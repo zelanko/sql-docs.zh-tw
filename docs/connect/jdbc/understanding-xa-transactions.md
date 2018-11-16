@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a72f59535e3cac718f1c2e7821cd69962043987f
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 66f12f33e7b6eaac901ca29961465be71e7996e3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851973"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605648"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 交易
 
@@ -45,7 +45,7 @@ ms.locfileid: "48851973"
 
 - 當您將 XA 交易與 Microsoft 分散式交易協調器 (MS DTC) 一起使用時，可能會注意到目前版本的 MS DTC 不支援緊密繫結的 XA 分支行為。 例如，MS DTC 在 XA 分支交易識別碼 (XID) 與 MS DTC 交易識別碼之間擁有一對一的對應，而且由鬆散繫結之 XA 分支所執行的工作會彼此隔離。  
   
-     在 [MSDTC 和緊密繫結的交易](http://support.microsoft.com/kb/938653)中所提供的 Hotfix 可以支援緊密繫結的 XA 分支，其中具有相同全域交易識別碼 (GTRID) 的多個 XA 分支會對應到單一 MS DTC 交易識別碼。 這個支援可讓多個緊密結合的 XA 分支查看彼此在資源管理員 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 中的變更。  
+     在 [MSDTC 和緊密繫結的交易](https://support.microsoft.com/kb/938653)中所提供的 Hotfix 可以支援緊密繫結的 XA 分支，其中具有相同全域交易識別碼 (GTRID) 的多個 XA 分支會對應到單一 MS DTC 交易識別碼。 這個支援可讓多個緊密結合的 XA 分支查看彼此在資源管理員 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 中的變更。  
   
 - [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 旗標可讓應用程式使用 XA 分支交易識別碼 (BQUAL) 不同，但全域交易識別碼 (GTRID) 和格式識別碼 (FormatID) 相同之緊密結合的 XA 交易。 若要使用該功能，您必須設定[SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) XAResource.start 方法的旗標參數上：  
   
@@ -117,7 +117,7 @@ ms.locfileid: "48851973"
 ### <a name="BKMK_ServerSide"></a> 針對已取消準備之交易的自動回復設定伺服器端逾時設定  
 
 > [!WARNING]  
-> 此伺服器端選項是 Microsoft JDBC Driver 4.2 (或更高版本) for SQL Server 的新功能。 若要取得更新過的表現方式，請務必更新伺服器上的 sqljdbc_xa.dll。 如需設定用戶端逾時值的詳細資訊，請參閱 [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)。  
+> 此伺服器端選項是 Microsoft JDBC Driver 4.2 (或更高版本) for SQL Server 的新功能。 若要取得更新過的表現方式，請務必更新伺服器上的 sqljdbc_xa.dll。 如需設定用戶端逾時值的詳細資訊，請參閱 [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)。  
 
 有兩個登錄設定 (DWORD 值) 用來控制分散式交易的逾時行為：  
   
@@ -167,7 +167,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL\<version>.<inst
   
 ### <a name="configuring-the-user-defined-roles"></a>設定使用者定義角色
 
-若要授與權限給特定使用者以使用 JDBC Driver 參與分散式交易，請將該使用者新增至 SqlJDBCXAUser 角色。 例如，使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，將名為 'shelby' (SQL 標準登入使用者名稱為 'shelby') 的使用者新增至 SqlJDBCXAUser 角色：  
+若要授與權限給特定使用者以使用 JDBC Driver 參與分散式交易，請將該使用者新增至 SqlJDBCXAUser 角色。 例如，使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，將名為 'shelby' (SQL 標準登入使用者名稱為 'shelby') 的使用者加入至 SqlJDBCXAUser 角色：  
 
 ```sql
 USE master  

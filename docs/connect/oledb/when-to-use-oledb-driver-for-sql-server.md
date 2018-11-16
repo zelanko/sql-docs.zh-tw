@@ -15,19 +15,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 39ad82d9a97781eb63b5de15e20494a0438855b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b2f7bf5a09294803ab620b22a75910c5f5e3e34
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798196"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602808"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>使用 OLE DB Driver for SQL Server 的時機
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 是一種技術可供您存取中的資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。  如需不同資料存取技術的討論內容，請參閱 [Data Access Technologies Road Map](http://go.microsoft.com/fwlink/?LinkID=179186) (資料存取技術藍圖)  
+  OLE DB Driver for SQL Server 是一種技術可供您存取中的資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。  如需不同資料存取技術的討論內容，請參閱 [Data Access Technologies Road Map](https://go.microsoft.com/fwlink/?LinkID=179186) (資料存取技術藍圖)  
   
  決定是否要使用 OLE DB Driver for SQL Server 當做應用程式的資料存取技術時，您應該考慮許多因素。  
   

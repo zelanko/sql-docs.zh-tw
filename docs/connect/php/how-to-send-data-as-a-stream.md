@@ -14,12 +14,12 @@ ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2efd1f90526b3113abfa7e3825506051108ca6cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c04077a33c372770fadece491b229ab5bc0f8b4
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669506"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604958"
 ---
 # <a name="how-to-send-data-as-a-stream"></a>如何：以資料流的形式傳送資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47669506"
 第三個範例說明如何使用 PDO_SQLSRV 驅動程式將資料流資料傳送至伺服器。  
   
 ## <a name="example-sending-stream-data-at-execution"></a>範例： 在執行傳送 Stream 資料
-下列範例會在 AdventureWorks 資料庫的 *Production.ProductReview* 資料表中插入資料列。 客戶意見 (*$comments*) 會透過 PHP [fopen](http://php.net/manual/en/function.fopen.php) 函式以資料流的形式開啟，然後在執行查詢時串流處理至伺服器。  
+下列範例會在 AdventureWorks 資料庫的 *Production.ProductReview* 資料表中插入資料列。 客戶意見 (*$comments*) 會透過 PHP [fopen](https://php.net/manual/en/function.fopen.php) 函式以資料流的形式開啟，然後在執行查詢時串流處理至伺服器。  
   
 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 所有輸出都會寫入至主控台。  
   

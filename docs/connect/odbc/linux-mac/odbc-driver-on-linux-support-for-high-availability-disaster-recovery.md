@@ -11,25 +11,25 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5922753b28c401312f917ce662b56c7378634a77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 952194b55ef14527e2f04d18edb5873e6098d2da
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687037"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600098"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux 和 macOS 上的 ODBC 驅動程式 - 高可用性和災害復原的支援
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-如需 Linux 和 macOS 的支援的 ODBC 驅動程式[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] 的相關資訊，請參閱：  
+如需 Linux 和 macOS 的支援的 ODBC 驅動程式[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]的相關資訊，請參閱：  
   
--   [可用性群組接聽程式、用戶端連線及應用程式容錯移轉 (SQL Server)](http://msdn.microsoft.com/library/hh213417.aspx)  
+-   [可用性群組接聽程式、用戶端連線及應用程式容錯移轉 (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
   
--   [建立及設定可用性群組 (SQL Server)](http://msdn.microsoft.com/library/ff878265.aspx)  
+-   [建立及設定可用性群組 (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
   
--   [容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)](http://msdn.microsoft.com/library/ff929171.aspx)  
+-   [容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
   
--   [使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)](http://msdn.microsoft.com/library/ff878253.aspx)  
+-   [使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)](https://msdn.microsoft.com/library/ff878253.aspx)  
   
 您可以在連接字串中指定給定可用性群組的可用性群組接聽程式。 如果在 Linux 或 macOS 上，ODBC 應用程式連線到可用性群組中發生容錯移轉的資料庫，則原始連線會中斷，而且應用程式必須在容錯移轉後開啟新連線，才能繼續工作。
 

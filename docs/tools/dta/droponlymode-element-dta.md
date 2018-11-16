@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -16,12 +15,12 @@ ms.assetid: 80960676-7581-4074-889b-80ee665963dd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5dbe613da38bdb5cfc3f76b1034e0813fb3dd35d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f75d3a4c293ebcb2f91c39df4cb1c008601dcde2
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730606"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51292865"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

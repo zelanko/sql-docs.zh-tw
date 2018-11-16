@@ -11,12 +11,12 @@ ms.assetid: 359a87c6-c13a-4518-8f23-a922e7f3b171
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19d17895f6a3d33da88509dcb2685d9d46e1996f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96b3597c8b8d4fa61b76a96278697f2678b7d9aa
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847188"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600358"
 ---
 # <a name="pdoexec"></a>PDO::exec
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -69,5 +69,5 @@ PDO::exec 不會傳回 SELECT 陳述式的結果。
 ## <a name="see-also"></a>另請參閱  
 [PDO 類別](../../connect/php/pdo-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

@@ -11,12 +11,12 @@ ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd67f3492788a38dfac635f51a16014d926578a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3fc12b1c8622596881810b784d5ceb95ae603ad
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670850"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605138"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,5 +73,5 @@ print $metadata['name'];
 ## <a name="see-also"></a>另請參閱  
 [PDOStatement 類別](../../connect/php/pdostatement-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

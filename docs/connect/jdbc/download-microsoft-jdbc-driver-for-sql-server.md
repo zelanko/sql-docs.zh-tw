@@ -11,12 +11,12 @@ ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b05ad276374427e13fcbca2cca2bd577d582451
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bf3a5a4ff0a71f3941833db6213c5ec53f46120
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710552"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602298"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>下載 Microsoft JDBC Driver for SQL Server
 
@@ -32,12 +32,12 @@ ms.locfileid: "47710552"
 ```  
 
 ## <a name="available-downloads-of-jdbc-driver-for-sql-server"></a>JDBC driver for SQL Server 的可用下載
- * [Microsoft JDBC Driver 7.0 for SQL Server](http://go.microsoft.com/fwlink/?linkid=2005972) 
- * [Microsoft JDBC Driver 6.4 for SQL Server](http://go.microsoft.com/fwlink/?linkid=868290) 
- * [Microsoft JDBC Driver 6.2 for SQL Server](http://go.microsoft.com/fwlink/?linkid=852460) 
- * [Microsoft JDBC Driver 6.0 for SQL Server](http://go.microsoft.com/fwlink/?LinkId=245496) 
- * [Microsoft JDBC Driver 4.2 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841534) 
- * [Microsoft JDBC Driver 4.1 for SQL Server](http://go.microsoft.com/fwlink/?linkid=841533) 
+ * [Microsoft JDBC Driver 7.0 for SQL Server](https://go.microsoft.com/fwlink/?linkid=2005972) 
+ * [Microsoft JDBC Driver 6.4 for SQL Server](https://go.microsoft.com/fwlink/?linkid=868290) 
+ * [Microsoft JDBC Driver 6.2 for SQL Server](https://go.microsoft.com/fwlink/?linkid=852460) 
+ * [Microsoft JDBC Driver 6.0 for SQL Server](https://go.microsoft.com/fwlink/?LinkId=245496) 
+ * [Microsoft JDBC Driver 4.2 for SQL Server](https://go.microsoft.com/fwlink/?linkid=841534) 
+ * [Microsoft JDBC Driver 4.1 for SQL Server](https://go.microsoft.com/fwlink/?linkid=841533) 
   
 ## <a name="unsupported-drivers"></a>不支援的驅動程式  
 這裡不提供下載不支援的驅動程式版本。 因為我們會持續改進 Java 連線能力支援， 所以強烈建議您使用最新版的 Microsoft JDBC 驅動程式。  

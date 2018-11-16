@@ -11,12 +11,12 @@ ms.assetid: c2e80566-fa41-4918-8521-cf2e05374cbd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75f6b34d722fc5624270162e7f3e31231946685e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4622c75f7185fae2ad03f64a898e6625af680329
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773156"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605008"
 ---
 # <a name="pdostatementexecute"></a>PDOStatement::execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -74,10 +74,10 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ```  
   
 > [!NOTE]
-> 建議使用字串做為輸入，繫結至的值時[十進位或數值資料行](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)若要確保精確性與正確性，如 PHP 有限精確度[浮點數](http://php.net/manual/en/language.types.float.php)。 這同樣適用於 bigint 資料行，尤其是值為範圍外[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
+> 建議使用字串做為輸入，繫結至的值時[十進位或數值資料行](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)若要確保精確性與正確性，如 PHP 有限精確度[浮點數](https://php.net/manual/en/language.types.float.php)。 這同樣適用於 bigint 資料行，尤其是值為範圍外[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
 
 ## <a name="see-also"></a>另請參閱  
 [PDOStatement 類別](../../connect/php/pdostatement-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

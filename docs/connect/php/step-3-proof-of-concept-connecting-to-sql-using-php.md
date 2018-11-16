@@ -11,12 +11,12 @@ ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc3ecb2395d350c66423fbf9b9da66dd2d30cf2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dab1e03a0c1f2364ec3557e375f7db044ad5b5cf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770946"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605128"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>步驟 3︰使用 PHP 連接到 SQL 的概念證明
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47770946"
   
 ## <a name="step-2--execute-query"></a>步驟 2： 執行查詢  
   
-[Sqlsrv_query （)](http://php.net/manual/en/function.sqlsrv-query.php)函式可以用來擷取結果集從查詢中，對 SQL Database。 此函式基本上會接受任何查詢和連接物件，並傳回結果集，這可以藉由使用反覆[sqlsrv_fetch_array （)](http://php.net/manual/en/function.sqlsrv-fetch-array.php)。  
+[Sqlsrv_query （)](https://php.net/manual/en/function.sqlsrv-query.php)函式可以用來擷取結果集從查詢中，對 SQL Database。 此函式基本上會接受任何查詢和連接物件，並傳回結果集，這可以藉由使用反覆[sqlsrv_fetch_array （)](https://php.net/manual/en/function.sqlsrv-fetch-array.php)。  
   
 ```php  
     function ReadData()  

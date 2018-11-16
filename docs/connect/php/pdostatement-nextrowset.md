@@ -11,12 +11,12 @@ ms.assetid: 048a6d8f-7fc4-449e-8161-19268c68f41d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6ae71b3f9f761338364ffd4d492a0a20a1aa809
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6982660f0a10cd4c92bf2b7e4ef7c0102779c58c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841576"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601808"
 ---
 # <a name="pdostatementnextrowset"></a>PDOStatement::nextRowset
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -60,5 +60,5 @@ bool PDOStatement::nextRowset();
 ## <a name="see-also"></a>另請參閱  
 [PDOStatement 類別](../../connect/php/pdostatement-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

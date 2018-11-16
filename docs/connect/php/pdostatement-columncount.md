@@ -11,12 +11,12 @@ ms.assetid: 8d89a568-0c7c-40dd-9f54-db7313600df3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2ddf9e2713f5a4da52700246dd7c254e64d797b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eae5c8a8074cfbda6c1f3eb57e3f65b1ef0e4b67
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619216"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604148"
 ---
 # <a name="pdostatementcolumncount"></a>PDOStatement::columnCount
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -61,5 +61,5 @@ print $stmt->columnCount();
 ## <a name="see-also"></a>另請參閱  
 [PDOStatement 類別](../../connect/php/pdostatement-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

@@ -11,12 +11,12 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 386618d9dc6dd0d1fe23fe0480105c3e8f01c914
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 147716f986fb89d756c1800ac6fd71e138fae6a1
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726378"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600858"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 驅動程式中的連接恢復功能
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47726378"
 > [!IMPORTANT]  
 >  Microsoft Azure SQL Database 和 SQL Server 2014 (和更新版本) 伺服器版本都支援連接恢復功能。  
   
- 如需閒置連線恢復功能的詳細資訊，請參閱[技術文章 – 閒置連線恢復功能](http://go.microsoft.com/fwlink/?LinkId=393996)。  
+ 如需閒置連線恢復功能的詳細資訊，請參閱[技術文章 – 閒置連線恢復功能](https://go.microsoft.com/fwlink/?LinkId=393996)。  
   
  為了控制重新連接的行為，Windows 上的 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有兩個選項：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47726378"
   
      您可以在執行下列作業時修改連接重試次數：  
   
-    -   透過**連接重試計數**控制項定義或修改使用 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料來源。  
+    -   透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接重試計數 **控制項定義或修改使用 ODBC Driver for** 的資料來源。  
   
     -   使用 **ConnectRetryCount** 連接字串關鍵字。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47726378"
   
      您可以在執行下列作業時修改連接重試間隔：  
   
-    -   透過**連接重試間隔**控制項定義或修改使用 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料來源。  
+    -   透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接重試間隔 **控制項定義或修改使用 ODBC Driver for** 的資料來源。  
   
     -   使用 **ConnectRetryInterval** 連接字串關鍵字。  
   

@@ -11,12 +11,12 @@ ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1de9ce8b14dd164ac24ac1bb7098494dbc134bfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a298a7c7f65a198e5bfb0922f2b061fd44079739
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778256"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604698"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>步驟 1︰設定 Ruby 開發的開發環境
 您必須設定您的開發環境的先決條件，才能開發使用 Ruby Driver for SQL Server 的應用程式。    
@@ -27,7 +27,7 @@ ms.locfileid: "47778256"
 ## <a name="windows"></a>Windows  
   
 1.  **Ruby 的安裝程式下載**  
-如果您的電腦並沒有 Ruby 請加以安裝。 針對新的 ruby 使用者，我們建議使用 Ruby 2.2.x 版本安裝程式。 這些提供穩定的語言和廣泛相容，並且已更新的封裝 （寶藏） 清單。 移[Ruby 的下載頁面](http://rubyinstaller.org/downloads/)及下載適當的 2.1.x 安裝程式。 如範例中，如果您是在 64 位元電腦上，下載 Ruby 2.1.6 (x64) 安裝程式。   
+如果您的電腦並沒有 Ruby 請加以安裝。 針對新的 ruby 使用者，我們建議使用 Ruby 2.2.x 版本安裝程式。 這些提供穩定的語言和廣泛相容，並且已更新的封裝 （寶藏） 清單。 移[Ruby 的下載頁面](https://rubyinstaller.org/downloads/)及下載適當的 2.1.x 安裝程式。 如範例中，如果您是在 64 位元電腦上，下載 Ruby 2.1.6 (x64) 安裝程式。   
   
 2.  **安裝 Ruby**  
 安裝程式下載後，執行下列作業：  

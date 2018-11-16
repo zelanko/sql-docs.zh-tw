@@ -14,12 +14,12 @@ ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ad5d49841db9abdd0b512c1d36454eccc5ff73a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cd3795f57f544d5f7003f7aab60be2a08a64229
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782876"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607188"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>透過 Linux 和 macOS 上的 ODBC 驅動程式進行資料存取追蹤
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -63,7 +63,7 @@ SQLLEN Size........: 8
 SQLSETPOSIROW Size.: 8
 ```
 
-[UnixODBC 文件](http://www.unixodbc.org/doc/UserManual/)說明使用者和系統名稱 （dsn） 之間的差異。 在 摘要：  
+[UnixODBC 文件](https://www.unixodbc.org/doc/UserManual/)說明使用者和系統名稱 （dsn） 之間的差異。 在 摘要：  
 
 - 使用者名稱 （dsn）---這些是只可以使用哪些特定的使用者名稱 （dsn）。 使用者可以使用連線、 新增、 修改及移除他們自己的使用者名稱 （dsn）。 使用者 Dsn 會儲存在使用者的主目錄或類別的子目錄中的檔案。
   

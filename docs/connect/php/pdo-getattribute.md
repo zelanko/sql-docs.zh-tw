@@ -11,12 +11,12 @@ ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 69ba316a7a08025479ed57be95fa7cbfba216d2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16a69d34bb8ae21b71831f57897811c6fc04ec93
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804976"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602588"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -91,5 +91,5 @@ print_r($conn->getAttribute( PDO::ATTR_CLIENT_VERSION ));
 ## <a name="see-also"></a>另請參閱  
 [PDO 類別](../../connect/php/pdo-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

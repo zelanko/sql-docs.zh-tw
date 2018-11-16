@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -16,12 +15,12 @@ ms.assetid: 9fe0bfb4-3aa6-4eb2-a83e-c0d0e7d4e9f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b6f4d76f3404ebcb8cf5e41135c264736e4a5973
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd8ce2e2460636e7343c0caf6b4ae99e094f41b7
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815156"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51290671"
 ---
 # <a name="server-element-dta"></a>Server 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -13,12 +13,12 @@ ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3784a3ba9b05bde0fafea486ddfdf3a968f96914
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: f2828098784601e10136ed8dd0f4b6f0272137d6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461123"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601100"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的系統需求
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "49461123"
 
 ## <a name="php"></a>PHP
 
-如需如何下載及安裝最新的穩定 PHP 二進位檔的資訊，請參閱 [PHP 網站](http://php.net)。  Microsoft Drivers for PHP for SQL Server 需要下列的 PHP 版本：
+如需如何下載及安裝最新的穩定 PHP 二進位檔的資訊，請參閱 [PHP 網站](https://php.net)。  Microsoft Drivers for PHP for SQL Server 需要下列的 PHP 版本：
 
 |PHP for SQL Server 驅動程式版本&#8594;<br />&#8595; PHP 版本|5.3 和 5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|
 |---|---|---|---|---|---|
@@ -42,7 +42,7 @@ ms.locfileid: "49461123"
 
 -   您的 PHP 延伸目錄中必須要有某個版本的驅動程式檔案。 請參閱[驅動程式版本](#driver-versions)針對不同的驅動程式檔案的相關資訊。  若要載入驅動程式，請參閱[下載 Microsoft Drivers for PHP for SQL Server](download-drivers-php-sql-server.md)。 如需為 PHP 設定驅動程式的資訊，請參閱[載入 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md)。
 
--   需要 Web 伺服器。 您的 Web 伺服器必須設定為執行 PHP。 如需裝載 IIS 與 PHP 應用程式的資訊，請參閱[PHP 的網站上的教學課程](http://php.net/manual/fa/install.windows.iis.php)。  
+-   需要 Web 伺服器。 您的 Web 伺服器必須設定為執行 PHP。 如需裝載 IIS 與 PHP 應用程式的資訊，請參閱[PHP 的網站上的教學課程](https://php.net/manual/fa/install.windows.iis.php)。  
 
     [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 已使用 IIS 10 和 FastCGI 測試。  
 

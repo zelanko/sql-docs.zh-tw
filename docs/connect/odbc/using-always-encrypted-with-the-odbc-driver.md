@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: dfe1777044234ec43c13f738fa1b0de896f96616
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f51baee10a0f9b9cbb3595be816b2928f5bc0b0
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828266"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604711"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>搭配使用 Always Encrypted 與 ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -52,7 +52,7 @@ SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer
 
 請注意，啟用 永遠加密不足，無法加密或解密成功;您也需要確定：
 
-- 應用程式要有 [檢視任何資料行的主要金鑰定義]** 和 [檢視任何資料行的加密金鑰定義]** 資料庫權限，才能存取資料庫中永遠加密金鑰的相關中繼資料。 如需詳細資訊，請參閱 <<c0> [ 資料庫的權限](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions)。
+- 應用程式要有 [檢視任何資料行的主要金鑰定義] 和 [檢視任何資料行的加密金鑰定義] 資料庫權限，才能存取資料庫中永遠加密金鑰的相關中繼資料。 如需詳細資訊，請參閱 <<c0> [ 資料庫的權限](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions)。
 
 - 應用程式可以存取用來保護查詢加密資料行的 Cek CMK。 這是相依於儲存 CMK 的金鑰儲存區提供者。 請參閱[使用 資料行主要金鑰存放區](#working-with-column-master-key-stores)如需詳細資訊。
 
@@ -605,5 +605,5 @@ ODBC Driver 17 for SQL Server 加密之前使用 SQLGetData 組件中不能擷�
 ## <a name="see-also"></a>另請參閱
 
 - [Always Encrypted (資料庫引擎)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [永遠加密部落格](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
+- [永遠加密部落格](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 

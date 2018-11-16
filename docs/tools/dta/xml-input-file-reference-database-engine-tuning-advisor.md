@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -18,12 +17,12 @@ ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8713438b825252b5ccc17a3914e219289110062
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fa942cf89221dcfb66e78e6be77bbdd882e91b8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763636"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656342"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>XML 輸入檔參考 (Database Engine Tuning Advisor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47763636"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML 輸入檔包含 XML 元素的階層，每個元素都包含指定微調工作階段設定的文字或其他元素。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML 輸入檔必須符合格式正確之 XML 的標準，因此，所有元素名稱都會區分大小寫。 元素利用 Pascal 案例來指定，這表示第一個字元是大寫，任何後續串連單字的第一個字母也是大寫。  
   
- 所有元素值都必須符合 XML 命名慣例。 如需有關這些慣例的詳細資訊，請參閱 MSDN Library 中的＜ [XML Textual Content](http://go.microsoft.com/fwlink/?LinkId=7614) ＞。  
+ 所有元素值都必須符合 XML 命名慣例。 如需有關這些慣例的詳細資訊，請參閱 MSDN Library 中的＜ [XML Textual Content](https://go.microsoft.com/fwlink/?LinkId=7614) ＞。  
   
  請注意，這份參考並不完整。 如需有關可用來定義 XML 輸入之所有元素的資訊，請參閱＜ [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML 結構描述 (DTASchema.xsd)＞。  
   

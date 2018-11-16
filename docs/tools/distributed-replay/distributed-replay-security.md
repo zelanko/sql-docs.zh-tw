@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1e85883fa9b772d132cc5f6aaa75f7d46539244
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7aef54c119c9941b245068186cc93f66f4e5f135
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717026"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677747"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay 安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,9 +80,9 @@ ms.locfileid: "47717026"
   
     3.  按 ENTER 鍵。  
   
-2.  **設定整部電腦的 DCOM 權限**：針對下表所列的每個帳戶授與對應的整部電腦 DCOM 權限。 如需如何設定整部電腦權限的詳細資訊，請參閱 [檢查清單：管理 DCOM 應用程式](http://go.microsoft.com/fwlink/?LinkId=185842)。  
+2.  **設定整部電腦的 DCOM 權限**：針對下表所列的每個帳戶授與對應的整部電腦 DCOM 權限。 如需如何設定整部電腦權限的詳細資訊，請參閱 [檢查清單：管理 DCOM 應用程式](https://go.microsoft.com/fwlink/?LinkId=185842)。  
   
-3.  **設定應用程式特定的 DCOM 權限**：針對下表所列的每個帳戶授與對應的應用程式特定 DCOM 權限。 控制器服務的 DCOM 應用程式名稱是 **DReplayController**。 如需如何設定應用程式特定權限的詳細資訊，請參閱 [檢查清單：管理 DCOM 應用程式](http://go.microsoft.com/fwlink/?LinkId=185842)。  
+3.  **設定應用程式特定的 DCOM 權限**：針對下表所列的每個帳戶授與對應的應用程式特定 DCOM 權限。 控制器服務的 DCOM 應用程式名稱是 **DReplayController**。 如需如何設定應用程式特定權限的詳細資訊，請參閱 [檢查清單：管理 DCOM 應用程式](https://go.microsoft.com/fwlink/?LinkId=185842)。  
   
  下表描述哪些 DCOM 權限是管理工具互動式使用者帳戶和 Client 服務帳戶所需的權限：  
   

@@ -42,12 +42,12 @@ ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5d396cb99ccda05efc3f4b1370eabc6bd5cc6bb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a598cb35b1b54151abb1393d231c23fb9a7ef0aa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767156"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667437"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler 對話方塊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一�
 |---|---
 |[事件] 資料行|選取或清除事件資料行中的核取方塊，來指定追蹤的事件。 依事件類別目錄所組織的**事件** 。 範本中所指定的事件類別會自動選取。 如需詳細資訊，請參閱 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
 |資料行|核取對應到所需事件和資料行的方塊，來指定追蹤的資料行。 依預設，針對追蹤內所包含的每個事件，都會核取所有相關的事件資料行。  
-|篩選|按一下資料行標頭並輸入篩選準則，即可指定篩選。 篩選的資料行在 **[編輯篩選]** 對話方塊中，會以資料行標籤左方的篩選圖示指出。 如需詳細資訊，請參閱 [SQL Server Profiler - 編輯篩選](http://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14)。  
+|篩選|按一下資料行標頭並輸入篩選準則，即可指定篩選。 篩選的資料行在 **[編輯篩選]** 對話方塊中，會以資料行標籤左方的篩選圖示指出。 如需詳細資訊，請參閱 [SQL Server Profiler - 編輯篩選](https://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14)。  
 |**顯示所有事件**|顯示所有可用的事件。 依預設，僅會顯示在 **[事件選取範圍]** 方格中選取的資料列。 取消選取此方塊，即可隱藏 **[事件選取範圍]** 方格中所有未選取的事件。  
 |**顯示所有資料行**|顯示所有可用的資料行。 依預設，僅會顯示選取的資料行。 取消選取此方塊，即可隱藏 **[事件選取範圍]** 方格中所有未選取的資料行。  
 |**資料行篩選**|啟動 [編輯篩選] 對話方塊。 您可以使用此對話來編輯資料行篩選。  
@@ -179,7 +179,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一�
 |---|---
 |**依序載入所有換用檔案，不另外提示**|開啟追蹤檔案時自動載入換用檔案。 如果在追蹤時建立多個檔案，則選取此選項會自動載入所有的換用檔案。  
 |**載入換用檔案之前先提示**|在開啟追蹤檔案時，讓 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 在加入換用檔案之前給您提示。  
-|**永不載入後續的換用檔案**|開啟追蹤檔案時，[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 永不載入後續的換用檔案。  
+|**永不載入後續的換用檔案**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 開啟追蹤檔案時，永不載入後續的換用檔案。  
 ### <a name="replay-options"></a>重新執行選項  
 |項目|Description
 |---|---

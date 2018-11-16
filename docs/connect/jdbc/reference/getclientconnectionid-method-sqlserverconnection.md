@@ -11,12 +11,12 @@ ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa6954248b747cfd08789fa6f2e73ebc1e4befba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 823411df1521292914f7b8decf0636d1e6a330e7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730016"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600728"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>getClientConnectionID 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,7 +59,7 @@ UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();
   
  不論您所連線的伺服器版本為何，**getClientConnectionID** 都會運作，但是擴充事件記錄檔以及連線信號緩衝區錯誤的相關項目不會出現在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 和先前版本中。  
   
- 如果記錄連接識別碼的擴充事件已啟用，您就可以在擴充事件記錄檔中找出連接識別碼，以便查看失敗是否位於伺服器。 此外，您也可以針對特定連線錯誤，在連線信號緩衝區中找出連線識別碼 ([透過連線信號緩衝區針對 SQL Server 2008 中的連線問題進行疑難排解](http://go.microsoft.com/fwlink/?LinkId=207752))。 如果連接識別碼不在連接信號緩衝區中，您就可以假設發生網路錯誤。  
+ 如果記錄連接識別碼的擴充事件已啟用，您就可以在擴充事件記錄檔中找出連接識別碼，以便查看失敗是否位於伺服器。 此外，您也可以針對特定連線錯誤，在連線信號緩衝區中找出連線識別碼 ([透過連線信號緩衝區針對 SQL Server 2008 中的連線問題進行疑難排解](https://go.microsoft.com/fwlink/?LinkId=207752))。 如果連接識別碼不在連接信號緩衝區中，您就可以假設發生網路錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

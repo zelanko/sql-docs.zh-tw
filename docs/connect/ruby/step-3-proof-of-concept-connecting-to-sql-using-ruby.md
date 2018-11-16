@@ -11,12 +11,12 @@ ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9eed37349152b48ab49859b44cc23cb463d8541b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f384f179983012d5acf4726fb641245ca8a2cfb2
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801376"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599968"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>步驟 3︰使用 Ruby 連線到 SQL 的概念證明
 
@@ -59,7 +59,7 @@ ms.locfileid: "47801376"
   
 若要搭配使用 TinyTDS 和 Azure，建議您執行多個`SET`陳述式來變更目前工作階段處理的特定資訊的方式。 建議`SET`陳述式所提供的程式碼範例。 比方說，`SET ANSI_NULL_DFLT_ON`可建立允許 null 值，即使未明確指定資料行的 null 屬性狀態的新資料行。  
   
-Microsoft SQL Server 與對齊[datetime](../../t-sql/data-types/datetime-transact-sql.md)格式，請使用[strftime](http://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime)函式來轉換成對應的日期時間格式。  
+Microsoft SQL Server 與對齊[datetime](../../t-sql/data-types/datetime-transact-sql.md)格式，請使用[strftime](https://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime)函式來轉換成對應的日期時間格式。  
   
 ``` ruby
     require 'tiny_tds'  

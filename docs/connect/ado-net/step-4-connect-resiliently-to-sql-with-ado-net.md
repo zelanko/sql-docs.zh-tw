@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75c6f352a962232b2109861b2a264d458af05e70
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 483c7f84d171b34135d16fd6f392b6f5f180d217
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119801"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607098"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>步驟 4︰使用 ADO.NET 彈性地連線到 SQL
 
@@ -39,7 +39,7 @@ ms.locfileid: "49119801"
   
 您的程式必須區分暫時性錯誤與持續性錯誤。 暫時性錯誤是在一段時間，例如暫時性網路問題可能會清除的錯誤狀況。  持續性錯誤的範例是時間的，如果您的程式具有目標資料庫名稱的拼字錯誤-在此情況下，「 沒有這類資料庫找到 」 錯誤會保存，並清除在短時間內沒機會。  
   
-分類為暫時性錯誤的錯誤號碼清單位於[SQL Database 用戶端應用程式的錯誤訊息](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+分類為暫時性錯誤的錯誤號碼清單位於[SQL Database 用戶端應用程式的錯誤訊息](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
   
 ## <a name="step-2-create-and-run-sample-application"></a>步驟 2： 建立和執行範例應用程式  
   
@@ -317,4 +317,4 @@ ms.locfileid: "49119801"
   
 ## <a name="next-steps"></a>Next Steps  
   
-若要探索其他最佳 practicies 及設計指導方針，請瀏覽[連接到 SQL Database： 連結、 最佳作法和設計指導方針](http://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
+若要探索其他最佳 practicies 及設計指導方針，請瀏覽[連接到 SQL Database： 連結、 最佳作法和設計指導方針](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  

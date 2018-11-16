@@ -11,12 +11,12 @@ ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40c21e3116effbdd2530a5c4b05c32d245454fab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91b4edcd65f972adb98cf1a4f6c62a81ebb184f8
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642896"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600139"
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -90,5 +90,5 @@ PDOException
 ## <a name="see-also"></a>另請參閱  
 [PDO 類別](../../connect/php/pdo-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

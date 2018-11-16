@@ -11,12 +11,12 @@ ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 134b5eef527b375e9107149ead9d55ab08933363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3b6790bce4cc3eb84ec707b56e909876606fa02
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598386"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603528"
 ---
 # <a name="using-table-valued-parameters"></a>使用資料表值參數
 
@@ -35,9 +35,9 @@ ms.locfileid: "47598386"
   
 | 資源                                                                                                             | Description                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [資料表值參數 (Database Engine)](http://go.microsoft.com/fwlink/?LinkId=98363)中 SQL Server 線上叢書 | 描述如何建立及使用資料表值參數                             |
-| [使用者定義資料表類型](http://go.microsoft.com/fwlink/?LinkId=98364)中 SQL Server 線上叢書                  | 描述用來宣告資料表值參數的使用者定義資料表類型 |
-| [Microsoft SQL Server Database Engine](http://go.microsoft.com/fwlink/?LinkId=120507) CodePlex 的區段        | 包含範例，示範如何使用 SQL Server 特性與功能  |
+| [資料表值參數 (Database Engine)](https://go.microsoft.com/fwlink/?LinkId=98363)中 SQL Server 線上叢書 | 描述如何建立及使用資料表值參數                             |
+| [使用者定義資料表類型](https://go.microsoft.com/fwlink/?LinkId=98364)中 SQL Server 線上叢書                  | 描述用來宣告資料表值參數的使用者定義資料表類型 |
+| [Microsoft SQL Server Database Engine](https://go.microsoft.com/fwlink/?LinkId=120507) CodePlex 的區段        | 包含範例，示範如何使用 SQL Server 特性與功能  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>在舊版的 SQL Server 中傳遞多個資料列  
 
@@ -53,7 +53,7 @@ SQL Server 2008 導入資料表值參數之前，將多個資料列傳遞至預�
   
 ## <a name="creating-table-valued-parameter-types"></a>建立資料表值參數類型  
 
-資料表值參數以使用 TRANSACT-SQL 來定義的強型別資料表結構為基礎`CREATE TYPE`陳述式。 您必須建立資料表類型，並在 SQL Server 中定義的結構，才能在用戶端應用程式中使用資料表值參數。 如需建立資料表類型的詳細資訊，請參閱[使用者定義資料表類型](http://go.microsoft.com/fwlink/?LinkID=98364)SQL Server 線上叢書 》 中。  
+資料表值參數以使用 TRANSACT-SQL 來定義的強型別資料表結構為基礎`CREATE TYPE`陳述式。 您必須建立資料表類型，並在 SQL Server 中定義的結構，才能在用戶端應用程式中使用資料表值參數。 如需建立資料表類型的詳細資訊，請參閱[使用者定義資料表類型](https://go.microsoft.com/fwlink/?LinkID=98364)SQL Server 線上叢書 》 中。  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -298,7 +298,7 @@ pStmt.execute();
 
 | [屬性]                                                                                                    | Description                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 公用最終的 void setStructured （int parameterIndex，字串 tvpName，SQLServerDataTable tvpDataTbale）    | 會填入資料表的資料表值參數。 parameterIndex 是參數索引，tvpName 是資料表值參數的名稱，tvpDataTable 是來源資料的資料表物件。                                                                                                          |
+| 公用最終的 void setStructured （int parameterIndex，字串 tvpName，SQLServerDataTable tvpDataTable）    | 會填入資料表的資料表值參數。 parameterIndex 是參數索引，tvpName 是資料表值參數的名稱，tvpDataTable 是來源資料的資料表物件。                                                                                                          |
 | 公用最終的 void setStructured （int parameterIndex，字串 tvpName，結果集 tvpResultSet）             | 資料表值參數中填入從同一資料表中擷取一個結果集。 parameterIndex 是參數索引，tvpName 是資料表值參數的名稱，tvpResultSet 是來源的結果集物件。                                                                               |
 | 公用最終的 void setStructured （int parameterIndex，字串 tvpName，ISQLServerDataRecord tvpDataRecord） | 會填入資料表值參數與 ISQLServerDataRecord 物件。 ISQLServerDataRecord 用於串流資料，而且使用者會決定如何使用它。 parameterIndex 是參數索引，tvpName 是資料表值參數的名稱，tvpDataRecord 是 ISQLServerDataRecord 物件。 |
   

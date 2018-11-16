@@ -11,12 +11,12 @@ ms.assetid: f132b2af-0433-4fbe-b03f-69a7d631093a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdccf7fdc3c49c4186e7f18db6f5c98b89665eaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efbf689ea02b318a7a389a848b5a516090be699f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804276"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606312"
 ---
 # <a name="pdostatementsetfetchmode"></a>PDOStatement::setFetchMode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -87,5 +87,5 @@ $*mode*：任何能夠傳遞至 [PDOStatement::fetch](../../connect/php/pdostate
 ## <a name="see-also"></a>另請參閱  
 [PDOStatement 類別](../../connect/php/pdostatement-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

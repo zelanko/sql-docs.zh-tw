@@ -18,12 +18,12 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a293ff4bd2eae7f1e54914c805e4e180ce17fb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc82d2860bf5e927556103a6c508b1cd662e4b42
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669516"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602918"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -82,7 +82,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 **sqlsrv_prepare** 和 **sqlsrv_execute** 的組合可將陳述式準備和陳述式執行分成兩個函式呼叫中，並可用於執行參數化查詢。 此函數非常適合用來執行陳述式多次 (每次執行時使用不同的參數值)。  
   
-如需寫入和讀取大量資訊的替代策略，請參閱 [SQL 陳述式的批次](../../odbc/reference/develop-app/batches-of-sql-statements.md)和 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)。  
+如需寫入和讀取大量資訊的替代策略，請參閱 [SQL 陳述式的批次](../../odbc/reference/develop-app/batches-of-sql-statements.md) 和 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
 如需詳細資訊，請參閱 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
   
@@ -219,7 +219,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 建議使用字串做為輸入，繫結至的值時[十進位或數值資料行](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)若要確保精確性與正確性，如 PHP 有限精確度[浮點數](http://php.net/manual/en/language.types.float.php)。 這同樣適用於 bigint 資料行，尤其是值為範圍外[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
+> 建議使用字串做為輸入，繫結至的值時[十進位或數值資料行](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)若要確保精確性與正確性，如 PHP 有限精確度[浮點數](https://php.net/manual/en/language.types.float.php)。 這同樣適用於 bigint 資料行，尤其是值為範圍外[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
 
 ## <a name="example"></a>範例  
 此程式碼範例示範如何繫結十進位值做為輸入參數。  

@@ -8,16 +8,16 @@ ms.custom: ''
 ms.topic: article
 ms.date: 06/18/2018
 ms.author: genemi
-ms.openlocfilehash: fa070ecfed9d962dc2716e5b72eaf690eff0fe7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4286a9a1fcc2eff3becd483d658b371bb6452032
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806087"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600368"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>適用於 Microsoft SQL 資料庫的連線模組
 
-本文提供連線模組下載連結或*驅動程式*用戶端程式可用來與互動[Microsoft SQL Server](../relational-databases/database-features.md)，和在雲端中與其對應項[AzureSQL Database](http://docs.microsoft.com/azure/sql-database/)。 驅動程式可供各種程式設計語言，在下列作業系統上執行：
+本文提供連線模組下載連結或*驅動程式*用戶端程式可用來與互動[Microsoft SQL Server](../relational-databases/database-features.md)，和在雲端中與其對應項[AzureSQL Database](https://docs.microsoft.com/azure/sql-database/)。 驅動程式可供各種程式設計語言，在下列作業系統上執行：
 
 - Linux (Ubuntu)
 - MacOS
@@ -43,13 +43,13 @@ original page is no longer the latest because the newer page is being added.
 But this policy is not agreed on or observed,
 putting the links in the following table at risk for being outdated.
 
-PHP driver in Github.com also uses this FWLink:  http://go.microsoft.com/fwlink/?LinkID=518036 ,
-although the FWLink is less precise than is http://github.com/Microsoft/msphpsql/tree/dev#install-unix .
+PHP driver in Github.com also uses this FWLink:  https://go.microsoft.com/fwlink/?LinkID=518036 ,
+although the FWLink is less precise than is https://github.com/Microsoft/msphpsql/tree/dev#install-unix .
 -->
 
 | 語言 | 下載 SQL 驅動程式 |
 | :------- | :---------------------- |
-| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET core for Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[適用於 MacOS 的.NET core](https://www.microsoft.com/net/core#macos)<br />[.NET core for Windows](https://www.microsoft.com/net/core) |
+| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br /><br />[.NET core for Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[適用於 MacOS 的.NET core](https://www.microsoft.com/net/core#macos)<br />[.NET core for Windows](https://www.microsoft.com/net/core) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js 驅動程式，安裝指示](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
@@ -68,18 +68,18 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 
 | 語言 | ORM 驅動程式下載 |
 | :------- | :------------------ |
-| C# | [Entity Framework Core](http://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x 或更新版本)](http://docs.microsoft.com/ef/) |
-| Java | [休眠 ORM](http://hibernate.org/orm)|
-| PHP | [導師的 ORM，隨附於 Laravel 安裝](http://laravel.com/docs/) |
-| Node.js | [Sequelize ORM](http://docs.sequelizejs.com) |
-| Python | [Django](http://www.djangoproject.com/) |
-| Ruby | [Ruby on Rails](http://rubyonrails.org/) |
+| C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x 或更新版本)](https://docs.microsoft.com/ef/) |
+| Java | [休眠 ORM](https://hibernate.org/orm)|
+| PHP | [導師的 ORM，隨附於 Laravel 安裝](https://laravel.com/docs/) |
+| Node.js | [Sequelize ORM](https://docs.sequelizejs.com) |
+| Python | [Django](https://www.djangoproject.com/) |
+| Ruby | [Ruby on Rails](https://rubyonrails.org/) |
 
 
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>建置的應用程式網頁
-[http://aka.ms/sqldev](http://aka.ms/sqldev) 會帶您前往一整組*建置的應用程式*網頁。 網頁提供的程式設計語言、 作業系統和 SQL 連接驅動程式的多個組合的資訊。 建置的應用程式網頁所提供的資訊包括下列項目：
+[https://aka.ms/sqldev](https://aka.ms/sqldev) 會帶您前往一整組*建置的應用程式*網頁。 網頁提供的程式設計語言、 作業系統和 SQL 連接驅動程式的多個組合的資訊。 建置的應用程式網頁所提供的資訊包括下列項目：
 
 - 如何開始從一開始，每個語言 + 作業系統驅動程式組合的詳細資料。
     - 安裝最新的 SQL 連接驅動程式的指示。
@@ -97,7 +97,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 &nbsp;
 
 ## <a name="related-links"></a>相關連結
-- [程式碼連接到 Azure SQL Database 在雲端中，使用 Java 和其他語言的範例](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)。
+- [程式碼連接到 Azure SQL Database 在雲端中，使用 Java 和其他語言的範例](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)。
 
 <!-- Image references -->
 

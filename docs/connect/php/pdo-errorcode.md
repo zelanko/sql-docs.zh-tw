@@ -11,12 +11,12 @@ ms.assetid: 5864b1d8-6814-41cd-a88d-415124484c13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b7fd35d23d97c8f24161301762033a63efb29dc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 152b8f1f0792f0680f7602a2d2f0f18c70ad9781
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804374"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604784"
 ---
 # <a name="pdoerrorcode"></a>PDO::errorCode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,5 +56,5 @@ print $conn->errorCode();
 ## <a name="see-also"></a>另請參閱  
 [PDO 類別](../../connect/php/pdo-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

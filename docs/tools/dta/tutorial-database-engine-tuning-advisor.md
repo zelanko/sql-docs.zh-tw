@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], tutorials
@@ -15,12 +14,12 @@ ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 571b2a78414b6435a48d24cbc4abb83d0f8d2d8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a70ee2ad71f6b51f8bb28dc0361e65c6cebc18a8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750496"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657527"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>教學課程：Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ Database Engine Tuning Advisor 提供兩個使用者介面：圖形化使用者�
 ## <a name="requirements"></a>需求  
 這個教學課程是專門針對不熟悉 Database Engine Tuning Advisor GUI 或 **dta** 命令提示字元公用程式，但是熟悉資料庫概念和結構 (例如索引和索引檢視) 的資料庫管理員而提供。  
   
-您必須安裝具有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 範例資料庫的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] (或更新版本)。 為了加強安全性，依預設，不會安裝範例資料庫。 若要安裝範例資料庫，請參閱＜ [安裝 SQL Server 範例和範例資料庫](http://sqlserversamples.codeplex.com)＞。  
+您必須安裝具有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 範例資料庫的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] (或更新版本)。 為了加強安全性，依預設，不會安裝範例資料庫。 若要安裝範例資料庫，請參閱＜ [安裝 SQL Server 範例和範例資料庫](https://sqlserversamples.codeplex.com)＞。  
   
 ## <a name="after-you-finish-this-tutorial"></a>完成這個教學課程之後  
 完成這個教學課程中的課程之後，請參閱下列主題，以取得有關 Database Engine Tuning Advisor 的詳細資訊：  

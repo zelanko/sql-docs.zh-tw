@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9939a049b8157b1a9d1aa127cbab18629bc0af03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 992784658a97e938b7793c612d32dfa7fc2a5574
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616293"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696806"
 ---
 # <a name="transactions-sql-data-warehouse"></a>交易 (SQL 資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  如果因為執行階段陳述式錯誤以外的錯誤而讓明確交易無法順利完成，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 會自動復原交易，並釋放交易所佔用的一切資源。 例如，如果用戶端與 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 執行個體之間的網路連線已中斷，或用戶端登出應用程式，該連線任何尚未認可的交易會在網路通知該執行個體發生中斷時全部復原。  
   
- 如果在批次中發生執行階段陳述式錯誤，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的行為會與將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** 設定為 **ON** 一致，整個交易也會復原。 如需 **XACT_ABORT** 設定的詳細資訊，請參閱 [SET XACT_ABORT (Transact-SQL)](http://msdn.microsoft.com/library/ms188792.aspx)。  
+ 如果在批次中發生執行階段陳述式錯誤，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的行為會與將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** 設定為 **ON** 一致，整個交易也會復原。 如需 **XACT_ABORT** 設定的詳細資訊，請參閱 [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx)。  
   
 ## <a name="general-remarks"></a>一般備註  
  工作階段在指定的時間只能執行一個交易。不支援儲存點和巢狀交易。  

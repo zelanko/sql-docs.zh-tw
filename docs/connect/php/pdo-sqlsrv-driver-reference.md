@@ -11,12 +11,12 @@ ms.assetid: a618a360-d4aa-475b-97d0-81979ebad444
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c636c1258a42135f758b839065f7de8c21c0514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 427b51ef5eb23bf051d76e8c310849284dd856e5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807078"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607198"
 ---
 # <a name="pdosqlsrv-driver-reference"></a>PDO_SQLSRV 驅動程式參考
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47807078"
   
 -   [PDOStatement 類別](../../connect/php/pdostatement-class.md)  
   
-如需詳細資訊，請參閱 [PDO](http://php.net/manual/book.pdo.php)。  
+如需詳細資訊，請參閱 [PDO](https://php.net/manual/book.pdo.php)。  
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   

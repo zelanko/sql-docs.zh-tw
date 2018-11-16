@@ -11,12 +11,12 @@ ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6c87e7b85282c7ca237689296e08d2b7645240ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0134b1f5f20c02a853ef31024191ed69e9129908
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767136"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602648"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證連線
 
@@ -221,7 +221,7 @@ You have successfully logged on as: <your user name>
     3. 按一下 [應用程式註冊] 索引標籤。
     4. 在下拉式清單中，按一下 「 新的應用程式註冊 」。
     5. 輸入 mytokentest 作為應用程式的易記名稱，選取 [Web 應用程式/API]。
-    6. 我們不需要登入 URL。 只是提供的任何項目: “http://mytokentest" 。
+    6. 我們不需要登入 URL。 只是提供的任何項目: “https://mytokentest" 。
     7. 按一下底部的 [建立]。
     9. 仍是在 Azure 入口網站中，按一下您的應用程式的 [設定] 索引標籤並開啟 [屬性] 索引標籤。
     10. 尋找 「 應用程式識別碼 」 （也稱為用戶端識別碼） 值，並將它複製擱置在一旁，您稍後需要此設定您的應用程式 (例如 1846943b-ad04-4808-aa13-4702d908b5c1) 時。 請參閱下列快照集。

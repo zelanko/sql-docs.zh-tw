@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], sqlservr
@@ -24,12 +23,12 @@ ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc4ff327c1962d4440df32badb234c715a64ac00
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dba9e5498d39c80a5bc5d1c43134242c5715980
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775588"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656908"
 ---
 # <a name="sqlservr-application"></a>sqlservr 應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  在大部分情況下，sqlservr.exe 程式只用來進行疑難排解或主要的維護工作。 在命令提示字元處利用 sqlservr.exe 啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會以服務形式啟動，因此，您無法使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] net **命令停止** 。 使用者可以連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，但 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具會顯示該服務的狀態， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員因而可正確地指出該服務已經停止。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可以連接到伺服器，但它也會指出該服務已經停止。  
   
 ## <a name="compatibility-support"></a>相容性支援  
- **不支援**  -h [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]參數。 舊版 32 位元 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體使用此參數，在啟用 AWE 的狀況下保留 Hot Add Memory 中繼資料的虛擬記憶體位址空間。 如需詳細資訊，請參閱 [SQL Server 2016 中已停止的 SQL Server 功能](http://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da)。  
+ **不支援**  -h [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]參數。 舊版 32 位元 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體使用此參數，在啟用 AWE 的狀況下保留 Hot Add Memory 中繼資料的虛擬記憶體位址空間。 如需詳細資訊，請參閱 [SQL Server 2016 中已停止的 SQL Server 功能](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 服務啟動選項](../database-engine/configure-windows/database-engine-service-startup-options.md)  

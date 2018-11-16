@@ -11,12 +11,12 @@ ms.assetid: 329d9b5e-1c5d-40b0-9127-1051d0646fc7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e3523e432c9f2f33d63c0db7ed6f64359299549
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07831f8af80804caff64f74102333a56b5f7d4c6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655496"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601028"
 ---
 # <a name="pdostatementsetattribute"></a>PDOStatement::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -70,5 +70,5 @@ echo $stmt->getAttribute( constant( "PDO::SQLSRV_ATTR_QUERY_TIMEOUT" ) );
 ## <a name="see-also"></a>另請參閱  
 [PDOStatement 類別](../../connect/php/pdostatement-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

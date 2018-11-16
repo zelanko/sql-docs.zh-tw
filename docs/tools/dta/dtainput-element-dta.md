@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -16,12 +15,12 @@ ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef4b0ba096186954f9aa20d4b63be53c4cef3ae8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d77f9a70ade63a2e8fdf1d063932b315d9f4656e
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678396"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291044"
 ---
 # <a name="dtainput-element-dta"></a>DTAInput 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

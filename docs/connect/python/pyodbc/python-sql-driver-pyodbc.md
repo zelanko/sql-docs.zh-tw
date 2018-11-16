@@ -11,12 +11,12 @@ ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: effb73bb9edc1567848cd8ff700747049f54e5a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1de13581ce371ed843e9290274dfcfd1a13c53c2
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608929"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604968"
 ---
 # <a name="python-sql-driver---pyodbc"></a>Python SQL 驅動程式 - pyodbc
 
@@ -30,4 +30,4 @@ ms.locfileid: "47608929"
 
 ## <a name="documentation"></a>文件集
 
-* [pyodbc 文件](http://mkleehammer.github.io/pyodbc/)  
+* [pyodbc 文件](https://mkleehammer.github.io/pyodbc/)  

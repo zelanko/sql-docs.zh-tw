@@ -14,12 +14,12 @@ ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50c03fb857a2c136748a5f9c5c4630bff29b49c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5424315950e33bda642b4c0e39474b3a87a63fbd
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691816"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602168"
 ---
 # <a name="how-to-specify-php-data-types"></a>如何：指定 PHP 資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47691816"
     如需用以指定 PHP 資料類型之常數的資訊，請參閱[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) 的＜PHPTYPE＞一節。  
   
 ## <a name="example"></a>範例  
-下列範例會從 AdventureWorks 資料庫的 *Production.ProductReview* 資料表中擷取資料列。 在每個傳回的資料列中，*ReviewDate* 欄位會擷取為字串，而 *Comments* 欄位會擷取為資料流。 串流資料可使用 PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) 函數來顯示。  
+下列範例會從 AdventureWorks 資料庫的 *Production.ProductReview* 資料表中擷取資料列。 在每個傳回的資料列中，*ReviewDate* 欄位會擷取為字串，而 *Comments* 欄位會擷取為資料流。 串流資料可使用 PHP [fpassthru](https://php.net/manual/en/function.fpassthru.php) 函數來顯示。  
   
 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   

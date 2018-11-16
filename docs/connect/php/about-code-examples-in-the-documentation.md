@@ -11,12 +11,12 @@ ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ff8b884253f43c0b1092eb5ad7244eca7f3e3db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1520106fa39e850bf09d78a5eeee955fba1260fb
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605816"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606738"
 ---
 # <a name="about-code-examples-in-the-documentation"></a>關於文件中的程式碼範例
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,11 +26,11 @@ ms.locfileid: "47605816"
   
 -   幾乎所有的範例假設 SQL Server 2008 或更新版本和 AdventureWorks 資料庫安裝在本機電腦上。  
   
-    如需如何下載 SQL Server 免費版和試用版的相關資訊，請參閱 [SQL Server](http://go.microsoft.com/fwlink/?LinkID=120193)。  
+    如需如何下載 SQL Server 免費版和試用版的相關資訊，請參閱 [SQL Server](https://go.microsoft.com/fwlink/?LinkID=120193)。  
   
     如需有關如何下載並安裝 AdventureWorks 資料庫的資訊，請參閱 < [SQL Server 範例 Github 儲存機制中的 AdventureWorks 頁面](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)。
   
--   本文件中幾乎所有的程式碼範例均應從命令列執行，如此可讓所有程式碼範例的測試自動化。 如需如何從命令列執行 PHP 的相關資訊，請參閱 [從命令列使用 PHP](http://php.net/manual/en/features.commandline.php)。  
+-   本文件中幾乎所有的程式碼範例均應從命令列執行，如此可讓所有程式碼範例的測試自動化。 如需如何從命令列執行 PHP 的相關資訊，請參閱 [從命令列使用 PHP](https://php.net/manual/en/features.commandline.php)。  
   
 -   雖然這些範例旨在從命令列執行，但每個範例都可以從瀏覽器叫用來執行，且無須對指令碼進行任何變更。 若要妥善格式化輸出，以取代每個"\n""\<\/b >"之前從瀏覽器叫用每個範例中。  
   

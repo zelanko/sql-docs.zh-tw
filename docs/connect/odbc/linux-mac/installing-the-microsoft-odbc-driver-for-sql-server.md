@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 7cbc1a78a2cce71494da04ffeb19649b22b2585e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4293880c6301712876d3a76a88ad9090925296b9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736476"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600798"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS (在 Linux 及 macOS 上安裝 Microsoft ODBC Driver for SQL Server)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -369,12 +369,12 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 - Red Hat：```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE：```glibc, libuuid1, krb5, openssl, unixODBC```
 
-這些每個封裝接著會有自己的相依性，這可能會或可能不存在於系統上。 此問題的一般解決方案，請參閱散發套件的套件管理員文件： [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)， [Ubuntu](http://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)，和[SUSE](https://en.opensuse.org/Portal:Zypper)
+這些每個封裝接著會有自己的相依性，這可能會或可能不存在於系統上。 此問題的一般解決方案，請參閱散發套件的套件管理員文件： [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)， [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)，和[SUSE](https://en.opensuse.org/Portal:Zypper)
 
 也很常見，手動下載所有相依的套件並將它們放在一起安裝在電腦上，然後再手動安裝，每個套件完成[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 13 封裝。
 
 #### <a name="redhat-linux-enterprise-server-7"></a>Redhat Linux Enterprise Server 7
-  - 下載最新`msodbcsql``.rpm`從這裡開始： http://packages.microsoft.com/rhel/7/prod/
+  - 下載最新`msodbcsql``.rpm`從這裡開始： https://packages.microsoft.com/rhel/7/prod/
   - 安裝相依性和驅動程式
   
 ```
@@ -383,7 +383,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
 #### <a name="ubuntu-1604"></a>Ubuntu 16.04
-- 下載最新`msodbcsql``.deb`從這裡開始： http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
+- 下載最新`msodbcsql``.deb`從這裡開始： https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
 - 安裝相依性和驅動程式 
 
 ```
@@ -392,7 +392,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
-- 下載最新`msodbcsql``.rpm`從這裡開始： http://packages.microsoft.com/sles/12/prod/
+- 下載最新`msodbcsql``.rpm`從這裡開始： https://packages.microsoft.com/sles/12/prod/
 - 安裝相依性和驅動程式
 
 ```
@@ -436,7 +436,7 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
   
 若要確認已成功註冊 Microsoft ODBC Driver on Linux，請執行下列命令：```odbcinst -q -d -n "ODBC Driver 11 for SQL Server"```。  
   
-[使用 ODBC Driver on Linux 的現有 MSDN C++ ODBC 範例](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) ，會顯示使用 ODBC Driver on Linux 連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的程式碼範例。  
+[使用 ODBC Driver on Linux 的現有 MSDN C++ ODBC 範例](https://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) ，會顯示使用 ODBC Driver on Linux 連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的程式碼範例。  
   
 **解除安裝**  
   
@@ -488,15 +488,15 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
   
 如需解決連接失敗的詳細資訊，請參閱：  
   
--   [疑難排解 SQL 連接性問題的步驟](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
+-   [疑難排解 SQL 連接性問題的步驟](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
--   [SQL Server 2005 連接問題的疑難排解 - 第 1 部分](http://blogs.msdn.com/b/sql_protocols/archive/2005/10/22/sql-server-2005-connectivity-issue-troubleshoot-part-i.aspx)  
+-   [SQL Server 2005 連接問題的疑難排解 - 第 1 部分](https://blogs.msdn.com/b/sql_protocols/archive/2005/10/22/sql-server-2005-connectivity-issue-troubleshoot-part-i.aspx)  
   
--   [使用連接信號緩衝區在 SQL Server 2008 中進行連接的疑難排解](http://blogs.msdn.com/b/sql_protocols/archive/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer.aspx)  
+-   [使用連接信號緩衝區在 SQL Server 2008 中進行連接的疑難排解](https://blogs.msdn.com/b/sql_protocols/archive/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer.aspx)  
   
--   [SQL Server 驗證疑難排解員](http://blogs.msdn.com/b/sqlsecurity/archive/2010/03/29/sql-server-authentication-troubleshooter.aspx)  
+-   [SQL Server 驗證疑難排解員](https://blogs.msdn.com/b/sqlsecurity/archive/2010/03/29/sql-server-authentication-troubleshooter.aspx)  
   
--   [錯誤詳細資料 (http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
+-   [錯誤詳細資料 (https://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](https://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
   
     應變更 URL 中指定的錯誤號碼 (11001)，以符合您所看到的錯誤。  
   

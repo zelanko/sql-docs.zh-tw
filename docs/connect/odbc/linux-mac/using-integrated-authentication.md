@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0edf87997b8b53266e7597b392bb217288590636
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9fc7f06a3b7c2455777b56de0875841c51905e95
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810146"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604358"
 ---
 # <a name="using-integrated-authentication"></a>使用整合式驗證
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -57,23 +57,23 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
 
 當應用程式作為服務執行時，因為 Kerberos 認證依設計到期，請更新認證以確保服務可持續使用。 ODBC 驅動程式不會更新認證本身;請確認有`cron`作業或更新他們的到期日之前的認證會定期執行的指令碼。 若要避免每次更新都需要密碼，您可以使用 keytab 檔案。  
   
-[Kerberos 的設定和用法](http://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) 詳細說明如何在 Linux 上 Kerberize 服務。
+[Kerberos 的設定和用法](https://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) 詳細說明如何在 Linux 上 Kerberize 服務。
   
 ## <a name="tracking-access-to-a-database"></a>追蹤對資料庫的存取
 
-資料庫管理員可在透過整合驗證存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系統帳戶 時，建立資料庫存取的稽核線索。  
+使用系統帳戶透過整合式驗證存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，資料庫管理員可以建立資料庫存取的稽核記錄。  
   
-登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用系統帳戶，且 Linux 上沒有模擬資訊安全內容的功能。 因此，需要有更多線索來判別使用者。
+登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時會使用系統帳戶，但 Linux 上並沒有模擬安全性內容的功能。 因此，需要有更多線索來判別使用者。
   
 若要代表系統帳戶以外的使用者稽核 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的活動，應用程式必須使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**。  
   
-若要改善應用程式效能，應用程式可以將連接共用與整合式驗證和稽核搭配使用。 不過，結合連線共用、整合驗證和稽核會產生安全性風險，原因是 unixODBC 驅動程式管理員允許不同使用者重複使用共用連線。 如需詳細資訊，請參閱 [ODBC 連接共用](http://www.unixodbc.org/doc/conn_pool.html)。  
+若要改善應用程式效能，應用程式可以將連接共用與整合式驗證和稽核搭配使用。 不過，結合連線共用、整合驗證和稽核會產生安全性風險，原因是 unixODBC 驅動程式管理員允許不同使用者重複使用共用連線。 如需詳細資訊，請參閱 [ODBC 連接共用](https://www.unixodbc.org/doc/conn_pool.html)。  
 
 在重複使用前，應用程式必須執行 `sp_reset_connection` 來重設共用連線。  
 
 ## <a name="using-active-directory-to-manage-user-identities"></a>使用 Active Directory 管理使用者身分識別
 
-應用程式系統管理員不需要分別管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的各組登入認證。 Active Directory 可以設定為整合式驗證的金鑰發佈中心 (KDC)。 請參閱[Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos)如需詳細資訊。
+應用程式系統管理員不需要管理個別的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]登入認證集。 Active Directory 可以設定為整合式驗證的金鑰發佈中心 (KDC)。 請參閱[Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos)如需詳細資訊。
 
 ## <a name="using-linked-server-and-distributed-queries"></a>使用連結的伺服器和分散式查詢
 
@@ -81,9 +81,9 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 -   使用者登入用戶端電腦，並向應用程式伺服器進行驗證。  
   
--   應用程式伺服器驗證為不同的資料庫，並連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+-   應用程式伺服器驗證為不同的資料庫，並連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會向另一個資料庫驗證為資料庫使用者 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 向另一個資料庫 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) 驗證為資料庫使用者。  
   
 在設定整合式驗證之後，認證將會傳遞至連結的伺服器。  
   
@@ -126,7 +126,7 @@ Linux 或 macOS 電腦上的時間和 Kerberos 金鑰發佈中心 (KDC) 上的�
 
 如果 Kerberos 驗證失敗， Linux 或 macOS 上的 ODBC 驅動程式不會使用 NTLM 驗證。  
 
-如需有關如何驗證與 Active Directory 的 Linux 或 macOS 電腦的詳細資訊，請參閱[使用 Active Directory 驗證 Linux 用戶端](http://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)和[整合 OS X 與 Active Directory的最佳作法](http://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). 如需有關如何設定 Kerberos 的詳細資訊，請參閱 < [MIT Kerberos 文件](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)。
+如需有關如何驗證與 Active Directory 的 Linux 或 macOS 電腦的詳細資訊，請參閱[使用 Active Directory 驗證 Linux 用戶端](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)和[整合 OS X 與 Active Directory的最佳作法](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). 如需有關如何設定 Kerberos 的詳細資訊，請參閱 < [MIT Kerberos 文件](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)。
 
 ## <a name="see-also"></a>另請參閱  
 [程式設計指導方針](../../../connect/odbc/linux-mac/programming-guidelines.md)

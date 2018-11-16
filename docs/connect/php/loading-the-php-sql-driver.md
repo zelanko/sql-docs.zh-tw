@@ -13,12 +13,12 @@ ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eec1a271e10e85c9a22bfa45c75c8ac5efbbf7d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dd99ffa39de48dbf8839cbe06a8bb236fffbdf3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785612"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606198"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>載入 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -77,9 +77,9 @@ extension_dir = "c:\PHP\ext"
 3.  重新啟動 Web 伺服器。  
   
 > [!NOTE]  
-> 若要判斷是否已成功載入驅動程式，請執行可呼叫 [phpinfo()](http://php.net/manual/en/function.phpinfo.php) 的指令碼。  
+> 若要判斷是否已成功載入驅動程式，請執行可呼叫 [phpinfo()](https://php.net/manual/en/function.phpinfo.php) 的指令碼。  
   
-如需 **php.ini** 指示詞的詳細資訊，請參閱[核心 php.ini 指示詞的描述](http://php.net/manual/en/ini.core.php)。  
+如需 **php.ini** 指示詞的詳細資訊，請參閱[核心 php.ini 指示詞的描述](https://php.net/manual/en/ini.core.php)。  
   
 ## <a name="see-also"></a>另請參閱  
 [開始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

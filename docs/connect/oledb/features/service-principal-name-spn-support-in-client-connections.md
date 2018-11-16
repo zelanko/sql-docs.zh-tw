@@ -15,12 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 6ebcd45f6c115a6b27262166122a37653474a3f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae488cfeabc3d506bc53b455f0df6149c537765d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787387"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605278"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>用戶端連接中的服務主要名稱 (SPN) 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,20 +37,20 @@ ms.locfileid: "47787387"
 >  用戶端應用程式所指定的 SPN 僅能在建立與 Windows 整合式安全性的連接時使用。  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** 是一種診斷工具，可幫助排除 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]發生的 Kerberos 相關連接問題。 如需詳細資訊，請參閱 [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046)。  
+>  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** 是一種診斷工具，可幫助排除 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]發生的 Kerberos 相關連接問題。 如需詳細資訊，請參閱 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。  
   
  如需有關 Kerberos 的詳細資訊，請參閱下列文件：  
   
--   [Kerberos Technical Supplement for Windows](http://go.microsoft.com/fwlink/?LinkId=101449) (適用於 Windows 的 Kerberos 技術補充)  
+-   [Kerberos Technical Supplement for Windows](https://go.microsoft.com/fwlink/?LinkId=101449) (適用於 Windows 的 Kerberos 技術補充)  
   
--   [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkID=100758)  
+-   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
 ## <a name="usage"></a>使用方式  
  下表描述用戶端應用程式可允許安全驗證的常見案例。  
   
 |狀況|Description|  
 |--------------|-----------------|  
-|舊版應用程式不會指定 SPN。|此相容性案例保證對於針對舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 開發的應用程式沒有行為上的變更。 如果沒有指定 SPN，應用程式會依賴所產生的 SPN，而且不會知道所使用的驗證方法。|  
+|舊版應用程式不會指定 SPN。|此相容性案例保證對於針對舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]開發的應用程式沒有行為上的變更。 如果沒有指定 SPN，應用程式會依賴所產生的 SPN，而且不會知道所使用的驗證方法。|  
 |使用目前版本 OLE DB Driver for SQL Server 的用戶端應用程式會將連接字串中的 SPN 指定為網域使用者或電腦帳戶、執行個體專屬的 SPN，或使用者定義的字串。|**ServerSPN** 關鍵字可以在提供者、初始化或連接字串中使用，以執行下列操作：<br /><br /> -指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體用於連接的帳戶。 這會簡化 Kerberos 驗證的存取。 如果有 Kerberos 金鑰發行中心 (KDC)，而且有指定正確的帳戶，則可能使用 Kerberos 驗證而非 NTLM。 KDC 通常位於與網域控制站相同的電腦上。<br /><br /> -指定 SPN 來查閱 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的服務帳戶。 對於每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，系統會產生可用於此目的的兩個預設 SPN。 不過，系統不保證這些金鑰存在於 Active Directory 中，因此在此情況下，不保證使用 Kerberos 驗證。<br /><br /> -指定將用於查閱 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之服務帳戶的 SPN。 這可以是對應到服務帳戶的任何使用者定義字串。 在此情況下，必須在 KDC 中手動註冊金鑰，而且必須滿足使用者定義 SPN 的規則。<br /><br /> **FailoverPartnerSPN** 關鍵字可用於指定容錯移轉夥伴伺服器的 SPN。 帳戶的範圍與 Active Directory 金鑰值與您針對主體伺服器指定的值相同。|  
 |OLE DB 應用程式會將 SPN 指定為主體伺服器或容錯移轉夥伴伺服器的資料來源初始化屬性。|**SSPROP_INIT_SERVER_SPN** 屬性集中的連接屬性 **DBPROPSET_SQLSERVERDBINIT** 可用於指定連接的 SPN。<br /><br /> **SSPROP_INIT_FAILOVER_PARTNER_SPN** 中的連接屬性 **DBPROPSET_SQLSERVERDBINIT** 可用於指定容錯移轉夥伴伺服器的 SPN。|   
 |使用者會在 OLE DB 的 **[資料連結]** 或 **[登入]** 對話方塊中指定伺服器或容錯移轉夥伴伺服器的 SPN。|SPN 可以在 **[資料連結]** 或 **[登入]** 對話方塊中指定。|   
@@ -105,7 +105,7 @@ ms.locfileid: "47787387"
   
 -   [用戶端連接 &#40;OLE DB&#41; 中的服務主體名稱 &#40;SPN&#41;](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
- 如需有關示範這項功能之範例應用程式的詳細資訊，請參閱 [SQL Server 資料可程式性範例](http://msftdpprodsamples.codeplex.com/)。  
+ 如需有關示範這項功能之範例應用程式的詳細資訊，請參閱 [SQL Server 資料可程式性範例](https://msftdpprodsamples.codeplex.com/)。  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB Driver for SQL Server 功能](../../oledb/features/oledb-driver-for-sql-server-features.md)   

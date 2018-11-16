@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: f68761672232d2fed88ec3b56d5349d4f925fd43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cde5de04f06c7954ad9eb5ae721ae1c4ba04e4ce
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718306"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606258"
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server 中的疏鬆資料行支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47718306"
   
  如需有關在 OLE DB Driver for SQL Server 的疏鬆資料行支援[疏鬆資料行支援&#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)。  
   
- 如需示範這項功能之範例應用程式的詳細資訊，請參閱 [SQL Server 資料程式設計範例](http://msftdpprodsamples.codeplex.com/)。  
+ 如需示範這項功能之範例應用程式的詳細資訊，請參閱 [SQL Server 資料程式設計範例](https://msftdpprodsamples.codeplex.com/)。  
   
 ## <a name="user-scenarios-for-sparse-columns-and-ole-db-driver-for-sql-server"></a>疏鬆資料行和 OLE DB Driver for SQL Server 的使用者案例  
  下表摘要說明 OLE DB driver 具有疏鬆資料行的 SQL Server 使用者一般使用者案例：  

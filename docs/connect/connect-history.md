@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 manager: kenvh
-ms.openlocfilehash: 9dcce05957fb00cc966a9667e59b6b510396362a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d040c333aec94cc1de41df03906470356a530faa
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691286"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605628"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL Server 的驅動程式歷程記錄
 
@@ -96,7 +96,7 @@ MDAC/WDAC 包含下列元件：
 * **SQLODBC:** Microsoft SQL Server ODBC 驅動程式 (SQLODBC)，可支援 Microsoft SQL server 的存取，已被取代。 其連線到 SQL Server 的未來版本可能不支援。 Windows 7 之後，將從作業系統移除連接版本早於 SQL Server 7 的能力。 新的應用程式應該使用可支援新的 SQL Server 功能的 Windows 上的 SQL Server 的 Microsoft ODBC 驅動程式。 現有的應用程式應該移轉至 Microsoft ODBC Driver for SQL Server 也較佳的效能、 可靠性和可支援性的。 相關的資訊，請參閱[更新至 SQL Server Native Client 應用程式從 MDAC](../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)。
 * **Microsoft Jet Database Engine 4.0:** 從 2.6 版開始，MDAC 不會再包含 Jet 元件。 換句話說，MDAC 2.6，2.7、 2.8 不包含 Microsoft Jet、 Microsoft Jet OLE DB 提供者、 ODBC 桌面資料庫驅動程式或 Jet 資料存取物件 (DAO)。 Microsoft Jet 資料庫引擎 4.0 元件進入功能已被取代的狀態和持續工程，哪些尚未收到自現為 Microsoft Windows Windows 2000 中的功能層級的增強功能。
 
-  沒有可用的 64 位元版本的 Jet Database Engine、 Jet OLEDB 驅動程式、 Jet ODBC 驅動程式或 Jet DAO。 如需詳細資訊，請參閱[知識庫文章 957570](http://support.microsoft.com/kb/957570)。 在 64 位元版本的 Windows，32 位元 Jet 是 Windows WOW64 子系統下執行。 如需有關 WOW64 的詳細資訊，請參閱[MSDN WOW64 文件](/windows/desktop/WinProg64/wow64-implementation-details)。 原生的 64 位元應用程式無法與在 WOW64 中執行的 32 位元 Jet 驅動程式通訊。
+  沒有可用的 64 位元版本的 Jet Database Engine、 Jet OLEDB 驅動程式、 Jet ODBC 驅動程式或 Jet DAO。 如需詳細資訊，請參閱[知識庫文章 957570](https://support.microsoft.com/kb/957570)。 在 64 位元版本的 Windows，32 位元 Jet 是 Windows WOW64 子系統下執行。 如需有關 WOW64 的詳細資訊，請參閱[MSDN WOW64 文件](/windows/desktop/WinProg64/wow64-implementation-details)。 原生的 64 位元應用程式無法與在 WOW64 中執行的 32 位元 Jet 驅動程式通訊。
 
   而不是 Microsoft Jet，Microsoft 建議您使用[Microsoft SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)開發新的、 需要關聯式資料存放區的非 Microsoft Access 應用程式時。 這些新的或已轉換的 Jet 應用程式可以繼續使用 Jet 藉由使用 Microsoft Office 2003 和舊版的檔案 （.mdb 和.xls），來儲存非主要資料。 不過，對於這些應用程式中，您應該規劃從 Jet 移轉到 2007 Office System 驅動程式。 您可以[下載 2007 Office System 驅動程式](https://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=7554f536-8c28-4598-9b72-ef94e038c891)，可讓您讀取和寫入至已存在的檔案 （.mdb 和.xls） 的 Office 2003 或 Office 2007 （*.accdb、 *.xlsm、 *.xlsx 和 *.xlsb） 檔案格式中。
 
@@ -110,7 +110,7 @@ MDAC/WDAC 包含下列元件：
 * **Oracle ODBC 和 Oracle OLE DB:** Microsoft Oracle ODBC 驅動程式 (Oracle ODBC) 和 Microsoft OLE DB Provider for Oracle (Oracle OLE DB) 提供的 Oracle 資料庫伺服器的存取權。 它們會使用 Oracle Call Interface (OCI) 第 7 版所建置，並提供適用於 Oracle 7 的完整支援。 此外，它會使用 Oracle 7 模擬為 Oracle 8 資料庫提供有限的支援。 Oracle 不支援使用 OCI 第 7 版呼叫的應用程式。 這些技術已被取代。 如果您使用 Oracle 資料來源，您應該移轉到 Oracle 提供的驅動程式和提供者。
 * **RDS:** 遠端資料服務 (RDS) 是透過網際網路或近端內部網路存取遠端的 ADO 資料錄集物件的專屬 Microsoft 機制。 RDS 是已被取代;任何主要功能增強功能不進行了 RDS 自 MDAC 2.1。 Microsoft 已發行.NET Framework，但有廣泛的 SOAP 功能，並取代 RDS 元件。 在 Windows 7 之後，將從作業系統移除所有 RDS 伺服器元件。
 * **JRO:** Jet 複寫物件 」 (JRO) 已被取代。 JRO 用於 ADO 與 Jet (*.mdb) 資料庫，以建立並壓縮 Jet 資料庫 (.mdb)，並執行 Jet 複寫管理。MDAC 2.7 會其最後一個版本。JRO 無法在 64 位元 Windows 作業系統上。Microsoft Access 2007 檔案格式中不支援 JRO (*.accdb)。
-* **16 位元 ODBC 支援：** 如果您使用的 16 位元應用程式，您應該將它移轉至 32 位元應用程式。 16 位元功能已被取代，正在從 64 位元作業系統中移除。 如需詳細資訊，請參閱[知識庫文章 896458](http://support.microsoft.com/kb/896458)。
+* **16 位元 ODBC 支援：** 如果您使用的 16 位元應用程式，您應該將它移轉至 32 位元應用程式。 16 位元功能已被取代，正在從 64 位元作業系統中移除。 如需詳細資訊，請參閱[知識庫文章 896458](https://support.microsoft.com/kb/896458)。
 * **OLEDB 簡單提供者 (MSDAOSP):** OLEDB 簡單提供者提供快速建置簡單的資料上的 OLE DB 提供者架構。 MSDAOSP 已被取代。
 * **ODBC 資料指標程式庫：** ODBC 資料指標程式庫 (ODBCCR32.dll) 提供有限的用戶端資料指標。 ODBC 資料指標程式庫已被取代;您的應用程式可以使用伺服器端資料指標實作，來取代。
 * **OLE DB 跨處理序介面的遠端處理：** OLEDB 介面遠端 (msdaps.dll) 嘗試讓 OLE DB 提供者跨處理序。 OLEDB 跨處理序介面的遠端執行功能已被取代。

@@ -11,12 +11,12 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7f41b727fe84ab0454a85466cfa74c376788b9e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7da4795d3485f5165ac7844f00d5a46f0a29cc9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730576"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603664"
 ---
 # <a name="date-and-time-improvements"></a>日期和時間改善
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47730576"
   
  如需有關日期/時間改善功能的詳細資訊，請參閱 <<c0> [ 日期和時間改善&#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)。</c0>  
   
- 如需示範這項功能之範例應用程式的詳細資訊，請參閱 [SQL Server 資料程式設計範例](http://msftdpprodsamples.codeplex.com/)。  
+ 如需示範這項功能之範例應用程式的詳細資訊，請參閱 [SQL Server 資料程式設計範例](https://msftdpprodsamples.codeplex.com/)。  
   
 ## <a name="usage"></a>使用方式  
  下列章節描述使用新日期和時間類型的各種方式。  

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -16,12 +15,12 @@ ms.assetid: 9bc5d1d5-27a7-4434-966f-c3935794af27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a53ae778d6c39cc6c83099bc1cd18b76733a4d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29cf98af6f52daae37f4d38ea844a39273c9eb93
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753416"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51290665"
 ---
 # <a name="partitioning-element-dta"></a>Partitioning 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - SqlLocalDB utility [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9fb0cae29d4e0803b62c968c2fc84bc6cc208b1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d845b000daa4610fc19e573342faaef361c0de01
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661976"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51292084"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

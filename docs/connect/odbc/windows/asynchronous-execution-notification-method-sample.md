@@ -11,17 +11,17 @@ ms.assetid: 55c51fff-119d-445f-8732-c1569966e559
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 652e6ad7792917c198bc521a484275a005cd1ea0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25b3fd8ae5c4f63c69200eaec8a736d8c44931f5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639176"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603581"
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>非同步執行 (通知方法) 範例
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  本主題中的程式碼範例示範如何使用[非同步執行 (通知方法)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx)。  
+  本主題中的程式碼範例示範如何使用[非同步執行 (通知方法)](https://msdn.microsoft.com/library/hh405038(VS.85).aspx)。  
   
  此函式會使用非同步通知開啟五個連線，並且對每個連線的陳述式執行一個查詢。  
   

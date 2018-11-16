@@ -11,17 +11,17 @@ ms.assetid: 9c77b68d-0649-44af-96fa-586cbb319f5f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d30d4a0fafb9153a4f5e4b2067dc7fc54a15cc5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edaca465d4c3c078ff837f30ab0f8881c59a7f72
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784736"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600488"
 ---
 # <a name="pdo-class"></a>PDO 類別
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-PDO 類別包含可讓您的 PHP 應用程式連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的方法。  
+PDO 類別包含可讓您的 PHP 應用程式連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -74,5 +74,5 @@ PDO 類別包含下列方法：
 
 [開始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

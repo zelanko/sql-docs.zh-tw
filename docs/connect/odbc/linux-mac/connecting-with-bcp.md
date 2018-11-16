@@ -13,17 +13,17 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eff5cd89f349b3835eaace4d75c3a3a13655b4b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf2dbc66590360b5f7a06409eccff7244ba89224
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682636"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600158"
 ---
 # <a name="connecting-with-bcp"></a>連接 bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[Bcp](http://go.microsoft.com/fwlink/?LinkID=190626) 公用程式可在 Linux 和 macOS 版 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 上使用。 本頁記載的 Windows 版本的差異`bcp`。
+[Bcp](https://go.microsoft.com/fwlink/?LinkID=190626) 公用程式可在 Linux 和 macOS 版 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 上使用。 本頁記載的 Windows 版本的差異`bcp`。
   
 - 欄位結束字元是定位字元 ("\t")。  
   
@@ -112,7 +112,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定 `bcp` 公用程式使用信任連線 (整合式安全性) 連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 - -U *login_id*  
-指定用來連接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登入識別碼。  
+指定用來連接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的登入識別碼。  
   
 - -V  
 報告 `bcp` 公用程式版本號碼和著作權。  
@@ -141,7 +141,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定接收來自命令提示字元重新導向之輸出的檔案名稱。  
   
 - -V (80 | 90 | 100)  
-使用舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料類型。  
+使用舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的資料類型。  
   
 - -X  
 與 format 和 -f format_file 選項一起使用，會產生以 XML 為基礎的格式檔案，而非預設的非 XML 格式檔案。  

@@ -15,12 +15,12 @@ ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09422214ac33ed7179d66a46aed9db09f2ef6039
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1527b212385f280d16bf3f86ce753352b4fb744
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805306"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603938"
 ---
 # <a name="connecting-to-sql-server"></a>連線到 SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -64,18 +64,18 @@ Server = [protocol:]server[,port]
  - **bcp master.INFORMATION_SCHEMA.TABLES 出 OutFile.dat-S <server> -U <name> -P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>使用安全通訊端層 (SSL)  
-您可以使用安全通訊端層 (SSL) 加密與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的連線。 SSL 會保護網路上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用者名稱和密碼。 SSL 也會驗證伺服器的身分識別，以防止攔截式 (MITM) 攻擊。  
+您可以使用安全通訊端層 (SSL) 來加密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的連接。 SSL 會保護網路上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用者名稱和密碼。 SSL 也會驗證伺服器的身分識別，以防止攔截式 (MITM) 攻擊。  
 
 啟用加密可提高安全性，但會犧牲效能。
 
-如需詳細資訊，請參閱 <<c0> [ 加密 SQL Server 的連接](http://go.microsoft.com/fwlink/?LinkId=220900)並[使用加密而不需驗證](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)。
+如需詳細資訊，請參閱 <<c0> [ 加密 SQL Server 的連接](https://go.microsoft.com/fwlink/?LinkId=220900)並[使用加密而不需驗證](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)。
 
 無論 **Encrypt** 和 **TrustServerCertificate**的設定為何，伺服器登入認證 (使用者名稱和密碼) 一律都會加密。 下表說明 **Encrypt** 和 **TrustServerCertificate** 設定的效用。  
 
 ||**TrustServerCertificate = 否**|**TrustServerCertificate = yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|不檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料不會加密。|不檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料不會加密。|  
-|**Encrypt=yes**|會檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料會加密。<br /><br />[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 憑證內主體一般名稱 (CN) 或主體別名 (SAN) 中的名稱 (或 IP 位址) 應完全符合指定在連接字串中的伺服器名稱 (或 IP 位址)。|不檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料會加密。|  
+|**Encrypt=yes**|會檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料會加密。<br /><br />[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 憑證中的主體一般名稱 (CN) 或主體別名 (SAN) 中的名稱 (或 IP 位址)，應完全符合連接字串中指定的伺服器名稱 (或 IP 位址)。|不檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料會加密。|  
 
 根據預設，加密的連接一律會驗證伺服器的憑證。 不過，如果您連接到已自我簽署的憑證的伺服器，也新增`TrustServerCertificate`略過檢查憑證的受信任的憑證授權單位清單進行比對的選項：  
 

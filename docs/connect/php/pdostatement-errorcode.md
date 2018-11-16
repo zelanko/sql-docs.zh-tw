@@ -11,12 +11,12 @@ ms.assetid: 4161abec-c12b-444e-9de5-f1dac7b3e0e4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d83174f1ddc9dfdeb41bf3df1feaf196ce11c53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5bbe2c3bc3aa3b75a32e5567ee4e1891b303e52
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743046"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604748"
 ---
 # <a name="pdostatementerrorcode"></a>PDOStatement::errorCode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,5 +52,5 @@ print $stmt->errorCode();
 ## <a name="see-also"></a>另請參閱  
 [PDOStatement 類別](../../connect/php/pdostatement-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

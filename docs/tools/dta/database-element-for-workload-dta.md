@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -16,12 +15,12 @@ ms.assetid: 112fca2a-37e5-4162-b2e7-b56eb8ab0c6f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ac28cd994e21b2afe8934a131dc8c48f8b70b4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 880edbcbf109e57e043e52b7d6e180edd2b7b00b
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709426"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51292714"
 ---
 # <a name="database-element-for-workload-dta"></a>工作負載的 Database 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

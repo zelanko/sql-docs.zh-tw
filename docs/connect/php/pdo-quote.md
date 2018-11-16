@@ -11,12 +11,12 @@ ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eaf86787fb87824363745b565050ec9facde093d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b14ce7da2a7cb7fbc59de41fc7a651c6e67c86c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705356"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604729"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -65,5 +65,5 @@ $stmt->execute(array($param, $param2));
 ## <a name="see-also"></a>另請參閱  
 [PDO 類別](../../connect/php/pdo-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

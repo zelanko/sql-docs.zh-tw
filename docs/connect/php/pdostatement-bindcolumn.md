@@ -11,12 +11,12 @@ ms.assetid: bbdcea53-d23d-4769-89a0-95c7cf4d5390
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1e870d28371b44f77db8d7023fe7b7978ca01d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a283106d84cbfd28fb22bc3539dfa193934aafb3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801766"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605828"
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -70,5 +70,5 @@ while ( $row = $stmt->fetch( PDO::FETCH_BOUND ) ){
 ## <a name="see-also"></a>另請參閱  
 [PDOStatement 類別](../../connect/php/pdostatement-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

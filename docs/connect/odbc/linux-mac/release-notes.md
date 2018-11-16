@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 30dffe30bfe0b87156f65d5c21bd0aaba033f0af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62270c3cce4b1a5f57874d6cd40c7c64ff409100
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746846"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600298"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上 Microsoft ODBC Driver for SQL Server 的版本資訊
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -111,10 +111,10 @@ Ubuntu 現在已連同 Red Hat 和 SUSE 受到支援。 每個平台具有平台
 **TLS 1.2 支援**: Linux 上的 SQL Server 的 Microsoft ODBC Driver 13.0 現在支援 TLS 1.2，使用與 SQL Server 的安全通訊時。
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>Linux 和 macOS 上 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的新功能  
-ODBC Driver on SUSE Linux (預覽) 支援 64 位元 SUSE Linux Enterprise 11 Service Pack 2。 如需詳細資訊，請參閱[系統需求](../../../connect/odbc/linux-mac/system-requirements.md)。  
+ODBC Driver on SUSE Linux (預覽) 支援 64 位元 SUSE Linux Enterprise 11 Service Pack 2。 如需詳細資訊，請參閱 [System Requirements](../../../connect/odbc/linux-mac/system-requirements.md)。  
 
-Linux 上的 ODBC 驅動程式支援 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]。 如需詳細資訊，請參閱 < [ODBC Driver on Linux 支援的高可用性、 災害復原](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
+ODBC Driver on Linux 支援 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]。 如需詳細資訊，請參閱 < [ODBC Driver on Linux 支援的高可用性、 災害復原](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
 
-ODBC Driver on Linux 支援對 Microsoft Azure SQL Database 的連接。 如需詳細資訊，請參閱 [如何：使用 ODBC 連接到 Windows Azure SQL Database](http://msdn.microsoft.com/library/hh974312.aspx)。  
+ODBC Driver on Linux 支援對 Microsoft Azure SQL Database 的連接。 如需詳細資訊，請參閱 [如何：使用 ODBC 連接到 Windows Azure SQL Database](https://msdn.microsoft.com/library/hh974312.aspx)。  
 
 `-l`選項 （登入逾時） 已新增至`bcp`。 如需詳細資訊，請參閱[使用 **bcp** 連線](../../../connect/odbc/linux-mac/connecting-with-bcp.md)。

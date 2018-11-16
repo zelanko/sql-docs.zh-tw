@@ -11,18 +11,18 @@ ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e4f058b1ae9f35df86b1e326c520bd4ebb588c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd82f894db2afc469c40c883deab2071b0e89f98
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798896"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600448"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>使用 Kerberos 整合式驗證連接到 SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-從 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 開始，應用程式可使用 **authenticationScheme** 連線屬性來指定要使用類型 4 Kerberos 整合驗證連線至資料庫。 請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)如需有關連接屬性。 如需有關 Kerberos 的詳細資訊，請參閱 < [Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkID=100758)。
+從 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 開始，應用程式可使用 **authenticationScheme** 連線屬性來指定要使用類型 4 Kerberos 整合驗證連線至資料庫。 請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)如需有關連接屬性。 如需有關 Kerberos 的詳細資訊，請參閱 < [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)。
 
 當您搭配 Java **Krb5LoginModule** 使用整合驗證時，可使用 [Class Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html) (類別 Krb5LoginModule) 設定模組。
 
@@ -31,7 +31,7 @@ ms.locfileid: "47798896"
 - **useDefaultCcache = true**
 - **moduleBanner = false**
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會為其他所有 Java VM 設定下列屬性：
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會針對所有其他 Java VM 設定以下屬性：
 
 - **useTicketCache = true**
 - **doNotPrompt = true**
@@ -54,7 +54,7 @@ ms.locfileid: "47798896"
 
 以下指導方針可幫助您設定 Kerberos：
 
-1. 設定**AllowTgtSessionKey**為 1 的 Windows 登錄中。 如需詳細資訊，請參閱 [Windows Server 2003 中的 Kerberos 通訊協定登錄項目與 KDC 設定金鑰](http://support.microsoft.com/kb/837361)。
+1. 設定**AllowTgtSessionKey**為 1 的 Windows 登錄中。 如需詳細資訊，請參閱 [Windows Server 2003 中的 Kerberos 通訊協定登錄項目與 KDC 設定金鑰](https://support.microsoft.com/kb/837361)。
 2. 確定 Kerberos 組態 (UNIX 環境中的 krb5.conf) 指向您的環境所適用的正確領域和 KDC。
 3. 使用 kinit 或登入網域來初始化 TGT 快取。
 4. 當使用 **authenticationScheme=JavaKerberos** 的應用程式在 Windows Vista 或 Windows 7 作業系統上執行時，您應使用標準使用者帳戶。 但是，如果您在系統管理員帳戶之下執行應用程式，則必須以系統管理員權限執行此應用程式。
@@ -72,9 +72,9 @@ ms.locfileid: "47798896"
 
 如需有關服務主要名稱 (SPN) 的詳細資訊，請參閱：
 
-- [如何在 SQL Server 中使用 Kerberos 驗證](http://support.microsoft.com/kb/319723)
+- [如何在 SQL Server 中使用 Kerberos 驗證](https://support.microsoft.com/kb/319723)
 
-- [搭配 SQL Server 使用 Kerberos](http://go.microsoft.com/fwlink/?LinkId=207814)
+- [搭配 SQL Server 使用 Kerberos](https://go.microsoft.com/fwlink/?LinkId=207814)
 
 > [!NOTE]  
 > 6.2 版 JDBC 驅動程式的跨領域 Kerberos，正確地使用之前，您就必須明確設定**serverSpn**。

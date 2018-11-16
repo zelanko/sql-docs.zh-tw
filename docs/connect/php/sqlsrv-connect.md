@@ -19,12 +19,12 @@ ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb1a54fc32fe4f840a0023fc707d5d93b0284f32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8df39220a9d3ee2286e4ed86610790e20a3b78c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700896"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601188"
 ---
 # <a name="sqlsrvconnect"></a>sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -54,7 +54,7 @@ PHP 連接資源。 如果連接無法成功建立並開啟，則傳回 **false*
 如果未在選用 *$connectionInfo* 參數中指定 *UID* 和 *PWD* 索引鍵的值，則會使用 Windows 驗證嘗試進行連接。 如需關於連接到伺服器的詳細資訊，請參閱 [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md) 和 [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)。  
   
 ## <a name="example"></a>範例  
-下列範例會使用 Windows 驗證建立及開啟連接。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](http://www.codeplex.com/SqlServerSamples) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+下列範例會使用 Windows 驗證建立及開啟連接。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://www.codeplex.com/SqlServerSamples) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  

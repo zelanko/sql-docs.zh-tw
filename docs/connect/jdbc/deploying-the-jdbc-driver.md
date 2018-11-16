@@ -11,19 +11,19 @@ ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40def6feee993604fb65ebc1abd2d98f5c0718ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 543651938433e2ac6824ea771edc1eba11540558
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751756"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603038"
 ---
 # <a name="deploying-the-jdbc-driver"></a>部署 JDBC 驅動程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   當部署會相依於 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的應用程式時，必須隨著應用程式一起轉散發 JDBC 驅動程式。 不同於 Windows Data Access Components (Windows DAC) (它是 Windows 作業系統的元件)，JDBC 驅動程式被視為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的元件。  
   
- 有兩種方法可利用應用程式部署 JDBC Driver。 第一種方法就是將 JDBC 驅動程式檔案包括為自訂安裝封裝的一部份。 第二種方法牽涉到使用 Microsoft 提供的 JDBC 安裝套件，您可以從 [Microsoft JDBC Driver for SQL Server 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=70166)下載此套件。  
+ 有兩種方法可利用應用程式部署 JDBC Driver。 第一種方法就是將 JDBC 驅動程式檔案包括為自訂安裝封裝的一部份。 第二種方法牽涉到使用 Microsoft 提供的 JDBC 安裝套件，您可以從 [Microsoft JDBC Driver for SQL Server 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=70166)下載此套件。  
   
  下列幾節討論如何在 Windows 及 UNIX 作業系統上使用 JDBC 安裝封裝。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "47751756"
 >  使用 `/auto` 選項時，它並不是真的無訊息安裝，因為 WinZip 對話方塊仍會出現在使用者的畫面上。 不過，您將不需要與其互動，而且解壓縮作業一完成，它就會關閉。  
   
 ## <a name="deploying-the-driver-on-unix-systems"></a>在 UNIX 系統上部署驅動程式  
- 在 UNIX 作業系統上部署 JDBC 驅動程式時，您必須使用安裝套件的 GZIP 檔版本，通常名為 `sqljdbc_<version>_<language>.tar.gz`。  
+ 在 UNIX 作業系統上部署 JDBC 驅動程式時，您必須使用安裝封裝的 gzip 檔版本，通常名為 `sqljdbc_<version>_<language>.tar.gz`。  
   
  在安裝 JDBC 驅動程式之前，請確定 gzip 和 tar 公用程式已安裝在使用者的系統上，並確定包含這兩個公用程式之執行檔的資料夾已新增至 PATH 環境變數。  
   

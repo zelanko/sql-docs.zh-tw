@@ -11,12 +11,12 @@ ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 442e9693bcb06f6ea4fc94acbd3c020a598da504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4091b9334b024519054738c4f3fde6d0d0348625
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664656"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602988"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Node.js Driver for SQL Server
 
@@ -33,7 +33,7 @@ ms.locfileid: "47664656"
   
 ## <a name="documentation"></a>文件集  
   
-[在 Github 上的冗長乏味的模組文件](http://tediousjs.github.io/tedious/)  
+[在 Github 上的冗長乏味的模組文件](https://tediousjs.github.io/tedious/)  
   
 ## <a name="community"></a>社群  
 * [Azure Node.js 開發人員中心](https://azure.microsoft.com/develop/nodejs/)  

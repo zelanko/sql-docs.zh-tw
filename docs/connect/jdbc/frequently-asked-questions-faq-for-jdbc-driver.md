@@ -11,12 +11,12 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f0197ed97f8d03784cd89d2bede5a4e7744e80f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65963e0e41bc4bb85ac3c734efc30835f371191e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613416"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603088"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC Driver 常見問題集 (FAQ)
 
@@ -105,25 +105,25 @@ JDBC Driver 4.1/4.2、 6.0、 6.2、 6.4、 / 7.0 是可轉散發套件。 檢�
 是的。 驅動程式支援使用 IPv6 位址。 使用連接屬性集合和 serverName 連接字串屬性。 如需詳細資訊，請參閱[建置連線 URL](../../connect/jdbc/building-the-connection-url.md)。
 
 **什麼是自適性緩衝？**  
-適應性緩衝是從 Microsoft SQL Server 2005 JDBC Driver 1.2 版引進。 它是針對在沒有伺服器資料指標負擔的情況下，擷取任何種類的大數值資料而設計的。 Microsoft SQL Server JDBC Driver 的自適性緩衝功能提供連接字串屬性 responseBuffering，可以設定為 "adaptive" 或 "full"。 在 1.2 版中，預設的緩衝模式為 "full"，而且應用程式必須明確自適性緩衝模式。 自 JDBC Driver 2.0 版起，此驅動程式的預設行為是 "adaptive"。 因此，您的應用程式不需要明確要求自適性行為，就能取得自適性緩衝行為。 如需詳細資訊，請參閱[使用自適性緩衝](../../connect/jdbc/using-adaptive-buffering.md)與[什麼是自適性回應緩衝以及我為何應該使用它？](http://go.microsoft.com/fwlink/?LinkId=111575)部落格。
+適應性緩衝是從 Microsoft SQL Server 2005 JDBC Driver 1.2 版引進。 它是針對在沒有伺服器資料指標負擔的情況下，擷取任何種類的大數值資料而設計的。 Microsoft SQL Server JDBC Driver 的自適性緩衝功能提供連接字串屬性 responseBuffering，可以設定為 "adaptive" 或 "full"。 在 1.2 版中，預設的緩衝模式為 "full"，而且應用程式必須明確自適性緩衝模式。 自 JDBC Driver 2.0 版起，此驅動程式的預設行為是 "adaptive"。 因此，您的應用程式不需要明確要求自適性行為，就能取得自適性緩衝行為。 如需詳細資訊，請參閱[使用自適性緩衝](../../connect/jdbc/using-adaptive-buffering.md)與[什麼是自適性回應緩衝以及我為何應該使用它？](https://go.microsoft.com/fwlink/?LinkId=111575)部落格。
 
 **此驅動程式支援連線共用嗎？**  
-此驅動程式提供支援 Java Platform, Enterprise Edition 5 (Java EE 5) 的連接共用。 此驅動程式實作了 JDBC 3.0 所需的介面，讓驅動程式能夠參與中介軟體應用程式廠商所提供的連接共用實作。 此驅動程式可參與這些環境中的共用連接。 如需詳細資訊，請參閱[使用連線共用](../../connect/jdbc/using-connection-pooling.md)。 此驅動程式不提供自己的共用實作，而會使用第三方 Java 應用程式伺服器。
+此驅動程式提供支援 Java Platform, Enterprise Edition 5 (Java EE 5) 的連接共用。 此驅動程式實作了 JDBC 3.0 所需的介面，讓驅動程式能夠參與中介軟體應用程式廠商所提供的連接共用實作。 此驅動程式可參與這些環境中的共用連接。 如需詳細資訊，請參閱 [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md)。 此驅動程式不提供自己的共用實作，而會使用第三方 Java 應用程式伺服器。
 
 **此驅動程式是否提供任何支援選項？**  
-此驅動程式提供數個支援選項。 您可以張貼您的問題，或發出給我們[GitHub 存放庫](https://github.com/microsoft/mssql-jdbc)這由 Microsoft 監視。 [論壇](http://go.microsoft.com/fwlink/?LinkID=246673)受 Microsoft、 Mvp 和社群。 您也可以連絡 Microsoft 客戶支援服務。 開發小組可能會要求您重現任何第三方應用程式伺服器以外的問題。 若無法在裝載 Java 容器之環境以外之處重現問題，您必須連絡相關的第三方廠商，小組才能繼續協助您。 小組可能也會要求您重新產生您的問題，例如 Windows 作業系統上，因此可以最佳支援問題。
+此驅動程式提供數個支援選項。 您可以張貼您的問題，或發出給我們[GitHub 存放庫](https://github.com/microsoft/mssql-jdbc)這由 Microsoft 監視。 [論壇](https://go.microsoft.com/fwlink/?LinkID=246673)受 Microsoft、 Mvp 和社群。 您也可以連絡 Microsoft 客戶支援服務。 開發小組可能會要求您重現任何第三方應用程式伺服器以外的問題。 若無法在裝載 Java 容器之環境以外之處重現問題，您必須連絡相關的第三方廠商，小組才能繼續協助您。 小組可能也會要求您重新產生您的問題，例如 Windows 作業系統上，因此可以最佳支援問題。
 
 **此驅動程式是否通過認證，可與任何第三方應用程式伺服器搭配使用？**
 此驅動程式已在多種應用程式伺服器上進行過測試，包括 IBM WebSphere 及 SAP NetWeaver。
 
 **如何啟用追蹤功能？**  
-此驅動程式支援追蹤 (或記錄) 功能，可用於協助解決在應用程式中使用 JDBC 驅動程式時所發生的問題。 為能在用戶端上使用 JAR 追蹤，JDBC 驅動程式會使用 java.util.logging 中的記錄 API java.util.logging。 如需詳細資訊，請參閱[追蹤驅動程式作業](../../connect/jdbc/tracing-driver-operation.md)。 對於伺服器端的 XA 追蹤，請參閱 [Data Access Tracing in SQL Server](http://go.microsoft.com/fwlink/?LinkId=248705)(SQL Server 的資料存取追蹤)。
+此驅動程式支援追蹤 (或記錄) 功能，可用於協助解決在應用程式中使用 JDBC 驅動程式時所發生的問題。 為能在用戶端上使用 JAR 追蹤，JDBC 驅動程式會使用 java.util.logging 中的記錄 API java.util.logging。 如需詳細資訊，請參閱[追蹤驅動程式作業](../../connect/jdbc/tracing-driver-operation.md)。 對於伺服器端的 XA 追蹤，請參閱 [Data Access Tracing in SQL Server](https://go.microsoft.com/fwlink/?LinkId=248705)(SQL Server 的資料存取追蹤)。
 
 **何處可以下載舊版的驅動程式？例如 SQL Server 2000 的 JDBC 驅動程、2005 驅動程式、1.0、1.1 或 1.2 版的驅動程式。**  
 因為已經停止支援這些驅動程式版本，所以也不再提供其下載。 因為我們會持續改進 Java 連線能力支援， 所以極力建議您使用最新版的 Microsoft JDBC 驅動程式。
 
 **我使用 JRE 1.4。哪一個驅動程式與 JRE 1.4 相容？**  
-對於使用 SAP 產品並需要 JRE 1.4 支援的客戶，請連絡 [SAPService Marketplace](http://service.sap.com/) ，以取得 1.2 Microsoft JDBC Driver。
+對於使用 SAP 產品並需要 JRE 1.4 支援的客戶，請連絡 [SAPService Marketplace](https://service.sap.com/) ，以取得 1.2 Microsoft JDBC Driver。
 
 **此驅動程式可以使用 FIPS 驗證演算法進行通訊嗎？**  
 Microsoft JDBC Driver 不含任何密碼編譯演算法。 若客戶使用作業系統、應用程式及聯邦資訊處理標準 (FIPS) 可接受的 JVM 演算法，並將驅動程式設定成使用這些演算法，則此驅動程式只會使用指定的演算法進行通訊。

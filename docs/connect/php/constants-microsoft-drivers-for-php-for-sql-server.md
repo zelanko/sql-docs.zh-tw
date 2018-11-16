@@ -13,20 +13,20 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28e5394d824a5999aec90cffb21e07e72dea1691
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f391f25c6a8dc4914e0bb50362ef284ab9a1b4d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605506"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603748"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>常數 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本主題討論 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]所定義的常數。  
+本主題討論 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 所定義的常數。  
   
 ## <a name="pdosqlsrv-driver-constants"></a>PDO_SQLSRV 驅動程式常數  
-[PDO 網站](http://php.net/manual/book.pdo.php)上列出的常數在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 中是有效的。  
+[PDO 網站](https://php.net/manual/book.pdo.php)上列出的常數在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 中是有效的。  
   
 以下描述 PDO_SQLSRV 驅動程式中的 Microsoft 特定常數。  
   
@@ -132,7 +132,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性可用來處理從資料行的數值
 |SQLSRV_PARAM_OUT|表示輸出參數。|  
   
 ### <a name="phptype-constants"></a>PHPTYPE 常數  
-下表列出用來說明 PHP 資料類型的常數。 如需 PHP 資料類型的資訊，請參閱 [PHP 類型](http://php.net/manual/en/language.types.php)。  
+下表列出用來說明 PHP 資料類型的常數。 如需 PHP 資料類型的相關資訊，請參閱 [PHP 類型](https://php.net/manual/en/language.types.php)。  
   
 |SQLSRV 常數|PHP 資料類型|  
 |-------------------|-----------------|  

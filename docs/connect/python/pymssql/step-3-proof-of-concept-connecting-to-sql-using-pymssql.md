@@ -11,12 +11,12 @@ ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81042ababad2b8ec7107a4413dfd6e3dcecafb8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef8c981dea064595433568a89088e800d81876e7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764056"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606818"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>步驟 3︰使用 pymssql 連線到 SQL 的概念證明
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47764056"
   
 ## <a name="step-1--connect"></a>步驟 1： 連線  
   
-[Pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html)函數用來連接到 SQL Database。  
+[Pymssql.connect](https://pymssql.org/en/latest/ref/pymssql.html)函數用來連接到 SQL Database。  
   
 ```python
     import pymssql  
@@ -35,7 +35,7 @@ ms.locfileid: "47764056"
   
 ## <a name="step-2--execute-query"></a>步驟 2： 執行查詢  
   
-[Cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute)函式可以用來擷取結果集從查詢中，對 SQL Database。 此函式基本上會接受任何查詢，並傳回結果集，這可以藉由使用反覆[cursor.fetchone （)](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone)。  
+[Cursor.execute](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute)函式可以用來擷取結果集從查詢中，對 SQL Database。 此函式基本上會接受任何查詢，並傳回結果集，這可以藉由使用反覆[cursor.fetchone （)](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone)。  
   
   
 ```python

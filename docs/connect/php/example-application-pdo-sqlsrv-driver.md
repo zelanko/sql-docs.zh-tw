@@ -11,12 +11,12 @@ ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f0c3f2bd194d211ef3c48aa0fe9e37b09f44bf11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f867277822d834324bb0f1a40b6b162beeb33421
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651976"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606408"
 ---
 # <a name="example-application-pdosqlsrv-driver"></a>範例應用程式 (PDO_SQLSRV 驅動程式)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +28,7 @@ AdventureWorks Product Reviews 範例應用程式是一種 Web 應用程式，�
 1.  安裝 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 如需詳細資訊，請參閱[Getting Started with Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 2.  將本文件稍後所列的程式碼複製到兩個檔案中：adventureworks_demo.php 和 photo.php。  
 3.  將 adventureworks_demo.php 和 photo.php 檔案放入您的 Web 伺服器的根目錄中。  
-4.  執行應用程式啟動 http://localhost/adventureworks_demo.php從瀏覽器。  
+4.  執行應用程式啟動 https://localhost/adventureworks_demo.php從瀏覽器。  
   
 ## <a name="requirements"></a>需求  
 若要執行 AdventureWorks Product Reviews 範例應用程式，您的電腦的下列項目必須相符：  

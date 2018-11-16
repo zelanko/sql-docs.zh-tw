@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 69324ab25ba5efd293e445aa7ae4f0ff768b1c8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bd80a957b3f571c4289935eaab145e0fd9f9719
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698276"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656368"
 ---
 # <a name="new-alias-alias-tab"></a>新增別名 (別名索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47698276"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並非接聽預設具名管道，因此您必須為連接字串提供其他管道名稱。  
   
--   應用程式想要連接到伺服器上的 `ACCT`資料庫，但該資料庫已被合併為 `ACCT` 伺服器上的 `CENTRAL`執行個體。 該應用程式無法輕易修改。 您可以建立名為 `ACCT`的別名，其連接字串指向 `CENTRAL\ACCT`。  
+-   應用程式想要連接到伺服器上的 `ACCT` 資料庫，但該資料庫已被合併為 `ACCT` 伺服器上的 `CENTRAL` 執行個體。 該應用程式無法輕易修改。 您可以建立名為 `ACCT`的別名，其連接字串指向 `CENTRAL\ACCT`。  
   
 ## <a name="creating-a-valid-connection-string"></a>建立有效的連接字串  
  如需有效別名屬性組合的範例描述，請參閱下列主題：  
@@ -55,6 +55,6 @@ ms.locfileid: "47698276"
   
 -   [Creating a Valid Connection String Using TCP IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
--   [使用具名管道建立有效的連接字串](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
+-   [使用具名管道建立有效的連接字串](https://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -16,12 +15,12 @@ ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 913f8361303c6622c9d8bef5b37bfa8fcbfeaf43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a64b7feb1f3d557a6c5d38d6beaea1b32728d453
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760026"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51292784"
 ---
 # <a name="testserver-element-dta"></a>TestServer 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

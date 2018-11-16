@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -26,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b2f6a7406fb500f3e909761c4c632587748c1df8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b824df9549ac9fcb65ff4c5bb3ca54f03967e86e
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847469"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291914"
 ---
 # <a name="osql-utility"></a>osql 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -139,7 +138,7 @@ C:\>osql
  **-c** *cmd_end*  
  指定命令結束字元。 依預設，在一行中單獨輸入 GO，便會終止命令，並將命令傳給 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 當您重設命令結束字元時，請勿使用對作業系統有特殊意義的 [!INCLUDE[tsql](../includes/tsql-md.md)] 保留字或字元，不論前面是否附加了反斜線，都是一樣。  
   
- **-q "查詢** ****"**  
+ **-q "查詢** **"**  
  啟動 **osql** 時便執行查詢，但查詢完成時 **osql** 不會結束。 (請注意，查詢陳述式不應包含 GO)。 如果您是從批次檔中發出查詢，請使用變數 (%variables) 或環境變數 (%variables%)。 例如：  
   
 ```  
@@ -149,7 +148,7 @@ osql -E -q "select name, object_id from %table%"
   
  請利用雙引號括住查詢，利用單引號括住內嵌在查詢中的任何項目。  
   
- **-Q"查詢** ****"**  
+ **-Q"查詢** **"**  
  執行查詢並立即結束 **osql**。 請利用雙引號括住查詢，利用單引號括住內嵌在查詢中的任何項目。  
   
  **-n**  

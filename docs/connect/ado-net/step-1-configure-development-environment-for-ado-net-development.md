@@ -11,12 +11,12 @@ ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4c78d9001a802b60963f9c02ad03b84b431a025
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75d2e123831a3a5d0db3e780634c6d9c7d996844
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616996"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606488"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>步驟 1︰設定 ADO.NET 開發的開發環境
 
@@ -31,8 +31,8 @@ ms.locfileid: "47616996"
 1. ![下載-向下箭號-圈選起來](../../ssdt/media/download.png)[下載並安裝.NET Framework，包括 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 2. 安裝 Visual Studio Community，或類似整合開發環境 (IDE) 撰寫和編譯 C# 原始程式碼。 Microsoft 現在提供的 Visual Studio Community*免費*。  
-    - [下載 Visual Studio Community](http://www.visualstudio.com/products/visual-studio-community-vs)  
-    - [更多選項免費 Visual Studio](http://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
+    - [下載 Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs)  
+    - [更多選項免費 Visual Studio](https://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
 
 ### <a name="net-core-for-linux-ubuntu-and-macos"></a>適用於 Linux-Ubuntu 和 MacOS 的.NET core

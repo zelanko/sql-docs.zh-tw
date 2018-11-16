@@ -11,12 +11,12 @@ ms.assetid: cf156d65-d933-4235-b89a-18e172d61c15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd7d5312a6e4f35f90dd0c673571dd0441c9a9fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ccb63f8a269ac7347284fd5c5d977dc21ef265a5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692846"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599981"
 ---
 # <a name="pdostatementdebugdumpparams"></a>PDOStatement::debugDumpParams
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,5 +58,5 @@ $stmt->debugDumpParams();
 ## <a name="see-also"></a>另請參閱  
 [PDOStatement 類別](../../connect/php/pdostatement-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

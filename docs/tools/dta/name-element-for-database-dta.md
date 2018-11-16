@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -16,12 +15,12 @@ ms.assetid: e871c4fa-3b57-46cf-b4f8-e3be86f92dc4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: afdf7adcd8150f5d6dcef3aa22e5c5e35e89071e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a183ba4c5ab5bf3698ecf421899d00a70c746ef
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840596"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291134"
 ---
 # <a name="name-element-for-database-dta"></a>資料庫的 Name 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

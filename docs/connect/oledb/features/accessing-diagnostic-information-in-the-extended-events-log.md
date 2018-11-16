@@ -11,19 +11,19 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 63ec91867fee1a9e0b32853eb6b2553ab261f9f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e4951665996143a56acf55fb0f90e24d3ba3e4c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849956"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602678"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>存取擴展事件記錄檔中的診斷資訊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  從 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 開始，OLE DB Driver for SQL Server 及資料存取追蹤 ([資料存取追蹤](http://go.microsoft.com/fwlink/?LinkId=125805)) 已更新為更容易從連接性信號緩衝區取得有關連接失敗的診斷資訊，以及從擴充的事件記錄檔取得應用程式效能資訊。  
+  從 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 開始，OLE DB Driver for SQL Server 及資料存取追蹤 ([資料存取追蹤](https://go.microsoft.com/fwlink/?LinkId=125805)) 已更新為更容易從連接性信號緩衝區取得有關連接失敗的診斷資訊，以及從擴充的事件記錄檔取得應用程式效能資訊。  
   
  如需讀取擴充事件記錄檔的資訊，請參閱[檢視事件工作階段資料](../../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)。 
 
@@ -32,7 +32,7 @@ ms.locfileid: "47849956"
 >  此功能僅供疑難排解及診斷使用，可能不適用稽核或安全性。  
   
 ## <a name="remarks"></a>Remarks  
- OLE DB Driver for SQL Server 會針對連接作業傳送用戶端連接識別碼。 如果連線失敗，您可以存取連線通道緩衝區 ([使用連線通道緩衝區在 SQL Server 2008 中進行連線的疑難排解](http://go.microsoft.com/fwlink/?LinkId=207752))、尋找 **ClientConnectionID** 欄位，並且取得有關連線失敗的診斷資訊。 僅在發生錯誤時，才會在信號緩衝區中記錄用戶端連接識別碼。 (如果在傳送登入前封包之前連接失敗，則不會產生用戶端連接識別碼。)用戶端連接識別碼是 16 位元組的 GUID。 如果在擴充的事件工作階段中，將 **client_connection_id** 動作新增至事件，您也可以在擴充的事件輸出目標中找到用戶端連接識別碼。 如果您需要進一步的診斷協助，您可以啟用資料存取追蹤並重新執行連接命令，然後觀察資料存取追蹤的 **ClientConnectionID** 欄位中是否有失敗的作業。  
+ OLE DB Driver for SQL Server 會針對連接作業傳送用戶端連接識別碼。 如果連線失敗，您可以存取連線通道緩衝區 ([使用連線通道緩衝區在 SQL Server 2008 中進行連線的疑難排解](https://go.microsoft.com/fwlink/?LinkId=207752))、尋找 **ClientConnectionID** 欄位，並且取得有關連線失敗的診斷資訊。 僅在發生錯誤時，才會在信號緩衝區中記錄用戶端連接識別碼。 (如果在傳送登入前封包之前連接失敗，則不會產生用戶端連接識別碼。)用戶端連接識別碼是 16 位元組的 GUID。 如果在擴充的事件工作階段中，將 **client_connection_id** 動作新增至事件，您也可以在擴充的事件輸出目標中找到用戶端連接識別碼。 如果您需要進一步的診斷協助，您可以啟用資料存取追蹤並重新執行連接命令，然後觀察資料存取追蹤的 **ClientConnectionID** 欄位中是否有失敗的作業。  
    
   
  OLE DB Driver for SQL Server 也會傳送執行緒特有的活動識別碼。 如果已啟動工作階段並啟用 TRACK_CAUSAILITY 選項，即可在擴充的事件工作階段中擷取活動識別碼。 如果使用中的連接發生效能問題，您可以從用戶端的資料存取追蹤中取得活動識別碼 (**ActivityID** 欄位)，然後在擴充的事件輸出中找出活動識別碼。 擴充事件中的活動識別碼為 16 位元組的 GUID (與用戶端連接識別碼的 GUID 不同)，後面附加 4 位元組的序號。 此序號表示執行緒內要求的順序，並指出執行緒的批次和 RPC 陳述式的相對排序。 啟用資料存取追蹤，並開啟資料存取追蹤組態中的 18 位元時，會選擇性地針對 SQL 批次陳述式和 RPC 要求傳送 **ActivityID**。  

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - issue element
@@ -16,12 +15,12 @@ ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 01d786d6310ae7cf818697a6d6af1fb0d5a5e24b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 543ebeca0f18a5dee4136e8f505b5174f4c69c07
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641468"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291614"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue 元素 (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

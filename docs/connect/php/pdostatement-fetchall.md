@@ -11,12 +11,12 @@ ms.assetid: be74188a-77cd-4d19-b16e-77278373c979
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 323bab5eed2ca159d5a80cd2ce8e5c9f9cc12322
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af0449f10bb83ac55fe89809e7f62162d011d3c8
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660806"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601218"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -87,5 +87,5 @@ $*ctor_args*：當 $*fetch_style* 為 PDO::FETCH_CLASS 或 PDO::FETCH_OBJ 時，
 ## <a name="see-also"></a>另請參閱  
 [PDOStatement 類別](../../connect/php/pdostatement-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

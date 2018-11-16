@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -16,12 +15,12 @@ ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bca4143569e05c9891647f536860adc6108c2c87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2823734aec3138dd030a0d0399d11d458a970a8a
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748206"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291054"
 ---
 # <a name="database-element-for-configuration-dta"></a>組態的 Database 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

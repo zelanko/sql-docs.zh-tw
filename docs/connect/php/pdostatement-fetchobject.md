@@ -11,12 +11,12 @@ ms.assetid: 71ad1932-cab3-4c29-8950-f5e82547d3b5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3925dfab04904e347f5c8bc428c4de89b3c78e52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c65d059d786d33f324ba254f23216269c0ca0f80
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655306"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604389"
 ---
 # <a name="pdostatementfetchobject"></a>PDOStatement::fetchObject
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,5 +58,5 @@ $*ctor_args*：一個選擇性陣列，具有自訂類別建構函式的引數�
 ## <a name="see-also"></a>另請參閱  
 [PDOStatement 類別](../../connect/php/pdostatement-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

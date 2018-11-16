@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25ebc4837eb37604a45e98112fa5fc24bdb3e69b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15c0402f83dec65b6476d481b77553a037d4fa47
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742996"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602028"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>此驅動程式版本的已知問題
 
@@ -25,7 +25,7 @@ ms.locfileid: "47742996"
 
 本文包含 Microsoft ODBC Driver 13，13.1，17 for SQL Server 在 Linux 和 macOS 上的已知問題的清單。
 
-其他問題會公佈於 [Microsoft ODBC 驅動程式團隊部落格](http://blogs.msdn.com/b/sqlnativeclient/)上。  
+其他問題會公佈於 [Microsoft ODBC 驅動程式團隊部落格](https://blogs.msdn.com/b/sqlnativeclient/)上。  
 
 - Windows、Linux 和 macOS 可能會以不同的方式轉換來自專用區 (PUA) 或使用者定義字元 (EUDC) 的字元。 透過 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在伺服器上執行的轉換，會使用 Windows 轉換程式庫。 驅動程式中的轉換使用的 Windows、 Linux 或 macOS 轉換程式庫。 執行這些轉換時，這兩個程式庫可能會產生不同的結果。 如需詳細資訊，請參閱[終端使用者定義字元和專用區字元](/windows/desktop/Intl/end-user-defined-characters)。
 

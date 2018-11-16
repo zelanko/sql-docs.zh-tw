@@ -13,17 +13,17 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 424d15af41db2980b62c8ab8af6311889c67fb78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 039b47f1a2affd12f53a8c45c931348eb4a2077e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672564"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604758"
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 連接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481) 公用程式可在 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux 和 macOS 上使用。
+[sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) 公用程式可在 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux 和 macOS 上使用。
   
 下列命令顯示如何使用 Windows 驗證 (Kerberos) 和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]驗證，分別：
   

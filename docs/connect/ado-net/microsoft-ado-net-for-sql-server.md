@@ -11,12 +11,12 @@ ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a237531d89aee072c234f57024a09fd1774f99f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a15fc702c5f7b3907441a237f5765b19ea41a14d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765526"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602278"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
@@ -36,8 +36,8 @@ ADO.NET 是 .NET 語言的核心資料存取技術。 使用 System.Data.SqlClie
 * [System.Data.SqlClient 命名空間](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
   
 ## <a name="community"></a>社群  
-* [ADO.NET Managed 提供者論壇](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataproviders/threads/)  
-* [ADO.NET 資料集論壇](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataset/threads)  
+* [ADO.NET Managed 提供者論壇](https://social.msdn.microsoft.com/Forums/adodotnetdataproviders/threads/)  
+* [ADO.NET 資料集論壇](https://social.msdn.microsoft.com/Forums/adodotnetdataset/threads)  
   
 ## <a name="more-samples"></a>其他範例  
 * [ADO.NET Code Examples](https://msdn.microsoft.com/library/dw70f090.aspx) (ADO.NET 程式碼範例)  
