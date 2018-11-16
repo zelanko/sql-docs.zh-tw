@@ -3,10 +3,9 @@ title: 建立連結的伺服器 (SQL Server Database Engine) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/20/2015
 ms.prod: sql
+ms.technology: ''
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.linkedserver.properties.general.f1
@@ -19,12 +18,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9ca552197c0cb602d2cbce91237106e48c9d345
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: f057c890f5779bfb40591235fd8a870396ffeb90
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383474"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512923"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>建立連結的伺服器 (SQL Server Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
