@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d034b7a930de907e0868271b175cabd5507ad07c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0e835d14bfb2684685f95f65dd1a16e7e4edb55e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031827"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814111"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>關於 URL 保留項目和註冊 (SSRS 組態管理員)
   Reporting Services 應用程式的 URL 會當做 URL 保留項目定義在 HTTP.SYS 中。 URL 保留項目會定義 Web 應用程式之 URL 端點的語法。 當您在報表伺服器上設定應用程式時，會同時針對報表伺服器 Web 服務和報表管理員定義 URL 保留項目。 當您透過安裝程式或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具設定 URL 時，將會自動為您建立 URL 保留項目：  
@@ -57,8 +57,8 @@ ms.locfileid: "50031827"
   
 |HTTP.SYS 中的 URL 保留項目|URL|說明|  
 |---------------------------------|---------|-----------------|  
-|`http://+:80/reportserver`|`http://<computername>/reportserver`<br /><br /> `http://<IPAddress>/reportserver`<br /><br /> `http://localhost/reportserver`|此 URL 保留項目會在通訊埠 80 上指定萬用字元 (+)。 如此會將任何指定可在通訊埠 80 上解析為報表伺服器電腦之主機的內送要求放入報表伺服器佇列中。 請注意在處理這個 URL 保留項目時，可使用任意數目的 URL 來存取報表伺服器。<br /><br /> 對於大多數作業系統而言，這是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器的預設 URL 保留項目。|  
-|`http://123.45.67.0:80/reportserver`|`http://123.45.67.0/reportserver`|此 URL 保留項目會指定 IP 位址，而且比起萬用字元 URL 保留項目更具限制性。 只有包含此 IP 位址的 URL 可用來連接報表伺服器。 指定此 URL 保留項目時，要求位於 `http://<computername>/reportserver` 或 `http://localhost/reportserver` 的報表伺服器將會失敗。|  
+|`https://+:80/reportserver`|`https://<computername>/reportserver`<br /><br /> `https://<IPAddress>/reportserver`<br /><br /> `https://localhost/reportserver`|此 URL 保留項目會在通訊埠 80 上指定萬用字元 (+)。 如此會將任何指定可在通訊埠 80 上解析為報表伺服器電腦之主機的內送要求放入報表伺服器佇列中。 請注意在處理這個 URL 保留項目時，可使用任意數目的 URL 來存取報表伺服器。<br /><br /> 對於大多數作業系統而言，這是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器的預設 URL 保留項目。|  
+|`https://123.45.67.0:80/reportserver`|`https://123.45.67.0/reportserver`|此 URL 保留項目會指定 IP 位址，而且比起萬用字元 URL 保留項目更具限制性。 只有包含此 IP 位址的 URL 可用來連接報表伺服器。 指定此 URL 保留項目時，要求位於 `https://<computername>/reportserver` 或 `https://localhost/reportserver` 的報表伺服器將會失敗。|  
   
 ##  <a name="DefaultURLs"></a> 預設 URL  
  如果您使用預設組態安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，安裝程式將會保留 URL 供報表伺服器 Web 服務和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]使用。 當您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具內定義 URL 保留項目時，您也可以接受這些預設值。 如果您安裝 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 或是將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝為具名執行個體，預設 URL 將會包含執行個體名稱。  
@@ -82,12 +82,12 @@ ms.locfileid: "50031827"
   
 |執行個體類型|應用程式|預設 URL|HTTP.SYS 中的實際 URL 保留項目|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|預設執行個體|報表伺服器 Web 服務|`http://\<servername>/reportserver`|`http://<servername>:80/reportserver`|  
-|預設執行個體|入口網站|`http://<servername>/reportserver`|`http://<servername>:80/reportserver`|  
-|具名執行個體|報表伺服器 Web 服務|`http://<servername>/reportserver_<instancename>`|`http://<servername>:80/reportserver_<instancename>`|  
-|具名執行個體|入口網站|`http://<servername>/reports_<instancename>`|`http://<servername>:80/reports_<instancename>`|  
-|SQL Server Express|報表伺服器 Web 服務|`http://<servername>/reportserver_SQLExpress`|`http://<servername>:80/reportserver_SQLExpress`|  
-|SQL Server Express|入口網站|`http://<servername>/reports_SQLExpress`|`http://<servername>:80/reports_SQLExpress`|  
+|預設執行個體|報表伺服器 Web 服務|`https://\<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|預設執行個體|入口網站|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|具名執行個體|報表伺服器 Web 服務|`https://<servername>/reportserver_<instancename>`|`https://<servername>:80/reportserver_<instancename>`|  
+|具名執行個體|入口網站|`https://<servername>/reports_<instancename>`|`https://<servername>:80/reports_<instancename>`|  
+|SQL Server Express|報表伺服器 Web 服務|`https://<servername>/reportserver_SQLExpress`|`https://<servername>:80/reportserver_SQLExpress`|  
+|SQL Server Express|入口網站|`https://<servername>/reports_SQLExpress`|`https://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Reporting Services URL 的驗證和服務識別  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 保留項目會指定報表伺服器服務的服務帳戶。 執行此服務所用的帳戶會用於針對相同執行個體內執行之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式所建立的所有 URL。 報表伺服器執行個體的服務識別會儲存在 RSReportServer.config 檔案中。  
@@ -97,9 +97,9 @@ ms.locfileid: "50031827"
  由於預設安全性為 **RSWindowsNegotiate**，所以會停用匿名存取。 如果是內部網路存取，報表伺服器 URL 會使用網路電腦名稱。 如果您想要設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 進行網際網路連接，就必須使用不同的設定。 如需驗證的詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/security/authentication-with-the-report-server.md) 使用報表伺服器驗證 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ##  <a name="URLlocalAdmin"></a> 用於本機管理的 URL  
- 如果您指定了強式或弱式萬用字元作為 URL 保留項目，則可以使用 `http://localhost/reportserver` 或 `http://localhost/reports`。  
+ 如果您指定了強式或弱式萬用字元作為 URL 保留項目，則可以使用 `https://localhost/reportserver` 或 `https://localhost/reports`。  
   
- `http://localhost` URL 會解譯成 `http://127.0.0.1`。 如果您將 URL 保留項目限制為電腦名稱或單一 IP 位址，則除非您針對本機電腦上的 127.0.0.1 建立其他保留項目，否則將無法使用 localhost。 同樣地，如果電腦上已停用 localhost 或 127.0.0.1，您將無法使用該 URL。  
+ `https://localhost` URL 會解譯成 `https://127.0.0.1`。 如果您將 URL 保留項目限制為電腦名稱或單一 IP 位址，則除非您針對本機電腦上的 127.0.0.1 建立其他保留項目，否則將無法使用 localhost。 同樣地，如果電腦上已停用 localhost 或 127.0.0.1，您將無法使用該 URL。  
   
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]、 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 和更新版本包含新的安全性功能，可讓意外使用更高權限執行程式的風險降到最低。 您需要其他步驟，才能在這些作業系統上啟用管理。 如需詳細資訊，請參閱 [設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   

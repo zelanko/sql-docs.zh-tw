@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d8f37dfd8178d200a9df1203be70a771b57bf3a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 58abfa4ff4add4415b71a536b0c9aeb1f6a9f472
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721956"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702556"
 ---
 # <a name="view-information-about-an-operator"></a>檢視關於操作員的資訊
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47721956"
   
 -   **若要使用下列項目，檢視關於操作員的資訊：**  
   
-    [Transact-SQL](#SSMSProcedure)  
+    [SQL Server Management Studio](#SSMSProcedure)  
   
     [Transact-SQL](#TsqlProcedure)  
   
@@ -104,5 +104,5 @@ ms.locfileid: "47721956"
     GO  
     ```  
   
-如需詳細資訊，請參閱 [sp_help_operator (Transact-SQL)](http://msdn.microsoft.com/caedc43d-44b8-415a-897e-92923f6de3b8)。  
+如需詳細資訊，請參閱 [sp_help_operator (Transact-SQL)](https://msdn.microsoft.com/caedc43d-44b8-415a-897e-92923f6de3b8)。  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 84e7f739f0d7dfe8e47b8053a37db327ee6b49a4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9682be8f89a78a959cba3e4991c3405b0326f125
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031647"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813781"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 模式的 PowerShell Cmdlet
 
@@ -160,7 +160,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  將 Proxy 加入至預設 Proxy 群組。  
   
-3.  將服務應用程式存取權授與連接埠 80 Web 應用程式的內容資料庫。 此指令碼會假設網站 `http://sitename` 已存在。  
+3.  將服務應用程式存取權授與連接埠 80 Web 應用程式的內容資料庫。 此指令碼會假設網站 `https://sitename` 已存在。  
   
 ```  
 # Create service application and service application proxy  
@@ -172,7 +172,7 @@ $serviceAppProxy = New-SPRSServiceApplicationProxy –Name “My RS Service App 
 Get-SPServiceApplicationProxyGroup –default | Add-SPServiceApplicationProxyGroupMember –Member $serviceAppProxy  
   
 # Grant application pool account access to the port 80 web application’s content database.  
-$webApp = Get-SPWebApplication “http://sitename”  
+$webApp = Get-SPWebApplication “https://sitename”  
 $appPoolAccountName = $appPool.ProcessAccount.LookupName()  
 $webApp.GrantAccessToProcessIdentity($appPoolAccountName)  
   

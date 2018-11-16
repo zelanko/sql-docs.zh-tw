@@ -11,21 +11,21 @@ ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12908c9a880e09f08cc4903032243128025dbb3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe4b6dd462a8f8fec6797c26f7ae0461c4b0a4ce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797352"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669857"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>HOW TO：從 Team Foundation Build 執行 SQL Server 單元測試
 您可以使用 Team Foundation Build，在執行組建驗證測試 (BVT) 時執行 SQL Server 單元測試。 您可以設定單元測試以部署資料庫、產生測試資料，然後執行選取的測試。 如果您不熟悉 Team Foundation Build，就應該先檢閱下列資訊，然後再依照本主題的程序進行：  
   
 -   [建立和定義 SQL Server 單元測試](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [如何：在建置應用程式之後設定和執行已排程的測試](http://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [如何：在建置應用程式之後設定和執行已排程的測試](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
   
--   [建立基本組建定義](http://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+-   [建立基本組建定義](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
 使用這些程序之前，您必須先執行下列工作來設定工作環境：  
   
@@ -215,22 +215,22 @@ ms.locfileid: "47797352"
   
 1.  連接到執行 Team Foundation Server 的電腦。  
   
-    如需詳細資訊，請參閱[使用原始檔控制總管](http://msdn.microsoft.com/library/ms181370(VS.100).aspx)。  
+    如需詳細資訊，請參閱[使用原始檔控制總管](https://msdn.microsoft.com/library/ms181370(VS.100).aspx)。  
   
 2.  如果您的方案原本不在原始檔控制中，請將它加入至原始檔控制。  
   
-    如需詳細資訊，請參閱[將專案或方案加入至版本控制](http://msdn.microsoft.com/library/ms181374(VS.100).aspx)。  
+    如需詳細資訊，請參閱[將專案或方案加入至版本控制](https://msdn.microsoft.com/library/ms181374(VS.100).aspx)。  
   
 3.  按一下 [檢視]，然後按一下 [暫止簽入]。  
   
 4.  簽入方案的所有檔案。  
   
-    如需詳細資訊，請參閱[簽入暫止的變更](http://msdn.microsoft.com/library/ms181411(VS.100).aspx)。  
+    如需詳細資訊，請參閱[簽入暫止的變更](https://msdn.microsoft.com/library/ms181411(VS.100).aspx)。  
   
     > [!NOTE]  
     > 您可能會有控管自動化測試之建立與管理方式的特定小組程序。 例如，此程序可能會要求您必須先在本機驗證組建，然後再簽入該程式碼以及將要針對程式碼執行的測試。  
   
-    在 [方案總管] 中，掛鎖圖示會出現在每一個檔案的旁邊，指出它已簽入。 如需詳細資訊，請參閱[檢視版本控制檔案和資料夾屬性](http://msdn.microsoft.com/library/ms245468(VS.100).aspx)。  
+    在 [方案總管] 中，掛鎖圖示會出現在每一個檔案的旁邊，指出它已簽入。 如需詳細資訊，請參閱[檢視版本控制檔案和資料夾屬性](https://msdn.microsoft.com/library/ms245468(VS.100).aspx)。  
   
     您的測試可用於 Team Foundation Build。 您現在可以建立包含想要執行之測試的組建定義。  
   
@@ -280,11 +280,11 @@ ms.locfileid: "47797352"
   
 3.  確認 [組建定義]、[組建代理程式] 和 [此組建的置放資料夾] 欄位中的值都正確無誤，然後按一下 [佇列]。  
   
-    [Build 總管] 的 [已佇列] 索引標籤隨即出現。 如需詳細資訊，請參閱[管理和檢視已完成的組建 (Visual Studio 2010)](http://msdn.microsoft.com/library/ms181730(VS.100).aspx) 或[在 Build 總管中管理您的組建 (Visual Studio 2012)](http://msdn.microsoft.com/library/ms181732.aspx)。  
+    [Build 總管] 的 [已佇列] 索引標籤隨即出現。 如需詳細資訊，請參閱[管理和檢視已完成的組建 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx) 或[在 Build 總管中管理您的組建 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx)。  
   
 ## <a name="see-also"></a>另請參閱  
 [執行 SQL Server 單元測試](../ssdt/running-sql-server-unit-tests.md)  
-[建立基本組建定義](http://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
-[將組建排入佇列](http://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
-[監視執行中組建的進度](http://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
+[建立基本組建定義](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+[將組建排入佇列](https://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
+[監視執行中組建的進度](https://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
   

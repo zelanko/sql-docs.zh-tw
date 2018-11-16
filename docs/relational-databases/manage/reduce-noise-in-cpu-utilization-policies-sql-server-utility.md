@@ -13,12 +13,12 @@ ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2d1c191ae176eb70a79c2546f44c0cef2743433
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 82e9cfe7afa18692376f113d31c07771a36e045d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033665"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674317"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>降低 CPU 使用量原則的雜訊 (SQL Server 公用程式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51033665"
   
 -   將違規的百分比容錯提高 1 個增量，成為 30%。 1 小時內的單一違規將會是取樣大小 4 中的 1 個資料點。 在此情況下，此原則將會容許每個小時有 1 個違規，但是會在 1 小時的收集期間內，報告 2 或 2 個以上的違規有使用量過高情形 (>30% 的資料點)。  
   
--   提高 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Managed 執行個體和資料層應用程式之處理器使用量的原則臨界值。 如需如何變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體或資料層應用程式之全域 CPU 使用量原則的詳細資訊，請參閱 [公用程式管理 &#40;SQL Server 公用程式&#41;](http://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)。 如需如何變更個別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之 CPU 使用量原則的詳細資訊，請參閱[受管理的執行個體詳細資料 &#40;SQL Server 公用程式&#41;](http://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)。 如需如何變更個別資料層應用程式之 CPU 使用量原則的詳細資訊，請參閱[部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](http://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
+-   提高 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Managed 執行個體和資料層應用程式之處理器使用量的原則臨界值。 如需如何變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體或資料層應用程式之全域 CPU 使用量原則的詳細資訊，請參閱 [公用程式管理 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)。 如需如何變更個別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之 CPU 使用量原則的詳細資訊，請參閱[受管理的執行個體詳細資料 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)。 如需如何變更個別資料層應用程式之 CPU 使用量原則的詳細資訊，請參閱[部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-underutilized"></a>將處理器使用量報告為過低之前，其違規的頻率應該是多少？  
  您可以在公用程式總管中，使用 **[公用程式管理]** 節點的 **[原則]** 索引標籤設定來設定評估期間和違規百分比的容錯。 若要變更原則，請使用原則描述右邊的滑動軸控制項，然後按一下 **[套用]**。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  
@@ -56,10 +56,10 @@ ms.locfileid: "51033665"
   
 -   將 CPU 報告為使用量過低之前，資料點違規的預設百分比為 90%。 選項的範圍是從 0% 到 100%。  
   
- 根據預設值，每週將會收集 672 個資料點，而且原則臨界值為 0%。 所以根據預設，這個原則不會產生處理器使用量過低的違規情形。 如需如何變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體或資料層應用程式之全域 CPU 使用量原則的詳細資訊，請參閱[公用程式管理 &#40;SQL Server 公用程式&#41;](http://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)。 如需如何變更個別 SQL Server 執行個體之 CPU 使用量原則的詳細資訊，請參閱[受管理的執行個體詳細資料 &#40;SQL Server 公用程式&#41;](http://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)。 如需如何變更個別資料層應用程式之 CPU 使用量原則的詳細資訊，請參閱[部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](http://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
+ 根據預設值，每週將會收集 672 個資料點，而且原則臨界值為 0%。 所以根據預設，這個原則不會產生處理器使用量過低的違規情形。 如需如何變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體或資料層應用程式之全域 CPU 使用量原則的詳細資訊，請參閱[公用程式管理 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)。 如需如何變更個別 SQL Server 執行個體之 CPU 使用量原則的詳細資訊，請參閱[受管理的執行個體詳細資料 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)。 如需如何變更個別資料層應用程式之 CPU 使用量原則的詳細資訊，請參閱[部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
   
 ## <a name="see-also"></a>另請參閱  
- [公用程式管理 &#40;SQL Server 公用程式&#41;](http://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)   
+ [公用程式管理 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)   
  [監視 SQL Server 公用程式中的 SQL Server 執行個體](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [修改資源健康情況原則定義 &#40;SQL Server 公用程式&#41;](../../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)   
  [SQL Server 公用程式的功能與工作](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  

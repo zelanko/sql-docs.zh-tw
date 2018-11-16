@@ -5,21 +5,20 @@ ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, creating policy conditions
 ms.assetid: 8a612f7e-6c70-49db-a4de-48431e097cc5
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5f15fc35f7dc8bba16a786a5db86fc8c2f3da0f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f6f17e97b485e7c6c4dc747886bd5304b8fa812
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821316"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512363"
 ---
 # <a name="create-a-new-policy-based-management-condition"></a>建立新的原則式管理條件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,13 +32,13 @@ ms.locfileid: "47821316"
   
 -   **若要使用下列項目來建立條件：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要 msdb 資料庫中 PolicyAdministratorRole 角色的成員資格。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  

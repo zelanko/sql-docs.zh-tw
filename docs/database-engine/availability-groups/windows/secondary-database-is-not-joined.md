@@ -14,12 +14,12 @@ ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ea90846cec7e49142ea0ee11faa21c1b1cc833bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01ba0d2a58a54cba2d509df407d11d8c5d0ebdee
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675872"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606508"
 ---
 # <a name="secondary-database-is-not-joined"></a>次要資料庫未加入
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "47675872"
  此原則會檢查次要資料庫 (也稱為「次要資料庫複本」) 的聯結狀態。 當資料庫複本未聯結時，原則為狀況不良。 否則原則為狀況良好。  
   
 > [!NOTE]  
->  在此 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]版本中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [Secondary database is not joined](http://go.microsoft.com/fwlink/p/?LinkId=220862) (次要資料庫並未聯結)。  
+>  在此 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]版本中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [Secondary database is not joined](https://go.microsoft.com/fwlink/p/?LinkId=220862) (次要資料庫並未聯結)。  
   
 ## <a name="possible-causes"></a>可能的原因  
  此次要資料庫並未聯結至可用性群組。 此次要資料庫的組態不完整。  
   
 ## <a name="possible-solution"></a>可能的解決方案  
- 使用 Transact-SQL、PowerShell 或 SQL Server Management Studio，將次要複本聯結至可用性群組。 如需將次要複本聯結至可用性群組的詳細資訊，請參閱 [將次要複本聯結至可用性群組 (SQL Server)](http://msdn.microsoft.com/library/ff878473\(SQL.110\).aspx)。  
+ 使用 Transact-SQL、PowerShell 或 SQL Server Management Studio，將次要複本聯結至可用性群組。 如需將次要複本聯結至可用性群組的詳細資訊，請參閱 [將次要複本聯結至可用性群組 (SQL Server)](https://msdn.microsoft.com/library/ff878473\(SQL.110\).aspx)。  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

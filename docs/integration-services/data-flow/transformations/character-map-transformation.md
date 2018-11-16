@@ -19,12 +19,12 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6bbf9e0fa3d3c2a8cc900e0bd48163dc11eba3ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 28b21fbe189151578b073a51050b3b7aeb95b79b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619376"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640435"
 ---
 # <a name="character-map-transformation"></a>字元對應轉換
   「字元對應」轉換會套用字串函數，例如從小寫轉換成大寫、字元資料。 此轉換只能在字串資料類型的資料行資料上操作。  
@@ -74,7 +74,7 @@ ms.locfileid: "47619376"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -122,6 +122,6 @@ ms.locfileid: "47619376"
  輸入每一個輸出資料行的別名。 預設為輸入資料行的名稱，後面接著 **[的副本]** ；但是您也可以選擇任何唯一的描述性名稱。  
   
  **設定錯誤輸出**  
- 使用 [設定錯誤輸出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 對話方塊，即可指定此轉換的錯誤處理選項。  
+ 使用 [設定錯誤輸出](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 對話方塊，即可指定此轉換的錯誤處理選項。  
   
   

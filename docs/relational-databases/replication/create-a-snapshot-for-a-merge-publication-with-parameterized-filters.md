@@ -15,12 +15,12 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 142822158f03c76c1c36f40fa937438c989ec3ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71d7e79a0e941b5f080b033469700e19eaa3241e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811796"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666089"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>使用參數化篩選建立合併式發行集的快照集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -275,7 +275,7 @@ PAUSE
 >  當篩選發行項產生了對每個訂閱而言是唯一的非重疊資料分割時 (在建立合併發行項時，針對 P:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption 指定 F:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription 的值)，則只要合併代理程式一執行，就會清除中繼資料。 這表示分割快照集會更快過期。 當使用這個選項時，您應該考慮允許訂閱者要求產生快照集。 如需詳細資訊，請參閱＜ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞主題中的「使用適當的篩選選項」一節。  
   
 > [!IMPORTANT]  
->  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](http://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
+>  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
 #### <a name="to-create-a-publication-that-allows-subscribers-to-initiate-snapshot-generation-and-delivery"></a>建立可讓訂閱者初始化快照集產生和傳遞的發行集  
   

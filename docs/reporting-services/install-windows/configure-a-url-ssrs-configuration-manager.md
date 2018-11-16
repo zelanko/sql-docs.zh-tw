@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc385863afdd0ec6c9c5fb06799f8109f0c9cea7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 403946b29ebda9e8023b8f156daac9fbb9202df4
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645146"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813351"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>設定 URL (SSRS 組態管理員)
   使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或報表伺服器 Web 服務之前，您至少必須為每一個應用程式設定一個 URL。 如果您在「僅限檔案」模式下安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (意即在安裝精靈的 [報表伺服器安裝選項] 頁面中選取 [安裝但不設定伺服器] 選項)，就一定要設定 URL。 如果您在預設組態中安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，就表示已經為每一個應用程式設定了 URL。  
@@ -78,7 +78,7 @@ ms.locfileid: "47645146"
   
          `netstat –anp tcp`  
   
-    -   請檢閱 Microsoft 技術支援文件 [TCP/IP 連接埠指派資訊](http://support.microsoft.com/kb/174904)，以閱讀有關 TCP 通訊埠指派以及已知通訊埠 (0 到 1023)、已註冊的通訊埠 (1024 到 49151) 和動態或私人通訊埠 (49152 到 65535) 之間差異的資訊。  
+    -   請檢閱 Microsoft 技術支援文件 [TCP/IP 連接埠指派資訊](https://support.microsoft.com/kb/174904)，以閱讀有關 TCP 通訊埠指派以及已知通訊埠 (0 到 1023)、已註冊的通訊埠 (1024 到 49151) 和動態或私人通訊埠 (49152 到 65535) 之間差異的資訊。  
   
     -   如果您正在使用 Windows 防火牆，您必須開啟此通訊埠。 如需指示，請參閱 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)。  
   
@@ -124,9 +124,9 @@ ms.locfileid: "47645146"
 ## <a name="setting-advanced-properties-to-specify-additional-urls"></a>設定進階屬性來指定其他 URL  
  您可以藉由指定不同的通訊埠或主機名稱，為報表伺服器 Web 服務或 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 保留多個 URL (可以是 IP 位址，或是網域名稱伺服器可解析為指派給電腦之 IP 位址的主機標頭名稱)。 您可以藉由建立多個 URL，設定對相同報表伺服器執行個體的不同存取路徑。 例如，若要啟用對報表伺服器的內部網路和外部網路存取，您可能會使用預設 URL 來存取內部網路，並使用額外的完整主機名稱來存取外部網路：  
   
--   `http://myserver01/reportserver`  
+-   `https://myserver01/reportserver`  
   
--   `http://www.adventure-works.com/reportserver`  
+-   `https://www.adventure-works.com/reportserver`  
   
  您不能為相同的應用程式執行個體設定多個虛擬目錄名稱。 每一個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式執行個體都會對應到單一虛擬目錄名稱。 如果您在相同電腦上有多個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體，應用程式的虛擬目錄名稱應該包含此執行個體名稱，以確保每一個要求都會到達所要的目標。  
  
@@ -151,7 +151,7 @@ ms.locfileid: "47645146"
   
 2.  按一下 **[加入]**。  
   
-3.  按一下 IP 位址或主機標頭名稱。 如果您指定主機標頭，請務必指定 DNS 服務可以解析的名稱。 如果您要指定公開可用的網域名稱，請包含整個 URL，包括 `http://www` 在內。  
+3.  按一下 IP 位址或主機標頭名稱。 如果您指定主機標頭，請務必指定 DNS 服務可以解析的名稱。 如果您要指定公開可用的網域名稱，請包含整個 URL，包括 `https://www` 在內。  
   
 4.  指定通訊埠。 如果您指定自訂通訊埠，應用程式的 URL 一定要包含通訊埠編號。  
   
@@ -165,13 +165,13 @@ ms.locfileid: "47645146"
 ##  <a name="URLExamples"></a> URL 組態的範例  
  下列清單顯示一些報表伺服器 URL 的範例：  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
--   `http://localhost/reportserver_SQLEXPRESS`  
+-   `https://localhost/reportserver_SQLEXPRESS`  
   
--   `http://sales01/reportserver`  
+-   `https://sales01/reportserver`  
   
--   `http://sales01:8080/reportserver`  
+-   `https://sales01:8080/reportserver`  
   
 -   `https://sales.adventure-works.com/reportserver`  
   
@@ -179,13 +179,13 @@ ms.locfileid: "47645146"
   
  您用以存取 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 的 URL 共用類似的格式，而且通常建立在主控報表伺服器的相同網站之下。 唯一不同的是虛擬目錄名稱 (在這個範例中為 **reports** ，但是您可以將它設定成想要使用的任何名稱)：  
   
--   `http://localhost/reports`  
+-   `https://localhost/reports`  
   
--   `http://localhost/reports_SQLEXPRESS`  
+-   `https://localhost/reports_SQLEXPRESS`  
   
--   `http://sales01/reports`  
+-   `https://sales01/reports`  
   
--   `http://sales01:8080/reports`  
+-   `https://sales01:8080/reports`  
   
 -   `https://sales.adventure-works.com/reports`  
   

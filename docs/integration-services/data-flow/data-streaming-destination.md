@@ -13,12 +13,12 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 958446082e1576e14f50d09a9b8b7181bf2f18af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10ad201fd848ba195c5c448dfc1f27c2b6ff058d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771576"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638605"
 ---
 # <a name="data-streaming-destination"></a>資料流目的地
   **資料流目的地** 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 目的地元件，可讓 **OLE DB Provider for SSIS** 取用 SSIS 封裝的輸出做為表格式結果集。 您可以建立連結的伺服器來使用 OLE DB Provider for SSIS，然後在連結的伺服器上執行 SQL 查詢來顯示 SSIS 封裝所傳回的資料。  
@@ -54,7 +54,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
  系統管理中心可讓您在 SQL Server 資料庫中發行檢視。 如此一來，您可以使用 SSIS 封裝發行精靈，來發行 SSIS 封裝做為 SQL 檢視。 接著，可在 Power BI 系統管理中心選取要包含於 OData 摘要中的檢視。 資料負責人可以使用適用於 Excel 的 Power Query 增益集，從 SSIS 封裝取用摘要。  
   
- 如需詳細的逐步解說，請參閱 [發行 SSIS 封裝做為 OData 摘要來源](http://go.microsoft.com/fwlink/?LinkID=317367)。  
+ 如需詳細的逐步解說，請參閱 [發行 SSIS 封裝做為 OData 摘要來源](https://go.microsoft.com/fwlink/?LinkID=317367)。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -81,6 +81,6 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  類似於 [輸入資料行] 索引標籤，您可以變更此索引標籤中的輸出資料行名稱。在左側樹狀檢視中，依序展開 [Data Streaming Destination 輸入] 和 [輸入資料行]。 按一下輸入資料行名稱，在右窗格中的輸出資料行名稱中變更名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [發行 SSIS 封裝做為 OData 摘要來源](http://go.microsoft.com/fwlink/?LinkID=317367)  
+ [發行 SSIS 封裝做為 OData 摘要來源](https://go.microsoft.com/fwlink/?LinkID=317367)  
   
   

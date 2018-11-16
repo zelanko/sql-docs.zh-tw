@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 778ac08636656ad9b4598c0ac022fcc0a5e2284f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: fedc2265a7d8e879a2ca67c5d2e6946ae1cb2c30
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029467"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812242"
 ---
 # <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>使用報表檢視器控制項整合 Reporting Services - 入門
 
@@ -55,7 +55,7 @@ ms.locfileid: "50029467"
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
     <title></title>
@@ -64,7 +64,7 @@ ms.locfileid: "50029467"
     <form id="form1" runat="server">
     <asp:ScriptManager runat="server"></asp:ScriptManager>        
         <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote">
-            <ServerReport ReportServerUrl="http://AContosoDepartment/ReportServer" ReportPath="/LatestSales" />
+            <ServerReport ReportServerUrl="https://AContosoDepartment/ReportServer" ReportPath="/LatestSales" />
         </rsweb:ReportViewer>
     </form>
 </body>
@@ -177,7 +177,7 @@ ms.locfileid: "50029467"
 
 ```
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head runat="server">
     <style>
         html,body,form,#div1 {
@@ -190,7 +190,7 @@ ms.locfileid: "50029467"
     <div id="div1" >
             <asp:ScriptManager runat="server"></asp:ScriptManager>
         <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote" Height="100%" Width="100%">
-            <ServerReport ReportServerUrl="http://test/ReportServer" ReportPath="/testreport" />
+            <ServerReport ReportServerUrl="https://test/ReportServer" ReportPath="/testreport" />
         </rsweb:ReportViewer>
     </div>
     </form>
@@ -205,7 +205,7 @@ ms.locfileid: "50029467"
 
 ```
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head runat="server">
 </head>
 <body>
@@ -213,7 +213,7 @@ ms.locfileid: "50029467"
     <div style="height:100vh;">
             <asp:ScriptManager runat="server"></asp:ScriptManager>
         <rsweb:ReportViewer ID="ReportViewer1" runat="server" ProcessingMode="Remote" Height="100%" Width="100%">
-            <ServerReport ReportServerUrl="http://test/ReportServer" ReportPath="/testreport" />
+            <ServerReport ReportServerUrl="https://test/ReportServer" ReportPath="/testreport" />
         </rsweb:ReportViewer>
     </div>
     </form>

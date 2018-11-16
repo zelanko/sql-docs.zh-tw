@@ -22,12 +22,12 @@ ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 048465a20f3a665d3199a6382695f14b28d8902d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e63d7e75b0025fb5e23f2d9bc1120d77ff7faa2f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850307"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659398"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>使用複寫代理程式事件的警示
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47850307"
 |20578|**複寫: 代理程式自訂關閉**|||  
 |22815|**點對點衝突偵測警示**|散發代理程式在嘗試將變更套用到對等節點上時偵測到衝突。|是|  
   
- 除了這些警示外，複寫監視器還提供與狀態和效能相關的警告與警示集合。 如需相關資訊，請參閱 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。 您也可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警示基礎結構，為其他複寫事件定義警示。 如需詳細資訊，請參閱[建立使用者定義的事件](http://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)。  
+ 除了這些警示外，複寫監視器還提供與狀態和效能相關的警告與警示集合。 如需相關資訊，請參閱 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。 您也可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警示基礎結構，為其他複寫事件定義警示。 如需詳細資訊，請參閱[建立使用者定義的事件](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)。  
   
  **若要設定預先定義的複寫警示**  
   

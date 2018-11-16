@@ -10,12 +10,12 @@ ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b81e501c153bb0789a1cf1cefd0c148dc9d96f9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa46327ef5037c70c25c156b9d224ea66218020f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731556"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601324"
 ---
 # <a name="clusterlog-always-on-availability-groups"></a>CLUSTER.LOG (Always On 可用性群組)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "47731556"
 ## <a name="generate-cluster-log"></a>產生叢集記錄檔  
  您可以透過兩種方式產生叢集記錄檔：  
   
-1.  在命令提示字元使用 `cluster /log /g` 命令。 此命令會產生叢集記錄檔到每個 WSFC 節點上的 \windows\cluster\reports 目錄。 這個方法的優點是，您可以使用 `/level` 選項來指定所產生記錄檔的詳細資訊層級。 缺點是您不能指定所產生叢集記錄檔的目的地目錄。 如需詳細資訊，請參閱[如何在 Windows Server 2008 容錯移轉叢集中建立 cluster.log](http://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx) \(英文\)。  
+1.  在命令提示字元使用 `cluster /log /g` 命令。 此命令會產生叢集記錄檔到每個 WSFC 節點上的 \windows\cluster\reports 目錄。 這個方法的優點是，您可以使用 `/level` 選項來指定所產生記錄檔的詳細資訊層級。 缺點是您不能指定所產生叢集記錄檔的目的地目錄。 如需詳細資訊，請參閱[如何在 Windows Server 2008 容錯移轉叢集中建立 cluster.log](https://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx) \(英文\)。  
   
-2.  使用 [Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx) \(英文\) PowerShell Cmdlet。 這個方法的優點是您可以將產生自所有節點的叢集記錄檔，集中到執行 Cmdlet 節點上的單一目的地目錄。 缺點是，您無法指定所產生記錄檔的詳細資訊層級。  
+2.  使用 [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx) \(英文\) PowerShell Cmdlet。 這個方法的優點是您可以將產生自所有節點的叢集記錄檔，集中到執行 Cmdlet 節點上的單一目的地目錄。 缺點是，您無法指定所產生記錄檔的詳細資訊層級。  
   
  下列 PowerShell 命令會產生最近 15 分鐘之內來自所有叢集節點的叢集記錄檔，並將它們放到目前的目錄中。 在具系統管理權限的 PowerShell 視窗中執行命令。  
   
@@ -57,7 +57,7 @@ Get-ClusterLog –TimeSpan 15 –Destination .
 8.  再以滑鼠右鍵按一下可用性群組資源，然後按一下 [讓此資源上線]。  
   
 ## <a name="availability-group-resource-events"></a>可用性群組資源事件  
- 下表顯示在針對可用性群組資源保留的 CLUSTER.LOG 中，您可以看見的不同事件類型。 如需 WSFC 中資源主控子系統 (RHS) 和資源控制監視器 (RCM) 的詳細資訊，請參閱 [Windows Server 2008 容錯移轉叢集中的資源主控子系統 (RHS)](http://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx) \(英文\)。  
+ 下表顯示在針對可用性群組資源保留的 CLUSTER.LOG 中，您可以看見的不同事件類型。 如需 WSFC 中資源主控子系統 (RHS) 和資源控制監視器 (RCM) 的詳細資訊，請參閱 [Windows Server 2008 容錯移轉叢集中的資源主控子系統 (RHS)](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx) \(英文\)。  
   
 |識別碼|來源|來自 CLUSTER.LOG 的範例|  
 |----------------|------------|------------------------------|  

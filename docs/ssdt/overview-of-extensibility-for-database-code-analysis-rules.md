@@ -11,15 +11,15 @@ ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c754ce006834a44413d64821ea79349da2e62d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 606b835328f704adcaa282d0a2c4d3984c9ddec0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699916"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51655781"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>資料庫程式碼分析規則的擴充性概觀
-包含 SQL Server Data Tools 的 Visual Studio 版本包括程式碼分析規則，可報告資料庫程式碼中的 Transact\-SQL 設計、命名和效能警告。 如需詳細資訊，請參閱[分析資料庫程式碼以提升程式碼品質](http://msdn.microsoft.com/library/dd172133(v=vs.100).aspx) \(機器翻譯\)。  
+包含 SQL Server Data Tools 的 Visual Studio 版本包括程式碼分析規則，可報告資料庫程式碼中的 Transact\-SQL 設計、命名和效能警告。 如需詳細資訊，請參閱[分析資料庫程式碼以提升程式碼品質](https://msdn.microsoft.com/library/dd172133(v=vs.100).aspx) \(機器翻譯\)。  
   
 如果內建的程式碼分析規則未涵蓋您要包括的特定 Transact\-SQL 問題，則您可以建立自訂的資料庫程式碼分析規則。 例如，您可能想要建立可避免使用 WAITFOR DELAY 陳述式的自訂規則，如[為 SQL Server 編寫自訂靜態程式碼分析規則組件的逐步解說](../ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md)中所示。 若要建立自訂的資料庫程式碼分析規則，您要使用 [CodeAnalysis](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.aspx) 命名空間中的類別。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "47699916"
   
 ![資料庫程式碼分析規則元件](../ssdt/media/ssdt-database-code-analysis-rules-components.jpg "資料庫程式碼分析規則元件")  
   
-當您使用資料庫程式碼分析規則功能時，無論是直接執行靜態程式碼分析 (如需詳細資訊，請參閱[如何：分析 Transact-SQL 程式碼以找出錯誤](http://msdn.microsoft.com/library/dd172119(v=vs.100).aspx) \(機器翻譯\))，或透過執行建置，都會根據您在專案中設定所有規則的方式來載入並使用它們。 如需詳細資訊，請參閱[如何：啟用和停用資料庫程式碼靜態分析的特定規則](http://msdn.microsoft.com/library/dd172131(v=vs.100).aspx) \(機器翻譯\)。 擴充管理員也將載入您已建立並登錄的任何自訂規則組件。 如需詳細資訊，請參閱[如何：安裝和管理擴充功能](../ssdt/how-to-install-and-manage-feature-extensions.md)。  
+當您使用資料庫程式碼分析規則功能時，無論是直接執行靜態程式碼分析 (如需詳細資訊，請參閱[如何：分析 Transact-SQL 程式碼以找出錯誤](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx) \(機器翻譯\))，或透過執行建置，都會根據您在專案中設定所有規則的方式來載入並使用它們。 如需詳細資訊，請參閱[如何：啟用和停用資料庫程式碼靜態分析的特定規則](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx) \(機器翻譯\)。 擴充管理員也將載入您已建立並登錄的任何自訂規則組件。 如需詳細資訊，請參閱[如何：安裝和管理擴充功能](../ssdt/how-to-install-and-manage-feature-extensions.md)。  
   
 自訂程式碼分析規則類別繼承自 [SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx)。 自訂規則類別可以透過其規則執行內容來存取許多有用物件。 其中包括：  
   

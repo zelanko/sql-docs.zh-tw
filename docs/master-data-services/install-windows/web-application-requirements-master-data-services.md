@@ -14,12 +14,12 @@ ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c9d5a6651613fe99707e26cdae5fc3410359911d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51cd8e352d5400c012fe8dcfe7e6c4c7f6e4ef9b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851068"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696109"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 應用程式需求 (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "47851068"
 -   [安裝 SQL Server 2016 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)    
   
 ### <a name="microsoft-silverlight"></a>Microsoft Silverlight  
- 若要在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式中工作，用戶端電腦必須安裝 Silverlight 5。 如果您沒有必要的 Silverlight 版本，系統將會在您導覽至需要 Silverlight 的 Web 應用程式區域時提示安裝 Silverlight。 您可以從 [這裡](http://go.microsoft.com/fwlink/?LinkId=243096)安裝 Silverlight 5。  
+ 若要在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式中工作，用戶端電腦必須安裝 Silverlight 5。 如果您沒有必要的 Silverlight 版本，系統將會在您導覽至需要 Silverlight 的 Web 應用程式區域時提示安裝 Silverlight。 您可以從 [這裡](https://go.microsoft.com/fwlink/?LinkId=243096)安裝 Silverlight 5。  
   
 ### <a name="role-and-role-services"></a>角色和角色服務  
  在 Windows Server 2012 或 Windows Server 2012 R2 上，您可以使用 Microsoft Management Console (MMC) 中所提供的 [伺服器管理員]，以安裝 [網頁伺服器 (IIS)] 角色及必要的角色服務。  

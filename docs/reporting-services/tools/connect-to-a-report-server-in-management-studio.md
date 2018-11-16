@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5c580efe78572b757fc92f591ba4569d595fb4fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f08bb5994803652ff264335d0a6ea723b5d1918d
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737296"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813222"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>連接至 Management Studio 中的報表伺服器
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供物件總管，可讓您連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系列中的任何伺服器並以圖形方式瀏覽其內容。 若為 Reporting Services，您可以使用 [物件總管] 來進行下列作業：  
@@ -62,7 +62,7 @@ ms.locfileid: "47737296"
   
 2.  按一下 [連線] 檢視伺服器類型的清單，然後選取 [Reporting Services]。  
   
-3.  在 [連接到伺服器] 對話方塊中，輸入 SharePoint 網站的 URL。 下列範例說明語法：`http://<web server>/sites/<site>`。  
+3.  在 [連接到伺服器] 對話方塊中，輸入 SharePoint 網站的 URL。 下列範例說明語法：`https://<web server>/sites/<site>`。  
   
 4.  選取驗證類型。 如果您要使用 Windows 驗證，就必須使用您的認證進行連接。 如果您選取了 [基本驗證] 或 [表單驗證]，請輸入帳戶和密碼。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "47737296"
   
     -   若為原生模式報表伺服器，請輸入報表伺服器執行個體的名稱。 報表伺服器執行個體名稱以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱為基礎。 根據預設，本機報表伺服器執行個體的執行個體名稱就是電腦名稱。 如果您將報表伺服器安裝為具名執行個體，請使用此語法來指定伺服器：\<伺服器名稱>[\\<執行個體名稱\>]。  
   
-    -   若為以 SharePoint 整合模式執行的報表伺服器，要連接的伺服器就是與報表伺服器連接的 SharePoint 網站。 連接至 SharePoint 網站是必要的，如此您才能夠檢視控制報表伺服器內容和作業之存取權的權限等級。 您可以在網站集合中指定任何網站。 下列範例說明語法：`http://mysharepointsite`。  
+    -   若為以 SharePoint 整合模式執行的報表伺服器，要連接的伺服器就是與報表伺服器連接的 SharePoint 網站。 連接至 SharePoint 網站是必要的，如此您才能夠檢視控制報表伺服器內容和作業之存取權的權限等級。 您可以在網站集合中指定任何網站。 下列範例說明語法：`https://mysharepointsite`。  
   
 5.  對於 [驗證]，請選取要用於存取 Web 伺服器的驗證模式。 您必須選擇報表伺服器正在使用的驗證模式。  
   
@@ -106,8 +106,8 @@ ms.locfileid: "47737296"
 |連接至|工作|[權限]|  
 |----------------|-----------|-----------------|  
 |原生模式報表伺服器 (當做預設或具名執行個體連接)：<br /><br /> \<伺服器名稱>\<_執行個體><br /><br /> 報表伺服器的連接是透過報表伺服器 WMI 提供者建立的。|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。<br /><br /> 建立和管理共用排程。<br /><br /> 建立、修改或刪除角色定義。|指派給系統管理員角色。|  
-|原生模式報表伺服器 (透過報表伺服器 Web 服務的端點，當做預設或具名執行個體連接)：<br /><br /> `http://<servername>/reportserver`<br /><br /> 指定報表伺服器的 URL 會提供連接至報表伺服器的替代方式。|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。<br /><br /> 建立和管理共用排程。<br /><br /> 建立、修改或刪除角色定義。|指派給系統管理員角色。|  
-|SharePoint 整合模式報表伺服器 (透過 SharePoint 網站連接)：<br /><br /> `http://<webserver>/<SharePointSite>`|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。<br /><br /> 建立和管理針對您所連接之網站定義的共用排程。<br /><br /> 檢視針對您所連接之網站定義的權限等級。|您所連接之 SharePoint 網站的完整控制權限等級。|  
+|原生模式報表伺服器 (透過報表伺服器 Web 服務的端點，當做預設或具名執行個體連接)：<br /><br /> `https://<servername>/reportserver`<br /><br /> 指定報表伺服器的 URL 會提供連接至報表伺服器的替代方式。|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。<br /><br /> 建立和管理共用排程。<br /><br /> 建立、修改或刪除角色定義。|指派給系統管理員角色。|  
+|SharePoint 整合模式報表伺服器 (透過 SharePoint 網站連接)：<br /><br /> `https://<webserver>/<SharePointSite>`|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。<br /><br /> 建立和管理針對您所連接之網站定義的共用排程。<br /><br /> 檢視針對您所連接之網站定義的權限等級。|您所連接之 SharePoint 網站的完整控制權限等級。|  
 |SharePoint 整合模式報表伺服器 (透過報表伺服器執行個體的名稱連接)：<br /><br /> \<伺服器名稱>\<_執行個體>|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。|與報表伺服器整合之 SharePoint 網站的完整控制權限等級。<br /><br /> 請注意，當您連接至報表伺服器而非 SharePoint 網站時，您可以執行的工作數目會大幅減少。 這是因為報表伺服器只能傳回在報表伺服器資料庫 (而非 SharePoint 組態和內容資料庫) 中儲存或管理的應用程式資料。|  
   
 ## <a name="see-also"></a>另請參閱  

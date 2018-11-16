@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: facb62a69380df53d0f8b76db49086412e37ef31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07e75b6fa3391bfb82752ffbff81e513f2a9259f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682187"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659708"
 ---
 # <a name="sql-server-data-tools---license-terms"></a>SQL Server Data Tools - 授權條款
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "47682187"
 &nbsp;&nbsp;**a.  SQL Server Reporting Services 地圖報表項目。** 本軟體可能包含透過 Bing 地圖服務 (或後續品牌) 應用程式開發介面 (以下稱 「Bing 地圖服務 API」) 擷取地圖、影像和其他資料等內容的功能。 這些功能的用途是建立顯示地圖、空照圖和混合影像套疊資料的報表， 如果包含這些功能，您可以建立及檢視動態或靜態文件， 其使用僅限於與本軟體一併使用或透過軟體整合式內建存取方法。 　貴用戶不得以其他方式複製、儲存、封存或建立透過 Bing 地圖服務 API 提供之內容的資料庫。 　貴用戶不得將下列項目用於任何用途，即使可透過 Bing 地圖服務 API 取得亦然：  
 * Bing 地圖服務 API 用於提供以感應器為基礎的導航/行程，或者  
 * 任何道路交通資料或鳥瞰影像 (或相關中繼資料)。  
-貴用戶對於 Bing 地圖服務的使用方式也會受到 Bing 地圖服務使用者的使用條款 (http://go.microsoft.com/?linkid=9710837) 和 Bing 地圖服務隱私權聲明 (http://go.microsoft.com/fwlink/?LinkID=248686) 所規範。  
+貴用戶對於 Bing 地圖服務的使用方式也會受到 Bing 地圖服務使用者的使用條款 (https://go.microsoft.com/?linkid=9710837) 和 Bing 地圖服務隱私權聲明 (https://go.microsoft.com/fwlink/?LinkID=248686) 所規範。  
   
 &nbsp;&nbsp;**b.**  本軟體的設計目的是允許 SQL Server Integration Services (SSIS) 的使用者能夠 (a) 在內部部署資料存放區和 Microsoft 線上服務之間移動資料，以及 (b) 觸發 Microsoft 線上服務中的特定動作。 為了執行此動作，軟體會使用網際網路通訊協定，來 (i) 將資料 (包括您自己指定的特定資料與軟體設定相關資料) 傳送給這些服務，以及 (ii) 向這些服務要求資料 (包括您自己指定的特定資料與 Microsoft 線上服務的性質與設定)。 一旦設定軟體來與這些服務通訊之後，　貴用戶可能不會在軟體連線到這些服務時收到個別通知。  
   

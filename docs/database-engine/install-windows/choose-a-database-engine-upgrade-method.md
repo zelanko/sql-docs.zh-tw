@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 3d9389f515c6e6558a5df2a39a778e24b9179567
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: ba27a8364afc3d006341079a597cc0edcb6131fb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970779"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665607"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>選擇資料庫引擎升級方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,17 +30,17 @@ ms.locfileid: "50970779"
   
  **下載**  
   
--   若要下載 [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server)**。  
+-   若要下載 [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server)**。  
   
--   有 Azure 帳戶嗎？  接著前往**[這裡](http://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)** 加速已安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition 的虛擬機器。  
+-   有 Azure 帳戶嗎？  接著前往**[這裡](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)** 加速已安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition 的虛擬機器。  
   
 > [!NOTE]  
 >  您也可以考慮在升級計畫中升級 Azure SQL Database，或將您的 SQL Server 環境虛擬化。 本文未涵蓋這些文章，如有需要請參閱以下連結：
 >   - [Azure 虛擬機器上的 SQL Server 概觀](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
->   - [Azure SQL Database](https://azure.microsoft.com/en-us/services/sql-database/) 
+>   - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
 >   - [在 Azure 中選取 SQL Server 選項](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)。  
   
-##  <a name="UpgradeInPlace"></a> 就地升級  
+## <a name="upgrade-in-place"></a>就地升級  
  透過此方法，SQL Server 安裝程式會以新的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 位元取代現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 位元，然後升級每個系統及使用者資料庫，藉此升級現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝。  就地升級方法最簡易，其需要停機一段時間，需要後援時也會花費較長時間，而且未受所有案例支援。 如需支援與未支援的就地升級案例詳細資訊，請參閱 [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)。  
   
  此方法通常用在下列案例中：  
@@ -61,7 +61,7 @@ ms.locfileid: "50970779"
   
  如需詳細步驟，請參閱[使用安裝精靈升級 SQL Server &#40;安裝程式&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)。  
   
-##  <a name="NewInstallationUpgrade"></a> 遷移到新的安裝  
+## <a name="migrate-to-a-new-installation"></a>遷移到新的安裝  
  透過此方法，您可以在建置新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境的同時保有目前環境，前者通常在新的硬體上，並使用新版作業系統。 在新環境中安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 後，您可以執行幾個步驟讓新環境就緒，以便將現有使用者資料庫從現有環境遷移到新環境，並盡可能縮短停機時間。 這些步驟包括遷移下列項目：  
   
 -   **系統物件：** 某些應用程式相依於超出單一使用者資料庫範圍的資訊、實體和/或物件。 一般而言，應用程式相依於 master 和 msdb 資料庫以及使用者資料庫。 如果有資料庫正確運作所需的任何項目儲存在使用者資料庫外部，則必須設法讓目的地伺服器執行個體也能提供。 例如，應用程式的登入在 master 資料庫中儲存為中繼資料，就必須在目的地伺服器上加以重新建立。 若應用程式或資料庫維護計畫相依於 SQL Server Agent 作業，而其中繼資料儲存於 msdb 資料庫，則必須在目的地伺服器執行個體上重新建立那些作業。 伺服器層級觸發程序的中繼資料也同樣儲存在 master 中。  
@@ -80,21 +80,18 @@ ms.locfileid: "50970779"
  在遷移使用者資料庫後，您可以使用多種方法其中之一 (例如將伺服器重新命名、使用 DNS 項目、修改連接字串) 向新使用者指出新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  與就地升級相較之下，新的安裝方法可減少風險及停機時間，並有助於硬體及作業系統升級與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的更新同時進行。  
   
 > [!NOTE]  
->  若您已經就地擁有高可用性 (HA) 解決方案或其他多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體環境，請前往 [輪流升級](#RollingUpgrade)。 若您未就地擁有高可用性解決方案，則可以考慮暫時設定 [資料庫鏡像](../database-mirroring/setting-up-database-mirroring-sql-server.md) 進一步縮短停機時間以加速升級，或利用此機會設定 [AlwaysOn 可用性群組](http://msdn.microsoft.com/library/hh510260.aspx) 當作永久 HA 解決方案。  
+>  若您已經就地擁有高可用性 (HA) 解決方案或其他多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體環境，請前往 [輪流升級](#RollingUpgrade)。 若您未就地擁有高可用性解決方案，則可以考慮暫時設定 [資料庫鏡像](../database-mirroring/setting-up-database-mirroring-sql-server.md) 進一步縮短停機時間以加速升級，或利用此機會設定 [AlwaysOn 可用性群組](https://msdn.microsoft.com/library/hh510260.aspx) 當作永久 HA 解決方案。  
   
  例如，您可以使用此方法來升級：  
   
--   不支援之作業系統上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝。  
+-   不支援之作業系統上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝。    
+-   [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 和更新版本的 SQL Server x86 安裝不支援 x86 安裝。   
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新硬體和/或新版作業程式。    
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。   
+-   [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 和更新版本的 SQL Server 2005 不支援 SQL Server 2005 的就地升級。 如需詳細資訊，請參閱[是否從 SQL Server 2005 升級？](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)
+
   
--   [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 和更新版本的 SQL Server x86 安裝不支援 x86 安裝。  
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新硬體和/或新版作業程式。  
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
-  
--   [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 和更新版本的 SQL Server 2005 不支援 SQL Server 2005 的就地升級。 如需詳細資訊，請參閱[是否從 SQL Server 2005 升級？](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)  
-  
- 新安裝升級的必要步驟會依據您使用連接儲存體還是 SAN 儲存體而有些微不同。  
+新安裝升級的必要步驟會依據您使用連接儲存體還是 SAN 儲存體而有些微不同。  
   
 -   **連接儲存體環境：** 若您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境使用連接儲存體，下圖及圖中連結會引導您完成 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 新安裝升級的必要步驟。  
   
@@ -104,19 +101,14 @@ ms.locfileid: "50970779"
   
      ![SAN 儲存體使用卸離和附加的新安裝升級方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "SAN 儲存體使用卸離和附加的新安裝升級方法")  
   
-##  <a name="RollingUpgrade"></a> 輪流升級  
+## <a name="rolling-upgrade"></a>輪流升級  
  當 SQL Server 解決方案環境涉及必須以特定順序升級的多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，便需要輪流升級，盡可能增加執行時間、減少風險並保留功能。 輪流升級基本上是有特定順序的多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的升級，會在現有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體執行就地升級，或執行新的安裝升級，加速升級專案中硬體和/或作業系統的升級。 在許多案例中，您都需要使用輪流升級方法。 下列文章記載這些案例：  
   
--   Always-On 可用性群組：如需在此環境中執行輪流升級的詳細步驟，請參閱 [升級 AlwaysOn 可用性群組複本執行個體](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)。  
-  
--   容錯移轉叢集執行個體：如需在此環境中執行輪流升級的詳細步驟，請參閱[升級 SQL Server 容錯移轉叢集執行個體](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)。  
-  
--   鏡像執行個體：如需在此環境中執行輪流升級的詳細步驟，請參閱 [升級鏡像執行個體](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)。  
-  
--   記錄傳送執行個體：如需在此環境中執行輪流升級的詳細步驟，請參閱[升級 SQL Server 的記錄傳送 &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)。  
-  
--   複寫環境：如需在此環境中執行輪流升級的詳細步驟，請參閱[升級複寫的資料庫](../../database-engine/install-windows/upgrade-replicated-databases.md)。
-  
+-   Always-On 可用性群組：如需在此環境中執行輪流升級的詳細步驟，請參閱 [升級 AlwaysOn 可用性群組複本執行個體](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)。    
+-   容錯移轉叢集執行個體：如需在此環境中執行輪流升級的詳細步驟，請參閱[升級 SQL Server 容錯移轉叢集執行個體](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)。    
+-   鏡像執行個體：如需在此環境中執行輪流升級的詳細步驟，請參閱 [升級鏡像執行個體](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)。    
+-   記錄傳送執行個體：如需在此環境中執行輪流升級的詳細步驟，請參閱[升級 SQL Server 的記錄傳送 &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)。    
+-   複寫環境：如需在此環境中執行輪流升級的詳細步驟，請參閱[升級複寫的資料庫](../../database-engine/install-windows/upgrade-replicated-databases.md)。  
 -   SQL Server Reporting Services 向外延展環境：如需在此環境中執行輪流升級的詳細步驟，請參閱 [升級和移轉 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。  
   
 ## <a name="next-steps"></a>後續步驟

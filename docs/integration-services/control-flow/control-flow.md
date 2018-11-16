@@ -15,12 +15,12 @@ ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 032b2fc6eee634f1b651384a035d381820844200
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8119069b08b2f84bcdf71fa50894eb2e743b88b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673456"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640665"
 ---
 # <a name="control-flow"></a>控制流程
   封裝由控制流程及選擇性的一個或多個資料流程所組成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供三種不同類型的控制流目程項目，分別是提供套件中結構的容器、提供功能的工作，以及將可執行檔、容器與工作連線成一個排序控制流程的優先順序條件約束。  
@@ -54,11 +54,11 @@ ms.locfileid: "47673456"
   
      將工作或容器加入 **[控制流程]** 索引標籤的設計介面後， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師會自動將連接子加入該項目。 如果封裝包括兩個以上的項目、工作或容器，則您可透過將它們的連接子從一個項目拖曳至另一個項目，來將其聯結到控制流程中。  
   
-     兩個項目之間的連接子代表一個優先順序條件約束。 優先順序條件約束定義兩個已連接項目之間的關聯性。 它指定在執行階段工作與容器的執行順序，以及執行工作與容器的條件約束。 例如，優先順序條件約束可以指定某個工作必須成功，然後才可以執行控制流程中的下一個工作。 如需詳細資訊，請參閱 [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)。  
+     兩個項目之間的連接子代表一個優先順序條件約束。 優先順序條件約束定義兩個已連接項目之間的關聯性。 它指定在執行階段工作與容器的執行順序，以及執行工作與容器的條件約束。 例如，優先順序條件約束可以指定某個工作必須成功，然後才可以執行控制流程中的下一個工作。 如需詳細資訊，請參閱 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
   
 -   加入連接管理員。  
   
-     許多工作都需要連接到資料來源，因此您必須將工作所需的連接管理員加入封裝。 視其使用的列舉值類型而定，「Foreach 迴圈」容器也可能需要連接管理員。 您可以在逐項建構控制流程時，或在開始建構控制流程之前加入連接管理員。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)和[建立連接管理員](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
+     許多工作都需要連接到資料來源，因此您必須將工作所需的連接管理員加入封裝。 視其使用的列舉值類型而定，「Foreach 迴圈」容器也可能需要連接管理員。 您可以在逐項建構控制流程時，或在開始建構控制流程之前加入連接管理員。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)和[建立連接管理員](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具還包括許多設計階段功能，您可以使用這些功能管理設計介面，並使控制流程可以自我記錄。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47673456"
   
 -   [在控制流程中新增或刪除工作或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
--   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 -   [建立或取消元件的群組](../../integration-services/group-or-ungroup-components.md)  
   

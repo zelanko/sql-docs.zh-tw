@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15c87cdbe7f96b3775a4ecfc475436e2996c212e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6eb8e352e18331142adf23a76371d49d8403a4cd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630116"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696816"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>課程 1：建立及查詢資料庫物件
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "47630116"
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] 撰寫陳述式並且提交給 [!INCLUDE[ssDE](../includes/ssde-md.md)] 可以採用下列方式：  
   
--   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 這個教學課程會假設您使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，但是您也可以使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express，這個版本可以從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?linkid=67359)免費下載。  
+-   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 這個教學課程會假設您使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，但是您也可以使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express，這個版本可以從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?linkid=67359)免費下載。  
   
 -   使用 [sqlcmd 公用程式](../tools/sqlcmd-utility.md)。  
   
@@ -213,7 +213,7 @@ ms.locfileid: "47630116"
 |||  
 |-|-|  
 |[字串函數 &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md)|[日期和時間資料類型與函數 &#40;Transact-SQL&#41;](../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
-|[數學函數 &#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)|[Text 和 Image 函數 &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
+|[數學函數 &#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)|[Text 和 Image 函數 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
 
 ## <a name="create-views-and-stored-procedures"></a>建立檢視和預存程序
 檢視是預存的 SELECT 陳述式，而預存程序是一個或多個批次執行的 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式。  

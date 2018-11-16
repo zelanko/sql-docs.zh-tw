@@ -14,12 +14,12 @@ ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8d1c3b689a42b2c7a0a41fd4df71a6d78dc2a122
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5da3ebf716c227e2724d7ca2676405aa34b7241
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710686"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663287"
 ---
 # <a name="create-clr-functions"></a>建立 CLR 函數
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47710686"
 -   [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
   
 ## <a name="accessing-native-code"></a>存取機器碼  
- CLR 函數可用來透過 Managed 程式碼中的 PInvoke 存取機器碼 (Unmanaged 程式碼)，例如使用 C 或 C++ 撰寫的程式碼 (如需詳細資訊，請參閱 [從 Managed 程式碼呼叫原生函數](http://go.microsoft.com/fwlink/?LinkID=181929) )。 如此可讓您重複使用舊版程式碼 (如 CLR UDF) 或是使用機器碼撰寫關鍵效能 UDF。 這樣的處理方式需要 UNSAFE 組件。 如需了解使用 UNSAFE 組件的注意事項，請參閱 [CLR 整合程式碼存取安全性](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) 。  
+ CLR 函數可用來透過 Managed 程式碼中的 PInvoke 存取機器碼 (Unmanaged 程式碼)，例如使用 C 或 C++ 撰寫的程式碼 (如需詳細資訊，請參閱 [從 Managed 程式碼呼叫原生函數](https://go.microsoft.com/fwlink/?LinkID=181929) )。 如此可讓您重複使用舊版程式碼 (如 CLR UDF) 或是使用機器碼撰寫關鍵效能 UDF。 這樣的處理方式需要 UNSAFE 組件。 如需了解使用 UNSAFE 組件的注意事項，請參閱 [CLR 整合程式碼存取安全性](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) 。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立使用者定義函數 &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   

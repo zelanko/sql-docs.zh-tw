@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce8d405d4ae630f7166389d98086237270333e51
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 7ee293543439436615840e720071d11971aed3dc
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252155"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703666"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 陳述式 (Transact-SQL)
 還原利用 BACKUP 命令取得的 SQL 資料庫備份。 
@@ -365,7 +365,7 @@ RESTORE 可以在發生錯誤之後，重新啟動。 另外，您也可以指�
 您也可以利用 RESTORE 陳述式，將全文檢索資料還原到替代位置，以及執行全文檢索資料的差異還原、檔案和檔案群組還原及差異檔案和檔案群組還原。 另外，RESTORE 只能連同資料庫資料一起還原全文檢索檔案。  
   
 > [!NOTE] 
-> 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 匯入的全文檢索目錄仍然會視為資料庫檔案。 對於這些檔案而言，備份全文檢索目錄的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 程序會維持適用狀態，不過不再需要於備份作業期間暫停和繼續。 如需詳細資訊，請參閱[備份並還原全文檢索目錄](http://go.microsoft.com/fwlink/?LinkId=107381)。  
+> 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 匯入的全文檢索目錄仍然會視為資料庫檔案。 對於這些檔案而言，備份全文檢索目錄的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 程序會維持適用狀態，不過不再需要於備份作業期間暫停和繼續。 如需詳細資訊，請參閱[備份並還原全文檢索目錄](https://go.microsoft.com/fwlink/?LinkId=107381)。  
   
 ## <a name="metadata"></a>中繼資料  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含備份與還原記錄資料表，以便用來為每個伺服器執行個體進行追蹤備份和還原活動。 當執行還原時，也會修改備份記錄資料表。 如需有關這些資料表的資訊，請參閱[備份記錄與標頭資訊 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)。  
@@ -745,7 +745,7 @@ FROM URL
 指定放置於 URL而且將用於還原作業的一或多個備份裝置。 URL 格式可用於從 Microsoft Azure 儲存體服務還原備份。 
 
 > [!IMPORTANT]  
-> 為了在從 URL 還原時能從多部裝置還原，您必須使用共用存取簽章 (SAS) 權杖。 如需建立共用存取簽章的範例，請參閱 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[在 Azure 儲存體上使用 Powershell 搭配共用存取簽章 (SAS) 權杖來簡化 SQL 認證的建立](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) \(英文\)。  
+> 為了在從 URL 還原時能從多部裝置還原，您必須使用共用存取簽章 (SAS) 權杖。 如需建立共用存取簽章的範例，請參閱 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[在 Azure 儲存體上使用 Powershell 搭配共用存取簽章 (SAS) 權杖來簡化 SQL 認證的建立](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) \(英文\)。  
   
 *n*  
 這是一個預留位置，表示可以在逗號分隔清單中指定最多達 64 個備份裝置。  
@@ -839,7 +839,7 @@ WHERE r.command = 'RESTORE DATABASE'
 > [!div class="mx-tdCol2BreakAll"]
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|[SQL Database<br />受控執行個體](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* 平行處理<br />資料倉儲\*_**
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|[SQL Database<br />受控執行個體](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\*平行處理<br />資料倉儲\*_**
 
 &nbsp;
 

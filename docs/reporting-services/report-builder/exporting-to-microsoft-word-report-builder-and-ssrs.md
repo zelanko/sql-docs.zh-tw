@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9a345a40713bdba845e2e2cdd825326c1799c1e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 1dd2e24be0ca0746ad456a43c9005f3e0dd8a30c
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021092"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814091"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>匯出至 Microsoft Word (報表產生器及 SSRS)
 
@@ -112,9 +112,9 @@ ms.locfileid: "50021092"
   
  下列主題提供有關設定 Office 和 Word 選項的其他資訊。  
   
--   在 Word 的 [Microsoft Office 語言喜好設定] 或 [Word 選項] 對話方塊中變更編輯語言。 如需詳細資訊，請參閱＜ [在 Office 程式中啟用使用其他語言的功能](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1)＞。  
+-   在 Word 的 [Microsoft Office 語言喜好設定] 或 [Word 選項] 對話方塊中變更編輯語言。 如需詳細資訊，請參閱＜ [在 Office 程式中啟用使用其他語言的功能](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1)＞。  
   
--   加入 Office 語言套件，然後變更編輯語言。 如需詳細資訊，請參閱 [在 Office 程式中啟用使用其他語言的功能](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) 和 [Office 語言選項](http://office.microsoft.com/language/)。  
+-   加入 Office 語言套件，然後變更編輯語言。 如需詳細資訊，請參閱 [在 Office 程式中啟用使用其他語言的功能](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) 和 [Office 語言選項](https://office.microsoft.com/language/)。  
   
 > [!NOTE]  
 >  您在 Word 的 [Microsoft Office 語言喜好設定] 或 [Word 選項] 對話方塊中變更編輯語言時，變更會套用至所有 Office 程式。  

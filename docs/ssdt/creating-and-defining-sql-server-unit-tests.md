@@ -14,12 +14,12 @@ ms.assetid: 3c082177-a2b1-4fde-8833-b49b2a351815
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ed68e2510169ee0c56a3dfbf2e95c2cb164412b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14d242dbf69e223b5e56b575f09e55e1f3ba6964
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688586"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681276"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>建立和定義 SQL Server 單元測試
 您可以執行 SQL Server 單元測試，來驗證結構描述中一個或多個資料庫物件的變更是否中斷了資料庫應用程式中的現有功能。 這些測試會補充軟體開發人員所建立的單元測試。 您必須執行這兩種測試以驗證應用程式的行為。  
@@ -46,7 +46,7 @@ ms.locfileid: "47688586"
 [執行 SQL Server 單元測試](../ssdt/running-sql-server-unit-tests.md)  
 建立 SQL Server 單元測試之後，您可以從 [測試檢視] 視窗、SQL Server 單元測試設計工具或使用 Team Foundation Build 來執行測試。  
   
-[案例：定義資料庫單元測試的自訂測試條件](http://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[案例：定義資料庫單元測試的自訂測試條件](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
 您可以建立自訂測試條件來測試預設測試條件無法驗證的行為。  
   
 ## <a name="see-also"></a>另請參閱  
