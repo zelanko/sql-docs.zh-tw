@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 02a1d28025fd88694ea4538dc352bc8b7fea51d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e11b4ef7224a622b22c3d7cc15d97175c73625bd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662608"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671328"
 ---
 # <a name="dboserverquotas-azure-sql-database"></a>dbo.server_quotas (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -47,6 +47,6 @@ ms.locfileid: "47662608"
  這個檢視可供所有使用者角色權限來連接到虛擬**主要**資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理高階資料庫](http://go.microsoft.com/fwlink/?LinkID=311927)  
+ [管理高階資料庫](https://go.microsoft.com/fwlink/?LinkID=311927)  
   
   

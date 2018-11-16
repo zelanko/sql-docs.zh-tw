@@ -16,12 +16,12 @@ ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d32af5a596d41dc85a2d04fd9e5a6eb98380be3e
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: e9b113a9ef0ca0905fa90833a5c9568a9318834a
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383833"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698807"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>解除安裝現有的 SQL Server 執行個體 (安裝程式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "49383833"
   
 1.  如果解除安裝程序未順利完成，請嘗試解決導致解除安裝失敗的問題。 下列文章可以幫助您了解解除安裝失敗的原因：  
   
-    -   [如何在安裝記錄檔中識別 SQL Server 2008 的安裝問題](http://support.microsoft.com/kb/955396/en-us)  
+    -   [如何在安裝記錄檔中識別 SQL Server 2008 的安裝問題](https://support.microsoft.com/kb/955396/en-us)  
   
     -   [檢視與讀取 SQL Server 安裝程式記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   

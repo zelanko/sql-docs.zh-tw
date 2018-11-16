@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02cd5a093d0af3d325437c77dc07846ee8f6db23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83346a846e180cd2e77c6ba895bac7a899b1143a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601266"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639176"
 ---
 # <a name="dtexec-utility"></a>dtexec 公用程式
   **dtexec** 命令提示字元公用程式可用於設定及執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 **dtexec** 公用程式可存取所有封裝組態及執行功能，例如參數、連線、屬性、變數、記錄與進度指標。 **dtexec** 公用程式可讓您從下列來源載入封裝： [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器、.ispac 專案檔案、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統。  
@@ -172,7 +172,7 @@ dtexec /option [value] [/option [value]]...
   
      這個選項需要同時指定這兩個參數：在 *id_or_name* 引數中必須提供連接管理員名稱或 GUID，而且在 *connection_string* 引數中必須指定有效的連接字串。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)。  
   
-     您可以在執行階段使用 **/Connection** 選項，從不同於設計時所指定的位置載入封裝組態。 然後這些組態的值會取代您原本指定的值。 但 **/Connection** 選項只可用於使用連接管理員的組態，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態。 若要了解如何套用封裝組態，請參閱 [封裝組態](../../integration-services/packages/package-configurations.md) 和 [SQL Server 2016 中 Integration Services 功能的行為變更](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)。  
+     您可以在執行階段使用 **/Connection** 選項，從不同於設計時所指定的位置載入封裝組態。 然後這些組態的值會取代您原本指定的值。 但 **/Connection** 選項只可用於使用連接管理員的組態，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態。 若要了解如何套用封裝組態，請參閱 [封裝組態](../../integration-services/packages/package-configurations.md) 和 [SQL Server 2016 中 Integration Services 功能的行為變更](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)。  
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]：(選擇性)。 在執行封裝期間，於主控台中顯示指定的記錄項目。 如果省略了這個選項，主控台便不會顯示任何記錄項目。 如果指定了這個選項，但未設定用來限制顯示的參數，就會顯示每個記錄項目。 若要限制主控台顯示的項目，您可以使用 *displayoptions* 參數指定要顯示的資料行，以及使用 *list_options* 參數來限制記錄項目類型。  
   
@@ -403,7 +403,7 @@ dtexec /option [value] [/option [value]]...
   
      `/Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1`  
   
-     您可以使用 **/Set** 選項變更載入封裝組態的來源位置。 但您不可使用 **/Set** 選項覆寫先前在設計階段由組態所指定的值。 若要了解如何套用封裝組態，請參閱 [封裝組態](../../integration-services/packages/package-configurations.md) 和 [SQL Server 2016 中 Integration Services 功能的行為變更](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)。  
+     您可以使用 **/Set** 選項變更載入封裝組態的來源位置。 但您不可使用 **/Set** 選項覆寫先前在設計階段由組態所指定的值。 若要了解如何套用封裝組態，請參閱[封裝組態](../../integration-services/packages/package-configurations.md)和 [SQL Server 2016 中 Integration Services 功能的行為變更](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)。  
   
 -   **/Ser[ver]** *伺服器*：(選擇性)。 指定 **/SQL** 或 **/DTS** 選項時，此選項會指定要擷取封裝的來源伺服器名稱。 若省略 **/Server** 選項而指定了 **/SQL** 或 **/DTS** 選項，將會嘗試對本機伺服器執行封裝作業。 *server_instance* 值可能會加上引號。  
   
@@ -630,6 +630,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
 ```  
   
 ## <a name="related-content"></a>相關內容  
- www.mattmasson.com 上的部落格文章： [結束碼、DTEXEC 和 SSIS 目錄](http://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)。  
+ www.mattmasson.com 上的部落格文章： [結束碼、DTEXEC 和 SSIS 目錄](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)。  
   
   

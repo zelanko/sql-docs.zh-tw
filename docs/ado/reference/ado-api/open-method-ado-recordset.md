@@ -17,12 +17,12 @@ ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc084a4fc2d5448efce8721c426ce78a4bb18a76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c1a53f8c310f43503b7dde8c85beb862a66e953
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655516"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606670"
 ---
 # <a name="open-method-ado-recordset"></a>Open 方法 (ADO Recordset)
 在開啟資料指標[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
@@ -47,7 +47,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  *LockType*  
  選擇性。 A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)值，決定使用哪種類型的鎖定 （並行） 提供者應該開啟時**資料錄集**。 預設值是**Recordset**。  
   
- *選項*  
+ *選項。*  
  選擇性。 A**長**值，指出提供者應該如何評估*來源*引數，如果它代表的項目以外的其他**命令**物件，或是**資料錄集**應該從先前儲存的位置的檔案還原。 可以是一或多個[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)或是[的執行方式](../../../ado/reference/ado-api/executeoptionenum.md)可與位元的 OR 運算子結合的值。  
   
 > [!NOTE]
@@ -61,7 +61,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  使用**開放**方法**Recordset**物件開啟資料指標，表示記錄基底資料表、 查詢，或先前儲存的結果**資料錄集**。  
   
- 使用選擇性*來源*引數來指定資料來源，使用下列其中之一：**命令**物件變數，SQL 陳述式、 預存程序、 資料表名稱、 URL 或完整檔案路徑名稱。 如果*來源*是檔案的路徑名稱，它可以是完整路徑 ("c:\dir\file.rst 」) 的相對路徑 ("...\file.rst")，或 URL ("http://files/file.rst」)。  
+ 使用選擇性*來源*引數來指定資料來源，使用下列其中之一：**命令**物件變數，SQL 陳述式、 預存程序、 資料表名稱、 URL 或完整檔案路徑名稱。 如果*來源*是檔案的路徑名稱，它可以是完整路徑 ("c:\dir\file.rst 」) 的相對路徑 ("...\file.rst")，或 URL ("https://files/file.rst」)。  
   
  它不是個不錯的主意，使用*來源*引數**開啟**方法，以執行動作查詢不會傳回記錄，因為沒有任何簡單的方法，以判斷呼叫是否成功。 **資料錄集**傳回這類查詢將會關閉。 若要執行的查詢，不會傳回記錄，例如 SQL INSERT 陳述式，呼叫[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法**命令**物件或[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。  
   
