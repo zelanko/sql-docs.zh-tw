@@ -16,12 +16,12 @@ ms.assetid: 00682b5e-4720-422e-a5ec-4a96f26e1300
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 384bdc9bf2da72c32f309e1cdfbb4e624ec465a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d8be2ed7dbf353935e46fcd09a45070838c0852
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649056"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664583"
 ---
 # <a name="service-broker-catalog-views-transact-sql"></a>Service Broker 目錄檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47649056"
   
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [系統檢視表&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [系統檢視表&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [sys.service_broker_endpoints &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-service-broker-endpoints-transact-sql.md)   
  [sys.service_queues &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)  
   

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f7721018d887fdb4c24293c4076f384167f38a55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb1f29a3037cafdddc14973f77d7bb3d8c52f296
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695076"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350266"
 ---
 # <a name="working-with-multidimensional-data"></a>使用多維度資料
 A*資料格集*是多維度資料的查詢的結果。 它包含的軸、 通常不超過四個座標軸通常只有兩個或三個集合。 *軸*是用來找出或篩選 cube 中的特定值的一或多個維度的成員集合。  
@@ -64,7 +64,7 @@ A*資料格集*是多維度資料的查詢的結果。 它包含的軸、 通常
   
  每個座標以含有兩個成員的位置，從 [銷售員] 維度，而另一個從 [Geography] 維度的其中一個：  
   
-```  
+```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
 (Valentine, Japan), (Nash, Seattle), (Nash, Boston), (Nash, USA_North),  
 (Nash, Japan)  
@@ -72,7 +72,7 @@ A*資料格集*是多維度資料的查詢的結果。 它包含的軸、 通常
   
  Y 軸只能有一個維度，其中包含下列八個位置：  
   
-```  
+```console
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   

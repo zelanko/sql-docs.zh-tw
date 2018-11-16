@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3927708ae0e9fe00043bc0cb51926d836dd912f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a81f7808275dfee216d6d884db45e267e06271c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748696"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662486"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>使用陳述式參數 - 繫結參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "47748696"
   
  使用時，才會支援具名的參數[!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE**陳述式或 ODBC CALL 逸出序列執行預存程序。  
   
- 如果**與 SQL_DESC_NAME**設定預存程序參數，在查詢中的所有預存程序參數也應該設定**與 SQL_DESC_NAME**。  如果常值會使用在預存程序呼叫中，其中參數已**與 SQL_DESC_NAME**設定，則常值應該使用格式 *' 名稱*=*值*'，何處*名稱*是預存程序參數名稱 (例如@p1)。 如需詳細資訊，請參閱 <<c0> [ 依名稱 （具名參數） 的繫結參數](http://go.microsoft.com/fwlink/?LinkId=167215)。  
+ 如果**與 SQL_DESC_NAME**設定預存程序參數，在查詢中的所有預存程序參數也應該設定**與 SQL_DESC_NAME**。  如果常值會使用在預存程序呼叫中，其中參數已**與 SQL_DESC_NAME**設定，則常值應該使用格式 *' 名稱*=*值*'，何處*名稱*是預存程序參數名稱 (例如@p1)。 如需詳細資訊，請參閱 <<c0> [ 依名稱 （具名參數） 的繫結參數](https://go.microsoft.com/fwlink/?LinkId=167215)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用陳述式參數](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  

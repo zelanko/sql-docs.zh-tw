@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,18 +15,18 @@ ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d5122b7484e35f16a357b590a843a4a6dd81d13
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 283e623b045e635ef3165b51270c2a257d7856fd
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655456"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559995"
 ---
 # <a name="registering-a-custom-business-object"></a>註冊自訂商務物件
 若要成功地透過 Web 伺服器啟動 （.dll 或.exe） 的自訂商務物件，商務物件的 ProgID 必須輸入登錄到此程序中所述。 此 RDS 功能會執行獲批准的可執行檔用來保護您的 Web 伺服器的安全性。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 > [!NOTE]
 >  MDAC 2.0 和更新版本的 Windows DAC，預設的商務物件中， [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)，MDAC/Windows DAC 安裝期間未註冊預設情況下。 不過，如果**RDSServer.DataFactory**已註冊為安全的安裝之前的電腦上執行，登錄項目保留在新的安裝。  

@@ -18,12 +18,12 @@ ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00efe39e8ab60df83ddd267269461f6a6ff61ee0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a670dcf5d011bf30f7196d04b3338d05d6095ee5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594627"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661097"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ EXECUTE sp_batch_params @SQLString;
   
 ## <a name="see-also"></a>另請參閱  
  [執行預存程序](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [執行預存程序的使用說明主題&#40;ODBC&#41;](http://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
+ [執行預存程序的使用說明主題&#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
  [執行預存程序 &#40; OLE DB &#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
   
   

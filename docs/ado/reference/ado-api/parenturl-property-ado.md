@@ -16,12 +16,12 @@ ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdbff500a90ab4456b3e9ef252be4407c636cdec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e67ac30883a7665368f6f46045ff61d9375b8cd1
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822106"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603018"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL 屬性 (ADO)
 表示絕對的 URL 字串，指向父代[記錄](../../../ado/reference/ado-api/record-object-ado.md)的目前**記錄**物件。  
@@ -35,13 +35,13 @@ ms.locfileid: "47822106"
  假設"first"下 「 第二個 「 包含的資料夾。 開啟**記錄**物件，使用下列語法：  
   
 ```  
-record.ActiveConnection = "http://first"  
+record.ActiveConnection = "https://first"  
 record.Open "second"  
 ```  
   
- 現在的值`the` **ParentURL**屬性是`"http://first"`，則相同**ActiveConnection**。  
+ 現在的值`the` **ParentURL**屬性是`"https://first"`，則相同**ActiveConnection**。  
   
- 來源也可以是絕對 URL 例如`"http://first/second"`。 **ParentURL**屬性就`"http://first"`，上面的層級`"second"`。  
+ 來源也可以是絕對 URL 例如`"https://first/second"`。 **ParentURL**屬性就`"https://first"`，上面的層級`"second"`。  
   
  如果這個屬性可能是 null 的值：  
   

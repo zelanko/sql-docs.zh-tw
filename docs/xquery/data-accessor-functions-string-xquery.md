@@ -5,8 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a5b98660cb803c2cb3e17ee8be1d4b619de394c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4df87a9fedffa701858fef9101c58db12c1c3bf2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836446"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661677"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>資料存取子函式 - string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ fn:string($arg as item()?) as xs:string
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
  /PD:ProductDescription/PD:Features  
 ')  
 FROM Production.ProductModel  
@@ -71,9 +70,9 @@ WHERE ProductModelID=19
  以下是部份結果：  
   
 ```  
-<PD:Features xmlns:PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+<PD:Features xmlns:PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
    These are the product highlights.   
-   <p1:Warranty xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+   <p1:Warranty xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
     <p1:WarrantyPeriod>3 years</p1:WarrantyPeriod>  
     <p1:Description>parts and labor</p1:Description>  
    </p1:Warranty>  
@@ -85,7 +84,7 @@ WHERE ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
  string(/PD:ProductDescription[1]/PD:Features[1])  
 ')  
 FROM Production.ProductModel  

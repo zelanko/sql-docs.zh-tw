@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 019d3d1491425854b681a5c1e8dd08e5228af2ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 003fc3496a68f0437dc2c7d313179da1f37a9c7b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623716"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669057"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的客戶意見反應
 
@@ -22,7 +22,7 @@ ms.locfileid: "47623716"
 
 根據預設，Microsoft SQL Server 會收集客戶如何使用應用程式的相關資訊。 具體來說，SQL Server 會收集有關安裝體驗、使用情況和效能的相關資訊。 這些資訊可協助 Microsoft 改善產品，以進一步滿足客戶需求。 例如，Microsoft 會收集客戶所遇到之錯誤代碼的相關資訊，以便修正相關錯誤、改善如何使用 SQL Server 的相關文件，以及判斷是否應將功能加入到產品中以滿足客戶。
 
-本文件提供有關收集何種資訊，以及有關如何設定傳送也收集 Linux 上的 Microsoft SQL Server 詳細資料給 Microsoft 的資訊。 SQL Server 2017 包含隱私權聲明，說明我們執行，並不會從使用者收集哪些資訊。 如需詳細資訊，請參閱 <<c0> [ 隱私權聲明](http://go.microsoft.com/fwlink/?LinkID=868444)。
+本文件提供有關收集何種資訊，以及有關如何設定傳送也收集 Linux 上的 Microsoft SQL Server 詳細資料給 Microsoft 的資訊。 SQL Server 2017 包含隱私權聲明，說明我們執行，並不會從使用者收集哪些資訊。 如需詳細資訊，請參閱 <<c0> [ 隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)。
 
 具體來說，Microsoft 不會透過此機制傳送下列類型的資訊：
 

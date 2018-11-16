@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: f277ca5984523ea25a0a7a8f02cde025d6e14789
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 4e4de2fbb87fb7716ccde8de52924cd2402424fc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419383"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675457"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的安裝指引
 
@@ -38,10 +38,10 @@ Red Hat Enterprise Linux (RHEL)、 SUSE Linux Enterprise Server (SLES) 和 Ubunt
 
 | 平台 | 支援的版本 | Get
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3 或 7.4 | [取得 RHEL 7.4](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3 或 7.4 | [取得 RHEL 7.4](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [取得 SLES v12 SP2](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 | [取得 Ubuntu 16.04](http://www.ubuntu.com/download/server)
-| **Docker 引擎** | 1.8+ | [取得 Docker](http://www.docker.com/products/overview)
+| **Ubuntu** | 16.04 | [取得 Ubuntu 16.04](https://www.ubuntu.com/download/server)
+| **Docker 引擎** | 1.8+ | [取得 Docker](https://www.docker.com/products/overview)
 
 Microsoft 也支援部署和管理 SQL Server 容器使用 OpenShift 和 Kubernetes。
 

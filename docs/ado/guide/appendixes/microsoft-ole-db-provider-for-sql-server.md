@@ -15,12 +15,12 @@ ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98de1a3a2e03a576b84543bf3578d87e7ad6c655
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8b5759c0ede8ea6579da11563849df191ad84b1
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657968"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350472"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server 概觀
 Microsoft OLE DB Provider for SQL Server，SQLOLEDB，可讓 ADO 存取 Microsoft SQL Server。
@@ -30,7 +30,7 @@ Microsoft OLE DB Provider for SQL Server，SQLOLEDB，可讓 ADO 存取 Microsof
 ## <a name="connection-string-parameters"></a>連接字串參數
  若要連接到此提供者，將*提供者*引數[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性：
 
-```
+```vb
 SQLOLEDB
 ```
 
@@ -39,7 +39,7 @@ SQLOLEDB
 ## <a name="typical-connection-string"></a>一般連接字串
  此提供者的一般連接字串是：
 
-```
+```vb
 "Provider=SQLOLEDB;Data Source=serverName;"
 Initial Catalog=databaseName;
 User ID=MyUserID;Password=MyPassword;"
@@ -76,14 +76,14 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="command-object-usage"></a>命令物件使用方式
  SQLOLEDB 會接受混合物的 ODBC 和 SQL Server 特有的 TRANSACT-SQL，為有效的語法。 例如，下列 SQL 陳述式會使用 ODBC SQL 逸出序列來指定 LCASE 字串函數：
 
-```
+```sql
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers
 
 ```
 
  LCASE 會傳回字元字串，將所有大寫字元轉換為其小寫的對等項目。 ANSI SQL 字串函數 LOWER 執行相同的作業，因此下列 SQL 陳述式是 ANSI 相當於稍早所呈現的 ODBC 陳述式：
 
-```
+```sql
 SELECT customerid=LOWER(CustomerID) FROM Customers
 
 ```
@@ -95,14 +95,14 @@ SELECT customerid=LOWER(CustomerID) FROM Customers
 
 ## <a name="odbc-sql"></a>ODBC SQL
 
-```
+```vb
 {call SalesByCategory('Produce', '1995')}
 
 ```
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-```
+```sql
 EXECUTE SalesByCategory 'Produce', '1995'
 
 ```
@@ -135,7 +135,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ## <a name="dynamic-properties"></a>動態屬性
  Microsoft OLE DB Provider for SQL Server 會插入到數個動態屬性**屬性**未開啟的集合[連線](../../../ado/reference/ado-api/connection-object-ado.md)，[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，和[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。
 
- 下表是 cross-index 的 ADO 和 OLE DB 的名稱，為每個動態屬性。 OLE DB 程式設計人員參考是參考的 ADO 屬性名稱的詞彙 「 描述 」。 您可以在 OLE DB 程式設計人員參考中找到這些屬性的詳細資訊。 搜尋索引中的 OLE DB 屬性名稱，或請參閱[附錄 c: OLE DB 屬性](http://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)。
+ 下表是 cross-index 的 ADO 和 OLE DB 的名稱，為每個動態屬性。 OLE DB 程式設計人員參考是參考的 ADO 屬性名稱的詞彙 「 描述 」。 您可以在 OLE DB 程式設計人員參考中找到這些屬性的詳細資訊。 搜尋索引中的 OLE DB 屬性名稱，或請參閱[附錄 c: OLE DB 屬性](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)。
 
 ## <a name="connection-dynamic-properties"></a>連接的動態屬性
  下列屬性會新增至**屬性**的集合**連線**物件。
@@ -355,7 +355,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |XML 根目錄|SSPROP_STREAM_XMLROOT|
 |XSL|SSPROP_STREAM_XSL|
 
- 特定的實作細節及 Microsoft SQL Server OLE DB 提供者的相關功能的資訊，請參閱[SQL Server 提供者](http://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635)。
+ 特定的實作細節及 Microsoft SQL Server OLE DB 提供者的相關功能的資訊，請參閱[SQL Server 提供者](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635)。
 
 ## <a name="see-also"></a>另請參閱
  [ConnectionString 屬性 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [提供者屬性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

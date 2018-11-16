@@ -16,12 +16,12 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e03932fe9d6cc98648c2e0da2e2cdd963a8d67f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c247ab2681f2ff1b0891c15e0348a088f08e42c1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826134"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677577"
 ---
 # <a name="driver-manager-connection-pooling"></a>驅動程式管理員連線共用
 連接共用，可讓應用程式使用來自不需要重新建立每次使用的連接集區的連接。 一旦連線已建立並放在集區中，應用程式可以重複使用該連線，而不執行完整的連線程序。  
@@ -59,11 +59,11 @@ ms.locfileid: "47826134"
     > [!NOTE]  
     >  要求的連線來共用連接如何比對是由 SQL_ATTR_CP_MATCH 環境屬性來決定。 如需詳細資訊，請參閱 < [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)。  
   
-     使用連接共用的 ODBC 應用程式應該呼叫[CoInitializeEx](http://go.microsoft.com/fwlink/?LinkID=116307)應用程式初始化期間並[CoUninitialize](http://go.microsoft.com/fwlink/?LinkId=116310)應用程式關閉時。  
+     使用連接共用的 ODBC 應用程式應該呼叫[CoInitializeEx](https://go.microsoft.com/fwlink/?LinkID=116307)應用程式初始化期間並[CoUninitialize](https://go.microsoft.com/fwlink/?LinkId=116310)應用程式關閉時。  
   
 5.  呼叫**SQLDisconnect**完成與連線。 連接傳回連接集區，並可重複使用。  
   
- 如需深入的討論，請參閱[Microsoft Data Access Components 中的共用](http://go.microsoft.com/fwlink/?LinkId=120776)。  
+ 如需深入的討論，請參閱[Microsoft Data Access Components 中的共用](https://go.microsoft.com/fwlink/?LinkId=120776)。  
   
 ## <a name="connection-pooling-considerations"></a>連接共用的考量  
  執行任何下列動作使用的 SQL 命令 （而非透過 ODBC API），可能會影響連接的狀態，而且啟用連接共用時，會造成無法預期的問題：  
@@ -85,4 +85,4 @@ ms.locfileid: "47826134"
 ## <a name="see-also"></a>另請參閱  
  [連接至資料來源或驅動程式](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [開發 ODBC 驅動程式](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Microsoft Data Access Components 中的共用](http://go.microsoft.com/fwlink/?LinkId=120776)
+ [Microsoft Data Access Components 中的共用](https://go.microsoft.com/fwlink/?LinkId=120776)

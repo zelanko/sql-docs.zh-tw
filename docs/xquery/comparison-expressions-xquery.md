@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -21,12 +20,12 @@ ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e2cc3870ca0b302175c6fdd546b730e73956485f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac4e617b7abb220dd2a8767a334ddbdf1c685d2c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824781"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661831"
 ---
 # <a name="comparison-expressions-xquery"></a>比較運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ select @x.query('/a[1] < "17"')
  下列查詢會從 AdventureWorks 範例資料庫所提供的產品目錄，傳回產品型號的小型圖片。 該查詢會將 `PD:ProductDescription/PD:Picture/PD:Size` 所傳回的不可部份完成值序列與單一序列 "small" 進行比較。 如果比較為 True 時，它會傳回 < 圖片\>項目。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
 SELECT CatalogDescription.query('         
     for $P in /PD:ProductDescription/PD:Picture[PD:Size = "small"]         
     return $P') as Result         
@@ -96,8 +95,8 @@ WHERE  ProductModelID=19
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
   
 SELECT AdditionalContactInfo.value('         
    /aci:AdditionalContactInfo//act:telephoneNumber/act:number = "112-111-1111"', 'nvarchar(10)') as Result         
@@ -109,8 +108,8 @@ WHERE ContactID=1
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
   
 SELECT AdditionalContactInfo.query('         
   if (/aci:AdditionalContactInfo//act:telephoneNumber/act:number = ("222-222-2222","112-111-1111"))         
@@ -127,11 +126,11 @@ WHERE ContactID=1
   
 ```  
 \<act:number   
-  xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+  xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
     111-111-1111  
 \</act:number>  
 \<act:number   
-  xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+  xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
     112-111-1111  
 \</act:number>   
 ```  
@@ -158,7 +157,7 @@ WHERE ContactID=1
   
 ```  
 SELECT CatalogDescription.query('         
-              declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";         
+              declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";         
               for $P in /PD:ProductDescription/PD:Picture[PD:Size eq "small"]         
               return         
                     $P         
@@ -179,7 +178,7 @@ WHERE ProductModelID=19
   
 ```  
 \<PD:Picture   
-  xmlns:PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+  xmlns:PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
   \<PD:Angle>front\</PD:Angle>  
   \<PD:Size>small\</PD:Size>  
   \<PD:ProductPhotoID>31\</PD:ProductPhotoID>  
@@ -194,7 +193,7 @@ WHERE ProductModelID=19
  下列查詢會檢查工作中心位置 10 在製造特定產品型號的過程中是否為第一個。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' AS AWMI)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' AS AWMI)  
   
 SELECT ProductModelID, Instructions.query('         
     if (  (//AWMI:root/AWMI:Location[@LocationID=10])[1]         
@@ -230,8 +229,8 @@ ProductModelID       Result
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS WM)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS WM)  
   
 SELECT CatalogDescription.value('  
      (/PD:ProductDescription/PD:Features/WM:Warranty)[1] <<   

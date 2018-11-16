@@ -10,12 +10,12 @@ ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b0f5bcfff72abb16c45aebc12f7c1a2220e2330f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fe903d81bc698ff324b504034ed92025570254c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735496"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656627"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>將 DB2 結構描述對應至 SQL Server 結構描述 (DB2ToSQL)
 DB2，在每個資料庫會有一或多個結構描述。 根據預設，SSMA 會移轉 DB2 結構描述中的所有物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名為結構描述的資料庫。 不過，您可以自訂 DB2 結構描述之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。  
@@ -60,7 +60,7 @@ SSMA 中，您可以將 DB2 結構描述對應到任何可用[!INCLUDE[ssNoVersi
 1.  在 [結構描述對應] 索引標籤中，選取任何資料列然後按一下**重設為預設**還原成預設的資料庫和結構描述。  
   
 ## <a name="next-steps"></a>後續步驟  
-如果您想要分析的 DB2 物件轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件，您可以[（SSMA 常見） 的資料移轉報告](http://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)。  
+如果您想要分析的 DB2 物件轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件，您可以[（SSMA 常見） 的資料移轉報告](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)。  
   
 ## <a name="see-also"></a>另請參閱  
 [連接到 SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  

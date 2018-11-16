@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 469b4dece1dca9aca2aa584e60bd502034fc8645
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: f60ce03d303941855b0b1eaa242b03966db1e79f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119085"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670837"
 ---
 # <a name="xqueries-involving-hierarchy"></a>與階層有關的 XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "49119085"
   
 ```sql
 SELECT Instructions.query('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    \<ManuInstr  ProdModelID = "{sql:column("Production.ProductModel.ProductModelID") }"   
                 ProductModelName = "{ sql:column("Production.ProductModel.Name") }" >  
             {   
@@ -90,8 +89,8 @@ WHERE ProductModelID=7
   
 ```sql
 SELECT AdditionalContactInfo.query('  
- declare namespace ci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
- declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+ declare namespace ci="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
+ declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
 for $ph in /ci:AdditionalContactInfo//act:telephoneNumber  
    return  
       $ph/act:number  
@@ -104,18 +103,18 @@ WHERE ContactID = 1
   
 ```xml
 \<act:number   
-  xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+  xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   111-111-1111  
 \</act:number>  
 \<act:number   
-  xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+  xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   112-111-1111  
 \</act:number>  
 ```  
   
  若只要擷取最上層電話號碼，尤其是 <`AdditionalContactInfo`> 的 <`telephoneNumber`> 子元素，則將查詢中的 FOR 運算式變更成  
   
- `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber` 。  
+ `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   
 ## <a name="see-also"></a>另請參閱  
  [XQuery 基本概念](../xquery/xquery-basics.md)   

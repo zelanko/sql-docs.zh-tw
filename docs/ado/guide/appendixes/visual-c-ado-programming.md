@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 02/15/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +16,12 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 392b1a0dd471c699dfc10f9c105d9975508968b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 713d471d350877a207b49a9649db0b7262273f52
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606479"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350372"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ ADO 程式設計
 ADO API 參考說明 ADO 應用程式開發介面 (API) 的語法類似到 Microsoft Visual Basic 的功能。 ADO 程式設計人員適用的對象是所有使用者，但採用不同的語言，例如 Visual Basic、 Visual c + + (包含或不含 **#import**指示詞)，和 Visual J + + （與 ADO/WFC 類別封裝）。  
@@ -44,26 +44,26 @@ ADO API 參考說明 ADO 應用程式開發介面 (API) 的語法類似到 Micro
   
  您可以取得或設定與呼叫這些表單的屬性：  
   
-```  
-variable = objectPtr->GetProperty(); // get property value   
-objectPtr->PutProperty(value);       // set property value  
-objectPtr->PutRefProperty(&value);   // set property with object pointer  
-```  
+```cpp
+variable = objectPtr->GetProperty(); // get property value   
+objectPtr->PutProperty(value);       // set property value  
+objectPtr->PutRefProperty(&value);   // set property with object pointer  
+```
   
 ## <a name="using-property-directives"></a>使用屬性指示詞  
  **__Declspec(property...)** 編譯器指示詞是 Microsoft 專有 C 語言擴充功能會宣告用做屬性，將有一個替代語法的函式。 如此一來，您可以設定或取得屬性值的方式類似於 Visual Basic。 比方說，您可以設定，並取得屬性的這種方式：  
   
-```  
-objectPtr->property = value;        // set property value  
-variable = objectPtr->property;     // get property value  
-```  
+```cpp
+objectPtr->property = value;        // set property value  
+variable = objectPtr->property;     // get property value  
+```
   
  請注意，您不需要程式碼：  
   
-```  
-objectPtr->PutProperty(value);      // set property value  
-variable = objectPtr->GetProperty;  // get property value  
-```  
+```cpp
+objectPtr->PutProperty(value);      // set property value  
+variable = objectPtr->GetProperty;  // get property value  
+```
   
  編譯器會產生適當 **取得 * * *-*，**放**-，或 **PutRef * * * 屬性*呼叫根據宣告哪些替代語法，以及屬性是否為正在讀取或寫入。  
   
@@ -78,36 +78,36 @@ variable = objectPtr->GetProperty;  // get property value
   
  **__Declspec(property...)** 編譯器指示詞宣告**項目**屬性，為每個集合有替代語法的基本**GetItem()** 方法。 替代語法會使用方括號，並看起來類似陣列參考。 一般情況下，兩個表單看起來如下所示：  
   
-```  
+```cpp
   
       collectionPtr->GetItem(index);  
 collectionPtr->Item[index];  
-```  
+```
   
  例如，將值指派的欄位**資料錄集**物件，名為***rs***衍生自**作者**資料表**pubs**資料庫。 使用**item**屬性來存取第三個**欄位**的**資料錄集**物件**欄位**（集合編製索引的集合零，假設名為第三個欄位***au_fname***)。 然後呼叫**value （)** 方法**欄位**指派字串值的物件。  
   
  這可以表示在 Visual Basic 中以下列四種方法 （Visual basic 獨有的最後兩個表單; 其他語言中沒有對等項目）：  
   
-```  
+```cpp
 rs.Fields.Item(2).Value = "value"  
 rs.Fields.Item("au_fname").Value = "value"  
 rs(2) = "value"  
 rs!au_fname = "value"  
-```  
+```
   
  在 Visual c + + 中的相當於上述前兩個表單是：  
   
-```  
+```cpp
 rs->Fields->GetItem(long(2))->PutValue("value");   
 rs->Fields->GetItem("au_fname")->PutValue("value");  
-```  
+```
   
  -(的替代語法**值**屬性也會顯示)  
   
-```  
+```cpp
 rs->Fields->Item[long(2)]->Value = "value";  
 rs->Fields->Item["au_fname"]->Value = "value";  
-```  
+```
   
  如需逐一查看集合的範例，請參閱 < ADO 參考 > 的 「 ADO 集合 」 一節。  
   
@@ -139,14 +139,14 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  例如，宣告**Recordset::Open**方法是：  
   
-```  
-    HRESULT Open (  
-        const _variant_t & Source,  
-        const _variant_t & ActiveConnection,  
-        enum CursorTypeEnum CursorType,  
-        enum LockTypeEnum LockType,  
-        long Options );  
-```  
+```cpp
+    HRESULT Open (  
+        const _variant_t & Source,  
+        const _variant_t & ActiveConnection,  
+        enum CursorTypeEnum CursorType,  
+        enum LockTypeEnum LockType,  
+        long Options );  
+```
   
  `ActiveConnection`引數會參考 **_variant_t**，您可能會撰寫程式碼做為連接字串的指標或開啟這**連接**物件。  
   
@@ -177,13 +177,13 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  三種方法是例外狀況的一般用法**vtMissing**。 這些是**Execute**方法**連接**並**命令**物件，而**NextRecordset** 方法**資料錄集**物件。 以下是其簽章：  
   
-```  
-_RecordsetPtr <A HREF="mdmthcnnexecute.htm">Execute</A>( _bstr_t CommandText, VARIANT * RecordsAffected,   
-        long Options );  // Connection  
-_RecordsetPtr <A HREF="mdmthcmdexecute.htm">Execute</A>( VARIANT * RecordsAffected, VARIANT * Parameters,   
-        long Options );  // Command  
-_RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * RecordsAffected );  // Recordset  
-```  
+```cpp
+_RecordsetPtr <A HREF="mdmthcnnexecute.htm">Execute</A>( _bstr_t CommandText, VARIANT * RecordsAffected,   
+        long Options );  // Connection  
+_RecordsetPtr <A HREF="mdmthcmdexecute.htm">Execute</A>( VARIANT * RecordsAffected, VARIANT * Parameters,   
+        long Options );  // Command  
+_RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * RecordsAffected );  // Recordset  
+```
   
  參數， *RecordsAffected*並*參數*，都是指標**Variant**。 *參數*是輸入的參數指定的地址**Variant**包含單一參數或陣列的參數，將會修改正在執行的命令。 *RecordsAffected*是一個 output 參數，指定的地址**Variant**、 方法所影響的資料列數目傳回的位置。  
   
@@ -193,11 +193,11 @@ _RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * RecordsAff
   
  因此，針對這三種方法，它是有效的來撰寫這類程式碼：  
   
-```  
-pConnection->Execute("commandText", NULL, adCmdText);   
-pCommand->Execute(NULL, NULL, adCmdText);  
+```cpp
+pConnection->Execute("commandText", NULL, adCmdText);   
+pCommand->Execute(NULL, NULL, adCmdText);  
 pRecordset->NextRecordset(NULL);  
-```  
+```
   
 ## <a name="error-handling"></a>錯誤處理  
  在 COM 中，大部分的作業會傳回 HRESULT 傳回碼指出函數是否已順利完成。 **#Import**指示詞會產生每個 「 原始 」 的方法或屬性周圍的包裝函式程式碼，並檢查傳回的 HRESULT。 如果 HRESULT 指出失敗，包裝函式程式碼會擲回的 COM 錯誤的 HRESULT 傳回碼的呼叫 _com_issue_errorex() 做為引數。 COM 錯誤物件可以陷入**嘗試**-**攔截**區塊。 (為了效率的因素，攔截的參考 **_com_error**物件。)  
@@ -212,54 +212,54 @@ pRecordset->NextRecordset(NULL);
 ### <a name="declaring-an-ado-object"></a>宣告 ADO 物件  
  在 Visual Basic 中的 ADO 物件的變數 (在此情況下，如**資料錄集**物件) 宣告，如下所示：  
   
-```  
+```vb
 Dim rst As ADODB.Recordset  
-```  
+```
   
  子句中，「`ADODB.Recordset`"，是的 ProgID**資料錄集**登錄中所定義的物件。 新執行個體**記錄**物件宣告，如下所示：  
   
-```  
+```vb
 Dim rst As New ADODB.Recordset  
-```  
+```
   
  -或-  
   
-```  
+```vb
 Dim rst As ADODB.Recordset  
 Set rst = New ADODB.Recordset  
-```  
+```
   
  Visual c + + **#import**指示詞會產生所有 ADO 物件的智慧型指標類型宣告。 比方說，此變數會指向 **_Recordset**物件屬於型別 **_RecordsetPtr**，並宣告，如下所示：  
   
-```  
+```cpp
 _RecordsetPtr  rs;  
-```  
+```
   
  此變數會指向的新執行個體 **_Recordset**物件宣告，如下所示：  
   
-```  
+```cpp
 _RecordsetPtr  rs("ADODB.Recordset");  
-```  
+```
   
  -或-  
   
-```  
+```cpp
 _RecordsetPtr  rs;  
 rs.CreateInstance("ADODB.Recordset");  
-```  
+```
   
  -或-  
   
-```  
+```cpp
 _RecordsetPtr  rs;  
 rs.CreateInstance(__uuidof(_Recordset));  
-```  
+```
   
  在後**CreateInstance**呼叫方法時，變數可用，如下所示：  
   
-```  
+```cpp
 rs->Open(...);  
-```  
+```
   
  請注意，在其中一個案例，「`.`"如同變數是類別的執行個體，使用運算子 (`rs.CreateInstance`)，並在另一個的情況下，"`->`"如同變數是介面的指標，使用運算子 (`rs->Open`)。  
   
@@ -268,61 +268,61 @@ rs->Open(...);
 ### <a name="coding-a-missing-parameter--string"></a>撰寫程式碼遺失參數-字串  
  當您需要撰寫程式碼遺失**字串**運算元在 Visual Basic 中，您只是省略運算元。 在 Visual c + + 中，您必須指定的運算元。 程式碼 **_bstr_t**具有值為空字串。  
   
-```  
-_bstr_t strMissing(L"");  
-```  
+```cpp
+_bstr_t strMissing(L"");  
+```
   
 ### <a name="coding-a-missing-parameter--variant"></a>撰寫程式碼遺失參數-Variant  
  當您需要撰寫程式碼遺失**Variant**運算元在 Visual Basic 中，您只是省略運算元。 在 Visual c + + 中，您必須指定所有的運算元。 程式碼遺失**Variant**參數搭配 **_variant_t**設為特殊值，DISP_E_PARAMNOTFOUND，然後 VT_ERROR 的類型。 或者，指定**vtMissing**，這對等的預先定義的常數由所提供 **#import**指示詞。  
   
-```  
-_variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR);   
-```  
+```cpp
+_variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR);   
+```
   
  -或使用-  
   
-```  
+```cpp
 ...vtMissing...;  
-```  
+```
   
 ### <a name="declaring-a-variant"></a>宣告變數  
  在 Visual Basic **Variant**以宣告**Dim**陳述式，如下所示：  
   
-```  
-Dim VariableName As Variant  
-```  
+```vb
+Dim VariableName As Variant  
+```
   
  Visual c + + 中，將變數宣告為類型 **_variant_t**。 少數的圖解 **_variant_t**宣告如下所示。  
   
 > [!NOTE]
 >  這些宣告只是提供約略的構念的您會在自己的程式碼。 如需詳細資訊，請參閱以下範例中和 Visual C + + 文件。  
   
-```  
-_variant_t  VariableName(value);  
-_variant_t  VariableName((data type cast) value);  
-_variant_t  VariableName(value, VT_DATATYPE);  
-_variant_t  VariableName(interface * value, bool fAddRef = true);  
-```  
+```cpp
+_variant_t  VariableName(value);  
+_variant_t  VariableName((data type cast) value);  
+_variant_t  VariableName(value, VT_DATATYPE);  
+_variant_t  VariableName(interface * value, bool fAddRef = true);  
+```
   
 ### <a name="using-arrays-of-variants"></a>使用 Variant 的陣列  
  在 Visual Basic 中的陣列**變化**可以使用自動程式化**Dim**陳述式，或者，您可能會使用**陣列**函式，如下列範例程式碼所示：  
   
-```  
-Public Sub ArrayOfVariants  
-Dim cn As ADODB.Connection  
-Dim rs As ADODB.Recordset  
+```vb
+Public Sub ArrayOfVariants  
+Dim cn As ADODB.Connection  
+Dim rs As ADODB.Recordset  
 Dim fld As ADODB.Field  
   
-    cn.Open "DSN=pubs"  
-    rs = cn.OpenSchema(adSchemaColumns, _  
-        Array(Empty, Empty, "authors", Empty))  
+    cn.Open "DSN=pubs"  
+    rs = cn.OpenSchema(adSchemaColumns, _  
+        Array(Empty, Empty, "authors", Empty))  
     For Each fld in rs.Fields  
         Debug.Print "Name = "; fld.Name  
     Next fld  
     rs.Close  
     cn.Close  
-End Sub  
-```  
+End Sub  
+```
   
  下列 Visual c + + 範例示範如何使用**SafeArray**搭配 **_variant_t**。  
   
@@ -333,12 +333,12 @@ End Sub
   
 2.  您只需要一維陣列，因此您可以使用**SafeArrayCreateVector**，而不是一般用途**SAFEARRAYBOUND**宣告並**SafeArrayCreate**函式。 以下是該程式碼會如下所示使用**SafeArrayCreate**:  
   
-    ```  
-       SAFEARRAYBOUND   sabound[1];  
-       sabound[0].lLbound = 0;  
-       sabound[0].cElements = 4;  
-       pSa = SafeArrayCreate(VT_VARIANT, 1, sabound);  
-    ```  
+    ```cpp
+       SAFEARRAYBOUND   sabound[1];  
+       sabound[0].lLbound = 0;  
+       sabound[0].cElements = 4;  
+       pSa = SafeArrayCreate(VT_VARIANT, 1, sabound);  
+    ```
   
 3.  列舉常數所識別的結構描述**adSchemaColumns**，四個條件約束資料行相關聯： table_catalog 排列，TABLE_SCHEMA、 TABLE_NAME、 COLUMN_NAME。 因此，陣列**Variant**建立具有四個元素的值。 然後指定條件約束值，對應到第三個資料行名稱，這個值。  
   
@@ -348,15 +348,15 @@ End Sub
   
      如果**SafeArrayDestroy**所呼叫，程式碼看起來會像這樣：  
   
-    ```  
-          TESTHR(SafeArrayDestroy(pSa));  
-       vtCriteria.vt = VT_EMPTY;  
-          vtCriteria.parray = NULL;  
-    ```  
+    ```cpp
+          TESTHR(SafeArrayDestroy(pSa));  
+       vtCriteria.vt = VT_EMPTY;  
+          vtCriteria.parray = NULL;  
+    ```
   
      不過，很容易，可讓 **_variant_t**管理**SafeArray**。  
   
-```  
+```cpp
 // Visual_CPP_ADO_Prog_1.cpp  
 // compile with: /EHsc  
 #import "msado15.dll" no_namespace rename("EOF", "EndOfFile")  
@@ -411,27 +411,27 @@ int main() {
    }  
    CoUninitialize();  
 }  
-```  
+```
   
 ### <a name="using-property-getputputref"></a>使用屬性的 Get/Put/PutRef  
  在 Visual Basic 中的屬性名稱未限定是否是擷取、 指派，或指派參考。  
   
-```  
-Public Sub GetPutPutRef  
-Dim rs As New ADODB.Recordset  
-Dim cn As New ADODB.Connection  
-Dim sz as Integer  
-cn.Open "Provider=sqloledb;Data Source=yourserver;" & _  
-         "Initial Catalog=pubs;Integrated Security=SSPI;"  
-rs.PageSize = 10  
-sz = rs.PageSize  
-rs.ActiveConnection = cn  
-rs.Open "authors",,adOpenStatic  
+```vb
+Public Sub GetPutPutRef  
+Dim rs As New ADODB.Recordset  
+Dim cn As New ADODB.Connection  
+Dim sz as Integer  
+cn.Open "Provider=sqloledb;Data Source=yourserver;" & _  
+         "Initial Catalog=pubs;Integrated Security=SSPI;"  
+rs.PageSize = 10  
+sz = rs.PageSize  
+rs.ActiveConnection = cn  
+rs.Open "authors",,adOpenStatic  
 ' ...  
 rs.Close  
 cn.Close  
-End Sub  
-```  
+End Sub  
+```
   
  此 Visual c + + 範例示範**取得**/**放**/**PutRef * * * 屬性*。  
   
@@ -442,7 +442,7 @@ End Sub
   
 2.  您不需要轉換的運算元`rs->PutRefActiveConnection(cn)`要`(IDispatch *)`運算元的類型已經是因為`(IDispatch *)`。  
   
-```  
+```cpp
 // Visual_CPP_ado_prog_2.cpp  
 // compile with: /EHsc  
 #import "msado15.dll" no_namespace rename("EOF", "EndOfFile")  
@@ -480,35 +480,35 @@ int main() {
    }  
    ::CoUninitialize();  
 }  
-```  
+```
   
 ### <a name="using-getitemx-and-itemx"></a>使用 GetItem(x)] 和 [項目 [x]  
  此 Visual Basic 範例示範的標準和替代語法**項目**（)。  
   
-```  
-Public Sub GetItemItem  
-Dim rs As New ADODB.Recordset  
-Dim name as String  
-rs = rs.Open "authors", "DSN=pubs;", adOpenDynamic, _  
-         adLockBatchOptimistic, adTable  
-name = rs(0)  
-' -or-  
-name = rs.Fields.Item(0)  
-rs(0) = "Test"  
+```vb
+Public Sub GetItemItem  
+Dim rs As New ADODB.Recordset  
+Dim name as String  
+rs = rs.Open "authors", "DSN=pubs;", adOpenDynamic, _  
+         adLockBatchOptimistic, adTable  
+name = rs(0)  
+' -or-  
+name = rs.Fields.Item(0)  
+rs(0) = "Test"  
 rs.UpdateBatch  
-' Restore name  
-rs(0) = name  
+' Restore name  
+rs(0) = name  
 rs.UpdateBatch  
 rs.Close  
-End Sub  
-```  
+End Sub  
+```
   
  此 Visual c + + 範例示範**項目**。  
   
 > [!NOTE]
 >  下列附註與加上註解區段中的程式碼範例： 集合使用的存取時**項目**，索引 **2**，必須轉換成**長**讓適當的建構函式會叫用。  
   
-```  
+```cpp
 // Visual_CPP_ado_prog_3.cpp  
 // compile with: /EHsc  
 #import "msado15.dll" no_namespace rename("EOF", "EndOfFile")  
@@ -549,7 +549,7 @@ void main() {
    }  
    ::CoUninitialize();  
 }  
-```  
+```
   
 ### <a name="casting-ado-object-pointers-with-idispatch-"></a>轉換與 ADO 物件指標 (IDispatch *)  
  下列 Visual c + + 範例示範如何使用 (IDispatch *) 來轉換 ADO 物件指標。  
@@ -565,7 +565,7 @@ void main() {
   
  這段程式碼示範一些有用的行為 **_variant_t**並 **_bstr_t**運算子。  
   
-```  
+```cpp
 // Visual_CPP_ado_prog_4.cpp  
 // compile with: /EHsc  
 #import "msado15.dll" no_namespace rename("EOF", "EndOfFile")  

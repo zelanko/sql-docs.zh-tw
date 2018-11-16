@@ -18,12 +18,12 @@ ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a5d098bc7d158bb8108e633a2ebb00a05406d4da
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: aa776b9b87d6742d530d87f08f00e7ac868a0788
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215116"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675867"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>SetStringValue 方法 (SqlServiceAdvancedProperty 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,6 +53,6 @@ object.SetStringValue(StrValue)
  屬性值類型必須是**字串**能夠將屬性設定為字串值。  
   
 ## <a name="see-also"></a>另請參閱  
- [啟動及停止服務](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [啟動及停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

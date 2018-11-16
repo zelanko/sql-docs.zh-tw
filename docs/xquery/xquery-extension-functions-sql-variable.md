@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 938560986eeaae29ee1d0a2b37f1b2bcceec5b53
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: fe1115c7e0cf0e4f78ff09acb405c64912af3471
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119765"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657997"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>XQuery 擴充函式 - sql:variable()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ DECLARE @price money
   
 SET @price=2500.00  
 SELECT ProductID, Production.ProductModel.ProductModelID,CatalogDescription.query('  
-declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
   
        <Product   
            ProductID="{ sql:column("Production.Product.ProductID") }"  
@@ -95,7 +94,7 @@ WHERE ProductID=771
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server XQuery 擴充函式](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [SQL Server XQuery 擴充函式](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [比較具類型的 XML 與不具類型的 XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [建立 XML 資料的執行個體](../relational-databases/xml/create-instances-of-xml-data.md)   

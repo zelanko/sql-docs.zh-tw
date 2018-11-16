@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75e79708ffe1ca40a38d93378b93481d6fdd91ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25c8da6552446f7c34cd6deb050b2074da67443c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766566"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673107"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>使用 ODBC 資料表值參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47766566"
 ## <a name="table-valued-parameter-with-fully-bound-multirow-buffers-send-data-as-a-tvp-with-all-values-in-memory"></a>完整繫結多資料列緩衝區之下的資料表值參數 (使用記憶體中的所有值，將資料當做 TVP 傳送)  
  當搭配完整繫結的多資料列緩衝區使用時，記憶體中將提供所有參數值。 例如，這對於 OLTP 交易而言就是典型的情況，在這類交易中，資料表值參數可以封裝到單一預存程序中。 如果沒有資料表值參數，這會牽涉到動態產生複雜的多重陳述式批次，或是對伺服器進行多次呼叫。  
   
- 使用繫結資料表值參數本身[SQLBindParameter](http://go.microsoft.com/fwlink/?LinkId=59328)以及其他參數。 所有參數都已繫都結之後，應用程式設定參數焦點屬性 SQL_SOPT_SS_PARAM_FOCUS，每個資料表值參數，並呼叫 SQLBindParameter 資料表值參數的資料行。  
+ 使用繫結資料表值參數本身[SQLBindParameter](https://go.microsoft.com/fwlink/?LinkId=59328)以及其他參數。 所有參數都已繫都結之後，應用程式設定參數焦點屬性 SQL_SOPT_SS_PARAM_FOCUS，每個資料表值參數，並呼叫 SQLBindParameter 資料表值參數的資料行。  
   
  資料表值參數的伺服器類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所特有的新類型 SQL_SS_TABLE。 SQL_SS_TABLE 的繫結 C 類型一定必須是 SQL_C_DEFAULT。 資料表值參數繫結的參數不會傳送任何資料；它是用來傳遞資料表中繼資料，以及控制要如何傳遞資料表值參數之組成資料行中的資料。  
   

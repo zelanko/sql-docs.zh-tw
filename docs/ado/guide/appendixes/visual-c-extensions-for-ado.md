@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,14 +16,14 @@ ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca21e976783a10a738488762e382982e4fd8fd8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4432c125b0c860775911aa753984806a472a64ba
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747676"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350183"
 ---
-# <a name="visual-c-extensions"></a>Visual c + + 延伸模組
+# <a name="visual-c-extensions-for-ado"></a>Visual C++ Extensions for ADO
 程式設計 Visual c + + ADO 的慣用的方法使用 **#import**指示詞中所述[Microsoft Visual c + + ADO 程式設計](../../../ado/guide/appendixes/visual-c-ado-programming.md)。 不過，舊版 ADO 隨附使用 Visual c + + 的程式設計替代方法： Visual c + + 延伸模組。 本節提供這項功能的人必須維護 Visual c + + 延伸模組的程式碼，但新的 ADO 程式碼應該使用 # 來撰寫**匯入**。
 
  其中一個最沉悶作業 Visual c + + 程式設計人員所面臨的 ADO 使用擷取資料會轉換成 c + + 資料型別，傳回 VARIANT 資料類型，而然後將轉換的資料儲存在類別或結構的資料時。 除了很麻煩，擷取透過 VARIANT 資料類型的 c + + 資料減少效能。

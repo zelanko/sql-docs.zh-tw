@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 17703c8a4c4839b977da9f4583a90ea3c3583b52
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: c5b7babb3f34f906a241669bbde753e3beaace92
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119885"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662267"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 擴充函式 - sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ sql:column("columnName")
   
     ```sql
     SELECT P.ProductID, CatalogDescription.query('  
-    declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+    declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
            <Product   
                ProductID=       "{ sql:column("P.ProductID") }"  
                ProductName=     "{ sql:column("P.Name") }"  
@@ -107,12 +106,12 @@ ProductID               Result
 ...  
 ```  
   
- 下列查詢建構了包含產品特定資訊的 XML。 此資訊包含隸屬於特定產品型號 ProductModelID=19 的所有產品之 ProductID、ProductName、ProductPrice 以及 ProductModelName (如果有的話)。 接著會將 XML 指派給@x的變數**xml**型別。  
+ 下列查詢建構了包含產品特定資訊的 XML。 此資訊包含隸屬於特定產品型號 ProductModelID=19 的所有產品之 ProductID、ProductName、ProductPrice 以及 ProductModelName (如果有的話)。 接著會將 XML 指派給@x的變數 **xml** 型別。  
   
 ```sql
 declare @x xml  
 SELECT @x = CatalogDescription.query('  
-declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
        <Product   
            ProductID=       "{ sql:column("P.ProductID") }"  
            ProductName=     "{ sql:column("P.Name") }"  
@@ -132,7 +131,7 @@ select @x
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server XQuery 擴充函式](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [SQL Server XQuery 擴充函式](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [比較具類型的 XML 與不具類型的 XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [建立 XML 資料的執行個體](../relational-databases/xml/create-instances-of-xml-data.md)   

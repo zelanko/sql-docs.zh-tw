@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 4a3785d994b6bd40b6b808d07d5272fa7534a7fb
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 9b6902057c3bf5da706de8832b33c959ed285a9b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221566"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702346"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>設定適用於 SQL Server 2019 巨量資料叢集部署的 Minikube
 
@@ -39,7 +39,7 @@ ms.locfileid: "51221566"
 
 1. 如果您還沒有安裝 」 的 hypervisor，現在安裝一個。
    - OS x 安裝[xhyve driver](https://git.k8s.io/minikube/docs/drivers.md)， [VirtualBox](https://www.virtualbox.org/wiki/Downloads)，或[VMware Fusion](https://www.vmware.com/products/fusion)。
-   - 針對 Linux，安裝[VirtualBox](https://www.virtualbox.org/wiki/Downloads)或是[KVM](http://www.linux-kvm.org/)。
+   - 針對 Linux，安裝[VirtualBox](https://www.virtualbox.org/wiki/Downloads)或是[KVM](https://www.linux-kvm.org/)。
    - 對於 Windows，安裝[VirtualBox](https://www.virtualbox.org/wiki/Downloads)或是[HYPER-V](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install)。 如果您沒有外部交換器在 hyper-v 中設定，然後建立一個具有 「 外部網路存取權。  請參閱如何[minikube 的 hyper-v 中建立外部交換器](https://blogs.msdn.microsoft.com/wasimbloch/2017/01/23/setting-up-kubernetes-on-windows10-laptop-with-minikube/)。
 
 ## <a name="install-minikube"></a>安裝 Minikube

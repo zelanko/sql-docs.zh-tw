@@ -21,19 +21,19 @@ ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 95adea5a61ecc102dae885e9ea526113942a13a5
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 8a3f6118c2227ad81d368c012c7282e3ba962881
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216776"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671737"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>使用伺服器事件的 WMI 提供者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   本主題會提供您使用伺服器事件的 WMI 提供者進行程式設計前應該考慮的指導方針。  
   
 ## <a name="enabling-service-broker"></a>啟用 Service Broker  
- 伺服器事件的 WMI 提供者可透過將事件的 WQL 查詢轉譯為目標系統中的事件通知來運作。 了解事件通知如何運作在根據提供者進行程式設計時可能很有用。 如需詳細資訊，請參閱＜ [伺服器事件的 WMI 提供者概念](http://technet.microsoft.com/library/ms180560.aspx)＞。  
+ 伺服器事件的 WMI 提供者可透過將事件的 WQL 查詢轉譯為目標系統中的事件通知來運作。 了解事件通知如何運作在根據提供者進行程式設計時可能很有用。 如需詳細資訊，請參閱＜ [伺服器事件的 WMI 提供者概念](https://technet.microsoft.com/library/ms180560.aspx)＞。  
   
  特別是，WMI 提供者所建立的事件通知使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來傳送伺服器事件的相關訊息，因此必須在產生事件的每個地方啟用此服務。 如果您的程式查詢伺服器執行個體上的事件，必須啟用該執行個體之 msdb 中的 [!INCLUDE[ssSB](../../includes/sssb-md.md)]，因為那是提供者所建立之目標 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務 (名稱為 SQL/Notifications/ProcessWMIEventProviderNotification/v1.0) 的位置。 如果您的程式查詢資料庫中或特定資料庫物件上的事件，則必須在該目標資料庫中啟用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 。 如果部署應用程式之後沒有啟用對應的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] ，基礎事件通知所產生的任何事件都會傳送到事件通知所使用的服務佇列，但是不會傳回到您的 WMI 管理應用程式，直到啟用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 為止。  
   
@@ -64,7 +64,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
   
 -   若要建立以佇列為範圍的事件通知，至少需要佇列的 ALTER 權限。  
   
- 如需有關 WQL 查詢範圍的詳細資訊，請參閱＜ [搭配伺服器事件的 WMI 提供者使用 WQL](http://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx)＞。  
+ 如需有關 WQL 查詢範圍的詳細資訊，請參閱＜ [搭配伺服器事件的 WMI 提供者使用 WQL](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx)＞。  
   
  為說明範圍，請考慮使用包含下列 WQL 查詢的 WMI 提供者應用程式：  
   
@@ -114,6 +114,6 @@ WHERE DatabaseName = "AdventureWorks2012"
  WMI 提供者伺服器事件會在目標資料庫中，建立所需的事件通知事件通知事件會將資料傳送至目標服務名稱為的 msdb 中**SQL/通知/ProcessWMIEventProviderNotification/v1.0**。 目標服務會將事件放入 **msdb** 中，名稱為 **WMIEventProviderNotificationQueue**的佇列 (當此服務首次連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，提供者會同時動態地建立服務和佇列)。接著，提供者會從此佇列讀取 XML 事件資料，並將其轉換為 Managed 物件格式 (MOF)，然後再將其傳回到用戶端應用程式。 MOF 資料是由 WQL 查詢所要求的事件屬性所組成，做為通用訊息模型 (CIM) 類別定義。 每個屬性都有一個對應的 CIM 類型。 例如，`SPID`屬性會傳回當做 CIM 類型**Sint32**。 每個屬性的 CIM 類型都會列在＜ [伺服器事件類別和屬性的 WMI 提供者](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)＞中的每個事件類別之下。  
   
 ## <a name="see-also"></a>另請參閱  
- [伺服器事件的 WMI 提供者概念](http://technet.microsoft.com/library/ms180560.aspx)  
+ [伺服器事件的 WMI 提供者概念](https://technet.microsoft.com/library/ms180560.aspx)  
   
   

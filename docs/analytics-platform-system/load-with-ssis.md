@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f20220208aed16d745dbab5aecce64e6653ef350
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394232"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700909"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>使用平行處理資料倉儲的 Integration Services 載入資料
 提供使用 SQL Server Integration Services (SSIS) 封裝將資料載入 SQL Server Parallel Data Warehouse 的參考和部署資訊。  
@@ -29,7 +29,7 @@ Before you can start loading data, use the following topics to install the Integ
   
 -   [Connect With Integration Services for loading](connect-with-ssis-for-loading.md)  
   
-For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
+For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
 
 -->
   
@@ -249,12 +249,12 @@ id,city,lastUpdateDate,orderDate
 ## <a name="see-also"></a>另請參閱  
 [建立指令碼工作使用 SSIS PDW 目的地配接器](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
-[設計和實作封裝 (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
-[教學課程： 建立基本封裝，使用精靈](http://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
-[開始使用 (Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
-[動態封裝產生範例](http://go.microsoft.com/fwlink/?LinkId=202413)  
-[設計您的 SSIS 套件的平行處理原則 （SQL Server 影片）](http://msdn.microsoft.com/library/dd795221.aspx)  
-[Microsoft SQL Server 社群範例： Integration Services](http://go.microsoft.com/fwlink/?LinkId=202415)  
+[設計和實作封裝 (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
+[教學課程： 建立基本封裝，使用精靈](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
+[開始使用 (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
+[動態封裝產生範例](https://go.microsoft.com/fwlink/?LinkId=202413)  
+[設計您的 SSIS 套件的平行處理原則 （SQL Server 影片）](https://msdn.microsoft.com/library/dd795221.aspx)  
+[Microsoft SQL Server 社群範例： Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [與異動資料擷取改善累加式載入](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [緩時變維度轉換](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
 [大量插入工作](../integration-services/control-flow/bulk-insert-task.md)  

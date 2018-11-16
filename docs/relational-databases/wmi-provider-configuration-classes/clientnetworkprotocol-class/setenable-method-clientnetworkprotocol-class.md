@@ -18,16 +18,16 @@ ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f68d08d4902e6bdcde291c75cb463d8f525a3eb3
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: a785d94bd777117055e71b9f46a6122baa8b9813
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217446"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675727"
 ---
 # <a name="setenable-method-clientnetworkprotocol-class"></a>SetEnable 方法 (ClientNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  啟用用戶端網路通訊協定所指定[Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)。  
+  啟用用戶端網路通訊協定所指定[Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,6 +46,6 @@ object.SetEnableMethod()
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定用戶端網路通訊協定和網路程式庫](http://technet.microsoft.com/library/ms181035.aspx)  
+ [設定用戶端網路通訊協定和網路程式庫](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -13,19 +13,19 @@ ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 800b2f3bbfe5547931bc66322817f9a221cf3a8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c32b779370341be7b6026cf6d12cccbf3cc97b8a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704016"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663847"
 ---
 # <a name="supported-net-framework-libraries"></a>支援的 .NET Framework 程式庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中裝載的 Common Language Runtime (CLR)，您能夠以 Managed 程式碼撰寫預存程序、觸發程序、使用者定義函數、使用者定義型別及使用者定義彙總。 藉由 .NET Framework 類別庫所提供的功能，您可以存取預先建立的類別，這些類別可提供字串操作、進階數學運算、檔案存取、加密等多項功能。 您可以透過任何 Managed 預存程序、使用者定義型別、觸發程序、使用者定義函數或使用者定義彙總來存取這些類別。  
   
 > [!NOTE]  
->  如果在全域組件快取 (GAC) 中服務或升級不受支援的組件，則 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 應用程式可能會停止運作。 這是因為 GAC 中的服務或升級程式庫不會升級 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內的這些組件。 如果某個組件同時存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫和 GAC 中，這個組件的兩個副本就必須完全相符。 如果它們不相符，當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 整合使用該組件時，將會發生錯誤。 如果服務或升級的任何組件在 GAC 中，也會登錄在資料庫中，包括不受支援的.NET Framework 組件，請務必也服務或升級的內部的組件複製您[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫與**ALTER ASSEMBLY**陳述式。 如需詳細資訊，請參閱 <<c0> [ 知識庫文件 949080](http://support.microsoft.com/kb/949080)。  
+>  如果在全域組件快取 (GAC) 中服務或升級不受支援的組件，則 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 應用程式可能會停止運作。 這是因為 GAC 中的服務或升級程式庫不會升級 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內的這些組件。 如果某個組件同時存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫和 GAC 中，這個組件的兩個副本就必須完全相符。 如果它們不相符，當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 整合使用該組件時，將會發生錯誤。 如果服務或升級的任何組件在 GAC 中，也會登錄在資料庫中，包括不受支援的.NET Framework 組件，請務必也服務或升級的內部的組件複製您[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫與**ALTER ASSEMBLY**陳述式。 如需詳細資訊，請參閱 <<c0> [ 知識庫文件 949080](https://support.microsoft.com/kb/949080)。  
   
 ## <a name="supported-libraries"></a>支援的程式庫  
  從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 開始，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就具備受支援之 .NET Framework 程式庫的清單，這些程式庫均經過測試，以確保符合與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 互動的可靠性和安全性標準。 受支援的程式庫不需要在伺服器上明確地註冊，即可用於程式碼內，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會從全域組件快取 (GAC) 直接載入這些程式庫。  

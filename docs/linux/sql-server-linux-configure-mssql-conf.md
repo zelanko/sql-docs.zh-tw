@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: a8a4cd22d4637c2d6fd86bf61d25c16dda728394
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 21034e0e7ae4e84d245d12b631c96c41760c46c4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753585"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658810"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具，設定在 Linux 上的 SQL Server
 
@@ -148,7 +148,7 @@ ms.locfileid: "50753585"
    sudo systemctl restart mssql-server
    ```
 
-如需詳細資訊，請參閱 <<c0> [ 在 Linux 上的 SQL Server 的客戶意見反應](sql-server-linux-customer-feedback.md)並[SQL Server 隱私權聲明](http://go.microsoft.com/fwlink/?LinkID=868444)。
+如需詳細資訊，請參閱 <<c0> [ 在 Linux 上的 SQL Server 的客戶意見反應](sql-server-linux-customer-feedback.md)並[SQL Server 隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)。
 
 ## <a id="datadir"></a> 變更預設的資料或記錄檔目錄位置
 
@@ -506,7 +506,7 @@ sudo systemctl restart mssql-server
 
 除了設定這些值，您也必須設定路由，並且更新 通訊埠 135 的防火牆。 如需有關如何執行這項操作的詳細資訊，請參閱 <<c0> [ 如何在 Linux 上設定 MSDTC](sql-server-linux-configure-msdtc.md)。
 
-有數個其他 mssql conf 可用來監視和疑難排解 MSDTC 設定。 下表簡要說明這些設定。 如需其用法的詳細資訊，請參閱 Windows 支援文件中的詳細資料[如何啟用診斷追蹤，MS dtc](https://support.microsoft.com/en-us/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute)。
+有數個其他 mssql conf 可用來監視和疑難排解 MSDTC 設定。 下表簡要說明這些設定。 如需其用法的詳細資訊，請參閱 Windows 支援文件中的詳細資料[如何啟用診斷追蹤，MS dtc](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute)。
 
 | mssql conf 設定 | 描述 |
 |---|---|

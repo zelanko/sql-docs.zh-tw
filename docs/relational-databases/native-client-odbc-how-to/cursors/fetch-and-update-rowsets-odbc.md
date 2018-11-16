@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0669adbf316b27dcec6c57d33aff4fa25168459
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2789762eca102fd684e74704a57315a6a39b3821
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625397"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677927"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>提取和更新資料列集 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "47625397"
   
 1.  （選擇性） 呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) with POSITIONED，若要變更資料列集中的資料列 (R) 數目。  
   
-2.  呼叫[SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401)或是[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)取得資料列集。  
+2.  呼叫[SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)或是[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)取得資料列集。  
   
 3.  如果使用繫結資料行，請將繫結資料行緩衝區中目前可用的資料值和資料長度用於資料列集。  
   
-     如果使用未繫結的資料行，每個資料列呼叫[SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407)利用 SQL_POSITION 來設定資料指標位置，然後針對每個未繫結的資料行：  
+     如果使用未繫結的資料行，每個資料列呼叫[SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407)利用 SQL_POSITION 來設定資料指標位置，然後針對每個未繫結的資料行：  
   
     -   呼叫[SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md)一或多次，以取得資料在最後一個繫結的資料列集的資料行之後，未繫結資料行。 若要呼叫[SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md)應該遞增資料行編號的順序。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47625397"
   
 4.  設定任何資料執行中的 text 或 image 資料行。  
   
-5.  呼叫[SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407)或是[SQLBulkOperations](http://go.microsoft.com/fwlink/?LinkId=58398)若要設定資料指標位置，重新整理、 更新、 刪除或加入資料列集內的資料列。  
+5.  呼叫[SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407)或是[SQLBulkOperations](https://go.microsoft.com/fwlink/?LinkId=58398)若要設定資料指標位置，重新整理、 更新、 刪除或加入資料列集內的資料列。  
   
      如果資料執行中的 text 或 image 資料行用於更新或加入作業，請處理它們。  
   

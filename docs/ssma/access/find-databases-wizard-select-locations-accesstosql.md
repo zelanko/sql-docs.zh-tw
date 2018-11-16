@@ -12,12 +12,12 @@ ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ea7f401e2f78d954f92395069b7b53167294662d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86e9d39e6dd56cb5762933dc5ed37b5740a34ea5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812066"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666747"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>尋找資料庫精靈 （選取位置） (AccessToSQL)
 在 [尋找資料庫精靈] 的 [選取位置] 頁面中，您可以輸入的搜尋參數來尋找存取資料庫。  
@@ -60,5 +60,5 @@ ms.locfileid: "47812066"
   
 ## <a name="see-also"></a>另請參閱  
 [新增和移除 Access 資料庫檔案](adding-and-removing-access-database-files-accesstosql.md)  
-[使用者介面 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[使用者介面 Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

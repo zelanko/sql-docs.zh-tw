@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2bc5acc2ee6f81dbdf1ce16a98fb7f75bbf6f121
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6541cae5271e35fd5ad0030ffc8625fc97a46149
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594556"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659087"
 ---
 # <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>建立部署指令碼以 SQL Server Always On 可用性群組
 
@@ -206,7 +206,7 @@ python ./deploy-ag.py deploy --ag ag1 --namespace AG1 --sa-password '<MyC0m91exP
 python ./deploy-ag.py deploy --ag ag1 --namespace ag1 --sa-password '<MyC0m91exP@55w0r!>' --env AKS --verbose
 ```
 
-指令碼完成之後，Kubernetes 運算子會建立儲存體、 SQL Server 執行個體、 負載平衡器服務。 您可以監視與部署[Kubernetes 儀表板](http://docs.microsoft.com/azure/aks/kubernetes-dashboard)。
+指令碼完成之後，Kubernetes 運算子會建立儲存體、 SQL Server 執行個體、 負載平衡器服務。 您可以監視與部署[Kubernetes 儀表板](https://docs.microsoft.com/azure/aks/kubernetes-dashboard)。
 
 在 Kubernetes 之後建立的 SQL Server 容器：
 

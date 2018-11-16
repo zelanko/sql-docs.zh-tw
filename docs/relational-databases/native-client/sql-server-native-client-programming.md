@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b5b8e1f8d3c27552033b014347108ebbedba75e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a2c01750ac0cb1a743e6961cc693f9912857d8b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708586"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662287"
 ---
 # <a name="sql-server-native-client-programming"></a>SQL Server Native Client 程式設計
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47708586"
  [尋找其他 SQL Server Native Client 資訊](../../relational-databases/native-client/finding-more-sql-server-native-client-information.md)  
  提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的其他相關資源，包括外部資源及取得進一步協助的連結。  
   
- [SQL Server Native Client 錯誤](http://msdn.microsoft.com/library/ebd0e9a8-5fe5-4b15-9a44-2f131a13c186)  
+ [SQL Server Native Client 錯誤](https://msdn.microsoft.com/library/ebd0e9a8-5fe5-4b15-9a44-2f131a13c186)  
  包含與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 相關聯的執行階段錯誤主題。  
   
 ## <a name="see-also"></a>另請參閱  

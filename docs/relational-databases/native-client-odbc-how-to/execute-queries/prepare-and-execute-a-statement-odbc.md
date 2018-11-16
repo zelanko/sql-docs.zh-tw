@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df6353935efe167023b39d51d53e061b5a6b5deb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e67a239248271720e943ec80eeef6a2cb6f875e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673534"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677227"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>準備和執行陳述式 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "47673534"
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>準備一次陳述式，然後執行多次  
   
-1.  呼叫[SQLPrepare 函數](http://go.microsoft.com/fwlink/?LinkId=59360)準備陳述式。  
+1.  呼叫[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)準備陳述式。  
   
-2.  （選擇性） 呼叫[SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404)來決定已備妥的陳述式中的參數數目。  
+2.  （選擇性） 呼叫[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)來決定已備妥的陳述式中的參數數目。  
   
 3.  (選擇性) 針對準備陳述式中的每個參數：  
   
@@ -43,9 +43,9 @@ ms.locfileid: "47673534"
   
     -   如果陳述式具有參數標記，請將資料值放在繫結參數緩衝區中。  
   
-    -   呼叫[SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)執行備妥的陳述式。  
+    -   呼叫[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)執行備妥的陳述式。  
   
-    -   如果資料在執行中輸入的參數， [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)會傳回 SQL_NEED_DATA。 使用區塊傳送資料[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)並[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)。  
+    -   如果資料在執行中輸入的參數， [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)會傳回 SQL_NEED_DATA。 使用區塊傳送資料[SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405)並[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)。  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>準備含有資料行取向參數繫結的陳述式  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47673534"
   
 2.  呼叫 SQLPrepare 準備陳述式。  
   
-3.  （選擇性） 呼叫[SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404)來決定已備妥的陳述式中的參數數目。  
+3.  （選擇性） 呼叫[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)來決定已備妥的陳述式中的參數數目。  
   
 4.  （選擇性） 針對已備妥的陳述式中每個參數，呼叫 SQLDescribeParam 以便取得參數資訊。  
   

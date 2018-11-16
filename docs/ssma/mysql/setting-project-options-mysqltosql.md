@@ -12,12 +12,12 @@ ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 56e7a30725a4fcad36ffa2df869ecc559056a29e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e397bf4480dd7a9955fb8c7acbce0d11fd910893
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819226"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663967"
 ---
 # <a name="setting-project-options-mysqltosql"></a>設定專案選項 (MySQLToSQL)
 針對每個 SSMA 專案中，您可以設定專案層級的選項。 這些選項會指定如何轉換物件、 資料的移轉方式，和來源資料類型如何對應至目標資料類型。  您將物件轉換為 SQL Server 或 SQL Azure，或將資料移轉至 SQL Server 或 SQL Azure 之前，確認適用於專案的組態選項。  
@@ -55,7 +55,7 @@ SSMA 會有五種專案設定：
   
 -   [專案設定&#40;移轉&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
   
--   [專案設定 (GUI) （SSMA 一般）](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [專案設定 (GUI) （SSMA 一般）](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
   
 -   [專案設定&#40;類型對應&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
   

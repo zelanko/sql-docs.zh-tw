@@ -19,12 +19,12 @@ ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b61127c2844117b2d9c042b352129a1860e227c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f258d7e49f86ed8015d8e51f2373633b7d7f10c4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743186"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663135"
 ---
 # <a name="sysdmoswindowsinfo-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "47743186"
 |-----------------|---------------|-----------------|  
 |**windows_release**|**nvarchar(256)**|對於 Windows，傳回版本號碼。 如需值和描述的清單，請參閱 < [Operating System Version (Windows)](/windows/desktop/SysInfo/operating-system-version)。 不能是 NULL。|  
 |**windows_service_pack_level**|**nvarchar(256)**| 對於 Windows，傳回 service pack 號碼。 不能是 NULL。 |  
-|**windows_sku**|**int**|對於 Windows，將傳回 Windows 存貨保持單元 (SKU) 識別碼。 如需 SKU Id 和描述的清單，請參閱 < [GetProductInfo 函數](http://msdn.microsoft.com/library/ms724358.aspx)。 可為 Null。 |  
-|**os_language_version**|**int**| 對於 Windows，傳回的作業系統的 Windows 地區設定識別碼 (LCID)。 如需 LCID 值和描述的清單，請參閱 <<c0> [ 由 Microsoft 指派的地區設定識別碼](http://go.microsoft.com/fwlink/?LinkId=208080)。 不能是 NULL。|  
+|**windows_sku**|**int**|對於 Windows，將傳回 Windows 存貨保持單元 (SKU) 識別碼。 如需 SKU Id 和描述的清單，請參閱 < [GetProductInfo 函數](https://msdn.microsoft.com/library/ms724358.aspx)。 可為 Null。 |  
+|**os_language_version**|**int**| 對於 Windows，傳回的作業系統的 Windows 地區設定識別碼 (LCID)。 如需 LCID 值和描述的清單，請參閱 <<c0> [ 由 Microsoft 指派的地區設定識別碼](https://go.microsoft.com/fwlink/?LinkId=208080)。 不能是 NULL。|  
   
   
 ## <a name="permissions"></a>Permissions  

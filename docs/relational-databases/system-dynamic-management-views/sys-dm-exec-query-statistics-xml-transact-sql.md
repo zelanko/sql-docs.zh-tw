@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9fdcbb6bec46043f030172d794cb5238d99a151e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5cb0bdbbbb535293835a0114061d8ca322ec8a8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784658"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675097"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sys.dm_exec_query_statistics_xml(session_id)
   
 **輕量型**分析基礎結構的統計資料可用於[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SP2 和[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，可啟用：
   -  全域使用追蹤旗標 7412。
-  -  使用[ *query_thread_profile* ](http://support.microsoft.com/kb/3170113)擴充的事件。
+  -  使用[ *query_thread_profile* ](https://support.microsoft.com/kb/3170113)擴充的事件。
   
 > [!NOTE]
 > 一旦啟用追蹤旗標 7412、 輕量型程式碼剖析將會啟用分析基礎結構，而不是標準的分析，例如 DMV 查詢執行統計資料的任何消費者[sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)。

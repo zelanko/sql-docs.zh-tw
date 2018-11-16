@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a054ef8015379d7360f513ce075c1001bf08d898
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4323fd5542216550013624dc75a6428cd1a8cd0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844966"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663587"
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47844966"
 |**process_kernel_time_ms**|**bigint**|**適用於：**[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 核心模式中所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行緒所使用的總時間，以毫秒為單位。 因為這個值包含伺服器上所有處理器的時間，所以它可能會大於單一處理器時脈。 不可為 Null。|  
 |**process_user_time_ms**|**bigint**|**適用於：**[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 使用者模式中所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行緒所使用的總時間，以毫秒為單位。 因為這個值包含伺服器上所有處理器的時間，所以它可能會大於單一處理器時脈。 不可為 Null。|  
 |**time_source**|**int**|**適用於：**[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用於擷取時鐘時間的 API。 不可為 Null。<br /><br /> 0 = QUERY_PERFORMANCE_COUNTER<br /><br /> 1 = MULTIMEDIA_TIMER|  
-|**time_source_desc**|**nvarchar(60)**|**適用於：**[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 描述**time_source**資料行。 不可為 Null。<br /><br /> QUERY_PERFORMANCE_COUNTER = [QueryPerformanceCounter](http://go.microsoft.com/fwlink/?LinkId=163095) API 會擷取時鐘時間。<br /><br /> MULTIMEDIA_TIMER =[多媒體計時器](http://go.microsoft.com/fwlink/?LinkId=163094)擷取時鐘時間的 API。|  
+|**time_source_desc**|**nvarchar(60)**|**適用於：**[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 描述**time_source**資料行。 不可為 Null。<br /><br /> QUERY_PERFORMANCE_COUNTER = [QueryPerformanceCounter](https://go.microsoft.com/fwlink/?LinkId=163095) API 會擷取時鐘時間。<br /><br /> MULTIMEDIA_TIMER =[多媒體計時器](https://go.microsoft.com/fwlink/?LinkId=163094)擷取時鐘時間的 API。|  
 |**virtual_machine_type**|**int**|**適用於：**[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否在虛擬化環境中執行。  不可為 Null。<br /><br /> 0 = NONE<br /><br /> 1 = HYPERVISOR<br /><br /> 2 = OTHER|  
 |**virtual_machine_type_desc**|**nvarchar(60)**|**適用於：**[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 描述**virtual_machine_type**資料行。 不可為 Null。<br /><br /> NONE =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並未在虛擬機器內執行。<br /><br /> HYPERVISOR = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行於 Hypervisor 內部，也就是硬體輔助虛擬化。 安裝 Hyper_V 角色時，Hypervisor 會裝載作業系統，以便在主機作業系統上執行的執行個體會在 Hypervisor 中執行。<br /><br /> OTHER = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行於沒有採用硬體助理的虛擬機器內部，例如 Microsoft Virtual PC。|  
 |**softnuma_configuration**|**int**|**適用於：**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指定已設定的方式 NUMA 節點。 不可為 Null。<br /><br /> 0 = OFF 表示硬體預設<br /><br /> 1 = 自動軟體 NUMA<br /><br /> 2 = 透過登錄的手動軟體 NUMA|  

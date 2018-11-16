@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a685a06ae50961cd90752e64d1c2f41049d4f4ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd6e33f7265eaa7f2ae7433410aae2d4d2e507db
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814286"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666627"
 ---
 # <a name="use-cursors-odbc"></a>使用資料指標 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "47814286"
   
 2.  使用 SQL_ATTR_ROW_ARRAY_SIZE 屬性呼叫 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 來設定資料列集大小。  
   
-3.  如果使用 WHERE CURRENT OF 子句完成定點更新，可以選擇呼叫 [SQLSetCursorName](http://go.microsoft.com/fwlink/?LinkId=58406) 來設定資料指標名稱。  
+3.  如果使用 WHERE CURRENT OF 子句完成定點更新，可以選擇呼叫 [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) 來設定資料指標名稱。  
   
 4.  執行 SQL 陳述式。  
   
-5.  如果使用 WHERE CURRENT OF 子句完成定點更新，而且資料指標名稱沒有隨步驟 3 中的 [SQLSetCursorName](http://go.microsoft.com/fwlink/?LinkId=58406) 提供，可以選擇呼叫 [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) 來設定資料指標名稱。  
+5.  如果使用 WHERE CURRENT OF 子句完成定點更新，而且資料指標名稱沒有隨步驟 3 中的 [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) 提供，可以選擇呼叫 [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) 來設定資料指標名稱。  
   
 6.  呼叫 [SQLNumResultCols](../../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) 來取得資料列集中的資料行 (C) 數目。  
   
@@ -60,11 +60,11 @@ ms.locfileid: "47814286"
   
     -   如果該函數傳回 SQL_NO_DATA，表示沒有其他可用的結果集。  
   
-    -   如果該函數傳回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR，請呼叫 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 來判斷是否可以使用來自 PRINT 或 RAISERROR 陳述式的輸出。  
+    -   如果該函數傳回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR，請呼叫 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 來判斷是否可以使用來自 PRINT 或 RAISERROR 陳述式的輸出。  
   
      如果繫結陳述式參數用於預存程序的輸出參數或傳回值，請使用繫結參數緩衝區中目前可用的資料。  
   
-     在使用繫結參數時，每個 [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) 或 [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) 呼叫都會執行 SQL 陳述式 S 次，其中 S 是繫結參數陣列中的元素數。 這代表將要處理 S 個結果集，其中每個結果集都是由 SQL 陳述式的單一執行通常會傳回的結果集、輸出參數和傳回碼等所有項目而組成。  
+     在使用繫結參數時，每個 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 或 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 呼叫都會執行 SQL 陳述式 S 次，其中 S 是繫結參數陣列中的元素數。 這代表將要處理 S 個結果集，其中每個結果集都是由 SQL 陳述式的單一執行通常會傳回的結果集、輸出參數和傳回碼等所有項目而組成。  
   
      請注意，當結果集包含計算資料列時，每個計算資料列都可以提供為個別的結果集。 這些計算結果集會散佈在一般的資料列內，將一般的資料列分隔成多個結果集。  
   

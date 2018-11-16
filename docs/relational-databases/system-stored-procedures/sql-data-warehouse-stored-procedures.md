@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 3369dfd653f1a0485f60145779b5691e200493a3
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: eb92907b87382c9aad2b7c1a580bf0feb33ac7bd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254404"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657147"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>SQL 資料倉儲預存程序
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "50254404"
  [sp_special_columns_100 &#40;SQL 資料倉儲&#41;](../../relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md)  
   
 > [!NOTE]  
->  某些額外的系統預存程序，只能用在執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或透過 Api 並不供一般客戶的用戶端使用。 這些程序會列在[系統預存程序 & Amp;#40;transact-SQL&AMP;#41;](http://msdn.microsoft.com/library/ms187961.aspx)。 這些程序會受到變更，而且不保證相容性。 在清單上的所有程序不適用於[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
+>  某些額外的系統預存程序，只能用在執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或透過 Api 並不供一般客戶的用戶端使用。 這些程序會列在[系統預存程序 & Amp;#40;transact-SQL&AMP;#41;](https://msdn.microsoft.com/library/ms187961.aspx)。 這些程序會受到變更，而且不保證相容性。 在清單上的所有程序不適用於[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存函式&#40;Transact SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md)   

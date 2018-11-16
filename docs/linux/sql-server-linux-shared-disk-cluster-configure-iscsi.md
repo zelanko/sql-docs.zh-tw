@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 3c40ef7b0115dea0c0167729676e2203f62d2ea1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 519289337d35ebd0cc8d59d54e624d1dfa819792
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633906"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676337"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>設定容錯移轉叢集執行個體-iSCSI-Linux 上的 SQL Server
 
@@ -38,8 +38,8 @@ iSCSI 使用網路來呈現從已知做為目標伺服器的伺服器的磁碟�
 本節將討論如何設定伺服器，fci 會做為節點上的 iSCSI 啟動器。 指示應該可以如常 RHEL 和 Ubuntu 上運作。
 
 如需有關支援的散發套件的 iSCSI 啟動器的詳細資訊，請參閱下列連結：
-- [Red Hat](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
-- [SUSE](http://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
+- [Red Hat](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
+- [SUSE](https://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
 
 1.  您可以選擇其中一個將參與的伺服器 FCI 組態中。 不論哪一個。 iSCSI 應該是在專用的網路，因此設定 iSCSI 辨識並使用該網路。 執行`sudo iscsiadm -m iface -I <iSCSIIfaceName> -o new`其中`<iSCSIIfaceName>`是網路的唯一或易記名稱。 下列範例會使用`iSCSINIC`:

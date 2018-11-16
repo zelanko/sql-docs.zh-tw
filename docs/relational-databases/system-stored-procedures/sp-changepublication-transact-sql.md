@@ -17,12 +17,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c715b7af71fc98df34036daf9311f1ed32b1c772
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e80f468f917a240981fc6e4c16df862d72084541
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689726"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670167"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**並行**|使用所有資料表的原生模式大量複製程式輸出，但在快照集的產生程序中，不鎖定資料表。 這個項目對快照式複寫無效。|  
 ||**concurrent_c**|使用所有資料表的字元模式大量複製程式輸出，但在快照集的產生程序中，不鎖定資料表。 這個項目對快照式複寫無效。|  
 |**taskid**||這個屬性已被取代，不再受到支援。|  
-|**allow_drop**|**true**|可讓`DROP TABLE`DLL 支援發行項是交易式複寫的一部分。 支援的最低版本： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 或更新版本和[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]Service Pack 1 或更新版本。 其他參考： [KB 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+|**allow_drop**|**true**|可讓`DROP TABLE`DLL 支援發行項是交易式複寫的一部分。 支援的最低版本： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 或更新版本和[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]Service Pack 1 或更新版本。 其他參考： [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|停用`DROP TABLE`DLL 支援屬於交易式複寫的發行項。 這是**預設**這個屬性的值。|
 |**NULL** （預設值）||傳回支援的值的清單*屬性*。|  
   

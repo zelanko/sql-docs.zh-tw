@@ -17,12 +17,12 @@ ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f70970ec872d3c921fa10e3eacb1c54d7c4de2d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3acf5ed94993d50c3c81813cd9ea09db2c231a08
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632206"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600018"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>適用於網際網路發佈的 OLE DB 提供者
 ADO[記錄](../../../ado/reference/ado-api/record-object-ado.md)並[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件可用 Microsoft OLE DB provider for Internet Publishing （網際網路發行的提供者） 來存取及管理資源，例如 Web 資料夾或檔案由 Microsoft FrontPage。 ADO 中，您可以指定的來源**記錄**， **Stream**，或[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)是 URL。 您可以接著上傳、 下載、 移動、 複製和刪除資源，或直接管理資源的屬性。  
@@ -36,20 +36,20 @@ ADO[記錄](../../../ado/reference/ado-api/record-object-ado.md)並[Stream](../.
 -   指定"URL ="連接字串中。 例如：  
   
     ```  
-    objConn.Open "URL=http://servername"  
+    objConn.Open "URL=https://servername"  
     ```  
   
 -   指定針對 Msdaipp.dso*提供者*的連接字串關鍵字。 例如：  
   
     ```  
-    objConn.Open "provider=MSDAIPP.DSO;data source=http://servername"  
+    objConn.Open "provider=MSDAIPP.DSO;data source=https://servername"  
     ```  
   
 -   指定針對 Msdaipp.dso[提供者](../../../ado/reference/ado-api/provider-property-ado.md)屬性[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件。 例如：  
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  
-    objConn.Open "http://servername"  
+    objConn.Open "https://servername"  
     ```  
   
 > [!NOTE]

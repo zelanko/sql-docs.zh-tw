@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e3dac6aefb8db2dbd1c651f0a2cf27b0f29559c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46f48aa117c18bcc7af28cdf7c676cf195b553f6
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735000"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350062"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft 資料成形 Service for OLE DB 概觀
 > [!IMPORTANT]
@@ -30,7 +30,7 @@ ms.locfileid: "47735000"
 ## <a name="provider-keyword"></a>提供者關鍵字
  要叫用 OLE DB Data Shaping Service，請連接字串中指定下列關鍵字和值。
 
-```
+```vb
 "Provider=MSDataShape"
 ```
 
@@ -44,14 +44,14 @@ ms.locfileid: "47735000"
 
  您也可以藉由指定其名稱為關鍵字的連接字串中設定可寫入的動態屬性。 例如，在 Microsoft Visual Basic 中，設定**資料提供者**動態屬性 」 MSDASQL 」 藉由指定：
 
-```
+```vb
 Dim cn as New ADODB.Connection
 cn.Open "Provider=MSDataShape;Data Provider=MSDASQL"
 ```
 
  您也可以設定，或藉由指定其名稱為索引中擷取動態屬性[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)屬性。 例如，下列程式碼範例會取得並列印目前的值**資料提供者**動態屬性，然後設定新的值，如果 cn。DataProvider 已設為"MSDataShape 」 (直接或間接透過連接字串) 和未開啟連接：
 
-```
+```vb
 Debug.Print cn.Properties("Data Provider")
 cn.Properties("Data Provider") = "MSDASQL"
 ```

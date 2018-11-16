@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ae4979d02f92ef95364cc264c1a89c83b49a48d2
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 2ea71a918ab9ceb1afba41e5af0148212f33044b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148043"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607138"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -127,7 +127,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 ## <a name="remarks"></a>備註  
  如果您想要建立具有內建測試資料集的模型，您應該使用 CREATE MINING STRUCTURE 陳述式，後面接著 ALTER MINING STRUCTURE。 但是，並非所有模型類型都支援鑑效組資料集。 如需詳細資訊，請參閱 [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)。  
   
- 如何使用 CREATEMODEL 陳述式建立採礦模型的逐步解說，請參閱[時間序列預測 DMX 教學課程](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
+ 如何使用 CREATEMODEL 陳述式建立採礦模型的逐步解說，請參閱[時間序列預測 DMX 教學課程](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
   
 ## <a name="naive-bayes-example"></a>貝氏機率分類範例  
  以下範例使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 貝氏機率分類演算法建立新的採礦模型。 Bike Buyer 資料行定義為可預測屬性。  

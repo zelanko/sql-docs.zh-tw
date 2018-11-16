@@ -13,12 +13,12 @@ ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6122efd4340fb223e42ffa77b5851380be23b0c0
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 2489442eb8de9d8d0ebfb5d8ed902dd2792e22f2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099369"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675597"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>專案設定 （轉換） (AccessToSQL)
 轉換專案設定可讓您設定如何將物件轉換至 Access 資料庫物件從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫物件。  
@@ -112,5 +112,5 @@ SELECT 陳述式中的資料行名稱為萬用字元 （*） 時，請在 輸出
 -   **完整模式**: True  
   
 ## <a name="see-also"></a>另請參閱  
-[使用者介面 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[使用者介面 Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

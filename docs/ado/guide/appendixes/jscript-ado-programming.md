@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +16,12 @@ ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63559af64241be111ed99c9996b63c1978b3d649
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64655ad666954b2fb63448cb1e55430dd6191491
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655626"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350462"
 ---
 # <a name="jscript-ado-programming"></a>JScript ADO 程式設計
 ## <a name="creating-an-ado-project"></a>建立 ADO 專案  
@@ -35,14 +35,14 @@ ms.locfileid: "47655626"
   
  您可以複製並將常數的定義，從這些檔案貼到您的 ASP 網頁，或者，如果您要執行伺服器端指令碼，將 Adojavas.inc 檔案複製到您的網站上的資料夾，並參考從您的 ASP 網頁，就像這樣：  
   
-```  
+```javascript
 <!--#include File="adojavas.inc"-->  
 ```  
   
 ## <a name="creating-ado-objects-in-jscript"></a>在 JScript 中建立 ADO 物件  
  您必須改用**CreateObject**函式呼叫：  
   
-```  
+```javascript
 var Rs1;  
 Rs1 = Server.CreateObject("ADODB.Recordset");  
 ```  
@@ -50,15 +50,15 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 ## <a name="jscript-example"></a>JScript 範例  
  下列程式碼是會開啟 Active Server Page (ASP) 檔案中的 JScript 伺服器端程式設計的一般範例**資料錄集**物件：  
   
-```  
-<%  @LANGUAGE="JScript" %>  
+```javascript
+<%  @LANGUAGE="JScript" %>  
 <!--#include File="adojavas.inc"-->  
 <HTML>  
 <BODY BGCOLOR="White" topmargin="10" leftmargin="10">  
 <%  
 var Source = "SELECT * FROM Authors";  
 var Connect =  "Provider=sqloledb;Data Source=srv;" +  
-    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
+    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
 var Rs1 = Server.CreateObject( "ADODB.Recordset.2.5" );  
 Rs1.Open(Source,Connect,adOpenForwardOnly);  
 Response.Write("Success!");  

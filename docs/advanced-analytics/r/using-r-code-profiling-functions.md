@@ -1,5 +1,5 @@
 ---
-title: 使用 R 程式碼分析函式 （SQL Server 機器學習） |Microsoft 文件
+title: 使用 R 程式碼剖析函式 （SQL Server 機器學習服務） |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,17 +7,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 05689ae356d415f9655b8709c619e40e6d8fa817
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 64f065df5f5769e37bb1d5a8dbc2fba2d5f936ee
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202170"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703966"
 ---
-# <a name="using-r-code-profiling-functions"></a>使用 R 程式碼分析函式
+# <a name="using-r-code-profiling-functions"></a>使用 R 程式碼剖析函式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-除了使用 SQL Server 資源和工具來監視 R 指令碼執行之外，您還可以使用由其他 R 套件提供的效能工具，來取得內部函式呼叫的相關詳細資訊。 本主題提供一些基本資源的清單，以協助您開始。 如需專家指導，建議您閱讀由 Hadley Wickham 所著的《進階 R》一書中的[效能 (英文)](http://adv-r.had.co.nz/Performance.html) 章節。
+除了使用 SQL Server 資源和工具來監視 R 指令碼執行之外，您還可以使用由其他 R 套件提供的效能工具，來取得內部函式呼叫的相關詳細資訊。 本主題提供一些基本資源的清單，以協助您開始。 如需專家指導，我們建議上一章[效能](https://adv-r.had.co.nz/Performance.html)書 《 進階 R，Hadley Wickham 所著中。
 
 ## <a name="using-rprof"></a>使用 RPROF
 
@@ -66,7 +66,7 @@ help("Sys.time")
 
 Microsoft R Open 的文件 (預設會安裝) 包含開發適用於 R 語言之擴充功能的手冊，其中會詳細討論程式碼剖析與偵錯。
 
-章節也會提供線上： [https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)
+本章也會提供線上： [https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)
 
 ### <a name="location-of-r-help-files"></a>R 說明檔的位置
 

@@ -21,12 +21,12 @@ ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 93e6bcfc4ec686f61672fa382d545db5a7000f96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7722193dc643b4fd5afaa9a21559febe137cba6b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838796"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662847"
 ---
 # <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ EXEC managed_backup.sp_backup_config_basic
  啟用特定資料庫上的受管理的備份的資料庫名稱。  
   
  @container_url  
- 指出備份的位置 URL。 當@credential_name是 NULL，此 URL 是 Azure 儲存體中的 blob 容器的共用的存取簽章 (SAS) URL，並備份使用新的備份至區塊 blob 功能。 如需詳細資訊，請檢閱[了解 SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 當@credential_name指定，則這是儲存體帳戶 URL，並備份使用已被取代的備份分頁 blob 的功能。  
+ 指出備份的位置 URL。 當@credential_name是 NULL，此 URL 是 Azure 儲存體中的 blob 容器的共用的存取簽章 (SAS) URL，並備份使用新的備份至區塊 blob 功能。 如需詳細資訊，請檢閱[了解 SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 當@credential_name指定，則這是儲存體帳戶 URL，並備份使用已被取代的備份分頁 blob 的功能。  
   
 > [!NOTE]  
 >  只有一個 SAS URL 是目前支援這個參數。  

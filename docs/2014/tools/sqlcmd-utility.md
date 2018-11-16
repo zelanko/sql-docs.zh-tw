@@ -27,12 +27,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 38b30537da238905fdc4ae1394dfceb6d9606f89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7fe44b790fbf99811761041f4b81eeb3b48e96da
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229968"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641535"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 工用程式
   `sqlcmd`公用程式可讓您輸入[!INCLUDE[tsql](../includes/tsql-md.md)]陳述式、 系統程序與指令碼檔案在命令提示字元中，在**查詢編輯器**SQLCMD 模式、 Windows 指令碼檔案或的作業系統 (Cmd.exe) 作業步驟[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]代理程式作業。 這個公用程式利用 ODBC 執行 [!INCLUDE[tsql](../includes/tsql-md.md)] 批次。  
@@ -99,7 +99,7 @@ ms.locfileid: "48229968"
  宣告連接到伺服器時的應用程式工作負載類型。 目前唯一支援的值是 **ReadOnly**。 若未指定 **-K**，sqlcmd 公用程式將無法支援 AlwaysOn 可用性群組中連接至次要複本。 如需詳細資訊，請參閱 <<c0> [ 使用中次要： 可讀取次要複本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  `-M` *multisubnet_failover*  
- 一律指定`-M`連接到可用性群組接聽程式時[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]可用性群組或[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]容錯移轉叢集執行個體。 `-M` 提供目前使用中伺服器的更快速偵測與連接。 如果未指定 `–M`，`-M` 為關閉。 如需詳細資訊[!INCLUDE[ssHADR](../includes/sshadr-md.md)]，請參閱 <<c2> [ 可用性群組接聽程式、 用戶端連接性及應用程式容錯移轉&#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md)，[建立和設定可用性群組&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[容錯移轉叢集和 AlwaysOn 可用性群組&#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)，和[使用中次要： 可讀取次要複本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .</c2>  
+ 在連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體時，永遠指定 `-M`。 `-M` 提供目前使用中伺服器的更快速偵測與連接。 如果未指定 `–M`，`-M` 為關閉。 如需詳細資訊[!INCLUDE[ssHADR](../includes/sshadr-md.md)]，請參閱 <<c2> [ 可用性群組接聽程式、 用戶端連接性及應用程式容錯移轉&#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md)，[建立和設定可用性群組&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[容錯移轉叢集和 AlwaysOn 可用性群組&#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)，和[使用中次要： 可讀取次要複本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .</c2>  
   
  **-N**  
  用戶端會用這個參數要求加密的連接。  
@@ -182,7 +182,7 @@ ms.locfileid: "48229968"
   
 -   假設多個輸入檔都是相同的字碼頁。 Unicode 與非 Unicode 的輸入檔可以混合使用。  
   
- 輸入`chcp`在命令提示字元中，以驗證 Cmd.exe 的字碼頁。  
+ 在命令提示字元下輸入 `chcp`，以驗證 Cmd.exe 的字碼頁。  
   
  **-i** *input_file*[**,***input_file2*...]  
  識別包含 SQL 陳述式或預存程序的批次之檔案。 您可以指定多個檔案，它們會依照順序加以讀取和處理。 檔案名稱之間不能有空格。 `sqlcmd` 會先檢查指定的檔案是否全部存在。 如果有一個或多個檔案不存在，`sqlcmd` 會結束作業。 -i 和 -Q/-q 為互斥選項。  
@@ -404,7 +404,7 @@ ms.locfileid: "48229968"
   
  傳回多項結果時，`sqlcmd` 會在批次的各結果集之間，列印一行空白行。 此外，「\<x > 受影響的資料列 」 不適用於執行的陳述式時，沒有出現訊息。  
   
- 若要使用`sqlcmd`，以互動方式輸入`sqlcmd`在命令提示字元中的一個或多個本主題稍早所述的選項。 如需詳細資訊，請參閱[使用 sqlcmd 公用程式](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
+ 若要使用`sqlcmd`，以互動方式輸入`sqlcmd`在命令提示字元中的一個或多個本主題稍早所述的選項。 如需詳細資訊，請參閱 [使用 sqlcmd 公用程式](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
 > [!NOTE]  
 >  選項 **-L**， **-Q**， **-Z**或是 **-i**導致`sqlcmd`在執行之後結束。  
@@ -707,7 +707,7 @@ ms.locfileid: "48229968"
   
  `GO`  
   
- 當您按 ENTER 時，會傳回下列結果集。  
+ 當您按下 ENTER 時，則會傳回下列結果集。  
   
  `BusinessEntityID FirstName    LastName`  
   

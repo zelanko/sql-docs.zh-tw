@@ -16,16 +16,16 @@ ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 196641267bfedaff0de657d842b75a38c7cac75a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d24d67f3c798c061fe10c932f36aa4e7f007f772
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753356"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602358"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>DataSpace 物件和 CreateObject 方法範例 (VBScript)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  下列範例示範如何使用[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法[rds。DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)與預設的商務物件[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)。 若要測試此範例中，剪下並貼上此程式碼之間\<主體 > 並\</b > 標記以正常的 HTML 文件並將它命名**DataSpaceVBS.asp**。 ASP 指令碼會識別您的伺服器。  
   
@@ -107,7 +107,7 @@ The <i>Query</i> Method of the RDSServer.DataFactory is used to bring back a Rec
     Dim strCnxn  
     Dim strSQL  
   
-    strServer = "http://<%=Request.ServerVariables("SERVER_NAME")%>"  
+    strServer = "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
     strCnxn = "Provider='sqloledb';Data Source=" & _  
             "<%=Request.ServerVariables("SERVER_NAME")%>" & ";" & _  
             "Integrated Security='SSPI';Initial Catalog='Northwind';"  
@@ -140,7 +140,7 @@ The <i>Query</i> Method of the RDSServer.DataFactory is used to bring back a Rec
   
 ```  
 Sub Window_OnLoad()  
-   strServer = "http://<%=Request.ServerVariables("SERVER_NAME")%>"  
+   strServer = "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
    Set BO = ADS1.CreateObject("VbBusObj.VbBusObjCls", strServer)  
    txtConnect.Value = "dsn=Pubs;uid=MyUserID;pwd=MyPassword;"  
    txtGetRecordset.Value = "Select * From authors for Browse"  

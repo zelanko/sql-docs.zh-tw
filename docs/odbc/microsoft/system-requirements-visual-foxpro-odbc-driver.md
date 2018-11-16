@@ -19,18 +19,18 @@ ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb94ee7b87f7e2e68f949f8a97b672182157c3f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff2db6cff725e133789804856b1913517c34ceb0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693386"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664092"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>系統需求 (Visual FoxPro ODBC Driver)
 安裝的系統需求提供的最小作業系統 」 和 「 已成功安裝驅動程式所需的磁碟空間。 您已安裝驅動程式之後，您可以選取您要用來存取 Visual FoxPro 資料的特定應用程式軟體。  
   
 ## <a name="installation-requirements"></a>安裝需求  
- 如需安裝需求和其他資訊，請參閱[Visual FoxPro ODBC Driver 下載網站](http://go.microsoft.com/fwlink/?LinkId=121318)。  
+ 如需安裝需求和其他資訊，請參閱[Visual FoxPro ODBC Driver 下載網站](https://go.microsoft.com/fwlink/?LinkId=121318)。  
   
 ## <a name="accessing-visual-foxpro-data"></a>存取 Visual FoxPro 資料  
  若要存取 Microsoft Visual FoxPro 或 FoxPro 2。*x*資料，您必須擁有下列：  

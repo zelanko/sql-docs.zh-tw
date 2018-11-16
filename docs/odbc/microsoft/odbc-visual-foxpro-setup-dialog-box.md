@@ -15,17 +15,17 @@ ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37ec2a9f033c124ab70db996f11179797877c09b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e2d83f77f8bb9227daab996e425d1880d1bfabd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686436"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674410"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro 設定對話方塊
 **ODBC Visual FoxPro 設定**對話方塊可讓您新增或變更 Visual FoxPro 資料來源。  
   
- 若要下載此驅動程式，請參閱[Visual FoxPro ODBC Driver 下載網站](http://go.microsoft.com/fwlink/?LinkId=121318)。  
+ 若要下載此驅動程式，請參閱[Visual FoxPro ODBC Driver 下載網站](https://go.microsoft.com/fwlink/?LinkId=121318)。  
   
 ## <a name="dialog-box-options"></a>對話方塊選項  
  **資料來源名稱**  

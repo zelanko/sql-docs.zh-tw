@@ -1,6 +1,6 @@
 ---
-title: 判斷輪詢頻率-Analytics Platform System |Microsoft 文件
-description: 本文說明如何判斷 Analytics Platform System 應用裝置警示的輪詢頻率。
+title: 判斷輪詢頻率-Analytics Platform System |Microsoft Docs
+description: 這篇文章說明如何判斷 Analytics Platform System appliance 警示的輪詢頻率。
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,32 +9,32 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 39597e0e4623a3006709acde7fe54f97545c362f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 6b838766e7a6d6bfb9a68bb832cd7a8feb3c9960
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707616"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696616"
 ---
 # <a name="determine-polling-frequency"></a>判斷輪詢頻率
-本文說明如何判斷 Analytics Platform System 應用裝置警示的輪詢頻率。  
+這篇文章說明如何判斷 Analytics Platform System appliance 警示的輪詢頻率。  
   
 ## <a name="to-determine-the-polling-frequency"></a>若要判斷輪詢頻率  
-由於 PDW 目前不支援主動式通知出現警示時，監視解決方案，就必須持續輪詢應用裝置的 Dll。  就內部而言，PDW 輪詢元件在不同的時間間隔：  
+由於 PDW 目前不支援主動通知警示發生時，監視解決方案，就必須持續輪詢設備 Dll。  就內部而言，PDW 輪詢元件在不同的時間間隔：  
   
--   叢集-60 秒  
+-   叢集 – 60 秒  
   
 -   活動訊號-60 秒  
   
--   所有其他元件 – 五分鐘  
+-   所有其他元件-5 分鐘  
   
--   效能計數器 – 3 秒  
+-   效能計數器-三秒  
   
-一般警示，輪詢間隔也使用 System Center，這個是**每隔 15 分鐘**。  很明顯地，您可以增加或減少經常查詢，但不是建議使用輪詢小於每隔六小時。  
+一般間隔輪詢是否有警示，也會使用 System Center，這是**每隔 15 分鐘**。  很明顯地，您可以增加或減少經常查詢，但不是建議使用輪詢小於每 6 小時。  
   
-更頻繁地輪詢可接受的但太過頻繁的輪詢可以干擾[sys.dm_pdw_nodes_exec_requests](http://msdn.microsoft.com/library/ms177648(v=sql11).aspx) DMV。  輪詢頻率太高可能會讓您難以診斷查詢效能的使用者發出時他們快速地復原到檢視。  
+更頻繁地輪詢是可接受的但輪詢太過頻繁可以干擾[sys.dm_pdw_nodes_exec_requests](https://msdn.microsoft.com/library/ms177648(v=sql11).aspx) DMV。  輪詢太過頻繁變得相當困難的使用者，以診斷查詢效能問題時其快速彙超出檢視。  
   
 ## <a name="see-also"></a>另請參閱  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[應用裝置監視&#40;Analytics Platform System&#41;](appliance-monitoring.md)  
+[設備監視&#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

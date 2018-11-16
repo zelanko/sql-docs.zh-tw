@@ -1,5 +1,5 @@
 ---
-title: 清除 Analysis Services 快取 |Microsoft 文件
+title: 清除 Analysis Services 快取 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4ed87e37ca9b13af696977a86eeccd34eec81e87
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0b9276d0a8684023d8e6dba1a890b5f1698a017a
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016555"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700326"
 ---
 # <a name="clear-the-analysis-services-caches"></a>清除 Analysis Services 快取
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -87,7 +87,6 @@ ms.locfileid: "34016555"
     </return>  
     ```  
   
-## <a name="see-also"></a>另請參閱  
- [監視 Analysis Services 執行個體](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+
   
   

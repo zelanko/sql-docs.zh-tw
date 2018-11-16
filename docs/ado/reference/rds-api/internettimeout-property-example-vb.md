@@ -15,16 +15,16 @@ ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57c0c8e6a7a6bcab7ea5d096ee27ae510065daa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe7074c592c837d292257bcaa18f3eb0638a6515
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634796"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606718"
 ---
 # <a name="internettimeout-property-example-vb"></a>InternetTimeout 屬性範例 (VB)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  此範例示範[InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md)屬性，這存在於[DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)並[DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)物件。 這個範例會使用**DataControl**物件，並設定為 20 秒的逾時。  
   
@@ -38,7 +38,7 @@ Public Sub Main()
     Dim rst As ADODB.Recordset  
     Set dc = New RDS.DataControl  
   
-    dc.Server = "http://MyServer"  
+    dc.Server = "https://MyServer"  
     dc.ExecuteOptions = 1  
     dc.FetchOptions = 1  
     dc.Connect = "Provider='sqloledb';Data Source='MySqlServer';" & _  

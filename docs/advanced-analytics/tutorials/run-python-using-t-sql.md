@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3b4a7987a0fc9d50bbc5c8803d741be13acf7433
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 59897cbe6abc13b9842dc148ef8c2de4413926d0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050891"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702951"
 ---
 # <a name="run-python-using-t-sql"></a>使用 T-SQL 執行 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -139,7 +139,7 @@ WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColM
 
 其他類型的輸入可以當做 SQL 變數： 比方說，您可以傳遞定型的模型為變數，例如使用序列化函式[pickle](https://docs.python.org/3.0/library/pickle.html)或是[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)中撰寫模型二進位格式。
 
-預存程序傳回單一的 Python [pandas](http://pandas.pydata.org/pandas-docs/stable/index.html)資料框架做為輸出，但您也可以輸出純量和做為變數的模型。 例如，您可以輸出定型的模型，做為二進位的變數，並將它傳遞至 T-SQL INSERT 陳述式，以寫入該模型的資料表。 您也可以產生繪圖 （以二進位格式） 或純量 （個別的值，例如日期和時間，所經過的時間來定型模型，等等）。
+預存程序傳回單一的 Python [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html)資料框架做為輸出，但您也可以輸出純量和做為變數的模型。 例如，您可以輸出定型的模型，做為二進位的變數，並將它傳遞至 T-SQL INSERT 陳述式，以寫入該模型的資料表。 您也可以產生繪圖 （以二進位格式） 或純量 （個別的值，例如日期和時間，所經過的時間來定型模型，等等）。
 
 現在，讓我們看看只是預設的 sp_execute_external_script 的輸入和輸出變數：`InputDataSet`和`OutputDataSet`。 
 
@@ -313,7 +313,7 @@ SQL Server 背後的 Python **pandas**套件，這也很適合使用表格式資
 
 我們需要轉換成表格式結構時我們純量的數學運算的結果，仍然需要將它們轉換成 SQL Server 可以處理的格式。 
 
-1. 若要將一系列轉換成 data.frame，呼叫 pandas [DataFrame](http://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe)方法。
+1. 若要將一系列轉換成 data.frame，呼叫 pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe)方法。
 
     ```sql
     execute sp_execute_external_script 

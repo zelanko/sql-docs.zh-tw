@@ -1,32 +1,23 @@
 ---
 title: 移轉 Reporting Services 安裝 (原生模式) | Microsoft Docs
-ms.custom: ''
-ms.date: 08/10/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- database-engine
-ms.topic: conceptual
-helpviewer_keywords:
-- manual Reporting Services migrations
-- Report Server Windows service
-- custom Reporting Services installations
-- automatic Reporting Services migrations
-- Reporting Services, upgrades
-- upgrading Reporting Services
-- migrating Reporting Services
-ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0c156dee6d76d9b83cdaa2cc7f1856e128d53186
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.custom: ''
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.technology: database-engine
+ms.topic: conceptual
+ms.date: 08/10/2017
+ms.openlocfilehash: 2575f73102f1fbaa73a7606ceb8c070dcdd72b58
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082888"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604058"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>移轉 Reporting Services 安裝 (原生模式)
+
   本主題提供將下列其中一個支援版本之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式部署遷移至新 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體的逐步指示：  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -77,7 +68,7 @@ ms.locfileid: "48082888"
   
  裝載報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本有一些限制。 如果您重複使用先前安裝中所建立的報表伺服器資料庫，請檢閱下列主題。  
   
--   [建立報表伺服器資料庫&#40;SSRS 組態管理員&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+-   [建立報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
   
 ##  <a name="bkmk_fixed_database_name"></a> 固定資料庫名稱  
  您無法重新命名報表伺服器資料庫。 資料庫的識別會在建立資料庫時，記錄於報表伺服器預存程序中。 重新命名報表伺服器的主要或暫存資料庫將會在程序執行時造成錯誤發生，使得報表伺服器安裝失效。  
@@ -228,7 +219,7 @@ ms.locfileid: "48082888"
   
 5.  如果您在新的電腦上安裝報表伺服器，而且正在使用 Windows 防火牆，請確定報表伺服器所接聽的 TCP 通訊埠是開啟的。 此通訊埠依預設為 80。 如需詳細資訊，請參閱[設定供報表伺服器存取的防火牆](../report-server/configure-a-firewall-for-report-server-access.md)。  
   
-6.  如果您想要在本機管理您的原生模式報表伺服器，則必須設定作業系統，允許以報表管理員進行本機管理。 如需詳細資訊，請參閱[設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
+6.  如果您想要在本機管理您的原生模式報表伺服器，則必須設定作業系統，允許以報表管理員進行本機管理。 如需詳細資訊，請參閱 [設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
 ##  <a name="bkmk_copy_custom_config"></a> 將自訂組態設定複製到 RSReportServer.config 檔案  
  如果您在先前安裝中修改了 RSReportServer.config 檔案或 RSWebApplication.config 檔案，就應該在新的 RSReportServer.config 檔案中進行相同的修改。 下列清單將摘要列出一些您可能會修改先前組態檔的原因，並且提供有關如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中設定相同設定的其他資訊。  
@@ -246,7 +237,7 @@ ms.locfileid: "48082888"
   
 1.  開啟瀏覽器並輸入 URL 位址，以測試報表伺服器和「報表管理員」虛擬目錄。 如需詳細資訊，請參閱[驗證 Reporting Services 安裝](verify-a-reporting-services-installation.md)。  
   
-2.  測試報表，並確認其包含您預期的資料。 檢閱資料來源資訊，查看是否仍然有指定資料來源連接資訊。 雖然報表伺服器會在處理和轉譯報表時使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 報表物件模型，但是它不會將 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 建構取代成新的報表定義語言元素。 若要深入了解現有報表如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 報表伺服器上執行，請參閱[升級報表](upgrade-reports.md)。  
+2.  測試報表，並確認其包含您預期的資料。 檢閱資料來源資訊，查看是否仍然有指定資料來源連接資訊。 雖然報表伺服器會在處理和轉譯報表時使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 報表物件模型，但是它不會將 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 建構取代成新的報表定義語言元素。 若要深入了解現有報表如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 報表伺服器上執行，請參閱 [升級報表](upgrade-reports.md)。  
   
 ##  <a name="bkmk_remove_unused"></a> 移除未使用的程式和檔案  
  一旦將報表伺服器成功遷移至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體之後，就可以執行下列步驟，以移除不再需要的程式和檔案。  
@@ -268,8 +259,8 @@ ms.locfileid: "48082888"
 2.  如果您不再需這部電腦上的 IIS，請移除它。  
   
 ## <a name="see-also"></a>另請參閱  
- [移轉 Reporting Services 安裝&#40;SharePoint 模式&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)   
- [報表伺服器資料庫&#40;SSRS 原生模式&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
+ [遷移 Reporting Services 安裝 &#40;SharePoint 模式&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)   
+ [報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
  [升級和移轉 Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [Reporting Services 回溯相容性](../reporting-services-backward-compatibility.md)   
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

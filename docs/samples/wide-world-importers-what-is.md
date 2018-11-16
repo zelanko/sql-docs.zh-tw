@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cffb25700ccd160f62cc7ad54164bf5fe168225a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 017f301d9888ddd4f90d70e7d993faf840640a66
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832006"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670687"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Wide World Importers Microsoft sql 範例資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,4 +65,4 @@ SQL Server Analysis Services 用來建立分析資料模型，從維度資料模
 
 此處所述的範例資料庫和範例程式碼的授權： [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
-範例資料庫包含已從 data.gov 和自然 EarthData 載入的公用資料。 使用規定如下： [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)
+範例資料庫包含已從 data.gov 和自然 EarthData 載入的公用資料。 使用規定如下： [https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)

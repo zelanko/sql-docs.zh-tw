@@ -15,12 +15,12 @@ ms.assetid: ab95e6f8-51dc-4018-9d19-cc0a6de893a5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0403b561d26f39ee84bd6e47f75f2d81141f739e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7caa791bc1a6bfc2bb08fd3d30ec38d8a06cd0db
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785186"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658367"
 ---
 # <a name="data-spaces-transact-sql"></a>資料空間 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47785186"
 |[sys.destination_data_spaces](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)|[sys.partition_schemes](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [系統檢視表&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [系統檢視表&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

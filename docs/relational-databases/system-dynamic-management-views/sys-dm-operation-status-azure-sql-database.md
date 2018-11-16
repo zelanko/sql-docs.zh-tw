@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 335888ba664751bb20348472736ad697b8fe2b6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad16bb39d693e78f0d6678cbf5d6b1c4abfb5816
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633476"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663268"
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47633476"
 |percent_complete|**int**|已完成作業的百分比。 值不連續且有效的值如下。 不是 NULL。<br/><br/>0 = 未啟動的作業<br/>50 = 作業進行中<br/>100 = 作業完成|  
 |error_code|**int**|表示在作業失敗期間發生之錯誤的代碼。 如果這個值為 0，就表示作業已順利完成。|  
 |error_desc|**nvarchar(2048)**|在作業失敗期間發生之錯誤的描述。|  
-|error_severity|**int**|在作業失敗期間發生之錯誤的嚴重性層級。 如需錯誤嚴重性的詳細資訊，請參閱[Database Engine 錯誤嚴重性](http://go.microsoft.com/fwlink/?LinkId=251052)。|  
+|error_severity|**int**|在作業失敗期間發生之錯誤的嚴重性層級。 如需錯誤嚴重性的詳細資訊，請參閱[Database Engine 錯誤嚴重性](https://go.microsoft.com/fwlink/?LinkId=251052)。|  
 |error_state|**int**|保留供日後使用。 我們無法保證未來的相容性。|  
 |start_time|**datetime**|作業啟動時的時間戳記。|  
 |last_modify_time|**datetime**|上次修改長時間執行作業之記錄時的時間戳記。 如果作業順利完成，這個欄位會顯示作業完成時的時間戳記。|  

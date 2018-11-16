@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9101b79f393d8afd5bd98586cfc18ad5d366545
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 319980e5ce6b2bb1671c57c9619b635fbf130bf8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832154"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671157"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 插入資料 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -214,7 +214,7 @@ ms.locfileid: "47832154"
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，資料表名稱可以包含空格，例如 Northwind 資料庫中的 Order Details 資料表。 不過，這不是有效的 XML 字元[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]識別碼，卻不是有效的 XML 識別碼可以編碼使用 '__xHHHH\_\_' 當做編碼值，其中 HHHH 代表四位數字十六進位 ucs-2 代碼最大顯著性的位元第一順序的字元。  
   
 > [!NOTE]  
->  此範例會使用 Northwind 資料庫。 您可以從這個下載中使用 SQL 指令碼，可用來安裝 Northwind 資料庫[Microsoft 寍鯚](http://go.microsoft.com/fwlink/?LinkId=30196)。  
+>  此範例會使用 Northwind 資料庫。 您可以從這個下載中使用 SQL 指令碼，可用來安裝 Northwind 資料庫[Microsoft 寍鯚](https://go.microsoft.com/fwlink/?LinkId=30196)。  
   
  此外，項目名稱必須括在括號 ([])。 因為字元 [和] 在 XML 中無效，您就必須將它們編碼為 _x005B\_和 _x005D\_分別。 (如果您使用對應結構描述，則可以提供不包含空格之類無效字元的元素。 對應結構描述會進行必要的對應，因此您就不必進行這些字元的編碼)。  
   
@@ -388,7 +388,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
  下列的結構描述 (CustOrderSchema.xml) 描述 **\<CustOrder >** 所組成的項目**OrderID**並**EmployeeID**屬性。 若要讓結構描述更有可看性，預設值指派給**EmployeeID**屬性。 Updategram 只會將屬性的預設值用於插入作業，而且只有在 Updategram 未指定該屬性時才會這麼做。  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="CustOrder" >  
    <xsd:complexType>  
@@ -458,7 +458,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 ```  
 <?xml version="1.0"?>  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:element name="Student" sql:relation="Students">  
   <xsd:complexType>  
@@ -489,7 +489,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql"  
       xmlns:updg="urn:schemas-microsoft-com:xml-updategram"  
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+      xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
   
 <updg:sync mapping-schema='StudentSchema.xml'>  
   <updg:before/>  
@@ -538,7 +538,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
   <updg:sync mapping-schema='XSD-ElementHavingNameSpace.xml'>  
     <updg:after>  
-       <x:Order  xmlns:x="http://server/xyz/schemas/"  
+       <x:Order  xmlns:x="https://server/xyz/schemas/"  
              updg:at-identity="SalesOrderID"   
              RevisionNumber="1"  
              OrderDate="2001-07-01 00:00:00.000"  
@@ -564,11 +564,11 @@ CustOrder(OrderID, EmployeeID, OrderType)
  下列結構描述 (XSD-ElementHavingNamespace.xml) 顯示相對應元素和屬性的宣告方式。  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
      xmlns:dt="urn:schemas-microsoft-com:datatypes"   
      xmlns:sql="urn:schemas-microsoft-com:mapping-schema"    
-     xmlns:x="http://server/xyz/schemas/"   
-     targetNamespace="http://server/xyz/schemas/" >  
+     xmlns:x="https://server/xyz/schemas/"   
+     targetNamespace="https://server/xyz/schemas/" >  
   <xsd:element name="Order" sql:relation="Sales.SalesOrderHeader" type="x:Order_type"/>  
   <xsd:complexType name="Order_type">  
     <xsd:attribute name="SalesOrderID"  type="xsd:ID"/>  
@@ -633,10 +633,10 @@ CustOrder(OrderID, EmployeeID, OrderType)
  <ProductModel>  
     <Name>Mountain-100</Name>  
     <Desc><?xml-stylesheet href="ProductDescription.xsl" type="text/xsl"?>  
-        <p1:ProductDescription xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
-              xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
-              xmlns:wf="http://www.adventure-works.com/schemas/OtherFeatures"   
-              xmlns:html="http://www.w3.org/1999/xhtml"   
+        <p1:ProductDescription xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+              xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
+              xmlns:wf="https://www.adventure-works.com/schemas/OtherFeatures"   
+              xmlns:html="https://www.w3.org/1999/xhtml"   
               xmlns="">  
   <p1:Summary>  
      <html:p>Insert Example</html:p>  
@@ -687,9 +687,9 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
-           xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
+           xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  
      <xsd:complexType>  
        <xsd:sequence>  

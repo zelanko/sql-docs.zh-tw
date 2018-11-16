@@ -15,12 +15,12 @@ ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6b2fa1bdf96693a29f0e4e7b5d2d27b35a83c122
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b32590b47a5fd686b02dfc0a1cd1cd323fc9a70
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639306"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663047"
 ---
 # <a name="deploying-clr-database-objects"></a>部署 CLR 資料庫物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47639306"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- 如需有關建立不同類型的 managed 的資料庫物件中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 < [clr 使用者定義函式](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)， [clr 使用者定義彙總](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)， [CLR使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)， [CLR 預存程序](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)，以及[CLR 觸發程序](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)。  
+ 如需有關建立不同類型的 managed 的資料庫物件中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 < [clr 使用者定義函式](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)， [clr 使用者定義彙總](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)， [CLR使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)， [CLR 預存程序](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)，以及[CLR 觸發程序](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)。  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>將組件部署至實際伺服器  
  一旦 CLR 資料庫物件已經在測試伺服器上測試並驗證之後，您就可以將它們散發至實際伺服器。 如需有關偵錯 managed 的資料庫物件的詳細資訊，請參閱 <<c0> [ 偵錯 CLR 資料庫物件](../../relational-databases/clr-integration/debugging-clr-database-objects.md)。  

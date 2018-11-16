@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: dedd8b0c51176d64f4f65b27bd90f747f8690859
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 1053f3a11bed9efbf75d7270f677c9f226221a3f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252006"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674193"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>部署 Kubernetes 使用 Azure Kubernetes Service (AKS) 中的 SQL Server 容器
 
@@ -33,11 +33,11 @@ ms.locfileid: "48252006"
 
 ## <a name="ha-solution-on-kubernetes-running-in-azure-kubernetes-service"></a>在 Azure Kubernetes Service 中執行的 Kubernetes 上的 HA 解決方案
 
-Kubernetes 1.6 和更新版本可支援[儲存類別](http://kubernetes.io/docs/concepts/storage/storage-classes/)，[永續性磁碟區宣告](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)，而[Azure 磁碟的磁碟區類型](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)。 您可以建立和管理 Kubernetes 中的原生的 SQL Server 執行個體。 這篇文章中的範例示範如何建立[部署](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)以達到類似的共用的磁碟容錯移轉叢集執行個體的高可用性組態。 在此組態中，Kubernetes 會扮演的角色叢集 orchestrator。 當容器中的 SQL Server 執行個體失敗時，協調器會啟動另一個執行個體附加至相同的永續性儲存體的容器。
+Kubernetes 1.6 和更新版本可支援[儲存類別](https://kubernetes.io/docs/concepts/storage/storage-classes/)，[永續性磁碟區宣告](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)，而[Azure 磁碟的磁碟區類型](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)。 您可以建立和管理 Kubernetes 中的原生的 SQL Server 執行個體。 這篇文章中的範例示範如何建立[部署](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)以達到類似的共用的磁碟容錯移轉叢集執行個體的高可用性組態。 在此組態中，Kubernetes 會扮演的角色叢集 orchestrator。 當容器中的 SQL Server 執行個體失敗時，協調器會啟動另一個執行個體附加至相同的永續性儲存體的容器。
 
 ![Kubernetes SQL Server 叢集的圖表](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
-在上圖中，`mssql-server`是中的容器[pod](http://kubernetes.io/docs/concepts/workloads/pods/pod/)。 Kubernetes 會協調在叢集中的資源。 A[複本集](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)可確保 pod，節點失敗後自動復原。 應用程式連接至服務。 在此情況下，服務會代表裝載失敗後會保持相同的 IP 位址的負載平衡器`mssql-server`。
+在上圖中，`mssql-server`是中的容器[pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/)。 Kubernetes 會協調在叢集中的資源。 A[複本集](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)可確保 pod，節點失敗後自動復原。 應用程式連接至服務。 在此情況下，服務會代表裝載失敗後會保持相同的 IP 位址的負載平衡器`mssql-server`。
 
 在下列圖表中，`mssql-server`容器失敗。 作為協調者，Kubernetes 會保證正確的複本中狀況良好的執行個體計數設定，並啟動新的容器，根據組態。 Orchestrator 的相同節點上，啟動新的 pod 和`mssql-server`重新連線至相同的永續性儲存體。 服務連接到重新建立`mssql-server`。
 
@@ -52,7 +52,7 @@ Kubernetes 1.6 和更新版本可支援[儲存類別](http://kubernetes.io/docs/
 * **Kubernetes 叢集**
    - 本教學課程需要一個 Kubernetes 叢集。 步驟會使用[kubectl](https://kubernetes.io/docs/user-guide/kubectl/)來管理叢集。 
 
-   - 請參閱[部署 Azure Container Service (AKS) 叢集](http://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster)來建立並連接到在 AKS 中使用的單一節點 Kubernetes 叢集`kubectl`。 
+   - 請參閱[部署 Azure Container Service (AKS) 叢集](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster)來建立並連接到在 AKS 中使用的單一節點 Kubernetes 叢集`kubectl`。 
 
    >[!NOTE]
    >若要防止節點失敗，Kubernetes 叢集需要一個以上的節點。
@@ -62,7 +62,7 @@ Kubernetes 1.6 和更新版本可支援[儲存類別](http://kubernetes.io/docs/
 
 ## <a name="create-an-sa-password"></a>建立的 SA 密碼
 
-在 Kubernetes 叢集中建立的 SA 密碼。 Kubernetes 可管理敏感的組態資訊，例如密碼[祕密](http://kubernetes.io/docs/concepts/configuration/secret/)。
+在 Kubernetes 叢集中建立的 SA 密碼。 Kubernetes 可管理敏感的組態資訊，例如密碼[祕密](https://kubernetes.io/docs/concepts/configuration/secret/)。
 
 下列命令會建立 SA 帳戶的密碼：
 
@@ -77,9 +77,9 @@ Kubernetes 1.6 和更新版本可支援[儲存類別](http://kubernetes.io/docs/
 
 ## <a name="create-storage"></a>建立儲存體
 
-設定[永續性磁碟區](http://kubernetes.io/docs/concepts/storage/persistent-volumes/)並[永續性磁碟區宣告](http://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection)的 Kubernetes 叢集中。 完成下列步驟： 
+設定[永續性磁碟區](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)並[永續性磁碟區宣告](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection)的 Kubernetes 叢集中。 完成下列步驟： 
 
-1. 建立資訊清單來定義的儲存體類別和永續性磁碟區宣告。  資訊清單會指定儲存體佈建程式，參數，並[收回原則](http://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming)。 Kubernetes 叢集會使用此資訊清單，來建立永續性儲存體。 
+1. 建立資訊清單來定義的儲存體類別和永續性磁碟區宣告。  資訊清單會指定儲存體佈建程式，參數，並[收回原則](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming)。 Kubernetes 叢集會使用此資訊清單，來建立永續性儲存體。 
 
    下列 yaml 範例會定義儲存類別和永續性磁碟區宣告。 儲存體類別佈建程式是`azure-disk`，因為此 Kubernetes 叢集是在 Azure 中。 儲存體帳戶類型是`Standard_LRS`。 永續性磁碟區宣告名為`mssql-data`。 永續性磁碟區宣告中繼資料包括： 註釋連接回儲存體類別。 
 
@@ -155,7 +155,7 @@ Kubernetes 1.6 和更新版本可支援[儲存類別](http://kubernetes.io/docs/
 
 在此範例中，裝載 SQL Server 執行個體的容器會描述為 Kubernetes 部署物件。 部署會建立在複本集。 複本集所建立的 pod。 
 
-在此步驟中，會建立資訊清單，以描述 SQL Server 為基礎的容器[mssql server linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker 映像。 資訊清單參考`mssql-server`永續性磁碟區宣告，而`mssql`已經套用到 Kubernetes 叢集的密碼。 資訊清單也會說明[服務](http://kubernetes.io/docs/concepts/services-networking/service/)。 此服務是負載平衡器。 負載平衡器可保證在復原 SQL Server 執行個體之後，仍然存在的 IP 位址。 
+在此步驟中，會建立資訊清單，以描述 SQL Server 為基礎的容器[mssql server linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker 映像。 資訊清單參考`mssql-server`永續性磁碟區宣告，而`mssql`已經套用到 Kubernetes 叢集的密碼。 資訊清單也會說明[服務](https://kubernetes.io/docs/concepts/services-networking/service/)。 此服務是負載平衡器。 負載平衡器可保證在復原 SQL Server 執行個體之後，仍然存在的 IP 位址。 
 
 1. 建立要描述的部署資訊清單 （YAML 檔案）。 下列範例說明的部署，包括 SQL Server 容器映像為基礎的容器。
 
@@ -212,7 +212,7 @@ Kubernetes 1.6 和更新版本可支援[儲存類別](http://kubernetes.io/docs/
    * `value: "Developer"`： 設定要執行的 SQL Server Developer edition 的容器。 開發人員版本未授權用於生產環境的資料。 如果是部署用於生產環境中，設定適當的版本 (`Enterprise`， `Standard`，或`Express`)。 
 
       >[!NOTE]
-      >如需詳細資訊，請參閱 < [SQL Server 授權如何](http://www.microsoft.com/sql-server/sql-server-2017-pricing)。
+      >如需詳細資訊，請參閱 < [SQL Server 授權如何](https://www.microsoft.com/sql-server/sql-server-2017-pricing)。
 
    * `persistentVolumeClaim`︰ 此值需要的項目`claimName:`對應至用於永續性磁碟區宣告的名稱。 本教學課程使用`mssql-data`。 
 
@@ -275,9 +275,9 @@ Kubernetes 1.6 和更新版本可支援[儲存類別](http://kubernetes.io/docs/
 
 您可以使用下列應用程式連接到 SQL Server 執行個體。 
 
-* [SSMS](http://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
+* [SSMS](https://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
 
-* [SSDT](http://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
+* [SSDT](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
 
 * sqlcmd
    
@@ -327,6 +327,6 @@ Kubernetes 時，會自動重新建立的 pod 來復原 SQL Server 執行個體�
 ## <a name="next-steps"></a>後續步驟
 
 > [!div class="nextstepaction"]
->[Kubernetes 的簡介](http://docs.microsoft.com/azure/aks/intro-kubernetes)
+>[Kubernetes 的簡介](https://docs.microsoft.com/azure/aks/intro-kubernetes)
 
 

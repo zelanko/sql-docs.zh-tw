@@ -14,12 +14,12 @@ ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d35f549581e9ac0a12c37cef90f66969aff1659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b42e515c4c124e19ad6079aca6ef68727fea3d2a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633428"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601348"
 ---
 # <a name="shape-commands-in-general"></a>一般 Shape 命令
 資料成形定義形狀的資料行**Recordset**，資料行中的方式所表示的實體之間的關聯性**資料錄集**已填入資料。  
@@ -46,7 +46,7 @@ ms.locfileid: "47633428"
   
  您可以存取**Recordset**元件的形狀**資料錄集**以程式設計方式或透過適當的視覺控制項。  
   
- Microsoft 提供一種視覺化工具，會產生圖形命令 (請參閱[資料環境設計師](http://go.microsoft.com/fwlink/?LinkId=5689)Visual Basic 6 文件中)，另一個則會顯示 （請參閱 「 使用 Microsoft 階層的階層式資料指標Flexgrid 控制項 」 中的 Visual Basic 6 文件）。  
+ Microsoft 提供一種視覺化工具，會產生圖形命令 (請參閱[資料環境設計師](https://go.microsoft.com/fwlink/?LinkId=5689)Visual Basic 6 文件中)，另一個則會顯示 （請參閱 「 使用 Microsoft 階層的階層式資料指標Flexgrid 控制項 」 中的 Visual Basic 6 文件）。  
   
  如需有關瀏覽階層式資訊**Recordset**，請參閱[存取階層式資料錄集中的資料列](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)。  
   

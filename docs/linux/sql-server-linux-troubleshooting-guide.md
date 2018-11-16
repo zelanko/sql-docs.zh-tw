@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 74a6b4780aab192e09b24f385ac5357c2515a5fc
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 4bd04ee62af21255f40363de602c6461aeb350a6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419263"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677910"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>疑難排解 SQL Server on Linux
 
@@ -118,9 +118,9 @@ SQL Server 引擎會記錄到 /var/opt/mssql/log/errorlog 檔中的 Linux 和 Do
 核心傾印 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
-   ```
+   ```
 
-SQL 傾印 
+For SQL dumps 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
@@ -207,7 +207,7 @@ SQL 傾印
 
 2. 錯誤： 主機名稱必須是 15 個字元或更少。
 
-   這是每當嘗試安裝的 SQL Server 的 Debian 套件的電腦名稱長度超過 15 個字元的已知問題。 目前沒有任何因應措施以外變更機器的名稱。 若要達到此目的的方法之一是編輯主機名稱的檔案，然後重新啟動電腦。 下列[網站指南](http://www.cyberciti.biz/faq/ubuntu-change-hostname-command/)這將詳細說明。
+   這是每當嘗試安裝的 SQL Server 的 Debian 套件的電腦名稱長度超過 15 個字元的已知問題。 目前沒有任何因應措施以外變更機器的名稱。 若要達到此目的的方法之一是編輯主機名稱的檔案，然後重新啟動電腦。 下列[網站指南](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/)這將詳細說明。
 
 3. 正在重設的系統管理 (SA) 密碼。
 
@@ -239,7 +239,7 @@ SQL 傾印
    sqlcmd -S myserver -U sa -P Test\$\$
    ```
 
-   資源：[特殊字元](http://tldp.org/LDP/abs/html/special-chars.html)
-   [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
+   資源：[特殊字元](https://tldp.org/LDP/abs/html/special-chars.html)
+   [Escaping](https://tldp.org/LDP/abs/html/escapingsection.html)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

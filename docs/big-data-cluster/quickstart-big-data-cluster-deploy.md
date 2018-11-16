@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 11/06/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: efa3d06feb138445c3e55e5d2ea3da7e60f3da20
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: c25474a30ace6ed6e1ab0560f1b3746a071690ef
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269553"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697036"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入門： 部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集
 
@@ -56,7 +56,7 @@ pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1
 
 在繼續之前，請注意下列重要指導方針：
 
-- 在 [命令視窗](http://docs.microsoft.com/visualstudio/ide/reference/command-window)，引號括住包含環境變數中。 如果您可以使用引號括住来包裝的密碼，密碼中包含引號。
+- 在 [命令視窗](https://docs.microsoft.com/visualstudio/ide/reference/command-window)，引號括住包含環境變數中。 如果您可以使用引號括住来包裝的密碼，密碼中包含引號。
 - 在 bash 中，引號不包含在變數中。 我們的範例中使用雙引號括住`"`。
 - 可以為任何您喜歡，設定密碼環境變數，但請確定它們已夠複雜，而且不使用`!`， `&`，或`'`字元。
 - CTP 2.1 版本中，不會變更預設連接埠。

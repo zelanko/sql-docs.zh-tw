@@ -10,12 +10,12 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 89998a328aa400958d8cd406f412bf7f91b4884e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a90d7bd53433bd0db027787cdcd83f53b8227804
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845783"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668397"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server 移轉小幫手
 Microsoft SQL Server 移轉小幫手 (SSMA) 是設計來自動化 SQL Server 從 Microsoft Access、 DB2、 MySQL、 Oracle 和 SAP ASE 資料庫移轉工具。  
@@ -49,11 +49,11 @@ SSMA 支援下列版本的目標。
 * * 此目標，只有支援 SSMA for Oracle。
  
 ## <a name="downloads"></a>下載
-- [SSMA for Access](http://aka.ms/ssmaforaccess)
-- [SSMA for DB2](http://aka.ms/ssmafordb2)
-- [SSMA for MySql](http://aka.ms/ssmaformysql)
-- [SSMA for Oracle](http://aka.ms/ssmafororacle)
-- [SSMA for SAP ASE](http://aka.ms/ssmaforsybase)
+- [SSMA for Access](https://aka.ms/ssmaforaccess)
+- [SSMA for DB2](https://aka.ms/ssmafordb2)
+- [SSMA for MySql](https://aka.ms/ssmaformysql)
+- [SSMA for Oracle](https://aka.ms/ssmafororacle)
+- [SSMA for SAP ASE](https://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>取得 SSMA 支援  
 **說明及支援的 Microsoft SQL Server 移轉小幫手 (SSMA):**  
@@ -62,9 +62,9 @@ SSMA 支援下列版本的目標。
   
 -   **SQL Server 社群論壇**– 在 SQL Server 社群中發問  
   
-    -   [SQL Server 社群](http://go.microsoft.com/fwlink/?LinkId=42455)-新聞群組和由 SQL Server 社群監視的論壇。 此網站還會列出社群資訊來源，例如部落格或網站。  
+    -   [SQL Server 社群](https://go.microsoft.com/fwlink/?LinkId=42455)-新聞群組和由 SQL Server 社群監視的論壇。 此網站還會列出社群資訊來源，例如部落格或網站。  
   
-    -   [SQL Server 開發人員中心社群](http://go.microsoft.com/fwlink/?LinkId=42456)-新聞群組、 論壇和其他社群資源，SQL Server 開發人員很有用  
+    -   [SQL Server 開發人員中心社群](https://go.microsoft.com/fwlink/?LinkId=42456)-新聞群組、 論壇和其他社群資源，SQL Server 開發人員很有用  
   
 -   協助支援-請移至[ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts) ，並搜尋 [SQL Server 移轉小幫手]。  選取您的版本，然後選取 [啟動要求]。  包含使用 SQL Server 移轉小幫手工具協助的支援。  
   

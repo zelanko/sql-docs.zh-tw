@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbdbfd58cc8e14722e62eee47223b1995c1d585e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd093ed5352fc303642a2d20d2cab9a0829522ae
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777326"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558485"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>資料表值參數類型探索
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "47777326"
   
  對於大部分的參數類型支援 icommandwithparameters:: Getparameterinfo 程序參數的型別資訊。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，隨著使用者定義型別和 **xml** 資料類型的導入，GetParameterInfo 方法不足以支撐這個用途，因為透過 ICommandWithParameters 提供使用者定義型別資訊 (名稱、結構描述和目錄) 是不可行的。 新的介面，ISSCommandWithParameters，被定義為提供擴充的類型資訊。  
   
- 資料表值參數，您也使用 ISSCommandWithParameters 介面來探索的詳細的資訊。 用戶端會呼叫 ISSCommandWithParameters::GetParameterInfo 準備命令物件之後。 資料表值參數，如*wType* DBPARAMINFO 結構的成員提供者，會設定為 DBTYPE_TABLE。 DBPARAMINFO 結構的 *ulParamSize* 欄位具有 ~0 的值。  
+ 資料表值參數，您也使用 ISSCommandWithParameters 介面來探索的詳細的資訊。 用戶端會呼叫 ISSCommandWithParameters::GetParameterInfo 準備命令物件之後。 如果是資料表值參數，DBPARAMINFO 結構的 *wType* 成員會由提供者設定為 DBTYPE_TABLE。 DBPARAMINFO 結構的 *ulParamSize* 欄位具有 ~0 的值。  
   
- 然後取用者會使用 ISSCommandWithParamters::GetParameterProperties 來要求其他屬性 (資料表值參數類型目錄名稱、資料表值參數類型結構描述名稱、資料表值參數類型名稱、資料行排序和預設資料行)。  
+ 取用者會再要求其他屬性 （資料表值參數類型類別目錄名稱、 資料表值參數類型結構描述名稱、 資料表值參數的型別名稱、 資料行排序和預設資料行），利用 ISSCommandWithParameters::GetParameterProperties。  
   
  如果在知道了類型名稱之後要擷取個別資料行資訊，取用者必須呼叫 IOpenRowset::OpenRowsetor 或取得 DBSCHEMA_TABLE_TYPE_COLUMNS 資料列集，其方式是將資料表值參數類型名稱指定為資料表名稱。  
   

@@ -10,12 +10,12 @@ ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 091482cbfc42dabead28ceade0c7840860ae3cc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cca10f2a54a70e91e46bb8b98e9799885b5f175
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776601"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671718"
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>安裝 SSMA for Sybase (SybaseToSQL)
 SSMA 用戶端包含用來連接到 Sybase Adaptive Server Enterprise (ASE) 的資料庫伺服器和執行個體的程式檔案[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB，ASE 資料庫物件，以轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 語法，載入物件組成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB，然後再移轉資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQLDB。  
@@ -31,7 +31,7 @@ SSMA 設計用於搭配 ASE 11.9.2 或更新版本以及所有版本的[!INCLUDE
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更新版本。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework 4.0 版或更新版本。 .NET Framework 4.0 版位於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]產品媒體。 您也可以取得從中[.NET Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=48882)。  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework 4.0 版或更新版本。 .NET Framework 4.0 版位於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]產品媒體。 您也可以取得從中[.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882)。  
   
 -   Sybase OLEDB/ADO.Net/ODBC 提供者和連線到 Sybase ASE 資料庫伺服器，其中包含您想要移轉的資料庫。 您可以從 Sybase ASE 產品媒體安裝提供者。 如需連線資訊，請參閱[連接到 Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)。  
   
@@ -40,7 +40,7 @@ SSMA 設計用於搭配 ASE 11.9.2 或更新版本以及所有版本的[!INCLUDE
 -   4 GB RAM，建議。  
   
 ## <a name="installing-the-ssma-for-sybase-client"></a>安裝 SSMA for Sybase 用戶端  
-SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server Migration Assistant 的下載頁面](http://aka.ms/ssmaforsybase)。  
+SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server Migration Assistant 的下載頁面](https://aka.ms/ssmaforsybase)。  
   
 下載最新版本之後，您必須先解壓縮安裝檔案，才能安裝 SSMA。  
   

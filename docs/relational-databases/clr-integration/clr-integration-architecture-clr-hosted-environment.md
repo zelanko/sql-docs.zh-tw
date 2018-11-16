@@ -27,12 +27,12 @@ ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 10eaa071ed8fa57bb648e5ece87dc91bb4cb62e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 455b7b8e5b12f330a970589b04844d3a62f983b8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779186"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661297"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 整合架構 - CLR 主控環境
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "47779186"
  類型安全程式碼是只以妥善定義的方式存取記憶體結構的程式碼。 例如，在有一個有效的物件參考上，類型安全程式碼可以存取和實際欄位成員對應的固定位移上的記憶體。 然而，如果程式碼存取的記憶體，是位於該物件所屬記憶體範圍以內或以外的任意位移時，即不是類型安全。 當組件載入 CLR 時，在要使用 Just-In-Time (JIT) 編譯來編譯的 MSIL 前，執行階段會執行一個檢查程式碼來判斷其類型安全性的驗證階段。 成功通過此驗證的程式碼稱為可驗證類型安全 (verifiably type-safe) 的程式碼。  
   
 ###### <a name="application-domains"></a>應用程式網域  
- CLR 支援應用程式網域的概念，做為主機處理序內的執行區域，其中可以載入與執行 Managed 程式碼組件。 應用程式網域界限提供組件間的隔離。 組件會透過靜態變數與資料成員的可見性，以及動態呼叫程式碼的能力隔離。 應用程式網域也是載入和卸載程式碼的機制。 程式碼只能透過卸載應用程式網域來從記憶體卸載。 如需詳細資訊，請參閱 <<c0> [ 應用程式定義域和 CLR 整合安全性](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)。  
+ CLR 支援應用程式網域的概念，做為主機處理序內的執行區域，其中可以載入與執行 Managed 程式碼組件。 應用程式網域界限提供組件間的隔離。 組件會透過靜態變數與資料成員的可見性，以及動態呼叫程式碼的能力隔離。 應用程式網域也是載入和卸載程式碼的機制。 程式碼只能透過卸載應用程式網域來從記憶體卸載。 如需詳細資訊，請參閱 <<c0> [ 應用程式定義域和 CLR 整合安全性](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)。  
   
 ###### <a name="code-access-security-cas"></a>程式碼存取安全性 (CAS)  
  CLR 安全性系統提供一種方式來控制 Managed 程式碼可以透過指派權限給程式碼來執行的作業種類。 程式碼存取權限是根據程式碼識別指派的 (例如，組件的簽章或程式碼的來源)。  

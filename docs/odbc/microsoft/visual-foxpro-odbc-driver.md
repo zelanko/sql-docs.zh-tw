@@ -16,12 +16,12 @@ ms.assetid: 27359133-dd41-478f-8902-996022deb845
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ebaffdc7404730a059b38186d55209033c8847c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8899881a83137d4038cd3a04adf3df1feb08d981
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788436"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670928"
 ---
 # <a name="visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC Driver
 Microsoft Visual FoxPro 是功能強大物件導向環境，來建構和應用程式開發的資料庫。 Microsoft Visual FoxPro ODBC Driver 可讓應用程式來開啟查詢和更新 Visual FoxPro 和較早版本的 FoxPro，透過開啟資料庫連接 (ODBC) 介面中的資料。  
@@ -45,4 +45,4 @@ Microsoft Visual FoxPro 是功能強大物件導向環境，來建構和應用�
 |檢視存取 Visual FoxPro 資料使用 Visual c + + 的簡單範例|[使用 Visual FoxPro ODBC Driver 與 C 或 c + + 應用程式](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)|  
 |請參閱支援的硬體和軟體的清單|[系統需求](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)|  
   
- 如需下載和安裝 Visual FoxPro ODBC driver 的資訊，請參閱 < [Visual FoxPro ODBC Driver](http://go.microsoft.com/fwlink/?LinkId=121318)上 MSDN 下載。
+ 如需下載和安裝 Visual FoxPro ODBC driver 的資訊，請參閱 < [Visual FoxPro ODBC Driver](https://go.microsoft.com/fwlink/?LinkId=121318)上 MSDN 下載。

@@ -10,12 +10,12 @@ ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c4e3fcf3b9353a43a453dd1c70c24960bc331ff2
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: b5138dea4cfea23d77dae5d4bc766b4c2738f4e7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099699"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659061"
 ---
 # <a name="generating-reports-accesstosql"></a>產生報表 (AccessToSQL)
 使用命令來執行某些活動的報表會產生物件樹狀結構層級的 SSMA 主控台中。  
@@ -143,5 +143,5 @@ ms.locfileid: "50099699"
 -   失敗指令碼  
   
 ## <a name="see-also"></a>另請參閱  
-[執行 SSMA 主控台 （存取）](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[執行 SSMA 主控台 （存取）](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

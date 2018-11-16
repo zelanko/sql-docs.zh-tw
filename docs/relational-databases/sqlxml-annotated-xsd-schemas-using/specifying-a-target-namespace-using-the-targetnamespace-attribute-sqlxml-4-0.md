@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3a0db5aab684503cd59982eb0efd50ef533d4da0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51b94ca4b8fcd9aada2b6963a8ee567fb0e12882
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685156"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669577"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>使用 targetNamespace 屬性來指定目標命名空間 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47685156"
  下列 XSD 結構描述使用指定的目標命名空間**xsd: targetnamespace**屬性。 結構描述也會設定**elementFormDefault**並**attributeFormDefault**屬性的值即可 **"unqualified"** （這些屬性的預設值）。 這是全域宣告，而且會影響所有本機元素 (**\<順序 >** 結構描述中) 和屬性 (**CustomerID**， **ContactName**，以及**OrderID**結構描述中)。  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
             xmlns:CO="urn:MyNamespace"   
             targetNamespace="urn:MyNamespace" >  
@@ -130,7 +130,7 @@ ms.locfileid: "47685156"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 < [Ba6e326154d2"&gt;using ADO to Execute SQLXML Queries&lt](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 [使用ADO執行SQLXML查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  如果指定了結構描述**elementFormDefault**並**attributeFormDefault**屬性值 **"qualified"**，執行個體文件將會擁有所有的本機限定的項目和屬性。 您可以變更要包含這些屬性在先前的結構描述 **\<2&gt;xsd:schema&lt;2} >** 項目，再重新執行範本。 因為這些屬性現在也會在此執行個體中限定，所以 XPath 查詢將會變更為可包含命名空間前置詞。  
   

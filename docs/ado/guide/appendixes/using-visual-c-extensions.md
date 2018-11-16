@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +16,12 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20b39cc744b65bb3d386f54680f641757f8d7484
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aeae626f924776092bc8f6652e716747768b689c
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824021"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350522"
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 延伸模組
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 介面
@@ -34,12 +34,12 @@ ms.locfileid: "47824021"
 ## <a name="binding-entries"></a>繫結項目
  Visual c + + 延伸模組，用於 ADO 對應的欄位[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)C/c + + 變數的物件。 欄位和變數之間的對應的定義會呼叫*繫結項目*。 巨集提供數值、 固定長度和可變長度的資料繫結項目。 自 Visual c + + 延伸模組類別，衍生類別中宣告的繫結項目和 C/c + + 變數**CADORecordBinding**。 **CADORecordBinding**類別在內部定義的繫結項目巨集。
 
- ADO 在內部對應至 OLE DB 中這些巨集的參數**DBBINDING**結構，並建立 OLE DB**存取子**物件來管理的移動和資料欄位與變數之間的轉換。 OLE DB 定義的資料為包含三個部分： A*緩衝區*其中儲存資料;*狀態*，指出欄位是否已成功儲存在緩衝區，或如何變數應該還原成欄位;而*長度*的資料。 (請參閱[開始和設定資料 (OLE DB)](http://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)在 OLE DB 程式設計人員參考中，如需詳細資訊。)
+ ADO 在內部對應至 OLE DB 中這些巨集的參數**DBBINDING**結構，並建立 OLE DB**存取子**物件來管理的移動和資料欄位與變數之間的轉換。 OLE DB 定義的資料為包含三個部分： A*緩衝區*其中儲存資料;*狀態*，指出欄位是否已成功儲存在緩衝區，或如何變數應該還原成欄位;而*長度*的資料。 (請參閱[開始和設定資料 (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)在 OLE DB 程式設計人員參考中，如需詳細資訊。)
 
 ## <a name="header-file"></a>標頭檔
  若要使用 Visual c + + 延伸模組用於 ADO 應用程式中包含下列檔案：
 
-```
+```cpp
 #include <icrsint.h>
 ```
 
@@ -63,19 +63,19 @@ ms.locfileid: "47824021"
 ## <a name="syntax"></a>語法
  **BindToRecordset**方法 associates**資料錄集**C/c + + 變數的欄位。
 
-```
+```cpp
 BindToRecordset(CADORecordBinding *binding)
 ```
 
  **AddNew**方法會叫用 adafruitis ADO [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法，來加入新的資料列**資料錄集**。
 
-```
+```cpp
 AddNew(CADORecordBinding *binding)
 ```
 
  **更新**方法會叫用 adafruitis ADO[更新](../../../ado/reference/ado-api/update-method.md)方法，來更新**資料錄集**。
 
-```
+```cpp
 Update(CADORecordBinding *binding)
 ```
 
@@ -84,7 +84,7 @@ Update(CADORecordBinding *binding)
 
  系列的巨集可供固定長度的資料，例如**adDate**或是**adBoolean**; 數值資料，例如**adTinyInt**， **adInteger**，或**adDouble**; 和可變長度資料，例如**adChar**， **adVarChar**或**adVarBinary**。 所有的數字類型，除了**adVarNumeric**，也是固定長度類型。 每個系列的不同組的參數，以便您可以排除不感興趣的繫結資訊。
 
- 如需詳細資訊，請參閱 <<c0> [ 附錄 a： 資料類型](http://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)，OLE DB 程式設計人員參考。
+ 如需詳細資訊，請參閱 <<c0> [ 附錄 a： 資料類型](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)，OLE DB 程式設計人員參考。
 
 ### <a name="begin-binding-entries"></a>開始繫結項目
  **BEGIN_ADO_BINDING**(*類別*)
@@ -115,7 +115,7 @@ Update(CADORecordBinding *binding)
 |---------------|-----------------|
 |*類別*|類別定義的繫結項目和 C/c + + 變數。|
 |*Ordinal*|序號，計算從一個**資料錄集**欄位都對應到您的 C/c + + 變數。|
-|*資料類型*|C/c + + 變數的對等的 ADO 資料類型 (請參閱[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)取得一份有效的資料類型)。 值**資料錄集**欄位將會轉換成這個資料型別，如有必要。|
+|*DataType*|C/c + + 變數的對等的 ADO 資料類型 (請參閱[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)取得一份有效的資料類型)。 值**資料錄集**欄位將會轉換成這個資料型別，如有必要。|
 |*Buffer*|C/c + + 變數名稱，其中**資料錄集**欄位將會儲存。|
 |*大小*|以位元組為單位的大小上限*緩衝區*。 如果*緩衝區*包含可變長度字串，其會允許出空間給結束的零。|
 |*狀態*|會指出變數的名稱是否的內容*緩衝區*有效，以及是否要的欄位轉換*資料型別*已順利完成。<br /><br /> 兩個最重要的值，這個變數會**adFldOK**，表示轉換是否成功; 並**adFldNull**，這表示欄位的值會是類型 VT_NULL 的 VARIANT 和不只是空的。<br /><br /> 可能值為*狀態*詳列於下一步 資料表，也就是 「 狀態值 」。|

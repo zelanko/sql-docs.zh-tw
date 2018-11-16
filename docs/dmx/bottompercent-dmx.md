@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3bfc4f178752d77fe8eb6807c91ebdc4bd3bb890
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4b678aafac0c189983f69cc6db75bcaa48bd9ccf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002110"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602928"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
  **BottomPercent**函式會以遞增次序順序傳回最底部資料列。 陣序為基礎的評估值\<排名運算式 > 引數，每個資料列，使總和\<排名運算式 > 值至少是指定所指定的百分比\<%>引數。 **BottomPercent**傳回符合指定之百分比值的可能最小元素數目。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立預測查詢的關聯模型，您在建置[83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
+ 下列範例會建立預測查詢的關聯模型，您在建置[83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
   
  若要了解 BottomPercent 的運作方式，可能要先執行僅傳回巢狀的資料表的預測查詢很有幫助。  
   

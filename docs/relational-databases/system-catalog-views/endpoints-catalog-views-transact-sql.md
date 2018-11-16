@@ -16,12 +16,12 @@ ms.assetid: 557bc2f2-135c-4e96-be5a-dfbdfd2ec932
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72036c003b98aeb73af1dde27d6693db1e2ab944
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ddf1dec130e78b95132eb617a20614574486a89
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746196"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673947"
 ---
 # <a name="endpoints-catalog-views-transact-sql"></a>端點目錄檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47746196"
 |[sys.http_endpoints](../../relational-databases/system-catalog-views/sys-http-endpoints-transact-sql.md)||  
   
 ## <a name="see-also"></a>另請參閱  
- [系統檢視表&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [系統檢視表&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

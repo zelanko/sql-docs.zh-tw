@@ -10,12 +10,12 @@ ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f083b38d64927ded898366434def4505cd3f67c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3c31e4c815ac3c52f029ec474e53488b8202c8e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672656"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664292"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>建立伺服器連線檔案 (AccessToSQL)
 伺服器的資訊可以是指定伺服器一節的指令碼檔案。 伺服器的資訊也可以指定不同的伺服器連線檔案中。 伺服器連接檔案的命令列參數是`-c <serverconnectionfile>`。 相同的伺服器識別碼是否存在於指令碼和伺服器連線檔案，則會視為在指令碼檔案中的伺服器定義。  
@@ -68,5 +68,5 @@ ms.locfileid: "47672656"
 操作主控台的下一個步驟是[執行 SSMA 主控台&#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[執行 SSMA 主控台 （存取）](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[執行 SSMA 主控台 （存取）](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

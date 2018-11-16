@@ -1,6 +1,6 @@
 ---
-title: 在 SQL Server 機器學習上安裝新的 Python 封裝 |Microsoft 文件
-description: 將新的 Python 封裝加入至 SQL Server 2017 機器學習服務 （資料庫） 和機器學習伺服器 （獨立）
+title: SQL Server Machine Learning 上安裝新的 Python 套件 |Microsoft Docs
+description: 將新的 Python 套件新增至 SQL Server 2017 Machine Learning 服務 （資料庫內） 和 Machine Learning Server （獨立式）
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/10/2018
@@ -8,96 +8,98 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: fa1ed2612fb88653a7259af0675b496fac4a6723
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 4e7ad9382f1e85bd5f816065116b5a52c6745c8b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34074232"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697638"
 ---
-# <a name="install-new-python-packages-on-sql-server"></a>SQL Server 上安裝新的 Python 封裝
+# <a name="install-new-python-packages-on-sql-server"></a>SQL Server 上安裝新的 Python 套件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文說明如何在 SQL Server 2017 機器學習服務的執行個體上安裝新的 Python 封裝。 一般情況下，安裝新套件的程序是類似於標準的 Python 環境。 不過，一些額外的步驟所需，如果伺服器沒有網際網路連線。
+本文說明如何在 SQL Server 2017 Machine Learning 服務的執行個體上安裝新的 Python 套件。 一般情況下，安裝新套件的程序是類似於標準的 Python 環境。 不過，一些額外的步驟所需，如果伺服器沒有網際網路連線。
 
-如需了解封裝的安裝位置，或者哪些封裝已安裝的說明，請參閱[取得 R 或 Python 封裝資訊](../r/determine-which-packages-are-installed-on-sql-server.md)。
+如需封裝的位置和安裝路徑的詳細資訊，請參閱 <<c0> [ 取得 R 或 Python 封裝資訊](../r/determine-which-packages-are-installed-on-sql-server.md)。
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>先決條件
 
-+ 您必須安裝 SQL Server 2017 機器學習服務 （資料庫） 與 Python 語言選項。 如需指示，請參閱[安裝 SQL Server 2017 機器學習服務 （資料庫）](../install/sql-machine-learning-services-windows-install.md)。
++ [SQL Server 2017 Machine Learning 服務 （資料庫）](../install/sql-machine-learning-services-windows-install.md)與 Python 語言選項。 
 
-+ 每個伺服器執行個體中，您必須安裝個別封裝的副本。 封裝無法執行個體之間共用。
++ 套件必須是 Windows 上符合規定及執行的 Python 3.5。 
 
-+ 套件必須放在 Windows 上符合規定及執行的 Python 3.5。 
++ 系統管理伺服器的存取權才可安裝套件。
 
-+ 評估封裝是否適合用來在 SQL Server 環境中使用。 通常資料庫伺服器支援多個服務和應用程式，而且檔案系統上的資源可能會限制，以及連線到伺服器。 在許多情況下是完全封鎖網際網路存取。
+## <a name="considerations"></a>考量
 
-    其他常見的問題包括使用的網路上伺服器或防火牆或封裝無法在 Windows 電腦安裝的相依性與封鎖的功能。 
+然後再加入封裝，請考慮封裝是否適用於 SQL Server 環境。 通常資料庫伺服器是配合多個工作負載的共用的資產。 如果您新增的壓力，太多計算伺服器的封裝，將會降低效能。 
 
-    一些受歡迎的 Python 封裝 （例如酒瓶） 執行工作，例如 web 程式開發更好獨立的環境中執行。 我們建議您使用 Python 資料庫內的工作，例如 machine learning 中，需要大量的資料處理與 database engine 從緊密整合獲益，而不是直接查詢資料庫。
+此外，一些熱門的 Python 套件 （例如 Flask) 執行工作，例如 web 開發、 計較適合用來獨立環境。 我們建議您在資料庫引擎，例如機器學習服務，而獲益的緊密整合的工作，而不是直接查詢資料庫的工作使用 Python 中的資料庫。
 
-+ 伺服器的系統管理權限才能安裝封裝。
+資料庫伺服器經常被鎖定。 在許多情況下，會完全封鎖網際網路存取。 針對具有一長串的相依性套件，您必須事先識別這些相依性，並願意手動安裝每個。
 
-## <a name="add-a-new-python-package"></a>加入新的 Python 封裝
+## <a name="add-a-new-python-package"></a>新增新的 Python 封裝
 
-此範例中，我們假設您想要直接在 SQL Server 電腦上安裝新的封裝。
+此範例中，我們假設您想要直接在 SQL Server 電腦上安裝新套件。
 
-在此範例中所安裝的套件[CNTK](https://docs.microsoft.com/cognitive-toolkit/)，深入學習 microsoft 的支援自訂，定型集，和不同類型的類神經網路共用的架構。
+安裝套件是每個執行個體。 如果您有多個機器學習服務執行個體時，您必須新增封裝到每一個。
+
+在此範例中所安裝的套件[CNTK](https://docs.microsoft.com/cognitive-toolkit/)，來自 Microsoft 的支援自訂項目，教育訓練，以及不同類型的類神經網路共用的深度學習架構。
 
 > [!TIP]
-> 需要設定您的 Python 工具的說明？ 請參閱這些部落格：
+> 需要設定您的 Python 工具的協助嗎？ 請參閱這些部落格：
 > 
-> [開始使用 Python Web 服務使用機器學習伺服器](https://blogs.msdn.microsoft.com/mlserver/2017/12/13/getting-started-with-python-web-services-using-machine-learning-server/)
+> [開始使用 Python 的 Web 服務使用 Machine Learning Server](https://blogs.msdn.microsoft.com/mlserver/2017/12/13/getting-started-with-python-web-services-using-machine-learning-server/)
 > 
-> [David 臂： Microsoft 認知 Toolkit + VS 程式碼](http://dacrook.com/cntk-vs-code-awesome/)
+> [David 臂： Microsoft Cognitive Toolkit + VS Code](https://dacrook.com/cntk-vs-code-awesome/)
 
-### <a name="step-1-download-the-windows-version-of-the-python-package"></a>步驟 1： 下載了 Python 封裝的 Windows 版本
+### <a name="step-1-download-the-windows-version-of-the-python-package"></a>步驟 1： 下載 Windows 版本的 Python 套件
 
-+ 如果您沒有網際網路存取的伺服器上安裝 Python 封裝，您必須 WHL 檔案下載到另一部電腦，並將它複製到伺服器。
++ 如果您要在沒有網際網路存取伺服器上安裝 Python 套件，您必須下載到不同的電腦的 WHL 檔案，並再將它複製到伺服器。
 
-    例如，在個別電腦上，您可以下載 WHL 檔案從這個站台[ https://cntk.ai/PythonWheel/CPU-Only ](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)，然後將檔案複製`cntk-2.1-cp35-cp35m-win_amd64.whl`到 SQL Server 電腦上的本機資料夾。
+    比方說，在另一部電腦，您可以下載的 WHL 檔案從這個站台[ https://cntk.ai/PythonWheel/CPU-Only ](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)，然後將檔案複製`cntk-2.1-cp35-cp35m-win_amd64.whl`到 SQL Server 電腦上的本機資料夾。
 
-+ SQL Server 2017 使用 Python 3.5。 
++ SQL Server 2017 會使用 Python 3.5。 
 
 > [!IMPORTANT]
 > 請確定您取得封裝的 Windows 版本。 如果檔案結尾.gz，很可能不正確的版本。
 
-此頁面包含多個平台與多個的 Python 版本的下載：[設定 CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
+此頁面包含多個平台以及多個 Python 版本的下載：[設定 CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
 
 ### <a name="step-2-open-a-python-command-prompt"></a>步驟 2： 開啟 Python 命令提示字元
 
-找出 SQL Server 所使用的預設 Python 程式庫位置。 如果您已安裝多個執行個體，找出您要加入封裝的執行個體的 PYTHON_SERVICE 資料夾。
+找出 SQL Server 所使用的預設 Python 程式庫位置。 如果您已安裝多個執行個體，找出您要加入封裝的執行個體 PYTHON_SERVICE 資料夾。
 
-例如，如果機器學習服務已安裝，使用預設值，和機器學習服務已啟用預設執行個體上，路徑會，如下所示：
+例如，如果已安裝 Machine Learning 服務使用預設值，以及機器學習服務已啟用預設執行個體上，路徑為，如下所示：
 
     `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
 
 開啟 Python 命令提示字元中執行個體相關聯。
 
 > [!TIP]
-> 未來偵錯和測試，您可能想要設定 Python 環境的特定執行個體文件庫。
+> 未來偵錯和測試，您可能想要設定的 Python 環境的特定執行個體文件庫。
 
 ### <a name="step-3-install-the-package-using-pip"></a>步驟 3： 使用 pip 安裝套件
 
-+ 如果您習慣使用 Python 命令列，使用 PIP.exe 來安裝新的封裝。 您可以找到**pip**安裝程式中的`Scripts`子資料夾。 
++ 如果您習慣使用 Python 命令列時，可用於 PIP.exe 安裝新的套件。 您可以找到**pip**中的安裝程式`Scripts`子資料夾。 
 
-  SQL Server 安裝程式不會新增指令碼至系統路徑。 如果您收到錯誤，`pip`無法辨識為內部或外部命令，您可以將指令碼 資料夾加入 PATH 變數視窗中。
+  SQL Server 安裝程式不會新增至系統路徑的指令碼。 如果您收到錯誤指出`pip`無法辨識為內部或外部命令，您可以將指令碼 資料夾加入 PATH 變數，在 Windows 中。
 
-  完整路徑**指令碼**預設安裝中的資料夾如下所示：
+  完整路徑**指令碼**資料夾在預設安裝中如下所示：
 
     C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\Scripts
 
-+ 如果您正在使用 Visual Studio 2017 或 Visual Studio 2015 的 Python 擴充功能，您可以執行`pip install`從**Python 環境**視窗。 按一下**封裝**，並在文字方塊中，提供的名稱或要安裝之封裝的位置。 您不需要輸入`pip install`; 它會為您自動填入。 
++ 如果您使用 Visual Studio 2017 或 Visual Studio 2015 使用 Python 擴充功能，您可以執行`pip install`從**Python 環境**視窗。 按一下 **封裝**，並在文字方塊中，提供的名稱或要安裝之封裝的位置。 您不需要輸入`pip install`; 它會為您自動填入。 
 
-    - 如果電腦沒有網際網路存取，請提供封裝的名稱或為特定套件和版本的 URL。 
+    - 如果電腦沒有網際網路存取，提供封裝的名稱或為特定的套件和版本的 URL。 
     
-    例如，若要安裝的版本支援適用於 Windows 和 Python 3.5 CNTK，指定的下載 URL: `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
+    例如，若要安裝 CNTK 支援 Windows 及 Python 3.5 的版本，指定的下載 URL: `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
 
-    - 如果電腦沒有網際網路存取，您必須下載 WHL 檔案開始安裝之前。 然後，指定的本機檔案路徑和名稱。 例如，貼上的下列路徑和檔案，以安裝從網站下載的 WHL 檔案： `"C:\Downloads\CNTK\cntk-2.1-cp35-cp35m-win_amd64.whl"`
+    - 如果電腦沒有網際網路存取，您必須在開始安裝之前下載的 WHL 檔案。 然後，指定的本機檔案路徑和名稱。 比方說，貼上下列的路徑和檔案，以安裝從網站下載的 WHL 檔案： `"C:\Downloads\CNTK\cntk-2.1-cp35-cp35m-win_amd64.whl"`
 
-您可能會提示您提升權限來完成安裝。
+您可能會提示提升權限來完成安裝。
 
-安裝進度，您可以看到在 [命令提示字元] 視窗的狀態訊息：
+安裝進行時，您可以看到 [命令提示字元] 視窗中的狀態訊息：
 
 ```python
 pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl
@@ -110,13 +112,13 @@ Successfully installed cntk-2.1
 ```
 
 
-### <a name="step-4-load-the-package-or-its-functions-as-part-of-your-script"></a>步驟 4： 載入封裝或其函式做為您的指令碼的一部分
+### <a name="step-4-load-the-package-or-its-functions-as-part-of-your-script"></a>步驟 4： 在您的指令碼載入封裝或其函式
 
-安裝完成時，您可以立即開始使用封裝中的下一個步驟所述。
+安裝完成時，您可以立即開始使用的封裝下, 一個步驟中所述。
 
-使用 CNTK，深入學習範例，請參閱這些教學課程： [CNTK API Python](https://cntk.ai/pythondocs/tutorials.html)
+如需使用 CNTK、 深度學習的範例，請參閱這些教學課程： [cntk Python API](https://cntk.ai/pythondocs/tutorials.html)
 
-若要使用封裝中的函式指令碼中，插入標準`import <package_name>`初始行指令碼中的陳述式：
+若要使用封裝中的函式，在您的指令碼中，插入標準`import <package_name>`陳述式中的指令碼前面幾行：
 
 ```python
 import numpy as np
@@ -124,16 +126,19 @@ import cntk as cntk
 cntk._version_
 ```
 
-## <a name="list-installed-packages-using-conda"></a>列出已安裝的封裝使用 conda
+## <a name="list-installed-packages-using-conda"></a>列出已安裝的套件使用 conda
 
-有不同的方式，您可以取得已安裝的封裝清單。 例如，您可以檢視已安裝的封裝中**Python 環境**的 Visual Studio 視窗。
+有不同的方式，您可以取得一份已安裝的套件。 例如，您可以檢視在已安裝的套件**Python 環境**的 Visual Studio 的 windows。
 
-如果您使用 Python 命令列，您可以使用**Pip**或**conda**封裝管理員 中，隨附於 SQL Server 安裝程式新增 Anaconda Python 環境。
+如果您使用 Python 命令列，您可以使用**Pip**或**conda**套件管理員 中，隨附於 SQL Server 安裝程式新增的 Anaconda Python 環境。
 
-假設您將指令碼 資料夾加入 PATH 環境變數，列出 Python 環境中的封裝管理員命令提示字元中執行此命令。 否則，請參閱[取得 R，並將 Python 封裝資訊](../r/determine-which-packages-are-installed-on-sql-server.md#pip-conda)如何在 SQL Server 中執行的 Python 工具上的指標。
+1. 請移至 C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\Scripts
 
-```python
-conda list
-```
+1. 以滑鼠右鍵按一下**conda.exe** > **系統管理員身分執行**，然後輸入`conda list`來傳回目前環境中安裝的套件清單。
 
-如需有關**conda**以及如何使用它來建立和管理多個 Python 環境，請參閱[管理環境與 conda](https://conda.io/docs/user-guide/tasks/manage-environments.html)。
+1. 同樣地，以滑鼠右鍵按一下**pip.exe** > **系統管理員身分執行**，然後輸入`pip list`傳回相同的資訊。 
+
+如需詳細資訊**conda**以及如何使用它來建立和管理多個 Python 環境，請參閱[管理 conda 環境](https://conda.io/docs/user-guide/tasks/manage-environments.html)。
+
+> [!Note]
+> SQL Server 安裝程式不會新增 Pip 或 Conda 至系統路徑和實際執行 SQL Server 的執行個體，讓非必要的可執行檔的路徑之外是最佳作法。 不過，開發和測試環境中，您可以將指令碼 資料夾加入系統的 PATH 環境變數，從任何位置執行 Pip 和 Conda 命令。

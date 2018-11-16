@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 565217e494b753ee22c2fa3715f17108a9fab5da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be6edd514530acca7ac79cebf959a09d20562ac5
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638306"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350642"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概觀
 ADO 或 RDS 程式設計人員，理想的世界就是每個資料來源會公開 OLE DB 介面，可讓 ADO 無法呼叫直接將資料來源。 雖然有更多資料庫廠商實作的 OLE DB 介面，但某些資料來源不是尚未公開這種方式。 不過，大部分的 DBMS 系統目前使用中可以透過 ODBC 存取。
@@ -227,7 +227,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="dynamic-properties"></a>動態屬性
  Microsoft OLE DB Provider for ODBC 插入到數個動態屬性**屬性**未開啟的集合[連線](../../../ado/reference/ado-api/connection-object-ado.md)，[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，以及[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。
 
- 下表是 cross-index 的 ADO 和 OLE DB 的名稱，為每個動態屬性。 OLE DB 程式設計人員參考是參考的 ADO 屬性名稱的詞彙，「 說明 」。 您可以在 OLE DB 程式設計人員參考中找到這些屬性的詳細資訊。 搜尋索引中的 OLE DB 屬性名稱，或請參閱[附錄 c: OLE DB 屬性](http://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)。
+ 下表是 cross-index 的 ADO 和 OLE DB 的名稱，為每個動態屬性。 OLE DB 程式設計人員參考是參考的 ADO 屬性名稱的詞彙，「 說明 」。 您可以在 OLE DB 程式設計人員參考中找到這些屬性的詳細資訊。 搜尋索引中的 OLE DB 屬性名稱，或請參閱[附錄 c: OLE DB 屬性](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)。
 
 ## <a name="connection-dynamic-properties"></a>連接的動態屬性
  下列屬性會新增至**連接**物件的**屬性**集合。
@@ -429,7 +429,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |可更新性|DBPROP_UPDATABILITY|
 |使用書籤|DBPROP_BOOKMARKS|
 
- 如需有關特定實作和有關 Microsoft OLE DB Provider for ODBC 的功能資訊的詳細資訊，請參閱 < [OLE DB 程式設計人員參考](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)或瀏覽 MSDN 上的資料存取和儲存體開發人員中心網站。
+ 如需有關特定實作和有關 Microsoft OLE DB Provider for ODBC 的功能資訊的詳細資訊，請參閱 < [OLE DB 程式設計人員參考](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)或瀏覽 MSDN 上的資料存取和儲存體開發人員中心網站。
 
 ## <a name="see-also"></a>另請參閱
  [命令物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [CommandText 屬性 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [ConnectionString 屬性 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [執行方法 (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md) [Open 方法 (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) [Parameters 集合 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md) [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [提供者屬性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [支援方法](../../../ado/reference/ado-api/supports-method.md)

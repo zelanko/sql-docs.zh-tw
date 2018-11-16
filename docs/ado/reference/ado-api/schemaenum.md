@@ -16,24 +16,24 @@ ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4dd7edb2f5969f7ec8ded931c5e562c0c1992768
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c95ec9525fe0890d241fd6a99a6c298f6ef7568e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749226"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603659"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 指定的結構描述型別**Recordset**可[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法擷取。  
   
 ## <a name="remarks"></a>備註  
- 函式和資料行的其他資訊傳回每一個 ADO 常數，請參閱主題[附錄 b： 結構描述資料列集](http://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1)的 OLE DB 程式設計人員參考。 下表的 [描述] 部分中的括號括住，會列出每個主題的名稱。  
+ 函式和資料行的其他資訊傳回每一個 ADO 常數，請參閱主題[附錄 b： 結構描述資料列集](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1)的 OLE DB 程式設計人員參考。 下表的 [描述] 部分中的括號括住，會列出每個主題的名稱。  
   
- 函式和資料行的其他資訊傳回每一個 ADO MD 常數，請參閱主題[OLE DB for OLAP 物件和結構描述資料列集](http://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144)OLE DB 中的線上分析處理 (OLAP) 文件。 下表描述資料行中的括號括住，會列出每個主題的名稱。  
+ 函式和資料行的其他資訊傳回每一個 ADO MD 常數，請參閱主題[OLE DB for OLAP 物件和結構描述資料列集](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144)OLE DB 中的線上分析處理 (OLAP) 文件。 下表描述資料行中的括號括住，會列出每個主題的名稱。  
   
  您可以轉譯至 ADO 資料類型的 OLE DB 文件中的資料行的資料類型可藉由參考 ADO 的 Description 資料行[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)主題。 例如，OLE DB 資料類型**DBTYPE_WSTR**相當於 ADO 資料類型**adWChar**。  
   
- ADO 會產生常數，結構描述類似的結果**adSchemaDBInfoKeywords**並**adSchemaDBInfoLiterals**。 建立 ADO**資料錄集**，並使用分別傳回的值，然後填滿每個資料列**IDBInfo::GetKeywords**並**IDBInfo::GetLiteralInfo**方法。 這些方法的其他資訊可在[IDBInfo](http://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) OLE DB 程式設計人員參考一節。  
+ ADO 會產生常數，結構描述類似的結果**adSchemaDBInfoKeywords**並**adSchemaDBInfoLiterals**。 建立 ADO**資料錄集**，並使用分別傳回的值，然後填滿每個資料列**IDBInfo::GetKeywords**並**IDBInfo::GetLiteralInfo**方法。 這些方法的其他資訊可在[IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) OLE DB 程式設計人員參考一節。  
   
 |常數|值|描述|條件約束資料行|  
 |--------------|-----------|-----------------|------------------------|  

@@ -15,16 +15,16 @@ ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fcb4ccd685a5f28377972db03d32496017bda8cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaa379431395f3f5fbb01d777042118553bd7e18
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731217"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599628"
 ---
 # <a name="refresh-method-example-vbscript"></a>Refresh 方法範例 (VBScript)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  下列範例示範如何設定必要的參數的[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)在執行階段。 方法[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)會使用擷取[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)方法取決於設定[ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md)和[FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md)屬性。 若要測試此範例中，剪下並貼入正常的 ASP 文件中的下列程式碼並將它命名**RefreshVBS.asp**。 使用 **尋找**找出檔案 Adovbs.inc，並將它放在您打算使用的目錄。 ASP 指令碼會識別您的伺服器。  
   
@@ -86,7 +86,7 @@ body {
    ID=RDC HEIGHT=1 WIDTH=1>  
 </OBJECT>  
 <HR>  
-Server: <Input Size=70 Name="txtServer" Value="http://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
+Server: <Input Size=70 Name="txtServer" Value="https://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
 Connect: <Input Size=70 Name="txtConnect" Value="Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind'"><BR>  
 SQL: <Input Size=70 Name="txtSQL" Value="Select * from Employees">  
 <HR>  
@@ -104,7 +104,7 @@ SQL: <Input Size=70 Name="txtSQL" Value="Select * from Employees">
    <TD>Asynchronously: <BR>  
       <Input Type="Radio" Name="optExecuteOptions"  OnClick="SetExO('adcExecAsync')">  
    </TD>  
-   <TD> </TD>  
+   <TD> </TD>  
 </TR>  
 <TR>  
    <TD COLSPAN=3 BGCOLOR=silver>  

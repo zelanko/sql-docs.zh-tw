@@ -10,35 +10,35 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 02d76e3eadd8852d1c512c263e74dd8f8d6013de
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: c74b39f4b7816221e2258bde2b1fef2b9e74d9d3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356449"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658569"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>Always On 可用性群組的 SQL Server 容器
 
-SQL Server 2019 支援可用性群組中針對 Kubernetes 的容器。 針對可用性群組，部署 SQL Server [Kubernetes 運算子](http://coreos.com/blog/introducing-operators.html)到 Kubernetes 叢集。 運算子可協助封裝、 部署及管理叢集中的可用性群組。
+SQL Server 2019 支援可用性群組中針對 Kubernetes 的容器。 針對可用性群組，部署 SQL Server [Kubernetes 運算子](https://coreos.com/blog/introducing-operators.html)到 Kubernetes 叢集。 運算子可協助封裝、 部署及管理叢集中的可用性群組。
 
 ![Kubernetes 的容器中的 AG](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
 在上圖中，四個節點的 kubernetes 叢集會裝載具有三個複本的可用性群組。 解決方案包含下列元件：
 
-* Kubernetes [*部署*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/)。 此部署包含使用運算子，以及設定對應。 這些提供容器映像、 軟體和部署可用性群組的 SQL Server 執行個體所需的指示。
+* Kubernetes [*部署*](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)。 此部署包含使用運算子，以及設定對應。 這些提供容器映像、 軟體和部署可用性群組的 SQL Server 執行個體所需的指示。
 
-* 三個節點，每個裝載[ *StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)。 包含 StatefulSet [ *pod*](http://kubernetes.io/docs/concepts/workloads/pods/pod-overview/)。 包含每個 pod:
+* 三個節點，每個裝載[ *StatefulSet*](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)。 包含 StatefulSet [ *pod*](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/)。 包含每個 pod:
   * SQL Server 執行的容器一個 SQL Server 執行個體。
   * 可用性群組代理程式。 
 
-* 兩個[ *ConfigMaps* ](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)與可用性群組相關。 ConfigMaps 提供下列資訊：
+* 兩個[ *ConfigMaps* ](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)與可用性群組相關。 ConfigMaps 提供下列資訊：
   * 運算子的部署。
   * 可用性群組。
 
- * [*永續性磁碟區*](http://kubernetes.io/docs/concepts/storage/persistent-volumes/)是儲存體的片段。 A*永續性磁碟區宣告*(PVC) 是由使用者的儲存體的要求。 資料和記錄儲存體 PVC 附屬於每個容器。 Azure Kubernetes Service (AKS) 中，您[建立永續性磁碟區宣告](http://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)自動儲存類別為基礎的佈建存放裝置。
+ * [*永續性磁碟區*](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)是儲存體的片段。 A*永續性磁碟區宣告*(PVC) 是由使用者的儲存體的要求。 資料和記錄儲存體 PVC 附屬於每個容器。 Azure Kubernetes Service (AKS) 中，您[建立永續性磁碟區宣告](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)自動儲存類別為基礎的佈建存放裝置。
 
 
-此外，叢集會儲存[*祕密*](http://kubernetes.io/docs/concepts/configuration/secret/)密碼、 憑證、 金鑰和其他機密資訊。
+此外，叢集會儲存[*祕密*](https://kubernetes.io/docs/concepts/configuration/secret/)密碼、 憑證、 金鑰和其他機密資訊。
 
 ## <a name="deploy-the-availability-group-in-kubernetes"></a>部署在 Kubernetes 中的可用性群組
 
@@ -74,11 +74,11 @@ StatfulSet 包含：
 
 * `mssql-operator`
 
-    此程序會部署為個別的 Kubernetes 部署。 它會註冊[Kubernetes 自訂資源](http://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)稱為`SqlServer`(sqlservers.mssql.microsoft.com)。 然後它會接聽此類正在建立或更新的 Kubernetes 叢集中的資源。 針對每一個這類事件，它會建立或更新對應的執行個體的 Kubernetes 資源 (例如 StatefulSet 或`mssql-server-k8s-init-sql`作業)。
+    此程序會部署為個別的 Kubernetes 部署。 它會註冊[Kubernetes 自訂資源](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)稱為`SqlServer`(sqlservers.mssql.microsoft.com)。 然後它會接聽此類正在建立或更新的 Kubernetes 叢集中的資源。 針對每一個這類事件，它會建立或更新對應的執行個體的 Kubernetes 資源 (例如 StatefulSet 或`mssql-server-k8s-init-sql`作業)。
 
 * `mssql-server-k8s-health-agent`
 
-    此網頁伺服器提供的 Kubernetes[作用探查](http://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/)判斷 SQL Server 執行個體的健康情況。 藉由呼叫監視本機 SQL Server 執行個體的健全狀況`sp_server_diagnostics`並比較其結果與您的監視原則。
+    此網頁伺服器提供的 Kubernetes[作用探查](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/)判斷 SQL Server 執行個體的健康情況。 藉由呼叫監視本機 SQL Server 執行個體的健全狀況`sp_server_diagnostics`並比較其結果與您的監視原則。
 
 * `mssql-ha-supervisor`
 
@@ -92,7 +92,7 @@ StatfulSet 包含：
 
 * `mssql-server-k8s-init-sql`
   
-    此 Kubernetes[作業](http://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/)期望的狀態組態適用於 SQL Server 執行個體。 每次建立或更新 sql Server 資源時，則運算子會建立作業。 它可確保目標 SQL Server 執行個體對應至自訂的資源所需的資源中所述的設定。
+    此 Kubernetes[作業](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/)期望的狀態組態適用於 SQL Server 執行個體。 每次建立或更新 sql Server 資源時，則運算子會建立作業。 它可確保目標 SQL Server 執行個體對應至自訂的資源所需的資源中所述的設定。
 
     例如，如果以下任何設定需要，它會完成它們：
   * 更新的 SA 密碼

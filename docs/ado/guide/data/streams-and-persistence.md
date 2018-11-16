@@ -14,12 +14,12 @@ ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2db82bb76ab58782682a612983bca3d7c4fccfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 616a272e9fab9a3bf448063082bfedfe5d7e33a5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701726"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600418"
 ---
 # <a name="streams-and-persistence"></a>資料流和保存
 [資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件[儲存](../../../ado/reference/ado-api/save-method.md)方法存放區，或*持續發生*，則**資料錄集**在檔案中，而[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法還原**資料錄集**從該檔案。  
@@ -105,7 +105,7 @@ Set rs = nothing
   
  在 RDS 上新的屬性[DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)， [URL](../../../ado/reference/rds-api/url-property-rds.md)，指向 產生.asp 頁面**資料錄集**。 這表示**Recordset**可以取得物件而不需要 RDS 使用伺服器端[DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)物件或使用者撰寫的商務物件。 這可大幅簡化 RDS 程式設計模型。  
   
- 伺服器端程式碼中，名為 http://server/directory/recordset.asp:  
+ 伺服器端程式碼中，名為 https://server/directory/recordset.asp:  
   
 ```  
 <%  
@@ -139,8 +139,8 @@ rs.Save response, adPersistADTG
 <BR>  
   
 <OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"  
-    ID=DC1 HEIGHT=1 WIDTH = 1>  
-    <PARAM NAME="URL" VALUE="http://server/directory/recordset.asp">  
+    ID=DC1 HEIGHT=1 WIDTH = 1>  
+    <PARAM NAME="URL" VALUE="https://server/directory/recordset.asp">  
 </OBJECT>  
   
 </SCRIPT>  
@@ -153,11 +153,11 @@ rs.Save response, adPersistADTG
 ```  
 ...  
 function GetRs()   
-    {  
-    rs = CreateObject("ADODB.Recordset");  
-    rs.Open "http://server/directory/recordset.asp"  
-    DC1.SourceRecordset = rs;  
-    }  
+    {  
+    rs = CreateObject("ADODB.Recordset");  
+    rs.Open "https://server/directory/recordset.asp"  
+    DC1.SourceRecordset = rs;  
+    }  
 ...  
 ```  
   

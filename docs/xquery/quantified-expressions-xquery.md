@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -24,12 +23,12 @@ ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3c4c4e0581a6ae639fc4f70a8c254f437114fc2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 761e0c000666fc413c060bf4f01ea24b307d3fbd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720096"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665397"
 ---
 # <a name="quantified-expressions-xquery"></a>定量運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "47720096"
   
 ```  
 SELECT Instructions.query('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         if (every $WC in //AWMI:root/AWMI:Location   
             satisfies $WC/@LocationID)  
         then  
@@ -76,7 +75,7 @@ where ProductModelID=7
   
 ```  
 SELECT Instructions.value('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         every $WC in  //AWMI:root/AWMI:Location   
             satisfies $WC/@LocationID',   
   'nvarchar(10)') as Result  
@@ -88,7 +87,7 @@ where ProductModelID=7
   
 ```  
 SELECT ProductModelID, CatalogDescription.value('  
-     declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      some $F in /PD:ProductDescription/PD:Picture  
         satisfies $F/PD:Size="small"', 'nvarchar(20)') as SmallPicturesStored  
 FROM Production.ProductModel  

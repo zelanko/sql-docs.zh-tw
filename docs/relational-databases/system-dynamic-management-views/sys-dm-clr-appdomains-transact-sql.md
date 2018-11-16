@@ -19,12 +19,12 @@ ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b164c253f9e1bc90f65e143ef3490a4cca9542ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7e1c3534e510e2a18929331918db7b6cf3efa60
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681706"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657457"
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47681706"
   
  CLR 整合 Managed 資料庫物件有多種類型。 如需這些物件的一般資訊，請參閱[利用 Common Language Runtime (CLR) 整合建置資料庫物件](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)。 執行這些物件時，每當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會建立**AppDomain**供其來載入及執行必要的程式碼。 隔離等級**AppDomain**是其中一個**AppDomain**每個資料庫每個擁有者。 也就是使用者所擁有的所有 CLR 物件一律會都執行在同一**AppDomain**每個資料庫 （如果使用者在不同資料庫中，CLR 資料庫物件將會執行不同的應用程式定義域中註冊 CLR 資料庫物件）。 **AppDomain**程式碼完成執行之後不會損毀。 而會將它快取到記憶體中，以供日後執行使用。 這可改善效能。  
   
- 如需詳細資訊，請參閱 <<c0> [ 應用程式定義域](http://go.microsoft.com/fwlink/p/?LinkId=299658)。  
+ 如需詳細資訊，請參閱 <<c0> [ 應用程式定義域](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

@@ -18,12 +18,12 @@ ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af24a0656f46f0256775f4ea1649ab806e207fdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fec2cea71ba818e955e0b6c2ce31c58f2c07357
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856332"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677317"
 ---
 # <a name="connecting-using-file-data-sources"></a>使用檔案資料來源進行連線
 檔案資料來源的連接資訊儲存在.dsn 檔案。 如此一來，連接字串可以是一位使用者重複使用或有適當的驅動程式安裝數個使用者共用。 檔案包含驅動程式名稱 （或在自檔案資料來源的情況下的另一個資料來源名稱） 和 （選擇性） 連接字串，可供**SQLDriverConnect**。 驅動程式管理員建置呼叫的連接字串**SQLDriverConnect**從.dsn 檔案中的關鍵字。  
@@ -55,4 +55,4 @@ DSN = MyDataSource
  用於檔案資料來源的連接字串是.dsn 檔案中指定的關鍵字和連接字串，在呼叫中指定關鍵字的等位**SQLDriverConnect**。 如果任何.dsn 檔案中的關鍵字衝突與連接字串中的關鍵字，驅動程式管理員會決定應該使用哪一個關鍵字值。 如需詳細資訊，請參閱 < [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [http://support.microsoft.com/kb/165866](http://support.microsoft.com/kb/165866)
+ [https://support.microsoft.com/kb/165866](https://support.microsoft.com/kb/165866)

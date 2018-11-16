@@ -11,12 +11,12 @@ ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41c340d2d84e80100788ae2d797a37fd048e4264
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 629ba98b4b30f5000cac7366f5b558e925cf20cf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735516"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600008"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>步驟 2：初始化 [主要] 清單方塊
 若要宣告全域記錄和資料錄集物件，請將下列程式碼插入 （一般） （宣告） 的 Form1:  
@@ -34,19 +34,19 @@ Dim grs As Recordset
   
 ```  
 Private Sub Form_Load()  
-    Set grec = New Record  
-    Set grs = New Recordset  
-    grec.Open "", "URL=http://servername/foldername/", , _  
-        adOpenIfExists Or adCreateCollection  
-    Set grs = grec.GetChildren  
-    While Not grs.EOF  
-        lstMain.AddItem grs(0)  
-        grs.MoveNext  
-    Wend  
+    Set grec = New Record  
+    Set grs = New Recordset  
+    grec.Open "", "URL=https://servername/foldername/", , _  
+        adOpenIfExists Or adCreateCollection  
+    Set grs = grec.GetChildren  
+    While Not grs.EOF  
+        lstMain.AddItem grs(0)  
+        grs.MoveNext  
+    Wend  
 End Sub  
 ```  
   
- 此程式碼會具現化通用的記錄和資料錄集物件。 記錄物件， `grec`，開啟具有指定為 ActiveConnection 的 URL。 如果 URL 存在，會將它開啟;如果已經存在，它會建立它。 請注意，您應該將"http://servername/foldername/」 具有有效的 URL，從您的環境。  
+ 此程式碼會具現化通用的記錄和資料錄集物件。 記錄物件， `grec`，開啟具有指定為 ActiveConnection 的 URL。 如果 URL 存在，會將它開啟;如果已經存在，它會建立它。 請注意，您應該將"https://servername/foldername/」 具有有效的 URL，從您的環境。  
   
  資料錄集物件中， `grs`，開啟的資料錄的子系`grec`。 然後`lstMain`會填入已發行 URL 資源的檔案名稱。  
   

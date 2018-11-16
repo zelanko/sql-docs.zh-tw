@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -16,12 +15,12 @@ ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 49bf0afdc009b314f2ea43c6d0b9db72390f4d35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cdfb1bf06bd7b1157525ffd2beed10c4c3daf2be
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661986"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659377"
 ---
 # <a name="general-xquery-use-cases"></a>一般 XQuery 使用案例
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47661986"
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
   <Product  ProductModelID="{ (/p1:ProductDescription/@ProductModelID)[1] }">  
      {   
        /p1:ProductDescription/p1:Specifications/Weight   
@@ -76,7 +75,7 @@ WHERE CatalogDescription is not null
  下列查詢擷取相同資訊，但只針對目錄描述中的規格 (<`Specifications`> 元素) 有包含重量 (<`Weight`> 元素) 的那些產品型號。 此範例使用 WITH XMLNAMESPACES 來宣告 pd 前置詞及其命名空間繫結。 如此一來，繫結不會在描述兩者**query （)** 方法並在**exist （)** 方法。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 SELECT CatalogDescription.query('  
           <Product  ProductModelID="{ (/pd:ProductDescription/@ProductModelID)[1] }">  
                  {   
@@ -102,7 +101,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight
     <Size>small</Size>  
   </Picture>  
 </Product>  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 SELECT CatalogDescription.query('  
    <pd:Product  ProductModelID="{ (/pd:ProductDescription/@ProductModelID)[1] }">  
       <Picture>  
@@ -127,7 +126,7 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
   
 ```  
 <p1:Product   
-  xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+  xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
   ProductModelID="19">  
   <Picture>  
     <p1:Angle>front</p1:Angle>  
@@ -142,7 +141,7 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
   for $pd in /p1:ProductDescription,  
    $f in $pd/p1:Features/*  
   return  
@@ -170,7 +169,7 @@ WHERE ProductModelID=19
  <ProductModelName>Mountain 100</ProductModelName>  
  <ProductModelID>19</ProductModelID>  
  <p1:Warranty   
-   xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+   xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
     <p1:WarrantyPeriod>3 year</p1:WarrantyPeriod>  
     <p1:Description>parts and labor</p1:Description>  
  </p1:Warranty>  
@@ -178,7 +177,7 @@ WHERE ProductModelID=19
 <Feature>  
  <ProductModelName>Mountain 100</ProductModelName>  
  <ProductModelID>19</ProductModelID>  
- <p2:Maintenance xmlns:p2="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+ <p2:Maintenance xmlns:p2="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
     <p2:NoOfYears>10</p2:NoOfYears>  
     <p2:Description>maintenance contact available through your dealer   
            or any AdventureWorks retail store.</p2:Description>  
@@ -193,7 +192,7 @@ WHERE ProductModelID=19
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
-     declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      <Product>  
          <ProductModelName>   
            { data(/pd:ProductDescription/@ProductModelName) }   
@@ -216,11 +215,11 @@ WHERE ProductModelID=19
   <ProductModelID>19</ProductModelID>  
   <p1:Warranty>... </p1:Warranty>  
   <p2:Maintenance>...  </p2:Maintenance>  
-  <p3:wheel xmlns:p3="http://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p3:wheel>  
-  <p4:saddle xmlns:p4="http://www.adventure-works.com/schemas/OtherFeatures">  
-    <p5:i xmlns:p5="http://www.w3.org/1999/xhtml">Anatomic design</p5:i> and made from durable leather for a full-day of riding in comfort.</p4:saddle>  
-  <p6:pedal xmlns:p6="http://www.adventure-works.com/schemas/OtherFeatures">  
-    <p7:b xmlns:p7="http://www.w3.org/1999/xhtml">Top-of-the-line</p7:b> clipless pedals with adjustable tension.</p6:pedal>  
+  <p3:wheel xmlns:p3="https://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p3:wheel>  
+  <p4:saddle xmlns:p4="https://www.adventure-works.com/schemas/OtherFeatures">  
+    <p5:i xmlns:p5="https://www.w3.org/1999/xhtml">Anatomic design</p5:i> and made from durable leather for a full-day of riding in comfort.</p4:saddle>  
+  <p6:pedal xmlns:p6="https://www.adventure-works.com/schemas/OtherFeatures">  
+    <p7:b xmlns:p7="https://www.w3.org/1999/xhtml">Top-of-the-line</p7:b> clipless pedals with adjustable tension.</p6:pedal>  
    ...  
 ```  
   
@@ -229,7 +228,7 @@ WHERE ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      <Product>   
           { /pd:ProductDescription/@ProductModelID }  
           { /pd:ProductDescription/@ProductModelName }   
@@ -258,7 +257,7 @@ WHERE CatalogDescription is not NULL
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
-     declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
       for $pd in /p1:ProductDescription/*[substring(local-name(.),string-length(local-name(.))-2,3)="ons"]  
       return   
           <Root>  
@@ -275,7 +274,7 @@ WHERE CatalogDescription is not NULL
 ProductModelID   Result  
 -----------------------------------------  
          19        <Root>         
-                     <p1:Specifications xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">          
+                     <p1:Specifications xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">          
                           ...         
                      </p1:Specifications>         
                    </Root>          
@@ -285,7 +284,7 @@ ProductModelID   Result
  下列查詢擷取其目錄描述的摘要描述中包含 "Aerodynamic" 一字的產品型號：  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 SELECT ProductModelID, CatalogDescription.query('  
           <Prod >  
              { /pd:ProductDescription/@ProductModelID }  
@@ -313,8 +312,8 @@ WHERE CatalogDescription.value('
 ProductModelID Result        
 -------------- ------------------------------------------  
 28     <Prod ProductModelID="28">  
-        <pd:Summary xmlns:pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
-       <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">  
+        <pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+       <p1:p xmlns:p1="https://www.w3.org/1999/xhtml">  
          A TRUE multi-sport bike that offers streamlined riding and a  
          revolutionary design. Aerodynamic design lets you ride with the   
          pros, and the gearing will conquer hilly roads.</p1:p>  
@@ -329,7 +328,7 @@ ProductModelID Result
 SELECT  ProductModelID  
 FROM    Production.ProductModel  
 WHERE   CatalogDescription is not NULL  
-AND     CatalogDescription.exist('declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+AND     CatalogDescription.exist('declare namespace p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      /p1:ProductDescription/p1:Picture  
 ') = 0  
 ```  

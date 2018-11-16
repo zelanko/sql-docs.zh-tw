@@ -17,18 +17,18 @@ ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5e5c207a6928c82adeb8d45e22ea342bc40f0322
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa05b8b4be3c155c7ca59132892e0863dda60a5f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798826"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600638"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl 物件 (RDS)
 繫結資料的查詢[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)至一或多個控制項 （例如，文字方塊中，方格控制項或下拉式方塊） 來顯示**資料錄集**網頁上的資料。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47798826"
   
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="DataControl"  
    <PARAM NAME="Connect" VALUE="DSN=DSNName;UID=MyUserID;PWD=MyPassword;">  
-   <PARAM NAME="Server" VALUE="http://awebsrvr">  
+   <PARAM NAME="Server" VALUE="https://awebsrvr">  
    <PARAM NAME="SQL" VALUE="QueryText">  
 </OBJECT>  
 ```  
@@ -78,7 +78,7 @@ ms.locfileid: "47798826"
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"   
     ID="DataControl"  
    <PARAM NAME="Connect" VALUE="DSN=DSNName;UID=MyUserID;PWD=MyPassword;">  
-   <PARAM NAME="Server" VALUE="http://awebsrvr">  
+   <PARAM NAME="Server" VALUE="https://awebsrvr">  
    <PARAM NAME="SQL" VALUE="QueryText">  
    <PARAM NAME="ExecuteOptions" VALUE="1">   <PARAM NAME="FetchOptions" VALUE="1">  
 </OBJECT>  

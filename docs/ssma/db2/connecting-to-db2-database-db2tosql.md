@@ -10,12 +10,12 @@ ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c280b28082a1f85074b129d7a659333d7323d879
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce6a13eec87b60480ed2e68aa3d21a4c4f90ba1b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735546"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668367"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>連接至 DB2 資料庫 (DB2ToSQL)
 若要將 DB2 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您必須連接到您想要移轉的 DB2 資料庫。 當您連線時，SSMA 中取得所有 DB2 結構描述的相關中繼資料，然後顯示 DB2 中繼資料總管 窗格中。 SSMA 會儲存在資料庫伺服器的相關資訊，但不會儲存密碼。  
@@ -107,7 +107,7 @@ DB2 資料庫的相關中繼資料不會自動重新整理。 DB2 中繼資料�
   
 ## <a name="next-step"></a>下一個步驟  
   
--   移轉程序的下一個步驟是[連接到 SQL Server](http://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)。  
+-   移轉程序的下一個步驟是[連接到 SQL Server](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)。  
   
 ## <a name="see-also"></a>另請參閱  
 [移轉的 DB2 資料庫到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

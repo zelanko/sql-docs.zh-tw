@@ -20,16 +20,16 @@ ms.assetid: 8a74802f-34d6-4676-bf94-07df5f8bff66
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0cea18d6895363e1a264258c88d733fc3c5ab35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 755ca4454ecf1d07f2f932a4651ab6378d5eb189
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661116"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601568"
 ---
 # <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>FilterColumn、 FilterCriterion、 FilterValue、 SortColumn 和 SortDirection 屬性以及 Reset 方法範例 (VBScript)
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  下列程式碼示範如何設定[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) **Server** designtime 和其資料感知的 HTML 資料表使用資料來源的繫結的參數。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**FilterColumnVBS.asp**。  
   
@@ -91,7 +91,7 @@ Filter Criterion: <SELECT NAME="cboCriterion">
               <br>  
 Filter Value: <INPUT NAME="txtFilterValue">  
 <HR WIDTH="25%">  
-<INPUT TYPE=BUTTON NAME=Clear VALUE="CLEAR ALL">    
+<INPUT TYPE=BUTTON NAME=Clear VALUE="CLEAR ALL">    
 <INPUT TYPE=BUTTON NAME=SortFilter VALUE="APPLY">  
   
 <HR>  

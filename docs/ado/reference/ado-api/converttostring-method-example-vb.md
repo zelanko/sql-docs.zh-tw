@@ -15,12 +15,12 @@ ms.assetid: 31731e4f-3c0c-451e-8cbc-c9df28fabf6c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d156e733f59a66997a8ba0ec5dfe763bfadcc655
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01b032aa98e4e8887722521016c95d99b7b58a7a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613136"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604648"
 ---
 # <a name="converttostring-method-example-vb"></a>ConvertToString 方法範例 (VB)
 ```  
@@ -49,7 +49,7 @@ Public Sub Main()
      ' Create a DataSpace object  
     Set rdsDS = New RDS.DataSpace  
      ' Create a DataFactory object  
-    Set rdsDF = rdsDS.CreateObject("RDSServer.DataFactory", "http://MyServer") 'MyServer  
+    Set rdsDF = rdsDS.CreateObject("RDSServer.DataFactory", "https://MyServer") 'MyServer  
   
      ' Get all of the Author records  
   

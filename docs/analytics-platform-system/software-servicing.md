@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 79231b6e2867154bc4d826b83a0a4fd27487f438
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 444d7f29e7f65da7e5d98dde310b2c1f8ad8dd4b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909798"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700207"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>Analytics Platform System 中的軟體維護
 本節摘要說明服務的需求，Analytics Platform System appliance，包括 WSUS 和 Analytics Platform System hotfix 的軟體。  
   
 ## <a name="Basics"></a>軟體服務基本概念  
-**WSUS:** Analytics Platform System appliance 必須設定為從 Windows Server Update Services (WSUS) 接收更新。 這些更新包括裝置軟體的重要變更。 設定之後，更新會自動安裝，並不需要實際操作的管理。 一般而言，設定 WSUS 更新期間[設定 Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41; ](configure-windows-server-update-services-wsus.md)在新的應用裝置安裝期間執行的步驟。 如果沒有，則可以稍後再執行此組態步驟。 如需 WSUS 的資訊，請參閱[WSUS 網站指南](http://go.microsoft.com/fwlink/?LinkId=202417)。  
+**WSUS:** Analytics Platform System appliance 必須設定為從 Windows Server Update Services (WSUS) 接收更新。 這些更新包括裝置軟體的重要變更。 設定之後，更新會自動安裝，並不需要實際操作的管理。 一般而言，設定 WSUS 更新期間[設定 Windows Server Update Services &#40;WSUS&#41; &#40;Analytics Platform System&#41; ](configure-windows-server-update-services-wsus.md)在新的應用裝置安裝期間執行的步驟。 如果沒有，則可以稍後再執行此組態步驟。 如需 WSUS 的資訊，請參閱[WSUS 網站指南](https://go.microsoft.com/fwlink/?LinkId=202417)。  
   
 **Hotfix:** 此外，您可能需要套用 Analytics Platform System hotfix。 A *hotfix*建立特定的客戶，若要解決問題，Analytics Platform System 軟體的軟體更新。 每個 hotfix 是可執行檔安裝客戶特定問題的修正程式。 每個 hotfix 也會包含 Windows、 SQL Server 和 Analytics Platform System 的累積的所有先前發行的軟體更新。 如果您要安裝的 hotfix，Microsoft 支援服務將您提供的 hotfix 和指示。  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f7b4f9303a96e6197cc6580a5c799404f48e5c4a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5d8562661e313aea59dfb233dbc5b2194b582c2d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040436"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602488"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +85,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   第三個範例示範如何使用 EXTEND_MODEL_CASES 參數，以全新的資料更新採礦模型。  
   
- 若要深入了解如何使用時間序列模型，請參閱 < 資料採礦教學課程中，[第 2 課： 建立預測狀況&#40;中繼資料採礦教學課程&#41;](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2)並[時間序列預測 DMX教學課程](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
+ 若要深入了解如何使用時間序列模型，請參閱 < 資料採礦教學課程中，[第 2 課： 建立預測狀況&#40;中繼資料採礦教學課程&#41;](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2)並[時間序列預測 DMX教學課程](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
   
 > [!NOTE]  
 >  您可能會從模型中取得不同的結果；提供底下範例的結果只是為了說明結果格式。  
@@ -119,7 +119,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>範例 2：加入新資料並使用 REPLACE_MODEL_CASES  
  假設您發現特定地區的資料不正確，而且您想要使用模型中的模式，但是要調整預測來符合新的資料。 或者，您可能會尋找具有更可靠之趨勢的另一個地區，而且想要將最可靠的模型套用到另一個地區的資料。  
   
- 在這類情況下，您可以使用 REPLACE_MODEL_CASES 參數，並指定新的資料集當做歷程記錄資料使用。 這樣一來，將會根據指定之模型內的模式來做預測，但是將會從新資料點的結尾繼續順利進行。 如需完整的逐步解說此案例中，請參閱 <<c0> [ 進階時間序列預測&#40;中繼資料採礦教學課程&#41;](http://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)。</c0>  
+ 在這類情況下，您可以使用 REPLACE_MODEL_CASES 參數，並指定新的資料集當做歷程記錄資料使用。 這樣一來，將會根據指定之模型內的模式來做預測，但是將會從新資料點的結尾繼續順利進行。 如需完整的逐步解說此案例中，請參閱 <<c0> [ 進階時間序列預測&#40;中繼資料採礦教學課程&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)。</c0>  
   
  下列 PREDICTION JOIN 查詢說明取代資料以及做出新預測的語法。 如果是取代資料，此範例會擷取 Amount 和 Quantity 資料行的值，並將每一個乘以二：  
   
@@ -194,7 +194,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   根據新擴充的模型，傳回剩餘三個時間配量的新預測。  
   
- 下表列出範例 2 查詢的結果。 請注意，針對 M200 Europe 傳回的前兩個值與您提供的新值一模一樣。 這是預設的行為；如果您想要在新資料的結尾之後開始預測，您必須指定開始和結束時間步驟。 如需如何執行這項操作的範例，請參閱 <<c0> [ 第 5 課： 擴充時間序列模型](http://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d)。  
+ 下表列出範例 2 查詢的結果。 請注意，針對 M200 Europe 傳回的前兩個值與您提供的新值一模一樣。 這是預設的行為；如果您想要在新資料的結尾之後開始預測，您必須指定開始和結束時間步驟。 如需如何執行這項操作的範例，請參閱 <<c0> [ 第 5 課： 擴充時間序列模型](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d)。  
   
  也請注意一點，您並未提供太平洋地區的新資料。 因此，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會針對全部五個時間配量傳回新預測。  
   
@@ -255,6 +255,6 @@ OR [Model Region] = 'M200 North America'
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組&#40;DMX&#41;函式參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [時間序列模型查詢範例](../analysis-services/data-mining/time-series-model-query-examples.md)   
- [預測&#40;DMX&#41;](../dmx/predict-dmx.md)  
+ [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
   

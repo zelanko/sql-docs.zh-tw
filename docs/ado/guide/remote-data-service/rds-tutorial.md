@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 02/15/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9a7538bb51ebe0a04a20aff81e83c3cc1ac92aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c9136f1fc1fdf7538744501984af50e2ca52f04
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747886"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558625"
 ---
 # <a name="rds-tutorial"></a>RDS 教學課程
 本教學課程說明如何使用 RDS 程式設計模型來查詢及更新資料來源。 首先，它會描述要完成這項工作所需的步驟。 則教學課程中重複出現在 Microsoft® Visual Basic Scripting Edition （具備 ADO 的 Windows Foundation Classes (ADO/WFC)）。  
@@ -30,7 +30,7 @@ ms.locfileid: "47747886"
 -   如果您不確定特定的 RDS 功能資料，而且有了另一種語言，您可以尋找另一種語言來表示相同的功能來解決您的問題。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="how-the-tutorial-is-presented"></a>本教學課程的呈現方式  
  本教學課程為基礎的 RDS 程式設計模型。 它會個別討論的程式設計模型的每個步驟。 此外，它會說明每個步驟的 Visual Basic 程式碼片段。  

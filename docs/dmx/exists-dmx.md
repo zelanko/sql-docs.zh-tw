@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 936612dba4f466c5bc78f20f5a3ea07954a20a1c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 99f6db275fcddaff3e739311ed588fb0ec776aaf
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37998580"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602828"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ EXISTS(<subquery>)
 ## <a name="examples"></a>範例  
  您可以使用 EXISTS 和 NOT EXISTS 來檢查巢狀資料表中的條件。 當您建立的篩選可控制用來定型或測試資料採礦模型的資料時，這樣的處理方式會很有用。 如需詳細資訊，請參閱[採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
   
- 下列範例根據`[Association]`採礦結構和採礦模型中建立[Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 此查詢只會傳回客戶至少購買一個修補套件的案例。  
+ 下列範例根據`[Association]`採礦結構和採礦模型中建立[Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 此查詢只會傳回客戶至少購買一個修補套件的案例。  
   
 ```  
 SELECT * FROM [Association].CASES  

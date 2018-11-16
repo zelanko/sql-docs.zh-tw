@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c859de289a9f93a23702c63bd50269bb0881b34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 500a3e38599b0041b036eb148f837afc67260849
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714986"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350502"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB 概觀的 Microsoft 資料指標服務
 OLE DB 的 Microsoft 資料指標服務來補充資料提供者的資料指標支援函式。 如此一來，使用者察覺到相當一致的功能，從所有資料提供者。
@@ -31,7 +31,7 @@ OLE DB 的 Microsoft 資料指標服務來補充資料提供者的資料指標�
 ## <a name="keyword"></a>關鍵字
  若要叫用此服務元件，請設定[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)或[連線](../../../ado/reference/ado-api/connection-object-ado.md)物件的[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設**adUseClient**。
 
-```
+```vb
 connection.CursorLocation=adUseClient
 recordset.CursorLocation=adUseClient
 ```
@@ -41,7 +41,7 @@ recordset.CursorLocation=adUseClient
 
  有些動態屬性的變更不會對基礎資料來源顯示的在叫用資料指標服務之後。 例如，設定*命令逾*屬性上的**資料錄集**將不會顯示基礎資料提供者。
 
-```
+```vb
 
 Recordset1.CursorLocation = adUseClient     'invokes cursor service
 Recordset1.Open "authors", _
@@ -75,7 +75,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 
  您也可以設定，或藉由指定其名稱為索引中擷取動態屬性**屬性**集合。 比方說，取得並列印目前的值[最佳化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)動態屬性，然後將新的值，如下所示：
 
-```
+```vb
 Debug.Print rs.Properties("Optimize")
 rs.Properties("Optimize") = True
 ```

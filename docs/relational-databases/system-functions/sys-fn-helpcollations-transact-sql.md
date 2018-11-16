@@ -21,12 +21,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f781faaf571a9c97dfa141bb94e086368e12bd42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83c9efd36bbcec788ef18b19552446877c5e36c8
+ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608757"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51629611"
 ---
 # <a name="sysfnhelpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +56,7 @@ fn_helpcollations ()
 ## <a name="examples"></a>範例  
  下列範例會傳回開頭是 `L` 字母，而且是二進位排序定序的所有定序名稱。  
   
-```  
+```sql  
 SELECT Name, Description FROM fn_helpcollations()  
 WHERE Name like 'L%' AND Description LIKE '% binary sort';  
 ```  

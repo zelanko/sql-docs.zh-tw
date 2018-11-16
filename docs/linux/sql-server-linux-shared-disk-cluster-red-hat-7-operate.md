@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: c7e554e0fb010e51af7e0ece757094800078c0d0
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 4b41e3adeaab22a958e94e373762c57a6d613f6d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085100"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661262"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>操作 SQL server 的 Red Hat Enterprise Linux 共用的磁碟叢集
 
@@ -31,20 +31,20 @@ ms.locfileid: "49085100"
 
 ## <a name="architecture-description"></a>結構描述
 
-叢集層以在 Red Hat Enterprise Linux (RHEL) 為基礎[HA 附加元件](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)之上建置[Pacemaker](http://clusterlabs.org/)。 Corosync 和 Pacemaker 協調叢集間通訊和資源管理。 SQL Server 執行個體是在上一個節點或其他使用中。
+叢集層以在 Red Hat Enterprise Linux (RHEL) 為基礎[HA 附加元件](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)之上建置[Pacemaker](https://clusterlabs.org/)。 Corosync 和 Pacemaker 協調叢集間通訊和資源管理。 SQL Server 執行個體是在上一個節點或其他使用中。
 
 下圖說明在 Linux 叢集中使用 SQL Server 元件。 
 
 ![Red Hat Enterprise Linux 7 共用磁碟的 SQL 叢集](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-如需有關叢集設定、 資源代理程式選項，以及管理的詳細資訊，請瀏覽[RHEL 參考文件](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
+如需有關叢集設定、 資源代理程式選項，以及管理的詳細資訊，請瀏覽[RHEL 參考文件](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
 
 ## <a name = "failManual"></a>容錯移轉叢集以手動方式
 
-`resource move`命令建立條件約束，強制啟動目標節點上的資源。  在執行後`move`命令，執行資源`clear`會移除條件約束，因此可以一次移動的資源，或具有自動容錯移轉的資源。 
+`resource move`命令建立條件約束，強制啟動目標節點上的資源。  在執行後`move`命令，執行資源`clear`會移除條件約束，因此可以一次移動的資源，或具有自動容錯移轉的資源。 
 
 ```bash
-sudo pcs resource move <sqlResourceName> <targetNodeName>  
+sudo pcs resource move <sqlResourceName> <targetNodeName>  
 sudo pcs resource clear <sqlResourceName> 
 ```
 
@@ -60,7 +60,7 @@ sudo pcs resource clear mssqlha
 檢視目前的叢集狀態：
 
 ```bash
-sudo pcs status  
+sudo pcs status  
 ```
 
 檢視即時狀態的叢集和資源：
@@ -183,7 +183,7 @@ sudo crm_mon
     下列範例會將名為的節點**vm3**到叢集。
 
     ```bash
-    sudo pcs    cluster auth  
+    sudo pcs    cluster auth  
     sudo pcs    cluster start 
     ```
 
@@ -192,7 +192,7 @@ sudo crm_mon
 若要從叢集移除節點執行下列命令：
 
 ```bash
-sudo pcs    cluster node remove <nodeName>  
+sudo pcs    cluster node remove <nodeName>  
 ```
 
 ## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>變更 sqlservr 資源監視間隔的頻率
@@ -226,7 +226,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 ```
 Cluster name: MyAppSQL 
-Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
+Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
 Stack: corosync 
 Current DC: sqlvmnode1  (version 1.1.13-10.el7_2.4-44eb2dd) - partition with quorum 
 3 nodes and 1 resource configured 
@@ -271,7 +271,7 @@ pacemaker: active/enabled
 
 ## <a name="additional-resources"></a>其他資源
 
-* [叢集從頭](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf)從 Pacemaker 的指南
+* [叢集從頭](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)從 Pacemaker 的指南
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -1,5 +1,5 @@
 ---
-title: BottomCount (DMX) |Microsoft 文件
+title: BottomCount (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b844f4337a0d09a9457da0658b44e8225f6c224
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: 382cfe7e7ce77fec66d2b9e5b370f397abd14dce
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34843031"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602908"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,18 +29,18 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>適用於  
- 運算式會傳回資料表，例如\<資料表資料行參考 >，或傳回資料表的函數。  
+ 該運算式會傳回資料表，例如\<資料表資料行參考 >，或傳回資料表的函式。  
   
 ## <a name="return-type"></a>傳回類型  
  \<資料表運算式 >  
   
 ## <a name="remarks"></a>備註  
- 所提供的值\<排名運算式 > 引數會決定遞增次序順序中提供的資料列\<資料表運算式 > 引數，以及中所指定的最底部資料列數目\<計數 > 引數會傳回。  
+ 所提供的值\<排名運算式 > 引數會決定的陣序規範中提供的資料列的遞增次序順序\<資料表運算式 > 引數，並在指定的最底部資料列數目\<計數 > 引數傳回。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立預測查詢的關聯模型，您使用建置[基本資料採礦教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
+ 下列範例會建立預測查詢的關聯模型，您使用建置[83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
   
- 若要了解 BottomCount 的運作方式，可能很有幫助先執行僅傳回巢狀的資料表的預測查詢。  
+ 若要了解 BottomCount 的運作方式，可能要先執行僅傳回巢狀的資料表的預測查詢很有幫助。  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -51,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  在此範例中，當做輸入提供的值包含單引號，因此必須在該值前面加上另一個單引號來逸出。 如果您不確定插入逸出字元的語法，可以使用預測查詢產生器來建立查詢。 當您從下拉式清單選取值時，就會為您插入所需的逸出字元。 如需詳細資訊，請參閱[資料採礦設計師中建立單一查詢](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)。  
+>  在此範例中，當做輸入提供的值包含單引號，因此必須在該值前面加上另一個單引號來逸出。 如果您不確定插入逸出字元的語法，可以使用預測查詢產生器來建立查詢。 當您從下拉式清單選取值時，就會為您插入所需的逸出字元。 如需詳細資訊，請參閱 <<c0> [ 資料採礦設計師中建立單一查詢](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)。  
   
  範例結果：  
   
@@ -68,7 +68,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
   
- BottomCount 函數會採用此查詢的結果，並傳回加總為指定之百分比的最小值資料列。  
+ BottomCount 函式會採用此查詢的結果，並傳回加總為指定之百分比的最小值的資料列。  
   
 ```  
 SELECT   
@@ -83,9 +83,9 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- BottomCount 函數的第一個引數是資料表資料行的名稱。 在此範例中，巢狀的資料表會傳回呼叫預測函式，並使用 INCLUDE_STATISTICS 引數。  
+ BottomCount 函式的第一個引數是資料表資料行的名稱。 在此範例中，巢狀的資料表會傳回呼叫 Predict 函式，並使用 INCLUDE_STATISTICS 引數。  
   
- BottomCount 函式的第二個引數是您用來排序結果的巢狀資料表中的資料行。 在此範例中，INCLUDE_STATISTICS 選項會傳回資料行 $SUPPORT、$PROBABILTY 和 $ADJUSTED PROBABILITY。 此範例因為支援值不是分數而使用 $SUPPORT，因此比較容易確認。  
+ BottomCount 函式的第二個引數是巢狀資料表，您用來排序結果中的資料行。 在此範例中，INCLUDE_STATISTICS 選項會傳回資料行 $SUPPORT、$PROBABILTY 和 $ADJUSTED PROBABILITY。 此範例因為支援值不是分數而使用 $SUPPORT，因此比較容易確認。  
   
  BottomCount 函數的第三個引數指定資料列的數目。 若要取得三個排名最低的資料列 (如 $SUPPORT 所排序)，請輸入 3。  
   

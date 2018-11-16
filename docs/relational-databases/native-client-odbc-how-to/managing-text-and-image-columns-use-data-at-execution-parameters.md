@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ec5799c1454a9f904ed49fd6cd41e71162f4886
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55feda84f7c64b4d33229ac6fe58b6b2d782b7a9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831276"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671140"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>管理 text 和 image 資料行 - 使用資料執行中參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,20 +34,20 @@ ms.locfileid: "47831276"
   
     -   使用程式定義之參數識別碼的 **rgbValue** (第八個參數)。  
   
-2.  呼叫 [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) 或 [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) 會傳回 SQL_NEED_DATA，這表示資料執行中參數已準備就緒可供處理。  
+2.  呼叫 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 或 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 會傳回 SQL_NEED_DATA，這表示資料執行中參數已準備就緒可供處理。  
   
 3.  針對每一個資料執行中參數：  
   
-    -   呼叫 [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) 來取得程式定義的參數識別碼。 如果有另一個資料執行中參數，它將會傳回 SQL_NEED_DATA。  
+    -   呼叫 [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 來取得程式定義的參數識別碼。 如果有另一個資料執行中參數，它將會傳回 SQL_NEED_DATA。  
   
     -   呼叫 [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) 一次或多次來傳送參數資料，直到傳送長度為止。  
   
-4.  呼叫 [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) 來指示最終資料執行中參數的所有資料都已傳送。 它不會傳回 SQL_NEED_DATA。  
+4.  呼叫 [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 來指示最終資料執行中參數的所有資料都已傳送。 它不會傳回 SQL_NEED_DATA。  
   
 ## <a name="example"></a>範例  
  此範例顯示如何使用 SQLParamData 和 SQLPutData 讀取 SQL_LONG 變數字元資料。 IA64 不支援此範例。  
   
- 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫  (您可以從 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案) 首頁下載 AdventureWorks 範例資料庫)。此資料來源必須以作業系統提供的 ODBC 驅動程式為基礎 (驅動程式名稱為 "SQL Server")。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
+ 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫  (您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案) 首頁下載 AdventureWorks 範例資料庫)。此資料來源必須以作業系統提供的 ODBC 驅動程式為基礎 (驅動程式名稱為 "SQL Server")。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
@@ -227,6 +227,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [管理 text 和 image 資料行使用說明主題&#40;ODBC&#41;](http://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+ [管理 text 和 image 資料行使用說明主題&#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Analysis Services Server Management |Microsoft 文件
-ms.date: 05/02/2018
+title: SQL Server Analysis Services 伺服器管理 |Microsoft Docs
+ms.date: 11/15/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,25 +9,28 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 62c350b13db727b747fc4573b3bb634ac59256f9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 41c689b2dfb122b94204cfbb8d52f9f8e9a1a8fb
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015975"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700436"
 ---
-# <a name="analysis-services-server-management"></a>Analysis Services 伺服器管理
+# <a name="sql-server-analysis-services-server-management"></a>SQL Server Analysis Services 伺服器管理
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
+Azure Analysis services，請參閱[管理 Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-manage)。
 
   Analysis Services 的伺服器執行個體是一份**msmdsrv.exe**當做作業系統服務執行的可執行檔。 每一個執行個體與相同伺服器上的其他執行個體之間完全獨立，而且擁有它自己的組態設定、權限、通訊埠、啟動帳戶、檔案儲存體和伺服器模式屬性。  
   
- 每個執行個體執行以 Windows 服務 Msmdsrv.exe，在定義的登入帳戶的安全性內容中。  
+ Windows 服務 Msmdsrv.exe，在定義的登入帳戶的安全性內容中執行每個執行個體。  
   
 -   預設執行個體的服務名稱是 MSSQLServerOLAPService。  
   
 -   每個具名執行個體的服務名稱是 MSOLAP$ InstanceName。  
   
 > [!NOTE]  
->  如果安裝了多個執行個體，安裝程式會同時安裝重新導向程式服務，整合於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]瀏覽器服務。 重新導向程式服務會負責將用戶端導向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的適當具名執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務一律會在本機服務帳戶的安全性內容中執行，本機服務帳戶是 Windows 針對不會存取本機電腦外部資源的服務所使用的受限使用者帳戶。  
+>  如果已安裝多個執行個體，安裝程式也會安裝重新導向程式服務，整合了[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]瀏覽器服務。 重新導向程式服務會負責將用戶端導向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的適當具名執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務一律會在本機服務帳戶的安全性內容中執行，本機服務帳戶是 Windows 針對不會存取本機電腦外部資源的服務所使用的受限使用者帳戶。  
   
  多重執行個體表示您可以在相同硬體上安裝多個伺服器執行個體來進行擴充。 尤其對於 Analysis Services 而言，這也表示您可以在相同伺服器上安裝多個執行個體 (每個執行個體都設定為在特定模式下執行) 來支援不同的伺服器模式。  
   
@@ -40,9 +43,9 @@ ms.locfileid: "34015975"
  通常，您必須執行的大部分管理工作不會因模式而改變。 您身為 Analysis Services 系統管理員，可以使用相同的程序和指令碼來管理網路上的任何 Analysis Services 執行個體，不論其安裝方式為何。  
   
 > [!NOTE]  
->  例外狀況是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 部署的伺服器管理一定會在 SharePoint 伺服陣列的內容中進行。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 與其他伺服器模式不同之處在於它永遠都是單一執行個體，而且一定會透過 SharePoint 管理中心或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具來管理。 雖然可在 SQL Server Management Studio 或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中連接到 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]for SharePoint，但是不需要這樣做。 SharePoint 伺服器陣列包含的基礎結構會同步處理伺服器狀態及監視伺服器可用性。 使用其他工具可能會干擾這些作業。 如需有關[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]伺服器的管理，請參閱[Power Pivot for SharePoint ](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)。  
+>  例外狀況是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 部署的伺服器管理一定會在 SharePoint 伺服陣列的內容中進行。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 與其他伺服器模式不同之處在於它永遠都是單一執行個體，而且一定會透過 SharePoint 管理中心或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具來管理。 雖然可在 SQL Server Management Studio 或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中連接到 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]for SharePoint，但是不需要這樣做。 SharePoint 伺服器陣列包含的基礎結構會同步處理伺服器狀態及監視伺服器可用性。 使用其他工具可能會干擾這些作業。 如需詳細資訊[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]伺服器的管理，請參閱 < [Powerpivot for SharePoint ](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="common-server-management-topics"></a>常見的伺服器管理主題  
   
 |連結|工作描述|  
 |----------|----------------------|  

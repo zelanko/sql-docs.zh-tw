@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f473cb42230aec0b5e40fb59fe10b2f34013ba2f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 65ab4d5ebf1fbe64d3e85854df186d9ebe098e84
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985260"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600058"
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM&lt;結構&gt;。案例
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  因此，若要保護敏感性資料或個人資訊，您應該建構您的資料來源檢視來遮罩個人資訊，並授與**AllowDrillthrough**採礦結構或採礦模型權限時，才必要。  
   
 ## <a name="examples"></a>範例  
- 下列範例以採礦結構中，目標郵寄 」，此作業取決於[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]資料庫和相關聯的採礦模型。 如需詳細資訊，請參閱 < [83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
+ 下列範例以採礦結構中，目標郵寄 」，此作業取決於[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]資料庫和相關聯的採礦模型。 如需詳細資訊，請參閱 < [83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>範例 1：鑽研結構案例  
  下列範例會傳回採礦結構「目標郵寄」中，最舊的 500 位客戶的清單。 此查詢會傳回採礦模型中的所有資料行，但會將資料列限制為購買自行車的客戶，並以年齡加以排序。 您也可以編輯運算式清單，僅傳回您需要的資料行。  

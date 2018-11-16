@@ -5,8 +5,7 @@ ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
@@ -16,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcff6266a24602b0ce1f17818d1c4b0451b1adaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf061fc552a29730fb25a1fd36fb868efb031953
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830646"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512803"
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph 架構  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47830646"
 使用者可以建立一張圖表，每個資料庫。 圖形是節點和邊緣資料表的集合。 可在資料庫中，任何結構描述下建立節點或邊緣資料表，但它們都屬於一個邏輯的圖表。 節點資料表是類似的節點類型的集合。 比方說，Person 節點資料表保留屬於圖形的所有人員節點。 同樣地，邊緣資料表是邊緣的類似類型的集合。 例如，朋友邊緣資料表會保存將人員連接到另一個人的所有邊緣。 因為節點和邊緣會儲存在資料表中，節點或邊緣資料表才支援大部分的一般資料表上支援的作業。 
  
  
-![sql graph 架構](../../relational-databases/graphs/media/sql-graph-architecture.png "Sql 圖形資料庫架構")   
+![sql graph 架構](../../relational-databases/graphs/media/sql-graph-architecture.png "Sql 圖形資料庫架構")   
 
 圖 1: SQL Graph 資料庫架構
  
@@ -57,7 +56,7 @@ ms.locfileid: "47830646"
 
 [圖 2] 顯示節點和邊緣資料表儲存在資料庫中的方式。 
 
-![人員朋友表格](../../relational-databases/graphs/media/person-friends-tables.png "/people/person 節點和 friend 邊緣資料表")   
+![人員朋友表格](../../relational-databases/graphs/media/person-friends-tables.png "/people/person 節點和 friend 邊緣資料表")   
 
 圖 2： 節點和邊緣資料表表示法
 
@@ -110,7 +109,7 @@ ms.locfileid: "47830646"
 |graph_id_\<hex_string> |bigint |1  |內部`graph_id`資料行  |
 |$edge_id_\<hex_string> |NVARCHAR   |0  |外部`edge_id`資料行  |
 |from_obj_id_\<hex_string>  |INT    |1  |從節點內部 `object_id`  |
-|from_id_\<hex_string>  |bigint |1  |從節點的內部 `graph_id`  |
+|from_id_\<hex_string>  |bigint |1  |從節點內部 `graph_id`  |
 |$from_id_\<hex_string> |NVARCHAR   |0  |從節點的外部 `node_id`  |
 |to_obj_id_\<hex_string>    |INT    |1  |內部節點 `object_id`  |
 |to_id_\<hex_string>    |bigint |1  |內部節點 `graph_id`  |
@@ -130,7 +129,7 @@ ms.locfileid: "47830646"
 
 
 
-## <a name="transact-sql-reference"></a>TRANSACT-SQL 參考 
+## <a name="transact-sql-reference"></a>Transact-SQL 參考 
 了解[!INCLUDE[tsql-md](../../includes/tsql-md.md)]導入 SQL Server 和 Azure SQL Database 中的擴充功能，可讓建立和查詢圖表物件。 查詢語言擴充功能會協助查詢和周遊圖形，使用 ASCII 作品語法。
  
 ### <a name="data-definition-language-ddl-statements"></a>資料定義語言 (DDL) 陳述式
@@ -140,7 +139,7 @@ ms.locfileid: "47830646"
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|節點和邊緣資料表可以改變關聯式資料表，使用的相同方式`ALTER TABLE`。 使用者可以新增或修改使用者定義資料行、 索引或條件約束。 不過，改變內部圖形資料行，例如`$node_id`或`$edge_id`，將會產生錯誤。  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |使用者可以在虛擬資料行和節點和邊緣資料表中的 使用者定義資料行上建立索引。 支援所有的索引類型，包括叢集和非叢集資料行存放區索引。  |
 |建立邊緣條件約束    |[邊緣條件約束&#40;Transact SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |使用者可以現在建立邊緣條件約束，強制執行特定的語意的 edge 資料表上，同時又維持資料完整性  |
-|DROP TABLE |[卸除資料表&#40;Transact SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |節點和邊緣資料表卸除相同的方式，使用關聯式資料表`DROP TABLE`。 不過，在此版本中，有任何條件約束，以確保沒有邊緣指向已刪除的節點，並不支援的邊緣節點或節點資料表的刪除時的串聯的刪除。 我們建議如果除節點資料表時，使用者會捨棄任何連接到該節點資料表，以手動方式來維護圖形的完整性中節點的邊緣。  |
+|DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |節點和邊緣資料表卸除相同的方式，使用關聯式資料表`DROP TABLE`。 不過，在此版本中，有任何條件約束，以確保沒有邊緣指向已刪除的節點，並不支援的邊緣節點或節點資料表的刪除時的串聯的刪除。 我們建議如果除節點資料表時，使用者會捨棄任何連接到該節點資料表，以手動方式來維護圖形的完整性中節點的邊緣。  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>資料操作語言 (DML) 陳述式

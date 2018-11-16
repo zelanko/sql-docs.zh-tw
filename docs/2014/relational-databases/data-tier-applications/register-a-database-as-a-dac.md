@@ -20,12 +20,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d71b277f3717a0406f2f91fbce596ea90389b8da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c5bf53045abe0f93e2ff1e07ec17d31f7d58248b
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067058"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814071"
 ---
 # <a name="register-a-database-as-a-dac"></a>將資料庫註冊為 DAC
   使用任何一種**註冊資料層應用程式精靈**或 Windows PowerShell 指令碼來建立資料層應用程式 (DAC) 定義，以便描述現有的資料庫中的物件，並註冊 DAC 定義中的`msdb`系統資料庫 (**主要**在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。  
@@ -76,7 +76,7 @@ ms.locfileid: "48067058"
 ##  <a name="Set_properties"></a> 設定屬性頁面  
  使用此頁面來指定 DAC 層級屬性，例如應用程式名稱和版本。  
   
- **應用程式名稱** - 指定用來識別 DAC 定義之名稱的字串，此欄位已經填入資料庫名稱。  
+ **應用程式名稱** -指定用來識別 DAC 定義，欄位名稱的字串是已填入資料庫名稱。  
   
  **版本** - 可識別 DAC 版本的數值。 DAC 版本會用於 Visual Studio 中，以便識別開發人員正在處理的 DAC 版本。 在部署 DAC 時，版本會儲存在`msdb`資料庫和更新版本底下檢視**資料層應用程式**中的節點[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   

@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 helpviewer_keywords:
 - XQuery
@@ -18,19 +17,19 @@ ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6125bdcff27bc79d8eb850e7baafdd872342adf6
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 3e1f2196b8ba58af2f13dd1b022d62655f2b0aab
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119526"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672257"
 ---
 # <a name="xquery-language-reference-sql-server"></a>Xquery 語言參考 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[tsql](../includes/tsql-md.md)] 支援用於查詢之 XQuery 語言的子集**xml**資料型別。 此 XQuery 實作是與 XQuery 的 July 2004 Working Draft 合作。 該語言是由 World Wide Web Consortium (W3C) 以及所有主要資料庫廠商，還有 Microsoft 聯合開發。 因為 W3C 規格可能會在成為 W3C 建議之前會歷經數次修改，所以此實行可能會跟最終的建議不同。 此主題說明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援之 XQuery 子集的語意及語法。  
   
- 如需詳細資訊，請參閱 < [W3C XQuery 1.0 語言規格](http://go.microsoft.com/fwlink/?LinkId=48846)。  
+ 如需詳細資訊，請參閱 < [W3C XQuery 1.0 語言規格](https://go.microsoft.com/fwlink/?LinkId=48846)。  
   
  XQuery 是可查詢結構化或半結構化 XML 資料的語言。 具有**xml**資料類型中提供的支援[!INCLUDE[ssDE](../includes/ssde-md.md)]，文件可以儲存在資料庫，然後使用 XQuery 進行查詢。  
   
@@ -47,7 +46,7 @@ SELECT @x.query('/ROOT/a')
  在下列範例中，查詢針對 Instructions 資料行指定**xml** AdventureWorks 資料庫中 ProductModel 資料表中的型別。  
   
 ```sql
-SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
+SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
     /AWMI:root/AWMI:Location[@LocationID=10]  
 ') as Result   
 FROM  Production.ProductModel  
@@ -67,7 +66,7 @@ WHERE ProductModelID=7
 |||  
   
 > [!NOTE]  
->  本章節的組織是以 World Wide Web Consortium (W3C) XQuery Working Draft 規格為依據。 本章節中提供的部分圖表即採自上述規格。 本章節會比較 Microsoft XQuery 實作與 W3C 規格，描述 Microsoft XQuery 跟 W3C 的不同之處，以及指出不支援的 W3C 功能。 W3C 規格將會位於[ http://www.w3.org/TR/2004/WD-xquery-20040723 ](http://go.microsoft.com/fwlink/?LinkId=48846)。  
+>  本章節的組織是以 World Wide Web Consortium (W3C) XQuery Working Draft 規格為依據。 本章節中提供的部分圖表即採自上述規格。 本章節會比較 Microsoft XQuery 實作與 W3C 規格，描述 Microsoft XQuery 跟 W3C 的不同之處，以及指出不支援的 W3C 功能。 W3C 規格將會位於[ https://www.w3.org/TR/2004/WD-xquery-20040723 ](https://go.microsoft.com/fwlink/?LinkId=48846)。  
   
 ## <a name="in-this-section"></a>本節內容  
   

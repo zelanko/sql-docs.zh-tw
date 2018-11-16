@@ -23,12 +23,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 081a43863385ced49fa1863c4667c8b435be6f99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d44d8031daaac656cb99a7477991dc6c30ce864
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698426"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666507"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>系統預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47698426"
   
 |類別目錄|描述|  
 |--------------|-----------------|  
-|[作用中異地複寫預存程序](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|用來管理 Azure SQL Database 中的作用中異地複寫組態管理|  
+|[作用中異地複寫預存程序](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|用來管理 Azure SQL Database 中的作用中異地複寫組態管理|  
 |[目錄預存程序](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|用來實作 ODBC 資料字典功能，以及隔離 ODBC 應用程式，不讓基礎系統資料表受到變更。|  
 |[異動資料擷取預存程序](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|用來啟用、停用或報告異動資料擷取物件。|  
 |[資料指標預存程序](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|用來實作游標變數功能。|  
@@ -48,7 +48,7 @@ ms.locfileid: "47698426"
 |[Database Mail 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體內，用來執行電子郵件作業。|  
 |[資料庫維護計畫預存程序](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)|用來設定管理資料庫效能所需的核心維護工作。|  
 |[分散式的查詢預存程序](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|用來實作和管理分散式查詢。|  
-|[Filestream 和 FileTable 預存程序&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|用來設定與管理 FILESTREAM 和 FileTable 功能。|  
+|[Filestream 和 FileTable 預存程序&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|用來設定與管理 FILESTREAM 和 FileTable 功能。|  
 |[防火牆規則預存程序&#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md)|用來設定 Azure SQL Database 防火牆。|  
 |[全文檢索搜尋預存程序](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)|用來實作和查詢全文檢索索引。|  
 |[一般擴充預存程序](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)|用來針對各種維護活動，提供從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體到外部程式的介面。|  
@@ -56,16 +56,16 @@ ms.locfileid: "47698426"
 |[管理資料倉儲預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|用來設定管理資料倉儲。|  
 |[OLE Automation 預存程序](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|用來啟用標準 Automation 物件，以供標準 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次使用。|  
 |[以原則為基礎的管理預存程序](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|用於以原則為基礎的管理。|  
-|[PolyBase 預存程序](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|新增或移除 PolyBase 向外延展群組中的電腦。|  
+|[PolyBase 預存程序](https://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|新增或移除 PolyBase 向外延展群組中的電腦。|  
 |[查詢存放區預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|用來微調效能。|  
 |[複寫預存程序](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|用來管理複寫。|  
 |[安全性預存程序](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)|用來管理安全性。|  
-|[快照集備份的預存程序](http://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|用來刪除 FILE_SNAPSHOT 備份，以及其所有快照集，或刪除的個別備份檔案快照集。|  
-|[空間索引預存程序](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|用來分析及改善的空間索引編製索引的效能。|  
+|[快照集備份的預存程序](https://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|用來刪除 FILE_SNAPSHOT 備份，以及其所有快照集，或刪除的個別備份檔案快照集。|  
+|[空間索引預存程序](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|用來分析及改善的空間索引編製索引的效能。|  
 |[SQL Server Agent 預存程序](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)|由 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 用來監視效能及活動。|  
 |[SQL Server Profiler 預存程序](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 用來管理已排程和事件驅動的活動。|  
 |[Stretch Database 預存程序](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|用來管理 stretch database。|  
-|[時態表的預存程序](http://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|使用時態表|  
+|[時態表的預存程序](https://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|使用時態表|  
 |[XML 預存程序](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)|用於 XML 文字管理。|  
   
 > [!NOTE]  

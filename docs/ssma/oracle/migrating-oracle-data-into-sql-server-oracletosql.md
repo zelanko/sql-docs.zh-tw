@@ -13,23 +13,23 @@ ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: aacffa7cd65716969eae08488314eed08d4691e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3b69ae2b59b3f82025404dd575f0602ea8c02a7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821206"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668217"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>將 Oracle 資料移轉到 SQL Server (OracleToSQL)
 您已成功同步處理與已轉換的物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以將資料從 Oracle 移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 > [!IMPORTANT]  
-> 如果伺服器端資料移轉引擎所使用的引擎，然後，您可以將移轉資料之前您必須安裝 SSMA Oracle 延伸模組組件和執行 SSMA 的電腦上的 Oracle 提供者。 也必須執行的 SQL Server Agent 服務。 如需如何安裝此延伸模組組件的詳細資訊，請參閱[安裝伺服器元件 (OracleToSQL)](http://msdn.microsoft.com/33070e5f-4e39-4b70-ae81-b8af6e4983c5)  
+> 如果伺服器端資料移轉引擎所使用的引擎，然後，您可以將移轉資料之前您必須安裝 SSMA Oracle 延伸模組組件和執行 SSMA 的電腦上的 Oracle 提供者。 也必須執行的 SQL Server Agent 服務。 如需如何安裝此延伸模組組件的詳細資訊，請參閱[安裝伺服器元件 (OracleToSQL)](https://msdn.microsoft.com/33070e5f-4e39-4b70-ae81-b8af6e4983c5)  
   
 ## <a name="setting-migration-options"></a>移轉選項的設定  
 然後再移轉資料到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，檢閱中的專案移轉選項**專案設定** 對話方塊。  
   
--   使用此對話方塊中，您可以設定選項，例如移轉批次大小、 資料表鎖定、 條件約束檢查，null 值的處理和身分識別值的處理。 如需將專案移轉設定的詳細資訊，請參閱[專案設定 （移轉） (OracleToSQL)](http://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60)。  
+-   使用此對話方塊中，您可以設定選項，例如移轉批次大小、 資料表鎖定、 條件約束檢查，null 值的處理和身分識別值的處理。 如需將專案移轉設定的詳細資訊，請參閱[專案設定 （移轉） (OracleToSQL)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60)。  
   
 -   **移轉引擎**中**專案設定**對話方塊，可讓使用者能夠執行使用的資料移轉引擎的兩種類型的移轉程序：  
   
@@ -94,9 +94,9 @@ ms.locfileid: "47821206"
   
 5.  在 [**連接到 Oracle** ] 對話方塊中，輸入連線認證，然後再按一下**Connect**。 如需有關如何連接至 Oracle 的詳細資訊，請參閱[連接到 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
   
-    連接到目標資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，輸入中的連接認證**連接到 SQL Server**  對話方塊中，然後按一下**Connect**。 如需有關連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[連接到 SQL Server](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
+    連接到目標資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，輸入中的連接認證**連接到 SQL Server**  對話方塊中，然後按一下**Connect**。 如需有關連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[連接到 SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
   
-    訊息會出現在**輸出**窗格。 移轉完成時，**資料移轉報告**隨即出現。 如果未移轉任何資料，按一下包含錯誤，資料列，然後按一下**詳細資料**。 當您完成報表時，請按一下**關閉**。 如需有關資料移轉報告的詳細資訊，請參閱[（SSMA 常見） 的資料移轉報告](http://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    訊息會出現在**輸出**窗格。 移轉完成時，**資料移轉報告**隨即出現。 如果未移轉任何資料，按一下包含錯誤，資料列，然後按一下**詳細資料**。 當您完成報表時，請按一下**關閉**。 如需有關資料移轉報告的詳細資訊，請參閱[（SSMA 常見） 的資料移轉報告](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
 > 做為目標資料庫使用 SQL Express 版本時，允許只能用戶端端資料移轉，並不支援伺服器端資料移轉。  

@@ -10,12 +10,12 @@ ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8419990abe0870d248ad403fc4d802b1775fe3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a53992485c98e5f4978ca0d6bcdba2747301702f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678956"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659147"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA 主控台 (DB2ToSQL) 中的命令列選項
 Microsoft 為您提供執行及控制 SSMA 活動的一組健全命令列選項。 後續章節將詳細說明相同。  
@@ -120,7 +120,7 @@ Microsoft 為您提供執行及控制 SSMA 活動的一組健全命令列選項�
 ### <a name="secure-password-option-psecurepassword"></a>安全的密碼選項:-p/securepassword  
 這個選項表示伺服器連接的加密的密碼。 不同於其他所有選項： 選項或都不會執行任何指令碼有助於移轉相關的任何活動，但可協助管理移轉專案中使用的伺服器連接的密碼加密。  
   
-您無法輸入任何其他選項和密碼，做為命令列參數。 否則，它會導致錯誤。 如需詳細資訊，請參閱[管理密碼](http://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94)一節。  
+您無法輸入任何其他選項和密碼，做為命令列參數。 否則，它會導致錯誤。 如需詳細資訊，請參閱[管理密碼](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94)一節。  
   
 支援下列子選項`–p/securepassword`:  
   

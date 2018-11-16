@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,18 +14,18 @@ ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36f6eec4b8203848dc6f4b8c99597f22c9cedeab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5efa6587ade3a15ce4b45b7247da1c3a896f69ee
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625876"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558525"
 ---
 # <a name="customization-file-sql-section"></a>自訂檔案 SQL 區段
 **Sql**區段可以包含新的 SQL 字串，它會取代用戶端命令字串。 如果沒有區段中的 SQL 字串，將會忽略一節。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  新的 SQL 字串可能*參數化*。 也就是中的參數**sql**區段 SQL 字串 (指定的 '？ ' 字元) 中對應的引數所能取代*識別碼*用戶端的命令字串中 (所指定以逗號分隔清單在括號中）。 識別項和引數清單的行為類似函式呼叫。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "47625876"
   
  如果新的 SQL 陳述式字串不是有效的然後執行陳述式會失敗。 用戶端會有效地略過該參數。 您可以執行刻意為 「 關閉 」 所有的用戶端 SQL 命令藉由指定：  
   
-```  
+```console
 [SQL default]   
 SQL = " "  
 ```  

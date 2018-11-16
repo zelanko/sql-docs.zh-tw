@@ -21,12 +21,12 @@ ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6cb75ec737a8342f284179b37bbcd09d1eec335
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 049f3d0201957cfee5d7bc88301c6af97c0b6dcb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654146"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660678"
 ---
 # <a name="data-tier-application-views---dbosysdacinstances"></a>資料層應用程式檢視-dbo.sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,6 +53,6 @@ ms.locfileid: "47654146"
   
 ## <a name="see-also"></a>另請參閱  
  [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [資料層應用程式檢視&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
+ [資料層應用程式檢視&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
   
   

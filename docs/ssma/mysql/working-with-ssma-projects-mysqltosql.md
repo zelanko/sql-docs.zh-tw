@@ -15,12 +15,12 @@ ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f29b13b47c6f52522606bb8bc4a1aeff6b642145
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 518f899118d5a7d2dce4f56d185fce9d5b1e47df
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641666"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661667"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>使用 SSMA 專案 (MySQLToSQL)
 若要將 MySQL 資料庫移轉至 SQL Server 或 SQL Azure，您必須先建立 SSMA 專案。 專案是檔案，其中包含下列資訊：  
@@ -54,7 +54,7 @@ SSMA 會包含數項設定將轉換和載入資料庫、 移轉資料和同步�
   
 -   設定同步處理到 SQL Server 的相關資訊，請參閱[專案設定&#40;同步處理&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)。  
   
--   GUI 設定的相關資訊，請參閱[專案設定 (GUI) （SSMA 常見）](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)。  
+-   GUI 設定的相關資訊，請參閱[專案設定 (GUI) （SSMA 常見）](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)。  
   
 -   如需資料類型對應設定的資訊，請參閱[專案設定&#40;類型對應&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)。  
   

@@ -17,12 +17,12 @@ ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3481d9b7c186f3492e403b6881f4ffafbe90912b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2b4df18cf783e23792b51fb2c437b82c6a8ec52
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787279"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606208"
 ---
 # <a name="openschema-method"></a>OpenSchema 方法
 從提供者取得資料庫結構描述資訊。  
@@ -62,7 +62,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 >  **遠端資料服務使用量** **OpenSchema**方法並不適用於用戶端[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。  
   
 > [!NOTE]
->  在 Visual Basic 中，有四位元組不帶正負號的整數 (DBTYPE UI4) 中的資料行**資料錄集**傳回**OpenSchema**方法**連接**物件無法要相較於其他變數。 如需 OLE DB 資料類型的詳細資訊，請參閱[OLE DB (OLE DB) 中的資料型別](http://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a)並[附錄 a： 資料類型](http://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)Microsoft OLE DB 程式設計人員參考中。  
+>  在 Visual Basic 中，有四位元組不帶正負號的整數 (DBTYPE UI4) 中的資料行**資料錄集**傳回**OpenSchema**方法**連接**物件無法要相較於其他變數。 如需 OLE DB 資料類型的詳細資訊，請參閱[OLE DB (OLE DB) 中的資料型別](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a)並[附錄 a： 資料類型](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)Microsoft OLE DB 程式設計人員參考中。  
   
 > [!NOTE]
 >  **Visual C/c + + 使用者**時不使用用戶端資料指標，擷取 「 ORDINAL_POSITION 」 在 ADO 中的資料行結構描述的傳回類型 VT_R8 MDAC 2.7、 MDAC 2.8 和 Windows Data Access Components (Windows DAC) 6.0 中，同時使用 MDAC 中的型別中的 variant2.6 為 VT_I4。 撰寫的 MDAC 2.6 尋找變數的唯一程式傳回的型別 VT_I4 得到為零，如果不需要修改下 MDAC 2.7、 MDAC 2.8 和 Windows DAC 6.0 執行每個序數。 因為傳回 OLE DB 資料類型為 DBTYPE_UI4，進行這項變更，並帶正負號的 VT_I4 類型中沒有足夠的空間，以包含所有可能的值，而不可能被截斷發生，因而導致資料遺失。  

@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM&lt;模型&gt;。案例 (DMX) |Microsoft 文件
+title: SELECT FROM&lt;模型&gt;。案例 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bba9e354eb1925ed4175f720f8008550364dc1a5
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: 4f65aa4dc64e795235286eccd9f3283216ba6f4f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842801"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604229"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM&lt;模型&gt;。案例 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34842801"
 > [!NOTE]  
 >  在資料採礦延伸模組 (DMX) 中，唯有建立模型時才能啟用鑽研。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，將鑽研加入到現有的模型，但是在檢視或查詢案例之前，必須先重新處理模型。  
   
- 如需如何啟用鑽研的詳細資訊，請參閱[CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md)， [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)，和[ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)。  
+ 如需如何啟用鑽研的詳細資訊，請參閱[CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md)， [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)，以及[ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -55,14 +55,14 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  選擇性。 傳回純量值的運算式。  
   
 ## <a name="remarks"></a>備註  
- 如果有同時在採礦模型和採礦結構上啟用鑽研，對於模型和結構具有鑽研權限之角色成員的使用者可以存取不包含在採礦模型中的採礦結構資料行。 因此，若要保護敏感性資料或個人資訊，您應該建構您的資料來源檢視來遮罩個人資訊，並授與**AllowDrillthrough**只在必要時在採礦結構上的權限。  
+ 如果有同時在採礦模型和採礦結構上啟用鑽研，對於模型和結構具有鑽研權限之角色成員的使用者可以存取不包含在採礦模型中的採礦結構資料行。 因此，若要保護敏感性資料或個人資訊，您應該建構您的資料來源檢視來遮罩個人資訊，並授與**AllowDrillthrough**會在必要時，只有在採礦結構上的權限。  
   
- [延隔&#40;DMX&#41; ](../dmx/lag-dmx.md)函式可以搭配時間序列模型用來傳回或篩選每個案例與初始時間之間的延遲時間。  
+ [Lag &#40;DMX&#41; ](../dmx/lag-dmx.md)函式可以搭配時間序列模型，傳回或篩選每個案例與初始時間之間的延遲時間。  
   
- 使用[IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md)函式在**其中**子句會傳回與結構描述資料列集之 NODE_UNIQUE_NAME 資料行所指定的節點相關聯的案例。  
+ 使用[IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md)函式中**位置**子句會傳回與結構描述資料列集之 NODE_UNIQUE_NAME 資料行所指定的節點相關聯的案例。  
   
 ## <a name="examples"></a>範例  
- 下列範例以採礦結構目標郵寄 」 為基礎[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]資料庫和其相關聯的採礦模型。 如需詳細資訊，請參閱[基本資料採礦教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
+ 下列範例以採礦結構上目標郵寄 」，此作業取決於[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]資料庫和其相關聯的採礦模型。 如需詳細資訊，請參閱 < [83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>範例 1：鑽研模型案例和結構資料行  
  下列範例會傳回用於測試「目標郵寄」模型之所有案例的資料行。 如果有建置模型的採礦結構不包含鑑效組測試資料集，此查詢會傳回 0 個案例。 您可以使用運算式清單，僅傳回您需要的資料行。  

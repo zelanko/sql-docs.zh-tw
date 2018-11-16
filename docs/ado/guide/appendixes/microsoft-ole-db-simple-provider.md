@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,20 +15,20 @@ ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd22d13a0fe656a7d176d6fb9fd2a97e3ce8d3b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d67bcc157d069d180a7fd8295ece9f2139d5499c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673528"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604638"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 簡單提供者概觀
-Microsoft OLE DB 簡單提供者 (OSP) 允許存取的提供者已經使用任何資料的 ADO [OLE DB 簡單提供者 (OSP) 工具組](http://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)。 簡單的提供者被用來存取需要唯一基本的 OLE DB 支援，例如記憶體中陣列或 XML 文件的資料來源。
+Microsoft OLE DB 簡單提供者 (OSP) 允許存取的提供者已經使用任何資料的 ADO [OLE DB 簡單提供者 (OSP) 工具組](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)。 簡單的提供者被用來存取需要唯一基本的 OLE DB 支援，例如記憶體中陣列或 XML 文件的資料來源。
 
 ## <a name="connection-string-parameters"></a>連接字串參數
  若要連接到 OLE DB 範例提供者 DLL，請設定*提供者*引數[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性：
 
-```
+```vb
 MSDAOSP
 ```
 
@@ -39,7 +39,7 @@ MSDAOSP
 ## <a name="typical-connection-string"></a>一般連接字串
  此提供者的一般連接字串是：
 
-```
+```vb
 "Provider=MSDAOSP;Data Source=serverName"
 ```
 
@@ -55,26 +55,26 @@ MSDAOSP
 
  **Portfolio.xml**用在下列範例中的檔案包含下列樹狀結構：
 
-```
+```console
 Portfolio
-   Stock
-      Shares
-      Symbol
-      Price
-      Info
-         Company Name
-         WebSite
+   Stock
+      Shares
+      Symbol
+      Price
+      Info
+         Company Name
+         WebSite
 ```
 
  XML DSO 會使用內建的啟發學習法來將 XML 樹狀結構中的節點轉換成階層式的章節**資料錄集**。
 
  使用這些內建的啟發學習法，XML 樹狀結構會轉換成兩個層級階層**資料錄集**的格式如下：
 
-```
+```console
 Parent Recordset
 Shares, Symbol, Price, $Text
-   Child Recordset
-      Company Name, WebSite, $Text
+   Child Recordset
+      Company Name, WebSite, $Text
 ```
 
  請注意 公事包 和 資訊標記不會出現在階層**資料錄集**。 如需 XML DSO 如何將 XML 樹狀結構轉換為階層式的說明**資料錄集**，請參閱下列規則。 在下一節中討論 $Text 資料行。
@@ -100,7 +100,7 @@ Shares, Symbol, Price, $Text
 
  程式碼所需的建構**資料錄集**如下所示：
 
-```
+```vb
 Dim adoConn as ADODB.Connection
 Dim adoRS as ADODB.Recordset
 
@@ -108,15 +108,15 @@ Set adoRS = New ADODB.Connection
 Set adoRS = New ADODB.Recordset
 
 adoConn.Open "Provider=MSDAOSP; Data Source=MSXML2.DSOControl.2.6;"
-adoRS.Open "http://WebServer/VRoot/portfolio.xml, adoConn
+adoRS.Open "https://WebServer/VRoot/portfolio.xml, adoConn
 ```
 
 > [!NOTE]
 >  使用四個不同的命名慣例，可以指定資料檔案的路徑。
 
-```
+```vb
 'HTTP://
-adoRS.Open "http://WebServer/VRoot/portfolio.xml", adoConn
+adoRS.Open "https://WebServer/VRoot/portfolio.xml", adoConn
 'FILE://
 adoRS.Open "file:/// C:\\Directory\\portfolio.xml", adoConn
 'UNC Path
@@ -137,14 +137,14 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 
 -   XMLDSO 將額外的資料行的資料 ($Text) 加入至每個**資料錄集**階層架構中。
 
- 如需有關 OLE DB 簡單提供者的詳細資訊，請參閱 <<c0> [ 建置簡單的提供者](http://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)。
+ 如需有關 OLE DB 簡單提供者的詳細資訊，請參閱 <<c0> [ 建置簡單的提供者](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)。
 
 ## <a name="code-example"></a>程式碼範例
  下列 Visual Basic 程式碼示範如何開啟任意的 XML 檔案，建構階層式**Recordset**，並以遞迴方式撰寫的每個每一筆記錄**資料錄集**至偵錯視窗。
 
  以下是簡單的 XML 檔案，其中包含股票報價。 下列程式碼會使用此檔案以建構兩個層級階層**資料錄集**。
 
-```
+```xml
 <portfolio>
    <stock>
       <shares>100</shares>
@@ -152,7 +152,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
       <price>$70.00</price>
       <info>
          <companyname>Microsoft Corporation</companyname>
-         <website>http://www.microsoft.com</website>
+         <website>https://www.microsoft.com</website>
       </info>
    </stock>
    <stock>
@@ -161,7 +161,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
       <price>$107.00</price>
       <info>
          <companyname>Apple Computer, Inc.</companyname>
-         <website>http://www.apple.com</website>
+         <website>https://www.apple.com</website>
       </info>
    </stock>
    <stock>
@@ -170,7 +170,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
       <price>$50.00</price>
       <info>
          <companyname>Dell Corporation</companyname>
-         <website>http://www.dell.com</website>
+         <website>https://www.dell.com</website>
       </info>
     </stock>
     <stock>
@@ -179,7 +179,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
        <price>$115.00</price>
        <info>
           <companyname>Intel Corporation</companyname>
-          <website>http://www.intel.com</website>
+          <website>https://www.intel.com</website>
        </info>
    </stock>
 </portfolio>
@@ -187,7 +187,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 
  以下是兩個 Visual Basic sub 程序。 建立第一個**資料錄集**並將它傳遞給*WalkHier* sub 程序中，遞迴會逐步引導，階層中向下，撰寫每個**欄位**中每個中的每一筆記錄**資料錄集**至偵錯視窗。
 
-```
+```vb
 Private Sub BrowseHierRecordset()
 ' Add ADO 2.7 or later to Project/References
 ' No need to add MSXML2, ADO just passes the ProgID through to the OSP.
@@ -201,7 +201,7 @@ Private Sub BrowseHierRecordset()
     Set adoChildRS = ADODB.Recordset
 
     adoConn.Open "Provider=MSDAOSP; Data Source=MSXML2.DSOControl.2.6;"
-    adoRS.Open "http://bwillett3/Kowalski/portfolio.xml", adoConn
+    adoRS.Open "https://bwillett3/Kowalski/portfolio.xml", adoConn
 
     Dim iLevel As Integer
     iLevel = 0

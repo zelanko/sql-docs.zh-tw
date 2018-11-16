@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,22 +14,22 @@ ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aaeedb6dffb992ac940eebd450c63d33badb299d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e936b6b68a67c1616a00d38f6d84776d44ef327
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845276"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559431"
 ---
 # <a name="rds-scenario"></a>RDS 案例
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  通訊錄應用程式會示範如何使用遠端資料服務 (RDS) 來建置簡單的資料感知的 Web 應用程式的案例 — 企業線上通訊錄。 此案例適用於 Microsoft Visual Basic Scripting Edition (VBScript) COM 程式設計人員想要了解如何使用資料感知的 ActiveX 控制項有了 RDS，且較有經驗的軟體開發人員想要建置以資料為中心的 Web 應用程式。  
   
  此案例假設您知道如何使用 ActiveX 控制項的基本 HTML 配置標記、 使用 DHTML 資料繫結技術和程式。  
   
- 如果您已安裝 SDK，就可以找到通訊錄範例應用程式的完整原始程式碼位於 samples\dataaccess\rds\AddressBook\AddressBook.asp SDK 目錄中。 若要檢視的通訊錄案例，請在 Internet Explorer 4.0 或更新版本中，輸入**http://*webserver*/RDS/AddressBook/AddressBook.asp**位置*webserver*是指定的名稱您的 Windows NT 4.0 或 Windows 2000 Web 伺服器電腦執行 Internet Information Services (IIS) 和 ASP。  
+ 如果您已安裝 SDK，就可以找到通訊錄範例應用程式的完整原始程式碼位於 samples\dataaccess\rds\AddressBook\AddressBook.asp SDK 目錄中。 若要檢視的通訊錄案例，請在 Internet Explorer 4.0 或更新版本中，輸入**https://*webserver*/RDS/AddressBook/AddressBook.asp**其中*webserver*名稱提供給 Windows NT 4.0 或 Windows 2000 Web 伺服器電腦正在執行 Internet Information Services (IIS) 和 ASP。  
   
 ## <a name="introduction-to-address-book"></a>簡介通訊錄  
  通訊錄範例應用程式提供一個簡單線上通訊錄，您可以使用透過內部網路發佈的可搜尋的目錄。 通訊錄經過設計，因此使用者可以要求員工的相關資訊的一或多個欄位中輸入搜尋字串。 若要顯示的遠端資料服務的基本功能，範例應用程式刻意保持小型、 最小數目的物件和搜尋欄位。  

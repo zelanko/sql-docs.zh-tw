@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b6c57b37948110bca985994686e43f83de6e30b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce757524bd43c403e89aaa1ebf0461c8e31ff381
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595396"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663407"
 ---
 # <a name="running-stored-procedures---call-stored-procedures"></a>執行預存程序 - 呼叫預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47595396"
   
 2.  呼叫[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)每個輸入、 輸入/輸出和輸出參數，以及程序傳回值 （如果有的話）。  
   
-3.  執行陳述式搭配[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)。  
+3.  執行陳述式搭配[SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)。  
   
 > [!NOTE]  
 >  如果應用程式使用 Transact-SQL EXECUTE 語法 (相對於 ODBC CALL 逸出序列) 來提交程序，則 SQL Server ODBC 驅動程式會將程序呼叫當做 SQL 陳述式 (而不是 RPC) 傳遞到 SQL Server。 此外，如果使用 Transact-SQL EXECUTE 陳述式，則不會傳回輸出參數。  

@@ -18,12 +18,12 @@ ms.assetid: 7a656644-2154-419f-9787-99877f597770
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ced27995713e0863bc95ab24145fef745b52b20f
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 825e823fb8e354ff7af37505f33ffa5561cf4fb7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216406"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657098"
 ---
 # <a name="numberofflags-property-clientnetworkprotocol-class"></a>NumberOfFlags 屬性 (ClientNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,6 +46,6 @@ object.NumberofFlags [= value]
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定用戶端通訊協定](http://technet.microsoft.com/library/ms181035.aspx)  
+ [設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

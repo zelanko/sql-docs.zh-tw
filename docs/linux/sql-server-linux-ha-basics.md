@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b33acbcf74857cd6a2def74f3596e3dda2a034a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 880ccf036a12d5cc8e7e2bd56aa3bbcc58a2984f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720866"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665669"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 部署的 SQL Server 可用性基本概念
 
@@ -77,7 +77,7 @@ Samba，也就是伺服器訊息區 (SMB) 的 Linux 變體，也可用來建立�
 
 也可以使用以 Windows 為基礎的 SMB 共用;以 Linux 為基礎，只要 Samba 用戶端部分已正確設定主控您建立的 Linux 伺服器上不需要 SMB 共用[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]和共用有正確的存取權。 對於混合式環境中，這會是一種方法運用現有的基礎結構以 Linux 為基礎[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]部署。
 
-很重要的一點是，Samba 部署的版本應該是 SMB 3.0 相容。 當已加入 SMB 支援[!INCLUDE[sssql11-md](../includes/sssql11-md.md)]，它必須支援 SMB 3.0 的所有共用。 如果使用 Samba 共用並不是 Windows Server，Samba 為基礎的共用應該使用 Samba 4.0 或更新版本，並在理想情況下 4.3 或更新版本，支援 SMB 3.1.1。 理想的 SMB 和 Linux 上的資訊來源是[SMB3 中 Samba](http://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf)。
+很重要的一點是，Samba 部署的版本應該是 SMB 3.0 相容。 當已加入 SMB 支援[!INCLUDE[sssql11-md](../includes/sssql11-md.md)]，它必須支援 SMB 3.0 的所有共用。 如果使用 Samba 共用並不是 Windows Server，Samba 為基礎的共用應該使用 Samba 4.0 或更新版本，並在理想情況下 4.3 或更新版本，支援 SMB 3.1.1。 理想的 SMB 和 Linux 上的資訊來源是[SMB3 中 Samba](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf)。
 
 最後，使用網路檔案系統 (NFS) 共用是一個選項。 使用 NFS 不是以 Windows 為基礎的部署選項[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]，且僅用於以 Linux 為基礎的部署。
 
@@ -117,7 +117,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **防火牆文件：**
--   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>安裝[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]套件的可用性
@@ -156,7 +156,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 
 Ubuntu 沒有可用性的指南。
 
-如需整個堆疊的詳細資訊，請參閱官方[Pacemaker 文件頁面](http://clusterlabs.org/doc/)Clusterlabs 站台上。
+如需整個堆疊的詳細資訊，請參閱官方[Pacemaker 文件頁面](https://clusterlabs.org/doc/)Clusterlabs 站台上。
 
 ### <a name="pacemaker-concepts-and-terminology"></a>Pacemaker 概念與術語
 本節說明常見的概念和術語的 Pacemaker 實作。
@@ -208,13 +208,13 @@ Pacemaker 叢集的記錄檔位置是根據散發而有所不同。
 本章節將討論規劃 Pacemaker 叢集的重點。
 
 ### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>適用於虛擬化以 Linux 為基礎的 Pacemaker 叢集 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
-使用虛擬機器來部署以 Linux 為基礎[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Ag 和 Fci 的部署都會受到與以 Windows 為基礎的與其相同的規則。 沒有一組基本的規則來支援虛擬化[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]由 Microsoft 提供的部署[Microsoft 支援知識庫 956893](https://support.microsoft.com/en-us/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment)。 不同的 hypervisor，例如 Microsoft 的 HYPER-V 和 VMware ESXi 可能除此之外，，有不同的變異數，因為平台本身的差異。
+使用虛擬機器來部署以 Linux 為基礎[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Ag 和 Fci 的部署都會受到與以 Windows 為基礎的與其相同的規則。 沒有一組基本的規則來支援虛擬化[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]由 Microsoft 提供的部署[Microsoft 支援知識庫 956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment)。 不同的 hypervisor，例如 Microsoft 的 HYPER-V 和 VMware ESXi 可能除此之外，，有不同的變異數，因為平台本身的差異。
 
 說到 Ag 和 Fci 下虛擬化，請確定指定的 Pacemaker 叢集的節點，設定反親和性。 當設定為高可用性，在 AG 或 FCI 組態中，裝載的 Vm[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]應該永遠不會在同一台 hypervisor 主機上執行。 比方說，如果部署兩個節點 FCI 時，那里需要要*至少*三個 hypervisor 主機，因此，某處的其中一個 Vm 裝載一個節點移發生主機故障時，特別是當使用功能像 Live移轉或 vMotion。
 
 如需詳細資訊，請參閱：
 -   Hyper V 文件 –[使用客體叢集以提供高可用性](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
--   （撰寫 Windows 為基礎的部署，但大部分的概念仍套用） – 白皮書[規劃高可用性的任務關鍵性 SQL Server 部署使用 VMware vSphere](http://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
+-   （撰寫 Windows 為基礎的部署，但大部分的概念仍套用） – 白皮書[規劃高可用性的任務關鍵性 SQL Server 部署使用 VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 >[!NOTE]
 >使用 stonith 進行與 Pacemaker 叢集 RHEL 尚不支援 hyper-v。 之前的支援，如需詳細資訊和更新，請參閱[RHEL 高可用性叢集的支援原則](https://access.redhat.com/articles/29440#3physical_host_mixing)。

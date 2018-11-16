@@ -10,12 +10,12 @@ ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3ba9694808be6922762f023af496bc64ff2403b8
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: d0a0f167f14910f657f6c65b9778b0aadde65b10
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099849"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664207"
 ---
 # <a name="managing-passwords-accesstosql"></a>管理密碼 (AccessToSQL)
 本章節是關於保護資料庫的密碼和匯入，或將它們匯出到伺服器的程序：  
@@ -122,5 +122,5 @@ SSMA 主控台應用程式可讓您將加密的資料庫密碼存在於本機電
     Please confirm password: xxxxxxxx  
   
 ## <a name="see-also"></a>另請參閱  
-[執行 SSMA 主控台 （存取）](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[執行 SSMA 主控台 （存取）](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

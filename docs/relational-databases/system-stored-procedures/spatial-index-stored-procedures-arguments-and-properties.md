@@ -15,12 +15,12 @@ ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c26c49d98bac45dc6385d5af4bac4d1082c64c30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ccd9e2be26c8d514e17a4aa03af422cd648fe426
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778506"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666597"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>空間索引預存程序-引數和屬性
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -323,7 +323,7 @@ ms.locfileid: "47778506"
 ## <a name="requirements"></a>需求  
   
 ## <a name="see-also"></a>另請參閱  
- [空間索引預存程序&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [空間索引預存程序&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [XQuery 基本概念](../../xquery/xquery-basics.md)   

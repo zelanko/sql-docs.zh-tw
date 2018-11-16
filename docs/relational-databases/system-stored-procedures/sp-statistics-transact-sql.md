@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d72e2c9f79e2029e26275be46e200d476dbf621a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b365ad16ce7f96ba3e0dd14f278b1ce4db60a32
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704546"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657130"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -99,7 +99,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  雜湊的索引類型接受完全相符或範圍搜尋，但模式比對搜尋不會使用索引。  
   
- **sp_statistics**相當於**SQLStatistics** ODBC 中。 傳回的結果都會按照**NON_UNIQUE**，**型別**， **INDEX_QUALIFIER**， **INDEX_NAME**，和**SEQ_IN_索引**。 如需詳細資訊，請參閱 < [ODBC API 參考](http://go.microsoft.com/fwlink/?LinkId=68323)。  
+ **sp_statistics**相當於**SQLStatistics** ODBC 中。 傳回的結果都會按照**NON_UNIQUE**，**型別**， **INDEX_QUALIFIER**， **INDEX_NAME**，和**SEQ_IN_索引**。 如需詳細資訊，請參閱 < [ODBC API 參考](https://go.microsoft.com/fwlink/?LinkId=68323)。  
   
 ## <a name="permissions"></a>Permissions  
  需要結構描述的 SELECT 權限。  

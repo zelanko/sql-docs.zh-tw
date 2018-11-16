@@ -10,12 +10,12 @@ ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 481429d65f587cdbeb7ed977cafd4553f697c59c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 094ceed90543e61bf0577131508612244393cead
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771439"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671668"
 ---
 # <a name="user-interface-reference-db2tosql"></a>使用者介面參考 (DB2ToSQL)
 本節包含說明主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) for DB2。  
@@ -31,7 +31,7 @@ ms.locfileid: "47771439"
 |[連接至 DB2 資料庫&#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|使用**連接到 DB2**對話方塊連接到您想要移轉的 DB2 資料庫。|  
 |[連接到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|使用**連接到 SQL Server**對話方塊中，連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]至您想要移轉。|  
 |[資料移轉報告&#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|顯示的結果將資料從 DB2，以便移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
-|[資料移轉設定](http://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|使用**擴充資料移轉設定**撰寫自訂查詢的資料移轉 索引標籤。|  
+|[資料移轉設定](https://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|使用**擴充資料移轉設定**撰寫自訂查詢的資料移轉 索引標籤。|  
 |[編輯類型對應&#40;DB2ToSQL&#41;](../../ssma/db2/edit-type-mapping-db2tosql.md)|使用**新的類型對應**或是**編輯類型對應**對話方塊來建立或修改的來源和目標資料庫和資料庫物件之間的資料類型對應。|  
 |[全域設定&#40;編輯器&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|使用編輯器頁面**全域設定**對話方塊來設定程式碼編輯器選項。|  
 |[全域設定&#40;對話方塊&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-dialogs-db2tosql.md)|使用對話方塊頁面**全域設定**對話方塊來設定預設的對話方塊和警告設定。|  

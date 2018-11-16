@@ -13,17 +13,17 @@ ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d6a73f88a0c1bc0ab2235241f7801c8fbc0f8328
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1278552f1bfe1ccfb7ab250f843e86c62e63440b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660336"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659835"
 ---
 # <a name="assessment-report-accesstosql"></a>評定報告 (AccessToSQL)
 評定報表視窗中顯示的資料庫物件的轉換結果[!INCLUDE[tsql](../../includes/tsql-md.md)]語法，也可以幫助您評估複雜度和成本的移轉專案。  
   
-若要建立的評估報告，將來源中繼資料總管 中，選取物件上按一下滑鼠右鍵**資料庫**，然後選取**建立報表**。 您也會自動顯示這份報告之後您將結構描述的轉換。 不過，報表名稱將會轉換報告。 如需詳細資訊，請參閱 <<c0> [ 專案設定 (GUI) （SSMA 常見）](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)。  
+若要建立的評估報告，將來源中繼資料總管 中，選取物件上按一下滑鼠右鍵**資料庫**，然後選取**建立報表**。 您也會自動顯示這份報告之後您將結構描述的轉換。 不過，報表名稱將會轉換報告。 如需詳細資訊，請參閱 <<c0> [ 專案設定 (GUI) （SSMA 常見）](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)。  
   
 ## <a name="options"></a>選項。  
 **檔案總管 窗格**  
@@ -38,5 +38,5 @@ ms.locfileid: "47660336"
 若要檢視訊息詳細資料，請按一下**錯誤**，**警告**，或**訊息**，然後展開 訊息。 SSMA 會顯示具有這項錯誤的物件清單。 按一下以顯示物件的所有轉換詳細資訊的物件。  
   
 ## <a name="see-also"></a>另請參閱  
-[使用者介面 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[使用者介面 Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

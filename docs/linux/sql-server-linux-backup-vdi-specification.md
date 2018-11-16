@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: f29a133ce422b5e6fd04bcd6a78bd036e1f447ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f417002cc3a778b0406cc56e763b8d7b4931b0c6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806176"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660138"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux VDI 用戶端 SDK 規格上的 SQL Server
 
@@ -30,9 +30,9 @@ ms.locfileid: "47806176"
 - 在 Linux 上的 SQL Server 不支援具名執行個體，因此已移除執行個體名稱的參考。 
 - 在安裝於 /opt/mssql/lib/libsqlvdi.so libsqlvdi.so 中實作共用程式庫
 
-這份文件會補充**vbackup.chm** ，詳細說明 Windows VDI 規格。 下載[Windows VDI 規格](http://www.microsoft.com/download/details.aspx?id=17282)。
+這份文件會補充**vbackup.chm** ，詳細說明 Windows VDI 規格。 下載[Windows VDI 規格](https://www.microsoft.com/download/details.aspx?id=17282)。
 
-同時檢閱上的 範例 VDI 備份解決方案[SQL Server 範例 GitHub 儲存機制](http://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux)。
+同時檢閱上的 範例 VDI 備份解決方案[SQL Server 範例 GitHub 儲存機制](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux)。
 
 ## <a name="user-permissions-setup"></a>使用者權限設定
 
@@ -195,7 +195,7 @@ ms.locfileid: "47806176"
 | |**pCmd** |這是先前從 ClientVirtualDevice::GetCommand 傳回命令的位址。
 | |**completionCode** |這是狀態碼指出的完成狀態。 這個參數必須傳回所有命令。 傳回的程式碼應該適用於正在執行的命令。 ERROR_SUCCESS 用於所有案例中，以表示成功執行的命令。 可能的程式碼的完整清單，請參閱該檔案，vdierror.h。 每個命令的一般狀態碼清單會出現在 「 命令 」 中，在本文稍後。
 | |**bytesTransferred** |這是已成功傳送的位元組數目。 這才會傳回命令的讀取和寫入的資料傳輸。
-| |**位置** |這是只有 GetPosition 命令的回應。
+| |**position** |這是只有 GetPosition 命令的回應。
         
 | 傳回值 | 引數 | 說明
 | ----- | ----- | ------ |

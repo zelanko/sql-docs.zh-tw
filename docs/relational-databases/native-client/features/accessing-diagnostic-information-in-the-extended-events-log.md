@@ -10,26 +10,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f402d6bb08878f1d6c131eab256b1bc5bc49576d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 196f8d762763fa6fd0062db23be9e4d955826e05
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683427"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677909"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>存取擴展事件記錄檔中的診斷資訊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  從開始[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 及資料存取追蹤 ([資料存取追蹤](http://go.microsoft.com/fwlink/?LinkId=125805)) 已更新以讓您更輕鬆地從連線通道取得有關連接失敗的診斷資訊緩衝區與應用程式效能資訊的擴充的事件記錄檔。  
+  從開始[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 及資料存取追蹤 ([資料存取追蹤](https://go.microsoft.com/fwlink/?LinkId=125805)) 已更新以讓您更輕鬆地從連線通道取得有關連接失敗的診斷資訊緩衝區與應用程式效能資訊的擴充的事件記錄檔。  
   
- 如需讀取擴充事件記錄檔的資訊，請參閱[檢視事件工作階段資料](http://msdn.microsoft.com/library/ac742a01-2a95-42c7-b65e-ad565020dc49)。  
+ 如需讀取擴充事件記錄檔的資訊，請參閱[檢視事件工作階段資料](https://msdn.microsoft.com/library/ac742a01-2a95-42c7-b65e-ad565020dc49)。  
   
 > [!NOTE]  
 >  此功能僅供疑難排解及診斷使用，可能不適用稽核或安全性。  
   
 ## <a name="remarks"></a>備註  
- 針對連接作業，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會傳送用戶端連接識別碼。 如果連線失敗，您可以存取連線通道緩衝區 ([使用連線通道緩衝區在 SQL Server 2008 中進行連線的疑難排解](http://go.microsoft.com/fwlink/?LinkId=207752))、尋找 **ClientConnectionID** 欄位，並且取得有關連線失敗的診斷資訊。 僅在發生錯誤時，才會在信號緩衝區中記錄用戶端連接識別碼。 (如果在傳送登入前封包之前連接失敗，則不會產生用戶端連接識別碼。)用戶端連接識別碼是 16 位元組的 GUID。 如果在擴充的事件工作階段中，將 **client_connection_id** 動作新增至事件，您也可以在擴充的事件輸出目標中找到用戶端連接識別碼。 如果您需要進一步的診斷協助，您可以啟用資料存取追蹤並重新執行連接命令，然後觀察資料存取追蹤的 **ClientConnectionID** 欄位中是否有失敗的作業。  
+ 針對連接作業，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會傳送用戶端連接識別碼。 如果連線失敗，您可以存取連線通道緩衝區 ([使用連線通道緩衝區在 SQL Server 2008 中進行連線的疑難排解](https://go.microsoft.com/fwlink/?LinkId=207752))、尋找 **ClientConnectionID** 欄位，並且取得有關連線失敗的診斷資訊。 僅在發生錯誤時，才會在信號緩衝區中記錄用戶端連接識別碼。 (如果在傳送登入前封包之前連接失敗，則不會產生用戶端連接識別碼。)用戶端連接識別碼是 16 位元組的 GUID。 如果在擴充的事件工作階段中，將 **client_connection_id** 動作新增至事件，您也可以在擴充的事件輸出目標中找到用戶端連接識別碼。 如果您需要進一步的診斷協助，您可以啟用資料存取追蹤並重新執行連接命令，然後觀察資料存取追蹤的 **ClientConnectionID** 欄位中是否有失敗的作業。  
   
  如果您正在使用中的 ODBC[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端和連線成功，您可以取得用戶端連接識別碼**SQL_COPT_SS_CLIENT_CONNECTION_ID**屬性搭配[SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md).  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5314c18f7626ee631d7d0b59ad8d9c004a33148b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3134ff97059efa61ab2df82a9b7d3c7aa4ee769e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147863"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697008"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis services 的 database Consistency Checker (DBCC)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "50147863"
  只要資料庫是在 SQL Server 2016 執行個體上執行，DBCC for Analysis Services 便能在任何相容性層級的任何 Analysis Services 資料庫上執行。 只要確認您針對每個資料庫類型使用正確的命令語法即可。  
   
 > [!NOTE]  
->  如果您熟悉 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)，很快地您會發現 Analysis Services 中的 DBCC 範圍較狹隘。 Analysis Services 中的 DBCC 是專門針對整個資料庫或個別物件回報資料損毀的單一命令。 如果您需要將其他工作 (如收集資訊) 納入考量，請嘗試改用 AMO PowerShell 或 XMLA 指令碼。 如需詳細資訊連結，請參閱 [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md) 。  
+>  如果您熟悉 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)，很快地您會發現 Analysis Services 中的 DBCC 範圍較狹隘。 Analysis Services 中的 DBCC 是專門針對整個資料庫或個別物件回報資料損毀的單一命令。 如果您需要將其他工作 (如收集資訊) 納入考量，請嘗試改用 AMO PowerShell 或 XMLA 指令碼。
   
 ## <a name="permission-requirements"></a>權限需求  
  您必須是 Analysis Services 資料庫或伺服器管理員 (伺服器角色的成員) 才能執行命令。 如需相關指示，請參閱[授與資料庫權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) 或[將伺服器系統管理員權限授與 Analysis Services 執行個體](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
@@ -299,7 +299,6 @@ Execution complete
 ## <a name="see-also"></a>另請參閱  
  [處理資料庫、資料表或資料分割 &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [Analysis Services 中表格式模型的相容性層級](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Analysis Services 的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   

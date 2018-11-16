@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 117faab160c512f4732b0709b0b2e1024a196893
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: ee92cd702b716ea79f05adaf35f775927710411f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991181"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672447"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>部署 SQL Server Always On 可用性群組上的 Kubernetes 叢集
 
@@ -32,11 +32,11 @@ ms.locfileid: "49991181"
 - Kubernetes 叢集
 - Kubernetes 版本 1.11.0 或更高版本
 - 至少三個節點
-- [kubectl](http://kubernetes.io/docs/tasks/tools/install-kubectl/)
+- [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 - 若要存取[sql server 範例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files)GitHub 存放庫
 
 >[!NOTE]
->您可以使用任何類型的 Kubernetes 叢集。 若要在 Azure Kubernetes Service (AKS) 建立 Kubernetes 叢集，請參閱[建立 AKS 叢集](http://docs.microsoft.com/azure/aks/create-cluster)。
+>您可以使用任何類型的 Kubernetes 叢集。 若要在 Azure Kubernetes Service (AKS) 建立 Kubernetes 叢集，請參閱[建立 AKS 叢集](https://docs.microsoft.com/azure/aks/create-cluster)。
 > 下列指令碼會在 Azure 中建立四個節點的 Kubernetes 叢集。
 >```azure-cli
 az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys

@@ -17,12 +17,12 @@ ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7d1c6c05e196e1a845c073545c3f79f0f83a19b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9b69fa2c6ed790a33da50c0002b17a7e4461d0e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622276"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656757"
 ---
 # <a name="creating-an-assembly"></a>建立組件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   呼叫或參考的組件是在相同的資料庫中所建立。  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>建立組件時指定安全性  
- 建立組件時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫中，您可以指定三個不同的安全性層級程式碼可以在其中執行的其中一個：**安全**， **EXTERNAL_ACCESS**，或**UNSAFE**. 當**CREATE ASSEMBLY**陳述式執行時，可能會導致無法在伺服器上註冊的組件的程式碼組件上執行某些檢查。 如需詳細資訊，請參閱 「 模擬 」 範例上[CodePlex](http://msftengprodsamples.codeplex.com/)。  
+ 建立組件時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫中，您可以指定三個不同的安全性層級程式碼可以在其中執行的其中一個：**安全**， **EXTERNAL_ACCESS**，或**UNSAFE**. 當**CREATE ASSEMBLY**陳述式執行時，可能會導致無法在伺服器上註冊的組件的程式碼組件上執行某些檢查。 如需詳細資訊，請參閱 「 模擬 」 範例上[CodePlex](https://msftengprodsamples.codeplex.com/)。  
   
  **安全**時的預設權限集合和適用於大部分的案例。 若要指定給定的安全性層級，您要修改 CREATE ASSEMBLY 陳述式的語法，如下所示：  
   
@@ -136,6 +136,6 @@ WITH PERMISSION_SET = UNSAFE;
  [卸除組件](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [CLR 整合程式碼存取安全性](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [TRUSTWORTHY 資料庫屬性](../../../relational-databases/security/trustworthy-database-property.md)   
- [允許部分信任的呼叫端](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [允許部分信任的呼叫端](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   
   

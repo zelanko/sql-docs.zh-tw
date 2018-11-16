@@ -31,12 +31,12 @@ ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a0647d1e0f7dd082b3ce3aab668d8af8d5673efb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3e8921e230f581f60c96e6443d4fa5b71a417b3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795766"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661558"
 ---
 # <a name="creating-user-defined-types---coding"></a>建立使用者定義型別 - 編碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -621,7 +621,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
  填補的目的是確保文化特性與貨幣值完全分開，以便在將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼中的一個 UDT 與另一 UDT 進行比較時，會將文化特性位元組與文化特性位元組進行比較，並將貨幣位元組值與貨幣位元組值進行比較。  
   
- 針對完整的程式碼清單**貨幣**UDT 中的指示，說明如何安裝 CLR 範例的後續[SQL Server Database Engine 範例](http://msftengprodsamples.codeplex.com/)。  
+ 針對完整的程式碼清單**貨幣**UDT 中的指示，說明如何安裝 CLR 範例的後續[SQL Server Database Engine 範例](https://msftengprodsamples.codeplex.com/)。  
   
 ### <a name="currency-attributes"></a>Currency 屬性  
  **貨幣**UDT 定義下列屬性。  
@@ -745,7 +745,7 @@ public void Read(System.IO.BinaryReader r)
 }  
 ```  
   
- 針對完整的程式碼清單**貨幣**UDT，請參閱[SQL Server Database Engine 範例](http://msftengprodsamples.codeplex.com/)。  
+ 針對完整的程式碼清單**貨幣**UDT，請參閱[SQL Server Database Engine 範例](https://msftengprodsamples.codeplex.com/)。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  

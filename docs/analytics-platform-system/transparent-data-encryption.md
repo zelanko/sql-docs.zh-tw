@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f30d22725e7d0fd099cf2976af42d74d08a93b22
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: c29383e02746ac3abb60a15d2d0368483d2ee13e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400611"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699441"
 ---
 # <a name="transparent-data-encryption"></a>透明資料加密
 您可以採取幾個預防措施來維護資料庫安全，例如設計安全的系統、加密機密的資產，以及在資料庫伺服器周圍建立防火牆。 不過，所在實體媒體 （例如磁碟機或備份磁帶） 遭竊的案例中，惡意人士可以只還原或附加資料庫並瀏覽資料。 一個解決方案是加密資料庫中的敏感性資料，並使用憑證來保護用來加密資料的金鑰。 如此可防止沒有金鑰的任何人使用資料，但是這種防護類型必須事先規劃。  
@@ -207,7 +207,7 @@ Tempdb 系統資料庫會加密啟用加密時使用[sp_pdw_database_encryption]
   
 系統可以存取金鑰，而不需要人為介入 （例如提供密碼）。 如果沒有憑證，系統會將輸出說明適當的憑證可用之前，無法解密的 DEK 的錯誤。  
   
-當轉換成另一個應用裝置資料庫，用來保護其 ' DEK 首先必須還原在目的地伺服器上。 然後可以如往常般還原資料庫。 如需詳細資訊，請參閱 < 標準的 SQL Server 文件，在[將 TDE 保護的資料庫移至另一個 SQL Server](http://technet.microsoft.com/library/ff773063.aspx)。  
+當轉換成另一個應用裝置資料庫，用來保護其 ' DEK 首先必須還原在目的地伺服器上。 然後可以如往常般還原資料庫。 如需詳細資訊，請參閱 < 標準的 SQL Server 文件，在[將 TDE 保護的資料庫移至另一個 SQL Server](https://technet.microsoft.com/library/ff773063.aspx)。  
   
 應該保留用來加密 Dek 的憑證，只要有使用它們的資料庫備份。 憑證的備份必須包含憑證的私密金鑰，因為不含私密金鑰的憑證無法用於還原資料庫。 這些憑證私用金鑰備份會儲存在不同的檔案，必須提供憑證還原有密碼保護。  
   

@@ -1,5 +1,5 @@
 ---
-title: IIf (MDX) |Microsoft 文件
+title: IIf (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ff85ddef47099462a8c38031141120d02bfd1019
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 0b05929d24533e0bdcdbcac59820307a373428ff
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740677"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700776"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -29,25 +29,25 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
 ```  
   
 ## <a name="arguments"></a>引數  
- IIf 函數會採用三個引數： iif (\<條件 >，\<然後分支 >， \<else 分支 >)。  
+ IIf 函式接受三個引數： iif (\<條件 >，\<然後分支 >， \<else 分支 >)。  
   
  *Logical_Expression*  
- 條件評估為**true** (1) 或**false** (0)。 它必須是有效的多維度運算式 (MDX) 邏輯運算式。  
+ 條件評估為**真**(1) 或**false** (0)。 它必須是有效的多維度運算式 (MDX) 邏輯運算式。  
   
  *Expression1 提示 [急切 |Strict |延遲]]*  
- 邏輯運算式評估為時，使用**true**。 Expression1 必須是有效的多維度運算式 (MDX) 運算式。  
+ 邏輯運算式評估為時，使用 **，則為 true**。 Expression1 必須是有效的多維度運算式 (MDX) 運算式。  
   
  *Expression2 提示 [急切 |Strict |延遲]]*  
  邏輯運算式評估為時，使用**false**。 Expression2 必須是有效的多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- 邏輯運算式所指定的條件評估為**false**當此運算式的值為零。 任何其他值會評估為**true**。  
+ 由邏輯運算式指定的條件評估為**false**當此運算式的值為零。 任何其他值評估為 **，則為 true**。  
   
- 條件時**true**、 **IIf**函式會傳回第一個運算式。 否則，此函數會傳回第二個運算式。  
+ 條件時**真**，則**IIf**函式會傳回第一個運算式。 否則，此函數會傳回第二個運算式。  
   
  指定的運算式可以傳回值或 MDX 物件。 而且，指定的運算式不需要類型相符。  
   
- **IIf**函式不建議用於建立一組根據搜尋準則的成員。 請改用[篩選](../mdx/filter-mdx.md)函式評估邏輯運算式指定集合中的每個成員，並傳回成員子集。  
+ **IIf**函式不建議在建立一組根據搜尋準則的成員。 請改用[篩選](../mdx/filter-mdx.md)函式評估的邏輯運算式針對指定集合中每個成員，並傳回成員子集。  
   
 > [!NOTE]  
 >  如果任何一個運算式評估為 NULL，符合該條件時，結果集將是 NULL。  
@@ -64,10 +64,10 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  EAGER 和 STRICT 在提示中互斥，它們可以在不同的運算式中，用於相同的 IIF(,,)。  
   
- 如需詳細資訊，請參閱[IIF 函數查詢提示，在 SQL Server Analysis Services 2008](http://go.microsoft.com/fwlink/?LinkId=269540)和[執行計畫與 MDX IIF 函數和 CASE 陳述式的計畫提示](http://go.microsoft.com/fwlink/?LinkId=269565)。  
+ 如需詳細資訊，請參閱 < [SQL Server Analysis Services 2008 中的 IIF 函數查詢提示](https://go.microsoft.com/fwlink/?LinkId=269540)並[的執行計畫與 MDX IIF 函數和 CASE 陳述式的計畫提示](https://go.microsoft.com/fwlink/?LinkId=269565)。  
   
 ## <a name="examples"></a>範例  
- 下列查詢示範簡單的用法**IIF**內的導出量值，傳回兩個不同的字串值時的量值 Internet Sales Amount 大於或小於 $10000 的其中一個：  
+ 下列查詢示範簡單的用法**IIF**內導出量值傳回兩個不同的字串值時的量值 Internet Sales Amount 大於或小於 $10000 其中之一：  
   
  `WITH MEMBER MEASURES.IIFDEMO AS`  
   
@@ -131,7 +131,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  `WHERE([Product].[Product Categories].[Subcategory].&[26])`  
   
- 以下是範例**IIF**傳回一個資料列上建立一組複雜 tuple 在 Generate 函數內的兩個集合：  
+ 以下是範例**IIF**傳回資料列上建立一組複雜 tuple 在 Generate 函數內的兩個集合的其中一個：  
   
  `SELECT {[Measures].[Internet Sales Amount]} ON 0,`  
   
@@ -178,6 +178,6 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

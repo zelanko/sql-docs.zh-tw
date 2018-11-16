@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,17 +13,17 @@ ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fcff12760076a47e31fc6b140e0f3cdb7fc590e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee1d76052402ab775e9e8de20e1ef6da07e23432
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657746"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558446"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>在 Windows 2000 上設定 RDS
 如果您遇到取得 RDS 升級至 Windows 2000 之後正確運作的問題，請遵循下列步驟來排解這個問題：  
   
-1.  請確定使用 Internet Explorer 瀏覽至 http:// 伺服器執行第一個 World Wide Web Publishing 服務。 如果您無法存取 Web 伺服器，以這種方式，開啟命令提示字元並輸入下列命令，也就是 「 NET 啟動 W3SVC"。  
+1.  請確定使用 Internet Explorer 瀏覽至 https:// 伺服器執行第一個 World Wide Web Publishing 服務。 如果您無法存取 Web 伺服器，以這種方式，開啟命令提示字元並輸入下列命令，也就是 「 NET 啟動 W3SVC"。  
   
 2.  在 [開始] 功能表上選取 [執行]。 輸入 msdfmap.ini，然後按一下 [確定]，在記事本中開啟 msdfmap.ini 檔案。 檢查 [連線 DEFAULT] 區段中，並存取參數設定為 NOACCESS，如果將它變更為唯讀。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47657746"
  請務必嘗試重新啟動伺服器，如果要解決此問題，一開始不會出現變更。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中。 使用 RDS 到應用程式移轉[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中。 使用 RDS 到應用程式移轉[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="see-also"></a>另請參閱  
  [RDS 基本概念](../../../ado/guide/remote-data-service/rds-fundamentals.md)

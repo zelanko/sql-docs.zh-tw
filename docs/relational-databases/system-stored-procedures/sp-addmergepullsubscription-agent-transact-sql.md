@@ -17,12 +17,12 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da16887ff7debf09e69fc72cf464f5838cf6ddc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: abd4893368069217003ca9fa5a6f4dca9e4229de
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749737"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681366"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -294,13 +294,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  這是現有散發代理程式作業的名稱。 *job_name*已**sysname**，預設值是 NULL。 只有在訂閱將利用現有的作業來同步處理，而不用新建立的作業 (預設值) 時，才指定這個參數。 如果您不屬於**sysadmin**固定伺服器角色，您必須指定*job_login*並*job_password*當您指定*job_name*.  
   
  [  **@dynamic_snapshot_location =** ] **'***dynamic_snapshot_location***'** ]  
- 如果將使用已篩選資料快照集，這便是要讀取的快照集檔案的資料夾路徑 *dynamic_snapshot_location*已**nvarchar(260)**，預設值是 NULL。 如需詳細資訊，請參閱 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+ 如果將使用已篩選資料快照集，這便是要讀取的快照集檔案的資料夾路徑 *dynamic_snapshot_location*已**nvarchar(260)**，預設值是 NULL。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
  [  **@use_web_sync =** ] *use_web_sync&lt*  
  指出 Web 同步處理已啟用。 *use_web_sync&lt*已**元**，預設值是 0。 **1**指定可以在使用 HTTP 透過網際網路同步處理提取訂閱。  
   
  [  **@internet_url =** ] **'***應***'**  
- 這是複寫接聽程式 (REPLISAPI.DLL) 的 Web 同步處理位置。 *應*已**nvarchar(260)**，預設值是 NULL。 *應*是完整的 URL，格式`http://server.domain.com/directory/replisapi.dll`。 如果將伺服器設定成來接聽通訊埠 80 以外的通訊埠，就必須用 `http://server.domain.com:portnumber/directory/replisapi.dll` 格式來提供通訊埠編號，其中 `portnumber` 代表通訊埠。  
+ 這是複寫接聽程式 (REPLISAPI.DLL) 的 Web 同步處理位置。 *應*已**nvarchar(260)**，預設值是 NULL。 *應*是完整的 URL，格式`https://server.domain.com/directory/replisapi.dll`。 如果將伺服器設定成來接聽通訊埠 80 以外的通訊埠，就必須用 `https://server.domain.com:portnumber/directory/replisapi.dll` 格式來提供通訊埠編號，其中 `portnumber` 代表通訊埠。  
   
  [  **@internet_login =** ] **'***internet_url***'**  
  這是在利用 HTTP 基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入。 *internet_url*已**sysname**，預設值是 NULL。  

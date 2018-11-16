@@ -13,23 +13,23 @@ ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e9751dcfe8ee708731dbad54860a978f0e498df7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: faecf1d3a7ab820ef01a25ea67b2313ab03e056a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604766"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657398"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Sybase ASE 資料移轉到 SQL Server-Azure SQL DB (SybaseToSQL)
 已成功載入到 Sybase Adaptive Server Enterprise (ASE) 資料庫物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 中，您可以從 ASE 移轉資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。  
   
 > [!IMPORTANT]  
-> 如果伺服器端資料移轉引擎所使用的引擎，然後移轉資料，您必須先安裝 SSMA for Sybase ASE 延伸模組組件和 Sybase ASE 上的提供者執行 SSMA 的電腦。 也必須執行的 SQL Server Agent 服務。 如需如何安裝此延伸模組組件的詳細資訊，請參閱[SQL Server (SybaseToSQL) 上安裝 SSMA 元件](http://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
+> 如果伺服器端資料移轉引擎所使用的引擎，然後移轉資料，您必須先安裝 SSMA for Sybase ASE 延伸模組組件和 Sybase ASE 上的提供者執行 SSMA 的電腦。 也必須執行的 SQL Server Agent 服務。 如需如何安裝此延伸模組組件的詳細資訊，請參閱[SQL Server (SybaseToSQL) 上安裝 SSMA 元件](https://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
   
 ## <a name="setting-migration-options"></a>移轉選項的設定  
 在移轉之前資料載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 中，檢閱中的專案移轉選項**專案設定** 對話方塊。  
   
--   使用此對話方塊中，您可以設定選項，例如移轉批次大小、 資料表鎖定、 條件約束檢查，null 值的處理和身分識別值的處理。 如需將專案移轉設定的詳細資訊，請參閱[專案設定 （移轉） (Sybase)](http://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924)。  
+-   使用此對話方塊中，您可以設定選項，例如移轉批次大小、 資料表鎖定、 條件約束檢查，null 值的處理和身分識別值的處理。 如需將專案移轉設定的詳細資訊，請參閱[專案設定 （移轉） (Sybase)](https://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924)。  
   
     如需詳細資訊**擴充資料移轉設定**，請參閱[資料移轉設定](data-migration-settings-sybasetosql.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47604766"
   
 **伺服器端資料移轉：**  
   
--   伺服器端資料移轉期間，引擎會位於目標資料庫。 它可透過延伸模組套件進行安裝。 如需有關如何安裝此延伸模組組件的詳細資訊，請參閱[SQL Server (SybaseToSQL) 上安裝 SSMA 元件](http://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
+-   伺服器端資料移轉期間，引擎會位於目標資料庫。 它可透過延伸模組套件進行安裝。 如需有關如何安裝此延伸模組組件的詳細資訊，請參閱[SQL Server (SybaseToSQL) 上安裝 SSMA 元件](https://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
   
 -   若要起始移轉的伺服器端上，選取**伺服器端資料移轉引擎**選項**專案設定**對話方塊。  
   
@@ -99,11 +99,11 @@ ms.locfileid: "47604766"
   
 5.  在 [**連接到 Sybase ASE** ] 對話方塊中，輸入連線認證，然後再按一下**Connect**。 如需有關如何連接到 Sybase ASE 的詳細資訊，請參閱 <<c0> [ 連接到 Sybase &#40;SybaseToSQL&#41;</c0>](../../ssma/sybase/connect-to-sybase-sybasetosql.md)  
   
-    如果目標資料庫是 SQL Server，然後輸入中的連接認證**連接到 SQL Server**  對話方塊中，然後按一下**Connect**。 如需有關如何連接到 SQL Server 的詳細資訊，請參閱[連接到 SQL Server(SybaseToSQL)](http://msdn.microsoft.com/dd368a1a-45b0-40e9-b4d3-5cdb48c26606)  
+    如果目標資料庫是 SQL Server，然後輸入中的連接認證**連接到 SQL Server**  對話方塊中，然後按一下**Connect**。 如需有關如何連接到 SQL Server 的詳細資訊，請參閱[連接到 SQL Server(SybaseToSQL)](https://msdn.microsoft.com/dd368a1a-45b0-40e9-b4d3-5cdb48c26606)  
   
     如果目標資料庫是 Azure SQL DB，然後輸入中的連接認證**連線到 Azure SQL DB**  對話方塊中，然後按一下**Connect**。 如需有關如何連線到 Azure SQL DB 的詳細資訊，請參閱[連線到 Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
   
-    訊息會出現在**輸出**窗格。 移轉完成時，**資料移轉報告**隨即出現。 如果未移轉任何資料，按一下包含錯誤，資料列，然後按一下**詳細資料**。 當您完成報表時，請按一下**關閉**。 如需有關資料移轉報告的詳細資訊，請參閱[（SSMA 常見） 的資料移轉報告](http://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    訊息會出現在**輸出**窗格。 移轉完成時，**資料移轉報告**隨即出現。 如果未移轉任何資料，按一下包含錯誤，資料列，然後按一下**詳細資料**。 當您完成報表時，請按一下**關閉**。 如需有關資料移轉報告的詳細資訊，請參閱[（SSMA 常見） 的資料移轉報告](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
 > 做為目標資料庫使用 SQL Express 版本時，允許只能用戶端端資料移轉，並不支援伺服器端資料移轉。  

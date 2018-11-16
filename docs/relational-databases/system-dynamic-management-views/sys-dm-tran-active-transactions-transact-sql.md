@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b940db47793a5b56c952970c4f12e4a7f15f92e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e2d3ef2e3428a45dce7e55761a16cc32cb3b425
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674806"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663150"
 ---
 # <a name="sysdmtranactivetransactions-transact-sql"></a>sys.dm_tran_active_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,10 +46,10 @@ ms.locfileid: "47674806"
 |transaction_state|**int**|0 = 交易尚未完全初始化。<br /><br /> 1 = 交易已經初始化，但尚未啟動。<br /><br /> 2 = 交易在作用中。<br /><br /> 3 = 交易已經結束。 它只用於唯讀交易。<br /><br /> 4 = 認可處理序已經在分散式交易上起始。 它只用於分散式交易。 分散式交易仍在作用中，但無法再做進一步的處理。<br /><br /> 5 = 交易是在已準備的狀態，正在等候解析。<br /><br /> 6 = 已認可的交易。<br /><br /> 7 = 正在回復交易。<br /><br /> 8 = 已回復交易。|  
 |transaction_status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |transaction_status2|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|dtc_state|**int**|**適用於**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (初始版本至[目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299659))。<br /><br /> 1 = ACTIVE<br /><br /> 2 = PREPARED<br /><br /> 3 = COMMITTED<br /><br /> 4 = ABORTED<br /><br /> 5 = RECOVERED|  
+|dtc_state|**int**|**適用於**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (初始版本至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299659))。<br /><br /> 1 = ACTIVE<br /><br /> 2 = PREPARED<br /><br /> 3 = COMMITTED<br /><br /> 4 = ABORTED<br /><br /> 5 = RECOVERED|  
 |dtc_status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |dtc_isolation_level|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|filestream_transaction_id|**varbinary(128)**|**適用於**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (初始版本至[目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299659))。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|filestream_transaction_id|**varbinary(128)**|**適用於**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (初始版本至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299659))。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   
 ## <a name="permissions"></a>Permissions

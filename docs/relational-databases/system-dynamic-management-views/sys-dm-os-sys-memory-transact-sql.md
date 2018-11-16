@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d20221d1f551b17483d977b98226066950ce8ce2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cea000b63948207626298c1f0c977ba22ec3865
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709616"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677307"
 ---
 # <a name="sysdmossysmemory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -47,8 +47,8 @@ ms.locfileid: "47709616"
 |**system_cache_kb**|**bigint**|系統快取記憶體的總容量 (以 KB 為單位)。|  
 |**kernel_paged_pool_kb**|**bigint**|分頁核心集區的總容量 (以 KB 為單位)。|  
 |**kernel_nonpaged_pool_kb**|**bigint**|未分頁核心集區的總容量 (以 KB 為單位)。|  
-|**system_high_memory_signal_state**|**bit**|系統記憶體資源充足通知的狀態。 值為 1 表示 Windows 已經設定了記憶體充足的訊號。 如需詳細資訊，請參閱 < [CreateMemoryResourceNotification](http://go.microsoft.com/fwlink/?LinkId=82427) MSDN library 中。|  
-|**system_low_memory_signal_state**|**bit**|系統記憶體資源不足通知的狀態。 值為 1 表示 Windows 已經設定了記憶體不足的訊號。 如需詳細資訊，請參閱 < [CreateMemoryResourceNotification](http://go.microsoft.com/fwlink/?LinkId=82427) MSDN library 中。|  
+|**system_high_memory_signal_state**|**bit**|系統記憶體資源充足通知的狀態。 值為 1 表示 Windows 已經設定了記憶體充足的訊號。 如需詳細資訊，請參閱 < [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) MSDN library 中。|  
+|**system_low_memory_signal_state**|**bit**|系統記憶體資源不足通知的狀態。 值為 1 表示 Windows 已經設定了記憶體不足的訊號。 如需詳細資訊，請參閱 < [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) MSDN library 中。|  
 |**system_memory_state_desc**|**nvarchar(256)**|記憶體狀態的描述。 請參閱下表。|  
 |**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   

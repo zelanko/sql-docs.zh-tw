@@ -13,12 +13,12 @@ ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f0390360aef76b15c9743780eff787dd0a2d275d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04e58ec9c40f62932c4a711c1e96c0bd4e8162e2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676496"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666167"
 ---
 # <a name="using-test-repositories-oracletosql"></a>使用測試存放庫 (OracleToSQL)
 SSMA 測試儲存機制存放區 SSMA Tester 測試案例和測試結果以供稍後使用。 儲存機制資料會儲存在 SQL Server 資料表**TestCaseRepository**並**RunTestCaseResultRepository**結構描述中**ssma_oracle_utilities** 的**ssmatesterdb**資料庫。  
@@ -50,7 +50,7 @@ SSMA 測試儲存機制存放區 SSMA Tester 測試案例和測試結果以供�
   
 -   按一下 **編輯**按鈕，以執行測試案例精靈並變更選取的測試。  
   
--   按一下 [**執行**] 按鈕以開啟[執行測試案例 (OracleToSQL)](http://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02)對話方塊，然後執行選取的測試。  
+-   按一下 [**執行**] 按鈕以開啟[執行測試案例 (OracleToSQL)](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02)對話方塊，然後執行選取的測試。  
   
 ## <a name="test-results-repository"></a>測試結果儲存機制  
 您可以檢視測試結果儲存機制**測試結果**頁**存放庫的測試案例**視窗。 按一下以開啟**測試結果...** 從**Tester**功能表。  

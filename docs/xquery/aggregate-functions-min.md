@@ -5,8 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c52144d2cef297109c3c8aef1751690edf723cf9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69381eb0ffdd3638079d824d8d4c150563375a6c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792468"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656968"
 ---
 # <a name="aggregate-functions---min"></a>彙總函式 - min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ```  
 select ProductModelID, Name, Instructions.query('  
   declare namespace AWMI=  
-    "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+    "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   for   $Location in /AWMI:root/AWMI:Location  
   where $Location/@LaborHours =  
           min( /AWMI:root/AWMI:Location/@LaborHours )  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -19,12 +18,12 @@ ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f3c1b32f4fc987c22dfe4660525f5e45d341bbd9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 470543f0016a01d10f6fff06383216ff984649fb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777276"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656288"
 ---
 # <a name="sequence-and-qnames-xquery"></a>順序和 QName (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +116,7 @@ SELECT @x.query('/Root/a');
   
 ```  
 SELECT Instructions.query('  
-   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+   declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $Step in /AWMI:root/AWMI:Location[1]/AWMI:step  
       return  
            string($Step)   
@@ -136,19 +135,19 @@ WHERE ProductModelID=7;
   
 |Prefix|URI|  
 |------------|---------|  
-|xs|http://www.w3.org/2001/XMLSchema|  
-|xsi|http://www.w3.org/2001/XMLSchema-instance|  
-|xdt|http://www.w3.org/2004/07/xpath-datatypes|  
-|fn|http://www.w3.org/2004/07/xpath-functions|  
+|xs|https://www.w3.org/2001/XMLSchema|  
+|xsi|https://www.w3.org/2001/XMLSchema-instance|  
+|xdt|https://www.w3.org/2004/07/xpath-datatypes|  
+|fn|https://www.w3.org/2004/07/xpath-functions|  
 |(無前置詞)|`urn:schemas-microsoft-com:xml-sql`|  
-|sqltypes|http://schemas.microsoft.com/sqlserver/2004/sqltypes|  
-|xml|`http://www.w3.org/XML/1998/namespace`|  
-|(無前置詞)|`http://schemas.microsoft.com/sqlserver/2004/SOAP`|  
+|sqltypes|https://schemas.microsoft.com/sqlserver/2004/sqltypes|  
+|xml|`https://www.w3.org/XML/1998/namespace`|  
+|(無前置詞)|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
  您所建立的每個資料庫都**sys** XML 結構描述集合。 此集合會保留這些結構描述，所以從使用者建立的任何 XML 結構描述集合都能存取這些結構描述。  
   
 > [!NOTE]  
->  此實作不支援`local`前置詞中的 XQuery 規格中所述 http://www.w3.org/2004/07/xquery-local-functions。  
+>  此實作不支援`local`前置詞中的 XQuery 規格中所述 https://www.w3.org/2004/07/xquery-local-functions。  
   
 ## <a name="see-also"></a>另請參閱  
  [XQuery 基本概念](../xquery/xquery-basics.md)  

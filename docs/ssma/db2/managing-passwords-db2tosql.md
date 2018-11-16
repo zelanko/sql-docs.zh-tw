@@ -10,12 +10,12 @@ ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3761e7918b76b5917c53e93356bc07f51a521992
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 2a2ba7cfb16c4df96fa40edb23d9bccea3599005
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099219"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675650"
 ---
 # <a name="managing-passwords-db2tosql"></a>管理密碼 (DB2ToSQL)
 本章節是關於保護資料庫的密碼和匯入，或將它們匯出到伺服器的程序：  
@@ -129,5 +129,5 @@ SSMA 主控台應用程式可讓您將加密的資料庫密碼存在於本機電
 
   
 ## <a name="see-also"></a>另請參閱  
-[執行 SSMA 主控台](http://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
+[執行 SSMA 主控台](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

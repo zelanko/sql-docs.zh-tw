@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 549e392cca7887230a8fb8e22296b8b3e1bb9833
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f9175d82102e5c0dbbae2fbc7054459a0710e6e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667896"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670878"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>如何開始開發應用程式在 Linux 上的 SQL server
 
@@ -32,7 +32,7 @@ ms.locfileid: "47667896"
 
 開始使用，並使用 SQL Server 建置應用程式的最佳方式是親自試用。
 
-- 瀏覽至[快速入門教學課程](http://aka.ms/sqldev)。
+- 瀏覽至[快速入門教學課程](https://aka.ms/sqldev)。
 - 選取您的語言和開發平台。
 - 嘗試的程式碼範例。
 

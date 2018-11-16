@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2a227848ac7f7fde500aa03a1ab206d19c11f3fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d17cc2ccc46733c857f884f78a1b0c9b3f980586
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758716"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674107"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL 工作流程
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47758716"
 
 ## <a name="download"></a>下載
 
-如範例的最新版本，請參閱 <<c0> [ 整個 world importers-發行](http://go.microsoft.com/fwlink/?LinkID=800630)。 下載*每日 ETL.ispac* Integration Services 封裝檔案。
+如範例的最新版本，請參閱 <<c0> [ 整個 world importers-發行](https://go.microsoft.com/fwlink/?LinkID=800630)。 下載*每日 ETL.ispac* Integration Services 封裝檔案。
 
 如需重新建立範例資料庫的原始程式碼，請參閱[匯入 world wide 工具](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)。
 

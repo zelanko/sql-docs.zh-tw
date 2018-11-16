@@ -15,12 +15,12 @@ ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d61e3ab4bd3fb7afda858dd7e2b14fd2bddbd599
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a71b651df387bfe28992d426fd2080587e439ad
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752386"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600918"
 ---
 # <a name="ado-errors"></a>ADO 錯誤
 **ErrorValueEnum**常數描述 ADO 錯誤值。 如需完整清單，這些列舉的常數，包括值，請參閱[附錄 b: ADO 錯誤](../../../ado/guide/appendixes/appendix-b-ado-errors.md)。 本節會檢查一些更有趣的錯誤，並說明某些特定的情況下，可能會引發，或若要修正此問題的解決方案。 這兩個**ErrorValueEnum**列出常數及簡短的正面十進位數字。
@@ -64,7 +64,7 @@ ms.locfileid: "47752386"
 |**3724**|**adErrCantConvertvalue**|由於符號不符或資料溢位以外的原因，無法轉換資料值。 例如，轉換會有截斷的資料。|
 |**3725**|**adErrCantCreate**|無法設定或擷取欄位資料類型是未知，或提供者有資源不足，無法執行作業，因為資料值。|
 |**3726**|**adErrColumnNotOnThisRow**|記錄不包含此欄位。 指定了不正確的欄位名稱或欄位不是位於**欄位**參考目前資料錄的集合。|
-|**3727**|**adErrURLDoesNotExist**|來源 URL 或父項目的 URL 不存在。 在來源或目的地的 URL 中沒有錯字。 您可能會有`http://mysite/photo/myphoto.jpg`當您應該實際擁有`http://mysite/photos/myphoto.jpg`改。 父 URL 中的印刷錯誤，(在此情況下，*相片*而不是*相片*) 造成錯誤。|
+|**3727**|**adErrURLDoesNotExist**|來源 URL 或父項目的 URL 不存在。 在來源或目的地的 URL 中沒有錯字。 您可能會有`https://mysite/photo/myphoto.jpg`當您應該實際擁有`https://mysite/photos/myphoto.jpg`改。 父 URL 中的印刷錯誤，(在此情況下，*相片*而不是*相片*) 造成錯誤。|
 |**3728**|**adErrTreePermissionDenied**|權限還不足以存取樹狀目錄或樹狀子目錄。 名為連接字串中的使用者沒有適當的權限。|
 |**3729**|**adErrInvalidURL**|URL 包含無效的字元。 請確定輸入的 URL 正確。 URL 遵循註冊到目前的提供者的配置 （例如 http 為登錄網際網路發行的提供者）。|
 |**3730**|**adErrResourceLocked**|所指定的 URL 表示的物件已鎖定的一或多個其他處理序。 請等候程序已完成，然後再次嘗試操作。 您嘗試存取的物件已被鎖定，由另一個使用者或應用程式中的另一個處理序。 這是最有可能發生在多使用者環境中。|

@@ -18,12 +18,12 @@ ms.assetid: ac386558-392e-46f3-97f8-382f267b7fca
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e08b8aa0ac6cc30121f8a2f385644f2210912754
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: d9059718a7349483c1327518dbc9d68b60ee16a0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217642"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668097"
 ---
 # <a name="protocoldll-property-servernetworkprotocol-class"></a>ProtocolDLL 屬性 (ServerNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,6 +46,6 @@ object.ProtocolDLL [= value]
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定伺服器網路通訊協定和網路程式庫](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [設定伺服器網路通訊協定和網路程式庫](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

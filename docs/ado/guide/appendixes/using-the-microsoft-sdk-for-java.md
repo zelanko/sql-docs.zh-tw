@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 02/15/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edab19ee8b3ae4eee186835d25220ee638c41149
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab4aaed1cfd661d38476c81f8bdc3dcab3aa0f88
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786916"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350492"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>使用 Microsoft SDK for Java
 
@@ -38,13 +38,13 @@ Microsoft SDK for Java 是 Microsoft Internet Explorer 環境的開發人員套�
   
 1.  在命令提示字元執行下列命令。 您必須設定要包含 Microsoft SDK for Java 的 Bin 目錄的路徑，或從該位置執行命令。 一般來說，Microsoft SDK for Java 被安裝在與 Visual Studio 相同的位置。 這是單一命令陳述式。  
   
-    ```  
+    ```java
     \<path to DevStudio>\<path to Java SDK>\bin\JactiveX.exe /javatlb "C:\program files\common files\system\ado\msado15.dll"  
     ```  
   
 2.  執行下列命令來編譯產生的類別。 /G:t 切換開啟偵錯符號的產生，因此您可以追蹤程式。Java 的符號。 表示發行組建中移除它。  
   
-    ```  
+    ```java
     jvc /g:t c:\<windows>\Java\trustlib\msado15\*.Java  
     ```  
   

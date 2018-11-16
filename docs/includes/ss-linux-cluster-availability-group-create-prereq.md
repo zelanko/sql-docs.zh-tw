@@ -44,8 +44,8 @@
    下列範例顯示 **node1** 上的 `/etc/hosts`，以及 **node1**、**node2** 和 **node3** 上的新增項目。 本文件中， **node1**是指裝載主要複本的伺服器。 並**node2**並**node3**到裝載次要複本的伺服器，請參閱。
 
     ```
-    127.0.0.1   localhost localhost4 localhost4.localdomain4
-    ::1       localhost localhost6 localhost6.localdomain6
+    127.0.0.1   localhost localhost4 localhost4.localdomain4
+    ::1       localhost localhost6 localhost6.localdomain6
     10.128.18.12 node1
     10.128.16.77 node2
     10.128.15.33 node3
@@ -77,7 +77,7 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-如需此 XE 工作階段的詳細資訊，請參閱[擴充事件的 AlwaysOn](http://msdn.microsoft.com/library/dn135324.aspx)。
+如需此 XE 工作階段的詳細資訊，請參閱[擴充事件的 AlwaysOn](https://msdn.microsoft.com/library/dn135324.aspx)。
 
 ## <a name="create-a-certificate"></a>建立憑證
 
@@ -166,6 +166,6 @@ ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 >[!IMPORTANT]
 >SQL Server 2017 版本中，支援資料庫鏡像端點的唯一驗證方法是`CERTIFICATE`。 `WINDOWS`選項將會啟用在未來的版本。
 
-如需詳細資訊，請參閱[資料庫鏡像端點 (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx)。
+如需詳細資訊，請參閱[資料庫鏡像端點 (SQL Server)](https://msdn.microsoft.com/library/ms179511.aspx)。
 
 

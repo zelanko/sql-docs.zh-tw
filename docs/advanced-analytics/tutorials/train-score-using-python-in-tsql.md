@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3cdab7ab26166392724ee278cbaf76afd68b9472
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 17b51d695a923b6db1661e6e15605a1f05d08178
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099868"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51293154"
 ---
 # <a name="create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>建立、 定型和使用 SQL Server 中的預存程序中的 Python 模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -155,15 +155,18 @@ SQL Server 開發的常見模式是組織成不同的預存程序的可程式化
 
 在此練習中，您已了解如何建立不同的工作，其中每個預存程序會使用系統預存程序專用的預存程序[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)啟動 Python 處理序。 Python 程序的輸入會當做參數傳遞至 sp_execute_external 指令碼。 在 Python 指令碼本身和 SQL Server 資料庫中的資料變數會傳遞做為輸入。
 
+一般而言，您只應在 SSMS 中使用外觀精美的 Python 程式碼或簡單的 Python 程式碼會傳回資料列為主的輸出。 作為工具，SSMS 支援 T-SQL 這類的查詢語言，並傳回扁平化資料列集。 如果您的程式碼會產生類似的散佈圖或長條圖的視覺化輸出，您會需要一個工具或使用者的應用程式，可以呈現影像。
+
 針對某些 Python 開發人員用來撰寫全部包含的指令碼處理作業的範圍，將工作組織成個別的程序看起來不必要。 但定型和計分有不同的使用案例。 藉由分隔它們，您可以將每個工作放上不同的排程和作業的 「 範圍 」 權限。
 
 同樣地，您也可以利用資源配置的 SQL Server 功能，例如平行處理，資源控管，或撰寫您的指令碼，以使用中的演算法[revoscalepy](../python/what-is-revoscalepy.md)或是[MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) ，支援資料流處理和平行執行。 藉由分隔定型和計分，您可以針對特定工作負載的最佳化。
 
 最後一個好處是可以使用參數來修改處理程序。 在此練習中，建立模型 （在此範例中，名為"貝氏機率分類 」） 的 Python 程式碼傳遞做為第二個預存程序呼叫模型評分程序中的輸入。 這個練習中只會使用一個模型，但您可以想像如何參數化的評分的工作中的模型會使該指令碼更加實用。
 
-
 ## <a name="next-steps"></a>後續步驟
 
-先前的教學課程著重於本機執行。 不過，您也可以執行 Python 程式碼從用戶端工作站，作為遠端計算內容中使用 SQL Server。 如需設定用戶端工作站連接到 SQL Server 的詳細資訊，請參閱[設定 Python 用戶端工具](../python/setup-python-client-tools-sql.md)。
+如果您不熟悉 Python 的 SQL 開發人員，檢閱的步驟和工具來處理在本機，Python 程式碼能夠轉移到遠端的 SQL Server 執行個體從本機工作階段執行。
 
-+ [從 Python 用戶端建立 revoscalepy 模型](use-python-revoscalepy-to-create-model.md)
+> [!div class="nextstepaction"]
+> [設定 Python 用戶端工作站](../python/setup-python-client-tools-sql.md)。
+

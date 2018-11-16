@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f5c3cc4756c305ba82af4c110488722ec24a9af
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 4684ee669f739e358b7c70c0bfd93ec0fca62362
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251985"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657007"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>適用於 SQL Server 容器的高可用性
 
@@ -31,13 +31,13 @@ SQL Server 2019 （預覽） 導入了更強固的架構，與 Kubernetes Statef
 
 ## <a name="container-with-sql-server-instance-on-kubernetes"></a>在 Kubernetes 上的 SQL Server 執行個體的容器
 
-Kubernetes 1.6 和更新版本可支援[*儲存類別*](http://kubernetes.io/docs/concepts/storage/storage-classes/)， [*永續性磁碟區宣告*](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)，而[ *Azure 磁碟的磁碟區類型*](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)。 
+Kubernetes 1.6 和更新版本可支援[*儲存類別*](https://kubernetes.io/docs/concepts/storage/storage-classes/)， [*永續性磁碟區宣告*](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)，而[ *Azure 磁碟的磁碟區類型*](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)。 
 
 在此組態中，Kubernetes 會扮演的角色容器協調器。 
 
 ![Kubernetes SQL Server 叢集的圖表](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
-在上圖中，`mssql-server`是 SQL Server 執行個體 （容器） 中[ *pod*](http://kubernetes.io/docs/concepts/workloads/pods/pod/)。 A[複本集](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)可確保 pod，節點失敗後自動復原。 應用程式連接至服務。 在此情況下，服務會代表裝載失敗後會保持相同的 IP 位址的負載平衡器`mssql-server`。
+在上圖中，`mssql-server`是 SQL Server 執行個體 （容器） 中[ *pod*](https://kubernetes.io/docs/concepts/workloads/pods/pod/)。 A[複本集](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)可確保 pod，節點失敗後自動復原。 應用程式連接至服務。 在此情況下，服務會代表裝載失敗後會保持相同的 IP 位址的負載平衡器`mssql-server`。
 
 Kubernetes 會協調在叢集中的資源。 當裝載 SQL Server 執行個體容器的節點失敗時，它會啟動新的容器，SQL Server 執行個體，並將它連結至相同的永續性儲存體。
 
@@ -47,25 +47,25 @@ SQL Server 2017 和更新版本支援容器的 Kubernetes 上。
 
 ## <a name="a-sql-server-always-on-availability-group-on-sql-server-containers-in-kubernetes"></a>SQL Server Always On 可用性群組在 Kubernetes 中的 SQL Server 容器
 
-SQL Server 2019 支援可用性群組中針對 Kubernetes 的容器。 針對可用性群組，部署 SQL Server [Kubernetes 運算子](http://coreos.com/blog/introducing-operators.html)到 Kubernetes 叢集。 運算子可協助封裝、 部署及管理 SQL Server 執行個體和叢集中的可用性群組。
+SQL Server 2019 支援可用性群組中針對 Kubernetes 的容器。 針對可用性群組，部署 SQL Server [Kubernetes 運算子](https://coreos.com/blog/introducing-operators.html)到 Kubernetes 叢集。 運算子可協助封裝、 部署及管理 SQL Server 執行個體和叢集中的可用性群組。
 
 ![Kubernetes 的容器中的 AG](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
 在上圖中，四個節點的 kubernetes 叢集中會裝載具有三個複本的可用性群組。 解決方案包含下列元件：
 
-* Kubernetes [*部署*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/)。 此部署包含使用運算子，以及設定對應。 部署描述的容器映像、 軟體和部署可用性群組的 SQL Server 執行個體所需的指示。
+* Kubernetes [*部署*](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)。 此部署包含使用運算子，以及設定對應。 部署描述的容器映像、 軟體和部署可用性群組的 SQL Server 執行個體所需的指示。
 
-* 三個節點，每個裝載[ *StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)。 StatefulSet 包含 pod。 包含每個 pod:
+* 三個節點，每個裝載[ *StatefulSet*](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)。 StatefulSet 包含 pod。 包含每個 pod:
   * SQL Server 執行的容器一個 SQL Server 執行個體。
   * 監督員`mcr.microsoft.com/mssql/ha`管理可用性群組。
 
-* 兩個[ *ConfigMaps* ](http://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)與可用性群組相關。 ConfigMaps 提供下列資訊：
+* 兩個[ *ConfigMaps* ](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)與可用性群組相關。 ConfigMaps 提供下列資訊：
   * 運算子的部署。
   * 可用性群組。
 
  * 針對每個 SQL Server 執行個體的永續性磁碟區會提供資料和記錄檔的儲存體。
 
-此外，叢集會儲存[*祕密*](http://kubernetes.io/docs/concepts/configuration/secret/)密碼、 憑證、 金鑰和其他機密資訊。
+此外，叢集會儲存[*祕密*](https://kubernetes.io/docs/concepts/configuration/secret/)密碼、 憑證、 金鑰和其他機密資訊。
 
 ## <a name="compare-sql-server-high-availability-on-containers-with-and-without-the-availability-group"></a>比較容器而不需可用性群組上的 SQL Server 高可用性
 

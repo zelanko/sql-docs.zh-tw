@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6eeb2c71e821c9ccf5a89129a862b3d01a1d64bf
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 2e861bf2d8daf2460fbffcf2d92fcd33f859cd78
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085500"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699111"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>快速入門： 處理資料類型與 SQL Server 中使用 R 的物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -108,7 +108,7 @@ $ X...      : Factor w/ 1 level " ": 1
 $ c..world..: Factor w/ 1 level "world": 1
 ```
 
-如您所見，稍微變化一下 R 語法，就會對結果的結構描述產生極大的影響。 我們不會詳述原因，因為 R 資料類型的差異會更詳盡的說明這篇文章中 Hadley Wickham 所著： [R 資料結構](http://adv-r.had.co.nz/Data-structures.html)。
+如您所見，稍微變化一下 R 語法，就會對結果的結構描述產生極大的影響。 我們不會詳述原因，因為 R 資料類型的差異會更詳盡的說明這篇文章中 Hadley Wickham 所著： [R 資料結構](https://adv-r.had.co.nz/Data-structures.html)。
 
 現在只需注意，您需要在將 R 物件強制轉型為資料框架時檢查預期的結果。
 
@@ -266,7 +266,7 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 + 已使用 R 資料類型 **POSIXct** 來處理 datetime 資料行。
 + 「 ProductSeries"已被識別為文字資料行**因素**，這表示類別變數。 預設會處理字串值以做為因數。 如果您將字串傳遞至 R，則會將它轉換為整數，以供內部使用，接著對應回輸出上的字串。
 
-### <a name="summary"></a>摘要
+### <a name="summary"></a>總結
 
 即使這些簡短的範例中，您可以看到不必做為輸入傳遞 SQL 查詢時，請檢查資料轉換的效果。 由於 R 不支援某些 SQL Server 資料類型的請考慮這些方式來避免發生錯誤：
 

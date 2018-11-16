@@ -14,25 +14,25 @@ ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d331bdf617e2b7b748039d69347f00f7fb4046a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed2d80793d70418e02d22bf104d21b6d3bec6c4d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761216"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599529"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 方法 (RDS)
 建立目標商務物件的 proxy，並傳回的指標。 要透過網際網路傳送要求和資料與商務物件通訊的伺服器端 stub proxy 封裝和封送處理資料。 同處理序元件物件會使用任何 proxy，只是物件的指標會提供。  
   
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>語法  
  遠端資料服務支援下列通訊協定： HTTP、 HTTPS (HTTP 透過安全通訊端層)、 DCOM 和同處理序。  
   
 |通訊協定|語法|  
 |--------------|------------|  
-|HTTP|Set 物件 = DataSpace.CreateObject ("ProgId"，"http://awebsrvr")|  
+|HTTP|Set 物件 = DataSpace.CreateObject ("ProgId"，"https://awebsrvr")|  
 |HTTPS|Set 物件 = DataSpace.CreateObject ("ProgId"，"https://awebsrvr")|  
 |DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
 |內含式|Set object = DataSpace.CreateObject("ProgId", "")|  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
-ms.openlocfilehash: 28c0d7598baf5cff573716f4e7848852c42a9f8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 312797b2b883f764fc65588e72cd67d7227e327a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606036"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659654"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Oracle 結構描述移轉至 SQL Server 2017 Linux 上使用 SQL Server 移轉小幫手
 
@@ -38,7 +38,7 @@ ms.locfileid: "47606036"
 
 ## <a name="download-and-install-ssma-for-oracle"></a>下載並安裝 SSMA for Oracle
 
-另外還有數個版本的 SQL Server Migration Assistant，根據您的來源資料庫。  下載最新版[SQL Server Migration Assistant for Oracle](http://aka.ms/ssmafororacle)和使用的下載頁面上找到的指示進行安裝。
+另外還有數個版本的 SQL Server Migration Assistant，根據您的來源資料庫。  下載最新版[SQL Server Migration Assistant for Oracle](https://aka.ms/ssmafororacle)和使用的下載頁面上找到的指示進行安裝。
 
 > [!NOTE]
 > 在此階段中， **SSMA for Oracle 延伸模組組件**不支援在 Linux 上，但它不需要在此教學課程。

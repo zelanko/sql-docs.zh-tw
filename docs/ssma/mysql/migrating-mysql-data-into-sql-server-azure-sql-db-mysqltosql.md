@@ -13,23 +13,23 @@ ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 32b017e53d36560b5330a25f7167f865bea6ea88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a366f9ff19099ba640a02aecfe00a944e0fa6299
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745456"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681266"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>將 MySQL 資料移轉到 SQL Server-Azure SQL DB (MySQLToSQL)
 您已成功同步處理與已轉換的物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您可以移轉的資料從 mysql 移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
   
 > [!IMPORTANT]  
-> 引擎是否正在使用伺服器端資料移轉引擎，然後在移轉之前的資料，您必須安裝 SSMA for MySQL 延伸模組套件，並執行 SSMA 的電腦上的 MySQL 提供者。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]也必須執行代理程式服務。 如需如何安裝此延伸模組組件的詳細資訊，請參閱[SQL Server （從 mysql 移轉至 SQL） 上安裝 SSMA 元件](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
+> 引擎是否正在使用伺服器端資料移轉引擎，然後在移轉之前的資料，您必須安裝 SSMA for MySQL 延伸模組套件，並執行 SSMA 的電腦上的 MySQL 提供者。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]也必須執行代理程式服務。 如需如何安裝此延伸模組組件的詳細資訊，請參閱[SQL Server （從 mysql 移轉至 SQL） 上安裝 SSMA 元件](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
   
 ## <a name="setting-migration-options"></a>移轉選項的設定  
 然後再移轉資料到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，檢閱中的專案移轉選項**專案設定** 對話方塊。  
   
--   使用此對話方塊中，您可以設定選項，例如移轉批次大小、 資料表鎖定、 條件約束檢查，null 值的處理和識別的值處理。 如需將專案移轉設定的詳細資訊，請參閱[專案設定 （移轉）](http://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9)。  
+-   使用此對話方塊中，您可以設定選項，例如移轉批次大小、 資料表鎖定、 條件約束檢查，null 值的處理和識別的值處理。 如需將專案移轉設定的詳細資訊，請參閱[專案設定 （移轉）](https://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9)。  
   
     如需詳細資訊**擴充資料移轉設定**，請參閱[資料移轉設定](data-migration-settings-mysqltosql.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47745456"
   
 **伺服器端資料移轉：**  
   
--   在伺服器端資料移轉期間，引擎會位於目標資料庫。 它可透過延伸模組套件進行安裝。 如需有關如何安裝此延伸模組組件的詳細資訊，請參閱[SQL Server （從 mysql 移轉至 SQL） 上安裝 SSMA 元件](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
+-   在伺服器端資料移轉期間，引擎會位於目標資料庫。 它可透過延伸模組套件進行安裝。 如需有關如何安裝此延伸模組組件的詳細資訊，請參閱[SQL Server （從 mysql 移轉至 SQL） 上安裝 SSMA 元件](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
   
 -   若要起始移轉的伺服器端上，選取**伺服器端資料移轉引擎**選項**專案設定** 對話方塊。  
   
@@ -99,11 +99,11 @@ ms.locfileid: "47745456"
   
 5.  在 [**連接到 MySQL** ] 對話方塊中，輸入連線認證，然後再按一下**Connect**。 如需有關如何連接至 MySQL 的詳細資訊，請參閱[連接到 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   
-    如果目標資料庫是 SQL Server，然後輸入中的連接認證**連接到 SQL Server**  對話方塊中，然後按一下**Connect**。 如需有關如何連接到 SQL Server 的詳細資訊，請參閱[連接到 SQL Server](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
+    如果目標資料庫是 SQL Server，然後輸入中的連接認證**連接到 SQL Server**  對話方塊中，然後按一下**Connect**。 如需有關如何連接到 SQL Server 的詳細資訊，請參閱[連接到 SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
   
     如果目標資料庫是 SQL Azure，然後輸入中的連接認證**連接到 SQL Azure**  對話方塊中，然後按一下**Connect**。 如需有關如何連接到 SQL Azure 的詳細資訊，請參閱 <<c0> [ 連線到 Azure SQL DB &#40;MySQLToSQL&#41;</c0>](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)  
   
-    訊息會出現在**輸出**窗格。 移轉完成時，**資料移轉報告**隨即出現。 如果未移轉任何資料，按一下包含錯誤，資料列，然後按一下**詳細資料**。 當您完成報表時，請按一下**關閉**。 如需有關資料移轉報告的詳細資訊，請參閱[（SSMA 常見） 的資料移轉報告](http://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    訊息會出現在**輸出**窗格。 移轉完成時，**資料移轉報告**隨即出現。 如果未移轉任何資料，按一下包含錯誤，資料列，然後按一下**詳細資料**。 當您完成報表時，請按一下**關閉**。 如需有關資料移轉報告的詳細資訊，請參閱[（SSMA 常見） 的資料移轉報告](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
 > 做為目標資料庫使用 SQL Express 版本時，允許只能用戶端端資料移轉，並不支援伺服器端資料移轉。  

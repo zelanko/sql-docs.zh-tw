@@ -11,12 +11,12 @@ ms.assetid: 6c498d2b-22d6-4661-bc21-2ee708336c8b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e113f931e318c501f69540ec19e97e3ae72b553f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04f2f2c71c3560fe892d63dd5263b8b6f846a241
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130538"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638615"
 ---
 # <a name="process-tabular-model-partitions-ssas-tabular"></a>處理表格式模型資料分割 (SSAS 表格式)
   分割區會將一個資料表分割成多個邏輯部分。 接著，每個分割區可以不受其他分割區的影響，單獨處理 (重新整理)。 此主題中的工作描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [處理資料分割] 對話方塊，處理模型資料庫中的資料分割。  
@@ -27,7 +27,7 @@ ms.locfileid: "48130538"
   
 2.  在 [資料分割] 對話方塊的 [資料分割] 中，按一下 [處理] 按鈕。  
   
-3.  在 [處理資料分割] 對話方塊的 [模式] 清單方塊中，選取下列其中一個處理模式：  
+3.  在 **處理資料分割**對話方塊中，於**模式**清單方塊中，選取其中一個程序模式如下：  
   
     |[模式]|描述|  
     |----------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "48130538"
 4.  在 **[處理]** 核取方塊資料行中，選取您想透過選取的模式處理的資料分割，然後按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [表格式模型資料分割&#40;SSAS 表格式&#41;](partitions-ssas-tabular.md)   
- [建立及管理表格式模型資料分割&#40;SSAS 表格式&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [表格式模型資料分割 &#40;SSAS 表格式&#41;](partitions-ssas-tabular.md)   
+ [建立及管理表格式模型資料分割 &#40;SSAS 表格式&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

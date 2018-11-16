@@ -19,19 +19,19 @@ ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b76d583cf73b035024e57ba1cb66e63c76d1ad23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1167762e9d623aa3de04db38f67ee02f3551763d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797186"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671194"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   針對計畫控制代碼指定的批次，以 XML 格式傳回顯示計畫。 計畫控制代碼指定的計畫可以是快取或目前正在執行的計畫。  
   
- 執行程序表 XML 結構描述是發行及提供[颾 Microsoft 寍鯚](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)。 安裝有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的目錄也會提供這個項目。  
+ 執行程序表 XML 結構描述是發行及提供[颾 Microsoft 寍鯚](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)。 安裝有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的目錄也會提供這個項目。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

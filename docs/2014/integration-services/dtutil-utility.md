@@ -26,15 +26,15 @@ ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d21a944b037affb71700bf49cf665331acb60e1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a359d584125a2b332e178d03d03cc75f4f4ad1f1
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149168"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559468"
 ---
 # <a name="dtutil-utility"></a>Encrypt
-  **Dtutil**命令 p1ompt 公用程式用來管理[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]封裝。 這個公用程式可以複製、移動、刪除封裝，或確認封裝是否存在。 下列三個位置所儲存的任何 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝都可以執行這些動作： [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區和檔案系統。 如果公用程式存取存放在 **msdb**中的封裝，則命令提示字元可能會需要使用者名稱和密碼。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，則命令提示字元需要使用者名稱和密碼。 如果遺漏使用者名稱， **dtutil** 會嘗試使用 Windows 驗證登入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 封裝的儲存類型是由 `/SQL`、`/FILE` 和 `/DTS` 等選項來識別。  
+  **dtutil** 命令提示字元公用程式可用來管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。 這個公用程式可以複製、移動、刪除封裝，或確認封裝是否存在。 下列三個位置所儲存的任何 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝都可以執行這些動作： [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區和檔案系統。 如果公用程式存取存放在 **msdb**中的封裝，則命令提示字元可能會需要使用者名稱和密碼。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，則命令提示字元需要使用者名稱和密碼。 如果遺漏使用者名稱， **dtutil** 會嘗試使用 Windows 驗證登入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 封裝的儲存類型是由 `/SQL`、`/FILE` 和 `/DTS` 等選項來識別。  
   
  **dtutil** 命令提示字元公用程式不支援使用命令檔或重新導向。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48149168"
 > [!NOTE]  
 >  您也可以在連接到 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的執行個體時，透過 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]以視覺化方式執行 dtutil 所執行的許多作業。 如需詳細資訊，請參閱[封裝管理 &#40;SSIS 服務&#41;](service/package-management-ssis-service.md)。  
   
- 您可以依照任何順序來輸入這些選項。 垂直線 ("|") 字元是 `OR` 運算子，用來顯示可能的值。 您必須使用其中一個選項所分隔`OR`管道。  
+ 您可以依照任何順序來輸入這些選項。 垂直線 ("|") 字元是 `OR` 運算子，用來顯示可能的值。 您必須使用以 `OR` 垂直線分隔的其中一個選項。  
   
  所有選項的開頭都必須是斜線 (/) 或減號 (-)。 但是，請勿在斜線或減號與選項的文字之間加入空格，否則此命令會失敗。  
   
@@ -88,7 +88,7 @@ dtutil /option [value] [/option [value]]...
 |選項|描述|  
 |------------|-----------------|  
 |/?|顯示命令提示字元選項。|  
-|/C[opy] *location;destinationPathandPackageName*|對 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝指定複製動作。 若要使用此參數，您必須先使用 **/FI**、 **/SQ**或 **/DT** 選項來指定封裝的位置。 接下來，指定目的地位置目的地封裝名稱。 *destinationPathandPackageName* 引數指定複製 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝所在的位置。 如果目的地*位置*是`SQL`，則*DestUser*， *DestPassword*並*DestServer*也必須是引數在命令中指定。<br /><br /> 當`Copy`動作發現目的地，現有的封裝**dtutil**會提示使用者確認刪除封裝。 `Y`回覆會覆寫封裝和`N`回覆會結束程式。 當命令包含 *Quiet* 引數時，不會出現提示，並且會覆寫任何現有的封裝。|  
+|/C[opy] *location;destinationPathandPackageName*|對 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝指定複製動作。 若要使用此參數，您必須先使用 **/FI**、 **/SQ**或 **/DT** 選項來指定封裝的位置。 接下來，指定目的地位置目的地封裝名稱。 *destinationPathandPackageName* 引數指定複製 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝所在的位置。 如果目的地*位置*是`SQL`，則*DestUser*， *DestPassword*並*DestServer*也必須是引數在命令中指定。<br /><br /> 當`Copy`動作發現目的地，現有的封裝**dtutil**會提示使用者確認刪除封裝。 `Y` 回覆會覆寫封裝，`N` 回覆會結束程式。 當命令包含 *Quiet* 引數時，不會出現提示，並且會覆寫任何現有的封裝。|  
 |/Dec[rypt] *password*|(選擇性)。 設定載入含密碼加密的封裝時，所用的解密密碼。|  
 |/Del[ete]|刪除 *SQL*、 *DTS* 或 *FILE* 選項所指定的封裝。 如果 **dtutil** 無法刪除封裝，程式便會結束。|  
 |/DestP[assword] *password*|指定搭配 SQL 選項來連接使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證之目的地 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，所使用的密碼。 如果 *DESTPASSWORD* 是指定在不含 *DTSUSER* 選項的命令列上，則會產生錯誤。<br /><br /> 注意： [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]。|  
@@ -106,7 +106,7 @@ dtutil /option [value] [/option [value]]...
 |/FR[ename] {*SQL* &#124; *DTS*} [;*ParentFolderPath; OldFolderName;NewFolderName]*|(選擇性)。 重新命名 [!INCLUDE[ssIS](../includes/ssis-md.md)] 或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的資料夾。 *ParentFolderPath* 是要重新命名之資料夾的位置。 *OldFolderName* 是資料夾目前的名稱， *NewFolderName* 是要提供給資料夾的新名稱。|  
 |/H[elp] *選項*|顯示文字擴充說明來示範 **dtutil** 選項及描述其用法。 option 引數是選擇性的。 如果包含這個引數，說明文字會包括指定選項的詳細資訊。 下列範例會顯示所有選項的說明：<br /><br /> `dtutil /H`<br /><br /> 下列兩個範例顯示如何使用 */H* 選項來顯示特定選項的擴充說明，例如本範例中的 */Q [uiet]* 選項：<br /><br /> `dtutil /Help Quiet`<br /><br /> `dtutil /H Q`|  
 |/I[DRegenerate]|建立封裝的新 GUID 及更新封裝識別碼屬性。 複製封裝時，封裝識別碼保持不變；因此，記錄檔包含兩個封裝相同的 GUID。 此動做為新複製的封裝建立新的 GUID，以便與原始封裝區別。|  
-|/M[ove] {*SQL* &#124; *File* &#124; *DTS*}; *pathandname*|對 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝指定移動動作。 若要使用此參數，請先使用 **/FI**、 **/SQ**或 **/DT** 選項來指定封裝的位置。 接下來，指定 **Move** 動作。 這個動作需要兩個以分號分隔的引數：<br /><br /> 目的地引數可指定 *SQL*、 *FILE*或 *DTS*。 *SQL* 目的地可包含 *DESTUSER*、 *DESTPASSWORD*和 *DESTSERVER* 選項。<br /><br /> *pathandname* 引數指定封裝位置： *SQL* 使用封裝路徑和封裝名稱， *FILE* 使用 UNC 或本機路徑， *DTS* 使用相對於 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區根目錄的位置。 當目的地為 *FILE* 或 *DTS*時，路徑引數不包含檔案名稱。 而是使用在指定位置的封裝名稱來做為檔案名稱。<br /><br /> <br /><br /> 當`MOVE`動作發現目的地，現有的封裝**dtutil**會提示您確認您想要覆寫該封裝。 `Y`回覆會覆寫封裝和`N`回覆會結束程式。 當命令包含 *QUIET* 選項時，不會出現提示，並且會覆寫任何現有的封裝。|  
+|/M[ove] {*SQL* &#124; *File* &#124; *DTS*}; *pathandname*|對 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝指定移動動作。 若要使用此參數，請先使用 **/FI**、 **/SQ**或 **/DT** 選項來指定封裝的位置。 接下來，指定 **Move** 動作。 這個動作需要兩個以分號分隔的引數：<br /><br /> 目的地引數可指定 *SQL*、 *FILE*或 *DTS*。 *SQL* 目的地可包含 *DESTUSER*、 *DESTPASSWORD*和 *DESTSERVER* 選項。<br /><br /> *pathandname* 引數指定封裝位置： *SQL* 使用封裝路徑和封裝名稱， *FILE* 使用 UNC 或本機路徑， *DTS* 使用相對於 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區根目錄的位置。 當目的地為 *FILE* 或 *DTS*時，路徑引數不包含檔案名稱。 而是使用在指定位置的封裝名稱來做為檔案名稱。<br /><br /> <br /><br /> 當`MOVE`動作發現目的地，現有的封裝**dtutil**會提示您確認您想要覆寫該封裝。 `Y` 回覆會覆寫封裝，`N` 回覆會結束程式。 當命令包含 *QUIET* 選項時，不會出現提示，並且會覆寫任何現有的封裝。|  
 |/Q[uiet]|停止執行包含 `COPY`、`MOVE` 或 `SIGN` 選項的命令時所可能出現的確認提示。 如果目的地電腦中已有指定封裝的同名封裝，或已簽署了指定的封裝，就會出現這些提示。|  
 |/R[emark] *text*|在命令列中加入註解。 註解引數是選擇性的。 如果註解文字包括空格，就必須用引號括住文字。 您可以在單一命令列中併入多個 REM 選項。|  
 |/Si[gn] {*SQL* &#124; *File* &#124; *DTS*}; *path*; *hash*|簽署 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝。 這個動作需要使用三個以分號分隔的引數：<br /><br /> 目的地引數可指定 *SQL*、 *FILE*或 *DTS*。 SQL 目的地可包含 *DESTUSER*、 *DESTPASSWORD* 和 *DESTSERVER* 選項。<br /><br /> path 引數指定要處理之封裝的位置。<br /><br /> hash 引數指定用可變長度十六進位字串來表示的憑證識別碼。<br /><br /> <br /><br /> **\*\* 重要事項 \*\*** 當 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 設定為檢查封裝的簽章時，將只會檢查數位簽章是否存在、是否有效，以及是否來自信任的來源。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 不會檢查封裝是否經過變更。<br /><br /> 如需詳細資訊，請參閱[使用數位簽章來識別封裝的來源](security/identify-the-source-of-packages-with-digital-signatures.md)。|  
@@ -183,7 +183,7 @@ dtutil /SQL delPackage /SOURCEUSER srcUserName /SOURCEPASSWORD #8nGs*w7F /DELETE
 ```  
   
 > [!NOTE]  
->  若要刪除具名伺服器中的封裝，包括`SOURCESERVER`選項和其引數。 您只能利用 *SQL* 選項來指定伺服器。  
+>  若要刪除具名伺服器中的封裝，請併入 `SOURCESERVER` 選項及其引數。 您只能利用 *SQL* 選項來指定伺服器。  
   
  若要刪除儲存在 SSIS 封裝存放區中的封裝，請使用下列語法：  
   
@@ -260,7 +260,7 @@ dtutil /FILE c:\srcPackage.dtsx /MOVE FILE;c:\destPackage.dtsx
 dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819873a91f919  
 ```  
   
- 若要尋找憑證相關資訊，請使用 **CertMgr**。 可在 **CertMgr** 公用程式中檢視雜湊碼，方法是選取憑證，然後按一下 [檢視]  來檢視屬性。 **[詳細資料]** 索引標籤提供有關認證的詳細資訊。 `Thumbprint`屬性可做為雜湊值，其空格已移除。  
+ 若要尋找憑證相關資訊，請使用 **CertMgr**。 可在 **CertMgr** 公用程式中檢視雜湊碼，方法是選取憑證，然後按一下 [檢視]  來檢視屬性。 **[詳細資料]** 索引標籤提供有關認證的詳細資訊。 `Thumbprint` 屬性是做為雜湊值使用，其空格已移除。  
   
 > [!NOTE]  
 >  此範例使用的雜湊不是真正的雜湊。  
@@ -275,6 +275,6 @@ dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [在 SQL Server Data Tools 中執行套件](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)  
+ [在 SQL Server Data Tools 中執行封裝](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)  
   
   

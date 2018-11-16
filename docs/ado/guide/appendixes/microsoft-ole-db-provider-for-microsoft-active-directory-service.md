@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16e7bbd20113c253cbd7a3da183750c8ff566da3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16ece0ae1eee2ed1cc944504af87a74609cba0fe
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758586"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350442"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 服務的 Microsoft OLE DB 提供者
 Active Directory 服務介面 (ADSI) 提供者可讓 ADO 連接到異質的 directory services 透過 ADSI。 這可讓 ADO 應用程式唯讀存取 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 directory 服務，除了任何 LDAP 相容目錄服務和 Novell Directory Services。 ADSI 本身為基礎提供者模型，因此如果有新的提供者提供存取至另一個目錄，ADO 應用程式將能夠順暢地存取它。 ADSI 提供者是無限制執行緒，並啟用 Unicode。  
@@ -29,7 +29,7 @@ Active Directory 服務介面 (ADSI) 提供者可讓 ADO 連接到異質的 dire
 ## <a name="connection-string-parameters"></a>連接字串參數  
  若要連接到此提供者，將**提供者**引數[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性如下：  
   
-```  
+```vb
 ADSDSOObject  
 ```  
   
@@ -38,7 +38,7 @@ ADSDSOObject
 ## <a name="typical-connection-string"></a>一般連接字串  
  此提供者的一般連接字串如下所示：  
   
-```  
+```vb
 "Provider=ADSDSOObject;User ID=MyUserID;Password=MyPassword;"  
 ```  
   
@@ -56,7 +56,7 @@ ADSDSOObject
 ## <a name="command-text"></a>命令文字  
  下列語法將提供者所辨識的四部分的命令文字字串：  
   
-```  
+```vb
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
@@ -65,17 +65,17 @@ ADSDSOObject
 |*Root*|指出**ADsPath**要從中開始搜尋 （也就是搜尋的根） 物件。|  
 |*篩選*|表示搜尋篩選器以 RFC 1960 格式。|  
 |*屬性*|表示要傳回之屬性的逗號分隔清單。|  
-|*範圍*|選擇性。 A**字串**，指定搜尋範圍。 可以是下列其中一項：<br /><br /> 基底，搜尋只有基底物件 （搜尋根目錄）。<br />-OneLevel — 搜尋只有一個層級。<br />-樹狀子目錄，搜尋整個樹狀子目錄。|  
+|*範圍。*|選擇性。 A**字串**，指定搜尋範圍。 可以是下列其中一項：<br /><br /> 基底，搜尋只有基底物件 （搜尋根目錄）。<br />-OneLevel — 搜尋只有一個層級。<br />-樹狀子目錄，搜尋整個樹狀子目錄。|  
   
  例如：  
   
-```  
+```vb
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
 ```  
   
  提供者也支援 SQL SELECT 命令文字。 例如：  
   
-```  
+```vb
 "SELECT title, telephoneNumber From 'LDAP://DC=Microsoft, DC=COM' WHERE   
 objectClass='user' AND objectCategory='Person'"  
 ```  

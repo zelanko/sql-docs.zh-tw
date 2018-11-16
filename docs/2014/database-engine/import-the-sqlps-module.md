@@ -11,12 +11,12 @@ ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e687fd8c7fcd7c21f8aac9b546492a8f9bd4a644
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e73c0d114744241d18dc7946e852e05b3a2c6e5e
+ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077238"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51629551"
 ---
 # <a name="import-the-sqlps-module"></a>匯入 SQLPS 模組
   從 PowerShell 管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的建議方式是將 `sqlps` 模組匯入 Windows PowerShell 2.0 環境中。 此模組會載入及註冊 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 嵌入式管理單元和管理能力組件。  
@@ -39,17 +39,17 @@ ms.locfileid: "48077238"
 -   使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理能力物件模型 (例如 Microsoft.SqlServer.Management.Smo) 來管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件。  
   
 > [!NOTE]  
->  兩個 SQL Server Cmdlet (`Encode-Sqlname` 和 `Decode-Sqlname`) 名稱中所用的動詞，與核准的 Windows PowerShell 2.0 動詞不相符。 這不會影響其作業，但是 Windows PowerShell 會引發警告時`sqlps`模組匯入工作階段。  
+>  兩個 SQL Server Cmdlet (`Encode-Sqlname` 和 `Decode-Sqlname`) 名稱中所用的動詞，與核准的 Windows PowerShell 2.0 動詞不相符。 這不會影響其作業，但是 Windows PowerShell 會在將 `sqlps` 模組匯入工作階段時引發警告。  
   
 ###  <a name="Security"></a> 安全性  
- 根據預設，Windows PowerShell 執行時會將指令碼執行原則設定為 [受限制]，這樣就不會執行任何 Windows PowerShell 指令碼。 若要載入 `sqlps` 模組，您可以使用 `Set-ExecutionPolicy` Cmdlet 來允許執行已簽署的指令碼或任何指令碼。 建議您只執行來自信任來源的指令碼，並且利用適當的 NTFS 權限來保護所有輸入檔和輸出檔的安全。 如需啟用 Windows PowerShell 指令碼的詳細資訊，請參閱 [Running Windows PowerShell Scripts](http://www.microsoft.com/technet/scriptcenter/topics/winpsh/manual/run.mspx)(執行 Windows PowerShell 指令碼)。  
+ 根據預設，Windows PowerShell 執行時會將指令碼執行原則設定為 [受限制]，這樣就不會執行任何 Windows PowerShell 指令碼。 若要載入 `sqlps` 模組，您可以使用 `Set-ExecutionPolicy` Cmdlet 來允許執行已簽署的指令碼或任何指令碼。 建議您只執行來自信任來源的指令碼，並且利用適當的 NTFS 權限來保護所有輸入檔和輸出檔的安全。 如需啟用 Windows PowerShell 指令碼的詳細資訊，請參閱 [Running Windows PowerShell Scripts](https://docs.microsoft.com/powershell/scripting/setup/starting-windows-powershell?view=powershell-6#how-to-enable-windows-powershell-ise-on-earlier-releases-of-windows)(執行 Windows PowerShell 指令碼)。  
   
 ##  <a name="LoadSqlps"></a> 載入 sqlps 模組  
  **在 Windows PowerShell 中載入 sqlps 模組**  
   
-1.  使用`Set-ExecutionPolicy`cmdlet 來設定適當的指令碼執行原則。  
+1.  使用 `Set-ExecutionPolicy` Cmdlet，設定適當的指令碼執行原則。  
   
-2.  使用`Import-Module`cmdlet 匯入 sqlps 模組。 指定`DisableNameChecking`參數，如果您想要隱藏警告的相關`Encode-Sqlname`和`Decode-Sqlname`。  
+2.  使用 `Import-Module` Cmdlet，匯入 sqlps 模組。 如果您想要隱藏 `DisableNameChecking` 和 `Encode-Sqlname` 的警告，請指定 `Decode-Sqlname` 參數。  
   
 ### <a name="example-powershell"></a>範例 (PowerShell)  
  此範例載入已關閉名稱檢查的 `sqlps` 模組。  

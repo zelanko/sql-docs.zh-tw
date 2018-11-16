@@ -2,7 +2,7 @@
 title: Azure Data Studio 版本資訊 |Microsoft Docs
 description: Azure Data Studio 版本資訊
 ms.custom: tools|sos
-ms.date: 09/24/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -10,16 +10,41 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34b8f3f1e3f7ca3396b32c6dad99ef721542fd48
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 9723a51154d0098271f8d3206c7f7a7470598422
+ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237064"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51289918"
 ---
 # <a name="azure-data-studio-release-notes"></a>Azure Data Studio 版本資訊
 
-**[下載 10 月份版本 ！](download.md)**
+**[下載 11 月版本 ！](download.md)**
+
+## <a name="november-2018-november-release"></a>2018 年 11 月起 （11 月發行）
+
+發行日期： 2018 年 11 月 6 日  
+版本： 1.2.4
+
+- 若要更新[SQL Server 2019 Preview 延伸模組](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- 簡介 貼上的計劃延伸模組
+- 高彩查詢延伸模組，包括 SSMS 編輯器佈景主題簡介
+- 修正在 SQL Server Agent、 Profiler、 和匯入延伸模組
+- 修正.Net Core 通訊端 KeepAlive 問題造成被卸除在 macOS 上的非作用中連線
+- 升級至.Net Core 的 SQL 工具服務 2.2 Preview 3 （適用於最終的 AAD 支援）
+
+### <a name="bug-fixes"></a>錯誤修正
+- 修正[發出 # 2933年](https://github.com/Microsoft/azuredatastudio/issues/2933)： 連線到 Azure SQL DB 遺失
+- 修正[發出 # 2914年](https://github.com/Microsoft/azuredatastudio/issues/2914)： 擴充資料庫的 OE 節點的 「 無效的引數 」 例外狀況
+- 修正[發出 # 2935年](https://github.com/Microsoft/azuredatastudio/pull/2935)： 查詢結果中正確顯示多行訊息
+- 修正[發出 # 2906年](https://github.com/Microsoft/azuredatastudio/pull/2906)： 資料表名稱包含特殊字元時，修正編輯資料的文件名稱
+- 修正[發出 # 2929年](https://github.com/Microsoft/azuredatastudio/issues/2929)： 建置延伸模組中的變更記錄指出檢查 VSCode 版本資訊的變更
+- 修正[發出 # 2719年](https://github.com/Microsoft/azuredatastudio/issues/2719)： 高對比佈景主題雙精度浮點數/三合一的圖示
+- 修正[發出 #3047](https://github.com/Microsoft/azuredatastudio/pull/3047)： 新增命令列介面來連接到 SQL Server
+- 修正[發出 #3031](https://github.com/Microsoft/azuredatastudio/pull/3031)： 加入查詢計劃的佈景主題支援
+- ...
+
+如需詳細資訊，請參閱 <<c0> [ 變更記錄檔](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)，並[版本](https://github.com/Microsoft/azuredatastudio/releases)。
 
 ## <a name="october-2018-october-release"></a>2018 年 10 月起 （年 10 月發行）
 
@@ -58,7 +83,7 @@ ms.locfileid: "50237064"
     - 若要了解快速資料準備的檔案格式和資料類型使用在 Notebook 中的文字的程式碼加速器程式庫。
   - Azure 資源總管
     - Azure 資源總管檢視可讓您瀏覽資料相關的端點，您的 Azure 帳戶，並在 [物件總管] 中建立其連線。 在此版本中都支援 Azure SQL Database 和伺服器。
-  - SQL Server Polybase 建立外部資料表精靈
+  - SQL Server PolyBase 建立外部資料表精靈
     - 使用簡單易用的精靈，建立外部資料表和其支援的中繼資料結構。 在此版本中，支援 SQL Server 和 Oracle 的遠端伺服器。
 - 查詢結果方格效能和大量的結果集的 UX 改良功能。
 - Visual Studio 程式碼的原始碼重新整理 從 1.23 1.26.1 格線版面配置與改善設定編輯器 （預覽）。

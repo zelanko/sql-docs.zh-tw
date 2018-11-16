@@ -13,12 +13,12 @@ ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 50556ffbe1ea88df7e62fdb75b9c9d260a0bd662
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 441366208d2bfd886794dd7e50dca7e0aef7b3ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099529"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659337"
 ---
 # <a name="project-settings-migration-accesstosql"></a>專案設定 （移轉） (AccessToSQL)
 移轉專案設定可讓您設定如何將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
@@ -88,5 +88,5 @@ ms.locfileid: "50099529"
 在資料移轉期間使用的批次大小。 每個批次之後，會記錄交易。 根據預設，所有配置的批次大小為 10000。  
   
 ## <a name="see-also"></a>另請參閱  
-[使用者介面 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[使用者介面 Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

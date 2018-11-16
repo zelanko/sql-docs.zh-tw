@@ -18,16 +18,16 @@ ms.assetid: bce69ab9-ea5b-43fd-8114-08b1b5890755
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d9e890e359080f2d12e5c0947f3b9b214afb6591
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 38dabb0ce6efe87a360b78693c78fb36240242c3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215518"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675827"
 ---
 # <a name="setdisable-method-clientnetworkprotocol-class"></a>SetDisable 方法 (ClientNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  停用所指定的用戶端網路通訊協定[Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)。  
+  停用所指定的用戶端網路通訊協定[Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,6 +46,6 @@ object.SetDisable()
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定用戶端網路通訊協定和網路程式庫](http://technet.microsoft.com/library/ms181035.aspx)  
+ [設定用戶端網路通訊協定和網路程式庫](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

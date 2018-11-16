@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,16 +13,16 @@ ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a8c6e3b1d74cb122a94cc643a9eb94d5dbb6c5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 729daea7fe719f33ec8931424143c3fedc5ac86f
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772716"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558325"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>將商務物件標示為可安全編寫指令碼
 > [!IMPORTANT]
->  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  若要協助確保安全的網際網路環境，您需要具現化任何商務物件標示[rds。DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)物件的[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法為 「 指令碼的安全。 」 您需要確保它們會如此標示，在系統登錄的授權區域之前可用於 DCOM。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "47772716"
   
  若要以手動方式標記您的商務物件為安全的指令碼，建立副檔名為.reg，其中包含下列文字的文字檔案。 在此範例中， \< *MyActiveXGUID*> 是您的商務物件的十六進位 GUID 數字。 下列兩個數字會啟用安全的-指令碼的功能：  
   
-```  
+```console
 [HKEY_CLASSES_ROOT\CLSID\<MyActiveXGUID>\Implemented   
 Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}]  
 [HKEY_CLASSES_ROOT\CLSID\<MyActiveXGUID>\Implemented   

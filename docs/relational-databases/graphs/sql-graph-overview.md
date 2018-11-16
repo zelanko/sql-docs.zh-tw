@@ -5,8 +5,7 @@ ms.date: 07/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
@@ -16,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d6e3a5e26fd40fc4f2fca093a41048aa7e3c5b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695897"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512703"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 和 Azure SQL Database 的圖表處理
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47695897"
 
 
 ## <a name="what-is-a-graph-database"></a>什麼是一種圖表資料庫？  
-圖表資料庫是節點 （或端點） 的集合和邊緣 （或關聯性）。 節點表示 （例如，個人或組織） 的實體，邊緣表示連接 （適用於範例中，按讚數或朋友） 的兩個節點之間的關聯性。 節點和邊緣都可能有與其相關聯的屬性。 以下是一些功能，使圖表資料庫的唯一：  
+圖表資料庫是節點 (或頂點) 與邊線 (或關聯性) 的集合。 節點表示實體 (例如個人或組織)，邊線代表其所連結之兩個節點的關聯性 (例如按讚數或朋友數)。 節點和邊緣都可能有與其相關聯的屬性。 以下是一些功能，使圖表資料庫的唯一：  
 -   邊緣或關聯性是第一級實體中的圖表資料庫，可以有屬性與其相關聯。 
 -   單一邊緣可以彈性地連接圖形資料庫中的多個節點。
 -   您可以表示模式比對和多重躍點瀏覽查詢輕鬆。

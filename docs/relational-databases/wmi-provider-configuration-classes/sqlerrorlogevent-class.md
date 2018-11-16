@@ -14,12 +14,12 @@ ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 652eaeb01289bac4af6af81de6278270d6596c91
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 35e2af3f371d66ce38df5cb376516d40d01006bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216956"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659844"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent 類別
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ Next
   
      **\<磁碟機 >: \Program Files\Microsoft SQL Server\MSSQL13** **。\<執行個體名稱 > \MSSQL\Log**  
   
- 如果透過防火牆連接，請確定您已在遠端目標電腦上的 WMI 防火牆中設定例外狀況。 如需詳細資訊，請參閱 <<c0> [ 連接到 WMI 遠端從 Windows Vista 開始](http://go.microsoft.com/fwlink/?LinkId=178848)。  
+ 如果透過防火牆連接，請確定您已在遠端目標電腦上的 WMI 防火牆中設定例外狀況。 如需詳細資訊，請參閱 <<c0> [ 連接到 WMI 遠端從 Windows Vista 開始](https://go.microsoft.com/fwlink/?LinkId=178848)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SqlErrorLogFile 類別](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)   

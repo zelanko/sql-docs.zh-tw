@@ -10,12 +10,12 @@ ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 3e2e84fd2117afe15075084741e65989a30960cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da846d4afb4ce8fe745b98c8503901fe804520e0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674172"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681106"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>連線到 Oracle (OracleToSQL)
 使用**連接到 Oracle**對話方塊連接到您想要移轉的 Oracle 資料庫。  
@@ -70,7 +70,7 @@ ms.locfileid: "47674172"
   
 連接字串是由參數名稱和值配對所組成。  
   
--   OLE DB 連接字串資訊，請參閱[Microsoft OLE DB Provider for Oracle](http://go.microsoft.com/fwlink/?LinkId=85640)在 MSDN Library 文章。  
+-   OLE DB 連接字串資訊，請參閱[Microsoft OLE DB Provider for Oracle](https://go.microsoft.com/fwlink/?LinkId=85640)在 MSDN Library 文章。  
   
 SSMA 的連接字串，請一律包含提供者參數。 此外，請確定您包含連接埠參數，當您連接到 Oracle。  
   

@@ -10,12 +10,12 @@ ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d4ff4fdcf07b84455b76994d23cc2c9b0f738106
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 491eec7c723681639308b05a78de2ab935bd81e7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100099"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663858"
 ---
 # <a name="generating-reports-db2tosql"></a>產生報表 (DB2ToSQL)
 使用命令來執行某些活動的報表會產生物件樹狀結構層級的 SSMA 主控台中。  
@@ -138,5 +138,5 @@ ms.locfileid: "50100099"
 -   失敗指令碼  
   
 ## <a name="see-also"></a>另請參閱  
-[執行 SSMA 主控台](http://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
+[執行 SSMA 主控台](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

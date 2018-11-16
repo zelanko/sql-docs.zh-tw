@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,12 +16,12 @@ ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7454eb815faf26248b4326487a833f0038f64c1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee9a48b4bec625e4d64caf20aa1b5c8eaefe34f3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698266"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660397"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>路徑運算式 - 使用縮寫語法
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +48,9 @@ child::ProductDescription[attribute::ProductModelID=19]
   
     ```  
     SELECT AdditionalContactInfo.query('             
-                declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";             
-                declare namespace crm="http://schemas.adventure-works.com/Contact/Record";             
-                declare namespace ci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";             
+                declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";             
+                declare namespace crm="https://schemas.adventure-works.com/Contact/Record";             
+                declare namespace ci="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";             
                 /descendant-or-self::node()/child::act:telephoneNumber             
                 ') as result             
     FROM Person.Contact             

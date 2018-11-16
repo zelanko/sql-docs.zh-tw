@@ -15,12 +15,12 @@ ms.assetid: ad9ad40f-b018-4bae-b003-691f08dcefdf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 45e3e6c0d82c505db02cd3a28881af9ee7164e5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59ef65e7222443c90003184b0f8e85be0d56c78f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730106"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663257"
 ---
 # <a name="index-related-dynamic-management-views-and-functions-transact-sql"></a>索引相關的動態管理檢視和函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,6 +37,6 @@ ms.locfileid: "47730106"
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [系統檢視表&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [系統檢視表&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

@@ -17,12 +17,12 @@ ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d57b193cd66c4c6428e3c60d6b1ef5d6331ffc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b095e034df987fd580b5f5855993c9cf070a1236
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613256"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599839"
 ---
 # <a name="readtext-method"></a>ReadText 方法
 讀取指定的文字的字元數[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。  
@@ -47,7 +47,7 @@ String = Stream.ReadText ( NumChars)
 > [!NOTE]
 >  **ReadText**方法搭配文字資料流 ([型別](../../../ado/reference/ado-api/type-property-ado-stream.md)會**adTypeText**)。 二進位資料流 (**型別**是**adTypeBinary**)，使用[讀取](../../../ado/reference/ado-api/read-method.md)。  
   
- 導致大量透過傳回的 XML 資料的查詢**ReadText** ActiveX Data Object (ADO) 的 Stream 物件的方法可能會花費很長的時間執行;，如果進行此設定會從叫用 COM + 元件中ASP 網頁上，使用者的工作階段可能會逾時。ADO 將從 utf-8 編碼為 Unicode; 轉換 Stream 物件資料頻繁的記憶體重新配置參與一次轉換的這類數量龐大的資料是很耗時。 若要解決，請重複的呼叫**ReadText**方法 ADO 命令物件，並指定較少的字元。 測試顯示的值等於 128 K (131,072) 是最佳。 回應時間減少為這個值會減少。 如需詳細資訊，請參閱知識庫文章 280067，"PRB： 使用 ADO 資料流物件 ReadText 方法來擷取從 SQL Server 2000 的非常大型的 XML 文件可能會很慢 」，Microsoft 知識庫中在 http://support.microsoft.com 。  
+ 導致大量透過傳回的 XML 資料的查詢**ReadText** ActiveX Data Object (ADO) 的 Stream 物件的方法可能會花費很長的時間執行;，如果進行此設定會從叫用 COM + 元件中ASP 網頁上，使用者的工作階段可能會逾時。ADO 將從 utf-8 編碼為 Unicode; 轉換 Stream 物件資料頻繁的記憶體重新配置參與一次轉換的這類數量龐大的資料是很耗時。 若要解決，請重複的呼叫**ReadText**方法 ADO 命令物件，並指定較少的字元。 測試顯示的值等於 128 K (131,072) 是最佳。 回應時間減少為這個值會減少。 如需詳細資訊，請參閱知識庫文章 280067，"PRB： 使用 ADO 資料流物件 ReadText 方法來擷取從 SQL Server 2000 的非常大型的 XML 文件可能會很慢 」，Microsoft 知識庫中在 https://support.microsoft.com 。  
   
 ## <a name="applies-to"></a>適用於  
  [Stream 物件 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8c992cbda06d158bec0b76d6d46d71157a08cf3e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 728ab56a844a6c7a14f5de7e39abc5d38146c85a
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032985"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560375"
 ---
 # <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>適用於 SQL 開發人員的教學課程： 在資料庫內 Python 分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "51032985"
 
 + [第 1 課： 瀏覽及視覺化資料使用 Python](sqldev-py3-explore-and-visualize-the-data.md)
 
-+ [第 2 課： 建立資料功能使用 使用自訂 SQL 函數](sqldev-py4-create-data-features-using-t-sql.md)
++ [第 2 課： 建立使用自訂 SQL 函式的資料特徵](sqldev-py4-create-data-features-using-t-sql.md)
 
 + [第 3 課： 訓練及儲存使用 T-SQL Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 

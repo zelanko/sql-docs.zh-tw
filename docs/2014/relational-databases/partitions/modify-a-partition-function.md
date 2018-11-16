@@ -10,12 +10,12 @@ ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9371a82366f31c2d8221834a1bd29f9cfd9cc0d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7cc06db0cf02a5d2e85b4e49a778f5484446b9be
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049038"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640755"
 ---
 # <a name="modify-a-partition-function"></a>修改資料分割函數
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在資料分割資料表或索引的資料分割函數中，加上或減去指定的資料分割數 (遞增為 1)，藉以變更 [!INCLUDE[tsql](../../includes/tsql-md.md)]中資料表或索引的資料分割方式。 若要加入資料分割，可以將現有資料分割「拆解」為兩個資料分割，並重新定義新資料分割的界限。 若要卸除資料分割，可以將兩個資料分割的界限「合併」成為一個。 最後這個動作會重新擴展一個資料分割，並使另一個資料分割成為未指派。  
@@ -33,7 +33,7 @@ ms.locfileid: "48049038"
   
 -   **若要使用下列項目來修改資料分割函數：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48049038"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不提供修改資料分割函數的複寫支援。 如果您要變更發行集資料庫中的資料分割函數，必須在訂閱資料庫中手動執行此作業。  
   
--   ALTER PARITITION FUNCTION 所影響的所有檔案群組都必須在線上。  
+-   ALTER PARTITION FUNCTION 會影響的所有檔案群組必須在線上。  
   
 ###  <a name="Security"></a> 安全性  
   

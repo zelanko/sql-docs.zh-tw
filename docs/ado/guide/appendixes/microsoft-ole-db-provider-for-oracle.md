@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 572920ccf63f35c74e39cd02a4b32c4fd85b0550
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fce44a6059b82a5d5a6edeac30d4411afcbd96ce
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698576"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350232"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 概觀
 > [!IMPORTANT]
@@ -31,7 +31,7 @@ ms.locfileid: "47698576"
 ## <a name="connection-string-parameters"></a>連接字串參數
  若要連接到此提供者，將*提供者*引數[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性：
 
-```
+```vb
 MSDAORA
 ```
 
@@ -42,7 +42,7 @@ MSDAORA
 ## <a name="typical-connection-string"></a>一般連接字串
  此提供者的一般連接字串是：
 
-```
+```vb
 "Provider=MSDAORA;Data Source=serverName;User ID=MyUserID; Password=MyPassword;"
 ```
 
@@ -61,7 +61,7 @@ MSDAORA
 ## <a name="provider-specific-connection-parameters"></a>提供者特有的連接參數
  提供者支援除了 ADO 所定義的數個提供者特有的連接參數。 因為 ADO 連接屬性，這些提供者特有的屬性可設透過[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)的集合[連線](../../../ado/reference/ado-api/connection-object-ado.md)或是一部分**ConnectionString**.
 
- 這些參數中的完整說明[OLE DB 程式設計人員參考](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)。 [ADO 動態屬性索引](../../../ado/reference/ado-api/ado-dynamic-property-index.md)提供這些參數名稱和對應的 OLE DB 屬性之間的交互參考。
+ 這些參數中的完整說明[OLE DB 程式設計人員參考](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)。 [ADO 動態屬性索引](../../../ado/reference/ado-api/ado-dynamic-property-index.md)提供這些參數名稱和對應的 OLE DB 屬性之間的交互參考。
 
 |參數|描述|
 |---------------|-----------------|

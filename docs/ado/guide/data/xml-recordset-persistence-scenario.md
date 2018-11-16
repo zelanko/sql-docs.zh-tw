@@ -13,12 +13,12 @@ ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 252df4b5133861b6ff9892600bfe1c53206fefec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65f4705eb926c116d935384163cffe4f33b11a88
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789216"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600238"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 資料錄集保存案例
 在此案例中，您將建立 Active Server Pages (ASP) 應用程式，直接將資料錄集物件的內容將 ASP 回應物件。  
@@ -111,7 +111,7 @@ ms.locfileid: "47789216"
 </HTML>  
 ```  
   
- 關閉 default.htm 檔案，並將它儲存到您用來儲存 XMLResponse.asp 相同的資料夾。 使用 Internet Explorer 4.0 或更新版本中，開啟 URL http://*sqlserver*/XMLPersist/default.htm，並觀察結果。 資料會顯示在 繫結的 DHTML 資料表。 現在開啟 URL http:// *sqlserver* /XMLPersist/XMLResponse.asp，並觀察結果。 XML 會顯示。  
+ 關閉 default.htm 檔案，並將它儲存到您用來儲存 XMLResponse.asp 相同的資料夾。 使用 Internet Explorer 4.0 或更新版本中，開啟 URL https://*sqlserver*/XMLPersist/default.htm，並觀察結果。 資料會顯示在 繫結的 DHTML 資料表。 現在開啟 URL https:// *sqlserver* /XMLPersist/XMLResponse.asp，並觀察結果。 XML 會顯示。  
   
 ## <a name="see-also"></a>另請參閱  
  [Save 方法](../../../ado/reference/ado-api/save-method.md)   

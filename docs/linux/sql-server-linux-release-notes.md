@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: d1163c58933ab4d2b6d7faa8b643a3401d87d530
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 4760c70f71b798fb31d96c6b36fb91afe6de9667
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270131"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666017"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 的版本資訊
 
@@ -78,7 +78,7 @@ ms.locfileid: "51270131"
 
 ## <a id="CU12"></a> CU12 (Oct 2018)
 
-這是 SQL Server 2017 的累計更新 12 (CU12) 版本。 此版本的 SQL Server 引擎版本是 14.0.3045.24。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/en-us/help/4464082 ](https://support.microsoft.com/en-us/help/4464082)。
+這是 SQL Server 2017 的累計更新 12 (CU12) 版本。 此版本的 SQL Server 引擎版本是 14.0.3045.24。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/help/4464082 ](https://support.microsoft.com/help/4464082)。
 
 ### <a name="package-details"></a>套件詳細資料
 
@@ -92,7 +92,7 @@ ms.locfileid: "51270131"
 
 ## <a id="CU11"></a> CU11 (年 9 月 2018)
 
-這是 SQL Server 2017 的累積更新 11 (CU11) 版本。 此版本的 SQL Server 引擎版本是 14.0.3038.14。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/en-us/help/4462262 ](https://support.microsoft.com/en-us/help/4462262)。
+這是 SQL Server 2017 的累積更新 11 (CU11) 版本。 此版本的 SQL Server 引擎版本是 14.0.3038.14。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/help/4462262 ](https://support.microsoft.com/help/4462262)。
 
 ### <a name="package-details"></a>套件詳細資料
 
@@ -106,7 +106,7 @@ ms.locfileid: "51270131"
 
 ## <a id="CU10"></a> CU10 (Aug 2018)
 
-這是 SQL Server 2017 的累計更新 10 (CU10) 版本。 此版本的 SQL Server 引擎版本是 14.0.3037.1。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/en-us/help/4342123 ](https://support.microsoft.com/en-us/help/4342123)。
+這是 SQL Server 2017 的累計更新 10 (CU10) 版本。 此版本的 SQL Server 引擎版本是 14.0.3037.1。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/help/4342123 ](https://support.microsoft.com/help/4342123)。
 
 ### <a name="package-details"></a>套件詳細資料
 
@@ -120,7 +120,7 @@ ms.locfileid: "51270131"
 
 ## <a id="CU9-GDR2"></a> CU9 GDR2 (Aug 2018)
 
-這是 SQL Server 2017 也包含先前發行的 CU (CU9) 的安全性更新。 此版本的 SQL Server 引擎版本是 14.0.3035.2。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/en-us/help/4293805 ](https://support.microsoft.com/en-us/help/4293805)。
+這是 SQL Server 2017 也包含先前發行的 CU (CU9) 的安全性更新。 此版本的 SQL Server 引擎版本是 14.0.3035.2。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/help/4293805 ](https://support.microsoft.com/help/4293805)。
 
 ### <a name="package-details"></a>套件詳細資料
 
@@ -134,7 +134,7 @@ ms.locfileid: "51270131"
 
 ## <a id="GDR2"></a> GDR2 (Aug 2018)
 
-這是僅包含 SQL Server 2017 的 GDR2 （和 GDR1） 安全性修正程式的安全性更新。  此版本的 SQL Server 引擎版本是 14.0.2002.14。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/en-us/help/4293803 ](https://support.microsoft.com/en-us/help/4293803)。
+這是僅包含 SQL Server 2017 的 GDR2 （和 GDR1） 安全性修正程式的安全性更新。  此版本的 SQL Server 引擎版本是 14.0.2002.14。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/help/4293803 ](https://support.microsoft.com/help/4293803)。
 
 ### <a name="package-details"></a>套件詳細資料
 
@@ -148,7 +148,7 @@ ms.locfileid: "51270131"
 
 ## <a id="CU9"></a> CU9 (七月 2018)
 
-這是 SQL Server 2017 的累計更新 9 (CU9) 版本。 此版本的 SQL Server 引擎版本是 14.0.3030.27。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/en-us/help/4341265 ](https://support.microsoft.com/en-us/help/4341265)。
+這是 SQL Server 2017 的累計更新 9 (CU9) 版本。 此版本的 SQL Server 引擎版本是 14.0.3030.27。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/help/4341265 ](https://support.microsoft.com/help/4341265)。
 
 ### <a name="package-details"></a>套件詳細資料
 
@@ -162,7 +162,7 @@ ms.locfileid: "51270131"
 
 ## <a id="CU8"></a> CU8 (Jun 2018)
 
-這是 SQL Server 2017 的累積更新 8 (CU8) 版本。 此版本的 SQL Server 引擎版本是 14.0.3029.16。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/en-us/help/4338363 ](https://support.microsoft.com/en-us/help/4338363)。
+這是 SQL Server 2017 的累積更新 8 (CU8) 版本。 此版本的 SQL Server 引擎版本是 14.0.3029.16。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/help/4338363 ](https://support.microsoft.com/help/4338363)。
 
 ### <a name="package-details"></a>套件詳細資料
 
@@ -176,7 +176,7 @@ ms.locfileid: "51270131"
 
 ## <a id="CU7"></a> CU7 (2018 年)
 
-這是 SQL Server 2017 的累積更新 7 (CU7) 版本。 此版本的 SQL Server 引擎版本是 14.0.3026.27。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/en-us/help/4229789 ](https://support.microsoft.com/en-us/help/4229789)。
+這是 SQL Server 2017 的累積更新 7 (CU7) 版本。 此版本的 SQL Server 引擎版本是 14.0.3026.27。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/help/4229789 ](https://support.microsoft.com/help/4229789)。
 
 ### <a name="package-details"></a>套件詳細資料
 
@@ -236,7 +236,7 @@ sudo systemctl start mssql-server
 
 ## <a id="CU4"></a> CU4 (Feb 2018)
 
-這是 SQL Server 2017 的累計更新 4 (CU4) 版本。 此版本的 SQL Server 引擎版本是 14.0.3022.28。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/en-us/help/4056498 ](https://support.microsoft.com/en-us/help/4056498)。
+這是 SQL Server 2017 的累計更新 4 (CU4) 版本。 此版本的 SQL Server 引擎版本是 14.0.3022.28。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/help/4056498 ](https://support.microsoft.com/help/4056498)。
 
 ### <a name="package-details"></a>套件詳細資料
 
@@ -253,7 +253,7 @@ sudo systemctl start mssql-server
 
 ## <a id="GDR1"></a> GDR1 (Jan 2018)
 
-這是僅包含 SQL Server 2017 的安全性問題修正 GDR1 安全性更新。 此版本的 SQL Server 引擎版本是 14.0.2000.63。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/en-us/help/4057122 ](https://support.microsoft.com/en-us/help/4057122)。
+這是僅包含 SQL Server 2017 的安全性問題修正 GDR1 安全性更新。 此版本的 SQL Server 引擎版本是 14.0.2000.63。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/help/4057122 ](https://support.microsoft.com/help/4057122)。
 
 ### <a name="package-details"></a>套件詳細資料
 
@@ -267,7 +267,7 @@ sudo systemctl start mssql-server
 
 ## <a id="CU3"></a> CU3 (Jan 2018)
 
-這是 SQL Server 2017 的累積更新 3 (CU3) 版本。 此版本的 SQL Server 引擎版本是 14.0.3015.40。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/en-us/help/4052987 ](https://support.microsoft.com/en-us/help/4052987)。
+這是 SQL Server 2017 的累積更新 3 (CU3) 版本。 此版本的 SQL Server 引擎版本是 14.0.3015.40。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/help/4052987 ](https://support.microsoft.com/help/4052987)。
 
 ### <a name="package-details"></a>套件詳細資料
 

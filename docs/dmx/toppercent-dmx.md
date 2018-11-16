@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 781b5c660826ff963497a5b89b7bc01a16eeb265
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 60af695b92b23db33b009c446431a1b8f325d68f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040396"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600388"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ TopPercent(<table expression>, <rank expression>, <percent>)
  **TopPercent**函式會傳回最頂部資料列的已評估值為基礎的順位的遞減順序\<排名運算式 > 引數，每個資料列，使總和\<排名運算式 >值至少是指定所指定的百分比\<%> 引數。 **TopPercent**傳回符合指定之百分比值的可能最小元素數目。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立預測查詢的關聯模型，您使用建置[83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
+ 下列範例會建立預測查詢的關聯模型，您使用建置[83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
   
  若要了解 TopPercent 的運作方式，可能要先執行僅傳回巢狀的資料表的預測查詢很有幫助。  
   

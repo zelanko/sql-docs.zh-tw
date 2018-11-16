@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 56e780efde72007d9ed4f1b701cde220a0f9be4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 939cc21d8f89d93dca9249efcad82a85874a00c4
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688116"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350014"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for Internet 發行等概觀
 Microsoft OLE DB Provider for Internet Publishing 會將 ADO 可以存取由 Microsoft FrontPage 或 Microsoft Internet Information Server 的資源。 資源包括 web 來源檔案，例如 HTML 檔案或 Windows 2000 web 資料夾。
@@ -28,7 +28,7 @@ Microsoft OLE DB Provider for Internet Publishing 會將 ADO 可以存取由 Mic
 ## <a name="connection-string-parameters"></a>連接字串參數
  若要連接到此提供者，將*提供者*引數[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性：
 
-```
+```vb
 MSDAIPP.DSO
 ```
 
@@ -37,13 +37,13 @@ MSDAIPP.DSO
 ## <a name="typical-connection-string"></a>一般連接字串
  此提供者的一般連接字串是：
 
-```
+```vb
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
  -或-
 
-```
+```vb
 "URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 

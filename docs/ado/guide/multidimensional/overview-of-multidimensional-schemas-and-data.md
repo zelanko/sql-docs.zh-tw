@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70bd6f1867d48a9c96f5759d95c2a08a22714d8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f06f62768637ebb48ffa6e1cfd2560ff3b53c383
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811156"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350412"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多維度結構描述和資料的概觀
 ## <a name="understanding-multidimensional-schemas"></a>了解多維度的結構描述  
@@ -41,7 +41,7 @@ ms.locfileid: "47811156"
   
  [Geography] 維度具有下列成員的集合：  
   
-```  
+```console
 {All, North America, Europe, Canada, USA, UK, Germany, Canada-West,  
 Canada-East, USA-NW, USA-SW, USA-NE, USA-SE, England, Scotland,   
 Wales,Ireland, Germany-North, Germany-South, Ottawa, Toronto,   

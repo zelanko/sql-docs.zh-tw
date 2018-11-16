@@ -10,24 +10,24 @@ ms.assetid: 871fcccd-b726-4b13-9f95-d02b4b39d8ab
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b2adfc4b32b2d6223f2852a425bf073f14cb3294
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09cce119f74bcdf858887078c0a78046dedde7d2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659343"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677977"
 ---
 # <a name="clr-integration---what39s-new"></a>CLR 整合-什麼&#39;新
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   以下是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中 CLR 整合的新功能：  
   
--   在 CLR 的版本 4 中，CLR 資料庫物件不再攔截損壞的狀態例外狀況。 這些例外狀況現在會在 CLR 整合裝載層中攔截。 這些例外狀況依然可以由 CLR 資料庫元件所攔截藉由設定程式碼屬性 ([\<legacyCorruptedStateExceptionsPolicy > 項目](http://go.microsoft.com/fwlink/?LinkId=204954))。 但是不建議您這樣做，因為當發生損壞的狀態例外狀況時，結果就不可靠。  
+-   在 CLR 的版本 4 中，CLR 資料庫物件不再攔截損壞的狀態例外狀況。 這些例外狀況現在會在 CLR 整合裝載層中攔截。 這些例外狀況依然可以由 CLR 資料庫元件所攔截藉由設定程式碼屬性 ([\<legacyCorruptedStateExceptionsPolicy > 項目](https://go.microsoft.com/fwlink/?LinkId=204954))。 但是不建議您這樣做，因為當發生損壞的狀態例外狀況時，結果就不可靠。  
   
 -   由於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的安全性要求很嚴格，所以 CLR 資料庫元件將會繼續使用 CLR 2.0 版中所定義的程式碼存取安全性模型。  
   
--   在 CLR 4 版中中的格式錯誤**System.TimeSpan**值會產生**System.FormatExceptions**。 在 CLR 中的格式錯誤的第 4 版之前**System.TimeSpan**數值會被忽略。 需要的 CLR 版本 4 之前行為的資料庫應用程式應該執行資料庫的相容性層級 (**ALTER DATABASE 相容性層級**) 100 或更低。 如需詳細資訊，請參閱 < [< TimeSpan_LegacyFormatMode > 項目](http://go.microsoft.com/fwlink/?LinkId=205109)。  
+-   在 CLR 4 版中中的格式錯誤**System.TimeSpan**值會產生**System.FormatExceptions**。 在 CLR 中的格式錯誤的第 4 版之前**System.TimeSpan**數值會被忽略。 需要的 CLR 版本 4 之前行為的資料庫應用程式應該執行資料庫的相容性層級 (**ALTER DATABASE 相容性層級**) 100 或更低。 如需詳細資訊，請參閱 < [< TimeSpan_LegacyFormatMode > 項目](https://go.microsoft.com/fwlink/?LinkId=205109)。  
   
--   版本 4 的 CLR 支援 Unicode 5.1。 涉及一些腔調字標記和符號的排序作業將得以改善。 如果您的應用程式依賴舊版的排序行為，可能會發生相容性問題。 若要啟用舊版排序，資料庫相容性層級 (**ALTER DATABASE 相容性層級**) 必須設為 100 或更低。 為了支援這項處理，[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 會將 sort00001000.dll 安裝在 .NET Framework 4 目錄中 (C:\Windows\Microsoft.NET\Framework\v4.0.30319)。 如需詳細資訊，請參閱 < [ \<CompatSortNLSVersion > 項目](http://go.microsoft.com/fwlink/?LinkId=205110)。  
+-   版本 4 的 CLR 支援 Unicode 5.1。 涉及一些腔調字標記和符號的排序作業將得以改善。 如果您的應用程式依賴舊版的排序行為，可能會發生相容性問題。 若要啟用舊版排序，資料庫相容性層級 (**ALTER DATABASE 相容性層級**) 必須設為 100 或更低。 為了支援這項處理，[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 會將 sort00001000.dll 安裝在 .NET Framework 4 目錄中 (C:\Windows\Microsoft.NET\Framework\v4.0.30319)。 如需詳細資訊，請參閱 < [ \<CompatSortNLSVersion > 項目](https://go.microsoft.com/fwlink/?LinkId=205110)。  
   
 -   已新增下列資料行[sys.dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md): **total_processor_time_ms**， **total_allocated_memory_kb**，和**survived_memory_kb**。  
   

@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -19,12 +18,12 @@ ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d496a846c49c002e77f0f8bc3bde13fad24755a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 731877fced1d14e385f8681d4a436269e518595a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854756"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656797"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>模組和初構 - XQuery 初構
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47854756"
  例如，以下 XQuery 針對 Instructions 資料行所指定**xml**將製造指示儲存為 XML 的型別。 該查詢會擷取工作中心位置 `10` 的製造指示。 `query()`方法**xml**資料類型用來指定 XQuery。  
   
 ```  
-SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
+SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
     /AWMI:root/AWMI:Location[@LocationID=10]  
 ') AS Result   
 FROM  Production.ProductModel  
@@ -43,7 +42,7 @@ WHERE ProductModelID=7
   
  請注意下列項目是從上一個查詢而來：  
   
--   XQuery 初構包含命名空間前置詞 (AWMI) 宣告， `(namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`。  
+-   XQuery 初構包含命名空間前置詞 (AWMI) 宣告， `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`。  
   
 -   `declare namespace` 關鍵字定義稍後要用在查詢主體中的命名空間前置詞。  
   
@@ -56,7 +55,7 @@ WHERE ProductModelID=7
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
          /PD:ProductDescription/PD:Summary   
     ') as Result  
 FROM Production.ProductModel  
@@ -66,7 +65,7 @@ where ProductModelID=19
  若要增進查詢的可讀性，您可以使用 WITH XMLNAMESPACES 來宣告命名空間，而不要在查詢初構中使用 `declare namespace` 來宣告前置詞和命名空間的繫結。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
   
 SELECT CatalogDescription.query('  
          /PD:ProductDescription/PD:Summary   
@@ -84,7 +83,7 @@ where ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-     declare default element namespace  "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare default element namespace  "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
         /ProductDescription/Summary   
     ') as Result  
 FROM  Production.ProductModel  
@@ -94,7 +93,7 @@ WHERE ProductModelID=19
  您也可以使用 WITH XMLNAMESPACES 來宣告預設命名空間：  
   
 ```  
-WITH XMLNAMESPACES (DEFAULT 'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription')  
+WITH XMLNAMESPACES (DEFAULT 'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription')  
 SELECT CatalogDescription.query('  
         /ProductDescription/Summary   
     ') as Result  

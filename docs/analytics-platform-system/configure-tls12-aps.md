@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 10/29/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 638633a84721532ad05a52126aa7bcfd3f2bb6b7
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 15bee3f68bf922ec9220c9ac570e5bd372f47483
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237172"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697856"
 ---
 # <a name="configure-tls-12-in-aps"></a>在 AP 中設定 TLS 1.2
 
@@ -22,7 +22,7 @@ ms.locfileid: "50237172"
 
 > [!WARNING]
 > 這個區段、方法或工作包含說明如何修改登錄的步驟。 不過，如果您修改登錄不正確，可會造成資料遺失，而需要重新安裝作業系統的可能會發生嚴重的問題。 我們強烈建議您備份登錄再進行修改。 如此一來，如果發生問題，您就可以還原登錄。 如需有關如何備份和還原登錄，請按一下下列文章編號，以檢視 Microsoft 知識庫中的發行項的詳細資訊：<br>
-[322756](https://support.microsoft.com/en-us/help/322756)如何備份及還原 Windows 中的登錄
+[322756](https://support.microsoft.com/help/322756)如何備份及還原 Windows 中的登錄
 
 **停用：**
 ```

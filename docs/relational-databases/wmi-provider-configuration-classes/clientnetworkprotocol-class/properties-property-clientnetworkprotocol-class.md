@@ -18,16 +18,16 @@ ms.assetid: 7e0a4e38-4555-4750-8fd3-4425b29e6aa1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6497305d0a0d9a303df0f46e74914b3467243cdf
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: bdf4da36e3329ed5da4a820494ef16e999eed3d5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217686"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672487"
 ---
 # <a name="properties-property-clientnetworkprotocol-class"></a>Properties 屬性 (ClientNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  取得與所指定之目前用戶端網路通訊協定相關聯的屬性[Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)。  
+  取得與所指定之目前用戶端網路通訊協定相關聯的屬性[Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,6 +46,6 @@ object.Properties [= value]
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定用戶端網路通訊協定和網路程式庫](http://technet.microsoft.com/library/ms181035.aspx)  
+ [設定用戶端網路通訊協定和網路程式庫](https://technet.microsoft.com/library/ms181035.aspx)  
   
   
