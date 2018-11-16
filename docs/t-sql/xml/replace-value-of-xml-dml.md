@@ -19,12 +19,12 @@ ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e339113e8bb1dff22f7b44ebfcf623d3ef622a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b413d8948d671b0b3717df94db8cf18ecada004
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607986"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701456"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -158,7 +158,7 @@ go
 --insert a new location - <Location 1000/>.   
 update T  
 set Instructions.modify('  
-  declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 insert <MI:Location LocationID="1000"  LaborHours="1000"  LotSize="1000" >  
            <MI:step>Do something using <MI:tool>hammer</MI:tool></MI:step>  
          </MI:Location>  
@@ -172,7 +172,7 @@ go
 -- Now replace manu. tool in location 1000  
 update T  
 set Instructions.modify('  
-  declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   replace value of (/MI:root/MI:Location/MI:step/MI:tool)[1]   
   with   "screwdriver"  
 ')  
@@ -182,7 +182,7 @@ from T
 -- Now replace value of lot size  
 update T  
 set Instructions.modify('  
-  declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   replace value of (/MI:root/MI:Location/@LotSize)[1]   
   with   500 cast as xs:decimal ?  
 ')  

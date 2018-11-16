@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 179bc0379e508954c93464b6f1075334756dd250
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: bbeeff135edbc333b6ce8b3e20cf5235710f2dc1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085484"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677677"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>設定 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本指南提供指示來建立 Red Hat Enterprise Linux 上的 SQL Server 的兩個節點的共用的磁碟叢集。 叢集層以在 Red Hat Enterprise Linux (RHEL) 為基礎[HA 附加元件](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)之上建置[Pacemaker](http://clusterlabs.org/)。 SQL Server 執行個體是在上一個節點或其他使用中。
+本指南提供指示來建立 Red Hat Enterprise Linux 上的 SQL Server 的兩個節點的共用的磁碟叢集。 叢集層以在 Red Hat Enterprise Linux (RHEL) 為基礎[HA 附加元件](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)之上建置[Pacemaker](https://clusterlabs.org/)。 SQL Server 執行個體是在上一個節點或其他使用中。
 
 > [!NOTE] 
 > Red Hat HA 附加元件和文件集的存取需要訂用帳戶。 
@@ -30,7 +30,7 @@ ms.locfileid: "49085484"
 
 ![Red Hat Enterprise Linux 7 共用磁碟的 SQL 叢集](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-如需有關叢集設定、 資源代理程式選項，以及管理的詳細資訊，請瀏覽[RHEL 參考文件](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
+如需有關叢集設定、 資源代理程式選項，以及管理的詳細資訊，請瀏覽[RHEL 參考文件](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
 
 
 > [!NOTE] 
@@ -201,8 +201,8 @@ NFS 伺服器上執行下列作業：
 
 如需使用 NFS 的詳細資訊，請參閱下列資源：
 
-* [NFS 伺服器和 firewalld |Stack Exchange](http://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
-* [掛接 NFS 磁碟區 |Linux 的網路系統管理員指南](http://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
+* [NFS 伺服器和 firewalld |Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
+* [掛接 NFS 磁碟區 |Linux 的網路系統管理員指南](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
 * [NFS 伺服器設定](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/s1-nfs-server-export.html)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>掛接點的共用存放裝置的資料庫檔案目錄
@@ -389,7 +389,7 @@ NFS 伺服器上執行下列作業：
 
 ## <a name="additional-resources"></a>其他資源
 
-* [叢集從頭](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf)從 Pacemaker 的指南
+* [叢集從頭](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)從 Pacemaker 的指南
 
 ## <a name="next-steps"></a>後續步驟
 

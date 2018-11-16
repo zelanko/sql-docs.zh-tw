@@ -5,21 +5,20 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: ec908006-67ae-4674-9a61-25ea741d6197
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3fb1cdb7d6b55d32a2029a840d8120b8f39b4e67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10187162bec9286867c56def5c8bc2b4c1ed5382
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627332"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51655617"
 ---
 # <a name="set-the-max-degree-of-parallelism-option-for-optimal-performance"></a>設定平行處理原則的最大程度選項來取得最佳效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "47627332"
  使用 sp_configure 將 max degree of parallelism 選項設定為 8。  
   
 ## <a name="for-more-information"></a>詳細資訊  
- [Microsoft 知識庫文章 329204](http://go.microsoft.com/fwlink/?linkid=117786)  
+ [Microsoft 知識庫文章 329204](https://go.microsoft.com/fwlink/?linkid=117786)  
   
  [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)  
   

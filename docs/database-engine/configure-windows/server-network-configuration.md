@@ -19,12 +19,12 @@ ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 441e329ce93ea0aa30a8a3ad0f2cbf587d7d196e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed07e09663aa19ead617ce1c6ae63762fff0d67b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736628"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600278"
 ---
 # <a name="server-network-configuration"></a>伺服器網路組態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47736628"
  使用繫結和服務繫結的驗證擴充保護可供支援擴充保護的作業系統使用。 如需詳細資訊，請參閱 [使用擴充保護連接至 Database Engine](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)。  
   
 ## <a name="authenticating-by-using-kerberos"></a>使用 Kerberos 驗證  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 Kerberos 驗證。 如需詳細資訊，請參閱 [註冊 Kerberos 連接的服務主體名稱](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) 和 [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 Kerberos 驗證。 如需詳細資訊，請參閱 [註冊 Kerberos 連接的服務主體名稱](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) 和 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。  
   
 ### <a name="registering-a-server-principal-name-spn"></a>註冊伺服器主體名稱 (SPN)  
  Kerberos 驗證服務會使用 SPN 來驗證服務。 如需詳細資訊，請參閱 [註冊 Kerberos 連接的服務主體名稱](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。  

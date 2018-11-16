@@ -17,12 +17,12 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2ec8e76d8973216b58dc1472077554e51867e86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93abc35fca7d04d1a8fffb84de93b8739685818f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738006"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697886"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>建立新的 SQL Server 容錯移轉叢集 (安裝程式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47738006"
   
  如需遠端安裝的詳細資訊，請參閱[支援的版本與版本升級](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
   
- 如需有關在 Windows 容錯移轉叢集中安裝 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的詳細資訊，請參閱＜ [如何將 SQL Server Analysis Services 叢集化](http://go.microsoft.com/fwlink/p/?LinkId=396548)＞。  
+ 如需有關在 Windows 容錯移轉叢集中安裝 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的詳細資訊，請參閱＜ [如何將 SQL Server Analysis Services 叢集化](https://go.microsoft.com/fwlink/p/?LinkId=396548)＞。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  開始之前，請先檢視下列《 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》主題：  
@@ -169,7 +169,7 @@ ms.locfileid: "47738006"
   
 17. 在 [伺服器組態 - 服務帳戶] 頁面中，指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務的登入帳戶。 在這個頁面上所設定的實際服務隨著您選取要安裝的功能而不同。  
   
-     您可以將相同登入帳戶指派給所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務，或個別設定每一個服務帳戶。 啟動類型針對所有可識別叢集服務是設為手動，其中包括全文檢索搜尋及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理程式，並且在安裝期間無法進行變更。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您個別設定服務帳戶，以針對各項服務提供最低權限，其中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務會授與必須完成工作的最小權限。 如需詳細資訊，請參閱 [伺服器組態 - 服務帳戶](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 和 [設定 Windows 服務帳戶與權限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+     您可以將相同登入帳戶指派給所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務，或個別設定每一個服務帳戶。 啟動類型針對所有可識別叢集服務是設為手動，其中包括全文檢索搜尋及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理程式，並且在安裝期間無法進行變更。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您個別設定服務帳戶，以針對各項服務提供最低權限，其中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務會授與必須完成工作的最小權限。 如需詳細資訊，請參閱 [伺服器組態 - 服務帳戶](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 和 [設定 Windows 服務帳戶與權限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
      若要針對此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中的所有服務帳戶指定相同的登入帳戶，請在頁面底部的欄位中提供認證。  
   

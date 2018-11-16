@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7aee55b262ab1a06f99325f977fe5e5be014f5eb
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b3cb1aef270d2fb512d6234227b5ed6ab8b09a51
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021902"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812861"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>設定原生模式報表伺服器進行本機管理 (SSRS)
   如果您想要在本機管理報表伺服器執行個體，則在下列其中一個作業系統上部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器需要其他組態步驟。 本主題說明如何設定報表伺服器以進行本機管理。 如果您尚未安裝或設定報表伺服器，請參閱[從安裝精靈安裝 SQL Server 2016 &#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) 和[管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)。  
@@ -87,7 +87,7 @@ ms.locfileid: "50021902"
   
 8.  按一下 **[網站]**。  
   
-9. 加入 `http://<your-server-name>`。  
+9. 加入 `https://<your-server-name>`。  
   
 10. 如果您並未針對預設網站使用 HTTPS，請清除 **[此區域內的所有網站需要伺服器驗證 (https:)]** 核取方塊。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "50021902"
   
 ###  <a name="bkmk_configure_site_settings"></a> 報表管理員網站設定  
   
-1.  以系統管理權限開啟瀏覽器，並瀏覽至報表管理員 `http://<server name>/reports`。  
+1.  以系統管理權限開啟瀏覽器，並瀏覽至報表管理員 `https://<server name>/reports`。  
   
 2.  按一下首頁上方角落的 **[站台設定]** 。  
   

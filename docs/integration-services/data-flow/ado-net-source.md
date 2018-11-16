@@ -22,22 +22,22 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ca0a56e3168e5493104cd54472516800d444078
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 125caa4360df6b789bd9f8f61b12d85552b4983e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665578"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638765"
 ---
 # <a name="ado-net-source"></a>ADO NET 來源
   ADO NET 來源會從 .NET 提供者取用資料，並使該資料可供資料流程使用。  
   
- 您可以使用 ADO NET 來源連接至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 不過，不支援使用 OLE DB 連接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 如需 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的詳細資訊，請參閱 [Azure SQL Database 一般限制與方針](http://go.microsoft.com/fwlink/?LinkId=248228)。  
+ 您可以使用 ADO NET 來源連接至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 不過，不支援使用 OLE DB 連接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 如需 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的詳細資訊，請參閱 [Azure SQL Database 一般限制與方針](https://go.microsoft.com/fwlink/?LinkId=248228)。  
   
 ## <a name="data-type-support"></a>資料類型支援  
  此來源會將未對應到特定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型的所有資料類型轉換成 DT_NTEXT [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 即使資料類型為 **System.Object**，還是會發生轉換。  
   
- 您可以將 DT_NTEXT 資料類型變更為 DT_WSTR 資料類型，或是將 DT_WSTR 資料類型變更為 DT_NTEXT 資料類型。 您可以在 ADO NET 來源的 **[進階編輯器]** 對話方塊中設定 **[DataType]** 屬性，以變更資料類型。 如需詳細資訊，請參閱 [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)。  
+ 您可以將 DT_NTEXT 資料類型變更為 DT_WSTR 資料類型，或是將 DT_WSTR 資料類型變更為 DT_NTEXT 資料類型。 您可以在 ADO NET 來源的 **[進階編輯器]** 對話方塊中設定 **[DataType]** 屬性，以變更資料類型。 如需詳細資訊，請參閱 [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)。  
   
  您可以在 ADO NET 來源之後使用資料轉換，將 DT_NTEXT 資料類型轉換成 DT_BYTES 或 DT_STR 資料類型。 如需詳細資訊，請參閱 [Data Conversion Transformation](../../integration-services/data-flow/transformations/data-conversion-transformation.md)。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47665578"
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [ADO NET 自訂屬性](../../integration-services/data-flow/ado-net-custom-properties.md)  
   

@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 43458e87144b5903a0d6436d5596bb5c3585d928
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: c58fcf00f0feb3f6dc78f1df095a5934edfde6f3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383319"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600888"
 ---
 # <a name="install-sql-server"></a>安裝 SQL Server
 
@@ -38,7 +38,7 @@ ms.locfileid: "49383319"
 
 * **範例資料庫與範例程式碼**： 
     * 這些範例預設不會隨著 SQL Server 安裝程式一起安裝 
-    * 若要安裝 Express 版本以外之 SQL Server 隨附的這些範例，請參閱 [GitHub](http://github.com/Microsoft/sql-server-samples)
+    * 若要安裝 Express 版本以外之 SQL Server 隨附的這些範例，請參閱 [GitHub](https://github.com/Microsoft/sql-server-samples)
     
 
 ## <a name="get-the-installation-media"></a>取得安裝媒體
@@ -70,7 +70,7 @@ ms.locfileid: "49383319"
 |[安裝 SQL Server Database Engine](../../database-engine/install-windows/install-sql-server-database-engine.md)|描述如何安裝及設定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。|  
 |[安裝 SQL Server 複寫](../../database-engine/install-windows/install-sql-server-replication.md)|描述如何安裝及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication。|  
 |[安裝 Distributed Replay - 概觀](../../tools/distributed-replay/install-distributed-replay-overview.md)|列出說明 Distributed Replay 功能安裝的文章。|  
-|[安裝 SQL Server 管理工具與 SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|描述如何安裝及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具。|  
+|[安裝 SQL Server 管理工具與 SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|描述如何安裝及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具。|  
 |[安裝 SQL Server PowerShell](../../database-engine/install-windows/install-sql-server-powershell.md)|描述安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 元件時的考量。|  
   
 

@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 312d655507d2c7880746cf1f81f61059ddf64de4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 74eb23f2f294995222bcb90a7791f1133179462d
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027897"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813418"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Oracle 連接類型 (SSRS)
 若要在報表中使用來自 Oracle 資料庫的資料，您必須具有以 Oracle 類型的報表資料來源為基礎的資料集。 此內建資料來源類型會直接使用 Oracle 資料提供者，並且需要 Oracle 用戶端軟體元件。
 
 若要安裝 Oracle 用戶端工具，您可以執行下列步驟。
  
-1.  前往 [Oracle 的下載網站](http://www.oracle.com/us/products/tools/index-090165.html)
+1.  前往 [Oracle 的下載網站](https://www.oracle.com/us/products/tools/index-090165.html)
 2.  下載 ODAC 12c Release 4 (12.1.0.2.4) for Windows (伺服器為 64bit，工具為 32bit)
 3.  安裝 Data Provider for .NET 4
   
@@ -61,9 +61,9 @@ Data Source="Oracle"; Unicode="True"
   
 -   msdn.microsoft.com 上的[使用 Oracle 的 .NET Framework 資料提供者](https://go.microsoft.com/fwlink/?LinkId=112314)   
   
--   [如何使用 Reporting Services 設定及存取 Oracle 資料來源 (機器翻譯)](http://support.microsoft.com/kb/834305)  
+-   [如何使用 Reporting Services 設定及存取 Oracle 資料來源 (機器翻譯)](https://support.microsoft.com/kb/834305)  
   
--   [如何新增 NETWORK SERVICE 安全性主體的權限 (機器翻譯)](http://support.microsoft.com/kb/870668)  
+-   [如何新增 NETWORK SERVICE 安全性主體的權限 (機器翻譯)](https://support.microsoft.com/kb/870668)  
   
 ###### <a name="alternate-data-extensions"></a>替代資料延伸模組  
  您也可以使用 OLE DB 資料來源類型，從 Oracle 資料庫擷取資料。 如需詳細資訊，請參閱 [OLE DB 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)。  

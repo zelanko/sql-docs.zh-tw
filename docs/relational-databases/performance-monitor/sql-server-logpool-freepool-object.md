@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:LogPool FreePool
 ms.assetid: 8ffd569b-045f-4c3f-a473-4a491d6a1d80
-author: dagiro
-ms.author: v-dagir
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d3bcbf30599d053d1e0a4b8c946db5705b391a7b
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 0852e2e5a205293e8f11558cb1acda17a2ce8c3f
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030365"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560215"
 ---
 # <a name="sql-server-logpool-freepool-object"></a>SQL Server, LogPool FreePool 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

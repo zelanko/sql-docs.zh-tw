@@ -11,12 +11,12 @@ ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 662ace2d6ce6e3f74b2c4f77f58dcf5bc1d6df0f
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 08185a514dbba480aaef760532430ff7c1f53bf9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030924"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663004"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>使用公用程式總管來管理 SQL Server 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,24 +39,24 @@ ms.locfileid: "51030924"
 ### <a name="sql-server-utility-navigation-pane"></a>SQL Server 公用程式導覽窗格  
  [公用程式總管] 導覽窗格會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內提供物件的樹狀檢視 (以公用程式控制點來分組)。 若要展開資料夾，請在 [公用程式總管] 導覽窗格內按一下加號 (+) 或是按兩下 UCP 名稱。 以滑鼠右鍵按一下資料夾或物件來執行一般工作。 樹狀檢視中的節點如下所示：  
   
--   樹狀檢視中的最上層節點為公用程式控制點 (UCP)， 此節點名稱建構為："Utility_Name" (ComputerName\UCP_instance_name)。 如果您沒有 UCP，則必須建立 UCP。 如果您未連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式，必須建立一個連接。 如需詳細資訊，請參閱 [SQL Server 公用程式的功能與工作](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)。 在樹狀檢視中按一下 UCP 名稱，使用儀表板檢視中的資料來填入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [公用程式總管] 內容窗格。 如需詳細資訊，請參閱[公用程式儀表板 &#40;SQL Server 公用程式&#41;](http://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1)。  
+-   樹狀檢視中的最上層節點為公用程式控制點 (UCP)， 此節點名稱建構為："Utility_Name" (ComputerName\UCP_instance_name)。 如果您沒有 UCP，則必須建立 UCP。 如果您未連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式，必須建立一個連接。 如需詳細資訊，請參閱 [SQL Server 公用程式的功能與工作](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)。 在樹狀檢視中按一下 UCP 名稱，使用儀表板檢視中的資料來填入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [公用程式總管] 內容窗格。 如需詳細資訊，請參閱[公用程式儀表板 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1)。  
   
      以滑鼠右鍵按一下 UCP 節點以重新整理儀表板中的資料。  
   
--   在樹狀檢視中按一下 **[部署的資料層應用程式]** 節點，存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內容窗格中的清單檢視資料。 內容窗格底部的詳細資料索引標籤會提供 CPU 和儲存使用量的資料，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內個別資料層應用程式之原則定義和屬性詳細資料的存取權。 如需詳細資訊，請參閱[部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](http://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
+-   在樹狀檢視中按一下 **[部署的資料層應用程式]** 節點，存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內容窗格中的清單檢視資料。 內容窗格底部的詳細資料索引標籤會提供 CPU 和儲存使用量的資料，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內個別資料層應用程式之原則定義和屬性詳細資料的存取權。 如需詳細資訊，請參閱[部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
   
      在樹狀檢視中以滑鼠右鍵按一下 [部署的資料層應用程式] 節點，以存取篩選設定或重新整理清單檢視中的資料。  
   
--   在樹狀檢視中按一下 **[受管理的執行個體]** 節點，以存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內容窗格中的清單檢視資料。 內容窗格底部的詳細資料索引標籤會提供 CPU 與存放磁碟區使用量的資料，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內個別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體之原則定義與屬性詳細資料的存取權。 如需詳細資訊，請參閱[受管理的執行個體詳細資料 &#40;SQL Server 公用程式&#41;](http://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)。  
+-   在樹狀檢視中按一下 **[受管理的執行個體]** 節點，以存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內容窗格中的清單檢視資料。 內容窗格底部的詳細資料索引標籤會提供 CPU 與存放磁碟區使用量的資料，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內個別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體之原則定義與屬性詳細資料的存取權。 如需詳細資訊，請參閱[受管理的執行個體詳細資料 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)。  
   
      在樹狀檢視中以滑鼠右鍵按一下 [受管理的執行個體] 節點，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的受管理執行個體加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中，以存取篩選設定或重新整理清單檢視中的資料。  
   
--   按一下樹狀檢視中的 [公用程式管理] 節點，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中針對所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理執行個體及部署的資料層應用程式來存取全域原則定義，以檢視 UCP 管理員資訊，並存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式管理資料倉儲的組態設定。 如需詳細資訊，請參閱[公用程式管理 &#40;SQL Server 公用程式&#41;](http://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)。 您也可以使用 **[原則]** 索引標籤上的控制項，變更報告原則違規的敏感度。 如需詳細資訊，請參閱[降低 CPU 使用量原則的雜訊 &#40;SQL Server Utility&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
+-   按一下樹狀檢視中的 [公用程式管理] 節點，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中針對所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理執行個體及部署的資料層應用程式來存取全域原則定義，以檢視 UCP 管理員資訊，並存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式管理資料倉儲的組態設定。 如需詳細資訊，請參閱[公用程式管理 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)。 您也可以使用 **[原則]** 索引標籤上的控制項，變更報告原則違規的敏感度。 如需詳細資訊，請參閱[降低 CPU 使用量原則的雜訊 &#40;SQL Server Utility&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)。  
   
      在樹狀檢視中，以滑鼠右鍵按一下 [公用程式管理] 節點，以重新整理內容窗格中的資料。  
   
 ### <a name="sql-server-utility-dashboard"></a>SQL Server 公用程式儀表板  
- 在 [公用程式總管] 樹狀檢視中選取 UCP 節點會填入 [公用程式總管] 內容窗格中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式儀表板。 此儀表板在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內針對所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體和資料層應用程式提供其狀態的摘要，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式所管理之物件的整體儲存使用量。 如需詳細資訊，請參閱[公用程式儀表板 &#40;SQL Server 公用程式&#41;](http://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1)。 若要註冊或移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請參閱[註冊 SQL Server 的執行個體 &#40;SQL Server 公用程式&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md) 或[部署資料層應用程式](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)或[從 SQL Server 公用程式移除 SQL Server 執行個體](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md)。  
+ 在 [公用程式總管] 樹狀檢視中選取 UCP 節點會填入 [公用程式總管] 內容窗格中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式儀表板。 此儀表板在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內針對所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體和資料層應用程式提供其狀態的摘要，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式所管理之物件的整體儲存使用量。 如需詳細資訊，請參閱[公用程式儀表板 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1)。 若要註冊或移除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請參閱[註冊 SQL Server 的執行個體 &#40;SQL Server 公用程式&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md) 或[部署資料層應用程式](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)或[從 SQL Server 公用程式移除 SQL Server 執行個體](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md)。  
   
 ### <a name="filtering-the-list-of-objects-in-utility-explorer-contents"></a>在公用程式總管內容中篩選物件清單  
  當節點包含大量物件時，可能很不容易找到您要找的物件。 在這種情況下，請利用 [公用程式總管] 的篩選功能來縮減清單大小。 例如，當您需要尋找特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，或是只需要尋找檔案空間使用量過低的電腦時。 請以滑鼠右鍵按一下您要篩選的資料夾，再按一下篩選按鈕，然後按一下 **[篩選設定]** 來開啟 [公用程式總管篩選設定] 對話方塊。 您可以依名稱、電腦 CPU、執行個體 CPU、檔案空間、磁碟區空間、原則覆寫設定或上次報告時間來篩選清單。 **[運算子]** 和 **[值]** 資料行會在下拉式清單中提供其他篩選運算子。  

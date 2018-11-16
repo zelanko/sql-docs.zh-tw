@@ -18,12 +18,12 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b5cb3e406f070d9bf527b4f6c8a65fb0dd6e2dda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b035d9f36acfa1f01e7eafdb81d68f647d874db5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736886"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638965"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>屬性運算式中的列舉常數
   如果屬性運算式包含來自列舉值成員清單的值，運算式必須使用列舉值成員的數值來取代成員的易記名稱。 例如，如果運算式設定了 **LoggingMode** 屬性，您就必須使用數值 2 來取代易記名稱 Disabled。  
@@ -581,7 +581,7 @@ ms.locfileid: "47736886"
 |失敗|1|  
 |Completion|2|  
   
- **IsolationLevel** 屬性：由 .NET Framework **IsolationLevel** 列舉設定。 如需詳細資訊，請參閱 [MSDN Library](http://go.microsoft.com/fwlink?LinkId=17313)中的＜.NET Framework 類別庫＞。  
+ **IsolationLevel** 屬性：由 .NET Framework **IsolationLevel** 列舉設定。 如需詳細資訊，請參閱 [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313)中的＜.NET Framework 類別庫＞。  
   
  **LoggingMode** 屬性：使用來自 **DTSLoggingMode** 列舉的值進行設定。  
   
@@ -605,7 +605,7 @@ ms.locfileid: "47736886"
 ## <a name="see-also"></a>另請參閱  
  [在封裝中使用屬性運算式](../../integration-services/expressions/use-property-expressions-in-packages.md)   
  [Integration Services &#40;SSIS&#41; 封裝](../../integration-services/integration-services-ssis-packages.md)   
- [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)   
+ [整合服務容器](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)  
   

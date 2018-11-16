@@ -10,18 +10,18 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8b3a2b9208900d89a56f3a49b5dd1cf1aa0e04d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 392b683ac3213f51f4a263f6643adf34d76c133c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724216"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606868"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>疑難排解：可用性群組超過 RTO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   在可用性群組上進行自動容錯移轉或規劃的手動容錯移轉之後沒有資料遺失，您可能會發現容錯移轉時間超過您的復原時間目標 (RTO)。 或者，當您在使用[監視 Always On 可用性群組的效能](monitor-performance-for-always-on-availability-groups.md)中的方法評估同步認可次要複本的容錯移轉時間時，發現它超過您的 RTO。  
   
- 如果您的自動容錯移轉仍未完成，請參閱[針對 SQL Server 2012 Always On 環境中的自動容錯移轉問題進行疑難排解](http://support.microsoft.com/kb/2833707) \(機器翻譯\)。  
+ 如果您的自動容錯移轉仍未完成，請參閱[針對 SQL Server 2012 Always On 環境中的自動容錯移轉問題進行疑難排解](https://support.microsoft.com/kb/2833707) \(機器翻譯\)。  
   
  下節說明造成容錯移轉的時間超過 RTO 的常見原因。  
   
@@ -64,6 +64,6 @@ from sys.dm_hadr_database_replica_states
  如果重做執行緒確實落後，則您需要調查次要複本效能降低的根本原因。 如果和報告工作負載有 I/O 競爭，您可以使用 [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) 來控制報告工作負載使用的 CPU 週期，進而間接地在某種程度上控制 I/O 週期。 例如，如果您的報告工作負載取用百分之 10 的 CPU，但它是以 I/O 為主的工作負載，則您可以使用 Resource Governor 將 CPU 資源使用量限制為百分之 5，以限制讀取工作負載，進而降低對 I/O 的影響。  
   
 ## <a name="next-steps"></a>後續步驟  
- [對 SQL Server 中的效能問題進行疑難排解 (適用於 SQL Server 2012)](http://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx) \(英文\)  
+ [對 SQL Server 中的效能問題進行疑難排解 (適用於 SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx) \(英文\)  
   
   

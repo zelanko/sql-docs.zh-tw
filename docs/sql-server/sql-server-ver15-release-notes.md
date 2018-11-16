@@ -1,23 +1,21 @@
 ---
 title: SQL Server 2019 版本資訊 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/06/2018
-ms.prod: sql-server-2018
+ms.prod: sql
 ms.reviewer: ''
-ms.technology:
-- server-general
+ms.technology: release-landing
 ms.topic: article
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 7fba2c4989b6e50fe720a44e127b044dea93876d
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 2c21ac917845b8162348b93fec3b868f1f748592
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269801"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703856"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 預覽版版本資訊
 
@@ -33,7 +31,7 @@ ms.locfileid: "51269801"
 > - 從任何版本升級 SQL Server 的現有執行個體
 
 **請試用 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]！**
-- [![從評估中心下載](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [下載 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 以安裝於 Windows](http://go.microsoft.com/fwlink/?LinkID=862101)
+- [![從評估中心下載](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [下載 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 以安裝於 Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
 - 安裝於 Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md)、[SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) 和 [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)。
 - [在 Docker 的 SQL Server 2019 上執行](../linux/quickstart-install-connect-docker.md)。
 
@@ -45,12 +43,12 @@ ms.locfileid: "51269801"
 在下列其中一個位置可以找到有限支援：
 
 - 論壇
-  - [SQL Server 意見反應](http://aka.ms/sqlfeedback)
+  - [SQL Server 意見反應](https://aka.ms/sqlfeedback)
   - [SQL Server 使用者入門](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
   - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
   - [SQL Server 文件](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
 
-- 或具有 [#sqlhelp](https://twitter.com/search?q=%23sqlhelp) 的推文 [@SQLServer](http://twitter.com/SQLServer)
+- 或具有 [#sqlhelp](https://twitter.com/search?q=%23sqlhelp) 的推文 [@SQLServer](https://twitter.com/SQLServer)
 
 ### <a name="documentation-ctp-21"></a>文件 (CTP 2.1)
 
@@ -69,7 +67,7 @@ ms.locfileid: "51269801"
     - [Linux - 系統需求](../linux/sql-server-linux-setup.md#system)
   - **軟體**
     - Windows Server 2016 或更新版本。 如需其他需求，請參閱[安裝 SQL Server 的需求](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
-    - Microsoft .NET Framework 4.6.2。 可從[下載中心](http://www.microsoft.com/download/details.aspx?id=53344)取得。
+    - Microsoft .NET Framework 4.6.2。 可從[下載中心](https://www.microsoft.com/download/details.aspx?id=53344)取得。
     - 針對 Linux，請參閱 [Linux - 支援的平台](../linux/sql-server-linux-setup.md#supportedplatforms)
 
 ### <a name="floating-point-results"></a>浮點結果

@@ -15,12 +15,12 @@ ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9d2289a199ec54eacb42a5fce175f91872ab8133
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74ed9891af2905f8f45716c64b5f3ed9ac241905
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848860"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700400"
 ---
 # <a name="model-object-permissions-master-data-services"></a>模型物件權限 (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "47848860"
  一般而言，您應該指派模型物件的 [全部] 權限，然後明確地指派底下物件的權限。  
   
 ## <a name="external-resources"></a>外部資源  
- 請參考 msdn.com 上的 [Security Improvements](http://go.microsoft.com/fwlink/p/?LinkId=615376)(安全性改進) 部落格文章。  
+ 請參考 msdn.com 上的 [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376)(安全性改進) 部落格文章。  
   
 ## <a name="see-also"></a>另請參閱  
  [指派模型物件權限 &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   

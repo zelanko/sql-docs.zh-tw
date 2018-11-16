@@ -13,12 +13,12 @@ ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb51c9ec57e20ecd641a06964624987e636a6c40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef5ec59980d267a8ead0f69aedb12c6eca5508dc
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164388"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639865"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>資料分割 (還原資料庫對話方塊) (Analysis Services - 多維度資料)
   在 **中，使用** [還原資料庫] **對話方塊的** [資料分割] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 頁面，即可指定本機資料分割的還原位置和是否還原遠端資料分割，以及指定還原遠端資料分割時所使用的遠端備份檔案。  
@@ -85,7 +85,7 @@ ms.locfileid: "48164388"
 |**...**|按一下即可顯示 [遠端資料分割 - 進階設定] 對話方塊，並修改還原遠端資料分割的進階選項，例如資料來源的連接字串。 如需 [遠端資料分割 - 進階設定] 對話方塊的詳細資訊，請參閱[遠端資料分割 - 進階設定對話方塊 &#40;Analysis Services - 多維度資料&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md)。|  
   
 ## <a name="see-also"></a>另請參閱  
- [還原資料庫對話方塊&#40;Analysis Services-多維度資料&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [還原資料庫對話方塊 &#40;Analysis Services - 多維度資料&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [一般&#40;還原資料庫對話方塊&#41; &#40;Analysis Services-多維度資料&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [備份與還原 Analysis Services 資料庫](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

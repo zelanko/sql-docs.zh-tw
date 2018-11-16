@@ -13,12 +13,12 @@ ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e61e2c864cf0ac03a22d0ef7772c0ce8f83ecba3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a2912f9023db4e31bcb35f742d8d7cc1c8ce208
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802592"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701221"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>角色切換後針對登入和作業進行管理 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "47802592"
 ###  <a name="SSauthentication"></a> 使用 SQL Server 驗證或本機 Windows 登入的應用程式登入  
  如果應用程式使用 SQL Server 驗證或本機 Windows 登入，可能會由於 SID 不相符造成遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體無法解析該應用程式的登入。 SID 不相符將導致此登入成為遠端伺服器執行個體上的被遺棄使用者。 若應用程式是在容錯移轉後連接到鏡像資料庫或記錄傳送資料庫，或者連接到從備份初始化的複寫訂閱者資料庫，可能就會發生這個問題。  
   
- 建議您在設定這類應用程式而要使用由遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所裝載的資料庫時，應採取預防措施以避免此問題。 預防的方法包括從本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體傳送登入和密碼到遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 如需如何預防此問題的詳細資訊，請參閱知識庫文章 918992：[如何在 SQL Server 的執行個體之間傳送登入和密碼](http://support.microsoft.com/kb/918992/)。  
+ 建議您在設定這類應用程式而要使用由遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所裝載的資料庫時，應採取預防措施以避免此問題。 預防的方法包括從本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體傳送登入和密碼到遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 如需如何預防此問題的詳細資訊，請參閱知識庫文章 918992：[如何在 SQL Server 的執行個體之間傳送登入和密碼](https://support.microsoft.com/kb/918992/)。  
   
 > [!NOTE]  
 >  此問題會影響位於不同電腦上的 Windows 本機帳戶。 但是，網域帳戶不至於發生此問題，因為每一部電腦上的 SID 都相同。  
   
- 如需詳細資訊，請參閱 Database Engine 部落格文章： [Orphaned Users with Database Mirroring and Log Shipping](http://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (孤立的使用者與資料庫鏡像及記錄傳送)。  
+ 如需詳細資訊，請參閱 Database Engine 部落格文章： [Orphaned Users with Database Mirroring and Log Shipping](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (孤立的使用者與資料庫鏡像及記錄傳送)。  
   
 ## <a name="jobs"></a>中稱為  
  像是備份工作這類的工作，也需要特別注意。 通常在角色切換之後，資料庫擁有者或系統管理員必須為新的主要/主體資料庫重新建立各項作業。  

@@ -18,12 +18,12 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2dae72cf4246b2d78b246e52ca96d5f52f7183a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1fa8689862184f0554eff0aefd3d39896f2abdf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725266"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662517"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47725266"
   
 ||  
 |-|  
-|**適用於**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[最新版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
+|**適用於**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[最新版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

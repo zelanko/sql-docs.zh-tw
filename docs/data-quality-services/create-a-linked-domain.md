@@ -14,12 +14,12 @@ ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fa8579cf1642f736a60cd826049d0128c5c3090
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0bce721aec2958cca21a4ac002b0da5a90682fb9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654408"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702226"
 ---
 # <a name="create-a-linked-domain"></a>建立連結的定義域
 
@@ -45,7 +45,7 @@ ms.locfileid: "47654408"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能建立連結的定義域。  
   
 ##  <a name="Create"></a> 建立連結的定義域  
@@ -65,7 +65,7 @@ ms.locfileid: "47654408"
   
 6.  必要時，您可以在 [定義域屬性] 索引標籤中變更連結的定義域的名稱或描述。  
   
-7.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)＞中所述。  
+7.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)＞中所述。  
   
 ##  <a name="Map"></a> Map two fields to linked domains  
   

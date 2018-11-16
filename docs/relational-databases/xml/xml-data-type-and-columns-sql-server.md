@@ -11,12 +11,12 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37135e6bc1c30ea79e9ecda5ee53e90ea85c5f67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b831b54ed0755c8c7ef55364bdc0f8152f22b54
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761948"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662498"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 資料類型和資料行 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,9 @@ ms.locfileid: "47761948"
   
 -   原生儲存為 **xml** 資料類型  
   
-     以內部表示法來儲存資料，以保存資料的 XML 內容。 這個內部表示法包括有關內含項目階層、文件順序，以及元素和屬性值的資訊。 特別是會保存 XML 資料的 InfoSet 內容。 如需 InfoSet 的詳細資訊，請前往 [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843)。 InfoSet 內容可能會與文字版 XML 不同，因為沒有保留下列資訊：不重要的空格、屬性的順序、命名空間前置詞及 XML 宣告。  
+     以內部表示法來儲存資料，以保存資料的 XML 內容。 這個內部表示法包括有關內含項目階層、文件順序，以及元素和屬性值的資訊。 特別是會保存 XML 資料的 InfoSet 內容。 如需 InfoSet 的詳細資訊，請前往 [https://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843)。 InfoSet 內容可能會與文字版 XML 不同，因為沒有保留下列資訊：不重要的空格、屬性的順序、命名空間前置詞及 XML 宣告。  
   
-     針對具類型的 **xml** 資料類型 (與 XML 結構描述繫結的 **xml** 資料類型)，後置結構描述驗證 InfoSet (PSVI) 會將類型資訊加入 InfoSet 中，而且會以內部表示法來編碼。 這樣可以大幅增加剖析的速度。 如需詳細資訊，請參閱 [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) 和 [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871) 的「W3C XML 結構描述」規格。  
+     針對具類型的 **xml** 資料類型 (與 XML 結構描述繫結的 **xml** 資料類型)，後置結構描述驗證 InfoSet (PSVI) 會將類型資訊加入 InfoSet 中，而且會以內部表示法來編碼。 這樣可以大幅增加剖析的速度。 如需詳細資訊，請參閱 [https://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) 和 [https://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871) 的「W3C XML 結構描述」規格。  
   
 -   XML 與關聯式儲存之間的對應  
   
@@ -142,7 +142,7 @@ ms.locfileid: "47761948"
   
 -   您想要使用 XML 檢視來大量載入 XML 資料，並將其分解在基礎資料表中。  
   
- 範例包括在資料交換及 Web 服務中公開為 XML 的關聯式資料，以及含有固定結構描述的 XML 資料。 如需詳細資訊，請參閱 [MSDN Online Library](http://go.microsoft.com/fwlink/?linkid=31174)。  
+ 範例包括在資料交換及 Web 服務中公開為 XML 的關聯式資料，以及含有固定結構描述的 XML 資料。 如需詳細資訊，請參閱 [MSDN Online Library](https://go.microsoft.com/fwlink/?linkid=31174)。  
   
 #### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>範例：使用註解式 XML 結構描述 (AXSD) 來將資料模型化  
  舉例來說，假設您要將現有的關聯式資料 (例如：客戶、訂單及線性項目) 處理成 XML。 在關聯式資料上使用 AXSD，以定義 XML 檢視。 XML 檢視可讓您將 XML 資料大量載入至資料表中，並使用 XML 檢視來查詢及更新關聯式資料。 如果您必須在不干擾 SQL 應用程式工作的情況下，與其他應用程式交換含有 XML 標記的資料，這種模型會很有用。  

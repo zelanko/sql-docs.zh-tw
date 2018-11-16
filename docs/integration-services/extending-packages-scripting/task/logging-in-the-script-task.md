@@ -22,12 +22,12 @@ ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d3e5480754ecc5f1c8230061500585a7a661fcf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: baa0e4e5cc4134b4efbd84ffbba8a422af7f4e8a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720126"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640026"
 ---
 # <a name="logging-in-the-script-task"></a>在指令碼工作中記錄
   在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 封裝中使用記錄可以讓您藉由記錄預先定義事件或使用者定義訊息，記錄關於執行進度、結果和問題的詳細資訊以供稍後分析。 指令碼工作可以使用 **Dts** 物件的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 方法記錄使用者定義的資料。 如果記錄已啟用，而且已在 [設定 SSIS 記錄] 對話方塊的 [詳細資料] 索引標籤上選取 **ScriptTaskLogEntry** 事件以進行記錄，<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 方法的呼叫會儲存為工作設定之所有記錄提供者中的事件資訊。  
@@ -95,7 +95,7 @@ public class ScriptMain
   
 ## <a name="external-resources"></a>外部資源  
   
--   dougbert.com 上的部落格文章：[Logging custom events for Integration Services tasks](http://go.microsoft.com/fwlink/?LinkId=165644) (記錄 Integration Services 工作的自訂事件)  
+-   dougbert.com 上的部落格文章：[Logging custom events for Integration Services tasks](https://go.microsoft.com/fwlink/?LinkId=165644) (記錄 Integration Services 工作的自訂事件)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 記錄](../../../integration-services/performance/integration-services-ssis-logging.md)  

@@ -14,12 +14,12 @@ ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6f57d1cc99a2966ea220774366cca8aa6e2f8049
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 847e0dd3546062f00a1feb939ec4fa469f693c06
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834957"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702706"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 組態參考 (Master Data Services)
 
@@ -33,16 +33,16 @@ ms.locfileid: "47834957"
 |組態元素|Description|  
 |---------------------------|-----------------|  
 |**masterDataServices**|自訂元素。 將 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服務連接到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。|  
-|**connectionStrings**|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [connectionStrings 項目 (ASP.NET 設定結構描述)](http://go.microsoft.com/fwlink/?LinkId=178347) 。|  
-|**system.web**|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [system.web 項目 (ASP.NET 設定結構描述)](http://go.microsoft.com/fwlink/?LinkId=178348) 。|  
-|**startup**|.NET Framework 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [\<startup 項目](http://go.microsoft.com/fwlink/?LinkId=178349)。|  
-|**執行階段**|.NET Framework 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [\<runtime 項目](http://go.microsoft.com/fwlink/?LinkId=178350)。|  
-|**system.codedom**|.NET Framework 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [\<system.codedom> 項目](http://go.microsoft.com/fwlink/?LinkId=178351)。|  
-|**system.web.extensions**|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [system.web.extensions 項目 (ASP.NET 設定結構描述)](http://go.microsoft.com/fwlink/?LinkId=178352) 。|  
-|**system.webServer**|包含 IIS 項目的區段群組。 如需詳細資訊，請參閱 MSDN Library 中的 [system.webServer 區段群組 \[IIS 7 設定結構描述\]](http://go.microsoft.com/fwlink/?LinkId=178353)。|  
-|**system.serviceModel**|WCF 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [\<system.serviceModel>](http://go.microsoft.com/fwlink/?LinkId=178354)。|  
-|**system.diagnostics**|.NET Framework 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [\<system.diagnostics> 項目](http://go.microsoft.com/fwlink/?LinkId=178355)。|  
-|**appSettings**|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [appSettings 項目 (一般設定結構描述)](http://go.microsoft.com/fwlink/?LinkId=178356) 。|  
+|**connectionStrings**|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [connectionStrings 項目 (ASP.NET 設定結構描述)](https://go.microsoft.com/fwlink/?LinkId=178347) 。|  
+|**system.web**|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [system.web 項目 (ASP.NET 設定結構描述)](https://go.microsoft.com/fwlink/?LinkId=178348) 。|  
+|**startup**|.NET Framework 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [\<startup 項目](https://go.microsoft.com/fwlink/?LinkId=178349)。|  
+|**執行階段**|.NET Framework 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [\<runtime 項目](https://go.microsoft.com/fwlink/?LinkId=178350)。|  
+|**system.codedom**|.NET Framework 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [\<system.codedom> 項目](https://go.microsoft.com/fwlink/?LinkId=178351)。|  
+|**system.web.extensions**|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [system.web.extensions 項目 (ASP.NET 設定結構描述)](https://go.microsoft.com/fwlink/?LinkId=178352) 。|  
+|**system.webServer**|包含 IIS 項目的區段群組。 如需詳細資訊，請參閱 MSDN Library 中的 [system.webServer 區段群組 \[IIS 7 設定結構描述\]](https://go.microsoft.com/fwlink/?LinkId=178353)。|  
+|**system.serviceModel**|WCF 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [\<system.serviceModel>](https://go.microsoft.com/fwlink/?LinkId=178354)。|  
+|**system.diagnostics**|.NET Framework 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [\<system.diagnostics> 項目](https://go.microsoft.com/fwlink/?LinkId=178355)。|  
+|**appSettings**|ASP.NET 元素。 如需詳細資訊，請參閱 MSDN Library 中的 [appSettings 項目 (一般設定結構描述)](https://go.microsoft.com/fwlink/?LinkId=178356) 。|  
   
 ## <a name="masterdataservices-element"></a>masterDataServices 元素  
  **\<masterDataServices>** 項目是用來將 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服務連接到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的自訂項目。  

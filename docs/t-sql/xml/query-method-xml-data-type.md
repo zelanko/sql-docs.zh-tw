@@ -16,12 +16,12 @@ ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd0c0409a49a99c8768d49080bccbc36ef86f9ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb7f52a1861567630229b31679b3d84cb42eaeae
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621156"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703926"
 ---
 # <a name="query-method-xml-data-type"></a>query() 方法 (xml 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,13 +74,13 @@ SELECT @myDoc.query('/Root/ProductDescription/Features')
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 <Product ProductModelID="{ /PD:ProductDescription[1]/@ProductModelID }" />  
 ') as Result  
 FROM Production.ProductModel  
 where CatalogDescription.exist('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain";  
      /PD:ProductDescription/PD:Features/wm:Warranty ') = 1  
 ```  
   
@@ -105,8 +105,8 @@ declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-w
 ```  
 WITH XMLNAMESPACES 
 (  
-   'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  
-   'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS WM
+   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  
+   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS WM
 )  
 SELECT CatalogDescription.query('<Product ProductModelID="{ /PD:ProductDescription[1]/@ProductModelID }" />')
        AS Result  

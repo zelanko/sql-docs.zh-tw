@@ -14,12 +14,12 @@ ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3b98b9cd1b4c99ba6fec20d8fe4912013aba1ea6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2ec789b32bb23fbdc2ac48278b16a02588d2580
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664289"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638581"
 ---
 # <a name="parsing-data"></a>剖析資料
   封裝中的資料流程會在異質資料存放區之間擷取和載入資料，這樣可以使用各種不同的標準和自訂資料類型。 在一個資料流程中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來源執行擷取資料、剖析字串資料並將資料轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型的工作。 後續轉換可以剖析資料以便將其轉換成不同的資料類型，或者建立資料類型不同的資料行副本。 元件中使用的運算式同樣可以將引數和運算元轉換成不同的資料類型。 最後，當資料載入資料存放區時，目的地則可以剖析資料以便將其轉換成目的地使用的資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
@@ -201,5 +201,5 @@ ms.locfileid: "47664289"
 ## <a name="standard-parse"></a>Standard Parse
 標準剖析是一組區分地區設定的剖析常式，它支援 Oleaut32.dll 和 Ole2dsip.dll 中可用的 Automation 資料類型轉換 API 所提供的所有資料類型轉換。 標準剖析相當於 OLE DB 剖析 API。  
   
- 標準剖析提供對國際性資料之資料類型轉換的支援，它應在「快速剖析」不支援資料格式時使用。 如需 Automation 資料類型轉換 API 的詳細資訊，請參閱 [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=79427)中的＜資料類型轉換 API＞。 
+ 標準剖析提供對國際性資料之資料類型轉換的支援，它應在「快速剖析」不支援資料格式時使用。 如需 Automation 資料類型轉換 API 的詳細資訊，請參閱 [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=79427)中的＜資料類型轉換 API＞。 
  

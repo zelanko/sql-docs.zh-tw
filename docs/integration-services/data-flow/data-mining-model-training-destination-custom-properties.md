@@ -11,12 +11,12 @@ ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f7e2c9daf0e9bfdd070102aee93a762c16db5149
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c792827f8016fdf211b378df80fb94c7ca143e57
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825565"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641416"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>資料採礦模型定型目的地自訂屬性
   資料採礦模型定型目的地同時具有自訂屬性以及所有資料流程元件通用的屬性。  
@@ -34,6 +34,6 @@ ms.locfileid: "47825565"
  如需詳細資訊，請參閱 [資料採礦模型定型目的地](../../integration-services/data-flow/data-mining-model-training-destination.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

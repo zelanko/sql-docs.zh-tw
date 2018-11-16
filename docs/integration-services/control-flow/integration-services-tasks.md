@@ -27,12 +27,12 @@ ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ccf893e78afdd01a001a513bd266f60c3b8b607c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5b7675748ba110d19147750133bf3252ba3c29e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788546"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640935"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 工作
   工作為控制流程元素，用來定義封裝控制流程中所執行工作的單位。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝是由一或多項工作所組成。 如果封裝包含超過一項工作，則會在控制流程中按照優先順序條件約束連接並排列順序。  
@@ -75,7 +75,7 @@ ms.locfileid: "47788546"
   
  如需利用撰寫程式的方式將工作加入封裝的詳細資訊，請參閱 [以程式設計方式加入工作](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)。  
   
- 每項工作均可使用 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 針對各項工作提供的自訂對話方塊，或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中包括的 [屬性] 視窗另行設定。 封裝可包括多項相同類型的工作，例如六項執行 SQL 工作，而每項工作皆可分別設定。 如需詳細資訊，請參閱 [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
+ 每項工作均可使用 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 針對各項工作提供的自訂對話方塊，或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中包括的 [屬性] 視窗另行設定。 封裝可包括多項相同類型的工作，例如六項執行 SQL 工作，而每項工作皆可分別設定。 如需詳細資訊，請參閱 [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
 ## <a name="tasks-connections-and-groups"></a>工作連接和群組  
  如果工作包含超過一項工作，則會在控制流程中按照優先順序條件約束連接並排列順序。 如需詳細資訊，請參閱 [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)。  

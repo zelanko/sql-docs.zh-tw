@@ -19,12 +19,12 @@ ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4fb378c8ec2021e856c654f57844de1d36a67746
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b4d6dc76ba333681e14a9437c6931b21035bda0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710136"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639745"
 ---
 # <a name="union-all-transformation"></a>聯集全部轉換
   「聯集全部」轉換會將多項輸入結合至單一輸出。 例如，五個不同的「一般檔案」來源的輸出，可做為「聯集全部」轉換的輸入並組合成一個輸出。  
@@ -43,7 +43,7 @@ ms.locfileid: "47710136"
 ## <a name="configuration-of-the-union-all-transformation"></a>聯集全部轉換的組態  
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可透過程式設計方式設定之屬性的詳細資訊，請參閱 [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)。  
+ 如需可透過程式設計方式設定之屬性的詳細資訊，請參閱 [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)。  
   
  如需有關如何設定屬性的詳細資訊，請按下列其中一個主題：  
   

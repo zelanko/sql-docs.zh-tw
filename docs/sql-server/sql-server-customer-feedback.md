@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: aabe54448e4f91a87531d4e56de4f617a1610d4f
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 6f9f6b87abbac930bc51d5b0f5a32d48e0afb730
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419123"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701979"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>設定 SQL Server 以將意見反應傳送給 Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ AND instance_name = '_Total'
 安裝後，可以透過 [錯誤和使用方式報表] 應用程式變更 SQL Server 元件和執行個體的使用量資料收集設定。 此應用程式包含在 SQL Server 安裝之中。 此工具可讓每個 SQL Server 執行個體設定自己的使用量資料設定。
 
 > [!NOTE]
-> [錯誤和使用方式報表] 應用程式會列出於 SQL Server 的 [組態工具] 底下。 您可以利用與 SQL Server 2017 中相同的方式，使用此工具管理您針對收集「錯誤報告」和「使用意見反應」的喜好設定。 「錯誤報告」有別於「使用意見反應」的收集，因此可以獨立於「使用意見反應」收集進行開啟或關閉。 「錯誤報告」會收集要傳送給 Microsoft 的損毀傾印，其中可能包含[隱私權聲明](http://go.microsoft.com/fwlink/?LinkID=868444)中所述的機密資訊。
+> [錯誤和使用方式報表] 應用程式會列出於 SQL Server 的 [組態工具] 底下。 您可以利用與 SQL Server 2017 中相同的方式，使用此工具管理您針對收集「錯誤報告」和「使用意見反應」的喜好設定。 「錯誤報告」有別於「使用意見反應」的收集，因此可以獨立於「使用意見反應」收集進行開啟或關閉。 「錯誤報告」會收集要傳送給 Microsoft 的損毀傾印，其中可能包含[隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)中所述的機密資訊。
 
 若要啟動 [SQL Server 錯誤和使用方式報表]，請按一下或點選 [開始]，然後在搜尋方塊中搜尋「錯誤」。 隨即顯示 [SQL Server 錯誤和使用方式報表] 項目。 啟動工具之後，您可以管理針對該電腦上所安裝之執行個體和元件所收集的使用意見反應及嚴重錯誤。
 
@@ -153,7 +153,7 @@ SSMS 不會收集自己的損毀傾印。 與 SSMS 相關的任何損毀傾印�
  
 - Windows Server 2016 與 Windows 10
 
-    [在您的組織中設定 Windows 遙測](https://technet.microsoft.com/en-us/itpro/windows/manage/configure-windows-telemetry-in-your-organization)
+    [在您的組織中設定 Windows 遙測](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization)
 - Windows Server 2008 R2 與 Windows 7
 
     [WER 設定](/windows/desktop/wer/wer-settings) \(英文\)

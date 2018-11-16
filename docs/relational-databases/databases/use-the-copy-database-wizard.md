@@ -5,8 +5,7 @@ ms.date: 07/26/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.cdw.packageconfiguration.f1
@@ -27,12 +26,12 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 43fd3d9eee0e5279882ed3355c6b804e45b77754
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3513d85607582a8aab726804f2501ee675859460
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787506"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560505"
 ---
 # <a name="use-the-copy-database-wizard"></a>使用複製資料庫精靈
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +98,7 @@ ms.locfileid: "47787506"
   
 
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="Permissions"></a> Permissions  
  您必須在來源伺服器與目的地伺服器上成為 **系統管理員 (sysadmin)** 固定伺服器角色的成員。  
   
 ##  <a name="Overview"></a> [複製資料庫精靈] 頁面 

@@ -14,12 +14,12 @@ ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1648487c3ed1354b2b50d59b123fd57b236172f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48483caed9b6056fb87183210af0c2ba3014067f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797276"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667467"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>錯誤和事件參考 (Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,8 @@ ms.locfileid: "47797276"
   
 |資源|Description|  
 |--------------|-----------------|  
-|[SQL Server 社群](http://go.microsoft.com/fwlink/?LinkId=42455)|這個網站包含由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 社群所監控之新聞群組和論壇的連結。 它還會列出社群資訊來源，例如網誌或網站。 雖然不保證一定有答案，不過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 社群對於解答問題有很大的幫助。|  
-|[SQL Server 程式開發人員中心社群](http://go.microsoft.com/fwlink/?LinkId=42456)|此網站著重在新聞群組、論壇及其他社群資源，這些資訊對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員很有用。|  
-|[Microsoft 說明及支援](http://go.microsoft.com/fwlink/?linkid=16419)|您可以使用這個網站向 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援人員提交案件。|  
+|[SQL Server 社群](https://go.microsoft.com/fwlink/?LinkId=42455)|這個網站包含由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 社群所監控之新聞群組和論壇的連結。 它還會列出社群資訊來源，例如網誌或網站。 雖然不保證一定有答案，不過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 社群對於解答問題有很大的幫助。|  
+|[SQL Server 程式開發人員中心社群](https://go.microsoft.com/fwlink/?LinkId=42456)|此網站著重在新聞群組、論壇及其他社群資源，這些資訊對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員很有用。|  
+|[Microsoft 說明及支援](https://go.microsoft.com/fwlink/?linkid=16419)|您可以使用這個網站向 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援人員提交案件。|  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4976298eee9ed0e8b3cef41fa2f201a5590799bc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7bad528f4c644ee4de7339eacdd1e0a0e74c9abc
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031889"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814301"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
   本主題提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 概念的簡短摘要。  
@@ -33,7 +33,7 @@ ms.locfileid: "50031889"
  報表伺服器項目包含分頁與行動報表、KPI、共用資料來源、共用資料集，以及其他可發行、上傳或儲存至報表伺服器的項目。 組織原生報表伺服器之報表伺服器階層資料夾結構中的項目，或是組織 SharePoint 網站之 SharePoint 內容庫中的項目。 如需詳細資訊，請參閱[報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)。  
   
 ### <a name="folders"></a>資料夾
- 在原生報表伺服器上，資料夾提供儲存在報表伺服器中所有可定址項目的階層式導覽結構和路徑。 您可以使用資料夾階層和網站以及資料夾權限，協助控制對報表伺服器項目的存取權，這稱為 *「項目層級安全性」*(Item-level security)。 資料夾階層中的子資料夾預設會繼承您對特定資料夾所定義的角色指派。 若您將特定的角色指派給資料夾，則繼承規則將不再適用。 資料夾結構包含一個稱為 **[主資料夾]** 的根節點以及多個支援選擇性 **[我的報表]** 功能的保留資料夾。 在瀏覽器中，根節點是報表伺服器虛擬目錄的名稱 (例如，`http://myreportserver/reports`)。 如需詳細資訊，請參閱 [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)。  
+ 在原生報表伺服器上，資料夾提供儲存在報表伺服器中所有可定址項目的階層式導覽結構和路徑。 您可以使用資料夾階層和網站以及資料夾權限，協助控制對報表伺服器項目的存取權，這稱為 *「項目層級安全性」*(Item-level security)。 資料夾階層中的子資料夾預設會繼承您對特定資料夾所定義的角色指派。 若您將特定的角色指派給資料夾，則繼承規則將不再適用。 資料夾結構包含一個稱為 **[主資料夾]** 的根節點以及多個支援選擇性 **[我的報表]** 功能的保留資料夾。 在瀏覽器中，根節點是報表伺服器虛擬目錄的名稱 (例如，`https://myreportserver/reports`)。 如需詳細資訊，請參閱 [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)。  
   
  在 SharePoint 網站上，使用文件庫和內容庫中的 SharePoint 資料夾來組織項目。  
   

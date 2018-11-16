@@ -26,12 +26,12 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73752c57120544374edfc9790b07fe6a648779a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb0840c67ff34759e9d17426b33ce2d32f4e1143
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826296"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642233"
 ---
 # <a name="set-package-properties"></a>設定封裝屬性
   當您使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 所提供的圖形介面，在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立封裝時，可以在 [屬性] 視窗中設定封裝物件的屬性。  
@@ -54,19 +54,19 @@ ms.locfileid: "47826296"
   
 -   [交易](#Transactions)  
   
--   [版本](#Version)  
+-   [版本(Version)](#Version)  
   
  如需無法在 [屬性] 視窗中設定的其他套件屬性的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.Package>。  
   
 ### <a name="to-set-package-properties-in-the-properties-window"></a>在屬性視窗中設定封裝屬性  
   
--   [設定封裝的屬性](http://msdn.microsoft.com/library/0d20346e-475c-412f-b3ff-7bce25242b7a)  
+-   [設定封裝的屬性](https://msdn.microsoft.com/library/0d20346e-475c-412f-b3ff-7bce25242b7a)  
   
 ## <a name="properties-by-category"></a>依類別列出屬性  
  下表會依類別列出封裝屬性。  
   
 ###  <a name="Checkpoints"></a> 檢查點  
- 您可以使用此類別中的屬性，從封裝控制流程中的失敗點重新啟動封裝，而不用從控制流程的開頭重新執行封裝。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
+ 您可以使用此類別中的屬性，從封裝控制流程中的失敗點重新啟動封裝，而不用從控制流程的開頭重新執行封裝。 如需詳細資訊，請參閱 [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
 |屬性|Description|  
 |--------------|-----------------|  

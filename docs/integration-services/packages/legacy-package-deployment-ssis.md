@@ -32,12 +32,12 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df681347fde77f4891ed082b2e75ef15e9f935e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cad877fe1c1431f044f41b6dc7087c8b990cc4c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718266"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639065"
 ---
 # <a name="legacy-package-deployment-ssis"></a>舊版封裝部署 (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的工具和精靈可以簡化將封裝從開發電腦部署到實際伺服器或部署到其他電腦的流程。  
@@ -102,7 +102,7 @@ ms.locfileid: "47718266"
   
 -   您不能使用 **/ConfigFile** 選項來載入可取代您在設計階段指定之組態的組態。  
   
- 如需這些選項的詳細資訊，以及這些選項在 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 與舊版之間的行為差異，請參閱 [SQL Server 2016 中 Integration Services 功能的行為變更](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)。  
+ 如需這些選項的詳細資訊，以及這些選項在 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 與舊版之間的行為差異，請參閱 [SQL Server 2016 中 Integration Services 功能的行為變更](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)。  
   
 ### <a name="package-configuration-types"></a>封裝組態類型  
  下表描述封裝組態類型。  
@@ -430,7 +430,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 > [!NOTE]  
 >  您也可以設定 [執行封裝工作] 將父封裝變數或參數 (或專案參數) 對應到子封裝參數，以將值傳遞到子封裝。 如需詳細資訊，請參閱 [執行封裝工作](../../integration-services/control-flow/execute-package-task.md)。  
   
- 在子封裝中建立封裝組態之前，並不需要在父封裝中建立變數。 您可以隨時將變數加入父封裝中，但是必須使用封裝組態中父變數的確切名稱。 不過，在可以更新組態的子封裝中必須包含現有的變數，您才可以建立父變數組態。 如需加入和設定變數的詳細資訊，請參閱 [加入、刪除、變更封裝中使用者定義變數的範圍](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)。  
+ 在子封裝中建立封裝組態之前，並不需要在父封裝中建立變數。 您可以隨時將變數加入父封裝中，但是必須使用封裝組態中父變數的確切名稱。 不過，在可以更新組態的子封裝中必須包含現有的變數，您才可以建立父變數組態。 如需加入和設定變數的詳細資訊，請參閱 [加入、刪除、變更封裝中使用者定義變數的範圍](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)。  
   
  父變數組態使用之父封裝中變數的範圍可以設定為「執行封裝」工作、擁有該工作的容器，或是封裝。 如果封裝中定義了多個名稱相同的變數，則會使用最接近「執行封裝」工作範圍的變數。 最接近「執行封裝」工作的範圍就是工作本身。  
   

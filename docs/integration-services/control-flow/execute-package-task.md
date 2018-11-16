@@ -20,12 +20,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 986d3bf99eb08279dab77ed12ff1b04dccce1538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cb0ba9c72da4fe69988fa580ba3080237b3b078
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818124"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640675"
 ---
 # <a name="execute-package-task"></a>執行封裝工作
   「執行封裝」工作可讓封裝將其他封裝當做工作流程的一部分執行，以延伸 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企業功能。  
@@ -63,7 +63,7 @@ ms.locfileid: "47818124"
  依預設，「執行封裝」工作的 ExecuteOutOfProcess 屬性會設定為 **False**，而且子封裝會在與父封裝的相同處理序中執行。 如果您將此屬性設定為 **True**，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 此外，如果您將此屬性設定為 **True**，則無法在僅限工具安裝中偵錯封裝。 您必須安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 如需詳細資訊，請參閱 [安裝 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
   
 ## <a name="extending-transactions"></a>延伸交易  
- 父封裝使用的交易可延伸至子封裝；因此，這兩種封裝執行的工作都能認可或回復。 例如，根據子封裝執行的資料庫插入，可以認可或回復父封裝所執行的資料庫插入，反之亦然。 如需詳細資訊，請參閱＜ [Inherited Transactions](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)＞。  
+ 父封裝使用的交易可延伸至子封裝；因此，這兩種封裝執行的工作都能認可或回復。 例如，根據子封裝執行的資料庫插入，可以認可或回復父封裝所執行的資料庫插入，反之亦然。 如需詳細資訊，請參閱＜ [Inherited Transactions](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)＞。  
   
 ## <a name="propagating-logging-details"></a>傳播記錄詳細資料  
  「執行封裝」工作執行的子封裝不一定會設定為使用記錄，但是子封裝永遠會將記錄的詳細資料轉送給父封裝。 如果「執行封裝」工作設定為使用記錄，則此工作會記錄來自子封裝的記錄詳細資料。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
@@ -114,7 +114,7 @@ ms.locfileid: "47818124"
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="configuring-the-execute-package-task-programmatically"></a>以程式設計的方式設定執行封裝工作  
  如需有關以程式設計方式設定這些屬性的詳細資訊，請按下列主題：  

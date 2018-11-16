@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ebaeb1a0fce11d984f858247763c4222d4a8b27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90c611eff42a3cd31894e27b1a7737ca77e91bea
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603546"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670403"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 資料類型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47603546"
  XPath 具備三種資料類型：**字串**，**數目**，並**布林**。 **數字**資料類型一定是 IEEE 754 雙精確度浮點數。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Float(53)** 資料類型是最接近 XPath**數目**。 不過， **float(53)** 不完全是 IEEE 754。 例如，不會使用 NaN (非數字的值)，也不會使用無限。 嘗試將非數字的字串來轉換**數字**並嘗試除以零產生錯誤。  
   
 ## <a name="xpath-conversions"></a>XPath 轉換  
- 當您使用 XPath 查詢 (例如，`OrderDetail[@UnitPrice > "10.0"]`) 時，隱含和明確的資料類型轉換可能會以明顯的方式變更查詢的意義。 因此，了解如何實作 XPath 資料類型相當重要。 XPath 語言規格，XML 路徑語言 (XPath) 1.0 版，W3C 提出的建議 8 1999 年，請參閱 W3C 網站上 http://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
+ 當您使用 XPath 查詢 (例如，`OrderDetail[@UnitPrice > "10.0"]`) 時，隱含和明確的資料類型轉換可能會以明顯的方式變更查詢的意義。 因此，了解如何實作 XPath 資料類型相當重要。 XPath 語言規格，XML 路徑語言 (XPath) 1.0 版，W3C 提出的建議 8 1999 年，請參閱 W3C 網站上 https://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
   
  XPath 運算子分為四個類別：  
   

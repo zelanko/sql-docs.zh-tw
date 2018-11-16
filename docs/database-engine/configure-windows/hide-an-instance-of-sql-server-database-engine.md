@@ -14,12 +14,12 @@ ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f781dfcf0bc2d3ca1516cd45e7cddce7922ac348
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5336a318a5384402d10e44b905446e29b0b71aec
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720616"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606528"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>隱藏 SQL Server Database Engine 的執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,6 +47,6 @@ ms.locfileid: "47720616"
 ## <a name="see-also"></a>另請參閱  
  [伺服器網路組態](../../database-engine/configure-windows/server-network-configuration.md)   
  [SQL 虛擬伺服器用戶端連接的描述](https://support.microsoft.com/kb/273673)   
- [如何將靜態連接埠指派給 SQL Server 具名執行個體，並避免常見陷阱](http://blogs.msdn.com/b/arvindsh/archive/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall.aspx)  
+ [如何將靜態連接埠指派給 SQL Server 具名執行個體，並避免常見陷阱](https://blogs.msdn.com/b/arvindsh/archive/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall.aspx)  
   
   

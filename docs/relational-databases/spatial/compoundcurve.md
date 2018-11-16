@@ -11,19 +11,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cab23e9c1c0515cd0fd49b191928870aeb2184c7
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 26495b201fcfc29b891a83c4f7cc4011cfd7cbd9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019033"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658917"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **CompoundCurve** 是零個或多個屬於 geometry 或 geography 類型之連續 **CircularString** 或 **LineString** 執行個體的集合。  
   
 > [!IMPORTANT]  
->  如需此版本中新空間功能 (包括 **CompoundCurve** 子類型) 的詳細描述和範例，請下載技術白皮書： [SQL Server 2012 中的新空間功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  
+>  如需此版本中新空間功能 (包括 **CompoundCurve** 子類型) 的詳細描述和範例，請下載技術白皮書： [SQL Server 2012 中的新空間功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
   
  您可以具現化空的 **CompoundCurve** 執行個體，但是若要讓 **CompoundCurve** 有效，它就必須符合下列準則：  
   

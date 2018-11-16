@@ -18,12 +18,12 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 956ddabb6101f524de052afb107e5434d6d87892
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1231fc3c3f18711357ccf84daf06fb4821fa27a2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850977"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664928"
 ---
 # <a name="clr-integration---overview"></a>CLR 整合 - 概觀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,8 @@ ms.locfileid: "47850977"
  您可以建立擴充預存程序來執行無法以 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序執行的功能。 但是擴充預存程序可能會危害 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序整合性，而驗證為具有型別安全的 Managed 程式碼則不會。 此外，記憶體管理、執行緒與 Fiber 排程及同步處理服務都會在 CLR 的 Managed 程式碼與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之間得到進一步整合。 CLR 整合為您提供比擴充預存程序更安全的方式來撰寫執行工作所需的預存程序，而這是無法在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中執行的動作。 如需有關 CLR 整合與擴充預存程序的詳細資訊，請參閱 < [CLR 整合的效能](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [安裝.NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
- [CLR 整合的架構](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
+ [安裝.NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [CLR 整合的架構](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
  [從 CLR 資料庫物件的資料存取](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [CLR 整合使用者入門](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
   

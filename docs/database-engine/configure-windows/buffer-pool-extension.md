@@ -11,12 +11,12 @@ ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d66f118490cf0a665b94f3b0ae64c43f6179243
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f732c4038940ef2ed5ee511e399f3bcf2efae54f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658196"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606888"
 ---
 # <a name="buffer-pool-extension"></a>緩衝集區擴充
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47658196"
  下列詞彙適用於緩衝集區擴充功能。  
   
  固態硬碟 (SSD)  
- 固態硬碟會以持續方式將資料儲存在記憶體 (RAM) 中。 如需詳細資訊，請參閱 [這個定義](http://en.wikipedia.org/wiki/Solid-state_drive)。  
+ 固態硬碟會以持續方式將資料儲存在記憶體 (RAM) 中。 如需詳細資訊，請參閱 [這個定義](https://en.wikipedia.org/wiki/Solid-state_drive)。  
   
  緩衝區  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，緩衝區是 8 KB 的記憶體頁面，大小與資料或索引頁面相同。 因此，緩衝區快取也分成 8 KB 的頁面。 頁面會保留在緩衝區快取中，直到緩衝區管理員需要緩衝區來讀取更多資料為止。 只有資料修改後，才會重新寫入磁碟。 這些記憶體中已修改的頁面稱為中途分頁。 如果頁面相當於它在磁碟上的資料庫映像，就表示它不是中途頁面。 在重新寫入磁碟之前，可以多次修改緩衝區快取中的資料。  

@@ -34,18 +34,18 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7408e6160a6d82779ceb7c470e773db4a128ffa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 851f89487199b1deae2086352a255374621688c6
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782226"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638815"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查閱轉換
   「模糊查閱」轉換會執行資料清除工作，例如標準化資料、更正資料及提供遺漏值。  
   
 > [!NOTE]  
->  如需模糊查閱轉換 (包括效能和記憶體限制) 的詳細資訊，請參閱 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(SQL Server Integration Services 2005 中的模糊查閱和模糊群組) 白皮書。  
+>  如需模糊查閱轉換 (包括效能和記憶體限制) 的詳細資訊，請參閱 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(SQL Server Integration Services 2005 中的模糊查閱和模糊群組) 白皮書。  
   
  「模糊查詢」轉換與「查閱」轉換的不同之處在於其使用模糊比對。 「查閱」轉換使用等聯結 (Equi-Join)，在參考資料表中尋找相符的資料錄。 它會傳回至少有一項相符資料錄的資料錄，以及傳回沒有任何相符資料錄的資料錄。 相反地，「模糊查閱」轉換會使用模糊比對，傳回參考資料表中的一個或多個相近相符項目。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47782226"
   
  此轉換有一個輸入和一個輸出。  
   
- 只有具有 **DT_WSTR** 和 **DT_STR** 資料類型的資料行可用於模糊比對。 完全比對可使用任何 DTS 資料類型，但 **DT_TEXT**、 **DT_NTEXT**和 **DT_IMAGE**除外。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../../integration-services/data-flow/integration-services-data-types.md)。 參與輸入與參考資料表之間聯結的資料行必須具有相容的資料類型。 例如，將具有 DTS **DT_WSTR** 資料類型的資料行聯結到具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** 資料類型的資料行是有效的，但將具有 **DT_WSTR** 資料類型的資料行聯結到具有 **int** 資料類型的資料行則是無效的。  
+ 只有具有 **DT_WSTR** 和 **DT_STR** 資料類型的資料行可用於模糊比對。 完全比對可使用任何 DTS 資料類型，但 **DT_TEXT**、 **DT_NTEXT**和 **DT_IMAGE**除外。 如需詳細資訊，請參閱＜ [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)＞。 參與輸入與參考資料表之間聯結的資料行必須具有相容的資料類型。 例如，將具有 DTS **DT_WSTR** 資料類型的資料行聯結到具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** 資料類型的資料行是有效的，但將具有 **DT_WSTR** 資料類型的資料行聯結到具有 **int** 資料類型的資料行則是無效的。  
   
  您可以指定最大記憶體數量、資料列比較演算法，以及轉換使用的索引和參考資料表快取，以自訂此轉換。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47782226"
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -216,7 +216,7 @@ ms.locfileid: "47782226"
   
 ## <a name="see-also"></a>另請參閱  
  [查閱轉換](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [模糊群組轉換](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

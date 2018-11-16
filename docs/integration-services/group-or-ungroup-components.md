@@ -16,12 +16,12 @@ ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c781794fb548baa688596e613270c641eff9d481
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37711d75b48118bd180307795d9fbaa3dfc4bf74
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765536"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638015"
 ---
 # <a name="group-or-ungroup-components"></a>將元件分組或取消分組
   **設計師中的**[控制流程] **、**[資料流程] **和** [事件處理常式] [!INCLUDE[ssIS](../includes/ssis-md.md)] 索引標籤都支援可摺疊的群組。 如果封裝具有許多元件，這些索引標籤可能會變得十分擁擠，因而難以同時檢視所有元件並找到您要使用的項目。 可摺疊的群組功能可以節省工作介面的空間，讓您更輕易地使用大型封裝。  
@@ -62,6 +62,6 @@ ms.locfileid: "47765536"
   
 ## <a name="see-also"></a>另請參閱  
  [在控制流程中加入或刪除工作或容器](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [使用預設的優先順序條件約束來連接工作和容器](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
+ [使用預設的優先順序條件約束來連接工作和容器](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
   
   

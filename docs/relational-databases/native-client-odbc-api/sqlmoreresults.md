@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 297b9cad27440f98f905c07fa39541a1705cd9e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c7c0a26e3960921ab0c97191538f721cd71d31f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839926"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674967"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -165,7 +165,7 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLMoreResults 函數](http://go.microsoft.com/fwlink/?LinkId=59357)   
+ [SQLMoreResults 函數](https://go.microsoft.com/fwlink/?LinkId=59357)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

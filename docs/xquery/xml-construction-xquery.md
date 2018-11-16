@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -23,12 +22,12 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5861d48490df31e731113b673972a7768867a5ab
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 58a7f5c5702123ae6be475b1cb377b2f8a9c52fc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119896"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657537"
 ---
 # <a name="xml-construction-xquery"></a>XML 建構 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +141,7 @@ SELECT @y;
   
 ```sql
 SELECT Instructions.query('  
-    declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+    declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         <FirstLocation>  
            { /AWMI:root/AWMI:Location[1]/AWMI:step }  
         </FirstLocation>   
@@ -155,10 +154,10 @@ WHERE ProductModelID=7;
   
 ```xml
 <FirstLocation>  
-  <AWMI:step xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">  
+  <AWMI:step xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">  
       Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>.   
   </AWMI:step>  
-  <AWMI:step xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">  
+  <AWMI:step xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">  
       Attach <AWMI:tool>Trim Jig TJ-26</AWMI:tool> to the upper and lower right corners of the aluminum sheet.   
   </AWMI:step>  
    ...  
@@ -264,7 +263,7 @@ SELECT @y;
   
 ```sql
 SELECT Instructions.query('  
-    declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+    declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         <FirstLocation   
          LocationID="{ (/AWMI:root/AWMI:Location[1]/@LocationID)[1] }"  
          SetupHrs = "{ (/AWMI:root/AWMI:Location[1]/@SetupHours)[1] }" >  
@@ -436,7 +435,7 @@ select @x.query( '
   
 ```sql
 SELECT Instructions.query('  
-        <FirstLocation xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+        <FirstLocation xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
          LocationID="{ (/AWMI:root/AWMI:Location[1]/@LocationID)[1] }"  
          SetupHrs = "{ (/AWMI:root/AWMI:Location[1]/@SetupHours)[1] }" >  
            { /AWMI:root/AWMI:Location[1]/AWMI:step }  
@@ -446,12 +445,12 @@ FROM  Production.ProductModel
 where ProductModelID=7  
 ```  
   
- 請注意以此方式建立的新命名空間前置詞，將會覆寫此前置詞的任何已存在的命名空間宣告。 例如，<`FirstLocation`> 元素中的命名空間宣告將會覆寫在查詢初構中的命名空間宣告 `AWMI="http://someURI"`。  
+ 請注意以此方式建立的新命名空間前置詞，將會覆寫此前置詞的任何已存在的命名空間宣告。 例如，<`FirstLocation`> 元素中的命名空間宣告將會覆寫在查詢初構中的命名空間宣告 `AWMI="https://someURI"`。  
   
 ```sql
 SELECT Instructions.query('  
-declare namespace AWMI="http://someURI";  
-        <FirstLocation xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+declare namespace AWMI="https://someURI";  
+        <FirstLocation xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
          LocationID="{ (/AWMI:root/AWMI:Location[1]/@LocationID)[1] }"  
          SetupHrs = "{ (/AWMI:root/AWMI:Location[1]/@SetupHours)[1] }" >  
            { /AWMI:root/AWMI:Location[1]/AWMI:step }  
@@ -504,7 +503,7 @@ declare @x xml
 set @x=''  
 select @x.query('  
   
-declare namespace myNS="   http://       
+declare namespace myNS="   https://       
  abc/  
 xyz  
   
@@ -554,7 +553,7 @@ test
   
 ```sql
 SELECT Instructions.query('  
-  declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    <?myProcessingInstr abc="value" ?>,   
    <FirstLocation   
         WorkCtrID = "{ (/AWMI:root/AWMI:Location[1]/@LocationID)[1] }"  
@@ -576,7 +575,7 @@ where ProductModelID=7;
 <FirstLocation WorkCtrID="10" SetupHrs="0.5">  
   <!-- some comment -->  
   <?myPI some processing instructions ?>  
-  <AWMI:step xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">I  
+  <AWMI:step xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">I  
   nsert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>.   
   </AWMI:step>  
     ...  
@@ -640,7 +639,7 @@ text{"Some text "},
   
 ```sql
 SELECT Instructions.query('  
-  declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    element FirstLocation   
      {  
         attribute LocationID { (/AWMI:root/AWMI:Location[1]/@LocationID)[1] },  

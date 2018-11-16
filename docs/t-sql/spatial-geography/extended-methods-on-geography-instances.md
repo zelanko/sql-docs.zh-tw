@@ -13,12 +13,12 @@ ms.assetid: d1822f1b-c1dd-4f2f-ab7c-6617c05a2b6c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b45d75b28f35b62b0444e26501dd4b12016160bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9848ec9734163720c09954e927f0426be1d0c6eb
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600766"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698406"
 ---
 # <a name="extended-methods-on-geography-instances"></a>地理位置例項上擴充的方法
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "47600766"
   
  如需有關 OGC 規格的詳細資訊，請參閱下列資源：  
   
--   [OGC 規格，簡單特徵存取第一部 - 常見架構](http://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [OGC 規格，簡單特徵存取第一部 - 常見架構](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
--   [OGC 規格，簡單特徵存取第二部 - SQL 選項](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC 規格，簡單特徵存取第二部 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
--   [OGC 規格，地理標記語言](http://go.microsoft.com/fwlink/?LinkId=93629) \(英文\)  
+-   [OGC 規格，地理標記語言](https://go.microsoft.com/fwlink/?LinkId=93629) \(英文\)  
   
 ## <a name="in-this-section"></a>本節內容  
   

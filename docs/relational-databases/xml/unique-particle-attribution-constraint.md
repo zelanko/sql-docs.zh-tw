@@ -18,12 +18,12 @@ ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e139bb657f8f30fd2e60083c6f0b2019b26d8e05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed6f9122b7f25454266fcb50e6b41b43c17a92f6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674906"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662229"
 ---
 # <a name="unique-particle-attribution-constraint"></a>唯一物件屬性條件約束
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "47674906"
   
 -   附錄 H：唯一物件屬性條件約束的分析 (非標準的) (Appendix H: Analysis of the Unique Particle Attribution Constraint (non-normative))  
   
- 若要查看文件，請瀏覽 [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?linkid=48881)。  
+ 若要查看文件，請瀏覽 [https://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881)。  
   
 ## <a name="see-also"></a>另請參閱  
  [XML 結構描述集合 &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  

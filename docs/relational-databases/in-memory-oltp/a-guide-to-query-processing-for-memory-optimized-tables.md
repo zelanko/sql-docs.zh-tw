@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4b5ab2ecda2c0616754b7f16b122095e6d80a545
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fed96fa278f64a5fd8628802c1875f2ca8195f7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662196"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664637"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>記憶體最佳化資料表的查詢處理指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- 為了建構本文中所顯示的查詢計劃，這兩個資料表中已填入 Northwind 範例資料庫中的範例資料，您可以從 [Northwind and pubs Sample Databases for SQL Server 2000](http://www.microsoft.com/download/details.aspx?id=23654)(SQL Server 2000 的 Northwind 和 pubs 範例資料庫) 下載該資料庫。  
+ 為了建構本文中所顯示的查詢計劃，這兩個資料表中已填入 Northwind 範例資料庫中的範例資料，您可以從 [Northwind and pubs Sample Databases for SQL Server 2000](https://www.microsoft.com/download/details.aspx?id=23654)(SQL Server 2000 的 Northwind 和 pubs 範例資料庫) 下載該資料庫。  
   
  請看下列查詢，其中聯結了 Customer 和 Order 這兩個資料表，並且會傳回訂單識別碼和相關聯的客戶資訊：  
   

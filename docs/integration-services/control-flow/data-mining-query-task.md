@@ -19,12 +19,12 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a99a67a8c6ff7a1d774ae5446e7b836908be8f43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 184f3337f706d2a19210a8304d6b351b352ea309
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611388"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639895"
 ---
 # <a name="data-mining-query-task"></a>資料採礦查詢工作
   「資料採礦查詢」工作會根據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]內建的資料採礦模型執行預測查詢。 預測查詢會使用採礦模型建立新資料的預測。 例如，預測查詢可預測夏季各月間可能出售的帆船數目，或產生可能購買帆船的預期客戶清單。  
@@ -58,7 +58,7 @@ ms.locfileid: "47611388"
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-data-mining-query-task"></a>以程式設計方式設定資料採礦查詢工作  
  如需有關以程式設計方式設定這些屬性的詳細資訊，請按下列其中一個主題：  

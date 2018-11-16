@@ -155,7 +155,7 @@ items:
     - name: 連結的伺服器 +
       href: ../relational-databases/linked-servers/linked-servers-database-engine.md
     - name: 指令碼 +
-      href: ../relational-databases/scripting/database-engine-scripting.md
+      href: ../ssms/scripting/database-engine-scripting.md
     - name: 全文檢索搜尋 +
       href: ../relational-databases/search/full-text-search.md
     - name: 子查詢 +
@@ -204,9 +204,9 @@ items:
     href: ../relational-databases/system-tables/system-tables-transact-sql.md
   - name: 系統檢視表 +
     href: ../relational-databases/system-views/replication-views-transact-sql.md
-ms.openlocfilehash: acbbc26643f176a668c2259f27b77f28fb2a7e4a
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 8c23236b2dad073616d1d3a5ee82f475bde0119a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877961"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641005"

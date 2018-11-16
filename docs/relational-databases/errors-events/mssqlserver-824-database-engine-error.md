@@ -12,12 +12,12 @@ ms.assetid: 2aa22246-2712-4fdb-9744-36e7e6f3175e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c0773573e2b290b75bdc9855aa09f30a73be4197
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5dc0afe70b6f83e458d3e132e156982f82b7e50
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597663"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664968"
 ---
 # <a name="mssqlserver824"></a>MSSQLSERVER_824
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47597663"
 |訊息文字|SQL Server 偵測到邏輯的一致性 I/O 錯誤: %ls。 這是當在檔案 '%ls' 中位移 %#016I64x 的資料庫識別碼 %d 之頁面 %S_PGID 進行 %S_MSG 的期間所發生的。  SQL Server 錯誤記錄檔和系統事件記錄檔中的訊息，或許可以提供其他詳細資訊。|  
   
 ## <a name="explanation"></a>說明  
-此錯誤表示 Windows 回報從磁碟成功讀取頁面，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發現頁面錯誤。 此錯誤與錯誤 823 類似，不同的是 Windows 並未偵測到此錯誤。 這通常表示 I/O 子系統發生問題，例如磁碟機故障、磁碟韌體問題、錯誤的裝置驅動程式等。 如需 I/O 錯誤的詳細資訊，請參閱[Microsoft SQL Server I/O Basics, Chapter 2](http://go.microsoft.com/fwlink/?LinkId=69370) (第 2 章 Microsoft SQL Server I/O 基本概念)。  
+此錯誤表示 Windows 回報從磁碟成功讀取頁面，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發現頁面錯誤。 此錯誤與錯誤 823 類似，不同的是 Windows 並未偵測到此錯誤。 這通常表示 I/O 子系統發生問題，例如磁碟機故障、磁碟韌體問題、錯誤的裝置驅動程式等。 如需 I/O 錯誤的詳細資訊，請參閱[Microsoft SQL Server I/O Basics, Chapter 2](https://go.microsoft.com/fwlink/?LinkId=69370) (第 2 章 Microsoft SQL Server I/O 基本概念)。  
   
 ## <a name="user-action"></a>使用者動作  
   

@@ -16,18 +16,18 @@ ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1594b912a8914e253cc89ce236fd26ad7a1c32c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6811dc26bf473d5b720f843735f5f2f2ef3bab0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693856"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670627"
 ---
 # <a name="debugging-clr-database-objects"></a>偵錯 CLR 資料庫物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援在資料庫中偵錯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 Common Language Runtime (CLR) 物件。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中偵錯的關鍵層面是設定和使用的簡易性，以及 SQL Server 偵錯程式與 Microsoft Visual Studio 偵錯程式的整合。 此外，偵錯可跨語言運作。 使用者可以從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 順利地逐步執行 CLR 物件，反之亦然。 SQL Server Management Studio 中的 Transact-SQL 偵錯工具無法用於偵錯 Managed 資料庫物件，但您可以使用 Visual Studio 中的偵錯工具來偵錯物件。 在 Visual Studio 中的 Managed 資料物件支援所有通用偵錯功能，例如伺服器上執行之常式內的「逐步執行」和「不進入函數」陳述式。 偵錯工具可在偵錯期間，設定中斷點、檢查呼叫堆疊，檢查變數，以及修改變數值。 請注意，Visual Studio .NET 2003 無法用於 CLR 整合程式設計或偵錯。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含預先安裝的 .NET Framework，而且 Visual Studio .NET 2003 無法使用 .NET Framework 2.0 組件。  
   
- 如需有關偵錯使用 Visual Studio 的 managed 程式碼的詳細資訊，請參閱 「[偵錯 Managed 程式碼](http://go.microsoft.com/fwlink/?LinkId=120377)"Visual Studio 文件中的主題。  
+ 如需有關偵錯使用 Visual Studio 的 managed 程式碼的詳細資訊，請參閱 「[偵錯 Managed 程式碼](https://go.microsoft.com/fwlink/?LinkId=120377)"Visual Studio 文件中的主題。  
   
 ## <a name="debugging-permissions-and-restrictions"></a>偵錯使用權限及限制  
  偵錯是具有高度權限的作業，因此只有隸屬**sysadmin**固定的伺服器角色可以執行此作業[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -43,7 +43,7 @@ ms.locfileid: "47693856"
 ## <a name="overview-of-debugging-managed-database-objects"></a>偵錯 Managed 資料庫物件的概觀  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的偵錯遵循每個連接模型。 偵錯工具僅會偵測及偵錯其與用戶端之連接的活動。 因為偵錯工具的功能不受連接類型的限制，所以可以對表格式資料流 (TDS) 及 HTTP 連接進行偵錯。 不過，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許偵錯現有的連接。 偵錯支援在伺服器上執行的常式內的所有通用偵錯功能。 偵錯工具與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可透過分散式元件物件模式 (COM) 進行互動。  
   
- 如需詳細資訊以及有關偵錯 managed 預存程序、 函數、 觸發程序、 使用者定義型別和彙總的案例，請參閱 「[SQL Server CLR 整合資料庫偵錯](http://go.microsoft.com/fwlink/?LinkId=120378)"Visual Studio 中的主題文件。  
+ 如需詳細資訊以及有關偵錯 managed 預存程序、 函數、 觸發程序、 使用者定義型別和彙總的案例，請參閱 「[SQL Server CLR 整合資料庫偵錯](https://go.microsoft.com/fwlink/?LinkId=120378)"Visual Studio 中的主題文件。  
   
  必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上啟用 TCP/IP 網路通訊協定，才能針對遠端開發、偵錯和開發使用 Visual Studio。 如需啟用在伺服器上的 TCP/IP 通訊協定的詳細資訊，請參閱[Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md)。  
   

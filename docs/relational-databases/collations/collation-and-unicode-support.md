@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0a6c44ddcf6a222db8db865896921ad29ea2f56
-ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
+ms.openlocfilehash: 9b154ba3569c46d96c2e89b8fd209f51159e603a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49636477"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661717"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "49636477"
     
 當[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式在各有不同定序設定的不同資料庫內容中執行時，陳述式的結果可能不同。 如果可能的話，請針對組織使用標準化定序。 這樣您就不需要在每一個字元或 Unicode 運算式中明確指定定序。 如果您必須使用有不同定序和字碼頁設定的物件，則在編寫查詢程式碼時，必須考量定序優先順序的規則。 如需詳細資訊，請參閱 [定序優先順序 (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)。    
     
-與定序相關聯的選項是區分大小寫、區分腔調字、區分假名、區分全半形和區分變化選取器 (Variation Selector)。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引進一個適用於 [UTF-8](http://www.wikipedia.org/wiki/UTF-8) 編碼的額外選項。 這些選項的指定方式是將它們附加至定序名稱。 例如，此定序 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` 區分大小寫、區分腔調字、區分假名、區分全半形和 UTF-8 編碼。 例如，此定序 `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` 不區分大小寫、不區分腔調字、區分假名、區分全半形和區分變化選取器，並使用非 Unicode 編碼。 下表描述與這些不同選項相關聯的行為。    
+與定序相關聯的選項是區分大小寫、區分腔調字、區分假名、區分全半形和區分變化選取器 (Variation Selector)。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 引進一個適用於 [UTF-8](https://www.wikipedia.org/wiki/UTF-8) 編碼的額外選項。 這些選項的指定方式是將它們附加至定序名稱。 例如，此定序 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` 區分大小寫、區分腔調字、區分假名、區分全半形和 UTF-8 編碼。 例如，此定序 `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` 不區分大小寫、不區分腔調字、區分假名、區分全半形和區分變化選取器，並使用非 Unicode 編碼。 下表描述與這些不同選項相關聯的行為。    
     
 |選項|Description|    
 |------------|-----------------|    
@@ -66,7 +66,7 @@ ms.locfileid: "49636477"
 |區分腔調字 (_AS)|區分有腔調和無腔調的字元。 例如，'a' 不等於 'ấ'。 如果未選取此選項，定序就不會區分腔調。 亦即，在排序用途上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將有腔調和無腔調字母視為相同。 指定 _AI，就可以明確地選取不區分腔調字。|    
 |區分假名 (_KS)|區分兩種類型的日文假名字元：平假名和片假名。 如果未選取此選項，定序就不會區分假名。 亦即，在排序用途上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將平假名和片假名視為相同。 省略此選項，是指定不區分假名的唯一方法。|    
 |區分全半形 (_WS)|區分全形與半形字元。 如果未選取此選項，在排序用途上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將相同字元的全形和半形表示法視為相同。 省略此選項，是指定不區分全形與半形的唯一方法。|    
-|區分變化選取器 (_VSS) | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]中首次引進如何區分日文定序 Japanese_Bushu_Kakusu_140 和 Japanese_XJIS_140 中的各種不同表意字元變化選取器。 變化序列是由基底字元加上額外的變化選取器所組成。 如果未選取此 _VSS 選項，則定序不區分變化選取器，而且比較時不會考慮變化選取器。 換句話說，SQL Server 基於排序目的，會將建置在相同基底字元但使用不同變化選取器的字元視為相同。 另請參閱  [Unicode Ideographic Variation Database](http://www.unicode.org/reports/tr37/)。 <br/><br/> 全文檢索搜尋索引不支援區分 Variation Selector (_VSS) 定序。 全文檢索搜尋索引支援只區分腔調字 (_AS)、區分假名 (_KS) 和區分全半形 (_WS) 選項。 SQL Server XML 和 CLR 引擎不支援 (_VSS) Variation Selector。
+|區分變化選取器 (_VSS) | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]中首次引進如何區分日文定序 Japanese_Bushu_Kakusu_140 和 Japanese_XJIS_140 中的各種不同表意字元變化選取器。 變化序列是由基底字元加上額外的變化選取器所組成。 如果未選取此 _VSS 選項，則定序不區分變化選取器，而且比較時不會考慮變化選取器。 換句話說，SQL Server 基於排序目的，會將建置在相同基底字元但使用不同變化選取器的字元視為相同。 另請參閱  [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/)。 <br/><br/> 全文檢索搜尋索引不支援區分 Variation Selector (_VSS) 定序。 全文檢索搜尋索引支援只區分腔調字 (_AS)、區分假名 (_KS) 和區分全半形 (_WS) 選項。 SQL Server XML 和 CLR 引擎不支援 (_VSS) Variation Selector。
 |UTF-8 (_UTF8)|讓 UTF-8 編碼資料儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果未選取此選項，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用適用資料類型的預設非 Unicode 編碼格式。| 
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列定序集：    
@@ -113,7 +113,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ```    
     
 ###  <a name="Locale_Defn"></a> 地區設定    
-地區設定是一組與某個地點或文化特性相關聯的資訊。 此資訊包括口語的名稱和識別碼、用來撰寫該語言的指令碼及文化習慣。 定序可與一個或多個地區設定產生關聯。 如需詳細資訊，請參閱 [Microsoft 指派的地區設定識別碼](http://msdn.microsoft.com/goglobal/bb964664.aspx)。    
+地區設定是一組與某個地點或文化特性相關聯的資訊。 這項資訊包括口語的名稱和識別碼、用來撰寫該語言的指令碼及文化習慣。 定序可與一個或多個地區設定產生關聯。 如需詳細資訊，請參閱 [Microsoft 指派的地區設定識別碼](https://msdn.microsoft.com/goglobal/bb964664.aspx)。    
     
 ###  <a name="Code_Page_Defn"></a> Code Page    
  字碼頁是給定的指令碼的已排序字元集，其中每一個字元與數字索引或字碼指標值相關聯。 Windows 字碼頁一般稱為 *「字元集」* (Character set) 或 *charset*。 字碼頁是用來提供不同 Windows 系統地區設定所使用的字元集和鍵盤配置的支援。     
@@ -258,10 +258,10 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 |描述如何變更錯誤訊息的語言，以及日期、時間和貨幣資料之使用和顯示方式的喜好設定。|[設定工作階段語言](../../relational-databases/collations/set-a-session-language.md)|    
     
 ##  <a name="Related_Content"></a> 相關內容    
-[SQL Server 最佳做法定序變更](http://go.microsoft.com/fwlink/?LinkId=113891)    
+[SQL Server 最佳做法定序變更](https://go.microsoft.com/fwlink/?LinkId=113891)    
 [使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
-[SQL Server 最佳做法：移轉至 Unicode](http://go.microsoft.com/fwlink/?LinkId=113890) - 不再維護   
-[Unicode Consortium 網站](http://go.microsoft.com/fwlink/?LinkId=48619)    
+[SQL Server 最佳做法：移轉至 Unicode](https://go.microsoft.com/fwlink/?LinkId=113890) - 不再維護   
+[Unicode Consortium 網站](https://go.microsoft.com/fwlink/?LinkId=48619)    
     
 ## <a name="see-also"></a>另請參閱    
 [自主資料庫定序](../../relational-databases/databases/contained-database-collations.md)     

@@ -11,18 +11,18 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c312e9b4cf820e247555b668d82834fd804457a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cba1d5551205c1658975943b76612f4e50768c0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620336"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699046"
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio - 授權條款
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ### <a name="available-languages"></a>可用語言：  
-[簡體中文](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [繁體中文](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [英文 (美國)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [法文](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
-[德文](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [義大利文](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [日文](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [韓文](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [葡萄牙文 (巴西)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [俄文](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [西班牙文](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
+[簡體中文](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
+[德文](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
   
 ## <a name="microsoft-software-license-terms"></a>MICROSOFT 軟體授權條款  
 **Microsoft SQL Server Management Studio**  
@@ -73,7 +73,7 @@ ms.locfileid: "47620336"
   
 **3.  網際網路服務。** Microsoft 隨軟體提供網際網路服務。 並得以隨時變更或取消這些服務。  
   
-&nbsp;&nbsp;**a.  網際網路服務之同意。** 下列及 SQL Server 隱私權聲明中所述之軟體功能會透過網際網路連線至 Microsoft 或服務提供者電腦系統。 在某些情況下，雙方連線時將不會另行通知　貴用戶。 貴用戶得關閉此功能或不使用此功能。 如需這項功能的詳細資訊，請參閱 [http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120)。 **此功能一經使用，即代表　貴用戶同意這些資訊的傳輸。** Microsoft 不會用這些資訊來辨識或連絡　貴用戶。  
+&nbsp;&nbsp;**a.  網際網路服務之同意。** 下列及 SQL Server 隱私權聲明中所述之軟體功能會透過網際網路連線至 Microsoft 或服務提供者電腦系統。 在某些情況下，雙方連線時將不會另行通知　貴用戶。 貴用戶得關閉此功能或不使用此功能。 如需這項功能的詳細資訊，請參閱 [https://go.microsoft.com/fwlink/?LinkID=398120](https://go.microsoft.com/fwlink/?LinkID=398120)。 **此功能一經使用，即代表　貴用戶同意這些資訊的傳輸。** Microsoft 不會用這些資訊來辨識或連絡　貴用戶。  
   
 &nbsp;&nbsp;**i.  電腦資訊。** 下面功能會使用網際網路通訊協定，將　貴用戶的電腦資訊傳送至適當的系統上，例如　貴用戶的網際網路通訊協定位址、作業系統及瀏覽器的類型、　貴用戶使用的軟體名稱及版本，以及　貴用戶安裝軟體之裝置的語言代碼。 Microsoft 會使用這項資訊來提供網際網路服務予　貴用戶。  
   

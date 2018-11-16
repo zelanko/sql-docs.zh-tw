@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51adb868b7504010956ab560904b3739f1cf137b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f84b4801446fd970c0d1e42054782d533b18574
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831816"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670717"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>記憶體最佳化資料表的交易
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -317,6 +317,6 @@ go
   
 - [sp_getapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
-- [Database Engine 中資料列版本設定式的隔離等級](http://msdn.microsoft.com/library/ms177404.aspx)  
+- [Database Engine 中資料列版本設定式的隔離等級](https://msdn.microsoft.com/library/ms177404.aspx)  
   
 - [控制交易持久性](../../relational-databases/logs/control-transaction-durability.md)   

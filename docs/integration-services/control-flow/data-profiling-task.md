@@ -17,12 +17,12 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2ac2b973c867e8c5edc4cd8b7eb42ecfee6b3fe0
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 23abd4f7ebe0cb0cc3c18053914d6aa531fcde7d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906288"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640685"
 ---
 # <a name="data-profiling-task"></a>資料分析工作
   資料分析工作會計算各種設定檔，協助您熟悉資料來源並在資料中識別必須修復的問題。  
@@ -117,7 +117,7 @@ ms.locfileid: "48906288"
 |**DataProfilingTaskTrace**|提供有關此工作之狀態的描述性資訊。 訊息包括下列資訊：<br /><br /> 開始處理要求<br /><br /> 查詢開始<br /><br /> 查詢結束<br /><br /> 完成計算要求|  
   
 ## <a name="output-and-its-schema"></a>輸出及其結構描述  
- 資料分析工作會將選取的設定檔輸出到根據 DataProfile.xsd 結構描述結構化的 XML。 您可以指定此 XML 輸出要以檔案或封裝變數儲存。 您可以在 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/) 線上檢視此結構描述。 您可以從網頁儲存結構描述的本機複本。 然後，您可以在 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或其他結構描述編輯器、XML 編輯器，或「記事本」之類的文字編輯器中檢視結構描述的本機複本。  
+ 資料分析工作會將選取的設定檔輸出到根據 DataProfile.xsd 結構描述結構化的 XML。 您可以指定此 XML 輸出要以檔案或封裝變數儲存。 您可以在 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/) 線上檢視此結構描述。 您可以從網頁儲存結構描述的本機複本。 然後，您可以在 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或其他結構描述編輯器、XML 編輯器，或「記事本」之類的文字編輯器中檢視結構描述的本機複本。  
   
  此資料品質資訊的結構描述對於下列事項可能很實用：  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48906288"
   
 -   建立搭配資料品質資訊使用的自訂工具。  
   
- 在結構描述中，將目標命名空間識別為 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
+ 在結構描述中，將目標命名空間識別為 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>封裝的條件式工作流程中的輸出  
  資料分析元件不包含內建功能，無法根據資料分析工作的輸出，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的工作流程中實作條件式邏輯。 不過，您可以利用最少量的程式設計，在指令碼工作中輕鬆加入這個邏輯。 此程式碼會根據 XML 輸出執行 XPath 查詢，然後以封裝變數儲存結果。 將指令碼工作連接到後續工作的優先順序條件約束可以使用運算式來判斷工作流程。 例如，指令碼工作會偵測到 Null 值在資料行中的百分比超出特定的臨界值。 此條件為 true 時，您可能想要先中斷封裝並解決問題，然後再繼續。  

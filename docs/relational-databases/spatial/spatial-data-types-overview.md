@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aae75f2f665536336fcf745a86675846249b4ab8
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 9a9e4f02d0662150c8f8458da7bde3b5a4838022
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018403"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668027"
 ---
 # <a name="spatial-data-types-overview"></a>空間資料類型概觀
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,8 +84,8 @@ geometry 類型的圓弧線段定義於 XY 笛卡兒座標平面上 (忽略 Z �
 OGC 的 SQL 簡單特徵規格討論了外部環形和內部環形，但是這樣的區別對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 資料類型沒有很大的意義。多邊形的任何環形都可以當作外部環形。  
 
 如需有關 OGC 規格的詳細資訊，請參閱下列主題：  
--   [OGC 規格，簡單特徵存取第一部 - 常見架構](http://go.microsoft.com/fwlink/?LinkId=93627)  
--   [OGC 規格，簡單特徵存取第二部 - SQL 選項](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC 規格，簡單特徵存取第一部 - 常見架構](https://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [OGC 規格，簡單特徵存取第二部 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> 圓弧線段  
 三種可具現化的類型可以採用圓弧線段： **CircularString**、 **CompoundCurve**和 **CurvePolygon**。  圓弧線段是由二維平面中的三個點定義，而且第三個點不得與第一個點相同。  
@@ -173,7 +173,7 @@ SELECT @g.ToString(), @g.STLength();
 ## <a name="see-also"></a>另請參閱  
 - [空間資料 (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 
 - [geometry 資料類型方法參考](https://msdn.microsoft.com/library/bb933973.aspx) 
-- [geography 資料類型方法參考](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
+- [geography 資料類型方法參考](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
 - [STNumCurves &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
 - [STNumCurves &#40;geography 資料類型&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)   
 - [STGeomFromText &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)   

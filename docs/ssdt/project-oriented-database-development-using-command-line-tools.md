@@ -11,12 +11,12 @@ ms.assetid: 9a26def9-8fbd-43e4-9e57-414840b73ed8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02f1851a2be9e6cd716c3d9b151378a8d84a2a32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 658826481c77368f4cb8118ae3fe839a06886d03
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615936"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663317"
 ---
 # <a name="project-oriented-database-development-using-command-line-tools"></a>使用命令列工具進行專案導向的資料庫開發
 SQL Server Data Tools 提供命令列工具以讓您應用於一些專案導向的資料庫開發案例。  
@@ -26,7 +26,7 @@ SQL Server Data Tools 提供命令列工具以讓您應用於一些專案導向�
 |||  
 |-|-|  
 |[SqlPackage.exe](../tools/sqlpackage.md)|本主題將說明用於下列工作的 SQLPackage.exe 公用程式：<br /><br />-   從即時 SQL Server 資料庫擷取 .dacpac 檔案。<br />-   將 .dacpac 檔案發行至即時 SQL Server 資料庫，以便累加更新即時資料庫結構描述，使其符合該 .dacpac。<br />-   將 .dacpac 檔案與即時 SQL Server 資料庫進行比較，並產生累加式升級 Transact\-SQL 指令碼而無須更新即時資料庫。<br />-   比較兩個 .dacpac 檔案以產生累加式升級 Transact\-SQL 指令碼。<br />-   產生 XML 報表以列出一旦資料庫進行累加式升級後，累加式升級可能造成的變更摘要。|  
-|[搭配 dbSqlPackage 提供者使用 MSDeploy](../ssdt/using-msdeploy-with-dbsqlpackage-provider.md)|本主題將說明用於下列工作的 [Web Deployment Tool](http://go.microsoft.com/fwlink/?LinkId=231798) 提供者 (隨附於 SSDT 且名為 dbSqlPackage)，可搭配 Microsoft Internet Information Services (IIS) Web Deployment Tool (MSDeploy.exe) 運作：<br /><br />-   從遠端/本機 SQL Server 或 SQL Azure 資料庫擷取 .dacpac 檔案。<br />-   將 .dacpac 發行至遠端/本機 SQL Server 或 SQL Azure 資料庫，以累加升級資料庫。<br />-   從本機 SQL Server 資料庫發行至遠端 SQL Server 或 SQL Azure 資料庫，以累加升級遠端資料庫。<br />-   將 .dacpac 與遠端/本機 SQL Server 或 SQL Azure 資料庫進行比較，以產生累加升級 Transact\-SQL 指令碼而無須更新即時資料庫。<br />-   產生 XML 報表以列出一旦資料庫進行累加式升級後，累加式升級可能造成的變更摘要。|  
+|[搭配 dbSqlPackage 提供者使用 MSDeploy](../ssdt/using-msdeploy-with-dbsqlpackage-provider.md)|本主題將說明用於下列工作的 [Web Deployment Tool](https://go.microsoft.com/fwlink/?LinkId=231798) 提供者 (隨附於 SSDT 且名為 dbSqlPackage)，可搭配 Microsoft Internet Information Services (IIS) Web Deployment Tool (MSDeploy.exe) 運作：<br /><br />-   從遠端/本機 SQL Server 或 SQL Azure 資料庫擷取 .dacpac 檔案。<br />-   將 .dacpac 發行至遠端/本機 SQL Server 或 SQL Azure 資料庫，以累加升級資料庫。<br />-   從本機 SQL Server 資料庫發行至遠端 SQL Server 或 SQL Azure 資料庫，以累加升級遠端資料庫。<br />-   將 .dacpac 與遠端/本機 SQL Server 或 SQL Azure 資料庫進行比較，以產生累加升級 Transact\-SQL 指令碼而無須更新即時資料庫。<br />-   產生 XML 報表以列出一旦資料庫進行累加式升級後，累加式升級可能造成的變更摘要。|  
   
 ## <a name="related-sections"></a>相關章節  
 [專案導向的離線資料庫開發](../ssdt/project-oriented-offline-database-development.md)  

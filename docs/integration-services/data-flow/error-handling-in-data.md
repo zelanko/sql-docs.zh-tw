@@ -23,12 +23,12 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cb3e092e9ea185be0de966c73a5005072b8a70c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c08e1b617755d50b49de7c9286e6f5a512039527
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612203"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641828"
 ---
 # <a name="error-handling-in-data"></a>處理資料中的錯誤
   當資料流程元件將轉換套用至資料行資料、從來源擷取資料或將資料載入目的地時，可能會發生錯誤。 錯誤通常是因為非預期的資料值所產生的。 例如，資料轉換失敗的原因是資料行包含字串而非數字；向資料庫資料行插入失敗的原因是資料為日期，而資料行是數值資料類型；運算式評估失敗的原因是資料行值為零，導致數學運算無效。  
@@ -148,7 +148,7 @@ ms.locfileid: "47612203"
 ## <a name="see-also"></a>另請參閱  
  [資料流程](../../integration-services/data-flow/data-flow.md)   
  [使用轉換來轉換資料](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
- [以路徑連接元件](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [以路徑連接元件](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [資料流程工作](../../integration-services/control-flow/data-flow-task.md)   
  [資料流程](../../integration-services/data-flow/data-flow.md)  
   

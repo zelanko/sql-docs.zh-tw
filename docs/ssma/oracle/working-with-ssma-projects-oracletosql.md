@@ -12,12 +12,12 @@ ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: bc0bdfac0ed1f1c4f992db8ef833d6f092b3fb53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ec3a2f9bcdf43657649263d77eff3b31c9a57a3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677912"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662710"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>使用 SSMA 專案 (OracleToSQL)
 若要將 Oracle 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您首先建立 SSMA 專案。 專案是檔案，其中包含下列資訊：  
@@ -120,7 +120,7 @@ SSMA 會包含數個設定來轉換和載入資料庫物件移轉資料和同步
 3.  若要重新連線到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上**檔案**功能表上，按一下**重新連接到 SQL Server**。  
   
 ## <a name="next-step"></a>下一個步驟  
-移轉程序的下一個步驟是[連接到 Oracle 資料庫 (OracleToSQL)](http://msdn.microsoft.com/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6)。  
+移轉程序的下一個步驟是[連接到 Oracle 資料庫 (OracleToSQL)](https://msdn.microsoft.com/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6)。  
   
 ## <a name="see-also"></a>另請參閱  
 [移轉的 Oracle 資料庫到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

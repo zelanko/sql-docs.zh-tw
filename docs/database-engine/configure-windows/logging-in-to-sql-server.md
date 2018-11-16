@@ -22,12 +22,12 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 090787213bcfbabc153513895aff3286a7c87cfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05631087cc98f2b148072f954f3400bbcbaba41a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768196"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600529"
 ---
 # <a name="logging-in-to-sql-server"></a>登入 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,9 +84,9 @@ WHERE session_id = @@SPID;
   
  下列資源可協助您疑難排解連接問題。  
   
--   [如何疑難排解與 SQL Server Database Engine 的連接](http://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
+-   [如何疑難排解與 SQL Server Database Engine 的連接](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
--   [疑難排解 SQL 連接性問題的步驟](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
+-   [疑難排解 SQL 連接性問題的步驟](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
 ## <a name="related-content"></a>相關內容  
  [選擇驗證模式](../../relational-databases/security/choose-an-authentication-mode.md)  

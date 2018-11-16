@@ -16,12 +16,12 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6d8de770ff7ef5187db60c359ed0ccea1ab25cc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69a2c06ca2a365814dd87b72d0641d91516def95
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791456"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703596"
 ---
 # <a name="administrators-master-data-services"></a>管理員 (Master Data Services)
 
@@ -73,7 +73,7 @@ ms.locfileid: "47791456"
 |實體系統管理員|根據明確指派的系統管理員權限或繼承自群組的權限，使用者可以是實體系統管理員。<br /><br /> 只能存取被授與存取權的功能區域。<br /><br /> 自動擁有特定實體中所有物件和成員的所有權限。<br /><br /> 如果實體變更需要核准時，就可以核准暫止的變更集。|  
   
 ## <a name="external-resources"></a>外部資源  
- 請參考 msdn.com 上的 [Security Improvements](http://go.microsoft.com/fwlink/p/?LinkId=615376)(安全性改進) 部落格文章。  
+ 請參考 msdn.com 上的 [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376)(安全性改進) 部落格文章。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立模型管理員 &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   

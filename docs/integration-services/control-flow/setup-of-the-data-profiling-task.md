@@ -13,12 +13,12 @@ ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e593351cd5ba5f0aa7efb1ced09af98cc40c3a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 137310a0a8ef7ecf1d76d70b146b1e12ff4a2d5a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652376"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638775"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>資料分析工作的設定
   在您可以檢閱來源資料的設定檔前，第一個步驟是設定並執行「資料分析」工作。 您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部建立這個工作。 若要設定「資料分析」工作，您可以使用「資料分析工作編輯器」。 此編輯器可讓您選取要輸出設定檔的位置以及要計算的設定檔。 設定工作後，您可以執行封裝以計算資料設定檔。  
@@ -98,7 +98,7 @@ ms.locfileid: "47652376"
   
 -   建立搭配資料品質資訊使用的自訂工具。  
   
- 在結構描述中，將目標命名空間識別為 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
+ 在結構描述中，將目標命名空間識別為 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
   
 ## <a name="next-step"></a>下一個步驟  
  [資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  

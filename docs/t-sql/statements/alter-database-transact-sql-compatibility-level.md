@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e08cc23d78be8f617d51bd6d8310eaef5aa1f0e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d923536f678884307be526ddebf0f825774c1093
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666596"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699666"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 > 
 > 如果您想要針對整個資料庫使用資料庫相容性層級 140，但有偏好 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之**基數估計**模型 (對應至資料庫相容性層級 110) 的理由，請參閱 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，特別是其關鍵字 `LEGACY_CARDINALITY_ESTIMATION = ON`。
 >  
-> 如需有關如何評估您 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]最重要查詢的效能差異，請參閱[在 Azure SQL Database 中使用相容性層級 130 改善查詢效能](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。 請注意，本文是指相容性層級 130 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 使用相同的方法移至 140。
+> 如需有關如何評估您 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]最重要查詢的效能差異，請參閱[在 Azure SQL Database 中使用相容性層級 130 改善查詢效能](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。 請注意，本文是指相容性層級 130 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 使用相同的方法移至 140。
 
 請執行以下查詢已判斷您所連線的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本。  
   
@@ -116,7 +116,7 @@ SELECT name, compatibility_level FROM sys.databases;
 >
 > 如需相容性層級之間差異的詳細資訊，請參閱本文稍後的適當章節。 
 
-若要將 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 升級至最新版本，同時維護升級前已存在的資料庫相容性層級及其可支援性狀態，建議使用 [Microsoft Data Migration Assistant](http://www.microsoft.com/download/details.aspx?id=53595) 工具 (DMA)，執行資料庫中應用程式程式碼的靜態功能介面區驗證。 在 DMA 工具輸出中，由於沒有關於遺失或不相容功能的錯誤，因此可防止應用程式在新的目標版本上出現任何功能迴歸的情況。 如需 DMA 工具的詳細資訊，請參閱[這裡](http://blogs.msdn.microsoft.com/datamigration/dma)。
+若要將 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 升級至最新版本，同時維護升級前已存在的資料庫相容性層級及其可支援性狀態，建議使用 [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) 工具 (DMA)，執行資料庫中應用程式程式碼的靜態功能介面區驗證。 在 DMA 工具輸出中，由於沒有關於遺失或不相容功能的錯誤，因此可防止應用程式在新的目標版本上出現任何功能迴歸的情況。 如需 DMA 工具的詳細資訊，請參閱[這裡](https://blogs.msdn.microsoft.com/datamigration/dma)。
 
 > [!NOTE] 
 > DMA 支援資料庫相容性層級 100 (含) 以上。 已排除 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 作為來源版本。 

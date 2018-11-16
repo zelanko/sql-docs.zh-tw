@@ -13,19 +13,19 @@ ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1dc2552c848b691346c57a0191f9c9200bad4523
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce48e7aa89451131b7ed483fa5132af22565c170
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666166"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673547"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID 函式
 **合規性**  
  版本導入： ODBC 3.81 標準相容性： ODBC  
   
  **摘要**  
- **SQLCleanupConnectionPoolID**通知逾時的集區識別碼的驅動程式。集區識別碼可以逾時，每當該集區識別碼相關聯的集區中的所有連線都已逾時。請參閱[Microsoft Data Access Components 中的共用](http://msdn.microsoft.com/library/ms810829.aspx)取得的連接逾時的詳細資訊。  
+ **SQLCleanupConnectionPoolID**通知逾時的集區識別碼的驅動程式。集區識別碼可以逾時，每當該集區識別碼相關聯的集區中的所有連線都已逾時。請參閱[Microsoft Data Access Components 中的共用](https://msdn.microsoft.com/library/ms810829.aspx)取得的連接逾時的詳細資訊。  
   
 ## <a name="syntax"></a>語法  
   

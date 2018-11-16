@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 380a73ff26d48abf90e5068395a2defc29d28746
-ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
+ms.openlocfilehash: 1c5e3e3e1cdfda5126392e6295fc45cf29b9f507
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47441748"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657077"
 ---
 # <a name="export-a-data-tier-application"></a>匯出資料層應用程式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47441748"
   
  如果 DAC 或包含的使用者中不支援資料庫的物件，則無法匯出資料庫。 如需有關 DAC 中支援之物件類型的詳細資訊，請參閱＜ [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)＞。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="Permissions"></a> Permissions  
  您至少需具備 ALTER ANY LOGIN 和資料庫範圍 VIEW DEFINITION 權限，以及 **sys.sql_expression_dependencies**的 SELECT 權限，才能匯出 DAC。 匯出 DAC 可以透過 securityadmin 固定伺服器角色的成員來完成，這個角色的成員也是匯出 DAC 之來源資料庫中 database_owner 固定資料庫角色的成員。 系統管理員固定伺服器角色的成員或內建 SQL Server 系統管理員帳戶 **sa** 也可以匯出 DAC。
  
 在 Azure SQL DB 上，您需要**針對每個資料庫**授與所有資料表或特定資料表的 VIEW DEFINITION 和 SELECT 權限
@@ -120,7 +120,7 @@ ms.locfileid: "47441748"
 ##  <a name="NetApp"></a> 使用 .Net Framework 應用程式  
  **在 .Net Framework 應用程式中使用 Export() 方法，匯出 DAC。**  
   
- 若要檢視程式碼範例，請下載 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)上的 DAC 範例應用程式。  
+ 若要檢視程式碼範例，請下載 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)上的 DAC 範例應用程式。  
   
 1.  建立 SMO Server 物件，並將它設定為包含要匯出之 DAC 的執行個體。  
   

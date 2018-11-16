@@ -13,12 +13,12 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fdd198e8b5bf23e69d74be057c97b29e229dada
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 126dad89a25ccf1a11958676cb0be439fb4aac65
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717886"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641565"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>逐步解說︰發行 SSIS 封裝做為 SQL 檢視
   本逐步解說提供詳細的步驟來發行 SSIS 封裝，以做為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的 SQL 檢視。  
@@ -252,7 +252,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  Timeout 表示在來自 SSIS 封裝的新資料到達之前，適用於 SSIS 的 OLE DB 提供者可以等待的秒數。 預設逾時為 60 秒。 您可以為逾時指定介於 20 和 32000 之間的整數值。  
   
- Parameters 包含封裝參數和專案參數的值。 參數的規則與 [DTExec](http://msdn.microsoft.com/library/hh231187.aspx)中的參數相同。  
+ Parameters 包含封裝參數和專案參數的值。 參數的規則與 [DTExec](https://msdn.microsoft.com/library/hh231187.aspx)中的參數相同。  
   
  下列清單指定查詢子句中允許的特殊字元︰  
   

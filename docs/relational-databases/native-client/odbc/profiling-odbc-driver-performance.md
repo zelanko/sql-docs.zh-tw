@@ -21,12 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8b62db56319fd3d09d7c6afd14df2ee727bb4e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 366909575681db12ee0f309637786c5dca58c78d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854593"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659503"
 ---
 # <a name="profiling-odbc-driver-performance"></a>分析 ODBC 驅動程式效能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -87,7 +87,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|在 SQL_PERF_START 之後處理的 SELECT 陳述式數目。|  
 |SQLSelectRows|在 SQL_PERF_START 之後選取的資料列數目。|  
 |交易|SQL_PERF_START 之後的使用者交易數目，包括回復。 當 ODBC 應用程式使用 SQL_AUTOCOMMIT_ON 執行時，會將每個命令視為交易。|  
-|SQLPrepares|數目[SQLPrepare 函數](http://go.microsoft.com/fwlink/?LinkId=59360)SQL_PERF_START 之後呼叫。|  
+|SQLPrepares|數目[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)SQL_PERF_START 之後呼叫。|  
 |ExecDirects|數目**SQLExecDirect**在 SQL_PERF_START 之後呼叫。|  
 |SQLExecutes|數目**SQLExecute**在 SQL_PERF_START 之後呼叫。|  
 |CursorOpens|驅動程式在 SQL_PERF_START 之後已經開啟伺服器資料指標的次數。|  

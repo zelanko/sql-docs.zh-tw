@@ -16,12 +16,12 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bce4b148fbb5a573446f21ea7e116a01d79fc1e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 34a278c1ec90d9ddc49771850cf6226e9ee702ba
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849518"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642185"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>封裝的 SQL Server Agent 作業
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，自動化並排程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的執行。 您可以排程部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器，並且儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統的封裝。  
@@ -60,14 +60,14 @@ ms.locfileid: "47849518"
   
  如需詳細資訊，請參閱 [使用 SQL Server Agent 排程封裝](#schedule)。  
   
- 如需示範如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來執行封裝的影片，請參閱 MSDN Library 中的影片首頁， [如何：使用 SQL Server Agent 讓 SSIS 封裝執行自動化 (SQL Server 影片)](http://go.microsoft.com/fwlink/?LinkId=141771)。  
+ 如需示範如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來執行封裝的影片，請參閱 MSDN Library 中的影片首頁， [如何：使用 SQL Server Agent 讓 SSIS 封裝執行自動化 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=141771)。  
   
 ##  <a name="trouble"></a> 疑難排解  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟可能無法啟動封裝，即使封裝在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中以及從命令列都順利執行。 此問題有一些常見的原因，以及數個建議的解決方案。 如需詳細資訊，請參閱下列資源。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫文件： [從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行](http://support.microsoft.com/kb/918760)  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫文件： [從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行](https://support.microsoft.com/kb/918760)  
   
--   位於 MSDN Library 的影片： [疑難排解：使用 SQL Server Agent 的封裝執行 (SQL Server 影片)](http://go.microsoft.com/fwlink/?LinkId=141772)。  
+-   位於 MSDN Library 的影片： [疑難排解：使用 SQL Server Agent 的封裝執行 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=141772)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟啟動封裝後，封裝執行可能失敗，也可能會成功，但產生非預期的結果。 您可以使用下列工具對這些問題進行疑難排解。  
   
@@ -120,11 +120,11 @@ ms.locfileid: "47849518"
   
 7.  在 [執行身分] 清單中，選取 [SQL Server Agent 服務帳戶] 或選取具有作業步驟將使用之認證的 Proxy 帳戶。 如需建立 Proxy 帳戶的資訊，請參閱[建立 SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   
-     使用 Proxy 帳戶而非 [SQL Server Agent 服務帳戶]，可解決使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行封裝時可能發生的常見問題。 如需這些問題的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫文章： [從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行](http://support.microsoft.com/kb/918760)。  
+     使用 Proxy 帳戶而非 [SQL Server Agent 服務帳戶]，可解決使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行封裝時可能發生的常見問題。 如需這些問題的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫文章： [從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行](https://support.microsoft.com/kb/918760)。  
   
     > **注意：** 如果 Proxy 帳戶所使用認證的密碼變更，您就需要更新認證密碼。 否則，作業步驟將會失敗。  
   
-     如需設定 SQL Server Agent 服務帳戶的資訊，請參閱[設定 SQL Server Agent 的服務啟動帳戶 &#40;SQL Server 組態管理員&#41;](http://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472)。  
+     如需設定 SQL Server Agent 服務帳戶的資訊，請參閱[設定 SQL Server Agent 的服務啟動帳戶 &#40;SQL Server 組態管理員&#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472)。  
   
 8.  在 [封裝來源] 清單方塊中，按一下封裝的來源，然後設定作業步驟的選項。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "47849518"
     ||**屬性覆寫**：<br /><br /> 按一下 [加入] 輸入封裝屬性的新值、指定屬性路徑，以及指出屬性值是否為敏感。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器加密敏感資料。 若要編輯或移除屬性的設定，請按一下 [屬性覆寫] 方塊中的資料列，然後按一下 [編輯] 或 [移除]。 您可以執行下列其中一個動作來尋找屬性路徑：<br /><br /> -從 XML 組態檔 (\*.dtsconfig) 檔案複製屬性路徑。 路徑會在檔案的 [組態] 區段中列出，做為 [路徑] 屬性的值。 以下是 MaximumErrorCount 屬性的路徑範例：\Package.Properties[MaximumErrorCount]<br /><br /> -執行 [封裝組態精靈]，並從最後的 [正在完成精靈] 頁面複製屬性路徑。 然後您就可以取消精靈。<br /><br /> <br /><br /> 注意：[屬性覆寫] 選項主要用於您從舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 升級之組態的封裝。 您使用 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 建立並部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的建立會使用參數，而非組態。|  
     ||**記錄層次**<br /><br /> 選取下列其中一個封裝執行的記錄層級。 請注意，選取 [效能] 或 [詳細資訊] 記錄層級，可能會影響封裝執行的效能。<br /><br /> **無**：<br />                          關閉記錄功能。 只記錄封裝執行狀態。<br /><br /> **基本**：<br />                          記錄所有事件，自訂和診斷事件除外。 這是記錄層級的預設值。<br /><br /> **效能**：<br />                          只記錄效能統計資料，以及 OnError 和 OnWarning 事件。<br /><br /> **詳細資訊**：<br />                          記錄所有事件，包括自訂和診斷事件。<br /><br /> 您選取的記錄層級會決定 SSISDB 檢視及 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的報表中顯示的資訊。 如需詳細資訊，請參閱 [Integration Services (SSIS) 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。|  
     ||**在發生錯誤時傾印**<br /><br /> 指定在封裝執行期間發生任何錯誤時，是否產生偵錯傾印檔案。 這些檔案會包含有關封裝執行的資訊，可幫助您針對問題進行疑難排解。 當您選取此選項，而在執行期間發生錯誤時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立 .mdmp 檔 (二進位檔) 和 .tmp 檔 (文字檔)。 根據預設，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會將檔案儲存在 \<磁碟機>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 資料夾中。|  
-    ||**32 位元執行階段**<br /><br /> 指出是否在已安裝 64 位元版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 64 位元電腦上，使用 32 位元版本的 dtexec 公用程式執行封裝。<br /><br /> 如果您的封裝使用的原生 OLE DB 提供者無法在 64 位元版本中使用，您可能需要使用 32 位元版本的 dtexec 執行封裝。 如需詳細資訊，請參閱 [Integration Services 的 64 位元考量](http://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)。<br /><br /> 根據預設，當您選取 [SQL Server Integration Services 封裝] 作業步驟類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會使用系統自動叫用的 dtexec 公用程式版本執行封裝。 系統會根據電腦處理器以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本和電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，叫用 32 位元或 64 位元版本的公用程式。|  
+    ||**32 位元執行階段**<br /><br /> 指出是否在已安裝 64 位元版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 64 位元電腦上，使用 32 位元版本的 dtexec 公用程式執行封裝。<br /><br /> 如果您的封裝使用的原生 OLE DB 提供者無法在 64 位元版本中使用，您可能需要使用 32 位元版本的 dtexec 執行封裝。 如需詳細資訊，請參閱 [Integration Services 的 64 位元考量](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)。<br /><br /> 根據預設，當您選取 [SQL Server Integration Services 封裝] 作業步驟類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會使用系統自動叫用的 dtexec 公用程式版本執行封裝。 系統會根據電腦處理器以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本和電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，叫用 32 位元或 64 位元版本的公用程式。|  
   
      **封裝來源**：SQL Server、SSIS 封裝存放區或檔案系統  
   
@@ -171,7 +171,7 @@ ms.locfileid: "47849518"
     |**組態**|加入 XML 組態檔，以特定組態執行封裝。 使用封裝組態在執行階段更新封裝屬性的值。<br /><br /> 此選項對應至 **dtexec** 的 **/ConfigFile**選項。<br /><br /> 如需了解封裝組態套用的方式，請參閱＜ [Package Configurations](../../integration-services/packages/package-configurations.md)＞。 如需如何建立封裝組態的資訊，請參閱 [建立封裝組態](../../integration-services/packages/create-package-configurations.md)。|  
     |**命令檔**|在另一個檔案中，指定要以 **dtexec**執行的其他選項。<br /><br /> 例如，您可以納入包含 /Dump *errorcode* 選項的檔案，以便在封裝執行過程中發生一個或多個指定的事件時，產生偵錯傾印檔案。<br /><br /> 您可以建立多個檔案，然後使用 [命令檔] 選項指定適當的檔案，藉此以不同的選項組合執行封裝。<br /><br /> [命令檔] 選項對應至 **dtexec** 的 **/CommandFile** 選項。|  
     |**資料來源**|檢視包含在封裝中的連接管理員。 若要修改連接字串，請按一下連接管理員，然後按一下連接字串。<br /><br /> 此選項對應至 **dtexec** 的 **/Connection**選項。|  
-    |**執行選項**|**發生驗證警告時封裝就失敗**<br /> 指出是否將警告訊息視為錯誤。 如果您選取此選項，而在驗證期間發生警告，則封裝會在驗證期間失敗。 此選項對應至 **dtexec** 的 **/WarnAsError**選項。<br /><br /> **驗證封裝但不執行**<br /> 指出在驗證階段之後，是否停止執行封裝 (並不會實際執行封裝)。 此選項對應至 **dtexec** 的 **/Validate**選項。<br /><br /> **覆寫 MacConcurrentExecutables 屬性**<br /> 指定封裝可以同時執行的可執行檔數量。 值為 -1，表示封裝可以執行的最大可執行檔數目，等於執行封裝之電腦上的處理器總數再加 2。 此選項對應至 **dtexec** 的 **/MaxConcurrent**選項。<br /><br /> **啟用封裝檢查點**<br /> 指出在執行封裝期間，封裝是否要使用檢查點。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。<br /><br /> 此選項對應至 **dtexec** 的 **/CheckPointing**選項。<br /><br /> **覆寫重新啟動選項**<br /> 指出是否為封裝上的 **CheckpointUsage** 屬性設定新值。 從 [重新啟動選項] 清單方塊中選取值。<br /><br /> 此選項對應至 **dtexec** 的 **/Restart**選項。<br /><br /> **使用 32 位元執行階段**<br /> 指出是否在已安裝 64 位元版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 64 位元電腦上，使用 32 位元版本的 dtexec 公用程式執行封裝。<br /><br /> 如果您的封裝使用的原生 OLE DB 提供者無法在 64 位元版本中使用，您可能需要使用 32 位元版本的 dtexec 執行封裝。 如需詳細資訊，請參閱 [Integration Services 的 64 位元考量](http://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)。<br /><br /> 根據預設，當您選取 [SQL Server Integration Services 封裝] 作業步驟類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會使用系統自動叫用的 dtexec 公用程式版本執行封裝。 系統會根據電腦處理器以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本和電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，叫用 32 位元或 64 位元版本的公用程式。|  
+    |**執行選項**|**發生驗證警告時封裝就失敗**<br /> 指出是否將警告訊息視為錯誤。 如果您選取此選項，而在驗證期間發生警告，則封裝會在驗證期間失敗。 此選項對應至 **dtexec** 的 **/WarnAsError**選項。<br /><br /> **驗證封裝但不執行**<br /> 指出在驗證階段之後，是否停止執行封裝 (並不會實際執行封裝)。 此選項對應至 **dtexec** 的 **/Validate**選項。<br /><br /> **覆寫 MacConcurrentExecutables 屬性**<br /> 指定封裝可以同時執行的可執行檔數量。 值為 -1，表示封裝可以執行的最大可執行檔數目，等於執行封裝之電腦上的處理器總數再加 2。 此選項對應至 **dtexec** 的 **/MaxConcurrent**選項。<br /><br /> **啟用封裝檢查點**<br /> 指出在執行封裝期間，封裝是否要使用檢查點。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。<br /><br /> 此選項對應至 **dtexec** 的 **/CheckPointing**選項。<br /><br /> **覆寫重新啟動選項**<br /> 指出是否為封裝上的 **CheckpointUsage** 屬性設定新值。 從 [重新啟動選項] 清單方塊中選取值。<br /><br /> 此選項對應至 **dtexec** 的 **/Restart**選項。<br /><br /> **使用 32 位元執行階段**<br /> 指出是否在已安裝 64 位元版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 64 位元電腦上，使用 32 位元版本的 dtexec 公用程式執行封裝。<br /><br /> 如果您的封裝使用的原生 OLE DB 提供者無法在 64 位元版本中使用，您可能需要使用 32 位元版本的 dtexec 執行封裝。 如需詳細資訊，請參閱 [Integration Services 的 64 位元考量](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)。<br /><br /> 根據預設，當您選取 [SQL Server Integration Services 封裝] 作業步驟類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會使用系統自動叫用的 dtexec 公用程式版本執行封裝。 系統會根據電腦處理器以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本和電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，叫用 32 位元或 64 位元版本的公用程式。|  
     |**記錄**|讓記錄提供者與執行封裝產生關聯。<br /><br /> **文字檔的 SSIS 記錄提供者**<br /> 將記錄項目寫入 ASCII 文字檔中<br /><br /> **SQL Server 的 SSIS 記錄提供者**<br /> 將記錄項目寫入 MSDB 資料庫中的 sysssislog 資料表。<br /><br /> **SQL Server Profiler 的 SSIS 記錄提供者**<br /> 寫入您可以使用 SQL Server Profiler 檢視的追蹤檔。<br /><br /> **Windows 事件記錄檔的 SSIS 記錄提供者**<br /> 將記錄項目寫入 Windows 事件記錄檔中的應用程式記錄檔。<br /><br /> **XML 檔案的 SSIS 記錄提供者**<br /> 將記錄檔寫入 XML 檔案。<br /><br /> 對於文字檔、XML 檔案和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler 記錄提供者，請選取包含在封裝中的檔案連接管理員。 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄提供者，請選取包含在封裝中的 OLE DB 連線管理員。<br /><br /> 此選項對應至 **dtexec** 的 **/Logger**選項。|  
     |**設定值**|覆寫封裝屬性設定。 在 [屬性] 方塊的 [屬性路徑] 和 [值] 資料行中輸入值。 在您輸入某個屬性的值之後，[屬性] 對話方塊中就會出現一個空白資料列，讓您輸入其他屬性的值。<br /><br /> 若要從 [屬性] 方塊中移除屬性，請按一下資料列，然後按一下 [移除]。<br /><br /> 您可以執行下列其中一個動作來尋找屬性路徑：<br /><br /> -從 XML 組態檔 (\*.dtsconfig) 檔案複製屬性路徑。 路徑會在檔案的 [組態] 區段中列出，做為 [路徑] 屬性的值。 以下是 MaximumErrorCount 屬性的路徑範例：\Package.Properties[MaximumErrorCount]<br /><br /> -執行 [封裝組態精靈]，並從最後的 [正在完成精靈] 頁面複製屬性路徑。 然後您就可以取消精靈。|  
     |**驗證**|**只執行簽署的封裝**<br /> 指出是否已檢查封裝簽章。 如果此封裝未簽署或是簽章無效，此封裝就會失敗。 此選項對應至 **dtexec** 的 **/VerifySigned**選項。<br /><br /> **確認封裝組建**<br /> 指出是否已對照此選項旁的 [組建] 方塊中所輸入的組建編號，驗證封裝的組建編號。 如果發生不符的情形，將不會執行封裝。 此選項對應至 **dtexec** 的 **/VerifyBuild**選項。<br /><br /> **確認封裝識別碼**<br /> 指出是否已驗證封裝的 GUID，方法是將它與此選項旁的 [封裝識別碼] 方塊中所輸入的封裝識別碼相比較。 此選項對應至 **dtexec** 的 **/VerifyPackageID**選項。<br /><br /> **確認版本識別碼**<br /> 指出是否已驗證封裝的版本 GUID，方法是將它與此選項旁的 [版本識別碼] 方塊中所輸入的版本識別碼相比較。 此選項對應至 **dtexec** 的 **/VerifyVersionID**選項。|  
@@ -195,16 +195,16 @@ ms.locfileid: "47849518"
 
 ## <a name="external-resources"></a>外部資源  
   
--   [網站上的知識庫文件：](http://support.microsoft.com/kb/918760)從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
+-   [網站上的知識庫文件：](https://support.microsoft.com/kb/918760)從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
--   位於 MSDN Library 的影片： [疑難排解：使用 SQL Server Agent 的封裝執行 (SQL Server 影片)](http://go.microsoft.com/fwlink/?LinkId=141772)  
+-   位於 MSDN Library 的影片： [疑難排解：使用 SQL Server Agent 的封裝執行 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=141772)  
   
--   位於 MSDN Library 的影片： [如何：使用 SQL Server Agent 讓 SSIS 封裝執行自動化 (SQL Server 影片)](http://go.microsoft.com/fwlink/?LinkId=141771)  
+-   位於 MSDN Library 的影片： [如何：使用 SQL Server Agent 讓 SSIS 封裝執行自動化 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=141771)  
   
--   位於 mssqltips.com 的技術文件： [Checking SQL Server Agent jobs using Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=165675)(使用 Windows PowerShell 檢查 SQL Server Agent 作業)  
+-   位於 mssqltips.com 的技術文件： [Checking SQL Server Agent jobs using Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=165675)(使用 Windows PowerShell 檢查 SQL Server Agent 作業)  
   
--   mssqltips.com 上的技術文件： [Auto alert for SQL Agent jobs when they are enabled or disabled](http://go.microsoft.com/fwlink/?LinkId=165676)(於 SQL Agent 作業已啟用或停用時自動警示)  
+-   mssqltips.com 上的技術文件： [Auto alert for SQL Agent jobs when they are enabled or disabled](https://go.microsoft.com/fwlink/?LinkId=165676)(於 SQL Agent 作業已啟用或停用時自動警示)  
   
--   mssqltips.com 上的部落格文章： [Configuring SQL Agent Jobs to Write to Windows Event Log](http://go.microsoft.com/fwlink/?LinkId=220745)(將 SQL 代理程式工作設定成寫入 Windows 事件記錄檔)。  
+-   mssqltips.com 上的部落格文章： [Configuring SQL Agent Jobs to Write to Windows Event Log](https://go.microsoft.com/fwlink/?LinkId=220745)(將 SQL 代理程式工作設定成寫入 Windows 事件記錄檔)。  
   
   

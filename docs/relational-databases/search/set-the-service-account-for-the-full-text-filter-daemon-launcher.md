@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a6aa1d3f6417d91c43eb59ea40c773e7b2b2619
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 301d4af9c9c9ddc36b57005d2b5b34ddb51b35aa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715696"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678097"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>設定全文檢索篩選背景程式啟動器的服務帳戶
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ SQL 全文檢索篩選背景程式啟動器服務是與特定 [!INCLUDE[ssNoVers
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務會當做 SQL 全文檢索篩選背景程式啟動器服務用戶端的具名管道伺服器。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動之前已經由另一個處理序建立此具名管道，則會有錯誤記錄到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔和 Windows 事件記錄檔中，而且將無法使用全文檢索搜尋。  請判斷哪一個處理序或應用程式正在嘗試使用相同的具名管道，並停止應用程式。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理服務的如何主題 &#40;SQL Server 組態管理員&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)   
+ [管理服務的如何主題 &#40;SQL Server 組態管理員&#41;](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)   
  [升級全文檢索搜尋](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

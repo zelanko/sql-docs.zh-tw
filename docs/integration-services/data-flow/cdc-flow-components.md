@@ -11,12 +11,12 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78d5b8b15d9a063646e9a68e3a77c08166ffde8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3a062cd23809db8edf5439f252dabcc6d905dad
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828596"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641185"
 ---
 # <a name="cdc-flow-components"></a>CDC 流程元件
   Change Data Capture Components by Attunity for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 可協助 SSIS 開發人員使用 CDC 並且降低 CDC 封裝的複雜性。  
@@ -40,7 +40,7 @@ ms.locfileid: "47828596"
 ## <a name="installation"></a>安裝  
  本節描述 Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]CDC 元件的安裝程序。  
   
- SSIS 的 CDC 元件隨附於 Attunity 所提供適用於 Microsoft SQL Server® 的 Microsoft® Change Data Capture Designer for Oracle 和 Change Data Capture Service for Oracle。 此下載是 SQL Server Feature Pack 的一部分。 從 [SQL Server 2016 Feature Pack 網頁](http://go.microsoft.com/fwlink/?LinkId=746297)下載 Feature Pack 的元件。  
+ SSIS 的 CDC 元件隨附於 Attunity 所提供適用於 Microsoft SQL Server® 的 Microsoft® Change Data Capture Designer for Oracle 和 Change Data Capture Service for Oracle。 此下載是 SQL Server Feature Pack 的一部分。 從 [SQL Server 2016 Feature Pack 網頁](https://go.microsoft.com/fwlink/?LinkId=746297)下載 Feature Pack 的元件。  
   
 ### <a name="version-support"></a>版本支援
 
@@ -205,15 +205,15 @@ ms.locfileid: "47828596"
   
 -   mattmasson.com 上的部落格文章： [CDC in SSIS for SQL Server 2012](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/)。  
   
--   blogs.msdn.com 上有關設定 CDC 服務的部落格文章： [CDC for Oracle in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=247827)SQL Server 2012 中的 Oracle CDC)。  
+-   blogs.msdn.com 上有關設定 CDC 服務的部落格文章： [CDC for Oracle in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=247827)SQL Server 2012 中的 Oracle CDC)。  
   
--   social.technet.microsoft.com 上的技術文章： [安裝 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](http://go.microsoft.com/fwlink/?LinkId=252958)。  
+-   social.technet.microsoft.com 上的技術文章： [安裝 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252958)。  
   
--   social.technet.microsoft.com 上的技術文章： [疑難排解 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity 中的組態問題](http://go.microsoft.com/fwlink/?LinkId=252960)。  
+-   social.technet.microsoft.com 上的技術文章： [疑難排解 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity 中的組態問題](https://go.microsoft.com/fwlink/?LinkId=252960)。  
   
--   social.technet.microsoft.com 上的技術文章： [疑難排解 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity 中的 CDC 執行個體錯誤](http://go.microsoft.com/fwlink/?LinkId=252961)。  
+-   social.technet.microsoft.com 上的技術文章： [疑難排解 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity 中的 CDC 執行個體錯誤](https://go.microsoft.com/fwlink/?LinkId=252961)。  
   
--   technet.microsoft.com 上的影片： [CDC for Oracle Databases using SQL Server Integration Services 2012](http://technet.microsoft.com/sqlserver/jj218898)(使用 SQL Server Integration Services 2012 的 Oracle CDC 資料庫) (SQL Server 影片)。  
+-   technet.microsoft.com 上的影片： [CDC for Oracle Databases using SQL Server Integration Services 2012](https://technet.microsoft.com/sqlserver/jj218898)(使用 SQL Server Integration Services 2012 的 Oracle CDC 資料庫) (SQL Server 影片)。  
   
 ## <a name="see-also"></a>另請參閱  
  [CDC 控制工作](../../integration-services/control-flow/cdc-control-task.md)  

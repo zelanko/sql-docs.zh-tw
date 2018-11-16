@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2556b7c0e6c7bbbc4d25821a54a627263b3a3d1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb50e72c96f69b58dcae48a30cd4b29994ba9e44
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819486"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697756"
 ---
 # <a name="data-type-conversion-database-engine"></a>資料類型轉換 (資料庫引擎)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -97,7 +97,7 @@ CAST ( $157.27 AS VARCHAR(10) )
 |**float**|**Double**|  
 |**real**|**Single**|  
 |**money**、 **smallmoney**|**貨幣**|  
-|**datetime**、**smalldatetime**|**Date**|  
+|**datetime**、**smalldatetime**|**日期**|  
 |設成 NULL 的任何類型|**Variant** 設為 Null|  
   
 所有單一的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值皆會轉換成單一的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 值，但不包括 **binary**、**varbinary** 及 **image** 值。 這些值會在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中轉換成一維的 **Byte()** 陣列。 此陣列的範圍為 **Byte (** 0 到 *length*1 **)**，其中 *length* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**binary**、**varbinary** 或 **image** 值中的位元組數。
@@ -109,7 +109,7 @@ CAST ( $157.27 AS VARCHAR(10) )
 |**Long**、**Integer**、**Byte**、**Boolean**、**Object**|**int**|  
 |**Double**、**Single**|**float**|  
 |**貨幣**|**money**|  
-|**Date**|**datetime**|  
+|**日期**|**datetime**|  
 |字元數不超過 4000 個的 **String**|**varchar**/**nvarchar**|  
 |多於 4000 個字元的 **String**|**text**/**ntext**|  
 |位元組數不超過 8000 的一維 **Byte()** 陣列|**varbinary**|  
@@ -119,6 +119,6 @@ CAST ( $157.27 AS VARCHAR(10) )
 [OLE Automation 預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)
+[COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)
   
   

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b065fd332f45898a728edf7abc2bafb814b6555d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edaebbf5d6b8f0f5e91e1fc4cd2f3a719363053c
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708106"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695707"
 ---
 # <a name="assign-alerts-to-an-operator"></a>指派警示給操作員
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47708106"
   
 -   **若要使用下列項目指派警示給操作員：**  
   
-    [Transact-SQL](#SSMSProcedure)  
+    [SQL Server Management Studio](#SSMSProcedure)  
   
     [Transact-SQL](#TsqlProcedure)  
   
@@ -105,5 +105,5 @@ ms.locfileid: "47708106"
     GO  
     ```  
   
-如需詳細資訊，請參閱 [sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)。  
+如需詳細資訊，請參閱 [sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)。  
   

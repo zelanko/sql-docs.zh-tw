@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5fd1780e5c6450b85ef3805f96d1613064a60138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e05fe32c6c08375ddd1b424ef3401b1bf684822
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605396"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671757"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>檢視及修改複寫安全性設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47605396"
   
 -   **若要檢視及修改複寫安全性設定，請使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47605396"
 ###  <a name="Security"></a> 安全性  
  基於安全性理由，密碼的實際值在複寫預存程序所傳回的結果集中會有遮罩。  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  檢視並修改下列對話方塊中的安全性設定：  
@@ -417,7 +417,7 @@ ms.locfileid: "47605396"
 ##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
   
 > [!IMPORTANT]  
->  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](http://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
+>  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
   
 #### <a name="to-change-all-instances-of-a-password-stored-on-a-replication-server"></a>變更複寫伺服器上儲存的所有密碼執行個體  
   
@@ -434,7 +434,7 @@ ms.locfileid: "47605396"
     -   *password* - 新的密碼值。  
   
         > [!IMPORTANT]  
-        >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 Windows .NET Framework 提供的 [密碼編譯服務](http://go.microsoft.com/fwlink/?LinkId=34733) 。  
+        >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 Windows .NET Framework 提供的 [密碼編譯服務](https://go.microsoft.com/fwlink/?LinkId=34733) 。  
   
         > [!NOTE]  
         >  只有 **sysadmin** 固定伺服器角色的成員，才能呼叫這個方法。  

@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
@@ -18,12 +17,12 @@ caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a79f10ad7eee25932e3ef5753c021d1d6ea3974f
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: d6cba97149bde173d7cac233f3bc5742b710ce5d
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877951"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571377"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ Microsoft Azure Blob 儲存體服務的 SQL Server 整合支援一開始是 SQL 
 - 佈建[執行 SQL Server 的 Azure VM](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/)
 - 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 - 下載 [AdventureWorks2016 範例資料庫](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) \(英文\)。
-- 將使用者帳戶指派給 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 的角色，並授與[改變任何認證](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql)權限。 
+- 將使用者帳戶指派給 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 的角色，並授與 [ALTER ANY CREDENTIAL](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 權限。 
  
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 - 建立預存存取原則和共用存取儲存體
 在本節中，您將使用 [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 指令碼，在 Azure Blob 容器上建立使用預存存取原則的共用存取簽章。  

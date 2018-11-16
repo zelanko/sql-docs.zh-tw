@@ -12,12 +12,12 @@ ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e242cbd5658b743ac813f4c0f03f1bfc74ad62ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3159cc63badeeec786caaf0c50ac383af029dd6b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812836"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674007"
 ---
 # <a name="mssqlserver8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,5 +76,5 @@ DBCC CHECKCATALOG 或 DBCC CHECKDB 在指定之物件的系統中繼資料表中
 不要手動更新系統資料表。 SQL Server 不支援對系統資料庫進行任何手動變更。 如果您更新 SQL Server 資料庫中的系統資料表，則會記錄兩個事件 (事件識別碼 17659 和事件識別碼 3859)。 如需詳細資訊，請參閱知識庫文件 2688307＜當您更新 SQL Server 資料庫中的系統資料表時，會記錄事件識別碼 17659 和事件識別碼 3859＞(機器翻譯)。  
   
 ## <a name="see-also"></a>另請參閱  
-[Event ID 17659 and event ID 3859 are logged when you update system tables in a SQL Server database](http://support.microsoft.com/kb/2688307/EN-US) (當您更新 SQL Server 資料庫中的系統資料表時，會記錄事件識別碼 17659 和事件識別碼 3859)  
+[Event ID 17659 and event ID 3859 are logged when you update system tables in a SQL Server database](https://support.microsoft.com/kb/2688307/EN-US) (當您更新 SQL Server 資料庫中的系統資料表時，會記錄事件識別碼 17659 和事件識別碼 3859)  
   

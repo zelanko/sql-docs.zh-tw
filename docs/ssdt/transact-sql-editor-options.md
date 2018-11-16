@@ -28,12 +28,12 @@ ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de191188dfcd22a75ed42555b432d757f9ac316e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffc6d128bcc1984a0d340e3ec4a39e0f6dccc897
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598917"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667047"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 編輯器選項
 本主題包含 Transact-SQL 編輯器部分選項的相關資訊。 若要設定這些選項，請透過 [工具\選項] 功能表巡覽至 [選項] 對話方塊。  
@@ -50,25 +50,25 @@ ms.locfileid: "47598917"
 |**SET TEXTSIZE**|2,147,483,647 個位元組的預設值表示 SQL Server 將提供完整的資料欄位，直到 text、ntext、nvarchar(max) 及 varchar(max) 資料欄位的上限。 這不會影響 XML 資料類型。 提供較小的數值，即可在有大量數值時，限制傳回的結果數量。 資料行若大於提供的數值，就會被截斷。|  
 |**執行逾時**|指出取消查詢之前要等候的秒數。 值為 0 表示無盡的等候，或沒有逾時。|  
 |**預設會以 SQLCMD 模式開啟新查詢**|選取此核取方塊，即可以 SQLCMD 模式開啟新查詢。 只有在透過 [工具] 功能表開啟此對話方塊時，才可以看見此核取方塊。<br /><br />當您選取此選項時，請注意以下限制：<br /><br />-   資料庫引擎查詢編輯器中的 IntelliSense 會關閉。<br />-   由於查詢編輯器不會從命令列執行，所以您無法傳入命令列參數 (如變數)。<br />-   由於查詢編輯器無法回應作業系統提示，所以您必須非常小心，不要執行互動式陳述式。|  
-|**SET NOCOUNT**|停止在結果中傳回指出 Transact-SQL 陳述式所影響之資料列數的訊息。 如需詳細資訊，請參閱 [SET NOCOUNT](http://go.microsoft.com/fwlink/?LinkID=238731)。|  
-|**SET NOEXEC**|若為 **ON**，則告知 Microsoft® SQL Server™ 編譯 Transact-SQL 陳述式的每個批次，但不要執行它們。 若為 **OFF**，則告知 Microsoft® SQL Server™ 在編譯之後執行所有批次。如需詳細資訊，請參閱 [SET NOEXEC](http://go.microsoft.com/fwlink/?LinkId=238770)。|  
-|**SET PARSEONLY**|檢查每個 Transact-SQL 陳述式的語法，且會在未編譯或執行陳述式的情況下，傳回任何錯誤訊息。 如需詳細資訊，請參閱 [SET PARSEONLY](http://go.microsoft.com/fwlink/?LinkId=238734)。|  
-|**SET CONCAT_NULL_YIELDS_NULL**|控制是否將串連結果視為 Null 或空字串值。如需詳細資訊，請參閱 [SET CONCAT_NULL_YIELDS_NULL](http://go.microsoft.com/fwlink/?LinkId=238733)。|  
-|**SET ARITHABORT**|查詢執行過程中發生溢位或除以零的錯誤時終止查詢。 如需詳細資訊，請參閱  [SET ARITHABORT](http://msdn.microsoft.com/library/aa259212(v=SQL.80).aspx) \(英文\)。|  
-|**SET SHOWPLAN_TEXT**|使 Microsoft® SQL Server™ 不執行 Transact-SQL 陳述式。 相反地，SQL Server 會傳回如何執行這些陳述式的詳細資訊。 如需詳細資訊，請參閱 [SET SHOWPLAN_TEXT](http://go.microsoft.com/fwlink/?LinkID=238737)。|  
+|**SET NOCOUNT**|停止在結果中傳回指出 Transact-SQL 陳述式所影響之資料列數的訊息。 如需詳細資訊，請參閱 [SET NOCOUNT](https://go.microsoft.com/fwlink/?LinkID=238731)。|  
+|**SET NOEXEC**|若為 **ON**，則告知 Microsoft® SQL Server™ 編譯 Transact-SQL 陳述式的每個批次，但不要執行它們。 若為 **OFF**，則告知 Microsoft® SQL Server™ 在編譯之後執行所有批次。如需詳細資訊，請參閱 [SET NOEXEC](https://go.microsoft.com/fwlink/?LinkId=238770)。|  
+|**SET PARSEONLY**|檢查每個 Transact-SQL 陳述式的語法，且會在未編譯或執行陳述式的情況下，傳回任何錯誤訊息。 如需詳細資訊，請參閱 [SET PARSEONLY](https://go.microsoft.com/fwlink/?LinkId=238734)。|  
+|**SET CONCAT_NULL_YIELDS_NULL**|控制是否將串連結果視為 Null 或空字串值。如需詳細資訊，請參閱 [SET CONCAT_NULL_YIELDS_NULL](https://go.microsoft.com/fwlink/?LinkId=238733)。|  
+|**SET ARITHABORT**|查詢執行過程中發生溢位或除以零的錯誤時終止查詢。 如需詳細資訊，請參閱  [SET ARITHABORT](https://msdn.microsoft.com/library/aa259212(v=SQL.80).aspx) \(英文\)。|  
+|**SET SHOWPLAN_TEXT**|使 Microsoft® SQL Server™ 不執行 Transact-SQL 陳述式。 相反地，SQL Server 會傳回如何執行這些陳述式的詳細資訊。 如需詳細資訊，請參閱 [SET SHOWPLAN_TEXT](https://go.microsoft.com/fwlink/?LinkID=238737)。|  
 |**SET STATISTICS TIME**|顯示剖析、編譯和執行每個陳述式所需要的毫秒數。|  
 |**SET STATISTICS IO**|使 Microsoft® SQL Server™ 顯示 Transact-SQL 陳述式所產生之磁碟活動量的相關資訊。|  
-|**SET TRANSACTION ISOLATION LEVEL**|控制連接所發出之所有 Microsoft® SQL Server™ **SELECT** 陳述式的預設交易鎖定行為。 如需詳細資訊，請參閱  [SET TRANSACTION ISOLATION LEVEL](http://go.microsoft.com/fwlink/?LinkId=238730)。|  
-|**SET LOCK_TIMEOUT**|指定陳述式等待鎖定釋出的毫秒數。 如需詳細資訊，請參閱 [SET LOCK_TIMEOUT](http://go.microsoft.com/fwlink/?LinkId=238747)|  
-|**SET QUERY_GOVERNOR_COST_LIMIT**|覆寫目前針對目前連接所設定的值。 如需詳細資訊，請參閱 [SET QUERY_GOVERNOR_COST_LIMIT](http://go.microsoft.com/fwlink/?LinkId=238749)。|  
-|**SET ANSI_DEFAULTS**|控制一組共同指定某些 SQL-92 標準行為的 Microsoft® SQL Server™ 設定。 如需詳細資訊，請參閱 [SET ANSI_DEFAULTS](http://go.microsoft.com/fwlink/?LinkId=238750)。|  
-|**SET QUOTED_IDENTIFIER**|在分隔識別碼和常值字串的引號方面，使 Microsoft® SQL Server™ 遵照 SQL-92 規則。 以雙引號分隔的識別碼可能是 Transact-SQL 的保留關鍵字，或是包含通常識別碼的 Transact-SQL 語法規則不允許的字元。如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER](http://go.microsoft.com/fwlink/?LinkId=238751)。|  
-|**SET ANSI_NULL_DFLT_ON**|當資料庫的 ANSI null default 選項是 false 時，改變工作階段的行為來覆寫新資料行的預設 Null 屬性。 如需詳細資訊，請參閱 [SET ANSI_NULL_DFLT_ON](http://go.microsoft.com/fwlink/?LinkID=238752)。|  
-|**SET IMPLICIT_TRANSACTIONS**|若為 **ON**，則將連接設定為隱含交易模式。 若為 **OFF**，則讓連接返回自動認可交易模式。 如需詳細資訊，請參閱 [SET IMPLICIT_TRANSACTIONS](http://go.microsoft.com/fwlink/?LinkId=238753)。|  
-|**SET CURSOR_CLOSE_ON_COMMIT**|控制是否要在認可交易時關閉資料指標。 如需詳細資訊，請參閱 [SET CURSOR_CLOSE_ON_COMMIT](http://go.microsoft.com/fwlink/?LinkId=238754)。|  
-|**SET ANSI_PADDING**|控制資料行如何儲存比資料行的定義大小還短的值，以及如何儲存 **char**、 **varchar**、 **binary**和 **varbinary** 資料含有尾端空格的值。 如需詳細資訊，請參閱 [SET ANSI_PADDING](http://go.microsoft.com/fwlink/?LinkId=238755)。|  
-|**SET ANSI_WARNINGS**|指定數個錯誤狀況的 SQL-92 標準行為。如需詳細資訊，請參閱 [SET ANSI_WARNINGS](http://go.microsoft.com/fwlink/?LinkId=238758)。|  
-|**SET ANSI_NULLS**|等於 (**=**) 和不等於 (**<>**) 比較運算子搭配 Null 值一起使用時，指定符合 SQL-92 規範的行為。如需詳細資訊，請參閱 [SET ANSI_NULLS](http://go.microsoft.com/fwlink/?LinkId=238759)。|  
+|**SET TRANSACTION ISOLATION LEVEL**|控制連接所發出之所有 Microsoft® SQL Server™ **SELECT** 陳述式的預設交易鎖定行為。 如需詳細資訊，請參閱  [SET TRANSACTION ISOLATION LEVEL](https://go.microsoft.com/fwlink/?LinkId=238730)。|  
+|**SET LOCK_TIMEOUT**|指定陳述式等待鎖定釋出的毫秒數。 如需詳細資訊，請參閱 [SET LOCK_TIMEOUT](https://go.microsoft.com/fwlink/?LinkId=238747)|  
+|**SET QUERY_GOVERNOR_COST_LIMIT**|覆寫目前針對目前連接所設定的值。 如需詳細資訊，請參閱 [SET QUERY_GOVERNOR_COST_LIMIT](https://go.microsoft.com/fwlink/?LinkId=238749)。|  
+|**SET ANSI_DEFAULTS**|控制一組共同指定某些 SQL-92 標準行為的 Microsoft® SQL Server™ 設定。 如需詳細資訊，請參閱 [SET ANSI_DEFAULTS](https://go.microsoft.com/fwlink/?LinkId=238750)。|  
+|**SET QUOTED_IDENTIFIER**|在分隔識別碼和常值字串的引號方面，使 Microsoft® SQL Server™ 遵照 SQL-92 規則。 以雙引號分隔的識別碼可能是 Transact-SQL 的保留關鍵字，或是包含通常識別碼的 Transact-SQL 語法規則不允許的字元。如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER](https://go.microsoft.com/fwlink/?LinkId=238751)。|  
+|**SET ANSI_NULL_DFLT_ON**|當資料庫的 ANSI null default 選項是 false 時，改變工作階段的行為來覆寫新資料行的預設 Null 屬性。 如需詳細資訊，請參閱 [SET ANSI_NULL_DFLT_ON](https://go.microsoft.com/fwlink/?LinkID=238752)。|  
+|**SET IMPLICIT_TRANSACTIONS**|若為 **ON**，則將連接設定為隱含交易模式。 若為 **OFF**，則讓連接返回自動認可交易模式。 如需詳細資訊，請參閱 [SET IMPLICIT_TRANSACTIONS](https://go.microsoft.com/fwlink/?LinkId=238753)。|  
+|**SET CURSOR_CLOSE_ON_COMMIT**|控制是否要在認可交易時關閉資料指標。 如需詳細資訊，請參閱 [SET CURSOR_CLOSE_ON_COMMIT](https://go.microsoft.com/fwlink/?LinkId=238754)。|  
+|**SET ANSI_PADDING**|控制資料行如何儲存比資料行的定義大小還短的值，以及如何儲存 **char**、 **varchar**、 **binary**和 **varbinary** 資料含有尾端空格的值。 如需詳細資訊，請參閱 [SET ANSI_PADDING](https://go.microsoft.com/fwlink/?LinkId=238755)。|  
+|**SET ANSI_WARNINGS**|指定數個錯誤狀況的 SQL-92 標準行為。如需詳細資訊，請參閱 [SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758)。|  
+|**SET ANSI_NULLS**|等於 (**=**) 和不等於 (**<>**) 比較運算子搭配 Null 值一起使用時，指定符合 SQL-92 規範的行為。如需詳細資訊，請參閱 [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)。|  
   
 ## <a name="QueryResults"></a>查詢結果  
   

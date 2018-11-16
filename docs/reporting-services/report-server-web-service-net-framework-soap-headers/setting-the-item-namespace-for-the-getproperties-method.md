@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 661930ac70d1fdf657547f816f64fca1ed888213
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86d01110e1d1e0146e34a3d2f5c3afe2434f48bd
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779866"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812841"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>設定 GetProperties 方法的項目命名空間
   您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 <xref:ReportService2010.ItemNamespaceHeader> SOAP 標頭，根據兩個不同的項目識別碼來擷取項目屬性：項目的完整路徑或是項目的識別碼。  
@@ -37,7 +37,7 @@ Class Sample
    Sub Main()  
       Dim rs As New ReportingService2010()  
       rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
-      rs.Url = "http://<Server Name>/reportserver/ReportService2010.asmx"  
+      rs.Url = "https://<Server Name>/reportserver/ReportService2010.asmx"  
   
       Dim items() As CatalogItem  
   
@@ -80,7 +80,7 @@ class Sample
    {  
    ReportingService2010 rs = new ReportingService2010();  
       rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
-      rs.Url = "http://<Server Name>/reportserver/ReportService2010.asmx";  
+      rs.Url = "https://<Server Name>/reportserver/ReportService2010.asmx";  
   
       CatalogItem[] items;  
   

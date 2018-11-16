@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: add55d50f0af680a7be1f220149ea851d684ea2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9fda704e778e684aa9b53a073e9540239ed5f975
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734496"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674987"
 ---
 # <a name="how-for-json-escapes-special-characters-and-control-characters-sql-server"></a>FOR JSON 如何逸出特殊字元和控制字元 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47734496"
   本主題描述 SQL Server **SELECT** 陳述式的 **FOR JSON** 子句如何逸出特殊字元，並在 JSON 輸出中代表控制字元。  
 
 > [!IMPORTANT]
-> 此頁面描述 Microsoft SQL Server 中的內建 JSON 支援。 如需 JSON 中逸出和編碼的一般資訊，請參閱 JSON RFC 的第 2.5 節 - [http://www.ietf.org/rfc/rfc4627.txt](http://www.ietf.org/rfc/rfc4627.txt)。
+> 此頁面描述 Microsoft SQL Server 中的內建 JSON 支援。 如需 JSON 中逸出和編碼的一般資訊，請參閱 JSON RFC 的第 2.5 節 - [https://www.ietf.org/rfc/rfc4627.txt](https://www.ietf.org/rfc/rfc4627.txt)。
 
 ## <a name="escaping-of-special-characters"></a>逸出特殊字元  
 如果來源資料包含特殊字元，**FOR JSON** 子句會以 `\` 逸出 JSON 輸出中的這些字元，如下表所示。 在屬性名稱和它們的值中都會發生這項逸出。  
@@ -82,7 +82,7 @@ FOR JSON PATH
   
 ### <a name="microsoft-blog-posts"></a>Microsoft 部落格文章  
   
-如需特定的解決方案、使用案例和建議，請參閱這些[部落格文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)，了解 SQL Server 和 Azure SQL Database 中的內建 JSON 支援。  
+如需特定的解決方案、使用案例和建議，請參閱這些[部落格文章](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)，了解 SQL Server 和 Azure SQL Database 中的內建 JSON 支援。  
 
 ### <a name="microsoft-videos"></a>Microsoft 影片
 

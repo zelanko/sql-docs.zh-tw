@@ -29,12 +29,12 @@ ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2ec65ffa5ee5df74d48de5280fedb825da8607aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8de9b27a58d277191a4d40da6b34dbcbbd43e497
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598157"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51655637"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>新增和移除 Access 資料庫檔案 (AccessToSQL)
 若要將 Access 資料移至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您必須將一或多個 Access 資料庫加入 SSMA 專案。 這些資料庫必須是 Access 97 或更新版本。 如果您的資料庫從舊版的存取權，您必須將資料庫轉換為較新版本。 您可以開啟和儲存在 Access 97 或更新版本的資料庫，才將它們新增至 SSMA。  
@@ -129,7 +129,7 @@ Access 資料庫加入至專案之後，專案中繼資料會出現在存取中�
 2.  以滑鼠右鍵按一下資料庫，然後按**Remove Database**。  
   
 ## <a name="next-step"></a>下一個步驟  
-移轉程序的下一個步驟是[連接到 SQL Server](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)。  
+移轉程序的下一個步驟是[連接到 SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)。  
   
 ## <a name="see-also"></a>另請參閱  
 [將 Access 資料庫移轉至 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

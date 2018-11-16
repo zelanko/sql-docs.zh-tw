@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f8d99eed452b9e9fc1e0c5c808eab95c17227bc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aed644bec059dadff338711634c6ec7d252498cd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659566"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701846"
 ---
 # <a name="create-a-wmi-event-alert"></a>建立 WMI 事件警示
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47659566"
   
 -   **若要使用下列項目建立 WMI 事件警示：**  
   
-    [Transact-SQL](#SSMSProcedure)  
+    [SQL Server Management Studio](#SSMSProcedure)  
   
     [Transact-SQL](#TsqlProcedure)  
   
@@ -109,5 +109,5 @@ ms.locfileid: "47659566"
     GO  
     ```  
   
-如需詳細資訊，請參閱 [sp_add_alert (Transact-SQL)](http://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09)。  
+如需詳細資訊，請參閱 [sp_add_alert (Transact-SQL)](https://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09)。  
   

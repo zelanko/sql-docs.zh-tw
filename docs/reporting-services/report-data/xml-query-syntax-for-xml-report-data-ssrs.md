@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d0c2b65f24b76f875b8fa11896cc70f62bb0902b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60488eef28194d8ffdd88dd37897011a9e6422b4
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668756"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812671"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML 報表資料的 XML 查詢語法 (SSRS)
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可以建立 XML 資料來源的資料集。 當您定義資料來源之後，要建立此資料集的查詢。 根據資料來源所指向的 XML 資料類型而定，您可藉由加入 XML **查詢** 或元素路徑來建立資料集查詢。 XML **查詢** 會以 **\<Query>** 標記作為開頭，而且會包含因資料來源而異的命名空間和 XML 項目。 元素路徑與命名空間無關，而且會指定當搭配類似 XPath 語法使用基礎 XML 資料時，要使用哪些節點和節點屬性。 如需項目路徑的詳細資訊，請參閱 [XML 報表資料的項目路徑語法 &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)。  
@@ -54,23 +54,23 @@ ms.locfileid: "47668756"
   
 |XML 資料來源|查詢範例|  
 |---------------------|-------------------|  
-|<xref:ReportService2010.ReportingService2010.ListChildren%2A> 方法中的 Web 服務 XML 資料。|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
-|SoapAction 中的 Web 服務 XML 資料。|`<Query xmlns=namespace>`<br /><br /> `<SoapAction>http://schemas/microsoft.com/sqlserver/2005/03/23/reporting/reportingservices/ListChildren</SoapAction>`<br /><br /> `</Query>`|  
-|使用命名空間的 XML 文件或內嵌 XML 資料。<br /><br /> 指定元素路徑之命名空間的查詢元素。|`<Query xmlns:es="http://schemas.microsoft.com/StandardSchemas/ExtendedSales">`<br /><br /> `<ElementPath>/Customers/Customer/Orders/Order/es:LineItems/es:LineItem</ElementPath>`<br /><br /> `</Query>`|  
+|<xref:ReportService2010.ReportingService2010.ListChildren%2A> 方法中的 Web 服務 XML 資料。|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="https://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
+|SoapAction 中的 Web 服務 XML 資料。|`<Query xmlns=namespace>`<br /><br /> `<SoapAction>https://schemas/microsoft.com/sqlserver/2005/03/23/reporting/reportingservices/ListChildren</SoapAction>`<br /><br /> `</Query>`|  
+|使用命名空間的 XML 文件或內嵌 XML 資料。<br /><br /> 指定元素路徑之命名空間的查詢元素。|`<Query xmlns:es="https://schemas.microsoft.com/StandardSchemas/ExtendedSales">`<br /><br /> `<ElementPath>/Customers/Customer/Orders/Order/es:LineItems/es:LineItem</ElementPath>`<br /><br /> `</Query>`|  
 |內嵌 XML 文件。|`<Query>`<br /><br /> `<XmlData>`<br /><br /> `<Customers>`<br /><br /> `<Customer ID="1">Bobby</Customer>`<br /><br /> `</Customers>`<br /><br /> `</XmlData>`<br /><br /> `<ElementPath>Customer {@}</ElementPath>`<br /><br /> `</Query>`|  
 |使用預設值的 XML 文件。|*沒有查詢*。<br /><br /> 元素路徑衍生自 XML 文件本身，而且與命名空間無關。|  
   
 > [!NOTE]  
->  第一個 Web 服務範例會使用 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法中的 Web 服務 XML 資料。 若要執行這個查詢，您必須建立新的資料來源，然後設定 `http://localhost/reportserver/reportservice2006.asmx` 的連接字串。 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法會採用兩個參數︰**Item** 和 **Recursive**。 將 **Item** 的預設值設定為 **/** ，而 **Recursive** 的預設值設定為 **1**。  
+>  第一個 Web 服務範例會使用 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法中的 Web 服務 XML 資料。 若要執行這個查詢，您必須建立新的資料來源，然後設定 `https://localhost/reportserver/reportservice2006.asmx` 的連接字串。 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 方法會採用兩個參數︰**Item** 和 **Recursive**。 將 **Item** 的預設值設定為 **/** ，而 **Recursive** 的預設值設定為 **1**。  
   
 ## <a name="specifying-namespaces"></a>指定命名空間  
  使用 XML **查詢** 元素可指定用於資料來源中 XML 資料的命名空間。 下列 XML 查詢會使用命名空間 **sales**。 **和** 的 XML `sales:LineItems` ElementPath `sales:LineItem` 節點會使用命名空間 **sales**。  
   
 ```  
 <Query xmlns:sales=  
-"http://schemas.microsoft.com/StandardSchemas/ExtendedSales">  
+"https://schemas.microsoft.com/StandardSchemas/ExtendedSales">  
    <SoapAction>  
-      http://schemas.microsoft.com/SalesWebService/ListOrders   
+      https://schemas.microsoft.com/SalesWebService/ListOrders   
    </SoapAction>  
    <ElementPath>  
       Customers/Customer/Orders/Order/sales:LineItems/sales:LineItem  
@@ -85,14 +85,14 @@ ms.locfileid: "47668756"
   
 |XML 查詢元素|在資料集中產生欄位|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|A 值：`http://schemas.microsoft.com/...`<br /><br /> B 值：`http://schemas.microsoft.com/...`<br /><br /> C 值：`http://schemas.microsoft.com/...`|  
-|`<xmldp:Query xmlns:xmldp="http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="http://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|D 值<br /><br /> E 值<br /><br /> F 值|  
+|\<Query/>|A 值：`https://schemas.microsoft.com/...`<br /><br /> B 值：`https://schemas.microsoft.com/...`<br /><br /> C 值：`https://schemas.microsoft.com/...`|  
+|`<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|D 值<br /><br /> E 值<br /><br /> F 值|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML 文件：DPNamespace.xml  
- 您可以複製這段 XML，並將它儲存為報表設計師可以使用的 URL，以便當做 XML 資料來源使用；例如 http://localhost/DPNamespace.xml。  
+ 您可以複製這段 XML，並將它儲存為報表設計師可以使用的 URL，以便當做 XML 資料來源使用；例如 https://localhost/DPNamespace.xml。  
   
 ```  
-<Root xmlns:ns="http://schemas.microsoft.com/...">  
+<Root xmlns:ns="https://schemas.microsoft.com/...">  
    <ns:Element1>  
       <Node>Value A</Node>  
       <Node>Value B</Node>  

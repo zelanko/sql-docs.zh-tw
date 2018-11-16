@@ -5,8 +5,7 @@ ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
@@ -16,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cd0d739f35f9f6cdcf03c525c41f0d2fb70d131
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dadd28224a7f360ee90767861025b0bdebc7cbe5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623826"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669397"
 ---
 # <a name="memory-management-architecture-guide"></a>記憶體管理架構指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +68,7 @@ ms.locfileid: "47623826"
 <sup>6</sup> 如果(在具有 AWE 支援的 32 位元上或是本身的 64 位元上) 授與鎖定記憶體中的分頁權限 (LPIM)，我們建議另外設定最大伺服器記憶體。 如需 LPIM 的詳細資訊，請參閱[伺服器記憶體伺服器設定選項](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)
 
 > [!NOTE]
-> 舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以在 32 位元作業系統上執行。 在 32 位元作業系統上存取超過 4 GB 的記憶體，會需要 Address Windowing Extensions (AWE) 來管理記憶體。 若 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是在 64 位元作業系統上執行，就沒有這項需要。 如需有關 AWE 的詳細資訊，請參閱 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 文件中的[處理序位址空間](http://msdn.microsoft.com/library/ms189334.aspx)以及[管理大型資料庫的記憶體](http://msdn.microsoft.com/library/ms191481.aspx)。   
+> 舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以在 32 位元作業系統上執行。 在 32 位元作業系統上存取超過 4 GB 的記憶體，會需要 Address Windowing Extensions (AWE) 來管理記憶體。 若 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是在 64 位元作業系統上執行，就沒有這項需要。 如需有關 AWE 的詳細資訊，請參閱 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 文件中的[處理序位址空間](https://msdn.microsoft.com/library/ms189334.aspx)以及[管理大型資料庫的記憶體](https://msdn.microsoft.com/library/ms191481.aspx)。   
 
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始對記憶體管理進行的變更
 舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 及 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) 中，使用了五種不同的機制配置記憶體：
@@ -188,7 +187,7 @@ FROM sys.dm_os_process_memory;
 
 **網路封包大小**是表格式資料配置 (TDS) 封包的大小，用於在應用程式和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫引擎之間進行通訊。 預設封包大小是 4 KB，由 network packet size 組態選項所控制。
 
-啟用多個使用中結果集 (MARS) 時，使用者連接大約是 (3 + 3 \* num_logical_connections) \* network_packet_size + 94 KB
+啟用多個使用中結果集 (MARS) 時，使用者連接大約是 (3 + 3 \*num_logical_connections)\* network_packet_size + 94 KB
 
 ## <a name="effects-of-min-memory-per-query"></a>min memory per query 的作用
 *min memory per query* 設定選項會建立為執行查詢所配置的最小記憶體數量 (以 KB 為單位)。 這也稱為最小記憶體授與。 所有查詢都必須等到可取得要求的最小記憶體、執行可以開始前，或超過查詢等候伺服器設定選項中指定的值為止。 在此情況下累積的等候類型為 RESOURCE_SEMAPHORE。

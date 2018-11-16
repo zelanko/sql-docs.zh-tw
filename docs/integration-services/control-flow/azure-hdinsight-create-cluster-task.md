@@ -14,12 +14,12 @@ ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1635771d132d12ac078975f506cd51ac7076093
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4687c4508bea34e9435bbfe6d33ad47b1c6a9a45
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787827"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638095"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight 建立叢集工作
 [Azure HDInsight 建立叢集工作] 可讓 SSIS 套件在指定的 Azure 訂用帳戶和資源群組中建立 Azure HDInsight 叢集。
@@ -28,7 +28,7 @@ ms.locfileid: "47787827"
   
 > [!NOTE]  
 > - 建立新的 HDInsight 叢集可能需要 10~20 分鐘。  
-> - 建立與執行 Azure HDInsight 叢集需要支付相關成本。 如需詳細資料，請參閱 [HDInsight 價格](http://azure.microsoft.com/pricing/details/hdinsight/)。  
+> - 建立與執行 Azure HDInsight 叢集需要支付相關成本。 如需詳細資料，請參閱 [HDInsight 價格](https://azure.microsoft.com/pricing/details/hdinsight/)。  
   
 若要加入 [Azure HDInsight Create Cluster Task (Azure HDInsight 建立叢集工作)]，請將其拖放至 SSIS 設計師，並按兩下或在其上按一下滑鼠右鍵，然後按一下 [編輯]，即可看到以下 [Azure HDInsight Create Cluster Task Editor (Azure HDInsight 建立叢集工作編輯器)] 對話方塊。  
   

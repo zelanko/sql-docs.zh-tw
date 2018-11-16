@@ -14,12 +14,12 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57ceb8a68ec89d1bb0f5e78109445719d84d731a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff152320679a4a315da2630ecb426ce9ba2cc7b3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804656"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641145"
 ---
 # <a name="change-data-capture-ssis"></a>異動資料擷取 (SSIS)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，異動資料擷取會針對將累加式載入從來源資料表有效執行到資料超市和資料倉儲的挑戰，提供有效的方案。  
@@ -96,9 +96,9 @@ ms.locfileid: "47804656"
 ## <a name="samples-of-change-data-capture-packages"></a>異動資料擷取封裝的範例  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供兩個範例，示範如何在封裝中使用異動資料擷取。 如需詳細資訊，請參閱下列主題：  
   
--   [讀我檔案_指定之間隔的異動資料擷取封裝範例](http://go.microsoft.com/fwlink/?LinkId=133507)  
+-   [讀我檔案_指定之間隔的異動資料擷取封裝範例](https://go.microsoft.com/fwlink/?LinkId=133507)  
   
--   [讀我檔案_自上次要求後的異動資料擷取封裝範例](http://go.microsoft.com/fwlink/?LinkId=133508)  
+-   [讀我檔案_自上次要求後的異動資料擷取封裝範例](https://go.microsoft.com/fwlink/?LinkId=133508)  
   
 ## <a name="related-tasks"></a>相關工作  
   
@@ -119,6 +119,6 @@ ms.locfileid: "47804656"
 -   [執行多個資料表的累加式載入](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
 ## <a name="related-content"></a>相關內容  
- sqlblog.com 上的部落格文章： [SSIS Design Pattern – Incremental Load](http://go.microsoft.com/fwlink/?LinkId=217679)(SSIS 設計模式 - 累加式載入)  
+ sqlblog.com 上的部落格文章： [SSIS Design Pattern – Incremental Load](https://go.microsoft.com/fwlink/?LinkId=217679)(SSIS 設計模式 - 累加式載入)  
   
   

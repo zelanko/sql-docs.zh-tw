@@ -19,12 +19,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d87ea7d4e61f2da561728ce66e797b32f2fd17b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddb4cc58fed64ddb755e797095d72a31b85885a0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785016"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642005"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 變數
   變數會儲存 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝及其容器、工作和事件處理常式在執行階段可使用的值。 「指令碼」工作和「指令碼」元件中的指令碼也可以使用變數。 將工作和容器排序成工作流程的優先順序條件約束，可在其條件約束定義含有運算式時使用變數。  
@@ -46,7 +46,7 @@ ms.locfileid: "47785016"
 ## <a name="system-and-user-defined-variables"></a>系統及使用者定義變數  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支援兩種類型的變數：使用者自訂變數和系統變數。 使用者自訂變數由封裝開發人員定義，而系統變數則由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]定義。 您可以根據封裝需要建立許多使用者自訂變數，但無法建立其他系統變數。  
   
- 所有的變數 (系統變數和使用者自訂變數) 都可在「執行 SQL」工作用來將變數對應至 SQL 陳述式之參數的參數繫結中使用。 如需詳細資訊，請參閱[執行 SQL 工作](../integration-services/control-flow/execute-sql-task.md)和[執行 SQL 工作中的參數和傳回碼](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)。  
+ 所有的變數 (系統變數和使用者自訂變數) 都可在「執行 SQL」工作用來將變數對應至 SQL 陳述式之參數的參數繫結中使用。 如需詳細資訊，請參閱[執行 SQL 工作](../integration-services/control-flow/execute-sql-task.md)和[執行 SQL 工作中的參數和傳回碼](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)。  
   
 > [!NOTE]  
 >  使用者自訂變數和系統變數的名稱會區分大小寫。  
@@ -75,7 +75,7 @@ ms.locfileid: "47785016"
   
  針對不同的容器類型可使用一組不同的系統變數。 如需封裝及其元素所使用之系統變數的詳細資訊，請參閱 [系統變數](../integration-services/system-variables.md)。  
   
- 如需變數之實際使用狀況的詳細資訊，請參閱 [在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 如需變數之實際使用狀況的詳細資訊，請參閱 [在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
 ## <a name="properties-of-variables"></a>變數屬性  
  您可以透過在 [變數] 視窗或 [屬性] 視窗中設定下列屬性來設定使用者定義變數。 但某些屬性只能在 [屬性] 視窗中設定。  
@@ -96,7 +96,7 @@ ms.locfileid: "47785016"
  指定變數名稱。  
   
  **命名空間**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供兩個命名空間：**User** 和 **System**。 依預設，自訂變數屬於 **User** 命名空間，而系統變數則屬於 **System** 命名空間。 您可以為使用者定義變數建立其他命名空間，並變更 **User** 命名空間的名稱，但是您無法變更 **System** 命名空間的名稱，也無法將變數加入 **System** 命名空間或將系統變數指派給其他命名空間。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供兩個命名空間： **User** 和 **System**。 依預設，自訂變數屬於 **User** 命名空間，而系統變數則屬於 **System** 命名空間。 您可以為使用者定義變數建立其他命名空間，並變更 **User** 命名空間的名稱，但是您無法變更 **System** 命名空間的名稱，也無法將變數加入 **System** 命名空間或將系統變數指派給其他命名空間。  
   
 **RaiseChangedEvent**  
  當此屬性設為 [True] 時，**OnVariableValueChanged** 事件會在變數變更值時產生。  
@@ -140,7 +140,7 @@ ms.locfileid: "47785016"
 
 變數具有設定變數值和該值之資料類型的選項。 兩個屬性必須相容：例如，同時使用字串值和整數資料類型是無效的。  
   
- 如果變數設定為做為運算式評估，則必須提供運算式。 在執行階段會評估運算式，且會將變數值設定為評估結果。 例如，如果變數使用運算式 `DATEPART("month", GETDATE())` ，則變數的值將為目前日期所在之月份數。 運算式必須是使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 運算式文法語法的有效運算式。 當運算式搭配變數使用時，運算式可以使用運算式文法提供的常值、運算子和函數，但是運算式無法參考封裝中資料流程的資料行。 運算式的最大長度為 4000 個字元。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../integration-services/expressions/integration-services-ssis-expressions.md)。  
+ 如果變數設定為做為運算式評估，則必須提供運算式。 在執行階段會評估運算式，且會將變數值設定為評估結果。 例如，如果變數使用運算式 `DATEPART("month", GETDATE())` ，則變數的值將為目前日期所在之月份數。 運算式必須是使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 運算式文法語法的有效運算式。 當運算式搭配變數使用時，運算式可以使用運算式文法提供的常值、運算子和函數，但是運算式無法參考封裝中資料流程的資料行。 運算式的最大長度為 4000 個字元。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../integration-services/expressions/integration-services-ssis-expressions.md)為止。  
   
 **ValueType**    
  > [!NOTE]  
@@ -155,11 +155,11 @@ ms.locfileid: "47785016"
   
  **資料流程運算式** ：使用變數在運算式中提供值，「衍生的資料行」和「條件式分割」轉換會使用這些運算式擴展資料行，或將資料列導向不同的轉換輸出。 例如， `@varSalutation + LastName`運算式會串連 `VarSalutation` 變數和 `LastName` 資料行中的值。 `Income < @HighIncome` 運算式會將 `Income` 資料行中、值小於 `HighIncome` 變數中的值的資料列導向輸出。 如需詳細資訊，請參閱[衍生的資料行轉換](../integration-services/data-flow/transformations/derived-column-transformation.md)、[條件式分割轉換](../integration-services/data-flow/transformations/conditional-split-transformation.md) 和 [Integration Services &#40;SSIS&#41; 運算式](../integration-services/expressions/integration-services-ssis-expressions.md)。  
   
- **優先順序條件約束運算式**：提供要在優先順序條件約中使用的值，決定受條件約束的可執行檔是否執行。 這些運算式可以和執行結果 (成功、失敗、完成) 一起使用，或取代執行結果。 例如，如果 `@varMax > @varMin`運算式評估為 **true**，可執行檔就會執行。 如需詳細資訊，請參閱[將運算式加入優先順序條件約束](http://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)。  
+ **優先順序條件約束運算式**：提供要在優先順序條件約中使用的值，決定受條件約束的可執行檔是否執行。 這些運算式可以和執行結果 (成功、失敗、完成) 一起使用，或取代執行結果。 例如，如果 `@varMax > @varMin`運算式評估為 **true**，可執行檔就會執行。 如需詳細資訊，請參閱[將運算式加入優先順序條件約束](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)。  
   
- **參數和傳回碼** ：提供值給輸入參數，或儲存輸出參數和傳回碼的值。 您可以將變數對應到參數和傳回值來完成這個動作。 例如，如果您將 `varProductId` 變數設為 23 並執行 `SELECT * from Production.Product WHERE ProductID = ?`SQL 陳述式，查詢就會擷取 `ProductID` 為 23 的產品。 如需詳細資訊，請參閱 [執行 SQL 工作](../integration-services/control-flow/execute-sql-task.md) 和 [執行 SQL 工作中的參數和傳回碼](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)。  
+ **參數和傳回碼** ：提供值給輸入參數，或儲存輸出參數和傳回碼的值。 您可以將變數對應到參數和傳回值來完成這個動作。 例如，如果您將 `varProductId` 變數設為 23 並執行 `SELECT * from Production.Product WHERE ProductID = ?`SQL 陳述式，查詢就會擷取 `ProductID` 為 23 的產品。 如需詳細資訊，請參閱 [執行 SQL 工作](../integration-services/control-flow/execute-sql-task.md) 和 [執行 SQL 工作中的參數和傳回碼](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)。  
   
- **For 迴圈運算式** ：提供要在「For 迴圈」的初始化、評估和指派運算式中使用的值。 例如，如果 `varCount` 變數為 2 且 `varMaxCount` 為 10，初始化運算式為 `@varCount`，評估運算式為  `@varCount < @varMaxCount`且指派運算式為 `@varCount =@varCount +1`，則迴圈就會重複 8 次。 如需詳細資訊，請參閱 [For 迴圈容器](../integration-services/control-flow/for-loop-container.md)。  
+ **For 迴圈運算式** ：提供要在「For 迴圈」的初始化、評估和指派運算式中使用的值。 例如，如果 `varCount` 變數為 2 且 `varMaxCount` 為 10，初始化運算式為 `@varCount`，評估運算式為  `@varCount < @varMaxCount`且指派運算式為 `@varCount =@varCount +1`，則迴圈就會重複 8 次。 如需詳細資訊，請參閱 [For 迴圈容器](../integration-services/control-flow/for-loop-container.md)為止。  
   
  **父封裝變數組態** ：將值從父封裝傳遞到子封裝。 子封裝可以使用父封裝變數組態存取父封裝中的變數。 例如，如果子封裝必須使用和父封裝相同的日期，子封裝就可以定義父封裝變數組態，指定由父封裝中之 GETDATE 函數設定的變數。 如需詳細資訊，請參閱 [執行封裝工作](../integration-services/control-flow/execute-package-task.md) 和 [封裝組態](../integration-services/packages/package-configurations.md)。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "47785016"
   
 6.  選擇性地按一下**方格選項**圖示，在 [變數方格選項] 對話方塊中選取要顯示的其他資料行，然後按一下 [確定]。  
   
-7.  選擇性地設定變數屬性。 如需詳細資訊，請參閱 [設定使用者定義變數的屬性](http://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)。  
+7.  選擇性地設定變數屬性。 如需詳細資訊，請參閱 [設定使用者定義變數的屬性](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)。  
   
 8.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
 

@@ -11,12 +11,12 @@ ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 49912f010400e81fb120c5f8abd0dbc94718b999
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1bd77fa65a3667bdc06934386b293783270bc1a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773576"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641195"
 ---
 # <a name="sap-bw-source"></a>SAP BW 來源
   SAP BW 來源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的來源元件。 因此，SAP BW 來源會從 SAP Netweaver BW 版本 7 系統中擷取資料，並將這項資料提供給 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中的資料流程。  
@@ -115,7 +115,7 @@ ms.locfileid: "47773576"
   
  如果您不知道設定來源的所有必要值，可能必須詢問 SAP 系統管理員。  
   
- 如需示範如何設定及使用 SAP BW 連接管理員、來源和目的地的逐步解說，請參閱＜ [搭配 SAP BI 7.0 使用 SQL Server 2008 Integration Services](http://go.microsoft.com/fwlink/?LinkID=137090)＞技術白皮書。 這份技術白皮書也會示範如何設定 SAP BW 中的必要物件。  
+ 如需示範如何設定及使用 SAP BW 連接管理員、來源和目的地的逐步解說，請參閱＜ [搭配 SAP BI 7.0 使用 SQL Server 2008 Integration Services](https://go.microsoft.com/fwlink/?LinkID=137090)＞技術白皮書。 這份技術白皮書也會示範如何設定 SAP BW 中的必要物件。  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>使用 SSIS 設計師設定來源  
  如需有關可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之 SAP BW 來源屬性的詳細資訊，請按下列其中一個主題：  

@@ -30,12 +30,12 @@ ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8137ed37cdbe3bec62e8f7e5a900ade9513894fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735182"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666197"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>轉換 Access 資料庫物件 (AccessToSQL)
 在您加入 Access 資料庫並連接到後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure、 SSMA 顯示中繼資料存取和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫物件。 您可以現在選取 存取的資料庫物件，然後將轉換將結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 結構描述。  
@@ -49,7 +49,7 @@ ms.locfileid: "47735182"
 在轉換期間 SSMA 會列印到輸出 窗格中，以及錯誤、 警告和錯誤清單 窗格來參考用訊息的狀態。 您可以使用此資訊來判斷是否需要修改您的 Access 資料庫或您的轉換程序，以便取得所需的轉換結果。 您也可以使用中的資訊[準備移轉的 Access 資料庫](preparing-access-databases-for-migration-accesstosql.md)主題，以判斷將並不會轉換。  
   
 ## <a name="setting-conversion-options"></a>設定轉換選項  
-在轉換前的物件，檢閱中的專案轉換選項**專案設定** 對話方塊。 藉由使用這個對話方塊中，您可以設定如何 SSMA 轉換索引備忘資料行、 主索引鍵、 外部索引鍵條件約束、 時間戳記和無索引的資料表。 如需詳細資訊，請參閱[專案設定 （轉換）](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+在轉換前的物件，檢閱中的專案轉換選項**專案設定** 對話方塊。 藉由使用這個對話方塊中，您可以設定如何 SSMA 轉換索引備忘資料行、 主索引鍵、 外部索引鍵條件約束、 時間戳記和無索引的資料表。 如需詳細資訊，請參閱[專案設定 （轉換）](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
 ## <a name="conversion-results"></a>轉換結果  
 下表顯示可存取物件的轉換，並產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 物件：  

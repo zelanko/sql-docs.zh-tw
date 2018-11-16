@@ -16,12 +16,12 @@ ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5b3fa0a640791f25da1fc16162f097a39502d86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7524bd375dcf2c2d34395a0e87c1b3fe7d08ba63
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765746"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640057"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>在控制流程中加入或刪除工作或容器
   當您在控制流程設計師中工作時，[ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中的 [工具箱] 會列出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供用於在封裝中建立控制流程的工作。 如需工具箱的詳細資訊，請參閱 [SSIS 工具箱](../../integration-services/ssis-toolbox.md)。  
@@ -96,9 +96,9 @@ ms.locfileid: "47765746"
   
 4.  在 [控制流程] 索引標籤的設計介面上，以滑鼠右鍵按一下工作或容器，然後按一下 [編輯] 開啟對應的工作或容器編輯器。  
   
-     如需如何設定「For 迴圈」容器的資訊，請參閱[設定 For 迴圈容器](http://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)。  
+     如需如何設定「For 迴圈」容器的資訊，請參閱[設定 For 迴圈容器](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)。  
   
-     如需如何設定「Foreach 迴圈」容器的資訊，請參閱 [設定 Foreach 迴圈容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+     如需如何設定「Foreach 迴圈」容器的資訊，請參閱 [設定 Foreach 迴圈容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
   
     > [!NOTE]  
     >  「時序」容器沒有任何自訂編輯器。  
@@ -114,6 +114,6 @@ ms.locfileid: "47765746"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)   
- [控制流程](../../integration-services/control-flow/control-flow.md)  
+ [[控制流程]](../../integration-services/control-flow/control-flow.md)  
   
   

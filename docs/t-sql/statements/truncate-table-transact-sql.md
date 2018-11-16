@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da01e9b3f60004b0418978a0f520816402b23807
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: ed7f25c6151a135ffba2add1c0f9873dabb84198
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970859"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698496"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,7 +77,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
  這是要截斷之資料表，或要從中移除所有資料列之資料表的名稱。 *table_name* 必須是常值。 *table_name* 不得為 **OBJECT_ID()** 函數或變數。  
   
  WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )  
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
  指定要截斷的資料分割，或要移除所有資料列的部分。 如果未分割此資料表，**WITH PARTITIONS** 引數將會產生錯誤。 如果未提供 **WITH PARTITIONS** 子句，將會截斷整個資料表。  
   
@@ -157,7 +157,7 @@ GO
   
 ### <a name="b-truncate-table-partitions"></a>B. 截斷資料表資料分割  
   
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
  下列範例會截斷分割資料表的指定資料分割。 `WITH (PARTITIONS (2, 4, 6 TO 8))` 語法會導致資料分割編號 2、 4、 6、 7 和 8 被截斷。  
   

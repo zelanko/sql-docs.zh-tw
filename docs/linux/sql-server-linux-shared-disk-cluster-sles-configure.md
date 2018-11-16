@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 84c242d3c7c8e38642f1ee76f109f90a1ea9520e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cce3c1f06978ba0ff5b9630bdaa5f5aebc0ddf1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635816"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667987"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>設定 SQL Server 的 SLES 共用的磁碟叢集
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本指南提供指示來建立適用於 SQL Server 在 SUSE Linux Enterprise Server (SLES) 的兩個節點的共用的磁碟叢集。 叢集層根據 SUSE[高可用性延伸模組 (HAE)](https://www.suse.com/products/highavailability)之上建置[Pacemaker](http://clusterlabs.org/)。 
+本指南提供指示來建立適用於 SQL Server 在 SUSE Linux Enterprise Server (SLES) 的兩個節點的共用的磁碟叢集。 叢集層根據 SUSE[高可用性延伸模組 (HAE)](https://www.suse.com/products/highavailability)之上建置[Pacemaker](https://clusterlabs.org/)。 
 
 如需有關叢集設定、 資源代理程式選項、 管理、 最佳做法和建議的詳細資訊，請參閱 < [SUSE Linux Enterprise 高可用性延伸模組 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
 

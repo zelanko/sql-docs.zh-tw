@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d49e9c7b8b567ff4628e4e2353a6ce0a7a4adc4
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: bbedfe588a66e166f46e9240db65689a2b2a6459
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970559"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700343"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +87,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 -   如果 READ_COMMITTED_SNAPSHOT 設為 ON，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用資料列版本設定，依照資料在陳述式開始時就存在的狀態，向每個陳述式提供具有交易一致性的資料快照集。 鎖定的使用目的不是為了防止其他交易更新資料。
 
 > [!IMPORTANT]  
-> 選擇交易隔離等級並不會影響為保護資料修改所取得的鎖定。 交易永遠都會取得它所修改之資料的獨佔鎖定，並保留該鎖定直到交易完成為止，不論為該交易所設定的隔離等級為何皆同。 此外，在 READ_COMMITTED 隔離等級所做的更新會於選取的資料列上使用更新鎖定，而在 SNAPSHOT 隔離等級所做的更新使用資料列版本來選取要更新的資料列。 對於讀取作業，交易隔離等級主要是定義對於其他交易所做修改之影響的保謢等級。 如需詳細資訊，請參閱[交易鎖定與資料列版本設定指南](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)。
+> 選擇交易隔離等級並不會影響為保護資料修改所取得的鎖定。 交易永遠都會取得它所修改之資料的獨佔鎖定，並保留該鎖定直到交易完成為止，不論為該交易所設定的隔離等級為何皆同。 此外，在 READ_COMMITTED 隔離等級所做的更新會於選取的資料列上使用更新鎖定，而在 SNAPSHOT 隔離等級所做的更新使用資料列版本來選取要更新的資料列。 對於讀取作業，交易隔離等級主要是定義對於其他交易所做修改之影響的保謢等級。 如需詳細資訊，請參閱[交易鎖定與資料列版本設定指南](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)。
 
 > [!NOTE]  
 >  快照集隔離支援 FILESTREAM 資料。 在快照集隔離模式下，交易中的任何陳述式所讀取之 FILESTREAM 資料，都會是交易啟動時就存在之資料的交易一致性版本。  

@@ -19,19 +19,19 @@ ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6255d6aa17b55a73b6ccb6d119e1e377effa4977
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e38185e537747c951ad7fb236a3b06837240617a
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608576"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698377"
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 在提供了地理標記語言 (GML) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 子集中的表示法時，建構 **geography** 執行個體。
   
-如需有關 GML 的詳細資訊，請參閱以下開放地理空間協會規格：[OGC 規格，地理標記語言](http://go.microsoft.com/fwlink/?LinkId=93629) \(英文\)
+如需有關 GML 的詳細資訊，請參閱以下開放地理空間協會規格：[OGC 規格，地理標記語言](https://go.microsoft.com/fwlink/?LinkId=93629) \(英文\)
   
 這個 **geography** 資料類型方法可支援 **FullGlobe** 執行個體或大於半球的空間執行個體。
   
@@ -65,7 +65,7 @@ GeomFromGml ( GML_input, SRID )
 ```  
 DECLARE @g geography;  
 DECLARE @x xml;  
-SET @x = '<LineString xmlns="http://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>';  
+SET @x = '<LineString xmlns="https://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>';  
 SET @g = geography::GeomFromGml(@x, 4326);  
 SELECT @g.ToString();  
 ```  
@@ -75,7 +75,7 @@ SELECT @g.ToString();
 ```  
 DECLARE @g geography;  
 DECLARE @x xml;  
-SET @x = '<FullGlobe xmlns="http://schemas.microsoft.com/sqlserver/2011/geography" />';  
+SET @x = '<FullGlobe xmlns="https://schemas.microsoft.com/sqlserver/2011/geography" />';  
 SET @g = geography::GeomFromGml(@x, 4326);  
 SELECT @g.ToString();  
 ```  

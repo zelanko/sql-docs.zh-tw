@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77ef8c2340724558b137bb1da1bb3448db677795
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86f54b31eb9bab93b6a4a3be918e1011f023ab5b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855280"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666517"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>逐步解說：建立及執行 SQL Server 單元測試
 在這個逐步解說中，您要建立 SQL Server 單元測試，以確認數個預存程序的行為。 您可以建立 SQL Server 單元測試，協助識別可能會導致不正確之應用程式行為的程式碼缺失。 您可以執行 SQL Server 單元測試和應用程式測試，作為自動化測試套件的一部分。  
@@ -40,7 +40,7 @@ ms.locfileid: "47855280"
 在其中一個單元測試偵測到預存程序錯誤之後，您更正該錯誤並重新執行測試。  
   
 ## <a name="prerequisites"></a>Prerequisites  
-若要完成此逐步解說，您必須能夠連接到您有權建立及部署資料庫的資料庫伺服器 (或 LocalDB 資料庫)。 如需詳細資訊，請參閱 [Visual Studio 資料庫功能的必要權限](http://msdn.microsoft.com/library/aa833413(VS.100).aspx)。  
+若要完成此逐步解說，您必須能夠連接到您有權建立及部署資料庫的資料庫伺服器 (或 LocalDB 資料庫)。 如需詳細資訊，請參閱 [Visual Studio 資料庫功能的必要權限](https://msdn.microsoft.com/library/aa833413(VS.100).aspx)。  
   
 ## <a name="CreateScript"></a>建立包含資料庫結構描述的指令碼  
   
@@ -968,7 +968,7 @@ ms.locfileid: "47855280"
     您指定預期會發生特定例外狀況。 您可以選擇性地指定特定的錯誤號碼。 如果您沒有加入此屬性，單元測試會失敗，而且 [測試結果] 視窗會出現訊息。  
   
     > [!IMPORTANT]  
-    > 目前 Visual Studio 2012 不支援 ExpectedSqlException 屬性。 如需解決此問題的詳細資訊，請參閱 [無法執行「預期的失敗」資料庫單元測試](http://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)。  
+    > 目前 Visual Studio 2012 不支援 ExpectedSqlException 屬性。 如需解決此問題的詳細資訊，請參閱 [無法執行「預期的失敗」資料庫單元測試](https://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)。  
   
 3.  在 [檔案] 功能表中，按一下 [儲存 SqlServerUnitTests1.cs]。  
   

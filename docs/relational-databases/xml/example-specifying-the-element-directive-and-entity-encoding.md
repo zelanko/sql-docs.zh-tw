@@ -14,12 +14,12 @@ ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e88486af3e2e8e3da25aaf78eaab4df47f1c7bb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e943e6dfb83d21d4a0e0beac0c6acd0d62881f1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620446"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667357"
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>範例：指定 ELEMENT 指示詞及實體編碼
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ SELECT  2 as Tag,
         ProductModelID,  
         Name,  
        (SELECT CatalogDescription.query('  
-            declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+            declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
           /pd:ProductDescription/pd:Summary'))  
 FROM     Production.ProductModel  
 WHERE    CatalogDescription is not null  

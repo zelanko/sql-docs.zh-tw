@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72a1972d6824b30ac97fedc2652fe89620a96ff3
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 32f201e6eb386119fd61aa9fb34fdc90a7ab4b25
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970689"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559446"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -987,6 +987,7 @@ BEGIN
     ORDER BY AnnualSales DESC, ResellerName ASC;  
 END  
 ;  
+GO
   
 --Show 10 Top Resellers  
 EXEC Get10TopResellers;  

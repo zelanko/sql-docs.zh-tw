@@ -18,12 +18,12 @@ ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d016498e0b46ce17cfd705264c6996c56302be32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf23a076f7e4d7e873f48988364c51b1daa03b0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641566"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663377"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>建立和管理專案 (AccessToSQL)
 若要將 Access 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您必須先建立 SSMA 專案。 專案是包含您想要移轉至 Access 資料庫的相關中繼資料的檔案[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，目標執行個體的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 移轉的物件和資料，將會接收[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]連線資訊和專案設定。  
@@ -39,19 +39,19 @@ SSMA 會包含數個選項，藉以轉換和同步處理資料庫物件和轉換
   
 3.  在左窗格中，按一下 **轉換**。  
   
-4.  在右窗格中，檢閱的選項。 如需這些選項的詳細資訊，請參閱[專案設定 （轉換）](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)。  
+4.  在右窗格中，檢閱的選項。 如需這些選項的詳細資訊，請參閱[專案設定 （轉換）](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)。  
   
 5.  視需要變更選項。  
   
 6.  重複上一個步驟**遷移**， **GUI**，並**型別對應**頁面。  
   
-    -   如需移轉選項的資訊，請參閱[專案設定 （移轉）](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)。  
+    -   如需移轉選項的資訊，請參閱[專案設定 （移轉）](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)。  
   
-    -   如需使用者介面選項的詳細資訊，請參閱[專案設定 (GUI)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)。  
+    -   如需使用者介面選項的詳細資訊，請參閱[專案設定 (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)。  
   
-    -   如需有關資料類型對應設定的詳細資訊，請參閱[專案設定 （類型對應）](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)。  
+    -   如需有關資料類型對應設定的詳細資訊，請參閱[專案設定 （類型對應）](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)。  
   
-    -   SQL Azure 設定的相關資訊，請參閱[專案設定 (SQL Azure)](http://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)。  
+    -   SQL Azure 設定的相關資訊，請參閱[專案設定 (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)。  
   
 **請注意**只有在您選擇建立專案時的移轉至 SQL Azure 時，SQL Azure 設定將會提供。  
   

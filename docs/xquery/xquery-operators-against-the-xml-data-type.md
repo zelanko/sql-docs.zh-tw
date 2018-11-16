@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -18,12 +17,12 @@ ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10102e3c726a3703a3a9f3aa953171fb4a5dd79b
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 5ba69530f6c9cb8451211a2dcec333d347062b74
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119276"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671857"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>針對 xml 資料類型的 XQuery 運算子
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +46,8 @@ ms.locfileid: "49119276"
   
 ```sql
 WITH XMLNAMESPACES (  
-'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS ACI,  
-'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
+'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS ACI,  
+'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
 SELECT ContactID   
 FROM   Person.Contact  
 WHERE  AdditionalContactInfo.value('  
@@ -65,7 +64,7 @@ WHERE  AdditionalContactInfo.value('
 ```sql
 SELECT ProductModelID, Instructions.query('  
      declare namespace   
- AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+ AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
      for $i in (/AWMI:root/AWMI:Location)[1]  
      return   
        <Location LocationID="{ ($i/@LocationID) }"  
@@ -84,7 +83,7 @@ where ProductModelID=7
   
 ```sql
 SELECT CatalogDescription.query('  
-     declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      for $P in /PD:ProductDescription/PD:Picture[PD:Size eq "small"]  
      return  
            $P  

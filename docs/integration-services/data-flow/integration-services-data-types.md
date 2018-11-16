@@ -19,12 +19,12 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8fc0c1658ce051aa3e0fa494ef5c1b40d2db8881
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76559f2d4a8c96a64792e4ecf095094c3cb1229e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832518"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641755"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 資料類型
   當資料輸入封裝中的資料流程時，擷取資料的來源會將資料轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 數值資料會指派為數值資料類型、字串資料指派為字元資料類型，而日期則是指派為日期資料類型。 其他資料，例如 GUID 和「二進位大型物件區塊 (BLOB)」也都會被指派適當的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 如果資料的資料類型不能轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型，則會發生錯誤。  
@@ -254,7 +254,7 @@ ms.locfileid: "47832518"
  如需資料流程中對應資料類型的資訊，請參閱 [使用資料流程中的資料類型](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)。  
   
 ## <a name="related-content"></a>相關內容  
- blogs.msdn.com 上的部落格文章： [SSIS 2008 中各種資料類型轉換技術的效能比較](http://go.microsoft.com/fwlink/?LinkId=220823)。  
+ blogs.msdn.com 上的部落格文章： [SSIS 2008 中各種資料類型轉換技術的效能比較](https://go.microsoft.com/fwlink/?LinkId=220823)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流程中的資料](../../integration-services/data-flow/data-in-data-flows.md)  

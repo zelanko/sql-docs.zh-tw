@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0507fd785dfe6eb61993c30c90b116db423548aa
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 022c63e58d212c5b45f18fcfc60b169dae9be81d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419453"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675897"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>疑難排解：尋找 SQL Server 異動複寫的錯誤 
 若對異動複寫的運作方式沒有基本的了解，針對複寫錯誤進行疑難排解可能會令人感到沮喪。 建立發行集的第一個步驟是讓快照集代理程式建立快照集，並將它儲存到快照集資料夾。 接下來，散發代理程式會將快照集套用到訂閱者。 
@@ -252,7 +252,7 @@ ms.locfileid: "49419453"
     
 1. 若要停用詳細資訊記錄，請遵循相同的上一個步驟來移除您之前新增的一整行 `-Output`。 
 
-如需詳細資訊，請參閱[啟用複寫代理程式的詳細資訊記錄](https://support.microsoft.com/en-us/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se)。 
+如需詳細資訊，請參閱[啟用複寫代理程式的詳細資訊記錄](https://support.microsoft.com/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se)。 
 
 
 ## <a name="see-also"></a>另請參閱

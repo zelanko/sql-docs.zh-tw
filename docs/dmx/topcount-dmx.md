@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 182c83cf6b2850941c2f21924395c0ebe160db01
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e67e1e408186e78f00c4b54399fb2e87ac673541
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989849"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601738"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ TopCount(<table expression>, <rank expression>, <count>)
  不過，有很多情況下，您可能仍然需要使用 TopCount。 比方說，不支援 DMX**頂端**子 select 陳述式中的限定詞。 [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)函式也不支援新增**頂端**。  
   
 ## <a name="examples"></a>範例  
- 下列範例會針對您使用建立的關聯模型的預測查詢[83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 查詢會傳回相同的結果，但第一個範例中使用 TopCount 和第二個範例會使用 Predict 函式。  
+ 下列範例會針對您使用建立的關聯模型的預測查詢[83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 查詢會傳回相同的結果，但第一個範例中使用 TopCount 和第二個範例會使用 Predict 函式。  
   
  若要了解 TopCount 的運作方式，可能要先執行僅傳回巢狀的資料表的預測查詢很有幫助。  
   

@@ -18,12 +18,12 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fcf04dc0eb2209afcd9dfc180d59e6452e5b52d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d334d7aac70cdbadef5bdeede6d9f3a53c74caa7
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820066"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638325"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>緩時變維度轉換
   「緩時變維度」轉換可在資料倉儲維度資料表中協調記錄的更新與插入。 例如，您可利用此轉換來設定轉換輸出，該轉換輸出會使用 AdventureWorks OLTP 資料庫中 Production.Products 資料表的資料，在 [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] 資料庫的 DimProduct 資料表內插入和更新記錄。  
@@ -90,7 +90,7 @@ ms.locfileid: "47820066"
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -108,6 +108,6 @@ ms.locfileid: "47820066"
   
 ## <a name="related-content"></a>相關內容  
   
--   blogs.msdn.com 上的部落格項目 [Optimizing the Slowly Changing Dimension Wizard](http://go.microsoft.com/fwlink/?LinkId=199481)(最佳化緩時變維度精靈)。  
+-   blogs.msdn.com 上的部落格項目 [Optimizing the Slowly Changing Dimension Wizard](https://go.microsoft.com/fwlink/?LinkId=199481)(最佳化緩時變維度精靈)。  
   
   

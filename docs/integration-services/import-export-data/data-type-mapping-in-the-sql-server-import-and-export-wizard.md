@@ -11,12 +11,12 @@ ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 826e7ca671272f859cd0d5da7059b34cf4cfedba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee64f342f8ef865d8b264f37c332098b0c2d62cf
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847266"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637622"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>SQL Server 匯入和匯出精靈的資料類型對應
  在 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 中，您可以在新的目的地資料表和檔案中設定資料行的名稱、資料類型和資料類型屬性，但無法針對資料行值指定自訂轉換。 所以，從來源到目的地的資料類型內建對應極為重要。  
@@ -32,7 +32,7 @@ ms.locfileid: "47847266"
 如果貴公司在資料類型間需要不同的對應，您可以更新對應檔案，變更精靈使用的對應。 例如，將資料從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  nchar **資料類型對應到 DB2** GRAPHIC **VAR資料類型對應到 DB2** VARGRAPHIC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，請在  對應檔中變更 **nchar** 對應，以便使用 **資料類型對應到 DB2** 取代 **VAR資料類型對應到 DB2.** 傳送到 DB2 時，如果您想讓  
   
 ## <a name="you-can-add-a-new-mapping-file"></a>您可以加入新的對應檔案
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會安裝多種來源和目的地常用之組合的對應。 您也可以在 **MappingFiles** 目錄中加入新的對應檔案，支援其他的來源與目的地。 新的對應檔必須符合已發行的 XSD 結構描述，也必須對應來源和目的地的唯一組合。 對應檔案結構描述 **DataTypeMapping.xsd**的發行位置在 [這裡](http://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd)。
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會安裝多種來源和目的地常用之組合的對應。 您也可以在 **MappingFiles** 目錄中加入新的對應檔案，支援其他的來源與目的地。 新的對應檔必須符合已發行的 XSD 結構描述，也必須對應來源和目的地的唯一組合。 對應檔案結構描述 **DataTypeMapping.xsd** 的發行位置在[這裡](https://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd)。
  
 ## <a name="sample-mapping-file"></a>範例對應檔案
 以下是從 SQL Server 資料類型 (或者更具體地說，從 SQL Server .Net Framework 資料提供者使用的資料類型) 對應至 Oracle 資料類型之 XML 對應檔案的一部分。 如您所見，SQL Server **int** 資料類型對應到 Oracle **INTEGER** 資料類型即為一例。
@@ -40,8 +40,8 @@ ms.locfileid: "47847266"
 ```xml  
   
 <dtm:DataTypeMappings  
-    xmlns:dtm="http://www.microsoft.com/SqlServer/Dts/DataTypeMapping.xsd"   
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:dtm="https://www.microsoft.com/SqlServer/Dts/DataTypeMapping.xsd"   
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"  
     SourceType="System.Data.SqlClient.SqlConnection"   
     MinSourceVersion="*"   
     MaxSourceVersion="*"   

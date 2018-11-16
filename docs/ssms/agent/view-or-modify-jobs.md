@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0545efe9b55573db9a3fde4c92e436cc67b0369d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 02aa7c66d720746d6472059f5a3597d15ef642f0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681466"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703696"
 ---
 # <a name="view-or-modify-jobs"></a>檢視或修改作業
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47681466"
 EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  
 ```  
   
-如需詳細資訊，請參閱 [sp_purge_jobhistory (TRANSACT-SQL)](http://msdn.microsoft.com/237f9bad-636d-4262-9bfb-66c034a43e88)。  
+如需詳細資訊，請參閱 [sp_purge_jobhistory (TRANSACT-SQL)](https://msdn.microsoft.com/237f9bad-636d-4262-9bfb-66c034a43e88)。  
   
 **系統管理員** 固定伺服器角色的成員不僅可以檢視所有作業的定義或記錄，也可修改任何作業。  
   

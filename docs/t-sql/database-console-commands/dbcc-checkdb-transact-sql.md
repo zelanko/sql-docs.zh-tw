@@ -35,12 +35,12 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 78cf2eae42192abf6b926b753595ed26cf4190bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00c334d707886efdcfa00860def58f0c662a7cb6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705446"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704116"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD
     
 REPAIR_ALLOW_DATA_LOSS  
  嘗試修復所有報告的錯誤。 這些修復可能會造成某些資料的遺失。  
-    
+    
 > [!WARNING]
 > REPAIR_ALLOW_DATA_LOSS 選項是支援的功能，但不一定是讓資料庫處於實體一致狀態的最佳選項。 如果成功的話，REPAIR_ALLOW_DATA_LOSS 選項可能會導致部分資料遺失。 事實上，這個選項遺失的資料，可能會比使用者從上次已知良好備份還原資料庫所遺失的資料多。 
 >
@@ -117,12 +117,12 @@ REPAIR_REBUILD
  此引數不會修復涉及 FILESTREAM 資料的錯誤。  
     
 > [!IMPORTANT] 
-> 由於搭配任何 REPAIR 選項的 DBCC CHECKDB 已完整記錄下來並可復原，因此 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一律會建議使用者在交易內 (執行命令前先執行 BEGIN TRANSACTION) 搭配任何 REPAIR 選項使用 CHECKDB，以便使用者可以確認要接受作業的結果。 接著使用者可執行 COMMIT TRANSACTION，來認可修復作業完成的所有工作。 如果使用者不想接受作業的結果，可執行 ROLLBACK TRANSACTION 恢復修復作業的結果。    
+> 由於搭配任何 REPAIR 選項的 DBCC CHECKDB 已完整記錄下來並可復原，因此 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一律會建議使用者在交易內 (執行命令前先執行 BEGIN TRANSACTION) 搭配任何 REPAIR 選項使用 CHECKDB，以便使用者可以確認要接受作業的結果。 接著使用者可執行 COMMIT TRANSACTION，來認可修復作業完成的所有工作。 如果使用者不想接受作業的結果，可執行 ROLLBACK TRANSACTION 恢復修復作業的結果。    
 >     
 > 若要修復錯誤，我們建議您從備份中還原。 修復作業並不考慮資料表或資料表之間的任何條件約束。 如果指定的資料表涉及一或多項條件約束，建議您在修復作業之後，執行 DBCC CHECKCONSTRAINTS。 如果您必須使用 REPAIR，請執行不含修復選項的 DBCC CHECKDB 來尋找要使用的修復層級。 如果您使用 REPAIR_ALLOW_DATA_LOSS 層級，建議您在搭配這個選項執行 DBCC CHECKDB 之前，先備份資料庫。    
     
 ALL_ERRORMSGS  
- 根據每個物件顯示所有報告的錯誤。 系統預設會顯示所有錯誤訊息。 指定或省略這個選項沒有任何作用。 錯誤訊息是依物件識別碼排序，但從 [tempdb 資料庫](../../relational-databases/databases/tempdb-database.md)產生的訊息除外。     
+ 根據每個物件顯示所有報告的錯誤。 系統預設會顯示所有錯誤訊息。 指定或省略這個選項沒有任何作用。 錯誤訊息是依物件識別碼排序，但從 [tempdb 資料庫](../../relational-databases/databases/tempdb-database.md)產生的訊息除外。     
 
 EXTENDED_LOGICAL_CHECKS  
  如果相容性層級為 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 或更高，則會針對索引檢視表、XML 索引和空間索引 (如果有的話) 執行邏輯一致性檢查。  
@@ -133,7 +133,7 @@ NO_INFOMSGS
     
 TABLOCK  
  使 DBCC CHECKDB 取得鎖定，而不使用內部資料庫快照集。 這包括資料庫上的短期獨佔 (X) 鎖定。 TABLOCK 可讓 DBCC CHECKDB 在負載沉重的資料庫上執行得快一些，但 DBCC CHECKDB 執行時，資料庫可用的並行會降低。  
-    
+    
 > [!IMPORTANT] 
 > TABLOCK 會限制執行的檢查；不會對資料庫執行 DBCC CHECKCATALOG，也不會驗證 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 資料。
     
@@ -155,11 +155,11 @@ PHYSICAL_ONLY
 DATA_PURITY  
  使 DBCC CHECKDB 檢查資料庫，找出無效或超出範圍的資料行值。 例如，DBCC CHECKDB 會偵測具有大於或小於 **datetime** 資料類型可接受範圍之日期和時間值的資料行；或是 **decimal** 或近似數值資料類型資料行具有無效的小數位數或有效位數值。  
  預設會啟用資料行值的完整性檢查，而不需要 DATA_PURITY 選項。 對於從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級的資料庫，在毫無錯誤的情況下完成對資料庫執行 DBCC CHECKDB WITH DATA_PURITY 之前，依預設不啟用資料行值的完整性檢查。 此後，依預設 DBCC CHECKDB 會檢查資料行值的完整性。 如需有關從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級資料庫可能對 CHECKDB 造成何種影響的詳細資訊，請參閱本主題稍後的「備註」一節。  
-    
+    
 > [!WARNING]
 > 如果指定 PHYSICAL_ONLY，則不會執行資料行完整性檢查。
     
- 這個選項報告的驗證錯誤無法使用 DBCC 修復選項更正。 如需手動更正這些錯誤的相關資訊，請參閱知識庫文件 923247：[對 SQL Server 2005 及更新版本中的 DBCC 錯誤 2570 進行疑難排解](http://support.microsoft.com/kb/923247) \(機器翻譯\)。  
+ 這個選項報告的驗證錯誤無法使用 DBCC 修復選項更正。 如需手動更正這些錯誤的相關資訊，請參閱知識庫文件 923247：[對 SQL Server 2005 及更新版本中的 DBCC 錯誤 2570 進行疑難排解](https://support.microsoft.com/kb/923247) \(機器翻譯\)。  
     
  MAXDOP  
  **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
@@ -167,7 +167,7 @@ DATA_PURITY
  覆寫陳述式之 **sp_configure** 的 **max degree of parallelism** 設定選項。 MAXDOP 可能會超過使用 sp_configure 所設定的值。 如果 MAXDOP 超過使用 Resource Governor 所設定的值，[!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] 就會使用 [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md) 中所描述的 Resource Governor MAXDOP 值。 當您使用 MAXDOP 查詢提示時，適用所有搭配 max degree of parallelism 組態選項使用的語意規則。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
  
 > [!WARNING] 
-> 如果 MAXDOP 設定為零，SQL Server 會選擇要使用之平行處理原則的最大程度。    
+> 如果 MAXDOP 設定為零，SQL Server 會選擇要使用之平行處理原則的最大程度。    
 
 ## <a name="remarks"></a>Remarks    
 DBCC CHECKDB 不會檢查停用的索引。 如需詳細資訊，請參閱[停用索引和條件約束](../../relational-databases/indexes/disable-indexes-and-constraints.md)。    

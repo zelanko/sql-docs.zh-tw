@@ -19,12 +19,12 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3a7c93c43a35f528030035e300624bacb4e72431
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a6d3345b1a6e8f7ffdebec05ae3f71d04cb8fe3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690216"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639305"
 ---
 # <a name="excel-source"></a>Excel 來源
   Excel 來源會從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 活頁簿中的工作表或範圍擷取資料。  
@@ -52,7 +52,7 @@ ms.locfileid: "47690216"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之所有屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Excel 自訂屬性](../../integration-services/data-flow/excel-custom-properties.md)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "47690216"
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |資料表或檢視|從工作表或 Excel 檔案的具名範圍中擷取資料。|  
-|資料表名稱或檢視名稱變數|在變數中指定工作表或範圍名稱。<br /><br /> **相關資訊︰**[在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|資料表名稱或檢視名稱變數|在變數中指定工作表或範圍名稱。<br /><br /> **相關資訊︰**[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |SQL (命令)|使用 SQL 查詢從 Excel 檔案中擷取資料。 |  
 |來自變數的 SQL 命令|在變數中指定 SQL 查詢文字。|  
   

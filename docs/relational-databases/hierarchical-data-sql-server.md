@@ -5,8 +5,7 @@ ms.date: 09/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
@@ -20,12 +19,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91c2bd0e6e2793c1690adf6bcc9be1c8542eabba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cf997219044de427ed968ca39928e1449f73e60
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790046"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659477"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層式資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47790046"
   
 -   網頁之間的連結圖形  
   
- 使用 [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) 做為資料類型來建立具有階層式結構的資料表，或描述儲存在另一個位置的階層式資料結構。 使用 [中的](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) hierarchyid 函數 [!INCLUDE[tsql](../includes/tsql-md.md)] 來查詢及管理階層式資料。  
+ 使用 [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) 做為資料類型來建立具有階層式結構的資料表，或描述儲存在另一個位置的階層式資料結構。 使用 [中的](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) hierarchyid 函數 [!INCLUDE[tsql](../includes/tsql-md.md)] 來查詢及管理階層式資料。  
   
 ##  <a name="keyprops"></a> hierarchyid 的主要屬性  
  **hierarchyid** 資料類型的值代表樹狀目錄階層中的位置。 **hierarchyid** 的值具有下列屬性：  
@@ -528,7 +527,7 @@ GO
   
   
 ## <a name="see-also"></a>另請參閱  
- [Hierarchyid 資料類型方法參考](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
+ [Hierarchyid 資料類型方法參考](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
  [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   

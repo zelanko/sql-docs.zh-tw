@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0785cd58ffed215f9cebf29a62e40c70cc96c720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 594dce3e2a973179d3c056fe6c6ff447bd59c844
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850566"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603768"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>WSFC 叢集服務離線
 
@@ -41,7 +41,7 @@ ms.locfileid: "47850566"
  當叢集狀態為標準仲裁時，原則為狀況良好。  
   
 > [!NOTE]  
->  在此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [WSFC 叢集服務已離線](http://go.microsoft.com/fwlink/p/?LinkId=220849) 。  
+>  在此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [WSFC 叢集服務已離線](https://go.microsoft.com/fwlink/p/?LinkId=220849) 。  
   
 ## <a name="possible-causes"></a>可能的原因  
  這個問題可能是叢集服務問題或叢集遺失仲裁所造成。  

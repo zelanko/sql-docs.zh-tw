@@ -15,19 +15,19 @@ ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8222a9d4ccf71b012c41a7a5059a46ea3b42e060
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90788ae0c29e293db84f3b6f60fd93af41b99d8b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645836"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637700"
 ---
 # <a name="use-annotations-in-packages"></a>使用封裝中的註解
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師會提供註解，可用於使封裝自我記錄並易於了解及維護。 您可以將註解加入「 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」的控制流程、資料流程及事件處理常式設計介面。 註解 (Annotation) 可以包含任何類型的文字，而且它們可用於將標籤、註解 (Comment) 及其他描述性資訊加入至封裝。 註解只是設計階段功能。 例如，註解不寫入記錄檔中。  
   
  當您按 ENTER 鍵時，文字會折行。 註解方塊會自動在您加入其他文字行時放大。 封裝註解會以純文字格式保存在封裝檔案的 CDATA 區段中。  
   
- 如需對封裝檔案格式所做變更的詳細資訊，請參閱 [SSIS 封裝格式](http://msdn.microsoft.com/library/cfe0e5dc-5be3-4222-b721-fe83665edd94)。  
+ 如需對封裝檔案格式所做變更的詳細資訊，請參閱 [SSIS 封裝格式](https://msdn.microsoft.com/library/cfe0e5dc-5be3-4222-b721-fe83665edd94)。  
   
  當您儲存封裝時，「 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」會在封裝中儲存註解。  
   

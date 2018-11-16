@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5835d17dcb628eebe99bff4c6e3182a10e41dbe7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0c343a3a0326fe8da74ed475bc8dbf6b018a27f0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021042"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811801"
 ---
 # <a name="feature-reference-reporting-services"></a>功能參考 (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含可用於建立、管理及檢視報表的數個工具和應用程式。 此章節提供描述這些工具和應用程式之對話方塊、網頁以及精靈的特定主題。  
@@ -42,7 +42,7 @@ ms.locfileid: "50021042"
  [Reporting Services 概念 &#40;SSRS&#41;](../reporting-services/reporting-services-concepts-ssrs.md)   
  [Reporting Services 報表 &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [報表資料集 &#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)   
- [開始使用報表產生器](http://www.microsoft.com/download/en/details.aspx?id=29072)   
+ [開始使用報表產生器](https://www.microsoft.com/download/en/details.aspx?id=29072)   
  [使用報表產生器 1.0 來設計和實作報表](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

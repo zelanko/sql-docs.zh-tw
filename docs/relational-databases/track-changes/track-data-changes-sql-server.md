@@ -1,12 +1,10 @@
 ---
 title: 追蹤資料變更 (SQL Server) | Microsoft 文件
-ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], compared to change tracking
@@ -22,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a668e59baa2b412a960447b1fe14c6adf596804e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f757719563cd2f5ba190b3d2d0f0b3b33f38df40
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625379"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666407"
 ---
 # <a name="track-data-changes-sql-server"></a>追蹤資料變更 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -155,7 +153,7 @@ ms.locfileid: "47625379"
   
      描述變更追蹤、提供變更追蹤之運作方式的高層級概觀，以及描述變更追蹤要如何與其他 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 功能互動。  
   
--   [Microsoft Sync Framework 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=108054)  
+-   [Microsoft Sync Framework 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
      提供 [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 和 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的完整文件集。 在 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的文件集中，＜如何：使用 SQL Server 變更追蹤＞主題包含了詳細資訊和程式碼範例。  
   
@@ -178,7 +176,7 @@ ms.locfileid: "47625379"
  [變更追蹤函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [異動資料擷取預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [異動資料擷取資料表 &#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)   
- [異動資料擷取相關的動態管理檢視 &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [異動資料擷取相關的動態管理檢視 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   
 

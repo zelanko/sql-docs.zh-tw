@@ -12,12 +12,12 @@ ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: cfd409799157d2f1adeb4d362dd2e85e4eb4bb82
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: f2b3abf36923d11776ac08f4e4386981eb2aad48
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100269"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669477"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>尋找資料庫精靈 （驗證選取項目） (AccessToSQL)
 [尋找資料庫精靈] 的 [確認選取項目] 頁面會列出可以加入至 SSMA 的檔案。 如果不正確的檔案清單，請按一下**回**修改清單。 否則，請按一下**完成**加入檔案。  
@@ -35,5 +35,5 @@ ms.locfileid: "50100269"
 顯示檔案的擁有者。  
   
 ## <a name="see-also"></a>另請參閱  
-[使用者介面 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[使用者介面 Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

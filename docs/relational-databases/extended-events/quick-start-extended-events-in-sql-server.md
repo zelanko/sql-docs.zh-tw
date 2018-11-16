@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9636e10649dc9a8b297e2397e07fbc4629f2cdf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7c3718d1402ebdc6ff82bddc55172f09ff8b61a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673726"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658347"
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>快速入門︰SQL Server 中的擴充事件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47673726"
 
 
 > [!NOTE]
-> 如需 Microsoft SQL Server 與 Azure SQL Database 之間擴充事件差異的相關資訊，請參閱 [SQL Database 中的擴充事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。
+> 如需 Microsoft SQL Server 與 Azure SQL Database 之間擴充事件差異的相關資訊，請參閱 [SQL Database 中的擴充事件](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。
 
 
 ## <a name="preparations-before-demo"></a>示範前的準備工作
@@ -56,7 +56,7 @@ ms.locfileid: "47673726"
 
 您必須完成下列準備工作，才能實際執行後續的示範。
 
-1. [下載 SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)
+1. [下載 SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
   - 您應該每個月安裝 SSMS 的最新每月更新。
 2. 登入 Microsoft SQL Server 2014 或更新版本，或是 Azure SQL Database 資料庫 (其中的 `SELECT @@version` 會傳回其第一個節點為 12 或更高的值)。
 3. 確定您的帳戶具有 [伺服器權限](../../t-sql/statements/grant-server-permissions-transact-sql.md) ： **ALTER ANY EVENT SESSION**。
@@ -191,7 +191,7 @@ GO
 > [!NOTE]
 > 若為 Azure SQL Database，上述 CREATE EVENT SESSION 陳述式中的 ON SERVER 子句會改為 ON DATABASE。
 > 
-> 如需 Microsoft SQL Server 與 Azure SQL Database 之間擴充事件差異的詳細資訊，請參閱 [SQL Database 中的擴充事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。
+> 如需 Microsoft SQL Server 與 Azure SQL Database 之間擴充事件差異的詳細資訊，請參閱 [SQL Database 中的擴充事件](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。
 
 
 #### <a name="pre-drop-of-the-event-session"></a>DROP 事件工作階段之前
@@ -415,7 +415,7 @@ SELECT
 - [尋找持有最多鎖定的物件](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - 此案例使用目標 package0.histogram，它會處理未經處理的事件資料，再向您顯示。
 - [判斷哪些查詢持有鎖定](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)
-  - 此案例使用 [目標 package0.pair_matching](http://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3)，其中的事件配對為 sqlserver.lock_acquire 和 lock_release。
+  - 此案例使用 [目標 package0.pair_matching](https://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3)，其中的事件配對為 sqlserver.lock_acquire 和 lock_release。
 
 
 ## <a name="terms-and-concepts-in-extended-events"></a>擴充事件的詞彙和概念
@@ -647,9 +647,9 @@ SELECT HAS_PERMS_BY_NAME(
 - 內建函數 [HAS_PERMS_BY_NAME (TRANSACT-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)的詳細資料
 - [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)
 - [GRANT 伺服器權限 (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
-- [sys.server_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms188786.aspx)
-- [sys.database_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms187328.aspx)(特別針對 Azure SQL Database)
-- 部落格︰ [Effective Database Engine Permissions](http://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)(有效的 Database Engine 權限)
+- [sys.server_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms188786.aspx)
+- [sys.database_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms187328.aspx)(特別針對 Azure SQL Database)
+- 部落格︰ [Effective Database Engine Permissions](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)(有效的 Database Engine 權限)
 - 可縮放的 PDF 格式 [海報](https://aka.ms/sql-permissions-poster)，顯示所有 SQL Server 權限的階層。
 
 

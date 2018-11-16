@@ -14,12 +14,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d39af6af5eb04c9e8e8c340a71f0e8b1cb179fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffd79ef6abe6bd0e143d2ec84d72ebcc7476f3df
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790988"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675877"
 ---
 # <a name="install-and-configure-semantic-search"></a>安裝及設定語意搜尋
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ GO
   
         1.  在 **安裝媒體上，找到名稱為** SemanticLanguageDatabase.msi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Windows Installer 套件。  
   
-        2.  從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心的 [Microsoft® SQL Server® 2016 Semantic Language Statistics](https://www.microsoft.com/en-us/download/details.aspx?id=52681) (Microsoft® SQL Server® 2016 語意語言統計資料) 頁面下載 Installer 套件。  
+        2.  從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心的 [Microsoft® SQL Server® 2016 Semantic Language Statistics](https://www.microsoft.com/download/details.aspx?id=52681) (Microsoft® SQL Server® 2016 語意語言統計資料) 頁面下載 Installer 套件。  
   
 2.  執行 **SemanticLanguageDatabase.msi** Windows Installer 套件，以擷取資料庫和記錄檔。  
   
@@ -146,6 +146,6 @@ GO
 ## <a name="install-optional-support-for-newer-document-types"></a>安裝選擇性的新版文件類型支援  
   
 ###  <a name="office"></a> 安裝 Microsoft Office 和其他 Microsoft 文件類型的最新篩選  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會安裝最新的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 斷詞工具和字幹，但是不會安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 文件和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 文件類型的最新篩選。 這些篩選是針對以最新版 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 應用程式建立的文件編製索引時所必要。 若要下載最新的篩選，請參閱 [Microsoft Office 2010 篩選套件](http://go.microsoft.com/fwlink/?LinkId=218293)。 (這裡不會是 Office 2013 或 Office 2016 的 Filter Pack 版本)。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會安裝最新的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 斷詞工具和字幹，但是不會安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 文件和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 文件類型的最新篩選。 這些篩選是針對以最新版 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 應用程式建立的文件編製索引時所必要。 若要下載最新的篩選，請參閱 [Microsoft Office 2010 篩選套件](https://go.microsoft.com/fwlink/?LinkId=218293)。 (這裡不會是 Office 2013 或 Office 2016 的 Filter Pack 版本)。
   
   

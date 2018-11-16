@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9b74a33bb9b81c930075b87fa0703014b079909f
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: aec1d61a092926132ae1505ac5bf6ae4bc502560
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383283"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699634"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
@@ -43,8 +43,8 @@ ms.locfileid: "49383283"
 如需安裝 SQL Server Integration Services 與 SQL Server 及您可能想要或所需其他下載的詳細資訊，請參閱[安裝 Integration Services](install-windows/install-integration-services.md)。
 
 ##  <a name="infotipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) 資源
--   [在 SSIS 論壇中取得協助](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
--   [在 Stack Overflow 取得協助](http://stackoverflow.com/questions/tagged/ssis)  
+-   [在 SSIS 論壇中取得協助](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices)
+-   [在 Stack Overflow 取得協助](https://stackoverflow.com/questions/tagged/ssis)  
 -   [關注 SSIS 小組部落格](https://blogs.msdn.microsoft.com/ssis/)
 -   [回報問題及建議功能](https://feedback.azure.com/forums/908035-sql-server)
 -   [在您的電腦上取得文件](../sql-server/sql-server-help-installation.md)

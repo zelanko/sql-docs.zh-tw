@@ -11,12 +11,12 @@ ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9a39ae6682829121d2471d49c3dd8fd9fdfbfd8d
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 6a1b585c5d4288d05e00d24e0f17b4823899a418
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864198"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640976"
 ---
 # <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
      您可以指定範圍或層級 (執行/專案) 以及要刪除的金鑰數目。 刪除的預設批次大小是 1000。 如果您將層級設定為 2，則只有在刪除相關的專案時，才會刪除金鑰和憑證。  
   
- 如需詳細資訊，請參閱下列知識庫文章。 [修正：當您在 SQL Server 2012 中使用 SSISDB 作為部署存放區時的效能問題](http://support.microsoft.com/kb/2972285)  
+ 如需詳細資訊，請參閱下列知識庫文章。 [修正：當您在 SQL Server 2012 中使用 SSISDB 作為部署存放區時的效能問題](https://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a>範例  
  下列範例會呼叫 cleanup_server_execution_keys 預存程序。  

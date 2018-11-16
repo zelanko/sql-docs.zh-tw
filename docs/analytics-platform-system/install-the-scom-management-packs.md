@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 8a870ed2fb711599556178132e133039098f3051
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: f0acfa636a3432dcffb18cfec57ee7625c1eb01b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909818"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696427"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>針對分析平台系統安裝 SQL Server Operations Manager (SCOM) 管理組件
 請遵循下列步驟來下載並安裝適用於 SQL Server PDW 的 System Center Operations Manager (SCOM) 管理組件。 監視 SQL Server PDW 的 SCOM 所需的管理組件。  
@@ -25,13 +25,13 @@ ms.locfileid: "37909818"
 System Center Operations Manager 必須安裝且正在執行。 SQL Server PDW 2012 需要 System Center Operations Manager 2007 R2、 System Center Operations Manager 2012 或 System Center Operations Manager 2012 service pack 1。  
   
 ## <a name="Step1"></a>步驟 1： 下載管理組件  
-APS PDW 工作負載中，下載[Microsoft Analytics Platform System 的 System Center 管理組件](http://go.microsoft.com/fwlink/?LinkId=396857)。  
+APS PDW 工作負載中，下載[Microsoft Analytics Platform System 的 System Center 管理組件](https://go.microsoft.com/fwlink/?LinkId=396857)。  
   
-設備管理、 下載[SQL Server 應用裝置基礎管理組件](http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11436)。  
+設備管理、 下載[SQL Server 應用裝置基礎管理組件](https://www.microsoft.com/download/details.aspx?displaylang=en&id=11436)。  
   
-針對舊版的 PDW 不 APS 中，下載[System Center Monitoring Pack for Microsoft SQL Server 2012 平行資料倉儲應用裝置](http://go.microsoft.com/fwlink/p/?LinkId=282661)。  
+針對舊版的 PDW 不 APS 中，下載[System Center Monitoring Pack for Microsoft SQL Server 2012 平行資料倉儲應用裝置](https://go.microsoft.com/fwlink/p/?LinkId=282661)。  
   
-<!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](http://go.microsoft.com/fwlink/?LinkId=390208).  -->
+<!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
 ## <a name="Step2"></a>步驟 2： 安裝管理組件  
   

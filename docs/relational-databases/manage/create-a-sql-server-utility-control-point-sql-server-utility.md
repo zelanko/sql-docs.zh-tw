@@ -21,12 +21,12 @@ ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07729e6ad2593b5d2b7627f8e768064bfc285245
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 91610d3bcef8cf2e8aee490ce2037b26ba0eadbb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033175"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670907"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>建立 SQL Server 公用程式控制點 (SQL Server 公用程式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "51033175"
   
 -   此程序必須由擁有系統管理員 (sysadmin) 權限的使用者執行，而這些是建立 UCP 所需的相同權限。  
   
--   您必須從 UCP 中移除所有 SQL Server 受管理的執行個體。 請注意，UCP 就是 SQL Server 受管理的執行個體。 如需相關資訊，請參閱 [如何：從 SQL Server 公用程式中移除 SQL Server 執行個體](http://go.microsoft.com/fwlink/?LinkId=169392)。  
+-   您必須從 UCP 中移除所有 SQL Server 受管理的執行個體。 請注意，UCP 就是 SQL Server 受管理的執行個體。 如需相關資訊，請參閱 [如何：從 SQL Server 公用程式中移除 SQL Server 執行個體](https://go.microsoft.com/fwlink/?LinkId=169392)。  
   
  您可以使用這個程序，從 SQL Server 公用程式中移除 SQL Server UCP。 完成此作業之後，您就可以再次於 SQL Server 執行個體上建立 UCP。  
   
@@ -140,7 +140,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  若要繼續進行，請按 **[下一步]**。  
   
 ##  <a name="Connection_dialog"></a> 連接對話方塊  
- 在 [連接到伺服器] 對話方塊中，確認伺服器類型、電腦名稱及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱資訊。 如需詳細資訊，請參閱[連接到伺服器 &#40;Database Engine&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
+ 在 [連接到伺服器] 對話方塊中，確認伺服器類型、電腦名稱及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱資訊。 如需詳細資訊，請參閱[連接到伺服器 &#40;Database Engine&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
   
 > [!NOTE]  
 >  如果連接已加密，將會使用加密的連接。 如果連接未加密， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式會使用加密的連接重新連接。  
@@ -170,7 +170,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體不得擁有名為 "sysutility_mdw" 的資料庫。|建立 UCP 作業將會建立名為 "sysutility_mdw" 的公用程式管理資料倉儲 (UMDW)。 此作業會要求在執行驗證規則時，該名稱不能存在於電腦上。 若要繼續，您必須移除或重新命名任何名為 "sysutility_mdw" 的資料庫。 如需重新命名作業的詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。|  
 |必須停止指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的收集組。|在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上建立 UCP 時，請停止已經存在的收集組。 如果資料收集器已停用，請啟用它，並停止任何執行中的收集組，然後針對建立 UCP 作業重新執行驗證規則。<br /><br /> 若要啟用資料收集器：<br /><br /> 在 [物件總管] 中，展開 **[管理]** 節點。<br /><br /> 以滑鼠右鍵按一下 **[資料收集]**，然後按一下 **[啟用資料收集]**。<br /><br /> 若要停止收集組：<br /><br /> 在 [物件總管] 中，依序展開 [管理] 節點、 **[資料收集]** 和 **[系統資料收集組]**。<br /><br /> 以滑鼠右鍵按一下您要停止的收集組，然後按一下 **[停止資料收集組]**。<br /><br /> 訊息方塊會顯示此動作的結果，而此收集組圖示上的紅色圓圈會指示此收集組已經停止。|  
 |必須在指定的執行個體上啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務。 如果指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體，那麼必須將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務設定為手動啟動。 否則，必須將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務設定為自動啟動。|啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務。 如果指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體，那麼請將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務設定為手動啟動。 否則，請將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務設定為自動啟動。|  
-|WMI 必須正確設定。|若要針對 WMI 組態進行疑難排解，請參閱 [疑難排解 SQL Server 公用程式](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)。|  
+|WMI 必須正確設定。|若要針對 WMI 組態進行疑難排解，請參閱 [疑難排解 SQL Server 公用程式](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶不得為內建帳戶，例如 Network Service。|如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶為內建帳戶 (如 Network Service)，請將此帳戶重新指派給具有系統管理員權限的 Windows 網域帳戶。|  
 |如果您選取 Proxy 帳戶選項， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶必須是有效的 Windows 網域帳戶。|指定有效的 Windows 網域帳戶。 若要確保此帳戶是有效的，請使用 Windows 網域帳戶登入指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|  
 |如果您選取服務帳戶選項， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶不得為內建帳戶，例如 Network Service。|如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶為內建帳戶 (如 Network Service)，請將此帳戶重新指派給 Windows 網域帳戶。|  
@@ -229,6 +229,6 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 公用程式的功能與工作](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [疑難排解 SQL Server 公用程式](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
+ [疑難排解 SQL Server 公用程式](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

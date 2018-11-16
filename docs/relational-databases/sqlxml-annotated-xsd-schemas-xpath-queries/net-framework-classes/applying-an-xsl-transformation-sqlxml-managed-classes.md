@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 981d8c7b92457bff5601702f95b2db07c49ac951
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edef83662d48ea7aa6dcfa1906946c3016d02b4c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632508"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677537"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>套用 XSL 轉換 (SQLXML Managed 類別)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ class Test
   
 ```  
 <?xml version='1.0' encoding='UTF-8'?>  
- <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">   
+ <xsl:stylesheet xmlns:xsl="https://www.w3.org/1999/XSL/Transform" version="1.0">   
     <xsl:output method="html"/>  
     <xsl:template match = '*'>  
         <xsl:apply-templates />  

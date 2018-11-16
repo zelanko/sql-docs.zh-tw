@@ -10,12 +10,12 @@ ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4e77b08484a08871d2b9dcd70de0ddf339bb8f07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d479c8f7de1c9d7463e57f37f9e8588c9bc68b6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805966"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666497"
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>安裝 SSMA for DB2 用戶端 (DB2ToSQL)
 SSMA 用戶端是由執行下列工作的程式檔案所組成：  
@@ -41,7 +41,7 @@ SSMA 設計用於搭配 z/OS 9.0 以及 10.0 的版本上的 DB2 或 LUW 版本 
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更新版本。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 4.0 版或更新版本。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 4.0 版位於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]產品媒體。 您也可以取得從中[.NET Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=48882)。  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 4.0 版或更新版本。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 4.0 版位於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]產品媒體。 您也可以取得從中[.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882)。  
   
 -   Microsoft OLEDB Provider for DB2 第 5 版或更新版本，並連線到您想要移轉的 DB2 資料庫。  
   
@@ -50,9 +50,9 @@ SSMA 設計用於搭配 z/OS 9.0 以及 10.0 的版本上的 DB2 或 LUW 版本 
 -   4 GB RAM，建議。  
   
 ## <a name="microsoft-oledb-provider-for-db2"></a>Microsoft OLEDB Provider for DB2  
-若要下載的 OLEDB provider for DB2 5.0 版，請移至[Microsoft® SQL Server® 2014 Feature Pack](http://www.microsoft.com/download/details.aspx?id=42295)。  
+若要下載的 OLEDB provider for DB2 5.0 版，請移至[Microsoft® SQL Server® 2014 Feature Pack](https://www.microsoft.com/download/details.aspx?id=42295)。  
   
-SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server Migration Assistant 的下載頁面](http://aka.ms/ssmafordb2)。  
+SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server Migration Assistant 的下載頁面](https://aka.ms/ssmafordb2)。  
   
 下載最新版本之後，您必須先解壓縮安裝檔案，才能安裝 SSMA。  
   

@@ -14,12 +14,12 @@ ms.assetid: 938bb035-e07a-4082-9f93-229d9feb6b06
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b06376518361b0ab33d227e11a06654bfc3618f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1d70f630f5dca16e1140ebe5846d49b14a9a626
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657398"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699536"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>利用 SQL Server Management Studio 管理伺服器
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47657398"
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 的工具元件包括已註冊的伺服器、物件總管、方案總管、範本總管、物件總管詳細資料頁面，以及文件視窗。 若要顯示工具，請在 [檢視] 功能表上按一下工具名稱。 若要顯示查詢編輯器工具，請在工具列上按一下 [新增查詢] 按鈕。  
   
 > [!IMPORTANT]  
-> 依預設，不會加密 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之間的網路傳輸。 除非您已建立加密連接，否則，請勿在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中使用機密資料 (包括密碼)。 如需詳細資訊，請參閱 [如何：啟用 Database Engine 的加密連接 (SQL Server 組態管理員)](http://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)。  
+> 依預設，不會加密 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之間的網路傳輸。 除非您已建立加密連接，否則，請勿在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中使用機密資料 (包括密碼)。 如需詳細資訊，請參閱 [如何：啟用 Database Engine 的加密連接 (SQL Server 組態管理員)](https://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)。  
   
 請利用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 來執行下列動作：  
   
@@ -62,5 +62,5 @@ ms.locfileid: "47657398"
   
 ## <a name="see-also"></a>另請參閱  
 [使用 SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
-[如何：檢視伺服器屬性 (SQL Server Management Studio)](http://msdn.microsoft.com/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
+[如何：檢視伺服器屬性 (SQL Server Management Studio)](https://msdn.microsoft.com/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
   

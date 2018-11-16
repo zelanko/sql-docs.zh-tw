@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1925249781d938ad95bd4c27e60f797f8ad7b5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5869fe4903ea60a42e8710b0acc969e8a8bc6202
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717575"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673987"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -111,9 +111,9 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|記錄大小平均值 (以位元組為單位)。<br /><br /> 如果是索引，則為 IN_ROW_DATA 配置單位中 B 型樹狀目錄目前層級的平均記錄大小。<br /><br /> 如果是堆積，則為 IN_ROW_DATA 配置單位中的平均記錄大小。<br /><br /> 如果是 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為完整配置單位中的平均記錄大小。<br /><br /> NULL*模式*= LIMITED。|  
 |forwarded_record_count|**bigint**|在堆積中，有指向另一個資料位置之轉送指標的記錄數目 (此狀態發生於更新期間，原始位置的空間不足以儲存新資料列時)。<br /><br /> 如果是 IN_ROW_DATA 配置單位以外的任何堆積配置單位，則為 NULL。<br /><br /> NULL 堆積*模式*= LIMITED。|  
 |compressed_page_count|**bigint**|壓縮的頁面數。<br /><br /> 如果是堆積，新配置的頁面不會使用 PAGE 壓縮方式。 堆積會在兩個特殊情況下使用 PAGE 壓縮方式：大量匯入資料或是重建堆積時。 造成頁面配置的一般 DML 作業將不會使用 PAGE 壓縮方式。 當 compressed_page_count 值成長到大於您要的臨界值時，重建堆積。<br /><br /> 如果是具有叢集索引的資料表，compressed_page_count 值會指示 PAGE 壓縮的效能。|  
-|hobt_id|BIGINT|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 為僅限資料行存放區索引，則會追蹤分割區的內部資料行存放區資料的資料列集的識別碼。 資料列集是儲存為資料堆積或二進位樹狀結構。 它們有相同的索引識別碼，做為父資料行存放區索引。 如需詳細資訊，請參閱 < [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)。<br /><br /> 如果|  
-|column_store_delete_buffer_state|TINYINT|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 清空<br /><br /> 3 = 排清<br /><br /> 4 = 淘汰<br /><br /> 5 = 備妥|  
-|column_store_delete_buff_state_desc||**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 不正確 – 父索引不是資料行存放區索引。<br /><br /> 開啟 – deleters 和掃描器會使用此。<br /><br /> 正在清空 – 清空 deleters 但掃描器仍然使用它。<br /><br /> 排清 – 緩衝區就會關閉，並刪除點陣圖正在寫入緩衝區中的資料列。<br /><br /> 淘汰 – 的封閉式的刪除緩衝區中的資料列寫入為刪除的點陣圖，但緩衝區有未遭截斷，因為掃描器仍在使用它。 新的掃描器，不需要使用淘汰的緩衝區，因為開啟的緩衝區已足夠。<br /><br /> 已準備好 – 此刪除緩衝區可供使用。|  
+|hobt_id|BIGINT|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 為僅限資料行存放區索引，則會追蹤分割區的內部資料行存放區資料的資料列集的識別碼。 資料列集是儲存為資料堆積或二進位樹狀結構。 它們有相同的索引識別碼，做為父資料行存放區索引。 如需詳細資訊，請參閱 < [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)。<br /><br /> 如果|  
+|column_store_delete_buffer_state|TINYINT|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 清空<br /><br /> 3 = 排清<br /><br /> 4 = 淘汰<br /><br /> 5 = 備妥|  
+|column_store_delete_buff_state_desc||**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 不正確 – 父索引不是資料行存放區索引。<br /><br /> 開啟 – deleters 和掃描器會使用此。<br /><br /> 正在清空 – 清空 deleters 但掃描器仍然使用它。<br /><br /> 排清 – 緩衝區就會關閉，並刪除點陣圖正在寫入緩衝區中的資料列。<br /><br /> 淘汰 – 的封閉式的刪除緩衝區中的資料列寫入為刪除的點陣圖，但緩衝區有未遭截斷，因為掃描器仍在使用它。 新的掃描器，不需要使用淘汰的緩衝區，因為開啟的緩衝區已足夠。<br /><br /> 已準備好 – 此刪除緩衝區可供使用。|  
   
 ## <a name="remarks"></a>備註  
  sys.dm_db_index_physical_stats 動態管理函數會取代 DBCC SHOWCONTIG 陳述式。  
@@ -197,7 +197,7 @@ GO
   
 -   以 ALTER INDEX REBUILD 代替 DBCC DBREINDEX，以線上或離線方式重建索引。 如需詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
   
- 單獨片段的這個理由，不足以重新組織或重建索引。 片段的主要影響是降低掃描索引時的頁面預先讀取的輸送量。 這樣會使得回應時間更慢。 如果片段化的資料表或索引上的查詢工作負載不含掃描在內 (因為工作負載主要是單一查閱)，移除片段不會有任何影響。 如需詳細資訊，請參閱此[Microsoft 寍鯚](http://go.microsoft.com/fwlink/?linkid=31012)。  
+ 單獨片段的這個理由，不足以重新組織或重建索引。 片段的主要影響是降低掃描索引時的頁面預先讀取的輸送量。 這樣會使得回應時間更慢。 如果片段化的資料表或索引上的查詢工作負載不含掃描在內 (因為工作負載主要是單一查閱)，移除片段不會有任何影響。 如需詳細資訊，請參閱此[Microsoft 寍鯚](https://go.microsoft.com/fwlink/?linkid=31012)。  
   
 > [!NOTE]  
 >  如果在壓縮作業時，部分或完全移動索引，則執行 DBCC SHRINKFILE 或 DBCC SHRINKDATABASE 可能會導入片段。 因此，即使一定要執行壓縮作業，應該在移除片段之前執行。  
@@ -430,8 +430,8 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
  [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys.dm_db_index_usage_stats &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys.dm_db_partition_stats &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [sys.allocation_units &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [系統檢視表&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [系統檢視表&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

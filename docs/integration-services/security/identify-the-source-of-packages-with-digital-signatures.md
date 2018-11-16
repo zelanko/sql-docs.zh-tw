@@ -19,12 +19,12 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee92e9c8873a65dd6f35da970e2bb2223a4649e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c0139abead73541a39f9207e94ae7d0a4d1a8f2
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798023"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639491"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用數位簽章來識別封裝的來源
   您可以使用數位憑證來簽署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，以便識別其來源。 當您已經使用數位憑證來簽署封裝之後，就可以讓 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 檢查數位簽章，然後再載入封裝。 若要讓 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 檢查簽章，您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 **dtexec** 公用程式 (dtexec.exe) 中設定選項，或設定選擇性登錄值。  
@@ -67,7 +67,7 @@ ms.locfileid: "47798023"
 |3|封鎖無效和不受信任的簽章以及未簽署的封裝<br /><br /> 此設定也會封鎖自我產生的簽章。|  
   
 > [!NOTE]  
->  **BlockedSignatureStates** 的建議設定為 3。 此設定會提供最大程度的保護，以防範無效或不受信任的未簽署封裝或簽章。 但是，建議設定未必適合所有情況。 如需簽署數位資產的詳細資訊，請參閱 MSDN Library 中的[Introduction to Code Signing](http://go.microsoft.com/fwlink/?LinkId=51414)(程式碼簽署簡介) 主題。  
+>  **BlockedSignatureStates** 的建議設定為 3。 此設定會提供最大程度的保護，以防範無效或不受信任的未簽署封裝或簽章。 但是，建議設定未必適合所有情況。 如需簽署數位資產的詳細資訊，請參閱 MSDN Library 中的[Introduction to Code Signing](https://go.microsoft.com/fwlink/?LinkId=51414)(程式碼簽署簡介) 主題。  
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>實作封裝的簽署原則  
   
@@ -100,11 +100,11 @@ ms.locfileid: "47798023"
   
     -   向發行憑證的公開商業憑證授權單位取得憑證。  
   
-    -   從可以讓組織在內部發行憑證的憑證伺服器取得憑證。 您必須將用來簽署憑證的根憑證加入至 **[信任根憑證授權單位]** 存放區。 若要加入根憑證，您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) 的「憑證」嵌入式管理單元。 如需詳細資訊，請參閱 MSDN Library 中的＜[憑證服務](http://go.microsoft.com/fwlink/?LinkId=100755)＞(英文) 主題。  
+    -   從可以讓組織在內部發行憑證的憑證伺服器取得憑證。 您必須將用來簽署憑證的根憑證加入至 **[信任根憑證授權單位]** 存放區。 若要加入根憑證，您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) 的「憑證」嵌入式管理單元。 如需詳細資訊，請參閱 MSDN Library 中的＜[憑證服務](https://go.microsoft.com/fwlink/?LinkId=100755)＞(英文) 主題。  
   
-    -   建立僅供測試用途的自訂憑證。 憑證建立工具 (Makecert.exe) 會產生供測試用途的 X.509 憑證。 如需詳細資訊，請參閱 MSDN Library 中的＜[憑證建立工具 (Makecert.exe)](http://go.microsoft.com/fwlink/?LinkId=100756)＞主題。  
+    -   建立僅供測試用途的自訂憑證。 憑證建立工具 (Makecert.exe) 會產生供測試用途的 X.509 憑證。 如需詳細資訊，請參閱 MSDN Library 中的＜[憑證建立工具 (Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)＞主題。  
   
-     如需有關憑證的詳細資訊，請參閱「憑證」嵌入式管理單元的線上說明。 如需有關如何簽署數位資產的詳細資訊，請參閱 MSDN Library 中的[使用 Authenticode 簽署與檢查程式碼](http://go.microsoft.com/fwlink/?LinkId=78100)主題。  
+     如需有關憑證的詳細資訊，請參閱「憑證」嵌入式管理單元的線上說明。 如需有關如何簽署數位資產的詳細資訊，請參閱 MSDN Library 中的[使用 Authenticode 簽署與檢查程式碼](https://go.microsoft.com/fwlink/?LinkId=78100)主題。  
   
 -   確定憑證已經啟用程式碼簽署。 若要判斷憑證是否已啟用程式碼簽署，請在「憑證」嵌入式管理單元中檢閱憑證的屬性。  
   

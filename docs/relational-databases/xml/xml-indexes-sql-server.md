@@ -34,12 +34,12 @@ ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bfa0e49e09c0cde8283015215aab25ce13a0c50f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dac012727df032d45674add5016782de3ca6ad6a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718586"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669907"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "47718586"
  XML 執行個體是以大型二進位物件 (BLOB) 儲存在 **xml** 類型資料行中。 這些 XML 執行個體可以是大型的，而且所儲存之 **xml** 資料類型執行個體的二進位表示法最多可達 2 GB。 如果沒有索引，這些二進位大型物件就會在執行階段切割，以便評估查詢。 這項切割作業可能會很費時。 例如，請考慮下列查詢：  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
   /PD:ProductDescription/PD:Summary  
@@ -108,7 +108,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
  例如，下列查詢會傳回儲存在 `CatalogDescription`**xml** 類型資料行`ProductModel`資料表中的摘要資訊。 此查詢只會針對目錄描述也儲存 <`Features`> 描述的產品型號傳回其 <`Summary`> 資訊。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
 ```  
   
  至於主要 XML 索引，而不是切割基底資料表中每個 XML 二進位大型物件的執行個體，會針對 `exist()` 方法中所指定的運算式，循序搜尋索引中與每個 XML 二進位大型物件相對應的資料列。 如果在索引中的 Path 資料行找到了路徑，就會從主要 XML 索引擷取 <`Summary`> 元素及其子樹，並將其轉換為 XML 二進位大型物件，當做 `query()` 方法的結果。  
@@ -150,7 +150,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
  下列查詢顯示 PATH 索引非常有用：  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
   /PD:ProductDescription/PD:Summary  
@@ -174,8 +174,8 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
   
 SELECT ContactID   
 FROM   Person.Contact  
@@ -192,7 +192,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  例如，若為產品型號 `19`，下列查詢就會使用 `ProductModelID` 方法來擷取 `ProductModelName` 和 `value()` 屬性值。 PROPERTY 索引可提供比使用主要 XML 索引或其他次要 XML 索引更快的執行。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.value('(/PD:ProductDescription/@ProductModelID)[1]', 'int') as ModelID,  
        CatalogDescription.value('(/PD:ProductDescription/@ProductModelName)[1]', 'varchar(30)') as ModelName          

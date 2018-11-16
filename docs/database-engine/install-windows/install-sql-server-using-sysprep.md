@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c319172feafb550ff79f8af1361c0b82f45bcff8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 058272ca68136c3a1f00a20ef3036c5c9704c659
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633076"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602538"
 ---
 # <a name="install-sql-server-with-sysprep"></a>使用 SysPrep 安裝 SQL Server
 
@@ -36,7 +36,7 @@ ms.locfileid: "47633076"
 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本及硬體和軟體需求的詳細資訊，請參閱[安裝 SQL Server 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。 
     
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 叢集支援  
- 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]開始，SysPrep 支援以命令列安裝叢集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱＜ [何謂 Sysprep](http://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx)＞。 
+ 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]開始，SysPrep 支援以命令列安裝叢集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱＜ [何謂 Sysprep](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx)＞。 
   
 ### <a name="to-prepare-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集 (自動)  
   
@@ -175,7 +175,7 @@ ms.locfileid: "47633076"
   
 11. 在 **[伺服器組態 - 服務帳戶]** 頁面中，指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的登入帳戶。 在這個頁面上所設定的實際服務隨著您選取要安裝的功能而不同。 
   
-     您可以將相同登入帳戶指派給所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務，或個別設定每一個服務帳戶。 此外，您也可以指定要自動啟動服務、手動啟動服務或停用服務。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您個別設定服務帳戶，以針對各項服務提供最低權限，其中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務會授與必須完成工作的最小權限。 如需詳細資訊，請參閱 [伺服器組態 - 服務帳戶](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 和 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。 
+     您可以將相同登入帳戶指派給所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務，或個別設定每一個服務帳戶。 此外，您也可以指定要自動啟動服務、手動啟動服務或停用服務。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您個別設定服務帳戶，以針對各項服務提供最低權限，其中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務會授與必須完成工作的最小權限。 如需詳細資訊，請參閱 [伺服器組態 - 服務帳戶](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 和 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。 
   
      若要針對此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的所有服務帳戶指定相同的登入帳戶，請在頁面底部的欄位中提供認證。 
   
@@ -183,15 +183,15 @@ ms.locfileid: "47633076"
   
      當您完成針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務指定登入資訊之後，請按 **[下一步]**。 
   
-12. 使用 [伺服器組態 - 定序] 索引標籤，為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指定非預設的定序。 如需詳細資訊，請參閱[伺服器組態 - 定序](http://msdn.microsoft.com/library/e3986870-5be4-458b-b671-5ff12a27b022)。 
+12. 使用 [伺服器組態 - 定序] 索引標籤，為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指定非預設的定序。 如需詳細資訊，請參閱[伺服器組態 - 定序](https://msdn.microsoft.com/library/e3986870-5be4-458b-b671-5ff12a27b022)。 
   
 13. 使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [組態 - 帳戶提供] 頁面來指定以下項目：  
   
     - 安全性模式 - 為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體選取 Windows 驗證或混合模式驗證。 如果您選取混合模式驗證，就必須為內建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶提供增強式密碼。 
   
-         當裝置與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]建立成功的連接之後，Windows 驗證和混合模式的安全性機制是相同的。 如需詳細資訊，請參閱 [Database Engine 組態 - 伺服器組態](http://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720)。 
+         當裝置與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]建立成功的連接之後，Windows 驗證和混合模式的安全性機制是相同的。 如需詳細資訊，請參閱 [Database Engine 組態 - 伺服器組態](https://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720)。 
   
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員 - 您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上至少必須指定一個系統管理員。 若要加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式執行所用的帳戶，請按一下 **[加入目前使用者]**。 若要從系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中將會有管理員權限的使用者、群組或電腦清單。 如需詳細資訊，請參閱 [Database Engine 組態 - 伺服器組態](http://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720)。 
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員 - 您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上至少必須指定一個系統管理員。 若要加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式執行所用的帳戶，請按一下 **[加入目前使用者]**。 若要從系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中將會有管理員權限的使用者、群組或電腦清單。 如需詳細資訊，請參閱 [Database Engine 組態 - 伺服器組態](https://msdn.microsoft.com/library/834b26bc-49de-4033-88d5-6aa7b1609720)。 
   
      當您完成清單的編輯之後，請按一下 **[確定]**。 然後，在組態對話方塊中確認管理員的清單。 當此清單完成時，請按 **[下一步]**。 
   
@@ -200,11 +200,11 @@ ms.locfileid: "47633076"
     > [!IMPORTANT]  
     >  如果您要指定非預設的安裝目錄，請確定安裝資料夾對於此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的目錄共用。 
   
-     如需詳細資訊，請參閱 [Database Engine 組態 - 資料目錄](http://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)。 
+     如需詳細資訊，請參閱 [Database Engine 組態 - 資料目錄](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)。 
   
-15. 使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [組態 - FILESTREAM] 頁面來針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體啟用 FILESTREAM。 如需詳細資訊，請參閱 [Database Engine 組態 - Filestream](http://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)。 
+15. 使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [組態 - FILESTREAM] 頁面來針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體啟用 FILESTREAM。 如需詳細資訊，請參閱 [Database Engine 組態 - Filestream](https://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)。 
   
-16. 使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [組態] 頁面來指定要建立的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝類型。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態模式的詳細資訊，請參閱 [Reporting Services 組態選項 (SSRS)](http://msdn.microsoft.com/library/e4561f6c-bc7f-467e-821a-cde8e5cd7391)。 
+16. 使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [組態] 頁面來指定要建立的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝類型。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態模式的詳細資訊，請參閱 [Reporting Services 組態選項 (SSRS)](https://msdn.microsoft.com/library/e4561f6c-bc7f-467e-821a-cde8e5cd7391)。 
   
 17. 在 **[錯誤報告]** 頁面上，指定您想要傳送給 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的資訊，這可協助改善 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 錯誤報告選項預設為啟用。 
   
@@ -306,7 +306,7 @@ ms.locfileid: "47633076"
 - [解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [什麼是 Sysprep？](http://go.microsoft.com/fwlink/?LinkId=143546)   
- [Windows SysPrep 的運作方式](http://go.microsoft.com/fwlink/?LinkId=143547)  
+ [什麼是 Sysprep？](https://go.microsoft.com/fwlink/?LinkId=143546)   
+ [Windows SysPrep 的運作方式](https://go.microsoft.com/fwlink/?LinkId=143547)  
   
   

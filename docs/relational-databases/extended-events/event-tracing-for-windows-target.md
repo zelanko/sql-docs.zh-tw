@@ -16,21 +16,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ad995a0165c02f9af769071b86cea6699ae35f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 450e93877ecabb524e5307a5ec940de32859ead6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659186"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656948"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件追蹤目標
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   使用 Windows 事件追蹤 (ETW) 當做目標之前，我們建議您最好具備 ETW 的實用知識。 ETW 追蹤會搭配擴充事件一起使用，或是當做擴充事件的事件取用者使用。 下列外部連結提供取得有關 ETW 之背景資訊的起點：  
   
--   [Windows 事件](http://go.microsoft.com/fwlink/?LinkId=92380)  
+-   [Windows 事件](https://go.microsoft.com/fwlink/?LinkId=92380)  
   
--   [使用 ETW 改善偵錯和效能調整](http://go.microsoft.com/fwlink/?LinkId=92381)  
+-   [使用 ETW 改善偵錯和效能調整](https://go.microsoft.com/fwlink/?LinkId=92381)  
   
  ETW 目標是單一目標，但是此目標可加入至許多工作階段。 如果某個事件在許多工作階段上引發，只會在每次發生事件時，將該事件傳播至 ETW 目標一次。 在每一個處理序上，擴充事件引擎則限制為單一執行個體。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47659186"
     > [!IMPORTANT]  
     >  當第一個工作階段啟動之後，將無法變更檔案路徑。  
   
--   受管理物件格式 (MOF) 檔案位於 *\<安裝路徑>* \Microsoft SQL Server\Shared 中。 如需詳細資訊，請參閱 MSDN 上的 [Managed Object Format (MOF)](http://go.microsoft.com/fwlink/?LinkId=92851) (管理物件格式)。  
+-   受管理物件格式 (MOF) 檔案位於 *\<安裝路徑>* \Microsoft SQL Server\Shared 中。 如需詳細資訊，請參閱 MSDN 上的 [Managed Object Format (MOF)](https://go.microsoft.com/fwlink/?LinkId=92851) (管理物件格式)。  
   
 ## <a name="adding-the-target-to-a-session"></a>將目標加入至工作階段  
  若要將 ETW 目標加入至擴充事件工作階段，您必須在建立或改變事件工作階段時，加入下列陳述式：  
@@ -91,7 +91,7 @@ ADD TARGET package0.etw_classic_sync_target
  如需示範如何使用 ETW 目標 (包括如何檢視資料) 之完整範例的詳細資訊，請參閱 [使用擴充事件監視系統活動](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 擴充的事件目標](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [SQL Server 擴充的事件目標](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  

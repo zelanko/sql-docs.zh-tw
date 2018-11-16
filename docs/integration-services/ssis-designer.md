@@ -25,12 +25,12 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bed5ac354f31b809f7699cea2e9e09f99158928
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e70f5cffad52b660f0006d416dfa027fba355de4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820106"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642125"
 ---
 # <a name="ssis-designer"></a>SSIS 設計師
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師是可以用於建立及維護 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的圖形工具。 [!INCLUDE[ssIS](../includes/ssis-md.md)][!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 提供的設計師是 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的一部分。  
@@ -89,7 +89,7 @@ ms.locfileid: "47820106"
 ### <a name="event-handlers-tab"></a>事件處理常式索引標籤  
  您可以在 [事件處理常式] 索引標籤的設計介面上，建構封裝中的事件。請在 [事件處理常式] 索引標籤上，選取要建立事件處理常式的封裝或封裝物件，然後選取要與事件處理常式產生關聯的事件。 事件處理常式具有控制流程和選擇性的資料流程。  
   
- 如需詳細資訊，請參閱 [Add an Event Handler to a Package](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)(將事件處理常式加入封裝中)。  
+ 如需詳細資訊，請參閱 [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78) (將事件處理常式加入封裝中)。  
   
 ### <a name="package-explorer-tab"></a>封裝總管索引標籤  
  封裝可能相當複雜，其中包括許多工作、連接管理員、變數和其他元素等。 封裝總管檢視可讓您查看封裝元素的完整清單。  
@@ -104,7 +104,7 @@ ms.locfileid: "47820106"
 #### <a name="connection-managers-area"></a>連接管理員區域  
  您可以在 [連線管理員] 區域中，加入及修改封裝所使用的連線管理員。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含可以連接到各種不同的資料來源 (例如文字檔、OLE DB 資料庫及 .NET 提供者) 的連線管理員。  
   
- 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../integration-services/connection-manager/integration-services-ssis-connections.md)和[建立連接管理員](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
+ 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../integration-services/connection-manager/integration-services-ssis-connections.md)和[建立連接管理員](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
  
 ## <a name="control-flow-tab"></a>控制流程索引標籤
 使用 **設計師的** [控制流程] [!INCLUDE[ssIS](../includes/ssis-md.md)] 索引標籤，即可在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中建立控制流程。  

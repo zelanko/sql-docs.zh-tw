@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 620debfd008dc120e171241d0038229e9dce8a04
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a3a822ddfdd954e0811e83ca4c92a2c3dc7e5b90
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028191"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812971"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>安裝 SQL Server Reporting Services (2017 和更新版本)
 
@@ -98,15 +98,15 @@ URL 保留項目是由前置詞、主機名稱、通訊埠和虛擬目錄所組�
 |部分|Description|
 |----------|-----------------|
 |Prefix|預設前置詞是 HTTP。 如果您之前安裝了安全通訊端層 (SSL) 憑證，安裝程式會嘗試建立使用 HTTPS 前置詞的 URL 保留項目。|
-|主機名稱|預設主機名稱是強式萬用字元 (+)， 它會指定報表伺服器接受解析為電腦任何主機名稱之指定連接埠上的任何 HTTP 要求，包括 `http://<computername>/reportserver`、`http://localhost/reportserver` 或 `http://<IPAddress>/reportserver.`|
+|主機名稱|預設主機名稱是強式萬用字元 (+)， 它會指定報表伺服器接受解析為電腦任何主機名稱之指定連接埠上的任何 HTTP 要求，包括 `https://<computername>/reportserver`、`https://localhost/reportserver` 或 `https://<IPAddress>/reportserver.`|
 |通訊埠|預設連接埠是 80。 如果您使用連接埠 80 以外的任何連接埠，當您在瀏覽器視窗中開啟入口網站時，就必須明確將此連接埠新增至 URL 中。|
 |虛擬目錄|根據預設，系統會建立虛擬目錄，報表伺服器 Web 服務使用 ReportServer 格式，入口網站使用 Reports 格式。 如果是報表伺服器 Web 服務，預設虛擬目錄會是 **reportserver**。 入口網站的預設虛擬目錄為 **reports**。|
 
 完整 URL 字串可能出現的範例如下：
 
-- `http://+:80/reportserver`，提供報表伺服器的存取權。
+- `https://+:80/reportserver`，提供報表伺服器的存取權。
 
-- `http://+:80/reports`，提供入口網站的存取權。
+- `https://+:80/reports`，提供入口網站的存取權。
 
 ## <a name="firewall"></a>防火牆
 

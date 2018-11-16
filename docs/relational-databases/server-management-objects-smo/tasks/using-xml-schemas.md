@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d0e6c33529219e73b4d517dc23fc933b0bf31f1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6eca03339745d8e8459eba438389f3c8e6000871
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814176"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660526"
 ---
 # <a name="using-xml-schemas"></a>使用 XML 結構描述
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -44,7 +44,7 @@ db = srv.Databases("AdventureWorks2012")
 'Define an XmlSchemaCollection object by supplying the parent database and name arguments in the constructor.
 Dim xsc As XmlSchemaCollection
 xsc = New XmlSchemaCollection(db, "MySampleCollection")
-xsc.Text = "\<schema xmlns=" + Chr(34) + "http://www.w3.org/2001/XMLSchema" + Chr(34) + "  xmlns:ns=" + Chr(34) + "http://ns" + Chr(34) + ">\<element name=" + Chr(34) + "e" + Chr(34) + " type=" + Chr(34) + "dateTime" + Chr(34) + "/></schema>"
+xsc.Text = "\<schema xmlns=" + Chr(34) + "https://www.w3.org/2001/XMLSchema" + Chr(34) + "  xmlns:ns=" + Chr(34) + "https://ns" + Chr(34) + ">\<element name=" + Chr(34) + "e" + Chr(34) + " type=" + Chr(34) + "dateTime" + Chr(34) + "/></schema>"
 'Create the XML schema collection on the instance of SQL Server.
 xsc.Create()
 ```
@@ -64,7 +64,7 @@ xsc.Create()
             // database and name arguments in the constructor.   
             XmlSchemaCollection xsc = default(XmlSchemaCollection);  
             xsc = new XmlSchemaCollection(db, "MySampleCollection");  
-            xsc.Text = "\<schema xmlns=" + Strings.Chr(34) + "http://www.w3.org/2001/XMLSchema" + Strings.Chr(34) + " xmlns:ns=" + Strings.Chr(34) + "http://ns" + Strings.Chr(34) + ">\<element name=" + Strings.Chr(34) + "e" + Strings.Chr(34) + " type=" + Strings.Chr(34) + "dateTime" + Strings.Chr(34) + "/></schema>";  
+            xsc.Text = "\<schema xmlns=" + Strings.Chr(34) + "https://www.w3.org/2001/XMLSchema" + Strings.Chr(34) + " xmlns:ns=" + Strings.Chr(34) + "https://ns" + Strings.Chr(34) + ">\<element name=" + Strings.Chr(34) + "e" + Strings.Chr(34) + " type=" + Strings.Chr(34) + "dateTime" + Strings.Chr(34) + "/></schema>";  
             //Create the XML schema collection on the instance of SQL Server.   
             xsc.Create();  
         }  
@@ -87,8 +87,8 @@ $xsc = New-Object -TypeName Microsoft.SqlServer.Management.SMO.XmlSchemaCollecti
   
 #Add the xml  
 $dq = '"' # the double quote character  
-$xsc.Text = "<schema xmlns=" + $dq + "http://www.w3.org/2001/XMLSchema" + $dq + `  
-"  xmlns:ns=" + $dq + "http://ns" + $dq + "><element name=" + $dq + "e" + $dq +`  
+$xsc.Text = "<schema xmlns=" + $dq + "https://www.w3.org/2001/XMLSchema" + $dq + `  
+"  xmlns:ns=" + $dq + "https://ns" + $dq + "><element name=" + $dq + "e" + $dq +`  
  " type=" + $dq + "dateTime" + $dq + "/></schema>"  
   
 #Create the XML schema collection on the instance of SQL Server.  

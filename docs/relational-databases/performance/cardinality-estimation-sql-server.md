@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c5096ef0690e915b1063c684ed60e00bcba8f33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27ef6862a5fcfb6e63ffcbdd89fb1e000c2065f2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854536"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667027"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基數估計 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,11 +83,11 @@ GO
  
 或者從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，使用[查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`。
  
- ```sql  
+ ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
-WHERE OrderAddedDate >= '2016-05-01'; 
-OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
+WHERE OrderAddedDate >= '2016-05-01'; 
+OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
 **查詢存放區**︰從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，提供查詢存放區工具，方便您檢查查詢的效能。 在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中，啟用查詢存放區的情況下，**物件總管**中的資料庫節點下會顯示**查詢存放區**節點。  
@@ -108,7 +108,7 @@ SET QUERY_STORE CLEAR;
 ```  
   
 > [!TIP] 
-> 建議您安裝最新版本的 [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx)，並經常進行更新。  
+> 建議您安裝最新版本的 [Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)，並經常進行更新。  
   
 追蹤基數估計處理序的另一個做法，是使用名為 **query_optimizer_estimate_cardinality** 的擴充事件。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼範例會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上執行。 其會將 .xel 檔案寫入 `C:\Temp\` (不過您可變更路徑)。 當您在 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 中開啟 .xel 檔案時，會以使用方便的方式來顯示其詳細資訊。  
   
@@ -139,17 +139,17 @@ STATE = START;  --STOP;
 GO  
 ```  
   
-如需為 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 量身訂做之擴充事件的相關資訊，請參閱 [SQL Database 中的擴充事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。  
+如需為 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 量身訂做之擴充事件的相關資訊，請參閱 [SQL Database 中的擴充事件](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。  
   
 ## <a name="steps-to-assess-the-ce-version"></a>評估 CE 版本的步驟  
   
 接下來的步驟可讓您用來評估是否有任何最重要查詢在最新 CE 下的執行效能不佳。 其中一些步驟是透過執行上一節所示的程式碼範例來進行。  
   
-1.  開啟 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 確定您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫已設定為最高可用的相容性層級。  
+1.  開啟 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]。 確定您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫已設定為最高可用的相容性層級。  
   
 2.  執行下列預備步驟：  
   
-    1.  開啟 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]  
+    1.  開啟 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]。  
   
     2.  執行 T-SQL，確定您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫已設定為最高可用的相容性層級。  
   
@@ -270,7 +270,7 @@ WHERE s.ticket = r.ticket AND
   
 ## <a name="see-also"></a>另請參閱  
  [效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](http://msdn.microsoft.com/library/dn673537.aspx) (使用 SQL Server 2014 基數估算程式最佳化您的查詢計劃)  
+ [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (使用 SQL Server 2014 基數估算程式最佳化您的查詢計劃)  
  [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)     
  [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    

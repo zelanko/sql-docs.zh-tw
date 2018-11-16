@@ -18,12 +18,12 @@ ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 05b2b181a1495a36135fae1019bd464b5bb8a701
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1d53e37f49341e022cc6c0b3e795b3f57c7108c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737706"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637935"
 ---
 # <a name="sequence-container"></a>時序容器
   「時序」容器會定義屬於封裝控制流程子集的控制流程。 「時序」容器會將封裝納入多個不同的控制流程中，而各流程中包含在整個封裝控制流程內執行的一項或多項工作和容器。  
@@ -54,11 +54,11 @@ ms.locfileid: "47737706"
  如需以程式設計方式設定這些屬性的詳細資訊，請參閱《開發人員指南》中 **T:Microsoft.SqlServer.Dts.Runtime.Sequence** 類別的文件。  
   
 ## <a name="related-tasks"></a>相關工作  
- 如需如何設定 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中元件屬性的資訊，請參閱 [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
+ 如需如何設定 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中元件屬性的資訊，請參閱 [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
 ## <a name="see-also"></a>另請參閱  
  [在控制流程中加入或刪除工作或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [使用預設的優先順序條件約束來連線工作和容器](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)   
+ [使用預設的優先順序條件約束來連接工作和容器](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)   
  [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)  
   
   

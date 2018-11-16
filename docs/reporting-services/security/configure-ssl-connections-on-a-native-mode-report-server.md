@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ddb9d77d0c2ddc9ac729bd0389a3bb70196cb189
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 5cd953a67893c2f9c457389a74c309fa207b2aad
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020272"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813601"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>在原生模式報表伺服器上設定 SSL 連接
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式會使用 HTTP SSL (安全通訊端層) 服務來建立與報表伺服器的加密連接。 如果您在報表伺服器電腦的本機憑證存放區內有安裝憑證 (.cer) 檔案，您可以將此憑證繫結到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 保留項目，以便透過加密通道支援報表伺服器連接。  
   
 > [!TIP]  
->  如果您正在使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式，請參閱 SharePoint 文件集取得詳細資訊。 例如，[如何在 SharePoint 2010 web 應用程式上啟用 SSL (http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)。  
+>  如果您正在使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式，請參閱 SharePoint 文件集取得詳細資訊。 例如，[如何在 SharePoint 2010 web 應用程式上啟用 SSL (https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)。  
   
  由於 Internet Information Services (IIS) 也使用 HTTP SSL，所以如果您在同一部電腦上執行 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，將必須負責解決重要的互通性問題。 請務必檢閱「與 IIS 的互通性問題」一節，以取得如何對付這些問題的指引。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "50020272"
   
  SSL 繫結是 Microsoft Windows 中的共用資源。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員或其他工具 (像是 IIS 管理員) 所做的變更，可能會影響同一部電腦上的其他應用程式。 最佳做法是使用相同的工具編輯用來建立繫結的繫結。  例如，如果您使用組態管理員建立 SSL 繫結，則建議您使用組態管理員管理繫結的生命週期。 如果您使用 IIS 管理員建立繫結，則建議您使用 IIS 管理員管理繫結的生命週期。 如果在電腦上安裝 IIS 之後才安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，則最好在設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]之前先檢閱 IIS 中的 SSL 組態。  
   
- 如果您使用 Reporting Services 組態管理員移除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 SSL 繫結，SSL 可能無法再於執行 Internet Information Services (IIS) 的伺服器或另一部 HTTP.SYS 伺服器的網站上運作。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員會移除下列登錄機碼。 移除此登錄機碼時，IIS 的 SSL 繫結也會移除。 若沒有此繫結，就不會對 HTTPS 通訊協定提供 SSL。 若要診斷此問題，請使用 IIS 管理員或 HTTPCFG.exe 命令列公用程式。若要解決此問題，請使用 IIS 管理員還原網站的 SSL 繫結。若要避免未來發生此問題，請使用 IIS 管理員移除 SSL 繫結，然後使用 IIS 管理員還原所需網站的繫結。 如需詳細資訊，請參閱知識庫文章：[移除 SSL 繫結之後 SSL 便不再有用 (http://support.microsoft.com/kb/956209/n)](http://support.microsoft.com/kb/956209/n) \(英文\)。  
+ 如果您使用 Reporting Services 組態管理員移除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 SSL 繫結，SSL 可能無法再於執行 Internet Information Services (IIS) 的伺服器或另一部 HTTP.SYS 伺服器的網站上運作。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員會移除下列登錄機碼。 移除此登錄機碼時，IIS 的 SSL 繫結也會移除。 若沒有此繫結，就不會對 HTTPS 通訊協定提供 SSL。 若要診斷此問題，請使用 IIS 管理員或 HTTPCFG.exe 命令列公用程式。若要解決此問題，請使用 IIS 管理員還原網站的 SSL 繫結。若要避免未來發生此問題，請使用 IIS 管理員移除 SSL 繫結，然後使用 IIS 管理員還原所需網站的繫結。 如需詳細資訊，請參閱知識庫文章：[移除 SSL 繫結之後 SSL 便不再有用 (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n) \(英文\)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用報表伺服器驗證](../../reporting-services/security/authentication-with-the-report-server.md)   

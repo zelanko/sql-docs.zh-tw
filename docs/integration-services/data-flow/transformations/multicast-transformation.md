@@ -19,12 +19,12 @@ ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 795eacbaacc5fca1cc3d51908a365986019543c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab41c2219ecc43988af30ad071dbea17a5c4f63e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664966"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638135"
 ---
 # <a name="multicast-transformation"></a>多點傳送轉換
   「多點傳送」轉換會將其輸入散發至一個或多個輸出。 此轉換與「條件式分割」轉換類似。 這兩種轉換都會將輸入導向多個輸出， 兩者的差異在於「多點傳送」轉換會將每個資料列導向每個輸出，而「條件式分割」會將一個資料列導向單一輸出。 如需詳細資訊，請參閱 [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)。  
@@ -38,7 +38,7 @@ ms.locfileid: "47664966"
 ## <a name="configuration-of-the-multicast-transformation"></a>設定多點傳送轉換  
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需有關可以程式設計方式設定之屬性的詳細資訊，請參閱＜ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)＞。  
+ 如需有關可以程式設計方式設定之屬性的詳細資訊，請參閱＜ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)＞。  
   
 ## <a name="related-tasks"></a>相關工作  
  如需如何設定此元件屬性的資訊，請參閱 [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  

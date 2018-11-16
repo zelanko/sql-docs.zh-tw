@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a821706126519e5d48026eae834e320f706d2e4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9cb0cecaef28d512cf36e694344e62b01df88ebf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176428"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657497"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server （獨立式） 和 SQL Server 中的 Machine Learning Server （獨立式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +35,7 @@ SQL Server 2016 只是 R。 SQL Server 2017 支援 R 和 Python。 下表描述�
 | Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open)是 Microsoft 的開放原始碼散發套件的。會包含封裝和解譯器。 一律使用 MRO 配套在安裝程式中的版本。 |
 | R 工具 | R 主控台視窗和命令提示字元是標準的工具，在 R 散發。 在 \Program files\Microsoft SQL Server\140\R_SERVER\bin\x64 中找到它們。 |
 | R 範例和指令碼 |  開放原始碼 R 和 RevoScaleR 套件包含內建的資料集，讓您可以建立並使用預先安裝的資料執行指令碼。 在 \Program files\Microsoft SQL Server\140\R_SERVER\library\datasets 和 \library\RevoScaleR 尋找它們。 |
-| Python 套件 | [**revoscalepy** ](../python/what-is-revoscalepy.md)可延展的 Python 與資料操作、 轉換、 視覺化和分析的函式中為主要媒體櫃。 <br/>[**microsoftml** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)新增機器學習演算法來建立自訂文字分析、 影像分析和情緒分析模型。  |
+| Python 套件 | [**revoscalepy** ](../python/what-is-revoscalepy.md)是主要的程式庫適用於可調整的 Python 搭配資料操作、 轉換、 視覺效果和分析的函式。 <br/>[**microsoftml** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)新增機器學習演算法來建立自訂文字分析、 影像分析和情緒分析模型。  |
 | Python 工具 | 內建的 Python 命令列工具可用於臨機操作測試和工作項目。 在 \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe 中找到此工具。 |
 | Anaconda | Anaconda 是開放原始碼散發套件的 Python 和基本封裝。 |
 | Python 範例和指令碼 | 在使用 R、 Python 會包含內建的資料集與指令碼。 尋找 revoscalepy 資料在 \Program files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site packages\revoscalepy\data\sample 資料。 |

@@ -15,12 +15,12 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3ecd041e75644fa726e2dc388c4b5ee34d8cded8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb02296dd980e0db7e093950bd33eed7d3c05cf3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664686"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677297"
 ---
 # <a name="the-transaction-log-sql-server"></a>交易記錄 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47664686"
 在還原每個記錄檔備份時，Database Engine 會重新套用記錄在記錄檔中的所有修改，以向前復原所有交易。 在還原最後一個記錄檔備份後，Database Engine 接著會使用記錄檔資訊來回復在該點尚未完成的所有交易。 
 
 ### <a name="supporting-transactional-replication"></a>支援異動複寫
-「記錄讀取器代理程式」會監視設定異動複寫的各資料庫交易記錄，並將標示要複寫的交易從交易記錄複製到散發資料庫中。 如需詳細資訊，請參閱 [異動複寫的運作方式](http://msdn.microsoft.com/library/ms151706.aspx)。
+「記錄讀取器代理程式」會監視設定異動複寫的各資料庫交易記錄，並將標示要複寫的交易從交易記錄複製到散發資料庫中。 如需詳細資訊，請參閱 [異動複寫的運作方式](https://msdn.microsoft.com/library/ms151706.aspx)。
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>支援高可用性和災害復原解決方案
 待命伺服器方案、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、資料庫鏡像和記錄傳送都是高度依賴交易記錄。 
@@ -157,7 +157,7 @@ ms.locfileid: "47664686"
   
     -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 新堆積重建 (如果適用)。 `DROP INDEX`作業期間的索引頁取消配置**一律**經完整記錄。
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="RelatedTasks"></a> Related tasks  
  **管理交易記錄**  
   
 -   [管理交易記錄檔的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  

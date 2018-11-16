@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10ed333bd96a0667271f3f5653e9f81ba614d49b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76859771490cf744db4dff1e247188f978426cfa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662576"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670597"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>大量匯入與匯出 XML 文件的範例 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47662576"
 如需詳細資訊，請參閱下列主題。
 - [使用 bcp 公用程式匯入及匯出大量資料 (SQL Server)。](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
 - [使用 BULK INSERT 或 OPENROWSET (BULK...) 匯入大量資料 (SQL Server)。](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
-- [如何使用 XML 大量載入元件將 XML 匯入 SQL Server。](https://support.microsoft.com/en-us/kb/316005)
+- [如何使用 XML 大量載入元件將 XML 匯入 SQL Server。](https://support.microsoft.com/kb/316005)
 - [XML 結構描述集合 (SQL Server)](../xml/xml-schema-collections-sql-server.md)
   
 ## <a name="examples"></a>範例  

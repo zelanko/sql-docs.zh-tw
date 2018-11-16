@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.logshipping.settings.monitor.f1
@@ -14,12 +13,12 @@ ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4fcbb55287fe1b83d4c474bf643a2eff3a20928b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98c2a62a558785f2ea2c483eb1e109a6ee873b0d
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788447"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560435"
 ---
 # <a name="log-shipping-monitor-settings"></a>記錄傳送監視器設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

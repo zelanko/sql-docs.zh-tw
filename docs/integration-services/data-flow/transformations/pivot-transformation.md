@@ -19,12 +19,12 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57c3adc8418eaab839ef4f7c924c794eaa53bb05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a136d62eb71b4551478e4247c498555cad0fafe
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605906"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641015"
 ---
 # <a name="pivot-transformation"></a>樞紐轉換
   「樞紐」轉換可藉由樞紐資料行值上的輸入資料，將正規化的資料集轉換為較不正規但更精簡的版本。 例如，列出客戶名稱、產品及購買數量的正規化 **Orders** 資料集，對於購買多個產品的客戶一般都具有多個資料列，且該客戶的每個資料列都顯示不同產品的訂單詳細資料。 藉由樞紐產品資料行上的資料集，「樞紐」轉換可以為每位客戶輸出含單一資料列的資料集。 該單一資料列會列出客戶購買的所有產品，產品名稱顯示為資料行名稱，而數量則顯示為產品資料行中的值。 因為不是每位客戶都會購買所有產品，所以許多資料行可能包含 Null 值。  
@@ -127,7 +127,7 @@ ms.locfileid: "47605906"
   
  如需有關 [進階編輯器] 對話方塊中可設定屬性的詳細資訊，請按一下下列其中一個主題：  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

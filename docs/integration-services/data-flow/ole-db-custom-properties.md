@@ -11,12 +11,12 @@ ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b0961f3cb3b63b86b65490e0959d9e369edb0ed5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9942a24879e9e9c8d3b2bfa0c20c0f3f7400992
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836046"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638985"
 ---
 # <a name="ole-db-custom-properties"></a>OLE DB 自訂屬性
   **來源自訂屬性**  
@@ -69,6 +69,6 @@ ms.locfileid: "47836046"
  如需詳細資訊，請參閱 [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

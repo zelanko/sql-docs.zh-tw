@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 29ef6eaf427a0ab8ee2a3b040f2a4255079eecdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c762c5ebb679460686dbf38958d097de687b1052
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826346"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673527"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47826346"
 > [!CAUTION]  
 >  對於擁有大量的資料庫或大量的登入的安裝，即可限制會導致效能、 高 CPU 使用率、 sys.event_log 中的活動，並將其可能會導致登入失敗中。 Sys.event_log 的查詢可以協助的問題。 Microsoft 正努力解決此問題。 在此同時，若要減少此問題的影響，限制 sys.event_log 的查詢。 NewRelic SQL Server 外掛程式的使用者應該瀏覽[Microsoft Azure SQL Database 外掛程式調整和效能調整](https://discuss.newrelic.com/t/microsoft-azure-sql-database-plugin-tuning-performance-tweaks/30729)的其他設定資訊。  
   
- `sys.event_log`檢視包含下列資料行。  
+ `sys.event_log` 檢視包含以下資料行。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -75,12 +75,12 @@ ms.locfileid: "47826346"
 |**連線能力**|**connection_failed**|9|**重新設定**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 連接失敗，因為資料庫當時正在進行重新組態。|  
 |**連線能力**|**connection_terminated**|0|**idle_connection_timeout**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 連接已閒置超過系統定義的臨界值。|  
 |**連線能力**|**connection_terminated**|1|**重新設定**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 由於資料庫重新設定，已終止工作階段。|  
-|**連線能力**|**節流設定**|*\<原因代碼 >*|**reason_code**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 要求已節流。  節流原因代碼： *\<原因代碼 >*。 如需詳細資訊，請參閱 <<c0> [ 引擎節流](http://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
-|**連線能力**|**throttling_long_transaction**|40549|**long_transaction**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 工作階段已終止，因為您有長時間執行的交易。 請嘗試縮短您的交易。 如需詳細資訊，請參閱 <<c0> [ 資源限制](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**連線能力**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它取得太多鎖定。 請嘗試在單一交易中讀取或修改較少的資料列。 如需詳細資訊，請參閱 <<c0> [ 資源限制](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**連線能力**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用 TEMPDB。 請嘗試修改查詢，減少使用暫存資料表空間。 如需詳細資訊，請參閱 <<c0> [ 資源限制](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**連線能力**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用交易記錄檔空間。 請嘗試在單一交易中修改較少的資料列。 如需詳細資訊，請參閱 <<c0> [ 資源限制](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**連線能力**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用記憶體。 請嘗試修改查詢以處理較少的資料列。 如需詳細資訊，請參閱 <<c0> [ 資源限制](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**連線能力**|**節流設定**|*\<原因代碼 >*|**reason_code**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 要求已節流。  節流原因代碼： *\<原因代碼 >*。 如需詳細資訊，請參閱 <<c0> [ 引擎節流](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
+|**連線能力**|**throttling_long_transaction**|40549|**long_transaction**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 工作階段已終止，因為您有長時間執行的交易。 請嘗試縮短您的交易。 如需詳細資訊，請參閱 <<c0> [ 資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**連線能力**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它取得太多鎖定。 請嘗試在單一交易中讀取或修改較少的資料列。 如需詳細資訊，請參閱 <<c0> [ 資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**連線能力**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用 TEMPDB。 請嘗試修改查詢，減少使用暫存資料表空間。 如需詳細資訊，請參閱 <<c0> [ 資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**連線能力**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用交易記錄檔空間。 請嘗試在單一交易中修改較少的資料列。 如需詳細資訊，請參閱 <<c0> [ 資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**連線能力**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用記憶體。 請嘗試修改查詢以處理較少的資料列。 如需詳細資訊，請參閱 <<c0> [ 資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**引擎**|**死結**|0|**死結**|2|發生死結。|  
   
 ## <a name="permissions"></a>Permissions  
@@ -224,6 +224,6 @@ SELECT * FROM CTE2;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Azure SQL Database 中擴充的事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+ [Azure SQL Database 中擴充的事件](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
   
   

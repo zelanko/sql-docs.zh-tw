@@ -11,12 +11,12 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d8fff1dbb0d7e44ad814c312be65efccaa731ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3d91b56ea331d443252206f627aa4b0b3b40345
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792471"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639695"
 ---
 # <a name="lesson-1-1---creating-a-new-integration-services-project"></a>課程 1-1 - 建立新的 Integration Services 專案
 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立封裝的第一步就是建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。 這個專案包含物件的範本 — 資料來源、資料來源檢視和封裝 — 您在資料轉換方案中會用到它們。  
@@ -26,7 +26,7 @@ ms.locfileid: "47792471"
 > [!NOTE]  
 > 這個教學課程需要 Microsoft SQL Server Data Tools。  
 >   
-> 如需有關安裝 SQL Server Data Tools 的詳細資訊，請參閱＜ [SQL Server Data Tools 下載](http://msdn.microsoft.com/data/hh297027)＞。  
+> 如需有關安裝 SQL Server Data Tools 的詳細資訊，請參閱＜ [SQL Server Data Tools 下載](https://msdn.microsoft.com/data/hh297027)＞。  
   
 ### <a name="to-create-a-new-integration-services-project"></a>若要建立新的 Integration Services 專案  
   

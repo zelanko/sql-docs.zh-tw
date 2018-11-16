@@ -17,12 +17,12 @@ ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a84a11092ab1cab6e252d16d010f991d8a865c0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddcdfc32fe38495779f95aae0da20bf314c34c17
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761706"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639645"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>傳送主要預存程序工作
   「傳送主要預存程序」工作會在 **執行個體上的** master [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫之間，傳送一個或多個使用者自訂預存程序。 若要從 **master** 資料庫傳送預存程序，程序的擁有者必須為 dbo。  
@@ -48,7 +48,7 @@ ms.locfileid: "47761706"
  「傳送主要預存程序」工作並不報告登入傳送的累加進度，它只報告 0% 和 100 % 完成。  
   
 ## <a name="execution-value"></a>執行值  
- 工作之 **ExecutionValue** 屬性中定義的執行值會傳回已傳送的預存程序數。 透過將使用者自訂變數指派給「傳送主要預存程序」工作的 **ExecValueVariable** 屬性，可將與預存程序傳送相關的資訊用於封裝中的其他物件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 工作之 **ExecutionValue** 屬性中定義的執行值會傳回已傳送的預存程序數。 透過將使用者自訂變數指派給「傳送主要預存程序」工作的 **ExecValueVariable** 屬性，可將與預存程序傳送相關的資訊用於封裝中的其他物件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
 ## <a name="log-entries"></a>記錄項目  
  「傳送主要預存程序」工作包含下列自訂記錄項目：  
@@ -78,7 +78,7 @@ ms.locfileid: "47761706"
 ## <a name="related-tasks"></a>相關工作  
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="transfer-master-stored-procedures-task-editor-general-page"></a>傳送主要預存程序工作編輯器 (一般頁面)
   使用 [傳送主要預存程序工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述傳送主要預存程序工作。  

@@ -11,12 +11,12 @@ ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dfc778865740b7ecb525e530ad94b27c2d2cf767
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebf916f83a801005d16c860a9dc84205b1fd43d1
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809886"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703126"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>建立主資料管理員 Web 服務 Proxy 類別
 
@@ -36,19 +36,19 @@ ms.locfileid: "47809886"
   
 3.  儲存檔案的變更。  
   
-4.  瀏覽至服務 URL (例如：`http://yourserver/MDS/service/service.svc`) 來測試中繼資料發佈。 如果已啟用中繼資料發佈，則會顯示開頭為   
+4.  瀏覽至服務 URL (例如：`https://yourserver/MDS/service/service.svc`) 來測試中繼資料發佈。 如果已啟用中繼資料發佈，則會顯示開頭為   
     「您已建立服務」的頁面。  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>使用 Visual Studio 建立 Proxy 類別  
- 如果您已安裝 Visual Studio 2010，產生 Proxy 類別最簡單的方式，就是將 [服務參考] 新增至您的專案。 服務參考的位址就是 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式的 URL，並附加 /service/service.svc。 例如： `http://yourserver/MDS/service/service.svc`＞。 如需詳細資訊，請參閱[如何：新增、更新或移除服務參考](http://go.microsoft.com/fwlink/?LinkId=221167)。  
+ 如果您已安裝 Visual Studio 2010，產生 Proxy 類別最簡單的方式，就是將 [服務參考] 新增至您的專案。 服務參考的位址就是 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式的 URL，並附加 /service/service.svc。 例如： `https://yourserver/MDS/service/service.svc`＞。 如需詳細資訊，請參閱[如何：新增、更新或移除服務參考](https://go.microsoft.com/fwlink/?LinkId=221167)。  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>使用 Svcutil.exe 建立 Proxy 類別  
- 您必須已經安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK，電腦上才會有 Svcutil.exe。 如果您使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，您須使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 命令提示字元執行此命令。 如需詳細資訊，請參閱 [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](http://go.microsoft.com/fwlink/?LinkId=165027) 和[從服務中繼資料產生 WCF 用戶端](http://go.microsoft.com/fwlink/?LinkId=164821)。  
+ 您必須已經安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK，電腦上才會有 Svcutil.exe。 如果您使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，您須使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 命令提示字元執行此命令。 如需詳細資訊，請參閱 [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) 和[從服務中繼資料產生 WCF 用戶端](https://go.microsoft.com/fwlink/?LinkId=164821)。  
   
  若要使用 Svcutil.exe 建立一組 C# Proxy 類別，請使用類似以下的命令：  
   
 ```  
-svcutil.exe http://<server_name:port>/<virtual_path>/Service/Service.svc   
+svcutil.exe https://<server_name:port>/<virtual_path>/Service/Service.svc   
 /out:<proxy_name>.cs /messageContract /tcv:Version35   
 /noconfig /ct:System.Collections.ObjectModel.Collection`1   
 /namespace:*,Microsoft.MasterDataServices  

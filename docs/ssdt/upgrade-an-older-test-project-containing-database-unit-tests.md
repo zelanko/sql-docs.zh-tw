@@ -11,12 +11,12 @@ ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02978a329399612e22e952ff6c0be6201c48d32e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4c40f2173ac2ee907aa6999539e83cd4d8eba0a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715062"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661217"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>升級包含資料庫單元測試的舊版測試專案
 您可以升級在 Visual Studio 2010 中建立且包含資料庫單元測試的舊版測試專案，以使用新的 SQL Server Data Tools 資料庫單元測試執行階段和工具。 升級舊版專案之後，您可以將 SQL Server 單元測試加入至專案 (如需詳細資訊，請參閱[建立並定義 SQL Server 單元測試](../ssdt/creating-and-defining-sql-server-unit-tests.md))。  
@@ -24,7 +24,7 @@ ms.locfileid: "47715062"
 > [!TIP]  
 > 如果您要使用 Visual Studio 2010，將 SQL Server 單元測試加入至測試專案之後，就不應該使用舊版資料庫單元測試範本加入單元測試。 如果這麼做，需要再次轉換專案，才能正確執行測試。  
   
-如果您有 Visual Studio 2010 以前版本所建立的測試資料庫專案，可以使用 [如何：從舊版 Visual Studio 升級資料庫單元測試](http://msdn.microsoft.com/library/dd193412(VS.100).aspx)中的資訊，將資料庫專案升級至 Visual Studio 2010，然後再將專案升級至 SQL Server Data Tools。  
+如果您有 Visual Studio 2010 以前版本所建立的測試資料庫專案，可以使用 [如何：從舊版 Visual Studio 升級資料庫單元測試](https://msdn.microsoft.com/library/dd193412(VS.100).aspx)中的資訊，將資料庫專案升級至 Visual Studio 2010，然後再將專案升級至 SQL Server Data Tools。  
   
 ### <a name="initiating-an-upgrade"></a>起始升級  
   

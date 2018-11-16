@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75263ad68af90f0dfd8035cc943a194c344f90fa
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: c8c9e653781b821d3fcc2e7c2e5dd218b329e22c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461028"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675357"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -122,7 +122,7 @@ ms.locfileid: "49461028"
 7. 在 SQL Server 電腦上，在提升權限的 Windows PowerShell 主控台執行下列命令，以告知 SQL Server 電腦證明的位置。 請確定您指定 HGS 電腦的 IP 位址或 DNS 名稱。 
 
    ```powershell
-   Set-HgsClientConfiguration -AttestationServerUrl http://<IP address or DNS name>/Attestation -KeyProtectionServerUrl http://<IP address or DNS name>/KeyProtection/  
+   Set-HgsClientConfiguration -AttestationServerUrl https://<IP address or DNS name>/Attestation -KeyProtectionServerUrl https://<IP address or DNS name>/KeyProtection/  
    ```
 
 上述命令的結果應該顯示 AttestationStatus = Passed。
@@ -145,9 +145,9 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 – 請重�
    RECONFIGURE
    ```
 
-3. 重新啟動您的 SQL Server 執行個體，先前的變更才會生效。 您可以在 SSMS 中重新啟動執行個體，方法是在 [物件總管] 中以滑鼠右鍵按一下它，然後選取 [重新啟動]。 執行個體重新啟動之後，重新連線到它。
+3. 重新啟動您的 SQL Server 執行個體，先前的變更才會生效。 您可以在 SSMS 中重新啟動執行個體，方法是在 [物件總管] 中以滑鼠右鍵按一下它，然後選取 [重新啟動]。 執行個體重新啟動之後，請與它重新連線。
 
-4. 執行下列查詢，確認安全記憶體保護區現在已載入：
+4. 執行下列查詢，確認現在已載入安全記憶體保護區：
 
    ```sql
    SELECT [name], [value], [value_in_use] FROM sys.configurations
@@ -231,18 +231,18 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 – 請重�
     1. 以滑鼠右鍵按一下 [Always Encrypted 金鑰]，然後選取 [新增資料行主要金鑰]。
     2. 選取您的資料行主要金鑰名稱：CMK1。
     3. 請確定您選取 [Windows 憑證存放區 (目前使用者或本機電腦)] 或 [Azure Key Vault]。
-    4. 選取 [允許記憶體保護區計算]。
-    5. 如果您選取 Azure Key Vault，請登入 Azure，然後選取您的金鑰保存庫。 如需如何建立 Always Encrypted 金鑰保存庫的詳細資訊，請參閱 [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/) (從 Azure 入口網站管理金鑰保存庫)。
-    6. 如果金鑰已存在請選取它，或是遵循表單上的指示來建立新金鑰。
+    4. 選取 [允許記憶體保護區運算]。
+    5. 如果您已選取 Azure Key Vault，請登入 Azure，然後選取您的金鑰保存庫。 如需如何建立 Always Encrypted 金鑰保存庫的詳細資訊，請參閱 [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/) (從 Azure 入口網站管理金鑰保存庫)。
+    6. 如果金鑰已存在，請選取它，或是遵循表單上的指示來建立新金鑰。
     7. 選取 [確定]。
 
-        ![允許記憶體保護區計算](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
+        ![允許記憶體保護區運算](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
 
 4. 建立已啟用記憶體保護區的新資料行加密金鑰：
 
     1. 以滑鼠右鍵按一下 [Always Encrypted 金鑰]，然後選取 [新增資料行加密金鑰]。
     2. 輸入新資料行加密金鑰的名稱：CEK1。
-    3. 在 [資料行主要金鑰] 下拉式清單中，選取您在上一個步驟中建立的資料行主要金鑰。
+    3. 在 [資料行主要金鑰] 下拉式清單中，選取您在先前步驟中建立的資料行主要金鑰。
     4. 選取 [確定]。
 
 ## <a name="step-6-encrypt-some-columns-in-place"></a>步驟 6：就地加密某些資料行
@@ -253,7 +253,7 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 – 請重�
     1. 在 SSMS 中，開啟新的查詢視窗。
     2. 以滑鼠右鍵按一下新查詢視窗中的任何位置。
     3. 選取 [連線]\>[變更連線]。
-    4. 選取 [選項]。 巡覽至 [Always Encrypted] 索引標籤、選取 [啟用 Always Encrypted]，並指定您的記憶體保護區證明 URL。
+    4. 選取 [選項]。 巡覽至 [Always Encrypted] 索引標籤，並選取 [啟用 Always Encrypted]，然後指定您的記憶體保護區證明 URL。
     5. 選取 [連接]。
 2. 在 SSMS 中，設定另一個查詢視窗，並針對資料庫連線停用 Always Encrypted 。
     1. 在 SSMS 中，開啟新的查詢視窗。
@@ -294,7 +294,7 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 – 請重�
 現在，您可以針對加密的資料行執行豐富查詢。 在伺服器端記憶體保護區內，將會執行一些查詢處理。 
 
 1. 啟用 Always Encrypted 的參數化。
-    1. 從 SSMS 的主功能表選取 [查詢]。
+    1. 從 SSMS 的主功能表中，選取 [查詢]。
     2. 選取 [查詢選項...] 。
     3. 瀏覽至 [執行] > [進階]。
     4. 選取或取消選取 [啟用 Always Encrypted 的參數化]。

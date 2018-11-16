@@ -15,12 +15,12 @@ ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 82349ca6935f685c441dfa15fede994d19173fb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4222e8a63a29fe8c41d0e1715d2569bc9863068c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685929"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661258"
 ---
 # <a name="creating-user-defined-types"></a>建立使用者定義型別
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Reconfigure
 ## <a name="example"></a>範例  
  下列程式碼清單會定義 Point UDT，詳細資料中所述[< 類型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)。  
   
- 藉由安裝 CLR 範例，可取得本節所討論之其他範例的完整程式碼清單。 如需有關安裝這些範例的指示，請參閱[SQL Server Database Engine 範例](http://msftengprodsamples.codeplex.com/)。  
+ 藉由安裝 CLR 範例，可取得本節所討論之其他範例的完整程式碼清單。 如需有關安裝這些範例的指示，請參閱[SQL Server Database Engine 範例](https://msftengprodsamples.codeplex.com/)。  
   
  C#  
   

@@ -20,12 +20,12 @@ ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d768351c318d46d0d82b3553f8d12bed7fb817ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8be5561838f5a2072ad330c907d4fac49f8a96e5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795916"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638211"
 ---
 # <a name="merge-transformation"></a>合併轉換
   「合併」轉換會將兩個已排序的資料集結合成單一資料集。 各資料集的資料列會根據其索引鍵資料行的值插入輸出中。  
@@ -60,7 +60,7 @@ ms.locfileid: "47795916"
   
  如需可以用程式設計的方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47795916"
   
 ## <a name="see-also"></a>另請參閱  
  [合併聯結轉換](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
- [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [聯集全部轉換](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [資料流程](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

@@ -21,12 +21,12 @@ ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bfcf99a28a847097d943495c205d7d894bb388ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af752a0d7435e64ce7f8e7f985817ad4bca25167
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658466"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638646"
 ---
 # <a name="sort-transformation"></a>排序轉換
   「排序」轉換會以遞增或遞減的順序排序輸入資料，並將排序的資料複製到轉換輸出。 您可以對輸入套用多項排序，而各項排序是由決定排序順序的數字識別。 數字最小的資料行會最先排序，接著是排序數字第二小的排序資料行，以此類推。 例如，如果名為 **CountryRegion** 的資料行排序順序為 1，且名為 **City** 的資料行排序順序為 2，則輸出會先按照 Country/Region 排序，然後才按照 City。 正數代表以遞增順序排序，負數則代表以遞減順序排序。 未排序的資料行具有 0 的排序次序。 未選取進行排序的資料行會與經過排序的資料行一起自動複製到轉換輸出。  
@@ -47,7 +47,7 @@ ms.locfileid: "47658466"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47658466"
  如需如何設定元件屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="related-content"></a>相關內容  
- codeplex.com 上的範例： [SortDeDuplicateDelimitedString 自訂 SSIS 元件](http://go.microsoft.com/fwlink/?LinkId=220821)。  
+ codeplex.com 上的範例： [SortDeDuplicateDelimitedString 自訂 SSIS 元件](https://go.microsoft.com/fwlink/?LinkId=220821)。  
   
 ## <a name="sort-transformation-editor"></a>排序轉換編輯器
   使用 **[排序轉換編輯器]** 對話方塊，即可選取要排序的資料行、設定排序順序和指定是否要移除重複的項目。  

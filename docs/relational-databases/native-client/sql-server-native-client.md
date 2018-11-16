@@ -11,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c14175fd58e11fd372c0ab523ccbd48e1f856f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ce8d425aeb1c1b66f198efb4b222dc94c6e24ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627406"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677797"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,13 +45,13 @@ SNAC 或 SQL Server Native Client，指的是，已用交換來參考適用於 S
 
 中的 ODBC[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端支援新增至 Windows 7 SDK 中的標準 ODBC 的三個功能：  
 
--   連接相關作業的非同步執行。 如需詳細資訊，請參閱 <<c0> [ 非同步執行](http://go.microsoft.com/fwlink/?LinkID=191493)。  
+-   連接相關作業的非同步執行。 如需詳細資訊，請參閱 <<c0> [ 非同步執行](https://go.microsoft.com/fwlink/?LinkID=191493)。  
 
--   C 資料類型擴充性。 如需詳細資訊，請參閱 < [ODBC 中的 C 資料類型](http://go.microsoft.com/fwlink/?LinkID=191495)。  
+-   C 資料類型擴充性。 如需詳細資訊，請參閱 < [ODBC 中的 C 資料類型](https://go.microsoft.com/fwlink/?LinkID=191495)。  
 
      若要支援這項功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端，可以傳回 SQLGetDescField **SQL_C_SS_TIME2** (如**時間**類型) 或**SQL_C_SS_TIMESTAMPOFFSET** （適用於**datetimeoffset**) 而非**SQL_C_BINARY**，如果您的應用程式使用 ODBC 3.8 的話。 如需詳細資訊，請參閱 <<c0> [ 資料類型對 ODBC 日期和時間改善支援](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)。  
 
--   呼叫**SQLGetData**使用小型緩衝區多次，以便擷取大型參數值。 如需詳細資訊，請參閱 <<c0> [ 使用 SQLGetData 擷取輸出參數](http://go.microsoft.com/fwlink/?LinkID=191494)。  
+-   呼叫**SQLGetData**使用小型緩衝區多次，以便擷取大型參數值。 如需詳細資訊，請參閱 <<c0> [ 使用 SQLGetData 擷取輸出參數](https://go.microsoft.com/fwlink/?LinkID=191494)。  
 
  下列主題描述的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 行為變更。  
 

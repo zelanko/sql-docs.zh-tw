@@ -17,12 +17,12 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43b3ec688f23d1ba50392c09b115301cfa2ae127
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4aca92b322d3eb0a3b987300d88a877d29cf3cda
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707891"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639023"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>封裝執行的疑難排解工具
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的功能與工具，可讓您在完成及部署封裝之後，用以疑難排解封裝的執行問題。  
@@ -82,7 +82,7 @@ ms.locfileid: "47707891"
   
     3.  **考慮擷取資料列計數資料**。 請考慮另外建立資料表以存放資料列計數資訊，在此資料表中，是以封裝的 ExecutionID 識別封裝執行的每個執行個體。 使用「資料列計數」轉換，在資料流程的關鍵點將資料列計數儲存到一系列變數中。 資料流程結束後，請使用執行 SQL 工作將這一系列的值插入資料表中的資料列，以供稍後進行分析及製作報表。  
   
-     如需此方法的詳細資訊，請參閱《 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 白皮書》 [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602)(專案 REAL：Business Intelligence ETL 設計練習) 中的 "ETL Auditing and Logging" (＜ETL 稽核和記錄＞) 一節。  
+     如需此方法的詳細資訊，請參閱《[!INCLUDE[msCoName](../../includes/msconame-md.md)] 白皮書》[Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602) (專案 REAL：Business Intelligence ETL 設計練習) 中的 "ETL Auditing and Logging" (＜ETL 稽核和記錄＞) 一節。  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>使用偵錯傾印檔案針對封裝執行進行疑難排解  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，您可以建立偵錯傾印檔案，以便提供封裝執行的資訊。 如需相關資訊，請參閱 [產生封裝執行的傾印檔案](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)。  
@@ -95,7 +95,7 @@ ms.locfileid: "47707891"
      您可以針對資料流程工作設定 **DelayValidation** 屬性，但無法針對個別資料流程元件設定這個屬性。 將個別資料流程元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 屬性設為 **false**中開發封裝時可以用於疑難排解封裝的功能和工具。 不過，當這個屬性的值是 **false**時，元件不會察覺對外部資料來源之中繼資料所做的變更。 設為 **true**時， <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 屬性可以協助避免因資料庫中的鎖定而造成的封鎖問題，尤其是在封裝使用交易時。  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>疑難排解執行階段權限的問題  
- 如果您嘗試使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行已部署封裝時發生錯誤，可能此代理程式所使用的帳戶沒有必要權限。 如需如何為您從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業執行的封裝進行疑難排解的資訊，請參閱 [從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行](http://support.microsoft.com/kb/918760)。 如需如何從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業執行封裝的詳細資訊，請參閱 [封裝的 SQL Server Agent 作業](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)。  
+ 如果您嘗試使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行已部署封裝時發生錯誤，可能此代理程式所使用的帳戶沒有必要權限。 如需如何為您從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業執行的封裝進行疑難排解的資訊，請參閱[從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行](https://support.microsoft.com/kb/918760)。 如需如何從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業執行封裝的詳細資訊，請參閱 [封裝的 SQL Server Agent 作業](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)。  
   
  若要連接至 Excel 或 Access 資料來源， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 需要使用在 TEMP 和 TMP 環境變數所指定之資料夾中有權讀取、寫入、建立和刪除暫存檔的帳戶。  
   
@@ -110,4 +110,4 @@ ms.locfileid: "47707891"
  [偵錯資料流程](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>相關內容  
- 位於 dougbert.com 的部落格項目： [Adding the error column name to an error output](http://go.microsoft.com/fwlink/?LinkId=261546)(將錯誤資料行名稱加入至錯誤輸出)。  
+ 位於 dougbert.com 的部落格項目： [Adding the error column name to an error output](https://go.microsoft.com/fwlink/?LinkId=261546)(將錯誤資料行名稱加入至錯誤輸出)。  

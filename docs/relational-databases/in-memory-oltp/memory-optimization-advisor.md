@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3202bef4631477b1dcb25bda412773830f7f0ccc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ffa4178e4e0f5fc26dc7545edce4cf5326c17a5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724886"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671402"
 ---
 # <a name="memory-optimization-advisor"></a>記憶體最佳化 Advisor
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47724886"
   
 -   將資料表和資料移轉至記憶體最佳化 (如果沒有不支援的功能)。  
     
- 如需移轉方法的資訊，請參閱 [記憶體內部 OLTP - 一般工作負載模式和移轉考量](http://msdn.microsoft.com/library/dn673538.aspx)。  
+ 如需移轉方法的資訊，請參閱 [記憶體內部 OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>使用記憶體最佳化 Advisor 的逐步解說  
  在 **[物件總管]** 中，以滑鼠右鍵按一下您想要轉換的資料表，然後選取 **[記憶體最佳化 Advisor]**。 隨即顯示 **[資料表記憶體最佳化 Advisor]** 的歡迎頁面。  
@@ -99,7 +99,7 @@ ms.locfileid: "47724886"
   
  如果主索引鍵不存在，而且資料表正移轉至非持久性資料表，這個畫面將不會出現。  
   
- 對於文字資料行 ( **char**、 **nchar**、 **varchar**和 **nvarchar**類型的資料行)，您必須選取適當的定序。 記憶體中 OLTP 只支援記憶體最佳化資料表上的資料行之 BIN2 定序，而不支援附帶補充字元的定序。 如需支援的定序及定序變更之潛在影響的詳細資訊，請參閱＜ [Collations and Code Pages](http://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) ＞。  
+ 對於文字資料行 ( **char**、 **nchar**、 **varchar**和 **nvarchar**類型的資料行)，您必須選取適當的定序。 記憶體中 OLTP 只支援記憶體最佳化資料表上的資料行之 BIN2 定序，而不支援附帶補充字元的定序。 如需支援的定序及定序變更之潛在影響的詳細資訊，請參閱＜ [Collations and Code Pages](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) ＞。  
   
  您可以為主索引鍵設定下列參數：  
   
@@ -113,7 +113,7 @@ ms.locfileid: "47724886"
   
 -   非叢集索引。 此類型的索引最適合具有許多範圍查詢的索引。 您可以在 **[排序資料行和次序]** 清單中設定每個資料行的排序次序。  
   
- 若要了解主索引鍵最適合的索引類型，請參閱 [雜湊索引](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e)。  
+ 若要了解主索引鍵最適合的索引類型，請參閱 [雜湊索引](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e)。  
   
  選定主索引鍵之後，請按 **[下一步]** 。  
   

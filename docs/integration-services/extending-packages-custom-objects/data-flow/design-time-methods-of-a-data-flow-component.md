@@ -20,12 +20,12 @@ ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4864aedf00d616ee35e551035574430c808bd70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5c45761082fc37846cb732c6130718ba23efee0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806026"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639117"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>資料流程元件的設計階段方法
   據說在執行之前，資料流程工作會設計狀態階段進行累加變更。 變更可包括元件的加入或移除、連接元件的路徑物件之加入或移除，以及對於元件中繼資料的變更。 當中繼資料變更發生時，元件可以監視變更並對其做出反應。 例如，元件可以不允許某些變更，或是做其他變更以回應變更。 在設計階段，設計工具會透過設計階段 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> 介面與元件互動。  
@@ -101,7 +101,7 @@ customProperty.TypeConverter = GetType(MyValidValues).AssemblyQualifiedName
 customProperty.Value = MyValidValues.ValueOne  
 ```  
   
- 如需詳細資訊，請參閱 [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=7022) 中的＜通用類型轉換＞與＜實作類型轉換子＞。  
+ 如需詳細資訊，請參閱 [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022) 中的＜通用類型轉換＞與＜實作類型轉換子＞。  
   
  您可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> 屬性，為自訂屬性值指定自訂編輯器對話方塊，如下列範例所示。 首先，如果您找不到符合需求的現有 UI 類型編輯器類別，您必須建立一個繼承自 **System.Drawing.Design.UITypeEditor** 的自訂類型編輯器。  
   
@@ -135,7 +135,7 @@ customProperty.Name = "My Custom Property"
 customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName  
 ```  
   
- 如需詳細資訊，請參閱 [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=7022) 中的＜實作 UI 類型編輯器＞。  
+ 如需詳細資訊，請參閱 [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022) 中的＜實作 UI 類型編輯器＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流程元件的執行階段方法](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  

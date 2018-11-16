@@ -37,12 +37,12 @@ ms.assetid: ''
 author: pamela
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 84ac455efb9a5babe801d11218659730382dab8d
-ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
+ms.openlocfilehash: fe1fef76dd083d5b464bd2021aebb0e74e695543
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50965976"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703916"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -247,5 +247,5 @@ GO
 
 ## <a name="see-also"></a>另請參閱
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)    
-[How to generate a script of the necessary database metadata to create a statistics-only database in SQL Server](http://support.microsoft.com/help/914288) (如何產生必要資料庫中繼資料的指令碼，以在 SQL Server 中建立僅限統計資料的資料庫)   
+[How to generate a script of the necessary database metadata to create a statistics-only database in SQL Server](https://support.microsoft.com/help/914288) (如何產生必要資料庫中繼資料的指令碼，以在 SQL Server 中建立僅限統計資料的資料庫)   
 

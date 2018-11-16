@@ -22,12 +22,12 @@ ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c732b19c371a48e2bf165a3fe7d326fe8476e045
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9d8b702172a66918bd5fe6a101ddf07b05f6484
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639336"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677887"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>使用 WITH XMLNAMESPACES 將命名空間加入至查詢
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ FOR XML RAW ('ns1:Prod'), ELEMENTS
     ```  
     CREATE TABLE T (x xml)  
     go  
-    WITH XMLNAMESPACES ('http://abc' as myNS )  
+    WITH XMLNAMESPACES ('https://abc' as myNS )  
     INSERT INTO T VALUES('<myNS:root/>')  
     ```  
   
@@ -114,7 +114,7 @@ FOR XML RAW, ELEMENTS XSINIL
  以下是結果：  
   
 ```  
-<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
+<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="uri">  
   <ns1:ProductID>316</ns1:ProductID>  
   <ns1:Name>Blade</ns1:Name>  
   <ns1:Color xsi:nil="true" />  
@@ -181,7 +181,7 @@ FOR XML PATH('sql:root')
 </sql:root>  
 ```  
   
- 只有 xml 命名空間前置詞，不用在 WITH XMLNAMESPACES 中明確定義就可以使用，如以下 PATH 模式查詢中所示。 同時，若前置詞已經宣告了，就必須將它繫結到命名空間 http://www.w3.org/XML/1998/namespace。 SELECT 子句中指定的名稱會參考不是使用 WITH XMLNAMESPACES 明確定義的 xml 命名空間前置詞。  
+ 只有 xml 命名空間前置詞，不用在 WITH XMLNAMESPACES 中明確定義就可以使用，如以下 PATH 模式查詢中所示。 同時，若前置詞已經宣告了，就必須將它繫結到命名空間 https://www.w3.org/XML/1998/namespace。 SELECT 子句中指定的名稱會參考不是使用 WITH XMLNAMESPACES 明確定義的 xml 命名空間前置詞。  
   
 ```  
 SELECT 'en'    as "English/@xml:lang",  
@@ -208,14 +208,14 @@ go
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
-declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
     <Product   
         ProductModelID= "{ sql:column("ProductModelID") }"   
         />  
 ') AS Result  
 FROM Production.ProductModel  
 WHERE CatalogDescription.exist('  
-    declare namespace  pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+    declare namespace  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      /pd:ProductDescription[(pd:Specifications)]'  
     ) = 1  
 ```  
@@ -223,13 +223,13 @@ WHERE CatalogDescription.exist('
  在上一個查詢中，**query()** 及 **exist()** 方法都在其初構中宣告了相同的命名空間。 例如：  
   
 ```  
-declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 ```  
   
  另外，您也可以先宣告 WITH XMLNAMESPACES，然後在查詢中使用命名空間前置詞。 在此情況中， **query()** 及 **exist()** 方法就不需要在初構中包含命名空間宣告。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
 SELECT ProductModelID, CatalogDescription.query('  
     <Product   
         ProductModelID= "{ sql:column("ProductModelID") }"   

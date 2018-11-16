@@ -21,18 +21,18 @@ ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: e78d5226a4ab726718eb7725640de22dd811a684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9495ff7a58da124255cc6bf5674d92ebeef4c2b0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764406"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677667"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>準備 Access 資料庫的移轉 (AccessToSQL)
 移轉至 Access 資料庫之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您必須判斷哪些資料庫移轉，並確保這些資料庫準備好進行移轉。  
   
 ## <a name="determining-when-to-migrate-to-sql-server"></a>判斷何時要移轉至 SQL Server  
-Jet 資料庫引擎，用來作為資料庫引擎進行存取，是有彈性、 簡單易用的解決方案，適用於資料管理。 不過，隨著變得越來越大的資料庫及更多的任務關鍵性，許多使用者發現，它們需要較高的效能、 安全性或可用性。 對於需要更強固的資料平台的應用程式，請考慮將應用程式所需的基礎資料庫移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需有關如何決定何時要移轉的詳細資訊，請參閱 <<c0> [ 移轉資訊頁面](http://go.microsoft.com/fwlink/?LinkId=68571)上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網站。  
+Jet 資料庫引擎，用來作為資料庫引擎進行存取，是有彈性、 簡單易用的解決方案，適用於資料管理。 不過，隨著變得越來越大的資料庫及更多的任務關鍵性，許多使用者發現，它們需要較高的效能、 安全性或可用性。 對於需要更強固的資料平台的應用程式，請考慮將應用程式所需的基礎資料庫移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需有關如何決定何時要移轉的詳細資訊，請參閱 <<c0> [ 移轉資訊頁面](https://go.microsoft.com/fwlink/?LinkId=68571)上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]網站。  
   
 您將資料庫移轉至之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以繼續使用存取是透過連結的資料表，或您可以手動將移轉您的應用程式[!INCLUDE[msCoName](../../includes/msconame_md.md)].NET Framework 為基礎的程式碼直接互動[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   

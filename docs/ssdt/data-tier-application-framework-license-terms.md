@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 307471c65910c702a7777796e153a599a6a4e59f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13c4320a3e571c6680800fac18f9be75674f61ce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825916"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664987"
 ---
 # <a name="data-tier-application-framework---license-terms"></a>資料層應用程式架構 - 授權條款
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "47825916"
     -   將軟體或本合約移轉給任何第三人。  
     -   利用軟體提供商業軟體主機服務。  
       
-4.  **第三方廠商聲明。** 本軟體可能包含第三方廠商程式碼，這些程式碼係由 Microsoft 而非第三方廠商根據本合約中設立的條款授權予　貴用戶。 任何第三方廠商程式碼聲明 (如果有的話) 僅供　貴用戶資訊參考之用。 此外，任何從本軟體連結、呼叫或參考之第三方廠商指令碼，係由擁有這類程式碼之第三方廠商授權給　貴用戶，而非由 Microsoft 授權，請參閱 ASP.NET Ajax CDN 使用規定： http://www.asp.net/ajaxlibrary/CDN.ashx。  
+4.  **第三方廠商聲明。** 本軟體可能包含第三方廠商程式碼，這些程式碼係由 Microsoft 而非第三方廠商根據本合約中設立的條款授權予　貴用戶。 任何第三方廠商程式碼聲明 (如果有的話) 僅供　貴用戶資訊參考之用。 此外，任何從本軟體連結、呼叫或參考之第三方廠商指令碼，係由擁有這類程式碼之第三方廠商授權給　貴用戶，而非由 Microsoft 授權，請參閱 ASP.NET Ajax CDN 使用規定： https://www.asp.net/ajaxlibrary/CDN.ashx。  
   
 5.  **備份。** 貴用戶得製作軟體的一份備份。 貴用戶僅得用它來重新安裝軟體。  
   

@@ -23,12 +23,12 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f87b80fb11261ee1d49326dfc29fe89fc2bdc94c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e46ec694b130ca684f5437e04159436a36afd44
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857036"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641175"
 ---
 # <a name="script-component"></a>指令碼元件
   指令碼元件可裝載指令碼，並讓封裝包含及執行自訂指令碼。 您可在封裝中使用指令碼元件以達到下列目的：  
@@ -101,7 +101,7 @@ ms.locfileid: "47857036"
 ### <a name="configuring-the-script-component-programmatically"></a>以程式設計的方式設定指令碼元件  
  如需有關可以在 **[屬性]** 視窗中或以程式設計的方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -177,7 +177,7 @@ ms.locfileid: "47857036"
  **Inputs and outputs**  
  在左方選取輸入及輸出，即可在右方檢視其在資料表中的屬性。 可用於編輯的屬性會根據選取範圍而有所不同。 顯示的許多屬性是唯讀的。 如需個別屬性的詳細資訊，請參閱下列主題。  
   
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
  [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

@@ -14,17 +14,17 @@ ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8205582caebddb941d3c5dc512a3952fbf9f8f3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4404b2af9114da376e007bf91533f9e083dbff10
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750356"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639875"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 套件和專案參數
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 參數可讓您在封裝執行時，將值指派給封裝內的屬性。 您可以在專案層級建立 *「專案參數」* (Project Parameter)，並在封裝層級建立 *「封裝參數」* (Package Parameter)。 專案參數可用於向專案中的一個或多個封裝提供專案接收的任何外部輸入。 封裝參數可讓您修改封裝執行，而不需要編輯和重新部署封裝。  
   
- 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中您使用 **[Project.params]** 視窗建立、修改或刪除專案參數。 您可使用 **設計師中的** [參數] [!INCLUDE[ssIS](../includes/ssis-md.md)] 索引標籤建立、修改或刪除封裝參數。 您可使用 **[參數化]** 對話方塊將新的或現有的參數與工作屬性產生關聯。 如需使用 **[Project.params]** 視窗和 **[參數]** 索引標籤的詳細資訊，請參閱＜ [Create Parameters](http://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99)＞。 如需 **[參數化]** 對話方塊的詳細資訊，請參閱＜ [Parameterize Dialog Box](http://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)＞。  
+ 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中您使用 **[Project.params]** 視窗建立、修改或刪除專案參數。 您可使用 **設計師中的** [參數] [!INCLUDE[ssIS](../includes/ssis-md.md)] 索引標籤建立、修改或刪除封裝參數。 您可使用 **[參數化]** 對話方塊將新的或現有的參數與工作屬性產生關聯。 如需使用 **[Project.params]** 視窗和 **[參數]** 索引標籤的詳細資訊，請參閱＜ [Create Parameters](https://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99)＞。 如需 **[參數化]** 對話方塊的詳細資訊，請參閱＜ [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)＞。  
   
 ## <a name="parameters-and-package-deployment-model"></a>參數及封裝部署模型  
  一般而言，若您是使用封裝部署模型部署封裝，就應該使用組態而不是參數。  
@@ -214,6 +214,6 @@ ms.locfileid: "47750356"
  若要使用 Transact-SQL 設定伺服器預設值，請使用 [catalog.set_object_parameter_value &#40;SSISDB 資料庫&#41;](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md) 預存程序。 若要檢視目前的伺服器預設值，請查詢 [catalog.object_parameters &#40;SSISDB 資料庫&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 檢視。 若要清除伺服器預設值，請使用 [catalog.clear_object_parameter_value &#40;SSISDB 資料庫&#41;](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md) 預存程序。  
   
 ## <a name="related-content"></a>相關內容  
- mattmasson.com 上的部落格文章： [SSIS 快速提示：必要參數](http://go.microsoft.com/fwlink/?LinkId=239781)。  
+ mattmasson.com 上的部落格文章： [SSIS 快速提示：必要參數](https://go.microsoft.com/fwlink/?LinkId=239781)。  
   
   

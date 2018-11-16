@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb9e6c469e4cc90565cfc0864b4f03fee44d326f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 889f791f74d7f28496b763eb942907ab8227ef4d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747056"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670737"
 ---
 # <a name="working-with-query-notifications"></a>使用查詢通知
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,11 +62,11 @@ ms.locfileid: "47747056"
 CREATE QUEUE myQueue  
 CREATE SERVICE myService ON QUEUE myQueue   
   
-([http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
+([https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
 ```  
   
 > [!NOTE]  
->  服務必須使用預先定義的合約 `http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification` (如上所示)。  
+>  服務必須使用預先定義的合約 `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification` (如上所示)。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 提供者  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援在資料列集修改時取用者通知。 使用者會在資料列集修改的每個階段以及嘗試進行任何變更時收到通知。  
@@ -117,7 +117,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- 如果 SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT 和 SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS 並非 NULL，則每次執行命令時，都會將包含上述定義的三個屬性的查詢通知 TDS 標頭傳送到伺服器。 如果其中任一項為 Null，則不會傳送標頭，而會傳回 SQL_SUCCESS_WITH_INFO。 驗證發生於[SQLPrepare 函數](http://go.microsoft.com/fwlink/?LinkId=59360)， **SqlExecDirect**，並**SqlExecute**，則所有失敗如果不是有效屬性。 同樣地，當針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本設定這些查詢通知屬性時，執行會失敗且引發 SQL_SUCCESS_WITH_INFO。  
+ 如果 SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT 和 SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS 並非 NULL，則每次執行命令時，都會將包含上述定義的三個屬性的查詢通知 TDS 標頭傳送到伺服器。 如果其中任一項為 Null，則不會傳送標頭，而會傳回 SQL_SUCCESS_WITH_INFO。 驗證發生於[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)， **SqlExecDirect**，並**SqlExecute**，則所有失敗如果不是有效屬性。 同樣地，當針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本設定這些查詢通知屬性時，執行會失敗且引發 SQL_SUCCESS_WITH_INFO。  
   
 > [!NOTE]  
 >  訂閱永遠都不會因為準備陳述式而初始化，但可能會因為執行陳述式而初始化。  

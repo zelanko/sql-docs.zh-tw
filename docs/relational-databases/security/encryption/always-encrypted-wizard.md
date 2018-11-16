@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 863c4664560b42103e3ed2ff288bdbcb7d69a52c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38077378d0980d351c4c65ca25b1574b7a7d7bc2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630166"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673574"
 ---
 # <a name="always-encrypted-wizard"></a>永遠加密精靈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47630166"
  
  - 如需示範如何透過精靈設定 [永遠加密] 功能，並在用戶端應用程式加以運用的完整逐步解說，請參閱 [SQL Database 教學課程︰透過永遠加密來保護敏感性資料](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)。  
  
- - 如需使用精靈的影片，請參閱 [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)。 此外，請參閱 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性小組部落格的 [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](http://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx)(SSMS 加密精靈 - 幾個簡單步驟即可啟用永遠加密)。  
+ - 如需使用精靈的影片，請參閱 [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)。 此外，請參閱 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性小組部落格的 [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](https://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx)(SSMS 加密精靈 - 幾個簡單步驟即可啟用永遠加密)。  
  
  - **權限︰** 若要使用此精靈來查詢加密資料行及選取金鑰，您必須具有 `VIEW ANY COLUMN MASTER KEY DEFINITION` 和 `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` 權限。 若要建立新的金鑰，您也必須具有 `ALTER ANY COLUMN MASTER KEY` 和 `ALTER ANY COLUMN ENCRYPTION KEY` 權限。  
  
