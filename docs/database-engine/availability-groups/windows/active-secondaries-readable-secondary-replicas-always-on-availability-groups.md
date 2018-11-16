@@ -17,12 +17,12 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2aaca4afa75981ce56f68c4408f4dd9d820a4939
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0c7c2b420adedaff0a67ff0f10c14d581f13f94
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777186"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604710"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47777186"
   
 -   以磁碟資料表的唯讀工作負載，會使用資料列版本設定以移除對於次要資料庫的封鎖競爭。 針對次要資料庫執行的所有查詢都會自動對應到快照集隔離交易層級，即使已明確設定其他交易隔離等級也是如此。 此外，所有鎖定提示都會被忽略。 這排除了讀取器/寫入器競爭。  
   
--   記憶體最佳化持久資料表的唯讀工作負載存取資料的方式，與主要資料庫上的存取方式完全相同，都是使用原生預存程序或 SQL 互通性，而且具有相同的交易隔離等級限制 (請參閱 [Database Engine 中的隔離等級](http://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7))。 在主要複本上執行的報表工作負載或唯讀查詢可以在次要複本上執行，不需要任何變更。 同樣地，在次要複本上執行的報表工作負載或唯讀查詢也可以在主要複本上執行，不需要任何變更。  與磁碟基礎的資料表類似，對次要資料庫執行的所有查詢都會自動對應到快照集隔離交易層級，即使已明確設定其他交易隔離等級也是如此。  
+-   記憶體最佳化持久資料表的唯讀工作負載存取資料的方式，與主要資料庫上的存取方式完全相同，都是使用原生預存程序或 SQL 互通性，而且具有相同的交易隔離等級限制 (請參閱 [Database Engine 中的隔離等級](https://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7))。 在主要複本上執行的報表工作負載或唯讀查詢可以在次要複本上執行，不需要任何變更。 同樣地，在次要複本上執行的報表工作負載或唯讀查詢也可以在主要複本上執行，不需要任何變更。  與磁碟基礎的資料表類似，對次要資料庫執行的所有查詢都會自動對應到快照集隔離交易層級，即使已明確設定其他交易隔離等級也是如此。  
   
 -   次要複本上以磁碟為基礎和記憶體最佳化資料表類型，都允許對資料表變數進行 DML 作業。  
   
@@ -256,7 +256,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [關於可用性複本的用戶端連線存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
+ [關於可用性複本的用戶端連接存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [統計資料](../../../relational-databases/statistics/statistics.md)  
   

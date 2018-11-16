@@ -38,12 +38,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d57063ee518574adbb5faf2070ef2cfd203885b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8e4fb4a2e8da7ecf32e4bec80f3d18a53a022ac
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745326"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699796"
 ---
 # <a name="search-condition-transact-sql"></a>搜尋條件 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "47745326"
  指定 SELECT 陳述式、查詢運算式或子查詢結果集中所傳回之資料列的條件。 如果是 UPDATE 陳述式，便指定要更新的資料列。 如果是 DELETE 陳述式，便指定要刪除的資料列。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式搜尋條件中所能包括的述詞數目沒有限制。  
   
  \<graph_search_pattern>  
- 指定圖形比對模式。 如需此子句之引數的詳細資訊，請參閱 [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
+ 指定圖形比對模式。 如需此子句的引數詳細資訊，請參閱 [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
  
  NOT  
  執行述詞所指定之布林運算式的否定運算。 如需詳細資訊，請參閱 [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md)。  
@@ -134,7 +134,7 @@ ms.locfileid: "47745326"
  這是一個資料行名稱、常數、函數、變數、純量子查詢，或任何由一個或多個運算子來連接的資料行名稱、常數和函數之組合，或子查詢。 另外，運算式也可以包含 CASE 運算式。  
   
 > [!NOTE]  
->  非 Unicode 字串常數和變數會使用與資料庫預設定序對應的字碼頁。 僅使用非 Unicode 字元資料及參考非 Unicode 字元資料類型 **char**、**varchar** 及 **text** 時，就會進行字碼頁轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將非 Unicode 字串常數和變數，轉換成與所參考資料行之定序或使用 COLLATE 指定之定序對應的字碼頁，但前提是該字碼頁與和資料庫預設定序對應的字碼頁不同。 任何在新字碼頁中找不到的字元只要可以找到[最相符對應](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)，就會轉譯成類似的字元，否則會轉換成預設的取代字元 "?"。  
+>  非 Unicode 字串常數和變數會使用與資料庫預設定序對應的字碼頁。 僅使用非 Unicode 字元資料及參考非 Unicode 字元資料類型 **char**、**varchar** 及 **text** 時，就會進行字碼頁轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將非 Unicode 字串常數和變數，轉換成與所參考資料行之定序或使用 COLLATE 指定之定序對應的字碼頁，但前提是該字碼頁與和資料庫預設定序對應的字碼頁不同。 任何在新字碼頁中找不到的字元只要可以找到[最相符對應](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)，就會轉譯成類似的字元，否則會轉換成預設的取代字元 "?"。  
 >  
 > 使用多個字碼頁時，可以在字元常數前面加上大寫字母 'N'，以及使用 Unicode 變數，來避免進行字碼頁轉換。  
   

@@ -12,12 +12,12 @@ ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 22cd64be469f9e8c1ebdcac7bd463bbf4d6d9c26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e028d1238a0bb41207d5a88f4c219dac7cb392cd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694186"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696596"
 ---
 # <a name="business-rule-actions-master-data-services"></a>商務規則動作 (Master Data Services)
 
@@ -54,7 +54,7 @@ ms.locfileid: "47694186"
 |---------------------|-----------------|  
 |**需要**|選取的屬性 **為需要的**，表示不能為 null 或空白。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
 |**無效**|選取的屬性 **無效**。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
-|**必須包含模式**|選取的屬性 **必須包含指定的模式** 。 使用 .NET Framework 規則運算式來指定模式。<br /><br /> 如需有關規則運算式的詳細資訊，請參閱 MSDN Library 中的 [規則運算式語言項目](http://go.microsoft.com/fwlink/?LinkId=164401) 。<br /><br /> 此動作適用於文字及連結值。|  
+|**必須包含模式**|選取的屬性 **必須包含指定的模式** 。 使用 .NET Framework 規則運算式來指定模式。<br /><br /> 如需有關規則運算式的詳細資訊，請參閱 MSDN Library 中的 [規則運算式語言項目](https://go.microsoft.com/fwlink/?LinkId=164401) 。<br /><br /> 此動作適用於文字及連結值。|  
 |**必須是唯一的**|選取的屬性 **必須獨立或與定義的屬性結合時是唯一的** 。<br /><br /> **最佳作法** ：結合此動作與強制性條件，以確保訂閱系統中索引欄位的有效性。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。<br /><br /> **注意**：如果第一個屬性的類型是 DateTime，則無法與類型為 Numeric 或 Text 的屬性一起使用。 如果第一個屬性的類型是 Numeric，則無法與類型為 DateTime 的屬性一起使用。|  
 |**必須具有下列其中一個值**|選取的屬性 **必須具有清單中指定的其中一個值** 。<br /><br /> 此動作適用於文字值。|  
 |**必須大於**|選取的屬性 **必須大於** 特定的屬性、特定的屬性值或空白。<br /><br /> 此動作適用於文字、數字及日期值。|  
@@ -71,7 +71,7 @@ ms.locfileid: "47694186"
   
 |動作名稱|Description|  
 |-----------------|-----------------|  
-|**啟動工作流程**|起始外部工作流程。 造成此動作發生的資料會傳遞給工作流程。 如需詳細資訊，請參閱 [Master Data Services 的 SharePoint 工作流程整合](http://msdn.microsoft.com/library/gg690195.aspx)。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
+|**啟動工作流程**|起始外部工作流程。 造成此動作發生的資料會傳遞給工作流程。 如需詳細資訊，請參閱 [Master Data Services 的 SharePoint 工作流程整合](https://msdn.microsoft.com/library/gg690195.aspx)。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
   
 ## <a name="see-also"></a>另請參閱  
  [商務規則條件 &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   

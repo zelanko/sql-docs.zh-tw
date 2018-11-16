@@ -14,17 +14,17 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0433940c558dc6cac8aeb7310bb6b038e911b971
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1dab0e7496a41d897b927c4a53d6cc75ca8bdc4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827186"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640766"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services (SSIS) 伺服器與目錄
   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中設計和測試封裝之後，可以將含有那些封裝的專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器是裝載 **SSISDB** 資料庫的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體。 資料庫會儲存封裝、專案、參數、權限、伺服器屬性與作業歷程記錄等物件。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器為主控 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 資料庫之 **ssDEnoversion** 的執行個體。 資料庫會儲存封裝、專案、參數、權限、伺服器屬性與作業歷程記錄等物件。  
   
  **SSISDB** 資料庫會透過可供您查詢的公用檢視，公開物件資訊。 此資料庫也會提供預存程序，讓您可加以呼叫來管理物件。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "47827186"
 ## <a name="high-availability"></a>高可用性  
  **SSISDB** 資料庫和其他使用者資料庫一樣，也支援資料庫鏡像和複寫。 如需鏡像及複寫的詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
- 您也可以利用 SSIS 和 Always On 可用性群組，以提供 SSISDB 及其內容的高可用性。 如需詳細資訊，請參閱[適用於 SSIS 目錄 (SSISDB) 的 AlwaysOn](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)。 另請參閱這篇 Matt Masson 撰寫的部落格文章：[SSIS 與 AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873)，網址為 blogs.msdn.com。  
+ 您也可以利用 SSIS 和 Always On 可用性群組，以提供 SSISDB 及其內容的高可用性。 如需詳細資訊，請參閱[適用於 SSIS 目錄 (SSISDB) 的 AlwaysOn](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)。 另請參閱這篇 Matt Masson 撰寫的部落格文章：[SSIS 與 AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=255873)，網址為 blogs.msdn.com。  
   
 ##  <a name="ssms"></a> SQL Server Management Studio 中的 Integration Services Server  
  當您連接到主控 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 資料庫之 **ssDEnoversion** 執行個體時，您會在 [物件總管] 中看到以下物件：  
@@ -57,6 +57,6 @@ ms.locfileid: "47827186"
 -   [執行 Integration Services (SSIS) 套件](../../integration-services/packages/run-integration-services-ssis-packages.md)  
   
 ## <a name="related-content"></a>相關內容  
- 部落格內容：[SSIS 與 AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873)，網址為 blogs.msdn.com。  
+ 部落格內容：[SSIS 與 AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=255873)，網址為 blogs.msdn.com。  
   
   

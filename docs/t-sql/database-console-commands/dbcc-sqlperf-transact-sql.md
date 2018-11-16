@@ -23,19 +23,19 @@ ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: fe8d7ae38915a335276e661e3ce5f28c61b9a40e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4843f3085b409ef1c34096e040c92be8cd8c744
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710996"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696626"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 為所有資料庫提供交易記錄空間使用量的統計資料。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，它可以用來重設等候及閂鎖統計資料。
   
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([某些區域為預覽版](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([某些區域為預覽版](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -90,7 +90,7 @@ WITH NO_INFOMSGS
 ## <a name="examples"></a>範例  
   
 ### <a name="a-displaying-log-space-information-for-all-databases"></a>A. 顯示所有資料庫的記錄檔空間資訊  
-下列範例會顯示包含在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內之所有資料庫的 `LOGSPACE` 資訊。
+下列範例會顯示包含在 `LOGSPACE` 執行個體內之所有資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資訊。
   
 ```sql  
 DBCC SQLPERF(LOGSPACE);  

@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ae4b7f0804b9cab8ac9c364be2337f6b7438025
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3498d05f32abac1a8ffccf408c4b4af30023ed8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647506"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664917"
 ---
 # <a name="tables"></a>資料表
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "47647506"
  除了基本使用者定義資料表的標準角色之外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還提供在資料庫中具有特殊用途的下列資料表類型。  
   
  分割區資料表  
- 資料分割資料表的資料會水平劃分成數個單元，分散於資料庫中的多個檔案群組。 資料分割使大型資料表或索引的管理更為容易，這是因為您可以快速有效地存取或管理資料的子集，同時維持整體集合的完整性。 依預設， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 最多支援 15,000 個資料分割。 如需詳細資訊，請參閱 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
+ 資料分割資料表的資料會水平劃分成數個單元，分散於資料庫中的多個檔案群組。 資料分割使大型資料表或索引的管理更為容易，這是因為您可以快速有效地存取或管理資料的子集，同時維持整體集合的完整性。 依預設， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 最多支援 15,000 個資料分割。 如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。  
   
  暫存資料表  
  暫存資料表儲存在 **tempdb**中。 暫存資料表有兩種：區域與全域。 它們在名稱、可見性和可用性方面有些差異。 本機暫存資料表是以單一數字符號 (#) 作為名稱的第一個字元；只有目前連接的使用者才能看見它們，當使用者中斷與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的連接時，就會刪除它們。 全域暫存資料表是以兩個數字符號 (##) 做為名稱的前兩個字元；只要一建立好，任何使用者都能看見它們，只有當所有參考這些資料表的使用者都中斷與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的連接時，才會刪除它們。  
   
  系統資料表  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將伺服器組態及其所有資料表的定義資料儲存在一組特殊資料表中，稱為系統資料表。 使用者不能直接查詢或更新系統資料表。 系統資料表中的資訊可透過系統檢視表取得。 如需詳細資訊，請參閱[系統檢視 &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將伺服器組態及其所有資料表的定義資料儲存在一組特殊資料表中，稱為系統資料表。 使用者不能直接查詢或更新系統資料表。 系統資料表中的資訊可透過系統檢視表取得。 如需詳細資訊，請參閱[系統檢視 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)。  
   
  寬型資料表  
  寬型資料表會使用 [疏鬆資料行](../../relational-databases/tables/use-sparse-columns.md) ，將資料表可以包含的資料行總數增加至 30,000。 疏鬆資料行為已最佳化儲存位置來保存 Null 值的一般資料行。 疏鬆資料行會減少 Null 值的空間需求，但要付出擷取非 Null 值的更多成本負擔。 寬型資料表已定義 [資料行集](../../relational-databases/tables/use-column-sets.md)，而資料行集是不具類型的 XML 表示，可將資料表的所有疏鬆資料行合併至結構化輸出中。 索引和統計資料的數目也會分別增加至 1,000 和 30,000。 寬型資料表資料列的大小上限為 8,019 個位元組。 因此，任何特定資料列中的大部分資料應該是 NULL。 在寬型資料表中，非疏鬆資料行加上計算資料行的數目上限仍然是 1,024。  

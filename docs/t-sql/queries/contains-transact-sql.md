@@ -35,12 +35,12 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76af62211fc8d479e476fceb643efaf5946eca7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 146802c657155f751b7121723d95fa7d78cb98e3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753656"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704026"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -354,7 +354,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  您可以在 CONTAINS 或 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 述詞中使用四部分名稱，以便在連結的伺服器上查詢目標資料表的全文檢索索引資料行。 若要準備遠端伺服器來接收全文檢索查詢，請針對遠端伺服器上的目標資料表與資料行建立全文檢索索引，然後加入遠端伺服器成為連結的伺服器。  
   
 ## <a name="comparison-of-like-to-full-text-search"></a>LIKE 與全文檢索搜尋的比較  
- 相較於全文檢索搜尋，[LIKE](../../t-sql/language-elements/like-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 述詞只能針對字元模式運作。 您也無法使用 LIKE 述詞來查詢格式化的二進位資料。 此外，針對大量非結構化文字資料執行 LIKE 查詢的速度會比針對相同資料執行對等全文檢索查詢的速度要慢很多。 對於數百萬列的資料，使用 LIKE 查詢時可能要好幾分鐘才能傳回搜尋結果，但是使用全文檢索查詢時可能只要幾秒鐘的時間 (視傳回的資料列數目及其大小而定)。 另一個考量是 LIKE 只對整個資料表執行簡單模式掃描。 相對地，全文檢索查詢是語言感知，會在索引和查詢時間套用特定轉換，例如篩選停用字詞以及進行同義字和詞形變化的擴充。 這些轉換有助於全文檢索查詢改善其重新叫用及其結果的最終次序。  
+ 相較於全文檢索搜尋， [LIKE](../../t-sql/language-elements/like-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 述詞只能針對字元模式運作。 您也無法使用 LIKE 述詞來查詢格式化的二進位資料。 此外，針對大量非結構化文字資料執行 LIKE 查詢的速度會比針對相同資料執行對等全文檢索查詢的速度要慢很多。 對於數百萬列的資料，使用 LIKE 查詢時可能要好幾分鐘才能傳回搜尋結果，但是使用全文檢索查詢時可能只要幾秒鐘的時間 (視傳回的資料列數目及其大小而定)。 另一個考量是 LIKE 只對整個資料表執行簡單模式掃描。 相對地，全文檢索查詢是語言感知，會在索引和查詢時間套用特定轉換，例如篩選停用字詞以及進行同義字和詞形變化的擴充。 這些轉換有助於全文檢索查詢改善其重新叫用及其結果的最終次序。  
   
 ## <a name="querying-multiple-columns-full-text-search"></a>查詢多個資料行 (全文檢索搜尋)  
  您可以指定要搜尋的資料行清單，來查詢多個資料行。 這些資料行必須來自相同的資料表。  
@@ -547,7 +547,7 @@ GO
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [使用全文檢索搜尋進行查詢](../../relational-databases/search/query-with-full-text-search.md)   
  [全文檢索搜尋](../../relational-databases/search/full-text-search.md)   
- [建立全文檢索搜尋查詢 &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [建立全文檢索搜尋查詢 &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   

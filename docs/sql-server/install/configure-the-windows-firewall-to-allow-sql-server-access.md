@@ -23,12 +23,12 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 936daeb3e47c4acf57b3bc519f410861c4248945
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: c27a57b034e538971f9ed5e32634a2469c84b0b3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970999"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702878"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "50970999"
 若要透過防火牆存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，您必須在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 防火牆是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 的元件。 您也可以安裝來自其他公司的防火牆。 本文討論 Windows 防火牆的設定方法；其中的基本原則也適用於其他防火牆程式。  
   
 > [!NOTE]  
->  本文提供防火牆設定的概觀，並且摘要說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員有興趣的資訊。 如需有關防火牆的詳細資訊以及授權的防火牆資訊，請參閱防火牆文件集，例如 [具有進階安全性的 Windows 防火牆和 IPsec](http://go.microsoft.com/fwlink/?LinkID=116904)。  
+>  本文提供防火牆設定的概觀，並且摘要說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員有興趣的資訊。 如需有關防火牆的詳細資訊以及授權的防火牆資訊，請參閱防火牆文件集，例如 [具有進階安全性的 Windows 防火牆和 IPsec](https://go.microsoft.com/fwlink/?LinkID=116904)。  
   
  如果使用者已熟悉 [控制台] 中的 [Windows 防火牆] 項目與具有進階安全性的 Windows 防火牆 Microsoft Management Console (MMC) 嵌入式管理單元，並清楚自己想要設定的防火牆設定，即可直接移至下列清單中的文章：  
   
@@ -62,11 +62,11 @@ ms.locfileid: "50970999"
   
  選擇防火牆策略比單獨決定給定的通訊埠應該開啟或關閉更複雜。 為企業設計防火牆策略時，請務必考慮所有適用的規則和組態選項。 本文不會檢閱所有可能的防火牆選項。 我們建議您檢閱下列文件：  
   
- [具有進階安全性的 Windows 防火牆入門指南](http://go.microsoft.com/fwlink/?LinkId=116080)  
+ [具有進階安全性的 Windows 防火牆入門指南](https://go.microsoft.com/fwlink/?LinkId=116080)  
   
- [具有進階安全性的 Windows 防火牆設計指南](http://go.microsoft.com/fwlink/?LinkId=116904)  
+ [具有進階安全性的 Windows 防火牆設計指南](https://go.microsoft.com/fwlink/?LinkId=116904)  
   
- [伺服器及網域隔離簡介](http://go.microsoft.com/fwlink/?LinkId=116081)  
+ [伺服器及網域隔離簡介](https://go.microsoft.com/fwlink/?LinkId=116081)  
   
 ##  <a name="BKMK_default"></a> 預設防火牆設定  
  規劃防火牆組態的第一個步驟是判斷作業系統之防火牆的目前狀態。 如果作業系統是從舊版升級，先前的防火牆設定可能已經保留下來。 此外，其他管理員或網域中的「群組原則」可能已經變更了防火牆設定。  
@@ -97,11 +97,11 @@ ms.locfileid: "50970999"
   
      如需有關 **netsh**的詳細資訊，請參閱下列連結：  
   
-    -   [如何使用 Netsh.exe 工具和命令列參數](http://support.microsoft.com/kb/242468)  
+    -   [如何使用 Netsh.exe 工具和命令列參數](https://support.microsoft.com/kb/242468)  
   
-    -   [如何使用 “netsh advfirewall firewall” 內容而非 “netsh firewall” 內容來控制 Windows Server 2008 和 Windows Vista 的 Windows 防火牆行為 (機器翻譯)](http://support.microsoft.com/kb/947709)  
+    -   [如何使用 “netsh advfirewall firewall” 內容而非 “netsh firewall” 內容來控制 Windows Server 2008 和 Windows Vista 的 Windows 防火牆行為 (機器翻譯)](https://support.microsoft.com/kb/947709)  
   
-    -   [搭配 "profile=all" 參數使用的 "netsh firewall" 命令不會在 Windows Vista 架構的電腦上設定公用設定檔](http://support.microsoft.com/kb/947213)  
+    -   [搭配 "profile=all" 參數使用的 "netsh firewall" 命令不會在 Windows Vista 架構的電腦上設定公用設定檔](https://support.microsoft.com/kb/947213)  
   
 ## <a name="ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>使用的通訊埠 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  下列表格可以協助您識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的通訊埠。  
@@ -194,24 +194,24 @@ ms.locfileid: "50970999"
 |--------------|----------|--------------|  
 |Windows Management Instrumentation<br /><br /> 如需有關 WMI 的詳細資訊，請參閱＜ [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)＞。|WMI 會使用透過 DCOM 所指派的通訊埠，當做共用服務主機執行。 WMI 可能正在使用 TCP 通訊埠 135。<br /><br /> 請參閱「 [通訊埠 135 的特殊考量](#BKMK_port_135)」|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員會使用 WMI 來列出並管理服務。 建議您使用預先設定的規則群組 **Windows Management Instrumentation (WMI)**。 如需詳細資訊，請參閱下面的「 [與其他防火牆規則的互動](#BKMK_other_rules) 」一節。|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC)|TCP 通訊埠 135<br /><br /> 請參閱「 [通訊埠 135 的特殊考量](#BKMK_port_135)」|如果應用程式使用分散式交易，您可能必須將防火牆設定成允許 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 傳輸在個別 MS DTC 執行個體之間，以及在 MS DTC 與資源管理員 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 之間流動。 我們建議您使用預先設定的規則群組 **[分散式交易協調器]** 。<br /><br /> 針對個別資源群組中的整個叢集設定了單一共用 MS DTC 時，您應該將 sqlservr.exe 當做例外加入至防火牆。|  
-|[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的瀏覽按鈕會使用 UDP 來連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務。 如需詳細資訊，請參閱 [SQL Server Browser 服務 &#40;Database Engine and SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)。|UDP 通訊埠 1434|UDP 是一種無連接的通訊協定。<br /><br /> 防火牆具有一項名為 [INetFwProfile 介面的 UnicastResponsesToMulticastBroadcastDisabled 屬性](http://go.microsoft.com/fwlink/?LinkId=118371) 的設定，可在廣播 (或多點傳送) UDP 要求的單點傳送回應方面控制防火牆的行為。  它有兩種行為：<br /><br /> 如果此設定為 TRUE，就完全不允許廣播的任何單點傳送回應。 列舉服務將會失敗。<br /><br /> 如果此設定為 FALSE (預設值)，就允許單點傳送回應 3 秒。 您無法設定時間的長度。 在擁塞或高延遲的網路中，或是負載繁重的伺服器上，嘗試列舉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體可能會傳回部分清單，因而誤導使用者。|  
+|[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的瀏覽按鈕會使用 UDP 來連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務。 如需詳細資訊，請參閱 [SQL Server Browser 服務 &#40;Database Engine and SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)。|UDP 通訊埠 1434|UDP 是一種無連接的通訊協定。<br /><br /> 防火牆具有一項名為 [INetFwProfile 介面的 UnicastResponsesToMulticastBroadcastDisabled 屬性](https://go.microsoft.com/fwlink/?LinkId=118371) 的設定，可在廣播 (或多點傳送) UDP 要求的單點傳送回應方面控制防火牆的行為。  它有兩種行為：<br /><br /> 如果此設定為 TRUE，就完全不允許廣播的任何單點傳送回應。 列舉服務將會失敗。<br /><br /> 如果此設定為 FALSE (預設值)，就允許單點傳送回應 3 秒。 您無法設定時間的長度。 在擁塞或高延遲的網路中，或是負載繁重的伺服器上，嘗試列舉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體可能會傳回部分清單，因而誤導使用者。|  
 |<a name="BKMK_IPsec"></a> IPsec 傳輸|UDP 通訊埠 500 和 UDP 通訊埠 4500|如果網域原則要求透過 IPsec 完成網路通訊，您也必須將 UDP 通訊埠 4500 和 UDP 通訊埠 500 加入至例外清單。 IPsec 是在 Windows 防火牆嵌入式管理單元中使用 [新增輸入規則精靈] 的選項。 如需詳細資訊，請參閱稍後的 [Using the Windows Firewall with Advanced Security Snap-in](#BKMK_WF_msc) (使用具有進階安全性嵌入式管理單元的 Windows 防火牆)。|  
-|使用 Windows 驗證搭配信任的網域|防火牆必須設定成允許驗證要求。|如需詳細資訊，請參閱＜ [如何設定網域和信任的防火牆](http://support.microsoft.com/kb/179442/)＞。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 叢集|叢集需要與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]沒有直接相關的其他通訊埠。|如需詳細資訊，請參閱＜ [啟用可供叢集使用的網路](http://go.microsoft.com/fwlink/?LinkId=118372)＞。|  
-|保留在 HTTP 伺服器 API (HTTP.SYS) 中的 URL 命名空間|可能是 TCP 通訊埠 80，但是可以設定成其他通訊埠。 如需一般資訊，請參閱＜ [設定 HTTP 和 HTTPS](http://go.microsoft.com/fwlink/?LinkId=118373)＞。|如需有關使用 HttpCfg.exe 保留 HTTP.SYS 端點的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定資訊，請參閱[關於 URL 保留項目和註冊 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)。|  
+|使用 Windows 驗證搭配信任的網域|防火牆必須設定成允許驗證要求。|如需詳細資訊，請參閱＜ [如何設定網域和信任的防火牆](https://support.microsoft.com/kb/179442/)＞。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 叢集|叢集需要與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]沒有直接相關的其他通訊埠。|如需詳細資訊，請參閱＜ [啟用可供叢集使用的網路](https://go.microsoft.com/fwlink/?LinkId=118372)＞。|  
+|保留在 HTTP 伺服器 API (HTTP.SYS) 中的 URL 命名空間|可能是 TCP 通訊埠 80，但是可以設定成其他通訊埠。 如需一般資訊，請參閱＜ [設定 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=118373)＞。|如需有關使用 HttpCfg.exe 保留 HTTP.SYS 端點的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定資訊，請參閱[關於 URL 保留項目和註冊 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)。|  
   
 ##  <a name="BKMK_port_135"></a> 通訊埠 135 的特殊考量  
  當您使用 RPC 搭配 TCP/IP 或 UDP/IP 當做傳輸時，系統通常會視需要以動態方式將傳入通訊埠指派給系統服務。所使用的是大於通訊埠 1024 的 TCP/IP 和 UDP/IP 通訊埠。 這些通訊埠通常非正式地稱為「隨機 RPC 通訊埠」。 在這些情況下，RPC 用戶端會仰賴 RPC 端點對應程式來告知它們哪些動態通訊埠已經指派給伺服器。 對於某些以 RPC 為基礎的服務而言，您可以設定特定通訊埠，而非讓 RPC 以動態方式指派通訊埠。 不論服務為何，您都可以將 RPC 以動態方式指派的通訊埠範圍限制成小範圍。 由於通訊埠 135 用於許多服務，所以它經常會受到惡意使用者的攻擊。 開啟通訊埠  
   
  如需有關通訊埠 135 的詳細資訊，請參閱下列參考：  
   
--   [Windows Server 系統的服務概觀和網路通訊埠需求 (機器翻譯)](http://support.microsoft.com/kb/832017)  
+-   [Windows Server 系統的服務概觀和網路通訊埠需求 (機器翻譯)](https://support.microsoft.com/kb/832017)  
   
--   [使用產品光碟的 Windows Server 2003 支援工具對 RPC 端點對應程式錯誤進行疑難排解](http://support.microsoft.com/kb/839880)  
+-   [使用產品光碟的 Windows Server 2003 支援工具對 RPC 端點對應程式錯誤進行疑難排解](https://support.microsoft.com/kb/839880)  
   
--   [遠端程序呼叫 (RPC)](http://go.microsoft.com/fwlink/?LinkId=118375)  
+-   [遠端程序呼叫 (RPC)](https://go.microsoft.com/fwlink/?LinkId=118375)  
   
--   [如何設定 RPC 動態連接埠配置以使用防火牆](http://support.microsoft.com/kb/154596/)  
+-   [如何設定 RPC 動態連接埠配置以使用防火牆](https://support.microsoft.com/kb/154596/)  
   
 ##  <a name="BKMK_other_rules"></a> 與其他防火牆規則的互動  
  [Windows 防火牆] 會使用規則和規則群組來建立其組態。 每個規則或規則群組通常會與特定的程式或服務相關聯，而且該程式或服務可能會不經通知而修改或刪除該項規則。 例如，規則群組 **World Wide Web 服務 (HTTP)** 和 **World Wide Web 服務 (HTTPS)** 會與 IIS 相關聯。 啟用這些規則將會開啟通訊埠 80 和 443，而且如果您啟用了這些規則，相依於通訊埠 80 和 443 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能將會正常運作。 不過，設定 IIS 的管理員可能會修改或停用這些規則。 因此，如果您要針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用通訊埠 80 或通訊埠 443，就應該建立維護所需通訊埠組態的自訂規則或規則群組 (獨立於其他 IIS 規則)。  
@@ -219,7 +219,7 @@ ms.locfileid: "50970999"
  [具有進階安全性的 Windows 防火牆] MMC 嵌入式管理單元允許符合任何適用允許規則的任何傳輸。 因此，如果有兩項同時套用至通訊埠 80 的規則 (具有不同的參數)，系統就會允許符合任何一項規則的傳輸。 所以，如果其中一項規則允許來自區域子網路而且透過通訊埠 80 的傳輸，而另一項規則允許來自任何位址的傳輸，其結果就是允許通訊埠 80 的所有傳輸，不論來源為何。 若要有效管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的存取權，管理員應該定期檢閱在伺服器上啟用的所有防火牆規則。  
   
 ##  <a name="BKMK_profiles"></a> 防火牆設定檔的概觀  
- [Windows Firewall with Advanced Security Getting Started Guide](http://go.microsoft.com/fwlink/?LinkId=116080) (具有進階安全性的 Windows 防火牆入門指南) 中的 **網路位置感知主機防火牆**一節會討論防火牆設定檔。 簡而言之，作業系統會在連接性、連接和類別方面識別並記憶它們所連接的每個網路。  
+ [Windows Firewall with Advanced Security Getting Started Guide](https://go.microsoft.com/fwlink/?LinkId=116080) (具有進階安全性的 Windows 防火牆入門指南) 中的 **網路位置感知主機防火牆**一節會討論防火牆設定檔。 簡而言之，作業系統會在連接性、連接和類別方面識別並記憶它們所連接的每個網路。  
   
  [具有進階安全性的 Windows 防火牆] 具有三種網路位置類型：  
   
@@ -309,10 +309,10 @@ ms.locfileid: "50970999"
   
          **-n** 參數會指示 **netstat** 以數值方式顯示使用中 TCP 連線的位址與通訊埠號碼。 **-a** 參數會指示 **netstat** 顯示電腦所接聽之電腦上的 TCP 與 UDP 通訊埠。  
   
--   **PortQry** 公用程式可用於將 TCP/IP 通訊埠的狀態回報為接聽中、未接聽或已篩選。 (若為已篩選狀態，表示通訊埠不一定是接聽中。此狀態會指出公用程式未接收到通訊埠的回應)。**PortQry** 公用程式可從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkId=28590)下載。  
+-   **PortQry** 公用程式可用於將 TCP/IP 通訊埠的狀態回報為接聽中、未接聽或已篩選。 (若為已篩選狀態，表示通訊埠不一定是接聽中。此狀態會指出公用程式未接收到通訊埠的回應)。**PortQry** 公用程式可從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=28590)下載。  
   
 ## <a name="see-also"></a>另請參閱  
- [Windows Server 系統的服務概觀和網路通訊埠需求 (機器翻譯)](http://support.microsoft.com/kb/832017)   
+ [Windows Server 系統的服務概觀和網路通訊埠需求 (機器翻譯)](https://support.microsoft.com/kb/832017)   
  [如何：設定防火牆設定 (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

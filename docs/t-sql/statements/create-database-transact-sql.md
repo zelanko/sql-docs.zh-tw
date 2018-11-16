@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5263a785fff56a2f1c375c7615a725f931582cfe
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 95823c0c63e65532213e1a195b978e98df9d9986
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100519"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701046"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -194,7 +194,7 @@ CREATE DATABASE database_snapshot_name
  COLLATE *collation_name*  
  指定資料庫的預設定序。 定序名稱可以是 Windows 定序名稱或 SQL 定序名稱。 若未指定，會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的預設定序指派給資料庫。 資料庫快照集中無法指定定序名稱。  
   
- 定序名稱無法利用 FOR ATTACH 或 FOR ATTACH_REBUILD_LOG 子句來指定。 如需有關如何變更所附加資料庫之定序的資訊，請瀏覽此 [Microsoft 網站](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335)。  
+ 定序名稱無法利用 FOR ATTACH 或 FOR ATTACH_REBUILD_LOG 子句來指定。 如需有關如何變更所附加資料庫之定序的資訊，請瀏覽此 [Microsoft 網站](https://go.microsoft.com/fwlink/?linkid=16419&kbid=325335)。  
   
  如需有關 Windows 和 SQL 定序名稱的詳細資訊，請參閱 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)。  
   
@@ -509,7 +509,7 @@ CREATE DATABASE database_snapshot_name
  除非指定 FOR ATTACH，否則每個新資料庫都會從 model 資料庫繼承資料庫選項設定。 例如，在模型資料庫及您建立的任何新資料庫中，auto shrink 資料庫選項會設定為 **true**。 如果您在 model 資料庫中變更選項，您建立的任何新資料庫也會使用這些新的選項設定。 變更 model 資料庫中的作業不會影響現有的資料庫。 如果在 CREATE DATABASE 陳述式上指定 FOR ATTACH，新資料庫就會繼承原始資料庫的資料庫選項設定。  
   
 ## <a name="viewing-database-information"></a>檢視資料庫資訊  
- 您可以利用目錄檢視、系統函數和系統預存程序，以傳回資料庫、檔案和檔案群組的相關資訊。 如需詳細資訊，請參閱[系統檢視 &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)。  
+ 您可以利用目錄檢視、系統函數和系統預存程序，以傳回資料庫、檔案和檔案群組的相關資訊。 如需詳細資訊，請參閱[系統檢視 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)。  
   
 ## <a name="permissions"></a>[權限]  
  需要 CREATE DATABASE、CREATE ANY DATABASE 或 ALTER ANY DATABASE 權限。  
@@ -935,13 +935,13 @@ CREATE DATABASE database_name
   
 *database_name* 
  
-新資料庫的名稱。 此名稱在 SQL 伺服器上必須是唯一的，並且符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的識別碼規則。 如需詳細資訊，請參閱[識別碼](http://go.microsoft.com/fwlink/p/?LinkId=180386)。  
+新資料庫的名稱。 此名稱在 SQL 伺服器上必須是唯一的，並且符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的識別碼規則。 如需詳細資訊，請參閱[識別碼](https://go.microsoft.com/fwlink/p/?LinkId=180386)。  
   
 *Collation_name*  
 
 指定資料庫的預設定序。 定序名稱可以是 Windows 定序名稱或 SQL 定序名稱。 如果沒有指定，資料庫會擁有指派的預設定序，即 SQL_Latin1_General_CP1_CI_AS。  
   
-如需有關 Windows 和 SQL 定序名稱的詳細資訊，請參閱 [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx)。  
+如需有關 Windows 和 SQL 定序名稱的詳細資訊，請參閱 [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx)。  
   
 CATALOG_COLLATION  
 
@@ -1097,7 +1097,7 @@ MAXSIZE 提供了限制資料庫大小的功能。 如果資料庫的大小達�
   
 - 來源伺服器名稱和複製目標的伺服器名稱可以相同，也可以不同。 兩個名稱相同時，則這是是選擇性參數，而且根據預設會使用目前工作階段的伺服器內容。  
   
-- 來源和目的地資料庫名稱必須加以指定、是唯一的，並且符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的識別碼規則。 如需詳細資訊，請參閱[識別碼](http://go.microsoft.com/fwlink/p/?LinkId=180386)。  
+- 來源和目的地資料庫名稱必須加以指定、是唯一的，並且符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的識別碼規則。 如需詳細資訊，請參閱[識別碼](https://go.microsoft.com/fwlink/p/?LinkId=180386)。  
   
 - `CREATE DATABASE` 陳述式必須在將要建立新資料庫之 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器的 master 資料庫內容中執行。 
 - 複製完成後，目的地資料庫必須做為獨立資料庫管理。 您可以在與來源資料庫不相關的情況下，單獨對新資料庫執行 `ALTER DATABASE` 和 `DROP DATABASE` 陳述式。 您也可以將新資料庫複製到另一個新資料庫。  
@@ -1225,13 +1225,13 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 *database_name* 
  
-新資料庫的名稱。 此名稱在 SQL 伺服器上必須是唯一的，並且符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的識別碼規則。 如需詳細資訊，請參閱[識別碼](http://go.microsoft.com/fwlink/p/?LinkId=180386)。  
+新資料庫的名稱。 此名稱在 SQL 伺服器上必須是唯一的，並且符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的識別碼規則。 如需詳細資訊，請參閱[識別碼](https://go.microsoft.com/fwlink/p/?LinkId=180386)。  
   
 *Collation_name*  
 
 指定資料庫的預設定序。 定序名稱可以是 Windows 定序名稱或 SQL 定序名稱。 如果沒有指定，資料庫會擁有指派的預設定序，即 SQL_Latin1_General_CP1_CI_AS。  
   
-如需有關 Windows 和 SQL 定序名稱的詳細資訊，請參閱 [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx)。  
+如需有關 Windows 和 SQL 定序名稱的詳細資訊，請參閱 [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx)。  
   
 ## <a name="remarks"></a>Remarks
  
@@ -1307,12 +1307,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 ## <a name="arguments"></a>引數  
 *database_name*  
-新資料庫的名稱。 此名稱在 SQL Server 上必須是唯一名稱，其可同時裝載 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 資料庫和 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 資料庫，且必須符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的識別碼規則。 如需詳細資訊，請參閱[識別碼](http://go.microsoft.com/fwlink/p/?LinkId=180386)。  
+新資料庫的名稱。 此名稱在 SQL Server 上必須是唯一名稱，其可同時裝載 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 資料庫和 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 資料庫，且必須符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的識別碼規則。 如需詳細資訊，請參閱[識別碼](https://go.microsoft.com/fwlink/p/?LinkId=180386)。  
   
 *collation_name*  
 指定資料庫的預設定序。 定序名稱可以是 Windows 定序名稱或 SQL 定序名稱。 如果未指定，則會將資料庫指派預設定序，即 SQL_Latin1_General_CP1_CI_AS。  
   
-如需有關 Windows 和 SQL 定序名稱的詳細資訊，請參閱 [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx)。  
+如需有關 Windows 和 SQL 定序名稱的詳細資訊，請參閱 [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx)。  
   
 *EDITION*  
 指定資料庫的服務層。 若是 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，請使用 'datawarehouse'。  

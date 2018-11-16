@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e566f09ae6c3357ecdbc2083f1f32fffadcf94d0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 41a03695526a669f33b74833137415a35db02929
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028234"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812742"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>使用 Reporting Services 的 REST API 進行開發
 
@@ -46,7 +46,7 @@ REST API 要求/回應配對可分成五個元件：
 
 * HTTP **回應訊息標頭**欄位：
 
-    * [HTTP 狀態碼](http://www.w3.org/Protocols/HTTP/HTRESP.html)，範圍可介於 2xx 成功碼到 4xx 或 5xx 錯誤碼之間。 或者，可能會傳回服務定義的狀態碼，如 API 文件中所示。
+    * [HTTP 狀態碼](https://www.w3.org/Protocols/HTTP/HTRESP.html)，範圍可介於 2xx 成功碼到 4xx 或 5xx 錯誤碼之間。 或者，可能會傳回服務定義的狀態碼，如 API 文件中所示。
     * 支援要求回應所需的其他選擇性標頭欄位，例如 `Content-type` 回應標頭。
 
 * 選擇性的 HTTP **回應訊息主體**欄位：
@@ -59,7 +59,7 @@ REST API 要求/回應配對可分成五個元件：
 
 ## <a name="testing-api-calls"></a>測試 API 呼叫
 
-用於測試 HTTP 要求/回應訊息的工具之一是 [Fiddler](http://www.telerik.com/fiddler)。 Fiddler 是可攔截 REST 要求的免費 Web 偵錯 Proxy，讓您輕鬆就能診斷 HTTP 要求/回應訊息。
+用於測試 HTTP 要求/回應訊息的工具之一是 [Fiddler](https://www.telerik.com/fiddler)。 Fiddler 是可攔截 REST 要求的免費 Web 偵錯 Proxy，讓您輕鬆就能診斷 HTTP 要求/回應訊息。
 
 ## <a name="next-steps"></a>後續步驟
 

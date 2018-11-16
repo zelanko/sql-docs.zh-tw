@@ -16,12 +16,12 @@ ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 226602debe898225405fb636eecec47c76cfedc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bf516256277abc02a8499f06707a518f2aadf75
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685996"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664938"
 ---
 # <a name="transaction-log-backups-sql-server"></a>交易記錄備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,12 +55,12 @@ ms.locfileid: "47685996"
 -   根據預設，每項成功的備份作業都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔與系統事件記錄檔中，加入一個項目。 如果您經常備份記錄檔，這些成功訊息可能會快速累積，因而產生龐大的錯誤記錄檔，讓您難以尋找其他訊息。 在這類情況下，如果沒有任何指令碼相依於這些記錄項目，您就可以使用追蹤旗標 3226 來隱藏這些記錄項目。 如需詳細資訊，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
 
 -   請經常進行充分的記錄備份來支援商務需求，特別是您對工作損失 (例如可能因損壞的記錄儲存體而引起) 的耐受性。 
-   -   進行記錄備份的頻率如何才適當，視您在工作損失風險的耐受性，與儲存、管理及可能還原記錄備份的容量之間所做的取捨而定。 實作復原策略，以及特別是記錄備份頻率時，考慮使用必要的 [RTO](http://wikipedia.org/wiki/Recovery_time_objective) 和 [RPO](http://wikipedia.org/wiki/Recovery_point_objective)。
+   -   進行記錄備份的頻率如何才適當，視您在工作損失風險的耐受性，與儲存、管理及可能還原記錄備份的容量之間所做的取捨而定。 實作復原策略，以及特別是記錄備份頻率時，考慮使用必要的 [RTO](https://wikipedia.org/wiki/Recovery_time_objective) 和 [RPO](https://wikipedia.org/wiki/Recovery_point_objective)。
    -   每 15 到 30 分鐘進行一次記錄備份可能就足夠了。 如果您的業務需要將工作損失風險減至最低，請考慮更頻繁地進行記錄備份。 較頻繁的記錄備份還會帶來另一優點，就是增加記錄截斷的頻率，從而產生較小的記錄檔。  
   
 > [!IMPORTANT]
 > 若要限制您需要還原的記錄備份數目，定期備份資料是基本作業。 例如，您可能會排程每週的完整資料庫備份和每日的差異資料庫備份。  
-> 同樣地，實作復原策略，以及特別是完整和差異資料庫備份頻率時，考慮使用必要的 [RTO](http://wikipedia.org/wiki/Recovery_time_objective) 和 [RPO](http://wikipedia.org/wiki/Recovery_point_objective)。
+> 同樣地，實作復原策略，以及特別是完整和差異資料庫備份頻率時，考慮使用必要的 [RTO](https://wikipedia.org/wiki/Recovery_time_objective) 和 [RPO](https://wikipedia.org/wiki/Recovery_point_objective)。
   
 ##  <a name="RelatedTasks"></a> 相關工作  
  **若要建立交易記錄備份**  

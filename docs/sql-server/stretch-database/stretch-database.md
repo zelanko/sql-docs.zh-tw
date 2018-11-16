@@ -11,12 +11,12 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d9675dfc6a36407f788bfc9c419ce9aea1eccb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae4e7fc1879a530f2a97f41276d9d0d4237ba471
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689586"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701988"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "47689586"
  請使用 SQL Server 2016 升級建議程式的功能 Stretch Database Advisor，為 Stretch Database 識別資料庫和資料表。 如需詳細資訊，請參閱 [執行 Stretch Database Advisor 以識別 Stretch Database 的資料庫和資料表](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)。 若要深入了解潛在的封鎖問題，請參閱 [Stretch Database 的介面區限制和封鎖問題](../../sql-server/stretch-database/limitations-for-stretch-database.md)。  
 
 ## <a name="test-drive-stretch-database"></a>試用 Stretch Database  
- **透過 AdventureWorks 範例資料庫試用 Stretch Database。** 若要取得 AdventureWorks 範例資料庫，至少要從 [這裡](https://www.microsoft.com/en-us/download/details.aspx?id=49502)。 將範例資料庫還原到 SQL Server 2016 的執行個體後，請將範例檔案解壓縮，然後從 Stretch DB 資料夾開啟 Stretch DB 範例檔案。 執行此檔案中的指令碼，以檢查您的資料在啟用 Stretch Database 前後所使用的空間，進而追蹤資料遷移的進度，並確認您可在資料遷移期間和遷移後繼續查詢現有資料和插入新資料。  
+ **透過 AdventureWorks 範例資料庫試用 Stretch Database。** 若要取得 AdventureWorks 範例資料庫，至少要從 [這裡](https://www.microsoft.com/download/details.aspx?id=49502)。 將範例資料庫還原到 SQL Server 2016 的執行個體後，請將範例檔案解壓縮，然後從 Stretch DB 資料夾開啟 Stretch DB 範例檔案。 執行此檔案中的指令碼，以檢查您的資料在啟用 Stretch Database 前後所使用的空間，進而追蹤資料遷移的進度，並確認您可在資料遷移期間和遷移後繼續查詢現有資料和插入新資料。  
   
 ## <a name="next-step"></a>下一步  
  **識別屬於 Stretch Database 對象的資料庫和資料表。** 下載 SQL Server 2016 升級建議程式，並執行 Stretch Database Advisor，識別屬於 Stretch Database 對象的資料庫和資料表。 Stretch Database Advisor 也可以識別封鎖問題。 如需詳細資訊，請參閱 [執行 Stretch Database Advisor 以識別 Stretch Database 的資料庫和資料表](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)。  

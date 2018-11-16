@@ -10,12 +10,12 @@ ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: be6ca2af39fecd2ad56f894b18f820137b2e6769
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 1302c9dac8533496582415dd4326a0c1c6f7de23
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051080"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813331"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置
 
@@ -51,7 +51,7 @@ ms.locfileid: "50051080"
   
  若要下載並安裝此增益集，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心：  
   
--   **SP1 增益集：**  [適用於 Microsoft® SharePoint® 的 Microsoft® SQL Server® 2012 SP1 Reporting Services 增益集](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583).  
+-   **SP1 增益集：**  [適用於 Microsoft® SharePoint® 的 Microsoft® SQL Server® 2012 SP1 Reporting Services 增益集](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583).  
   
 -   **SP1：**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://go.microsoft.com/fwlink/p/?LinkID=255906) (https://go.microsoft.com/fwlink/p/?LinkID=255906)。  
 
@@ -62,6 +62,6 @@ ms.locfileid: "50051080"
 ## <a name="next-steps"></a>後續步驟
 
 [安裝或解除安裝 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[解除安裝 Reporting Services 增益集之後，就無法瀏覽 SharePoint 頁面的非預設區域](http://support.microsoft.com/kb/2009212)  
+[解除安裝 Reporting Services 增益集之後，就無法瀏覽 SharePoint 頁面的非預設區域](https://support.microsoft.com/kb/2009212)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

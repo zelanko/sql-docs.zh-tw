@@ -20,12 +20,12 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 364c3ec544f0a019a81416b1b1c005e91601f94d
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 84db1d36a782fc054129b1ff753b620e82684499
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031285"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675367"
 ---
 # <a name="utility-explorer-f1-help"></a>公用程式總管 F1 說明
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "51031285"
   
  請注意，當您按一下使用量類別連結時，公用程式總管瀏覽窗格中對應的節點後面會加上 [(已篩選)]，意即 [受管理的執行個體] 會標示為 [受管理的執行個體 (已篩選) ]。 若要檢視篩選設定，請以滑鼠右鍵按一下瀏覽窗格中的節點，然後選取 [篩選]，再按一下 [篩選設定]。 若要清除篩選設定，請以滑鼠右鍵按一下瀏覽窗格中的節點，然後選取 [篩選]，再按一下 [移除篩選]。  
   
- 如需檢視個別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的健全狀態或是檢視或變更原則組態設定的詳細資訊，請參閱[受管理的執行個體詳細資料 &#40;SQL Server 公用程式&#41;](http://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)。  
+ 如需檢視個別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的健全狀態或是檢視或變更原則組態設定的詳細資訊，請參閱[受管理的執行個體詳細資料 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)。  
   
  公用程式摘要  
  顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式所管理之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Managed 執行個體及資料層應用程式的數目。  
@@ -95,10 +95,10 @@ ms.locfileid: "51031285"
   
 -   沒有可用的資料 - 資料層應用程式沒有可用的資料，因為包含資料層應用程式的 SQL Server Managed 執行個體並未報告資料。  
   
- 每一個健全狀態參數的詳細狀態會列在滑動指標中。 滑動指標右邊的片段會顯示每一個狀態類別中的資料層應用程式數目。 如需檢視個別資料層應用程式的健全狀態或是檢視或變更原則組態設定的詳細資訊，請參閱[部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](http://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
+ 每一個健全狀態參數的詳細狀態會列在滑動指標中。 滑動指標右邊的片段會顯示每一個狀態類別中的資料層應用程式數目。 如需檢視個別資料層應用程式的健全狀態或是檢視或變更原則組態設定的詳細資訊，請參閱[部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
   
  公用程式儲存使用量歷程記錄  
- 使用量歷程記錄會顯示在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式儀表板底部的時間圖中。 請注意，時間資料會使用 datetime 資料類型來顯示 UCP 本機日期和時間。 如需詳細資訊，請參閱 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 主題。  
+ 使用量歷程記錄會顯示在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式儀表板底部的時間圖中。 請注意，時間資料會使用 datetime 資料類型來顯示 UCP 本機日期和時間。 如需詳細資訊，請參閱 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主題。  
   
  使用顯示區域左邊的選項按鈕來變更圖形的報表期間。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "51031285"
   
  您可以變更清單檢視中資料行的順序，其方式是將資料行拖曳到左邊或右邊。 您可以加入或刪除清單檢視中的資料行，其方式是以滑鼠右鍵按一下資料行標題，並選取或取消選取資料行。 右鍵功能表也會提供排序選項。 您也可以按一下資料行名稱的上方來啟動排序。  
   
- 若要存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式清單檢視的篩選選項，請在 [公用程式總管] 瀏覽窗格中以滑鼠右鍵按一下 [部署的資料層應用程式] 節點，並選取 [篩選]。 當實作篩選設定之後，[公用程式總管] 中的 [部署的資料層應用程式] 節點會標示 [部署的資料層應用程式 (已篩選)]。 如需詳細資訊，請參閱[篩選設定 &#40;物件總管與公用程式總管&#41;](http://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2)。  
+ 若要存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式清單檢視的篩選選項，請在 [公用程式總管] 瀏覽窗格中以滑鼠右鍵按一下 [部署的資料層應用程式] 節點，並選取 [篩選]。 當實作篩選設定之後，[公用程式總管] 中的 [部署的資料層應用程式] 節點會標示 [部署的資料層應用程式 (已篩選)]。 如需詳細資訊，請參閱[篩選設定 &#40;物件總管與公用程式總管&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2)。  
   
  根據預設，下列資料行會顯示有關每一個資料層應用程式的健全狀態資訊。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "51031285"
   
 -   復原模式：(簡單、完整或大量記錄)  
   
--   上次報告時間：此資料行會使用 datetime 資料類型來顯示 UCP 本機日期和時間。 如需詳細資訊，請參閱 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 主題。  
+-   上次報告時間：此資料行會使用 datetime 資料類型來顯示 UCP 本機日期和時間。 如需詳細資訊，請參閱 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主題。  
   
  CPU 使用量索引標籤  
  [CPU 使用量] 索引標籤會針對資料層應用程式和電腦的 CPU 使用量顯示歷程記錄資料的並排圖形。  
@@ -196,7 +196,7 @@ ms.locfileid: "51031285"
 -   1 年，每隔 1 個月顯示。  
   
  儲存使用量索引標籤  
- [儲存使用量] 索引標籤的樹狀檢視會針對屬於清單檢視中選取之資料層應用程式的資料庫檔案和記錄檔來顯示儲存使用量詳細資料。 請注意，時間資料會使用 datetime 資料類型來顯示 UCP 本機日期和時間。 如需詳細資訊，請參閱 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 主題。  
+ [儲存使用量] 索引標籤的樹狀檢視會針對屬於清單檢視中選取之資料層應用程式的資料庫檔案和記錄檔來顯示儲存使用量詳細資料。 請注意，時間資料會使用 datetime 資料類型來顯示 UCP 本機日期和時間。 如需詳細資訊，請參閱 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主題。  
   
  顯示畫面可以依檔案群組或磁碟區來分組。 若要使用檔案群組樹狀檢視，請選取 [檔案群組依據] 選項中的 [檔案群組] 選項按鈕。  
   
@@ -255,7 +255,7 @@ ms.locfileid: "51031285"
   
 -   復原模式：(簡單、完整或大量記錄)  
   
--   上次報告時間：此資料行會使用 datetime 資料類型來顯示 UCP 本機日期和時間。 如需詳細資訊，請參閱 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 主題。
+-   上次報告時間：此資料行會使用 datetime 資料類型來顯示 UCP 本機日期和時間。 如需詳細資訊，請參閱 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主題。
 
 ## <a name="managed-instance-details-sql-server-utility"></a>受管理的執行個體詳細資料 (SQL Server 公用程式)
  公用程式總管之 Managed 執行個體檢視中的資訊提供了個別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的使用量資料、CPU 使用量歷程記錄、檔案層級的儲存使用量詳細資料，以及檢視和更新原則臨界值的功能。 原則臨界值可以針對電腦及資料庫檔案和記錄檔在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體層級控制，也可以在存放磁碟區的層級控制。 您也可以針對個別的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Managed 執行個體檢視屬性詳細資料。  
@@ -274,7 +274,7 @@ ms.locfileid: "51031285"
   
  您可以變更清單檢視中資料行的順序，其方式是將資料行拖曳到左邊或右邊。 您可以加入或刪除清單檢視中的資料行，其方式是以滑鼠右鍵按一下資料行標題，並選取或取消選取資料行。 右鍵功能表也會提供排序選項。 您也可以按一下資料行名稱的上方來啟動排序。  
   
- 若要存取公用程式清單檢視的篩選選項，請在 [公用程式總管] 瀏覽窗格中以滑鼠右鍵按一下 [Managed 執行個體] 節點，並選取 [篩選]。 當已經實作篩選設定之後，公用程式總管中的 [受管理的執行個體] 節點將會標示 [受管理的執行個體 (已篩選)]。 如需詳細資訊，請參閱[篩選設定 &#40;物件總管與公用程式總管&#41;](http://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2)。  
+ 若要存取公用程式清單檢視的篩選選項，請在 [公用程式總管] 瀏覽窗格中以滑鼠右鍵按一下 [Managed 執行個體] 節點，並選取 [篩選]。 當已經實作篩選設定之後，公用程式總管中的 [受管理的執行個體] 節點將會標示 [受管理的執行個體 (已篩選)]。 如需詳細資訊，請參閱[篩選設定 &#40;物件總管與公用程式總管&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2)。  
   
  根據預設，下列資料行會顯示有關每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Managed 執行個體的健全狀態資訊。  
   
@@ -318,7 +318,7 @@ ms.locfileid: "51031285"
   
 -   語言：  
   
--   上次報告時間：此資料行會使用 datetime 資料類型來顯示 UCP 本機日期和時間。 如需詳細資訊，請參閱 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 主題。  
+-   上次報告時間：此資料行會使用 datetime 資料類型來顯示 UCP 本機日期和時間。 如需詳細資訊，請參閱 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主題。  
   
  CPU 使用量索引標籤  
  [CPU 使用量] 索引標籤會針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和電腦的 CPU 使用量顯示歷程記錄資料的並排圖形。  
@@ -336,7 +336,7 @@ ms.locfileid: "51031285"
 -   1 年，每隔 1 個月顯示。  
   
  儲存使用量索引標籤  
- [儲存使用量] 索引標籤具有樹狀檢視，可顯示儲存使用量詳細資料。 請注意，時間資料會使用 datetime 資料類型來顯示 UCP 本機日期和時間。 如需詳細資訊，請參閱 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 主題。  
+ [儲存使用量] 索引標籤具有樹狀檢視，可顯示儲存使用量詳細資料。 請注意，時間資料會使用 datetime 資料類型來顯示 UCP 本機日期和時間。 如需詳細資訊，請參閱 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主題。  
   
  顯示畫面可以依資料庫或磁碟區來分組。 若要使用資料庫樹狀檢視，請選取 [檔案群組依據:] 選項中的 [資料庫] 選項按鈕。 若要檢視個別資料庫檔案的儲存使用量狀態，請按一下樹狀檢視中資料庫名稱旁邊的加號。 列出的資料庫檔案包含了所有屬於您在清單檢視中選取之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體的系統資料庫和使用者資料庫。  
   
@@ -512,6 +512,6 @@ ms.locfileid: "51031285"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 公用程式的功能與工作](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [疑難排解 SQL Server 公用程式](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
+ [疑難排解 SQL Server 公用程式](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

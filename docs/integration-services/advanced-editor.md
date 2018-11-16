@@ -17,12 +17,12 @@ ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd50e2c507295921952c549d1eeee869b74e0e7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ef5d2976ede4bf9c96ae109acd921d9fa385f6d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731096"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641455"
 ---
 # <a name="advanced-editor"></a>進階編輯器
   使用 **[進階編輯器]** 對話方塊設定所選取之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件的屬性。  
@@ -43,11 +43,11 @@ ms.locfileid: "47731096"
   
  顯示的屬性會因元件而異。 如需有關 **[進階編輯器]** 可能顯示之屬性的詳細資訊，請參閱下列主題：  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
--   [路徑屬性](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
+-   [路徑屬性](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
   
  如需有關正在編輯之特定元件的詳細資訊，請參閱＜ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件及概念＞文件集＜資料流程元素＞一節中的該元件描述：  
   

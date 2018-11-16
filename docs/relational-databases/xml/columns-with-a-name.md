@@ -13,12 +13,12 @@ ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6ca9677709101f4b74386ee736cb7c1087af347
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dfdb170e28bb5fd9ab88aeda72ef0c2483e4074
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768396"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675947"
 ---
 # <a name="columns-with-a-name"></a>有名稱的資料行
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ for xml PATH
 SELECT   
        ProductModelID,  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
                 /MI:root/MI:Location   
               ') as ManuWorkCenterInformation  
 FROM Production.ProductModel  
@@ -157,7 +157,7 @@ FOR XML PATH, ELEMENTS XSINIL
  以下是結果：  
   
 ```  
-<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"   
       EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  

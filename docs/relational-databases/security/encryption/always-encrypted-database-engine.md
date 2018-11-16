@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d514532bc7c3c08a1c31a934c41761ee524c9d7
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 748c341960d8bb50a70f06e6473c2eb613b071aa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827349"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675127"
 ---
 # <a name="always-encrypted-database-engine"></a>一律加密 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -187,7 +187,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 
 - 如果您在 [連接到伺服器]  對話方塊的 [其他屬性]  索引標籤中，使用 **column encryption setting=enabled** 連接，SQL Server Management Studio 就會解密擷取自加密資料行的結果。 至少需要 SQL Server Management Studio 17 版，才能插入、更新或篩選已加密的資料行。
 
-- 來自 `sqlcmd` 的加密連接需要至少 13.1 版，可從 [下載中心](http://go.microsoft.com/fwlink/?LinkID=825643)取得。
+- 來自 `sqlcmd` 的加密連接需要至少 13.1 版，可從 [下載中心](https://go.microsoft.com/fwlink/?LinkID=825643)取得。
 
   
 ## <a name="database-permissions"></a>資料庫權限  

@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d413485fc85b0599921524e339a900a5067f496c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 620b936f976bca27ba1bb0c95e8b882d589e77d7
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029247"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814031"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>原生至 SharePoint 移轉 (SSRS)
 
@@ -23,7 +23,7 @@ ms.locfileid: "50029247"
 ##  <a name="bkmk_native_to_sharepoint"></a> Reporting Services 移轉工具  
  此工具支援將內容從原生模式部署移轉至 SharePoint 模式部署。 此工具不支援從 SharePoint 模式移轉至 SharePoint 模式，或是從 SharePoint 模式移轉至原生模式。  
   
- 如需詳細資訊，請參閱 [Reporting Services 移轉工具](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560) \(英文\)。  
+ 如需詳細資訊，請參閱 [Reporting Services 移轉工具](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560) \(英文\)。  
   
 ## <a name="use-script-to-migrate-content"></a>使用指令碼來移轉內容  
  如果移轉工具不符合您的需求，您可以手動移轉報表伺服器資料。 下面為將報表項目從一個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署移轉至另一個部署之步驟的摘要。 此方法支援以原生模式或 SharePoint 模式做為來源或目的地伺服器。  
@@ -34,7 +34,7 @@ ms.locfileid: "50029247"
   
     -   [在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。 本主題說明如何使用您可以從 CodePlex 下載的範例指令碼。  
   
-    -   CodePlex 上的 rss 指令碼範例， [可將內容從一個報表伺服器移轉至另一個報表伺服器的 Reporting Services RS.exe 指令碼](http://azuresql.codeplex.com/releases/view/115207)。  
+    -   CodePlex 上的 rss 指令碼範例， [可將內容從一個報表伺服器移轉至另一個報表伺服器的 Reporting Services RS.exe 指令碼](https://azuresql.codeplex.com/releases/view/115207)。  
   
     -   [指令碼與 PowerShell 搭配 Reporting Services](../../reporting-services/tools/scripting-and-powershell-with-reporting-services.md)  
   

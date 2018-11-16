@@ -21,12 +21,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f9e682940da2b880265e6d9d9763551bd858339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38ce786d8362f711e238b32059ae3bae4f50006e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749666"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672627"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ ms.locfileid: "47749666"
 >  雖然 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別支援在設定屬性時宣告明確的交易，不過，這樣的交易可能會平擾內部複寫交易、可能會產生非預期的結果，而且不應該與 RMO 搭配使用。  
 
 ### <a name="enabling-tls-12-support-for-rmo-components"></a>啟用 RMO 元件的 TLS 1.2 支援 
- 您可以安裝更新 [KB 3140245](http://support.microsoft.com/help/3140245)，並如本文中所述建立登錄機碼，來啟用 Windows 2012 和更低版本上之 RMO 元件的 TLS 1.2 支援。 在 Windows 2012 R2 和更新版本上，只需要建立上文所述的登錄機碼。
+ 您可以安裝更新 [KB 3140245](https://support.microsoft.com/help/3140245)，並如本文中所述建立登錄機碼，來啟用 Windows 2012 和更低版本上之 RMO 元件的 TLS 1.2 支援。 在 Windows 2012 R2 和更新版本上，只需要建立上文所述的登錄機碼。
  
 ## <a name="example"></a>範例  
  這個範例會示範屬性變更的快取。 會快取對於交易式發行集屬性所做的變更，直到將它們明確地傳送到伺服器為止。  

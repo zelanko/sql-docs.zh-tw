@@ -1,22 +1,20 @@
 ---
 title: SQL Server 2019 的新功能 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/06/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
-ms.technology:
-- server-general
+ms.technology: release-landing
 ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 36a98e8c702b3d3ff772ccf42bdfd56153ddd7fc
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.openlocfilehash: 55cf8c1bc9a7a74928ebe2f5c0c7060c94068e48
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272616"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703906"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019 的新功能
 
@@ -25,7 +23,7 @@ ms.locfileid: "51272616"
 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 是以舊版本為基礎，可讓 SQL Server 成長為平台，以供您選擇開發語言、資料類型、內部部署或雲端以及作業系統。 本文摘要說明 SQL Server 2019 的新功能。 如需詳細資訊和已知問題，請參閱 [SQL Server 2019 版本資訊](sql-server-ver15-release-notes.md)。
 
 **試用 SQL Server 2019！**
-- [![從評估中心下載](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [下載 SQL Server 2019 以安裝於 Windows](http://go.microsoft.com/fwlink/?LinkID=862101)
+- [![從評估中心下載](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [下載 SQL Server 2019 以安裝於 Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
 - 安裝於 Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md)、[SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) 和 [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)。
 - [在 Docker 的 SQL Server 2019 上執行](../linux/quickstart-install-connect-docker.md)。
 
@@ -178,7 +176,7 @@ SQL Server 2019 預覽引進靜態資料遮罩。 您可以使用靜態資料遮
 
   如果索引建立失敗，則沒有此功能，必須重新執行線上索引建立作業，而且必須從頭重新啟動作業。
 
-使用此版本，我們會擴充可繼續的功能，以將此功能新增至可用的[可繼續線上索引重建](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/)。
+使用此版本，我們會擴充可繼續的功能，以將此功能新增至可用的[可繼續線上索引重建](https://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/)。
 
 此外，可以使用[線上和可繼續 DDL 作業的資料庫範圍預設設定](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)將此功能設定為特定資料庫的預設值。
 
@@ -264,7 +262,7 @@ SQL Server 2019 預覽引進靜態資料遮罩。 您可以使用靜態資料遮
 
 如果沒有此功能，您必須直接在索引 DDL 陳述式中指定線上和可繼續選項 (例如索引建立和重建)。
 
-詳細資訊：如需索引可繼續作業的詳細資訊，請參閱[可繼續的線上索引建立](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/)。
+詳細資訊：如需索引可繼續作業的詳細資訊，請參閱[可繼續的線上索引建立](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/)。
 
 ### <a id="ha"></a>Always On 可用性群組 - 更多同步複本 (CTP 2.0)
 
@@ -331,7 +329,7 @@ SQL Server 2019 預覽引進靜態資料遮罩。 您可以使用靜態資料遮
 
 輕量型查詢分析基礎結構 (LWP) 所提供的查詢效能資料比標準分析技術更具效率。 根據預設，現在會啟用輕量型分析。 它已在 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 中引進。 相較於標準查詢分析機制有最多 75% CPU 的額外負荷，輕量型查詢分析提供預期額外負荷為 2% CPU 的查詢執行統計資料收集機制。 在舊版中，根據預設，它為 OFF。 資料庫管理員可以使用[追蹤旗標 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 來啟用它。 
 
-如需輕量型分析的詳細資訊，請參閱 [Developers Choice: Query progress – anytime, anywhere](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (開發人員選擇：隨時隨地查詢進度)。
+如需輕量型分析的詳細資訊，請參閱 [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (開發人員選擇：隨時隨地查詢進度)。
 
 ### <a id="polybase"></a>新的 PolyBase 連接器
 

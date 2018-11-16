@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581da1ec4f3b42a9b71f4f8fedc5a22100d6ff2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f70aa8745576c2837d4b957fed9783baa0248f07
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596126"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657607"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>記憶體內部 OLTP 的初始區域調查
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ SQL Server 提供記憶體內部功能，以大幅改進許多應用程式系統
   
   
 > [!NOTE]
-> 有關 [Azure SQL Database - 記憶體內部技術中可用之記憶體內部功能的兩分鐘影片](http://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies)。 影片張貼日期為 2015 年 12 月。  
+> 有關 [Azure SQL Database - 記憶體內部技術中可用之記憶體內部功能的兩分鐘影片](https://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies)。 影片張貼日期為 2015 年 12 月。  
 
 
 ### <a name="columnstore"></a>columnstore
@@ -463,7 +463,7 @@ ALTER TABLE...ADD/DROP 可以從記憶體最佳化資料表或索引新增或移
 如需原生 UDF 效能的測試資料和說明，請參閱︰  
   
   - [在 SQL Server 2016 中使用原生編譯的 UDF 來降低 RBAR 影響](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
-  - [原生編譯使用者定義函式](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/)部落格文章，作者 Gail Shaw，日期為 2016 年 1 月。  
+  - [原生編譯使用者定義函式](https://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/)部落格文章，作者 Gail Shaw，日期為 2016 年 1 月。  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
   
@@ -475,7 +475,7 @@ ALTER TABLE...ADD/DROP 可以從記憶體最佳化資料表或索引新增或移
   - [判斷是否應將資料表或預存程序移植至記憶體內部 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - SQL Server Management Studio 中的交易效能分析報告可協助您評估記憶體內部 OLTP 是否能改善您資料庫應用程式的效能。  
   - 請使用 [記憶體最佳化建議程式](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 協助您將磁碟資料庫資料表移轉至記憶體內部 OLTP。   
-- [備份、還原及復原記憶體最佳化資料表](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+- [備份、還原及復原記憶體最佳化資料表](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   - 記憶體最佳化資料表所使用的儲存空間可能會遠超過它在記憶體中的大小，而且會影響資料庫備份的大小。  
 - [與記憶體最佳化資料表的交易](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - 包含 T-SQL 中記憶體最佳化資料表交易的重試邏輯相關資訊。  

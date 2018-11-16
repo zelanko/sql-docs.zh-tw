@@ -11,12 +11,12 @@ ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 789322fa4274c6819fe1f71ac7ae06056fce5a5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b96ff3e9775e38a7eb61449d6a2ed5e9bc4d6db4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785456"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681286"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>HOW TO：撰寫在單一交易範圍內執行的 SQL Server 單元測試
 您可以修改單元測試，使其在單一交易範圍中執行。 如果採用這種方法，在測試結束之後，可以復原此測試所進行的任何變更。 下列程序說明其做法：  
@@ -54,7 +54,7 @@ ms.locfileid: "47785456"
     > [!NOTE]  
     > 在執行 COMMIT TRANSACTION 陳述式之後，無法復原交易。  
   
-    如需如何搭配預存程序和觸發程序使用 ROLLBACK TRANSACTION 的詳細資訊，請參閱 Microsoft 網站上的這個網頁：[ROLLBACK TRANSACTION (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkID=115927)。  
+    如需如何搭配預存程序和觸發程序使用 ROLLBACK TRANSACTION 的詳細資訊，請參閱 Microsoft 網站上的這個網頁：[ROLLBACK TRANSACTION (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=115927)。  
   
 ## <a name="to-create-a-transaction-for-a-single-test-method"></a>若要建立單一測試方法的交易  
 在此範例中，您是在使用 [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope) 類型時使用環境交易。 根據預設，執行連接和授權連接不會使用環境交易，因為這些連接是在執行方法前即已建立。 SqlConnection 擁有的 [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction) 方法會將作用中的連接與交易產生關聯。 建立環境交易時，會將自己註冊為目前的交易，而您可以透過 [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current) 屬性存取此交易。 在此範例中，在處置環境交易時就會復原交易。 如果想要認可在執行單元測試時進行的任何變更，您必須呼叫 [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete) 方法。  
@@ -171,7 +171,7 @@ ms.locfileid: "47785456"
     服務的狀態應該會更新為 [已啟動]。 現在應該就能夠執行使用 System.Transactions 的單元測試。  
   
 > [!IMPORTANT]  
-> 即使您已啟動分散式交易控制器服務，仍有可能發生下列錯誤：`System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)`。 如果發生這個錯誤，您必須針對網路存取設定分散式交易控制器。 如需詳細資訊，請參閱[啟用網路 DTC 存取](http://go.microsoft.com/fwlink/?LinkId=193916)。  
+> 即使您已啟動分散式交易控制器服務，仍有可能發生下列錯誤：`System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)`。 如果發生這個錯誤，您必須針對網路存取設定分散式交易控制器。 如需詳細資訊，請參閱[啟用網路 DTC 存取](https://go.microsoft.com/fwlink/?LinkId=193916)。  
   
 ## <a name="see-also"></a>另請參閱  
 [建立和定義 SQL Server 單元測試](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

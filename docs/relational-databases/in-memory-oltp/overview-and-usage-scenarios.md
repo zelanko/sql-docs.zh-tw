@@ -5,20 +5,19 @@ ms.date: 04/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 69b27bc4eba03a7f9c9bf83880f680720402ad3c
-ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
+ms.openlocfilehash: c7c22748f79ecf91239255374716e29c729eca34
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50150189"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660367"
 ---
 # <a name="overview-and-usage-scenarios"></a>概觀和使用案例
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "50150189"
 
 ## <a name="in-memory-oltp-overview"></a>記憶體內部 OLTP 概觀
 
-記憶體內部 OLTP 可以為正確的工作負載提供絕佳的效能提升。 有一位客戶 (bwin) 只使用一部執行 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的電腦，運用記憶體內部 OLTP，設法[達到每秒 120 萬個要求](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)。 另一位客戶 (Quorum) 利用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中的記憶體內部 OLTP，設法加倍工作負載，同時[減少 70% 的資源使用率](https://customers.microsoft.com/en-US/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)。 雖然有客戶在某些案例中見識到效能提升最多可達 30 倍，但您看到的提升程度會取決於工作負載。
+記憶體內部 OLTP 可以為正確的工作負載提供絕佳的效能提升。 有一位客戶 (bwin) 只使用一部執行 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的電腦，運用記憶體內部 OLTP，設法[達到每秒 120 萬個要求](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)。 另一位客戶 (Quorum) 利用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中的記憶體內部 OLTP，設法加倍工作負載，同時[減少 70% 的資源使用率](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)。 雖然有客戶在某些案例中見識到效能提升最多可達 30 倍，但您看到的提升程度會取決於工作負載。
 
 現在，這個效能提升來自何處？ 在本質上，記憶體內部 OLTP 是藉由讓資料存取和交易執行更有效率，以及移除並行執行交易之間的鎖定和閂鎖競爭，來提升交易處理的效能︰因為它在記憶體內部，所以速度不快；因為它已針對記憶體內部的資料進行最佳化，所以速度很快。 資料儲存體、存取和處理演算法均已重新設計，可充分利用關於記憶體內部與高度並行運算的最新增強功能。
 
@@ -67,8 +66,8 @@ ms.locfileid: "50150189"
 
 #### <a name="customer-case-studies"></a>客戶案例研究
 
-- CMC Markets 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的記憶體內部 OLTP 來達成一致的低延遲：[因為一秒都不想再等，所以這家金融服務公司目前正在更新其交易軟體。](https://customers.microsoft.com/en-us/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
-- Derivco 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的記憶體內部 OLTP 來支援增加的輸送量並處理尖峰工作負載：[當某家線上遊戲公司不想承擔其未來風險時，其首選為 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。](https://customers.microsoft.com/en-us/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
+- CMC Markets 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的記憶體內部 OLTP 來達成一致的低延遲：[因為一秒都不想再等，所以這家金融服務公司目前正在更新其交易軟體。](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
+- Derivco 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的記憶體內部 OLTP 來支援增加的輸送量並處理尖峰工作負載：[當某家線上遊戲公司不想承擔其未來風險時，其首選為 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
 
 
 ### <a name="data-ingestion-including-iot-internet-of-things"></a>擷取資料，包括 IoT (Internet of Things)
@@ -93,9 +92,9 @@ ms.locfileid: "50150189"
  
 #### <a name="customer-case-studies"></a>客戶案例研究
 
-- [Quorum 利用 Azure SQL Database 中的記憶體內部 OLTP，將主要資料庫的工作負載加倍，同時降低 70% 的使用率](http://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
-- EdgeNet 利用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的記憶體內部 OLTP，提升了批次資料載入的效能，並移除了維護中層快取的需求：[資料服務公司利用記憶體內部技術，即時存取產品資料](https://customers.microsoft.com/en-us/story/data-services-firm-gains-real-time-access-to-product-d)
-- Beth Israel Deaconess Medical Center 使用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的記憶體內部 OLTP，已能大幅改善網域控制站的資料擷取率，並處理尖峰工作負載：[https://customers.microsoft.com/en-us/story/strengthening-data-security-and-creating-more-time-for]
+- [Quorum 利用 Azure SQL Database 中的記憶體內部 OLTP，將主要資料庫的工作負載加倍，同時降低 70% 的使用率](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
+- EdgeNet 利用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的記憶體內部 OLTP，提升了批次資料載入的效能，並移除了維護中層快取的需求：[資料服務公司利用記憶體內部技術，即時存取產品資料](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
+- Beth Israel Deaconess Medical Center 使用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的記憶體內部 OLTP，已能大幅改善網域控制站的資料擷取率，並處理尖峰工作負載：[https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for]
 
 ### <a name="caching-and-session-state"></a>快取和工作階段狀態
 
@@ -113,7 +112,7 @@ ASP.NET 工作階段狀態是非常成功的記憶體內部 OLTP 使用案例。
 
 #### <a name="customer-case-studies"></a>客戶案例研究
 
-- bwin 利用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的記憶體內部 OLTP，已能大幅增加輸送量並減少 ASP.NET 工作階段狀態的硬體使用量：[遊戲網站可以調整為每秒 250,000 個要求並提升玩家體驗](https://customers.microsoft.com/en-us/story/gaming-site-can-scale-to-250000-requests-per-second-an)
+- bwin 利用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的記憶體內部 OLTP，已能大幅增加輸送量並減少 ASP.NET 工作階段狀態的硬體使用量：[遊戲網站可以調整為每秒 250,000 個要求並提升玩家體驗](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an)
 - bwin 甚至進一步利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的記憶體內部 OLTP 來增加 ASP.NET 工作階段狀態的輸送量，並實作整個企業的中層快取系統：[bwin 如何使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的記憶體內部 OLTP 來達到前所未有的效能和延展性](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
 
 ### <a name="tempdb-object-replacement"></a>Tempdb 物件取代
@@ -224,7 +223,7 @@ GO
 
 ## <a name="resources-to-learn-more"></a>值得深入了解的資源：
 
-[提高 T-SQL 效能的記憶體內部 OLTP 技術](http://msdn.microsoft.com/library/mt694156.aspx)   
+[提高 T-SQL 效能的記憶體內部 OLTP 技術](https://msdn.microsoft.com/library/mt694156.aspx)   
 如需使用記憶體內部 OLTP 的效能示範，請參閱：[in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)   
 [說明記憶體內部 OLTP 並顯示示範的 17 分鐘影片](https://www.youtube.com/watch?v=l5l5eophmK4) (示範是 8:25)   
 [啟用記憶體內部 OLTP 並設定建議選項的指令碼](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)   
@@ -233,4 +232,4 @@ GO
 [使用記憶體最佳化提升暫存資料表與資料表變數效能](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)   
 [使用 SQL Database 中的記憶體內部技術將效能最佳化](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)  
 [系統版本設定時態表與記憶體最佳化資料表](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)  
-[記憶體內部 OLTP - 一般工作負載模式和移轉考量](http://msdn.microsoft.com/library/dn673538.aspx)。 
+[記憶體內部 OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。 

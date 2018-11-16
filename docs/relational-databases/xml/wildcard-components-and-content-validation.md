@@ -14,12 +14,12 @@ ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 14d15b7c78fd5f720dd77fc924fe321147d4de26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dbb4ecd59362c016536aed6731d5418cbe88d616
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820408"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674409"
 ---
 # <a name="wildcard-components-and-content-validation"></a>萬用字元元件和內容驗證
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +44,8 @@ ms.locfileid: "47820408"
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="http://www.w3.org/2001/XMLSchema"   
-        targetNamespace="http://ns">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema"   
+        targetNamespace="https://ns">  
    <element name="e" type="anyType"/>  
    <element name="a" type="byte"/>  
    <element name="b" type="string"/>  
@@ -57,7 +57,7 @@ GO
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<e xmlns="http://ns"><a>1</a><b>data</b></e>'  
+SET @var = '<e xmlns="https://ns"><a>1</a><b>data</b></e>'  
 GO  
 ```  
   
@@ -65,7 +65,7 @@ GO
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<e xmlns="http://ns"><a>1</a><c>Wrong</c><b>data</b></e>'  
+SET @var = '<e xmlns="https://ns"><a>1</a><c>Wrong</c><b>data</b></e>'  
 GO  
 ```  
   
@@ -73,7 +73,7 @@ GO
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<e xmlns="http://ns"><a>Wrong</a><b>data</b></e>'  
+SET @var = '<e xmlns="https://ns"><a>Wrong</a><b>data</b></e>'  
 SELECT @var  
 GO  
 ```  

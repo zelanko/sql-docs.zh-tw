@@ -1,0 +1,170 @@
+items:
+- name: 概觀
+  href: database-engine-scripting.md
+- name: 查詢與文字編輯器 (SQL Server Management Studio)
+  href: query-and-text-editors-sql-server-management-studio.md
+- name: Database Engine 查詢編輯器 (SQL Server Management Studio)
+  href: database-engine-query-editor-sql-server-management-studio.md
+- name: XML 編輯器 (SQL Server Management Studio)
+  href: xml-editor-sql-server-management-studio.md
+- name: 設定編輯器 (SQL Server Management Studio)
+  href: configure-editors-sql-server-management-studio.md
+  items:
+  - name: 使副檔名與程式碼編輯器相關聯
+    href: associate-file-extensions-to-a-code-editor.md
+  - name: 變更字型色彩、大小與樣式
+    href: change-font-color-size-and-style.md
+  - name: 在 Management Studio 中使用屬性視窗
+    href: use-the-properties-window-in-management-studio.md
+- name: 開啟編輯器 (SQL Server Management Studio)
+  href: open-an-editor-sql-server-management-studio.md
+- name: 管理編輯器和檢視模式
+  href: manage-the-editor-and-view-mode.md
+- name: 管理程式碼格式設定
+  href: manage-code-formatting.md
+- name: 導覽程式碼與文字
+  href: navigate-code-and-text.md
+- name: 查詢編輯器中的色彩編碼
+  href: color-coding-in-query-editors.md
+- name: 程式碼大綱
+  href: code-outlining.md
+- name: 拖放文字
+  href: drag-and-drop-text.md
+- name: 搜尋和取代
+  href: search-and-replace.md
+  items:
+  - name: 以累加方式搜尋作用中的文件
+    href: search-an-active-document-incrementally.md
+  - name: 以互動方式搜尋文件
+    href: search-documents-interactively.md
+  - name: 使用結果清單搜尋文件
+    href: search-documents-using-results-lists.md
+  - name: 使用萬用字元搜尋文字
+    href: search-text-with-wildcards.md
+  - name: 使用規則運算式搜尋文字
+    href: search-text-with-regular-expressions.md
+  - name: 尋找和取代
+    href: find-and-replace.md
+  - name: 檔案中尋找
+    href: find-in-files.md
+  - name: 尋找結果視窗
+    href: find-results-windows.md
+  - name: 檔案中取代
+    href: replace-in-files.md
+- name: 管理書籤
+  href: manage-bookmarks.md
+  items:
+  - name: 書籤 F1 說明
+    href: bookmarks-f1-help.md
+- name: 列印程式碼與結果
+  href: print-code-and-results.md
+- name: 使用查詢編輯器編輯 SQLCMD 指令碼
+  href: edit-sqlcmd-scripts-with-query-editor.md
+- name: IntelliSense (SQL Server Management Studio)
+  href: intellisense-sql-server-management-studio.md
+  items:
+  - name: 設定 IntelliSense (SQL Server Management Studio)
+    href: configure-intellisense-sql-server-management-studio.md
+  - name: 參數資訊 (IntelliSense)
+    href: parameter-info-intellisense.md
+  - name: 快速資訊 (IntelliSense)
+    href: quick-info-intellisense.md
+  - name: 自動完成文字 (IntelliSense)
+    href: complete-word-intellisense.md
+  - name: 語法組的自動比對
+    href: automatic-matching-of-syntax-pairs.md
+  - name: 對 IntelliSense 進行疑難排解 (SSMS)
+    href: troubleshooting-intellisense.md
+  - name: IntelliSense 所支援的 Transact-SQL 語法
+    href: transact-sql-syntax-supported-by-intellisense.md
+- name: Transact-SQL 程式碼片段
+  href: transact-sql-code-snippets.md
+  items:
+  - name: 插入 Transact-SQL 程式碼片段
+    href: insert-transact-sql-snippets.md
+  - name: 插入範圍陳述式 Transact-SQL 程式碼片段
+    href: insert-surround-with-transact-sql-snippets.md
+  - name: 完成 Transact-SQL 程式碼片段
+    href: complete-transact-sql-snippets.md
+  - name: 新增 Transact-SQL 程式碼片段
+    href: add-transact-sql-snippets.md
+- name: Transact-SQL 偵錯工具
+  href: transact-sql-debugger.md
+  items:
+  - name: 先設定防火牆規則再執行 TSQL 偵錯工具
+    href: configure-firewall-rules-before-running-the-tsql-debugger.md
+  - name: 執行 Transact-SQL 偵錯工具
+    href: run-the-transact-sql-debugger.md
+  - name: 逐步執行 Transact-SQL 程式碼
+    href: step-through-transact-sql-code.md
+  - name: Transact-SQL 中斷點
+    href: transact-sql-breakpoints.md
+    items:
+    - name: 切換中斷點
+      href: toggle-a-breakpoint.md
+    - name: 啟用、停用以及刪除中斷點
+      href: enable-disable-and-delete-breakpoints.md
+    - name: 指定中斷點條件
+      href: specify-a-breakpoint-condition.md
+    - name: 指定叫用計數
+      href: specify-a-hit-count.md
+    - name: 指定中斷點篩選條件
+      href: specify-a-breakpoint-filter.md
+    - name: 指定中斷點動作
+      href: specify-a-breakpoint-action.md
+    - name: 編輯中斷點位置
+      href: edit-a-breakpoint-location.md
+  - name: Transact-SQL 偵錯工具 - 資訊
+    href: transact-sql-debugger-information.md
+    items:
+    - name: Transact-SQL 偵錯工具 - 錯誤清單視窗
+      href: transact-sql-debugger-error-list-window.md
+    - name: Transact-SQL 偵錯工具 - 中斷點視窗
+      href: transact-sql-debugger-breakpoints-window.md
+    - name: Transact-SQL 偵錯工具 - 呼叫堆疊視窗
+      href: transact-sql-debugger-call-stack-window.md
+    - name: Transact-SQL 偵錯工具 - 區域變數視窗
+      href: transact-sql-debugger-locals-window.md
+    - name: Transact-SQL 偵錯工具 - 執行緒視窗
+      href: transact-sql-debugger-threads-window.md
+    - name: Transact-SQL 偵錯工具 - 命令視窗
+      href: transact-sql-debugger-command-window.md
+    - name: Transact-SQL 偵錯工具 - 輸出視窗
+      href: transact-sql-debugger-output-window.md
+    - name: Transact-SQL 偵錯工具 - 監看式視窗
+      href: transact-sql-debugger-watch-window.md
+    - name: Transact-SQL 偵錯工具 - 快速監看式對話方塊
+      href: transact-sql-debugger-quickwatch-dialog-box.md
+  - name: 狀態列 (Database Engine 查詢編輯器)
+    href: status-bar-database-engine-query-editor.md
+  - name: 檢視物件總管中的空間資料
+    href: view-spatial-data-in-object-explorer.md
+    items:
+    - name: 空間結果視窗
+      href: spatial-results-window.md
+- name: sqlcmd
+  items:
+  - name: 啟動公用程式
+    href: sqlcmd-start-the-utility.md
+  - name: 使用公用程式
+    href: sqlcmd-use-the-utility.md
+  - name: 連線到資料庫引擎
+    href: sqlcmd-connect-to-the-database-engine.md
+  - name: 執行 Transact-SQL 指令檔
+    href: sqlcmd-run-transact-sql-script-files.md
+  - name: 搭配指令碼變數使用
+    href: sqlcmd-use-with-scripting-variables.md
+- name: 產生指令碼 (SQL Server Management Studio)
+  href: generate-scripts-sql-server-management-studio.md
+  items:
+  - name: '[產生和發佈指令碼]'
+    href: generate-and-publish-scripts-wizard.md
+    items:
+    - name: 指令碼產生精靈支援的物件
+      href: objects-supported-by-the-generate-scripts-wizard.md
+ms.openlocfilehash: 0af0621ecb4c4a69879cee63196222748c2824b0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642496"

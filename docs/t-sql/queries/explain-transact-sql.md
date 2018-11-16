@@ -11,12 +11,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5ff1df22bd00680aeb0574624a3a7b55a688b3a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cef2b01c9b9d5147583cc4419fd105bd3e91503f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632656"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701413"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -67,7 +67,7 @@ EXPLAIN SQL_statement
 |\<sql>|回應 *SQL_statement*。|  
 |\<params>|目前不使用此標記。|  
 |\<dsql_operations>|摘要說明和包含查詢步驟，並包含查詢的成本資訊。 也包含所有 `<dsql_operation>` 區塊。 此標記包含整個查詢的計數資訊：<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* 是查詢執行的預估時間總計，以毫秒為單位。<br /><br /> *total_number_operations* 是查詢的作業總數。 將平行處理並在多個節點上執行的作業都會計算為單一作業。|  
-|\<dsql_operation>|描述查詢計劃內的單一作業。 \<dsql_operation> 標記包含做為屬性的作業類型：<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* 是在[查詢資料 (SQL Server PDW)](http://msdn.microsoft.com/3f4f5643-012a-4c36-b5ec-691c4bbe668c) 中找到的其中一個值。<br /><br /> `\<dsql_operation>` 區塊中的內容取決於作業類型。<br /><br /> 請參閱下表。|  
+|\<dsql_operation>|描述查詢計劃內的單一作業。 \<dsql_operation> 標記包含做為屬性的作業類型：<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* 是在[查詢資料 (SQL Server PDW)](https://msdn.microsoft.com/3f4f5643-012a-4c36-b5ec-691c4bbe668c) 中找到的其中一個值。<br /><br /> `\<dsql_operation>` 區塊中的內容取決於作業類型。<br /><br /> 請參閱下表。|  
   
 |作業類型|內容|範例|  
 |--------------------|-------------|-------------|  

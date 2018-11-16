@@ -12,12 +12,12 @@ ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 456458c98ddee8115f715839c6e13c3c3680196a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bad3ae2d22a1aed53cb5da61f631e48bde480d56
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713176"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701916"
 ---
 # <a name="planning-a-sql-server-installation"></a>規劃 SQL Server 安裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47713176"
   
  除非軟體的使用方式受到個別的合約 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 大量授權合約或與 ISV 或 OEM 簽訂的協力廠商合約) 所管制，否則不論安裝方法為何，您都必須確認以個人身分或代表實體接受軟體授權條款。  
   
- 這些授權條款會顯示在安裝程式使用者介面中，供您檢閱和接受。 自動安裝 (使用 `/Q` 或 `/QS` 參數) 必須包含 `/IAcceptSQLServerLicenseTerms` 參數。 在 [Microsoft SQL Server 授權條款與資訊](http://www.microsoft.com/Licensing/product-licensing/sql-server.aspx)分別下載與檢閱授權條款。 若為大量授權條款，請參閱[授權條款與文件](http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)。 若為舊版 SQL Server，請參閱 [Microsoft 軟體授權條款](http://go.microsoft.com/fwlink/?LinkID=148209)。  
+ 這些授權條款會顯示在安裝程式使用者介面中，供您檢閱和接受。 自動安裝 (使用 `/Q` 或 `/QS` 參數) 必須包含 `/IAcceptSQLServerLicenseTerms` 參數。 在 [Microsoft SQL Server 授權條款與資訊](https://www.microsoft.com/Licensing/product-licensing/sql-server.aspx)分別下載與檢閱授權條款。 若為大量授權條款，請參閱[授權條款與文件](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)。 若為舊版 SQL Server，請參閱 [Microsoft 軟體授權條款](https://go.microsoft.com/fwlink/?LinkID=148209)。  
   
 > [!NOTE]  
 >  根據您收到本軟體的方式 (例如，透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 大量授權)，軟體的使用方式可能會受到其他條款與條件的限制。  

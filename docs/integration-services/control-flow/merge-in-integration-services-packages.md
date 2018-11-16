@@ -13,12 +13,12 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c8198ea6c27b78125ac9b7c77989bf59fd57e34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 921e2883985eed8b3640ef7da9e874b74b30c55f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856106"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638005"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services Packages
   目前版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]之「執行 SQL」工作中的 SQL 陳述式可能會包含 MERGE 陳述式。 這個 MERGE 陳述式可讓您在單一陳述式中完成多項 INSERT、UPDATE 及 DELETE 作業。  
@@ -34,7 +34,7 @@ ms.locfileid: "47856106"
     > [!NOTE]  
     >  一般而言，雖然 MERGE 陳述式在此狀況下需要臨時資料表，但是 MERGE 陳述式的效能通常會超過查閱轉換所執行之逐列查閱的效能。 此外，當大型查閱資料表要測試可供查閱轉換用於快取其參考資料表的記憶體時，MERGE 也很有用。  
   
- 如需支援使用 MERGE 陳述式的範例目的地元件，請參閱 CodePlex 社群範例： [MERGE Destination](http://go.microsoft.com/fwlink/?LinkId=141215)。  
+ 如需支援使用 MERGE 陳述式的範例目的地元件，請參閱 CodePlex 社群範例： [MERGE Destination](https://go.microsoft.com/fwlink/?LinkId=141215)。  
   
 ## <a name="using-merge"></a>使用 MERGE  
  一般而言，當您想要在資料表之間套用包含插入、更新和刪除的變更時，就可以使用 MERGE 陳述式。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]之前，這項程序需要查閱轉換和多項 OLE DB 命令轉換。 查閱轉換會執行逐列查閱，以便判斷每個資料列是新的或已變更。 然後，OLE DB 命令轉換會執行必要的 INSERT、UPDATE 及 DELETE 作業。 從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]開始，單一 MERGE 陳述式即可取代查閱轉換及對應的 OLE DB 命令轉換。  

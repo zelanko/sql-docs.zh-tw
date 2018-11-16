@@ -10,12 +10,12 @@ ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b3e74619a00e2f2e0db9529fc96ca93994f6895a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6aa72013df7e229c76154b6de1839c2ff0e0f0dc
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693376"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701246"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>保護主資料管理員 Web 應用程式
 
@@ -35,7 +35,7 @@ ms.locfileid: "47693376"
   
 ### <a name="to-secure-the-master-data-manager-web-application-with-https"></a>若要使用 HTTPS 保護主資料管理員 Web 應用程式  
   
-1.  在確認 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式已經使用 HTTP 正確設定之後，在 IIS 中建立憑證。 如需詳細資訊，請參閱[在 IIS 7 中設定伺服器憑證](http://technet.microsoft.com/library/cc732230\(WS.10\).aspx)。  
+1.  在確認 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式已經使用 HTTP 正確設定之後，在 IIS 中建立憑證。 如需詳細資訊，請參閱[在 IIS 7 中設定伺服器憑證](https://technet.microsoft.com/library/cc732230\(WS.10\).aspx)。  
   
 2.  在 [連接] 窗格中，按一下 [網站] 底下主控 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式的網站。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47693376"
   
 11. 尋找字串 `<security mode="Message">` ，並將其變更為 `<security mode="Transport">`。  
   
-12. 儲存並關閉檔案。 如果出現錯誤，這可能是因為您已啟用 UAC。 如需詳細資訊，請參閱 [關閉使用者帳戶控制](http://technet.microsoft.com/library/cc709691\(WS.10\).aspx)。 使用者現在應該能夠使用 HTTPS 存取網站。  
+12. 儲存並關閉檔案。 如果出現錯誤，這可能是因為您已啟用 UAC。 如需詳細資訊，請參閱[關閉使用者帳戶控制](https://technet.microsoft.com/library/cc709691\(WS.10\).aspx)。 使用者現在應該能夠使用 HTTPS 存取網站。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立主資料管理員 Web 應用程式 &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  

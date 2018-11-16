@@ -14,12 +14,12 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b2d68a048a1d2767bdbaf5931dd59f9a928e50a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12ad3867a465582aa1362f8607187ed9026c26ca
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623566"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605438"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>指定複本頁面 (新增可用性群組精靈：加入複本精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47623566"
  **伺服器執行個體**  
  顯示將裝載可用性複本的伺服器執行個體名稱。  
   
- 如果 [可用性複本] 方格未列出您要用來裝載次要複本的伺服器執行個體，請按一下 [新增複本] 按鈕。 如果您在混合式 IT 環境設定可用性群組 (請參閱 [SQL Server 在 Windows Azure 虛擬機器的高可用性和災害復原](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx))，您可以按一下 [加入 Azure 複本] 按鈕，以在 Windows Azure 中建立包含次要複本的虛擬機器。  
+ 如果 [可用性複本] 方格未列出您要用來裝載次要複本的伺服器執行個體，請按一下 [新增複本] 按鈕。 如果您在混合式 IT 環境設定可用性群組 (請參閱 [SQL Server 在 Windows Azure 虛擬機器的高可用性和災害復原](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx))，您可以按一下 [加入 Azure 複本] 按鈕，以在 Windows Azure 中建立包含次要複本的虛擬機器。  
   
  **初始角色**  
  指出新的複本一開始執行的角色：[主要] 或 [次要]。  
@@ -67,7 +67,7 @@ ms.locfileid: "47623566"
  按一下可將次要複本加入至可用性群組。  
   
  **加入 Azure 複本**  
- 按一下以建立在可用性群組中執行次要複本的 Windows Azure 虛擬機器。 此選項只適用於混合式 IT 中包含內部部署複本的可用性群組。 如需詳細資訊，請參閱＜ [Windows Azure 虛擬機器中 SQL Server 的高可用性和災害復原](http://msdn.microsoft.com/library/windowsazure/jj870962.aspx)＞。  
+ 按一下以建立在可用性群組中執行次要複本的 Windows Azure 虛擬機器。 此選項只適用於混合式 IT 中包含內部部署複本的可用性群組。 如需詳細資訊，請參閱＜ [Windows Azure 虛擬機器中 SQL Server 的高可用性和災害復原](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)＞。  
   
  **移除複本**  
  按一下可從可用性群組中移除選取的次要複本。  

@@ -5,8 +5,7 @@ ms.custom: P360
 ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -19,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7553be68390c90b2cab8ac55c66bb9ffa47ad88
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3041f983b1d5aec55ac3727c322558ed22e69315
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031265"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658627"
 ---
 # <a name="tempdb-database"></a>tempdb 資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "51031265"
  \* 檔案數目取決於電腦上 (邏輯) 處理器的數量。 一般而言，如果邏輯處理器的數目小於或等於 8，請使用與邏輯處理器數目相同的資料檔案數目。 如果邏輯處理器的數目大於 8，請使用 8 個資料檔案，要是競爭的情況仍持續發生，請以 4 的倍數增加資料檔案數目，直到競爭縮減到可接受的程度；或是對工作負載/程式碼進行變更。
 
 > [!NOTE]
-> 資料檔案數目預設值取決於 [KB 2154845](http://support.microsoft.com/kb/2154845/)內的一般指導方針。  
+> 資料檔案數目預設值取決於 [KB 2154845](https://support.microsoft.com/kb/2154845/)內的一般指導方針。  
   
 ### <a name="moving-the-tempdb-data-and-log-files-in-sql-server"></a>移動 SQL Server 中的 tempdb 資料和記錄檔  
  若要移動 **tempdb** 資料和記錄檔，請參閱 [移動系統資料庫](../../relational-databases/databases/move-system-databases.md)。  
@@ -278,4 +277,4 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [使用 SQL Server 2005 中的 tempdb](https://technet.microsoft.com/library/cc966545.aspx)  
- [tempdb 磁碟空間不足的疑難排解](http://msdn.microsoft.com/library/ms176029.aspx) 
+ [tempdb 磁碟空間不足的疑難排解](https://msdn.microsoft.com/library/ms176029.aspx) 

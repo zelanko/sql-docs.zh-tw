@@ -25,12 +25,12 @@ ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 02140750f49c326e7d7da84ffa08b798e0462f07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ff8f2d557fac07f588b278e2b2667b75e60f478
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799386"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701287"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,9 +70,9 @@ END CONVERSATION conversation_handle
   
  如果 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 尚未處理交談的結束對話或錯誤訊息，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會通知交談的遠端，告知交談已經結束。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 傳給遠端服務的訊息會隨著指定的選項而不同：  
   
--   如果交談結束時沒有任何錯誤，而且與遠端服務的交談仍然在進行中，則 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將 `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` 類型的訊息傳送給遠端服務。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會依照交談順序將此訊息加入到傳輸佇列。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 在傳送這個訊息之前，會先傳送此交談目前位於傳輸佇列中的所有訊息。  
+-   如果交談結束時沒有任何錯誤，而且與遠端服務的交談仍然在進行中，則 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將 `https://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` 類型的訊息傳送給遠端服務。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會依照交談順序將此訊息加入到傳輸佇列。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 在傳送這個訊息之前，會先傳送此交談目前位於傳輸佇列中的所有訊息。  
   
--   如果交談結束時出現錯誤，而且與遠端服務的交談仍然在進行中，則 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將 `http://schemas.microsoft.com/SQL/ServiceBroker/Error` 類型的訊息傳送給遠端服務。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會卸除此交談目前位於傳輸佇列中的任何其他訊息。  
+-   如果交談結束時出現錯誤，而且與遠端服務的交談仍然在進行中，則 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將 `https://schemas.microsoft.com/SQL/ServiceBroker/Error` 類型的訊息傳送給遠端服務。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會卸除此交談目前位於傳輸佇列中的任何其他訊息。  
   
 -   WITH CLEANUP 子句可讓資料庫管理員移除無法正常完成的交談。 這個選項會移除交談的所有訊息和目錄檢視項目。 請注意，在這個情況下，交談的遠端不會收到任何交談已結束的訊息，可能也不會收到應用程式已送出而尚未通過網路傳輸的訊息。 除非交談無法正常完成，否則，請避免使用這個選項。  
   

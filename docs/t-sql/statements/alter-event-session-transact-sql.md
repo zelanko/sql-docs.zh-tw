@@ -20,12 +20,12 @@ ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: db06e014e735e9174cde6364f30ee3870977941d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fb0c0e35b2350bf3b1753434425389eb8f3503d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742086"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696789"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ ON SERVER
 |DROP EVENT \<event_specifier>|卸除 *\<event_specifier>* 所識別的事件。 \<event_specifier> 在事件工作階段中必須是有效的。|  
 |ADD TARGET \<event_target_specifier>|將 \<event_target_specifier> 所指定的目標與事件工作階段建立關聯。|
 |[*event_module_guid*].*event_package_name*.*target_name*|此為事件工作階段中之目標的名稱，其中：<br /><br /> -   *event_module_guid* 是包含此事件之模組的 GUID。<br />-   *event_package_name* 是包含此動作物件的套件。<br />-   *target_name* 是動作。 動作會出現在 sys.dm_xe_objects 檢視表中當做 object_type 'target'。|  
-|SET { *target_parameter_name*= \<value> [, ...*n*] }|設定目標參數。 目標參數會出現在 sys.dm_xe_object_columns 檢視中當作 column_type 'customizable ' 和 object_name = *target_name*。<br /><br /> **注意！！** 如果是使用信號緩衝區目標，建議您將 max_memory 目標參數設為 2048 KB，以避免 XML 輸出可能發生資料截斷。 如需不同目標類型的詳細資訊，請參閱 [SQL Server 擴充的事件目標](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)。|  
+|SET { *target_parameter_name*= \<value> [, ...*n*] }|設定目標參數。 目標參數會出現在 sys.dm_xe_object_columns 檢視中當作 column_type 'customizable ' 和 object_name = *target_name*。<br /><br /> **注意！！** 如果是使用信號緩衝區目標，建議您將 max_memory 目標參數設為 2048 KB，以避免 XML 輸出可能發生資料截斷。 如需不同目標類型的詳細資訊，請參閱 [SQL Server 擴充的事件目標](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)。|  
 |DROP TARGET \<event_target_specifier>|卸除 \<event_target_specifier> 所識別的目標。 \<event_target_specifier> 在事件工作階段中必須是有效的。|  
 |EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** &#124; ALLOW_MULTIPLE_EVENT_LOSS &#124; NO_EVENT_LOSS }|指定要用來處理事件遺失的事件保留模式。<br /><br /> **ALLOW_SINGLE_EVENT_LOSS**<br /> 事件可能會從工作階段遺失。 當所有事件緩衝區已滿時，只會卸除單一事件。 當事件緩衝區已滿時遺失單一事件會允許可接受的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能特性，同時也可讓處理之事件資料流中的資料遺失情形降至最低。<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS<br /> 包含多個事件的完整事件緩衝區可能會從工作階段中遺失。 遺失的事件數目取決於配置給工作階段的記憶體大小、記憶體的分割及緩衝區中的事件大小。 當事件緩衝區被快速填滿時，這個選項對於伺服器效能的影響會降至最低，但是可能會從工作階段中遺失大量的事件。<br /><br /> NO_EVENT_LOSS<br /> 不允許事件遺失。 這個選項可確保將會保留所有引發的事件。 使用這個選項可強制引發事件的所有工作一直等候到事件緩衝區中有可用的空間為止。 這樣可能會在事件工作階段為使用中時偵測到效能問題。 當使用者連接在等候事件從緩衝區排清時，可能會停滯。|  
 |MAX_DISPATCH_LATENCY = { *seconds* SECONDS &#124; **INFINITE** }|指定事件在分派給事件工作階段目標之前，將於記憶體內緩衝處理的時間量。 最小的延遲值是 1 秒鐘。 但是，可使用 0 來指定 INFINITE 延遲。 依預設，此值設定為 30 秒。<br /><br /> *seconds* SECONDS<br /> 將緩衝區排清到目標之前所需等候的時間 (以秒為單位)。 *seconds* 是整數。<br /><br /> **INFINITE**<br /> 只有當緩衝區已滿，或是當事件工作階段關閉時，才能將緩衝區排清到目標。<br /><br /> **注意！！** MAX_DISPATCH_LATENCY = 0 SECONDS 相當於 MAX_DISPATCH_LATENCY = INFINITE。|  
@@ -173,7 +173,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
- [SQL Server 擴充的事件目標](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [SQL Server 擴充的事件目標](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)   
  [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
  [sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)  

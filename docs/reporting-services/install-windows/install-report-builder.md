@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ebcef28bd5b785bb72059986e39aae34d8af7921
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 916709e73cd7cad750683dca984d9e897b84997d
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021322"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813181"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]是一種獨立式應用程式，由您或系統管理員安裝在電腦上。 您可以透過 Microsoft 下載中心、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 報表伺服器，或整合 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的 SharePoint 網站進行安裝。  
@@ -29,7 +29,7 @@ ms.locfileid: "50021322"
  
 ## <a name="install-includessrbnoversionincludesssrbnoversionmd-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 安裝 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 
   
- 系統管理員也可以使用 System Center Configuration Manager 這類軟體，將此程式發送至您的電腦。 若要了解如何使用特定軟體來安裝 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，請參閱軟體的文件集。 如需詳細資訊，請參閱 [System Center Configuration Manager 網站](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager)。  
+ 系統管理員也可以使用 System Center Configuration Manager 這類軟體，將此程式發送至您的電腦。 若要了解如何使用特定軟體來安裝 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，請參閱軟體的文件集。 如需詳細資訊，請參閱 [System Center Configuration Manager 網站](https://www.microsoft.com/cloud-platform/system-center-configuration-manager)。  
   
 > [!IMPORTANT]  
 >  Windows Vista 和 Windows 7 安全性功能需要更高的權限才能執行命令列作業，並且會提示執行命令列的權限。 安裝不是無訊息的。 若要進行無訊息安裝，您必須以管理員的身分執行命令列。  

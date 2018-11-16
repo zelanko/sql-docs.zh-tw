@@ -5,8 +5,7 @@ ms.date: 07/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - index design guide
@@ -24,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6deaaa7ac9774cc775801ae7946675452cc15a35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e26f3436b821c1b6b42dec9f0b5f0c7170da780e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822399"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669597"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引架構和設計指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -175,7 +174,7 @@ ms.locfileid: "47822399"
   
 -   使查詢執行更快和更具效率。 當查詢存取索引的一些資料分割時，查詢最佳化工具可以同時處理個別的資料分割並排除未受查詢影響的資料分割。  
   
-如需相關資訊，請參閱 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
+如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。  
   
 ###  <a name="Sort_Order"></a> 索引排序順序設計指導方針  
  定義索引時，您應該考慮要以遞增還是遞減的順序，來儲存索引鍵資料行的資料。 遞增是預設值，且可繼續與舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]相容。 CREATE INDEX、CREATE TABLE 與 ALTER TABLE 陳述式的語法，可在索引及條件約束的個別資料行上支援關鍵字 ASC (遞增) 與 DESC (遞減)。  
@@ -825,7 +824,7 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>記憶體內部非叢集索引架構
 
-記憶體內部非叢集索引是使用原本由 Microsoft Research 2011 規畫說明的 Bw 型樹狀結構的資料結構來實作。 Bw 型樹狀結構是鎖定且不需閂鎖的 B 型樹狀結構變化。 如需詳細資料，請參閱 [The Bw-Tree: A B-tree for New Hardware Platforms](http://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/) (Bw 型樹狀結構：新硬體平台的 B 型樹狀結構)。 
+記憶體內部非叢集索引是使用原本由 Microsoft Research 2011 規畫說明的 Bw 型樹狀結構的資料結構來實作。 Bw 型樹狀結構是鎖定且不需閂鎖的 B 型樹狀結構變化。 如需詳細資料，請參閱 [The Bw-Tree: A B-tree for New Hardware Platforms](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/) (Bw 型樹狀結構：新硬體平台的 B 型樹狀結構)。 
 
 在極高層面，Bw 型樹狀結構可以視為依頁面識別碼 (PidMap) 組織的頁面地圖，方便配置並重複使用頁面識別碼 (PidAlloc) 和在頁面地圖中互相連結的頁面集。 這三個高層級的子元件構成 Bw 型樹狀結構的基本內部結構。
 
@@ -892,8 +891,8 @@ Bw 型樹狀結構中的索引頁可視需要從儲存單一資料列成長，�
 [CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
 [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
 [重新組織與重建索引](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
-[＜使用 SQL Server 2008 索引檢視提升效能＞](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
-[Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+[＜使用 SQL Server 2008 索引檢視提升效能＞](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+[分割資料表與索引](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [建立主索引鍵](../relational-databases/tables/create-primary-keys.md)    
 [記憶體最佳化資料表的索引](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
 [資料行存放區索引概觀](../relational-databases/indexes/columnstore-indexes-overview.md)  
@@ -902,4 +901,4 @@ Bw 型樹狀結構中的索引頁可視需要從儲存單一資料列成長，�
 [索引相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [計算資料行的索引](../relational-databases/indexes/indexes-on-computed-columns.md)   
 [索引和 ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      
-[自適性索引重組](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      
+[自適性索引重組](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      

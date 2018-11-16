@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af39fd0a7a05bd66565ac94f112c63ac1158df86
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 11f2ad440e817c62a8efa67ba421351b9db93ff9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264888"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662421"
 ---
 # <a name="partitioned-tables-and-indexes"></a>分割資料表與索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -128,11 +128,11 @@ ms.locfileid: "48264888"
   
 ## <a name="related-content"></a>相關內容  
  您可能會發現下列資料分割資料表和索引策略和實作白皮書十分有用。  
--   [使用 SQL Server 2008 的資料分割資料表和索引策略](http://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
--   [如何實作自動滑動視窗](http://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
--   [大量載入至資料分割資料表](http://msdn.microsoft.com/library/cc966380.aspx)    
+-   [使用 SQL Server 2008 的資料分割資料表和索引策略](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
+-   [如何實作自動滑動視窗](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
+-   [大量載入至資料分割資料表](https://msdn.microsoft.com/library/cc966380.aspx)    
 -   [專案 REAL：資料生命週期 -- 資料分割](https://technet.microsoft.com/library/cc966424.aspx)    
--   [分割資料表和索引上的查詢處理增強功能](http://msdn.microsoft.com/library/ms345599.aspx)    
--   [建立大規模關聯式資料倉儲的前 10 大最佳作法](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
+-   [分割資料表和索引上的查詢處理增強功能](https://msdn.microsoft.com/library/ms345599.aspx)    
+-   [建立大規模關聯式資料倉儲的前 10 大最佳作法](https://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
   
   

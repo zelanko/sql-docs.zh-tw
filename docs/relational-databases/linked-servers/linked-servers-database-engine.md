@@ -3,10 +3,9 @@ title: 連結的伺服器 (Database Engine) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
+ms.technology: ''
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB, linked servers
@@ -21,12 +20,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3a6b69707626c67ae1d96f305a46bf5b0fd09317
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f9e1a278e51c2ace53932fcc48ef3759baa307d
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618052"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512723"
 ---
 # <a name="linked-servers-database-engine"></a>連結的伺服器 (Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

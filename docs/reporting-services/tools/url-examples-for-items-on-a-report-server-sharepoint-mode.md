@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a21d053818991c19e8b57ce60c11f4766973b6ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b787bdccdb913bd95051c8e3a4a3dd37fed5c01
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839556"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812951"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>報表伺服器上的項目 URL 範例 - SharePoint 模式
   若要將報表和相關項目發行至 SharePoint 文件庫，您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 撰寫工具 (例如報表設計師) 來發行內容，也可以使用 SharePoint 網站動作來上傳內容。  
@@ -47,21 +47,21 @@ ms.locfileid: "47839556"
  不支援使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL Proxy 端點。 Proxy 端點包含通訊埠編號，例如 `http:*//servername:8080/reportserver*`。  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>SharePoint 伺服器網站或子網站的 URL  
- 當您部署報表或報表資料來源時，您必須使用指向 SharePoint 網站或子網站的 URL (如果有的話)。 在 URL 中，網站名稱會出現在伺服器名稱的後面，例如 `http://*servername/site*` 或 `http://*servername/site/subsite*`。  
+ 當您部署報表或報表資料來源時，您必須使用指向 SharePoint 網站或子網站的 URL (如果有的話)。 在 URL 中，網站名稱會出現在伺服器名稱的後面，例如 `https://*servername/site*` 或 `https://*servername/site/subsite*`。  
   
  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web 應用程式上，網站和子網站通常會對應到主要網站上的索引標籤。 若要尋找網站名稱或子網站名稱，按一下 [主資料夾]，然後按一下 [所有網站內容]。 捲動至底部，然後尋找 [網站與工作區]。 網站清單便會出現在此區段中。  
   
 ### <a name="url-for-a-sharepoint-library"></a>SharePoint 文件庫的 URL  
  當您將報表或相關項目部署至 SharePoint 文件庫時，您必須使用指向 SharePoint 文件庫的 URL。 要用於文件庫的 URL 會視您所使用的 SharePoint 版本而有所不同。  
   
- 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 或 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]，文件庫會出現在伺服器名稱後面，例如 `http://*servername/*Shared Documents`。  
+ 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 或 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]，文件庫會出現在伺服器名稱後面，例如 `https://*servername/*Shared Documents`。  
   
- 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]上，文件庫會出現在網站和子網站後面。 例如， `http://*servername/site/*Documents`。  
+ 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]上，文件庫會出現在網站和子網站後面。 例如， `https://*servername/site/*Documents`。  
   
  若要尋找新 SharePoint 文件庫或不熟悉之網站的路徑資訊，開啟瀏覽器，然後找出您要發行報表的 SharePoint 文件庫。 如果文件庫是空的，上傳任何檔案。 以滑鼠右鍵按一下檔案，然後選取 [屬性]，以開啟 [屬性] 視窗。 檔案的位址包含發行作業所需的 URL 值。  
   
 ### <a name="fully-qualified-urls-for-items-on-a-sharepoint-site"></a>SharePoint 網站上之項目的完整 URL  
- 儲存在 SharePoint 文件庫中的項目一定會透過完整的 URL 定址，該 URL 會以 Web 應用程式開始 (`http://*server*`) 當作根節點，然後以您要參考的檔案名稱結尾。  
+ 儲存在 SharePoint 文件庫中的項目一定會透過完整的 URL 定址，該 URL 會以 Web 應用程式開始 (`https://*server*`) 當作根節點，然後以您要參考的檔案名稱結尾。  
   
  在 URL 中的檔案名稱包含副檔名。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47839556"
  若要指定鑽研報表，請在運算式中加入 URL。 例如，若要指定名為 SalesDetails 的報表做為鑽研報表，請在文字方塊或預留位置文字的 [動作] 中，將 ReportName 設到下列運算式：  
   
 ```  
-="http://site/subsite/documentlibrary/SalesDetails.rdl"  
+="https://site/subsite/documentlibrary/SalesDetails.rdl"  
 ```  
   
 ### <a name="reserved-names-on-sharepoint-sites"></a>在 SharePoint 網站上的保留名稱  
@@ -94,11 +94,11 @@ ms.locfileid: "47839556"
   
 |目標|範例 URL|  
 |------------|-----------------|  
-|SharePoint 伺服器。|`http://TestServer`|  
-|SharePoint 伺服器網站或子網站。|`http://TestServer/toplevelsite/subsite`|  
-|在 **或** 部署上， [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] Shared Documents [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 中的 Company Sales 範例報表。|`http://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
-|在 **或** 執行個體上， [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] Documents/Doc [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 資料夾中的 Company Sales 範例報表。|`http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
-|在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 執行個體上，[報告中心] 中的 Company Sales 範例報表。|`http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
+|SharePoint 伺服器。|`https://TestServer`|  
+|SharePoint 伺服器網站或子網站。|`https://TestServer/toplevelsite/subsite`|  
+|在 **或** 部署上， [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] Shared Documents [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 中的 Company Sales 範例報表。|`https://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
+|在 **或** 執行個體上， [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] Documents/Doc [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 資料夾中的 Company Sales 範例報表。|`https://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
+|在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 執行個體上，[報告中心] 中的 Company Sales 範例報表。|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
 ##  <a name="publishingToDocLib"></a> 從撰寫工具發行到 SharePoint 文件庫  
  當您使用報表撰寫工具將報表和相關的檔案發行至文件庫時，加入這些檔案之前會先進行驗證。 如果您在 SharePoint 文件庫上使用 [上傳] 動作來上傳報表與相關檔案，則不會進行任何驗證檢查。 因此，在您藉由管理、編輯或執行檔案來存取報表前，將不會知道檔案是否有效。  

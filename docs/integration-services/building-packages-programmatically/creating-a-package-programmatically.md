@@ -19,12 +19,12 @@ ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b09b200cfead07be03449d6f62c70ee3fc180d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4782edbfb3b353dbd07313e0568847d5c696ad8
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704336"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637725"
 ---
 # <a name="creating-a-package-programmatically"></a>以程式設計方式建立封裝
   <xref:Microsoft.SqlServer.Dts.Runtime.Package> 物件是 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 專案方案中所有其他物件的最上層容器。 做為最上層容器，封裝是第一個建立的物件，而且後續的物件會加入其中，然後在封裝的內容中執行。 封裝本身不會移動或是轉換資料。 封裝依賴它所含的工作 (Task) 以執行工作 (Work)。 工作 (Task) 會執行封裝所執行的大部分工作 (Work)，並定義封裝的功能。 只需要三行程式碼就可以建立和執行封裝，但是還需要將各種工作與 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件加入，以便為您的封裝提供其他功能。 本節討論如何以程式設計方式建立封裝。 有關如何建立工作或 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 的詳細資訊並非在此提供， 這些內容將於後續章節說明。  
@@ -151,9 +151,9 @@ End Module
   
 ## <a name="external-resources"></a>外部資源  
   
--   blogs.msdn.com 上的部落格文章：[API Sample - OleDB source and OleDB destination](http://go.microsoft.com/fwlink/?LinkId=220824) (API 範例 - OleDB 來源與 OleDB 目的地)。  
+-   blogs.msdn.com 上的部落格文章：[API Sample - OleDB source and OleDB destination](https://go.microsoft.com/fwlink/?LinkId=220824) (API 範例 - OleDB 來源與 OleDB 目的地)。  
   
--   blogs.msdn.com 上的部落格文章：[EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223) (EzAPI - 針對 SQL Server 2012 更新)。  
+-   blogs.msdn.com 上的部落格文章：[EzAPI – Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223) (EzAPI - 針對 SQL Server 2012 更新)。  
   
 ## <a name="see-also"></a>另請參閱  
  [以程式設計方式新增工作](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  

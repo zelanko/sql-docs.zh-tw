@@ -17,24 +17,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 856f26ac921a1bbe4f467cd11b785ee3868eeac2
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: ee44e6c7a4ff8befc21b461feab44a07a8658a2f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643886"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696726"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar 和 nvarchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-固定長度 **nchar** 或變動長度 **nvarchar** 的字元資料型別。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，當使用支援[補充字元 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的定序時，這些資料類型會存放完整範圍的 [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 字元並使用 [UTF-16](http://www.wikipedia.org/wiki/UTF-16) 字元編碼。 若指定非 SC 定序，則這些資料類型只會存放 [UCS-2](http://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms) 字元編碼所支援之字元資料的子集。
+固定長度 **nchar** 或變動長度 **nvarchar** 的字元資料型別。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，當使用支援[補充字元 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的定序時，這些資料類型會存放完整範圍的 [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 字元並使用 [UTF-16](https://www.wikipedia.org/wiki/UTF-16) 字元編碼。 若指定非 SC 定序，則這些資料類型只會存放 [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms) 字元編碼所支援之字元資料的子集。
   
 ## <a name="arguments"></a>引數  
 **nchar** [ ( n ) ]  
-固定長度的字串資料。 *n* 會定義字串長度 (單位為位元組配對)，而且必須是 1 到 4,000 之間的值。 儲存大小是 *n* 個位元組的兩倍。 針對 [UCS-2](http://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 編碼，儲存大小是 *n* 位元組的兩倍，而可存放的字元數目也是 *n*。 針對 UTF-16 編碼，儲存大小仍是 *n* 位元組的兩倍，但可存放的字元數目可能小於 *n*，因為補充字元使用兩個位元組配對 (亦稱為[代理配對 (surrogate-pair)](http://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF))。 **nchar** 的 ISO 同義字為 **national char** 及 **national character**。
+固定長度的字串資料。 *n* 會定義字串長度 (單位為位元組配對)，而且必須是 1 到 4,000 之間的值。 儲存體大小是 *n* 個位元組的兩倍。 針對 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 編碼，儲存大小是 *n* 位元組的兩倍，而可存放的字元數目也是 *n*。 針對 UTF-16 編碼，儲存大小仍是 *n* 位元組的兩倍，但可存放的字元數目可能小於 *n*，因為補充字元使用兩個位元組配對 (亦稱為[代理配對 (surrogate-pair)](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF))。 **nchar** 的 ISO 同義字為 **national char** 及 **national character**。
   
 **nvarchar** [ ( n | **max** ) ]  
-可變長度的字串資料。 *n* 會定義字串長度 (單位為位元組配對)，而且必須是 1 到 4,000 之間的值。 **max** 表示儲存大小上限是 2^30-1 個字元 (2 GB)。 儲存大小是 *n* 位元組的兩倍 + 2 位元組。 針對 [UCS-2](http://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 編碼，儲存大小是 *n* 位元組的兩倍 + 2 位元組，而可存放的字元數目也是 *n*。 針對 UTF-16 編碼，儲存大小仍是 *n* 位元組的兩倍 + 2 位元組，但可存放的字元數目可能小於 *n*，因為補充字元使用兩個位元組配對 (亦稱為[代理配對 (surrogate-pair)](http://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF))。 **nvarchar** 的 ISO 同義字為 **national char varying** 及 **national character varying**。
+可變長度的字串資料。 *n* 會定義字串長度 (單位為位元組配對)，而且必須是 1 到 4,000 之間的值。 **max** 表示儲存大小上限是 2^30-1 個字元 (2 GB)。 儲存大小是 *n* 位元組的兩倍 + 2 位元組。 針對 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 編碼，儲存大小是 *n* 位元組的兩倍 + 2 位元組，而可存放的字元數目也是 *n*。 針對 UTF-16 編碼，儲存大小仍是 *n* 位元組的兩倍 + 2 位元組，但可存放的字元數目可能小於 *n*，因為補充字元使用兩個位元組配對 (亦稱為[代理配對 (surrogate-pair)](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF))。 **nvarchar** 的 ISO 同義字為 **national char varying** 及 **national character varying**。
   
 ## <a name="remarks"></a>Remarks  
 當資料定義或變數宣告陳述式中沒有指定 *n* 時，預設長度為 1。 當 *n* 不是由 CAST 函式指定時，預設長度為 30。
@@ -64,7 +64,7 @@ ms.locfileid: "49643886"
 ## <a name="see-also"></a>另請參閱
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  

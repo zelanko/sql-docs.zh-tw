@@ -5,8 +5,7 @@ ms.date: 08/28/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.options.f1
@@ -14,12 +13,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e2170bef87a87e05454f6092e5829797808d96c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49e6357f4f108b05b0f28442d0e526445a5a5ad7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706556"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659367"
 ---
 # <a name="database-properties-options-page"></a>資料庫屬性 (選項頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,10 +95,10 @@ ms.locfileid: "47706556"
  在 SQL Server 2016 和 Azure SQL Database 中，有許多可將範圍設為資料庫層級的組態屬性。 如需所有這些設定的詳細資訊，請參閱 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。  
   
  **舊版基數估計**  
- 指定與資料庫相容性層級無關之主要的查詢最佳化工具基數估計模型。 這與 [追蹤旗標 9481](https://support.microsoft.com/en-us/kb/2801413)相同。  
+ 指定與資料庫相容性層級無關之主要的查詢最佳化工具基數估計模型。 這與 [追蹤旗標 9481](https://support.microsoft.com/kb/2801413)相同。  
   
  **次要的舊版基數估計**  
- 指定與資料庫相容性層級無關之次要 (如果有的話) 的查詢最佳化工具基數估計模型。 這與 [追蹤旗標 9481](https://support.microsoft.com/en-us/kb/2801413)相同。  
+ 指定與資料庫相容性層級無關之次要 (如果有的話) 的查詢最佳化工具基數估計模型。 這與 [追蹤旗標 9481](https://support.microsoft.com/kb/2801413)相同。  
   
  **最大 DOP**  
  指定應該用於陳述式之主要的預設 [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 設定。  
@@ -108,16 +107,16 @@ ms.locfileid: "47706556"
  指定應該用於陳述式之次要 (如果有的話) 的預設 [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 設定。  
   
  **參數探測**  
- 啟用或停用主要的參數探測。 這與 [追蹤旗標 4136](https://support.microsoft.com/en-us/kb/980653)相同。  
+ 啟用或停用主要的參數探測。 這與 [追蹤旗標 4136](https://support.microsoft.com/kb/980653)相同。  
   
  **次要的參數探測**  
- 啟用或停用次要 (如果有的話) 的參數探測。 這與 [追蹤旗標 4136](https://support.microsoft.com/en-us/kb/980653)相同。  
+ 啟用或停用次要 (如果有的話) 的參數探測。 這與 [追蹤旗標 4136](https://support.microsoft.com/kb/980653)相同。  
   
  **查詢最佳化工具修正程式**  
- 啟用或停用主要的查詢最佳化 Hotfix，而不管資料庫的相容性層級為何。 這與 [追蹤旗標 4199](https://support.microsoft.com/en-us/kb/974006)相同。  
+ 啟用或停用主要的查詢最佳化 Hotfix，而不管資料庫的相容性層級為何。 這與 [追蹤旗標 4199](https://support.microsoft.com/kb/974006)相同。  
   
  **次要的查詢最佳化工具修正程式**  
- 啟用或停用次要 (如果有的話) 的查詢最佳化 Hotfix，而不管資料庫的相容性層級為何。 這與 [追蹤旗標 4199](https://support.microsoft.com/en-us/kb/974006)相同。  
+ 啟用或停用次要 (如果有的話) 的查詢最佳化 Hotfix，而不管資料庫的相容性層級為何。 這與 [追蹤旗標 4199](https://support.microsoft.com/kb/974006)相同。  
   
 ## <a name="filestream"></a>FILESTREAM  
  **FILESTREAM 目錄名稱**  

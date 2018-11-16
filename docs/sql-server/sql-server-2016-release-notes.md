@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4615707f7d3df5da90f8eea999ba290ae2ee0366
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: fc441d3247d5320e0a9913c0df48cc2573f22858
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269992"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700470"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 版本資訊
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51269992"
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP2 包含 2016 SP1 之後發行的所有累計更新，截至並且包含 CU8。 
 
 - [![Microsoft 下載中心](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?linkid=869608) [下載 SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
-- 如需完整的更新清單，請參閱 [SQL Server 2016 Service Pack 2 版本資訊](https://support.microsoft.com/en-us/help/4052908/sql-server-2016-service-pack-2-release-information)
+- 如需完整的更新清單，請參閱 [SQL Server 2016 Service Pack 2 版本資訊](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-2-release-information)
 
 SQL Server 2016 SP2 安裝在安裝之後可能需要重新開機。 最佳做法是在 SQL Server 2016 SP2 安裝後規劃和執行重新開機。
 
@@ -45,11 +45,11 @@ SQL Server 2016 SP2 中包含有關效能和規模調整的改善。
 |變更追蹤清除    |   已改善針對變更追蹤資料表的變更追蹤清除效能和效率。    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) \(機器翻譯\) |
 |使用 CPU 逾時來取消 Resource Governor 要求   |   藉由實際取消要求來改善查詢要求的處理 (如果針對要求達到 CPU 閾值)。 此行為會在追蹤旗標 2422 下啟用。 |   [KB4038419](https://support.microsoft.com/help/4038419/add-cpu-timeout-to-resource-governor-request-max-cpu-time-sec) \(英文\)   |
 |使用 SELECT INTO 來在檔案群組中建立目標資料表    |   從 SQL Server 2016 SP2 開始，SELECT INTO T-SQL 語法開始支援將資料表載入其他檔案群組，而不是使用 T-SQL 語法中 ON <Filegroup name> 關鍵字使用者的預設檔案群組。 |       |
-|改善 TempDB 的間接檢查點    |   已改善 TempDB 的間接檢查點，以最小化 DPLists 上的執行緒同步鎖定競爭。 此改善可讓 SQL Server 2016 上的 TempDB 工作負載，在 TempDB 的間接檢查點為 ON 的情況下，預設便能進行相應放大。    |   [KB4040276](https://support.microsoft.com/en-us/help/4040276) \(機器翻譯\)   |
+|改善 TempDB 的間接檢查點    |   已改善 TempDB 的間接檢查點，以最小化 DPLists 上的執行緒同步鎖定競爭。 此改善可讓 SQL Server 2016 上的 TempDB 工作負載，在 TempDB 的間接檢查點為 ON 的情況下，預設便能進行相應放大。    |   [KB4040276](https://support.microsoft.com/help/4040276) \(機器翻譯\) |
 |已改善大型記憶體機器上的資料庫備份效能  |   SQL Server 2016 SP2 將於備份期間清空進行中 I/O 的方式最佳化，進而大幅提升小型至中型資料庫的備份效能。 我們已在對 2TB 的機器進行系統資料庫備份時，觀察到超過 100x 的改善。 效能提升會隨著資料庫大小增加而減少，因為要備份的分頁和備份 I/O 與反覆運算緩衝集區相較之下需要更多時間。 針對在配備大量記憶體的大型高階伺服器上裝載多個小型資料庫的客戶，此變更有助於提升備份效能。    |       |
 |針對啟用 TDE 之資料庫的 VDI 備份壓縮支援   |   SQL Server 2016 SP2 新增了 VDI 支援，可讓 VDI 備份解決方案針對啟用 TDE 的資料庫利用壓縮功能。 此改善引入新的備份格式，以針對啟用 TDE 的資料庫支援備份壓縮。 SQL Server 引擎會透明地處理新的和舊的備份格式以還原備份。   |       |
 |複寫代理程式設定檔參數的動態載入    |   這個新的增強功能能以動態方式載入複寫代理程式參數，而不需要重新啟動代理程式。 這個變更僅適用於最常使用的代理程式設定檔參數。 |       |
-|針對統計資料建立/更新支援 MAXDOP 選項 |    這個增強功能允許針對 CREATE/UPDATE 統計資料陳述式指定 MAXDOP 選項，也會在建立或重建所有索引類型而更新統計資料時，確保使用的是正確的 MAXDOP 設定 (如果 MAXDOP 選項存在)   |   [KB4041809](https://support.microsoft.com/en-us/help/4041809) \(機器翻譯\)   |
+|針對統計資料建立/更新支援 MAXDOP 選項 |    這個增強功能允許針對 CREATE/UPDATE 統計資料陳述式指定 MAXDOP 選項，也會在建立或重建所有索引類型而更新統計資料時，確保使用的是正確的 MAXDOP 設定 (如果 MAXDOP 選項存在)   |   [KB4041809](https://support.microsoft.com/help/4041809) \(機器翻譯\) |
 |針對累加統計資料改善自動統計資料更新 |    在特定案例下，當資料表中的多個分割區發生數個資料變更，且累加統計資料的總修改計數器超過自動更新閾值，但沒有任何個別分割區超過自動更新閾值時，統計資料更新可能會延遲，直到資料表中發生更多修改為止。 此行為已在追蹤旗標 11024 下修正。   |       |
 
 SQL Server 2016 SP2 中已包含支援能力和診斷相關的改善。
@@ -58,7 +58,7 @@ SQL Server 2016 SP2 中已包含支援能力和診斷相關的改善。
 |針對可用性群組中資料庫的完整 DTC 支援    |   SQL Server 2016 中目前不支援可用性群組中資料庫的跨資料庫交易。 在 SQL Server 2016 SP2 中，我們針對可用性群組資料庫的分散式交易推出完整支援。   |       |
 |更新 sys.databases 的 is_encrypted 資料行，以正確反映 TempDB 的加密狀態 |   TempDB 之 sys.databases 中的 is_encryptedcolumn 資料行的值為 1，即使在您關閉所有使用者資料庫的加密並重新啟動 SQL Server 之後也一樣。 預期的行為是該值為 0，因為在此情況下 TempDB 已經不再加密。 從 SQL Server 2016 SP2 開始，sys.databases.is_encrypted 現在會正確地反映 TempDB 的加密狀態。  |       |
 |新的 DBCC CLONEDATABASE 選項，以產生驗證的複製品和備份   |   在 SQL Server 2016 SP2 中，DBCC CLONEDATABASE 有兩個新的選項：產生驗證的複製品，或產生備份複製品。 當使用 WITH VERIFY_CLONEDB 選項建立複製品資料庫時，系統會建立並驗證一致的資料庫複製品，且 Microsoft 將會支援它以用於生產環境。 已推出新的屬性，以驗證複製品是否已驗證 SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’)。 使用 BACKUP_CLONEDB 選項建立複製品時，在相同的資料夾中會產生備份作為資料檔案，以讓客戶能輕鬆將複製品移動到其他伺服器，或將它傳送到 Microsoft 客戶支援 (CSS) 以進行疑難排解。  |       |
-|針對 DBCC CLONEDATABASE 的 Service Broker (SSB) 支援    |   已增強 DBCC CLONEDATABASE 命令，以允許撰寫 SSB 物件指令碼。  |   [KB4092075](https://support.microsoft.com/en-us/help/4092075) \(機器翻譯\)   |
+|針對 DBCC CLONEDATABASE 的 Service Broker (SSB) 支援    |   已增強 DBCC CLONEDATABASE 命令，以允許撰寫 SSB 物件指令碼。  |   [KB4092075](https://support.microsoft.com/help/4092075) \(機器翻譯\) |
 |新的 DMV 以監視 TempDB 版本存放空間使用量    |   SQL Server 2016 SP2 中已推出新的 sys.dm_tran_version_store_space_usage DMV，以允許監視 TempDB 的版本存放空間使用量。 在生產環境伺服器上執行時，DBA 現在可以根據每個資料庫的版本存放空間使用量需求，主動規劃 TempDB 大小，而不會產生任何效能負擔。 |       |
 |針對複寫代理程式的完整傾印支援 | 目前，如果複寫代理程式遇到未處理的例外狀況，預設會建立例外狀況徵兆的小型傾印。 這會使對未處理的例外狀況進行疑難排解變得非常困難。 我們透過此變更推出新的登錄機碼，它將允許針對複寫代理程式建立完整傾印。  |       |
 |針對讀取可用性群組路由失敗的擴充事件增強功能 |   在之前，read_only_rout_fail xEvent 會在路由清單存在，但路由清單中的伺服器沒有任何一個可供連線的情況下觸發。 SQL Server 2016 SP2 包含可協助進行疑難排解的額外資訊，並且也會針對觸發此 xEvent 的程式碼項目提供額外資訊。  |       |
@@ -66,7 +66,7 @@ SQL Server 2016 SP2 中已包含支援能力和診斷相關的改善。
 |新的 DMV 以監視 VLF 資訊 |   新的 DMV sys.dm_db_log_info 已在 SQL Server 2016 SP2 中推出，以將類似 DBCC LOGINFO 的 VLF 資訊公開，以監視、警示和防止客戶會遇到的可能 T-Log 問題。    |       |
 |sys.dm_os_sys_info 中的處理器資訊|   已新增資料行至 sys.dm_os_sys_info DMV，以公開處理器的相關資訊，如 socket_count 和 cores_per_numa。  |       |
 |sys.dm_db_file_space_usage 中的範圍修改資訊| 已新增資料行至 sys.dm_db_file_space_usage，以追蹤自上次完整備份之後的已修改範圍數目。  |       |
-|sys.dm_exec_query_stats 中的區段資訊 |   已新增資料行至 sys.dm_exec_query_stats，以追蹤略過和讀取的資料行存放區區段數目，如 total_columnstore_segment_reads 和 total_columnstore_segment_skips。   |   [KB4051358](https://support.microsoft.com/en-us/help/4051358) \(英文\)   |
+|sys.dm_exec_query_stats 中的區段資訊 |   已新增資料行至 sys.dm_exec_query_stats，以追蹤略過和讀取的資料行存放區區段數目，如 total_columnstore_segment_reads 和 total_columnstore_segment_skips。   |   [KB4051358](https://support.microsoft.com/help/4051358) \(英文\) |
 |針對散發資料庫設定正確的相容性層級  |   安裝 Service Pack 之後，散發資料庫相容性層級會變更為 90。 這是因為 sp_vupgrade_replication 預存程序中的程式碼路徑所造成。 SP 現在已經過變更，可為散發資料庫設定正確的相容性層級。   |       |
 |公開最後一個已知的良好 DBCC CHECKDB 資訊    |   已新增資料庫選項，來以程式設計方式傳回最後一次成功執行 DBCC CHECKDB 的日期。 使用者現在可以查詢 DATABASEPROPERTYEX([database], ‘lastgoodcheckdbtime’)，以取得代表在所指定伺服器上最後一次成功執行 DBCC CHECKDB 的日期/時間單一值。  |       |
 |Showplan XML 增強功能| [使用統計資料來編譯查詢計劃的相關資訊](https://blogs.msdn.microsoft.com/sql_server_team/sql-server-2017-showplan-enhancements/) \(英文\)，包括統計資料名稱、修改計數器、取樣百分比，以及統計資料最後一次更新的時間。 請注意，此功能只新增到 CE 模型 120 和更新版本。 例如，CE 70 並不支援此功能。| |
@@ -141,11 +141,11 @@ SQL Server 2016 SP1 安裝可能需要在安裝後重新開機。 最佳做法�
 -   [產品文件 (GA)](#bkmk_ga_docs)
  
 ### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA) 
-Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL Server 2016 必須安裝這些二進位檔。 已提供修正此問題的更新。 如果不安裝 VC Runtime 二進位檔的這項更新，SQL Server 2016 就可能在特定情況下遇到穩定性問題。 安裝 SQL Server 2016 之前，請先檢查電腦是否需要 [KB 3164398](http://support.microsoft.com/kb/3164398)中所述的填補。 修補程式也包含在 [SQL Server 2016 RTM 的累計更新套件 1 (CU1)](https://www.microsoft.com/download/details.aspx?id=53338)。 
+Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL Server 2016 必須安裝這些二進位檔。 已提供修正此問題的更新。 如果不安裝 VC Runtime 二進位檔的這項更新，SQL Server 2016 就可能在特定情況下遇到穩定性問題。 安裝 SQL Server 2016 之前，請先檢查電腦是否需要 [KB 3164398](https://support.microsoft.com/kb/3164398)中所述的填補。 修補程式也包含在 [SQL Server 2016 RTM 的累計更新套件 1 (CU1)](https://www.microsoft.com/download/details.aspx?id=53338)。 
 
 **解決方式：** 請使用下列其中一種解決方案：
 
-- 安裝 [KB 3138367 - Visual C++ 2013 年和 Visual C++ 的可轉散發套件的更新](http://support.microsoft.com/kb/3138367)。 此 KB 是慣用的解決方式。 您可以在安裝 SQL Server 2016 之前或之後安裝此更新。 
+- 安裝 [KB 3138367 - Visual C++ 2013 年和 Visual C++ 的可轉散發套件的更新](https://support.microsoft.com/kb/3138367)。 此 KB 是慣用的解決方式。 您可以在安裝 SQL Server 2016 之前或之後安裝此更新。 
 
     如已安裝 SQL Server 2016，請依序執行下列步驟︰
 
@@ -155,7 +155,7 @@ Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL S
     1.  重新啟動電腦。
  
 
- - 安裝  [KB 3164398 - SQL Server 2016 MSVCRT 必要條件的重大更新](http://support.microsoft.com/kb/3164398)。  
+ - 安裝  [KB 3164398 - SQL Server 2016 MSVCRT 必要條件的重大更新](https://support.microsoft.com/kb/3164398)。  
  
     如果使用 **KB 3164398**，就可以在 SQL Server 安裝期間，透過 Microsoft Update 或從 Microsoft 下載中心安裝。 
 

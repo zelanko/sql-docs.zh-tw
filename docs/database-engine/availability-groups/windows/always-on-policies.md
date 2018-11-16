@@ -10,12 +10,12 @@ ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d25f54c29937ba4289308e07bb2013a4c671dbbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e199f1f548ae8a978cd13ad3ba99db8c1182c96
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767886"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606948"
 ---
 # <a name="always-on-availability-groups-policies"></a>Always On 可用性群組原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,6 +33,6 @@ ms.locfileid: "47767886"
 3.  若要在 [選取頁面] 窗格中檢視所有可用性群組系統原則，按一下 [原則選取]。  
   
 ## <a name="next-steps"></a>後續步驟  
- [Always On 健康情況模型第 2 部分：擴充健康情況模型](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) \(英文\)。  
+ [Always On 健康情況模型第 2 部分：擴充健康情況模型](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) \(英文\)。  
   
   

@@ -20,12 +20,12 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce77499661b7b12c5acb010d9a639c2517bef94d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba87cc9564183c45f4c00765f05bbaa363d231ce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697079"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673347"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 來部署資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ ms.locfileid: "47697079"
 ## <a name="using-a-net-framework-application"></a>使用 .Net Framework 應用程式  
  **在 .Net Framework 應用程式中使用 DacStoreExport() 與 Import() 方法，以部署資料庫。**  
   
- 若要檢視程式碼範例，請下載 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)上的 DAC 範例應用程式。  
+ 若要檢視程式碼範例，請下載 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)上的 DAC 範例應用程式。  
   
 1.  建立 SMO Server 物件，並將它設定為包含要部署之資料庫的執行個體或伺服器。  
   

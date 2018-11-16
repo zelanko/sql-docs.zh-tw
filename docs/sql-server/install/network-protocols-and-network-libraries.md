@@ -21,12 +21,12 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a04cd6d732622e91d5080ed77a2eba4d62d71a12
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 708b8c242098251211e3f0dc17df003669b68991
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630182"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696636"
 ---
 # <a name="network-protocols-and-network-libraries"></a>網路通訊協定和網路程式庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47630182"
 ## <a name="default-sql-server-network-configuration"></a>預設 SQL Server 網路組態  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設執行個體會設定成使用 TCP/IP 通訊埠 1433 及具名管道 \\\\.\pipe\sql\query。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具名執行個體會設定成使用 TCP 動態通訊埠，而該通訊埠的通訊埠編號則由作業系統指派。  
   
- 如果您無法使用動態通訊埠位址 (例如，當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接必須通過已設定成通過特定通訊埠位址的防火牆伺服器時)。 選取未指派的通訊埠編號。 通訊埠編號指派是由 Internet Assigned Numbers Authority 所管理，而且列於 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)。  
+ 如果您無法使用動態通訊埠位址 (例如，當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接必須通過已設定成通過特定通訊埠位址的防火牆伺服器時)。 選取未指派的通訊埠編號。 通訊埠編號指派是由 Internet Assigned Numbers Authority 所管理，而且列於 [https://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844)。  
   
  為了加強安全性，安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時不會完全啟用網路連接。 若要在安裝程式完成之後啟用、停用和設定網路通訊協定，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 網路組態區域。  
   

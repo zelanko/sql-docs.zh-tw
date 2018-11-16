@@ -10,21 +10,21 @@ f1_keywords:
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2beb59a4cd0b1fefc8ff6ef9fafc376614cf0f3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81a93008e887148b14f1ff6d4b4cf5b06570a1df
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706196"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812091"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Reporting Services 登入對話方塊 (SSRS)
   使用 **[Reporting Services 登入]** 對話方塊，即可提供發行報表至報表伺服器的認證。  
   
--   **注意** ：如果這是您在設定專案的 **TargetServerURL** 部署屬性之後第一次將報表發行到報表伺服器，請確認所指定的伺服器名稱包含 **server** ，而不是 **reports**。 例如， `http://localhost/reportserver`，而不是 `http://localhost/reports`。 如果是指定本機伺服器的 `reports` 目錄，而不是 `reportserver` 目錄，則會間接導致此對話方塊開啟。 如需設定 **TargetServerURL** 的詳細資訊，請參閱[設定部署屬性 &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)。  
+-   **注意** ：如果這是您在設定專案的 **TargetServerURL** 部署屬性之後第一次將報表發行到報表伺服器，請確認所指定的伺服器名稱包含 **server** ，而不是 **reports**。 例如， `https://localhost/reportserver`，而不是 `https://localhost/reports`。 如果是指定本機伺服器的 `reports` 目錄，而不是 `reportserver` 目錄，則會間接導致此對話方塊開啟。 如需設定 **TargetServerURL** 的詳細資訊，請參閱[設定部署屬性 &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)。  
   
 ## <a name="options"></a>選項。  
  **Server**  
- 顯示報表伺服器的名稱。 例如， `http://localhost/reportserver`。 如果報表伺服器使用的是預設通訊埠 80 以外的通訊埠，請加入該通訊埠號碼。 例如， `http://localhost:81/reportserver`。  
+ 顯示報表伺服器的名稱。 例如， `https://localhost/reportserver`。 如果報表伺服器使用的是預設通訊埠 80 以外的通訊埠，請加入該通訊埠號碼。 例如， `https://localhost:81/reportserver`。  
   
  **User name**  
  輸入使用者名稱以登入 Web 服務。  

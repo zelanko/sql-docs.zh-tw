@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50a5843fb6f96133cbf0af6a8ce8e8a46190eaef
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: f7e6bf628b30bedb157e17bd7dc785061dbc2d26
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120445"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665617"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>記憶體內部 OLTP 的範例資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "49120445"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   基於效能測試考量，伺服器的規格必須與您的實際執行環境類似。 您應為此特定範例準備至少 16GB 的記憶體供 SQL Server 使用。 如需記憶體內部 OLTP 的硬體一般指導方針，請參閱下列部落格文章：[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   基於效能測試考量，伺服器的規格必須與您的實際執行環境類似。 您應為此特定範例準備至少 16GB 的記憶體供 SQL Server 使用。 如需記憶體內部 OLTP 的硬體一般指導方針，請參閱下列部落格文章：[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>安裝以 AdventureWorks 為基礎的 In-Memory OLTP 範例  
  請遵循下列步驟來安裝範例：  
@@ -183,7 +183,7 @@ ms.locfileid: "49120445"
   
  HASH 索引可用來進一步最佳化工作負載。 特別是最佳化點查閱和資料列插入。 不過請注意，這些索引不支援範圍掃描、依序掃描，或搜尋前置索引鍵資料行。 因此，您需要謹慎地使用這些索引。 此外，您必須在建立時指定 bucket_count。 此計數通常應該設定為索引鍵數值到兩倍索引鍵數值之間的值，不過高估通常不會造成問題。  
   
- 如需有關 [index guidelines](http://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) (索引指導方針) 及 [choosing the right bucket_count](http://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)(選擇正確的 bucket_count) 之指導方針的詳細資料，請參閱《線上叢書》。  
+ 如需有關 [index guidelines](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) (索引指導方針) 及 [choosing the right bucket_count](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)(選擇正確的 bucket_count) 之指導方針的詳細資料，請參閱《線上叢書》。  
   
  移轉之資料表上的索引已調整為適用於銷售訂單處理工作負載示範。 此工作負載需要在 Sales.SalesOrderHeader_inmem 和 Sales.SalesOrderDetail_inmem 資料表中進行插入和點查閱，也需要對 Production.Product_inmem 和 Sales.SpecialOffer_inmem 資料表中的主索引鍵資料行進行點查閱。  
   
@@ -271,7 +271,7 @@ ms.locfileid: "49120445"
   
     -   更新給定銷售訂單的出貨資訊。 這也會更新銷售訂單之所有明細項目的出貨資訊。  
   
-    -   這是原生編譯預存程序 Sales.usp_UpdateSalesOrderShipInfo_native 的包裝函式程序，其重試邏輯可處理更新相同訂單之並行交易所時產生的 (非預期) 潛在衝突。 如需有關重試邏輯的詳細資訊，請參閱 [這裡](http://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)的《線上叢書》主題。  
+    -   這是原生編譯預存程序 Sales.usp_UpdateSalesOrderShipInfo_native 的包裝函式程序，其重試邏輯可處理更新相同訂單之並行交易所時產生的 (非預期) 潛在衝突。 如需有關重試邏輯的詳細資訊，請參閱 [這裡](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)的《線上叢書》主題。  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
@@ -313,7 +313,7 @@ ms.locfileid: "49120445"
   
  安裝步驟：  
   
-1.  從以下頁面下載並執行 RML 公用程式的 x64 安裝套件：[http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
+1.  從以下頁面下載並執行 RML 公用程式的 x64 安裝套件：[https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
   
 2.  如果出現對話方塊，指出特定檔案正在使用，請按一下 [繼續]  
   

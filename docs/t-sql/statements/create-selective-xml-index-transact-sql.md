@@ -13,12 +13,12 @@ ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26cde6db634a28bd4586e9971b14f995f44c17f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22026d82330efbce1eb372a30ffc339186f66df9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767146"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701257"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ FOR(
   
 ```  
 CREATE SELECTIVE XML INDEX on T1(C1)  
-WITH XMLNAMESPACES ('http://www.tempuri.org/' as myns)  
+WITH XMLNAMESPACES ('https://www.tempuri.org/' as myns)  
 FOR ( path1 = '/myns:book/myns:author/text()' );  
 ```  
   

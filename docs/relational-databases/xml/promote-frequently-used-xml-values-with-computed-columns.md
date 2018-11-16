@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 680232b1a65bf811c5281da715e4fb93fd2f416f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9be4170345ea7aab0d7d1a7dc848291e776e27d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735686"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665567"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用計算資料行升級常用的 XML 值
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  若要執行此作業，您要先建立資料流 CLR 函數。 **xml** 資料類型在 ADO.NET 中公開為 Managed 類別 SqlXml，並支援傳回 XmlReader 的 **CreateReader()** 方法。  
   
 > [!NOTE]  
->  本節中的範例程式碼使用 XPathDocument 及 XPathNavigator。 它們會強制您將所有 XML 文件載入記憶體。 如果您在應用程式中使用類似的程式碼來處理好幾個大型 XML 文件，此程式碼是無法調整的。 反之，您要讓記憶體配置維持少量，並且盡可能使用資料流介面。 如需有關效能的詳細資訊，請參閱 [CLR 整合的架構](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)。  
+>  本節中的範例程式碼使用 XPathDocument 及 XPathNavigator。 它們會強制您將所有 XML 文件載入記憶體。 如果您在應用程式中使用類似的程式碼來處理好幾個大型 XML 文件，此程式碼是無法調整的。 反之，您要讓記憶體配置維持少量，並且盡可能使用資料流介面。 如需有關效能的詳細資訊，請參閱 [CLR 整合的架構](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)。  
   
 ```  
 public class c_streaming_xml_tvf {  

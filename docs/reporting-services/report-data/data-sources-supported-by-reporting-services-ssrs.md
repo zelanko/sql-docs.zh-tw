@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7348463fe7fb9f3871ecba06a2be8e768f8e3d51
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7a08ece8729125bf1cc60bb96385d58ba5c3a6ee
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029160"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813861"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services (SSRS) 支援的資料來源
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會透過使用資料處理延伸模組的模組化與可延伸資料層，擷取資料來源中的報表資料。 若要擷取資料來源中的報表資料，您必須選取資料處理延伸模組，其同時支援資料來源的類型 (也就是在資料來源上執行的軟體版本) 與資料來源平台 (32 位元或 64 位元 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])。  
@@ -175,7 +175,7 @@ ms.locfileid: "50029160"
 ###  <a name="OLEDBAll"></a> OLE DB Data Processing Extension  
  OLE DB 資料處理延伸模組需要根據您要在報表中使用的資料來源版本，選擇其他資料提供者層。 如果您不選取特定的資料提供者，則會提供預設值。 透過從 [資料來源] 或 [共用資料來源] 對話方塊的 [編輯] 按鈕存取的 [連接屬性] 對話方塊，選擇特定的資料提供者。  
   
- 如需 OLE DB 相關聯之查詢設計工具的詳細資訊，請參閱 [圖形化查詢設計工具使用者介面](../../reporting-services/report-data/graphical-query-designer-user-interface.md)。 如需有關 OLE DB 提供者之特定支援的詳細資訊，請參閱 [知識庫中的](http://support.microsoft.com/default.aspx/kb/811241) Visual Studio .NET 設計工具支援 OLE DB 提供者特定資訊 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
+ 如需 OLE DB 相關聯之查詢設計工具的詳細資訊，請參閱 [圖形化查詢設計工具使用者介面](../../reporting-services/report-data/graphical-query-designer-user-interface.md)。 如需有關 OLE DB 提供者之特定支援的詳細資訊，請參閱 [知識庫中的](https://support.microsoft.com/default.aspx/kb/811241) Visual Studio .NET 設計工具支援 OLE DB 提供者特定資訊 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
  [返回資料來源資料表](#DataSourcesTable)  
   
@@ -196,7 +196,7 @@ ms.locfileid: "50029160"
   
  支援與位置有關的未指名參數。 此延伸模組不支援具名參數。 若要使用具名參數，請使用 [Oracle](#OracleClient) 資料處理延伸模組。  
   
- 如需有關將 Oracle 設定為資料來源的詳細資訊，請參閱＜ [如何使用 Reporting Services 設定及存取 Oracle 資料來源](http://support.microsoft.com/kb/834305)＞(機器翻譯)。 如需其他權限設定的詳細資訊，請參閱 [知識庫中的](http://support.microsoft.com/kb/870668) 如何新增 NETWORK SERVICE 安全性主體的權限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] (機器翻譯)。  
+ 如需有關將 Oracle 設定為資料來源的詳細資訊，請參閱＜ [如何使用 Reporting Services 設定及存取 Oracle 資料來源](https://support.microsoft.com/kb/834305)＞(機器翻譯)。 如需其他權限設定的詳細資訊，請參閱 [知識庫中的](https://support.microsoft.com/kb/870668) 如何新增 NETWORK SERVICE 安全性主體的權限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] (機器翻譯)。  
   
  [返回資料來源資料表](#DataSourcesTable)  
   
@@ -229,11 +229,11 @@ ms.locfileid: "50029160"
  
 若要安裝 Oracle 用戶端工具，您可以執行下列步驟。
  
-1.  前往 [Oracle 的下載網站](http://www.oracle.com/us/products/tools/index-090165.html)
+1.  前往 [Oracle 的下載網站](https://www.oracle.com/us/products/tools/index-090165.html)
 2.  下載 ODAC 12c Release 4 (12.1.0.2.4) for Windows (伺服器為 64bit，工具為 32bit)
 3.  安裝 Data Provider for .NET 4
   
- 此延伸模組支援具名參數。 若使用 Oracle 11g 或更新版本，則支援多重值的參數。 對於與位置有關的未指名參數，請搭配資料提供者 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle 使用 OLE DB 資料處理延伸模組。 如需有關將 Oracle 設定為資料來源的詳細資訊，請參閱＜ [如何使用 Reporting Services 設定及存取 Oracle 資料來源](http://support.microsoft.com/kb/834305)＞(機器翻譯)。 如需其他權限設定的詳細資訊，請參閱 [知識庫中的](http://support.microsoft.com/kb/870668) 如何新增 NETWORK SERVICE 安全性主體的權限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] (機器翻譯)。  
+ 此延伸模組支援具名參數。 若使用 Oracle 11g 或更新版本，則支援多重值的參數。 對於與位置有關的未指名參數，請搭配資料提供者 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle 使用 OLE DB 資料處理延伸模組。 如需有關將 Oracle 設定為資料來源的詳細資訊，請參閱＜ [如何使用 Reporting Services 設定及存取 Oracle 資料來源](https://support.microsoft.com/kb/834305)＞(機器翻譯)。 如需其他權限設定的詳細資訊，請參閱 [知識庫中的](https://support.microsoft.com/kb/870668) 如何新增 NETWORK SERVICE 安全性主體的權限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] (機器翻譯)。  
   
  您可以從具有多個輸入參數的預存程序擷取資料，但是預存程序必須只傳回一個輸出資料指標。 如需詳細資訊，請參閱＜ [使用 DataReader 擷取資料](https://go.microsoft.com/fwlink/?LinkId=81758)＞中的 Oracle 章節。  
   
@@ -270,7 +270,7 @@ ms.locfileid: "50029160"
   
  如需詳細資訊，請參閱 [Teradata 連線類型 &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md)。  
   
- 您也可以根據 Teradata 資料庫建立模型。 如需詳細資訊，請參閱 Teradata 網站上的以下白皮書： [Microsoft SQL Server 2012 Reporting Services 和 Teradata Corporation](http://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)(英文)。  
+ 您也可以根據 Teradata 資料庫建立模型。 如需詳細資訊，請參閱 Teradata 網站上的以下白皮書： [Microsoft SQL Server 2012 Reporting Services 和 Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)(英文)。  
   
  [返回資料來源資料表](#DataSourcesTable)  
   

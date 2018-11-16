@@ -16,12 +16,12 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 93088a7d39261f014a742b93f7d9e89ea55b52a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad9700e9b1c86b454191e51c6a7e4ee52c393c6b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611026"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606838"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>交易 - 可用性群組和資料庫鏡像
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ SQL Server 2017 支援可用性群組中多個資料庫的分散式交易。 這
 
 如需詳細資訊，請參閱：
 
-- [DTC Administration Guide](http://msdn.microsoft.com/library/ms681291.aspx) (DTC 系統管理指南)
-- [DTC Developers Guide](http://msdn.microsoft.com/library/ms679938.aspx) (DTC 開發人員指南)
-- [DTC Programmers Reference](http://msdn.microsoft.com/library/ms686108.aspx) (DTC 程式設計人員參考)
+- [DTC Administration Guide](https://msdn.microsoft.com/library/ms681291.aspx) (DTC 系統管理指南)
+- [DTC Developers Guide](https://msdn.microsoft.com/library/ms679938.aspx) (DTC 開發人員指南)
+- [DTC Programmers Reference](https://msdn.microsoft.com/library/ms686108.aspx) (DTC 程式設計人員參考)
 
 ## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 和以前版本：相同 SQL Server 執行個體內的跨資料庫交易支援  
 
@@ -60,7 +60,7 @@ SQL Server 2016 引進此功能，以便在可用性群組中有一或多個該�
   
  必須符合下列需求：  
   
--   可用性群組必須在 Windows Server 2012 R2 或更新版本上執行。 針對 Windows Server 2012 R2，您必須安裝 [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973) 上所提供 KB3090973 中的更新。  
+-   可用性群組必須在 Windows Server 2012 R2 或更新版本上執行。 針對 Windows Server 2012 R2，您必須安裝 [https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973) 上所提供 KB3090973 中的更新。  
   
 -   必須使用 **CREATE AVAILABILITY GROUP** 命令和 **WITH DTC\_SUPPORT = PER_DB** 子句建立可用性群組。 您目前無法改變現有可用性群組。  
 

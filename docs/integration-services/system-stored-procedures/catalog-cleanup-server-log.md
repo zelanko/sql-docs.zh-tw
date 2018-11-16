@@ -11,12 +11,12 @@ ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5db8dc4812a13028817d44265b64235f9d77713a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbcf940b5679a22ff6d2c0692878b6c57e104ddb
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649556"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638675"
 ---
 # <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ catalog.cleanup_server_log
   
      您可以指定範圍或層級 (執行/專案) 以及要刪除的金鑰數目。 刪除的預設批次大小是 1000。 如果您將層級設為 2，則只有在刪除相關的專案時，才會刪除金鑰和憑證。  
   
- 如需詳細資訊，請參閱下列知識庫文章：[FIX: Performance issues when you use SSISDB as your deployment store in SQL Server 2012](http://support.microsoft.com/kb/2972285) (修正：當您在 SQL Server 2012 中使用 SSISDB 作為部署存放區時的效能問題)  
+ 如需詳細資訊，請參閱下列知識庫文章：[FIX: Performance issues when you use SSISDB as your deployment store in SQL Server 2012](https://support.microsoft.com/kb/2972285) (修正：當您在 SQL Server 2012 中使用 SSISDB 作為部署存放區時的效能問題)  
   
 ## <a name="example"></a>範例  
  下列範例會呼叫 cleanup_server_log 預存程序。  

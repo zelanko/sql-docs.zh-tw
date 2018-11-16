@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d86acb0dae3d8f9059229dda764403aa999fd817
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c6dcae60590d6bcdeaaf06d41326a8fc0cb64f64
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030847"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812661"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Power Pivot 連接類型 (SSRS)
   您可以使用 SQL Server Analysis Services 資料處理延伸模組，從已在 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中發行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿中擷取資料。  
@@ -29,7 +29,7 @@ ms.locfileid: "50030847"
  請使用報表資料來源類型： **Microsoft SQL Server Analysis Services**。  
   
 ## <a name="connection-string"></a>連接字串  
- 連接字串是已在 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫或其他文件庫中發行之 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的 URL，例如 `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`。  
+ 連接字串是已在 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫或其他文件庫中發行之 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的 URL，例如 `https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`。  
   
 ## <a name="credentials"></a>認證  
  請指定存取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿和 SharePoint 網站所需的認證，例如 Windows 驗證 (整合式安全性)。 如需詳細資訊，請參閱[資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 或[在報表產生器中指定認證](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  

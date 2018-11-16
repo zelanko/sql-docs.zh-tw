@@ -27,12 +27,12 @@ ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 7d846878ae012a82f7ff8f6662b8a6095d664cb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd3481d797bca1822255b1ac6cf30a1123c2e669
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831936"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697188"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ PHYSICAL_ONLY
 DATA_PURITY  
  使 DBCC CHECKTABLE 檢查資料表，找出無效或超出範圍的資料行值。 例如，DBCC CHECKTABLE 偵測到資料行具有大於或小於 **datetime** 資料類型可接受範圍的日期和時間值；或者，**decimal** 或近似數值資料類型資料行具有無效的小數位數或有效位數值。  
  預設會啟用資料行值的完整性檢查，而不需要 DATA_PURITY 選項。 對於從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級的資料庫，您可以使用 DBCC CHECKTABLE WITH DATA_PURITY 尋找並更正特定資料表的錯誤，不過，必須先在毫無錯誤的情況下完成對資料庫執行 DBCC CHECKDB WITH DATA_PURITY，否則依預設不對資料表啟用資料行值檢查。 此後，依預設 DBCC CHECKDB 和 DBCC CHECKTABLE 會檢查資料行值的完整性。  
- 這個選項報告的驗證錯誤無法使用 DBCC 修復選項更正。 如需手動更正這些錯誤的相關資訊，請參閱知識庫文件 923247：[對 SQL Server 2005 及更新版本中的 DBCC 錯誤 2570 進行疑難排解](http://support.microsoft.com/kb/923247) \(機器翻譯\)。  
+ 這個選項報告的驗證錯誤無法使用 DBCC 修復選項更正。 如需手動更正這些錯誤的相關資訊，請參閱知識庫文件 923247：[對 SQL Server 2005 及更新版本中的 DBCC 錯誤 2570 進行疑難排解](https://support.microsoft.com/kb/923247) \(機器翻譯\)。  
  如果指定 PHYSICAL_ONLY，則不會執行資料行完整性檢查。  
     
 MAXDOP  

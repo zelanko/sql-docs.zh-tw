@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fe66beb328e38a02bf24e9ed6a7ca9349b997781
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: cc0d7ba8aa5261e93f7b291f3e948e0f773c45e5
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029807"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812924"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>比較報表檢視器中的本機模式與連線模式報表
 
@@ -55,9 +55,9 @@ ms.locfileid: "50029807"
   
  如需詳細資訊，請參閱下列內容。  
   
--   [Access 2013 的新功能](http://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx) (http://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx)。  
+-   [Access 2013 的新功能](https://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx) (https://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx)。  
   
--   [Access 應用程式的基本工作](http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500) (http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500)。  
+-   [Access 應用程式的基本工作](https://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500) (https://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500)。  
   
 ## <a name="configure-local-mode-reporting-with-sharepoint-2010"></a>設定 SharePoint 2010 的本機模式報表
 
@@ -79,7 +79,7 @@ ms.locfileid: "50029807"
   
 ## <a name="connected-mode"></a>「連接模式」
 
- 如需使用 ADS 延伸模組搭配 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 連接模式的最新資訊，請參閱 [SharePoint 網站中的 Access Services 報表顯示資料延伸模組 'ADS' 中的錯誤](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx)(英文)。  
+ 如需使用 ADS 延伸模組搭配 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 連接模式的最新資訊，請參閱 [SharePoint 網站中的 Access Services 報表顯示資料延伸模組 'ADS' 中的錯誤](https://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx)(英文)。  
   
 ## <a name="see-also"></a>另請參閱
 

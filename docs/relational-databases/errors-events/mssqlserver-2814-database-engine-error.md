@@ -12,12 +12,12 @@ ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4a2620affb6732ef0f48fe5ca29689f7d39ec38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 895ec797f0c0182fe1579972d3adb3663302d7d4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649916"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677630"
 ---
 # <a name="mssqlserver2814"></a>MSSQLSERVER_2814
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47649916"
     AND qs.plan_handle = *plan_handle*;
     ```
   
-2.  為了避免重新編譯，請根據原因代碼的說明，修改陳述式、批次或程序。 例如，一個預存程序可能會包含一個或多個 SET 陳述式。 您應該從此程序中移除這些陳述式。 如需重新編譯原因和解決方案的其他範例，請參閱 [Batch Compilation, Recompilation, and Plan Caching Issues in SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=69175)(SQL Server 2005 中的批次編譯、重新編譯及計畫快取問題)。  
+2.  為了避免重新編譯，請根據原因代碼的說明，修改陳述式、批次或程序。 例如，一個預存程序可能會包含一個或多個 SET 陳述式。 您應該從此程序中移除這些陳述式。 如需重新編譯原因和解決方案的其他範例，請參閱 [Batch Compilation, Recompilation, and Plan Caching Issues in SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=69175)(SQL Server 2005 中的批次編譯、重新編譯及計畫快取問題)。  
   
 3.  如果持續發生問題，請連絡 Microsoft 客戶支援服務。  
   

@@ -20,12 +20,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 88a79851dbb95a42ca35be1fb9e82db362564dc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82b71c24dc5aed407a50cfd4758ac13357eb29c2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617707"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673287"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>在現有發行集中加入和卸除發行項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "47617707"
  如上所提到的，在某些情況下，卸除發行項需要卸除、重新建立並同步處理訂閱。 如需詳細資訊，請參閱[訂閱發行集](../../../relational-databases/replication/subscribe-to-publications.md)和[同步處理資料](../../../relational-databases/replication/synchronize-data.md)。  
  
  > [!NOTE]
- > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** 或更新版本和 **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** 或更新版本，支援使用 **DROP TABLE** DLL 命令為參與異動複寫的發行項卸除資料表。 如果發行集支援 DROP TABLE DDL，則 DROP TABLE 作業會從發行集和資料庫卸除資料表。 記錄讀取器代理程式會為卸除資料表的散發資料庫張貼清理命令，並執行發行者中繼資料的清理。 如果記錄讀取器尚未處理參考卸除資料表的所有記錄檔記錄，就會忽略與卸除資料表建立關聯的新命令。 已處理的記錄會傳遞至散發資料庫中。 如果散發代理程式在記錄讀取器清理過時 (已卸除) 的發行項之前先處理它們，它們可能會套用在訂閱者資料庫上。 所有異動複寫發行集的**預設**設定為不支援 DROP TABLE DLL。 [KB 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) 具有這項改良功能的更多詳細資料。
+ > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** 或更新版本和 **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** 或更新版本，支援使用 **DROP TABLE** DLL 命令為參與異動複寫的發行項卸除資料表。 如果發行集支援 DROP TABLE DDL，則 DROP TABLE 作業會從發行集和資料庫卸除資料表。 記錄讀取器代理程式會為卸除資料表的散發資料庫張貼清理命令，並執行發行者中繼資料的清理。 如果記錄讀取器尚未處理參考卸除資料表的所有記錄檔記錄，就會忽略與卸除資料表建立關聯的新命令。 已處理的記錄會傳遞至散發資料庫中。 如果散發代理程式在記錄讀取器清理過時 (已卸除) 的發行項之前先處理它們，它們可能會套用在訂閱者資料庫上。 所有異動複寫發行集的**預設**設定為不支援 DROP TABLE DLL。 [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) 具有這項改良功能的更多詳細資料。
 
   
 ## <a name="see-also"></a>另請參閱  

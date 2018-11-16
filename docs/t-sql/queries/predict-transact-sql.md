@@ -1,7 +1,7 @@
 ---
 title: PREDICT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/02/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e9547440f6e6023560fb1c8e2bcefcd57605345
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b95f966b27db3638aae6455dc5e7819f07d0ebae
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682316"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695456"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -70,9 +70,6 @@ DATA 參數用來指定用於計分或預測的資料。 資料是以查詢中�
 PARAMETERS 參數用來指定用於計分或預測的選擇性使用者定義參數。
 
 每個參數的名稱都與模型類型有關。 例如，RevoScaleR 中的 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 函數援參數 `@computeResiduals`，表示評分羅吉斯迴歸模型時是否應該計算殘值。 如果您呼叫相容模型，就可以將該參數名稱與 TRUE 或 FALSE 值傳遞到 `PREDICT` 函數。
-
-> [!NOTE]
-> 此選項不適用於 SQL Server 2017 的發行前版本。
 
 **WITH ( <result_set_definition> )**
 
@@ -121,7 +118,7 @@ DECLARE @logit_model varbinary(max) = "SELECT TOP 1 [model_binary] from [models_
 DECLARE @input_qry = "SELECT ID, [Gender], [Income] from NewCustomers";
 
 SELECT PREDICT [class]
-FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry
+FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry)
 WITH (class string);
 ```
 
@@ -172,9 +169,6 @@ END;
 ```
 
 ### <a name="creating-an-r-model-and-generating-scores-using-optional-model-parameters"></a>建立 R 模型，並使用選擇性的模型參數產生分數
-
-> [!NOTE]
-> 在候選版 1 中不支援使用參數引數。
 
 此範例假設您已使用 RevoScaleR 的呼叫，建立一個以共變數矩陣擬合的羅吉斯迴歸模型，如下所示：
 

@@ -14,12 +14,12 @@ ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ce3745881465c7f71eed0986e3de669b7488a8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21e2f8c20e4a1fcaadeb8747ed2f9fde29d9c10b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830846"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699918"
 ---
 # <a name="change-domain-values"></a>變更定義域值
 
@@ -44,7 +44,7 @@ ms.locfileid: "47830846"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能變更定義域值。  
   
 ##  <a name="Change"></a> 變更定義域值  
@@ -90,7 +90,7 @@ ms.locfileid: "47830846"
   
     -   **將選取的定義域值設為群組的前置值**：若要變更群組的前置值，請在群組中選取未指定為前置值的某個值，然後按一下 **[將選取的定義域值設為群組的前置值]** 按鈕。 這樣會將前置值設定為其他值的取代值。 只有在您已經設定兩個或多個群組在一起的值，而且要變更 DQS 所指定的前置值時，才能執行這項作業。 請注意，前置值是由藍色資料列中的粗體值所指定。  
   
-7.  **拼字檢查**：如果某個值有波浪式紅色底線，則表示拼字檢查建議此值的更正。 以滑鼠右鍵按一下有底線的值，然後選取適用的更正。 值類型會變成 (或維持) 錯誤，而且更正將會加入至 **[更正為]** 資料行。 按一下向下箭號，以查看其他建議的更正。 手動輸入更正，將其加入至拼字檢查字典，而且能夠將其選取為更正。 如需相關資訊，請參閱 [使用 DQS 拼字檢查](../data-quality-services/use-the-dqs-speller.md) 及 [設置域屬性](../data-quality-services/set-domain-properties.md)。  
+7.  **拼字檢查**：如果某個值有波浪式紅色底線，則表示拼字檢查建議此值的更正。 以滑鼠右鍵按一下有底線的值，然後選取適用的更正。 值類型會變成 (或維持) 錯誤，而且更正將會加入至 **[更正為]** 資料行。 按一下向下箭號，以查看其他建議的更正。 手動輸入更正，將其加入至拼字檢查字典，而且能夠將其選取為更正。 如需相關資訊，請參閱 [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) 及 [Set Domain Properties](../data-quality-services/set-domain-properties.md)。  
   
     > [!NOTE]  
     >  若要使用拼字檢查，您可以在 **[定義域屬性]** 頁面中啟用此功能，或者如果 **[定義域屬性]** 頁面中已停用此功能，您可以按一下 **[定義域值]** 頁面上的 **[啟用/停用拼字檢查]** 圖示，在此頁面上啟用此功能。  
@@ -103,7 +103,7 @@ ms.locfileid: "47830846"
   
 11. **刪除選取的定義域值**：若要從定義域中移除一個或多個現有的值，請選取 [值] 資料表中的值，然後按一下 **[刪除選取的定義域值]** 圖示。 DQS_NULL 的項目無法刪除，所以如果您選擇多個要刪除的值，而且 DQS_NULL 的項目是其中一個，此作業將會失敗。  
   
-12. 按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)＞中所述。  
+12. 按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)＞中所述。  
   
 ##  <a name="FollowUp"></a> 後續操作：在變更定義域值之後  
  在您變更定義域值之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  

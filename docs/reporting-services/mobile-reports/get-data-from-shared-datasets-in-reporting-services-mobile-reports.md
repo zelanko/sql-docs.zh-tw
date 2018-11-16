@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ec30904cc7c434d5450de025feb0cb7698a2e128
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cac1a32b49fde5b41c0a8ef21706d873ce037cd3
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836952"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813931"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>從 Reporting Services 行動報表中的共用資料集取得資料
 除了[載入 Excel 檔案資料](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)，SQL Server 行動報表發行工具也可以存取幾乎所有來源的資料。 存取資料需有共用的資料來源，在 Reporting Services 入口網站設定。 深入了解 [建立共用資料來源](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 和 [建立共用資料集](../../reporting-services/report-data/manage-shared-datasets.md)。  
@@ -41,7 +41,7 @@ ms.locfileid: "47836952"
   
 匯入資料集之後，您就可以像處理模擬資料，或是處理 Excel 檔案的本機資料一樣，設計自己的行動報表。  
   
-共用資料集預設保持最新的資料，因為每次有人檢視以資料集為基礎的行動報表，SQL Server 就會執行基礎查詢，並傳回最新的資料。 您可以很清楚地看到，如果有許多人檢視您的行動報表，實在不太理想，所以，您可以設定定期執行查詢並快取結果資料集。 這篇部落格文章說明 [快取和資料重新整理如何在 Web 入口網站中運作](http://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/)。  
+共用資料集預設保持最新的資料，因為每次有人檢視以資料集為基礎的行動報表，SQL Server 就會執行基礎查詢，並傳回最新的資料。 您可以很清楚地看到，如果有許多人檢視您的行動報表，實在不太理想，所以，您可以設定定期執行查詢並快取結果資料集。 這篇部落格文章說明 [快取和資料重新整理如何在 Web 入口網站中運作](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/)。  
   
 ## <a name="add-edit-or-remove-a-report-server"></a>加入、編輯或移除報表伺服器  
   
@@ -60,8 +60,8 @@ ms.locfileid: "47836952"
 ### <a name="see-also"></a>另請參閱  
 - [使用 SQL Server 行動報表發行工具建立與發行行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  [入口網站 (SSRS 原生模式)](../../reporting-services/web-portal-ssrs-native-mode.md)  
--  在 [iPad app 中檢視 SQL Server 行動報表和 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI for iOS)  
--  請參閱 [在 iPhone 應用程式中檢視 SQL Server 行動報表和 KPI (iOS 版 Power BI)](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (iOS 版 Power BI)  
+-  在 [iPad app 中檢視 SQL Server 行動報表和 KPI](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI for iOS)  
+-  請參閱 [在 iPhone 應用程式中檢視 SQL Server 行動報表和 KPI (iOS 版 Power BI)](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (iOS 版 Power BI)  
   
   
   

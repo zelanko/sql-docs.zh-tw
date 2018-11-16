@@ -9,12 +9,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 881189fdec593d48b443d85ee548ca1bb80b24a8
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 578c7002e4366dd0b0b4ef4e633d5e59dffe4802
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146053"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697686"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何參與編輯 SQL Server 文件集
 
@@ -33,7 +33,7 @@ ms.locfileid: "50146053"
 
 您可以在瀏覽器中對 SQL Server 內容進行簡單的編輯，再提交到 Microsoft。 [Microsoft Docs 參與者指南概觀](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents)一文記載了完整程序。 下列影片示範在瀏覽器中提交變更的端對端程序：
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE23pxh]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE23pxh]
 
 > [!TIP]
 > 請注意，[編輯] 按鈕的位置與影片中顯示的位置會稍有不同，但程序相同。

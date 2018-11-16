@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: aebcc1e87551d4543c32e1a7b21f10b4b1dff2f0
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 7fa7bf2f5d315bda158ed45f3965fbc2a952fb00
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018443"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700296"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -409,7 +409,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;
 ### <a name="maxdop-resources"></a>MAXDOP 資源
 
 - [平行處理原則的程度](../../relational-databases/query-processing-architecture-guide.md#DOP)
-- [SQL Server 的 "max degree of parallelism" 組態選項的建議和指導方針](https://support.microsoft.com/en-us/kb/2806535)
+- [SQL Server 的 "max degree of parallelism" 組態選項的建議和指導方針](https://support.microsoft.com/kb/2806535)
 
 ### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION 資源
 
@@ -424,7 +424,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;
 ### <a name="queryoptimizerhotfixes-resources"></a>QUERY_OPTIMIZER_HOTFIXES 資源
 
 - [追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
-- [SQL Server 查詢最佳化工具 Hotfix 追蹤旗標 4199 服務模型](https://support.microsoft.com/en-us/kb/974006)
+- [SQL Server 查詢最佳化工具 Hotfix 追蹤旗標 4199 服務模型](https://support.microsoft.com/kb/974006)
 
 ### <a name="elevateonline-resources"></a>ELEVATE_ONLINE 資源
 

@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0203cb3331df3ba5a27ec08e55c10712c9e64d19
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 5bf5375edaa73a280bb2332e21c0bde50d304832
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031007"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813921"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>匯出報表 (報表產生器及 SSRS)
 
@@ -174,13 +174,13 @@ ms.locfileid: "50031007"
  您也可以透過指定轉譯延伸模組做為 URL 參數的 URL 存取報表，並且直接將報表轉譯成指定的格式，而不需先轉譯為 HTML。 下列範例會以 Excel 格式轉譯報表：  
   
 ```  
-http://<Report Server Name>/reportserver?/Sales/YearlySalesSummary&rs:Format=Excel&rs:Command=Render  
+https://<Report Server Name>/reportserver?/Sales/YearlySalesSummary&rs:Format=Excel&rs:Command=Render  
 ```  
   
  而下列會從具名執行個體轉譯 PowerPoint 報表︰  
   
 ```  
-http://<Report Server Name/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
+https://<Report Server Name/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
 ```  
   
  如需詳細資訊，請參閱 [Export a Report Using URL Access](../../reporting-services/export-a-report-using-url-access.md)。  
