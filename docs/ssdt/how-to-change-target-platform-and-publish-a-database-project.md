@@ -14,12 +14,12 @@ ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9aea64fa39d5089da9e4a97eaffb86ae2a81fa6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7b84f8d8de17b64d99b8e308ab45c36479b4a2b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668536"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668884"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>如何：變更目標平台及發行資料庫專案
 您可以將您的 SQL Server Data Tools (SSDT) 資料庫專案的目標 SQL Server 版本變更為任何支援之 SQL Server (SQL Server 2005、2008、2008 R2、Microsoft SQL Server 2012 或 SQL Azure) 的執行個體。 如此一來，您就可以將資料庫開發工作集中於一個專案，但視需要再將它發行到多個 SQL Server 執行個體。  
@@ -43,7 +43,7 @@ SSDT 透過對目標平台的認知以及自動偵測程式碼中的任何錯誤
   
 3.  請注意，下列錯誤顯示在 [錯誤清單] 窗格中：SQL70015: SQL Azure 不支援 '檔案群組參考和資料分割配置'。  
   
-    SSDT 會自動根據目標平台來驗證指令碼。 在這種情況下，由於 SQL Azure 不支援檔案群組，SSDT 傳回錯誤。 如需在 SQL Azure 中不支援的 Transact\-SQL 陳述式清單，請參閱[部分支援的 Transact-SQL 陳述式 (Microsoft Azure SQL Database)](http://msdn.microsoft.com/library/ee336267.aspx)。  
+    SSDT 會自動根據目標平台來驗證指令碼。 在這種情況下，由於 SQL Azure 不支援檔案群組，SSDT 傳回錯誤。 如需在 SQL Azure 中不支援的 Transact\-SQL 陳述式清單，請參閱[部分支援的 Transact-SQL 陳述式 (Microsoft Azure SQL Database)](https://msdn.microsoft.com/library/ee336267.aspx)。  
   
 4.  移除 `ON` 子句。 請注意，該錯誤隨即從 [錯誤清單] 中消失。  
   

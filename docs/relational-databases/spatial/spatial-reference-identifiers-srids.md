@@ -15,19 +15,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2fee224c6ca940df7dacb0ee0f5a34a50628902
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 40a398a06cfc1e12a80b173186dab188425d23b9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51017553"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677757"
 ---
 # <a name="spatial-reference-identifiers-srids"></a>空間參考識別碼 (SRID)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   每一個空間執行個體都有空間參考識別碼 (SRID)， 此 SRID 會對應到空間參考系統，此系統是以用於扁平表面對應或圓形表面對應的特定橢圓體為根據。  
   
 > [!IMPORTANT]  
->  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引進之空間功能 (包括新的 SRID) 的詳細描述和範例，請下載技術白皮書： [New Spatial Features in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407)(SQL Server 2012 的新空間功能)。  
+>  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引進之空間功能 (包括新的 SRID) 的詳細描述和範例，請下載技術白皮書： [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)(SQL Server 2012 的新空間功能)。  
   
  空間資料行可包含具有不同 SRID 的物件。 但是，當針對資料使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空間資料方法來執行作業時，只能使用具有相同 SRID 的空間執行個體。 衍生自兩個空間資料執行個體的任何空間方法結果只有在這兩個執行個體具有相同的 SRID (根據用來判斷執行個體座標的相同度量、資料和投射單位) 時，才是有效的。 最常見的 SRID 度量單位是公尺或平方公尺。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "51017553"
  `geometry1.STIntersects(geometry2) = 1`  
   
 > [!NOTE]  
->  空間參考識別系統是由 [歐洲石油探勘組織 (EPSG)](http://go.microsoft.com/fwlink/?LinkId=99349) 標準所定義，這是為了地圖製作、探勘和測地資料儲存所開發的一套標準。 這項標準的擁有者為石油生產者 (OGP) 探勘和定位委員會 (Oil and Gas Producers (OGP) Surveying and Positioning Committee)。  
+>  空間參考識別系統是由 [歐洲石油探勘組織 (EPSG)](https://go.microsoft.com/fwlink/?LinkId=99349) 標準所定義，這是為了地圖製作、探勘和測地資料儲存所開發的一套標準。 這項標準的擁有者為石油生產者 (OGP) 探勘和定位委員會 (Oil and Gas Producers (OGP) Surveying and Positioning Committee)。  
   
 ## <a name="see-also"></a>另請參閱  
  [空間資料類型概觀](../../relational-databases/spatial/spatial-data-types-overview.md)  

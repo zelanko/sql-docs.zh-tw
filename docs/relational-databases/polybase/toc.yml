@@ -13,7 +13,7 @@ items:
     href: polybase-scale-out-groups.md
 - name: 使用說明指南
   items:
-  - name: 安裝
+  - name: Install
     items:
     - name: 在 Windows 上安裝
       href: polybase-installation.md
@@ -29,7 +29,7 @@ items:
         href: polybase-configuration.md
     - name: Azure Blob 儲存體
       href: polybase-configure-azure-blob-storage.md
-    - name: SQL Server
+    - name: '[SQL Server]'
       href: polybase-configure-sql-server.md
     - name: Oracle
       href: polybase-configure-oracle.md
@@ -64,16 +64,16 @@ items:
   - name: DBA Stack Exchange
     href: https://dba.stackexchange.com/questions/tagged/sql-server
   - name: Stack Overflow
-    href: http://stackoverflow.com/questions/tagged/sql-server
+    href: https://stackoverflow.com/questions/tagged/sql-server
   - name: MSDN 論壇
-    href: https://social.msdn.microsoft.com/Forums/home?category=sqlserver
+    href: https://social.msdn.microsoft.com/Forums/en-us/home?category=sqlserver
   - name: 提交意見反應
     href: https://feedback.azure.com/forums/908035-sql-server
   - name: Reddit
     href: https://www.reddit.com/r/SQLServer
-ms.openlocfilehash: 0213c240d1820e447c50cb63b6b36bf4298f417b
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: ce0b30511fb46fa85a62019710bbb401b2a99546
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806649"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697407"

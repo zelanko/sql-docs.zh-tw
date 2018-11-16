@@ -12,12 +12,12 @@ ms.assetid: 839705e7-fa37-4c0d-9f3f-95a9eab98bcf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3bb040a3e43d9cc7e3702037900f1474cde5013c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 878239e5e718bfd53c347fcf8866580f1bf99a14
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795556"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671827"
 ---
 # <a name="mssqlserver33081"></a>MSSQLSERVER_33081
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ WHERE ring_buffer_type = 'RING_BUFFER_SECURITY_ERROR';
 ```  
   
 ## <a name="user-action"></a>使用者動作  
-若要調查問題，請搜尋 MSDN (http://msdn.microsoft.com/) 中的 Windows 錯誤碼。 解決此錯誤或連絡 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CSS 以了解詳細資訊。 如果您需要連絡 CSS，請收集下列資訊以供支援人員參考。  
+若要調查問題，請搜尋 MSDN (https://msdn.microsoft.com/) 中的 Windows 錯誤碼。 解決此錯誤或連絡 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CSS 以了解詳細資訊。 如果您需要連絡 CSS，請收集下列資訊以供支援人員參考。  
   
 -   顯示無法載入密碼編譯提供者錯誤的錯誤記錄檔。  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 936cc6417a1af8b38b548b321486d233fa086363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf79a9f1c6790abfb1a2435e533aa0847abbd3b6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800026"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813981"
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>使用 URL 存取整合 Reporting Services - Web 應用程式
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 URL 存取是特別針對可透過網路存取個別報表所設計。 這種類型的存取最適於將報表檢視與導覽整合到自訂 Web 應用程式。 若要在 Web 應用程式中使用 URL 存取，您可以：  
@@ -35,7 +35,7 @@ ms.locfileid: "47800026"
  在下列範例中，超連結會鎖定名為 "main" 的框架，這可能與包含超連結的框架不同。 超連結可能是 Web 入口網站的一部分。  
   
 ```  
-<a href="http://server/reportserver?/SampleReports/Territory Sales   
+<a href="https://server/reportserver?/SampleReports/Territory Sales   
 Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >  
    Click here for the Territory Sales Drilldown sample report  
 </a>  
@@ -60,7 +60,7 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
  下列範例 HTML 示範表單的使用，您可以透過特定的 URL 來使用目標報表伺服器，並將查詢字串參數以表單的輸入欄位之一部分來傳遞。  
   
 ```  
-<FORM id="frmRender" action="http://server/reportserver?/SampleReports/  
+<FORM id="frmRender" action="https://server/reportserver?/SampleReports/  
    Territory Sales Drilldown" method="post" target="_self">  
    <INPUT type="hidden" name="rs:Command" value="Render">   
    <INPUT type="hidden" name="rc:LinkTarget" value="main">  
@@ -72,7 +72,7 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
  在上述範例中，如果使用者按一下表單上的按鈕，報表伺服器會傳回在目前框架鎖定的 HTML 轉譯報表。 可比較的 URL 存取字串可能如下所示：  
   
 ```  
-http://server/reportserver?/SampleReports/Territory Sales   
+https://server/reportserver?/SampleReports/Territory Sales   
 Drilldown&rs:Command=Render&rc:LinkTarget=main&rs:Format=HTML4.0  
 ```  
   

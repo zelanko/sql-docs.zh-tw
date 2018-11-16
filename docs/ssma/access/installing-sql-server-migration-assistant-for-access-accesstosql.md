@@ -23,12 +23,12 @@ ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f8dd4dcfc08366e78f11fc8b10fa269f17bb09e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 128c83e0fd63b2724311aec046bdb9683c569a03
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708436"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664117"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>安裝 SQL Server Migration Assistant for Access (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) 的存取使用精靈來安裝 Windows Installer 為基礎。 本主題提供有關安裝必要條件的資訊 SSMA，最新版本的連結和安裝、 授權、 解除安裝和升級 SSMA 的指示。  
@@ -46,12 +46,12 @@ ms.locfileid: "47708436"
   
 -   Microsoft 資料存取物件 (DAO) 提供者版本 12.0 或 14.0。 您可以從 Microsoft Office 2010/2007年產品安裝 DAO 提供者，或從 Microsoft 網站下載。  
   
--   SQL Server Native Access Client (SNAC) 版本為 10.5 和更新版本移轉至 SQL Azure。 您可以取得最新版的 SNAC 從[Microsoft® SQL Server® 2008 R2 功能套件](http://go.microsoft.com/fwlink/?LinkId=196940)  
+-   SQL Server Native Access Client (SNAC) 版本為 10.5 和更新版本移轉至 SQL Azure。 您可以取得最新版的 SNAC 從[Microsoft® SQL Server® 2008 R2 功能套件](https://go.microsoft.com/fwlink/?LinkId=196940)  
   
 -   4 GB 的 RAM （建議選項）。  
   
 ## <a name="installing-ssma"></a>安裝 SSMA  
-SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server Migration Assistant 的下載頁面](http://aka.ms/ssmaforaccess)。  
+SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server Migration Assistant 的下載頁面](https://aka.ms/ssmaforaccess)。  
   
 下載最新版本之後，您必須先解壓縮安裝檔案，才能安裝 SSMA。
 

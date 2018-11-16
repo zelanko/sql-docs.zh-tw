@@ -30,12 +30,12 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7a00dbd30f8cee08cb1667627c4b20c64eaef79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9be97427a20f7277088422734f0108d999a7302d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799103"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641255"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 記錄
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括可用於在封裝、容器和工作中實作記錄的記錄提供者。 使用記錄，可以擷取有關封裝的執行階段資訊，藉此幫助您在每次執行封裝時對其進行稽核和疑難排解。 例如，記錄可以擷取執行封裝之操作員的名稱，以及封裝開始和結束的時間。  
@@ -233,7 +233,7 @@ ms.locfileid: "47799103"
   
     -   若為 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，請使用檔案連線管理員。  
   
-    -   若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請使用 OLE DB 連接管理員。 如需詳細資訊，請參閱 [OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
+    -   若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請使用 OLE DB 連接管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
     -   若為 Windows 事件記錄檔，不需任何動作。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 會自動建立記錄檔。  
   
@@ -679,4 +679,4 @@ SQL Server Integration Services 提供一組豐富的自訂事件，為套件和
 -   [Integration Services 套件所記錄的事件](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
   
 ## <a name="related-content"></a>相關內容  
- [用於完整及詳細記錄的 DTLoggedExec 工具 (CodePlex 專案)](http://go.microsoft.com/fwlink/?LinkId=150579)  
+ [用於完整及詳細記錄的 DTLoggedExec 工具 (CodePlex 專案)](https://go.microsoft.com/fwlink/?LinkId=150579)  

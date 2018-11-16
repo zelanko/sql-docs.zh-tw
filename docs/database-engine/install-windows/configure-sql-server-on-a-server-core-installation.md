@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 38fefb6c403008e32d9783ac8a1b2a956a340055
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddee0e6eb08f95b1552ae76291afa22e0d3e171b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691544"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602018"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安裝上設定 SQL Server
 
@@ -34,15 +34,15 @@ ms.locfileid: "47691544"
   
 如需遠端設定及管理 Server Core 安裝的詳細資訊，請參閱以下文章：  
   
-- [安裝 Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
+- [安裝 Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
   
-- [以 Sconfig.cmd 設定 Windows Server 2016 的 Server Core 安裝](http://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016)  
+- [以 Sconfig.cmd 設定 Windows Server 2016 的 Server Core 安裝](https://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016)  
   
-- [在 Server Core 伺服器 Windows Server 2012 R2 上安裝伺服器角色和功能](http://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
+- [在 Server Core 伺服器 Windows Server 2012 R2 上安裝伺服器角色和功能](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
   
-- [Managing a Server Core installation: Overview](http://go.microsoft.com/fwlink/?LinkId=245962)  
+- [Managing a Server Core installation: Overview](https://go.microsoft.com/fwlink/?LinkId=245962)  
   
-- [Administering a Server Core installation](http://go.microsoft.com/fwlink/?LinkId=245963)
+- [Administering a Server Core installation](https://go.microsoft.com/fwlink/?LinkId=245963)
   
 ##  <a name="BKMK_InstallSQLUpdates"></a> 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新  
 本節提供有關在 Windows Server Core 機器上安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 更新的資訊。 我們建議客戶及時評估並安裝最新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新，以便確保系統保持在最新狀態而且具有最新的安全性更新。 如需在 Windows Server Core 機器上安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 的詳細資訊，請參閱[在 Server Core 上安裝 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)。  
@@ -58,7 +58,7 @@ ms.locfileid: "47691544"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會整合最新產品更新與主要產品安裝，因此主要產品及其適用的更新可同時安裝。  
   
-安裝程式找到最新版本的可用更新後，會使用目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程序進行下載與整合。 產品更新可以引入累計更新、Service Pack，或 Service Pack 加上累計更新。  
+安裝程式找到最新版本的可用更新後，會使用目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程序將其下載並進行整合。 產品更新可以引入累計更新、Service Pack，或 Service Pack 加上累計更新。  
   
 指定 UpdateEnabled 和 UpdateSource 參數在主要產品安裝中包含最新的產品更新。 請參考以下範例，了解如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間啟用產品更新：  
   
@@ -230,6 +230,6 @@ $Tcp
   
 ## <a name="see-also"></a>另請參閱  
  [在 Server Core 上安裝 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
- [安裝的使用說明文章](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
+ [安裝的使用說明文章](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8decfb0a7378ef1acfaf671276f6449cde19ba1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c67e42a98bf6b653b35ead538449d725a6ed9d96
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794606"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662257"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>檢視及處理 Database Engine Tuning Advisor 的輸出
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47794606"
  您也可以使用 GUI 來檢視由 **dta** 命令列公用程式產生的微調輸出。  
   
 > [!NOTE]  
->  如果您使用 **dta** 命令列公用程式並指定以 **-ox** 引數將輸出寫入到 XML 檔案，則在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案] 功能表上按一下 [開啟檔案]，即可開啟並檢視 XML 輸出檔。 如需詳細資訊，請參閱 [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)。 如需 **dta** 命令列公用程式的相關資訊，請參閱 [dta 公用程式](../../tools/dta/dta-utility.md)。  
+>  如果您使用 **dta** 命令列公用程式並指定以 **-ox** 引數將輸出寫入到 XML 檔案，則在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案] 功能表上按一下 [開啟檔案]，即可開啟並檢視 XML 輸出檔。 如需詳細資訊，請參閱 [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)。 如需 **dta** 命令列公用程式的相關資訊，請參閱 [dta 公用程式](../../tools/dta/dta-utility.md)。  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>以 Database Engine Tuning Advisor GUI 檢視微調建議  
   
@@ -175,7 +175,7 @@ ms.locfileid: "47794606"
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     您也可以透過 [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta)，線上取得 Database Engine Tuning Advisor XML 結構描述。  
+     您也可以透過 [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta)，線上取得 Database Engine Tuning Advisor XML 結構描述。  
   
 6.  建立工作負載及 XML 輸入檔之後，即可準備將輸入檔提交至 **dta** 命令列公用程式，以進行分析。 請確定您有指定 **-ox** 公用程式引數的 XML 輸出檔名稱。 這樣會以 **Configuration** 元素中所指定的建議組態來建立 XML 輸出檔。 若您想再執行一次 Database Engine Tuning Advisor，以檢查另一個以該輸出檔為基礎的假設組態，則您可以複製輸出檔的 **Configuration** 元素內容，並貼到新的 XML 輸入檔或原來的 XML 輸入檔中。 如需有關 XML 輸入檔與 **dta** 公用程式一起使用的資訊，請參閱 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)中的＜使用 dta 公用程式微調資料庫＞。  
   
@@ -310,7 +310,7 @@ ms.locfileid: "47794606"
  **[排程在稍後執行]**  
  產生建議的指令碼，並將動作儲存為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。  
   
- **Date**  
+ **日期**  
  指定您想要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業以套用建議的日期。  
   
  **Time**  
@@ -322,7 +322,7 @@ ms.locfileid: "47794606"
  **[微調摘要]**  
  顯示 Database Engine Tuning Advisor 建議的摘要。  
   
- **Date**  
+ **日期**  
  Database Engine Tuning Advisor 建立報表的日期。  
   
  **Time**  

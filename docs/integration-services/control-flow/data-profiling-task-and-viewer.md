@@ -15,12 +15,12 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2aab2b6a4c19ed5cb8d3e1d5ea73af57cb6e506e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a2cb16273cd19ee5ef58c1cfde74d3ba890f9ad
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831656"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641375"
 ---
 # <a name="data-profiling-task-and-viewer"></a>資料分析工作和檢視器
   「資料分析」工作提供擷取、轉換和載入資料之處理內部的資料分析功能。 您可以使用「資料分析」工作來獲得下列好處：  
@@ -70,6 +70,6 @@ ms.locfileid: "47831656"
  「資料分析」工作沒有內建的功能，您無法根據設定檔輸出，使用條件式邏輯將此工作連接到下游工作。 不過，您可以利用少量的程式設計，在「指令碼」工作中輕鬆加入這個邏輯。 例如，「指令碼」工作可以根據「資料分析」工作的輸出檔，執行 XPath 查詢。 此查詢可以判斷特定資料行中，null 值的百分比是否超出特定的臨界值。 如果百分比超出臨界值，您可以中斷封裝，並解決來源資料中的問題，然後再繼續。 如需詳細資訊，請參閱 [在封裝工作流程中納入資料分析工作](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md)。  
   
 ## <a name="related-content"></a>相關內容  
- [資料分析工具結構描述](http://go.microsoft.com/fwlink/?LinkId=251524)  
+ [資料分析工具結構描述](https://go.microsoft.com/fwlink/?LinkId=251524)  
   
   

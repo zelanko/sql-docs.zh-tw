@@ -21,12 +21,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2400595e7e32cf2eb9e4adee010c844145aac959
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd627ea368aea84611863b491ee3b0aaab1cc190
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721766"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641816"
 ---
 # <a name="execute-sql-task"></a>執行 SQL 工作
   「執行 SQL」工作會執行封裝中的 SQL 陳述式或預存程序。 工作可以包含逐次執行的單一 SQL 陳述式或多重 SQL 陳述式。 您可將執行 SQL 工作用於下列用途：  
@@ -66,7 +66,7 @@ ms.locfileid: "47721766"
 >  「執行 SQL」工作可能無法成功剖析在「執行 SQL」工作外部撰寫的有效 SQL 陳述式。  
   
 > [!NOTE]  
->  「執行 SQL」工作會使用 **RecognizeAll** ParseMode 列舉值。 如需詳細資訊，請參閱 [ManagedBatchParser Namespace](http://go.microsoft.com/fwlink/?LinkId=223617)(ManagedBatchParser 命名空間)。  
+>  「執行 SQL」工作會使用 **RecognizeAll** ParseMode 列舉值。 如需詳細資訊，請參閱 [ManagedBatchParser Namespace](https://go.microsoft.com/fwlink/?LinkId=223617)(ManagedBatchParser 命名空間)。  
   
 ## <a name="send-multiple-statements-in-a-batch"></a>批次傳送多重陳述式  
  如果您在執行 SQL 工作中加入多個陳述式，可將它們組成群組，並在批次中執行。 若要表示批次結束，請使用 GO 命令。 兩個 GO 命令之間的所有 SQL 陳述式，都會在一個批次中傳送至要執行的 OLE DB 提供者。 SQL 命令可包含以 GO 命令分隔的多個批次。  
@@ -183,7 +183,7 @@ ms.locfileid: "47721766"
  **SQLStatement**  
  在選項方塊中輸入要執行的 SQL 陳述式，或按一下瀏覽按鈕 (…) 在 [輸入 SQL 查詢] 對話方塊中輸入 SQL 陳述式，或按一下 [建立查詢] 使用 [查詢產生器] 對話方塊來撰寫陳述式。  
   
- **相關主題**︰[查詢產生器](http://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
+ **相關主題**︰[查詢產生器](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = 檔案連接  
  **FileConnection**  
@@ -195,7 +195,7 @@ ms.locfileid: "47721766"
  **SourceVariable**  
  選取現有的變數，或按一下 [\<新增變數...>] 以建立新的變數。  
   
- **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>參數對應頁面 - 執行 SQL 工作編輯器
 使用 [執行 SQL 工作編輯器] 對話方塊的 [參數對應] 頁面，即可將變數對應到 SQL 陳述式中的參數。  
@@ -286,7 +286,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
 #### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>搭配 ADO.NET 和 ADO 連線管理員使用參數  
  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 和 ADO 連線管理員對於使用參數的 SQL 命令，擁有特定的需求：  
   
--   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員要求 SQL 命令必須使用參數名稱作為參數標記。 這表示變數可以直接對應到參數。 例如， `@varName` 變數會對應到名為 `@parName` 的參數，並提供值給 `@parName`參數。  
+-   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接管理員要求 SQL 命令必須使用參數名稱做為參數標記。 這表示變數可以直接對應到參數。 例如， `@varName` 變數會對應到名為 `@parName` 的參數，並提供值給 `@parName`參數。  
   
 -   ADO 連接管理員要求 SQL 命令必須使用問號 (?) 做為參數標記。 不過，您可以使用整數值之外的任何使用者自訂名稱做為參數名稱。  
   
@@ -307,7 +307,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
 ###  <a name="Date_and_time_data_types"></a> 搭配日期和時間資料類型使用參數  
   
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>搭配 ADO.NET 和 ADO 連線管理員使用日期和時間參數  
- 讀取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型的資料，即 **time** 和 **datetimeoffset** 時，使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 或 ADO 連線管理員的「執行 SQL」工作有下列額外需求：  
+ 讀取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型的資料，即 **time** 和 **datetimeoffset**時，使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 或 ADO 連線管理員的「執行 SQL」工作有下列額外需求：  
   
 -   若是 **time** 資料，[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員要求此資料必須儲存在參數類型為 **Input** 或 **Output**，且資料類型為 **string** 的參數中。  
   
@@ -322,7 +322,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
  如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型以及如何將其對應到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) 和 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 #### <a name="use-date-and-time-parameters-with-ole-db-connection-managers"></a>搭配 OLE DB 連線管理員使用日期和時間參數  
- 使用 OLE DB 連線管理員時，「執行 SQL」工作對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，即 **date**、**time**、**datetime**、**datetime2** 和 **datetimeoffset** 的資料具有特定的儲存需求。 您必須以下列其中一種參數類型儲存此資料：  
+ 使用 OLE DB 連線管理員時，「執行 SQL」工作對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，即 **date**、 **time**、 **datetime**、 **datetime2**和 **datetimeoffset**的資料具有特定的儲存需求。 您必須以下列其中一種參數類型儲存此資料：  
   
 -   NVARCHAR 資料類型的輸入參數。  
   
@@ -338,7 +338,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
  如果資料沒有以適當的輸入或輸出參數儲存，則封裝會失敗。  
   
 #### <a name="use-date-and-time-parameters-with-odbc-connection-managers"></a>搭配 ODBC 連線管理員使用日期和時間參數  
- 使用 ODBC 連線管理員時，「執行 SQL」工作對於具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型之一，即 **date**、**time**、**datetime**、**datetime2** 或 **datetimeoffset** 的資料具有特定的儲存需求。 您必須以下列其中一種參數類型儲存此資料：  
+ 使用 ODBC 連線管理員時，「執行 SQL」工作對於具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型之一，即 **date**、 **time**、 **datetime**、 **datetime2**或 **datetimeoffset**的資料具有特定的儲存需求。 您必須以下列其中一種參數類型儲存此資料：  
   
 -   SQL_WVARCHAR 資料類型的 **input** 參數。  
   
@@ -382,7 +382,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
 |連接類型|EXEC 語法|  
 |---------------------|-----------------|  
 |EXCEL 和 OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> 如需 ODBC CALL 語法的詳細資訊，請參閱 MSDN Library 之《ODBC 程式設計人員參考》中的主題 [程序參數](http://go.microsoft.com/fwlink/?LinkId=89462)。|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> 如需 ODBC CALL 語法的詳細資訊，請參閱 MSDN Library 之《ODBC 程式設計人員參考》中的主題[程序參數](https://go.microsoft.com/fwlink/?LinkId=89462)。|  
 |ADO|如果 IsQueryStoredProcedure 設為 [False]，則 `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> 如果 IsQueryStoredProcedure 設為 [True]，則 `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|如果 IsQueryStoredProcedure 設為 [False]，則 `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> 如果 IsQueryStoredProcedure 設為 [True]，則 `uspGetBillOfMaterials`|  
   
@@ -445,7 +445,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
     |ODBC|1, 2, 3, …|  
     |EXCEL 和 OLE DB|0, 1, 2, 3, …|  
   
-10. 從 [變數名稱] 清單中，選取一個變數。 如需詳細資訊，請參閱[加入、刪除、變更封裝中使用者定義變數的範圍](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)。  
+10. 從 [變數名稱] 清單中，選取一個變數。 如需詳細資訊，請參閱[加入、刪除、變更封裝中使用者定義變數的範圍](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)。  
   
 11. 在 [方向] 清單中，指定參數是輸入、輸出還是傳回值。  
   
@@ -471,7 +471,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
 |連接類型|EXEC 語法|  
 |---------------------|-----------------|  
 |EXCEL 和 OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> 如需 ODBC CALL 語法的詳細資訊，請參閱 MSDN Library 之《ODBC 程式設計人員參考》中的主題 [程序參數](http://go.microsoft.com/fwlink/?LinkId=89462)。|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> 如需 ODBC CALL 語法的詳細資訊，請參閱 MSDN Library 之《ODBC 程式設計人員參考》中的主題[程序參數](https://go.microsoft.com/fwlink/?LinkId=89462)。|  
 |ADO|如果 IsQueryStoreProcedure 設為 [False]，則 `EXEC ? = myStoredProcedure 1`<br /><br /> 如果 IsQueryStoreProcedure 設為 [True]，則 `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|將 IsQueryStoreProcedure 設為 [True]。<br /><br /> `myStoredProcedure`|  
   
@@ -516,7 +516,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
  XML 結果集只可對應至資料類型為 **String** 或 **Object** 的變數。 如果變數有 **String** 資料類型，則執行 SQL 工作會傳回字串，且 XML 來源可使用 XML 資料。 如果變數具有 **Object** 資料類型，則執行 SQL 工作會傳回「文件物件模組」(DOM) 物件。  
   
- **[完整結果集]** 必須對應至資料類型為 **Object** 的變數。 傳回結果為資料列集物件。 您可以使用 Foreach 迴圈容器，將儲存在 Object 變數中的資料表資料列值，擷取到封裝變數中，然後使用指令碼工作，將儲存在封裝變數中的資料寫入檔案。 如需如何使用 Foreach 迴圈容器和指令碼工作執行此作業的示範，請參閱 msftisprodsamples.codeplex.com 上的 CodePlex 範例 [執行 SQL 參數及結果集](http://go.microsoft.com/fwlink/?LinkId=157863)(英文)。  
+ **[完整結果集]** 必須對應至資料類型為 **Object** 的變數。 傳回結果為資料列集物件。 您可以使用 Foreach 迴圈容器，將儲存在 Object 變數中的資料表資料列值，擷取到封裝變數中，然後使用指令碼工作，將儲存在封裝變數中的資料寫入檔案。 如需如何使用 Foreach 迴圈容器和指令碼工作執行此作業的示範，請參閱 msftisprodsamples.codeplex.com 上的 CodePlex 範例 [執行 SQL 參數及結果集](https://go.microsoft.com/fwlink/?LinkId=157863)(英文)。  
   
  下表列出可對應至結果集之變數的資料類型。  
   
@@ -554,7 +554,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
 8.  若要加入結果集對應，請按一下 [加入]。  
   
-9. 從 [變數名稱] 清單中，選取變數或新建變數。 如需詳細資訊，請參閱[加入、刪除、變更封裝中使用者定義變數的範圍](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)。  
+9. 從 [變數名稱] 清單中，選取變數或新建變數。 如需詳細資訊，請參閱[加入、刪除、變更封裝中使用者定義變數的範圍](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)。  
   
 10. 在 [結果名稱] 清單中，選擇性地修改結果集的名稱。  
   

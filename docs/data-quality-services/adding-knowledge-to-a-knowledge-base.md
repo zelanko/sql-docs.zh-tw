@@ -12,12 +12,12 @@ ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2223d0ab9f9ee3f2d6032bdcde425caae7657e3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea2749719f7ced61f304aadb5636d4909fd5b5db
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711246"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700706"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>將知識加入至知識庫
 
@@ -46,14 +46,14 @@ ms.locfileid: "47711246"
   
 -   如需文件集中的詳細資訊，請參閱＜ [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md)＞。  
   
--   如需示範如何執行知識探索的影片，請按一下 [這裡](http://msdn.microsoft.com/sqlserver/hh323825.aspx)。  
+-   如需示範如何執行知識探索的影片，請按一下 [這裡](https://msdn.microsoft.com/sqlserver/hh323825.aspx)。  
   
 ##  <a name="ManageDomain"></a> 管理定義域中的資料值  
  DQS 可讓您以互動方式變更及增加電腦輔助的知識探索活動所產生的中繼資料。 您會在 [定義域管理] 活動中執行這項作業，您可以在此活動中將變更套用至特定資料值。  
   
 -   如需文件集中的詳細資訊，請參閱＜ [Change Domain Values](../data-quality-services/change-domain-values.md)＞。  
   
--   如需示範如何執行定義域管理的影片，請按一下 [這裡](http://msdn.microsoft.com/sqlserver/hh323825.aspx)。 請注意，在此影片中，您會在知識探索精靈的 [管理定義域值] 頁面中變更定義域值。 您也可以在 [定義域管理] 活動的 [定義域值] 頁面中執行這些步驟。  
+-   如需示範如何執行定義域管理的影片，請按一下 [這裡](https://msdn.microsoft.com/sqlserver/hh323825.aspx)。 請注意，在此影片中，您會在知識探索精靈的 [管理定義域值] 頁面中變更定義域值。 您也可以在 [定義域管理] 活動的 [定義域值] 頁面中執行這些步驟。  
   
 ##  <a name="DQSFile"></a> 從 .dqs 檔案匯入知識  
  您可以將 .dqs 資料檔中的定義域匯入現有的知識庫，或者將 .dqs 中的整個知識庫匯入新的知識庫。 若要這樣做，您必須先將現有的定義域或知識庫匯出至 .dqs 檔案。 包含定義域的 .dqs 檔案會包含所有定義域資料；包含知識庫的 .dqs 檔案將包含所有知識庫資訊，包括定義域和比對原則。  

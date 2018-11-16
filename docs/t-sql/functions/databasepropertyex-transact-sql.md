@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d31b8d30686e55d97423648e34ea63be653be031
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b1e75eb377a21c8d5192926b2c912ae4da5a0b7
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832916"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697426"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ DATABASEPROPERTYEX ( database , property )
 ```  
   
 ## <a name="arguments"></a>引數  
-*database*  
+*資料庫*  
 指定資料庫名稱的運算式，其 `DATABASEPROPERTYEX` 會傳回具名屬性資訊。 *database* 具有 **nvarchar(128)** 資料類型。  
 
 若是 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，`DATABASEPROPERTYEX` 需要目前資料庫的名稱。 如果指定了不同的資料庫名稱，它會對所有屬性傳回 NULL。
@@ -68,7 +68,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsAutoCreateStatisticsIncremental|自動建立的單一資料行統計資料會累加 (如果可能)。|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效輸入<br /><br /> 基底資料類型：**int**|  
 |IsAutoShrink|資料庫檔案是自動定期壓縮的候選項。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效輸入<br /><br /> 基底資料類型：**int**|  
 |IsAutoUpdateStatistics|當查詢使用可能已過期的現有統計資料時，查詢最佳化工具就會更新這些統計資料。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：輸入無效<br /><br /> 基底資料類型：**int**|
-|IsClone|資料庫僅為使用 DBCC CLONEDATABASE 所建立之使用者資料庫的結構描述和統計資料複本。 如需詳細資訊，請參閱 [Microsoft 支援服務文章](http://support.microsoft.com/help/3177838)。|**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效輸入<br /><br /> 基底資料類型：**int**| 
+|IsClone|資料庫僅為使用 DBCC CLONEDATABASE 所建立之使用者資料庫的結構描述和統計資料複本。 如需詳細資訊，請參閱 [Microsoft 支援服務文章](https://support.microsoft.com/help/3177838)。|**適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效輸入<br /><br /> 基底資料類型：**int**| 
 |IsCloseCursorsOnCommitEnabled|當交易認可時，所有開啟的資料指標都會關閉。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效輸入<br /><br /> 基底資料類型：**int**|  
 |IsFulltextEnabled|資料庫已啟用全文檢索和語意索引。|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> <br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：輸入無效<br /><br /> 基底資料類型：**int**<br /><br /> **注意：** 此屬性的值現在沒有任何作用。 使用者資料庫一定會啟用全文檢索搜尋。 未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本將會移除這個屬性。 請勿在新的開發工作中使用此屬性，並且盡快修改使用此屬性的應用程式。|  
 |IsInStandBy|資料庫在線上唯讀，允許還原記錄。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效輸入<br /><br /> 基底資料類型：**int**|  
@@ -84,7 +84,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsSubscribed|將資料庫訂閱到發行集中。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效輸入<br /><br /> 基底資料類型：**int**|  
 |IsSyncWithBackup|該資料庫是已發行的資料庫或散發資料庫，並支援在不干擾異動複寫的情況下進行還原。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效輸入<br /><br /> 基底資料類型：**int**|  
 |IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 偵測到因為斷電或其他系統失效所造成的不完全 I/O 作業。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效輸入<br /><br /> 基底資料類型：**int**| 
-|IsVerifiedClone|資料庫僅為使用 DBCC CLONEDATABASE 之 WITH VERIFY_CLONEDB 選項所建立之使用者資料庫的結構描述和統計資料複本。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/help/3177838)。|**適用於**：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 開始。<br /><br /> <br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效輸入<br /><br /> 基底資料類型：**int**| 
+|IsVerifiedClone|資料庫僅為使用 DBCC CLONEDATABASE 之 WITH VERIFY_CLONEDB 選項所建立之使用者資料庫的結構描述和統計資料複本。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/help/3177838)。|**適用於**：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 開始。<br /><br /> <br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效輸入<br /><br /> 基底資料類型：**int**| 
 |IsXTPSupported|指出資料庫是否支援記憶體內部 OLTP，即建立及使用經記憶體最佳化的資料表和原生編譯模組。<br /><br /> 特定於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：<br /><br /> IsXTPSupported 是獨立於任何建立記憶體內部 OLTP 物件所必須之 MEMORY_OPTIMIZED_DATA 檔案群組的存在之外。|**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效輸入、發生錯誤或不適用<br /><br /> 基底資料類型：**int**|  
 |LastGoodCheckDbTime|最後一個成功 DBCC CHECKDB 在指定的資料庫上執行的日期和時間。<sup>1</sup> 如果 DBCC CHECKDB 尚未在資料庫上執行，則回傳回 1900-01-01 00:00:00.000。|**適用於**：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 開始。<br /><br /> 日期時間值<br /><br /> NULL：無效輸入<br /><br /> 基底資料型別：**datetime**| 
 |LCID|Windows 的定序地區設定識別碼 (LCID)。|LCID 值 (十進位格式)。<br /><br /> 基底資料類型：**int**|  

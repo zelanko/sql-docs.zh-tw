@@ -14,12 +14,12 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 321ae7aea8a8d3742f641e57d5a8c4276938a555
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65466a1750ecc340ed10ae961fa1a46d05a22192
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665245"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606808"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>針對 SQL Server Database Engine 的連接進行疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "47665245"
 
 ### <a name="not-included"></a>不包括
 
-* 本主題不包含 SSPI 錯誤的相關資訊。 如需 SSPI 錯誤，請參閱 [如何疑難排解「無法產生 SSPI 內容」錯誤訊息](http://support.microsoft.com/kb/811889)。  
-* 本主題不包含 Kerberos 錯誤的相關資訊。 如需說明，請參閱 [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046)。
+* 本主題不包含 SSPI 錯誤的相關資訊。 如需 SSPI 錯誤，請參閱 [如何疑難排解「無法產生 SSPI 內容」錯誤訊息](https://support.microsoft.com/kb/811889)。  
+* 本主題不包含 Kerberos 錯誤的相關資訊。 如需說明，請參閱 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。
 * 本主題不包含 SQL Azure 連線能力的相關資訊。 如需協助，請參閱 [Troubleshooting connectivity issues with Microsoft Azure SQL Database](https://support.microsoft.com/help/10085/troubleshooting-connectivity-issues-with-microsoft-azure-sql-database) (針對 Microsoft Azure SQL Database 連線問題進行疑難排解)。 
 
 ## <a name="gathering-information-about-the-instance-of-sql-server"></a>收集 SQL Server 執行個體的相關資訊
@@ -80,10 +80,10 @@ ms.locfileid: "47665245"
 使用 TCP/IP 連接到 SQL Server，需要 Windows 能夠建立連線。 使用 `ping` 工具測試 TCP。
 1.  在 [開始] 功能表上，按一下 [執行]。 在 [執行] 視窗中輸入 **cmd**，然後按一下 [確定]。 
 2.  在命令提示字元視窗中，先輸入 `ping`，然後輸入執行 SQL Server 的電腦 IP 位址。 例如，使用 IPv4 位址的 `ping 192.168.1.101` ，或使用 IPv6 位址的 `ping fe80::d51d:5ab5:6f09:8f48%11` 。 (您必須用稍早蒐集的電腦 IP 位址取代 ping 後面的數字。) 
-3.  如果已正確設定網路，您會收到如「\<IP 位址> 的回覆」，加上一些其他資訊的回應。 如果您收到諸如 **目的地主機無法連線** 或**要求逾時**這類錯誤，表示 TCP/IP 未正確設定。 (請檢查 IP 位址是否正確、輸入是否正確。)此時的錯誤可能表示用戶端電腦、伺服器電腦，或網路方面 (例如路由器) 發生了問題。 網際網路有許多資源可疑難排解 TCP/IP。 您可以先從 2006 年這篇文章 [Chapter 16 – Troubleshooting TCP/IP](http://support.microsoft.com/kb/169790)(第 16 章 – 疑難排解 TCP/IP) 開始了解如何疑難排解基本的 TCP/IP 問題。
+3.  如果已正確設定網路，您會收到如「\<IP 位址> 的回覆」，加上一些其他資訊的回應。 如果您收到諸如 **目的地主機無法連線** 或**要求逾時**這類錯誤，表示 TCP/IP 未正確設定。 (請檢查 IP 位址是否正確、輸入是否正確。)此時的錯誤可能表示用戶端電腦、伺服器電腦，或網路方面 (例如路由器) 發生了問題。 網際網路有許多資源可疑難排解 TCP/IP。 您可以先從 2006 年這篇文章 [Chapter 16 – Troubleshooting TCP/IP](https://support.microsoft.com/kb/169790)(第 16 章 – 疑難排解 TCP/IP) 開始了解如何疑難排解基本的 TCP/IP 問題。
 4.  接下來，如果使用 IP 位址順利完成 ping 測試，請再測試電腦名稱可否解析成 TCP/IP 位址。 在用戶端電腦的命令提示字元視窗中，先輸入 `ping` ，然後再輸入執行 SQL Server 的電腦名稱。 例如，使用 IPv4 位址的 `ping newofficepc` 
 5.  如果您可以 Ping 到 IP 位址，但現在收到諸如 **目的地主機無法連線** 或**要求逾時**這類錯誤，表示您可能在用戶端電腦上快取到舊 (過時) 的名稱解析資訊。 輸入 `ipconfig /flushdns` 以清除 DNS (動態名稱解析) 快取。 再次用名稱 ping 電腦。 清空 DNS 快取後，用戶端電腦會檢查伺服器電腦 IP 位址的最新資訊。 
-6.  如果已正確設定網路，您會收到如「\<IP 位址> 的回覆」，加上一些其他資訊的回應。 如果可以使用 IP 位址成功 ping 伺服器電腦，但在 ping 電腦名稱時收到諸如 **目的地主機無法連線** 或**要求逾時**這類錯誤，表示名稱解析未正確設定。 (如需詳細資訊，請參閱先前參考的 2006 年文章 [Chapter 16 – Troubleshooting TCP/IP](http://support.microsoft.com/kb/169790) (第 16 章 – 疑難排解 TCP/IP)。)成功的名稱解析不需要連接到 SQL Server，但如果電腦名稱無法解析為 IP 位址，則必須指定 IP 位址才能連線。 這沒有真正解決問題，但之後會修正名稱解析。
+6.  如果已正確設定網路，您會收到如「\<IP 位址> 的回覆」，加上一些其他資訊的回應。 如果可以使用 IP 位址成功 ping 伺服器電腦，但在 ping 電腦名稱時收到諸如 **目的地主機無法連線** 或**要求逾時**這類錯誤，表示名稱解析未正確設定。 (如需詳細資訊，請參閱先前參考的 2006 年文章 [Chapter 16 – Troubleshooting TCP/IP](https://support.microsoft.com/kb/169790) (第 16 章 – 疑難排解 TCP/IP)。)成功的名稱解析不需要連接到 SQL Server，但如果電腦名稱無法解析為 IP 位址，則必須指定 IP 位址才能連線。 這沒有真正解決問題，但之後會修正名稱解析。
   
   
 ## <a name="testing-a-local-connection"></a>測試本機連線
@@ -104,7 +104,7 @@ ms.locfileid: "47665245"
 如果此時遇到錯誤，您必須先解決問題才能繼續。 問題的發生有很多可能的原因。 登入可能沒有連接的授權。 可能遺漏了預設資料庫。
 
 >    [!NOTE] 
->    某些刻意傳遞至用戶端的錯誤訊息，未提供疑難排解問題的足夠資訊。 這是為免向攻擊者提供 SQL Server 相關資訊的安全性功能。 若要檢視有關錯誤的完整資訊，請查看 SQL Server 錯誤記錄檔。 裡面會提供詳細資料。 如果您收到錯誤： **18456 使用者登入失敗**，請參閱《線上叢書》主題 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) 有關於錯誤碼的其他資訊。 Aaron Bertrand 的部落格有內容豐富的錯誤碼清單，請參閱 [Troubleshooting Error 18456](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)。 如果可以連接，請使用 SSMS 在物件總管的 [管理] 區段中檢視錯誤記錄檔。 否則，請使用 Windows 記事本程式來檢視錯誤記錄檔。 預設位置會隨著您的版本而不同，並且可以在安裝期間變更。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 的預設位置為 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`。  
+>    某些刻意傳遞至用戶端的錯誤訊息，未提供疑難排解問題的足夠資訊。 這是為免向攻擊者提供 SQL Server 相關資訊的安全性功能。 若要檢視有關錯誤的完整資訊，請查看 SQL Server 錯誤記錄檔。 裡面會提供詳細資料。 如果您收到錯誤： **18456 使用者登入失敗**，請參閱《線上叢書》主題 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) 有關於錯誤碼的其他資訊。 Aaron Bertrand 的部落格有內容豐富的錯誤碼清單，請參閱 [Troubleshooting Error 18456](https://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)。 如果可以連接，請使用 SSMS 在物件總管的 [管理] 區段中檢視錯誤記錄檔。 否則，請使用 Windows 記事本程式來檢視錯誤記錄檔。 預設位置會隨著您的版本而不同，並且可以在安裝期間變更。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 的預設位置為 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`。  
 
 4.   如果可以使用共用記憶體連接，請使用 TCP 測試連接。 名稱前面可以指定 **tcp:** 以強制 TCP 連線。 例如：
 
@@ -144,7 +144,7 @@ Windows XP Service Pack 2 從多年前就開始這麼做：Windows 防火牆已�
   * 啟動 SQL Server Browser 服務。 請返回 **收集 SQL Server 執行個體的相關資訊**一節 (第 1.d 節)。
   * 防火牆正在封鎖 SQL Server Browser 服務。 在防火牆中開啟 UDP 連接埠 1434。 請返回 **在防火牆中開啟連接埠**一節。 (請確定您開啟 UDP 連接埠，而非 TCP 連接埠。 這些是不同的項目)。
   * 路由器正在封鎖 UDP 連接埠 1434 資訊。 UDP 通訊 (使用者資料包通訊協定) 不適合通過路由器。 這會防止低優先順序流量填滿網路。 您可以設定讓路由器轉送 UDP 流量，或者決定連線時一律提供連接埠號碼。
-  * 如果用戶端電腦使用的是 Windows 7 或 Windows Server 2008 (或較新的作業系統)，作業系統可能會捨棄UDP 流量，因為傳回伺服器回應的 IP 位址和被查詢的位址不同。 這是封鎖「鬆散的來源對應」的安全性功能。 如需詳細資訊，請參閱《線上叢書》主題 **疑難排解：等候時間逾時** 的 [多個伺服器 IP 位址](http://msdn.microsoft.com/library/ms190181.aspx)一節。 這是 SQL Server 2008 R2 的文章，但是原則仍然適用。 您可以設定讓用戶端使用正確的 IP 位址，或者決定連線時一律提供連接埠號碼。
+  * 如果用戶端電腦使用的是 Windows 7 或 Windows Server 2008 (或較新的作業系統)，作業系統可能會捨棄UDP 流量，因為傳回伺服器回應的 IP 位址和被查詢的位址不同。 這是封鎖「鬆散的來源對應」的安全性功能。 如需詳細資訊，請參閱《線上叢書》主題 **疑難排解：等候時間逾時** 的 [多個伺服器 IP 位址](https://msdn.microsoft.com/library/ms190181.aspx)一節。 這是 SQL Server 2008 R2 的文章，但是原則仍然適用。 您可以設定讓用戶端使用正確的 IP 位址，或者決定連線時一律提供連接埠號碼。
      
 3. 一旦可以使用 IP 位址 (或具名執行個體的 IP 位址和執行個體名稱) 連線，請嘗試使用電腦名稱 (或具名執行個體的電腦名稱和執行個體名稱) 連線。 將 `tcp:` 放在電腦名稱前面，以強制 TCP/IP 連線。 例如， `ACCNT27`電腦上的預設執行個體使用 `tcp:ACCNT27` 。該電腦上稱為 `PAYROLL`的具名執行個體使用 `tcp:ACCNT27\PAYROLL` 。如果可以使用 IP 位址連線，但不能使用電腦名稱連線，表示有名稱解析問題。 請返回 **測試 TCP/IP 連線**一節 (第 4 節)。
 

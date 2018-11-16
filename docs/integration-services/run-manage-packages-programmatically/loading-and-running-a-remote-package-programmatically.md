@@ -15,12 +15,12 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47b3ca2abf53fe93a24eb23650c1b741a2445988
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b1954044626059e8a637aa41292839062269250
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684389"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640010"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>以程式設計方式載入和執行遠端封裝
   若要從沒有安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的本機電腦執行遠端封裝，請啟動封裝，讓它們在已安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的遠端電腦上執行。 完成這項工作的方法是讓本機電腦使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent、Web 服務或遠端元件來啟動遠端電腦上的封裝。 如果您嘗試直接從本機電腦啟動遠端封裝，該封裝將載入並嘗試從本機電腦執行。 如果本機電腦沒有安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，封裝將不會執行。  
@@ -45,7 +45,7 @@ ms.locfileid: "47684389"
 > [!NOTE]  
 >  **sp_start_job** 預存程序的傳回值指出預存程序是否能夠順利地啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。 傳回值不會指出封裝是成功或是失敗。  
   
- 如需從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業執行之套件的疑難排解資訊，請參閱 Microsoft 文章：[從 SQL Server Agent 作業步驟呼叫 SSIS 套件時，SSIS 套件未執行](http://support.microsoft.com/kb/918760)。  
+ 如需從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業執行之套件的疑難排解資訊，請參閱 Microsoft 文章：[從 SQL Server Agent 作業步驟呼叫 SSIS 套件時，SSIS 套件未執行](https://support.microsoft.com/kb/918760)。  
   
 ### <a name="sample-code"></a>範例程式碼  
   
@@ -176,7 +176,7 @@ Imports System.Web.Services.Protocols
 Imports Microsoft.SqlServer.Dts.Runtime  
 Imports System.IO  
   
-<WebService(Namespace:="http://dtsue/")> _  
+<WebService(Namespace:="https://dtsue/")> _  
 <WebServiceBinding(ConformsTo:=WsiProfiles.BasicProfile1_1)> _  
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _  
 Public Class LaunchSSISPackageService  
@@ -252,7 +252,7 @@ using System.Web.Services.Protocols;
 using Microsoft.SqlServer.Dts.Runtime;  
 using System.IO;  
   
-[WebService(Namespace = "http://dtsue/")]  
+[WebService(Namespace = "https://dtsue/")]  
 [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]  
 public class LaunchSSISPackageServiceCS : System.Web.Services.WebService  
 {  
@@ -417,7 +417,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>外部資源  
   
--   位於 technet.microsoft.com 的影片：[如何：使用 SQL Server Agent 讓 SSIS 套件執行自動化 (SQL Server 影片)](http://technet.microsoft.com/sqlserver/ff686764.aspx)  
+-   位於 technet.microsoft.com 的影片：[如何：使用 SQL Server Agent 讓 SSIS 套件執行自動化 (SQL Server 影片)](https://technet.microsoft.com/sqlserver/ff686764.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [了解本機與遠端執行之間的差異](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 336b6d329f5c488ac5501627bd8be43974d66be5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 600a120969bc9bd9821738809f8dde1eb6554053
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856716"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665124"
 ---
 # <a name="temporal-tables"></a>時態表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47856716"
   
     -   [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
--   **視訊︰** 如需為時 20 分鐘的 Temporal 討論，請參閱 [SQL Server 2016 的 Temporal](http://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016)。  
+-   **視訊︰** 如需為時 20 分鐘的 Temporal 討論，請參閱 [SQL Server 2016 的 Temporal](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016)。  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>什麼是系統建立版本的時態表？  
  系統建立版本的時態表是一種使用者資料表，其設計目的是為了保留資料變更的完整歷程記錄，並允許簡易的時間點分析。 由於每個資料列的有效期間是由系統 (也就是資料庫引擎) 所管理，因此這種類型的時態表稱為系統設定版本的時態表。  

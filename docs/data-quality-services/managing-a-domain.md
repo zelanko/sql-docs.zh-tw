@@ -12,12 +12,12 @@ ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e414944e29abfebdd665fdcaa57bf45d39023daf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2730c37ba3afd24a0bbc29dece7a25dd15496bac
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807326"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700886"
 ---
 # <a name="managing-a-domain"></a>管理定義域
 
@@ -55,7 +55,7 @@ ms.locfileid: "47807326"
 |變更或增加知識庫中的值|[變更網域值](../data-quality-services/change-domain-values.md)|  
 |使用驗證和標準化規則|[建立網域規則](../data-quality-services/create-a-domain-rule.md)|  
 |使用關聯來更正屬於定義域值之一部分的詞彙|[建立以詞彙為主的關聯](../data-quality-services/create-term-based-relations.md)|  
-|完成、關閉或取消定義域管理活動|[結束定義域管理活動](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|完成、關閉或取消定義域管理活動|[結束定義域管理活動](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
 ## <a name="related-tasks"></a>相關工作  
   

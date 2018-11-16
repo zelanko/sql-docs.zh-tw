@@ -20,12 +20,12 @@ ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29bb67908dc0f2946aa92738ab83c1d43a884f81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 251e5f79c03c02499aec9f3c0f90f42902d32474
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791186"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656607"
 ---
 # <a name="syssoapendpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47791186"
 |**is_sql_language_enabled**|**bit**|指定 1 = BATCHES = ENABLED 選項，表示該端點可以有特定的 SQL 批次。|  
 |**wsdl_generator_procedure**|**nvarchar(776)**|實作這個方法之預存程序的三部份名稱。<br /><br /> 方法的名稱必須遵循三部分的語法。 一部分、二部分及四部分的名稱皆不可使用。|  
 |**default_database**|**sysname**|DATABASE = 選項中所給定的預設資料庫名稱。<br /><br /> 指定 NULL = DEFAULT。|  
-|**default_namespace**|**nvarchar(384)**|指定命名空間中的預設命名空間 = 選項，或`http://tempuri.org`如果改為指定預設值。|  
+|**default_namespace**|**nvarchar(384)**|指定命名空間中的預設命名空間 = 選項，或`https://tempuri.org`如果改為指定預設值。|  
 |**default_result_schema**|**tinyint**|SCHEMA = 選項的預設值。<br /><br /> 0 = NONE<br /><br /> 1 = STANDARD|  
 |**default_result_schema_desc**|**nvarchar(60)**|SCHEMA = 選項的預設值描述。<br /><br /> 無<br /><br /> STANDARD|  
 |**is_xml_charset_enforced**|**bit**|已指定 0 = CHARACTER_SET = SQL 選項。<br /><br /> 已指定 1 = CHARACTER_SET = XML 選項。|  

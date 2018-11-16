@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60850daf93756d71441bb5b764513530e812fcfb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15add88f6a244b81b13bf9f63d4a53381fe091eb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768292"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665957"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -212,7 +212,7 @@ ms.locfileid: "47768292"
 |SQL_USER_NAME|目前的使用者名稱。|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLGetInfo 函數](http://go.microsoft.com/fwlink/?LinkId=59354)   
+ [SQLGetInfo 函數](https://go.microsoft.com/fwlink/?LinkId=59354)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

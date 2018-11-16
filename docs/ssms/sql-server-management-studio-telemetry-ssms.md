@@ -11,16 +11,16 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abe3642cf4d74b67fcb595548a498fb062d5cddd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70c044c6b674ef7b64368edfbee069cf6c6a6332
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633346"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698897"
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>SSMS 使用意見收集的本機稽核
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-SQL Server Management Studio (SSMS) 包含使用已連線到網際網路的功能，可收集匿名的功能使用方式資料並傳送給 Microsoft。 SSMS 可能會收集標準的電腦資訊以及關於使用方式和效能的資訊，這些資訊可能會傳送給 Microsoft，並基於改善 SSMS 的品質、安全性和可靠性的目的加以分析。 我們不會收集　貴用戶的姓名、地址或是其他連絡資訊等資料。 如需詳細資訊，請參閱 [SQL Server 隱私權聲明](http://go.microsoft.com/fwlink/?LinkID=868444)。
+SQL Server Management Studio (SSMS) 包含使用已連線到網際網路的功能，可收集匿名的功能使用方式資料並傳送給 Microsoft。 SSMS 可能會收集標準的電腦資訊以及關於使用方式和效能的資訊，這些資訊可能會傳送給 Microsoft，並基於改善 SSMS 的品質、安全性和可靠性的目的加以分析。 我們不會收集　貴用戶的姓名、地址或是其他連絡資訊等資料。 如需詳細資訊，請參閱 [SQL Server 隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)。
 
 ## <a name="audit-feature-usage-data"></a>稽核功能的使用方式資料
 
@@ -33,8 +33,8 @@ SQL Server Management Studio (SSMS) 包含使用已連線到網際網路的功�
 
 ## <a name="enable-or-disable-usage-feedback-collection-in-ssms"></a>啟用或停用 SSMS 中的使用意見收集
 
-若要選擇參與或退出 SSMS 的使用方式資料收集，請參閱︰[如何設定 SQL Server 2016 以傳送意見給 Microsoft](http://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft)。
+若要選擇參與或退出 SSMS 的使用方式資料收集，請參閱︰[如何設定 SQL Server 2016 以傳送意見給 Microsoft](https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft)。
 
 ## <a name="see-also"></a>另請參閱
 
-[SQL Server 使用意見收集的本機稽核](http://msdn.microsoft.com/library/mt743085.aspx)
+[SQL Server 使用意見收集的本機稽核](https://msdn.microsoft.com/library/mt743085.aspx)

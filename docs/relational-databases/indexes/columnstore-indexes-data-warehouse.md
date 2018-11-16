@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce0d82f3c1808f96ce07c949f05cbadaed1cf248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ce64614e3c2f9d27bfafb9101e54ab49df2089e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659129"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672617"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>資料行存放區索引 - 資料倉儲
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -125,7 +125,7 @@ END TRAN
 ```  
   
 ### <a name="snapshot-isolation-and-read-committed-snapshot-isolations"></a>快照集隔離和讀取認可快照集隔離  
- 使用「快照集隔離」(SI) 來保證交易的一致性，以及「讀取認可快照集隔離」(RCSI) 來確保資料行存放區索引上查詢陳述式層級的一致性。 這可讓查詢執行而不會封鎖資料寫入器。 此非封鎖性的行為也會大幅降低複雜交易發生死結的可能性。 如需詳細資訊，請參閱 MSDN 上的 [SQL Server 中的快照集隔離](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) 。  
+ 使用「快照集隔離」(SI) 來保證交易的一致性，以及「讀取認可快照集隔離」(RCSI) 來確保資料行存放區索引上查詢陳述式層級的一致性。 這可讓查詢執行而不會封鎖資料寫入器。 此非封鎖性的行為也會大幅降低複雜交易發生死結的可能性。 如需詳細資訊，請參閱 MSDN 上的 [SQL Server 中的快照集隔離](https://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) 。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料行存放區索引設計指導](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   

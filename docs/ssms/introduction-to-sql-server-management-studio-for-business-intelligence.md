@@ -15,12 +15,12 @@ ms.assetid: ffaa77b7-03d0-4d7a-aa42-c5091a4f2ceb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8626960b3b5a16a8edc3aed7956799de24e61c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f3ec990e48b6d9913db9e610fee6bfca6b9190a
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608786"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701364"
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>適用於商業智慧的 SQL Server Management Studio 簡介
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47608786"
   
 您可使用 [共用排程] 資料夾來管理共用排程，並管理報表伺服器資料庫 (ReportServer、ReportServerTempdb)。 當您將報表伺服器資料庫移到新的或另一個 SQL Server Database Engine ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]) 時，您也會在 Master 系統資料庫中建立 RSExecRole。 如需有關這些工作的詳細資訊，請參閱下列主題：  
   
--   [Management Studio 的如何主題](http://msdn.microsoft.com/60685458-9108-47bf-820a-5e7db454d408)  
+-   [Management Studio 的如何主題](https://msdn.microsoft.com/60685458-9108-47bf-820a-5e7db454d408)  
   
 -   [管理報表伺服器資料庫](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)  
   
@@ -52,11 +52,11 @@ ms.locfileid: "47608786"
   
 您也可以透過以下方式來管理伺服器：啟用及設定各種功能、設定伺服器預設值及管理角色和作業。 如需有關這些工作的詳細資訊，請參閱下列主題：  
   
--   [如何：設定報表伺服器屬性 (Management Studio)](http://msdn.microsoft.com/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)  
+-   [如何：設定報表伺服器屬性 (Management Studio)](https://msdn.microsoft.com/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)  
   
--   [如何：建立、刪除或修改角色 (Management Studio)](http://msdn.microsoft.com/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)  
+-   [如何：建立、刪除或修改角色 (Management Studio)](https://msdn.microsoft.com/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)  
   
--   [啟用和停用 Reporting Services 的用戶端列印](http://msdn.microsoft.com/0e709c96-7517-4547-8ef6-5632f8118524)  
+-   [啟用和停用 Reporting Services 的用戶端列印](https://msdn.microsoft.com/0e709c96-7517-4547-8ef6-5632f8118524)  
   
 ## <a name="see-also"></a>另請參閱  
 [使用 SQL Server Data Tools 進行開發和實作](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  

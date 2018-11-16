@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f45da55ab27ba8043409b78663be008d7be9720f
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 4fafda7376f5c44c795fab85c6659cf5824522e1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216806"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677897"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的變更記錄
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -534,11 +534,11 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 - 表格式：DAX 剖析和資料編輯列的各種功能增強及效能修正。
 - 表格式：如果未開啟任何 SSAS Tabular 專案，Tabular Model Explorer 就不會再顯示。
 - 多維度：修正處理對話方塊在高 DPI 機器上無法使用的問題。
-- 表格式：已修正 SSDT 會在 SSMS 已開啟的情況下開啟任何 BI 專案時發生錯誤的問題。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
-- 表格式：修正階層未正確儲存到 1103 模型中 BIM 檔案的問題。[Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
+- 表格式：已修正 SSDT 會在 SSMS 已開啟的情況下開啟任何 BI 專案時發生錯誤的問題。 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- 表格式：修正階層未正確儲存到 1103 模型中 BIM 檔案的問題。[Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
 - 表格式：修正即使不支援，但在 32 位元機器上仍允許整合式工作區模式的問題。
 - 表格式：修正在半選取模式 (例如鍵入 DAX 運算式但按下量值) 下按一下任何項目都會造成損毀的問題。
-- 表格式：修正部署精靈會將模型的 .Name 屬性重設回 "Model" 的問題。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
+- 表格式：修正部署精靈會將模型的 .Name 屬性重設回 "Model" 的問題。 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
 - 表格式：修正即使未選取圖表檢視，在 TME 中選取階層也應顯示屬性的問題。
 - 表格式：修正從特定應用程式貼入 DAX 資料編輯列時會貼上影像或其他內容，而非文字的問題。
 - 表格式：修正 1103 中有些舊模型因為具有特定定義的量值存在而無法開啟的問題。
@@ -569,8 +569,8 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 - 修正在 SSDT 中設計報表時，參數、資料來源及資料集的樹狀檢視會在做出大多數變更時折疊的問題 
 - 修正 [儲存] 應儲存 RDL 版本而非最新版本的問題。
 - 修正 SSDT RS 在備份關閉時仍備份檔案的問題，及其他數個問題。
-- 修正報表產生器中，在按一下 [分割儲存格] 時會顯示錯誤的問題。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
-- 修正快取可能造成報表中資料不正確的問題。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
+- 修正報表產生器中，在按一下 [分割儲存格] 時會顯示錯誤的問題。 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
+- 修正快取可能造成報表中資料不正確的問題。 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
 
 **IS 專案：**
 - 修正 run64bitruntime 設定無法固定的問題。
@@ -582,7 +582,7 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 
 **資料庫專案：**
 - SSDT DACPAC 部署將設定加回 IgnoreColumnOrder [Connect 項目 (英文)](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)
-- 如果使用 STRING_SPLIT，SSDT 就無法編譯 [Connect 項目 (英文)](http://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
+- 如果使用 STRING_SPLIT，SSDT 就無法編譯 [Connect 項目 (英文)](https://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
 - 修正 DeploymentContributors 可以存取公開模型，但支援結構描述未初始化的問題 [Github 問題 (英文)](https://github.com/Microsoft/DACExtensions/issues/8)
 - FILEGROUP 位置的 DacFx 暫時修正
 - 外部同義字的「無法解析的參考」錯誤修正。 
@@ -743,7 +743,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
     - **SSDT：**
         - 連接錯誤 1898001 [已修正資料行描述 128 個字元限制的問題](https://connect.microsoft.com/SQLServer/feedback/details/1898001/column-description-limited-to-128-characters)。
         - 已修正從 VS 發行資料庫並未在發行設定檔 xml 中套用 DatabaseServiceObjective 屬性的問題。
-        - 連接錯誤 2900167 [已修正不正確保留暫存檔的單元測試問題](http://connect.microsoft.com/SQLServer/feedback/details/2900167/running-ssdt-unit-tests-leaves-temp-files-behind)。
+        - 連接錯誤 2900167 [已修正不正確保留暫存檔的單元測試問題](https://connect.microsoft.com/SQLServer/feedback/details/2900167/running-ssdt-unit-tests-leaves-temp-files-behind)。
         - 已修正 [資料庫設定] 的 [保留週期] 下拉式方塊被截斷的問題。
         - 已修正變更密碼時遺漏在 SQL CLR 專案屬性上驗證空白舊密碼的問題。
     - **DACFx：**

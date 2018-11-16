@@ -10,19 +10,19 @@ ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 295aca6d94eb7ec1ce2deb97d7f77e23999d7e13
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dbdee734d6d8a1dac825ad8f502c5851f746f42
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759586"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681076"
 ---
 # <a name="data-migration-settings-db2tosql"></a>資料移轉設定 (DB2ToSQL)
   
 ## <a name="data-migration-settings"></a>資料移轉設定  
 **資料移轉設定**可讓使用者撰寫自訂查詢的資料移轉。  
   
--   此索引標籤時可以使用**擴充資料移轉選項**設為**顯示**，並隱藏時設定設為**隱藏**專案設定中。 如需有關移轉的專案設定的詳細資訊，請參閱[專案設定 （移轉）](http://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) 。  
+-   此索引標籤時可以使用**擴充資料移轉選項**設為**顯示**，並隱藏時設定設為**隱藏**專案設定中。 如需有關移轉的專案設定的詳細資訊，請參閱[專案設定 （移轉）](https://msdn.microsoft.com/48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae) 。  
   
 -   剖析的自訂 SQL 陳述式將會實作**資料移轉設定**資料表節點 索引標籤。  
   
@@ -53,5 +53,5 @@ ms.locfileid: "47759586"
 -   **取消：** 按一下 **取消**還原出現設定進行變更之前。  
   
 ## <a name="see-also"></a>另請參閱  
-[將 DB2 資料移轉至 SQL Server](http://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
+[將 DB2 資料移轉至 SQL Server](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
   

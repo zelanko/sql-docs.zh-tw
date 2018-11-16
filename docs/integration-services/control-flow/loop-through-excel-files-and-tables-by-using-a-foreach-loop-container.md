@@ -15,12 +15,12 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03f8fe59c2c78c1687d36ab31df6321bda9a6ba9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b79ca6af9b0ccea0dfb1fe66b73f33cc8b9cd062
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728676"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639245"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表
   此主題的程序描述如何使用「Foreach 迴圈」容器搭配適當列舉值，循環使用資料夾中的 Excel 活頁簿，或循環使用 Excel 活頁簿中的資料表。  
@@ -36,7 +36,7 @@ ms.locfileid: "47728676"
   
      如果您沒有針對 [擴充屬性] 引數使用變數，就必須手動將它加入至包含連接字串的運算式。  
   
-3.  將 Foreach 迴圈容器加入 [控制流程] 索引標籤。如需如何設定 Foreach 迴圈容器的資訊，請參閱[設定 Foreach 迴圈容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+3.  將 Foreach 迴圈容器加入 [控制流程] 索引標籤。如需如何設定 Foreach 迴圈容器的資訊，請參閱 [設定 Foreach 迴圈容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
   
 4.  在 [Foreach 迴圈編輯器] 的 [集合] 頁面上，選取 Foreach 檔案列舉值、指定 Excel 活頁簿所在位置的資料夾，並指定檔案篩選 (通常是 *.xlsx)。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "47728676"
   
 6.  關閉 [Foreach 迴圈編輯器]。  
   
-7.  如[加入、刪除或共用封裝中的連線管理員](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)中所述，將 Excel 連線管理員加入封裝。 選取現有的 Excel 活頁簿檔案做為要連接的檔案，以避免驗證錯誤。  
+7.  如[加入、刪除或共用封裝中的連線管理員](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)中所述，將 Excel 連線管理員加入封裝。 選取現有的 Excel 活頁簿檔案做為要連接的檔案，以避免驗證錯誤。  
   
     > [!IMPORTANT]  
     >  為了避免在設定使用此 Excel 連線管理員的工作和資料流程元件時發生驗證錯誤，請在 [Excel 連線管理員編輯器] 中選取現有的 Excel 活頁簿。 在設定了 **ConnectionString** 屬性的運算式之後 (如下列步驟所述)，連線管理員就不會在執行階段使用這個活頁簿。 在您建立和設定封裝之後，就可以在 [屬性] 視窗中清除 **ConnectionString** 屬性的值。 不過，如果您要清除這個值，除非執行「ForEach 迴圈」，否則 Excel 連接管理員的連接字串屬性將不再有效。 因此，您必須將使用連線管理員的工作或封裝的 **DelayValidation** 屬性設為 [True]，以避免驗證錯誤。  
@@ -73,11 +73,11 @@ ms.locfileid: "47728676"
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>使用 Foreach ADO.NET 結構描述資料列集列舉值來循環使用 Excel 資料表  
   
-1.  建立會使用 Microsoft ACE OLE DB 提供者來連線到 Excel 活頁簿的 ADO.NET 連線管理員。 在 [連線管理員] 對話方塊的 [全部] 頁面上，確定您輸入 Excel 版本 - 在本案例中為 Excel 12.0 - 作為 Extended Properties 屬性的值。 如需詳細資訊，請參閱 [加入、刪除或共用封裝中的連線管理員](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)。  
+1.  建立會使用 Microsoft ACE OLE DB 提供者來連線到 Excel 活頁簿的 ADO.NET 連線管理員。 在 [連線管理員] 對話方塊的 [全部] 頁面上，確定您輸入 Excel 版本 - 在本案例中為 Excel 12.0 - 作為 Extended Properties 屬性的值。 如需詳細資訊，請參閱 [加入、刪除或共用封裝中的連線管理員](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)。  
   
 2.  建立會接收迴圈每個反覆運算上目前資料表名稱的字串變數。  
   
-3.  將 Foreach 迴圈容器加入 [控制流程] 索引標籤。如需如何設定Foreach 迴圈容器的資訊，請參閱[設定 Foreach 迴圈容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+3.  將 Foreach 迴圈容器加入 [控制流程] 索引標籤。如需如何設定Foreach 迴圈容器的資訊，請參閱[設定 Foreach 迴圈容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
   
 4.  在 [Foreach 迴圈編輯器] 的 [集合] 頁面上，選取 [Foreach ADO.NET 結構描述資料列集] 列舉值。  
   
@@ -96,8 +96,8 @@ ms.locfileid: "47728676"
   
 ## <a name="see-also"></a>另請參閱  
  [使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../load-data-to-from-excel-with-ssis.md)  
- [設定 Foreach 迴圈容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
- [新增或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)   
+ [設定 Foreach 迴圈容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
+ [加入或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)   
  [Excel 連線管理員](../../integration-services/connection-manager/excel-connection-manager.md)   
  [Excel 來源](../../integration-services/data-flow/excel-source.md)   
  [Excel 目的地](../../integration-services/data-flow/excel-destination.md)   

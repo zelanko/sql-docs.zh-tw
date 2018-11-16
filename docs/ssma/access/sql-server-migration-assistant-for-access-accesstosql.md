@@ -10,12 +10,12 @@ ms.assetid: 40c1eb02-26b2-44ba-969d-6c430c61c281
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 5307d39c4b983df16473226bc3aa94a163ea3d33
-ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
+ms.openlocfilehash: 57dde428be8a70b1476de390dbbd22549434c2ee
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757983"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670117"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>存取 (AccessToSQL) 的 SQL Server 移轉小幫手
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) 的存取是移轉工具從資料庫[!INCLUDE[msCoName](../../includes/msconame_md.md)]存取版本 97 到 2010年[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 在 Windows 和 Linux （預覽） / [!INCLUDE[msCoName](../../includes/msconame_md.md)] Azure SQL DB。 SSMA for Access 會將轉換至 Access 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL 資料庫物件，這些物件組成的載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL，然後移轉資料，從存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL。  
@@ -26,7 +26,7 @@ ms.locfileid: "50757983"
   
 |章節|描述|  
 |-----------|---------------|  
-|[SSMA for Access 的新功能](http://msdn.microsoft.com/a24d3fc0-6911-4bfa-828a-197abf222e02)|列出 SSMA 版本所做的變更。|  
+|[SSMA for Access 的新功能](https://msdn.microsoft.com/a24d3fc0-6911-4bfa-828a-197abf222e02)|列出 SSMA 版本所做的變更。|  
 |[安裝 SQL Server 移轉小幫手，存取](installing-sql-server-migration-assistant-for-access-accesstosql.md)|列出安裝 SSMA，如需安裝和授權 SSMA，以及最新版本的連結的程序的必要條件。|  
 |[Getting Started with SQL Server 移轉小幫手，存取&#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)|介紹 SSMA 和其使用者介面。|  
 |[準備移轉的 Access 資料庫](preparing-access-databases-for-migration-accesstosql.md)|描述如何準備您的 Access 資料庫轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure。|  
@@ -34,5 +34,5 @@ ms.locfileid: "50757983"
 |[連結到 SQL Server 的 Access 應用程式](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)|描述如何使用您現有的 Access 應用程式，搭配[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |[使用者介面參考](user-interface-reference-accesstosql.md)|包含文件 SSMA 對話方塊。|  
 |[使用 SSMA for Access 主控台](working-with-ssma-for-access-console-accesstosql.md)|包含在 SSMA 主控台應用程式上的文件|  
-|[取得 SSMA 協助進行存取](http://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|提供取得其他協助的相關資訊。|  
+|[取得 SSMA 協助進行存取](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|提供取得其他協助的相關資訊。|  
   

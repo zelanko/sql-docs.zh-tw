@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1928122dd8ca4c4ab5043a57ddc29cc82b8d42c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d225f20cae31e9f462d7f7c85c7109a3cecf43d
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615466"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812958"
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>使用 URL 存取整合 Reporting Services - Windows 應用程式
   雖然會為 Web 環境最佳化報表伺服器的 URL 存取，不過，您也可以使用 URL 存取來將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表內嵌到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式。 不過，需要 Windows Form 的 URL 存取仍然需要您使用網頁瀏覽器技術。 您可以透過 URL 存取與 Windows Form 使用下列整合案例：  
@@ -98,14 +98,14 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
  您可以呼叫其 **Navigate** 方法，將 <xref:System.Windows.Forms.WebBrowser> 控制項導向 URL。 您可以在執行階段將特定的 URL 存取字串指派到 <xref:System.Windows.Forms.WebBrowser> 控制項，如下列範例所示。  
   
 ```vb  
-Dim url As String = "http://localhost/reportserver?/" & _  
+Dim url As String = "https://localhost/reportserver?/" & _  
                     "AdventureWorks2012 Sample Reports/" & _  
                     "Company Sales&rs:Command=Render"  
 WebBrowser1.Navigate(url)  
 ```  
   
 ```csharp  
-string url = "http://localhost/reportserver?/" +  
+string url = "https://localhost/reportserver?/" +  
              "AdventureWorks2012 Sample Reports/" +  
              "Company Sales&rs:Command=Render";  
 webBrowser1.Navigate(url);  

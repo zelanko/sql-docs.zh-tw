@@ -11,12 +11,12 @@ ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 17d53c7a49afc61d3e43606ac3f805a5b21e6bd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9555f2ec58aefa5f0a3b071b0d4cf7c8ee7ff14
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208148"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813871"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>第 3 課：從報表伺服器載入報表定義
   在您建立專案並從 RDL 結構描述產生類別之後，就可以開始從報表伺服器載入報表定義。  
@@ -43,7 +43,7 @@ ms.locfileid: "48208148"
         string reportPath =   
             "/AdventureWorks 2012 Sample Reports/Company Sales 2012";  
   
-        // Retrieve the report defintion   
+        // Retrieve the report definition   
         // from the report server  
         byte[] bytes =   
             _reportService.GetItemDefinition(reportPath);  
@@ -72,7 +72,7 @@ ms.locfileid: "48208148"
         Dim reportPath As String = _  
             "/AdventureWorks 2012 Sample Reports/Company Sales 2012"  
   
-        'Retrieve the report defintion   
+        'Retrieve the report definition   
         'from the report server  
         Dim bytes As Byte() = _  
             m_reportService.GetItemDefinition(reportPath)  

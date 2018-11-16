@@ -12,12 +12,12 @@ ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a03431a47838eefccce03d433f7cfebe7194e68c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99c2f117eb5e7ce3844b4ea435c6f99ffa3c3557
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609656"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663417"
 ---
 # <a name="new-project-ssma-accesstosql"></a>新的專案 (SSMA) (AccessToSQL)
 使用**新的專案**對話方塊，即可建立新的 SSMA 專案。 若要存取**新的專案**對話方塊的 **檔案**功能表上，按一下 **新專案**。  
@@ -49,5 +49,5 @@ ms.locfileid: "47609656"
   
 > [!IMPORTANT]  
 > 'SQL Azure' 類型的新專案需要 SQL Server Native Client (SNAC) 版本為 10.5 或上方連結存取資料表中，以 SQL Azure 資料庫。   
-> 您可以取得最新版的從 SNAC [Microsoft® SQL Server® 2008 R2 功能套件](http://go.microsoft.com/fwlink/?LinkId=196940)。  
+> 您可以取得最新版的從 SNAC [Microsoft® SQL Server® 2008 R2 功能套件](https://go.microsoft.com/fwlink/?LinkId=196940)。  
   

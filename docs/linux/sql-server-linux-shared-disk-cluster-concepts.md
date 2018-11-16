@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: bc689b96be7fbfcf348ec6d55e27abcceb2024d6
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 668bf72f2673b123ce5a238dbbf5cd7af43604d4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032665"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676527"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>容錯移轉叢集執行個體-在 Linux 上的 SQL Server
 
@@ -35,7 +35,7 @@ ms.locfileid: "51032665"
 
     如需有關叢集設定、 資源代理程式選項、 管理、 最佳做法和建議的詳細資訊，請參閱 < [SUSE Linux Enterprise 高可用性延伸模組 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
 
-RHEL HA 附加元件和 SUSE HAE 之上[Pacemaker](http://clusterlabs.org/)。
+RHEL HA 附加元件和 SUSE HAE 之上[Pacemaker](https://clusterlabs.org/)。
 
 下圖所示，兩部伺服器被提供儲存體。 -Corosync 和 Pacemaker-叢集元件協調通訊和資源管理。 其中一個伺服器具有作用中的連接到儲存體資源和 SQL Server。 當 Pacemaker 偵測到失敗時叢集的元件會管理資源移動到另一個節點。  
 

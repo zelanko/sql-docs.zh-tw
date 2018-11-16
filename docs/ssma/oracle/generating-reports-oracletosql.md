@@ -14,12 +14,12 @@ ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 8d3a51f05159967505c22854817b0331ff607d7e
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 22da46c214f42e5e561e51895f98b59d490eb389
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099512"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671297"
 ---
 # <a name="generating-reports-oracletosql"></a>產生報表 (OracleToSQL)
 使用命令來執行某些活動的報表會產生物件樹狀結構層級的 SSMA 主控台中。  
@@ -142,5 +142,5 @@ ms.locfileid: "50099512"
 -   失敗指令碼  
   
 ## <a name="see-also"></a>另請參閱  
-[執行 SSMA 主控台 (Oracle)](http://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[執行 SSMA 主控台 (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

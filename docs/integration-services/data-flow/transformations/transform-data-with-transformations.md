@@ -15,12 +15,12 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6573534c2117192efcb3a40c848e72e0a39d0426
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ddbce6d12a8a3697b473eccaf9d8cd89dccd1a1
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610755"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640255"
 ---
 # <a name="transform-data-with-transformations"></a>使用轉換來轉換資料
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含三種類型的資料流程元件：來源、轉換與目的地。  
@@ -45,7 +45,7 @@ ms.locfileid: "47610755"
   
  您也可以撰寫自訂轉換。 如需詳細資訊，請參閱 [開發自訂資料流程元件](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) 和 [開發特定類型的資料流程元件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)。  
   
- 在將轉換加入資料流程設計師之後，設定轉換之前，您可以透過將資料流程中另一轉換或來源的輸出連接到轉換的輸入，以將此轉換連接到資料流程。 兩個資料流程元件之間的連接子稱為路徑。 如需連接元件以及使用路徑的詳細資訊，請參閱 [以路徑連接元件](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)。  
+ 在將轉換加入資料流程設計師之後，設定轉換之前，您可以透過將資料流程中另一轉換或來源的輸出連接到轉換的輸入，以將此轉換連接到資料流程。 兩個資料流程元件之間的連接子稱為路徑。 如需連接元件以及使用路徑的詳細資訊，請參閱 [以路徑連接元件](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)。  
   
 ### <a name="to-add-a-transformation-to-a-data-flow"></a>將轉換加入資料流程  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47610755"
 ## <a name="see-also"></a>另請參閱  
  [資料流程工作](../../../integration-services/control-flow/data-flow-task.md)   
  [資料流程](../../../integration-services/data-flow/data-flow.md)   
- [以路徑連接元件](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [以路徑連接元件](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [資料中的錯誤處理](../../../integration-services/data-flow/error-handling-in-data.md)   
  [資料流程](../../../integration-services/data-flow/data-flow.md)  
   

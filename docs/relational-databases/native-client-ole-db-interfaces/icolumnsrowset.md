@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf78cbf201f909e47df2efc3ebc2051af3e1ac8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30fe0ac28575bdbed43b27aa79403ca9fd05408e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640176"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676307"
 ---
 # <a name="icolumnsrowset"></a>IColumnsRowset
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,6 +26,6 @@ ms.locfileid: "47640176"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 會將 DBCOLUMN_BASETABLEINSTANCE 資料行加入至 IColumnsRowset::GetColumnRowset。 這個資料行會傳回 DBTYPE_I2 並保留給 Microsoft 使用。 在未來的版本中，這個資料行中的資訊可能會變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [介面&#40;OLE DB&#41;](http://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
+ [介面&#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
   
   

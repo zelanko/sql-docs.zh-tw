@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 307db631ea3d4b803402f11070c5770afe452b0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d764bcfec14d14b1c1a3e6bf5a6f0af9b18687ce
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772557"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701316"
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 資料庫函式是什麼？
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,14 +60,14 @@ ms.locfileid: "47772557"
 |[資料指標函式](cursor-functions-transact-sql.md)|傳回資料指標的詳細資訊。|  
 |[日期與時間資料類型與函式](date-and-time-data-types-and-functions-transact-sql.md)|執行作業來處理日期和時間輸入值，以及傳回字串、數值，或日期和時間值。|  
 |[JSON 函式](json-functions-transact-sql.md)|驗證、查詢，或變更 JSON 資料。|  
-|[邏輯函式](http://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|執行邏輯運算。|  
+|[邏輯函式](https://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|執行邏輯運算。|  
 |[數學函式](mathematical-functions-transact-sql.md)|根據函數參數所提供的輸入值來執行計算，以及傳回數值。|  
 |[中繼資料函式](metadata-functions-transact-sql.md)|傳回資料庫和資料庫物件的相關資訊。|  
 |[安全性函式](security-functions-transact-sql.md)|傳回使用者和角色的相關資訊。|  
 |[字串函式](string-functions-transact-sql.md)|執行作業來處理字串 (**char** 或 **varchar**) 輸入值，並傳回字串或數值。|  
 |[系統函式](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|執行作業和傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中的值、物件和設定的相關資訊。|  
 |[系統統計函式](system-statistical-functions-transact-sql.md)|傳回系統的統計資訊。|  
-|[文字和影像函式](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|執行作業來處理文字或影像輸入值或資料行，以及傳回值的相關資訊。|  
+|[文字和影像函式](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|執行作業來處理文字或影像輸入值或資料行，以及傳回值的相關資訊。|  
   
 ## <a name="function-determinism"></a>函數決定性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內建函數可能具決定性或不具決定性。 如果每當利用一組特定輸入值來呼叫函數時，函數都會傳回相同的值，這些函數便是具決定性。 如果每次呼叫時都可能傳回不同結果，即便使用同一組特定的輸入值也是如此，這些函數便是不具決定性。 如需詳細資訊，請參閱[確定性與非確定性函式](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)  

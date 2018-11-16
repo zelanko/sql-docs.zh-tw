@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 2c5aa5be950aa9596af1523a53665514a8b7f6c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb130bbf8c3c2e66bd5b64458ca5f07b83f9b532
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754916"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606768"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>變更資料庫相容性層級並使用查詢存放區
 
@@ -39,7 +39,7 @@ ms.locfileid: "47754916"
 > - tempdb、model、msdb 和 Resource 資料庫的相容性層級在升級之後會設定為目前相容性層級。   
 > - master 系統資料庫會繼續保有升級前的相容性層級。    
   
-啟用新查詢處理器功能的升級程序與產品的發行後服務模型有關。  其中某些修正是在[追蹤旗標 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199) 下所發行。  需要修正程式的客戶可以選擇這些修正程式，而不會造成其他客戶的非預期衰退。 查詢處理器 Hotfix 的發行後服務模型記載在 [這裡](http://support.microsoft.com/kb/974006)。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，移到新的相容性層級表示不再需要追蹤旗標 4199，原因是現在預設會在最新的相容性層級中啟用那些修正。 因此，在升級程序期間，一定要確認在升級程序完成之後未啟用 4199。  
+啟用新查詢處理器功能的升級程序與產品的發行後服務模型有關。  其中某些修正是在[追蹤旗標 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199) 下所發行。  需要修正程式的客戶可以選擇這些修正程式，而不會造成其他客戶的非預期衰退。 查詢處理器 Hotfix 的發行後服務模型記載在 [這裡](https://support.microsoft.com/kb/974006)。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，移到新的相容性層級表示不再需要追蹤旗標 4199，原因是現在預設會在最新的相容性層級中啟用那些修正。 因此，在升級程序期間，一定要確認在升級程序完成之後未啟用 4199。  
 
 > [!NOTE]
 > 不過，如果適用的話，仍需追蹤旗標 4199，以啟用在 RTM 後發行的任何新查詢處理器修正。

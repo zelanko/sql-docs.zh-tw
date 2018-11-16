@@ -18,12 +18,12 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6676cceb6f48b4609e14e8b0667db9d6a2c92b28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cea3308f6d070a0cd1b7b902f1b76306ae1930a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796756"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641675"
 ---
 # <a name="data-flow"></a>資料流程
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供三種不同類型的資料流程元件：來源、轉換與目的地。 來源從關聯式資料庫、檔案和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的資料表和檢視等資料存放區擷取資料。 轉換會修改、摘要並清除資料。 目的地則將資料載入資料存放區或建立記憶體中資料集。  
@@ -33,7 +33,7 @@ ms.locfileid: "47796756"
   
  此外， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供將一個元件的輸出連接到另一個元件的輸入之路徑。 路徑會定義元件的順序，還能讓您將附註加入資料流程或檢視資料行的來源。  
   
- 您可透過將來源和目的地的輸出，連接到轉換和目的地的輸入，以連接資料流程元件。 在建構資料流程時，您通常會在加入第二個和後續元件至資料流程時連接這些元件。 在您連接元件之後，輸入資料行便可用於設定元件。 當沒有任何輸入資料行可使用時，您將需要在元件已連接到資料流程後完成該元件的組態。 如需詳細資訊，請參閱 [Integration Services 路徑](../../integration-services/data-flow/integration-services-paths.md) 和 [以路徑連接元件](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)。  
+ 您可透過將來源和目的地的輸出，連接到轉換和目的地的輸入，以連接資料流程元件。 在建構資料流程時，您通常會在加入第二個和後續元件至資料流程時連接這些元件。 在您連接元件之後，輸入資料行便可用於設定元件。 當沒有任何輸入資料行可使用時，您將需要在元件已連接到資料流程後完成該元件的組態。 如需詳細資訊，請參閱 [Integration Services 路徑](../../integration-services/data-flow/integration-services-paths.md) 和 [以路徑連接元件](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)。  
   
  下圖顯示了具有來源、一個輸入與一個輸出的轉換，以及目的地的資料流程。 除輸入資料行、輸出資料行和外部資料行之外，該圖還包含了輸入、輸出和錯誤輸出。  
   
@@ -100,11 +100,11 @@ ms.locfileid: "47796756"
   
 |來源|Description|  
 |------------|-----------------|  
-|Oracle 來源|Oracle 來源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的來源元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=789384)。|  
-|SAP BI 來源|SAP BI 來源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的來源元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面的 [Microsoft SQL Server 功能套件](http://go.microsoft.com/fwlink/?LinkID=746297)。|  
-|Teradata 來源|Teradata 來源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的來源元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=789384)。|  
+|Oracle 來源|Oracle 來源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的來源元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)。|  
+|SAP BI 來源|SAP BI 來源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的來源元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面的 [Microsoft SQL Server 功能套件](https://go.microsoft.com/fwlink/?LinkID=746297)。|  
+|Teradata 來源|Teradata 來源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的來源元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)。|  
   
- 如需如何利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 獲致效能提升的示範，請參閱 [Microsoft Connector for Oracle by Attunity 的效能 (SQL Server 視影片)](http://go.microsoft.com/fwlink/?LinkID=210369)。  
+ 如需如何利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 獲致效能提升的示範，請參閱 [Microsoft Connector for Oracle by Attunity 的效能 (SQL Server 視影片)](https://go.microsoft.com/fwlink/?LinkID=210369)。  
   
 ## <a name="transformations"></a>轉換  
  轉換具有廣泛的功能。 它可以執行例如更新、摘要、清除、合併和散發資料等工作。 您可以修改資料行中的值、查閱資料表中的值、清除資料，以及彙總資料行值。  
@@ -161,14 +161,14 @@ ms.locfileid: "47796756"
   
 |來源|Description|  
 |------------|-----------------|  
-|Oracle 目的地|Oracle 目的地是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的目的地元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=789384)。|  
-|SAP BI 目的地|SAP BI 目的地是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的目的地元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面的 [Microsoft SQL Server 功能套件](http://go.microsoft.com/fwlink/?LinkID=746297)。|  
-|Teradata 目的地|Teradata 目的地是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的目的地元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=789384)。|  
+|Oracle 目的地|Oracle 目的地是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的目的地元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)。|  
+|SAP BI 目的地|SAP BI 目的地是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的目的地元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面的 [Microsoft SQL Server 功能套件](https://go.microsoft.com/fwlink/?LinkID=746297)。|  
+|Teradata 目的地|Teradata 目的地是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的目的地元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)。|  
   
- 如需如何利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 獲致效能提升的示範，請參閱 [Microsoft Connector for Oracle by Attunity 的效能 (SQL Server 視影片)](http://go.microsoft.com/fwlink/?LinkID=210369)。  
+ 如需如何利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 獲致效能提升的示範，請參閱 [Microsoft Connector for Oracle by Attunity 的效能 (SQL Server 視影片)](https://go.microsoft.com/fwlink/?LinkID=210369)。  
   
 ## <a name="connection-managers"></a>連接管理員  
- 許多資料流程元件會連接到資料來源，您必須在封裝中加入元件所需的連接管理員，才能正確設定元件。 您可以在建構資料流程時，或是在開始建構資料流程之前，加入連接管理員。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)和[建立連接管理員](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
+ 許多資料流程元件會連接到資料來源，您必須在封裝中加入元件所需的連接管理員，才能正確設定元件。 您可以在建構資料流程時，或是在開始建構資料流程之前，加入連接管理員。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)和[建立連接管理員](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
   
 ## <a name="external-metadata"></a>外部中繼資料  
  當您使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師在封裝中建立資料流程時，來自來源和目的地的中繼資料會複製到來源和目的地的外部資料行，做為結構描述的快照集。 當 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 驗證封裝時，[ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 會根據變更，比較此對照集與來源結構描述，或比較此對照集與目的地的結構描述，並公佈錯誤和警告。  
@@ -216,4 +216,4 @@ ms.locfileid: "47796756"
  [連接資料流程中的元件](../../integration-services/data-flow/connect-components-in-a-data-flow.md)  
   
 ## <a name="related-content"></a>相關內容  
- technet.microsoft.com 上的影片： [Microsoft Connector for Oracle by Attunity 的效能 (SQL Server 影片)](http://go.microsoft.com/fwlink/?LinkID=210369)。  
+ technet.microsoft.com 上的影片： [Microsoft Connector for Oracle by Attunity 的效能 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkID=210369)。  

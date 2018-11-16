@@ -6,12 +6,12 @@ description: 尋找可協助您安裝或升級 SQL Server 及相關服務的內�
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 6ca8f1acd90936c6f58a80543027731b6ada6451
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: be4c1d4fed73718c0a2aa7e5d386613444c3072d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743143"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697936"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -324,16 +324,16 @@ ms.locfileid: "50743143"
         <h2>與我們保持連絡</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external"> 參與 </a>
+                <a href="https://aka.ms/editsqldocs" data-linktype="external"> 參與 </a>
             </li>
            <li>
                 <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external"> 取得協助 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external"> 意見反應 </a>
+                <a href="https://aka.ms/sqldocsfeedback" data-linktype="external"> 意見反應 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> 問卷 </a>
+                <a href="https://aka.ms/sqldocsurvey" data-linktype="external"> 問卷 </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external">部落格</a>

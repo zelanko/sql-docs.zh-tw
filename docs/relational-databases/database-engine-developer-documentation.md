@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cf6458cdb92f11871b27ae007d4207f3628c46b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 500281b84c84e84507660e3961b3d512b939e582
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597646"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668598"
 ---
 # <a name="database-engine-developer-documentation"></a>Database Engine 開發人員文件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ ms.locfileid: "47597646"
  [Database Engine 擴充預存程序程式設計](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
  描述如何使用擴充預存程序，以 C 之類的程式語言建立您自己的外部常式。  
   
- [資料收集器程式設計](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)  
+ [資料收集器程式設計](https://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)  
  描述資料收集器物件模型。  
   
- [例外狀況訊息方塊程式設計](http://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
+ [例外狀況訊息方塊程式設計](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)  
  描述如何在應用程式中使用例外狀況訊息方塊程式介面，讓您更有效地控制訊息經驗，以便讓使用者選擇要儲存錯誤訊息內容以供日後參考，或是取得訊息的說明。  
   
 ## <a name="see-also"></a>另請參閱  

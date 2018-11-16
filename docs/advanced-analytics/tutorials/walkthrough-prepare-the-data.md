@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cc47b7a8ba7090064983063ab579bd8ac8a1ccbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5206213c06b283e8736dea8079f6909149e670e9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142088"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703676"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>準備要使用 PowerShell （逐步解說） 的資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -100,7 +100,7 @@ GitHub 存放庫中已提供所需的所有程式碼。 您可以使用 PowerShe
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - 此範例會使用 R grep 函數來搜尋可用路徑的向量，並尋找包含"Program Files"路徑。 如需詳細資訊，請參閱 < [ http://www.rdocumentation.org/packages/base/functions/grep ](http://www.rdocumentation.org/packages/base/functions/grep)。
+    - 此範例會使用 R grep 函數來搜尋可用路徑的向量，並尋找包含"Program Files"路徑。 如需詳細資訊，請參閱 < [ https://www.rdocumentation.org/packages/base/functions/grep ](https://www.rdocumentation.org/packages/base/functions/grep)。
 
     - 如果您認為已經安裝的套件，來檢查已安裝的封裝清單執行`installed.packages()`。
 
@@ -173,7 +173,7 @@ This step (plugging in database information) takes 0.48 seconds.
 
 若要手動下載資料，以滑鼠右鍵按一下下列連結，然後選取 [另存目標] 。
 
-[http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](http://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
+[https://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv](https://getgoing.blob.core.windows.net/public/nyctaxi1pct.csv)
 
 記下所下載資料檔案的路徑以及在其中儲存資料的檔案名稱。 您需要將資料載入至資料表使用的完整路徑**bcp**。
 
@@ -265,7 +265,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 資料是包含 2013 年超過 173,000,000 筆個別車程記錄的紐約市計程車資料集的代表性取樣 (包含針對每個車程所付的費用和小費金額)。 為了讓您輕鬆地使用資料，Microsoft 資料科學小組已執行縮小取樣，只取得 1% 的資料。  這項資料已共用於 Azure 中的公用 Blob 儲存容器，格式為 .CSV。 來源資料是未壓縮的檔案，低於 350 MB。
 
-+ 公用資料集： [NYC 計程車和禮車委託](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ 公用資料集： [NYC 計程車和禮車委託](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
 + [NYC 計程車資料集上建立 Azure ML 模型](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/)。
 

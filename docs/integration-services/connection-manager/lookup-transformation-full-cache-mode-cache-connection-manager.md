@@ -13,12 +13,12 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bdf93e2f4da62ffa7a1cfd6edac11955f3bd757f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b44eaab3266d75663458572af238f5a15bd35b5e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853577"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642285"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>查閱轉換完整快取模式 - 快取連線管理員
   您可以將查閱轉換設定為使用完整快取模式以及快取連接管理員。 在完整快取模式中，參考資料集會在查閱轉換執行之前載入快取。  
@@ -54,15 +54,15 @@ ms.locfileid: "47853577"
   
 -   [快取轉換](../../integration-services/data-flow/transformations/cache-transform.md)  
   
--   [快取連線管理員](../../integration-services/connection-manager/cache-connection-manager.md)  
+-   [快取連接管理員](../../integration-services/connection-manager/cache-connection-manager.md)  
   
 -   [優先順序條件約束](../../integration-services/control-flow/precedence-constraints.md)  
   
--   [執行套件工作](../../integration-services/control-flow/execute-package-task.md)  
+-   [執行封裝工作](../../integration-services/control-flow/execute-package-task.md)  
   
 -   [時序容器](../../integration-services/control-flow/sequence-container.md)  
   
- 如需示範如何在完整快取模式中使用快取連線管理員實作查閱轉換的影片，請參閱 [如何：在完整快取模式中實作查閱轉換 (SQL Server 影片)](http://go.microsoft.com/fwlink/?LinkId=131031)。  
+ 如需示範如何在完整快取模式中使用快取連線管理員實作查閱轉換的影片，請參閱 [如何：在完整快取模式中實作查閱轉換 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=131031)。  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>若要使用快取連接管理員和資料流程中的資料來源在單一封裝中以完整快取模式實作查閱轉換  
   
@@ -81,7 +81,7 @@ ms.locfileid: "47853577"
      如果是非索引資料行，索引位置為 0。 如果是索引資料行，則索引位置是循序的正數。  
   
     > [!NOTE]  
-    >  當查閱轉換是設定為使用快取連接管理員，則只有參考資料集中的索引資料行可以對應到輸入資料行。 而且，所有的索引資料行都必須進行對應。 如需詳細資訊，請參閱[快取連線管理員編輯器](../../integration-services/connection-manager/cache-connection-manager-editor.md)。  
+    >  當查閱轉換是設定為使用快取連接管理員，則只有參考資料集中的索引資料行可以對應到輸入資料行。 而且，所有的索引資料行都必須進行對應。 如需詳細資訊，請參閱 [快取連線管理員編輯器](../../integration-services/connection-manager/cache-connection-manager-editor.md)。  
   
 6.  若要將快取儲存至檔案，請在 [快取連線管理員編輯器] 的 [一般] 索引標籤上，藉由設定下列選項來設定快取連線管理員：  
   
@@ -157,7 +157,7 @@ ms.locfileid: "47853577"
      如果是非索引資料行，索引位置為 0。 如果是索引資料行，則索引位置是循序的正數。  
   
     > [!NOTE]  
-    >  當查閱轉換是設定為使用快取連接管理員，則只有參考資料集中的索引資料行可以對應到輸入資料行。 而且，所有的索引資料行都必須進行對應。 如需詳細資訊，請參閱[快取連線管理員編輯器](../../integration-services/connection-manager/cache-connection-manager-editor.md)。  
+    >  當查閱轉換是設定為使用快取連接管理員，則只有參考資料集中的索引資料行可以對應到輸入資料行。 而且，所有的索引資料行都必須進行對應。 如需詳細資訊，請參閱 [快取連線管理員編輯器](../../integration-services/connection-manager/cache-connection-manager-editor.md)。  
   
 7.  視需要設定快取轉換。 如需詳細資訊，請參閱[快取轉換編輯器 &#40;連線管理員頁面&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) 和[快取轉換編輯器 &#40;對應頁面&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md)。  
   
@@ -219,7 +219,7 @@ ms.locfileid: "47853577"
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-by-using-cache-connection-manager-and-an-existing-cache-file"></a>使用快取連接管理員和現有的快取檔案以完整快取模式實作查閱轉換  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中開啟 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，然後開啟封裝。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中開啟 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，然後開啟封裝。  
   
 2.  以滑鼠右鍵按一下 [連線管理員] 區域，然後按一下 [新增連接]。  
   
@@ -281,7 +281,7 @@ ms.locfileid: "47853577"
 9. 執行封裝。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 OLE DB 連線管理員以完整快取模式來實作查閱轉換](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [使用 OLE DB 連接管理員，以完整快取模式來實作查閱轉換](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [以沒有快取或部分快取模式來實作查閱](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services 轉換](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

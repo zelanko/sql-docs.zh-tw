@@ -11,12 +11,12 @@ ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6487a55cf1c6c336dc1c02c2fe4000dfc843ff82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06df375e2887a58ed00370989921b654497afa84
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773758"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670137"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>搭配 dbSqlPackage 提供者使用 MSDeploy
 **DbSqlPackage** 是一種 **MSDeploy** 提供者，可讓您與 SQL Server/SQL Azure 資料庫進行互動。 **DbSqlPackage** 支援下列動作：  
@@ -29,10 +29,10 @@ ms.locfileid: "47773758"
   
 -   **Script**：建立 Transact\-SQL 指令碼 (相當於發行動作所執行的指令碼)。  
   
-如需有關 DACFx 的詳細資訊，請參閱 DACFx Managed API 文件，網址為：[http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) \(機器翻譯\) 或 [SqlPackage.exe](../tools/sqlpackage.md) (DACFx 命令列工具)。  
+如需有關 DACFx 的詳細資訊，請參閱 DACFx Managed API 文件，網址為：[https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) \(機器翻譯\) 或 [SqlPackage.exe](../tools/sqlpackage.md) (DACFx 命令列工具)。  
   
 > [!IMPORTANT]  
-> dbSqlPackage 提供者功能將從 Visual Studio 的下一個主要版本中移除。 如需如何利用 Web Deploy 進行資料庫發行的相關資訊，請參閱[用於累加資料庫發行的 dbDacFx 提供者](http://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing) \(英文\)。  
+> dbSqlPackage 提供者功能將從 Visual Studio 的下一個主要版本中移除。 如需如何利用 Web Deploy 進行資料庫發行的相關資訊，請參閱[用於累加資料庫發行的 dbDacFx 提供者](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing) \(英文\)。  
   
 ## <a name="command-line-syntax"></a>命令列語法  
 **MSDeploy** 搭配 **dbSqlPackage** 提供者會使用下列形式的命令列：  

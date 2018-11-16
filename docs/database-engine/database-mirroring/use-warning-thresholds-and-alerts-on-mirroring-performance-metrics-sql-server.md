@@ -18,12 +18,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e25793ba20a442b92feef901684290892604a245
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 983078a8dc713af70fb57fab655ff7eed9acad35
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609268"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600998"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用鏡像效能標準的警告臨界值與警示 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "47609268"
   
  定義資料庫鏡像事件的警示後，我們建議您在兩個夥伴伺服器執行個體上都定義警告臨界值和警示。 雖然個別事件會在主體伺服器或鏡像伺服器上產生，不過每一個夥伴都可以隨時執行任何一個角色。 若要確保在容錯移轉之後警示會繼續運作，您必須在兩個夥伴上都定義該警示。  
   
- 如需詳細資訊，請參閱此 [SQL Server 網站](http://go.microsoft.com/fwlink/?linkid=62373)上關於資料庫鏡像事件之警示的白皮書。 這份白皮書包含如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent、資料庫鏡像 WMI 事件及範例指令碼來設定警示的詳細資訊。  
+ 如需詳細資訊，請參閱此 [SQL Server 網站](https://go.microsoft.com/fwlink/?linkid=62373)上關於資料庫鏡像事件之警示的白皮書。 這份白皮書包含如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent、資料庫鏡像 WMI 事件及範例指令碼來設定警示的詳細資訊。  
   
 > [!IMPORTANT]  
 >  我們強烈建議您針對所有鏡像工作階段，將資料庫設定為傳送任何狀態變更事件的警示。 除非狀態變更預期為手動組態變更的結果，否則就表示發生了可能會危害資料的事件。 若要有效保護資料，請識別並修正非預期狀態變更的原因。  

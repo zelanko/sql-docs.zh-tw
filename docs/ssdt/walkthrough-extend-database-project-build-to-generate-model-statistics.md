@@ -11,12 +11,12 @@ ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e3501dc7245d583c0fa30e6c50aabcdd9e2e5e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8fa6573f852eebe34801db57ba62cd29f9da3e5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669876"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659137"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>逐步解說：擴充資料庫專案組建，以產生模型統計資料
 您可以建立組建參與者，以便在建置資料庫時執行自訂動作。 在這個逐步解說，會建立名為 ModelStatistics 的組建參與者，以便在建置資料庫專案時從 SQL 資料庫模型輸出統計資料。 因為在建置時這個組建參與者採用參數，所以需要某些其他步驟。  
@@ -56,12 +56,12 @@ ms.locfileid: "47669876"
   
 |**類別**|**方法/屬性**|**說明**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|查詢模型以取得物件資訊，這是模型應用程式開發介面的主要進入點。 只可以查詢最上層型別，例如資料表或檢視表，資料行這類的型別只可以透過周遊模型找到。 如果未指定 ModelTypeClass 篩選，會傳回所有最上層型別。|  
-|[TSqlObject](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|尋找與目前 TSqlObject 參考之項目的關聯性。 例如，針對資料表，這會傳回例如資料表資料行的物件。 在此情況下，ModelRelationshipClass 篩選可用來指定查詢的精確關聯性 (例如使用 “Table.Columns” 篩選確保只會傳回資料行)。<br /><br />有一些類似的方法，例如 GetReferencingRelationshipInstances、GetChildren 和 GetParent。 如需詳細資訊，請參閱應用程式開發介面文件。|  
+|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|查詢模型以取得物件資訊，這是模型應用程式開發介面的主要進入點。 只可以查詢最上層型別，例如資料表或檢視表，資料行這類的型別只可以透過周遊模型找到。 如果未指定 ModelTypeClass 篩選，會傳回所有最上層型別。|  
+|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|尋找與目前 TSqlObject 參考之項目的關聯性。 例如，針對資料表，這會傳回例如資料表資料行的物件。 在此情況下，ModelRelationshipClass 篩選可用來指定查詢的精確關聯性 (例如使用 “Table.Columns” 篩選確保只會傳回資料行)。<br /><br />有一些類似的方法，例如 GetReferencingRelationshipInstances、GetChildren 和 GetParent。 如需詳細資訊，請參閱應用程式開發介面文件。|  
   
 **唯一識別您的參與者**  
   
-在建置程序期間，自訂參與者是從標準擴充目錄載入。 組建參與者是由 [ExportBuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) 屬性加以識別。 參與者需要這個屬性，才能設定為可搜尋的。 這個屬性應看起來如下：  
+在建置程序期間，自訂參與者是從標準擴充目錄載入。 組建參與者是由 [ExportBuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) 屬性加以識別。 參與者需要這個屬性，才能設定為可搜尋的。 這個屬性應看起來如下：  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -75,7 +75,7 @@ ms.locfileid: "47669876"
   
 -   建立類別庫專案並加入必要參考。  
   
--   定義繼承自 [BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) 且名稱為 ModelStatistics 的類別。  
+-   定義繼承自 [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)名稱為 ModelStatistics 的類別。  
   
 -   覆寫 OnExecute 方法。  
   
@@ -500,7 +500,7 @@ ms.locfileid: "47669876"
         ```  
         <?xml version="1.0" encoding="utf-8"?>  
   
-        <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+        <Project xmlns="https://schemas.microsoft.com/developer/msbuild/2003">  
           <PropertyGroup>  
             <BuildContributors>$(BuildContributors);ExampleContributors.ModelStatistics</BuildContributors>  
             <ContributorArguments Condition="'$(Configuration)' == 'Debug'">$(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy=name;</ContributorArguments>  

@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe36e8787e37bc82336322e67cb59b804d021baf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2589c948149b92541910b68e7da3c6cca414d2b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768896"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667178"
 ---
 # <a name="always-encrypted-cryptography"></a>永遠加密的密碼編譯
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "47768896"
 ## <a name="data-encryption-algorithm"></a>資料加密演算法  
  「永遠加密」會使用 **AEAD_AES_256_CBC_HMAC_SHA_256** 演算法來加密資料庫中的資料。  
   
- **AEAD_AES_256_CBC_HMAC_SHA_256** 衍生自 [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05) 的規格草稿。 它會使用「驗證的加密」配置搭配相關聯的資料，遵循「加密然後 MAC」方法。 那就是，第一次加密純文字，並根據產生的加密文字產生 MAC。  
+ **AEAD_AES_256_CBC_HMAC_SHA_256** 衍生自 [https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05) 的規格草稿。 它會使用「驗證的加密」配置搭配相關聯的資料，遵循「加密然後 MAC」方法。 那就是，第一次加密純文字，並根據產生的加密文字產生 MAC。  
   
- 為了隱藏模式， **AEAD_AES_256_CBC_HMAC_SHA_256** 會使用作業的加密區塊鏈結 (CBC) 模式，其中會將初始值送入名為初始化向量 (IV) 的系統中。 CBC 模式的完整描述請參閱 [http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf)。  
+ 為了隱藏模式， **AEAD_AES_256_CBC_HMAC_SHA_256** 會使用作業的加密區塊鏈結 (CBC) 模式，其中會將初始值送入名為初始化向量 (IV) 的系統中。 CBC 模式的完整描述請參閱 [https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf)。  
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** 會使用下列步驟，來計算指定純文字值的加密文字值。  
   
@@ -176,7 +176,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**xml**|N/A (不支援)|  
   
 ## <a name="net-reference"></a>.NET 參考  
- 如需本文件所討論的演算法詳細資訊，請參閱 **.NET 參考** 中的 **SqlAeadAes256CbcHmac256Algorithm.cs** 和 [SqlColumnEncryptionCertificateStoreProvider.cs](http://referencesource.microsoft.com/)檔案。  
+ 如需本文件所討論的演算法詳細資訊，請參閱 **.NET 參考** 中的 **SqlAeadAes256CbcHmac256Algorithm.cs** 和 [SqlColumnEncryptionCertificateStoreProvider.cs](https://referencesource.microsoft.com/)檔案。  
   
 ## <a name="see-also"></a>另請參閱  
  [永遠加密 &#40;Database Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   

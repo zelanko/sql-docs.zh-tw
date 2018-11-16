@@ -10,19 +10,19 @@ ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: df7e09828a172a27c7819565954be2040e1ce909
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96b60573b81625c8896fb9022a6a718770f349ed
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824166"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656135"
 ---
 # <a name="data-migration-settings-oracletosql"></a>資料移轉設定 (OracleToSQL)
   
 ## <a name="data-migration-settings"></a>資料移轉設定  
 **資料移轉設定**可讓使用者撰寫自訂查詢的資料移轉。  
   
--   此索引標籤時可以使用**擴充資料移轉選項**設為**顯示**，並隱藏時設定設為**隱藏**專案設定中。 如需有關移轉的專案設定的詳細資訊，請參閱[專案設定 （移轉）](http://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60) 。  
+-   此索引標籤時可以使用**擴充資料移轉選項**設為**顯示**，並隱藏時設定設為**隱藏**專案設定中。 如需有關移轉的專案設定的詳細資訊，請參閱[專案設定 （移轉）](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60) 。  
   
 -   剖析的自訂 SQL 陳述式將會實作**資料移轉設定**資料表節點 索引標籤。  
   

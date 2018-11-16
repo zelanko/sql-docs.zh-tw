@@ -16,12 +16,12 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7b7e61e278efe9040ad070452ce57535f33b26d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 199029eee15d44e3aba5b65c894de58b1ca2129c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847056"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639705"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>在 SQL Server 資料工具中建立封裝
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，您可以使用下列其中一個方法來建立新的封裝：  
@@ -44,9 +44,9 @@ ms.locfileid: "47847056"
   
      [ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會建立一個完整封裝來進行簡單的匯入或匯出。 此精靈會設定連接、來源和目的地，並加入所需的任何資料轉換，好讓您立即執行匯入或匯出。 您可以選擇儲存封裝以供日後再次執行，或是在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中精簡及增強封裝。 但是，如果您儲存封裝，您必須將封裝加入現有的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，然後才可以在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中變更封裝或執行封裝。  
   
- 使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 設計師在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中建立的封裝將儲存到檔案系統。 若要將封裝儲存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或封裝存放區，您必須儲存該封裝的複本。 如需詳細資訊，請參閱 [儲存封裝的複本](http://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)。  
+ 使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 設計師在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中建立的封裝將儲存到檔案系統。 若要將封裝儲存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或封裝存放區，您必須儲存該封裝的複本。 如需詳細資訊，請參閱 [儲存封裝的複本](https://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)。  
 
- 如需示範如何使用預設封裝範本建立基本封裝的影片，請參閱 [建立基本封裝 (SQL Server 影片)](http://go.microsoft.com/fwlink/?LinkId=131023)。  
+ 如需示範如何使用預設封裝範本建立基本封裝的影片，請參閱 [建立基本封裝 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=131023)。  
 
 ## <a name="get-sql-server-data-tools"></a>取得 SQL Server Data Tools
 若要安裝 SQL Server Data Tools (SSDT)，請參閱 [下載 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。

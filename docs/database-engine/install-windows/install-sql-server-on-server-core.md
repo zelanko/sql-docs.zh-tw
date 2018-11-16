@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 0e86bec4983dd1f15f4c91fe4ee7a851f8264556
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bce46bab220ddda57d18cea6588c35475becd372
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665443"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601888"
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安裝 SQL Server
 
@@ -24,7 +24,7 @@ ms.locfileid: "47665443"
 
 您可以在 Server Core 安裝上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。   
   
-Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可協助降低這些伺服器角色的維護和管理需求，以及減少其攻擊面。 如需 Server Core 的詳細資訊，請參閱[安裝 Server Core](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core)。 如需在 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 上實作之 Server Core 的詳細資訊，請參閱 [Server Core for Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx)。  
+Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可協助降低這些伺服器角色的維護和管理需求，以及減少其攻擊面。 如需 Server Core 的詳細資訊，請參閱[安裝 Server Core](https://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core)。 如需在 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 上實作之 Server Core 的詳細資訊，請參閱 [Server Core for Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx)。  
   
  如需目前支援的作業系統清單，請參閱[安裝 SQL Server 的硬體和軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。
 
@@ -59,7 +59,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
 |Distributed Replay Controller|否||  
 |Distributed Replay Client|僅限遠端|不支援在 Server Core 上安裝這些功能。 這些元件可以安裝在與 Server Core 不同的伺服器上，並連接至安裝在 Server Core 上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Services。|  
 |SQL 用戶端連接性 SDK|是||  
-|Microsoft Sync Framework|是|Microsoft Sync Framework 未包含在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝套件中。 您可以從這個 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788) 頁面下載適當的 Sync Framework 版本，並將它安裝至執行 Server Core 的電腦上。|  
+|Microsoft Sync Framework|是|Microsoft Sync Framework 未包含在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝套件中。 您可以從這個 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) 頁面下載適當的 Sync Framework 版本，並將它安裝至執行 Server Core 的電腦上。|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|否||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|否||  
   
@@ -81,7 +81,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
   
  除非軟體的使用方式受到個別的合約 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 大量授權合約或與 ISV 或 OEM 簽訂的協力廠商合約) 所管制，否則不論安裝方法為何，您都必須確認以個人身分或代表實體接受軟體授權條款。  
   
- 這些授權條款會顯示在安裝程式使用者介面中，供您檢閱和接受。 自動安裝 (使用 /Q 或 /QS 參數) 必須包括 /IACCEPTSQLSERVERLICENSETERMS 參數。 您可以另外在 [Microsoft 軟體授權合約](http://go.microsoft.com/fwlink/?LinkId=148209)檢閱授權條款。  
+ 這些授權條款會顯示在安裝程式使用者介面中，供您檢閱和接受。 自動安裝 (使用 /Q 或 /QS 參數) 必須包括 /IACCEPTSQLSERVERLICENSETERMS 參數。 您可以另外在 [Microsoft 軟體授權合約](https://go.microsoft.com/fwlink/?LinkId=148209)檢閱授權條款。  
   
 > [!NOTE]  
 >  根據您收到本軟體的方式 (例如，透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 大量授權)，軟體的使用方式可能會受到其他條款與條件的限制。  
@@ -331,9 +331,9 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  [使用組態檔安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
  [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [SQL Server 2017 的版本與支援功能](../../sql-server/editions-and-components-of-sql-server-2017.md)   
- [安裝 Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
- [以 Sconfig.cmd 設定 Windows Server 2016 的 Server Core 安裝](http://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
- [Windows PowerShell 中的容錯移轉叢集 Cmdlet](http://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   
+ [安裝 Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
+ [以 Sconfig.cmd 設定 Windows Server 2016 的 Server Core 安裝](https://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
+ [Windows PowerShell 中的容錯移轉叢集 Cmdlet](https://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   
 
   
   

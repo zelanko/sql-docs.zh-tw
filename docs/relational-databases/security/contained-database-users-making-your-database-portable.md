@@ -15,12 +15,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9422dffce3f17d66dac56436b4d81ed0cada882
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb1ba86a6f856a1ce35837c483d1148d9b935267
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764696"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670237"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>自主的資料庫使用者 - 使資料庫可攜
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,9 +55,9 @@ ms.locfileid: "47764696"
   
  如需 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 防火牆規則的詳細資訊，請參閱下列主題：  
   
--   [Azure SQL Database 防火牆](http://msdn.microsoft.com/library/azure/ee621782.aspx)  
+-   [Azure SQL Database 防火牆](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
   
--   [如何：設定防火牆設定 (Azure SQL Database)](http://msdn.microsoft.com/library/azure/jj553530.aspx)  
+-   [如何：設定防火牆設定 (Azure SQL Database)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
   
 -   [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
   

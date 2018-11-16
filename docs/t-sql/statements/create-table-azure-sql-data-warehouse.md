@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dc5e566ecbb27e88f730af0423d179b8829f51ed
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: d647102d72b9ec3dc03e0887dbc1b9abe60a3308
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120425"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703816"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -165,7 +165,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="DataTypes"></a> 資料類型
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 支援最常使用的資料類型。 下方是所支援資料類型的清單，以及它們的詳細資料和儲存體位元組。 若要進一步了解資料類型和使用方式，請參閱 [SQL 資料倉儲中的資料表資料類型](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)。
 
-如需資料類型轉換表，請參閱 [CAST 和 CONVERT (Transact-SQL)](http://msdn.microsoft.com/library/ms187928/) 的＜隱含轉換＞一節。
+如需資料類型轉換表，請參閱 [CAST 和 CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/) 的＜隱含轉換＞一節。
 
 `datetimeoffset` [ ( *n* ) ]  
  *n* 的預設值是 7。  
@@ -291,7 +291,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  
 每個散發都會包含所有資料表資料分割。 例如，如果有 60 個散發和 4 個資料表資料分割，就會有 320 個資料分割。 如果資料表是叢集資料行存放區索引，每個資料分割都會有一個資料行存放區索引，這表示您將會有 320 個資料行存放區索引。
 
-我們建議使用較少的資料表資料分割，以確保每個資料行存放區索引都有足夠的資料列，以充分利用資料行存放區索引的優點。 如需進一步指導方針，請參閱 [SQL 資料倉儲中的資料分割資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)和 [SQL 資料倉儲中的索引資料表](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-tables-index/)  
+我們建議使用較少的資料表資料分割，以確保每個資料行存放區索引都有足夠的資料列，以充分利用資料行存放區索引的優點。 如需進一步指導方針，請參閱 [SQL 資料倉儲中的資料分割資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)和 [SQL 資料倉儲中的索引資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 
   
  ### <a name="rowstore-table-heap-or-clustered-index"></a>資料列存放區資料表 (堆積或叢集索引)  
@@ -304,7 +304,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 
 如需詳細資訊，請參閱下列文章：
 - [資料行存放區索引建立版本功能摘要](https://msdn.microsoft.com/library/dn934994/)
-- [SQL 資料倉儲中的索引資料表](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-tables-index/)
+- [SQL 資料倉儲中的索引資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [資料行存放區索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md) 
  
 <a name="LimitationsRestrictions"></a>  

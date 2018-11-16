@@ -19,12 +19,12 @@ ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 74287e364736b4a1d09711b20817a9a0b0c694c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd1197eff97d7e195e66841021c915aafb820342
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839536"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698516"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ GO
 ### <a name="b-getting-the-number-of-rows-in-each-nonempty-partition-of-a-partitioned-table-or-index"></a>B. 取得在資料分割資料表或索引的每個非空白資料分割中之資料列數目  
  下列範例會傳回包含資料之 `TransactionHistory` 資料表的每個資料分割中之資料列數目。 `TransactionHistory` 資料表使用資料分割函數 `TransactionRangePF1`，它在 `TransactionDate` 資料行上進行資料分割。  
   
- 若要執行這個範例，您必須先針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫執行 PartitionAW.sql 指令碼。 如需詳細資訊，請參閱 [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015)。  
+ 若要執行這個範例，您必須先針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫執行 PartitionAW.sql 指令碼。 如需詳細資訊，請參閱 [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015)。  
   
 ```  
 USE AdventureWorks2012;  
@@ -92,7 +92,7 @@ GO
  下列範例會傳回 `5` 資料表之第 `TransactionHistory` 個資料分割的所有資料列。  
   
 > [!NOTE]  
->  若要執行這個範例，您必須先針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫執行 PartitionAW.sql 指令碼。 如需詳細資訊，請參閱 [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015)。  
+>  若要執行這個範例，您必須先針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫執行 PartitionAW.sql 指令碼。 如需詳細資訊，請參閱 [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015)。  
   
 ```  
 SELECT * FROM Production.TransactionHistory  

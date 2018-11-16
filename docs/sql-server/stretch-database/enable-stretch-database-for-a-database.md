@@ -12,12 +12,12 @@ ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eda7f99f93bf7837ec253c52588707d86bd0785c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f2d95ea5ad60dda2b9d4e902aae80b0d2c06b9e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753734"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696403"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47753734"
   
 -   檢閱 [Stretch Database 的限制](../../sql-server/stretch-database/limitations-for-stretch-database.md)。  
   
--   Stretch Database 能將資料移轉到 Azure。 因此，您必須擁有 Azure 帳戶和計費用的訂閱。 若要取得 Azure 帳戶，請 [按一下這裡](http://azure.microsoft.com/en-us/pricing/free-trial/)。  
+-   Stretch Database 能將資料移轉到 Azure。 因此，您必須擁有 Azure 帳戶和計費用的訂閱。 若要取得 Azure 帳戶，請 [按一下這裡](https://azure.microsoft.com/pricing/free-trial/)。  
   
 -   擁有建立新的 Azure 伺服器或選取現有的 Azure 伺服器所需的連線和登入資訊。  
   

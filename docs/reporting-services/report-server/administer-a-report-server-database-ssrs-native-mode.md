@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fbada45cdf1112f757113491b16aa92fa4d5f359
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c49eadcdfb290f46bd523605c789f0f298653ca6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808146"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814221"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>管理報表伺服器資料庫 (SSRS 原生模式)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署會使用兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫供內部儲存之用。 根據預設，資料庫是命名為 ReportServer 和 ReportServerTempdb。 ReportServerTempdb 是由主要報表伺服器資料庫所建立，用於儲存暫存資料、工作階段資訊和快取報表。  
@@ -74,7 +74,7 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ```  
   
 ## <a name="about-database-versions"></a>關於資料庫版本  
- 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，沒有提供有關資料庫版本的明確資訊。 不過，因為資料庫版本一律與產品版本同步，所以您可以使用產品版本資訊，得知資料庫版本變更的時間。 您可以透過記錄檔、所有 SOAP 呼叫的標頭，以及當您連線到報表伺服器 URL 時 (例如，當您將瀏覽器開啟到 `http://localhost/reportserver` 時) 出現的檔案版本資訊，取得 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的產品版本資訊。  
+ 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，沒有提供有關資料庫版本的明確資訊。 不過，因為資料庫版本一律與產品版本同步，所以您可以使用產品版本資訊，得知資料庫版本變更的時間。 您可以透過記錄檔、所有 SOAP 呼叫的標頭，以及當您連線到報表伺服器 URL 時 (例如，當您將瀏覽器開啟到 `https://localhost/reportserver` 時) 出現的檔案版本資訊，取得 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的產品版本資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

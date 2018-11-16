@@ -17,12 +17,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: bfba6fe9611a6f24e0f84b523424c3d49bdf170d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 250b61577f651ddadd7529b172f5bed04d26f896
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621796"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656149"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>使用 Azure Key Vault 進行可延伸金鑰管理 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47621796"
    
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器是作為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 與 Azure 金鑰保存庫之間的橋接器，因此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以運用 Azure 金鑰保存庫服務的延展性、高效能和高可用性。 下圖代表金鑰階層架構在具有 Azure 金鑰保存庫和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器的 EKM 提供者架構中的運作方式。  
   
-  Azure 金鑰保存庫可以與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure 虛擬機器和內部部署伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 安裝搭配使用。 金鑰保存庫服務也提供選項，以使用受到緊密控制和監視的硬體安全性模組 (HSM)，對非對稱加密金鑰提供更高等級的保護。 如需金鑰保存庫的詳細資訊，請參閱 [Azure 金鑰保存庫](http://go.microsoft.com/fwlink/?LinkId=521401)。  
+  Azure 金鑰保存庫可以與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure 虛擬機器和內部部署伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 安裝搭配使用。 金鑰保存庫服務也提供選項，以使用受到緊密控制和監視的硬體安全性模組 (HSM)，對非對稱加密金鑰提供更高等級的保護。 如需金鑰保存庫的詳細資訊，請參閱 [Azure 金鑰保存庫](https://go.microsoft.com/fwlink/?LinkId=521401)。  
   
  下列影像摘要說明使用金鑰保存庫的 EKM 處理流程。 (影像中的程序步驟數字並非用以比對遵循影像的安裝步驟數字。)  
   

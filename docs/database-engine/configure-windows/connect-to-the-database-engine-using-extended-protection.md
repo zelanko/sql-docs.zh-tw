@@ -18,19 +18,19 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 638bd8f87293a6d541cbcef7078a6724d6380d33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d03661990e6316b7faa223cac63c8c63939fb998
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700080"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606008"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用擴充保護連接至 Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 開始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就支援 [擴充保護]。 **驗證擴充保護** 是作業系統實作的網路元件功能。 Windows 7 和 Windows Server 2008 R2 上可支援 **[擴充保護]** 。 Service Pack 中內含**擴充保護** ，可供舊版 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 作業系統使用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在使用 **擴充保護**進行連接時較安全。  
   
 > [!IMPORTANT]  
->  Windows 預設不會啟用 **[擴充保護]** 。 如需有關如何在 Windows 中啟用 **[擴充保護]** 的詳細資訊，請參閱 [驗證擴充保護](http://support.microsoft.com/kb/968389)。  
+>  Windows 預設不會啟用 **[擴充保護]** 。 如需有關如何在 Windows 中啟用 **[擴充保護]** 的詳細資訊，請參閱 [驗證擴充保護](https://support.microsoft.com/kb/968389)。  
   
 ## <a name="description-of-extended-protection"></a>擴充保護的描述  
  **[擴充保護]** 會使用服務繫結與通道繫結來避免驗證轉送攻擊。 在驗證轉送攻擊中，可以執行 NTLM 驗證的用戶端 (如 Windows 檔案總管、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook、.NET SqlClient 應用程式等) 會連接到攻擊者 (如惡意 CIFS 檔案伺服器)。 攻擊者會使用用戶端的認證來偽裝成用戶端，並向服務驗證 (例如， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務的執行個體)。  
@@ -50,14 +50,14 @@ ms.locfileid: "47700080"
  通道繫結會在用戶端與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的執行個體之間建立安全通道 (Schannel)。 此服務會驗證用戶端的真實性，其方式是比較該通道特有的用戶端通道繫結 Token (CBT) 與它自己的 CBT。 通道繫結會處理引誘和詐騙這兩種攻擊。 但是，它會發生較大的執行階段成本，因為它需要所有工作階段流量的傳輸層安全性 (TLS) 加密。 用戶端應用程式使用加密連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時會發生通道繫結，與加密由用戶端還是伺服器強制無關。  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 資料提供者支援 TLS 1.0 和 SSL 3.0。 如果您以在作業系統 SChannel 層級中進行變更的方式，強制執行不同的通訊協定 (例如 TLS 1.1 或 TLS 1.2)，您與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連線可能會失敗。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料提供者支援 TLS 1.0 和 SSL 3.0。 如果您以在作業系統 SChannel 層級中進行變更的方式，強制執行不同的通訊協定 (例如 TLS 1.1 或 TLS 1.2)，您與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連線可能會失敗。  
   
 ### <a name="operating-system-support"></a>作業系統支援  
  下列連結提供有關 Windows 如何支援 **[擴充保護]** 的詳細資訊：  
   
--   [具有擴充保護的整合式 Windows 驗證](http://msdn.microsoft.com/library/dd639324.aspx)  
+-   [具有擴充保護的整合式 Windows 驗證](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [Microsoft 安全性摘要報告 (973811)，驗證擴充保護](http://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [Microsoft 安全性摘要報告 (973811)，驗證擴充保護](https://www.microsoft.com/technet/security/advisory/973811.mspx)  
   
 ## <a name="settings"></a>[設定]  
  有三個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接設定會影響服務繫結與通道繫結。 這些設定可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員或 WMI 加以設定，而且可以使用原則型式管理中的 **[伺服器通訊協定設定]** Facet 加以檢視。  
@@ -81,7 +81,7 @@ ms.locfileid: "47700080"
      當一個以上的 SPN 知道伺服器時，便需要 **[接受的 NTLM SPN]** 變數。 當用戶端嘗試使用伺服器不知道的有效 SPN 連接到伺服器時，服務繫結將會失敗。 若要避免這個問題，使用者可以使用 **[接受的 NTLM SPN]** 來指定代表伺服器的數個 SPN。 **[接受的 NTLM SPN]** 是以分號分隔的一系列 SPN。 例如，若要允許 SPN **MSSQLSvc/ HostName1.Contoso.com** 和 **MSSQLSvc/ HostName2.Contoso.com**，請在 **[接受的 NTLM SPN]** 方塊中輸入 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** 。 此變數的最大長度為 2,048 個字元。 **[接受的 NTLM SPN]** 位於 **組態管理員的** [MSSQLSERVER 的通訊協定屬性] ([進階] 索引標籤) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上。  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>啟用 Database Engine 的擴充保護  
- 若要使用 **[擴充保護]**，伺服器和用戶端都必須擁有支援 **[擴充保護]** 的作業系統，而且必須在作業系統上啟用 **[擴充保護]** 。 如需有關如何針對作業系統啟用 **[擴充保護]** 的詳細資訊，請參閱 [驗證擴充保護](http://support.microsoft.com/kb/968389)。  
+ 若要使用 **[擴充保護]**，伺服器和用戶端都必須擁有支援 **[擴充保護]** 的作業系統，而且必須在作業系統上啟用 **[擴充保護]** 。 如需有關如何針對作業系統啟用 **[擴充保護]** 的詳細資訊，請參閱 [驗證擴充保護](https://support.microsoft.com/kb/968389)。  
   
  從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 開始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就支援 [擴充保護]。 某些舊版**的未來更新中將可以使用** [擴充保護] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在伺服器電腦上啟用 **[擴充保護]** 之後，請使用下列步驟來啟用 **[擴充保護]**：  
   
@@ -100,12 +100,12 @@ ms.locfileid: "47700080"
 ## <a name="configuring-other-sql-server-components"></a>設定其他 SQL Server 元件  
  如需如何設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的詳細資訊，請參閱 [含有 Reporting Services 的驗證擴充保護](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)。  
   
- 當使用 IIS 來透過 HTTP 或 HTTPs 連接存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以充分利用 IIS 所提供的擴充保護。 如需有關如何設定 IIS 使用擴充保護的詳細資訊，請參閱 [在 IIS 7.5 中設定擴充保護](http://go.microsoft.com/fwlink/?LinkId=181105)。  
+ 當使用 IIS 來透過 HTTP 或 HTTPs 連接存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以充分利用 IIS 所提供的擴充保護。 如需有關如何設定 IIS 使用擴充保護的詳細資訊，請參閱 [在 IIS 7.5 中設定擴充保護](https://go.microsoft.com/fwlink/?LinkId=181105)。  
   
 ## <a name="see-also"></a>另請參閱  
  [伺服器網路組態](../../database-engine/configure-windows/server-network-configuration.md)   
  [用戶端網路組態](../../database-engine/configure-windows/client-network-configuration.md)   
- [驗證擴充保護概觀](http://go.microsoft.com/fwlink/?LinkID=177943)   
- [具有擴充保護的整合式 Windows 驗證](http://go.microsoft.com/fwlink/?LinkId=179922)  
+ [驗證擴充保護概觀](https://go.microsoft.com/fwlink/?LinkID=177943)   
+ [具有擴充保護的整合式 Windows 驗證](https://go.microsoft.com/fwlink/?LinkId=179922)  
   
   

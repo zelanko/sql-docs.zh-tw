@@ -13,12 +13,12 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 708ffe100c9dae44fb96134a47981b3353e2626d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85f07a1380cf59db3944ab905d6aca9156a4b94b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793016"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672037"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server 物件與版本的 DAC 支援
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,11 +117,11 @@ ms.locfileid: "47793016"
 ##  <a name="Considerations"></a> 部署動作的其他考量  
  請注意，DAC Framework 資料部署動作有下列考量：  
   
--   **擷取/匯出** - 使用 DAC Framework 從資料庫建立封裝的動作 – 例如，擷取 .dacpac 檔案、匯出 .bacpac 檔案 - 這些限制都不適用。 封裝中的資料為來源資料庫中資料的不失真表示法。 如果封裝中有上述的任一情況，則擷取/匯出記錄將會透過上述的訊息包含問題摘要。 這是為了警告使用者，他們所建立的封裝中可能會發生資料部署問題。 使用者也會在記錄中看到以下摘要訊息：**這些限制不會影響 DAC Framework 所建立之 DAC 封裝中儲存之資料類型和值的精確度，而只適用於將 DAC 封裝部署到資料庫所產生的資料類型和值。如需受影響的資料以及如何解決這個限制的詳細資訊，請參閱**[這個主題](http://go.microsoft.com/fwlink/?LinkId=267086)。  
+-   **擷取/匯出** - 使用 DAC Framework 從資料庫建立封裝的動作 – 例如，擷取 .dacpac 檔案、匯出 .bacpac 檔案 - 這些限制都不適用。 封裝中的資料為來源資料庫中資料的不失真表示法。 如果封裝中有上述的任一情況，則擷取/匯出記錄將會透過上述的訊息包含問題摘要。 這是為了警告使用者，他們所建立的封裝中可能會發生資料部署問題。 使用者也會在記錄中看到以下摘要訊息：**這些限制不會影響 DAC Framework 所建立之 DAC 封裝中儲存之資料類型和值的精確度，而只適用於將 DAC 封裝部署到資料庫所產生的資料類型和值。如需受影響的資料以及如何解決這個限制的詳細資訊，請參閱**[這個主題](https://go.microsoft.com/fwlink/?LinkId=267086)。  
   
 -   **部署/發行/匯入** - 使用 DAC Framework 將封裝部署到資料庫的動作，例如部署或發行 .dacpac 檔案以及匯入 .bacpac 檔案，這些限制都適用。 目標資料庫中產生的資料可能不包含封裝中資料的不失真表示法。 部署/匯入記錄將會在每個執行個體遇到問題時包含一則訊息 (如上所述)。 錯誤將封鎖此作業 – 請參閱上面的類別目錄 3 - 但是在其他警告的情況下將會繼續。  
   
-     如需此案例中受影響的資料以及如何解決部署/發行/匯入動作之這項限制的詳細資訊，請參閱 [這個主題](http://go.microsoft.com/fwlink/?LinkId=267087)。  
+     如需此案例中受影響的資料以及如何解決部署/發行/匯入動作之這項限制的詳細資訊，請參閱 [這個主題](https://go.microsoft.com/fwlink/?LinkId=267087)。  
   
 -   **因應措施** - 擷取和匯出作業會將不失真的 BCP 資料檔寫入 .dacpac 或 .bacpac 檔案中。 為了避免限制，請使用 SQL Server BCP.exe 命令列公用程式，將不失真的資料從 DAC 封裝部署到目標資料庫。  
   

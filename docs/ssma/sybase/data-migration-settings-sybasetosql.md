@@ -10,19 +10,19 @@ ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c32d2f1bce255f9490bdb74d8f07a9ddbe7cc161
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1191a29fa3988b85548578e8a38efc12d9fce41c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681396"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658132"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>資料移轉設定 (SybaseToSQL)
   
 ## <a name="data-migration-settings"></a>資料移轉設定  
 **資料移轉設定**可讓使用者撰寫自訂查詢的資料移轉。  
   
--   此索引標籤時可以使用**擴充資料移轉選項**設為**顯示**，並隱藏時設定設為**隱藏**專案設定中。 如需有關移轉的專案設定的詳細資訊，請參閱[專案設定 （移轉）](http://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924) 。  
+-   此索引標籤時可以使用**擴充資料移轉選項**設為**顯示**，並隱藏時設定設為**隱藏**專案設定中。 如需有關移轉的專案設定的詳細資訊，請參閱[專案設定 （移轉）](https://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924) 。  
   
 -   剖析的自訂 SQL 陳述式將會實作**資料移轉設定**資料表節點 索引標籤。  
   
@@ -53,5 +53,5 @@ ms.locfileid: "47681396"
 -   **取消：** 按一下 **取消**還原出現設定進行變更之前。  
   
 ## <a name="see-also"></a>另請參閱  
-[將 Sybase 資料移轉至 SQL Server/SQL Azure](http://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)  
+[將 Sybase 資料移轉至 SQL Server/SQL Azure](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)  
   

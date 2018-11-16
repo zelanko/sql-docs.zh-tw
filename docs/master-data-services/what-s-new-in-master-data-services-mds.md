@@ -12,12 +12,12 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 962df1579b7d18bcaaf420a3bf79cfbd29940daa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ba960c94e1620b0381796a2e26112af21a3a9a1
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855226"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696837"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 的新功能
 
@@ -33,9 +33,9 @@ ms.locfileid: "47855226"
   
  **下載**  
   
--   若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往  **[評估中心](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**。  
+-   若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**。  
   
--   有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** ，來加速已安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虛擬機器。  
+-   有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 來加速已安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虛擬機器。  
   
 ##  <a name="improved-performance"></a>改良的效能  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47855226"
   
     ```  
   
-     如需詳細資訊，請參閱 [URL 壓縮](http://www.iis.net/configreference/system.webserver/urlcompression)  
+     如需詳細資訊，請參閱 [URL 壓縮](https://www.iis.net/configreference/system.webserver/urlcompression)  
   
 -   下列新的 SQL Server Agent 工作會進行索引與記錄的維護。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47855226"
   
  分散程度超過 30% 的索引會於線上重建。 重建期間，相同資料表上的 CRUD 作業效能會受到影響。 如果在意效能降低的問題，建議您於營業時間執行預存程序。 如需索引片段的詳細資訊，請參閱＜ [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)＞。  
   
- 如需詳細資訊，請參閱 Master Data Services 部落格上的 [SQL Server 2016 效能與調整改善](http://go.microsoft.com/fwlink/p/?LinkId=615375)一文。  
+ 如需詳細資訊，請參閱 Master Data Services 部落格上的 [SQL Server 2016 效能與調整改善](https://go.microsoft.com/fwlink/p/?LinkId=615375)一文。  
   
 ##  <a name="improved-security"></a>已改善安全性  
   

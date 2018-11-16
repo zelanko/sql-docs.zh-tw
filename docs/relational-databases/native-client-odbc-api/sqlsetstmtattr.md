@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a8ef2abe539c47e3a66092d12628ee6850e7a58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbe732e9f0d22047146edc3d37a049b7300db0b7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852862"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667779"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47852862"
   
 |*ValuePtr*值|描述|  
 |----------------------|-----------------|  
-|SQL_DP_ON|預設值。 之後呼叫[SQLPrepare 函數](http://go.microsoft.com/fwlink/?LinkId=59360)，陳述式準備會延遲，直到**SQLExecute**稱為或中繼屬性作業 (**SQLDescribeCol**或**SQLDescribeParam**) 執行。|  
+|SQL_DP_ON|預設值。 之後呼叫[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)，陳述式準備會延遲，直到**SQLExecute**稱為或中繼屬性作業 (**SQLDescribeCol**或**SQLDescribeParam**) 執行。|  
 |SQL_DP_OFF|在準備陳述式立即**SQLPrepare**執行。|  
   
 ### <a name="sqlsoptssregionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -150,7 +150,7 @@ ms.locfileid: "47852862"
  如果目錄函數則 SQLTables、 SQLColumns、 或 SQLPrimaryKeys SQL_SOPT_SS_NAME_SCOPE 以外的值時呼叫會傳回 SQL_SS_NAME_SCOPE_TABLE、 SQL_ERROR。 此時會產生包含 SQLSTATE HY010 與「函數順序錯誤 (SQL_SOPT_SS_NAME_SCOPE 未設定為 SQL_SS_NAME_SCOPE_TABLE)」訊息的診斷記錄。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLGetStmtAttr 函數](http://go.microsoft.com/fwlink/?LinkId=59355)   
+ [SQLGetStmtAttr 函數](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

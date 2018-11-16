@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a8384ad803f70b6ec4bcca2bca49390f969a661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b6a2665e963f552a7d5cb726b5d7904f7a13415
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604306"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812722"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>為 Reporting Services 訂閱與傳遞疑難排解
   
@@ -67,7 +67,7 @@ ms.locfileid: "47604306"
 * 將認證設定從預存變更為整合或提示的值。  
 * 報表定義中的參數名稱或資料類型已變更，並且已經重新發行報表。 如果訂閱包括已不再有效的參數，則訂閱會變成非使用中。  
   
-如需詳細資訊，請參閱 TechNet Wiki [Troubleshoot issues and errors with Reporting Services](http://social.technet.microsoft.com/wiki/contents/articles/1633.ssrs-troubleshoot-issues-and-errors-with-reporting-services.aspx)(針對 Reporting Services 的問題和錯誤進行疑難排解)。  
+如需詳細資訊，請參閱 TechNet Wiki [Troubleshoot issues and errors with Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.ssrs-troubleshoot-issues-and-errors-with-reporting-services.aspx)(針對 Reporting Services 的問題和錯誤進行疑難排解)。  
   
   
     

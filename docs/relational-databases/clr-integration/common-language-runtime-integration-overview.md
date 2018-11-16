@@ -18,12 +18,12 @@ ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 85f3bc694fa1636316eb19de49ad5ad9defa5eaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b72ce858925c0df0c4faba7f90b0dcc606d52ed8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718376"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665022"
 ---
 # <a name="common-language-runtime-integration-overview"></a>Common Language Runtime 整合概觀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "47718376"
   
 -   **可增進的安全和安全性。** Managed 程式碼會在 Database Engine 主控的 Common Language Run-time 環境下執行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會運用此環境提供更安全的替代方式給舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所提供的擴充預存程序。  
   
--   **定義資料類型和彙總函式的能力。** 使用者定義型別和使用者定義彙總是兩個新的 Managed 資料庫物件，它們可以擴充 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的儲存和查詢功能。  
+-   **定義資料類型和彙總函式的能力。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者定義型別和使用者定義彙總是兩個新的 Managed 資料庫物件，它們可以擴充  的儲存和查詢功能。  
   
--   **透過標準化環境簡化的開發。** 資料庫開發會整合到後續版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .NET 開發環境中。 開發人員用來開發與偵錯資料庫物件和指令碼的工具，與他們用來撰寫中介層或用戶層的 .NET Framework 元件和服務的工具是一樣的。  
+-   **透過標準化環境簡化的開發。** [!INCLUDE[msCoName](../../includes/msconame-md.md)]資料庫開發會整合到後續版本的  Visual Studio .NET 開發環境中。 開發人員用來開發與偵錯資料庫物件和指令碼的工具，與他們用來撰寫中介層或用戶層的 .NET Framework 元件和服務的工具是一樣的。  
   
 -   **更佳的效能和延展性的可能性。** 在許多情況下，.NET Framework 語言編譯和執行模型會透過 Transact-SQL 提供改善的效能。  
   
@@ -53,14 +53,14 @@ ms.locfileid: "47718376"
  [CLR 整合的新功能](../../relational-databases/clr-integration/clr-integration-what-s-new.md)  
  描述這個版本的新功能。  
   
- [CLR 整合的架構](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  
+ [CLR 整合的架構](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  
  描述 CLR 整合的設計目標。  
   
  [啟用 CLR 整合](../../relational-databases/clr-integration/clr-integration-enabling.md)  
  說明如何啟用 CLR 整合。  
   
 ## <a name="see-also"></a>另請參閱  
- [安裝.NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [安裝.NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [CLR 整合的效能](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   
   

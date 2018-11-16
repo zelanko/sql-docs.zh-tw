@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fb335a8be8f5006421c98ac98ac6974a1603f640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa3decb1f8abd44dc9e35f75de63ebae24a885e9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608840"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704016"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -144,7 +144,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ```  
   
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. 使用 SAS 權杖建立認證  
- **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [目前的版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [目前的版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
   
  下列範例會使用 SAS 權杖來建立共用存取簽章憑證。  如需在 Azure 容器上建立預存存取原則和共用存取簽章，再使用共用存取簽章來建立認證的教學課程，請參閱[教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016 資料庫](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
@@ -168,6 +168,6 @@ GO
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [第 2 課︰使用共用存取簽章建立 SQL Server 認證](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
- [共用存取簽章](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+ [共用存取簽章](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
   
   

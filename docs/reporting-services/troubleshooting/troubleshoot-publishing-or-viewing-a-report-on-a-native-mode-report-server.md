@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d89b4156225de984854076f8218c29f033e4a0d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff2caeab1399ac45523b8b0adae753225271840e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653036"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811771"
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>在原生模式報表伺服器上疑難排解發行或檢視報表
   
@@ -29,7 +29,7 @@ ms.locfileid: "47653036"
   
 當您部署報表至原生模式的報表伺服器時，常見的錯誤是指定報表資料夾的名稱，而非報表伺服器的名稱。   
   
-確認報表伺服器 URL 是報表伺服器的位址 (例如 `http://localhost/reportserver`)，而非報表管理員虛擬目錄的位址 (例如 `http://localhost/reports`)。 如果您已經為報表伺服器指定了與預設通訊埠編號 80 不同的通訊埠編號，您必須在報表伺服器位址中指定它 (例如 `http://localhost:81/reportserver`)。   
+確認報表伺服器 URL 是報表伺服器的位址 (例如 `https://localhost/reportserver`)，而非報表管理員虛擬目錄的位址 (例如 `https://localhost/reports`)。 如果您已經為報表伺服器指定了與預設通訊埠編號 80 不同的通訊埠編號，您必須在報表伺服器位址中指定它 (例如 `https://localhost:81/reportserver`)。   
   
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>當我在已發行的報表中切換項目時，沒有反應。  
   在本機預覽中檢視報表時，您可以切換報表中的項目，並加以顯示或隱藏。 當報表發行至報表伺服器後，重新檢視報表時，切換項目會失去作用。   

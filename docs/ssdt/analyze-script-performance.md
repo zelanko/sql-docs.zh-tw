@@ -13,12 +13,12 @@ ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e88dbe70181dfa4000858a48ce4ebe6250a65d52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7386a1bceed8ed79dddf2636ae152d79c460a5ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836206"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675048"
 ---
 # <a name="analyze-script-performance"></a>分析指令碼效能
 您可以使用 SQL Server Data Tools 提供的工具，判斷是否能提升查詢、預存程序或指令碼的效能。 例如，監視用戶端統計資料 (例如常用查詢的回應時間)，您可以判斷是否需要變更資料表的查詢或索引。 這類統計資料可以包含用戶端執行時間、查詢設定檔、以及傳送和接收的封包/位元組。  
@@ -32,7 +32,7 @@ ms.locfileid: "47836206"
   
 如果開啟用戶端統計資料，查詢執行時 [統計資料] 索引標籤會出現在 [訊息] 索引標籤旁邊。 如果關閉用戶端統計資料，[統計資料] 索引標籤就不會出現。 來自後續查詢執行的統計資料會與平均值一起列出。  
   
-如需有關收集的統計資料的詳細資訊，請參閱[查詢視窗統計資料窗格](http://msdn.microsoft.com/library/aa216969(SQL.80).aspx) \(英文\) 和[本主題的＜用戶端統計資料索引標籤＞](http://msdn.microsoft.com/library/aa833205.aspx)一節。  
+如需有關收集的統計資料的詳細資訊，請參閱[查詢視窗統計資料窗格](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) \(英文\) 和[本主題的＜用戶端統計資料索引標籤＞](https://msdn.microsoft.com/library/aa833205.aspx)一節。  
   
 ## <a name="using-execution-plans"></a>使用執行計畫  
 執行計畫會顯示資料庫引擎如何巡覽資料表，以及如何使用索引為查詢或其他 DML 陳述式 (如更新) 存取或處理資料。 這種圖形式的方法，對於了解查詢的效能特性非常有幫助。  
@@ -41,7 +41,7 @@ ms.locfileid: "47836206"
   
 在剖析或執行指令碼之後，按一下 [執行計畫] 索引標籤，以查看執行計畫輸出的圖形表示。  
   
-圖形執行計畫輸出是從右向左讀，從上向下讀。 在被分析的批次中的每個查詢都會顯示出來，包括每個查詢佔批次處理總成本的百分比在內。 若要檢視其他資訊 (例如每個步驟的成本與操作)，請將滑鼠停留在圖形計畫中的[邏輯與實體運算子圖示](http://msdn.microsoft.com/library/ms175913.aspx)上。  
+圖形執行計畫輸出是從右向左讀，從上向下讀。 在被分析的批次中的每個查詢都會顯示出來，包括每個查詢佔批次處理總成本的百分比在內。 若要檢視其他資訊 (例如每個步驟的成本與操作)，請將滑鼠停留在圖形計畫中的[邏輯與實體運算子圖示](https://msdn.microsoft.com/library/ms175913.aspx)上。  
   
 若要改變執行計劃的顯示，請以滑鼠右鍵按一下 [執行計畫]，然後選取 [放大]、[縮小]、[自訂顯示比例] 或 [縮放至適當比例]。 [放大] 與 [縮小] 可讓您以固定量放大或縮小執行計畫。 [自訂顯示比例] 可讓您定義自己的顯示倍率，例如縮放至百分之 80。  [縮放至適當比例] 可調整執行計畫以符合結果窗格。  
   
@@ -52,5 +52,5 @@ ms.locfileid: "47836206"
   
 若要手動使用程式碼分析，請以滑鼠右鍵按一下 [方案總管] 中的專案，再選取 [執行程式碼分析]。 程式碼分析警告列在 **[錯誤清單]** 視窗中。 按兩下警告即可巡覽至有問題的原始程式碼，而且使用 [顯示錯誤說明] 快顯功能表也可以檢視警告的其他資訊與可能的修正方法。  
   
-如需程式碼分析的詳細資訊，請參閱[分析資料庫程式碼以改善程式碼品質](http://msdn.microsoft.com/library/dd172133.aspx)。  
+如需程式碼分析的詳細資訊，請參閱[分析資料庫程式碼以改善程式碼品質](https://msdn.microsoft.com/library/dd172133.aspx)。  
   

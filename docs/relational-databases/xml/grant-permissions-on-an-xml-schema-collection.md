@@ -14,12 +14,12 @@ ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5754466b8647a6d1107b3f565d525b6e3e15933f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5bd71aa5fe43b953fc887e9cede1bab221bcc26c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614466"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658277"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>授與 XML 結構描述集合的權限
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,15 +95,15 @@ GO
 SETUSER 'TestLogin1'  
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
+            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="AdditionalContactInfo" >  
   <xsd:complexType mixed="true" >  
     <xsd:sequence>  
       <xsd:any processContents="strict"    
-               namespace="http://schemas.adventure-works.com/Contact/Record   
-                          http://schemas.adventure-works.com/AdditionalContactTypes"  
+               namespace="https://schemas.adventure-works.com/Contact/Record   
+                          https://schemas.adventure-works.com/AdditionalContactTypes"  
                minOccurs="0" maxOccurs="unbounded" />  
     </xsd:sequence>  
   </xsd:complexType>  
@@ -154,16 +154,16 @@ GO
 SETUSER 'TestLogin1'  
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
+            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
   
 <xsd:element name="AdditionalContactInfo" >  
   <xsd:complexType mixed="true" >  
     <xsd:sequence>  
       <xsd:any processContents="strict"    
-               namespace="http://schemas.adventure-works.com/Contact/Record   
-                          http://schemas.adventure-works.com/AdditionalContactTypes"  
+               namespace="https://schemas.adventure-works.com/Contact/Record   
+                          https://schemas.adventure-works.com/AdditionalContactTypes"  
                minOccurs="0" maxOccurs="unbounded" />  
     </xsd:sequence>  
   </xsd:complexType>  
@@ -204,7 +204,7 @@ GO
 SETUSER 'TestLogin1'  
 GO  
 INSERT INTO MyTestTable VALUES('  
-<telephone xmlns="http://schemas.adventure-works.com/Additional/ContactInfo">111-1111</telephone>  
+<telephone xmlns="https://schemas.adventure-works.com/Additional/ContactInfo">111-1111</telephone>  
 ')  
 GO  
 -- To query the table, TestLogin1 must have permissions: SELECT on the table and EXECUTE on the XML schema collection.  
@@ -213,7 +213,7 @@ GO
 GRANT SELECT TO TestLogin1  
 GO  
 -- TestLogin1 already has EXECUTE permission on the schema (granted before inserting a record in the table).  
-SELECT xmlCol.query('declare default element namespace "http://schemas.adventure-works.com/Additional/ContactInfo" /telephone[1]')  
+SELECT xmlCol.query('declare default element namespace "https://schemas.adventure-works.com/Additional/ContactInfo" /telephone[1]')  
 FROM MyTestTable  
 GO  
 -- To show that the user must have EXECUTE permission to query, revoke the  
@@ -225,7 +225,7 @@ Go
 -- Now TestLogin1 cannot execute the query.  
 SETUSER 'TestLogin1'  
 GO  
-SELECT xmlCol.query('declare default element namespace "http://schemas.adventure-works.com/Additional/ContactInfo" /telephone[1]')  
+SELECT xmlCol.query('declare default element namespace "https://schemas.adventure-works.com/Additional/ContactInfo" /telephone[1]')  
 FROM MyTestTable  
 GO  
 -- Final cleanup   
@@ -269,16 +269,16 @@ GO
 SETUSER 'TestLogin1'  
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
+            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
   
 <xsd:element name="AdditionalContactInfo" >  
   <xsd:complexType mixed="true" >  
     <xsd:sequence>  
       <xsd:any processContents="strict"    
-               namespace="http://schemas.adventure-works.com/Contact/Record   
-                          http://schemas.adventure-works.com/AdditionalContactTypes"  
+               namespace="https://schemas.adventure-works.com/Contact/Record   
+                          https://schemas.adventure-works.com/AdditionalContactTypes"  
                minOccurs="0" maxOccurs="unbounded" />  
     </xsd:sequence>  
   </xsd:complexType>  
@@ -295,9 +295,9 @@ GO
 SETUSER 'TestLogin1'  
 GO  
 ALTER XML SCHEMA COLLECTION myTestSchemaCollection ADD '  
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
-            xmlns="http://schemas.adventure-works.com/Additional/ContactInfo"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
+            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns="https://schemas.adventure-works.com/Additional/ContactInfo"   
 elementFormDefault="qualified">  
  <xsd:element name="pager" type="xsd:string"/>  
 </xsd:schema>  
@@ -362,16 +362,16 @@ GO
 setuser 'TestLogin1'  
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
+            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
   
 <xsd:element name="AdditionalContactInfo" >  
  <xsd:complexType mixed="true" >  
     <xsd:sequence>  
       <xsd:any processContents="strict"   
-               namespace="http://schemas.adventure-works.com/Contact/Record   
-                          http://schemas.adventure-works.com/AdditionalContactTypes"  
+               namespace="https://schemas.adventure-works.com/Contact/Record   
+                          https://schemas.adventure-works.com/AdditionalContactTypes"  
                minOccurs="0" maxOccurs="unbounded" />  
     </xsd:sequence>  
  </xsd:complexType>  
@@ -457,8 +457,8 @@ GO
 CREATE USER schemaUser WITH DEFAULT_SCHEMA=dbo  
 GO  
 CREATE XML SCHEMA COLLECTION MySC AS '  
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns"  
-xmlns:ns="http://ns">  
+<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="https://ns"  
+xmlns:ns="https://ns">  
   
    <simpleType name="ListOfIntegers">  
       <list itemType="integer"/>  

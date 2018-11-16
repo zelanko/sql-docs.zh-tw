@@ -18,12 +18,12 @@ ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7abe69490b3531e2be44300edf9c5047f0aacb94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4b7193e2b113cdbac330215abc3915c01f1385c
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613081"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699956"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -384,7 +384,7 @@ FROM T;
 -- expression 2 in the insert() must be singleton.      
 UPDATE T   
 set Instructions.modify('   
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
 insert <MI:Location LocationID="1000" >   
            <MI:step>New instructions go here</MI:step>   
          </MI:Location>   
@@ -397,7 +397,7 @@ FROM T ;
 -- 2) insert attributes in the new <Location>             
 UPDATE T             
 SET Instructions.modify('             
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";             
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";             
 insert attribute LaborHours { "1000" }             
 into (/MI:root/MI:Location[@LocationID=1000])[1] ');   
 GO             

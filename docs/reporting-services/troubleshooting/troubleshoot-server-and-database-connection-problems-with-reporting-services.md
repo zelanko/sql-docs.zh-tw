@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d566f66531785b8ac4ccee5b60e26caf2c83848
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6e44af551221792f288cb23ef616f68b0c7965d6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028837"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814311"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>針對 Reporting Services 的伺服器與資料庫連線問題進行疑難排解
 使用此主題，即可對在連接到報表伺服器時遇到的問題進行疑難排解。 此主題也提供有關「意外的錯誤」訊息的資訊。 如需資料來源組態和設定報表伺服器連接的詳細資訊，請參閱 [指定報表資料來源的認證和連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 和 [設定報表伺服器資料庫連接 (SSRS 組態管理員)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
@@ -34,7 +34,7 @@ ms.locfileid: "50028837"
 * 確認報表伺服器 URL 和報表伺服器資料庫的連接字串正確無誤。 若 Reporting Services 或 Database Engine 已安裝成具名執行個體，在安裝期間建立的預設連接字串將會包含執行個體名稱。 例如，若您在名為 DEVSRV01 的伺服器上安裝了 SQL Server Express with Advanced Services 的預設執行個體，報表管理員 URL 就是 DEVSRV01\Reports$SQLEXPRESS。 此外，連接字串中的資料庫伺服器名稱將類似於 DEVSRV01\SQLEXPRESS。 如需 SQL Server Express 的 URL 和資料來源連接字串的相關資訊，請參閱 [SQL Server Express with Advanced Services 中的 Reporting Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx)。 若要驗證報表伺服器資料庫的連接字串，請啟動 Reporting Services 組態工具，然後檢視 [資料庫安裝] 頁面。  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>無法建立連接。 請確定該伺服器正在執行。  
-這是 ADOMD.NET 提供者傳回的錯誤。 發生這個錯誤的可能原因有幾個。 如果您已將伺服器指定為 "localhost"，請試著指定伺服器名稱來取代。 如果無法將記憶體配置給新連接，也會發生此錯誤。 如需詳細資訊，請參閱 [Knowledge Base Article 912017 - Error message when you connect to an instance of SQL Server 2005 Analysis Services:](http://support.microsoft.com/kb/912017)(知識庫文章 912017 - 當您連接到 SQL Server 2005 Analysis Services 的執行個體時的錯誤訊息︰)。  
+這是 ADOMD.NET 提供者傳回的錯誤。 發生這個錯誤的可能原因有幾個。 如果您已將伺服器指定為 "localhost"，請試著指定伺服器名稱來取代。 如果無法將記憶體配置給新連接，也會發生此錯誤。 如需詳細資訊，請參閱 [Knowledge Base Article 912017 - Error message when you connect to an instance of SQL Server 2005 Analysis Services:](https://support.microsoft.com/kb/912017)(知識庫文章 912017 - 當您連接到 SQL Server 2005 Analysis Services 的執行個體時的錯誤訊息︰)。  
   
 若錯誤訊息也包含「無法識別這部主機」，則表示 Analysis Services 伺服器無法使用或拒絕連接。 若您將 Analysis Services 伺服器安裝成遠端電腦上的具名執行個體，您可能必須執行 SQL Server Browser 服務，以便取得該執行個體所使用的連接埠號碼。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "50028837"
   
 若要解決這個錯誤，您應該重新安裝此軟體。 除此之外，您可以透過 SOAP 端點連接至報表伺服器，當做暫時的解決方法：  
   
-* 在 Management Studio 的 [連接到伺服器]  對話方塊中，於 [伺服器名稱] 內輸入報表伺服器 URL。 依預設，此為 `http://<your server name>/reportserver`。 或者若您正在使用 SQL Server 2008 Express with Advanced Services，則為 `http://<your server name>/reportserver$sqlexpress`。  
+* 在 Management Studio 的 [連接到伺服器]  對話方塊中，於 [伺服器名稱] 內輸入報表伺服器 URL。 依預設，此為 `https://<your server name>/reportserver`。 或者若您正在使用 SQL Server 2008 Express with Advanced Services，則為 `https://<your server name>/reportserver$sqlexpress`。  
   
 若要解決此錯誤，以便使用 WMI 提供者進行連接，您應該執行安裝程式來修復 Reporting Services 或加以重新安裝。  
   

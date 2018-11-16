@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 766ae518aad577c4f8a700dbbdd433e1794e9c75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05901af8c6f11379b186495d1ae744c5f7598d91
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842246"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814271"
 ---
 # <a name="creating-the-web-service-proxy"></a>建立 Web 服務 Proxy
   用戶端與 Web 服務可以使用 SOAP 訊息來進行通訊，這會以 XML 來封裝輸入與輸出參數。 Proxy 類別會將參數對應至 XML 元素，然後透過網路傳送 SOAP 訊息。 以此方式，Proxy 類別可讓您免於在 SOAP 層級與 Web 服務通訊，並可讓您在任何支援 SOAP 與 Web 服務 Proxy 的開發環境中，叫用 Web 服務方法。  
@@ -36,7 +36,7 @@ ms.locfileid: "47842246"
      例如，下列命令提示陳述式會為報表伺服器 Web 服務的管理端點指定 URL：  
   
     ```  
-    wsdl /language:CS /n:"Microsoft.SqlServer.ReportingServices2010" http://<Server Name>/reportserver/reportservice2010.asmx?wsdl  
+    wsdl /language:CS /n:"Microsoft.SqlServer.ReportingServices2010" https://<Server Name>/reportserver/reportservice2010.asmx?wsdl  
     ```  
   
      WSDL 工具會接受一些命令提示引數以產生 Proxy。 上述範例會指定 C# 語言，這是要在 Proxy 中使用的建議命名空間 (如果使用一個以上的 Web 服務端點，便可防止名稱衝突)，並產生稱為 ReportingService2010.cs 的 C# 檔案。 如果範例已指定 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]，則此範例將會產生名為 ReportingService2010.vb 的 Proxy 檔案。 這個檔案是在您執行命令的目錄中建立。  
@@ -79,7 +79,7 @@ ReportingService2010 service = new ReportingService2010();
      報表伺服器 Web 服務的報表執行端點之簡化的 URL，可能如下所示：  
   
     ```  
-    http://<Server Name>/reportserver/reportexecution2005.asmx  
+    https://<Server Name>/reportserver/reportexecution2005.asmx  
     ```  
   
      這個 URL 包含部署報表伺服器 Web 服務的網域、包含服務的資料夾名稱，以及服務的探索檔名稱。 如需不同 URL 項目的完整描述，請參閱[存取 SOAP API](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)。  
@@ -105,13 +105,13 @@ ReportingService2010 service = new ReportingService2010();
   
 ```vb  
 Dim rs As New myNamespace.myReferenceName.ReportExecutionService()  
-rs.Url = "http://<Server Name>/reportserver/reportexecution2005.asmx?wsdl"  
+rs.Url = "https://<Server Name>/reportserver/reportexecution2005.asmx?wsdl"  
 rs.Credentials = System.Net.CredentialCache.DefaultCredentials  
 ```  
   
 ```csharp  
 myNamespace.myReferenceName.ReportExecutionService rs = new myNamespace.myReferenceName.ReportExecutionService();  
-rs.Url = "http://<Server Name>/reportserver/reportexecution2005.asmx?wsdl";  
+rs.Url = "https://<Server Name>/reportserver/reportexecution2005.asmx?wsdl";  
 rs.Credentials = System.Net.CredentialCache.DefaultCredentials;  
   
 ```  

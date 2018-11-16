@@ -21,12 +21,12 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7b05729795395111a1ab887c9da992f1c460536
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 285141958996c85de736020c33bee0afabb9b5b9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651576"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638785"
 ---
 # <a name="identifiers-ssis"></a>識別碼 (SSIS)
   在運算式中，識別碼是可供運算的資料行和變數。 運算式可使用一般和限定識別碼。  
@@ -102,7 +102,7 @@ ms.locfileid: "47651576"
 ## <a name="unique-variable-names"></a>唯一變數名稱  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援自訂變數並提供一組系統變數。 自訂變數預設屬於 **使用者** 命名空間，而系統變數則屬於 **系統** 命名空間。 您可以為自訂變數建立額外的命名空間，並更新命名空間的名稱，以符合應用程式的需要。 運算式產生器會列出所有命名空間中適用的變數。  
   
- 所有變數都有範圍且屬於命名空間。 變數擁有封裝範圍，或封裝中容器或工作的範圍。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的運算式產生器只會列出範圍內的變數。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 所有變數都有範圍且屬於命名空間。 變數擁有封裝範圍，或封裝中容器或工作的範圍。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的運算式產生器只會列出範圍內的變數。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
  運算式中使用的變數必須有唯一名稱，運算式評估工具才能正確評估運算式。 如果封裝使用多個同名的變數，則其命名空間必須有所區別。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供由兩個冒號 (::) 組成的命名空間解析運算子，可用於指出變數所屬的命名空間。 例如，下列運算式使用兩個名稱為 **Count**的變數；其中一個屬於 **使用者** 命名空間，另一個屬於 **MyNamespace** 命名空間。  
   
@@ -122,6 +122,6 @@ ms.locfileid: "47651576"
 ```  
   
 ## <a name="related-content"></a>相關內容  
- pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](http://go.microsoft.com/fwlink/?LinkId=746575)  
+ pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](https://go.microsoft.com/fwlink/?LinkId=746575)  
   
   

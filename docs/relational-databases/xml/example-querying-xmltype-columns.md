@@ -13,12 +13,12 @@ ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 365956e659cf0114fded70b1a8215fcaa2e6b0f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3db0636b5bbc8dddde432d73a62b2e38d6e5427b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660296"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666027"
 ---
 # <a name="example-querying-xmltype-columns"></a>範例：查詢 XMLType 資料行
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ USE AdventureWorks2012;
 GO  
 SELECT ProductModelID, Name,  
    Instructions.query('  
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
    /MI:root/MI:Location[1]/MI:step  
 ')   
 FROM Production.ProductModel  
@@ -57,7 +57,7 @@ USE AdventureWorks2012;
 GO  
 SELECT ProductModelID, Name,  
    Instructions.query('  
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
    /MI:root/MI:Location[1]/MI:step  
 ') as ManuSteps  
 FROM Production.ProductModel  
@@ -85,7 +85,7 @@ USE AdventureWorks2012;
 GO  
 SELECT ProductModelID, Name,  
    Instructions.query('  
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
    /MI:root/MI:Location[1]/MI:step  
 ') as ManuSteps  
 FROM Production.ProductModel  
@@ -96,7 +96,7 @@ go
  以下是結果：  
   
 ```  
-<MyRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<MyRoot xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
    ...  
   <ProductModelData>  
     <ProductModelID>6</ProductModelID>  

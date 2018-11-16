@@ -13,12 +13,12 @@ ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb974864c6a4bc2a90308873a02a305e6d69acd2
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 876e6cc23bd5b4063c977de44af05c2e43ee002d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811984"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672837"
 ---
 # <a name="monitor-data-tier-applications"></a>監視資料層應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "43811984"
  SSMS 的 **[物件總管]** 會顯示部署至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體之每個 DAC 的基本組態資訊，而不論是否在 SQL Server 公用程式中管理執行個體。 而且，可以使用監視任何資料庫的相同程序，來監視與部署 DAC 相關聯的資料庫。  
   
 ## <a name="using-the-sql-server-utility"></a>使用 SQL Server 公用程式  
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 公用程式總管中的 [部署的資料層應用程式] 詳細資料頁面會顯示一個儀表板，這個儀表板會報告已部署至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之受管理執行個體的所有 DAC 資源使用情況。 詳細資料頁面的上方窗格會列出每個已部署的 DAC 以及視覺指標，顯示其 CPU 的使用量與檔案資源是否超出針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式所定義的原則之外。 如果您選取清單檢視中的任何 DAC，在頁面下方窗格的索引標籤中會顯示其他詳細資料。 如需詳細資料頁面上所呈現之資訊的詳細資訊，請參閱[部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](http://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 公用程式總管中的 [部署的資料層應用程式] 詳細資料頁面會顯示一個儀表板，這個儀表板會報告已部署至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之受管理執行個體的所有 DAC 資源使用情況。 詳細資料頁面的上方窗格會列出每個已部署的 DAC 以及視覺指標，顯示其 CPU 的使用量與檔案資源是否超出針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式所定義的原則之外。 如果您選取清單檢視中的任何 DAC，在頁面下方窗格的索引標籤中會顯示其他詳細資料。 如需詳細資料頁面上所呈現之資訊的詳細資訊，請參閱[部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
   
  使用 [部署的資料層應用程式] 詳細資料頁面快速識別使用不足或其硬體資源負荷過重的 DAC 之後，您可以做出處理所有問題的計畫。 未充分使用其目前硬體資源的多個 DAC 可以合併到單一伺服器，釋出部分伺服器做為其他用途使用。 如果 DAC 在目前伺服器上的資源負荷過重，可以將 DAC 移到更大的伺服器，或者將額外的資源加入至目前的伺服器。  
   
- 資源使用量的上下限是由 **[公用程式管理]** 詳細資料頁面中所定義的應用程式監視原則定義的。 資料庫管理員可以量身訂作這些原則，以符合其組織所設立的限制。 例如，某家公司可能會設定 75% 做為 DAC 的 CPU 使用量上限，而另一家公司則可能將上限設定為 80%。 如需有關設定應用程式監視原則的詳細資訊，請參閱[公用程式管理 &#40;SQL Server 公用程式&#41;](http://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)。  
+ 資源使用量的上下限是由 **[公用程式管理]** 詳細資料頁面中所定義的應用程式監視原則定義的。 資料庫管理員可以量身訂作這些原則，以符合其組織所設立的限制。 例如，某家公司可能會設定 75% 做為 DAC 的 CPU 使用量上限，而另一家公司則可能將上限設定為 80%。 如需有關設定應用程式監視原則的詳細資訊，請參閱[公用程式管理 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)。  
   
  若要檢視 [部署的資料層應用程式] 詳細資料頁面：  
   
@@ -68,7 +68,7 @@ ms.locfileid: "43811984"
 ## <a name="using-the-dac-system-views-and-tables"></a>使用 DAC 系統檢視表與資料表  
  msdb.dbo.sysdac_history_internal 系統資料表會記錄針對 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體執行的所有 DAC 管理動作成功或失敗。 資料表會記錄每個動作發生的時間，以及起始動作的登入。 如需詳細資訊，請參閱 [sysdac_history_internal &#40;Transact-SQL&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-history-internal.md)。  
   
- DAC 系統檢視表會報告基本目錄資訊。 如需詳細資訊，請參閱[資料層應用程式檢視表 &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)。  
+ DAC 系統檢視表會報告基本目錄資訊。 如需詳細資訊，請參閱[資料層應用程式檢視表 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)。  
   
 ## <a name="monitoring-dac-databases"></a>監視 DAC 資料庫  
  成功部署 DAC 之後，包含在 DAC 中的資料庫會與其他任何資料庫的運作方式相同。 使用標準 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 技術與工具來監視資料庫的效能、記錄、事件與資源使用情況。  

@@ -14,12 +14,12 @@ ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7b48b8ba8d561bfaa1ae11897ab47dfd198e5a4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dec114e42921c7d7619ad3da6252d54e534826a9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752866"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601598"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>可用性群組尚未就緒，無法自動容錯
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47752866"
  至少一個次要複本已做好自動容錯移轉的準備時，原則為狀況良好。  
   
 > [!NOTE]  
->  在此 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]版本中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [Availability group is not ready for automatic failover](http://go.microsoft.com/fwlink/p/?LinkId=220851) (可用性群組尚未準備進行自動容錯移轉)。  
+>  在此 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]版本中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [Availability group is not ready for automatic failover](https://go.microsoft.com/fwlink/p/?LinkId=220851) (可用性群組尚未準備進行自動容錯移轉)。  
   
 ## <a name="possible-causes"></a>可能的原因  
  可用性群組尚未準備進行自動容錯移轉。 主要複本已設定為自動容錯移轉，不過次要複本尚未準備進行自動容錯移轉。 設定為自動容錯移轉的次要複本可能無法使用，或者其資料同步處理狀態目前不是 SYNCHRONIZED。  

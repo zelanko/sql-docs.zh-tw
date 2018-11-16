@@ -15,22 +15,22 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 707ab28617129f16bd3e3bbf142349dcba6ff49b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684876"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665737"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>針對 Web 同步處理設定 IIS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主題中的程序，會構成設定合併式複寫之 Web 同步處理時所採取的第二個步驟。 請在啟用 Web 同步處理的發行集之後執行這個步驟。 如需組態處理序的概觀，請參閱＜ [[設定 Web 同步處理]](../../relational-databases/replication/configure-web-synchronization.md)＞。 完成本主題中的程序之後，請繼續執行第三個步驟，即設定訂閱來使用 Web 同步處理。 第三個步驟在下列主題中描述：  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[如何：設定訂閱來使用 Web 同步處理\(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[如何：設定訂閱來使用 Web 同步處理\(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   複寫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式設計： [如何：將訂閱設定為使用 Web 同步處理 (複寫 Transact-SQL 程式設計)](http://msdn.microsoft.com/library/ms345206.aspx)  
+-   複寫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式設計： [如何：將訂閱設定為使用 Web 同步處理 (複寫 Transact-SQL 程式設計)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO： [如何：設定訂閱使用 Web 同步處理 (RMO 程式設計)](http://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO： [如何：設定訂閱使用 Web 同步處理 (RMO 程式設計)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  Web 同步處理利用執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 的電腦，來同步處理合併式發行集的提取訂閱。 支援 IIS 5.0 版、IIS 6.0 版和 IIS 7.0 版。 但是，IIS 7.0 版不支援「設定 Web 同步處理精靈」。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47684876"
   
 4.  按一下 [確定] 。  
   
- 如果您無法從 CA 取得伺服器憑證，您可以指定憑證來進行測試。 若要設定 IIS 6.0 來進行測試，請利用 SelfSSL 公用程式來安裝憑證。 IIS 6.0 資源套件中有提供此公用程式。 您可以從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkId=30958)下載這些工具。 如需 IIS 5.0，請移至 [Microsoft 說明及支援](http://go.microsoft.com/fwlink/?LinkId=46229)。  
+ 如果您無法從 CA 取得伺服器憑證，您可以指定憑證來進行測試。 若要設定 IIS 6.0 來進行測試，請利用 SelfSSL 公用程式來安裝憑證。 IIS 6.0 資源套件中有提供此公用程式。 您可以從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=30958)下載這些工具。 如需 IIS 5.0，請移至 [Microsoft 說明及支援](https://go.microsoft.com/fwlink/?LinkId=46229)。  
   
 > [!NOTE]  
 >  憑證必須先與網站相關聯，該網站才能夠使用 SSL。 SelfSSL 會自動將憑證與預設網站相關聯。 如果您已擁有憑證或稍後從 CA 安裝憑證，則必須明確地將憑證與 Web 同步處理所使用的網站相關聯。 請確定只有一個與用於同步處理訂閱之網站相關聯的憑證。 如果有多個憑證，訂閱者將使用第一個可用的網站。  

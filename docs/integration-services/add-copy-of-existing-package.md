@@ -15,12 +15,12 @@ ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61befd223253a57223235c57646a496c230a7806
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e44ac5f9f5c1eee8af10dd48fa8577b3056cd70
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648286"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641135"
 ---
 # <a name="add-copy-of-existing-package"></a>加入現有封裝的副本
   使用 **[加入現有封裝的副本]** 對話方塊，即可將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、檔案系統，或 SSIS 封裝存放區中所儲存之封裝的副本，加入至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
@@ -45,7 +45,7 @@ ms.locfileid: "47648286"
  輸入封裝路徑，或是按一下瀏覽按鈕 [(...)]，並找出要複製的封裝。  
   
 ## <a name="see-also"></a>另請參閱  
- [儲存封裝的副本](http://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
+ [儲存封裝的副本](https://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
  [儲存套件](../integration-services/save-packages.md)   
  [Integration Services 服務 &#40;SSIS 服務&#41;](../integration-services/service/integration-services-service-ssis-service.md)
   

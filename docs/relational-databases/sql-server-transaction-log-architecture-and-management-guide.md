@@ -5,8 +5,7 @@ ms.date: 01/05/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction log architecture guide
@@ -23,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 738de181911733a5edd7f973a5c43e2503f63a2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 262e55ab61f3e4ee68e905ea264ae15f450b58ed
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631866"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658068"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 交易記錄架構與管理指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,7 +90,7 @@ ms.locfileid: "47631866"
 如需 `ALTER DATABASE` 的 `FILEGROWTH` 和 `SIZE` 引數的詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41; 檔案及檔案群組選項](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
 
 > [!TIP]
-> 若要判斷指定執行個體中所有資料庫的目前交易記錄大小的最佳 VLF 分佈，以及達到所需大小的必要成長增量，請參閱此[指令碼](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。
+> 若要判斷指定執行個體中所有資料庫的目前交易記錄大小的最佳 VLF 分佈，以及達到所需大小的必要成長增量，請參閱此[指令碼](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。
   
  交易記錄是循環使用的檔案。 例如，假設資料庫的一個實體記錄檔分成四個 VLF。 資料庫建立時，邏輯記錄檔從實體記錄檔的最前面開始。 新的記錄會加在邏輯記錄檔的最後，並朝向實體記錄檔的結尾處擴充。 記錄截斷會釋出記錄出現在最小復原記錄序號 (MinLSN) 前面的所有虛擬記錄。 *MinLSN* 是成功回復全資料庫所需之最舊記錄檔記錄的記錄序號。 範例資料庫中的交易記錄看起來如下圖所示。  
   
@@ -143,12 +142,12 @@ ms.locfileid: "47631866"
  在建立第一個記錄備份之前，您必須建立完整備份，例如資料庫備份或檔案備份組中的第一個備份。 僅使用檔案備份來還原資料庫，可能會讓情況變得很複雜。 因此，我們建議您盡可能先從完整資料庫備份開始。 之後，則需要定期備份交易記錄。 這不僅是要降低工作損失的風險，也是為了在必要時可以截斷交易記錄。 交易記錄通常在每個傳統記錄備份之後截斷。  
   
 > [!IMPORTANT]
-> 我們建議您經常進行充分的記錄備份以支援商務需求，特別是您對工作損失 (例如可能因損壞的記錄儲存體而引起) 的耐受性。 進行記錄備份的頻率如何才適當，視您在工作損失風險的耐受性，與儲存、管理及可能還原記錄備份的容量之間所做的取捨而定。 實作復原策略，以及特別是記錄備份頻率時，考慮使用必要的 [RTO](http://wikipedia.org/wiki/Recovery_time_objective) 和 [RPO](http://wikipedia.org/wiki/Recovery_point_objective)。
+> 我們建議您經常進行充分的記錄備份以支援商務需求，特別是您對工作損失 (例如可能因損壞的記錄儲存體而引起) 的耐受性。 進行記錄備份的頻率如何才適當，視您在工作損失風險的耐受性，與儲存、管理及可能還原記錄備份的容量之間所做的取捨而定。 實作復原策略，以及特別是記錄備份頻率時，考慮使用必要的 [RTO](https://wikipedia.org/wiki/Recovery_time_objective) 和 [RPO](https://wikipedia.org/wiki/Recovery_point_objective)。
 > 每 15 到 30 分鐘進行一次記錄備份可能就足夠了。 如果您的業務需要將工作損失風險減至最低，請考慮更頻繁地進行記錄備份。 較頻繁的記錄備份還會帶來另一優點，就是增加記錄截斷的頻率，從而產生較小的記錄檔。  
   
 > [!IMPORTANT]
 > 若要限制您需要還原的記錄備份數目，定期備份資料是基本作業。 例如，您可能會排程每週的完整資料庫備份和每日的差異資料庫備份。  
-> 同樣地，實作復原策略，以及特別是完整和差異資料庫備份頻率時，考慮使用必要的 [RTO](http://wikipedia.org/wiki/Recovery_time_objective) 和 [RPO](http://wikipedia.org/wiki/Recovery_point_objective)。
+> 同樣地，實作復原策略，以及特別是完整和差異資料庫備份頻率時，考慮使用必要的 [RTO](https://wikipedia.org/wiki/Recovery_time_objective) 和 [RPO](https://wikipedia.org/wiki/Recovery_point_objective)。
 
 如需交易記錄備份的詳細資訊，請參閱[交易記錄備份 &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。
   
@@ -253,7 +252,7 @@ LSN 148 是交易記錄中最後一個記錄。 當記錄於 LSN 147 的檢查�
 [設定 recovery interval 伺服器設定選項](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-[了解 SQL Server 中的記錄與復原，作者 Paul Randal](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
-[《SQL Server Transaction Log Management》，作者 Tony Davis 和 Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
+[了解 SQL Server 中的記錄與復原，作者 Paul Randal](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    
+[《SQL Server Transaction Log Management》，作者 Tony Davis 和 Gail Shaw](https://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   

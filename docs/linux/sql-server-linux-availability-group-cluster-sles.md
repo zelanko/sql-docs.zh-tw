@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 3fb1b2646e399e5fe96dcc66f60aa92b4f009116
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 3db679a5df861cbdbf08443b5fdd85e99b01d3b3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383733"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670617"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 SLES 叢集
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本指南提供指示來建立適用於 SQL Server 在 SUSE Linux Enterprise Server (SLES) 12 SP2 的三個節點叢集。 如需高可用性，Linux 上的可用性群組需要三個節點-請參閱[可用性群組組態的高可用性和資料保護](sql-server-linux-availability-group-ha.md)。 叢集層根據 SUSE[高可用性延伸模組 (HAE)](https://www.suse.com/products/highavailability)之上建置[Pacemaker](http://clusterlabs.org/)。 
+本指南提供指示來建立適用於 SQL Server 在 SUSE Linux Enterprise Server (SLES) 12 SP2 的三個節點叢集。 如需高可用性，Linux 上的可用性群組需要三個節點-請參閱[可用性群組組態的高可用性和資料保護](sql-server-linux-availability-group-ha.md)。 叢集層根據 SUSE[高可用性延伸模組 (HAE)](https://www.suse.com/products/highavailability)之上建置[Pacemaker](https://clusterlabs.org/)。 
 
 如需有關叢集設定、 資源代理程式選項、 管理、 最佳做法和建議的詳細資訊，請參閱 < [SUSE Linux Enterprise 高可用性延伸模組 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
 
@@ -79,7 +79,7 @@ ms.locfileid: "49383733"
    sudo crm_report -X "-p 3479" [...]
    ```
 
-   如需詳細資訊，請參閱 < [SLES 系統管理指南-其他區段](http://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc)。
+   如需詳細資訊，請參閱 < [SLES 系統管理指南-其他區段](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc)。
 
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>為 Pacemaker 建立 SQL Server 登入
@@ -104,7 +104,7 @@ ms.locfileid: "49383733"
 
 ## <a name="set-up-the-first-node"></a>設定第一個節點
 
-   請參閱[SLES 安裝指示](http://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
+   請參閱[SLES 安裝指示](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
 
 1. 身分登入`root`在實體或虛擬機器，您想要為叢集節點。
 2. 藉由執行啟動啟動程序的指令碼：
@@ -220,7 +220,7 @@ Pacemaker 叢集廠商需要啟用 STONITH 和隔離裝置設定為支援的叢�
 
 節點層級隔離可確保節點不會執行任何資源。 這是藉由重設節點和它的 Pacemaker 實作稱為 STONITH （這代表 「 限定標頭中的另一個節點 」）。 Pacemaker 支援很棒的各種不同的隔離裝置，例如伺服器不斷電供應器或管理的介面卡。
 
-如需詳細資訊，請參閱 < [Pacemaker 叢集從頭](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)，[隔離和 Stonith](http://clusterlabs.org/doc/crm_fencing.html)並[SUSE HA 文件： 隔離和 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)。
+如需詳細資訊，請參閱 < [Pacemaker 叢集從頭](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)，[隔離和 Stonith](https://clusterlabs.org/doc/crm_fencing.html)並[SUSE HA 文件： 隔離和 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)。
 
 在叢集的初始設定時，如果偵測不到任何設定時，會停用 STONITH。 它可稍後再執行下列命令：
 

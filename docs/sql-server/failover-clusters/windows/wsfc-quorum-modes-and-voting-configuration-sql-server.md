@@ -14,12 +14,12 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb85a4e0f209fd5589c55e0392393c61a57e6fe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 134831664f7b13177dac016bb9b92906a2974eb5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835920"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703586"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 仲裁模式和投票組態 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "47835920"
 > [!IMPORTANT]  
 >  為了能夠使用 NodeWeight 設定，必須將以下 Hotfix 套用至 WSFC 叢集中的所有伺服器：  
 >   
->  [KB2494036](http://support.microsoft.com/kb/2494036)：提供 Hotfix 讓您設定叢集節點，該節點在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036)：提供 Hotfix 讓您設定叢集節點，該節點在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> 建議的仲裁投票調整  
  在啟用或停用給定 WSFC 節點的投票時，請遵循下列方針：  
@@ -110,7 +110,7 @@ ms.locfileid: "47835920"
 >   
 >  -   裝載主要複本的叢集節點沒有投票權。  
 > -   次要複本有設定自動容錯移轉，而且它的叢集節點沒有投票權。  
-> -   [KB2494036](http://support.microsoft.com/kb/2494036) 不會安裝在裝載可用性複本的所有叢集節點上。 針對多網站部署中的叢集節點加入或移除投票需要這個修補程式。 不過，單一網站部署中通常不需要，而且您可以安心地忽略警告。  
+> -   [KB2494036](https://support.microsoft.com/kb/2494036) 不會安裝在裝載可用性複本的所有叢集節點上。 針對多網站部署中的叢集節點加入或移除投票需要這個修補程式。 不過，單一網站部署中通常不需要，而且您可以安心地忽略警告。  
   
 > [!TIP]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 公開數個系統動態管理檢視 (DMV)，有助於您管理設定相關的 WSFC 叢集組態和節點仲裁投票。  
@@ -125,13 +125,13 @@ ms.locfileid: "47835920"
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Microsoft SQL Server AlwaysOn 高可用性和災害復原解決方案指南)](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Microsoft SQL Server AlwaysOn 高可用性和災害復原解決方案指南)](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [AlwaysOn 可用性群組精靈中的仲裁投票組態檢查](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
--   [Windows Server 技術：容錯移轉叢集](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Windows Server 技術：容錯移轉叢集](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [容錯移轉叢集逐步指南：在容錯移轉叢集中設定仲裁](http://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [容錯移轉叢集逐步指南：在容錯移轉叢集中設定仲裁](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [透過強制仲裁執行 WSFC 災害復原 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

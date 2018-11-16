@@ -19,12 +19,12 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6cc9fbc190645b2f517758b129e92f458dcef316
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cbdfeec8b603c4ca474088e0134f9fb2c319c08
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846596"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661124"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>啟動及使用 Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -223,7 +223,7 @@ ms.locfileid: "47846596"
 >  不支援暫停 Database Engine Tuning Advisor。 若在按下 [停止分析] 或 [停止分析 (附帶建議)] 工具列按鈕之後按下 [開始分析] 工具列按鈕，Database Engine Tuning Advisor 會啟動新的微調工作階段。  
   
 ###  <a name="dta"></a> 使用 dta 公用程式  
- [dta 公用程式](../../tools/dta/dta-utility.md) 提供一個命令提示字元可執行檔，您可用來微調資料庫。 這個公用程式可讓您在批次檔和指令碼中使用 Database Engine Tuning Advisor 的功能。 您的 **dta** 公用程式會將計畫快取項目、追蹤檔案、追蹤資料表和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼視為工作負載； 它也會使用符合 Database Engine Tuning Advisor XML 結構描述的 XML 輸入，此結構描述可從此 [Microsoft 網站](http://go.microsoft.com/fwlink/?linkid=43100)取得。  
+ [dta 公用程式](../../tools/dta/dta-utility.md) 提供一個命令提示字元可執行檔，您可用來微調資料庫。 這個公用程式可讓您在批次檔和指令碼中使用 Database Engine Tuning Advisor 的功能。 您的 **dta** 公用程式會將計畫快取項目、追蹤檔案、追蹤資料表和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼視為工作負載； 它也會使用符合 Database Engine Tuning Advisor XML 結構描述的 XML 輸入，此結構描述可從此 [Microsoft 網站](https://go.microsoft.com/fwlink/?linkid=43100)取得。  
   
  開始使用 **dta** 公用程式微調工作負載之前，請先考慮下列事項：  
   
@@ -313,7 +313,7 @@ ms.locfileid: "47846596"
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
- 您也可以從這個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Microsoft 網站 [，線上取得](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)Tuning Advisor XML 結構描述。  
+ 您也可以從這個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Microsoft 網站 [，線上取得](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)Tuning Advisor XML 結構描述。  
   
  此 URL 可將您帶往具有許多 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 結構描述的網頁。 將網頁向下捲動，直到您找到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 的資料列。  
   

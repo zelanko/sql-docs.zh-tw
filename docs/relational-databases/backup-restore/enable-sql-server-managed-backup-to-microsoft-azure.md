@@ -11,18 +11,18 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 753c323030f5d854bba3e0cd7bd985f8fdc90d24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fedebfb082639114ec068f80db436af7b8a035b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649696"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672797"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>啟用 SQL Server Managed Backup to Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主題說明如何使用資料庫和執行個體層級的預設設定來啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。 它也會說明啟用電子郵件通知以及監視備份活動的方式。  
   
- 本教學課程使用 Azure PowerShell。 開始本教學課程之前，請 [下載並安裝 Azure PowerShell](http://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
+ 本教學課程使用 Azure PowerShell。 開始本教學課程之前，請 [下載並安裝 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
   
 > [!IMPORTANT]  
 >  如果您也想要啟用進階選項或使用自訂排程，則在啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]之前，需先進行這些設定。 如需詳細資訊，請參閱 [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)。  
@@ -31,7 +31,7 @@ ms.locfileid: "47649696"
   
 #### <a name="create-the-azure-blob-container"></a>建立 Azure Blob 容器  
   
-1.  **註冊 Azure：** 如果您已經有 Azure 訂用帳戶，請移至下一個步驟。 否則，您可以開始使用 [免費試用版](http://azure.microsoft.com/pricing/free-trial/) 或瀏覽 [購買選項](http://azure.microsoft.com/pricing/purchase-options/)。  
+1.  **註冊 Azure：** 如果您已經有 Azure 訂用帳戶，請移至下一個步驟。 否則，您可以開始使用 [免費試用版](https://azure.microsoft.com/pricing/free-trial/) 或瀏覽 [購買選項](https://azure.microsoft.com/pricing/purchase-options/)。  
   
 2.  **建立 Azure 儲存體帳戶︰** 如果您已經有儲存體帳戶，請移至下一個步驟。 否則，您可以使用 [Azure 管理入口網站](https://manage.windowsazure.com/) 或 Azure PowerShell 來建立儲存體帳戶。 下列 `New-AzureStorageAccount` 命令會在美東地區建立名為 `managedbackupstorage` 的儲存體帳戶。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "47649696"
     New-AzureStorageAccount -StorageAccountName "managedbackupstorage" -Location "EAST US"  
     ```  
   
-     如需儲存體帳戶的詳細資訊，請參閱 [關於 Azure 儲存體帳戶](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。  
+     如需儲存體帳戶的詳細資訊，請參閱 [關於 Azure 儲存體帳戶](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。  
   
 3.  **建立適用於備份檔案的 Blob 容器︰** 您可以在 Azure 管理入口網站或 Azure PowerShell 中建立 Blob 容器。 下列 `New-AzureStorageContainer` 命令會在 `backupcontainer` 儲存體帳戶中建立名為 `managedbackupstorage` 的 Blob 容器。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "47649696"
     |**容器 URL：**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
     |**SAS 權杖︰**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
   
-     記下容器 URL 和 SAS，以便在建立 SQL 認證時使用。 如需 SAS 的詳細資訊，請參閱 [共用存取簽章，第 1 部分：了解 SAS 模型](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。  
+     記下容器 URL 和 SAS，以便在建立 SQL 認證時使用。 如需 SAS 的詳細資訊，請參閱 [共用存取簽章，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。  
   
 #### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   

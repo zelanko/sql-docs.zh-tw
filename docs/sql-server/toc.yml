@@ -75,7 +75,7 @@ items:
   items:
   - name: 部落格
     items:
-    - name: SQL Server
+    - name: '[SQL Server]'
       href: https://blogs.technet.microsoft.com/dataplatforminsider/
     - name: SQL Server Database Engine
       href: https://blogs.msdn.microsoft.com/sqlserverstorageengine/
@@ -87,7 +87,7 @@ items:
     items:
     - name: Microsoft Virtual Academy
       href: https://mva.microsoft.com/product-training/sql-server#!lang=1033
-    - name: Channel 9 上的 SQL
+    - name: SQL 在 Channel 9
       href: https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year
   - name: 意見反應及說明
     href: sql-server-get-help.md
@@ -99,7 +99,7 @@ items:
     - name: DBA Stack Exchange
       href: https://dba.stackexchange.com/questions/tagged/sql-server
     - name: Stack Overflow
-      href: http://stackoverflow.com/questions/tagged/sql-server
+      href: https://stackoverflow.com/questions/tagged/sql-server
     - name: MSDN 論壇
       href: https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver
     - name: Reddit
@@ -116,9 +116,9 @@ items:
       href: partner-dev-sql-server.md
   - name: 使用 Help Viewer 的本機內容
     href: sql-server-help-installation.md
-ms.openlocfilehash: e462a3e3c62f4a04a2104a7402886d62776a3cb9
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.openlocfilehash: 4ba749e86c1ab87aab0d55324a4ad39c83be65e7
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272566"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702460"

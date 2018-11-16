@@ -18,12 +18,12 @@ ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 47a917fc622bd8be46dd798b9adc787ad6a51e34
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 60099ea8f029f8e1b6687a1d69e12cb76f520c61
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030965"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656558"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 公用程式的功能與工作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "51030965"
 |描述如何在 SQL Server 受管理的執行個體上變更公用程式資料收集器的 Proxy 帳戶。|[變更 SQL Server 受管理的執行個體上之公用程式收集組的 Proxy 帳戶 &#40;SQL Server 公用程式&#41;](../../relational-databases/manage/change-proxy-account-for-utility-collection-on-managed-sql-server.md)|  
 |描述如何將 UCP 從某個 SQL Server 執行個體移至另一個 SQL Server 執行個體。|[將 UCP 從一個 SQL Server 執行個體移到另一個 &#40;SQL Server 公用程式&#41;](../../relational-databases/manage/move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md)|  
 |描述如何移除 UCP。|[移除公用程式控制點 &#40;SQL Server 公用程式&#41;](../../relational-databases/manage/remove-a-utility-control-point-sql-server-utility.md)|  
-|描述如何疑難排解 SQL Server 公用程式。|[疑難排解 SQL Server 公用程式](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)|  
+|描述如何疑難排解 SQL Server 公用程式。|[疑難排解 SQL Server 公用程式](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)|  
 |描述如何疑難排解 SQL Server 資源健全狀況。|[疑難排解 SQL Server 資源健全情況 &#40;SQL Server 公用程式&#41;](../../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)|  
 |UtilityExplorer F1 說明主題的連結。|[公用程式總管 F1 說明](../../relational-databases/manage/utility-explorer-f1-help.md)|  
   

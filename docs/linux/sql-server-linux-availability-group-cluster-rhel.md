@@ -10,23 +10,23 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: c828c2345bf87461ba924cbdd23eb262336d1dcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec5ed0ce61c1b1f48ecc148326b9a1906ff95122
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715456"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670817"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 RHEL 叢集
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文件說明如何建立 Red Hat Enterprise Linux 上的 SQL Server 的三個節點的可用性群組叢集。 如需高可用性，Linux 上的可用性群組需要三個節點-請參閱[可用性群組組態的高可用性和資料保護](sql-server-linux-availability-group-ha.md)。 叢集層以在 Red Hat Enterprise Linux (RHEL) 為基礎[HA 附加元件](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)之上建置[Pacemaker](http://clusterlabs.org/)。 
+本文件說明如何建立 Red Hat Enterprise Linux 上的 SQL Server 的三個節點的可用性群組叢集。 如需高可用性，Linux 上的可用性群組需要三個節點-請參閱[可用性群組組態的高可用性和資料保護](sql-server-linux-availability-group-ha.md)。 叢集層以在 Red Hat Enterprise Linux (RHEL) 為基礎[HA 附加元件](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)之上建置[Pacemaker](https://clusterlabs.org/)。 
 
 > [!NOTE] 
 > Red Hat 的完整文件的存取需要有效的訂用帳戶。 
 
-如需有關叢集設定、 資源代理程式選項，以及管理的詳細資訊，請瀏覽[RHEL 參考文件](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
+如需有關叢集設定、 資源代理程式選項，以及管理的詳細資訊，請瀏覽[RHEL 參考文件](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
 
 > [!NOTE] 
 > SQL Server 並未緊密整合到 Linux 上的 Pacemaker，與 Windows Server 容錯移轉叢集。 無法感知叢集的 SQL Server 執行個體。 Pacemaker 會提供叢集資源的協調流程。 此外，虛擬網路名稱是 Windows Server 容錯移轉叢集的特定-Pacemaker 中沒有任何對等項目。 可用性群組動態管理檢視 (Dmv) 查詢叢集資訊會傳回空的資料列，Pacemaker 叢集上。 若要建立透明容錯移轉之後的重新連線的接聽程式，以用來建立虛擬 IP 資源的 IP 的 DNS 中手動註冊接聽程式名稱。 
@@ -58,7 +58,7 @@ ms.locfileid: "47715456"
 
 ### <a name="enable-the-high-availability-subscription-for-rhel"></a>啟用適用於 RHEL 的高可用性訂用帳戶
 
-叢集中的每個節點必須有適用於 RHEL 和高可用性新增適當的訂用帳戶。 檢閱的需求[如何在 Red Hat Enterprise Linux 中安裝高可用性叢集封裝](http://access.redhat.com/solutions/45930)。 請遵循下列步驟來設定訂用帳戶和儲存機制：
+叢集中的每個節點必須有適用於 RHEL 和高可用性新增適當的訂用帳戶。 檢閱的需求[如何在 Red Hat Enterprise Linux 中安裝高可用性叢集封裝](https://access.redhat.com/solutions/45930)。 請遵循下列步驟來設定訂用帳戶和儲存機制：
 
 1. 註冊系統。
 
@@ -88,7 +88,7 @@ ms.locfileid: "47715456"
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-如需詳細資訊，請參閱 < [Pacemaker – 的開放原始碼、 高可用性叢集](http://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/)。 
+如需詳細資訊，請參閱 < [Pacemaker – 的開放原始碼、 高可用性叢集](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/)。 
 
 設定訂用帳戶之後，請完成下列步驟來設定 Pacemaker:
 
@@ -110,9 +110,9 @@ Pacemaker 叢集廠商需要啟用 STONITH 和隔離裝置設定為支援的叢�
 
 STONITH 和隔離的相關資訊，請參閱下列文章：
 
-* [從零開始的 pacemaker 叢集](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
-* [隔離和 STONITH](http://clusterlabs.org/doc/crm_fencing.html)
-* [Red Hat pacemaker 的高可用性附加元件： 隔離](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
+* [從零開始的 pacemaker 叢集](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+* [隔離和 STONITH](https://clusterlabs.org/doc/crm_fencing.html)
+* [Red Hat pacemaker 的高可用性附加元件： 隔離](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
 因為節點層級的隔離設定大量取決於您的環境，請將它停用此教學課程中 （它可以設定更新版本）。 下列指令碼會停用節點層級隔離：
 
@@ -149,7 +149,7 @@ pcs resource update ag1 meta failure-timeout=60s
 ```
 
 
-如需 Pacemaker 叢集內容資訊，請參閱[Pacemaker 叢集屬性](http://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html)。
+如需 Pacemaker 叢集內容資訊，請參閱[Pacemaker 叢集屬性](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html)。
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>為 Pacemaker 建立 SQL Server 登入
 

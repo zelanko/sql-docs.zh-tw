@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67eab65f8ead5fe1cc4934671f8d11be2944044a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30514478f54d71d88245ace385600cb2931101eb
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737736"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814141"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>將超連結加入到 URL (報表產生器及 SSRS)
 了解如何將文字方塊、影像、圖表和量測計的超連結動作加入 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  分頁報表。 這些連結可以移至其他報表、移至報表中的書籤，或是移至靜態或動態 URL。 
@@ -73,9 +73,9 @@ ms.locfileid: "47737736"
   
 4.  在 **[選取 URL]** 中，輸入或選取 URL 或是評估為 URL 的運算式，或者按下拉式箭號，再按一下含有 URL 之欄位的名稱。 
 
-    對於發行到設定為原生模式之報表伺服器的項目，請使用完整或相對路徑， 例如， `http://<servername>/images/image1.jpg`。 
+    對於發行到設定為原生模式之報表伺服器的項目，請使用完整或相對路徑， 例如， `https://<servername>/images/image1.jpg`。 
     
-    對於發行到設定為 SharePoint 整合模式之報表伺服器的項目，請使用完整 URL， 例如， `http://<SharePointservername>/<site>/Documents/images/image1.jpg`。
+    對於發行到設定為 SharePoint 整合模式之報表伺服器的項目，請使用完整 URL， 例如， `https://<SharePointservername>/<site>/Documents/images/image1.jpg`。
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

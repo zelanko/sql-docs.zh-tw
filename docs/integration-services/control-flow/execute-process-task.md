@@ -17,12 +17,12 @@ ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa43a9bac948f5d03d21689b4272f2c93317792b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0451f0bdb394d66fa8477c43aee801bd25ead1db
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654876"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638755"
 ---
 # <a name="execute-process-task"></a>執行處理工作
   「執行處理」工作會隨 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝工作流程執行應用程式或批次檔。 雖然可以使用「執行處理」工作來開啟任何標準應用程式，例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 或 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]，但通常您會使用它來執行處理資料來源的商業應用程式或批次檔。 例如，您可以使用「執行處理」工作展開壓縮的文字檔。 然後封裝就可以使用文字檔做為封裝中資料流程的資料來源。 另一項範例為：您可以使用「執行處理」工作來執行產生每日銷售報表的自訂 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 應用程式。 接著，您就可將報告附加至「傳送郵件」工作，並將報告轉寄到通訊群組清單。  
@@ -42,12 +42,12 @@ ms.locfileid: "47654876"
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ### <a name="property-settings"></a>屬性設定  
  當「執行處理」工作執行自訂應用程式時，此工作會透過下列一個或兩個方法提供輸入給應用程式：  
   
--   您在 [StandardInputVariable] 屬性設定中指定的變數。 如需變數的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+-   您在 [StandardInputVariable] 屬性設定中指定的變數。 如需變數的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
 -   您在 **Arguments** 屬性設定中指定的引數。 (例如，如果工作使用 Word 開啟文件，則引數可能命名為 .doc 檔)。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47654876"
   
  您可以使用運算式來設定各種「執行處理」工作屬性。  
   
- 當您使用 **StandardInputVariable** 屬性設定「執行處理」工作來提供輸入時，請從應用程式呼叫 **Console.ReadLine** 方法來讀取輸入。 如需詳細資訊，請參閱 [Console.ReadLine 方法](http://go.microsoft.com/fwlink/?LinkId=129201)類別庫中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
+ 當您使用 **StandardInputVariable** 屬性設定「執行處理」工作來提供輸入時，請從應用程式呼叫 **Console.ReadLine** 方法來讀取輸入。 如需詳細資訊，請參閱 [Console.ReadLine 方法](https://go.microsoft.com/fwlink/?LinkId=129201)類別庫中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
   
  當您使用 **Arguments** 屬性設定「執行處理」工作來提供輸入時，請執行下列其中一個步驟來取得引數：  
   
@@ -68,11 +68,11 @@ ms.locfileid: "47654876"
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  
   
-     如需詳細資訊，請參閱 [參考中的](http://go.microsoft.com/fwlink/?LinkId=129200)My.Application.CommandLineArgs 屬性 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 主題。  
+     如需詳細資訊，請參閱 [參考中的](https://go.microsoft.com/fwlink/?LinkId=129200)My.Application.CommandLineArgs 屬性 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 主題。  
   
 -   如果您使用 Microsoft Visual C# 撰寫應用程式，請使用 **Main** 方法。  
   
-     如需詳細資訊，請參閱《C# 程式設計手冊》中的 [命令列引數 (C# 程式設計手冊)](http://go.microsoft.com/fwlink/?LinkId=129406)主題。  
+     如需詳細資訊，請參閱《C# 程式設計手冊》中的 [命令列引數 (C# 程式設計手冊)](https://go.microsoft.com/fwlink/?LinkId=129406)主題。  
   
  「執行處理」工作也包含 **StandardOutputVariable** 和 **StandardErrorVariable** 屬性，分別用來指定使用應用程式的標準輸出和錯誤輸出。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "47654876"
  **StandardInputVariable**  
  選取變數來提供處理序的輸入，或按一下 [\<新增變數...>] 建立新的變數：  
   
- **相關主題：**[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：**[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
  選取變數來擷取處理序的輸出，或按一下 [\<新增變數...>] 建立新的變數。  

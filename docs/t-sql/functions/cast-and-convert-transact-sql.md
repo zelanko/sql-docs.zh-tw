@@ -36,12 +36,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 269c024484a16dab24fc1a0ed66a2b13c64595a2
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 81a94dcde2f149ef16b5e1f42428bac706bbfaf5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971089"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697456"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -194,7 +194,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 隱含轉換不需要指定 CAST 函式或 CONVERT 函式。 明確轉換需要指定 CAST 函式或 CONVERT 函式。 下圖顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統提供之資料類型所能使用的所有明確和隱含資料類型轉換。 這些包含 **bigint**、**sql_variant** 和 **xml**。 從 **sql_variant** 資料類型進行指派時，不可使用隱含轉換，但可以隱含轉換成 **sql_variant**。
   
 > [!TIP]  
->  [Microsoft 下載中心](http://www.microsoft.com/download/details.aspx?id=35834)可將此圖表當成 PDF 檔案下載。  
+>  [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=35834)可將此圖表當成 PDF 檔案下載。  
   
 ![資料類型轉換表](../../t-sql/data-types/media/lrdatahd.png "資料類型轉換表")
   

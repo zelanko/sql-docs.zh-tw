@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b9adedc8637acf84feccd5b24fa540892399ebc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c9e8950edd84f57e4e751533799faba451234ca0
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030417"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813021"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>將 SQL Server Reporting Services 報表檢視器網頁組件新增至 SharePoint 頁面
 
@@ -46,7 +46,7 @@ ms.locfileid: "50030417"
 
     ![新增報表檢視器網頁組件。](media/sharepoint-report-viewer-web-part.png)
 
-    一開始可能會出現錯誤。 之所以會出現錯誤，是因為預設報表伺服器的 URL 設定為 *http://localhost*，而該位置可能無法取得報表伺服器。
+    一開始可能會出現錯誤。 之所以會出現錯誤，是因為預設報表伺服器的 URL 設定為 *https://localhost*，而該位置可能無法取得報表伺服器。
 
 ## <a name="configure-the-report-viewer-web-part"></a>設定報表檢視器網頁組件
 
@@ -56,7 +56,7 @@ ms.locfileid: "50030417"
 
     ![從 [網頁組件] 下拉式清單編輯網頁。](media/sharepoint-edit-web-part.png)
 
-2. 請輸入裝載報表之報表伺服器的**報表伺服器 URL**。 看起來應該類似於 *http://myrsserver/reportserver*。
+2. 請輸入裝載報表之報表伺服器的**報表伺服器 URL**。 看起來應該類似於 *https://myrsserver/reportserver*。
 
 3. 輸入您想要在網頁組件內顯示的報表名稱與路徑。 它看起來會類似 */AdventureWorks Sample Reports/Company Sales*。 在此範例中，報表 *Company Sales* 位在 *AdventureWorks 範例報表*資料夾中。
 

@@ -12,12 +12,12 @@ ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e69c48d9f5c026f6c71b80a4a9a67ed83c989c25
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 2da773ee52b036854b5b908615ebadafb0de591d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099619"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665488"
 ---
 # <a name="generating-reports-mysqltosql"></a>產生報表 (MySQLToSQL)
 使用命令來執行某些活動的報表會產生物件樹狀結構層級的 SSMA 主控台中。  
@@ -144,5 +144,5 @@ ms.locfileid: "50099619"
 -   失敗指令碼  
   
 ## <a name="see-also"></a>另請參閱  
-[執行 SSMA 主控台 (MySQL)](http://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+[執行 SSMA 主控台 (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

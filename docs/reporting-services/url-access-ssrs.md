@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e1fc511cdfd383979ba3bcecd782ed4b481d6260
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83ec1aecfa57651ce206881fb66f3cae6a226603
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817406"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813811"
 ---
 # <a name="url-access-ssrs"></a>URL 存取 (SSRS)
   在 SQL Server Reporting Services (SSRS) 中，報表伺服器的 URL 存取權可讓您透過 URL 要求，傳送命令至報表伺服器。 例如，您可在原生模式報表伺服器或 SharePoint 文件庫中自訂報表的轉譯。 您可能已使用特定一組報表參數值來檢視過報表，或報表中您感興趣的特定頁面。 您可以使用預先定義的 URL 存取參數，封裝 URL 中的資訊。 您還可以內嵌轉譯格式或調整報表檢視器外觀的參數，以進一步自訂報表伺服器處理報表的方式。 然後，您可以直接將此 URL 貼入電子郵件或網頁，讓其他人在瀏覽器中用相同方式存取您的報表。  
@@ -59,14 +59,14 @@ reportpath
  報表伺服器 Web 服務 URL。 針對原生模式，其為 Reporting Services 設定管理員中設定之報表伺服器執行個體的 Web 服務 URL (請參閱[設定報表伺服器 URL &#40;SSRS 設定管理員&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md))。 例如：  
   
 ```  
-http://myrshost/reportserver  
+https://myrshost/reportserver  
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
  針對 SharePoint 整合模式，其為整合 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 之 SharePoint 網站的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Proxy URL。 例如：  
   
 ```  
-http://myspsite/subsite/_vti_bin/reportserver  
+https://myspsite/subsite/_vti_bin/reportserver  
 ```  
   
 > [!TIP]  
@@ -84,7 +84,7 @@ http://myspsite/subsite/_vti_bin/reportserver
  若為 SharePoint 整合模式，其為 SharePoint 文件庫中項目的完整 URL，包括項目延伸模組。 例如：  
   
 ```  
-http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
+https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
 ```  
   
  **&**  

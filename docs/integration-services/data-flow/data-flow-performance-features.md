@@ -24,12 +24,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb243fa126fc53282bd310d3bd5d47029e2f4aba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 694f1c2d29ced11a4f66a05bd983fe704e1be241
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605828"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642375"
 ---
 # <a name="data-flow-performance-features"></a>資料流程效能的功能
   本主題提供有關如何設計 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝以避免常見效能問題的建議。 本主題同時也提供有關您可以用於疑難排解封裝效能之功能與工具的資訊。  
@@ -135,7 +135,7 @@ ms.locfileid: "47605828"
  如果必須在資料流程中建立多個彙總，您應考慮使用一個「彙總」轉換來建立多個彙總，而不是建立多個轉換。 當一個彙總就是其他彙總的子集時，這個方法能夠改善效能，因為轉換可以最佳化內部儲存體，並且只會掃描一次傳入的資料。 例如，如果彙總使用 GROUP BY 子句和 AVG 彙總，則將它們組合成一個轉換可以改進效能。 不過，在一個「彙總」轉換內執行多個彙總會序列化彙總作業，因此，當多個彙總必須個別計算時，可能不會改善效能。  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>模糊查閱和模糊群組轉換  
- 如需有關最佳化「模糊查閱」和「模糊群組」轉換的詳細資訊，請參閱＜ [SQL Server Integration Services 2005 中的模糊查詢和模糊群組](http://go.microsoft.com/fwlink/?LinkId=96604)＞(英文) 白皮書。  
+ 如需有關最佳化「模糊查閱」和「模糊群組」轉換的詳細資訊，請參閱＜ [SQL Server Integration Services 2005 中的模糊查詢和模糊群組](https://go.microsoft.com/fwlink/?LinkId=96604)＞(英文) 白皮書。  
   
 #### <a name="lookup-transformation"></a>查閱轉換  
  輸入僅查閱所需資料行的 SELECT 陳述式可以將記憶體中的參考資料大小最小化。 這個選項的效能比選取會傳回大量不必要資料的整個資料表或檢視表更好。  
@@ -148,7 +148,7 @@ ms.locfileid: "47605828"
   
  「緩時變維度」轉換中最緩慢的元件通常是一次針對一個單一資料列執行 UPDATE 的「OLE DB 命令」轉換。 因此，改善「緩時變維度」轉換效能最有效的方式就是取代「OLE DB 命令」轉換。 您可以將這些轉換取代為將要更新的所有資料列儲存到臨時資料表的目的地元件。 然後，您可以同時加入針對所有資料列執行以單一資料列集為基礎之 Transact-SQL UPDATE 的「執行 SQL」工作。  
   
- 進階使用者可以針對緩時變維度處理，設計針對大維度進行最佳化的自訂資料流程。 如需此方式的討論和範例，請參閱＜ [專案 REAL：Business Intelligence ETL 設計練習](http://go.microsoft.com/fwlink/?LinkId=96602)＞(英文) 白皮書中的「唯一的維度狀況」一節。  
+ 進階使用者可以針對緩時變維度處理，設計針對大維度進行最佳化的自訂資料流程。 如需此方式的討論和範例，請參閱＜ [專案 REAL：Business Intelligence ETL 設計練習](https://go.microsoft.com/fwlink/?LinkId=96602)＞(英文) 白皮書中的「唯一的維度狀況」一節。  
   
 ### <a name="destinations"></a>目的地  
  為達成較佳的目的地效能，請考慮使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地並測試目的地的效能。  
@@ -171,38 +171,38 @@ ms.locfileid: "47605828"
 ## <a name="related-content"></a>相關內容  
  **文件和部落格文章**  
   
--   technet.microsoft.com 上的技術文件： [SQL Server 2005 Integration Services：效能策略](http://go.microsoft.com/fwlink/?LinkId=98899)  
+-   technet.microsoft.com 上的技術文件： [SQL Server 2005 Integration Services：效能策略](https://go.microsoft.com/fwlink/?LinkId=98899)  
   
--   technet.microsoft.com 上的技術文件： [Integration Services：效能微調技術](http://go.microsoft.com/fwlink/?LinkId=98900)  
+-   technet.microsoft.com 上的技術文件： [Integration Services：效能微調技術](https://go.microsoft.com/fwlink/?LinkId=98900)  
   
--   sqlcat.com 上的技術文件： [將同步轉換分割為多個工作來增加管線的輸送量](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)  
+-   sqlcat.com 上的技術文件： [將同步轉換分割為多個工作來增加管線的輸送量](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)  
   
--   msdn.microsoft.com 上的技術文章： [資料載入效能指南](http://go.microsoft.com/fwlink/?LinkId=220816)。  
+-   msdn.microsoft.com 上的技術文章： [資料載入效能指南](https://go.microsoft.com/fwlink/?LinkId=220816)。  
   
--   msdn.microsoft.com 上的技術文件： [我們使用 SSIS 在短短 30 分鐘內載入了 1TB 的資料，您也可以](http://go.microsoft.com/fwlink/?LinkId=220817)。  
+-   msdn.microsoft.com 上的技術文件： [我們使用 SSIS 在短短 30 分鐘內載入了 1TB 的資料，您也可以](https://go.microsoft.com/fwlink/?LinkId=220817)。  
   
--   sqlcat.com 上的技術文件： [10 大 SQL Server Integration Services 的最佳作法](http://go.microsoft.com/fwlink/?LinkId=220818)。  
+-   sqlcat.com 上的技術文件： [10 大 SQL Server Integration Services 的最佳作法](https://go.microsoft.com/fwlink/?LinkId=220818)。  
   
--   sqlcat.com 上的技術文件及範例： [SSIS 的「平衡型資料散發者」](http://go.microsoft.com/fwlink/?LinkId=220822)。  
+-   sqlcat.com 上的技術文件及範例： [SSIS 的「平衡型資料散發者」](https://go.microsoft.com/fwlink/?LinkId=220822)。  
   
--   blogs.msdn.com 上的部落格文章： [疑難排解 SSIS 封裝效能問題](http://go.microsoft.com/fwlink/?LinkId=238156)  
+-   blogs.msdn.com 上的部落格文章： [疑難排解 SSIS 封裝效能問題](https://go.microsoft.com/fwlink/?LinkId=238156)  
   
  **視訊**  
   
--   影片系列， [Designing and Tuning for Performance your SSIS packages in the Enterprise (SQL Video Series)](http://go.microsoft.com/fwlink/?LinkId=400878)(設計及微調企業中 SSIS 封裝的效能 (SQL 影片系列))  
+-   影片系列， [Designing and Tuning for Performance your SSIS packages in the Enterprise (SQL Video Series)](https://go.microsoft.com/fwlink/?LinkId=400878)(設計及微調企業中 SSIS 封裝的效能 (SQL 影片系列))  
   
--   technet.microsoft.com 上的影片： [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](http://technet.microsoft.com/sqlserver/ff686901.aspx)(調整企業中的 SSIS 封裝資料流程 (SQL Server 視訊))  
+-   technet.microsoft.com 上的影片： [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686901.aspx)(調整企業中的 SSIS 封裝資料流程 (SQL Server 視訊))  
   
--   technet.microsoft.com 上的影片： [Understanding SSIS Data Flow Buffers (SQL Server Video)](http://technet.microsoft.com/sqlserver/ff686905.aspx)(了解 SSIS 資料流程緩衝區 (SQL Server 視訊))  
+-   technet.microsoft.com 上的影片： [Understanding SSIS Data Flow Buffers (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686905.aspx)(了解 SSIS 資料流程緩衝區 (SQL Server 視訊))  
   
--   channel9.msdn.com 上的影片： [Microsoft SQL Server Integration Services 效能設計模式](http://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)。  
+-   channel9.msdn.com 上的影片： [Microsoft SQL Server Integration Services 效能設計模式](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)。  
   
--   sqlcat.com 上的簡報： [Microsoft IT 如何運用 SQL Server 2008 SSIS 資料流程引擎增強功能](http://go.microsoft.com/fwlink/?LinkId=217660)。  
+-   sqlcat.com 上的簡報： [Microsoft IT 如何運用 SQL Server 2008 SSIS 資料流程引擎增強功能](https://go.microsoft.com/fwlink/?LinkId=217660)。  
   
--   technet.microsoft.com 上的影片： [平衡型資料散發者](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)  
+-   technet.microsoft.com 上的影片： [平衡型資料散發者](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)  
   
 ## <a name="see-also"></a>另請參閱  
  [疑難排解封裝開發的工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [套件執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

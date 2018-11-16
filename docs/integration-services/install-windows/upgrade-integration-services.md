@@ -16,12 +16,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 7bd66f0839d520cf9708f001756de2d031d6df0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e831a5adc9142a339ee633592ccb98c8ff9f1462
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753796"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642355"
 ---
 # <a name="upgrade-integration-services"></a>升級 Integration Services
   如果您的電腦上目前安裝有 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或更新版本，您可以升級到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]。  
@@ -46,7 +46,7 @@ ms.locfileid: "47753796"
 > -   執行 DTS 2000 封裝工作  
 > -   DTS 封包的 Upgrade Advisor 掃描。  
 >   
->  如需其他已停止功能的相關資訊，請參閱 [SQL Server 2016 中已停止的 Integration Services 功能](http://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7)。  
+>  如需其他已停止功能的相關資訊，請參閱 [SQL Server 2016 中已停止的 Integration Services 功能](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7)。  
   
 ## <a name="upgrading-integration-services"></a>升級 Integration Services  
  您可以使用以下其中一個方法來升級：  
@@ -145,6 +145,6 @@ ms.locfileid: "47753796"
 -   您無法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦上的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 代理程式作業來執行已升級之 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 執行個體中所儲存的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]封裝。  
   
 ## <a name="external-resources"></a>外部資源  
- blogs.msdn.com 上的部落格文章： [在 Denali 中製作現有的自訂 SSIS 延伸模組和應用程式工作](http://go.microsoft.com/fwlink/?LinkId=238157)。  
+ blogs.msdn.com 上的部落格文章： [在 Denali 中製作現有的自訂 SSIS 延伸模組和應用程式工作](https://go.microsoft.com/fwlink/?LinkId=238157)。  
   
   

@@ -10,12 +10,12 @@ ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6a1f55ad47ee17504118b3db5c00e61f39092e34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e950ae6cbbf71154bfaf402ae9e3246bd3d93fe
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841006"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606928"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Always On 可用性群組疑難排解和監視指南
  本指南將協助您開始監視 Always On 可用性群組，並且對可用性群組中的某些常見的問題進行疑難排解。 本指南將提供在其他位置已發佈的有用資訊的原始內容和登陸頁面。 雖然本指南無法完整討論在可用性群組大範圍中發生的所有問題，但是可以為您指出根本原因分析和問題解決的正確方向。 
@@ -31,8 +31,8 @@ ms.locfileid: "47841006"
 |--------------|-------------------|-----------------|  
 |[疑難排解 Always On 可用性群組組態 &#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md)|組態|提供資訊以協助您針對設定可用性群組的伺服器執行個體時常遇到的問題進行疑難排解。 一般組態問題包含可用性群組未啟用、不正確地設定帳戶、資料庫鏡像端點不存在、端點無法存取 (SQL Server 錯誤 1418)、網路存取不存在，以及聯結資料庫命令失敗 (SQL Server 錯誤 35250)。|  
 |[疑難排解失敗的加入檔案作業 &#40;Always On 可用性群組&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|組態|加入檔案作業會造成次要資料庫暫止並處於 NOT SYNCHRONIZING 狀態。|  
-|[無法連線到多重子網路環境中的可用性群組接聽程式](http://support.microsoft.com/kb/2792139/en-us) \(英文\)|用戶端連接性|設定可用性群組接聽程式之後，您就無法從應用程式 Ping 到接聽程式或與它連線。|  
-|[疑難排解失敗的自動容錯移轉](http://support.microsoft.com/kb/2833707) \(英文\)|容錯移轉|自動容錯移轉未順利完成。|  
+|[無法連線到多重子網路環境中的可用性群組接聽程式](https://support.microsoft.com/kb/2792139/en-us) \(英文\)|用戶端連接性|設定可用性群組接聽程式之後，您就無法從應用程式 Ping 到接聽程式或與它連線。|  
+|[疑難排解失敗的自動容錯移轉](https://support.microsoft.com/kb/2833707) \(英文\)|容錯移轉|自動容錯移轉未順利完成。|  
 |[偵錯：可用性群組超過 RTO](troubleshoot-availability-group-exceeded-rto.md)|效能|在自動容錯移轉或規劃的手動容錯移轉之後若未遺失資料，容錯移轉時間會超過您的 RTO。 或者，當您評估同步認可次要複本 (例如自動容錯移轉夥伴) 的容錯移轉時間時，發現它超過您的 RTO。|  
 |[偵錯：可用性群組超過 RPO](troubleshoot-availability-group-exceeded-rpo.md)|效能|在您執行強制手動容錯移轉之後，遺失的資料超過您的 RPO。 或者，當您計算非同步認可次要複本的潛在資料遺失時，發現它超過您的 RPO。|  
 |[疑難排解：對主要複本的變更未反映在次要複本上](troubleshoot-primary-changes-not-reflected-on-secondary.md)|效能|用戶端應用程式在主要複本上成功完成更新，但是查詢次要複本卻顯示未反映變更。|  
@@ -65,15 +65,15 @@ ms.locfileid: "47841006"
 |-----------|-----------------|  
 |[監視 Always On 可用性群組的效能](monitor-performance-for-always-on-availability-groups.md)|描述可用性群組的資料同步處理程序、流量控制閘道，以及監視可用性群組時的實用計量，同時也顯示如何收集 RTO 和 RPO 計量。|  
 |[監視可用性群組 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|提供監視可用性群組的工具資訊。|  
-|[Always On 健康情況模型，第 1 部分：健康情況模型架構](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx) \(英文\)|提供 Always On 健康情況模型的概觀。|  
-|[Always On 健康情況模型，第 2 部分：擴充健康情況模型](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) \(英文\)|示範如何自訂 Always On 健康情況模型及自訂 Always On 儀表板來顯示額外的資訊。|  
-|[使用 PowerShell 監視 Always On 健康情況，第 1 部分：基本 Cmdlet 概觀](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx) \(英文\)|針對可用來監視可用性群組健康情況的 Always On PowerShell Cmdlet，提供其基本概觀。|  
-|[使用 PowerShell 監視 Always On 健康情況，第 2 部分：進階 Cmdlet 使用](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx) \(英文\)|提供 Always On PowerShell Cmdlet 的進階使用方式資訊，以監視可用性群組健康情況。|  
-|[使用 PowerShell 監視 Always On 健康情況，第 3 部分：一個簡單的監視應用程式](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx) \(英文\)|示範如何使用應用程式自動監視可用性群組。|  
-|[使用 PowerShell 監視 Always On 健康情況，第 4 部分：與 SQL Server Agent 整合](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx) \(英文\)|提供如何與 SQL Server Agent 整合可用性群組監視，以及如何設定發生問題時通知適當對象的資訊。|  
+|[Always On 健康情況模型，第 1 部分：健康情況模型架構](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx) \(英文\)|提供 Always On 健康情況模型的概觀。|  
+|[Always On 健康情況模型，第 2 部分：擴充健康情況模型](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) \(英文\)|示範如何自訂 Always On 健康情況模型及自訂 Always On 儀表板來顯示額外的資訊。|  
+|[使用 PowerShell 監視 Always On 健康情況，第 1 部分：基本 Cmdlet 概觀](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx) \(英文\)|針對可用來監視可用性群組健康情況的 Always On PowerShell Cmdlet，提供其基本概觀。|  
+|[使用 PowerShell 監視 Always On 健康情況，第 2 部分：進階 Cmdlet 使用](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx) \(英文\)|提供 Always On PowerShell Cmdlet 的進階使用方式資訊，以監視可用性群組健康情況。|  
+|[使用 PowerShell 監視 Always On 健康情況，第 3 部分：一個簡單的監視應用程式](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx) \(英文\)|示範如何使用應用程式自動監視可用性群組。|  
+|[使用 PowerShell 監視 Always On 健康情況，第 4 部分：與 SQL Server Agent 整合](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx) \(英文\)|提供如何與 SQL Server Agent 整合可用性群組監視，以及如何設定發生問題時通知適當對象的資訊。|  
 
 ## <a name="next-steps"></a>後續步驟  
- [SQL Server Always On 團隊部落格](http://blogs.msdn.com/b/sqlalwayson/)   
- [CSS SQL Server 工程師部落格](http://blogs.msdn.com/b/psssql/)  
+ [SQL Server Always On 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)   
+ [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
   

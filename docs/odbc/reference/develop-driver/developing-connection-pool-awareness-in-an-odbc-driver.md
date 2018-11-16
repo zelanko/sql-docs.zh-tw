@@ -11,12 +11,12 @@ ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87731fd9ebd2bf02f1fca2d81a918c330df08925
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a7a38a3d71b28cc32b863bf95ca6b99fa2bddaa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820186"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661747"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>在 ODBC 驅動程式中開發連線集區覺察
 本主題討論開發 ODBC 驅動程式，其中包含此驅動程式應該如何提供連線共用服務的相關資訊的詳細資料。  
@@ -68,7 +68,7 @@ ms.locfileid: "47820186"
 ## <a name="the-connection-rating"></a>連接評等  
  相較於建立新的連線，您可以藉由重設共用連接部分連接資訊 （例如資料庫） 取得較佳的效能。 因此，您可能不想要在您的索引鍵屬性集的資料庫名稱。 否則，您可以有不同的集區的每個資料庫，這可能不是很好的中介層應用程式中，客戶會使用各種不同的連接字串。  
   
- 每當您重複使用具有一些屬性不相符的連接，您應該重設不相符的屬性，根據新的應用程式要求，使傳回的連接是與應用程式要求相同 （請參閱屬性 SQL_ATTR 的討論在 _DBC_INFO_TOKEN [SQLSetConnectAttr 函數](http://go.microsoft.com/fwlink/?LinkId=59368))。 不過，重設這些屬性可能會降低效能。 例如，重設資料庫需要伺服器的網路呼叫。 因此，如果有的話，重複使用完全相符的連線。  
+ 每當您重複使用具有一些屬性不相符的連接，您應該重設不相符的屬性，根據新的應用程式要求，使傳回的連接是與應用程式要求相同 （請參閱屬性 SQL_ATTR 的討論在 _DBC_INFO_TOKEN [SQLSetConnectAttr 函數](https://go.microsoft.com/fwlink/?LinkId=59368))。 不過，重設這些屬性可能會降低效能。 例如，重設資料庫需要伺服器的網路呼叫。 因此，如果有的話，重複使用完全相符的連線。  
   
  驅動程式中的評等函式可以評估新的連線要求與現有的連接。 例如，可以判斷驅動程式的評等函式：  
   
@@ -109,7 +109,7 @@ ms.locfileid: "47820186"
   
  驅動程式管理員**SQLAllocHandle**並**SQLFreeHandle**將不會接受這個新的控制代碼類型。  
   
- SQL_HANDLE_DBC_INFO_TOKEN 可能包含機密資訊，例如認證。 因此，驅動程式應安全地清除記憶體緩衝區 (使用[SecureZeroMemory](http://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx))，其中包含敏感資訊之前釋放與這個控制代碼**SQLFreeHandle**。 每當應用程式的環境控制代碼關閉時，將會關閉所有相關聯的連接集區。  
+ SQL_HANDLE_DBC_INFO_TOKEN 可能包含機密資訊，例如認證。 因此，驅動程式應安全地清除記憶體緩衝區 (使用[SecureZeroMemory](https://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx))，其中包含敏感資訊之前釋放與這個控制代碼**SQLFreeHandle**。 每當應用程式的環境控制代碼關閉時，將會關閉所有相關聯的連接集區。  
   
 ## <a name="driver-manager-connection-pool-rating-algorithm"></a>評等演算法的驅動程式管理員連接集區  
  本章節將討論驅動程式管理員連接共用的評等演算法。 驅動程式開發人員可以實作相同的演算法，針對回溯相容性。 此演算法可能不適合。 您應該調整此演算法會根據您的實作 （否則就沒有理由實作這項功能）。  

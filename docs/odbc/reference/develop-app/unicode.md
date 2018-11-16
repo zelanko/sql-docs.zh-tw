@@ -14,17 +14,17 @@ ms.assetid: 113e1c9a-8333-4805-86f2-e4b57ab816a5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9ee58c367e83a61afef45d7df3358488dcb85a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e6201b83b909573476b043cdb1a10543f894def
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821066"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661807"
 ---
 # <a name="unicode"></a>Unicode
 Unicode 定義許多語言的字元編碼方式。  
   
- 如需 Unicode 標準的詳細資訊，請參閱[Unicode 協會](http://www.unicode.org)。  
+ 如需 Unicode 標準的詳細資訊，請參閱[Unicode 協會](https://www.unicode.org)。  
   
  Unicode 定義通用的字元集。 Windows ANSI 字碼頁定義的字元集，通常包含一種語言的字元。 它可能是更難撰寫的應用程式，才可使用不同的字碼頁。  
   

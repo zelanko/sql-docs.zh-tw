@@ -16,18 +16,18 @@ ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 075cb0870d7fa3f4cbddaef60c2de4d1aa0683c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a32f7f321baa17dbcdaf557bb7de033422a02dbc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668701"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668257"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>對應來源和目標資料類型 (AccessToSQL)
 存取資料庫型別不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫類型。 當您轉換到存取資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件，您必須指定如何從存取的資料類型對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以接受預設資料類型對應，或您可以自訂對應，如下列程序中所示。  
   
 ## <a name="default-mappings"></a>預設對應  
-SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，請參閱[(Type Mapping) 的專案設定](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)。  
+SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，請參閱[(Type Mapping) 的專案設定](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)。  
   
 ## <a name="customizing-data-type-mappings"></a>自訂資料類型對應  
 藉由使用**專案設定** 對話方塊中，您可以自訂類型如何對應所有的資料庫和專案中的資料庫物件。 專案的型別對應套用至所有資料庫和資料庫物件不具有自訂類型對應。  

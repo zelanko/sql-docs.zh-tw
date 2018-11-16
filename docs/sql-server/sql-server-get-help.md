@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 03294cce7e8c800d51b5a333e92d611cf8b694fe
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: e4e48ba424b9c9c8ef56d1280d774c7ee3120ffe
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384093"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698226"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 說明與意見反應
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ SQL Server Management Studio (SSMS) 小組也會密切監視 SQL Server [User Vo
 如果您是商業使用者，請檢閱 Microsoft [連絡](https://support.microsoft.com/gp/contactus81?forceorigin=esmc&Audience=Commercial)頁面。
 
 ## <a name="i-want-to-review-license-information-about-sql-server"></a>我想要檢閱 SQL Server 的授權資訊
-如果您想要下載並檢閱 SQL Server 的授權資訊，該資訊位於 [Microsoft SQL Server 額外軟體授權條款](https://www.microsoft.com/en-us/download/details.aspx?id=39299)。 
+如果您想要下載並檢閱 SQL Server 的授權資訊，該資訊位於 [Microsoft SQL Server 額外軟體授權條款](https://www.microsoft.com/download/details.aspx?id=39299)。 
 
 ## <a name="i-want-to-ask-the-community-for-help"></a>我想要尋求社群的協助 
 如果您有興趣參與充滿活力的 SQL Server 社群並獲得協助，有多種選項可提供給您！
@@ -80,9 +80,9 @@ SQL Server Management Studio (SSMS) 小組也會密切監視 SQL Server [User Vo
 ## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>我想要提供 SQL 文件內容的意見反應
 
 ### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![編輯內容](../includes/media/edit-topic-pencil.png) 編輯內容
-您是否發現我們文件的問題？ 您知道您可以自己編輯內容嗎？ 如果您這樣做，不只會改善我們的文件，而且您也會成為該頁面的貢獻者！ 如需詳細資訊，請參閱 [http://aka.ms/editsqldocs](http://aka.ms/editsqldocs)。 
+您是否發現我們文件的問題？ 您知道您可以自己編輯內容嗎？ 如果您這樣做，不只會改善我們的文件，而且您也會成為該頁面的貢獻者！ 如需詳細資訊，請參閱 [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs)。 
 
 ### <a name="surveys"></a>問卷
-如果您有空閒時間，並希望分享您對 SQL Docs 體驗的一些看法，請參加我們的調查！ 可從 [http://aka.ms/SQLDocSurvey](http://aka.ms/SQLDocSurvey) 找到，大約需要 10-15 分鐘。 
+如果您有空閒時間，並希望分享您對 SQL Docs 體驗的一些看法，請參加我們的調查！ 可從 [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey) 找到，大約需要 10-15 分鐘。 
 
-如果您有想與 SQL 內容小組分享的事項、想法、建議、意見反應，任何事情都可以！ 請前往 [http://aka.ms/SQLDocsFeedback](http://aka.ms/SQLDocsFeedback)。 
+如果您有想與 SQL 內容小組分享的事項、想法、建議、意見反應，任何事情都可以！ 請前往 [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback)。 

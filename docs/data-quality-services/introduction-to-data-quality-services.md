@@ -14,12 +14,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b235ea1151b99870623dbbea89f83e02150235e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44fc2fd9ff3a47272c031ff71cda6e2a75f59a72
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640844"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700276"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 簡介
 
@@ -43,7 +43,7 @@ ms.locfileid: "47640844"
   
 -   **比對** ：在以規則為基礎的程序中識別語意重複，這個程序可讓您判斷構成符合項目的元素，並執行刪除重複作業。 如需詳細資訊，請參閱 [Data Matching](../data-quality-services/data-matching.md)。  
   
--   **Reference Data Services** ：使用參考資料提供者的服務驗證資料的品質。 您可以使用 [Microsoft Azure Marketplace](http://azure.microsoft.com/marketplace/) 的 Reference Data Services 來清理、驗證、比對與充實資料。 如需詳細資訊，請參閱 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)。  
+-   **Reference Data Services** ：使用參考資料提供者的服務驗證資料的品質。 您可以使用 [Microsoft Azure Marketplace](https://azure.microsoft.com/marketplace/) 的 Reference Data Services 來清理、驗證、比對與充實資料。 如需詳細資訊，請參閱 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)。  
   
 -   **分析** ：分析資料來源，讓您得以深入了解在知識探索、定義域管理、比對以及資料清理程序每個階段的資料品質。 分析在 DQS 資料品質方案中是一個功能強大的工具。 您可以建立資料品質方案，其中分析就如同知識管理、比對或資料清理一樣重要。 如需詳細資訊，請參閱 [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
   

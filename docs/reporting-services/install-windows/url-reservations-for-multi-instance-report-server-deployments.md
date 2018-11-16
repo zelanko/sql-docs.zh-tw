@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26de643bf01e9ebffca01ff5b1f8aeecc38b7c5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7d96d825c9a1b9a6bc4ea069a9c7b04d79b5412
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741256"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814061"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>多重執行個體報表伺服器部署的 URL 保留項目
   如果您在相同電腦上安裝多個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體，您就必須考慮要如何為每一個執行個體定義 URL 保留項目。 在每一個執行個體中，報表伺服器 Web 服務和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 至少每一個都必須有一個 URL 保留項目。 完整的保留項目集合在 HTTP.SYS 中必須是唯一的。  
@@ -26,8 +26,8 @@ ms.locfileid: "47741256"
   
 |SQL Server 執行個體|預設 URL 保留項目|  
 |-------------------------|-----------------------------|  
-|預設值 (MSSQLServer)|`http://+:80/reportserver`|  
-|已命名 (MynamedInstance)|`http://+:80/reportserver_MyNamedInstance`|  
+|預設值 (MSSQLServer)|`https://+:80/reportserver`|  
+|已命名 (MynamedInstance)|`https://+:80/reportserver_MyNamedInstance`|  
   
  如果是具名執行個體，虛擬目錄會包含此執行個體名稱。 預設執行個體和具名執行個體都會接聽相同的通訊埠，但是唯一的虛擬目錄名稱會決定哪一個報表伺服器取得要求。  
   
@@ -38,8 +38,8 @@ ms.locfileid: "47741256"
   
 |報表伺服器預設執行個體 (MSSQLSERVER)|ReportServer_MyNamedInstance|唯一性|  
 |----------------------------------------------------|-----------------------------------|----------------|  
-|`http://+:80/reportserver`|`http://+:8888/reportserver`|每個執行個體會接聽不同的通訊埠。|  
-|`http://www.contoso.com/reportserver`|`http://SRVR-46/reportserver`|每一個執行個體都會對應到不同的伺服器名稱 (完整網域名稱和電腦名稱)。|  
+|`https://+:80/reportserver`|`https://+:8888/reportserver`|每個執行個體會接聽不同的通訊埠。|  
+|`https://www.contoso.com/reportserver`|`https://SRVR-46/reportserver`|每一個執行個體都會對應到不同的伺服器名稱 (完整網域名稱和電腦名稱)。|  
   
 ## <a name="uniqueness-requirements"></a>唯一性規定  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用的基礎技術對於唯一的名稱有一些規定。 HTTP.SYS 要求它的儲存機制內的所有 URL 都必須是唯一的。 您可以讓通訊埠、主機名稱或虛擬目錄名稱不同，以建立唯一的 URL。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 要求相同處理序內的應用程式識別必須是唯一的。 這項規定會影響虛擬目錄名稱， 它指定您不能在相同的報表伺服器執行個體內重複虛擬目錄名稱。  

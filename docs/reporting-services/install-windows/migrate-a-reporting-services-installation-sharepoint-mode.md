@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf12709e232d4b9d84f311784f78d469b7f00e7b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: fd029f997770dd78269f58bed5daddc60699fb8a
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021312"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813401"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>移轉 Reporting Services 安裝 (SharePoint 模式)
 
@@ -48,9 +48,9 @@ ms.locfileid: "50021312"
 ###  <a name="bkmk_content_only_migration"></a> 僅限內容移轉  
  **Reporting Services 僅限內容移轉：** 若要將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 內容複製到新的伺服器陣列，您需要使用類似 **rs.exe** 的工具將內容複製到新的 SharePoint 安裝。 如需有關僅限內容移轉的詳細資訊，請參閱以下主題：  
   
--   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 指令碼：** 這些指令碼可以在原生模式與 SharePoint 模式報表伺服器之間移轉內容及資源。 如需詳細資訊，請參閱 [在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) 和 [Reporting Services RS.exe script migrates content](http://azuresql.codeplex.com/releases/view/115207)(可移轉內容的 Reporting Services RS.exe 指令碼)。  
+-   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 指令碼：** 這些指令碼可以在原生模式與 SharePoint 模式報表伺服器之間移轉內容及資源。 如需詳細資訊，請參閱 [在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) 和 [Reporting Services RS.exe script migrates content](https://azuresql.codeplex.com/releases/view/115207)(可移轉內容的 Reporting Services RS.exe 指令碼)。  
   
--   **Reporting Services 移轉工具：** 此工具可以將報表項目從原生模式伺服器複製到 SharePoint 模式伺服器。 如需詳細資訊，請參閱 [Reporting Services 移轉工具](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560) \(英文\)。  
+-   **Reporting Services 移轉工具：** 此工具可以將報表項目從原生模式伺服器複製到 SharePoint 模式伺服器。 如需詳細資訊，請參閱 [Reporting Services 移轉工具](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560) \(英文\)。  
   
 ###  <a name="bkmk_full_migration"></a> 完整移轉  
  **完整移轉：** 若要隨 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 目錄資料庫一併將 SharePoint 內容資料庫 移轉到新的伺服器陣列，可以執行本主題摘錄的一系列備份及還原選項。 在某些情況下，還原階段所使用的工具必須與備份階段所使用的工具不同。 例如，您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定管理員從舊版 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 備份加密金鑰，但是您必須使用 SharePoint 管理中心或 PowerShell 將加密金鑰還原到 SQL Server 2016 Reporting Services SharePoint 模式安裝。  

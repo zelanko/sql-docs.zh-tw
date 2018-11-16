@@ -14,12 +14,12 @@ ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 122fa1af75e522bf9fd52e7c92079038392461b6
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 32b0e29977dea2d3269972ff06bc34f9af214012
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419099"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697446"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server 版本的計算容量限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "49419099"
  [SQL Server 2016 的版本和元件](../sql-server/editions-and-components-of-sql-server-2016.md)   
  [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server 的最大容量規格](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
- [SQL Server 2016 的安裝快速入門](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
+ [SQL Server 2016 的安裝快速入門](https://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

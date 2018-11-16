@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8ddd123c60806826918f8b42412048aaa408776
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f8103e48da5c0059cfc977f862ebd8fc0839fb9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716496"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661057"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ sys.dm_db_index_operational_stats (
 |**database_id**|**smallint**|資料庫識別碼。|    
 |**object_id**|**int**|資料表或檢視表的識別碼。|    
 |**index_id**|**int**|索引或堆積的識別碼。<br /><br /> 0 = 堆積|    
-|**hobt_id**|**bigint**|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 之資料堆積或 B 型樹狀目錄會追蹤資料行存放區索引的內部資料的資料列的識別碼。<br /><br /> 空值-這不是內部的資料行存放區資料列集。<br /><br /> 如需詳細資訊，請參閱 < [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
+|**hobt_id**|**bigint**|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 之資料堆積或 B 型樹狀目錄會追蹤資料行存放區索引的內部資料的資料列的識別碼。<br /><br /> 空值-這不是內部的資料行存放區資料列集。<br /><br /> 如需詳細資訊，請參閱 < [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
 |**partition_number**|**int**|在索引或堆積內，以 1 為基底的資料分割編號。|    
 |**leaf_insert_count**|**bigint**|分葉層級插入的累計計數。|    
 |**leaf_delete_count**|**bigint**|分葉層級刪除的累計計數。 已刪除的記錄未標示為準刪除項目第一次只會漸增 leaf_delete_count。 已刪除的記錄，建立映像第一次，如**leaf_ghost_count**會改為遞增。|    
@@ -244,7 +244,7 @@ GO
  [sys.dm_db_index_usage_stats &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
  [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
  [sys.dm_db_partition_stats &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
- [sys.allocation_units &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
     
   

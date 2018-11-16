@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c625459ae357dd0c8db1ab7b2255e95e5787b1f0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ac129843dafffbc53c32f639e0ed1113d53eec6b
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029337"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813661"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>安裝 Reporting Services 2016 原生模式報表伺服器
 
@@ -85,15 +85,15 @@ ms.locfileid: "50029337"
 |部分|Description|  
 |----------|-----------------|  
 |Prefix|預設前置詞是 HTTP。 如果您之前安裝了安全通訊端層 (SSL) 憑證，安裝程式將會嘗試建立使用 HTTPS 前置詞的 URL 保留項目。|  
-|主機名稱|預設主機名稱是強式萬用字元 (+)， 它會指定報表伺服器接受解析為電腦任何主機名稱之指定連接埠上的任何 HTTP 要求，包括 `http://<computername>/reportserver`、`http://localhost/reportserver` 或 `http://<IPAddress>/reportserver`。|  
+|主機名稱|預設主機名稱是強式萬用字元 (+)， 它會指定報表伺服器接受解析為電腦任何主機名稱之指定連接埠上的任何 HTTP 要求，包括 `https://<computername>/reportserver`、`https://localhost/reportserver` 或 `https://<IPAddress>/reportserver`。|  
 |通訊埠|預設連接埠是 80。 請注意，如果您使用通訊埠 80 以外的任何通訊埠，當您在瀏覽器視窗中開啟 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 應用程式時，就必須明確將此通訊埠加入 URL 中。|  
 |虛擬目錄|根據預設，系統會使用 ReportServer_\<執行個體名稱> (針對報表伺服器 Web 服務) 和 Reports_\<執行個體名稱> (針對[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]) 的格式來建立虛擬目錄。 如果是報表伺服器 Web 服務，預設虛擬目錄會是 **reportserver**。 如果是 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，則預設虛擬目錄為 **reports**。|  
   
  完整 URL 字串可能出現的範例如下：  
   
--   `http://+:80/reportserver`，提供報表伺服器的存取權。  
+-   `https://+:80/reportserver`，提供報表伺服器的存取權。  
   
--   `http://+:80/reports`，提供 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 的存取權。
+-   `https://+:80/reports`，提供 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 的存取權。
   
 ##  <a name="bkmk_installwithwizard"></a> 使用 SQL Server 安裝精靈安裝原生模式  
  下列清單描述您在 SQL Server 安裝精靈中選取的  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 專屬步驟和選項。 此清單不會描述您在安裝精靈中看見的每一個頁面，而是只有屬於原生模式安裝的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相關頁面。  
@@ -130,9 +130,9 @@ ms.locfileid: "50029337"
   
 5.  在 [執行個體組態] 頁面上，請記住，如果您選擇設定 [具名執行個體] ，則在瀏覽至報表管理員和報表伺服器本身時，需要在 URL 中使用執行個體名稱。 如果執行個體名稱為 "THESQLINSTANCE"，則 URL 會如下所示︰  
   
-    -   `http://[ServerName]/ReportServer_THESQLINSTANCE`  
+    -   `https://[ServerName]/ReportServer_THESQLINSTANCE`  
   
-    -   `http://[ServerName]/Reports_THESQLINSTANCE`  
+    -   `https://[ServerName]/Reports_THESQLINSTANCE`  
   
 6.  **伺服器組態**：如果您打算使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱功能，請在 [伺服器組態]  頁面上設定 SQL Server Agent [自動]  啟動類型。   預設值是 [手動]。  
   
@@ -153,9 +153,9 @@ ms.locfileid: "50029337"
   
     -   開啟 [ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員]，並確認能夠連接到報表伺服器。  
   
-    -   **以系統管理權限** 開啟瀏覽器，並連接到 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，例如 `http://localhost/Reports`。  
+    -   **以系統管理權限** 開啟瀏覽器，並連接到 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]，例如 `https://localhost/Reports`。  
   
-    -   以系統管理權限開啟瀏覽器，並連接到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器頁面。 例如，  `http://localhost/ReportServer`  
+    -   以系統管理權限開啟瀏覽器，並連接到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器頁面。 例如，  `https://localhost/ReportServer`  
   
  如需詳細資訊，請參閱下列兩個主題的＜原生＞一節：  
   

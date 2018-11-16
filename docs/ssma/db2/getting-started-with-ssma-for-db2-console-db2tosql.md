@@ -10,12 +10,12 @@ ms.assetid: f245c017-023e-4880-8721-8908d339525e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 472f830f41c5cc9d250a26b8e2612b7c0a6b68b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b8417d75ab0a08532dd073b3ce7f803b3f7490c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728756"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668297"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>開始使用 SSMA for DB2 主控台 (DB2ToSQL)
 本章節描述的程序啟動並開始使用 DB2 主控台應用程式。 也列出，此處所使用的慣例典型的 SSMA 主控台輸出 視窗中。  
@@ -42,9 +42,9 @@ Windows 系統上成功啟動主控台後，您可以使用下列步驟，在其
   
 其他功能：  
   
-1.  [管理密碼](http://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94)並匯出 / 匯入到其他視窗機器  
+1.  [管理密碼](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94)並匯出 / 匯入到其他視窗機器  
   
-2.  [產生報表](http://msdn.microsoft.com/69ef5fd9-190d-4c58-8199-b3f77d5e1883)以檢視詳細的 xml 輸出評估 /conversion 和資料移轉的報表。 詳細的錯誤報告也可能產生的重新整理] 和 [同步處理命令。  
+2.  [產生報表](https://msdn.microsoft.com/69ef5fd9-190d-4c58-8199-b3f77d5e1883)以檢視詳細的 xml 輸出評估 /conversion 和資料移轉的報表。 詳細的錯誤報告也可能產生的重新整理] 和 [同步處理命令。  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA 主控台輸出慣例  
 執行 SSMA 指令碼命令和選項，主控台程式會在主控台上對使用者顯示的結果和訊息 （資訊、 錯誤等），或如有需要，將重新導向至 xml 輸出檔。 每一種在輸出中的訊息被以獨特的色彩。 例如，在白色文字訊息表示指令碼檔案的命令;綠色的色彩中的一個表示提示使用者輸入，依此類推。  
@@ -63,5 +63,5 @@ Windows 系統上成功啟動主控台後，您可以使用下列步驟，在其
 |11：青色|開始]、 [完成] 和 [作業的結果。|  
   
 ## <a name="see-also"></a>另請參閱  
-[安裝 SSMA for DB2](http://msdn.microsoft.com/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
+[安裝 SSMA for DB2](https://msdn.microsoft.com/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
   

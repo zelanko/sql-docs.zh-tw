@@ -11,12 +11,12 @@ ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fca90f8f929a5a0ac245b7cd4fc74790976c8c23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 475141eeda17f2460d5f3da466501a61626ce74c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739826"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641975"
 ---
 # <a name="raw-file-custom-properties"></a>原始檔案自訂屬性
   **來源自訂屬性**  
@@ -54,6 +54,6 @@ ms.locfileid: "47739826"
  如需相關資訊，請參閱 [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

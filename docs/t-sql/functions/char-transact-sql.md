@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a548ec574f6ae81b6e365f8f0e9f68db6357102
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 4603333bce62f363a70c82936dfdbb28478f6a0d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643776"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701936"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ CHAR ( integer_expression )
 0 到 255 之間的整數。 `CHAR` 會針對此範圍以外的整數運算式傳回 `NULL` 值，或當整數運算式只包含雙位元組字元的第一個位元組時也會傳回此值。
 
 > [!NOTE]
-> 一些非歐洲字元集 (例如 [Shift Japanese Industrial Standards](http://www.wikipedia.org/wiki/Shift_JIS)) 包括能以單位元組編碼配置表示的字元，但需要多位元組編碼。 如需有關字元集的詳細資訊，請參閱[單位元組和多位元組字元集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。 
+> 一些非歐洲字元集 (例如 [Shift Japanese Industrial Standards](https://www.wikipedia.org/wiki/Shift_JIS)) 包括能以單位元組編碼配置表示的字元，但需要多位元組編碼。 如需有關字元集的詳細資訊，請參閱[單位元組和多位元組字元集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。 
   
 ## <a name="return-types"></a>傳回類型
 **char(1)**

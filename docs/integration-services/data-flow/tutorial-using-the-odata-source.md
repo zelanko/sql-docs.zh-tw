@@ -11,15 +11,15 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1f668fd09c2eb5bfc796f1fcd74d5f4d8e569ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cda725134aeba441a1cd6a59c7d3e7ae57d76de
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716346"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637755"
 ---
 # <a name="tutorial-using-the-odata-source"></a>教學課程：使用 OData 來源
-  本教學課程將逐步引導您進行從範例 **Northwind** OData 服務 (http://services.odata.org/V3/Northwind/Northwind.svc/) 擷取 **Employees** 集合，然後將該集合載入一般檔案的程序。  
+  本教學課程將逐步引導您進行從範例 **Northwind** OData 服務 (https://services.odata.org/V3/Northwind/Northwind.svc/) 擷取 **Employees** 集合，然後將該集合載入一般檔案的程序。  
   
 ## <a name="1-create-an-integration-services-project"></a>1.建立 Integration Services 專案  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47716346"
   
 5.  按一下 **[新增]** ，加入新的 OData 連接管理員。  
   
-6.  輸入 **[服務文件位置]** 的 OData 服務 URL。 此 URL 可以是服務文件的 URL，或是特定摘要或實體的 URL。 針對本教學課程的用途，輸入服務文件的 URL：[http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/)。  
+6.  輸入 **[服務文件位置]** 的 OData 服務 URL。 此 URL 可以是服務文件的 URL，或是特定摘要或實體的 URL。 針對本教學課程的用途，輸入服務文件的 URL：[https://services.odata.org/V3/Northwind/Northwind.svc/](https://services.odata.org/V3/Northwind/Northwind.svc/)。  
   
 7.  確認已選取 **[Windows 驗證]** 做為用來存取 OData 服務的 **[驗證]** 。 **[Windows 驗證]** 預設為選取狀態。  
   

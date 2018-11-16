@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -20,12 +19,12 @@ ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f30b9673ac7ba59e54544e00aaeecbf501c7500b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd6417c10be286164b9d56a0c2587dfd63a1de23
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627896"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670336"
 ---
 # <a name="logical-expressions-xquery"></a>邏輯運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ expression1 or expression2
   
 ```  
 SELECT CatalogDescription.query('  
-     declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      for $F in /PD:ProductDescription/PD:Picture[PD:Size="small"   
                                                  and PD:Angle="front"]  
      return   
@@ -67,7 +66,7 @@ where ProductModelID=19
   
 ```  
 <PD:Picture   
-  xmlns:PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+  xmlns:PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
   <PD:Angle>front</PD:Angle>  
   <PD:Size>small</PD:Size>  
   <PD:ProductPhotoID>31</PD:ProductPhotoID>  

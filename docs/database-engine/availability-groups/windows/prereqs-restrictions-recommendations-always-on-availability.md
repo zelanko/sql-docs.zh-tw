@@ -19,12 +19,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8054c3c985aa83aba25aa40aa40dca8d2923e8f6
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: b5f815cba0bf8cf2777053a502597cd19ccd6a20
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48852023"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600948"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>必要條件、限制和建議 - AlwaysOn 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "48852023"
   
 ||相依功能|Hotfix|連結|  
 |------|-----------------------|------------|----------|  
-|![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|適用於 .Net 3.5 SP1 的 Hotfix 新增對 AlwaysOn 功能的 SQL 用戶端支援，包括讀取意圖、Readonly 和 Multisubnetfailover。 每一部 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表伺服器上都需要安裝這個 Hotfix。|KB 2654347： [適用於 .Net 3.5 SP1 的 Hotfix 新增對 AlwaysOn 功能的支援](http://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|適用於 .Net 3.5 SP1 的 Hotfix 新增對 AlwaysOn 功能的 SQL 用戶端支援，包括讀取意圖、Readonly 和 Multisubnetfailover。 每一部 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表伺服器上都需要安裝這個 Hotfix。|KB 2654347： [適用於 .Net 3.5 SP1 的 Hotfix 新增對 AlwaysOn 功能的支援](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="SystemRequirements"></a> 檢查清單：需求 (Windows 系統)  
@@ -67,7 +67,7 @@ ms.locfileid: "48852023"
 ###  <a name="PermissionsWindows"></a> 權限 (Windows 系統)  
  若要管理 WSFC，使用者必須是每個叢集節點上的系統管理員。  
   
- 如需有關管理叢集之帳戶的詳細資訊，請參閱 [Appendix A: Failover Cluster Requirements](http://technet.microsoft.com/library/dd197454.aspx)(附錄 A：容錯移轉叢集要求)。  
+ 如需有關管理叢集之帳戶的詳細資訊，請參閱 [Appendix A: Failover Cluster Requirements](https://technet.microsoft.com/library/dd197454.aspx)(附錄 A：容錯移轉叢集要求)。  
   
 ###  <a name="RelatedTasksWindows"></a> 相關工作 (Windows 系統)  
   
@@ -99,17 +99,17 @@ ms.locfileid: "48852023"
   
 ##### <a name="related-content-powershell"></a>相關內容 (PowerShell)  
   
--   [Clustering and High-Availability](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (叢集和高可用性 - 容錯移轉叢集和網路負載平衡團隊部落格)  
+-   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (叢集和高可用性 - 容錯移轉叢集和網路負載平衡團隊部落格)  
   
--   [在容錯移轉叢集上開始使用 Windows PowerShell](http://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [在容錯移轉叢集上開始使用 Windows PowerShell](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [叢集資源命令和對等的 Windows PowerShell 指令程式](http://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [叢集資源命令和對等的 Windows PowerShell 指令程式](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
 ###  <a name="RelatedContentWS"></a> 相關內容 (Windows 系統)  
   
--   [在多網站容錯移轉叢集中設定 DNS 設定](http://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
+-   [在多網站容錯移轉叢集中設定 DNS 設定](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
--   [網路名稱資源的 DNS 註冊](http://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
+-   [網路名稱資源的 DNS 註冊](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
   
 
 ##  <a name="ServerInstance"></a> SQL Server 執行個體的必要條件和限制  
@@ -167,7 +167,7 @@ ms.locfileid: "48852023"
   
     -   次要複本上的備份會在備份作業的持續時間內保留主要複本上的執行緒。  
   
- 如需詳細資訊，請參閱 [AlwaysOn - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工程師部落格)。  
+ 如需詳細資訊，請參閱 [AlwaysOn - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工程師部落格)。  
   
 ###  <a name="PermissionsSI"></a> 權限 (伺服器執行個體)  
   
@@ -186,7 +186,7 @@ ms.locfileid: "48852023"
   
 ###  <a name="RelatedContentSI"></a> 相關內容 (伺服器執行個體)  
   
--   [AlwaysOn - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [AlwaysOn - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ##  <a name="NetworkConnect"></a> 網路連線建議  
  強烈建議您針對 WSFC 節點之間的通訊及可用性複本之間的通訊使用相同的網路連結。  使用不同的網路連結時，部分連結失敗 (或甚至間歇性失敗) 可能會發生意外的行為。  
@@ -210,7 +210,7 @@ ms.locfileid: "48852023"
 ###  <a name="RestrictionsFCI"></a> 限制 (FCI)  
   
 > [!NOTE]  
-> 容錯移轉叢集執行個體支援叢集共用磁碟區 (CSV)。 如需有關 CSV 的詳細資訊，請參閱 [了解容錯移轉叢集的叢集共用磁碟區](http://technet.microsoft.com/library/dd759255.aspx)。  
+> 容錯移轉叢集執行個體支援叢集共用磁碟區 (CSV)。 如需有關 CSV 的詳細資訊，請參閱 [了解容錯移轉叢集的叢集共用磁碟區](https://technet.microsoft.com/library/dd759255.aspx)。  
   
 -   **FCI 的叢集節點只能針對給定的可用性群組裝載一個複本**：如果您在 FCI 上新增可用性複本，則可能是 FCI 擁有者的 WSFC 節點將無法針對相同的可用性群組裝載另一個複本。  若要避免可能發生的衝突，建議為容錯移轉叢集執行個體設定可能的擁有者。 這樣可避免可能導致單一 WSFC 嘗試裝載同一個可用性群組的兩個可用性複本。
   
@@ -242,7 +242,7 @@ ms.locfileid: "48852023"
   
 -   [容錯移轉叢集和可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [AlwaysOn 架構指南：使用容錯移轉叢集執行個體和可用性群組，建立高可用性和災害復原解決方案](http://technet.microsoft.com/library/jj215886.aspx)  
+-   [AlwaysOn 架構指南：使用容錯移轉叢集執行個體和可用性群組，建立高可用性和災害復原解決方案](https://technet.microsoft.com/library/jj215886.aspx)  
   
 ##  <a name="PrerequisitesForAGs"></a> 可用性群組的必要條件和限制  
  **本節內容：**  
@@ -382,11 +382,11 @@ ms.locfileid: "48852023"
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server AlwaysOn 團隊部落格：SQL Server AlwaysOn 官方團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [AlwaysOn - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [AlwaysOn - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

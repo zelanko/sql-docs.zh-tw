@@ -14,12 +14,12 @@ ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 703131ee76d1e48a64adc326ce3e34d04802f5cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1d5b272edba906e829b44ae4e23e9ddd8d4eaa0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685476"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699726"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>透過強制仲裁執行 WSFC 災害復原 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47685476"
 > [!WARNING]  
 >  使用者應該充分了解 Windows Server 容錯移轉叢集、WSFC 仲裁模型、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以及環境特定部署組態的概念和互動方式。  
 >   
->  如需詳細資訊，請參閱：  [SQL Server 的 Windows Server 容錯移轉叢集 (WSFC)](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC 仲裁模式和投票組態 (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)。  
+>  如需詳細資訊，請參閱：  [SQL Server 的 Windows Server 容錯移轉叢集 (WSFC)](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC 仲裁模式和投票組態 (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)。  
   
 ###  <a name="Security"></a> 安全性  
  使用者必須是屬於 WSFC 叢集之每一個節點上本機 Administrators 群組成員的網域帳戶。  
@@ -66,7 +66,7 @@ ms.locfileid: "47685476"
   
      在此節點上，您可以使用強制仲裁程序來手動強制叢集上線。  為了盡量降低遺失資料的可能性，請選取最後裝載可用性群組主要複本的節點。  
   
-     如需詳細資訊，請參閱：＜  [在無仲裁情況下強制啟動 WSFC 叢集](http://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)＞  
+     如需詳細資訊，請參閱：＜  [在無仲裁情況下強制啟動 WSFC 叢集](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)＞  
   
     > [!NOTE]  
     >  強制仲裁設定會影響整個叢集並封鎖仲裁檢查，直到邏輯 WSFC 叢集達成大多數投票並自動轉換成一般仲裁模式的作業為止。  
@@ -118,9 +118,9 @@ ms.locfileid: "47685476"
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [檢視容錯移轉叢集的事件和記錄檔](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [檢視容錯移轉叢集的事件和記錄檔](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog 容錯移轉叢集指令程式](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog 容錯移轉叢集指令程式](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  

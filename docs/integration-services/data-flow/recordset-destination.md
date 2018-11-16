@@ -18,12 +18,12 @@ ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 906d78e42c48443b26d5d600e168dff92a119bd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 977cf906b46ae792bc979c5b6b844dbf6368b40e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667876"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640505"
 ---
 # <a name="recordset-destination"></a>資料錄集目的地
   資料錄集目的地可建立和擴展記憶體中的 ADO 資料錄集。 資料錄集的形狀，是由設計階段時對「資料錄集」目的地的輸入所定義。  
@@ -39,7 +39,7 @@ ms.locfileid: "47667876"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [資料錄集目的地自訂屬性](../../integration-services/data-flow/recordset-destination-custom-properties.md)  
   

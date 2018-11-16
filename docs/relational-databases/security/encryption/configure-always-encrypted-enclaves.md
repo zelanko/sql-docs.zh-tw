@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 48580f2ca2e83a968f9599b98956c079f763bf71
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 591dbbc9772378efccb37ca2f7b3af94d37f4529
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307122"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677137"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>設定具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -70,7 +70,7 @@ Windows 主機守護者服務 (HGS) 必須安裝於不同的 HGS 電腦，而非
 1. 以系統管理員身分登入 SQL Server 電腦。
 2. 以系統管理員身分執行 PowerShell。
 3. 執行 [Get-HGSClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration)。
-4. 寫下並儲存 AttestationServerURL 屬性。 它看起來應該類似如下：`http://x.x.x.x/Attestation`。
+4. 寫下並儲存 AttestationServerURL 屬性。 它看起來應該類似如下：`https://x.x.x.x/Attestation`。
 
 
 ### <a name="install-tools"></a>安裝工具
@@ -607,7 +607,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 
 #### <a name="prerequisites"></a>Prerequisites
 
-- 您的資料行使用已啟用記憶體保護區的資料行加密金鑰所加密。
+- 使用已啟用記憶體保護區的資料行加密金鑰來加密資料行。
 - 您已佈建已啟用記憶體保護區的新資料行加密金鑰 (如果您的目標是取代已啟用記憶體保護區的目前資料行加密金鑰，並保護資料行)。
 - 您可以存取資料行主要金鑰。
 
@@ -853,7 +853,7 @@ GO;
 
 ### <a name="develop-and-test-your-app"></a>開發和測試應用程式 
 
-若要使用 Always Encrypted 和記憶體保護區計算，您的應用程式需要使用連接字串中的下列兩個關鍵字來連線至資料庫：`Column Encryption Setting = Enabled; Enclave Attestation Url=http://x.x.x.x/Attestation` (其中 xxxx 可以是 IP、網域等)。
+若要使用 Always Encrypted 和記憶體保護區計算，您的應用程式需要使用連接字串中的下列兩個關鍵字來連線至資料庫：`Column Encryption Setting = Enabled; Enclave Attestation Url=https://x.x.x.x/Attestation` (其中 xxxx 可以是 IP、網域等)。
 
 此外，您的應用程式需要遵守適用於使用 Always Encrypted 的應用程式一般方針；例如，應用程式必須可以存取與資料庫資料行建立關聯的資料行主要金鑰，而應用程式查詢中會參考這些資料庫資料行。
 
@@ -905,7 +905,7 @@ namespace ConsoleApp1
       static void Main(string\[\] args)
    {
 
-   string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = http://10.193.16.185/Attestation/attestationservice.svc/signingCertificates; Integrated Security = true";
+   string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = https://10.193.16.185/Attestation/attestationservice.svc/signingCertificates; Integrated Security = true";
 
 using (SqlConnection connection = new SqlConnection(connectionString))
 {

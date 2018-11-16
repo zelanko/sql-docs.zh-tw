@@ -22,12 +22,12 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3c0538df090ea96f85a300f1aef6035f6c676419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5016c697c83ff286fe9d1d66f59dad92f1c534dc
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652426"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700926"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -318,13 +318,13 @@ WAITFOR(
       AS ConversationErrors,  
       CASE WHEN message_type_name = N'//Adventure-Works.com/Expenses/SubmitExpense'  
           THEN CAST(message_body AS XML).value(  
-                'declare namespace rpt = "http://Adventure-Works.com/schemas/expenseReport"  
+                'declare namespace rpt = "https://Adventure-Works.com/schemas/expenseReport"  
                    (/rpt:ExpenseReport/rpt:EmployeeID)[1]', 'nvarchar(20)')  
          ELSE NULL  
       END AS EmployeeID,  
       CASE WHEN message_type_name = N'//Adventure-Works.com/Expenses/SubmitExpense'  
           THEN CAST(message_body AS XML).query(  
-                'declare namespace rpt = "http://Adventure-Works.com/schemas/expenseReport"   
+                'declare namespace rpt = "https://Adventure-Works.com/schemas/expenseReport"   
                      /rpt:ExpenseReport/rpt:ItemDetail')  
           ELSE NULL  
       END AS ItemList  

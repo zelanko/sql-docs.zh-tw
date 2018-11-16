@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee065317d06fbf19ce03c6a9be3b67ff03a0edd5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 04591d5c1d44f0655d0f8dac0743a0e3d0cf6c55
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030587"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814211"
 ---
 # <a name="manage-shared-datasets"></a>管理共用資料集
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，共用資料集是從連接至外部資料來源的共用資料來源擷取資料。 共用資料集提供方法以共用查詢，可協助您為多個報表提供一致的資料集。 資料集查詢可以包含資料集參數。 您可以在第一次使用時或指定排程，設定共用資料集以快取特定參數組合的查詢結果。 您可以使用共用資料集快取，配合報表快取及報表資料摘要，協助管理資料來源的存取。  
@@ -63,7 +63,7 @@ ms.locfileid: "50030587"
  在 XML 中檢視共用資料集定義的另一個方法是：在報表管理員中使用 URL 存取語法。 例如，若要檢視每個資料集參數的預設值，您可以使用下列 URL 存取命令，從報表伺服器顯示名為 DataSet1 的共用資料集定義：  
   
 ```  
-http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
+https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
 ```  
   
 ## <a name="controlling-access-to-the-shared-dataset-definition"></a>控制共用的資料集定義的存取  
@@ -90,10 +90,10 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 |變更共用資料集項目屬性。|報表管理員|[一般屬性頁面、共用資料集 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)|  
 |為報表中的共用資料集執行個體指定其他共用資料集屬性。|報表產生器報表設計師|[資料集屬性對話方塊、查詢](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)|  
 |繫結至共用資料集的不同共用資料來源。|報表管理員|[資料來源選擇頁面 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb)|  
-|驗證資料集參數的預設值。|在報表產生器中開啟，或使用 URL 存取語法。|例如：<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
+|驗證資料集參數的預設值。|在報表產生器中開啟，或使用 URL 存取語法。|例如：<br /><br /> `https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
 |啟用快取|報表管理員|[快取共用資料集 &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [快取頁面、共用資料集 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)|  
 |建立或編輯快取重新整理計畫|報表管理員|[快取重新整理選項 &#40;報表管理員&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)|  
-|檢視共用資料集定義結構描述。|報表管理員|`http://<reportserver>/shareddatasetdefinition.xsd`|  
+|檢視共用資料集定義結構描述。|報表管理員|`https://<reportserver>/shareddatasetdefinition.xsd`|  
 |在 SharePoint 整合模式中，同步處理報表伺服器與 SharePoint 網站之間的共用資料集定義|SharePoint 應用程式頁面|變更共用資料集項目屬性<br /><br /> 變更快取選項<br /><br /> 變更共用資料來源|  
   
 ## <a name="comparing-shared-datasets-with-other-report-server-items"></a>比較共用資料集與其他報表伺服器項目  
