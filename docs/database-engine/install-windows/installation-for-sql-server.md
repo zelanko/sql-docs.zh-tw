@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c2044c56bdb1581f3d68af741198bcffa4ff6b4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e85f782e8229d6f1515ba9265cfe3e7c8910318a
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625666"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603580"
 ---
 # <a name="sql-server-installation"></a>SQL Server 安裝
 
@@ -44,7 +44,7 @@ ms.locfileid: "47625666"
 
 - [[!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] 的版本和支援的功能](~/sql-server/editions-and-components-of-sql-server-2017.md).  
 - [[!INCLUDE[ss2016](../../includes/sssql15-md.md)] 的版本和支援的功能](~/sql-server/editions-and-components-of-sql-server-2016.md).  
-- [[!INCLUDE[ss2014](../../includes/sssql14-md.md)] 的版本和支援的功能](http://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
+- [[!INCLUDE[ss2014](../../includes/sssql14-md.md)] 的版本和支援的功能](https://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
   
 ## <a name="in-this-section"></a>本節內容  
 不論您是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈或命令提示字元來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，安裝程序都包括下列步驟：  
@@ -59,7 +59,7 @@ ms.locfileid: "47625666"
 [安裝 SQL Server](../../database-engine/install-windows/install-sql-server.md)  
  說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的安裝選項。  
   
-[SQL Server 安裝程式使用者介面參考](http://msdn.microsoft.com/library/183b5cdd-962e-41ca-8064-ea44f622c77d)  
+[SQL Server 安裝程式使用者介面參考](https://msdn.microsoft.com/library/183b5cdd-962e-41ca-8064-ea44f622c77d)  
  描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈所顯示的安裝選項。  
   
 [升級 SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
@@ -75,12 +75,12 @@ ms.locfileid: "47625666"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 屬於 Microsoft BI 平台的功能包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，以及用來建立或處理分析資料的數種用戶端應用程式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式文件中的這一節將說明如何安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
 ## <a name="more-information"></a>[詳細資訊]
-[安裝具有 SharePoint 的 SQL Server BI 功能 &#40;PowerPivot 和 Reporting Services&#41;](http://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
+[安裝具有 SharePoint 的 SQL Server BI 功能 &#40;PowerPivot 和 Reporting Services&#41;](https://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
  本節說明如何在 SharePoint 環境中安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能， 同時也會列出特定版本 SharePoint 能使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 除此之外還會提供 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 及 SharePoint 模式下的 Reporting Services 安裝程序。  
   
 ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) 安裝新的範例資料庫， [Wide World Importers](../../sample/world-wide-importers/wide-world-importers-documentation.md)。 
   
-[其他 SQL Server 範例和範例資料庫](http://sqlserversamples.codeplex.com/)  
+[其他 SQL Server 範例和範例資料庫](https://sqlserversamples.codeplex.com/)  
  描述如何安裝及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 範例與範例資料庫。  
   
 請參閱 [SQL Server 更新中心](https://msdn.microsoft.com/library/ff803383.aspx) 連結和資訊，所有支援的 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]版本。  

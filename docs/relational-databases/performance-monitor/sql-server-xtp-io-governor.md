@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: performance-monitor
 ms.topic: conceptual
 ms.assetid: 91e176fe-c838-44e9-b4fc-2814a0551ca3
-author: dagiro
-ms.author: v-dagir
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6a82a841dcda9a663c9645cab5f04598c3407bda
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 34ceefa87a51ff0bc0c22643e18c8fb0e2393ace
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033312"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558305"
 ---
 # <a name="sql-server-xtp-io-governor"></a>SQL Server XTP IO 管理員
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -24,7 +24,7 @@ items:
     - name: PowerShell
       href: create-an-availability-group-sql-server-powershell.md
     - name: Azure 虛擬機器
-      href: http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
+      href: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
   - name: 接聽程式
     href: create-or-configure-an-availability-group-listener-sql-server.md
 - name: 概念
@@ -323,9 +323,9 @@ items:
         href: dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md
       - name: SQL Server 錯誤記錄
         href: sql-server-error-log-always-on-availability-groups.md
-ms.openlocfilehash: eb844e9ab22bfe204d787495896ba3bf0dd9c71a
-ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
+ms.openlocfilehash: c962e839ca3ced89bd8538bfbfe5273e5b837025
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45534010"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603688"
