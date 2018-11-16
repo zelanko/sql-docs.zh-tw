@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 930835c23ae211b6c909d62c693959bbbe6f2172
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 177d49376d7ed69c8a6ed14fa68326b1d54003fc
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662186"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603568"
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>接聽程式、用戶端連接和應用程式容錯移轉
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47662186"
  可用性群組接聽程式是由下列所定義：  
   
  唯一的 DNS 名稱  
- 這也稱為虛擬網路名稱 (VNN)。 套用 DNS 主機名稱的 Active Directory 命名規則。 如需詳細資訊，請參閱 [Active Directory 中的電腦、網域、站台及 OU 的命名慣例](http://support.microsoft.com/kb/909264) 知識庫文件。  
+ 這也稱為虛擬網路名稱 (VNN)。 套用 DNS 主機名稱的 Active Directory 命名規則。 如需詳細資訊，請參閱 [Active Directory 中的電腦、網域、站台及 OU 的命名慣例](https://support.microsoft.com/kb/909264) 知識庫文件。  
   
  一個或多個虛擬 IP 位址 (VIP)  
  為可用性群組可容錯移轉的一個或多個目標子網路設定 VIP。  
@@ -237,7 +237,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [可用性群組接聽程式簡介](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/16/introduction-to-the-availability-group-listener/) (SQL Server AlwaysOn 團隊部落格)  
   

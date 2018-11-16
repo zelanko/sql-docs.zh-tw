@@ -5,8 +5,7 @@ ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], renaming
@@ -16,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b6b97d2d670754f8205ffe269883d6791f605f5b
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: a0ea80a51a578f99cdff6189acacfe991ab34c43
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232532"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557835"
 ---
 # <a name="rename-a-database"></a>重新命名資料庫
 
@@ -38,7 +37,7 @@ ms.locfileid: "48232532"
   
 - 使用下列方法重新命名資料庫：  
   
-     [Transact-SQL](#rename-a-database-using-sql-server-management-studio)  
+     [SQL Server Management Studio](#rename-a-database-using-sql-server-management-studio)  
   
      [Transact-SQL](#rename-a-database-using-transact-sql)  
   

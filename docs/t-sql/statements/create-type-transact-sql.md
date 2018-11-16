@@ -27,12 +27,12 @@ ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fb00480cb014e994c0dd888afa35acaeb8dd93c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6dae0f33308ca37bb9a5fd4b0f1f94280ecbf146
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814576"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512893"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47814576"
 ## <a name="syntax"></a>語法  
   
 ```  
--- Disk-Based Type Syntax  
+-- User-defined Data Type Syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
     FROM base_type   
@@ -115,7 +115,7 @@ column_name AS computed_column_expression
 ```  
   
 ```  
--- Memory-Optimized Table Type Syntax  
+-- User-defined Table Types Syntax  
 CREATE TYPE [schema_name. ] type_name  
 AS TABLE ( { <column_definition> }  
     |  [ <table_constraint> ] [ ,... n ]    
