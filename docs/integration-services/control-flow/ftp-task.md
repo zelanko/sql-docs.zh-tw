@@ -17,12 +17,12 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55f98003cc391c3b5cf770646ccc2db783a99495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a02e688f6488fecdaeea6c668bc49d64a5698915
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599466"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641795"
 ---
 # <a name="ftp-task"></a>FTP 工作
   FTP 工作會下載和上傳資料檔以及管理伺服器上的目錄。 例如，封裝可從遠端伺服器或網際網路位置下載資料檔，此工作可視為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝工作流程的一部分。 您可將 FTP 工作用於下列用途：  
@@ -73,7 +73,7 @@ ms.locfileid: "47599466"
 ## <a name="related-tasks"></a>相關工作  
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具中設定這些屬性的詳細資訊，請參閱 [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
+ 如需如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具中設定這些屬性的詳細資訊，請參閱 [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
  如需以程式設計方式設定這些屬性的詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>。  
   

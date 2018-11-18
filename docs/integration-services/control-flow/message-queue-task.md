@@ -22,12 +22,12 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 260512d99817084b6a7cc4af1e39e6557f6fea37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61956bf22dc15c95d986317d3a3cf18e9ca4d58b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720206"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639885"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   「訊息佇列」工作可讓您使用 Message Queuing (又稱為 MSMQ) 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝之間傳送和接收訊息，或將訊息傳送至由自訂應用程式處理的應用程式佇列。 這些訊息可採用簡單文字、檔案或變數及其值的形式。  
@@ -42,7 +42,7 @@ ms.locfileid: "47720206"
   
  傳送或接收訊息時，「訊息佇列」工作會使用下列四種訊息類型之一：資料檔、字串、字串訊息至變數或變數。 只有接收訊息時才能使用「字串訊息至變數」訊息類型。  
   
- 工作使用 MSMQ 連接管理員以連接到訊息佇列。 如需詳細資訊，請參閱 [MSMQ 連線管理員](../../integration-services/connection-manager/msmq-connection-manager.md)。 如需有關 Message Queuing 的詳細資訊，請參閱 [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=7022)。  
+ 工作使用 MSMQ 連接管理員以連接到訊息佇列。 如需詳細資訊，請參閱 [MSMQ 連線管理員](../../integration-services/connection-manager/msmq-connection-manager.md)。 如需有關 Message Queuing 的詳細資訊，請參閱 [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022)。  
   
  「訊息佇列」工作要求安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 **[要安裝的元件]** 頁面或 **[特徵選取]** 頁面上選取要安裝的一些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，會安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件的部分子集。 這些元件對特定的工作有用，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能會受到限制。 例如， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 選項會安裝設計某個封裝所需的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件，但不會安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務，因此「訊息佇列」工作將無法運作。 為了確保 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的完整安裝，您必須在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [要安裝的元件] **頁面上選取** 。 如需安裝及執行「訊息佇列」工作的詳細資訊，請參閱 [安裝 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "47720206"
  如需有關以程式設計方式來設定這些屬性的詳細資訊，請參閱《開發人員指南》中 **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** 類別的文件。  
   
 ## <a name="related-tasks"></a>相關工作  
- 如需如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定這些屬性的詳細資訊，請參閱 [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
+ 如需如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定這些屬性的詳細資訊，請參閱 [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
 ## <a name="message-queue-task-editor-general-page"></a>訊息佇列工作編輯器 (一般頁面)
   使用 **[訊息佇列工作編輯器]** 對話方塊的 **[一般頁面]** ，即可命名和描述訊息佇列工作、指定訊息格式以及指出工作是否傳送或接收訊息。  
@@ -229,7 +229,7 @@ ms.locfileid: "47720206"
  **變數**  
  鍵入變數名稱，或按一下 [\<新增變數…>]，然後設定新的變數。  
   
- **相關主題：**[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：**[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="filter-dynamic-options"></a>篩選動態選項  
   
@@ -274,7 +274,7 @@ ms.locfileid: "47720206"
  **變數**  
  鍵入要保存已接收之訊息的變數名稱，或按一下 [\<新增變數…>]，然後設定新的變數。  
   
- **相關主題：**[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：**[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="select-variables"></a>選取變數
   使用 [選取變數] 對話方塊，即可指定在訊息佇列工作中用於傳送訊息作業的變數。 [可用的變數] 清單包含在訊息佇列工作或其父容器之範圍中的系統和使用者自訂變數。 此工作使用 [選取的變數] 清單中的變數。  
@@ -295,7 +295,7 @@ ms.locfileid: "47720206"
  **新增變數**  
  建立新變數。  
   
- **相關主題：**[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：**[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  

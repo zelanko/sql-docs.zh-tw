@@ -11,12 +11,12 @@ ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f87ea27f4643ec12173f6793f7019de27a4f32f0
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 33c01da8b0ae9f439debe2f8343bddbc1c7de2fe
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100329"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698486"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>將步驟加入至 SQL Server Agent 主要作業
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -88,5 +88,5 @@ ms.locfileid: "50100329"
     GO  
     ```  
   
-如需詳細資訊，請參閱 [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)。  
+如需詳細資訊，請參閱 [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)。  
   

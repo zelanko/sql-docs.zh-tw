@@ -10,12 +10,12 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fcb60c8c249f0b1f1a789b25134bfbcc2419210a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cfc2b3cbb9dedc9f2b8902229c6aea9e68226ec
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694497"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603994"
 ---
 # <a name="configure-distributed-availability-group"></a>設定分散式的可用性群組  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ GO
 ```  
   
 > [!NOTE]  
->  **LISTENER_URL** 會指定每個可用性群組的接聽程式，以及可用性群組的資料庫鏡像端點。 在此範例中，其為通訊埠 `5022` (非用於建立接聽程式的通訊埠 `60173` )。 如果您要使用負載平衡器 (例如在 Azure 中)，則請[新增分散式可用性群組連接埠的負載平衡規則](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group)。 除了 SQL Server 執行個體連接埠之外，還需要新增接聽程式連接埠的規則。 
+>  **LISTENER_URL** 會指定每個可用性群組的接聽程式，以及可用性群組的資料庫鏡像端點。 在此範例中，其為通訊埠 `5022` (非用於建立接聽程式的通訊埠 `60173` )。 如果您要使用負載平衡器 (例如在 Azure 中)，則請[新增分散式可用性群組連接埠的負載平衡規則](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group)。 除了 SQL Server 執行個體連接埠之外，還需要新增接聽程式連接埠的規則。 
   
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>將分散式可用性群組加入第二個叢集  
  然後在第二個 WSFC 上聯結分散式可用性群組。  

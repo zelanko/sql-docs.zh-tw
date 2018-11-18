@@ -201,5 +201,5 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 ## <a name="next-steps"></a>後續步驟
 
 針對 Hadoop 安全性設定，請參閱[設定 Hadoop 安全性](polybase-configure-hadoop-security.md)。<br>
-如需有關 PolyBase 的詳細資訊，請參閱 <<c0> [ 什麼是 PolyBase？](../relational-databases/polybase/polybase-guide.md)。 
+如需有關 PolyBase 的詳細資訊，請參閱 [ 什麼是 PolyBase？](../relational-databases/polybase/polybase-guide.md)。 
  

@@ -5,8 +5,7 @@ ms.date: 02/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - VIA protocol
@@ -35,12 +34,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a939d2d7ab238e418578f93fb6b1f052539e781a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb9338a5951f480baa052aff771f3d149282f18a
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767456"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350072"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2016"></a>SQL Server 2016 中已停止的 Database Engine 功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

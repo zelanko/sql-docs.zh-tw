@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - Data sync
@@ -33,12 +32,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1427cea1e6a920b0c3705a5a305e165b4ccb99be
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: f6771cb18d227c4e81290129ed5611da584988e7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991092"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665009"
 ---
 # <a name="database-lifecycle-management"></a>資料庫生命週期管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,13 +45,13 @@ ms.locfileid: "49991092"
   
  DLM 一開始會探討專案設計與意圖，接著探討資料庫開發、測試、建置、部署、維護、監視和備份活動，最後再探討資料封存。 本主題將提供 DLM 各階段的概觀：從資料庫開發開始，然後依序進行建置、部署和監視動作。 同時也包含資料管理活動，以及資料可攜性作業，例如匯入/匯出、備份、移轉和同步。  
   
- 若要閱讀完整主題，請參閱 [Database Lifecycle Management (DLM)](http://go.microsoft.com/fwlink/?LinkId=276949)(資料庫生命週期管理 (DLM))。  
+ 若要閱讀完整主題，請參閱 [Database Lifecycle Management (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949)(資料庫生命週期管理 (DLM))。  
   
 ## <a name="see-also"></a>另請參閱  
- [Windows Azure 首頁](http://www.windowsazure.com/)   
- [Windows Azure 開發人員中心](http://www.windowsazure.com/develop/overview/)   
- [Windows Azure 管理中心](http://www.windowsazure.com/manage/overview/)   
- [Windows Azure 團隊部落格](http://www.windowsazure.com/community/blog/)   
- [Windows Azure 支援選項](http://www.windowsazure.com/support/contact/)  
+ [Windows Azure 首頁](https://www.windowsazure.com/)   
+ [Windows Azure 開發人員中心](https://www.windowsazure.com/develop/overview/)   
+ [Windows Azure 管理中心](https://www.windowsazure.com/manage/overview/)   
+ [Windows Azure 團隊部落格](https://www.windowsazure.com/community/blog/)   
+ [Windows Azure 支援選項](https://www.windowsazure.com/support/contact/)  
   
   

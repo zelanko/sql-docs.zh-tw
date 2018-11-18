@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 52829a433526e10b3170610a1f9281bfbd9a5796
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43fe7c85f87c0022db14cb7553d4771385017096
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840476"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699067"
 ---
 # <a name="manage-job-steps"></a>管理作業步驟
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47840476"
   
 每個作業步驟都是在特定的安全性內容中執行。 如果作業步驟指定 Proxy，則作業步驟會在該 Proxy 認證的安全性內容中執行。 如果作業步驟未指定 Proxy，則作業步驟會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶的內容中執行。 只有系統管理員 (sysadmin) 固定伺服器角色的成員，才可以建立未明確指定 Proxy 的作業。  
   
-因為作業步驟是在特定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 使用者的環境中執行，因此該使用者需具備讓作業步驟執行所需的權限和組態。 例如，如果您建立了一個作業，它需要磁碟機代號或通用命名慣例 (UNC) 路徑，則在測試工作時，其作業步驟可能會在您的 Windows 使用者帳戶下執行。 不過，作業步驟的 Windows 使用者也必須具備必要的權限、磁碟機代號組態或必要磁碟機的存取權， 否則，作業步驟會失敗。 若要防止此問題發生，請確定每一個作業步驟的 Proxy，對於作業步驟所執行的工作都具有必要權限。 如需詳細資訊，請參閱 [安全性與保護 (Database Engine)](http://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7)。  
+因為作業步驟是在特定 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 使用者的環境中執行，因此該使用者需具備讓作業步驟執行所需的權限和組態。 例如，如果您建立了一個作業，它需要磁碟機代號或通用命名慣例 (UNC) 路徑，則在測試工作時，其作業步驟可能會在您的 Windows 使用者帳戶下執行。 不過，作業步驟的 Windows 使用者也必須具備必要的權限、磁碟機代號組態或必要磁碟機的存取權， 否則，作業步驟會失敗。 若要防止此問題發生，請確定每一個作業步驟的 Proxy，對於作業步驟所執行的工作都具有必要權限。 如需詳細資訊，請參閱 [安全性與保護 (Database Engine)](https://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7)。  
   
 ## <a name="job-step-logs"></a>作業步驟記錄  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 可以將某些作業步驟的輸出寫入作業系統檔案，或寫入 msdb 資料庫中的 sysjobstepslogs 資料表。 以下作業步驟類型可以寫入輸出至兩個目的地：  
@@ -96,7 +96,7 @@ ms.locfileid: "47840476"
   
 (選擇性) 您也可以開啟現有的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 檔案做為作業步驟的命令。  
   
-[!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟不使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy。 相反地，如果作業步驟的擁有者是系統管理員 (sysadmin) 固定伺服器角色的成員，則作業步驟會以作業步驟的擁有者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶的身分來執行。 系統管理員 (sysadmin) 固定伺服器角色的成員也可以指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟在另一個使用者內容之下執行，方法是使用 sp_add_jobstep 預存程序的 *database_user_name* 參數。 如需詳細資訊，請參閱 [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)。  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟不使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy。 相反地，如果作業步驟的擁有者是系統管理員 (sysadmin) 固定伺服器角色的成員，則作業步驟會以作業步驟的擁有者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶的身分來執行。 系統管理員 (sysadmin) 固定伺服器角色的成員也可以指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟在另一個使用者內容之下執行，方法是使用 sp_add_jobstep 預存程序的 *database_user_name* 參數。 如需詳細資訊，請參閱 [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)。  
   
 > [!NOTE]  
 > 單一 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟可包含多個批次。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟可包含內嵌 GO 命令。  
@@ -108,7 +108,7 @@ ms.locfileid: "47840476"
   
 -   要開啟之現有的 PowerShell 指令碼檔案。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent PowerShell 子系統會開啟一個 PowerShell 工作階段，並載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元。當作作業步驟命令使用的 PowerShell 指令碼可以參考 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者和指令程式。 如需使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元撰寫 PowerShell 指令碼的詳細資訊，請參閱 [SQL Server PowerShell](http://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7)。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent PowerShell 子系統會開啟一個 PowerShell 工作階段，並載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元。當作作業步驟命令使用的 PowerShell 指令碼可以參考 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者和指令程式。 如需使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元撰寫 PowerShell 指令碼的詳細資訊，請參閱 [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7)。  
   
 ## <a name="activex-scripting-job-steps"></a>ActiveX Scripting 作業步驟  
   
@@ -172,7 +172,7 @@ Set oServer = nothing
   
 -   輸入要執行的陳述式。 陳述式必須為多維度運算式 (MDX) 查詢。  
   
-如需 MDX 的詳細資訊，請參閱 [MDX 陳述式基礎觀念 (MDX)](http://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b)。  
+如需 MDX 的詳細資訊，請參閱 [MDX 陳述式基礎觀念 (MDX)](https://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b)。  
   
 ## <a name="integration-services-packages"></a>Integration Services 封裝  
 當您建立 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝作業步驟時，必須執行以下動作：  
@@ -217,7 +217,7 @@ Set oServer = nothing
 |描述如何刪除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟記錄。|[Delete a Job Step Log](../../ssms/agent/delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>另請參閱  
-[sysjobstepslogs (Transact-SQL)](http://msdn.microsoft.com/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
+[sysjobstepslogs (Transact-SQL)](https://msdn.microsoft.com/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
 [建立作業](../../ssms/agent/create-jobs.md)  
-[sp_add_job (Transact-SQL)](http://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
+[sp_add_job (Transact-SQL)](https://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
   

@@ -16,12 +16,12 @@ ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2763491ea1e6ee9793d2b2641e46d957a0982e0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84016132e2f61816cc392175927296786f27ce24
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763946"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696756"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>升級 SQL Server 容錯移轉叢集執行個體 (安裝程式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "47763946"
   
 10. [磁碟空間需求] 頁面會計算您所指定之功能的所需磁碟空間，並且比較空間需求與執行安裝程式之電腦的可用磁碟空間。  
   
-11. 在 [全文檢索搜尋升級] 頁面上，針對升級的資料庫指定升級選項。 如需詳細資訊，請參閱 [全文檢索搜尋升級選項](http://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)。  
+11. 在 [全文檢索搜尋升級] 頁面上，針對升級的資料庫指定升級選項。 如需詳細資訊，請參閱 [全文檢索搜尋升級選項](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)。  
   
 12. 在 **[錯誤報告]** 頁面上，指定您想要傳送給 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 的資訊，這可協助改善 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 錯誤報告選項預設為啟用。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "47763946"
   
 -   [變更資料庫相容性模式並使用查詢存放區](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)  
   
--   [善用新的 SQL Server 2016 功能](http://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
+-   [善用新的 SQL Server 2016 功能](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
   
 ## <a name="see-also"></a>另請參閱  
  [升級 SQL Server 容錯移轉叢集執行個體](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)   

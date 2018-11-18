@@ -16,12 +16,12 @@ ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ab8fe68907b558b5556f9a68e445fe6412155c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d74b4642fc3a8b9ad08796a4ff032088310acbe
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853656"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639445"
 ---
 # <a name="copy-package-objects"></a>複製封裝物件
   此主題描述如何在某個封裝內或兩個封裝之間複製控制流程項目、資料流程項目和連接管理員。  
@@ -65,7 +65,7 @@ ms.locfileid: "47853656"
 ## <a name="see-also"></a>另請參閱  
  [控制流程](../integration-services/control-flow/control-flow.md)   
  [資料流程](../integration-services/data-flow/data-flow.md)   
- [Integration Services &#40;SSIS&#41; 連線](../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [複製專案項目](http://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
+ [Integration Services &#40;SSIS&#41; 連接](../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [複製專案項目](https://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
   

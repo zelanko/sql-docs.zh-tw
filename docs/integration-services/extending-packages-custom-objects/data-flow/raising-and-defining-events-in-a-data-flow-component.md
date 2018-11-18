@@ -21,12 +21,12 @@ ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f03a535b5a4de1796d310b3b4c45d55d8c83b81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79c8828067f72645d9d251111aed40f472c8bf0e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829426"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640245"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>在資料流程元件中引發和定義事件
   元件開發人員可以引發 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 介面中定義的事件子集，其方式是呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 屬性上所公開的方法。 您也可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.EventInfos%2A> 集合來定義自訂事件，然後在執行期間使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> 方法來引發這些事件。 本章節描述如何建立及引發事件，並提供有關您在設計階段的何時應該引發事件的指引。  
@@ -93,6 +93,6 @@ End Sub
 
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 事件處理常式](../../../integration-services/integration-services-ssis-event-handlers.md)   
- [將事件處理常式新增至套件](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
+ [將事件處理常式新增至套件](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   

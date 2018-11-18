@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 1a982b90e9bbbb919e78d77e071ea13a6cff1bd3
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: d706feed2f2826afa6bb975d4ce47170b71126c4
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460683"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605328"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>從安裝精靈安裝 SQL Server 2016 (安裝程式)
 
@@ -69,7 +69,7 @@ Microsoft 發現特定版本的 Microsoft VC++ 2013 Runtime 二進位檔問題�
 4.  在 [授權條款] 頁面上，檢閱授權合約，並在同意時，選取 [我接受授權條款]  核取方塊，然後按 [下一步] 。  
 
   >[!NOTE]
-  > SQL Server 會將您的安裝經驗及其他使用方式與效能資料的相關資訊傳送給 Microsoft，以協助改進產品。 若要深入了解 SQL Server 資料處理與隱私權控制，請參閱[隱私權聲明](https://privacy.microsoft.com/en-us/privacystatement)和[設定 SQL Server 將意見反應傳送給 Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016)。 
+  > SQL Server 會將您的安裝經驗及其他使用方式與效能資料的相關資訊傳送給 Microsoft，以協助改進產品。 若要深入了解 SQL Server 資料處理與隱私權控制，請參閱[隱私權聲明](https://privacy.microsoft.com/privacystatement)和[設定 SQL Server 將意見反應傳送給 Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016)。 
   
 5.  在 [全域規則] 視窗中，如果沒有規則錯誤，安裝程序會自動前進到 [產品更新] 視窗。  
   

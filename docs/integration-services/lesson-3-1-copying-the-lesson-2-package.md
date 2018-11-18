@@ -11,12 +11,12 @@ ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cc63345e757ca07490a6bf365c2523ccda8b0c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae60895da9a461b7bcf7fb8fa034833e39c68e1a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761446"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637785"
 ---
 # <a name="lesson-3-1---copying-the-lesson-2-package"></a>課程 3-1 - 複製第 2 課的封裝
 在這項工作中，您將為第 2 課所建立的 Lesson 2.dtsx 套件建立複本。 另外，您也可以將此教學課程中隨附之已完成的第 2 課套件加入專案，然後改為複製該套件。 在第 3 課其餘的課程中，您將使用這個新的複本。  
@@ -53,7 +53,7 @@ ms.locfileid: "47761446"
   
     若要下載此教學課程的所有課程封裝，請執行下列動作。  
   
-    1.  導覽至 [Integration Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  導覽至 [Integration Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  按一下 **[下載]** 索引標籤。  
   

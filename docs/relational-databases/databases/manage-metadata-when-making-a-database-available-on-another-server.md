@@ -5,8 +5,7 @@ ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cross-database queries [SQL Server]
@@ -36,12 +35,12 @@ ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e67b8ad7112be79d34a1bfa790d5e05fde67377b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8480a8b8f3889a1686d29bcd3858ee3921383cd
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840986"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559467"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>管理在另一部伺服器上提供資料庫時所需的中繼資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -267,7 +266,7 @@ ms.locfileid: "47840986"
 > **注意：** 如需如何設定鏡像資料庫登入的資訊，請參閱[設定資料庫鏡像或 AlwaysOn 可用性群組的登入帳戶 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 和[角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
   
   
-##  <a name="permissions"></a> 權限  
+##  <a name="permissions"></a> Permissions  
  當您在其他伺服器執行個體上提供資料庫時，可能會影響下列類型的權限。  
   
 -   系統物件的 GRANT、REVOKE 或 DENY 權限  

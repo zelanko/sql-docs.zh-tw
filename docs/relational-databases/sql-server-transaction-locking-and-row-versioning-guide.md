@@ -5,8 +5,7 @@ ms.date: 02/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, transaction locking and row versioning
@@ -18,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c99ea57cbfbf5b24dc94b7827cf958495a759a76
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: ef1ca3b64ee0e70dd71bfcea3fc270790343e204
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906528"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661107"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>交易鎖定與資料列版本設定指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -1861,7 +1860,7 @@ GO
  您可能必須使用 KILL 陳述式。 但是，請小心使用此陳述式，尤其是執行重要處理序時。 如需詳細資訊，請參閱 [KILL &#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md)。  
   
 ##  <a name="Additional_Reading"></a> 其他閱讀資料   
-[資料列版本設定的額外負荷](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
+[資料列版本設定的額外負荷](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
 [擴充事件](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [動態管理檢視與函數 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      

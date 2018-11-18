@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2bde47d4db0a86d84715a0265042e57e2202f497
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6580a1df3ed83d0eec4d6dada7ed2954f44b8989
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704216"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700796"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多重子網路叢集 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,8 +77,8 @@ ms.locfileid: "47704216"
 |安裝 SQL Server 容錯移轉叢集|[建立新的 SQL Server 容錯移轉叢集 (安裝程式)](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |現有 SQL Server 容錯移轉叢集的就地升級|[升級 SQL Server 容錯移轉叢集執行個體 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |維護現有 SQL Server 容錯移轉叢集|[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
-|使用容錯移轉叢集管理嵌入式管理單元檢視 WSFC 事件和記錄|[檢視容錯移轉叢集的事件和記錄檔](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
-|使用 Windows PowerShell 建立 WSFC 容錯移轉叢集中所有節點 (或特定節點) 的記錄檔|[Get-ClusterLog 容錯移轉叢集指令程式](http://technet.microsoft.com/library/ee461045.aspx)|  
+|使用容錯移轉叢集管理嵌入式管理單元檢視 WSFC 事件和記錄|[檢視容錯移轉叢集的事件和記錄檔](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
+|使用 Windows PowerShell 建立 WSFC 容錯移轉叢集中所有節點 (或特定節點) 的記錄檔|[Get-ClusterLog 容錯移轉叢集指令程式](https://technet.microsoft.com/library/ee461045.aspx)|  
   
 
   

@@ -21,12 +21,12 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: df9d03fda22eae666d589e6cc3706e84aee6825d
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: ff7bffcb3a31a697300d98e0de03a7f3e3111701
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033205"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681336"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>註冊 SQL Server 的執行個體 (SQL Server 公用程式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,12 +94,12 @@ ms.locfileid: "51033205"
  若要繼續進行，請按 **[下一步]**。  
   
 ##  <a name="Instance_name"></a> 指定 SQL Server 的執行個體  
- 若要從連接對話方塊選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請按一下 [連接...]。 使用以下格式提供電腦名稱和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱：ComputerName\InstanceName。 如需詳細資訊，請參閱[連接到伺服器 &#40;Database Engine&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
+ 若要從連接對話方塊選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請按一下 [連接...]。 使用以下格式提供電腦名稱和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱：ComputerName\InstanceName。 如需詳細資訊，請參閱[連接到伺服器 &#40;Database Engine&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
   
  若要繼續進行，請按 **[下一步]**。  
   
 ##  <a name="Connection_dialog"></a> 連接對話方塊  
- 在 [連接到伺服器] 對話方塊中，確認伺服器類型、電腦名稱及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱資訊。 如需詳細資訊，請參閱[連接到伺服器 &#40;Database Engine&#41;](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
+ 在 [連接到伺服器] 對話方塊中，確認伺服器類型、電腦名稱及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱資訊。 如需詳細資訊，請參閱[連接到伺服器 &#40;Database Engine&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
   
 > [!NOTE]  
 >  如果連接已加密，將會使用加密的連接。 如果連接未加密， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式會使用加密的連接重新連接。  
@@ -129,7 +129,7 @@ ms.locfileid: "51033205"
 |必須停止指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的收集組。|在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上停止預先存在的收集組。 如果資料收集器已停用，請啟用它，並停止任何執行中的收集組，然後針對建立 UCP 作業重新執行驗證規則。<br /><br /> 若要啟用資料收集器：<br /><br /> 在 [物件總管] 中，展開 **[管理]** 節點。<br /><br /> 以滑鼠右鍵按一下 **[資料收集]**，然後按一下 **[啟用資料收集]**。<br /><br /> 若要停止收集組：<br /><br /> 在 [物件總管] 中，依序展開 [管理] 節點、 **[資料收集]** 和 **[系統資料收集組]**。<br /><br /> 以滑鼠右鍵按一下您要停止的收集組，然後按一下 **[停止資料收集組]**。<br /><br /> 訊息方塊會顯示此動作的結果，而此收集組圖示上的紅色圓圈會指示此收集組已經停止。|  
 |必須在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務。|請在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 服務。 如果指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體，那麼請將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務設定為手動啟動。 否則，請將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務設定為自動啟動。|  
 |必須在 UCP 上啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務。|在 UCP 上啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體，那麼請將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務設定為手動啟動。 否則，請將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務設定為自動啟動。|  
-|WMI 必須正確設定。|若要針對 WMI 組態進行疑難排解，請參閱 [疑難排解 SQL Server 公用程式](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)。|  
+|WMI 必須正確設定。|若要針對 WMI 組態進行疑難排解，請參閱 [疑難排解 SQL Server 公用程式](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶必須是 UCP 上的有效 Windows 網域帳戶。|指定有效的 Windows 網域帳戶。 若要確保此帳戶是有效的，請使用 Windows 網域帳戶登入 UCP。|  
 |如果您選取 Proxy 帳戶選項， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶必須是指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上的有效 Windows 網域帳戶。|指定有效的 Windows 網域帳戶。 若要確保此帳戶是有效的，請使用 Windows 網域帳戶登入指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶不得為類似 Network Service 的內建帳戶。|將此帳戶重新指派給 Windows 網域帳戶。 若要確保此帳戶是有效的，請使用 Windows 網域帳戶登入指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|  
@@ -173,7 +173,7 @@ ms.locfileid: "51033205"
 >   
 >  其他資訊: 無法獲得關於 Windows NT 群組/使用者 '\<域名稱\帳戶名稱>' 的資訊，錯誤碼 0x5。 (Microsoft SQL Server，錯誤：15404)  
 >   
->  如需對這個失敗進行疑難排解的詳細資訊，請參閱 [疑難排解 SQL Server 公用程式](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)。  
+>  如需對這個失敗進行疑難排解的詳細資訊，請參閱 [疑難排解 SQL Server 公用程式](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)。  
   
 > [!IMPORTANT]  
 >  請勿在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體上變更「公用程式資訊」收集組的任何屬性，也請勿手動開啟/關閉資料收集，因為資料收集是由公用程式代理程式作業所控制。  
@@ -199,6 +199,6 @@ ms.locfileid: "51033205"
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 公用程式的功能與工作](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [監視 SQL Server 公用程式中的 SQL Server 執行個體](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [疑難排解 SQL Server 公用程式](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
+ [疑難排解 SQL Server 公用程式](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

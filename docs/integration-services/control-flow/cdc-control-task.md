@@ -14,12 +14,12 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74609a50ad4d2f29bbbd7d25cc4cd1a242e64ff4
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: b187fb1d2e5595ef1ec75ed99c9a6e3f85029f3e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071752"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640695"
 ---
 # <a name="cdc-control-task"></a>CDC 控制工作
   CDC 控制工作是用來控制異動資料擷取 (CDC) 封裝的開發週期。 它會處理 CDC 封裝與初始載入封裝的同步處理，以及 CDC 封裝執行中所處理之記錄序號 (LSN) 範圍的管理。 此外，CDC 控制工作也會處理錯誤狀況和復原。  
@@ -78,11 +78,11 @@ ms.locfileid: "49071752"
   
 ## <a name="related-content"></a>相關內容  
   
--   social.technet.microsoft.com 上的技術文章： [安裝 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](http://go.microsoft.com/fwlink/?LinkId=252958)。  
+-   social.technet.microsoft.com 上的技術文章： [安裝 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252958)。  
   
--   social.technet.microsoft.com 上的技術文章： [疑難排解 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity 中的組態問題](http://go.microsoft.com/fwlink/?LinkId=252960)。  
+-   social.technet.microsoft.com 上的技術文章： [疑難排解 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity 中的組態問題](https://go.microsoft.com/fwlink/?LinkId=252960)。  
   
--   social.technet.microsoft.com 上的技術文章： [疑難排解 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity 中的 CDC 執行個體錯誤](http://go.microsoft.com/fwlink/?LinkId=252961)。  
+-   social.technet.microsoft.com 上的技術文章： [疑難排解 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity 中的 CDC 執行個體錯誤](https://go.microsoft.com/fwlink/?LinkId=252961)。  
   
 ## <a name="cdc-control-task-editor"></a>CDC 控制工作編輯器
   使用 **[CDC 控制工作編輯器]** 對話方塊，即可設定 CDC 控制工作。 CDC 控制工作組態包括定義 CDC 資料庫的連接、CDC 工作作業，以及狀態管理資訊。  

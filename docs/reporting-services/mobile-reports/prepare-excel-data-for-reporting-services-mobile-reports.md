@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f6b9807928cf7caae55c6002daa428955a19a2ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9285b9b89930fe540f9b5493f1730184cf4e9526
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708426"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813831"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>準備 Reporting Services 行動報表的 Excel 資料
   
@@ -86,8 +86,8 @@ Excel 工作表中的自訂物件，包括樞紐分析表、視覺效果和影�
 ### <a name="see-also"></a>另請參閱  
 - [Prepare data for Reporting Services mobile reports (準備 Reporting Services 行動報表的資料)](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
 - [使用 SQL Server 行動報表發行工具建立與發行行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
--  在 [iPad app 中檢視 SQL Server 行動報表和 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI for iOS)  
--  請參閱 [在 iPhone 應用程式中檢視 SQL Server 行動報表和 KPI (iOS 版 Power BI)](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (iOS 版 Power BI)  
+-  在 [iPad app 中檢視 SQL Server 行動報表和 KPI](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI for iOS)  
+-  請參閱 [在 iPhone 應用程式中檢視 SQL Server 行動報表和 KPI (iOS 版 Power BI)](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (iOS 版 Power BI)  
   
   
   

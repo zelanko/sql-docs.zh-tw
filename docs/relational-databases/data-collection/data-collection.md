@@ -14,12 +14,12 @@ ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14abdd44fca86401238db0216febb5a6a002ffa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 091c4034071394d03c1548290c5d6eea08d50b8e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596786"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662337"
 ---
 # <a name="data-collection"></a>資料收集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47596786"
   
  資料收集器可讓您調整資料收集的範圍，以適合測試與實際環境的需要。 資料收集器也會使用資料倉儲，這是藉由設定不同的資料保留期間而讓您管理所收集之資料的關聯式資料庫。  
   
- 資料收集器支援動態微調資料收集，而且可透過它的 API 加以擴充。 如需詳細資訊，請參閱 [Data Collector Programming](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)。  
+ 資料收集器支援動態微調資料收集，而且可透過它的 API 加以擴充。 如需詳細資訊，請參閱 [Data Collector Programming](https://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)。  
   
  下圖顯示資料收集器如何納入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]資料收集和資料管理的整體策略中。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47596786"
   
 -   Proxy 帳戶  
   
- 如需詳細資訊，請參閱[自動化管理工作 &#40;SQL Server Agent&#41;](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)。  
+ 如需詳細資訊，請參閱[自動化管理工作 &#40;SQL Server Agent&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 可用來執行從個別資料提供者收集資料的套件。 您應該要熟悉下列的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 工具和概念：  
   

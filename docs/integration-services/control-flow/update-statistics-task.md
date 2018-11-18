@@ -16,12 +16,12 @@ ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 096b8cdc93f09056dbd52d792a93884008cc3525
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8ccaac651915cb79814999c1e3ffd0e37aeb715
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739428"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641935"
 ---
 # <a name="update-statistics-task"></a>更新統計資料工作
   「更新統計資料」工作會在指定的資料表或索引檢視表中，更新一個或多個統計群組 (集合) 索引鍵值散發的詳細資訊。 如需詳細資訊，請參閱 [Statistics](../../relational-databases/statistics/statistics.md)。  
@@ -44,7 +44,7 @@ ms.locfileid: "47739428"
 >  此工作用於建立工作執行的 Transact-SQL 陳述式之時間，與工作更新的統計資料數成正比。 如果此工作設定成更新含有大量索引的資料庫內所有資料表與檢視表中的統計資料，或是更新多重資料庫中的統計資料，則此工作可能會花費相當多的時間產生 Transact-SQL 陳述式。  
   
 ## <a name="configuration-of-the-update-statistics-task"></a>設定更新統計資料工作  
- 您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」設定屬性 這項工作位於「 **設計師」中** [工具箱] **的** [維護計畫工作] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 區段。  
+ 您可以透過 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 設定屬性。 這項工作位於「 **設計師」中** [工具箱] **的** [維護計畫工作] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 區段。  
   
  如需有關可在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列主題：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47739428"
 ## <a name="related-tasks"></a>相關工作  
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   

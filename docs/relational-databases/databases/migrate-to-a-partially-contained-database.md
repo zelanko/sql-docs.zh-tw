@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, migrating to
@@ -14,12 +13,12 @@ ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c4089eabbc972a5c68237859e1b021c74c418d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc658daa87062450c8b98f6bc9d7548feba4de31
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719906"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559215"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "47719906"
  您必須先在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體上啟用自主資料庫，然後才能建立自主資料庫。  
   
 ### <a name="enabling-contained-databases-using-transact-sql"></a>使用 Transact-SQL 來啟用自主資料庫  
- 下列範例會在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體上啟用自主資料庫。  
+ 下列範例會在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體上啟用自主資料庫。  
   
 ```sql  
 sp_configure 'contained database authentication', 1;  

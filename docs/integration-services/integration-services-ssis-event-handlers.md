@@ -22,12 +22,12 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb2e06d17fcea51da160b9d5c8d4002c5b3fd21b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aab1631f282ff05af8f7e2a1089d7234325ef1e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788696"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642105"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件處理常式
   在執行階段，可執行檔 (封裝和「Foreach 迴圈」、「For 迴圈」、「時序」，以及工作主機容器) 會引發事件。 例如，當發生錯誤時，會引發 OnError 事件。 您可以建立這些事件的自訂事件處理常式，以擴充封裝功能，並使封裝在執行階段易於管理。 事件處理常式可以執行下列工作：  
@@ -96,7 +96,7 @@ ms.locfileid: "47788696"
   
  當 [事件處理常式] 索引標籤為使用中時，[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中 [工具箱] 的 [控制流程項目] 和 [維護計畫工作] 節點，會包含用於在事件處理常式中建立控制流程的工作及容器。 [資料流程來源]、[轉換] 及 [資料流程目的地] 節點包含用於在事件處理常式中建立資料流程的資料來源、轉換及目的地。 如需詳細資訊，請參閱[控制流程](../integration-services/control-flow/control-flow.md)和[資料流程](../integration-services/data-flow/data-flow.md)。  
   
- [事件處理常式] 索引標籤還包含 [連線管理員] 區域，在此區域中，您可以建立並修改事件處理常式用於連接到伺服器和資料來源的連線管理員。 如需詳細資訊，請參閱[建立連線管理員](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
+ [事件處理常式] 索引標籤還包含 [連線管理員] 區域，在此區域中，您可以建立並修改事件處理常式用於連接到伺服器和資料來源的連線管理員。 如需詳細資訊，請參閱[建立連線管理員](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
   
 ### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>在事件處理常式索引標籤上新增事件處理常式  
   
@@ -125,11 +125,11 @@ ms.locfileid: "47788696"
 ## <a name="set-the-properties-of-an-event-handler"></a>設定事件處理常式的屬性  
  您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性] 視窗中，或以程式設計方式設定屬性。  
   
- 如需如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中設定這些屬性的相關資訊，請參閱 [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
+ 如需如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中設定這些屬性的相關資訊，請參閱 [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
  如需以程式設計方式設定這些屬性的相關資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>。  
   
 ## <a name="related-tasks"></a>相關工作  
- 如需如何將事件處理常式加入封裝的相關資訊，請參閱 [將事件處理常式加入封裝中](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)。  
+ 如需如何將事件處理常式加入封裝的相關資訊，請參閱[將事件處理常式加入封裝中](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)。  
   
   

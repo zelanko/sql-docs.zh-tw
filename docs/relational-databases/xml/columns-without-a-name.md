@@ -13,12 +13,12 @@ ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af2a05622ab072d7b611dd5561047c3b00c4fa61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7990de0a0fb9dec2ee969ecdfe183a4e565777c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732306"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675307"
 ---
 # <a name="columns-without-a-name"></a>沒有名稱的資料行
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ USE AdventureWorks2012;
 GO  
 SELECT ProductModelID,  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
                 /MI:root/MI:Location   
               ')   
 FROM Production.ProductModel  

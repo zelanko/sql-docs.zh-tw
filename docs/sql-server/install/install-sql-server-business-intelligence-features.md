@@ -10,12 +10,12 @@ ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a309b4884d870d6d17a19f73144725077005f18a
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: b181ab608b059890a74435e07f010e7633e965d4
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099310"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696056"
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>安裝 SQL Server Business Intelligence 功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,10 +42,10 @@ ms.locfileid: "50099310"
 -   [安裝 Reporting Services SharePoint 模式](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)  
 
 > [!NOTE]
-> SQL Server 2016 不含 SQL Server Data Tools (SSDT)。 [下載 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)。
+> SQL Server 2016 不含 SQL Server Data Tools (SSDT)。 [下載 SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)。
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services &#40;SSRS&#41; 的新功能](http://msdn.microsoft.com/bc909063-6b84-4b3a-80d2-e93fc04b4b9d)   
+ [Reporting Services &#40;SSRS&#41; 的新功能](https://msdn.microsoft.com/bc909063-6b84-4b3a-80d2-e93fc04b4b9d)   
  [Analysis Services 的新功能](../../analysis-services/what-s-new-in-analysis-services.md)   
  [Integration Services 的新功能](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)   
  [Master Data Services &#40;MDS&#41; 的新功能](../../master-data-services/what-s-new-in-master-data-services-mds.md)   

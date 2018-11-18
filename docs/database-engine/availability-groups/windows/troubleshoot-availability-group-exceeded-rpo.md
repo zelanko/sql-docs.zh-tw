@@ -10,12 +10,12 @@ ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a29d3176e364eca785727f49d6be9522147ef36e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f70ce34097cc2057344864b1db4ed7ce17a01311
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722506"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602863"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>疑難排解：可用性群組超過 RPO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47722506"
   
  此外，檢查兩個效能物件 `SQL Server:Availability Replica > Flow Control Time (ms/sec)` 和 `SQL Server:Availability Replica > Flow Control/sec` 也很有用。 乘以這兩個值可以提供您在最後一刻等候流量控制清除花費了多少時間。 流量控制等候的時間越長，傳送速率越低。  
   
- 下列計量對於診斷網路延遲和輸送量很有用。 您可以使用其他 Windows 工具，例如 **ping.exe** 和[網路監視器](http://www.microsoft.com/download/details.aspx?id=4865)評估延遲和網路使用率。  
+ 下列計量對於診斷網路延遲和輸送量很有用。 您可以使用其他 Windows 工具，例如 **ping.exe** 和[網路監視器](https://www.microsoft.com/download/details.aspx?id=4865)評估延遲和網路使用率。  
   
 -   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   
@@ -70,7 +70,7 @@ ms.locfileid: "47722506"
  一旦記錄區塊在記錄檔上經過強化，就能防止資料遺失。 因此，請務必將記錄檔與資料檔案隔離。 如果記錄檔和資料檔案都對應到相同的硬碟，報告大量讀取資料檔案的工作負載會耗用與記錄強化作業所需的 I/O 資源相同。 慢速的記錄強化可能會轉譯為慢速認可至主要複本，這可能會導致過度啟動流量控制，以及流量控制的等候時間很長。  
   
 ### <a name="diagnosis-and-resolution"></a>診斷和解決方案  
- 如果您確認網路不屬於高度延遲或低輸送量的狀況，則應該調查次要複本是否有 I/O 競爭情形。 [SQL 伺服器：盡可能降低磁碟 I/O](http://technet.microsoft.com/magazine/jj643251.aspx) 中的查詢對於識別競爭很有用。 為了方便起見，該文章的範例衍生如下。  
+ 如果您確認網路不屬於高度延遲或低輸送量的狀況，則應該調查次要複本是否有 I/O 競爭情形。 [SQL 伺服器：盡可能降低磁碟 I/O](https://technet.microsoft.com/magazine/jj643251.aspx) 中的查詢對於識別競爭很有用。 為了方便起見，該文章的範例衍生如下。  
   
  下列指令碼可讓您查看在 SQL Server 執行個體上執行的每個可用性資料庫，在每個資料檔案和記錄檔的讀取數目和寫入數目。 它會依照平均的 I/O 拖延時間 (毫秒) 排序。 請注意，數字是從上次啟動伺服器執行個體的時間開始累計。 因此，您應該在經過一些時間之後，計算兩個測量值之間的差異。  
   
@@ -127,6 +127,6 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
  如果您找到了 I/O 瓶頸，而且將記錄檔和資料檔案放在同一個硬碟上，則應該做的第一件事是將資料檔案和記錄檔放在不同的磁碟上。 這個最佳做法可防止報告工作負載干擾從主要複本到記錄緩衝區的記錄傳送路徑，以及其在次要複本上強化交易的能力。  
   
 ## <a name="next-steps"></a>後續步驟  
- [對 SQL Server 中的效能問題進行疑難排解 (適用於 SQL Server 2012)](http://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx) \(英文\)  
+ [對 SQL Server 中的效能問題進行疑難排解 (適用於 SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx) \(英文\)  
   
   

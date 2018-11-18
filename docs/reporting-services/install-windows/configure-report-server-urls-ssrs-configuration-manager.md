@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6167e81d5f6d9307101994e687b1ecd353793394
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aa67d80d18b6f93393cfccac146765a8df536ed
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609696"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813341"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>設定報表伺服器 URL (SSRS 組態管理員)
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，URL 是用來存取報表伺服器 Web 服務和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]。 在您可以使用其中一個應用程式以前，您至少必須為此 Web 服務和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]設定一個 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 將會針對在大多數部署方案下運作良好的這兩個應用程式 URL 提供預設值，其中包括與其他 Web 服務和應用程式並存的部署。  
@@ -38,9 +38,9 @@ ms.locfileid: "47609696"
 ## <a name="default-urls"></a>預設 URL  
  當您透過 URL 存取報表伺服器或 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 時，此 URL 應該包含主機名稱，而不是 IP 位址。 在 TCP/IP 網路上，IP 位址將會解析為主機名稱 (或是電腦的網路名稱)。 如果您使用預設值來設定 URL，您應該能夠使用將電腦名稱或 localhost 指定為主機名稱的 URL 來存取報表伺服器 Web 服務：  
   
--   `http://<computername>/reportserver`  
+-   `https://<computername>/reportserver`  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
  讓這些 URL 可用的設定會出現在下表中， 這個表格會顯示可透過包含主機名稱的 URL 來啟用報表伺服器連接的預設值：  
   

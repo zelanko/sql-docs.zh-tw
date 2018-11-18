@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f7b76775e501d2ba9c3c13191beb75973d9f6bbb
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 8dde773d49f9f53c6c35a7a4508b3666180480fd
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120285"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604948"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 與 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "49120285"
   
  使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 搭配 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料來源的主要優點是能夠運用可讀取的次要複本做為報表資料來源，同時次要複本可針對主要資料庫提供容錯移轉。  
   
- 如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的一般資訊，請參閱 [SQL Server 2012 的 AlwaysOn 常見問題集 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768)。  
+ 如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的一般資訊，請參閱 [SQL Server 2012 的 AlwaysOn 常見問題集 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768)。  
   
  **本主題內容：**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "49120285"
   
  當您在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 連接字串中加入其中一個 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 屬性，但是伺服器無法辨識該屬性時，就會出現此訊息。 如果報表伺服器已啟用遠端錯誤，當您在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用者介面中按一下 [測試連接] 按鈕以及預覽報表時，就會看見上述錯誤訊息。  
   
- 如需有關必要 Hotfix 的詳細資訊，請參閱 [KB 2654347A hotfix introduces support for the AlwaysOn features from SQL Server 2012 to the .NET Framework 3.5 SP1](http://go.microsoft.com/fwlink/?LinkId=242896) (KB 2654347A Hotfix 從 SQL Server 2012 將 AlwaysOn 功能支援引進 .NET Framework 3.5 SP1 中)。  
+ 如需有關必要 Hotfix 的詳細資訊，請參閱 [KB 2654347A hotfix introduces support for the AlwaysOn features from SQL Server 2012 to the .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkId=242896) (KB 2654347A Hotfix 從 SQL Server 2012 將 AlwaysOn 功能支援引進 .NET Framework 3.5 SP1 中)。  
   
  如需其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]需求的資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "49120285"
   
 -   ReportServerTempDB  
   
- 原生模式不支援或使用警示資料庫及相關功能。 您可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態管理員中設定原生模式報表伺服器。 若為 SharePoint 模式，您可以將服務應用程式資料庫名稱設定為進行 SharePoint 組態設定時所建立之「用戶端存取點」的名稱。 如需使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 來設定 SharePoint 的詳細資訊，請參閱 [Configure and manage SQL Server availability groups for SharePoint Server (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165) (設定及管理 SharePoint Server 的 SQL Server 可用性群組)。  
+ 原生模式不支援或使用警示資料庫及相關功能。 您可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態管理員中設定原生模式報表伺服器。 若為 SharePoint 模式，您可以將服務應用程式資料庫名稱設定為進行 SharePoint 組態設定時所建立之「用戶端存取點」的名稱。 如需使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 來設定 SharePoint 的詳細資訊，請參閱 [Configure and manage SQL Server availability groups for SharePoint Server (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165) (設定及管理 SharePoint Server 的 SQL Server 可用性群組)。  
   
 > [!NOTE]  
 >  SharePoint 模式報表伺服器會在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務應用程式資料庫與 SharePoint 內容資料庫之間使用同步處理程序。 請務必一起維護報表伺服器資料庫和內容資料庫。 您應該考慮將它們設定在相同的可用性群組中，以便一起容錯移轉和復原。 請考慮下列案例：  

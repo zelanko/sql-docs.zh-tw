@@ -5,21 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, evaluate policy
 ms.assetid: 0b3214bd-d0ab-45ab-9281-3d95507abe54
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c4e45adf390bce2d1f7700bfb01428fdc999f05d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29db8b510faecc2b9006cba0bfec995ec78d8beb
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670796"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512159"
 ---
 # <a name="evaluate-a-policy-based-management-policy-from-that-policy"></a>根據原則式管理原則評估該原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,13 +32,13 @@ ms.locfileid: "47670796"
   
 -   **若要使用下列項目來評估原則：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要 msdb 資料庫中 PolicyAdministratorRole 角色的成員資格。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  

@@ -16,12 +16,12 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19d117028e03fb3223ee3448ca555531ad47d94d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07ec3a12ada376275ab4be5b40078d7ffc9aa469
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633886"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639855"
 ---
 # <a name="file-system-task"></a>檔案系統工作
   「檔案系統」工作會在檔案系統中的檔案和目錄上執行作業。 例如，封裝可使用「檔案系統」工作建立、移動或刪除目錄和檔案。 您也可以使用「檔案系統」工作設定檔案和目錄的屬性。 例如，「檔案系統」工作可將檔案設為隱藏或唯讀。  
@@ -70,7 +70,7 @@ ms.locfileid: "47633886"
   
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請參閱下列主題：  
   
--   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
  如需有關如何以程式設計的方式設定這些屬性的詳細資訊，請參閱下列主題：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "47633886"
 ## <a name="file-system-task-editor-general-page"></a>檔案系統工作編輯器 (一般頁面)
   使用 [檔案系統工作編輯器] 對話方塊的 [一般] 頁面，即可設定工作執行的檔案系統作業。  
   
- 您必須透過設定 SourceConnection 和 DestinationConnection 屬性，以指定來源和目的地連線管理員。 您可以提供指向工作做為來源或目的地使用之檔案的檔案連接管理員名稱，而如果檔案路徑是儲存在變數中，則可以提供變數的名稱。 若要使用變數來儲存檔案路徑，您必須先將來源連接的 [IsSourcePathVariable] 選項和目的地連接的 [IsDestinationPatheVariable] 選項設定為 [True]。 接著您就可以選擇要使用的現有系統或使用者自訂變數，或是建立新的變數。 您可以在 [加入變數] 對話方塊中，設定和指定變數的範圍。 此範圍必須是「檔案系統」工作或父容器。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 您必須透過設定 SourceConnection 和 DestinationConnection 屬性，以指定來源和目的地連線管理員。 您可以提供指向工作做為來源或目的地使用之檔案的檔案連接管理員名稱，而如果檔案路徑是儲存在變數中，則可以提供變數的名稱。 若要使用變數來儲存檔案路徑，您必須先將來源連接的 [IsSourcePathVariable] 選項和目的地連接的 [IsDestinationPatheVariable] 選項設定為 [True]。 接著您就可以選擇要使用的現有系統或使用者自訂變數，或是建立新的變數。 您可以在 [加入變數] 對話方塊中，設定和指定變數的範圍。 此範圍必須是「檔案系統」工作或父容器。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
 > [!NOTE]  
 >  若要覆寫您針對 **SourceConnection** 和 **DestinationConnection** 屬性選取的變數，請針對 [來源] 和 [目的地] 屬性輸入運算式。 您可在 [檔案系統工作編輯器] 的 [運算式] 頁面上輸入運算式。 例如，為了設定做為工作目的地使用的檔案路徑，在某些情況下您可能想要使用變數 A，而在其他情況下使用變數 B。  
@@ -143,7 +143,7 @@ ms.locfileid: "47633886"
  **DestinationVariable**  
  在清單中選取變數名稱，或按一下 [\<新增變數...>] 建立新的變數。  
   
- **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  **DestinationConnection**  
@@ -157,7 +157,7 @@ ms.locfileid: "47633886"
  **SourceVariable**  
  在清單中選取變數名稱，或按一下 [\<新增變數...>] 建立新的變數。  
   
- **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  **SourceConnection**  

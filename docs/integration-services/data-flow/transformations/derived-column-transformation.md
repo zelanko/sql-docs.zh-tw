@@ -20,12 +20,12 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b1c27ff60b3e1c4dc99478d2df0377ae05a77f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d842af4f5e9245836e595c02a8adebfeaae3dba
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713556"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639325"
 ---
 # <a name="derived-column-transformation"></a>衍生的資料行轉換
   「衍生的資料行」轉換會將運算式套用至轉換輸入資料行，藉此建立新的資料行值。 運算式可包含來自轉換輸入之變數、函數、運算子和資料行的任意組合。 結果可加入做為新的資料行，或插入現有資料行做為取代值。 「衍生的資料行」轉換可定義多個衍生的資料行，且任何變數或輸入資料行都可在多個運算式中出現。  
@@ -62,7 +62,7 @@ ms.locfileid: "47713556"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -113,7 +113,7 @@ ms.locfileid: "47713556"
  如果將資料加入新的資料行，[衍生的資料行轉換編輯器] 對話方塊就會自動設定 DT_STR 資料類型的字碼頁。 您可以更新 [字碼頁]。  
   
  **設定錯誤輸出**  
- 使用 [ [設定錯誤輸出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ] 對話方塊來指定如何處理錯誤。  
+ 使用 [ [設定錯誤輸出](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ] 對話方塊來指定如何處理錯誤。  
   
 ## <a name="related-content"></a>相關內容  
- social.technet.microsoft.com 上的技術文件： [SSIS 運算式範例](http://go.microsoft.com/fwlink/?LinkId=220761)  
+ social.technet.microsoft.com 上的技術文件： [SSIS 運算式範例](https://go.microsoft.com/fwlink/?LinkId=220761)  

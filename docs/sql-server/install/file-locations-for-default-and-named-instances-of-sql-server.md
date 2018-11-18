@@ -10,12 +10,12 @@ ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ffd05feffd0a3b92abad1f7a661daeeccddd98ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8db4609eb02cb64c4281190462e74fe24711d02
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609456"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699236"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server 的預設和具名執行個體的檔案位置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -143,7 +143,7 @@ ms.locfileid: "47609456"
 >  您應該可以在 Data 子目錄中找到資料檔案。 例如，如果是在 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.\<InstanceName>\MSSQL\Data 底下找到資料檔案，請在升級時指定 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.\<執行個體名稱>\ 以指定系統資料庫的資料目錄根路徑。  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 組態 - 資料目錄](http://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)   
- [Analysis Services 組態 - 資料目錄](http://msdn.microsoft.com/library/ef732855-b7af-4f40-a619-5573c1c354bb)  
+ [Database Engine 組態 - 資料目錄](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)   
+ [Analysis Services 組態 - 資料目錄](https://msdn.microsoft.com/library/ef732855-b7af-4f40-a619-5573c1c354bb)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 85df2401dc5827a2e476fa62178586ee834d188d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08d95d5ba1f6a0c1a46218dde190e09af2452eae
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751646"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677857"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>SQL Server Managed Backup to Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ ms.locfileid: "47751646"
   
 |必要條件|Description|  
 |------------------|-----------------|  
-|**Microsoft Azure 帳戶**|您可以在瀏覽 [購買選項](http://azure.microsoft.com/pricing/free-trial/) 之前，利用 [免費試用版](http://azure.microsoft.com/pricing/purchase-options/)來開始。|  
-|**Azure 儲存體帳戶**|備份會儲存在與 Azure 儲存體帳戶相關聯的 Azure Blob 儲存體中。 如需建立儲存體帳戶的逐步指示，請參閱 [關於 Azure 儲存體帳戶](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。|  
-|**Blob 容器**|Blob 會組織於容器中。 您會指定適用於備份檔案的目標容器。 您可以在 [Azure 管理入口網站](https://manage.windowsazure.com/)中建立一個容器，或者使用 **New-AzureStorageContainer**[Azure PowerShell](http://azure.microsoft.com/documentation/articles/powershell-install-configure/) 命令。|  
-|**共用存取簽章 (SAS)**|目標容器的存取權是由共用存取簽章 (SAS) 所控制。 如需 SAS 概觀，請參閱 [共用存取簽章，第 1 部分：了解 SAS 模型](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 您可以在程式碼中或使用 **New-AzureStorageContainerSASToken** PowerShell 命令，建立 SAS 權杖。 如需簡化此程序的 PowerShell 指令碼，請參閱 [在 Azure 儲存體上使用共用存取簽章 (SAS) 權杖搭配 Powershell 簡化 SQL 認證的建立](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)。 SAS 權杖可以儲存在 **SQL 認證** 中，搭配 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]一起使用。|  
+|**Microsoft Azure 帳戶**|您可以在瀏覽 [購買選項](https://azure.microsoft.com/pricing/free-trial/) 之前，利用 [免費試用版](https://azure.microsoft.com/pricing/purchase-options/)來開始。|  
+|**Azure 儲存體帳戶**|備份會儲存在與 Azure 儲存體帳戶相關聯的 Azure Blob 儲存體中。 如需建立儲存體帳戶的逐步指示，請參閱 [關於 Azure 儲存體帳戶](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。|  
+|**Blob 容器**|Blob 會組織於容器中。 您會指定適用於備份檔案的目標容器。 您可以在 [Azure 管理入口網站](https://manage.windowsazure.com/)中建立一個容器，或者使用 **New-AzureStorageContainer**[Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 命令。|  
+|**共用存取簽章 (SAS)**|目標容器的存取權是由共用存取簽章 (SAS) 所控制。 如需 SAS 概觀，請參閱 [共用存取簽章，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 您可以在程式碼中或使用 **New-AzureStorageContainerSASToken** PowerShell 命令，建立 SAS 權杖。 如需簡化此程序的 PowerShell 指令碼，請參閱 [在 Azure 儲存體上使用共用存取簽章 (SAS) 權杖搭配 Powershell 簡化 SQL 認證的建立](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)。 SAS 權杖可以儲存在 **SQL 認證** 中，搭配 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]一起使用。|  
 |**SQL Server Agent**|SQL Server Agent 必須針對 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 執行，才能運作。 請考慮將自動啟動選項設定為自動化。|  
   
 ## <a name="components"></a>Components  

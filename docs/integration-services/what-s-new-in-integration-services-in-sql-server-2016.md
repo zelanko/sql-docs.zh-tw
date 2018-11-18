@@ -15,12 +15,12 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5896643e84782c6b0a36fd4ef6da3e487acdab5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93504e52da01f99536fd04581ef9af29c06afcc9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691777"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640195"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 的新功能
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -185,9 +185,9 @@ ms.locfileid: "47691777"
 ####  <a name="encrypted"></a> 支援 SSIS 目錄中的 AlwaysOn  
  SSIS 已經支援 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的永遠加密功能。 如需詳細資訊，請參閱下列部落格文章。  
   
--   [使用永遠加密的 SSIS](http://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
+-   [使用永遠加密的 SSIS](https://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
   
--   [使用永遠加密的查詢轉換](http://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)  
+-   [使用永遠加密的查詢轉換](https://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)  
 
 ### <a name="better-debugging"></a>更容易偵錯
 
@@ -213,7 +213,7 @@ ms.locfileid: "47691777"
   
 -   在指令碼元件或自訂資料流程元件中，呼叫 IDTSComponentMetadata100 介面的新 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 方法。  
   
- 如需此改進功能的詳細資訊，請參閱下列由 SSIS 開發人員 Bo Fan 所張貼的部落格文章︰ [適用於 SSIS 資料流程的錯誤資料行改進功能](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)。  
+ 如需此改進功能的詳細資訊，請參閱下列由 SSIS 開發人員 Bo Fan 所張貼的部落格文章︰ [適用於 SSIS 資料流程的錯誤資料行改進功能](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)。  
   
 > [!NOTE]  
 >  (後續版本中已擴大此支援。 如需詳細資訊，請參閱 [Expanded support for error column names](#getidstring) (已擴大錯誤資料行名稱的支援) 和 [New IDTSComponentMetaData130 interface in the API](#CMD130)(API 中新的 IDTSComponentMetaData130 介面)。  
@@ -223,7 +223,7 @@ ms.locfileid: "47691777"
   
  GetIdentificationStringByLineageID 方法已重新命名為 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>中已新增或更新的功能。 如需詳細資訊，請參閱＜ [資料流程中適用於錯誤的資料行名稱](#ErrorColumn)＞。  
   
- 如需此變更和錯誤資料行改進功能的詳細資訊，請參閱下列更新的部落格文章。 [適用於 SSIS 資料流程的錯誤資料行增強功能 (已針對 CTP3.3 更新)](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
+ 如需此變更和錯誤資料行改進功能的詳細資訊，請參閱下列更新的部落格文章。 [適用於 SSIS 資料流程的錯誤資料行增強功能 (已針對 CTP3.3 更新)](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
   
 > [!NOTE]  
 >  (在 RC0 中，這個方法已移至新的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 介面。 如需詳細資訊，請參閱 [New IDTSComponentMetaData130 interface in the API](#CMD130)(API 中新的 IDTSComponentMetaData130 介面)。  
@@ -285,7 +285,7 @@ ms.locfileid: "47691777"
  Excel 連線管理員、Excel 來源和 Excel 目的地現在明確支援 Excel 2016 資料來源。  
 
 ####  <a name="SAPBW"></a> 已發行 Connector for SAP BW for SQL Server 2016  
- 適用於 Microsoft SQL Server® 2016 的 Microsoft® Connector for SAP BW 已發行為 SQL Server 2016 Feature Pack 的一部分。 若要下載 Feature Pack 的元件，請參閱 [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)。
+ 適用於 Microsoft SQL Server® 2016 的 Microsoft® Connector for SAP BW 已發行為 SQL Server 2016 Feature Pack 的一部分。 若要下載 Feature Pack 的元件，請參閱 [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)。
  
 #### <a name="oracleteradata"></a> 已發行 Connectors v4.0 for Oracle and Teradata
 已發行 Microsoft Connectors v4.0 for Oracle and Teradata。 若要下載連接器，請參閱 [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)。
@@ -346,7 +346,7 @@ ms.locfileid: "47691777"
  [SQL Server 匯入和匯出精靈] 現在可以從 Azure Blob 儲存體匯入資料，並將資料儲存至其中。 如需詳細資訊，請參閱[選擇資料來源 &#40;SQL Server 匯入和匯出精靈&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) 和[選擇目的地 &#40;SQL Server 匯入和匯出精靈&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)。 
 
 ####  <a name="CDCOracle"></a> 已發行 Change Data Capture Designer and Service for Oracle for Microsoft SQL Server 2016  
- Attunity 所提供之適用於 Microsoft SQL Server® 2016 的 Microsoft® Change Data Capture Designer for Oracle 和 Change Data Capture Service for Oracle 已發行為 SQL Server 2016 Feature Pack 的一部分。  這些元件現在支援傳統安裝中的 Oracle 12c。 (不支援多租用戶安裝) 若要下載 Feature Pack 的元件，請參閱 [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)。  
+ Attunity 所提供之適用於 Microsoft SQL Server® 2016 的 Microsoft® Change Data Capture Designer for Oracle 和 Change Data Capture Service for Oracle 已發行為 SQL Server 2016 Feature Pack 的一部分。  這些元件現在支援傳統安裝中的 Oracle 12c。 (不支援多租用戶安裝) 若要下載 Feature Pack 的元件，請參閱 [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)。  
   
 ####  <a name="cdc2016"></a> 已針對 SQL Server 2016 更新 CDC 元件  
  CDC (異動資料擷取) 控制工作、來源和分隔器轉換元件已更新，可與 SQL Server 2016 完全相容。 沒有任何新功能，也沒有任何行為變更。  
@@ -360,7 +360,7 @@ ms.locfileid: "47691777"
  維度處理目的地不適用於 SQL 2016 相容性層級的表格式模型。  如果您要進行表格式處理，就只需要 Analysis Services 處理工作和資料分割處理目的地。 
 
 ####  <a name="builtinR"></a> 支援內建的 R Services  
- SSIS 已支援 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的內建 R 服務。 您不只能使用 SSIS 來擷取資料和載入分析的輸出，而且還能建置、執行及定期重新訓練 R 模型。 如需詳細資訊，請參閱下列部落格文章。 [使用 SQL Server 2016 SSIS 和 R 服務推動您的機器學習服務專案](http://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx)。 
+ SSIS 已支援 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的內建 R 服務。 您不只能使用 SSIS 來擷取資料和載入分析的輸出，而且還能建置、執行及定期重新訓練 R 模型。 如需詳細資訊，請參閱下列部落格文章。 [使用 SQL Server 2016 SSIS 和 R 服務推動您的機器學習服務專案](https://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx)。 
 
 ####  <a name="ValidateXML"></a> XML 工作中詳細的 XML 驗證輸出  
  驗證 XML 文件，並啟用 XML 工作的 **ValidationDetails** 屬性以取得詳細的錯誤輸出。 在提供 **ValidationDetails** 屬性前，XML 工作所執行的 XML 驗證只會傳回結果為 True 或 False，而不會有錯誤的相關資訊及其位置。 現在，當您將 **ValidationDetails** 設定為 True 時，輸出檔案即涵蓋每項錯誤的詳細資訊，包括行號及位置。 您可以使用此資訊來了解、尋找及修正 XML 文件中的錯誤。 如需詳細資訊，請參閱＜ [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md)＞。  

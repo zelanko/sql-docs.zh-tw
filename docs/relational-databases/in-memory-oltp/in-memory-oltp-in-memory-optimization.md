@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1de98e2d7009bb787b5904c33560655cabcc314
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dfb694a6e9bd6bbdd3525251747a42b35271ab0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809700"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674117"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (記憶體中最佳化)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,12 +60,12 @@ ms.locfileid: "47809700"
 |[使用記憶體最佳化資料表的需求](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)|討論有關使用記憶體最佳化資料表的硬體和軟體需求以及方針。|  
 |[記憶體內部 OLTP 程式碼範例](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)|包含程式碼範例，示範如何建立及使用記憶體最佳化資料表。|  
 |[記憶體最佳化資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|介紹記憶體最佳化的資料表。|  
-|[記憶體最佳化資料表變數](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|程式碼範例，示範如何使用記憶體最佳化的資料表變數取代傳統資料表變數，以減少 tempdb 的使用量。|  
-|[記憶體最佳化資料表上的索引](http://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|介紹記憶體最佳化索引。|  
+|[記憶體最佳化資料表變數](https://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|程式碼範例，示範如何使用記憶體最佳化的資料表變數取代傳統資料表變數，以減少 tempdb 的使用量。|  
+|[記憶體最佳化資料表上的索引](https://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|介紹記憶體最佳化索引。|  
 |[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)|介紹原生編譯的預存程序。|  
-|[為記憶體內部 OLTP 管理記憶體](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)|了解及管理系統上的記憶體使用量。|  
+|[為記憶體內部 OLTP 管理記憶體](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)|了解及管理系統上的記憶體使用量。|  
 |[建立及管理記憶體最佳化物件的儲存體](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)|討論資料與差異檔案 (儲存記憶體最佳化之資料表中的交易資訊)。|  
-|[備份、還原及復原記憶體最佳化資料表](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)|討論記憶體最佳化資料表的備份、還原及復原。|  
+|[備份、還原及復原記憶體最佳化資料表](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)|討論記憶體最佳化資料表的備份、還原及復原。|  
 |[記憶體內部 OLTP 的 Transact-SQL 支援](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)|討論適用於 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]支援。|  
 |[記憶體內部 OLTP 資料庫的高可用性支援](../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)|討論可用性群組與 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]中的容錯移轉叢集。|  
 |[記憶體內部 OLTP 的 SQL Server 支援](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)|列出為支援記憶體最佳化資料表新增和更新的語法和功能。|  
@@ -79,13 +79,13 @@ ms.locfileid: "47809700"
 
 -   [SQL Server 記憶體內部 OLTP 內部技術白皮書](https://msdn.microsoft.com/library/mt764316.aspx)  
 
--   [SQL Server 記憶體內部 OLTP 和資料行存放區功能的比較](http://download.microsoft.com/download/D/0/0/D0075580-6D72-403D-8B4D-C3BD88D58CE4/SQL_Server_2016_In_Memory_OLTP_and_Columnstore_Comparison_White_Paper.pdf)
+-   [SQL Server 記憶體內部 OLTP 和資料行存放區功能的比較](https://download.microsoft.com/download/D/0/0/D0075580-6D72-403D-8B4D-C3BD88D58CE4/SQL_Server_2016_In_Memory_OLTP_and_Columnstore_Comparison_White_Paper.pdf)
 
 -   SQL Server 2016 中記憶體內部 OLTP 的新功能 [第 1 部分](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/11/12/in-memory-oltp-whats-new-in-sql2016-ctp3/) 和 [第 2 部分](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3/)
   
--   [記憶體內部 OLTP - 一般工作負載模式和移轉考量](http://msdn.microsoft.com/library/dn673538.aspx)  
+-   [記憶體內部 OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [記憶體內部 OLTP 部落格](http://go.microsoft.com/fwlink/?LinkId=311696)  
+-   [記憶體內部 OLTP 部落格](https://go.microsoft.com/fwlink/?LinkId=311696)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫功能](../../relational-databases/database-features.md)  

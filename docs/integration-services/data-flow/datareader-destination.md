@@ -16,12 +16,12 @@ ms.assetid: 56fcc4bf-c901-42c3-a71d-110039293431
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3cb33e3042ced47e0ac1e97377985b20299aa0af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b552b2b5dfa1e53a56d7a012f0f1eb89322f1e83
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595146"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640526"
 ---
 # <a name="datareader-destination"></a>DataReader 目的地
   DataReader 目的地使用 ADO.NET **DataReader** 介面來公開資料流程中的資料。 然後，資料可以由其他應用程式取用。 例如，您可以設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表的資料來源，以使用執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的結果。 若要這樣做，請建立實作 DataReader 目的地的資料流程。  
@@ -37,7 +37,7 @@ ms.locfileid: "47595146"
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [DataReader 目的地自訂屬性](../../integration-services/data-flow/datareader-destination-custom-properties.md)  
   

@@ -19,12 +19,12 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6412da2497f7201016ddfbb4b81397d769de5032
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99eb1ed68d2af04dce3106b2642fcdb068a55ef5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698836"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641590"
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services 開發人員文件
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括完全改寫的物件模型，已透過許多功能增強，這使得擴充封包和設計其程式更輕鬆、更彈性且更強大。 開發人員幾乎可以擴充和程式設計 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的每個層面。  
@@ -83,7 +83,7 @@ ms.locfileid: "47698836"
   
 ## <a name="external-resources"></a>外部資源  
   
--   位於 www.codeplex.com/MSFTISProdSamples 的 CodePlex 範例：[Integration Services 產品範例](http://go.microsoft.com/fwlink/?LinkID=131204)  
+-   位於 www.codeplex.com/MSFTISProdSamples 的 CodePlex 範例：[Integration Services 產品範例](https://go.microsoft.com/fwlink/?LinkID=131204)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  

@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e1ef574febdd3c4624138c70d5d5d8acb74c6a3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 840849b3d08feac21dd5b96235405773fc06f64c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803709"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607158"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>使用安裝精靈升級 SQL Server (安裝程式)
 
@@ -112,7 +112,7 @@ ms.locfileid: "47803709"
   
 14. [伺服器組態 - 服務帳戶] 頁面上會顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的預設服務帳戶。 在這個頁面上所設定的實際服務隨著您要升級的功能而不同。  
   
-     驗證和登入資訊將來自先前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 您可以將相同登入帳戶指派給所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務，或個別設定每一個服務帳戶。 此外，您也可以指定要自動啟動服務、手動啟動服務或停用服務。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您個別設定服務帳戶，以便 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務會授與必須完成工作的最小權限。 如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+     驗證和登入資訊將來自先前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 您可以將相同登入帳戶指派給所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務，或個別設定每一個服務帳戶。 此外，您也可以指定要自動啟動服務、手動啟動服務或停用服務。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您個別設定服務帳戶，以便 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務會授與必須完成工作的最小權限。 如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)預覽版本升級問題的解答。  
   
      若要針對此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的所有服務帳戶指定相同的登入帳戶，請在頁面底部的欄位中提供認證。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "47803709"
   
      當您完成針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務指定登入資訊之後，請按 **[下一步]**。  
   
-15. 在 [全文檢索搜尋升級選項] 頁面上，針對升級的資料庫指定升級選項。 如需詳細資訊，請參閱 [全文檢索搜尋升級選項](http://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)。  
+15. 在 [全文檢索搜尋升級選項] 頁面上，針對升級的資料庫指定升級選項。 如需詳細資訊，請參閱 [全文檢索搜尋升級選項](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)。  
   
 16. 如果所有規則都通過，[功能規則] 視窗會自動前進。  
   
@@ -143,6 +143,6 @@ ms.locfileid: "47803709"
   
 ## <a name="see-also"></a>另請參閱  
  [升級 SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [回溯相容性_已刪除](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
+ [回溯相容性_已刪除](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   

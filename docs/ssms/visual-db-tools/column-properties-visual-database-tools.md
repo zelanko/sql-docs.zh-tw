@@ -17,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 438356f08fee5bc9ac20c4a5b2038e54e7a6ffa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ce67b078a4410f67a1c877951e83dece65af1b6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815966"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698776"
 ---
 # <a name="column-properties-visual-database-tools"></a>資料行屬性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47815966"
 展開以顯示其餘屬性。  
   
 **資料類型**  
-顯示選取之資料行的資料類型。 如需詳細資訊，請參閱 [資料類型 (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)。  
+顯示選取之資料行的資料類型。 如需詳細資訊，請參閱 [資料類型 (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)。  
   
 **識別值增量**  
 針對識別欄位之每個後續的資料列，顯示將加到 [識別值種子] 的遞增量。 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。  
@@ -95,7 +95,7 @@ ms.locfileid: "47815966"
 顯示資料行的資料類型是否允許 Null 值。  
   
 **資料類型**  
-顯示選取之資料行的資料類型。 若要編輯這個屬性，請按一下該屬性的值，並展開下拉式清單，然後選擇另一個值。 如需詳細資訊，請參閱 [資料類型 (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)。  
+顯示選取之資料行的資料類型。 若要編輯這個屬性，請按一下該屬性的值，並展開下拉式清單，然後選擇另一個值。 如需詳細資訊，請參閱 [資料類型 (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)。  
   
 **預設值或繫結**  
 沒有為此資料行指定值時，顯示此資料行的預設值。 下拉式清單包含資料來源中所定義的所有全域預設值。 若要將資料行繫結到全域預設值，請從下拉式清單中選取。 此外，若要為資料行建立預設條件約束，請直接將預設值當作文字輸入。  
@@ -143,7 +143,7 @@ ms.locfileid: "47815966"
 指出用來建立資料行索引的語言。  
   
 **統計語意**  
-選取是否要針對選取的資料行啟用統計語意索引。 如需詳細資訊，請參閱 [語意搜尋預留位置](http://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97)。  
+選取是否要針對選取的資料行啟用統計語意索引。 如需詳細資訊，請參閱 [語意搜尋預留位置](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97)。  
   
 如果您在選取 **[統計語意]** 之前選取 **[語言]**，而且選取的語言沒有相關聯的語意語言模型，則 **[統計語意]** 選項會設定為 **[否]** ，而且無法修改。 如果您在選取 **[語言]** 之前針對 **[統計語意]** 選項選取 **[是]**，則 **[語言]** 欄中的可用語言將受限為有語意語言模型支援的語言。  
   

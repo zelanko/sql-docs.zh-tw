@@ -5,8 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
@@ -15,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 21e42bda8955a2235f70790aa14b915b404ac514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b69a59b2b4741894a6242998b67a9b7f9f3d5fe
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703656"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604338"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>資料庫引擎的新功能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47703656"
 
 #### <a name="try-it-out"></a>現在就試試看
 
-- 若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往 **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**![下載](../analysis-services/media/download.png "下載")。
+- 若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往 **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**![下載](../analysis-services/media/download.png "下載")。
 
 - 有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/services/virtual-machines/sql-server/)** ，來加速已安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虛擬機器。
 
@@ -43,7 +42,7 @@ ms.locfileid: "47703656"
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 Service Pack 1 (SP1)  
 -  [程序](../t-sql/statements/create-procedure-transact-sql.md)、[檢視](../t-sql/statements/create-view-transact-sql.md)、[函式](../t-sql/statements/create-function-transact-sql.md)和[觸發程序](../t-sql/statements/create-trigger-transact-sql.md)現在可以使用 `CREATE OR ALTER <object>` 語法。
--   已新增更一般的查詢提示模型支援︰ `OPTION (USE HINT('<hint1>', '<hint2>'))`。 如需詳細資訊，請參閱[查詢提示 (Transact-SQL)](../t-sql/queries/hints-transact-sql-query.md)。  
+-   已新增更一般的查詢提示模型支援︰ `OPTION (USE HINT('<hint1>', '<hint2>'))`。 如需詳細資訊，請參閱 [查詢提示 (Transact-SQL)](../t-sql/queries/hints-transact-sql-query.md)。  
 - [sys.dm_exec_valid_use_hints](../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) DMV 已新增至清單提示。  
 - 已新增 [sys.dm_exec_query_statistics_xml](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) DMV 來傳回 showplan XML 暫時性統計資料。  
 - [sys.dm_db_incremental_stats_properties](../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md) DMV 已新增至指定資料表的累加統計資料。  
@@ -177,7 +176,7 @@ SQL Server 2014 和 2016 的記憶體最佳化資料表的儲存格式已變更�
 
 如需整體資訊，請參閱：
 
-- [記憶體中的 OLTP 不支援 Transact-SQL 建構](../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)
+- [記憶體內部 OLTP 不支援的 Transact-SQL 建構](../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)
 - [記憶體內部 OLTP 不支援的 SQL Server 功能](~/relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)
 
 
@@ -186,7 +185,7 @@ SQL Server 2014 和 2016 的記憶體最佳化資料表的儲存格式已變更�
 
 - 資料大小不再有任何限制。 請參閱 [估計記憶體最佳化資料表的記憶體需求](~/relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)。
 
-- 有多個並行執行緒負責[將記憶體最佳化資料表的變更保存到磁碟](../relational-databases/in-memory-oltp/scalability.md)。
+- 有多個並行執行緒負責 [將記憶體最佳化資料表的變更保存到磁碟](../relational-databases/in-memory-oltp/scalability.md)。
 
 - [使用解譯的 Transact-SQL 存取記憶體最佳化資料表](../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md)的平行計畫支援。
 
@@ -203,7 +202,7 @@ SQL Server 2014 和 2016 的記憶體最佳化資料表的儲存格式已變更�
 
 - 支援使用暫時系統版本設定功能搭配記憶體內部 OLTP。 如需詳細資訊，請參閱[系統版本設定時態表與記憶體最佳化資料表](../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 
-- 對記憶體內部 OLTP 工作負載中原生編譯程式碼的查詢存放區支援。 如需詳細資訊，請參閱[使用含有記憶體內部 OLTP 的查詢存放區](../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)。
+- 對記憶體內部 OLTP 工作負載中原生編譯程式碼的查詢存放區支援。 如需詳細資訊，請參閱 [使用含有記憶體內部 OLTP 的查詢存放區](../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)。
 
 - [記憶體最佳化資料表中的資料列層級安全性](../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md#rls)
 
@@ -244,7 +243,7 @@ Insert-select 陳述式中的 Insert 是多執行緒，或可以有平行計畫 
 在 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 中，使用 Microsoft Azure Blob 儲存體服務的 SQL Server 備份至 URL 功能現在支援使用區塊 Blob 的等量備份組，最多可支援 12.8 TB 的備份大小。 如需範例，請參閱＜ [Code Examples](../relational-databases/backup-restore/sql-server-backup-to-url.md#Examples)＞。
 
 ### <a name="file-snapshot-backups-to-microsoft-azure-blob-storage"></a>Microsoft Azure Blob 儲存體的檔案快照備份
- 在 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 中，SQL Server 備份至 URL 功能現在支援使用 Azure 快照集來備份資料庫，其中所有的資料庫檔案都是使用 Microsoft Azure Blob 儲存體服務來進行儲存。 如需詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。
+ 在 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]中，SQL Server 備份至 URL 功能現在支援使用 Azure 快照集來備份資料庫，其中所有的資料庫檔案都是使用 Microsoft Azure Blob 儲存體服務來進行儲存。 如需詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。
 
 ### <a name="managed-backup"></a>受控備份
 在 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 中，SQL Server Managed Backup to Microsoft Azure 會對備份檔案使用新的區塊 Blob 儲存體。 Managed Backup 還有幾項變更和增強功能。
@@ -258,7 +257,7 @@ Insert-select 陳述式中的 Insert 是多執行緒，或可以有平行計畫 
  如需相關資訊，請參閱 [SQL Server Managed Backup to Microsoft Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)
 
 > [!NOTE]
->  對於 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，這些新的受管理備份功能在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中還沒有對應的 UI 支援。
+>  對於 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，這些新的受管理備份功能在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中還沒有對應的 UI 支援。
 
 ## <a name="tempdb-database"></a>TempDB 資料庫
  TempDB 有數個增強功能︰
@@ -373,7 +372,7 @@ SQL Server 2016 新增對匯入和匯出 JSON 以及使用 JSON 字串的內建�
 - [sys.dm_exec_function_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-function-stats-transact-sql.md) 提供有關純量值函數的執行統計資料。
 - 從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，[sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) 中的項目會保持 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 之前的樣子。
 - 新的動態管理函數 [sys.dm_exec_input_buffer &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) 可以傳回已提交至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的陳述式相關資訊。
-- 有兩個新檢視支援 [SQL Server R 服務](../advanced-analytics/r-services/sql-server-r-services.md)：[sys.dm_external_script_requests](../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) 和 [sys.dm_external_script_execution_stats](../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)。 
+- 有兩個新檢視支援 [SQL Server R 服務](../advanced-analytics/r-services/sql-server-r-services.md)： [sys.dm_external_script_requests](../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) 和 [sys.dm_external_script_execution_stats](../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)。 
 
 
 ## <a name="security-enhancements"></a>安全性增強功能
@@ -441,17 +440,17 @@ AlwaysOn 現在支援加密的資料庫。 當您建立新的可用性群組時�
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 支援為了連接到 Microsoft Azure 而開發的 Active Directory 驗證程式庫 (ADAL)。 這會取代 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中使用的憑證式驗證。
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 安裝的必要條件是安裝 .NET 4.6。 安裝程式會在安裝 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 時自動安裝.NET 4.6。
 - 新的查詢結果方格選項支援在複製或儲存結果方格中的文字時保留歸位字元/換行字元 (新行字元)。 從 [工具] / [選項] 功能表設定此選項。
-- SQL Server 管理工具已不再從主要的功能樹狀目錄中安裝。如需詳細資訊，請參閱 [使用 SSMS 安裝 SQL Server 管理工具](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)。
+- SQL Server 管理工具已不再從主要的功能樹狀目錄中安裝。如需詳細資訊，請參閱 [使用 SSMS 安裝 SQL Server 管理工具](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)。
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 安裝的必要條件是安裝 .NET 4.6.1。 安裝程式會在安裝 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 時自動安裝.NET 4.6.1。
 
 ### <a name="upgrade-advisor"></a>Upgrade Advisor
 SQL Server 2016 Upgrade Advisor Preview 是獨立的工具，可讓舊版使用者對其 SQL Server 資料庫執行一組升級規則，以指出重大行為變更和已被取代的功能，以及協助新功能 (例如 Stretch Database) 採用。
 
- 您可以在 [這裡](https://www.microsoft.com/en-us/download/details.aspx?id=48119) 下載 Upgrade Advisor Preview，或使用 Web Platform Installer 進行安裝。
+ 您可以在 [這裡](https://www.microsoft.com/download/details.aspx?id=48119) 下載 Upgrade Advisor Preview，或使用 Web Platform Installer 進行安裝。
 
 ## <a name="see-also"></a>另請參閱
 [SQL Server 2016 的新功能](../sql-server/what-s-new-in-sql-server-2016.md)
  
 [SQL Server 2016 版本資訊](../sql-server/sql-server-2016-release-notes.md) 
  
-[安裝 SQL Server 管理工具與 SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
+[安裝 SQL Server 管理工具與 SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)

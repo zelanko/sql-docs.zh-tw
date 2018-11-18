@@ -26,12 +26,12 @@ ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee1e6771bc2d4a10ff7c43bfc1d13bec7855529c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbcf4fb0fb88ef90b234938252fa7cb48391d861
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681896"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642215"
 ---
 # <a name="dtutil-utility"></a>Encrypt
   **dtutil** 命令提示字元公用程式可用來管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。 這個公用程式可以複製、移動、刪除封裝，或確認封裝是否存在。 下列三個位置所儲存的任何 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝都可以執行這些動作： [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區和檔案系統。 如果公用程式存取存放在 **msdb**中的封裝，則命令提示字元可能會需要使用者名稱和密碼。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，則命令提示字元需要使用者名稱和密碼。 如果遺漏使用者名稱， **dtutil** 會嘗試使用 Windows 驗證登入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 封裝的儲存類型是由 **/SQL**、 **/FILE**和 **/DTS** 等選項來識別。  
@@ -264,7 +264,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 > [!NOTE]  
 >  此範例使用的雜湊不是真正的雜湊。  
   
- 如需詳細資訊，請參閱＜ [Signing and Checking Code with Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100)＞的＜CertMgr＞一節。  
+ 如需詳細資訊，請參閱＜ [Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)＞的＜CertMgr＞一節。  
   
 ### <a name="encrypt-examples"></a>加密範例  
  下列範例會利用完整的封裝加密和密碼，將檔案基礎的 PackageToEncrypt.dtsx 加密成檔案基礎的 EncryptedPackage.dts。 用於加密的密碼是 *EncPswd*。  

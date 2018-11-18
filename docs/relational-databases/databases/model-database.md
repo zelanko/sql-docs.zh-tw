@@ -5,8 +5,7 @@ ms.date: 03/04/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - template databases [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9dfda8e563b604f265692e0d2dde4d77755cdccc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf51363b4dc2e09e0a86de1d02be5bc60de5a318
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688686"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558825"
 ---
 # <a name="model-database"></a>Model 資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

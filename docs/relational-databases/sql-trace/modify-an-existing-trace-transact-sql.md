@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], modifying
@@ -15,12 +14,12 @@ ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63f41914062a0f5153c95cba7a710745edf350ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a81b088112069e5ff134e823ebd6484dcca40531
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746146"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51570536"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>修改現有的追蹤 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

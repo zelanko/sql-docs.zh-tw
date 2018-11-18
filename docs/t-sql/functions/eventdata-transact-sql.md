@@ -25,12 +25,12 @@ ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f6303d4854e8a46715182bd40e274e8ccf12b30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 953a4d79d128d2295b5365653f0f7b62647f6069
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734566"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701326"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ EVENTDATA( )
 ## <a name="schemas-returned"></a>傳回的結構描述  
 EVENTDATA 會傳回 **xml** 資料類型的值。 根據預設，所有事件的結構描述定義都會安裝在此目錄中：[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd。  
   
-[Microsoft SQL Server XML Schemas](http://go.microsoft.com/fwlink/?LinkID=31850) (Microsoft SQL Server XML 結構描述) 網頁也會有事件結構描述。  
+[Microsoft SQL Server XML Schemas](https://go.microsoft.com/fwlink/?LinkID=31850) (Microsoft SQL Server XML 結構描述) 網頁也會有事件結構描述。  
   
 若要針對任何特定的事件擷取結構描述，請搜尋複雜類型 `EVENT_INSTANCE_<event_type>` 的結構描述。 例如，若要擷取 `DROP_TABLE` 事件的結構描述，請搜尋 `EVENT_INSTANCE_DROP_TABLE` 的結構描述。  
   

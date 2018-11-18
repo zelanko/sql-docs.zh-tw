@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e5ff6d186c4dc724ed344a1fe89ecb2d92bfb5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4498b558e740927f52ab53a0edb8a615a34c0690
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722676"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657777"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>從資料存取應用程式呼叫原生編譯預存程序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
   
 1.  建立含有記憶體最佳化資料檔案群組的範例資料庫。 如需如何建立具有記憶體最佳化資料檔案群組之資料庫的資訊，請參閱 [建立記憶體最佳化資料表和原生編譯的預存程序](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
   
-2.  建立稱為 PrepExecSample 且指向資料庫的 ODBC 資料來源。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驅動程式。 您也可以修改範例並使用 [Microsoft ODBC Driver for SQL Server](http://msdn.microsoft.com/library/jj730314.aspx)。  
+2.  建立稱為 PrepExecSample 且指向資料庫的 ODBC 資料來源。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驅動程式。 您也可以修改範例並使用 [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/library/jj730314.aspx)。  
   
 3.  在範例資料庫上執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼 (如下)。  
   

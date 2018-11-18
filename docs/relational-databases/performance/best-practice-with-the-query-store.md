@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b167ab02b982688442ef0a580fab344d112f9e75
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 8903afa017c51439e023dd40b33abadba5282885
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031007"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657837"
 ---
 # <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -328,7 +328,7 @@ WHERE is_forced_plan = 1;
 追蹤旗標 7752 會啟用查詢存放區的非同步載入，並允許 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在完整載入查詢存放區之前執行查詢。 預設查詢存放區行為會防止在查詢存放區復原前執行查詢。
 
 > [!IMPORTANT]
-> 若您只針對 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的 Just-In-Time 負載見解使用查詢存放區，請計畫儘快安裝 [KB 4340759](http://support.microsoft.com/help/4340759) 中的效能延展性修正程式。 
+> 若您只針對 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的 Just-In-Time 負載見解使用查詢存放區，請計畫儘快安裝 [KB 4340759](https://support.microsoft.com/help/4340759) 中的效能延展性修正程式。 
 
 ## <a name="see-also"></a>另請參閱  
  [查詢存放區目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

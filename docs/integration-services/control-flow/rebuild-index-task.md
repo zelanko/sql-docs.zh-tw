@@ -17,12 +17,12 @@ ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 95bc574e5c0485ab785496268ad49d51abe64ed9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29e5210a44842d349ab76081f141d2d3d7152bb4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818358"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637815"
 ---
 # <a name="rebuild-index-task"></a>重建索引工作
   「重建索引」工作會重建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料表與檢視中的索引。 如需管理索引的詳細資訊，請參閱 [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
@@ -54,14 +54,14 @@ ms.locfileid: "47818358"
 >  此工作用於建立工作執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式之時間，與工作重建的索引數目成正比。 如果此工作設定成重建含有大量索引的資料庫內所有資料表與檢視中的索引，或是重建多重資料庫中的索引，則此工作可能會花費相當多的時間產生 Transact-SQL 陳述式。  
   
 ## <a name="configuration-of-the-rebuild-index-task"></a>設定重建索引工作  
- 您可以透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」設定屬性 這項工作位於「 **設計師」中** [工具箱] **的** [維護計畫工作] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 區段。  
+ 您可以透過 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 設定屬性。 這項工作位於「 **設計師」中** [工具箱] **的** [維護計畫工作] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 區段。  
   
  如需有關可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請按下列主題：  
   
  [重建索引工作 &#40;維護計畫&#41;](../../relational-databases/maintenance-plans/rebuild-index-task-maintenance-plan.md)  
   
 ## <a name="related-tasks"></a>相關工作  
- 如需如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具中設定這些屬性的詳細資訊，請參閱 [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)(設定工作或容器的屬性)。  
+ 如需如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具中設定這些屬性的詳細資訊，請參閱 [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)(設定工作或容器的屬性)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   

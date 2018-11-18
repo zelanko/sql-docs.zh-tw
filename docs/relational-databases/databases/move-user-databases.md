@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - disaster recovery [SQL Server], moving database files
@@ -26,12 +25,12 @@ ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 715720df17d54506992f53cca83bc82d6d413338
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d73ac7a360743e057b99e4b026a7464952cf9f89
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618966"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559308"
 ---
 # <a name="move-user-databases"></a>移動使用者資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ ms.locfileid: "47618966"
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' );  
     ```  
   
-2.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體或關閉系統以執行維護。 如需詳細資訊，請參閱 [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+2.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體或關閉系統以執行維護。 如需詳細資訊，請參閱 [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 3.  將一個或多個檔案移到新位置。  
   
@@ -181,7 +180,7 @@ WHERE database_id = DB_ID(N'AdventureWorks2012')
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [移動系統資料庫](../../relational-databases/databases/move-system-databases.md)   
  [移動資料庫檔案](../../relational-databases/databases/move-database-files.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   

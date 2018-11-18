@@ -5,8 +5,7 @@ ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configure
 ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server], managing
@@ -23,12 +22,12 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bbe790a131fe48a4cdfd506aedcde49308ab67d0
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 3a635138aa7488b9580a69560bb43295257b2915
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383403"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657029"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 組態管理員
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,11 +85,11 @@ ms.locfileid: "49383403"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援共用記憶體、TCP/IP 與具名管道通訊協定。 如需有關選擇網路通訊協定的詳細資訊，請參閱＜ [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)＞。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援 VIA、Banyan VINES Sequenced Packet Protocol (SPP)、多重通訊協定、AppleTalk 或 NWLink IPX/SPX 網路通訊協定。 先前連接這些通訊協定的用戶端必須選取不同的通訊協定，才能連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 您不能利用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員來設定 WinSock Proxy。 若要設定 WinSock Proxy，請參閱您的 ISA 伺服器文件集。  
   
 ## <a name="related-tasks"></a>相關工作  
- [管理服務的如何主題 &#40;SQL Server 組態管理員&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
+ [管理服務的如何主題 &#40;SQL Server 組態管理員&#41;](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
   
  [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
- [啟動、停止或暫停 SQL Server Agent 服務](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
+ [啟動、停止或暫停 SQL Server Agent 服務](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   
  [將 SQL Server 執行個體設定為自動啟動 &#40;SQL Server 組態管理員&#41;](../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
   

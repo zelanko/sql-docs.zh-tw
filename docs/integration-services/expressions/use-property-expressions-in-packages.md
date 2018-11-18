@@ -20,12 +20,12 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97ab72d572ee533ed43dfde39b362c5bb16120a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f04de3c323f5655e7503d6d375df536897654740
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726666"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641385"
 ---
 # <a name="use-property-expressions-in-packages"></a>在封裝中使用屬性運算式
   屬性運算式是指派給屬性的運算式，用於在執行階段啟用該屬性的動態更新。 例如，屬性運算式可更新「收件者」欄位，傳送郵件工作透過插入儲存在變數中的電子郵件地址來使用該欄位。  
@@ -168,11 +168,11 @@ ms.locfileid: "47726666"
   
 ## <a name="external-resources"></a>外部資源  
   
--   [運算式和組態螢光筆標示 (CodePlex 專案)](http://go.microsoft.com/fwlink/?LinkId=146625)  
+-   [運算式和組態螢光筆標示 (CodePlex 專案)](https://go.microsoft.com/fwlink/?LinkId=146625)  
   
--   social.technet.microsoft.com 上的技術文件： [SSIS 運算式範例](http://go.microsoft.com/fwlink/?LinkId=220761)  
+-   social.technet.microsoft.com 上的技術文件： [SSIS 運算式範例](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
 ## <a name="see-also"></a>另請參閱  
- [在套件中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [在套件中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

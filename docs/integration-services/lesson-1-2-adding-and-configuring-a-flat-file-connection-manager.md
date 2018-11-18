@@ -11,12 +11,12 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77563c8bcd8a2cd60ddcf87c2481057f139236e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8ed30954131f756401f054c35992d3339dfddb5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847346"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638415"
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>課程 1-2 - 新增和設定一般檔案連線管理員
 在這項工作中，您將一般檔案連接管理員加入您剛才建立的封裝中。 一般檔案連接管理員可讓封裝從一般檔案擷取資料。 使用一般檔案連接管理員，您可以指定當封裝從一般檔案擷取資料時，要套用的檔案名稱和位置、地區設定和字碼頁及檔案格式 (包括資料行分隔符號)。 此外，您可以手動指定個別資料行的資料類型，或使用 [建議資料行類型] 對話方塊，將所擷取資料的資料行自動對應至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 資料類型。  
@@ -43,7 +43,7 @@ ms.locfileid: "47847346"
   
     範例資料隨附在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 課程封裝中。 若要下載範例資料和課程封裝，請執行下列動作。  
   
-    1.  導覽至 [Integration Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  導覽至 [Integration Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  按一下 **[下載]** 索引標籤。  
   
@@ -86,10 +86,10 @@ ms.locfileid: "47847346"
   
     |一般檔案資料行|建議類型|目的地資料行|目的地類型|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
+    |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|日期|  
-    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
+    |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|FLOAT|  
   
     對 [CurrencyID] 資料行建議的資料類型與目的地資料表中的欄位資料類型不相容。 因為 `DimCurrency.CurrencyAlternateKey` 的資料類型是 Nchar (3)，所以 [CurrencyID] 必須從 [DT_STR] 字串變更為 [DT_WSTR] Unicode 字串。 另外，`DimDate.FullDateAlternateKey` 欄位定義為日期資料類型，因此 [CurrencyDate] 需要從日期 [DT_Date] 變更為資料庫日期 [DT_DBDATE]。  
   

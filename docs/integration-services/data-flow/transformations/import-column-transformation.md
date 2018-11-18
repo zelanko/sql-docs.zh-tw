@@ -18,12 +18,12 @@ ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db6164b8f8c90e4b7ec97f134dcdb41da4d2e240
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a51ed134b1cac2c6282b8bb2566dc9d27873bc05
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611336"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642015"
 ---
 # <a name="import-column-transformation"></a>匯入資料行轉換
   「匯入資料行」轉換會從檔案讀取資料，並將資料加入至資料流程中的資料行。 封裝可使用此轉換將其他檔案中儲存的文字和影像加入至資料流程。 例如，將資料載入儲存產品資訊之資料表中的資料流程，即可加入「匯入資料行」轉換，以便從檔案匯入客戶對每項產品的檢閱，然後將檢閱加入至資料流程。  
@@ -46,7 +46,7 @@ ms.locfileid: "47611336"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

@@ -14,12 +14,12 @@ ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 726dbfd9f3c16088af469de9745edfa454c6c00a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aec1a0cc2b6a5f12dce1d8c49c7d2c1b26771e00
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788796"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602818"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>可用性複本沒有健全的角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47788796"
  這項原則檢查可用性複本的角色狀態。 當可用性複本的角色既不是主要也不是次要時，原則為狀況不良。 否則原則為狀況良好。  
   
 > [!NOTE]  
->  在此版本 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [可用性複本沒有狀況良好的角色](http://go.microsoft.com/fwlink/p/?LinkId=220856) 。  
+>  在此版本 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [可用性複本沒有狀況良好的角色](https://go.microsoft.com/fwlink/p/?LinkId=220856) 。  
   
 ## <a name="possible-causes"></a>可能的原因  
  可用性複本的角色狀態為狀況不良。 複本沒有主要或次要角色。  

@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eecf2a1f9ce383e6fe79f3736aa571d0f49eabef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 314c2379994655f985ce31adf9c427ece9377bb1
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735236"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269941"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +68,7 @@ SERVERPROPERTY ( 'propertyname' )
 |IsHadrEnabled|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 在這個伺服器執行個體上已啟用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。<br /><br /> 0 = [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能已停用。<br /><br /> 1 = [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能已啟用。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料類型：**int**<br /><br /> 若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體上建立及執行可用性複本，必須在此伺服器執行個體上啟用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。 如需詳細資訊，請參閱[啟用和停用 AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。<br /><br /> **注意：** IsHadrEnabled 屬性只與 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 相關。 此伺服器屬性不影響其他高可用性或災害復原功能，例如資料庫鏡像或記錄傳送。|  
 |IsIntegratedSecurityOnly|伺服器處於整合式安全性模式。<br /><br /> 1 = 整合式安全性 (Windows 驗證)<br /><br /> 0 = 非整合式安全性。 (Windows 驗證及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證)。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料類型：**int**|  
 |IsLocalDB|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 伺服器是 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB 的執行個體。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。|  
-|IsPolybaseInstalled|**適用於**： [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 傳回伺服器執行個體是否已安裝 PolyBase 功能。<br /><br /> 0 = 未安裝 PolyBase。<br /><br /> 1 = 已安裝 PolyBase。<br /><br /> 基底資料類型：**int**|  
+|IsPolyBaseInstalled|**適用於**： [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 傳回伺服器執行個體是否已安裝 PolyBase 功能。<br /><br /> 0 = 未安裝 PolyBase。<br /><br /> 1 = 已安裝 PolyBase。<br /><br /> 基底資料類型：**int**|  
 |IsSingleUser|伺服器處於單一使用者模式。<br /><br /> 1 = 單一使用者。<br /><br /> 0 = 非單一使用者<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料類型：**int**|  
 |IsXTPSupported|**適用於**：SQL Server ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。<br /><br /> 伺服器支援 In-Memory OLTP。<br /><br /> 1= 伺服器支援 In-Memory OLTP。<br /><br /> 0= 伺服器不支援 In-Memory OLTP。<br /><br /> NULL = 輸入無效、發生錯誤或不適用。<br /><br /> 基底資料類型：**int**|  
 |LCID|Windows 的定序地區設定識別碼 (LCID)。<br /><br /> 基底資料類型：**int**|  

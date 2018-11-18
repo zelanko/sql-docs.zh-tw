@@ -20,12 +20,12 @@ ms.assetid: 5bd3393d-2fa5-4db0-a69a-a1a72d638e9d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1e8505e3d4dd2d7bf6768a021935dcedfec743e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6403eec02fa800ca0fd09ac93479c993f47fd26
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625126"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695486"
 ---
 # <a name="drop-security-policy-transact-sql"></a>DROP SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
   
 ## <a name="arguments"></a>引數  
  *IF EXISTS*  
- **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。  
+ **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
   
  只有在安全性原則已存在時，才能有條件地將其卸除。  
   

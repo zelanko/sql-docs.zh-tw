@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 221908a0d6dd92c589c8121d763981c36a5ea1fe
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: af27d39daf56d1964d897c556118634ae7f0411a
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099969"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813051"
 ---
 # <a name="use-my-subscriptions-native-mode-report-server"></a>使用我的訂閱 (原生模式報表伺服器)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站包括 [我的訂閱] 頁面，將您所有的訂閱組織在一個地方。 您可以使用 [我的訂閱] 來檢視、修改、啟用、停用和刪除現有的訂閱。 然而，無法用它來建立訂閱。  [我的訂閱] 僅顯示您所建立的訂閱。 即使您已經加入成為其他使用者擁有之訂閱的訂閱者，它一樣不會列出其他使用者擁有的訂閱，也不會顯示資料驅動訂閱。
@@ -42,7 +42,7 @@ ms.locfileid: "50099969"
 ```  
 #server -  all subscriptions of the current user at the given server or site  
 $server="[server name]/reportserver"  
-$rs2010 = New-WebServiceProxy -Uri "http://$server/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
+$rs2010 = New-WebServiceProxy -Uri "https://$server/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
   
 $subscriptions=ListMySubscriptions(ItemPathOrSiteURL)  
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status  

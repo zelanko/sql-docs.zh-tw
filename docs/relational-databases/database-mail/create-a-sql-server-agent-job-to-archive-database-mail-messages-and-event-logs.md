@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - archiving mail messages and attachments [SQL Server]
@@ -17,12 +16,12 @@ ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5dce59e01f5723139b9c9bcd0a3162540073753b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9705b867d8f12c83b0c3e3c0d1ec6a8461e7a2dd
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813926"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559925"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>建立 SQL Server Agent 作業以封存 Database Mail 訊息及事件記錄檔
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "47813926"
  在實際執行環境中，您可能會想要加入其他錯誤檢查，並在作業失敗時傳送電子郵件訊息給操作員。  
   
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="Permissions"></a> Permissions  
  您必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能執行此主題中所描述的預存程序。  
   
   

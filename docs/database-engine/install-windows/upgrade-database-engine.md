@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 02f454ba26701263b98ba86d22bb98943ed2a498
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99d1b87ac5584f05911ebfb16387babc408e26f5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613427"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600928"
 ---
 # <a name="upgrade-database-engine"></a>升級 Database Engine
 
@@ -36,6 +36,6 @@ ms.locfileid: "47613427"
   
 4.  [變更資料庫相容性模式並使用查詢存放區](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) ：將資料庫升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之後所要執行的其中一個步驟是啟用新功能，方法是變更資料庫相容性模式，然後再使用查詢存放區來監視效能。 本文會討論這項程序，並提供建議的工作流程。  
   
-5.  [善用新的 SQL Server 功能](http://www.microsoft.com/sql-server/sql-server-2017)：最後，完成上述步驟之後，您就可以開始探索如何利用特定新資料庫引擎增強。 本文提供其中一些增強功能的建議，以及詳細資訊的連結。  
+5.  [善用新的 SQL Server 功能](https://www.microsoft.com/sql-server/sql-server-2017)：最後，完成上述步驟之後，您就可以開始探索如何利用特定新資料庫引擎增強。 本文提供其中一些增強功能的建議，以及詳細資訊的連結。  
   
   

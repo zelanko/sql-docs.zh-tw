@@ -13,12 +13,12 @@ ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a21bdb4d878f49f78f514696e01dcbc8fbcc81eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51dddf0e5fd971aeb2aa1229bb1af2faae744b6e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649978"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638525"
 ---
 # <a name="using-variables-in-the-script-component"></a>在指令碼元件中使用變數
   變數會儲存封裝及其容器、工作與事件處理常式在執行階段所能使用的值。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../../integration-services/integration-services-ssis-variables.md)。  
@@ -38,6 +38,6 @@ ms.locfileid: "47649978"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 變數](../../../integration-services/integration-services-ssis-variables.md)   
- [在套件中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

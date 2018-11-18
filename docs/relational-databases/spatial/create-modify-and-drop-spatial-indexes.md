@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f27df5372436759fb719ddcafcf028b8d918205d
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: efaa2078b561c0c69fbcff2f83eed09f7d3c24ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018393"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669607"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>建立、修改及卸除空間索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "51018393"
   
 4.  在 [空間索引] 對話方塊中，按一下 [加入]。  
   
-5.  在 [Selected Spatial Index (選取的空間索引)] 清單中選取新的索引，並在右邊方格中設定此空間索引的屬性。 如需這些屬性的資訊，請參閱[空間索引對話方塊 &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f)。  
+5.  在 [Selected Spatial Index (選取的空間索引)] 清單中選取新的索引，並在右邊方格中設定此空間索引的屬性。 如需這些屬性的資訊，請參閱[空間索引對話方塊 &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f)。  
   
   
 ###  <a name="alter"></a> 改變空間索引  

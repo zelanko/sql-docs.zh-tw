@@ -18,12 +18,12 @@ ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3fe44ae7473108a15a7df98140588adfd17908a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79d0137ece0db79720f032cd596a174154ad39b0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620786"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641855"
 ---
 # <a name="copy-column-transformation"></a>複製資料行轉換
   「複製資料行」轉換會複製輸入資料行，並將新資料行加入轉換輸出，以建立新資料行。 稍後在資料流程中，可將不同的轉換套用至資料行副本。 例如，您可以使用「複製資料行」轉換建立資料行複本，然後使用「字元對應」轉換將複製的資料轉換為大寫字元，或使用「彙總」轉換將彙總套用至新資料行。  
@@ -37,7 +37,7 @@ ms.locfileid: "47620786"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

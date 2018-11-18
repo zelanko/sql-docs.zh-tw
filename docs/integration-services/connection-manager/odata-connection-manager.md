@@ -14,12 +14,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ec5760d6f62c045b1985aad534c7447f75f59c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 790c7b1e50b029ab2cf2cbf4ad41bd80cf11cb0c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667276"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641821"
 ---
 # <a name="odata-connection-manager"></a>OData 連接管理員
  使用 OData 連線管理員連線到 OData 資料來源。 OData 來源元件會使用 OData 連線管理員連線到 OData 資料來源，並取用服務中的資料。 如需詳細資訊，請參閱＜ [OData Source](../../integration-services/data-flow/odata-source.md)＞。  
@@ -74,7 +74,7 @@ ms.locfileid: "47667276"
  連接管理員的名稱。  
   
  **服務文件位置**  
- OData 服務的 URL。 例如： http://services.odata.org/V3/Northwind/Northwind.svc/＞。  
+ OData 服務的 URL。 例如： https://services.odata.org/V3/Northwind/Northwind.svc/＞。  
   
  **驗證**  
 選取下列其中一個選項：

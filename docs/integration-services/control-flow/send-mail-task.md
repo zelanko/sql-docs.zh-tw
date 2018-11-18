@@ -21,12 +21,12 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 805036ee530834ea2581613578fa0417087def82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2504bc45e358ebbf35b279e07be511f7a6041956
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682498"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641285"
 ---
 # <a name="send-mail-task"></a>傳送郵件工作
   傳送郵件工作會傳送電子郵件訊息。 藉由使用傳送郵件工作，封裝即可在封裝工作流程中的工作成功或失敗時傳送訊息，或傳送回應封裝在執行階段所引發事件的訊息。 例如，工作可通知資料庫管理員「備份資料庫」工作成功或失敗。  
@@ -79,11 +79,11 @@ ms.locfileid: "47682498"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask>  
   
 ## <a name="related-tasks"></a>相關工作  
- 如需如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定這些屬性的資訊，請按一下 [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
+ 如需如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定這些屬性的資訊，請按一下 [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)。  
   
 ## <a name="related-content"></a>相關內容  
   
--   shareourideas.com 上的技術文件： [如何在 C# 中傳送包含傳遞通知的電子郵件](http://go.microsoft.com/fwlink/?LinkId=237625)(如何在 C# 中傳送包含傳遞通知的電子郵件)  
+-   shareourideas.com 上的技術文件： [如何在 C# 中傳送包含傳遞通知的電子郵件](https://go.microsoft.com/fwlink/?LinkId=237625)(如何在 C# 中傳送包含傳遞通知的電子郵件)  
   
 ## <a name="send-mail-task-editor-general-page"></a>傳送郵件工作編輯器 (一般頁面)
   使用 [傳送郵件工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述傳送郵件工作。  
@@ -158,7 +158,7 @@ ms.locfileid: "47682498"
  **MessageSource**  
  在清單中選取變數，或按一下 [\<新增變數...>]，以建立新的變數。  
   
- **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   

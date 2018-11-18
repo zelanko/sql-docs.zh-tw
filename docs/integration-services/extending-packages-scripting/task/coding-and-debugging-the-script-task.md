@@ -22,12 +22,12 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 899d12bc7545f90717fda4fabb1ddbfb0c69c316
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54c01591842965bcd45cff732295d2769fd6c661
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726676"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639585"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>指令碼工作的程式碼撰寫和偵錯
   在 [指令碼工作編輯器] 中設定指令碼工作之後，於指令碼工作開發環境中撰寫自訂程式碼。  
@@ -244,7 +244,7 @@ To open Help, press F1.
   
 ## <a name="external-resources"></a>外部資源  
   
--   blogs.msdn.com 上的部落格文章：[VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661) (SSIS 2008 和 R2 安裝的 VSTA 安裝與設定問題)。  
+-   blogs.msdn.com 上的部落格文章：[VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://go.microsoft.com/fwlink/?LinkId=215661) (SSIS 2008 和 R2 安裝的 VSTA 安裝與設定問題)。  
   
 ## <a name="see-also"></a>另請參閱  
  [參考指令碼解決方案中的其他組件](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   

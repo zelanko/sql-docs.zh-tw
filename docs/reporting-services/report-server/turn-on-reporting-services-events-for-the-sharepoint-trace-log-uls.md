@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee9c57eff9572632d40147007b9be8e669702a3a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0f4d8f59821a649214ddc2deda128d801e6ddb7a
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020372"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814171"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
 
@@ -108,7 +108,7 @@ Get-SPDiagnosticConfig
 |報表伺服器目錄||  
 |報表伺服器區塊||  
 |報表伺服器清除||  
-|報表伺服器組態管理員|範例項目：<br /><br /> MediumUsing 報表伺服器內部 URL `http://localhost:80/ReportServer`。<br /><br /> UnexpectedMissing 或是無效的 ExtendedProtectionLevel 設定|  
+|報表伺服器組態管理員|範例項目：<br /><br /> MediumUsing 報表伺服器內部 URL `https://localhost:80/ReportServer`。<br /><br /> UnexpectedMissing 或是無效的 ExtendedProtectionLevel 設定|  
 |報表伺服器密碼編譯||  
 |報表伺服器資料延伸模組||  
 |報表伺服器資料庫輪詢||  

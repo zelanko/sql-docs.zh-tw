@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39775440387b30fcba75248b50b1ae63b84459b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 972e420f75db790321bc8c8eee595f1932e4f451
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639051"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662419"
 ---
 # <a name="extended-events"></a>擴充事件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47639051"
 您可以在下列位置找到擴充事件的詳細資訊：
 
 - [快速入門︰SQL Server 中的擴充事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
-- 部落格： [SQL Server 擴充事件](http://blogs.msdn.com/b/extended_events/)
+- 部落格： [SQL Server 擴充事件](https://blogs.msdn.com/b/extended_events/)
 
   
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件的優點  
@@ -44,7 +44,7 @@ ms.locfileid: "47639051"
 |主題|Description|  
 |-----------|-----------------|  
 |[SQL Server 擴充的事件套件](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|描述擴充事件封裝，其中包含執行擴充事件工作階段時，用來取得及處理資料的物件。|  
-|[SQL Server 擴充的事件目標](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|描述事件工作階段期間可以接收資料的事件取用者。|  
+|[SQL Server 擴充的事件目標](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|描述事件工作階段期間可以接收資料的事件取用者。|  
 |[SQL Server 擴充的事件引擎](../../relational-databases/extended-events/sql-server-extended-events-engine.md)|描述可實作和管理擴充事件工作階段的引擎。|  
 |[SQL Server 擴充的事件工作階段](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)|描述擴充事件工作階段。|  
   
@@ -65,7 +65,7 @@ ms.locfileid: "47639051"
   
 -   「擴充事件」引擎無法得知事件。 如此可讓此引擎將任何事件繫結至任何目標，因為此引擎不受到事件內容的限制。 如需有關擴充的事件引擎的詳細資訊，請參閱＜ [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md)＞。  
   
--   事件會與事件取用者區隔，後者在擴充的事件中稱為 *「目標」* 。 這表示，任何目標都可以接收任何事件。 此外，目標可以自動耗用任何引發的事件，這樣可以記錄或提供其他事件內容。 如需詳細資訊，請參閱＜ [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)＞。  
+-   事件會與事件取用者區隔，後者在擴充的事件中稱為 *「目標」* 。 這表示，任何目標都可以接收任何事件。 此外，目標可以自動耗用任何引發的事件，這樣可以記錄或提供其他事件內容。 如需詳細資訊，請參閱＜ [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)＞。  
   
 -   事件與事件發生時所要採取的動作不同。 因此，任何動作都可以與任何事件產生關聯。  
   
@@ -90,15 +90,15 @@ ms.locfileid: "47639051"
 |工作描述|主題|  
 |----------------------|-----------|  
 |使用 **[物件總管]** 管理事件工作階段。|[在物件總管中管理事件工作階段](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)|  
-|描述如何建立擴充事件工作階段。|[建立擴充事件工作階段](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)|  
+|描述如何建立擴充事件工作階段。|[建立擴充事件工作階段](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)|  
 |描述如何檢視及重新整理目標資料。| [進階檢視 SQL Server 中擴充事件的目標資料](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)|  
 |描述如何使用擴充事件工具來建立和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 「擴充事件」工作階段。|[擴充事件工具](../../relational-databases/extended-events/extended-events-tools.md)|  
 |描述如何改變擴充事件工作階段。|[更改擴充事件工作階段](../../relational-databases/extended-events/alter-an-extended-events-session.md)|  
-|描述如何取得與事件有關之欄位的資訊。|[取得所有事件的欄位](http://msdn.microsoft.com/library/4e4ee03f-5bca-42ed-a37c-db1c82e3aad2)|  
-|描述如何在註冊的封裝中查明哪些事件可用。|[檢視已註冊之套件的事件](http://msdn.microsoft.com/library/9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f)|  
-|描述如何判斷哪些擴充事件目標可在註冊的封裝中使用。|[檢視已註冊之套件的擴充事件目標](http://msdn.microsoft.com/library/4985aa5f-ac99-49f6-852c-9d25916549e9)|  
+|描述如何取得與事件有關之欄位的資訊。|[取得所有事件的欄位](https://msdn.microsoft.com/library/4e4ee03f-5bca-42ed-a37c-db1c82e3aad2)|  
+|描述如何在註冊的封裝中查明哪些事件可用。|[檢視已註冊之套件的事件](https://msdn.microsoft.com/library/9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f)|  
+|描述如何判斷哪些擴充事件目標可在註冊的封裝中使用。|[檢視已註冊之套件的擴充事件目標](https://msdn.microsoft.com/library/4985aa5f-ac99-49f6-852c-9d25916549e9)|  
 |描述如何檢視同等於每一個 SQL 追蹤事件及其關聯資料行的「擴充事件」事件和動作。|[檢視同等於 SQL 追蹤事件類別的擴充事件](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
-|描述當您在 CREATE EVENT SESSION 或 ALTER EVENT SESSION 中使用 ADD TARGET 引數時，如何尋找可以設定的參數。|[取得 ADD TARGET 引數的可設定參數](http://msdn.microsoft.com/library/08454543-c5c8-4ca3-9af9-f1d82264471c)|  
+|描述當您在 CREATE EVENT SESSION 或 ALTER EVENT SESSION 中使用 ADD TARGET 引數時，如何尋找可以設定的參數。|[取得 ADD TARGET 引數的可設定參數](https://msdn.microsoft.com/library/08454543-c5c8-4ca3-9af9-f1d82264471c)|  
 |描述如何將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段。|[將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段](../../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
 |描述如何判斷哪些查詢持有鎖定、查詢的計畫，以及取得鎖定時的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 堆疊。|[判斷哪些查詢持有鎖定](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
 |描述如何識別阻礙資料庫效能的鎖定來源。|[尋找持有最多鎖定的物件](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  

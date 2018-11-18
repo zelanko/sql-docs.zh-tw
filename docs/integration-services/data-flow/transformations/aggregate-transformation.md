@@ -20,12 +20,12 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 11ba7ca730a99631270911f6b6f3e66a4ab5b14e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42ed9609e1c2b9337e0c7f98b27c533144f8213d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607336"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638925"
 ---
 # <a name="aggregate-transformation"></a>彙總轉換
   「彙總」轉換會將彙總函式 (例如 Average) 套用至資料行值，並將結果複製到轉換輸出。 除了彙總函式外，該轉換還提供 GROUP BY 子句，讓您用來指定要彙總的群組。  
@@ -115,7 +115,7 @@ ms.locfileid: "47607336"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -178,7 +178,7 @@ ms.locfileid: "47607336"
 |**GroupBy**|將資料集分割成群組。 具有任何資料類型的資料行可用於分組。 如需詳細資訊，請參閱 GROUP BY。|  
 |**Sum**|加總資料行中的值。 只能加總具有數值資料類型的資料行。 如需詳細資訊，請參閱 SUM。|  
 |**平均值**|傳回資料行中資料行值的平均。 只能平均具有數值資料類型的資料行。 如需詳細資訊，請參閱 AVG。|  
-|**Count**|傳回群組中的項目數。 如需詳細資訊，請參閱 COUNT。|  
+|**計數**|傳回群組中的項目數。 如需詳細資訊，請參閱 COUNT。|  
 |**CountDistinct**|傳回群組中唯一非 Null 值的數目。 如需詳細資訊，請參閱 COUNT 和 Distinct。|  
 |**最小值**|傳回群組中的最小值。 限制為數值資料類型。|  
 |**最大值**|傳回群組中的最大值。 限制為數值資料類型。|  

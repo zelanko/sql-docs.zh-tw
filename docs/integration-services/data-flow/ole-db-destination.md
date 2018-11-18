@@ -24,12 +24,12 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52db780f2e19862110b274b97c2ce616b1503301
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fb8aaaabd83d6e5f5f234c58f3c9dcfab1ee7fa
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636877"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640128"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目的地
   OLE DB 目的地會使用資料庫的資料表、檢視或 SQL 命令將資料載入各種符合 OLE DB 標準的資料庫。 例如，OLE DB 來源可以將資料載入至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表中。  
@@ -60,7 +60,7 @@ ms.locfileid: "47636877"
 > [!NOTE]  
 >  視目的地類型而定，[OLE DB 目的地編輯器] 對話方塊產生的 CREATE TABLE 陳述式可能需要進行修改。 例如，某些目的地並不支援 CREATE TABLE 陳述式所使用的資料類型。  
   
- 此目的地使用 OLE DB 連接管理員連接到資料來源，且連接管理員會指定要使用的 OLE DB 提供者。 如需詳細資訊，請參閱 [OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
+ 此目的地使用 OLE DB 連接管理員連接到資料來源，且連接管理員會指定要使用的 OLE DB 提供者。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案亦提供您建立 OLE DB 連線管理員所在的資料來源物件，讓 OLE DB 目的地使用資料來源和資料來源檢視。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "47636877"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [OLE DB 自訂屬性](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -141,7 +141,7 @@ ms.locfileid: "47636877"
 |------------|-----------------|  
 |資料表或檢視|將資料載入 OLE DB 目的地中的資料表或檢視。|  
 |資料表或檢視 - 快速載入|將資料載入 OLE DB 目的地中的資料表或檢視，並使用快速載入選項。 如需有關快速載入資料存取模式 (已針對大量插入進行過最佳化) 的詳細資訊，請參閱＜ [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)＞。|  
-|資料表名稱或檢視名稱變數|請在變數中指定資料表或檢視名稱。<br /><br /> **相關資訊**︰ [在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|資料表名稱或檢視名稱變數|請在變數中指定資料表或檢視名稱。<br /><br /> **相關資訊**︰ [在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |資料表名稱或檢視名稱變數 - 快速載入|在變數中指定資料表或檢視名稱，並使用快速載入選項來載入資料。 如需有關快速載入資料存取模式 (已針對大量插入進行過最佳化) 的詳細資訊，請參閱＜ [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)＞。|  
 |SQL (命令)|使用 SQL 查詢，將資料載入到 OLE DB 目的地。|  
   

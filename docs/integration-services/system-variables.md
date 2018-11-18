@@ -17,12 +17,12 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 141fd581fc00e60b241fe9f944fab8405426235d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc1d04899bf2b31c5bf4586afb88ed40d2ff8a0c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726266"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641905"
 ---
 # <a name="system-variables"></a>系統變數
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一組儲存執行封裝及其物件之資訊的系統變數。 這些變數可以用於運算式及屬性運算式，以自訂封裝、容器、工作及事件處理常式。  
@@ -105,6 +105,6 @@ ms.locfileid: "47726266"
  此規則也適用於使用者自訂變數。 但是，由於系統變數的資料類型無法變更，而且您必須修改這些變數的用法以符合其資料類型，因此使用者自訂變數比較有彈性。 參數繫結中使用之使用者自訂變數所定義的資料類型，通常與其對應參數的資料類型相容。  
   
 ## <a name="related-tasks"></a>相關工作  
- [在執行 SQL 工作中將查詢參數對應到變數](http://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
+ [在執行 SQL 工作中將查詢參數對應到變數](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
   
   

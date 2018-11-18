@@ -14,12 +14,12 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c0d656ffdc18168e12092abfb66b0027fd68632
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66422144cac35578bd9d6e77c887ad7e12ed21f9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633136"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673597"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>遠端 Blob 存放區 (RBS) (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "47633136"
 ## <a name="rbs-requirements"></a>RBS 需求  
  - RBS 在儲存 BLOB 中繼資料所在的主要資料庫伺服器中，需要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise。  不過，如果您使用提供的 FILESTREAM 提供者，可以將 BLOB 本身儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 上。 若要連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，RBS 至少需要 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] 的 ODBC 驅動程式第 11 版和 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]的 ODBC 驅動程式第 13 版。 這些驅動程式可透過 [Download ODBC Driver for SQL Server](https://msdn.microsoft.com/library/mt703139.aspx)(下載 ODBC Driver for SQL Server) 取得。    
   
- RBS 包含一個 FILESTREAM 提供者，可讓您使用 RBS，將 BLOB 儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體上。 如果您要使用 RBS 將 BLOB 儲存在不同的儲存方案中，您必須使用針對該儲存方案開發的 RBS 提供者，或使用 RBS API 開發一個自訂的 RBS 提供者。 將 BLOB 儲存在 NTFS 檔案系統中的範例提供者，在 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190)上作為學習資源提供。  
+ RBS 包含一個 FILESTREAM 提供者，可讓您使用 RBS，將 BLOB 儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體上。 如果您要使用 RBS 將 BLOB 儲存在不同的儲存方案中，您必須使用針對該儲存方案開發的 RBS 提供者，或使用 RBS API 開發一個自訂的 RBS 提供者。 將 BLOB 儲存在 NTFS 檔案系統中的範例提供者，在 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190)上作為學習資源提供。  
   
 ## <a name="rbs-security"></a>RBS 安全性  
- SQL 遠端 Blob 存放區團隊部落格是了解這項功能很好的資訊來源。 [RBS Security Model](http://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx)(RBS 安全性模型) 文章中有描述 RBS 安全性模型。  
+ SQL 遠端 Blob 存放區團隊部落格是了解這項功能很好的資訊來源。 [RBS Security Model](https://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx)(RBS 安全性模型) 文章中有描述 RBS 安全性模型。  
   
 ### <a name="custom-providers"></a>自訂提供者  
  當您使用自訂提供者將 BLOB 儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]外部時，請確認您使用適合自訂提供者之儲存媒體的權限和加密選項，保護已儲存的 BLOB。  
@@ -77,10 +77,10 @@ ms.locfileid: "47633136"
 ##  <a name="rbsresources"></a> RBS 資源  
   
  **RBS 範例**  
- [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190) 上提供的 RBS 範例會示範如何開發 RBS 應用程式，以及如何開發與安裝自訂的 RBS 提供者。  
+ [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) 上提供的 RBS 範例會示範如何開發 RBS 應用程式，以及如何開發與安裝自訂的 RBS 提供者。  
   
  **RBS 部落格**  
- [RBS 部落格](http://go.microsoft.com/fwlink/?LinkId=210315) 會提供其他資訊來協助您了解、部署，以及維護 RBS。  
+ [RBS 部落格](https://go.microsoft.com/fwlink/?LinkId=210315) 會提供其他資訊來協助您了解、部署，以及維護 RBS。  
   
 ##  <a name="Key_rotation"></a> 金鑰輪替指令碼  
  此範例會建立名為 `sp_rotate_rbs_symmetric_credential_key` 的預存程序，以您選擇的金鑰來取代目前使用的 RBS  

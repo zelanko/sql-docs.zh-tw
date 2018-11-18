@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28bda5c6e02b21343cef97ee04c36f80f124d9a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc1eb47e6cde8ff1fb34bde4bf82f4d79013d90e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630356"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675413"
 ---
 # <a name="create-a-login"></a>建立登入
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "47630356"
   
     2.  按一下 **[從這個位置]** 底下的 **[位置]** 開啟 **[位置]** 對話方塊並選取其中一個可用的伺服器位置。 完成後，請按一下 **[確定]**。  
   
-    3.  在 [輸入要選取的物件名稱 (範例)] 底下，輸入要尋找的使用者或群組名稱。 如需詳細資訊，請參閱＜ [選擇使用者、電腦或群組對話方塊](http://technet.microsoft.com/library/cc771712.aspx)＞。  
+    3.  在 [輸入要選取的物件名稱 (範例)] 底下，輸入要尋找的使用者或群組名稱。 如需詳細資訊，請參閱＜ [選擇使用者、電腦或群組對話方塊](https://technet.microsoft.com/library/cc771712.aspx)＞。  
   
-    4.  如需其他進階搜尋選項，請按一下 **[進階]** 。 如需詳細資訊，請參閱 [選擇使用者、電腦或群組對話方塊 - 進階頁面](http://technet.microsoft.com/library/cc733110.aspx)。  
+    4.  如需其他進階搜尋選項，請按一下 **[進階]** 。 如需詳細資訊，請參閱 [選擇使用者、電腦或群組對話方塊 - 進階頁面](https://technet.microsoft.com/library/cc733110.aspx)。  
   
     5.  按一下 [確定] 。  
   

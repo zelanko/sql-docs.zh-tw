@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4edaecf62a1f78c90954b60ff0c08ce462993dd3
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 23938f5885fd207aed8143686f7b762d81fc8130
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020342"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813891"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 組態檔
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** 檔案會儲存報表伺服器 Web 服務和背景處理所使用的設定。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式都是在讀取 RSReportServer.config 檔中儲存之組態設定的單一處理序中執行。 原生模式和 SharePoint 模式的報表伺服器都使用 RSReportServer.config，不過，這兩個模式不會使用組態檔中的所有相同設定。 SharePoint 模式版本的檔案較小，因為 SharePoint 模式的許多設定是儲存在 SharePoint 組態資料庫中，而不是檔案中。 本主題描述針對原生模式和 SharePoint 模式所安裝的預設組態檔，以及由組態檔控制的部分重要設定和行為。  
@@ -429,7 +429,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
             <VirtualDirectory>ReportServer</VirtualDirectory>
             <URLs>
                 <URL>
-                    <UrlString>http://+:80</UrlString>
+                    <UrlString>https://+:80</UrlString>
                     <AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>
                     <AccountName>NT SERVICE\ReportServer</AccountName>
                 </URL>
@@ -440,7 +440,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
             <VirtualDirectory>Reports</VirtualDirectory>
             <URLs>
                 <URL>
-                    <UrlString>http://+:80</UrlString>
+                    <UrlString>https://+:80</UrlString>
                     <AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>
                     <AccountName>NT SERVICE\ReportServer</AccountName>
                 </URL>
@@ -770,7 +770,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
       <VirtualDirectory>ReportServer</VirtualDirectory>  
       <URLs>  
         <URL>  
-          <UrlString>http://+:80</UrlString>  
+          <UrlString>https://+:80</UrlString>  
           <AccountSid>  
           </AccountSid>  
           <AccountName>  
@@ -783,7 +783,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
       <VirtualDirectory>Reports</VirtualDirectory>  
       <URLs>  
         <URL>  
-          <UrlString>http://+:80</UrlString>  
+          <UrlString>https://+:80</UrlString>  
           <AccountSid>  
           </AccountSid>  
           <AccountName>  

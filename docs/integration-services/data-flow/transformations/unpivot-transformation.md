@@ -19,12 +19,12 @@ ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f24af29ad0c0378f9977bf73a6555135f2c1df8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20a7422664808911e2241eacb4f48c51f0246b2d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753806"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639768"
 ---
 # <a name="unpivot-transformation"></a>取消樞紐轉換
   「取消樞紐」轉換可以使非正規化的資料集變成較正規化的版本，方法是將單一記錄中多個資料行的值擴充為單一資料行中具有同一值的多個記錄。 例如，列出客戶名稱的資料集對每個客戶都具有一個資料列，同時產品及購買數量會顯示在資料列的資料行中。 當「取消樞紐」轉換將資料集正規化之後，資料集便會對客戶購買的每種產品包含不同的資料列。  
@@ -48,7 +48,7 @@ ms.locfileid: "47753806"
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [通用屬性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [轉換自訂屬性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

@@ -23,12 +23,12 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6d3b3253488f09b6a20b1de4745f6c97ed77515
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ef264a836b1081bdeba65fc09fce758b0faf897
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806508"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641805"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服務 (SSIS 服務)
   本節中的主題討論 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務 (用於管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的 Windows 服務)。 若要建立、儲存及執行 Integration Services 封裝，則不需要這項服務。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 支援 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務能與舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]回溯相容。  
@@ -187,7 +187,7 @@ ms.locfileid: "47806508"
   
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
-\<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+\<DtsServiceConfiguration xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
   <TopLevelFolders>  
     \<Folder xsi:type="SqlServerFolder">  
@@ -232,7 +232,7 @@ ms.locfileid: "47806508"
   
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
-\<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+\<DtsServiceConfiguration xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
   <TopLevelFolders>  
     \<Folder xsi:type="SqlServerFolder">  
@@ -251,7 +251,7 @@ ms.locfileid: "47806508"
  登錄機碼 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** 指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務所使用之設定檔的位置和名稱。 此登錄機碼的預設值為 **C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**。 您可以更新此登錄機碼的值，以便針對組態檔使用不同的名稱和位置。 請注意，路徑中的版本號碼 (120 適用於 SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)]、130 適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 等等) 將會根據 SQL Server 版本而不同。
   
 > [!CAUTION]  
->  不當地編輯登錄可能會造成嚴重問題，並導致您必須重新安裝作業系統。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不保證能夠解決不當編輯登錄所產生的問題。 在編輯登錄之前，請先備份重要資料。 如需有關如何備份、還原及編輯登錄的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫文件： [Microsoft Windows 登錄說明](http://support.microsoft.com/kb/256986)。  
+>  不當地編輯登錄可能會造成嚴重問題，並導致您必須重新安裝作業系統。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不保證能夠解決不當編輯登錄所產生的問題。 在編輯登錄之前，請先備份重要資料。 如需有關如何備份、還原及編輯登錄的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫文件： [Microsoft Windows 登錄說明](https://support.microsoft.com/kb/256986)。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務啟動時會載入組態檔。 登錄項目如有任何變更，就必須重新啟動服務。  
 
@@ -359,7 +359,7 @@ ms.locfileid: "47806508"
 > [!IMPORTANT]  
 >  若要管理儲存在遠端伺服器上的封裝，您不必連接到該遠端伺服器上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務執行個體， 而是要編輯 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的組態檔，好讓 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 顯示儲存在遠端伺服器上的封裝。
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務使用 DCOM 通訊協定。 如需有關 DCOM 通訊協定如何穿越防火牆運作的詳細資訊，請參閱 MSDN Library 中的[搭配防火牆使用分散式 COM](http://go.microsoft.com/fwlink/?LinkId=12490)文件。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務使用 DCOM 通訊協定。 如需有關 DCOM 通訊協定如何穿越防火牆運作的詳細資訊，請參閱 MSDN Library 中的[搭配防火牆使用分散式 COM](https://go.microsoft.com/fwlink/?LinkId=12490)文件。  
   
  有許多防火牆系統可用。 如果您正在執行 Windows 防火牆以外的防火牆，請參閱防火牆文件以獲取您正在使用之系統所特定的資訊。  
   

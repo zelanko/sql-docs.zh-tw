@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ceed700884c3f146053612f06f9370d8f454e067
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15c2ebe8c7084e10e4b7ff1ad556ed465d91c799
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799427"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813961"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>使用 Reporting Services 行動報表中的模擬資料
 當您將圖庫元素放在設計介面上時， [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 會立即產生該元素的模擬資料。 建立行動報表時，這項資料會提供數個實用的用途。   
@@ -42,8 +42,8 @@ ms.locfileid: "47799427"
   
 ### <a name="see-also"></a>另請參閱  
 - [使用 SQL Server 行動報表發行工具建立與發行行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
--  在 [iPad app 中檢視 SQL Server 行動報表和 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI for iOS)  
--  請參閱 [在 iPhone 應用程式中檢視 SQL Server 行動報表和 KPI (iOS 版 Power BI)](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (iOS 版 Power BI)  
+-  在 [iPad app 中檢視 SQL Server 行動報表和 KPI](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI for iOS)  
+-  請參閱 [在 iPhone 應用程式中檢視 SQL Server 行動報表和 KPI (iOS 版 Power BI)](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (iOS 版 Power BI)  
   
   
   

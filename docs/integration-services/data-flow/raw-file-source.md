@@ -19,12 +19,12 @@ ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ccea2475e89d0f0fdd5d89e01162ce5ab7271c90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5a6a40ef5bee1c50ddbaf1f3424d3199e8494e3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821087"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637652"
 ---
 # <a name="raw-file-source"></a>原始檔案來源
   「原始檔案」來源會從檔案讀取原始資料。 由於資料的表示法對於來源而言是原生的，因此資料不需翻譯，也幾乎不需要剖析。 這表示，「原始檔案」來源可比其他來源更快讀取資料，例如「一般檔案」和 OLE DB 來源。  
@@ -45,7 +45,7 @@ ms.locfileid: "47821087"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [原始檔案自訂屬性](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47821087"
   
 ## <a name="related-content"></a>相關內容  
   
--   sqlservercentral.com 上的部落格文章： [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)(原始檔案太酷了)  
+-   sqlservercentral.com 上的部落格文章： [Raw Files Are Awesome](https://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)(原始檔案太酷了)  
   
 ## <a name="raw-file-source-editor-connection-manager-page"></a>原始檔案來源編輯器 (連接管理員頁面)
   「原始檔案」來源會從檔案讀取原始資料。 由於資料的表示法對於來源而言是原生的，因此資料不需翻譯，也幾乎不需要剖析。   

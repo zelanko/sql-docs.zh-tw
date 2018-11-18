@@ -11,12 +11,12 @@ ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51ca2217d9d04cb6d38c493e2199a065720f8c17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4b1bfeea10cf53ae279afac2c457e8fa8f1c6ec
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626046"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641865"
 ---
 # <a name="recordset-destination-custom-properties"></a>資料錄集目的地自訂屬性
   資料錄集目的地同時具有自訂屬性以及所有資料流程元件通用的屬性。  
@@ -32,6 +32,6 @@ ms.locfileid: "47626046"
  如需詳細資訊，請參閱 [Recordset Destination](../../integration-services/data-flow/recordset-destination.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

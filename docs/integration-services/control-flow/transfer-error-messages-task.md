@@ -17,12 +17,12 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2a1c3f5b010d0d1fbe0e1aae8ed19e1436ee05f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d377673177bd5aa2a5ac77b48e93153bdf420f41
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722736"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640855"
 ---
 # <a name="transfer-error-messages-task"></a>傳送錯誤訊息工作
   [傳送錯誤訊息] 工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間傳送一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者自訂的錯誤訊息。 使用者定義的訊息是識別碼等於或大於 50000 的訊息。 識別碼小於 50000 的訊息是系統錯誤訊息，這種訊息無法使用「傳送錯誤訊息」工作進行傳送。  
@@ -39,7 +39,7 @@ ms.locfileid: "47722736"
   
 -   略過重複的錯誤訊息。  
   
- 在執行階段，「傳送錯誤訊息」工作會使用一或多個 SMO 連接管理員，連接到來源和目的地伺服器。 SMO 連接管理員會在「傳送錯誤訊息」工作以外另行設定，然後在「傳送錯誤訊息」工作中參考。 存取伺服器時，SMO 連接管理員會指定要使用的伺服器和驗證模式。 如需詳細資訊，請參閱 [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md)。  
+ 在執行階段，「傳送錯誤訊息」工作會使用一或多個 SMO 連接管理員，連接到來源和目的地伺服器。 SMO 連接管理員會在「傳送錯誤訊息」工作以外另行設定，然後在「傳送錯誤訊息」工作中參考。 存取伺服器時，SMO 連接管理員會指定要使用的伺服器和驗證模式。 如需相關資訊，請參閱 [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md)。  
   
  [傳送錯誤訊息] 工作支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來源和目的地。 將哪一個用作來源或目的地是沒有限制的。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47722736"
  該工作並不報告錯誤訊息傳送的累加進度，它只報告 0% 和 100 % 完成。  
   
 ## <a name="execution-value"></a>執行值  
- 工作之 **ExecutionValue** 屬性中定義的執行值會傳回已傳送的錯誤訊息數目。 透過將使用者定義的變數指派給 [傳送錯誤訊息] 工作的 **ExecValueVariable** 屬性，可將與錯誤訊息傳送相關的資訊用於封裝中的其他物件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 工作之 **ExecutionValue** 屬性中定義的執行值會傳回已傳送的錯誤訊息數目。 透過將使用者定義的變數指派給 [傳送錯誤訊息] 工作的 **ExecValueVariable** 屬性，可將與錯誤訊息傳送相關的資訊用於封裝中的其他物件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)和[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
 ## <a name="log-entries"></a>記錄項目  
  「傳送錯誤訊息」工作包含下列自訂記錄項目：  
@@ -77,7 +77,7 @@ ms.locfileid: "47722736"
 ## <a name="related-tasks"></a>相關工作  
  如需有關如何在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
--   [設定工作或容器的屬性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [設定工作或容器的屬性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="transfer-error-messages-task-editor-general-page"></a>傳送錯誤訊息工作編輯器 (一般頁面)
   使用 [傳送錯誤訊息工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述傳送錯誤訊息工作。 [傳送錯誤訊息] 工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間傳送一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者自訂的錯誤訊息。   

@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cfd9c9d9a1e309cae28abfa7674d021405f6d02
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: bcf25195821c42d5120fc5d248b364ce23e24ed0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798597"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700316"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -194,7 +194,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ## <a name="locking-behavior"></a>鎖定行為  
  根據預設，DELETE 陳述式永遠都會取得它所修改之資料表的獨佔 (X) 鎖定，並保留該鎖定直到交易完成為止。 運用獨佔 (X) 鎖定，沒有其他交易可修改資料；只有使用 NOLOCK 提示或讀取未認可隔離等級，才能進行讀取作業。 您可以指定資料表提示，透過指定其他鎖定方法來覆寫 DELETE 陳述式持續時間的這個預設行為，但是，我們建議僅將提示做為由資深開發人員及資料庫系統管理員採取的最後手段。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
- 當資料列從堆積中刪除時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 可能會在作業時使用資料列或頁面鎖定。 如此一來，由刪除作業清空的頁面仍然會配置給堆積。 如果未取消空白頁面的配置，資料庫中的其他物件就無法重複使用相關聯的空間。  
+ 當資料列從堆積中刪除時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可能會在作業時使用資料列或頁面鎖定。 如此一來，由刪除作業清空的頁面仍然會配置給堆積。 如果未取消空白頁面的配置，資料庫中的其他物件就無法重複使用相關聯的空間。  
   
  若要刪除堆積中的資料列及取消配置頁面，請使用下列其中一個方法。  
   
@@ -230,7 +230,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  本節的範例會使用最少的所需語法來示範 DELETE 陳述式的基本功能。  
   
 #### <a name="a-using-delete-with-no-where-clause"></a>A. 使用不含 WHERE 子句的 DELETE  
- 以下範例會刪除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `SalesPersonQuotaHistory` 資料表的所有資料列，因為並未利用 WHERE 子句來限制刪除的資料列數。  
+ 以下範例會刪除 `SalesPersonQuotaHistory` 資料庫中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表的所有資料列，因為並未利用 WHERE 子句來限制刪除的資料列數。  
   
 ```sql
 DELETE FROM Sales.SalesPersonQuotaHistory;  
@@ -241,7 +241,7 @@ GO
  本節中的範例會顯示如何限制將會遭到刪除的資料列數目。  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. 使用 WHERE 子句刪除一組資料列  
- 以下範例會刪除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `ProductCostHistory` 資料表中，所有 `StandardCost` 資料行值超過 `1000.00` 的資料列。  
+ 以下範例會刪除 `ProductCostHistory` 資料庫的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表中，所有 `StandardCost` 資料行值超出 `1000.00`的資料列。  
   
 ```sql
 DELETE FROM Production.ProductCostHistory  
@@ -367,7 +367,7 @@ GO
 ```  
   
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>G. 使用 OPENQUERY 函數刪除遠端資料表的資料  
- 下列範例會藉由指定 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 資料列集函式來刪除遠端資料表的資料列。 上一個範例所建立之連結的伺服器名稱會用於這個範例。  
+ 下列範例會藉由指定 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 資料列集函數來刪除遠端資料表的資料列。 上一個範例所建立之連結的伺服器名稱會用於這個範例。  
   
 ```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
@@ -404,7 +404,7 @@ GO
 ```  
   
 #### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. 在 DELETE 陳述式中，搭配 <from_table_name> 來使用 OUTPUT  
- 以下範例根據 `DELETE` 陳述式的 `FROM` 子句所定義的搜尋準則來刪除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 `ProductProductPhoto` 資料表中的資料列。 `OUTPUT` 子句會傳回所刪除的資料表的 `DELETED.ProductID`、 `DELETED.ProductPhotoID`資料行及 `Product` 資料表中的資料行。 `FROM` 子句藉此來指定要刪除的資料列。  
+ 以下範例根據 `ProductProductPhoto` 陳述式的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 子句所定義的搜尋準則來刪除 `FROM` 資料庫的 `DELETE` 資料表中的資料列。 `OUTPUT` 子句會傳回所刪除的資料表的 `DELETED.ProductID`、 `DELETED.ProductPhotoID`資料行及 `Product` 資料表中的資料行。 `FROM` 子句藉此來指定要刪除的資料列。  
   
 ```sql
 DECLARE @MyTableVar table (  
@@ -458,7 +458,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 ### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. 搭配 DELETE 陳述式使用標籤及查詢提示  
- 此查詢示會示範查詢聯結提示與 DELETE 陳述式搭配使用的基本語法。 如需聯結提示及如何使用 OPTION 子句的詳細資訊，請參閱 [OPTION (SQL Server PDW)](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc)。  
+ 此查詢示會示範查詢聯結提示與 DELETE 陳述式搭配使用的基本語法。 如需聯結提示及如何使用 OPTION 子句的詳細資訊，請參閱 [OPTION (SQL Server PDW)](https://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc)。  
   
 ```sql
 -- Uses AdventureWorks  

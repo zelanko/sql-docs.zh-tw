@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54c1b3946a2e1495390f228d21198f40dae06c62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb0e8200fb90dd4455c60f650c5fd3e9f5afddd7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639416"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665517"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>建立系統建立版本的時態表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ WITH
   
 -   如果指定的結構描述不存在，則 **CREATE TABLE** 陳述式會失敗。  
   
--   如果 **HISTORY_TABLE** 參數指定的資料表已經存在，就會根據新建立的時態表驗證 [結構描述一致性和暫存資料一致性](http://msdn.microsoft.com/library/dn935015.aspx)。 如果您指定無效的記錄資料表，則 **CREATE TABLE** 陳述式會失敗。  
+-   如果 **HISTORY_TABLE** 參數指定的資料表已經存在，就會根據新建立的時態表驗證 [結構描述一致性和暫存資料一致性](https://msdn.microsoft.com/library/dn935015.aspx)。 如果您指定無效的記錄資料表，則 **CREATE TABLE** 陳述式會失敗。  
   
 ## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>建立具有使用者定義記錄資料表的時態表  
  當使用者想要以特定的儲存體選項和其他索引來指定記錄資料表時，就很適合建立具有使用者定義記錄資料表的時態表。 下例會使用與要建立的時態表一致的結構描述，建立使用者定義的記錄資料表。 對這個使用者定義的記錄資料表，會建立叢集資料行存放區索引和其他非叢集資料列存放區 (B-tree) 索引以進行點查閱。 這個使用者定義的記錄資料表建立之後，就會建立系統建立版本的時態表，將使用者定義的記錄資料表指定為預設的記錄資料表。  

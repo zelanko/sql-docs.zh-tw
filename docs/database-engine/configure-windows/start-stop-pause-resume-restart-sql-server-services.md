@@ -41,12 +41,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf944c001534a6b1dec008498122e5d020e1a0c1
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 49a5a5681093c9a4f39f843d713aa286c86fc818
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383823"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601958"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>啟動、停止、暫停、繼續、重新啟動 SQL Server 服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ ms.locfileid: "49383823"
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 根據預設，只有本機 Administrators 群組的成員能夠啟動、停止、暫停、繼續或重新啟動服務。 若要將管理服務的能力授與非系統管理員，請參閱 [How to grant users rights to manage services in Windows Server 2003](http://support.microsoft.com/kb/325349)(如何在 Windows Server 2003 中，將管理服務的權限授與使用者)。 (其他 Windows 版本的程序都很相似)。  
+ 根據預設，只有本機 Administrators 群組的成員能夠啟動、停止、暫停、繼續或重新啟動服務。 若要將管理服務的能力授與非系統管理員，請參閱 [How to grant users rights to manage services in Windows Server 2003](https://support.microsoft.com/kb/325349)(如何在 Windows Server 2003 中，將管理服務的權限授與使用者)。 (其他 Windows 版本的程序都很相似)。  
   
  使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] SHUTDOWN [!INCLUDE[tsql](../../includes/tsql-md.md)]**命令停止** 需要 **sysadmin** 或 **serveradmin** 固定伺服器角色的成員資格，而且無法移轉。  
   
@@ -355,7 +355,7 @@ ms.locfileid: "49383823"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 安裝程式文件集的概觀](http://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)   
+ [SQL Server 安裝程式文件集的概觀](https://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)   
  [檢視與讀取 SQL Server 安裝程式記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)   
  [以最低組態啟動 SQL Server](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)   

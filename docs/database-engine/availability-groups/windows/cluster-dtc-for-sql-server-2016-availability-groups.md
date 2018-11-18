@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cdb63eb4a44b3035010336a8143b8bb34e0da8fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd433b33fcf62afd16b27f368507fc2794768fae
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703726"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601378"
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>針對 SQL Server 2016 可用性群組叢集化 DTC
 
@@ -48,7 +48,7 @@ ms.locfileid: "47703726"
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|停止並停用本機 DTC 服務。|[設定如何啟動服務](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|針對可用性群組中的每個執行個體輪流使用 SQL Server 服務。  視需要容錯移轉可用性群組。|[執行可用性群組的已規劃手動容錯移轉 (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
-- 如果伺服器是 Windows Server 2012 R2，則作業系統必須套用 [KB 3030373](http://support.microsoft.com/kb/3090973) 。
+- 如果伺服器是 Windows Server 2012 R2，則作業系統必須套用 [KB 3030373](https://support.microsoft.com/kb/3090973) 。
 
 - 根據 [AlwaysOn 可用性群組的必要條件、限制和建議](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)中的檢查清單來準備可用性群組的伺服器。
 
@@ -64,6 +64,6 @@ ms.locfileid: "47703726"
 [逐步建立可用性群組](create-an-availability-group-transact-sql.md)
 
 
-[SQL Server 2016 DTC Support in Availability Groups](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) (可用性群組中的 SQL Server 2016 DTC 支援) 
+[SQL Server 2016 DTC Support in Availability Groups](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) (可用性群組中的 SQL Server 2016 DTC 支援) 
 
-[外部連結：使用 Windows Server 2008 R2 設定 SQL Server 叢集執行個體的 DTC](http://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)
+[外部連結：使用 Windows Server 2008 R2 設定 SQL Server 叢集執行個體的 DTC](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)
