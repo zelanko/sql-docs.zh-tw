@@ -3,14 +3,14 @@ items:
   href: index.md
 - name: 機器學習延伸模組 (R、Python)
   items:
-  - name: 機器學習服務 (R、Python)
+  - name: 新功能
+    href: what-s-new-in-sql-server-machine-learning-services.md
+  - name: SQL ML 服務 (R、Python)
     href: what-is-sql-server-machine-learning.md
   - name: R Services
     href: r/sql-server-r-services.md
   - name: 獨立伺服器
     href: r/r-server-standalone.md
-  - name: 新功能
-    href: what-s-new-in-sql-server-machine-learning-services.md
 - name: Java 延伸模組
   items:
   - name: 在 SQL 上執行 Java 程式碼
@@ -25,13 +25,13 @@ items:
   items:
   - name: SQL Server 2019 中的差異
     href: install/sql-machine-learning-services-ver15.md
-  - name: 機器學習服務 (R、Python)
+  - name: 安裝 ML 服務 (R、Python)
     href: install/sql-machine-learning-services-windows-install.md
-  - name: R Services
+  - name: 安裝 R 服務
     href: install/sql-r-services-windows-install.md
-  - name: 獨立伺服器 (R、Python)
+  - name: 安裝獨立伺服器 (R、Python)
     href: install/sql-machine-learning-standalone-windows-install.md
-  - name: 預先定型的模型
+  - name: 安裝已訓練的模型
     href: install/sql-pretrained-models-install.md
   - name: 離線安裝程式 (不連線到網際網路)
     href: install/sql-ml-component-install-without-internet-access.md
@@ -42,9 +42,9 @@ items:
     href: install/sql-ml-component-commandline-install.md
   - name: 升級 R 與 Python
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
-  - name: 設定 R 工具
+  - name: 設定 R 用戶端
     href: r/set-up-a-data-science-client.md
-  - name: 設定 Python 工具
+  - name: 設定 Python 用戶端
     href: python/setup-python-client-tools-sql.md
   - name: 設定虛擬伺服器
     href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
@@ -324,10 +324,10 @@ items:
     - name: '[SQL Server]'
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: 機器學習服務伺服器
-      href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 38a11ee71e6c69c0305258b8f307ac5c6beb3481
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+      href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
+ms.openlocfilehash: d2cf2947c60d3ac3550dfeeba3acbf46bd0e48bd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030096"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697896"
