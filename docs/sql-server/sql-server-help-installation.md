@@ -10,12 +10,12 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57b606af70ac4018fbedd266a9fe38243347458d
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: e9a1ae0aac049fef58d8007c26dce6ce355344a6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460583"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700526"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 離線說明和說明檢視器
 
@@ -134,7 +134,7 @@ SSMS 17.x 以及 VS 2015 和 2017 使用說明檢視器 2.x，其支援 SQL Serv
 
 此程序使用說明檢視器 1.x 從 Microsoft 下載中心下載 SQL Server 2014 說明，並將它安裝在電腦上。
 
-1. 巡覽至 [Microsoft SQL Server 2014 的產品文件](https://www.microsoft.com/en-us/download/details.aspx?id=42557)下載網站，然後按一下 [下載]。  
+1. 巡覽至 [Microsoft SQL Server 2014 的產品文件](https://www.microsoft.com/download/details.aspx?id=42557)下載網站，然後按一下 [下載]。  
 2. 按一下訊息方塊中的 [儲存]，將 *SQLServer2014Documentation\_\*.exe* 檔案儲存至電腦。  
    
    >[!NOTE]

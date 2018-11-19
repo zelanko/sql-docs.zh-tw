@@ -10,12 +10,12 @@ ms.assetid: 00665e16-2990-4bfc-8e17-d97ca9fb4999
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dd380541c42e7e49434a0683609c3fb8dd6ae64a
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 730965c17bc53781729d0dcd78aaa8085128a35b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50098981"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659417"
 ---
 # <a name="appendix---1-accesstosql"></a>附錄-1 (AccessToSQL)
 SSMA 主控台命令列選項的快速檢視：  
@@ -32,5 +32,5 @@ SSMA 主控台命令列選項的快速檢視：
 |8|-?|否|不適用|不適用|  
   
 ## <a name="see-also"></a>另請參閱  
-[執行 SSMA 主控台 （存取）](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[執行 SSMA 主控台 （存取）](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

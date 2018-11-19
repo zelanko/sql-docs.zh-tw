@@ -5,21 +5,20 @@ ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 894ba222854e21a5d02811ca457ffa47184c4431
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca2bbf04ef2132f0bf1250cd6bd5c097a5a7760b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702575"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669367"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>設定事件通知的對話安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47702575"
 |-------------------|-------------------|  
 |選擇或建立資料庫來保存事件通知和主要金鑰。|選擇或建立資料庫來保存主要金鑰。|  
 |如果來源資料庫沒有主要金鑰，請 [建立主要金鑰](../../t-sql/statements/create-master-key-transact-sql.md)。 來源和目標資料庫上必須有主要金鑰才能協助保護其個別憑證。|如果目標資料庫沒有主要金鑰，請建立主要金鑰。|  
-|為來源資料庫[建立登入](../../t-sql/statements/create-login-transact-sql.md) 和對應的 [使用者](../../t-sql/statements/create-使用者-transact-sql.md) 。|為目標資料庫建立登入和對應的使用者。|  
+|為來源資料庫[建立登入](../../t-sql/statements/create-login-transact-sql.md) 和對應的 [使用者](../../t-sql/statements/create-user-transact-sql.md)。|為目標資料庫建立登入和對應的使用者。|  
 |[建立憑證](../../t-sql/statements/create-certificate-transact-sql.md) ，這是來源資料庫的使用者所擁有的憑證。|建立憑證，這是目標資料庫的使用者所擁有的憑證。|  
 |[備份憑證](../../t-sql/statements/backup-certificate-transact-sql.md) 到可供目標伺服器存取的檔案。|備份憑證到可供來源伺服器存取的檔案。|  
 |[建立使用者](../../t-sql/statements/create-user-transact-sql.md)時，指定目標資料庫的使用者和 WITHOUT LOGIN。 此使用者將擁有要從備份檔案建立的目標資料庫憑證。 使用者不必對應到登入，因為此使用者唯一的目的是要擁有接下來的步驟 3 所建立的目標資料庫憑證。|建立使用者時，指定來源資料庫的使用者和 WITHOUT LOGIN。 此使用者將擁有要從備份檔案建立的來源資料庫憑證。 使用者不必對應到登入，因為此使用者唯一的目的是要擁有接下來的步驟 3 所建立的來源資料庫憑證。|  
@@ -55,7 +54,7 @@ ms.locfileid: "47702575"
 |來源伺服器|目標伺服器|  
 |-------------------|-------------------|  
 |從目標憑證的備份檔案[建立憑證](../../t-sql/statements/create-certificate-transact-sql.md) 時，指定目標資料庫使用者作為擁有者。|從來源憑證的備份檔案建立憑證時，指定來源資料庫使用者作為擁有者。|  
-|[授與權限](../../t-sql/statements/grant-transact-sql.md) 來建立來源資料庫使用者的事件通知。 如需此權限的詳細資訊，請參閱 [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md)。|授與 REFERENCES 權限給現有的事件通知 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 合約上的目標資料庫使用者： `http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`。|  
+|[授與權限](../../t-sql/statements/grant-transact-sql.md) 來建立來源資料庫使用者的事件通知。 如需此權限的詳細資訊，請參閱 [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md)。|授與 REFERENCES 權限給現有的事件通知 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 合約上的目標資料庫使用者： `https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`。|  
 |[建立遠端服務繫結](../../t-sql/statements/create-remote-service-binding-transact-sql.md) 至目標服務，並指定目標資料庫使用者的認證。 遠端服務繫結保證來源資料庫使用者擁有之憑證中的公開金鑰會驗證傳送至目標伺服器的訊息。|[授與](../../t-sql/statements/grant-transact-sql.md) CREATE QUEUE、CREATE SERVICE 和 CREATE SCHEMA 權限給目標資料庫使用者。|  
 ||如果尚未以目標資料庫使用者連接到資料庫，請立刻執行此動作。|  
 ||[建立佇列](../../t-sql/statements/create-queue-transact-sql.md) 來接收事件通知訊息，並 [建立服務](../../t-sql/statements/create-service-transact-sql.md) 來傳遞訊息。|  
@@ -68,7 +67,7 @@ ms.locfileid: "47702575"
   
 |來源伺服器|目標伺服器|  
 |-------------------|-------------------|  
-|[建立路由](../../t-sql/statements/create-route-transact-sql.md) 到目標服務，並指定目標資料庫的 Service Broker 識別碼和已同意的 TCP 通訊埠編號。|建立路由到來源服務，並指定來源資料庫的 Service Broker 識別碼和已同意的 TCP 通訊埠編號。 若要指定來源服務，請使用下列提供的服務： `http://schemas.microsoft.com/SQL/Notifications/EventNotificationService`。|  
+|[建立路由](../../t-sql/statements/create-route-transact-sql.md) 到目標服務，並指定目標資料庫的 Service Broker 識別碼和已同意的 TCP 通訊埠編號。|建立路由到來源服務，並指定來源資料庫的 Service Broker 識別碼和已同意的 TCP 通訊埠編號。 若要指定來源服務，請使用下列提供的服務： `https://schemas.microsoft.com/SQL/Notifications/EventNotificationService`。|  
 |切換到 **master** 資料庫來設定伺服器層級驗證。|切換到 **master** 資料庫來設定伺服器層級驗證。|  
 |如果 **master** 資料庫沒有主要金鑰，請 [建立主要金鑰](../../t-sql/statements/create-master-key-transact-sql.md)。|如果 **master** 資料庫沒有主要金鑰，請建立主要金鑰。|  
 |[建立憑證](../../t-sql/statements/create-certificate-transact-sql.md) 來驗證資料庫。|建立憑證來驗證資料庫。|  
