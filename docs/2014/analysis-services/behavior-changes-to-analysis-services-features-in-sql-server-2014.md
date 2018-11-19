@@ -103,7 +103,7 @@ ms.locfileid: "50145837"
 #### <a name="new-default-setting-for-load-balancing-requests-changed-from-round-robin-to-health-based"></a>負載平衡要求的新預設設定從「循環配置資源」變更為「依據健全狀態」  
  PowerPivot 服務應用程式的預設設定會決定如何將 PowerPivot 資料的要求分散至伺服陣列中的多部 PowerPivot for SharePoint 伺服器。 在舊版中，預設設定為 **[循環配置資源]**，這項設定會在可用的伺服器之間循序分散要求。 而在此版本中，預設現在為 **[依據健全狀態]**。 PowerPivot 服務應用程式會使用伺服器健全狀況統計資料 (例如可用的記憶體或 CPU)，決定哪個伺服器執行個體取得 xt 要求。  
   
- 如果您已從舊版升級伺服器，PowerPivot 服務應用程式仍會保留舊的預設設定 (**[循環配置資源]**)。 若要使用 **[依據健全狀態]** 配置方法設定，則必須修改組態設定。 如需詳細資訊，請參閱 [Create and Configure a PowerPivot Service Application in Central Administration](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)。  
+ 如果您已從舊版升級伺服器，PowerPivot 服務應用程式仍會保留舊的預設設定 (**[循環配置資源]**)。 若要使用 **[依據健全狀態]** 配置方法設定，則必須修改組態設定。 如需詳細資訊，請參閱 [建立及設定 PowerPivot 服務應用程式](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [回溯相容性](../../2014/getting-started/backward-compatibility.md)   
