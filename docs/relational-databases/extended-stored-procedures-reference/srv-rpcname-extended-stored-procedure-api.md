@@ -20,12 +20,12 @@ ms.assetid: 0a1424e4-3319-4836-b8d8-5e0344cc683f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b01f8614194e56c2cb582e84b1c4808842d43c5d
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f86fe9c3b74eda068ddbf8a5c0b026f58fc1f386
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031365"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658007"
 ---
 # <a name="srvrpcname-extended-stored-procedure-api"></a>srv_rpcname (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,6 +64,6 @@ len
  由於沒有遠端預存程序時呼叫 **srv_rpcname** 是有效的做法 (不會出現任何參考用錯誤)，所以這個函式會提供一種方法來判斷遠端預存程序是否存在。  
   
 > [!IMPORTANT]  
->  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
+>  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
   
   
