@@ -1,7 +1,7 @@
 ---
 title: 使用 ODBC 驅動程式使用 Azure Active Directory |適用於 SQL Server 的 Microsoft Docs
 ms.custom: ''
-ms.date: 03/21/2018
+ms.date: 11/08/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7486e97fb0efe9fffa9fe6eb49ee75cc6d75bfce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 949ae2e19279db895ca9bca1441f06c2b2d8948f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634998"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604098"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>搭配 ODBC 驅動程式使用 Azure Active Directory
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -35,7 +35,7 @@ Microsoft ODBC Driver for SQL Server 使用 13.1 版或更新可讓 ODBC 應用�
 |[屬性]|值|預設|Description|
 |-|-|-|-|
 |`Authentication`|（未設定），（空字串）、 `SqlPassword`， `ActiveDirectoryPassword`， `ActiveDirectoryIntegrated`， `ActiveDirectoryInteractive`|(未設定)|控制驗證模式。<table><tr><th>ReplTest1<th>Description<tr><td>(未設定)<td>驗證模式取決於其他關鍵字 （現有舊版連線選項）。<tr><td>(空字串)<td>連接字串是: "{0}"覆寫並取消設定`Authentication`DSN 中的設定值。<tr><td>`SqlPassword`<td>直接驗證使用者名稱和密碼的 SQL Server 執行個體。<tr><td>`ActiveDirectoryPassword`<td>使用 Azure Active Directory 身分識別的使用者名稱和密碼進行驗證。<tr><td>`ActiveDirectoryIntegrated`<td>_Windows 驅動程式只_。 使用 Azure Active Directory 身分識別使用整合式的驗證進行驗證。<tr><td>`ActiveDirectoryInteractive`<td>_Windows 驅動程式只_。 使用 Azure Active Directory 身分識別使用互動式驗證進行驗證。</table>|
-|`Encrypt`|(未設定)、`Yes`、`No`|（請參閱描述）|控制連接的加密。 如果前的屬性值`Authentication`未設定_無_，預設值是`Yes`。 否則預設為 `No`。 加密前的屬性值是`Yes`值設定為如果`Yes`DSN 或連接字串中。|
+|`Encrypt`|(未設定)、`Yes`、`No`|（請參閱描述）|控制連接的加密。 如果前的屬性值`Authentication`未設定_無_DSN 或連接字串中，預設值是`Yes`。 否則預設為 `No`。 如果屬性`SQL_COPT_SS_AUTHENTICATION`前的屬性值會覆寫`Authentication`，明確地設定 DSN 或連接字串或連接屬性中的加密值。 加密前的屬性值是`Yes`值設定為如果`Yes`DSN 或連接字串中。|
 
 ## <a name="new-andor-modified-connection-attributes"></a>新增和/或修改連接屬性
 
@@ -45,7 +45,7 @@ Microsoft ODBC Driver for SQL Server 使用 13.1 版或更新可讓 ODBC 應用�
 |-|-|-|-|-|
 |`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`、`SQL_AU_PASSWORD`、`SQL_AU_AD_INTEGRATED`、`SQL_AU_AD_PASSWORD`、`SQL_AU_AD_INTERACTIVE`、`SQL_AU_RESET`|(未設定)|請參閱說明`Authentication`上述的關鍵字。 `SQL_AU_NONE` 提供以明確覆寫一組`Authentication`值在 DSN 和/或連接字串中，雖然`SQL_AU_RESET`取消設定此屬性，如果它已設定，讓較高的優先順序的 DSN 或連接字串值。|
 |`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|指標`ACCESSTOKEN`或 NULL|NULL|如果不是 null，會指定 azure Ad 存取權杖來使用。 它會指定存取權杖，也`UID`， `PWD`， `Trusted_Connection`，或`Authentication`連接字串關鍵字或其對等的屬性。 <br> **注意︰** ODBC Driver 13.1 版僅支援這上_Windows_。|
-|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|（請參閱描述）|控制連接的加密。 `SQL_EN_OFF` 和`SQL_EN_ON`停用和啟用加密，分別。 如果前的屬性值`Authentication`未設定_無_或`SQL_COPT_SS_ACCESS_TOKEN`設定，並`Encrypt`中未指定的 DSN 」 或 「 連接字串，預設值是`SQL_EN_ON`。 否則預設為 `SQL_EN_OFF`。 此屬性可控制的有效值[是否使用加密連接。](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)|
+|`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|（請參閱描述）|控制連接的加密。 `SQL_EN_OFF` 和`SQL_EN_ON`停用和啟用加密，分別。 如果前的屬性值`Authentication`未設定_無_或`SQL_COPT_SS_ACCESS_TOKEN`設定，並`Encrypt`中未指定的 DSN 」 或 「 連接字串，預設值是`SQL_EN_ON`。 否則預設為 `SQL_EN_OFF`。 如果連接屬性`SQL_COPT_SS_AUTHENTICATION`設定為不_無_，明確地設定`SQL_COPT_SS_ENCRYPT`所要的值如果`Encrypt`DSN 或連接字串中未指定。 此屬性可控制的有效值[是否使用加密連接。](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)|
 |`SQL_COPT_SS_OLDPWD`|\-|\-|\-|不支援與 Azure Active Directory，因為 AAD 主體的密碼變更，無法透過 ODBC 連接來完成。 <br><br>SQL Server 驗證的密碼逾期已在 SQL Server 2005 中推出。 `SQL_COPT_SS_OLDPWD`屬性已新增至允許用戶端提供連線的舊和新的密碼。 設定這個屬性之後，提供者將不會針對第一次連接或後續連接使用連接集區，因為連接字串將會包含已經變更的「舊密碼」。|
 |`SQL_COPT_SS_INTEGRATED_SECURITY`|`SQL_IS_INTEGER`|`SQL_IS_OFF`、`SQL_IS_ON`|`SQL_IS_OFF`|_已被取代_; 使用`SQL_COPT_SS_AUTHENTICATION`設定為`SQL_AU_AD_INTEGRATED`改。 <br><br>強制使用 Windows 驗證 (在 Linux 和 macOS 上的 Kerberos) 的伺服器登入的存取驗證。 使用 Windows 驗證時，驅動程式會忽略使用者識別碼和密碼值的一部分`SQLConnect`， `SQLDriverConnect`，或`SQLBrowseConnect`處理。|
 
@@ -57,7 +57,7 @@ DSN 設定和連接 Ui 的驅動程式已增強，以使用與 Azure AD 的驗�
 
 您可使用新的 Azure AD 驗證選項時建立或編輯現有的 DSN 使用驅動程式的安裝程式 UI:
 
-`Authentication=ActiveDirectoryIntegrated` SQL Azure 的 Azure Active Directory 整合式驗證
+`Authentication=ActiveDirectoryIntegrated` 表示對 SQL Azure 進行 Azure Active Directory 整合式驗證
 
 ![CreateNewDSN_ADIntegrated.png](windows/CreateNewDSN_ADIntegrated.png)
 
@@ -106,7 +106,7 @@ DSN 設定和連接 Ui 的驅動程式已增強，以使用與 Azure AD 的驗�
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
 
 > [!NOTE] 
->- 當新的 Active Directory 選項配合 Windows ODBC 驅動程式，請確認[適用於 SQL Server 的 Active Directory Authentication Library](http://go.microsoft.com/fwlink/?LinkID=513072)已安裝。 當使用 Linux 和 macOS 的驅動程式，請確定`libcurl`已安裝。 17.2 和更新版本的驅動程式版本，這是不明確的相依性因為不需要其他驗證方法或 ODBC 作業。
+>- 當新的 Active Directory 選項配合 Windows ODBC 驅動程式，請確認[適用於 SQL Server 的 Active Directory Authentication Library](https://go.microsoft.com/fwlink/?LinkID=513072)已安裝。 當使用 Linux 和 macOS 的驅動程式，請確定`libcurl`已安裝。 17.2 和更新版本的驅動程式版本，這是不明確的相依性因為不需要其他驗證方法或 ODBC 作業。
 >- 若要使用的 SQL Server 帳戶的使用者名稱和密碼進行連接，您現在可以使用新`SqlPassword`選項，建議使用，特別是針對 SQL Azure 因為這個選項會啟用更安全連線的預設值。
 >- 若要使用的 Azure Active Directory 帳戶的使用者名稱和密碼進行連接，指定`Authentication=ActiveDirectoryPassword`連接字串中，`UID`和`PWD`關鍵字的使用者名稱和密碼，分別。
 >- 若要使用 Windows 整合式 」 或 「 Active Directory 整合式 （僅 Windows 驅動程式） 驗證連線，請指定`Authentication=ActiveDirectoryIntegrated`連接字串中。 驅動程式會自動選擇正確的驗證模式。 `UID` 和`PWD`不得指定。
@@ -136,7 +136,7 @@ typedef struct AccessToken
     ...
     SQLCHAR connString[] = "Driver={ODBC Driver 13 for SQL Server};Server={server};UID=myuser;PWD=myPass;Authentication=ActiveDirectoryPassword"
     ...
-    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);  
+    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);  
     ...
 ~~~
 下列範例將示範使用 Azure Active Directory 存取權杖驗證與連接到 SQL Server 所需的程式碼。 在此情況下，就必須修改應用程式程式碼，來處理存取權杖，並將相關聯的連接屬性。

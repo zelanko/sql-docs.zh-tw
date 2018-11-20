@@ -11,12 +11,12 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ce122713ce5d57daa9a7313d8b6d184bd33b850
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.openlocfilehash: 2f9eded908271973415987155de5cf1efdc906db
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842746"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600968"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>搭配使用 Always Encrypted 與 JDBC 驅動程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,9 +29,9 @@ Always Encrypted 可讓用戶端加密敏感性資料，而且永遠不會向 SQ
 - 請確定 Microsoft JDBC Driver 6.0 （或更新版本） 的開發電腦上安裝 SQL Server。 
 - 下載並安裝 Java 密碼編譯延伸模組 (JCE) 無限制的強度管轄權原則檔。  請務必閱讀 ZIP 檔案中的讀我檔案，以了解安裝指示及可能的匯出/匯入問題相關詳細資料。  
 
-    - 如果使用 mssql-jdbc-X.X.X.jre7.jar 或 sqljdbc41.jar，則可以從[下載 Java 密碼編譯延伸模組 (JCE) 無限制的強度管轄權原則檔 7](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html) 下載原則檔
+    - 如果使用 mssql-jdbc-X.X.X.jre7.jar 或 sqljdbc41.jar，則可以從[下載 Java 密碼編譯延伸模組 (JCE) 無限制的強度管轄權原則檔 7](https://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html) 下載原則檔
 
-    - 如果使用 mssql-jdbc-X.X.X.jre8.jar 或 sqljdbc42.jar，則可以從[下載 Java 密碼編譯延伸模組 (JCE) 無限制的強度管轄權原則檔 8](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) 下載原則檔
+    - 如果使用 mssql-jdbc-X.X.X.jre8.jar 或 sqljdbc42.jar，則可以從[下載 Java 密碼編譯延伸模組 (JCE) 無限制的強度管轄權原則檔 8](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) 下載原則檔
 
     - 如果使用 mssql jdbc X.X.X.jre9.jar，任何原則檔案不需要下載。 在 Java 9 的管轄權原則預設為無限制的強度的加密。
 
@@ -154,7 +154,7 @@ String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<p
 這些認證會出現在 連接屬性時，JDBC 驅動程式會自動執行個體化 SQLServerColumnEncryptionJavaKeyStoreProvider。
 
 ### <a name="creating-a-column-master-key-for-the-java-key-store"></a>建立 Java 金鑰存放區的資料行主要金鑰
-SQLServerColumnEncryptionJavaKeyStoreProvider 可以搭配 JKS 或 PKCS12 金鑰儲存區類型。 若要建立或匯入要與此提供者所使用的金鑰使用 Java [keytool](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html)公用程式。 此金鑰必須具備作為金鑰存放區本身相同的密碼。 如何建立公開金鑰和其相關聯的私密金鑰使用 keytool 公用程式的範例如下：
+SQLServerColumnEncryptionJavaKeyStoreProvider 可以搭配 JKS 或 PKCS12 金鑰儲存區類型。 若要建立或匯入要與此提供者所使用的金鑰使用 Java [keytool](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/keytool.html)公用程式。 此金鑰必須具備作為金鑰存放區本身相同的密碼。 如何建立公開金鑰和其相關聯的私密金鑰使用 keytool 公用程式的範例如下：
 
 ```
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.jks -storepass mypassword -validity 360 -keysize 2048 -storetype jks
@@ -652,4 +652,4 @@ SQLServerConnection.setColumnEncryptionKeyCacheTtl (10, TimeUnit.MINUTES)
 
 ## <a name="see-also"></a>另請參閱
 
-[Always Encrypted (資料庫引擎)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+[一律加密 (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

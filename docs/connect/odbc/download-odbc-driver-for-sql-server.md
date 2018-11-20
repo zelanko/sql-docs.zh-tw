@@ -1,5 +1,5 @@
 ---
-title: 下載 ODBC Driver for SQL Server |Microsoft Docs
+title: 下載 ODBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2018
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7e691c3be64bd58512a2a2c8ed0fab144cd001d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fa6c6e18620c0e80576e864eca246c524eb0c5d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621966"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601038"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>下載 ODBC Driver for SQL Server
 
@@ -102,6 +102,6 @@ ms.locfileid: "47621966"
 
 ### <a name="linux"></a>Linux
 
-- **Red Hat Enterprise Linux 5 和 6 (64 位元)** - [下載 Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](http://go.microsoft.com/fwlink/?LinkId=267321)
+- **Red Hat Enterprise Linux 5 和 6 (64 位元)** - [下載 Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)
 
-- **SUSE Linux Enterprise 11 Service Pack 2 (64 位元)** - [下載 Microsoft ODBC Driver 11 Preview for SQL Server - SUSE Linux](http://go.microsoft.com/fwlink/?LinkId=264916)
+- **SUSE Linux Enterprise 11 Service Pack 2 (64 位元)** - [下載 Microsoft ODBC Driver 11 Preview for SQL Server - SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)

@@ -2,20 +2,20 @@
 title: SQL 用戶端程式設計的首頁 |Microsoft Docs
 description: 下載和語言和作業系統，連線到 SQL Server 或 Azure SQL Database 的多個組合文件註解連結的 [中樞] 頁面。
 author: MightyPen
-ms.date: 04/16/2018
+ms.date: 11/07/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
-ms.reviewer: meetb
+ms.reviewer: v-daveng
 ms.author: genemi
-ms.openlocfilehash: e2c3da2ba71661602f69f85f5eb79ba6d550be9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d773e05a3ed953e5210c0ade3226b4a32e82aeab
+ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633796"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51289898"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>用戶端程式設計 Microsoft SQL server 首頁
 
@@ -34,8 +34,8 @@ ms.locfileid: "47633796"
 
 如需有關連接到 Azure SQL Database 的連接字串的詳細資訊，請參閱：
 
-- [使用.NET Core (C#) 來查詢 Azure SQL database](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core)。
-- 附近的其他語言的相關內容，上述資料表中發行項是其他 Azure SQL Database。 比方說，請參閱 <<c0> [ 使用 PHP 查詢 Azure SQL database](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)。
+- [使用.NET Core (C#) 來查詢 Azure SQL database](/azure/sql-database/sql-database-connect-query-dotnet-core)。
+- 附近的其他語言的相關內容，上述資料表中發行項是其他 Azure SQL Database。 比方說，請參閱 <<c0> [ 使用 PHP 查詢 Azure SQL database](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)。
 
 
 #### <a name="build-an-app-webpages"></a>建置的應用程式網頁
@@ -79,8 +79,8 @@ ms.locfileid: "47633796"
 | :-- | :-- |
 | [使用 ADO.NET 連接到 SQL 的概念證明](./ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md) | 小型程式碼範例著重於連接和查詢 SQL Server。 |
 | [使用 ADO.NET 彈性地連接到 SQL](./ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md) | 因為連線可能偶爾會遇到的連線中斷，請重試邏輯的程式碼範例中。<br /><br />重試邏輯也適用於維護透過網際網路到任何雲端資料庫，例如 Azure SQL database 的連線。 |
-| [Azure SQL Database： 示範如何在 Windows/Linux/macOS 上使用.NET Core 建立 C# 程式，來連線及查詢](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core) | Azure SQL Database 的範例。 |
-| [組建的-應用程式： C# 中，ADO.NET 中，Windows](http://www.microsoft.com/sql-server/developer-get-started/csharp/win/) | 組態資訊，以及程式碼範例。 |
+| [Azure SQL Database： 示範如何在 Windows/Linux/macOS 上使用.NET Core 建立 C# 程式，來連線及查詢](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core) | Azure SQL Database 的範例。 |
+| [組建的-應用程式： C# 中，ADO.NET 中，Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/) | 組態資訊，以及程式碼範例。 |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>文件集
@@ -88,8 +88,8 @@ ms.locfileid: "47633796"
 |||
 | :-- | :-- |
 | [C# 使用 ADO.NET](./ado-net/index.md)| 我們的文件的根目錄。 |
-| [命名空間： System.Data](http://docs.microsoft.com/dotnet/api/system.data) | 一組用於 ADO.NET 的類別。 |
-| [命名空間：System.Data.SqlClient](http://docs.microsoft.com/dotnet/api/system.data.SqlClient) | 一組類別是最直接的 ADO.NET 的中心。 |
+| [命名空間： System.Data](https://docs.microsoft.com/dotnet/api/system.data) | 一組用於 ADO.NET 的類別。 |
+| [命名空間：System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.SqlClient) | 一組類別是最直接的 ADO.NET 的中心。 |
 | &nbsp; | <br /> |
 
 
@@ -103,14 +103,14 @@ Entity Framework (EF) 提供物件關聯式對應 (ORM)。 ORM 容易操作關�
 EF 有直接或間接的關聯性，使用下列技術：
 
 - .NET Framework
-- [LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/)，或[LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
+- [LINQ to SQL](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/)，或[LINQ to Entities](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
 - 語言語法增強功能，例如**=>** C# 中的運算子。
-- 針對對應至您的 SQL database 中的資料表類別產生原始程式碼的實用程式。 比方說， [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)。
+- 針對對應至您的 SQL database 中的資料表類別產生原始程式碼的實用程式。 比方說， [EdmGen.exe](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)。
 
 
 #### <a name="original-ef-and-new-ef"></a>原始的 EF 和新的 EF
 
-[Entity Framework 的起始頁](http://docs.microsoft.com/ef/)介紹 EF 的描述如下所示：
+[Entity Framework 的起始頁](https://docs.microsoft.com/ef/)介紹 EF 的描述如下所示：
 
 - Entity Framework 是物件關聯式對應程式 (O/RM)，可讓.NET 開發人員使用使用.NET 物件的資料庫。 它可免除大部分開發人員通常需要撰寫資料存取原始碼的需求。
 
@@ -118,8 +118,8 @@ EF 有直接或間接的關聯性，使用下列技術：
 
 |     |     |
 | :-- | :-- |
-| [EF 6.x](http://docs.microsoft.com/ef/ef6/) | 首先，Microsoft 會在 2008 年八月發行 EF。 在 2015 年 3 月 Microsoft 宣佈了 EF 6.x 是像在開發 Microsoft 的最終版本。 Microsoft 發行的原始程式碼到公用網域。<br /><br />一開始 EF 是.NET Framework 的一部分。 但 EF 6.x 已從.NET Framework 中移除。<br /><br />[在 Github 存放庫中的 EF 6.x 來源程式碼*aspnet/EntityFramework6*](http://github.com/aspnet/EntityFramework6) |
-| [EF Core](http://docs.microsoft.com/ef/core/) | Microsoft 在 2016 年 6 月發行新開發的 EF Core。 EF Core 被設計用於較佳的彈性和可攜性。 EF Core 可以執行超出只是 Microsoft Windows 作業系統上。 而且 EF Core 可以只是 Microsoft SQL Server 以外的資料庫和其他關聯式資料庫互動。<br /><br />**C&#x23;程式碼範例：**<br />[Entity Framework Core 使用者入門](https://docs.microsoft.com/ef/core/get-started/index)<br />[與現有的資料庫的.NET Framework 上的 EF Core 使用者入門](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
+| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | 首先，Microsoft 會在 2008 年八月發行 EF。 在 2015 年 3 月 Microsoft 宣佈了 EF 6.x 是像在開發 Microsoft 的最終版本。 Microsoft 發行的原始程式碼到公用網域。<br /><br />一開始 EF 是.NET Framework 的一部分。 但 EF 6.x 已從.NET Framework 中移除。<br /><br />[在 Github 存放庫中的 EF 6.x 來源程式碼*aspnet/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
+| [EF Core](https://docs.microsoft.com/ef/core/) | Microsoft 在 2016 年 6 月發行新開發的 EF Core。 EF Core 被設計用於較佳的彈性和可攜性。 EF Core 可以執行超出只是 Microsoft Windows 作業系統上。 而且 EF Core 可以只是 Microsoft SQL Server 以外的資料庫和其他關聯式資料庫互動。<br /><br />**C&#x23;程式碼範例：**<br />[Entity Framework Core 使用者入門](https://docs.microsoft.com/ef/core/get-started/index)<br />[與現有的資料庫的.NET Framework 上的 EF Core 使用者入門](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
 EF 及相關的技術強大，並很多開發人員想要精通的整個區域，了解。
@@ -141,8 +141,8 @@ Microsoft 提供的 Java Database Connectivity (JDBC) 驅動程式與 SQL Server
 | [程式碼範例](./jdbc/code-samples/index.md) | 教導資料型別，結果集和大型資料相關的程式碼範例。 |
 | [連接 URL 範例](./jdbc/connection-url-sample.md) | 描述如何使用連接 URL 來連接到 SQL Server。 然後使用它來使用 SQL 陳述式來擷取資料。 |
 | [資料來源範例](./jdbc/data-source-sample.md) | 描述如何使用資料來源連接到 SQL Server。 然後使用預存程序來擷取資料。 |
-| [使用 Java 查詢 Azure SQL database](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java) | Azure SQL Database 的範例。 |
-| [建立 Ubuntu 上使用 SQL Server 的 Java 應用程式](http://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/) | 組態資訊，以及程式碼範例。 |
+| [使用 Java 查詢 Azure SQL database](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java) | Azure SQL Database 的範例。 |
+| [建立 Ubuntu 上使用 SQL Server 的 Java 應用程式](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/) | 組態資訊，以及程式碼範例。 |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>文件集
@@ -164,15 +164,15 @@ JDBC 文件包含下列主要區域：
 
 使用 Node.js 您可以連接到 SQL Server 從 Windows、 Linux 或 mac。 我們的 Node.js 文件的根[此處](./node-js/index.md)。
 
-SQL Server 的 Node.js 連線驅動程式是以 JavaScript 進行實作。 驅動程式會使用 TDS 通訊協定，所有現代化版本的 SQL Server 支援。 驅動程式是開放原始碼專案，[可在 Github 上](http://tediousjs.github.io/tedious/)。
+SQL Server 的 Node.js 連線驅動程式是以 JavaScript 進行實作。 驅動程式會使用 TDS 通訊協定，所有現代化版本的 SQL Server 支援。 驅動程式是開放原始碼專案，[可在 Github 上](https://tediousjs.github.io/tedious/)。
 
 #### <a name="code-examples"></a>程式碼範例
 
 |||
 | :-- | :-- |
 | [使用 Node.js 連接到 SQL 的概念證明](./node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md) | 最基本來源連接到 SQL Server 和執行查詢的程式碼。 |
-| [Azure SQL database： 使用 Node.js 查詢](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | 在雲端中的 Azure SQL Database 的範例。 |
-| [建立 Node.js 應用程式，以在 macOS 上使用 SQL Server](http://www.microsoft.com/sql-server/developer-get-started/node/mac/) | 組態資訊，以及程式碼範例。 |
+| [Azure SQL database： 使用 Node.js 查詢](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | 在雲端中的 Azure SQL Database 的範例。 |
+| [建立 Node.js 應用程式，以在 macOS 上使用 SQL Server](https://www.microsoft.com/sql-server/developer-get-started/node/mac/) | 組態資訊，以及程式碼範例。 |
 | &nbsp; | <br /> |
 
 
@@ -227,8 +227,8 @@ SQL Server 的 Node.js 連線驅動程式是以 JavaScript 進行實作。 驅�
 | :-- | :-- |
 | [使用 PHP 連接到 SQL 的概念證明](./php/step-3-proof-of-concept-connecting-to-sql-using-php.md) | 小型程式碼範例著重於連接和查詢 SQL Server。 |
 | [使用 PHP 彈性地連接到 SQL](./php/step-4-connect-resiliently-to-sql-with-php.md) | 因為透過網際網路和雲端的連線可以偶爾會遇到的連線中斷，請重試邏輯的程式碼範例中。 |
-| [Azure SQL database： 使用 PHP 來查詢](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php) | Azure SQL Database 的範例。 |
-| [建立使用 RHEL 上的 SQL Server 的 PHP 應用程式](http://www.microsoft.com/sql-server/developer-get-started/php/rhel/) | 組態資訊，以及程式碼範例。 |
+| [Azure SQL database： 使用 PHP 來查詢](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php) | Azure SQL Database 的範例。 |
+| [建立使用 RHEL 上的 SQL Server 的 PHP 應用程式](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/) | 組態資訊，以及程式碼範例。 |
 | &nbsp; | <br /> |
 
 
@@ -245,8 +245,8 @@ SQL Server 的 Node.js 連線驅動程式是以 JavaScript 進行實作。 驅�
 |||
 | :-- | :-- |
 | [連接到使用 pyodbc Python 與 SQL 的概念證明](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | 小型程式碼範例著重於連接和查詢 SQL Server。 |
-| [Azure SQL database： 使用 Python 查詢](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Azure SQL Database 的範例。 |
-| [建立在 SLES 上使用 SQL Server 的 PHP 應用程式](http://www.microsoft.com/sql-server/developer-get-started/python/sles/) | 組態資訊，以及程式碼範例。 |
+| [Azure SQL database： 使用 Python 查詢](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Azure SQL Database 的範例。 |
+| [建立在 SLES 上使用 SQL Server 的 PHP 應用程式](https://www.microsoft.com/sql-server/developer-get-started/python/sles/) | 組態資訊，以及程式碼範例。 |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>文件集
@@ -270,15 +270,15 @@ SQL Server 的 Node.js 連線驅動程式是以 JavaScript 進行實作。 驅�
 |||
 | :-- | :-- |
 | [使用 Ruby 連接到 SQL 的概念證明](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | 小型程式碼範例著重於連接和查詢 SQL Server。 |
-| [Azure SQL database︰ 使用 Ruby 來查詢](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database 的範例。 |
-| [建立 Ruby 應用程式，以在 MacOS 上使用 SQL Server](http://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | 組態資訊，以及程式碼範例。 |
+| [Azure SQL database︰ 使用 Ruby 來查詢](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database 的範例。 |
+| [建立 Ruby 應用程式，以在 MacOS 上使用 SQL Server](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | 組態資訊，以及程式碼範例。 |
 | &nbsp; | <br /> |
 
 
 
 <a name="an-204-aka-ms-sqldev" />
 
-## <a name="build-an-app-website-for-sql-client-developmenthttpwwwmicrosoftcomsql-serverdeveloper-get-started"></a>[建置的應用程式的網站，SQL 用戶端開發](http://www.microsoft.com/sql-server/developer-get-started/)
+## <a name="build-an-app-website-for-sql-client-developmenthttpswwwmicrosoftcomsql-serverdeveloper-get-started"></a>[建置的應用程式的網站，SQL 用戶端開發](https://www.microsoft.com/sql-server/developer-get-started/)
 
 
 在我們[*建置的應用程式*](https://www.microsoft.com/sql-server/developer-get-started/)網頁，您可以選擇從一長串的程式設計語言連線到 SQL Server。 而用戶端程式可以執行各種不同的作業系統。
@@ -346,16 +346,16 @@ SQL Server 的 Node.js 連線驅動程式是以 JavaScript 進行實作。 驅�
 
 #### <a name="developer-hub-for-azure"></a>適用於 Azure 的開發人員中樞
 
-- [適用於 Azure 的開發人員中樞](http://docs.microsoft.com/azure/)
-- [適用於.NET 開發人員的 azure](http://docs.microsoft.com/dotnet/azure/)
-- [適用於 Java 開發人員的 azure](http://docs.microsoft.com/java/azure/)
-- [適用於 Node.js 開發人員的 azure](http://docs.microsoft.com/nodejs/azure/)
-- [適用於 Python 開發人員的 azure](http://docs.microsoft.com/python/azure/)
-- [在 Azure 中建立 PHP web 應用程式](http://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-php)
+- [適用於 Azure 的開發人員中樞](https://docs.microsoft.com/azure/)
+- [適用於.NET 開發人員的 azure](https://docs.microsoft.com/dotnet/azure/)
+- [適用於 Java 開發人員的 azure](https://docs.microsoft.com/java/azure/)
+- [適用於 Node.js 開發人員的 azure](https://docs.microsoft.com/nodejs/azure/)
+- [適用於 Python 開發人員的 azure](https://docs.microsoft.com/python/azure/)
+- [在 Azure 中建立 PHP web 應用程式](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-php)
 
 #### <a name="other-languages"></a>其他語言
 
-- [建立 Go 應用程式在 Windows 上使用 SQL Server](http://www.microsoft.com/sql-server/developer-get-started/go/windows/)
+- [建立 Go 應用程式在 Windows 上使用 SQL Server](https://www.microsoft.com/sql-server/developer-get-started/go/windows/)
 
 
 

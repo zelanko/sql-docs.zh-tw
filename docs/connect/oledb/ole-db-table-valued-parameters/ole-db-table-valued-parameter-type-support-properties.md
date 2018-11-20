@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7e2e9fde43deb3b6efbac62dc39d27897d32c9ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90240caba9bbba0539c2b827d9471b4318592ba6
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783196"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559616"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 資料表值參數類型支援 (屬性)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47783196"
   本主題提供與資料表值參數資料列集物件相關聯之 OLE DB 屬性和屬性集的相關資訊。  
   
 ## <a name="properties"></a>屬性  
- 以下為透過 IRowsetInfo::GetPropeties 方法，在資料表值參數資料列集物件上公開的屬性清單。 請注意，所有資料表值參數資料列集屬性都是唯讀的。 因此，您嘗試將任何設定的屬性，透過 iopenrowset:: Openrowset 或 ITableDefinitionWithConstraints::CreateTableWithConstraints 設為非預設值的方法會導致錯誤，而且會建立任何物件。  
+ 以下為透過 IRowsetInfo::GetProperties 方法，在資料表值參數資料列集物件上公開的屬性清單。 請注意，所有資料表值參數資料列集屬性都是唯讀的。 因此，您嘗試將任何設定的屬性，透過 iopenrowset:: Openrowset 或 ITableDefinitionWithConstraints::CreateTableWithConstraints 設為非預設值的方法會導致錯誤，而且會建立任何物件。  
   
  沒有在資料表值參數資料列集物件中實作的屬性不會列在此處。 如需屬性的完整清單，請參閱 OLE DB 文件集中的＜Windows Data Access Components＞。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "47783196"
 |SSPROP_COL_COMPUTED|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 類型：VT_BOOL<br /><br /> 描述：設定為 VARIANT_TRUE 時，表示資料行為計算資料行。 VARIANT_FALSE 則表示它不是計算資料行。|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- 這些屬性會探索 ISSCommandWithParamters::GetParameterProperties 的呼叫中的資料表值參數類型資訊時，由取用者和設定資料表值參數相關的特定屬性時的消費者所設定透過 isscommandwithparameters:: Setparameterproperties。  
+ 這些屬性會探索 Getparameterinfo 的呼叫中的資料表值參數類型資訊時，由取用者和設定資料表值參數相關的特定屬性時的消費者所設定透過 isscommandwithparameters:: Setparameterproperties。  
   
  下表提供這些屬性的詳細描述。  
   

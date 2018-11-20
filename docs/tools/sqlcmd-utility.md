@@ -5,8 +5,7 @@ ms.date: 09/12/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -29,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1b62fe2d79dfa947cb9c8f0f6ebbd0c484960e26
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 9ba83c8913d9e906925986cc07e3a2816c131cc6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461163"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661237"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 工用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "49461163"
 此公用程式會使用 ODBC 來執行 TRANSACT-SQL 批次。 
  
 > [!NOTE]
-> sqlcmd 公用程式的最新版本 (Web 版本) 可從 [下載中心](http://go.microsoft.com/fwlink/?LinkID=825643)取得。 您需要的版本，13.1 或更新版本，才能支援 Always Encrypted (`-g`) 和 Azure Active Directory 驗證 (`-G`)。 (您可能已在電腦上安裝多個 sqlcmd.exe 版本。 請務必使用正確的版本。 若要判斷版本，請執行 `sqlcmd -?`。)
+> sqlcmd 公用程式的最新版本 (Web 版本) 可從 [下載中心](https://go.microsoft.com/fwlink/?LinkID=825643)取得。 您需要的版本，13.1 或更新版本，才能支援 Always Encrypted (`-g`) 和 Azure Active Directory 驗證 (`-G`)。 (您可能已在電腦上安裝多個 sqlcmd.exe 版本。 請務必使用正確的版本。 若要判斷版本，請執行 `sqlcmd -?`。)
 
 您可以嘗試 sqlcmd 公用程式從 Azure Cloud Shell，因為它會預先安裝預設： [![啟動 Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "啟動 Cloud Shell")](https://shell.azure.com)
 
@@ -142,10 +141,10 @@ sqlcmd
  **-E** 選項會忽略可能出現的使用者名稱與密碼環境變數設定，例如 SQLCMDPASSWORD。 如果同時使用 **-E** 選項和 **-U** 或 **-P** 選項，就會產生錯誤訊息。  
 
 **-g**  
-將 [資料行加密設定] 設定為 `Enabled`。 如需詳細資訊，請參閱 [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md)。 僅支援儲存在 Windows 憑證存放區中的主要金鑰。 -g 參數至少需要 **sqlcmd** [13.1](http://go.microsoft.com/fwlink/?LinkID=825643)版。 若要判斷您的版本，請執行 `sqlcmd -?`。
+將 [資料行加密設定] 設定為 `Enabled`。 如需詳細資訊，請參閱 [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md)。 僅支援儲存在 Windows 憑證存放區中的主要金鑰。 -g 參數至少需要 **sqlcmd** [13.1](https://go.microsoft.com/fwlink/?LinkID=825643) 版。 若要判斷您的版本，請執行 `sqlcmd -?`。
 
  **-G**  
- 這個參數在連線到 SQL Database 或 SQL 資料倉儲時由用戶端使用，以指定使用 Azure Active Directory 驗證來驗證使用者。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDUSEAAD = true。 -G 參數至少需要 **sqlcmd** [13.1](http://go.microsoft.com/fwlink/?LinkID=825643)版。 若要判斷您的版本，請執行 `sqlcmd -?`。 如需詳細資訊，請參閱 [使用 Azure Active Directory 驗證連線到 SQL Database 或 SQL 資料倉儲](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。 -G 選項不支援-A 選項。
+ 這個參數在連線到 SQL Database 或 SQL 資料倉儲時由用戶端使用，以指定使用 Azure Active Directory 驗證來驗證使用者。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDUSEAAD = true。 -G 參數至少需要 **sqlcmd** [13.1](https://go.microsoft.com/fwlink/?LinkID=825643) 版。 若要判斷您的版本，請執行 `sqlcmd -?`。 如需詳細資訊，請參閱 [使用 Azure Active Directory 驗證連線到 SQL Database 或 SQL 資料倉儲](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。 -G 選項不支援-A 選項。
 
 > [!IMPORTANT]
 > **-G** 選項只適用於 Azure SQL Database 和 Azure 資料倉儲。
@@ -799,7 +798,7 @@ sqlcmd
   
  `GO`  
   
- 當您按 ENTER 時，會傳回下列結果集。  
+ 當您按下 ENTER，就會傳回下列結果集。  
   
  `BusinessEntityID FirstName    LastName`  
   
