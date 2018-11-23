@@ -1,12 +1,10 @@
 ---
 title: 管理和監視異動資料擷取 (SQL Server) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
@@ -16,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d12ba58b2257425356b01c38c8fddeb41f6336a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6fafa2ba203ecbcd3141503a170c81c21282621
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780026"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560515"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和監視異動資料擷取 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +76,7 @@ ms.locfileid: "47780026"
  執行清除時，所有擷取執行個體的下限標準一開始是在單一交易中更新。 然後，它會嘗試從變更資料表和 cdc.lsn_time_mapping 資料表中移除已過時的項目。 可設定的臨界值會限制在任何單一陳述式中刪除的項目數。 如果無法針對任何個別的資料表執行刪除，將無法防止針對其餘資料表嘗試進行此作業。  
   
 ### <a name="cleanup-job-customization"></a>清除作業自訂  
- 對於清除作業而言，自訂的可能性在於用來決定哪些變更資料表項目要捨棄的策略。 在傳遞的清除作業中，唯一支援的策略是以時間為基礎的策略。 在該情況下，新下限標準的計算方式是從上次處理之交易的認可時間中減去允許的保留週期。 由於基礎清除程序是以 **lsn** 而非時間為基礎，所以您可以使用任何數目的策略來決定要保留在變更資料表中的最小 **lsn** 。 其中只有某些策略是嚴格地以時間為基礎。 例如，如果需要存取變更資料表的下游處理序無法執行，用戶端的相關知識就可用來提供保全。 此外，雖然預設策略會套用相同的 **lsn** 來清除所有資料庫的變更資料表，但是您也可以呼叫基礎清除程序，以便在擷取執行個體層級進行清除。  
+ 對於清除作業而言，自訂的可能性在於用來決定哪些變更資料表項目要捨棄的策略。 在傳遞的清除作業中，唯一支援的策略是以時間為基礎的策略。 在該情況下，新下限標準的計算方式是從上次處理之交易的認可時間中減去允許的保留週期。 由於基礎清除程序是以 **lsn** 而非時間為基礎，所以您可以使用任何數目的策略來決定要保留在變更資料表中的最小 **lsn**。 其中只有某些策略是嚴格地以時間為基礎。 例如，如果需要存取變更資料表的下游處理序無法執行，用戶端的相關知識就可用來提供保全。 此外，雖然預設策略會套用相同的 **lsn** 來清除所有資料庫的變更資料表，但是您也可以呼叫基礎清除程序，以便在擷取執行個體層級進行清除。  
   
 ##  <a name="Monitor"></a> 監視異動資料擷取程序  
  監視異動資料擷取程序可讓您判斷變更是否正確地並且以合理的延遲寫入變更資料表。 監視也可以協助您識別可能發生的任何錯誤。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含兩個動態管理檢視，可協助您監視異動資料擷取： [sys.dm_cdc_log_scan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) 和 [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)。  
@@ -86,18 +84,24 @@ ms.locfileid: "47780026"
 ### <a name="identify-sessions-with-empty-result-sets"></a>識別含有空白結果集的工作階段  
  sys.dm_cdc_log_scan_sessions 中的每個資料列都代表記錄檔掃描工作階段 (除了識別碼為 0 的資料列以外)。 記錄檔掃描工作階段相當於執行一次 [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)。 在工作階段期間，掃描可能會傳回變更或傳回空的結果。 如果結果集是空的，sys.dm_cdc_log_scan_sessions 中的 empty_scan_count 資料行就會設定為 1。 如果含有連續的空結果集 (例如擷取作業連續執行)，最後一個現有資料列中的 empty_scan_count 就會遞增。 例如，如果 sys.dm_cdc_log_scan_sessions 已經針對傳回變更的掃描包含 10 個資料列，而且資料列中含有五個空的結果，表示檢視包含 11 個資料列。 在 empty_scan_count 資料行中，最後一個資料列的值為 5。 若要判斷具有空白掃描的工作階段，請執行下列查詢：  
   
- `SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0`  
+```sql
+SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0
+```
   
 ### <a name="determine-latency"></a>判斷延遲  
  sys.dm_cdc_log_scan_sessions 管理檢視含有記錄每個擷取工作階段之延遲的資料行。 延遲會定義成在來源資料表上認可交易與在變更資料表上認可最後一個擷取交易之間經過的時間。 系統只會針對使用中工作階段填入 latency 資料行。 若為 empty_scan_count 資料行中的值大於 0 的工作階段，latency 資料行就會設定為 0。 下列查詢會針對最近的工作階段傳回平均延遲：  
   
- `SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
+```sql
+SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
+```
   
  您可以使用延遲資料來判斷擷取程序處理交易的速度快慢。 當擷取程序連續執行時，這項資料便最有用。 如果擷取程序正按照排程執行，延遲可能會很高，因為在來源資料表上認可交易與按照排程時間執行的擷取程序之間存在延遲。  
   
  擷取程序效率的另一個重要量值是輸送量。 這是指每個工作階段期間每秒處理的平均命令數目。 若要判斷某個工作階段的輸送量，請將 command_count 資料行中的值除以 duration 資料行中的值。 下列查詢會針對最近的工作階段傳回平均輸送量：  
   
- `SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
+```sql
+SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0
+```
   
 ### <a name="use-data-collector-to-collect-sampling-data"></a>使用資料收集器來收集取樣資料  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料收集器可讓您從任何資料表或動態管理檢視中收集資料的快照集，然後建立效能資料倉儲。 當資料庫啟用異動資料擷取時，以固定間隔建立 sys.dm_cdc_log_scan_sessions 檢視和 sys.dm_cdc_errors 檢視的快照集以便之後分析會很有用。 下列程序會設定從 sys.dm_cdc_log_scan_sessions 管理檢視中收集取樣資料的資料收集器。  
@@ -130,10 +134,10 @@ ms.locfileid: "47780026"
   
     -- Create a collection item using statistics from   
     -- the change data capture dynamic management view.  
-    DECLARE @paramters xml;  
+    DECLARE @parameters xml;  
     DECLARE @collection_item_id int;  
   
-    SELECT @paramters = CONVERT(xml,   
+    SELECT @parameters = CONVERT(xml,   
         N'<TSQLQueryCollector>  
             <Query>  
               <Value>SELECT * FROM sys.dm_cdc_log_scan_sessions</Value>  
@@ -146,7 +150,7 @@ ms.locfileid: "47780026"
     @collector_type_uid = N'302E93D1-3424-4BE7-AA8E-84813ECF2419',  
     @name = ' CDC Performance Data Collector',  
     @frequency = 5,   
-    @parameters = @paramters,  
+    @parameters = @parameters,  
     @collection_item_id = @collection_item_id output;  
   
     GO  
@@ -160,6 +164,6 @@ ms.locfileid: "47780026"
  [追蹤資料變更 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [關於異動資料擷取 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [啟用和停用異動資料擷取 &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   
- [使用異動資料 &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
+ [使用變更資料 &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
   

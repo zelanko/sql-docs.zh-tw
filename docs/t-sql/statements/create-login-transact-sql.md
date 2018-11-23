@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6208a06f94b84fb145cd3fa1c4f2eef0e428f915
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: f5145db044f618727144dba0eae86ac4643f0a2d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461083"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704136"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -144,7 +144,7 @@ ASYMMETRIC KEY *asym_key_name*
 >  CHECK_EXPIRATION 和 CHECK_POLICY 只會在 Windows Server 2003 和更新版本中強制執行。 如需詳細資訊，請參閱＜ [Password Policy](../../relational-databases/security/password-policy.md)＞。 
   
 - 從憑證或非對稱金鑰建立的登入只能用於程式碼簽章。 它們不能用來連線至 SQL Server。 僅當憑證或非對稱金鑰已存在於 master 時，您才能從憑證或非對稱金鑰中建立登入。 
-- 如需傳送登入的指令碼，請參閱 [如何在 SQL Server 2005 和 SQL Server 2008 的執行個體之間傳送登入和密碼](http://support.microsoft.com/kb/918992)。
+- 如需傳送登入的指令碼，請參閱 [如何在 SQL Server 2005 和 SQL Server 2008 的執行個體之間傳送登入和密碼](https://support.microsoft.com/kb/918992)。
 - 建立登入會自動啟用新登入，並授與登入伺服器層級的 **CONNECT SQL** 權限。 
 - 伺服器的[驗證模式](../../relational-databases/security/choose-an-authentication-mode.md)必須符合登入類型，以允許存取。
 - 如需設計權限系統的資訊，請參閱 [資料庫引擎權限使用者入門](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
@@ -294,7 +294,7 @@ SID = *sid*
   
 ## <a name="remarks"></a>Remarks  
 - 密碼會區分大小寫。
-- 如需傳送登入的指令碼，請參閱 [如何在 SQL Server 2005 和 SQL Server 2008 的執行個體之間傳送登入和密碼](http://support.microsoft.com/kb/918992)。
+- 如需傳送登入的指令碼，請參閱 [如何在 SQL Server 2005 和 SQL Server 2008 的執行個體之間傳送登入和密碼](https://support.microsoft.com/kb/918992)。
 - 建立登入會自動啟用新登入，並授與登入伺服器層級的 **CONNECT SQL** 權限。 
 - 伺服器的[驗證模式](../../relational-databases/security/choose-an-authentication-mode.md)必須符合登入類型，以允許存取。
     - 如需設計權限系統的資訊，請參閱 [資料庫引擎權限使用者入門](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
@@ -326,8 +326,8 @@ SID = *sid*
 建立登入之後，登入就可以連線至 SQL Database，但是只會取得 **public** 角色的權限。 請考慮執行下列其中一些活動。 
   
 - 若要連線至資料庫，請建立用於登入該資料庫的資料庫使用者。 如需詳細資訊，請參閱 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)。 
-- 若要將權限授與資料庫中的使用者，請使用**ALTER SERVER ROLE** … **ADD MEMBER** 陳述式可將用法新增至其中一個內建的資料庫角色或自訂角色，或直接使用 [GRANT](../../t-sql/statements/grant-transact-sql.md) 陳述式將權限授與使用者。 如需詳細資訊，請參閱[非系統管理員角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 和 [GRANT](grant-transact-sql.md) 陳述式。
-- 若要授與伺服器範圍權限，請在 master 資料庫中建立資料庫使用者，並使用 **ALTER SERVER ROLE** … **ADD MEMBER** 陳述式可將用法新增至其中一個管理伺服器角色。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)，以及[伺服器角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
+- 若要將權限授與資料庫中的使用者，請使用**ALTER SERVER ROLE** … **ADD MEMBER** 陳述式可將使用者新增至其中一個內建的資料庫角色或自訂角色，或直接使用 [GRANT](../../t-sql/statements/grant-transact-sql.md) 陳述式將權限授與使用者。 如需詳細資訊，請參閱[非系統管理員角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 和 [GRANT](grant-transact-sql.md) 陳述式。
+- 若要授與伺服器範圍權限，請在 master 資料庫中建立資料庫使用者，並使用 **ALTER SERVER ROLE** … **ADD MEMBER** 陳述式可將使用者新增至其中一個管理伺服器角色。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)，以及[伺服器角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
 - 使用 **GRANT** 陳述式將伺服器層級權限授與新登入或包含登入的角色。 如需詳細資訊，請參閱 [GRANT](../../t-sql/statements/grant-transact-sql.md)。
   
 ## <a name="examples"></a>範例  
@@ -412,7 +412,7 @@ SID = *sid*
   
 ## <a name="remarks"></a>Remarks  
 - 密碼會區分大小寫。
-- 如需傳送登入的指令碼，請參閱 [如何在 SQL Server 2005 和 SQL Server 2008 的執行個體之間傳送登入和密碼](http://support.microsoft.com/kb/918992)。
+- 如需傳送登入的指令碼，請參閱 [如何在 SQL Server 2005 和 SQL Server 2008 的執行個體之間傳送登入和密碼](https://support.microsoft.com/kb/918992)。
 - 建立登入會自動啟用新登入，並授與登入伺服器層級的 **CONNECT SQL** 權限。 
 - 伺服器的[驗證模式](../../relational-databases/security/choose-an-authentication-mode.md)必須符合登入類型，以允許存取。
     - 如需設計權限系統的資訊，請參閱 [資料庫引擎權限使用者入門](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
@@ -444,8 +444,8 @@ SID = *sid*
 建立登入之後，登入就可以連線至 SQL Database，但是只會取得 **public** 角色的權限。 請考慮執行下列其中一些活動。 
   
 - 若要連線至資料庫，請建立用於登入該資料庫的資料庫使用者。 如需詳細資訊，請參閱 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)。 
-- 若要將權限授與資料庫中的使用者，請使用**ALTER SERVER ROLE** … **ADD MEMBER** 陳述式可將用法新增至其中一個內建的資料庫角色或自訂角色，或直接使用 [GRANT](../../t-sql/statements/grant-transact-sql.md) 陳述式將權限授與使用者。 如需詳細資訊，請參閱[非系統管理員角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 和 [GRANT](grant-transact-sql.md) 陳述式。
-- 若要授與伺服器範圍權限，請在 master 資料庫中建立資料庫使用者，並使用 **ALTER SERVER ROLE** … **ADD MEMBER** 陳述式可將用法新增至其中一個管理伺服器角色。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)，以及[伺服器角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
+- 若要將權限授與資料庫中的使用者，請使用**ALTER SERVER ROLE** … **ADD MEMBER** 陳述式可將使用者新增至其中一個內建的資料庫角色或自訂角色，或直接使用 [GRANT](../../t-sql/statements/grant-transact-sql.md) 陳述式將權限授與使用者。 如需詳細資訊，請參閱[非系統管理員角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 和 [GRANT](grant-transact-sql.md) 陳述式。
+- 若要授與伺服器範圍權限，請在 master 資料庫中建立資料庫使用者，並使用 **ALTER SERVER ROLE** … **ADD MEMBER** 陳述式可將使用者新增至其中一個管理伺服器角色。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)，以及[伺服器角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
 - 使用 **GRANT** 陳述式將伺服器層級權限授與新登入或包含登入的角色。 如需詳細資訊，請參閱 [GRANT](../../t-sql/statements/grant-transact-sql.md)。
   
 ## <a name="examples"></a>範例  
@@ -530,7 +530,7 @@ PASSWORD **='** password**'*
   
 ## <a name="remarks"></a>Remarks  
 - 密碼會區分大小寫。
-- 如需傳送登入的指令碼，請參閱 [如何在 SQL Server 2005 和 SQL Server 2008 的執行個體之間傳送登入和密碼](http://support.microsoft.com/kb/918992)。
+- 如需傳送登入的指令碼，請參閱 [如何在 SQL Server 2005 和 SQL Server 2008 的執行個體之間傳送登入和密碼](https://support.microsoft.com/kb/918992)。
 - 建立登入會自動啟用新登入，並授與登入伺服器層級的 **CONNECT SQL** 權限。 
 - 伺服器的[驗證模式](../../relational-databases/security/choose-an-authentication-mode.md)必須符合登入類型，以允許存取。
     - 如需設計權限系統的資訊，請參閱 [資料庫引擎權限使用者入門](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
@@ -557,8 +557,8 @@ PASSWORD **='** password**'*
 建立登入之後，登入就可以連線至 SQL 資料倉儲，但是只會取得 **public** 角色的權限。 請考慮執行下列其中一些活動。 
   
 - 若要連接至資料庫，請建立用於登入的資料庫使用者。 如需詳細資訊，請參閱 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)。
-- 若要將權限授與資料庫中的使用者，請使用**ALTER SERVER ROLE** … **ADD MEMBER** 陳述式可將用法新增至其中一個內建的資料庫角色或自訂角色，或直接使用 [GRANT](grant-transact-sql.md) 陳述式將權限授與使用者。 如需詳細資訊，請參閱[非系統管理員角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 和 [GRANT](grant-transact-sql.md) 陳述式。
-- 若要授與伺服器範圍權限，請在 master 資料庫中建立資料庫使用者，並使用 **ALTER SERVER ROLE** … **ADD MEMBER** 陳述式可將用法新增至其中一個管理伺服器角色。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)，以及[伺服器角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
+- 若要將權限授與資料庫中的使用者，請使用**ALTER SERVER ROLE** … **ADD MEMBER** 陳述式可將使用者新增至其中一個內建的資料庫角色或自訂角色，或直接使用 [GRANT](grant-transact-sql.md) 陳述式將權限授與使用者。 如需詳細資訊，請參閱[非系統管理員角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 和 [GRANT](grant-transact-sql.md) 陳述式。
+- 若要授與伺服器範圍權限，請在 master 資料庫中建立資料庫使用者，並使用 **ALTER SERVER ROLE** … **ADD MEMBER** 陳述式可將使用者新增至其中一個管理伺服器角色。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)，以及[伺服器角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
 
 - 使用 **GRANT** 陳述式將伺服器層級權限授與新登入或包含登入的角色。 如需詳細資訊，請參閱 [GRANT](../../t-sql/statements/grant-transact-sql.md)。 
   
@@ -667,7 +667,7 @@ WINDOWS
 > [!IMPORTANT]  
 >  CHECK_EXPIRATION 和 CHECK_POLICY 只會在 Windows Server 2003 和更新版本中強制執行。 如需詳細資訊，請參閱＜ [Password Policy](../../relational-databases/security/password-policy.md)＞。 
   
-- 如需傳送登入的指令碼，請參閱 [如何在 SQL Server 2005 和 SQL Server 2008 的執行個體之間傳送登入和密碼](http://support.microsoft.com/kb/918992)。
+- 如需傳送登入的指令碼，請參閱 [如何在 SQL Server 2005 和 SQL Server 2008 的執行個體之間傳送登入和密碼](https://support.microsoft.com/kb/918992)。
 - 建立登入會自動啟用新登入，並授與登入伺服器層級的 **CONNECT SQL** 權限。 
 - 如需設計權限系統的資訊，請參閱 [資料庫引擎權限使用者入門](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
 

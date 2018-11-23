@@ -13,12 +13,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: markingmyname
 ms.author: maghan
 ms.date: 03/07/2017
-ms.openlocfilehash: 204e8d3e85c76edac6ccc56e8fd3a5b51975bd28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63cee227f67a6e4c07974a296e3c512318d83fe2
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681456"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813201"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>設定部署屬性 (Reporting Services)
 
@@ -64,7 +64,7 @@ ms.locfileid: "47681456"
   
 10. 在 [TargetServerURL] 文字方塊中，鍵入目標報表伺服器的 URL。 在發行報表之前，您必須設定此屬性為有效的報表伺服器 URL。 當您發行至以原生模式執行的報表伺服器時，請使用報表伺服器之虛擬目錄的 URL (例如 http:*//server/reportserver* 或 https:*//server/reportserver*)。 這是報表伺服器的虛擬目錄，而非報表管理員。  
   
-     發行至以 SharePoint 整合模式執行的報表伺服器時，請使用 SharePoint 頂層網站或子網站的 URL。 如果您未指定網站，則會使用預設頂層網站 (例如 http://*伺服器名稱*、 http://*伺服器名稱*/*網站*或 http://*伺服器名稱*/*網站*/*子網站*)。  
+     發行至以 SharePoint 整合模式執行的報表伺服器時，請使用 SharePoint 頂層網站或子網站的 URL。 如果您未指定網站，則會使用預設頂層網站 (例如 https://伺服器名稱、 https://伺服器名稱/網站或 https://伺服器名稱/網站/子網站)。  
   
 ### <a name="to-set-configuration-manager-properties"></a>設定組態管理員屬性  
   

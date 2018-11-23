@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f6f3e3d23c2d2777a3a17db16d047222991d48a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6feef76b565f8a1bb738175a06b8b6ab5d68c440
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030617"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813171"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>將 SQL Server Reporting Services 報表檢視器網頁組件部署至 SharePoint 頁面
 
@@ -79,7 +79,7 @@ Microsoft 下載中心提供報表檢視器網頁組件。
 
     ![從齒輪圖示開啟網站設定。](media/sharepoint-site-settings.png)
 
-    根據預設，SharePoint Web 應用程式會經由通訊埠 80 進行存取。 這表示通常只要輸入 *http://<computer name>* 即可存取 SharePoint 網站來開啟根網站集合。
+    根據預設，SharePoint Web 應用程式會經由通訊埠 80 進行存取。 這表示通常只要輸入 *https://<computer name>* 即可存取 SharePoint 網站來開啟根網站集合。
 
 3. 在 [網站集合管理] 中選取 [網站集合功能]。
 
@@ -119,7 +119,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
     ![從齒輪圖示開啟網站設定。](media/sharepoint-site-settings.png)
 
-    根據預設，SharePoint Web 應用程式會經由通訊埠 80 進行存取。 這表示通常只要輸入 *http://<computer name>* 即可存取 SharePoint 網站來開啟根網站集合。
+    根據預設，SharePoint Web 應用程式會經由通訊埠 80 進行存取。 這表示通常只要輸入 *https://<computer name>* 即可存取 SharePoint 網站來開啟根網站集合。
 
 2. 在**網站設計工具庫**下選取 [網頁組件]。
 

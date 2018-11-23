@@ -11,12 +11,12 @@ ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c1c48583a37a959a0922dc12ac72ef064e51c91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b140ea28397ace096c5b37db26a661fd7194647
+ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769492"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51629541"
 ---
 # <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>課程 1-9 - 測試第 1課 的教學課程套件
 在這一課，您完成了下列工作：  
@@ -44,7 +44,7 @@ ms.locfileid: "47769492"
   
 1.  在 **[偵錯]** 功能表上，按一下 **[開始偵錯]**。  
   
-    封裝隨即執行，讓 1097 個資料列順利加入 **AdventureWorksDW2012** 的 **FactCurrency**事實資料表中。  
+    隨即執行套件，其將 1097 個資料列順利新增至 **AdventureWorksDW2012** 的 **NewFactCurrencyRate** 事實資料表中。  
   
 2.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]**。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "47769492"
 [第 2 課：使用 SSIS 新增迴圈](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[執行專案和套件](packages/run-integration-services-ssis-packages.md) 
+[執行專案和封裝](packages/run-integration-services-ssis-packages.md) 
   
   
   

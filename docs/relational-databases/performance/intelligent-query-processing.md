@@ -2,7 +2,7 @@
 title: Microsoft SQL 資料庫中的智慧查詢處理 | Microsoft Docs
 description: 可改善 SQL Server 和 Azure SQL Database 查詢效能的智慧查詢處理功能。
 ms.custom: ''
-ms.date: 10/10/2018
+ms.date: 11/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,19 +14,19 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eba7eba4e21e0bb488664149347e8c58fae3e3ad
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: c4269cc9f61ecd1bd3130fe7fab0f1e5a1ae65bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030935"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660950"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 資料庫中的智慧查詢處理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 **智慧查詢處理**功能系列都包含具有廣泛影響的功能，能夠以最少的實作投入量改善現有工作負載的效能。
 
-![智慧查詢處理功能](./media/2_IQPFeatureFamily.png)
+![智慧查詢處理功能](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>彈性查詢處理
 彈性查詢處理功能系列包括查詢處理改良功能，可調整最佳化策略以符合您應用程式工作負載的執行階段條件。 包含以下改良功能：批次模式自適性聯結、記憶體授與意見反應，以及交錯執行多重陳述式資料表值函式。
@@ -54,6 +54,14 @@ ms.locfileid: "51030935"
 使用資料表變數延後編譯時，會延遲編譯參考資料表變數的陳述式，直到第一次實際執行陳述式為止。 這個延後編譯行為與暫存資料表的行為完全相同，而且此變更會導致使用實際基數，而不是原始的單一資料列猜測。 若要在 Azure SQL Database 中啟用資料表變數延後編譯的公開預覽功能，請在執行查詢時，針對您所連線的資料庫，啟用資料庫相容性層級 150。
 
 如需詳細資訊，請參閱[資料表變數延遲編譯](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation ).
+
+## <a name="scalar-udf-inlining"></a>純量 UDF 內嵌
+> [!NOTE]
+> 純量 UDF 內嵌為公開預覽功能。  
+
+純量 UDF 內嵌會將純量使用者定義函數 (UDF) 自動轉換成關聯運算式，並將它們內嵌在呼叫 SQL 查詢中，以改善運用純量 UDF 之工作負載的效能。 純量 UDF 內嵌有助於對 UDF 內的作業進行以成本為基礎的最佳化，以促成集合導向、平行且有效率的計畫，而不是無效率、反覆且連續的執行計畫。 根據預設，資料庫相容性層級 150 會啟用此功能。
+
+如需詳細資訊，請參閱 [Scalar UDF Inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sqlallproducts-allversions) (純量 UDF 內嵌)。
 
 ## <a name="approximate-query-processing"></a>近似查詢處理
 > [!NOTE]

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fc8a5e6bc796cf5e7c014c51ec93074eae863bb7
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: d391061ce82c0516bbfc30e9d05cce7bdedd65ed
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051011"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813671"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 在本教學課程中，您會將群組和總計新增至 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表以組織和摘要資料。  
@@ -115,7 +115,7 @@ ms.locfileid: "50051011"
 3.  在 **TargetServerURL** 中，輸入報表伺服器的名稱，例如   
     - `http:/<servername>/reportserver`  
    
-    - `http://localhost/reportserver` 適用於在報表伺服器上設計報表時。  
+    - `https://localhost/reportserver` 適用於在報表伺服器上設計報表時。  
   
   
 4. 請記住，TargetReportFolder 是 tutorial (即專案名稱)。  這是下一步中將在其中部署報表的資料夾名稱。  
@@ -129,7 +129,7 @@ ms.locfileid: "50051011"
     > 正在略過 'Sales Orders.rdl'。 項目已是最新版本。  
     > 建立已完成 -- 0 個錯誤，0 個警告  
     > ------ 已經開始部署: 專案: tutorial，組態: 偵錯 ------  
-    > 正在部署至 http://[伺服器名稱]/reportserver  
+    > 正在部署至 https://[伺服器名稱]/reportserver  
     > 正在部署報表 '/tutorial/Sales Orders'。  
     > 部署已完成 -- 0 個錯誤，0 個警告  
     > ========== 建置: 1 個成功或最新狀態，0 個失敗，0 個略過 ==========  
@@ -143,8 +143,8 @@ ms.locfileid: "50051011"
   
     瀏覽至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web入口網站 URL。   
     **注意︰入口網站** URL 是 "Reports"，而非 "Reportserver" 的報表伺服器 URL。  例如：   
-    `http://<server name>/reports`(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
-    在報表伺服器上設計報表時可用 `http://localhost/reports`。  
+    `https://<server name>/reports`(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
+    在報表伺服器上設計報表時可用 `https://localhost/reports`。  
   
 8.  瀏覽至包含報表的資料夾。 預設名稱是 *tutorial*，即專案名稱或輸入專案屬性中 TargetReportFolder 欄位的名稱。   
 按一下 **Sales Orders** 報表的名稱，以在瀏覽器中檢視轉譯的報表。  

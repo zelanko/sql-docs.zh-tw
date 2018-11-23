@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90e24f7de0ca9950962cd078c7e7360572de89da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8ed3ce76d449e6e67418a13fe1d61baeed1edf0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673716"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638515"
 ---
 # <a name="modify-a-partition-function"></a>修改資料分割函數
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47673716"
   
 -   **若要使用下列項目來修改資料分割函數：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -58,11 +58,11 @@ ms.locfileid: "47673716"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不提供修改資料分割函數的複寫支援。 如果您要變更發行集資料庫中的資料分割函數，必須在訂閱資料庫中手動執行此作業。  
   
--   ALTER PARITITION FUNCTION 所影響的所有檔案群組都必須在線上。  
+-   ALTER PARTITION FUNCTION 所影響的所有檔案群組都必須在線上。  
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  下列中的任何權限都可用來執行 ALTER PARTITION FUNCTION：  
   
 -   ALTER ANY DATASPACE 權限。 這個權限預設會授與 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_ddladmin** 固定資料庫角色的成員。  

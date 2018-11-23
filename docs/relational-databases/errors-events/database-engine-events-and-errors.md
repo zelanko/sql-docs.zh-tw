@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a6507c72a325871fa4ec2e075a00dc458ac64ba3
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: e80daf389baedb35dc7416c95096fe346854dfe9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384173"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678067"
 ---
 # <a name="database-engine-errors"></a>資料庫引擎錯誤
 該資料表包含錯誤訊息編號和描述 (來自 sys.messages 目錄檢視的錯誤訊息文字)。 
@@ -1035,10 +1035,10 @@ ms.locfileid: "49384173"
 |   2117    |   16  |   否  |   無法在 %S_MSG '%.* ls' 上 %S_MSG INSTEAD OF trigger '%.*ls'，因為 %S_MSG 具有 FILESTREAM 資料行。  |
 |   2201    |   16  |   否  |   %s不允許藉由限制從 "anySimpleType" 衍生，只有在未指定條件約束 Facet 時，才允許藉由限制而從某類型衍生，但此類型必須是藉由延伸模組而從 "anySimpleType" 衍生。 |
 |   2202    |   16  |   否  |   %s編譯查詢時發生錯誤。 若要取得有關錯誤的詳細資訊，必須在查詢中使用的 XML 結構描述集合上，以具有 EXECUTE 權限的使用者身分執行查詢。    |
-|   2203    |   16  |   否  |   %s僅 'http://www.w3.org/2001/XMLSchema#decimal?'、'http://www.w3.org/2001/XMLSchema#boolean?' 或 'node()*' 運算式做為述詞，但發現 '%ls' |
-|   2204    |   16  |   否  |   %s僅 'http://www.w3.org/2001/XMLSchema#boolean?' 或 'node()*' 運算式，但發現 '%ls'   |
+|   2203    |   16  |   否  |   %s僅 'https://www.w3.org/2001/XMLSchema#decimal?'、'https://www.w3.org/2001/XMLSchema#boolean?' 或 'node()*' 運算式做為述詞，但發現 '%ls'   |
+|   2204    |   16  |   否  |   %s僅 'https://www.w3.org/2001/XMLSchema#boolean?' 或 'node()*' 運算式，但發現 '%ls'  |
 |   2205    |   16  |   否  |   必須是 %s"%ls"。   |
-|   2206    |   16  |   否  |   %s命名空間前置詞 'xml' 只可以與 URI 'http://www.w3.org/XML/1998/namespace' 相關聯，且此 URI 不能和其他前置詞一起使用。    |
+|   2206    |   16  |   否  |   %s命名空間前置詞 'xml' 只可以與 URI 'https://www.w3.org/XML/1998/namespace' 相關聯，且此 URI 不能和其他前置詞一起使用。   |
 |   2207    |   16  |   否  |   %s只能插入非文件的節點。 發現 "%ls"。 |
 |   2208    |   16  |   否  |   %s以 '%ls' 開頭的 URI 太長。 最大容許長度是 %d 個字元。  |
 |   2209    |   16  |   否  |   %s接近 '%ls' 的語法錯誤   |
@@ -1121,7 +1121,7 @@ ms.locfileid: "49384173"
 |   2309    |   16  |   否  |   %s "%ls" 的值不是有效的號碼。 |
 |   2310    |   16  |   否  |   %s屬性 "%ls" 宣告了一次以上。   |
 |   2311    |   16  |   否  |   %s屬性 "%ls" 在 "%ls" 中宣告了一次以上。  |
-|   2312    |   16  |   否  |   %s屬性 '%ls' 的值不符合類型定義 'http://www.w3.org/2001/XMLSchema#%ls': '%ls'。   |
+|   2312    |   16  |   否  |   %s屬性 '%ls' 的值不符合類型定義 'https://www.w3.org/2001/XMLSchema#%ls': '%ls'。  |
 |   2313    |   16  |   否  |   %s屬性 "%ls" 的值不可以是 "%ls"。 |
 |   2314    |   16  |   否  |   %s屬性 "%ls" 不可以有負值。 |
 |   2315    |   16  |   否  |   %s屬性 "%ls" 應該有字串值。   |
@@ -3044,7 +3044,7 @@ ms.locfileid: "49384173"
 |   6869    |   16  |   否  |   嘗試重新定義命名空間前置詞 '%.*ls'    |
 |   6870    |   16  |   否  |   WITH XMLNAMESPACES 子句中使用的前置詞 '%.*ls' 包含無效的 XML 識別碼。 '%c'(0x%04X) 是錯誤的第一個字元。  |
 |   6871    |   16  |   否  |   WITH XMLNAMESPACES 中使用的前置詞 '%.*ls' 已保留，無法做為使用者自訂前置詞。  |
-|   6872    |   16  |   否  |   XML 命名空間前置詞 'xml' 只可以與 URI http://www.w3.org/XML/1998/namespace 相關聯。 此 URI 不能和其他前置詞一起使用。   |
+|   6872    |   16  |   否  |   XML 命名空間前置詞 'xml' 只可以與 URI https://www.w3.org/XML/1998/namespace 相關聯。 此 URI 不能和其他前置詞一起使用。  |
 |   6873    |   16  |   否  |   FOR XML 的 ELEMENTS XSINIL 選項不支援重新定義 'xsi' XML 命名空間前置詞。 |
 |   6874    |   16  |   否  |   WITH XMLNAMESPACES 子句中不允許空的 URI。  |
 |   6875    |   16  |   否  |   WITH XMLNAMESPACES 中使用的 URI '%.*ls' 無效。 '%c'(0x%04X) 是錯誤的第一個字元。    |
@@ -3423,7 +3423,7 @@ ms.locfileid: "49384173"
 |   7802    |   16  |   否  |   不支援具有傳回類型 "%.*ls" 的函數透過 SOAP 引動過程。   |
 |   7803    |   15  |   否  |   子句 %.*ls 無法用在 %.* ls 陳述式中。    |
 |   7804    |   15  |   否  |   %.*ls 和 %.* ls 不能共用相同的值。   |
-|   7805    |   16  |   否  |   參數 SITE 不能有類似 'http://' 之類的配置做為前置詞。 SITE 的有效值包括 {'*' | '+' | 'site_name'}。  |
+|   7805    |   16  |   否  |   參數 SITE 不能有類似 'https://' 之類的配置作為前置詞。 SITE 的有效值包括 {'*' | '+' | 'site_name'}。 |
 |   7806    |   16  |   否  |   由端點 '%.*ls' 指定的 URL 已經註冊以接收要求，或已保留供另一個服務使用。  |
 |   7807    |   16  |   否  |   嘗試註冊端點 '%.*ls' 時，發生錯誤 ('0x%x')。   |
 |   7808    |   10  |   否  |   無法取消註冊端點 '%.*ls'。 |
@@ -4176,11 +4176,11 @@ ms.locfileid: "49384173"
 |   9304    |   16  |   否  |   %s這個版本的伺服器只支援 XQuery 版本 '1.0'。    |
 |   9305    |   16  |   否  |   %s'instance of' 的目標中只支援後面接著 '?' 的類型名稱。 |
 |   9306    |   16  |   否  |   %s'replace value of' 的目標不可以是聯集類型，找到 '%ls'。 |
-|   9308    |   16  |   否  |   %s'%ls' 的 %s 引數必須是單一數值基本類型或 'http://www.w3.org/2004/07/xpath-datatypes#untypedAtomic'。 找到類型 '%ls' 的引數。  |
-|   9309    |   16  |   否  |   %s'replace value of' 的目標不可以是 'http://www.w3.org/2001/XMLSchema#anySimpleType'，找到 '%ls'。 |
+|   9308    |   16  |   否  |   %s'%ls' 的 %s 引數必須是單一數值基本類型或 'https://www.w3.org/2004/07/xpath-datatypes#untypedAtomic'。 找到類型 '%ls' 的引數。 |
+|   9309    |   16  |   否  |   %s'replace value of' 的目標不可以是 'https://www.w3.org/2001/XMLSchema#anySimpleType'，找到 '%ls'。    |
 |   9310    |   16  |   否  |   %s'replace value of' 的 'with' 子句不能包含建構的 XML。   |
 |   9311    |   16  |   否  |   %s'%ls' 中不允許異質性時序，找到 '%ls' 和 '%ls'。  |
-|   9312    |   16  |   否  |   簡單類型或 'http://www.w3.org/2001/XMLSchema#anyType'元素不支援 %s'%ls'，找到 '%ls'。   |
+|   9312    |   16  |   否  |   簡單類型或 'https://www.w3.org/2001/XMLSchema#anyType'元素不支援 %s'%ls'，找到 '%ls'。  |
 |   9313    |   16  |   否  |   %s這個版本的伺服器並不支援多個運算式或在屬性建構函式中混合字串的運算式。   |
 |   9314    |   16  |   否  |   %s無法隱含的不可部分完成或套用 'fn:data()' 至複雜內容元素，推斷的類型 '%ls' 內找到類型 '%ls'。  |
 |   9315    |   16  |   否  |   %s計算元素的名稱運算式和屬性建構函式只支援常數運算式。   |
@@ -4200,7 +4200,7 @@ ms.locfileid: "49384173"
 |   9330    |   16  |   否  |   %s '%ls' 中只允許可以比較的類型，找到 '%ls'。  |
 |   9331    |   16  |   否  |   %s '%ls' 附近發生語法錯誤，必須是 '%ls' 或 '%ls'。 |
 |   9332    |   16  |   否  |   %s '%ls' 附近發生語法錯誤，必須是 'where'、'(stable) order by' 或 'return'。   |
-|   9333    |   16  |   否  |   %s使用簡單類型或 'http://www.w3.org/2001/XMLSchema#anyType' 元素時，不支援 '//' 後面接著 'self'、'parent' 或 'descendant-or-self' 座標軸，找到 '%ls'。  |
+|   9333    |   16  |   否  |   %s使用簡單類型或 'https://www.w3.org/2001/XMLSchema#anyType' 元素時，不支援 '//' 後面接著 'self'、'parent' 或 'descendant-or-self' 座標軸，找到 '%ls'。 |
 |   9334    |   16  |   否  |   %s在本機屬性上或有 'ref' 屬性的元素定義上不能指定 'form' 屬性。 位置: '%ls'。    |
 |   9335    |   16  |   否  |   %s不支援 XQuery 語法 '%ls'。 |
 |   9336    |   16  |   否  |   %s不支援 XML 結構描述語法 '%ls'。 |
@@ -4270,10 +4270,10 @@ ms.locfileid: "49384173"
 |   9461    |   16  |   否  |   以 '%.*ls' 開頭的 XML %ls 為 %d 個字元長度，超出了限制。 最大容許長度是 %d 個字元。  |
 |   9462    |   16  |   否  |   XML 剖析: 行 %d，字元 %d，並未讀取值的所有區塊  |
 |   9463    |   16  |   否  |   XML 剖析: 行 %d，字元 %d，xml:space 具有不合法的值 |
-|   9464    |   16  |   否  |   XML 剖析: 行 %d，字元 %d，XML 命名空間前置詞 'xml' 只可以與 URI http://www.w3.org/XML/1998/namespace 相關聯。 此 URI 不能和其他前置詞一起使用。   |
+|   9464    |   16  |   否  |   XML 剖析: 行 %d，字元 %d，XML 命名空間前置詞 'xml' 只可以與 URI https://www.w3.org/XML/1998/namespace 相關聯。 此 URI 不能和其他前置詞一起使用。  |
 |   9465    |   16  |   否  |   XML 剖析: 行 %d，字元 %d，XML 命名空間前置詞 'xmlns' 保留給 XML 使用。    |
-|   9466    |   16  |   否  |   XML 剖析: 行 %d，字元 %d，XML 命名空間 URI (http://www.w3.org/XML/1998/namespace) 只能指派給前置詞 'xml'。   |
-|   9467    |   16  |   否  |   XML 剖析: 行 %d，字元 %d，xmlns 命名空間 URI (http://www.w3.org/2000/xmlns/) 已保留，不得使用。   |
+|   9466    |   16  |   否  |   XML 剖析: 行 %d，字元 %d，XML 命名空間 URI (https://www.w3.org/XML/1998/namespace) 只能指派給前置詞 'xml'。  |
+|   9467    |   16  |   否  |   XML 剖析: 行 %d，字元 %d，xmlns 命名空間 URI (https://www.w3.org/2000/xmlns/) 已保留，不得使用。  |
 |   9480    |   16  |   否  |   XML 剖析: 行 %d，字元 %d，未支援的 XML |
 |   9500    |   16  |   否  |   VALUE 方法中使用的資料類型 '%.*ls' 無效。  |
 |   9501    |   16  |   否  |   XQuery: 無法解析 sql:variable('%.*ls')。 變數必須宣告為純量 TSQL 變數。   |
@@ -8894,7 +8894,7 @@ ms.locfileid: "49384173"
 |   33024   |   16  |   否  |   DLL 中的密碼編譯提供者 %S_MSG '%ls' 與系統目錄中為識別碼 %d 的提供者記錄的 GUID 不同。   |
 |   33025   |   16  |   否  |   無效的密碼編譯提供者屬性: %S_MSG。   |
 |   33026   |   16  |   否  |   GUID 為 '%ls' 的密碼編譯提供者已存在。  |
-|   [33027](mssqlserver-33027-database-engine-error.md) |       |       |   無法載入密碼編譯提供者 '%.*ls'，因為 Authenticode 簽章或檔案路徑無效。 請檢查先前其他失敗的訊息。    |
+|   [33027](mssqlserver-33027-database-engine-error.md) |       |       |   無法載入密碼編譯提供者 '%.*ls'，因為 Authenticode 簽章或檔案路徑無效。 請檢查先前其他失敗的訊息。    |
 |   33027   |   16  |   否  |   無法載入程式庫 '%.*ls'。 如需詳細資訊，請參閱錯誤記錄檔。 |
 |   [33028](mssqlserver-33028-database-engine-error.md) |   16  |   否  |   無法為 %S_MSG '%.*ls' 開啟工作階段。 提供者錯誤碼: %d。 (%S_MSG)   |
 |   33029   |   16  |   否  |   無法初始化密碼編譯提供者。 提供者錯誤碼: %d。 (%S_MSG) |
@@ -9069,7 +9069,7 @@ ms.locfileid: "49384173"
 
 ## <a name="see-also"></a>另請參閱
 [了解資料庫引擎錯誤](../../relational-databases/errors-events/understanding-database-engine-errors.md)  
-[導致 Database Engine 錯誤的原因和解決方案](http://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)  
+[導致 Database Engine 錯誤的原因和解決方案](https://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)  
 
   
   

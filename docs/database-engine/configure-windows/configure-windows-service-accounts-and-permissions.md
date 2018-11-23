@@ -51,12 +51,12 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 772596b978cebc8b1581ac1a0e2e39f042afdf09
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: ce8d3928a59acfb2c3b53e19b50934b8f30a0eda
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237114"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605979"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>設定 Windows 服務帳戶與權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "50237114"
   
  - **SQL Server PolyBase 引擎** - 提供外部資料來源的分散式查詢功能。
  
- - **SQL Server Polybase 資料移動服務** - 可在 SQL Server 與外部資料來源之間，以及在 SQL Server 與 PolyBase 向外延展群組的 SQL 節點之間移動資料。
+ - **SQL Server PolyBase 資料移動服務** - 可在 SQL Server 與外部資料來源之間，以及在 PolyBase 向外延展群組的 SQL 節點之間移動資料。
   
 ##  <a name="Serv_Prop"></a> 服務屬性和組態
 
@@ -180,9 +180,9 @@ ms.locfileid: "50237114"
   
      群組受管理的服務帳戶是適用於多部伺服器的 MSA。 Windows 會為伺服器群組上執行的服務管理服務。 Active Directory 會自動更新群組受管理的服務帳戶密碼，不需要重新啟動服務。 您可以設定 SQL Server 服務，以使用群組受管理的服務帳戶主體。 自 SQL Server 2014 起，SQL Server 已可支援獨立執行個體的群組受控服務帳戶，自 SQL Server 2016 起的版本，則支援容錯移轉叢集執行個體與可用性群組。  
   
-    若要針對 SQL Server 2014 或更新版本使用群組受管理的服務帳戶，作業系統必須是 Windows Server 2012 R2 或更新版本。 Windows Server 2012 R2 的伺服器需要套用 [KB 2998082](http://support.microsoft.com/kb/2998082) ，以便服務可以在變更密碼之後立即登入，不會中斷。  
+    若要針對 SQL Server 2014 或更新版本使用群組受管理的服務帳戶，作業系統必須是 Windows Server 2012 R2 或更新版本。 Windows Server 2012 R2 的伺服器需要套用 [KB 2998082](https://support.microsoft.com/kb/2998082) ，以便服務可以在變更密碼之後立即登入，不會中斷。  
   
-    如需詳細資訊，請參閱[群組受控服務帳戶](http://technet.microsoft.com/library/hh831782.aspx)  
+    如需詳細資訊，請參閱[群組受控服務帳戶](https://technet.microsoft.com/library/hh831782.aspx)  
       
     > [!NOTE]  
     >  網域系統管理員必須先在 Active Directory 中建立群組受管理的服務帳戶， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式才能將其用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
@@ -203,7 +203,7 @@ ms.locfileid: "50237114"
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設執行個體上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|  
     |名為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 **執行個體上的**Agent 服務|**NT SERVICE\SQLAGENT$PAYROLL**|  
   
- 如需受管理的服務帳戶和虛擬帳戶的詳細資訊，請參閱[服務帳戶的逐步指南](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)的**受管理的服務帳戶和虛擬帳戶概念**一節，以及[受管理的服務帳戶常見問題集 (FAQ)](http://technet.microsoft.com/library/ff641729\(WS.10\).aspx)。  
+ 如需受管理的服務帳戶和虛擬帳戶的詳細資訊，請參閱[服務帳戶的逐步指南](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx)的**受管理的服務帳戶和虛擬帳戶概念**一節，以及[受管理的服務帳戶常見問題集 (FAQ)](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx)。  
   
  **安全性注意事項：**[!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)]如果可行，請使用 [MSA](#MSA) 或[虛擬帳戶](#VA_Desc)。 如果無法使用 MSA 或虛擬帳戶，請使用特定低權限的使用者帳戶或網域帳戶，而不要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的共用帳戶。 針對不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務使用個別的帳戶。 請勿將其他權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶或服務群組。 權限將透過群組成員資格授與，或直接授與服務 SID (如果支援服務 SID)。  
   
@@ -283,7 +283,7 @@ ms.locfileid: "50237114"
  根據服務組態，在安裝或升級期間服務帳戶或服務 SID 會加入做為服務群組成員。
   
 ###  <a name="Windows"></a> Windows 權限和權利  
- 指派為用來啟動服務的帳戶需要有服務的 **啟動、停止和暫停權限** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會自動指派此權限。  請先安裝遠端伺服器管理工具 (RSAT)。 請參閱＜ [適用 Windows 7 的遠端伺服器管理工具](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d)＞。
+ 指派為用來啟動服務的帳戶需要有服務的 **啟動、停止和暫停權限** 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會自動指派此權限。  請先安裝遠端伺服器管理工具 (RSAT)。 請參閱＜ [適用 Windows 7 的遠端伺服器管理工具](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d)＞。
   
  下表顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式要求 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件所使用之個別服務 SID 或本機 Windows 群組需要有的權限。
   

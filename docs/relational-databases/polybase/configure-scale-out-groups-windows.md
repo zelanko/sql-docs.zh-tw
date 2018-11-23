@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3041a862639c8cbd71f2ad71378e980ec0b31fdc
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b9294d9208b9cafc3610a9682c13cebcc970669e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905132"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672937"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>改善 Windows 上的 PolyBase 相應放大群組
 
@@ -52,7 +52,7 @@ ms.locfileid: "48905132"
   
    - PQTH4A-CMP02  
   
-2. 網域帳戶︰ *PQTH4A\PolybaseUse*r  
+2. 網域帳戶︰*PQTH4A\PolyBaseUse*r  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>在所有電腦上安裝包含 PolyBase 的 SQL Server
 
@@ -60,7 +60,7 @@ ms.locfileid: "48905132"
   
 2. 在 [功能選取] 頁面上，選取 [適用於外部資料的 PolyBase 查詢服務]。
   
-3. 在 [伺服器設定] 頁面上，針對 SQL Server PolyBase 引擎和 SQL Server PolyBase 資料移動服務，請使用**網域帳戶** PQTH4A\PolybaseUser。
+3. 在 [伺服器設定] 頁面上，針對 SQL Server PolyBase 引擎和 SQL Server PolyBase 資料移動服務，請使用**網域帳戶** PQTH4A\PolyBaseUser。
   
 4. 在 [PolyBase 組態] 頁面上，選取 [Use the SQL Server instance as part of a PolyBase scale-out group (使用此 SQL Server 執行個體作為 PolyBase 向外延展群組的一部分)]。 這會開啟防火牆，以允許 PolyBase 服務的連入連線。
   
@@ -106,6 +106,6 @@ ms.locfileid: "48905132"
   
 ## <a name="next-steps"></a>後續步驟  
 
-如需疑難排解，請參閱 [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)。
+如需疑難排解，請參閱 [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)。
   
 如需 PolyBase 的詳細資訊，請參閱 [PolyBase 概觀](../../relational-databases/polybase/polybase-guide.md)。

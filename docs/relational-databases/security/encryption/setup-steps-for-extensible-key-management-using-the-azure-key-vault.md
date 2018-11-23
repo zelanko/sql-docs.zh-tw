@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 646d0cd8cb030e2e848ce5bd56b7b3ee228db449
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 422b8e8d8436430ec01cd92045e951850ee913ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817644"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663353"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>使用 Azure Key Vault 進行 SQL Server TDE 可延伸金鑰管理 - 設定步驟
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47817644"
   
 -   您必須擁有 Azure 訂用帳戶  
   
--   安裝最新 [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) (5.2.0 或更新版本)。  
+-   安裝最新 [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (5.2.0 或更新版本)。  
 
 -   建立 Azure Active Directory  
 
@@ -239,10 +239,13 @@ SQL Server 版本  |可轉散發套件的安裝連結
    
   
 ## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>第 III 部分：安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器  
- 從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/p/?LinkId=521700)下載 SQL Server 連接器。 (這應該由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 電腦的系統管理員所完成)。  
+ 從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/p/?LinkId=521700)下載 SQL Server 連接器。 (這應該由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 電腦的系統管理員所完成)。  
 
 > [!NOTE]  
 >  1.0.0.440 版和較舊版本皆已被取代，而且生產環境也不再支援。 請前往 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=45344) ，使用 [SQL Server 連接器維護和疑難排解](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) 頁面之＜SQL Server 連接器的升級＞下的指示，升級為 1.0.1.0 版或更新版本。
+
+> [!NOTE]  
+> 1.0.5.0 版中的憑證指紋演算法有重大變更。 您在升級至 1.0.5.0 版之後可能會遇到資料庫還原失敗。 請參閱知識庫文章 [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0)。
   
  ![EKM 連接器安裝](../../../relational-databases/security/encryption/media/ekm-connector-install.png "EKM 連接器安裝")  
   

@@ -26,12 +26,12 @@ ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dd91fdb2419be15b08fc42ee4928f8bf52c56a1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 577e3013c3538d641da81d416cd016041df80143
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709736"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637865"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
  線上必須有檔案群組存在，且使用資料分割函數的資料分割結構描述必須將它標示為 NEXT USED，以便存放新的資料分割。 您可以在 CREATE PARTITION SCHEME 陳述式中，將檔案群組配置給資料分割。 如果 CREATE PARTITION SCHEME 陳述式配置的檔案群組超出需要 (CREATE PARTITION FUNCTION 陳述式所建立的資料分割數，比用來存放它們的檔案群組少)，就會有未指派的檔案群組，資料分割結構描述會將其中一個標示為 NEXT USED。 這個檔案群組將存放新的資料分割。 如果沒有資料分割結構描述標示為 NEXT USED 的檔案群組，您就必須利用 ALTER PARTITION SCHEME 來加入檔案群組，或指定現有的檔案群組，來存放新的資料分割。 您可以指定已存放資料分割的檔案群組來存放其他資料分割。 由於資料分割函數可以參與多項資料分割結構描述，因此，所有使用要新增資料分割之資料分割函數的資料分割結構描述，都必須有 NEXT USED 檔案群組。 否則，ALTER PARTITION FUNCTION 會失敗，且會出現一則錯誤，顯示一個或多個缺少 NEXT USED 檔案群組的資料分割結構描述。  
   
- 如果您在相同的檔案群組中建立所有資料分割，會在一開始時自動將該檔案群組指派為 NEXT USED 檔案群組。 但執行分割作業之後，即不會再有指定的 NEXT USED 檔案群組。 您必須使用 ALTER PARITION SCHEME 將檔案群組明確指派為 NEXT USED 檔案群組，否則後續分割作業將會失敗。  
+ 如果您在相同的檔案群組中建立所有資料分割，會在一開始時自動將該檔案群組指派為 NEXT USED 檔案群組。 但執行分割作業之後，即不會再有指定的 NEXT USED 檔案群組。 您必須使用 ALTER PARTITION SCHEME 將檔案群組明確指派為 NEXT USED 檔案群組，否則後續分割作業將會失敗。  
   
 > [!NOTE]  
 >  資料行存放區索引的限制：當資料表上存在資料行存放區索引時，僅可分割空的資料分割。 在執行此作業之前，您必須卸除或停用資料行存放區索引  
@@ -93,7 +93,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
 -   執行 ALTER PARTITION FUNCTION 陳述式的序列。  
   
- ALTER PARITITION FUNCTION 所影響的所有檔案群組都必須在線上。  
+ ALTER PARTITION FUNCTION 所影響的所有檔案群組都必須在線上。  
   
  當使用資料分割函數的任何資料表有停用的叢集索引時，ALTER PARTITION FUNCTION 會失敗。  
   

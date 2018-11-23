@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6096869fb812034dbcd313cfbe0ab95373d27f23
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 8c4dd4b79881160f5fdfe61a7c60f76ce0ae2cf0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100289"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703956"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -142,7 +142,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  *database_name* . [ schema_name ] . | schema_name. ] *table_name*  
  要建立之資料表名稱的第一到第三部分。 針對外部資料表，只有資料表中繼資料會儲存在 SQL 中，而有關所參考檔案或資料夾的基本統計資料則會儲存在 Hadoop 或 Azure Blob 儲存體中。 實際上不會有任何資料會移至或儲存於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。  
   
- \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE 允許一或多個資料行定義。 CREATE EXTERNAL TABLE 和 CREATE TABLE 在定義資料行上都使用相同的語法。 唯一的例外是無法在外部資料表上使用 DEFAULT CONSTRAINT。 如需資料行定義及其資料類型的完整詳細資料，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 和 [Azure SQL Database 上的 CREATE TABLE](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)。  
+ \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE 允許一或多個資料行定義。 CREATE EXTERNAL TABLE 和 CREATE TABLE 在定義資料行上都使用相同的語法。 唯一的例外是無法在外部資料表上使用 DEFAULT CONSTRAINT。 如需資料行定義及其資料類型的完整詳細資料，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 和 [Azure SQL Database 上的 CREATE TABLE](https://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1)。  
   
  資料行定義 (包括資料類型及資料行數目) 必須符合外部檔案中的資料。 若有不相符的情形，系統在查詢實際資料時將會拒絕檔案資料列。  
   
@@ -150,7 +150,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  指定位於 Hadoop 或 Azure Blob 儲存體中之實際資料的資料夾或檔案路徑，以及檔案名稱。 位置會從根資料夾開始；根資料夾是在外部資料來源中指定的資料位置。  
 
 
-在 SQL Server 中，CREATE EXTERNAL TABLE 陳述式會建立尚未存在的路徑和資料夾。 您接著可以使用 INSERT INTO 將資料從本機 SQL Server 資料表匯出至外部資料來源。 如需詳細資訊，請參閱 [Polybase 查詢](/sql/relational-databases/polybase/polybase-queries)。 
+在 SQL Server 中，CREATE EXTERNAL TABLE 陳述式會建立尚未存在的路徑和資料夾。 您接著可以使用 INSERT INTO 將資料從本機 SQL Server 資料表匯出至外部資料來源。 如需詳細資訊，請參閱 [PolyBase 查詢](/sql/relational-databases/polybase/polybase-queries)。 
 
 在 SQL 資料倉儲和 Analytics Platform System 中，[CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) 陳述式會建立不存在的路徑和資料夾。 在這兩個產品中，CREATE EXTERNAL TABLE 不會建立路徑和資料夾。
 
@@ -161,7 +161,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  ![外部資料表的遞迴資料](../../t-sql/statements/media/aps-polybase-folder-traversal.png "外部資料表的遞迴資料")  
   
- 若要變更預設設定並僅從根資料夾讀取，請在 core-site.xml 設定檔中將 \<polybase.recursive.traversal> 屬性設為 'false'。 此檔案位於 `<SqlBinRoot>\Polybase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`。 例如， `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`。  
+ 若要變更預設設定並僅從根資料夾讀取，請在 core-site.xml 設定檔中將 \<polybase.recursive.traversal> 屬性設為 'false'。 此檔案位於 `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`。 例如， `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`。  
   
  DATA_SOURCE = *external_data_source_name*  
  指定包含外部資料位置之外部資料來源的名稱。 此位置可為 Hadoop 或 Azure Blob 儲存體。 若要建立外部資料來源，請使用 [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)。  
@@ -553,7 +553,7 @@ FROM ClickStream
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [常見的中繼資料查詢範例 (SQL Server PDW)](http://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
+ [常見的中繼資料查詢範例 (SQL Server PDW)](https://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   

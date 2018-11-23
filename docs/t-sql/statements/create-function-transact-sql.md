@@ -1,7 +1,7 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/25/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -36,17 +36,20 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 55bbcbb08d9062d4eb8402a8c15dd243aa9b6a98
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 90c31ce4210cb05b205459c63bd616c8bba382d3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864286"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704066"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中建立使用者定義函數。 使用者定義函數是一種 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 Common Language Runtime (CLR) 常式，它會接受參數、執行動作 (例如複雜計算) 並且將該動作的結果傳回成值。 傳回值可以是純量 (單一) 值或資料表。 您可以使用這個陳述式來建立可用下列方式使用的可重複使用常式：  
+> [!div class="nextstepaction"]
+> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中建立使用者定義函數。 使用者定義函數是一種 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 Common Language Runtime (CLR) 常式，它會接受參數、執行動作 (例如複雜計算) 並且將該動作的結果傳回成值。 傳回值可以是純量 (單一) 值或資料表。 您可以使用這個陳述式來建立可用下列方式使用的可重複使用常式：  
   
 -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中，例如 SELECT  
   
@@ -135,6 +138,7 @@ RETURNS @return_variable TABLE <table_type_definition>
   | [ SCHEMABINDING ]  
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
   | [ EXECUTE_AS_Clause ]  
+  | [ INLINE = { ON | OFF }]  
 }  
   
 <table_type_definition>:: =   
@@ -345,15 +349,15 @@ RETURNS return_data_type
  指定建立函式名稱時應該要參考的組件和方法。  
   
 -   *assembly_name* - 必須符合 `name` 資料行中的值，此資料行屬於   
-    `SELECT * FROM sys.assemblies;`。  
+    `SELECT * FROM sys.assemblies;`(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
     這是 `CREATE ASSEMBLY` 陳述式中所使用的名稱。  
   
 -   *class_name* - 必須符合 `assembly_name` 資料行中的值，此資料行屬於  
-    `SELECT * FROM sys.assembly_modules;`。  
+    `SELECT * FROM sys.assembly_modules;`(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
     值常包含內嵌的句號或點。 在這類情況下，TRANSACT-SQL 語法會要求以一組方括弧 [] 括住值，或以一組雙引號 "" 括住值。  
   
 -   *method_name* - 必須符合 `method_name` 資料行中的值，此資料行屬於   
-    `SELECT * FROM sys.assembly_modules;`。  
+    `SELECT * FROM sys.assembly_modules;`(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
     方法必須為靜態。  
   
  在典型的範例中，針對所有類型皆位於 MyFood 命名空間的 MyFood.DLL，`EXTERNAL NAME` 的值可能是：   
@@ -367,7 +371,7 @@ RETURNS return_data_type
   
  *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) 定義 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式的資料表資料類型。 資料表宣告包括資料行定義和資料行或資料表條件約束。 資料表一律放在主要檔案群組中。  
   
- \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([在某些地區為預覽版](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
+ \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] ) **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([在某些地區為預覽版](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
   
  定義 CLR 函數的資料表資料類型。 資料表宣告只包含資料行名稱和資料類型。 資料表一律放在主要檔案群組中。  
   
@@ -418,18 +422,21 @@ RETURNS return_data_type
   
 -   執行 CREATE FUNCTION 陳述式的使用者在函數參考的資料庫物件上有 REFERENCES 權限。  
   
- RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
- 指定純量值函式的 **OnNULLCall** 屬性。 若未指定，預設情況下意味著 CALLED ON NULL INPUT。 這表示，即使傳遞 NULL 做為引數，函數主體仍會執行。  
+RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
+指定純量值函式的 **OnNULLCall** 屬性。 若未指定，預設情況下意味著 CALLED ON NULL INPUT。 這表示，即使傳遞 NULL 做為引數，函數主體仍會執行。  
   
- 如果在 CLR 函數中指定 RETURNS NULL ON NULL INPUT，它會指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在它接收的任何引數是 NULL 時傳回 NULL，而不必實際叫用函數主體。 如果 \<method_specifier> 中指定的 CLR 函式方法已經有一個指出 RETURNS NULL ON NULL INPUT 的自訂屬性，但 CREATE FUNCTION 陳述式指出 CALLED ON NULL INPUT，則會優先使用 CREATE FUNCTION 陳述式。 無法為 CLR 資料表值函式指定 **OnNULLCall** 屬性。 
+如果在 CLR 函數中指定 RETURNS NULL ON NULL INPUT，它會指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在它接收的任何引數是 NULL 時傳回 NULL，而不必實際叫用函數主體。 如果 \<method_specifier> 中指定的 CLR 函式方法已經有一個指出 RETURNS NULL ON NULL INPUT 的自訂屬性，但 CREATE FUNCTION 陳述式指出 CALLED ON NULL INPUT，則會優先使用 CREATE FUNCTION 陳述式。 無法為 CLR 資料表值函式指定 **OnNULLCall** 屬性。 
   
- EXECUTE AS 子句  
- 指定執行使用者定義函數時所在的安全性內容。 因此，您可以控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要利用哪個使用者帳戶來驗證在函數參考的任何資料庫物件上的權限。  
+EXECUTE AS 子句  
+指定執行使用者定義函數時所在的安全性內容。 因此，您可以控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要利用哪個使用者帳戶來驗證在函數參考的任何資料庫物件上的權限。  
   
 > [!NOTE]  
->  無法為內嵌使用者定義函數指定 EXECUTE AS。  
+>  無法為內嵌資料表值函式指定 EXECUTE AS。
   
  如需詳細資訊，請參閱 [EXECUTE AS 子句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)。  
+
+INLINE = { ON | OFF }  
+指定是否應該內嵌此純量 UDF。 此子句僅適用於純量使用者定義函式。 `INLINE` 子句非為強制。 如果未指定 `INLINE` 子句，它會根據是否可以內嵌 UDF 自動設為 ON/OFF。 如果指定 `INLINE=ON`，但發現不可內嵌 UDF，則會擲回錯誤。 如需詳細資訊，請參閱[純量 UDF 內嵌](../../relational-databases/user-defined-functions/scalar-udf-inlining.md)。
   
  **\< column_definition >::=** 
   
@@ -580,7 +587,7 @@ RETURNS return_data_type
 |**SystemDataAccess**|函數會存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之本機執行個體中的系統資料 (系統目錄或虛擬系統資料表)。||  
 |**UserDataAccess**|函數會存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之本機執行個體中的使用者資料。|包含使用者定義資料表和暫存資料表，但不包含資料表變數。|  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 會自動判斷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 函數的有效位數和決定性屬性。 使用者可以指定 CLR 函數的資料存取和決定性屬性。 如需詳細資訊，請參閱 [CLR 整合自訂屬性的概觀](http://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 會自動判斷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 函數的有效位數和決定性屬性。 使用者可以指定 CLR 函數的資料存取和決定性屬性。 如需詳細資訊，請參閱 [CLR 整合自訂屬性的概觀](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)。  
   
  若要顯示這些屬性目前的值，請使用 [OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md)。  
   

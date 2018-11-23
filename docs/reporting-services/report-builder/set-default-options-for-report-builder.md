@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee6b34ed594948bd796f589c7ded4b4259062a3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f09dd10c77c7e4d87e769748d9053f18fc6d0fe9
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678606"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811991"
 ---
 # <a name="set-default-options-for-report-builder"></a>設定報表產生器的預設選項
   在報表產生器中，您可以設定許多實用的預設值，來更輕鬆快速地撰寫報表。  例如，如果您設定或變更預設報表伺服器，除非您另外指定，否則報表產生器會自動將您的報表儲存到相同的報表伺服器。  
@@ -24,7 +24,7 @@ ms.locfileid: "47678606"
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **預設使用此報表伺服器或 SharePoint 網站**  
- 您的管理員可能已經設定這個選項。 此值可以是以 http:// 或 https:// 為開頭的正確格式 URL。 這項設定會決定預設顯示在資料表/矩陣和圖表精靈中的資料來源連接。 此外，您的報表將在這個伺服器上處理，而且您可以參考來自這個伺服器的資源。  
+ 您的管理員可能已經設定這個選項。 此值可以是以 https:// 或 https:// 為開頭的正確格式 URL。 這項設定會決定預設顯示在資料表/矩陣和圖表精靈中的資料來源連接。 此外，您的報表將在這個伺服器上處理，而且您可以參考來自這個伺服器的資源。  
   
  如果您選取不同的報表伺服器，可能必須重新啟動報表產生器，才能讓這項變更生效。  
   

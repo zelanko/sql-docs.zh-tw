@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 11/13/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8780fd5714af5acb0405592f1700ab19004fd0b
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: fadf7f7a73edc0ce50dfe00c95747deeff0395bf
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336297"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699406"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -369,12 +369,15 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 **非叢集資料行存放區索引：**
 -   不能有 1024 個以上的資料行。
 -   無法建立為以條件約束為基礎的索引。 在具有叢集資料行存放區索引的資料表上，可能有唯一條件約束、主索引鍵條件約束或外部索引鍵條件約束。 條件約束一律會使用資料列存放區索引強制實施。 無法使用資料行存放區 (叢集或非叢集) 索引強制實執條件約束。
--   無法在檢視表或索引檢視表上建立。  
 -   不能包含疏鬆資料行。  
 -   無法使用 **ALTER INDEX** 陳述式加以變更。 若要變更非叢集索引，您必須先卸除再重新建立資料行存放區索引。 您可以使用 **ALTER INDEX** 來停用並重建資料行存放區索引。  
 -   無法使用 **INCLUDE** 關鍵字來建立。  
 -   不可包含 **ASC** 或 **DESC** 關鍵字來排序索引。 資料行存放區索引是依據壓縮演算法來排序。 遞增或遞減排序會取消許多效能優點。  
 -   無法在非叢集資料行存放區索引中包含類型 nvarchar(max)、varchar(max), 和 varbinary(max) 的大型物件 (LOB) 資料行。 僅叢集資料行存放區索引支援 LOB 類型，開始於 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 版和設定於進階層的 Azure SQL Database、標準層 (S3 和以上)，以及所有 VCore 供應項目層。 請注意，先前的版本不支援叢集和非叢集資料行存放區索引中的 LOB 類型。
+
+
+> [!NOTE]  
+> 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，您可以在索引檢視表上建立非叢集資料行存放區索引。  
 
 
  **資料行存放區索引無法與下列功能結合：**  
@@ -392,6 +395,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 -   異動資料擷取。 因為非叢集資料行存放區索引 (NCCI) 是唯讀的，因此您法使用異動資料擷取。 這個功能對於叢集資料行存放區索引 (CCI) 不起作用。  
 -   可讀取的次要複本。 您無法從 AlwaysOn 可用性群組的可讀取次要複本來存取叢集資料行存放區索引 (CCI)。  您可以從可讀取的次要複本來存取非叢集資料行存放區索引 (NCCI)。  
 -   Multiple Active Result Sets (MARS)。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 使用 MARS 來與具有資料行存放區索引的資料表進行唯讀連線。 不過，[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 不支援 MARS 在具備資料行存放區索引的資料表上，進行並行資料操作語言 (DML) 作業。 發生這種情況時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會終止連線並中止交易。  
+-  無法在檢視表或索引檢視表上建立非叢集資料行存放區索引。
   
  如需有關資料行存放區索引之效能優點和限制的詳細資訊，請參閱[資料行存放區索引概觀](../../relational-databases/indexes/columnstore-indexes-overview.md)。
   
@@ -731,7 +735,7 @@ WITH ( DROP_EXISTING = ON);
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. 將資料行存放區資料表轉換回資料列存放區堆積  
- 使用 [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) 來卸除叢集資料行存放區索引，然後將資料表轉換成資料列存放區堆積。 這個範例會將 cci_xDimProduct 資料表轉換成資料列存放區堆積。 資料表仍然會繼續散發，但是儲存為堆積。  
+ 使用 [DROP INDEX (SQL Server PDW)](https://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) 來卸除叢集資料行存放區索引，然後將資料表轉換成資料列存放區堆積。 這個範例會將 cci_xDimProduct 資料表轉換成資料列存放區堆積。 資料表仍然會繼續散發，但是儲存為堆積。  
   
 ```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  

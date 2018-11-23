@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8764d1e8b8ae4facebf49fa746740f69fb8148e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a8daefea37ba33264ca6fa4498f89201abeb0d0
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752749"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571387"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ OPENDATASOURCE ( provider_name, init_string )
  這是登錄為 OLE DB 提供者之 PROGID 的名稱，以用來存取資料來源。 *provider_name* 為沒有預設值的 **char** 資料類型。  
   
  *init_string*  
- 為傳遞到目的地提供者 IDataInitialize 介面的連接字串。 提供者字串語法是以分號隔開的索引鍵值組為基礎，例如：**'**_keyword1_=_value_**;***keyword2*=* value***'**。  
+ 為傳遞到目的地提供者 IDataInitialize 介面的連接字串。 提供者字串語法是以分號隔開的索引鍵值組為基礎，例如：**'**_keyword1_=_value_ **;** _keyword2_=_value_**'**。  
   
  如需在提供者上支援的特定關鍵字-值配對，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK。 這份文件集定義基本語法。 下表列出 *init_string* 引數最常使用的關鍵字。  
   

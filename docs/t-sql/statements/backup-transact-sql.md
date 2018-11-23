@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ea0a580f54af1296394b26ffd2175efad873657e
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 5c0d52b75baa9850df8d6da546a3abbf31498df8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252205"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699336"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -257,7 +257,7 @@ TO \<backup_device> [ **,**...*n* ] 指出隨附的[備份裝置](../../relation
 > NUL 磁碟裝置將捨棄傳送給它的所有資訊，而且只應用於測試。 這不適用於生產環境。
   
 > [!IMPORTANT]  
-> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 開始至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，當您備份至 URL 時，可以只備份到單一裝置。 為了在備份到 URL 時能夠備份到多部裝置，您必須使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，而且必須使用共用存取簽章 (SAS) 權杖。 如需建立共用存取簽章的範例，請參閱 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[在 Azure 儲存體上使用 Powershell 搭配共用存取簽章 (SAS) 權杖來簡化 SQL 認證的建立](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) \(英文\)。  
+> 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 開始至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，當您備份至 URL 時，可以只備份到單一裝置。 為了在備份到 URL 時能夠備份到多部裝置，您必須使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，而且必須使用共用存取簽章 (SAS) 權杖。 如需建立共用存取簽章的範例，請參閱 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[在 Azure 儲存體上使用 Powershell 搭配共用存取簽章 (SAS) 權杖來簡化 SQL 認證的建立](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) \(英文\)。  
   
 **URL 適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
@@ -279,7 +279,7 @@ MIRROR TO \<backup_device> [ **,**...*n* ] 指定一組最多三個的次要備�
 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Enterprise 版本才提供這個選項。  
   
 > [!NOTE]  
-> 如果 MIRROR TO = DISK，BACKUP 會自動判斷磁碟裝置的適當區塊大小。 如需有關區塊大小的詳細資訊，請參閱這份資料表稍後的 "BLOCKSIZE"。  
+> 如果 MIRROR TO = DISK，BACKUP 會自動根據磁碟的磁區大小，來判斷磁碟裝置的適當區塊大小。 如果使用與指定為主要備份裝置的磁碟不同的磁區大小來格式化 MIRROR TO 磁碟，備份命令將會失敗。  為了鏡像具有不同磁區大小的裝置備份，必須指定 BLOCKSIZE 參數，且應該設定為所有目標裝置之間的最大磁區大小。  如需區塊大小的詳細資訊，請參閱本主題稍後的＜BLOCKSIZE＞。  
   
 \<backup_device> 請參閱本節前面的 "\<backup_device>"。
   
@@ -470,7 +470,7 @@ BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }
 緩衝區所使用的總空間可由下列公式判斷：*buffercount/maxtransfersize*。  
   
 > [!NOTE]  
-> 如需使用 `BUFFERCOUNT` 選項的重要資訊，請參閱[不正確的 BufferCount 資料傳輸選項可能導致 OOM 狀況](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) \(英文\) 部落格文章。  
+> 如需使用 `BUFFERCOUNT` 選項的重要資訊，請參閱[不正確的 BufferCount 資料傳輸選項可能導致 OOM 狀況](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) \(英文\) 部落格文章。  
   
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } 以位元組為單位，指定要用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與備份媒體之間的最大傳輸單位。 可能的值是 65536 位元組 (64 KB) 的倍數，最大可達 4194304 位元組 (4 MB)。  
 
@@ -726,7 +726,7 @@ BACKUP 支援 `RESTART` 選項，以提供與舊版 [!INCLUDE[ssNoVersion](../..
 只要作業系統支援資料庫的定序，便可以執行跨平台的備份作業，即使在不同類型的處理器之間，也是如此。  
  
 搭配含有單一資料檔案且已啟用[透明資料加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 的資料庫使用備份壓縮時，建議使用**大於 65536 (64 KB)** 的 `MAXTRANSFERSIZE` 設定。   
-從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，這會針對 TDE 加密的資料庫啟用最佳化壓縮演算法，此演算法會先將頁面解密、將其壓縮，然後再次加密。 如果使用 `MAXTRANSFERSIZE = 65536` (64 KB)，搭配 TDE 加密資料庫的備份壓縮就會直接壓縮加密的頁面，可能不會產生良好的壓縮率。 如需詳細資訊，請參閱[適用於已啟用 TDE 之資料庫的備份壓縮](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/) \(英文\)。
+從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，這會針對 TDE 加密的資料庫啟用最佳化壓縮演算法，此演算法會先將頁面解密、將其壓縮，然後再次加密。 如果使用 `MAXTRANSFERSIZE = 65536` (64 KB)，搭配 TDE 加密資料庫的備份壓縮就會直接壓縮加密的頁面，可能不會產生良好的壓縮率。 如需詳細資訊，請參閱[適用於已啟用 TDE 之資料庫的備份壓縮](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/) \(英文\)。
 
 > [!NOTE]  
 > 某些情況下，預設值 `MAXTRANSFERSIZE` 大於 64K：
@@ -1003,7 +1003,7 @@ TO URL
 指定要用於備份作業的 URL。 URL 格式可用來建立備份至 Microsoft Azure 儲存體服務。 
 
 > [!IMPORTANT]  
-> 為了在備份到 URL 時能夠備份到多部裝置，您必須使用共用存取簽章 (SAS) 權杖。 如需建立共用存取簽章的範例，請參閱 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[在 Azure 儲存體上使用 Powershell 搭配共用存取簽章 (SAS) 權杖來簡化 SQL 認證的建立](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) \(英文\)。  
+> 為了在備份到 URL 時能夠備份到多部裝置，您必須使用共用存取簽章 (SAS) 權杖。 如需建立共用存取簽章的範例，請參閱 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 和[在 Azure 儲存體上使用 Powershell 搭配共用存取簽章 (SAS) 權杖來簡化 SQL 認證的建立](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) \(英文\)。  
   
 *n*  
 這是一個預留位置，表示可以在逗號分隔清單中指定最多達 64 個備份裝置。  
@@ -1068,7 +1068,7 @@ BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }
 緩衝區所使用的總空間可由下列公式判斷：*buffercount/maxtransfersize*。  
   
 > [!NOTE]  
-> 如需使用 `BUFFERCOUNT` 選項的重要資訊，請參閱[不正確的 BufferCount 資料傳輸選項可能導致 OOM 狀況](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) \(英文\) 部落格文章。  
+> 如需使用 `BUFFERCOUNT` 選項的重要資訊，請參閱[不正確的 BufferCount 資料傳輸選項可能導致 OOM 狀況](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) \(英文\) 部落格文章。  
   
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } 以位元組為單位，指定要用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與備份媒體之間的最大傳輸單位。 可能的值是 65536 位元組 (64 KB) 的倍數，最大可達 4194304 位元組 (4 MB)。  
 

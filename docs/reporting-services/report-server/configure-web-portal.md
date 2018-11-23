@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f37cb519981b0f3ac0be532ad82e6ed74d073d8f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 606b6fa37f5dc067cdf134792215fd7c2cd09067
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031700"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813211"
 ---
 # <a name="configure-the-web-portal"></a>設定入口網站
 
@@ -80,7 +80,7 @@ ms.locfileid: "50031700"
 
 2. 開啟 Internet Explorer。
 
-3. 輸入入口網站 URL。 根據預設，它是 http://\<**您的伺服器名稱**>/reports，但是如果您將 Reporting Services 安裝成具名執行個體，預設 URL 就是 http://\<**您的伺服器名稱**>/reports\<**_執行個體名稱**>。
+3. 輸入入口網站 URL。 根據預設，它是 https://\<**您的伺服器名稱**>/reports，但如果您將 Reporting Services 安裝成具名執行個體，預設 URL 將為 https://\<**您的伺服器名稱**>/reports\<**_執行個體名稱**>。
 
 4. 選取 [站台設定] 。
 

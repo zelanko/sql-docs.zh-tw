@@ -25,12 +25,12 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5e873944e68a05b29ed865572202e7e2b4438d76
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 8926d9f39722bac3d70bc10aba6970ff32a5bb17
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816894"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703366"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
 
 ## <a name="remarks"></a>Remarks  
 
-- 多個物件分類可利用單一 ‘DROP SENSITIVITY CLASSIFICTION’ 陳述式來卸除。
+- 多個物件分類可利用單一 ‘DROP SENSITIVITY CLASSIFICATION’ 陳述式來卸除。
 
 ## <a name="permissions"></a>[權限]  
 
@@ -90,8 +90,8 @@ DROP SENSITIVITY CLASSIFICATION FROM
 
 ## <a name="see-also"></a>另請參閱  
 
-[ADD SENSITIVITY CLASSIFICTION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+[ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
 [sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
 
-[開始使用 SQL 資訊保護](http://aka.ms/sqlip)
+[開始使用 SQL 資訊保護](https://aka.ms/sqlip)

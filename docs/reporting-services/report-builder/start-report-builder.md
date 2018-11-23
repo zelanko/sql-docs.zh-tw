@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e42aec0a8630d26b7831217418f35197bc338567
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 15b4e8094c5d45c5001002edfcf4e2202c09576f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030607"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814261"
 ---
 # <a name="start-report-builder"></a>啟動報表產生器
 
@@ -36,7 +36,7 @@ ms.locfileid: "50030607"
   
 ## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-from-the-includessrsnoversionincludesssrsnoversion-mdmd-web-portal"></a>從 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Web 入口網站啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-1.  在網頁瀏覽器的網址列中，輸入報表伺服器的 URL。 根據預設，URL 為 http://\<*伺服器名稱*>/reports。  
+1.  在網頁瀏覽器的網址列中，輸入報表伺服器的 URL。 根據預設，URL 為 https://\<*伺服器名稱*>/reports。  
   
 2.  在 Web 入口網站的頂端列中，選取 [新增] > [編頁報表]。  
   

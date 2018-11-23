@@ -11,24 +11,24 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98f2039da862c64e8f223afdedba7889627a5116
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: a4431e593a74c7f6a656f78cd70abfd19c813bdd
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384073"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642075"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>第 1 課：使用 SSIS 建立專案和基本套件
 
-在這一課，您將建立一個從單個一般檔案來源擷取資料的簡易 ETL 封裝，使用兩個查閱轉換元件來轉換資料、將該資料寫入至 **AdventureWorksDW2012** 中的 **FactCurrency**事實資料表。 在這一課，您會學到如何建立新封裝，加入和設定資料來源和目的地連接，以及使用新控制流程和資料流程元件。  
+在這一課，您將建立一個從單個一般檔案來源擷取資料的簡易 ETL 套件，使用兩個查閱轉換元件來轉換資料、將該資料寫入至 **AdventureWorksDW2012** 中的 **FactCurrencyRate** 事實資料表複本。 在這一課，您會學到如何建立新封裝，加入和設定資料來源和目的地連接，以及使用新控制流程和資料流程元件。  
   
 > [!IMPORTANT]  
-> 這個教學課程需要 **AdventureWorksDW2012** 範例資料庫。 如需安裝和部署 **AdventureWorksDW2012**的詳細資訊，請參閱 [CodePlex 上的 Reporting Services 產品範例](http://go.microsoft.com/fwlink/p/?LinkID=526910)。  
+> 這個教學課程需要 **AdventureWorksDW2012** 範例資料庫。 如需有關安裝和部署 **AdventureWorksDW2012**的資訊，請參閱 [CodePlex 上的 Reporting Services 產品範例](https://go.microsoft.com/fwlink/p/?LinkID=526910)。  
   
 ## <a name="understanding-the-package-requirements"></a>了解封裝需求  
 這個教學課程需要 Microsoft SQL Server Data Tools。  
   
-如需安裝 SQL Server Data Tools 的詳細資訊，請參閱 [SQL Server Data Tools 下載](http://msdn.microsoft.com/data/hh297027)。  
+如需安裝 SQL Server Data Tools 的詳細資訊，請參閱 [SQL Server Data Tools 下載](https://msdn.microsoft.com/data/hh297027)。  
   
 在建立封裝之前，您需要了解來源資料和目的地使用的格式。 了解這些資料格式之後，您就可以定義必要的轉換，將來源資料對應至目的地。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "49384073"
 使用一般檔案來源資料時，一定要了解一般檔案連接管理員如何解譯一般檔案資料。 如果一般檔案來源是 Unicode，一般檔案連接管理員會將所有資料行定義為 [DT_WSTR]，預設資料行寬度為 50。 如果一般檔案來源是以 ANSI 編碼，資料行會定義為 [DT_STR]，且資料行寬度為 50。 您或許必須變更這些預設值，好讓字串資料行類型更適合您的資料。 若要這麼做，您必須查看要在其中寫入資料的目的地之資料類型，然後在一般檔案連接管理員內選擇正確類型。  
   
 ### <a name="looking-at-the-destination"></a>查看目的地  
-來源資料的最終目的地是 **AdventureWorksDW** 中的 **FactCurrency**事實資料表。 **FactCurrency** 事實資料表有 4 個資料行，而且與兩個維度資料表之間有關聯性，如下表所示。  
+來源資料的最終目的地是 **AdventureWorksDW** 中的 **FactCurrencyRate** 事實資料表複本。 **FactCurrencyRate** 事實資料表有四個資料行，且與兩個維度資料表之間有關聯性，如下表所示。  
   
 |資料行名稱|資料類型|查閱資料表|查閱資料行|  
 |---------------|-------------|----------------|-----------------|  
@@ -65,10 +65,10 @@ ms.locfileid: "49384073"
   
 |一般檔案資料行|資料表名稱|資料行名稱|資料類型|  
 |--------------------|--------------|---------------|-------------|  
-|0|AdventureWorksDW2012|AverageRate|float|  
+|0|FactCurrencyRate|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar(3)|  
 |2|DimDate|FullDateAlternateKey|日期|  
-|3|AdventureWorksDW2012|EndOfDayRate|FLOAT|  
+|3|FactCurrencyRate|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>課程工作  
 這一課包含下列工作：  

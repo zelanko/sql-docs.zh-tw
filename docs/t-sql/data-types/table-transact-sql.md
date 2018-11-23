@@ -16,12 +16,12 @@ ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ba13a096eac5b83a9bc094a2017ddde3cf6d8f81
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 7e4844a9bf0e265f52db634400383452cc99a5d9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100459"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703836"
 ---
 # <a name="table-transact-sql"></a>資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "49100459"
 一種特殊的資料類型，可用於儲存結果集以供後續處理。 **table** 主要用來暫時儲存資料列集，此資料列集會當作資料表值函式的結果集傳回。 函式和變數可以宣告為 **table** 類型。 **table** 變數可以在函式、預存程序和批次中使用。 若要宣告 **table** 類型的變數，請使用 [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。
   
 
-**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 透過 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -116,7 +116,7 @@ SELECT select_list INTO table_variable;
 **資料表變數延遲編譯**可針對參考資料表變數的查詢，提升計劃品質和整體效能。 在最佳化和初始計劃編譯期間，此功能將會根據實際資料表變數的資料列計數，傳播基數估計值。 這個精確的資料列計數資訊接著將用於最佳化下游計劃作業。
 
 > [!NOTE]
-> 資料表變數延遲編譯是 Azure SQL Database 中的一個公開預覽功能。  
+> 資料表變數延後編譯是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 的公開預覽功能。
 
 使用資料表變數延後編譯時，會延遲編譯參考資料表變數的陳述式，直到第一次實際執行陳述式為止。 這個延後編譯行為與暫存資料表的行為完全相同，而且此變更會導致使用實際基數，而不是原始的單一資料列猜測。 
 
@@ -231,7 +231,7 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
 [使用者定義的函式](../../relational-databases/user-defined-functions/user-defined-functions.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

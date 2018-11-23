@@ -12,12 +12,12 @@ ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 3d3b048b5aa0c2a2cfd0eaf89e03d49f37152497
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b229fb722c1a6de85e4c26179c776ba605909441
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610936"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269931"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料載入 Azure SQL 資料倉儲
 
@@ -96,7 +96,7 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
 
 1. 使用 Azure Blob 上傳工作將資料暫存於 Azure Blob 儲存體。 若要取得 Azure Blob 上傳工作，請下載 [Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]。
 
-2. 然後使用 SSIS 執行 SQL 工作以啟動能將資料載入至 SQL 資料倉儲的 PolyBase 指令碼。 如需將資料從 Azure Blob 儲存體載入 SQL 資料倉儲 (但未使用 SSIS) 的範例，請參閱[教學課程：將資料載入 Azure SQL 資料倉儲](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw)。
+2. 然後使用 SSIS 執行 SQL 工作以啟動會將資料載入至 SQL 資料倉儲的 PolyBase 指令碼。 如需將資料從 Azure Blob 儲存體載入 SQL 資料倉儲 (但未使用 SSIS) 的範例，請參閱[教學課程：將資料載入 Azure SQL 資料倉儲](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw)。
 
 ## <a name="option-2---use-a-source-and-destination"></a>選項 2 - 使用來源和目的地
 

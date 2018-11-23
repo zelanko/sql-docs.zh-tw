@@ -7,12 +7,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e3d1af1202c172eda900d5fe9e2830ff201de72
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c7fe58cb279924ac60c2902c29dcd6bade82dd6f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029497"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813821"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新功能
 
@@ -29,9 +29,9 @@ ms.locfileid: "50029497"
 請前往 **[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=55252)** 下載 SQL Server 2017 Reporting Services。
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-## <a name="sql-server-2019-ctp-20-reporting-services"></a>SQL Server 2019 CTP 2.0 Reporting Services
+## <a name="sql-server-2019-preview-reporting-services"></a>SQL Server 2019 Preview Reporting Services
 
-SQL Server vNext CTP 2.0 Reporting Services 不提供預覽。 安裝目前的版本 [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md)。 
+[!INCLUDE[sql-server-2019]](../includes/sssqlv15-md.md)] Reporting Services 不適用於 CTP 2.1。 安裝目前的版本 [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md)。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -76,12 +76,12 @@ SQL Server vNext CTP 2.0 Reporting Services 不提供預覽。 安裝目前的�
   
  ![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
  
- #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
+ #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a> [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
   您可以使用商標套件，以組織的標誌和色彩自訂 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 。  
   
   如需自訂商標的詳細資訊，請參閱 [建立入口網站品牌形象](https://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1)
  
- #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
+ #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a> [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
 您可以直接在 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 中，建立與所在資料夾內容相關的 KPI。 建立 KPI 時，您可以選擇資料集欄位並彙總這些值。 您也可以選取相關內容，以鑽研至更多詳細資料。
   
@@ -95,7 +95,7 @@ SQL Server vNext CTP 2.0 Reporting Services 不提供預覽。 安裝目前的�
 Reporting Services 行動報表是針對各種外形規格最佳化的專用報表，並為存取行動裝置上報表的使用者提供最佳體驗。 行動報表具備各種視覺效果，從時間、類別和比較圖表，到矩形式樹狀結構圖和自訂地圖。 將行動報表連接到資料來源範圍，包括內部部署 SQL Server Analysis Services 多維度和表格式資料。 在設計介面上，使用可調式格線列和格線欄以及根據任何螢幕大小適當縮放的彈性行動報表元素，來配置行動報表。 然後將這些行動報表儲存至 Reporting Service 伺服器，在 iPad、iPhone、Android 手機及 Windows 10 裝置的瀏覽器或 Power BI 行動裝置應用程式中，檢視報表並與其互動。
   
 #### <a name="mobile-report-publisher"></a>行動報表發行工具  
- [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]可讓您將 SQL Server 行動報表建立並發行到您的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]。  
+  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]可讓您將 SQL Server 行動報表建立並發行到您的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]。  
   
  ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
   
@@ -147,7 +147,7 @@ Reporting Services 行動報表是針對各種外形規格最佳化的專用報�
  您也可以對訂閱輸出選取 PPTX 格式，並使用報表伺服器 URL 存取來轉譯及匯出報表。 例如，您瀏覽器中的以下 URL 命令會從報表伺服器的具名執行個體匯出報表。  
   
 ```  
-http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
+https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportfolder%2freport+name+with+spaces&rs:Format=pptx  
 ```  
   
  如需詳細資訊，請參閱 [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)。  

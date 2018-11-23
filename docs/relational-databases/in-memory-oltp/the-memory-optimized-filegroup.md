@@ -11,12 +11,12 @@ ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 31c66aaacdcebfeabf43cc6466659e25d47d4d05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35ef666a70cc92f094035bebefda21b42a4f4819
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606936"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269741"
 ---
 # <a name="the-memory-optimized-filegroup"></a>記憶體最佳化檔案群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47606936"
   
 以下是適用於記憶體最佳化檔案群組的限制：  
   
--   一旦您建立記憶體最佳化檔案群組之後，就可以卸除資料庫來移除它。 在實際執行環境中，您不太可能需要移除記憶體最佳化檔案群組。  
+-   一旦您使用記憶體最佳化檔案群組之後，就可以透過卸除資料庫予以移除。 在實際執行環境中，您不太可能需要移除記憶體最佳化檔案群組。  
   
 -   您無法卸除非空白的容器或是將資料和差異檔案組移至記憶體最佳化檔案群組中的另一個容器。  
   

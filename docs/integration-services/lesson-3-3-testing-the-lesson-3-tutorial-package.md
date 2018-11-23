@@ -11,12 +11,12 @@ ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bad683dc5ad0b49ac464ab3efcb90a652d45aa9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca00f40146d5019f770e3141d3961e40ed526ccc
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760816"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559156"
 ---
 # <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>課程 3-3 - 測試第 3 課教學課程套件
 在這項工作中，您將執行 Lesson 3.dtsx 封裝。 當封裝執行時，[記錄事件] 視窗會列出寫入記錄檔的記錄項目。 在封裝完成執行之後，您要確認記錄提供者所產生之記錄檔的內容。  
@@ -32,7 +32,7 @@ ms.locfileid: "47760816"
   
 ![套件中的資料流程](../integration-services/media/task9lesson1data.gif "套件中的資料流程")  
   
-### <a name="to-run-the-lesson-4-tutorial-package"></a>若要執行第 4 課的教學課程封裝  
+### <a name="to-run-the-lesson-3-tutorial-package"></a>執行第 3 課的教學課程套件  
   
 1.  在 [SSIS] 功能表上，按一下 [記錄事件]。  
   

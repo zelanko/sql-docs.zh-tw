@@ -5,8 +5,7 @@ ms.date: 06/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, query processing architecture
@@ -17,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b6be4caf0746d7ebbcd25c1a3a27221d48db582
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: d85ac4addb2b1ec0e709a4e0fd72f0ca0be46f86
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226380"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701476"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +119,9 @@ GO
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具並不僅是選擇最低資源成本的執行計畫，也選擇傳回給使用者的結果中，具合理的資源成本，以及傳回結果速度最快的計畫。 例如，一般平行處理查詢時，需使用比循序處理時使用更多的資源，但完成的速度較快。 如果伺服器的負載不會受到負面的影響，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具將會使用平行執行計畫來傳回結果。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具在估計以不同方法擷取資料表或索引中資訊的資源成本時，是根據散發統計資料。 散發統計資料適用於資料行和索引。 他們可指出特殊索引或資料行中值的選擇性。 例如，在表示車種的資料表中，許多車種的製造商都是相同的，但每輛車都有一個唯一的汽車識別號碼。 因此索引 VIN 比索引製造商更具選擇性。 如果目前沒有索引統計資料，則最佳化工具可能無法針對目前的資料表狀態做出最佳選擇。 如需讓索引統計資料保持最新的詳細資訊，請參閱[統計資料](../relational-databases/statistics/statistics.md)。 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具在估計以不同方法擷取資料表或索引中資訊的資源成本時，是根據散發統計資料。 系統會保留資料行和索引的散發統計資料，其中包含基礎資料密度<sup>1</sup> 的相關資訊。 這可用來指出特定索引或資料行中值的選擇性。 例如，在表示車種的資料表中，許多車種的製造商都是相同的，但每輛車都有一個唯一的汽車識別號碼。 由於 VIN 的密度比製造商低，因此 VIN 的索引會比製造商的索引更具選擇性。 如果目前沒有索引統計資料，則最佳化工具可能無法針對目前的資料表狀態做出最佳選擇。 如需密度的詳細資訊，請參閱[統計資料](../relational-databases/statistics/statistics.md#density)。 
+
+<sup>1</sup> 密度會定義資料中唯一值的分佈，或指定資料行中重複值的平均數。 當密度降低時，值的選擇性會增加。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具非常重要，因為它可以讓資料庫伺服器隨著資料庫中的狀況變更來進行動態調整，而不需要由程式設計人員或資料庫管理員來輸入。 這樣程式設計師便不用將焦點集中在描述查詢的最後結果。 他們可以相信每次執行陳述式時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具將依資料庫的狀態建立最有效率的執行計畫。
 
@@ -138,11 +139,11 @@ GO
 
 這裡描述來用以處理 `SELECT` 陳述式的基本步驟適用於其他 SQL 陳述式，例如 `INSERT`、 `UPDATE`及 `DELETE`。 `UPDATE` 與 `DELETE` 陳述式都必須將目標設定為要修改或刪除的資料列集合。 識別這些資料列的處理序，與用以識別參與 `SELECT` 陳述式結果集之來源資料列的處理序相同。 `UPDATE` 和 `INSERT` 陳述式可能都包含內嵌的 `SELECT 陳述式，其可提供要更新或插入的資料值。
 
-即使資料定義語言 (DDL) 陳述式 (如 `CREATE PROCEDURE` 或 `ALTER TABL`) 最後會解析為系統目錄資料表上一連串的關聯式作業，但有時還是會根據資料表來解析 (如 `ALTER TABLE ADD COLUMN`)。
+即使資料定義語言 (DDL) 陳述式 (例如 `CREATE PROCEDURE` 或 `ALTER TABLE`) 最後會解析為系統目錄資料表上一連串的關聯式作業，但有時還是會根據資料表來解析 (例如 `ALTER TABLE ADD COLUMN`)。
 
 ### <a name="worktables"></a>工作資料表
 
-關聯式引擎在執行 SQL 陳述式中所指定的邏輯作業前，可能需要先建立一個工作資料表。 工作資料表屬於內部資料表，可用來保存中繼結果。 工作資料表會針對特定的 `GROUP BY`、 `ORDER BY`或 `UNION` 查詢而產生。 例如，如果 `ORDER BY` 子句會參考不在任何索引範圍內的資料行，則關聯式引擎可能需要產生工作資料表，根據所要求的順序來排序結果集。 工作資料表有時候也當作多工緩衝處理使用，可暫時保存執行部份查詢計畫的結果。 工作資料表建置於 `tempdb` 中，並且會在不再需要時自動卸除。
+關聯式引擎在執行 SQL 陳述式中所指定的邏輯作業前，可能需要先建立一個工作資料表。 工作資料表屬於內部資料表，可用來保存中繼結果。 工作資料表會針對特定的 `GROUP BY`、 `ORDER BY`或 `UNION` 查詢而產生。 例如，如果 `ORDER BY` 子句會參考不在任何索引範圍內的資料行，則關聯式引擎可能需要產生工作資料表，根據所要求的順序來排序結果集。 工作資料表有時候也當作多工緩衝處理使用，可暫時保存執行部份查詢計畫的結果。 工作資料表會建立在 tempdb 中，並且在不需再使用時自動卸除。
 
 ### <a name="view-resolution"></a>檢視解析
 
@@ -698,7 +699,7 @@ WHERE ProductID = 63;
 
 將 [平行處理原則的最大程度] 選項設為 0 (預設)，可讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在平行計畫執行中使用所有可用的處理器 (最大值為 64 個處理器)。 雖然當 MAXDOP 選項設定為 0 時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會將執行階段目標設定為 64 個邏輯處理器，但必要時可手動設定不同的值。 針對查詢或索引將 MAXDOP 設定為 0，讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可針對平行計畫執行中指定的查詢或索引使用所有可用的處理器 (最大值為 64 個處理器)。 MAXDOP 不是所有平行查詢的強制值，而是符合平行處理原則資格之所有查詢的暫訂目標。 這表示，如果執行階段沒有足夠的背景工作執行緒可用，查詢可能會使用比 MAXDOP 伺服器組態選項更低的平行處理原則程度來執行。
 
-如需設定 MAXDOP 的最佳做法，請參閱這篇 [Microsoft 支援文章](http://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)。
+如需設定 MAXDOP 的最佳做法，請參閱這篇 [Microsoft 支援文章](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)。
 
 ### <a name="parallel-query-example"></a>平行查詢範例
 
@@ -1019,7 +1020,7 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 * 請使用具有快速處理器的伺服器並盡量多使用您可以負擔的處理器核心，以充分利用平行查詢處理功能。
 * 確定伺服器擁有足夠的 I/O 控制器頻寬。 
 * 在每一個大型資料分割資料表上建立叢集索引，以充分利用 B 型樹狀結構的掃描最佳化。
-* 當您將資料大量載入資料分割資料表時，請遵循 [The Data Loading Performance Guide](http://msdn.microsoft.com/library/dd425070.aspx) (資料載入效能指南) 技術白皮書中的最佳做法建議。
+* 當您將資料大量載入資料分割資料表時，請遵循 [The Data Loading Performance Guide](https://msdn.microsoft.com/library/dd425070.aspx) (資料載入效能指南) 技術白皮書中的最佳做法建議。
 
 ### <a name="example"></a>範例
 

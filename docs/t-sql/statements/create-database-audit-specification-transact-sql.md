@@ -23,12 +23,12 @@ ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8c7f8c07725d702eb09cf538dc688136f230659c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2612f61d9a64d8b7d7cf156a1bd03d32d29dc1c9
+ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812716"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51289878"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
  這是資料庫中套用稽核動作或稽核動作群組的資料表、檢視表或其他安全性實體物件。 如需相關資訊，請參閱 [Securables](../../relational-databases/security/securables.md)。  
   
  *principal*  
- 這是套用稽核動作或稽核動作群組的資料庫主體名稱。 如需詳細資訊，請參閱[主體 &#40;資料庫引擎&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)。  
+ 這是套用稽核動作或稽核動作群組的資料庫主體名稱。 若要稽核所有資料庫主體，請使用資料庫主體 `public`。 如需詳細資訊，請參閱[主體 &#40;資料庫引擎&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)。  
   
  WITH ( STATE = { ON | OFF } )  
  啟用或停用從這個稽核規格收集而來之記錄的稽核。  
@@ -91,8 +91,10 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
   
  建立資料庫稽核規格之後，具有 `CONTROL SERVER`、`ALTER ANY DATABASE AUDIT` 權限的主體或 `sysadmin` 帳戶就可以檢視此規格。  
   
-## <a name="examples"></a>範例  
- 下列範例會針對 `Payrole_Security_Audit` 資料庫中的 `Payrole_Security_Audit` 資料表，建立稱為 `SELECT` 的伺服器稽核，然後建立可由 `INSERT` 使用者稽核 `dbo` 和 `HumanResources.EmployeePayHistory` 陳述式的資料庫稽核規格，其名稱為 `AdventureWorks2012`。  
+## <a name="examples"></a>範例
+
+### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>A. 針對任何資料庫主體，稽核資料表的 SELECT 和 INSERT 
+ 下列範例會針對 `AdventureWorks2012` 資料庫中的 `HumanResources.EmployeePayHistory` 資料表，建立稱為 `Payrole_Security_Audit` 的伺服器稽核，然後建立可由任何使用者 (`public`) 稽核 `SELECT` 和 `INSERT` 陳述式的資料庫稽核規格，其稱為 `Payrole_Security_Audit`。  
   
 ```  
 USE master ;  
@@ -116,8 +118,39 @@ ADD (SELECT , INSERT
      ON HumanResources.EmployeePayHistory BY dbo )  
 WITH (STATE = ON) ;  
 GO  
-```  
+``` 
+
+### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>B. 針對特定的資料庫角色，稽核 _sales_ 結構描述中「所有」物件的任何 DML (INSERT、UPDATE 或 DELETE)  
+ 下列範例會針對 `AdventureWorks2012` 資料庫中的 `Sales` 資料表，建立稱為 `DataModification_Security_Audit` 的伺服器稽核，然後建立由具新資料庫角色 `SalesUK` 使用者稽核 `INSERT`、`UPDATE` 和 `DELETE` 陳述式的資料庫稽核規格，其稱為 `Audit_Data_Modification_On_All_Sales_Tables`。  
   
+```  
+USE master ;  
+GO  
+-- Create the server audit.
+-- Change the path to a path that the SQLServer Service has access to. 
+CREATE SERVER AUDIT DataModification_Security_Audit  
+    TO FILE ( FILEPATH = 
+'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA' ) ; 
+GO  
+-- Enable the server audit.  
+ALTER SERVER AUDIT DataModification_Security_Audit   
+WITH (STATE = ON) ;  
+GO  
+-- Move to the target database.  
+USE AdventureWorks2012 ;  
+GO  
+CREATE ROLE SalesUK
+GO
+-- Create the database audit specification.  
+CREATE DATABASE AUDIT SPECIFICATION Audit_Data_Modification_On_All_Sales_Tables  
+FOR SERVER AUDIT DataModification_Security_Audit  
+ADD ( INSERT, UPDATE, DELETE  
+     ON Schema::Sales BY SalesUK )  
+WITH (STATE = ON) ;    
+GO  
+```  
+
+
 ## <a name="see-also"></a>另請參閱  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   

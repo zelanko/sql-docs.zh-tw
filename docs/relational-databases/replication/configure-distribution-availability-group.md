@@ -1,7 +1,7 @@
 ---
 title: 設定可用性群組中的 SQL Server 散發資料庫 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 11/13/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b8d12a1626d6d2d76e24f5aeebfe6d3f50a66959
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 94616b5950ca1ff7f33d9061d2bbc8bab53fbc8c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48817996"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602628"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>設定 Always On 可用性群組中的複寫散發資料庫
 
@@ -48,6 +48,7 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 透過下列機制引進 AG 中�
 - 新增或移除現有散發資料庫 AG 中的節點。
 - 散發者可以有多個散發資料庫。 每個散發資料庫都可以在自己的 AG 中，而且不可以在任何 AG 中。 多個散發資料庫可以共用 AG。
 - 發行者和散發者需要位在不同的 SQL Server 執行個體上。
+- 如果裝載散發資料庫之可用性群組的接聽程式設定為使用非預設連接埠，則必須為接聽程式和非預設連接埠設定別名。
 
 ## <a name="limitations-or-exclusions"></a>限制或排除
 
@@ -63,6 +64,7 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 透過下列機制引進 AG 中�
 - 散發資料庫 AG 必須設定接聽程式。
 - 散發資料庫 AG 中的次要複本可以同步或非同步。 建議並偏好使用同步模式。
 - 不支援雙向異動複寫。
+- 當散發資料庫新增至可用性群組時，SSMS 不會將散發資料庫顯示為同步處理中/已同步處理。
 
 
    >[!NOTE]
@@ -391,9 +393,9 @@ Go
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
 :CONNECT SQLNODE2
-EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
- /* For security reasons the linked server remote logins password is changed with ######## */
-EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
+EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
+ /* For security reasons the linked server remote logins password is changed with ######## */
+EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
 ```
 
 ## <a name="see-also"></a>另請參閱  

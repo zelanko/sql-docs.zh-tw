@@ -1,12 +1,10 @@
 ---
 title: 移轉後驗證和最佳化指南 | Microsoft Docs
-ms.custom: ''
 ms.date: 5/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - post-migration validation and optimization
@@ -14,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-manager: ''
-ms.openlocfilehash: fe6ebb9967a3f1569db605a17b8f48b2a82a0470
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: craigg
+ms.openlocfilehash: 897f8affc74e764b19457aec84bfff21b867895e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662946"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658518"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移轉後驗證和最佳化指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ ms.locfileid: "47662946"
 
 這是因為從 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 開始，所有的查詢最佳化工具變更都會繫結至最新的[資料庫相容性層級](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)；因此，計劃不會在升級時立即變更，而是在使用者將 `COMPATIBILITY_LEVEL` 資料庫選項變更為最新版本時變更。 此功能會結合查詢存放區，可讓您在升級過程中對查詢效能擁有絕佳層級的控制。 
 
-如需 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 所導入的查詢最佳化工具變更的詳細資訊，請參閱[使用 SQL Server 2014 基數估算程式最佳化您的查詢計劃](http://msdn.microsoft.com/library/dn673537.aspx)。
+如需 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 所導入的查詢最佳化工具變更的詳細資訊，請參閱[使用 SQL Server 2014 基數估算程式最佳化您的查詢計劃](https://msdn.microsoft.com/library/dn673537.aspx)。
 
 ### <a name="steps-to-resolve"></a>解決步驟
 
@@ -53,7 +51,7 @@ ms.locfileid: "47662946"
 **適用於：** 外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉。
 
 > [!NOTE]
-> 若為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉，如果此問題存在於來源 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，依現況移轉至較新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法解決這種情況。 
+> 針對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉，如果此問題存在於來源 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，則依現況移轉至較新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法解決這種情況。 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 透過在第一次編譯時使用探查輸入參數來編譯預存程序的查詢計劃，產生已針對該輸入資料分佈進行最佳化的參數化和可重複使用的計畫。 即使不是預存程序，也會將產生簡單計劃的大部分陳述式進行參數化。 第一次快取計劃之後，日後的每次執行都會對應至先前快取的計劃。
 第一次編譯時若未對一般工作負載使用最常見的參數集，就會引發潛在問題。 對於不同的參數，使用相同的執行計畫會變成效率不佳。 如需本主題的詳細資訊，請參閱[參數探測](../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。
@@ -81,7 +79,7 @@ ms.locfileid: "47662946"
 
 1.  對於遺漏索引的任何參考運用圖形化執行計畫。
 2.  索引建議由 [Database Engine Tuning Advisor](../tools/dta/tutorial-database-engine-tuning-advisor.md) 產生。
-3.  運用[遺漏索引 DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) 或透過 [SQL Server 效能儀表板](https://www.microsoft.com/en-us/download/details.aspx?id=29063)。
+3.  運用[遺漏索引 DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) 或透過 [SQL Server 效能儀表板](https://www.microsoft.com/download/details.aspx?id=29063)。
 4.  利用既有的指令碼，可以使用現有的 DMV 深入了解任何遺漏、重複、多餘、很少使用和完全未使用的索引，以及是否有任何索引參考已提示/硬式編碼成資料庫中的現有程序和函數。 
 
 > [!TIP] 

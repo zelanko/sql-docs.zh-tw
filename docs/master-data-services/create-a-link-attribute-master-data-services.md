@@ -15,21 +15,21 @@ ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0eca5b1b66d296ccee49377d436b3be4c66a8cd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f309ad8d7842b678fa47ed5786023b0bb042b63
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719276"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703147"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>建立連結屬性 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  當您想要讓使用者輸入超連結作為屬性值 (例如 http://www.contoso.com) 時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中建立連結屬性。  
+  當您想要讓使用者輸入超連結作為屬性值 (例如 https://www.contoso.com) 時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中建立連結屬性。  
   
 > [!NOTE]  
->  當使用者輸入連結屬性的值時，字串開頭必須為 **http://** ，否則將會顯示一個錯誤。  
+>  當使用者輸入連結屬性的值時，字串開頭必須為 **https://**，否則將會顯示一個錯誤。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  

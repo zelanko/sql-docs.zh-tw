@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4b53d5804668a46ade48d0beb41eae8fb7650374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a094030a35acf997186061b752f9b61d8f7b8200
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794386"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601675"
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server 使用意見收集的本機稽核
 
@@ -27,7 +27,7 @@ ms.locfileid: "47794386"
 
 ## <a name="introduction"></a>簡介
 
-Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能可能會收集並傳送電腦或裝置的相關資訊。 這稱為「標準電腦資訊」。 [SQL Server 使用意見收集](http://support.microsoft.com/kb/3153756) 的本機稽核元件會將服務收集的資料寫入至指定的資料夾，代表將傳送給 Microsoft 的資料 (記錄)。 本機稽核的目的是要讓客戶看到 Microsoft 以此功能收集的所有資料，以用於相容性、法規或隱私權驗證的理由。  
+Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能可能會收集並傳送電腦或裝置的相關資訊。 這稱為「標準電腦資訊」。 [SQL Server 使用意見收集](https://support.microsoft.com/kb/3153756) 的本機稽核元件會將服務收集的資料寫入至指定的資料夾，代表將傳送給 Microsoft 的資料 (記錄)。 本機稽核的目的是要讓客戶看到 Microsoft 以此功能收集的所有資料，以用於相容性、法規或隱私權驗證的理由。  
 
 從 SQL Server 2016 CU2 開始，本機稽核可以在 SQL Server 資料庫引擎和 Analysis Services (SSAS) 的執行個體層級設定。 在 SQL Server 2016 CU4 與 SQL Server 2016 SP1 中，也會啟用 SQL Server Integration Services (SSIS) 的本機稽核。 安裝程式執行期間所安裝的其他 SQL Server 元件，以及在安裝程式執行之後下載或安裝的 SQL Server 工具，沒有使用意見收集的本機稽核功能。 
 
@@ -37,7 +37,7 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 
 1. 執行個體已修補為 SQL Server 2016 RTM CU2 或更新版本。 針對 Integration Services，執行個體已修補為 SQL 2016 RTM CU4 或 SQL 2016 SP1
 
-1. 使用者必須是系統管理員或具有存取權可新增和修改登錄機碼、建立資料夾、管理資料夾安全性及停止/啟動 Windows 服務的角色。  
+1. 使用者必須是系統管理員或具有存取權可新增和修改登錄機碼、建立資料夾、管理資料夾安全性及停止/啟動 Windows 服務的角色。  
 
 ## <a name="pre-configuration-steps-prior-to-turning-on-local-audit"></a>預先設定步驟，再開啟本機稽核 
 
@@ -66,7 +66,7 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>設定本機稽核檔案的新資料夾。    
 
-建立新資料夾 (本機稽核目錄) 供本機稽核寫入記錄檔。 例如，資料庫引擎的預設執行個體的本機稽核目錄完整路徑會是︰*C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*。 
+建立新資料夾 (本機稽核目錄) 供本機稽核寫入記錄檔。 例如，資料庫引擎的預設執行個體的本機稽核目錄完整路徑會是︰*C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*。 
  
   >[!NOTE] 
   >請在 SQL Server 安裝路徑以外設定本機稽核的目錄路徑，以避免允許稽核功能和修補作業造成潛在的 SQL Server 問題。
@@ -127,7 +127,7 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 
 完成預先設定步驟之後，您可以開啟本機稽核。 若要這樣做，請使用系統管理員帳戶或具有具有存取權可修改登錄機碼的類似角色，遵循下列步驟來開啟或關閉本機稽核。 
 
-1. 啟動 **regedit**。  
+1. 啟動 **regedit**。  
 
 1. 巡覽至適當的 CPE [路徑](#create-a-registry-key-setting-to-configure-local-audit-target-directory)。 
 
@@ -162,9 +162,9 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 
 ## <a name="maintenance"></a>維護 
 
-1. 若要限制本機稽核寫入檔案的磁碟空間使用量，請設定原則或定期工作來清除本機稽核目錄，移除較舊且不需要的檔案。  
+1. 若要限制本機稽核寫入檔案的磁碟空間使用量，請設定原則或定期工作來清除本機稽核目錄，移除較舊且不需要的檔案。  
 
-2. 保護本機稽核目錄路徑，讓它只能由適當的人員存取。 請注意，記錄檔包含[如何設定 SQL Server 2016 將意見反應傳送給 Microsoft](http://support.microsoft.com/kb/3153756)中所述的資訊。 此檔案的存取權應該避免大部分組織成員讀取它。  
+2. 保護本機稽核目錄路徑，讓它只能由適當的人員存取。 請注意，記錄檔包含[如何設定 SQL Server 2016 將意見反應傳送給 Microsoft](https://support.microsoft.com/kb/3153756)中所述的資訊。 此檔案的存取權應該避免大部分組織成員讀取它。  
 
 ## <a name="data-dictionary-of-local-audit-output-data-structure"></a>本機稽核輸出資料結構的資料字典 
 
@@ -177,9 +177,9 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 - **data** 包含對應查詢執行的輸出，此執行花費時間為 **queryTimeInTicks**。
 - T-SQL 查詢的**queryIdentifiers** 會具有查詢中所儲存的 T-SQL 查詢定義。
 
-| 邏輯本機稽核資訊階層 | 相關的資料行 |
+| 邏輯本機稽核資訊階層 | 相關的資料行 |
 | ------ | -------|
-| 標頭 | emitTime, schemaVersion 
+| 標頭 | emitTime, schemaVersion 
 | 電腦 | operatingSystem 
 | 執行個體 | instanceUniqueID、correlationID、clientVersion 
 | Session | sessionID, traceName 
@@ -188,12 +188,12 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>名稱/值配對的定義和範例 
 
-下面所列的資料行代表本機稽核檔案輸出的順序。 使用 SHA 256 的單向雜湊用於底下許多資料行的匿名值。  
+下面所列的資料行代表本機稽核檔案輸出的順序。 使用 SHA 256 的單向雜湊用於底下許多資料行的匿名值。  
 
 | [屬性] | Description | 範例值
 |-------|--------| ----------|
 |instanceUniqueID| 匿名的執行個體識別碼 | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
-|schemaVersion| SQLCEIP 結構描述版本 |  3 
+|schemaVersion| SQLCEIP 結構描述版本 |  3 
 |emitTime |UTC 的資料點發出時間 | 2016-09-08T17:20:22.1124269Z 
 |sessionID | 要服務 SQLCEIP 服務用的工作階段識別碼 | 89decf9a-ad11-485c-94a7-fefb3a02ed86 
 |correlationId | 其他識別碼的預留位置 | 0 
@@ -204,8 +204,8 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 |traceName | 追蹤的類別：(SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |queryIdentifier | 查詢的識別碼 | SQLServerProperties.002 
 |data   | 所收集到 queryIdentifier 相關資訊的輸出，它作為 T-SQL 查詢、XE 工作階段或應用程式的輸出 |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
-|查詢| 如果適用的話，此為與產生資料之 queryIdentifier 相關的 T-SQL 查詢定義。        此元件不會由 SQL Server CEIP 服務上傳。 它包含在本機稽核中，僅供客戶參考之用。| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolybaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolybaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
-|queryTimeInTicks | 具有下列追蹤類別的查詢執行所需的持續時間：(SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
+|查詢| 如果適用的話，此為與產生資料之 queryIdentifier 相關的 T-SQL 查詢定義。        此元件不會由 SQL Server CEIP 服務上傳。 它包含在本機稽核中，僅供客戶參考之用。| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
+|queryTimeInTicks | 具有下列追蹤類別的查詢執行所需的持續時間：(SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
  
 ### <a name="trace-categories"></a>追蹤類別 
 目前，我們會收集下列追蹤類別︰ 
@@ -263,7 +263,7 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
         "Version": "Microsoft SQL Server 2017 (RTM-CU6) (KB4101464) - 14.0.3025.34 (X64) \n\tApr  9 2018 18:00:41 \n\tCopyright (C) 2017 Microsoft Corporation\n\tEnterprise Edition: Core-based Licensing (64-bit) on Windows 10 Enterprise 10.0 <X64> (Build 16299: )\n"
       }
     ],
-    "query": "SELECT\n      SERVERPROPERTY('Collation') AS [Collation],\n      SERVERPROPERTY('IsFullTextInstalled') AS [SqlFTinstalled],\n      SERVERPROPERTY('IsIntegratedSecurityOnly') AS [SqlIntSec],\n      SERVERPROPERTY('IsSingleUser') AS [IsSingleUser],\n      SERVERPROPERTY ('FileStreamEffectiveLevel') AS [SqlFilestreamMode],\n      SERVERPROPERTY('IsPolybaseInstalled') AS [SqlPbInstalled],\n      SERVERPROPERTY('PolybaseRole') AS [SqlPbNodeRole],\n      SERVERPROPERTY('ProductMajorVersion') AS [SqlVersionMajor],\n      SERVERPROPERTY('ProductMinorVersion') AS [SqlVersionMinor],\n      SERVERPROPERTY('ProductBuild') AS [SqlVersionBuild],\n      SERVERPROPERTY('ProductBuildType') AS ProductBuildType,\n      SERVERPROPERTY('ProductLevel') AS ProductLevel,\n      SERVERPROPERTY('ProductUpdateLevel') AS ProductUpdateLevel,\n      SERVERPROPERTY('ProductUpdateReference') AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)),CHARINDEX('.', REVERSE(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY('EditionID') AS SQLEditionId,\n      SERVERPROPERTY('IsClustered') AS IsClustered,\n      SERVERPROPERTY('IsHadrEnabled') AS IsHadrEnabled,\n      SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version",
+    "query": "SELECT\n      SERVERPROPERTY('Collation') AS [Collation],\n      SERVERPROPERTY('IsFullTextInstalled') AS [SqlFTinstalled],\n      SERVERPROPERTY('IsIntegratedSecurityOnly') AS [SqlIntSec],\n      SERVERPROPERTY('IsSingleUser') AS [IsSingleUser],\n      SERVERPROPERTY ('FileStreamEffectiveLevel') AS [SqlFilestreamMode],\n      SERVERPROPERTY('IsPolyBaseInstalled') AS [SqlPbInstalled],\n      SERVERPROPERTY('PolyBaseRole') AS [SqlPbNodeRole],\n      SERVERPROPERTY('ProductMajorVersion') AS [SqlVersionMajor],\n      SERVERPROPERTY('ProductMinorVersion') AS [SqlVersionMinor],\n      SERVERPROPERTY('ProductBuild') AS [SqlVersionBuild],\n      SERVERPROPERTY('ProductBuildType') AS ProductBuildType,\n      SERVERPROPERTY('ProductLevel') AS ProductLevel,\n      SERVERPROPERTY('ProductUpdateLevel') AS ProductUpdateLevel,\n      SERVERPROPERTY('ProductUpdateReference') AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)),CHARINDEX('.', REVERSE(CAST(SERVERPROPERTY('ProductVersion') AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY('EditionID') AS SQLEditionId,\n      SERVERPROPERTY('IsClustered') AS IsClustered,\n      SERVERPROPERTY('IsHadrEnabled') AS IsHadrEnabled,\n      SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version",
     "queryTimeInTicks": 0
   },
   {
@@ -322,7 +322,7 @@ DBA 必須自行管理目錄的檔案清除工作，以避免耗用太多磁碟�
 
 **是否有用戶端或工具，可用於讀取此 JSON 輸出？**
 可以使用 [記事本]、Visual Studio 或您選擇的任何 JSON 讀取器來讀取輸出。
-或者，您可以在 SQL Server 2016 執行個體中讀取 JSON 檔案並分析資料，如下所示。 如需如何在 SQL Server 中讀取 JSON 檔案的詳細資訊，請瀏覽 [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](http://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(使用 OPENROWSET (BULK) 和 OPENJSON (Transact-SQL) 將 JSON 檔案匯入到 SQL Server)。
+或者，您可以在 SQL Server 2016 執行個體中讀取 JSON 檔案並分析資料，如下所示。 如需如何在 SQL Server 中讀取 JSON 檔案的詳細資訊，請瀏覽 [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)(使用 OPENROWSET (BULK) 和 OPENJSON (Transact-SQL) 將 JSON 檔案匯入到 SQL Server)。
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)

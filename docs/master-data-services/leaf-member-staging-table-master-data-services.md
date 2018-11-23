@@ -15,12 +15,12 @@ ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 46dc98904bc82a167fa1c014b5ace8b8699170a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82ca5e58e5e24c128e37a9335fd87bc3bb2d4e28
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626216"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700256"
 ---
 # <a name="leaf-member-staging-table-master-data-services"></a>分葉成員暫存資料表 (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "47626216"
 |**[字碼]**<br /><br /> 必要項，除非程式碼自動為 **ImportType1** 或 **2** 產生。如需詳細資訊，請參閱[自動建立代碼 &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)。|成員的唯一代碼。||  
 |**名稱**<br /><br /> 選擇性|成員的名稱。||  
 |**NewCode**|唯有在您要變更成員代碼時才使用。||  
-|\<屬性名稱>|實體中的每個屬性都有一個資料行存在。 將其搭配 **ImportType** **0** 或 **2**使用。 對於自由格式屬性，指定屬性的新文字或字串值。 對於網域屬性，指定將成為屬性之成員的代碼。 對於連結屬性，URL 開頭必須是 **http://**。<br /><br /> 注意：您無法暫存檔案屬性。||  
+|\<屬性名稱>|實體中的每個屬性都有一個資料行存在。 將其搭配 **ImportType** **0** 或 **2**使用。 對於自由格式屬性，指定屬性的新文字或字串值。 對於網域屬性，指定將成為屬性之成員的代碼。 針對連結屬性，URL 開頭必須是 **https://**。<br /><br /> 注意：您無法暫存檔案屬性。||  
   
 ## <a name="see-also"></a>另請參閱  
  [概觀：從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e40163fe08b451e59dc28915002079b80e987e6f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9ae23135583dc09db8d8a8b0cfb7d356244fb753
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021182"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812275"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>在 SharePoint 中啟用報表伺服器和 Power View 整合功能
 
@@ -26,7 +26,7 @@ ms.locfileid: "50021182"
 > [!NOTE]
 > SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
 
- 如果您在安裝 SharePoint 產品之後安裝適用於 SharePoint 2010 產品的 Reporting Services 增益集，只會針對根網站集合啟用報表伺服器整合功能和 Power View 整合功能。 如果是其他網站集合，您必須手動啟用這些功能。 例如，如果您擁有 **http://[我的伺服器名稱]/sites/[網站集合名稱]** 網站集合，您需要手動啟用 Reporting Services 網站集合功能。  
+ 如果您在安裝 SharePoint 產品之後安裝適用於 SharePoint 2010 產品的 Reporting Services 增益集，只會針對根網站集合啟用報表伺服器整合功能和 Power View 整合功能。 如果是其他網站集合，您必須手動啟用這些功能。 例如，如果您擁有 **https://[我的伺服器名稱]/sites/[網站集合名稱]** 網站集合，您需要手動啟用 Reporting Services 網站集合功能。  
   
  如果沒有根網站集合，則 Reporting Services 增益集會記錄與下面類似的訊息。  
   

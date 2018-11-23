@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 096948b417e29b073ecc30abd9831c62ef520646
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 15d83a8f15492e0d1f9c0cf1d804645f4b14c867
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252195"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814351"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL) 
 
@@ -668,7 +668,7 @@ Windows 相容的目錄名稱。 此名稱在 [!INCLUDE[ssNoVersion](../../inclu
   
 **\<mixed_page_allocation_option> ::=**  
   
-**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。 
+**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。 
   
 MIXED_PAGE_ALLOCATION { OFF | ON } 控制資料庫是否可以針對資料表或索引的前八個頁面使用混合範圍建立初始頁面。  
  
@@ -682,7 +682,7 @@ ON
   
 **\<PARAMETERIZATION_option> ::=**  
   
-控制參數化選項。  
+控制參數化選項。 如需參數化的詳細資訊，請參閱[查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)。 
   
 PARAMETERIZATION { SIMPLE | FORCED }  
 SIMPLE  
@@ -698,13 +698,13 @@ FORCED
 **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
 ON | OFF | CLEAR [ ALL ]  
-控制是否在此資料庫中啟用查詢存放區，並且控制查詢存放區內容的移除。  
+控制是否在此資料庫中啟用查詢存放區，並且控制查詢存放區內容的移除。 如需詳細資訊，請參閱[查詢存放區使用案例](../../relational-databases/performance/query-store-usage-scenarios.md)。 
   
 ON  
 啟用查詢存放區。  
   
 OFF  
-停用查詢存放區。  這是預設值。   
+停用查詢存放區。 這是預設值。   
   
 CLEAR  
 移除查詢存放區的內容。  
@@ -799,7 +799,7 @@ TORN_PAGE_DETECTION
 - 將使用者或系統資料庫升級為 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本時，都會保留 PAGE_VERIFY 值 (NONE 或 TORN_PAGE_DETECTION)。 我們建議您使用 CHECKSUM。  
   
     > [!NOTE]  
-    > 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，tempdb 資料庫的 PAGE_VERIFY 資料庫選項設定為 NONE 而且無法修改。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中，新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 tempdb 資料庫的預設值為 CHECKSUM。 升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝時，預設值仍然維持 NONE。 此選項可以進行修改。 我們建議您針對 tempdb 資料庫使用 CHECKSUM。  
+    > 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，tempdb 資料庫的 PAGE_VERIFY 資料庫選項設定為 NONE 而且無法修改。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中，新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 tempdb 資料庫的預設值為 CHECKSUM。 升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝時，預設值仍然維持 NONE。 此選項可以進行修改。 我們建議您針對 tempdb 資料庫使用 CHECKSUM。  
   
 - TORN_PAGE_DETECTION 可以使用較少資源，但所提供的 CHECKSUM 保護最少。  
 - 在資料庫不離線、不鎖定，或不妨礙資料庫並行作業的情況下，可以設定 PAGE_VERIFY。  
@@ -809,7 +809,7 @@ TORN_PAGE_DETECTION
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會重試任何因總和檢查碼、損毀頁或其他 I/O 錯誤而失敗的讀取作業四次。 如果任何一次重試讀取成功，都會將訊息寫入錯誤記錄檔中，且會繼續觸發讀取作業的命令。 如果重試失敗，此命令便會失敗，且會出現錯誤訊息 824。  
   
-如需錯誤訊息 823、824 和 825 的詳細資訊，請參閱[如何疑難排解 SQL Server 中的錯誤訊息 823](http://support.microsoft.com/help/2015755)、[如何疑難排解 SQL Server 中的錯誤訊息 824](http://support.microsoft.com/help/2015756) 和[如何疑難排解 SQL Server 中的訊息 825 &#40;讀取重試&#41;](http://support.microsoft.com/help/2015757)。
+如需錯誤訊息 823、824 和 825 的詳細資訊，請參閱[如何疑難排解 SQL Server 中的錯誤訊息 823](https://support.microsoft.com/help/2015755)、[如何疑難排解 SQL Server 中的錯誤訊息 824](https://support.microsoft.com/help/2015756) 和[如何疑難排解 SQL Server 中的訊息 825 &#40;讀取重試&#41;](https://support.microsoft.com/help/2015757)。
   
 您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視的 *page_verify_option* 資料行，或檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函數的 *IsTornPageDetectionEnabled* 屬性來判斷這個選項目前的設定。  
   
@@ -1171,7 +1171,7 @@ GO
 ```  
   
 ### <a name="b-setting-the-database-to-readonly"></a>B. 將資料庫設為 READ_ONLY  
-將資料庫或檔案群組的狀態改成 READ_ONLY 或 READ_WRITE 時，需要資料庫的獨佔存取權。 下列範例會將資料庫設成 `SINGLE_USER` 模式來取得獨佔存取。 之後，範例會將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的狀態設成 `READ_ONLY`，並將資料庫的存取權還給所有使用者。  
+將資料庫或檔案群組的狀態改成 READ_ONLY 或 READ_WRITE 時，需要資料庫的獨佔存取權。 下列範例會將資料庫設成 `SINGLE_USER` 模式來取得獨佔存取。 之後，範例會將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的狀態設成 `READ_ONLY` ，並將資料庫的存取權還給所有使用者。  
   
 > [!NOTE]  
 >  這個範例在第一個 `WITH ROLLBACK IMMEDIATE` 陳述式中，使用終止選項 `ALTER DATABASE` 。 所有未完成的交易都會回復，而且 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的任何其他連接都會立即中斷。  
@@ -1964,7 +1964,7 @@ NO_WAIT
 ## <a name="examples"></a>範例  
   
 ### <a name="a-setting-the-database-to-readonly"></a>A. 將資料庫設為 READ_ONLY  
-將資料庫或檔案群組的狀態改成 READ_ONLY 或 READ_WRITE 時，需要資料庫的獨佔存取權。 下列範例會將資料庫設成 `RESTRICTED_USER` 模式來限制存取。 之後，範例會將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的狀態設成 `READ_ONLY`，並將資料庫的存取權還給所有使用者。  
+將資料庫或檔案群組的狀態改成 READ_ONLY 或 READ_WRITE 時，需要資料庫的獨佔存取權。 下列範例會將資料庫設成 `RESTRICTED_USER` 模式來限制存取。 之後，範例會將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的狀態設成 `READ_ONLY` ，並將資料庫的存取權還給所有使用者。  
   
 ```sql  
 USE master;  
@@ -2666,7 +2666,7 @@ NO_WAIT
 ## <a name="examples"></a>範例  
   
 ### <a name="a-setting-the-database-to-readonly"></a>A. 將資料庫設為 READ_ONLY  
-將資料庫或檔案群組的狀態改成 READ_ONLY 或 READ_WRITE 時，需要資料庫的獨佔存取權。 下列範例會將資料庫設成 `RESTRICTED_USER` 模式來限制存取。 之後，範例會將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的狀態設成 `READ_ONLY`，並將資料庫的存取權還給所有使用者。  
+將資料庫或檔案群組的狀態改成 READ_ONLY 或 READ_WRITE 時，需要資料庫的獨佔存取權。 下列範例會將資料庫設成 `RESTRICTED_USER` 模式來限制存取。 之後，範例會將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的狀態設成 `READ_ONLY` ，並將資料庫的存取權還給所有使用者。  
   
 ```sql  
 USE master;  

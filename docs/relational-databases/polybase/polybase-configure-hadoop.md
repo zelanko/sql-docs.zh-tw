@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2dd074f4cd7d3d9042e5f0deb3de6ee0731c4af9
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: e899430e196563d4477ae4cbe072cdc1078cd471
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806718"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606558"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>設定 PolyBase 存取 Hadoop 中的外部資料
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-此文章說明如何在 SQL Server 執行個體上使用 PolyBase 來查詢位於 Hadoop 中的外部資料。
+本文說明如何在 SQL Server 執行個體上使用 PolyBase 來查詢位於 Hadoop 中的外部資料。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -35,11 +35,9 @@ ms.locfileid: "49806718"
 
 - PolyBase 支援兩個 Hadoop 提供者，Hortonworks Data Platform (HDP) 和 Cloudera 分散式 Hadoop (CDH)。 Hadoop 的新版本遵循 "Major.Minor.Version" 模式，並且支援所支援主要和次要版本內的所有版本。 支援下列 Hadoop 提供者：
 
-  - Linux/Windows Server 上的 Hortonworks HDP 1.3  
-  - Linux 上的 Hortonworks HDP 2.1 – 2.6
-  - Windows Server 上的 Hortonworks HDP 2.1 - 2.3  
-  - Linux 上的 Cloudera CDH 4.3  
-  - Linux 上的 Cloudera CDH 5.1 - 5.5、5.9 - 5.13
+  - Linux 上的 Hortonworks HDP 1.3、2.1-2.6、3.0
+  - Windows Server 上的 Hortonworks HDP 1.3、2.1-2.3
+  - Linux 上的 Cloudera CDH 4.3、5.1-5.5、5.9-5.13
 
 > [!NOTE]
 > 從 SQL Server 2016 SP1 CU7 和 SQL Server 2017 CU3 開始，PolyBase 支援 Hadoop 加密區域。 如果您使用 [PolyBase 向外延展群組](polybase-scale-out-groups.md)，則所有計算節點也必須位在支援 Haddop 加密區域的組建上。
@@ -75,7 +73,7 @@ ms.locfileid: "49806718"
 1. 在 SQL Server 的安裝路徑中，尋找 **yarn-site.xml** 檔案。 通常其路徑如下：  
 
    ```xml  
-   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolybaseHadoopconf  
+   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBaseHadoopconf  
    ```  
 
 1. 在 Hadoop 電腦上，尋找 Hadoop 組態目錄中的類比檔案。 在檔案中，尋找並複製組態機碼 yarn.application.classpath 的值。  

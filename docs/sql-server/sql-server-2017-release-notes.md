@@ -11,26 +11,26 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ff000457e8328864ac8e77c5d21b0048da3b024
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: d414f256e0eb06bfe3925b0e8e1a61b4799c3c7c
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419403"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703766"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 版本資訊
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 本文說明 SQL Server 2017 的限制和問題。 如需相關資訊，請參閱：
 - [SQL Server 2017 的新功能](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Linux 上的 SQL Server 版本資訊](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
-- [SQL Server 2017 累積更新](http://aka.ms/sql2017cu)，以取得最新累積更新 (CU) 版本的資訊
+- [SQL Server 2017 累積更新](https://aka.ms/sql2017cu)，以取得最新累積更新 (CU) 版本的資訊
 
 **試用 SQL Server！**
-- [![從 Evaluation Center 下載](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [下載 SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![從 Evaluation Center 下載](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [下載 SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)
 - [![建立虛擬機器](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [使用 SQL Server 2017 加速虛擬機器](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 > [!NOTE]
-> SQL Server 2019 現已提供預覽。 如需詳細資訊，請參閱 [SQL Server 2019 中的新功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)。
+> SQL Server 2019 現已提供預覽。 如需詳細資訊，請參閱 [SQL Server 2019 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)。
 
 ## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server 2017 - 正式運作版本 (2017 年 10 月)
 ### <a name="database-engine"></a>Database Engine
@@ -44,12 +44,12 @@ ms.locfileid: "49419403"
     3. 使用原始共用名稱再次選取 [啟用 FILESTREAM 的檔案 I/O 資料流存取]，然後按一下 [套用]。
 
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
-- **問題和客戶的影響：** 在使用者權限頁面上，當您將權限授予實體樹狀檢視中的根層級時，會看到下列錯誤：`"The model permission cannot be saved. The object guid is not valid"`
+- **問題和客戶的影響：** 在使用者權限頁面上，當您將權限授與實體樹狀檢視中的根層級時，會看到下列錯誤：`"The model permission cannot be saved. The object guid is not valid"`
 
 - **因應措施：** 
   - 將權限授予樹狀檢視中的子節點而不是根層級。
   - 中的多個
-  - 執行「[在實體層級上套用權限時發生錯誤](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)」這個 MDS 小組部落格中說明的指令碼
+  - 執行「[在實體層級上套用權限時發生錯誤](https://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)」這個 MDS 小組部落格中說明的指令碼
 
 ### <a name="analysis-services"></a>Analysis Services
 - **問題和客戶的影響：** 1400 相容性層級的表格式模型目前無法使用下列來源的資料連接器。

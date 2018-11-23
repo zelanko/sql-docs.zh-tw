@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b11acfb91190aa4f6d1b49e603954c53bbcd86e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd1990fcb8a8637a120a35e2f8809d7bf48b1ecf
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737676"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812761"
 ---
 # <a name="helplink-element"></a>HelpLink 元素
   **Detail** 屬性的 **HelpLink** 項目是報表伺服器所產生的 URL 字串。 URL 會以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 說明及支援所管理的網頁為目標，並提供有關 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中發生的特定錯誤之其他說明與知識庫文章。 URL 具有下列語法：  
   
- **http://** www.microsoft.com**/** products**/** ee**/** transform.aspx **?EvtSrc**=v*alue***&EvtID**=* value ***&ProdName**=* value***&ProdVer**=* value*  
+ **https://** www.microsoft.com**/** products**/** ee**/** transform.aspx **?EvtSrc**=v*alue***&EvtID**=* value ***&ProdName**=* value***&ProdVer**=* value*  
   
  下表列出 **HelpLink** URL 的引數。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "47737676"
  下列範例說明為錯誤碼 **rsReservedItem** 傳回的 **HelpLink** URL。 當使用者嘗試修改或刪除在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的保留項目時，就會發生這個錯誤。  
   
 ```  
-http://www.microsoft.com/products/ee/transform.aspx?  
+https://www.microsoft.com/products/ee/transform.aspx?  
 EvtSrc=Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings  
 &EvtID=rsReservedItem&ProdName=Microsoft%20SQL%20Server%20Reporting%20Services&ProdVer=8.00  
 ```  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 30457df56828e9a2c197b44126555c63f17c40f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74e64506ec3ba27a3caf87292556ab22c5609c57
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681936"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813041"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe 公用程式會處理您在輸入檔中所提供的指令碼。 使用此公用程式可自動化報表伺服器部署和管理工作。  
@@ -56,7 +56,7 @@ rs {-?}
  (必要) 指定要執行的 .rss 檔案。 這個值可以是 .rss 檔案的相對路徑或完整路徑。  
   
  **-s** *serverURL*  
- (必要) 指定要對其執行檔案的 Web 伺服器名稱和報表伺服器虛擬目錄名稱。 報表伺服器 URL 的範例為 `http://examplewebserver/reportserver`。 伺服器名稱開頭的前置詞 http:// 或 https:// 是選擇性的。 如果您省略前置詞，報表伺服器 Script Host 會先嘗試使用 https，而且如果 https 無法運作，則會使用 http。  
+ (必要) 指定要對其執行檔案的 Web 伺服器名稱和報表伺服器虛擬目錄名稱。 報表伺服器 URL 的範例為 `https://examplewebserver/reportserver`。 伺服器名稱開頭的前置詞 https:// 為選擇性。 如果您省略前置詞，報表伺服器 Script Host 會先嘗試使用 https，而且如果 https 無法運作，則會使用 http。  
   
  **-u** [*domain*\\]*username*  
  (選擇性) 指定用來連接到報表伺服器的使用者帳戶。 如果省略 **-u** 和 **-p** ，則會使用目前的 Windows 使用者帳戶。  
@@ -88,7 +88,7 @@ rs {-?}
   
  會在命令列上指定 **-v** 引數，以及用於設定在執行階段定義於指令碼中的全域變數值。 例如，如果您的指令碼包含名為 *parentFolder*的變數，您就可以在命令列上指定該資料夾的名稱：  
   
- `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
+ `rs.exe -i myScriptFile.rss -s https://myServer/reportserver -v parentFolder="Financial Reports"`  
   
  全域變數會使用給定的名稱來建立並設定為所提供的值。 例如， **-v a=**"**1**" **-v b=**"**2**" 會產生名為 **a** 的變數，其值為 "**1**"，以及名為 **b** 的變數，其值為 "**2**"。  
   
@@ -97,14 +97,14 @@ rs {-?}
  **-t**  
  (選擇性) 追蹤記錄的輸出錯誤訊息。 此引數沒有取得值。 如需詳細資訊，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。  
   
-##  <a name="bkmk_permissions"></a> 權限  
+##  <a name="bkmk_permissions"></a> Permissions  
  若要執行工具，您必須有足夠的權限，可以連接到要對其執行指令碼的報表伺服器執行個體。 您可以執行指令碼在本機電腦或遠端電腦執行變更。 若要對安裝在遠端電腦上的報表伺服器執行變更，請在 **-s** 引數中指定遠端電腦。  
   
 ##  <a name="bkmk_examples"></a> 範例  
  下列範例說明如何指定指令碼檔案，其中包含您要執行的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 指令碼和 Web 服務方法。  
   
 ```  
-rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
+rs –i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver  
 ```  
   
  如需詳細範例，請參閱 [在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  

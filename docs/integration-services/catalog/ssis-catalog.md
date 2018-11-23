@@ -1,7 +1,7 @@
 ---
 title: SSIS 目錄 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 11/12/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c168338d466273d28f2b8bd9d1f27c71f3a30b31
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: e63424772029acf5862d19362e9a7e9bd0e082c1
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864296"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641405"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
   **SSISDB** 目錄是處理您已部署至 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 伺服器之 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 專案的中心點。 例如，您可以設定專案和封裝參數、設定環境以指定封裝的執行值、執行和疑難排解封裝，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 伺服器作業。  
@@ -36,7 +36,7 @@ ms.locfileid: "47864296"
   
  若要維護 **SSISDB** 資料庫，建議您套用管理使用者資料庫的標準企業原則。 如需有關建立維護計畫的詳細資訊，請參閱＜ [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)＞。  
   
- **SSISDB** 目錄和 **SSISDB** 資料庫都支援 Windows PowerShell。 如需有關使用 SQL Server 搭配 Windows PowerShell 的詳細資訊，請參閱＜ [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)＞。 如需有關如何使用 Windows PowerShell 完成部署專案等工作的範例，請參閱 blogs.msdn.com 上的部落格文章： [SQL Server 2012 中的 SSIS 和 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)。  
+ **SSISDB** 目錄和 **SSISDB** 資料庫都支援 Windows PowerShell。 如需有關使用 SQL Server 搭配 Windows PowerShell 的詳細資訊，請參閱＜ [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)＞。 如需有關如何使用 Windows PowerShell 完成部署專案等工作的範例，請參閱 blogs.msdn.com 上的部落格文章： [SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。  
   
  如需檢視作業資料的詳細資訊，請參閱 [監視封裝執行和其他作業](../../integration-services/performance/monitor-running-packages-and-other-operations.md)。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "47864296"
   
 -   [目錄組態](../../integration-services/catalog/ssis-catalog.md#Configuration)  
   
--   [Permissions](../../integration-services/catalog/ssis-catalog.md#Permissions)  
+-   [權限](../../integration-services/catalog/ssis-catalog.md#Permissions)  
   
 -   [資料夾](../../integration-services/catalog/ssis-catalog.md#Folders)  
   
@@ -178,7 +178,7 @@ ms.locfileid: "47864296"
 |每一專案的版本數目上限|MAX_PROJECT_VERSIONS|  
 |全伺服器的預設記錄層次|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="Permissions"></a> Permissions  
  專案、環境和封裝會包含在屬於安全性實體物件的資料夾中。 您可以將權限授與資料夾，包括 MANAGE_OBJECT_PERMISSIONS 權限。 MANAGE_OBJECT_PERMISSIONS 可讓您將資料夾內容管理委派給使用者，而不必將使用者成員資格授與 ssis_admin 角色。 您還可以授與權限給專案、環境和作業。 作業包括初始化 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、部署專案、建立及啟動執行、驗證專案和封裝及設定 **SSISDB** 目錄。  
   
  如需資料庫角色的詳細資訊，請參閱 [資料庫層級角色](../../relational-databases/security/authentication-access/database-level-roles.md)。  
@@ -356,12 +356,12 @@ ms.locfileid: "47864296"
   
     ```  
   
-     如需如何使用 Windows PowerShell 和 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間的其他範例，請參閱 blogs.msdn.com 上的部落格文章：[SQL Server 2012 中的 SSIS 和 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)。 如需此命名空間的概觀和程式碼範例，請參閱 blogs.msdn.com 上的部落格文章： [SSIS 目錄管理物件模型初探](http://go.microsoft.com/fwlink/?LinkId=254267)。  
+     如需如何使用 Windows PowerShell 和 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間的其他範例，請參閱 blogs.msdn.com 上的部落格文章：[SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。 如需此命名空間的概觀和程式碼範例，請參閱 blogs.msdn.com 上的部落格文章： [SSIS 目錄管理物件模型初探](https://go.microsoft.com/fwlink/?LinkId=254267)。  
 
 ## <a name="catalog-properties-dialog-box"></a>目錄屬性對話方塊
   使用 [目錄屬性] 對話方塊來設定 SSISDB 目錄。 目錄屬性定義如何加密敏感性資料，如何保留作業和專案版本設定資料，以及何時驗證作業逾時。SSISDB 目錄是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案、封裝、參數與環境的中央儲存和管理點。  
   
- 您也可以在 catalog.catalog_property 檢視表中檢視目錄屬性，以及使用 catalog.configure_catalog 預存程序來設定屬性。 如需詳細資訊，請參閱 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 和 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)。  
+ 您也可以在 `catalog.catalog_properties` 檢視表中檢視目錄屬性，以及使用 `catalog.configure_catalog` 預存程序來設定屬性。 如需詳細資訊，請參閱 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 和 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)。  
   
  **您想要做什麼事？**  
   
@@ -380,15 +380,14 @@ ms.locfileid: "47864296"
 ###  <a name="options"></a> 設定選項  
   
 #### <a name="options"></a>選項。  
- 下表描述對話方塊中的特定屬性，以及 catalog.catalog_property 檢視表中的對應屬性。  
+ 下表描述對話方塊中的特定屬性，以及 `catalog.catalog_properties` 檢視表中的對應屬性。  
   
-|屬性名稱 (目錄屬性對話方塊)|屬性名稱 (catalog.catalog_property 檢視表)|Description|  
+|屬性名稱 (目錄屬性對話方塊)|屬性名稱 (catalog.catalog_properties 檢視表)|Description|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
-|加密演算法名稱|ENCRYPTION_CLEANUP_ENABLED|指定用來加密目錄中敏感性參數值的加密類型。 以下是可能的值：<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (預設)|  
-|驗證逾時 (秒)|VALIDATION_TIMEOUT|指定專案驗證或套件驗證在停止之前可以執行的秒數上限。 預設值為 300 秒。<br /><br /> 執行驗證是非同步作業。 專案或套件越大，驗證所需時間越長。<br /><br /> 如需有關驗證專案和封裝的詳細資訊，請參閱＜ [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)＞。|  
+|加密演算法名稱|ENCRYPTION_ALGORITHM|指定用來加密目錄中敏感性參數值的加密類型。 以下是可能的值：<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (預設)|  
+|每一專案的版本數目上限|MAX_PROJECT_VERSIONS|指定目錄中所儲存的專案版本數目。 當專案版本清除作業執行時，會移除超過上限的舊專案版本。|  
 |定期清除記錄檔|OPERATION_CLEANUP_ENABLED|將屬性設為 True，指出 SQL Server Agent 作業 (作業清除) 會執行。 否則請將屬性設為 False。|  
 |保留週期 (天)|RETENTION_WINDOW|指定可允許的作業資料存在時間上限 (以天為單位)。 SQL Agent 作業 (作業清除) 會移除比指定天數還舊的資料。|  
-|每一專案的版本數目上限|MAX_PROJECT_VERSIONS|指定目錄中所儲存的專案版本數目。 當專案版本清除作業執行時，會移除超過上限的舊專案版本。|  
 
 ## <a name="back-up-restore-and-move-the-ssis-catalog"></a>備份、還原和移動 SSIS 目錄
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -413,7 +412,7 @@ ms.locfileid: "47864296"
   
     ```  
   
-3.  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [備份資料庫] 對話方塊備份 SSISDB 資料庫。 如需詳細資訊，請參閱 [如何：備份資料庫 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=231812)。  
+3.  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [備份資料庫] 對話方塊備份 SSISDB 資料庫。 如需詳細資訊，請參閱 [如何：備份資料庫 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)。  
   
 4.  執行下列動作，以產生 ##MS_SSISServerCleanupJobLogin## 的 CREATE LOGIN 指令碼。 如需詳細資訊，請參閱 [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)。  
   
@@ -437,7 +436,7 @@ ms.locfileid: "47864296"
   
 ### <a name="to-restore-the-ssis-database"></a>若要還原 SSIS 資料庫  
   
-1.  如果您要將 SSISDB 資料庫還原至從未建立過 SSISDB 目錄的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請執行 sp_configure 預存程序，藉以啟用 Common Language Runtime (CLR)。 如需詳細資訊，請參閱 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [CLR 已啟用選項](http://go.microsoft.com/fwlink/?LinkId=231855)。  
+1.  如果您要將 SSISDB 資料庫還原至從未建立過 SSISDB 目錄的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請執行 sp_configure 預存程序，藉以啟用 Common Language Runtime (CLR)。 如需詳細資訊，請參閱 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [CLR 已啟用選項](https://go.microsoft.com/fwlink/?LinkId=231855)。  
   
     ```  
     use master   
@@ -580,7 +579,7 @@ ms.locfileid: "47864296"
 ###  <a name="prereq"></a> 必要條件  
 針對 SSISDB 資料庫啟用 Always On 支援之前，請先執行下列必要條件步驟。  
   
-1.  設定 Windows 容錯移轉叢集。 如需相關指示，請參閱 [安裝適用於 Windows Server 2012 的容錯移轉叢集功能和工具](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 部落格文章。 在所有叢集節點上安裝功能和工具。  
+1.  設定 Windows 容錯移轉叢集。 如需相關指示，請參閱 [安裝適用於 Windows Server 2012 的容錯移轉叢集功能和工具](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 部落格文章。 在所有叢集節點上安裝功能和工具。  
   
 2.  在叢集的每個節點上，安裝含有 Integration Services (SSIS) 功能的 SQL Server 2016。  
   
@@ -662,8 +661,8 @@ ms.locfileid: "47864296"
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   blogs.msdn.com 上的部落格文章： [SQL Server 2012 中的 SSIS 和 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)。  
+-   blogs.msdn.com 上的部落格文章： [SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。  
   
--   blogs.msdn.com 上的部落格文章： [SSIS 目錄存取控制提示](http://go.microsoft.com/fwlink/?LinkId=246669)。  
+-   blogs.msdn.com 上的部落格文章： [SSIS 目錄存取控制提示](https://go.microsoft.com/fwlink/?LinkId=246669)。  
   
--   blogs.msdn.com 上的部落格文章 [SSIS 目錄管理物件模型初探](http://go.microsoft.com/fwlink/?LinkId=254267)。  
+-   blogs.msdn.com 上的部落格文章 [SSIS 目錄管理物件模型初探](https://go.microsoft.com/fwlink/?LinkId=254267)。  

@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0180124c5904c6ea1020ad92337a566d8418651
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96a2e1c791ba80a7aba39cd77e309228404a04a8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791476"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697388"
 ---
 # <a name="statistics"></a>Statistics
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47791476"
   
 ##  <a name="DefinitionQOStatistics"></a> 元件和概念  
 ### <a name="statistics"></a>Statistics  
- 查詢最佳化的統計資料是指包含資料表或索引檢視表之一或多個資料行中值分佈相關統計資料的二進位大型物件 (BLOB)。 查詢最佳化工具會使用這些統計資料來估計查詢結果中的*基數*或資料列數目。 這些*基數估計值*可讓查詢最佳化工具建立高品質的查詢計劃。 例如，根據您的述詞而定，查詢最佳化工具可使用基數估計值來選擇索引搜尋運算子，而非需要更大量資源的索引掃描運算子，而且這樣做會改善查詢效能。  
+ 查詢最佳化的統計資料是指包含資料表或索引檢視表之一或多個資料行中值分佈相關統計資料的二進位大型物件 (BLOB)。 查詢最佳化工具會使用這些統計資料來估計查詢結果中的*基數*或資料列數目。 這些*基數估計值*可讓查詢最佳化工具建立高品質的查詢計劃。 例如，根據您的述詞而定，查詢最佳化工具可使用基數估計值來選擇索引搜尋運算子，而非需要更大量資源的索引掃描運算子 (如果這樣做會改善查詢效能)。  
   
  每個統計資料物件都是針對一或多個資料表資料行的清單所建立，其中包含「長條圖」以顯示第一個資料行中的值分佈狀態。 多個資料行的統計資料物件也會儲存這些資料行之間值相互關聯的相關統計資料。 這些相互關聯統計資料 (或稱「密度」) 衍生自資料行值之相異資料列的數目。 
 
@@ -45,7 +45,7 @@ ms.locfileid: "47791476"
 「長條圖」可測量資料集中每一個相異值的發生頻率。 查詢最佳化工具會計算有關統計資料物件之第一個索引鍵資料行中資料行值的長條圖，以統計方式取樣資料列或執行資料表或檢視表中所有資料列的完整掃描來選取資料行值。 如果長條圖是從一組取樣的資料列所建立，資料列數和相異值數的儲存總計會是預估值，而且不需要為整數。
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的長條圖只會針對單一資料行建置；也就是統計資料物件之索引鍵資料行集合中的第一個資料行。
+> <a name="frequency"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的長條圖只會針對單一資料行建置；也就是統計資料物件的索引鍵資料行集合中第一個資料行。
   
 若要建立長條圖，查詢最佳化工具會排序資料行值、計算符合每一個相異資料行值的值數目，然後將資料行值彙總成最多 200 個連續長條圖步驟。 每一個長條圖步驟都包含某個範圍的資料行值，後面緊接著上限資料行值。 此範圍包括界限值之間的所有可能資料行值，但是不包括界限值本身。 最低的已排序資料行值就是第一個長條圖步驟的上限值。
 
@@ -70,12 +70,12 @@ ms.locfileid: "47791476"
 -   虛線代表用來預估範圍內相異值總數的取樣值 (*distinct_range_rows*) 以及範圍內的值總數 (*range_rows*)。 查詢最佳化工具會使用 *range_rows* 和 *distinct_range_rows* 來計算 *average_range_rows*，而且不會儲存取樣值。   
   
 #### <a name="density"></a>密度向量  
-**密度**是給定資料行或組合資料行中的重複項目數量資訊，其計算方式為 1/(相異值數目)。 查詢最佳化工具會使用密度來增強查詢的基數預估，這些查詢會從相同的資料表或索引檢視表傳回多個資料行。 密度向量針對統計資料物件中資料行的每個前置詞各包含一個密度。 
+**密度**是給定資料行或組合資料行中的重複項目數量資訊，其計算方式為 1/(相異值數目)。 查詢最佳化工具會使用密度來增強查詢的基數預估，這些查詢會從相同的資料表或索引檢視表傳回多個資料行。 當密度降低時，值的選擇性會增加。 例如，在表示車種的資料表中，許多車種的製造商都是相同的，但每輛車都有一個唯一的汽車識別號碼。 由於 VIN 的密度比製造商低，因此 VIN 的索引會比製造商的索引更具選擇性。 
 
 > [!NOTE]
 > 「頻率」是統計資料物件第一個索引鍵資料行中每一個相異值的發生次數資訊，其計算方式為資料列計數乘以密度。 如果資料行具有唯一值，則其最大頻率為 1。
 
-例如，如果統計資料物件具有 `CustomerId`、`ItemId` 和 `Price` 等索引鍵資料行，就會根據下列每一個資料行前置詞來計算密度。
+密度向量針對統計資料物件中資料行的每個前置詞各包含一個密度。 例如，如果統計資料物件具有 `CustomerId`、`ItemId` 和 `Price` 等索引鍵資料行，就會根據下列每一個資料行前置詞來計算密度。
   
 |資料行前置詞|計算密度的依據|  
 |---|---|
@@ -112,7 +112,7 @@ ORDER BY s.name;
     * 若資料表基數在評估統計資料時為 500 或更小的數值，將會在每 500 次修改之後更新。
     * 若資料表基數在評估統計資料時為超過 500 的數值，將會在每 500 + 20% 的修改次數之後更新。
 
-* 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始並 在[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 之下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用降低、動態的統計資料更新臨界值。此臨界值會根據資料表中的資料列數目來做出調整。 這是以 1000 乘以目前資料表基數的平方根來計算。 例如，如果您的資料表包含 2 百萬個資料列，則計算結果是 sqrt (1000 * 2000000) = 44721.359。 透過這項變更，大型資料表上的統計資料會經常更新。 不過，如果資料庫的相容性層級低於 130，便會套用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 臨界值。  
+* 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始並 在[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 之下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用降低、動態的統計資料更新臨界值。此臨界值會根據資料表中的資料列數目來做出調整。 這是以 1000 乘以目前資料表基數的平方根來計算。 例如，如果您的資料表包含 2 百萬個資料列，則計算結果是 sqrt (1000 * 2000000) = 44721.359。 透過這項變更，大型資料表上的統計資料會經常更新。 不過，如果資料庫的相容性層級低於 130，便會套用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 臨界值。  
 
 > [!IMPORTANT]
 > 在[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 低於 130 之下，從 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 開始至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，或是從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，使用[追蹤旗標 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會使用降低、動態的統計資料更新臨界值。此臨界值會根據資料表中的資料列數目來做出調整。
@@ -121,7 +121,7 @@ ORDER BY s.name;
   
 AUTO_UPDATE_STATISTICS 選項會套用至針對索引所建立的統計資料物件、查詢述詞中的單一資料行，以及使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 陳述式所建立的統計資料。 此外，這個選項也會套用至篩選的統計資料。  
  
-如需控制 AUTO_UPDATE_STATISTICS 的詳細資訊，請參閱 [控制 SQL Server 中的 Autostat (AUTO_UPDATE_STATISTICS) 行為](http://support.microsoft.com/help/2754171) \(機器翻譯\)。
+如需控制 AUTO_UPDATE_STATISTICS 的詳細資訊，請參閱 [控制 SQL Server 中的 Autostat (AUTO_UPDATE_STATISTICS) 行為](https://support.microsoft.com/help/2754171) \(機器翻譯\)。
   
 #### <a name="autoupdatestatisticsasync"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  非同步統計資料更新選項 [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) 會決定查詢最佳化工具要使用同步或非同步統計資料更新。 根據預設，非同步統計資料更新選項會處於關閉狀態，而查詢最佳化工具會以同步方式更新統計資料。 AUTO_UPDATE_STATISTICS_ASYNC 選項會套用至針對索引所建立的統計資料物件、查詢述詞中的單一資料行，以及使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 陳述式所建立的統計資料。  
@@ -273,7 +273,7 @@ GO
 
 ### <a name="automatic-index-and-statistics-management"></a>自動索引與統計資料管理
 
-利用[自適性索引重組](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)等解決方案，為一或多個資料庫自動管理索引重組以及統計資料更新。 這項程序會根據索引分散程度與其他參數，自動選擇要進行重建或是重新組織索引，並以線性閾值更新統計資料。
+利用[自適性索引重組](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)等解決方案，為一或多個資料庫自動管理索引重組以及統計資料更新。 這項程序會根據索引分散程度與其他參數，自動選擇要進行重建或是重新組織索引，並以線性閾值更新統計資料。
   
 ##  <a name="DesignStatistics"></a> 有效使用統計資料的查詢  
  某些查詢實作 (例如查詢述詞中的區域變數和複雜運算式) 可能會導致次佳的查詢計劃。 不過，遵循查詢設計指導方針來有效使用統計資料有助於避免這種情況發生。 如需查詢述詞的詳細資訊，請參閱[搜尋條件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)。  
@@ -383,10 +383,10 @@ GO
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [建立篩選的索引](../../relational-databases/indexes/create-filtered-indexes.md)   
- [控制 SQL Server 中的 Autostat (AUTO_UPDATE_STATISTICS) 行為](http://support.microsoft.com/help/2754171)  \(機器翻譯\)  
+ [控制 SQL Server 中的 Autostat (AUTO_UPDATE_STATISTICS) 行為](https://support.microsoft.com/help/2754171)  \(機器翻譯\)  
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)   
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)    
- [自適性索引重組](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   
+ [自適性索引重組](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   

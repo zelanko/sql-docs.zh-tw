@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5e0f3461cee55781379fc598bbc6c61e51f5704
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7db1fd9af6a36f0804819c389b06778ae04d2ebf
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021172"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813761"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 行動報表：完整逐步解說
 逐步解說在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 入口網站透過 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 建立適用於任何螢幕大小的行動報表，並在 Power BI 行動應用程式中檢視它們。
@@ -37,7 +37,7 @@ ms.locfileid: "50021172"
 *  或者：World Wide Importers 範例資料庫，可從 [Microsoft SQL Server 範例](../../sample/microsoft-sql-server-samples.md)頁面取得。
 * 若要檢視結果︰ 
   *   [註冊 Power BI 服務](https://go.microsoft.com/fwlink/?LinkID=513879) ，並且
-  *  [下載 Power BI 行動應用程式](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) 到您的行動裝置：iOS、Android 手機或 Windows 10 裝置。  
+  *  [下載 Power BI 行動應用程式](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) 到您的行動裝置：iOS、Android 手機或 Windows 10 裝置。  
 
   
 ## <a name="create-a-shared-data-source"></a>建立共用資料來源  
@@ -76,7 +76,7 @@ ms.locfileid: "50021172"
    
 4. 在 [名稱] 欄位中，以下列格式輸入您儲存資料來源的伺服器名稱：   
    
-   名稱： http://*localhost*/ReportServer  
+   名稱： https://*localhost*/ReportServer  
    類型的項目：資料來源 (*.rsds)  
    
 5. 按一下 [開啟]，並巡覽至您在該伺服器上建立的資料來源。  
@@ -260,7 +260,7 @@ ms.locfileid: "50021172"
 若要檢視您的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 報表，您必須先︰
 
 *  [註冊 Power BI 服務](https://go.microsoft.com/fwlink/?LinkID=513879)(如果您還沒有帳戶)。
-*  [下載 Power BI 行動應用程式](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) 到您的行動裝置。  
+*  [下載 Power BI 行動應用程式](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) 到您的行動裝置。  
 
 ### <a name="view-your-mobile-report"></a>檢視您的行動報表
   

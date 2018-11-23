@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c7c7dd4137517f9ad4ec97dda1b0fa948f40feb4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9bb61746e2794faa9fab5f2fbc89c42fbe9ccd5f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021892"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814331"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>入口網站 (SSRS 原生模式)
 
@@ -75,9 +75,9 @@ Reporting Services 入口網站是一種 Web 體驗，可讓您檢視報表、�
 
 2. 在網頁瀏覽器的網址列中，輸入入口網站 URL。
 
-    根據預設，URL 為 *http://[ComputerName]/reports*。
+    根據預設，URL 為 https://[電腦名稱]/reports。
 
-    報表伺服器可能會設定為使用特定的通訊埠。 例如， *http://[ComputerName]:80/reports* 或 *http://[ComputerName]:8080/reports*。
+    報表伺服器可能會設定為使用特定的通訊埠。 例如， https://[電腦名稱]:80/reports 或 https://[電腦名稱]:8080/reports。
 
 ## <a name="grouping-by-categories"></a>依類別分組
 

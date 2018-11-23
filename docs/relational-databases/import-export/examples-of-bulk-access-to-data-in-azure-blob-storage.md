@@ -5,8 +5,7 @@ ms.date: 01/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], from Azure blob storage
@@ -18,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b941c3348f487c501650b903d1413c540c6a9eb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bbc70dbfec864052c4c877794561c8692cdfcfb
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791742"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560405"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>大量存取 Azure Blob 儲存體資料的範例
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +30,11 @@ ms.locfileid: "47791742"
 `BULK INSERT` 和 `OPENROWSET` 陳述式可以直接存取 Azure Blob 儲存體中的檔案。 下列範例會使用 CSV (逗號分隔值) 檔案 (名為 `inv-2017-01-19.csv`)、容器 (名為 `Week3`) 中所儲存或儲存體帳戶 (名為 `newinvoices`) 中所儲存的資料。 您可以使用格式檔案的路徑，但該檔案未包括在這些範例中。 
 
 從 SQL Server 大量存取 Azure Blob 儲存體，需要至少 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
+
+>  [!IMPORTANT]
+>  容器和 Blob 上檔案的所有路徑都是 `CASE SENSITIVE`。 如果不正確，可能會傳回錯誤，例如「無法大量載入。 沒有檔案 "file.csv"，或您不具檔案存取權限。」
+。
+
 
 ## <a name="create-the-credential"></a>建立認證   
    

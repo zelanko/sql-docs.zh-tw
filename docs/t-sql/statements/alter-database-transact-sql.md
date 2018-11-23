@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ece0ca36756e233412d2befcc7246504d1c2aa23
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 41d256aa69778804f637b2e380383d29552efc98
+ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252135"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51571467"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -143,6 +143,9 @@ MODIFY NAME **=***new_database_name*
   
 COLLATE *collation_name*  
 指定資料庫的定序。 *collation_name* 可以是 Windows 定序名稱或 SQL 定序名稱。 若未指定，就會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的定序指派給資料庫。  
+
+> [!NOTE]
+> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中建立資料庫之後，即無法變更定序。
   
 使用預設定序除外的方式建立資料庫時，資料庫中的資料一律會接受指定的定序。 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建立自主資料庫時，會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設定序 (**Latin1_General_100_CI_AS_WS_KS_SC**) 來維護內部的目錄資訊。  
   
