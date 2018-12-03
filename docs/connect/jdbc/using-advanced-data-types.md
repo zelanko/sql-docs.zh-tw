@@ -11,22 +11,22 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ebdaa05923df2437c0d8d5bafc2bfa86b0a76de9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b794a8c93fd7a9c83e783a04999cbeb8a9e58f48
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750106"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510497"
 ---
 # <a name="using-advanced-data-types"></a>使用進階資料類型
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會使用 JDBC 進階資料類型，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型轉換為 Java 程式設計語言可以理解的格式。  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會使用 JDBC 進階資料類型，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型轉換為 Java 程式語言可以理解的格式。  
   
 ## <a name="remarks"></a>Remarks
 
-下表列出進階 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、JDBC 與 Java 程式設計語言資料類型之間的預設對應。  
+下表列出進階 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、JDBC 和 Java 程式語言資料類型之間的預設對應。  
   
 |SQL Server 類型|JDBC 類型 (java.sql.Types)|Java 語言類型|  
 |----------------------|-----------------------------------|-------------------------|  
@@ -162,9 +162,9 @@ JDBC 驅動程式中 **xml** 資料類型的實作提供下列項目的支援：
   
 ## <a name="user-defined-data-type"></a>使用者定義資料類型  
 
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中導入使用者定義類型 (UDT)，可讓您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中儲存物件和自訂資料結構，因而擴充 SQL 類型系統的功能。 UDT 可以包含多個資料類型並可以具有行為，使其有別於由單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型組成的傳統別名資料類型。 使用能產生可驗證程式碼並由 Microsoft .NET Common Language Runtime (CLR) 支援的任何語言，即可定義 UDT。 這包括 Microsoft Visual C# 和 Visual Basic .NET。 資料會公開為 .NET Framework 類別或結構的欄位和屬性，而行為則是由類別或結構的方法所定義。  
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中導入使用者自訂類型 (UDT)，可讓您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中儲存物件和自訂資料結構，因而擴充了 SQL 類型系統的功能。 UDT 可以包含多個資料類型並可以具有行為，使其有別於由單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型組成的傳統別名資料類型。 使用能產生可驗證程式碼並由 Microsoft .NET Common Language Runtime (CLR) 支援的任何語言，即可定義 UDT。 這包括 Microsoft Visual C# 和 Visual Basic .NET。 資料會公開為 .NET Framework 類別或結構的欄位和屬性，而行為則是由類別或結構的方法所定義。  
   
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，UDT 可以用作資料表的資料行定義、[!INCLUDE[tsql](../../includes/tsql-md.md)] 批次中的變數，或是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式或預存程序的引數。  
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，UDT 可以用做資料表的資料行定義、[!INCLUDE[tsql](../../includes/tsql-md.md)] 批次中的變數，或是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數或預存程序的引數。  
   
 如需使用者定義資料類型的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用和修改使用者定義類型的執行個體＞。  
   

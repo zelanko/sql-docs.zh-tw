@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 6f51baee10a0f9b9cbb3595be816b2928f5bc0b0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a0c917c6f7200db2b5a04b47185ba6b61f59ad34
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604711"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506833"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>搭配使用 Always Encrypted 與 ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -365,9 +365,9 @@ Azure 金鑰保存庫是存放和管理永遠加密資料行主要金鑰的方�
 
 此驅動程式支援使用下列認證類型的 Azure Key Vault 進行驗證：
 
-- 使用者名稱/密碼 – 使用此方法，認證是在 Azure Active Directory 使用者和其密碼的名稱。
+- 使用者名稱/密碼-使用此方法，認證是在 Azure Active Directory 使用者和其密碼的名稱。
 
-- 用戶端識別碼/密碼 – 使用此方法，認證是應用程式用戶端識別碼和應用程式祕密。
+- 用戶端識別碼/密碼-使用此方法，認證是應用程式用戶端識別碼和應用程式祕密。
 
 若要允許使用 AKV 中儲存的資料行加密的 Cmk 驅動程式，請使用下列的只有連接字串關鍵字：
 

@@ -1,7 +1,7 @@
 ---
 title: SQL 工具和公用程式 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲 |Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 0a0a46fb27c8695ead3cc68e17677ccdcf7cb6fc
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 84cebceddc18ee3d288226ebd00bc86ea25ac926
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292974"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190988"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL 工具和公用程式 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "51292974"
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage**是命令列公用程式會自動執行數個資料庫開發工作。 macOS 和 Linux 版本的 sqlpackage 目前目前為預覽版。 | Windows、 macOS 和 Linux|
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell**提供 cmdlet 讓您使用 SQL| Windows、 macOS 和 Linux|
 | [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd**公用程式可讓您輸入 TRANSACT-SQL 陳述式、 系統程序和指令碼檔案，在命令提示字元。 | Windows、 macOS 和 Linux|
-|[**bcp**](../2014/tools/bcp-utility.md)|**b**ulk **c**opy **p**rogram 公用程式 (**bcp**) 會以使用者指定格式，在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體與資料檔案之間大量複製資料。|Windows、 macOS 和 Linux|
+|[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|**b**ulk **c**opy **p**rogram 公用程式 (**bcp**) 會以使用者指定格式，在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體與資料檔案之間大量複製資料。|Windows、 macOS 和 Linux|
 |[**mssql scripter （預覽）**](https://github.com/Microsoft/mssql-scripter)|**mssql scripter**是一種多平台命令列體驗來編寫指令碼 SQL Server 資料庫|Windows、 macOS 和 Linux|
 |[**mssql conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql conf**設定在 Linux 上執行的 SQL Server。|Linux|
 

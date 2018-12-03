@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 29adbfcbce3701a853f18f7f1b3079bc0bb6f8ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 531286af24740e37e125708a4b874b6aba27c3dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695676"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403423"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>搭配 PHP Drivers for SQL Server 使用 Always Encrypted
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -155,7 +155,7 @@ $stmt->execute();
 下列範例會示範根據加密的值，以及擷取純文字資料，從使用 SQLSRV 和 PDO_SQLSRV 驅動程式的加密資料行篩選資料。 請注意下列幾點：
  -   在 WHERE 子句中用來篩選 SSN 資料行的值，需要使用繫結參數傳遞，如此驅動程式可以清晰簡明的方式加密它，再將它傳送至伺服器。
  -   執行具有繫結參數的查詢，PHP 驅動程式除非使用者明確指定的 SQL 型別，使用 SQLSRV 驅動程式時，會自動判斷使用者的 SQL 類型。
- -   程式列印的所有值都是純文字，因為驅動程式以透明的方式解密從 SSN 和 BirthDate 資料行擷取的資料。
+ -   程式列印的所有值都是純文字格式，因為驅動程式會以清晰簡明方式來解密從 SSN 和 BirthDate 資料行擷取的資料。
  
 注意： 只有加密是具決定性，查詢就可以加密資料行上執行相等比較作業。 如需詳細資訊，請參閱[選取確定性或隨機化加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)。
 

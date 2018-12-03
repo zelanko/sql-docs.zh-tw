@@ -11,12 +11,12 @@ ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f9eded908271973415987155de5cf1efdc906db
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: HT
+ms.openlocfilehash: 4659c6571f8afbcdb757141e03df51ac54d0835e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600968"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510724"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>搭配使用 Always Encrypted 與 JDBC 驅動程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -57,7 +57,7 @@ Microsoft JDBC Driver for SQL Server 隨附於下列內建的資料行主要金�
 所有這些金鑰儲存區提供者都是以更多詳細資料，請依照下列各節中所述。 您只需要實作一個使用 Always Encrypted 的金鑰儲存區提供者。
 
 ### <a name="using-azure-key-vault-provider"></a>使用 Azure 金鑰保存庫提供者
-Azure Key Vault 是存放和管理 Always Encrypted 資料行主要金鑰的方便選項 (尤其是當應用程式裝載在 Azure 時)。 Microsoft JDBC Driver for SQL Server 包含的內建提供者，SQLServerColumnEncryptionAzureKeyVaultProvider，使金鑰儲存在 Azure 金鑰保存庫中的應用程式。 此提供者的名稱是 AZURE_KEY_VAULT。 若要使用 Azure Key Vault 存放區提供者，應用程式開發人員必須在 Azure Key Vault 中建立保存庫和金鑰，並在 Azure Active Directory 中建立的應用程式註冊。 已註冊的應用程式必須授與取得，解密、 加密、 解除包裝金鑰、 包裝金鑰，以及確認權限定義而建立的 Always Encrypted 金鑰保存庫的存取原則中。 如需有關如何設定金鑰保存庫，並建立資料行主要金鑰的詳細資訊，請參閱 < [Azure Key Vault – 逐步解說](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)並[在 Azure Key Vault 中建立資料行主要金鑰](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)。
+Azure Key Vault 是存放和管理 Always Encrypted 資料行主要金鑰的方便選項 (尤其是當應用程式裝載在 Azure 時)。 Microsoft JDBC Driver for SQL Server 包含的內建提供者，SQLServerColumnEncryptionAzureKeyVaultProvider，使金鑰儲存在 Azure 金鑰保存庫中的應用程式。 此提供者的名稱是 AZURE_KEY_VAULT。 若要使用 Azure Key Vault 存放區提供者，應用程式開發人員必須在 Azure Key Vault 中建立保存庫和金鑰，並在 Azure Active Directory 中建立的應用程式註冊。 已註冊的應用程式必須授與取得，解密、 加密、 解除包裝金鑰、 包裝金鑰，以及確認權限定義而建立的 Always Encrypted 金鑰保存庫的存取原則中。 如需有關如何設定金鑰保存庫，並建立資料行主要金鑰的詳細資訊，請參閱 < [Azure Key Vault-逐步解說](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)並[在 Azure Key Vault 中建立資料行主要金鑰](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)。
 
 對於在此頁面上，如果您已建立 Azure Key Vault 的範例為基礎的資料行主要金鑰和使用 SQL Server Management Studio 的資料行加密金鑰，來重新建立它們的 T-SQL 指令碼可能會看起來類似此範例中使用它自己的特定**KEY_路徑**並**ENCRYPTED_VALUE**:
 
@@ -106,7 +106,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > 如何在 Maven 專案中加入這些相依性的範例，請參閱[下載 ADAL4J 和 AKV 相依性使用 Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
 ### <a name="using-windows-certificate-store-provider"></a>使用 Windows 憑證存放區提供者
-SQLServerColumnEncryptionCertificateStoreProvider 可用來將資料行主要金鑰儲存在 Windows 憑證存放區。 若要建立的資料行主要金鑰和資料行加密金鑰定義在資料庫中，使用 [SQL Server Management Studio (SSMS) 永遠加密精靈] 或其他支援的工具。 相同的精靈可用來產生自我簽署的憑證可用來當做資料行主要金鑰的永遠加密資料的 Windows 憑證存放區。 如需有關資料行主要金鑰和資料行加密金鑰的 T-SQL 語法的詳細資訊，請參閱 < [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)並[建立的資料行加密金鑰](../../t-sql/statements/create-column-encryption-key-transact-sql.md)分別。
+SQLServerColumnEncryptionCertificateStoreProvider 可用來將資料行主要金鑰儲存在 Windows 憑證存放區。 若要建立的資料行主要金鑰和資料行加密金鑰定義在資料庫中，使用 [SQL Server Management Studio (SSMS) 永遠加密精靈] 或其他支援的工具。 相同的精靈可用來產生自我簽署的憑證可用來當做資料行主要金鑰的永遠加密資料的 Windows 憑證存放區。 如需有關資料行主要金鑰和資料行加密金鑰的 T-SQL 語法的詳細資訊，請參閱 < [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)並[CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)分別。
 
 SQLServerColumnEncryptionCertificateStoreProvider 的名稱是 MSSQL_CERTIFICATE_STORE，而且可以進行查詢 getName() API 提供者物件。 它會自動註冊驅動程式，並可順暢地不搭配任何應用程式變更。
 
@@ -260,7 +260,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerException;
  */
 public class AlwaysEncrypted {
     // Alias of the key stored in the keystore.
-    private static String keyAlias = "<proide key alias>";
+    private static String keyAlias = "<provide key alias>";
 
     // Name by which the column master key will be known in the database.
     private static String columnMasterKeyName = "MyCMK";

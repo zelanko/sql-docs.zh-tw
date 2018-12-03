@@ -31,12 +31,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 100959bccc140374f2cc954c6d2fd3624fe93fea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 729d2f7288e6156cdd0688f6eed4b3e5acada5ff
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672276"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391455"
 ---
 # <a name="using-xml-data-types"></a>使用 XML 資料類型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "47672276"
   
  <sup>1</sup>如果使用 **ICommandWithParameters::SetParameterInfo** 指定 DBTYPE_XML 以外的伺服器類型，而且存取子類型為 DBTYPE_XML，則在執行陳述式 (DB_E_ERRORSOCCURRED，參數狀態為 DBSTATUS_E_BADACCESSOR) 時會發生錯誤；否則，資料會傳送到伺服器，但是伺服器會傳回錯誤，指出沒有從 XML 隱含地轉換為參數的資料類型。  
   
- <sup>2</sup> 超出此文章的範圍。  
+ <sup>2</sup> 超出本文的範圍。  
   
  <sup>3</sup>格式為 UTF-16，無位元組順序標示 (BOM)，無編碼規格，無 Null 結束。  
   

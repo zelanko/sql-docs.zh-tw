@@ -11,12 +11,12 @@ ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d009a20b4e3a432cdea72a881024ca3aead1bc09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70a19f97f3949fd43b0fba86b876f0da606a114b
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658796"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52159106"
 ---
 # <a name="building-the-connection-url"></a>建立連接 URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -74,7 +74,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>具名和多個 SQL Server 執行個體  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許在每部伺服器上安裝多個資料庫執行個體。 並以特定的名稱識別每個執行個體。 若要連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的具名執行個體，您可以指定具名執行個體的連接埠號碼 (偏好選項)，或者將執行個體名稱指定為 JDBC URL 屬性或 **datasource** 屬性。 如果沒有指定執行個體名稱或通訊埠號碼屬性，則會建立預設執行個體的連接。 請參閱下列範例：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許在每個伺服器上安裝多個資料庫執行個體。 並以特定的名稱識別每個執行個體。 若要連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的具名執行個體，您可以指定具名執行個體的連接埠號碼 (偏好選項)，或者將執行個體名稱指定為 JDBC URL 屬性或 **datasource** 屬性。 如果沒有指定執行個體名稱或通訊埠號碼屬性，則會建立預設執行個體的連接。 請參閱下列範例：  
   
  若要使用通訊埠號碼，請執行下列：  
   

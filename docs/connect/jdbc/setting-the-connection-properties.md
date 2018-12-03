@@ -11,12 +11,12 @@ ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 273a8d6893caf5552dc2945561e51cf4c5170f2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e43274ff06c741252f5bd4926a8ff28ef82e1a9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783886"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412195"
 ---
 # <a name="setting-the-connection-properties"></a>設定連接屬性
 
@@ -65,8 +65,8 @@ ms.locfileid: "47783886"
 | fipsProvider<br/><br/>String<br/><br/>null | FIPS 的 JVM 設定提供者。 比方說，BCFIPS 或 SunPKCS11 NSS。 版本 6.4.0-移除查看詳細資料[此處](https://github.com/Microsoft/mssql-jdbc/pull/460)。 |
 | gsscredential<br/><br/>org.ietf.jgss.GSSCredential<br/><br/>null | 從 Microsoft JDBC Driver 6.2 for SQL Server，可以在這個屬性中傳遞使用者認證來進行 Kerberos 限制委派。 <br/><br/>這必須搭配**integratedSecurity**作為 **，則為 true**並**JavaKerberos** **authenticationscheme**。 |
 | hostNameInCertificate<br/><br/>String<br/><br/>null | 用於驗證 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSL 憑證的主機名稱。<br/><br/> 如果未指定 hostNameInCertificate 屬性或設定為 null，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 將會在連線 URL 上使用 **serverName** 屬性值，當作驗證 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSL 憑證的主機名稱。<br/><br/> **注意︰** 這個屬性可搭配**加密**/**驗證**屬性而**trustServerCertificate**屬性。 只有連線會使用 Secure Sockets Layer (SSL) 加密，這個屬性會影響憑證驗證，而**trustServerCertificate**設為"false"。 確定傳遞給 **hostNameInCertificate** 的值完全符合伺服器憑證中主體替代名稱 (SAN) 內的一般名稱 (CN) 或 DNS 名稱，SSL 連線才會成功。 如需詳細資訊，請參閱 <<c0> [ 了解 SSL 支援](../../connect/jdbc/understanding-ssl-support.md)。 |
-| INSTANCENAME<br/><br/>String<br/>[&lt;=128 char]<br/><br/>null | 要連線的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。 如果未指定，將會連接到預設執行個體。 如果已指定 instanceName 與通訊埠，請參閱通訊埠的注意事項。<br/><br/> 如果您在 **Server** 連線屬性中指定虛擬網路名稱，則不能使用 **instanceName** 連線屬性。 請參閱[高可用性、 災害復原的 JDBC 驅動程式支援](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)如需詳細資訊。 |
-| integratedSecurity<br/><br/>boolean<br/>["true"&#124;"false"]<br/><br/>false | 設定為"true"，表示 Windows 認證由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows 作業系統上。 若為 "true"，JDBC 驅動程式會搜尋本機電腦認證快取，以取得電腦上已提供的認證或網路登入。<br/><br/> 設為 「 true 」 (具有**authenticationscheme = JavaKerberos**)，以表示 Kerberos 認證由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需有關 Kerberos 驗證的詳細資訊，請參閱 <<c0> [ 使用 Kerberos 整合式驗證來連接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。 <br/><br/> 若為 "false"，必須提供使用者名稱及密碼。 |
+| INSTANCENAME<br/><br/>String<br/>[&lt;=128 char]<br/><br/>null | 要連接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。 如果未指定，將會連接到預設執行個體。 如果已指定 instanceName 與通訊埠，請參閱通訊埠的注意事項。<br/><br/> 如果您在 **Server** 連線屬性中指定虛擬網路名稱，則不能使用 **instanceName** 連線屬性。 請參閱[高可用性、 災害復原的 JDBC 驅動程式支援](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)如需詳細資訊。 |
+| integratedSecurity<br/><br/>boolean<br/>["true"&#124;"false"]<br/><br/>false | 設定為"true"，表示 Windows 認證由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows 作業系統上。 若為 "true"，JDBC 驅動程式會搜尋本機電腦認證快取，以取得電腦上已提供的認證或網路登入。<br/><br/> 設為 「 true 」 (具有**authenticationscheme = JavaKerberos**)，以表示 Kerberos 認證由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱[使用 Kerberos 整合式驗證連接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。 <br/><br/> 若為 "false"，必須提供使用者名稱及密碼。 |
 | jaasConfigurationName<br/><br/>String<br/><br/>SQLJDBCDriver | 從 Microsoft JDBC Driver 6.2 for SQL Server，SQL Server 的每個連線可以有它自己 JAAS 登入組態檔來建立 Kerberos 連接。 這個屬性可以傳遞登入組態檔的名稱。 <br/> 根據預設，驅動程式設定屬性`useDefaultCcache = true`IBM Jvm 的和`useTicketCache = true`如其他的 Jvm。 |
 | keyStoreAuthentication<br/><br/>String<br/><br/>null | 從 Microsoft JDBC Driver 6.0 for SQL Server，此屬性會識別要順暢地使用 永遠加密的連接設定的金鑰存放區，並判斷用來驗證的金鑰存放區的驗證機制。 Microsoft JDBC Driver 6.0 for SQL Server 支援設定啟動 Java 金鑰存放區順暢地使用您要設定這個屬性 」**keyStoreAuthentication = JavaKeyStorePassword**"。 請注意，若要使用這個屬性，您也需要設定**keyStoreLocation**並**keyStoreSecret** Java 金鑰存放區的屬性。 <br/><br/>如需詳細資訊，請瀏覽[搭配 JDBC 驅動程式使用 Always Encrypted](https://msdn.microsoft.com/library/mt591987%28v=sql.110%29.aspx?f=255&MSPPError=-2147217396)。 |
 | keyStoreLocation<br/><br/>String<br/><br/>null | 當**keyStoreAuthentication = JavaKeyStorePassword**，則**keyStoreLocation**屬性會識別儲存資料行主要金鑰，以搭配 Always Encrypted 的 Java 金鑰儲存區檔案的路徑資料。 請注意，路徑必須包含的金鑰儲存區檔案名稱。<br/><br/>如需詳細資訊，請瀏覽[搭配 JDBC 驅動程式使用 Always Encrypted](https://msdn.microsoft.com/library/mt591987%28v=sql.110%29.aspx?f=255&MSPPError=-2147217396)。 |
@@ -104,7 +104,7 @@ ms.locfileid: "47783886"
 | &nbsp; | &nbsp; |
 
 > [!NOTE]  
-> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會針對連線屬性採用伺服器預設值，但是 ANSI_DEFAULTS 和 IMPLICIT_TRANSACTIONS 除外。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會自動將 ANSI_DEFAULTS 設定為 ON，並將 IMPLICIT_TRANSACTIONS 設定為 OFF。
+> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會針對連接屬性採用伺服器預設值，但是 ANSI_DEFAULTS 和 IMPLICIT_TRANSACTIONS 除外。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會自動將 ANSI_DEFAULTS 設定為 ON，並將 IMPLICIT_TRANSACTIONS 設定為 OFF。
 
 > [!Important]
 > 如果驗證已設為 ActiveDirectoryPassword，必須在 classpath 中包含下列的程式庫： [azure active directory-程式庫-針對-java](https://github.com/AzureAD/azure-activedirectory-library-for-java)。 它可以在找到[Maven 儲存機制](https://mvnrepository.com/artifact/com.microsoft.azure/adal4j)。 若要下載的程式庫和其相依性最簡單的方式使用 Maven: 

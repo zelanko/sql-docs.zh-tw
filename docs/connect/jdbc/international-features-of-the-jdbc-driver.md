@@ -11,12 +11,12 @@ ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 321176cae5783968826f3094f63a5c6e30a1d3e9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 45ad47f53b36a54843aacb985e3d9c3db3d55d01
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601968"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398331"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC Driver 的國際功能
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

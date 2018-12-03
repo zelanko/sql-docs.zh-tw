@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: c146426a9c325eec721e3289d711d0a00a632e2c
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 69b3b5c9574578b286b882b7d2125b0bb984759b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050850"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413738"
 ---
 # <a name="sqlpackage-release-notes"></a>sqlpackage 版本資訊
 
@@ -76,20 +76,22 @@ ms.locfileid: "50050850"
 - 新增 /DiagnosticsFile:"C:\Temp\sqlpackage.log 」 命令列參數來指定要儲存診斷資訊的檔案路徑。
 - 已新增的 /Diagnostics 命令列參數，以記錄至主控台的診斷資訊。
 
-## <a name="sqlpackage-on-macos-and-linux-001-preview"></a>在 macOS 和 Linux 0.0.1 （預覽） 上的 sqlpackage
+## <a name="sqlpackage-on-macos-and-linux-net-core-preview"></a>在 macOS 和 Linux 的.NET Core （預覽） 上的 sqlpackage
 
-發行日期：2018 年 5 月 9 日  
-組建：15.0.4057.1
+發行日期：2018 年 11 月 15 日  
+建置
 
-此版本包含.NET Core 2.0 為目標的 sqlpackage 的跨平台預覽組建，並可在 macOS 和 Linux 上執行。 
+此版本包含.NET Core 2.1 中為目標的 sqlpackage 的跨平台預覽組建，並可在 macOS 和 Linux 上執行。 
+
+版本包含下列修正：
+
+- 移至.NET Core 2.1 
+- CLR UDT 類型，包括 SQL CLR UDT 類型的支援： SqlGeography，SqlGeometry，& SqlHierarchyId。
 
 此版本是早期預覽，具有下列已知問題：
 
 - /P:CommandTimeout 參數是硬式編碼為 120。
 - 不支援建置和部署參與者。
-  - 移至.NET Core 2.1 受到 System.ComponentModel.Composition.dll 之後，將會修正。
-  - 需要處理區分大小寫的路徑。
-- 不支援 SQL CLR UDT 類型，包括 SQL Server CLR UDT 類型： SqlGeography，SqlGeometry，& SqlHierarchyId。
 - 不支援使用 json 資料序列化的舊版.dacpac 及.bacpac 檔案。
 - 由於與區分大小寫的檔案系統的問題，可能無法解析參考的.dacpacs (例如 master.dacpac)。
   - 因應措施是改為大寫的參考檔案 (例如 MASTER。BACPAC)。

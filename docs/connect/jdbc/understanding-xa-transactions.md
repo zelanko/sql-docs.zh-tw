@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66f12f33e7b6eaac901ca29961465be71e7996e3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 8231b574516c11995dc5f91e5cf59fcdcfb6dc04
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605648"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393832"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 交易
 

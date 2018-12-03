@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 322a9ce1992bb2b4d0215cfefa747ea56e68472f
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: e6585c78b26199c7ae5194e37d152db91aab1224
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050920"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396312"
 ---
 # <a name="download-and-install-sqlpackage"></a>下載並安裝 sqlpackage
 
@@ -26,8 +26,8 @@ Windows、 macOS 和 Linux 上，執行 sqlpackage。
 |平台|下載|發行日期|Version|建置
 |:---|:---|:---|:---|:---|
 |Windows|[MSI 安裝程式](https://go.microsoft.com/fwlink/?linkid=2033947)|2018 年 10 月 24日日|18.0|15.0.4200.1|
-|macOS (預覽)|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=873927)|2018 年 5 月 9 日 |0.0.1|15.0.4057.1|
-|Linux (預覽)|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=873926)|2018 年 5 月 9 日 |0.0.1|15.0.4057.1|
+|macOS 的.NET Core （預覽）|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2044514)|2017 年 11 月 15 日 | - |13.0.0.0|
+|Linux 的.NET Core （預覽）|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2044263)|2017 年 11 月 15 日 | - |13.0.0.0|
 
 如需最新版本的詳細資訊，請參閱[版本資訊](sqlpackage-release-notes.md)。
 
@@ -42,7 +42,7 @@ Windows、 macOS 和 Linux 上，執行 sqlpackage。
 
 ## <a name="get-sqlpackage-preview-for-macos"></a>取得適用於 macOS 的 sqlpackage （預覽）
 
-1. 下載[適用於 macOS 的 sqlpackage](https://go.microsoft.com/fwlink/?linkid=873927)。
+1. 下載[適用於 macOS 的 sqlpackage](https://go.microsoft.com/fwlink/?linkid=2044514)。
 2. 若要將檔案解壓縮，並啟動 sqlpackage，開啟新的終端機視窗並輸入下列命令：
 
    **.zip 安裝：**
@@ -57,7 +57,7 @@ Windows、 macOS 和 Linux 上，執行 sqlpackage。
 
 ## <a name="get-sqlpackage-preview-for-linux"></a>取得適用於 Linux 的 sqlpackage （預覽）
 
-1. 下載[適用於 Linux 的 sqlpackage](https://go.microsoft.com/fwlink/?linkid=873926)使用其中一種安裝程式或.tar.gz 下載封存：
+1. 下載[適用於 Linux 的 sqlpackage](https://go.microsoft.com/fwlink/?linkid=2044263)使用其中一種安裝程式或.tar.gz 下載封存：
 2. 若要將檔案解壓縮，並啟動 sqlpackage，開啟新的終端機視窗並輸入下列命令：
 
    **.zip 安裝：**

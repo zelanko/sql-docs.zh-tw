@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:LogPool FreePool
@@ -13,12 +13,12 @@ ms.assetid: 8ffd569b-045f-4c3f-a473-4a491d6a1d80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0852e2e5a205293e8f11558cb1acda17a2ce8c3f
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 1def80d606fea6c48c7fc93b93825a3cd94aefeb
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560215"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52157756"
 ---
 # <a name="sql-server-logpool-freepool-object"></a>SQL Server, LogPool FreePool 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

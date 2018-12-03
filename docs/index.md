@@ -8,12 +8,12 @@ ms.author: barbkess
 ms.topic: hub-page
 ms.technology:
 - database-engine
-ms.openlocfilehash: 53097763daa17b78639ac93e379a95dfde4920d3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 35bfe5306daf36c5496287cd6e34849c32e7f6c7
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697846"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858733"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -149,7 +149,7 @@ ms.locfileid: "51697846"
                             <li class="fullSpan">
                                 <ul class="cardsC panelContent singlePanelContent cols cols4" style="display:flex!important;">
                                     <li>
-                                      <a href="/sql/lp/sql-server/install-sql-and-services/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/install-sql-and-services/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -168,7 +168,7 @@ ms.locfileid: "51697846"
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/business-continuity/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/business-continuity/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -187,7 +187,7 @@ ms.locfileid: "51697846"
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/secure-sql-server/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/secure-sql-server/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -206,7 +206,7 @@ ms.locfileid: "51697846"
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/manage-monitor-tune/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/manage-monitor-tune/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -225,7 +225,7 @@ ms.locfileid: "51697846"
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/load-move-data/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/load-move-data/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -244,7 +244,7 @@ ms.locfileid: "51697846"
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/database-design/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/database-design/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -263,7 +263,7 @@ ms.locfileid: "51697846"
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/query-data/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/query-data/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -282,7 +282,7 @@ ms.locfileid: "51697846"
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/sql-education-center/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/sql-education-center/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">

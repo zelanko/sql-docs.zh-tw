@@ -1,5 +1,5 @@
 ---
-title: updateAsciiStream 方法 （java.io.InputStream，int） |Microsoft Docs
+title: updateBinaryStream 方法 (java.io.InputStream, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 4e2997a0-c18e-4114-bce9-0ab4b2b9f92c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f5ce02456075e1341a73c80d70d7c6d417ec79f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a548e0b6beb1815052167d28d67d1228c0bf6dfc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684210"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517304"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream-int"></a>updateAsciiStream 方法 (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

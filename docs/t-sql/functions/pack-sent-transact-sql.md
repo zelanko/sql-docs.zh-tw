@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - number of output packets written
 - '@@PACK_SENT function'
-- packets [SQL Server], ouput
+- packets [SQL Server], output
 - networking [SQL Server], output packets
 - connections [SQL Server], packets
 - output packets written to network [SQL Server]
@@ -23,12 +23,12 @@ ms.assetid: 8a322162-24c9-48e9-bfa4-c060e4e11dba
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9542c2d646c5257d33b910eb41da06860c9aa67c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9acc45cf23878582f39fffc72a9c19ba01f9729
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683628"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321624"
 ---
 # <a name="x40x40packsent-transact-sql"></a>&#x40;&#x40;PACK_SENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47683628"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```sql
 @@PACK_SENT  
 ```  
   
@@ -52,7 +52,7 @@ ms.locfileid: "47683628"
 ## <a name="examples"></a>範例  
  下列範例會顯示 `@@PACK_SENT` 的用法。  
   
-```  
+```sql
 SELECT @@PACK_SENT AS 'Pack Sent';  
 ```  
   
