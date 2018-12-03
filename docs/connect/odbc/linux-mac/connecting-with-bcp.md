@@ -13,12 +13,12 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf2dbc66590360b5f7a06409eccff7244ba89224
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 903106b5dfc17b98aae0614bd7b168d9b3acdf11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600158"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527531"
 ---
 # <a name="connecting-with-bcp"></a>連接 bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -79,7 +79,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定空白資料行在作業過程中應保持 Null 值，而非保有插入之資料行的任何預設值。  
   
 - -l  
-指定登入逾時。 –l 選項會指定您嘗試連線到伺服器時，登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 逾時之前的秒數。 預設登入逾時是 15 秒。 登入逾時必須是介於 0 與 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內，`bcp` 就會產生錯誤訊息。 值為 0 會指定無限逾時。
+指定登入逾時。 –l 選項會指定在您嘗試連線到伺服器時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入  的逾時秒數。 預設登入逾時是 15 秒。 登入逾時必須是介於 0 與 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內，`bcp` 就會產生錯誤訊息。 值為 0 會指定無限逾時。
   
 - -L *last_row*  
 指定要從資料表匯出或從資料檔案匯入的最後一個資料列的號碼。  

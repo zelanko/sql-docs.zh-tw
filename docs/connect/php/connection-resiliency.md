@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 34d4bc2342397f5809ef16ef59ed342d6c86d421
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 6afbf85f5e141736ac4a78dc381205228bd5ddaa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460373"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527104"
 ---
 # <a name="idle-connection-resiliency"></a>閒置連線恢復功能
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "49460373"
 
 #### <a name="remarks"></a>Remarks
 
-當連線處於閒置狀態時，適用於連接恢復功能。 失敗發生時執行的交易，例如，將不會觸發重新連線嘗試 – 它們會失敗，因為預期。 下列情況下，稱為無法復原的工作階段狀態，將不會觸發重新連線嘗試：
+當連線處於閒置狀態時，適用於連接恢復功能。 失敗發生時執行的交易，例如，將不會觸發重新連線嘗試次數-它們會失敗，因為預期。 下列情況下，稱為無法復原的工作階段狀態，將不會觸發重新連線嘗試：
 
 * 暫存資料表
 * 全域和本機資料指標

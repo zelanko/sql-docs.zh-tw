@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2edaeee9d073cb0c12a509bd23e3db9edf4b3894
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9a8fa77ed1819d22eb90ea4fb0a7308122f708e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602183"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522949"
 ---
 # <a name="programming-guidelines"></a>程式設計指導方針
 
@@ -123,7 +123,7 @@ SQLWCHAR 資料必須是 UTF-16LE (Little Endian)。
 1.  您可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證和 **host,port** 建立專用管理員連接 (DAC)。 Sysadmin 角色的成員首先必須探索 DAC 通訊埠。 請參閱[適用於資料庫管理員的診斷連線](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port)來探索如何。 例如，如果 DAC 連接埠是 33000，您可透過下列方式以 `sqlcmd` 與其連線：  
 
     ```
-    sqlcmd –U <user> -P <pwd> -S <host>,33000
+    sqlcmd -U <user> -P <pwd> -S <host>,33000
     ```
 
     > [!NOTE]  

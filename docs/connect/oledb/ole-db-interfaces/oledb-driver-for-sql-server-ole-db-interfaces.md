@@ -16,19 +16,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d0086ada5f1399de191670dc415fca2e1ca00bce
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 5bf463a531bad6c7d03a4b7d6439a71539fe9df8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606938"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521466"
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>OLE DB Driver for SQL Server (OLE DB) 介面
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 會將介面公開給想要在執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之一或多部電腦上存取資料的取用者。 OLE DB Driver for SQL Server 是 OLE DB 版本 2.0 相容的提供者。  
+  OLE DB Driver for SQL Server 會將介面公開給想要在執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之一或多部電腦上存取資料的取用者。 OLE DB Driver for SQL Server 是 OLE DB 版本 2.0 相容提供者。  
   
  這個 OLE DB Driver for SQL Server 程式設計參考不會記載所有 OLE DB 介面與方法，只會記載使用 OLE DB Driver for SQL Server 時，表現為提供者特定行為的介面與方法。  
   

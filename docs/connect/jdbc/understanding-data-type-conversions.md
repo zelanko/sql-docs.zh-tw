@@ -11,12 +11,12 @@ ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e46023a364a39950a2fe82fef0cc8357bed6d601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01e3d8b002df2f939528bef8d4faa39d3a5c72f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762406"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520203"
 ---
 # <a name="understanding-data-type-conversions"></a>了解資料類型轉換
 
@@ -107,7 +107,7 @@ JDBC Driver 的 setObject 方法所支援的轉換有三種類別：
 
 - **不失真 (x)**：轉換的數值情況為，setter 類型與基礎伺服器類型相同或更小。 例如，在基礎伺服器**十進位**資料行上呼叫 setBigDecimal 時，不需要轉換。 針對數值到字元的轉換，Java **numeric** 資料類型會轉換為 **String**。 例如，以值 "53" 在 varchar(50) 資料行上呼叫 setDouble，會在該目的地資料行中產生字元值 "53"。
 
-- **轉換 (y)**：從 Java **numeric** 類型轉換到較小的基礎伺服器 **numeric** 類型。 這是一般轉換並遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 轉換慣例。 有效位數一律會截斷 (絕不進位)，而溢位則會擲出未支援的轉換錯誤。 例如，在基礎整數資料行上使用值為 "1.9999" 的 updateDecimal，會在目的地資料行中產生 "1"；但如果傳遞 "3000000000"，則驅動程式會擲回錯誤。
+- **轉換 (y)**：從 Java **numeric** 類型轉換到較小的基礎伺服器 **numeric** 類型。 這是一般轉換並遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 轉換慣例。 有效位數一律會截斷 (絕不進位)，而溢位則會擲回未支援的轉換錯誤。 例如，在基礎整數資料行上使用值為 "1.9999" 的 updateDecimal，會在目的地資料行中產生 "1"；但如果傳遞 "3000000000"，則驅動程式會擲回錯誤。
 
 - **視資料而定 (z)**：從 Java **String** 類型轉換到基礎 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型會依下列情況而定：此驅動程式將 **String** 值傳送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 視情況執行轉換。 如果 sendStringParametersAsUnicode 連線屬性設定為 true 而且基礎 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型為 **image**，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許將 **nvarchar** 轉換為 **image** 而且會擲回 SQLServerException。 如果 sendStringParametersAsUnicode 設定為 false 且基礎 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型為 **image**，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許將 **varchar** 轉換為 **image** 且不會擲回例外狀況。
 
