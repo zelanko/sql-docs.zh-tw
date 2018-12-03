@@ -11,12 +11,12 @@ ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7cecdeb5d702346110c37068a51aebd755a57411
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2e598a2b383e0580a3be7eccc460c36ec863ffb0
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601628"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616679"
 ---
 # <a name="sql-data-developer"></a>SQL 資料開發人員
 若要建立資料中心的解決方案，跨行動裝置和桌上型電腦的網頁伺服器、 企業伺服器及雲端使用 Microsoft SQL 資料平台。  

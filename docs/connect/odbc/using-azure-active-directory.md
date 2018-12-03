@@ -11,12 +11,12 @@ ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 949ae2e19279db895ca9bca1441f06c2b2d8948f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7273baec814905d86e431c5a6a8f13313b9743e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604098"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536654"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>搭配 ODBC 驅動程式使用 Azure Active Directory
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -88,13 +88,13 @@ DSN 設定和連接 Ui 的驅動程式已增強，以使用與 Azure AD 的驗�
 這些選項會對應至相同的五個用於 DSN 設定上述的 UI。
 
 ### <a name="example-connection-strings"></a>範例連接字串
-1. SQL Server 驗證 – 舊版的語法。 不驗證伺服器憑證，以及伺服器強制執行它時，才會使用加密。 連接字串中傳遞使用者名稱/密碼。
+1. SQL Server 驗證-舊版語法。 不驗證伺服器憑證，以及伺服器強制執行它時，才會使用加密。 連接字串中傳遞使用者名稱/密碼。
 `server=Server;database=Database;UID=UserName;PWD=Password;`
-2. SQL 驗證 – 新的語法。 用戶端要求加密 (預設值`Encrypt`是`true`) 和伺服器憑證取得已驗證，而不論加密設定 (除非`TrustServerCertificate`設定為`true`)。 連接字串中傳遞使用者名稱/密碼。
+2. SQL 驗證-新的語法。 用戶端要求加密 (預設值`Encrypt`是`true`) 和伺服器憑證取得已驗證，而不論加密設定 (除非`TrustServerCertificate`設定為`true`)。 連接字串中傳遞使用者名稱/密碼。
  `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=SqlPassword;`
-3. 整合式 Windows 驗證 (Kerberos Linux 和 macOS 上) 使用 SSPI （至 SQL Server 或 SQL IaaS） – 目前的語法。 不驗證伺服器憑證，除非使用加密。 
+3. 整合式 Windows 驗證 (Kerberos Linux 和 macOS 上) 使用 SSPI （至 SQL Server 或 SQL IaaS）-目前的語法。 不驗證伺服器憑證，除非使用加密。 
 `server=Server;database=Database;Trusted_Connection=yes;`
-4. (_Windows 驅動程式只_。)整合式 Windows 驗證使用 SSPI （如果目標資料庫是在 SQL Server 或 SQL IaaS） – 新的語法。 用戶端要求加密 (預設值`Encrypt`是`true`) 和伺服器憑證取得已驗證，而不論加密設定 (除非`TrustServerCertificate`設定為`true`)。 
+4. (_Windows 驅動程式只_。)整合式 Windows 驗證使用 SSPI （如果目標資料庫是在 SQL Server 或 SQL IaaS）-新的語法。 用戶端要求加密 (預設值`Encrypt`是`true`) 和伺服器憑證取得已驗證，而不論加密設定 (除非`TrustServerCertificate`設定為`true`)。 
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
 5. AAD 的使用者名稱/密碼驗證 （如果目標資料庫是 Azure SQL DB 中）。 取得驗證伺服器憑證，不論 [加密] 設定 (除非`TrustServerCertificate`設為`true`)。 連接字串中傳遞使用者名稱/密碼。 
 `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;`

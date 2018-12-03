@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 849acd4eabc86882912d72309b6507e4ba2fd21b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 124c1f9cfa058b3f59141af0a16d8db25fef700b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810766"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535124"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>OLE DB Driver for SQL Server 程式設計
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47810766"
   
  OLE DB Driver for SQL Server 提供的應用程式連接到 OLE DB 支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- OLE DB Driver for SQL Server 是 OLE DB 版本 2.0 相容的提供者。  
+ OLE DB Driver for SQL Server 是 OLE DB 版本 2.0 相容提供者。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -65,7 +65,7 @@ ms.locfileid: "47810766"
   
 -   [FILESTREAM 支援](../../oledb/features/filestream-support.md)  
   
--   [Transactions](../../oledb/ole-db-transactions/transactions.md)  
+-   [交易](../../oledb/ole-db-transactions/transactions.md)  
   
 -   [錯誤](../../oledb/ole-db-errors/errors.md)  
   

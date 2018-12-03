@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: dae35a8d8ef11619bd6a6ce43f9dc4ba7cfb73f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edd075f24e1acaef4bb83485a8b7b2faef874d06
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610186"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524479"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>將應用程式從 MDAC 更新為適用於 SQL Server 的 OLE DB 驅動程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47610186"
 
 -   OLE DB Driver for SQL Server 支援存取舊版[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫。  
 
--   OLE DB Driver for SQL Server 不包含 XML 整合。 OLE DB Driver for SQL Server 支援 SELECT... FOR XML 查詢，但不支援其他類型的 XML 功能。 不過，支援 OLE DB Driver for SQL Server **xml**中的資料類型導入[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。  
+-   OLE DB Driver for SQL Server 不包含 XML 整合。 OLE DB Driver for SQL Server 支援 SELECT...FOR XML 查詢，但不支援其他類型的 XML 功能。 不過，支援 OLE DB Driver for SQL Server **xml**中的資料類型導入[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。  
 
 -   適用於 SQL Server 的 OLE DB 驅動程式支援只利用連接字串屬性來設定用戶端網路程式庫。 如果您需要更完整的網路程式庫組態，您必須使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員。  
 

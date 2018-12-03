@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 2d16e9c805f9979a53a9e8bc8c2e265e06ccbab9
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+ms.openlocfilehash: 8d06e0f985a9e50d1eee0a7e6c96f440d8ef7dcd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629621"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528567"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -273,7 +273,7 @@ SqlPackage.exe 的匯出動作會將即時資料庫從 SQL Server 或 Azure SQL 
   
 ## <a name="import-parameters-and-properties"></a>匯入參數與屬性
 
-SqlPackage.exe 匯入動作匯入的結構描述和資料表資料從 BACPAC 套件-.bacpac 檔案-新的或空白的資料庫，在 SQL Server 或 Azure SQL Database。 在對現有資料庫進行匯入作業時，目標資料庫不能包含任何使用者定義的結構描述物件。  
+SqlPackage.exe 匯入動作匯入的結構描述和資料表的資料，從 BACPAC 套件-.bacpac 檔案-新的或空白的資料庫，在 SQL Server 或 Azure SQL Database。 在對現有資料庫進行匯入作業時，目標資料庫不能包含任何使用者定義的結構描述物件。  
   
 ### <a name="help-for-command-actions"></a>命令動作的說明
 

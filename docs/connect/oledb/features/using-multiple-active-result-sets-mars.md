@@ -18,12 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7f0c8c9d13eca087db3d7202d57c058527e2c073
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8f59034d6826bd1af3f1c48c81674dfc039b85e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610316"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545466"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>使用 Multiple Active Result Sets (MARS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -107,7 +107,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  陳述式和不可部分完成的區塊，為交錯格式所做的變更會彼此隔離。 比方說，如果一個陳述式或不可部分完成的區塊會進行一些變更，並接著就會產生另一個陳述式的執行，新的陳述式不會看到第一個陳述式所做的變更。 此外，當第一個陳述式繼續執行時，它不會看到任何其他陳述式所做的任何變更。 陳述式只會看到變更，會完成並認可之前的陳述式會啟動。  
   
- 在目前的使用者交易使用 BEGIN TRANSACTION 陳述式，就可以啟動新的使用者交易 – 這是支援只能在 interop 模式中，因此只能從 T-SQL 陳述式，呼叫 BEGIN TRANSACTION，而且未從內原生編譯預存程序。 您可以建立儲存點使用 SAVE TRANSACTION 或交易的 API 呼叫的交易。Save(save_point_name) 回復到儲存點。 這項功能只能從 T-SQL 陳述式，也會啟用，並不是從在原生編譯的預存程序。  
+ 在目前的使用者交易使用 BEGIN TRANSACTION 陳述式，就可以啟動新的使用者交易-這是支援只能在 interop 模式中，因此只能從 T-SQL 陳述式，呼叫 BEGIN TRANSACTION，而且不會從內原生編譯預存程序。 您可以建立儲存點使用 SAVE TRANSACTION 或交易的 API 呼叫的交易。Save(save_point_name) 回復到儲存點。 這項功能只能從 T-SQL 陳述式，也會啟用，並不是從在原生編譯的預存程序。  
   
  **MARS 和資料行存放區索引**  
   

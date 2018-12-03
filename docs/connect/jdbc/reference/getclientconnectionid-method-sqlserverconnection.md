@@ -11,12 +11,12 @@ ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 823411df1521292914f7b8decf0636d1e6a330e7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: eb6e81dc3968677571fea444fc83a4b999a74b5c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600728"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544375"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>getClientConnectionID 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,9 +49,9 @@ UUID id = ((ISQLServerConnection)con).getClientConnectionId();
   
 ```  
 SQLServerConnectionPoolDataSource ds = new SQLServerConnectionPoolDataSource();  
-ds.setUser("…");  
-ds.setPassword("…");  
-ds.setServerName("…");  
+ds.setUser("...");  
+ds.setPassword("...");  
+ds.setServerName("...");  
 PooledConnection pcon= ds.getPooledConnection();  
 Connection cn = pcon.getConnection();  
 UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();  
