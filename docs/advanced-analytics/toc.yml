@@ -71,7 +71,7 @@ items:
 - name: 教學課程
   href: tutorials/machine-learning-services-tutorials.md
   items:
-  - name: data
+  - name: 範例資料
     items:
     - name: 航空公司資料集
       href: tutorials/demo-data-airlinedemo-in-sql.md
@@ -84,64 +84,60 @@ items:
     items:
     - name: 訓練並使用您的第一個模型
       href: tutorials/train-score-using-python-in-tsql.md
+    - name: 使用 revoscalepy 建立 Python 模型
+      href: tutorials/use-python-revoscalepy-to-create-model.md
     - name: 了解資料庫內分析
       href: tutorials/sqldev-in-database-python-for-sql-developers.md
       items:
-      - name: 1 - 將資料視覺化
+      - name: 1 - 資料探索
         href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: 2 - 建立資料特徵
+      - name: 2 - 特徵工程
         href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: 3 - 訓練並儲存至 SQL
+      - name: 3 - 訓練及部署
         href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: 4 - 預測結果
+      - name: 4 - 預測
         href: tutorials/sqldev-py6-operationalize-the-model.md
-    - name: 使用 revoscalepy 建立模型
-      href: tutorials/use-python-revoscalepy-to-create-model.md
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
     - name: 建立資料分割型模型
       href: tutorials/r-tutorial-create-models-per-partition.md
-    - name: 了解資料庫內分析
+    - name: 適用於 SQL 開發人員的資料庫內分析
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
-      - name: 1 - 將資料視覺化
+      - name: 1 - 資料探索
         href: tutorials/sqldev-explore-and-visualize-the-data.md
-      - name: 2 - 建立資料特徵
+      - name: 2 - 特徵工程
         href: tutorials/sqldev-create-data-features-using-t-sql.md
-      - name: 3 - 訓練並儲存至 SQL
+      - name: 3 - 訓練及部署
         href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
-      - name: 4 - 預測結果
+      - name: 4 - 預測
         href: tutorials/sqldev-operationalize-the-model.md
-    - name: 資料科學端對端逐步解說
+    - name: 適用於資料科學家的資料庫內分析
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
       items:
-      - name: 準備資料
-        href: tutorials/walkthrough-prepare-the-data.md
-      - name: 使用 SQL 探索資料
-        href: tutorials/walkthrough-view-and-explore-the-data.md
-      - name: 使用 R 摘要資料
+      - name: 1 - 資料探索
         href: tutorials/walkthrough-view-and-summarize-data-using-r.md
-      - name: 建立圖表及繪圖
+      - name: 2 - 圖表及繪圖
         href: tutorials/walkthrough-create-graphs-and-plots-using-r.md
-      - name: 建立資料特徵
+      - name: 3 - 特徵工程
         href: tutorials/walkthrough-create-data-features.md
-      - name: 建立及儲存模型
+      - name: 4 - 建置及儲存模型
         href: tutorials/walkthrough-build-and-save-the-model.md
-      - name: 部署及使用模型
+      - name: 5 - 部署及使用模型
         href: tutorials/walkthrough-deploy-and-use-the-model.md
-    - name: 使用 RevoScaleR 深入鑽研
+    - name: RevoScaleR 深入探討
       href: tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
       items:
       - name: 建立資料庫與權限
         href: tutorials/deepdive-work-with-sql-server-data-using-r.md
-      - name: 使用 RxSqlServerData 建立資料物件
+      - name: 建立 RxSqlServerData 物件
         href: tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
       - name: 查詢及修改資料
         href: tutorials/deepdive-query-and-modify-the-sql-server-data.md
       - name: 定義計算內容
         href: tutorials/deepdive-define-and-use-compute-contexts.md
-      - name: 建立及執行 R 指令碼
+      - name: 計算摘要統計資料
         href: tutorials/deepdive-create-and-run-r-scripts.md
       - name: 將資料視覺化
         href: tutorials/deepdive-visualize-sql-server-data-using-r.md
@@ -151,18 +147,16 @@ items:
         href: tutorials/deepdive-score-new-data.md
       - name: 轉換資料
         href: tutorials/deepdive-transform-data-using-r.md
-      - name: 使用 rxImport 將資料載入記憶體
+      - name: 使用 rxImport 載入資料
         href: tutorials/deepdive-load-data-into-memory-using-rximport.md
       - name: 使用 rxDataStep 建立資料表
         href: tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
-      - name: 使用 rxDataStep 執行區塊處理分析
+      - name: 執行區塊化分析
         href: tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
-      - name: 分析本機計算內容中的資料
-        href: tutorials/deepdive-analyze-data-in-local-compute-context.md
       - name: 在 SQL Server 與 XDF 檔案之間移動資料
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
-      - name: 建立簡單的模擬
-        href: tutorials/deepdive-create-a-simple-simulation.md
+      - name: 使用 rxExec 傳送自訂 R
+        href: tutorials/r-tutorial-custom-r-functions.md
 - name: 範例
   href: https://github.com/Microsoft/sql-server-samples
 - name: 方案
@@ -296,13 +290,13 @@ items:
       href: python/what-is-revoscalepy.md
 - name: 資源
   items:
-  - name: 已知問題
-    href: known-issues-for-sql-server-machine-learning-services.md
   - name: 版本資訊
     href: https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes
   - name: 疑難排解
     href: machine-learning-troubleshooting-faq.md
     items:
+    - name: 已知問題
+      href: known-issues-for-sql-server-machine-learning-services.md
     - name: 資料收集
       href: data-collection-ml-troubleshooting-process.md
     - name: 安裝和升級錯誤
@@ -325,9 +319,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: 機器學習服務伺服器
       href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
-ms.openlocfilehash: d2cf2947c60d3ac3550dfeeba3acbf46bd0e48bd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e400aa9026b3a2684ffc5f436e4fe43cba3c52d4
+ms.sourcegitcommit: 0395ffeb6e51b5d653fa23673e564c4c0cfe4f57
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697896"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52717191"

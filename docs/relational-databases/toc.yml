@@ -132,20 +132,26 @@ items:
         href: ../relational-databases/sql-trace/sql-trace.md
     - name: 調整
       items:
+      - name: 資料庫測試助理
+        href: https://www.microsoft.com/download/details.aspx?id=54090
       - name: 記憶體內部 OLTP +
         href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
       - name: 索引 +
         href: ../relational-databases/indexes/indexes.md
       - name: 資料分割 +
         href: ../relational-databases/partitions/partitioned-tables-and-indexes.md
+      - name: 效能中心 +
+        href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
+      - name: 效能監視及調整工具 +
+        href: ../relational-databases/performance/performance-monitoring-and-tuning-tools.md
       - name: Resource Governor +
         href: ../relational-databases/resource-governor/resource-governor.md
-      - name: 執行程序表運算子
+      - name: 執行程序邏輯和實體運算子參考
         href: showplan-logical-and-physical-operators-reference.md
       - name: 統計資料 +
         href: ../relational-databases/statistics/statistics.md
-      - name: 效能 +
-        href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
+      - name: 使用查詢存放區的工作負載調整資料庫
+        href: ../relational-databases/performance/tuning-database-using-workload-from-query-store.md
   - name: PolyBase +
     href: ../relational-databases/polybase/polybase-guide.md
   - name: 查詢資料
@@ -204,9 +210,9 @@ items:
     href: ../relational-databases/system-tables/system-tables-transact-sql.md
   - name: 系統檢視表 +
     href: ../relational-databases/system-views/replication-views-transact-sql.md
-ms.openlocfilehash: 8c23236b2dad073616d1d3a5ee82f475bde0119a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 63116a51771db804d7e0a30dac73f24934c29c51
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641005"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439750"

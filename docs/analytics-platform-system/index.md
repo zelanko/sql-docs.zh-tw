@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 62fefedaa417e73820a7e14df9bf90f6215b9161
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ed7ba4a6b5b2f69c51f06a4dbf2947d97981c38f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702446"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419099"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System  
 Microsoft Analytics Platform System (APS) 是專為資料倉儲和巨量資料分析而設計的資料平台，可提供深層資料整合、高速查詢處理、高擴充性儲存體和端對端商業智慧方案的簡易維護。  
@@ -27,25 +27,25 @@ PolyBase 技術結合了關聯式 PDW 資料與來自多種來源的 Hadoop 資�
   
 Analytics Platform System 會以設備形式運送至您的資料中心，其配備專為執行多個工作負載預先安裝與預先設定的硬體和軟體。 當您購買 Analytics Platform System 時，可根據業務需求購買適用於 PDW 的計算節點。  
   
-Analytics Platform System 不僅快速、可擴充，並設計有高備援與高可用性功能，是值得您託付最關鍵業務資料的可靠平台。 Analytics Platform System 的設計宗旨是簡潔單純，因此您可以輕鬆學習與進行管理。 PDW 的 PolyBase 技術適用於分析 Hadoop 資料，並深度整合商業智慧工具，是建立端對端方案的完整平台。  
+Analytics Platform System 不僅快速、可擴充，並設計有高備援與高可用性功能，是值得您託付最關鍵業務資料的可靠平台。 Analytics Platform System 的設計宗旨是簡潔單純，因此您可以輕鬆學習與進行管理。 PDW 的 PolyBase 技術適用於分析 Hadoop 資料，並深度整合商業智慧工具，是建立端對端解決方案的完整平台。  
   
   
 ## <a name="parallel-data-warehouse-software-designed-for-massively-parallel-processing"></a>平行處理資料倉儲軟體，專為大量平行處理而設計
   
-您可將 PDW 作為端對端商業智慧方案的核心關聯式資料倉儲元件。 採用 PDW 的大量平行處理 (MPP) 設計時，查詢完成的速度通常比建置於對稱式多重處理 (SMP) 資料庫管理系統上的傳統資料倉儲還快 50 倍。  
+您可將 PDW 作為端對端商業智慧方案的核心關聯式資料倉儲元件。 透過 PDW 的大量平行處理 (MPP) 設計，查詢完成的速度通常比建置於對稱式多重處理 (SMP) 資料庫管理系統上的傳統資料倉儲快 50 倍。  
   
 > [!NOTE]  
 > 速度快 50 倍意味著原本數小時的查詢只需要幾分鐘就能完成，而需要數分鐘的查詢則只需要幾秒鐘時間。 這個突破性的效能可讓商務分析師更快產生更詳細的結果，並輕鬆地執行特定查詢或向下切入詳細資料。 如此一來，您的企業即可更快速制定出更明智的決策。  
   
 除了實現突破性的查詢效能，PDW 還可輕鬆提供下列優勢：  
   
--   您可以將「縮放單位」新增至現有系統，將單一設備的資料倉儲從幾 TB 擴充至 6 PB 以上的資料  
+-   您可以將「縮放單位」新增至現有系統，以將單一設備的資料倉儲從幾 TB 擴充至 6 PB 以上的資料  
   
 -   內建的高備援性和高可用功能，可確保您在需要資料時都能安心使用  
   
 -   解決載入和合併資料的最新資料挑戰  
   
--   使用 PDW 之高度平行化的 PolyBase 技術，將 Hadoop 資料與關聯式資料整合以供快速分析  
+-   使用 PDW 之高度平行化的 PolyBase 技術，將 Hadoop 資料與關聯式資料整合以快速分析  
   
 -   您可以使用商業智慧工具，來建立完整的端對端解決方案。  
 

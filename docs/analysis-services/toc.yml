@@ -1359,7 +1359,7 @@ items:
       - name: 執行緒集區屬性
     - name: 監視 Analysis Services
       items:
-      - name: 監視概觀
+      - name: 監視工具
         href: ./instances/monitor-an-analysis-services-instance.md
       - name: SQL Server Profiler
         href: ./instances/use-sql-server-profiler-to-monitor-analysis-services.md
@@ -1376,6 +1376,12 @@ items:
         href: ./instances/performance-counters-ssas.md
       - name: 追蹤事件
         href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
+      - name: 記錄作業
+        href: ./instances/log-operations-in-analysis-services.md
+    - name: 清除伺服器快取
+      href: ./instances/clear-the-analysis-services-caches.md
+    - name: 資料庫一致性檢查程式 (DBCC)
+      href: ./instances/database-consistency-checker-dbcc-for-analysis-services.md
   - name: '[連接]'
     items:
     - name: 連線至伺服器概觀
@@ -1511,7 +1517,7 @@ items:
   - name: 表格式物件模型 (TOM)
     href: https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo
   - name: 分析管理物件 (AMO)
-    href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
+    href: https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo
   - name: 概念式結構定義語言 (CSDL)
     href: https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
   - name: XML for Analysis (XMLA)
@@ -1524,9 +1530,9 @@ items:
     href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
   - name: 追蹤事件
     href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
-ms.openlocfilehash: 31cc232f3a10dbaf2113af6708bce6df3923178e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: feee35408dd9439862dce7ca043184bf2d9fd05f
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698463"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302911"
