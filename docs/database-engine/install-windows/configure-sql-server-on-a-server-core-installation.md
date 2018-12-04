@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: ddee0e6eb08f95b1552ae76291afa22e0d3e171b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 26a4fcb38edaa490fd295b7f781a2062a7671199
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602018"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409045"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安裝上設定 SQL Server
 
@@ -63,7 +63,7 @@ ms.locfileid: "51602018"
 指定 UpdateEnabled 和 UpdateSource 參數在主要產品安裝中包含最新的產品更新。 請參考以下範例，了解如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間啟用產品更新：  
   
 ```  
-Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource=”<SourcePath>” /IACCEPTSQLSERVERLICENSETERMS  
+Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource="<SourcePath>" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
 ###  <a name="bkmk_alreadyInstall"></a> 在安裝 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 完成之後安裝更新  

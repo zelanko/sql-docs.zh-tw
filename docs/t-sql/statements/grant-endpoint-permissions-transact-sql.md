@@ -18,12 +18,12 @@ ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e9057d518c736f0e7722829febdaaf3c0f782151
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e33f7df043083a205754ee78b6b1ce67131d59d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619836"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508892"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>GRANT 端點權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  *permission*  
  指定可以授與的端點權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- ON ENDPOINT **::***endpoint_name*  
+ ON ENDPOINT **::**_endpoint_name_  
  指定要授與其權限的端點。 範圍限定詞 (**::**) 是必要項。  
   
  TO \<server_principal>  

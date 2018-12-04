@@ -11,12 +11,12 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 963ea851b052d3a460aad1bbfd6e59051ecc6f7d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: b9414215e82a6828152e1ab84265a5b70b6a2171
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571208"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302681"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連接到 Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "51571208"
 - [授權其他連接](#additional) 
 
 ## <a name="tools">使用者入門的工具</a> 
- -[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 出貨時已附帶各種工具。 這個主題描述您需要的優先工具，並幫助您選取作業的正確工具。 所有工具都可以從 [開始] 功能表存取。 根據預設，有些工具 (像是 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]) 並不會安裝。 您必須在安裝期間選取工具作為用戶端元件的一部分。 如需下面所述工具的完整描述，請在《 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》中搜尋相關內容。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 只包含工具的子集。  
+- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 出貨時已附帶各種工具。 這個主題描述您需要的優先工具，並幫助您選取作業的正確工具。 所有工具都可以從 [開始] 功能表存取。 根據預設，有些工具 (像是 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]) 並不會安裝。 您必須在安裝期間選取工具作為用戶端元件的一部分。 如需下面所述工具的完整描述，請在《 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》中搜尋相關內容。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 只包含工具的子集。  
 
 ### <a name="basic-tools"></a>基本工具
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是管理 [!INCLUDE[ssDE](../includes/ssde-md.md)] 以及撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 程式碼的主要工具。 它裝載於 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Shell 中， 您可以從 [Microsoft 下載中心](https://msdn.microsoft.com/library/mt238290.aspx)免費下載 SSMS。 最新版本可以與舊版 [!INCLUDE[ssDE_md](../includes/ssde-md.md)]搭配使用。  
@@ -45,10 +45,10 @@ ms.locfileid: "51571208"
 
 ##### <a name="to-start-sql-server-configuration-manager"></a>啟動 SQL Server 組態管理員  
 - 在目前的 Windows 版本上，於 [開始] 頁面上輸入**組態管理員**，然後按一下 [SQL Server *版本*組態管理員]。   
- --   使用舊版 Windows 時，請在 **「開始」** 功能表上依序指向 **「所有程式」**、[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] 及 **「組態工具」**，然後按一下 **「SQL Server 組態管理員」**。  
- -  
+- 使用舊版 Windows 時，請在 [開始] 功能表上依序指向 [所有程式]、[[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]] 和 [組態工具]，然後按一下 [SQL Server 組態管理員]。  
+
 ## <a name="connect"></a>連接 Management Studio  
- -若您知道執行個體的名稱，而且是以電腦上本機系 Administrator 群組的成員身分連線，要從相同電腦上執行的工具連線到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 會很容易。 下列程序必須執行在主控 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的相同電腦上。  
+- 如果您知道執行個體的名稱，而且是以電腦上本機系統管理員群組的成員身分來連接，則要從相同電腦上所執行的工具連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 很容易。 下列程序必須執行在主控 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的相同電腦上。  
 
 > [!NOTE]  
 > 本主題討論如何連接至內部部署 SQL Server。 若要連接到 Azure SQL Database，請參閱 [使用 SQL Server Management Studio 連接到 SQL Database 並執行範例 T-SQL 查詢](https://azure.microsoft.com/documentation/articles/sql-database-connect-query-ssms/)。  

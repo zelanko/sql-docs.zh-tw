@@ -11,12 +11,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 615aa894b7ceb07d471c281eb6be24db9c0e3a43
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 675379c6c182ad72ecdeefe09423fe981cf67b41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657568"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520517"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 課：從另一部電腦連接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +124,7 @@ ms.locfileid: "51657568"
   
 2.  在 [連接到伺服器] 對話方塊中，確認 [伺服器類型] 方塊中的 [Database Engine]。  
   
-3.  在 [伺服器名稱] 方塊中，輸入 **tcp:** 以指定通訊協定，後面接著電腦名稱、逗號和通訊埠編號。 若要連線到預設執行個體，通訊埠 1433 為隱含 且可省略的通訊埠，因此只要鍵入 *tcp:***<電腦名稱> 即可。 在我們的具名執行個體範例中，請鍵入 **tcp:<電腦名稱>,49172**。  
+3.  在 [伺服器名稱] 方塊中，輸入 **tcp:** 以指定通訊協定，後面接著電腦名稱、逗號和通訊埠編號。 若要連接到預設執行個體，通訊埠 1433 是內定通訊埠而且可省略，因此只要輸入 **tcp:**_<computer_name>_ 即可。 在我們的具名執行個體範例中，請輸入 **tcp:**_<computer_name>_**,49172**。  
   
     > [!NOTE]  
     > 如果 [伺服器名稱] 方塊中省略了 **tcp:**，用戶端將依照用戶端設定中指定的順序，嘗試所有啟用的通訊協定。  

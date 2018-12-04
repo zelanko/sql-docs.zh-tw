@@ -3,20 +3,20 @@ title: 第 2 課：建立和套用命名標準原則 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
+ms.technology: security
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fb7082aec21e75c2852ac7efdc2d7a4fa565768d
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 688a61aeecfb729eeee877e0f8d3e463eaff06c8
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512823"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52159036"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>第 2 課：建立和套用命名標準原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 814787bdc97347c320814be4f6da0a742d6fe985
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c9079baf374b6ab60cf275aaa6551eba5385e79
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725426"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712029"
 ---
 # <a name="report-server-properties-general-page"></a>報表伺服器屬性 (一般頁面)
   您可以使用這個頁面來檢視或修改在報表管理員中使用的標題、啟用或停用 [我的報表]、針對 [我的報表] 安全性選取角色定義，以及啟用或停用用戶端列印控制項。  
@@ -35,7 +35,7 @@ ms.locfileid: "47725426"
  此屬性是唯讀的。 指定您要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本。  
   
  **版本(Edition)**  
- 此屬性是唯讀的。 指定目前的報表伺服器執行個體。 並非所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+ 此屬性是唯讀的。 指定目前的報表伺服器執行個體。 並非所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2017 的版本及支援的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
  **驗證模式**  
  此屬性是唯讀的。 它會識別報表伺服器執行個體所接受之驗證要求的類型。 若要變更驗證模式，您必須編輯 **RSReportServer.config** 檔案。 如需詳細資訊，請參閱 [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md)。  

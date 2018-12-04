@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b37ab52355d00e96471a2bb440ad6b76a1bc31da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c88e875c659a2677329711248257e56084453e78
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691826"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616771"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>在 .NET Framework 更新之後升級 SQLCLR 組件
 
@@ -28,7 +27,7 @@ ms.locfileid: "47691826"
  如果 .NET Framework 更新需要您重新啟動 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 電腦，會自動升級受影響的 SQLCLR 組件，以修正重新啟動 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 電腦時的 MVID 不相符問題。 不過，若是不需要您重新啟動 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 電腦的 .NET Framework 更新，則會發生錯誤，因為當您嘗試使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 連接至 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]時，會造成組件的 MVID 不相符：  
   
 ```  
-A new version of .NET was installed on this machine. In order to continue to work with DQS please run dqsinstaller.exe –upgradedlls.  
+A new version of .NET was installed on this machine. In order to continue to work with DQS please run dqsinstaller.exe -upgradedlls.  
 ```  
   
  若要修正此問題，則必須升級 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中受影響的 SQLCLR 組件。 您可以透過使用 **upgradedlls** 命令列參數執行 DQSInstaller.exe 檔的方式略過重新建立 DQS 資料庫，而只升級受影響的組件。 這樣可確保您的知識庫、資料品質專案以及 DQS 中的任何其他資料都會保留下來。  

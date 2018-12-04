@@ -11,12 +11,12 @@ ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c01f4ad93f36874e70352b6efa6c5592c71d6bf8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8eab3ceeb9ace557f7e7f34b4bb267d6269d7fdc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671767"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521376"
 ---
 # <a name="create-an-encrypted-backup"></a>建立加密的備份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,8 +86,8 @@ ms.locfileid: "51671767"
   
     ```  
     CREATE CREDENTIAL mycredential   
-    WITH IDENTITY= 'mystorageaccount' – this is the name of the storage account you specified when creating a storage account    
-    , SECRET = '<storage account access key>' – this should be either the Primary or Secondary Access Key for the storage account  
+    WITH IDENTITY= 'mystorageaccount' - this is the name of the storage account you specified when creating a storage account    
+    , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
 2.  **建立資料庫主要金鑰︰** 選擇要儲存在資料庫中之主要金鑰複本的加密密碼。 連接到 Database Engine，再啟動新的查詢視窗，將下列範例複製並貼到新的查詢視窗中，然後按一下 [執行]。  
@@ -119,7 +119,7 @@ ms.locfileid: "51671767"
     BACKUP DATABASE [MyTestDB]  
     TO URL = N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
     WITH  
-      CREDENTIAL 'mycredential' – this is the name of the credential created in the first step.  
+      CREDENTIAL 'mycredential' - this is the name of the credential created in the first step.  
       ,COMPRESSION  
       ,ENCRYPTION   
        (  

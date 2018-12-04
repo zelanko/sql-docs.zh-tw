@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - User Settable object
@@ -14,12 +14,12 @@ ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 40be191181d093b7e32f5f3f7ac0c8ac0c868b23
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: cb3c412361acf4e3c059f902c2fc0ae498601d36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033475"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522995"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server 的 User Settable 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51033475"
 |**User counter 1**|使用 **sp_user_counter1**來定義。|  
 |**使用者計數器 2**|使用 **sp_user_counter2**來定義。|  
 |**使用者計數器 3**|使用 **sp_user_counter3**來定義。|  
-|…||  
+|...||  
 |**User counter 10**|使用 **sp_user_counter10**來定義。|  
   
  若要使用使用者計數器預存程序，只要從您自己的應用程式執行它們，並且以一個整數參數代表計數器的新數值。 例如若要將 **User counter 1** 設成數值 10，可執行下列的 Transact-SQL 陳述式：  

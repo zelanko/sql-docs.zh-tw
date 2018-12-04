@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f82b79c8f5484a10e59827b7821038d93142e664
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 729464b51af6c9450f9166bd9a3c51d35541810f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677636"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530537"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>建立完整資料庫備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -362,7 +362,7 @@ $FileName = 'Sales.bak';
 $database = 'Sales';
 $BackupFile = $container + '/' + $FileName ;
   
-Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile $BackupFile;
+Backup-SqlDatabase -ServerInstance "MyServer" -Database $database -BackupFile $BackupFile;
 ```
  
  **若要設定和使用 SQL Server PowerShell 提供者**  

@@ -26,12 +26,12 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3513d85607582a8aab726804f2501ee675859460
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 8930cb9c01ab04f6166a710de66ab3bbb3241a05
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560505"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403243"
 ---
 # <a name="use-the-copy-database-wizard"></a>使用複製資料庫精靈
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -312,7 +312,7 @@ ms.locfileid: "51560505"
      > **注意：** 您可以從任何資料庫啟動 [複製資料庫精靈]。  您可以從來源或目的地伺服器使用 [複製資料庫精靈]。
   
 ### <a name="a--move-database-using-detach-and-attach-method-to-an-instance-on-a-different-physical-server--a-login-and-sql-server-agent-job-will-be-moved-as-well"></a>**A.使用卸離與附加方法，將資料庫移至不同實體伺服器上的執行個體。登入和 SQL Server Agent 作業也會一併移動。**  
-下列範例會將 `Sales` 資料庫、名為 `contoso\Jennie` 的 Windows 登入和名為 `Jennie’s Report` 的 SQL Server Agent 作業，從 `Server1` 上的 SQL Server 2008 執行個體，移至 `Server2`上的 SQL Server 2016 執行個體。  `Jennie’s Report` 使用 `Sales` 資料庫。  `Sales` 目前不在目的地伺服器 `Server2`上。  `Server1` 將會在移動資料庫之後，重新指派給不同的小組。
+下列範例會將 `Sales` 資料庫、名為 `contoso\Jennie` 的 Windows 登入和名為 `Jennie's Report` 的 SQL Server Agent 作業，從 `Server1` 上的 SQL Server 2008 執行個體，移至 `Server2`上的 SQL Server 2016 執行個體。  `Jennie's Report` 使用 `Sales` 資料庫。  `Sales` 目前不在目的地伺服器 `Server2`上。  `Server1` 將會在移動資料庫之後，重新指派給不同的小組。
   
 6.  如先前的 [限制事項](#Restrictions)中所述，傳送參考尚不存在於目的地伺服器之資料庫的 SQL Server Agent 作業時，必須在目的地伺服器上建立 Shell 資料庫。  請在目的地伺服器上，建立名為 `Sales` 的 Shell 資料庫。 
 
@@ -322,7 +322,7 @@ ms.locfileid: "51560505"
   
 9.  [設定目的地資料庫] 頁面︰此**精靈**指出 `Sales` 已存在於目的地伺服器上 (如上述**步驟 6** 所建立)，並已在**目的地資料庫**名稱中附加 `_new`。  請從 [目的地資料庫] 文字方塊中刪除 `_new`。  如有需要，請變更 [檔案名稱] 和 [目的地資料夾]。  選取 [卸除目的地伺服器上具有相同名稱的資料庫，然後繼續資料庫傳送，並覆寫現有的資料庫檔案]。  按 [下一步] 。
   
-10. [選取伺服器物件] 頁面︰在 [選取的相關物件:] 面板中，按一下[Object name Logins (物件名稱登入)] 的省略符號按鈕。  在 [複製選項] 下，選取 [只複製選取的登入:]。  核取 [顯示所有伺服器登入] 的方塊。  核取 `contoso\Jennie` 的 [登入] 方塊。  按一下 [確定] 。  在 [可用的相關的物件:] 面板中，選取 [SQL Server Agent 作業] 然後按一下 [>] 按鈕。  在 [選取的相關物件:] 面板中，按一下 [SQL Server Agent 作業] 的省略符號按鈕。  在 [複製選項] 下，選取 [只複製選取的作業]。  核取 [`Jennie’s Report`] 的方塊。  按一下 [確定] 。  按 [下一步] 。  
+10. [選取伺服器物件] 頁面︰在 [選取的相關物件:] 面板中，按一下[Object name Logins (物件名稱登入)] 的省略符號按鈕。  在 [複製選項] 下，選取 [只複製選取的登入:]。  核取 [顯示所有伺服器登入] 的方塊。  核取 `contoso\Jennie` 的 [登入] 方塊。  按一下 [確定] 。  在 [可用的相關的物件:] 面板中，選取 [SQL Server Agent 作業] 然後按一下 [>] 按鈕。  在 [選取的相關物件:] 面板中，按一下 [SQL Server Agent 作業] 的省略符號按鈕。  在 [複製選項] 下，選取 [只複製選取的作業]。  核取 [`Jennie's Report`] 的方塊。  按一下 [確定] 。  按 [下一步] 。  
   
 11. [來源資料庫檔案的位置] 頁面︰按一下 [來源伺服器上的檔案共用] 的省略符號按鈕，然後巡覽至指定的資料夾位置。  例如，針對資料夾位置 `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA`，使用 `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` 作為 [來源伺服器上的檔案共用]。  按 [下一步] 。
   
@@ -354,7 +354,7 @@ ms.locfileid: "51560505"
 由於 `Server1` 會移至不同的小組，而且不會重複 **移動** 作業，因此請考慮執行下列步驟：
      -    刪除 `SalesFromServer1toServer2_Move` 上的 SSIS 封裝 `Server2`。
      -    刪除 `SalesFromServer1toServer2_Move` 上的 SQL Server Agent 作業 `Server2`。
-     -    刪除 `Jennie’s Report` 上的 SQL Server Agent 作業 `Server1`。
+     -    刪除 `Jennie's Report` 上的 SQL Server Agent 作業 `Server1`。
      -    卸除 `contoso\Jennie` 上的登入 `Server1`。
 
 

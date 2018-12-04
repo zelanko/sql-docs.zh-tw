@@ -14,12 +14,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ff49250b6af2d309df7b184168f3c2c901cb050e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 249fedd79398097fffbffae3afc5effb275dd6c5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661137"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407275"
 ---
 # <a name="sql-server-replication"></a>SQL Server 複寫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

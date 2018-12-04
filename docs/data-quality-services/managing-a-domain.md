@@ -5,19 +5,18 @@ ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2730c37ba3afd24a0bbc29dece7a25dd15496bac
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2eaa6b8aa0a739bff87cb59d6e4bdb2c04683274
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700886"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617111"
 ---
 # <a name="managing-a-domain"></a>管理定義域
 

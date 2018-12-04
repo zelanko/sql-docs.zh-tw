@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0e91e3572d962ec9c819aae7f501b7b274f5c452
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 10bdfa7e45324e845019e6b670321e56839a79bd
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029567"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711469"
 ---
 # <a name="schedules"></a>[排程]
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供 **共用排程** 和 **報表特定排程** 來協助您控制報表的處理和散發。 這兩種排程類型之間的差異是定義、儲存和管理它們的方式。 兩種排程類型的內部建構則相同。 所有排程都會指定一個循環類型：每月、每週或每日。 在循環類型內，您可以設定發生事件之頻率的間隔和範圍。 不論您是建立共用排程還是報表特定排程，循環模式的類型和指定這些模式的方式相同。
@@ -54,7 +54,7 @@ ms.locfileid: "50029567"
  如需如何建立及管理排程的詳細資訊，請參閱＜ [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)＞。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供排程作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [Features Suppported by edition of SQL Server 2016](https://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454)(SQL Server 2016 版本支援的功能)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供排程作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2017 的版本及支援的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
 ##  <a name="bkmk_compare"></a> 比較共用排程與報表特定排程  
  這兩種排程類型會產生相同的輸出：  

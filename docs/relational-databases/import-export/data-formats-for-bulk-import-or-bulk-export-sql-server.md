@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84f44eb8ff2f35942660b8fd773962f2fda8cc9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b87bd6357b51803ff9535483b9991099b903e1b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753566"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527525"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>大量匯入或大量匯出的資料格式 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "47753566"
   
 |作業|原生|Unicode 原生|字元|Unicode 字元|  
 |---------------|------------|--------------------|---------------|-----------------------|  
-|使用不含任何擴充或雙位元組字集 (DBCS) 字元的資料檔，在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間進行大量傳送資料。 除非已使用格式檔案，否則必須以相同的方式定義這些資料表。|是*|—|—|—|  
-|若為 **sql_variant** 資料行，使用原生資料格式是最佳方法，因為原生資料格式會保留每個 **sql_variant** 值的中繼資料，但字元或 Unicode 格式則不會。|是|—|—|—|  
-|使用含有擴充或 DBCS 字元的資料檔，在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間進行大量傳送資料。|—|是|—|—|  
-|從其他程式所產生的文字檔，大量匯入資料。|—|—|是|—|  
-|將資料大量匯出至文字檔，以便使用於另一個程式之中。|—|—|是|—|  
-|使用含有 Unicode 資料但不含擴充或 DBCS 字元的資料檔，在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間進行大量傳送資料。|—|—|—|是|  
+|使用不含任何擴充或雙位元組字集 (DBCS) 字元的資料檔，在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間進行大量傳送資料。 除非已使用格式檔案，否則必須以相同的方式定義這些資料表。|是*|-|-|-|  
+|若為 **sql_variant** 資料行，使用原生資料格式是最佳方法，因為原生資料格式會保留每個 **sql_variant** 值的中繼資料，但字元或 Unicode 格式則不會。|是|-|-|-|  
+|使用含有擴充或 DBCS 字元的資料檔，在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間進行大量傳送資料。|-|是|-|-|  
+|從其他程式所產生的文字檔，大量匯入資料。|-|-|是|-|  
+|將資料大量匯出至文字檔，以便使用於另一個程式之中。|-|-|是|-|  
+|使用含有 Unicode 資料但不含擴充或 DBCS 字元的資料檔，在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間進行大量傳送資料。|-|-|-|是|  
   
  \* 這是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bcp **時，從**大量匯出資料最快的方法。  
   

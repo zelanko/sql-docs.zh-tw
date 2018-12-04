@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f04159b96b441370043054660869b7a7117a6ef
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 49c5203d03ed1a216f4aedc6913ea6e1bddefa2d
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657767"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711509"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>監視原生編譯預存程序的效能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,6 @@ ms.locfileid: "51657767"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- 如需 **sp_statement_completed** 擴充事件的詳細資訊，請參閱 [How to retrieve the statement that caused an event](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)(如何擷取導致事件的陳述式)。  
   
 ## <a name="using-data-management-views-and-query-store"></a>使用資料管理檢視和查詢存放區
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 支援收集原生編譯預存程序在程序層級和查詢層級的執行統計資料。 收集執行統計資料會影響效能，所以預設並未啟用。  

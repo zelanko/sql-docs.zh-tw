@@ -18,12 +18,12 @@ ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a23829250c59cf720c5c8b0c639702a5fc501364
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21eb0fdce01f4c48f11f084ff3bf1ba8a1354b1a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627696"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545460"
 ---
 # <a name="deny-certificate-permissions-transact-sql"></a>DENY 憑證權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ DENY permission  [ ,...n ]
  *permission*  
  指定可以拒絕的憑證權限。 如下所列。  
   
- ON CERTIFICATE **::***certificate_name*  
+ ON CERTIFICATE **::**_certificate_name_  
  指定正在拒絕權限的憑證。 需要範圍限定詞 "::"。  
   
  *database_principal*  

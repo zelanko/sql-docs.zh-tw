@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4498b558e740927f52ab53a0edb8a615a34c0690
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cef3ca4751259ad7e61d0de4f7f5758da2dbd5fd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657777"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545686"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>從資料存取應用程式呼叫原生編譯預存程序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ if (returnCode != SQL_SUCCESS && returnCode != SQL_SUCCESS_WITH_INFO) {
 }  
   
 // 2, 3, 4 - ItemNo, ProdCode, Qty  
-…  
+...  
   
 // Prepare stored procedure  
 returnCode = SQLPrepare(hstmt, (SQLTCHAR *) _T("{call ItemInsert(?, ?, ?, ?)}"),SQL_NTS);  

@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 992f029f64cdb9d6c60bcef4e748b2fee21a0c90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a3a3456a816769217c4b1e8f89ee9ffd8cfe91d
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673028"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711709"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 組態檔
- ||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SQL Server 2016|
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
   
 ReportingServicesService.exe.config 檔包括設定追蹤的設定。  
   

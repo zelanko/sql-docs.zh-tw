@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e26f3436b821c1b6b42dec9f0b5f0c7170da780e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 217fe5bc510d5f25eaddfad69fa08ad4dd760c8f
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669597"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712699"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引架構和設計指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -638,7 +638,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 *columnstore index* 是使用單欄式資料格式 (稱為「資料行存放區」) 來儲存、擷取及管理資料的一項技術。 如需詳細資訊，請參閱[資料行存放區索引概觀](../relational-databases/indexes/columnstore-indexes-overview.md)。 
 
-如需版本資訊，請參閱[資料行存放區索引 - 新增功能](/sql/relational-databases/indexes/columnstore-indexes-what-s-new)。
+如需版本資訊，請參閱[資料行存放區索引 - 新增功能](../relational-databases/indexes/columnstore-indexes-what-s-new.md)。
 
 ### <a name="columnstore-index-architecture"></a>資料行存放區索引架構
 

@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fda704e778e684aa9b53a073e9540239ed5f975
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c3df2557120308cc77b0abbd3f9c3bc5eed73b36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674987"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542498"
 ---
 # <a name="how-for-json-escapes-special-characters-and-control-characters-sql-server"></a>FOR JSON 如何逸出特殊字元和控制字元 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "51674987"
 |---------------------------|--------------------------|  
 |CHAR(0)|\u0000|  
 |CHAR(1)|\u0001|  
-|…|…|  
+|...|...|  
 |CHAR(31)|\u001f|  
   
 ## <a name="example"></a>範例  

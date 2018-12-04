@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3c1600d29743d9a1c477d2d7b707eafc6839a5fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 967f4188168d1f322ba64c5ef9dfca5c958f3b45
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733582"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525348"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 公用程式 (SSRS)
   **rsconfig.exe** 公用程式會加密連接和帳戶值，並會將它們儲存在 RSReportServer.config 檔中。 加密的值包括自動處理報表的程序所用的報表伺服器資料庫連接資訊和帳戶值。  
@@ -29,13 +29,13 @@ ms.locfileid: "47733582"
 ```  
   
 rsconfig {-?}  
-{–cconnection}  
-{–eunattendedaccount}  
-{–mcomputername}  
-{–iinstancename}  
-{–sservername}  
-{–ddatabasename}  
-{–aauthmethod}  
+{-cconnection}  
+{-eunattendedaccount}  
+{-mcomputername}  
+{-iinstancename}  
+{-sservername}  
+{-ddatabasename}  
+{-aauthmethod}  
 {-uusername}  
 {-ppassword}  
 {-ttrace}  

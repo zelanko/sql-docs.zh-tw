@@ -5,7 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Access Methods object
@@ -14,12 +14,12 @@ ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f9458313f692f5a63db7524ef4bcf31cbf85064d
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 2c13a43c28409d84bd9572767bdd92a4b6e0314d
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033255"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52159016"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server 的 Access Methods 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

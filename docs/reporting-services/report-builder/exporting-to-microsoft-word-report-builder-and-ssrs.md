@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1dd2e24be0ca0746ad456a43c9005f3e0dd8a30c
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b315779a4e6c16bdea162ebd5d70c4b9c12ec94b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814091"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393332"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>匯出至 Microsoft Word (報表產生器及 SSRS)
 
@@ -179,7 +179,7 @@ ms.locfileid: "51814091"
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- WORDOPENXML 延伸模組會定義 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx 檔案的 Word 轉譯器。 WORD 延伸模組會定義 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 版本。 `Visible = “false”` 表示隱藏 Word 2003 轉譯器。 如需詳細資訊，請參閱 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 和 [RSReportDesigner 組態檔](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。  
+ WORDOPENXML 延伸模組會定義 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx 檔案的 Word 轉譯器。 WORD 延伸模組會定義 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 版本。 `Visible = "false"` 表示隱藏 Word 2003 轉譯器。 如需詳細資訊，請參閱 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 和 [RSReportDesigner 組態檔](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。  
   
 ### <a name="differences-between-the-word-and-word-2003-renderers"></a>Word 與 Word 2003 轉譯器之間的差異  
  透過 Word 或 Word 2003 轉譯器所轉譯的報表通常無法用肉眼分辨。 不過，您可能會注意到 Word 或 Word 2003 這兩個格式之間的小差異。  

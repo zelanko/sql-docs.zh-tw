@@ -5,18 +5,18 @@ ms.date: 04/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f019b52164dbb0b196292ff518045eac9344b903
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 4d08e417a3fb14a9679fd3662e570f9596b93656
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029915"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52159056"
 ---
 # <a name="sql-server-columnstore-object"></a>SQL Server, Columnstore 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

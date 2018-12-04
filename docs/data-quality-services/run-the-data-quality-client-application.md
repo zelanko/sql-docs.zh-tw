@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.browseforservers.f1
@@ -15,12 +14,12 @@ ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cb3fd865f2e26addacd74a949f79ccfc6ba463c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0ed4ad06e5e2db6594e467cbab392a75797289f
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736496"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616268"
 ---
 # <a name="run-the-data-quality-client-application"></a>執行 Data Quality Client 應用程式
 
@@ -35,7 +34,7 @@ ms.locfileid: "47736496"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  您必須擁有授與 DQS_MAIN 資料庫的其中一個 DQS 角色 (dqs_adminstrator、dqs_kb_editor 或 dqs_kb_operator)，才能登入 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]。  
   
 ##  <a name="Run"></a> 執行 Data Quality Client  

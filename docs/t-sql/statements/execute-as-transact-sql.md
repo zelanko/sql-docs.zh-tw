@@ -23,12 +23,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0f3b600c6598ed7400249376fe0a44670ea20339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4db2249838a1032ce44e13870463fac43012dfa9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627816"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512622"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,8 +82,8 @@ ms.locfileid: "47627816"
   
  如需如何還原到先前內容的詳細資訊，請參閱 [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)。  
   
- COOKIE INTO **@***varbinary_variable*  
- 指定如果呼叫的 REVERT WITH COOKIE 陳述式包含正確的 **@***varbinary_variable* 值，則執行內容只可以還原回先前的內容。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 Cookie 傳送至 **@***varbinary_variable*。 **COOKIE INTO** 選項只能在特定層級使用。  
+ COOKIE INTO **@**_varbinary_variable_  
+ 指定如果呼叫的 REVERT WITH COOKIE 陳述式包含正確的 **@**_varbinary_variable_ 值，則執行內容只可以還原回先前的內容。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 Cookie 傳送至 **@**_varbinary_variable_。 **COOKIE INTO** 選項只能在特定層級使用。  
   
  **@** *varbinary_variable* 是 **varbinary(8000)**。  
   

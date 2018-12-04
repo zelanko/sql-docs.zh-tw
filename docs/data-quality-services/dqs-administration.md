@@ -5,8 +5,7 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dqs administration
@@ -16,12 +15,12 @@ ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8ee25f36edd4f5b50dacbf24885534d458096b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db618785ace138f958f1b37713cf0c96f6ffb10b
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773546"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617858"
 ---
 # <a name="dqs-administration"></a>dqs 管理
 

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Wait Statistics object
@@ -14,12 +14,12 @@ ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b1ef49a7d2d52cef010f497e2505324154684ee7
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 64af49d6210bfe024fdc6099458bc9cbfdb42b5a
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030605"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52158476"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server 的 Wait Statistics 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

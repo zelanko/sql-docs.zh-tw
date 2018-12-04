@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d94dfc03c090a871742999a821d1bfa0951add7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8d6d83624fc47a12387e2edf02381faa3cfaedcf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030927"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545374"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 公用程式 (SSRS)
   擷取、還原、建立和刪除「用來保護機密報表伺服器資料，以免遭到未獲授權的存取」之對稱金鑰。 另外，這個公用程式也用來將報表伺服器執行個體聯結在向外延展部署中。 「報表伺服器向外延展部署」是指共用單一報表伺服器資料庫的多個報表伺服器執行個體。  
@@ -34,11 +34,11 @@ ms.locfileid: "50030927"
 ```  
   
 rskeymgmt {-?}  
-{–eextract}  
-{–aapply}  
+{-eextract}  
+{-aapply}  
 {-ddeleteall}  
-{–srecreatekey}  
-{–rremoveinstancekey}  
+{-srecreatekey}  
+{-rremoveinstancekey}  
 {-jjoinfarm}  
 {-iinstance}  
 {-ffile}  

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.admin.config.general.f1
@@ -18,12 +17,12 @@ ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a04fbc0b19b59097c46a7e55ecbd55030f4e68b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dbb09e9aa932797a975f26de15e2b466101c4026
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733578"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616308"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching"></a>設定清理和比對的臨界值
 
@@ -35,7 +34,7 @@ ms.locfileid: "47733578"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  您必須擁有 DQS_MAIN 資料庫的 dqs_administrator 角色，才能設定這些臨界值。  
   
 ##  <a name="Configure"></a> 設定臨界值  

@@ -5,19 +5,18 @@ ms.date: 06/04/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ea2749719f7ced61f304aadb5636d4909fd5b5db
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0b59abf2e804a63d154cb809d7e4df5784ed9e66
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700706"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616968"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>將知識加入至知識庫
 

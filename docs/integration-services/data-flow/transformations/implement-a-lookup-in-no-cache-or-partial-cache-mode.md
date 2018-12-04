@@ -16,12 +16,12 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b735de61b88a5b33c6dd8174a3e0bd6cf3b9dece
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b063396b2dc55636f85b6884206c1a5a1d6e6109
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628656"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509216"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>以沒有快取或部分快取模式實作查閱
   您可以將查閱轉換設定為使用部分快取或沒有快取模式：  
@@ -61,11 +61,11 @@ ms.locfileid: "47628656"
   
     -   按一下 **[使用 SQL 查詢的結果]**，然後在 **[SQL 命令]** 視窗中建立查詢。  
   
-         – 或 –  
+         -或-  
   
          按一下 **[建立查詢]** ，即可使用 **[查詢產生器]** 提供的圖形工具建立查詢。  
   
-         – 或 –  
+         -或-  
   
          按一下 **[瀏覽]** ，從檔案匯入 SQL 陳述式。  
   

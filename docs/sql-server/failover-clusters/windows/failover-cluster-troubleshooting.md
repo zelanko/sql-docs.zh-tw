@@ -14,12 +14,12 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b4cecedd4d58531017b8f7557515a61e7e07496
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f6c458d34a5d42d0300441ee85c03a3bf4a04c3
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608396"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302811"
 ---
 # <a name="failover-cluster-troubleshooting"></a>容錯移轉叢集疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47608396"
   
 -   [適用於 Windows Server 2012 R2 架構容錯移轉叢集的建議 Hotfix 和更新](https://support.microsoft.com/kb/2920151)  
   
--   [適用於 Windows Server 2012 架構容錯移轉叢集的建議 Hotfix 和更新](https://support.microsoft.com/kb/278426)  
+-   [適用於 Windows Server 2012 架構容錯移轉叢集的建議 Hotfix 和更新](https://support.microsoft.com/kb/2784261)  
   
 -   [適用於 Windows Server 2008 R2 架構容錯移轉叢集的建議 Hotfix 和更新](https://support.microsoft.com/kb/980054)  
   

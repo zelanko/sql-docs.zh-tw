@@ -18,12 +18,12 @@ ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7c7a1d742e76f9825986fbaba0e12278974006fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 932080377094ae17767856a9ced0256e05e0fe81
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744096"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544058"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY 端點權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  *permission*  
  指定可以拒絕的端點權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- ON ENDPOINT **::***endpoint_name*  
+ ON ENDPOINT **::**_endpoint_name_  
  指定要拒絕其權限的端點。 範圍限定詞 (**::**) 是必要項。  
   
  TO \<server_principal>  

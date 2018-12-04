@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Broker / DBM Transport object
@@ -14,12 +14,12 @@ ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cac576fd873853e848783762d7028f375b83c79d
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 2b4e92440afdc0bb57f696f2d0c2e601025442e8
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030565"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52158986"
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>SQL Server 的 Broker─DBM Transport 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

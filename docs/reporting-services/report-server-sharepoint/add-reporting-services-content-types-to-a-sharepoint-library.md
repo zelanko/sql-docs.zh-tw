@@ -9,12 +9,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0fb7557159f5c5560e4c8f4ad27d1a778da1e66f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 63cdf3f760c332bfe6d0b7438a1e5778f90295cc
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813691"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617808"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>將 Reporting Services 內容類型新增至 SharePoint 文件庫
 
@@ -72,7 +72,7 @@ ms.locfileid: "51813691"
   
 5.  重新整理瀏覽器，然後按一下 **[報表伺服器整合功能]** 的 **[啟動]**。  
   
-     ![rs_reportserver_integration_deactive](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactive.gif "rs_reportserver_integration_deactive")  
+     ![](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
   
 ##  <a name="bkmk_enable_content_management"></a> 啟用單一文件庫的內容類型管理 (SharePoint 2013)  
   

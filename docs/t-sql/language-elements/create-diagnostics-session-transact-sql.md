@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 030bcb218a5865973ffaee0b02c0aa2f69282be7
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9eefa5a7120f64f5dc6f621a2a74956a461619d9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698946"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394022"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -34,18 +34,18 @@ ms.locfileid: "51698946"
   
 ```  
 Creating a new diagnostics session:  
-CREATE DIAGNOSTICS SESSION diagnostics_name AS N’{<session_xml>}’;  
+CREATE DIAGNOSTICS SESSION diagnostics_name AS N'{<session_xml>}';  
   
 <session_xml>::  
 <Session>  
    [ <MaxItemCount>max_item_count_num</MaxItemCount> ]  
    <Filter>  
-      { \<Event Name=”event_name”/>  
-         [ <Where>\<filter_property_name Name=”value” ComparisonType="comp_type"/></Where> ] [ ,...n ]  
+      { \<Event Name="event_name"/>  
+         [ <Where>\<filter_property_name Name="value" ComparisonType="comp_type"/></Where> ] [ ,...n ]  
       } [ ,...n ]  
    </Filter> ]   
    <Capture>  
-      \<Property Name=”property_name”/> [ ,...n ]  
+      \<Property Name="property_name"/> [ ,...n ]  
    </Capture>  
 <Session>  
   

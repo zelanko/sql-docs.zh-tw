@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Buffer Node
@@ -14,12 +14,12 @@ ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 857d86addd96bceaa565124fadafaee75aec9abc
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: a1898df94eb9f5c6adb47d931d156e1b1b8357cd
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031575"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52158716"
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server:Buffer Node
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

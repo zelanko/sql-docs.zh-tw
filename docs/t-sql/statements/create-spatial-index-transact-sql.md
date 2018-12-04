@@ -23,12 +23,12 @@ ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d5b34fc92c70e01941bbdea6ef110a8af4a11e26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6eeaf835671b624b61f7c542760a00b0acb45ff0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620026"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507579"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,8 +64,8 @@ CREATE SPATIAL INDEX index_name
     [ USING GEOMETRY_AUTO_GRID ]  
           WITH  (  
         <bounding_box>  
-            [ [,] <tessellation_cells_per_object> [ ,…n] ]  
-            [ [,] <spatial_index_option> [ ,…n] ]  
+            [ [,] <tessellation_cells_per_object> [ ,...n] ]  
+            [ [,] <spatial_index_option> [ ,...n] ]  
                  )  
 }  
   
@@ -74,9 +74,9 @@ CREATE SPATIAL INDEX index_name
        [ USING GEOMETRY_GRID ]  
          WITH (  
                     <bounding_box>  
-                        [ [,]<tessellation_grid> [ ,…n] ]  
-                        [ [,]<tessellation_cells_per_object> [ ,…n] ]  
-                        [ [,]<spatial_index_option> [ ,…n] ]  
+                        [ [,]<tessellation_grid> [ ,...n] ]  
+                        [ [,]<tessellation_cells_per_object> [ ,...n] ]  
+                        [ [,]<spatial_index_option> [ ,...n] ]  
    )  
 }   
   
@@ -89,7 +89,7 @@ CREATE SPATIAL INDEX index_name
 {  
     [ USING GEOGRAPHY_AUTO_GRID ]  
     [ WITH (  
-        [ [,] <tessellation_cells_per_object> [ ,…n] ]  
+        [ [,] <tessellation_cells_per_object> [ ,...n] ]  
         [ [,] <spatial_index_option> ]  
      ) ]  
 }  
@@ -98,9 +98,9 @@ CREATE SPATIAL INDEX index_name
 {  
     [ USING GEOGRAPHY_GRID ]  
     [ WITH (  
-                [ <tessellation_grid> [ ,…n] ]  
-                [ [,] <tessellation_cells_per_object> [ ,…n] ]  
-                [ [,] <spatial_index_option> [ ,…n] ]  
+                [ <tessellation_grid> [ ,...n] ]  
+                [ [,] <tessellation_cells_per_object> [ ,...n] ]  
+                [ [,] <spatial_index_option> [ ,...n] ]  
                 ) ]  
 }  
   

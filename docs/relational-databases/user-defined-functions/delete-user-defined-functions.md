@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d02dd4a286321a6d5b2334f5cedcb06926f245fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0e8c720660c17c262f66e5a14841dff490c008b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652266"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412095"
 ---
 # <a name="delete-user-defined-functions"></a>刪除使用者定義函數
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47652266"
   
 -   **若要使用下列項目刪除使用者定義函數：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47652266"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要函數所屬結構描述的 ALTER 權限，或函數的 CONTROL 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -84,7 +84,7 @@ ms.locfileid: "47652266"
 3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
-    -- creates function called “Sales.ufn_SalesByStore”  
+    -- creates function called "Sales.ufn_SalesByStore"  
     USE AdventureWorks2012;  
     GO  
     CREATE FUNCTION Sales.ufn_SalesByStore (@storeid int)  

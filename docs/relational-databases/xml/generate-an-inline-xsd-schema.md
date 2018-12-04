@@ -19,12 +19,12 @@ ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6aae24935aea1c7ca452f199340cd1dca7299a4f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b45bd2df29628717d8cb1b2d1ba66a858a03f7a3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675347"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521495"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>產生內嵌 XSD 結構描述
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -241,7 +241,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  這是所產生的對應 XML。 以下只顯示內嵌 XSD 的一部分：  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -279,7 +279,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
 -   結果，因為 `DealerPrice` 值在資料表中是 NULL，所以只有 `ListPrice` 會做為 <`Price`> 元素傳回。 如果將 `XSINIL` 參數加入 ELEMENTS 指示詞，您會收到兩個元素，它們將對應至 DealerPrice 的 <`Price`> 元素的 `xsi:nil` 值設定為 TRUE。 您也會在內嵌 XSD 結構描述的 <`row`> 複雜類型定義中，接收到兩個 <`Price`> 子元素，這兩個子元素的 `nillable` 屬性都設為 TRUE。 以下片段是部分結果：  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -335,7 +335,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  以下是結果。 以下只顯示內嵌 XSD 結構描述的一部份：  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -404,7 +404,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  下列查詢中，Col2 和 Col3 使用相同別名。 這會產生兩個具有相同名稱的同層級元素，且在結果中這兩者都是 <`raw`> 元素的子系。 這兩個資料行屬於不同類型，而且兩者都可以是 NULL。 以下是結果。 只顯示一部份的內嵌 XSD 結構描述。  
   
- `…`  
+ `...`  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:General Statistics
@@ -14,12 +14,12 @@ ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 87c62b36e4f6ce3a96b3f40447794e2a9273d66c
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 2817d1f91340de65a4b8707f26f428da991eef3e
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030345"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52158886"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server 的 General Statistics 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

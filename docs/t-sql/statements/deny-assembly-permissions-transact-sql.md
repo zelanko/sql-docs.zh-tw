@@ -17,12 +17,12 @@ ms.assetid: be0896b3-f793-44c9-9390-1c6e58f33b2b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 160e2ae131870a0d1f5800adb5d3e380340d81c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b24367de294b3a28542577b6bd6c833f5c4e06b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844986"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531857"
 ---
 # <a name="deny-assembly-permissions-transact-sql"></a>DENY 組件權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  *permission*  
  指定組件可以拒絕的權限。 如下所列。  
   
- ON ASSEMBLY **::***assembly_name*  
+ ON ASSEMBLY **::**_assembly_name_  
  指定正在拒絕權限的組件。 需要範圍限定詞 "::"。  
   
  *database_principal*  

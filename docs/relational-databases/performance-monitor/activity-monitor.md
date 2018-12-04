@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server]
@@ -13,12 +13,12 @@ ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cc0a42cb38ca6ca3d4382b6abd293e93fd04ff16
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 533838b933cbe41e868f921bee6eafe14df44def
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029965"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52158016"
 ---
 # <a name="activity-monitor"></a>活動監視器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

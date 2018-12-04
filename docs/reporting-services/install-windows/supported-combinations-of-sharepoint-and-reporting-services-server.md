@@ -12,12 +12,12 @@ ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f22aed510bf6c5a34d4c4c2a79db7d0f3a56bfe2
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 8fb0f6ab994ffc096324a179050abbb4e8f303e7
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051120"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711519"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>支援的 SharePoint 與 Reporting Services 伺服器組合
 
@@ -75,7 +75,7 @@ ms.locfileid: "50051120"
 ## <a name="next-steps"></a>後續步驟
 
  [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
- [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+ [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-components-of-sql-server-2017.md)   
  [安裝 SQL Server 2016 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

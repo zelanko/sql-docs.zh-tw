@@ -10,12 +10,12 @@ ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: aa46327ef5037c70c25c156b9d224ea66218020f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 77ea53441472625fe419a322054eb5300a78e4c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601324"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531501"
 ---
 # <a name="clusterlog-always-on-availability-groups"></a>CLUSTER.LOG (Always On 可用性群組)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51601324"
   
 ```powershell  
 Import-Module FailoverClusters   
-Get-ClusterLog –TimeSpan 15 –Destination .  
+Get-ClusterLog -TimeSpan 15 -Destination .  
 ```  
   
 ## <a name="always-on-log-verbosity"></a>Always On 記錄詳細資訊  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8682e9016830309f7f8a0ce43d8dd72f6192e35f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92156defdf08b3828fde898c7043a941bbd7326b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738306"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394011"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>總計、彙總與內建集合的運算式範圍
   撰寫運算式時，您會發現 *「範圍」* (Scope) 一詞用於多個內容。 範圍可以指定要用於評估運算式的資料、轉譯頁面上的文字方塊集合、可以根據切換顯示或隱藏之報表項目的集合。 您將會在與運算式評估、彙總函式語法、條件式可用性相關的主題中，以及與這些領域相關的錯誤訊息中看 *「範圍」* (Scope) 一詞。 使用下列描述來協助區分 *「範圍」* (Scope) 適用的意義：  
@@ -68,7 +68,7 @@ ms.locfileid: "47738306"
      下列運算式會產生 SellStartDate 與 LastReceiptDate 之間的間隔年數。 這些欄位位於兩個不同的資料集：DataSet1 和 DataSet2 中。 [First 函式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md) 為彙總函式，它會傳回 DataSet1 中 SellStartDate 的第一個值，以及 DataSet2 中 LastReceiptDate 的第一個值。  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   **網域範圍** ：也稱為同步處理範圍。 一種資料範圍的類型，適用於巢狀資料區的運算式評估。 網域範圍用來跨所有群組執行個體指定彙總，讓系統可以對齊巢狀執行個體並輕鬆進行比較。 例如，您可以對齊資料表中內嵌之走勢圖的範圍和高度，讓這些值可以對齊。  

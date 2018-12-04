@@ -15,12 +15,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a36049bcbd2d5c043320f3e10d06005bf2f70b2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d410a838083aeb52c090dee0f9878a8baa52cca3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671216"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504050"
 ---
 # <a name="secure-the-subscriber"></a>保護訂閱者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47671216"
  如需詳細資訊，請參閱[建立交易式發行集的可更新訂閱](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md)和[檢視及修改複寫安全性設定](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   
 > [!IMPORTANT]  
->  對於複寫在發行集資料庫中建立的檢視，為連接指定的帳戶應該只被授與插入、更新及刪除資料的權限，而不應該被授與任何其他權限。 對於發行集資料庫中以 **syncobj_**\<十六進位數字>** 格式命名的檢視，您在每一個訂閱者端設定的帳戶都應該被授與這些檢視的權限。  
+>  對於複寫在發行集資料庫中建立的檢視，為連接指定的帳戶應該只被授與插入、更新及刪除資料的權限，而不應該被授與任何其他權限。 對於發行集資料庫中以 **syncobj_**_\<十六進位數字>_ 格式命名的檢視，您在每一個訂閱者端設定的帳戶都應該被授與這些檢視的權限。  
   
 ## <a name="queued-updating-subscriptions"></a>佇列更新訂閱  
  設定佇列更新訂閱時，請注意與安全性相關的兩方面：  

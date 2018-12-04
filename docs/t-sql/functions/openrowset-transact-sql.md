@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a9d56cab3d149490b176aade356708c15767cf9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db0fbc2125ca748f0426eea95c4c1a059e5b67f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838496"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509956"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -253,13 +253,13 @@ FIELDQUOTE **=** 'field_quote'
 >    訊息 491，層級 16，狀態 1，行 20    
 >    必須為 FROM 子句中的大量資料列集指定相互關聯名稱。    
   
--   `SELECT...FROM OPENROWSET(BULK...)` 陳述式會直接查詢檔案中的資料，而不將資料匯入資料表中。 `SELECT…FROM OPENROWSET(BULK...)` 陳述式也可以使用格式檔案來指定資料行名稱和資料類型，以列出大量資料行別名。  
+-   `SELECT...FROM OPENROWSET(BULK...)` 陳述式會直接查詢檔案中的資料，而不將資料匯入資料表中。 `SELECT...FROM OPENROWSET(BULK...)` 陳述式也可以使用格式檔案來指定資料行名稱和資料類型，以列出大量資料行別名。  
   
 -   使用 `OPENROWSET(BULK...)` 當做 `INSERT` 或 `MERGE` 陳述式中的來源資料表會將資料檔中的資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。 如需詳細資訊，請參閱[使用 BULK INSERT 或 OPENROWSET&#40;BULK...&#41; 來匯入大量資料 &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。  
   
 -   當搭配 `INSERT` 陳述式使用 `OPENROWSET BULK` 選項時，BULK 子句支援資料表提示。 除了一般的資料表提示 (例如 `TABLOCK`) 之外，`BULK` 子句也接受下列特殊化資料表提示：`IGNORE_CONSTRAINTS` (僅忽略 `CHECK` 和 `FOREIGN KEY` 限制式)、`IGNORE_TRIGGERS``KEEPDEFAULTS`和 `KEEPIDENTITY`。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
- 如需如何使用 `INSERT...SELECT * FROM OPENROWSET(BULK...)` 陳述式的資訊，請參閱[資料的大量匯入及匯出 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。 如需大量匯入所執行的資料列插入作業於何時記錄到交易記錄的資訊，請參閱[大量匯入採用最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
+ 如需如何使用 `INSERT...SELECT * FROM OPENROWSET(BULK...)` 陳述式的資訊，請參閱[資料的大量匯入及匯出 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。 如需大量匯入所執行的資料列插入作業於何時記錄到交易記錄的資訊，請參閱 [大量匯入採用最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
 > [!NOTE]  
 >  使用 `OPENROWSET` 時，一定要了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何處理模擬。 如需安全性考量的資訊，請參閱[使用 BULK INSERT 或 OPENROWSET&#40;BULK...&#41; 匯入大量資料 &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。  

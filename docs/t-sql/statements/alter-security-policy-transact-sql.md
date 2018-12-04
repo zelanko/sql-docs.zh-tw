@@ -20,12 +20,12 @@ ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5a8ed3524665bc9cb74e29e20c658ccce8fbb640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1476efcf0060344279a1bd78a25057e25c54bb2a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836626"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519779"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ ms.locfileid: "47836626"
 ALTER SECURITY POLICY schema_name.security_policy_name   
     (  
         { ADD { FILTER | BLOCK } PREDICATE tvf_schema_name.security_predicate_function_name   
-           ( { column_name | arguments } [ , …n ] ) ON table_schema_name.table_name   
+           ( { column_name | arguments } [ , ...n ] ) ON table_schema_name.table_name   
            [ <block_dml_operation> ]  }   
         | { ALTER { FILTER | BLOCK } PREDICATE tvf_schema_name.new_security_predicate_function_name   
-             ( { column_name | arguments } [ , …n ] ) ON table_schema_name.table_name   
+             ( { column_name | arguments } [ , ...n ] ) ON table_schema_name.table_name   
            [ <block_dml_operation> ] }  
         | { DROP { FILTER | BLOCK } PREDICATE ON table_schema_name.table_name }   
         | [ <additional_add_alter_drop_predicate_statements> [ , ...n ] ]  

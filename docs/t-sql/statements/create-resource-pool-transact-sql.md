@@ -20,12 +20,12 @@ ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4dd65e67ebffe024c1cb6e13e84f38d3209dff9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22f087361a987dd423623650ea95d8d749265439
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652956"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538936"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,10 +57,10 @@ CREATE RESOURCE POOL pool_name
 [;]  
   
 <scheduler_range_spec> ::=  
-{ SCHED_ID | SCHED_ID TO SCHED_ID }[,…n]  
+{ SCHED_ID | SCHED_ID TO SCHED_ID }[,...n]  
   
 <NUMA_node_range_spec> ::=  
-{ NUMA_node_ID | NUMA_node_ID TO NUMA_node_ID }[,…n]  
+{ NUMA_node_ID | NUMA_node_ID TO NUMA_node_ID }[,...n]  
 ```  
   
 ## <a name="arguments"></a>引數  

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Plan Cache object
@@ -14,12 +14,12 @@ ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5007256ef1632adf0ecd88e0948fb29899a41d44
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 642355874cb565ee486014e0560e83f580b75aa1
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033345"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52158516"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server 的 Plan Cache 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

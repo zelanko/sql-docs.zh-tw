@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dc31a6b98c12b948dd353ca7f7839f5a1fb0dc04
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e2a96184600b2601fcb75159b4a76c2255deacb3
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696737"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617098"
 ---
 # <a name="manage-dqs-databases"></a>管理 DQS 資料庫
 

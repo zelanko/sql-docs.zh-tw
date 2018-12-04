@@ -3,22 +3,22 @@ title: 資料庫主控台命令 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/16/2017
 ms.prod: sql
+ms.technology: t-sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: t-sql
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 02265d6f-44fb-4e28-af58-115ba1ef6c75
-author: douglaslMS
-ms.author: douglasl
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.openlocfilehash: fe5f39330d7049594a51c7523511c54ff847e0dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74f5f6de736b50aa2fe22933519d145b75190c5d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666699"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526745"
 ---
 # <a name="database-console-commands"></a>資料庫主控台命令
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,4 +33,3 @@ ms.locfileid: "47666699"
 |[DBCC](../../t-sql/database-console-commands/dbcc-transact-sql.md)|[RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md)|  
 |[KILL](../../t-sql/language-elements/kill-transact-sql.md)|[SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)|  
 |[KILL QUERY NOTIFICATION SUBSCRIPTION](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)||  
-  

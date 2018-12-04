@@ -5,19 +5,18 @@ ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b526e1437b310499a84625b1460ba18570c8513d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5d961931ca85eae1eead3a51eadbecd467bfff3
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764126"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616608"
 ---
 # <a name="importing-and-exporting-knowledge"></a>匯入和匯出知識
 

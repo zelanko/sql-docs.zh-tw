@@ -1,22 +1,22 @@
 ---
 title: 將 SQL Server Reporting Services 報表檢視器網頁組件部署至 SharePoint 頁面 | Microsoft Docs
-ms.date: 10/05/2017
+ms.date: 11/15/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6feef76b565f8a1bb738175a06b8b6ab5d68c440
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e9b2d920b55e412f3b9fa119db0a7cf893659fca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813171"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502822"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>將 SQL Server Reporting Services 報表檢視器網頁組件部署至 SharePoint 頁面
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 報表檢視器網頁組件是自訂的網頁組件，可用於檢視 SharePoint 網站中的 SQL Server Reporting Services (原生模式) 報表。 您可以在使用網頁組件來檢視、巡覽、列印並匯出報表伺服器的報表。 報表檢視器網頁組件與 SQL Server Reporting Services 報表伺服器或 Power BI 報表伺服器所處理的報表定義 (.rdl) 檔建立關聯。 此報表檢視器網頁組件不能搭配 Power BI 報表伺服器中裝載的 Power BI 報表使用。
 
@@ -54,7 +54,7 @@ Microsoft 下載中心提供報表檢視器網頁組件。
 2. 執行 [Add-SPSolution](https://technet.microsoft.com/library/ff607552(v=office.16).aspx) 以新增伺服器陣列解決方案。
 
     ```
-    Add-SPSolution –LiteralPath "{path to file}\ReportViewerWebPart.wsp"
+    Add-SPSolution -LiteralPath "{path to file}\ReportViewerWebPart.wsp"
     ```
 
     此指令程式會傳回方案的名稱、方案識別碼及 Deployed=False。 在下個步驟中，您將部署方案。
@@ -64,13 +64,13 @@ Microsoft 下載中心提供報表檢視器網頁組件。
     **SharePoint 2013**
 
     ```
-    Install-SPSolution –Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
+    Install-SPSolution -Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
     ```
 
     **SharePoint 2016**
 
     ```
-    Install-SPSolution –Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}
+    Install-SPSolution -Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}
     ```
 
 ## <a name="activate-feature"></a>啟用功能

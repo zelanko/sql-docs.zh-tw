@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 583f00394043b93eb81d9717d771ea087ce2f21c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cd03ba4b9b0363ef1d8ebe9c3ff0721fc08e3f9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713997"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542272"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ ALTER USER userName
   
 -- SQL Database syntax when connected to a federation member  
 ALTER USER userName  
-     WITH <set_item> [ ,… n ]   
+     WITH <set_item> [ ,... n ]   
 [;]  
   
 <set_item> ::=   
@@ -109,12 +109,12 @@ ALTER USER userName
  *userName*  
  指定在這個資料庫內用來識別使用者的名稱。  
   
- LOGIN **=***loginName*  
+ LOGIN **=**_loginName_  
  變更使用者的安全性識別碼 (SID) 使其符合登入的 SID，以便將使用者重新對應到另一個登入。  
   
  如果 ALTER USER 陳述式是 SQL 批次中的唯一陳述式，Windows Azure SQL Database 會支援 WITH LOGIN 子句。 如果 ALTER USER 陳述式不是 SQL 批次中的唯一陳述式或是在動態 SQL 中執行，則不支援 WITH LOGIN 子句。  
   
- NAME **=***newUserName*  
+ NAME **=**_newUserName_  
  指定新的名稱給這位使用者。 *newUserName* 不可已存在目前資料庫中。  
   
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
@@ -128,15 +128,15 @@ ALTER USER userName
 > [!NOTE]  
 >  只有包含的使用者能夠使用此選項。 請參閱[自主資料庫](../../relational-databases/databases/contained-databases.md)和 [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md) 以取得詳細資訊。  
   
- OLD_PASSWORD **=***'oldpassword'*  
- **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ OLD_PASSWORD **=**_'oldpassword'_  
+ **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  目前的使用者密碼，將由 '*password*' 取代。 密碼會區分大小寫。 密碼區分大小寫。除非您有 **ALTER ANY USER** 權限，否則需要 *OLD_PASSWORD* 才能變更密碼。 需要 *OLD_PASSWORD* 可防止具有 **IMPERSONATION** 權限的使用者變更密碼。  
   
 > [!NOTE]  
 >  只有包含的使用者能夠使用此選項。  
   
- DEFAULT_LANGUAGE **=***{ NONE | \<lcid> | \<語言名稱> | \<語言別名> }*  
+ DEFAULT_LANGUAGE **=**_{ NONE | \<lcid> | \<語言名稱> | \<語言別名> }_  
  **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  指定要指派給使用者的預設語言。 如果這個選項設為 NONE，預設語言將設為資料庫的目前預設語言。 如果稍後變更了資料庫的預設語言，使用者的預設語言會保持不變。 *DEFAULT_LANGUAGE* 可以是本機識別碼 (lcid)、語言名稱或語言別名。  
@@ -228,7 +228,7 @@ GO
 ALTER USER Philip   
 WITH  NAME = Philipe   
     , DEFAULT_SCHEMA = Development   
-    , PASSWORD = 'W1r77TT98%ab@#’ OLD_PASSWORD = 'New Devel0per'   
+    , PASSWORD = 'W1r77TT98%ab@#' OLD_PASSWORD = 'New Devel0per'   
     , DEFAULT_LANGUAGE  = French ;  
 GO  
 ```  

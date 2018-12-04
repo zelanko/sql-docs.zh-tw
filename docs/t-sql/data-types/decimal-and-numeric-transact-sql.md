@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c56435e2b0b576ae33ddb00f631fde8dee608ff7
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 0e487b66d13b4dcaba83219cc1fa6edf8eadc37d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970449"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530024"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 和 numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "50970449"
 具有固定有效位數和小數位數的數值資料類型。 Decimal 和 numeric 是同義字，可以交換使用。
   
 ## <a name="arguments"></a>引數  
-**decimal**[ **(***p*[ **,***s*] **)**] and **numeric**[ **(***p*[ **,***s*] **)**]  
-固定有效位數和小數位數的數字。 當使用最大有效位數時，有效的值是從 - 10^38 +1 到 10^38 - 1。 **decimal** 的 ISO 同義字是 **dec** 和 **dec(***p*, *s***)**。 **numeric** 在功能上相當於 **decimal**。
+**decimal**[ **(**_p_[ **,**_s_] **)**] 和 **numeric**[ **(**_p_[ **,**_s_] **)**]  
+固定有效位數和小數位數的數字。 當使用最大有效位數時，有效的值是從 - 10^38 +1 到 10^38 - 1。 **decimal** 的 ISO 同義字為 **dec** 及 **dec(**_p_, _s_**)**。 **numeric** 在功能上相當於 **decimal**。
   
 p (有效位數)  
 可儲存的最大十進位數總數，小數點左右兩側都包括在內。 有效位數必須是從 1 到最大有效位數 38 的值。 預設有效位數是 18。

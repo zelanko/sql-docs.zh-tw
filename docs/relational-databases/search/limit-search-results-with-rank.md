@@ -20,12 +20,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df88756d363675cd8ff4c22b93174e0eaac647dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b6d92770fd91231bb2f491f38b6c3dc4563d08a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741346"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520997"
 ---
 # <a name="limit-search-results-with-rank"></a>限制 RANK 的搜索結果
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -194,10 +194,10 @@ Rank = Σ[Terms in Query] w ( ( ( k1 + 1 ) tf ) / ( K + tf ) ) * ( ( k3 + 1 ) qt
 Where:   
 w is the Robertson-Sparck Jones weight.   
 In simplified form, w is defined as:   
-w = log10 ( ( ( r + 0.5 ) * ( N – R + r + 0.5 ) ) / ( ( R – r + 0.5 ) * ( n – r + 0.5 ) )  
+w = log10 ( ( ( r + 0.5 ) * ( N - R + r + 0.5 ) ) / ( ( R - r + 0.5 ) * ( n - r + 0.5 ) )  
 N is the number of indexed rows for the property being queried.   
 n is the number of rows containing the word.   
-K is ( k1 * ( ( 1 – b ) + ( b * dl / avdl ) ) ).   
+K is ( k1 * ( ( 1 - b ) + ( b * dl / avdl ) ) ).   
 dl is the property length, in word occurrences.   
 avdl is the average length of the property being queried, in word occurrences.   
 k1, b, and k3 are the constants 1.2, 0.75, and 8.0, respectively.   

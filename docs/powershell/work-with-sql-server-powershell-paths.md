@@ -10,12 +10,12 @@ ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 604934dd4246ee6a941712b6810c9872336183db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 605e7a5b532e03d55b9d15964697597b06793174
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750546"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502456"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>使用 SQL Server PowerShell 路徑
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47750546"
   
 ```  
 $MyDBVar = New-Object Microsoft.SqlServer.Management.SMO.Database  
-$MyDBVar | Get-Member –Type Methods  
+$MyDBVar | Get-Member -Type Methods  
 $MyDBVar | Get-Member -Type Properties  
 ```  
   

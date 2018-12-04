@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc5770d8390c7a7014eec86e7b576d1c64deec23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8738e882455cfdb05630754e94f349d2e5f0204a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596087"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512113"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>複寫、變更追蹤和異動資料擷取 - AlwaysOn 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -207,7 +207,7 @@ ms.locfileid: "47596087"
   
 |||||  
 |-|-|-|-|  
-||**發行者**|**Distributor***\*|**訂閱者**|  
+||**發行者**|**散發者**|**訂閱者**|  
 |**異動**|是<br /><br /> 注意：不包含雙向和相互異動複寫的支援。|是|是| 
 |**P2P**|否|否|否|  
 |**合併式**|是|否|否|  

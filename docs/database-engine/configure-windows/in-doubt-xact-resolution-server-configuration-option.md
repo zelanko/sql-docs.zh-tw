@@ -15,12 +15,12 @@ ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8bf7949d13738df6b78a7b3c8edfebcdea017e46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b42584dfc1e77ad6c9e214e8c755828bd758307
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646466"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513795"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>不能肯定的交易解析伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_configure 'show advanced options', 1
 GO  
 RECONFIGURE  
 GO  
-sp_configure 'in-doubt xact resolution', 2 -– presume abort  
+sp_configure 'in-doubt xact resolution', 2 -- presume abort  
 GO  
 RECONFIGURE  
 GO  
@@ -60,13 +60,13 @@ sp_configure 'show advanced options', 1
 GO  
 RECONFIGURE  
 GO  
-sp_configure 'in-doubt xact resolution', 1 -– presume commit  
+sp_configure 'in-doubt xact resolution', 1 -- presume commit  
 GO  
 reconfigure  
 GO  
-ALTER DATABASE pubs SET ONLINE –- run recovery again  
+ALTER DATABASE pubs SET ONLINE -- run recovery again  
 GO  
-sp_configure 'in-doubt xact resolution', 0 –- back to no assumptions  
+sp_configure 'in-doubt xact resolution', 0 -- back to no assumptions  
 GO  
 sp_configure 'show advanced options', 0  
 GO  

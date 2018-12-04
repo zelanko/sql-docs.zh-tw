@@ -21,12 +21,12 @@ ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79c8828067f72645d9d251111aed40f472c8bf0e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f05d4527b0df0d93a40068aa9a35e977189349dd
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640245"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858583"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>在資料流程元件中引發和定義事件
   元件開發人員可以引發 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 介面中定義的事件子集，其方式是呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 屬性上所公開的方法。 您也可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.EventInfos%2A> 集合來定義自訂事件，然後在執行期間使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> 方法來引發這些事件。 本章節描述如何建立及引發事件，並提供有關您在設計階段的何時應該引發事件的指引。  
@@ -57,7 +57,7 @@ public override void RegisterEvents()
     string [] parameterNames = new string[2]{"RowCount", "StartTime"};  
     ushort [] parameterTypes = new ushort[2]{ DtsConvert.VarTypeFromTypeCode(TypeCode.Int32), DtsConvert.VarTypeFromTypeCode(TypeCode.DateTime)};  
     string [] parameterDescriptions = new string[2]{"The number of rows to sort.", "The start time of the Sort operation."};  
-    EventInfos.Add("StartingSort","Fires when the component begins sorting the rows.",false,ref parameterNames, ref paramterTypes, ref parameterDescriptions);  
+    EventInfos.Add("StartingSort","Fires when the component begins sorting the rows.",false,ref parameterNames, ref parameterTypes, ref parameterDescriptions);  
 }  
 public override void ProcessInput(int inputID, PipelineBuffer buffer)  
 {  
@@ -77,7 +77,7 @@ Public  Overrides Sub RegisterEvents()
   Dim parameterNames As String() = New String(2) {"RowCount", "StartTime"}   
   Dim parameterTypes As System.UInt16() = New System.UInt16(2) {DtsConvert.VarTypeFromTypeCode(TypeCode.Int32), DtsConvert.VarTypeFromTypeCode(TypeCode.DateTime)}   
   Dim parameterDescriptions As String() = New String(2) {"The number of rows to sort.", "The start time of the Sort operation."}   
-  EventInfos.Add("StartingSort", "Fires when the component begins sorting the rows.", False, parameterNames, paramterTypes, parameterDescriptions)   
+  EventInfos.Add("StartingSort", "Fires when the component begins sorting the rows.", False, parameterNames, parameterTypes, parameterDescriptions)   
 End Sub   
   
 Public  Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As PipelineBuffer)   

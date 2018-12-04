@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7676df1bf5d5a556b79cdcfe0797884438150190
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cc42802f6263e7e7609ef6c11aa6dda4114cee97
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701116"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503647"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -593,9 +593,9 @@ WITH ( ONLINE = ON | OFF) \<適用於改變資料行>
   
 -   `WAIT_AT_LOW_PRIORITY` 選項不能以線上改變資料行使用。  
   
--   `ALTER COLUMN … ADD/DROP PERSISTED` 不支援線上改變資料行。  
+-   `ALTER COLUMN ... ADD/DROP PERSISTED` 不支援線上改變資料行。  
   
--   `ALTER COLUMN … ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` 不會受到線上改變資料行的影響。  
+-   `ALTER COLUMN ... ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` 不會受到線上改變資料行的影響。  
   
 -   已啟用變更追蹤，或是屬於合併式複寫發行者之線上改變資料行不支援改變資料表。  
   
@@ -627,7 +627,7 @@ WITH CHECK | WITH NOCHECK
 
 ALTER INDEX *index_name* 指定要變更或改變之 *index_name* 的貯體計數。
   
-語法 ALTER TABLE ... 只有記憶體最佳化資料表支援 ADD/DROP/ALTER INDEX。    
+語法 ALTER TABLE ...只有記憶體最佳化資料表支援 ADD/DROP/ALTER INDEX。    
 
 > [!IMPORTANT]
 > 在未使用 ALTER TABLE 陳述式的情況下，記憶體最佳化資料表上的索引就不支援 [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)、[ALTER INDEX](alter-index-transact-sql.md) 與 [PAD_INDEX](alter-table-index-option-transact-sql.md) 陳述式。
@@ -660,7 +660,7 @@ CONSTRAINT *constraint_name*
 INDEX *index_name*    
 指定從資料表中移除 *index_name*。
   
-語法 ALTER TABLE ... 只有記憶體最佳化資料表支援 ADD/DROP/ALTER INDEX。    
+語法 ALTER TABLE ...只有記憶體最佳化資料表支援 ADD/DROP/ALTER INDEX。    
 
 > [!IMPORTANT]
 > 在未使用 ALTER TABLE 陳述式的情況下，記憶體最佳化資料表上的索引就不支援 [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)、[ALTER INDEX](alter-index-transact-sql.md) 與 [PAD_INDEX](alter-table-index-option-transact-sql.md) 陳述式。
@@ -1008,7 +1008,7 @@ IF EXISTS
  您可以在 ALTER COLUMN 子句中指定資料行資料類型的新大小，以變更資料行的長度、有效位數或小數位數。 如果資料行中有資料存在，則新大小不得小於資料的最大大小。 此外，除非資料行是 **varchar**、**nvarchar** 或 **varbinary** 資料類型，且索引不是 PRIMARY KEY 條件約束的結果，否則不能在索引中定義資料行。 請參閱範例 P。  
   
 ## <a name="locks-and-alter-table"></a>鎖定和 ALTER TABLE  
- ALTER TABLE 中指定的變更會立即實作。 如果變更作業需要修改資料表中的資料列，ALTER TABLE 會更新資料列。 ALTER TABLE 會取得資料表上的結構描述修改 (SCH-M) 鎖定，以確定下列事項：在變更期間，除了在結束時需要非常短暫的 SCH-M 鎖定之線上索引作業以外，沒有其他連接會參考資料表的中繼資料。 在 `ALTER TABLE…SWITCH` 作業中，會同時在來源資料表與目標資料表上取得鎖定。 對資料表所做的修改會記錄下來，且完全可復原。 影響每份極大型資料表中之所有資料列的變更 (例如，卸除資料行或在某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上加入含有預設值的 NOT NULL 資料行) 可能需要很長的時間才能完成及產生多個記錄。 執行這些 ALTER TABLE 陳述式時，要像執行任何影響多個資料列的 INSERT、UPDATE 或 DELETE 陳述式時一樣地小心。  
+ ALTER TABLE 中指定的變更會立即實作。 如果變更作業需要修改資料表中的資料列，ALTER TABLE 會更新資料列。 ALTER TABLE 會取得資料表上的結構描述修改 (SCH-M) 鎖定，以確定下列事項：在變更期間，除了在結束時需要非常短暫的 SCH-M 鎖定之線上索引作業以外，沒有其他連接會參考資料表的中繼資料。 在 `ALTER TABLE...SWITCH` 作業中，會同時在來源資料表與目標資料表上取得鎖定。 對資料表所做的修改會記錄下來，且完全可復原。 影響每份極大型資料表中之所有資料列的變更 (例如，卸除資料行或在某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上加入含有預設值的 NOT NULL 資料行) 可能需要很長的時間才能完成及產生多個記錄。 執行這些 ALTER TABLE 陳述式時，要像執行任何影響多個資料列的 INSERT、UPDATE 或 DELETE 陳述式時一樣地小心。  
   
 ### <a name="adding-not-null-columns-as-an-online-operation"></a>以線上作業的方式加入 NOT NULL 資料行  
  從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition 開始，當預設值是「執行階段常數」時，加入含有預設值的 NOT NULL 資料行就是線上作業。 這表示，不論資料表中的資料列數目為何，此作業幾乎會立即完成。 這是因為資料表中的現有資料列不會在作業期間更新。而是，預設值只會儲存在資料表的中繼資料內，而且存取這些資料列的查詢會視需要查閱此值。 這種行為是自動的。不需要任何額外的語法，即可實作超越 ADD COLUMN 語法的線上作業。 執行階段常數是一種運算式，它會在執行階段針對資料表中的每個資料列產生相同的值，不論其決定性為何。 例如，常數運算式 "My temporary data" 或系統函數 GETUTCDATETIME() 都是執行階段常數。 相反地，`NEWID()` 或 `NEWSEQUENTIALID()` 函數不是執行階段常數，因為系統會針對資料表中的每個資料列產生唯一值。 加入含有非執行階段常數之預設值的 NOT NULL 資料行一律以離線方式執行，而且系統會在作業期間取得獨佔 (SCH-M) 鎖定。  

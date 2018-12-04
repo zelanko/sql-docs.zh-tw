@@ -22,12 +22,12 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1e28639c3e0f167c61f63c4d63eadf703609b54b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf6c6caf1162c3b2257ffea9c051fa7634250fd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603516"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507256"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>有效位數、小數位數和長度 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -63,10 +63,10 @@ ms.locfileid: "47603516"
   
 \* 結果有效位數及小數位數的絕對最大值為 38。 當結果有效位數大於 38 時，會縮小至 38，並會縮減對應的小數位數，以防止截斷結果的整數部分。 在例如乘法或除法等某些案例中，為保持十進位有效位數，將不會縮小比例因素 (雖然可能會引發溢位錯誤)。
 
-在加法跟減法運算中，我們需要 `max(p1 – s1, p2 – s2)` 位置來儲存十進位數字的整數部分。 若沒有足夠的空間儲存它們 (即 `max(p1 – s1, p2 – s2) < min(38, precision) – scale`) 時，便會縮小小數位數，以提供整數部分足夠的空間。 其結果的小數位數便是 `MIN(precision, 38) - max(p1 – s1, p2 – s2)`，因此小數部分可能會四捨五入以調整至符合結果的小數位數。
+在加法跟減法運算中，我們需要 `max(p1 - s1, p2 - s2)` 位置來儲存十進位數字的整數部分。 若沒有足夠的空間儲存它們 (即 `max(p1 - s1, p2 - s2) < min(38, precision) - scale`) 時，便會縮小小數位數，以提供整數部分足夠的空間。 其結果的小數位數便是 `MIN(precision, 38) - max(p1 - s1, p2 - s2)`，因此小數部分可能會四捨五入以調整至符合結果的小數位數。
 
 在乘法及除法運算中，我們需要 `precision - scale` 位置來儲存結果的整數部分。 可能會使用下列規則來縮小小數位數：
-1.  若整數部分小於 32，則結果的小數位數會縮小至 `min(scale, 38 – (precision-scale))`，因為它不可大於 `38 – (precision-scale)`。 在此案例中，結果可能會四捨五入。
+1.  若整數部分小於 32，則結果的小數位數會縮小至 `min(scale, 38 - (precision-scale))`，因為它不可大於 `38 - (precision-scale)`。 在此案例中，結果可能會四捨五入。
 1. 若其小於 6 且整數部分大於 32，則小數位數便不會變更。 在此案例中，若無法調整至符合 decimal(38, scale)，則便可能引發溢位錯誤 
 1. 若其大於 6 且整數部分大於 32，則小數位數便會設為 6。 在此案例中，整數部分及小數位數都會縮小，且其結果的類型為 decimal(38, 6)。 結果可能會四捨五入至 6 個小數位數，或是擲回溢位錯誤 (若整數部分無法調整至 32 位數)。
 
@@ -76,7 +76,7 @@ ms.locfileid: "47603516"
 select cast(0.0000009000 as decimal(30,20)) * cast(1.0000000000 as decimal(30,20)) [decimal 38,17]
 ```
 在此案例中，位數 (precision) 為 61，小數位數 (scale) 為 40。
-整數部分 (precision-scale = 21) 小於 32，因此這屬於乘法規則中的案例 (1)，小數位數會計算為 `min(scale, 38 – (precision-scale)) = min(40, 38 – (61-40)) = 17`。 結果類型為 `decimal(38,17)`。
+整數部分 (precision-scale = 21) 小於 32，因此這屬於乘法規則中的案例 (1)，小數位數會計算為 `min(scale, 38 - (precision-scale)) = min(40, 38 - (61-40)) = 17`。 結果類型為 `decimal(38,17)`。
 
 下列運算式會傳回結果 `0.000001` 以符合 `decimal(38,6)`：
 ```sql

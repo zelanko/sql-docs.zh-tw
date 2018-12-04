@@ -5,19 +5,18 @@ ms.date: 06/04/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 679cb9b7ba6b6a3019c1037017ee1b9aa27ecf00
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66a1ad8c326dc6fe221777136edcb01a9b9aa1af
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743106"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617488"
 ---
 # <a name="manage-a-knowledge-base"></a>管理知識庫
 
@@ -32,7 +31,7 @@ ms.locfileid: "47743106"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能開啟知識庫。  
   
 ##  <a name="Manage"></a> 管理知識庫  

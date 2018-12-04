@@ -12,12 +12,12 @@ ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2211e8016beb1850df83135520987140bb5af242
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a783a386f625a6ca02c6a88dd2378963cc3cce27
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796256"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406585"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>暫存預存程序 (Master Data Services)
 
@@ -56,7 +56,7 @@ EXEC[stg].[udp_name_Leaf]
       @VersionName = N'VERSION_1',  
 @LogFlag = 1,  
 @BatchTag = N'batch1'  
-      @UserName=N’domain\user’  
+      @UserName=N'domain\user'  
   
 GO  
   

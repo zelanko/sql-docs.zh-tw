@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f866c9da83c8ae2a6c72b9d176de94bad1aa4589
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 64c65622c52d49ebd0e20c3a84ad43e81fd35da5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021442"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712039"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>編寫部署和管理工作的指令碼
 
@@ -107,7 +107,7 @@ Public Sub Main()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  
@@ -124,7 +124,7 @@ End Sub
 [GenerateDatabaseCreationScript 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
 [GenerateDatabaseRightsScript 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
 [GenerateDatabaseUpgradeScript 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
-[從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+[從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
 [安裝 Reporting Services 原生模式報表伺服器](~/reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)   
 [Reporting Services 報表伺服器 &#40;原生模式&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
 [報表伺服器命令提示字元公用程式 &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   

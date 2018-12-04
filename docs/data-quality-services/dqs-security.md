@@ -5,19 +5,18 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f710dcbd2757b6fd284e0c72c2409de1670af7f8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 91b7f5cd25601dff60705465fadbb80a1b169dca
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699649"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616468"
 ---
 # <a name="dqs-security"></a>DQS 安全性
 

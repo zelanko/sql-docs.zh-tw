@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d762aba3ebb5e0f31dbeccb452b92c8eadb44c64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c316614bff8740e3ae45908776b671f1d7a5ea9f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598216"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523565"
 ---
 # <a name="delete-an-index"></a>刪除索引
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47598216"
   
 -   **使用下列方法刪除索引：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47598216"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要資料表或檢視表的 ALTER 權限。 依預設，這個權限會授與 **系統管理員** 固定伺服器角色以及 **db_ddladmin** 和 **db_owner** 固定資料庫角色。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -86,7 +86,7 @@ ms.locfileid: "47598216"
   
 7.  按一下 [ **關閉**]。  
   
-8.  在 [檔案] 功能表上，選取 [儲存 <資料表名稱>]。  
+8.  在 [檔案] 功能表上，選取 [儲存 _table_name_]。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

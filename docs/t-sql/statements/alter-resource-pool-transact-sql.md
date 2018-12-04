@@ -18,12 +18,12 @@ ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b8d936e14cf2492ae9b9529996e9d28d40d02a9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 711ac97cd2376cc924075d67b2f25ece1a4744e0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856466"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518735"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,10 @@ ALTER RESOURCE POOL { pool_name | "default" }
 [;]  
   
 <scheduler_range_spec> ::=  
-{SCHED_ID | SCHED_ID TO SCHED_ID}[,…n]  
+{SCHED_ID | SCHED_ID TO SCHED_ID}[,...n]  
   
 <NUMA_node_range_spec> ::=  
-{NUMA_node_ID | NUMA_node_ID TO NUMA_node_ID}[,…n]  
+{NUMA_node_ID | NUMA_node_ID TO NUMA_node_ID}[,...n]  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -172,7 +172,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
+ [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   

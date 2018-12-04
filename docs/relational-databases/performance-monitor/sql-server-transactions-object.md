@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Transactions
@@ -14,12 +14,12 @@ ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2f01ab11c76f316d2180bec658dff250d7c39aec
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 31753573d5033a4310c039f016211fa023378e5b
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030035"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52158786"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server 的 Transactions 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

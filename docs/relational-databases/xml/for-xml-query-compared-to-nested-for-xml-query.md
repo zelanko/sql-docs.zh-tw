@@ -14,12 +14,12 @@ ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12ad145e68eb3766bc58f7df7e0d0908b8af0622
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52e2475748a96d8be757890552225061a241d32a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664516"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539090"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>與巢狀 FOR XML 查詢比較的 FOR XML 查詢
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -195,9 +195,9 @@ FOR XML AUTO, TYPE
                 ProductName="Mountain-100 Silver, 42" Color="Silver" />  
       <Production.Product ProductID="773"   
                 ProductName="Mountain-100 Silver, 44" Color="Silver" />  
-        …  
+        ...  
     </ProductModel>  
-     …  
+     ...  
 ```  
   
  如果從產生產品子類別目錄的巢狀 `ELEMENTS` 查詢移除 `FOR XML` 指示詞，整個結果將為屬性中心。 然後您可以無套疊的方式撰寫此查詢 加入 `ELEMENTS` 會使 XML 一部份為屬性中心，一部份為元素中心。 此結果無法由單一層 FOR XML 查詢產生。  

@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 838b55352b4dd2a7de790778914bb11888dce3a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83040a96a96e34e71864a967ecb9ab06632c1376
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847191"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518516"
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -66,8 +66,8 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 |-------|-------|
 |NVARCHAR(MAX) |NVARCHAR(MAX) |
 |VARCHAR(MAX) |VARCHAR(MAX) |
-|NVARCHAR(1…4000) |NVARCHAR(4000) |
-|VARCHAR(1…8000) |VARCHAR(8000) |
+|NVARCHAR(1...4000) |NVARCHAR(4000) |
+|VARCHAR(1...8000) |VARCHAR(8000) |
 |int、bigint、smallint、tinyint、numeric、float、real、bit、decimal、smallmoney、money、datetime、datetime2 |NVARCHAR(4000) |
 
 

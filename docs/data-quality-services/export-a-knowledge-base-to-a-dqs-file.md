@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e3aae70028bca6a3f14a52de728d72055c1c376d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89b1a55d77ea5730d885fcb0c5969e94e4c96199
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684366"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617418"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>將知識庫匯出到 .dqs 檔案
 
@@ -36,7 +35,7 @@ ms.locfileid: "47684366"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能將知識庫匯出到 .dqs 資料檔。  
   
 ##  <a name="Export"></a> 將知識庫匯出到.dqs 檔案  

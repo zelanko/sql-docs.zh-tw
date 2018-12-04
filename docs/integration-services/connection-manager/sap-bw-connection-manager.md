@@ -13,12 +13,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d891d0e4168274d796ca96227802a76c50bf0942
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 38482743b988419f2aa16d874bed5fdc7a60286d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641985"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528432"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 連接管理員
   SAP BW 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的連接管理員元件。 因此，SAP BW 連接管理員會提供 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 來源和目的地元件所需之 SAP Netweaver BW 版本 7 系統的連接 (使用 SAP BW 連線管理員的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 元件只有屬於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Connector 1.1 for SAP BW 封裝一部分的 SAP BW 來源和目的地)。  
@@ -69,7 +69,7 @@ ms.locfileid: "51641985"
   
     -   按兩下 SAP BW 連接管理員。  
   
-         – 或 –  
+         -或-  
   
     -   以滑鼠右鍵按一下 SAP BW 連線管理員，然後選取 [編輯]。  
   

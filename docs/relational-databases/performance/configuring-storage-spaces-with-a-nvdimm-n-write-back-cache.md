@@ -10,12 +10,12 @@ ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8bba028ef8c2d0bcc5c3a3c328cc5be0eabab9c2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: abe4c1e52fbb43f7c2c1ffbe4a7e6c40c45fda78
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665268"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528337"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>設定具有 NVDIMM-N 回寫式快取的儲存空間
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ $pd | Select FriendlyName, MediaType, BusType
  您可以透過包含 PhysicalDisks 的 $pd 變數，輕鬆地使用 New-StoragePool PowerShell Cmdlet 建立存放集區。  
   
 ```  
-New-StoragePool –StorageSubSystemFriendlyName “Windows Storage*” –FriendlyName NVDIMM_Pool –PhysicalDisks $pd  
+New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName NVDIMM_Pool -PhysicalDisks $pd  
 ```  
   
  ![New-StoragePool](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
@@ -62,7 +62,7 @@ New-StoragePool –StorageSubSystemFriendlyName “Windows Storage*” –Friend
  建立集區之後，下一個步驟是對虛擬磁碟進行切割及格式化。 在本例中，只會建立一個虛擬磁碟，而且可以使用 New-Volume PowerShell Cmdlet 簡化此程序：  
   
 ```  
-New-Volume –StoragePool (Get-StoragePool –FriendlyName NVDIMM_Pool) –FriendlyName Log_Space –Size 300GB –FileSystem NTFS –AccessPath S: -ResiliencySettingName Mirror  
+New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyName Log_Space -Size 300GB -FileSystem NTFS -AccessPath S: -ResiliencySettingName Mirror  
 ```  
   
  ![New-Volume](../../relational-databases/performance/media/new-volume.png "New-Volume")  

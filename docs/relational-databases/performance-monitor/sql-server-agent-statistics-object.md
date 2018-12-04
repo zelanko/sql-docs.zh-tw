@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Statistics object
@@ -14,12 +14,12 @@ ms.assetid: ebe92bfa-0721-48aa-9ba6-e7904ad265a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 77e5005778b83b24bd3bf9a64991b2bd8ab3efd2
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 5749f88d7ff8ade460aba1527f707430590855db
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033615"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52158676"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server Agent、Statistics 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

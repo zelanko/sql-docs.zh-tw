@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logging
@@ -16,12 +15,12 @@ ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2f1d9b8d82822616d97a50341ba0e07f393715d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c32c76188ec7a685ecaa117ea303673bf4d3e682
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801866"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616928"
 ---
 # <a name="manage-dqs-log-files"></a>管理 DQS 記錄檔
 

@@ -5,8 +5,7 @@ ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.cdvaluerelations.f1
@@ -14,12 +13,12 @@ ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a60784e5ccbb4bc5c94396a46d2bd2754923eaa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 320f57a1e80a39ae3048c8a08fd991cb643e2dcf
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655686"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617898"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>使用複合定義域中的值關聯
 
@@ -34,7 +33,7 @@ ms.locfileid: "47655686"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能檢視複合定義域中的值關聯。  
   
 ##  <a name="Use"></a> 檢視值關聯  

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - database performance [SQL Server], alerts
@@ -21,12 +21,12 @@ ms.assetid: 0511136a-1b6b-4095-aa45-39e77b67aba2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 180fe1bfbe082d314d78957c3a7201c3f9f2942d
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 2e0829ac63c69e4d2c80cc3553dcf215285c1804
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031393"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52158746"
 ---
 # <a name="create-a-sql-server-database-alert"></a>建立 SQL Server 資料庫警示
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

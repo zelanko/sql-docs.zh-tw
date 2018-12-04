@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d2b4bb2249f0c4a6ec57c037db54c490f3066e2b
-ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
+ms.openlocfilehash: babfa67f96f9514d748e6d87c0230e154468eff4
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757943"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858593"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>設定 PolyBase 存取 SQL Server 中的外部資料
 
@@ -66,7 +66,7 @@ ms.locfileid: "50757943"
     */  
     CREATE EXTERNAL DATA SOURCE SQLServerInstance
     WITH ( 
-    LOCATION = sqlserver://SqlServer,
+    LOCATION = 'sqlserver://SqlServer',
     -- PUSHDOWN = ON | OFF,
       CREDENTIAL = SQLServerCredentials
     );

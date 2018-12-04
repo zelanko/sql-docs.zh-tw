@@ -21,12 +21,12 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8272586fc2621a22ffa6337624fab4414e8229e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d08609edc596006290d5e0bb062701c5f212ff8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770126"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514699"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>資料庫管理員的診斷連接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47770126"
   
 -   DAC 最初會嘗試連接到與登入相關聯的預設資料庫。 連接成功後，您就可以連接到 master 資料庫。 如果預設資料庫離線或是無法使用，連接將會傳回錯誤 4060。 但是，若您使用下列命令來覆寫預設資料庫以連接到 master 資料庫，連接就會成功：  
   
-     **sqlcmd –A –d master**  
+     **sqlcmd -A -d master**  
   
      建議您使用 DAC 連接到 master 資料庫，因為只要啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，就一定可以使用 master。  
   
@@ -93,11 +93,11 @@ ms.locfileid: "47770126"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在啟動期間動態指定 DAC 通訊埠。 連接到預設執行個體時，DAC 會在連接時避免對 SQL Server Browser 服務使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解析通訊協定 (SSRP) 要求。 它會先透過 TCP 通訊埠 1434 連接。 若失敗，則會發出 SSRP 呼叫以取得通訊埠。 若 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 並未接聽 SSRP 要求，則連接要求會傳回錯誤。 請參閱錯誤記錄檔，以了解 DAC 接聽時所使用的通訊埠編號。 若 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的組態可接受遠端管理連接，DAC 就必須以明確的通訊埠編號起始：  
   
- **sqlcmd –S tcp:***\<server>,\<port>*  
+ **sqlcmd -S tcp:***\<server>,\<port>*  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會列出 DAC 的通訊埠編號，依預設為 1434。 若將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為只接受本機 DAC 連接，請利用下列命令使用回送配接器進行連接：  
   
- **sqlcmd –S 127.0.0.1,1434**  
+ **sqlcmd -S 127.0.0.1,1434**  
   
 > [!TIP]  
 >  當搭配 DAC 連接到 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 時，您也必須使用 -d 選項在連接字串中指定資料庫名稱。  
@@ -105,7 +105,7 @@ ms.locfileid: "47770126"
 ## <a name="example"></a>範例  
  在此範例中，系統管理員注意到伺服器 `URAN123` 並未回應，而要診斷問題。 為了進行這項作業，使用者啟動 `sqlcmd` 命令提示字元公用程式，並使用 `URAN123` 來表示 DAC，連接到伺服器 `-A` 。  
   
- `sqlcmd -S URAN123 -U sa -P <xxx> –A`  
+ `sqlcmd -S URAN123 -U sa -P <xxx> -A`  
   
  此時，系統管理員可執行查詢以診斷問題，並盡可能結束未回應的工作階段。  
   

@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4bb8822d29e2dd3270d5947e62bab6fe498f86c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5fd38e30039ee174ed2558a88c1ddc1e3785238d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629506"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514552"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>資料行存放區索引 - 新功能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "47629506"
   
 -   資料行存放區索引支援讀取認可快照集隔離等級 (RCSI) 和快照集隔離 (SI)。 這可讓交易式一致性分析查詢沒有任何鎖定。  
   
--   資料行存放區透過移除刪除的資料列，但不必明確重建索引，來支援索引重組。 `ALTER INDEX … REORGANIZE` 陳述式會根據內部定義的原則，如同線上作業從資料行存放區中移除已刪除的資料列  
+-   資料行存放區透過移除刪除的資料列，但不必明確重建索引，來支援索引重組。 `ALTER INDEX ... REORGANIZE` 陳述式會根據內部定義的原則，如同線上作業從資料行存放區中移除已刪除的資料列  
   
 -   您可以在 AlwaysOn 可讀取次要複本上存取資料行存放區索引。 您可以將分析查詢卸載到 AlwaysOn 次要複本，以改善作業分析的效能。  
   

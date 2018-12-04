@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c573eceaf4f06c2c9302070566aa3c78f2b1be3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 080095d5458b461c6323c215c88c2cd0773d264a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607431"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540333"
 ---
 # <a name="lower-transact-sql"></a>LOWER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ WHERE ListPrice between 11.00 and 20.00;
 Lower                 Upper                  LowerUpper  
 --------------------  ---------------------  --------------------  
 minipump              MINIPUMP               minipump  
-taillights – battery  TAILLIGHTS – BATTERY   taillights - battery
+taillights - battery  TAILLIGHTS - BATTERY   taillights - battery
 ```  
   
 ## <a name="see-also"></a>另請參閱  

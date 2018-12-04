@@ -10,12 +10,12 @@ ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ef4cee8a8f784af0eb8e51b9ac23dc16ecf63bf
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: cd3f0d0c7b8fe29f6ad64cb5d006d2d8917b6cce
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605788"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413655"
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>自動初始化 AlwaysOn 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -194,7 +194,7 @@ CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER
     ADD EVENT sqlserver.hadr_physical_seeding_restore_state_change,
     ADD EVENT sqlserver.hadr_physical_seeding_submit_callback
     ADD TARGET package0.event_file(
-        SET filename=N’autoseed.xel’,
+        SET filename=N'autoseed.xel',
             max_file_size=(5),
             max_rollover_files=(4)
         )

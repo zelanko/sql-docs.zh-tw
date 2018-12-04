@@ -13,12 +13,12 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5bf791d21d9a3997a7284a6fdda7f4e8eab9c66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43edd7fbdaf744ae9c5ea401e28ccef930d91f2d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616030"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506984"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>查閱轉換完整快取模式 - OLE DB 連線管理員
   您可以將查閱轉換設定為使用完整快取模式以及 OLE DB 連接管理員。 在完整快取模式中，參考資料集會在查閱轉換執行之前載入快取。  
@@ -46,17 +46,17 @@ ms.locfileid: "47616030"
   
 7.  在 **[指定如何處理無相符項目的資料列]** 清單中，針對沒有相符項目的資料列選取錯誤處理選項。  
   
-8.  在 [連接] 頁面上，從 **[OLE DB 連接管理員]** 清單中選取連接管理員，或按一下 **[新增]** 建立新的連接管理員。 如需詳細資訊，請參閱 [OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
+8.  在 [連接] 頁面上，從 **[OLE DB 連接管理員]** 清單中選取連接管理員，或按一下 **[新增]** 建立新的連接管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
 9. 執行下列其中一項工作：  
   
     -   按一下 **[使用資料表或檢視]**，然後選取資料表或檢視，或按一下 **[新增]** 建立資料表或檢視。  
   
-         – 或 –  
+         -或-  
   
     -   按一下 **[使用 SQL 查詢的結果]**，然後在 **[SQL 命令]** 視窗中建立查詢，或是按一下 **[建立查詢]** ，使用 **[查詢產生器]** 提供的圖形工具來建立查詢。  
   
-         – 或 –  
+         -或-  
   
     -   或者，按一下 **[瀏覽]** ，從檔案匯入 SQL 陳述式。  
   
@@ -83,8 +83,8 @@ ms.locfileid: "47616030"
 13. 按一下 **[確定]** ，將變更儲存至查閱轉換，然後再執行封裝。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用快取連線管理員以完整快取模式來實作查閱轉換](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
- [以沒有快取或部分快取模式來實作查閱](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [使用快取連接管理員以完整快取模式實作查閱轉換](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
+ [以沒有快取或部分快取模式實作查閱](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services 轉換](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

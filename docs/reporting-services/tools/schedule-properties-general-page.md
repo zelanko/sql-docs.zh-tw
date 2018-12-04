@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ecd386a4fe3004e36d5039a2fe8e98dfcc185033
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 907e3eaa4852979797395317a2db93276c551965
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816506"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712149"
 ---
 # <a name="schedule-properties-general-page"></a>排程屬性 (一般頁面)
   使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 中的 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 頁面即可檢視或修改共用排程。 共用排程可以用來取代報表特定或訂閱特定的排程。 對排程所做的變更會在您儲存排程之後套用。 編輯排程並不會影響目前正在進行中的作業。 如果您編輯排程時，該排程正在使用中，則系統會允許根據該排程觸發的所有目前處理中報表和訂閱繼續完成。  
@@ -31,7 +31,7 @@ ms.locfileid: "47816506"
  4) 以滑鼠右鍵按一下共用排程，然後選取 [屬性]。  
   
 > [!NOTE]  
->並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都提供此功能，而且在您執行沒有此功能的版本時，此頁面並不會出現。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+>並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都提供此功能，而且在您執行沒有此功能的版本時，此頁面並不會出現。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2017 的版本及支援的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
 ## <a name="options"></a>選項。  
  **名稱**  

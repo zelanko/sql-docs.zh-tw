@@ -24,12 +24,12 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8135737f7abe250bfcd29b080b6875efad6286db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8023d72b28ec3ff9e9bafe2423b26620a5046ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676750"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534112"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>媒體集、媒體家族與備份組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ WITH
   
  ![分散在 3 個媒體集磁帶上的第二個備份集](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "分散在 3 個媒體集磁帶上的第二個備份集")  
   
- 當您要還原備份時，可以使用 FILE 選項來指定所要使用的備份。 下列範例示範 FILE **=**<備份集檔案編號>** 子句在還原 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的完整資料庫備份時的用法，並接著示範在相同媒體集上進行差異資料庫備份。 這個媒體集使用三個備份磁帶，分別位於磁帶機 `\\.\tape0`、 `tape1`和 `tape2`。  
+ 當您要還原備份時，可以使用 FILE 選項來指定所要使用的備份。 下列範例示範 FILE **=**_backup_set_file_number_ 子句在還原 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的完整資料庫備份時的用法，並接著示範在相同媒體集上進行差異資料庫備份。 這個媒體集使用三個備份磁帶，分別位於磁帶機 `\\.\tape0`、 `tape1`和 `tape2`。  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  

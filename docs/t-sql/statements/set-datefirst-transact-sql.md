@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1f1edf12b9a13c91c80bdb764ff4a9331015891
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b369aafc68c7bf06ca56e325c036ffa0c7e4341
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737416"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515136"
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ SET DATEFIRST 7 ;
 ```  
   
 ## <a name="arguments"></a>引數  
- *number* | **@***number_var*  
+ *number* | **@**_number_var_  
  這是一個整數，代表一週的第一天。 它可以是下列值之一。  
   
 |ReplTest1|每週的第一天是|  

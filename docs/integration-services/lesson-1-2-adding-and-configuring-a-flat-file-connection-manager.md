@@ -11,12 +11,12 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8ed30954131f756401f054c35992d3339dfddb5
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: cc3bd44753305f7509a8777c48265f3f0edd2f2c
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638415"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617658"
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>課程 1-2 - 新增和設定一般檔案連線管理員
 在這項工作中，您將一般檔案連接管理員加入您剛才建立的封裝中。 一般檔案連接管理員可讓封裝從一般檔案擷取資料。 使用一般檔案連接管理員，您可以指定當封裝從一般檔案擷取資料時，要套用的檔案名稱和位置、地區設定和字碼頁及檔案格式 (包括資料行分隔符號)。 此外，您可以手動指定個別資料行的資料類型，或使用 [建議資料行類型] 對話方塊，將所擷取資料的資料行自動對應至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 資料類型。  
@@ -43,7 +43,7 @@ ms.locfileid: "51638415"
   
     範例資料隨附在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 課程封裝中。 若要下載範例資料和課程封裝，請執行下列動作。  
   
-    1.  導覽至 [Integration Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  導覽至 [Integration Services 產品範例](https://www.microsoft.com/download/details.aspx?id=56827)  
   
     2.  按一下 **[下載]** 索引標籤。  
   

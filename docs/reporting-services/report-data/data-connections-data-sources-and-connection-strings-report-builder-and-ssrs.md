@@ -7,12 +7,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 76d770e5a6e01707eaebef67a1db147719395f64
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e9294579f338034ae7082f8fe05960af4e3a4fc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814011"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394025"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>資料連接、資料來源及連接字串 (報表產生器和 SSRS)
 
@@ -107,7 +107,7 @@ ms.locfileid: "51814011"
 |Azure SQL Database|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|將資料來源類型設定為 **Microsoft Azure SQL Database**。 如需詳細資訊，請參閱 [SQL Azure 連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)。|  
 |SQL Server 平行資料倉儲|`HOST=<IP address>;database= AdventureWorks; port=<port>`|將資料來源類型設為 **Microsoft SQL Server Parallel Data Warehouse**。 如需詳細資訊，請參閱 [SQL Server 平行資料倉儲連接類型 &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)。|  
 |本機伺服器上的 Analysis Services 資料庫|`data source=localhost;initial catalog=Adventure Works DW`|將資料來源類型設為 **Microsoft SQL Server Analysis Services**。 如需詳細資訊，請參閱 [MDX 的 Analysis Services 連線類型 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) 或 [DMX 的 Analysis Services 連線類型 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)。|  
-|具有 Sales 檢視方塊的 Analysis Services 表格式模型資料庫|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|將資料來源類型設為 **Microsoft SQL Server Analysis Services**。 在 cube= 設定中指定檢視方塊名稱。 如需詳細資訊，請參閱 [檢視方塊 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)。|  
+|具有 Sales 檢視方塊的 Analysis Services 表格式模型資料庫|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|將資料來源類型設為 **Microsoft SQL Server Analysis Services**。 在 cube= 設定中指定檢視方塊名稱。 如需詳細資訊，請參閱 [檢視方塊 &#40;SSAS 表格式&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)。|  
 |在原生模式設定之報表伺服器上的報表模型資料來源|`Server=https://myreportservername/reportserver; datasource=/models/Adventure Works`|指定報表伺服器或文件庫 URL 以及報表伺服器資料或文件庫資料夾命名空間中已發行模型的路徑。 如需詳細資訊，請參閱[報表模型連線 &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)。|  
 |在 SharePoint 整合模式設定之報表伺服器上的報表模型資料來源|`Server=https://server; datasource=https://server/site/documents/models/Adventure Works.smdl`|指定報表伺服器或文件庫 URL 以及報表伺服器資料或文件庫資料夾命名空間中已發行模型的路徑。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|將資料來源類型設為 **OLE DB Provider for OLAP Services 8.0**。<br /><br /> 如果將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ConnectTo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 屬性設為 **8.0** ，則可以加快 **2000**資料來源的連接。 若要設定這個屬性，請使用 **[連接屬性]** 對話方塊的 **[進階屬性]** 索引標籤。|  

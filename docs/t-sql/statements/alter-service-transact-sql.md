@@ -21,12 +21,12 @@ ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 40d8904952530525ccebb7f97dd6deba00ff9071
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82c14fd14460f3b134441931493357a33a2cacf4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628928"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508667"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ALTER SERVICE service_name
  *service_name*  
  這是要變更的服務名稱。 您不可指定伺服器、資料庫和結構描述名稱。  
   
- ON QUEUE [ *schema_name***.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  指定這項服務的新佇列。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會從目前的佇列中，將這項服務的所有訊息移到新佇列中。  
   
  ADD CONTRACT *contract_name*  

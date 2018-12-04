@@ -18,12 +18,12 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7598f2c27ba93d2b736315526d5b4e004232d777
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8422db4a4888cf217c674954588c04acad675d9f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733809"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529927"
 ---
 # <a name="manually-prepare-a-database-for-an-availability-group-sql-server"></a>針對可用性群組手動準備資料庫 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47733809"
 ###  <a name="Security"></a> 安全性  
  備份資料庫時， [TRUSTWORTHY 資料庫屬性](../../../relational-databases/security/trustworthy-database-property.md) 將設為 OFF。 因此，新還原資料庫上的 TRUSTWORTHY 一律為 OFF。  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  BACKUP DATABASE 和 BACKUP LOG 權限預設為 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md)。  
   
  當還原的資料庫不存在伺服器執行個體上時，RESTORE 陳述式就需要 CREATE DATABASE 權限。 如需詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-transact-sql.md)備份。  
@@ -258,7 +258,7 @@ Backup-SqlDatabase -Database "MyDB1" -BackupAction "Log" -BackupFile "\\share\ba
 # Restore database backup   
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
 # Restore log backup   
-Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery –ServerInstance "DestinationMachine\Instance"  
+Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
   
 ```  
   

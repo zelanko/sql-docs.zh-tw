@@ -25,12 +25,12 @@ ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 73a1c310ce9f18dee10e3cd78003e90468b98122
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 441a94486a663c0709af8f083869f1c4d538cc92
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607707"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412365"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -127,17 +127,17 @@ SET @OrderMsg = < construct message as appropriate for the application > ;
   
 BEGIN DIALOG @dialog_handle1  
 FROM SERVICE [//InitiatorDB/InitiatorService]  
-TO SERVICE '//TargetDB1/TargetService’  
+TO SERVICE '//TargetDB1/TargetService'  
 ON CONTRACT [//AllDBs/OrderProcessing] ;  
   
 BEGIN DIALOG @dialog_handle2  
 FROM SERVICE [//InitiatorDB/InitiatorService]  
-TO SERVICE '//TargetDB2/TargetService’  
+TO SERVICE '//TargetDB2/TargetService'  
 ON CONTRACT [//AllDBs/OrderProcessing] ;  
   
 BEGIN DIALOG @dialog_handle3  
 FROM SERVICE [//InitiatorDB/InitiatorService]  
-TO SERVICE '//TargetDB3/TargetService’  
+TO SERVICE '//TargetDB3/TargetService'  
 ON CONTRACT [//AllDBs/OrderProcessing] ;  
   
 SEND ON CONVERSATION (@dialog_handle1, @dialog_handle2, @dialog_handle3)  

@@ -58,7 +58,7 @@ items:
 - name: Reporting Services
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
 - name: 機器學習服務
-  href: ../advanced-analytics/what-is-sql-server-machine-learning.md
+  href: ../advanced-analytics/index.md
 - name: SQL Server 移轉小幫手
   href: ../ssma/sql-server-migration-assistant.md
 - name: Data Migration Assistant
@@ -116,9 +116,9 @@ items:
       href: partner-dev-sql-server.md
   - name: 使用 Help Viewer 的本機內容
     href: sql-server-help-installation.md
-ms.openlocfilehash: 4ba749e86c1ab87aab0d55324a4ad39c83be65e7
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 3afe0c201dcbf8f0f90fd6cec3149c26f4f0ee1c
+ms.sourcegitcommit: 0395ffeb6e51b5d653fa23673e564c4c0cfe4f57
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702460"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52717261"

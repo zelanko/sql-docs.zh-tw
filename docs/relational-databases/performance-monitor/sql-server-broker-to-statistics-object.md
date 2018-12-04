@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Broker Transmission Object object
@@ -14,12 +14,12 @@ ms.assetid: b5bc5dde-e540-4848-8aa3-5735c51df2fb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e65e3b09d7b99e694bf3cf9b1cc1f5481d600720
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 5dbf71d0b68654776783929cd59b475627747684
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029155"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52158296"
 ---
 # <a name="sql-server-broker-to-statistics-object"></a>SQL Server 的 Broker TO Statistics 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

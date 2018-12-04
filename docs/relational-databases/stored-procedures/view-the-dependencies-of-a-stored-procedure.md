@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5685c3f7b24422e17a5315f89e1b36c2e415297c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a4f5357e9645eb5ab1e55db96ae0138144ded8b9
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709086"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617738"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>檢視預存程序的相依性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47709086"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  系統函數： **sys.dm_sql_referencing_entities**  
  需要受參考實體的 CONTROL 權限和 sys.dm_sql_referencing_entities 的 SELECT 權限。 當受參考實體為資料分割函數時，便需要資料庫的 CONTROL 權限。 根據預設，SELECT 權限會授與 public。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47709086"
 ##  <a name="Procedures"></a> 如何檢視預存程序的相依性  
  您可以使用下列其中一項：  
   
--   [Transact-SQL](#SSMSProcedure)  
+-   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
@@ -157,7 +157,7 @@ ms.locfileid: "47709086"
     SELECT referenced_schema_name, referenced_entity_name,  
     referenced_minor_name,referenced_minor_id, referenced_class_desc,  
     is_caller_dependent, is_ambiguous  
-    FROM sys.dm_sql_referencing_entities ('Purchasing.uspVendorAllInfo', 'OBJECT');  
+    FROM sys.dm_sql_referenced_entities ('Purchasing.uspVendorAllInfo', 'OBJECT');  
     GO  
     ```  
   

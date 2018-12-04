@@ -14,12 +14,12 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d71d22599d95cb55f1d7ca6f916987c6a462cda1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5826cdd783e7dd50a80d3e3a495dfffd16144f53
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641636"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503236"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>排序合併和合併聯結轉換的資料
   在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]中，「合併」和「合併聯結」轉換需要針對其輸入排序的資料。 輸入資料必須實際排序，且必須在來源中或上游轉換中設定輸出和輸出資料行的排序選項。 如果排序選項表示資料已排序，但實際上資料並未排序，則合併或合併聯結作業的結果可能無法預測。  
@@ -39,7 +39,7 @@ ms.locfileid: "47641636"
   
      「排序」轉換會使用 Windows 定序來排序字串值。  
   
-     – 或 –  
+     -或-  
   
 -   使用 Transact-SQL CAST 運算子，先將 **varchar** 值轉換成 **nvarchar** 值，再使用 Transact-SQL ORDER BY 子句來排序資料。  
   

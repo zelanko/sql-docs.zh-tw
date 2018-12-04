@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1c391d200e5e992572b27e8d99c92498e0ba297e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: e04bdc6edaf53e73c7f26dd85a512dbda369ebb1
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031877"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711960"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱是在特定時間，或是為了回應某個事件時，以您指定的檔案格式所傳遞之報表組態。 例如，在每個星期三將 MonthlySales.rdl 報表以 Microsoft Word 文件儲存至檔案共用。 訂閱可用於排程及自動化報表的傳遞，並可搭配一組特定的報表參數值。  
@@ -33,7 +33,7 @@ ms.locfileid: "50031877"
   
  ![SSRS 訂閱流程範例](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "SSRS 訂閱流程範例")  
   
- 並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供訂閱。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+ 並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供訂閱。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2017 的版本及支援的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
  **本主題內容：**  
   

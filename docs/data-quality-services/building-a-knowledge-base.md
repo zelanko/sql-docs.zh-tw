@@ -5,19 +5,18 @@ ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbf7c8cdba74c9aa3aae158ec172f5a559384214
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6765a9bd98cc1ae16bd58fd1e3816e8c178d6f92
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773216"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616898"
 ---
 # <a name="building-a-knowledge-base"></a>建立知識庫
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 68cdbca9db8c1495569c8b3688215616fe2ba33f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 740a342a11d7e02a3922fcf846855c4dc4d6e023
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814161"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405895"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>停用或暫停報表與訂閱處理
   有好幾種方法，您可以用來停用或暫停 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表和訂閱處理。 本主題中的方法涵蓋了停用訂閱、中斷資料來源連接等範圍。 並非所有的方法都適用於兩種 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器模式。下表摘要說明這些方法和支援的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器模式：  
@@ -64,7 +64,7 @@ ms.locfileid: "51814161"
 ```  
 #disable specific subscription  
 $rs2010 = New-WebServiceProxy -Uri "https://SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
-$subscriptionID = "subscription guid”;  
+$subscriptionID = "subscription guid";  
 $rs2010.DisableSubscription($subscriptionID);  
   
 ```  

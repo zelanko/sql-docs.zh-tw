@@ -5,8 +5,7 @@ ms.date: 02/29/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.clienthome.f1
@@ -14,12 +13,12 @@ ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0381b06556441757155639a35a667153353b8e11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a7e84ae47e5a9ce6e934e612f546478335d35a1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693334"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616179"
 ---
 # <a name="data-quality-client-home-screen"></a>Data Quality Client 首頁畫面
 

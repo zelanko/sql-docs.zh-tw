@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 61f8db13b3984825d37924a248ffebb31e2a5613
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e0dd324cfbe9fbac48c85c31cea20887d650014c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813111"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402109"
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>訂閱設定與檔案共用帳戶 (Configuration Manager)
   使用 **Configuration Manager 的 [訂閱設定]**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 頁面，針對原生模式報表伺服器與檔案共用訂閱設定檔案共用帳戶。 檔案共用帳戶可讓您在將報表傳遞至檔案共用的多個訂閱中，使用單一認證組合。 當變更認證時，您可針對檔案共用帳戶設定變更，而無須更新每個個別訂閱。  
@@ -43,7 +43,7 @@ ms.locfileid: "51813111"
 > [!IMPORTANT]
 > [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務帳戶控制訂閱傳送，並會與檔案共用訂閱使用的帳戶進行互動。 Windows 安全性功能會限制以下組合：1) [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務帳戶、2) 檔案共用帳戶使用的帳戶。 例如，若針對檔案共用帳戶使用內建作業系統帳戶，則 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務帳戶必須是具模擬權限的另一個服務帳戶。 若設定明確的檔案共用帳戶和密碼，則檔案共用帳戶需要權限以登入執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務的電腦。 若檔案共用帳戶不具必要權限，則使用檔案共用帳戶的訂閱將會失敗，且產生類似下列內容的錯誤訊息：  
 >   
->  `“Failure writing file {file} : An impersonation error occurred using the security context of the current user.”`  
+>  `"Failure writing file {file} : An impersonation error occurred using the security context of the current user."`  
   
 ## <a name="powershell-sample-to-audit-use-of-the-file-share-account"></a>稽核使用檔案共用帳戶的 PowerShell 範例  
  執行下列 Windows PowerShell 指令碼，以列出所有設為使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 檔案共用帳戶 **的**訂閱。 將 `SERVERNAME` 更新為報表伺服器的適當值。  

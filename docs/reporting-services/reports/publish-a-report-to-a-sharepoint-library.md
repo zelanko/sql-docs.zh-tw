@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b482f472d682a8cc1b78e106e1d9d1c289d9fbb4
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 7043001ee9942ec1e99e329209b56a670274b2ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814281"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527567"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>將報表發行到 SharePoint 文件庫
   若要將報表發行至有設定 SharePoint 整合的 SharePoint 網站，您必須在報表設計師中設定專案屬性。 在專案屬性中，伺服器、報表和共用資料來源的所有參考都必須是完整 URL。 在報表定義中，子報表、鑽研報表和資源 (如網路架構影像) 的所有參考都必須是完整 URLS。  
@@ -28,7 +28,7 @@ ms.locfileid: "51814281"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟現有或新的報表伺服器專案。  
   
-2.  在 **[專案]** 功能表按一下 **[屬性]**。 [*\<專案>***屬性頁**] 對話方塊隨即開啟。  
+2.  在 **[專案]** 功能表按一下 **[屬性]**。 \<專案> [屬性頁] 對話方塊隨即開啟。  
   
 3.  在 **[組態]** 清單中，選取用來建立及發行報表的方案組建組態的名稱。 目前的設定列為 [使用中](\<設定>)。  
   

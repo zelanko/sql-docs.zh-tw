@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32e830639abf73e85051486c8fa542bc0d1842a9
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: ae5faf4c861de4849289fe8752633caca0347976
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560190"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523291"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
     <disjunct> | <comparison>  
   
 <disjunct> ::=  
-        column_name IN (constant ,…)  
+        column_name IN (constant ,...)  
   
 <comparison> ::=  
         column_name <comparison_op> constant  
@@ -110,7 +110,7 @@ CREATE STATISTICS statistics_name
     <disjunct> | <comparison>  
   
 <disjunct> ::=  
-        column_name IN (constant ,…)  
+        column_name IN (constant ,...)  
   
 <comparison> ::=  
         column_name <comparison_op> constant  
@@ -126,7 +126,7 @@ CREATE STATISTICS statistics_name
  *table_or_indexed_view_name*  
  這是要在其上建立統計資料之資料表、索引檢視表或外部資料表的名稱。 若要在另一個資料庫上建立統計資料，請指定限定的資料表名稱。  
   
- *column [ ,…n]*  
+ *column [ ,...n]*  
  要在統計資料中包含的一或多個資料行。 資料行應該由左至右依優先順序排列。 只有第一個資料行用來建立色階分佈圖。 所有資料行都是用於名為密度的跨資料行相互關聯統計資料。  
   
  您可以指定任何可指定為索引鍵資料行的資料行，但下列例外狀況除外：  

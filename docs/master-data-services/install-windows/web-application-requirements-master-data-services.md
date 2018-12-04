@@ -14,12 +14,12 @@ ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 51cd8e352d5400c012fe8dcfe7e6c4c7f6e4ef9b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ba64768a5131fea3f3fee2ef994cdfa274d45695
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696109"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531777"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 應用程式需求 (Master Data Services)
 
@@ -67,7 +67,7 @@ ms.locfileid: "51696109"
 ```powershell  
 Install-WindowsFeature Web-Mgmt-Console, AS-NET-Framework, Web-Asp-Net, Web-Asp-Net45, Web-Default-Doc, Web-Dir-Browsing, Web-Http-Errors, Web-Static-Content, Web-Http-Logging, Web-Request-Monitor, Web-Stat-Compression, Web-Filtering, Web-Windows-Auth, NET-Framework-Core, WAS-Process-Model, WAS-NET-Environment, WAS-Config-APIs  
   
-Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeature –Restart  
+Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeature -Restart  
 ```  
   
  如需 PowerShell 命令的詳細資訊，請參閱 [Install-WindowsFeature](https://technet.microsoft.com/library/jj205467)。  

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server], CPU usage
@@ -23,12 +23,12 @@ ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e2d0f5c497ec996b78212ce0c8176fbf17073683
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 55a1641a6afcd31b6dcef53d01292972e15d371c
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033275"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52158336"
 ---
 # <a name="monitor-cpu-usage"></a>監視 CPU 使用量
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

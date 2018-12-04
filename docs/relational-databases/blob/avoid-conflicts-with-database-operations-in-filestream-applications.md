@@ -13,12 +13,12 @@ ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e36dc896a5f8629464b589b03f457d151766d9f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5967b38a0bcc648bf02a5b3c6fa404b31eaaccf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809676"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540634"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>避免與 FILESTREAM 應用程式中的資料庫作業相衝突
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ dstHandle =  OpenSqlFilestream(dstFilePath, Write, 0,
     transactionToken, cbTransactionToken, 0);  
   
 //Write some date to the FILESTREAM BLOB.  
-WriteFile(dstHandle, updateData, …);  
+WriteFile(dstHandle, updateData, ...);  
   
 //DDL statements will be denied.  
 //DML statements will be denied.  
 //SELECT statements will be allowed. The FILESTREAM BLOB is  
 //returned without the modifications that are made by  
-//WriteFile(dstHandle, updateData, …).  
+//WriteFile(dstHandle, updateData, ...).  
 CloseHandle(dstHandle);  
   
 //DDL statements will be allowed.  

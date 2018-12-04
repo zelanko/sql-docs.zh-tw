@@ -18,12 +18,12 @@ ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d390015877bc930ec70b2b858e077baa5ce920fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b88fa209dba54482de1e113b7b7ee81528b43ab8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650716"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519776"
 ---
 # <a name="deny-type-permissions-transact-sql"></a>DENY 類型權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *permission*  
  指定可以拒絕的類型權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- ON TYPE **::** [ *schema_name***.** ] *type_name*  
+ ON TYPE **::** [ _schema_name_**.** ] *type_name*  
  指定要拒絕其權限的類型。 範圍限定詞 (**::**) 是必要項。 如果未指定 *schema_name*，則使用預設結構描述。 如果指定 *schema_name*，則結構描述範圍限定詞 (**.**) 為必要項目。  
   
  TO \<database_principal>  

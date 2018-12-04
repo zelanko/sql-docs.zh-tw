@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Catalog Metadata
@@ -13,12 +13,12 @@ ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 84a8e5324d5dcb1f2727fbc73d3a9c1f75fda618
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 0474646ae51a8fdabe6ff139c6eff1ec966f8d93
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558365"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52158806"
 ---
 # <a name="sql-server-catalog-metadata-object"></a>SQL Server, Catalog Metadata Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

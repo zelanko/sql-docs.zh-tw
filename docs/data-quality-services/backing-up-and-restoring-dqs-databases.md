@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b2ff315ef171a93a00c3e251b60ceb147e6637aa
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 6c92992f10c20988cedd185185e1d5704815869e
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119815"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617918"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>備份及還原 DQS 資料庫
 

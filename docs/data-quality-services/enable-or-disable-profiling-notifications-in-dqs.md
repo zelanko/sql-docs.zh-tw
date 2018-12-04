@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 helpviewer_keywords:
 - enable notifications
@@ -16,12 +15,12 @@ ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df84ccf152a7170cb4df9e0bb1e8a1893541484e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14b19a2b9174924fd941721f9a7dd1b8764e5bb5
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841587"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617038"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>在 DQS 中啟用或停用分析通知
 
@@ -33,7 +32,7 @@ ms.locfileid: "47841587"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  您必須擁有 DQS_MAIN 資料庫的 dqs_administrator 角色，才能啟用通知。  
   
 ##  <a name="Enable"></a> 啟用或停用分析通知  

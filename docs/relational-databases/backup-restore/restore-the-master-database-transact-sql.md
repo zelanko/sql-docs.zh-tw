@@ -13,12 +13,12 @@ ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a99c6f0f1e583afe023823ab2e46e3d142a5e7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08da0ac24a7999235efc6150d313ca2bb2ae0ea7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633786"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502200"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>還原 master 資料庫 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47633786"
  下列範例會在預設伺服器執行個體上還原 `master` 資料庫。 此範例假設伺服器執行個體已經在單一使用者模式中執行。 此範例會啟動 `sqlcmd` ，並執行 `RESTORE DATABASE` 陳述式，從磁碟裝置還原 `master` 的完整資料庫備份： `Z:\SQLServerBackups\master.bak`。  
   
 > [!NOTE]  
->  對於具名執行個體，**sqlcmd** 命令必須指定 **-S**\<電腦名稱>**\\\<執行個體名稱> 選項。  
+>  對於具名執行個體，**sqlcmd** 命令必須指定 **-S**_\<電腦名稱>_\\*\<執行個體名稱>* 選項。  
   
 ```  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47633786"
  [完整資料庫還原 &#40;簡單復原模式&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [完整資料庫還原 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [孤立的使用者疑難排解 &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)   
- [資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [重建系統資料庫](../../relational-databases/databases/rebuild-system-databases.md)   
  [Database Engine 服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)   
  [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)   

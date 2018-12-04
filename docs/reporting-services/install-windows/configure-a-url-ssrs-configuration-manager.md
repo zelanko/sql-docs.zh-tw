@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 403946b29ebda9e8023b8f156daac9fbb9202df4
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 2638e15f21d21563d639b2597ad30b6597f9ecd1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813351"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509521"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>設定 URL (SSRS 組態管理員)
   使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或報表伺服器 Web 服務之前，您至少必須為每一個應用程式設定一個 URL。 如果您在「僅限檔案」模式下安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (意即在安裝精靈的 [報表伺服器安裝選項] 頁面中選取 [安裝但不設定伺服器] 選項)，就一定要設定 URL。 如果您在預設組態中安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，就表示已經為每一個應用程式設定了 URL。  
@@ -76,7 +76,7 @@ ms.locfileid: "51813351"
   
     -   從命令提示字元輸入下列命令，以傳回所使用的 TCP 通訊埠清單：  
   
-         `netstat –anp tcp`  
+         `netstat -anp tcp`  
   
     -   請檢閱 Microsoft 技術支援文件 [TCP/IP 連接埠指派資訊](https://support.microsoft.com/kb/174904)，以閱讀有關 TCP 通訊埠指派以及已知通訊埠 (0 到 1023)、已註冊的通訊埠 (1024 到 49151) 和動態或私人通訊埠 (49152 到 65535) 之間差異的資訊。  
   

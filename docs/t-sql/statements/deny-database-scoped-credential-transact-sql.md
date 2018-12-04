@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bea99935468b3da3e2ca101a328df85c70a857a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4074d587bd170351c00a71bca81f6169b1cc021f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656046"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506104"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY 資料庫範圍認證 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ DENY permission  [ ,...n ]
  *permission*  
  指定可在資料庫範圍認證拒絕的權限。 如下所列。  
   
- ON DATABASE SCOPED CREDENTIAL **::***credential_name*  
+ ON DATABASE SCOPED CREDENTIAL **::**_credential_name_  
  指定拒絕權限的資料庫範圍認證。 需要範圍限定詞 "::"。  
   
  *database_principal*  

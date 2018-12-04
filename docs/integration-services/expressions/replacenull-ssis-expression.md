@@ -11,12 +11,12 @@ ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 532e739a550f1ce0d5045bd1f896a92e70e291aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23d07daa8b67edc171dce033c3e46ebc8f9a9f1c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715606"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419889"
 ---
 # <a name="replacenull-ssis-expression"></a>REPLACENULL (SSIS 運算式)
   如果第一個運算式參數的值為 NULL，則會傳回第二個運算式參數的值，否則會傳回第一個運算式的值。  
@@ -58,7 +58,7 @@ REPLACENULL(MyColumn, "1900-01-01")
 >  下列範例會示範 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]/[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]的作法。  
   
 ```  
-(DT_DBTIMESTAMP) (ISNULL(MyColumn) ? “1900-01-01” : MyColumn)   
+(DT_DBTIMESTAMP) (ISNULL(MyColumn) ? "1900-01-01" : MyColumn)   
 ```  
   
   

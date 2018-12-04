@@ -5,7 +5,7 @@ ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server], setting the refresh interval
@@ -16,12 +16,12 @@ ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a7104521d3cd5388fb2468d52edb35d7b8619178
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 88180f23108dbc8d930dd51cd3bb44d21c69567b
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033235"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52158966"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>開啟活動監視器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

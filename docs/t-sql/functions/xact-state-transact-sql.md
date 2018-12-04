@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d74e1ebfb3f1d8e2bc36c2a4bd0432a830934b5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f72bda649e317b5c08638f959e6b7600aac72a88
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799336"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530526"
 ---
 # <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ XACT_STATE()
  XACT_STATE 和 @@TRANCOUNT 函式都可用來偵測目前的要求是否有使用中的使用者交易。 @@TRANCOUNT 無法用來判斷交易是否已分類為無法認可的交易。 XACT_STATE 無法用來判斷是否有巢狀交易。  
   
 ## <a name="examples"></a>範例  
- 下列範例會在 `XACT_STATE` 建構之 `CATCH` 區塊中使用 `TRY…CATCH`，來決定要認可或回復交易。 由於 `SET XACT_ABORT` 是 `ON`，因此，條件約束違規錯誤會使交易進入無法認可的狀態。  
+ 下列範例會在 `XACT_STATE` 建構之 `CATCH` 區塊中使用 `TRY...CATCH`，來決定要認可或回復交易。 由於 `SET XACT_ABORT` 是 `ON`，因此，條件約束違規錯誤會使交易進入無法認可的狀態。  
   
 ```  
 USE AdventureWorks2012;  

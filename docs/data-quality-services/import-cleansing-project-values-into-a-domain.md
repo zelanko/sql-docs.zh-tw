@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.importprojectvalues.f1
@@ -14,12 +13,12 @@ ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a79a860b30a94c5514c91922354a9a82c30e4148
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5f87200afad4a7026f763cdf5eecf34160082ce
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647716"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617368"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>將清理專案值匯入定義域中
 
@@ -37,7 +36,7 @@ ms.locfileid: "47647716"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能將清理程序期間所收集的資料品質知識匯入定義域中。  
   
 ##  <a name="Import"></a> 匯入清理專案值  

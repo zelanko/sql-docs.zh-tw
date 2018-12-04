@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce3b05fb49206be29106bb84b2e4291f337aa261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dca735754367f7ca69fb36f6e5437e421c55a30
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635436"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537596"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>檢視同等於 SQL 追蹤事件類別的擴充事件項目
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47635436"
   
 -   從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的查詢編輯器執行下列查詢：  
   
-    ```  
+    ```sql  
     USE MASTER;  
     GO  
     SELECT DISTINCT  
@@ -62,7 +62,7 @@ ms.locfileid: "47635436"
     -   SQL 追蹤資料行對應到與「擴充事件」事件相關聯的其中一個資料欄位。  
   
         > [!NOTE]  
-        >  每一個「擴充事件」事件都有一組預設資料欄位，這些欄位會自動包含在結果集內。  
+        > 每一個「擴充事件」事件都有一組預設資料欄位，這些欄位會自動包含在結果集內。  
   
     -   此動作資料行並沒有有意義的「擴充事件」同等項目。 其中一個範例就是 SQL 追蹤中的 EventClass 資料行。 「擴充事件」中不需要此資料行，因為事件名稱有相同的用途。  
   
