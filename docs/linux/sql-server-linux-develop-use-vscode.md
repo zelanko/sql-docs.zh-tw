@@ -23,7 +23,7 @@ ms.locfileid: "51033625"
 
 本文示範如何使用**mssql** Visual Studio Code （VS Code），開發 SQL Server 資料庫的擴充功能。
 
-Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 圖形化的程式碼編輯器。 [ **Mssql**適用於 VS Code 的延伸模組]可讓您連接到 SQL Server，使用 TRANSACT-SQL (T-SQL)、 查詢和檢視結果。
+Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 圖形化的程式碼編輯器。 [**Mssql**適用於 VS Code 的延伸模組] 可讓您連接到 SQL Server，使用 TRANSACT-SQL (T-SQL)、 查詢和檢視結果。
 
 ## <a name="install-vs-code"></a>安裝 VS Code
 1. 如果尚未安裝 VS Code[下載並安裝 VS Code]您的電腦上。
@@ -147,7 +147,7 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
 
 2. 按下**F1**顯示命令選擇區。
 
-3. 在命令選擇區輸入 **sql** 以顯示 SQL 命令，或輸入 **sqluse** 以顯示 **MS SQL:Use Database** 命令。
+3.  在命令選擇區輸入 **sql** 以顯示 SQL 命令，或輸入 **sqluse** 以顯示 **MS SQL:Use Database** 命令。
 
 4. 按一下  **MS sql: use-cdata 資料庫**，然後選取**TutorialDB**資料庫。 這是在上一節中建立新資料庫變更的內容。
 

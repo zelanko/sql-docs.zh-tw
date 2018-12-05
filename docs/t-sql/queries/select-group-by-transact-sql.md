@@ -33,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd0f0157f1f3f0c684dcb8f07af725b97929c10f
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3aafd6afb6e619cb9d4112fe5c7fcd1c1775d84b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906018"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509047"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -334,7 +334,7 @@ GROUP BY 子句支援 SQL-2006 標準內包含的所有 GROUP BY 功能，但是
   
 -   GROUP BY 子句中不允許使用群組集合，除非它們屬於明確 GROUPING SETS 清單的一部分。 例如，標準中允許 `GROUP BY Column1, (Column2, ...ColumnN`)，但是 Transact-SQL 中不允許。  Transact-SQL 支援 `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))` 和 `GROUP BY Column1, Column2, ... ColumnN`，這兩者語意相等。 其語意相當於之前的 `GROUP BY` 範例。 這是為了避免 `GROUP BY Column1, (Column2, ...ColumnN`) 可能錯誤地解譯為 `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))`，這兩者語意不相等。  
   
--   群組集合內不允許使用群組集合。 例如，SQL-2006 標準中允許 `GROUP BY GROUPING SETS (A1, A2,…An, GROUPING SETS (C1, C2, ...Cn))`，但是 Transact-SQL 中不允許。 Transact-SQL 允許 `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` 或 `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`，這兩者在語意上與第一個 GROUP BY 範例相同，而且語法更清楚。  
+-   群組集合內不允許使用群組集合。 例如，SQL-2006 標準中允許 `GROUP BY GROUPING SETS (A1, A2,...An, GROUPING SETS (C1, C2, ...Cn))`，但是 Transact-SQL 中不允許。 Transact-SQL 允許 `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` 或 `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`，這兩者在語意上與第一個 GROUP BY 範例相同，而且語法更清楚。  
   
 -   GROUP BY [ALL/DISTINCT] 只能在包含資料行運算式的簡單 GROUP BY 子句中使用。 不允許搭配 GROUPING SETS、ROLLUP、CUBE、WITH CUBE 或 WITH ROLLUP 建構。 ALL 為預設值而且是隱含的。 也只能在回溯相容的語法中使用。
   
