@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 83346a846e180cd2e77c6ba895bac7a899b1143a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bcbef7c771d402d1532ecaece4426666920f785b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639176"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513386"
 ---
 # <a name="dtexec-utility"></a>dtexec 公用程式
   **dtexec** 命令提示字元公用程式可用於設定及執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 **dtexec** 公用程式可存取所有封裝組態及執行功能，例如參數、連線、屬性、變數、記錄與進度指標。 **dtexec** 公用程式可讓您從下列來源載入封裝： [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器、.ispac 專案檔案、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統。  
@@ -168,7 +168,7 @@ dtexec /option [value] [/option [value]]...
   
      您可以使用 **/ConfigFile** 選項在執行階段載入您未在設計階段指定的其他組態。 但您不可使用 **/ConfigFile** 選項取代您在設計階段指定過的設定值。 如需了解封裝組態套用的方式，請參閱＜ [Package Configurations](../../integration-services/packages/package-configurations.md)＞。  
   
--   **/Conn[ection]** *id_or_name;connection_string [[;id_or_name;connection_string]…]*：(選擇性)。 指定具有指定名稱或 GUID 的連接管理員位於此封裝中，並指定連接字串。  
+-   **/Conn[ection]** *id_or_name;connection_string [[;id_or_name;connection_string]...]*：(選擇性)。 指定具有指定名稱或 GUID 的連接管理員位於此封裝中，並指定連接字串。  
   
      這個選項需要同時指定這兩個參數：在 *id_or_name* 引數中必須提供連接管理員名稱或 GUID，而且在 *connection_string* 引數中必須指定有效的連接字串。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)。  
   
@@ -333,7 +333,7 @@ dtexec /option [value] [/option [value]]...
   
      以下範例會執行封裝，以及為專案參數 (myparam) 提供 myvalue，並為封裝參數 (anotherparam) 提供整數值 12。  
   
-     `Dtexec /isserver “SSISDB\MyFolder\MyProject\MyPackage.dtsx” /server “.” /parameter $Project::myparam;myvalue /parameter anotherparam(int32);12`  
+     `Dtexec /isserver "SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "." /parameter $Project::myparam;myvalue /parameter anotherparam(int32);12`  
   
      您也可以使用參數設定連接管理員屬性。 使用 CM 前置詞代表連接管理員參數。  
   
@@ -625,7 +625,7 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
  下列範例顯示如何使用 **/ISServer** 選項，以及設定專案和連接管理員參數。  
   
 ```  
-/Server localhost /ISServer “\SSISDB\MyFolder\Integration Services Project1\Package.dtsx” /Par "$Project::ProjectParameter(Int32)";1 /Par "CM.SourceServer.InitialCatalog";SourceDB  
+/Server localhost /ISServer "\SSISDB\MyFolder\Integration Services Project1\Package.dtsx" /Par "$Project::ProjectParameter(Int32)";1 /Par "CM.SourceServer.InitialCatalog";SourceDB  
   
 ```  
   

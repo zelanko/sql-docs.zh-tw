@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: bb130bbf8c3c2e66bd5b64458ca5f07b83f9b532
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: adf5a2daee8231746a3ed364619f511f05d011f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606768"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405223"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>變更資料庫相容性層級並使用查詢存放區
 
@@ -30,7 +30,7 @@ ms.locfileid: "51606768"
   
 - 因為升級是單向作業 (不可能降級檔案格式)，所以可以將啟用新功能區隔到資料庫內的個別作業。 設定可還原為先前的資料庫相容性層級。  新的模型可減少必須在中斷期間發生的事項數目。  
   
-- 查詢處理器的變更會有複雜的影響。 即使對系統進行「良好」變更對多數工作負載而言可能有益，但可能造成其他工作負載的重要查詢發生無法接受的迴歸。 將此邏輯與升級程序區隔可讓功能 (例如查詢存放區) 快速降低計畫選擇迴歸，或甚至在生產伺服器中予以完全避免。  
+- 查詢處理器的變更會有複雜的影響。 即使對系統進行「良好」變更對多數工作負載而言可能有益，但可能造成其他工作負載之重要查詢發生無法接受的迴歸。 將此邏輯與升級程序區隔可讓功能 (例如查詢存放區) 快速降低計畫選擇迴歸，或甚至在生產伺服器中予以完全避免。  
   
 > [!IMPORTANT]  
 > 附加或還原資料庫以及就地升級之後，[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 預期會有下列行為：

@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cb85fe53517bcbed16ff86be801578c6d80d21d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4c69b0ebfe9750d904e46ee3e6bdc7665ef5d0b7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642903"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398831"
 ---
 # <a name="specify-a-breakpoint-action"></a>指定中斷點動作
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51642903"
   
  列印訊息是在 [列印訊息] 選項中指定，並指定為文字字串，其中的運算式包含來自偵錯中 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的資訊。 運算式包含：  
   
--   以大括號 ({}) 括住的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。 運算式可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變數、參數和內建函數。 範例包括 {@MyVariable}、{@NameParameter}、{@@SPID} 或 {SERVERPROPERTY(‘ProcessID’)}。  
+-   以大括號 ({}) 括住的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。 運算式可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變數、參數和內建函數。 範例包括 {@MyVariable}、{@NameParameter}、{@@SPID} 或 {SERVERPROPERTY('ProcessID')}。  
   
 -   下列其中一個關鍵字：  
   
@@ -44,7 +44,7 @@ ms.locfileid: "51642903"
   
     4.  $FUNCTION 傳回設定中斷點之預存程序或使用者定義函數的名稱。 如果中斷點是在編輯器視窗中設定，$FUNCTION 會傳回編輯中指令碼檔案的名稱。  
   
-    5.  $PID 與 $PNAME 會傳回執行 Database Engine 執行個體且執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 之作業系統處理序的識別碼及名稱。 $PID 和 SERVERPROPERTY(‘ProcessID’) 傳回相同的識別碼，不同之處在於 $PID 是十六進位值，而 SERVERPROPERTY(‘ProcessID’) 是十進位值。  
+    5.  $PID 與 $PNAME 會傳回執行 Database Engine 執行個體且執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 之作業系統處理序的識別碼及名稱。 $PID 和 SERVERPROPERTY('ProcessID') 傳回相同的識別碼，不同之處在於 $PID 是十六進位值，而 SERVERPROPERTY('ProcessID') 是十進位值。  
   
     6.  $TID 與 $TNAME 會傳回執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次之作業系統執行緒的識別碼及名稱。 執行緒與執行 Database Engine 執行個體的處理序相關聯。 $TID 與 SELECT kpid FROM sys.sysprocesses WHERE spid = @@SPID 傳回相同的值，不同之處在於 $TID 是十六進位值，而 kpid 是十進位值。  
   

@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3f973f4894eb79456376250a838b9e71745a83c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f79ccd9b759275f3811ed0de2cb84114ce0609f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678966"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501982"
 ---
 # <a name="designate-a-fail-safe-operator"></a>指定保全操作員
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47678966"
   
 -   **若要使用下列項目指定保全操作員：**  
   
-    [Transact-SQL](#SSMSProcedure)  
+    [SQL Server Management Studio](#SSMSProcedure)  
   
 ## <a name="BeforeYouBegin"></a>開始之前  
   

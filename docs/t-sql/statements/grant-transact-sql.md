@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 256fd27b738070b1f18e77cd89b0fe8e75fbf952
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6105d05a89ad05b0b20d45cb67f394796811e0ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779632"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505291"
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -135,7 +135,7 @@ AS *principal*
  sp_helprotect 系統預存程序會報告資料庫層級安全性實體的權限。  
   
 ## <a name="with-grant-option"></a>WITH GRANT OPTION  
- **GRANT** … **WITH GRANT OPTION** 會指定接收權限的安全性主體能夠將指定的權限授與其他安全性帳戶。 當接收權限的主體是角色或 Windows 群組時，如果物件權限需要進一步授與非群組或角色成員的使用者，就必須使用 **AS** 子句。 因為只有使用者 (而非群組或角色) 能夠執行 **GRANT** 陳述式，所以群組或角色的特定成員必須在授與權限時使用 **AS** 子句來明確叫用角色或群組成員資格。 下列範例顯示如何在授權給角色或 Windows 群組時使用 **WITH GRANT OPTION**。  
+ **GRANT** ...**WITH GRANT OPTION** 會指定接收權限的安全性主體能夠將指定的權限授與其他安全性帳戶。 當接收權限的主體是角色或 Windows 群組時，如果物件權限需要進一步授與非群組或角色成員的使用者，就必須使用 **AS** 子句。 因為只有使用者 (而非群組或角色) 能夠執行 **GRANT** 陳述式，所以群組或角色的特定成員必須在授與權限時使用 **AS** 子句來明確叫用角色或群組成員資格。 下列範例顯示如何在授權給角色或 Windows 群組時使用 **WITH GRANT OPTION**。  
   
 ```  
 -- Execute the following as a database owner  

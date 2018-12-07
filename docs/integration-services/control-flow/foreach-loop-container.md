@@ -31,12 +31,12 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fcaca36529f0a3592a96b943184ef7f26ab59d52
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 12f91e676983cea041d966a0306fb1faf636019b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642229"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505932"
 ---
 # <a name="foreach-loop-container"></a>Foreach 迴圈容器
   「Foreach 迴圈」容器定義封裝中重複的控制流程。 迴圈實作與程式設計語言中 **Foreach** 迴圈的結構類似。 在封裝中，迴圈是使用 Foreach 列舉值啟用。  「Foreach 迴圈」容器會為指定列舉值的每個成員重複控制流程。  
@@ -155,7 +155,7 @@ ms.locfileid: "51642229"
   
     -   若要使用 Foreach SMO 列舉值，請選取現有的 ADO.NET 連接，或按一下 [連接] 清單中的 [新增連接]，然後輸入要使用的字串或按一下 [瀏覽]。 如果按一下 [選取 SMO 列舉] 對話方塊中的 [瀏覽]，請選取要列舉的物件類型及列舉類型，然後按一下 [確定]。  
   
-6.  (選擇性) 按一下 [集合] 頁面上 [運算式] 文字方塊中的瀏覽按鈕 **(…)**，以建立更新屬性值的運算式。 如需詳細資訊，請參閱[加入或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)。  
+6.  (選擇性) 按一下 [集合] 頁面上 [運算式] 文字方塊中的瀏覽按鈕 **(...)**，以建立更新屬性值的運算式。 如需詳細資訊，請參閱[加入或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)。  
   
     > [!NOTE]  
     >  [屬性] 清單中列出的屬性會隨列舉值而不同。  
@@ -213,7 +213,7 @@ ms.locfileid: "51642229"
 |**Foreach ADLS 檔案列舉值**|列舉指定的 Data Lake Store 目錄中的檔案。 選取這個值就會在 [Foreach ADLS 檔案列舉值] 區段中顯示動態選項。|
   
  **運算式**  
- 按一下或展開 **[運算式]** ，即可檢視現有屬性運算式的清單。 按一下省略符號 **(...)** 按鈕以加入列舉值屬性的屬性運算式，或是編輯和評估現有的屬性運算式。  
+ 按一下或展開 **[運算式]** ，即可檢視現有屬性運算式的清單。 按一下省略符號 **(...)** 按鈕以新增列舉值屬性的屬性運算式，或是編輯和評估現有的屬性運算式。  
   
  **相關主題**︰[Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)、[屬性運算式編輯器](../../integration-services/expressions/property-expressions-editor.md)、[運算式產生器](../../integration-services/expressions/expression-builder.md)  
   
@@ -240,11 +240,11 @@ ms.locfileid: "51642229"
  指定要列舉的檔案。  
   
 > [!NOTE]  
->  使用萬用字元 (*) 即可指定要包含在集合中的檔案。 例如，若要包括名稱內含 "abc" 的檔案，可使用下列篩選： \*abc\*。  
+>  使用萬用字元 (*) 即可指定要包含在集合中的檔案。 例如，若要包括名稱內含 "abc" 的檔案，請使用下列篩選：\*abc\*。  
 >   
 >  當您指定副檔名時，此列舉值也會傳回附加其他字元之相同副檔名的檔案 (這個行為與作業系統中 **dir** 命令的行為相同，而且此命令也會針對回溯相容性比較 8.3 檔案名稱)。列舉值的這個行為可能會導致非預期的結果。 例如，您只想要列舉 Excel 2003 檔案，而且指定了 "*.xls"。 不過，此列舉值也會傳回 Excel 2007 檔案，因為這些檔案的副檔名為 ".xlsx"。  
 >   
->  您可以使用運算式指定要包括在集合內的檔案，方法是展開 [集合] 頁面上的 [運算式]，選取 **FileSpec** 屬性，然後按一下省略符號按鈕 (…) 加入屬性運算式。  
+>  您可以使用運算式指定要包括在集合中的檔案，方法是展開 [集合] 頁面上的 [運算式]，選取 **FileSpec** 屬性，然後按一下省略符號按鈕 (...) 來新增屬性運算式。  
   
  **完整**  
  選取即可擷取檔案名稱的完整路徑。 如果在檔案選項中指定萬用字元，則會傳回符合篩選的完整路徑。  

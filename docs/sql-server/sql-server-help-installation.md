@@ -10,18 +10,20 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9a1ae0aac049fef58d8007c26dce6ce355344a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e05a241d81d4a051bd11dc8ce8b80858627afec0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700526"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514527"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 離線說明和說明檢視器
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 您可以使用 SQL Server Management Studio (SSMS) 或 Visual Studio (VS) 中的說明檢視器，從線上來源或磁碟下載並安裝 SQL Server 說明套件，以及進行離線檢視。 本文描述可安裝說明檢視器的工具、如何安裝離線說明內容，以及如何檢視 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]、SQL Server 2016 和 SQL Server 2017 的說明。
+
+一旦內容下載到具有網際網路存取的系統之後，您就可以接著將該內容移轉至沒有網際網路存取的系統。 
 
 > [!NOTE]
 > 結合 SQL Server 2016 和 SQL Server 2017 說明，雖然有些主題適用於特別註記的個別版本。 大部分主題都適用於兩者。
@@ -125,7 +127,8 @@ SSMS 17.x 以及 VS 2015 和 2017 使用說明檢視器 2.x，其支援 SQL Serv
    ![檢視說明](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
    說明目錄會顯示在左側，並在右側顯示選取的說明主題。 
-   
+
+  
 ## <a name="use-help-viewer-v1x"></a>使用說明檢視器 v1.x
 
 舊版 SSMS 和 VS 使用說明檢視器 1.x，其支援 SQL Server 2014 說明。 
@@ -165,13 +168,15 @@ SSMS 17.x 以及 VS 2015 和 2017 使用說明檢視器 2.x，其支援 SQL Serv
    
    ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
    
+
+
 ## <a name="view-online-help"></a>檢視線上說明
 
 線上說明一律會顯示最新內容。 
 
 **在 SSMS 17.x 中檢視 SQL Server 線上說明**
 
-- 在 [說明] 功能表中，按一下 [檢視說明]。 來自 [https://docs.microsoft.com/sql/ https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) 的最新 SQL Server 2016/2017 文件即會在瀏覽器中顯示。 
+- 在 [說明] 功能表中，按一下 [檢視說明]。 來自 [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) 的最新 SQL Server 2016/2017 文件即會在瀏覽器中顯示。 
 
    ![檢視說明](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
@@ -204,6 +209,22 @@ SSMS 17.x 以及 VS 2015 和 2017 使用說明檢視器 2.x，其支援 SQL Serv
 
 >  [!NOTE]
 >  只有在您於線上時，才能使用 F1 說明。 F1 說明沒有離線來源。 
+
+## <a name="systems-without-internet-access"></a>沒有網際網路存取的系統
+一旦您依照[上述步驟](#use-help-viewer-v2x)使用 SQL Server 說明檢視器將離線內容下載到具有網際網路存取的系統之後，您就可以接著將該內容移轉至沒有網際網路存取的系統。 您可以執行下列步驟來達成目的。 
+
+  >[!NOTE]
+  >離線系統上必須安裝支援說明檢視器的軟體，例如 SQL Server Management Studio。 
+
+1. 開啟說明檢視器 (Ctrl + Alt + F1)。
+1. 選取您感興趣的文件。 例如，依 SQL 篩選並選取 SQL Server 技術文件。 
+1. 識別檔案在磁碟上的實體路徑，您可以在**本機存放區路徑**下找到這些檔案。
+1. 使用您的檔案系統總管巡覽至此位置。 
+    1.  預設位置為： `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`
+1. 選取三個資料夾 **ContentStore**、**Incoming**、**IndexStore**，並將其複製到離線系統上相同的位置。 您可能需要使用臨時媒體裝置，例如 USB 或 CD。 
+1. 一旦移動這些檔案之後，請在離線系統上啟動說明檢視器，如此即可使用 SQL Server 技術文件。
+
+![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
    
 
 ## <a name="next-steps"></a>後續步驟

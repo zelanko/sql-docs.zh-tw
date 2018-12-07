@@ -19,12 +19,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ddb4cc58fed64ddb755e797095d72a31b85885a0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 35b990e553116d88764f4fa995935bc4ba90b22d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642005"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512905"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 變數
   變數會儲存 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝及其容器、工作和事件處理常式在執行階段可使用的值。 「指令碼」工作和「指令碼」元件中的指令碼也可以使用變數。 將工作和容器排序成工作流程的優先順序條件約束，可在其條件約束定義含有運算式時使用變數。  
@@ -46,7 +46,7 @@ ms.locfileid: "51642005"
 ## <a name="system-and-user-defined-variables"></a>系統及使用者定義變數  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支援兩種類型的變數：使用者自訂變數和系統變數。 使用者自訂變數由封裝開發人員定義，而系統變數則由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]定義。 您可以根據封裝需要建立許多使用者自訂變數，但無法建立其他系統變數。  
   
- 所有的變數 (系統變數和使用者自訂變數) 都可在「執行 SQL」工作用來將變數對應至 SQL 陳述式之參數的參數繫結中使用。 如需詳細資訊，請參閱[執行 SQL 工作](../integration-services/control-flow/execute-sql-task.md)和[執行 SQL 工作中的參數和傳回碼](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)。  
+ 所有的變數 (系統變數和使用者定義變數) 都可在「執行 SQL」工作用來將變數對應至 SQL 陳述式之參數的參數繫結中使用。 如需詳細資訊，請參閱 [執行 SQL 工作](../integration-services/control-flow/execute-sql-task.md) 和 [執行 SQL 工作中的參數和傳回碼](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)。  
   
 > [!NOTE]  
 >  使用者自訂變數和系統變數的名稱會區分大小寫。  

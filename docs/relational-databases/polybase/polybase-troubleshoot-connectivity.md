@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: 890fc0156200c135b49f695811c983d94c418766
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 13684012e1b5f7bfa17fbaf2fdf2ce5e0af4c72d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270181"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521452"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>對 PolyBase Kerberos 的連線問題進行疑難排解
 
@@ -136,11 +136,11 @@ PolyBase **不**支援 AD 與 MIT 之間的信任關係，而且必須針對 Had
  0020: 1F A0 03 02 01 02 A1 18 30 16 1B 06 6B 72 62 74 ........0...krbt 
  0030: 67 74 1B 0C 41 50 53 48 44 50 4D 53 2E 43 4F 4D gt..CONTOSO.COM 
  0040: A3 82 01 08 30 82 01 04 A0 03 02 01 10 A1 03 02 ....0........... 
- *[…Condensed…]* 
+ *[...Condensed...]* 
  0140: 67 6D F6 41 6C EB E0 C3 3A B2 BD B1 gm.Al...:... 
  Client Principal = admin_user@CONTOSO.COM 
  Server Principal = krbtgt/CONTOSO.COM@CONTOSO.COM 
- *[…Condensed…]* 
+ *[...Condensed...]* 
  [2017-04-25 21:34:34,500] INFO 1639[main] - com.microsoft.polybase.client.HdfsBridge.main(HdfsBridge.java:1579) - Successfully authenticated against KDC server. 
 ```
 
@@ -178,7 +178,7 @@ PolyBase 將會嘗試存取 HDFS，但因為要求未包含必要的服務票證
  0050: 15 73 68 61 73 74 61 2D 68 64 70 32 35 2D 30 30 .hadoop-hdp25-00 
  0060: 2E 6C 6F 63 61 6C A3 82 01 1A 30 82 01 16 A0 03 .local....0..... 
  0070: 02 01 10 A1 03 02 01 01 A2 82 01 08 04 82 01 04 ................ 
- *[…Condensed…]* 
+ *[...Condensed...]* 
  0240: 03 E3 68 72 C4 D2 8D C2 8A 63 52 1F AE 26 B6 88 ..hr.....cR..&.. 
  0250: C4 . 
 ```
@@ -204,7 +204,7 @@ PolyBase 將會嘗試存取 HDFS，但因為要求未包含必要的服務票證
 |javax.security.auth.login.LoginException<br>在 Kerberos 資料庫中找不到用戶端 (6) - CLIENT_NOT_FOUND |    在 core-site.xml 中指定的領域沒有提供的管理服務主體。|
 | javax.security.auth.login.LoginException<br> 總和檢查碼失敗 |    管理服務主體存在，但是密碼不正確。 |
 | 原生組態名稱：C:\Windows\krb5.ini<br>從原生組態載入 | 這不是例外狀況，但是表示 Java 的 krb5LoginModule 在您的電腦上偵測到自訂用戶端組態。 請檢查您的用戶端設定，因為這可能就是造成問題的原因。 |
-| javax.security.auth.login.LoginException<br>java.lang.IllegalArgumentException<br>不合法的主體名稱 admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule：未將任何規則套用至 admin_user@CONTOSO.COM | 對每個 Hadoop 叢集，依照適當規則將屬性 “hadoop.security.auth_to_local” 新增至 core-site.xml。 |
+| javax.security.auth.login.LoginException<br>java.lang.IllegalArgumentException<br>不合法的主體名稱 admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule：未將任何規則套用至 admin_user@CONTOSO.COM | 對每個 Hadoop 叢集，依照適當規則將屬性 "hadoop.security.auth_to_local" 新增至 core-site.xml。 |
 | java.net.ConnectException<br>嘗試存取位於 URI hdfs://10.193.27.230:8020 的外部檔案系統<br>發生連線例外狀況，導致從 IAAS16981207/10.107.0.245 對 10.193.27.230:8020 呼叫失敗 | 針對 KDC 的驗證已成功，但是無法存取 Hadoop 名稱節點。 請檢查名稱節點 IP 及連接埠。 請驗證已在 Hadoop 上停用防火牆。 |
 | java.io.FileNotFoundException<br>檔案不存在：/test/data.csv |    驗證已成功，但是指定的位置不存在。 請先檢查路徑，或先以根 "/" 測試。 |
 
@@ -214,7 +214,7 @@ PolyBase 將會嘗試存取 HDFS，但因為要求未包含必要的服務票證
 
 您可以在 KDC 主機或任何已設定的 KDC 用戶端上，執行  **kadmin.local** > (管理員登入) > **listprincs** ，以檢視所有已向 KDC 註冊的 SPN (包含管理員在內)。 若已正確地將 Hadoop 叢集 Kerberos 化，叢集中為數眾多的每項服務都應該各有一個可用的 SPN (例如 nn、dn、rm、yarn、spnego 等等)根據預設，可以在  **/etc/security/keytabs** 下找到這些 SPN 的對應 keytab 檔案 (密碼替代)。 KDC 的私密金鑰會用來為其加密。  
 
-此外，也請考慮使用  [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) 工具在本機驗證 KDC 上的管理員認證。 範例使用方式為： *kinit identity@MYREALM.COM*。 如果出現輸入密碼的提示即表示存在身分識別。 根據預設，KDC 記錄會位在  **/var/log/krb5kdc.log** 中，其中包括為票證提出的所有要求，包括提出該要求的用戶端 IP。 應該會有兩個要求來自該工具執行所在的 SQL Server 電腦 IP：首先是驗證伺服器對 TGT 的要求 - **AS\_REQ**，其次是票證授與伺服器對 ST 的要求 - **TGS\_REQ** 。
+此外，也請考慮使用  [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) 工具在本機驗證 KDC 上的管理員認證。 範例使用方式為： *kinit identity@MYREALM.COM*。 如果出現輸入密碼的提示即表示存在身分識別。  根據預設，KDC 記錄會位在  **/var/log/krb5kdc.log** 中，其中包括為票證提出的所有要求，包括提出該要求的用戶端 IP。 應該會有兩個要求來自該工具執行所在的 SQL Server 電腦 IP：首先是驗證伺服器對 TGT 的要求 - **AS\_REQ**，其次是票證授與伺服器對 ST 的要求 - **TGS\_REQ** 。
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 

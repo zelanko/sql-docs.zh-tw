@@ -15,12 +15,12 @@ ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8cc09f10e9bad8e5e1d6aebba6fb18736616e85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27acd1fcf2cd79ce7d681f9491ee77ffc7ad9d71
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665617"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503922"
 ---
 # <a name="expressions-page"></a>運算式頁面
   使用 [運算式] 頁面，即可編輯屬性運算式，並存取 [屬性運算式編輯器] 和 [屬性運算式產生器] 對話方塊。  

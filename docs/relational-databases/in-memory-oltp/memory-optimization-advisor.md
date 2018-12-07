@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ffa4178e4e0f5fc26dc7545edce4cf5326c17a5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ff483bc665f974c9cea0379291a4feb9a3fe55d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671402"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507927"
 ---
 # <a name="memory-optimization-advisor"></a>記憶體最佳化 Advisor
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51671402"
   
 -   將資料表和資料移轉至記憶體最佳化 (如果沒有不支援的功能)。  
     
- 如需移轉方法的資訊，請參閱 [記憶體內部 OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。  
+ 如需移轉方法的資訊，請參閱 [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx) (記憶體內部 OLTP - 一般工作負載模式和移轉考量)。  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>使用記憶體最佳化 Advisor 的逐步解說  
  在 **[物件總管]** 中，以滑鼠右鍵按一下您想要轉換的資料表，然後選取 **[記憶體最佳化 Advisor]**。 隨即顯示 **[資料表記憶體最佳化 Advisor]** 的歡迎頁面。  

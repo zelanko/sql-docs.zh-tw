@@ -1,7 +1,7 @@
 ---
 title: SQL 追蹤 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,30 +11,32 @@ ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc3432906e9d96b10def455aea07d4ef22cfe89d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: de20ad37cf5393f2498f00b7d5b1e78bd5285b34
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571447"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439800"
 ---
 # <a name="sql-trace"></a>SQL 追蹤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在 SQL 追蹤中，如果事件是列在追蹤定義中之事件類別的執行個體，這些事件就會被蒐集起來。 您可將這些事件篩選掉，也可以放入分配目的地的佇列中。 目的地可以是檔案或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO)，後者會在用於管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的應用程式中使用這些追蹤資訊。  
+在 SQL 追蹤中，如果事件是列在追蹤定義中之事件類別的執行個體，這些事件就會被蒐集起來。 您可將這些事件篩選掉，也可以放入分配目的地的佇列中。 目的地可以是檔案或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO)，後者會在用於管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的應用程式中使用這些追蹤資訊。  
   
-> [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用擴充事件。  
-  
+> [!IMPORTANT]
+> SQL 追蹤和 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 已淘汱。 包含 Microsoft SQL Server 追蹤和重新執行物件的 *Microsoft.SqlServer.Management.Trace* 命名空間也已淘汱。 
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
+> 請改用擴充事件。 如需[擴充事件](../../relational-databases/extended-events/extended-events.md)的詳細資訊，請參閱[快速入門︰SQL Server 中的擴充事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent 分析工具](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
+
 ## <a name="benefits-of-sql-trace"></a>SQL 追蹤的優點  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所提供的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 系統預存程序可建立 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體的追蹤。 您可以從自己的應用程式中使用這些系統預存程序以手動建立追蹤，而不是使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]建立追蹤。 如此一來，就可以依照您的企業需求撰寫自訂的應用程式。  
+Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所提供的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 系統預存程序可建立 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體的追蹤。 您可以從自己的應用程式中使用這些系統預存程序以手動建立追蹤，而不是使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]建立追蹤。 如此一來，就可以依照您的企業需求撰寫自訂的應用程式。  
   
 ## <a name="sql-trace-architecture"></a>SQL 追蹤架構  
- 「事件來源」可以是任何產生追蹤事件的來源，例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次，或類似死結的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 如需事件的詳細資訊，請參閱 [SQL Server 事件類別參考](../../relational-databases/event-classes/sql-server-event-class-reference.md)。 發生事件之後，如果其事件類別已納入追蹤定義內，追蹤就會蒐集事件資訊。 如果追蹤定義內已針對該事件類別定義了篩選，便會套用篩選並將追蹤事件資訊傳遞給佇列。 佇列中的追蹤資訊會寫入檔案，或由 SMO 在應用程式 (例如 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]) 中使用該資訊。 下列圖表顯示 SQL 追蹤如何在追蹤期間蒐集事件。  
+「事件來源」可以是任何產生追蹤事件的來源，例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次，或類似死結的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 如需事件的詳細資訊，請參閱 [SQL Server 事件類別參考](../../relational-databases/event-classes/sql-server-event-class-reference.md)。 發生事件之後，如果其事件類別已納入追蹤定義內，追蹤就會蒐集事件資訊。 如果追蹤定義內已針對該事件類別定義了篩選，便會套用篩選並將追蹤事件資訊傳遞給佇列。 佇列中的追蹤資訊會寫入檔案，或由 SMO 在應用程式 (例如 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]) 中使用該資訊。 下列圖表顯示 SQL 追蹤如何在追蹤期間蒐集事件。  
   
- ![Database Engine 事件追蹤處理](../../relational-databases/sql-trace/media/tracarch.gif "Database Engine 事件追蹤處理")  
+![Database Engine 事件追蹤處理](../../relational-databases/sql-trace/media/tracarch.gif "Database Engine 事件追蹤處理")  
   
 ## <a name="sql-trace-terminology"></a>SQL 追蹤詞彙  
- 下列詞彙說明 SQL 追蹤的主要概念。  
+下列詞彙說明 SQL 追蹤的主要概念。  
   
  **事件**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體內所發生的動作。  
@@ -70,7 +72,7 @@ ms.locfileid: "51571447"
  在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中，當追蹤儲存至資料表時所建立的資料表。  
   
 ## <a name="use-data-columns-to-describe-returned-events"></a>使用資料行描述傳回的事件  
- SQL 追蹤使用追蹤輸出的資料行來描述追蹤執行時傳回的事件。 下表描述的是 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，這些資料行與 SQL 追蹤使用的資料行相同，同時也會指出預設會選取的資料行。  
+SQL 追蹤使用追蹤輸出的資料行來描述追蹤執行時傳回的事件。 下表描述的是 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，這些資料行與 SQL 追蹤使用的資料行相同，同時也會指出預設會選取的資料行。  
   
 |資料行|資料行編號|Description|  
 |-----------------|-------------------|-----------------|  
