@@ -1,7 +1,7 @@
 ---
 title: sqlcmd 公用程式 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/12/2018
+ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9ba83c8913d9e906925986cc07e3a2816c131cc6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fbda7d318e797bb5336534cf380089d3bc5b7d38
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661237"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712719"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 工用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,10 +50,32 @@ ms.locfileid: "51661237"
 - 在 Windows 指令碼檔案中。
 - 在 SQL Server Agent 作業的作業系統 (Cmd.exe) 作業步驟。
 
-此公用程式會使用 ODBC 來執行 TRANSACT-SQL 批次。 
+此公用程式會使用 ODBC 來執行 TRANSACT-SQL 批次。
+
+## <a name="download-the-latest-version-of-sqlcmd-utility"></a>下載最新版的 sqlcmd 公用程式
+
+**[![下載](../ssdt/media/download.png)下載的 Microsoft 命令列公用程式 15.0.x 適用於 SQL Server (x64) (2.4 MB)](https://go.microsoft.com/fwlink/?linkid=2043518)**
+<br>**[![下載](../ssdt/media/download.png)下載的 Microsoft 命令列公用程式 15.0.x 適用於 SQL Server (x86) (2.2 MB)](https://go.microsoft.com/fwlink/?linkid=2043622)**
+
+命令列工具會公開上市 (GA)，不過，在發佈的安裝程式套件與[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。
+
+**版本資訊**
+
+版本號碼：15.0 <br>
+組建編號：15.0.1000.34<br>
+發行日期： 2018 年 10 月 18 日
+
+SQLCMD 的新版本支援 Azure AD 驗證，包括 SQL Database、 SQL 資料倉儲，以及 Always Encrypted 功能支援 Multi-factor Authentication (MFA)。
+新的 BCP 支援 Azure AD 驗證，包括 SQL Database 和 SQL 資料倉儲的 Multi-factor Authentication (MFA) 支援。
+
+**系統需求**Windows 10，Windows 7、 Windows 8、 Windows 8.1、 Windows Server 2008、 Windows Server 2008 R2、 Windows Server 2008 R2 SP1，Windows Server 2012 中，Windows Server 2012 此 R2 元件同時需要[Windows 安裝程式4.5](https://www.microsoft.com/download/details.aspx?id=8483)並[Microsoft ODBC Driver for SQL Server 17.2](https://www.microsoft.com/download/details.aspx?id=56567)。
  
+若要檢查的 SQLCMD 版本執行`sqlcmd -?`命令並確認該 15.0.1000.34 版本或更高的使用中。
+
+
+
 > [!NOTE]
-> sqlcmd 公用程式的最新版本 (Web 版本) 可從 [下載中心](https://go.microsoft.com/fwlink/?LinkID=825643)取得。 您需要的版本，13.1 或更新版本，才能支援 Always Encrypted (`-g`) 和 Azure Active Directory 驗證 (`-G`)。 (您可能已在電腦上安裝多個 sqlcmd.exe 版本。 請務必使用正確的版本。 若要判斷版本，請執行 `sqlcmd -?`。)
+> 您需要的版本，13.1 或更新版本，才能支援 Always Encrypted (`-g`) 和 Azure Active Directory 驗證 (`-G`)。 (您可能已在電腦上安裝多個 sqlcmd.exe 版本。 請務必使用正確的版本。 若要判斷版本，請執行 `sqlcmd -?`。)
 
 您可以嘗試 sqlcmd 公用程式從 Azure Cloud Shell，因為它會預先安裝預設： [![啟動 Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "啟動 Cloud Shell")](https://shell.azure.com)
 
@@ -124,7 +146,7 @@ sqlcmd
 ## <a name="command-line-options"></a>命令列選項  
  **登入相關選項**  
   **-A**  
- 使用專用管理員連接 (DAC) 來登入 SQL Server。 這種連接可用以進行伺服器的疑難排解。 此連接只適用於支援 DAC 的伺服器電腦。 如果無法使用 DAC， **sqlcmd** 會產生一則錯誤訊息，並結束作業。 如需有關 DAC 的詳細資訊，請參閱 [資料庫管理員的診斷連線](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -G 選項不支援-A 選項。 當連接到 SQL Database 使用-A，您必須是 SQL server 系統管理員。 DAC 不適用於 Azure Active Directory 系統管理員。
+ 使用專用管理員連接 (DAC) 來登入 SQL Server。 這種連接可用以進行伺服器的疑難排解。 此連接只適用於支援 DAC 的伺服器電腦。 如果無法使用 DAC， **sqlcmd** 會產生一則錯誤訊息，並結束作業。 如需有關 DAC 的詳細資訊，請參閱 [資料庫管理員的診斷連線](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -A 選項不支援使用-G 選項。 當連接到 SQL Database 使用-A，您必須是 SQL server 系統管理員。 DAC 不適用於 Azure Active Directory 系統管理員。
   
  **-C**  
  這個參數由用戶端所設定，以隱含方式信任伺服器憑證而且不進行驗證。 這個選項相當於 ADO.NET 選項 `TRUSTSERVERCERTIFICATE = true`。  
@@ -147,8 +169,8 @@ sqlcmd
  這個參數在連線到 SQL Database 或 SQL 資料倉儲時由用戶端使用，以指定使用 Azure Active Directory 驗證來驗證使用者。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDUSEAAD = true。 -G 參數至少需要 **sqlcmd** [13.1](https://go.microsoft.com/fwlink/?LinkID=825643) 版。 若要判斷您的版本，請執行 `sqlcmd -?`。 如需詳細資訊，請參閱 [使用 Azure Active Directory 驗證連線到 SQL Database 或 SQL 資料倉儲](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。 -G 選項不支援-A 選項。
 
 > [!IMPORTANT]
-> **-G** 選項只適用於 Azure SQL Database 和 Azure 資料倉儲。
-> AAD 整合式驗證目前不支援在 Linux 或 macOS 上。 
+> `-G` 選項只適用於 Azure SQL Database 與 Azure 資料倉儲。
+> AAD 整合式和互動式驗證目前不支援在 Linux 或 macOS 上。
 
 - **Azure Active Directory 使用者名稱和密碼：** 
 
@@ -169,17 +191,51 @@ sqlcmd
    *AAD 整合式驗證目前不支援在 Linux 或 macOS 上*。
 
     ```
-    Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G
+    Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G
     ```  
 
-    這會在後端產生下列連線字串︰ 
+    這會在後端產生下列連接字串︰ 
 
     ```
     SERVER = Target_DB_or_DW.testsrv.database.windows.net Authentication = ActiveDirectoryIntegrated; Trusted_Connection=NO
     ``` 
 
     > [!NOTE] 
-    > -E 選項 (Trusted_Connection) 不能搭配 -G 選項一起使用。
+    > `-E` 選項 (Trusted_Connection) 不能搭配 `-G` 選項一起使用。
+
+
+- **Azure Active Directory 互動式**  
+ 
+   Azure AD 互動式驗證，Azure SQL Database 和 SQL 資料倉儲，可讓您使用支援多重要素驗證的互動式方法。 如需詳細資訊，請參閱 < [Active Directory 互動式驗證](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)。 
+
+   互動式 azure AD 會要求**sqlcmd** [版本 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility)或更新版本，以及[ODBC 17.2 版或更新版本](https://www.microsoft.com/download/details.aspx?id=56567)。  
+
+   若要啟用互動式驗證，提供使用者名稱-G 選項 (-U)，而不提供密碼。
+
+   下列範例會匯出使用表示使用者名稱的 Azure AD 互動模式，其中使用者代表的 AAD 帳戶的資料。 這是上一節中所使用的相同範例： *Azure Active Directory 使用者名稱和密碼*。  
+
+   互動模式需要密碼才可手動輸入，或進行啟用，multi-factor authentication 使用的帳戶，請完成設定的 MFA 驗證方法。
+
+   ``` 
+   sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U alice@aadtest.onmicrosoft.com
+   ```
+
+   前一個命令會在後端產生下列連接字串：  
+
+   ```
+   SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID=alice@aadtest.onmicrosoft.com; AUTHENTICATION = ActiveDirectoryInteractive   
+   ```
+
+   在 Azure AD 使用者是網域的同盟的使用者，使用 Windows 帳戶，在命令列中，所需的使用者名稱包含其網域帳戶 (比方說，joe@contoso.com如下所示):
+
+   ```
+   sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
+   ```
+ 
+   如果來賓使用者在特定的 Azure AD 中存在，且具有執行 sqlcmd 命令的資料庫權限的 SQL DB 中存在的群組的一部分，會使用其來賓使用者的別名 (例如*keith0@adventureworks.com*)。
+
+  >[!IMPORTANT]
+  >沒有已知的問題時使用`-G`並`-U`選項使用 SQLCMD，其中放`-U`選項之前`-G`選項可能會導致驗證失敗。 開頭一律`-G`選項後面`-U`選項。
 
     
  **-H** *workstation_name*  
@@ -191,8 +247,8 @@ sqlcmd
  **-K** *application_intent*  
  宣告連接到伺服器時的應用程式工作負載類型。 目前唯一支援的值是 **ReadOnly**。 若未指定 **-K** ，sqlcmd 公用程式將無法支援在 AlwaysOn 可用性群組中連接至次要複本。 如需詳細資訊，請參閱[使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
- **-M** *multisubnet_failover*  
- 在連線到 SQL Server 可用性群組的可用性群組接聽程式或 SQL Server 容錯移轉叢集執行個體時，一律指定 **-M**。 **-M** 可提供對 (目前) 作用中伺服器更快速的偵測與連接。 如果未指定 **–M** ，則會關閉 **-M** 。 如需詳細資訊 [！包含[Sshadr&lt](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)，[建立及設定可用性群組&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[容錯移轉叢集和 Alwayson 可用性群組 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)，並[使用中次要： 可讀取的次要複本 (Always On 可用性群組）](https://msdn.microsoft.com/library/ff878253.aspx)。  
+**-M** *multisubnet_failover*  
+ 在連線到 SQL Server 可用性群組的可用性群組接聽程式或 SQL Server 容錯移轉叢集執行個體時，一律指定 **-M**。 **-M** 可提供對 (目前) 作用中伺服器更快速的偵測與連接。 如果未指定 **-M**，則會關閉 **-M**。 如需有關 [接聽程式、用戶端連線能力、應用程式容錯移轉](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[建立及設定可用性群組 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[容錯移轉叢集與 Always On 可用性群組 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) 與[使用中次要：可讀取的次要複本 (Always On 可用性群組)](https://msdn.microsoft.com/library/ff878253.aspx)。 
   
  **-N**  
  用戶端會用這個參數要求加密的連接。  
@@ -204,7 +260,7 @@ sqlcmd
 
 我們建議您使用強式密碼。
  
-#### <a name="use-a-strong-passwordhttpsmsdnmicrosoftcomlibraryms161962sql130aspx"></a>[**使用強式密碼！**](https://msdn.microsoft.com/library/ms161962(SQL.130).aspx)
+#### <a name="use-a-strong-passwordrelational-databasessecuritystrong-passwordsmd"></a>[**使用強式密碼！**](../relational-databases/security/strong-passwords.md)
   
   
  密碼提示的顯示方式，會以將密碼提示輸出到主控台的方式顯示，如： `Password:`  
@@ -248,7 +304,7 @@ sqlcmd
   
  如果沒有指定 **-U** 選項或 **-P** 選項，**sqlcmd** 便會嘗試使用 Microsoft Windows 驗證模式進行連線。 這項驗證以執行 **sqlcmd**之使用者的 Windows 帳戶為基礎。  
   
- 如果同時使用 **-U** 選項和 **-E** 選項 (稍後於本文中描述)，即會產生錯誤訊息。 如果 **–U** 選項後面有多個引數，就會產生錯誤訊息並結束程式。  
+ 如果同時使用 **-U** 選項和 **-E** 選項 (稍後於本文中描述)，即會產生錯誤訊息。 如果 **-U** 選項後面有多個引數，就會產生錯誤訊息並結束程式。  
   
  **-z** *new_password*  
  變更密碼：  
@@ -369,7 +425,7 @@ sqlcmd
   
  **格式化選項**  
   **-h** *headers*  
- 指定資料行標頭之間所要列印的資料列數。 預設值是每一組查詢結果各列印一次標頭。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDHEADERS。 請使用 **-1** 來指定不列印標頭。 任何無效的值都會讓 **sqlcmd** 產生錯誤訊息，並結束作業。  
+ 指定資料行標頭之間所要列印的資料列數。 預設值是每一組查詢結果各列印一次標頭。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDHEADERS。 使用 **-1** 來指定不列印標頭。 任何無效的值都會讓 **sqlcmd** 產生錯誤訊息，並結束作業。  
   
  **-k** [**1** | **2**]  
  從輸出中移除所有控制字元，如定位字元和新行字元。 此參數會在資料傳回時，保留資料行的格式。 如果指定 1，會用單一空格來取代控制字元。 如果指定 2，會用單一空格取代連續控制字元。 **-k** 與 **-k1**相同。  
@@ -711,7 +767,7 @@ sqlcmd
  在發現批次結束字元之後，便會讀取和執行這個檔案。 您可以發出多個 **:r** 命令。 這個檔案可包含任何 **sqlcmd** 命令。 其中包括批次結束字元 **GO**。  
   
 > [!NOTE]  
->  每次發現 **:r** 命令時，以互動模式顯示的行數便會加 1。 **:r** 命令會出現在 list 命令的輸出中。  
+>  每次發現 `:r` 命令時，以互動模式顯示的行數便會加 1。 `:r` 命令會出現在 list 命令的輸出中。  
   
  **:Serverlist**  
  列出設定在本機的伺服器，以及在網路中進行廣播的伺服器名稱。  
@@ -763,7 +819,7 @@ sqlcmd
   
 -   如果從本機電腦的 **sqlcmd** 呼叫位於遠端伺服器上的輸入檔，且檔案中包含磁碟機檔案路徑 (例如 :Out c:\OutputFile.txt)， 即會在本機電腦建立輸出檔案，而不是在遠端伺服器建立。  
   
--   有效的檔案路徑包括︰ `C:\<filename>`、 `\\<Server>\<Share$>\<filename>` 和 `"C:\Some Folder\<file name>"`。 如果路徑中有空格，請使用引號。  
+-   有效的檔案路徑包括︰`C:\<filename>`、`\\<Server>\<Share$>\<filename>` 與 `"C:\Some Folder\<file name>"`。 如果路徑中有空格，請使用引號。  
   
 -   每個新的 **sqlcmd** 工作階段都會覆寫現有的同名檔案。  
   
@@ -827,7 +883,7 @@ sqlcmd
  XML (資料流) 資料和資料列集資料不能混合。 如果在執行輸出 XML 資料流的 Transact-SQL 陳述式之前發出 XML ON 命令，則輸出會混亂。 已發出 XML ON 命令之後，您就不能執行輸出正規資料列集的 Transact-SQL 陳述式。  
   
 > [!NOTE]  
->  **:XML** 命令不支援 SET STATISTICS XML 陳述式。  
+>  `:XML` 命令不支援 SET STATISTICS XML 陳述式。  
   
 ###  <a name="OutputJSON"></a> JSON 輸出格式  
  當您希望產生 JSON 輸出時，請使用下列命令： `:XML ON`。 否則輸出會包含資料行名稱和 JSON 文字。 此輸出不是有效的 JSON。  
@@ -840,7 +896,7 @@ sqlcmd
 使用 Azure Active Directory 驗證的範例如下：
 ```
 sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G  -l 30
-sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -U bob@contoso.com -P MyAADPassword -G -l 30
+sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P MyAADPassword -l 30
 ```
   
 ## <a name="sqlcmd-best-practices"></a>sqlcmd 最佳作法  
@@ -866,13 +922,10 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -U bob@contoso.com -P MyA
  [管理作業步驟](~/ssms/agent/manage-job-steps.md)   
  [建立 CmdExec 作業步驟](~/ssms/agent/create-a-cmdexec-job-step.md)  
   
-  
 
+## <a name="feedback"></a>意見反應
 
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 用戶端工具論壇](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
 
-
-
-
-
-
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

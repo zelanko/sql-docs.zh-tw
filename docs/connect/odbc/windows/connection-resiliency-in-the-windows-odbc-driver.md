@@ -11,12 +11,12 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 147716f986fb89d756c1800ac6fd71e138fae6a1
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6b7a27d9358d6f7f5719aaf1fea1fb292b2db1af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600858"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545292"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 驅動程式中的連接恢復功能
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51600858"
 > [!IMPORTANT]  
 >  Microsoft Azure SQL Database 和 SQL Server 2014 (和更新版本) 伺服器版本都支援連接恢復功能。  
   
- 如需閒置連線恢復功能的詳細資訊，請參閱[技術文章 – 閒置連線恢復功能](https://go.microsoft.com/fwlink/?LinkId=393996)。  
+ 如需閒置連線恢復功能的詳細資訊，請參閱[技術文章 - 閒置連線恢復功能](https://go.microsoft.com/fwlink/?LinkId=393996)。  
   
  為了控制重新連接的行為，Windows 上的 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有兩個選項：  
   

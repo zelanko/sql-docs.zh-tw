@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b824df9549ac9fcb65ff4c5bb3ca54f03967e86e
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 31e71f63e1cb06fdc38af291668f32552e5659b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291914"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538908"
 ---
 # <a name="osql-utility"></a>osql 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ osql
 [-L] |  
 [  
   {  
-     {-Ulogin_id [-Ppassword]} | –E }  
+     {-Ulogin_id [-Ppassword]} | -E }  
      [-Sserver_name[\instance_name]] [-Hwksta_name] [-ddb_name]  
      [-ltime_out] [-ttime_out] [-hheaders]  
      [-scol_separator] [-wcolumn_width] [-apacket_size]  
@@ -112,7 +112,7 @@ C:\>osql
  指定命令逾時之前的秒數。如果未指定 *time_out* 值，命令不會逾時。  
   
  **-h** *headers*  
- 指定資料行標頭之間所要列印的資料列數。 預設值是每一組查詢結果各列印一次標頭。 請利用 -1 來指定不列印任何標頭。 若使用 –1，則參數和設定之間不能有空格 (**-h-1**而非 **-h -1**)。  
+ 指定資料行標頭之間所要列印的資料列數。 預設值是每一組查詢結果各列印一次標頭。 請利用 -1 來指定不列印任何標頭。 若使用 -1，則參數和設定之間不能有空格 (**-h-1**，而非 **-h -1**)。  
   
  **-s** *col_separator*  
  指定資料行分隔字元，依預設，它是一個空格。 若要使用對作業系統有特殊意義的字元 ( 如 | ; & < >)，請用雙引號 (") 括住該字元。  

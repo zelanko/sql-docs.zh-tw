@@ -15,12 +15,12 @@ ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d845b000daa4610fc19e573342faaef361c0de01
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 19902c030538d0384c89dd632aaf1d6f8c728048
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292084"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538780"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ SqlLocalDB.exe
   
 ## <a name="arguments"></a>引數  
  [ **create** | **c** ] *\<執行個體名稱>* *\<執行個體版本>* [**-s** ]  
- 建立 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** 的新執行個體。 **SqlLocalDB** 會使用 *\<執行個體版本>* 引數所指定之 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 二進位檔的版本。 使用至少一個十進位數的數字格式指定版本號碼。 次要版本號碼 (Service Pack) 為選擇性。 例如，下列兩個版本號碼都可接受：11.0 或 11.0.1186。 電腦上必須安裝指定的版本。 如果未指定，版本號碼會預設為 **SqlLocalDB** 公用程式的版本。 加入 **–s** 會啟動新的 **LocalDB**執行個體。  
+ 建立 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** 的新執行個體。 **SqlLocalDB** 會使用 *\<執行個體版本>* 引數所指定之 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 二進位檔的版本。 使用至少一個十進位數的數字格式指定版本號碼。 次要版本號碼 (Service Pack) 為選擇性。 例如，下列兩個版本號碼都可接受：11.0 或 11.0.1186。 電腦上必須安裝指定的版本。 如果未指定，版本號碼會預設為 **SqlLocalDB** 公用程式的版本。 加入 **-s** 會啟動新的 **LocalDB** 執行個體。  
   
  [ **share** | **h** ]  
  使用指定的共用名稱來共用指定的 **LocalDB** 私用執行個體。 如果省略使用者 SID 或帳戶名稱，會預設為目前的使用者。  
@@ -61,7 +61,7 @@ SqlLocalDB.exe
  啟動指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** 執行個體。 當成功的陳述式傳回 **LocalDB**的具名管道位址時。  
   
  [ **stop** | **p** ] *\<執行個體名稱>* [**-i** ] [**-k** ]  
- 停止指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** 執行個體。 加入 **–i** 會要求使用 **NOWAIT** 選項關閉此執行個體。 加入 **–k** 會在未經連絡的情況下終止執行個體處理序。  
+ 停止指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** 執行個體。 加入 **-i** 會要求使用 **NOWAIT** 選項關閉此執行個體。 加入 **-k** 會在未經連絡的情況下終止執行個體處理序。  
   
  [ **info** | **i** ] [ *\<執行個體名稱>* ]  
  列出目前使用者擁有的所有 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** 執行個體。  
@@ -99,7 +99,7 @@ SqlLocalDB.exe share "DeptLocalDB" "DeptSharedLocalDB"
 SqlLocalDB.exe start "DeptLocalDB"  
 SqlLocalDB.exe info "DeptLocalDB"  
 REM The previous statement outputs the Instance pipe name for the next step  
-sqlcmd –S np:\\.\pipe\LOCALDB#<use your pipe name>\tsql\query  
+sqlcmd -S np:\\.\pipe\LOCALDB#<use your pipe name>\tsql\query  
 CREATE LOGIN NewLogin WITH PASSWORD = 'Passw0rd!!@52';   
 GO  
 CREATE USER NewLogin;  
@@ -110,7 +110,7 @@ EXIT
  使用 **登入執行以下程式碼以連接到** LocalDB `NewLogin` 的共用執行個體。  
   
 ```  
-sqlcmd –S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52  
+sqlcmd -S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

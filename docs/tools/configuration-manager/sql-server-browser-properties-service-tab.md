@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 496609e09490fc984b03af568d24f15d0b88c8d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77286e4bb4ed04a61e6949c4834e242bfac4be66
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634786"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534653"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>SQL Server Browser 屬性 (服務索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47634786"
 -   停用：這項服務無法啟動。  
   
  **State**  
- 表示這項服務為執行中、已停止或已停用。 "" 表示狀態變更已暫止。  
+ 表示這項服務為執行中、已停止或已停用。 "**...**" 表示狀態變更已暫止。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Browser 服務](../../tools/configuration-manager/sql-server-browser-service.md)  

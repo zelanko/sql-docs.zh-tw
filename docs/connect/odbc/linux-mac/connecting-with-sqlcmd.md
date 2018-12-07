@@ -13,12 +13,12 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 039b47f1a2affd12f53a8c45c931348eb4a2077e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 21021402a10494306a3b667c5f7b83977dc7d205
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604758"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512543"
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 連接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,8 +28,8 @@ ms.locfileid: "51604758"
 下列命令顯示如何使用 Windows 驗證 (Kerberos) 和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]驗證，分別：
   
 ```  
-sqlcmd –E –Sxxx.xxx.xxx.xxx  
-sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx  
+sqlcmd -E -Sxxx.xxx.xxx.xxx  
+sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx  
 ```  
   
 ## <a name="available-options"></a>可用的選項
@@ -58,7 +58,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -H 指定工作站名稱。  
   
-- -i *input_file*[,*input_file*[,…]] 識別包含 SQL 陳述式或預存程序之批次的檔案。  
+- -i *input_file*[,*input_file*[,...]] 識別包含 SQL 陳述式或預存程序之批次的檔案。  
   
 - -I 組`SET QUOTED_IDENTIFIER`連接選項設為 ON。  
   
@@ -75,7 +75,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 - -m *error_level* 控制哪些錯誤訊息會傳送至 stdout。  
   
 - **-M**_多重\_容錯移轉_  
-在連接到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 容錯移轉叢集執行個體時，一律指定 **-M**。 **-M** 可提供對 (目前) 作用中伺服器更快速的容錯移轉偵測與連線。 如果未指定 **–M** ，則會關閉 **-M** 。 如需詳細資訊[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]，請參閱 < [ODBC Driver on Linux 和 macOS： 高可用性和災害復原](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
+在連接到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 容錯移轉叢集執行個體時，一律指定 **-M**。 **-M** 可提供對 (目前) 作用中伺服器更快速的容錯移轉偵測與連線。 如果未指定 **-M**，則會關閉 **-M**。 如需詳細資訊[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]，請參閱 < [ODBC Driver on Linux 和 macOS： 高可用性和災害復原](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
   
 > [!NOTE]  
 > CTP for SUSE Linux 不支援 **-M** 。 不過，您可以在傳遞至 `sqlcmd` 的 DSN 檔案中指定 **MultiSubnetFailover=Yes** 關鍵字。 如需詳細資訊，請參閱本主題結尾處的＜`sqlcmd` 和 `bcp` 中的 DSN 支援＞。  
@@ -184,7 +184,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 執行`sqlcmd`並用`c.sql`為輸入檔：  
   
-    slqcmd -S<…> -P<..> –U<..> -I c.sql  
+    slqcmd -S<...> -P<..> -U<..> -I c.sql  
 
 - a-z*密碼*變更密碼。  
   
@@ -222,9 +222,9 @@ Linux 或 macOS 上的 DSN 支援下列項目：
   
 DSN 中只需要 DRIVER 項目，但若要連線到伺服器，`sqlcmd` 或 `bcp` 將需要 SERVER 項目中的值。  
 
-如果在 DSN 和 `sqlcmd` 或 `bcp` 命令列中指定相同的選項，命令列選項會覆寫 DSN 中使用的值。 例如，如果 DSN 有 DATABASE 項目，而 `sqlcmd` 命令列包含 **-d**，將會使用傳遞至 **-d** 的值。 如果在 DSN 中指定 **Trusted_Connection=yes**，則會使用 Kerberos 驗證，並且會忽略所提供的使用者名稱 (**–U**) 和密碼 (**–P**)。
+如果在 DSN 和 `sqlcmd` 或 `bcp` 命令列中指定相同的選項，命令列選項會覆寫 DSN 中使用的值。 例如，如果 DSN 有 DATABASE 項目，而 `sqlcmd` 命令列包含 **-d**，將會使用傳遞至 **-d** 的值。 如果在 DSN 中指定 **Trusted_Connection=yes**，則會使用 Kerberos 驗證，並且會忽略所提供的使用者名稱 (**-U**) 和密碼 (**-P**)。
 
-叫用 `isql` 的現有指令碼，可藉由定義下列別名修改成使用 `sqlcmd`：`alias isql="sqlcmd –D"`。  
+叫用 `isql` 的現有指令碼，可藉由定義下列別名修改成使用 `sqlcmd`：`alias isql="sqlcmd -D"`。  
 
 ## <a name="see-also"></a>另請參閱  
 [使用 **bcp** 進行連線](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  

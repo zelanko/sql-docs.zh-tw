@@ -26,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 66a576c33b805fb350b465ea47d2588e0dae7036
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 23985f7a9c78993e154babdcbdd9980334f0fc36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291785"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541327"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 公用程式 [Service Broker]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ssbdiagnose
   [ CONNECT TO <connectionoptions> ] [ ...n]  
   
 <connectionoptions> ::=  
-    [ –E | { -U login_id [ -P password ] } ]  
+    [ -E | { -U login_id [ -P password ] } ]  
   [ -S server_name[\instance_name] ]  
   [ -d database_name ]  
   [ -l login_timeout ]  
@@ -221,7 +221,7 @@ WHERE database_id = DB_ID();
   
  如未指定 **-E** 也未指定 **-U** ， **ssbdiagnose** 就會使用 SQLCMDUSER 環境變數的值。 如果也沒有設定 SQLCMDUSER， **ssbdiagnose** 就會根據正在執行 **ssbdiagnose**的使用者 Windows 帳戶，使用 Windows 驗證模式嘗試連接。  
   
- 如果同時使用 **-U** 選項和 **-E** 選項，就會產生錯誤訊息。 如果 **–U** 選項後面有多個引數，就會產生錯誤訊息並結束程式。  
+ 如果同時使用 **-U** 選項和 **-E** 選項，就會產生錯誤訊息。 如果 **-U** 選項後面有多個引數，就會產生錯誤訊息並結束程式。  
   
  **-P** *password*  
  指定 **-U** 登入識別碼的密碼。 密碼會區分大小寫。 如果使用了 **-U** 選項，但沒有使用 **-P** 選項， **ssbdiagnose** 就會使用 SQLCMDPASSWORD 環境變數的值。 如果也沒有設定 SQLCMDPASSWORD， **ssbdiagnose** 就會提示使用者輸入密碼。  

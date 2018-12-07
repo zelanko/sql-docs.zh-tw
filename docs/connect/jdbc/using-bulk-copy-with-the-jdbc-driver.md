@@ -11,12 +11,12 @@ ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8a936373f299530f4bd98f2873d10727c980cce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4d7fabdf0f3de8c413a4621e6adb646cb1122e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741756"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534695"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>搭配 JDBC Driver 使用大量複製
 
@@ -46,7 +46,7 @@ BulkCopyDemoMatchingColumns 和 BulkCopyDemoDifferentColumns 資料表都採用 
 幾個程式碼範例示範如何使用一個 SQLServerBulkCopy 類別來寫入多個資料表。 在這些範例中，BulkCopyDemoOrderHeader 和 BulkCopyDemoOrderDetail 資料表用來當做目的地資料表。 這些資料表以 AdventureWorks 中的 Sales.SalesOrderHeader 和 Sales.SalesOrderDetail 資料表為基礎。  
   
 > [!NOTE]  
-> 提供的 SQLServerBulkCopy 程式碼範例，只是用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT … SELECT 陳述式來複製資料會更方便且更快速。  
+> 提供的 SQLServerBulkCopy 程式碼範例，只是用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式來複製資料會更方便且更快速。  
 
 ### <a name="table-setup"></a>資料表設定  
 
@@ -144,7 +144,7 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
 下列應用程式示範如何使用 SQLServerBulkCopy 類別載入資料。 在此範例中，將使用一個結果集將資料從 SQL Server AdventureWorks 資料庫的 Production.Product 資料表複製到相同資料庫中的類似資料表。  
   
 > [!IMPORTANT]  
-> 除非您已如[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT … SELECT 陳述式來複製資料會更方便且更快速。  
+> 除非您已如[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式來複製資料會更方便且更快速。  
 
 ```java
 import java.sql.Connection;
@@ -238,7 +238,7 @@ try (Connection con = DriverManager.getConnection(connectionUrl);
 如果您使用相同的 SQLServerBulkCopy 物件執行數項大量複製作業時，並無限制來源或目標資訊在每項作業中是否相等或不同。 不過，當您每次寫入到伺服器時，必須確定資料行關聯資訊已正確設定。  
   
 > [!IMPORTANT]  
-> 除非您已如[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT … SELECT 陳述式來複製資料會更方便且更快速。  
+> 除非您已如[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式來複製資料會更方便且更快速。  
 
 ```java
 import java.sql.Connection;
@@ -367,7 +367,7 @@ public class BulkCopyMultiple {
 此大量複製作業執行時的 **BatchSize** 屬性設定為 10。 當此作業遇到無效的資料列時，就會擲回例外狀況。 在第一個範例中，大量複製作業會為非交易作業。 發生錯誤前複製的所有批次均已認可；包含重複索引鍵的批次已回復，而且大量複製作業會在處理任何其他批次之前暫止。  
   
 > [!NOTE]  
-> 除非您已如[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT … SELECT 陳述式來複製資料會更方便且更快速。  
+> 除非您已如[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式來複製資料會更方便且更快速。  
 
 ```java
 import java.sql.Connection;
@@ -476,7 +476,7 @@ copyOptions.setUseInternalTransaction(true);
 下列應用程式與 **BulkCopyNonTransacted** 類似，但有一個例外：在此範例中，大量複製作業包含在較大的外部交易中。 當發生主要索引鍵違規錯誤時，整個交易便會回復，並且沒有任何資料列會加入目的地資料表。
 
 > [!NOTE]  
-> 除非您已如[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT … SELECT 陳述式來複製資料會更方便且更快速。  
+> 除非您已如[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式來複製資料會更方便且更快速。  
 
 ```java
 import java.sql.Connection;
@@ -583,7 +583,7 @@ public class BulkCopyExistingTransactions {
   
 5. 選取 [寫入查詢來指定要傳送的資料]，然後按一下 [下一步]。  輸入 [SQL 陳述式] 如：SELECT ProductID, Name, ProductNumber FROM Production.Product，然後按一下 [下一步]  
   
-6. 檢查設定：您可以將資料列分隔符號保留為 {CR}{LF}，並將資料行分隔符號保留為逗號 {,}。  選取 [編輯對應]… 然後檢查資料 [類型] 對於每個資料行是否都正確 (例如檢查 ProductID 是否為整數，以及檢查其他資料行是否為 Unicode 字串)。  
+6. 檢查設定：您可以將資料列分隔符號保留為 {CR}{LF}，並將資料行分隔符號保留為逗號 {,}。  選取 [編輯對應]，然後檢查資料 [類型] 對於每個資料行是否都正確 (例如檢查 ProductID 是否為整數，以及檢查其他資料行是否為 Unicode 字串)。  
   
 7. 直接跳到 [完成] 並執行匯出。  
 
@@ -776,7 +776,7 @@ ISQLServerBulkRecord 介面的簡單實作，可用於從分隔的檔案中讀�
   
 3. 該 CSV 檔案指定的分隔符號不應該出現在資料中的任何地方，如果是 Java 規則運算式中的限制字元，也應該要妥善逸出。  
   
-4. 在 CSV 檔案的實作中，雙引號內視為資料的一部分。 例如，如果分隔符號是逗號，則這一行：hello,”world”,”hello,world” 會被視為擁有四個資料行，其值為 hello、"world"、"hello 和 world"。  
+4. 在 CSV 檔案的實作中，雙引號內視為資料的一部分。 例如，如果分隔符號是逗號，則這一行：hello,"world","hello,world" 會被視為擁有四個資料行，其值為 hello、"world"、"hello 和 world"。  
   
 5. 新行字元做為資料列結束字元使用，因此在資料的任何地方都不允許使用。  
   
