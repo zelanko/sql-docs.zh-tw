@@ -1,7 +1,7 @@
 ---
 title: bcp 公用程式 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/12/2018
+ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -29,17 +29,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 51c510345b83f7dcf9279692b30de639af64a2fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 777fb26703b4582662748a15d4ac6ed6e0fdfae0
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675377"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712499"
 ---
 # <a name="bcp-utility"></a>bcp 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
- > Bcp 公用程式的最新版本，請參閱[適用於 SQL Server 的 Microsoft 命令列公用程式 14.0 ](https://go.microsoft.com/fwlink/?LinkID=825643)
 
  > 在 Linux 上使用 bcp，請參閱[在 Linux 上安裝 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 
@@ -50,10 +48,31 @@ ms.locfileid: "51675377"
  ![主題連結圖示](../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") 如需用於 **bcp** 語法的語法慣例，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
 > [!NOTE]
-> 若您使用 **bcp** 備份資料，請建立格式檔案以記錄資料格式。 **bcp** 資料檔案 **不包含** 任何結構描述或格式資訊，所以如果資料表或檢視表遭到卸除，而您又沒有格式檔案，即可能就無法匯入資料。  
-  
+> 若您使用 **bcp** 備份資料，請建立格式檔案以記錄資料格式。 **bcp** 資料檔案 **不包含** 任何結構描述或格式資訊，所以如果資料表或檢視表遭到卸除，而您又沒有格式檔案，即可能就無法匯入資料。
+
+## <a name="download-the-latest-version-of-bcp-utility"></a>下載最新版的 bcp 公用程式
+
+**[![下載](../ssdt/media/download.png) 下載適用於 SQL Server (x64) 的 Microsoft 命令列公用程式 15.0](https://go.microsoft.com/fwlink/?linkid=2043518)**
+<br>**[![下載](../ssdt/media/download.png) 下載適用於 SQL Server (x86) 的 Microsoft 命令列公用程式 15.0](https://go.microsoft.com/fwlink/?linkid=2043622)**
+
+命令列工具會公開上市 (GA)，不過，在發佈的安裝程式套件與[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。
+
+**版本資訊**
+
+版本號碼：15.0 <br>
+組建編號：15.0.1000.34<br>
+發行日期： 2018 年 10 月 18 日
+
+SQLCMD 的新版本支援 Azure AD 驗證，包括 SQL Database、 SQL 資料倉儲，以及 Always Encrypted 功能支援 Multi-factor Authentication (MFA)。
+新的 BCP 支援 Azure AD 驗證，包括 SQL Database 和 SQL 資料倉儲的 Multi-factor Authentication (MFA) 支援。
+
+**系統需求**Windows 10，Windows 7、 Windows 8、 Windows 8.1、 Windows Server 2008、 Windows Server 2008 R2、 Windows Server 2008 R2 SP1，Windows Server 2012 中，Windows Server 2012 此 R2 元件同時需要[Windows 安裝程式4.5](https://www.microsoft.com/download/details.aspx?id=8483)並[Microsoft ODBC Driver for SQL Server 17.2](https://www.microsoft.com/download/details.aspx?id=56567)。
+ 
+若要檢查的 BCP 版本執行`bcp /v`命令並確認該 15.0.1000.34 或更高版本中使用。
+
+
 <table><th>語法</th><tr><td><pre>
-bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>
+bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
     {<a href="#in">in</a> <a href="#data_file">data_file</a> | <a href="#out">out</a> <a href="#data_file">data_file</a> | <a href="#qry_out">queryout</a> <a href="#data_file">data_file</a> | <a href="#format">format</a> <a href="#format">nul</a>}
 <a>                                                                                                         </a>
     [<a href="#a">-a packet_size</a>]
@@ -151,7 +170,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |*code_page*|特定字碼頁編號；如 850。<br /><br /> 13 版之前的版本 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) 不支援字碼頁 65001 (UTF-8 編碼)。 從 13 版開始，可以將 UTF-8 編碼匯入舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。|  
   
  **-d** _**database\_name**_<a name="d"></a>   
- 指定要連接的資料庫。 根據預設，bcp.exe 會連接到使用者的預設資料庫。 如果指定 **-d** *database_name* 和三部分名稱 (*database_name.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice.如果指定 *database_name* 的開頭是連字號 (-) 或斜線 (/)，請勿在 **-d** 與資料庫名稱之間加上空格。  
+ 指定要連接的資料庫。 根據預設，bcp.exe 會連線到使用者的預設資料庫。 如果指定 **-d** *database_name* 和三部分名稱 (*database_name.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice.如果指定 *database_name* 的開頭是連字號 (-) 或斜線 (/)，請勿在 **-d** 與資料庫名稱之間加上空格。  
   
  **-e**  _**err\_檔案**_<a name="e"></a>  
  指定錯誤檔的完整路徑，該錯誤檔用來儲存 **bcp** 公用程式無法從檔案傳送至資料庫的任何資料列。 **bcp** 命令所產生的錯誤訊息，會送往使用者的工作站。 如果未使用這個選項，就不會建立錯誤檔。  
@@ -184,6 +203,10 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 **-G**<a name="G"></a>  
  這個參數在連線到 Azure SQL Database 或 Azure SQL 資料倉儲時由用戶端使用，以指定使用 Azure Active Directory 驗證來驗證使用者。 -G 參數需要[14.0.3008.27 版或更新版本](https://go.microsoft.com/fwlink/?LinkID=825643)。 若要判斷您的版本，請執行 bcp -v。 如需詳細資訊，請參閱 <<c0> [ 使用 Azure Active Directory 驗證來驗證與 SQL Database 或 SQL 資料倉儲](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。 
+
+> [!IMPORTANT]
+> **-G** 選項只適用於 Azure SQL Database 和 Azure 資料倉儲。
+> AAD 整合式和互動式驗證目前不支援在 Linux 或 macOS 上。
 
 > [!TIP]
 >  若要檢查您的 bcp 版本若包含 Azure Active Directory 驗證 (AAD) 類型的支援**bcp-** (bcp\<空間 >\<dash >\<dash >)，並確認您看到-G 的清單中可用的引數。
@@ -220,6 +243,29 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
+- **Azure Active Directory 互動式**  
+
+   Azure AD 互動式驗證，Azure SQL Database 和 SQL 資料倉儲，可讓您使用支援多重要素驗證的互動式方法。 如需詳細資訊，請參閱[Active Directory 互動式驗證](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)。 
+
+   互動式 azure AD 會要求**bcp** [版本 15.0.1000.34](#download-the-latest-version-of-bcp-utility)或更新版本，以及[ODBC 17.2 版或更新版本](https://www.microsoft.com/download/details.aspx?id=56567)。  
+
+   若要啟用互動式驗證，提供使用者名稱-G 選項 (-U)，而不提供密碼。   
+
+   下列範例會匯出使用表示使用者名稱的 Azure AD 互動模式，其中使用者代表的 AAD 帳戶的資料。 這是上一節中所使用的相同範例： *Azure Active Directory 使用者名稱和密碼*。  
+
+   互動模式需要密碼才可手動輸入，或進行啟用，multi-factor authentication 使用的帳戶，請完成設定的 MFA 驗證方法。 
+
+   ``` 
+   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com 
+   ``` 
+
+   如果在 Azure AD 使用者是網域同盟其中一個使用 Windows 帳戶，需要在命令列中的使用者名稱包含其網域帳戶 (比方說，joe@contoso.com如下所示):   
+
+   ```
+   bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
+   ```
+
+   如果來賓使用者存在於特定的 Azure AD，而是存在於 SQL DB 具有資料庫權限，才能執行 bcp 命令群組的一部分，會使用其來賓使用者的別名 (例如*keith0@adventureworks.com*)。
   
 **-h** _**"load hints**_[ ,... *n*]**"**<a name="h"></a> 指定將資料大量匯入資料表或檢視期間所要使用的一或多個提示。  
   
@@ -257,21 +303,21 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 * **FIRE_TRIGGERS**  
 利用 **in** 引數加以指定，任何定義於目的地資料表上的插入觸發程序，都會在大量複製作業期間執行。 如果未指定 FIRE_TRIGGERS，就不會執行任何插入觸發程序。 **out**、 **queryout**和 **format** 引數會略過 FIRE_TRIGGERS。  
   
- **-i** _**input\_file**_<a name="i"></a>  
- 指定回應檔的名稱，回應檔包含利用互動模式 (未指定 **-n**、 **-c**、 **-w**或 **-N** ) 執行大量複製時，在命令提示字元處對於每個資料欄位問題的回應。  
+**-i** _**input\_file**_<a name="i"></a>  
+指定回應檔的名稱，回應檔包含利用互動模式 (未指定 **-n**、 **-c**、 **-w**或 **-N** ) 執行大量複製時，在命令提示字元處對於每個資料欄位問題的回應。  
   
- 如果 *input_file* 的開頭是連字號 (-) 或斜線 (/)，請勿在 **-i** 與 *input_file* 值之間加上空格。  
+如果 *input_file* 的開頭是連字號 (-) 或斜線 (/)，請勿在 **-i** 與 *input_file* 值之間加上空格。  
   
- **-k**<a name="k"></a>  
- 指定空白資料行在作業過程中應保持 Null 值，而非保有插入之資料行的任何預設值。 如需詳細資訊，請參閱[大量匯入期間保留 Null 或使用預設值 &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
+**-k**<a name="k"></a>  
+指定空白資料行在作業過程中應保持 Null 值，而非保有插入之資料行的任何預設值。 如需詳細資訊，請參閱[大量匯入期間保留 Null 或使用預設值 &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
- **-K** _**application\_intent**_<a name="K"></a>   
- 宣告連接到伺服器時的應用程式工作負載類型。 唯一可能的值是 **ReadOnly**。 若未指定 **-K**，bcp 公用程式將不會支援在 AlwaysOn 可用性群組中連接次要複本。 如需詳細資訊，請參閱 [使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)中心概念。  
+**-K** _**application\_intent**_<a name="K"></a>   
+宣告連接到伺服器時的應用程式工作負載類型。 唯一可能的值是 **ReadOnly**。 若未指定 **-K**，bcp 公用程式將不會支援在 AlwaysOn 可用性群組中連接次要複本。 如需詳細資訊，請參閱 [使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)中心概念。  
   
- **-L** _**last\_row**_<a name="L"></a>  
- 指定要從資料表匯出或從資料檔案匯入的最後一個資料列的號碼。 這個參數需要大於 (>) 0 但小於 (<) 或等於 (=) 最後一個資料列號碼的值。 如果沒有這個參數，預設值是檔案中的最後一個資料列。  
+**-L** _**last\_row**_<a name="L"></a>  
+指定要從資料表匯出或從資料檔案匯入的最後一個資料列的號碼。 這個參數需要大於 (>) 0 但小於 (<) 或等於 (=) 最後一個資料列號碼的值。 如果沒有這個參數，預設值是檔案中的最後一個資料列。  
   
- *last_row* 可以是值高達 2^63-1 的正整數。  
+*last_row* 可以是值高達 2^63-1 的正整數。  
   
 **-m** _**max\_errors**_<a name="m"></a>  
 指定 **bcp** 作業取消前，可以出現的語法錯誤數上限。 語法錯誤也暗示著對於目的地資料類型的資料轉換錯誤。 *max_errors* 總計將只能在伺服器偵測的錯誤排除在外，例如條件約束違規。  
@@ -313,7 +359,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-q**<a name="q"></a>  
  在 **bcp** 公用程式與 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體之間的連接中，執行 SET QUOTED_IDENTIFIERS ON 陳述式。 請利用這個選項來指定包含空格或單引號的資料庫、擁有者、資料表或檢視表名稱。 請用引號 ("") 括住整個三部分資料表或檢視表名稱。  
   
- 若要指定包含空格或單引號的資料庫名稱，您必須使用 **–q** 選項。  
+ 若要指定包含空格或單引號的資料庫名稱，您必須使用 **-q** 選項。  
   
  **-q** 不適用於傳遞給 **-d**的值。  
   
@@ -339,7 +385,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  如果 *field_term* 的開頭是連字號 (-) 或斜線 (/)，請勿在 **-t** 與 *field_term* 值之間加上空格。  
   
  **-T**<a name="T"></a>  
- 指定 **bcp** 公用程式使用整合式安全性的信任連接，連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 網路使用者的安全性認證、 *login_id*及 *password* 不是必要的選項。 如果未指定 **–T** ，則必須指定 **–U** 與 **–P** ，才能順利登入。
+ 指定 **bcp** 公用程式使用整合式安全性的信任連接，連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 網路使用者的安全性認證、 *login_id*及 *password* 不是必要的選項。 如果未指定 **-T** ，則必須指定 **-U** 與 **-P** ，才能順利登入。
  
 > [!IMPORTANT]
 > 指定 **bcp** 公用程式要使用整合式安全性的信任連接，連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時，請使用 **-T** 選項 (信任連接)，而非「使用者名稱」和「密碼」的組合。 當 **bcp** 公用程式連接到 SQL Database 或 SQL 資料倉儲時，不支援使用 Windows 驗證或 Azure Active Directory 驗證。 請使用 **-U** 和 **-P** 選項。 
@@ -661,3 +707,8 @@ bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...
  [匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
   
+## <a name="feedback"></a>意見反應
+
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 用戶端工具論壇](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
