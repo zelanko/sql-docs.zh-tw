@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e7dfa2d347f020fc0514536680dce4343ee625c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a912718146d2c106072615577c130b2da576a578
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021452"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518515"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -206,7 +206,7 @@ ms.locfileid: "50021452"
   
  若要在新的報表伺服器電腦上重新建立可回復的加密，您必須還原之前所備份的金鑰。 儲存在報表伺服器資料庫中的完整金鑰集合是由對稱金鑰值所組成，再加上用來限制此金鑰之存取的服務識別資訊，如此一來，只有儲存此金鑰的報表伺服器執行個體才可以使用此金鑰。 在金鑰還原期間，報表伺服器將會以新的版本取代現有的金鑰複本。 新的版本包括目前電腦上所定義的電腦和服務識別的值。 如需詳細資訊，請參閱下列主題：  
   
--   SharePoint 模式：請參閱 [管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的＜金鑰管理＞一節  
+-   SharePoint 模式：請參閱[管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的＜金鑰管理＞一節  
   
 -   原生模式：請參閱 [備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   

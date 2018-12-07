@@ -10,12 +10,12 @@ ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 18d5e095789c1f7a240925130821c8adb639fe7b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 05519dae5377d1e58f6b8e47b91d898c0b67dc2f
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028367"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710869"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>在命令提示字元安裝 Reporting Services 2016
 
@@ -28,7 +28,7 @@ ms.locfileid: "50028367"
 ### <a name="rsinstallmode-native-mode"></a>RSINSTALLMODE (原生模式)
  安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的主要輸入設定為 **/RSINSTALLMODE** 輸入設定。 此設定包含兩個選項： **DefaultNativeMode** 和 **FilesOnlyMode**  
   
- 如果安裝包含 SQL Server Database Engine，預設 RSINSTALLMODE 為 DefaultNativeMode。如果安裝不包含 SQL Server Database Engine，預設 RSINSTALLMODE 為 FilesOnlyMode。如果選擇 DefaultNativeMode 但安裝不包含 SQL Server Database Engine，安裝會自動將 RSINSTALLMODE 變更為 FilesOnlyMode。 如需輸入設定的詳細資訊，請參閱 [從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。
+ 如果安裝包含 SQL Server Database Engine，預設 RSINSTALLMODE 為 DefaultNativeMode。如果安裝不包含 SQL Server Database Engine，預設 RSINSTALLMODE 為 FilesOnlyMode。如果選擇 DefaultNativeMode 但安裝不包含 SQL Server Database Engine，安裝會自動將 RSINSTALLMODE 變更為 FilesOnlyMode。 如需輸入設定的詳細資訊，請參閱[從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。
 
 ### <a name="examples-of-native-mode-installation"></a>原生模式安裝範例
 

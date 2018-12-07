@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 16a9ad6bc26b304be0ad3308c2e5afe2084a3a8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb658507dd7e28100338e1f300ff24ca0aeadf92
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732296"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394851"
 ---
 # <a name="pptx-device-information-settings"></a>PPTX 裝置資訊設定
   下表列出以 PPTX 格式轉譯 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表的裝置資訊設定。  
@@ -37,7 +37,7 @@ ms.locfileid: "47732296"
 |**PageHeight**|為報表所設定的頁面高度 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如 **11in**)。 這個值會覆寫報表的原始設定。|  
 |**PageWidth**|為報表所設定的頁面寬度 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如 **8.5in**)。 這個值會覆寫報表的原始設定。|  
 |**StartPage**|要轉譯之報表的第一頁。 **0** 值表示轉譯所有頁面。 預設值是 **1**秒。|  
-|**UseReportPageSize**|如果 UseReportPageSize =**false** ，則預設投影片大小為 PowerPoint 預設值 13.333” x 7.5” (16:9 外觀比例)。 如果 UseReportPageSize =true，則預設投影片大小為報表的定義頁面大小。<br /><br /> 預設值為 **false**<br /><br /> 請注意，PageWidth 和 PageHeight 設定會覆寫預設的寬度和高度。|  
+|**UseReportPageSize**|如果 UseReportPageSize =**false**，則預設投影片大小為 PowerPoint 預設 13.333" x 7.5" (16:9 外觀比例)。 如果 UseReportPageSize =true，則預設投影片大小為報表的定義頁面大小。<br /><br /> 預設值為 **false**<br /><br /> 請注意，PageWidth 和 PageHeight 設定會覆寫預設的寬度和高度。|  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

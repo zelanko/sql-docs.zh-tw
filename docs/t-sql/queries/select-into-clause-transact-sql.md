@@ -30,17 +30,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0996aa061c8c662c0ff14700961559bdbf22102
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f8d40fed1b2183bc82b85b5d82ac1895ca118f2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596656"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509007"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-SELECT INTO 會在預設的檔案群組中建立新的資料表，然後將查詢的結果資料列插入其中。 若要檢視完整的 SELECT 語法，請參閱 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)。  
+SELECT...INTO 會在預設的檔案群組中建立新的資料表，然後將查詢的結果資料列插入其中。 若要檢視完整的 SELECT 語法，請參閱 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)。  
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -86,7 +86,7 @@ SELECT INTO 會在預設的檔案群組中建立新的資料表，然後將查�
 ## <a name="limitations-and-restrictions"></a>限制事項  
  您無法將資料表變數或資料表值參數指定為新的資料表。  
   
- 即使已分割來源資料表，您還是無法使用 `SELECT…INTO` 來建立資料分割資料表。 `SELECT...INTO` 不會使用來源資料表的資料分割配置；但會在預設檔案群組中建立新的資料表。 若要將資料列插入資料分割資料表，您必須先建立資料分割資料表，再使用 `INSERT INTO...SELECT...FROM` 陳述式。  
+ 即使已分割來源資料表，您還是無法使用 `SELECT...INTO` 來建立資料分割資料表。 `SELECT...INTO` 不會使用來源資料表的資料分割配置；但會在預設檔案群組中建立新的資料表。 若要將資料列插入資料分割資料表，您必須先建立資料分割資料表，再使用 `INSERT INTO...SELECT...FROM` 陳述式。  
   
  在來源資料表中定義的索引、條件約束和觸發程序都不會傳送至新的資料表，而且您也無法在 `SELECT...INTO` 陳述式中指定它們。 如果您需要這些物件，則可以在執行 `SELECT...INTO` 陳述式之後建立它們。  
   
@@ -232,7 +232,7 @@ ORDER BY YearlyIncome;
  **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
 
 ```sql
-ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
+ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE
 (
@@ -241,7 +241,7 @@ FILENAME = '/var/opt/mssql/data/AdventureWorksDW2016_Data1.mdf'
 )
 TO FILEGROUP FG2;
 GO
-SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
+SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
 ```
   
 ## <a name="see-also"></a>另請參閱  

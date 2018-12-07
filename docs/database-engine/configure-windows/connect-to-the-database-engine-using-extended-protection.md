@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d03661990e6316b7faa223cac63c8c63939fb998
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f820161dcf242a06054e3f64198aad1f827ed3dd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606008"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395351"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用擴充保護連接至 Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51606008"
 >  Windows 預設不會啟用 **[擴充保護]** 。 如需有關如何在 Windows 中啟用 **[擴充保護]** 的詳細資訊，請參閱 [驗證擴充保護](https://support.microsoft.com/kb/968389)。  
   
 ## <a name="description-of-extended-protection"></a>擴充保護的描述  
- **[擴充保護]** 會使用服務繫結與通道繫結來避免驗證轉送攻擊。 在驗證轉送攻擊中，可以執行 NTLM 驗證的用戶端 (如 Windows 檔案總管、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook、.NET SqlClient 應用程式等) 會連接到攻擊者 (如惡意 CIFS 檔案伺服器)。 攻擊者會使用用戶端的認證來偽裝成用戶端，並向服務驗證 (例如， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務的執行個體)。  
+ **[擴充保護]** 會使用服務繫結與通道繫結來避免驗證轉送攻擊。 在驗證轉送攻擊中，可以執行 NTLM 驗證的用戶端 (如 Windows 檔案總管、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook、.NET SqlClient 應用程式等) 會連接到攻擊者 (如惡意 CIFS 檔案伺服器)。 攻擊者會使用用戶端的認證來偽裝成用戶端，並向服務驗證 (例如，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務的執行個體)。  
   
  這種攻擊有兩種變化：  
   
@@ -47,7 +47,7 @@ ms.locfileid: "51606008"
  服務繫結位址引誘攻擊的方式，是要求用戶端傳送用戶端打算連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的已簽署服務主要名稱 (SPN)。 在驗證回應的過程中，該服務會驗證封包中收到的 SPN 與它自己的 SPN 相符。 如果用戶端被引誘連接到攻擊者，用戶端將會包含攻擊者的已簽署 SPN。 攻擊者無法轉送封包來向真正的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務驗證為用戶端，因為其中包含攻擊者的 SPN。 服務繫結會產生單次可忽略的成本，但是並不會處理詐騙攻擊。 當用戶端應用程式沒有使用加密來連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，系統就會進行服務繫結。  
   
 ### <a name="channel-binding"></a>通道繫結  
- 通道繫結會在用戶端與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的執行個體之間建立安全通道 (Schannel)。 此服務會驗證用戶端的真實性，其方式是比較該通道特有的用戶端通道繫結 Token (CBT) 與它自己的 CBT。 通道繫結會處理引誘和詐騙這兩種攻擊。 但是，它會發生較大的執行階段成本，因為它需要所有工作階段流量的傳輸層安全性 (TLS) 加密。 用戶端應用程式使用加密連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時會發生通道繫結，與加密由用戶端還是伺服器強制無關。  
+ 通道繫結會在用戶端與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的執行個體之間建立安全通道 (Schannel)。 此服務會驗證用戶端的真實性，其方式是比較該通道特定用戶端通道繫結權杖 (CBT) 與它自己的 CBT。 通道繫結會處理引誘和詐騙這兩種攻擊。 但是，它會發生較大的執行階段成本，因為它需要所有工作階段流量的傳輸層安全性 (TLS) 加密。 用戶端應用程式使用加密連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時會發生通道繫結，與加密由用戶端還是伺服器強制無關。  
   
 > [!WARNING]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料提供者支援 TLS 1.0 和 SSL 3.0。 如果您以在作業系統 SChannel 層級中進行變更的方式，強制執行不同的通訊協定 (例如 TLS 1.1 或 TLS 1.2)，您與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連線可能會失敗。  

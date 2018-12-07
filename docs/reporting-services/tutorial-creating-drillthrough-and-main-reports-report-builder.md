@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1f756c0f2e843f2a13e394bb739647530feda09
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029159"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526176"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教學課程：建立鑽研及主報表 (報表產生器)
 本教學課程將教導您如何建立兩種 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表：鑽研報表和主報表。 這些報表中使用的範例銷售資料是從 Analysis Services Cube 擷取的。 
@@ -101,7 +101,7 @@ ms.locfileid: "50029159"
   
 #### <a name="to-create-query-filters"></a>若要建立查詢篩選  
   
-1.  在 **[設計查詢]** 頁面的 [中繼資料] 窗格中，按一下 **(…)** 按鈕。  
+1.  在 [設計查詢] 頁面的 [中繼資料] 窗格中，按一下 **(…)** 按鈕。  
   
 2.  在 [選取 Cube] 對話方塊中，按一下 [Sales]，然後按一下 [確定]。  
   
@@ -392,7 +392,7 @@ ms.locfileid: "50029159"
   
 #### <a name="to-create-query-filters"></a>若要建立查詢篩選  
   
-1.  在 **[設計查詢]** 頁面的 [中繼資料] 窗格中，按一下 Cube 區段中的省略符號 **(...)**。  
+1.  在 [設計查詢] 頁面的 [中繼資料] 窗格中，按一下 Cube 區段中的省略符號 **(...)**。  
   
 2.  在 [選取 Cube] 對話方塊中，按一下 [Sales]，然後按一下 [確定]。  
   

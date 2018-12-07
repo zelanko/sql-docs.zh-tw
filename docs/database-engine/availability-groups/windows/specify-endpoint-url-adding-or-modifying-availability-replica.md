@@ -15,16 +15,16 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 26ca39bf7b73381cf518bab2491d13b02d142277
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: fc5c128de983fc2bf2c4287b53f74495ff76ebb2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606728"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518252"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>指定端點 URL - 新增或修改可用性複本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  若要裝載可用性群組的可用性複本，伺服器執行個體必須擁有資料庫鏡像端點。 伺服器執行個體使用此端點接聽來自其他伺服器執行個體所裝載之可用性複本的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 訊息。 若要定義可用性群組的可用性複本，您必須指定將要裝載此複本之伺服器執行個體的端點 URL。 *「端點 URL」* (Endpoint URL) 會識別資料庫鏡像端點的傳輸通訊協定 (TCP)、伺服器執行個體的系統位址，以及與端點相關聯的通訊埠編號。  
+  若要裝載可用性群組的可用性複本，伺服器執行個體必須擁有資料庫鏡像端點。 伺服器執行個體使用此端點接聽來自其他伺服器執行個體所裝載之可用性複本的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 訊息。 若要定義可用性群組的可用性複本，您必須指定將要裝載此複本之伺服器執行個體的端點 URL。 「端點 URL」會識別資料庫鏡像端點的傳輸通訊協定 (TCP)、伺服器執行個體的系統位址，以及與端點相關聯的連接埠號碼。  
   
 > [!NOTE]  
 >  「端點 URL」一詞是資料庫鏡像使用者介面和文件集所用「伺服器網路位址」一詞的同義詞。  

@@ -12,12 +12,12 @@ ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 05a58fe071c4b593a31d2d69b89c0a14d08b04a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0bab6dc29d9bdf9fac1c29aa5faa56cf06c8cb57
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721180"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394341"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 建立模型部署封裝
 
@@ -94,7 +94,7 @@ ms.locfileid: "47721180"
   
      如果您不想要包含資料，請勿使用 `-version` 和 `-includedata` 參數。  
   
-6.  按 Enter 鍵。 當成功建立封裝之後，隨即顯示一則訊息，表示「MDSModelDeploy 作業已順利完成」。  
+6.  按 Enter 鍵。 當成功建立套件之後，隨即顯示一則訊息，表示「MDSModelDeploy 作業已順利完成」。  
   
 ## <a name="next-steps"></a>Next Steps  
   

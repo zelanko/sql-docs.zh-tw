@@ -12,12 +12,12 @@ ms.assetid: 98eb49e7-b190-4a21-8316-08c07cde14ed
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: aafa6b1378b9489327bb9340ee8168b78723304e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e4691d20c5dbbe67c7d457dbee2042cfd9ad203
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707056"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395461"
 ---
 # <a name="validation-master-data-services"></a>驗證 (Master Data Services)
 

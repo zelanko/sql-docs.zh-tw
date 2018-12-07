@@ -22,12 +22,12 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3a635138aa7488b9580a69560bb43295257b2915
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ee3a0ed473c40f21781eeb061d2d10436ebd47bd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657029"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510580"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 組態管理員
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,11 +73,11 @@ ms.locfileid: "51657029"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員可讓您建立或移除別名、變更通訊協定的使用順序，或檢視伺服器別名的屬性，其中包括：  
   
--   伺服器別名 — 用戶端連接之電腦所用的伺服器別名。  
+-   伺服器別名 - 用戶端連接之電腦所用的伺服器別名。  
   
--   通訊協定 — 組態項目所用的網路通訊協定。  
+-   通訊協定 - 設定項目所用的網路通訊協定。  
   
--   連接參數 — 網路通訊協定組態之連接位址的相關參數。  
+-   連接參數 - 網路通訊協定設定之連接位址的相關參數。  
   
  另外， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員也可讓您檢視容錯移轉叢集執行個體的相關資訊，不過，部份啟動和停止服務之類的動作，應該使用叢集管理員。  
   

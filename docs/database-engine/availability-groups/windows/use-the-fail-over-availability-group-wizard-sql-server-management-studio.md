@@ -20,16 +20,16 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: da51f432e92aac3ea446dc6d8392fe5dea305457
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 78bc2ed5285440afa526cc7e6e6ef1e732e4fc9e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799206"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530012"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>使用容錯移轉可用性群組精靈 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。 可用性群組會在可用性複本層級容錯移轉。 如果您容錯移轉至處於 SYNCHRONIZED 狀態的次要複本，此精靈就會執行規劃的手動容錯移轉 (不會遺失資料)。 如果您容錯移轉至處於 UNSYNCHRONIZED 或 NOT SYNCHRONIZING 狀態的次要複本，此精靈就會執行強制手動容錯移轉，也稱為「強制容錯移轉」  (可能會遺失資料)。 這兩種手動容錯移轉形式都會將您所連接的次要複本轉換成主要角色。 規劃的手動容錯移轉目前會將先前的主要複本會轉換成次要角色。 強制容錯移轉之後，當先前的主要複本上線時，它就會轉換成次要角色。  
+  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。 可用性群組會在可用性複本層級容錯移轉。 如果您容錯移轉至處於 SYNCHRONIZED 狀態的次要複本，此精靈就會執行規劃的手動容錯移轉 (不會遺失資料)。 如果您容錯移轉至處於 UNSYNCHRONIZED 或 NOT SYNCHRONIZING 狀態的次要複本，此精靈就會執行強制手動容錯移轉，也稱為「強制容錯移轉」 (可能會遺失資料)。 這兩種手動容錯移轉形式都會將您所連接的次要複本轉換成主要角色。 規劃的手動容錯移轉目前會將先前的主要複本會轉換成次要角色。 強制容錯移轉之後，當先前的主要複本上線時，它就會轉換成次要角色。  
 
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  第一次進行規劃的手動容錯移轉之前，請參閱 [執行可用性群組的已規劃手動容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。  
@@ -46,7 +46,7 @@ ms.locfileid: "47799206"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -60,7 +60,7 @@ ms.locfileid: "47799206"
   
 4.  **[簡介]** 頁面所呈現的資訊主要取決於任何次要複本是否符合規劃容錯移轉的資格。 如果此頁面顯示 **[執行這個可用性群組的計劃的容錯移轉]**，表示您可以在不遺失資料的情況下容錯移轉可用性群組。  
   
-5.  在 [選取新的主要複本]  頁面上，您可以在選擇將成為新主要複本的次要複本 (「容錯移轉目標」 ) 之前，檢視目前主要複本和 WSFC 仲裁的狀態。 若為規劃的手動容錯移轉，請務必選取 **[容錯移轉整備]** 值為 **[無資料遺失]** 的次要複本。 若為強制容錯移轉，則對於所有可能的容錯移轉目標而言，這個值都是「**資料遺失，警告(***#***)**」，其中 *#* 表示指定次要複本所存在的警告數目。 若要檢視給定容錯移轉目標的警告，請按一下其 [容錯移轉整備] 值。  
+5.  在 [選取新的主要複本]  頁面上，您可以在選擇將成為新主要複本的次要複本 (「容錯移轉目標」 ) 之前，檢視目前主要複本和 WSFC 仲裁的狀態。 若為規劃的手動容錯移轉，請務必選取 **[容錯移轉整備]** 值為 **[無資料遺失]** 的次要複本。 若為強制容錯移轉，則對於所有可能的容錯移轉目標而言，這個值都是「**資料遺失，警告 (***#***)**」，其中 *#* 表示指定次要複本所存在的警告數目。 若要檢視給定容錯移轉目標的警告，請按一下其 [容錯移轉整備] 值。  
   
      如需詳細資訊，請參閱本主題稍後的＜ [選取新的主要複本頁面](#SelectNewPrimaryReplica)＞。  
   

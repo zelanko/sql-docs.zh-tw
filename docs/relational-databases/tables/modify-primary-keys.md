@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ee5dd7e4bf1b4f4f6b05ab6ae54c04e5baf0ab1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efb4bcfd0ed5befc7438f5ff82747254efa8b88e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829996"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517006"
 ---
 # <a name="modify-primary-keys"></a>修改主索引鍵
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47829996"
   
 -   **若要使用下列項目來修改主索引鍵：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47829996"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要資料表的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  

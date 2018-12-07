@@ -11,12 +11,12 @@ ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1563485139b438580afc14da1262eff61b74be4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fe0017d3797f260aede9e712cbf1cecfe6a45a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642146"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420569"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 中的 Integration Services 新功能
 本主題說明 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中已新增或更新的功能。
@@ -50,7 +50,7 @@ ms.locfileid: "47642146"
 
 ## <a name="new-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的新功能
 
-您現在可以透過 Visual Studio 2017 或 Visual Studio 2015 中的 2017 開發將目標設為 SQL Server 2012 版的 SSIS 專案和套件。 如需詳細資訊，請參閱[下載 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。
+您現在可以透過 Visual Studio 2017 或 Visual Studio 2015 中的 2017 開發將目標設為 SQL Server 2012 版的 SSIS 專案和套件。 如需詳細資訊，請參閱 [下載 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。
 
 ## <a name="new-in-ssis-in-sql-server-2017-rc1"></a>SQL Server 2017 RC1 的 SSIS 新功能
 
@@ -72,7 +72,7 @@ ms.locfileid: "47642146"
 
 -   在相應放大中觸發執行時，您現在可以使用 **Use32BitRuntime** 參數。
 -   已改善相應放大中套件執行的 SSISDB 記錄效能。 事件訊息和訊息內容記錄現在會以批次模式寫入至 SSISDB，而非逐一寫入。 以下是這項改善的一些其他注意事項：        
-    - 目前 SQL Server Management Studio (SSMS) 版本中的某些報表目前不會針對相應放大中的執行顯示這些記錄。預期下一版的 SSMS 將支援它們。 受影響的報表包含 [所有連線] 報表、[錯誤內容] 報表，以及 [Integration Service 儀表板] 中的 [連線資訊] 區段。
+    - SQL Server Management Studio (SSMS) 目前版本中的某些報表，現在不會針對相應放大中的執行顯示這些記錄。預期下一版的 SSMS 將支援它們。 受影響的報表包含 [所有連線] 報表、[錯誤內容] 報表，以及 [Integration Service 儀表板] 中的 [連線資訊] 區段。
     - 已新增資料行 **event_message_guid**。 在相應放大中查詢這些執行記錄時，請使用此資料行來聯結 [catalog].[event_message_context] 檢視與 [catalog].[event_messages] 檢視，而非使用 **event_message_id**。
 -   若要取得 SSIS 相應放大的管理應用程式，請[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.1 或更新版本。
 

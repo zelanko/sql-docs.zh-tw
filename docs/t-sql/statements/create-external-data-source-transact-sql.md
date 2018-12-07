@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e864e1a5d3eb605fc7db462b1a685ce2e44e4ea5
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: b3375af07fc7231321c96c2aa03d95dbbdc6709f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560345"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506407"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -88,25 +88,25 @@ WITH
 GO
 
 
-
-
 -- PolyBase only: Hadoop cluster as data source
 -- (on Parallel Data Warehouse)
 CREATE EXTERNAL DATA SOURCE data_source_name
     WITH ( 
         TYPE = HADOOP, 
         LOCATION = 'hdfs://NameNode_URI[:port]'
-        [, JOB_TRACKER_LOCATION = 'JobTracker_URI[:port]' ]
+        [, RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI[:port]' ]
+        [, CREDENTIAL = credential_name]
     )
 [;]
 
--- PolyBase only: Azure Storage Blob as data source 
--- (on Parallel Data Warehouse)
-CREATE EXTERNAL DATA SOURCE data_source_name
-    WITH ( 
-        TYPE = BLOB_STORAGE,
+-- PolyBase only: Azure Storage Blob as data source   
+-- (on Parallel Data Warehouse)  
+CREATE EXTERNAL DATA SOURCE data_source_name  
+    WITH (   
+        TYPE = HADOOP,  
         LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'
-    )
+        [, CREDENTIAL = credential_name ]
+    )  
 [;]
   
 -- Elastic Database query only: a shard map manager as data source   
@@ -229,11 +229,11 @@ CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential
 
   
  RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  
- 指定 Hadoop 資源管理員位置。 當已指定時，查詢最佳化工具可以搭配 MapReduce 使用 Hadoop 的計算功能，制定以成本為基礎的決策，以預先處理 PolyBase 查詢的資料。 這稱為述詞下推，可大幅降低在 Hadoop 與 SQL 之間傳輸的資料量，因而改善查詢效能。  
+ 指定 Hadoop 資源管理員位置。 若已指定，則查詢最佳化工具可以搭配 MapReduce 使用 Hadoop 的計算功能，制定以成本為基礎的決策，以預先處理 PolyBase 查詢的資料。 這稱為述詞下推，可大幅降低在 Hadoop 與 SQL 之間傳輸的資料量，因而改善查詢效能。  
   
  若未指定，系統會針對 PolyBase 查詢，停用將計算推送到 Hadoop。  
  
-若未指定連接埠，系統會使用 ‘hadoop connectivity’ 設定的目前設定決定預設值。
+若未指定連接埠，系統會使用 'hadoop connectivity' 設定的目前設定決定預設值。
 
 |Hadoop 連線能力|預設資源管理員連接埠|
 |-------------------|-----------------------------|
@@ -498,7 +498,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices 
  WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
- SECRET = '(REMOVE ? FROM THE BEGINING)******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+ SECRET = '(REMOVE ? FROM THE BEGINNING)******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
 
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (

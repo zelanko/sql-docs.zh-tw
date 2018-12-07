@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 916709e73cd7cad750683dca984d9e897b84997d
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c77e8fdb5c3c7f4e163472b5a2fc8325d8d3583a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813181"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396831"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]是一種獨立式應用程式，由您或系統管理員安裝在電腦上。 您可以透過 Microsoft 下載中心、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 報表伺服器，或整合 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的 SharePoint 網站進行安裝。  

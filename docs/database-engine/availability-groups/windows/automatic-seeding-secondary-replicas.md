@@ -3,7 +3,7 @@ title: 自動植入次要複本 (SQL Server) | Microsoft Docs
 description: 使用自動植入來初始化次要複本。
 services: data-lake-analytics
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,17 +14,17 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b519e70c46f697c4ef819f59c122fba6c4e40ea2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d6a8359fede2b688292fa47e59a64d5ef43d424d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603618"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506694"
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>自動植入次要複本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在 SQL Server 2012 和 2014 中，初始化 SQL Server AlwaysOn 可用性群組次要複本的唯一方式是使用備份、複製和還原。 SQL Server 2016 引進的新功能是初始化次要複本 –「自動植入」。 自動植入使用記錄資料流傳輸，將使用 VDI 的備份串流到使用已設定端點的可用性群組的每個資料庫次要複本。 初始建立可用性群組期間，或將資料庫新增至某個可用性群組時，可以使用這項新功能。 所有支援 AlwaysOn 可用性群組的 SQL Server 版本都有自動植入功能，可以搭配傳統的可用性群組和[分散式可用性群組](distributed-availability-groups.md)使用。
+在 SQL Server 2012 和 2014 中，初始化 SQL Server AlwaysOn 可用性群組次要複本的唯一方式是使用備份、複製和還原。 SQL Server 2016 引進的新功能是初始化次要複本：「自動植入」。 自動植入使用記錄資料流傳輸，將使用 VDI 的備份串流到使用已設定端點的可用性群組的每個資料庫次要複本。 初始建立可用性群組期間，或將資料庫新增至某個可用性群組時，可以使用這項新功能。 所有支援 AlwaysOn 可用性群組的 SQL Server 版本都有自動植入功能，可以搭配傳統的可用性群組和[分散式可用性群組](distributed-availability-groups.md)使用。
 
 ## <a name="considerations"></a>考量
 
@@ -117,16 +117,14 @@ WITH (
 
 在變成次要複本的執行個體上，一旦加入該執行個體，下列訊息就會新增至 SQL Server 記錄檔：
 
->可用性群組 'AGName' 的本機可用性複本並未被授與建立資料庫的權限，但有 `AUTOMATIC` 的 `SEEDING_MODE`。 使用 `ALTER AVAILABILITY GROUP … GRANT CREATE ANY DATABASE` 命令可建立主要可用性複本植入的資料庫。
+>可用性群組 'AGName' 的本機可用性複本並未被授與建立資料庫的權限，但有 `AUTOMATIC` 的 `SEEDING_MODE`。 使用 `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` 命令可建立主要可用性複本植入的資料庫。
 
 ### <a name = "grantCreate"></a> 授與可用性群組在次要複本上建立資料庫的權限
 
 加入之後，授與可用性群組在 SQL Server 次要複本執行個體上建立資料庫的權限。 為使自動植入運作，可用性群組需要有建立資料庫的權限。 
 
 >[!TIP]
->當可用性群組在次要複本上建立資料庫時，它會將資料庫擁有者設成執行 `ALTER AVAILABILITY GROUP` 陳述式以授與建立任何資料庫權限的帳戶。 大部分的應用程式都需要次要複本的資料庫擁有者和主要複本相同。
->
->為確保所有的資料庫都是以和主要複本相同的資料庫擁有者名義所建立，請在主要複本資料庫擁有者的登入安全性內容下，執行下面的範例命令。 請注意，此登入需要 `ALTER AVAILABILITY GROUP` 權限。 
+>當可用性群組在次要複本上建立資料庫時，它會將 "sa" (更明確來說具有 sid 0x01 的帳戶) 設定為資料庫擁有者。 
 >
 >若要在次要複本自動建立資料庫之後變更資料庫擁有者，請使用 `ALTER AUTHORIZATION`。 請參閱 [ALTER AUTHORIZATION (Transact-SQL)](../../../t-sql/statements/alter-authorization-transact-sql.md)。
  
@@ -162,7 +160,7 @@ ALTER AVAILABILITY GROUP [<AGName>]
 
 ## <a name="change-the-seeding-mode-of-a-replica"></a>變更複本的植入模式
 
-建立可用性群組之後，可以改變複本植入模式，所以可以啟用或停用自動植入。 如果資料庫是以備份、複製和還原所建立，建立後啟用自動植入，可使用自動植入將資料庫新增至可用性群組。 例如：
+建立可用性群組之後，可以改變複本的植入模式，所以可以啟用或停用自動植入。 如果資料庫是以備份、複製和還原所建立，建立後啟用自動植入，可使用自動植入將資料庫新增至可用性群組。 例如：
 
 ```sql
 ALTER AVAILABILITY GROUP [AGName]
@@ -221,7 +219,7 @@ CREATE EVENT SESSION [AG_autoseed] ON SERVER
     ADD EVENT sqlserver.hadr_physical_seeding_restore_state_change,
     ADD EVENT sqlserver.hadr_physical_seeding_submit_callback
     ADD TARGET package0.event_file(
-        SET filename=N’autoseed.xel’,
+        SET filename=N'autoseed.xel',
         max_file_size=(5),
         max_rollover_files=(4)
         )

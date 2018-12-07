@@ -15,12 +15,12 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 20e04541e352e3df79b8ad03b2fa54940a875987
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f21bdeceed35e7eb680d5dd1c2b74863e3a29dbb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800486"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398778"
 ---
 # <a name="create-a-model-master-data-services"></a>建立模型 (Master Data Services)
 
@@ -49,7 +49,7 @@ ms.locfileid: "47800486"
   
 6.  在 [Log Retention Days] (記錄保留天數)  欄位中，選取其中一個選項來保留記錄資料。 預設值為 [系統設定] ，表示會從 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中的系統設定繼承值。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)。  
   
-     若要覆寫系統設定而不移除交易記錄資料，請選取 [否] 。 若只要保留今天的記錄資料並截斷過去幾天的所有記錄資料，請選取 [是]  ，然後將 [天數]  欄位設為 0。 若要保留指定天數的記錄資料，請選取 [是]  ，然後將 [天數]  欄位設為該天數。  
+     若要覆寫系統設定而不移除交易記錄資料，請選取 [否] 。 若只要保留今天的記錄資料並截斷過去幾天的所有記錄資料，請選取 [是]，然後將 [天數] 欄位設為 0。 若要保留指定天數的記錄資料，請選取 [是]  ，然後將 [天數]  欄位設為該天數。  
   
 7.  (選擇性) 選取 [建立與模型同名的實體]，建立與模型同名的實體。  
   

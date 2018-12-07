@@ -17,12 +17,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50819e03af647245949d3c60638767ce3ab859d7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d984799a7ac2ac3c6dd6241e98c3a5af175759b0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605808"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527162"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>設定可用性群組的唯讀路由 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ ms.locfileid: "51605808"
   
     -   若要設定主要角色的唯讀路由，請在 ADD REPLICA 或 MODIFY REPLICA WITH 子句中指定 PRIMARY_ROLE 選項，如下所示：  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=(‘***server***’** [ **,**...*n* ] **))**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('***server***'** [ **,**...*n* ] **))**  
   
          其中， *server* 會識別裝載可用性群組中唯讀次要複本的伺服器執行個體。  
   

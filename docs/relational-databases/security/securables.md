@@ -20,17 +20,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa19bc25c662c5010bf3cb424510117640795223
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: cb09b9028f2ef994d57f8a52ad21f6c80be63293
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864226"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537614"
 ---
 # <a name="securables"></a>[安全性實體]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  安全性實體是一種資源， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 授權系統會管理其存取權。 例如，資料表是安全性實體。 有些安全性實體可以包含在其他安全性實體內，因而建立稱為「範圍」的巢狀階層，以保護它們自己本身的安全。 安全性實體範圍為 **伺服器**、 **資料庫**以及 **結構描述**。  
+  安全性實體是一種資源，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 授權系統會管理其存取權。 例如，資料表是安全性實體。 有些安全性實體可以包含在其他安全性實體內，因而建立稱為「範圍」的巢狀階層，以保護它們自己本身的安全。 安全性實體範圍為 **伺服器**、 **資料庫**以及 **結構描述**。  
   
 ## <a name="securable-scope-server"></a>安全性實體範圍：伺服器  
  **伺服器** 安全性實體範圍包含下列安全性實體：  
@@ -87,7 +87,7 @@ ms.locfileid: "47864226"
   
 -   XML 結構描述集合  
   
--   物件 – 物件類別有下列成員：  
+-   物件 - 物件類別有下列成員：  
   
     -   Aggregate  
   

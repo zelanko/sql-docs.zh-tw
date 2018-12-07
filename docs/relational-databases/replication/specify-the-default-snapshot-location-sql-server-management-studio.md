@@ -14,12 +14,12 @@ ms.assetid: 27c5d9ad-a915-4c59-a8b7-82e3af61ac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ca691be3a18e6b74c407707ec3e2203629d9c0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3aa167df2f75b42cf5612b725cbfd368f4dc4407
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843496"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519955"
 ---
 # <a name="specify-the-default-snapshot-location-sql-server-management-studio"></a>指定預設快照集位置 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47843496"
   
 ### <a name="to-modify-the-default-snapshot-location"></a>若要修改預設快照集位置  
   
-1.  在 [散發者屬性 - \<散發者>] 對話方塊的 [發行者] 頁面上，按一下您要變更其預設快照集位置之發行者的屬性按鈕 (**…**)。  
+1.  在 [散發者屬性 - \<散發者>] 對話方塊的 [發行者] 頁面上，按一下您要變更其預設快照集位置之發行者的屬性按鈕 (**...**)。  
   
 2.  在 [發行者屬性 - \<發行者>] 對話方塊中，輸入 [預設快照集資料夾] 屬性的值。  
   

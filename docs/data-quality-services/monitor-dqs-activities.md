@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.administration.activitymonitoring.f1
@@ -17,12 +16,12 @@ ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e0864e25376f514186da5afe35d9dd4355ae939c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84e084b6db8576f4bd1f7c7d020ac9fe908a0eec
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801796"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617528"
 ---
 # <a name="monitor-dqs-activities"></a>監控 DQS 活動
 
@@ -37,7 +36,7 @@ ms.locfileid: "47801796"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
   
 -   您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_kb_operator 角色，才能檢視 DQS 活動。  
   
@@ -127,7 +126,7 @@ ms.locfileid: "47801796"
   
     -   **活動步驟**：顯示與選取活動相關聯之計算處理序 (活動步驟) 的方格。 此索引標籤底下的活動可能會顯示許多活動步驟。如果使用者執行了活動中相同的活動步驟許多次，就可能會發生這種情況。 例如，停止並重新啟動活動步驟。 這個索引標籤底下的方格會針對每個與活動相關聯的活動步驟顯示下列資訊： **[類型]**、 **[目前狀態]**、 **[開始時間]**、 **[經過時間]** 和 **[結束時間]**。  
   
-    -   **分析工具**：顯示目前和歷程記錄活動的分析資訊。 若為目前活動，它會包含部分但一致的資訊。 當您將對應的活動詳細資料匯出至 Excel 檔案時，活動的分析資訊就會匯出至 Excel 檔案。 這項資訊會顯示在匯出之 Excel 檔案的 **[分析工具 - 來源]** 和 **[分析工具 - 欄位]** 工作表中。  
+    -   **分析工具**：顯示目前和歷程記錄活動的分析資訊。 若為目前活動，它會包含部分但一致的資訊。 當您將對應的活動詳細資料匯出至 Excel 檔案時，活動的分析資訊就會匯出至 Excel 檔案。 這項資訊會顯示在匯出之 Excel 檔案的 [分析工具 - 來源] 和 [分析工具 - 欄位] 工作表中。  
   
 ##  <a name="Export"></a> 匯出 DQS 活動詳細資料  
  您可以將監控畫面中活動的活動屬性、活動處理序和分析資訊匯出至 Excel 檔案。 若要這樣做：  

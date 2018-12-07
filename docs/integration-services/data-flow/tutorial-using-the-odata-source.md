@@ -11,12 +11,12 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7cda725134aeba441a1cd6a59c7d3e7ae57d76de
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 841892faace82677df0bbd8939a147d2c65b363f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637755"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512999"
 ---
 # <a name="tutorial-using-the-odata-source"></a>教學課程：使用 OData 來源
   本教學課程將逐步引導您進行從範例 **Northwind** OData 服務 (https://services.odata.org/V3/Northwind/Northwind.svc/) 擷取 **Employees** 集合，然後將該集合載入一般檔案的程序。  
@@ -43,7 +43,7 @@ ms.locfileid: "51637755"
   
 4.  按兩下 [OData 來源] 元件以啟動 [OData 來源編輯器] 對話方塊。  
   
-5.  按一下 **[新增]** ，加入新的 OData 連接管理員。  
+5.  按一下 [新增...] 以新增 OData 連接管理員。  
   
 6.  輸入 **[服務文件位置]** 的 OData 服務 URL。 此 URL 可以是服務文件的 URL，或是特定摘要或實體的 URL。 針對本教學課程的用途，輸入服務文件的 URL：[https://services.odata.org/V3/Northwind/Northwind.svc/](https://services.odata.org/V3/Northwind/Northwind.svc/)。  
   

@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d6ad65d148f35255a93563cbdcb247efe8a61da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: db78cdc744ec73e0f2fb8b465187eaac84a2fae2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661337"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526519"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>搭配使用 Always Encrypted 與 .NET Framework Data Provider 進行開發
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -253,9 +253,9 @@ cmd.ExecuteNonQuery();
 
 ## <a name="working-with-column-master-key-stores"></a>使用資料行主要金鑰存放區
 
-若要加密參數值或解密查詢結果的資料，.NET Framework Data Provider for SQL Server 需要取得為目標資料行設定的資料行加密金鑰。 資料行加密金鑰是以加密形式存放在資料庫中繼資料。 每個資料行加密金鑰都有對應的資料行主要金鑰，主要金鑰是用於加密資料行加密金鑰。 資料庫中繼資料不儲存資料行主要金鑰，它只包含金鑰存放區的相關資訊，金鑰存放區包含特定的資料行主要金鑰以及金鑰存放區的金鑰位置。
+若要加密參數值或解密查詢結果的資料，.NET Framework Data Provider for SQL Server 需要取得為目標資料行設定的資料行加密金鑰。 資料行加密金鑰是以加密形式存放在資料庫中繼資料。 每個資料行加密金鑰都有對應的資料行主要金鑰，主要金鑰是用於加密資料行加密金鑰。 資料庫中繼資料不儲存資料行主要金鑰，它只包含金鑰存放區的相關資訊，金鑰存放區包含特定的資料行主要金鑰以及金鑰在金鑰存放區中的位置。
 
-若要取得資料行加密金鑰的純文字值，.NET Framework Data Provider for SQL Server 會先取得有關資料行加密金鑰及其對應資料行主要金鑰的中繼資料，然後使用中繼資料的資訊連絡包含資料行主要金鑰的金鑰存放區，解密加密的資料行加密金鑰。 .NET Framework Data Provider for SQL Server 使用資料行主要金鑰存放區提供者與存放區進行通訊，這是衍生自 [SqlColumnEncryptionKeyStoreProvider 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider.aspx)的類別執行個體。
+若要取得資料行加密金鑰的純文字值，.NET Framework Data Provider for SQL Server 會先取得有關資料行加密金鑰及其對應資料行主要金鑰的中繼資料，然後使用中繼資料的資訊連絡包含資料行主要金鑰的金鑰存放區，解密加密的資料行加密金鑰。 .NET Framework Data Provider for SQL Server 使用資料行主要金鑰存放區提供者與金鑰存放區進行通訊，這是衍生自 [SqlColumnEncryptionKeyStoreProvider 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider.aspx)的類別執行個體。
 
 
 取得資料行加密金鑰的程序︰

@@ -12,12 +12,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7ebe74f54dd33c3f31bc649eab9395e9f020b35f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebc3dfd0534deb313725ab646da26f770d0f99cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772386"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534456"
 ---
 # <a name="distributed-availability-groups"></a>分散式可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

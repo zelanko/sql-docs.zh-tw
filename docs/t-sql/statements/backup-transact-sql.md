@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5c0d52b75baa9850df8d6da546a3abbf31498df8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ecd7626e28faae1626809e6f45141c93dd4021e3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699336"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404513"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 

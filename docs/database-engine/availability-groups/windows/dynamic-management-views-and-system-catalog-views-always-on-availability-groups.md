@@ -10,12 +10,12 @@ ms.assetid: 4320a4a4-6183-462b-8bda-e7424e7cb706
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 937aa251ea066df28ec6241fbd6061af96773f04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79318dcd39a91eb8e3b9f570425f73838a1e53a3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758126"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417011"
 ---
 # <a name="dynamic-management-views-and-system-catalog-views-always-on-availability-groups"></a>動態管理檢視與系統目錄檢視 (Always On 可用性群組)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

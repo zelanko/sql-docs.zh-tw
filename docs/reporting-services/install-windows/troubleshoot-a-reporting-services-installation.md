@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4df963c826675b5c837200c4ab69037800b9dc5c
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 2051f89e5f7b9d07dccacbb441d95a72ff1de22a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814021"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391661"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>針對 Reporting Services 安裝進行疑難排解
 
@@ -75,7 +75,7 @@ ms.locfileid: "51814021"
  ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配回到頁首連結使用的箭頭圖示") [針對 SharePoint 模式安裝的問題進行疑難排解](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> 在 SharePoint 模式下安裝 SQL Server 2016 SSRS 之後，您在 SharePoint 管理中心內看不到 SQL Server Reporting Services 服務  
- **描述：** 如果成功安裝 SharePoint 模式的 SQL Server 2016 Reporting Services 與適用於 SharePoint 2013/2016 的 SQL Server 2016 Reporting Services 增益集之後，您沒有在下列兩個功能表中看見 “SQL Server Reporting Services”，表示 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務尚未註冊：  
+ **描述：** 若在成功安裝 SharePoint 模式的 SQL Server 2016 Reporting Services 與適用於 SharePoint 2013/2016 的 SQL Server 2016 Reporting Services 增益集之後，您沒有在下列兩個功能表中看見 "SQL Server Reporting Services"，則表示 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務尚未註冊：  
   
 -   SharePoint 2013/2016 管理中心 -> [應用程式管理] -> [管理伺服器上的服務] 頁面  
   
@@ -99,7 +99,7 @@ ms.locfileid: "51814021"
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  在下列頁面上，確認 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務的狀態顯示成 [已啟動]：SharePoint 2013/2016 管理中心 -> [應用程式管理] -> [管理伺服器上的服務]  
+2.  在以下頁面上，確認 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務的狀態已顯示為 [已啟動]：SharePoint 2013/2016 管理中心 -> [應用程式管理] -> [管理伺服器上的服務]  
   
  ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配回到頁首連結使用的箭頭圖示") [針對 SharePoint 模式安裝的問題進行疑難排解](#bkmk_tshoot_sharepoint)  
   
@@ -183,7 +183,7 @@ ms.locfileid: "51814021"
 ###  <a name="bkmk_RS_SHP_notsupported"></a> 您會看到使用 PREPAREIMAGE 時不支援 RS_SHP 的錯誤訊息  
  **描述：** 嘗試執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 PREPAREIMAGE 時，會看到與下面類似的錯誤訊息：  
   
- 執行 PREPAREIMAGE 動作時不支援指定的功能 'RS_SHP'，因為此動作不支援 SysPrep。 移除與 SysPrep 不相容的功能，然後重新執行安裝程式。  
+ 「執行 PREPAREIMAGE 動作時不支援指定的功能 'RS_SHP'，因為此動作不支援 SysPrep。 請移除與 SysPrep 不相容的功能，然後重新執行安裝程式。」  
   
  **因應措施：** 沒有因應措施。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不支援 SYSPREP (PREPAREIMAGE)。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式支援 SYSPREP。  
   

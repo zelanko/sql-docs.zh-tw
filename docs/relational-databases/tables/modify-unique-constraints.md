@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 241596df017e06519c2a2cc1993a7fb025addc97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f8d334eca117ed0ab63f2a82e5e6d59200c87c0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734616"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526353"
 ---
 # <a name="modify-unique-constraints"></a>修改唯一的條件約束
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47734616"
   
 -   **若要使用下列項目來修改唯一條件約束：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47734616"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要資料表的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -62,7 +62,7 @@ ms.locfileid: "47734616"
   
     |若要|請依照下列步驟：|  
     |--------|------------------------|  
-    |變更與條件約束有關的資料行|1) 在 [(一般)] 底下的方格中，按一下 [資料行]，然後按一下屬性右邊的省略符號 **(…)**。<br /><br /> 2) 在 [索引資料行] 對話方塊中，指定索引的新資料行或排序次序，同時指定這兩者。|  
+    |變更與條件約束有關的資料行|1) 在 [(一般)] 底下的方格中，按一下 [資料行]，然後按一下屬性右邊的省略符號 **(...)**。<br /><br /> 2) 在 [索引資料行] 對話方塊中，指定索引的新資料行或排序次序，同時指定這兩者。|  
     |重新命名條件約束|在 **[識別]** 底下的方格中，於 **[名稱]** 方塊中輸入新的名稱。 確定新名稱不會與 [選取的主/唯一索引鍵或索引] 清單中的名稱重複。|  
     |設定叢集選項|在 [資料表設計工具] 底下的方格中，選取 [建立成 CLUSTERED]，然後從下拉式清單中，選擇 [是] 建立叢集索引，或選擇 [否] 建立非叢集索引。 每個資料表只能存在一個叢集索引。 如果叢集索引已經存在這個資料表中，您就必須清除原始索引的這項設定。|  
     |定義填滿因數|在 **[資料表設計工具]** 底下的方格中，展開 **[填滿規格]** 類別目錄，然後在 **[填滿因數]** 方塊中輸入 0 到 100 之間的整數。|  

@@ -14,12 +14,12 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd3762adabe4098d48bfd5352a0a159672b76ecd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9270b71457bdbb6e932015ddcad8118ef2f42cdd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599096"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529925"
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>資料庫鏡像 - 建立工作階段 - Windows 驗證
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

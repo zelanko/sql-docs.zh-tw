@@ -12,12 +12,12 @@ ms.date: 02/13/2018
 ms.author: giladm
 author: giladm
 manager: shaik
-ms.openlocfilehash: c3c9936c7a69ec2d4f54f1f4412c5b39f60035e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18495f81289981d4ce5a72ac943150bfea4c4f3d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607096"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539117"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 資料探索與分類
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

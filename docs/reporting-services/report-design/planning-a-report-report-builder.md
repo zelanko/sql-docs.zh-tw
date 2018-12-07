@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab5c01a12200ed62cfc462fa25d3d75a95fd8589
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 385d8cfa69e7407aec2f31ee99962b2a1200e4aa
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716626"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710849"
 ---
 # <a name="planning-a-report-report-builder"></a>規劃報表 (報表產生器)
   報表產生器可讓您建立許多種類的分頁報表。 例如，您可以建立顯示摘要或詳細銷售資料、行銷和銷售趨勢、營運報表或儀表板的報表。 您也可以建立利用豐富文字格式 (例如銷售訂單、產品目錄或正式書信) 的報表。 所有這些報表都是使用報表產生器中相同基本建置組塊的不同組合而建立。 若要建立有用且易於了解的報表，先進行規劃是有效的方法。 以下是開始作業前可能要考量的部分事項：  
@@ -50,7 +50,7 @@ ms.locfileid: "47716626"
      您可以將報表儲存至本機電腦，繼續在本機使用或執行，以滿足您自己的資訊需求。 不過，若要與他人共用報表，您需要將報表儲存至以原生模式設定的報表伺服器，或是 SharePoint 整合模式下的報表伺服器。 如果將報表儲存到伺服器，其他人就可以在需要時隨時執行該報表。 或者，報表伺服器管理員可以設定報表的訂閱，或設定以電子郵件將報表傳遞給其他個人。 如果想要，可以用特定的匯出格式傳遞報表。 如需詳細資訊，請參閱 [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2016 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [SQL Server 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [報表撰寫概念 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [報表產生器教學課程](../../reporting-services/report-builder-tutorials.md)  
   

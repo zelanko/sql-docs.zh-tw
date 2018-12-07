@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0398062e9b57d536a0cc1a2c71c25e6983bea5c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df1121e89f1ec62148852e7b8a7aefaedd436fc9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678936"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399281"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>報表伺服器內容管理 (SSRS 原生模式)
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，內容管理是指管理報表伺服器項目。 所有項目都可以透過屬性和安全性設定單獨進行管理， 而任何一個項目都可以移至報表伺服器資料夾命名空間內的不同位置。 若要有效管理項目，您必須了解內容管理員所執行的工作。 從 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2 開始可以使用  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站。 本文會探討報表管理員和新的入口網站體驗。  
@@ -123,7 +123,7 @@ ms.locfileid: "47678936"
  資料夾中之項目的可見性，會依角色指派 (亦即，檢視某個項目的權限) 和資料夾適用的檢視選項而定。 在報表管理員中，您可以將 [內容] 頁面設定為清單檢視或詳細資料檢視。 在某些情況下，報表或項目可能會在清單檢視中隱藏。 刪除資料夾內容之前，務必要在詳細資料檢視中檢視資料夾。  
   
 ##  <a name="bkmk_Resources"></a> 資源  
- 資源是指儲存在報表伺服器上，但並非由報表伺服器所處理的 Managed 項目。 一般而言，資源會提供外部內容給報表使用者。 範例包括 .jpg 檔、包含空間資料的 ESRI 形狀檔，或 HTML 檔中描述報表所使用之商務規則的影像。 雖然此 JPG、SHP 或 HTML 檔會儲存在報表伺服器上，但是報表伺服器會直接將此檔案傳遞至瀏覽器而非先處理它。 如需詳細資訊，請參閱[影像 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) 和[地圖 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md) 的＜將資料加入至地圖＞一節。  
+ 資源是指儲存在報表伺服器上，但並非由報表伺服器所處理的 Managed 項目。 一般而言，資源會提供外部內容給報表使用者。 範例包括 .jpg 檔、包含空間資料的 ESRI 形狀檔，或 HTML 檔中描述報表所使用之商務規則的影像。 雖然此 JPG、SHP 或 HTML 檔會儲存在報表伺服器上，但是報表伺服器會直接將此檔案傳遞至瀏覽器而非先處理它。 如需詳細資訊，請參閱[影像 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) 和[地圖 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md) 的＜將資料新增至地圖＞一節。  
   
 ### <a name="adding-and-viewing-a-resource"></a>加入和檢視資源  
  若要將資源加入至報表伺服器，您可以上傳或發行檔案：  

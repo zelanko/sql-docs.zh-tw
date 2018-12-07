@@ -13,12 +13,12 @@ ms.assetid: d1822f1b-c1dd-4f2f-ab7c-6617c05a2b6c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9848ec9734163720c09954e927f0426be1d0c6eb
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2e5ffebd88c962313e525b110100bf82d2865e40
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698406"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535477"
 ---
 # <a name="extended-methods-on-geography-instances"></a>地理位置例項上擴充的方法
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "51698406"
   
 -   [OGC 規格，簡單特徵存取第一部 - 常見架構](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
--   [OGC 規格，簡單特徵存取第二部 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC 規格，簡易功能存取第二部分 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93628) \(英文\)  
   
 -   [OGC 規格，地理標記語言](https://go.microsoft.com/fwlink/?LinkId=93629) \(英文\)  
   

@@ -11,12 +11,12 @@ ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a1b585c5d4288d05e00d24e0f17b4823899a418
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ff408f0fd410e330f0ab5e3dfcdeee965a72a051
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640976"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545227"
 ---
 # <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,9 +66,9 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
 ## <a name="remarks"></a>Remarks  
  SQL Server 2012 Service Pack 2 已將 SERVER_OPERATION_ENCRYPTION_LEVEL 屬性新增至 **internal.catalog_properties** 資料表。 此屬性有兩個可能的值：  
   
--   **PER_EXECUTION (1)** - 會針對每次執行建立憑證和對稱金鑰，以用於保護機密的執行參數和執行記錄。 這是預設值。 您可能會在生產環境中遇到效能問題 (死結，失敗的維護作業等)，因為每次執行都會產生憑證/金鑰。 不過，此設定所提供的安全性層級高於其他值 (2)。  
+-   **PER_EXECUTION (1)** - 會針對每次執行建立憑證和對稱金鑰，以用於保護機密的執行參數和執行記錄。 這是預設值。 您可能會在生產環境中遇到效能問題 (鎖死、維護作業失敗等等)，因為每次執行時都會產生憑證/金鑰。 不過，此設定所提供的安全性層級高於另一個值 (2)。  
   
--   **PER_PROJECT (2)** - 會針對每個專案建立用於保護機密參數的憑證和對稱金鍵。 這可讓您擁有的效能優於 PER_EXECUTION 層級，因為金鍵和憑證只會針對專案產生一次，而不是每次執行都產生一次。  
+-   **PER_PROJECT (2)** - 會針對每個專案建立憑證和對稱金鑰，以用於保護敏感性 參數。 這可讓您擁有的效能優於 PER_EXECUTION 層級，因為金鍵和憑證只會針對專案產生一次，而不是每次執行都產生一次。  
   
  您必須先執行 [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md) 預存程序，才能將 SERVER_OPERATION_ENCRYPTION_LEVEL 從 1 變更為 2 (或) 從 2 變更為 1。 執行此預存程序之前，請執行下列動作：  
   

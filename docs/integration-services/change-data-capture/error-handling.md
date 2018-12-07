@@ -11,12 +11,12 @@ ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e445b2b09fb91ab820ee1ddcf2b5c9bb7076aa03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5880f74a5cb7296197e1d5ced383fa2c48aaf84a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637966"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400641"
 ---
 # <a name="error-handling"></a>錯誤處理
   Oracle CDC 執行個體會針對單一 Oracle 來源資料庫中的變更進行採礦處理 (Oracle RAC 叢集會視為單一資料庫)，並將認可的變更寫入目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中 CDC 資料庫內的變更資料表。  
@@ -56,7 +56,7 @@ ms.locfileid: "47637966"
   
 -   MSXDBCDC.dbo.xdbcdc_trace 資料表，它是由 Oracle CDC 服務主要處理序用於一般記錄和追蹤。  
   
--   \<cdc-database>.cdc.xdbcdc_trace 資料表，它是由 Oracle CDC 執行個體用於一般記錄和追蹤。 這表示與特定 Oracle CDC 執行個體有關的錯誤都會記錄到該執行個體的追蹤資料表。  
+-   \<cdc-database>.cdc.xdbcdc_trace 資料表，它是由 Oracle CDC 執行個體用於一般記錄和追蹤。 這表示與特定 Oracle CDC 執行個體相關之錯誤都會記錄到該執行個體的追蹤資料表。  
   
  當 Oracle CDC 服務在以下情況時會記錄資訊：  
   

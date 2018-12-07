@@ -20,12 +20,12 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f04de3c323f5655e7503d6d375df536897654740
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b55b675cf28bd0e61dd74b011aad9c50cd8325fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641385"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531606"
 ---
 # <a name="use-property-expressions-in-packages"></a>在封裝中使用屬性運算式
   屬性運算式是指派給屬性的運算式，用於在執行階段啟用該屬性的動態更新。 例如，屬性運算式可更新「收件者」欄位，傳送郵件工作透過插入儲存在變數中的電子郵件地址來使用該欄位。  
@@ -70,7 +70,7 @@ ms.locfileid: "51641385"
   
  ![屬性運算式的使用者介面](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "屬性運算式的使用者介面")  
   
- 在 [屬性] 視窗和 [運算式] 頁面上，按一下 [運算式] 集合層級上的瀏覽按鈕 **(…)**，以開啟 [屬性運算式編輯器] 對話方塊。 [屬性運算式編輯器] 可讓您將屬性對應至運算式，並輸入屬性運算式。 如果您想要使用圖形運算式工具來建立並驗證運算式，請按一下運算式層級上的瀏覽按鈕 **(…)**，以開啟 [運算式產生器] 對話方塊，然後再建立或修改並選擇性地驗證運算式。  
+ 在 [屬性] 視窗和 [運算式] 頁面上，按一下 [運算式] 集合層級上的瀏覽按鈕 ([...])，以開啟 [屬性運算式編輯器] 對話方塊。 [屬性運算式編輯器] 可讓您將屬性對應至運算式，並輸入屬性運算式。 如果您想要使用圖形運算式工具來建立並驗證運算式，請按一下運算式層級上的瀏覽按鈕 ([...])，以開啟 [運算式產生器] 對話方塊，然後再建立或修改並選擇性地驗證運算式。  
   
  您還可以從 [屬性運算式編輯器] 對話方塊，開啟 [運算式產生器] 對話方塊。  
   

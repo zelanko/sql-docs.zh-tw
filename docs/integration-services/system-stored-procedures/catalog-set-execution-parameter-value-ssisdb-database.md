@@ -11,12 +11,12 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7d44c57600719b35340295723f0ab25b4e1ae56f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c89486bb4d33ba52d1e0516d51eede715ddd9987
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808666"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405646"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |4|執行階段歷程<br /><br /> 收集追蹤資料流程中歷程所需的資料。|  
 |100|自訂記錄層次<br /><br /> 指定 CUSTOMIZED_LOGGING_LEVEL 參數中的設定。 如需可指定值的詳細資訊，請參閱 [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md)。<br /><br /> 如需自訂記錄層次的詳細資訊，請參閱[在 SSIS 伺服器上啟用套件執行的記錄功能](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)。|  
   
- 若要指定 Integration Services 伺服器在封裝執行期間發生任何錯誤時產生傾印檔案，請針對尚未執行之執行的執行個體，設定下列參數值。  
+ 若要指定 Integration Services 伺服器在套件執行期間發生任何錯誤時產生傾印檔案，請針對尚未執行之執行的執行個體，設定下列參數值。  
   
 |參數|ReplTest1|  
 |---------------|-----------|  
@@ -92,7 +92,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*parameter_name*|'DUMP_ON_ERROR|  
 |*parameter_value*|1|  
   
- 若要指定 Integration Services 伺服器在封裝執行期間發生事件時產生傾印檔案，請針對尚未執行的執行執行個體，設定下列參數值。  
+ 若要指定 Integration Services 伺服器在套件執行期間發生事件時產生傾印檔案，請針對尚未執行的執行執行個體，設定下列參數值。  
   
 |參數|ReplTest1|  
 |---------------|-----------|  
@@ -101,7 +101,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*parameter_name*|'DUMP_ON_EVENT|  
 |*parameter_value*|1|  
   
- 若要指定封裝執行期間會導致 Integration Services 伺服器產生傾印檔案的事件，請針對尚未執行之執行的執行個體，設定下列參數值。 使用分號來分隔多個事件代碼。  
+ 若要指定套件執行期間會導致 Integration Services 伺服器產生傾印檔案的事件，請針對尚未執行之執行的執行個體，設定下列參數值。 使用分號來分隔多個事件代碼。  
   
 |參數|ReplTest1|  
 |---------------|-----------|  

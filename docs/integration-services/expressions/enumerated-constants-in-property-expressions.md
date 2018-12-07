@@ -18,19 +18,19 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b035d9f36acfa1f01e7eafdb81d68f647d874db5
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 706ea141faa1e83c915e8ee01ff12f2d20dc10d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638965"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529714"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>屬性運算式中的列舉常數
   如果屬性運算式包含來自列舉值成員清單的值，運算式必須使用列舉值成員的數值來取代成員的易記名稱。 例如，如果運算式設定了 **LoggingMode** 屬性，您就必須使用數值 2 來取代易記名稱 Disabled。  
   
  此主題列出相當於列舉值易記名稱的數值，但僅限屬性運算式中常用之成員所屬的列舉值。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型包含其他許多列舉值，您在設計物件模型程式以程式設計方式建立封裝，或是對自訂封裝元素 (例如工作和資料流程元件) 進行編碼時，都會使用這些列舉值。  
   
- 除了封裝和封裝物件適用的自訂屬性以外， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [屬性] 視窗還包含一組可用於封裝、工作以及「Foreach 迴圈」、「For 迴圈」和「時序」等容器的屬性。 由列舉程式值設定的通用屬性會列在 [通用屬性] 區段中：**ForceExecutionResult**、 **LoggingMode**、 **IsolationLevel**和 **Transaction Option**。  
+ 除了封裝和封裝物件適用的自訂屬性以外， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [屬性] 視窗還包含一組可用於封裝、工作以及「Foreach 迴圈」、「For 迴圈」和「時序」等容器的屬性。 由列舉程式值設定的通用屬性會列在 [通用屬性] 區段中：**ForceExecutionResult**、**LoggingMode**、**IsolationLevel** 和 **Transaction Option**。  
   
  下列章節提供有關列舉常數的資訊：  
   
@@ -119,7 +119,7 @@ ms.locfileid: "51638965"
 |EnumerateRowsInFirstTable|2|  
   
 ### <a name="foreach-nodelist-enumerator"></a>Foreach NodeList 列舉值  
- **SourceDocumentType**、 **InnerXPathStringSourceType**和 **OuterXPathStringSourceType** 屬性：使用來自 **SourceType** 列舉的值進行設定。  
+ **SourceDocumentType**、**InnerXPathStringSourceType** 和 **OuterXPathStringSourceType** 屬性：使用來自 **SourceType** 列舉的值進行設定。  
   
 |SourceType 中的易記名稱|數值|  
 |---------------------------------|-------------------|  
@@ -424,7 +424,7 @@ ms.locfileid: "51638965"
 |Diff|4|  
 |修補|5|  
   
- **SourceType**、 **SecondOperandType**和 **XPathSourceType** 屬性：使用來自 **DTSXMLSourceType** 列舉的值進行設定。  
+ **SourceType**、**SecondOperandType** 和 **XPathSourceType** 屬性：使用來自 **DTSXMLSourceType** 列舉的值進行設定。  
   
 |DTSXMLSourceType 中的易記名稱|數值|  
 |---------------------------------------|-------------------|  

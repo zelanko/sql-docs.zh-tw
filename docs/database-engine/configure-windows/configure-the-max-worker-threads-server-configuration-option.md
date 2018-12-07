@@ -14,12 +14,12 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b8b2f1352c2eadb34780f1e5148f06059b7d4e13
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2522a2efa2edfb899d2693e6f4746edd85f2d7fe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596039"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420399"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>設定 max worker threads 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47596039"
   
 -   **使用下列方法設定 max worker threads 選項：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -73,7 +73,7 @@ ms.locfileid: "47596039"
     |CPU 數|32 位元電腦|64 位元電腦|  
     |------------|------------|------------| 
     |\<= 4 個處理器|256|512|
-    |\> 4 個處理器|256 + ((邏輯 CPU 數 - 4) * 8)|512 + ((邏輯 CPU 數 - 4) * 16)| 
+    |\> 4 個處理器|256 + ((邏輯 CPU 數 - 4) * 8)|512 + ((邏輯 CPU 數目 - 4) * 16)| 
   
     > [!NOTE]  
     > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不可以安裝在 32 位元作業系統上。 列出 32 位元電腦值以協助客戶執行 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更早版本。   建議在 32 位元電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的最大工作者執行緒設為 1024。  
@@ -102,7 +102,7 @@ ms.locfileid: "47596039"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  

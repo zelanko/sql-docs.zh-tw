@@ -15,12 +15,12 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3cd37fbe598fe93f5c5af5a63789511d667162ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 787e034767e419cd5f3b41b07364c6a11d908244
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701236"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543925"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications"></a>檢視並解決合併式發行集的資料衝突
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47701236"
   
     -   在上方方格中選取一個或多個資料列，然後按一下 **[移除]**，這相當於按一下 **[提交成功者]** 按鈕 (不會對資料進行任何變更)。  
   
-    -   按一下屬性按鈕 (**[…]**) 以檢視更多有關於衝突的資料行資訊。  
+    -   按一下屬性按鈕 ([...]) 以檢視更多有關於衝突的資料行資訊。  
   
     -   在提交資料之前，編輯 **[衝突成功者]** 或 **[衝突失敗者]** 資料行中的資料 (灰色資料行表示資料為唯讀)。  
   

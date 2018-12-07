@@ -22,12 +22,12 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 986d68540f75852061982ae159a903fc2ab1b518
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 33eb48be31cccdc96f8a38d008c7d1ebfa865981
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169284"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516129"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ CREATE FULLTEXT INDEX ON table_name
  *column_name*  
  這是包含在全文檢索索引中的資料行名稱。 只有類型為 **char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml** 和 **varbinary(max)** 的資料行可針對全文檢索搜尋編製索引。 若要指定多個資料行，請重複 *column_name* 子句，如下所示：  
   
- CREATE FULLTEXT INDEX ON *table_name* (*column_name1* […], *column_name2* […]) …  
+ CREATE FULLTEXT INDEX ON *table_name* (*column_name1* [...], *column_name2* [...]) ...  
   
  TYPE COLUMN *type_column_name*  
  指定用來保存 **varbinary(max)** 或 **image** 文件之文件類型的資料表資料行名稱 *type_column_name*。 這個資料行 (稱為類型資料行) 包含使用者提供的副檔名 (.doc、.pdf、.xls 等等)。 類型資料行必須屬於下列類型： **char**, **nchar**, **varchar**或 **nvarchar**。  
@@ -121,7 +121,7 @@ CREATE FULLTEXT INDEX ON table_name
  指定全文檢索索引涵蓋的資料表資料行變更 (更新、刪除或插入)，是否會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳播到全文檢索索引。 透過 WRITETEXT 和 UPDATETEXT 的資料變更並不會反映在全文檢索索引中，變更追蹤並不會收取這些變更。  
   
  MANUAL  
- 指定必須手動傳播追蹤的變更 (藉由呼叫 ALTER FULLTEXT INDEX …  START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (「手動母體擴展」)。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來定期呼叫這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
+ 指定必須手動傳播追蹤的變更 (藉由呼叫 ALTER FULLTEXT INDEX ...START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (「手動母體擴展」)。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來定期呼叫這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
  **AUTO**  
  指定在修改基底資料表中的資料時，同時自動散佈追蹤變更 (「自動母體擴展」)。 雖然變更會自動傳播，但這些變更可能不會立即反映在全文檢索索引中。 預設值是 AUTO。  

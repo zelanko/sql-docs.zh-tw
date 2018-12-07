@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e6b18b3248bf74ee85f849a8f62fcb87815558d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bce0be6e849dc2e374ca8af1025a5da386b27a2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750247"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533578"
 ---
 # <a name="view-user-defined-functions"></a>檢視使用者定義函數
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47750247"
   
 -   **使用下列方法取得函數的相關資訊：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -50,12 +50,12 @@ ms.locfileid: "47750247"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  若要使用 **sys.sql_expression_dependencies** 尋找函數的所有相依性，需要資料庫的 VIEW DEFINITION 權限以及資料庫之 **sys.sql_expression_dependencies** 的 SELECT 權限。 系統物件定義是公開可見的，就像 OBJECT_DEFINITION 中傳回的定義一樣。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### <a name="to-show-a-user-defined-functions-properties"></a>若要顯示使用者定義函數的屬性  
+#### <a name="to-show-a-user-defined-functions-properties"></a>顯示使用者定義函數的屬性  
   
 1.  在 **[物件總管]** 中，按一下資料庫旁邊的加號，此資料庫包含您要查看其屬性的函數，然後按一下加號展開 **[可程式性]** 資料夾。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47750247"
   
 4.  以滑鼠右鍵按一下要查看其屬性的函數，然後選取 [屬性]。  
   
-     下列屬性會出現在 [函數屬性 - *函數名稱*] 對話方塊中。  
+     下列屬性會出現在 [函數屬性 - *function_name*] 對話方塊中。  
   
      **[資料庫備份]**  
      包含此函數之資料庫的名稱。  

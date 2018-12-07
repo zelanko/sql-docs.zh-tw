@@ -32,12 +32,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8a2a8539b63df48520777276dac4e66867e8634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a729dac9bba3f8ace1f117b6317d24ec541fcc19
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799706"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641019"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -235,6 +235,8 @@ Execute a character string
   
  如果參數值是物件名稱、字元字串或者由資料庫名稱或結構描述名稱所限定，則必須以單引號括住整個名稱。 如果參數值是關鍵字，則必須以雙引號括住關鍵字。  
   
+如果您傳遞開頭不是 `@` 的單字，且沒有用單引號括住 (例如您忘記參數名稱上的 `@`)，則該單字會被視為 Nvarchar 字串 (儘管遺漏了引號)。
+
  如果預設值是在模組中定義，使用者就可以直接執行該模組，不必指定參數。  
   
  預設值也可以是 NULL。 通常，模組定義會指定當參數值為 NULL 時，應該採取什麼動作。  
@@ -287,7 +289,7 @@ Execute a character string
  這是包含要傳遞到連結伺服器之命令的常數字串。 如果包含 N，則字串解譯為 **nvarchar** 資料類型。  
   
  [?]  
- 指出為其在 EXEC('…', \<arg-list>) AT \<linkedsrv> 陳述式所使用之通過命令的 \<arg-list> 中提供值的參數。  
+ 指出為其在 EXEC('...', \<arg-list>) AT \<linkedsrv> 陳述式所使用之通過命令的 \<arg-list> 中提供值的參數。  
   
  AT *linked_server_name*  
 **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -295,7 +297,7 @@ Execute a character string
  指定 *command_string* 對 *linked_server_name* 執行，並將結果 (若有) 傳回用戶端。 *linked_server_name* 必須參考本機伺服器中現有的連結伺服器定義。 連結伺服器是利用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 所定義。  
   
  WITH \<execute_option>  
- 可能的執行選項。 INSERT…EXEC 陳述式中不可指定 RESULT SETS 選項。  
+ 可能的執行選項。 INSERT...EXEC 陳述式中不可指定 RESULT SETS 選項。  
   
 |詞彙|定義|  
 |----------|----------------|  
@@ -315,7 +317,7 @@ Execute a character string
 |schema_name|擁有資料表、檢視表或資料表值函式的結構描述名稱。|  
 |table_name &#124; view_name &#124; table_valued_function_name|指定傳回的資料行將會是具名資料表、檢視表或資料表值函式中所指定的資料行。 AS 物件語法不支援資料表變數、暫存資料表和同義字。|  
 |AS TYPE [schema_name.]table_type_name|指定傳回的資料行將會是資料表類型中所指定的資料行。|  
-|AS FOR XML|指定 EXECUTE 陳述式所呼叫的陳述式或預存程序產生的 XML 結果將會轉換成格式，如同 SELECT …  FOR XML … 所產生。 陳述式。 來自原始陳述式中型別指示詞的所有格式都會移除，而傳回的結果會如同未指定任何型別指示詞。 AS FOR XML 不會將非 XML 表格式結果從執行的陳述式或預存程序轉換為 XML。|  
+|AS FOR XML|指定 EXECUTE 陳述式所呼叫的陳述式或預存程序產生的 XML 結果將會轉換成如同是由 SELECT ...FOR XML ... 陳述式產生的格式。 來自原始陳述式中型別指示詞的所有格式都會移除，而傳回的結果會如同未指定任何型別指示詞。 AS FOR XML 不會將非 XML 表格式結果從執行的陳述式或預存程序轉換為 XML。|  
   
 |詞彙|定義|  
 |----------|----------------|  
@@ -391,7 +393,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-execute-to-pass-a-single-parameter"></a>A. 使用 EXECUTE 傳遞單一參數  
- [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的 `uspGetEmployeeManagers` 預存程序預期需要一個參數 (`@EmployeeID`)。 下列範例會將 `Employee ID 6` 當做參數值來執行 `uspGetEmployeeManagers` 預存程序。  
+ `uspGetEmployeeManagers` 資料庫中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 預存程序預期需要一個參數 (`@EmployeeID`)。 下列範例會將 `Employee ID 6` 當做參數值來執行 `uspGetEmployeeManagers` 預存程序。  
   
 ```  
 EXEC dbo.uspGetEmployeeManagers 6;  
@@ -416,7 +418,7 @@ GO
 ```  
   
 ### <a name="b-using-multiple-parameters"></a>B. 使用多個參數  
- 下列範例會執行 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的 `spGetWhereUsedProductID` 預存程序。 它會傳遞兩個參數：第一個參數是產品識別碼 (`819`)，第二個參數 `@CheckDate,` 則是 `datetime` 值。  
+ 下列範例會執行 `spGetWhereUsedProductID` 資料庫中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 預存程序。 它會傳遞兩個參數：第一個參數是產品識別碼 (`819`)，第二個參數 `@CheckDate,` 則是 `datetime` 值。  
   
 ```  
 DECLARE @CheckDate datetime;  
@@ -532,7 +534,7 @@ GO
 ```  
   
 ### <a name="i-using-execute-with-a-user-defined-function"></a>I. 使用 EXECUTE 與使用者定義函數  
- 下列範例會執行 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的 `ufnGetSalesOrderStatusText` 純量使用者定義函數。 它會使用變數 `@returnstatus` 來儲存該函數所傳回的值。 該函數會預期接受一個輸入參數 `@Status`。 它定義為 **tinyint** 資料類型。  
+ 下列範例會執行 `ufnGetSalesOrderStatusText` 資料庫中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 純量使用者定義函數。 它會使用變數 `@returnstatus` 來儲存該函數所傳回的值。 該函數會預期接受一個輸入參數 `@Status`。 它定義為 **tinyint** 資料類型。  
   
 ```  
 DECLARE @returnstatus nvarchar(15);  

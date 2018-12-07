@@ -13,16 +13,16 @@ ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f66b2e167979e2395832c3a73dfb450efa0211e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2d29e7565cf1fa25e93015682f9d700d8079f49a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701866"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503418"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>全文檢索索引資料行對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-這個對話方塊會列出 [資料表設計工具] 開啟的資料表中，參與全文檢索索引的資料行。 若要存取這個對話方塊，請在資料表設計工具中的資料表上按一下滑鼠右鍵、選擇 [全文檢索索引]，然後在 [全文檢索索引] 對話方塊中，依序按一下想要檢視或編輯之資料行索引、右邊方格的 [資料行] 欄位，再按一下省略符號 (**…**)。  
+這個對話方塊會列出 [資料表設計工具] 開啟的資料表中，參與全文檢索索引的資料行。 若要存取這個對話方塊，請在資料表設計工具中的資料表上按一下滑鼠右鍵、選擇 [全文檢索索引]，然後在 [全文檢索索引] 對話方塊中，依序按一下想要檢視或編輯的資料行索引、右側方格的 [資料行] 欄位，再按一下省略符號 (**...**)。  
   
 ## <a name="options"></a>選項。  
 **資料行**  

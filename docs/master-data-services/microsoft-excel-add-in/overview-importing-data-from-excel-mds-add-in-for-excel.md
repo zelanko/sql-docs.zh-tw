@@ -11,12 +11,12 @@ ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2211d4d23367e08d8a30ec4b7e71f7ad477a6030
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0f410c49f1ae4ded84c1077e26e824ba8c2b82f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685966"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502943"
 ---
 # <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>概觀：從 Excel 匯入資料 (適用於 Excel 的 MDS 增益集)
 
@@ -24,7 +24,7 @@ ms.locfileid: "47685966"
 
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，如果您想要與其他使用者共用資料，請將資料發行至 MDS 存放庫。 一旦發行資料之後，這項資料就可供此增益集的其他使用者下載。  
   
- 發行資料時，您已加入或更新的任何資料都會發行至 MDS 儲存機制。 不過，您已刪除的資料則不會發行。您必須個別刪除資料。 如需詳細資訊，請參閱 [刪除資料列 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/delete-a-row-mds-add-in-for-excel.md)。  
+ 發行資料時，您已新增或更新的任何資料都會發行至 MDS 存放庫。 不過，您已刪除的資料則不會發行；您必須個別刪除資料。 如需詳細資訊，請參閱 [刪除資料列 &#40;適用於 Excel 的 MDS 增益集&#41;](../../master-data-services/microsoft-excel-add-in/delete-a-row-mds-add-in-for-excel.md)。  
   
 > [!NOTE]  
 >  發行無法用來建立新的實體。 如需建立實體的詳細資訊，請參閱[建立實體 &#40;MDS 適用於 Excel 的增益集&#41;](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)。  
@@ -49,7 +49,7 @@ ms.locfileid: "47685966"
 >  如果您輸入了超過 500 個字元的註解，系統將自動截斷註解。  
   
 ## <a name="business-rule-and-other-validation"></a>商務規則和其他驗證  
- 發行資料時，系統會在資料加入至 MDS 儲存機制之前執行驗證，確保資料正確無誤。 如果資料不符合指定的準則，就不會發行至儲存機制。 如需詳細資訊，請參閱[驗證資料 &#40;MDS 適用於 Excel 的增益集&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)。  
+ 發行資料時，系統會在資料新增至 MDS 存放庫之前執行驗證，確保資料正確無誤。 如果資料不符合指定的準則，就不會發行至儲存機制。 如需詳細資訊，請參閱[驗證資料 &#40;MDS 適用於 Excel 的增益集&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
   

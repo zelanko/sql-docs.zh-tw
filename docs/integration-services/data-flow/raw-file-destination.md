@@ -21,12 +21,12 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d9632936ad839e0dbc1d425f0d554847f657dfd
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 15fbcd91b9b2604b0ce7faef4d129101c0fb6f40
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639786"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393611"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
   「原始檔案」目的地會將原始資料寫入檔案。 由於資料的格式對於目的地而言是原生的，因此資料不需翻譯，也幾乎不需要剖析。 這表示，「原始檔案」目的地可比其他目的地更快地寫入資料，例如「一般檔案」和 OLE DB 目的地。  
@@ -105,7 +105,7 @@ ms.locfileid: "51639786"
   
 5.  使用原始檔案目的地寫入 RawFile2。  
   
-     在資料流程中，RawFile1 因為是讀取來源而遭到鎖定。  
+     在資料流程中，由於 RawFile1 是讀取來源，因此遭到鎖定。  
   
 6.  將 RawFile1 取代成 RawFile2。  
   

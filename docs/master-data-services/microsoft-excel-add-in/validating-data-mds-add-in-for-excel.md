@@ -11,12 +11,12 @@ ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bc9f742eff99fd71efa984c0a0a88c97cceb221e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6690ab92652858d2ab3df7c066c5b4cbf6a65c57
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603198"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418549"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>驗證資料 (適用於 Excel 的 MDS 增益集)
 
@@ -50,7 +50,7 @@ ms.locfileid: "47603198"
   
 |[狀態]|Description|  
 |------------|-----------------|  
-|錯誤|資料列中一個或多個值不符合系統需求，如長度或資料類型。 MDS 儲存機制中的值未更新。|  
+|錯誤|資料列中一或多個值不符合系統需求，如長度或資料類型。 MDS 儲存機制中的值未更新。|  
 |新資料列|資料列中的值尚未發行到 MDS 儲存機制。|  
 |唯讀|登入的使用者有資料列中一個或多個值的唯讀權限，而且值無法更新。|  
 |未變更|工作表中尚未變更資料列中的任何值。 這不表示儲存機制中的值尚未變更；若要取得工作表中最新的資料，請在 [連接和載入] 群組中，請按一下 [載入或重新整理]。<br /><br /> 這是每個資料列的預設值。|  

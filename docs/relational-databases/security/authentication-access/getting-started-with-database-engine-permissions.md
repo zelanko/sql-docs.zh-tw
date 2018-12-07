@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c73e625f6447d5afd1e60acf8ec0e9159dcdb04e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00d28b0750ba599e4bc73fa2ec6586271b683545
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849586"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410855"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>資料庫引擎權限使用者入門
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   `PERMISSION` 會建立允許或禁止的動作。 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 可指定 230 個權限。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 具有較少的權限，這是因為在 Azure 中具有某些不相關的動作。 權限會列示在下面的[權限 &#40;Database Engine&#41;](../../../relational-databases/security/permissions-database-engine.md) 主題和參照圖表中。  
   
--   `ON SECURABLE::NAME` 是安全性實體類型 (伺服器、伺服器物件、資料庫或資料庫物件) 及其名稱。 某些權限不需要 `ON SECURABLE::NAME` ，這是因為其在內容當中不明確或不適當。 例如， `CREATE TABLE` 權限不需要 `ON SECURABLE::NAME` 子句。 (例如 `GRANT CREATE TABLE TO Mary;` 允許 Mary 建立資料表。)  
+-   `ON SECURABLE::NAME` 是安全性實體類型 (伺服器、伺服器物件、資料庫或資料庫物件) 及其名稱。 某些權限不需要 `ON SECURABLE::NAME` ，這是因為其在內容當中不明確或不適當。 例如，`CREATE TABLE` 權限不需要 `ON SECURABLE::NAME` 子句。 (例如 `GRANT CREATE TABLE TO Mary;` 允許 Mary 建立資料表。)  
   
 -   `PRINCIPAL` 是接收或失去權限的安全性主體 (登入、使用者或角色)。 盡可能授與權限給角色。  
   
@@ -175,7 +175,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
   
 -   您可使用 `sys.database_principals` 檢視，檢驗資料庫中的使用者與使用者定義角色。  
   
--   您可使用 `sys.server_permissions` 檢視，檢驗授與至登入以及使用者定義伺服器角色的權限。 此檢視在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]中無法使用。  
+-   您可使用 `sys.server_permissions` 檢視，檢驗授與至登入以及使用者定義伺服器角色的權限。 此檢視在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 中無法使用。  
   
 -   您可使用 `sys.database_permissions` 檢視，檢驗授與至使用者以及使用者定義固定資料庫角色的權限。  
   

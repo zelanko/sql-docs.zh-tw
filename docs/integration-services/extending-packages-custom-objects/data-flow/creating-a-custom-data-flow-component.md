@@ -20,15 +20,15 @@ ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 961e5bccc9dac041104280e3186ba6a767db588f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bdac01fd13da7f1662e8f8292a31a3412fcf5e7e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693536"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511202"
 ---
 # <a name="creating-a-custom-data-flow-component"></a>建立自訂資料流程元件
-  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中，資料流程工作會公開物件模型，讓開發人員透過使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 與 Managed 程式碼建立自訂資料流程元件 (來源、轉換和目的地)。  
+  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中，資料流程工作會公開物件模型，讓開發人員透過使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 與受控程式碼建立自訂資料流程元件 (來源、轉換和目的地)。  
   
  資料流程工作是由兩個元件所組成：<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 介面以及定義元件之間資料移動的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 物件之集合。  
   

@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: af6208fa360a646e68a814a6e0509f1130055424
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 148ae7bcbb2484f6a89b0ca787f8c6d8962a80dd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716946"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413785"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 陳述式 - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]

@@ -11,12 +11,12 @@ ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: deed72fce55d5e80f54ba53596c213288aae249d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: daae5aa71c227591a3349de4abd6526e83131f8c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664627"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512614"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>逐步解說：擴充資料庫專案部署以分析部署計畫
 您可以建立部署參與者，以便在部署 SQL 專案時執行自訂動作。 您可以建立 DeploymentPlanModifier 或 DeploymentPlanExecutor。 使用 DeploymentPlanModifier，在計畫執行前變更計畫；使用 DeploymentPlanExecutor，在計畫執行時執行作業。 在這個逐步解說中，您會建立名稱為 DeploymentUpdateReportContributor 的 DeploymentPlanExecutor，以產生有關部署資料庫專案時執行之動作的報表。 因為這個組建參與者接受參數來控制是否產生報表，您必須執行其他必要步驟。  
@@ -58,7 +58,7 @@ ms.locfileid: "51664627"
   
 1.  建立名稱為 MyDeploymentContributor 的 Visual Basic 或 Visual C# 類別庫專案。  
   
-2.  將 “Class1.cs” 檔案重新命名為 “DeploymentUpdateReportContributor.cs”。  
+2.  將 "Class1.cs" 檔案重新命名為 "DeploymentUpdateReportContributor.cs"。  
   
 3.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後按一下 [新增參考]。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "51664627"
         /// passed as an additional argument to the DacServices API. To set in a project file, add the following:  
         ///   
         /// <PropertyGroup>  
-        ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug’”>  
+        ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
         /// $(ContributorArguments);DeploymentUpdateReportContributor.GenerateUpdateReport=true;  
         ///     </ContributorArguments>  
         /// <PropertyGroup>  
@@ -114,7 +114,7 @@ ms.locfileid: "51664627"
   
     ```  
   
-    在此案例中，屬性的第一個參數應該是唯一識別碼，用來識別專案檔中的參與者。 最佳做法是將您資料庫的命名空間 (在此逐步解說中是 MyDeploymentContributor) 與類別名稱 (在此逐步解說中是 DeploymentUpdateReportContributor) 結合，來產生識別碼。  
+    在此案例中，屬性的第一個參數應該是唯一識別碼，用來識別專案檔中的參與者。 最佳做法是將您程式庫的命名空間 (在此逐步解說中是 MyDeploymentContributor) 與類別名稱 (在此逐步解說中是 DeploymentUpdateReportContributor) 結合，來產生識別碼。  
   
 3.  下一步，您將會加入下列成員，用來讓這個提供者接受命令列參數：  
   
@@ -526,7 +526,7 @@ ms.locfileid: "51664627"
     |-----------------|--------------------|  
     |類別成員|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)、[ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx)、[DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
     |WriteReport 方法|XmlWriter 和 XmlWriterSettings|  
-    |ReportPlanOperations 方法|相關型別包含：[DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)、[SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx)、[SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx)、[SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx)、[CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx)、[AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx)、[DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx)。<br /><br />還有一些其他步驟 (如需步驟的完整清單，請參閱應用程式開發介面文件)。|  
+    |ReportPlanOperations 方法|相關型別包含：[DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)、[SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx)、[SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx)、[SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx)、[CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx)、[AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx)、[DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx)。<br /><br />還有一些其他步驟 (如需步驟的完整清單，請參閱 API 文件)。|  
     |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
     |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
   
@@ -571,7 +571,7 @@ ms.locfileid: "51664627"
 -   使用 MSBuild 並提供適當的參數，部署專案。  
   
 ### <a name="add-properties-to-the-sql-project-sqlproj-file"></a>將屬性加入至 SQL 專案檔 (.sqlproj)  
-您一定要更新 SQL 專案檔，指定要執行之參與者的識別碼。 此外，因為這個參與者必須有 “GenerateUpdateReport” 引數，必須將它指定為參與者引數。  
+您一定要更新 SQL 專案檔，指定要執行之參與者的識別碼。 此外，因為這個參與者必須有 "GenerateUpdateReport" 引數，必須將它指定為參與者引數。  
   
 您可以使用下列其中一種作法： 手動修改 .sqlproj 檔案，加入必要的引數。 如果您的參與者沒有組態所需的任何參與者引數，或者如果您不想要在大量專案中重複使用參與者，可以選擇這樣做。 如果您選擇這個選項，將下列陳述式加入至 .sqlproj 檔案，在檔案的第一個 Import 節點後面：  
   
@@ -586,9 +586,9 @@ ms.locfileid: "51664627"
   
 1.  巡覽至 %Program Files%\MSBuild。  
   
-2.  建立將儲存目標檔案的新資料夾 “MyContributors”。  
+2.  建立將儲存目標檔案的新資料夾 "MyContributors"。  
   
-3.  在這個目錄中建立新檔案 “MyContributors.targets”，在檔案中加入下列文字，然後儲存檔案：  
+3.  在這個目錄中建立新檔案 "MyContributors.targets"，在檔案中新增下列文字，然後儲存檔案：  
   
     ```  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -610,16 +610,16 @@ ms.locfileid: "51664627"
 遵循其中一個方法之後，您可以使用 MSBuild，傳入命令列建置的參數。  
   
 > [!NOTE]  
-> 您一定要更新 "DeploymentContributors" 屬性指定您的參與者識別碼。 這是參與者原始程式檔中 “ExportDeploymentPlanExecutor” 屬性所用相同的識別碼。 如果沒有這個識別碼，當您建置專案時不會執行參與者。 只有在您有參與者執行所需的引數時，才需要更新 “ContributorArguments” 屬性。  
+> 您一定要更新 "DeploymentContributors" 屬性指定您的參與者識別碼。 這是參與者原始程式檔中 "ExportDeploymentPlanExecutor" 屬性所用相同的識別碼。 如果沒有這個識別碼，當您建置專案時不會執行參與者。 只有在您有參與者執行所需的引數時，才需要更新 "ContributorArguments" 屬性。  
   
 ### <a name="deploy-the-database-project"></a>部署資料庫專案  
-您的專案可以在 Visual Studio 中正常發行或部署。 只需開啟包含 SQL 專案的方案並選擇 [發行] 選項。 或使用 F5 對 LocalDB 進行偵錯部署。 在此範例中，我們將使用 [發行…] 對話方塊來產生部署指令碼。  
+您的專案可以在 Visual Studio 中正常發行或部署。 只要開啟包含 SQL 專案的方案，並從專案的滑鼠右鍵操作功能表中選擇 [發行...] 選項，或使用 F5 進行 LocalDB 偵錯部署。 在這個範例中，會使用 [發行...] 對話方塊產生部署指令碼。  
   
 ##### <a name="to-deploy-your-sql-project-and-generate-a-deployment-report"></a>若要部署 SQL 專案並產生部署報表  
   
 1.  開啟 Visual Studio，並開啟包含 SQL 專案的方案。  
   
-2.  選取專案並按 F5 進行偵錯部署。 注意：因為 ContributorArguments 元素設定為只在組態是 "Debug" 時才會包含在內，所以現在只產生偵錯部署的部署報表。 若要變更此情況，請將 Condition="'$(Configuration)' == 'Debug'" 陳述式從 ContributorArguments 定義移除。  
+2.  選取專案並按 "F5" 進行偵錯部署。 注意：因為 ContributorArguments 元素設定為只在設定是 "Debug" 時才會包含在內，所以現在只產生偵錯部署的部署報表。 若要變更此情況，請將 Condition="'$(Configuration)' == 'Debug'" 陳述式從 ContributorArguments 定義移除。  
   
 3.  類似下列範例的輸出應該會出現在輸出視窗中：  
   

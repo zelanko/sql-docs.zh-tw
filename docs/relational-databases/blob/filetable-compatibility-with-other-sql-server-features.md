@@ -13,12 +13,12 @@ ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b3e0a936d4898988dfeacfefe1bf00058b16fa5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b8205fdb8dc5e869a9ef96ab4d76739e08ce386
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757806"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522371"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable 與其他 SQL Server 功能的相容性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "47757806"
   
 -   檔案的檔案路徑可以在檢視表中視覺化，其方式是將它新增為檢視表中的明確資料行。 例如：  
   
-     `CREATE VIEW MP3FILES AS SELECT column1, column2, …, GetFileNamespacePath() AS PATH, column3,…  FROM Documents`  
+     `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   
  **索引檢視表**  
  目前的索引檢視表不得包含 FILESTREAM 資料行，或是相依於 FILESTREAM 資料行的計算資料行/保存的計算資料行。 當 FileTable 上定義檢視表時，這個行為依然不會變更。  

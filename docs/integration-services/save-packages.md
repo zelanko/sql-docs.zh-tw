@@ -19,12 +19,12 @@ ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b48a90afb091382446900cd1875533f8976810f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e9a2cbb66b7b77a9cb87b779baf76f63f627bd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693396"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542033"
 ---
 # <a name="save-packages"></a>儲存封裝
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，您可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師來建立封裝，並將封裝儲存為檔案系統中的 XML 檔案 (.dtsx 檔案)。 您也可以將封裝 XML 檔案的複本儲存至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 msdb 資料庫，或儲存至封裝存放區。 封裝存放區代表 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務所管理之檔案系統位置中的資料夾。  
@@ -68,7 +68,7 @@ ms.locfileid: "47693396"
   
 5.  若要儲存至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請指定驗證類型；如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，請提供使用者名稱與密碼。  
   
-6.  若要指定封裝路徑，請輸入路徑或按一下瀏覽按鈕 **(…)** 指定封裝的位置。 封裝的預設名稱是 Package。 您也可以選擇更新封裝名稱，以符合您的需求。  
+6.  若要指定封裝路徑，請輸入路徑或按一下瀏覽按鈕 ([...]) 指定封裝的位置。 封裝的預設名稱是 Package。 您也可以選擇更新封裝名稱，以符合您的需求。  
   
      如果您選取 **[SQL Server]** 作為 **[封裝路徑]** 選項，封裝路徑會由 **msdb** 中的邏輯資料夾和封裝名稱組成。 例如，如果 DownloadMonthlyData 封裝與 [MSDB] 資料夾 ( **msdb**中根邏輯資料夾的預設名稱) 中的 [Finance] 資料夾關聯，則名為 DownloadMonthlyData 之封裝的封裝路徑就是 MSDB/Finance/DownloadMonthlyData  
   
@@ -78,7 +78,7 @@ ms.locfileid: "47693396"
   
 7.  檢閱封裝保護等級。  
   
-8.  或者，按一下 [保護等級] 方塊旁的瀏覽按鈕 **(…)**，以變更保護等級。  
+8.  或者，按一下 [保護等級] 方塊旁的瀏覽按鈕 ([...])，以變更保護等級。  
   
     -   在 **[封裝保護等級]** 對話方塊中，選取不同的保護等級。  
   

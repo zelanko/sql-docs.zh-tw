@@ -11,15 +11,15 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3d91b56ea331d443252206f627aa4b0b3b40345
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 18dbf43f2305e9991d6fe37615f572e1dc464fda
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639695"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529522"
 ---
 # <a name="lesson-1-1---creating-a-new-integration-services-project"></a>課程 1-1 - 建立新的 Integration Services 專案
-在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立封裝的第一步就是建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。 這個專案包含物件的範本 — 資料來源、資料來源檢視和封裝 — 您在資料轉換方案中會用到它們。  
+在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立封裝的第一步就是建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。 這個專案包含物件的範本 (資料來源、資料來源檢視和封裝)，您在資料轉換方案中會用到它們。  
   
 您在這個 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教學課程中建立的封裝將解譯區分地區設定資料的值。 如果電腦未設定為使用地區設定選項 [英文 (美國)]，則您需要在封裝中設定其他屬性。 您在第 2 課到第 5 課使用的封裝，是從第 1 課建立的封裝複製而來，您不需要在複製的封裝中更新區分地區設定的屬性。  
   

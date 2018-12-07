@@ -18,17 +18,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1db55a3bdbe795b027d7f46a6eff541d0a49060c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 646a0e6b7885c2b220d7ea5c0165dbcd5a3c4de4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812076"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517083"
 ---
 # <a name="modify-foreign-key-relationships"></a>修改外部索引鍵關聯性
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改關聯性的外部索引鍵端。 修改資料表的外部索引鍵，會變更與主索引鍵資料表中之資料行相關的資料行。  
+  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改關聯性的外部索引鍵端。 修改資料表的外部索引鍵，會變更與主索引鍵資料表中資料行相關的資料行。  
   
  **本主題內容**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47812076"
   
 -   **使用下列方法修改外部索引鍵：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47812076"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要資料表的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -86,7 +86,7 @@ ms.locfileid: "47812076"
      在建立或重新啟用條件約束之前，依照條件約束驗證資料表中所有現有的資料。  
   
      **資料表及資料行規格分類**  
-     展開以顯示哪些資料表的哪些資料行，在關聯性中做為外部索引鍵和主要 (或唯一) 索引鍵。 若要編輯或定義這些值，請按一下屬性欄位右邊的省略符號按鈕 (**…**)。  
+     展開以顯示哪些資料表的哪些資料行，在關聯性中做為外部索引鍵和主要 (或唯一) 索引鍵。 若要編輯或定義這些值，請按一下屬性欄位右邊的省略符號按鈕 (**...**)。  
   
      **外部索引鍵基底資料表**  
      顯示所選取的關聯性中，哪些資料表包含有做為外部索引鍵的資料行。  

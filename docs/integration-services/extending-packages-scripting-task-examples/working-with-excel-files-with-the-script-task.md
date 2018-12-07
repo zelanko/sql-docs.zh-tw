@@ -17,12 +17,12 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ddbb2e0fe97024fe0ae44fcdcd971746263fad24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69771260dbffe33583e300942548a69fd21a5258
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715726"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529588"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>以指令碼工作處理 Excel 檔案
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 Excel 連接管理員、Excel 來源和 Excel 目的地，以處理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 檔案格式試算表中儲存的資料。 本主題所述的技術會使用指令碼工作取得有關可用 Excel 資料庫 (活頁簿檔案) 與資料表 (工作表與具名範圍) 的相關資訊。
@@ -79,15 +79,15 @@ ms.locfileid: "47715726"
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 (**...**) 按鈕，然後在 [選取變數] 對話方塊中選取 [ExcelFile] 變數。  
+    -   按一下屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取 [ExcelFile] 變數。  
   
-3.  按一下 [ReadWriteVariables]，並使用下列其中一項方法輸入屬性值：  
+3.  按一下 **ReadWriteVariables**，並使用下列其中一項方法輸入屬性值：  
   
     -   鍵入 **ExcelFileExists**。  
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 (**…**) 按鈕，然後在 [選取變數] 對話方塊中選取 [ExcelFileExists] 變數。  
+    -   按一下屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取 [ExcelFileExists] 變數。  
   
 4.  按一下 [編輯指令碼]，以開啟指令碼編輯器。  
   
@@ -149,7 +149,7 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 (**...**) 按鈕，然後在 [選取變數] 對話方塊中選取 **ExcelTable** 和 **ExcelFile** 變數。  
+    -   按一下屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取 [ExcelTable] 和 [ExcelFile] 變數。  
   
 3.  按一下 **ReadWriteVariables**，並使用下列其中一項方法輸入屬性值：  
   
@@ -157,7 +157,7 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 (**...**) 按鈕，然後在 [選取變數] 對話方塊中選取 [ExcelTableExists] 變數。  
+    -   按一下屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取 [ExcelTableExists] 變數。  
   
 4.  按一下 [編輯指令碼]，以開啟指令碼編輯器。  
   
@@ -256,7 +256,7 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 (**...**) 按鈕，然後在 [選取變數] 對話方塊中選取 ExcelFolder 變數。  
+    -   按一下屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取 [ExcelFolder] 變數。  
   
 3.  按一下 **ReadWriteVariables**，並使用下列其中一項方法輸入屬性值：  
   
@@ -264,7 +264,7 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 (**...**) 按鈕，然後在 [選取變數] 對話方塊中選取 ExcelFiles 變數。  
+    -   按一下屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取 [ExcelFiles] 變數。  
   
 4.  按一下 [編輯指令碼]，以開啟指令碼編輯器。  
   
@@ -331,7 +331,7 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 (**...**) 按鈕，然後在 [選取變數] 對話方塊中選取 ExcelFile 變數。  
+    -   按一下屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取 [ExcelFile] 變數。  
   
 3.  按一下 **ReadWriteVariables**，並使用下列其中一項方法輸入屬性值：  
   
@@ -339,7 +339,7 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 (**...**) 按鈕，然後在 [選取變數] 對話方塊中選取 ExcelTables 變數。  
+    -   按一下屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取 [ExcelTables] 變數。  
   
 4.  按一下 [編輯指令碼]，以開啟指令碼編輯器。  
   
@@ -444,7 +444,7 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 (**...**) 按鈕，然後在 [選取變數] 對話方塊中選取變數。  
+    -   按一下屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取變數。  
   
 5.  按一下 [編輯指令碼]，以開啟指令碼編輯器。  
   

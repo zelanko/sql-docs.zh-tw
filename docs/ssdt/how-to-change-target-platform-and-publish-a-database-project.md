@@ -14,12 +14,12 @@ ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7b84f8d8de17b64d99b8e308ab45c36479b4a2b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5dc61811562a8c9fb121d170d89b0b28806b29f4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668884"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516702"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>如何：變更目標平台及發行資料庫專案
 您可以將您的 SQL Server Data Tools (SSDT) 資料庫專案的目標 SQL Server 版本變更為任何支援之 SQL Server (SQL Server 2005、2008、2008 R2、Microsoft SQL Server 2012 或 SQL Azure) 的執行個體。 如此一來，您就可以將資料庫開發工作集中於一個專案，但視需要再將它發行到多個 SQL Server 執行個體。  
@@ -29,7 +29,7 @@ SSDT 透過對目標平台的認知以及自動偵測程式碼中的任何錯誤
 > [!WARNING]  
 > 下列程序利用先前在[連接的資料庫開發](../ssdt/connected-database-development.md)和[專案導向的離線資料庫開發](../ssdt/project-oriented-offline-database-development.md)小節中的程序所建立的實體。  
   
-### <a name="to-change-a-projects-target-platform"></a>若要變更專案的目標平台  
+### <a name="to-change-a-projects-target-platform"></a>變更專案的目標平台  
   
 1.  以滑鼠右鍵按一下 [方案總管] 中的專案，再選取 [屬性]。 按一下左邊的 [專案設定]  索引標籤存取 [專案設定]  屬性頁。  
   
@@ -63,7 +63,7 @@ SSDT 透過對目標平台的認知以及自動偵測程式碼中的任何錯誤
   
 6.  您還可以將發行設定儲存在設定檔中，讓日後的發行作業可以重複使用相同的設定。 若要如此，請按一下 [發行資料庫]  對話方塊中的 [另存設定檔]  按鈕。 以後您想要重新載入現有的設定時，就可以按一下 [載入設定檔]  按鈕。  
   
-7.  請留意 [資料工具作業]  視窗中的訊息。 按一下 [正在建立發行預覽] 右邊的 [檢視預覽] 連結 右邊的 [檢視預覽] 連結。這將會開啟部署預覽報表。 如果專案的目標平台與專案發行的目標資料庫伺服器不同，SSDT 會在此報表中提出警告。  例如，如果專案的目標平台為 Microsoft SQL Server 2012 ，而您嘗試將專案發行至 SQL Server 2008 R2 伺服器執行個體，則會在 [輸出] 視窗中看到下列警告：  
+7.  請留意 [資料工具作業]  視窗中的訊息。 按一下 [正在建立發行預覽...] 右邊的 [檢視預覽] 連結右邊的 [檢視預覽] 連結。這將會開啟部署預覽報表。 如果專案的目標平台與專案發行的目標資料庫伺服器不同，SSDT 會在此報表中發出警告。  例如，如果專案的目標平台為 Microsoft SQL Server 2012，而您嘗試將專案發行至 SQL Server 2008 R2 伺服器執行個體，則會在 [輸出] 視窗中看到下列警告：  
   
 **指定目標平台為 Microsoft SQL Server 2012 的專案可能會與 SQL Server 2008 產生相容性問題**    如果這類專案包含 Microsoft SQL Server 2012 中引入的實體 (例如序列物件)，則發行作業將會失敗。  
   

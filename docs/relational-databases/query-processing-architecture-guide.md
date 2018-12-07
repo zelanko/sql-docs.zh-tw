@@ -1,7 +1,7 @@
 ---
 title: 查詢處理架構指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/06/2018
+ms.date: 11/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d85ac4addb2b1ec0e709a4e0fd72f0ca0be46f86
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 89a7be267cfe6f4e60961e6d9a6610897cb5718d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701476"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542516"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -350,16 +350,19 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
-在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中執行任何 SQL 陳述式時，關聯式引擎會先尋找整個計畫快取，以確認相同 SQL 陳述式的現有執行計畫是否存在。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 找到任何現有的計畫，就會重複使用它，如此可省下重新編譯 SQL 陳述式的負擔。 如果沒有現有的執行計畫，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會為查詢建立新執行計畫。
+在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中執行任何 SQL 陳述式時，關聯式引擎會先尋找整個計畫快取，以確認相同 SQL 陳述式的現有執行計畫是否存在。 如果 SQL 陳述式與先前執行之 SQL 陳述的快取計劃每個字元都相符合，它就符合存在的資格。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 找到任何現有的計畫，就會重複使用它，如此可省下重新編譯 SQL 陳述式的負擔。 如果沒有現有的執行計畫，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會為查詢建立新執行計畫。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有一個非常有效率的演算法，可為任何特定 SQL 陳述式尋找現有的執行計畫。 在大部分的系統中，這個掃描所使用的最少資源，比能夠重複使用現有計畫來取代編譯每個 SQL 陳述式所節省下來的資源還少。
 
-此演算法若要能使得新的 SQL 陳述式符合快取中現有、未使用的執行計畫，所有的物件參考必須是完整的。 例如，這些 `SELECT` 陳述式的第一個不符合現有計畫，而第二個則符合：
+此演算法若要能使得新的 SQL 陳述式符合快取中現有、未使用的執行計畫，所有的物件參考必須是完整的。 例如，假設對於執行以下 `Person` 陳述式的使用者，`SELECT` 是預設結構描述。 但是在此範例中，`Person` 不需要是完整的，這表示第二個陳述式與現有的計畫不相符合，但第三個是相符合的：
 
 ```sql
 SELECT * FROM Person;
-
+GO
 SELECT * FROM Person.Person;
+GO
+SELECT * FROM Person.Person;
+GO
 ```
 
 ### <a name="removing-execution-plans-from-the-plan-cache"></a>從計畫快取中移除執行計畫
@@ -637,7 +640,6 @@ WHERE ProductID = 63;
 * 應用程式可以控制何時建立及重複使用執行計畫。
 * 準備/執行模型可以移至其他資料庫使用，包括舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
- 
 ### <a name="ParamSniffing"></a> 參數探測
 「參數探測」是指 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在編譯或重新編譯期間「探查」目前的參數值，然後將它傳遞給查詢最佳化工具，以便可用來產生可能更有效率之查詢執行計畫的程序。
 
@@ -655,6 +657,24 @@ WHERE ProductID = 63;
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供平行查詢，讓擁有多個處理器 (CPU) 的電腦，也能獲得最佳的查詢執行和索引作業。 因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可利用數個作業系統背景工作執行緒平行地執行查詢或索引作業，所以可快速而有效率地完成作業。
 
 在查詢最佳化期間，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會搜尋得益於平行執行的查詢或索引作業。 對於這些查詢，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會在查詢執行計畫中插入交換運算子，以準備平行執行的查詢。 所謂的交換運算子，是指查詢執行計畫中，提供存取管理、資料重新散佈以及流量控制的運算子。 交換運算子包括當做子類型的 `Distribute Streams`、 `Repartition Streams`及 `Gather Streams` 邏輯運算子，其中的一或多個可以出現在平行查詢之查詢計畫的執行程序表輸出中。 
+
+> [!IMPORTANT]
+> 某些建構禁止 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在整個執行計畫，或部分的執行計畫上利用平行處理原則的能力。
+
+禁止平行處理原則的建構包括：
+>
+> - **純量 UDF**    
+>   如需有關純量使用者定義函式的詳細資訊，請參閱[建立使用者定義函式](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)。 從 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 開始，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 能夠內嵌這些函式，且已經將在查詢處理期間使用平行處理原則的限制解除鎖定。 如需內嵌純量 UDF 的詳細資訊，請參閱 [SQL 資料庫中的智慧型查詢處理](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)。
+> - **遠端查詢**    
+>   如需遠端查詢的詳細資訊，請參閱[執行程序表邏輯和實體運算子參考](../relational-databases/showplan-logical-and-physical-operators-reference.md)。
+> - **動態資料指標**    
+>   如需資料指標的詳細資訊，請參閱 [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)。
+> - **遞迴查詢**    
+>   如需遞迴的詳細資訊，請參閱[定義和使用遞迴通用資料表運算式的方針](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)和 [T-SQL 中的遞迴](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)。
+> - **資料表值函式 (TVFs)**    
+>   如需 TVF 的詳細資訊，請參閱[建立使用者定義函式 (資料庫引擎)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
+> - **TOP 關鍵字**    
+>   如需詳細資訊，請參閱 [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md)。
 
 插入交換運算子之後，結果便是平行查詢執行計畫。 平行查詢執行計畫可以使用一個以上的背景工作執行緒。 非平行查詢所使用的序列執行計畫，執行時只會使用一個背景工作執行緒。 平行查詢實際所使用的背景工作執行緒數目，是在查詢計畫執行初始化時，由計畫的複雜度與平行處理原則的程度決定。 平行處理原則的程度決定將要使用的 CPU 最大數目，而不是將要使用的背景工作執行緒數目。 平行處理原則的程度值是在伺服器層級設定的，可以使用 sp_configure 系統預存程序來修改。 您可以指定 `MAXDOP` 查詢提示或 `MAXDOP` 索引選項，來覆寫個別查詢或索引陳述式的這個值。 
 
@@ -1098,4 +1118,6 @@ GO
  [使用查詢存放區的最佳作法](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [基數估計](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [彈性查詢處理](../relational-databases/performance/adaptive-query-processing.md)   
- [運算子優先順序](../t-sql/language-elements/operator-precedence-transact-sql.md)
+ [運算子優先順序](../t-sql/language-elements/operator-precedence-transact-sql.md)    
+ [執行計畫](../relational-databases/performance/execution-plans.md)    
+ [SQL Server Database Engine 和 Azure SQL Database 的效能中心](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)

@@ -14,12 +14,12 @@ ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7215ed9f2374a46ffd5034ce8a85ab0f40419ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c564788a1d77d9af83de28a2b4dbea022ea28ec1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840226"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530790"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>如何：建立專案的快照集
 **資料層應用程式**檔案提供了資料庫結構描述建立當時的唯讀表示。 其本質上被視為資料庫結構描述，您可以從中將結構描述物件匯回專案。 您也可以將它與資料庫或專案的結構描述進行比較，然後更新資料庫或專案以反映快照集之中定義的結構描述。  
@@ -31,7 +31,7 @@ ms.locfileid: "47840226"
   
 ### <a name="to-create-a-snapshot"></a>若要建立快照集  
   
-1.  以滑鼠右鍵按一下 [方案總管] 中的 [TradeDev] 專案，再選取 [資料層應用程式 (\*.dacpac)]。  
+1.  以滑鼠右鍵按一下 [方案總管] 中的 [TradeDev] 專案，再選取 [資料層應用程式 (\*.dacpac)...]。  
   
 2.  SSDT 將先嘗試建置專案。 如果沒有發生建置錯誤，[Snapshot] 資料夾會建立在 [方案總管] 中。 在這個資料夾內，SSDT 會以「<Project Name>_YYYYMMDD_HH-MM-SS.dacpac」名稱格式建立 .dacpac 檔案。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47840226"
   
 ### <a name="to-import-a-snapshot"></a>若要匯入快照集  
   
-1.  以滑鼠右鍵按一下 [方案總管] 中的 [TradeDev] 專案，再從內容功能表中依序選取 [匯入]、[資料層應用程式 (\*.dacpac)] 。  
+1.  以滑鼠右鍵按一下 [方案總管] 中的 [TradeDev] 專案，再從關連式功能表依序選取 [匯入] 和 [資料層應用 (\*.dacpac)...]。  
   
 2.  在 [匯入資料層應用程式] 對話方塊中，按一下 [瀏覽] 選取 **TradeDev1.dacpac** 做為匯入的來源。  
   

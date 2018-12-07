@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.refdata.f1
@@ -15,12 +14,12 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a317f61002d185b73c146a8fd1392252211928c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 358b1779ebc24f17035cb50eda77c7249456ff9a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730816"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617079"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>將定義域或複合定義域附加至參考資料
 
@@ -34,9 +33,9 @@ ms.locfileid: "47730816"
 > [!WARNING]  
 >  附加至參考資料服務的複合定義域可在將定義域對應至參考資料服務中的資料行時，於定義域下拉式清單中使用。 不要將複合定義域對應至參考資料服務結構描述中的資料行；您必須只將複合定義域內的個別定義域對應至參考資料服務結構描述中的適當資料行。 否則，它將會導致錯誤。  
   
- 參考資料服務結構描述可以擁有強制性資料行，假設您選擇使用此參考資料服務，該資料行必須與適當的定義域對應。 參考資料結構描述中的強制性資料行會使用 "(M)" 來向資料行名稱識別。 例如， **AddressLine** 是 **Melissa Data – Address Data** 中的強制性結構描述資料行，而 **CompanyName** 是 **Digital Trowel Inc. – Us companies and professional data for SQL users**中的強制性結構描述資料行。  
+ 參考資料服務結構描述可以擁有強制性資料行，假設您選擇使用此參考資料服務，該資料行必須與適當的定義域對應。 參考資料結構描述中的強制性資料行會使用 "(M)" 來向資料行名稱識別。 例如，**AddressLine** 是 **Melissa Data - Address Data** 中的強制性結構描述資料行，而 **CompanyName** 是 **Digital Trowel Inc. - Us companies and professional data for SQL users**中的強制性結構描述資料行。  
   
- 本主題中，我們將建立四個定義域： **[地址行]**、 **[縣/市]**、 **[州/省]** 和 **[郵遞區號]**，在複合定義域 **[地址驗證]** 下，將複合定義域附加至 **Melissa Data – Address Check** 參考資料服務，然後將複合定義域內的個別定義域對應至參考資料服務結構描述中適當的資料行。  
+ 本主題中，我們將建立四個定義域：[地址行]、[縣/市]、[州/省] 和 [郵遞區號]，在複合定義域 [地址驗證]下，將複合定義域附加至 **Melissa Data - Address Check** 參考資料服務，然後將複合定義域內的個別定義域對應至參考資料服務結構描述中適當的資料行。  
   
 ## <a name="before-you-begin"></a>開始之前  
   
@@ -66,9 +65,9 @@ ms.locfileid: "47730816"
   
 8.  在 **[線上參考資料提供者目錄]** 對話方塊中：  
   
-    1.  在 **[DataMarket Data Quality Services]** 底下，選取 **[Melissa Data – 地址檢查]** 方塊。  
+    1.  在 [DataMarket Data Quality Services]底下，選取 [Melissa Data - 地址檢查] 方塊。  
   
-    2.  將 [Melissa Data – Address Check] 參考資料服務與適當的定義域 ([地址行]、[縣/市]、[州/省] 和 [郵遞區號]) 相對應。 若要對應資料行，請在 **[RDS 結構描述]** 資料行中選取參考資料服務資料行，然後在 **[定義域]** 資料行中選取適當的定義域。 若要在資料表中加入其他資料列，請按一下 **[加入結構描述項目]** 圖示。  
+    2.  將 [Melissa Data - Address Check] 參考資料服務與適當的定義域 ([地址行]、[縣/市]、[州/省] 和 [郵遞區號]) 相對應。 若要對應資料行，請在 **[RDS 結構描述]** 資料行中選取參考資料服務資料行，然後在 **[定義域]** 資料行中選取適當的定義域。 若要在資料表中加入其他資料列，請按一下 **[加入結構描述項目]** 圖示。  
   
     3.  按一下 **[確定]** 儲存變更，並關閉 **[線上參考資料提供者目錄]** 對話方塊。  
   

@@ -24,12 +24,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 694f1c2d29ced11a4f66a05bd983fe704e1be241
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 8b172eb0635c54bf6b9e0289ac220676eb08fd9c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642375"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411985"
 ---
 # <a name="data-flow-performance-features"></a>資料流程效能的功能
   本主題提供有關如何設計 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝以避免常見效能問題的建議。 本主題同時也提供有關您可以用於疑難排解封裝效能之功能與工具的資訊。  
@@ -183,7 +183,7 @@ ms.locfileid: "51642375"
   
 -   sqlcat.com 上的技術文件： [10 大 SQL Server Integration Services 的最佳作法](https://go.microsoft.com/fwlink/?LinkId=220818)。  
   
--   sqlcat.com 上的技術文件及範例： [SSIS 的「平衡型資料散發者」](https://go.microsoft.com/fwlink/?LinkId=220822)。  
+-   sqlcat.com 上的技術文件及範例：[SSIS 的「平衡型資料散發者」](https://go.microsoft.com/fwlink/?LinkId=220822)。  
   
 -   blogs.msdn.com 上的部落格文章： [疑難排解 SSIS 封裝效能問題](https://go.microsoft.com/fwlink/?LinkId=238156)  
   

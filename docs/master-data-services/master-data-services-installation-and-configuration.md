@@ -12,12 +12,12 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7016e66ba91972f6f9ef365b7c60fa320b0bdbcf
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b79bb79750d7f4696581dab86c95cf71abf02375
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697356"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526953"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 安裝和組態
 
@@ -132,7 +132,7 @@ ms.locfileid: "51697356"
 3.  在 [資料庫伺服器] 頁面上，選取 [驗證類型]，然後按一下 [測試連接] 確認您可以使用所選驗證類型的認證連接到資料庫。 按 [下一步] 。
   
     > [!NOTE]  
-    >  若您選取 [目前使用者 - 整合式安全性] 做為驗證類型，[使用者名稱] 方塊會是唯讀的，並顯示登入電腦的 Windows 使用者帳戶名稱。 如果您要在 Azure 虛擬機器 (VM) 上執行 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]，則 [使用者名稱] 方塊會顯示 VM 名稱以及 VM 上本機系統管理員帳戶的使用者名稱。 
+    >  若您選取 [目前使用者 - 整合式安全性] 作為驗證類型，[使用者名稱] 方塊會是唯讀的，並顯示登入電腦的 Windows 使用者帳戶名稱。 如果您要在 Azure 虛擬機器 (VM) 上執行 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]，則 [使用者名稱] 方塊會顯示 VM 名稱以及 VM 上本機系統管理員帳戶的使用者名稱。 
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   

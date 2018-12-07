@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b64711527f4a21b2504f10ff3518607198ca46ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 529aaf3e6de3d748ee998b4b345bf90e84a885f1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852616"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407985"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>使用 PowerShell 設定永遠加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

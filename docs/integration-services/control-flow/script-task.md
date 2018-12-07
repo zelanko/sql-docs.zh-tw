@@ -19,12 +19,12 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 872991355d16ccd5dbd237baa4830957483b51ab
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: fb3f42c9b997b35492166d96a7eec698106f2ae9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641957"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522962"
 ---
 # <a name="script-task"></a>指令碼工作
   指令碼工作提供程式碼，用來執行無法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的內建工作和轉換中使用的函數。 指令碼工作亦可在一個指令碼中結合函數，而不使用多項工作和轉換。 您可以使用指令碼工作處理必須在封裝中執行一次 (或是每個列舉物件一次) 的工作，而非每個資料列執行一次的工作。  
@@ -127,13 +127,13 @@ ms.locfileid: "51641957"
  如果您在 VSTA 專案內變更此方法的名稱，您就必須變更 **[EntryPoint]** 屬性的值。  
   
  **ReadOnlyVariables**  
- 輸入以逗號分隔且指令碼可以使用的唯讀變數清單，或是按一下省略符號 (**…**) 按鈕，並在 [選取變數] 對話方塊中選取變數。  
+ 鍵入以逗號分隔且指令碼可以使用的唯讀變數清單，或是按一下省略符號 (**...**) 按鈕，並在 [選取變數] 對話方塊中選取變數。  
   
 > [!NOTE]  
 >  變數名稱會區分大小寫。  
   
  **ReadWriteVariables**  
- 輸入以逗號分隔且指令碼可以使用的可讀寫變數清單，或是按一下省略符號 (**…**) 按鈕，並在 [選取變數] 對話方塊中選取變數。  
+ 鍵入以逗號分隔且指令碼可以使用的可讀寫變數清單，或是按一下省略符號 (**...**) 按鈕，並在 [選取變數] 對話方塊中選取變數。  
   
 > [!NOTE]  
 >  變數名稱會區分大小寫。  

@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74195e0cfd6f636ee748f88c02ce1d2489c8e77b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 858466736667eb54d04e37cbbebb20bc5d106075
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625256"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531399"
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>REVOKE XML 結構描述集合權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -58,7 +58,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  指定可以撤銷的 XML 結構描述集合權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- ON XML SCHEMA COLLECTION :: [ *schema_name***.** ] *XML_schema_collection_name*  
+ ON XML SCHEMA COLLECTION :: [ _schema_name_**.** ] *XML_schema_collection_name*  
  指定要撤銷其權限的 XML 結構描述集合。 需要範圍限定詞 (::)。 如果未指定 *schema_name*，則會使用預設結構描述。 若指定 *schema_name*，則結構描述範圍限定詞 (.) 是必要項目。  
   
  GRANT OPTION  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad6781d27078053a67d236c6a96b21fd67e355df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ed9f661a49e6ad64642938672f6355a1d19d9f6
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703476"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302552"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 在這個 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教學課程中，您將利用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 入口網站資料驅動訂閱頁面來連接訂閱資料來源、建立擷取訂閱資料的查詢，以及將結果集對應至報表和傳遞選項。  
@@ -32,14 +32,17 @@ ms.locfileid: "47703476"
   
 ## <a name="define-a-description"></a>定義描述  
 1.  在 [描述] 中，輸入 **銷售訂單傳遞** 。
+
 ## <a name="type"></a>類型
 1.  按一下 [資料驅動訂閱]。  
+
 ## <a name="schedule"></a>[排程]
 1. 在 [排程] 區段中，按一下 [報表特定排程]。
 2. 按一下 [編輯排程]。
 3.  在 **[排程詳細資料]** 中，按一下 **[一次]**。  
 4.  請指定現在以後的幾分鐘做為開始時間。  
 5.  按一下 **[套用]**。
+
 ## <a name="destination"></a>目的地  
 1.  在 [目的地] 區段中，選取 [Windows 檔案共用] 傳遞方法。  
 
@@ -53,22 +56,24 @@ ms.locfileid: "47703476"
     data source=localhost; initial catalog=Subscribers
     ```
     
- ## <a name="credentials"></a>認證
- 1. 選取 [使用以下認證]。
- 2. 選取 [Windows 使用者名稱與密碼]。
- 3.  在 **[使用者名稱]** 和 **[密碼]** 中，輸入網域使用者名稱和密碼。 指定 **[使用者名稱]** 時，請同時包括網域和使用者帳戶。
-     > [!NOTE]  
+## <a name="credentials"></a>認證
+1. 選取 [使用以下認證]。
+2. 選取 [Windows 使用者名稱與密碼]。
+3.  在 **[使用者名稱]** 和 **[密碼]** 中，輸入網域使用者名稱和密碼。 指定 **[使用者名稱]** 時，請同時包括網域和使用者帳戶。
+    > [!NOTE]  
     > 用於連接至訂閱者資料來源的認證不會傳回給 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 如果您稍後修改了訂閱，就必須重新輸入用於連接到資料來源的密碼。
+
 ## <a name="query"></a>查詢      
 1.  在查詢方塊中，輸入下列查詢：  
   
-    ```  
+    ```sql
     Select * from OrderInfo  
     ```  
   
 2.  將逾時指定為 30 秒。  
   
 3.  按一下 [驗證查詢]，然後按一下 [套用]。
+
 ## <a name="delivery-options"></a>傳遞選項
 填入下列值：
 

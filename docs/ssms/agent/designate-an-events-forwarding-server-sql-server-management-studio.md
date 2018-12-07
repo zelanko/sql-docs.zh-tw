@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5f6602ce28f3ec04fd22037ecc2f0fd40a6c0440
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc60b53841cc44d094d5cea339ba2bd06f492aa6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856850"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502444"
 ---
 # <a name="designate-an-events-forwarding-server-sql-server-management-studio"></a>指定事件轉送伺服器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47856850"
   
 -   **若要使用下列項目指定事件轉送伺服器：**  
   
-    [Transact-SQL](#SSMSProcedure)  
+    [SQL Server Management Studio](#SSMSProcedure)  
   
 ## <a name="BeforeYouBegin"></a>開始之前  
   
@@ -56,7 +56,7 @@ ms.locfileid: "47856850"
   
 2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
   
-3.  在 [SQL Server Agent 屬性 - <伺服器名稱>] 對話方塊的 [選取頁面] 底下，選取 [進階]。  
+3.  在 [SQL Server Agent 屬性 - <伺服器名稱>] 對話方塊的 [選取頁面] 下，選取 [進階]。  
   
 4.  在 **[SQL Server 事件轉送]** 下，選取 **[轉送事件到另一部伺服器]** 核取方塊。  
   

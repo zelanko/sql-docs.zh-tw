@@ -28,12 +28,12 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1de19a956656b744b5f3e21e3efc21c971c6857
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: eb3ae1a8437ddf73b371f317d6a9c85f200cff8c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558815"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531476"
 ---
 # <a name="move-system-databases"></a>移動系統資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -151,11 +151,11 @@ ms.locfileid: "51558815"
   
 3.  在 [SQL Server (<執行個體名稱>) 屬性]**** 對話方塊中，按一下 [啟動參數] 索引標籤。  
   
-4.  在 [現有參數] 方塊中，選取 –d 參數來移動 master 資料檔案。 按一下 **[更新]** 來儲存變更。  
+4.  在 [現有參數] 方塊中，選取 -d 參數來移動 master 資料檔案。 按一下 **[更新]** 來儲存變更。  
   
      在 [指定啟動參數] 方塊中，將參數變更為 master 資料庫的新路徑。  
   
-5.  在 [現有參數] 方塊中，選取 –l 參數來移動 master 記錄檔。 按一下 **[更新]** 來儲存變更。  
+5.  在 [現有參數] 方塊中，選取 -l 參數來移動 master 記錄檔。 按一下 **[更新]** 來儲存變更。  
   
      在 [指定啟動參數] 方塊中，將參數變更為 master 資料庫的新路徑。  
   

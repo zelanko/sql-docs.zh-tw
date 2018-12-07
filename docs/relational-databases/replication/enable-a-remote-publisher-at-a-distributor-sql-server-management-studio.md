@@ -14,12 +14,12 @@ ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63b21aec220de42f9bf9fb8cd5fae1f109e501fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05bbc6f6eaad17fc49f210d20ab78126a68eeb60
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710096"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541980"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>在散發者端啟用遠端發行者 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47710096"
   
 4.  在 **[散發者密碼]** 頁面的 **[密碼]** 和 **[確認密碼]** 文字方塊中，為 **distributor_admin** 帳戶 (複寫將用其從「發行者」連接到「散發者」以執行管理工作) 指定增強式密碼。  
   
-5.  若要檢視和修改發行者的設定，請按一下屬性按鈕 (**...**)。  
+5.  若要檢視和修改發行者的設定，請按一下屬性按鈕 ([...])。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47710096"
   
 4.  在 **[發行者]** 頁面的 **[密碼]** 和 **[確認密碼]** 文字方塊中，為 **distributor_admin** 帳戶 (複寫將用其從「發行者」連接到「散發者」以執行管理工作) 指定增強式密碼。  
   
-5.  若要檢視和修改發行者的設定，請按一下屬性按鈕 (**...**)。  
+5.  若要檢視和修改發行者的設定，請按一下屬性按鈕 ([...])。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

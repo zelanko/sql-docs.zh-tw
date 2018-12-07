@@ -5,8 +5,7 @@ ms.date: 03/05/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Domains
@@ -14,12 +13,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 44fc2fd9ff3a47272c031ff71cda6e2a75f59a72
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b124775b451740c03a5c15fbb1ac281328cc7717
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700276"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617338"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 簡介
 

@@ -14,12 +14,12 @@ ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d5564de165e053a871202798ee55b07f2dccc1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c274b4e442d161071960af4578ccf7485050b26
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733917"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524824"
 ---
 # <a name="query-properties-visual-database-tools"></a>查詢屬性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,10 +62,10 @@ ms.locfileid: "47733917"
 指定結果集 (Result Set) 中要包含目前查詢中所有資料表的全部資料行。 選擇此選項就等於在 SQL 陳述式裡的 SELECT 關鍵字後指定星號 (*)，而非指定個別的資料行名稱。  
   
 **查詢參數清單**  
-顯示查詢參數。 若要編輯參數，請按一下屬性，再按屬性右邊的省略符號 ( **…** )。 (只適用於泛型 OLE DB)。  
+顯示查詢參數。 若要編輯參數，請按一下屬性，再按屬性右邊的省略符號 ([...])。 (只適用於泛型 OLE DB)。  
   
 **SQL 註解**  
-顯示 SQL 陳述式的描述。 若要查看或編輯整個描述，請按一下 [描述]，再按屬性右邊的省略符號 ( **…** )。 您的註解中可能包含使用查詢的人及使用時間等這類資訊 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 (含) 以後版本的資料庫)。  
+顯示 SQL 陳述式的描述。 若要查看或編輯整個描述，請按一下 [描述]，再按屬性右邊的省略符號 ([...])。 您的註解中可能包含使用查詢的人及使用時間等這類資訊 (只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 (含) 以後版本的資料庫)。  
   
 **排名規格分類**  
 展開以顯示 [Top]、[Percent]、[Expression] 的屬性，以及 [With Ties] 屬性。  

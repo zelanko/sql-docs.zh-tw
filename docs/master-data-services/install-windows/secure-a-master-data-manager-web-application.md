@@ -10,12 +10,12 @@ ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6aa72013df7e229c76154b6de1839c2ff0e0f0dc
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a51b4a791de70421a80f7a62a1ab13b865688529
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701246"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641473"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>保護主資料管理員 Web 應用程式
 
@@ -59,8 +59,11 @@ ms.locfileid: "51701246"
 10. 現在開啟 *磁碟機*:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication 中的 web.config 檔案。  
   
 11. 尋找字串 `<security mode="Message">` ，並將其變更為 `<security mode="Transport">`。  
-  
-12. 儲存並關閉檔案。 如果出現錯誤，這可能是因為您已啟用 UAC。 如需詳細資訊，請參閱[關閉使用者帳戶控制](https://technet.microsoft.com/library/cc709691\(WS.10\).aspx)。 使用者現在應該能夠使用 HTTPS 存取網站。  
+
+12. 將 `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">` 變更為 `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">` 以避免發生可能會出現在 Silverlight 用戶端中的問題。
+
+13. 儲存並關閉檔案。 如果出現錯誤，這可能是因為您已啟用 UAC。 如需詳細資訊，請參閱 [關閉使用者帳戶控制](http://technet.microsoft.com/library/cc709691\(WS.10\).aspx)。 使用者現在應該能夠使用 HTTPS 存取網站。  
+
   
 ## <a name="see-also"></a>另請參閱  
  [建立主資料管理員 Web 應用程式 &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  

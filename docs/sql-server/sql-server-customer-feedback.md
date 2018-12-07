@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 6f9f6b87abbac930bc51d5b0f5a32d48e0afb730
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 47d911c6a05af96d042211f98b5365230dd57084
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701979"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525197"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>設定 SQL Server 以將意見反應傳送給 Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

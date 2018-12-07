@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6939de7db25f8f0e572cebef2181551f5190922b
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 32df63456e46fd8f522d897cd6068967bbb785b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171880"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411845"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -57,14 +57,14 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 > [!IMPORTANT]
 > Azure SQL Database 只支援 Azure Key Vault 與共用存取簽章身分識別。 不支援 Windows 使用者身分識別。
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  當認證變更時，*identity_name* 和 *secret* 的值都會重設。 如果未指定選擇性 SECRET 引數，預存秘密的值便會設為 NULL。  
   
  秘密是利用服務主要金鑰來加密的。 如果重新產生服務主要金鑰，便會利用新的服務主要金鑰來重新加密秘密。  
   
  您可以在 **sys.credentials** 目錄檢視中，看到認證的相關資訊。  
   
-## <a name="permissions"></a>權限  
+## <a name="permissions"></a>[權限]  
  需要 ALTER ANY CREDENTIAL 權限。 如果認證是系統認證，則需要 CONTROL SERVER 權限。  
   
 ## <a name="examples"></a>範例  

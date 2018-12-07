@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8ee65149173effd4ec43965dc56cdf9e308f23b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ce984371d1dd618c7a99b081667115208b7afb7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833036"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406465"
 ---
 # <a name="recompile-a-stored-procedure"></a>重新編譯預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47833036"
   
 ###  <a name="Recommendations"></a> 建議  
   
--   初次編譯或重新編譯程序時，該程序的查詢計劃會針對資料庫及其物件目前的狀態最佳化。 如果資料庫的資料或結構經歷大幅變更，則重新編譯程序時，會針對這些變更更新並最佳化程序的查詢計劃。 如此可以提高程序的處理效能。  
+-   初次編譯或重新編譯程序時，該程序的查詢計劃會針對資料庫及其物件目前狀態最佳化。 如果資料庫的資料或結構經歷大幅變更，則重新編譯程序時，會針對這些變更更新並最佳化程序的查詢計劃。 如此可以提高程序的處理效能。  
   
 -   有時候程序必須強制重新編譯，有時候則會自動重新編譯。 只要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新啟動，自動重新編譯就會發生。 若程序所參考的基礎資料表經過實體設計變更，則也會進行重新編譯。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47833036"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  **WITH RECOMPILE** 選項  
  如果在建立程序定義時使用此選項，則需要資料庫的 CREATE PROCEDURE 權限以及建立程序所在結構描述的 ALTER 權限。  
   

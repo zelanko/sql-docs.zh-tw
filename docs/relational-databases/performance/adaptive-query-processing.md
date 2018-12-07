@@ -2,7 +2,7 @@
 title: Microsoft SQL 資料庫中的彈性查詢處理 | Microsoft Docs | Microsoft Docs
 description: 可改善 SQL Server (2017 和更新版本) 和 Azure SQL Database 查詢效能的彈性查詢處理功能。
 ms.custom: ''
-ms.date: 10/15/2018
+ms.date: 11/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,25 +14,27 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60f02a303e6e085dc14a165ec51e316a2bc88f8e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f4494b91315c8d2cd155e2ac80d6b5005685ff32
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031195"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503407"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 資料庫中的彈性查詢處理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 本文所介紹的這些彈性查詢處理功能，可用來改善 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中的查詢效能：
-- 批次模式記憶體授與意見反應。
-- 批次模式自適性聯結。
-- 交錯執行。 
+- 批次模式記憶體授與意見反應
+- 批次模式自適性聯結
+- 交錯執行
 
-在一般的層級中，SQL Server 執行查詢如下：
+在一般的層級中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行查詢如下：
 1. 查詢最佳化程序會針對特定的查詢產生一組可行的執行計劃。 在此期間，會評估計劃選項的成本，並使用預估成本最低的計劃。
 1. 查詢執行程序會採用查詢最佳化工具所選擇的計劃，並使用它執行作業。
-    
+
+如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中查詢處理和執行模式的詳細資訊，請參閱[查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)。
+
 有時候查詢最佳化工具所選擇的計劃，會因種種原因而未達最佳化。 例如，預估流經查詢計劃的資料列數目可能不正確。 預估成本可協助判斷選取使用哪一個計劃執行。 如果基數估計值不正確，即使原始假設不佳，仍使用原始方案。
 
 ![彈性查詢處理功能](./media/1_AQPFeatures.png)
@@ -88,7 +90,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-啟用時，此設定在 sys.database_scoped_configurations 中會顯示為已啟用。
+啟用時，此設定在 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 中會顯示為已啟用。
 
 若要針對源自資料庫的所有查詢執行重新啟用批次模式的記憶體授與意見反應，請在適用資料庫的內容中執行下列程式碼：
 
@@ -96,7 +98,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
-您也可以將 DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK 指定為 USE HINT 查詢提示，以針對特定查詢停用批次模式的記憶體授與意見反應。  例如：
+您也可以將 `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` 指定為 [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)，以針對特定查詢停用批次模式的記憶體授與意見反應。 例如：
 
 ```sql
 SELECT * FROM Person.Address  
@@ -107,23 +109,23 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標設定。
 
 ## <a name="row-mode-memory-grant-feedback"></a>資料列模式記憶體授與意見反應
-**適用於**：SQL Database 作為公開預覽功能
+**適用對象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]作為公開預覽功能
 
 > [!NOTE]
 > 資料列模式記憶體授與回應是公開預覽版功能。  
 
 調整批次和資料列模式運算子的記憶體授與大小，藉此在批次模式記憶體授與意見反應功能上展開資料列模式記憶體授與意見反應。  
 
-若要在 Azure SQL Database 中啟用資料列模式記憶體授與意見反應的公開預覽功能，請在執行查詢時，針對您所連線的資料庫，啟用資料庫相容性層級 150。
+若要在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中啟用資料列模式記憶體授與意見反應的公開預覽功能，請在執行查詢時，針對您所連線的資料庫，啟用資料庫相容性層級 150。
 
 透過 **memory_grant_updated_by_feedback** XEvent 將可以看到資料列模式記憶體授與意見反應活動。 
 
-從資料列模式記憶體授與意見反應開始，將會針對實際的執行後計劃，顯示兩個新的查詢計劃屬性：**IsMemoryGrantFeedbackAdjusted** 和 **LastRequestedMemory**，這兩個屬性會新增到 MemoryGrantInfo 查詢計劃 XML 元素中。 
+從資料列模式記憶體授與意見反應開始，將會針對實際的執行後計劃，顯示兩個新的查詢計劃屬性：***IsMemoryGrantFeedbackAdjusted*** 和 ***LastRequestedMemory***，這兩個屬性會新增到 *MemoryGrantInfo* 查詢計劃 XML 元素中。 
 
-LastRequestedMemory 會在查詢執行之前，顯示授與的記憶體 (KB)。 IsMemoryGrantFeedbackAdjusted 屬性可讓您針對實際查詢執行計畫內的陳述式，檢查記憶體授與意見反應的狀態。 此屬性中顯示的值如下：
+*LastRequestedMemory* 會在查詢執行之前，顯示授與的記憶體 (KB)。 *IsMemoryGrantFeedbackAdjusted* 屬性可讓您針對實際查詢執行計劃內的陳述式，檢查記憶體授與意見反應的狀態。 此屬性中顯示的值如下：
 
 | IsMemoryGrantFeedbackAdjusted 值 | Description |
-|--- |--- |
+|---|---|
 | 否：第一次執行 | 記憶體授與意見反應不會針對第一次編譯和相關聯的執行，調整記憶體。  |
 | 否：精確授與 | 如果沒有溢出到磁碟，而且陳述式使用至少 50% 的授與的記憶體，則不會觸發記憶體授與意見反應。 |
 | 否：意見反應遭到停用 | 如果記憶體授與意見反應持續遭到觸發，而且在記憶體增加和減少記憶體的作業之間波動，我們將會停用陳述式的記憶體授與意見反應。 |
@@ -131,7 +133,7 @@ LastRequestedMemory 會在查詢執行之前，顯示授與的記憶體 (KB)。 
 | 是：穩定 | 已套用記憶體授與意見反應，而且授與的記憶體現已穩定，表示針對上次執行授與的記憶體就是針對目前執行授與的記憶體。 |
 
 > [!NOTE]
-> 在 17.9 版與更新版本中，公開預覽版資料列模式記憶體授與回應方案屬性在 SQL Server Management Studio 圖形化查詢執行計劃中是可見的。 
+> 在 17.9 版與更新版本中，公開預覽版資料列模式記憶體授與意見反應計劃屬性在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 圖形化查詢執行計劃中是可見的。 
 
 ### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>停用資料列模式記憶體授與意見反應，而不變更相容性層級
 您可以在資料庫或陳述式的範圍中停用資料列模式記憶體授與意見反應，同時仍將資料庫相容性層級維持在 150 以上。 若要針對源自資料庫的所有查詢執行停用資料列模式記憶體授與意見反應，請在適用資料庫的內容中執行下列程式碼：
@@ -146,7 +148,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-您也可以將 DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK 指定為 USE HINT 查詢提示，以針對特定查詢停用資料列模式記憶體授與意見反應。  例如：
+您也可以將 `DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK` 指定為 [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)，以針對特定查詢停用資料列模式記憶體授與意見反應。 例如：
 
 ```sql
 SELECT * FROM Person.Address  
@@ -159,35 +161,33 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 
 ## <a name="batch-mode-adaptive-joins"></a>批次模式自適性聯結
 批次模式自適性聯結功能可讓選擇的[雜湊聯結或巢狀迴圈聯結](../../relational-databases/performance/joins.md)方法，延後到已掃描的第一個輸入**之後**。 自適性聯結運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。 因此，您的計劃可在執行期間動態切換至較佳的聯結策略。
-運作方式：
+運作方式如下：
 -  如果組建聯結輸入的資料列計數小到巢狀迴圈聯結會比雜湊聯結更佳的情況，則您的計劃就會切換成巢狀迴圈演算法。
 -  如果組建聯結輸入超過特定的資料列計數閾值，則不會切換，且您的計劃會繼續執行雜湊聯結。
 
 下列查詢用來說明自適性聯結範例：
 
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
-[fo].[Quantity]
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
-此查詢會傳回 336 個資料列。 透過啟用[即時查詢統計資料](../../relational-databases/performance/live-query-statistics.MD)，我們會看到下列計劃：
+此查詢會傳回 336 個資料列。 透過啟用[即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)，我們會看到下列計劃：
 
 ![查詢結果 336 個資料列](./media/4_AQPStats336Rows.png)
 
 我們在計劃中看到：
 1. 我們使用了資料行存放區索引掃描，為雜湊聯結建置階段提供資料列。
 1. 我們有新的自適性聯結運算子。 此運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。 本例中的閾值是 78 個資料列。 凡是 &gt;= 78 個資料列的計劃都會使用雜湊聯結。 如果小於該閾值，則會使用巢狀迴圈聯結。
-1. 因為我們傳回 336 個資料列 (超過閾值)，所以第二個分支會表示標準雜湊聯結作業的探查階段。 請注意，即時查詢統計資料會顯示流經運算子的資料列，本例中為 “672 of 672”。
-1. 而最後一個分支是我們的叢集索引搜尋，供未超過閾值的巢狀迴圈聯結所使用。 請注意，我們看到的顯示是 “0 of 336” 資料列 (分支未使用)。
+1. 因為我們傳回 336 個資料列 (超過閾值)，所以第二個分支會表示標準雜湊聯結作業的探查階段。 請注意，即時查詢統計資料會顯示流經運算子的資料列，本例中為 "672 of 672"。
+1. 而最後一個分支是我們的叢集索引搜尋，供未超過閾值的巢狀迴圈聯結所使用。 請注意，我們看到的顯示是"0 of 336" 資料列 (分支未使用)。
  現在對比使用相同查詢的計劃，但這次的 *Quantity* 值在資料表中只有一個資料列：
  
 ```sql
-SELECT  [fo].[Order Key], [si].[Lead Time Days],
-[fo].[Quantity]
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
@@ -249,14 +249,14 @@ WHERE [fo].[Quantity] = 361;
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
 ```
 
-啟用時，此設定在 sys.database_scoped_configurations 中會顯示為已啟用。
+啟用時，此設定在 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 中會顯示為已啟用。
 若要針對源自資料庫的所有查詢執行重新啟用自適性聯結，請在適用資料庫的內容中執行下列程式碼：
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
 ```
 
-您也可以將 DISABLE_BATCH_MODE_ADAPTIVE_JOINS 指定為 USE HINT 查詢提示，以針對特定查詢停用自適性聯結。  例如：
+您也可以將 `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` 指定為 [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)，以針對特定查詢停用自適性聯結。 例如：
 
 ```sql
 SELECT s.CustomerID,
@@ -264,17 +264,18 @@ SELECT s.CustomerID,
        sc.CustomerCategoryName
 FROM Sales.Customers AS s
 LEFT OUTER JOIN Sales.CustomerCategories AS sc
-ON s.CustomerCategoryID = sc.CustomerCategoryID
+       ON s.CustomerCategoryID = sc.CustomerCategoryID
 OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
 ```
 
 USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標設定。
 
 ## <a name="interleaved-execution-for-multi-statement-table-valued-functions"></a>交錯執行多重陳述式資料表值函式
-交錯執行會變更單次查詢執行的最佳化和執行階段之間的單向界限，並讓計劃根據修改過的基數估計值調整。 在最佳化期間，如果我們遇到交錯執行的候選項目，目前是**多重陳述式資料表值函式 (MSTVF)**，我們會暫停最佳化、執行適用的樹狀子目錄、擷取精確的基數估計值，再繼續下游作業的最佳化。
-MSTVF 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中具有固定的基數估計值 100，在舊版中則為 1。 交錯執行有利處理因為這些與多重陳述式資料表值函式建立關聯之固定基數估計值引起的工作負載效能問題。
+交錯執行會變更單次查詢執行的最佳化和執行階段之間的單向界限，並讓計劃根據修改過的基數估計值調整。 在最佳化期間，如果我們遇到交錯執行的候選項目，目前是**多重陳述式資料表值函式 (MSTVF)**，我們會暫停最佳化、執行適用的樹狀子目錄、擷取精確的基數估計值，然後繼續下游作業的最佳化。   
 
-下圖說明即時查詢統計資料輸出，它是整體執行計劃的子集，顯示 MSTVF 固定基數估計值的影響。 您可以查看實際的資料列流程與估計的資料列。 此計劃有三個重要區域 (流向為由右至左)：
+MSTVF 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始具有固定的基數估計值 100，在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中則為 1。 交錯執行有利於處理因為這些固定基數估計值與 MSTVF 建立關聯而引起的工作負載效能問題。 如需 MSTVF 的詳細資訊，請參閱[建立使用者定義函式 (資料庫引擎)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
+
+下圖說明[即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)輸出，它是整體執行計劃的子集，顯示 MSTVF 固定基數估計值的影響。 您可以查看實際的資料列流程與估計的資料列。 此計劃有三個重要區域 (流向為由右至左)：
 1. MSTVF 資料表掃描的固定估計值是 100 個資料列。 但此範例有 527,597 個資料列流經此 MSTVF 資料表掃描 (如即時查詢統計資料中所見的 *527597 of 100* 估計實值)，所以固定的估計值將會大幅扭曲。
 1. 至於巢狀迴圈作業，假定外部端聯結只會傳回 100 個資料列。 如果 MSTVF 實際傳回大量的資料列，使用完全不同的聯結演算法可能會更好。
 1. 至於雜湊比對作業，請注意小型警告符號，它在本例中表示溢出到磁碟。
@@ -287,7 +288,7 @@ MSTVF 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL1
 
 1. 請注意，MSTVF 資料表掃描現在反映精確的基數估計值。 亦請注意此資料表掃描的重新排序和其他作業。
 1. 而關於聯結演算法，我們已改從巢狀迴圈作業切換到雜湊比對作業，如果涉及大量的資料列，這樣更接近最佳狀態。
-1. 亦請注意，我們不再顯示溢出警告，因為我們要根據 MSTVF 資料表掃描的實際資料列計數，授與更多記憶體。
+1. 另請注意，我們不再顯示溢出警告，因為我們要根據 MSTVF 資料表掃描的實際資料列計數，授與更多記憶體。
 
 ### <a name="interleaved-execution-eligible-statements"></a>符合交錯執行的陳述式
 在交錯執行中參考陳述式的 MSTVF，目前必須是唯讀的，且不為資料修改作業的一部分。 此外，如果 MSTVF 未使用執行階段常數，則不適用於交錯執行。
@@ -297,10 +298,10 @@ MSTVF 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL1
 一般而言，交錯執行有益於下列情況的查詢：
 1. 中繼結果集的預估和實際資料列數目間有很大的扭曲 (本例中為 MSTVF)。
 1. 而整體查詢對中繼結果的大小變更十分敏感。 這通常發生在查詢計劃有樹狀子目錄的複雜樹狀結構時。
-僅僅 MSTVF 的 "SELECT *" 不會得益於交錯執行。
+僅僅 MSTVF 的 `SELECT *` 不會受益於交錯執行。
 
 ### <a name="interleaved-execution-overhead"></a>交錯執行的負擔
-負擔應該最小，甚至完全沒有。 在引入交錯執行前，MSTVF 已被具體化，不過差異在於，現在我們要允許延遲最佳化，並利用具體化資料列集的基數估計值。
+負擔應該最小，甚至完全沒有。 在導入交錯執行前，MSTVF 已被具體化，不過差異在於，現在我們要允許延遲最佳化，並利用具體化資料列集的基數估計值。
 就像任何會影響變更的計劃一樣，有些計劃的變更，會識我們以較佳的樹狀子目錄基數，得到整體查詢更差的計劃。 風險降低可以包括還原相容性層級，或使用查詢存放區強制執行非迴歸版的計劃。
 
 ### <a name="interleaved-execution-and-consecutive-executions"></a>交錯執行和連續執行
@@ -339,18 +340,18 @@ MSTVF 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL1
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
-啟用時，此設定在 sys.database_scoped_configurations 中會顯示為已啟用。
+啟用時，此設定在 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 中會顯示為已啟用。
 若要針對源自資料庫的所有查詢執行重新啟用交錯執行，請在適用資料庫的內容中執行下列程式碼：
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
-您也可以將 DISABLE_INTERLEAVED_EXECUTION_TVF 指定為 USE HINT 查詢提示，以針對特定查詢停用交錯執行。  例如：
+您也可以將 `DISABLE_INTERLEAVED_EXECUTION_TVF` 指定為 [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)，以針對特定查詢停用交錯執行。 例如：
 
 ```sql
-SELECT  [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
-FROM    [Fact].[Order] AS [fo]
+SELECT [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
+FROM [Fact].[Order] AS [fo]
 INNER JOIN [Fact].[WhatIfOutlierEventQuantity]('Mild Recession',
                             '1-01-2013',
                             '10-15-2014') AS [foo] ON [fo].[Order Key] = [foo].[Order Key]
@@ -371,5 +372,6 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 [查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)    
 [執行程序邏輯和實體運算子參考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [聯結](../../relational-databases/performance/joins.md)    
-[示範彈性查詢處理](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)          
-
+[示範自適性查詢處理](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)    
+[USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)   
+[建立使用者定義函數 (資料庫引擎)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)  

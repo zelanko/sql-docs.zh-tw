@@ -11,12 +11,12 @@ ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 374971541d49ebd55449c500b3d61a6ed1296ff3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffee06e8a6372f146996673c425a89000eda0a1d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766080"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420659"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>建立自訂工作流程 (Master Data Services)
 
@@ -62,9 +62,9 @@ ms.locfileid: "47766080"
   
 2.  加入 Microsoft.MasterDataServices.WorkflowTypeExtender.dll 的參考。 此組件可以在 \<您的安裝資料夾>\Master Data Services\WebApplication\bin 中找到。  
   
-3.  將 ‘using Microsoft.MasterDataServices.Core.Workflow;’ 加入至您的 C# 程式碼檔案。  
+3.  將 'using Microsoft.MasterDataServices.Core.Workflow;' 新增至您的 C# 程式碼檔案。  
   
-4.  從類別宣告中的 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 繼承。 類別宣告應該類似：‘public class WorkflowTester : IWorkflowTypeExtender’。  
+4.  從類別宣告中的 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 繼承。 類別宣告應該類似：'public class WorkflowTester : IWorkflowTypeExtender'。  
   
 5.  實作 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 介面。 SQL Server MDS 工作流程整合服務會呼叫 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 方法來啟動您的工作流程。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "47766080"
   
 1.  在 \<您的安裝資料夾>\Master Data Services\WebApplication\bin 中尋找 Microsoft.MasterDataServices.Workflow.exe.config。  
   
-2.  將 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫連線資訊加入至 “ConnectionString” 設定。 如果您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝使用區分大小寫的定序，資料庫的名稱就必須以資料庫中相同的大小寫輸入。 例如，完整的設定標記可能如以下所示：  
+2.  將 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫連線資訊新增至 "ConnectionString" 設定。 如果您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝使用區分大小寫的定序，資料庫的名稱就必須以資料庫中相同的大小寫輸入。 例如，完整的設定標記可能如以下所示：  
   
     ```xml  
     <setting name="ConnectionString" serializeAs="String">  
@@ -83,7 +83,7 @@ ms.locfileid: "47766080"
     </setting>  
     ```  
   
-3.  在 “ConnectionString” 設定下方加入 “WorkflowTypeExtenders” 設定，讓標記名稱與您的工作流程處理常式組件產生關聯。 例如：  
+3.  在 "ConnectionString" 設定下方新增 "WorkflowTypeExtenders" 設定，讓標籤名稱與您的工作流程處理常式組件建立關聯。 例如：  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -94,7 +94,7 @@ ms.locfileid: "47766080"
      \<值> 標記的內部文字採用 \<工作流程標記>=\<組件限定工作流程類型名稱> 的格式。 \<工作流程標記> 是在您於[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]中建立商務規則時，用來識別工作流程處理常式組件的名稱。 \<組件限定工作流程類型名稱> 是您工作流程類別的命名空間限定名稱，後面加上一個逗號，再加上組件的顯示名稱。 如果您的組件具備強式名稱，也必須包含版本資訊及其 PublicKeyToken。 如果您已經為不同種類的工作流程建立多個工作流程處理常式，則可以包含多個 \<設定> 標記。  
   
 > [!NOTE]  
->  根據您伺服器的組態，可以在嘗試儲存 Microsoft.MasterDataServices.Workflow.exe.config 檔案時，看到「存取遭到拒絕」錯誤。 如果發生這個情形，請暫時停用伺服器上的 [使用者帳戶控制 (UAC)]。 若要這麼做，開啟 [控制台]，然後按一下 [系統及安全性]。 在 [控制中心] 底下，按一下 [變更使用者帳戶控制設定]。 在 [使用者帳戶控制設定] 對話方塊中，將長條滑動到底部，讓您絕不會收到通知。 重新啟動電腦，然後重複以上的步驟以編輯您的組態檔。 儲存此檔案之後，將您的 UAC 設定重設為預設層級。  
+>  根據您伺服器的設定，可以在嘗試儲存 Microsoft.MasterDataServices.Workflow.exe.config 檔案時，看到「存取遭拒」錯誤。 如果發生這個情形，請暫時停用伺服器上的 [使用者帳戶控制 (UAC)]。 若要這麼做，開啟 [控制台]，然後按一下 [系統及安全性]。 在 [控制中心] 底下，按一下 [變更使用者帳戶控制設定]。 在 [使用者帳戶控制設定] 對話方塊中，將長條滑動到底部，讓您絕不會收到通知。 重新啟動電腦，然後重複以上的步驟以編輯您的組態檔。 儲存此檔案之後，將您的 UAC 設定重設為預設層級。  
   
 ### <a name="start-sql-server-mds-workflow-integration-service"></a>啟動 SQL Server MDS 工作流程整合服務  
  根據預設，不會安裝 SQL Server MDS 工作流程整合服務。 您必須先安裝此服務，才能使用它。 為獲得更大的安全性，請為服務建立本機使用者，並僅授與此使用者執行工作流程作業所需的權限。 若要建立使用者，請安裝服務、啟動服務，然後遵循以下步驟進行：  
@@ -118,7 +118,7 @@ ms.locfileid: "47766080"
 6.  使用 Services 嵌入式管理單元啟動 SQL Server MDS 工作流程整合服務。 若要這麼做，請在 Services 嵌入式管理單元中尋找 SQL Server MDS 工作流程整合服務，選取該服務，然後按一下 [啟動] 連結。  
   
 ### <a name="create-a-workflow-business-rule"></a>建立工作流程商務規則  
- 使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 建立並發佈套用時啟動工作流程的商務規則。 您應該確定您的商務規則中包含變更屬性值的動作，讓規則在套用一次之後，評估為 false。 例如，當 Price 屬性值大於 500，且 Approved 屬性值為空白時，您的商務規則可能會評估為 true。 接著，此規則可能會包含兩個動作：一個是將 Approved 屬性值設定為 Pending，另一個是啟動工作流程。 或者，您可能想要建立一個使用「已變更」條件的規則，並加入您的屬性以變更追蹤群組。 如需商務規則的詳細資訊，請參閱[商務規則 &#40;Master Data Services&#41;](../../master-data-services/business-rules-master-data-services.md)。  
+ 使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 建立並發佈套用時啟動工作流程的商務規則。 您應該確定您的商務規則中包含變更屬性值的動作，讓規則在套用一次之後，評估為 false。 例如，當 Price 屬性值大於 500，且 Approved 屬性值為空白時，您的商務規則可能會評估為 true。 接著，此規則可能會包含兩個動作：一個是將 Approved 屬性值設定為 Pending，另一個是啟動工作流程。 或者，建議您建立一個使用「已變更」條件的規則，並新增您的屬性以變更追蹤群組。 如需商務規則的詳細資訊，請參閱[商務規則 &#40;Master Data Services&#41;](../../master-data-services/business-rules-master-data-services.md)。  
   
  依照以下步驟，建立在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中啟動自訂工作流程的商務規則。  
   

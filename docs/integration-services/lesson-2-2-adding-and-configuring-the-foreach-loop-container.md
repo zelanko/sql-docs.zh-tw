@@ -11,12 +11,12 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 193794ba5d5553036b6fc2018d3e8d8a5ce4401d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 492691c3fd6c8cd9206b591aa2302bc62a658daa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642165"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527134"
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>課程 2-2 - 新增和設定 Foreach 迴圈容器
 在這項工作中，您將加入功能，於一般檔案的資料夾中形成迴圈，並對每個一般檔案套用在第 1 課使用的相同資料流程轉換。 您的作法是在控制流程中加入和設定 Foreach 迴圈容器。  

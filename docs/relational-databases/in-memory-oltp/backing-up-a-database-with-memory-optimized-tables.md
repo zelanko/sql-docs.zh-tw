@@ -11,12 +11,12 @@ ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f0faaa704bb7a160d4a17d80a97efd2bae85b629
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0cf5f24bc4c330c40323ee18189cc10b0aed080e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671239"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398731"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>備份含有記憶體最佳化資料表的資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "51671239"
 ### <a name="estimating-size-of-full-database-backup"></a>估計完整資料庫備份的大小  
   
 > [!IMPORTANT]  
->  建議您不要使用 BackupSizeInBytes 值來估計記憶體中 OLTP 的備份大小。  
+>  建議您不要使用 BackupSizeInBytes 值來估計記憶體內部 OLTP 的備份大小。  
   
  第一個工作負載案例主要是為了插入。 在此案例中，大部分的資料檔案都處於使用中狀態，並且已完全載入，而且已刪除的資料列很少。 資料庫備份的大小與記憶體中的資料大小十分接近。  
   

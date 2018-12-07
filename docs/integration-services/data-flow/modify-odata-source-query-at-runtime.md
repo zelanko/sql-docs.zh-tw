@@ -11,12 +11,12 @@ ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 13ca379e808a970142bd568fe158bafdfaa5d0d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbfb753b0c2674e3345286b5a2ee2f038228c5d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778574"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517837"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>在執行階段提供 OData 來源查詢
  您可以在執行階段修改 OData 來源查詢，修改的方式是將「運算式」加入資料流程工作的 **[OData Source].[Query]** 屬性。  
@@ -28,7 +28,7 @@ ms.locfileid: "47778574"
 ## <a name="provide-the-query-as-a-parameter"></a>以參數形式提供查詢  
  下列程序示範如何將 OData 來源元件所使用的查詢公開為封裝的參數。  
   
-1.  以滑鼠右鍵按一下 [資料流程工作]，然後選取 [參數化…] 選項。  
+1.  以滑鼠右鍵按一下 [資料流程工作]，然後選取 [參數化...] 選項。  
   
 2.  在 [參數化] 對話方塊中，針對 [屬性] 選取 **[\<OData 來源元件的名稱>].[Query]**。  
   
@@ -53,11 +53,11 @@ ms.locfileid: "47778574"
   
 2.  在 [屬性] 視窗中，反白顯示 [運算式] 屬性。  
   
-3.  按一下 … (省略符號) 按鈕，即可開啟 [屬性運算式編輯器]。  
+3.  按一下 ... (省略符號) 按鈕，即可開啟 [屬性運算式編輯器]。  
   
 4.  選取 **[OData Source].[Query]** 屬性。  
   
-5.  按一下 … (省略符號) 按鈕 (針對 [運算式])。  
+5.  按一下 [運算式] 的 ... (省略符號) 按鈕。  
   
 6.  輸入 [運算式]。  
   

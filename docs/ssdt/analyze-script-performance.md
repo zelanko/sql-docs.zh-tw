@@ -13,12 +13,12 @@ ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7386a1bceed8ed79dddf2636ae152d79c460a5ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ed6f127b8f1a692f1cd71839570cd38d21213482
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675048"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396913"
 ---
 # <a name="analyze-script-performance"></a>分析指令碼效能
 您可以使用 SQL Server Data Tools 提供的工具，判斷是否能提升查詢、預存程序或指令碼的效能。 例如，監視用戶端統計資料 (例如常用查詢的回應時間)，您可以判斷是否需要變更資料表的查詢或索引。 這類統計資料可以包含用戶端執行時間、查詢設定檔、以及傳送和接收的封包/位元組。  
@@ -32,7 +32,7 @@ ms.locfileid: "51675048"
   
 如果開啟用戶端統計資料，查詢執行時 [統計資料] 索引標籤會出現在 [訊息] 索引標籤旁邊。 如果關閉用戶端統計資料，[統計資料] 索引標籤就不會出現。 來自後續查詢執行的統計資料會與平均值一起列出。  
   
-如需有關收集的統計資料的詳細資訊，請參閱[查詢視窗統計資料窗格](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) \(英文\) 和[本主題的＜用戶端統計資料索引標籤＞](https://msdn.microsoft.com/library/aa833205.aspx)一節。  
+如需已收集之統計資料的詳細資訊，請參閱 [Query Window Statistics Pane](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) (查詢視窗統計資料窗格) 和[本主題的＜用戶端統計資料索引標籤＞](https://msdn.microsoft.com/library/aa833205.aspx)一節。  
   
 ## <a name="using-execution-plans"></a>使用執行計畫  
 執行計畫會顯示資料庫引擎如何巡覽資料表，以及如何使用索引為查詢或其他 DML 陳述式 (如更新) 存取或處理資料。 這種圖形式的方法，對於了解查詢的效能特性非常有幫助。  

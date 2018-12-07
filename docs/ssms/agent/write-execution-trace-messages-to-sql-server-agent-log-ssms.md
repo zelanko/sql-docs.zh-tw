@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f2c1c9c494afd89627e397347870db2d1604886a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1d1b2e646eb12fbfb1b0226cb20a8a97bf92b5c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696797"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508552"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "47696797"
   
 2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
   
-3.  在 [SQL Server Agent 屬性 - _server\_name_] 對話方塊，於 [一般] 頁面的 [錯誤記錄檔] 下，選取 [Include execution trace messages] \(包含執行追蹤訊息\) 核取方塊。  
+3.  在 [SQL Server Agent 屬性 -_server\_name_] 對話方塊中，於 [一般] 頁面的 [錯誤記錄檔] 下，選取 [包含執行追蹤訊息] 核取方塊。  
   
 4.  按一下 [確定] 。  
   

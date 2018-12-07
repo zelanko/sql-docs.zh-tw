@@ -11,12 +11,12 @@ ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbcf940b5679a22ff6d2c0692878b6c57e104ddb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 8498ac8bbcf8a053497c24fbe8bd7c529a2c4382
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638675"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544703"
 ---
 # <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

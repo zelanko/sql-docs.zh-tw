@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74e64506ec3ba27a3caf87292556ab22c5609c57
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 6e2231b51551972536d9ea534f53d5a0a2cbbfc7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813041"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543958"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe 公用程式會處理您在輸入檔中所提供的指令碼。 使用此公用程式可自動化報表伺服器部署和管理工作。  
@@ -84,7 +84,7 @@ rs {-?}
  (選擇性) 指定以批次方式執行指令碼檔案中的命令。 若有任何命令失敗，便會回復此批次。 有些命令無法批次處理，而會依平常方式執行。 只有在指令碼中發生未處理的例外狀況會導致批次復原。 如果指令碼處理例外狀況並從 **Main**正常地傳回，則會認可該批次。 如果忽略此參數，則會執行此命令而不會建立批次。 如需詳細資訊，請參閱 [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md)。  
   
  **-v** *globalvar*  
- (選擇性) 指定在指令碼中使用的全域變數。 如果指令碼使用全域變數，則必須指定此引數。 指定的值必須是 .rss 檔案中所定義的全域變數之有效值。 您必須為每個 **–v** 引數指定一個全域變數。  
+ (選擇性) 指定在指令碼中使用的全域變數。 如果指令碼使用全域變數，則必須指定此引數。 指定的值必須是 .rss 檔案中所定義的全域變數之有效值。 您必須為每個 **-v** 引數指定一個全域變數。  
   
  會在命令列上指定 **-v** 引數，以及用於設定在執行階段定義於指令碼中的全域變數值。 例如，如果您的指令碼包含名為 *parentFolder*的變數，您就可以在命令列上指定該資料夾的名稱：  
   
@@ -104,7 +104,7 @@ rs {-?}
  下列範例說明如何指定指令碼檔案，其中包含您要執行的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 指令碼和 Web 服務方法。  
   
 ```  
-rs –i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver  
+rs -i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver  
 ```  
   
  如需詳細範例，請參閱 [在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  

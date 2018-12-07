@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fc441d3247d5320e0a9913c0df48cc2573f22858
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f7252b672eb29206bbd77cc92cdb3de68f3d6c91
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700470"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524327"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 版本資訊
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ SQL Server 2016 SP2 中已包含支援能力和診斷相關的改善。
 |   --- |   --- |   --- |
 |針對可用性群組中資料庫的完整 DTC 支援    |   SQL Server 2016 中目前不支援可用性群組中資料庫的跨資料庫交易。 在 SQL Server 2016 SP2 中，我們針對可用性群組資料庫的分散式交易推出完整支援。   |       |
 |更新 sys.databases 的 is_encrypted 資料行，以正確反映 TempDB 的加密狀態 |   TempDB 之 sys.databases 中的 is_encryptedcolumn 資料行的值為 1，即使在您關閉所有使用者資料庫的加密並重新啟動 SQL Server 之後也一樣。 預期的行為是該值為 0，因為在此情況下 TempDB 已經不再加密。 從 SQL Server 2016 SP2 開始，sys.databases.is_encrypted 現在會正確地反映 TempDB 的加密狀態。  |       |
-|新的 DBCC CLONEDATABASE 選項，以產生驗證的複製品和備份   |   在 SQL Server 2016 SP2 中，DBCC CLONEDATABASE 有兩個新的選項：產生驗證的複製品，或產生備份複製品。 當使用 WITH VERIFY_CLONEDB 選項建立複製品資料庫時，系統會建立並驗證一致的資料庫複製品，且 Microsoft 將會支援它以用於生產環境。 已推出新的屬性，以驗證複製品是否已驗證 SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’)。 使用 BACKUP_CLONEDB 選項建立複製品時，在相同的資料夾中會產生備份作為資料檔案，以讓客戶能輕鬆將複製品移動到其他伺服器，或將它傳送到 Microsoft 客戶支援 (CSS) 以進行疑難排解。  |       |
+|新的 DBCC CLONEDATABASE 選項，以產生驗證的複製品和備份   |   在 SQL Server 2016 SP2 中，DBCC CLONEDATABASE 有兩個新的選項：產生驗證的複製品，或產生備份複製品。 當使用 WITH VERIFY_CLONEDB 選項建立複製品資料庫時，系統會建立並驗證一致的資料庫複製品，且 Microsoft 將會支援它以用於生產環境。 已推出新的屬性，以驗證複製品是否已驗證 SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone')。 使用 BACKUP_CLONEDB 選項建立複製品時，在相同的資料夾中會產生備份作為資料檔案，以讓客戶能輕鬆將複製品移動到其他伺服器，或將它傳送到 Microsoft 客戶支援 (CSS) 以進行疑難排解。  |       |
 |針對 DBCC CLONEDATABASE 的 Service Broker (SSB) 支援    |   已增強 DBCC CLONEDATABASE 命令，以允許撰寫 SSB 物件指令碼。  |   [KB4092075](https://support.microsoft.com/help/4092075) \(機器翻譯\) |
 |新的 DMV 以監視 TempDB 版本存放空間使用量    |   SQL Server 2016 SP2 中已推出新的 sys.dm_tran_version_store_space_usage DMV，以允許監視 TempDB 的版本存放空間使用量。 在生產環境伺服器上執行時，DBA 現在可以根據每個資料庫的版本存放空間使用量需求，主動規劃 TempDB 大小，而不會產生任何效能負擔。 |       |
 |針對複寫代理程式的完整傾印支援 | 目前，如果複寫代理程式遇到未處理的例外狀況，預設會建立例外狀況徵兆的小型傾印。 這會使對未處理的例外狀況進行疑難排解變得非常困難。 我們透過此變更推出新的登錄機碼，它將允許針對複寫代理程式建立完整傾印。  |       |
@@ -68,7 +68,7 @@ SQL Server 2016 SP2 中已包含支援能力和診斷相關的改善。
 |sys.dm_db_file_space_usage 中的範圍修改資訊| 已新增資料行至 sys.dm_db_file_space_usage，以追蹤自上次完整備份之後的已修改範圍數目。  |       |
 |sys.dm_exec_query_stats 中的區段資訊 |   已新增資料行至 sys.dm_exec_query_stats，以追蹤略過和讀取的資料行存放區區段數目，如 total_columnstore_segment_reads 和 total_columnstore_segment_skips。   |   [KB4051358](https://support.microsoft.com/help/4051358) \(英文\) |
 |針對散發資料庫設定正確的相容性層級  |   安裝 Service Pack 之後，散發資料庫相容性層級會變更為 90。 這是因為 sp_vupgrade_replication 預存程序中的程式碼路徑所造成。 SP 現在已經過變更，可為散發資料庫設定正確的相容性層級。   |       |
-|公開最後一個已知的良好 DBCC CHECKDB 資訊    |   已新增資料庫選項，來以程式設計方式傳回最後一次成功執行 DBCC CHECKDB 的日期。 使用者現在可以查詢 DATABASEPROPERTYEX([database], ‘lastgoodcheckdbtime’)，以取得代表在所指定伺服器上最後一次成功執行 DBCC CHECKDB 的日期/時間單一值。  |       |
+|公開最後一個已知的良好 DBCC CHECKDB 資訊    |   已新增資料庫選項，來以程式設計方式傳回最後一次成功執行 DBCC CHECKDB 的日期。 使用者現在可以查詢 DATABASEPROPERTYEX([database], 'lastgoodcheckdbtime')，以取得代表在所指定伺服器上最後一次成功執行 DBCC CHECKDB 的日期/時間單一值。  |       |
 |Showplan XML 增強功能| [使用統計資料來編譯查詢計劃的相關資訊](https://blogs.msdn.microsoft.com/sql_server_team/sql-server-2017-showplan-enhancements/) \(英文\)，包括統計資料名稱、修改計數器、取樣百分比，以及統計資料最後一次更新的時間。 請注意，此功能只新增到 CE 模型 120 和更新版本。 例如，CE 70 並不支援此功能。| |
 | |如果查詢最佳化工具使用「資料列目標」邏輯，則會將新屬性 [EstimateRowsWithoutRowgoal](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-row-goal/) \(英文\) 新增到執行程序表 XML。| |
 | |實際執行程序表 XML 中的新執行階段屬性 [UdfCpuTime 和 UdfElapsedTime](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-udfs/) \(英文\)，以追蹤在純量使用者定義函數 (UDF) 中花費的時間。| |

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.matchingproject.map.f1
@@ -16,12 +15,12 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9d855f0f1a43c3c5d885941b6a924835732161d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93ad673f1566d1045705c390b0b0064859ba18fd
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702926"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617948"
 ---
 # <a name="run-a-matching-project"></a>執行比對專案
 
@@ -43,7 +42,7 @@ ms.locfileid: "47702926"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能執行比對專案。  
   
 ##  <a name="StartingaMatchingProject"></a> 第一步：啟動比對專案  
@@ -67,7 +66,7 @@ ms.locfileid: "47702926"
     > [!NOTE]  
     >  只有當 DQS 支援來源資料類型，而且該類型符合 DQS 定義域資料類型時，您才能將來源資料對應至 DQS 定義域。 如需有關 DQS 支援之資料類型的詳細資訊，請參閱＜ [DQS 定義域支援的 SQL Server 和 SSIS 資料類型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)＞。  
   
-4.  按一下 **[加號 (+)]** 控制項，將資料列加入至對應資料表，或按一下 **[減號 (–)]** 控制項，移除資料列。  
+4.  按一下 [加號 (+)] 控制項，將資料列加入至對應資料表，或按一下 [減號 (-)] 控制項，移除資料列。  
   
 5.  按一下 **[預覽資料來源]** 查看您選取之 SQL Server 資料表或檢視表中的資料，或者您選取的 Excel 工作表。  
   
@@ -128,7 +127,7 @@ ms.locfileid: "47702926"
   
     -   叢集清單及每一個叢集中相符的記錄，包括規則名稱和分數。 樞紐記錄將會標示為「樞紐」。 這些叢集會先出現在匯出清單中。  
   
-    -   不相符的記錄清單，其中 [分數] 和 [規則名稱] 資料行中會有 “NULL”。 這些記錄將會附加到叢集後面的匯出清單。  
+    -   不相符的記錄清單，其中 [分數] 和 [規則名稱] 資料行中會有 "NULL"。 這些記錄將會附加到叢集後面的匯出清單。  
   
      將會針對生存結果匯出以下項目：  
   

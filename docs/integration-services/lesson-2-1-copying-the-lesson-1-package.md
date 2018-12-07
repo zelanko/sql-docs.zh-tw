@@ -11,12 +11,12 @@ ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7638d36f78853612c312880cd9698625af1ffe3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ba8f4ef0845ebad226eb8a57edb15347eacf5814
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640475"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541956"
 ---
 # <a name="lesson-2-1---copying-the-lesson-1-package"></a>課程 2-1 - 複製第 1 課套件
 在這項工作中，您將為第 1 課所建立的 Lesson 1.dtsx 套件建立複本。 如果您並未完成第 1 課，可以將此教學課程中隨附之已完成的第 1 課封裝加入至專案中，然後改為複製該封裝。 在第 2 課其餘的課程中，您將使用這個新的複本。  
@@ -47,9 +47,9 @@ ms.locfileid: "51640475"
   
 2.  在方案總管中，以滑鼠右鍵按一下 [SSIS 套件]，然後按一下 [新增現有的套件]。  
   
-3.  在 [新增現有套件的複本] 對話方塊的 [套件位置] 中，選取 [檔案系統]。  
+3.  在 [加入現有封裝的複本] 對話方塊的 [封裝位置] 中，選取 [檔案系統]。  
   
-4.  按一下瀏覽 **(…)** 按鈕，導覽至電腦上的 [Lesson 1.dtsx]，然後按一下 [開啟]。  
+4.  按一下瀏覽 **(…)** 按鈕，巡覽至電腦上的 **Lesson 1.dtsx**，然後按一下 [開啟]。  
   
     若要下載此教學課程的所有課程封裝，請執行下列動作。  
   

@@ -16,12 +16,12 @@ ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de5c9bfbdcc910b717c4155be6d5181ce37b2c96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 869d9c837bef828bf749a0d5382742e5762ac5c7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844756"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502035"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>開啟查詢和檢視表設計工具 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47844756"
   
 -   [圖表] 窗格會以圖形顯示您從資料連接所選取的資料表或資料表值物件。 同時還會顯示資料表或物件之間的任何聯結關聯性。  
   
--   只要將您的選擇輸入於類似工作表的方格，[準則] 窗格便可以讓您指定查詢選項，例如，要顯示的資料行、如何排序結果，以及要選取的資料列。  
+-   只要將您的選擇輸入於類似方格的試算表，[準則] 窗格便可以讓您指定查詢選項 (例如，要顯示的資料行、如何排序結果，以及要選取的資料列)。  
   
 -   您可以使用 [SQL] 窗格建立您自己的 SQL 陳述式，也可以使用 [準則] 窗格和 [圖表] 窗格建立陳述式。在這個情況中，SQL 陳述式會在 [SQL] 窗格中建立。 建立查詢時，[SQL] 窗格將自動更新並重新格式化以方便您讀取。  
   

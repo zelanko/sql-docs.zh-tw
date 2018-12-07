@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41a03695526a669f33b74833137415a35db02929
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: d4872ffea819c23ca27ec0d01e4709a231f95cf5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812742"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514405"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>使用 Reporting Services 的 REST API 進行開發
 

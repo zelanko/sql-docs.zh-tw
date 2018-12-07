@@ -35,12 +35,12 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 00c334d707886efdcfa00860def58f0c662a7cb6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f5d0da7fb7b4515875b456eac380a6f5e0588e55
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704116"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420429"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

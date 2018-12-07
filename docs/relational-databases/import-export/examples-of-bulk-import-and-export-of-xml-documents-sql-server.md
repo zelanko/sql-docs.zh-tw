@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76859771490cf744db4dff1e247188f978426cfa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8bca6661ce0401cf5f24398e60f263a644584b7c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670597"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530550"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>大量匯入與匯出 XML 文件的範例 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -158,7 +158,7 @@ GO
   
  若要解決這個問題，您可以從包含 DTD 的資料檔匯入 XML 資料，方法是使用 `OPENROWSET(BULK...)` 函數，然後在命令的 `CONVERT` 子句中指定 `SELECT` 選項。 此命令的基本語法如下：  
   
- `INSERT ... SELECT CONVERT(…) FROM OPENROWSET(BULK...)`  
+ `INSERT ... SELECT CONVERT(...) FROM OPENROWSET(BULK...)`  
   
 #### <a name="sample-data-file"></a>範例資料檔  
  在測試這個大量匯入範例之前，請建立包含下列範例執行個體的檔案 (`C:\temp\Dtdfile.xml`)：  

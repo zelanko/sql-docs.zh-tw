@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81a690c550a3010a69d6356a0525eecdfc6410c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0dbf0368c86b906a2f482010779407353f771db8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751056"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392882"
 ---
 # <a name="set-index-options"></a>設定索引選項
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47751056"
   
 -   **使用下列方法修改索引的屬性：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47751056"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要資料表或檢視表的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  

@@ -11,12 +11,12 @@ ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33c01da8b0ae9f439debe2f8343bddbc1c7de2fe
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 640b9c04c8988c091fea267b74c7f3552079d175
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698486"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517536"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>將步驟加入至 SQL Server Agent 主要作業
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,8 +58,8 @@ ms.locfileid: "51698486"
   
 4.  以滑鼠右鍵按一下您想要新增步驟的作業，然後選取 [屬性]。  
   
-5.  在 [作業屬性 - <作業名稱>] 對話方塊的 [選取頁面] 底下，選取 [步驟]。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性 - 新增作業 &#40;步驟頁面&#41;](../../ssms/agent/job-properties-new-job-steps-page.md)。  
-  
+5.  在 [作業屬性 -_job_name_] 對話方塊的 [選取頁面] 下，選取 [步驟]。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性 - 新增作業 &#40;步驟頁面&#41;](../../ssms/agent/job-properties-new-job-steps-page.md)。  
+ 
 6.  完成後，請按一下 **[確定]**。  
   
 ## <a name="TsqlProcedure"></a>使用 Transact-SQL  

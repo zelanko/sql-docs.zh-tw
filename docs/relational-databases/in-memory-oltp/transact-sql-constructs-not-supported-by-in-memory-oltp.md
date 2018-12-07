@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ca94f7ef5ed0c6f070424c47aee10c7848a061d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8023d29ccdf04ff46b995e1f698bb54a905df5d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822446"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503619"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>記憶體中的 OLTP 不支援 Transact-SQL 建構
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47822446"
 |功能|已篩選的索引|記憶體最佳化資料表中不支援篩選的索引。 請從索引指定中省略 **WHERE** 子句。|  
 |功能|包含的資料行|記憶體最佳化資料表並不需要指定內含資料行。 記憶體最佳化資料表內所有的資料行都是隱含包含在每一個記憶體最佳化的索引中。|  
 |作業|DROP INDEX|不支援卸除記憶體最佳化資料表上的索引。 您可以使用 ALTER TABLE 刪除索引。<br /><br /> 如需詳細資訊，請參閱 [改變記憶體最佳化資料表](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)。|  
-|索引選項|*索引選項*|只支援一個索引選項 – 雜湊索引的 BUCKET_COUNT。|  
+|索引選項|*索引選項*|只支援一個索引選項 - HASH 索引的 BUCKET_COUNT。|  
   
 ## <a name="nonclustered-hash-indexes"></a>非叢集雜湊索引  
  下表列出可能出現於涉及非叢集雜湊索引之錯誤訊息文字中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能和關鍵字，以及解決錯誤的更正動作。  
@@ -105,7 +105,7 @@ ms.locfileid: "47822446"
 |功能|非常數參數的預設值|在原生編譯預存程序上使用具有參數的預設值時，值必須為常數。 請從參數宣告中移除任何萬用字元。|  
 |功能|EXTERNAL|無法對 CLR 預存程序執行原生編譯。 從 CREATE PROCEDURE 陳述式中移除 AS EXTERNAL 子句或 NATIVE_COMPILATION 選項。|  
 |功能|編號的預存程序|原生編譯預存程序不可編號。 從 **CREATE PROCEDURE** 陳述式移除 **;***number*。|  
-|功能|多列 INSERT ... VALUES 陳述式|無法使用相同的 **INSERT** 陳述式在原生編譯預存程序中插入多個資料列。 請為每個資料列建立 **INSERT** 陳述式。|  
+|功能|多資料列 INSERT ...VALUES 陳述式|無法使用相同的 **INSERT** 陳述式在原生編譯預存程序中插入多個資料列。 請為每個資料列建立 **INSERT** 陳述式。|  
 |功能|通用資料表運算式 (CTE)|原生編譯預存程序中不支援通用資料表運算式 (CTE)。 重寫查詢。|  
 |功能|COMPUTE|不支援 **COMPUTE** 子句。 請從查詢中將它移除。|  
 |功能|SELECT INTO|不支援 **INTO** 子句與 **SELECT** 陳述式一起使用。 請將查詢重新撰寫為 **INSERT INTO** *Table* **SELECT**。|  

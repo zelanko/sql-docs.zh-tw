@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5489f4086cf8bfb7b2609538a0cda5a1c2515ad
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 7afbcb496179a583d40a4f194d55c872f43cb293
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100179"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535612"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>監視 Reporting Services 訂閱
   您可以透過使用者介面、Windows PowerShell 或記錄檔來監視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱。 您可以使用的監視選項取決於正在執行的報表伺服器模式。  
@@ -87,7 +87,7 @@ ms.locfileid: "50100179"
   
 2.  開啟報表的內容功能表 (**…**)。  
   
-3.  選取展開的功能表選項 (**...**)。  
+3.  選取展開的功能表選項 (**…**)。  
   
 4.  選取 [管理訂閱]   
   

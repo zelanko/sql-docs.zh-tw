@@ -13,12 +13,12 @@ ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18a953d0bf5619fec9ee443df19130cca0a8314d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93fea5756d35e116ae9d265d2c0c157e538258ce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785891"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512154"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML 索引對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47785891"
 顯示 XML 索引的名稱。 在建立新索引時，會根據 [資料表設計師] 作用中視窗的資料表，給予預設的名稱。 您可以隨時變更名稱。  
   
 **說明**  
-描述索引。 若要寫入更詳細的描述，請按一下 [描述]，再按屬性欄位右邊的省略符號按鈕 (**…**)。 如此便可提供較大的區域以寫入文字。  
+描述索引。 若要寫入更詳細的描述，請按一下 [描述]，然後按一下屬性欄位右邊的省略符號按鈕 (**…**)。 如此便可提供較大的區域以寫入文字。  
   
 **資料表設計工具類別目錄**  
 展開時會顯示此 XML 索引的屬性相關資訊。  

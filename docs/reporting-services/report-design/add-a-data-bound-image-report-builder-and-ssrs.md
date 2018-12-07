@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a48d24c6250160fe5ade5a941c5591c358fc1908
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 945ee262e8d507a62aa954eec847e3b7bd4ac308
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031679"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524502"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>加入資料繫結影像 (報表產生器及 SSRS)
   報表可以包含儲存在資料庫內之影像的參考。 這類影像稱為「資料繫結影像」。 出現在產品清單中產品名稱旁邊的圖片就是資料繫結影像的範例。  
@@ -39,7 +39,7 @@ ms.locfileid: "50031679"
   
 7.  在 **[使用此欄位]** 中，選取包含您報表中之影像的欄位。  
   
-8.  在 **[使用此 MIME 類型]** 中，選取影像的 MIME 類型或檔案格式，例如 bmp。  
+8.  在 [使用此 MIME 類型]中，選取影像的 MIME 類型或檔案格式，例如 bmp。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2a0bbb55ddb23cfcbebd081cfc25e9a4ee5d6ffa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c75caf73aed97e2f7d0774de3da0dacc7a8708cc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685126"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417839"
 ---
 # <a name="rename-user-defined-functions"></a>重新命名使用者定義函數
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47685126"
   
 -   **若要使用下列項目重新命名使用者定義函數：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47685126"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  若要卸除函數，需要函數所屬結構描述的 ALTER 權限，或函數的 CONTROL 權限。 若要重新建立函數，需要資料庫的 CREATE FUNCTION 權限，以及此函數建立所在之結構描述的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -70,12 +70,12 @@ ms.locfileid: "47685126"
   
 4.  以滑鼠右鍵按一下您要重新命名的函數，然後選取 [重新命名]。  
   
-5.  輸入函數的新名稱。  
+5.  輸入函式的新名稱。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要重新命名使用者定義函數**  
   
- 您無法使用 Transact-SQL 陳述式來執行這項工作。 若要使用 Transact-SQL 來重新命名使用者定義函數，您必須先刪除現有的函數，然後使用新的名稱來重新建立函數。 確定使用函數舊名稱的所有程式碼和應用程式現在都使用新名稱。  
+ 您無法使用 Transact-SQL 陳述式來執行這項工作。 若要使用 Transact-SQL 來重新命名使用者定義函數，您必須先刪除現有的函數，然後使用新的名稱來重新建立函數。 確定使用函式舊名稱的所有程式碼和應用程式現在都使用新名稱。  
   
  如需詳細資訊，請參閱 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) 和 [DROP FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md)。  
   

@@ -18,12 +18,12 @@ ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66f4d5e1a419d9a194532902e0df259eccc35590
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dddd2ea5c0abb9cf2aaa1258bbbb5cff14e6ca99
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838536"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519164"
 ---
 # <a name="table-value-constructor-transact-sql"></a>資料表值建構函式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
  這是一個常數、變數或運算式。 此運算式不能包含 EXECUTE 陳述式。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
- 資料表值建構函式的使用方式有兩種：直接在 INSERT … VALUES 陳述式的 VALUES 清單中使用，或在任何允許使用衍生資料表的位置中當作衍生資料表來使用。 如果資料列數目超過最大值，就會傳回錯誤 10738。 若要插入超出所允許限制的資料列數，請使用下列其中一種方法：  
+ 資料表值建構函式的使用方式有兩種：直接在 INSERT ...VALUES 陳述式的 VALUES 清單中使用，或在任何允許使用衍生資料表的位置中當作衍生資料表來使用。 如果資料列數目超過最大值，就會傳回錯誤 10738。 若要插入超出所允許限制的資料列數，請使用下列其中一種方法：  
   
 -   建立多個 INSERT 陳述式  
   

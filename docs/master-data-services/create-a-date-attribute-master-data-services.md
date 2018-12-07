@@ -15,12 +15,12 @@ ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dfe30a7f6aa477c123d8b9efa9d17e69bd2bfc51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa31a8e2601eba31d1f7579b5f110945a47f4d79
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728297"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395291"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>建立日期屬性 (Master Data Services)
 

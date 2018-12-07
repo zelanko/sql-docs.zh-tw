@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d201f4cd41acb71a1b6502e0a6dd2b2d27ceb9f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c25c25223f660f4e5a71897bf599b986135bf7a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754646"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617429"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>清理複合定義域中的資料
 
@@ -43,7 +42,7 @@ ms.locfileid: "47754646"
   
  假設有以下範例：有一個複合定義域 Product 具有三個個別定義域：ProductName、CompanyName 和 ProductVersion。 請建立以下最終跨定義域規則：  
   
- 如果定義域 ‘CompanyName’ 值包含 *Microsoft* 而且定義域 ‘ProductName’ 值等於 *Office* 且 ‘ProductVersion’ 值等於 *2010* ，則定義域 ‘ProductName’ 值等於 *Microsoft Office 2010*。  
+ 如果定義域 'CompanyName' 值包含 *Microsoft* 而且定義域 ‘ProductName’ 值等於 *Office* 且 'ProductVersion' 值等於 *2010*，則定義域 'ProductName' 值等於 *Microsoft Office 2010*。  
   
  當執行此跨定義域規則時，來源資料 (ProductName) 會在清理活動之後更正為以下項目：  
   
@@ -59,7 +58,7 @@ ms.locfileid: "47754646"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- 當您測試最終 *Then* 跨定義域規則 **[值等於]** 時， **[測試複合定義域規則]** 對話方塊會包含新的資料行 **[更正為]**，此資料行會顯示正確資料。 在清理資料品質專案時，這個最終跨定義域規則會將資料變更為 100% 信賴，而且 [原因] 資料行會顯示以下訊息：由規則 ‘\<跨定義域規則名稱>’ 更正。 如需有關跨定義域規則的詳細資訊，請參閱＜ [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)＞。  
+ 當您測試最終 *Then* 跨定義域規則 **[值等於]** 時， **[測試複合定義域規則]** 對話方塊會包含新的資料行 **[更正為]**，此資料行會顯示正確資料。 在清理資料品質專案時，這個最終跨定義域規則會將資料變更為 100% 信賴，而且 [原因] 資料行會顯示以下訊息：由規則 '\<跨定義域規則名稱>' 更正。 如需有關跨定義域規則的詳細資訊，請參閱＜ [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)＞。  
   
 > [!NOTE]  
 >  最終跨定義域規則將不適用於附加至參考資料服務的複合定義域。  

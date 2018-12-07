@@ -16,12 +16,12 @@ ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80ccfc7b9fbebb107b040be95825e28901086a2d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: d3b39f333b4e280b9b01bb8dc9fa5fcfe98f7324
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558475"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502766"
 ---
 # <a name="detach-a-database"></a>卸離資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "51558475"
   
     -   當資料庫涉及複寫時， **[狀態]** 為 **[尚未備妥]** 且 **[訊息]** 資料行會顯示 **[資料庫已複寫]**。  
   
-    -   當資料庫有一或多個使用中的連線時，[狀態]為 [未就緒]且 [訊息] 資料行顯示 [<使用中連線數目> 個使用中的連線線] - 例如：[1 個使用中的連線]。 您必須選取 **[卸除連接]** 中斷任何使用中的連接之後，才能卸離資料庫。  
+    -   當資料庫有一或多個使用中的連線時，[狀態] 為 [未就緒]且 [訊息] 資料行顯示 [<使用中連線數目> 個使用中的連線]，例如：[1 個使用中的連線]。 您必須選取 **[卸除連接]** 中斷任何使用中的連接之後，才能卸離資料庫。  
   
      若要取得有關訊息的詳細資訊，請按一下超連結文字，以開啟活動監視器。  
   

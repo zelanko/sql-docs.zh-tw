@@ -31,12 +31,12 @@ ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8269d0b8913d0ccde1a351ee2489a7818b00c45e
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: b4bef219ec0e9bd4526b8f7c015a1800d9753656
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336287"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529874"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -215,7 +215,7 @@ DELETE Sales.ShoppingCartItem
 ## <a name="parallelism"></a>平行處理原則
  會將結果傳回給用戶端的 OUTPUT 子句一律是使用序列計劃。
 
-在相容性層級設定為 130 或更高的資料庫環境中，如果 INSERT...SELECT 作業針對 SELECT 陳述式使用 WITH (TABLOCK) 提示，同時也使用 OUTPUT…INTO 來插入至暫存資料表或使用者資料表，則視子樹成本而定，INSERT…SELECT 的目標資料表將會適用平行處理原則。  OUTPUT INTO 子句中參考的目標資料表將不適用平行處理原則。 
+在相容性層級設定為 130 或更高的資料庫環境中，如果 INSERT...SELECT 作業針對 SELECT 陳述式使用 WITH (TABLOCK) 提示，同時也使用 OUTPUT...INTO 來插入至暫存資料表或使用者資料表，則視子樹成本而定，INSERT...SELECT 的目標資料表將會適用平行處理原則。  OUTPUT INTO 子句中參考的目標資料表將不適用平行處理原則。 
  
 ## <a name="triggers"></a>觸發程序  
  從 OUTPUT 傳回的資料行會反映在 INSERT、UPDATE 或 DELETE 陳述式完成之後執行觸發程序之前的資料。  

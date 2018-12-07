@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: c53f178bb532eb038d4c06ca882d067aa7ae4eb5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d1e3b8c76da30f9216b8f5d44df40b92360350dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703936"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540561"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 版本資訊
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "51703936"
 **因應措施** ：您可以參考系統組態檢查報告，深入了解這些安裝程式規則。 系統組態檢查會產生報告，其中包含每個已執行之規則以及執行狀態的簡短描述。 系統組態檢查報告位於 %programfiles%\Microsoft SQL Server\110\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\。  
   
 ### <a name="12-adding-a-local-user-account-for-the-distributed-replay-controller-service-might-terminate-setup-unexpectedly"></a>1.2 加入 Distributed Replay Controller 服務的本機使用者帳戶可能會非預期地終止安裝程式  
-**問題** ：在 SQL Server 安裝程式的 [Distributed Replay Controller]  頁面中，當您嘗試加入 Distributed Replay Controller 服務的本機使用者帳戶時，安裝程式將會非預期地終止並顯示「SQL Server 安裝程式失敗」錯誤訊息。  
+**問題** ：在 SQL Server 安裝程式的 [Distributed Replay Controller] 頁面中，當您嘗試加入 Distributed Replay Controller 服務的本機使用者帳戶時，安裝程式將會非預期地終止並顯示「SQL Server 安裝程式失敗」錯誤訊息。  
   
-**因應措施** ：在安裝 SQL 期間，請勿經由 [加入目前使用者] 或 [加入] 加入本機使用者帳戶。 請在安裝之後，依照下列步驟手動加入本機使用者帳戶：  
+**因應措施**：在安裝 SQL 期間，請勿經由 [加入目前使用者] 或 [加入...] 加入本機使用者帳戶。 請在安裝之後，依照下列步驟手動加入本機使用者帳戶：  
   
 1.  停止 SQL Server Distributed Replay Controller 服務。  
   
@@ -188,9 +188,9 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
 -   Windows PowerShell 2.0 是安裝 SQL Server 2012 Database Engine 元件和 SQL Server Management Studio 的必要條件，但是 SQL Server 安裝程式已不再安裝 Windows PowerShell。 如果您的電腦沒有 PowerShell 2.0，可以遵循 [Windows Management Framework](https://support.microsoft.com/kb/968929) 頁面上的指示啟用此元件。 您取得 Windows PowerShell 2.0 的方式取決於您在哪一個作業系統執行：  
   
-    -   Windows Server 2008 -- Windows PowerShell 1.0 是一項功能，而且可以加入。 下載及安裝 Windows PowerShell 2.0 版本 (以 OS 修補程式的形式生效)。  
+    -   Windows Server 2008 - Windows PowerShell 1.0 是一項功能，而且可以加入。 下載及安裝 Windows PowerShell 2.0 版本 (以 OS 修補程式的形式生效)。  
   
-    -   Windows 7/Windows Server 2008 R2 -- 預設會安裝 Windows PowerShell 2.0。  
+    -   Windows 7/Windows Server 2008 R2 - 預設會安裝 Windows PowerShell 2.0。  
   
 -   如果您打算在 SharePoint 環境中使用 SQL Server 2012 功能，則需要 SharePoint Server 2010 Service Pack 1 (SP1) 和 SharePoint 8 月份累計更新。 您必須先安裝 SP1、SharePoint [8 月份累計更新](https://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx)並完整修補伺服器陣列，然後再將 SQL Server 2012 功能加入至伺服器陣列。 此需求適用於下列 SQL Server 2012 功能：使用 Database Engine 的執行個體做為伺服器陣列的資料庫伺服器、設定 PowerPivot for SharePoint，或在 SharePoint 模式中部署 Reporting Services。  
   
@@ -308,7 +308,7 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
   
 **因應措施**：若要避免這個問題，請啟用 IPv4，或使用下列步驟加入登錄項目，並建立 ACL 以針對 IPv6 啟用說明檢視器：  
   
-1.  在 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0 底下建立名為 “IPv6” 且具有 “1 (DWORD(32 bit))” 值的登錄機碼。  
+1.  在 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0 底下建立名為 "IPv6" 且具有 "1 (DWORD(32 bit))" 值的登錄機碼。  
   
 2.  從管理員 CMD 視窗執行下列命令，為 IPv6 通訊埠設定安全性 ACL：  
   
@@ -341,7 +341,7 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 **因應措施** ：若要避免這種狀況，請發行您需要保存在知識探索中的工作，再啟動新的活動。  
   
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 控制項無法針對大字型適當縮放  
-**問題** ：如果您將文字大小變更為 [大 - 150%] (在 Windows Server 2008 或 Windows 7 中)，或將 [自訂 DPI 設定] 變更為 200% (在 Windows 7 中)，便無法存取 [新增知識庫]  頁面上的 [取消]  和 [建立]  按鈕。  
+**問題**：如果您將文字大小變更為 [大 - 150%] (在 Windows Server 2008 或 Windows 7 中)，或將 [自訂 DPI 設定] 變更為 200% (在 Windows 7 中)，便無法存取 [新增知識庫] 頁面上的 [取消] 和 [建立] 按鈕。  
   
 **因應措施**：若要解決這個問題，請將字型設定為較小的大小。  
   
@@ -403,7 +403,7 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
   
 發生此錯誤是因為 DQS 在 SQL Server 資料庫中與在 C# 中比較字串的方式不同。 SQL Server 資料庫中的字串比較不區分大小寫，但是在 C# 中則區分大小寫。  
   
-我們使用範例來說明。 假設有使用者 Domain\user1。 此使用者使用 “user1” 帳戶登入 Data Quality Client 電腦，並處理知識庫。 DQS 會針對每一位使用者將最近使用的知識庫儲存為 DQS_MAIN 資料庫中 A_CONFIGURATION 資料表內的記錄。 在此情況下，此記錄將會以下列名稱儲存：RecentList:KB:Domain\user1。 之後，使用者以 “User1” 身分 (請注意 U 為大寫) 登入 Data Quality Client 電腦，並嘗試在 [最近使用的知識庫]  清單中針對定義域管理活動開啟此知識庫。 DQS 中的基礎程式碼將會比較兩個字串 RecentList:KB:DOMAIN\user1 和 DOMAIN\User1，而 C# 中會進行區分大小寫的字串比較，因為這兩個字串不相符，所以 DQS 會嘗試在 DQS_MAIN 資料庫的 A_CONFIGURATION 資料表中為使用者 (User1) 插入一筆新的記錄。 但是，由於 SQL 資料庫中的字串比較不區分大小寫，所以導致該字串已經存在於 DQS_MAIN 資料庫的 A_CONFIGURATION 資料表中，因此插入作業將會失敗。  
+我們使用範例來說明。 假設有使用者 Domain\user1。 此使用者使用 "user1" 帳戶登入 Data Quality Client 電腦，並處理知識庫。 DQS 會針對每一位使用者將最近使用的知識庫儲存為 DQS_MAIN 資料庫中 A_CONFIGURATION 資料表內的記錄。 在此情況下，此記錄將會以下列名稱儲存：RecentList:KB:Domain\user1。 之後，使用者以 "User1" 身分 (請注意 U 為大寫) 登入 Data Quality Client 電腦，並嘗試在 [最近使用的知識庫] 清單中針對定義域管理活動開啟此知識庫。 DQS 中的基礎程式碼將會比較兩個字串 RecentList:KB:DOMAIN\user1 和 DOMAIN\User1，而 C# 中會進行區分大小寫的字串比較，因為這兩個字串不相符，所以 DQS 會嘗試在 DQS_MAIN 資料庫的 A_CONFIGURATION 資料表中為使用者 (User1) 插入一筆新的記錄。 但是，由於 SQL 資料庫中的字串比較不區分大小寫，所以導致該字串已經存在於 DQS_MAIN 資料庫的 A_CONFIGURATION 資料表中，因此插入作業將會失敗。  
   
 **因應措施** ：若要修正此問題，您可以進行下列其中一項作業：  
   

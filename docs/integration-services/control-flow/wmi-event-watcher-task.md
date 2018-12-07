@@ -18,12 +18,12 @@ ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57e2b48eef389d244a866eba9a0c27bdcacc9419
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 60ddc7dd6b9afc953017ed076fc9a57a713bc818
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642095"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527644"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 事件監看員工作
   「WMI 事件監看員」工作使用 Management Instrumentation 查詢語言 (WQL) 事件查詢來監看 Windows Management Instrumentation (WMI) 事件，以指定感興趣的事件。 您可將「WMI 事件監看員」工作用於下列用途：  

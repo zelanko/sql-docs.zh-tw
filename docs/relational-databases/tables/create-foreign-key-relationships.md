@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 978997ac3048bffb2e8f475d2c728a38b7a27283
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 544dbc5722f1af81b3d4b858a8b6b5e4b2b7165f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383583"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517760"
 ---
 # <a name="create-foreign-key-relationships"></a>建立外部索引鍵關聯性
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "49383583"
     
 4.  在 [ **選取的關聯性** ] 清單中，按一下關聯性。    
     
-5.  按一下方格右邊的 [資料表及資料行規格]，然後按一下屬性右邊的省略符號 (**…**)。    
+5.  按一下方格右邊的 [資料表及資料行規格]，然後按一下屬性右邊的省略符號 (**...**)。    
     
 6.  在 [資料表和資料行] 對話視窗的 [主索引鍵] 下拉式清單中，選擇將要成為關聯性主索引鍵端的資料表。    
     

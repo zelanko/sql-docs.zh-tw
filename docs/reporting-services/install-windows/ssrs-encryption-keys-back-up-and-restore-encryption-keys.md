@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c6c7dd24c716849d6d36ca28908d57c0e715f17c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81bfdfb8d622096b30ea76a7632c5fd61ac833e3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645096"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514990"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 加密金鑰 - 備份與還原加密金鑰
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47645096"
  **SharePoint 模式** ：SharePoint 管理中心頁面或 PowerShell。  
   
 ##  <a name="bkmk_backup_sharepoint"></a> 備份 SharePoint 模式報表伺服器  
- 對於 SharePoint 模式報表伺服器，您可以使用 PowerShell 命令，或使用適用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面。 如需詳細資訊，請參閱 [管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的＜金鑰管理＞一節  
+ 對於 SharePoint 模式報表伺服器，您可以使用 PowerShell 命令，或使用適用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面。 如需詳細資訊，請參閱[管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的＜金鑰管理＞一節  
   
 ##  <a name="bkmk_backup_configuration_manager"></a> 備份加密金鑰 - Reporting Services 組態管理員 (原生模式)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47645096"
   
 5.  選取 [確定]。  
   
-###  <a name="bkmk_backup_rskeymgmt"></a> 備份加密金鑰 – rskeymgmt (原生模式)  
+###  <a name="bkmk_backup_rskeymgmt"></a> 備份加密金鑰 - rskeymgmt (原生模式)  
   
 1.  在主控報表伺服器的本機電腦上，執行 **[rskeymgmt.exe]** 。 您必須使用 **-e** 擷取引數來複製金鑰、提供檔案名稱，並指定密碼。 下列範例說明您必須指定的引數：  
   
@@ -95,7 +95,7 @@ ms.locfileid: "47645096"
   
 5.  選取 [確定]。 
   
-###  <a name="bkmk_restore_rskeymgmt"></a> 還原加密金鑰 – rskeymgmt (原生模式)  
+###  <a name="bkmk_restore_rskeymgmt"></a> 還原加密金鑰 - rskeymgmt (原生模式)  
   
 1.  在主控報表伺服器的本機電腦上，執行 **[rskeymgmt.exe]** 。 使用 **-a** 引數還原金鑰。 您必須提供完整的檔案名稱，並指定密碼。 下列範例說明您必須指定的引數：  
   

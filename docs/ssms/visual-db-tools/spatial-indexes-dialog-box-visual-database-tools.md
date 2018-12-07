@@ -13,12 +13,12 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30d728c87ec3f83f20491933c0cda1af845ea6af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb31f067ceb052a165cd6e3830e778d6af15e875
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651402"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509365"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>空間索引對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "47651402"
 顯示空間索引的名稱。 在建立新的索引時，會根據 [資料表設計工具] 作用中視窗的資料表，給予預設的名稱。 您可以隨時變更名稱。  
   
 **說明**  
-描述此索引。 若要寫入更詳細的描述，請按一下 [描述]，再按屬性欄位右邊的省略符號按鈕 (**…**)。 如此便可提供較大的區域以寫入文字。  
+描述此索引。 若要寫入更詳細的描述，請按一下 [描述]，然後按一下屬性欄位右邊的省略符號按鈕 (**…**)。 如此便可提供較大的區域以寫入文字。  
   
 **資料表設計工具類別目錄**  
 展開時會顯示此空間索引的屬性相關資訊。  

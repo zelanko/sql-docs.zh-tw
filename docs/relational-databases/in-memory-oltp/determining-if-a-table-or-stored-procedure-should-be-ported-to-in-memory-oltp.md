@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8042627fcc85cf6b9418f7a0b16eae9255441a57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cb94b594be62bf19ad90c00ffaef6145eb90fc9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684056"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531616"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>判斷是否應將資料表或預存程序匯出至記憶體中 OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的交易效能分析報表，可協助您評估記憶體內部 OLTP 是否能改善資料庫應用程式的效能。 此報表還能指出在應用程式中啟用記憶體內部 OLTP 所需執行的工作。 識別您要匯出至記憶體內部 OLTP 的磁碟資料表之後，即可使用 [記憶體最佳化建議程式](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)協助您遷移資料表。 同樣地， [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) 可協助您將預存程序匯出為原生編譯的預存程序。 如需移轉方法的資訊，請參閱 [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(記憶體內部 OLTP - 一般工作負載模式和移轉考量)。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的交易效能分析報表，可協助您評估 In-Memory OLTP 是否能改善資料庫應用程式的效能。 此報表還能指出在應用程式中啟用記憶體內部 OLTP 所需執行的工作。 識別您要匯出至記憶體內部 OLTP 的磁碟資料表之後，即可使用 [記憶體最佳化建議程式](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)協助您遷移資料表。 同樣地， [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) 可協助您將預存程序匯出為原生編譯的預存程序。 如需移轉方法的資訊，請參閱 [In-Memory OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
  直接針對生產資料庫，或是具有類似生產工作負載之作用中工作負載的測試資料庫，執行交易效能分析報表。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "47684056"
 2.  輸入下列命令。  
   
     ```  
-    Save-SqlMigrationReport –FolderPath “<folder_path>”  
+    Save-SqlMigrationReport -FolderPath "<folder_path>"  
     ```  
   
 3.  驗證下列項目。  
@@ -158,12 +158,12 @@ ms.locfileid: "47684056"
     ```  
   
     ```  
-    Save-SqlMigrationReport –Server "<instance_name>" -Database "<db_name>" -FolderPath "<folder_path1>"  
+    Save-SqlMigrationReport -Server "<instance_name>" -Database "<db_name>" -FolderPath "<folder_path1>"  
   
     ```  
   
     ```  
-    Save-SqlMigrationReport –Server "<instance_name>" -Database "<db_name>" -Object <object_name> -FolderPath "<folder_path2>"  
+    Save-SqlMigrationReport -Server "<instance_name>" -Database "<db_name>" -Object <object_name> -FolderPath "<folder_path2>"  
   
     ```  
   

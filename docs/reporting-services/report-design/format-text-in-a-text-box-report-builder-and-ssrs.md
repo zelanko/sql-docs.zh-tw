@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae9cbb47056a368faeed42fd4e20179e0fb0f61d
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7619852bae5989dcf12b571175d21243f6968051
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021822"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516036"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>格式化文字方塊中的文字 (報表產生器及 SSRS)
   您可以在文件方塊中，單獨地對文字任何一部分進行格式化，並且在同一個文字方塊中，混合使用預留文字與靜態文字。 混合格式與加入預留位置文字的功能可以讓您針對報表中的文字建立合併列印或範本。 您可以使用預留位置來個別定義和格式化任何運算式。  
@@ -49,7 +49,7 @@ ms.locfileid: "50021822"
   
 2.  在 **[插入]** 索引標籤上，按一下 **[文字方塊]**。 在清單中按一下，然後拖曳滑鼠來建立一個所需大小的方塊。  
   
-3.  在文字方塊中輸入標籤，例如 **My Field**。  
+3.  在文字方塊中鍵入標籤，例如 **My Field**。  
   
 4.  將欄位從資料集拖曳至文字方塊中。 如此就會針對您的欄位建立預留位置。  
   

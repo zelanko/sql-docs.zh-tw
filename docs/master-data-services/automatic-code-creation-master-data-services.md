@@ -12,12 +12,12 @@ ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 24965436108df067d7bd4ea10b4ad1e71b9ce69e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f77a3a5ffd40ea3f279f64a42c173625b95e4bd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727276"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394271"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>自動建立代碼 (Master Data Services)
 
@@ -33,7 +33,7 @@ ms.locfileid: "47727276"
 ## <a name="generating-other-attribute-values"></a>產生其他屬性值  
  管理員可以透過建立商務規則，為 Code 以外的其他屬性自動產生值。 他們可以指定一個初始值，而且可以指定每個後續值的遞增數目。  
   
- 當您使用其中一種工具或暫存處理序，將屬性值輸入至 MDS 時，可以將屬性值留空。 套用商務規則時，將會根據最高的現有值遞增這些值。 例如，如果您的規則是「將屬性預設為從 1 開始產生，並以 4 遞增的值」，而且該屬性最高的目前值為 700，則加入之下一個成員的值將是 704。  
+ 當您使用其中一種工具或暫存處理序，將屬性值輸入至 MDS 時，可以將屬性值留空。 套用商務規則時，將會根據最高的現有值遞增這些值。 例如，如果您的規則是「將屬性預設為從 1 開始產生，並以 4 遞增的值」，而且該屬性最高的目前值為 700，則新增之下一個成員的值將是 704。  
   
 ## <a name="related-tasks"></a>相關工作  
   

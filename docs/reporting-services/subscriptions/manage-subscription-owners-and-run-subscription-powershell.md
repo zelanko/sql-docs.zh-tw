@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: de4452bcf7d1600f49ecc28f0a66ae15ef0a602d
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c81da7beaedbb7374154db2c35985b8c9955a376
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813381"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396851"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>管理訂閱擁有者及執行訂閱
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -243,7 +243,7 @@ ForEach ($item in $items)
 ```  
   
 ##  <a name="bkmk_list_for_1_report"></a> 指令碼：列出與特定報表相關聯的所有訂閱  
- 此指令碼會列出與特定報表相關聯的所有訂閱。 不同之處在於 SharePoint 模式的報表路徑語法，需要完整的 URL。 在語法範例中，使用的報表名稱是 “title only”，其中包含空格，因此需要以單引號將報表名稱括住。  
+ 此指令碼會列出與特定報表相關聯的所有訂閱。 不同之處在於 SharePoint 模式的報表路徑語法，需要完整的 URL。 在語法範例中，使用的報表名稱是 "title only"，其中包含空格，因此需要以單引號將報表名稱括住。  
   
  **原生模式語法：**  
   
@@ -337,7 +337,7 @@ $subscription | select Path, report, Description, SubscriptionID, Owner, Status
   
  如需組態檔的詳細資訊，請參閱 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)。  
   
- 指令碼包含延遲邏輯 “`Start-Sleep -s 6`”，所以在觸發事件之後會有時間，以透過 ListSubscription 方法取得更新的狀態。  
+ 指令碼包含延遲邏輯 "`Start-Sleep -s 6`"，所以在觸發事件之後會有時間，以透過 ListSubscription 方法取得更新的狀態。  
   
  **原生模式語法：**  
   

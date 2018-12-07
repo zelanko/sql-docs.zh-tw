@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fca24650ef1d7b26dc9fac93c0ab5d714bf7d90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33faa406912e2f80d6911e9e4f94b27397e89cef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841926"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534757"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>建立及儲存資料行主要金鑰 (永遠加密)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ $azureLocation = "<key vault location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<column master key name>"
 $azureCtx = Set-AzureRMContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
 New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
 Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
@@ -139,7 +139,7 @@ $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destinatio
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>讓 Azure 金鑰保存庫金鑰可供應用程式和使用者使用
 
-使用 Azure 金鑰保存庫金鑰作為資料行主要金鑰時，您的應用程式必須向 Azure 驗證，且應用程式的識別必須對金鑰保存庫有下列權限︰ *get*、 *unwrapKey*和 *verify*。 
+使用 Azure Key Vault 金鑰作為資料行主要金鑰時，您的應用程式必須向 Azure 驗證，且應用程式的身分識別必須對金鑰保存庫有下列權限︰*get*、*unwrapKey* 和 *verify*。 
 
 若要佈建由儲存在 Azure 金鑰保存庫中之資料行主要金鑰所保護的資料行加密金鑰，您需要 *get*、 *unwrapKey*、 *wrapKey*、 *sign*和 *verify* 權限。 此外，若要在 Azure 金鑰保存庫中建立新的金鑰，您需要 *create* 權限；若要列出金鑰保存庫的內容，您需要 *list* 權限。
 
@@ -165,7 +165,7 @@ Set-AzureRmKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $reso
 
 若要讓 HSM 可供指定電腦上的應用程式使用，實作 CNG 的金鑰儲存提供者 (KSP)，必須安裝及設定在電腦上。 永遠加密用戶端驅動程式 (驅動程式內的資料行主要金鑰存放區提供者)，使用 KSP 來加密和解密資料行加密金鑰 (使用金鑰存放區中儲存的資料行主要金鑰所保護)。
 
-Windows 包含 Microsoft 軟體金鑰儲存提供者 – 以軟體為基礎的 KSP，您可以用它進行測試用途。 請參閱 [CNG 金鑰儲存提供者](/windows/desktop/SecCertEnroll/cng-key-storage-providers)。
+Windows 包含 Microsoft 軟體金鑰儲存提供者 - 以軟體為基礎的 KSP，您可以用它進行測試用途。 請參閱 [CNG 金鑰儲存提供者](/windows/desktop/SecCertEnroll/cng-key-storage-providers)。
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-cngksp"></a>使用 CNG/KSP 在金鑰存放區中建立資料行主要金鑰
 

@@ -9,12 +9,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c96de7a5f5141e97a9e3670711e09eb3c20cd324
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: f58c39fb0be119da6164b62d91d3e3da8e0a5c48
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021612"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504114"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>在資料警示設計工具中建立資料警示
 
@@ -75,15 +75,15 @@ ms.locfileid: "50021612"
   
 10. 輸入比較值。  
   
-11. (選擇性) 再按一次省略符號 **(…)** 。  
+11. (選擇性) 再按一次省略符號 **(...)**。  
   
-     省略符號 **(…)** 會出現在包含第一個子句的那一行。  
+     省略符號 **(...)** 會出現在包含第一個子句的那一行。  
   
      OR 子句將加入 AND 規則底下，且包含在規則內。  
   
 12. (選擇性) 按一下向下箭頭，選取 [欄位選取模式]，然後選取清單中的資料行。  
   
-     您將會發現，您按一下以加入 OR 子句的省略符號 **(…)** 已消失。  
+     您將會發現，您按一下以新增 OR 子句的省略符號 **(...)** 已消失。  
   
 13. (選擇性) 再按一次 [新增規則] 即可新增其他規則。  
   

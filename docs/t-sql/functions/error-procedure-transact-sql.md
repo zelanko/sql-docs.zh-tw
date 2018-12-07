@@ -25,17 +25,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 459119eb08117ed52a455fdfb80fe3f393a410fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caae632e8e413001d57d125126bb3f8f979a8e82
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807100"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617058"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-此函式會在發生錯誤且該錯誤造成執行 TRY…CATCH 建構的 CATCH 區塊時，傳回預存程序或觸發程序的名稱。  
+此函式會在發生錯誤且該錯誤造成執行 TRY...CATCH 建構的 CATCH 區塊時，傳回預存程序或觸發程序的名稱。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,9 +59,7 @@ ERROR_PROCEDURE ( )
 `ERROR_PROCEDURE` 支援在 CATCH 區塊範圍內的任何位置呼叫。  
   
 不論執行多少次，或在 `CATCH` 區塊範圍內的哪個位置執行，`ERROR_PROCEDURE` 都會傳回預存程序或觸發程序的名稱。 這有別於 @@ERROR 之類的函式，它們只會在緊接於發生錯誤的陳述式之後的陳述式中，傳回錯誤號碼。  
-  
-在巢狀 `CATCH` 區塊中，`ERROR_PROCEDURE` 會參考該 `CATCH` 區塊之 `CATCH` 區塊範圍特定的錯誤號碼。 例如，外部 TRY...CATCH 建構的 `CATCH` 區塊可能會有內部 `TRY...CATCH` 建構。 在該內部 `CATCH` 區塊內，`ERROR_PROCEDURE` 會傳回叫用內部 `CATCH` 區塊之錯誤的號碼。 如果 `ERROR_PROCEDURE` 是在外部 `CATCH` 區塊中執行，它會傳回叫用該外部 `CATCH` 區塊之錯誤的號碼。  
-  
+   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
 ### <a name="a-using-errorprocedure-in-a-catch-block"></a>A. 在 CATCH 區塊中使用 ERROR_PROCEDURE  

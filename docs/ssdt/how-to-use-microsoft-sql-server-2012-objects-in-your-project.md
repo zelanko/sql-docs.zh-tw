@@ -11,17 +11,17 @@ ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 539eb7ed053ff4f1d41aaa34360cd71772bbfc9c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2ead75f8b71227b1bd3831b650cc036a66b5b325
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681086"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397090"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>如何：在專案中使用 Microsoft SQL Server 2012 物件
 在這個範例中，您會將一個序列物件加入至以 Microsoft SQL Server 2012 為目標的資料庫專案。  
   
-序列在 Microsoft SQL Server 2012 中導入。 序列是使用者定義的結構描述繫結物件，該物件會根據建立順序所使用的規格產生數值序列。 數值序列是在定義的間隔依照遞增或遞減順序來產生，而且可依照要求循環 (重複)。  如需有關序列物件的詳細資訊，請參閱[序號](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx)。 如需 Microsoft SQL Server 2012 之新功能的資訊，請參閱 [SQL Server 2012 的新功能](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx)。  
+序列在 Microsoft SQL Server 2012 中導入。 序列是使用者定義的結構描述繫結物件，該物件會根據建立順序所使用的規格產生數值序列。 數值序列是在定義的間隔依照遞增或遞減順序來產生，而且可依照要求循環 (重複)。  如需有關序列物件的詳細資訊，請參閱[序號](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx)。 如需 Microsoft SQL Server 2012 新功能的資訊，請參閱 [SQL Server 2012 的新功能](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx)。  
   
 > [!WARNING]  
 > 下列程序利用先前在[連接的資料庫開發](../ssdt/connected-database-development.md)和[專案導向的離線資料庫開發](../ssdt/project-oriented-offline-database-development.md)小節中的程序所建立的實體。  
@@ -44,7 +44,7 @@ ms.locfileid: "51681086"
     CACHE 10  
     ```  
   
-4.  如果專案的目標平台未設定為 Microsoft SQL Server 2012，[錯誤清單] 會顯示 `CREATE SEQUENCE` 陳述式有語法錯誤。 若要修正此問題，請遵循[如何：變更目標平台及發行資料庫專案](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主題來相應地變更目標平台。  
+4.  如果專案的目標平台未設定為 Microsoft SQL Server 2012，則 [錯誤清單] 會顯示 `CREATE SEQUENCE` 陳述式有語法錯誤。 若要修正此問題，請遵循[如何：變更目標平台及發行資料庫專案](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主題來相應地變更目標平台。  
   
 5.  請遵循[如何：變更目標平台及發行資料庫專案](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)，將專案發佈至已連接的 Microsoft SQL Server 2012 伺服器中的資料庫。  
   

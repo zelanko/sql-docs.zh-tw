@@ -15,12 +15,12 @@ ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ebd4835fe24846df21b887841813f7cac596f7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d39d78d9fef6756804f69c8fb49ed1e880d94767
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598162"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395382"
 ---
 # <a name="database-object-security-master-data-services"></a>資料庫物件安全性 (Master Data Services)
 
@@ -45,7 +45,7 @@ ms.locfileid: "47598162"
 -   [設定系統設定](#SysSettings)  
   
 ##  <a name="Staging"></a> 暫存資料  
- 在下表中，每個安全物件都會有 "name" 做為名稱的一部分。 這表示建立實體時所指定的暫存資料表名稱。 如需詳細資訊，請參閱[概觀︰從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+ 在下表中，每個安全物件都會有 "name" 作為名稱的一部分。 這表示建立實體時所指定的暫存資料表名稱。 如需詳細資訊，請參閱[概觀︰從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
 |動作|[安全性實體]|[權限]|  
 |------------|----------------|-----------------|  

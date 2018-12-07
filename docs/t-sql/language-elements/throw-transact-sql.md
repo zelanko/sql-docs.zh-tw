@@ -19,17 +19,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7aff73be9d9213cea3c9336a926a0ad0de0a3c80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a9c57b68a7aabc2d275dd5fa64c7e7cb00c3969
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803256"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505907"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中引發例外狀況，並將執行轉移至 TRY…CATCH 建構的 CATCH 區塊。  
+  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中引發例外狀況，並將執行轉移至 TRY...CATCH 建構的 CATCH 區塊。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ THROW [ { error_number | @local_variable },
 ## <a name="remarks"></a>Remarks  
  THROW 陳述式之前的陳述式後面必須接著分號 (;) 陳述式結束字元。  
   
- 如果沒有 TRY…CATCH 建構，就會終止陳述式批次。 系統會設定引發例外狀況的行號和程序。 嚴重性設為 16。  
+ 如果沒有 TRY...CATCH 建構，就會終止陳述式批次。 系統會設定引發例外狀況的行號和程序。 嚴重性設為 16。  
   
  如果指定不含參數的 THROW 陳述式，它必須出現在 CATCH 區塊內。 這會導致引發攔截到的例外狀況。 THROW 陳述式中發生的任何錯誤都會導致陳述式批次終止。  
   

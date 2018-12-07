@@ -25,12 +25,12 @@ ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b52f9aa0131639bdfe68222bba42eae774d2b18f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f3b97043a2f9c348da76b8d0c15a448bf8106011
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698327"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510786"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ CREATE AVAILABILITY GROUP group_name
    FOR [ DATABASE database_name [ ,...n ] ]  
    REPLICA ON <add_replica_spec> [ ,...n ]  
    AVAILABILITY GROUP ON <add_availability_group_spec> [ ,...2 ]  
-   [ LISTENER ‘dns_name’ ( <listener_option> ) ]  
+   [ LISTENER 'dns_name' ( <listener_option> ) ]  
 [ ; ]  
   
 <with_option_spec>::=   
@@ -83,8 +83,8 @@ CREATE AVAILABILITY GROUP group_name
      } )  
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
-        [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
+        [,] [ READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE } ]  
+        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
      } )  
      | SESSION_TIMEOUT = integer  
   
@@ -104,12 +104,12 @@ CREATE AVAILABILITY GROUP group_name
    }  
   
   <network_subnet_option> ::=  
-     ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’    
+     'four_part_ipv4_address', 'four_part_ipv4_mask'    
   
   <ip_address_option> ::=  
      {   
-        ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’  
-      | ‘ipv6_address’  
+        'four_part_ipv4_address', 'four_part_ipv4_mask'  
+      | 'ipv6_address'  
      }  
   
 ```  
@@ -147,7 +147,7 @@ CREATE AVAILABILITY GROUP group_name
  FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
  指定哪一個失敗狀況會針對這個可用性群組觸發自動容錯移轉。 FAILURE_CONDITION_LEVEL 是在群組層級上設定，但只有在為同步認可可用性模式 (AVAILIBILITY_MODE **=** SYNCHRONOUS_COMMIT) 設定的可用性複本上才會顯出重要性。 此外，只有當主要和次要複本已設定自動容錯移轉模式 (FAILOVER_MODE **=** AUTOMATIC) 而且次要複本目前與主要複本同步時，失敗狀況才可以觸發自動容錯移轉。  
   
- 失敗狀況層級 (1–5) 的範圍從最低限制 (層級 1) 到最高限制 (層級 5)。 給定的狀況層級包含所有較少限制的層級。 因此，最嚴格的狀況層級 5 包含四個較少限制的狀況層級 (1-4)，層級 4 則包含層級 1-3，依此類推。 下表描述與每個層級對應的失敗狀況。  
+ 失敗狀況層級 (1-5) 的範圍從最低限制 (層級 1) 到最高限制 (層級 5)。 給定的狀況層級包含所有較少限制的層級。 因此，最嚴格的狀況層級 5 包含四個較少限制的狀況層級 (1-4)，層級 4 則包含層級 1-3，依此類推。 下表描述與每個層級對應的失敗狀況。  
   
 |層級|失敗狀況|  
 |-----------|-----------------------|  
@@ -201,7 +201,7 @@ CREATE AVAILABILITY GROUP group_name
 >  之後，您可以在裝載目前主要複本的伺服器執行個體上，將適合的資料庫加入至可用性群組。 您也可以從可用性群組中移除資料庫。 如需詳細資訊，請參閱 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)中的 PowerShell，將次要複本加入現有的 AlwaysOn 可用性群組中。  
   
  REPLICA ON  
- 指定要在新的可用性群組中裝載可用性複本的 SQL 伺服器執行個體 (一個到五個)。  每個複本是由後面接著 WITH (…) 子句的伺服器執行個體位址所指定。 您至少必須指定本機伺服器執行個體，這會成為初始主要複本。 您最多也可以選擇指定四個次要複本。  
+ 指定要在新的可用性群組中裝載可用性複本的 SQL 伺服器執行個體 (一個到五個)。  每個複本是由後面接著 WITH (...) 子句的伺服器執行個體位址所指定。 您至少必須指定本機伺服器執行個體，這會成為初始主要複本。 您最多也可以選擇指定四個次要複本。  
   
  您必須將每個次要複本聯結至可用性群組。 如需詳細資訊，請參閱 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)中的 PowerShell，將次要複本加入現有的 AlwaysOn 可用性群組中。  
   
@@ -297,7 +297,7 @@ CREATE AVAILABILITY GROUP group_name
   
  如需詳細資訊，請參閱 [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
- SECONDARY_ROLE **(** … **)**  
+ SECONDARY_ROLE **(** ... **)**  
  指定會在此可用性複本目前擁有次要角色 (亦即，每當它是次要複本時) 時生效的角色專屬設定。 在括弧內指定任一個或兩個次要角色選項。 如果您同時指定兩個選項，則使用逗號分隔清單。  
   
  次要角色選項如下：  
@@ -326,7 +326,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  若是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的具名執行個體，則應該將 Transact-SQL 接聽程式設定為使用特定通訊埠。 如需詳細資訊，請參閱[設定伺服器接聽特定 TCP 通訊埠 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   
- PRIMARY_ROLE **(** … **)**  
+ PRIMARY_ROLE **(** ... **)**  
  指定會在此可用性複本目前擁有主要角色 (亦即，每當它是主要複本時) 時生效的角色專屬設定。 在括弧內指定任一個或兩個主要角色選項。 如果您同時指定兩個選項，則使用逗號分隔清單。  
   
  主要角色選項如下：  
@@ -340,7 +340,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  主要複本的資料庫允許所有連接。 這是預設行為。  
   
- READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE } 指定為此可用性群組裝載可用性複本之伺服器執行個體的逗號分隔清單，以次要角色執行時，此可用性群組會符合下列需求：  
+ READ_ONLY_ROUTING_LIST **=** { **('**\<server_instance>**'** [ **,**...*n* ] **)** | NONE } 指定為此可用性群組裝載可用性複本之伺服器執行個體的逗號分隔清單，以次要角色執行時，此可用性群組會符合下列需求：  
   
 -   設定為允許所有連接或唯讀連接 (請參閱 SECONDARY_ROLE 選項的 ALLOW_CONNECTIONS 引數，如上所示)。  
   
@@ -414,7 +414,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  指定手動植入 (預設值)。 此方法會要求您在主要複本上建立資料庫的備份，並在次要可用性群組複本上手動還原該備份。  
   
- LISTENER **‘**_dns\_name_**’(** \<listener_option\> **)** 定義此可用性群組的新可用性群組接聽程式。 LISTENER 是選擇性引數。  
+ LISTENER **'**_dns\_name_**'(** \<listener_option\> **)** 定義此可用性群組的新可用性群組接聽程式。 LISTENER 是選擇性引數。  
   
 > [!IMPORTANT]  
 >  在建立第一個接聽程式之前，強烈建議您閱讀[建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
@@ -436,7 +436,7 @@ CREATE AVAILABILITY GROUP group_name
   
  \<listener_option> LISTENER 會採用下列其中一個 \<listener_option> 選項： 
   
- WITH DHCP [ ON { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** } ]  
+ WITH DHCP [ ON { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** } ]  
  指定可用性群組接聽程式會使用動態主機設定通訊協定 (DHCP)。  或者，使用 ON 子句以識別建立此接聽程式的網路。 DHCP 受限於單一子網路，這個子網路用於可用性群組中主控複本的每個伺服器執行個體。  
   
 > [!IMPORTANT]  
@@ -446,7 +446,7 @@ CREATE AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** | **(‘**_ipv6\_address_**’)** } [ **,** ...*n* ] **)** [ **,** PORT **=**_listener\_port_ ]  
+ WITH IP **(** { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** | **('**_ipv6\_address_**')** } [ **,** ...*n* ] **)** [ **,** PORT **=**_listener\_port_ ]  
  指定可用性群組接聽程式會使用一個或多個靜態 IP 位址，而不使用 DHCP。 若要建立跨多個子網路的可用性群組，接聽程式組態中每個子網路都需要一個靜態 IP 位址。 對於給定的子網路，靜態 IP 位址可以是 IPv4 位址或 IPv6 位址。 請與網路系統管理員連絡以取得會主控新可用性群組複本之每個子網路的靜態 IP 位址。  
   
  例如：  
@@ -555,7 +555,7 @@ CREATE AVAILABILITY GROUP MyAg
          );
 GO  
 ALTER AVAILABILITY GROUP [MyAg]
-  ADD LISTENER ‘MyAgListenerIvP6’ ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
+  ADD LISTENER 'MyAgListenerIvP6' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173 );   
 GO  
 ```  
   

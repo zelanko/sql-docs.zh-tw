@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 966b2acdeff68d445935b55ea1bf8ab24f2ad74a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74ab6c88467b20299574003c17fd96ac563dbc25
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684696"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502583"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "47684696"
 時區位移指定 **time** 或 **datetime** 值從 UTC 算起的時區位移。 時區位移可表示成 [+|-] hh:mm：
 -   hh 是代表時區位移中時數的兩位數，範圍介於 00 至 14 之間。  
 -   mm 是代表時區位移中額外分鐘數的兩位數，範圍介於 00 至 59 之間。  
--   \+ (加號) 或 – (減號) 是時區位移的必要符號。 這會指出若要取得當地時間，則必須在 UTC 時間中加上或扣除時區位移。 時區位移的有效範圍介於 -14:00 至 +14:00 之間。  
+-   \+ (加號) 或 - (減號) 是時區時差的必要符號。 這會指出若要取得當地時間，則必須在 UTC 時間中加上或扣除時區位移。 時區位移的有效範圍介於 -14:00 至 +14:00 之間。  
   
 時區位移範圍會遵循 XSD 結構描述定義的 W3C XML 標準，而且稍微與 SQL 2003 標準定義 (12:59 至 +14:00) 不同。
   
@@ -236,7 +236,7 @@ SELECT
 |資料類型|輸出|  
 |---|---|
 |**Time**|12:35:29. 1234567|  
-|**Date**|2007-05-08|  
+|**日期**|2007-05-08|  
 |**Smalldatetime**|2007-05-08 12:35:00|  
 |**Datetime**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  

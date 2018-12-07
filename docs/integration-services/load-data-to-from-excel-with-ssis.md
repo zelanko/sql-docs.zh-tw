@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c4618fc4c6b352e119fb4c4686820ee8077dfab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 270528218e23d230ecb8b8ea4dc5bde6baaa6440
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848396"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545718"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 從 Excel 匯入資料，或將資料匯出至 Excel
 
@@ -172,17 +172,17 @@ ms.locfileid: "47848396"
 
 Excel 驅動程式只能辨識有限的一組資料類型。 例如，所有的數值資料行都會被解譯為倍整數 (DT_R8)，而所有的字串資料行 (備忘錄資料行除外) 全都會被解譯成 255 個字元的 Unicode 字串 (DT_WSTR)。 SSIS 對應 Excel 資料類型的情況如下：
 
--   數值 – 雙精確度浮點數 (DT_R8)
+-   數值 - 雙精確度浮點數 (DT_R8)
 
--   貨幣 – 貨幣 (DT_CY)
+-   貨幣 - 貨幣 (DT_CY)
 
--   布林值 – 布林值 (DT_BOOL)
+-   布林值 - 布林值 (DT_BOOL)
 
--   日期/時間 – datetime (DT_DATE)
+-   日期/時間 - datetime (DT_DATE)
 
--   字串 – Unicode 字串，長度 255 (DT_WSTR)
+-   字串 - Unicode 字串，長度 255 (DT_WSTR)
 
--   備忘錄 – Unicode 文字資料流 (DT_NTEXT)
+-   備忘錄 - Unicode 文字資料流 (DT_NTEXT)
 
 ### <a name="data-type-and-length-conversions"></a>資料類型和長度轉換
 

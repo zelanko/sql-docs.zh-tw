@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ace4a96004e22a1c922a491a8f2906c98caefc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98ddc4f21807b9ac5185ad5e510cd83e35bbc93b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856376"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521656"
 ---
 # <a name="create-check-constraints"></a>建立檢查條件約束
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47856376"
   
 -   **若要使用下列項目來建立新的檢查條件約束：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "47856376"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要資料表的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -55,7 +55,7 @@ ms.locfileid: "47856376"
   
 1.  在 [物件總管] 中，展開您想要加入檢查條件約束的資料表、以滑鼠右鍵按一下 [條件約束]，然後按一下 [新增條件約束]。  
   
-2.  在 [檢查條件約束] 對話方塊中，按一下 [運算式] 欄位，然後按一下省略符號 **(…)**。  
+2.  在 [檢查條件約束] 對話方塊中，按一下 [運算式] 欄位，然後按一下省略符號 **(...)**。  
   
 3.  在 **[檢查條件約束運算式]** 對話方塊中，輸入檢查條件約束的 SQL 運算式。 例如，若要將 `SellEndDate` 資料表之 `Product` 資料行中的項目限制為大於或等於 `SellStartDate` 資料行中日期的值或是 NULL 值，請輸入：  
   

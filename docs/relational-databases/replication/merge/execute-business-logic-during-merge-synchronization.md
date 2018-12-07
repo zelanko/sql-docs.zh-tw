@@ -18,12 +18,12 @@ ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8e1433d9157aed6a933d5117417be1a4fcc1c79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 083a4ccb00c834fba4f250aa1a2063b76ad9bd86
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605596"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407625"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>在合併同步處理期間執行商務邏輯
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

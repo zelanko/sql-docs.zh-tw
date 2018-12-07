@@ -18,12 +18,12 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8cea3308f6d070a0cd1b7b902f1b76306ae1930a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ba9dc3ac94a3db07bb37eac96ffdbb72911ad562
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641675"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503570"
 ---
 # <a name="data-flow"></a>資料流程
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供三種不同類型的資料流程元件：來源、轉換與目的地。 來源從關聯式資料庫、檔案和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的資料表和檢視等資料存放區擷取資料。 轉換會修改、摘要並清除資料。 目的地則將資料載入資料存放區或建立記憶體中資料集。  

@@ -15,18 +15,18 @@ ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 219ece6442b19e1652da164a7620a3a0b5e1e8a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a40eefb6b60b21387c90b84e7bffdc423b7d798
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745046"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503959"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>摺疊資料列群組 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 可以建立一種查詢結果，其中各結果資料列對應至原始資料的完整資料列群組。 摺疊資料列時，請注意下列事項：  
   
--   **您可以排除重複的資料列** ：有些查詢建立的結果集中會產生許多完全相同的資料列。 例如，您可以建立結果集，其中每個資料列都包含城市以及某個城市 (含有一個作者) 所在的州名 － 但如果某個城市含有數個作者，則將產生數個相同的資料列。 產生的 SQL 將如下所示：  
+-   **您可以排除重複的資料列** ：有些查詢建立的結果集中會產生許多完全相同的資料列。 例如，您可以建立結果集，其中每個資料列都包含城市以及某個城市 (含有一個作者) 所在的州名；但如果某個城市含有數個作者，則將產生數個相同的資料列。 產生的 SQL 將如下所示：  
   
     ```  
     SELECT city, state  

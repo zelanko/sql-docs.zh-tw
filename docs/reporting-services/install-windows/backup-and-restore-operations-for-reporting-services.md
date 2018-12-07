@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.topic: conceptual
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
 ms.date: 05/24/2018
-ms.openlocfilehash: 42ca036f069d5c7014e14a4c3ccb0d1e9d298a2b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 557dd30f14bf990cdfce2dd5e2de153bec3a72c4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030119"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390281"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 的備份與還原作業
 
@@ -48,7 +48,7 @@ ms.locfileid: "50030119"
 >  如果您的報表伺服器處於 SharePoint 模式，則要連線其他資料庫，包括 SharePoint 設定資料庫和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 警示資料庫。 在 SharePoint 模式下，系統會針對每個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式建立三個資料庫。 **reportserver**、 **reportservertempdb**和 **dataalerting** 資料庫。 如需詳細資訊，請參閱[備份與還原 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)  
   
 ## <a name="backing-up-the-encryption-keys"></a>備份加密金鑰  
- 當您第一次設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝時，應該要備份加密金鑰。 每次變更服務帳戶的身分或重新命名電腦時，您也應該同時備份加密金鑰。 如需詳細資訊，請參閱 [備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。 若是 SharePoint 模式的報表伺服器，請參閱 [管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的＜金鑰管理＞一節。  
+ 當您第一次設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝時，應該要備份加密金鑰。 每次變更服務帳戶的身分或重新命名電腦時，您也應該同時備份加密金鑰。 如需詳細資訊，請參閱 [備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。 針對 SharePoint 模式的報表伺服器，請參閱[管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)的＜金鑰管理＞一節。  
   
 ## <a name="backing-up-the-configuration-files"></a>備份組態檔  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用組態檔來儲存應用程式設定。 您應該在第一次設定伺服器時，以及部署任何自訂延伸模組之後，備份設定檔。 要備份的檔案包括：  

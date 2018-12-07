@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d98dfd2c96322a2ba1b042a0edfcff8f7e6fb518
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a87156a7987b3386f452944c49076d47fdaffa59
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696676"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401323"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "51696676"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```    
 CREATE EVENT SESSION event_session_name  
 ON SERVER  
 {  
@@ -230,7 +229,7 @@ ON SERVER
  指定當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時，是否要自動啟動這個事件工作階段。  
   
 > [!NOTE]  
->  如果 STARTUP_STATE = ON，則只有當 SQL Server 停止並重新啟動之後，事件工作階段才會啟動。  
+> 如果 `STARTUP_STATE = ON`，則只有當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 停止並重新啟動之後，事件工作階段才會啟動。  
   
  ON  
  事件工作階段會在啟動時啟動。  
@@ -239,15 +238,15 @@ ON SERVER
  事件工作階段不會在啟動時啟動。  
   
 ## <a name="remarks"></a>Remarks  
- 邏輯運算子的優先順序是 NOT (最高)，後面依序接著 AND 和 OR。  
+邏輯運算子的優先順序是 `NOT` (最高)，後面依序接著 `AND` 和 `OR`。  
   
 ## <a name="permissions"></a>[權限]  
- 需要 ALTER ANY EVENT SESSION 權限。  
+需要 `ALTER ANY EVENT SESSION` 權限。  
   
 ## <a name="examples"></a>範例  
  以下範例將示範如何建立名為 `test_session` 的事件工作階段。 這個範例會加入兩個事件，並使用 Windows 事件追蹤目標。  
   
-```  
+```sql  
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='test_session')  
     DROP EVENT session test_session ON SERVER;  
 GO  

@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1841f9ac3408726bd54817c2f59291261a5fc641
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e3017d2f90f1b9ef7988b110e6767864924217c
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788476"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586281"
 ---
 # <a name="update-statistics"></a>更新統計資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47788476"
   
 -   **若要使用下列項目更新統計資料物件：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47788476"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  如果使用 UPDATE STATISTICS 或透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]進行變更，需要資料表或檢視表的 ALTER 權限。 如果使用 `sp_updatestats`，需要 **系統管理員** 固定伺服器角色的成員資格或資料庫 (**dbo**) 的擁有權。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -60,11 +60,11 @@ ms.locfileid: "47788476"
   
 5.  以滑鼠右鍵按一下要更新的統計資料物件，然後選取 [屬性]。  
   
-6.  在 [統計資料屬性 - _statistics\_name_] 對話方塊中，選取 [更新這些資料行的統計資料] 核取方塊，然後按一下 [確定]。  
+6.  在 [統計資料屬性 -_statistics\_name_] 對話方塊中，選取 [更新這些資料行的統計資料] 核取方塊，然後按一下 [確定]。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
-#### <a name="to-update-a-specific-statistics-object"></a>若要更新特定的統計資料物件  
+### <a name="to-update-a-specific-statistics-object"></a>若要更新特定的統計資料物件  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "47788476"
     GO  
     ```  
   
-#### <a name="to-update-all-statistics-in-a-table"></a>若要更新資料表中的所有統計資料  
+### <a name="to-update-all-statistics-in-a-table"></a>若要更新資料表中的所有統計資料  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -96,9 +96,9 @@ ms.locfileid: "47788476"
     GO  
     ```  
   
- 如需詳細資訊，請參閱 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)。  
+如需詳細資訊，請參閱 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)。  
   
-#### <a name="to-update-all-statistics-in-a-database"></a>若要更新資料庫中的所有統計資料  
+### <a name="to-update-all-statistics-in-a-database"></a>若要更新資料庫中的所有統計資料  
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
@@ -112,7 +112,9 @@ ms.locfileid: "47788476"
     -- The following example updates the statistics for all tables in the database.   
     EXEC sp_updatestats;  
     ```  
-  
- 如需詳細資訊，請參閱 [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)。  
-  
-  
+
+如需詳細資訊，請參閱 [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)。   
+
+### <a name="automatic-index-and-statistics-management"></a>自動索引與統計資料管理
+利用[自適性索引重組](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)等解決方案，為一或多個資料庫自動管理索引重組以及統計資料更新。 這項程序會根據索引分散程度與其他參數，自動選擇要進行重建或是重新組織索引，並以線性閾值更新統計資料。
+

@@ -16,12 +16,12 @@ ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: eed8e2ea431b38ff11c61d86c869cbc3f3de82cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2213a6f87aa11db9201dc052efa5a5513e185a7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618518"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539159"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>建立伺服器稽核和資料庫稽核規格
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47618518"
   
 -   **若要使用下列項目建立伺服器稽核和資料庫稽核規格：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47618518"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
   
 -   具有 ALTER ANY DATABASE AUDIT 權限的使用者可以建立資料庫稽核規格，並將其繫結至任何稽核。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47618518"
   
 1.  在 [物件總管] 中，展開 **[安全性]** 資料夾。  
   
-2.  以滑鼠右鍵按一下 [稽核] 資料夾，然後選取 [新增稽核…]。 如需詳細資訊，請參閱 [建立伺服器稽核與伺服器稽核規格](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)。  
+2.  以滑鼠右鍵按一下 [稽核] 資料夾，然後選取 [新增稽核]。如需詳細資訊，請參閱 [建立伺服器稽核與伺服器稽核規格](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)。  
   
 3.  當您完成選取選項之後，按一下 **[確定]**。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "47618518"
   
 2.  展開 **[安全性]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [資料庫稽核規格] 資料夾，然後選取 [新增資料庫稽核規格…]。  
+3.  以滑鼠右鍵按一下 [資料庫稽核規格] 資料夾，然後選取 [新增資料庫稽核規格]。  
   
      **[建立資料庫稽核規格]** 對話方塊有下列選項。  
   

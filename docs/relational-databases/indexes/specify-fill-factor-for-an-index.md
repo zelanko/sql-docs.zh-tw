@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c2ff2cff49acefb568a0d052b00e4ec8d7e838f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a80d893cd942e7d8c1e9bb12b6fa21a3247d7e52
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630407"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401623"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>指定索引的填滿因素
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47630407"
   
 -   **使用下列方法指定索引的填滿因數：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47630407"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  

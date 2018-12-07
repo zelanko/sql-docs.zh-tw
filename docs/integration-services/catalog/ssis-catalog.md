@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e63424772029acf5862d19362e9a7e9bd0e082c1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 41ed2ef9899e4c0df7cb6aa3aa8f00ac62d6ffb2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641405"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535543"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
   **SSISDB** 目錄是處理您已部署至 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 伺服器之 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 專案的中心點。 例如，您可以設定專案和封裝參數、設定環境以指定封裝的執行值、執行和疑難排解封裝，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 伺服器作業。  
@@ -394,7 +394,7 @@ ms.locfileid: "51641405"
 
   [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 包括 SSISDB 資料庫。 您可以查詢 SSISDB 資料庫中的檢視，以檢查物件、設定以及儲存在 [SSISDB] 目錄中的作業資料。 本主題提供備份與還原資料庫的指示。  
   
- [SSISDB] 目錄會儲存您已經部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝。 如需目錄的詳細資訊，請參閱 [SSIS 目錄](../../integration-services/catalog/ssis-catalog.md)。  
+ **SSISDB** 目錄會儲存您已經部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝。 如需目錄的詳細資訊，請參閱 [SSIS 目錄](../../integration-services/catalog/ssis-catalog.md)。  
   
 ###  <a name="backup"></a> 若要備份 SSIS 資料庫  
   
@@ -627,7 +627,7 @@ ms.locfileid: "51641405"
 > [!WARNING]  
 >  在您啟用適用於 AlwaysOn 的 SSIS 支援之前，不支援自動容錯移轉 SSISDB 資料庫。  
   
- 表格會顯示剛從 Always On 可用性群組新增的次要複本。 按一下 **[連接]** 按鈕，然後輸入驗證認證以連接到複本。 使用者帳戶必須是每個複本上的系統管理員群組成員，才能啟用 SSIS 的 Always On 支援。 當您成功連接到每個複本之後，按一下 [確定]  以啟用適用於 AlwaysOn 的 SSIS 支援。  
+ 表格會顯示剛從 Always On 可用性群組新增的次要複本。 針對清單中的每個複本按一下 [連接...] 按鈕，然後輸入驗證認證以連接到複本。 使用者帳戶必須是每個複本上的系統管理員群組成員，才能啟用 SSIS 的 Always On 支援。 當您成功連接到每個複本之後，按一下 [確定]  以啟用適用於 AlwaysOn 的 SSIS 支援。  
  
 在您完成其他必要條件之後，如果操作功能表上的 [啟用 Always On 支援] 選項顯示為停用，請嘗試下列方法：
 1.  按一下 [重新整理] 選項，以重新整理操作功能表。

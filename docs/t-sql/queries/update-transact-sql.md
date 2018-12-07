@@ -39,12 +39,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5118700c017167664b0e33867f43ec6dbd46813d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9ab6a40f49ce64e4e157c4eacccb59b6135ed4ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704056"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520850"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -482,7 +482,7 @@ ID     Value
 |[更新使用者定義型別](#UDTs)|使用者定義型別|  
 |[使用提示來覆寫查詢最佳化工具的預設行為](#TableHints)|資料表提示 • 查詢提示|  
 |[擷取 UPDATE 陳述式的結果](#CaptureResults)|OUTPUT 子句|  
-|[在其他陳述式中使用 UPDATE](#Other)|預存程序 • TRY…CATCH|  
+|[在其他陳述式中使用 UPDATE](#Other)|預存程序 • TRY...CATCH|  
   
 ###  <a name="BasicSyntax"></a> 基本語法  
  本節的範例會使用所需的最少語法來示範 UPDATE 陳述式的基本功能。  
@@ -1033,8 +1033,8 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-#### <a name="ac-using-update-in-a-trycatch-block"></a>AC. 在 TRY…CATCH 區塊中使用 UPDATE  
- 下列範例在 TRY…CATCH 區塊中使用 UPDATE 陳述式，處理更新作業期間可能會發生的執行錯誤。  
+#### <a name="ac-using-update-in-a-trycatch-block"></a>AC. 在 TRY...CATCH 區塊中使用 UPDATE  
+ 下列範例在 TRY...CATCH 區塊中使用 UPDATE 陳述式，處理更新作業期間可能會發生的執行錯誤。  
   
 ```sql  
 USE AdventureWorks2012;  

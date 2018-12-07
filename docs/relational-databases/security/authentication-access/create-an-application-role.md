@@ -16,12 +16,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d9b5b5de9948c72aa3654c0236516886f4c4a72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70f74f1b098c53c864fb2bf20889b43541d70846
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633676"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539735"
 ---
 # <a name="create-an-application-role"></a>建立應用程式角色
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47633676"
   
 -   **若要使用下列項目建立應用程式角色：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "47633676"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要資料庫的 ALTER ANY APPLICATION ROLE 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -61,7 +61,7 @@ ms.locfileid: "47633676"
   
 4.  以滑鼠右鍵按一下 [應用程式角色] 資料夾，然後選取 [新增應用程式角色]。  
   
-5.  在 **[應用程式角色 - 新增]** 對話方塊，於 **[一般]** 頁面上的 **[角色名稱]** 方塊中輸入新應用程式角色的名稱。  
+5.  在 [應用程式角色 - 新增] 對話方塊，於 [一般] 頁面上的 [角色名稱] 方塊中輸入新應用程式角色的名稱。  
   
 6.  在 **[預設結構描述]** 方塊中，透過輸入物件名稱，指定擁有此角色建立的物件之結構描述。 或者，按一下省略符號 **(...)**，開啟 [尋找結構描述] 對話方塊。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47633676"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他選項  
- **[應用程式角色 - 新增]** 對話方塊也在其他兩個頁面上提供選項： **[安全性實體]** 和 **[擴充屬性]**。  
+ [應用程式角色 - 新增] 對話方塊也在其他兩個頁面上提供選項：[安全性實體] 和 [擴充屬性]。  
   
 -   **[安全性實體]** 頁面列出所有可能的安全性實體以及可授與登入的安全性實體權限。  
   

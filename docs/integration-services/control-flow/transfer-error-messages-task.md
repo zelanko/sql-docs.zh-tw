@@ -17,12 +17,12 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d377673177bd5aa2a5ac77b48e93153bdf420f41
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c189be4aa134ee15314571008ed29a3f53c467d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640855"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518770"
 ---
 # <a name="transfer-error-messages-task"></a>傳送錯誤訊息工作
   [傳送錯誤訊息] 工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間傳送一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者自訂的錯誤訊息。 使用者定義的訊息是識別碼等於或大於 50000 的訊息。 識別碼小於 50000 的訊息是系統錯誤訊息，這種訊息無法使用「傳送錯誤訊息」工作進行傳送。  
@@ -116,13 +116,13 @@ ms.locfileid: "51640855"
 |**False**|只複製指定的使用者自訂訊息。|  
   
  **ErrorMessagesList**  
- 按一下瀏覽按鈕 [(…)] 來選取要複製的錯誤訊息。  
+ 按一下瀏覽按鈕 **(...)** 來選取要複製的錯誤訊息。  
   
 > [!NOTE]  
 >  您必須先指定 [SourceConnection]，才能選取要複製的錯誤訊息。  
   
  **ErrorMessageLanguagesList**  
- 按一下瀏覽按鈕 [(…)]，來選取將使用者定義之錯誤訊息複製到目的地伺服器所用的語言。 在您可以傳送其他語言版本的訊息至目的地伺服器之前，us_english (字碼頁 1033) 版的訊息必須存在於該伺服器上。  
+ 按一下瀏覽按鈕 **(...)**，來選取將使用者定義之錯誤訊息複製到目的地伺服器所用的語言。 在您可以傳送其他語言版本的訊息至目的地伺服器之前，us_english (字碼頁 1033) 版的訊息必須存在於該伺服器上。  
   
 > [!NOTE]  
 >  您必須先指定 [SourceConnection]，才能選取要複製的錯誤訊息。  

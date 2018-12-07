@@ -13,12 +13,12 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 77c42bdf35fce0bb2106e99818e14d5b42992647
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: d20532a4fb3aad70ca2ff972d6236680db221768
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217196"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525639"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>作業活動監視器 (篩選設定)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "51217196"
  這個未命名的方塊，在準則被選取時提供準則的簡短描述。  
   
  **套用篩選**  
- 若要套用篩選，請按一下 [套用****篩選]，然後按一下 [確定]。 若要在 [篩選****設定] 對話方塊中保留篩選設定而不套用它們，請取消選取 [套用****篩選]，然後按一下 [確定]，以顯示所有資料列。  
+ 若要套用篩選，請按一下 [套用篩選]，然後按一下 [確定]。 若要在 [篩選設定] 對話方塊中保留篩選設定而不套用它們，請取消選取 [套用篩選]，然後按一下 [確定]，以顯示所有資料列。  
   
  **Clear**  
  將篩選設定恢復成預設值。  

@@ -17,12 +17,12 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a4d7fa27844de363c2a703a95e20df11277309fa
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b3886ac725556683a3b20d8c3cd513b2fe5949f1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606908"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617715"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +46,14 @@ Microsoft SQL Server 2016 Express **LocalDB** 是 [SQL Server Express](../../sql
  
 在安裝期間，您可以在 [功能選擇/共用功能] 頁面上選取 [LocalDB]。 每個主要 **版本只能有** LocalDB [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 二進位檔案的一個安裝。 多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理序可以啟動，而且全部都會使用相同的二進位檔案。 以 **LocalDB** 形式啟動的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體，其限制與 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 相同。  
 
- [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** 的執行個體是使用 **SqlLocalDB.exe** 公用程式來管理。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** 應該用來取代已被取代的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 使用者執行個體功能。 
+  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** 的執行個體是使用 **SqlLocalDB.exe** 公用程式來管理。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** 應該用來取代已被取代的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 使用者執行個體功能。 
   
 ## <a name="description"></a>Description  
  **LocalDB** 安裝程式使用 SqlLocalDB.msi 程式在電腦上安裝必要的檔案。 在安裝後， **LocalDB** 就是可建立及開啟 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 資料庫的系統資料庫檔案儲存在使用者本機上通常處於隱藏狀態的 AppData 路徑。 例如 **C:\Users\\<使用者\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**。 使用者資料庫檔案儲存在使用者指定的位置，通常是在 **C:\Users\\<使用者\>\Documents\\** 資料夾中的某個位置。  
   
- 如需在應用程式中併入 **LocalDB** 的詳細資訊，請參閱 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 文件：[Local Data Overview](https://msdn.microsoft.com/library/ms233817\(VS.110\).aspx) (本機資料概觀)、[Walkthrough: Creating a SQL Server LocalDB Database](https://msdn.microsoft.com/library/ms233763\(VS.110\).aspx) (逐步解說：建立 SQL Server LocalDB 資料庫) 與 [Walkthrough: Connecting to Data in a SQL Server LocalDB Database (Windows Forms)](https://msdn.microsoft.com/library/ms171890\(VS.110\).aspx) (逐步解說：連接至 SQL Server LocalDB 資料庫中的資料 (Windows Form))。  
+ 如需在應用程式中併入 **LocalDB** 的詳細資訊，請參閱 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 文件：[Local Data Overview](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110)) (本機資料概觀)、[Walkthrough: Creating a SQL Server LocalDB Database](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233763(v=vs.110)) (逐步解說：建立 SQL Server LocalDB 資料庫) 與 [Walkthrough: Connecting to Data in a SQL Server LocalDB Database (Windows Forms)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms171890(v=vs.110)) (逐步解說：連接至 SQL Server LocalDB 資料庫中的資料 (Windows Form))。  
   
- 如需有關 **LocalDB** API 的詳細資訊，請參閱＜ [SQL Server Express LocalDB 執行個體 API 參考](https://msdn.microsoft.com/library/hh234692\(SQL.110\).aspx) ＞和＜ [LocalDBStartInstance 函數](https://msdn.microsoft.com/library/hh217143\(SQL.110\).aspx)＞。  
+ 如需有關 **LocalDB** API 的詳細資訊，請參閱＜[SQL Server Express LocalDB 參考](../../relational-databases/sql-server-express-localdb-reference.md)＞。  
   
  SqlLocalDb 公用程式可以建立 **LocalDB**的新執行個體，啟動及停止 **LocalDB**執行個體，並包含協助您管理 **LocalDB**的選項。  如需 SqlLocalDb 公用程式的詳細資訊，請參閱 [SqlLocalDB 公用程式](../../tools/sqllocaldb-utility.md)。  
   
@@ -128,7 +128,7 @@ REM Gather information about the instance of LocalDB
  [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]**LocalDB** 執行個體是使用者建立、專供其使用的執行個體。 電腦上的任何使用者都可以使用 **LocalDB**執行個體建立資料庫、在其使用者設定檔之下儲存檔案，並在其認證之下執行此處理序。 根據預設，對 **LocalDB** 執行個體的存取只限其擁有者。 **LocalDB** 中所容納的資料受到資料庫檔案之檔案系統存取的保護。 如果使用者資料庫檔案儲存在共用位置，擁有該位置之檔案系統存取權的任何人都可以使用其擁有的 **LocalDB** 執行個體開啟資料庫。 如果資料庫檔案位於受保護的位置，例如使用者資料夾，則只有該使用者和擁有該資料夾存取權的任何系統管理員才可以開啟資料庫。 **LocalDB** 檔案一次只能由一個 **LocalDB** 執行個體開啟。  
   
 > [!NOTE]  
->  **LocalDB** 永遠都會在使用者安全性內容之下執行，也就是說， **LocalDB** 絕對不會使用本機系統管理員群組的認證執行。 這表示， **LocalDB** 執行個體使用的所有資料庫檔案都必須可使用擁有使用者的 Windows 帳戶加以存取，而不必考量本機系統管理員群組的成員資格。  
+>  **LocalDB** 永遠都會在使用者安全性內容之下執行，也就是說，**LocalDB** 絕對不會使用本機系統管理員群組的認證執行。 這表示，**LocalDB** 執行個體使用的所有資料庫檔案都必須可使用擁有使用者的 Windows 帳戶加以存取，而不必考量本機系統管理員群組的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  
 

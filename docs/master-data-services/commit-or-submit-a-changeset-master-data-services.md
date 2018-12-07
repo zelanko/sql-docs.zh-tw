@@ -12,12 +12,12 @@ ms.assetid: d323bbac-c8d4-4d2f-a7d2-a597e8b53e2d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d225720f7ee2f975df742400117852f3bb6e60d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6e6be6a7ac89e2d7eee61c1c44cf5392532ffc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606016"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395321"
 ---
 # <a name="commit-or-submit-a-changeset-master-data-services"></a>認可或提交變更集 (Master Data Services)
 

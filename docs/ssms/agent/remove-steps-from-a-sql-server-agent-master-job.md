@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e599d22ea6b3fd3d85fb71eb2e7824104981a308
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d0c89058bf05958e3a1d7050a3fd1abd0cacebfe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700786"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509915"
 ---
 # <a name="remove-steps-from-a-sql-server-agent-master-job"></a>Remove Steps from a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,8 +63,8 @@ ms.locfileid: "51700786"
   
 4.  以滑鼠右鍵按一下您想要刪除步驟的作業，然後選取 [屬性]。  
   
-5.  在 [作業屬性 - <作業名稱>] 對話方塊的 [選取頁面] 底下，選取 [步驟]。  
-  
+5.  在 [作業屬性 -_作業名稱_] 對話方塊的 [選取頁面] 下，選取 [步驟]。  
+
 6.  在 **[作業步驟清單]** 底下，選取您想要刪除的作業步驟，然後按一下 **[刪除]**。  
   
 7.  完成後，請按一下 **[確定]**。  

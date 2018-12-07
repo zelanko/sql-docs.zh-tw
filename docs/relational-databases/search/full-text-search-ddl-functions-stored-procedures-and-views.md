@@ -12,12 +12,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d624d1f12644bc21b62ad328f7f5b8662bdc550
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6fadc557aa18d65cec6df7be0773caa40f5f451
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845507"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516386"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>全文檢索搜尋 DDL、函數、預存程序與檢視
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

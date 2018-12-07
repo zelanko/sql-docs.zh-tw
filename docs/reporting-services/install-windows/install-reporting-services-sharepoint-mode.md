@@ -12,12 +12,12 @@ ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2f2de4e141a43631968124684c9c31ecc3f235f6
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 1aca33e3978b89ccf5f4423e76f0e2ba7888e6a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050960"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406515"
 ---
 # <a name="install-reporting-services-2016-in-sharepoint-mode"></a>以 SharePoint 模式安裝 Reporting Services 2016
 

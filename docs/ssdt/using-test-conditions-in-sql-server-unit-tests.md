@@ -13,12 +13,12 @@ ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 10f5d9c55f25221ae767a960393f7d7d775eff96
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 852651601ba7264c079a42c82a4bbb626d902328
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659205"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529882"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>在 SQL Server 單元測試中使用測試條件
 在 SQL Server 單元測試中，系統會執行一或多個 Transact\-SQL 測試指令碼。 您可以在 Transact\-SQL 指令碼內評估結果，也可以在測試中定義用來傳回錯誤及使測試失敗的 THROW 或 RAISERROR 或測試條件來評估結果。 測試會傳回 [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) 類別的執行個體。 這個類別的執行個體會包含一個或多個資料集、執行時間以及受指令碼影響的資料列。 所有這些資訊都會在執行指令碼期間收集。 可以使用測試條件來評估這些結果。 SQL Server Data Tools 會提供一組預先定義的測試條件。 您也可以建立及使用自訂條件；請參閱 [SQL Server 單元測試的自訂測試條件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)。  
@@ -88,7 +88,7 @@ ms.locfileid: "51659205"
   
 3.  (選擇性) 您可以將測試條件的 [(名稱)] 屬性變更為更有描述性的文字。  
   
-4.  在 [組態] 屬性中，按一下瀏覽 ([…]) 按鈕。  
+4.  在 [組態] 屬性中，按一下瀏覽 ([...]) 按鈕。  
   
     [ **TestConditionName 的組態** ] 對話方塊隨即出現。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "51659205"
   
 3.  (選擇性) 您可以將測試條件的 [(名稱)] 屬性變更為更有描述性的文字。  
   
-4.  在 [組態] 屬性中，按一下瀏覽 ([…]) 按鈕。  
+4.  在 [組態] 屬性中，按一下瀏覽 ([...]) 按鈕。  
   
     [ **TestConditionName 的組態** ] 對話方塊隨即出現。  
   

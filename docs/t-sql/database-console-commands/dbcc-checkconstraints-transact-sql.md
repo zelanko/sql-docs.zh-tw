@@ -24,12 +24,12 @@ ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 763acaea371103ac9d87bf25aa2de787cef78854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e93d0f71ab7c59a7bd0c43ea6badbc95bd8ee80
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759638"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525334"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ DBCC CHECKCONSTRAINTS 會檢查 FOREIGN KEY 和 CHECK 條件約束的完整性�
   
 **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
-如果指定 *table_name* 或 *table_id*，並已針對系統版本設定啟用，DBCC CHECKCONSTRAINTS 也會在指定的資料表上執行時態性資料一致性檢查。 未指定 *NO_INFOMSGS* 時，此命令會在輸出的獨立一行中傳回每個一致性違規。 輸出的格式將為 ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>…) AND \<時態表記錄的問題>。
+如果指定 *table_name* 或 *table_id*，並已針對系統版本設定啟用，DBCC CHECKCONSTRAINTS 也會在指定的資料表上執行時態性資料一致性檢查。 未指定 *NO_INFOMSGS* 時，此命令會在輸出的獨立一行中傳回每個一致性違規。 輸出的格式將為 ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...)AND \<時態表記錄的問題>。
   
 |檢查|檢查失敗時輸出中的其他資訊|  
 |-----------|-----------------------------------------------|  

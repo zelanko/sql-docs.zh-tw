@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5935c4eab40a44172fd71bc5f1f05344bd36ce5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c4bf49266f87dcc569ca6bca52c5a8d82119bb7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619416"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510857"
 ---
 # <a name="create-a-database-schema"></a>建立資料庫結構描述
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47619416"
   
 -   **若要使用下列項目建立結構描述：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47619416"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
   
 -   需要資料庫的 CREATE SCHEMA 權限。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "47619416"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他選項  
- **[結構描述 - 新增]** 對話方塊也在其他兩個頁面上提供選項： **[權限]** 和 **[擴充屬性]**。  
+ [結構描述 - 新增] 對話方塊也在其他兩個頁面上提供選項： [權限] 和 [擴充屬性]。  
   
 -   **[權限]** 頁面列出所有可能的安全性實體以及可授與登入的安全性實體權限。  
   

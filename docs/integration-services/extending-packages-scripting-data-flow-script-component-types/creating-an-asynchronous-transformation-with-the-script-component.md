@@ -17,12 +17,12 @@ ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c1d66177b62d1510d9d5abbb64781ec2220770a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54d63a6cae8144a83a0f7b03d52c16af411d7bf9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796786"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527037"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>使用指令碼元件建立非同步轉換
   您在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用轉換元件，以修改及分析從來源傳遞到目的地的資料。 具有同步輸出的轉換會處理通過該元件的每個輸入資料列。 具有非同步輸出的轉換可能會等候完成其處理作業，直到轉換作業收到所有輸入資料列為止，或者轉換作業可能會在收到所有輸入資料列以前先輸出某些資料列。 本主題將討論非同步轉換。 如果您的處理需要同步轉換，請參閱[使用指令碼元件建立同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)。 如需同步與非同步元件之間差異的詳細資訊，請參閱[了解同步和非同步轉換](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  
@@ -71,7 +71,7 @@ ms.locfileid: "47796786"
 ### <a name="adding-variables"></a>加入變數  
  如果有任何要在指令碼中使用其值的現有變數，則可以在 [指令碼轉換編輯器] 的 [指令碼] 頁面上，將它們新增至 ReadOnlyVariables 和 ReadWriteVariables 屬性欄位中。  
   
- 當您在屬性欄位中加入多個變數時，請用逗號分隔變數名稱。 您也可以按一下 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性欄位旁邊的省略符號 (**...**) 按鈕，然後在 [選取變數] 對話方塊中選取變數，來選取多個變數。  
+ 當您在屬性欄位中加入多個變數時，請用逗號分隔變數名稱。 您也可以按一下 [ReadOnlyVariables] 和 [ReadWriteVariables] 屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取變數，來選取多個變數。  
   
  如需如何利用指令碼元件使用變數的一般資訊，請參閱[在指令碼元件中使用變數](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   

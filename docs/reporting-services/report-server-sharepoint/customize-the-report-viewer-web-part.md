@@ -1,26 +1,26 @@
 ---
 title: 自訂報表檢視器 Web 組件 | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd5749c287f76dd018066ba6e63b3006e6f7d118
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6676e1ae64161d042fa32976bedc5c32288477ca
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021522"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411635"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>自訂報表檢視器 Web 組件
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-您可以使用報表檢視器 Web 組件來檢視在設定為 SharePoint 整合之報表伺服器上執行的報表。 可顯示的報表包括報表定義 (.rdl) 檔案和報表產生器報表。 報表會自動在新網頁中於報表檢視器 Web 組件中開啟，但如果您希望特定報表總是顯示在某現有網頁或網站上，您也可以將報表檢視器 Web 組件新增至該網頁上。
+您可以使用報表檢視器 Web 組件來檢視在設定為 SharePoint 整合之報表伺服器上執行的報表。 可顯示的報表包括報表定義 (.rdl) 檔案和報表產生器報表。 報表會自動在報表檢視器 Web 組件的新頁面中開啟。 如果您希望特定的報表能一律顯示在該頁面上，您也可以將報表檢視器 Web 組件新增至現有網頁或網站。
 
 > [!NOTE]
 > 雖然它們有相同的名稱，但是透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集安裝的報表檢視器 Web 組件，與包含在 RSWebParts.cab 檔案中的報表檢視器 Web 組件不同。 本主題中的指示是特別針對透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集安裝的報表檢視器 Web 組件。
@@ -41,7 +41,7 @@ ms.locfileid: "50021522"
   
 ### <a name="change-default-properties"></a>變更預設屬性
 
- 報表檢視器 Web 組件有一些預設屬性，非常適合用於視需要從文件庫或資料夾開啟報表。 根據預設，所有可用的控制項都會顯示在工具列上，而且高度和寬度都設定為使用網頁上可用的所有空間。 如果您要修改預設屬性，可透過 [網站設定] 自訂 Web 組件。  
+ 報表檢視器 Web 組件有一些預設屬性，非常適合用於視需要從文件庫或資料夾開啟報表。 根據預設，工具列會顯示所有可用的控制項。 高度和寬度設定為使用網頁上所有的可用空間。 如果您要修改預設屬性，可透過 [網站設定] 自訂 Web 組件。  
   
 1.  在 **[網站動作]** 功能表上，按一下 **[網站設定]**。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "50021522"
   
 ### <a name="customize-an-embedded-report-viewer-in-a-web-page"></a>在網頁中自訂內嵌的報表檢視器
 
- 您可以設定屬性，使報表檢視器適合網頁的大小。 報表檢視器可以與包含它的頁面使用相同的樣式和色彩。 您可以隱藏工具列、文件引導模式和參數區域的全部或一部分，使配置空間內的報表檢視區域放到最大。 報表所使用的樣式一定是在建立時為它所定義的樣式，您無法在報表發行至 SharePoint 文件庫後自訂其外觀。  
+ 您可以設定屬性，使報表檢視器適合網頁的大小。 報表檢視器可以與包含它的頁面使用相同的樣式和色彩。 您可以隱藏工具列、文件引導模式和參數區域的全部或一部分，使配置空間內的報表檢視區域放到最大。 報表一律使用您建立報表時所定義的樣式。 當您將報表發行至 SharePoint 文件庫之後，即無法自訂報表外觀。  
   
  如果要將報表檢視器 Web 組件內嵌在網頁中，就應該將 [報表 URL] 屬性設定為特定報表。 否則，報表檢視器將會顯示連結至報表的指示。 您無法自訂或移除這些指示。  
   

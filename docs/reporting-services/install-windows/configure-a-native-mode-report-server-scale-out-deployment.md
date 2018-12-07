@@ -1,6 +1,6 @@
 ---
 title: 設定原生模式報表伺服器向外延展部署 | Microsoft Docs
-ms.date: 05/24/2018
+ms.date: 11/29/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
@@ -11,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b026e4e361ff6664dfdc78d0215ec3ed723fe93
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a0e990b52a9433f959288dcf2e3518f85b8a6f67
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021642"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710639"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>設定原生模式報表伺服器向外延展部署
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-pbirs](../../includes/ssrs-appliesto-pbirs.md)]
 
 Reporting Services 原生模式支援向外延展部署模型，它可讓您在執行多個報表伺服器執行個體時共用單一報表伺服器資料庫。 向外延展部署是用來提高報表伺服器的延展性，以便處理更多的並行使用者及更大量的報表執行負載。 它也可以給特定伺服器專用，以處理互動式或已排程的報表。
 
 若為 Power BI 報表伺服器，您需要在負載平衡器上針對所有向外延展環境設定用戶端親和性 (有時稱為黏性工作階段)，以確保適當的效能。  
   
-若為 SQL Server 2016 Reporting Services，SharePoint 模式報表伺服器會利用 SharePoint 產品基礎結構進行向外延展。SharePoint 模式向外延展是透過將其他 SharePoint 模式報表伺服器加入至 SharePoint 伺服器陣列來執行。 如需 SharePoint 模式中向外延展的資訊，請參閱[將其他報表伺服器新增至伺服器陣列 &#40;SSRS 向外延展&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
+若為 SQL Server 2016 Reporting Services 和更早版本，SharePoint 模式報表伺服器會利用 SharePoint 產品基礎結構進行向外延展。SharePoint 模式向外延展是透過將其他 SharePoint 模式報表伺服器加入至 SharePoint 伺服器陣列來執行。 如需 SharePoint 模式中向外延展的資訊，請參閱[將其他報表伺服器新增至伺服器陣列 &#40;SSRS 向外延展&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
  
   *「向外延展部署」* (Scale-out Deployment) 的使用案例如下：  
   
@@ -46,7 +46,7 @@ Reporting Services 原生模式支援向外延展部署模型，它可讓您在�
   
  **若要規劃、安裝及設定向外延展部署，請遵循以下步驟：**  
   
--   如需如何安裝報表伺服器執行個體的指示，請檢閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[從安裝精靈安裝 SQL Server 2016 &#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
+-   如需如何安裝報表伺服器執行個體的指示，請檢閱[從安裝精靈 &#40;安裝程式&#41; 安裝 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
   
 -   如果您打算在網路負載平衡 (NLB) 叢集上主控向外延展部署，您應該先設定 NLB 叢集，然後再設定向外延展部署。 如需詳細資訊，請參閱 [在網路負載平衡叢集上設定報表伺服器](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)。  
   
@@ -133,7 +133,7 @@ An error occurred within the report server database.  This may be due to a conne
 3.  在 [向外延展部署] 頁面上，選取正等候加入此部署的報表伺服器執行個體，然後選取 [加入伺服器]。  
   
     > [!NOTE]  
-    >  **問題** ：嘗試將 Reporting Services 報表伺服器執行個體加入向外延展部署時，您可能會遇到像是「拒絕存取」之類的錯誤訊息。  
+    >  **問題：** 嘗試將 Reporting Services 報表伺服器執行個體加入向外延展部署時，您可能會遇到像是「拒絕存取」之類的錯誤訊息。  
     >   
     >  **因應措施** ：從第一個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體備份 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密金鑰，然後將此金鑰還原到第二部 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器。 接著嘗試將第二部伺服器加入 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 向外延展部署。  
   

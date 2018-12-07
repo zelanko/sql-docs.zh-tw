@@ -16,12 +16,12 @@ ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6dc31c1bdfc9dfb8c48630ae14958cfed64ab0f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e1b6f54763bd4c454dfebb61bf8e8ef3d0c7b63
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739516"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511914"
 ---
 # <a name="database-engine-error-severities"></a>Database Engine 錯誤嚴重性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,17 +57,17 @@ ms.locfileid: "47739516"
   
  RAISERROR 可以用來產生使用者定義的錯誤訊息，其嚴重性為 1 到 25。 RAISERROR 可以參考儲存在 **sys.messages** 目錄檢視的使用者定義錯誤訊息，或是動態建立訊息。 當在產生錯誤時使用 **sys.messages** 中的使用者自訂錯誤訊息，RAISERROR 指定的嚴重性會覆寫 **sys.messages** 所指定的嚴重性。 如需詳細資訊，請參閱 [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)。  
   
-## <a name="error-severity-and-trycatch"></a>錯誤嚴重性和 TRY…CATCH  
- TRY…CATCH 建構會捕捉嚴重性大於 10 而並未終止資料庫連接的所有執行錯誤。  
+## <a name="error-severity-and-trycatch"></a>錯誤嚴重性和 TRY...CATCH  
+ TRY...CATCH 建構會捕捉嚴重性大於 10 而並未終止資料庫連接的所有執行錯誤。  
   
- 嚴重性 0-10 的錯誤是參考訊息，不會使執行動作跳出 TRY…CATCH 建構的 CATCH 區塊。  
+ 嚴重性 0-10 的錯誤是資訊訊息，不會使執行動作跳出 TRY...CATCH 建構的 CATCH 區塊。  
   
  CATCH 區塊不會處理嚴重性通常是 20-25 的終止資料庫連接的錯誤，因為在連接終止時，會中止執行動作。  
   
  如需詳細資訊，請參閱 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)所發生的問題類型。  
   
 ## <a name="retrieving-error-severity"></a>擷取錯誤嚴重性  
- 您可以利用 ERROR_SEVERITY 系統函數來擷取造成執行 TRY…CATCH 建構的 CATCH 區塊之錯誤的嚴重性。 如果是在 CATCH 區塊範圍之外呼叫，ERROR_SEVERITY 會傳回 NULL。 如需詳細資訊，請參閱 [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)。  
+ 您可以利用 ERROR_SEVERITY 系統函式來擷取造成執行 TRY...CATCH 建構的 CATCH 區塊之錯誤的嚴重性。 如果是在 CATCH 區塊範圍之外呼叫，ERROR_SEVERITY 會傳回 NULL。 如需詳細資訊，請參閱 [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [了解 Database Engine 錯誤](../../relational-databases/errors-events/understanding-database-engine-errors.md)   

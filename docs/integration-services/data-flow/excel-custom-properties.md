@@ -11,12 +11,12 @@ ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5217d0b8e3bd9e786e8afa18b2561f5e154ca938
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0b000870562295381c9c61d54327da4ae7059a0d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639315"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542976"
 ---
 # <a name="excel-custom-properties"></a>Excel 自訂屬性
   **來源自訂屬性**  

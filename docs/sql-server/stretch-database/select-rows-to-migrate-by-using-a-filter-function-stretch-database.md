@@ -14,12 +14,12 @@ ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 03c2b23d2a4d320c7a96f04788bb2354aacabad5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65ce518617b3e7728e503504bfea838fee4f1beb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698606"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400891"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>使用篩選函數選取要移轉的資料列 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -139,7 +139,7 @@ RETURN  SELECT 1 AS is_eligible
 ### <a name="constant-expressions"></a>常數運算式  
  您在篩選函數中使用的常數可以是任何確定性的運算式，其可在定義函數時接受評估。 常數運算式可包含下列項目。  
   
--   常值。 例如， `N’abc’, 123`。  
+-   常值。 例如， `N'abc', 123`。  
   
 -   代數運算式。 例如， `123 + 456`。  
   
@@ -509,7 +509,7 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
 -   舊函數中的所有運算子都必須存在於新的函數中。  
   
--   新的函數不能包含不存在於舊函數中的運算子。  
+-   新函式不能包含不存在於舊函式中的運算子。  
   
 -   無法變更運算子引數的順序。  
   

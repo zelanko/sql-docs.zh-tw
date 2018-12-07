@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dqproject.opendqproject.f1
@@ -19,12 +18,12 @@ ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cc3dd7357788f1a4aa305161f5c4d837e5f9a64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ead34cab28f4988f649c6bc9dcfec5d282a08f1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773192"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617818"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>開啟、解除鎖定、重新命名和刪除資料品質專案
 
@@ -49,7 +48,7 @@ ms.locfileid: "47773192"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_kb_operator 角色，才能管理資料品質專案。  
   
 ##  <a name="Open"></a> 開啟資料品質專案  
@@ -64,9 +63,9 @@ ms.locfileid: "47773192"
   
 4.  隨即以上次活動關閉時的相同狀態來開啟資料品質專案。 資料品質專案具有以下狀態：  
   
-    -   如果是 **[清理]** 活動，資料品質專案可以擁有以下狀態： **[清理 - 對應]**、 **[清理 - 清理]**、 **[清理 - 管理和檢視結果]** 和 **[清理 - 匯出]**。  
+    -   如果是 [清理] 活動，資料品質專案可以擁有以下狀態：[清理 - 對應]、[清理 - 清理]、[清理 - 管理和檢視結果]和 [清理 - 匯出]。  
   
-    -   如果是 **[比對]** 活動，資料品質專案可以擁有以下狀態： **[比對 - 對應]**、 **[比對 - 比對]**、 **[比對 - 生存]** 和 **[比對 - 匯出]**。  
+    -   如果是 [比對] 活動，資料品質專案可以擁有以下狀態：[比對 - 對應]、[比對 - 比對]、[比對 - 生存] 和 [比對 - 匯出]。  
   
 ##  <a name="Unlock"></a> 解除鎖定資料品質專案  
  當您建立資料品質專案時，它處於已鎖定狀態，以防止其他使用者使用或修改。 如果您希望其他使用者使用您的資料品質專案，在您完成工作之後必須解除鎖定資料品質專案。 鎖定的專案會顯示鎖定符號。  

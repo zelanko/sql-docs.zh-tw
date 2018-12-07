@@ -5,19 +5,18 @@ ms.date: 01/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ac951cc6dd7ffc9225e1c97f0f698a0cecd5478
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de96b2465dd1829e3104af3af7e506204969963b
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738456"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617110"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
 
@@ -61,7 +60,7 @@ ms.locfileid: "47738456"
   
  **資料比對**  
   
- 比對處理序可讓資料管理人比較資料，以便透過刪除重複處理序校正相似但稍微不同的資料。 DQS 會根據知識庫中包含的比對規則執行刪除重複作業。資料管理人會在資料品質專案內部指定比對處理序的參數。 如需詳細資訊，請參閱 [資料比對](../data-quality-services/data-matching.md)。  
+ 比對處理序可讓資料管理人比較資料，以便透過刪除重複處理序校正相似但稍微不同的資料。 DQS 會根據知識庫中包含的比對規則執行刪除重複作業。資料管理人會在資料品質專案內部指定比對處理序的參數。 如需詳細資訊，請參閱 [Data Matching](../data-quality-services/data-matching.md)。  
   
  **分析與通知**  
   

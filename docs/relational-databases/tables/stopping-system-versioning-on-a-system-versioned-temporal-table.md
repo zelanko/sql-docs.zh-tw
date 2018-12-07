@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 028753b3af98748bd99c9b4b7adfa0801c1751e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37fe6d7b3dfe92e2cdf53e7a7b26ab363a567510
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595248"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409158"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>停止系統版本設定時態表上的系統版本設定功能
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

@@ -14,12 +14,12 @@ ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8413b1386d60ded8d9257e3a58a7e682355824f6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2a69f590c6ee1cdc95fc13b3a07fa17fb04feeab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640205"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528907"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>開發 Integration Services 的自訂物件
   當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 隨附的控制流程與資料流程物件無法完全滿足您的需求時，您可以自行開發許多類型的自訂物件，包括：  

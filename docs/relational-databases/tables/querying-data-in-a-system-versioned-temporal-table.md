@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5a968cfc8cbe06a492528d60022ba4aef03cd34
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: f9e1e9c58b88e7edd48fe3a1390f56e313572adf
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324581"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418809"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>查詢系統建立版本時態表中的資料
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

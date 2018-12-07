@@ -11,12 +11,12 @@ ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2093e1445f7328090d71c6c133960597da5ddf6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fe8886c5c826a6535a7d9898ad7d6f30756effd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650146"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419909"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>記憶體最佳化資料表的持久性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "47650146"
 |CFP0 (30%)、CFP1 (20%)、CFP2 (50%)、CFP3 (10%)|(CFP0、CFP1、CFP2)。 從左邊開始選擇檔案。<br /><br /> 未選擇 CTP3 是因為此項目會使得產生的資料檔案超過理想大小的 100%。|  
 |CFP0 (80%)、CFP1 (30%)、CFP2 (10%)、CFP3 (40%)|(CFP1、CFP2、CFP3)。 從左邊開始選擇檔案。<br /><br /> 略過 CFP0 是因為此項目若與 CFP1 合併，產生的資料檔案將會超過理想大小的 100%。|  
   
- 並非所有餘留可用空間的 CFP 都有資格進行合併。 例如，若兩個相鄰的 CFP 都是 60% 已滿，就沒有資格進行合併，而且這些 CFP 各自仍將有 40% 未使用的儲存空間。 最糟的情況是所有 CFP 皆為 50% 已滿，儲存空間利用率只達 50%。 已刪除的資料列可能由於 CFP 沒有資格進行合併而仍存在於儲存體中，但是記憶體中記憶體回收行程可能已從記憶體移除已刪除的資料列。 儲存體和記憶體的管理與記憶體回收無關。 使用中 CFP 所佔的儲存空間 (未必所有 CFP 一概更新) 最多可達記憶體中持久性資料表大小的 2 倍。  
+ 並非所有餘留可用空間的 CFP 都有資格進行合併。 例如，若兩個相鄰的 CFP 都是 60% 已滿，就沒有資格進行合併，而且這些 CFP 各自仍將有 40% 未使用的儲存空間。 最糟的情況是所有 CFP 皆為 50% 已滿，儲存空間利用率只達 50%。 已刪除的資料列可能由於 CFP 沒有資格進行合併而仍存在於儲存體中，但是記憶體內部記憶體回收可能已從記憶體移除已刪除的資料列。 儲存體和記憶體的管理與記憶體回收無關。 使用中 CFP 所佔的儲存空間 (未必所有 CFP 一概更新) 最多可達記憶體中持久性資料表大小的 2 倍。  
   
 ### <a name="life-cycle-of-a-cfp"></a>CFP 的生命週期  
  CFP 在解除配置之前會歷經幾個過渡狀態。 轉換檔案的各個階段都要設定資料庫檢查點與備份記錄檔，最後清除不再需要的檔案。 如需這些階段的說明，請參閱 [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)。  

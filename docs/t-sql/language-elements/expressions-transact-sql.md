@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3cec2923a408a857c5cdd6440e022c9314f1b5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c06ef657cc4a29926c29eef8616e22ba4025201f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658776"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511922"
 ---
 # <a name="expressions-transact-sql"></a>運算式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47658776"
 }  
 [ COLLATE Windows_collation_name ]  
   
--- Scalar Expression in a DECLARE, SET, IF…ELSE, or WHILE statement  
+-- Scalar Expression in a DECLARE, SET, IF...ELSE, or WHILE statement  
 <scalar_expression> ::=  
 {  
     constant   
@@ -86,7 +86,7 @@ ms.locfileid: "47658776"
 |----------|----------------|  
 |*constant*|這是代表單一特定資料值的符號。 如需詳細資訊，請參閱[常數 &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)。|  
 |*scalar_function*|這是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法的單位，可提供特定服務並傳回單一值。 *scalar_function* 可以是內建的純量函數 (例如 SUM、GETDATE 或 CAST 函數) 或純量使用者定義函數。|  
-|[ *table_name***.** ]|這是資料表的名稱或別名。|  
+|[ _table_name_**.** ]|這是資料表的名稱或別名。|  
 |*column*|這是資料行的名稱。 運算式中只能使用資料行的名稱。|  
 |*variable*|這是變數或參數的名稱。 如需詳細資訊，請參閱 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。|  
 |**(** *expression*  **)**|這是符合這個主題所定義的任何有效運算式。 括號是分組運算子，可確保會先評估運算式在括號內的所有運算子之後，才組合各個產生的運算式。|  

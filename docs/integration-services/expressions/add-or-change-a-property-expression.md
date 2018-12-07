@@ -14,12 +14,12 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db2423abafdc0ae9e3949e1cac55d0b963a4fc3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54c2f0a9a77b3cbcd4dd1ecc652b78f2bd2909bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754356"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505985"
 ---
 # <a name="add-or-change-a-property-expression"></a>加入或變更屬性運算式
   您可以為封裝、工作、「Foreach 迴圈」容器、「For 迴圈」容器、「時序」容器、事件處理常式、封裝和專案層級的連接管理員和記錄提供者建立屬性運算式。  
@@ -38,15 +38,15 @@ ms.locfileid: "47754356"
   
     -   以滑鼠右鍵按一下項目，然後按一下 [屬性]。  
   
-3.  在 [運算式] 方塊中按一下，然後按一下省略符號 [(…)]。  
+3.  在 [運算式] 方塊中按一下，然後按一下省略符號 (...)。  
   
 4.  在 [屬性運算式編輯器] 中，選取 [屬性] 清單中的屬性，然後執行下列其中之一：  
   
     -   直接在 [運算式] 資料行中輸入或變更屬性運算式，然後按一下 [確定]。  
   
-         – 或 –  
+         -或-  
   
-    -   在屬性的運算式資料列中，按一下省略符號 (…) 開啟 [運算式產生器]。  
+    -   在屬性的運算式資料列中，按一下省略符號 (...) 開啟 [運算式產生器]。  
   
 5.  (選擇性) 在 [運算式產生器] 中，進行下列任何一項工作：  
   
@@ -69,10 +69,10 @@ ms.locfileid: "47754356"
  [Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [在封裝中使用屬性運算式](../../integration-services/expressions/use-property-expressions-in-packages.md)   
  [Integration Services &#40;SSIS&#41; 封裝](../../integration-services/integration-services-ssis-packages.md)   
- [Integration Services 容器](../../integration-services/control-flow/integration-services-containers.md)   
+ [整合服務容器](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [Integration Services &#40;SSIS&#41; 事件處理常式](../../integration-services/integration-services-ssis-event-handlers.md)   
- [Integration Services &#40;SSIS&#41; 連線](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Integration Services &#40;SSIS&#41; 連接](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)  
   
   

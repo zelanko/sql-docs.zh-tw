@@ -20,12 +20,12 @@ ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f2e423b4b6ed686f00c566a1462435f501f094bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51073cc28977e0b30ec53a9d7b1165ea09920008
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779426"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398381"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ CREATE WORKLOAD GROUP group_name
 > [!NOTE]  
 >  預先定義的工作負載群組和資源集區都會使用小寫名稱，例如 "default"。 如果是使用區分大小寫之定序的伺服器，則應該將此列入考量。 具有不區分大小寫之定序 (如 SQL_Latin1_General_CP1_CI_AS) 的伺服器會將 "default" 和 "Default" 視為相同。  
   
- EXTERNAL external_pool_name | “default“  
+ EXTERNAL external_pool_name | "default"  
  **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
  工作負載群組可指定外部資源集區。 您可以定義工作負載群組，並與 2 個集區產生關聯：  

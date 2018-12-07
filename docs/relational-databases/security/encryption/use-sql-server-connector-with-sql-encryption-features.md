@@ -14,12 +14,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 15b8c62e501e13ce0145524c140a1c24deb2bcc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6f47c0b1139e78119a345cfbb7565500dc346a1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653796"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401081"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>搭配使用 SQL Server 連接器與 SQL 加密功能
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47653796"
  請先完成 [使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)主題的第 I 部分到第 IV 部分，再遵循這個主題上的步驟。  
  
 > [!NOTE]  
->  1.0.0.440 版和較舊版本皆已被取代，而且生產環境也不再支援。 請前往 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=45344) ，使用＜SQL Server 連接器升級＞下 [SQL Server 連接器維護和疑難排解](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) 頁面的指示，升級為 1.0.1.0 版或更新版本。  
+>  1.0.0.440 版和較舊版本皆已被取代，而且生產環境也不再支援。 請前往 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=45344)，使用 [SQL Server 連接器維護和疑難排解](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)頁面之＜SQL Server 連接器的升級＞下的指示來升級為 1.0.1.0 版或更新版本。  
   
 ## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>使用 Azure 金鑰保存庫中的非對稱金鑰進行透明資料加密  
  完成＜使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟＞主題的第 I 部分到第 IV 部分之後，請使用 Azure 金鑰保存庫金鑰以使用 TDE 來加密資料庫加密金鑰。  

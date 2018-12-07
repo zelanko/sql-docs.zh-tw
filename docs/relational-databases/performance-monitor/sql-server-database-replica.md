@@ -5,7 +5,7 @@ ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -16,18 +16,18 @@ ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3bcb9137498f43dd746b80ce8ba23ce1c4207fa6
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 5650417567f41581c42413bac9169e591d59a086
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033145"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511492"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server、資料庫複本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **SQLServer:Database Replica** 效能物件包含的效能計數器會報告有關 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中 AlwaysOn 可用性群組之次要資料庫的報表資訊。 這個物件只有在裝載次要複本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上才有效。  
   
-|計數器名稱|Description|檢視位置…|  
+|計數器名稱|Description|檢視位置...|  
 |------------------|-----------------|--------------|  
 |**File Bytes Received/sec**|次要資料庫的次要複本在上一秒所收到的 FILESTREAM 資料量。|次要複本|  
 |**Log Apply Pending Queue**|備妥且待套用至資料庫複本的記錄區塊數。|次要複本|

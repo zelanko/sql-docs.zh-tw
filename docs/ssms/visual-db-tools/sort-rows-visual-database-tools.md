@@ -14,12 +14,12 @@ ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b1c4cbf7909a6ab779d34be4595a0434bdf5812a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06a68464cbc0eeaa5536deca73497229b0e0e435
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668226"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505364"
 ---
 # <a name="sort-rows-visual-database-tools"></a>排序資料列 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "47668226"
     ORDER BY price DESC  
     ```  
   
--   **您可以依衍生資料行排序** ：例如，您可以建立結果集，其中每個資料列都含有書名；而需付較高版稅的書將先出現。 產生的 SQL 將如下所示：  
+-   **您可以依衍生資料行排序**：例如，您可以建立結果集，其中每個資料列都含有書名；需付較高版稅的書將優先顯示。 產生的 SQL 將如下所示：  
   
     ```  
     SELECT title, price * royalty / 100 as royalty_per_unit  
@@ -74,7 +74,7 @@ ms.locfileid: "47668226"
   
     若要計算衍生的資料行，您可以如同前述的範例使用 SQL 語法，或者使用會傳回數值類值的使用者定義函數。 如需使用者定義函數的詳細資訊，請參閱 SQL Server 文件。  
   
--   **您可以排序群組資料列** ：例如，您可以建立結果集，其中每個資料列說明某個城市，以及該城市中的作者數目，並且將包含多位作者的城市優先顯示。 產生的 SQL 將如下所示：  
+-   **您可以排序群組資料列**：例如，您可以建立結果集，其中每個資料列描述某個城市，以及該城市中的作者數目；包含多位作者的城市將優先顯示。 產生的 SQL 將如下所示：  
   
     ```  
     SELECT city, state, COUNT(*)  

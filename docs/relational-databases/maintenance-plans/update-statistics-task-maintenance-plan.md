@@ -15,18 +15,18 @@ ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 732cc1fb83248104d7f7487855961bf7969d7fae
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: c0b900cc31b9bacf0658422c9953dedec4ee9659
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217116"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517458"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>更新統計資料工作 (維護計畫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用 **[更新統計資料工作]** 對話方塊，更新有關資料表及索引中資料的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資訊。 此工作針對資料庫中使用者資料表所建立的每個索引，重新取樣散發統計資料。 在處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式的期間， [!INCLUDE[tsql](../../includes/tsql-md.md)] 會使用散發統計資料來最佳化資料表的導覽。 若要自動建立散發統計資料， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在每個索引的對應資料表中，定期地取樣資料。 取樣大小會視資料表的資料列數與資料修改的頻率而定。 使用此選項即可使用資料表中指定的資料百分比執行其他取樣。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用此資訊來建立更好的查詢計畫。  
   
- 此工作會執行 UPDATE STATISTICS 陳述式。  
+此工作會執行 `UPDATE STATISTICS` 陳述式。  
   
 ## <a name="options"></a>選項。  
  **[連接]**  
@@ -54,7 +54,8 @@ ms.locfileid: "51217116"
   
      產生維護計畫，只針對選取的資料庫執行維護工作。 如果選擇此選項，則必須在清單中至少選取一個資料庫。  
   
- **附註** 維護計畫只針對相容性層級設為 80 (含) 以上的資料庫來執行。 不會顯示相容性層級設為 70 或更低的資料庫。  
+ > [!NOTE]
+ > 維護計畫只針對相容性層級設為 80 (含) 以上的資料庫來執行。 不會顯示相容性層級設為 70 或更低的資料庫。  
   
  **物件**  
  限制 [選取範圍] 格線僅顯示資料表、檢視或兩者。  
@@ -84,7 +85,7 @@ ms.locfileid: "51217116"
  根據選取的選項，檢視此工作在伺服器上執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
 > [!NOTE]  
->  受影響的物件數目較為大量時，會多花一些時間才會顯示。  
+> 受影響的物件數目較為大量時，會多花一些時間才會顯示。  
   
 ## <a name="new-connection-dialog-box"></a>新增連接對話方塊  
  **連接名稱**  
@@ -112,6 +113,6 @@ ms.locfileid: "51217116"
  提供驗證時要使用的密碼。 無法使用此選項。  
   
 ## <a name="see-also"></a>另請參閱  
- [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
-  
-  
+ [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)    
+ [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)    
+ [自適性索引重組](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

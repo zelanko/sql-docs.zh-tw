@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 107603c3c6f15ea06ffcb8b273a5f7480ae93b86
-ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
+ms.openlocfilehash: f09da2ec6d40f45bfe756fcfe648fd54fd5db6fe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757973"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416869"
 ---
 # <a name="use-the-data-external-table-wizard-with-external-tables"></a>搭配使用資料外部資料表精靈與外部資料表
 

@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32c1cfde6f887074e3aa40486ea93f73f3865782
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 494272f6609af4d8cf8747aff8d3dd5eda85483f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672096"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510170"
 ---
 # <a name="create-statistics"></a>建立統計資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47672096"
   
 -   **若要使用下列項目建立統計資料：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "47672096"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  使用者必須是資料表或索引檢視表擁有者，或是下列其中一個角色的成員： **系統管理員** 固定伺服器角色、 **db_owner** 固定資料庫角色或 **db_ddladmin** 固定資料庫角色。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -118,7 +118,7 @@ ms.locfileid: "47672096"
      下列屬性會在 [_table\_name_ 資料表上新統計資料] 對話方塊的 [篩選] 頁面中顯示。  
   
      **篩選運算式**  
-     定義要在篩選統計資料中包含什麼資料列。 例如，使用 IPv4 位址的 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     定義要在篩選統計資料中包含什麼資料列。 例如， `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
 5.  在 [_table\_name_ 資料表上新統計資料] 對話方塊的 [一般] 頁面上，按一下 [新增]。  
   

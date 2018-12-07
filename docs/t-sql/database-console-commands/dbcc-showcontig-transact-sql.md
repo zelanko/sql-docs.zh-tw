@@ -24,12 +24,12 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 1937d8b4da1b824b0a1b46808b5e03f9bbdc77d9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2d66330f4c575972b019d7df68cf0f1d00f2fab4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697586"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510714"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

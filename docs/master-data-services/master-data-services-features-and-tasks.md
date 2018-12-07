@@ -12,12 +12,12 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3f4c71f7e0fdf539ab9a70213eeb275b45e33056
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61252bf85ab9862508bed327e27068add2cc0c74
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628446"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403833"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 功能及工作
 

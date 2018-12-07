@@ -13,12 +13,12 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 921e2883985eed8b3640ef7da9e874b74b30c55f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 1e8a7300f2b3a006ade820831f682eb379e9e200
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638005"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393971"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services Packages
   目前版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]之「執行 SQL」工作中的 SQL 陳述式可能會包含 MERGE 陳述式。 這個 MERGE 陳述式可讓您在單一陳述式中完成多項 INSERT、UPDATE 及 DELETE 作業。  
@@ -56,7 +56,7 @@ ms.locfileid: "51638005"
  資料庫每週都會產生一份 WeeklyChanges 資料表，其中包含該週的價格變更以及當週加入的新書。 透過使用單一 MERGE 陳述式，您就可以將 WeeklyChanges 資料表中的變更套用至 DimBook 資料表。 MERGE 陳述式會針對新加入的書籍插入新的資料列，然後針對價格已經變更之現有書籍的資料列，將 IsCurrent 資料行更新為 0。 此外，MERGE 陳述式也會針對價格已經變更的書籍插入新的資料列，然後針對這些新的資料列，將 IsCurrent 資料行的值設定為 1。  
   
 ### <a name="merge-a-table-with-new-data-against-the-old-table"></a>合併內含新資料的資料表與舊資料表  
- 資料庫會使用「開放式結構描述」來設定物件屬性的模型。也就是說，資料表包含每個屬性的名稱-值配對。 Properties 資料表包含三個資料行：EntityID、PropertyID 和 Value。 NewProperties 資料表 (更新的資料表版本) 必須與 Properties 資料表同步處理。 若要同步處理這兩份資料表，您可以使用單一 MERGE 陳述式來執行下列作業：  
+ 資料庫會使用「開放式結構描述」來設定物件屬性的模型；亦即，資料表包含每個屬性的成對名稱及數值。 Properties 資料表包含三個資料行：EntityID、PropertyID 和 Value。 NewProperties 資料表 (更新的資料表版本) 必須與 Properties 資料表同步處理。 若要同步處理這兩份資料表，您可以使用單一 MERGE 陳述式來執行下列作業：  
   
 -   從 Properties 資料表中刪除屬性 (如果它們不存在 NewProperties 資料表中的話)。  
   

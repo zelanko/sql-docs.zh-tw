@@ -14,12 +14,12 @@ ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ef66f125c9d545a33b3b3d33c06334b935523217
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2bafd110b358e3dc1c2d639e4a1b5251c89bb9b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669536"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517505"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>監視資料庫鏡像 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

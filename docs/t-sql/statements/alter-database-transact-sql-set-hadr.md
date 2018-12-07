@@ -24,12 +24,12 @@ ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4563eec091c31f879df497c4803f56ff8e3b61f4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 040c30ce4c48ce8d1fc596b88bae4bc1fec242aa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696206"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533348"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ALTER DATABASE database_name
  SET HADR  
  在指定的資料庫上執行所指定的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 命令。  
   
- { AVAILABILITY GROUP **=***group_name* | OFF }  
+ { AVAILABILITY GROUP **=**_group_name_ | OFF }  
  從指定的可用性群組中加入或移除可用性資料庫，方法如下：  
   
  *group_name*  
@@ -82,7 +82,7 @@ ALTER DATABASE database_name
  OFF  
  從可用性群組中移除指定的次要資料庫。  
   
- 若次要資料庫已落後主要資料庫過多，而您不想等候它趕上時，移除次要資料庫將有所助益。 移除次要資料庫後，您可還原結尾是最近的記錄備份檔之一系列備份，以更新次要資料庫 (使用 RESTORE … WITH NORECOVERY)。  
+ 若次要資料庫已落後主要資料庫過多，而您不想等候它趕上時，移除次要資料庫將有所助益。 移除次要資料庫後，您可還原結尾是最近的記錄備份檔之一系列備份，以更新次要資料庫 (使用 RESTORE ...WITH NORECOVERY)。  
   
 > [!IMPORTANT]  
 >  若要從可用性群組中完整移除可用性資料庫，請連線到裝載主要複本的伺服器執行個體，然後使用 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*group_name* REMOVE DATABASE *availability_database_name* 陳述式。 如需詳細資訊，請參閱[將主要資料庫從可用性群組移除 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)。  

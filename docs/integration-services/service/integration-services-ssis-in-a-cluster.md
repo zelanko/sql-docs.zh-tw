@@ -11,12 +11,12 @@ ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbb13ae1c48166df820375ff42be24fab19df579
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 714136a95b47626b0d8db0875a6b3d72402a472f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717326"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407345"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>叢集中的 Integration Services (SSIS)
   不建議您以叢集方式設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，因為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務不是叢集服務或叢集感知的服務，也不支援從一個叢集節點容錯移轉到另一個叢集節點。 因此，在叢集環境中，應該以獨立服務的形式在叢集中的每一個節點上安裝及啟動 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。  
@@ -99,7 +99,7 @@ ms.locfileid: "47717326"
   
 4.  在 [檔案] 功能表上，指向 [開新檔案]，然後按一下 [資源]。  
   
-5.  在 [資源精靈] 的 [新資源] 頁面上輸入名稱，然後選取 [一般服務] 作為 [服務類型]。 請不要變更 [群組] 的值。 按 [下一步] 。  
+5.  在 [資源精靈] 的 [新資源] 頁面上鍵入名稱，然後選取 [一般服務] 作為 [服務類型]。 請不要變更 [群組] 的值。 按 [下一步] 。  
   
 6.  在 [可能的擁有者] 頁面中，加入或移除作為資源之可能擁有者的叢集節點。 按 [下一步] 。  
   

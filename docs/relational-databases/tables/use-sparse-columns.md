@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79b653f3e93e896c3a7f72f4d3473fac2f34988b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa1e912b6a0ec2cce562e6ed6506acfb74a3a17e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648096"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520972"
 ---
 # <a name="use-sparse-columns"></a>使用疏鬆資料行
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47648096"
   
 -   具有疏鬆資料行之資料表的目錄檢視與一般資料表相同。 sys.columns 目錄檢視包含資料表中每一個資料行的資料列，而且也包含資料行集 (如果有定義的話)。  
   
--   疏鬆資料行是儲存層而非邏輯資料表的屬性。 因此，SELECT…INTO 陳述式不會將疏鬆資料行屬性複製到新資料表中。  
+-   疏鬆資料行是儲存層而非邏輯資料表的屬性。 因此，SELECT...INTO 陳述式不會將疏鬆資料行屬性複製到新資料表中。  
   
 -   COLUMNS_UPDATED 函數會傳回 **varbinary** 值，指示 DML 動作期間已更新所有資料行。 COLUMNS_UPDATED 函數傳回的位元如下：  
   
@@ -119,7 +119,7 @@ ms.locfileid: "47648096"
 ## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>疏鬆資料行之更新所需的記憶體中負擔  
  設計具有疏鬆資料行的資料表時，請記住，如果要更新資料列，則資料表中的每個非 Null 疏鬆資料行都需要額外 2 個位元組的負擔。 由於存在這項額外記憶體需求，因此當資料列大小總計 (包括這個記憶體負擔) 超過 8019，而且無法從資料列發送任何資料行時，更新可能會非預期地失敗並發生錯誤 576。  
   
- 假設某個資料表具有 600 個 bigint 類型的疏鬆資料行。 如果共有 571 個非 Null 資料行，則磁碟的大小總計就是 571 * 12 = 6852 個位元組。 加入額外資料列負擔和疏鬆資料行標頭之後，這個大小會增加至大約 6895 個位元組。 此頁面仍然具有大約 1124 個位元組的可用磁碟。 這可能會讓您以為其他資料行都可順利更新。 不過，在更新期間，記憶體中存在額外負擔，也就是 2\*(非 Null 疏鬆資料行的數目)。 在此範例中，加入額外負擔 (2 \* 571 = 1142 個位元組) 會將磁碟的資料列大小增加至大約 8037 個位元組。 這個大小超過了允許的大小上限：8019 個位元組。 因為所有資料行都是固定長度資料類型，所以無法從資料列發送資料行。 因此，更新就會失敗並發生 576 錯誤。  
+ 假設某個資料表具有 600 個 bigint 類型的疏鬆資料行。 如果共有 571 個非 Null 資料行，則磁碟的大小總計就是 571 * 12 = 6852 個位元組。 加入額外資料列負擔和疏鬆資料行標頭之後，這個大小會增加至大約 6895 個位元組。 此頁面仍然具有大約 1124 個位元組的可用磁碟。 這可能會讓您以為其他資料行都可順利更新。 不過，在更新期間，記憶體中存在額外負擔，也就是 2\*(非 Null 疏鬆資料行的數目)。 在此範例中，新增額外負荷 (2 \* 571 = 1142 個位元組) 會將磁碟的資料列大小增加至大約 8037 個位元組。 這個大小超過了允許的大小上限：8019 個位元組。 因為所有資料行都是固定長度資料類型，所以無法從資料列發送資料行。 因此，更新就會失敗並發生 576 錯誤。  
   
 ## <a name="restrictions-for-using-sparse-columns"></a>使用疏鬆資料行的限制  
  疏鬆資料行可具有任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，而且其行為就像其他任何資料行一樣，但是有下列限制：  

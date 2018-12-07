@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ed4c6eb7a61f28b22a349f2ef2511cba382a3b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94dba56cee823d5e8df68244b4d8d44fee5c98a2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730856"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529773"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>加入帶狀線來強調圖表資料 (報表產生器及 SSRS)
   帶狀線 (或稱寬帶) 是水平或垂直的範圍，這些範圍會以規則或自訂的間隔來繪製圖表背景的陰影。 您可以使用區域線：  
@@ -47,7 +47,7 @@ ms.locfileid: "47730856"
   
      軸屬性會在 [屬性] 視窗中顯示。  
   
-2.  在 [屬性] 窗格的 [外觀] ****區段中，針對 StripLines 屬性按一下 [編輯集合] 按鈕 (…) 來開啟 [ChartStripLine Collection Editor (ChartStripLine 集合編輯器)]****。  
+2.  在 [屬性] 窗格的 [外觀] 區段中，針對 StripLines 屬性按一下 [編輯集合] 按鈕 (…) 來開啟 [ChartStripLine 集合編輯器]。  
   
 3.  按一下 [新增]，將新的帶狀線新增集合。  
   

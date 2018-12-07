@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 589da307442ff382910d7185c761d4a0fe6a8178
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1713cfed406a4a300f98a1a06e9317cae1fb82e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723896"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402163"
 ---
 # <a name="xml-device-information-settings"></a>XML 裝置資訊設定
   下表列出以 XML 格式轉譯的裝置資訊設定。  

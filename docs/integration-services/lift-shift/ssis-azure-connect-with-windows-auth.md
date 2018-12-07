@@ -11,12 +11,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 612c118fe490afe8de7c794c1f1ff6327766a508
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 61d4d29b0dfc7fe67097c6cb61547c1c65dd79f1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119975"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411875"
 ---
 # <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>在 Azure 中從 SSIS 套件使用 Windows 驗證來連線至資料來源和檔案共用
 無論是在內部部署/Azure 虛擬機器上及 Azure 檔案中，您都可以使用 Windows 驗證來連線至與 Azure SSIS Integration Runtime (IR) 相同虛擬網路中的資料來源與檔案共用。 從在 Azure-SSIS IR 上執行的 SSIS 套件，使用 Windows 驗證連線至資料來源與檔案共用的方法有三種：

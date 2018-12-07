@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ad984721f43f478f35adc53b68c3d207fb2a2527
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2aa416e1913925c095e75888a624021f7eb3543f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696607"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541258"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>選擇建立全文檢索索引時的語言
 

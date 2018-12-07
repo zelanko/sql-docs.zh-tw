@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d786294fb6f5c6c60243912d31bb9339a079a12e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f77ab925ebfba6ab1d3fd524d7d740eca58fcba6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674227"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523482"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安裝 PolyBase
 
@@ -180,9 +180,9 @@ SELECT SERVERPROPERTY ('IsPolyBaseInstalled') AS IsPolyBaseInstalled;
 
 SQL Server PolyBase 安裝程式會在電腦上建立下列防火牆規則：  
    
-- SQL Server PolyBase – Database Engine - \<SQLServerInstanceName> (TCP-In)  
+- SQL Server PolyBase - Database Engine - \<SQLServerInstanceName> (TCP-In)  
    
-- SQL Server PolyBase – PolyBase 服務 - \<SQLServerInstanceName> (TCP-In)  
+- SQL Server PolyBase - PolyBase 服務 - \<SQLServerInstanceName> (TCP-In)  
 
 - SQL Server PolyBase - SQL Browser - (UDP-In)  
    

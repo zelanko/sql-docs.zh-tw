@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 26e58796bc49105c45df52213a9210426338812c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7030a99d5afed1c2c996eb34271fc130650e2aa3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667417"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514471"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "51667417"
  **Azure 快照集︰** 在某個時點間取得的 Azure blob 快照集。 如需詳細資訊，請參閱 [建立 Blob 的快照集](https://msdn.microsoft.com/library/azure/hh488361.aspx)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份現在支援儲存在 Microsoft Azure Blob 儲存體服務中的資料庫檔案 Azure 快照集備份。 如需詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 ###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
- **URL：** URL 會指定唯一備份檔案的統一資源識別項 (URI)。 此 URL 是用來提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份檔案的位置和名稱。 此 URL 必須指向實際的 Blob，而非只有容器。 如果 Blob 不存在，就會建立 Blob。 如果指定了現有的 Blob，除非同時指定 “WITH FORMAT” 選項覆寫 Blob 中現有的備份檔，否則 BACKUP 會失敗。  
+ **URL：** URL 會指定唯一備份檔案的統一資源識別項 (URI)。 此 URL 是用來提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份檔案的位置和名稱。 此 URL 必須指向實際的 Blob，而非只有容器。 如果 Blob 不存在，就會建立 Blob。 如果指定了現有的 Blob，除非同時指定 "WITH FORMAT" 選項覆寫 Blob 中現有的備份檔，否則 BACKUP 會失敗。  
   
  以下是 URL 值範例：http[s]://ACCOUNTNAME.blob.core.windows.net/\<容器>/\<.bak>。 HTTPS 不是必要項目，但是建議使用。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "51667417"
   
 -   不支援指定備份組選項 - **RETAINDAYS** 和 **EXPIREDATE** 。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份裝置名稱大小上限為 259 個字元。 BACKUP TO URL 會用 36 個字元的必要項目指定 URL – ‘https://.blob.core.windows.net//.bak’，而保留 223 個字元供帳戶、容器和 Blob 名稱共用。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份裝置名稱大小上限為 259 個字元。 BACKUP TO URL 會用 36 個字元的必要項目指定 URL - 'https://.blob.core.windows.net//.bak'，而保留 223 個字元供帳戶、容器和 Blob 名稱共用。  
   
 ###  <a name="Support"></a> 支援 Backup/Restore 陳述式  
   

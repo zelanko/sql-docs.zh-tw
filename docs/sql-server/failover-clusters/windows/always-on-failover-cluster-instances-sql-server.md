@@ -20,17 +20,17 @@ ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 96a9ca973b09dbadc4ab59219d8d916953ef318c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 034a46affb198c89baab3c4741ae84569c96951b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703826"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509921"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>AlwaysOn 容錯移轉叢集執行個體 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  AlwaysOn 容錯移轉叢集執行個體是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 供應項目的一部分，會利用 Windows Server 容錯移轉叢集 (WSFC) 功能，透過伺服器執行個體層級 (「容錯移轉叢集執行個體」(FCI)) 的備援提供本機高可用性。 FCI 是跨 Windows Server 容錯移轉叢集 (WSFC) 節點且可能跨多個子網路安裝的單一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在網路上，FCI 看似單一電腦上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，但是 FCI 提供容錯移轉，可以在目前的 WSFC 節點無法使用時，從該節點容錯移轉到另一個節點。  
+  Always On 容錯移轉叢集執行個體是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On 供應項目的一部分，會利用 Windows Server 容錯移轉叢集 (WSFC) 功能，透過伺服器執行個體層級 (「容錯移轉叢集執行個體」(FCI)) 的備援提供本機高可用性。 FCI 是跨 Windows Server 容錯移轉叢集 (WSFC) 節點且可能跨多個子網路安裝的單一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在網路上，FCI 看似單一電腦上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，但是 FCI 提供容錯移轉，可以在目前的 WSFC 節點無法使用時，從該節點容錯移轉到另一個節點。  
   
  FCI 可以利用[可用性群組](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)提供資料庫層級的遠端災害復原。 如需詳細資訊，請參閱[容錯移轉叢集和可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)。  
  

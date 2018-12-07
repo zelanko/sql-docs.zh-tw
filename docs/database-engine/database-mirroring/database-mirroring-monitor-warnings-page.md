@@ -13,12 +13,12 @@ ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 39044dfd57f4ae6a05a85e7cf21d4e7def5fb1c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 635fe088e51c17e1367eaaeab7e528e2f12e5dd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659516"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529677"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>資料庫鏡像監視器 (警告頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47659516"
  如需詳細資訊，請參閱此主題稍後的「備註」。  
   
 ## <a name="remarks"></a>Remarks  
- 如果伺服器執行個體目前無法使用資訊，則對應之 **[於...的臨界值]** 資料行的資料格便會顯示灰色背景和浮水印文字。 如果監視器未連線到伺服器執行個體，則每個資料格中的方格會依據該執行個體是預設執行個體還是具名執行個體而顯示 [未連線至 <系統名稱>] 或 [未連線至<系統名稱>****\\****<執行個體名稱>]。 如果監視器正在等候查詢傳回資料，則每個資料格中的方格會顯示 **[正在等候資料]** 。  
+ 如果伺服器執行個體目前無法使用資訊，則對應之 **[於...的臨界值]** 資料行的資料格便會顯示灰色背景和浮水印文字。 如果監視器未連線到伺服器執行個體，則每個資料格中的方格會依據該執行個體是預設執行個體還是具名執行個體而顯示 [未連線至 <系統名稱>] 或 [未連線至<系統名稱>****\\****<執行個體名稱>]。 如果監視器正在等候查詢傳回資料，則每個資料格中的方格會顯示 [正在等候資料...]。  
   
  當資訊可以使用時，每個警告的資料格會顯示指定的臨界值 (和度量單位) 或 [未啟用]。  
   

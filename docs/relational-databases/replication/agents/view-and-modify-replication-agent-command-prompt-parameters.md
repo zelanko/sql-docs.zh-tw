@@ -13,12 +13,12 @@ ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca6b669a4d93f1b2626b5dd47c12f29346fc6f57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed2ffecb1f73cdafcd00bf12866a852047e5e266
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636736"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516914"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>檢視並修改複寫代理程式命令提示字元參數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "47636736"
 > [!NOTE]  
 >  代理程式參數變更會在代理程式下次啟動時生效。 如果代理程式連續執行，則必須停止代理程式，然後重新啟動它。  
   
- 雖然可以直接修改參數，但是在更多的情形下透過代理程式設定檔來對其進行修改。 如需相關資訊，請參閱 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
+ 雖然可以直接修改參數，但是在更多的情形下透過代理程式設定檔來對其進行修改。 如需詳細資訊，請參閱 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
  如果您從 **[作業]** 資料夾存取代理程式作業，則使用下表來決定可用於各代理程式的代理程式作業名稱與參數。  
   
-|Agent|作業名稱|如需參數表，請參閱...|  
+|Agent|作業名稱|如需參數清單，請參閱...|  
 |-----------|--------------|------------------------------------|  
 |快照集代理程式|**\<發行者>-\<發行集資料庫>-\<發行集>-\<整數>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
 |合併式發行集分割區的快照集代理程式|**Dyn_\<發行者>-\<發行集資料庫>-\<發行集>-\<GUID>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  

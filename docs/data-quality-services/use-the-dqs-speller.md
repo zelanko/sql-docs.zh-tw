@@ -5,19 +5,18 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 704af229a0d61238ebd4bae9c306fec17c35816a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20764d8e2d377ae22f72cb4212d24d76ab92b993
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655363"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616689"
 ---
 # <a name="use-the-dqs-speller"></a>使用 DQS 拼字檢查
 
@@ -40,7 +39,7 @@ ms.locfileid: "47655363"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能執行拼字檢查。  
   
 ##  <a name="Enable"></a> 啟用拼字檢查  
@@ -73,7 +72,7 @@ ms.locfileid: "47655363"
  在您執行拼字檢查後，請完成定義域所屬的活動，以便使用拼字檢查所建議的更正。 如果在知識探索、定義域管理或比對原則活動中，請發行知識庫，以便將拼字檢查分析的結果提供給知識庫使用。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="How"></a> 拼字檢查的運作方式  
- DQS 拼字檢查會以紅色底線標示任何潛在的字串值錯誤 (整個值都會顯示該底線)。 例如，如果 “New York” 錯誤地拼寫為 “Neu York”，拼字檢查將會在 “Neu York” 底下顯示紅色底線 (而不只是在 “Neu” 底下顯示)。 如果您以滑鼠右鍵按一下此值，您會看到整個值的建議更正。 如果有五個以上的建議，您也可以按一下 **[其他建議]** 。 您可以選擇其中一項建議，或將值添加到原來的值所要顯示的字典中 (在使用者帳戶層級)。 加到字典中的值適用於所有定義域。 只有當您明確指定建議時，才會在定義域中進行更正。 當您從 [拼字檢查] 內容功能表選取建議時，值類型會變成 (或維持) 錯誤。 選取的建議將會加入至更正資料行。 請注意，值的 **[類型]** 可以是 **[正確]** ，但同時由拼字檢查標示為潛在錯誤。  
+ DQS 拼字檢查會以紅色底線標示任何潛在的字串值錯誤 (整個值都會顯示該底線)。 例如，如果 "New York" 錯誤地拼寫為 "Neu York"，拼字檢查將會在 "Neu York" 底下顯示紅色底線 (而不只是在 "Neu" 底下顯示)。 如果您以滑鼠右鍵按一下此值，您會看到整個值的建議更正。 如果有五個以上的建議，您也可以按一下 **[其他建議]** 。 您可以選擇其中一項建議，或將值添加到原來的值所要顯示的字典中 (在使用者帳戶層級)。 加到字典中的值適用於所有定義域。 只有當您明確指定建議時，才會在定義域中進行更正。 當您從 [拼字檢查] 內容功能表選取建議時，值類型會變成 (或維持) 錯誤。 選取的建議將會加入至更正資料行。 請注意，值的 **[類型]** 可以是 **[正確]** ，但同時由拼字檢查標示為潛在錯誤。  
   
  DQS 將會在 **[值]** 資料表的 **[值]** 資料行和 **[更正為]** 資料行中提供值的建議。 當您在 **[值]** 資料行中選取建議時，值類型會設定為 **[錯誤]**，而且當您手動插入建議時，建議會複製到 **[更正為]** 資料行中。 如果有現有的更正，該更正會變成建議。 在 **[清理]** 活動的 **[管理和檢視結果]** 頁面中，當您選取 **[更正為]** 資料行中的建議時，DQS 將會以選取項目取代目前選取的值，而且目前選取的值將會變成建議。 在 **[清理]** 活動的 **[管理和檢視結果]** 頁面中，記錄層級 (下方方格) 不會產生任何建議。  
   

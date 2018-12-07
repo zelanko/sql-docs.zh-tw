@@ -12,16 +12,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 18b9b09e5437889389f23b32c61b237ab65d3207
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 39f2ebeca9f19c8c00707c9e5427c797dfc09881
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764416"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519764"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>舊版的 SQL Server Data Tools (SSDT 和 SSDT-BI)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-SQL Server Data Tools (SSDT) 提供專案範本及設計介面以建置 SQL Server 內容類型，包括關聯式資料庫、Analysis Services 模型、Reporting Services 報表以及整合服務套件。  
+SQL Server Data Tools (SSDT) 提供專案範本及設計介面以建置 SQL Server 內容類型，包括關聯式資料庫、Analysis Services 模型、Reporting Services 報表及 Integration Services 套件。  
   
 SSDT 可以回溯相容，亦即您可以隨時使用[最新的 SSDT](download-sql-server-data-tools-ssdt.md) 設計及部署要在舊版 SQL Server 上執行的資料庫、模型、報表及套件。  
   

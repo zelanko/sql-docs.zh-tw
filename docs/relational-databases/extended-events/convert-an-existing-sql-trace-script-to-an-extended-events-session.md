@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95cf78e827e2f1d7fcb3fa99c096f3184b1cb0d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 855a61fe37f6b5d347e050687e73c894c227d1b6
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834816"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321734"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47834816"
   
 2.  取得追蹤的識別碼。 若要這樣做，請使用下列查詢：  
   
-    ```  
+    ```sql
     SELECT * FROM sys.traces;  
     GO  
     ```  
@@ -58,7 +58,7 @@ ms.locfileid: "47834816"
     > [!NOTE]  
     >  在這個範例中，將會使用預設追蹤的追蹤識別碼 (1)。  
   
-    ```  
+    ```sql
     USE MASTER;  
     GO  
     DECLARE @trace_id int;  
@@ -85,7 +85,7 @@ ms.locfileid: "47834816"
   
     3.  使用下列查詢來識別正確的資料欄位，這些欄位用於您在上一個步驟所識別的事件。 此查詢會在 "event_field" 資料行中顯示「擴充事件」資料欄位。 在此查詢中，使用您在上一個步驟所指定的事件名稱來取代 <事件名稱>。  
   
-        ```  
+        ```sql
         SELECT xp.name package_name, xe.name event_name  
            ,xc.name event_field, xc.description  
         FROM sys.trace_xe_event_map AS em  
@@ -104,9 +104,9 @@ ms.locfileid: "47834816"
 ## <a name="to-create-the-extended-events-session"></a>若要建立擴充事件工作階段  
  使用查詢編輯器建立「擴充事件」工作階段，並將輸出寫入檔案目標。 下列步驟說明單一查詢，連同示範如何建立查詢的說明。 如需完整查詢範例，請參閱本主題的＜範例＞一節。  
   
-1.  加入陳述式來建立事件工作階段，使用您想要用於「擴充事件」工作階段的名稱來取代*session_name* 。  
+1.  新增陳述式來建立事件工作階段，使用您想要用於「擴充事件」工作階段的名稱來取代 *session_name*。  
   
-    ```  
+    ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
        DROP EVENT SESSION [Session_Name] ON SERVER;  
     CREATE EVENT SESSION [Session_Name]  
@@ -133,7 +133,7 @@ ms.locfileid: "47834816"
   
      若要將這個項目轉換成「擴充事件」同等項目，則會加入 sqlserver.sp_statement_starting 和 sqlserver.sp_statement_completed 事件，連同動作清單。 包含述詞陳述式當做 WHERE 子句。  
   
-    ```  
+    ```sql
     ADD EVENT sqlserver.sp_statement_starting  
        (ACTION  
           (  
@@ -161,7 +161,7 @@ ms.locfileid: "47834816"
   
 3.  新增非同步檔案目標，使用您想要儲存輸出的位置來取代檔案路徑。 當您指定檔案目標時，您必須包含記錄檔和中繼資料檔案路徑檔案。  
   
-    ```  
+    ```sql
     ADD TARGET package0.asynchronous_file_target(  
        SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
@@ -170,7 +170,7 @@ ms.locfileid: "47834816"
   
 1.  您可以使用 sys.fn_xe_file_target_read_file 函數來檢視輸出。 若要這樣做，請執行下列查詢，使用您指定的路徑來取代檔案路徑：  
   
-    ```  
+    ```sql
     SELECT *, CAST(event_data as XML) AS 'event_data_XML'  
     FROM sys.fn_xe_file_target_read_file('c:\temp\ExtendedEventsStoredProcs*.xel', 'c:\temp\ExtendedEventsStoredProcs*.xem', NULL, NULL);  
   
@@ -181,7 +181,7 @@ ms.locfileid: "47834816"
   
      如需 sys.fn_xe_file_target_read_file 函數的詳細資訊，請參閱 [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)。  
   
-    ```  
+    ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
        DROP EVENT SESSION [session_name] ON SERVER;  
     CREATE EVENT SESSION [session_name]  
@@ -217,7 +217,7 @@ ms.locfileid: "47834816"
   
 ## <a name="example"></a>範例  
   
-```  
+```sql
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
    DROP EVENT SESSION [session_name] ON SERVER;  
 CREATE EVENT SESSION [session_name]  

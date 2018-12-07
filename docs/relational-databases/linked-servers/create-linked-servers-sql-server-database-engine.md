@@ -18,12 +18,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f057c890f5779bfb40591235fd8a870396ffeb90
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 68ffba6177eb86944ad62cc4876effdd7a63af8c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512923"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391242"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>建立連結的伺服器 (SQL Server Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "51512923"
   
 3.  在 [伺服器類型] 區域中，選取 [SQL Server] 表示連結的伺服器是 **SQL Server** 的另一個執行個體。  
   
-4.  在 **[安全性]** 頁面上，指定原始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線到連結的伺服器時將使用的安全性內容。 在使用者使用其網域登入進行連線的網域環境中，選取 **[使用登入的目前安全性內容建立]** 通常是最佳選擇。 當使用者使用 **[SQL Server]** 登入連線到原始 **[SQL Server]** 時，最佳選擇通常是選取 **[使用此安全性內容]**，然後提供所需的認證在連結的伺服器進行驗證。  
+4.  在 **[安全性]** 頁面上，指定原始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線到連結的伺服器時將使用的安全性內容。 在使用者使用其網域登入進行連線的網域環境中，選取 [使用登入的目前安全性內容建立] 通常是最佳選擇。 當使用者使用 **[SQL Server]** 登入連線到原始 **[SQL Server]** 時，最佳選擇通常是選取 **[使用此安全性內容]**，然後提供所需的認證在連結的伺服器進行驗證。  
   
      **本機登入**  
      指定可以連接到連結伺服器的本機登入。 本機登入可以是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入或 Windows 驗證登入。 使用這份清單可限制與特定登入的連接，或允許某些登入連接成不同的登入。  

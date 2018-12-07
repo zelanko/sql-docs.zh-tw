@@ -14,12 +14,12 @@ ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7001819d4603c392b034d54fffaee7b901400c20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b253e8b820652bf76771047e498dabd119bcb81
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779276"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396141"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>如何：使用資料表設計工具建立資料庫物件
 [SQL Server 物件總管] 中新的 [SQL Server] 節點不僅看上去非常類似於 SSMS，還能讓您透過作用有如 SSMS 對應介面的關聯式功能表建立新物件。  
@@ -59,14 +59,14 @@ ms.locfileid: "47779276"
     > [!WARNING]  
     > 從連接的資料庫編輯物件時，請不要將這些物件儲存到本機磁碟機。 若要將您的變更正確地儲存到資料庫，請遵循後續程序[如何：使用 Power Buffer 更新連接的資料庫](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)中的步驟。  
   
-6.  重複前面的步驟，建立另一個名為 **Customer** 的資料表。 這次使用資料行格線，將下列資料行加入至 Customer 資料表。 而且，記得要變更指令碼，讓資料表名稱是 `[dbo].[Customer]`。  
+6.  重複前面的步驟，建立另一個名為 **Customer** 的資料表。 這次使用資料行格線，將下列資料行加入至 Customer 資料表。 而且，記得要變更指令碼，讓資料表名稱為 `[dbo].[Customer]`。  
   
     |[屬性]|資料類型|**允許 Null**|  
     |--------|-------------|-------------------|  
     |Id|ssNoversion|取消選取|  
     |[屬性]|nvarchar (128)|取消選取|  
   
-7.  建立一個或多個名為 **Products** 的資料表。 使用資料行格線，將下列資料行加入至 Products 資料表。 而且，記得要變更指令碼，讓資料表名稱是 `[dbo].[Products]`。  
+7.  建立一個或多個名為 **Products** 的資料表。 使用資料行格線，將下列資料行加入至 Products 資料表。 而且，記得要變更指令碼，讓資料表名稱為 `[dbo].[Products]`。  
   
     |[屬性]|資料類型|**允許 Null**|  
     |--------|-------------|-------------------|  

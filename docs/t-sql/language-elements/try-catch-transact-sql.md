@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77b782d10d323ea7e548a149a873812359552345
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3374d7ae2f86ce27de46fad9027f78a040ca356b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674926"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545746"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,32 +61,32 @@ END CATCH
  這是任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
  *statement_block*  
- 在批次或 BEGIN…END 區塊中的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式群組。  
+ 在批次或 BEGIN...END 區塊中的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式群組。  
   
 ## <a name="remarks"></a>Remarks  
- TRY…CATCH 建構會擷取嚴重性高於 10 而未關閉資料庫連接的所有執行錯誤。  
+ TRY...CATCH 建構會擷取嚴重性高於 10 而未關閉資料庫連線的所有執行錯誤。  
   
  TRY 區塊後面必須緊接著相關聯的 CATCH 區塊。 在 END TRY 與 BEGIN CATCH 陳述式之間包含任何其他陳述式，將會產生語法錯誤。  
   
- TRY…CATCH 建構不能跨越多個批次。 TRY…CATCH 建構不能跨越多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式區塊。 例如，TRY…CATCH 建構不能跨越 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的兩個 BEGIN…END 區塊，也不能跨越 IF…ELSE 建構。  
+ TRY...CATCH 建構不能跨越多個批次。 TRY...CATCH 建構不能跨越多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式區塊。 例如，TRY...CATCH 建構不能跨越 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的兩個 BEGIN...END 區塊，也不能跨越 IF...ELSE 建構。  
   
  如果 TRY 區塊所含括的程式碼沒有錯誤，當 TRY 區塊中的最後一個陳述式完成執行時，控制權會傳給緊接在相關聯的 END CATCH 陳述式之後的陳述式。 如果 TRY 區塊所含括的程式碼發生錯誤，控制權會傳給相關聯的 CATCH 區塊中的第一個陳述式。 如果 END CATCH 陳述式是預存程序或觸發程序中的最後一個陳述式，控制權便會傳回呼叫預存程序或引發觸發程序的陳述式。  
   
  當 CATCH 區塊中的程式碼完成時，控制權會傳給緊接在 END CATCH 陳述式之後的陳述式。 CATCH 區塊擷取的錯誤不會傳回發出呼叫的應用程式。 如果有任何錯誤資訊必須傳回應用程式，CATCH 區塊中的程式碼便必須利用 SELECT 結果集或 RAISERROR 和 PRINT 陳述式之類的機制來執行這個動作。  
   
- TRY…CATCH 建構可以有巢狀結構。 TRY 區塊或 CATCH 區塊可以包含巢狀的 TRY…CATCH 建構。 例如，CATCH 區塊可以包含內嵌的 TRY…CATCH 建構，以便處理 CATCH 程式碼所發現的錯誤。  
+ TRY...CATCH 建構可以有巢狀結構。 TRY 區塊或 CATCH 區塊可以包含巢狀的 TRY...CATCH 建構。 例如，CATCH 區塊可以包含內嵌的 TRY...CATCH 建構，以便處理 CATCH 程式碼所發現的錯誤。  
   
- CATCH 區塊所發現的錯誤，會依照其他位置產生之錯誤的相同方式來處理。 如果 CATCH 區塊包含巢狀的 TRY…CATCH 建構，巢狀 TRY 區塊中的任何錯誤都會將控制權傳給巢狀的 CATCH 區塊。 如果沒有巢狀的 TRY…CATCH 建構，便會將錯誤傳回給呼叫者。  
+ CATCH 區塊所發現的錯誤，會依照其他位置產生之錯誤的相同方式來處理。 如果 CATCH 區塊包含巢狀的 TRY...CATCH 建構，巢狀 TRY 區塊中的任何錯誤都會將控制權傳給巢狀的 CATCH 區塊。 如果沒有巢狀的 TRY...CATCH 建構，便會將錯誤傳回給呼叫者。  
   
- TRY…CATCH 建構會從 TRY 區塊中的程式碼所執行的預存程序或觸發程序中，擷取尚未處理的錯誤。 另外，預存程序或觸發程序也可以包含它們自己的 TRY…CATCH 建構來處理它們的程式碼所產生的錯誤。 例如，當 TRY 區塊執行預存程序且在預存程序中發生錯誤時，便可以依照下列方式來處理錯誤：  
+ TRY...CATCH 建構會從 TRY 區塊中的程式碼所執行的預存程序或觸發程序中，擷取尚未處理的錯誤。 另外，預存程序或觸發程序也可以包含它們自己的 TRY...CATCH 建構來處理它們的程式碼所產生的錯誤。 例如，當 TRY 區塊執行預存程序且在預存程序中發生錯誤時，便可以依照下列方式來處理錯誤：  
   
--   如果預存程序未包含它自己的 TRY…CATCH 建構，錯誤會將控制權傳回給與包含 EXECUTE 陳述式之 TRY 區塊相關聯的 CATCH 區塊。  
+-   如果預存程序未包含它自己的 TRY...CATCH 建構，錯誤會將控制權傳回給與包含 EXECUTE 陳述式之 TRY 區塊相關聯的 CATCH 區塊。  
   
--   如果預存程序包含 TRY…CATCH 建構，錯誤會將控制權傳送給預存程序中的 CATCH 區塊。 當 CATCH 區塊程式碼完成時，控制權會傳回給緊接在呼叫預存程序的 EXECUTE 陳述式之後的陳述式。  
+-   如果預存程序包含 TRY...CATCH 建構，錯誤會將控制權傳送給預存程序中的 CATCH 區塊。 當 CATCH 區塊程式碼完成時，控制權會傳回給緊接在呼叫預存程序的 EXECUTE 陳述式之後的陳述式。  
   
  GOTO 陳述式無法用來進入 TRY 或 CATCH 區塊。 GOTO 陳述式可用來跳到相同 TRY 或 CATCH 區塊內的標籤，或離開 TRY 或 CATCH 區塊。  
   
- 在使用者定義函數內，無法使用 TRY…CATCH 建構。  
+ 在使用者定義函數內，無法使用 TRY...CATCH 建構。  
   
 ## <a name="retrieving-error-information"></a>擷取錯誤資訊  
  在 CATCH 區塊的範圍內，下列系統函數可用來取得造成執行 CATCH 區塊之錯誤的相關資訊：  
@@ -103,7 +103,7 @@ END CATCH
   
 -   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) 會傳回錯誤訊息的完整文字。 文字包括提供給任何可替代參數的值，例如，長度、物件名稱或次數。  
   
- 如果是在 CATCH 區塊範圍之外呼叫這些函數，它們會傳回 NULL。 這些函數可以從 CATCH 區塊範圍內的任何位置擷取錯誤資訊。 例如，下列指令碼顯示包含錯誤處理函數的預存程序。 在 `CATCH`建構的 `TRY…CATCH`區塊中，會呼叫預存程序，並傳回錯誤的相關資訊。  
+ 如果是在 CATCH 區塊範圍之外呼叫這些函數，它們會傳回 NULL。 這些函數可以從 CATCH 區塊範圍內的任何位置擷取錯誤資訊。 例如，下列指令碼顯示包含錯誤處理函數的預存程序。 在 `CATCH`建構的 `TRY...CATCH`區塊中，會呼叫預存程序，並傳回錯誤的相關資訊。  
   
 ```sql  
 -- Verify that the stored procedure does not already exist.  
@@ -135,18 +135,18 @@ END CATCH;
   
  ERROR\_\* 函數也可在[原生編譯之預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)的 `CATCH` 區塊中運作。  
   
-## <a name="errors-unaffected-by-a-trycatch-construct"></a>不受 TRY…CATCH 建構影響的錯誤  
- TRY…CATCH 建構不會擷取下列狀況：  
+## <a name="errors-unaffected-by-a-trycatch-construct"></a>不受 TRY...CATCH 建構影響的錯誤  
+ TRY...CATCH 建構不會擷取下列狀況：  
   
 -   嚴重性為 10 或以下的警告或參考訊息。  
   
--   嚴重性為 20 或以上的錯誤，它們會停止工作階段的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 工作處理。 如果發生嚴重性為 20 或以上的錯誤，但資料庫連接並未中斷，TRY…CATCH 仍會處理這個錯誤。  
+-   嚴重性為 20 或以上的錯誤，它們會停止工作階段的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 工作處理。 如果發生嚴重性為 20 或以上的錯誤，且資料庫連線並未中斷，TRY...CATCH 會處理這個錯誤。  
   
 -   用戶端中斷要求或中斷用戶端連接之類的注意事項。  
   
 -   系統管理員利用 KILL 陳述式來結束工作階段。  
   
- 當 TRY…CATCH 建構的相同執行層級發生下列錯誤類型時，CATCH 區塊不會處理這些錯誤：  
+ 當 TRY...CATCH 建構的相同執行層級發生下列錯誤類型時，CATCH 區塊不會處理這些錯誤：  
   
 -   造成無法執行批次的編譯錯誤，如語法錯誤。  
   
@@ -154,9 +154,9 @@ END CATCH;
   
  這些錯誤會傳回執行批次、預存程序或觸發程序的層級。  
   
- 如果在 TRY 區塊內，在編譯或陳述式層級重新編譯期間，較低的執行層級發生錯誤 (例如，執行 sp_executesql 或使用者定義預存程序時)，發生錯誤的層級會低於 TRY CATCH 建構，並由相關聯的 CATCH 區塊來處理。  
+ 如果在 TRY 區塊內，在編譯或陳述式層級重新編譯期間，較低的執行層級發生錯誤 (例如，執行 sp_executesql 或使用者定義預存程序時)，發生錯誤的層級會低於 TRY...CATCH 建構，並由相關聯的 CATCH 區塊來處理。  
   
- 下列範例顯示 `SELECT` 陳述式所產生的物件名稱解析錯誤，是在預存程序內執行相同的 `TRY…CATCH` 陳述式時，由 `CATCH` 區塊來擷取，而不是由 `SELECT` 建構來擷取。  
+ 下列範例顯示 `SELECT` 陳述式所產生的物件名稱解析錯誤，是在預存程序內執行相同的 `TRY...CATCH` 陳述式時，由 `CATCH` 區塊來擷取，而不是由 `SELECT` 建構來擷取。  
   
 ```sql  
 BEGIN TRY  
@@ -171,9 +171,9 @@ BEGIN CATCH
 END CATCH  
 ```  
   
- 此時不會擷取錯誤，控制權會將 `TRY…CATCH` 建構交給下一個較高的層級。  
+ 此時不會擷取錯誤，控制權會將 `TRY...CATCH` 建構交給下一個較高的層級。  
   
- 在預存程序內執行 `SELECT` 陳述式，會使錯誤發生在低於 `TRY` 區塊的層級。 這個錯誤由 `TRY…CATCH` 建構來處理。  
+ 在預存程序內執行 `SELECT` 陳述式，會使錯誤發生在低於 `TRY` 區塊的層級。 這個錯誤由 `TRY...CATCH` 建構來處理。  
   
 ```sql  
 -- Verify that the stored procedure does not exist.  
@@ -205,7 +205,7 @@ END CATCH;
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-using-trycatch"></a>A. 使用 TRY…CATCH  
+### <a name="a-using-trycatch"></a>A. 使用 TRY...CATCH  
  下列範例顯示將會產生除以零的錯誤之 `SELECT` 陳述式。 這個錯誤會使執行動作跳到相關聯的 `CATCH` 區塊。  
   
 ```sql  
@@ -225,8 +225,8 @@ END CATCH;
 GO  
 ```  
   
-### <a name="b-using-trycatch-in-a-transaction"></a>B. 在交易中使用 TRY…CATCH  
- 下列範例顯示 `TRY…CATCH` 區塊在交易內運作的方式。 `TRY` 區塊內的陳述式產生條件約束違規錯誤。  
+### <a name="b-using-trycatch-in-a-transaction"></a>B. 在交易中使用 TRY...CATCH  
+ 下列範例顯示 `TRY...CATCH` 區塊在交易內運作的方式。 `TRY` 區塊內的陳述式產生條件約束違規錯誤。  
   
 ```sql  
 BEGIN TRANSACTION;  
@@ -254,8 +254,8 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-### <a name="c-using-trycatch-with-xactstate"></a>C. 使用 TRY…CATCH 搭配 XACT_STATE  
- 下列範例顯示如何利用 `TRY…CATCH` 建構來處理交易內所發生的錯誤。 `XACT_STATE` 函數會判斷是否應該認可或回復交易。 在此範例中，`SET XACT_ABORT` 是 `ON`。 當發生條件約束違規錯誤時，會使交易成為無法認可。  
+### <a name="c-using-trycatch-with-xactstate"></a>C. 使用 TRY...CATCH 搭配 XACT_STATE  
+ 下列範例顯示如何利用 `TRY...CATCH` 建構來處理交易內所發生的錯誤。 `XACT_STATE` 函數會判斷是否應該認可或回復交易。 在此範例中，`SET XACT_ABORT` 是 `ON`。 當發生條件約束違規錯誤時，會使交易成為無法認可。  
   
 ```sql  
 -- Check to see whether this stored procedure exists.  
@@ -323,7 +323,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-trycatch"></a>D. 使用 TRY…CATCH  
+### <a name="d-using-trycatch"></a>D. 使用 TRY...CATCH  
  下列範例顯示將會產生除以零的錯誤之 `SELECT` 陳述式。 這個錯誤會使執行動作跳到相關聯的 `CATCH` 區塊。  
   
 ```sql  

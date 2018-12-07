@@ -15,12 +15,12 @@ ms.assetid: 04c02af0-5243-4d53-b35a-ddc4113ee8f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b18bd7b184523734e98ea49c96080856ccfe60a4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 43e7e88c10ffa05036e4a89d32ac6fa9021142f3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702746"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530570"
 ---
 # <a name="extended-static-geometry-methods"></a>擴充的靜態幾何方法
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51702746"
   
  [OGC 規格，簡單特徵存取第一部 - 常見架構](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
- [OGC 規格，簡單特徵存取第二部 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93628)  
+ [OGC 規格，簡易功能存取第二部分 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93628) \(英文\)  
   
  [OGC 規格，地理標記語言](https://go.microsoft.com/fwlink/?LinkId=93629) \(英文\)  
   

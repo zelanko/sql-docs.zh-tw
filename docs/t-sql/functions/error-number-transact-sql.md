@@ -23,17 +23,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c22f55d90fe484e0c9e16f74228210f75a88a3d
-ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
+ms.openlocfilehash: 690a972cb72fd4b2d5d4aa80e1fda36a2e7b03d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49359277"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541073"
 ---
 # <a name="errornumber-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-此函式會傳回造成執行 TRY…CATCH 建構的 CATCH 區塊之錯誤的錯誤號碼。  
+此函式會傳回造成執行 TRY...CATCH 建構的 CATCH 區塊之錯誤的錯誤號碼。  
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

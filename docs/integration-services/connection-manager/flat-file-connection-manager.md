@@ -23,12 +23,12 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1570c643375d9ca7b327b7e5f630657ff9aeaeed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6a920aa5f31bb18d717ea3da8edd328bd398a92
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694977"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420539"
 ---
 # <a name="flat-file-connection-manager"></a>一般檔案連接管理員
   「一般檔案」連接管理員可讓封裝存取一般檔案中的資料。 例如，「一般檔案」來源與目的地可以使用「一般檔案」連接管理員來擷取並載入資料。  

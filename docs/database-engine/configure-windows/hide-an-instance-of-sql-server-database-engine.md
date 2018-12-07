@@ -14,12 +14,12 @@ ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5336a318a5384402d10e44b905446e29b0b71aec
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9d6d01272a88f4a529e55959e12d87dd33c01cd5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606528"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406185"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>隱藏 SQL Server Database Engine 的執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

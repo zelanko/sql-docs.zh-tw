@@ -15,12 +15,12 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9fe9784b5d15b50403508142f934e3c09b3e7c5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d48c5860c097b8d027c23ead603094f9637d8368
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748826"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513917"
 ---
 # <a name="add-publisher"></a>加入發行者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,15 +30,15 @@ ms.locfileid: "47748826"
  **[加入]**  
  按一下即可選取要加入的發行者類型，可用來啟動 **[連接到伺服器]** 對話方塊。 選項包括：  
   
--   **加入 SQL Server 發行者...**  
+-   **新增 SQL Server 發行者...**  
   
      使用 **[連接到伺服器]** 對話方塊連接到發行者。  
   
--   **加入 Oracle 發行者...**  
+-   **新增 Oracle 發行者...**  
   
      使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor associated with the Oracle Publisher using the **Connect to Server** dialog box.  
   
--   **指定散發者，並加入其發行者...**  
+-   **指定散發者，並新增其發行者...**  
   
      使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [連接到伺服器] **對話方塊，連接到與一或多個發行者相關聯的** 散發者。  
   

@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4e48ba424b9c9c8ef56d1280d774c7ee3120ffe
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4eb0d351eeb3555f9f0162670209a9c15af6d964
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698226"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531495"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 說明與意見反應
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,6 +28,12 @@ SQL Server 工程小組密切關注 SQL Server [User Voice](https://feedback.azu
 
 ## <a name="i-want-to-make-a-suggestion-about-sql-server-management-studio"></a>我想要提供 SQL Server Management Studio 的相關建議
 SQL Server Management Studio (SSMS) 小組也會密切監視 SQL Server [User Voice](https://feedback.azure.com/forums/908035-sql-server)因此，如果您有任何想要回報的問題或建議，User Voice 是最佳選擇。 
+
+## <a name="i-want-to-access-the-sql-server-technical-documentation-offline"></a>我想要離線存取 SQL Server 技術文件
+如果您想要在離線系統上檢視 SQL Server 文件，您有兩個選項。 您可以在 SQL Server 技術文件中建立 PDF，或使用 [SQL Server 離線說明檢視器](sql-server-help-installation.md)下載離線內容。 
+
+如果您想要建立 PDF，請按一下位於每個目錄底部的 [Download PDF] \(下載 PDF\) 連結。
+![下載 PDF](media/sql-server-get-help/download-pdf.png)
 
 ## <a name="i-want-to-contact-microsoft-support"></a>我想要連絡 Microsoft 支援服務
 如果您是商務使用者，請檢閱[支援服務選項](https://support.microsoft.com/gp/support-options-for-business?forceorigin=esmc)。
@@ -77,12 +83,14 @@ SQL Server Management Studio (SSMS) 小組也會密切監視 SQL Server [User Vo
 - [MashaMSFT Twitter](https://twitter.com/mashamsft)
 - [MikeRayMSFT Twitter](https://twitter.com/mncray)
 
+## <a name="i-want-to-contribute-to-sql-server-documentation"></a>我想要參與 SQL Server 文件
+
+###<a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![編輯內容](../includes/media/edit-topic-pencil.png) 編輯內容
+您是否發現我們文件的問題？ 或者，您是否有任何文章可改善我們的文件？ 您可以自行編輯 docs.microsoft.com 上找到的內容。 如果您這樣做，不只會改善我們的文件，而且您也會成為該頁面的貢獻者！ 如需詳細資訊，請參閱 [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs)。 
+
+所有的公開文章都會經過 SQL 內容小組的審查，以確保技術方面的正確性與一致性。 
+
 ## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>我想要提供 SQL 文件內容的意見反應
-
-### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![編輯內容](../includes/media/edit-topic-pencil.png) 編輯內容
-您是否發現我們文件的問題？ 您知道您可以自己編輯內容嗎？ 如果您這樣做，不只會改善我們的文件，而且您也會成為該頁面的貢獻者！ 如需詳細資訊，請參閱 [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs)。 
-
-### <a name="surveys"></a>問卷
 如果您有空閒時間，並希望分享您對 SQL Docs 體驗的一些看法，請參加我們的調查！ 可從 [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey) 找到，大約需要 10-15 分鐘。 
 
 如果您有想與 SQL 內容小組分享的事項、想法、建議、意見反應，任何事情都可以！ 請前往 [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback)。 

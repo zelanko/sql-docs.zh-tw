@@ -21,12 +21,12 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2504bc45e358ebbf35b279e07be511f7a6041956
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2bb26e75401f7dfd93e23c197a8e1419ad21cb2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641285"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528448"
 ---
 # <a name="send-mail-task"></a>傳送郵件工作
   傳送郵件工作會傳送電子郵件訊息。 藉由使用傳送郵件工作，封裝即可在封裝工作流程中的工作成功或失敗時傳送訊息，或傳送回應封裝在執行階段所引發事件的訊息。 例如，工作可通知資料庫管理員「備份資料庫」工作成功或失敗。  
@@ -146,7 +146,7 @@ ms.locfileid: "51641285"
   
 #### <a name="messagesourcetype--direct-input"></a>MessageSourceType = 直接輸入  
  **MessageSource**  
- 輸入訊息文字或按一下瀏覽按鈕 (…)，然後在 [訊息來源] 對話方塊中輸入訊息。  
+ 輸入訊息文字或按一下瀏覽按鈕 ([...])，然後在 [訊息來源] 對話方塊中輸入訊息。  
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = 檔案連接  
  **MessageSource**  
@@ -156,7 +156,7 @@ ms.locfileid: "51641285"
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = 變數  
  **MessageSource**  
- 在清單中選取變數，或按一下 [\<新增變數...>]，以建立新的變數。  
+ 在清單中選取變數，或按一下 [\<新增變數...>] 建立新的變數。  
   
  **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

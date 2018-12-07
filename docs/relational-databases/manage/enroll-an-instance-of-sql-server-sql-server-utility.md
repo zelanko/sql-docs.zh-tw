@@ -21,12 +21,12 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ff7bffcb3a31a697300d98e0de03a7f3e3111701
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f928fcfc873e1a5e6209338b075a9df0ff543691
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681336"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509786"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>註冊 SQL Server 的執行個體 (SQL Server 公用程式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,12 +89,12 @@ ms.locfileid: "51681336"
 -   [正在註冊 SQL Server 的執行個體](#Enrolling)  
   
 ##  <a name="Welcome"></a> 註冊執行個體精靈簡介  
- 若要啟動此精靈，請在公用程式控制點上展開 [公用程式總管] 樹狀目錄，然後以滑鼠右鍵按一下 [受管理的執行個體]，並選取 [新增受管理的執行個體...]。  
+ 若要啟動此精靈，請在公用程式控制點上展開 [公用程式總管] 樹狀目錄，以滑鼠右鍵按一下 [受控執行個體]，然後選取 [新增受控執行個體...]。  
   
  若要繼續進行，請按 **[下一步]**。  
   
 ##  <a name="Instance_name"></a> 指定 SQL Server 的執行個體  
- 若要從連接對話方塊選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請按一下 [連接...]。 使用以下格式提供電腦名稱和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱：ComputerName\InstanceName。 如需詳細資訊，請參閱[連接到伺服器 &#40;Database Engine&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
+ 若要從連接對話方塊選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請按一下 [連接...]。使用以下格式提供電腦名稱和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱：ComputerName\InstanceName。 如需詳細資訊，請參閱[連接到伺服器 &#40;Database Engine&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
   
  若要繼續進行，請按 **[下一步]**。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "51681336"
 >  如需對這個失敗進行疑難排解的詳細資訊，請參閱 [疑難排解 SQL Server 公用程式](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)。  
   
 > [!IMPORTANT]  
->  請勿在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體上變更「公用程式資訊」收集組的任何屬性，也請勿手動開啟/關閉資料收集，因為資料收集是由公用程式代理程式作業所控制。  
+>  請勿在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的受控執行個體上變更「公用程式資訊」收集組的任何屬性，也請勿手動開啟/關閉資料收集，因為資料收集是由公用程式代理程式作業所控制。  
   
  完成 [註冊執行個體] 精靈之後，請在 SSMS 的**公用程式總管**瀏覽窗格中，按一下 [受管理的執行個體] 節點。 註冊的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會顯示在 [公用程式總管內容] 窗格中的清單檢視內。  
   

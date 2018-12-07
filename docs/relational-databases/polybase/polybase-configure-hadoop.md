@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e899430e196563d4477ae4cbe072cdc1078cd471
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a03177d0b78a6347c4438b8fe1f67a7d00c057ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606558"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522362"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>設定 PolyBase 存取 Hadoop 中的外部資料
 
@@ -198,7 +198,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 ```sql
 -- Enable INSERT into external table  
-sp_configure ‘allow polybase export’, 1;  
+sp_configure 'allow polybase export', 1;  
 reconfigure  
   
 -- Create an external table.

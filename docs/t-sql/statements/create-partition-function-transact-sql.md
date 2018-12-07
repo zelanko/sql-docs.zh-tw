@@ -1,7 +1,7 @@
 ---
 title: CREATE PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -28,12 +28,12 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ac8e31a6f918b79dbc43294e3f617630fa79ba50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa09a229b3cff08f452417a89bbc2ba357a502b0
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755356"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191011"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,9 +64,11 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  針對每個資料分割資料表的資料分割或使用 *partition_function_name* 的索引指定界限值。 如果 *boundary_value* 為空白，資料分割函數會使用 *partition_function_name*，將整個資料表或索引對應到單一資料分割。 只能使用 CREATE TABLE 或 CREATE INDEX 陳述式中所指定的一個資料分割資料行。  
   
  *boundary_value* 是可以參考變數的常數運算式。 其中包括使用者自訂類型變數，或函數和使用者自訂函數。 它不能參考 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。 *boundary_value* 必須符合或可以隱含地轉換成 *input_parameter_type* 中提供的資料類型，且在隱含地轉換期間，不能因為值的大小和小數位數不符合對應 *input_parameter_type* 的大小和小數位數而被截斷。  
-  
+
 > [!NOTE]  
->  如果 *boundary_value* 由 **datetime** 或 **smalldatetime** 常值組成，則評估這些常值時會假設 us_english 為工作階段語言。 這個行為已被取代。 為了確定使用所有工作階段語言時資料分割函數定義的行為都可如所預期，建議您使用所有語言設定都會解譯成相同內容的常數，例如 yyyymmdd 格式；或是將常值明確轉換成特定樣式。 若要判斷伺服器的工作階段語言，請執行 `SELECT @@LANGUAGE`。  
+>  如果 *boundary_value* 由 **datetime** 或 **smalldatetime** 常值組成，則評估這些常值時會假設 us_english 為工作階段語言。 這個行為已被取代。 為了確定使用所有工作階段語言時資料分割函數定義的行為都可如所預期，建議您使用所有語言設定都會解譯成相同內容的常數，例如 yyyymmdd 格式；或是將常值明確轉換成特定樣式。 若要判斷伺服器的工作階段語言，請執行 `SELECT @@LANGUAGE`。
+>
+> 如需詳細資訊，請參閱[將常值日期字串轉換成 DATE 值的非決定性轉換](../data-types/nondeterministic-convert-date-literals.md)。
   
  *...n*  
  指定 *boundary_value* 所提供的數目值，但不可超過 14,999。 所建立的資料分割數目等於 *n* + 1。 這些值不必依照順序列出。 如果值沒有排序，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將它們排序、建立函數，以及傳回未依序提供值的警告。 如果 *n* 包括任何重複的值，「資料庫引擎」會傳回錯誤。  

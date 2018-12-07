@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da96a86f4e25f6397af5cbba3423bc31514f7ca7
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 42bc4465080cacee930c0815ae587f4cafd2722a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702889"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512285"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "51702889"
   
 4.  以滑鼠右鍵按一下您想要編輯其排程的作業，然後選取 [屬性]。  
   
-5.  在 [作業屬性 - _job\_name_] 對話方塊的 [選取頁面] 下，選取 [排程]。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性 - 新增作業 &#40;排程頁面&#41;](../../ssms/agent/job-properties-new-job-schedules-page.md)。  
+5.  在 [作業屬性 -_job\_name_] 對話方塊的 [選取頁面] 下，選取 [排程]。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性 - 新增作業 &#40;排程頁面&#41;](../../ssms/agent/job-properties-new-job-schedules-page.md)。  
   
 6.  完成後，請按一下 **[確定]**。  
   

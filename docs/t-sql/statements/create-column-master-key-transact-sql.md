@@ -27,12 +27,12 @@ ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 56af3e381d8466f7afe68a5a1e77584511de5422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81fd7b18058430b3132471f67a8b94e4444873e7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609606"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393041"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

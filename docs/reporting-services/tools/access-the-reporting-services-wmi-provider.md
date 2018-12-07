@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f793de9e36968021155387ce0f926899f81f753d
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: bf1a42cb16c499490bd7ea1ff5657e8dff58bcde
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027777"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524424"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>存取 Reporting Services WMI 提供者
   Reporting Services WMI 提供者會公開兩個 WMI 類別，可透過指令碼管理原生模式報表伺服器執行個體：  
@@ -41,25 +41,25 @@ ms.locfileid: "50027777"
  若要列出 WMI 命名空間路徑中報表伺服器執行個體的編碼執行個體名稱，請使用下列 PowerShell 命令：  
   
 ```  
-PS C:\windows\system32> Get-WmiObject –namespace root\Microsoft\SqlServer\ReportServer  –class __Namespace –ComputerName hostname | select Name  
+PS C:\windows\system32> Get-WmiObject -namespace root\Microsoft\SqlServer\ReportServer  -class __Namespace -ComputerName hostname | select Name  
 ```  
   
 ## <a name="access-the-wmi-classes-using-powershell"></a>使用 PowerShell 存取 WMI 類別  
  若要存取 WMI 類別，請執行下列命令：  
   
 ```  
-PS C:\windows\system32> Get-WmiObject –namespace <namespacename> –class <classname> –ComputerName <hostname>  
+PS C:\windows\system32> Get-WmiObject -namespace <namespacename> -class <classname> -ComputerName <hostname>  
 ```  
   
  例如，若要存取主機 myrshost 的預設報表伺服器執行個體上的 MSReportServer_ConfigurationSetting 類別，請執行下列命令。 預設報表伺服器執行個體必須安裝在 myrshost 上，這個命令才會成功。  
   
 ```  
-PS C:\windows\system32> Get-WmiObject –namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLSERER\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost  
+PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLSERER\v11\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost  
 ```  
   
  這個命令語法會輸出所有類別屬性名稱和值。 請注意，即使您是存取預設報表伺服器執行個體 (RS_MSSQLSERVER) 的命名空間中的類別，仍會傳回 MSReportServer_ConfigurationSetting 類別的所有執行個體。 例如，如果 myrshost 上安裝了預設報表伺服器執行個體和名為 SHAREPOINT 的具名報表伺服器執行個體，則這個命令將傳回兩個 WMI 物件，並輸出這兩個報表伺服器執行個體的屬性名稱和值。  
   
- 若要在傳回多個執行個體時傳回特定類別的執行個體，請使用 –Filter 參數，依據擁有唯一值的屬性 (例如 InstanceName) 篩選結果。 例如，若只要傳回預設報表伺服器執行個體的 WMI 物件，請使用下列命令：  
+ 若要在傳回多個執行個體時傳回特定類別的執行個體，請使用 -Filter 參數，依據擁有唯一值的屬性 (例如 InstanceName) 篩選結果。 例如，若只要傳回預設報表伺服器執行個體的 WMI 物件，請使用下列命令：  
   
 ```  
 PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v13\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost -filter "InstanceName='MSSQLSERVER'"  

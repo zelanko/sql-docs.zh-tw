@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ebc48fe2725fa767c6ba92ee6eee5acdaf8f4ba1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e34b5bd595f70dc18b2e7ba447a689d6e1791367
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747076"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390291"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>第 3 課：使用報表精靈設計父報表
 在您建立父報表的資料連接和資料表之後，下一步是要使用報表設計師中的 [報表精靈] 設計父報表。 如需報表設計師的詳細資訊，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)。  

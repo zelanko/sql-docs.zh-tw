@@ -16,12 +16,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7de5dfc840c02faac0d915dc75b83ab82fd489fe
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 16688920d157a9f0fcbd68a12b3112418a81237e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031167"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511665"
 ---
 # <a name="data-alert-designer"></a>資料警示設計工具
 
@@ -82,9 +82,9 @@ ms.locfileid: "50031167"
 ### <a name="rules-and-clauses"></a>規則和子句  
  資料變更的範圍和警示規則會定義觸發警示的資料變更。 資料變更的範圍如下：  
   
--   **任何資料**- 至少有一個資料值符合條件所指定的規則。  
+-   **任何資料** - 至少有一個資料值符合條件所指定的規則。  
   
--   **沒有任何資料**- 沒有任何資料值符合條件所指定的規則。  
+-   **沒有任何資料** - 沒有任何資料值符合條件所指定的規則。  
   
  規則可包含零個、一個或多個子句。 多項規則會藉由 AND 邏輯運算子結合。 如果資料行為字串資料類型，則規則可以包含藉由 OR 運算子組合的多個子句。 以下說明僅使用一個子句的基本規則，使用 AND 運算子組合的多項規則，以及擁有一個或多個 OR 子句的多項規則。  
   

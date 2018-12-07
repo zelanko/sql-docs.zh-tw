@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: 897f8affc74e764b19457aec84bfff21b867895e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7dcb9f3efe8ffcc0e1dc2dbd0ff800f67f82d499
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658518"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506345"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移轉後驗證和最佳化指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ ms.locfileid: "51658518"
 3. 推斷出下列結構的效益：
   -   作為述詞使用的函數；
   -   萬用字元搜尋；
-  -   根據單欄式資料的複雜運算式 – 評估是否需要改為建立可建立索引的保存計算資料行；
+  -   根據單欄式資料的複雜運算式 - 評估是否需要改為建立可建立索引的保存計算資料行；
 
 > [!NOTE] 
 > 上述所有作業皆可以程式設計方式完成。

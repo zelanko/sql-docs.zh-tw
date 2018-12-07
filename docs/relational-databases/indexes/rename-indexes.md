@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7547210622ca3a1bf9aa33ffb4b6d143b4a943d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b61ab4da7de38c045fe222a6c0784b7032658ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653638"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511457"
 ---
 # <a name="rename-indexes"></a>重新命名索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47653638"
   
 -   **使用下列方法重新命名索引：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "47653638"
   
 7.  按一下 [ **關閉**]。  
   
-8.  在 [檔案] 功能表上，按一下 [儲存 <資料表名稱>]。  
+8.  在 [檔案] 功能表上，按一下 [儲存 _table_name_]。  
   
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>使用物件總管重新命名索引  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47653638"
   
 5.  以滑鼠右鍵按一下您要重新命名的索引，然後選取 [重新命名]。  
   
-6.  輸入索引的新名稱，再按 ENTER 鍵。  
+6.  鍵入索引的新名稱，然後按 Enter 鍵。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

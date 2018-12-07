@@ -14,12 +14,12 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff152320679a4a315da2630ecb426ce9ba2cc7b3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 374b59460313afaaeb670c8926f215580f7d11de
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641145"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534386"
 ---
 # <a name="change-data-capture-ssis"></a>異動資料擷取 (SSIS)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，異動資料擷取會針對將累加式載入從來源資料表有效執行到資料超市和資料倉儲的挑戰，提供有效的方案。  
@@ -119,6 +119,6 @@ ms.locfileid: "51641145"
 -   [執行多個資料表的累加式載入](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
 ## <a name="related-content"></a>相關內容  
- sqlblog.com 上的部落格文章： [SSIS Design Pattern – Incremental Load](https://go.microsoft.com/fwlink/?LinkId=217679)(SSIS 設計模式 - 累加式載入)  
+ sqlblog.com 上的部落格文章：[SSIS Design Pattern – Incremental Load](https://go.microsoft.com/fwlink/?LinkId=217679)(SSIS 設計模式 - 累加式載入)  
   
   

@@ -1,22 +1,22 @@
 ---
 title: 將 SQL Server Reporting Services 報表檢視器網頁組件新增至 SharePoint 頁面 | Microsoft Docs
-ms.date: 09/26/2017
+ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9e8950edd84f57e4e751533799faba451234ca0
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 39379fa6d6471f9d0d624dbbd2b05331c7e7a36a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813021"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398344"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>將 SQL Server Reporting Services 報表檢視器網頁組件新增至 SharePoint 頁面
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 將報表檢視器網頁組件新增至 SharePoint 網頁，從 SQL Server Reporting Services 或 Power BI 報表伺服器顯示報表。
 
@@ -46,17 +46,17 @@ ms.locfileid: "51813021"
 
     ![新增報表檢視器網頁組件。](media/sharepoint-report-viewer-web-part.png)
 
-    一開始可能會出現錯誤。 之所以會出現錯誤，是因為預設報表伺服器的 URL 設定為 *https://localhost*，而該位置可能無法取得報表伺服器。
+    您可能在一開始就看到錯誤。 之所以會出現錯誤，是因為預設報表伺服器的 URL 設定為 *https://localhost*，而該位置可能無法取得報表伺服器。
 
 ## <a name="configure-the-report-viewer-web-part"></a>設定報表檢視器網頁組件
 
-若要設定網頁組件指向特定的報表，請執行下列作業。
+若要設定網頁組件指向特定報表，請執行下列步驟。
 
 1. 編輯 SharePoint 頁面時，請選取網頁組件右上角的向下箭號，然後選取 [編輯網頁組件]。
 
     ![從 [網頁組件] 下拉式清單編輯網頁。](media/sharepoint-edit-web-part.png)
 
-2. 請輸入裝載報表之報表伺服器的**報表伺服器 URL**。 看起來應該類似於 *https://myrsserver/reportserver*。
+2. 請輸入裝載報表之報表伺服器的**報表伺服器 URL**。 URL 看起來應該類似 *https://myrsserver/reportserver*。
 
 3. 輸入您想要在網頁組件內顯示的報表名稱與路徑。 它看起來會類似 */AdventureWorks Sample Reports/Company Sales*。 在此範例中，報表 *Company Sales* 位在 *AdventureWorks 範例報表*資料夾中。
 

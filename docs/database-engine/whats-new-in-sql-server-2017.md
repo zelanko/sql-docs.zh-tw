@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e00e45f15923955d7ae4e65e8d39e92121a33a1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a0c98bc640a28642277ad16ca3ec209ddaaf0c3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838676"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541399"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>資料庫引擎的新功能 - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47838676"
 - 記憶體最佳化資料表上非叢集索引建置的效能增強。 資料庫復原期間 MEMORY_OPTIMIZED 資料表的 bwtree (非叢集) 索引建置效能已大幅最佳化。 這項改善可在使用非叢集索引時大幅減少資料庫復原時間。  
 - [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) 有三個新的資料行：socket_count、cores_per_socket、numa_node_count。 這在您於 VM 中執行伺服器的情況下很有用處，因為超出 NUMA 可能會造成過度認可的主機，並於最終轉變成效能問題。
 - [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) 中引進新的資料行 modified_extent_page_count\,，以追蹤資料庫之每個資料庫檔案中的差異變更。 新的資料行 modified_extent_page_count 可讓您建置智慧型備份解決方案，以在資料庫中的百分比變更頁面低於臨界值 (即 70-80%) 時執行差異備份，否則請執行完整資料庫備份。
-- SELECT INTO … ON FileGroup - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) 現在使用 SELECT INTO TSQL 語法中所新增的 **ON** 關鍵字支援，來支援將資料表載入使用者預設檔案群組以外的檔案群組。
+- SELECT INTO ...ON FileGroup - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) 現在使用 SELECT INTO TSQL 語法中所新增的 **ON** 關鍵字支援，來支援將資料表載入使用者預設檔案群組以外的檔案群組。
 - Tempdb 安裝程式改善 - 安裝程式可讓您指定每個檔案最多 **256 GB (262,144 MB)** 的初始 tempdb 檔案大小，並出現警告向客戶提醒檔案大小是否設定為大於 1 GB 的值，以及是否未啟用 IFI。 務必了解這表示未啟用檔案立即初始化 (IFI)，其中，根據所指定 tempdb 資料檔案的初始大小，安裝時間可能會以指數方式大幅增加。 IFI 不適用於交易記錄大小，因此指定交易記錄的較大值一律可以增加安裝時間，但會在安裝期間啟動 tempdb，而與 SQL Server 服務帳戶的 IFI 設定無關。
 - 已引進新的 dmv [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md)，以追蹤每個資料庫的版本存放區使用量。 這個新的 dmv 適用於監視 tempdb 的版本存放區使用量，可讓您根據每個資料庫的版本存放區使用量需求來主動規劃 tempdb 大小，而且在執行實際伺服器上執行它不會有任何效能損失或額外負荷。
 - 引進新的 DMF [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)，以公開與 DBCC LOGINFO 類似的 VLF 資訊來監視、警示以及避免因客戶所遇到之 VLF 數目、VLF 大小或 shrinkfile 問題所造成的潛在交易記錄問題。
@@ -56,18 +56,18 @@ ms.locfileid: "47838676"
 - 隨 SQL Server Management Studio 16.4 版發行的 Database Tuning Advisor (DTA)，在分析 SQL Server 2016 和更新版本時會有額外選項。    
    - 提升效能。 如需詳細資訊，請參閱[使用 Database Engine Tuning Advisor (DTA) 的建議改進效能](../relational-databases/performance/performance-improvements-using-dta-recommendations.md)。
    - `-fc` 選項可允許資料行存放區索引的建議。 如需詳細資訊，請參閱 [DTA 公用程式](../tools/dta/dta-utility.md)和 [Database Engine Tuning Advisor (DTA) 中的資料行存放區索引建議](../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)。  
-   - `-iq` 選項可允許 DTA 檢閱查詢存放區的工作負載。 如需詳細資訊，請參閱[使用查詢存放區的工作負載調整資料庫](../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。  
+   - `-iq` 選項可允許 DTA 檢閱查詢存放區的工作負載。 如需詳細資訊，請參閱 [使用查詢存放區的工作負載調整資料庫](../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。  
 - 針對記憶體內部功能，提供記憶體最佳化資料表和原生編譯函式的其他增強。 如需說明這些增強的程式碼範例，請參閱[使用記憶體內部 OLTP 最佳化 JSON 處理](../relational-databases/json/optimize-json-processing-with-in-memory-oltp.md)。
     - 支援記憶體最佳化資料表中的計算資料行，包括計算資料行的索引。
     - 完整支援原生編譯模組及 CHECK 條件約束中的 JSON 函數。  
     - 原生編譯模組中的`CROSS APPLY` 運算子。   
 - 新增了字串函數 [CONCAT_WS](../t-sql/functions/concat-ws-transact-sql.md)、[TRANSLATE](../t-sql/functions/translate-transact-sql.md) 及 [TRIM](../t-sql/functions/trim-transact-sql.md)。   
 - [STRING_AGG](../t-sql/functions/string-agg-transact-sql.md) 函數現在支援 `WITHIN GROUP` 子句。
-- 新增了兩種新的日文定序系列 (Japanese_Bushu_Kakusu_140 和 Japanese_XJIS_140)，並新增區分變體選取器 (_VSS) 定序選項供這些新的日文定序使用。 此外，所有新的定序會自動支援增補字元，而不需要指定 _SC 選項。 如需詳細資料，請參閱[定序與 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md)   
+- 新增了兩種新的日文定序系列 (Japanese_Bushu_Kakusu_140 和 Japanese_XJIS_140)，並新增區分變體選取器 (_VSS) 定序選項供這些新的日文定序使用。 此外，所有新的定序會自動支援增補字元，而不需要指定 _SC 選項。 如需詳細資料，請參閱 [定序與 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md)   
 - 新的大量存取選項 ([BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) 和 [OPENROWSET(BULK...)](../t-sql/functions/openrowset-transact-sql.md)) 能夠從指定為 CSV 格式的檔案直接存取資料，也能透過 [EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) 的新 `BLOB_STORAGE` 選項從儲存在 Azure Blob 儲存體的檔案直接存取資料。
 - 已加入資料庫 **COMPATIBILITY_LEVEL** 140。   在此層級中執行的客戶會取得最新的語言功能及查詢最佳化工具行為。 這包括每個 Microsoft 發行的發行前版本變更。
 - 計算累加統計資料更新臨界值的改善 (需要 140 相容性模式)。
-- 已加入 [sys.dm_exec_query_statistics_xml](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)。
+- 已加入[sys.dm_exec_query_statistics_xml](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) 。
 - 我們已進行記憶體最佳化物件的數個效能和語言增強：
     - 記憶體最佳化資料表現在支援 `sp_spaceused`。
     - 記憶體最佳化資料表和原生編譯 T-SQL 模組現在支援 `sp_rename`。

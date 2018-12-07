@@ -14,12 +14,12 @@ ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d02dd9770c152c91201a133d35034611a76a3535
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbaf6c28b551b65473784e231716c58f974e7962
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855086"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395361"
 ---
 # <a name="change-tracking-master-data-services"></a>變更追蹤 (Master Data Services)
 

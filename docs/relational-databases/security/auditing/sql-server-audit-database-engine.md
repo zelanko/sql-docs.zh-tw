@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 511436c7c6c5fc73f3bb8a5c02a91ea01f3e8791
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2736c3cf0d8373b80a41277a6b80b4b12b0ecd3a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670559"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510697"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "51670559"
   
  如果稽核管理員將檔案複製到不同的位置 (基於類似封存的理由)，新位置的 ACL 應該降低為以下權限：  
   
--   稽核管理員 - 讀取 / 寫入  
+-   稽核管理員 - 讀取/寫入  
   
 -   稽核讀取者 - 讀取  
   
@@ -114,9 +114,9 @@ ms.locfileid: "51670559"
  如需詳細資訊，請參閱 [建立伺服器稽核與伺服器稽核規格](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) 和 [建立伺服器稽核和資料庫稽核規格](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)。  
   
 ## <a name="considerations"></a>考量  
- 如果在稽核起始期間發生失敗，伺服器將不會啟動。 在此情況下，可以在命令列上使用 **–f** 選項來啟動伺服器。  
+ 如果在稽核起始期間發生失敗，伺服器將不會啟動。 在此情況下，可以在命令列上使用 **-f** 選項來啟動伺服器。  
   
- 當稽核失敗造成伺服器關閉，或是因為已針對稽核指定 ON_FAILURE=SHUTDOWN 而造成伺服器無法啟動時，MSG_AUDIT_FORCED_SHUTDOWN 事件將會寫入記錄檔中。 由於關閉將發生在初次遇到此設定時，所以此事件將會寫入一次。 當稽核的失敗訊息造成伺服器關閉之後，將會寫入此事件。 管理員可藉由使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] –m **旗標在單一使用者模式下啟動** ，以略過稽核所導致的關閉。 如果您在單一使用者模式下啟動，您會將指定 ON_FAILURE=SHUTDOWN 於該工作階段執行的任何稽核降級為 ON_FAILURE=CONTINUE。 當使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] –m **旗標啟動** 時，MSG_AUDIT_SHUTDOWN_BYPASSED 訊息將會寫入到錯誤記錄檔。  
+ 當稽核失敗造成伺服器關閉，或是因為已針對稽核指定 ON_FAILURE=SHUTDOWN 而造成伺服器無法啟動時，MSG_AUDIT_FORCED_SHUTDOWN 事件將會寫入記錄檔中。 由於關閉將發生在初次遇到此設定時，所以此事件將會寫入一次。 當稽核的失敗訊息造成伺服器關閉之後，將會寫入此事件。 管理員可藉由使用 **-m** 旗標在單一使用者模式下啟動[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，以略過稽核所導致的關閉。 如果您在單一使用者模式下啟動，您會將指定 ON_FAILURE=SHUTDOWN 於該工作階段執行的任何稽核降級為 ON_FAILURE=CONTINUE。 當使用 **-m** 旗標啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，MSG_AUDIT_SHUTDOWN_BYPASSED 訊息將會寫入到錯誤記錄檔。  
   
  如需服務啟動選項的詳細資訊，請參閱 [Database Engine 服務啟動選項](../../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   

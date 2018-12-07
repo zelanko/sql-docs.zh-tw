@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4399368e139d9ba6875e7b724c2c401bab8b7615
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9250b8e8ceb392973c5799d8cf473d8b94a267b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790227"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535393"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>永遠加密的金鑰管理概觀
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47790227"
     - [輪替資料行加密金鑰](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecek)
 
 
-- **SQL Server PowerShell** - 包含以使用和不使用角色隔離來管理永遠加密金鑰的 Cmdlet。 如需詳細資訊，請參閱：
+- **SQL Server PowerShell** - 包含以使用和不使用角色隔離來管理 Always Encrypted 金鑰的 Cmdlet。 如需詳細資訊，請參閱：
     - [使用 PowerShell 設定永遠加密金鑰](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
     - [使用 PowerShell 更換永遠加密金鑰](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
@@ -93,7 +93,7 @@ ms.locfileid: "47790227"
 
 為了確保永遠加密能夠有效地防止這類攻擊，您的金鑰管理程序必須確保資料行主要金鑰和資料行加密金鑰，以及包含資料行主要金鑰的金鑰存放區認證永遠不會洩漏給潛在攻擊者。 以下是您應該遵循的一些方針：
 
-- 永遠不要在裝載您資料庫的電腦上產生資料行主要金鑰或資料行加密金鑰。 請改為在不同的電腦上產生金鑰，這些電腦可以是金鑰管理的專用電腦，或是裝載無論如何都必須存取金鑰之應用程式的電腦。 這表示 **您永遠都不應該在裝載資料庫的電腦上執行用來產生金鑰的工具** ，因為如果攻擊者存取用來佈建或維護永遠加密金鑰的電腦，攻擊者可能會取得您的金鑰，即使金鑰只短暫地出現在工具的記憶體中亦然。
+- 永遠不要在裝載您資料庫的電腦上產生資料行主要金鑰或資料行加密金鑰。 請改為在不同的電腦上產生金鑰，這些電腦可以是金鑰管理的專用電腦，或是裝載無論如何都必須存取金鑰之應用程式的電腦。 這表示**您永遠都不應該在裝載資料庫的電腦上執行用來產生金鑰的工具**，因為如果攻擊者存取用來佈建或維護 Always Encrypted 金鑰的電腦，攻擊者可能會取得您的金鑰，即使金鑰只短暫地出現在工具的記憶體中亦然。
 - 為了確保您的金鑰管理程序不會不小心洩露資料行主要金鑰或資料行加密金鑰，請務必識別潛在敵人和安全性威脅，再定義及實作金鑰管理程序。 例如，如果您的目標是為了確保 DBA 無法存取敏感性資料，則不能由 DBA 負責產生金鑰。 不過，DBA「可以」管理資料庫中的金鑰中繼資料，因為中繼資料不包含純文字金鑰。
 
 ## <a name="next-steps"></a>Next Steps

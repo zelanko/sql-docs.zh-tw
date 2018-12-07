@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ceaaa60f305bceb51e6c0cfec45da926b1084a37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88dfd8e699fd71bbf2fdce8057fda78992dd498d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824596"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543452"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>ConfigurationSetting 方法 - CreateSSLCertificateBinding
   建立 SSL 憑證繫結。  
@@ -71,7 +71,7 @@ public void CreateSSLCertificateBinding(string application,
   
 2.  指定的 IPAddress 並未對應至這部電腦的 IPAddress。  
   
-3.  指定的 IPAddress 是 DHCP IPAddress (定期變更) – 請改用萬用字元 IP 位址 (0.0.0.0)。  
+3.  指定的 IPAddress 是 DHCP IPAddress (定期變更) - 請改用萬用字元 IP 位址 (0.0.0.0)。  
   
 4.  指定的 IPAddress 與 URL 保留項目的 IP 位址不符，而且萬用字元或主機名稱 URL 保留項目不存在。  
   

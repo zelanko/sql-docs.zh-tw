@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0f4d8f59821a649214ddc2deda128d801e6ddb7a
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 96e3049ecb5e222b6ced7fc6a2202c80e25a7028
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814171"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409535"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
 
@@ -100,7 +100,7 @@ Get-SPDiagnosticConfig
 |本機模式轉譯||  
 |SOAP 用戶端 Proxy||  
 |UI 頁面||  
-|Power View|已寫入 **LogClientTraceEvents** API 中的記錄項目。 這些項目來自於用戶端應用程式，包括 SQL Server Reporting Services 增益集的功能 Power View。<br /><br /> 所有來自於 LogClientTraceEvents API 的記錄項目都會記錄在 “SQL Server Reporting Services” 的 **類別目錄** 和 “Power View” 的 **區域** 之下。<br /><br /> 使用 “Power View” 的區域所記錄的項目內容是由用戶端應用程式所決定。|  
+|Power View|已寫入 **LogClientTraceEvents** API 中的記錄項目。 這些項目來自於用戶端應用程式，包括 SQL Server Reporting Services 增益集的功能 Power View。<br /><br /> 所有來自於 LogClientTraceEvents API 的記錄項目都會記錄在 "SQL Server Reporting Services" [類別目錄] 和 "Power View" [區域] 之下。<br /><br /> 使用 "Power View" 區域所記錄的項目內容是由用戶端應用程式所決定。|  
 |報表伺服器警示執行階段||  
 |報表伺服器應用程式定義域管理員||  
 |報表伺服器緩衝回應||  
@@ -138,10 +138,10 @@ Get-SPDiagnosticConfig
 |共用服務|範例項目：<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> MediumGranting 對內容資料庫的存取。<br /><br /> ReportingWebServiceApplication 的 MediumProvisioning 執行個體<br /><br /> ReportingWebServiceApplication 的 MediumProcessing 服務帳戶變更<br /><br /> MediumSetting 資料庫權限。|  
   
 ##  <a name="bkmk_powershell"></a> 利用 PowerShell 檢視記錄檔  
- ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容")您可以使用 PowerShell 從 ULS 記錄檔傳回 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相關事件的清單。 從 SharePoint 2010 管理命令介面輸入下列命令，從包含 "**sql server reporting services**" 的 ULS 記錄檔 UESQL11SPOINT-20110606-1530.log 傳回已篩選過的資料列清單：  
+ ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容")您可以使用 PowerShell 從 ULS 記錄檔傳回 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相關事件的清單。 從 SharePoint 2010 管理命令介面鍵入下列命令，從包含 "**sql server reporting services**" 的 ULS 記錄檔 UESQL11SPOINT-20110606-1530.log 傳回已篩選資料列清單：  
   
 ```  
-Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
+Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  
 ```  
   
  您可以下載用來讀取 ULS 記錄的工具。 例如，[SharePoint LogViewer](https://github.com/hasankhan/SharePointLogViewer)，可在 GitHub 上取得。 

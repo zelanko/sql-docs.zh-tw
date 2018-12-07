@@ -16,15 +16,15 @@ ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5951daccc88e8593c27365254d208c4b2ee84118
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11b6d7d881a034fa79315c37345d7845d868fc2b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753786"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542650"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>使用控制流程封裝組件在封裝之間重複使用控制流程
-  將常用的控制流程工作或容器儲存到獨立的組件檔案 (“.dtsxp” 檔案)，並使用控制流程封裝組件在一或多個封裝中多次重複使用。 這個再使用性讓 SSIS 封裝的設計和維護變得更容易。  
+  將常用的控制流程工作或容器儲存到獨立的組件檔案 (".dtsxp" 檔案)，並使用控制流程封裝組件在一或多個封裝中多次重複使用。 這個再使用性讓 SSIS 封裝的設計和維護變得更容易。  
   
 ## <a name="create-a-new-control-flow-package-part"></a>建立新的控制流程封裝組件  
  若要建立新的控制流程封裝組件，請在方案總管中展開 [封裝組件]  資料夾。 以滑鼠右鍵按一下 [控制流程]，然後選取 [New Control Flow Package Part (新增控制流程封裝組件)]。  
@@ -80,7 +80,7 @@ ms.locfileid: "47753786"
  **選項。**  
   
  **封裝組件路徑**  
- 輸入組件檔案路徑，或按一下瀏覽按鈕 (…)，找出要複製或參考的組件檔案。  
+ 輸入組件檔案路徑，或按一下瀏覽按鈕 ([...])，找出要複製或參考的組件檔案。  
   
  **加入為參考**  
  -   如果選取，則組件會加入 Integration Services 專案作為參考。 當您要在多個 Integration Services 專案中參考某個組件檔案的單一複本時，請選取這個選項。  
@@ -141,13 +141,13 @@ ms.locfileid: "47753786"
 ## <a name="package-parts-are-a-design-time-feature-only"></a>封裝組件只是設計階段功能  
  封裝組件只是設計階段功能。 SSIS 設計工具會建立、開啟、儲存和更新組件，並且加入、設定或刪除封裝中的組件執行個體。 不過，SSIS 執行階段並不知道組件。 以下是設計工具達到這種區隔的方法。  
   
--   設計工具會將封裝組件執行個體及其設定的屬性儲存到 “.dtsx.designer” 檔案。  
+-   設計工具會將封裝組件執行個體及其設定的屬性儲存到 ".dtsx.designer" 檔案。  
   
--   當設計工具儲存 “.dtsx.designer” 檔案時，它也會解壓縮這個檔案參考的組件內容，用組件的內容取代封裝的組件執行個體。  
+-   當設計工具儲存 ".dtsx.designer" 檔案時，它也會解壓縮這個檔案參考的組件內容，用組件的內容取代封裝的組件執行個體。  
   
--   最後，不再包含組件資訊的所有內容，會存回到 “.dtsx” 封裝檔案。 這就是 SSIS 執行階段執行的檔案。  
+-   最後，不再包含組件資訊的所有內容，會存回到 ".dtsx" 封裝檔案。 這就是 SSIS 執行階段執行的檔案。  
   
- 下圖示範組件 (“.dtsxp” 檔案)、SSIS 設計工具和 SSIS 執行階段之間的關聯性。  
+ 下圖示範組件 (".dtsxp" 檔案)、SSIS 設計工具和 SSIS 執行階段之間的關聯性。  
   
  ![控制流程範本的檔案和流程](../integration-services/media/control-flow-templates-intro.png "控制流程範本的檔案和流程")  
   

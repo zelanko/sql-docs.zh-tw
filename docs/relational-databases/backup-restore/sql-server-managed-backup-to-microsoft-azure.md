@@ -11,12 +11,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 08d95d5ba1f6a0c1a46218dde190e09af2452eae
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5c041ee4a56b2df2190eabb0da0ef472f0b8ee49
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677857"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397051"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>SQL Server Managed Backup to Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

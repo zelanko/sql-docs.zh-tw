@@ -16,12 +16,12 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae4d55d1cd6496b8e21d0522f750450c6b4a7338
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: ec3ca3bc16f7967128efc617844717dcf5e57270
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601138"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509280"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組概觀 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51601138"
 > [!TIP]  
 >  您可為主要資料庫建立任何類型的備份。 或者，您亦可為次要資料庫建立記錄備份和僅限複製的完整備份。 如需詳細資訊，請參閱 [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)中心概念。   
 
- 每一組可用性資料庫都是由 *「可用性複本」*(Availability Replica) 主控。 有兩種類型的可用性複本：單一 *「主要複本」*(Primary Replica)， 以及一到八個「次要複本」 (Secondary Replica)。前者裝載主要資料庫，後者各裝載一組次要資料庫，而且可以當做可用性群組的潛在容錯移轉目標。 可用性群組會在可用性複本層級容錯移轉。 可用性複本僅在資料庫層級針對某個可用性群組中的一組資料庫提供備援性。 資料庫問題，例如資料庫因為資料檔案遺失而變得可疑或交易記錄損毀，並不會造成容錯移轉。  
+ 每一組可用性資料庫都是由 *「可用性複本」*(Availability Replica) 主控。 有兩種類型的可用性複本：單一 *「主要複本」*(Primary Replica)， 以及一到八個「次要複本」 (Secondary Replica)。前者裝載主要資料庫，後者各裝載一組次要資料庫，而且可以當做可用性群組的潛在容錯移轉目標。 可用性群組會在可用性複本層級容錯移轉。 可用性複本僅在資料庫層級針對某個可用性群組中的一組資料庫提供備援。 資料庫問題，例如資料庫因為資料檔案遺失而變得可疑或交易記錄損毀，並不會造成容錯移轉。  
   
  主要複本提供主要資料庫，以供用戶端讀寫連接使用。 主要複本會將每個主要資料庫的交易記錄檔記錄傳送到每個次要資料庫。 這個稱為「資料同步處理」的程序是在資料庫層級發生。 每個次要複本都會快取交易記錄檔記錄 (「強行寫入」 記錄檔)，然後將它們套用到對應的次要資料庫。 資料同步處理在主要資料庫和每個連接的次要資料庫之間發生，與其他資料庫無關。 因此，次要資料庫可以暫停或失敗，而不影響其他次要資料庫，主要資料庫也可以暫停或失敗，而不影響其他主要資料庫。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "51601138"
   
  給定的執行個體只能裝載每個可用性群組的一個可用性複本。 但是，每一個執行個體都可以用於多個可用性群組。 給定的執行個體可以是獨立執行個體或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI)。 如果您需要伺服器層級的備援性，請使用容錯移轉叢集執行個體。  
   
- 每個可用性複本都會獲指派一個初始角色，即 *「主要角色」* (Primary Role) 或 *「次要角色」*(Secondary Role)，這個角色是由該複本的可用性資料庫所繼承。 給定複本的角色會決定所裝載的是讀寫資料庫還是唯讀資料庫。 其中一個複本 (也就是所謂的「主要複本」) 會獲指派主要角色並裝載讀寫資料庫，也就是「主要資料庫」。 至少有一個其他複本 (也就是所謂的 「次要複本」) 會獲指派次要角色。 次要複本會裝載唯讀資料庫，也就是次要資料庫。  
+ 每個可用性複本都會獲指派一個初始角色，即「主要角色」或「次要角色」，這個角色是由該複本的可用性資料庫所繼承。 給定複本的角色會決定所裝載的是讀寫資料庫還是唯讀資料庫。 其中一個複本 (也就是所謂的「主要複本」) 會獲指派主要角色並裝載讀寫資料庫，也就是「主要資料庫」。 至少有一個其他複本 (也就是所謂的 「次要複本」) 會獲指派次要角色。 次要複本會裝載唯讀資料庫，也就是次要資料庫。  
   
 > [!NOTE]  
 >  當可用性複本的角色未定 (例如在容錯移轉期間) 時，其資料庫會暫時處於 NOT SYNCHRONIZING 狀態。 在可用性複本的角色解析之前，會將其角色設為 RESOLVING。 如果可用性複本解析為主要角色，其資料庫會變成主要資料庫。 如果可用性複本解析為次要角色，其資料庫會變成次要資料庫。  

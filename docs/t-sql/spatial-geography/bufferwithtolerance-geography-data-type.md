@@ -18,12 +18,12 @@ ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de205df81d6919d6529726e9de77ec65e0aac927
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f83a4174fb599170e466a28ab06eb0d2772fd604
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698456"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391353"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51698456"
  *distance*  
  這是指定與 **geography** 執行個體之間距離的 **float** 運算式，將會從此執行個體的周圍計算緩衝。  
   
- 緩衝的最大距離不能超過 0.999 \* *π*  * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 的地球圓周) 或完整的地球。  
+ 緩衝區的最大距離不能超過 0.999 \* *π*  * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 的地球圓周) 或完整的地球。  
   
  *tolerance*  
  這是 **float** 運算式，用來指定緩衝距離的容錯。  

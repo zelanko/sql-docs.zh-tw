@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a0280b76490e82aa8bbad2d2dd3bf8cb451d81c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1b80f0d2ee798eea6aafb92d10aae50c14ceee2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808336"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541250"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -65,7 +65,7 @@ ADD MEMBER *server_principal*
 DROP MEMBER *server_principal*  
 從伺服器角色移除指定的伺服器主體。 *server_principal* 可以是登入或使用者定義的伺服器角色。 *server_principal* 不能是固定伺服器角色、資料庫角色或系統管理員。  
   
-WITH NAME **=***new_server_role_name*  
+WITH NAME **=**_new_server_role_name_  
 指定使用者定義伺服器角色的新名稱。 此名稱不能已存在於伺服器中。  
   
 ## <a name="remarks"></a>Remarks  

@@ -14,12 +14,12 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 65466a1750ecc340ed10ae961fa1a46d05a22192
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c491a67b55db4a730db2bb7fcd8977162657e516
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606808"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410905"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>針對 SQL Server Database Engine 的連接進行疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "51606808"
     3.  應該會列出類似「伺服器正在 [ 'any' \<ipv4> 1433] 上接聽」的訊息。 此訊息表示這個 SQL Server 執行個體正在接聽此電腦上的所有 IP 位址 (IP 第 4 版)，以及接聽 TCP 連接埠 1433。 (TCP 連接埠 1433 通常是 Database Engine 所使用的連接埠。 只有一個 SQL Server 執行個體可以使用連接埠，所以，如果安裝了多個 SQL Server 執行個體，有些執行個體必須使用其他的連接埠號碼)。記下您嘗試連接的 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 執行個體所使用的連接埠號碼。 
 
     >    [!NOTE] 
-    >    可能會列出 IP 位址 127.0.0.1。 它稱為回送介面卡位址，只能從同一部電腦上的處理序連接。 它可用於疑難排解，但無法使用它從另一部電腦連接。
+    >    可能會列出 IP 位址 127.0.0.1。 它稱為回送介面卡位址，只能從同一部電腦上的處理序連接。 它可用於疑難排解，但無法使用它從另一部電腦連線。
 
 ## <a name="enable-protocols"></a>啟用通訊協定
 

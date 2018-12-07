@@ -16,12 +16,12 @@ ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba7a8f577f9b05007e8b6b9a9477e1b3ffd6b441
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f0d0304757cb8b724a93ce02d03a889bb27e453a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701819"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532796"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>移除查詢的資料表 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

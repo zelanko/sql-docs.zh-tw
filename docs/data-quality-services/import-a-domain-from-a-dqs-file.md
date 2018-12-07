@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26af15dea92c143fe995e0072f80d3782a3adaab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7961facbec5f194c45c8677481af5b43bdfaa1e8
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787222"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616398"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>從 .dqs 檔案匯入定義域
 
@@ -27,7 +26,7 @@ ms.locfileid: "47787222"
   
  使用 .dqs 資料檔匯出某個知識庫中的定義域，然後將它匯入另一個知識庫將會簡化知識產生程序，以節省時間與精力。 這樣可讓您將定義域和定義域的知識與其他人分享，以節省他們的時間。 您可以匯入一個單一定義域或一個複合定義域 (包含多個單一定義域)。 包含單一定義域的 .dqs 檔案包括所有定義域資料，其中包括定義域屬性、值和規則資料，但不包括對應的參考資料資訊。 含有複合定義域的 .dqs 檔案包括所有複合定義域資料，其中包括複合定義域內所容納之單一定義域的所有定義域資料，以及複合定義域屬性、值關聯和 CD 規則，但不包括對應的參考資料。 已發行和未發行的資料都將匯入。  
   
- 當您匯入定義域時，此定義域的名稱依然與一開始匯出的定義域名稱相同，除非此定義域名稱已經存在 (此時 DQS 會在名稱中附加 “_1”)。 如果您匯入的複合定義域所包含的個別定義域與現有定義域同名，這個情況也會成立。  
+ 當您匯入定義域時，此定義域的名稱依然與一開始匯出的定義域名稱相同，除非此定義域名稱已經存在 (此時 DQS 會在名稱中附加 "_1")。 如果您匯入的複合定義域所包含的個別定義域與現有定義域同名，這個情況也會成立。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -36,7 +35,7 @@ ms.locfileid: "47787222"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能從 .dqs 資料檔匯入定義域。  
   
 ##  <a name="Import"></a> Import a domain from a .dqs file  

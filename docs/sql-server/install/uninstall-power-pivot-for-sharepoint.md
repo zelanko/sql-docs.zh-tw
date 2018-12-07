@@ -10,12 +10,12 @@ ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d60a5174b5ca067e9f0e0d9f5db7efd6e71466ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 105401dc20d20b3414624d5dd0a40238a32bd243
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840426"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535135"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>解除安裝 PowerPivot for SharePoint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47840426"
 ##  <a name="bkmk_remove"></a> 步驟 2：從 SharePoint 移除功能和方案  
  使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具，從 SharePoint 中移除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務和應用程式。  
   
--   您必須是伺服器陣列管理員、Analysis Services 執行個體的伺服器管理員，以及伺服器陣列組態資料庫的 **db_owner** 。  
+-   您必須是伺服器陣列管理員、Analysis Services 執行個體的伺服器管理員，以及伺服器陣列組態資料庫的 **db_owner**。  
   
 -   請針對 SharePoint 版本使用適當版本的組態工具。 請勿將其中任何一個工具用於 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 安裝。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "47840426"
   
 6.  按一下 **[驗證]** 來檢查每個動作是否有效。 如果無法使用 **[驗證]** ，表示所有動作都適用於您的系統。  
   
-7.  按一下 **[執行]** ，執行適用於此工作的所有動作。 只有在通過驗證檢查的情況下，才可以使用 **[執行]** 。 當您按一下 **[執行]** 時，會出現下列警告，提醒您動作是在批次模式下處理：「工具中標示為有效的所有組態設定都會套用到 SharePoint 伺服器陣列。 您要繼續嗎?」  
+7.  按一下 **[執行]** ，執行適用於此工作的所有動作。 只有在通過驗證檢查的情況下，才可以使用 **[執行]** 。 當您按一下 [執行] 時，會出現下列警告，提醒您動作是在批次模式下處理：「工具中標示為有效的所有組態設定都會套用到 SharePoint 伺服器陣列。 您要繼續嗎？」  
   
 8.  按一下 **[是]** 繼續。  
   
@@ -119,7 +119,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
 2.  以管理員身分啟動 SharePoint 管理命令介面，然後執行下列命令來檢視佇列中的作業：  
   
     ```  
-    Stsadm –o enumdeployments  
+    Stsadm -o enumdeployments  
     ```  
   
 3.  檢閱現有部署中的下列資訊： **[類型]** 是 [撤銷] 或 [部署]、 **[檔案]** 是 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
@@ -127,7 +127,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
 4.  若是與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案相關的部署或撤銷，請複製 **JobId** 的 GUID 值，然後將其貼入下列命令 (使用命令介面之 [編輯] 功能表上的 [標記]、[複製] 和 [貼上] 命令來複製 GUID)：  
   
     ```  
-    Stsadm –o canceldeployment –id “<GUID>”  
+    Stsadm -o canceldeployment -id "<GUID>"  
     ```  
   
 5.  依序按一下 **[驗證]** 和 **[執行]**，重試組態工具中的工作。  

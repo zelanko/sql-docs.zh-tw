@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a209033dc614ad2cccd6c1138d89c462f5152a7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0b63123e9d48ca7f89d888dca82b6b988942893
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698596"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417939"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理系統設定版本之時態表中的歷程記錄資料保留
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47698596"
 
 -   [保留原則](https://msdn.microsoft.com/library/mt637341.aspx#using-temporal-history-retention-policy-approach)  
 
- 對於以上任一種方式，移轉或清除歷程記錄資料的邏輯乃基於與目前資料表之期間結束相對應的資料行。 每個資料列的期間結束值決定資料列版本「關閉」的時間，也就是落在歷程記錄資料表的時間。 例如， `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` 條件指定超過一個月的歷程記錄資料需要移除或移出歷程記錄資料表。  
+ 對於以上任一種方式，移轉或清除歷程記錄資料的邏輯乃基於與目前資料表之期間結束相對應的資料行。 每個資料列的期間結束值決定資料列版本「關閉」時間，也就是落在歷程記錄資料表的時間。 例如， `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` 條件指定超過一個月的歷程記錄資料需要移除或移出歷程記錄資料表。  
   
 > **注意：**  本主題中的範例使用此 [時態表範例](creating-a-system-versioned-temporal-table.md)。  
   
@@ -108,7 +108,7 @@ SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));
 ```  
   
 ### <a name="using-transact-sql-to-stretch-a-portion-of-the-history-table"></a>使用 Transact-SQL 來延展一部分的歷程記錄資料表  
- 若只要延展一部分的歷程記錄資料表，您可以先從建立 [內嵌述詞函數](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)開始。 此範例中，我們假設您在 2015 年 12 月 1 日首次設定內嵌述詞函數，並想要將歷程記錄日期比 2015 年 11 月 1 日早的所有內容延伸到 Azure。 若要達成此目的，請從建立下列函數開始︰  
+ 若只要延展一部分的歷程記錄資料表，您可以先從建立 [內嵌述詞函數](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)開始。 此範例中，我們假設您在 2015 年 12 月 1 日首次設定內嵌述詞函式，並想要將歷程記錄日期比 2015 年 11 月 1 日早的所有內容延伸到 Azure。 若要達成此目的，請從建立下列函數開始︰  
   
 ```  
 CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151101(@systemEndTime datetime2)   
@@ -174,7 +174,7 @@ COMMIT ;
   
 -   週期性資料分割維護工作  
   
- 為了方便解說，假設我們想要保留歷程記錄資料 6 個月，而且我們想要將每個月的資料保存在不同的資料分割。 此外，假設我們在 2015 年 9 月啟動系統設定版本功能。  
+ 為了方便解說，假設我們想要保留歷程記錄資料 6 個月，且我們想要將每個月的資料保存在不同分割區。 此外，假設我們在 2015 年 9 月啟動了系統版本設定功能。  
   
  資料分割組態工作會建立歷程記錄資料表的初始資料分割組態。 此範例中，我們可以建立與滑動視窗大小相同數目的資料分割 (以月份為單位)，再加上一個預先準備的額外空資料分割 (如下所述)。 這個組態可確保系統能在我們首次啟動週期性資料分割維護工作時正確地儲存新資料，並且能確保我們永遠不會分割資料分割，以避免昂貴的資料移動。 您應該使用 Transact-SQL 依照以下範例指令碼來執行這項工作。  
   
@@ -184,7 +184,7 @@ COMMIT ;
   
 > **注意：** 如需在設定資料分割時使用 RANGE LEFT 與 RANGE RIGHT 的效能含意，請參閱下文中的資料表資料分割效能考量。  
   
- 請注意，第一個和最後一個資料分割的上限和下限分別保持「開啟」，以確保不論分割資料行中的值為何，每個新資料列都有目的地資料分割。   
+ 請注意，第一個和最後一個分割區的上限和下限分別保持「開啟」，以確保不論分割資料行中的值為何，每個新資料列都有目的地分割區。   
 隨著時間流逝，歷程記錄資料表中的新資料列將落在較高的資料分割。 當第 6 個資料分割填滿時，我們將達到預計的保留期限。 這是首次啟動週期性資料分割維護工作的時候 (您需要將它排程為定期執行，在本範例中為每月一次)。  
   
  下圖說明週期性資料分割維護工作 (請參閱下文中的詳細步驟)。  
@@ -333,7 +333,7 @@ COMMIT TRANSACTION
 ### <a name="performance-considerations-with-table-partitioning"></a>資料表資料分割效能考量  
  執行 MERGE RANGE 和 SPLIT RANGE 作業來避免任何資料移動是必要的，因為資料移動可能會造成繁重的效能負荷。 如需詳細資訊，請參閱[修改資料分割函數](../../relational-databases/partitions/modify-a-partition-function.md)。在 [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md) 時，您可以使用 RANGE LEFT (而非 RANGE RIGHT) 來達成目的。  
   
- 讓我們先以視覺化的方式說明 RANGE LEFT 和 RANGE RIGHT 選項的意義︰  
+ 讓我們先以視覺化方式說明 RANGE LEFT 和 RANGE RIGHT 選項的意義：  
   
  ![資料分割3](../../relational-databases/tables/media/partitioning3.png "資料分割3")  
   
@@ -341,7 +341,7 @@ COMMIT TRANSACTION
   
  在滑動視窗案例中，我們一律會移除最低的資料分割界限。  
   
--   RANGE LEFT 案例︰在 RANGE LEFT 案例中，最低的資料分割界限屬於資料分割 1，由於該資料分割是空的 (在資料分割切換移出後)，所以 MERGE RANGE 不會引發任何資料移動。  
+-   RANGE LEFT 案例︰在 RANGE LEFT 案例中，最低的分割區界限屬於分割區 1，由於該分割區是空的 (在分割區切換移出後)，所以 MERGE RANGE 不會引發任何資料移動。  
   
 -   RANGE RIGHT 案例︰在 RANGE RIGHT 案例中，最低的資料分割界限屬於資料分割 2，由於我們假設切換移出已將資料分割 1 清空，因此資料分割 2 不是空的。在該案例中，MERGE RANGE 將會引發資料移動 (資料分割 2 的資料將移動到資料分割 1)。 若要避免資料移動，滑動視窗案例中的 RANGE RIGHT 需要隨時保持清空的資料分割 1。 相較於 RANGE LEFT 案例，這表示如果我們使用 RANGE RIGHT，應該要建立及維護一個額外的資料分割，。  
   

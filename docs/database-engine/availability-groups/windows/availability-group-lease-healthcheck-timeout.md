@@ -10,12 +10,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 23dee7c1639f030e5dfbb2cb44309a100bf01861
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 25728b2c12d31d53f9638d08c952d75ae929bf9c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264898"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393981"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>租用、叢集和健全狀況檢查逾時的機制和方針 
 
@@ -39,13 +39,13 @@ Always On 資源 DLL 會監視內部 SQL Server 元件的狀態。 `sp_server_di
 
 ## <a name="lease-mechanism"></a>租用機制  
 
-不同於其他容錯移轉機制，SQL Server 執行個體在租用機制中扮演著主動的角色。 將 AG 連線為主要複本時，SQL Server 執行個體會繁衍 AG 的專用租用背景工作執行緒。 租用背景工作會與含有租用更新和租用停止事件的資源主機共用很小的記憶體區域。 租用背景工作和資源主機會以循環方式發出其各自的租用更新事件信號，然後睡眠並等候另一方發出其自己的租用更新事件或停止事件信號。 資源主機和 SQL Server 租用執行緒都有存留時間值，每次執行緒在另一個執行緒發出信號後喚醒時，即會更新此值。 如果等候信號期間達到存留時間上限，租用會過期，然後複本會轉換成該特定 AG 的解析中狀態。 如果發出租用停止事件信號，則複本會轉換成解析中角色。 
+不同於其他容錯移轉機制，SQL Server 執行個體在租用機制中扮演著主動的角色。 租用機制會用來作為叢集資源主機和 SQL Server 處理序間的簡單確定資源運作驗證。 此機制會用來確認兩邊 (叢集服務和 SQL Server 服務) 都有頻繁接觸、檢查彼此的狀態，最終防止核心分裂案例。  將 AG 連線為主要複本時，SQL Server 執行個體會繁衍 AG 的專用租用背景工作執行緒。 租用背景工作會與含有租用更新和租用停止事件的資源主機共用很小的記憶體區域。 租用背景工作和資源主機會以循環方式發出其各自的租用更新事件訊號，然後睡眠並等候另一方發出自己的租用更新事件或停止事件訊號。 資源主機和 SQL Server 租用執行緒都有存留時間值，每次執行緒在另一個執行緒發出信號後喚醒時，即會更新此值。 如果等候信號期間達到存留時間上限，租用會過期，然後複本會轉換成該特定 AG 的解析中狀態。 如果發出租用停止事件信號，則複本會轉換成解析中角色。 
 
 ![image](media/availability-group-lease-healthcheck-timeout/image1.png) 
 
 租用機制會強制在 SQL Server 與 Windows Server 容錯移轉叢集之間同步處理。 發出容錯移轉命令時，叢集服務會對目前主要複本的資源 DLL 發出離線呼叫。 資源 DLL 會先嘗試使用預存程序將 AG 離線。 如果此預存程序失敗或逾時，則會對叢集服務回報失敗，然後發出終止命令。 此終止會再次嘗試執行相同的預存程序，但叢集這次不會等候資源 DLL 回報成功或失敗，就會將 AG 連線到新的複本。 如果第二個程序呼叫失敗，則資源主機將必須依賴租用機制將執行個體離線。 呼叫資源 DLL 將 AG 離線時，資源 DLL 會發出租用停止事件信號，並喚醒 SQL Server 租用背景工作執行緒來將 AG 離線。 即使未發出此停止事件信號，租用仍會過期，且複本會轉換成解析中狀態。 
 
-租用基本上是主要執行個體與叢集之間的同步處理機制，但它也可以建立不需要容錯移轉的失敗狀況。 例如，高 CPU 或 tempdb 壓力會使租用背景工作執行緒匱乏，因此無法從 SQL 執行個體更新租用，而導致容錯移轉。 
+租用基本上是主要執行個體與叢集之間的同步處理機制，但它也可以建立不需要容錯移轉的失敗狀況。 例如，高 CPU、記憶體不足狀況、SQL 處理序在產生記憶體傾印時回應失敗、整個系統停止回應，或是 tempdb 壓力都可能會導致租用背景工作執行緒資源不足，導致從 SQL 執行個體更新失敗並造成容錯移轉。 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>叢集逾時值方針 
 
@@ -123,14 +123,14 @@ WSFC 組態中有四個值，負責決定叢集逾時值
    ![屬性](media/availability-group-lease-healthcheck-timeout/image3.png) 
 
 
-   根據 AG 的組態，可能會有接聽程式、共用磁碟、檔案共用等其他資源，這些資源不需要任何額外的設定。 
+   根據 AG 的設定，可能會有接聽程式、共用磁碟、檔案共用等其他資源，這些資源不需要任何額外的設定。 
 
    
 ### <a name="health-check-values"></a>健全狀況檢查值 
 
 控制 Always On 健全狀況檢查的兩個值為 FailureConditionLevel 和 HealthCheckTimeout。 FailureConditionLevel 會指出 `sp_server_diagnostics` 所回報之特定失敗狀況的容忍度，而 HealthCheckTimeout 會設定資源 DLL 未從 `sp_server_diagnostics` 收到更新可執行的時間。 `sp_server_diagnostics` 的更新間隔一律為 HealthCheckTimeout / 3。 
 
-若要設定容錯移轉狀況層級，請使用 `CREATE` 或 `ALTER` `AVAILABILITY GROUP` 陳述式的 `FAILURE_CONDITION_LEVEL = <n>` 選項，其中 `<n>` 是介於 1 到 5 之間的整數。 下列命令會將 AG ‘AG1’ 的失敗狀況層級設定為 1： 
+若要設定容錯移轉狀況層級，請使用 `CREATE` 或 `ALTER` `AVAILABILITY GROUP` 陳述式的 `FAILURE_CONDITION_LEVEL = <n>` 選項，其中 `<n>` 是介於 1 到 5 之間的整數。 下列命令會將 AG 'AG1' 的失敗狀況層級設為 1： 
 
 ```sql
 ALTER AVAILABILITY GROUP AG1 SET (FAILURE_CONDITION_LEVEL = 1); 

@@ -19,12 +19,12 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77947ba03e3f094077c950981a394a3566e24f0e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 27976be0f3b6091450650f2bf3a73d1afbe42d20
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639087"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518466"
 ---
 # <a name="data-flow-task"></a>資料流程工作
   資料流程工作會封裝在來源與目的地之間移動資料的資料流程引擎，並讓使用者在資料移動時轉換、清除及修改資料。 將資料流程工作加入封裝控制流程，使得封裝擷取、轉換和載入資料成為可能。  

@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67fe252e91145a427e7bd42064733ae78835d8cc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c33b07af2ad43f15913580ce55c173d04a876366
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667587"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511537"
 ---
 # <a name="columnstore-indexes---defragmentation"></a>資料行存放區索引 - 重組
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -182,7 +182,7 @@ ms.locfileid: "51667587"
 ## <a name="rebuild"></a> 使用 ALTER INDEX REBUILD 離線重組資料行存放區索引  
  若為 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本，則通常無須重建資料行存放區索引，這是因為 `REORGANIZE` 會在背景以線上作業方式執行必要的重建作業。  
   
- 重建資料行存放區索引會移除分散的片段，並將所有資料列移至資料行存放區。 使用 [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) 或 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) 完整重建現有的叢集資料行存放區索引。 此外，您可以使用 ALTER INDEX... REBUILD 重建特定分割區。  
+ 重建資料行存放區索引會移除分散的片段，並將所有資料列移至資料行存放區。 使用 [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) 或 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) 完整重建現有的叢集資料行存放區索引。 此外，您可以使用 ALTER INDEX ...REBUILD 重建特定分割區。  
   
 ### <a name="rebuild-process"></a>重建程序  
  為了重建資料行存放區索引， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會進行以下作業：  

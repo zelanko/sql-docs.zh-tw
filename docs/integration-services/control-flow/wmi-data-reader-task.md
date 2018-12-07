@@ -18,12 +18,12 @@ ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2945ebadf1a9637018a2e6cbbda7379efa6ef58
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: dbe9e655bff91e514c8157a1afb74504b9dc6717
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638194"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502719"
 ---
 # <a name="wmi-data-reader-task"></a>WMI 資料讀取器工作
   「WMI 資料讀取器」工作使用「Windows Management Instrumentation (WMI) 查詢語言」執行查詢，該查詢語言會從 WMI 傳回有關電腦系統的資訊。 您可將「WMI 資料讀取器」工作用於下列用途：  
@@ -151,7 +151,7 @@ Select * FROM Win32_QuickFixEngineering
   
 #### <a name="wqlquerysourcetype--direct-input"></a>WQLQuerySourceType = 直接輸入  
  **WQLQuerySource**  
- 提供查詢，或按一下 [省略符號 (...)]，然後使用 [WQL 查詢] 對話方塊輸入查詢。  
+ 提供查詢，或按一下省略符號 (...)，然後使用 [WQL 查詢] 對話方塊輸入查詢。  
   
 #### <a name="wqlquerysourcetype--file-connection"></a>WQLQuerySourceType = 檔案連接  
  **WQLQuerySource**  

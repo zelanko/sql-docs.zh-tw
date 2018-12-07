@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c8c9e653781b821d3fcc2e7c2e5dd218b329e22c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 90a9b797862db65187d991bb6961cdfd0bda8959
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675357"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523554"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "51675357"
 
 如果您收到 HostUnreachable 錯誤，就表示您的 SQL Server 電腦無法與 HGS 通訊。 請確定您可以 ping HGS 電腦。
 
-UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 – 請重複步驟 5 和 6，以解決此錯誤。
+UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複步驟 5 和 6，以解決此錯誤。
 
 如果所有其他方式均失敗，請執行 Clear-HgsClientHostKey，並重複步驟 4-7。
 
@@ -295,7 +295,7 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 – 請重�
 
 1. 啟用 Always Encrypted 的參數化。
     1. 從 SSMS 的主功能表中，選取 [查詢]。
-    2. 選取 [查詢選項...] 。
+    2. 選取 [查詢選項]。
     3. 瀏覽至 [執行] > [進階]。
     4. 選取或取消選取 [啟用 Always Encrypted 的參數化]。
     5. 選取 [確定]。

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f0c94ab62231ba2167e52c9999f18cf4bd1e9ca5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b1990930387dbd68ea843073b9d372ce735273f9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028127"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542014"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>處理訂閱 (Web 入口網站)
 

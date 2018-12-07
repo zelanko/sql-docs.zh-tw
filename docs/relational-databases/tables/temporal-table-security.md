@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d080ae2ac8d10469afb35efbd64122daf89d312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebe4438e48f14c1adba3b56d30cc772549f9ee7e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744426"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526437"
 ---
 # <a name="temporal-table-security"></a>時態表安全性
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,15 +42,15 @@ ms.locfileid: "47744426"
 |作業|目前的資料表|記錄資料表|  
 |---------------|-------------------|-------------------|  
 |**DROP TABLE**|不允許|不允許|  
-|**ALTER TABLE…SWITCH PARTITION**|僅限 SWITCH IN (請參閱 [對時態表進行資料分割](../../relational-databases/tables/partitioning-with-temporal-tables.md))|僅限 SWITCH OUT (請參閱 [對時態表進行資料分割](../../relational-databases/tables/partitioning-with-temporal-tables.md))|  
-|**ALTER TABLE…DROP PERIOD**|不允許|-|  
-|**ALTER TABLE…ADD PERIOD**|-|不允許|  
+|**ALTER TABLE...SWITCH PARTITION**|僅限 SWITCH IN (請參閱 [對時態表進行資料分割](../../relational-databases/tables/partitioning-with-temporal-tables.md))|僅限 SWITCH OUT (請參閱 [對時態表進行資料分割](../../relational-databases/tables/partitioning-with-temporal-tables.md))|  
+|**ALTER TABLE...DROP PERIOD**|不允許|-|  
+|**ALTER TABLE...ADD PERIOD**|-|不允許|  
   
 ## <a name="allowed-alter-table-operations"></a>允許的 ALTER TABLE 作業  
   
 |作業|目前|記錄|  
 |---------------|-------------|-------------|  
-|**ALTER TABLE…REBUILD**|允許 (獨立)|允許 (獨立)|  
+|**ALTER TABLE...REBUILD**|允許 (獨立)|允許 (獨立)|  
 |**CREATE INDEX**|允許 (獨立)|允許 (獨立)|  
 |**CREATE STATISTICS**|允許 (獨立)|允許 (獨立)|  
   

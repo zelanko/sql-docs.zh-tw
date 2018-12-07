@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f716dc0189ea509d48888c0dde25ea77e87f4a97
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: f73fa8fe85be39cb64b66cd6672fe9901c6e89e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027387"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507490"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>使用調色盤定義圖表的色彩 (報表產生器及 SSRS)
   您可以選取預先定義的調色盤，或定義自訂調色盤來變更圖表的色彩調色盤。 自訂調色盤是報表專屬的。  
@@ -42,7 +42,7 @@ ms.locfileid: "50027387"
   
 3.  在 **[圖表]** 區段中，為 **[調色盤]** 屬性選取 **[自訂]**。  
   
-4.  在 CustomPaletteColors 屬性中，按一下「編輯集合」\([…]) 按鈕。 **[ReportColorExpression 集合編輯器]** 便會開啟。  
+4.  在 CustomPaletteColors 屬性中，按一下 [編輯集合] (**...**) 按鈕。 **[ReportColorExpression 集合編輯器]** 便會開啟。  
   
 5.  按一下 **[加入]** 來加入色彩。 從下拉式清單中選取一個色彩，或選取 [運算式]，然後為特定色彩指定一個十六進位值，例如，ff6600 代表「橙色」。  
   

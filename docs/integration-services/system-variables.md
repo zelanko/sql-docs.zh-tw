@@ -17,12 +17,12 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dc1d04899bf2b31c5bf4586afb88ed40d2ff8a0c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6cd923a8c89336d009633ef3a33b1d56048c345c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641905"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523772"
 ---
 # <a name="system-variables"></a>系統變數
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一組儲存執行封裝及其物件之資訊的系統變數。 這些變數可以用於運算式及屬性運算式，以自訂封裝、容器、工作及事件處理常式。  

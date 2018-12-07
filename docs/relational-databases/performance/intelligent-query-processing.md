@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4269cc9f61ecd1bd3130fe7fab0f1e5a1ae65bf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d48f9fd87ff375a518b038d9ed4ef4a8d42675cc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660950"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403923"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 資料庫中的智慧查詢處理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,10 +29,15 @@ ms.locfileid: "51660950"
 ![智慧查詢處理功能](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>彈性查詢處理
-彈性查詢處理功能系列包括查詢處理改良功能，可調整最佳化策略以符合您應用程式工作負載的執行階段條件。 包含以下改良功能：批次模式自適性聯結、記憶體授與意見反應，以及交錯執行多重陳述式資料表值函式。
+彈性查詢處理功能系列包括查詢處理改良功能，可調整最佳化策略以符合您應用程式工作負載的執行階段條件。 包含下列改善： 
+-  批次模式自適性聯結
+-  記憶體授與意見反應
+-  交錯執行多重陳述式資料表值函式 (MSTVF)
 
 ### <a name="batch-mode-adaptive-joins"></a>批次模式自適性聯結
 這項功能可讓您的計劃在使用單一快取計畫的執行期間，以動態方式切換到較好的聯結策略。
+
+如需批次模式自適性聯結的詳細資訊，請參閱 [SQL 資料庫中的彈性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)。
 
 ### <a name="row-and-batch-mode-memory-grant-feedback"></a>資料列和批次模式記憶體授與意見反應
 > [!NOTE]
@@ -40,10 +45,12 @@ ms.locfileid: "51660950"
 
 這項功能將會重新計算查詢所需的實際記憶體，然後更新快取計劃的授與值，減少影響並行存取的過多記憶體授與，並修正導致佔用大量磁碟資源的低估記憶體授與。
 
-### <a name="interleaved-execution-for-multi-statement-table-valued-functions-mstvfs"></a>交錯執行多重陳述式資料表值函式 (MSTVF)
-利用交錯執行，我們可以使用函式的實際資料列計數制定更明智的下游查詢計劃決策。 
+如需記憶體授與意見反應的詳細資訊，請參閱 [SQL 資料庫中的彈性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)。
 
-如需詳細資訊，請參閱 [SQL 資料庫中的彈性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)。
+### <a name="interleaved-execution-for-multi-statement-table-valued-functions-mstvfs"></a>交錯執行多重陳述式資料表值函式 (MSTVF)
+利用交錯執行，我們可以使用函式的實際資料列計數制定更明智的下游查詢計劃決策。 如需多重陳述式資料表值函式 (MSTVF) 的詳細資訊，請參閱[資料表值函式](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
+
+如需交錯執行的詳細資訊，請參閱 [SQL 資料庫中的彈性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)。
 
 ## <a name="table-variable-deferred-compilation"></a>資料表變數延後編譯
 > [!NOTE]
@@ -59,9 +66,9 @@ ms.locfileid: "51660950"
 > [!NOTE]
 > 純量 UDF 內嵌為公開預覽功能。  
 
-純量 UDF 內嵌會將純量使用者定義函數 (UDF) 自動轉換成關聯運算式，並將它們內嵌在呼叫 SQL 查詢中，以改善運用純量 UDF 之工作負載的效能。 純量 UDF 內嵌有助於對 UDF 內的作業進行以成本為基礎的最佳化，以促成集合導向、平行且有效率的計畫，而不是無效率、反覆且連續的執行計畫。 根據預設，資料庫相容性層級 150 會啟用此功能。
+純量 UDF 內嵌會將[純量使用者定義函式 (UDF)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) 自動轉換成關聯運算式，並將它們內嵌在呼叫 SQL 查詢中，以改善運用純量 UDF 之工作負載的效能。 純量 UDF 內嵌有助於對 UDF 內的作業進行以成本為基礎的最佳化，以促成集合導向、平行且有效率的計畫，而不是無效率、反覆且連續的執行計畫。 根據預設，資料庫相容性層級 150 會啟用此功能。
 
-如需詳細資訊，請參閱 [Scalar UDF Inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sqlallproducts-allversions) (純量 UDF 內嵌)。
+如需詳細資訊，請參閱[純量 UDF 內嵌](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sqlallproducts-allversions)。
 
 ## <a name="approximate-query-processing"></a>近似查詢處理
 > [!NOTE]
@@ -76,9 +83,9 @@ ms.locfileid: "51660950"
 > 資料列存放區上的批次模式是一項公開預覽功能。  
 
 ### <a name="background"></a>背景
-SQL Server 2012 引進了新功能，可加速分析工作負載：資料行存放區索引。 我們已擴展使用案例，並改善每一個後續版本中資料行存放區索引的效能。 到目前為止，我們已將所有這些功能作為單一功能呈現及記載：您在資料表上建立資料行存放區索引，您的分析工作負載即可「變得更快」。 但在表面下，實際上包含了兩組相關卻相異的技術：
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進了新功能，可加速分析工作負載：資料行存放區索引。 我們已擴展使用案例，並改善每一個後續版本中資料行存放區索引的效能。 到目前為止，我們已將所有這些功能作為單一功能呈現及記載：您在資料表上建立資料行存放區索引，您的分析工作負載即可「變得更快」。 但在表面下，實際上包含了兩組相關卻相異的技術：
 - **資料行存放區**索引只會允許分析查詢存取其所需資料行中的資料。 相較於傳統「資料列存放區」索引的頁面壓縮，資料行存放區格式也允許更有效的壓縮。 
-- **批次模式**處理允許查詢運算子透過一次使用一批資料列，而非一次僅使用一個資料列，以更有效率的方式處理資料。 其他數項延展性改善也與批次模式處理繫結。
+- **批次模式**處理允許查詢運算子透過一次使用一批資料列，而非一次僅使用一個資料列，以更有效率的方式處理資料。 其他數項延展性改善也與批次模式處理繫結。 如需批次模式的詳細資訊，請參閱[執行模式](../../relational-databases/query-processing-architecture-guide.md#execution-modes)。
 
 這兩組功能一同使用，即可改善 I/O 和 CPU 使用率：
 - 資料行存放區索引允許在記憶體中放入更多您的資料，藉此減少 I/O 的需求。
@@ -117,6 +124,7 @@ SQL Server 2012 引進了新功能，可加速分析工作負載：資料行存�
 
 ### <a name="configuring-batch-mode-on-rowstore"></a>設定資料列存放區上的批次模式
 根據預設，會開啟 BATCH_MODE_ON_ROWSTORE 資料庫範圍設定，並且可用於停用資料列存放區上的批次模式，而無須變更資料庫相容性層級：
+
 ```sql
 -- Disabling batch mode on rowstore
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
@@ -124,7 +132,9 @@ ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
 -- Enabling batch mode on rowstore
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = ON;
 ```
+
 您可以透過資料庫範圍設定停用資料列存放區上的批次模式，同時使用 ALLOW_BATCH_MODE 查詢提示覆寫設定。 下列範例會啟用資料列存放區上的批次模式，即使已透過資料庫範圍設定停用該項功能：
+
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
 FROM Fact.OrderHistoryExtended
@@ -133,7 +143,9 @@ GROUP BY [Tax Rate], [Lineage Key], [Salesperson Key]
 ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('ALLOW_BATCH_MODE'));
 ```
+
 您也可以透過使用 DISALLOW_BATCH_MODE 查詢提示，來為特定查詢停用資料列存放區上的批次模式。 例如：
+
 ```sql
 SELECT [Tax Rate], [Lineage Key], [Salesperson Key], SUM(Quantity) AS SUM_QTY, SUM([Unit Price]) AS SUM_BASE_PRICE, COUNT(*) AS COUNT_ORDER
 FROM Fact.OrderHistoryExtended

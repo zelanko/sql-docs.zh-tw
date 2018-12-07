@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e69ce37e35b259ff44d1f1d1ddb064894729adf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48d205f913127fa598ba3d2d2d75f2a1eb3f1303
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800706"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406685"
 ---
 # <a name="view-statistics-properties"></a>檢視統計資料屬性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47800706"
   
 -   **若要使用下列項目檢視統計資料屬性：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47800706"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  使用者必須擁有資料表，或者使用者必須是 **系統管理員** 固定伺服器角色、 **db_owner** 固定資料庫角色或 **db_ddladmin** 固定資料庫角色的成員，才能檢視統計資料物件。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  

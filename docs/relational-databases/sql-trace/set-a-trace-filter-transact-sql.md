@@ -14,12 +14,12 @@ ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ea44db438eceb89432629bf424f4bf92dd6274b3
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: b5101f3bf54c7a68e71b4a83839c2e209b9953f4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570927"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523542"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>設定追蹤篩選 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51570927"
 2.  執行 **sp_trace_setfilter** 以設定要從追蹤的事件中擷取的相關資訊類型。  
   
 > [!IMPORTANT]  
->  不同於一般預存程序，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 預存程序的參數 (**sp_trace_* xx***) 都有強制類型，而且不支援資料類型的自動轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
+>  不同於一般預存程序，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 預存程序的參數 (**sp_trace\__xx_**) 都有強制類型，而且不支援資料類型的自動轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
  [篩選追蹤](../../relational-databases/sql-trace/filter-a-trace.md)   

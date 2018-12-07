@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8eeff8f6b53b9a48f0da04bdbcd7927a224b3d70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 701ba6cbdcc95895d55bd7db0fcc4468089f665f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850405"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538098"
 ---
 # <a name="configurationsetting-method---setdatabaseconnection"></a>ConfigurationSetting 方法 - SetDatabaseConnection
   設定特定報表伺服器資料庫的報表伺服器資料庫連接。  
@@ -51,7 +51,7 @@ public void BackupEncryptionKey(string Server,
   
 -   0 - Windows  
   
--   1 – [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   1 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   2 - Windows 服務  
   

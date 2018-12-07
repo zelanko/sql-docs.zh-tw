@@ -14,12 +14,12 @@ ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 32b0e29977dea2d3269972ff06bc34f9af214012
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b74eddf6fa77c63d7b4657375883e9b83e1893d4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697446"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400621"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server 版本的計算容量限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "51697446"
   
 在虛擬環境中，計算容量限制的依據為邏輯處理器的數目，而非核心數目。 原因是客體應用程式看不見處理器架構。 
 
-例如，如果一部伺服器的四個插槽都插入四核心處理器，而且能夠為每個核心啟用兩個超執行緒，則在啟用超執行緒的情況下，總共包含 32 個邏輯處理器。 但是在停用超執行緒的情況下，只包含 16 個邏輯處理器。 這些邏輯處理器可對應至伺服器上的虛擬機器。 而該邏輯處理器的虛擬機器計算負載則對應至主機伺服器中實體處理器上執行的執行緒。  
+例如，如果一部伺服器的四個插槽都插入四核心處理器，而且能夠為每個核心啟用兩個超執行緒，則在啟用超執行緒的情況下，總共包含 32 個邏輯處理器。 但是在停用超執行緒的情況下，只包含 16 個邏輯處理器。 這些邏輯處理器可對應至伺服器上的虛擬機器。 而該邏輯處理器之虛擬機器計算負載則對應至主機伺服器中實體處理器上執行的執行緒。  
   
 當每個虛擬處理器的效能都很重要時，建議您停用超執行緒。 您可以在 BIOS 設定期間，使用處理器的 BIOS 設定啟用或停用超執行緒。 但是，超執行緒通常是伺服器範圍的作業，會影響到在伺服器上執行的所有工作負載。 因此，建議您分隔在虛擬環境中執行的工作負載與實體作業系統環境中可從超執行緒效能獲益的工作負載。  
   

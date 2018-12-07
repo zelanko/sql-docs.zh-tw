@@ -15,12 +15,12 @@ ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c53884f814f60ff208dd066daf6c396a819e0a2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e086006cf53efe9a462fe9d21ff36377915c92b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724436"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398321"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>建立和測試分類使用者定義函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "47724436"
     go  
     ```  
   
-4.  建立使用時間函數和值 (可針對查閱資料表中的時間評估) 的分類函數。 如需在分類函數使用中使用查閱資料表的詳細資訊，請參閱本主題中的＜在分類函數中使用查閱資料表的最佳做法＞。  
+4.  建立使用時間函數和值 (可針對查閱資料表中的時間評估) 的分類函數。 如需在分類函式使用中使用查閱資料表的詳細資訊，請參閱本主題中的＜在分類函式中使用查閱資料表的最佳做法＞。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了一組擴充的日期與時間資料類型和函數。 如需詳細資訊，請參閱[日期和時間資料類型與函數 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
@@ -269,7 +269,7 @@ ms.locfileid: "47724436"
         >  以下是我們建議的最佳做法。 如果有問題導致無法遵循下列最佳做法，建議您連絡 Microsoft 支援部門，以便主動避免未來發生任何問題。  
   
 ## <a name="see-also"></a>另請參閱  
- [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
+ [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [啟用資源管理員](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [資源管理員工作負載群組](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

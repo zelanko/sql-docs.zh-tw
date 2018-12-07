@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bddc53e898acd23ab0f29902703ea53c74987730
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b21a93ad09aecc13842f37b488a8230347cab283
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854816"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514767"
 ---
 # <a name="modify-views"></a>修改檢視
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47854816"
   
 -   **使用下列方法修改檢視：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47854816"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  若要執行 ALTER VIEW，至少需要 OBJECT 的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -69,7 +69,7 @@ ms.locfileid: "47854816"
   
     1.  對於您要加入或移除的任何元素，選取或清除核取方塊。  
   
-    2.  以滑鼠右鍵按一下圖表窗格，並選取 [加入資料表]，然後從 [加入資料表] 對話方塊選取要加入檢視中的其他資料行。  
+    2.  以滑鼠右鍵按一下圖表窗格，並選取 [新增資料表...]，然後從 [新增資料表] 對話方塊選取要新增檢視中的其他資料行。  
   
     3.  以滑鼠右鍵按一下您要移除之資料表的標題列，然後選取 [移除]。  
   

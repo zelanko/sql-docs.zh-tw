@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.importfailing.f1
@@ -16,12 +15,12 @@ ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3fd18c3f8614a47a96f5a917fdeb6e59025a2590
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 394fbfd149e9631148ca495675d93bda0ed652f1
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828586"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616888"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>將 Excel 檔案中的值匯入定義域中
 
@@ -42,7 +41,7 @@ ms.locfileid: "47828586"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_administrator 角色，才能從 Excel 檔案匯入定義域值。  
   
 ##  <a name="Import"></a> 將值匯入 Excel 檔案中的網域  
@@ -67,9 +66,9 @@ ms.locfileid: "47828586"
   
 10. 按一下 [確定] 。 此時，系統會顯示進度列，其中指出已經成功匯入的值數目、未匯入的數目，以及值的總數。 按一下 **[取消]** 按鈕即可取消進度。  
   
-11. 確認「匯入完成」已顯示在 **[匯入定義域值]** 對話方塊中。 您可以在此對話方塊中查看已成功匯入的值，以及未匯入的值。 它會指出檔案的名稱和檔案的路徑、作業的完成狀態、已經成功匯入的值數目、未匯入的值數目，以及已處理的值總數。  
+11. 確認「匯入完成」已顯示在 [匯入定義域值] 對話方塊中。 您可以在此對話方塊中查看已成功匯入的值，以及未匯入的值。 它會指出檔案的名稱和檔案的路徑、作業的完成狀態、已經成功匯入的值數目、未匯入的值數目，以及已處理的值總數。  
   
-12. 對於未成功匯入的這些值，請按一下 **[記錄檔]** 顯示 **[匯入定義域值 - 失敗值]** 對話方塊，以便查看匯入作業失敗的原因。 **[失敗值]** 資料行會顯示無法從 Excel 檔案匯入定義域的值，而 **[原因]** 資料行會說明匯入失敗的原因。 您可以按一下 **[複製至剪貼簿]** ，將 **[失敗值]** 資料表複製到 [剪貼簿]，以便將該資料表複製到另一個程式，例如 Excel 試算表或 [記事本] 檔案。 按一下 **[確定]** 關閉 **[失敗值]** 對話方塊。  
+12. 對於未成功匯入的這些值，請按一下 [記錄檔] 顯示 [匯入定義域值 - 失敗值] 對話方塊，以便查看匯入作業失敗的原因。 **[失敗值]** 資料行會顯示無法從 Excel 檔案匯入定義域的值，而 **[原因]** 資料行會說明匯入失敗的原因。 您可以按一下 **[複製至剪貼簿]** ，將 **[失敗值]** 資料表複製到 [剪貼簿]，以便將該資料表複製到另一個程式，例如 Excel 試算表或 [記事本] 檔案。 按一下 **[確定]** 關閉 **[失敗值]** 對話方塊。  
   
 13. 按一下 **[確定]** 完成匯入作業，然後關閉對話方塊。 當匯入成功完成時， **[定義域值]** 頁面上的定義域值清單就會重新整理，而且將包含新匯入的值。 此時，篩選會變更為 **[所有值]** ，並且選取 **[只顯示新值]** 。 在匯入作業之後選取 **[只顯示新值]** 時，就只會顯示從 Excel 檔案匯入的值。  
   
@@ -116,7 +115,7 @@ ms.locfileid: "47828586"
   
     -   預期的格式如下：第一個資料行成為前置值，而第二個以上的資料行則成為同義字。  
   
-    -   您可以在相同的資料列或不同的資料列中匯入多個同義字。 例如，如果您想要匯入 “NYC” 和 “New York City” 成為 “New York” 的同義字，可以匯入資料行 1 包含 “New York”、資料行 2 包含 “NYC” 而且資料行 3 包含 “New York City” 的單一資料列。或者，您也可以匯入資料行 1 包含 “New York” 而且資料行 2 包含 “NYC” 的一個資料列，以及資料行 1 包含 “New York” 而且資料行 2 包含 “New York City” 的另一個資料列。 請注意，如果 “New York” 值已經存在定義域中，系統就只會加入同義字，而且使用者不會在匯入程序期間收到錯誤，指出該值已經存在。 如果第一個值原本不存在，它就會加入至定義域。  
+    -   您可以在相同的資料列或不同的資料列中匯入多個同義字。 例如，如果您想要匯入 "NYC" 和 "New York City" 成為 "New York" 的同義字，可以匯入資料行 1 包含 "New York"、資料行 2 包含 "NYC" 而且資料行 3 包含 "New York City" 的單一資料列。或者，您也可以匯入資料行 1 包含 "New York" 而且資料行 2 包含 "NYC" 的一個資料列，以及資料行 1 包含 "New York" 而且資料行 2 包含 "New York City" 的另一個資料列。 請注意，如果 "New York" 值已經存在定義域中，系統就只會加入同義字，而且使用者不會在匯入程序期間收到錯誤，指出該值已經存在。 如果第一個值原本不存在，它就會加入至定義域。  
   
  下列規則適用於針對匯入所使用的 Excel 檔案：  
   

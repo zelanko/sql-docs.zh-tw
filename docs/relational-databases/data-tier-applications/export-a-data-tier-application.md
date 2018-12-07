@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c5e3e3e1cdfda5126392e6295fc45cf29b9f507
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6fb94ddf437439fe2dcb414fb69f3049d1a4dbd9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657077"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513823"
 ---
 # <a name="export-a-data-tier-application"></a>匯出資料層應用程式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51657077"
 ## <a name="before-you-begin"></a>開始之前  
  匯出程序會使用兩個階段來建立 DAC 匯出檔。  
   
-1.  匯出會在匯出檔 (BACPAC 檔案) 中建立 DAC 定義，其方式相當於 DAC 擷取在 DAC 封裝檔案中建立 DAC 定義。 匯出的 DAC 定義包含目前資料庫中的所有物件。 如果匯出程序是針對原本從 DAC 部署的資料庫來執行，並已在部署之後直接變更資料庫，則匯出的定義會符合資料庫中所設定的物件，而非原始 DAC 中所定義的物件。  
+1.  匯出會在匯出檔 (BACPAC 檔案) 中建置 DAC 定義，其方式相當於 DAC 擷取在 DAC 套件檔案中建置 DAC 定義。 匯出的 DAC 定義包含目前資料庫中的所有物件。 如果匯出程序是針對原本從 DAC 部署的資料庫來執行，並已在部署之後直接變更資料庫，則匯出的定義會符合資料庫中所設定的物件，而非原始 DAC 中所定義的物件。  
   
 2.  匯出會大量複製資料庫中所有資料表的資料，並將資料合併至匯出檔。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "51657077"
   
 3.  以滑鼠右鍵按一下資料庫名稱。  
   
-4.  按一下 [工作]，然後選取 [匯出資料層應用程式]。  
+4.  按一下 [工作]，然後選取 [匯出資料層應用程式...]  
   
 5.  完成精靈對話方塊：  
   
@@ -95,7 +95,7 @@ ms.locfileid: "51657077"
 ##  <a name="Export_settings"></a> 匯出設定頁面  
  請使用此頁面來指定要建立 BACPAC 檔案的位置。  
   
--   **儲存至本機磁碟** - 在本機電腦的目錄中建立 BACPAC 檔案。 按一下 **[瀏覽]** 瀏覽本機電腦，或在提供的空間中指定路徑。 路徑名稱必須包含檔案名稱和 .bacpac 副檔名。  
+-   **儲存至本機磁碟** - 在本機電腦的目錄中建立 BACPAC 檔案。 按一下 [瀏覽...] 巡覽本機電腦，或在提供的空間中指定路徑。 路徑名稱必須包含檔案名稱和 .bacpac 副檔名。  
   
 -   **儲存至 Windows Azure** - 在 Windows Azure 容器中建立 BACPAC 檔案。 您必須連接到 Windows Azure 容器，才能驗證此選項。 請注意，此選項也會要求您指定暫存檔的本機目錄。 請注意，暫存檔將建立在指定的位置，而且作業完成之後，將保留在該位置。  
   

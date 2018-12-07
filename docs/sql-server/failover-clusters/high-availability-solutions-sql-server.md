@@ -17,12 +17,12 @@ ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c53eba08ad0e2ce91fe873c1072e262076a0cde4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5c07a9689453e11058dedcdcd0d014f01b6e480
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655982"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502416"
 ---
 # <a name="high-availability-solutions-sql-server"></a>高可用性解決方案 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47655982"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供幾個選項用於建立伺服器或資料庫的高可用性。 高可用性選項包括下列各項：    
     
 *  AlwaysOn 容錯移轉叢集執行個體    
- AlwaysOn 容錯移轉叢集執行個體是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn 供應項目的一部分，會利用 Windows Server 容錯移轉叢集 (WSFC) 功能，透過伺服器執行個體層級 (「容錯移轉叢集執行個體」(FCI)) 的備援提供本機高可用性。 FCI 是跨 Windows Server 容錯移轉叢集 (WSFC) 節點且可能跨多個子網路安裝的單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在網路上，FCI 看似單一電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，但是 FCI 提供容錯移轉，可以在目前的 WSFC 節點無法使用時，從該節點容錯移轉到另一個節點。    
+ Always On 容錯移轉叢集執行個體是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Always On 供應項目的一部分，會利用 Windows Server 容錯移轉叢集 (WSFC) 功能，透過伺服器執行個體層級 (「容錯移轉叢集執行個體」(FCI)) 的備援提供本機高可用性。 FCI 是跨 Windows Server 容錯移轉叢集 (WSFC) 節點且可能跨多個子網路安裝的單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在網路上，FCI 看似單一電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，但是 FCI 提供容錯移轉，可以在目前的 WSFC 節點無法使用時，從該節點容錯移轉到另一個節點。    
     
  如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)執行個體的容錯移轉叢集執行個體。    
     

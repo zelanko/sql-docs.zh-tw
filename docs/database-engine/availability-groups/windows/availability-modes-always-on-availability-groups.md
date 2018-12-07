@@ -17,12 +17,12 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0c4ec35fa7f25e7ece372914bc7109d298817ca
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a2dfe969dff2f9058af9391293dd1b3aabfdfdc5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602888"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544045"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>可用性模式 (AlwaysOn 可用性群組)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "51602888"
 -   [相關內容](#RelatedContent)  
   
 ##  <a name="SupportedAvModes"></a> 支援的可用性模式  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支援三種可用性模式— 非同步認可模式、同步認可模式和僅設定模=式，如下所示：  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支援三種可用性模式 - 非同步認可模式、同步認可模式和僅設定模式，如下所示：  
   
 -   「非同步認可模式」是一種當可用性複本分散距離相當遠時仍可正常運作的災害復原解決方案。 如果每個次要複本都在非同步認可模式下執行，主要複本就不會等候任何次要複本強行寫入記錄。 而是，將記錄檔記錄寫入本機記錄檔之後，主要複本會立即將交易確認傳送至用戶端。 主要複本會以相對於設定為非同步認可模式之次要複本的最低交易延遲執行。  如果目前主要複本設定為非同步認可的可用性模式，它將會以非同步方式認可所有次要複本的交易，不論其個別可用性模式設定為何。  
   

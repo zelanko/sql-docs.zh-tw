@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6a493772e014445a25b21078ce37ada5585e3226
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 7da1fa318ac1bab2310cb8708215db3456d84d66
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813911"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399911"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 在此 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教學課程中，您將使用入口網站來選取傳遞給收件者的報表。 您將定義的資料驅動訂閱將散發 **建立基本資料表報表 &#40;SSRS 教學課程&#41;** 教學課程中建立的 [建立基本資料表報表 &amp;#40;SSRS 教學課程&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)報表。  在下面的步驟中，您將修改報表用來取得資料的資料來源連接資訊。 只有使用 **預存認證** 來存取報表資料來源的報表可以透過資料驅動訂閱散發。 自動報表處理需要預存認證。  
@@ -105,7 +105,7 @@ ms.locfileid: "51813911"
   
 ## <a name="bkmk_redeploy"></a>重新部署報表  
   
-1.  請重新部署報表，讓下一課的訂閱組態能夠運用您在這一課所做的變更。 如需用於資料表教學課程之專案屬性的詳細資訊，請參閱[第 6 課：新增群組和總計 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md) 的＜將報表發行至報表伺服器 (選擇性)＞一節。  
+1.  請重新部署報表，讓下一課的訂閱組態能夠運用您在這一課所做的變更。 如需用於資料表教學課程的專案屬性詳細資訊，請參閱[第 6 課：新增群組和總計 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md) 的＜將報表發行至報表伺服器 (選擇性)＞一節。  
   
 2.  在工具列上，按一下 **[建置]** ，然後按一下 **[部署教學課程]**。  
   

@@ -53,12 +53,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e0989f8f24e3764c63ca30b7ed980c9a4852165
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6456a8ad03e4f0cb86c5299f1d817775688c1330
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702676"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535586"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 純量函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -94,14 +94,14 @@ ms.locfileid: "51702676"
 |CURRENT_TIME`[( time-precision )]` (ODBC 3.0)|傳回目前的當地時間。 其中 time-precision 引數會決定傳回值的秒數有效位數。|  
 |CURTIME() (ODBC 3.0)|傳回目前的當地時間。|  
 |DAYNAME( date_exp ) (ODBC 2.0)|傳回字元字串，其中針對 date_exp 的日期部分包含資料來源專用的日期名稱 (例如，若為使用英文的資料來源，則為 Sunday 到 Saturday 或 Sun. 到 Sat.； 若為使用德文的資料來源，則為 Sonntag 到 Samstag)。|  
-|DAYOFMONTH( date_exp ) (ODBC 1.0)|根據 date_exp 中的月份欄位，傳回月份的日期成為整數值 (範圍介於 1–31 之間)。|  
-|DAYOFWEEK( date_exp ) (ODBC 1.0)|根據 date_exp 中的週欄位，傳回當週的日期成為整數值 (範圍介於 1–7 之間，其中 1 代表星期日)。|  
-|HOUR( time_exp ) (ODBC 1.0)|根據 time_exp 中的小時欄位，傳回小時成為整數值 (範圍介於 0–23 之間)。|  
-|MINUTE( time_exp ) (ODBC 1.0)|根據 time_exp 中的分鐘欄位，傳回分鐘成為整數值 (範圍介於 0–59 之間)。|  
-|SECOND( time_exp ) (ODBC 1.0)|根據 time_exp 中的秒數欄位，傳回秒數成為整數值 (範圍介於 0–59 之間)。|  
+|DAYOFMONTH( date_exp ) (ODBC 1.0)|根據 date_exp 中的月份欄位，傳回月份的日期成為整數值 (範圍介於 1-31 之間)。|  
+|DAYOFWEEK( date_exp ) (ODBC 1.0)|根據 date_exp 中的週欄位，傳回當週的日期成為整數值 (範圍介於 1-7 之間，其中 1 代表星期日)。|  
+|HOUR( time_exp ) (ODBC 1.0)|根據 time_exp 中的小時欄位，傳回小時成為整數值 (範圍介於 0-23 之間)。|  
+|MINUTE( time_exp ) (ODBC 1.0)|根據 time_exp 中的分鐘欄位，傳回分鐘成為整數值 (範圍介於 0-59 之間)。|  
+|SECOND( time_exp ) (ODBC 1.0)|根據 time_exp 中的秒數欄位，傳回秒數成為整數值 (範圍介於 0-59 之間)。|  
 |MONTHNAME( date_exp ) (ODBC 2.0)|傳回字元字串，其中針對 date_exp 的月份部分包含資料來源專用的月份名稱 (例如，若為使用英文的資料來源，則為 January 到 December 或 Jan. 到 Dec.；若為使用德文的資料來源，則為 Januar 到 Dezember)。|  
-|QUARTER( date_exp ) (ODBC 1.0)|傳回 date_exp 中的季度成為整數值 (範圍介於 1–4 之間，其中 1 代表 1 月 1 日到 3 月 31 日)。|  
-|WEEK( date_exp ) (ODBC 1.0)|根據 date_exp 中的週欄位，傳回該年的週數成為整數值 (範圍介於 1–53 之間)。|  
+|QUARTER( date_exp ) (ODBC 1.0)|傳回 date_exp 中的季度成為整數值 (範圍介於 1-4 之間，其中 1 代表 1 月 1 日到 3 月 31 日)。|  
+|WEEK( date_exp ) (ODBC 1.0)|根據 date_exp 中的週欄位，傳回該年的週數成為整數值 (範圍介於 1-53 之間)。|  
   
 ## <a name="examples"></a>範例  
   

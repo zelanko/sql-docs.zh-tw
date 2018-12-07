@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 2a88ea46-c9f8-4dd7-aad1-16de11da4f06
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cfe60270d68886f498b25d5f9b161df4f7dc2622
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c9cf8ad14706b3e344ff6810bfae3ce84af2c32
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670568"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395401"
 ---
 # <a name="custom-report-item-architecture"></a>自訂報表項目架構
-  自訂報表項目是報表定義語言 (RDL) 的延伸模組，可讓開發人員加入 RDL 中原本就支援的功能，或是擴充現有控制項的功能。 自訂報表項目有兩個主要元件：執行階段元件與設計階段元件。 這些元件會實作成 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 組件，而且可用任何 符合 CLS 規範的語言來撰寫。  
+  自訂報表項目是報表定義語言 (RDL) 的延伸模組，可讓開發人員新增 RDL 中原本就支援的功能，或是擴充現有控制項的功能。 自訂報表項目有兩個主要元件：執行階段元件與設計階段元件。 這些元件會實作成 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 組件，而且可用任何 符合 CLS 規範的語言來撰寫。  
   
 ## <a name="the-run-time-component"></a>執行階段元件  
  自訂報表項目的執行階段元件會在執行階段由報表處理器進行呼叫。 執行階段元件會接受報表處理器在執行階段所傳遞的資料、處理這個資料，並傳回包含已轉譯之自訂報表項目的影像。  

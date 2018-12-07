@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4d12f59b94771a73f6f3b5db5290747940c768d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1c72f5294a7727b7d5a7903e0c12f8daa8c93cbf
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700936"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394144"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>升級在 Windows Server 2008/2008 R2/2012 叢集上執行的 SQL Server 執行個體
 
@@ -80,7 +80,7 @@ ms.locfileid: "51700936"
 
 9.  刪除或重新命名原始 AG 上的接聽程式。
 
-10. 使用原始 AG 的接聽程式名稱來重新命名或建立新 AG 的接聽程式。
+10. 使用原始 AG 接聽程式名稱來重新命名或建立新 AG 接聽程式。
 
     >[!NOTE]
     >雖然原始 AG 接聽程式的 DNS 記錄存在，但是嘗試使用此名稱來建立接聽程式將會失敗。
@@ -107,11 +107,11 @@ ms.locfileid: "51700936"
 
 7.  將系統資料庫從原始電腦複製至其平行目標電腦。
 
-8.  在原始環境的容錯移轉叢集管理員中，變更每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 角色的 [伺服器名稱] 資源名稱。
+8.  在原始環境的容錯移轉叢集管理員中，變更每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 角色的「伺服器名稱」資源名稱。
 
 9.  立即只讓每個 SQL FCI 角色的已重新命名「伺服器名稱」資源重新上線。
 
-10. 現在，在目標叢集的容錯移轉叢集管理員中，將每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 角色的 [伺服器名稱] 資源重新命名為原始叢集先前所保留的名稱。
+10. 現在，在目標叢集的容錯移轉叢集管理員中，將每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 角色的「伺服器名稱」資源重新命名為原始叢集先前所保留名稱。
 
     >[!NOTE]
     >刪除名稱的 DNS 記錄之後，另一部電腦已持有之名稱所引發的錯誤將會停止。
@@ -122,7 +122,7 @@ ms.locfileid: "51700936"
 
 ## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>案例 3：有 SQL FCI 和 SQL Server 可用性群組的 Windows 叢集
 
-如果您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式未使用任何獨立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (只有包含在至少一個可用性群組中的 SQL FCI)，則可以使用與「無可用性群組、無獨立執行個體」案例類似的方法將此項目移轉至新叢集。 將系統資料表複製至目標 FCI 共用磁碟之前，您必須卸除原始環境中的所有可用性群組。 所有資料庫都移轉至目標電腦之後，您將會重新建立具有相同結構描述和接聽程式名稱的可用性群組。 如此一來，Windows Server 容錯移轉叢集資源的格式會正確，並在目標叢集上進行管理。 **移轉之前，必須在目標環境之每部電腦的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager 中啟用 AlwaysOn。**
+如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式未使用任何獨立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (只有包含在至少一個可用性群組中的 SQL FCI)，則可以使用與「無可用性群組、無獨立執行個體」案例類似的方法將此項目移轉至新叢集。 將系統資料表複製至目標 FCI 共用磁碟之前，您必須卸除原始環境中的所有可用性群組。 所有資料庫都移轉至目標電腦之後，您將會重新建立具有相同結構描述和接聽程式名稱的可用性群組。 如此一來，Windows Server 容錯移轉叢集資源的格式會正確，並在目標叢集上進行管理。 **移轉之前，必須在目標環境之每部電腦的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager 中啟用 AlwaysOn。**
 
 ### <a name="to-perform-the-upgrade"></a>執行升級
 
@@ -142,11 +142,11 @@ ms.locfileid: "51700936"
 
 8.  將系統資料庫從原始電腦複製至其平行目標電腦。
 
-9.  在原始環境的容錯移轉叢集管理員中，變更每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 角色的 [伺服器名稱] 資源名稱。
+9.  在原始環境的容錯移轉叢集管理員中，變更每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 角色的「伺服器名稱」資源名稱。
 
 10. 立即只讓每個 SQL FCI 角色的已重新命名「伺服器名稱」資源重新上線。
 
-11. 現在，在目標叢集的容錯移轉叢集管理員中，將每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 角色的 [伺服器名稱] 資源重新命名為原始叢集先前所保留的名稱。
+11. 現在，在目標叢集的容錯移轉叢集管理員中，將每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 角色的「伺服器名稱」資源重新命名為原始叢集先前所保留名稱。
 
 12. 重新命名所有 FCI 之後，請重新啟動新叢集中的每部電腦。
 
@@ -160,7 +160,7 @@ ms.locfileid: "51700936"
 
 ## <a name="scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups"></a>案例 4：有獨立 SQL Server 執行個體、沒有可用性群組的 Windows 叢集
 
-移轉具有獨立執行個體的叢集，與移轉只有 FCI 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 叢集的程序類似，但您需要變更原始獨立電腦的電腦名稱，並「竊取」目標電腦上的舊電腦名稱，而不需要變更 FCI 網路名稱叢集資源的 VNN。 這會導致相對於無獨立案例的額外停機時間，因為除非您取得舊電腦的網路名稱，否則無法將目標獨立電腦加入至 WSFC。
+移轉具有獨立執行個體的叢集，與移轉只有 FCI 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 叢集的程序類似，但您需要變更原始獨立電腦的電腦名稱，並「竊取」目標電腦上的舊電腦名稱，而不需要變更 FCI 網路名稱叢集資源的 VNN。 這會導致相對於無獨立案例的額外停機時間，因為除非您取得舊電腦的網路名稱，否則無法將目標獨立電腦新增至 WSFC。
 
 ###  <a name="to-perform-the-upgrade"></a>執行升級
 
@@ -180,7 +180,7 @@ ms.locfileid: "51700936"
 
 8.  將系統資料庫複製至目標電腦。
 
-9.  在原始環境的容錯移轉叢集管理員中，將每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 角色的 [伺服器名稱] 資源變更為新的唯一名稱。
+9.  在原始環境的容錯移轉叢集管理員中，將每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 角色的「伺服器名稱」資源變更為新唯一名稱。
 
 10. 立即只讓每個 SQL FCI 角色的已重新命名「伺服器名稱」資源重新上線。
 
@@ -188,7 +188,7 @@ ms.locfileid: "51700936"
 
 12. 重新啟動之後，請將每部獨立電腦加入至目標 Windows Server 容錯移轉叢集。
 
-13. 現在，在目標叢集的容錯移轉叢集管理員中，將每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 角色的 [伺服器名稱] 資源重新命名為原始叢集先前所保留的名稱。
+13. 現在，在目標叢集的容錯移轉叢集管理員中，將每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 角色的「伺服器名稱」資源重新命名為原始叢集先前所保留名稱。
 
 14. 重新命名所有 FCI 之後，請重新啟動新叢集中的每部電腦。
 
@@ -218,7 +218,7 @@ ms.locfileid: "51700936"
 
 9.  將系統資料庫複製至目標電腦。
 
-10. 在原始環境的容錯移轉叢集管理員中，將每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 角色的「伺服器名稱」資源變更為新的唯一名稱。
+10. 在原始環境的容錯移轉叢集管理員中，將每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 角色的「伺服器名稱」資源變更為新唯一名稱。
 
 11. 立即只讓每個 SQL FCI 角色的已重新命名「伺服器名稱」資源重新上線。
 
@@ -226,7 +226,7 @@ ms.locfileid: "51700936"
 
 13. 重新啟動之後，請將每部獨立電腦加入至目標 Windows Server 容錯移轉叢集。
 
-14. 現在，在目標叢集的容錯移轉叢集管理員中，將每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 角色的「伺服器名稱」資源重新命名為原始叢集先前所保留的名稱。
+14. 現在，在目標叢集的容錯移轉叢集管理員中，將每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 角色的「伺服器名稱」資源重新命名為原始叢集先前所保留名稱。
 
 15. 重新命名所有 FCI 之後，請重新啟動新叢集中的每部電腦。
 

@@ -13,12 +13,12 @@ ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a229648a71d80c23145e61be35c3b3e8744578d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c13eb6089e9be42733782c54d757a0e3035fe6f7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802246"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418442"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>使用 FileTables 中的目錄與路徑
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ GO
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\`  
   
- 此目錄階層會形成 FileTable 命名空間的根。 在此目錄階層之下，FileTable 的 FILESTREAM 資料將會儲存為檔案，以及其下也可以再包含檔案與子目錄的子目錄。  
+ 此目錄階層會形成 FileTable 檔案命名空間的根目錄。 在此目錄階層之下，FileTable 的 FILESTREAM 資料將會儲存為檔案，以及其下也可以再包含檔案與子目錄的子目錄。  
   
  請務必牢記，於此執行個體層級的 FILESTREAM 共用之下所建立的目錄階層，是一個虛擬的目錄階層。 此階層儲存於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，且不會實際於 NTFS 檔案系統中呈現出來。 所有存取 FILESTREAM 共用之下以及其所包含之 FileTables 中檔案與目錄的作業，都會由檔案系統中內嵌的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件所攔截與處理。  
   

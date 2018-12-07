@@ -16,12 +16,12 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 649ebf4f39013ccc44b26c74acd311fe4f712f9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04f1834ebc282044164b2e1d2b77e784b3260973
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730868"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525114"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性群組資料庫層級健全狀況偵測容錯移轉選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -17,12 +17,12 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6919f19a3feec0122ac76d2b4cb4f0bdbbc68466
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3da52bc9b6014f5a2a553fc24e844299dd4ab4e8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691517"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515776"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>將現有的索引移至不同的檔案群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47691517"
   
 -   **若要將現有的索引移至不同的檔案群組，使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47691517"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -76,7 +76,7 @@ ms.locfileid: "47691517"
   
 8.  按一下 [ **關閉**]。  
   
-9. 在 [檔案] 功能表上，選取 [儲存 <資料表名稱>]。  
+9. 在 [檔案] 功能表上，選取 [儲存 _table_name_]。  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>若要在物件總管中將現有的索引移到不同的檔案群組  
   
@@ -100,7 +100,7 @@ ms.locfileid: "47691517"
   
      在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的多處理器電腦上，您可以指定平行處理原則的最大程度值，藉以設定用來執行索引陳述式的處理器數目。 並非每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用平行索引作業功能。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱＜SQL Server 2016 版本支援的功能＞。 如需平行索引作業的詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
-8.  按一下 **[確定]**。  
+8.  按一下 [確定] 。  
   
  下列資訊可從 [索引屬性 - *index_name*] 對話方塊的 [儲存體] 頁面取得：  
   

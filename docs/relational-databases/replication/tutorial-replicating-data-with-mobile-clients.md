@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66f33552c8ccd615cfb2894da0ef3ba337a43cc7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bc09bcca6e70d80e256cba8cd8a1ad6a477a4742
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681326"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545537"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>教學課程：設定伺服器和行動用戶端之間的複寫 (合併式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -205,7 +205,7 @@ ms.locfileid: "51681326"
 
    ![將資料庫新增至訂閱者的選項](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
-8. 在 [合併代理程式安全性] 頁面上，選取省略符號 (**...**) 按鈕。 在 [處理帳戶] 方塊中輸入 <訂閱者電腦名稱>**\repl_merge**，並提供此帳戶的密碼。 依序選取 [確定] 和 [下一步]，然後再次選取 [下一步]。  
+8. 在 [合併代理程式安全性] 頁面上，選取省略符號 ([...]) 按鈕。 在 [處理帳戶] 方塊中輸入 <訂閱者電腦名稱>**\repl_merge**，並提供此帳戶的密碼。 依序選取 [確定] 和 [下一步]，然後再次選取 [下一步]。  
 
    ![[合併代理程式安全性] 的選項](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 

@@ -22,12 +22,12 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f824f7fec40cf99b55ff97382269413ae82b5c83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2db3b6241096501190e2d1c8e3978bd349fed7a3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662096"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526202"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,13 +76,13 @@ ALTER FULLTEXT INDEX ON table_name
  停用全文檢索索引可讓您關閉變更追蹤，但保留全文檢索索引，而且您可以隨時使用 ENABLE 來重新啟動。 停用全文檢索索引時，全文檢索索引中繼資料會保留在系統資料表中。 如果停用全文檢索索引時，CHANGE_TRACKING 處於已啟用狀態 (自動或手動更新)，索引狀態會凍結，而且任何進行中的搜耙都會停止，此時不會追蹤資料表資料的新變更，也不會將它們傳播到索引中。  
   
  SET CHANGE_TRACKING {MANUAL | AUTO | OFF}  
- 指定全文檢索索引涵蓋的資料表資料行變更 (更新、刪除或插入)，是否會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 散佈到全文檢索索引。 透過 WRITETEXT 和 UPDATETEXT 的資料變更並不會反映在全文檢索索引中，變更追蹤並不會收取這些變更。  
+ 指定全文檢索索引涵蓋的資料表資料行變更 (更新、刪除或插入)，是否會由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳播到全文檢索索引。 透過 WRITETEXT 和 UPDATETEXT 的資料變更並不會反映在全文檢索索引中，變更追蹤並不會收取這些變更。  
   
 > [!NOTE]  
 >  如需有關變更追蹤與 WITH NO POPULATION 之間互動的詳細資訊，請參閱本主題後面的＜備註＞一節。  
   
  MANUAL  
- 指定追蹤的變更會手動傳播 (藉由呼叫 ALTER FULLTEXT INDEX... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (「手動母體擴展」)。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來定期呼叫這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
+ 指定追蹤的變更會手動傳播 (藉由呼叫 ALTER FULLTEXT INDEX...START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (「手動母體擴展」)。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來定期呼叫這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
  AUTO  
  指定在修改基底資料表中的資料時，同時自動散佈追蹤變更 (「自動母體擴展」)。 雖然變更會自動傳播，但這些變更可能不會立即反映在全文檢索索引中。 預設值是 AUTO。  
@@ -119,7 +119,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  如果這個值是雙位元組字集 (DBCS) 格式，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將它轉換成 Unicode。  
   
- 您必須針對指定為 *language_term* 的語言來啟用資源，如文字分隔和詞幹分析器。 如果這些資源不支援指定的語言，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。  
+ 您必須針對指定為 *language_term* 的語言來啟用資源，如文字分隔和詞幹分析器。 如果這些資源不支援指定的語言， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。  
   
  如果是包含多種語言之文字資料的非 BLOB 和非 XML 資料行，或資料行所儲存的文字語言不明，請使用中性 (0x0) 語言資源。 如果是儲存在 XML 或 BLOB 類型資料行中的文件，在建立索引時，將使用文件內的語言編碼。 例如，在 XML 資料行中，XML 文件的 xml:lang 屬性會識別語言。 在查詢時，除非在全文檢索查詢中指定 *language_term*否則，*language_term* 先前所指定的值會成為全文檢索查詢所用的預設語言。  
   
@@ -128,15 +128,15 @@ ALTER FULLTEXT INDEX ON table_name
   
  建立其他關鍵片語以及屬於統計語意索引一部分的文件相似度索引。 如需詳細資訊，請參閱[語意搜尋 &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)。  
   
- [ **,***...n*]  
+ [ **,**_...n_]  
  指出 ADD、ALTER 或 DROP 子句可以指定多個資料行。 當指定多個資料行時，請用逗號來分開這些資料行。  
   
  WITH NO POPULATION  
  指定在 ADD 或 DROP 資料行作業或是 SET STOPLIST 作業之後，將不會擴展全文檢索索引。 只有在使用者執行 START...POPULATION 命令時，才擴展索引。  
   
- 當指定 NO POPULATION 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不會擴展索引。 只有在使用者提供了 ALTER FULLTEXT INDEX...START POPULATION 命令之後，才會擴展索引。 未指定 NO POPULATION 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會擴展索引。  
+ 當指定 NO POPULATION 時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不會擴展索引。 只有在使用者提供了 ALTER FULLTEXT INDEX...START POPULATION 命令之後，才會擴展索引。 未指定 NO POPULATION 時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會擴展索引。  
   
- 如果既啟用 CHANGE_TRACKING，又指定 WITH NO POPULATION，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。 如果啟用 CHANGE_TRACKING，但沒有指定 WITH NO POPULATION，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會執行索引的完整母體擴展。  
+ 如果既啟用 CHANGE_TRACKING，又指定 WITH NO POPULATION，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。 如果啟用了 CHANGE_TRACKING，但沒有指定 WITH NO POPULATION，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會執行索引的完整母體擴展。  
   
 > [!NOTE]  
 >  如需有關變更追蹤與 WITH NO POPULATION 之間互動的詳細資訊，請參閱本主題後面的＜備註＞一節。  
@@ -274,7 +274,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 3.  再次將全文檢索索引與相同搜尋屬性清單或另一個搜尋屬性清單產生關聯。  
   
-     例如，下列陳述式會將全文檢索索引與原始搜尋屬性清單 `spl_1` 重新建立關聯：  
+     例如，下列陳述式會將全文檢索索引與原始搜尋屬性清單 `spl_1` 重新產生關聯：  
   
     ```  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_1;  
@@ -283,7 +283,7 @@ ALTER FULLTEXT INDEX ON table_name
      此陳述式會啟動完整母體擴展 (預設行為)。  
   
     > [!NOTE]  
-    >  針對不同的搜尋屬性清單 (例如 `spl_2`)，也需要進行重建。  
+    >  針對不同的搜尋屬性清單 (如 `spl_2`)，也會需要重建。  
   
 ## <a name="permissions"></a>[權限]  
  使用者必須具有資料表或索引檢視表的 ALTER 權限，或必須是 **sysadmin** 固定伺服器角色的成員，或是 **db_ddladmin** 或 **db_owner** 固定資料庫角色的成員。  

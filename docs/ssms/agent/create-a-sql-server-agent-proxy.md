@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aaa681a073ddb2d6bd686ecdaacb4a6e29916da9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d1be35274e41f259f0213d866bf91151d820f9d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699226"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415995"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>建立 SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "51699226"
   
 -   在建立 Proxy 之前，如果沒有認證可用，則必須先建立認證。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 使用認證來儲存 Windows 使用者帳戶的相關資訊。 認證中所指定的使用者對執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦必須具有「從網路存取這台電腦」的權限 (SeNetworkLogonRight)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 使用認證來儲存 Windows 使用者帳戶的相關資訊。 認證中所指定使用者對執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦必須具有「從網路存取這部電腦」的權限 (SeNetworkLogonRight)。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會檢查 Proxy 的子系統存取權，而且每當作業步驟執行時，就會提供 Proxy 的存取權。 如果 Proxy 不再擁有子系統的存取權，作業步驟就會失效。 否則， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會模擬 Proxy 中所指定的使用者，並執行作業步驟。  
   

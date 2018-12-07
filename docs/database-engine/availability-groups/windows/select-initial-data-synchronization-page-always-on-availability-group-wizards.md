@@ -14,17 +14,17 @@ ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9ff20c6ea926a20d0637f5d62add4bec0a9d475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a06a4f8bf7474cd2379886dc78cbdddc6a05cab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684816"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545387"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>選取初始資料同步頁面 (Always On 可用性群組精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  使用 AlwaysOn [選取初始資料同步處理] 頁面，指定新次要資料庫之初始資料同步處理的喜好設定。 此頁面由三個精靈所共用： [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]、 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]和 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]。  
+  使用 AlwaysOn [選取初始資料同步處理] 頁面，指定新次要資料庫之初始資料同步處理的喜好設定。 此頁面由三個精靈所共用：[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]、[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 和 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]。  
   
  可能的選項包含 [自動植入]、[完整的資料庫及記錄備份]、[僅加入] 或 [略過初始資料同步處理]。 選取 [自動植入]、[完整] 或 [僅加入] 之前，請確認您的環境符合必要條件。  
     

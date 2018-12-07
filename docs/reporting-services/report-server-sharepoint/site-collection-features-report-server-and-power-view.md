@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ae23135583dc09db8d8a8b0cfb7d356244fb753
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 18a805e049dfeedc3b8984c1c92da3af40b5bfda
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812275"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405709"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>在 SharePoint 中啟用報表伺服器和 Power View 整合功能
 
@@ -32,7 +32,7 @@ ms.locfileid: "51812275"
   
  「SharePoint Web 應用程式 80 沒有根網站集合」  
   
- 此訊息可在名為 “RS_SP_#.log” 的增益集安裝記錄中找到，其中 # 是遞增的數字。 此記錄檔可在目前使用者的 Temp 資料夾中找到，例如 C:\Users\\[使用者名稱]\AppData\Local\Temp。如需使用增益集之記錄選項的詳細資訊，請參閱 [安裝或解除安裝 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。  
+ 此訊息可在名為 "RS_SP_#.log" 的增益集安裝記錄中找到，其中 # 是遞增的數字。 此記錄檔可在目前使用者的 Temp 資料夾中找到，例如 C:\Users\\[使用者名稱]\AppData\Local\Temp。如需使用增益集之記錄選項的詳細資訊，請參閱 [安裝或解除安裝 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。  
 
 ## <a name="activate-the-report-server-and-power-view-integration-site-collection-features"></a>啟用報表伺服器和 Power View 整合網站集合功能
   

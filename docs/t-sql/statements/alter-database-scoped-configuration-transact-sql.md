@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7fa7bf2f5d315bda158ed45f3965fbc2a952fb00
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 744895bc3e2a60d8eb3edad4554f08bc1aaf6a95
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700296"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641499"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -111,7 +111,7 @@ PRIMARY
 
 PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}
 
-啟用或停用[參數探查](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。 預設值是 ON。 將 PARAMETER_SNIFFING 設為 [ON] 相當於啟用[追蹤旗標 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
+啟用或停用[參數探查](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。 預設值是 ON。 將 PARAMETER_SNIFFING 設為 OFF 相當於啟用[追蹤旗標 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 
 > [!TIP]
 > 若要在查詢層級完成此操作，請參閱 **OPTIMIZE FOR UNKNOWN** [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)。
@@ -121,7 +121,7 @@ PRIMARY
 
 只有在資料庫位於主要端上時，此值才會在次要端上有效，並且指定所有次要端上此設定的值將採用針對主要端設定的值。 如果主要端上使用[參數探查](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)的組態發生變更，次要端上的值將會相應地變更，而無須明確地設定次要端值。 [PRIMARY] 是次要端的預設設定。
 
-QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
+<a name="qo_hotfixes"></a> QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
 
 啟用或停用查詢最佳化 Hotfix，而不管資料庫的相容性層級為何。 預設值為 **OFF**，這會停用在針對特定版本導入最高可用相容性層級之後 (RTM 後) 發行的查詢最佳化 Hotfix。 將此值設定為 **ON** 相當於啟用[追蹤旗標 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
 

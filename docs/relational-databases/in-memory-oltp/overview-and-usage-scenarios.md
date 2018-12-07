@@ -12,12 +12,12 @@ author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7c22748f79ecf91239255374716e29c729eca34
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1ca7cb161bb4b3bebf2d7c65018b5221fd5bf1cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660367"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533400"
 ---
 # <a name="overview-and-usage-scenarios"></a>概觀和使用案例
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "51660367"
 #### <a name="customer-case-studies"></a>客戶案例研究
 
 - CMC Markets 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的記憶體內部 OLTP 來達成一致的低延遲：[因為一秒都不想再等，所以這家金融服務公司目前正在更新其交易軟體。](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
-- Derivco 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的記憶體內部 OLTP 來支援增加的輸送量並處理尖峰工作負載：[當某家線上遊戲公司不想承擔其未來風險時，其首選為 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
+- Derivco 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的 In-Memory OLTP 來支援增加的輸送量並處理尖峰工作負載：[當某家線上遊戲公司不想承擔其未來風險時，其首選為 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
 
 
 ### <a name="data-ingestion-including-iot-internet-of-things"></a>擷取資料，包括 IoT (Internet of Things)
@@ -83,7 +83,7 @@ ms.locfileid: "51660367"
 使用記憶體最佳化資料表進行資料擷取。 如果擷取包含大部分的插入 (而非更新)，而且顧慮到資料的記憶體內部 OLTP 資料儲存體使用量，則可
 
 - 使用工作，利用進行 [的工作，定期將資料批次卸載到含有](../indexes/columnstore-indexes-overview.md)叢集資料行存放區索引 `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`且磁碟為基礎的資料表，或者
-- 使用 [暫時的記憶體最佳化資料表](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) 來管理歷程記錄資料 - 在此模式中，歷程記錄資料會存留於磁碟上，而資料移動是由系統所管理。
+- 使用[暫時的記憶體最佳化資料表](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)管理歷程記錄資料 - 在此模式中，歷程記錄資料會存留於磁碟上，而資料移動是由系統所管理。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 範例儲存機制包含智慧型格線應用程式，其會使用暫時的記憶體最佳化資料表、記憶體最佳化資料表類型及原生編譯的預存程序來加速資料擷取，同時管理感應器資料的記憶體內部 OLTP 儲存體使用量： 
 
@@ -92,7 +92,7 @@ ms.locfileid: "51660367"
  
 #### <a name="customer-case-studies"></a>客戶案例研究
 
-- [Quorum 利用 Azure SQL Database 中的記憶體內部 OLTP，將主要資料庫的工作負載加倍，同時降低 70% 的使用率](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
+- [Quorum 利用 Azure SQL Database 中的 In-Memory OLTP，將主要資料庫的工作負載加倍，同時降低 70% 的使用率](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
 - EdgeNet 利用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的記憶體內部 OLTP，提升了批次資料載入的效能，並移除了維護中層快取的需求：[資料服務公司利用記憶體內部技術，即時存取產品資料](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
 - Beth Israel Deaconess Medical Center 使用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的記憶體內部 OLTP，已能大幅改善網域控制站的資料擷取率，並處理尖峰工作負載：[https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for]
 
@@ -232,4 +232,4 @@ GO
 [使用記憶體最佳化提升暫存資料表與資料表變數效能](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)   
 [使用 SQL Database 中的記憶體內部技術將效能最佳化](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)  
 [系統版本設定時態表與記憶體最佳化資料表](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)  
-[記憶體內部 OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。 
+[In-Memory OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。 

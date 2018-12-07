@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 115435aae796ea846e6412e6db5526cd9eb50526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 621811a2cf4c3f7e08143f8608dd0fdced65a816
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599306"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505832"
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>設定彈性的自動容錯移轉原則
 
@@ -61,7 +61,7 @@ ms.locfileid: "47599306"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
   
 |工作|[權限]|  
 |----------|-----------------|  
@@ -114,7 +114,7 @@ ms.locfileid: "47599306"
   
     -   若要設定容錯移轉狀況層級，請使用 **FailureConditionLevel***level* 參數，其中 *level* 是下列其中一個值：  
   
-        |ReplTest1|Level|起始自動容錯移轉的狀況|  
+        |ReplTest1|層級|起始自動容錯移轉的狀況|  
         |-----------|-----------|-------------------------------------------|  
         |**OnServerDown**|一|伺服器關閉時。 SQL Server 服務由於容錯移轉或重新啟動而停止。|  
         |**OnServerUnresponsive**|二|伺服器沒有回應時。 滿足任何狀況的較低值，而且 SQL Server 服務連接到叢集且超過健全狀況檢查逾時臨界值，或者目前主要複本處於失敗狀態。|  

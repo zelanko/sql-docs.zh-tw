@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ce64614e3c2f9d27bfafb9101e54ab49df2089e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2cfd16b46ddf4c06c283009ecfa836780c1c2444
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672617"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412065"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>資料行存放區索引 - 資料倉儲
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "51672617"
  自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]起，您可以在叢集資料行存放區索引上定義非叢集索引。   
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>例如：以非叢集索引改善資料表搜尋的效率  
- 若要改善在資料倉儲中搜尋資料表的效率，您可以建立專用的非叢集索引來執行對資料表搜尋有最佳效能的查詢。 例如，針對 B 型樹狀結構索引執行比對值或傳回小範圍值的查詢，其執行效能會比針對資料行存放區索引為佳。 它們不需要透過資料行存放區索引的完整資料表掃描，且透過 B 型樹狀結構索引執行二進位搜尋，會較快傳回正確的結果。  
+ 若要改善在資料倉儲中搜尋資料表的效率，您可以建立專用的非叢集索引來執行對資料表搜尋有最佳效能的查詢。 例如，針對 B 型樹狀結構索引執行比對值或傳回小範圍值的查詢，其執行效能會比針對資料行存放區索引為佳。 它們不需要透過資料行存放區索引的完整資料表掃描，且透過 B 型樹狀結構索引執行二進位搜尋會較快傳回正確的結果。  
   
 ```sql  
 --BASIC EXAMPLE: Create a nonclustered index on a columnstore table.  

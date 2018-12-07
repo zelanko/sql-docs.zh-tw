@@ -9,12 +9,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ccf3376c13ef02699913d5d494d5752d35f13006
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9e0032e303951ebfc531b3feb0831f1a48061914
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021602"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539932"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 資料警示
 
@@ -190,7 +190,7 @@ SQL Server Reporting Services 資料警示是資料驅動的警示解決方案�
   
  `<IsAlertingService>True</IsAlertingService>`  
   
- `…`  
+ `...`  
   
  `</Service>`  
   

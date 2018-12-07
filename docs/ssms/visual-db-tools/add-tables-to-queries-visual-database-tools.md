@@ -15,16 +15,16 @@ ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8fc0698d476b89ded113e0485a50c2c485880ff5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6bd5f44a6e9c4907aa320a42ce89d5fdcf80e457
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598989"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511829"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>將資料表加入查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-建立查詢時，您會從資料表或結構與資料表類似的其他物件 (檢視和某些使用者定義函數) 擷取資料。 若要在查詢中使用上述物件，請將這些物件新增到 [圖表窗格]。  
+建立查詢時，您會從資料表或結構與資料表類似的其他物件 (檢視和某些使用者定義函式) 擷取資料。 若要在查詢中使用上述物件，請將這些物件新增到 [圖表窗格]。  
   
 ### <a name="to-add-a-table-or-table-valued-object-to-a-query"></a>若要將資料表或資料表值物件加入至查詢  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47598989"
   
 3.  開啟現有查詢的 [查詢設計工具]  \(您現在已開啟兩個 [查詢設計工具])。  
   
-4.  顯示內部查詢 (即您要加入所新增之外部查詢現有查詢) 的 [SQL 窗格]。  
+4.  顯示內部查詢 (即您要加入所新增外部查詢之現有查詢) 的 [SQL 窗格]。  
   
 5.  選取 [SQL 窗格]中的所有文字，再將其複製到剪貼簿中。  
   

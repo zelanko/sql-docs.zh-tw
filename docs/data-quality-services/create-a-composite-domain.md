@@ -5,8 +5,7 @@ ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.createcd.f1
@@ -15,12 +14,12 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 275a22b7fca0634fd3ae955ead6c7cbbcd9acf66
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 81173982e9c44b135a3ba98312839ac799461988
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701776"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616858"
 ---
 # <a name="create-a-composite-domain"></a>建立複合定義域
 
@@ -98,7 +97,7 @@ ms.locfileid: "51701776"
  在建立複合定義域之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  
- Data Quality Services 可讓您根據知識來剖析資料，而不只是根據分隔符號或順序。 當複雜來源資料對應至複合定義域，而且您並未使用參考資料服務時，將會使用以知識為基礎的剖析。 您可以使用以知識為基礎的剖析，將資料來源中的資料剖析成相關的單一定義域。 當使用以知識為基礎的剖析時，DQS 會先嘗試使用知識將複雜資料剖析成單一定義域。 如果可能的話，它會將字串的若干部分識別為在一個或多個定義域中，並將字串剖析為其各個定義域。 例如，假設您將 “John B. Doe” 當做完整名稱欄位中的複雜值，而該欄位是由「完整名稱」複合網域所表示。 如果 DQS 在「名字」網域中識別 “John”，在「姓氏」網域中識別 “Doe”， 則 DQS 會根據網域知識將 “B.” 加入「中間名」網域中。  
+ Data Quality Services 可讓您根據知識來剖析資料，而不只是根據分隔符號或順序。 當複雜來源資料對應至複合定義域，而且您並未使用參考資料服務時，將會使用以知識為基礎的剖析。 您可以使用以知識為基礎的剖析，將資料來源中的資料剖析成相關的單一定義域。 當使用以知識為基礎的剖析時，DQS 會先嘗試使用知識將複雜資料剖析成單一定義域。 如果可能的話，它會將字串的若干部分識別為在一個或多個定義域中，並將字串剖析為其各個定義域。 例如，假設您將 "John B. Doe" 當做完整名稱欄位中的複雜值，而該欄位是由「完整名稱」複合網域所表示。 如果 DQS 在「名字」網域中識別 "John"，在「姓氏」網域中識別 "Doe"， 則 DQS 會根據網域知識將 “B.” 加入「中間名」網域中。  
   
  只有當您同時選取以分隔符號為基礎的剖析時，才可以使用以知識為基礎的剖析。 以知識為基礎的剖析不會取代分隔符號剖析，而是會將它增強。 只有當沒有知識存在時，DQS 才會使用分隔符號執行剖析。 在某些情況下，DQS 可能會判斷某些剖析是根據以知識為基礎的剖析，並判斷其他剖析是根據以分隔符號為基礎的剖析。  
   

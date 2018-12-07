@@ -5,8 +5,7 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.domainlist.f1
@@ -14,12 +13,12 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0317dea3113fafdf7f3cb9a43553103f3ba51c99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 088629be0f2dfa11e563b0ef7441a1b7c59ec515
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699606"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617028"
 ---
 # <a name="domain-management-domain-list"></a>定義域管理：定義域清單
 
@@ -40,7 +39,7 @@ ms.locfileid: "47699606"
  在知識庫中建立新的定義域。 此命令將會顯示 **[建立定義域]** 對話方塊。 若要使用此命令，請以滑鼠右鍵按一下定義域，或是按一下定義域清單上方的圖示。 如需相關資訊，請參閱 [建立定義域](../data-quality-services/create-a-domain.md)。  
   
  **建立選取之定義域的複本**  
- 建立選取之定義域的完全相同複本，並將其加入至知識庫。 其名稱將會是建立它所使用的定義域名稱，且名稱會附加「– 複本」。 若要使用此命令，請以滑鼠右鍵按一下定義域，然後按一下 **[建立複本]**，或是按一下定義域清單上方的圖示。 它無法提供給複合定義域使用。  
+ 建立選取之定義域的完全相同複本，並將其加入至知識庫。 其名稱將會是建立它所使用的定義域名稱，且名稱會附加「- 複本」。 若要使用此命令，請以滑鼠右鍵按一下定義域，然後按一下 **[建立複本]**，或是按一下定義域清單上方的圖示。 它無法提供給複合定義域使用。  
   
  **從資料檔匯入定義域**  
  從 .dqs 檔案匯入定義域。 這個命令會顯示 **[從資料檔匯入]** 對話方塊，好讓您瀏覽檔案系統，並針對單一定義域或複合定義域選取 .dqs 檔案。 若要使用此命令，請按一下定義域清單上方的圖示。 如需相關資訊，請參閱 [從 .dqs 檔案匯入定義域](../data-quality-services/import-a-domain-from-a-dqs-file.md)。  

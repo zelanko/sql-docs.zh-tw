@@ -15,18 +15,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85e6537fe5b9df976724d9d2392f14520ccf48d5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bb9628196ae08e94b9076e9e1bb422eaad0331e0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657807"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532144"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本主題將討論如何取得將屬性加入至搜尋屬性清單，使全文檢索搜尋能夠進行搜尋所需的值。 這些值包括文件屬性的屬性集 GUID 和屬性整數識別碼。  
   
- IFilter 從二進位資料 (也就是儲存在 **varbinary**、 **varbinary(max)** (包括 **FILESTREAM**) 或 **image** 資料類型資料行中的資料) 擷取的文件屬性可供全文檢索搜尋使用。 若要使擷取的屬性可搜尋，則必須手動將屬性加入至搜尋屬性清單。 同時，搜尋屬性清單必須與一個或多個全文檢索索引產生關聯。 如需詳細資訊，請參閱 [使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
+ IFilter 從二進位資料 (也就是儲存在 **varbinary**、**varbinary(max)** (包括 **FILESTREAM**) 或 **image** 資料類型資料行中的資料) 擷取的文件屬性可供全文檢索搜尋使用。 若要使擷取的屬性可搜尋，則必須手動將屬性加入至搜尋屬性清單。 同時，搜尋屬性清單必須與一個或多個全文檢索索引產生關聯。 如需詳細資訊，請參閱 [使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
  在屬性清單中加入可用屬性之前，您必須先找到有關屬性的兩項資訊：  
   
@@ -78,10 +78,10 @@ ms.locfileid: "51657807"
 .  
 propertyDescription  
 name = System.Author  
-…  
+...  
 formatID = F29F85E0-4FF9-1068-AB91-08002B27B3D9  
 propID = 4  
-…  
+...  
 ```  
   
  如需此屬性的完整描述，請參閱 Windows Search 文件集中的 [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) 。  

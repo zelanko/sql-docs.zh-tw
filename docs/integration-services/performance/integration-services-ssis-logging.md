@@ -30,12 +30,12 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9be97427a20f7277088422734f0108d999a7302d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c3843517e906cd2a1e6eaa7bcfe80d029525a902
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641255"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542887"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 記錄
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括可用於在封裝、容器和工作中實作記錄的記錄提供者。 使用記錄，可以擷取有關封裝的執行階段資訊，藉此幫助您在每次執行封裝時對其進行稽核和疑難排解。 例如，記錄可以擷取執行封裝之操作員的名稱，以及封裝開始和結束的時間。  

@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57f4f7b323dcc456ca58567e9c3a9ee5791d3ca6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9115aa7ed39102557243ddcc24754b3c7f5453bc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661197"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521837"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>建立、建構及查詢幾何執行個體
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51661197"
   
 -   [OGC 規格，簡單特徵存取第一部 - 常見架構](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
--   [OGC 規格，簡單特徵存取第二部 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93629)  
+-   [OGC 規格，簡易功能存取第二部分 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援以下列結構描述定義之現有 GML 3.1 標準的子集：[https://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](https://go.microsoft.com/fwlink/?LinkId=230959)。  
   

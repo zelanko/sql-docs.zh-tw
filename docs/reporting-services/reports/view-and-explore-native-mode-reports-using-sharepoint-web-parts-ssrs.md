@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4124d8a88485332133baf2cd4a39eb52da56652e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c78f6e02a2aef893aa3e8702158a5f3c63cea76a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813411"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417279"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
 
@@ -90,7 +90,7 @@ ms.locfileid: "51813411"
     Install-SPWebPartPack -LiteralPath "C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint\RSWebParts.cab" -GlobalInstall  
     ```  
   
-4.  您應該會看見類似以下的訊息，表示已部署 Web 組件。  
+4.  您應該會看見類似下列的訊息，表示已部署 Web 組件。  
   
     > 名稱               方案識別碼                                             已部署  
   
@@ -142,7 +142,7 @@ ms.locfileid: "51813411"
   
 7.  在 **[報表管理員 URL]** 中，輸入指向報表管理員執行個體的 URL，該執行個體與您要存取的原生模式報表伺服器相關聯。 根據預設，報表管理員 URL 具有下列語法：**https://\<伺服器名稱>/reports**。  
   
-8.  在 **[報表路徑]** 中，指定正斜線，後面緊跟著資料夾路徑與報表名稱。 請 **勿** 加入伺服器名稱或報表管理員虛擬目錄。 例如，若要開啟 Adventure Works 資料夾中的 ‘Company Sales’ 報表，請指定 **/Adventure Works/Company Sales**。 以下是 ‘Products’ 報表位於報表伺服器根資料夾 **/Products**的另一個範例。  
+8.  在 **[報表路徑]** 中，指定正斜線，後面緊跟著資料夾路徑與報表名稱。 請 **勿** 加入伺服器名稱或報表管理員虛擬目錄。 例如，若要開啟 Adventure Works 資料夾中的 'Company Sales' 報表，請指定 **/Adventure Works/Company Sales**。 下列是 'Products' 報表位於報表伺服器根資料夾 **/Products** 的另一個範例。  
   
 9. 按一下 [確定] 。  
   

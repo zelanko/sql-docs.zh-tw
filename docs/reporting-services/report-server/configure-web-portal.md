@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 606b6fa37f5dc067cdf134792215fd7c2cd09067
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 01c235ec53d0b8f70611b8523a4286790623d990
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813211"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415405"
 ---
 # <a name="configure-the-web-portal"></a>設定入口網站
 
@@ -27,7 +27,7 @@ ms.locfileid: "51813211"
 
 - 您必須擁有以最低限度方式設定的報表伺服器。 如需如何以最低限度方式設定報表伺服器的詳細資訊，請參閱[設定報表伺服器](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)。
 
-- 您的報表伺服器必須以原生模式執行。 您無法使用入口網站搭配針對 SharePoint 整合模式所設定的報表伺服器。 在 SQL Server 2012 中，您無法將報表伺服器從一種模式切換為另一種模式。 如果您要變更您環境使用之報表伺服器的類型，必須安裝所需之模式的報表伺服器，然後將報表項目複製或移動到新的報表伺服器。 這種程序通常稱為「移轉」。 移轉所需的步驟，取決於您要移轉到哪個模式以及您要從哪個版本移轉。 如需詳細資訊，請參閱＜ [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)＞。
+- 您的報表伺服器必須以原生模式執行。 您無法使用入口網站搭配針對 SharePoint 整合模式所設定的報表伺服器。 在 SQL Server 2012 中，您無法將報表伺服器從一種模式切換為另一種模式。 如果您要變更您環境使用之報表伺服器的類型，必須安裝所需之模式的報表伺服器，然後將報表項目複製或移動到新的報表伺服器。 這項處理序通常稱為「移轉」。 移轉所需的步驟，取決於您要移轉到哪個模式以及您要從哪個版本移轉。 如需詳細資訊，請參閱＜ [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)＞。
 
 - 您也必須擁有啟用指令碼的 Internet Explorer 11 或更新版本。 如需詳細資訊，請參閱 [Reporting Services 和 Power View 的瀏覽器支援](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。
 

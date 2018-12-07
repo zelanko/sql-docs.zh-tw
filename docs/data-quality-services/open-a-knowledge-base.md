@@ -5,8 +5,7 @@ ms.date: 06/04/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.openkb.f1
@@ -14,12 +13,12 @@ ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b96887fc805833fd8339798bbecdf22f6ce3159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e724810a6626a15b9a2a81cfce9354c126680366
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667562"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617788"
 ---
 # <a name="open-a-knowledge-base"></a>開啟知識庫
 
@@ -34,7 +33,7 @@ ms.locfileid: "47667562"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能開啟知識庫。  
   
 ##  <a name="Open"></a> Open a knowledge base  
@@ -84,7 +83,7 @@ ms.locfileid: "47667562"
   
 -   **\<空白>**：知識庫的 [狀態] 欄位空白的條件如下：已在 [定義域管理] 活動中按一下 [發行]，然後按一下 [是 - 發行知識庫並結束] 來發行知識庫。  
   
--   **工作中**：已在 [定義域管理] 活動中按一下 **[發行]** ，然後按一下 **[否 - 儲存知識庫工作並結束]** 來儲存知識庫工作。  
+-   **工作中**：已在 [定義域管理] 活動中按一下 [發行]，然後按一下 [否 - 儲存知識庫工作並結束] 來儲存知識庫工作。  
   
 -   **定義域管理**：已輸入知識庫的定義域資料，但尚未發行知識庫，而且工作仍在 [定義域管理] 活動中。 知識探索活動無法使用。 當您在 **[定義域管理]** 畫面中按一下 **[關閉]** 時，就會發生這種狀況。  
   
@@ -92,10 +91,10 @@ ms.locfileid: "47667562"
   
 -   **探索 - 探索**：已在 **[知識庫管理: 分析]** 頁面上關閉知識庫。 知識庫已鎖定，[定義域管理] 活動無法使用。  
   
--   **探索 - 值管理**：已在 **[知識庫管理: 管理定義域詞彙]** 頁面上關閉知識庫。 知識庫已鎖定，[定義域管理] 活動無法使用。  
+-   **探索 - 值管理**：已在 [知識庫管理: 管理定義域詞彙] 頁面上關閉知識庫。 知識庫已鎖定，[定義域管理] 活動無法使用。  
   
--   **比對原則 – 比對原則**：已在 **[比對原則 – 比對原則]** 頁面上關閉知識庫。 知識庫已鎖定，無法使用 [知識探索] 和 [定義域管理] 活動。  
+-   **比對原則 - 比對原則**：已在 [比對原則 - 比對原則] 頁面上關閉知識庫。 知識庫已鎖定，無法使用 [知識探索] 和 [定義域管理] 活動。  
   
--   **比對原則 – 比對結果**：已在 **[比對原則 – 比對結果]** 頁面上關閉知識庫。 知識庫已鎖定，無法使用 [知識探索] 和 [定義域管理] 活動。  
+-   **比對原則 - 比對結果**：已在 [比對原則 - 比對結果] 頁面上關閉知識庫。 知識庫已鎖定，無法使用 [知識探索] 和 [定義域管理] 活動。  
   
   

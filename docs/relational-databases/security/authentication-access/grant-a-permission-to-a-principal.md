@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a22a07d05fa6286eb88089393d563e746ee9def5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb89c5bd1d3c1f40e03de60041dc3d22cc56f661
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787176"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540415"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>為主體授與權限
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47787176"
   
 -   **若要使用下列項目為主體授與權限：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47787176"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  同意授權者 (或是指定了 AS 選項的主體) 必須具有指定了 GRANT OPTION 的權限本身，或是具有隱含目前正在授與權限的更高權限。 **系統管理員 (sysadmin)** 固定伺服器角色的成員也能夠授與任何權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -68,7 +68,7 @@ ms.locfileid: "47787176"
   
 4.  以滑鼠右鍵按一下預存程序，然後選取 [屬性]。  
   
-5.  在 [預存程序屬性 - _stored\_procedure\_name_] 對話方塊的 [選取頁面] 下，選取 [權限]。 使用此頁面將使用者或角色加入至預存程序，並指定這些使用者或角色擁有的權限。  
+5.  在 [預存程序屬性 -_stored\_procedure\_name_] 對話方塊的 [選取頁面] 下，選取 [權限]。 使用此頁面將使用者或角色加入至預存程序，並指定這些使用者或角色擁有的權限。  
   
 6.  完成後，請按一下 **[確定]**。  
   

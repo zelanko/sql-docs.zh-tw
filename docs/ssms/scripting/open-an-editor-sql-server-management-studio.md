@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c123c562a9f0d6c581fb6a69fcc52d0126302a6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6e2d05ae0034f7826044f2ae2f29a8d6ca2a07df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642862"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508735"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>開啟編輯器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "51642862"
 ### <a name="using-the-filenew-menu"></a>使用檔案/新增功能表  
  在 **[檔案]** 功能表上，按一下 **[新增]**，然後選取其中一個查詢編輯器選項：  
   
--   **使用目前的連接查詢** ：在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中開啟與目前連接相關聯之類型的新編輯器視窗。 此編輯器視窗使用相同的驗證資訊做為目前連接。 例如，如果您在 [物件總管] 中選取 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，然後使用 **[使用目前的連接查詢]**，則 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會使用相同的驗證資訊開啟與相同執行個體連接的 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器]。  
+-   **使用目前的連接查詢** - 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中開啟與目前連接相關聯之類型的新編輯器視窗。 此編輯器視窗使用相同的驗證資訊做為目前連接。 例如，如果您在 [物件總管] 中選取 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，然後使用 **[使用目前的連接查詢]**，則 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會使用相同的驗證資訊開啟與相同執行個體連接的 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器]。  
   
--   **Database Engine 查詢** ：開啟新的 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器]，和一個對話方塊以取得連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體所需的資訊。  
+-   **資料庫引擎查詢** - 開啟新的[!INCLUDE[ssDE](../../includes/ssde-md.md)]查詢編輯器，和一個對話方塊以取得連接至[!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體所需的資訊。  
   
 -   **Analysis Services MDX 查詢** ：開啟新的 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查詢編輯器]，和一個對話方塊以取得連接至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體所需的資訊。  
   
@@ -55,9 +55,9 @@ ms.locfileid: "51642862"
 ### <a name="using-the-toolbar"></a>使用工具列  
  在 **[標準]** 工具列上，按下列其中一個按鈕：  
   
--   **新增查詢** - 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中開啟與目前連接相關聯之類型的新編輯器視窗。 此編輯器視窗使用相同的驗證資訊做為目前連接。 例如，如果您在 [物件總管] 中選取 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，然後按一下 **[新增查詢]** 按鈕， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會使用相同的驗證資訊開啟與相同執行個體連接的 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器]。  
+-   **新增查詢** - 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中開啟與目前連接相關聯之類型的新編輯器視窗。 此編輯器視窗使用相同的驗證資訊做為目前連接。 例如，如果您在 [物件總管] 中選取 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，然後按一下 **[新增查詢]** 按鈕， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會使用相同的驗證資訊開啟與相同執行個體連接的 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器]。  
   
--   **Database Engine 查詢** ：開啟新的 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器]，和一個對話方塊以取得連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體所需的資訊。  
+-   **資料庫引擎查詢** - 開啟新的[!INCLUDE[ssDE](../../includes/ssde-md.md)]查詢編輯器，和一個對話方塊以取得連接至[!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體所需的資訊。  
   
 -   **Analysis Services MDX 查詢** ：開啟新的 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查詢編輯器]，和一個對話方塊以取得連接至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體所需的資訊。  
   

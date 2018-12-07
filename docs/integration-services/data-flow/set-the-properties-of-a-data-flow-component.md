@@ -13,12 +13,12 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 988675dd00135599fa053acb5cb96d58e81d9e14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddbb902789cfc4cbef5135d024ba8f6e2e1c7e98
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628576"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530267"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>設定資料流程元件的屬性
   若要設定資料流程元件的屬性 (包括來源、目的地和轉換)，請使用下列其中一個功能：  
@@ -104,11 +104,11 @@ ms.locfileid: "47628576"
 8.  若要儲存已更新的封裝，請按一下 [檔案] 功能表上的 [儲存選取項目]。  
 
 ## <a name="common-properties-of-data-flow-components"></a>資料流程元件的通用屬性
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中的資料流程物件具有元件層級、輸入和輸出層級，以及輸入資料行和輸出資料行層級上的通用屬性和自訂屬性。 許多屬性都有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中的資料流程物件具有元件層級、輸入和輸出層級，以及輸入資料行和輸出資料行層級上的通用屬性和自訂屬性。 許多屬性都有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
   
  本主題將列出及描述資料流程物件的通用屬性。  
   
--   [元件](#components)  
+-   [Components](#components)  
   
 -   [輸入](#inputs)  
   

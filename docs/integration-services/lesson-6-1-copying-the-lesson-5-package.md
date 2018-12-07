@@ -11,12 +11,12 @@ ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82ac3a5bb3a18c83246a55c9fa6e2154de58dc6f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b7d58507dac1d1071f0b546e0610f39381b648de
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642035"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501812"
 ---
 # <a name="lesson-6-1---copying-the-lesson-5-package"></a>課程 6-1 - 複製第 5 課套件
 在這項工作中，您將為第 5 課所建立的 Lesson 5.dtsx 封裝建立複本。 另外，您也可以將此教學課程中隨附之已完成的第 5 課封裝加入至專案中，然後改為複製該封裝。 在第 6 課其餘的課程中，您將使用這個新的副本。  
@@ -49,7 +49,7 @@ ms.locfileid: "51642035"
   
 3.  在 [加入現有封裝的副本] 對話方塊的 [封裝位置] 中，選取 [檔案系統]。  
   
-4.  按一下瀏覽 (…) 按鈕，巡覽至電腦上的 Lesson 5.dtsx，然後按一下 [開啟]。  
+4.  按一下瀏覽 (...) 按鈕，巡覽至電腦上的 Lesson 5.dtsx，然後按一下 [開啟]。  
   
     若要下載此教學課程的所有課程封裝，請執行下列動作。  
   

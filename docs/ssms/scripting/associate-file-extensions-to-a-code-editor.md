@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02a6e33039b097aa8632b94c06624cbcb84b5e6d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 59e49665d11b4b2abcc159e7028cf05db5c98d7a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642869"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542803"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>使副檔名與程式碼編輯器相關聯
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "51642869"
   
 5.  在 **[註冊的檔案類型]** 方塊中，按一下新的副檔名，再按 **[變更]**。  
   
-6.  在 **[開啟方式]** 對話方塊中，按一下 **[SSMS – SQL Server Management Studio]**，再按一下 **[確定]**。  
+6.  在 [開啟方式] 對話方塊中，按一下 [SSMS - SQL Server Management Studio]，再按一下 [確定]。  
   
 7.  按一下 **[關閉]** ，以關閉 **[資料夾選項]** 對話方塊，然後再關閉 Windows 檔案總管。  
   

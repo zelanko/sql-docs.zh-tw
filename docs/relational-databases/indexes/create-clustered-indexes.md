@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52ba8dd70e7b39dade42d21d3b02e5883be14735
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 514ec88554282cf6e2cf0cc74eb1f35e77091fa9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703206"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539028"
 ---
 # <a name="create-clustered-indexes"></a>建立叢集索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47703206"
   
 -   **使用下列方法在資料表上建立叢集索引：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "47703206"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -88,7 +88,7 @@ ms.locfileid: "47703206"
   
 3.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
-4.  按一下 **[索引鍵資料行]** 底下的 **[加入]**。  
+4.  按一下 [索引鍵資料行]底下的 [加入...]。  
   
 5.  在 [從 _table\_name_ 選取資料行] 對話方塊中，選取要新增至叢集索引的資料表資料行核取方塊。  
   

@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 05a08b7085f9485a002db182e3cff9a7ccee7465
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61b9d5633439ee9092246c0b4ce605b2523c2358
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837663"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535516"
 ---
 # <a name="enable-indexes-and-constraints"></a>啟用索引與條件約束
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47837663"
   
 -   **使用下列方法啟用已停用的索引：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "47837663"
 
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要資料表或檢視表的 ALTER 權限。 如果使用 DBCC DBREINDEX，使用者必須擁有該資料表，或者是 **系統管理員** 固定伺服器角色或 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  

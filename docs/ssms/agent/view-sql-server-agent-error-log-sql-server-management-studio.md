@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c2339f855afa7bfa8fb7a3ed0538aeb40b6c1600
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: becdad9b10bb5632ecefe96bcef2fa9e7ebaf29e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673079"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530397"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47673079"
   
 4.  以滑鼠右鍵按一下要檢視的錯誤記錄檔，然後選取 [檢視代理程式記錄]。  
   
-    [記錄檔檢視器 - <伺服器名稱>] 對話方塊有下列選項：  
+    *[記錄檔檢視器 -***server_name] 對話方塊有下列選項：  
   
     **載入記錄**  
     開啟對話方塊供您指定所要載入的記錄檔。  
@@ -106,7 +106,7 @@ ms.locfileid: "47673079"
     **執行個體**  
     發生事件之執行個體的名稱。 顯示為 *&lt;電腦名稱*\\*執行個體名稱&gt;*。  
   
-    **Date**  
+    **日期**  
     顯示事件的日期。  
   
     **Source**  

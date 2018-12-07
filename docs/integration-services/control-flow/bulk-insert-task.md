@@ -19,12 +19,12 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be86ec99816b6d609400aeb1f703c4bbe2adc131
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bd16052afcb3acf9b0d5a45f6f57ab896fcdc1c1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641765"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531832"
 ---
 # <a name="bulk-insert-task"></a>大量插入工作
   「大量插入」工作提供有效的方式，將大量資料複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或檢視。 例如，假設您的公司將百萬個資料列的產品清單儲存在大型電腦系統上，但公司的電子商務系統是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴展網頁。 您必須在晚上以大型電腦的主產品清單更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品資料表。 若要更新資料表，請以 Tab 分隔的格式儲存產品清單，並使用「大量插入」工作將資料直接複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。  
@@ -153,7 +153,7 @@ ms.locfileid: "51641765"
   
 #### <a name="format--use-file"></a>格式 = 使用檔案  
  **FormatFile**  
- 輸入格式檔案的路徑，或按一下省略符號按鈕 **(…)** 以尋找格式檔案。  
+ 輸入格式檔案的路徑，或按一下省略符號按鈕 **(...)** 以尋找格式檔案。  
   
 #### <a name="format--specify"></a>格式 = 指定  
  **RowDelimiter**  

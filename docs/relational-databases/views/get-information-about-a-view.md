@@ -23,16 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ca5faedafdd1eaedb110eacff43af85af6593fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d22570e6be56297a3428b5c9a89c04829379aa39
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648086"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505726"
 ---
 # <a name="get-information-about-a-view"></a>取得檢視的資訊
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-  您可以透過使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，取得 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視定義或屬性的資訊。 您可能需要查看檢視的定義才能了解如何從來源資料表衍生出資料；或是查看檢視所定義的資料。  
+  您可以透過使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，取得 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢視定義或屬性的相關資訊。 您可能需要查看檢視的定義才能了解如何從來源資料表衍生出資料；或是查看檢視所定義的資料。  
   
 > [!IMPORTANT]  
 >  如果變更檢視所參考的物件名稱，就必須修改檢視，使其文字反映新的名稱。 因此，在重新命名物件前，應先顯示物件的相依性，以判斷是否有任何檢視會受預期的變更所影響。  
@@ -45,7 +45,7 @@ ms.locfileid: "47648086"
   
 -   **使用下列方法取得檢視的相關資訊：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47648086"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  使用 `sp_helptext` 傳回檢視的定義，需要 **Public** 角色的成員資格。 使用 `sys.sql_expression_dependencies` 尋找檢視的所有相依性，需要資料庫的 VIEW DEFINITION 權限和資料庫之 `sys.sql_expression_dependencies` 的 SELECT 權限。 系統物件定義是公開可見的，就像 SELECT OBJECT_DEFINITION 中傳回的定義一樣。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -140,7 +140,7 @@ ms.locfileid: "47648086"
      顯示選定的檢視是否傳回所有資料行。 這是在建立檢視時設定的。  
   
      **SQL 註解**  
-     顯示 SQL 陳述式的描述。 若要查看或編輯整個描述，請按一下 [描述]，再按屬性右邊的省略符號 **(…)** 。 您的註解中可能包含使用檢視的人及使用時間等這類資訊。  
+     顯示 SQL 陳述式的描述。 若要查看或編輯整個描述，請按一下 [描述]，然後按一下屬性右側的省略符號 **(...)**。 您的註解中可能包含使用檢視的人及使用時間等這類資訊。  
   
      **Top 規格**  
      展開以顯示 **[Top]**、 **[運算式]**、 **[百分比]** 屬性，以及 **[WITH TIES]** 屬性。  

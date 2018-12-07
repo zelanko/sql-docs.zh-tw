@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6492f067d05a3606c5304e473162c8eabdcee5f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bddf69ebe967767c67f92782afdaaa2484fe2531
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845706"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537776"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | DISABLE  
     | REORGANIZE  [ PARTITION = partition_number ] [ WITH ( <reorganize_option>  ) ]  
     | SET ( <set_index_option> [ ,...n ] )   
-    | RESUME [WITH (<resumable_index_options>,[…n])]
+    | RESUME [WITH (<resumable_index_options>,[...n])]
     | PAUSE
     | ABORT
 }  
@@ -720,7 +720,7 @@ ONLINE、MAXDOP 和 SORT_IN_TEMPDB 的值並未儲存在系統目錄中。 除�
  
 -  重新執行具有相同參數的原始 ALTER INDEX REBUILD 陳述式，就會繼續已暫停的索引重建作業。 您也可以執行 ALTER INDEX RESUME 陳述式，繼續已暫停的索引重建作業。
 -  可繼續的索引不支援 SORT_IN_TEMPDB=ON 選項 
--  RESUMABLE=ON 的 DDL 命令無法在明確交易內部執行 (不能是開始交易的一部份 … 認可區塊)。
+-  RESUMABLE=ON 的 DDL 命令無法在明確交易內部執行 (不能是 begin tran ... commit 區塊的一部分)。
 -  只有已暫停的索引作業才能繼續。
 -  繼續已暫停的索引作業時，您可以將 MAXDOP 值變更為新值。  如果繼續已暫停的索引作業時未指定 MAXDOP，會使用最後一個 MAXDOP 值。 如果沒有為索引重建作業指定 MAXDOP 選項，會使用預設值。
 - 若要立即暫停索引作業，您可以停止進行中的命令 (Ctrl-C)，或執行 ALTER INDEX PAUSE 命令或 KILL *session_id* 命令。 暫停命令之後，可以使用 RESUME 選項繼續執行命令。
@@ -733,7 +733,7 @@ ONLINE、MAXDOP 和 SORT_IN_TEMPDB 的值並未儲存在系統目錄中。 除�
    -    RESUMABLE=ON 不支援重建已停用的索引
    -    ALTER INDEX REBUILD ALL 命令
    -    ALTER TABLE 使用索引重建  
-   -    RESUMABLE=ON 的 DDL 命令無法在明確交易內部執行 (不能是開始交易的一部份 … 認可區塊)
+   -    "RESUMABLE = ON" 的 DDL 命令無法在明確交易內部執行 (不能是 begin tran ... commit 區塊的一部分)
    -    重建已經計算或以 TIMESTAMP 資料行作為索引鍵資料行的索引。
 -   如果基底資料表包含 LOB 資料行，可繼續的叢集索引重建就會在此作業開始時需要 Sch-M 鎖定
    -    可繼續的索引不支援 SORT_IN_TEMPDB=ON 選項 
@@ -768,7 +768,7 @@ ONLINE、MAXDOP 和 SORT_IN_TEMPDB 的值並未儲存在系統目錄中。 除�
 -   ALTER INDEX \<index> ...REBUILD WITH ... 語法會重建此索引的所有資料分割。  
   
 ## <a name="statistics"></a>Statistics  
- 當您在資料表上執行 **ALTER INDEX ALL …** 時， 只會更新與索引相關聯的統計資料。 針對資料表 (而非索引) 所建立的自動或手動統計資料不會進行更新。  
+ 當您針對資料表執行 **ALTER INDEX ALL ...** 時，只會更新與索引相關聯的統計資料。 針對資料表 (而非索引) 所建立的自動或手動統計資料不會進行更新。  
   
 ## <a name="permissions"></a>[權限]  
  若要執行 ALTER INDEX，至少需要資料表或檢視表的 ALTER 權限。  

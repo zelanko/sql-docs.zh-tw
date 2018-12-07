@@ -11,12 +11,12 @@ ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 48cdfcf18aee274d9017e8d25c44536f2ec51c76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84033f550894c29a895ad63e8ee62ce5ce6d461b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712016"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506398"
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -78,9 +78,9 @@ JSON_MODIFY 會逸出所有類型為 NVARCHAR 或 VARCHAR 新值中的特殊字�
 |現有的值|路徑存在|Lax 模式|Strict 模式|  
 |--------------------|-----------------|--------------|-----------------|  
 |非 NULL|是|更新現有值。|更新現有值。|  
-|非 NULL|否|嘗試在指定的路徑上建立新的索引鍵/值組。<br /><br /> 這可能會失敗。 例如，若您指定路徑為 `$.user.setting.theme`，若 `$.user` 或 `$.user.settings` 物件不存在，或是設定為陣列或純量值，則 JSON_MODIFY 便不會建立 `theme` 索引鍵。|錯誤 – INVALID_PROPERTY|  
+|非 NULL|否|嘗試在指定的路徑上建立新的索引鍵/值組。<br /><br /> 這可能會失敗。 例如，若您指定路徑為 `$.user.setting.theme`，若 `$.user` 或 `$.user.settings` 物件不存在，或是設定為陣列或純量值，則 JSON_MODIFY 便不會建立 `theme` 索引鍵。|錯誤 - INVALID_PROPERTY|  
 |NULL|是|刪除現有屬性。|將現有值設定為 null。|  
-|NULL|否|不進行動作。 第一個引數會作為結果傳回。|錯誤 – INVALID_PROPERTY|  
+|NULL|否|不進行動作。 第一個引數會作為結果傳回。|錯誤 - INVALID_PROPERTY|  
   
  在 lax 模式中，JSON_MODIFY 會嘗試建立新的索引鍵/值組，但在某些案例下可能會失敗。  
   
@@ -206,7 +206,7 @@ PRINT @product
 }
 ```  
   
- 若您沒有將新的值轉換成數值類型，JSON_MODIFY 便會將其作為文字處理，並用雙引號括住它。  
+ 若您沒有將新的值轉換成數值類型，JSON_MODIFY 便會將其當作文字處理，並用雙引號括住。  
   
 ### <a name="example---increment-a-value"></a>範例 - 遞增值  
  下列範例示範如何使用 JSON_MODIFY 函式遞增 JSON 文字中的屬性。 首先，您可以使用現有屬性的值，並將其插入為新的索引鍵/值組。 然後您便可以透過將舊屬性的值設為 NULL 來刪除舊索引鍵。  

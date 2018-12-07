@@ -17,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5ce67b078a4410f67a1c877951e83dece65af1b6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b6914306472ae5eb438c8d7384f2a5e0d9128c17
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698776"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527076"
 ---
 # <a name="column-properties-visual-database-tools"></a>資料行屬性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -113,7 +113,7 @@ ms.locfileid: "51698776"
 展開以顯示其餘屬性。  
   
 **定序**  
-顯示選取之資料行的定序設定。 若要變更此設定，請按一下 [定序]，然後按一下值右邊的省略符號 (**…**)。  
+顯示選取之資料行的定序設定。 若要變更此設定，請按一下 [定序]，然後按一下值右邊的省略符號 (...)。  
   
 **計算資料行規格類別目錄**  
 展開以顯示 [公式] 和 [為永續性] 的屬性。 如果資料行為計算的，則也會顯示公式。 若要編輯公式，請展開此類別目錄，並在 [公式] 屬性中編輯它。  
@@ -128,7 +128,7 @@ ms.locfileid: "51698776"
 顯示欄位的資料類型資訊，使用與 SQL CREATE TABLE 陳述式相同的格式。 例如，包含可變長度字串 (最大長度為 20 個字元) 的欄位可表示為「varchar(20)」。 若要變更這個屬性，請直接輸入屬性值。  
   
 **說明**  
-顯示資料行的描述。 若要查看完整的描述，或要編輯它，請按一下 [描述]，然後按一下屬性右邊的省略符號 ( **…** )。  
+顯示資料行的描述。 若要查看完整的描述，或要編輯它，請按一下 [描述]，然後按一下屬性右邊的省略符號 (...)。  
   
 **全文檢索規格類別目錄**  
 展開以顯示全文檢索資料行特定的屬性。  

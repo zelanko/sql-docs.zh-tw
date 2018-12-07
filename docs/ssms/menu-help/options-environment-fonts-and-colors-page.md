@@ -11,12 +11,12 @@ ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f03dfa50d19496b95a1c9ee4e3bf31e0c70cd79
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: edb990e57f3f02db207959a4511d3b23069b0db4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702906"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507754"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>選項 (環境 - 字型和色彩頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51702906"
 [使用預設值] 按鈕會重設預設字型的值，以及從 [顯示設定] 清單中選取之清單項目的色彩值。  
   
 **字型 (粗體字表示固定寬度的字型)**  
-列出系統上安裝的所有字型。 在第一次開啟此下拉式清單時，會選取您從 [顯示設定] 清單中選擇之元素的目前字型。 固定字型 — 在編輯器中較易於對齊 — 以粗體顯示  
+列出系統上安裝的所有字型。 在第一次開啟此下拉式清單時，會選取您從 [顯示設定] 清單中選擇之元素的目前字型。 固定字型 (在編輯器中較易於對齊) 以粗體顯示。  
   
 **大小**  
 列出選取之字型的可用大小。 變更字型的大小會影響 [顯示設定] 選取項目的所有 [顯示項目] 項目。  

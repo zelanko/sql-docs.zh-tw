@@ -16,12 +16,12 @@ ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e397d797568d14cd184d8246425db13d9fb2a0b6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2d80647230c13b31ca9e5ae540798609fc93f527
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697676"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527396"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 陳述式 - 引數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -389,7 +389,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  CONTINUE_AFTER_ERROR  
  指定在發生錯誤之後，還原作業繼續運作。  
   
- 如果備份包含損毀的頁面，您最好利用不含錯誤的替代備份 (像是在頁面損毀之前所取得的備份) 來重複還原作業。 不過，您也可以利用還原陳述式的 CONTINUE_AFTER_ERROR 選項來還原損毀的備份，嘗試搶救這些資料，做為最後的手段。  
+ 如果備份包含損毀的分頁，您最好利用不含錯誤的替代備份 (像是在頁面損毀之前所取得的備份) 來重複還原作業。 不過，您也可以利用還原陳述式的 CONTINUE_AFTER_ERROR 選項來還原損毀的備份，嘗試搶救這些資料，做為最後的手段。  
   
 ##### <a name="filestream-options"></a>FILESTREAM 選項  
  FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
@@ -582,20 +582,20 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 > [!NOTE]  
 >  只有 RESTORE DATABASE 支援 PARTIAL 選項。  
   
- 下表列出一或多個陳述式所用的 WITH 選項，指出哪些陳述式支援各個選項。 核取記號 (√) 表示支援選項；破折號 (—) 表示不支援選項。  
+ 下表列出一或多個陳述式所用的 WITH 選項，指出哪些陳述式支援各個選項。 核取記號 (√) 表示支援該選項；破折號 (-) 表示不支援該選項。  
   
 |WITH 選項|RESTORE|RESTORE FILELISTONLY|RESTORE HEADERONLY|RESTORE LABELONLY|RESTORE REWINDONLY|RESTORE VERIFYONLY|  
 |-----------------|-------------|--------------------------|------------------------|-----------------------|------------------------|------------------------|  
-|{ CHECKSUM<br /><br /> &#124; NO_CHECKSUM }|√|√|√|√|—|√|  
-|{ CONTINUE_AFTER_ERROR<br /><br /> &#124; STOP_ON_ERROR }|√|√|√|√|—|√|  
-|FILE<sup>1</sup>|√|√|√|—|—|√|  
-|LOADHISTORY|—|—|—|—|—|√|  
-|MEDIANAME|√|√|√|√|—|√|  
-|MEDIAPASSWORD|√|√|√|√|—|√|  
-|MOVE|√|—|—|—|—|√|  
-|PASSWORD|√|√|√|—|—|√|  
-|{ REWIND &#124; NOREWIND }|√|只有 REWIND|只有 REWIND|只有 REWIND|—|√|  
-|STATS|√|—|—|—|—|√|  
+|{ CHECKSUM<br /><br /> &#124; NO_CHECKSUM }|√|√|√|√|-|√|  
+|{ CONTINUE_AFTER_ERROR<br /><br /> &#124; STOP_ON_ERROR }|√|√|√|√|-|√|  
+|FILE<sup>1</sup>|√|√|√|-|-|√|  
+|LOADHISTORY|-|-|-|-|-|√|  
+|MEDIANAME|√|√|√|√|-|√|  
+|MEDIAPASSWORD|√|√|√|√|-|√|  
+|MOVE|√|-|-|-|-|√|  
+|PASSWORD|√|√|√|-|-|√|  
+|{ REWIND &#124; NOREWIND }|√|只有 REWIND|只有 REWIND|只有 REWIND|-|√|  
+|STATS|√|-|-|-|-|√|  
 |{ UNLOAD &#124; NOUNLOAD }|√|√|√|√|√|√|  
   
  <sup>1</sup> FILE **=**_backup\_set\_file\_number_，這有別於 {FILE | FILEGROUP}。  

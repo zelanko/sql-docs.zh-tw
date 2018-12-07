@@ -12,19 +12,19 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 9d9dbe423415e1014a31621ba15f44fb0758e1a5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5dc3ba843314297131de569bafa5412577a24adf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699110"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510418"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server 高可用性和災害復原夥伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 若要為您的 SQL Server 服務提供高可用性和災害復原，您可以從各種領先業界的工具中選擇。  本文章特別介紹提供 Microsoft SQL Server 高可用性和災害復原解決方案支援的 Microsoft 夥伴公司。
 
 ## <a name="high-availability-and-disaster-recovery-partners"></a>高可用性和災害復原夥伴
-<!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
+<!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
 -->
 
 | Partner | Description | 連結 | 

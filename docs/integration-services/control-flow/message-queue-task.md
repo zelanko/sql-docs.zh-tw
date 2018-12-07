@@ -22,12 +22,12 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61956bf22dc15c95d986317d3a3cf18e9ca4d58b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d100819807cd669803ef698d4614373b0b997905
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639885"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503996"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   「訊息佇列」工作可讓您使用 Message Queuing (又稱為 MSMQ) 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝之間傳送和接收訊息，或將訊息傳送至由自訂應用程式處理的應用程式佇列。 這些訊息可採用簡單文字、檔案或變數及其值的形式。  
@@ -153,17 +153,17 @@ ms.locfileid: "51639885"
   
 #### <a name="messagetype--data-file-message"></a>MessageType = 資料檔訊息  
  **[DataFileMessage]**  
- 輸入資料檔的路徑，或按一下省略符號 **(...)** ，然後再尋找檔案。  
+ 鍵入資料檔的路徑，或按一下省略符號 **(...)**，然後尋找檔案。  
   
 #### <a name="messagetype--variable-message"></a>MessageType = 變數訊息  
  **[VariableMessage]**  
- 輸入變數名稱，或按一下省略符號 **(...)** ，然後再選取變數。 變數以逗號分隔。  
+ 鍵入變數名稱，或按一下省略符號 **(...)**，然後選取變數。 變數以逗號分隔。  
   
  **相關主題：** 選取變數  
   
 #### <a name="messagetype--string-message"></a>MessageType = 字串訊息  
  **[StringMessage]**  
- 輸入字串訊息，或按一下省略符號 **(...)**，然後在 [輸入字串訊息] 對話方塊中輸入訊息。  
+ 鍵入字串訊息，或按一下省略符號 **(...)**，然後在 [鍵入字串訊息] 對話方塊中鍵入訊息。  
   
 ## <a name="message-queue-task-editor-receive-page"></a>訊息佇列工作編輯器 (接收頁面)
   使用 [訊息佇列工作編輯器] 對話方塊的 [接收] 頁面，即可設定訊息佇列工作，以接收 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ) 訊息。  
@@ -192,7 +192,7 @@ ms.locfileid: "51639885"
   
 #### <a name="messagetype--data-file-message"></a>MessageType = 資料檔訊息  
  **SaveFileAs**  
- 輸入要使用的檔案路徑，或按一下省略符號按鈕 **(…)** ，然後尋找檔案。  
+ 鍵入要使用的檔案路徑，或按一下省略符號按鈕 **(...)**，然後尋找檔案。  
   
  **Overwrite**  
  指出儲存資料檔訊息的內容時，是否要覆寫現有檔案中的資料。 預設值為 **False**。  
@@ -213,7 +213,7 @@ ms.locfileid: "51639885"
   
 ##### <a name="filter--from-package"></a>篩選 = 來自封裝  
  **識別碼**  
- 如果您選擇套用篩選，請輸入可以接收訊息之來源封裝的唯一識別碼，或者按一下省略符號按鈕 **(…)** ，然後指定封裝。  
+ 如果您選擇套用篩選，請鍵入訊息接收來源套件的唯一識別碼，或按一下省略符號按鈕 **(...)**，然後指定套件。  
   
  **相關主題：**[選取封裝](../../integration-services/control-flow/select-a-package.md)  
   
@@ -239,7 +239,7 @@ ms.locfileid: "51639885"
   
 ##### <a name="filter--from-package"></a>篩選 = 來自封裝  
  **識別碼**  
- 如果您選擇套用篩選，請輸入可以接收訊息之來源封裝的唯一識別碼，或者按一下省略符號按鈕 **(…)** ，然後指定封裝。  
+ 如果您選擇套用篩選，請鍵入訊息接收來源套件的唯一識別碼，或按一下省略符號按鈕 **(...)**，然後指定套件。  
   
  **相關主題：**[選取封裝](../../integration-services/control-flow/select-a-package.md)  
   
@@ -272,7 +272,7 @@ ms.locfileid: "51639885"
  除非 [比較] 選項設定為 [無]，否則請提供訊息要比較的字串。  
   
  **變數**  
- 鍵入要保存已接收之訊息的變數名稱，或按一下 [\<新增變數…>]，然後設定新的變數。  
+ 鍵入要保存已接收訊息的變數名稱，或按一下 [\<新增變數…>]，然後設定新的變數。  
   
  **相關主題：**[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

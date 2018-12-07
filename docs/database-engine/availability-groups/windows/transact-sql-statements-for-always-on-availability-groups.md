@@ -13,12 +13,12 @@ ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9711abe965e293824da78bf0d956311679fc7c9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 730ce9da4a2e44dec103b6c0620acae176f969d1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771418"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506549"
 ---
 # <a name="transact-sql-statements-for-always-on-availability-groups"></a>AlwaysOn 可用性群組的 Transact-SQL 陳述式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47771418"
 -   [AVAILABILITY GROUP Transact-SQL 陳述式的限制](#Restrictions)  
   
 ##  <a name="CreateEndpoint"></a> CREATE ENDPOINT  
- 如果伺服器執行個體上沒有資料庫鏡像端點，[CREATE ENDPOINT … FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md) 就會建立資料庫鏡像端點。 您要部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或資料庫鏡像的每個伺服器執行個體都需要一個資料庫鏡像端點。  
+ 如果伺服器執行個體上沒有資料庫鏡像端點，[CREATE ENDPOINT ...FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md) 就會建立資料庫鏡像端點。 您要部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或資料庫鏡像的每個伺服器執行個體都需要一個資料庫鏡像端點。  
   
  在您要建立端點的伺服器執行個體上執行此陳述式。 每個給定的伺服器執行個體上只能建立一個資料庫鏡像端點。 如需詳細資訊，請參閱 [資料庫鏡像端點 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47771418"
   
  在裝載目前主要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上執行 ALTER AVAILABILITY GROUP。  
   
-##  <a name="AlterDb"></a> ALTER DATABASE … SET HADR …  
+##  <a name="AlterDb"></a> ALTER DATABASE ...SET HADR ...  
  ALTER DATABASE 陳述式中 [SET HADR](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 子句的選項可讓您將次要資料庫聯結至對應主要資料庫的可用性群組、移除聯結的資料庫、在聯結的資料庫上暫停資料同步處理，以及繼續資料同步處理。  
   
 ##  <a name="DropAG"></a> DROP AVAILABILITY GROUP  

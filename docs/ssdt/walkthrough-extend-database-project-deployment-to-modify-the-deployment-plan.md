@@ -11,12 +11,12 @@ ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ced46d8239c18a91963f4834f49dd4f36cc032c8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 073d32e69df1ab852271b1c921f1f3e99bae92c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681346"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531557"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>逐步解說：擴充資料庫專案部署以修改部署計畫
 您可以建立部署參與者，以便在部署 SQL 專案時執行自訂動作。 您可以建立 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 或 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)。 使用 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)，在計畫執行前變更計畫；使用 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)，在計畫執行時執行作業。 在這個逐步解說中，您將建立 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)，名稱為 SqlRestartableScriptContributor，這個部署參與者會將 IF 陳述式加入至部署指令碼中的批次，以在執行期間發生錯誤時，讓指令碼重新執行直到完成為止。  
@@ -58,7 +58,7 @@ ms.locfileid: "51681346"
   
 1.  建立名稱為 MyOtherDeploymentContributor 的 Visual C# 或 Visual Basic 類別庫專案。  
   
-2.  將 “Class1.cs” 檔案重新命名為 “SqlRestartableScriptContributor.cs”。  
+2.  將 "Class1.cs" 檔案重新命名為 "SqlRestartableScriptContributor.cs"。  
   
 3.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後按一下 [新增參考]。  
   
@@ -191,7 +191,7 @@ ms.locfileid: "51681346"
     // user's project does not have a pre/post deployment script  
     if (currentStep is BeginPreDeploymentScriptStep)  
     {  
-        // This step marks the begining of the predeployment script.  
+        // This step marks the beginning of the predeployment script.  
         // Save the step and move on.  
         beforePreDeploy = (BeginPreDeploymentScriptStep)currentStep;  
         continue;  
@@ -672,9 +672,9 @@ ms.locfileid: "51681346"
   
     1.  巡覽至 %Program Files%\MSBuild。  
   
-    2.  建立將儲存目標檔案的新資料夾 “MyContributors”。  
+    2.  建立將儲存目標檔案的新資料夾 "MyContributors"。  
   
-    3.  在這個目錄中建立新檔案 “MyContributors.targets”，在檔案中加入下列文字，然後儲存檔案：  
+    3.  在這個目錄中建立新檔案 "MyContributors.targets"，在檔案中加入下列文字，然後儲存檔案：  
   
         ```  
         <?xml version="1.0" encoding="utf-8"?>  
@@ -697,17 +697,17 @@ ms.locfileid: "51681346"
 遵循其中一個方法之後，您可以使用 MSBuild，傳入命令列建置的參數。  
   
 > [!NOTE]  
-> 您一定要更新 "DeploymentContributors" 屬性指定您的參與者識別碼。 這是參與者原始程式檔中 “ExportDeploymentPlanModifier” 屬性所用相同的識別碼。 如果沒有這個識別碼，當您建置專案時不會執行參與者。 只有在您有參與者執行所需的引數時，才需要更新 “ContributorArguments” 屬性。  
+> 您一定要更新 "DeploymentContributors" 屬性指定您的參與者識別碼。 這是參與者原始程式檔中 "ExportDeploymentPlanModifier" 屬性所用相同的識別碼。 如果沒有這個識別碼，當您建置專案時不會執行參與者。 只有在您有參與者執行所需的引數時，才需要更新 "ContributorArguments" 屬性。  
   
 ## <a name="deploy-the-database-project"></a>部署資料庫專案  
   
 #### <a name="to-deploy-your-sql-project-and-generate-a-deployment-report"></a>若要部署 SQL 專案並產生部署報表  
   
--   您的專案可以在 Visual Studio 中正常發行或部署。 只需開啟包含 SQL 專案的方案，然後從專案的滑鼠右鍵內容功能表中選擇 [發行…] 選項， 或使用 F5 對 LocalDB 進行偵錯部署。 在此範例中，我們將使用 [發行…] 對話方塊來產生部署指令碼。  
+-   您的專案可以在 Visual Studio 中正常發行或部署。 只要開啟包含 SQL 專案的方案，並從專案的滑鼠右鍵操作功能表中選擇 [發行...] 選項，或使用 F5 進行 LocalDB 偵錯部署。 在這個範例中，會使用 [發行...] 對話方塊產生部署指令碼。  
   
     1.  開啟 Visual Studio，並開啟包含 SQL 專案的方案。  
   
-    2.  在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選擇 [發行] 選項。  
+    2.  在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選擇 [發行...] 選項。  
   
     3.  設定發行目標伺服器名稱和資料庫名稱。  
   

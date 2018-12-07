@@ -10,12 +10,12 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: bc5ac40cd1131db2dd83a121177c1288fb01d1c4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 72dc0b6cd9b5cf5f5818e0f447901fcce8c17def
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699609"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416225"
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 開發夥伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

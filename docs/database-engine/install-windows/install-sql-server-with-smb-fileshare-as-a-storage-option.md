@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: d81475de98512e01be65b4c8c23c40809eec73fe
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b7e44d2a4e9d5e368b9232706ab53e1fd8ad6eac
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603628"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416509"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>安裝 SQL Server 與 SMB 檔案共用儲存體
 
@@ -63,9 +63,9 @@ ms.locfileid: "51603628"
   
 ### <a name="installation-options"></a>安裝選項  
   
--   在安裝程式 UI [資料庫引擎組態] 頁面的 [資料目錄] 索引標籤中，將「資料根目錄」參數設定為 “\\\fileserver1\share1\”。  
+-   在安裝程式 UI [資料庫引擎設定] 頁面的 [資料目錄] 索引標籤中，將 [資料根目錄] 參數設定為 "\\\fileserver1\share1\"。  
   
--   在命令提示字元安裝中，將 “/INSTALLSQLDATADIR” 指定為 “\\\fileserver1\share1\”。  
+-   在命令提示字元安裝中，將 "/INSTALLSQLDATADIR" 指定為 "\\\fileserver1\share1\"。  
   
      以下是使用 SMB 檔案共用選項在獨立伺服器上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的範例語法：  
   

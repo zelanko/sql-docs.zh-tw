@@ -12,18 +12,18 @@ ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 279198ba384acf33656d7567ed417a633eae7266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e607136bf7e13994e931166831b68d531d229dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826406"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404523"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>自動產生 Code 以外的屬性值 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您希望每次套用商務規則時，自動將整數指派為值，請自動為實體的屬性自動產生值。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，當您希望每次套用商務規則時，自動將整數指派為值，請自動為實體的屬性自動產生值。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
@@ -54,7 +54,7 @@ ms.locfileid: "47826406"
   
 9. 在 [元件] 窗格中，展開 [動作] 節點。  
   
-10. 在 [預設值] 節點中，按一下 [預設為產生的值]，然後將其拖曳至 [THEN] 窗格的 [動作] 標籤。  
+10. 在 [預設] 節點中，按一下 [預設為產生的值]，然後將其拖曳至 [THEN] 窗格的 [動作] 標籤。  
   
 11. 在 [屬性] 窗格中，按一下擁有您要產生之值的屬性，並將其拖曳至 [編輯動作] 窗格的 [選取屬性] 標籤。  
   

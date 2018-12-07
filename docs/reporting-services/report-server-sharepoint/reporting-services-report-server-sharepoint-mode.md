@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73b557a4f883c61a4877ad3f7c0e15ca18aac6f0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 51ef41f83e7122d0ab6fc1bc1149fd2eb257215e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029797"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529744"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 報表伺服器 (SharePoint 模式)
 

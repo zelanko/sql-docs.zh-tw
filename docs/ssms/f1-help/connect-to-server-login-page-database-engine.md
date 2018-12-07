@@ -13,12 +13,12 @@ ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a1e810a031480622c6ec7590156d2bdcd0d542b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 793d74393603d2ff535b501c64f4a35ef35eabc0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696648"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542211"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>連接到伺服器 (登入頁面) Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ SSMS 目前的版本提供五種驗證模式，可在連線至 [!INCLUDE[ssDE](.
 當使用者從非信任連接以指定的登入名稱與密碼進行連接時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會查看是否已設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入帳戶，以及指定的密碼是否符合先前記錄的密碼，自行執行驗證。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 沒有登入帳戶集，驗證將失敗，而使用者會收到錯誤訊息。 盡可能使用 Windows 驗證。  
   
   > **Active Directory - 與 MFA 支援通用**  
-[Active Directory - 與 MFA 通用] 是支援 Azure Multi-Factor Authentication (MFA) 的互動式工作流程。 Azure MFA 有助於保護資料和應用程式的存取，同時又滿足使用者對簡單登入程序的需求。 它提供增強式驗證與一系列簡單的驗證選項 — 電話、簡訊、智慧卡與 PIN，或行動應用程式通知，讓使用者選擇他們喜好的方法。 當使用者帳戶進行 MFA 設定時，互動式驗證工作流程會透過快顯對話方塊、使用智慧卡等，要求額外的使用者互動。當使用者帳戶進行 MFA 設定時，使用者必須選取 Azure 通用驗證才能連接。 如果使用者帳戶不需要 MFA，使用者仍然可以使用其他兩個 Azure Active Directory 驗證選項。 如需詳細資訊，請參閱 [SSMS support for Azure AD MFA with SQL Database and SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)(SQL 資料庫和 SQL 資料倉儲的 Azure AD MFA SSMS 支援)。 如有必要，您可以按一下 [選項]，選取 [連線內容]索引標籤，然後完成 [AD 網域或租用戶識別碼] 方塊，來變更驗證登入的網域。  
+[Active Directory - 與 MFA 通用] 是支援 Azure Multi-Factor Authentication (MFA) 的互動式工作流程。 Azure MFA 有助於保護資料和應用程式的存取，同時又滿足使用者對簡單登入程序的需求。 它提供增強式驗證與一系列簡單的驗證選項 - 電話、簡訊、智慧卡與 PIN，或行動應用程式通知，讓使用者選擇他們喜好的方法。 當使用者帳戶進行 MFA 設定時，互動式驗證工作流程會透過快顯對話方塊、使用智慧卡等，要求額外的使用者互動。當使用者帳戶進行 MFA 設定時，使用者必須選取 Azure 通用驗證才能連接。 如果使用者帳戶不需要 MFA，使用者仍然可以使用其他兩個 Azure Active Directory 驗證選項。 如需詳細資訊，請參閱 [SSMS support for Azure AD MFA with SQL Database and SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)(SQL 資料庫和 SQL 資料倉儲的 Azure AD MFA SSMS 支援)。 如有必要，您可以按一下 [選項]，選取 [連線內容]索引標籤，然後完成 [AD 網域或租用戶識別碼] 方塊，來變更驗證登入的網域。  
 
   > **Active Directory - 密碼**  
 Azure Active Directory 驗證機制使用 Azure Active Directory (Azure AD) 中的身分識別連接至 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。  如果您用來登入 Windows 的認證來自未與 Azure 同盟的網域，或是使用 Azure AD 根據初始或用戶端網域來使用 Azure AD 驗證時，請使用此方法連線至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 如需詳細資訊，請參閱 [使用 Azure Active Directory 驗證連線到 SQL 資料庫](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。  

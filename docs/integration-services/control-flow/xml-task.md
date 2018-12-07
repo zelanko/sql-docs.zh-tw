@@ -17,12 +17,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb9fcf4c03fdf2fb17d69d2d0f0b624d111f7e3f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e5dcf629121edc7d4502b0cedbf9825e74813587
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639675"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530648"
 ---
 # <a name="xml-task"></a>XML 工作
   XML 工作用於處理 XML 資料。 使用此工作，封裝可以擷取 XML 文件、使用「可延伸樣式表語言轉換」(XSLT) 樣式表和 XPath 運算式將作業套用到文件、合併多個文件，或者驗證、比較更新的文件，並將其儲存至檔案和變數。  
@@ -165,7 +165,7 @@ ms.locfileid: "51639675"
 |**變數**|設定包含 XML 文件的變數來源。|  
   
  **Source**  
- 如果 [Source] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
+ 如果 [Source] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 ([...])，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
   
  如果 [來源] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
@@ -226,7 +226,7 @@ ms.locfileid: "51639675"
 |**變數**|設定包含 XML 文件的變數來源。|  
   
  **SecondOperand**  
- 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [來源編輯器] 對話方塊來提供 XML。  
+ 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 ([...])，然後使用 [來源編輯器] 對話方塊來提供 XML。  
   
  如果 [SecondOperandType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
@@ -272,7 +272,7 @@ ms.locfileid: "51639675"
 |**變數**|設定包含 XML 文件的變數來源。|  
   
  **SecondOperand**  
- 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [來源編輯器] 對話方塊來提供 XML。  
+ 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 ([...])，然後使用 [來源編輯器] 對話方塊來提供 XML。  
   
  如果 [SecondOperandType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
@@ -318,7 +318,7 @@ ms.locfileid: "51639675"
 |**變數**|設定包含 XML 文件的變數來源。|  
   
  **SecondOperand**  
- 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [來源編輯器] 對話方塊來提供 XML。  
+ 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 ([...])，然後使用 [來源編輯器] 對話方塊來提供 XML。  
   
  如果 [SecondOperandType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
@@ -353,7 +353,7 @@ ms.locfileid: "51639675"
 |**變數**|設定包含 XML 文件的變數來源。|  
   
  **XPathStringSource**  
- 如果 [XPathStringSourceType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
+ 如果 [XPathStringSourceType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 ([...])，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
   
  如果 [XPathStringSourceType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>]，以建立新的連線管理員。  
   
@@ -398,7 +398,7 @@ ms.locfileid: "51639675"
 |**變數**|設定包含 XML 文件的變數來源。|  
   
  **SecondOperand**  
- 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
+ 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 ([...])，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
   
  如果 [SecondOperandType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
@@ -473,7 +473,7 @@ ms.locfileid: "51639675"
 |**變數**|設定包含 XML 文件的變數來源。|  
   
  **SecondOperand**  
- 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
+ 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 ([...])，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
   
  如果 [SecondOperandType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
@@ -519,7 +519,7 @@ ms.locfileid: "51639675"
 |**變數**|設定包含 XML 文件的變數來源。|  
   
  **SecondOperand**  
- 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
+ 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 ([...])，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
   
  如果 [SecondOperandType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   

@@ -12,12 +12,12 @@ ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 41d20108ae2fd1c8060627ae09b150e2b1bab9b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95ca303d9bed86f92cbd58776d4a24c4d92cce2a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656766"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398198"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 部署模型部署封裝
 
@@ -94,7 +94,7 @@ ms.locfileid: "47656766"
   
      其中 *PackageName* 是套件 (.pkg) 檔案的名稱、 *ModelName* 是新模型的名稱、 *VersionName* 是版本的名稱，而 *ServiceName* 是您在上一個步驟傳回的服務名稱。 確定模型和版本名稱符合區分大小寫的精確名稱。  
   
-6.  當成功部署封裝之後，隨即顯示一則訊息，表示「MDSModelDeploy 作業已順利完成」。  
+6.  當成功部署套件後，隨即顯示一則訊息，表示「MDSModelDeploy 作業已順利完成」。  
   
  **注意：**  
   

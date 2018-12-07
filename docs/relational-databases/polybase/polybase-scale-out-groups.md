@@ -14,12 +14,12 @@ ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 53802a8a327c2e66810cd8f084d0ba297eb95426
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a145b7ae7194720c8366f0c647a511e086fe4a2d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629936"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412635"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 向外延展群組
 

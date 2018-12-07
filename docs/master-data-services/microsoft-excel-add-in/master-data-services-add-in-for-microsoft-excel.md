@@ -11,12 +11,12 @@ ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8158439e20b5f841c01914f83490b8d9ab128fbb
-ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
+ms.openlocfilehash: 5b9e328f3abd3a53bfb4764470138d6d6b966236
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50965966"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617598"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>適用於 Microsoft Excel 的 Master Data Services 增益集
 
@@ -29,7 +29,7 @@ ms.locfileid: "50965966"
  在 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，您可以使用 Data Quality Services (DQS)，在將資料載入 MDS 之前比對資料。 這樣有助於防止 MDS 中的資料重複。  
 
 ## <a name="downloads"></a>下載 
->*  從[此 Microsoft 下載中心頁面](https://go.microsoft.com/fwlink/?linkid=836866)下載適用於 Excel 的 SQL Server 2016 SP1 Master Data Services 增益集。 
+>*  從[此 Microsoft 下載中心頁面](https://www.microsoft.com/download/details.aspx?id=56838)下載適用於 Excel 的 SQL Server 2016 SP2 Master Data Services 增益集。 
 >* 從[此 Microsoft 下載中心頁面](https://go.microsoft.com/fwlink/?linkid=836867)下載適用於 SQL Server 2017 的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]。
  
   

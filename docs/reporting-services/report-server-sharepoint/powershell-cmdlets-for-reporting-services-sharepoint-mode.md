@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9682be8f89a78a959cba3e4991c3405b0326f125
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: b9ae80895fa2cfd316e455e5084e5c1330365a62
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813781"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504293"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 模式的 PowerShell Cmdlet
 
@@ -34,7 +34,7 @@ ms.locfileid: "51813781"
 
 ## <a name="cmdlet-summary"></a>指令程式摘要
 
- 若要執行指令程式，您需要開啟 SharePoint 管理命令介面。 您也可以使用 Microsoft Windows 隨附的圖形化使用者介面編輯器 **Windows PowerShell 整合式指令碼環境 (ISE)**。 如需詳細資訊，請參閱 [Starting Windows PowerShell on Windows Server](https://technet.microsoft.com/library/hh847814.aspx)。 在下列 Cmdlet 摘要中，服務應用程式「資料庫」的參考是指 Reporting Services 服務應用程式建立和使用的所有資料庫。 其中包括組態、警示和暫時資料庫。  
+ 若要執行指令程式，您需要開啟 SharePoint 管理命令介面。 您也可以使用 Microsoft Windows 隨附的圖形化使用者介面編輯器 **Windows PowerShell 整合式指令碼環境 (ISE)**。 如需詳細資訊，請參閱 [Starting Windows PowerShell on Windows Server](https://technet.microsoft.com/library/hh847814.aspx)。 在下列 Cmdlet 摘要中，服務應用程式「資料庫」參考是指 Reporting Services 服務應用程式建立和使用的所有資料庫。 其中包括組態、警示和暫時資料庫。  
   
  當您輸入 PowerShell 範例時，將會看到類似下面的錯誤訊息：  
   
@@ -61,7 +61,7 @@ ms.locfileid: "51813781"
   
 3.  按一下 **[SharePoint 管理命令介面]**。  
   
- 若要檢視指令程式的命令列說明，可在 PowerShell 命令提示字元中使用 PowerShell 'Get-Help' 命令。 例如：  
+ 若要檢視 Cmdlet 的命令列說明，請在 PowerShell 命令提示字元中使用 PowerShell 'Get-Help' 命令。 例如：  
   
  `Get-Help Get-SPRSServiceApplicationServers`  
   
@@ -114,10 +114,10 @@ ms.locfileid: "51813781"
   
 ## <a name="basic-samples"></a>基本範例
 
- 傳回名稱中包含 'SPRS' 的指令程式清單。 這會是完整的 Reporting Services Cmdlet 清單。  
+ 傳回名稱中包含 'SPRS' 的 Cmdlet 清單。 這會是完整的 Reporting Services Cmdlet 清單。  
   
 ```  
-Get-command –noun *SPRS*  
+Get-command -noun *SPRS*  
 ```  
   
  或者透過更詳細的資訊，傳送到名為 commandlist.txt 的文字檔  
@@ -142,7 +142,7 @@ Install-SPRSServiceProxy
 get-spserviceinstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
 ```  
   
- 在 SharePoint 管理命令介面中輸入下列命令，即可從記錄檔傳回已篩選過的資料列清單。 此命令將會篩選包含 “ssrscustomactionerror” 的行。 這個範例會查看安裝 rssharepoint.msi 時建立的記錄檔。  
+ 在 SharePoint 管理命令介面中輸入下列命令，即可從記錄檔傳回已篩選過的資料列清單。 此命令將會篩選包含 "ssrscustomactionerror" 的行。 這個範例會查看安裝 rssharepoint.msi 時建立的記錄檔。  
   
 ```  
 Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-string "ssrscustomactionerror"  
@@ -150,7 +150,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 ## <a name="detailed-samples"></a>詳細範例
 
- 除了下列範例之外，亦請參閱 [Windows PowerShell script for Steps 1–4](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_full_script)主題中的＜Windows PowerShell 指令碼＞一節。  
+ 除了下列範例之外，另請參閱[步驟 1 到 4 的 Windows PowerShell 指令碼](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_full_script)主題中的＜Windows PowerShell 指令碼＞一節。  
   
 ### <a name="create-a-reporting-services-service-application-and-proxy"></a>建立 Reporting Services 服務應用程式和 Proxy
 
@@ -164,15 +164,15 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 ```  
 # Create service application and service application proxy  
-$appPool = Get-SPServiceApplicationPool “My App Pool”  
-$serviceApp = New-SPRSServiceApplication “My RS Service App” –ApplicationPool $appPool  
-$serviceAppProxy = New-SPRSServiceApplicationProxy –Name “My RS Service App Proxy” –ServiceApplication $serviceApp  
+$appPool = Get-SPServiceApplicationPool "My App Pool"  
+$serviceApp = New-SPRSServiceApplication "My RS Service App" -ApplicationPool $appPool  
+$serviceAppProxy = New-SPRSServiceApplicationProxy -Name "My RS Service App Proxy" -ServiceApplication $serviceApp  
   
 # Add service application proxy to default proxy group.  Any web application that uses the default proxy group will now be able to use this service application.  
-Get-SPServiceApplicationProxyGroup –default | Add-SPServiceApplicationProxyGroupMember –Member $serviceAppProxy  
+Get-SPServiceApplicationProxyGroup -default | Add-SPServiceApplicationProxyGroupMember -Member $serviceAppProxy  
   
-# Grant application pool account access to the port 80 web application’s content database.  
-$webApp = Get-SPWebApplication “https://sitename”  
+# Grant application pool account access to the port 80 web application's content database.  
+$webApp = Get-SPWebApplication "https://sitename"  
 $appPoolAccountName = $appPool.ProcessAccount.LookupName()  
 $webApp.GrantAccessToProcessIdentity($appPoolAccountName)  
   
@@ -186,7 +186,7 @@ $webApp.GrantAccessToProcessIdentity($appPoolAccountName)
 $app=get-sprsserviceapplication -Name "My RS Service App"  
 $emailCfg = Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml   
 $emailXml = [xml]$emailCfg   
-$emailXml.SelectSingleNode("//SMTPServer").InnerText = “<email server name>”  
+$emailXml.SelectSingleNode("//SMTPServer").InnerText = "<email server name>"  
 $emailXml.SelectSingleNode("//SendUsing").InnerText = "2"  
 $emailXml.SelectSingleNode("//SMTPAuthenticate").InnerText = "2"  
 $emailXml.SelectSingleNode("//From").InnerText = '<your FROM email address>'  
@@ -199,19 +199,19 @@ Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server 
 $app=get-sprsserviceapplication | where {$_.name -like " ssrs_testapp *"}  
 ```  
   
- 下列指令碼將傳回服務應用程式「Reporting Services 應用程式」之報表伺服器電子郵件傳遞延伸模組目前的組態值。 第一個步驟是將變數 $app 的值設定為名稱為 "My RS Service App" 之服務應用程式的物件。  
+ 下列指令碼將針對服務應用程式「Reporting Services 應用程式」傳回報表伺服器電子郵件傳遞延伸模組的目前設定值。 第一個步驟是將變數 $app 的值設定為名稱為 "My RS Service App" 之服務應用程式的物件。  
   
  第二個陳述式將取得變數 $app 中服務應用程式物件的「報表伺服器電子郵件」傳遞延伸模組，並且選取 configurationXML  
   
 ```  
-$app=get-sprsserviceapplication –Name "Reporting Services Application"  
+$app=get-sprsserviceapplication -Name "Reporting Services Application"  
 Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
 ```  
   
  您也可以將上述兩個陳述式重新撰寫成一個：  
   
 ```  
-get-sprsserviceapplication –Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
+get-sprsserviceapplication -Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
 ```  
   
 ### <a name="get-and-set-properties-of-the-reporting-service-application-database"></a>取得及設定 Reporting Service 應用程式資料庫的屬性
@@ -237,13 +237,13 @@ get-SPRSDatabase | select id, querytimeout,connectiontimeout, status, server, Se
      `ServiceInstance   : SPDatabaseServiceInstance`  
   
 ```  
-Set-SPRSDatabase –identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 -QueryTimeout 300  
+Set-SPRSDatabase -identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 -QueryTimeout 300  
 ```  
   
  若要確認是否已設定值，請再執行一次 GET Cmdlet。  
   
 ```  
-Get-SPRSDatabase –identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, querytimeout,connectiontimeout, status, server, ServiceInstance  
+Get-SPRSDatabase -identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, querytimeout,connectiontimeout, status, server, ServiceInstance  
 ```  
   
 ### <a name="list-reporting-services-data-extensions"></a>列出 Reporting Services 資料延伸模組
@@ -255,7 +255,7 @@ $apps = Get-SPRSServiceApplication
 foreach ($app in $apps)   
 {  
 Write-host -ForegroundColor "yellow" Service App Name $app.Name  
-Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensiontype | Format-Table -AutoSize  
+Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensiontype | Format-Table -AutoSize  
 }  
 ```  
   

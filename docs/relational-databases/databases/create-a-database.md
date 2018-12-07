@@ -15,12 +15,12 @@ ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8b62b974951172924ac475c68a652e80ce444c4
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 89a6251bca61f49b5acd6803702dc44cb21584c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560262"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544510"
 ---
 # <a name="create-a-database"></a>建立資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -16,12 +16,12 @@ ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1998aa0072e001f4c6065341dc788a9b0bb562e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4395090e03c904970b5cefcd71b0570a3e184a1e
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713396"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321724"
 ---
 # <a name="operators-ssis-expression"></a>運算子 (SSIS 運算式)
   本節描述運算式語言提供的運算子，以及運算式評估工具使用的運算子優先順序和關聯性。  
@@ -41,11 +41,11 @@ ms.locfileid: "47713396"
 |[% &#40;模數&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/modulo-ssis-expression.md)|提供第一個數值運算式除以第二個數值運算式之後的整數餘數。|  
 |[&#124;&#124; &#40;邏輯 OR&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/logical-or-ssis-expression.md)|執行邏輯 OR 運算。|  
 |[&& &#40;邏輯 AND&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/logical-and-ssis-expression.md)|執行邏輯 AND 運算。|  
-|[\! &#40;邏輯 Not&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/logical-not-ssis-expression.md)|執行布林運算元的否定運算。|  
+|[\! &#40;邏輯 NOT&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/logical-not-ssis-expression.md)|執行布林運算元的否定運算。|  
 |[&#124; &#40;位元包含 OR&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)|執行兩個整數值的位元 OR 運算。|  
 |[^ &#40;位元排除 OR&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)|執行兩個整數值的位元排除 OR 運算。|  
 |[& &#40;位元 AND&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/bitwise-and-ssis-expression.md)|執行兩個整數值的位元 AND 運算。|  
-|[~ &#40;位元 Not&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/bitwise-not-ssis-expression.md)|執行整數的位元否定運算。|  
+|[~ &#40;位元 NOT&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/bitwise-not-ssis-expression.md)|執行整數的位元否定運算。|  
 |[== &#40;等於&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/equal-ssis-expression.md)|執行比較來決定兩個運算式是否相等。|  
 |[\!= &#40;不等於&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/unequal-ssis-expression.md)|執行比較來決定兩個運算式是否不相等。|  
 |[&#62; &#40;大於&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)|執行比較來決定第一個運算式是否大於第二個運算式。|  

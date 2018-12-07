@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89da8d8beeca843662c6752cbc99d934b03760ee
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bba6cc9159ac3cfc9cc45f882a916dcad3365e4e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661347"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533559"
 ---
 # <a name="data-compression"></a>資料壓縮
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>中繼資料  
 下列系統檢視表包含叢集索引之資料壓縮的相關資訊：  
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) - **type** 及 **type_desc** 資料行包含 CLUSTERED COLUMNSTORE 和 NONCLUSTERED COLUMNSTORE。  
--   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) – **data_compression** 及 **data_compression_desc** 資料行包含 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。  
+-   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) - **data_compression** 及 **data_compression_desc** 資料行包含 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。  
   
 [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 程序不適用於資料行存放區索引。  
   

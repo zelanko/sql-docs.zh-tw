@@ -24,12 +24,12 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6cf546af42ff08a587c0d786026d2b89efffa296
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4efe82fa71303bdaf4f8615c80ce45ae3dfda857
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639135"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514121"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 連接
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝會使用連接來執行不同的工作以及實作 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能：  
@@ -159,7 +159,7 @@ ms.locfileid: "51639135"
   
     -   按一下要加入封裝的連接管理員類型。  
   
-         – 或 –  
+         -或-  
   
     -   如果未列出要加入的類型，請按一下 [新增連接]，以開啟 [加入 SSIS 連線管理員] 對話方塊、選取連線管理員類型，然後按一下 [確定]。  
   

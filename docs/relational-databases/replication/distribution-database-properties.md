@@ -15,12 +15,12 @@ ms.assetid: 0f404ab9-1237-4936-8df5-888baab6a245
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 97e6fea955e2ee82250f094fcf9f2bf76b15f452
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d833e97138dd184f35378ad39f96a9f71675d67
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701156"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535826"
 ---
 # <a name="distribution-database-properties"></a>散發資料庫屬性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47701156"
  記錄中繼資料的儲存時間長度，適用於所有類型的複寫。  
   
  **佇列讀取器代理程式安全性**  
- 佇列讀取器代理程式會用於具有佇列更新訂閱的異動複寫。 如果您在新增發行集精靈的 **[發行集類型]** 頁面上選取 **[具更新訂閱的交易式發行集]** ，則會自動建立佇列讀取器代理程式。 按一下 **[安全性設定]** ，即可變更執行代理程式和連接散發者的帳戶。  
+ 佇列讀取器代理程式會用於具有佇列更新訂閱的異動複寫。 如果您在新增發行集精靈的 **[發行集類型]** 頁面上選取 **[具更新訂閱的交易式發行集]** ，則會自動建立佇列讀取器代理程式。 按一下 [安全性設定]，以變更執行代理程式和與散發者連線的帳戶。  
   
  在此頁面上選取 **[建立佇列讀取器代理程式]** 也可以建立佇列讀取器代理程式 (如果已建立代理程式，此選項會停用)。  
   

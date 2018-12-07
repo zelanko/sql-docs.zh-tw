@@ -15,12 +15,12 @@ ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0862cc4baffd68b42723ff4037e48613170d488d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e22d55490c9149a857d74b7719d88fd7b25ea9a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768206"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504625"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>修改聯結運算子 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47768206"
   
 1.  在 [[圖表窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)] 中，在要修改的聯結線上按一下滑鼠右鍵，然後從捷徑功能表中選取 [屬性]。  
   
-2.  在 [屬性] 視窗中，按一下 [聯結條件及類型]，再按一下屬性右邊的省略符號 ([…])。  
+2.  在 [屬性] 視窗中，按一下 [聯結條件及類型]，然後按一下屬性右側的**省略符號 (...)**。  
   
 3.  在 [聯結] 對話方塊中選取新的運算子。  
   

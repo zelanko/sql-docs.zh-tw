@@ -18,12 +18,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20a92ccb6d9bfbc84fa13b7d26528544ae027a51
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f6dde11eba11acc7e0136c34025e74fead99f9e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642345"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502611"
 ---
 # <a name="web-service-task"></a>Web 服務工作
   「Web 服務」工作執行一個 Web 服務方法。 您可將「Web 服務」工作用於下列用途：  
@@ -84,7 +84,7 @@ ms.locfileid: "51642345"
   
 ### <a name="options"></a>選項。  
  **HTTPConnection**  
- 在清單中選取連線管理員，或按一下 [\<新增連線…>]，即可建立新的連線管理員。  
+ 在清單中選取連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
 > [!IMPORTANT]  
 >  HTTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
@@ -92,7 +92,7 @@ ms.locfileid: "51642345"
  **相關主題：**[HTTP 連接管理員](../../integration-services/connection-manager/http-connection-manager.md)、[HTTP 連接管理員編輯器 &#40;伺服器頁面&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
- 輸入本機電腦的 WSDL 檔案完整路徑，或按一下瀏覽按鈕 **(…)** 以找出此檔案。  
+ 鍵入本機電腦的 WSDL 檔案完整路徑，或按一下瀏覽按鈕 **(...)** 並找出此檔案。  
   
  如果您已經將 WSDL 檔案手動下載到電腦中，請選取該檔案。 如果尚未下載 WSDL 檔案，則請執行下列步驟：  
   
@@ -137,7 +137,7 @@ ms.locfileid: "51642345"
  從清單中選取要用於執行工作的 Web 方法。  
   
  **WebMethodDocumentation**  
- 輸入 Web 方法的描述，或按一下瀏覽按鈕 **(...)**，然後在 [Web 方法文件集] 對話方塊中輸入描述。  
+ 鍵入 Web 方法的描述，或按一下瀏覽按鈕 **(...)**，然後在 [Web 方法文件集] 對話方塊中鍵入描述。  
   
  **名稱**  
  列出 Web 方法之輸入的名稱。  
@@ -170,13 +170,13 @@ ms.locfileid: "51642345"
   
 #### <a name="outputtype--file-connection"></a>OutputType = 檔案連接  
  **檔案**  
- 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。  
+ 在清單中選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
  **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = 變數  
  **變數**  
- 在清單中選取變數，或按一下 [\<新增變數...>]，以建立新的變數。  
+ 在清單中選取變數，或按一下 [\<新增變數...>] 建立新的變數。  
   
  **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

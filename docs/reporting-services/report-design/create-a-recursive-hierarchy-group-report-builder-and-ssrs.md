@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d4e262ab70d75ef1f8ddff4772ceaf7adc68fec3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1e2cf655389529c6211ad2ed29ba2e9a309dcfa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701346"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542475"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>建立遞迴階層群組 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中，遞迴階層群組會組織包含多個階層層級之單一報表資料集內的資料，例如組織階層內經理-員工關聯性的報告結構。  
@@ -48,7 +48,7 @@ ms.locfileid: "47701346"
     > [!NOTE]  
     >  如果看不到 [屬性] 窗格，請按一下 [檢視] 索引標籤上的 [屬性]。  
   
-2.  在 [屬性] 窗格中，展開 [Padding] 節點，然後按一下 [左]，再從下拉式清單中選取 [\<運算式…>]。  
+2.  在 [屬性] 窗格中，展開 [Padding] 節點，然後按一下 [左]，再從下拉式清單中選取 [\<運算式>]。  
   
 3.  在 [運算式] 窗格中，輸入下列運算式：  
   

@@ -29,12 +29,12 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6dd2866ef242ad51a90de24051b5f39c3f68a8f7
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 48b6e5a48822401f543a494b8fd59638c4ea9609
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638897"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540880"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊群組轉換
   「模糊群組」轉換會透過識別可能重複的資料列並選取用於標準化資料的標準資料列，執行資料清除工作。  

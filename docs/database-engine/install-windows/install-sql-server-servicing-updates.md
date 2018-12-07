@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 985c1117e5913c38769a1baddd50a09ac6978ab1
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e23e27ea5806e40e3cea3d97552b59db3915732e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604808"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412755"
 ---
 # <a name="install-sql-server-servicing-updates"></a>安裝 SQL Server 服務更新
 

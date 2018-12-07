@@ -17,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef1ca3b64ee0e70dd71bfcea3fc270790343e204
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: de24fe5caaafc1475e647c84ea5a300c5221e5f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661107"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511774"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>交易鎖定與資料列版本設定指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "51661107"
   
  如果批次中發生執行階段陳述式錯誤 (例如條件約束違規)， [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的預設行為是只回復產生錯誤的陳述式。 您可以使用 `SET XACT_ABORT` 陳述式來變更這個行為。 在執行 `SET XACT_ABORT` ON 之後，任何執行階段陳述式錯誤都會導致自動復原目前的交易。 編譯錯誤 (例如語法錯誤) 並不受 `SET XACT_ABORT` 影響。 如需詳細資訊，請參閱 [SET XACT_ABORT &#40;Transact-SQL&#41;](../t-sql/statements/set-xact-abort-transact-sql.md)。  
   
- 發生錯誤時，更正動作 (`COMMIT` 或 `ROLLBACK`) 應該包含在應用程式碼中。 其中一個處理錯誤 (包括交易中的錯誤) 的有效工具是 [!INCLUDE[tsql](../includes/tsql-md.md)] `TRY…CATCH` 建構。 如需有關包括交易之範例的詳細資訊，請參閱 [TRY...CATCH &#40;Transact-SQL&#41;](../t-sql/language-elements/try-catch-transact-sql.md)。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，您可以使用 `THROW` 陳述式來引發例外狀況，然後將執行轉移至 `TRY…CATCH` 建構的 `CATCH` 區塊。 如需詳細資訊，請參閱 [THROW &#40;Transact-SQL&#41;](../t-sql/language-elements/throw-transact-sql.md)。  
+ 發生錯誤時，更正動作 (`COMMIT` 或 `ROLLBACK`) 應該包含在應用程式碼中。 其中一個處理錯誤 (包括交易中的錯誤) 的有效工具是 [!INCLUDE[tsql](../includes/tsql-md.md)] `TRY...CATCH` 建構。 如需有關包括交易之範例的詳細資訊，請參閱 [TRY...CATCH &#40;Transact-SQL&#41;](../t-sql/language-elements/try-catch-transact-sql.md)。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，您可以使用 `THROW` 陳述式來引發例外狀況，然後將執行轉移至 `TRY...CATCH` 建構的 `CATCH` 區塊。 如需詳細資訊，請參閱 [THROW &#40;Transact-SQL&#41;](../t-sql/language-elements/throw-transact-sql.md)。  
   
 ##### <a name="compile-and-run-time-errors-in-autocommit-mode"></a>自動認可模式下的編譯與執行階段錯誤  
  在自動認可模式中，有時 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 執行個體會好像已將整個批次回復，而非只有一個 SQL 陳述式。 這種情形只有遇到編譯錯誤時才會發生，執行階段錯誤則不會。 編譯錯誤會讓 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 無法建立執行計畫，因此批次中的任何陳述式都不會執行。 雖然產生錯誤的陳述式之前的所有陳述式都會回復，但錯誤會讓批次中的一切都不會執行。 在下列範例中，位於第三個批次的 `INSERT` 陳述式由於編譯錯誤而全部不執行。 前兩個 `INSERT` 陳述式由於並未執行而復原。  
@@ -1839,7 +1839,7 @@ GO
   
  長時間執行的交易可能會對資料庫造成以下幾個嚴重的問題：  
   
--   伺服器執行個體若是在作用中交易已執行許多未認可的修改之後關閉，後續重新啟動之復原階段所花費的時間，可能會遠超過**復原間隔**伺服器組態選項或 `ALTER DATABASE … SET TARGET_RECOVERY_TIME` 選項所指定的時間。 這些選項分別控制著使用中檢查點與間接檢查點的頻率。 如需有關檢查點類型的詳細資訊，請參閱[資料庫檢查點 &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)。  
+-   伺服器執行個體若是在作用中交易已執行許多未認可的修改之後關閉，後續重新啟動之復原階段所花費的時間，可能會遠超過**復原間隔**伺服器組態選項或 `ALTER DATABASE ... SET TARGET_RECOVERY_TIME` 選項所指定的時間。 這些選項分別控制著使用中檢查點與間接檢查點的頻率。 如需有關檢查點類型的詳細資訊，請參閱[資料庫檢查點 &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)。  
   
 -   更重要的是，等候中交易儘管產生的記錄可能很少，卻會永久阻礙記錄截斷動作，而導致交易記錄逐漸增大乃至填滿。 一旦交易記錄填滿，資料庫就不再能夠執行任何更新。 如需詳細資訊，請參閱 [SQL Server 交易記錄架構與管理指南](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md), [寫滿交易記錄疑難排解 &#40;SQL Server 錯誤 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)及[交易記錄 &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)。  
   

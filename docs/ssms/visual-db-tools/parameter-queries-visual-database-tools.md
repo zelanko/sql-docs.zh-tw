@@ -13,12 +13,12 @@ ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 323a630d1c3178f079319e00069e311b054f982a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd110c3ac8a222bb808e1ca5b084e36d4056b367
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833187"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505262"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>參數查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ WHERE (au_id = ?)
 ```  
   
 ## <a name="where-you-can-use-parameters"></a>使用參數的位置  
-您可以使用參數做為常值的預留位置，不管是文字或數值。 通常參數可做為個別資料列或群組的搜尋條件中之預留位置 (即在 SQL 陳述式的 WHERE 或 HAVING 子句中)。  
+您可以使用參數作為常值的預留位置 (不論是文字或數值)。 通常參數可做為個別資料列或群組的搜尋條件中之預留位置 (即在 SQL 陳述式的 WHERE 或 HAVING 子句中)。  
   
 您可以使用參數當做運算式中的預留位置。 例如，您可以利用每次執行查詢時都提供不同折扣值來計算折扣價格。 若要完成這項作業，您可以指定下列運算式：  
   

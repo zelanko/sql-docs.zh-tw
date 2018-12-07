@@ -11,12 +11,12 @@ ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b874fa5fa15e765f087327bbf60a3be0d9561077
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7f9f97120451e1cb5e4f05c256567d50c6fc904b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671877"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502386"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>比較用於儲存 Blob 的選項 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -14,12 +14,12 @@ ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82431376b5c7fbb052d5f36e158d269587dd7300
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36ded1687894433f5539e2b28f174729112407ec
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671416"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506684"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 訂用帳戶連線管理員
   **Azure 訂用帳戶連線管理員** 可使用您指定的屬性值，即 Azure 訂用帳戶識別碼和管理憑證，讓 SSIS 封裝連接到 Azure 訂用帳戶。  
@@ -36,7 +36,7 @@ ms.locfileid: "47671416"
   
 3.  從下拉式清單中選擇 [Management certificate store location (管理憑證存放區位置)] 和 [Management certificate store name (管理憑證存放區名稱)]。  
   
-4.  輸入 [管理憑證指紋]，或按一下 [瀏覽] 可從選取的存放區選擇憑證 以從選取的存放區中選擇憑證。 憑證必須上傳為訂用帳戶的管理憑證。 若要這樣做，請按一下 Azure 入口網站下一個頁面上的 [上傳] (如需詳細資訊，請參閱此 [MSDN 文章](https://msdn.microsoft.com/library/azure/gg551722.aspx))。  
+4.  輸入 [管理憑證指紋]，或按一下 [瀏覽...] 可從選取的存放區選擇憑證。 憑證必須上傳為訂用帳戶的管理憑證。 若要這樣做，請按一下 Azure 入口網站下一個頁面上的 [上傳] (如需詳細資訊，請參閱此 [MSDN 文章](https://msdn.microsoft.com/library/azure/gg551722.aspx))。  
   
      ![SSIS-AzureSettings-ManagementCertificate](../../integration-services/connection-manager/media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
   

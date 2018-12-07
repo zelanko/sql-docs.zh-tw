@@ -5,7 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: performance-monitor
+s.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -16,12 +16,12 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 179829be2e7aed6e6e71d31c5baadc57bfeb1e38
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07fe67c8d52f69f018acb68f64782be4af0c6c00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665407"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523337"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server、Deprecated Features 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,9 +134,9 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |PERMISSIONS|遇到了 PERMISSIONS 內建函數的參考。 請改為查詢 sys.fn_my_permissions。 每次查詢時發生一次。|  
 |ProcNums|遇到了已被取代的 ProcNums 語法。 請重寫陳述式來移除參考。 每次編譯時發生一次。|  
 |READTEXT|遇到 READTEXT 語法。 請重寫應用程式來使用 **varchar(max)** 資料類型及移除 **text** 資料類型語法。 每次查詢時發生一次。|  
-|RESTORE DATABASE 或 LOG WITH DBO_ONLY|遇到 RESTORE … WITH DBO_ONLY 語法。 請改用 RESTORE … RESTRICTED_USER。|  
-|RESTORE DATABASE 或 LOG WITH MEDIAPASSWORD|遇到 RESTORE … WITH MEDIAPASSWORD 語法。 WITH MEDIAPASSWORD 提供的安全性很弱，應該移除。|  
-|RESTORE DATABASE 或 LOG WITH PASSWORD|遇到 RESTORE … WITH PASSWORD 語法。 WITH PASSWORD 提供的安全性很弱，應該移除。|  
+|RESTORE DATABASE 或 LOG WITH DBO_ONLY|RESTORE ...WITH DBO_ONLY 語法。 請改用 RESTORE ...RESTRICTED_USER。|  
+|RESTORE DATABASE 或 LOG WITH MEDIAPASSWORD|RESTORE ...WITH MEDIAPASSWORD 語法。 WITH MEDIAPASSWORD 提供的安全性很弱，應該移除。|  
+|RESTORE DATABASE 或 LOG WITH PASSWORD|RESTORE ...WITH PASSWORD 語法。 WITH PASSWORD 提供的安全性很弱，應該移除。|  
 |從觸發程序傳回結果|每次叫用觸發程序時，都會發生這個事件。 請重寫觸發程序，好讓它不會傳回結果集。|  
 |ROWGUIDCOL|遇到 ROWGUIDCOL 語法。 請重寫陳述式來使用 $rowguid 語法。 每次編譯時發生一次。|  
 |SET ANSI_NULLS OFF|遇到 SET ANSI_NULLS OFF 語法。 請移除這個已被取代的語法。 每次編譯時發生一次。|  
@@ -173,13 +173,13 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sp_configure 'ft notify bandwidth (min)'|遇到 sp_configure 的 ft notify bandwidth (min) 選項。 請勿使用。 每次查詢時發生一次。|  
 |sp_configure 'locks'|遇到 sp_configure 的 locks 選項。 Locks 不再可以設定， 請勿使用。 每次查詢時發生一次。|  
 |sp_configure 'open objects'|遇到 sp_configure 的 open objects 選項。 open objects 的數目不再可以設定， 請勿使用。 每次查詢時發生一次。|  
-|sp_configure 'priority boost'|遇到 sp_configure 的 priority boost 選項。 請勿使用。 每次查詢時發生一次。 請改用 Windows start /high … program.exe 選項。|  
+|sp_configure 'priority boost'|遇到 sp_configure 的 priority boost 選項。 請勿使用。 每次查詢時發生一次。 請改用 Windows start /high ... program.exe 選項。|  
 |sp_configure 'remote proc trans'|遇到 sp_configure 的 remote proc trans 選項。 請勿使用。 每次查詢時發生一次。|  
 |sp_configure 'set working set size'|遇到 sp_configure 的 set working set size 選項。 working set size 不再可以設定， 請勿使用。 每次查詢時發生一次。|  
 |sp_control_dbmasterkey_password|sp_control_dbmasterkey_password 預存程序不會檢查主要金鑰是否存在。 這可允許回溯相容性，但是會顯示警告。 這個行為已被取代。 在未來版本中，主要金鑰必須存在，而且預存程序 sp_control_dbmasterkey_password 中使用的密碼必須與用來加密資料庫主要金鑰的其中一個密碼相同。|  
 |sp_create_removable|遇到 sp_create_removable 程序。 請改用 CREATE DATABASE。 每次查詢時發生一次。|  
 |sp_db_vardecimal_storage_format|遇到了 **vardecimal** 儲存格式的使用。 請改用資料壓縮。|  
-|sp_dbcmptlevel|遇到 sp_dbcmptlevel 程序。 請改用 ALTER DATABASE … SET COMPATIBILITY_LEVEL。 每次查詢時發生一次。|  
+|sp_dbcmptlevel|遇到 sp_dbcmptlevel 程序。 使用 ALTER DATABASE ...SET COMPATIBILITY_LEVEL。 每次查詢時發生一次。|  
 |sp_dbfixedrolepermission|遇到 sp_dbfixedrolepermission 程序。 請勿使用。 每次查詢時發生一次。|  
 |sp_dboption|遇到 sp_dboption 程序。 請改用 ALTER DATABASE 和 DATABASEPROPERTYEX。 每次編譯時發生一次。|  
 |sp_dbremove|遇到 sp_dbremove 程序。 請改用 DROP DATABASE。 每次查詢時發生一次。|  

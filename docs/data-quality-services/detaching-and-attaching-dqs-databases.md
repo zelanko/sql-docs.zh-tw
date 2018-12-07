@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3087eea3b8bcf5b153ff1303cbdddf55263cc6b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 639c21a124a9d8bcdecd6d240616ac10f6c87e93
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658436"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617408"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>卸離和附加 DQS 資料庫
 
@@ -38,7 +37,7 @@ ms.locfileid: "47658436"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
   
 -   您的 Windows 使用者帳戶必須是 SQL Server 執行個體之 db_owner 固定伺服器角色的成員，才能卸離 DQS 資料庫。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "47658436"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  **[資料庫詳細資料]** (下方) 窗格會顯示要附加之檔案的名稱。 若要確認或變更檔案的路徑名稱，請按一下  [瀏覽] 按鈕 (…)。  
+5.  **[資料庫詳細資料]** (下方) 窗格會顯示要附加之檔案的名稱。 若要確認或變更檔案的路徑名稱，請按一下 [瀏覽] 按鈕 (...)。  
   
 6.  按一下 **[確定]** 以附加 DQS_MAIN 資料庫。  
   

@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5283ad5eacfc569e07272df069c04fe4f42efcfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7266d3d1021592fc236e75f3893ec01aa29bb19f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771396"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398741"
 ---
 # <a name="modify-statistics"></a>修改統計資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47771396"
   
 -   **若要使用下列項目修改統計資料：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "47771396"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要：  
   
 -   使用者有資料表或檢視的 ALTER 權限。  
@@ -62,7 +62,7 @@ ms.locfileid: "47771396"
   
 5.  以滑鼠右鍵按一下要修改的統計資料物件，然後選取 [屬性]。  
   
-6.  在 [統計資料屬性 - *statistics_name*] 對話方塊的 [一般] 頁面上，按一下 [加入]、[移除]、[上移]、[下移] 或任何組合，以改變統計資料的屬性。 請記住，資料行在 **[統計資料行]** 方格中的位置會大幅影響統計資料的效益。  
+6.  在 [統計資料屬性 - *statistics_name*] 對話方塊的 [一般] 頁面上，按一下 [加入]、[移除]、[上移]、[下移] 或任何組合，以改變統計資料的屬性。 請記住，資料行在 [統計資料行] 方格中位置會大幅影響統計資料的效益。  
   
 7.  按一下 [確定] 。  
   

@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 53c1a7c5ce6c7d529fb07f356d87e0adc5c02e31
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9a4a035c33efa17f901e721ed23faf41c068c507
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639118"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513685"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>設定分散式交易的可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51639118"
 為確保分散式交易，必須設定可用性群組，將資料庫註冊為分散式交易資源管理員。  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 和更新版本提供對於可用性群組中分散式交易的完整支援。 在 Service Pack 2 之前的 [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] 版本中，不支援牽涉到可用性群組中資料庫的跨資料庫分散式交易 (也就是使用相同 SQL Server 執行個體上資料庫的交易)。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 沒有這項限制。 
+>[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 和更新版本提供對於可用性群組中分散式交易的完整支援。 在 Service Pack 2 之前的 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 版本中，不支援牽涉到可用性群組中資料庫的跨資料庫分散式交易 (也就是使用相同 SQL Server 執行個體上資料庫的交易)。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 沒有這項限制。 
 >
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 和 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 的組態步驟相同。
 
@@ -192,4 +192,4 @@ following the guideline for Troubleshooting DTC Transactions.
 
 [支援 XA 交易](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
 
-[運作方式：DTC 交易的工作階段/SPID (– 2)](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[運作方式：DTC 交易的工作階段/SPID (-2)](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)

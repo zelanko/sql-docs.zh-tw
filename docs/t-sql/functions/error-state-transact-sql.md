@@ -24,17 +24,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94720f617b9d2d8723ac6e9a28770291a966d4b3
-ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
+ms.openlocfilehash: 07dfe698333e4c8cf8191e5d2a5cd5cd1cecc801
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49359325"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508486"
 ---
 # <a name="errorstate-transact-sql"></a>ERROR_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  傳回造成執行 TRY…CATCH 建構之 CATCH 區塊之錯誤的狀態碼。  
+  傳回造成執行 TRY...CATCH 建構的 CATCH 區塊之錯誤的狀態碼。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2c24413499991277e93c882c581cc57a7c07478
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: be8577fca914627434314fa4b7352d6610ff72c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704046"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522906"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -226,7 +226,7 @@ OUTPUT 子句
  *execute_statement*  
  這是任何隨著 SELECT 或 READTEXT 陳述式而傳回資料的有效 EXECUTE 陳述式。 如需詳細資訊，請參閱 [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)。  
   
- INSERT…EXEC 陳述式中不能指定 EXECUTE 陳述式的 RESULT SETS 選項。  
+ INSERT...EXEC 陳述式中不能指定 EXECUTE 陳述式的 RESULT SETS 選項。  
   
  如果搭配使用 *execute_statement* 與 INSERT，則每個結果集都必須相容於資料表或 *column_list* 中的資料行。  
   
@@ -307,7 +307,7 @@ OUTPUT 子句
   
 ### <a name="best-practices-for-bulk-importing-data"></a>大量匯入資料的最佳做法  
   
-#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging"></a>使用 INSERT INTO…SELECT 搭配最低限度記錄來大量匯入資料  
+#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging"></a>使用 INSERT INTO...SELECT 搭配最低限度記錄來大量匯入資料  
  您可以搭配使用 `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` 最低限度記錄，有效率地將大量資料列從某份資料表 (例如暫存表格) 傳送至另一份資料表。 最低限度記錄可以改善此陳述式的效能並且降低交易期間作業填滿可用交易記錄空間的可能性。  
   
  此陳述式的最低限度記錄具有下列需求：  
@@ -322,7 +322,7 @@ OUTPUT 子句
   
 由於 MERGE 陳述式中的插入動作而插入堆積的資料列也可以採用最低限度記錄。  
   
- 與 BULK INSERT 陳述式 (持有較不嚴格的大量更新鎖定) 不同之處在於，具 TABLOCK 提示的 INSERT INTO…SELECT 對資料表持有獨佔 (X) 鎖定。 這代表您無法使用平行插入作業插入資料列。  
+ 與 BULK INSERT 陳述式 (持有較不嚴格的大量更新鎖定) 不同之處在於，具 TABLOCK 提示的 INSERT INTO...SELECT 對資料表持有獨佔 (X) 鎖定。 這代表您無法使用平行插入作業插入資料列。  
   
 #### <a name="using-openrowset-and-bulk-to-bulk-import-data"></a>利用 OPENROWSET 和 BULK 來大量匯入資料  
  OPENROWSET 函數可接受下列資料表提示，這些提示會針對大量載入最佳化提供 INSERT 陳述式：  
@@ -380,7 +380,7 @@ OUTPUT 子句
     ```  
   
 ## <a name="error-handling"></a>錯誤處理  
- 您可以在 TRY…CATCH 建構中指定 INSERT 陳述式，實作此陳述式的錯誤處理。  
+ 您可以在 TRY...CATCH 建構中指定 INSERT 陳述式，實作此陳述式的錯誤處理。  
   
  如果 INSERT 陳述式違反條件約束或規則，或它有不相容於資料行資料類型的值，陳述式便會失敗，而且系統會傳回一則錯誤訊息。  
   
@@ -406,7 +406,7 @@ OUTPUT 子句
 ## <a name="security"></a>Security  
  在連結的伺服器連接期間，傳送端伺服器會提供一個登入名稱與密碼來代表它本身，以連接到接收端伺服器。 若要讓這個連線有所作用，您必須使用 [sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md) 在連結伺服器之間建立登入對應。  
   
- 當您使用 OPENROWSET(BULK…) 時，一定要了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何處理模擬。 如需詳細資訊，請參閱[使用 BULK INSERT 或 OPENROWSET&#40;BULK...&#41; 匯入大量資料 &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 中的＜安全性考量＞。  
+ 當您使用 OPENROWSET(BULK...) 時，一定要了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何處理模擬。 如需詳細資訊，請參閱[使用 BULK INSERT 或 OPENROWSET&#40;BULK...&#41; 匯入大量資料 &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 中的＜安全性考量＞。  
   
 ### <a name="permissions"></a>[權限]  
  需要目標資料表的 INSERT 權限。  
@@ -421,10 +421,10 @@ OUTPUT 子句
 |--------------|------------------------------|  
 |[基本語法](#BasicSyntax)|INSERT • 資料表值建構函式|  
 |[處理資料行值](#ColumnValues)|IDENTITY • NEWID • 預設值 • 使用者定義型別|  
-|[從其他資料表插入資料](#OtherTables)|INSERT…SELECT • INSERT…EXECUTE • WITH 通用資料表運算式 • TOP • OFFSET FETCH|  
+|[從其他資料表插入資料](#OtherTables)|INSERT...SELECT • INSERT...EXECUTE • WITH 通用資料表運算式 • TOP • OFFSET FETCH|  
 |[指定標準資料表以外的目標物件](#TargetObjects)|檢視 • 資料表變數|  
 |[將資料列插入遠端資料表](#RemoteTables)|連結的伺服器 • OPENQUERY 資料列集函數 • OPENDATASOURCE 資料列集函數|  
-|[大量載入資料表或資料檔案中的資料](#BulkLoad)|INSERT…SELECT • OPENROWSET 函數|  
+|[大量載入資料表或資料檔案中的資料](#BulkLoad)|INSERT...SELECT • OPENROWSET 函式|  
 |[使用提示來覆寫查詢最佳化工具的預設行為](#TableHints)|資料表提示|  
 |[擷取 INSERT 陳述式的結果](#CaptureResults)|OUTPUT 子句|  
   
@@ -537,7 +537,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
  本節的範例示範將一個資料表的資料列插入另一個資料表的方法。  
   
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>H. 使用 SELECT 和 EXECUTE 選項插入其他資料表的資料  
- 下列範例會示範如何使用 INSERT…SELECT 或 INSERT…EXECUTE 將一個資料表中的資料插入另一個資料表。 每個方法都是以多資料表的 SELECT 陳述式為基礎，而該 SELECT 陳述式在資料行清單中包括一個運算式及一個常值。  
+ 下列範例會示範如何使用 INSERT...SELECT 或 INSERT...EXECUTE 將一個資料表中的資料插入另一個資料表。 每個方法都是以多資料表的 SELECT 陳述式為基礎，而該 SELECT 陳述式在資料行清單中包括一個運算式及一個常值。  
   
  第一個 INSERT 陳述式會使用 SELECT 陳述式，以從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的來源資料表 (`Employee`、`SalesPerson` 和 `Person`) 衍生資料，並將結果集儲存在 `EmployeeSales` 資料表中。 第二個 INSERT 陳述式會使用 EXECUTE 子句來呼叫包含 SELECT 陳述式的預存程序，而第三個 INSERT 陳述式會使用 EXECUTE 子句將 SELECT 陳述式當做常值字串來參考。  
   
@@ -812,7 +812,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
  本節的範例示範利用 INSERT 陳述式將資料大量載入資料表中的兩個方法。  
   
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q. 在記錄最少的情況下將資料插入堆積中  
- 下列範例會建立新的資料表 (堆積)，然後使用最低限度記錄，將另一個資料表中的資料插入其中。 此範例會假設 `AdventureWorks2012` 資料庫的復原模式設定為 FULL。 為了確保使用最低限度記錄，`AdventureWorks2012` 資料庫的復原模式會在插入資料列之前設定為 BULK_LOGGED，然後在 INSERT INTO…SELECT 陳述式之後重設為 FULL。 此外，針對目標資料表 `Sales.SalesHistory` 指定了 TABLOCK 提示。 這樣做可確保此陳述式會在交易記錄中使用最小的空間並有效率地執行作業。  
+ 下列範例會建立新的資料表 (堆積)，然後使用最低限度記錄，將另一個資料表中的資料插入其中。 此範例會假設 `AdventureWorks2012` 資料庫的復原模式設定為 FULL。 為了確保使用最低限度記錄，`AdventureWorks2012` 資料庫的復原模式會在插入資料列之前設定為 BULK_LOGGED，然後在 INSERT INTO...SELECT 陳述式之後重設為 FULL。 此外，針對目標資料表 `Sales.SalesHistory` 指定了 TABLOCK 提示。 這樣做可確保此陳述式會在交易記錄中使用最小的空間並有效率地執行作業。  
   
 ```sql
 -- Create the target heap.  

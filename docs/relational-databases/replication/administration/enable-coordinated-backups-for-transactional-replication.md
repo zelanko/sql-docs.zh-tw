@@ -19,12 +19,12 @@ ms.assetid: 73a914ba-8b2d-4f4d-ac1b-db9bac676a30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8a42406af2eb1a3133ffb3e6e65699f75f08bf46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e5eeeaa390b4a8607df47ddfd058bc9e1752395
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660416"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524807"
 ---
 # <a name="enable-coordinated-backups-for-transactional-replication"></a>為異動複寫啟用協調備份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47660416"
 2.  如果步驟 1 中的函式傳回 **0**，則請在發行集資料庫的發行者端執行 [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。 為 **@optname** 指定 **@optname**的值，而為 **@value** 指定 **@value**＞。  
   
     > [!NOTE]  
-    >  如果將 **sync with backup** 選項變更為 **false**，則在記錄讀取器執行後或在一個間隔後 (如果記錄讀取器持續執行)，發行集資料庫的截斷點就會更新。 最大間隔是由 **–MessageInterval** 代理程式參數 (預設值為 30 秒) 控制。  
+    >  如果將 **sync with backup** 選項變更為 **false**，則在記錄讀取器執行後或在一個間隔後 (如果記錄讀取器持續執行)，發行集資料庫的截斷點就會更新。 最大間隔是由 **-MessageInterval** 代理程式參數 (預設值為 30 秒) 控制。  
   
 ### <a name="to-enable-coordinated-backups-for-a-distribution-database"></a>若要啟用散發資料庫的協調備份  
   

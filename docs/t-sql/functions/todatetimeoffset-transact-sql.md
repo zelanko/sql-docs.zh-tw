@@ -25,12 +25,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bbce4d5261543ee5f1fdbc90a0ab9da7deb4475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2829710d348c56a5b3fcc09d06436929bcbfe16
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818296"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418319"
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ TODATETIMEOFFSET ( expression , time_zone )
 >  運算式的類型不可為 **text**、**ntext** 或 **image**，因為這些類型不可隱含轉換成 **varchar** 或 **nvarchar**。  
   
  *time_zone*  
- 這是代表時區時差的運算式，以分鐘為單位 (若為整數)，例如 -120，或以小時和分鐘為單位 (若為字串)，例如 ‘+13.00’。 範圍是 +14 到 -14 (以小時為單位)。 此運算式會針對指定的 time_zone 以當地時間解譯。  
+ 這是代表時區時差的運算式，以分鐘為單位 (若為整數)，例如 -120，或以小時和分鐘為單位 (若為字串)，例如 '+13.00'。 範圍是 +14 到 -14 (以小時為單位)。 此運算式會針對指定的 time_zone 以當地時間解譯。  
   
 > [!NOTE]  
 >  如果運算式為字元字串，它的格式必須為 {+|-}TZH:THM。  

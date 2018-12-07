@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86f54b31eb9bab93b6a4a3be918e1011f023ab5b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 71be318c40c5776440bf427cad57ed3fb903e55a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666517"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540929"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>逐步解說：建立及執行 SQL Server 單元測試
 在這個逐步解說中，您要建立 SQL Server 單元測試，以確認數個預存程序的行為。 您可以建立 SQL Server 單元測試，協助識別可能會導致不正確之應用程式行為的程式碼缺失。 您可以執行 SQL Server 單元測試和應用程式測試，作為自動化測試套件的一部分。  
@@ -556,7 +556,7 @@ ms.locfileid: "51666517"
   
 4.  在 [ **測試條件** ] 窗格，按一下清單中的 [ **預期的結構描述** ]，然後按一下 [ **加入測試條件**]。  
   
-5.  在 [屬性] 視窗中，按一下 [組態] 屬性中的瀏覽按鈕 ('**…**')。  
+5.  在 [屬性] 視窗中，按一下 [組態] 屬性中的瀏覽按鈕 ([...])。  
   
 6.  在 [ **expectedSchemaCondition1 的組態** ] 對話方塊中，指定資料庫連接。 例如，如果使用預設部署位置 (即 LocalDB)，則按一下 [新增連接] 以指定 **(LocalDB)\Projects**。 然後，選擇資料庫的名稱。  
   
@@ -621,7 +621,7 @@ ms.locfileid: "51666517"
   
 13. 在 [ **測試條件** ] 窗格，按一下清單中的 [ **資料總和檢查碼** ]，然後按一下 [ **加入測試條件**]。  
   
-14. 在 [屬性] 視窗中，按一下 [組態] 屬性中的瀏覽按鈕 ('**…**')。  
+14. 在 [屬性] 視窗中，按一下 [組態] 屬性中的瀏覽按鈕 ([...])。  
   
 15. 在 [ **checksumCondition1 的組態** ] 對話方塊中，指定資料庫連接。  
   

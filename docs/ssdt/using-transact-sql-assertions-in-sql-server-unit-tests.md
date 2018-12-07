@@ -11,12 +11,12 @@ ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8da09c20837b060606b087c0edebb7bf9713675e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 34cea0d4a251266d21218cefaee2d5f122e574ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671240"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543897"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>在 SQL Server 單元測試中使用 Transact-SQL 判斷提示
 在 SQL Server 單元測試中，Transact\-SQL 測試指令碼會執行並傳回結果。 有時候，結果會當做結果集傳回來。 您可以使用測試條件來驗證結果。 例如，您可以使用測試條件來檢查特定結果集傳回的資料列數目或驗證執行特定測試所花費的時間長度。 如需有關測試條件的詳細資訊，請參閱[在 SQL Server 單元測試中使用測試條件](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)。  
@@ -72,7 +72,7 @@ ms.locfileid: "51671240"
   
 @ErrorMessage 是任何使用者定義的錯誤訊息。 您可以格式化此訊息字串 (與 printf_s 函式很相似)。  
   
-@ErrorSeverity 是使用者定義的嚴重性層級 (範圍從 0 到 18)。  
+@ErrorSeverity 是使用者定義的嚴重性層級 (範圍從 0 - 18)。  
   
 > [!NOTE]  
 > 嚴重性層級的 '0' 和 '10' 值不會導致 SQL Server 單元測試失敗。 您可以使用範圍 0 - 18 中的任何其他值來導致測試失敗。  

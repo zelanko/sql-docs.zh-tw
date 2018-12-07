@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7309f4669a0672ca65b0c74961c14e83d073a4c6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ab97e64bacf15cf95c6594f45edceac05a24eef2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030377"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403003"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的 Reporting Services (SSDT)
 
@@ -56,7 +56,7 @@ ms.locfileid: "50030377"
   
 -   **資料集** ：每個資料集都會包含指定要從資料來源中擷取哪些資料的查詢。 您可以展開資料集，以便檢視資料集查詢所指定的欄位集合。  
   
-     在多維度資料集的某些查詢設計工具中，您可以在 [篩選] 窗格中指定篩選，然後指出是否要建立報表參數。 若您指定報表參數選項，系統就會自動建立特殊資料集，以擴展參數的有效值清單。  根據預設，此資料集不會出現在 [報表資料] 窗格內。 如需詳細資訊，請參閱[針對多維度資料的參數值顯示隱藏的資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)。  
+     在多維度資料集的某些查詢設計工具中，您可以在 [篩選] 窗格中指定篩選，然後指出是否要建立報表參數。 若您指定報表參數選項，系統就會自動建立特殊資料集，以填入參數的有效值清單。  根據預設，此資料集不會出現在 [報表資料] 窗格內。 如需詳細資訊，請參閱[針對多維度資料的參數值顯示隱藏的資料集 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)。  
   
 -   **報表參數** ：報表參數清單。 資料集查詢包含查詢參數時，可以手動或自動建立參數。  
   
@@ -237,7 +237,7 @@ ms.locfileid: "50030377"
   
 
 ##  <a name="bkmk_SourceControl"></a> 原始檔控制  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 可以與來源外掛程式整合。您可以使用 [選項]** 對話方塊中的 [專案和方案] 頁面，以指定外掛程式，並設定屬性。  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 可以與來源外掛程式整合。您可以使用 **[選項]** 對話方塊中的 [專案和方案] 頁面，以指定外掛程式，並設定屬性。  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> 自訂報表範本  
  若要使用自訂報表做為新報表的範本，您只需將自訂報表複製到裝有 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 之電腦上的 ReportProject 資料夾即可。 此資料夾預設位於下列位置： `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 將新項目加入報表專案時，您的自訂報表會顯示在 [範本] 窗格中。  

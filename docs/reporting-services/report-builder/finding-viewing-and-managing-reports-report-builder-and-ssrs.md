@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2d28ffb546476d2e18fd1dc57d04c837f7176142
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8e19127cd13ddb5e71ce245b4e0a832c63ecad76
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029689"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711009"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>尋找、檢視和管理報表 (報表產生器及 SSRS)
   在報表產生器中，您可以瀏覽報表伺服器或 SharePoint 網站上的資料夾，以便尋找報表、共用資料來源、模型，以及其他相關的報表項目，並瀏覽電腦以尋找本機報表。 為了更容易尋找報表，報表產生器會維護一份最近使用之伺服器及網站的清單，而且可以直接存取電腦檔案系統中的 [桌面]、[我的文件] 和 [我的電腦] 資料夾。  
@@ -147,7 +147,7 @@ ms.locfileid: "50029689"
   
 ## <a name="see-also"></a>另請參閱  
  [儲存報表 &#40;報表產生器&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
- [SQL Server 2016 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [SQL Server 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [安裝和解除安裝報表產生器](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
   
   

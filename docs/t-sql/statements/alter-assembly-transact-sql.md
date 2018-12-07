@@ -24,12 +24,12 @@ ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 542bf734722351128136e072222e0c3251e945f7
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c405884f8ff87cb0b37991dc5639bf69068a6ffd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700896"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503093"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ ALTER ASSEMBLY assembly_name
   
  如需詳細資訊，請參閱[實作組件](../../relational-databases/clr-integration/assemblies-implementing.md)。  
   
- [ DROP FILE { *file_name*[ **,***...n*] | ALL } ]  
+ [ DROP FILE { *file_name*[ **,**_...n_] | ALL } ]  
  從資料庫移除與該組件相關聯的檔案名稱，或是所有與該組件相關聯的檔案。 如果使用底下的 ADD FILE，則會先執行 DROP FILE。 此舉可讓您取代同名的檔案。  
   
 > [!NOTE]  

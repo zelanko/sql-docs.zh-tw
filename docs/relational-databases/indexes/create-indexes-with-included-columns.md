@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90acf990b3e498c73d8b25cc4a11f414f6e24c31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c32b38b0327c8c418929514c7f82e26a3a41584
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717936"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539716"
 ---
 # <a name="create-indexes-with-included-columns"></a>建立內含資料行的索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "47717936"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -84,17 +84,17 @@ ms.locfileid: "47717936"
   
 3.  按一下加號展開要建立非索引鍵資料行之索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引] 資料夾，指向 [新增索引]，然後選取 [非叢集索引]。  
+4.  以滑鼠右鍵按一下 [索引] 資料夾，指向 [新增索引]，然後選取 [非叢集索引…]。  
   
 5.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
-6.  按一下 **[索引鍵資料行]** 索引標籤底下的 **[加入]**。  
+6.  按一下 [索引鍵資料行] 索引標籤底下的 [加入...]。  
   
 7.  在 [從 _table\_name_ 選取資料行] 對話方塊中，選取要新增至索引之一或多個資料表資料行的一或多個核取方塊。  
   
 8.  按一下 [確定] 。  
   
-9. 按一下 **[包含的資料行]** 索引標籤底下的 **[加入]**。  
+9. 按一下 [包含的資料行] 索引標籤底下的 [加入...]。  
   
 10. 在 [從 _table\_name_ 選取資料行] 對話方塊中，選取要新增至索引中作為非索引鍵資料行之一或多個資料表資料行的一或多個核取方塊。  
   

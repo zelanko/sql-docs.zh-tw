@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 092b497ba4c42d563abce997a50b965b727bd72c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0d40fe3cece9f2f8ae290e09e4b722fdfc3873a2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020682"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412085"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>設定處理選項 (SharePoint 整合模式的 Reporting Services)
 
@@ -88,7 +88,7 @@ ms.locfileid: "50020682"
   
 ## <a name="set-database-timeout"></a>設定資料庫逾時
   
-*  使用 Windows PowerShell 設定的 SharePoint 報表伺服器資料庫逾時。 如需詳細資訊，請參閱＜ [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)＞的＜取得並設定 Reporting Services 應用程式資料庫的屬性＞一節。  
+*  使用 Windows PowerShell 設定的 SharePoint 報表伺服器資料庫逾時。 如需詳細資訊，請參閱 [Reporting Services SharePoint 模式的 PowerShell Cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md) 的＜取得及設定 Reporting Services 應用程式資料庫的屬性＞一節。  
   
 ## <a name="next-steps"></a>後續步驟
 

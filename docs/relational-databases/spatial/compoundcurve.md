@@ -11,12 +11,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26495b201fcfc29b891a83c4f7cc4011cfd7cbd9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3ed40a84fba304dab0d9c11c7c6bbe950f2511e8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658917"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511838"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
- 這會產生下列輸出：12.566370… 等於 4∏。 在此範例中， `CompoundCurve` 執行個體會儲存半徑為 2 的圓形。 前兩個程式碼範例都不需要使用 `CompoundCurve`。 在第一個範例中， `LineString` 執行個體已經簡化了，而在第二個範例中， `CircularString` 執行個體也已經簡化了。 不過，下一個範例會顯示 `CompoundCurve` 提供較佳替代方式之處。  
+ 這會產生下列輸出：12.566370…，相當於 4∏。 在此範例中， `CompoundCurve` 執行個體會儲存半徑為 2 的圓形。 前兩個程式碼範例都不需要使用 `CompoundCurve`。 在第一個範例中， `LineString` 執行個體已經簡化了，而在第二個範例中， `CircularString` 執行個體也已經簡化了。 不過，下一個範例會顯示 `CompoundCurve` 提供較佳替代方式之處。  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>F. 使用 CompoundCurve 來儲存半圓形  
  下列範例會使用 `CompoundCurve` 執行個體來儲存半圓形。  
@@ -182,8 +182,8 @@ SELECT 'Circle Two', @g2.STLength() AS Perimeter;  -- now we get an accurate amo
  輸出如下所示：  
   
 ```  
-Circle One11.940039…  
-Circle Two12.566370…  
+Circle One11.940039...  
+Circle Two12.566370...  
 ```  
   
  Circle Two 的圓周約為 4∏，這是圓周的實際值。 不過，Circle One 的圓周則明顯不精確。 Circle One 的 `CompoundCurve` 執行個體會儲存一個圓弧線段 (ABC) 和兩個直線線段 (CD, DA)。 `CompoundCurve` 執行個體必須儲存兩個圓弧線段 (ABC, CDA) 才能定義圓形。 `LineString` 執行個體會在 Circle One 的 `CompoundCurve` 執行個體中定義第二組點 (4 2, 2 4, 0 2)。 您必須在 `CircularString` 內部明確宣告 `CompoundCurve`執行個體。  

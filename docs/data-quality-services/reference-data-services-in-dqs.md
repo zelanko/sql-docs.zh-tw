@@ -5,19 +5,18 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 75492ffdd6246050c086deea74975921a19156b4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a491ae673059d9373067428ef226d5819a7a34ad
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702216"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617698"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS 中的 Reference Data Services
 

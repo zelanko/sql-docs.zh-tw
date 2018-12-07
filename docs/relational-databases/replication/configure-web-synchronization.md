@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18f27adad094effd34ab3778f54ac5d362dd4534
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36d70b56432fee62d157bb8e6cf192d906e84bc3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834626"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519342"
 ---
 # <a name="configure-web-synchronization"></a>[設定 Web 同步處理]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +136,7 @@ ms.locfileid: "47834626"
   
 -   如果您要複寫大量資料，可能必須調整合併代理程式的批次大小。  
   
- 合併式複寫的批次大小是以 *「層代」*(Generation) 為測量單位，而這是每個發行項的變更集合。 批次中的層代數目是使用合併代理程式的 –**DownloadGenerationsPerBatch** 和 –**UploadGenerationsPerBatch** 參數所指定。 如需詳細資訊，請參閱 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
+ 合併式複寫的批次大小是以 *「層代」*(Generation) 為測量單位，而這是每個發行項的變更集合。 批次中的世代數目是使用合併代理程式的 -**DownloadGenerationsPerBatch** 和 -**UploadGenerationsPerBatch** 參數所指定。 如需詳細資訊，請參閱 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
   
  若為大量資料，請針對每個批次參數指定一個少量數目。 我們建議您從 10 這個值開始，然後根據需求和效能進行微調。 一般而言，這些參數都指定於代理程式設定檔中。 如需有關設定檔的詳細資訊，請參閱＜ [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)＞。  
   

@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 901bb417d9af0f34d645ae18fa36a5c05dadb7aa
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: ce78afa02f0a0f5acdb061e21a1311ac20f844d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411778"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396914"
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>建立 AlwaysOn 可用性群組的叢集 DTC
 
@@ -116,7 +116,7 @@ foreach ($node in $nodes) {
     };
 ```  
 ## <a name="3--configure-in-doubt-xact-resolution"></a>3.設定 [不能肯定的交易解析] 
-此指令碼會將未決交易的 [不能肯定的交易解析] 伺服器組態選項設定為「假設為認可」。  在 SQL Server Management Studio (SSMS) 中，對 **SQLCMD 模式**的 `SQLNODE1` 執行下列 T-SQL 指令碼。
+此指令碼會將未決交易的 [不能肯定的交易解析] 伺服器設定選項設定為「假設為認可」。  在 SQL Server Management Studio (SSMS) 中，對 **SQLCMD 模式**的 `SQLNODE1` 執行下列 T-SQL 指令碼。
 
 ```sql  
 /*******************************************************************
@@ -587,4 +587,4 @@ GO
 ```
 
 > [!IMPORTANT]
-> 您必須執行 `USE AG1` 陳述式，確保資料庫內容已設定為 `AG1`。  否則，您會收到下列錯誤訊息：「交易內容正由另一個工作階段所使用」。
+> 您必須執行 `USE AG1` 陳述式，確保資料庫內容已設定為 `AG1`。  否則，您會收到下列錯誤訊息：「交易內容正由另一個工作階段使用」。

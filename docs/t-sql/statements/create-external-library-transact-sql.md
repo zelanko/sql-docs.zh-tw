@@ -19,12 +19,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e6154611d2579706f3da4f9159e5d1bfce41bb7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8c6b8ea4467ddc09a08d21a337b1b5c8c44f34e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741126"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538810"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -41,7 +41,7 @@ ms.locfileid: "47741126"
 ```text
 CREATE EXTERNAL LIBRARY library_name  
     [ AUTHORIZATION owner_name ]  
-FROM <file_spec> [,…2]  
+FROM <file_spec> [,...2]  
 WITH ( LANGUAGE = 'R' )  
 [ ; ]  
 
@@ -92,7 +92,7 @@ WITH ( LANGUAGE = 'R' )
 
 **PLATFORM = WINDOWS**
 
-指定程式庫內容的平台。 此值會預設為 SQL Server 執行所在的主機平台。 因此，使用者不一定要指定此值。 當支援多個平台或使用者必須指定不同的平台時，才需要指定此值。 
+指定程式庫內容的平台。 此值會預設為 SQL Server 執行所在的主機平台。 因此，使用者不需要指定此值。 當支援多個平台或使用者必須指定不同的平台時，才需要指定此值。 
 
 在 SQL Server 2017 中，Windows 是唯一支援的平台。
 

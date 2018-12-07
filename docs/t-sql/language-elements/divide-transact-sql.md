@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7c6da11d6f2f89b6add4376637e14753a01cc78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25ce811a394ae46b955b5c53d03b1b4f62da6ae0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664906"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390864"
 ---
 # <a name="-division-transact-sql"></a>/ (除法) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -84,7 +84,7 @@ SalesPersonID FirstName    LastName          SalesQuota  Sales Target Per Month
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會使用除法算術運算子，來計算每位員工之休假時數與病假時數的簡單比率。  
+ 下列範例會使用除法算術運算子，來計算每位員工休假時數與病假時數的簡單比率。  
   
 ```  
 -- Uses AdventureWorks  

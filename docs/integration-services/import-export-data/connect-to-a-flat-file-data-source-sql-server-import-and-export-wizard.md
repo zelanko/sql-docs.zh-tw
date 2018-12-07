@@ -11,19 +11,19 @@ ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c893a38541d6e79380b25f0e8e5414a6ee0d2b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffb879aa1b3fdbb5c89690de5cb4c61c5e9eab2d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853366"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393712"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>連線至一般檔案資料來源 (SQL Server 匯入和匯出精靈)
 本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連線至**一般檔案** (文字檔) 資料來源。 針對一般檔案，精靈的這兩個頁面會呈現不同的選項集，因此，本主題會分別描述一般檔案來源和一般檔案目的地。
 
 ## <a name="an-alternative-for-simple-text-import"></a>簡單文字匯入的替代方式
 如果您需要將文字檔匯入至 SQL Server，但不需要使用 [匯入和匯出精靈] 中的所有設定選項，則請考慮使用 SQL Server Management Studio (SSMS) 中的 [匯入一般檔案精靈]。 如需詳細資訊，請參閱下列文章：
-- [SQL Server Management Studio 17.3 的新功能](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/) \(英文\)
+- [What's new in SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/) (SQL Server Management Studio 17.3 的新功能)
 - [在 SSMS 17.3 中新推出的「匯入一般檔案精靈」簡介](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173) \(英文\)
 
 ## <a name="connect-to-a-flat-file-source"></a>連線至一般檔案來源

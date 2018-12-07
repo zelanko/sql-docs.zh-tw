@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 527a2c67a62328cc0e277bc3c45eebeb9167a804
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 52e4ef6b3361ca1e577f4c19a325bcb982c4e103
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020222"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403144"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>效能計數器 MSRS 2011 Web Service、效能物件
   本主題描述 **MSRS 2011 Web Service** 和 **MSRS 2011 Windows Service** 效能物件的效能計數器。 這些物件是 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 原生模式部署的一部分。  
@@ -110,7 +110,7 @@ ms.locfileid: "50020222"
 |**Total Snapshot Updates**|報表執行快照集更新總數|  
   
 ##  <a name="bkmk_powershell"></a> 使用 PowerShell 指令程式傳回清單  
- ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容")：以下 Windows PowerShell 指令碼會傳回 CounterSetName 開頭為 “msr” 的計數器集合：  
+ ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容")：下列 Windows PowerShell 指令碼會傳回 CounterSetName 開頭為 "msr" 的計數器集合：  
   
 ```  
 get-counter -listset msr*  

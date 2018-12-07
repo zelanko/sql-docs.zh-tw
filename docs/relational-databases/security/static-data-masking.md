@@ -11,12 +11,12 @@ author: egranet
 ms.author: esgranet
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50b39571179528f96f19370c4935b87e457b214f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 18dd28aeb4c1678b4b6ae454c065d3d96770cb5a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662994"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539109"
 ---
 # <a name="static-data-masking"></a>靜態資料遮罩
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "51662994"
 
 以下是執行靜態資料遮罩的逐步指南。 
  
-1. 啟動 SQL Server Management Studio。 連線到您的資料庫。 在左側的 [物件總管] 窗格中，展開 [資料庫] 資料夾。 以滑鼠右鍵按一下您想要遮罩的資料庫。 按一下 [工作]。 按一下 [遮罩資料庫... (預覽)]。
+1. 啟動 SQL Server Management Studio。 連線到您的資料庫。 在左側的 [物件總管] 窗格中，展開 [資料庫] 資料夾。 以滑鼠右鍵按一下您想要遮罩的資料庫。 按一下 [工作]。 以滑鼠左鍵按一下 [遮罩資料庫...(預覽)]。
  
  ![[工作] 功能表](../../relational-databases/security/media/sql-static-data-masking/task_data_masking.PNG)
  
@@ -104,7 +104,7 @@ ms.locfileid: "51662994"
  
  ![遮罩功能下拉式清單](../../relational-databases/security/media/sql-static-data-masking/masking_functions.PNG)
  
- 注意：大多數遮罩功能會有其他設定參數。 針對 [隨機顯示] 遮罩，靜態資料遮罩會提供預設參數。 針對 [Group Shuffle] \(群組隨機顯示\) 遮罩、[單一值] 遮罩和 [String Composite] \(字串複合\) 遮罩，使用者必須提供設定參數。 若要變更或提供設定參數，請按一下 [設定…] 選項，然後在快顯對話方塊中指定參數的 (替代) 值。 [遮罩功能](#masking-functions)中提供每項遮罩功能的詳細說明。
+ 注意：大多數遮罩功能會有其他設定參數。 針對 [隨機顯示] 遮罩，靜態資料遮罩會提供預設參數。 針對 [Group Shuffle] \(群組隨機顯示\) 遮罩、[單一值] 遮罩和 [String Composite] \(字串複合\) 遮罩，使用者必須提供設定參數。 若要變更或提供設定參數，請按一下 [設定] 選項，然後在快顯對話方塊中指定參數的 (替代) 值。 [遮罩功能](#masking-functions)中提供每項遮罩功能的詳細說明。
  
  ![遮罩功能設定按鈕](../../relational-databases/security/media/sql-static-data-masking/masking_functions_configure.png)
  
@@ -135,7 +135,7 @@ ms.locfileid: "51662994"
 
 ### <a name="single-value-masking"></a>[單一值] 遮罩
 
-[單一值] 遮罩會將資料行中的所有值取代為單一固定值，此值是由使用者指定。 輸入格式必須可轉換成所選資料行的任何類型。 若要指定值，請按一下 [設定…] 並提供值，然後按一下 [確定]。 
+[單一值] 遮罩會將資料行中的所有值取代為單一固定值，此值是由使用者指定。 輸入格式必須可轉換成所選資料行的任何類型。 若要指定值，請按一下 [設定] 並提供值，然後按一下 [確定]。 
 
 ![[單一值] 遮罩參數](../../relational-databases/security/media/sql-static-data-masking/single_value_parameter.PNG)
 

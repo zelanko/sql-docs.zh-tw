@@ -13,12 +13,12 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 126dad89a25ccf1a11958676cb0be439fb4aac65
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 968ae6356d2f9d9b84b8cf2d5bf6b012b000b7b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641565"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521234"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>逐步解說︰發行 SSIS 封裝做為 SQL 檢視
   本逐步解說提供詳細的步驟來發行 SSIS 封裝，以做為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的 SQL 檢視。  
@@ -243,7 +243,7 @@ GO
  OPENQUERY 函式的語法是︰  
   
 ```sql 
-SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters=”<parameter_name_1>=<value1>; parameter_name_2=<value2>”;Timeout=<Number of Seconds>;’)  
+SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters="<parameter_name_1>=<value1>; parameter_name_2=<value2>";Timeout=<Number of Seconds>;')  
 ```  
   
  Folder、Project 及 Package參數都是必要項。 Use32BitRuntime、Timeout 及 Parameters 則是選擇性的。  
@@ -256,15 +256,15 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  下列清單指定查詢子句中允許的特殊字元︰  
   
--   單一引號 (‘) – 標準的 OPENQUERY 支援此字元。 如果您想要在查詢子句中使用單引號，請使用兩個單引號 (‘’)。  
+-   單一引號 (') - 標準 OPENQUERY 支援此字元。 如果您想要在查詢子句中使用單引號，請使用兩個單引號 ('')。  
   
--   雙引號 (“) – 查詢的參數部分會以雙引號括住。 如果參數值本身包含雙引號，請使用逸出字元。 例如：\”。  
+-   雙引號 (") - 查詢的參數部分會以雙引號括住。 如果參數值本身包含雙引號，請使用逸出字元。 例如： \"＞。  
   
--   左和右方括弧 ([ 和 ]) – 這些字元可用來表示前置/後端空格。 例如，“[ 一些空格 ]” 代表 “ 一些空格 ” 字串，其中有一個前置空格和一個尾端空格。 如果這些字元本身會在查詢子句中使用，則必須逸出它們。 例如， \\和 \\]。  
+-   左和右方括弧 ([ 和 ]) - 這些字元可用來表示前置/後端空格。 例如，「[ 一些空格 ]」代表「 一些空格 」字串，其中有一個前置空格和一個尾端空格。 如果這些字元本身會在查詢子句中使用，則必須逸出它們。 例如， \\和 \\]。  
   
--   正斜線 (\\) – 查詢子句中使用的每個 \ 都必須使用逸出字元。 例如，系統會將查詢子句中的 \\\ 評估為 \。  
+-   正斜線 (\\) - 查詢子句中使用的每個 \ 都必須使用逸出字元。 例如，系統會將查詢子句中的 \\\ 評估為 \。  
   
- 正斜線 (\\) – 查詢子句中使用的每個 \ 都必須使用逸出字元。 例如，系統會將查詢子句中的 \\\ 評估為 \。  
+ 正斜線 (\\) - 查詢子句中使用的每個 \ 都必須使用逸出字元。 例如，系統會將查詢子句中的 \\\ 評估為 \。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流目的地](../../integration-services/data-flow/data-streaming-destination.md)   

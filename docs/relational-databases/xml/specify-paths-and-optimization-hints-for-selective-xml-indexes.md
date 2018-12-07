@@ -11,12 +11,12 @@ ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1caa27c607c82da066e350113d8c29e412c2ce39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 289fd23355fabab6ddbbbde34b2bbdfaeb57753f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731356"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505888"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>指定選擇性 XML 索引的路徑和最佳化提示
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -103,8 +103,8 @@ mypath= '/a/b' as XQUERY 'node()',
 pathX = '/a/b/c' as XQUERY 'xs:double' SINGLETON,  
 pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON  
 )  
--- mypath – Only the node value is needed; storage is saved.  
--- pathX – Performance is improved; secondary indexes are possible.  
+-- mypath - Only the node value is needed; storage is saved.  
+-- pathX - Performance is improved; secondary indexes are possible.  
 -- pathY - Performance is improved; secondary indexes are possible; storage is saved.  
 ```  
   

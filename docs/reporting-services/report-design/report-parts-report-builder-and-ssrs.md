@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4697eada10910db5ef9b37e9884b9746df360b8a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: adedbb3c4e173a1b27c0f1d911f847c5e69fe956
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021942"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542222"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>報表組件 (報表產生器及 SSRS)
   資料表、矩陣、圖表和影像等報表項目都可以當做 *「報表組件」*(Report Part) 發行。 報表組件是指已經個別發行至報表伺服器，而且可以在其他分頁報表中重複使用的分頁報表項目。 報表組件的副檔名為 .rsc。  

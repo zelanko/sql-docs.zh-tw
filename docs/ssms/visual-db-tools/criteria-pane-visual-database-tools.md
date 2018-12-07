@@ -19,12 +19,12 @@ ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51e55de138c9e737163db9750d7665f5ae0a5908
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f6beffa273fbb08c8d4c4066eac3e08f52ed4c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665146"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514047"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>準則窗格 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

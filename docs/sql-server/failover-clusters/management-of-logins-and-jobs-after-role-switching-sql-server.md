@@ -13,12 +13,12 @@ ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a2912f9023db4e31bcb35f742d8d7cc1c8ce208
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 39ddb99758833a5f942822e2639768480bf1bc99
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701221"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530136"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>角色切換後針對登入和作業進行管理 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

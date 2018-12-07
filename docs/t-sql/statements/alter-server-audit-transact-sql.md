@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 5f5eea2555792f5c25338407144df53d5784ed39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9176be66c987d3ff4f7cdf09ac8dd70fc1447273
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756558"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411855"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT  (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ SHUTDOWN
   
  您可以加入、改變及移除稽核規格，而不需停止稽核。  
   
- 在稽核已建立之後，就不能變更稽核的 GUID。  
+ 在建立稽核之後，即無法變更稽核的 GUID。  
   
 ## <a name="permissions"></a>[權限]  
  若要建立、改變或卸除伺服器稽核主體，您必須具有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 權限。  

@@ -11,12 +11,12 @@ ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f0c9ddcd2fecd498e6bb00458bfde1e07b1d431b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f25c7527000cb95878b60f4dfe05be4b47f943bb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747436"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532737"
 ---
 # <a name="temporal-table-usage-scenarios"></a>時態表使用案例
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -136,9 +136,9 @@ FROM Employee
   
 > [!TIP]  
 >  以 FOR SYSTEM_TIME 在 Temporal 子句中指定的篩選條件可進行 SARG (也就是說， SQL Server 可以利用基礎叢集索引來執行搜尋作業，而非掃描作業)。   
-> 如果您直接查詢記錄資料表，請以 \<期間資料行>  {< | > | =, …} date_condition AT TIME ZONE ‘UTC’ 的格式指定篩選，來確保您的篩選條件也是可進行 SARG 的。  
+> 如果您直接查詢記錄資料表，請以 \<期間資料行>  {< | > | =, ...} date_condition AT TIME ZONE 'UTC' 的格式指定篩選，來確保您的篩選條件也是可進行 SARG 的。  
 > 如果您將 AT TIME ZONE 套用到期間資料行，SQL Server 將會執行資料表/索引掃描，這可能會耗費相當多的資源。 請在查詢中避免這類條件：  
-> \<期間資料行>  AT TIME ZONE ‘\<您的時區>’  >  {< | > | =, …} date_condition。  
+> \<期間資料行>  AT TIME ZONE '\<您的時區>'  >  {< | > | =, ...} date_condition。  
   
  另請參閱： [查詢系統設定版本時態表中的資料](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)。  
   
@@ -446,7 +446,7 @@ FROM CTE
  下列範例將說明該程序，並假設 DimLocation 維度資料表已擁有 ValidFrom 和 ValidTo 做為 datetime2 不可為 Null 資料行，並由 ETL 程序所填入：  
   
 ```  
-/*Move “closed” row versions into newly created history table*/  
+/*Move "closed" row versions into newly created history table*/  
 SELECT * INTO  DimLocationHistory  
     FROM DimLocation  
         WHERE ValidTo < '9999-12-31 23:59:59.99';  

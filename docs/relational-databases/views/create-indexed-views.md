@@ -1,7 +1,7 @@
 ---
 title: 建立索引檢視表 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2018
+ms.date: 11/19/2018
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c37482e2adb298af1c2d650c5a6c0e5d06ece2b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f29c5c3fbe0a0d9e3e8bb724ad2f7b2af7ad545e
+ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650966"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52191048"
 ---
 # <a name="create-indexed-views"></a>建立索引檢視表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,8 @@ ms.locfileid: "47650966"
 |ARITHABORT|ON|ON|OFF|OFF|  
 |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
 |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+|QUOTED_IDENTIFIER|ON|ON|ON|OFF| 
+|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
   
 <sup>1</sup> 將 `ANSI_WARNINGS` 設為 ON 會隱含地將 `ARITHABORT` 設為 ON。  
   
@@ -107,6 +108,7 @@ ms.locfileid: "47650966"
     |PRECISE = TRUE|必須明確宣告為 .NET Framework 方法的屬性。|  
     |DATA ACCESS = NO SQL|將 DataAccess 屬性設定為 DataAccessKind.None 以及將 SystemDataAccess 屬性設定為 SystemDataAccessKind.None 決定。|  
     |EXTERNAL ACCESS = NO|對 CLR 常式，此屬性預設為 NO。|  
+    |&nbsp;|&nbsp;|
   
 -   檢視表必須使用 `WITH SCHEMABINDING` 選項來建立。  
   
@@ -126,6 +128,7 @@ ms.locfileid: "47650966"
     |資料表變數|`OUTER APPLY` 或 `CROSS APPLY`|`PIVOT`, `UNPIVOT`|  
     |疏鬆資料行集合|內嵌 (TVF) 或多重陳述式資料表值函式 (MSTVF)|`OFFSET`|  
     |`CHECKSUM_AGG`|||  
+    |&nbsp;|&nbsp;|&nbsp;|
   
      <sup>1</sup> 索引檢視表可以包含 **float** 資料行；不過，這類資料行不能併入叢集索引鍵中。  
   
@@ -152,11 +155,12 @@ ms.locfileid: "47650966"
   
  您可以停用資料表與檢視的索引。 停用資料表的叢集索引時，也會停用與資料表相關之檢視的索引。  
  
-<a name="nondeterministic"></a> 牽涉到將字元字串隱含轉換成 **datetime** 或 **smalldatetime** 的運算式被視為非決定性的。 這是因為結果需視伺服器工作階段的 LANGUAGE 和 DATEFORMAT 設定而定。 例如，運算式 `CONVERT (datetime, '30 listopad 1996', 113)` 的結果需視 LANGUAGE 設定而定，因為字串 '`listopad`' 在不同的語言中表示不同的月份。 同樣地，在運算式 `DATEADD(mm,3,'2000-12-01')`中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會根據 DATEFORMAT 設定解譯字串 `'2000-12-01'` 。 非 Unicode 字元資料與定序之間的隱含轉換也是視為非決定性的。  
-  
+<a name="nondeterministic"></a> 牽涉到將字元字串隱含轉換成 **datetime** 或 **smalldatetime** 的運算式被視為非決定性的。 如需詳細資訊，請參閱[將常值日期字串轉換成 DATE 值的非決定性轉換](../../t-sql/data-types/nondeterministic-convert-date-literals.md)。
+
+
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  至少必須具備資料庫的 **CREATE VIEW** 權限，以及要在其中建立檢視表之結構描述的 **ALTER** 權限。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  

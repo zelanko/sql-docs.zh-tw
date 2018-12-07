@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f53679294052b114ab2247ee47916aac6ff5fd3f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a74cdb7827351c6616a7d37ad3deb80a068a375c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697822"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394516"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -1047,7 +1047,7 @@ GO
 
 ## <a name="database-scoped-global-temporary-tables-azure-sql-database"></a>限定資料庫範圍的全域暫存資料表 (Azure SQL Database)
 
-適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的全域暫存資料表 (資料表名稱開頭是 ##) 會儲存在 tempdb 中，並在整個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有使用者的工作階段之間共用。 如需 SQL 資料表型別的相關資訊，請參閱上述的「建立資料表」相關章節。  
+適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的全域暫存資料表 (資料表名稱開頭是 ##) 會儲存在 tempdb 中，並在整個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所有使用者的工作階段之間共用。 如需 SQL 資料表型別的相關資訊，請參閱上述的「建立資料表」相關章節。  
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支援儲存在 tempdb 中且只限於資料庫層級範圍的全域暫存資料表。 這表示在同一 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 資料庫中的所有使用者工作階段，會共用全域暫存資料表。 其他資料庫的使用者工作階段無法存取全域暫存資料表。
 

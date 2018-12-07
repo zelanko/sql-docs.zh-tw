@@ -18,12 +18,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 983078a8dc713af70fb57fab655ff7eed9acad35
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0881a8939788215d9d2f59c71b6f9c9aa44fe243
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600998"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526973"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用鏡像效能標準的警告臨界值與警示 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

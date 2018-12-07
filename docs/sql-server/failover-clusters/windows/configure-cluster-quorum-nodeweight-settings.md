@@ -13,12 +13,12 @@ ms.assetid: cb3fd9a6-39a2-4e9c-9157-619bf3db9951
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db4e21dc88e3eb5dfc76fa00c37a32148424af20
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9663732206ec3697379a241ae7eecf6d12a3b749
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700954"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407725"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>設定叢集仲裁 NodeWeight 設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,12 +59,12 @@ ms.locfileid: "51700954"
 4.  以可讀格式輸出叢集節點屬性。  
   
 ### <a name="example-powershell"></a>範例 (Powershell)  
- 下列範例會變更 NodeWeight 設定，以便移除 “AlwaysOnSrv1” 節點的仲裁投票，然後輸出叢集中所有節點的設定。  
+ 下列範例會變更 NodeWeight 設定，以便移除 "AlwaysOnSrv1" 節點的仲裁投票，然後輸出叢集中所有節點的設定。  
   
 ```powershell  
 Import-Module FailoverClusters  
   
-$node = “AlwaysOnSrv1”  
+$node = "AlwaysOnSrv1"  
 (Get-ClusterNode $node).NodeWeight = 0  
   
 $cluster = (Get-ClusterNode $node).Cluster  
@@ -85,7 +85,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 2.  使用 **cluster.exe** 設定 `NodeWeight` 值。  
   
 ### <a name="example-clusterexe"></a>範例 (Cluster.exe)  
- 下列範例會變更 NodeWeight 值，以便在 “Cluster001” 叢集中移除 “AlwaysOnSrv1” 節點的仲裁投票。  
+ 下列範例會變更 NodeWeight 值，以便在 "Cluster001" 叢集中移除 "AlwaysOnSrv1" 節點的仲裁投票。  
   
 ```ms-dos  
 cluster.exe Cluster001 node AlwaysOnSrv1 /prop NodeWeight=0  

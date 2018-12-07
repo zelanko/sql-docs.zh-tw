@@ -18,12 +18,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6742cefe44c2fd4a545b243d22993e0d7615e585
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 803ce49a254bc6f0e969828192d914facf46ef3c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845406"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523027"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>建立伺服器稽核與伺服器稽核規格
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47845406"
   
 -   **若要使用下列項目建立伺服器稽核和伺服器稽核規格：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47845406"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
   
 -   若要建立、更改或卸除伺服器稽核，主體需要使用 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 權限。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "47845406"
      指定當 [稽核目的地] 為檔案時，要寫入稽核資料的資料夾位置。  
   
      **省略符號 (...)**  
-     開啟 [尋找資料夾 - _server\_name_] 對話方塊，指定檔案路徑或建立要寫入稽核檔案的資料夾。  
+     開啟 [尋找資料夾 -_server\_name_] 對話方塊，指定檔案路徑或建立要寫入稽核檔案的資料夾。  
   
      **稽核檔案最大限制:**  
      **輪用檔案數量上限**  

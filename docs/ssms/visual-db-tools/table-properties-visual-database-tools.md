@@ -14,12 +14,12 @@ ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d650e4af3018cf1bf5967943a080d3001479777b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ff3399745161d0ddb95d77f0f2f03a4c10da8b3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665006"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508859"
 ---
 # <a name="table-properties-visual-database-tools"></a>資料表屬性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47665006"
 顯示選取資料表的資料來源名稱。  
   
 **說明**  
-顯示選取資料表的描述。 若要查看或編輯整個描述，請按一下 [描述]，再按屬性右邊的省略符號 **(…)** 。  
+顯示選取資料表的描述。 若要查看或編輯整個描述，請按一下 [描述]，然後按一下屬性右邊的省略符號 **(...)**。  
   
 **結構描述**  
 顯示此資料表所屬結構描述的名稱 (只適用於 Microsoft SQL Server)。  

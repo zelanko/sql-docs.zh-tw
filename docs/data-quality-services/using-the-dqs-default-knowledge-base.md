@@ -5,19 +5,18 @@ ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 53b1636c4871e31eac5fe1376d10f84c892b1477
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bd057885bbaa3aa6439079a744ac0b2d341dd638
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695669"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52616728"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>使用 DQS 預設知識庫
 
@@ -39,7 +38,7 @@ ms.locfileid: "51695669"
   
 -   **美國 - 州**：包含美國各州的傳統完整 (官方) 名稱及兩個字母的縮寫。 前置值設定為傳統的州名稱。  
   
--   **美國 - 州 (前置兩個字母)**：包含美國各州的傳統完整 (官方) 名稱及兩個字母的縮寫。 前置值設定為兩個字母的州名縮寫。  
+-   **美國 - 州 (2 個字母的標題)**：包含美國各州的傳統完整 (官方) 名稱及兩個字母的縮寫。 前置值設定為兩個字母的州名縮寫。  
   
 ## <a name="using-the-default-knowledge-base"></a>使用預設知識庫  
  您可以透過下列方式使用預設的 DQS 知識庫 DQS 資料：  

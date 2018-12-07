@@ -40,12 +40,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0e9e904da503db5e88cc873c376f4ccd59da06f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0d0f86f70a4cd496c4f4f32dd0a88077337cf645
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678017"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505139"
 ---
 # <a name="configure-database-mail"></a>設定 Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,11 +104,11 @@ ms.locfileid: "51678017"
 ###  <a name="Welcome"></a> 歡迎頁面  
  此頁說明設定 Database Mail 的步驟。  
   
- **不要再顯示此頁面** - 如果將來要略過此歡迎頁面，請核取此選項。  
+ **不要再顯示此頁面** - 若將來要略過此歡迎頁面，請核取此選項。  
   
  **下一步** - 繼續 [選取組態工作] 頁面。  
   
- **取消** - 結束精靈，而不設定 Database Mail。  
+ **取消** - 終止精靈，而不設定 Database Mail  
   
  [Database Mail 組態精靈](#DBWizard)  
   

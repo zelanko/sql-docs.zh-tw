@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c9cceb220a5ccf5aac86c7bf52540e835adcf19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b6add721ab292799b0de72aff3dc4e8d0cd218f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657216"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504308"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>從舊版 SQL Server 匯入原生與字元格式資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,8 +54,8 @@ ms.locfileid: "47657216"
   
  **UDT 表示使用者定義類型。  
   
-## <a name="exporting-using-v-80"></a>使用 –V 80 匯出  
- 當您使用 **–V80** 參數大量匯出資料時，處於原生模式的 **nvarchar(max)**、 **varchar(max)**、 **varbinary(max)**、XML 和 UDT 資料會與 4 位元組前置詞一起儲存，就像 **text**、 **image**和 **ntext** 資料一樣，而不是與 8 位元組前置詞一起儲存 (這是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本的預設值)。  
+## <a name="exporting-using--v-80"></a>使用 -V 80 匯出  
+ 當您使用 **-V80** 參數大量匯出資料時，處於原生模式的 **nvarchar(max)**、**varchar(max)**、**varbinary(max)**、XML 和 UDT 資料會與 4 位元組前置詞一起儲存，如同 **text**、**image** 和 **ntext** 資料，而不是與 8 位元組前置詞一起儲存 (這是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本的預設)。  
   
 ## <a name="copying-date-values"></a>複製日期值  
  **bcp** 會使用 ODBC 大量複製 API。 因此，若要將日期值匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **bcp** 會使用 ODBC 日期格式 (*yyyy-mm-dd hh:mm:ss*[*.f...*])。  

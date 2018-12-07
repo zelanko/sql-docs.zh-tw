@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4c8a1a6571f72237b19c05dbf15d9ff70f9f7f3
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: ebc5c6b688bf7871ff3e75ab30fbb7dadb31f315
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970529"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521217"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -162,12 +162,12 @@ ISO 8601 包含 ISO 週-日期系統 (週數的編號系統)。 每一週都與�
   
 |每週的第一天|一年第一週包含|週指派兩次|使用於|  
 |---|---|---|---|
-|星期日|1 月 1 日，<br /><br /> 第一個星期六，<br /><br /> 一年的第 1–7 天|是|United States|  
-|星期一|1 月 1 日，<br /><br /> 第一個星期日，<br /><br /> 一年的第 1–7 天|是|大部分歐洲國家 (地區) 和英國|  
-|星期一|1 月 4 日，<br /><br /> 第一個星期四，<br /><br /> 一年的第 4–7 天|否|ISO 8601、挪威和瑞典|  
+|星期日|1 月 1 日，<br /><br /> 第一個星期六，<br /><br /> 一年的第 1-7 天|是|United States|  
+|星期一|1 月 1 日，<br /><br /> 第一個星期日，<br /><br /> 一年的第 1-7 天|是|大部分歐洲國家 (地區) 和英國|  
+|星期一|1 月 4 日，<br /><br /> 第一個星期四，<br /><br /> 一年的第 4-7 天|否|ISO 8601、挪威和瑞典|  
 |星期一|1 月 7 日，<br /><br /> 第一個星期一，<br /><br /> 一年的第 7 天|否||  
-|星期三|1 月 1 日，<br /><br /> 第一個星期二，<br /><br /> 一年的第 1–7 天|是||  
-|星期六|1 月 1 日，<br /><br /> 第一個星期五，<br /><br /> 一年的第 1–7 天|是||  
+|星期三|1 月 1 日，<br /><br /> 第一個星期二，<br /><br /> 一年的第 1-7 天|是||  
+|星期六|1 月 1 日，<br /><br /> 第一個星期五，<br /><br /> 一年的第 1-7 天|是||  
   
 ## <a name="tzoffset"></a>TZoffset  
 `DATEPART` 會以分鐘數 (帶正負號) 傳回 **TZoffset** (**tz**) 值。 此陳述式會傳回 310 分鐘的時區位移：

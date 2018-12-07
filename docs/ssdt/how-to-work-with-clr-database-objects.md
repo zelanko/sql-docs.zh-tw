@@ -13,12 +13,12 @@ ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f339b8c73a2bed5a36f61fd1afea7f01afc433dc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8192bd6c074f5ed90868af9f256935e6222fc525
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659118"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396881"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>如何：使用 CLR 資料庫物件
 除了使用 Transact\-SQL 程式語言以外，還可以使用 .NET Framework 語言來建立擷取及更新資料的資料庫物件。 以受控碼撰寫的資料庫物件稱為 SQL Server Common Language Runtime (CLR) 資料庫物件。 如需使用 SQL Server 中裝載的 CLR 資料庫物件之優點的說明，以及如何在 Transact\-SQL 與 CLR 之間擇一使用，請參閱 [CLR 整合的優點](../relational-databases/clr-integration/clr-integration-overview.md)和[使用受控碼來建立資料庫物件的優點](https://msdn.microsoft.com/library/k2e1fb36.aspx) \(機器翻譯\)。  

@@ -21,12 +21,12 @@ ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 91610d3bcef8cf2e8aee490ce2037b26ba0eadbb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 398820f012e60181ec6327a67fd5e1abb7adc407
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670907"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503595"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>建立 SQL Server 公用程式控制點 (SQL Server 公用程式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Instance_name"></a> 指定執行個體  
  指定有關您建立之 UCP 的下列資訊：  
   
--   **執行個體名稱** - 若要從連接對話方塊選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請按一下 [連接...]。 使用以下格式提供電腦名稱和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱：ComputerName\InstanceName。  
+-   **執行個體名稱** - 若要從連線對話方塊選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請按一下 [連線...]。使用以下格式提供電腦名稱和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱：ComputerName\InstanceName。  
   
 -   **公用程式名稱** - 指定將用來識別網路上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式的名稱。  
   
@@ -145,7 +145,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > [!NOTE]  
 >  如果連接已加密，將會使用加密的連接。 如果連接未加密， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式會使用加密的連接重新連接。  
   
- 若要繼續，請按一下 **[連接...]**。  
+ 若要繼續，請按一下 [連線...]。  
   
 ##  <a name="Agent_configuration"></a> 公用程式收集組帳戶  
  指定要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式收集組的 Windows 網域帳戶。 此帳戶會當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式收集組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶來使用。 另外，您也可以使用現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶。 若要通過驗證需求，請使用下列方針來指定帳戶。  
@@ -222,7 +222,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  使用下列範例建立新的公用程式控制點：  
   
 ```  
-> $UtilityInstance = new-object –Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
+> $UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
 > $SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
 > $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
 ```  

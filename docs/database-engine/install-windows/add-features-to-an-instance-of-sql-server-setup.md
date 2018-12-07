@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 38272ec433fac66c86d4743531649ce1c384c797
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: ba80e05e88811e0f6ceb2171250e623150c59f7f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606968"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537865"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>將功能新增至 SQL Server 的執行個體 (安裝程式)
 
@@ -79,7 +79,7 @@ ms.locfileid: "51606968"
   
 12. 使用 [伺服器組態 - 定序] 索引標籤，為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指定非預設的定序。 如需詳細資訊，請參閱[伺服器組態 - 定序](https://msdn.microsoft.com/library/e3986870-5be4-458b-b671-5ff12a27b022)。  
   
-13. 使用 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態 - 帳戶提供] 頁面來指定以下項目：  
+13. 使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [組態 - 帳戶提供] 頁面來指定以下項目：  
   
     -   安全性模式 - 為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體選取 Windows 驗證或混合模式驗證。 如果您選取混合模式驗證，就必須為內建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶提供增強式密碼。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "51606968"
   
      當您完成清單的編輯之後，請按一下 **[確定]**。 然後，在組態對話方塊中確認管理員的清單。 當此清單完成時，請按 **[下一步]**。  
   
-14. 使用 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態 - 資料目錄] 頁面來指定非預設的安裝目錄。 若要安裝到預設目錄，請按 **[下一步]**。  
+14. 使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [組態 - 資料目錄] 頁面來指定非預設的安裝目錄。 若要安裝到預設目錄，請按 **[下一步]**。  
   
     > [!IMPORTANT]  
     >  如果您要指定非預設的安裝目錄，請確定安裝資料夾對於此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的目錄共用。  
@@ -98,11 +98,11 @@ ms.locfileid: "51606968"
   
 15. 使用 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態 - FILESTREAM] 頁面來針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體啟用 FILESTREAM。 如需 FILESTREAM 的詳細資訊，請參閱 [Database Engine 組態 - Filestream](https://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)。 若要繼續進行，請按 [下一步]。  
   
-16. 您可以使用 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態 - 帳戶提供] 頁面指定伺服器模式以及要擁有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之管理員權限的使用者或帳戶。 伺服器模式會決定在伺服器上所要使用的記憶體及儲存體子系統。 不同方案類型會在不同的伺服器模式中執行。 如果要在伺服器上執行多維度 Cube 資料庫，請選擇預設選項 [多維度及資料採礦伺服器模式]。 無論系統管理員權限為何，至少須為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定一名系統管理員。 如果要加入執行 SQL Server 安裝程式的帳戶，請按一下 [加入目前使用者] 。 若要在系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中將會有管理員權限的使用者、群組或電腦清單。 如需伺服器模式及系統管理員權限的詳細資訊，請參閱 [Analysis Services 組態 - 帳戶提供](https://msdn.microsoft.com/library/169b1af2-6fe2-467f-8ca4-919f24c620ce)。  
+16. 您可以使用 [[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態 - 帳戶提供] 頁面指定伺服器模式以及要擁有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 之管理員權限的使用者或帳戶。 伺服器模式會決定在伺服器上所要使用的記憶體及儲存體子系統。 不同方案類型會在不同的伺服器模式中執行。 如果要在伺服器上執行多維度 Cube 資料庫，請選擇預設選項 [多維度及資料採礦伺服器模式]。 無論系統管理員權限為何，至少須為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定一名系統管理員。 如果要加入執行 SQL Server 安裝程式的帳戶，請按一下 [加入目前使用者] 。 若要在系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中將會有管理員權限的使用者、群組或電腦清單。 如需伺服器模式及系統管理員權限的詳細資訊，請參閱 [Analysis Services 組態 - 帳戶提供](https://msdn.microsoft.com/library/169b1af2-6fe2-467f-8ca4-919f24c620ce)。  
   
      當您完成清單的編輯之後，請按一下 **[確定]**。 然後，在組態對話方塊中確認管理員的清單。 當此清單完成時，請按 **[下一步]**。  
   
-17. 使用 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態 - 資料目錄] 頁面來指定非預設的安裝目錄。 若要安裝到預設目錄，請按 **[下一步]**。  
+17. 使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [組態 - 資料目錄] 頁面來指定非預設的安裝目錄。 若要安裝到預設目錄，請按 **[下一步]**。  
   
     > [!IMPORTANT]  
     >  如果您要指定非預設的安裝目錄，請確定安裝資料夾對於此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的目錄共用。  

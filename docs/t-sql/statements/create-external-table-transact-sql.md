@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c4dd4b79881160f5fdfe61a7c60f76ce0ae2cf0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4409d67e60fd4d82d339ac31e96ca75b578171fe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703956"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402813"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -170,7 +170,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  指定儲存外部資料檔案類型和壓縮方法之外部檔案格式物件的名稱。 若要建立外部檔案格式，請使用 [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)。  
   
  拒絕選項  
- 您可以指定能決定 PolyBase 如何處理其從外部資料來源所擷取之*已修改*記錄的拒絕參數。 若資料記錄的實際資料類型或資料行數目與外部資料表的資料行定義不相符，該資料記錄就會被系統視為「已修改」。  
+ 您可以指定能決定 PolyBase 如何處理其從外部資料來源所擷取之*已修改*記錄的拒絕參數。 若資料記錄之實際資料類型或資料行數目與外部資料表的資料行定義不相符，該資料記錄就會被系統視為「已修改」。  
   
  當您不指定會變更拒絕值時，PolyBase 就會使用預設值。 拒絕參數的相關資訊會在您搭配 CREATE EXTERNAL TABLE 陳述式建立外部資料表時，以額外中繼資料的形式儲存。   當未來有 SELECT 陳述式或 SELECT INTO SELECT 陳述式從外部資料表中選取資料時，PolyBase 將會使用拒絕選項來判斷在實際的查詢失敗之前，可以拒絕的資料列數目或百分比。 執行個體時提供 SQL Server 登入。 查詢將會傳回 (部分的) 結果，直到超過拒絕閾值為止；接著它便會搭配適當的錯誤訊息而失敗。  
   
@@ -220,7 +220,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 REJECTED_ROW_LOCATION = *Directory Location*
   
   指定外部資料來源中，已拒絕資料列和相應錯誤檔案應寫入的目錄。
-若指定的路徑不存在，PolyBase 會為您建立一個目錄。 會建立名稱為 “_rejectedrows” 的子目錄。“_” 字元可確保該目錄從其他資料處理逸出，除非已明確在位置參數中指名。 在此目錄中，會有一個根據載入提交時間建立的資料夾，格式為 YearMonthDay -HourMinuteSecond (例如 20180330-173205)。 在此資料中寫入了兩種類型的檔案，分別是 _reason 檔案與資料檔案。 
+若指定的路徑不存在，PolyBase 會為您建立一個目錄。 會建立名稱為 "_rejectedrows" 的子目錄。"_" 字元可確保該目錄從其他資料處理逸出，除非已明確在位置參數中指名。 在此目錄中，會有一個根據載入提交時間建立的資料夾，格式為 YearMonthDay -HourMinuteSecond (例如 20180330-173205)。 在此資料中寫入了兩種類型的檔案，分別是 _reason 檔案與資料檔案。 
 
 原因檔案與資料檔案均具有與 CTAS 陳述式相關的 queryID。 因為資料與原因檔案在不同的檔案中，所以對應的檔案會具有相符的尾碼。 
   

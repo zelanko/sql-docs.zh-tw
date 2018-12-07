@@ -16,12 +16,12 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 69a2c06ca2a365814dd87b72d0641d91516def95
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ca34e83b313a267f607ee9e45f8bf68fd1b0b357
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703596"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418769"
 ---
 # <a name="administrators-master-data-services"></a>管理員 (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "51703596"
   本文說明 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的系統管理員類型：模型系統管理員、實體系統管理員和進階使用者。  
   
 ## <a name="model-administrators"></a>模型管理員  
- 在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，模型系統管理員是在 [模型物件] 索引標籤上獲派最上層模型物件之 [Admin (系統管理員)] 權限。當使用者在特定模型上具有系統管理員權限時，模型 [Admin (系統管理員)] 權限會高於任何其他模型子物件的權限 (模型物件和成員的權限)，並且會被忽略。  
+ 在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，模型系統管理員是在 [模型物件] 索引標籤上獲派最上層模型物件之 [Admin (系統管理員)] 權限。當使用者在特定模型上具有系統管理員權限時，任何其他模型子物件的權限 (模型物件和成員的權限) 將由模型**系統管理員**權限取代，並且會被忽略。  
   
 -   如果使用者可以存取總管 功能區域，即可加入、刪除及更新此區域中的所有主要資料。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "51703596"
  使用者可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中或透過程式設計方式設定為模型管理員。 如需詳細資訊，請參閱 [建立模型管理員 &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)。  
   
 ## <a name="entity-administrators"></a>實體系統管理員  
- 在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，實體系統管理員是在模型物件索引標籤上獲派實體物件系統管理員權限的使用者。當使用者擁有實體系統管理員權限時，實體子物件上的任何其他權限 (模型物件和成員權限) 由系統管理員權限所取代，而且會被忽略。  
+ 在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，實體系統管理員是在模型物件索引標籤上獲派實體物件系統管理員權限的使用者。當使用者擁有實體的統管理員權限時，實體子物件上的任何其他權限 (模型物件和成員的權限) 將由系統管理員權限取代，而且會被忽略。  
   
 -   如果使用者可以存取總管 功能區域，即可加入、刪除及更新此區域中的所有主要資料。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "51703596"
   
 |管理員類型|Description|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 進階使用者|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中指派的權限不會影響管理員的存取。<br /><br /> 根據明確指派之功能區域權限或繼承自群組的權限，使用者可以是進階使用者。<br /><br /> 自動擁有所有模型的所有權限。<br /><br /> 自動擁有所有功能區域的存取權。|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 進階使用者|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中所指派權限不會影響系統管理員的存取。<br /><br /> 根據明確指派之功能區域權限或繼承自群組的權限，使用者可以是進階使用者。<br /><br /> 自動擁有所有模型的所有權限。<br /><br /> 自動擁有所有功能區域的存取權。|  
 |模型管理員|根據明確指派的系統管理員權限或繼承自群組的權限，使用者可以是模型系統管理員。<br /><br /> 只能存取被授與存取權的功能區域。<br /><br /> 自動擁有特定模型中的所有物件和成員的所有權限。|  
 |實體系統管理員|根據明確指派的系統管理員權限或繼承自群組的權限，使用者可以是實體系統管理員。<br /><br /> 只能存取被授與存取權的功能區域。<br /><br /> 自動擁有特定實體中所有物件和成員的所有權限。<br /><br /> 如果實體變更需要核准時，就可以核准暫止的變更集。|  
   

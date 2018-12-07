@@ -12,12 +12,12 @@ ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bfc0fecfb813fab9ccc7109a06729bd14abacfbc
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a36068cb17f38388dd411a7cab2927e518dc408d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697189"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395341"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>使用者及群組的權限功能區域 (主資料管理員)
 

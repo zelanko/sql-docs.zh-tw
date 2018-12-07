@@ -17,12 +17,12 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f9ea0da85324aa74b7ce9af17ab64b743a8f031
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 38152544ed3f0684cc13db7c2f429b46ed9ef5b1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638745"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521538"
 ---
 # <a name="debugging-data-flow"></a>偵錯資料流程
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」提供許多功能和工具，讓您用來疑難排解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中的資料流程。  
@@ -89,9 +89,9 @@ order by source_component_name, destination_component_name
   
 -   **total_rows** - 元件傳送的所有資料列總和  
   
--   **wall_clock_time_ms** – 每個元件經過的執行時間總計 (以毫秒為單位)  
+-   **wall_clock_time_ms** - 每個元件經過的執行時間總計 (以毫秒為單位)  
   
--   **num_rows_per_millisecond** – 每個元件每毫秒傳送的資料列數  
+-   **num_rows_per_millisecond** - 每個元件每毫秒傳送的資料列數  
   
  **HAVING** 子句可用來避免在計算中發生除以零的錯誤。  
   

@@ -23,12 +23,12 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 665fd5db9f42f79965c937a60bf3ebfdb729b217
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7098114ba6a69b65ba689f00a726bb93c93b6a2a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703946"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528777"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,10 +56,10 @@ ALTER AVAILABILITY GROUP group_name
    | DENY CREATE ANY DATABASE  
    | FAILOVER  
    | FORCE_FAILOVER_ALLOW_DATA_LOSS   
-   | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
-   | MODIFY LISTENER ‘dns_name’ ( <modify_listener_option> )  
-   | RESTART LISTENER ‘dns_name’  
-   | REMOVE LISTENER ‘dns_name’  
+   | ADD LISTENER 'dns_name' ( <add_listener_option> )  
+   | MODIFY LISTENER 'dns_name' ( <modify_listener_option> )  
+   | RESTART LISTENER 'dns_name'  
+   | REMOVE LISTENER 'dns_name'  
    | OFFLINE  
   }  
 [ ; ]  
@@ -92,8 +92,8 @@ ALTER AVAILABILITY GROUP group_name
      } )  
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
-        [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
+        [,] [ READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE } ]  
+        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
      } )  
      | SESSION_TIMEOUT = integer
   
@@ -111,7 +111,7 @@ ALTER AVAILABILITY GROUP group_name
           } )  
      | PRIMARY_ROLE ( {   
           ALLOW_CONNECTIONS = { READ_WRITE | ALL }   
-        | READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE }   
+        | READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE }   
           } )  
      | SESSION_TIMEOUT = seconds  
     )   
@@ -140,12 +140,12 @@ ALTER AVAILABILITY GROUP group_name
    }  
   
   <network_subnet_option> ::=  
-     ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’    
+     'four_part_ipv4_address', 'four_part_ipv4_mask'    
   
   <ip_address_option> ::=  
      {   
-        ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’  
-      | ‘ipv6_address’  
+        'four_part_ipv4_address', 'four_part_ipv4_mask'  
+      | 'ipv6_address'  
      }  
   
 <modify_listener_option>::=  
@@ -241,7 +241,7 @@ ALTER AVAILABILITY GROUP group_name
  如需從可用性群組中移除可用性資料庫之後所建議後續操作的詳細資訊，請參閱[將主要資料庫從可用性群組移除 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)。  
   
  ADD REPLICA ON  
- 指定要在可用性群組中裝載次要複本的 SQL 伺服器執行個體 (一個到八個)。  每個複本是由後面接著 WITH (…) 子句的伺服器執行個體位址所指定。  
+ 指定要在可用性群組中裝載次要複本的 SQL 伺服器執行個體 (一個到八個)。  每個複本都是由後面接著 WITH (...) 子句的伺服器執行個體位址所指定。  
   
  只有主要複本上才支援。  
   
@@ -337,7 +337,7 @@ ALTER AVAILABILITY GROUP group_name
   
  如需詳細資訊，請參閱 [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
- SECONDARY_ROLE **(** … **)**  
+ SECONDARY_ROLE **(** ... **)**  
  指定將會在此可用性複本目前擁有次要角色 (亦即，每當它是次要複本時) 時生效的角色專屬設定。 在括弧內指定任一個或兩個次要角色選項。 如果您同時指定兩個選項，則使用逗號分隔清單。  
   
  次要角色選項如下：  
@@ -366,7 +366,7 @@ ALTER AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  若是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的具名執行個體，則應該將 Transact-SQL 接聽程式設定為使用特定通訊埠。 如需詳細資訊，請參閱[設定伺服器接聽特定 TCP 通訊埠 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   
- PRIMARY_ROLE **(** … **)**  
+ PRIMARY_ROLE **(** ... **)**  
  指定將會在此可用性複本目前擁有主要角色 (亦即，每當它是主要複本時) 時生效的角色專屬設定。 在括弧內指定任一個或兩個主要角色選項。 如果您同時指定兩個選項，則使用逗號分隔清單。  
   
  主要角色選項如下：  
@@ -380,7 +380,7 @@ ALTER AVAILABILITY GROUP group_name
  ALL  
  主要複本的資料庫允許所有連接。 這是預設行為。  
   
- READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE }  
+ READ_ONLY_ROUTING_LIST **=** { **('**\<server_instance>**'** [ **,**...*n* ] **)** | NONE }  
  針對這個可用性群組，指定裝載可用性複本之伺服器執行個體的逗號分隔清單，以次要角色執行時，這些可用性複本會符合下列需求：  
   
 -   設定為允許所有連接或唯讀連接 (請參閱 SECONDARY_ROLE 選項的 ALLOW_CONNECTIONS 引數，如上所示)。  
@@ -408,7 +408,7 @@ ALTER AVAILABILITY GROUP group_name
  如需工作階段逾時期間的詳細資訊，請參閱 [Always On 可用性群組概觀 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
   
  MODIFY REPLICA ON  
- 修改可用性群組的任何複本。 要修改的複本清單針對每一個複本包含伺服器執行個體位址和 WITH (…) 子句。  
+ 修改可用性群組的任何複本。 要修改的複本清單針對每一個複本包含伺服器執行個體位址和 WITH (...) 子句。  
   
  只有主要複本上才支援。  
   
@@ -450,7 +450,7 @@ ALTER AVAILABILITY GROUP group_name
   
  如需強制容錯移轉的限制、先決條件與建議，以及強制容錯移轉對可用性群組中先前主要資料庫之影響的詳細資訊，請參閱[執行可用性群組的強制手動容錯移轉 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)。  
   
- ADD LISTENER **‘**_dns\_name_**’(** \<add_listener_option> **)**  
+ ADD LISTENER **'**_dns\_name_**'(** \<add_listener_option> **)**  
  為這個可用性群組定義新的可用性群組接聽程式。 只有主要複本上才支援。  
   
 > [!IMPORTANT]  
@@ -520,7 +520,7 @@ ALTER AVAILABILITY GROUP group_name
  指定手動植入。 此方法要求您必須在主要複本上建立資料庫的備份，並在次要可用性群組複本上手動還原該備份。  
   
  MODIFY AVAILABILITY GROUP ON  
- 修改分散式可用性群組的任何可用性群組設定。 要修改的可用性群組清單包含每個可用性群組的可用性群組名稱與 WITH (…) 子句。  
+ 修改分散式可用性群組的任何可用性群組設定。 要修改的可用性群組清單包含每個可用性群組的可用性群組名稱與 WITH (...) 子句。  
   
 > [!IMPORTANT]  
 >  此命令必須在主要可用性群組和次要可用性群組執行個體上重複。  
@@ -534,7 +534,7 @@ ALTER AVAILABILITY GROUP group_name
  \<add_listener_option>  
  ADD LISTENER 可接受下列其中一個選項：  
   
- WITH DHCP [ ON { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** } ]  
+ WITH DHCP [ ON { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** } ]  
  指定可用性群組接聽程式將會使用動態主機設定通訊協定 (DHCP)。  或者，使用 ON 子句以識別將建立此接聽程式的網路。 DHCP 受限於單一子網路，這個子網路用於可用性群組中主控可用性複本的每個伺服器執行個體。  
   
 > [!IMPORTANT]  
@@ -544,7 +544,7 @@ ALTER AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** | **(‘**_ipv6\_address_**’)** } [ **,** ..._n_ ] **)** [ **,** PORT **=**_listener\_port_ ]  
+ WITH IP **(** { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** | **('**_ipv6\_address_**')** } [ **,** ..._n_ ] **)** [ **,** PORT **=**_listener\_port_ ]  
  指定可用性群組接聽程式將使用一個或多個靜態 IP 位址，而不使用 DHCP。 若要建立跨多個子網路的可用性群組，接聽程式組態中每個子網路都需要一個靜態 IP 位址。 對於給定的子網路，靜態 IP 位址可以是 IPv4 位址或 IPv6 位址。 請與網路系統管理員連絡以取得將主控新可用性群組的可用性複本之每個子網路的靜態 IP 位址。  
   
  例如：  
@@ -567,22 +567,22 @@ ALTER AVAILABILITY GROUP group_name
   
  例如： `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **‘**_dns\_name_**’(** \<modify\_listener\_option\> **)**  
+ MODIFY LISTENER **'**_dns\_name_**'(** \<modify\_listener\_option\> **)**  
  修改這個可用性群組的現有可用性群組接聽程式。 只有主要複本上才支援。  
   
  \<modify\_listener\_option\>  
  MODIFY LISTENER 可接受下列其中一個選項：  
   
- ADD IP { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4_mask_**’)** \| <b>(‘</b>dns\_name*ipv6\_address*__’)__ }  
+ ADD IP { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4_mask_**')** \| <b>('</b>dns\_name*ipv6\_address*__')__ }  
  將所指定 IP 位址新增至由 *dns\_name* 所指定的可用性群組接聽程式。  
   
  PORT **=** *listener_port*  
  請參閱本節稍早有關這個引數的描述。  
   
- RESTART LISTENER **‘**_dns\_name_**’**  
+ RESTART LISTENER **'**_dns\_name_**'**  
  重新啟動與指定的 DNS 名稱關聯的接聽程式。 只有主要複本上才支援。  
   
- REMOVE LISTENER **‘**_dns\_name_**’**  
+ REMOVE LISTENER **'**_dns\_name_**'**  
  移除與指定的 DNS 名稱關聯的接聽程式。 只有主要複本上才支援。  
   
  OFFLINE  

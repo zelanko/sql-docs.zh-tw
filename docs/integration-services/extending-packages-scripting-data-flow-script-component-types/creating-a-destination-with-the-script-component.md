@@ -17,12 +17,12 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e00610b342f057f99a6aa7bb11ffcce9b23e8db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77bb9538c24be9fac285ab94b77d46ab85a29907
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620922"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541941"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>以指令碼元件建立目的地
   您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用目的地元件，以便將從上游來源和轉換收到的資料儲存至資料來源。 通常，目的地元件會透過現有的連接管理員連接到資料來源。  
@@ -69,7 +69,7 @@ ms.locfileid: "47620922"
 ### <a name="adding-variables"></a>加入變數  
  如果您想要在指令碼中使用現有的變數，可以在 [指令碼轉換編輯器] 的 [指令碼] 頁面上，將它們新增至 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性欄位中。  
   
- 當您在屬性欄位中加入多個變數時，請用逗號分隔變數名稱。 您也可以按一下 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性欄位旁邊的省略符號 (**...**) 按鈕，然後在 [選取變數] 對話方塊中選取變數，來選取多個變數。  
+ 當您在屬性欄位中加入多個變數時，請用逗號分隔變數名稱。 您也可以按一下 [ReadOnlyVariables] 和 [ReadWriteVariables] 屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取變數，來選取多個變數。  
   
  如需如何利用指令碼元件使用變數的一般資訊，請參閱[在指令碼元件中使用變數](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   

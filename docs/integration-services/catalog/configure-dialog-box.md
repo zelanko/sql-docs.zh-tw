@@ -15,12 +15,12 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1089176ed6b47ab7001f0a505b7d475bf1241c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 179c3418f6d8c13c4974d6b5b023e1905140c6a3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662386"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410205"
 ---
 # <a name="configure-dialog-box"></a>設定對話方塊
   使用 **[設定]** 對話方塊來針對封裝和專案設定參數、連接管理員及環境的參考。  
@@ -37,7 +37,7 @@ ms.locfileid: "47662386"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
-     您正在連接到主控 SSISDB 資料庫之 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體。  
+     您正在連線到主控 SSISDB 資料庫的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體。  
   
 2.  在 [物件總管] 中，展開樹狀目錄以顯示 **[Integration Services 目錄]** 節點。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "47662386"
 ##  <a name="references"></a> 在參考頁面上設定選項  
  使用 **[參考]** 頁面加入及移除環境的參考，並存取環境屬性。  
   
- 環境會針對已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器之專案中所包含的封裝，指定執行值。  
+ 環境會針對已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器之專案中所包含的套件，指定執行值。  
   
  **環境**  
  列出環境。  

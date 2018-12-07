@@ -20,12 +20,12 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf13f7db56ff7fedd5252283a927f4daff0ec5fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd018941567ec56619177928d55b83681c07a039
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664427"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302901"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47664427"
     
 若要還原加密的資料庫，您必須能夠存取用來加密該資料庫的憑證或非對稱金鑰。 如果沒有此憑證或非對稱金鑰，您就無法還原該資料庫。 只要您需要儲存備份，就必須保留用來加密資料庫加密金鑰的憑證。 如需詳細資訊，請參閱 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。    
     
-如果您將舊版資料庫還原至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，該資料庫會自動升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。   
+如果您將舊版資料庫還原至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，該資料庫會自動升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 這可防止搭配 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 的較舊版本使用資料庫。 但是，這與中繼資料狀態相關，且不會影響[資料庫相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)。 如果使用者資料庫的相容性層級在升級前為 100 或更高層級，則在升級後仍會保持相同。 如果升級前的相容性層級為 90，則在升級後的資料庫中，相容性層級會設定為 100 (這是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所支援的最低相容性層級)。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
 通常，資料庫立即變為可用。 不過，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫具有全文檢索索引，升級程序就會根據 [全文檢索升級選項] 伺服器屬性的設定，匯入、重設或重建這些索引。 如果您將升級選項設定為 [匯入] 或 [重建]，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建將需要十倍以上的時間。     
     
@@ -49,7 +49,7 @@ ms.locfileid: "47664427"
 
 ## <a name="examples"></a>範例
     
-### <a name="a-restore-a-full-database-backup"></a>**A.還原完整資料庫備份**    
+### <a name="a-restore-a-full-database-backup"></a>A. 還原完整資料庫備份   
     
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
     
@@ -61,7 +61,8 @@ ms.locfileid: "47664427"
     
          從下拉式清單中選取要還原的資料庫。 此清單僅包含已根據 **msdb** 備份記錄而備份的資料庫。    
     
-    > **注意：** 如果備份是根據不同的伺服器所建立，目的地伺服器就沒有所指定資料庫的備份記錄資訊。 在此情況下，請選取 **[裝置]** ，以便手動指定要還原的檔案或裝置。 
+        > [!NOTE]
+        > 如果備份是根據不同的伺服器建立的，目的地伺服器就沒有指定之資料庫的備份記錄資訊。 在此情況下，請選取 **[裝置]** ，以便手動指定要還原的檔案或裝置。 
     
     -   **[裝置]**    
     
@@ -95,7 +96,8 @@ ms.locfileid: "47664427"
     
          在 **[來源: 裝置: 資料庫]** 清單方塊中，選取應該還原的資料庫名稱。    
     
-        > **注意：** 這份清單只能在選取 [裝置] 時使用。 只有在所選取裝置上有備份的資料庫才可供使用。    
+         > [!NOTE]
+         > 這份清單只能在選取 **[裝置]** 時使用。 只有在所選取裝置上有備份的資料庫才可供使用。    
      
 4.  在 **[目的地]** 區段中，會將要還原之資料庫的名稱自動填入 **[資料庫]** 方塊。 若要變更資料庫的名稱，請在 **[資料庫]** 方塊中輸入新名稱。    
     
@@ -124,141 +126,118 @@ ms.locfileid: "47664427"
         -   **RESTORE WITH STANDBY** ，讓資料庫處於唯讀模式。 它會復原未認可的交易，但會將復原動作儲存在待命資料庫檔案中，以還原復原影響。    
     
     3.  **還原前先進行結尾記錄備份。** 並不是所有的還原實例都需要結尾記錄備份。  如需詳細資訊，請參閱[結尾記錄備份 (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) 中的＜需要結尾記錄備份的實例＞。
-    
     4.  若資料庫有使用中的連接，還原作業可能會失敗。 核取 **[關閉現有的連接選項]** ，確定已關閉 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 與資料庫之間的所有使用中連接。 這個核取方塊會在執行還原作業之前將資料庫設定為單一使用者模式，並在完成後將資料庫設定為多使用者模式。    
-    
     5.  如果想要系統在每個還原作業之間提示您，請選取 **[還原每個備份之前先提示]** 。 除非資料庫夠大，而且您想要監視還原作業的狀態，否則這通常不需要。    
     
-     如需這些還原選項的詳細資訊，請參閱 [還原資料庫 &#40;選項頁面&#41;](../../relational-databases/backup-restore/restore-database-options-page.md))，才能在完整或大量記錄復原模式下還原資料庫。    
+如需這些還原選項的詳細資訊，請參閱[還原資料庫 &#40;選項頁面&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)。    
     
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
-### <a name="b-restore-an-earlier-disk-backup-over-an-existing-database"></a>**B.以覆蓋現有資料庫的方式還原先前的磁碟備份**    
+### <a name="b-restore-an-earlier-disk-backup-over-an-existing-database"></a>B. 以覆蓋現有資料庫的方式還原先前的磁碟備份
 下列範例會還原先前對 `Sales` 執行的磁碟備份，並覆寫現有的 `Sales` 資料庫。
 
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
-    
 2.  以滑鼠右鍵按一下 [資料庫]，然後選取 [還原資料庫...]  
-
 3.  在 [一般] 頁面上，選取 [來源] 區段下的 [裝置]。
-
-4.  按一下瀏覽 (**...**) 按鈕，開啟 [選取備份裝置] 對話方塊。 按一下 [加入] 並巡覽至您的備份。  選取您的磁碟備份檔案，然後按一下 [確定]。
-
+4.  按一下瀏覽 (**...**) 按鈕，開啟 [選取備份裝置] 對話方塊。 按一下 [加入] 並巡覽至您的備份。 選取您的磁碟備份檔案，然後按一下 [確定]。
 5.  按一下 [確定] 回到 [一般] 頁面。
-
 6.  在 [選取頁面] 窗格中，按一下 [選項]。
-
 7.  在 [還原選項] 區段下，核取 [覆寫現有的資料庫 (WITH REPLACE)]。
 
-    > **注意：** 未核取此選項可能會導致出現下列錯誤訊息：「System.Data.SqlClient.SqlError: 備份組包含現有的 '`Sales`' 資料庫以外的資料庫備份。 (Microsoft.SqlServer.SmoExtended)」
+    > [!NOTE]
+    > 未核取此選項可能會導致出現下列錯誤訊息：「System.Data.SqlClient.SqlError: 備份組包含現有的 '`Sales`' 資料庫以外的資料庫備份。 (Microsoft.SqlServer.SmoExtended)」
 
 8.  在 [結尾記錄備份] 區段下，取消核取 [還原前先進行結尾記錄備份]。
 
-    > **注意** ：並不是所有的還原實例都需要結尾記錄備份。 如果復原點是包含在較早的記錄備份中，則不需要結尾記錄備份。 而且，如果您要移動或取代 (覆寫) 資料庫，而且不需要將它還原至最近備份之後的某個時間點，就不需要有結尾記錄備份。  如需詳細資訊，請參閱 [結尾記錄備份 (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。
-簡單復原模式下的資料庫無法使用此選項。
+    > [!NOTE]
+    > 並不是所有的還原實例都需要結尾記錄備份。 如果復原點是包含在較早的記錄備份中，則不需要結尾記錄備份。 而且，如果您要移動或取代 (覆寫) 資料庫，而且不需要將它還原至最近備份之後的某個時間點，就不需要有結尾記錄備份。 如需詳細資訊，請參閱 [結尾記錄備份 (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。
+
+    簡單復原模式下的資料庫無法使用此選項。
 
 9.  在 [伺服器連接] 區段下，核取 [關閉目的地資料庫的現有連接]。
 
-    > **注意：** 未核取此選項可能會導致出現下列錯誤訊息：「System.Data.SqlClient.SqlError: 無法獲得獨佔存取權，因為資料庫正在使用中。 (Microsoft.SqlServer.SmoExtended)」
+    > [!NOTE]
+    > 未核取此選項可能會導致出現下列錯誤訊息：「System.Data.SqlClient.SqlError: 無法獲得獨佔存取權，因為資料庫正在使用中。 (Microsoft.SqlServer.SmoExtended)」
     
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
-### <a name="c--restore-an-earlier-disk-backup-with-a-new-database-name-where-the-original-database-still-exists"></a>**C.在原始資料庫仍存在的情況下，使用新的資料庫名稱還原先前的磁碟備份**
+### <a name="c--restore-an-earlier-disk-backup-with-a-new-database-name-where-the-original-database-still-exists"></a>C.  在原始資料庫仍存在的情況下，使用新的資料庫名稱還原先前的磁碟備份
 下列範例會還原先前對 `Sales` 執行的磁碟備份，並建立新的資料庫 `SalesTest`。  原始的資料庫 `Sales`仍存在於伺服器上。
 
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
-    
 2.  以滑鼠右鍵按一下 [資料庫]，然後選取 [還原資料庫...]  
-
 3.  在 [一般] 頁面上，選取 [來源] 區段下的 [裝置]。
-
-4.  按一下瀏覽 (**...**) 按鈕，開啟 [選取備份裝置] 對話方塊。 按一下 [加入] 並巡覽至您的備份。  選取您的磁碟備份檔案，然後按一下 [確定]。
-
+4.  按一下瀏覽 (**...**) 按鈕，開啟 [選取備份裝置] 對話方塊。 按一下 [加入] 並巡覽至您的備份。 選取您的磁碟備份檔案，然後按一下 [確定]。
 5.  按一下 [確定] 回到 [一般] 頁面。
-
-6.  在 **[目的地]** 區段中，會將要還原之資料庫的名稱自動填入 **[資料庫]** 方塊。  若要變更資料庫的名稱，請在 **[資料庫]** 方塊中輸入新名稱。
-
+6.  在 **[目的地]** 區段中，會將要還原之資料庫的名稱自動填入 **[資料庫]** 方塊。 若要變更資料庫的名稱，請在 **[資料庫]** 方塊中輸入新名稱。
 7.  在 [選取頁面] 窗格中，按一下 [選項]。
-
 8.  在 [結尾記錄備份] 區段下，取消核取 [還原前先進行結尾記錄備份]。
 
-    > **重要！！** 無法取消核取此選項將會導致現有的資料庫 `Sales`變更為正在還原狀態。
+    > [!IMPORTANT]
+    > 無法取消核取此選項將會導致現有的資料庫 `Sales`變更為正在還原狀態。
 
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
-    > **注意：** 如果您收到下列錯誤訊息：「System.Data.SqlClient.SqlError: 資料庫 "`Sales`" 的記錄結尾尚未備份。 若您不想遺失其中的內容，請使用 BACKUP LOG WITH NORECOVERY 備份記錄。 亦可使用 RESTORE 陳述式的 WITH REPLACE 或 WITH STOPAT 子句，覆寫記錄的內容。 (Microsoft.SqlServer.SmoExtended)」。  
-則您可能未在上述步驟 6 中輸入新的資料庫名稱。  還原通常可以防止意外將資料庫覆寫成不同資料庫。  如果 RESTORE 陳述式中指定的資料庫已經存在於目前伺服器，而且指定的資料庫系列 GUID 與備份組中記錄的資料庫系列 GUID 不同，將不會還原資料庫。 這是重要的防護措施。
+    > [!NOTE]
+    > 若您收到下列錯誤訊息：      
+    > 「System.Data.SqlClient.SqlError：資料庫 "`Sales`" 的記錄結尾尚未備份。 若其中包含您不想遺失的內容，請使用 `BACKUP LOG WITH NORECOVERY` 備份記錄。 亦可使用 `RESTORE` 陳述式的 `WITH REPLACE` 或 `WITH STOPAT` 子句來覆寫記錄的內容。 (Microsoft.SqlServer.SmoExtended)」。      
+    > 則您可能未在上述步驟 6 中輸入新的資料庫名稱。 還原通常可以防止意外將資料庫覆寫成不同資料庫。 如果 `RESTORE` 陳述式中指定的資料庫已經存在於目前伺服器，而且所指定資料庫系列 GUID 與備份組中記錄的資料庫系列 GUID 不同，便不會還原資料庫。 這是重要的防護措施。
 
-### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>**D.將先前的磁碟備份還原至某個時間點**
-下列範例會將資料庫還原至 2016 年 5 月 30 日下午 1:23:17 時的狀態，並顯示含有多個記錄備份的還原作業。  資料庫目前不在伺服器上。
+### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>D.  將先前的磁碟備份還原至某個時間點
+下列範例會將資料庫還原至 `1:23:17 PM` `May 30, 2016` 時的狀態，並顯示含有多個記錄備份的還原作業。 資料庫目前不在伺服器上。
 
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
-    
 2.  以滑鼠右鍵按一下 [資料庫]，然後選取 [還原資料庫...]  
-
 3.  在 [一般] 頁面上，選取 [來源] 區段下的 [裝置]。
-
 4.  按一下瀏覽 (**...**) 按鈕，開啟 [選取備份裝置] 對話方塊。 按一下 [加入] 並巡覽至您的完整備份及所有相關交易記錄備份。  選取您的磁碟備份檔案，然後按一下 [確定]。
-
 5.  按一下 [確定] 回到 [一般] 頁面。
-
 6.  在 [目的地] 區段中，按一下 [時間表] 存取 [備份時間表] 對話方塊，手動選取停止復原動作的時間點。
-
-7.  選取 [特定的日期與時間]。
-8.  將 [時間表間隔] 變更為下拉式方塊中的 [小時] (選擇性)。
+7.  選取 [特定的日期與時間]。  
+8.  將 [時間表間隔] 變更為下拉式方塊中的 [小時] (選擇性)。  
 9.  將滑桿移至想要的時間。
-
 10. 按一下 [確定] 回到 [一般] 頁面。
-
 11. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
-### <a name="e--restore-a-backup-from-the-microsoft-azure-storage-service"></a>**E.從 Microsoft Azure 儲存體服務還原備份**
-#### <a name="common-steps"></a>**通用步驟**
+### <a name="e--restore-a-backup-from-the-microsoft-azure-storage-service"></a>E.  從 Microsoft Azure 儲存體服務還原備份
+
+#### <a name="common-steps"></a>通用步驟
 下列兩個範例會從 Microsoft Azure 儲存體服務中的備份執行 `Sales` 的還原。  儲存體帳戶名稱為 `mystorageaccount`。  容器名稱為 `myfirstcontainer`。  為求簡潔，前六個步驟只會在此列出一次，所有範例將從**步驟 7** 開始進行。
 1.  在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
-
 2.  以滑鼠右鍵按一下 [資料庫]，然後選取 [還原資料庫...]。
-
 3.  在 [一般] 頁面上，選取 [來源] 區段下的 [裝置]。
-
-4.  按一下瀏覽 (...) 按鈕，開啟 [選取備份裝置] 對話方塊。  
+4.  按一下瀏覽 (...) 按鈕，開啟 [選取備份裝置] 對話方塊。    
 5.  從 [備份媒體類型:] 下拉式清單中選取 [URL]。
-
 6.  按一下 [加入]，[選取備份檔案位置] 對話方塊隨即開啟。
 
-    #### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>**E1. 以覆蓋現有資料庫的方式還原等量備份，而且存在共用存取簽章。**
-    已建立具有讀取、寫入、刪除和列出權限的預存存取原則。  為容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`建立了與此預存存取原則相關聯的共用存取簽章。  如果 SQL Server 認證已經存在，則步驟大致相同。  資料庫 `Sales` 目前不在伺服器上。  備份檔案為 `Sales_stripe1of2_20160601.bak` 和 `Sales_stripe2of2_20160601.bak`。  
+#### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>E1.   以覆蓋現有資料庫的方式還原等量備份，而且存在共用存取簽章。
+已建立具有讀取、寫入、刪除和列出權限的預存存取原則。  為容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`建立了與此預存存取原則相關聯的共用存取簽章。  如果 SQL Server 認證已經存在，則步驟大致相同。  資料庫 `Sales` 目前不在伺服器上。  備份檔案為 `Sales_stripe1of2_20160601.bak` 和 `Sales_stripe2of2_20160601.bak`。  
 *  
-    7.  如果 SQL Server 認證已經存在，請從 [Azure 儲存體容器:] 下拉式清單中選取 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`；否則請手動輸入容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 的名稱。
-    
-    8.  在 [共用存取簽章:] RTF 方塊中，輸入共用存取簽章。
-       9.   按一下 [確定]，[在 Microsoft Azure 中尋找備份檔案] 對話方塊隨即開啟。
-    10. 展開 [容器] 並巡覽至 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
-    
-    11. 按住 Ctrl，然後選取檔案 `Sales_stripe1of2_20160601.bak` 和 `Sales_stripe2of2_20160601.bak`。
-    12. 按一下 [確定] 。
-    13. 按一下 [確定] 回到 [一般] 頁面。
-    14. 在 [選取頁面] 窗格中，按一下 [選項]。
-    15. 在 [還原選項] 區段下，核取 [覆寫現有的資料庫 (WITH REPLACE)]。
-    16. 在 [結尾記錄備份] 區段下，取消核取 [還原前先進行結尾記錄備份]。
-    17. 在 [伺服器連接] 區段下，核取 [關閉目的地資料庫的現有連接]。
-    18. 按一下 [確定] 。
+7.  如果 SQL Server 認證已經存在，請從 [Azure 儲存體容器:] 下拉式清單中選取 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`；否則請手動輸入容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 的名稱。 
+8.  在 [共用存取簽章:] RTF 方塊中，輸入共用存取簽章。
+9.  按一下 [確定]，[在 Microsoft Azure 中尋找備份檔案] 對話方塊隨即開啟。
+10. 展開 [容器] 並巡覽至 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
+11. 按住 Ctrl，然後選取檔案 `Sales_stripe1of2_20160601.bak` 和 `Sales_stripe2of2_20160601.bak`。
+12. 按一下 [確定] 。
+13. 按一下 [確定] 回到 [一般] 頁面。
+14. 在 [選取頁面] 窗格中，按一下 [選項]。
+15. 在 [還原選項] 區段下，核取 [覆寫現有的資料庫 (WITH REPLACE)]。
+16. 在 [結尾記錄備份] 區段下，取消核取 [還原前先進行結尾記錄備份]。
+17. 在 [伺服器連接] 區段下，核取 [關閉目的地資料庫的現有連接]。
+18. 按一下 [確定] 。
 
-    #### <a name="e2---a-shared-access-signature-does-not-exist"></a>**E2. 共用存取簽章不存在**
-    在此範例中， `Sales` 資料庫目前不在伺服器上。
-    7.  按一下 [加入]，[連接至 Microsoft 訂用帳戶] 對話方塊隨即開啟。  
-    
-    8.  完成 [連接至 Microsoft 訂用帳戶] 對話方塊，然後按一下 [確定] 回到 [選取備份檔案位置] 對話方塊。  如需其他資訊，請參閱[連接到 Microsoft Azure 訂用帳戶](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
-    9.  在 [選取備份檔案位置] 對話方塊中按一下 [確定]，[在 Microsoft Azure 中尋找備份檔案] 對話方塊隨即開啟。
-    10. 展開 [容器] 並巡覽至 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
-    11. 選取備份檔案，然後按一下 [確定]。
-    12. 按一下 [確定] 回到 [一般] 頁面。
-    13. 按一下 [確定] 。
+#### <a name="e2---a-shared-access-signature-does-not-exist"></a>E2.   共用存取簽章不存在
+在此範例中，`Sales` 資料庫目前不在伺服器上。
+7.  按一下 [加入]，[連接至 Microsoft 訂用帳戶] 對話方塊隨即開啟。  
+8.  完成 [連接至 Microsoft 訂用帳戶] 對話方塊，然後按一下 [確定] 回到 [選取備份檔案位置] 對話方塊。  如需其他資訊，請參閱[連接到 Microsoft Azure 訂用帳戶](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。
+9.  在 [選取備份檔案位置] 對話方塊中按一下 [確定]，[在 Microsoft Azure 中尋找備份檔案] 對話方塊隨即開啟。
+10. 展開 [容器] 並巡覽至 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
+11. 選取備份檔案，然後按一下 [確定]。
+12. 按一下 [確定] 回到 [一般] 頁面。
+13. 按一下 [確定] 。
 
-#### <a name="f---restore-local-backup-to-microsoft-azure-storage-url"></a>**F. 將本機備份還原至 Microsoft Azure 儲存體 (URL)**
-`Sales` 資料庫將從 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 中的備份還原至 Microsoft Azure 儲存體容器 `E:\MSSQL\BAK`。  已建立 Azure 容器的 SQL Server 認證。  目的地容器的 SQL Server 認證必須已經存在，因為您無法透過 **還原** 工作建立此認證。  `Sales` 資料庫目前不在伺服器上。
+#### <a name="f-restore-local-backup-to-microsoft-azure-storage-url"></a>F. 將本機備份還原至 Microsoft Azure 儲存體 (URL)
+`Sales` 資料庫將從 `E:\MSSQL\BAK` 中的備份還原至 Microsoft Azure 儲存體容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。  已建立 Azure 容器的 SQL Server 認證。  目的地容器的 SQL Server 認證必須已經存在，因為您無法透過 **還原** 工作建立此認證。  `Sales` 資料庫目前不在伺服器上。
 1.  在物件總管中，連接到 SQL Server Database Engine 的執行個體，然後展開該執行個體。
-
 2.  以滑鼠右鍵按一下 [資料庫]，然後選取 [還原資料庫...]。
 3.  在 [一般] 頁面上，選取 [來源] 區段下的 [裝置]。
 4.  按一下瀏覽 (...) 按鈕，開啟 [選取備份裝置] 對話方塊。  
@@ -270,7 +249,6 @@ ms.locfileid: "47664427"
 10. 核取 [將所有檔案重新放置到資料夾] 方塊。
 11. 在 [資料檔案資料夾:] 和 [記錄檔資料夾:] 的文字方塊中，輸入容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。
 12. 按一下 [確定] 。
-
 
 ## <a name="see-also"></a>另請參閱    
  [備份交易記錄 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)     

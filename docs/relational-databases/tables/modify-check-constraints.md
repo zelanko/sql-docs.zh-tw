@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 802fe8653cc33582ee22edd59eea3fb37561e3d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d325480ad39800d28161e79cf468419278fb894f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689176"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507352"
 ---
 # <a name="modify-check-constraints"></a>修改檢查條件約束
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47689176"
   
 -   **若要使用下列項目來修改檢查條件約束：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47689176"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要資料表的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -54,7 +54,7 @@ ms.locfileid: "47689176"
   
 1.  在 [物件總管] 中，以滑鼠右鍵按一下包含檢查條件約束的資料表，並選取 [設計]。  
   
-2.  在 **[資料表設計工具]** 功能表上，按一下 **[檢查條件約束]**。  
+2.  在 [資料表設計工具] 功能表上，按一下 [檢查條件約束...]。  
   
 3.  在 **[檢查條件約束]** 對話方塊的 **[選取的檢查條件約束]** 底下，選取您想要編輯的條件約束。  
   

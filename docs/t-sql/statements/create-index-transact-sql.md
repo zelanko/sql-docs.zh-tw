@@ -55,18 +55,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b5aaa932ce2e41122d2b133c7260e5eeafc1a7a
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 679eb8412f4633af845efc7c5520c351f9749822
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971029"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518333"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)> [!div class="nextstepaction"]
 > [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 在資料表或檢視上建立關聯式索引。 也稱為資料列存放區索引，因為它是叢集或非叢集的 B 型樹狀結構索引。 您可以在資料表中含有資料之前，先建立資料列存放區索引。 特別是在查詢會從特定資料行中選取，或需要以特定順序排序值時，使用資料列存放區索引來改善查詢效能。  
@@ -731,7 +730,7 @@ INSERT INTO t1 VALUES (1, 0);
 - 若要立即暫停索引作業，您可以停止 (Ctrl-C) 進行中的命令、執行 [ALTER INDEX](alter-index-transact-sql.md) PAUSE 命令，或執行 KILL `<session_id>` 命令。 暫停命令之後，可以使用 [ALTER INDEX](alter-index-transact-sql.md) 命令繼續執行該命令。 
 - 重新執行可繼續索引的原始 CREATE INDEX 陳述式，會自動繼續已暫停索引的建立作業。
 - 可繼續的索引不支援 SORT_IN_TEMPDB=ON 選項。 
-- RESUMABLE=ON 的 DDL 命令無法在明確交易內部執行 (不能是 TRAN … COMMIT 區塊的一部份)。
+- RESUMABLE=ON 的 DDL 命令無法在明確交易內部執行 (不能是開始 TRAN ...COMMIT 區塊的一部份)。
 - 若要繼續/中止建立/重建索引，請使用 [ALTER INDEX](alter-index-transact-sql.md) T-SQL 語法
 
 > [!NOTE]

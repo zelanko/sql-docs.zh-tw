@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bcf25195821c42d5120fc5d248b364ce23e24ed0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f8e9090e92baba8f67ee7ad0303103f41c66ace9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700316"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532173"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -173,7 +173,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  您可以使用 @@ROWCOUNT 函式，將刪除的資料列數目傳回用戶端應用程式。 如需詳細資訊，請參閱 [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)。  
   
 ## <a name="error-handling"></a>錯誤處理  
- 您可以在 TRY…CATCH 建構中指定 DELETE 陳述式，藉以實作此陳述式的錯誤處理。  
+ 您可以在 TRY...CATCH 建構中指定 DELETE 陳述式，以實作此陳述式的錯誤處理。  
   
  如果 DELETE 陳述式違反觸發程序，或試圖移除含有 FOREIGN KEY 條件約束的另一個資料表中之資料所參考的資料列，DELETE 陳述式便可能失敗。 如果 DELETE 移除了多個資料列，且有任何移除的資料列違反了觸發程序或條件約束，就會取消陳述式，傳回錯誤，且不會移除任何資料列。  
   

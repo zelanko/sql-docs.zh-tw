@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c6e008139eb9e52583045690cdc51b812ef8e73
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 5723f60855952e9e14e7cdff07ac312d10e38732
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642265"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526611"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 專案和封裝
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援兩種部署模型：專案部署模型和舊版封裝部署模型。 專案部署模型可讓您將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
@@ -100,7 +100,7 @@ ms.locfileid: "51642265"
   
  如果要將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器，請完成下列工作：  
   
-1.  建立 SSISDB 目錄 (若無)。 如需詳細資訊，請參閱 [SSIS 目錄](../../integration-services/catalog/ssis-catalog.md)。  
+1.  建立 SSISDB 目錄 (如果尚未建立)。 如需詳細資訊，請參閱 [SSIS 目錄](../../integration-services/catalog/ssis-catalog.md)。  
   
 2.  請執行 [Integration Services 專案轉換精靈] 將專案轉換為專案部署模型。 如需詳細資訊，請參閱底下指示： [將專案轉換為專案部署模型](#convert)  
   
@@ -293,7 +293,7 @@ static void Main()
 
 **OR**
 
- - 在 SQL Server 安裝資料夾 (例如 C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn) 下搜尋可執行檔 **ISDeploymentWizard.exe** 。 
+ - 在 SQL Server 安裝資料夾 (例如 C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn) 下搜尋可執行檔 **ISDeploymentWizard.exe**。 
  
  > **注意**：若顯示 [簡介] 頁面，請按一下 [下一步] 切換至 [選取來源] 頁面。 
  
@@ -318,7 +318,7 @@ static void Main()
 #### <a name="select-source"></a>選取來源  
  若您選取 [封裝部署]  選項做為 **部署模型** ，則 **Integration Services 部署精靈** 中的 [選取來源] 頁面會顯示封裝部署模型的特定設定。  
   
- 若要選取來源封裝，請按一下 [瀏覽...] 按鈕選取包含封裝的**資料夾**，或是在 [封裝資料夾路徑] 文字方塊中輸入資料夾路徑，然後按一下頁面底端的 [重新整理] 按鈕。 現在，您應會於清單方塊中的指定資料夾看見所有封裝。 根據預設，系統會選取所有封裝。 按一下第一個資料行的 **核取方塊** ，選擇您想要部署至伺服器的封裝。  
+ 若要選取來源封裝，請按一下 [瀏覽...] 按鈕以選取包含封裝的**資料夾**，或是在 [封裝資料夾路徑] 文字方塊中輸入資料夾路徑，然後在頁面底端按一下 [重新整理] 按鈕。 現在，您應會於清單方塊中的指定資料夾看見所有封裝。 根據預設，系統會選取所有封裝。 按一下第一個資料行的 **核取方塊** ，選擇您想要部署至伺服器的封裝。  
   
  參閱 [狀態]  和 [訊息]  資料行，以確認封裝的狀態。 若狀態設為 [準備就緒]  或 [警告] ，則部署精靈不會封鎖部署處理程序。 然而，若狀態設為 [錯誤] ，則精靈將不會繼續部署所選的封裝。 若要檢視詳細的警告/錯誤訊息，請按一下 [訊息] 資料行中的連結。  
   
@@ -327,7 +327,7 @@ static void Main()
  若所有選取的封裝狀態皆未設定為 [錯誤] ，則會啟用 [下一步]  按鈕讓您得以繼續執行封裝部署處理程序。  
   
 #### <a name="select-destination"></a>選取目的地  
- 選取封裝來源後，按一下 [下一步]  按鈕切換至 [選取目的地]  頁面。 封裝必須部署至 SSIS 目錄 (SSISDB) 中的專案。 因此在部署封裝前，請確定目的地專案已存在於 SSIS 目錄。 否則會建立空白專案。在 [選取目的地] 頁面的 [伺服器名稱] 文字方塊中輸入伺服器名稱，或是按一下 [瀏覽...] 按鈕選取伺服器執行個體。 按一下 [瀏覽] 按鈕 (在 [路徑] 文字方塊旁)，指定目的地專案。 如果專案不存在，請按一下 [新增專案...] 以建立空白專案做為目的地專案。 專案 **必須** 建立在資料夾下方。  
+ 選取封裝來源後，按一下 [下一步]  按鈕切換至 [選取目的地]  頁面。 封裝必須部署至 SSIS 目錄 (SSISDB) 中的專案。 因此在部署封裝前，請確定目的地專案已存在於 SSIS 目錄。 否則會建立空白專案。在 [選取目的地] 頁面的 [伺服器名稱] 文字方塊中輸入伺服器名稱，或是按一下 [瀏覽...] 按鈕以選取伺服器執行個體。 然後按一下 [路徑] 文字方塊旁的 [瀏覽...] 按鈕，以指定目的地專案。 若專案不存在，請按一下 [新增專案...] 以建立空白專案做為目的地專案。 專案 **必須** 建立在資料夾下方。  
   
 #### <a name="review-and-deploy"></a>檢閱和部署  
  在 [選取目的地]  頁面上，按一下 [下一步]  切換至 **Integration Services 部署精靈** 中的 [檢閱] 頁面。 在檢閱頁面上，檢閱有關部署動作的摘要報告。 驗證完成後，按一下 [部署]  按鈕以執行部署動作。  

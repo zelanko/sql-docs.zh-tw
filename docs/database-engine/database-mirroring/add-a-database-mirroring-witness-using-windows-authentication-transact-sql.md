@@ -15,12 +15,12 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ca1ecc06039f8bdfbf4516778a04f9c191544e45
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 4cf7b351726ab07313dff9272bd4411957f05cb2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168888"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507095"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>使用 Windows 驗證加入資料庫鏡像見證 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "49168888"
   
      其中 \<系統位址> 是清楚識別目的地電腦系統的字串，\<通訊埠> 是夥伴伺服器執行個體之鏡像端點使用的通訊埠編號。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   
-     例如，在主體伺服器執行個體上，下列 ALTER DATABASE 陳述式會設定見證。 資料庫名稱是 **AdventureWorks**、系統位址是 DBSERVER3 (見證系統的名稱)，而見證之資料庫鏡像端點所使用的通訊埠是 `7022`：  
+     例如，在主體伺服器執行個體上，下列 ALTER DATABASE 陳述式會設定見證。 資料庫名稱是 **AdventureWorks**、系統位址是 DBSERVER3 (見證系統的名稱)，而見證之資料庫鏡像端點所使用的連接埠是 `7022`：  
   
     ```  
     ALTER DATABASE AdventureWorks   

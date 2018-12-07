@@ -21,12 +21,12 @@ ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f1247bcaa04c14a822a333dc99f5a38e5354b247
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f0818c47f0b62240786e76b7e35fc7ea6db2dfd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606188"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534009"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>啟用或停用伺服器網路通訊協定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "51606188"
   
 4.  在主控台窗格中，按一下 **[SQL Server 服務]**。  
   
-5.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server (\<執行個體名稱>)]****，然後按一下 [重新啟動]，以停止並重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
+5.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server (\<執行個體名稱>)]，然後按一下 [重新啟動]，以停止並重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 SQL Server PowerShell  
   
@@ -68,7 +68,7 @@ ms.locfileid: "51606188"
   
 2.  從工作列啟動 Windows PowerShell，或是依序按一下 [開始]、[所有程式]、[附屬應用程式]、[Windows PowerShell]，然後按一下 [Windows PowerShell]。  
   
-3.  輸入 **sqlps** 來匯入 **Import-Module “sqlps”** 模組  
+3.  輸入 **sqlps** 來匯入 **Import-Module "sqlps"** 模組  
   
 4.  執行下列陳述式，即可同時啟用 TCP 和具名管道通訊協定。 請將 `<computer_name>` 取代成執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的電腦名稱。 如果您要設定具名執行個體，請將 `MSSQLSERVER` 取代成執行個體名稱。  
   

@@ -51,12 +51,12 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ce8d3928a59acfb2c3b53e19b50934b8f30a0eda
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c35e10e3ac81468a6add4bc1674fc6e56e126d42
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605979"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617728"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>設定 Windows 服務帳戶與權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ ms.locfileid: "51605979"
 
 用來啟動並執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的啟動帳戶可以是 [網域使用者帳戶](#Domain_User)、 [本機使用者帳戶](#Local_User)、 [受管理的服務帳戶](#MSA)、 [虛擬帳戶](#VA_Desc)或 [內建的系統帳戶](#Local_Service)。 若要啟動並執行， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每個服務都必須在安裝期間設定啟動帳戶。
   
- 本節描述可設定用來啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式使用的預設值、每個服務 SID 的概念、啟動選項，以及設定防火牆。  
+ 本節描述可設定用來啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式使用的預設值、每個服務 SID 的概念、啟動選項，以及設定防火牆。  
   
 -   [預設服務帳戶](#Default_Accts)  
   
@@ -291,7 +291,7 @@ ms.locfileid: "51605979"
 |---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體： **NT SERVICE\MSSQLSERVER**。 具名執行個體： **NT SERVICE\MSSQL$** InstanceName)。|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> 啟動 SQL 寫入器的權限<br /><br /> 讀取事件記錄檔服務的權限<br /><br /> 讀取遠端程序呼叫服務的權限|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent：** \*<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體： **NT Service\SQLSERVERAGENT**。 具名執行個體： **NT Service\SQLAGENT$**_InstanceName_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)|  
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]：**<br /><br /> (所有權利都會授與本機 Windows 群組。 預設執行個體： **SQLServerMSASUser$**_ComputerName_**$MSSQLSERVER**。 具名執行個體： **SQLServerMSASUser$**_ComputerName_**$**_InstanceName_。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 執行個體： **SQLServerMSASUser$**_ComputerName_**$**_PowerPivot_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> 僅限表格式：<br /><br /> **增加處理程序工作組** (SeIncreaseWorkingSetPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> **鎖定記憶體中的分頁** (SeLockMemoryPrivilege) – 其只有在分頁完全關閉時才需要。<br /><br /> 僅限容錯移轉叢集安裝：<br /><br /> **增加排程優先順序** (SeIncreaseBasePriorityPrivilege)|  
+|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]：**<br /><br /> (所有權利都會授與本機 Windows 群組。 預設執行個體： **SQLServerMSASUser$**_ComputerName_**$MSSQLSERVER**。 具名執行個體： **SQLServerMSASUser$**_ComputerName_**$**_InstanceName_。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 執行個體： **SQLServerMSASUser$**_ComputerName_**$**_PowerPivot_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> 僅限表格式：<br /><br /> **增加處理程序工作組** (SeIncreaseWorkingSetPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> **鎖定記憶體中的分頁** (SeLockMemoryPrivilege) - 這只有在分頁完全關閉時才需要。<br /><br /> 僅限容錯移轉叢集安裝：<br /><br /> **增加排程優先順序** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT SERVICE\ReportServer**。 具名執行個體：**NT SERVICE\\ReportServer$**<執行個體名稱>)。|**以服務方式登入** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體和具名執行個體： **NT SERVICE\MsDtsServer130**。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 沒有具名執行個體的個別處理序。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> 寫入應用程式事件記錄檔的權限。<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **在驗證之後模擬用戶端** (SeImpersonatePrivilege)|  
 |**全文檢索搜尋：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體： **NT Service\MSSQLFDLauncher**。 具名執行個體： **NT Service\ MSSQLFDLauncher$**_InstanceName_。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)|  
@@ -568,7 +568,7 @@ Windows Management Instrumentation (WMI) 必須能夠連接到 [!INCLUDE[ssDE](.
   
     -   服務的本機 Windows 群組已從 **SQLServer2005MSSQLUser$**_<電腦名稱>_**$**_<執行個體名稱>_ 重新命名為 **SQLServerMSSQLUser$**<電腦名稱>**$**<執行個體名稱>。 移轉之資料庫的檔案位置將會有本機 Windows 群組的存取控制項目 (ACE)。 新資料庫的位置將會有個別服務 SID 的 ACE。  
   
--   從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]升級的期間， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會保留 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 個別服務 SID 的 ACE。  
+-   從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 升級的期間，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會保留 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 個別服務 SID 的 ACE。  
   
 -   如果是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體，則會保留為服務設定之網域帳戶的 ACE。  
   
@@ -647,7 +647,7 @@ Windows Management Instrumentation (WMI) 必須能夠連接到 [!INCLUDE[ssDE](.
 |法文|AUTORITE NT\SERVICE LOCAL|AUTORITE NT\SERVICE RÉSEAU|AUTORITE NT\SYSTEM|BUILTIN\Administrators|  
 |義大利文|NT AUTHORITY\SERVIZIO LOCALE|NT AUTHORITY\SERVIZIO DI RETE|NT AUTHORITY\SYSTEM|BUILTIN\Administrators|  
 |西班牙文|NT AUTHORITY\SERVICIO LOC|NT AUTHORITY\SERVICIO DE RED|NT AUTHORITY\SYSTEM|BUILTIN\Administradores|  
-|俄文|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\SYSTEM|BUILTIN\Администраторы|  
+|俄文|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\СИСТЕМА|BUILTIN\Администраторы|  
   
 ## <a name="related-content"></a>相關內容  
  [SQL Server 安裝的安全性考量](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  

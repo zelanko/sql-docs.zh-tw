@@ -11,12 +11,12 @@ ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a52a29196fb0578482ebfff068adff736c954efa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed8aedc5ac55f933651d66826a58e7ba09f36c8e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818946"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526037"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>疑難排解封裝執行的報表
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的目前版本中， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一些標準報表，可協助您監視和疑難排解已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 其中兩份封裝報表特別有助於您檢視封裝執行狀態以及識別執行失敗的原因。  
@@ -25,15 +25,15 @@ ms.locfileid: "47818946"
   
      您可以依照下列方式解譯開始時間、結束時間和持續時間：  
   
-    -   如果封裝仍在執行中，則持續時間 = 目前時間 – 開始時間  
+    -   如果封裝仍在執行中，則持續時間 = 目前時間 - 開始時間  
   
-    -   如果封裝已完成，則持續時間 = 結束時間 – 開始時間  
+    -   如果封裝已完成，則持續時間 = 結束時間 - 開始時間  
   
      對於伺服器上已執行的每個封裝，儀表板可讓您放大報表，尋找可能發生之封裝執行錯誤的特定詳細資料。 例如，您可以按一下 [概觀] 顯示執行中工作狀態的高階概觀，或是按一下 [所有訊息] 顯示封裝執行過程中已擷取的詳細訊息。  
   
      您可以按一下 [篩選]，然後選取 [篩選設定] 對話方塊中的準則，篩選任何頁面上顯示的資料表。 可用的篩選準則取決於顯示的資料。 您可以在 [篩選設定] 對話方塊中按一下排序圖示，以變更報表的排序次序。  
   
--   **活動 - 所有執行報表**：這份報表會顯示伺服器上已執行之所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行的摘要。 此摘要會顯示每個執行的資訊，例如狀態、開始時間和結束時間。 每個摘要項目都包含執行詳細資訊的連結，包括執行期間產生的訊息以及效能資料。 就如同 Integration Services 儀表板一樣，您可以將篩選套用至資料表，以縮小顯示的資訊範圍。  
+-   **活動 - 所有執行報表** - 這份報表會顯示伺服器上已執行之所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行的摘要。 此摘要會顯示每個執行的資訊，例如狀態、開始時間和結束時間。 每個摘要項目都包含執行詳細資訊的連結，包括執行期間產生的訊息以及效能資料。 就如同 Integration Services 儀表板一樣，您可以將篩選套用至資料表，以縮小顯示的資訊範圍。  
   
 ## <a name="related-content"></a>相關內容  
  [Integration Services 伺服器的報表](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)  

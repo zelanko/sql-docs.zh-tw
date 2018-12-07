@@ -31,12 +31,12 @@ ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 976c052b519cc72de226c06f27abf8b8f43fd74c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ef067f78e6ff7e1358a89ab210ae8c701625b14
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616846"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543832"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
  FROM SERVICE *initiator_service_name*  
  指定起始對話的服務。 指定的名稱必須是目前資料庫中服務的名稱。 指定給起始端服務的佇列會接收目標服務傳回的訊息及 Service Broker 為了這項交談所建立的訊息。  
   
- TO SERVICE **'***target_service_name***'**  
+ TO SERVICE **'**_target_service_name_**'**  
  指定起始對話時所指向的目標服務。 *target_service_name* 是 **nvarchar(256)** 類型。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 使用逐位元組的比較方式來比對 *target_service_name* 字串。 換言之，這項比較會區分大小寫，且不會考慮目前的定序。  
   
  *service_broker_guid*  
@@ -92,13 +92,13 @@ WHERE database_id = DB_ID() ;
  ON CONTRACT *contract_name*  
  指定這項交談遵照的合約。 合約必須在目前的資料庫中。 如果目標服務不接受指定合約的新交談，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在交談上傳回錯誤訊息。 當省略這個子句時，交談會遵照名稱為 **DEFAULT** 的合約。  
   
- RELATED_CONVERSATION **=***related_conversation_handle*  
+ RELATED_CONVERSATION **=**_related_conversation_handle_  
  指定新對話要加入其中的現有交談群組。 當出現這個子句時，新對話與 *related_conversation_handle* 指定的對話屬於同一個交談群組。 *related_conversation_handle* 的類型必須可以隱含地轉換成 **uniqueidentifier** 類型。 如果 *related_conversation_handle* 並未參考現有的對話，陳述式將會失敗。  
   
- RELATED_CONVERSATION_GROUP **=***related_conversation_group_id*  
+ RELATED_CONVERSATION_GROUP **=**_related_conversation_group_id_  
  指定新對話要加入其中的現有交談群組。 當出現這個子句時，新對話將會加入 *related_conversation_group_id* 指定的交談群組。 *related_conversation_group_id* 的類型必須可以隱含地轉換成 **uniqueidentifier** 類型。 如果 *related_conversation_group_id* 並未參考現有的交談群組，Service Broker 會利用指定的 *related_conversation_group_id* 來建立新交談群組，並使新對話與該交談群組產生關聯。  
   
- LIFETIME **=***dialog_lifetime*  
+ LIFETIME **=**_dialog_lifetime_  
  指定對話維持開啟狀態的最大時間量。 為了使對話順利完成，兩個端點必須在存留期間過期之前明確地結束對話。 *dialog_lifetime* 值必須以秒為單位來表示。 存留期間的類型是 **int**。當沒有指定 LIFETIME 子句時，對話存留期間是 **int** 資料類型的最大值。  
   
  ENCRYPTION  

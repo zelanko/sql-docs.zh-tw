@@ -23,12 +23,12 @@ ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d784fca62ffd20e624cc2c103e4657e277012867
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21e4585a5b41fe14e68d7d7e5ca38f8da7060a8b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635556"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505566"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>支援的查詢類型 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47635556"
   
 -   **插入值** ：建立新資料列，並將新值插入至指定的資料行。 此類查詢將建立 SQL INSERT INTO...VALUES 陳述式。  
   
--   **更新查詢** ：變更資料表中一或多個現有資料列中的個別資料行值。 此類查詢將建立 SQL UPDATE…SET 陳述式。  
+-   **更新查詢** ：變更資料表中一或多個現有資料列中的個別資料行值。 此類查詢會建立 SQL UPDATE...SET 陳述式。  
   
 -   **刪除查詢** ：從資料表移除一或多個資料列。 這類查詢將建立 SQL DELETE 陳述式。  
   

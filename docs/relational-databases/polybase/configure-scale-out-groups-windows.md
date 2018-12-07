@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b9294d9208b9cafc3610a9682c13cebcc970669e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 792791cf7ac6abebc56f1b59381fb5d18e83d237
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672937"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417479"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>改善 Windows 上的 PolyBase 相應放大群組
 
@@ -70,7 +70,7 @@ ms.locfileid: "51672937"
   
 ## <a name="select-one-sql-server-as-head-node"></a>選取一個 SQL Server 作為前端節點  
   
-安裝程式完成之後，這兩部電腦可用來做為 PolyBase 群組前端節點。 在此範例中，我們將選擇 PQTH4A-CMP01 上的 "MSSQLSERVER" 做為前端節點。
+安裝程式完成之後，這兩部電腦可用來做為 PolyBase 群組前端節點。 在此範例中，我們將選擇 PQTH4A-CMP01 上的 "MSSQLSERVER" 作為前端節點。
   
 ## <a name="add-other-sql-server-instances-as-compute-nodes"></a>新增其他 SQL Server 節點作為計算節點  
   

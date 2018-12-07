@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5cf1431ab35afc336fb18ac5546d00336f97c1bc
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: 3e4a4805ee3cb706a20659919e28c09c84787934
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226350"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518365"
 ---
 # <a name="replication-distribution-agent"></a>複寫散發代理程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,7 +144,7 @@ distrib [-?]
 |**2**|指定要使用 SSL，而且憑證會經過驗證。|  
  
  > [!NOTE]  
- >  定義的 SSL 憑證必須包含 SQL Server 的完整網域名稱才會有效。 為了讓代理程式能在將 -EncryptionLevel 設定為 2 時成功連線，請在本機 SQL Server 上建立別名。 ‘Alias Name’ 參數應為伺服器名稱，且應將 ‘Server’ 參數設為 SQL Server 的完整名稱。
+ >  定義的 SSL 憑證必須包含 SQL Server 的完整網域名稱才會有效。 為了讓代理程式能在將 -EncryptionLevel 設定為 2 時成功連線，請在本機 SQL Server 上建立別名。 'Alias Name' 參數應為伺服器名稱，且應將 'Server' 參數設為 SQL Server 的完整名稱。
 
  如需詳細資訊，請參閱[安全性概觀 &#40;複寫&#41;](../../../relational-databases/replication/security/security-overview-replication.md)。  
   
@@ -207,7 +207,7 @@ distrib [-?]
  如果來源沒有任何複寫的交易可用，代理程式就會回報無交易訊息給散發者。 這個選項會指定回報另一個無交易訊息之前等候的時間長度。 在先前處理複寫的交易之後，當代理程式偵測到來源沒有任何交易可用時，代理程式一律會回報無交易訊息。 預設值是 60 秒。  
   
  **-OledbStreamThreshold** *oledb_stream_threshold*  
- 指定二進位大型物件資料 (其中資料將繫結為資料流) 的大小下限 (以位元組為單位)。 您必須指定 **–UseOledbStreaming** 才能使用這個參數。 值的範圍在 400 至 1048576 個位元組之間，預設為 16384 個位元組。  
+ 指定二進位大型物件資料 (其中資料將繫結為資料流) 的大小下限 (以位元組為單位)。 您必須指定 **-UseOledbStreaming** 才能使用這個參數。 值的範圍在 400 至 1048576 個位元組之間，預設為 16384 個位元組。  
   
  **-Output** *output_path_and_file_name*  
  這是代理程式輸出檔的路徑。 如果未提供檔案名稱，輸出將傳送至主控台。 如果指定的檔案名稱存在，輸出就會附加至該檔案。  
@@ -276,7 +276,7 @@ distrib [-?]
  指定散發的訂閱類型。  值為 **0** 表示發送訂閱、值為 **1** 表示提取訂閱，而值為 2 則表示匿名訂閱。  
   
  **-TransactionsPerHistory** [ **0**| **1**|...**10000**]  
- 指定記錄作業的交易間隔。 如果上一個記錄執行個體之後認可的交易數目大於這個選項，系統就會記錄記錄訊息。 預設值為 100。 **0** 值表示無限 **TransactionsPerHistory**。 See the preceding **–MessageInterval**parameter.  
+ 指定記錄作業的交易間隔。 如果上一個記錄執行個體之後認可的交易數目大於這個選項，系統就會記錄記錄訊息。 預設值為 100。 **0** 值表示無限 **TransactionsPerHistory**。 請參閱前面的 **-MessageInterval** 參數。  
   
  **-UseDTS**  
  必須針對允許資料轉換的發行集指定為參數。  

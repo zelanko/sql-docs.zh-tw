@@ -13,12 +13,12 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bd6d830a2c8fc612a7b9030de60e9c8ff458301
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5ae792d2237e1c2eaafddfe78cc0314f1240bd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649036"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526918"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Integration Services 設計師選項的 [一般]頁面
   在 [選項] 對話方塊上使用 [Integration Services 設計師] 頁面上的 [一般] 頁面，指定用來載入、顯示及升級封裝的選項。  
@@ -37,7 +37,7 @@ ms.locfileid: "47649036"
  選取此選項即可在載入未簽署的封裝時顯示警告。  
   
  **顯示優先順序約束條件標籤**  
- 選取在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中檢視封裝時，要在優先順序條件約束上顯示哪一個標籤 (成功、失敗或完成)。  
+ 選取在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中檢視封裝時，要在優先順序條件約束上顯示哪一個標籤 (成功、失敗或完成)。  
   
  **指令碼語言**  
  選取新指令碼工作和指令碼元件的預設指令碼語言。  
@@ -56,6 +56,6 @@ ms.locfileid: "47649036"
   
 ## <a name="see-also"></a>另請參閱  
  [安全性概觀 (Integration Services)](../integration-services/security/security-overview-integration-services.md)   
- [使用指令碼擴充套件](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
+ [使用指令碼擴充封裝](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
   
   

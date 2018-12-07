@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5dadd6da3f1f39060f8ec0f96e1034f42670300
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa37094aa6e41da48de776e7bb73b98096cae503
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603246"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523492"
 ---
 # <a name="create-filtered-indexes"></a>建立篩選的索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47603246"
   
 -   **使用下列方法建立篩選的索引：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -100,7 +100,7 @@ ms.locfileid: "47603246"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。 若要修改篩選索引運算式，請使用 CREATE INDEX WITH DROP_EXISTING。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -117,13 +117,13 @@ ms.locfileid: "47603246"
   
 5.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
-6.  按一下 **[索引鍵資料行]** 底下的 **[加入]**。  
+6.  按一下 [索引鍵資料行]底下的 [加入...]。  
   
 7.  在 [從 _table\_name_ 選取資料行] 對話方塊中，選取要新增至唯一索引之一或多個資料表資料行的一或多個核取方塊。  
   
 8.  按一下 [確定] 。  
   
-9. 在 **[篩選]** 頁面的 **[篩選運算式]** 底下，輸入要用來建立篩選索引的 SQL 運算式。  
+9. 在 [篩選] 頁面的 [篩選運算式]底下，輸入要用來建立篩選索引的 SQL 運算式。  
   
 10. 按一下 [確定] 。  
   

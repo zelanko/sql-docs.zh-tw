@@ -11,20 +11,20 @@ ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 76f25db84d074a9aeb544daf2fe33b512836daf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f706344fb2e3f194cb059e5d0d0338aaf7adc06
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713096"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402694"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>適用於 Excel 的 MDS 增益集中的資料品質比對
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  經過一段時間後，您需要將更多的資料加入至 MDS 儲存機制。 在加入資料之前，比較新資料與已在 MDS 中管理的資料，有助於確保不會加入重複或不精準的資料。  
+  經過一段時間後，您需要將更多的資料加入至 MDS 儲存機制。 在新增資料之前，比較新資料與已在 MDS 中受控的資料，有助於確保不會新增重複或不精準的資料。  
   
- MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Data Quality Services (DQS) 功能，比較相似資料。 當您使用增益集的比對功能時，相似記錄會群組在一起，而且會顯示代表結果精確度的分數。 如需有關 DQS 所提供之比對功能的詳細資訊，請參閱＜ [Data Matching](../../data-quality-services/data-matching.md)＞。  
+ MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Data Quality Services (DQS) 功能來比較相似的資料。 當您使用增益集的比對功能時，相似記錄會群組在一起，而且會顯示代表結果精確度的分數。 如需有關 DQS 所提供之比對功能的詳細資訊，請參閱＜ [Data Matching](../../data-quality-services/data-matching.md)＞。  
   
 ## <a name="workflow-for-data-quality-matching"></a>資料品質比對的工作流程  
  搭配使用 DQS 與 MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]時，請使用下列工作流程：  

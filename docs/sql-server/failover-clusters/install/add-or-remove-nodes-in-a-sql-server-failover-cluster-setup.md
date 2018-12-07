@@ -18,12 +18,12 @@ ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 80f4801fec7cdfc35d48d0fa608876cda4783235
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 00a845104de324dfc4bee50e6feba035d1592f98
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703686"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510886"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>在 SQL Server 容錯移轉叢集中加入或移除節點 (安裝程式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "51703686"
   
 8.  在 [叢集節點組態] 頁面上，使用下拉式方塊來指定將要在此安裝程式作業期間修改之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的名稱。  
   
-9. 在 [伺服器組態 - 服務帳戶] 頁面中，指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務的登入帳戶。 在這個頁面上所設定的實際服務隨著您選取要安裝的功能而不同。 若為容錯移轉叢集安裝，系統就會根據針對使用中節點所提供的設定，在這個頁面上預先填入帳戶名稱和啟動類型資訊。 不過，您必須提供每個帳戶的密碼。 如需詳細資訊，請參閱 [伺服器組態 - 服務帳戶](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 和 [設定 Windows 服務帳戶與權限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+9. 在 [伺服器設定 - 服務帳戶] 頁面中，指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務的登入帳戶。 在這個頁面上所設定的實際服務隨著您選取要安裝的功能而不同。 若為容錯移轉叢集安裝，系統就會根據針對使用中節點所提供的設定，在這個頁面上預先填入帳戶名稱和啟動類型資訊。 不過，您必須提供每個帳戶的密碼。 如需詳細資訊，請參閱 [伺服器組態 - 服務帳戶](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 和 [設定 Windows 服務帳戶與權限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
      **安全性注意事項** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   

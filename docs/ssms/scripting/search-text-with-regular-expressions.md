@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa7424ec1883ec7f9dcc488ec231bcfcd7f6d601
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 58a824164a694239faeb5dbfc9ce18ba260f518f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642904"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538801"
 ---
 # <a name="search-text-with-regular-expressions"></a>使用規則運算式搜尋文字
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,8 +65,8 @@ ms.locfileid: "51642904"
   
 |運算式|語法|Description|  
 |----------------|------------|-----------------|  
-|最少 — 零或多個|@|符合零或多個前導運算式出現項目，相符的字元數盡可能少。|  
-|最少 — 一或多個|#|符合一或多個前導運算式出現項目，相符的字元數儘可能少。|  
+|最少 - 零或多個|@|符合零或多個前導運算式出現項目，相符的字元數盡可能少。|  
+|最少 - 一或多個|#|符合一或多個前導運算式出現項目，相符的字元數儘可能少。|  
 |重複 n 次|^n|符合 N 個前導運算式的出現項目。 例如 [0-9]^4 符合任何 4 位數序列。|  
 |群組|()|將子運算式分組。|  
 |第 n 個標記文字|\n|在 [尋找或取代] 運算式中，指出第 n 個標記運算式相符的文字，其中 n 是 1 到 9 的數字。<br /><br /> 在 [取代] 運算式中，\0 會插入完整的相符文字。|  

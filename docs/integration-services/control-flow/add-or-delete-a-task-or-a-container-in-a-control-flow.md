@@ -16,12 +16,12 @@ ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7524bd375dcf2c2d34395a0e87c1b3fe7d08ba63
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6f0362ef230cfb620603c874a76e0614f89ab460
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640057"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523111"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>在控制流程中加入或刪除工作或容器
   當您在控制流程設計師中工作時，[ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中的 [工具箱] 會列出 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供用於在封裝中建立控制流程的工作。 如需工具箱的詳細資訊，請參閱 [SSIS 工具箱](../../integration-services/ssis-toolbox.md)。  
@@ -80,7 +80,7 @@ ms.locfileid: "51640057"
 5.  在 [屬性] 視窗中更新屬性值。  
   
     > [!NOTE]  
-    >  大部分的屬性都可以經由直接在文字方塊中輸入某個值，或從清單中選取某個值予以設定。 不過，有些屬性比較複雜，並具有自訂屬性編輯器。 若要設定這種屬性，請按一下文字方塊，然後按一下 [建立] **(…)** 按鈕開啟自訂編輯器。  
+    >  大部分的屬性都可以經由直接在文字方塊中輸入某個值，或從清單中選取某個值予以設定。 不過，有些屬性比較複雜，並具有自訂屬性編輯器。 若要設定這種屬性，請按一下文字方塊，然後按一下建立 ([...]) 按鈕開啟自訂編輯器。  
   
 6.  (選擇性) 建立屬性運算式，以動態方式更新工作或容器的屬性。 如需詳細資訊，請參閱 [加入或變更屬性運算式](../../integration-services/expressions/add-or-change-a-property-expression.md)。  
   

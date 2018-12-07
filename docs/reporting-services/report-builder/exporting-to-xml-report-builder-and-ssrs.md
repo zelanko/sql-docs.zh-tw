@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3cf0f16e4f1a5e831442bf143cd11b45ab2d319f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c2756cbd4dc0a075662b47aaa81d4e4158074147
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813471"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410828"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>匯出至 XML (報表產生器及 SSRS)
   XML 轉譯延伸模組會傳回 XML 格式的分頁報表。 報表 XML 的結構描述為報表特有的，且僅包含資料。 XML 轉譯延伸模組不會轉譯配置資訊，也不會維持分頁。 此延伸模組所產生的 XML 可以匯入資料庫中 (當做 XML 資料訊息使用)，或傳送到自訂應用程式。  
@@ -122,7 +122,7 @@ ms.locfileid: "51813471"
  不會轉譯邊角。 只會轉譯邊角的內容。  
   
 #### <a name="tablix-cells"></a>Tablix 資料格  
- Tablix 資料格會轉譯成元素。 元素的名稱擷取自儲存格的 DataElementName RDL 屬性。  
+ Tablix 資料格會轉譯成元素。 項目名稱擷取自儲存格的 DataElementName RDL 屬性。  
   
 #### <a name="automatic-subtotals"></a>自動小計  
  不會轉譯 Tablix 自動小計。  

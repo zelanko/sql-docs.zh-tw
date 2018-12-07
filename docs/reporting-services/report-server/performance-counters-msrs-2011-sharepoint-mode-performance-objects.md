@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 048503cecc50b684aea1d684cdef4a849ee0378f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b7df0f9ab315adddb3714846601210e54aa987e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030187"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529506"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>效能計數器 MSRS 2011 SharePoint 模式效能物件
   本主題描述屬於 **SharePoint 模式部署一部分之** MSRS 2011 Web 服務 SharePoint 模式 **和** MSRS 2011 Windows 服務 SharePoint 模式 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 效能物件的效能計數器。  
@@ -118,7 +118,7 @@ ms.locfileid: "50030187"
 |**Total Snapshot Updates**|報表執行快照集更新總數。|  
   
 ##  <a name="bkmk_powershell"></a> 使用 PowerShell 指令程式傳回清單  
- ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容")：以下 Windows PowerShell 指令碼會傳回 CounterSetName 開頭為 “msr” 的計數器集合  
+ ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容")：以下 Windows PowerShell 指令碼會傳回 CounterSetName 開頭為 "msr" 的計數器集合  
   
 ```  
 get-counter -listset msr*  
@@ -127,7 +127,7 @@ CounterSetName     : MSRS 2011 Windows Service SharePoint Mode
 CounterSetName     : MSRS 2011 Web Service SharePoint Mode  
 ```  
   
- 以下 Windows PowerShell 指令碼將會傳回 CounterSetName “MSRS 2011 Windows Service SharePoint Mode” 的效能計數器清單。  
+ 以下 Windows PowerShell 指令碼將會傳回 CounterSetName "MSRS 2011 Windows Service SharePoint Mode" 的效能計數器清單。  
   
 ```  
 (get-counter -listset "MSRS 2011 Windows Service SharePoint Mode").paths  

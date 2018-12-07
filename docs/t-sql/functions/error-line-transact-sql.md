@@ -23,17 +23,17 @@ ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fe54b0a56e90dd7c4645fd0e78db7e97f6c838f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9c847b6b04aa4ec1a67b89bf3fa6473b91e13bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770976"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515875"
 ---
 # <a name="errorline-transact-sql"></a>ERROR_LINE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-此函式會傳回發生錯誤造成執行 TRY…CATCH 建構之 CATCH 區塊的行號。  
+此函式會傳回發生錯誤造成執行 TRY...CATCH 建構之 CATCH 區塊的行號。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,7 +58,7 @@ ERROR_LINE ( )
   
 `ERROR_LINE` 會傳回發生錯誤的行號。 不論在 CATCH 區塊範圍內的哪個位置呼叫 `ERROR_LINE`，以及呼叫 `ERROR_LINE` 的次數為何，都是如此。 這有別於 @ERROR 之類的函式。 @ERROR 會在緊接於發生錯誤的陳述式之後的陳述式中，或在 CATCH 區塊的第一個陳述式中，傳回錯誤號碼。  
   
-在巢狀 CATCH 區塊中，`ERROR_LINE` 會傳回參考它的 CATCH 區塊範圍特定的錯誤行號。 例如，TRY…CATCH 建構的 CATCH 區塊可能包含巢狀的 TRY…CATCH 建構。 在巢狀 CATCH 區塊內，`ERROR_LINE` 會傳回叫用巢狀 CATCH 區塊之錯誤的行號。 如果 `ERROR_LINE` 是在外部 CATCH 區塊內執行，它會傳回叫用該特定 CATCH 區塊之錯誤的行號。  
+在巢狀 CATCH 區塊中，`ERROR_LINE` 會傳回參考它的 CATCH 區塊範圍特定的錯誤行號。 例如，TRY...CATCH 建構的 CATCH 區塊可能包含巢狀的 TRY...CATCH 建構。 在巢狀 CATCH 區塊內，`ERROR_LINE` 會傳回叫用巢狀 CATCH 區塊之錯誤的行號。 如果 `ERROR_LINE` 是在外部 CATCH 區塊內執行，它會傳回叫用該特定 CATCH 區塊之錯誤的行號。  
   
 ## <a name="examples"></a>範例  
   

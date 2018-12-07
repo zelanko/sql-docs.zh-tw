@@ -17,12 +17,12 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a02e688f6488fecdaeea6c668bc49d64a5698915
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 52f86e1750858ec7fabcb8fab30dcd23b4306ace
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641795"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509436"
 ---
 # <a name="ftp-task"></a>FTP 工作
   FTP 工作會下載和上傳資料檔以及管理伺服器上的目錄。 例如，封裝可從遠端伺服器或網際網路位置下載資料檔，此工作可視為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝工作流程的一部分。 您可將 FTP 工作用於下列用途：  

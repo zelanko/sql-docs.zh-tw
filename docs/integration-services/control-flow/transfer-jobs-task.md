@@ -17,12 +17,12 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73236a13046257caabc572de24957524d1cb41ea
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d247df4047b95456fb5ccdf1fe8bc1940909388e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639015"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502744"
 ---
 # <a name="transfer-jobs-task"></a>傳送作業工作
   「傳送作業」工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間，傳送一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 作業。  
@@ -116,7 +116,7 @@ ms.locfileid: "51639015"
 |**False**|只複製指定的作業。|  
   
  **JobsList**  
- 按一下瀏覽按鈕 **(…)** 來選取要複製的作業。 必須至少選取一個作業。  
+ 按一下瀏覽按鈕 **(...)** 來選取要複製的作業。 必須至少選取一個作業。  
   
 > [!NOTE]  
 >  選取要複製的作業之前，請指定 **SourceConnection** 。  

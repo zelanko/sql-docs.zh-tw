@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 89ab3aab8806c32c15496a3544e5fc660368d511
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 24c7a50845e4adb416251f25909c438d1bd4990d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604348"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394752"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005-2008-or-2008r2"></a>從 SQL Server 2005、2008 或 2008 R2 升級嗎？
 
@@ -41,9 +41,9 @@ ms.locfileid: "51604348"
   
 |關聯式儲存體選項|優點|其他考量因素|  
 |-------------------------------|--------------|-------------------------------|  
-|**內部部署 SQL Server**<br /><br /> 此選項適用於任何種類 (從交易系統到資料倉儲) 的應用程式。|因為軟硬體皆由您所管理，所以您幾乎能自由操控各項功能與規模調整功能。<br /><br /> 若要 SQL Server 的舊版執行個體升級，這是最相似的環境。|因為您必須購買、維護及管理您所擁有的硬體與軟體，所以此選項的初期投資最高，管理時間也最長。<br /><br /> 如需詳細資訊，請參閱 [SQL Server](https://www.microsoft.com/server-cloud/products/sql-server-2017/)。|  
+|**內部部署 SQL Server**<br /><br /> 此選項適用於任何種類 (從交易系統到資料倉儲) 的應用程式。|因為軟硬體皆由您所管理，所以您幾乎能自由操控各項功能與規模調整功能。<br /><br /> 若要從 SQL Server 的舊版執行個體升級，這是最相似的環境。|因為您必須購買、維護及管理您所擁有的硬體與軟體，所以此選項的初期投資最高，管理時間也最長。<br /><br /> 如需詳細資訊，請參閱 [SQL Server](https://www.microsoft.com/server-cloud/products/sql-server-2017/)。|  
 |**裝載於 Azure 虛擬機器上的 SQL Server**<br /><br /> 您若希望享有下列便利，可考慮此選項：<br /><br /> 移轉到託管環境的優點。<br /><br /> 控制作業環境。<br /><br /> 使用熟悉 SQL Server 功能集。|您可以快速從虛擬機器的映像庫快速進行部署。<br /><br /> 您可以使用完整的 SQL Server 功能集。<br /><br /> 您可以節省在伺服器軟硬體上的投資。 您只需按每小時的使用量付費。|您必須設定及管理 SQL Server 與作業系統軟體。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [Azure 虛擬機器上的 SQL Server 概觀](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)。<br /><br /> 如需移轉的相關資訊，請參閱 [將資料庫移轉至 Azure VM 上的 SQL Server](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/)。|  
-|**裝載 Azure SQL Database 的資料庫服務**<br /><br /> 若您需要價格較低、維護工作較少的解決方案，可以考慮此選項。<br /><br /> 此選項特別適合不需要時時保有相同容量的應用程式，或需要提供外部存取的應用程式。|您可以快速部署及相應增加。<br /><br /> 您只需按每小時的使用量付費。<br /><br /> 服務的費用不只有儲存體而已，還包括高可用性及自動化備份。|Azure SQL Database 所缺少的一些 SQL Server 功能並不適用於託管的雲端環境。 如需詳細資訊，請參閱 [Azure SQL Database Transact-SQL 資訊](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/)。<br /><br /> 相較於 SQL Server 的 524 PB，Azure SQL Database 也有資料庫大小上限 4 TB。 如需詳細資訊，請參閱[單一資料庫的資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)<br /><br /> 如需 SQL Database 的詳細資訊，請參閱 [Azure SQL Database 概觀](https://azure.microsoft.com/services/sql-database/)和 [Azure SQL Database 文件](https://docs.microsoft.com/azure/sql-database/)。<br /><br /> 如需移轉的相關資訊，請參閱 [將 SQL Server Database 移轉到 Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)。|  
+|**裝載 Azure SQL Database 的資料庫服務**<br /><br /> 若您需要價格較低、維護工作較少的解決方案，可以考慮此選項。<br /><br /> 此選項特別適合不需要隨時保有相同容量的應用程式，或需要提供外部存取的應用程式。|您可以快速部署及相應增加。<br /><br /> 您只需按每小時的使用量付費。<br /><br /> 服務的費用不只有儲存體而已，還包括高可用性及自動化備份。|Azure SQL Database 所缺少的一些 SQL Server 功能並不適用於託管的雲端環境。 如需詳細資訊，請參閱 [Azure SQL Database Transact-SQL 資訊](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/)。<br /><br /> 相較於 SQL Server 的 524 PB，Azure SQL Database 也有資料庫大小上限 4 TB。 如需詳細資訊，請參閱[單一資料庫的資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)<br /><br /> 如需 SQL Database 的詳細資訊，請參閱 [Azure SQL Database 概觀](https://azure.microsoft.com/services/sql-database/)和 [Azure SQL Database 文件](https://docs.microsoft.com/azure/sql-database/)。<br /><br /> 如需移轉的相關資訊，請參閱 [將 SQL Server Database 移轉到 Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)。|  
   
  對於某些資料及應用程式，您也可考慮使用非關聯式或 NoSQL 解決方案。  
   

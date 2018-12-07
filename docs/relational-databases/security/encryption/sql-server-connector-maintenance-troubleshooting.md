@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 1acf0e20eb84502fdba5915dfafbf5d4873130c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7bf2dcebf6b9b453a0f5ff839b9eb627698899e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649506"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520695"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 連接器維護和疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +30,8 @@ ms.locfileid: "47649506"
 ### <a name="key-rollover"></a>金鑰變換  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器需要金鑰名稱僅使用字元 “a-z”、“A-Z”、“0-9” 和 “-“，且長度限制為 26 個字元。   
-> Azure 金鑰保存庫中金鑰名稱相同的不同金鑰版本，將不會與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器搭配運作。 若要循環使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]正在使用的 Azure 金鑰保存庫金鑰，必須建立具有新金鑰名稱的新金鑰。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器需要金鑰名稱僅使用字元 "a-z"、"A-Z"、"0-9" 和 "-"，且長度限制為 26 個字元。   
+> Azure 金鑰保存庫中金鑰名稱相同的不同金鑰版本，將不會與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器搭配運作。 若要輪替 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 正在使用的 Azure Key Vault 金鑰，必須建立具有新金鑰名稱的新金鑰。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密的伺服器非對稱金鑰，通常每隔 1-2 年便需要進行版本設定。 請務必注意，雖然金鑰保存庫允許對金鑰進行版本設定，客戶不應該使用該功能來實作版本設定。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器無法處理金鑰保存庫金鑰版本中的變更。 若要實作金鑰版本設定，客戶必須在金鑰保存庫中建立新的金鑰，然後在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]中重新加密資料加密金鑰。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47649506"
     ```sql  
     CREATE CREDENTIAL Azure_EKM_TDE_cred2  
         WITH IDENTITY = 'ContosoDevKeyVault',   
-       SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789=’   
+       SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789='   
     FOR CRYPTOGRAPHIC PROVIDER EKM;  
   
     ALTER LOGIN TDE_Login2  
@@ -119,7 +119,7 @@ ms.locfileid: "47649506"
   
 3.  使用 Windows 的 [程式和功能] 功能解除安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器。  
   
-     或者，您可以重新命名 DLL 檔案所在的資料夾。 資料夾的預設名稱是 “[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for Microsoft Azure Key Vault”。  
+     或者，您可以重新命名 DLL 檔案所在的資料夾。 資料夾的預設名稱是 "[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for Microsoft Azure Key Vault"。  
   
 4.  從 Microsoft 下載中心安裝最新版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "47649506"
 ### <a name="on-azure-key-vault"></a>在 Azure 金鑰保存庫上  
   
 **金鑰作業如何與 Azure 金鑰保存庫搭配運作？**  
- 金鑰保存庫中的非對稱金鑰可用來保護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密金鑰。 只有非對稱金鑰的公開部分可離開保存庫，保存庫絕不會匯出私用部分。 所有使用非對稱金鑰的密碼編譯作業都是在 Azure 金鑰保存庫服務內完成，並受到服務安全性的保護。  
+ 金鑰保存庫中的非對稱金鑰可用來保護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密金鑰。 只有非對稱金鑰的公開部分可離開保存庫，保存庫絕不會匯出私用部分。 所有使用非對稱金鑰的密碼編譯作業都是在 Azure Key Vault 服務內完成，並受到服務安全性的保護。  
   
  **什麼是金鑰 URI？**  
  Azure 金鑰保存庫中的每個金鑰都有統一資源識別碼 (URI)，可用來在您的應用程式中參考該金鑰。 使用 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` 的格式來取得目前的版本，並使用 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` 的格式來取得特定版本。  
@@ -240,9 +240,9 @@ ms.locfileid: "47649506"
 3076 | ErrorHttpResourceNotFound | 伺服器回應 404，因為找不到索引鍵名稱。 請確定保存庫中有索引鍵名稱。
 3077 | ErrorHttpOperationForbidden | 伺服器回應 403，因為使用者沒有適當的權限，不能執行動作。 請確定您有執行指定作業的權限。 連接器至少需要「get、list、wrapKey、unwrapKey」權限，才能正確運作。   
   
-如果在此表格中看不到您的錯誤代碼，以下是一些可能發生此錯誤的原因︰   
+如果在此表格中看不到您的錯誤碼，以下是一些可能發生此錯誤的原因：   
   
--   您可能沒有網際網路存取權，因此無法存取您的 Azure 金鑰保存庫 - 請檢查您的網際網路連線。  
+-   您可能沒有網際網路存取權，因此無法存取您的 Azure Key Vault - 請檢查您的網際網路連線。  
   
 -   Azure 金鑰保存庫服務可能已關閉。 請在其他時間再試一次。  
   

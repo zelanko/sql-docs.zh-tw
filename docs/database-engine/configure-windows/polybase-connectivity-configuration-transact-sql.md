@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b877040c532a0ccb7911e4770d33f9e5f7a709c5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: aa90cb3f34b3aecd236a832a62144914ac2dd249
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602448"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415248"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 連接組態 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]

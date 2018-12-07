@@ -13,12 +13,12 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d09004ae91d7a30c64413f1f5f426e1c9da9fd07
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7b98cab5bffef09bdbbfd353f9f72bbb6d093c9c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696576"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508998"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>全文檢索索引對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51696576"
 展開時會顯示 [資料行] 和 [全文檢索資料庫目錄名稱]。  
   
 **資料行**  
-顯示可使用全文檢索搜尋資料行的逗號分隔清單。 若要查看完整清單，請按屬性欄位左側的省略符號按鈕 (**…**)。  
+顯示可使用全文檢索搜尋資料行的逗號分隔清單。 若要查看完整清單，請按一下屬性欄位左邊的省略符號按鈕 (**...**)。  
   
 **全文檢索資料庫目錄名稱**  
 顯示全文檢索索引儲存位置的全文檢索資料庫目錄名稱。 若要將索引儲存到不同的目錄，請按目錄名稱，然後從下拉式清單選擇另外一個目錄名稱。  

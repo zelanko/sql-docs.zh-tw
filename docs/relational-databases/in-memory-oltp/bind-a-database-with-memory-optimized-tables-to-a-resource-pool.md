@@ -11,12 +11,12 @@ ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e9ea3f4ea5649f6c23d5874c38f151839cbdc4b4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e176906e41e815733ac50f2e1b9e0db90a8d3a5a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672787"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513146"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>將包含記憶體最佳化資料表的資料庫繫結至資源集區
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -176,7 +176,7 @@ GO
 |\<= 96 GB|85%|  
 |>96 GB|90%|  
   
- 例如，如果您的「目標認可的記憶體」為 100 GB，而您估計記憶體最佳化資料表和索引需要 60GB 的記憶體，那麼您可以建立一個 MAX_MEMORY_PERCENT = 67 的資源集區 (需要 60GB / 0.90 = 66.667GB – 四捨五入為 67GB；已安裝 67GB / 100GB = 67%)，確保您的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 物件擁有所需的 60GB。  
+ 例如，如果您的「目標認可的記憶體」為 100 GB，而您估計經記憶體最佳化的資料表和索引需要 60GB 的記憶體，則您可以建立一個 MAX_MEMORY_PERCENT = 67 的資源集區 (需要 60GB / 0.90 = 66.667GB - 四捨五入為 67GB；已安裝 67GB / 100GB = 67%)，確保您的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 物件擁有所需的 60GB。  
   
  資料庫繫結至具名的資源集區後，請使用下列查詢查看跨不同資源集區的記憶體配置。  
   

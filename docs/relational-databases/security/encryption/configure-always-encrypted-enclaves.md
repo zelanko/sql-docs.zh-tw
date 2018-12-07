@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 591dbbc9772378efccb37ca2f7b3af94d37f4529
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 246fa155a8de930cd81d65df633d3f47bed9f56e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677137"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534766"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>設定具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -213,7 +213,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ```
 
 
-### <a name="provisioning-enclave-enabled-keys--azure-key-vault"></a>佈建已啟用記憶體保護區的金鑰 - Azure Key Vault
+### <a name="provisioning-enclave-enabled-keys---azure-key-vault"></a>佈建已啟用記憶體保護區的金鑰 - Azure Key Vault
 
 在用戶端/開發電腦上，開啟 Windows PowerShell ISE，並執行下列指令碼。
 
@@ -237,7 +237,7 @@ $akvKeyName = "<key name>"
 $azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId
 
 # Create a new resource group - skip, if your desired group already exists.
-New-AzureRmResourceGroup –Name $resourceGroup –Location $azureLocation
+New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation
 
 # Create a new key vault - skip if your vault already exists.
 New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation
@@ -511,7 +511,7 @@ GO
 - 缺點：
   - 不支援將加密類型從確定性變更為隨機化，因此在它解除鎖定確定性加密資料行的就地加密時，不會啟用豐富計算。
   - 不允許您選擇性地轉換與指定資料行主要金鑰建立關聯的一些資料行。
-  - 引進金鑰管理額外負荷；您需要建立新的資料行主要金鑰，並讓它可供查詢受影響資料行的應用程式使用。  
+  - 引進金鑰管理額外負荷；您需要建立新的資料行主要金鑰，並讓查詢受影響資料行的應用程式可取得它。  
 
 
 #### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>選項 2：此方法包含兩個步驟：1) 輪替資料行主要金鑰 (如選項 1) 以及 2) 使用隨機化加密來重新加密一小部分的確定性加密資料行，以啟用這些資料行的豐富計算。
@@ -522,7 +522,7 @@ GO
   
 - 缺點：
   - 不允許您選擇性地轉換與指定資料行主要金鑰建立關聯的一些資料行。
-  - 它引進金鑰管理額外負荷；您需要建立新的資料行主要金鑰，並讓它可供查詢受影響資料行的應用程式使用。
+  - 它引進金鑰管理額外負荷；您需要建立新的資料行主要金鑰，並讓查詢受影響資料行的應用程式可取得它。
 
 #### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>選項 3：在用戶端使用已啟用記憶體保護區的新資料行加密金鑰和隨機化加密 (需要時) 重新加密選取的資料行。
   
@@ -741,7 +741,7 @@ GO
 
 對已啟用記憶體保護區之資料行嘗試豐富查詢的最快方式，是從已啟用 Always Encrypted 參數化的 SSMS 查詢視窗。 如需 SSMS 中此有用功能的詳細資料，請參閱：
 
-- [Parameterization for Always Encrypted – Using SSMS to Insert into, Update and Filter by Encrypted Columns](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/) (Always Encrypted 的參數化 - 使用 SSMS 插入、更新並依加密資料行篩選)
+- [Always Encrypted 的參數化 - 使用 SSMS 插入、更新並依加密資料行篩選](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/) \(英文\)
 - [查詢加密資料行](configure-always-encrypted-using-sql-server-management-studio.md#querying-encrypted-columns)
 
 
@@ -758,7 +758,7 @@ GO
 2.  啟用 Always Encrypted 的參數化。
     
     1.  從 SSMS 的主功能表中，選取 [查詢]。
-    2.  選取 [查詢選項...] 。
+    2.  選取 [查詢選項]。
     3.  瀏覽至 [執行] > [進階]。
     4.  選取或取消選取 [啟用 Always Encrypted 的參數化]。
     5.  按一下 [確定]。

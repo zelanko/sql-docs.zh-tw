@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1b0c54bf494055567e7a8c8fc59fe001ac843cfa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dfd06b590ba54efc935bab1bbe8c898101e827ae
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671681"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518612"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解決記憶體不足問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "51671681"
   
 |主題|概觀|  
 |-----------|--------------|  
-|[解決由於 OOM 所造成的資料庫還原失敗](#bkmk_resolveRecoveryFailures)|若您收到錯誤訊息：「資料庫 '*\<資料庫名稱>*' 的還原作業因為資源集區 '*\<資源集區名稱>*' 中的記憶體不足而失敗」，該怎麼辦。|  
+|[解決由於 OOM 所造成的資料庫還原失敗](#bkmk_resolveRecoveryFailures)|若您收到錯誤訊息：「資料庫 '\<資料庫名稱>' 的還原作業因為資源集區 '\<資源集區名稱>' 中的記憶體不足而失敗」，該怎麼辦。|  
 |[解決低記憶體或 OOM 狀況對於工作負載的影響](#bkmk_recoverFromOOM)|如果您發現低記憶體問題對於效能造成負面影響，該怎麼辦。|  
-|[解決有足夠的記憶體可用但卻記憶體不足所造成的頁面配置失敗](#bkmk_PageAllocFailure)|若您收到錯誤訊息：「不允許資料庫 '*\<資料庫名稱>*' 的頁面配置，因為資源集區 '*\<資源集區名稱>*' 中的記憶體不足」，該怎麼辦。 …” 前提是可用的記憶體足夠供執行作業。|
+|[解決有足夠的記憶體可用但卻記憶體不足所造成的頁面配置失敗](#bkmk_PageAllocFailure)|若您收到錯誤訊息：「不允許資料庫 '\<資料庫名稱>' 的頁面配置，因為資源集區 '\<資源集區名稱>' 中的記憶體不足」，該怎麼辦。 ...」(前提是可用的記憶體足夠供執行作業)。|
 |[在 VM 環境中使用記憶體內部 OLTP 的最佳做法](#bkmk_VMs)|在虛擬環境中使用記憶體內部 OLTP 的注意事項。|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> 解決由於 OOM 所造成的資料庫還原失敗  
- 當您嘗試還原資料庫時，可能會收到錯誤訊息：「資料庫 '*\<資料庫名稱>*' 的還原作業因為資源集區 '*\<資源集區名稱>*' 中的記憶體不足而失敗」。這表示伺服器沒有足夠的可用記憶體來還原資料庫。 
+ 當您嘗試還原資料庫時，可能會收到錯誤訊息：「資料庫 '\<資料庫名稱>' 的還原作業因為資源集區 '\<資源集區名稱>' 中的記憶體不足而失敗」。這表示伺服器沒有足夠的可用記憶體來還原資料庫。 
    
 您還原資料庫的目標伺服器針對資料庫備份的記憶體最佳化資料表必須有足夠的可用記憶體，否則資料庫將不會恢復連線，並會標記為可疑。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "51671681"
 2.  [採取更正動作](#bkmk_takeCorrectiveAction)  
   
 ###  <a name="bkmk_openDAC"></a> 開啟 DAC (專用管理員連接)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供專用管理員連接 (DAC)。 即使伺服器對其他用戶端連接沒有回應，系統管理員也可以使用 DAC 來存取 SQL Server Database Engine 的執行中執行個體，以針對伺服器上的問題進行疑難排解。 您可以透過 `sqlcmd` 公用程式與 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來存取 DAC。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供專用管理員連接 (DAC)。 即使伺服器對其他用戶端連接沒有回應，系統管理員也可以使用 DAC 來存取 SQL Server 資料庫引擎的執行中執行個體，以針對伺服器上的問題進行疑難排解。 您可以透過 `sqlcmd` 公用程式與 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來存取 DAC。  
   
  如需透過 SSMS 或 `sqlcmd` 使用 DAC 的指導，請參閱[資料庫管理員的診斷連線](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。  
   
@@ -130,7 +130,7 @@ GO
  如需 MAX_MEMORY_PERCENT 之最大值的資訊，請參閱主題章節： [可用於記憶體最佳化資料表和索引的記憶體百分比](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)。  
   
 ##### <a name="install-additional-memory"></a>安裝額外記憶體  
- 最佳的終極解決方案還是安裝額外的實體記憶體 (如果可行)。 如果您這樣做，請記住，因為 [不太可能需要更多記憶體，所以您或許能夠一併提高 MAX_MEMORY_PERCENT 的值 (請參閱](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)變更現有集區上的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 子主題)，以便將大部分新安裝的記憶體提供給資源集區。  
+ 最佳的終極解決方案還是安裝額外的實體記憶體 (如果可行)。 如果您這樣做，請記住，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不太可能需要更多記憶體，所以您或許能夠一併提高 MAX_MEMORY_PERCENT 的值 (請參閱[變更現有集區上的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation) 子主題)，以便將大部分新安裝的記憶體提供給資源集區。  
   
 > [!IMPORTANT]  
 >  如果伺服器是在 VM 上執行，而且不是專用的，請將 MIN_MEMORY_PERCENT 與 MAX_MEMORY_PERCENT 設為相同值。   
@@ -153,7 +153,7 @@ GO
 -  如果您使用最小伺服器記憶體，最好只要指派所需的記憶體數量，這樣才能保留足夠的記憶體給其他處理序 (進而避免分頁)。
 -  不要設定太高的記憶體預先配置值。 否則，其他程序可能會在需要時，無法得到足夠的記憶體，而導致記憶體分頁。
 
-如果您為具有記憶體最佳化資料表的資料庫遵循上述作法，即使您有足夠的記憶體來還原資料庫，在嘗試還原和復原資料庫時，還是會導致資料庫陷入「復原暫止」狀態。 原因如下，在啟動時，記憶體內部 OLTP 將資料帶入記憶體的積極程度，遠勝於動態記憶體配置將記憶體配置給資料庫。
+如果您為具有經記憶體最佳化資料表的資料庫遵循上述作法，即使您有足夠的記憶體來復原資料庫，在嘗試還原和復原資料庫時，還是會導致資料庫陷入「復原暫止」狀態。 原因如下，在啟動時，記憶體內部 OLTP 將資料帶入記憶體的積極程度，遠勝於動態記憶體配置將記憶體配置給資料庫。
 
 ### <a name="resolution"></a>解決方案
 若要緩和這個問題，請預先配置足夠的記憶體給資料庫，以復原或重新啟動資料庫，而不是提供最小值，依賴動態記憶體在需要時提供額外的記憶體。

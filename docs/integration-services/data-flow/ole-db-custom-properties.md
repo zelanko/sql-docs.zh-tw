@@ -11,12 +11,12 @@ ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9942a24879e9e9c8d3b2bfa0c20c0f3f7400992
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: cb7cf5fed46000c77634ad0c5461b926d6c361dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638985"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524515"
 ---
 # <a name="ole-db-custom-properties"></a>OLE DB 自訂屬性
   **來源自訂屬性**  
@@ -52,7 +52,7 @@ ms.locfileid: "51638985"
   
 |屬性名稱|資料類型|Description|  
 |-------------------|---------------|-----------------|  
-|AccessMode|整數 (列舉)|一個值，指定目的地如何存取其目的地資料庫。<br /><br /> 此屬性可以有下列其中一個值：<br /><br /> <br /><br /> **OpenRowset** (0) - 您必須提供資料表或檢視表的名稱。<br /><br /> **從變數 OpenRowset** (1) - 您必須提供包含資料表或檢視表名稱之變數的名稱。<br /><br /> **使用 FastLoad OpenRowset** (3) - 您必須提供資料表或檢視表的名稱。<br /><br /> **從變數使用 FastLoad OpenRowset** (4) - 您必須提供包含資料表或檢視表名稱之變數的名稱。<br /><br /> **SQL 命令** (2) - 您要提供 SQL 陳述式。|  
+|AccessMode|整數 (列舉)|一個值，指定目的地如何存取其目的地資料庫。<br /><br /> 此屬性可以有下列其中一個值：<br /><br /> <br /><br /> **OpenRowset** (0)- 您必須提供資料表或檢視表的名稱。<br /><br /> **從變數 OpenRowset** (1)- 您必須提供包含資料表或檢視表名稱之變數的名稱。<br /><br /> **使用 FastLoad OpenRowset** (3)- 您必須提供資料表或檢視表的名稱。<br /><br /> **從變數使用 FastLoad OpenRowset** (4)- 您必須提供包含資料表或檢視表名稱之變數的名稱。<br /><br /> **SQL 命令** (2)- 您要提供 SQL 陳述式。|  
 |AlwaysUseDefaultCodePage|布林|一個值，指出要針對每個資料行使用 **DefaultCodePage** 屬性的值，還是嘗試從每個資料行的地區設定中衍生字碼頁。 此屬性的預設值為 **False**。|  
 |CommandTimeout|Integer|逾時之前 SQL 命令可以執行的秒數上限。值為 0 指出無限的時間。 這個屬性的預設值為 0。<br /><br /> 注意：雖然您無法在 [OLE DB 目的地編輯器] 中使用這個屬性，但是可以使用 [進階編輯器] 來設定這個屬性。|  
 |DefaultCodePage|Integer|與 OLE DB 目的地相關聯的預設字碼頁。|  

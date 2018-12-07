@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: db904742a73ec3837bfffe1eaecffbe37ca5c154
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a63512de9229f26e6e04ad5f44c5dd1c757cb881
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763246"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391691"
 ---
 # <a name="configurationsetting-method---setwindowsserviceidentity"></a>ConfigurationSetting 方法 - SetWindowsServiceIdentity
   讓報表伺服器 Windows 服務以指定之 Windows 使用者的身分執行，並且授與此帳戶足夠的檔案系統權限，以便允許報表伺服器運作。  
@@ -56,7 +56,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ## <a name="remarks"></a>Remarks  
  當 *UseBuiltInAccount* 參數設定為 **true** ，而且報表伺服器正在 Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] 或 Windows XP 上執行時，系統會忽略 *Name*、 *Domain*和 *Password* 參數的值並且使用本機系統帳戶。  
   
- 當 *UseBuiltInAccount* 參數設定為 **true** ，而且報表伺服器正在 Windows Server 2003 上執行時，系統會忽略 *Domain* 和 *Password* 屬性，而且名稱欄位必須包含 “Builtin\NetworkService”、“Builtin\System” 或 “Builtin\LocalService”。  
+ 當 *UseBuiltInAccount* 參數設定為 **true** ，且報表伺服器正在 Windows Server 2003 上執行時，系統會忽略 *Domain* 和 *Password* 屬性，而且名稱欄位必須包含 "Builtin\NetworkService"、"Builtin\System" 或 "Builtin\LocalService"。  
   
  SetWindowsServiceIdentity 方法會在報表伺服器安裝目錄中設定檔案與資料夾的檔案權限。  
   

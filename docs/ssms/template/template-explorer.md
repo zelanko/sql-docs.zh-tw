@@ -20,16 +20,16 @@ ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94842b8da4a9aeee8303b4fef18511234ce34346
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 813196518f7fc3b258e9b9fbe39bdd4b88089241
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783847"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416125"
 ---
 # <a name="template-explorer"></a>範本總管
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供各種範本。 範本為包含 SQL 指令碼的模板檔案，可協助您在資料庫中建立物件。 第一次開啟範本總管時，範本的複本是放置在 C:\Users 使用者資料夾的 AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates 底下。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供各種範本。 範本為包含 SQL 指令碼的模板檔案，可協助您在資料庫中建立物件。 第一次開啟範本總管時，範本的複本是放置在 C:\Users 使用者資料夾的 AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates 下。  
   
 您可以在 [範本總管] 中瀏覽可用的範本，然後開啟範本以將程式碼併入程式碼編輯器視窗。 您還可以建立自訂範本。  
   

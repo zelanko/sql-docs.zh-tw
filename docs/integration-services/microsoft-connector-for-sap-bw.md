@@ -11,12 +11,12 @@ ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2fbb7e2458432bb39ff452b703441fc320d2e645
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a06dcac3487220a84d8a22f6c92e02859e91a6f8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639575"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510063"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW 包含了三個為一組的元件，可讓您擷取 SAP Netweaver BW 版本 7 系統中的資料，或是將資料載入至該系統。  
@@ -35,11 +35,11 @@ ms.locfileid: "51639575"
 ## <a name="components"></a>Components  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW 具有下列元件：  
   
--   **SAP BW 來源**：SAP BW 來源是一個資料流程來源元件，可讓您擷取 SAP Netweaver BW 版本 7 系統中的資料。  
+-   **SAP BW 來源** - SAP BW 來源是一個資料流程來源元件，可讓您擷取 SAP Netweaver BW 版本 7 系統中的資料。  
   
--   **SAP BW 目的地**：SAP BW 目的地是一個資料流程目的地元件，可讓您將資料載入至 SAP Netweaver BW 版本 7 系統中。  
+-   **SAP BW 目的地** - SAP BW 目的地是一個資料流程目的地元件，可讓您將資料載入至 SAP Netweaver BW 版本 7 系統中。  
   
--   **SAP BW 連線管理員**：SAP BW 連線管理員可將 SAP BW 來源或 SAP BW 目的地連接至 SAP Netweaver BW 版本 7 系統。  
+-   **SAP BW 連線管理員** - SAP BW 連線管理員可將 SAP BW 來源或 SAP BW 目的地連接至 SAP Netweaver BW 版本 7 系統。  
   
  如需示範如何設定及使用 SAP BW 連線管理員、來源和目的地的逐步解說，請參閱技術白皮書： [Using SQL Server Integration Services with SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkId=301897)(搭配 SAP BI 7.0 使用 SQL Server Integration Services)。 這份技術白皮書也會示範如何設定 SAP BW 中的必要物件。  
   

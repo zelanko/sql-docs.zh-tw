@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5e8ebbbd4b9b507e8f41af26be70c676afe61c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4adfad731797d7c210787bdfaae3defa3e0a12ea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803486"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519557"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>規劃在 SQL Server 中採用記憶體內部 OLTP 功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -297,7 +297,7 @@ READPAST 提示在一些案例中很有幫助，例如數個工作階段全都�
 您可以讓您的 Transact-SQL 指令碼更能應付可能的交易錯誤，方法是在指令碼新增「重試邏輯」。 在 UPDATE 和 DELETE 呼叫很頻繁時，或是另一個資料表中的外部索引鍵參考了記憶體最佳化的資料表時，重試邏輯更可能有幫助。 如需詳細資料，請參閱：
 
 - [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
-- [記憶體最佳化資料表的交易相依性限制 – 錯誤 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
+- [Transaction dependency limits with memory optimized tables - Error 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/) (經記憶體最佳化資料表的交易相依性限制 - 錯誤 41839)
 
 
 

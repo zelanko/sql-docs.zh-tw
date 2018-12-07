@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: adb9e24e86f6552c9d08a5c495f4e04283eaa7f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51485f1d1bbe120b42371c9d04a9d4576ac8d0d4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628426"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391541"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>記憶體內部 OLTP 不支援的 SQL Server 功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,8 +32,8 @@ ms.locfileid: "47628426"
 |不支援的功能|功能描述|  
 |-------------------------|-------------------------|  
 |記憶體最佳化之資料表的資料壓縮。|使用資料壓縮功能有助於將資料壓縮在資料庫內及縮小資料庫的大小。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
-|經記憶體最佳化的資料表和雜湊索引，以及非叢集索引的資料分割。|資料分割資料表和索引的資料，已分成可以在資料庫中的多個檔案群組之間分佈的單位。 如需詳細資訊，請參閱 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。|  
-| 複寫 | 複寫組態除了訂閱者端對經記憶體最佳化的資料表的異動複寫以外，與參考記憶體最佳化資料表的資料表或檢視表並不相容。<br /><br />若有經記憶體最佳化的檔案群組，就不支援使用 sync_mode=’database snapshot’ 的複寫。<br /><br />如需詳細資訊，請參閱[複寫至記憶體最佳化資料表訂閱者](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)。|
+|經記憶體最佳化的資料表和雜湊索引，以及非叢集索引的資料分割。|資料分割資料表和索引的資料，已分成可以在資料庫中的多個檔案群組之間分佈的單位。 如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。|  
+| 複寫 | 複寫組態除了訂閱者端對經記憶體最佳化的資料表的異動複寫以外，與參考記憶體最佳化資料表的資料表或檢視表並不相容。<br /><br />若有經記憶體最佳化的檔案群組，即不支援使用 sync_mode='database snapshot' 的複寫。<br /><br />如需詳細資訊，請參閱[複寫至記憶體最佳化資料表訂閱者](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)。|
 |鏡像|具有 MEMORY_OPTIMIZED_DATA 檔案群組的資料庫不支援資料庫鏡像。 如需鏡像的詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。|  
 |重建記錄檔|具有 MEMORY_OPTIMIZED_DATA 檔案群組的資料庫不支援透過附加或 ALTER DATABASE 重建記錄檔。|  
 |連結的伺服器|在以記憶體最佳化資料表形式的相同查詢或交易中，您無法存取連結的伺服器。 如需詳細資訊，請參閱 [連結的伺服器 &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)。|  

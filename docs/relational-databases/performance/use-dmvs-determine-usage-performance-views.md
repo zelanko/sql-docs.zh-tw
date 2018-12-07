@@ -9,25 +9,22 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 05a02bae41ff2d39d9415154fd1aeabeee065c82
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4181615840f62b6e4e8a7447f559f4f0c50eb206
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668547"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586311"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>使用 DMV 來判斷檢視表的使用方式統計資料和效能
+本文涵蓋用來取得**使用檢視表的查詢效能**相關資訊的方法和指令碼。 這些指令碼的目的是提供資料庫內找到之各種檢視表的使用和效能指示器。 
 
-本文涵蓋的方法和指令碼用來取得資料庫物件中**使用檢視表的查詢效能**資訊。 這些指令碼的目的是提供資料庫內找到之各種檢視表的使用和效能指示器。 
-
-## <a name="sysdmexecqueryoptimizerinfo"></a>Sys.dm_exec_query_optimizer_info
-
-DMV [sys.dm_exec_query_optimizer_info](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql) 會公開 SQL Server 查詢最佳化工具所執行的最佳化統計資料。 這些值會累計，並且在 SQL Server 啟動時開始錄製。  
+## <a name="sysdmexecqueryoptimizerinfo"></a>sys.dm_exec_query_optimizer_info
+DMV [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) 會公開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具所執行的最佳化統計資料。 這些值會累計，並且在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時開始錄製。 如需查詢最佳化工具的詳細資訊，請參閱[查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)。   
 
 下面 common_table_expression (CTE) 使用此 DMV 提供工作負載的資訊 (例如參考檢視的查詢百分比)。 此查詢所傳回的結果不表示本身有效能問題，但可以在結合使用者對緩慢執行查詢的抱怨時公開基礎問題。 
 
-
-```SQL
+```sql
 WITH CTE_QO AS
 (
   SELECT
@@ -104,17 +101,17 @@ PIVOT (MAX([%]) FOR [counter]
       ,[fast forward cursor request])) AS p;
 GO
 ```
-結合此查詢的結果與系統檢視表 [sys.views](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-views-transact-sql) 的結果，來識別查詢統計資料、查詢文字和快取的執行計畫。 
 
-## <a name="sysviews"></a>Sys.views
+結合此查詢的結果與系統檢視表 [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md) 的結果，來識別查詢統計資料、查詢文字和快取的執行計畫。 
 
+## <a name="sysviews"></a>sys.views
 下面 CTE 提供執行次數、總執行時間以及從記憶體讀取的頁面資訊。 結果可以用來識別可能為最佳化候選項目的查詢。 
   
-  >[!NOTE]
-  > 此查詢的結果會根據 SQL Server 版本而不同。  
+> [!NOTE]
+> 此查詢的結果會根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本而不同。  
 
 
-```SQL
+```sql
 WITH CTE_VW_STATS AS
 (
   SELECT
@@ -168,12 +165,10 @@ CROSS APPLY
 GO
 ```
 
-## <a name="sysdmvexeccachedplans"></a>Sys.dmv_exec_cached_plans
+## <a name="sysdmvexeccachedplans"></a>sys.dmv_exec_cached_plans
+最終查詢使用 DMV [sys.dmv_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) 來提供未使用檢視表的資訊。 不過，執行計畫快取是動態的，而且結果可能會不同。 因此，使用此查詢一段時間，來判斷是否實際使用檢視表。 
 
-最終查詢使用 DMV [sys.dmv_exec_cached_plans](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql) 來提供未使用檢視表的資訊。 不過，執行計畫快取是動態的，而且結果可能會不同。 因此，使用此查詢一段時間，來判斷是否實際使用檢視表。 
-
-
-```SQL
+```sql
 SELECT
   SCHEMA_NAME(vw.schema_id) AS schemaname
   ,vw.name AS name
@@ -198,11 +193,11 @@ WHERE
 GO
 ```
 
-## <a name="related-external-resources"></a>相關外部資源
-
-- [DMVs for Performance Tuning (Video - SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k) (DMV 以微調效能 (影片 - SQL Saturday Pordenone))
-- [DMVs for Performance Tuning (Slide e Demo - SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409) (DMV 以微調效能 (以投影片放映示範 - SQL Saturday Pordenone))
-- [SQL Server Tuning in capsule form (movie-SQL Saturday Parma)](https://vimeo.com/200980883) (膠囊形式的 SQL Server 微調 (影片 - SQL Saturday Parma))
-- [SQL Server Tuning in a nutshell (slides and Demo-SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988) (SQL Server 概括微調 (投影片和示範 - SQL Saturday Parma))
-- [Performance Tuning With SQL Server Dynamic Management Views](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views) (SQL Server 動態管理檢視表的效能微調)
-- [The Most Prominent Wait Types of your SQL Server 2016](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016) (SQL Server 2016 的最顯著等候類型)
+## <a name="see-also"></a>另請參閱
+[動態管理檢視和函數](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[DMV 以微調效能 (影片 - SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)  \(英文\)  
+[DMV 以微調效能 (以投影片放映示範 - SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)  \(英文\)  
+[膠囊形式的 SQL Server 微調 (影片 - SQL Saturday Parma)](https://vimeo.com/200980883)   \(英文\)  
+[SQL Server 微調概要 (投影片和示範 - SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)  \(英文\)  
+[SQL Server 動態管理檢視表的效能微調](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)  \(英文\)  
+[The Most Prominent Wait Types of your SQL Server 2016](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016) (SQL Server 2016 的最顯著等候類型)   

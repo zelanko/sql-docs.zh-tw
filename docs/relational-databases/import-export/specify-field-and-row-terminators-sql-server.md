@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3a171b8a55394ae974cdc9e891e94bd84c9511f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc197fdb8571df79e1ea39cf49086a1cea68b4f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653366"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543798"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定欄位與資料列結束字元 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47653366"
 |反斜線*|\\\|  
 |Null 結束字元 (看不見的結束字元)**|\0|  
 |任何可列印的字元 (除了 Null 值、定位點、新行字元和 Return 鍵外，控制字元均無法列印)|(*、A、t、l 等等)|  
-|最多包含 10 個可列印字元的字串，包括先前所列的一些或所有結束字元|(**\t\*\*、end、!!!!!!!!!!、\t—\n 等等)|  
+|最多包含 10 個可列印字元的字串，包括先前所列的一些或所有結束字元|(**\t\*\*、end、!!!!!!!!!!、\t-\n 等等)|  
   
  *只有 t、n、r、0 和 '\0' 字元可以與反斜線逸出字元搭配使用，以產生控制字元。  
   

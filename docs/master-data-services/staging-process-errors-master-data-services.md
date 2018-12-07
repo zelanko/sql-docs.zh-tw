@@ -14,12 +14,12 @@ ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 65239f7dbdb0690115f50172ea34f72a62924250
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a47b9b13c5de6368b14b6767ea71d8e888da4c72
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798066"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395387"
 ---
 # <a name="staging-process-errors-master-data-services"></a>暫存處理序錯誤 (Master Data Services)
 
@@ -31,7 +31,7 @@ ms.locfileid: "47798066"
 |----------|-----------|--------------------------|----------------------|  
 |210001|暫存資料表中多次出現相同的成員代碼。|您的暫存批次多次包含相同的成員代碼。 未建立或更新任何成員。|分葉<br /><br /> 合併<br /><br /> 關聯性|  
 |210003|屬性值參考的成員不存在或為非使用中。|暫存網域型屬性時，您必須使用代碼，而不是名稱。 適用於 **ImportType0**、 **1**及 **2**。|分葉<br /><br /> 合併|  
-|210006|成員代碼非使用中。|**ImportType** = **1** ，而且您指定的成員代碼不存在。|分葉<br /><br /> 合併<br /><br /> 關聯性|  
+|210006|成員代碼非使用中。|**ImportType** = **1**，而且您指定的成員代碼不存在。|分葉<br /><br /> 合併<br /><br /> 關聯性|  
 |210032|階層名稱遺漏或無效。|找不到明確階層，或 **HierarchyName** 值空白。|合併<br /><br /> 關聯性|  
 |210035|程式碼產生商務規則不存在，因此需要 **MemberCode** 。|建立或更新成員時，除非您要使用自動程式碼產生，否則一律需要 **MemberCode** 。 如需詳細資訊，請參閱[自動建立代碼 &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)。|分葉<br /><br /> 合併|  
 |210036|程式碼產生商務規則存在，因此不需要 **MemberCode** 。|建立或更新成員時，如果您要使用自動程式碼產生，則不需要 **MemberCode** 。 不過，您可以選擇指定一個代碼。 如需詳細資訊，請參閱[自動建立代碼 &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)。|分葉<br /><br /> 合併|  

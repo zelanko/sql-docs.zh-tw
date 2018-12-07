@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 94616b5950ca1ff7f33d9061d2bbc8bab53fbc8c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 719fc39579f76b8f028de27cf8d22623968231c6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602628"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405965"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>設定 Always On 可用性群組中的複寫散發資料庫
 
@@ -48,7 +48,7 @@ SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 透過下列機制引進 AG 中�
 - 新增或移除現有散發資料庫 AG 中的節點。
 - 散發者可以有多個散發資料庫。 每個散發資料庫都可以在自己的 AG 中，而且不可以在任何 AG 中。 多個散發資料庫可以共用 AG。
 - 發行者和散發者需要位在不同的 SQL Server 執行個體上。
-- 如果裝載散發資料庫之可用性群組的接聽程式設定為使用非預設連接埠，則必須為接聽程式和非預設連接埠設定別名。
+- 如果裝載散發資料庫之可用性群組的接聽程式設定為使用非預設連接埠，則必須為接聽程式和非預設連接埠設定別名。 以前在所有發行者、散發者和訂閱者的複本上都需要建立此別名 (供訂閱者在提取模式中執行)。 
 
 ## <a name="limitations-or-exclusions"></a>限制或排除
 

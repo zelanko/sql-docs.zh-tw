@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c3faf4bb4b9f2a180bc09c91591ce6f6a9c3f15
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 1b9bb2a1744b7fdc8b734ab3435ef53e0710d8c8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605468"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411515"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升級 AlwaysOn 可用性群組複本執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -191,7 +191,7 @@ ms.locfileid: "51605468"
 
 >[!IMPORTANT]
 >- 請在每個步驟之間驗證同步。 在繼續下一個步驟前，請確認您的同步認可複本在可用性群組內確實同步，而且您的全域主要與分散式 AG 中的轉寄站同步。 
->- **建議**：在您每次驗證同步時，都在 SQL Server Management Studio 中重新整理資料庫節點和分散式 AG 節點。 在所有項目都同步後，請儲存各複本狀態的螢幕擷取畫面。 這有助於您掌握當下進行到哪個步驟，證明一切都在進行下一步之前正常運作，並在發生任何錯誤時協助您進行疑難排解。 
+>- **建議**：在您每次驗證同步時，都在 SQL Server Management Studio 中重新整理資料庫節點和分散式 AG 節點。 在所有項目都同步後，請儲存各複本狀態的螢幕擷取畫面。 這有助於您掌握當下進行到哪個步驟，證明在進行下一步之前一切運作正常，並在發生任何錯誤時協助您進行疑難排解。 
 
 
 ### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>分散式可用性群組輪流升級的圖表範例
@@ -223,7 +223,7 @@ ms.locfileid: "51605468"
 
 >[!IMPORTANT]
 >- 請在每個步驟之間驗證同步。 在繼續下一個步驟前，請確認您的同步認可複本在可用性群組內確實同步，而且您的全域主要與分散式 AG 中的轉寄站同步。 
->- 建議：在您每次驗證同步時，都在 SQL Server Management Studio 中重新整理資料庫節點和分散式 AG 節點。 在所有項目都同步處理後，請建立螢幕擷取畫面並加以儲存。 這有助於您掌握當下進行到哪個步驟，證明一切都在進行下一步之前正常運作，並在發生任何錯誤時協助您進行疑難排解。 
+>- 建議：在您每次驗證同步時，都在 SQL Server Management Studio 中重新整理資料庫節點和分散式 AG 節點。 在所有項目都同步處理後，請建立螢幕擷取畫面並加以儲存。 這有助於您掌握當下進行到哪個步驟，證明在進行下一步之前一切運作正常，並在發生任何錯誤時協助您進行疑難排解。 
 
 
 ## <a name="special-steps-for-change-data-capture-or-replication"></a>異動資料擷取或複寫的特殊步驟

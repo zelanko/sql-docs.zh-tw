@@ -17,12 +17,12 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 93abc35fca7d04d1a8fffb84de93b8739685818f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c93844267fd91f248c073b00b12c4a07d16d7da5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697886"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525287"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>建立新的 SQL Server 容錯移轉叢集 (安裝程式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,12 +124,12 @@ ms.locfileid: "51697886"
   
 11. 在 [執行個體組態] 頁面上，請指定要安裝預設或具名執行個體。 如需詳細資訊，請參閱＜ [Instance Configuration](../../install/instance-configuration.md)＞。  
   
-     **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 網路名稱** — 針對新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體指定網路名稱。 這是在網路上用來識別容錯移轉叢集的名稱。  
+     **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]網路名稱** - 針對新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體指定網路名稱。 這是在網路上用來識別容錯移轉叢集的名稱。  
   
     > [!NOTE]  
     >  這在舊版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集中稱為虛擬 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 名稱。  
   
-     **執行個體識別碼** ：根據預設，此執行個體名稱會當做執行個體識別碼使用。 這是用來識別 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果是預設執行個體，執行個體名稱和執行個體識別碼將會是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請選取 **[執行個體識別碼]** 方塊並提供值。  
+     **執行個體識別碼** ：依預設，此執行個體名稱會當作執行個體識別碼使用。 這是用來識別 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果是預設執行個體，執行個體名稱和執行個體識別碼將會是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請選取 **[執行個體識別碼]** 方塊並提供值。  
   
     > [!NOTE]  
     >  標準的獨立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (不論是預設還是具名執行個體) 都不會針對 [執行個體識別碼] 方塊使用非預設的值。  
@@ -179,7 +179,7 @@ ms.locfileid: "51697886"
   
 18. 使用 [伺服器組態 - 定序] 索引標籤，為 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 指定非預設的定序。  
   
-19. 使用 [ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 組態 - 帳戶提供] 頁面來指定以下項目：  
+19. 使用 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] [組態 - 帳戶提供] 頁面來指定以下項目：  
   
     -   安全性模式 - 為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體選取 Windows 驗證或混合模式驗證。 如果您選取混合模式驗證，就必須為內建 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系統管理員帳戶提供增強式密碼。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "51697886"
    
 21. 使用 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] [組態 - FILESTREAM] 頁面來針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體啟用 FILESTREAM。 按 **[下一步]** ，繼續進行。  
   
-22. 使用 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [組態 - 帳戶提供] 頁面來指定即將擁有 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]之管理員權限的使用者或帳戶。 您至少必須針對 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]指定一個系統管理員。 若要加入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式執行所用的帳戶，請按一下 **[加入目前使用者]**。 若要在系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中將會有管理員權限的使用者、群組或電腦清單。
+22. 使用 [[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 組態 - 帳戶提供] 頁面來指定即將擁有 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 之管理員權限的使用者或帳戶。 您至少必須針對 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]指定一個系統管理員。 若要加入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式執行所用的帳戶，請按一下 **[加入目前使用者]**。 若要在系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中將會有管理員權限的使用者、群組或電腦清單。
   
      當您完成清單的編輯之後，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 然後，在組態對話方塊中確認管理員的清單。 當此清單完成時，請按 **[下一步]**。  
   
@@ -266,7 +266,7 @@ ms.locfileid: "51697886"
   
 11. 在 [執行個體組態] 頁面上，請指定要安裝預設或具名執行個體。
   
-     **執行個體識別碼** ：根據預設，此執行個體名稱會當做執行個體識別碼使用。 這是用來識別 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果是預設執行個體，執行個體名稱和執行個體識別碼將會是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請選取 **[執行個體識別碼]** 文字方塊並提供值。  
+     **執行個體識別碼** ：依預設，此執行個體名稱會當作執行個體識別碼使用。 這是用來識別 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果是預設執行個體，執行個體名稱和執行個體識別碼將會是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請選取 **[執行個體識別碼]** 文字方塊並提供值。  
   
     > [!NOTE]  
     >  標準的獨立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (不論是預設還是具名執行個體) 都不會針對 [執行個體識別碼] 文字方塊使用非預設的值。  
@@ -356,13 +356,13 @@ ms.locfileid: "51697886"
   
 10. 在 [叢集網路組態] 頁面上，指定容錯移轉叢集執行個體的網路資源：  
   
-    -   **網路設定** — 針對容錯移轉叢集執行個體的所有節點與子網路指定 IP 類型和 IP 位址。 您可以針對多重子網路容錯移轉叢集指定多個 IP 位址，但是每個子網路只支援一個 IP 位址。 每個備妥的節點都至少應該是一個 IP 位址的擁有者。 如果您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集具有多個子網路，系統將會提示您將 IP 位址資源相依性設定為 OR。  
+    -   **網路設定** - 針對容錯移轉叢集執行個體的所有節點與子網路指定 IP 類型和 IP 位址。 您可以針對多重子網路容錯移轉叢集指定多個 IP 位址，但是每個子網路只支援一個 IP 位址。 每個備妥的節點都至少應該是一個 IP 位址的擁有者。 如果您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集具有多個子網路，系統將會提示您將 IP 位址資源相依性設定為 OR。  
   
      按 **[下一步]** ，繼續進行。  
   
 11. 本主題其餘部分的工作流程會因您針對安裝所指定的功能而不同。 您可能不會看到所有頁面，端視您的選取項目而定。  
   
-12. 使用 [ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 組態 - 帳戶提供] 頁面來指定以下項目：  
+12. 使用 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] [組態 - 帳戶提供] 頁面來指定以下項目：  
   
     -   安全性模式 - 為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體選取 Windows 驗證或混合模式驗證。 如果您選取混合模式驗證，就必須為內建 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系統管理員帳戶提供增強式密碼。  
   
@@ -378,7 +378,7 @@ ms.locfileid: "51697886"
     >  如果您要指定非預設的安裝目錄，請確定安裝資料夾對於此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中的目錄共用。 資料目錄應該位於容錯移轉叢集的共用叢集磁碟上。  
   
   
-14. 使用 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [組態 - 帳戶提供] 頁面來指定即將擁有 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]之管理員權限的使用者或帳戶。 您至少必須針對 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]指定一個系統管理員。 若要加入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式執行所用的帳戶，請按一下 **[加入目前使用者]**。 若要在系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中將會有管理員權限的使用者、群組或電腦清單。  
+14. 使用 [[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 組態 - 帳戶提供] 頁面來指定即將擁有 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 之管理員權限的使用者或帳戶。 您至少必須針對 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]指定一個系統管理員。 若要加入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式執行所用的帳戶，請按一下 **[加入目前使用者]**。 若要在系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中將會有管理員權限的使用者、群組或電腦清單。  
   
      當您完成清單的編輯之後，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 然後，在組態對話方塊中確認管理員的清單。 當此清單完成時，請按 **[下一步]**。  
   
@@ -397,7 +397,7 @@ ms.locfileid: "51697886"
 19. 安裝之後， **[完成]** 頁面會提供安裝和其他重要注意事項之摘要記錄檔的連結。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程序，請按一下 **[關閉]**。 有了這個步驟，針對相同容錯移轉叢集準備的所有節點現在都會成為已完成之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集的一部分。  
   
 ## <a name="next-steps"></a>Next Steps  
- **設定新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝** - 為了減少系統的可攻擊介面區，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會選擇性地安裝及啟用主要服務和功能。 如需詳細資訊，請參閱＜ [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md)＞。  
+ **設定新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝**- 為了減少系統的可攻擊介面區，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會選擇性地安裝及啟用主要服務和功能。 如需詳細資訊，請參閱＜ [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md)＞。  
   
  如需記錄檔位置的詳細資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   

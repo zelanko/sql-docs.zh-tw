@@ -14,12 +14,12 @@ ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9057e57ff7665e3e02aed12e9d0e130823efa73a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80bc2cd3fab4a81d76bac5623fef8f37d3167289
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619257"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416889"
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>複寫訂閱者及 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47619257"
   
     4.  將 `-Subscriber` 參數變更為訂閱者的可用性群組接聽程式名稱。  
   
- 依照這些步驟建立訂閱時，在容錯移轉後就不需要執行任何動作。  
+ 遵循這些步驟建立訂閱時，在容錯移轉後就不需要執行任何動作。  
   
 ## <a name="creating-a-transactional-replication-push-subscription"></a>建立異動複寫發送訂閱  
   

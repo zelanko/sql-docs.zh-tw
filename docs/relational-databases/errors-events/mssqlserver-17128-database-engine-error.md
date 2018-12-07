@@ -12,12 +12,12 @@ ms.assetid: 7b15a5e6-fd41-47ce-ba87-54f72acea4bb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b06392073917d16b27846f7233f798871f8fa14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3091a7a47be4504ace63302f4c821c3e15616d08
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729316"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538671"
 ---
 # <a name="mssqlserver17128"></a>MSSQLSERVER_17128
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

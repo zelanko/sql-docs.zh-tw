@@ -20,12 +20,12 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba87cc9564183c45f4c00765f05bbaa363d231ce
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ff2967c06b32540b92f40007f66ebe346eedca40
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673347"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540387"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 來部署資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "51673347"
   
 3.  展開 **[資料庫]** 節點。  
   
-4.  以滑鼠右鍵按一下您要部署的資料庫，選取 **[工作]**，然後選取 **[將資料庫部署到 SQL Azure]**。  
+4.  以滑鼠右鍵按一下您要部署的資料庫，選取 [工作]，然後選取 [將資料庫部署到 SQL Azure...]  
   
 5.  完成精靈對話方塊：  
   
@@ -99,7 +99,7 @@ ms.locfileid: "51673347"
   
  **本機主機：**  
   
--   **伺服器連接** - 指定伺服器連接的詳細資料，然後按一下 **[連接]** 來驗證連接。  
+-   **伺服器連接** - 指定伺服器連接的詳細資料，然後按一下 [連接] 來驗證連接。  
   
 -   **新資料庫名稱** - 指定新資料庫的名稱。  
   

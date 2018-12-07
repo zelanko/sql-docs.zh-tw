@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26826171d9d240e5daf919faabeb6023e77b86f8
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: cc5d22756ce35acb3469dbf385a5a21e3c969ef0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021682"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400901"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>建立及管理原生模式報表伺服器的訂閱
   標準訂閱是希望能透過電子郵件傳遞報表，或傳遞到共用資料夾之個別使用者所建立的訂閱。 此主題提供有關由個別使用者建立或管理的標準訂閱資訊。 資料驅動訂閱有不同的需求和步驟，且會在另一個主題中討論。 如需詳細資訊，請參閱 [建立、修改和刪除資料驅動訂閱](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
@@ -112,7 +112,7 @@ ms.locfileid: "50021682"
     > [!NOTE]  
     >  根據您的權限，可能可以輸入想要傳遞報表的目標電子郵件地址。 若要指定多個電子郵件地址，請使用分號 (;) 隔開。 您也可以在 [副本]、[密件副本] 和 [回覆至] 文字方塊中，鍵入其他電子郵件地址。 這需要您具有管理所有訂閱的權限。  
   
-7.  **主旨**：預設為 “@ReportName 已在 @ExecutionTime” 執行。 您可以編輯主旨，但請注意，@ReportName 和 @ExecutionTime 是 [主旨] 欄位中唯一支援的全域變數。  
+7.  **主旨**：預設為「@ReportName 已在 @ExecutionTime 執行」。 您可以編輯主旨，但請注意，@ReportName 和 @ExecutionTime 是 [主旨] 欄位中唯一支援的全域變數。  
   
 8.  選取傳遞選項，如下所示：  
   
@@ -161,7 +161,7 @@ ms.locfileid: "50021682"
 >  報表伺服器管理員無法從一個位置，管理在給定報表伺服器上使用的所有個別訂閱。 然而，報表伺服器管理員可以存取個別訂閱以修改或刪除。  
   
 ##  <a name="bkmk_delete_subscription"></a> 若要刪除訂閱  
- 若要刪除訂閱  
+ 刪除訂閱：  
   
 1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   

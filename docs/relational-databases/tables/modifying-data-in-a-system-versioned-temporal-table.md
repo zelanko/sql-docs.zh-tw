@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04ca2c0792b1b10ffd4baf182ac8aa12fb5c1f04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92b1b2098d1486c8dbc6958c9668387c815047d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810431"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403443"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>修改系統建立版本時態表中的資料
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ SWITCH TO [dbo].[Department] PARTITION 2;
   
 ```  
   
- 如果您嘗試從不含期間定義的資料表執行 PARTITION SWITCH，將會得到錯誤訊息︰ `Msg 13577, Level 16, State 1, Line 25    ALTER TABLE SWITCH statement failed on table 'MyDB.dbo.Staging_Department_2015_09_26' because target table has SYSTEM_TIME PERIOD while source table does not have it.`  
+ 如果您嘗試從不含期間定義的資料表執行 PARTITION SWITCH，將會得到錯誤訊息︰`Msg 13577, Level 16, State 1, Line 25    ALTER TABLE SWITCH statement failed on table 'MyDB.dbo.Staging_Department_2015_09_26' because target table has SYSTEM_TIME PERIOD while source table does not have it.`  
   
 ## <a name="updating-data"></a>更新資料  
  您可以利用一般的 **UPDATE** 陳述式，來更新目前資料表中的資料。 您可以針對「糟糕」案例從記錄資料表中更新目前資料表中的資料。 但是，您不能更新 **PERIOD** 資料行，而且當 **SYSTEM_VERSIONING = ON**時，您無法直接更新記錄資料表中的資料。   
@@ -147,7 +147,7 @@ Cannot update GENERATED ALWAYS columns in table 'TmpDev.dbo.Department'.
 ```  
   
 ### <a name="updating-the-current-table-from-the-history-table"></a>從記錄資料表更新目前的資料表  
- 您可以在目前資料表中使用 **UPDATE** ，將實際的資料列狀態還原為過去某個特定時間點的有效狀態 (還原為「上次已知良好的資料列版本」)。 下列範例顯示還原至記錄資料表中截至 2015 年 4 月 25 日且 DeptID = 10 的值。  
+ 您可以在目前資料表中使用 **UPDATE**，將實際資料列狀態還原為過去某個特定時間點的有效狀態 (還原為「上次已知良好的資料列版本」)。 下列範例顯示還原至記錄資料表中截至 2015 年 4 月 25 日且 DeptID = 10 的值。  
   
 ```  
 UPDATE Department   

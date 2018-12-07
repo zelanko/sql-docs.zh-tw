@@ -5,19 +5,18 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d17a0c27fa6ae4ed3c8cb609a41c44ad0342adae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2505215ccc58c9f85d256a5aa4a9de1d292cb5e8
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653266"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617608"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -33,7 +32,7 @@ ms.locfileid: "47653266"
   
 -   提供兩個步驟的程序來清理資料： *電腦輔助的程序* 和 *互動式程序*。 電腦輔助的程序會使用 DQS 知識庫中的知識自動處理資料，並建議替代項目/更正。 下一個步驟是互動式程序，可讓資料管理人核准、拒絕或修改 DQS 在電腦輔助的清理期間所提議的變更。  
   
--   使用定義域值、定義域規則和參考資料，標準化並充實客戶資料。 例如，透過將 “St.” 變更為 “Street” 讓詞彙使用方式標準化， 並透過將 “1 Microsoft way Redmond 98006” 變更為 “1 Microsoft Way, Redmond, WA 98006” 來填入遺漏的元素，藉以豐富資料。  
+-   使用定義域值、定義域規則和參考資料，標準化並充實客戶資料。 例如，透過將 "St." 變更為 "Street" 讓詞彙使用方式標準化， 並透過將 "1 Microsoft way Redmond 98006" 變更為 "1 Microsoft Way, Redmond, WA 98006" 來填入遺漏的元素，藉以豐富資料。  
   
 -   為使用者提供簡單、直覺，以及類似精靈的一致介面，以便在一組非常大的資料之間瀏覽資料並檢查其中的錯誤。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "47653266"
  ![Data Quality Client 中的資料清理](../data-quality-services/media/dqs-cleansingindqsclient.gif "Data Quality Client 中的資料清理")  
   
 ##  <a name="Leading"></a> 前置值更正  
- 前置值更正適用於擁有同義字，而且使用者想要使用其中一個同義字值做為前置值 (而非表示一致值的其他值) 的定義域值。 例如，“New York”、“NYC” 和 “big apple” 是同義字，而且使用者想要使用 “New York” 做為前置值，而非 “NYC” 和 “Big Apple”。 DQS 在清理程序期間支援前置值更正，以協助您將資料標準化。 只有在針對建立定義域時啟用成相同的定義域，才會進行前置值更正。 根據預設，除非您在建立定義域時清除 **[使用前置值]** 核取方塊，否則會針對前置值更正啟用所有定義域。 如需有關此核取方塊的詳細資訊，請參閱＜ [Set Domain Properties](../data-quality-services/set-domain-properties.md)＞。  
+ 前置值更正適用於擁有同義字，而且使用者想要使用其中一個同義字值做為前置值 (而非表示一致值的其他值) 的定義域值。 例如，"New York"、"NYC" 和 "big apple" 是同義字，而且使用者想要使用 "New York" 做為前置值，而非 "NYC" 和 "Big Apple"。 DQS 在清理程序期間支援前置值更正，以協助您將資料標準化。 只有在針對建立定義域時啟用成相同的定義域，才會進行前置值更正。 根據預設，除非您在建立定義域時清除 **[使用前置值]** 核取方塊，否則會針對前置值更正啟用所有定義域。 如需有關此核取方塊的詳細資訊，請參閱＜ [Set Domain Properties](../data-quality-services/set-domain-properties.md)＞。  
   
 ##  <a name="Standardize"></a> 標準化清理的資料  
  您可以選擇是否要根據針對定義域所定義的輸出格式，以標準化格式匯出已清理的資料。 建立定義域時，您可以選取當定義域中的資料值為輸出時，將套用的格式。 如需有關指定定義域之輸出格式的詳細資訊，請參閱＜ **Set Domain Properties** ＞中的 [[設定輸出格式為]](../data-quality-services/set-domain-properties.md)清單。  

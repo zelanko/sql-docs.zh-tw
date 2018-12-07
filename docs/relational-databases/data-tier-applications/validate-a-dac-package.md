@@ -16,12 +16,12 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b39b9349d1ae4a9bb986808f6af2c6fbb7e96f9f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 29449a8caceb76e6f4b0e5229b05603de2d6a8f3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810104"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518673"
 ---
 # <a name="validate-a-dac-package"></a>驗證 DAC 封裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +39,15 @@ ms.locfileid: "43810104"
   
  **在 SQL Server Developer Tools 中檢視 DAC**  
   
-1.  開啟 **[檔案]** 功能表，並選取 **[開新檔案]**，然後選取 **[專案]**。  
+1.  開啟 [檔案] 功能表，選取 [開新檔案]，然後選取 [專案...]。  
   
 2.  選取 **[SQL Server]** 專案範本，並指定 **[名稱]**、 **[位置]** 及 **[方案名稱]**。  
   
-3.  在 **[方案總管]** 中，以滑鼠右鍵按一下專案節點，並選取 **[屬性]**。  
+3.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後選取 [屬性...]。  
   
 4.  在 [專案設定] 索引標籤的 [輸出類型] 區段中，選取 [資料層應用程式 (.dacpac 檔案)] 核取方塊，然後關閉屬性對話方塊。  
   
-5.  在方案總管中，以滑鼠右鍵按一下專案節點，並選取 [匯入資料層應用程式]。  
+5.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後選取 [匯入資料層應用程式...]。  
   
 6.  使用方案總管開啟 DAC 中的所有檔案，例如伺服器選取原則和部署前後指令碼。  
   

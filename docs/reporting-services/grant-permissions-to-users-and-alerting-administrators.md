@@ -9,12 +9,12 @@ ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 98977f845f2226413c19b338dc15b11589231b98
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: e3c871fc80ebc172213fe843ea7cdf18002054ce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028067"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505596"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>將權限授與使用者及警示管理員
 
@@ -25,9 +25,9 @@ ms.locfileid: "50028067"
 > [!NOTE]
 > SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
 
-**資訊工作者**：權限必須包含「建立警示」和「檢視項目」的 SharePoint 權限。 名稱為「設計」、「參與」、「讀取」及「僅檢視」的內建 SharePoint 權限等級包含「建立警示」和「檢視項目」的 SharePoint 權限。 您也可以使用支援使用者建立、編輯、執行及檢視資料警示所需的權限，建立自訂權限等級。
+**資訊工作者** - 權限必須包含「建立警示」和「檢視項目」的 SharePoint 權限。 名稱為「設計」、「參與」、「讀取」及「僅檢視」的內建 SharePoint 權限等級包含「建立警示」和「檢視項目」的 SharePoint 權限。 您也可以使用支援使用者建立、編輯、執行及檢視資料警示所需的權限，建立自訂權限等級。
 
-**警示系統管理員**：權限必須包含「管理警示」的 SharePoint 權限。 根據預設，只有「完整控制權」權限層級包含使用「小組網站」網站範本建立的這項網站權限。 如果您使用其他網站範本，則會看見不同的預設 SharePoint 群組清單。 您可以使用支援警示系統管理員檢視及刪除資料警示所需的權限，將「管理警示」權限加入其中一個內建權限等級或建立自訂權限等級。
+**警示系統管理員** - 權限必須包含「管理警示」的 SharePoint 權限。 根據預設，只有「完整控制權」權限層級包含使用「小組網站」網站範本建立的這項網站權限。 如果您使用其他網站範本，則會看見不同的預設 SharePoint 群組清單。 您可以使用支援警示系統管理員檢視及刪除資料警示所需的權限，將「管理警示」權限加入其中一個內建權限等級或建立自訂權限等級。
 
 若要深入了解 SharePoint 權限，請參閱 [使用者權限與權限等級 (SharePoint Server 2010)](https://technet.microsoft.com/library/cc721640.aspx)。
 

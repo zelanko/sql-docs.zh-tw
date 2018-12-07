@@ -23,12 +23,12 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c20a95bcdb8c91059c63590c333c71a10542473a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 31b1fb369ee6b5007e79c96ebb7a536d6e2a147e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814044"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514042"
 ---
 # <a name="upgrade-a-data-tier-application"></a>升級資料層應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "43814044"
 ###  <a name="Security"></a> 安全性  
  為了提高安全性，SQL Server 驗證登入會儲存在 DAC 封裝中，而且沒有密碼。 當您部署或升級此封裝時，此登入會建立為停用的登入，而且會產生密碼。 若要啟用登入，請使用具有 ALTER ANY LOGIN 權限的登入進行登入，並使用 ALTER LOGIN 來啟用登入，然後指派可以傳達給使用者的新密碼。 Windows 驗證登入不需要這項處理，因為這類登入的密碼不是由 SQL Server 所管理。  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  DAC 只能由 **sysadmin** 或 **serveradmin** 固定伺服器角色的成員，或是具有 **dbcreator** 固定伺服器角色及擁有 ALTER ANY LOGIN 權限的登入進行升級。 登入必須是現有資料庫的擁有者。 內建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶 (名稱為 **sa** ) 也可以升級 DAC。  
   
 ##  <a name="UsingDACUpgradeWizard"></a> 使用升級資料層應用程式精靈  
@@ -83,7 +83,7 @@ ms.locfileid: "43814044"
   
 2.  展開 [管理] 節點，然後展開 [資料層應用程式] 節點。  
   
-3.  以滑鼠右鍵按一下要升級之 DAC 的節點，然後選取 [升級資料層應用程式…]  
+3.  以滑鼠右鍵按一下要升級之 DAC 的節點，然後選取 [升級資料層應用程式...]  
   
 4.  完成精靈對話方塊：  
   
@@ -178,7 +178,7 @@ ms.locfileid: "43814044"
 ## <a name="options-page"></a>選項頁面  
  您可以使用此頁面針對升級選取失敗時回復選項。  
   
- **失敗時回復** – 選取此選項，可將升級併入精靈在發生錯誤時嘗試回復的交易。 如需有關此選項的詳細資訊，請參閱＜ [選擇 DAC 升級選項](#ChoseDACUpgOptions)＞。  
+ **失敗時回復** - 選取此選項，可將升級併入精靈在發生錯誤時嘗試回復的交易。 如需有關此選項的詳細資訊，請參閱＜ [選擇 DAC 升級選項](#ChoseDACUpgOptions)＞。  
   
  **還原預設值** - 將此選項還原為其預設值 false。  
   
@@ -195,7 +195,7 @@ ms.locfileid: "43814044"
   
  **重新整理** - 重新整理動作清單。  
   
- **儲存動作報表** - 將動作視窗的內容儲存至 HTML 檔。  
+ **儲存動作報表** - 將動作視窗的內容儲存至 HTML 檔案。  
   
  **儘管變更可能遺失，還是繼續進行** - 指定您了解目前資料庫中的某些物件或資料將不會出現在新的資料庫中，但是您仍然願意繼續升級。 只有當您已經分析變更報表，並了解手動傳送新資料庫中所需之任何物件或資料所必須執行的步驟時，才應該選取這個按鈕。 如果您不確定，請按一下 [儲存動作報告] 按鈕儲存變更報表並按一下 [儲存指令碼] 按鈕儲存 Transact-SQL 指令碼，然後按一下 [取消]。 分析報表和指令碼、規劃如何在升級完成之後傳送任何必要的物件和資料，然後重新啟動精靈。  
   

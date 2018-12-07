@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 492bce94e029f432a7a36b7e60d81435b6b1e0ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3b558913488a6e8ded7b4e7df38c97af377331b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613730"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535584"
 ---
 # <a name="modify-user-defined-functions"></a>修改使用者定義函數
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47613730"
   
 -   **使用下列方式修改使用者定義函數：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47613730"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要函數或結構描述的 ALTER 權限。 如果此函數指定使用者定義型別，則需要該型別的 EXECUTE 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -73,7 +73,7 @@ ms.locfileid: "47613730"
   
 5.  在查詢視窗中，對 ALTER FUNCTION 陳述式進行必要的變更。  
   
-6.  按一下 [檔案] 功能表上的 **Save***function_name*。  
+6.  在 [檔案] 功能表上，按一下 [儲存 _function_name_]。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b665f3d20d223351b9da207d767cea0015fb94b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: be7ca58b2278941e37d3eee7f33469c9a53ab4eb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701957"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525066"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>建立 SQL Server Agent 主要作業
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "51701957"
   
 2.  按一下加號展開 **[SQL Server Agent]**。  
   
-3.  以滑鼠右鍵按一下 [作業] 資料夾，然後選取 [新增作業]。  
+3.  以滑鼠右鍵按一下 [作業] 資料夾，然後選取 [新增作業...]。  
   
 4.  在 **[新增作業]** 對話方塊的 **[一般]** 頁面中，修改作業的一般屬性。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性 - 新增作業 &#40;一般頁面&#41;](../../ssms/agent/job-properties-new-job-general-page.md)  
   

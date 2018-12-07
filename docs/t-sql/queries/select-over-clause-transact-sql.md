@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48f4de868657978e62285907d4f513b313f484b5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f04a60e28b96c97890ab34157df50bd1dfc39891
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699826"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526407"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -132,7 +132,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  指定資料分割內的起始點和結束點，以進一步限制資料分割中的資料列。 這可以藉由指定與目前資料列有關的資料列範圍 (透過邏輯關聯或實體關聯) 來完成。 可以使用 ROWS 子句來達成實體關聯。  
   
- ROWS 子句會限制資料分割內的資料列，方法是指定目前資料列之前或之後的固定資料列數。 另外，RANGE 子句會以邏輯方式限制資料分割內的資料列，方法是指定與目前資料列的值相關的值範圍。 前後的資料列是根據 ORDER BY 子句的順序定義。 視窗框架 “RANGE … CURRENT ROW …” 包括在 ORDER BY 運算式中具有與目前資料列相同值的所有資料列。 例如，ROWS BETWEEN 2 PRECEDING AND CURRENT ROW 表示此函數操作所在的資料列視窗大小為三個資料列，從之前的 2 個資料列直到目前的資料列。  
+ ROWS 子句會限制資料分割內的資料列，方法是指定目前資料列之前或之後的固定資料列數。 另外，RANGE 子句會以邏輯方式限制資料分割內的資料列，方法是指定與目前資料列的值相關的值範圍。 前後的資料列是根據 ORDER BY 子句的順序定義。 視窗框架 "RANGE ...CURRENT ROW ..." 包含 ORDER BY 運算式中，與目前資料列相同值的所有資料列。 例如，ROWS BETWEEN 2 PRECEDING AND CURRENT ROW 表示此函數操作所在的資料列視窗大小為三個資料列，從之前的 2 個資料列直到目前的資料列。  
   
 > [!NOTE]  
 >  ROWS 或 RANGE 要求必須指定 ORDER BY 子句。 如果 ORDER BY 包含多個順序運算式，則 CURRENT ROW FOR RANGE 會在判斷目前資料列時，考量 ORDER BY 清單中的所有資料列。  
@@ -175,7 +175,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  
 ### <a name="important"></a>重要！
 
-如果指定了 ROWS/RANGE，而且 \<前面的視窗框架> 用於 \<視窗框架範圍> (簡短語法)，則這個指定會用於視窗框架界限開始點，而 CURRENT ROW 則用於界限結束點。 例如，“ROWS 5 PRECEDING” 等於 “ROWS BETWEEN 5 PRECEDING AND CURRENT ROW”。  
+如果指定了 ROWS/RANGE，而且 \<前面的視窗框架> 用於 \<視窗框架範圍> (簡短語法)，則這個指定會用於視窗框架界限開始點，而 CURRENT ROW 則用於界限結束點。 例如，"ROWS 5 PRECEDING" 等於 "ROWS BETWEEN 5 PRECEDING AND CURRENT ROW"。  
   
 > [!NOTE]
 > 如果未指定 ORDER BY，則將整個資料分割用於視窗框架。 這只適用於不需要 ORDER BY 子句的函數。 如果未指定 ROWS/RANGE，但指定了 ORDER BY，則將 RANGE UNBOUNDED PRECEDING AND CURRENT ROW 當做視窗框架的預設值。 這只適用於可以接受選擇性 ROWS/RANGE 指定的函數。 例如，排名函數不能接受 ROWS/RANGE，因此，即使存在 ORDER BY 而不存在 ROWS/RANGE，這個視窗框架依然不適用。  

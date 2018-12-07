@@ -19,12 +19,12 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 367cc129fdb0f4786c37af5f1cf1fa4bb112fa90
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1c5694fc4fbf2464030eb5fe3104117cfee71eb0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663297"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398361"
 ---
 # <a name="securing-sql-server"></a>保護 SQL Server 的安全
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

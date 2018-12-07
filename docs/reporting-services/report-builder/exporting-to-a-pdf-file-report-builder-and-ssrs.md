@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 89d5396d70afa05055ac5905e8fa1a204b6d7d97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0e9cb87260aa04deaa2e91e928f17b2a94261a3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844046"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418129"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>匯出至 PDF 檔案 (報表產生器及 SSRS)
   PDF 轉譯延伸模組會將 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表轉譯成可在 Adobe Acrobat 與支援 PDF 1.3 之其他協力廠商 PDF 檢視器中開啟的檔案。 雖然 PDF 1.3 與 Adobe Acrobat 4.0 和更新版本相容，但是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 只支援 Adobe Acrobat 11.0 或更新版本。 轉譯延伸模組不需要 Adobe 軟體就能轉譯報表。 但是，若要檢視或列印 PDF 格式的報表，則需要 PDF 檢視器 (例如 Adobe Acrobat)。  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1a35f7ea2e08caf851a24b8ab52b79f39a760024
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 24b47c23fa34fe1a575268cf63ea8e50dd18139c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906158"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395931"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>在多個頁面上顯示資料列和資料行標頭 (報表產生器及 SSRS)
   您可以控制是否要針對跨多個頁面的 Tablix 資料區 (資料表、矩陣或清單)，在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表的每個頁面上重複資料列和資料行標頭。
@@ -50,7 +50,7 @@ ms.locfileid: "48906158"
   
 3.  按一下對應至要在捲動時保持可見之靜態成員 (資料列或資料行) 的靜態成員。 [屬性] 窗格會顯示 **[Tablix 成員]** 屬性。  
   
-     如果看不到 [屬性] 窗格，請按一下報表產生器視窗最上方的 **[檢視]** 索引標籤，然後按一下 **[屬性]**。  
+     如果看不到 [屬性] 窗格，請按一下報表產生器視窗最上方的 [檢視] 索引標籤，然後按一下 [屬性]。  
   
 4.  在 [屬性] 窗格中，將 **[RepeatOnNewPage]** 設定為 [True]。  
   

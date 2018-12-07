@@ -19,12 +19,12 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2492d80cd8899002d0b6baf5c219b5a724a6aab9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4b7e72842412f829a51a0c7befdea30818d903ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639075"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512072"
 ---
 # <a name="transfer-database-task"></a>傳送資料庫工作
   「傳送資料庫」工作會在兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。 與其他只能透過複製 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件來傳送它們的工作不同，「傳送資料庫」工作可以複製或移動資料庫。 這項工作也可用來在同一部伺服器內複製資料庫。  
@@ -181,7 +181,7 @@ ms.locfileid: "51639075"
  **網路檔案共用**  
  在來源伺服器上，會從中傳送資料庫檔案的網路共用資料夾。 當您在 **[傳送資料庫工作編輯器]** 對話方塊的 **[資料庫]** 頁面中，將 **[方法]** 指定為 **[DatabaseOffline]** ，以離線模式傳送資料庫時，請使用 **[網路檔案共用]** 。  
   
- 輸入網路檔案共用位置，或按一下 [瀏覽 (…)] 按鈕以尋找網路檔案共用位置。  
+ 輸入網路檔案共用位置，或按一下瀏覽按鈕 **(...)** 以尋找網路檔案共用位置。  
   
  在離線模式中傳送資料庫時，資料庫檔案會複製到來源伺服器上的 **[網路檔案共用]** 位置之後，才傳送到目的地伺服器。  
 

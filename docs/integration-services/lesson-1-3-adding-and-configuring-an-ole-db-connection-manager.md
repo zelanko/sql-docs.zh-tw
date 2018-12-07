@@ -11,12 +11,12 @@ ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 906287203a4ea4fe4129da373330b957ced33a57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3fbb4994b1f7f7416fbdbdde5dc6377b396dae9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626156"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539077"
 ---
 # <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>課程 1-3 - 加入和設定 OLE DB 連線管理員
 在加入一般檔案連接管理員來連接到資料來源之後，下一項工作是加入 OLE DB 連接管理員來連接到目的地。 OLE DB 連接管理員可讓封裝從任何 OLE DB 相容資料來源擷取資料或載入資料至該處。 使用 OLE DB 連接管理員，您可以指定連接的伺服器、驗證方法和預設資料庫。  

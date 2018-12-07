@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: abaa798e164df9fb552360357dbfc7a4943c9124
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d08234fcf8e50851d40a86859244e6bc2840fd1f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857080"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526393"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>ConfigurationSetting 方法 - GenerateDatabaseRightsScript
   產生可用來將報表伺服器資料庫和其他資料庫 (執行報表伺服器所需) 之權限授與使用者的 SQL 指令碼。 呼叫者預期要連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫伺服器並執行此指令碼。  
@@ -80,8 +80,8 @@ out Int32 HRESULT);
 |LocalSystem|[本機系統]|\<網域>\\<電腦名稱\>$|  
 |(S-1-5-20)|網路服務|\<網域>\\<電腦名稱\>$|  
 |NT AUTHORITY\NetworkService|網路服務|\<網域>\\<電腦名稱\>$|  
-|(S-1-5-19)|本機服務|錯誤 – 請參閱下面。|  
-|NT AUTHORITY\LocalService|本機服務|錯誤 – 請參閱下面。|  
+|(S-1-5-19)|本機服務|錯誤 - 請參閱下列內容。|  
+|NT AUTHORITY\LocalService|本機服務|錯誤 - 請參閱下列內容。|  
   
  在 [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]上，如果您正在使用內建帳戶，而且報表伺服器資料庫位於遠端，就會傳回錯誤。  
   
@@ -91,9 +91,9 @@ out Int32 HRESULT);
   
 |DatabaseServerName 的值|範例|  
 |---------------------------------|-------------|  
-|“.”||  
-|“(local)”||  
-|“LOCAL”||  
+|"."||  
+|"(local)"||  
+|"LOCAL"||  
 |localhost||  
 |\<機器名稱>|testlab14|  
 |\<機器 FQDN>|example.redmond.microsoft.com|  

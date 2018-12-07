@@ -44,12 +44,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 409da0193276741d11a09d14018d016afbe449a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 846769ff6330edf5576e4342a3c145829a18196a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700266"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530566"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>[產生和發佈指令碼]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -126,7 +126,7 @@ ms.locfileid: "51700266"
 
   ![儲存](media/generate-and-publish-scripts-wizard/save.png)   
   
--   **儲存至檔案** ：將指令碼儲存至一個或多個 .sql 檔案。 按一下瀏覽按鈕 (**…**)，來指定檔案的名稱和位置。 如果已經存在相同名稱的檔案，請選取 **[覆寫現有檔案]** 核取方塊來取代該檔案。 若要指定指令碼的產生方式，請按一下 **[單一檔案]** 或 **[每一物件單一檔案]** 。 若要指定指令碼中應該使用的文字種類，請按一下 **[Unicode 文字]** 或 **[ANSI 文字]** 。  
+-   **儲存至檔案** ：將指令碼儲存至一個或多個 .sql 檔案。 按一下瀏覽按鈕 ([...])，即可指定檔案的名稱和位置。 如果已經存在相同名稱的檔案，請選取 **[覆寫現有檔案]** 核取方塊來取代該檔案。 若要指定指令碼的產生方式，請按一下 **[單一檔案]** 或 **[每一物件單一檔案]** 。 若要指定指令碼中應該使用的文字種類，請按一下 **[Unicode 文字]** 或 **[ANSI 文字]** 。  
   
 -   **儲存至剪貼簿** ：將 Transact-SQL 指令碼儲存至 [剪貼簿]。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "51700266"
   
  **選項** - 在每個選項右方的可用設定清單中選取值，即可指定進階選項。  
   
- **一般** ：下列選項適用於整個指令碼。  
+ **一般**：下列選項適用於整個指令碼。  
   
 -   **ANSI 填補** ：在指令碼中包含 **ANSI PADDING ON** 。 預設值為 **True**。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "51700266"
   
 -   **編寫變更追蹤的指令碼** ：如果來源資料庫或來源資料庫中的資料表已啟用變更追蹤，則會編寫變更追蹤的指令碼。 預設值為 **False**。 如需詳細資訊，請參閱[關於變更追蹤 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)。  
   
--   **編寫 CHECK 條件約束的指令碼** ：在指令碼中加入 **CHECK** 條件約束。 預設值為 **True**。 **CHECK** 條件約束會要求輸入資料表的資料必須符合某些指定的條件。 如需相關資訊，請參閱 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)。  
+-   **編寫 CHECK 條件約束的指令碼**：在指令碼中加入 **CHECK** 條件約束。 預設值為 **True**。 **CHECK** 條件約束會要求輸入資料表的資料必須符合某些指定的條件。 如需相關資訊，請參閱 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)。  
   
 -   [編寫資料壓縮選項的指令碼] - 如果來源資料庫或來源資料庫中的資料表已設定資料壓縮選項，則會編寫資料壓縮選項的指令碼。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。 預設值為 **False**。  
   
@@ -239,7 +239,7 @@ ms.locfileid: "51700266"
   
  **選項** - 在每個選項右方的可用設定清單中選取值，即可指定進階選項。  
   
- **一般** ：下列選項適用於整個發佈作業。  
+ **一般**：下列選項適用於整個發佈作業。  
   
 1.  **將 UDDT 轉換為基底類型** ：設定為 **[True]** 時，使用者定義資料類型 (UDDT) 會轉換為用來建立它們的基礎基底資料類型。 當 UDDT 不存在於執行指令碼的資料庫時，請使用 **[True]** 。 設定為 **[False]** 時，就會使用 UDDT。 預設值為 **False**。  
   
@@ -265,7 +265,7 @@ ms.locfileid: "51700266"
   
 12. [要發行的資料類型] - 選取應該編寫指令碼的項目：[僅限資料]**Data only** 和/或 [僅限結構描述]。 預設值為 **[結構描述和資料]**。  
   
- **發佈選項** ：指定發佈到 Web 主機提供者時，是否要使用交易。  
+ **發佈選項**：指定發佈到 Web 主機提供者時，是否要使用交易。  
   
 1.  **使用交易發行** ：在發佈至遠端 Web 主控提供者時，使用交易。 如果目標資料庫無法完成發行，就會回復交易。 預設值為 **True**。  
   
@@ -340,7 +340,7 @@ ms.locfileid: "51700266"
  
 ## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>在 Azure SQL 資料倉儲上產生指令碼  
 
-如果使用 “Script As…” 產生的語法 不像 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 語法，或者收到錯誤訊息，您可能需要將 SQL Server Management Studio 中的指令碼選項設為 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。  
+如果使用 "Script As..." 產生的語法，不像 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 語法，或者收到錯誤訊息，您可能需要將 SQL Server Management Studio 中的指令碼選項設為 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。  
 
 ### <a name="how-to-set-default-scripting-options-to-sql-data-warehouse"></a>如何將預設指令碼選項設為 SQL 資料倉儲  
 

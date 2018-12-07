@@ -15,12 +15,12 @@ ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 170b40c086e3fe2c9d3ec7fbf3278a5ceeabe080
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d269e2e18c7c098e5f4149f4083d81a228b89da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783986"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527932"
 ---
 # <a name="select-a-package"></a>選取封裝
   使用 **[選取封裝]** 對話方塊，即可指定訊息佇列工作可以接收訊息的來源封裝。  
@@ -56,8 +56,8 @@ ms.locfileid: "47783986"
  如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請提供密碼。  
   
 ### <a name="location--dtsx-file"></a>位置 = DTSX 檔案  
- **[檔案名稱]**  
- 提供封裝的路徑，或按一下瀏覽按鈕 **(...)** 並尋找封裝。  
+ **檔案名稱**  
+ 提供封裝的路徑，或按一下瀏覽按鈕 ([...]) 並尋找封裝。  
   
 ## <a name="see-also"></a>另請參閱  
  [訊息佇列工作](../../integration-services/control-flow/message-queue-task.md)  

@@ -11,19 +11,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8ed3ce76d449e6e67418a13fe1d61baeed1edf0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 84c4c13cf1382fd757e2e7ad8832d6170edf3302
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638515"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391042"
 ---
 # <a name="modify-a-partition-function"></a>修改資料分割函數
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在資料分割資料表或索引的資料分割函數中，加上或減去指定的資料分割數 (遞增為 1)，藉以變更 [!INCLUDE[tsql](../../includes/tsql-md.md)]中資料表或索引的資料分割方式。 若要加入資料分割，可以將現有資料分割「拆解」為兩個資料分割，並重新定義新資料分割的界限。 若要卸除資料分割，可以將兩個資料分割的界限「合併」成為一個。 最後這個動作會重新擴展一個資料分割，並使另一個資料分割成為未指派。  
   
 > [!CAUTION]  
->  多份資料表或索引可以使用相同的資料分割函數。 當您修改資料分割函數時，將會在單一交易中影響所有資料表或索引。 修改之前，請先檢查資料分割函數的相依性。  
+>  多份資料表或索引可以使用相同的資料分割函數。 當您修改資料分割函數時，將會在單一交易中影響所有資料表或索引。 修改之前，請先檢查資料分割函式的相依性。  
   
  **本主題內容**  
   
@@ -97,12 +97,12 @@ ms.locfileid: "51638515"
 3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
-    -- Look for a previous version of the partition function “myRangePF1” and deletes it if it is found.  
+    -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
     IF EXISTS (SELECT * FROM sys.partition_functions  
         WHERE name = 'myRangePF1')  
         DROP PARTITION FUNCTION myRangePF1;  
     GO  
-    -- Create a new partition function called “myRangePF1” that partitions a table into four partitions.  
+    -- Create a new partition function called "myRangePF1" that partitions a table into four partitions.  
     CREATE PARTITION FUNCTION myRangePF1 (int)  
     AS RANGE LEFT FOR VALUES ( 1, 100, 1000 );  
     GO  
@@ -122,12 +122,12 @@ ms.locfileid: "51638515"
 3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
-    -- Look for a previous version of the partition function “myRangePF1” and deletes it if it is found.  
+    -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
     IF EXISTS (SELECT * FROM sys.partition_functions  
         WHERE name = 'myRangePF1')  
         DROP PARTITION FUNCTION myRangePF1;  
     GO  
-    -- Create a new partition function called “myRangePF1” that partitions a table into four partitions.  
+    -- Create a new partition function called "myRangePF1" that partitions a table into four partitions.  
     CREATE PARTITION FUNCTION myRangePF1 (int)  
     AS RANGE LEFT FOR VALUES ( 1, 100, 1000 );  
     GO  

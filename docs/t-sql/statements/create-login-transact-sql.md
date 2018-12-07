@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5145db044f618727144dba0eae86ac4643f0a2d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d15863bfeb814d88d3971b0cb3a957abee947c47
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704136"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516086"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -158,7 +158,7 @@ ASYMMETRIC KEY *asym_key_name*
   
  - 若要連接至資料庫，請建立用於登入的資料庫使用者。 如需詳細資訊，請參閱 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)。 
   
- - 使用 [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md) 建立使用者定義的伺服器角色。 使用 **ALTER SERVER ROLE** … 使用 **ADD MEMBER** 將新登入加入至使用者定義的伺服器角色中。 如需詳細資訊，請參閱 [CREATE SERVER ROL](../../t-sql/statements/create-server-role-transact-sql.md) 和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)。 
+ - 使用 [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md) 建立使用者定義的伺服器角色。 使用 **ALTER SERVER ROLE** ...使用 **ADD MEMBER** 將新登入加入至使用者定義的伺服器角色中。 如需詳細資訊，請參閱 [CREATE SERVER ROL](../../t-sql/statements/create-server-role-transact-sql.md) 和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)。 
   
  - 使用 **sp_addsrvrolemember** 將登入加入至固定伺服器角色中。 如需詳細資訊，請參閱[伺服器層級角色](../../relational-databases/security/authentication-access/server-level-roles.md)和 [sp_addsrvrolemember](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)。 
   
@@ -326,8 +326,8 @@ SID = *sid*
 建立登入之後，登入就可以連線至 SQL Database，但是只會取得 **public** 角色的權限。 請考慮執行下列其中一些活動。 
   
 - 若要連線至資料庫，請建立用於登入該資料庫的資料庫使用者。 如需詳細資訊，請參閱 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)。 
-- 若要將權限授與資料庫中的使用者，請使用**ALTER SERVER ROLE** … **ADD MEMBER** 陳述式可將使用者新增至其中一個內建的資料庫角色或自訂角色，或直接使用 [GRANT](../../t-sql/statements/grant-transact-sql.md) 陳述式將權限授與使用者。 如需詳細資訊，請參閱[非系統管理員角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 和 [GRANT](grant-transact-sql.md) 陳述式。
-- 若要授與伺服器範圍權限，請在 master 資料庫中建立資料庫使用者，並使用 **ALTER SERVER ROLE** … **ADD MEMBER** 陳述式可將使用者新增至其中一個管理伺服器角色。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)，以及[伺服器角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
+- 若要將權限授與資料庫中的使用者，請使用 **ALTER SERVER ROLE** ...**ADD MEMBER** 陳述式可將使用者新增至其中一個內建的資料庫角色或自訂角色，或直接使用 [GRANT](../../t-sql/statements/grant-transact-sql.md) 陳述式將權限授與使用者。 如需詳細資訊，請參閱[非系統管理員角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 和 [GRANT](grant-transact-sql.md) 陳述式。
+- 若要授與伺服器範圍權限，請在 master 資料庫中建立資料庫使用者，並使用 **ALTER SERVER ROLE** ...**ADD MEMBER** 陳述式可將使用者新增至其中一個管理伺服器角色。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)，以及[伺服器角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
 - 使用 **GRANT** 陳述式將伺服器層級權限授與新登入或包含登入的角色。 如需詳細資訊，請參閱 [GRANT](../../t-sql/statements/grant-transact-sql.md)。
   
 ## <a name="examples"></a>範例  
@@ -444,8 +444,8 @@ SID = *sid*
 建立登入之後，登入就可以連線至 SQL Database，但是只會取得 **public** 角色的權限。 請考慮執行下列其中一些活動。 
   
 - 若要連線至資料庫，請建立用於登入該資料庫的資料庫使用者。 如需詳細資訊，請參閱 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)。 
-- 若要將權限授與資料庫中的使用者，請使用**ALTER SERVER ROLE** … **ADD MEMBER** 陳述式可將使用者新增至其中一個內建的資料庫角色或自訂角色，或直接使用 [GRANT](../../t-sql/statements/grant-transact-sql.md) 陳述式將權限授與使用者。 如需詳細資訊，請參閱[非系統管理員角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 和 [GRANT](grant-transact-sql.md) 陳述式。
-- 若要授與伺服器範圍權限，請在 master 資料庫中建立資料庫使用者，並使用 **ALTER SERVER ROLE** … **ADD MEMBER** 陳述式可將使用者新增至其中一個管理伺服器角色。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)，以及[伺服器角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
+- 若要將權限授與資料庫中的使用者，請使用 **ALTER SERVER ROLE** ...**ADD MEMBER** 陳述式可將使用者新增至其中一個內建的資料庫角色或自訂角色，或直接使用 [GRANT](../../t-sql/statements/grant-transact-sql.md) 陳述式將權限授與使用者。 如需詳細資訊，請參閱[非系統管理員角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 和 [GRANT](grant-transact-sql.md) 陳述式。
+- 若要授與伺服器範圍權限，請在 master 資料庫中建立資料庫使用者，並使用 **ALTER SERVER ROLE** ...**ADD MEMBER** 陳述式可將使用者新增至其中一個管理伺服器角色。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)，以及[伺服器角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
 - 使用 **GRANT** 陳述式將伺服器層級權限授與新登入或包含登入的角色。 如需詳細資訊，請參閱 [GRANT](../../t-sql/statements/grant-transact-sql.md)。
   
 ## <a name="examples"></a>範例  
@@ -557,8 +557,8 @@ PASSWORD **='** password**'*
 建立登入之後，登入就可以連線至 SQL 資料倉儲，但是只會取得 **public** 角色的權限。 請考慮執行下列其中一些活動。 
   
 - 若要連接至資料庫，請建立用於登入的資料庫使用者。 如需詳細資訊，請參閱 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)。
-- 若要將權限授與資料庫中的使用者，請使用**ALTER SERVER ROLE** … **ADD MEMBER** 陳述式可將使用者新增至其中一個內建的資料庫角色或自訂角色，或直接使用 [GRANT](grant-transact-sql.md) 陳述式將權限授與使用者。 如需詳細資訊，請參閱[非系統管理員角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 和 [GRANT](grant-transact-sql.md) 陳述式。
-- 若要授與伺服器範圍權限，請在 master 資料庫中建立資料庫使用者，並使用 **ALTER SERVER ROLE** … **ADD MEMBER** 陳述式可將使用者新增至其中一個管理伺服器角色。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)，以及[伺服器角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
+- 若要將權限授與資料庫中的使用者，請使用 **ALTER SERVER ROLE** ...**ADD MEMBER** 陳述式可將使用者新增至其中一個內建的資料庫角色或自訂角色，或直接使用 [GRANT](grant-transact-sql.md) 陳述式將權限授與使用者。 如需詳細資訊，請參閱[非系統管理員角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 和 [GRANT](grant-transact-sql.md) 陳述式。
+- 若要授與伺服器範圍權限，請在 master 資料庫中建立資料庫使用者，並使用 **ALTER SERVER ROLE** ...**ADD MEMBER** 陳述式可將使用者新增至其中一個管理伺服器角色。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)，以及[伺服器角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)。
 
 - 使用 **GRANT** 陳述式將伺服器層級權限授與新登入或包含登入的角色。 如需詳細資訊，請參閱 [GRANT](../../t-sql/statements/grant-transact-sql.md)。 
   
@@ -679,7 +679,7 @@ WINDOWS
   
  - 若要連接至資料庫，請建立用於登入的資料庫使用者。 如需詳細資訊，請參閱 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)。 
   
- - 使用 [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md) 建立使用者定義的伺服器角色。 使用 **ALTER SERVER ROLE** … 使用 **ADD MEMBER** 將新登入加入至使用者定義的伺服器角色中。 如需詳細資訊，請參閱 [CREATE SERVER ROL](../../t-sql/statements/create-server-role-transact-sql.md) 和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)。 
+ - 使用 [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md) 建立使用者定義的伺服器角色。 使用 **ALTER SERVER ROLE** ...使用 **ADD MEMBER** 將新登入加入至使用者定義的伺服器角色中。 如需詳細資訊，請參閱 [CREATE SERVER ROL](../../t-sql/statements/create-server-role-transact-sql.md) 和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)。 
   
  - 使用 **sp_addsrvrolemember** 將登入加入至固定伺服器角色中。 如需詳細資訊，請參閱[伺服器層級角色](../../relational-databases/security/authentication-access/server-level-roles.md)和 [sp_addsrvrolemember](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)。 
   

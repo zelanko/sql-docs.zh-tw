@@ -16,12 +16,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca8b44ba4f5d2c62e4f4476d77f7d62e853fd1bd
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 2d9760d692e30a7d33828f27202ba7818c1ac047
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237034"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523463"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ replmerg [-?]
 [-InternetLogin internet_login]  
 [-InternetPassword internet_password]  
 [-InternetProxyLogin internet_proxy_login]  
-[–InternetProxyPassword internet_proxy_password]  
+[-InternetProxyPassword internet_proxy_password]  
 [-InternetProxyServer internet_proxy_server]  
 [-InternetSecurityMode [0|1]]  
 [-InternetTimeout internet_timeout]  
@@ -174,7 +174,7 @@ replmerg [-?]
 |**2**|指定要使用 SSL，而且憑證會經過驗證。|  
 
  > [!NOTE]  
- >  定義的 SSL 憑證必須包含 SQL Server 的完整網域名稱才會有效。 為了讓代理程式能在將 -EncryptionLevel 設定為 2 時成功連線，請在本機 SQL Server 上建立別名。 ‘Alias Name’ 參數應為伺服器名稱，且應將 ‘Server’ 參數設為 SQL Server 的完整名稱。
+ >  定義的 SSL 憑證必須包含 SQL Server 的完整網域名稱才會有效。 為了讓代理程式能在將 -EncryptionLevel 設定為 2 時成功連線，請在本機 SQL Server 上建立別名。 'Alias Name' 參數應為伺服器名稱，且應將 'Server' 參數設為 SQL Server 的完整名稱。
 
  如需詳細資訊，請參閱[安全性概觀 &#40;複寫&#41;](../../../relational-databases/replication/security/security-overview-replication.md)。  
   
@@ -246,7 +246,7 @@ replmerg [-?]
  **-InternetProxyLogin**  *internet_proxy_login*  
  指定連接至需要驗證之 Proxy 伺服器 (定義於 *internet_proxy_server*) 時使用的登入名稱。  
   
- **–InternetProxyPassword**  *internet_proxy_password*  
+ **-InternetProxyPassword**  *internet_proxy_password*  
  指定連接至需要驗證之 Proxy 伺服器 (定義於 *internet_proxy_server*) 時使用的密碼。  
   
  **-InternetProxyServer**  *internet_proxy_server*  

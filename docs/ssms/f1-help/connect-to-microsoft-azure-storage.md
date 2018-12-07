@@ -14,12 +14,12 @@ ms.assetid: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ff61f3f69b5ce5c73a96d6f9c06141e5bd17f75a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd9af00c06b2e999ec38d201e11fe305f7bb4e71
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839376"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523575"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>連接到 Microsoft Azure 儲存體
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

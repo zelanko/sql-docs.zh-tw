@@ -22,12 +22,12 @@ ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e5aac894abea70c3612b2ec053556718348313f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e38ff05819e3ca6b8717ae4c19b554bae57861b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694456"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542532"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>開發具有同步輸出的自訂轉換元件
   具有同步輸出的轉換元件會從上游元件接收資料列，並在傳遞資料列給下游元件時，讀取或是修改這些資料列之資料行中的值。 它們也必須定義從上游元件提供的資料行所衍生之其他輸出資料行，但是它們不需要將資料列加入資料流程。 如需同步與非同步元件之間差異的詳細資訊，請參閱[了解同步和非同步轉換](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  

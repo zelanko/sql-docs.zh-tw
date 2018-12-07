@@ -14,12 +14,12 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 134831664f7b13177dac016bb9b92906a2974eb5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ec96dd777f338af847602fdb4b595f9fefc76a9d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703586"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404093"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 仲裁模式和投票組態 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "51703586"
   
  WSFC 叢集中沒有個別節點可針對叢集整體狀況良好或狀況不良做最後決定。  在任何給定時刻，從每個節點的觀點來看，某些其他節點可能看起來離線、看起來正在進行容錯移轉，或因為網路通訊失敗而看起來沒有回應。  仲裁投票的關鍵功能是決定 WSFC 叢集中每個節點的表面狀態是否確實為這些節點的實際狀態。  
   
- 對於「僅限磁碟」以外的所有仲裁模式，仲裁投票的有效性取決於叢集中所有投票節點之間的可靠通訊。 相同實體子網路上節點之間的網路通訊應視為可靠；仲裁投票應該是信任的。  
+ 針對「僅限磁碟」以外的所有仲裁模式，仲裁投票的有效性取決於叢集中所有投票節點之間的可靠通訊。 相同實體子網路上節點之間的網路通訊應視為可靠；仲裁投票應該是信任的。  
   
  不過，如果另一個子網路上的節點在仲裁投票中是視為無回應，但它實際上已上線，另一方面也是狀況良好，最可能的原因是子網路之間的網路通訊失敗。  根據叢集拓撲、仲裁模式和容錯移轉原則組態，該網路通訊失敗實際上可能會建立多組投票節點 (或子網路)。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "51703586"
 >  [KB2494036](https://support.microsoft.com/kb/2494036)：提供 Hotfix 讓您設定叢集節點，該節點在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> 建議的仲裁投票調整  
- 在啟用或停用給定 WSFC 節點的投票時，請遵循下列方針：  
+ 在啟用或停用指定 WSFC 節點的投票時，請遵循下列方針：  
   
 -   **預設沒有任何投票。** 假設每個節點一定要有明確的合理原因才能投票。  
   

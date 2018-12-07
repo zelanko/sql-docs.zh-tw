@@ -11,12 +11,12 @@ ms.assetid: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8d6625b72cadddb7c6f587f664ae5134730f9939
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86a56f8394dbddccf00025b750256364aa51e99d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692186"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395673"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和災害復原
 
@@ -92,7 +92,7 @@ ms.locfileid: "47692186"
 
 如上節中的圖 1 所示，本文所述的解決方案包含 Windows Server 容錯移轉叢集 (WSFC)。 我們需要設定 WSFC，因為 SQL AlwaysOn 依靠 WFSC 來進行失敗偵測和容錯移轉。
 
-WSFC 是一種功能，可改善應用程式和服務的高可用性。 它包含一組獨立的 Windows Server 執行個體，而且這些執行個體上執行 Microsoft 容錯移轉叢集服務。 Windows Server 執行個體 (或偶而呼叫的節點) 會連接以彼此通訊，而且可以進行失敗偵測。 WSFC 提供失敗偵測和容錯移轉功能。 如果叢集中的節點或服務失敗，則會偵測到失敗，而且另一個節點自動或手動開始提供失敗節點上所裝載的服務。 因此，使用者只會發生最少的服務中斷，進而改善服務可用性。  
+WSFC 是一種功能，可改善應用程式和服務的高可用性。 它包含一組獨立的 Windows Server 執行個體，而且這些執行個體上執行 Microsoft 容錯移轉叢集服務。 Windows Server 執行個體 (或偶而呼叫的節點) 會連接以彼此通訊，而且可以進行失敗偵測。 WSFC 提供失敗偵測和容錯移轉功能。 如果叢集中的節點或服務失敗，則會偵測到失敗，而且另一個節點自動或手動開始提供失敗節點上所裝載的服務。 因此，使用者只會發生最少的服務中斷，進而改善服務可用性。  
 
 ### <a name="prerequisites"></a>Prerequisites
 
@@ -156,8 +156,8 @@ Windows Server 作業系統安裝於所有執行個體上，並修補所有更�
 7.  在 [摘要] 頁面上，檢查是否有任何警告或錯誤訊息。
 
     錯誤必須予以修正。 不過，警告可能不會產生問題。 警告訊息表示「測試的項目可能符合需求，但您應該檢查一些事項」。 例如，圖 7 顯示「驗證磁碟存取延遲」警告，可能是因為磁碟暫時正在忙著處理其他工作，因此您可以忽略它。 您應該檢查線上文件中的每個警告和錯誤訊息，以取得詳細資料。 請參閱圖 7。
- 
-    ![驗證組態精靈、正在驗證頁面](media/Fig6_ValidationTests.png)
+ 
+![驗證設定精靈，正在驗證頁面](media/Fig6_ValidationTests.png)
 
     圖 6
 
@@ -326,7 +326,7 @@ AG 只能建立於現有資料庫上。 因此，您可以在一個節點上建�
     d.  在 [網路模式] 文字方塊中輸入 DHCP，然後按一下 [下一步] 繼續。
 
     >[!NOTE] 
-    >您可以選擇性選擇 [靜態 IP] 作為 [網路模式]，然後輸入靜態 IP。 您也可以輸入 1433 以外的連接埠。 
+    >您可以選擇性選擇 [靜態 IP] 作為 [網路模式]，然後輸入靜態 IP。 您也可以輸入 1433 以外的連接埠。 
 
     ![設定接聽程式](media/Fig18_AvailabilityGroupCreateListener.png)
 
@@ -338,7 +338,7 @@ AG 只能建立於現有資料庫上。 因此，您可以在一個節點上建�
 
     ![設定資料同步處理](media/Fig19_AvailabilityGroupDataSync.png)
 
-    圖 19 
+    圖 19 
 
 10. 在 [驗證] 頁面上，確定所有驗證都成功通過，並更正任何錯誤。 按 **[下一步]** ，繼續進行。
 
@@ -354,11 +354,11 @@ AG 只能建立於現有資料庫上。 因此，您可以在一個節點上建�
 
     ![檢視儀表板](media/Fig20_ShowDashboard.png)
 
-    圖 20 
+    圖 20 
 
 3.  按一下 [容錯移轉]，以容錯移轉至同步複本和非同步複本。 這是要確認容錯移轉正確，未發生任何問題。
 
- AlwaysOn 安裝程式已完成。
+ AlwaysOn 安裝程式已完成。
 
 如需 AlwaysOn 可用性群組的詳細資訊，請參閱 [SQL Server 2016 AlwaysOn 可用性群組](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)。
 

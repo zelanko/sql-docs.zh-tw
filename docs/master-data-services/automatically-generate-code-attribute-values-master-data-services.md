@@ -12,18 +12,18 @@ ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cf5fcca2d442d7b5dd7029dbdace0cc084b43fca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b92484b397f3d99cd836079f738b152c5d16db5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670366"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419940"
 ---
 # <a name="automatically-generate-code-attribute-values-master-data-services"></a>自動產生 Code 屬性值 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您希望每次建立新成員時，自動將整數指派給字碼值，請自動為實體的 Code 屬性自動產生值。  
+  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，當您希望每次建立新成員時，自動將整數指派給 Code 值，請自動為實體的 Code 屬性產生值。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  
@@ -44,7 +44,7 @@ ms.locfileid: "47670366"
   
 4.  選取 **[自動建立字碼值]** 核取方塊。  
   
-5.  在 **[開始]** 方塊中，輸入開始遞增的數字。 如果成員已存在，則將根據最大的現有值設定 Code。 例如，如果最大的現有 Code 值為 299，則下一個成員的 Code 值將設為 300。  
+5.  在 **[開始]** 方塊中，輸入開始遞增的數字。 如果成員已存在，則將根據最大的現有值設定 Code。 例如，若最大的現有 Code 值為 299，則下一個成員的 Code 值將設為 300。  
   
 6.  按一下 **[儲存]**。  
   

@@ -27,15 +27,15 @@ ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5b7675748ba110d19147750133bf3252ba3c29e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 656a25127299bedc122a38aafa4534adbe181ccf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640935"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545275"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 工作
-  工作為控制流程元素，用來定義封裝控制流程中所執行工作的單位。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝是由一或多項工作所組成。 如果封裝包含超過一項工作，則會在控制流程中按照優先順序條件約束連接並排列順序。  
+  工作為控制流程元素，用來定義封裝控制流程中所執行工作的單位。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝是由一或多項工作所組成。 如果封裝包含超過一項工作，則會在控制流程中按照優先順序條件約束連接並排列順序。  
   
  您也可以使用支援 COM 的程式設計語言 (例如 Visual Basic) 或 .NET 程式設計語言 (例如 C#) 撰寫自訂工作。  
   

@@ -12,12 +12,12 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c0b06b45e9d3f2cfd06fba04a0d24547ec4689ce
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bce8b626c33bfb5a75fe7614ddb5c55d80d1d906
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699786"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398645"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b44b5afff54cf0630e3bde1d5668862d1d969133
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 62048b27a917684188c8d8c47cfc67817ed63efa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813731"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528584"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼
 
@@ -49,7 +49,7 @@ ms.locfileid: "51813731"
 |項目|已移轉|SharePoint|Description|  
 |----------|--------------|----------------|-----------------|  
 |密碼|**否**|**否**|密碼 **不會** 移轉。 內容項目移轉之後，請更新目的地伺服器上的認證資訊。 例如，具有預存認證的資料來源。|  
-|我的報表|**否**|**否**|原生模式 [我的報表] 功能是以個別使用者登入為基礎，因此，除非使用 **–u** 參數執行 rss 指令碼，否則指令碼服務無法存取 [我的報表] 資料夾中使用者的內容。 此外，[我的報表] 不屬於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的功能，所以資料夾中的項目無法複製到 SharePoint 環境中。 因此，指令碼不會複製來源原生模式報表伺服器上 [我的報表] 資料夾中的報表項目。<br /><br /> 若要使用這個指令碼移轉 [我的報表] 資料夾中的內容，請完成下列步驟：<br /><br /> 1.在報表管理員中建立新資料夾。 或者，您可以為每位使用者建立資料夾或子資料夾。<br />2.以其中一位具有 [我的報表] 內容的使用者身分登入。<br />3.在 [報表管理員] 中，按一下 [我的報表] 資料夾。<br />4.按一下資料夾的 [詳細資料] 檢視。<br />5.選取要複製的每個報表。<br />6.在 [報表管理員] 工具列中，按一下 [移動]。<br />7.選取所需的目的地資料夾。<br />8.對每位使用者重複步驟 2-7。<br />9.執行指令碼。|  
+|我的報表|**否**|**否**|原生模式 [我的報表] 功能是以個別使用者登入為基礎，因此，除非使用 **-u** 參數執行 rss 指令碼，否則指令碼服務無法存取 [我的報表] 資料夾中使用者的內容。 此外，[我的報表] 不屬於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的功能，所以資料夾中的項目無法複製到 SharePoint 環境中。 因此，指令碼不會複製來源原生模式報表伺服器上 [我的報表] 資料夾中的報表項目<br /><br /> 若要使用這個指令碼移轉 [我的報表] 資料夾中的內容，請完成下列步驟：<br /><br /> 1.在報表管理員中建立新資料夾。 或者，您可以為每位使用者建立資料夾或子資料夾。<br />2.以其中一位具有 [我的報表] 內容的使用者身分登入。<br />3.在 [報表管理員] 中，按一下 [我的報表] 資料夾。<br />4.按一下資料夾的 [詳細資料] 檢視。<br />5.選取要複製的每個報表。<br />6.在 [報表管理員] 工具列中，按一下 [移動]。<br />7.選取所需的目的地資料夾。<br />8.對每位使用者重複步驟 2-7。<br />9.執行指令碼。|  
 |記錄|**否**|**否**||  
 |記錄設定|是|是|雖然記錄設定會移轉，但是記錄詳細資料「不會」移轉。|  
 |[排程]|是|是|若要移轉排程，則必須在目標伺服器上執行 SQL Server Agent。 如果 SQL Server Agent 未在目標上執行，您將會看見類似這句的錯誤訊息：<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  
@@ -117,7 +117,7 @@ ms.locfileid: "51813731"
     > [!TIP]  
     >  若您只想稽核單一伺服器，請為來源和目的地使用相同的伺服器，然後在完成步驟 1 後取消使用。  
   
-     步驟 1 稽核資訊相當適合用於檢閱來源和目標原生模式伺服器上的現有角色。 以下是步驟一稽核清單的範例。 請注意清單中包含一個 [角色] 區段，因為使用了 「switch-v security="True"」 參數：  
+     步驟 1 稽核資訊相當適合用於檢閱來源和目標原生模式伺服器上的現有角色。 以下是步驟一稽核清單的範例。 請注意清單中包含一個 [角色] 區段，因為使用了 switch-v security="True" 參數：  
   
     -   `Retrieve and report the list of items that will be migrated. You can cancel the script after step 1 if you do not want to start the actual migration.`  
   
@@ -202,7 +202,7 @@ ms.locfileid: "51813731"
 |參數|Description|必要項|  
 |---------------|-----------------|--------------|  
 |**-s** Source_URL|來源報表伺服器的 URL|是|  
-|**-u** Domain\password **–p** password|來源伺服器的認證。|(選擇性) 如果遺失則使用預設認證|  
+|**-u** Domain\password **-p** password|來源伺服器的認證。|(選擇性) 如果遺失則使用預設認證|  
 |**-v st**="SITE"||選擇性。 這個參數僅用於 SharePoint 模式報表伺服器。|  
 |**- v f**="SOURCEFOLDER"|設定為 "/" 表示移轉所有內容，設定為類似 "/folder/subfolder" 則表示部分移轉。 將會複製這個資料夾中的所有內容|(選擇性) 預設值為 "/"。|  
 |**-v ts**="TARGET_URL"|目標 RS 伺服器的 URL||  
@@ -226,8 +226,8 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password" -v security="True"  
 ```  
   
-###  <a name="bkmk_native_2_sharepoint_root"></a> 原生模式到 SharePoint 模式 – 根網站  
- 下列範例將從原生模式 **SourceServer** 將內容移轉至 SharePoint 模式伺服器 **TargetServer**上的「根網站」。 原生模式伺服器上的 [報表] 和 [資料來源] 資料夾移轉後成為 SharePoint 部署上的新文件庫。  
+###  <a name="bkmk_native_2_sharepoint_root"></a> 原生模式到 SharePoint 模式 - 根網站  
+ 下列範例將從原生模式 **SourceServer** 將內容移轉至 SharePoint 模式伺服器 **TargetServer** 上的「根網站」。 原生模式伺服器上的 [報表] 和 [資料來源] 資料夾移轉後成為 SharePoint 部署上的新文件庫。  
   
  ![ssrs_rss_migrate_root_site](../../reporting-services/tools/media/ssrs-rss-migrate-root-site.gif "ssrs_rss_migrate_root_site")  
   
@@ -235,14 +235,14 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p Password -v ts="https://TargetServer/_vti_bin/ReportServer" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_2_sharepoint_with_site"></a> 原生模式到 SharePoint 模式 – 'bi' 網站集合  
+###  <a name="bkmk_native_2_sharepoint_with_site"></a> 原生模式到 SharePoint 模式 - 'bi' 網站集合  
  下列範例將從原生模式伺服器將內容移轉至包含網站集合 "sites/bi" 和共用文件庫的 SharePoint 伺服器。 指令碼會在目的地文件庫中建立資料夾。 例如，指令碼將在目標文件庫中建立 [報表] 和 [資料來源] 資料夾。  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_sharepoint_2_sharepoint"></a> SharePoint 模式到 SharePoint 模式 – 'bi' 網站集合  
+###  <a name="bkmk_sharepoint_2_sharepoint"></a> SharePoint 模式到 SharePoint 模式 - 'bi' 網站集合  
  下列範例會移轉內容：  
   
 -   從包含 "sites/bi" 網站集合和共用文件庫的 SharePoint 伺服器 **SourceServer** 。  
@@ -253,7 +253,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_to_native_Azure_vm"></a> 原生模式到原生模式 – Windows Azure 虛擬機器  
+###  <a name="bkmk_native_to_native_Azure_vm"></a> 原生模式到原生模式 - Windows Azure 虛擬機器  
  下列範例會移轉內容：  
   
 -   從原生模式報表伺服器 **SourceServer**。  
@@ -267,7 +267,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 > [!TIP]  
 >  如需如何使用 Windows PowerShell 在 Windows Azure 虛擬機器上建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器的詳細資訊，請參閱 [Use PowerShell to Create a Windows Azure VM With a Native Mode Report Server](https://msdn.microsoft.com/library/dn449661.aspx)(使用 PowerShell 建立具有原生模式報表伺服器的 Windows Azure VM)。  
   
-##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint 模式 – 'bi' 網站集合到 Windows Azure 虛擬機器上的原生模式伺服器  
+##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint 模式 - 'bi' 網站集合到 Windows Azure 虛擬機器上的原生模式伺服器  
  下列範例會移轉內容：  
   
 -   從包含 "sites/bi" 網站集合和共用文件庫的 SharePoint 模式報表伺服器 **SourceServer** 。  
@@ -308,11 +308,11 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
 3.  按一下 **[角色]**。  
   
 ##  <a name="bkmk_troubleshoot"></a> 疑難排解  
- 使用追蹤旗標 **–t** 取得詳細資訊。 例如，如果您執行指令碼並且看到類似下面的訊息  
+ 使用追蹤旗標 **-t** 取得詳細資訊。 例如，如果您執行指令碼並且看到類似下面的訊息  
   
 -   無法連線到伺服器: https://\<servername>/ReportServer/ReportService2010.asmx  
   
- 再次使用 **–t** 旗標執行指令碼，就會看見類似這句的訊息：  
+ 再次使用 **-t** 旗標執行指令碼，就會看見類似這句的訊息：  
   
 -   System.Exception: 無法連線到伺服器: https://\<伺服器名稱>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **要求失敗，HTTP 狀態 401: 未經授權**。   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- 內部例外狀況堆疊追蹤結束 ---  
   

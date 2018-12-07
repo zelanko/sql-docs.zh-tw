@@ -15,12 +15,12 @@ ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33490ce81c66d12d0309b56112b0a843d99fc969
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 62c705432367b8d2ad7b5de7de30c840be368aac
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560249"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405233"
 ---
 # <a name="work-with-change-data-sql-server"></a>使用變更資料 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "51560249"
  下列各節將描述使用 cdc.fn_cdc_get_all_changes_<capture_instance> 和 cdc.fn_cdc_get_net_changes_<capture_instance> 查詢函數來查詢異動資料擷取資料的一般狀況。  
   
 ### <a name="querying-for-all-changes-within-the-capture-instance-validity-interval"></a>在擷取執行個體有效性間隔內查詢所有變更  
- 變更資料最直接的要求就是在擷取執行個體的有效性間隔中傳回所有目前的變更資料。 若要提出這項要求，請先判斷有效性間隔的 LSN 下限與上限。 然後，請使用這些值來識別傳遞給 cdc.fn_cdc_get_all_changes_<擷取執行個體> 或 cdc.fn_cdc_get_net_changes_<擷取執行個體> 查詢函式的 @from_lsn 和 @to_lsn 參數。 您可以使用 [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) 函數來取得下限，而使用 [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) 函數來取得上限。 如需使用 cdc.fn_cdc_get_all_changes_<capture_instance> 查詢函數來查詢所有目前有效變更的範例程式碼，請參閱「列舉有效範圍的所有變更」範本。 如需使用 cdc.fn_cdc_get_net_changes_<capture_instance> 函數的類似範例，請參閱「列舉有效範圍的淨變更」範本。  
+ 變更資料最直接的要求就是在擷取執行個體有效性間隔中傳回所有目前變更資料。 若要提出這項要求，請先判斷有效性間隔的 LSN 下限與上限。 然後，請使用這些值來識別傳遞給 cdc.fn_cdc_get_all_changes_<擷取執行個體> 或 cdc.fn_cdc_get_net_changes_<擷取執行個體> 查詢函式的 @from_lsn 和 @to_lsn 參數。 您可以使用 [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) 函數來取得下限，而使用 [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) 函數來取得上限。 如需使用 cdc.fn_cdc_get_all_changes_<capture_instance> 查詢函數來查詢所有目前有效變更的範例程式碼，請參閱「列舉有效範圍的所有變更」範本。 如需使用 cdc.fn_cdc_get_net_changes_<capture_instance> 函數的類似範例，請參閱「列舉有效範圍的淨變更」範本。  
   
 ### <a name="querying-for-all-new-changes-since-the-last-set-of-changes"></a>查詢自從上一組變更以來的所有新變更  
  對於一般應用程式而言，查詢變更資料是持續進行的程序，並且針對自從上一個要求以來發生的所有變更提出定期要求。 您可以針對這類查詢使用 [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) 函數，以便從上一個查詢的上限衍生出目前查詢的下限。 這個方法可確保不會重複任何資料列，因為查詢間隔永遠會被視為封閉的間隔，其中兩個端點都包含在間隔中。 然後，您可以使用 [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) 函數來取得新要求間隔的高端點。 如需有系統地移動查詢視窗來取得自從上一個要求以來之所有變更的範例程式碼，請參閱「列舉自從上一個要求以來的所有變更」範本。  

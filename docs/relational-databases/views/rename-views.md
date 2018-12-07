@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 ms.manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b27f66940d3b1a43681cba5ad26a95596d0a969
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fdc46b1d0addad193f5bc09a9bcd60fab9efe027
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744186"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418169"
 ---
 # <a name="rename-views"></a>重新命名檢視
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47744186"
   
 -   **使用下列方法重新命名檢視：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "47744186"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要 SCHEMA 的 ALTER 權限，或 OBJECT 的 CONTROL 權限，以及資料庫的 CREATE VIEW 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  

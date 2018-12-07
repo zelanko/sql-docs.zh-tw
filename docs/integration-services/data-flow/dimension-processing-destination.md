@@ -21,12 +21,12 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 739a89b579e1bc0ebe3c83972a2781e94744768b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0b4735350d6b3d27d4fb0d17ddfcb169b704a67a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640165"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540316"
 ---
 # <a name="dimension-processing-destination"></a>維度處理目的地
   「維度處理」目的地會載入及處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 維度。 如需維度的詳細資訊，請參閱[維度 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)。  
@@ -161,7 +161,7 @@ ms.locfileid: "51640165"
 |**ReportAndStop**|報告錯誤並停止處理。|  
   
  **錯誤記錄路徑**  
- 輸入錯誤記錄路徑，或者按一下 [瀏覽] (…) 按鈕以選取目的地。  
+ 輸入錯誤記錄路徑，或者按一下 [瀏覽 (…)] 按鈕以選取目的地。  
   
  **瀏覽 (...)**  
  選取錯誤記錄的路徑。  

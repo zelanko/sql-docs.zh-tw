@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ed0fb7bcc834127254a6d3298d3baba7404386c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1b4bcffb5ec575c90561daf5c8c3757b3cdcb65
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699356"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539129"
 ---
 # <a name="join-a-role"></a>加入角色
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47699356"
   
 -   **若要將角色指派給登入和資料庫使用，使用：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47699356"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要資料庫的 **ALTER ANY ROLE** 權限、角色的 **ALTER** 權限，或 **db_securityadmin**的成員資格。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -79,9 +79,9 @@ ms.locfileid: "47699356"
   
 4.  以滑鼠右鍵按一下要編輯的角色，並且選取 [屬性]。  
   
-5.  在 [伺服器角色屬性 - _server\_role\_name_] 對話方塊的 [成員] 頁面上，按一下 [新增]。  
+5.  在 [伺服器角色屬性 -_server\_role\_name_] 對話方塊的 [成員] 頁面上，按一下 [新增]。  
   
-6.  在 [選取伺服器登入或角色] 對話方塊中，於 [輸入要選取的物件名稱 (範例)] 底下輸入要加入至此伺服器角色的登入或伺服器角色。 或者，按一下 **[瀏覽]** 並選取 **[瀏覽物件]** 對話方塊中任何或所有可用的物件。 按一下 [確定]，返回 [伺服器角色屬性 - _server\_role\_name_] 對話方塊。  
+6.  在 [選取伺服器登入或角色] 對話方塊中，於 [輸入要選取的物件名稱 (範例)] 底下輸入要加入至此伺服器角色的登入或伺服器角色。 或者，按一下 [瀏覽] 並選取 [瀏覽物件] 對話方塊中任何或所有可用的物件。 按一下 [確定]，返回 [伺服器角色屬性 -_server\_role\_name_] 對話方塊。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -101,9 +101,9 @@ ms.locfileid: "47699356"
   
 7.  以滑鼠右鍵按一下要編輯的角色，並且選取 [屬性]。  
   
-8.  在 資料庫角色屬性 - _database\_role\_name_ 對話方塊的 一般 頁面中，按一下 新增。  
+8.  在 [資料庫角色屬性 -_database\_role\_name_] 對話方塊的 [一般] 頁面中，按一下 [新增]。  
   
-9. 在 [選取資料庫使用者或角色] 對話方塊中，於 [輸入要選取的物件名稱 (範例)] 底下輸入要加入至此資料庫角色的登入或資料庫角色。 或者，按一下 **[瀏覽]** 並選取 **[瀏覽物件]** 對話方塊中任何或所有可用的物件。 按一下 確定，返回 資料庫角色屬性 - _database\_role\_name_ 對話方塊。  
+9. 在 [選取資料庫使用者或角色] 對話方塊中，於 [輸入要選取的物件名稱 (範例)] 底下輸入要加入至此資料庫角色的登入或資料庫角色。 或者，按一下 [瀏覽] 並選取 [瀏覽物件] 對話方塊中任何或所有可用的物件。 按一下 [確定]，返回 [資料庫角色屬性 -_database\_role\_name_] 對話方塊。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

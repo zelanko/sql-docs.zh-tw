@@ -11,12 +11,12 @@ ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74d17c1ceb03cfc452a925d41fdeab98c6f90339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b5f0799a26848f70bc67b24708a5d4352339d50
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654404"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532057"
 ---
 # <a name="lesson-2-2---verifying-the-deployment-bundle"></a>課程 2-2 - 確認部署配套
 在第 1 課中，您建立了「部署教學課程」專案，並且將封裝和輔助檔案加入至專案中。在上一項工作中，您為專案建立了部署公用程式。  

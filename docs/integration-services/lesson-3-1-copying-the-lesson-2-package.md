@@ -11,12 +11,12 @@ ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae60895da9a461b7bcf7fb8fa034833e39c68e1a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 992e258fad0d69542942d2ead4df8cf08b36c391
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637785"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536792"
 ---
 # <a name="lesson-3-1---copying-the-lesson-2-package"></a>課程 3-1 - 複製第 2 課的封裝
 在這項工作中，您將為第 2 課所建立的 Lesson 2.dtsx 套件建立複本。 另外，您也可以將此教學課程中隨附之已完成的第 2 課套件加入專案，然後改為複製該套件。 在第 3 課其餘的課程中，您將使用這個新的複本。  

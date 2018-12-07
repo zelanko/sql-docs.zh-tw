@@ -17,12 +17,12 @@ ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 87c6ae53c34ab0c960efc1a5347c6ff01c74f0df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ecf4ed7f81f4d490f9f5c966627377f93acaeb6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805516"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542052"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>在指令碼工作編輯器設定指令碼工作
   在指令碼工作內撰寫自訂程式碼之前，必須先在 [指令碼工作編輯器] 的三個頁面中設定其主要屬性。 您可以使用 [屬性] 視窗，設定其他非指令碼工作專用的工作屬性。  
@@ -52,13 +52,13 @@ ms.locfileid: "47805516"
 > [!NOTE]  
 >  變數名稱會區分大小寫。  
   
- 若要選取變數，請按一下屬性欄位旁邊的省略符號 (**…**) 按鈕。 如需詳細資訊，請參閱[選取變數頁面](../../../integration-services/control-flow/select-variables-page.md)。  
+ 若要選取變數，請按一下屬性欄位旁邊的省略符號 ([...]) 按鈕。 如需詳細資訊，請參閱[選取變數頁面](../../../integration-services/control-flow/select-variables-page.md)。  
   
 ### <a name="edit-script-button"></a>編輯指令碼按鈕  
  [編輯指令碼] 按鈕會啟動您用來撰寫自訂指令碼的 VSTA 開發環境。 如需詳細資訊，請參閱[指令碼工作的程式碼撰寫和偵錯](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)。  
   
 ## <a name="expressions-page-of-the-script-task-editor"></a>指令碼工作編輯器的運算式頁面  
- 在 [指令碼工作編輯器] 的 [運算式] 頁面上，您可以使用運算式，針對上面列出之指令碼工作的屬性及許多其他工作屬性來提供值。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)。  
+ 在 [指令碼工作編輯器] 的 [運算式] 頁面上，您可以使用運算式，針對上面列出之指令碼工作的屬性及許多其他工作屬性來提供值。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../../integration-services/expressions/integration-services-ssis-expressions.md)為止。  
   
 ## <a name="see-also"></a>另請參閱  
  [編碼和偵錯指令碼工作](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  

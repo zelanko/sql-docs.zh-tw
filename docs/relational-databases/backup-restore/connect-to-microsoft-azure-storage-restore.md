@@ -13,12 +13,12 @@ ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7be978540b673578fb9ca401f25dfab053f4f7e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e8a6d88387fb0674cd8d39f44a30358009e44f9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854169"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503969"
 ---
 # <a name="connect-to-microsoft-azure-storage-restore"></a>連接到 Microsoft Azure 儲存體 (還原)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47854169"
  指定 Windows Azure 儲存體帳戶存取金鑰。  
   
  [使用安全端點 (HTTPS)] 核取方塊  
- 選取此選項，以確保 Windows Azure 儲存體的安全連接 (建議使用)。  
+ 選取此選項，以確保 Microsoft Azure 儲存體的安全連線 (建議使用)。  
   
  [儲存帳戶金鑰]核取方塊  
  如果您想要 SQL Server 記住此儲存體帳戶的存取金鑰，請選取此核取方塊。  

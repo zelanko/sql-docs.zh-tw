@@ -14,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e6fafa2ba203ecbcd3141503a170c81c21282621
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: fd3fc6793ce2c95bfbb03d80e0413d0b0f6148d1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560515"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404983"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和監視異動資料擷取 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

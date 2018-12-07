@@ -12,12 +12,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cb90a4311a1fe37905d5962e66572f7431db7a2a
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 18f025f4ba212849d3823466d6555733f305ac91
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085254"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302691"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "49085254"
 -   管理儲存空間  
   
 ## <a name="database-engine-tuning-advisor-benefits"></a>Database Engine Tuning Advisor 優點  
- 如果未完全了解資料庫結構以及針對資料庫執行的查詢，則很難最佳化查詢效能。 Database Engine Tuning Advisor 可簡化這項工作，方法是分析目前查詢計畫快取，或是分析所建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢的工作負載，以及建議適當的實體設定。 若為更高階的資料庫管理員，DTA 可提供強而有力的機制以執行不同實體設計替代方案的探勘假設分析。 DTA 可以提供下列資訊。  
+ 如果未完全了解資料庫結構以及針對資料庫執行的查詢，則很難最佳化查詢效能。 **Database Engine Tuning Advisor (DTA)** 可簡化這項工作，方法是分析目前的查詢計劃快取，或是分析所建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢的工作負載，以及建議適當的實體設計。 若為更高階的資料庫管理員，DTA 可提供強而有力的機制以執行不同實體設計替代方案的探勘假設分析。 DTA 可以提供下列資訊。  
   
 -   利用查詢最佳化工具來分析工作負載中的查詢，以針對資料庫建議資料列存放區和[資料行存取區](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)索引的最佳混合情況。  
   
@@ -50,10 +50,10 @@ ms.locfileid: "49085254"
 
 -   設想替代方案，讓您以假設性組態的形式來提供可能的設計選項，供 Database Engine Tuning Advisor 進行評估。
 
--  調整來自各種來源的工作負載，包括 SQL Server 查詢存放區、計畫快取、SQL Server Profiler 追蹤檔案或資料表，或是 SQL 檔案。
+-   調整來自各種來源的工作負載，包括 SQL Server 查詢存放區、計畫快取、SQL Server Profiler 追蹤檔案或資料表，或是 SQL 檔案。
 
   
- Database Engine Tuning Advisor 的設計目的為處理下列查詢工作負載的類型。  
+Database Engine Tuning Advisor 的設計目的為處理下列查詢工作負載類型：  
   
 -   僅線上交易處理 (OLTP) 查詢  
   
@@ -66,22 +66,22 @@ ms.locfileid: "49085254"
 -   以更新為主的工作負載 (資料修改多於查詢)  
   
 ## <a name="dta-components-and-concepts"></a>DTA 元件及概念  
- Database Engine Tuning Advisor 圖形化使用者介面  
+ **Database Engine Tuning Advisor 圖形化使用者介面**  
  一種易用的介面，可用以指定工作負載，以及選取各種微調選項。  
   
  **dta** 公用程式  
  Database Engine Tuning Advisor 的命令提示字元版本。 **dta** 公用程式的設計，是為了讓您在應用程式和指令碼中使用 Database Engine Tuning Advisor 功能。  
   
- 工作負載  
+ **工作負載**  
  Transact-SQL 指令碼檔案、追蹤檔案或追蹤資料表，內含代表您要微調之資料庫的工作負載。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始，您可以將計畫快取指定為工作負載。  從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，您可以[將查詢存放區指定為工作負載](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)。 
   
- XML 輸入檔  
- Database Engine Tuning Advisor 可用以微調工作負載的 XML 格式檔案。 XML 輸入檔支援 GUI 或 **dta** 公用程式未提供的進階微調選項。  
+ **XML 輸入檔**  
+ Database Engine Tuning Advisor 可用來調整工作負載的 XML 格式檔案。 XML 輸入檔支援 GUI 或 **dta** 公用程式未提供的進階微調選項。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
  Database Engine Tuning Advisor 還具有下列限制事項。  
   
--   無法加入或卸除唯一索引，或用於強制執行 PRIMARY KEY 或 UNIQUE 條件約束的索引。  
+-   無法新增或卸除唯一索引，或用於強制執行 `PRIMARY KEY` 或 `UNIQUE` 條件約束的索引。  
   
 -   無法分析設定為單一使用者模式的資料庫。  
   

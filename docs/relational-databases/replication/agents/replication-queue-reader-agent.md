@@ -16,12 +16,12 @@ ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 61c197b6dbb7583f598f7d59d1f0903d52fd184f
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 34e7f949741ceb562ba85e6104e6f2f0c1b1af4a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236984"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392541"
 ---
 # <a name="replication-queue-reader-agent"></a>複寫佇列讀取器代理程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ qrdrsvc [-?]
 |**2**|指定要使用 SSL，而且憑證會經過驗證。|  
 
  > [!NOTE]  
- >  定義的 SSL 憑證必須包含 SQL Server 的完整網域名稱才會有效。 為了讓代理程式能在將 -EncryptionLevel 設定為 2 時成功連線，請在本機 SQL Server 上建立別名。 ‘Alias Name’ 參數應為伺服器名稱，且應將 ‘Server’ 參數設為 SQL Server 的完整名稱。
+ >  定義的 SSL 憑證必須包含 SQL Server 的完整網域名稱才會有效。 為了讓代理程式能在將 -EncryptionLevel 設定為 2 時成功連線，請在本機 SQL Server 上建立別名。 'Alias Name' 參數應為伺服器名稱，且應將 'Server' 參數設為 SQL Server 的完整名稱。
   
  如需詳細資訊，請參閱[安全性概觀 &#40;複寫&#41;](../../../relational-databases/replication/security/security-overview-replication.md)。  
   

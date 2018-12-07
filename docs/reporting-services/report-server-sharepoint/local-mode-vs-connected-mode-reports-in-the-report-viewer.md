@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cc0d7ba8aa5261e93f7b291f3e948e0f773c45e5
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 1083c87475c27e33dccd069149e240098d187473
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812924"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418799"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>比較報表檢視器中的本機模式與連線模式報表
 
@@ -79,7 +79,7 @@ ms.locfileid: "51812924"
   
 ## <a name="connected-mode"></a>「連接模式」
 
- 如需使用 ADS 延伸模組搭配 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 連接模式的最新資訊，請參閱 [SharePoint 網站中的 Access Services 報表顯示資料延伸模組 'ADS' 中的錯誤](https://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx)(英文)。  
+ 如需 ADS 延伸模組與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 連線模式搭配使用的最新資訊，請參閱 [Access Services Report in SharePoint Site shows error in data extension 'ADS'](https://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx) (SharePoint 網站中 Access Services 報表顯示資料延伸模組 'ADS' 中的錯誤)。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ade996ce083c37bbf9ef2eeae30fb6e62a5786c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caec4221795ed991c01d635931989499302b0c1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680486"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515077"
 ---
 # <a name="create-unique-indexes"></a>建立唯一索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47680486"
   
 -   **使用下列方法在資料表上建立唯一索引：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "47680486"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -116,7 +116,7 @@ ms.locfileid: "47680486"
   
 7.  在主要方格的 [(一般)] 底下，選取 [類型]，然後從清單中選擇 [索引]。  
   
-8.  選取 [資料行]，然後按一下省略符號 **(…)**。  
+8.  選取 [資料行]，然後按一下省略符號 **(...)**。  
   
 9. 在 **[索引資料行]** 對話方塊中的 **[資料行名稱]** 底下，選取要進行索引的資料行。 您最多可以選取 16 個資料行。 為了獲得最佳效能，每個索引最好只選取一或兩個資料行。 針對每個選取的資料行，指示索引是要以遞增或遞減順序排列此資料行的值。  
   
@@ -138,13 +138,13 @@ ms.locfileid: "47680486"
   
 3.  展開您要建立唯一索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引] 資料夾，指向 [新增索引]，然後選取 [非叢集索引…]。  
+4.  以滑鼠右鍵按一下 [索引] 資料夾，指向 [新增索引]，然後選取 [非叢集索引...]。  
   
 5.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
 6.  選取 **[唯一]** 核取方塊。  
   
-7.  按一下 **[索引鍵資料行]** 底下的 **[加入]**。  
+7.  按一下 [索引鍵資料行] 下的 [新增...]。  
   
 8.  在 [從 _table\_name_ 選取資料行] 對話方塊中，選取要新增至唯一索引之一或多個資料表資料行的一或多個核取方塊。  
   

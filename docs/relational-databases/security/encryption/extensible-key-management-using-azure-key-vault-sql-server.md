@@ -17,12 +17,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 250b61577f651ddadd7529b172f5bed04d26f896
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9bb567ea41c87b895314abb8c3f7cedc4bbfbc7d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656149"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391022"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>使用 Azure Key Vault 進行可延伸金鑰管理 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "51656149"
  ![使用 Azure Key Vault 的 SQL Server EKM](../../../relational-databases/security/encryption/media/ekm-using-azure-key-vault.png "使用 Azure Key Vault 的 SQL Server EKM")  
 
 > [!NOTE]  
->  1.0.0.440 版和較舊版本皆已被取代，而且生產環境也不再支援。 請前往 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=45344) ，使用＜SQL Server 連接器升級＞下 [SQL Server 連接器維護和疑難排解](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) 頁面上的指示，升級為 1.0.1.0 版或更新版本。
+>  1.0.0.440 版和較舊版本皆已被取代，而且生產環境也不再支援。 請前往 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=45344)，使用 [SQL Server 連接器維護和疑難排解](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)頁面＜SQL Server 連接器升級＞下的指示，升級為 1.0.1.0 版或更新版本。
   
  如需下一個步驟，請參閱 [使用 Azure 金鑰保存庫進行可延伸金鑰管理的設定步驟](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)。  
   

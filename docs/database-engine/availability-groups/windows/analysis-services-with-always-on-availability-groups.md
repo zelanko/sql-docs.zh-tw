@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a83aa8029ce66db969256ee672ae9418d1bc48a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 252353bd71cbbc5d3cdeb18ae0bcf49b7be440b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635016"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395451"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services 與 AlwaysOn 可用性群組
 
@@ -120,11 +120,11 @@ ms.locfileid: "47635016"
   
 3.  修改指令碼，以對您的部署有效的值來取代預留位置：  
   
-    -   以裝載主要複本之伺服器執行個體的名稱取代 ‘Computer01’。  
+    -   以裝載主要複本之伺服器執行個體的名稱取代 'Computer01'。  
   
-    -   以裝載次要複本之伺服器執行個體的名稱取代 ‘Computer02’。  
+    -   以裝載次要複本之伺服器執行個體的名稱取代 'Computer02'。  
   
-    -   以您的網域名稱取代 ‘contoso.com’，如果所有電腦都在相同的網域，則可以從指令碼加以省略。 如果接聽程式使用預設通訊埠，請保留通訊埠編號。 接聽程式實際使用的通訊埠會列於 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]的屬性頁面中。  
+    -   以您的網域名稱取代 'contoso.com'，如果所有電腦都在相同的網域，則可以從指令碼加以省略。 如果接聽程式使用預設通訊埠，請保留通訊埠編號。 接聽程式實際使用的通訊埠會列於 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]的屬性頁面中。  
   
 4.  執行指令碼。  
   
@@ -212,9 +212,9 @@ ms.locfileid: "47635016"
 9. 重複 Analysis Services 解決方案中的處理或查詢命令，然後在 SQL Server Profiler 中並排檢視追蹤。 您應該會看到執行處理的其他執行個體現在成為新的次要複本。  
   
 ##  <a name="bkmk_whathappens"></a> 容錯移轉之後會發生什麼情況  
- 在容錯移轉期間，次要複本會轉換到主要角色，而先前的主要複本會轉換到次要角色。 所有用戶端連接會終止，可用性群組接聽程式的擁有權會隨主要複本角色移至新的 SQL Server 執行個體，且接聽程式端點會繫結到新執行個體的虛擬 IP 位址和 TCP 通訊埠。 如需詳細資訊，請參閱[關於可用性複本的用戶端連線存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)。  
+ 在容錯移轉期間，次要複本會轉換到主要角色，而先前的主要複本會轉換到次要角色。 所有用戶端連線會終止，可用性群組接聽程式的擁有權會隨主要複本角色移至新的 SQL Server 執行個體，且接聽程式端點會繫結到新執行個體的虛擬 IP 位址和 TCP 連接埠。 如需詳細資訊，請參閱本主題稍後的 [關於可用性複本的用戶端連接存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md))。  
   
- 如果在處理期間發生容錯移轉，Analysis Services 的記錄檔或輸出視窗中會發生下列錯誤：「OLE DB 錯誤: OLE DB 或 ODBC 錯誤: 通訊連結失敗; 08S01; TPC 提供者: 遠端主機已強制關閉一個現存的連線。 ; 08S01。」  
+ 如果在處理期間發生容錯移轉，Analysis Services 的記錄檔或輸出視窗中會發生下列錯誤：「OLE DB 錯誤: OLE DB 或 ODBC 錯誤: 通訊連結失敗; 08S01; TPC 提供者: 遠端主機已強制關閉一個現有連線。 ; 08S01。」  
   
  如果您稍候幾分鐘再試一次，應該可以解決這個錯誤。 如果將可用性群組正確設定為可讀取的次要複本，當您重試處理時，會繼續在新的次要複本上處理。  
   
@@ -223,7 +223,7 @@ ms.locfileid: "47635016"
 ##  <a name="bkmk_writeback"></a> 使用 AlwaysOn 可用性資料庫時回寫  
  回寫是 Analysis Services 功能，支援 Excel 的假設分析。 這項功能也常用於自訂應用程式中的預算和預測工作。  
   
- 回寫支援需要 READWRITE 用戶端連接。 在 Excel 中，如果您嘗試在唯讀連接上回寫，會發生下列錯誤：「無法從外部資料來源擷取資料。」 「無法從外部資料來源擷取資料。」  
+ 回寫支援需要 READWRITE 用戶端連接。 在 Excel 中，如果您嘗試在唯讀連線上回寫，會發生下列錯誤：「無法從外部資料來源擷取資料。」 「無法從外部資料來源擷取資料。」  
   
  如果設定連接一律存取可讀取的次要複本，現在就必須設定使用主要複本之 READWRITE 連接的新連接。  
   

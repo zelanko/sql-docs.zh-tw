@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c80abd458a0275aeed00c2e97f29d07b0ce17f07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d313a2e98bd80a5b2621fd7ce8b30b70cb63f0b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715025"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537417"
 ---
 # <a name="populate-full-text-indexes"></a>擴展全文檢索索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,9 +100,9 @@ ALTER FULLTEXT INDEX ON Production.Document
   
      **使用自動母體擴展來設定追蹤變更**  
   
-    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING AUTO  
+    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ...WITH CHANGE_TRACKING AUTO  
   
-    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING AUTO  
+    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ...SET CHANGE_TRACKING AUTO  
   
     **範例 - 將全文檢索索引更改成使用自動變更追蹤**  
     下列範例會將 `HumanResources.JobCandidate` 範例資料庫之 `AdventureWorks` 資料表的全文檢索索引變更成使用變更追蹤搭配自動母體擴展。  
@@ -116,13 +116,13 @@ ALTER FULLTEXT INDEX ON Production.Document
   
 -   **手動母體擴展**  
   
-     如果您指定了 CHANGE_TRACKING MANUAL，全文檢索引擎就會針對全文檢索索引使用手動母體擴展。 初始完整母體擴展完成之後，系統就會追蹤變更，因為基底資料表中的資料已修改。 不過，在您執行 ALTER FULLTEXT INDEX … START UPDATE POPULATION 陳述式之前，它們不會傳播至全文檢索索引。 START UPDATE POPULATION 陳述式來手動套用變更。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來定期呼叫這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
+     如果您指定了 CHANGE_TRACKING MANUAL，全文檢索引擎就會針對全文檢索索引使用手動母體擴展。 初始完整母體擴展完成之後，系統就會追蹤變更，因為基底資料表中的資料已修改。 不過，它們不會傳播至全文檢索索引，直到您執行 ALTER FULLTEXT INDEX ...START UPDATE POPULATION 陳述式來手動套用變更。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來定期呼叫這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
      **若要使用手動母體擴展來啟動追蹤變更**  
   
-    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING MANUAL  
+    -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ...WITH CHANGE_TRACKING MANUAL  
   
-    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING MANUAL  
+    -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ...SET CHANGE_TRACKING MANUAL  
   
     **範例 - 使用手動變更追蹤來建立全文檢索索引**  
     下列範例會針對 `HumanResources.JobCandidate` 範例資料庫的 `AdventureWorks` 資料表建立使用變更追蹤搭配手動母體擴展的全文檢索索引。  
@@ -150,9 +150,9 @@ ALTER FULLTEXT INDEX ON Production.Document
    
 ### <a name="disable-change-tracking"></a>停用變更追蹤 
   
--   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING OFF  
+-   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ...WITH CHANGE_TRACKING OFF  
   
--   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING OFF  
+-   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ...SET CHANGE_TRACKING OFF  
    
   
 ## <a name="incremental-population-based-on-a-timestamp"></a>以時間戳記為基礎的累加母體擴展  

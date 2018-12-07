@@ -13,12 +13,12 @@ ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c657e42e1e754ca843a40967221512f55c9c9c9f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7a11a699a9bba7f04459bbcc39ef6fcf085cbed1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675337"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539695"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit 記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "51675337"
 |**event_time**|可稽核的動作引發時的日期/時間。|**datetime2**|是|  
 |**sequence_no**|追蹤單一稽核記錄中太長而無法納入稽核寫入緩衝區內的記錄順序。|**int**|是|  
 |**action_id**|動作的識別碼<br /><br /> 提示：若要使用 **action_id** 作為述詞，您必須將它從字元字串轉換為數值。 如需詳細資訊，請參閱 [針對 action_id/class_type 述詞篩選 SQL Server Audit](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)。|**varchar(4)**|是|  
-|**succeeded**|指出觸發稽核事件之動作的權限檢查成功還是失敗。 |**bit**<br /> – 1 = 成功、 <br />0 = 失敗|是|  
+|**succeeded**|指出觸發稽核事件之動作的權限檢查成功還是失敗。 |**bit**<br /> -1 = 成功， <br />0 = 失敗|是|  
 |**permission_bitmask**|當適用時，顯示已授與、拒絕或撤銷的權限|**bigint**|否|  
-|**is_column_permission**|指出資料行層級權限的旗標|**bit** <br />– 1 = True, <br />0 = False|否|  
+|**is_column_permission**|指出資料行層級權限的旗標|**bit** <br />- 1 = True， <br />0 = False|否|  
 |**session_id**|事件發生所在之工作階段的識別碼。|**int**|是|  
 |**server_principal_id**|動作執行所在之登入環境的識別碼。|**int**|是|  
 |**database_principal_id**|動作執行所在之資料庫使用者環境的識別碼。|**int**|否|  

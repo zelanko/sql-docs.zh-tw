@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f074f3bbdb3b3a7920f1e3ad86270a6bf51059b
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030197"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710699"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>建立 Reporting Services 行動報表
-您可以使用 SQL Server 行動報表發行工具，在可調整格線列和格線欄且具有彈性行動報表項目的設計介面上，快速建立針對任何螢幕大小適當調整大小的 SQL Server 2016 Reporting Services 行動報表。  
+您可以使用 SQL Server 行動報表發行工具，在可調整格線列和格線欄且具有彈性行動報表項目的設計介面上，快速建立針對任何螢幕大小適當調整大小的 SQL Server Reporting Services 行動報表。  
   
 第一次建立行動報表時，您可以從 Reporting Services 入口網站，將 SQL Server 行動報表發行工具安裝在本機電腦上。 您可以從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkID=733527)進行安裝。 之後，您就可以從入口網站或本機啟動。   
     
@@ -62,7 +62,7 @@ ms.locfileid: "50030197"
   
 11. 是時候儲存報表了。 選取左上方的儲存圖示，然後選取 [儲存至本機] 或 [儲存至伺服器]。  
   
-   您需要有 SQL Server 2016 Reporting Services 報表伺服器的存取權，才能將其儲存至伺服器。  
+   您需要有 SQL Server Reporting Services 報表伺服器的存取權，才能將其儲存至伺服器。  
      
    ### <a name="see-also"></a>另請參閱  
      

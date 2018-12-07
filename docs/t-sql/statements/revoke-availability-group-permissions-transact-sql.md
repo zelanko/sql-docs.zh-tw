@@ -18,12 +18,12 @@ ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4be4d925cb90cf02161e71c4797a22e2149b03dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42d3976cabcfc231079f5b3b0c8cf9cbd1dcde94
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807086"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524336"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>撤銷可用性群組權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ GO
 ```  
   
 ### <a name="c-revoking-a-previously-granted-with-grant-option-clause"></a>C. 撤銷先前授與的 WITH GRANT OPTION 子句  
- 如果使用 WITH GRANT OPTION 授與權限，則請使用 REVOKE GRANT OPTION FOR … 移除 WITH GRANT OPTION。 下列範例會授與權限，然後移除權限的 WITH GRANT 部分。  
+ 如果使用 WITH GRANT OPTION 授與權限，使用 REVOKE GRANT OPTION FOR ... 即可移除 WITH GRANT OPTION。 下列範例會授與權限，然後移除權限的 WITH GRANT 部分。  
   
 ```  
 USE master;  

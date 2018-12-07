@@ -23,12 +23,12 @@ ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2ad33a42cc05644fa2ce56836361fe8fee56324
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efc8631d234fae86010d7f94028fc962947561ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800329"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525726"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   **SELECT** - 針對每個參考的順序物件，為陳述式結果中的每個資料列，產生一次新值。  
   
--   **INSERT** … **VALUES** - 針對每個參考的順序物件，為陳述式中每個插入的資料列，產生一次新值。  
+-   **INSERT** ...**VALUES** - 針對每個參考的順序物件，為陳述式中每個插入的資料列，產生一次新值。  
   
 -   **UPDATE** - 針對每個參考的順序物件，為陳述式所更新的每個資料列，產生一次新值。  
   
@@ -93,7 +93,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   在使用 **DISTINCT**、**UNION**、**UNION ALL**、**EXCEPT** 或 **INTERSECT** 運算子的陳述式中。  
   
--   在使用 **ORDER BY** 子句的陳述式中 (除非使用 **NEXT VALUE FOR** … **OVER** (**ORDER BY** …))。  
+-   在使用 **ORDER BY** 子句的陳述式中 (除非使用 **NEXT VALUE FOR** ...**OVER** (**ORDER BY** ...))。  
   
 -   在下列子句中：**FETCH**、**OVER**、**OUTPUT**、**ON**、**PIVOT**、**UNPIVOT**、**GROUP BY**、**HAVING**、**COMPUTE**、**COMPUTE BY**，或 **FOR XML**。  
   
@@ -130,7 +130,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   可以改變預設條件約束中參考的定順序物件。  
   
--   當 `INSERT … SELECT` 或 `INSERT … EXEC` 陳述式中正在插入的資料來自使用 **ORDER BY** 子句的查詢時，則會依 **ORDER BY** 子句所指定的順序來產生 **NEXT VALUE FOR** 函式所傳回的值。  
+-   當 `INSERT ... SELECT` 或 `INSERT ... EXEC` 陳述式中正在插入的資料來自使用 **ORDER BY** 子句的查詢時，則會依 **ORDER BY** 子句所指定的順序來產生 **NEXT VALUE FOR** 函式所傳回的值。  
   
 ## <a name="using-a-sequence-object-with-an-over-order-by-clause"></a>搭配 OVER ORDER BY 子句使用順序物件  
  **NEXT VALUE FOR** 函式支援透過將 **OVER** 子句套用到 **NEXT VALUE FOR** 呼叫，來產生排序的順序值。 透過使用 **OVER** 子句，可確保傳回的值依據 **OVER** 子句之 **ORDER BY** 次子句的順序來產生。 搭配 **OVER** 子句使用 **NEXT VALUE FOR** 函式時，下列為額外的適用規則：  
@@ -143,7 +143,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   如果 **SELECT** 陳述式中所有 **NEXT VALUE FOR** 函式呼叫都指定 **OVER** 子句，**ORDER BY** 子句可用於 **SELECT** 陳述式。  
   
--   使用於 **SELECT** 陳述式或 `INSERT … SELECT …` 陳述式中時，允許 **OVER** 子句與 **NEXT VALUE FOR** 函式搭配使用。 在 **UPDATE** 或 **MERGE** 陳述式中，不允許 **OVER** 子句與 **NEXT VALUE FOR** 函式搭配使用。  
+-   使用於 **SELECT** 陳述式或 `INSERT ... SELECT ...` 陳述式中時，允許 **OVER** 子句與 **NEXT VALUE FOR** 函式搭配使用。 在 **UPDATE** 或 **MERGE** 陳述式中，不允許 **OVER** 子句與 **NEXT VALUE FOR** 函式搭配使用。  
   
 -   如果同時有另一個處理序正在存取順序物件，傳回的數字可能會有間距。  
   
@@ -278,8 +278,8 @@ GO
   
 ```  
   
-### <a name="e-using-the-next-value-for-function-with-select--into"></a>E. 搭配使用 NEXT VALUE FOR 函數與 SELECT … INTO  
- 下列範例會使用 `SELECT … INTO` 陳述式建立名為 `Production.NewLocation` 的資料表，然後使用 `NEXT VALUE FOR` 函式指定每個資料列的編號。  
+### <a name="e-using-the-next-value-for-function-with-select--into"></a>E. 搭配使用 NEXT VALUE FOR 函數與 SELECT ...INTO  
+ 下列範例會使用 `SELECT ... INTO` 陳述式建立名為 `Production.NewLocation` 的資料表，然後使用 `NEXT VALUE FOR` 函式指定每個資料列的編號。  
   
 ```  
 USE AdventureWorks2012 ;   

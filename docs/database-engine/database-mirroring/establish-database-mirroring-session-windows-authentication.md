@@ -13,12 +13,12 @@ ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e3a8430437bd4a4dae43e9a9b99f98c004a1b3c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a33e5f09ee0bda2bb1967b90902e47663f1846be
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838936"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522317"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>建立資料庫鏡像工作階段 - Windows 驗證
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47838936"
   
  若要建立資料庫鏡像工作階段，並修改資料庫的資料庫鏡像屬性，請使用 **[資料庫屬性]** 對話方塊的 **[鏡像]** 頁面。使用 **[鏡像]** 頁面來設定資料庫鏡像之前，請先確定您是否已經符合下列需求：  
   
--   主體和鏡像伺服器執行個體必須執行相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本 (Standard 或 Enterprise)。 此外，我們強烈建議您在可比較而且可以處理相同工作負載的系統上執行這些伺服器執行個體。  
+-   主體和鏡像伺服器執行個體必須執行相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本 (Standard 或 Enterprise)。 此外，我們強烈建議您在可比較而且可以處理相同工作負載的系統上執行這些伺服器執行個體。  
   
     > [!NOTE]  
     >  並非所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用見證伺服器執行個體。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -90,6 +90,6 @@ ms.locfileid: "47838936"
  [角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
  [設定資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
- [新增或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
+ [加入或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
   

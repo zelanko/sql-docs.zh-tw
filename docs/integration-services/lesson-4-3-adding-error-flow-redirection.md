@@ -11,12 +11,12 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03e6618461a81fa086e66db65d72de4e49fea634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaaa071f447b77242196da7a83a7b71f6f2ca395
+ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710286"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52302881"
 ---
 # <a name="lesson-4-3---adding-error-flow-redirection"></a>課程 4-3 - 新增錯誤流程重新導向
 如上一項工作所示範的，當 [查閱貨幣索引鍵] 轉換試圖處理已損毀範例一般檔案 (其產生錯誤) 時，不會產生相符者。 因為轉換使用錯誤輸出的預設值，所以任何錯誤都會造成轉換失敗。 當轉換失敗時，封裝的其餘部分也會失敗。  
@@ -51,7 +51,7 @@ ms.locfileid: "47710286"
   
 9. 在 **Name** 屬性中，輸入 **ErrorDescription** ，並將 **DataType** 屬性設為 **[Unicode 字串 [DT_WSTR]]**。  
   
-10. 在 **[指令碼]** 頁面上，確認 **LocaleID** 屬性是設為 **[英文 (美國)]**。  
+10. 在 [指令碼] 頁面上，確認 **LocaleID** 屬性是設為 **[英文 (美國)]**。  
   
 11. 按一下 **[編輯指令碼]** 開啟 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA)。 在 **Input0_ProcessInputRow** 方法中，輸入或剖析下列程式碼。  
   

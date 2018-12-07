@@ -19,12 +19,12 @@ ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4782edbfb3b353dbd07313e0568847d5c696ad8
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: cf68976e003eb3466d613f7f1c41db129c70f570
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637725"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540870"
 ---
 # <a name="creating-a-package-programmatically"></a>以程式設計方式建立封裝
   <xref:Microsoft.SqlServer.Dts.Runtime.Package> 物件是 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 專案方案中所有其他物件的最上層容器。 做為最上層容器，封裝是第一個建立的物件，而且後續的物件會加入其中，然後在封裝的內容中執行。 封裝本身不會移動或是轉換資料。 封裝依賴它所含的工作 (Task) 以執行工作 (Work)。 工作 (Task) 會執行封裝所執行的大部分工作 (Work)，並定義封裝的功能。 只需要三行程式碼就可以建立和執行封裝，但是還需要將各種工作與 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件加入，以便為您的封裝提供其他功能。 本節討論如何以程式設計方式建立封裝。 有關如何建立工作或 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 的詳細資訊並非在此提供， 這些內容將於後續章節說明。  

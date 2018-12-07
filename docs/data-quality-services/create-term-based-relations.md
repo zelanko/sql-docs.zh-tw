@@ -5,8 +5,7 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
@@ -14,20 +13,20 @@ ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1d46bc9edd1c907c1d8b13fb5677f1bec5f7c2f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d15ecb6a7ef4c9db9ce10fd2fd51882c68883aaa
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700866"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617268"
 ---
 # <a name="create-term-based-relations"></a>建立以詞彙為主的關聯
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  此主題描述如何針對 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的定義域建立以詞彙為主的關聯。 以詞彙為主的關聯 (TBR) 可讓您針對屬於定義域值的詞彙進行更正。 它會啟用多個值，這些值除了被視為相同同義字的共同部分拼字以外，都是相同的。 例如，您可以設定某個以詞彙為主的關聯，將 “Inc.” 詞彙變更為 “Incorporated”。 每當在定義域中遇到 “Inc.” 詞彙時，都會加以變更。 出現 “Contoso, Inc.” 的地方將會變更為 “Contoso, Incorporated”，而且這兩個值會被視為完全相符的同義字。  
+  此主題描述如何針對 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的定義域建立以詞彙為主的關聯。 以詞彙為主的關聯 (TBR) 可讓您針對屬於定義域值的詞彙進行更正。 它會啟用多個值，這些值除了被視為相同同義字的共同部分拼字以外，都是相同的。 例如，您可以設定某個以詞彙為主的關聯，將 "Inc." 詞彙變更為 "Incorporated"。 每當在定義域中遇到 "Inc." 詞彙時，都會加以變更。 出現 "Contoso, Inc." 的地方將會變更為 "Contoso, Incorporated"，而且這兩個值會被視為完全相符的同義字。  
   
- 若要使用以詞彙為主的關聯，請建立「值/更正為」配對清單，例如 “Inc.” 和 “Incorporated” 或是 “Senior” 和 “Sr.”。 使用以詞彙為主的關聯可讓您在整個定義域中變更詞彙，而不需要手動將個別定義域值設定為同義字。 您可以指定應該更正某個值，即使知識探索之前尚未探索該值。 如果以詞彙為主的關聯轉換讓兩個值變成完全相同，則 DQS 將會在兩者之間建立同義字關聯性 (在知識探索中)、在兩者之間建立更正關聯性 (在資料更正中)，或是建立完全相符的項目 (在比對中)。  
+ 若要使用以詞彙為主的關聯，請建立「值/更正為」配對清單，例如 "Inc." 和 "Incorporated" 或是 "Senior" 和 "Sr."。 使用以詞彙為主的關聯可讓您在整個定義域中變更詞彙，而不需要手動將個別定義域值設定為同義字。 您可以指定應該更正某個值，即使知識探索之前尚未探索該值。 如果以詞彙為主的關聯轉換讓兩個值變成完全相同，則 DQS 將會在兩者之間建立同義字關聯性 (在知識探索中)、在兩者之間建立更正關聯性 (在資料更正中)，或是建立完全相符的項目 (在比對中)。  
   
  在分析之前，以詞彙為主的關聯轉換和符號轉換 (其中會以空格或 null 取代特殊字元) 都會在前置處理階段進行。 如果要求複合定義域剖析，則會在兩次轉換之前執行，因為分隔符號剖析需要符號。 其他作業 (例如定義域規則和定義域值變更) 將會在轉換之後執行。 就比對而言，不論您是否執行了清理，都會在比對活動之前，將以詞彙為主的關聯套用至來源資料。  
   

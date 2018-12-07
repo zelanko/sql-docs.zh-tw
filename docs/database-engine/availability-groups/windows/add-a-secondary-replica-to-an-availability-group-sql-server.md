@@ -13,12 +13,12 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4e46ce182bbd81ce28939ac9250306fe7ff7cb57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 834e84ea62e9cfa7b6398d67e2b59ba011d21979
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615336"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512335"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>將次要複本加入至可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47615336"
   
 -   **使用下列方法加入複本：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47615336"
   
 ##  <a name="Security"></a> 安全性  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="Permissions"></a> Permissions  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  

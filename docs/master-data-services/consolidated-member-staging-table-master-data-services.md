@@ -15,12 +15,12 @@ ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 00cac987ae75a35223bd0fc61c1848edbbe0ca71
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0ae29a3e3b604ffdff961389f8acb2eebf2a4c95
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701381"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394423"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>合併成員暫存資料表 (Master Data Services)
 

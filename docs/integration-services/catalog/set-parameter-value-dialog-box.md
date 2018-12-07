@@ -11,12 +11,12 @@ ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2db8bb8e87f7daf14a96c614c4574654f0d6adc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6892f59a80eafeabdbf62164e5aac448e9d2b4a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672506"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410155"
 ---
 # <a name="set-parameter-value-dialog-box"></a>設定參數值對話方塊
   使用 **[設定參數值]** 對話方塊來針對專案和封裝設定參數與連接管理員屬性的值。  
@@ -31,7 +31,7 @@ ms.locfileid: "47672506"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
-     您正在連接到主控 SSISDB 資料庫之 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體。  
+     您正在連線到主控 SSISDB 資料庫的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體。  
   
 2.  在 [物件總管] 中，展開樹狀目錄以顯示 **[Integration Services 目錄]** 節點。  
   

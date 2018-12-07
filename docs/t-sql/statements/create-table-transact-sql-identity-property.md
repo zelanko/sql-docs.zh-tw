@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94b77d9ce0e036e0b3c5727d3731d0effc074f33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09422e46babcb966fdc4c86153e91439a5e46c88
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782446"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507396"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (屬性)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -64,13 +64,13 @@ IDENTITY [ (seed , increment) ]
   
  資料行上的識別屬性不保證以下事項：  
   
--   **值的唯一性** – 必須使用 **PRIMARY KEY** 或 **UNIQUE** 條件約束或 **UNIQUE** 索引來強制執行唯一性。  
+-   **值的唯一性** - 必須使用 **PRIMARY KEY** 或 **UNIQUE** 條件約束或 **UNIQUE** 索引來強制執行唯一性。  
   
--   **交易內的連續值** – 插入多個資料列的交易並不保證能夠取得資料列的連續值，因為其他並行插入可能會在資料表中發生。 如果值必須是連續的，則交易應該使用資料表的獨佔鎖定，或使用 **SERIALIZABLE** 隔離等級。  
+-   **交易內的連續值** - 插入多個資料列的交易並不保證能夠取得資料列的連續值，因為其他並行插入可能會在資料表中發生。 如果值必須是連續的，則交易應該使用資料表的獨佔鎖定，或使用 **SERIALIZABLE** 隔離等級。  
   
--   **重新啟動伺服器或其他失敗之後的連續值** – [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會基於效能考量而快取識別值，因此在資料庫失敗或伺服器重新啟動期間，某些指派的值可能會遺失。 這可能會導致插入識別值之後的間隙。 若不接受間隙，則應用程式應會使用其擁有的機制，產生索引鍵值。 搭配使用順序產生器和 **NOCACHE** 選項時，可將間隙限制為從未認可的交易。  
+-   **重新啟動伺服器或其他失敗之後的連續值** -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會基於效能考量而快取識別值，因此在資料庫失敗或伺服器重新啟動期間，某些指派的值可能會遺失。 這可能會導致插入識別值之後的間隙。 若不接受間隙，則應用程式應會使用其擁有的機制，產生索引鍵值。 搭配使用順序產生器和 **NOCACHE** 選項時，可將間隙限制為從未認可的交易。  
   
--   **重複使用值** – 如果是具有特定種子/增量的指定識別屬性，引擎不會重複使用識別值。 如果特定 INSERT 陳述式失敗或此 INSERT 陳述式已回復，則取用的識別值將會遺失而且不會再次產生。 這樣在產生後續識別值時會產生間隙。  
+-   **重複使用值** - 如果是具有特定種子/增量的指定識別屬性，引擎不會重複使用識別值。 如果特定 INSERT 陳述式失敗或此 INSERT 陳述式已回復，則取用的識別值將會遺失而且不會再次產生。 這樣在產生後續識別值時會產生間隙。  
   
  這些限制是為了提升效能之設計的一部分，而且也可在許多常見的情況中被接受。 如果您因為這些限制而無法使用識別值，請建立個別的資料表來保存目前的值，並使用您的應用程式管理資料表的存取和數字指派。  
   

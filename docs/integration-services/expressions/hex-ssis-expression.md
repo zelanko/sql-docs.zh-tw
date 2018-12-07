@@ -14,12 +14,12 @@ ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a1f1dd3e474845716b6fe9e116dea41b0ce7465
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b17dbcb21362a60ed9076134256ec99f3c264a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791226"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517995"
 ---
 # <a name="hex-ssis-expression"></a>HEX (SSIS 運算式)
   傳回代表整數的十六進位值的字串。  
@@ -45,7 +45,7 @@ HEX(integer_expression)
   
  傳回結果不包含限定詞，例如 0x 前置詞。 若要包含前置詞，請使用 + (串連) 運算子。 如需詳細資訊，請參閱 [+ &#40;串連&#41; &#40;SSIS 運算式&#41;](../../integration-services/expressions/concatenate-ssis-expression.md)。  
   
- HEX 標記法中使用的字母 A – F 會以大寫字元顯示。  
+ HEX 標記法中使用的字母 A-F 會以大寫字元顯示。  
   
  整數資料類型的結果字串長度如下：  
   

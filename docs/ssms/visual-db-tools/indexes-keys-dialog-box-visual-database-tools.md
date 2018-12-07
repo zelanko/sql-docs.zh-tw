@@ -14,12 +14,12 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f38f7da3ae5dc67a8f4282f38e5d8ebd6b110129
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cf2d4565166dc94569a7bb3815ce3d69112116c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699455"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518384"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>索引 - 索引鍵對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "51699455"
 展開時會顯示 [資料行]、[是唯一的] 和 [類型] 屬性。  
   
 **資料行**  
-列出索引鍵或索引中資料行的選擇排序次序，並且提供存取可在其中定義排序次序的對話方塊。 若要顯示對話方塊，可按一下 [資料行]，再按一下屬性欄位右邊的省略符號按鈕 (…)。  
+列出索引鍵或索引中資料行的選擇排序次序，並且提供存取可在其中定義排序次序的對話方塊。 若要顯示對話方塊，請按一下 [資料行]，然後按一下屬性欄位右邊出現的省略符號按鈕 (...)。  
   
 **是唯一的**  
 指示此索引或索引鍵中輸入的資料是否必須是唯一的。 這不適用於 XML 索引。  
@@ -57,7 +57,7 @@ ms.locfileid: "51699455"
 顯示索引鍵或索引的名稱。 在建立新索引時，會根據 [資料表設計師] 作用中視窗的資料表，給予預設的名稱。 您可以隨時變更名稱。  
   
 **說明**  
-提供描述索引鍵或索引的位置。 若要寫入更詳細的描述，請按一下 [描述]，再按屬性欄位右邊的省略符號按鈕 (**…**)。 如此便可提供較大的區域以寫入文字。  
+提供描述索引鍵或索引的位置。 若要寫入更詳細的描述，請按一下 [描述]，然後按一下屬性欄位右邊出現的省略符號按鈕 (**...**)。 如此便可提供較大的區域以寫入文字。  
   
 **資料表設計工具類別目錄**  
 展開時會顯示 [建立成 CLUSTERED] 的資訊。  

@@ -10,18 +10,18 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39889d49702394f0aec8f79c328e28ba318c9864
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 68fb5c69d30e9ba30f27bcd23347ed5543c7e792
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806738"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947583"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>設定 PolyBase 存取 MongoDB 中的外部資料
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-此文章說明如何在 SQL Server 執行個體上使用 PolyBase 查詢位於 MongoDB 中的外部資料。
+本文說明如何在 SQL Server 執行個體上使用 PolyBase 查詢位於 MongoDB 中的外部資料。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -152,7 +152,7 @@ JSON 巢狀/重複資料類型會以下列方式壓平合併
 
 ## <a name="cosmos-db-connection"></a>Cosmos DB 連線
 
-使用 Cosmos DB Mongo API 和 Mongo DB PolyBase 連接器時，您可以建立 **Cosmos DB 執行個體**的外部資料表。 依照上面所列的相同步驟，即可完成此操作。 請確定資料庫範圍認證、伺服器位址、連接埠及位置字串皆反映 Cosmos DB 伺服器的對應設定。 
+使用 Cosmos DB Mongo API 和 Mongo DB PolyBase 連接器時，您可以建立 **Cosmos DB 執行個體**的外部資料表。 依照上面所列的相同步驟，即可完成此操作。 請確認資料庫範圍認證、伺服器位址、連接埠及位置字串皆反映 Cosmos DB 伺服器的對應設定。 
 
 ## <a name="next-steps"></a>後續步驟
 

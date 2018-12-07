@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 89bed7eb00e04a354b1dd1fd59b0c36899aed044
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 3415084fcc93098f77ea367217b74ae2df7729f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814321"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393214"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>運算式範例 (報表產生器及 SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中常會使用運算式來控制內容與報表的外觀。 運算式是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]所撰寫，而且可以使用內建函數、自訂程式碼、報表與群組變數，以及使用者定義的變數。 運算式以等號 (=) 當做開頭。 如需運算式編輯器以及可包含之參考類型的詳細資訊，請參閱[報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 和[新增運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)。  
@@ -165,7 +165,7 @@ ms.locfileid: "51814321"
 -   下列運算式會產生 SellStartDate 與 LastReceiptDate 之間的間隔年數。 這些欄位位於兩個不同的資料集：DataSet1 和 DataSet2 中。 [First 函式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md) 為彙總函式，它會傳回 DataSet1 中 SellStartDate 的第一個值，以及 DataSet2 中 LastReceiptDate 的第一個值。  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   **DatePart** 函數會傳回包含給定 Date 值之指定元件的整數值。下列運算式則會傳回 DataSet1 中 SellStartDate 第一個值的年份。 已指定資料集範圍，因為報表中有多個資料集。  
@@ -229,7 +229,7 @@ ms.locfileid: "51814321"
      下列範例的作用與上述範例相同，也會在選取值清單前面顯示文字字串。  
   
     ```  
-    =”Report for “ & JOIN(Parameters!MySelection.Value, “ & “)  
+    ="Report for " & JOIN(Parameters!MySelection.Value, " & ")  
   
     ```  
   
@@ -244,7 +244,7 @@ ms.locfileid: "51814321"
   
 ### <a name="lookup"></a>查閱  
   
--   您可以藉由指定索引鍵欄位，使用 **Lookup** 函數來從一對一關係的資料集 (如索引鍵-值組) 中擷取值。 下列運算式會顯示資料集 (“Product”) 中的產品名稱 (有提供要比對的產品識別碼)：  
+-   您可以藉由指定索引鍵欄位，使用 **Lookup** 函數來從一對一關係的資料集 (如索引鍵-值組) 中擷取值。 下列運算式會顯示提供要比對的產品識別碼時，資料集 ("Product") 中的產品名稱：  
   
     ```  
     =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
@@ -543,7 +543,7 @@ ms.locfileid: "51814321"
     End Function  
     ```  
   
-     下列運算式顯示如何針對 “ColumnGroupByYear” 容器 (群組或資料區域)，從文字方塊呼叫此自訂程式碼。  
+     下列運算式顯示如何針對 "ColumnGroupByYear" 容器 (群組或資料區域)，從文字方塊呼叫此自訂程式碼。  
   
     ```  
     =Code.GetDeltaPercentage(Previous(Sum(Fields!Sales.Value),"ColumnGroupByYear"), Sum(Fields!Sales.Value))  

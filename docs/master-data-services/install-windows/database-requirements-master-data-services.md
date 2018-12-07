@@ -11,12 +11,12 @@ ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 81cd8304eec3d41db47d08957228075b2927bcaa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d9d62078c4c3f2e4b72abed1bc7275fbf616b5c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642736"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504606"
 ---
 # <a name="database-requirements-master-data-services"></a>資料庫需求 (Master Data Services)
 
@@ -48,7 +48,7 @@ ms.locfileid: "47642736"
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Business Intelligence (64 位元) x64  
   
--   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise (64 位元) x64 – 只能從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Enterprise 升級  
+-   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise (64 位元) x64 - 只能從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Enterprise 升級  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Developer (64 位元) x64  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47642736"
 |類型|Description|  
 |----------|-----------------|  
 |使用者帳戶|在 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]中，您可以使用 Windows 帳戶或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，來主控 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫。 此使用者帳戶必須屬於  執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 如需有關 **系統管理員** 角色的詳細資訊，請參閱 [伺服器層級角色](../../relational-databases/security/authentication-access/server-level-roles.md)。|  
-|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 系統管理員帳戶|當您建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫時，必須指定要成為 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 系統管理員的網域使用者帳戶。 對於所有與這個資料庫有關聯的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式，這位使用者都可以更新所有功能區域中的所有模型和所有資料。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。|  
+|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 系統管理員帳戶|當您建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫時，必須指定要成為 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 系統管理員的網域使用者帳戶。 對於所有與這個資料庫有關聯的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式，這位使用者都可以更新所有功能區域中的所有模型和所有資料。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。|  
   
 ### <a name="database-backup"></a>資料庫備份  
  最佳做法是根據環境的需求，每天在活動量低的時間備份一次完整的資料庫，然後更頻繁地備份交易記錄。 如需資料庫備份的詳細資訊，請參閱[備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  

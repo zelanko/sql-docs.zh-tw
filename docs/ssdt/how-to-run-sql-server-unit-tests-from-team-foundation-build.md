@@ -11,12 +11,12 @@ ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe4b6dd462a8f8fec6797c26f7ae0461c4b0a4ce
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1857f503abe300127d92c26ba5591407b863ebc0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669857"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527925"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>HOW TO：從 Team Foundation Build 執行 SQL Server 單元測試
 您可以使用 Team Foundation Build，在執行組建驗證測試 (BVT) 時執行 SQL Server 單元測試。 您可以設定單元測試以部署資料庫、產生測試資料，然後執行選取的測試。 如果您不熟悉 Team Foundation Build，就應該先檢閱下列資訊，然後再依照本主題的程序進行：  
@@ -93,7 +93,7 @@ ms.locfileid: "51669857"
   
 2.  選取測試。  
   
-3.  在 [屬性] 窗格中，按一下 [測試分類]，然後按一下最右側欄中的省略符號 (…)。  
+3.  在 [屬性] 窗格中，按一下 [測試分類]，然後按一下最右側欄中的省略符號 (...)。  
   
 4.  在 [測試分類] 視窗的 [加入新分類] 方塊中，輸入新測試分類的名稱。  
   
@@ -252,7 +252,7 @@ ms.locfileid: "51669857"
   
 5.  在巡覽列中，按一下 [處理序]。  
   
-6.  在 [必要項] 群組的 [要建置的項目] 中，按一下瀏覽 (…) 按鈕。  
+6.  在 [必要項] 群組的 [要建置的項目] 中，按一下瀏覽 (...) 按鈕。  
   
 7.  在 [建置專案清單編輯器] 對話方塊中，按一下 [加入]。  
   

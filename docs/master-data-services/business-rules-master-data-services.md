@@ -15,12 +15,12 @@ ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 97c774afa437340e584a0b2f94e6170fe7ca94fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e265ee9e55f11249ce84d15a2e0851d8d03752a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806511"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404493"
 ---
 # <a name="business-rules-master-data-services"></a>商務規則 (Master Data Services)
 
@@ -37,7 +37,7 @@ ms.locfileid: "47806511"
   
  若要使用商務規則，您必須先建立並發行規則，然後將已發行的規則套用至資料。 您可以透過驗證版本，將規則套用至某個版本的資料子集或所有資料。 直到所有屬性都通過商務規則驗證之後，才能認可版本。  
   
- 如果使用者所要加入的屬性值未通過商務規則驗證，此值仍然可以儲存。 您可以檢閱及更正 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中顯示的驗證問題。  
+ 如果使用者所要新增的屬性值未通過商務規則驗證，此值仍然可以儲存。 您可以檢閱及更正 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中顯示的驗證問題。  
   
  當您建立模型部署封裝時，若要包含商務規則，必須從封裝中的版本包含資料。  
   

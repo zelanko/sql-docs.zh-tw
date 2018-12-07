@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6580a1df3ed83d0eec4d6dada7ed2954f44b8989
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 39030ba95129160680782eeb88e3b4c99da622e7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700796"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407858"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多重子網路叢集 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "51700796"
 ##  <a name="DNS"></a> 容錯移轉期間的用戶端復原延遲  
  多重子網路 FCI 預設會針對其網路名稱啟用 RegisterAllProvidersIP 叢集資源。 在多重子網路組態中，網路名稱的線上或離線 IP 位址都會在 DNS 伺服器註冊。 然後用戶端應用程式會從 DNS 伺服器擷取所有註冊的 IP 位址，並依序或平行嘗試連接到位址。 這表示，多重子網路容錯移轉時用戶端復原時間不再取決於 DNS 更新延遲。 根據預設，用戶端會依序嘗試 IP 位址。 當用戶端在其連接字串中使用新的選擇性 **MultiSubnetFailover=True** 參數時，它會改為同時嘗試 IP 位址並連接到第一個回應的伺服器。 這有助於在發生容錯移轉時將用戶端復原延遲降至最低。 如需詳細資訊，請參閱 [Always On 用戶端連接性 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) 和 [建立或設定可用性群組接聽程式 (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
- 對於舊版用戶端程式庫或協力廠商資料提供者，您不能在連接字串中使用 **MultiSubnetFailover** 參數。 為確保用戶端應用程式以最佳方式與 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]多重子網路 FCI 搭配使用，針對每個額外 IP 位址，請嘗試將用戶端連接字串中的連接逾時調增 21 秒。 這可確保在完成多重子網路 FCI 中的所有 IP 位址之間循環前，用戶端的重新連接嘗試不會逾時。  
+ 對於舊版用戶端程式庫或協力廠商資料提供者，您不能在連接字串中使用 **MultiSubnetFailover** 參數。 為確保用戶端應用程式以最佳方式與 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]多重子網路 FCI 搭配使用，針對每個額外 IP 位址，請嘗試將用戶端連接字串中的連接逾時調增 21 秒。 這可確保在完成多重子網路 FCI 中的所有 IP 位址之間循環前，用戶端的重新連線嘗試不會逾時。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio 和 **sqlcmd** 的預設用戶端連接逾時期限是 15 秒。  
   

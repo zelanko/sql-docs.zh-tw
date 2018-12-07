@@ -5,19 +5,18 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2f587ce68a05e8c09438323d8ce3bc75bb3d2ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0464dc24bcb2842c822ac2b2a38e19283b428ad2
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702126"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617358"
 ---
 # <a name="data-matching"></a>資料比對
 

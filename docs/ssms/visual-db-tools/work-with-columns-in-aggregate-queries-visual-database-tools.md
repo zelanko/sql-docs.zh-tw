@@ -16,12 +16,12 @@ ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 393bc1e434071c82bc198531e855f9c355feaac6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b3d6a176379c4cdfae4509e3ab3988202831c49
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819246"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540650"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>在彙總查詢中使用資料行 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -8,12 +8,12 @@ ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 29b5ba7b28781351232ba1a51ad20b6b84fbfce7
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 26c28f65737fe989b416078e609f7742cfcf07b1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050860"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410365"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>設定 Reporting Services 服務應用程式的電子郵件
 
@@ -52,16 +52,16 @@ ms.locfileid: "50050860"
   
     -   傳送郵件失敗: SMTP 伺服器需要安全連接，或用戶端未經驗證。 伺服器回應為: 5.7.1 用戶端未經驗證。將不會重新傳送郵件。  
   
-     將 **SMTPAuthenticate** 變更為使用值 "2"。 您無法從使用者介面變更此值。 下列 PowerShell 指令碼範例會更新服務應用程式 "SSRS_TESTAPPLICATION" 之報表伺服器電子郵件傳遞延伸模組的完整組態。 請注意，指令碼中列出的部分節點也可以透過使用者介面設定，例如 [寄件者] 地址。  
+     將 **SMTPAuthenticate** 變更為使用值 "2"。 您無法從使用者介面變更此值。 下列 PowerShell 指令碼範例會更新服務應用程式 "SSRS_TESTAPPLICATION" 之報表伺服器電子郵件傳遞延伸模組的完整設定。 請注意，指令碼中列出的部分節點也可以透過使用者介面設定，例如 [寄件者] 地址。  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION *"}  
     $emailCfg = Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml   
     $emailXml = [xml]$emailCfg   
-    $emailXml.SelectSingleNode("//SMTPServer").InnerText = “your email server name"  
+    $emailXml.SelectSingleNode("//SMTPServer").InnerText = "your email server name"  
     $emailXml.SelectSingleNode("//SendUsing").InnerText = "2"  
     $emailXml.SelectSingleNode("//SMTPAuthenticate").InnerText = "2"  
-    $emailXml.SelectSingleNode("//From").InnerText = “your FROM email address”  
+    $emailXml.SelectSingleNode("//From").InnerText = "your FROM email address"  
     Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
     ```  
   
@@ -71,14 +71,14 @@ ms.locfileid: "50050860"
     get-sprsserviceapplication  
     ```  
   
-3.  下列範例會傳回服務應用程式 "SSRS_TESTAPPLICATION" 之電子郵件延伸模組的目前值。  
+3.  下列範例會傳回服務應用程式 "SSRS_TESTAPPLICATION" 的電子郵件延伸模組目前值。  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRSTEST_APPLICATION*"}  
     Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
     ```  
   
-4.  下列範例會使用服務應用程式 "SSRS_TESTAPPLICATION" 之電子郵件延伸模組的目前值，建立名為 "emailconfig.txt" 的新檔案。  
+4.  下列範例會使用服務應用程式 "SSRS_TESTAPPLICATION" 的電子郵件延伸模組目前值，建立名為 "emailconfig.txt" 的新檔案  
   
     ```  
     $app=get-sprsserviceapplication |where {$_.name -like "SSRS_TESTAPPLICATION*"}  

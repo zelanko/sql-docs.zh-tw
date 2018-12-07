@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 7018c0f71f51fa482ef0c1fad78b1aac20bf79cd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7ef6aa3dbfb10b0b17a6648270541c5e87e2142d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701060"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535719"
 ---
 # <a name="installation-wizard-help"></a>安裝精靈說明
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "51701060"
 ### <a name="options"></a>選項。  
  僅限容錯移轉叢集執行個體 - 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集網路名稱。 這個名稱會在網路上識別容錯移轉叢集執行個體。  
   
- 預設或具名執行個體 - 在決定要安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的預設執行個體還是具名執行個體時，請考量以下資訊：  
+ 預設或具名執行個體 - 在決定要安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設執行個體還是具名執行個體時，請考量以下資訊：  
   
 -   如果您計劃在資料庫伺服器上安裝單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，它應該是預設執行個體。  
   
@@ -451,6 +451,6 @@ ms.locfileid: "51701060"
   
  請確定 [User to provision (要提供的使用者)] 欄位有列出其權限應該更新之使用者的 DomainName\UserName。 從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [可用權限] **窗格的** 執行個體清單中選取要更新的角色，然後按一下向右鍵。 若要將使用者加入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有可用執行個體及可用角色的可用角色，按一下雙重向右鍵。  
   
- 若要在完成選擇時實作變更，請 [!INCLUDE[clickOK](../../includes/clickok-md.md)]。 若要結束工具而不進行變更，按一下 **[取消]**。  
+ 若要在完成選擇時實作變更，請 [!INCLUDE[clickOK](../../includes/clickok-md.md)]。若要結束工具而不進行變更，請按一下 [取消]。  
   
   

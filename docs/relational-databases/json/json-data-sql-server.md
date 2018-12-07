@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 166b6517389b9c48b37544df1a0e71e621b617f8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b772ebe8af00bee81c6034745b2e21311d09f23a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664617"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537404"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 資料
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -214,7 +214,7 @@ FOR JSON PATH
 
 ## <a name="use-cases-for-json-data-in-sql-server"></a>SQL Server 中 JSON 資料的使用案例
 
-SQL Server 與 Azure SQL Database 中的 JSON 支援，可讓您能結合關聯式概念與 NoSQL 概念。 您可以輕鬆地將關聯式資料轉換為半結構化的資料，反之亦然。 但 JSON 並非取代現有的關聯式模型。 以下是一些受益於 SQL Server 與 SQL Database 中 JSON 支援的特定使用案例。 如需詳細資訊，請參閱 [SQL Server 中的 JSON – 使用案例](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/)。
+SQL Server 與 Azure SQL Database 中的 JSON 支援，可讓您能結合關聯式概念與 NoSQL 概念。 您可以輕鬆地將關聯式資料轉換為半結構化的資料，反之亦然。 但 JSON 並非取代現有的關聯式模型。 以下是一些受益於 SQL Server 與 SQL Database 中 JSON 支援的特定使用案例。 如需詳細資訊，請參閱 [SQL Server 中的 JSON - 使用案例](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/)。
 
 ### <a name="simplify-complex-data-models"></a>簡化複雜的資料模型
 
@@ -226,7 +226,7 @@ SQL Server 與 Azure SQL Database 中的 JSON 支援，可讓您能結合關聯�
 
 ### <a name="process-log-and-telemetry-data"></a>處理記錄檔與遙測資料
 
-載入、查詢及分析儲存為 JSON 檔案的記錄資料，同時具備 TRANSACT-SQL 語言的所有功能。 如需詳細資訊，請參閱 [SQL Server 中的 JSON – 使用案例](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/)內的*記錄與遙測資料分析*。
+載入、查詢及分析儲存為 JSON 檔案的記錄資料，同時具備 TRANSACT-SQL 語言的所有功能。 如需詳細資訊，請參閱 [SQL Server 中的 JSON - 使用案例](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/)內的*記錄與遙測資料分析*。
 
 ### <a name="store-semi-structured-iot-data"></a>儲存半結構化的 IoT 資料
 

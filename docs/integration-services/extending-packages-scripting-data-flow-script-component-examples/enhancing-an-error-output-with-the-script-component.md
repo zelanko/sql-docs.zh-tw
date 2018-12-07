@@ -16,12 +16,12 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2c710d2177f47c1c866a62b04ae320dfe0f7d46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68973d2d0464372b070667a5d59dcc4327b211bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730836"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527946"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>使用指令碼元件增強錯誤輸出
   根據預設，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤輸出中的兩個額外資料行 ErrorCode 和 ErrorColumn 只包含數字碼，代表錯誤號碼及發生錯誤之資料行的識別碼。 這些數值若無對應的錯誤描述和資料行名稱，則用途有限。  

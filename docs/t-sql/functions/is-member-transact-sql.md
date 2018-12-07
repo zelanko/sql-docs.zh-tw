@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 654cd8331398746213afa892e8bf0c6acc86c269
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b7da52e047b004fe4be394c72a784dfe3ccec21
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735506"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391271"
 ---
 # <a name="ismember-transact-sql"></a>IS_MEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +76,7 @@ IS_MEMBER ( { 'group' | 'role' } )
   
  這個函數會評估角色成員資格，而非基礎權限。 例如，**db_owner** 固定資料庫角色具有 **CONTROL DATABASE** 權限。 如果使用者擁有 **CONTROL DATABASE** 權限，但不是此角色的成員，這個函式將正確回報該使用者不是 **db_owner** 角色的成員，即使該使用者擁有相同的權限也一樣。  
   
- **sysadmin** 固定伺服器角色的成員會作為 **dbo** 使用者輸入每個資料庫。 若要檢查 **sysadmin** 固定伺服器角色成員的權限，請檢查 **dbo** 的權限，而非原始登入。 因為 **dbo** 無法新增至資料庫角色中，也不存在於 Windows 群組之中，**dbo** 一律會傳回 0 (或當角色不存在時，傳回 NULL)。  
+ **sysadmin** 固定伺服器角色的成員會作為 **dbo** 使用者輸入每個資料庫。 若要檢查 **sysadmin** 固定伺服器角色成員的權限，請檢查 **dbo** 的權限，而非原始登入。 由於 **dbo** 無法新增至資料庫角色，也不存在於 Windows 群組之中，因此 **dbo** 一律會傳回 0 (或當角色不存在時，傳回 NULL)。  
   
 ## <a name="related-functions"></a>相關函數  
  若要判斷另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入是否為資料庫角色的成員，請使用 [IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md)。 若要判斷另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入是否為伺服器角色的成員，請使用 [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)。  

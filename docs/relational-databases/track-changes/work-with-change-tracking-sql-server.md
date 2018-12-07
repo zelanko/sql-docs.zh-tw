@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad1d14ef3d727aab417a9b755aeff56fb3d2687d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: e2f41329c10544686194524327ddb7fd560cb57d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559225"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514149"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>使用變更追蹤 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,16 +40,16 @@ ms.locfileid: "51559225"
 ### <a name="about-the-change-tracking-functions"></a>關於變更追蹤函數  
  應用程式可以使用下列函數來取得在資料庫中所做的變更和這些變更的相關資訊：  
   
- CHANGETABLE(CHANGES …) 函數  
+ CHANGETABLE(CHANGES ...) 函式  
  這個資料列集函數是用於查詢是否有變更資訊。 此函數會查詢儲存在內部變更追蹤資料表中的資料。 此函數會傳回結果集，其中包含已變更之資料列的主索引鍵，以及其他變更資訊，例如作業、更新的資料行及此資料列的版本。  
   
- CHANGETABLE(CHANGES …) 會將上一次同步處理版本當做引數。 上一次同步處理版本是使用 `@last_synchronization_version` 變數來取得。 上一次同步處理版本的語意如下：  
+ CHANGETABLE(CHANGES ...) 會將上一次同步處理版本當做引數。 上一次同步處理版本是使用 `@last_synchronization_version` 變數來取得。 上一次同步處理版本的語意如下：  
   
 -   呼叫的用戶端已取得變更並了解到上一次同步處理版本為止的所有變更 (包括此版本)。  
   
--   CHANGETABLE(CHANGES …) 因此會傳回上一次同步處理版本之後發生的所有變更。  
+-   CHANGETABLE(CHANGES ...) 因此會傳回上一次同步處理版本之後發生的所有變更。  
   
-     下圖將說明 CHANGETABLE(CHANGES …) 如何用於取得變更。  
+     下圖將說明 CHANGETABLE(CHANGES ...) 如何用於取得變更。  
   
      ![變更追蹤查詢輸出的範例](../../relational-databases/track-changes/media/queryoutput.gif "變更追蹤查詢輸出的範例")  
   
@@ -60,7 +60,7 @@ ms.locfileid: "51559225"
  這是用於取得用戶端可以擁有，並仍然可從 CHANGETABLE() 取得有效結果的最小有效版本。 用戶端應該針對此函數所傳回的值，檢查上一次同步處理版本。 如果上一次同步處理版本小於此函數所傳回的版本，用戶端將無法從 CHANGETABLE() 取得有效結果，而且必須重新初始化。  
   
 ### <a name="obtaining-initial-data"></a>取得初始資料  
- 在應用程式首次取得變更之前，應用程式必須先傳送查詢，以便取得初始資料和同步處理版本。 應用程式必須直接從資料表中取得適當的資料，然後使用 CHANGE_TRACKING_CURRENT_VERSION() 來取得初始版本。 這個版本將在首次取得變更時傳遞給 CHANGETABLE(CHANGES …)。  
+ 在應用程式首次取得變更之前，應用程式必須先傳送查詢，以便取得初始資料和同步處理版本。 應用程式必須直接從資料表中取得適當的資料，然後使用 CHANGE_TRACKING_CURRENT_VERSION() 來取得初始版本。 這個版本將在首次取得變更時傳遞給 CHANGETABLE(CHANGES ...)。  
   
  下列範例將說明如何取得初始同步處理版本和初始資料集。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "51559225"
 ```  
   
 ### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>使用變更追蹤函數來取得變更  
- 若要取得資料表的變更資料列和這些變更的相關資訊，請使用 CHANGETABLE(CHANGES…)。 例如，下列查詢會取得 `SalesLT.Product` 資料表的變更。  
+ 若要取得資料表的變更資料列和這些變更的相關資訊，請使用 CHANGETABLE(CHANGES...)。例如，下列查詢會取得 `SalesLT.Product` 資料表的變更。  
   
 ```sql  
 SELECT  
@@ -87,7 +87,7 @@ FROM
   
 ```  
   
- 一般而言，用戶端會想要取得資料列的最新資料，而非只有該資料列的主索引鍵。 因此，應用程式會讓 CHANGETABLE(CHANGES …) 的結果與使用者資料表中的資料聯結。 例如，下列查詢會與 `SalesLT.Product` 資料表聯結，以便取得 `Name` 和 `ListPrice` 資料行的值。 請注意 `OUTER JOIN`的用法。 這是確保系統會針對已經從使用者資料表中刪除的這些資料列傳回變更資訊的必要條件。  
+ 一般而言，用戶端會想要取得資料列的最新資料，而非只有該資料列的主索引鍵。 因此，應用程式會讓 CHANGETABLE(CHANGES ...) 的結果與使用者資料表中的資料聯結。 例如，下列查詢會與 `SalesLT.Product` 資料表聯結，以便取得 `Name` 和 `ListPrice` 資料行的值。 請注意 `OUTER JOIN`的用法。 這是確保系統會針對已經從使用者資料表中刪除的這些資料列傳回變更資訊的必要條件。  
   
 ```sql  
 SELECT  
@@ -108,7 +108,7 @@ ON
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION()  
 ```  
   
- 當應用程式取得變更時，它必須同時使用 CHANGETABLE(CHANGES…) 和 CHANGE_TRACKING_CURRENT_VERSION()，如下列範例所示。  
+ 當應用程式取得變更時，它必須同時使用 CHANGETABLE(CHANGES...) 和 CHANGE_TRACKING_CURRENT_VERSION()，如下列範例所示。  
   
 ```sql  
 -- Obtain the current synchronization version. This will be used the next time CHANGETABLE(CHANGES...) is called.  
@@ -133,7 +133,7 @@ ON
 ### <a name="validating-the-last-synchronized-version"></a>驗證上一次同步處理的版本  
  變更的相關資訊會保留一段有限的時間。 此時間長度是由可指定為 ALTER DATABASE 一部分的 CHANGE_RETENTION 參數所控制。  
   
- 請注意，針對 CHANGE_RETENTION 所指定的時間會決定所有應用程式必須向資料庫要求變更的頻率。 如果某個應用程式的 *last_synchronization_version* 值早於資料表的最小有效同步處理版本，該應用程式就無法執行有效的變更列舉。 這是因為某些變更資訊可能已經清除了。 在應用程式使用 CHANGETABLE(CHANGES …) 來取得變更之前，此應用程式必須先驗證它計畫傳遞給 CHANGETABLE(CHANGES …) 的 *last_synchronization_version* 值。 如果 *last_synchronization_version* 的值無效，該應用程式就必須重新初始化所有資料。  
+ 請注意，針對 CHANGE_RETENTION 所指定的時間會決定所有應用程式必須向資料庫要求變更的頻率。 如果某個應用程式的 *last_synchronization_version* 值早於資料表的最小有效同步處理版本，該應用程式就無法執行有效的變更列舉。 這是因為某些變更資訊可能已經清除了。 在應用程式使用 CHANGETABLE(CHANGES ...) 來取得變更之前，此應用程式必須先驗證它計劃傳遞給 CHANGETABLE(CHANGES ...) 的 *last_synchronization_version* 值。如果 *last_synchronization_version* 的值無效，該應用程式就必須重新初始化所有資料。  
   
  下列範例將說明如何針對每份資料表驗證 `last_synchronization_version` 的值是否有效。  
   
@@ -163,7 +163,7 @@ END
 ### <a name="using-column-tracking"></a>使用資料行追蹤  
  資料行追蹤可讓應用程式僅針對已經變更的資料行 (而非整個資料列) 取得資料。 例如，假設某份資料表具有一個或多個龐大但很少變更的資料行，而且具有其他經常變更的資料行。 如果沒有使用資料行追蹤，應用程式只能判斷出某個資料列已經變更，而且必須同步處理所有資料，包括大型資料行的資料。 不過，透過資料行追蹤，應用程式就可以判斷出大型資料行的資料是否已變更，而且僅同步處理該項資料 (如果已經變更的話)。  
   
- 資料行追蹤資訊會顯示在 CHANGETABLE(CHANGES …) 函數所傳回的 SYS_CHANGE_COLUMNS 資料行中。  
+ 資料行追蹤資訊會顯示在 CHANGETABLE(CHANGES ...) 函式所傳回的 SYS_CHANGE_COLUMNS 資料行中。  
   
  您可以使用資料行追蹤，以便針對尚未變更的資料行傳回 NULL。 如果資料行可以變更為 NULL，就必須傳回個別的資料行，以便指出資料行是否變更。  
   
@@ -204,15 +204,15 @@ ON
   
 2.  使用 CHANGE_TRACKING_CURRENT_VERSION() 來取得下一次可用於取得變更的版本。  
   
-3.  使用 CHANGETABLE(CHANGES …) 來取得 Sales 資料表的變更。  
+3.  使用 CHANGETABLE(CHANGES ...) 來取得 Sales 資料表的變更。  
   
-4.  使用 CHANGETABLE(CHANGES …) 來取得 SalesOrders 資料表的變更。  
+4.  使用 CHANGETABLE(CHANGES ...) 來取得 Salesorders 資料表的變更。  
   
  在資料庫中進行的兩個處理序可能會影響先前步驟所傳回的結果：  
   
 -   清除處理序會在背景執行而且會移除早於指定之保留週期的變更追蹤資訊。  
   
-     清除處理序是個別的背景處理序，它會使用您針對資料庫設定變更追蹤時指定的保留週期。 其問題在於，此清除處理序可能會在驗證上一次同步處理版本與呼叫 CHANGETABLE(CHANGES…) 之間的時間內進行。 原本有效的上一次同步處理版本可能會在取得變更時不再有效。 因此，可能會傳回不正確的結果。  
+     清除處理序是個別的背景處理序，它會使用您針對資料庫設定變更追蹤時指定的保留週期。 其問題在於，此清除處理序可能會在驗證上一次同步處理版本與呼叫 CHANGETABLE(CHANGES...) 之間的時間內進行。 原本有效的上一次同步處理版本可能會在取得變更時不再有效。 因此，可能會傳回不正確的結果。  
   
 -   持續進行的 DML 作業會在 Sales 和 SalesOrders 資料表中進行，例如下列作業：  
   
@@ -233,17 +233,17 @@ ON
   
 3.  使用 CHANGE_TRACKING_CURRENT_VERSION() 來取得下一次使用的版本。  
   
-4.  使用 CHANGETABLE(CHANGES …) 來取得 Sales 資料表的變更。  
+4.  使用 CHANGETABLE(CHANGES ...) 來取得 Sales 資料表的變更  
   
-5.  使用 CHANGETABLE(CHANGES …) 來取得 Salesorders 資料表的變更。  
+5.  使用 CHANGETABLE(CHANGES ...) 來取得 Salesorders 資料表的變更  
   
 6.  認可交易。  
   
  請記住一些重點，因為取得變更的所有步驟都在快照集交易內部：  
   
--   如果清除在驗證上一次同步處理版本之後進行，CHANGETABLE(CHANGES …) 的結果仍然有效，因為在交易內部看不到清除所執行的刪除作業。  
+-   如果清除在驗證上一次同步處理版本之後進行，CHANGETABLE(CHANGES ...) 的結果仍然有效，因為在交易內部看不到清除所執行的刪除作業。  
   
--   取得下一次同步處理版本之後，看不到對 Sales 資料表或 SalesOrders 資料表所做的任何變更，而且對 CHANGETABLE(CHANGES …) 的呼叫永遠不會傳回版本晚於 CHANGE_TRACKING_CURRENT_VERSION() 所傳回的變更。 此外，Sales 資料表與 SalesOrders 資料表之間的一致性也會保留下來，因為看不到在呼叫 CHANGETABLE(CHANGES …) 之間的時間內認可的交易。  
+-   取得下一次同步處理版本之後，看不到對 Sales 資料表或 SalesOrders 資料表所做的任何變更，而且對 CHANGETABLE(CHANGES ...) 的呼叫永遠不會傳回版本晚於 CHANGE_TRACKING_CURRENT_VERSION() 所傳回的變更。 此外，Sales 資料表與 SalesOrders 資料表之間的一致性也會保留下來，因為看不到在呼叫 CHANGETABLE(CHANGES ...) 之間的時間內認可的交易。  
   
  下列範例將說明如何針對資料庫啟用快照集隔離。  
   
@@ -303,7 +303,7 @@ COMMIT TRAN
   
  若要執行上述作業，同步處理應用程式可以使用下列函數：  
   
--   CHANGETABLE(VERSION )  
+-   CHANGETABLE(VERSION...)  
   
      當應用程式正在進行變更時，它可以使用此函數來檢查是否有衝突。 這個函數會針對變更追蹤資料表中的指定資料列，取得最新變更追蹤資訊。 此變更追蹤資訊包括上一次變更的資料列版本。 這項資訊可讓應用程式判斷，此資料列在上一次應用程式同步處理之後是否已變更。  
   
@@ -314,7 +314,7 @@ COMMIT TRAN
 ### <a name="checking-for-conflicts"></a>檢查是否有衝突  
  在雙向同步處理狀況中，用戶端應用程式必須判斷自從應用程式上一次取得變更以來，某個資料列是否尚未更新。  
   
- 下列範例將示範如何使用 CHANGETABLE(VERSION …) 函數，以最有效率的方式 (不需要個別查詢) 檢查是否有衝突。 在此範例中， `CHANGETABLE(VERSION …)` 會針對 `SYS_CHANGE_VERSION` 所指定的資料列，判斷 `@product id`。 `CHANGETABLE(CHANGES …)` 可以取得相同的資訊，但是這樣做比較沒有效率。 如果資料列的 `SYS_CHANGE_VERSION` 值大於 `@last_sync_version`的值，就表示發生衝突。 如果發生衝突，系統將不會更新此資料列。 `ISNULL()` 檢查是必要的，因為資料列可能沒有任何變更資訊可用。 如果自從啟用變更追蹤或清除變更資訊以來，此資料列尚未更新，就不會有任何變更資訊存在。  
+ 下列範例將示範如何使用 CHANGETABLE(VERSION ...) 函式，以最有效率的方式 (不需要個別查詢) 檢查是否有衝突。 在此範例中， `CHANGETABLE(VERSION ...)` 會針對 `SYS_CHANGE_VERSION` 所指定的資料列，判斷 `@product id`。 `CHANGETABLE(CHANGES ...)` 可以取得相同的資訊，但是這樣做比較沒有效率。 如果資料列的 `SYS_CHANGE_VERSION` 值大於 `@last_sync_version`的值，就表示發生衝突。 如果發生衝突，系統將不會更新此資料列。 `ISNULL()` 檢查是必要的，因為資料列可能沒有任何變更資訊可用。 如果自從啟用變更追蹤或清除變更資訊以來，此資料列尚未更新，就不會有任何變更資訊存在。  
   
 ```sql  
 -- Assumption: @last_sync_version has been validated.  
@@ -358,7 +358,7 @@ END
 ```  
   
 ### <a name="setting-context-information"></a>設定內容資訊  
- 應用程式可以使用 WITH CHANGE_TRACKING_CONTEXT 子句，將內容資訊與變更資訊儲存在一起。 然後，您就可以從 CHANGETABLE(CHANGES  ) 傳回的 SYS_CHANGE_CONTEXT 資料行中取得這項資訊。  
+ 應用程式可以使用 WITH CHANGE_TRACKING_CONTEXT 子句，將內容資訊與變更資訊儲存在一起。 然後，您就可以從 CHANGETABLE(CHANGES ...) 傳回的 SYS_CHANGE_CONTEXT 資料行中取得這項資訊。  
   
  內容資訊通常是用來識別變更的來源。 如果能夠識別變更的來源，再度同步處理時，資料存放區就可以使用該項資訊來避免取得變更。  
   
@@ -392,9 +392,9 @@ SET TRANSACTION ISOLATION LEVEL SNAPSHOT;
 BEGIN TRAN  
     -- Verify that last_sync_version is valid.  
     IF (@last_sync_version <  
-CHANGE_TRACKING_MIN_VALID_VERSION(OBJECT_ID(‘SalesLT.Product’)))  
+CHANGE_TRACKING_MIN_VALID_VERSION(OBJECT_ID('SalesLT.Product')))  
     BEGIN  
-       RAISERROR (N’Last_sync_version too old’, 16, -1);  
+       RAISERROR (N'Last_sync_version too old', 16, -1);  
     END  
     ELSE  
     BEGIN  

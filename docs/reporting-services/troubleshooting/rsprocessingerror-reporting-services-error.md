@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29acfcbe2ff3b94abdd0edf52adf0f594fe768e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d13ce445269ceb4d6de0663a5e8789598b71c58
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620816"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409588"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 錯誤
     
@@ -109,7 +109,7 @@ ms.locfileid: "47620816"
   
  您也可以將特定範圍的名稱傳遞給彙總函式。 範圍可以參考資料集的名稱、資料區域或在資料階層中較高範圍的名稱。 這點適用於下列訊息：  
   
--   \<報表項目類型> '\<報表項目名稱>' 有無效的範圍 “\<範圍名稱>”。 範圍必須是目前的範圍，或包含在目前的範圍之內。  
+-   \<報表項目類型> '\<報表項目名稱>' 有無效的範圍 "\<範圍名稱>"。 範圍必須是目前的範圍，或包含在目前的範圍之內。  
   
 -   \<報表項目類型> '\<報表項目名稱>' 的 \<屬性名稱> 運算式含有對彙總函式無效的範圍參數。 範圍參數必須設定為字串常數，此字串常數要和所包含的群組名稱、所包含的資料區域名稱或資料集名稱相同。  
   

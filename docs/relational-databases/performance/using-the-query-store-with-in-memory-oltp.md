@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3989426a807b5d4fbcfa078a41fdaf6856dea98d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91439c93e0c21ca447bb0ca585904ddf41d885c9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709676"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541088"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>使用含有記憶體內部 OLTP 的查詢存放區
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');
 ## <a name="see-also"></a>另請參閱  
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [建立記憶體最佳化資料表和原生編譯的預存程序](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
- [查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)   
+ [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [查詢存放區預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [查詢存放區目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   

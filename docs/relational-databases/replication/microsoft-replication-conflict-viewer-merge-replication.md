@@ -13,12 +13,12 @@ ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d27c90646aa8bae800780af97f9100427ccc06b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10b67088d8c7fde760db975070bf7bc53860d107
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633357"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545676"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 複寫衝突檢視器 (合併式複寫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "47633357"
  **顯示前五個資料行和有衝突資料的其他資料行。**  
  選取即可顯示前五個資料行和有衝突的任何資料行。 當資料表有大量資料行，但是您只想查看與解決衝突最相關的資料行時，這很有用。 前五個資料行一律會包含在此檢視中做為識別資料列的欄位，例如主索引鍵或名稱欄位，通常是在資料表的前幾個資料行中。  
   
- **顯示資料行資訊** (**...**)  
+ **顯示資料行資訊** ([...])  
  按一下即可檢視資料行資訊： **[資料表名稱]**、 **[資料行名稱]**、 **[資料類型]** 和 **[資料行值]**。 **[資料行值]** 是可編輯的，除非以唯讀顯示該值。  
   
  **提交成功者**  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 283ed465cf38b0653e24dfc8503a1dd98e4df9f9
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: bfb9b14f518b20cd318cd6a532ca96787bfbfe31
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021703"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711357"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教學課程：離線建立快速圖表報表 (報表產生器)
 
@@ -231,6 +231,6 @@ ms.locfileid: "50021703"
 ## <a name="next-steps"></a>後續步驟
 
 [報表產生器教學課程](../../reporting-services/report-builder-tutorials.md)   
-[SQL Server 2016 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[SQL Server 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

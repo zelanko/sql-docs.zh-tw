@@ -11,12 +11,12 @@ ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3e59151d342d73bc3ea45ab1c778cf8fe5b2ed01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 597012bc5f008402ade7bd3d18888a3321ba6a9a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792616"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398111"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>變更屬性類型 (適用於 Excel 的 MDS 增益集)
 
@@ -34,7 +34,7 @@ ms.locfileid: "47792616"
   
 -   您必須擁有存取 [系統管理] 和總管功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 -   必須有現有的模型、實體和屬性存在。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47792616"
   
 -   變更屬性的資料類型。  
   
--   產生具有後置詞 “_old” 且包含先前值的屬性複本。 這稱為已被取代的屬性。  
+-   產生具有後置詞 "_old" 且包含先前值的屬性複本。 這稱為已被取代的屬性。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性 &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)   

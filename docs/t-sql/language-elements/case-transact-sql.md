@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f62721f4efe8eb76c6f67679e0a8a0f3a0c49687
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: ce7020eb7270ffb24f1926c165a71e8db33774e0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970649"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400721"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -319,7 +319,7 @@ ORDER BY MaximumRate DESC;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. 使用 SELECT 陳述式搭配 CASE 運算式  
- 在 SELECT 陳述式內，CASE 運算式允許以比較值為基礎來取代結果集中的值。 下列範例使用 CASE 運算式來變更產品線類別目錄的顯示方式，使它們更容易被了解。 若值並不存在，即會顯示「Not for sale」的字樣。  
+ 在 SELECT 陳述式內，CASE 運算式允許以比較值為基礎來取代結果集中的值。 下列範例使用 CASE 運算式來變更產品線類別目錄的顯示方式，使它們更容易被了解。 若值並不存在，即會顯示 "Not for sale' 的字樣。  
   
 ```  
 -- Uses AdventureWorks  

@@ -16,12 +16,12 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa40898a63a4d84f9efeaf2c1bf404ab17cea20c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 47bca5d52c23a51177e9fe2492dfe1e001a2f807
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642065"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539170"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 交易
   封裝使用交易將工作執行的資料庫動作繫結至原子單位，這樣可以保持資料的完整性。 所有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 容器類型 (封裝、For 迴圈、Foreach 迴圈和時序容器，以及封裝每個工作的工作主機) 皆可設定成使用交易。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供三個設定交易的選項，分別是 **NotSupported**、 **Supported**及 **Required**。  

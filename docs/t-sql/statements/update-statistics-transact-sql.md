@@ -22,21 +22,21 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd501cd54a4726033b8c2a1b746148ec17f3dc8a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 877fbd597ce603427c9bdcca00b2ecdeffbb2180
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701749"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586291"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  針對資料表或索引檢視表更新查詢最佳化統計資料。 根據預設，查詢最佳化工具已經會視需要更新統計資料來改善查詢計劃。在某些情況下，您可以使用 UPDATE STATISTICS 或 [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) 預存程序，讓統計資料的更新頻率高於預設更新頻率，藉以改善查詢效能。  
+針對資料表或索引檢視表更新查詢最佳化統計資料。 根據預設，查詢最佳化工具已經會視需要更新統計資料來改善查詢計劃。在某些情況下，您可以使用 `UPDATE STATISTICS` 或 [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) 預存程序，讓統計資料的更新頻率高於預設更新頻率，以改善查詢效能。  
   
- 更新統計資料可確保查詢使用最新的統計資料進行編譯。 不過，更新統計資料會導致查詢重新編譯。 我們建議您不要太頻繁地更新統計資料，因為改善查詢計劃與重新編譯查詢所花費的時間之間具有效能權衡取捨。 特定的權衡取捨完全取決於您的應用程式。 UPDATE STATISTICS 可以使用 tempdb 來排序資料列的範例，以便建立統計資料。  
+更新統計資料可確保查詢使用最新的統計資料進行編譯。 不過，更新統計資料會導致查詢重新編譯。 我們建議您不要太頻繁地更新統計資料，因為改善查詢計劃與重新編譯查詢所花費的時間之間具有效能權衡取捨。 特定的權衡取捨完全取決於您的應用程式。 `UPDATE STATISTICS` 可以使用 tempdb 來排序資料列的範例，以建立統計資料。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -57,7 +57,7 @@ UPDATE STATISTICS table_or_indexed_view_name
             | SAMPLE number { PERCENT | ROWS }   
               [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
             | RESAMPLE   
-              [ ON PARTITIONS ( { <partition_number> | <range> } [, …n] ) ]  
+              [ ON PARTITIONS ( { <partition_number> | <range> } [, ...n] ) ]  
             | <update_stats_stream_option> [ ,...n ]  
         ]   
         [ [ , ] [ ALL | COLUMNS | INDEX ]   
@@ -131,7 +131,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  
  **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 開始) 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 開始)。  
  
- ON PARTITIONS ( { \<partition_number> | \<range> } [, …n] ) ] 強制重新計算包含 ON PARTITIONS 子句所指定之資料分割的分葉層級統計資料，然後合併來建置全域統計資料。 由於無法將使用不同取樣率建立的分割區區統計資料合併在一起，因此需要 WITH RESAMPLE。  
+ ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] 強制重新計算包含 ON PARTITIONS 子句所指定之資料分割的分葉層級統計資料，然後合併來建置全域統計資料。 由於無法將使用不同取樣率建立的分割區區統計資料合併在一起，因此需要 WITH RESAMPLE。  
   
 **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
@@ -183,25 +183,28 @@ MAXDOP = *max_degree_of_parallelism*
 
 ## <a name="remarks"></a>Remarks  
   
-## <a name="when-to-use-update-statistics"></a>使用 UPDATE STATISTICS 的時機  
- 如需使用 UPDATE STATISTICS 之時機的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
+### <a name="when-to-use-update-statistics"></a>使用 UPDATE STATISTICS 的時機  
+ 如需 `UPDATE STATISTICS` 之使用時機的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
 
-## <a name="limitations-and-restrictions"></a>限制事項  
+### <a name="limitations-and-restrictions"></a>限制事項  
 * 不支援更新外部資料表上的統計資料。 若要更新外部資料表上的統計資料，請卸除並重新建立統計資料。  
-* MAXDOP 選項與 STATS_STREAM、ROWCOUNT 及 PAGECOUNT 選項不相容。
-* 如果使用 MAXDOP 選項，會受限於 Resource Governor 工作負載群組 MAX_DOP 設定。
+* `MAXDOP` 選項與 `STATS_STREAM`、`ROWCOUNT` 和 `PAGECOUNT` 選項不相容。
+* `MAXDOP` 選項受限於 Resource Governor 工作負載 `MAX_DOP` 設定 (如果已使用)。
 
-## <a name="updating-all-statistics-with-spupdatestats"></a>使用 sp_updatestats 來更新所有統計資料  
- 如需如何針對資料庫中所有使用者定義和內部資料表更新統計資料的詳細資訊，請參閱預存程序 [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)。 例如，下列命令會呼叫 sp_updatestats 來更新資料庫的所有統計資料。  
+### <a name="updating-all-statistics-with-spupdatestats"></a>使用 sp_updatestats 來更新所有統計資料  
+如需如何針對資料庫中所有使用者定義和內部資料表更新統計資料的詳細資訊，請參閱預存程序 [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)。 例如，下列命令會呼叫 sp_updatestats 來更新資料庫的所有統計資料。  
   
 ```sql  
 EXEC sp_updatestats;  
 ```  
+
+### <a name="automatic-index-and-statistics-management"></a>自動索引與統計資料管理
+利用[自適性索引重組](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)等解決方案，為一或多個資料庫自動管理索引重組以及統計資料更新。 這項程序會根據索引分散程度與其他參數，自動選擇要進行重建或是重新組織索引，並以線性閾值更新統計資料。
   
-## <a name="determining-the-last-statistics-update"></a>判斷上次更新統計資料的時間  
+### <a name="determining-the-last-statistics-update"></a>判斷上次更新統計資料的時間  
  若要判斷上次更新統計資料的時間，請使用 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 函數。  
   
-## <a name="pdw--sql-data-warehouse"></a>PDW / SQL 資料倉儲  
+### <a name="pdw--sql-data-warehouse"></a>PDW / SQL 資料倉儲  
  PDW / SQL 資料倉儲不支援下列語法  
   
 ```sql  
@@ -225,7 +228,7 @@ update statistics t1 (a) with stats_stream = 0x01;
 ```  
   
 ## <a name="permissions"></a>[權限]  
- 需要資料表或檢視表的 ALTER 權限。  
+ 必須具備資料表或檢視的 `ALTER` 權限。  
   
 ## <a name="examples"></a>範例  
   
@@ -306,8 +309,5 @@ UPDATE STATISTICS Customer;
  [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
- [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
-  
-
-
-
+ [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)    
+ [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   

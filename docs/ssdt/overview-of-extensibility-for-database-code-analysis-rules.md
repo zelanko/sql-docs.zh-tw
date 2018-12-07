@@ -11,12 +11,12 @@ ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 606b835328f704adcaa282d0a2c4d3984c9ddec0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 42896bb62b5566c955c86c43618a8f64e4968b5a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51655781"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405865"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>資料庫程式碼分析規則的擴充性概觀
 包含 SQL Server Data Tools 的 Visual Studio 版本包括程式碼分析規則，可報告資料庫程式碼中的 Transact\-SQL 設計、命名和效能警告。 如需詳細資訊，請參閱[分析資料庫程式碼以提升程式碼品質](https://msdn.microsoft.com/library/dd172133(v=vs.100).aspx) \(機器翻譯\)。  
@@ -36,7 +36,7 @@ ms.locfileid: "51655781"
   
 -   有關規則本身的中繼資料。  
   
--   代表資料庫結構描述的 Dac.Model.TSqlModel，此結構描述包括所有模型元素、這些元素之間的關係，以及元素的任何屬性。  
+-   代表資料庫結構描述的 Dac.Model.TSqlModel，此結構描述包括所有模型項目、這些項目之間的關係，以及項目的任何屬性。  
   
 -   對於檢查特定元素的規則，代表模型中該結構描述元素的 Dac.Model.TSqlObject 會包括在內容中。  
   

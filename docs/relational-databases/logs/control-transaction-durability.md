@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 403f29c972b8137a7f2181962ce48a796ac4c753
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac96a7ea691a02c61aa132ea0efcdf5bc2d68ab1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817577"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513754"
 ---
 # <a name="control-transaction-durability"></a>控制交易持久性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,19 +95,19 @@ ms.locfileid: "47817577"
  身為 DBA 的您，可以控制使用者是否能使用下列陳述式，在資料庫上使用延遲的交易持久性。 您必須使用 ALTER DATABASE 來設定延遲的持久性設定。    
     
 ```sql    
-ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
+ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }    
 ```    
     
  **已停用**    
  [預設值] 使用這項設定時，在資料庫上認可的所有交易都是完全持久，不論認可層級設定為何 (DELAYED_DURABILITY=[ON | OFF])。 完全不需要進行預存程序變更和重新編譯。 這可讓您確保任何資料都不會因為延遲的持久性而面臨風險。    
     
  **允許**    
- 使用這項設定時，每筆交易的持久性都是在交易層級上決定的 – DELAYED_DURABILITY = { *OFF* | ON }。 如需詳細資訊，請參閱 [ATOMIC 區塊等級控制 – 原生編譯的預存程序](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl) 和 [COMMIT 等級控制 – Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl) 。    
+ 使用這項設定時，每筆交易的持久性都是在交易層級上決定的 - DELAYED_DURABILITY = { *OFF* | ON }。 如需詳細資訊，請參閱 [ATOMIC 區塊等級控制 - 原生編譯的預存程序](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl)和 [COMMIT 等級控制 - Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl)。    
     
  **強制**    
  使用這項設定時，在資料庫上認可的每筆交易都是延遲的持久。 不論交易是否有指定完全持久 (DELAYED_DURABILITY = OFF) ，交易都是延遲的持久。 當延遲的交易持久性適用於資料庫，而且您不想要變更任何應用程式程式碼時，這項設定就很有用。    
     
-###  <a name="CompiledProcControl"></a> ATOMIC 區塊等級控制 – 原生編譯的預存程序    
+###  <a name="CompiledProcControl"></a> ATOMIC 區塊等級控制 - 原生編譯的預存程序    
  下列程式碼會進入不可部分完成的區塊內部。    
     
 ```sql    
@@ -123,14 +123,14 @@ DELAYED_DURABILITY = { OFF | ON }
  **範例程式碼：**    
     
 ```sql    
-CREATE PROCEDURE <procedureName> …    
+CREATE PROCEDURE <procedureName> ...    
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER    
 AS BEGIN ATOMIC WITH     
 (    
     DELAYED_DURABILITY = ON,    
     TRANSACTION ISOLATION LEVEL = SNAPSHOT,    
     LANGUAGE = N'English'    
-    …    
+    ...    
 )    
 END    
 ```    
@@ -142,7 +142,7 @@ END
 |**DELAYED_DURABILITY = OFF**|不可部分完成的區塊會啟動新的完全持久交易。|不可部分完成的區塊會在現有的交易中建立儲存點，然後開始新的交易。|    
 |**DELAYED_DURABILITY = ON**|不可部分完成的區塊會啟動新的延遲持久交易。|不可部分完成的區塊會在現有的交易中建立儲存點，然後開始新的交易。|    
     
-###  <a name="bkmk_T-SQLControl"></a> COMMIT 層級控制 –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="bkmk_T-SQLControl"></a> COMMIT 層級控制 -[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  COMMIT 語法已擴充，因此您可以強制延遲的交易持久性。 如果資料庫層級的 DELAYED_DURABILITY 是 DISABLED 或 FORCED (請參閱上述說明)，就會忽略這個 COMMIT 選項。    
     
 ```sql    

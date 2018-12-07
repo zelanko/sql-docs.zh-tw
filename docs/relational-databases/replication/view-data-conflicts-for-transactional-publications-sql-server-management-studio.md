@@ -15,12 +15,12 @@ ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 164209d0d040c40a11c957506e0cd0892fc2980c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9764117e9c69a0581c0399b54c9b78ae694dec88
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837106"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540259"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>檢視交易式發行集的資料衝突 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47837106"
   
     -   在上方格中選取一個或多個資料列，然後按一下 **[移除]**，會從衝突中繼資料表中移除資料列。  
   
-    -   按一下屬性按鈕 (**[…]**) 以檢視更多有關於衝突的資料行資訊。  
+    -   按一下屬性按鈕 ([...]) 以檢視更多有關於衝突的資料行資訊。  
   
     -   選取 **[記錄此衝突的詳細資料]** 即可將衝突資料記錄到檔案中。 若要指定檔案的位置，請指向 **[檢視]** 功能表，然後按一下 **[選項]**。 輸入值，或按一下瀏覽按鈕 (**[...]**)，然後導覽至適當的檔案。 按一下 **[確定]** 關閉 **[選項]** 對話方塊。  
   

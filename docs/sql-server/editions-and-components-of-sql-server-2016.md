@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 39694d0bbcf365712c34811bbedab76ad3cff950
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 46e55bfb8e233be504018207886f60cd4fb448f6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702326"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532186"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 的版本及支援功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

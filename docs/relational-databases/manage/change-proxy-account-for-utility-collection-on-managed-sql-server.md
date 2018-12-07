@@ -11,12 +11,12 @@ ms.assetid: ff37ba8b-a08c-4109-b6e2-5748c995a52c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f850c8037ccc7d2f9b83ab776a38e17ec5c599ce
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c6b81f1a518886884397121d4e65fb258dbb39a1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681046"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519236"
 ---
 # <a name="change-proxy-account-for-utility-collection-on--managed-sql-server"></a>變更 Proxy 帳戶以進行受管理 SQL Server 上的公用程式收集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "51681046"
   
     -   在 SSMS 內的 [公用程式總管] 中，按一下 [受管理的執行個體] 節點。  
   
-    -   在 [公用程式總管] 清單檢視中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，然後選取 [移除受管理的執行個體]。 如需詳細資訊，請參閱[從 SQL Server 公用程式中移除 SQL Server 執行個體](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md)。  
+    -   在 [公用程式總管] 清單檢視中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱，然後選取 [移除受控執行個體...]。如需詳細資訊，請參閱 [從 SQL Server 公用程式中移除 SQL Server 執行個體](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md)。  
   
 2.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內再次註冊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
-    -   在 SSMS 內的 [公用程式總管] 中，以滑鼠右鍵按一下 [受管理的執行個體] 節點，然後選取 [新增受管理的執行個體]。  
+    -   在 SSMS 的 [公用程式總管] 中，以滑鼠右鍵按一下 [受控執行個體] 節點，然後選取 [新增受控執行個體...]。  
   
     -   依照提示完成精靈，指定新的 Proxy 帳戶。  
   

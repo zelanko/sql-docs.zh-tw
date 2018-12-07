@@ -15,12 +15,12 @@ ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b05de4a591964336b9d54ff3319086f818d6231f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c94df2f2857f0657e315d3944eeaf783eef3a20
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650236"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508295"
 ---
 # <a name="view-a-sql-server-audit-log"></a>檢視 SQL Server Audit 記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "47650236"
   
 -   **若要使用下列項目檢視 SQL Server 稽核記錄：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要 **CONTROL SERVER** 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -51,7 +51,7 @@ ms.locfileid: "47650236"
   
 2.  展開 **[稽核]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您想要檢視的稽核記錄，然後選取 **[檢視稽核記錄]**。 這會開啟 [記錄檔檢視器 - _server\_name_] 對話方塊。 如需詳細資訊，請參閱 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)。  
+3.  以滑鼠右鍵按一下您想要檢視的稽核記錄，然後選取 **[檢視稽核記錄]**。 這會開啟 [記錄檔檢視器 -_伺服器\_名稱_] 對話方塊。 如需詳細資訊，請參閱 [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md)。  
   
 4.  完成後，請按一下 **[關閉]**。  
   

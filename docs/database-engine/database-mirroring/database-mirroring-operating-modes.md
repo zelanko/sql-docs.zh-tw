@@ -13,12 +13,12 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b302626d3a1f13a2be13d0da77f2f3aca684b83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a7449f51121491025d662fde50eaa548602cd41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772006"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503463"
 ---
 # <a name="database-mirroring-operating-modes"></a>資料庫鏡像作業模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "47772006"
   
  與兩位夥伴不同的是，見證並不是為資料庫服務。 見證只是藉由確認主體伺服器是否已啟動而且可以正常運作，來支援自動容錯移轉。 只有當鏡像和見證與主體伺服器中斷連接後仍然保持相互連接時，鏡像伺服器才會開始進行自動容錯移轉。  
   
- 當見證設定完成後，工作階段就會要求 *「仲裁」*(它是至少兩個伺服器執行個體之間的關聯性，以便讓資料庫可供使用)。 如需詳細資訊，請參閱[資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)和[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ 當見證設定完成後，工作階段就會要求「仲裁」(它是至少兩個伺服器執行個體之間的關聯性，以便讓資料庫可供使用)。 如需詳細資訊，請參閱[資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)和[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
  自動容錯移轉必須符合下列條件：  
   

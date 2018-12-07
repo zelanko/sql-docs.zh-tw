@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a4c0341041bcd2cbf6845e7fd261e16b6028260
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 25abbb1cc11706b58c93d0884e024ad54fd280e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668697"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395888"
 ---
 # <a name="index-json-data"></a>索引 JSON 資料
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ CREATE INDEX idx_name
 ON JsonCollection(vName)
 ```  
   
-上述命令會在計算資料行 `vName` 上建立標準索引，其代表來自 JSON `$.name` 屬性的值。 在塞爾維亞文 (斯拉夫) 字碼頁中，字母順序如下：‘А’、’Б’、’В’、’Г’、’Д’、’Ђ’、’Е’ 等等。索引中的項目順序會與塞爾維亞文 (斯拉夫) 規則相容，這是因為 `JSON_VALUE` 函數的結果會繼承其來自來源資料行的定序。 下列範例會查詢此集合物件，並依名稱排序結果。  
+上述命令會在計算資料行 `vName` 上建立標準索引，其代表來自 JSON `$.name` 屬性的值。 在塞爾維亞文 (斯拉夫) 字碼頁中，字母順序如下：'А'、'Б'、'В'、'Г'、'Д'、'Ђ'、'Е' 等等。索引中的項目順序會與塞爾維亞文 (斯拉夫) 規則相容，這是因為 `JSON_VALUE` 函數的結果會繼承其來自來源資料行的定序。 下列範例會查詢此集合物件，並依名稱排序結果。  
   
 ```sql  
 SELECT JSON_VALUE(json,'$.name'),*

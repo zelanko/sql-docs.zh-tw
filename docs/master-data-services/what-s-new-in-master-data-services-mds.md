@@ -12,12 +12,12 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0ba960c94e1620b0381796a2e26112af21a3a9a1
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 657308bcf378b6e35a360a2c6ad39a807c03e086
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696837"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392338"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 的新功能
 
@@ -82,7 +82,7 @@ ms.locfileid: "51696837"
   
  使用者現已可在模型層級明確地獲派系統管理員權限。 這表示如果使用者稍後才獲派模型樹狀子目錄 (例如實體層級) 的權限，他並不會失去此系統管理員權限。  
   
- 在這一版的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，我們藉由採用下列新的權限，來提供更多權限層級︰讀取、建立、更新與刪除。 例如，具有更新權限的使用者現已可更新主要資料，而無須建立或刪除資料。 當您授與使用者建立、更新或刪除的權限時，使用者會自動獲派讀取權限。 您也可以合併讀取、建立、更新與刪除權限。  
+ 在此版本的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，我們藉由引進下列新的權限，來提供更多權限層級：讀取、建立、更新與刪除。 例如，具有更新權限的使用者現已可更新主要資料，而無須建立或刪除資料。 當您授與使用者建立、更新或刪除的權限時，使用者會自動獲派讀取權限。 您也可以合併讀取、建立、更新與刪除權限。  
   
  當您升級至 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]時，舊有權限會轉換成新的權限，如下表所示。  
   

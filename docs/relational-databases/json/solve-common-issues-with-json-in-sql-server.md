@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f6222c5829af5a63e4ab7fd079a405063f08ec5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2f2efdc555a1fe236d42ea342846674154cbee5b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661727"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393071"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>解決 SQL Server 中的 JSON 常見問題
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -131,9 +131,9 @@ WHERE [key] = 'color'
 ```  
 
 ### <a name="openjson-requires-compatibility-level-130"></a>OPENJSON 需要相容性層級 130  
- **問：** 嘗試在 SQL Server 2016 中執行 OPENJSON，結果收到下列錯誤。  
+ **問：** 我嘗試在 SQL Server 2016 中執行 OPENJSON，結果收到下列錯誤。  
   
- `Msg 208, Level 16, State 1 ‘Invalid object name OPENJSON’`  
+ `Msg 208, Level 16, State 1 'Invalid object name OPENJSON'`  
   
  **答：** OPENJSON 函式僅適用於相容性等級 130。 若您的資料庫相容性等級低於 130，則會隱藏 OPENJSON。 其他 JSON 函數適用於所有的相容性層級。  
  

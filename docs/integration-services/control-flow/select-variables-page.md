@@ -16,17 +16,17 @@ ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6083c77a8bb3474507b8a555dbeaf6e627cf3cb7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d75e66a4641ae5624a99b6c4bea88d14f93bbc1a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808126"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528219"
 ---
 # <a name="select-variables-page"></a>選取變數頁面
   使用 [選取變數] 對話方塊，可在您設定指令碼工作或指令碼元件時，為 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性選取一或多個變數。  
   
- 若要開啟 [選取變數] 對話方塊，請在 [指令碼轉換編輯器] 對話方塊的 [指令碼] 頁面上，於 [自訂屬性] 底下尋找 [ReadOnlyVariables] 或 [ReadWriteVariables] 屬性，然後按一下與該屬性相關聯的省略符號 (...) 按鈕。  
+ 若要開啟 [選取變數] 對話方塊，請在 [指令碼轉換編輯器] 對話方塊的 [指令碼] 頁面上，於 [自訂屬性] 底下尋找 [ReadOnlyVariables] 或 [ReadWriteVariables] 屬性，然後按一下與該屬性相關聯的省略符號 ([...]) 按鈕。  
   
 ## <a name="options"></a>選項。  
  選取方塊  

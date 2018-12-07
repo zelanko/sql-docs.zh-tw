@@ -29,12 +29,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f20a2bba58605ca7b518fa1a55ba1a75ffb366bb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 85a35b34610982ac4418e0e8ab05d3e1b188b968
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638945"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507466"
 ---
 # <a name="term-extraction-transformation"></a>詞彙擷取轉換
   「詞彙擷取」轉換會從轉換輸入資料行的文字中擷取詞彙，然後將這些詞彙寫入轉換輸出資料行。 轉換只適用於英文字，它使用自己的英文字典和有關英文的語言資訊。  
@@ -57,7 +57,7 @@ ms.locfileid: "51638945"
 ## <a name="exclusion-terms"></a>排除詞彙  
  (選擇性)「詞彙擷取」轉換可以參考包含排除詞彙 (是指當轉換從資料集中擷取詞彙時應略過的詞彙) 之資料表中的資料行。 如果一組詞彙在特殊商務和產業中視為不合理 (通常因為該詞彙出現的頻率太高，而成為一個非搜尋字)，則這個功能會非常有用。 例如，當從包含有關特殊品牌汽車的客戶支援資訊之資料集中擷取詞彙時，該品牌名稱自身可能會被排除，因為它被提及的頻率太高，而失去意義。 因此，排除清單中的值必須自訂到您要使用的資料集。  
   
- 當您將詞彙加入至排除清單時，包含該詞彙的所有詞彙 (單字或名詞片語) 也會被排除。 例如，如果排除清單包含單一字 *data*，則包含這個字的所有詞彙 (例如 *data*、 *data mining*、 *data integrity*和 *data validation* ) 也會被排除。 如果您只想排除包含 *data*單字的複合字，則必須明確將這些複合詞彙加入至排除清單。 例如，如果您要擷取含 *data*的個體，但要排除 *data validation*，則將 *data validation* 加入至排除清單，並確定 *data* 已從排除清單中移除。  
+ 當您將詞彙新增至排除清單時，包含該詞彙的所有詞彙 (單字或名詞片語) 也會被排除。 例如，如果排除清單包含單一字 *data*，則包含這個字的所有詞彙 (例如 *data*、 *data mining*、 *data integrity*和 *data validation* ) 也會被排除。 如果您只想排除包含 *data*單字的複合字，則必須明確將這些複合詞彙加入至排除清單。 例如，如果您要擷取含 *data*的個體，但要排除 *data validation*，則將 *data validation* 加入至排除清單，並確定 *data* 已從排除清單中移除。  
   
  參考資料表必須是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 Access 資料庫中的資料表。 「詞彙擷取」轉換會使用個別 OLE DB 連接，以連接到參考資料表。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "51638945"
   
 -   ASCII 分行符號字元 0x0d (歸位字元) 和 0x0a (換行字元)。 若要使用此字元作為句子界限，則資料列中必須有兩個或兩個以上的分行符號字元。  
   
--   連字號 (–)。 若要使用此字元作為句子界限，則連字號左邊或右邊字元都不能是字母。  
+-   連字號 (-)。 若要使用此字元作為句子界限，則連字號左邊或右邊字元都不能是字母。  
   
 -   底線符號 (_)。 若要使用此字元作為句子界限，則連字號左邊或右邊字元都不能是字母。  
   

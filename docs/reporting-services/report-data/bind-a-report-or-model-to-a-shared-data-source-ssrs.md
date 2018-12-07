@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 83e3d6d960e4fce7e96d9b8195e2a0f06e8f4dd4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0a72bb8d81564afbe632a68908baf4bad4dead82
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031337"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507464"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>將報表繫結至共用資料來源 (SSRS)
   在某些情況下 (例如，將報表從測試伺服器移到生產環境伺服器時)，您可能想先將檔案儲存在本機電腦，然後再上傳到不同的報表伺服器。 當您將報表上傳到新伺服器時，您必須將它重新繫結至新報表伺服器上儲存的共用資料來源。 如果不重新繫結報表，從新報表伺服器存取該報表時將無法正常運作。  

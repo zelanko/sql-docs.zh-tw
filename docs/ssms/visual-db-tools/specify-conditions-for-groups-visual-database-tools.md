@@ -14,16 +14,16 @@ ms.assetid: 269ad9c5-3261-4526-badf-7be3c869f229
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 249123a596ef53bf32758e7b03a9e1e1198b2e30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0dd5f15a013da84217bb588bca8efbf62d257108
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626896"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509645"
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>指定群組條件 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-您可以指定套用至整體群組的條件 (即 HAVING 子句)，以限制出現在查詢結果中的群組。 在資料經過分組及彙總 (Aggregate) 之後，便會套用 HAVING 子句中的條件。 只有符合條件的群組才會出現在查詢結果中。  
+您可以指定套用至整體群組的條件 (即 HAVING 子句)，以限制出現在查詢中的群組。 在資料經過分組及彙總 (Aggregate) 之後，便會套用 HAVING 子句中的條件。 只有符合條件的群組才會出現在查詢結果中。  
   
 例如，您可能想查看 `titles` 資料表中每個發行者的所有書籍的平均價格，但是只限於平均價格超過 $10.00。 在此情況下，您可以指定包含 `AVG(price) > 10`之類條件的 HAVING 子句。  
   

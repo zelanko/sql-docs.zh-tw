@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d0b16356be0c36f48f9e82b4a49e483c3eac529b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 42247b11f00524ba08dd74f41f11da35fdcb2026
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704086"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530348"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -287,7 +287,7 @@ ms.locfileid: "51704086"
    > [!NOTE]
    > QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 提示不會覆寫預設值或舊版基數估計設定，若它是透過資料庫範圍設定所強制，追蹤旗標或另一個查詢提示，例如 QUERYTRACEON。   
    > 此提示只會影響查詢最佳化工具的行為。 它不會影響可能相依於[資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)的其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，例如特定資料庫功能的可用性。  
-   > 若要深入了解這項提示，請參閱 [Developer’s Choice: Hinting Query Execution model](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model) (開發人員選擇：提示查詢執行模型)。
+   > 若要深入了解此提示，請參閱[開發人員精選：提示查詢執行模型](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model) \(英文\)。
     
 *  'QUERY_PLAN_PROFILE'      
  為查詢啟用輕量分析。 當包含這個新提示的查詢完成時，便會發出一個新的擴充事件 (query_plan_profile)。 此擴充事件會公開執行統計資料和與 query_post_execution_showplan 擴充事件相似的執行計畫 XML，但僅限包含新提示的查詢。 **適用於**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 開始)。 
@@ -296,7 +296,7 @@ ms.locfileid: "51704086"
   > 若您啟用收集 query_post_execution_showplan 擴充事件，這會將標準分析基礎結構新增至每個正在伺服器上執行的查詢，並因此影響整體伺服器效能。      
   > 若您啟用收集 *query_thread_profile* 擴充事件以改為使用輕量分析基礎結構，這會大幅減少效能額外負荷，但仍然會影響整體伺服器效能。       
   > 若您啟用 query_plan_profile 擴充事件，這只會為使用 QUERY_PLAN_PROFILE 執行的查詢啟用輕量分析基礎結構，因此不會影響伺服器上的其他工作負載。 使用提示分析特定查詢，而不影響伺服器工作負載的其他部分。
-  > 若要深入了解輕量分析，請參閱 [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (開發人員選擇：查詢進度 – 隨時、隨地)。
+  > 若要深入了解輕量分析，請參閱[開發人員選擇：查詢進度 - 隨時、隨地](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) \(英文\)。
  
 您可以使用動態管理檢視 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)，來查詢所有支援的 USE HINT 名稱清單。    
 

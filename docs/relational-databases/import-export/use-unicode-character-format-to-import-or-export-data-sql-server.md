@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41f52b1a60ebc5fc456b0b90b998c173356c5c7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f81e94012e4c976dc1d4fdb1013ec34e22ff51d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809636"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413305"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>使用 Unicode 字元格式匯入或匯出資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -163,7 +163,7 @@ REM Review results is SSMS
 ```
 
 ### **使用 bcp 與 Unicode 字元格式匯入非 XML 格式檔案的資料**<a name="bcp_widechar_import_fmt"></a>
-**-w** 與 **-f** 參數與 **IN** 命令。  因為此範例涉及 bcp、格式檔案與 Unicode 字元，以及資料檔案中的第一個資料欄位為字元，所以必須使用因應措施。  請參閱 [使用 Unicode 字元格式、bcp 與格式檔案的特殊注意事項](#special_considerations)。  資料檔案 `myWidechar.bcp` 會因為額外新增一筆 "dummy" 記錄而有所改變。 `-F 2` 參數會略過該筆記錄。
+**-w** 與 **-f** 參數與 **IN** 命令。  因為此範例涉及 bcp、格式檔案與 Unicode 字元，以及資料檔案中的第一個資料欄位為字元，所以必須使用因應措施。  請參閱 [使用 Unicode 字元格式、bcp 與格式檔案的特殊注意事項](#special_considerations)。  資料檔案 `myWidechar.bcp` 會因為額外新增一筆 "dummy" 記錄而有所改變。`-F 2` 參數會略過該筆記錄。
 
 在命令提示字元中輸入下列命令，然後執行修改步驟︰
 ```

@@ -11,12 +11,12 @@ ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 58257752fa22f6b3536e80c3dd25da8cca924b01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dbbeb9f11b735f461f5901c8cc03d6fff313bf31
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723846"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397231"
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>記憶體最佳化的系統版本設定時態表效能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47723846"
   
 -   您無法設定啟用資料排清工作的時間，但您可以叫用 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)的情況下刪除資料。  
   
--   請考慮使用叢集資料行存放區作為磁碟型記錄資料表的儲存選項，尤其是在您打算對使用彙總或視窗型函數的歷程記錄資料執行分析查詢時。 在此情況下，叢集資料行存放區會是記錄資料表的最佳選擇，因為它提供良好的資料壓縮，而且「易於插入」，這與記錄資料表資料的產生方式一致。  
+-   請考慮使用叢集資料行存放區作為磁碟型記錄資料表的儲存選項，尤其是在您打算對使用彙總或視窗型函數的歷程記錄資料執行分析查詢時。 在此情況下，叢集資料行存放區會是歷程記錄資料表的最佳選擇，因為它提供良好的資料壓縮，而且「易於插入」，這與歷程記錄資料表資料的產生方式一致。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統版本設定時態表與記憶體最佳化資料表](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   

@@ -15,12 +15,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b67636c618343b4f5beb5ec000f8d94236fb64a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f58c276968fd88b64ef5c48995eafbc553e14987
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696976"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507279"
 ---
 # <a name="system-settings-master-data-services"></a>系統設定 (Master Data Services)
 
@@ -84,7 +84,7 @@ ms.locfileid: "51696976"
   
 |組態管理員設定|系統設定|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**階層中預設的成員數目**|**HierarchyChildNodeLimit**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 總管功能區域中，於顯示 […其他…] 之前，每個階層節點中所顯示的成員數目上限。 就會出現。 您可以按一下 […更多…] 來顯示下一個成員群組。 預設值為 **50**。|  
+|**階層中預設的成員數目**|**HierarchyChildNodeLimit**|在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]的 [檔案總管] 功能區域中，於顯示 [...其他...] 之前，每個階層節點中所顯示的成員數目上限。 您可以按一下 [...其他...] 來顯示下一個成員群組。 預設值為 **50**。|  
 |**顯示階層中預設的名稱**|**ShowNamesInHierarchy**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 總管功能區域中，決定檢視階層時所選取的預設設定。<br /><br /> 預設值是 [是] 或 **1**，表示每個成員的名稱和程式碼都會顯示。 變更為 [否] 或 **2** 則只會顯示程式碼。|  
 |**清單中網域屬性的數目**|**DBAListRowLimit**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 總管功能區域中，當您按兩下方格中的網域屬性值時所顯示的屬性數目。 預設值為 **50**。 如果有超過 50 個成員存在，則會改為顯示可搜尋對話方塊。|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 總管功能區域中，使用 [比對] 篩選準則時所使用的相似度層級。 預設值為 **0.3**。 設定的值愈接近 **1** ，傳回的相符項目就愈接近搜尋準則。 設定成 **1** 則會傳回完全相符的項目。|  

@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 309f11629199f08080d83931dffcd3ab2f3ab7a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04e138f38923745d0095344959bc5876fc213b00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822398"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507438"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>複寫管理員的常見問題集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -186,7 +186,7 @@ ms.locfileid: "47822398"
  首先使用 [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)、[sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) 或 [發行集屬性 - \<發行集>] 對話方塊從發行集中卸除發行項，然後使用 `DROP <Object>` 將其從資料庫中卸除。 訂閱已加入之後，不可從快照集或交易式發行集卸除發行項，必須先卸除訂閱。 如需詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>如何在已發行的資料表中新增或卸除資料行？  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援在已發行物件上進行各種結構描述變更，包括新增和卸除資料行。 例如，在發行者端執行 ALTER TABLE ... DROP COLUMN，並將陳述式複寫至訂閱者，然後執行以卸除資料行。 執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本的「訂閱者」支援透過預存程序 [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) 和 [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)新增和卸除資料行。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援在已發行物件上進行各種結構描述變更，包括新增和卸除資料行。 例如，在發行者端執行 ALTER TABLE ...DROP COLUMN，並將陳述式複寫至訂閱者，然後執行以卸除資料行。 執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本的「訂閱者」支援透過預存程序 [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) 和 [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)新增和卸除資料行。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
 ## <a name="replication-maintenance"></a>複寫維護  
   

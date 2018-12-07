@@ -20,12 +20,12 @@ ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6fb0c0e35b2350bf3b1753434425389eb8f3503d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6f55b028c8fa1506bd6076bf5bdad2f90e074727
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696789"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392851"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,6 @@ ms.locfileid: "51696789"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 ALTER EVENT SESSION event_session_name  
 ON SERVER  
 {  
@@ -144,20 +143,20 @@ ON SERVER
 |STARTUP_STATE = { ON &#124; **OFF** }|指定當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時，是否要自動啟動這個事件工作階段。<br /><br /> 如果 STARTUP_STATE=ON，則只有當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 停止並重新啟動之後，事件工作階段才會啟動。<br /><br /> ON = 事件工作階段會在啟動時啟動。<br /><br /> **OFF** = 事件工作階段不會在啟動時啟動。|  
   
 ## <a name="remarks"></a>Remarks  
- 不可在同一個陳述式內同時使用 ADD 與 DROP 引數。  
+ 不可在同一個陳述式內同時使用 `ADD` 和 `DROP` 引數。  
   
 ## <a name="permissions"></a>[權限]  
- 需要 ALTER ANY EVENT SESSION 權限。  
+ 需要 `ALTER ANY EVENT SESSION` 權限。  
   
 ## <a name="examples"></a>範例  
  下列範例會啟動事件工作階段並取得某些即時工作階段統計資料，然後將兩個事件加入至現有工作階段。  
   
-```  
+```sql  
 -- Start the event session  
-ALTER EVENT SESSION test_session  
-ON SERVER  
+ALTER EVENT SESSION test_session ON SERVER  
 STATE = start;  
 GO  
+
 -- Obtain live session statistics   
 SELECT * FROM sys.dm_xe_sessions;  
 SELECT * FROM sys.dm_xe_session_events;  

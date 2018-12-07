@@ -13,12 +13,12 @@ ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7e305cc2ceb178b0adb812d8215022f981d2c95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77d24c998c17e9fb265defa252b37b955e451bda
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763906"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414665"
 ---
 # <a name="sql-server-data-tools"></a>SQL Server Data Tools
 SQL Server Data Tools (SSDT) 透過導入常見的宣告式模型轉換資料庫開發，此模型橫跨 Visual Studio 內的所有資料庫開發階段。 您可以使用 SSDT Transact\-SQL 設計功能建置、偵錯、維護和重構資料庫。 您可以使用資料庫專案，或直接使用位於內部或外部部署之連接的資料庫執行個體。  

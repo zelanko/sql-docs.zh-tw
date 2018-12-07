@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7b69a59b2b4741894a6242998b67a9b7f9f3d5fe
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2c82a2400020baf0d97cda595c630c2b7b55a9b1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604338"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504506"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>資料庫引擎的新功能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -225,7 +225,7 @@ SQL Server 2014 和 2016 的記憶體最佳化資料表的儲存格式已變更�
 ### <a name="sublinear-threshold-for-update-of-statistics"></a>統計資料更新的次線性閾值
 大型資料表的統計資料自動更新現在更為積極 (相容性層級 130)。 觸發自動更新統計資料的閾值為 20%，自 SQL Server 2016 起，當大型資料表中的列數增加時，這個閾值會開始降低 (仍為百分比)。 您不再需要設定追蹤旗標 2371 來降低此閾值。 
 ### <a name="other-enhancements"></a>其他增強功能
-Insert-select 陳述式中的 Insert 是多執行緒，或可以有平行計畫 (相容性層級 130)。 若要取得平行計畫，請使用 INSERT。 SELECT 陳述式必須使用 TABLOCK 提示。 如需詳細資訊，請參閱 [Parallel Insert Select](https://blogs.msdn.microsoft.com/sqlcat/2016/07/06/sqlsweet16-episode-3-parallel-insert-select/)(平行的 Insert Select)。
+Insert-select 陳述式中的 Insert 是多執行緒，或可以有平行計畫 (相容性層級 130)。 若要取得平行計劃，請使用 INSERT ...SELECT 陳述式必須使用 TABLOCK 提示。 如需詳細資訊，請參閱 [Parallel Insert Select](https://blogs.msdn.microsoft.com/sqlcat/2016/07/06/sqlsweet16-episode-3-parallel-insert-select/)(平行的 Insert Select)。
 
 ## <a name="live-query-statistics"></a>即時查詢統計資料
  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 可供檢視作用中查詢的即時執行計畫。 這個即時查詢計畫會隨著控制項在查詢計畫運算子之間流動，提供查詢執行程序的即時深入資訊。 如需相關資訊，請參閱 [Live Query Statistics](../relational-databases/performance/live-query-statistics.md)。
@@ -293,7 +293,7 @@ SQL Server 2016 新增對匯入和匯出 JSON 以及使用 JSON 字串的內建�
  如需詳細資訊，請參閱 [PolyBase 指南](../relational-databases/polybase/polybase-guide.md)。
 
 ## <a name="stretch-database"></a>Stretch Database
- Stretch Database 是 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 的新功能，可以透明且安全的方式，將您的歷程記錄資料移轉到 Microsoft Azure 雲端。 無論您的 SQL Server 資料位於內部部署或已延展到雲端，都能無縫存取。 您可以設定原則以決定資料的儲存位置，而 SQL Server 會在背景處理資料移動。 整個資料表都會一直在線上，而且可供查詢。 此外，因為資料位置對應用程式而言完全透明，所以 Stretch Database 不會要求對現有查詢或應用程式進行任何變更。 如需詳細資訊，請參閱 [Stretch Database](../sql-server/stretch-database/stretch-database.md)。
+ Stretch Database 是 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 的新功能，可以透明且安全的方式，將您的歷程記錄資料移轉到 Microsoft Azure 雲端。 無論您的 SQL Server 資料位於內部部署或已延展到雲端，都能平順地存取。 您可以設定原則以決定資料的儲存位置，而 SQL Server 會在背景處理資料移動。 整個資料表都會一直在線上，而且可供查詢。 此外，因為資料位置對應用程式而言完全透明，所以 Stretch Database 不會要求對現有查詢或應用程式進行任何變更。 如需詳細資訊，請參閱 [Stretch Database](../sql-server/stretch-database/stretch-database.md)。
  
 ## <a name="support-for-utf-8"></a>UTF-8 支援
 [bcp 公用程式](../tools/bcp-utility.md)、[BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) 和 [OPENROWSET](../t-sql/functions/openrowset-transact-sql.md) 現在支援 UTF-8 字碼頁。 如需詳細資訊，請參閱這些主題和[建立格式檔案 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)。
@@ -382,11 +382,11 @@ SQL Server 2016 新增對匯入和匯出 JSON 以及使用 JSON 字串的內建�
 
 
 ### <a name="always-encrypted"></a>永遠加密
-透過「永遠加密」，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以對加密的資料執行作業，而最棒的是，所有加密金鑰都與應用程式一起置於客戶信任的環境中，而不是放在伺服器上。 永遠加密可保護客戶資料，所以 DBA 無法存取純文字資料。 以透明方式在驅動程式層級進行資料加密和解密，可讓必須對現有應用程式執行的變更減至最少。 如需詳細資訊，請參閱[永遠加密 &#40;Database Engine&#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md)。
+透過 Always Encrypted，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以對加密資料執行作業；而最棒的是，所有加密金鑰都與應用程式一起置於客戶信任的環境中，而不是位於伺服器上。 永遠加密可保護客戶資料，所以 DBA 無法存取純文字資料。 以透明方式在驅動程式層級進行資料加密和解密，可讓必須對現有應用程式執行的變更減至最少。 如需詳細資訊，請參閱[永遠加密 &#40;Database Engine&#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md)。
 
 
 ### <a name="dynamic-data-masking"></a>動態資料遮罩
-動態資料遮罩會對不具權限的使用者遮罩機密資料，從而限制其曝光。 動態資料遮罩讓使用者能夠指定要顯示多少機密資料，藉此協助防止未經授權存取機密資料，同時盡可能減少對應用程式層的影響。 這項原則式安全性功能會將機密資料隱藏在指定資料庫欄位的查詢結果集內，而資料庫中的資料則不會變更。 如需相關資訊，請參閱 [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md)。
+動態資料遮罩會對不具權限的使用者遮罩機密資料，從而限制其曝光。 動態資料遮罩讓使用者能夠指定要顯示多少機密資料，藉此協助防止未經授權存取機密資料，同時盡可能減少對應用程式層的影響。 這項原則式安全性功能會將敏感性資料隱藏在指定資料庫欄位的查詢結果集內，而資料庫中的資料則不會變更。 如需相關資訊，請參閱 [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md)。
 
 
 ### <a name="new-permissions"></a>新的權限
@@ -412,9 +412,9 @@ SQL Server 2016 Standard Edition 現在支援 AlwaysOn 基本可用性群組。 
 
 現在有一組唯讀複本支援讀取意圖的連接要求負載平衡。 先前的行為一律將連接導向路由清單中第一個可用的唯讀複本。 如需詳細資訊，請參閱[設定唯讀複本之間的負載平衡](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)。
 
- 支援自動容錯移轉的複本數目已從&2; 增加到&3;。
+ 支援自動容錯移轉的複本數目已從 2 增加到 3。
 
- AlwaysOn 容錯移轉叢集現在支援群組受管理的服務帳戶。 如需相關資訊，請參閱 [群組受管理的服務帳戶](https://technet.microsoft.com/library/hh831782.aspx)。 在 Windows Server 2012 R2 中，需有一項更新來避免在密碼變更後發生暫時停機。 若要取得此更新，請參閱 [gMSA-based services can't log on after a password change in a Windows Server 2012 R2 domain](https://support.microsoft.com/kb/2998082/)(在 Windows Server 2012 R2 網域中變更密碼後，以 gMSA 為基礎的服務就無法登入)。
+ Always On 容錯移轉叢集現在支援群組受控服務帳戶。 如需相關資訊，請參閱 [群組受管理的服務帳戶](https://technet.microsoft.com/library/hh831782.aspx)。 在 Windows Server 2012 R2 中，需有一項更新來避免在密碼變更後發生暫時停機。 若要取得此更新，請參閱 [gMSA-based services can't log on after a password change in a Windows Server 2012 R2 domain](https://support.microsoft.com/kb/2998082/)(在 Windows Server 2012 R2 網域中變更密碼後，以 gMSA 為基礎的服務就無法登入)。
 
  [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 在 Windows Server 2016 上支援分散式交易和 DTC。 如需詳細資訊，請參閱[分散式交易支援](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md#dtcsupport)。
 
@@ -426,7 +426,7 @@ AlwaysOn 現在支援加密的資料庫。 當您建立新的可用性群組時�
 
 直接植入可讓次要複本透過網路自動植入 (而不是手動植入，其需要在次要複本上還原目標資料庫的實體備份)。 在 [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../t-sql/statements/create-availability-group-transact-sql.md) 或 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../t-sql/statements/alter-availability-group-transact-sql.md) 陳述式中設定 **SEEDING_MODE=AUTOMATIC**，即可指定直接植入。 您也必須在搭配直接植入使用的每個次要複本上利用 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../t-sql/statements/alter-availability-group-transact-sql.md) 指定 **GRANT CREATE ANY DATABASE**。
 
-**效能改進** - 透過平行和加速壓縮主要複本上的記錄檔區塊、最佳化同步處理通訊協定，以及平行解壓縮和重做次要複本上的記錄檔記錄，可用性群組的同步處理輸送量已增加 ~10 倍。 這會增加可讀取次要複本的有效期限，並減少容錯移轉時的資料庫復原時間。 請注意，在 SQL Server 2016 中，還無法平行重做記憶體最佳化資料表。
+**效能改善** - 透過平行和加速壓縮主要複本上的記錄檔區塊、最佳化同步處理通訊協定，以及平行解壓縮和重做次要複本上的記錄檔記錄，可用性群組的同步處理輸送量已增加 10 倍以上。 這會增加可讀取次要複本的有效期限，並減少容錯移轉時的資料庫復原時間。 請注意，在 SQL Server 2016 中，還無法平行重做記憶體最佳化資料表。
 
 ## <a name="replication-enhancements"></a>複寫增強功能
 - 現在支援記憶體最佳化資料表的複寫。 如需詳細資訊，請參閱[複寫至記憶體最佳化資料表訂閱者](../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)。

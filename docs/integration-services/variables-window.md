@@ -16,17 +16,17 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3417b53ba41027b5d629069676818b8f54f13d0b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: eaa6caf40a44ba8579b5e5cff31f0c4c10f2eb4a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640865"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420509"
 ---
 # <a name="variables-window"></a>變數視窗
   使用 [變數] 視窗，即可建立和修改使用者定義的變數，並檢視系統變數。  
   
- 依預設，[變數] 視窗位於 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中 [SSIS 設計師] 的 [連線管理員] 區域下方。 如果您未看見 [變數] 視窗，請按一下 [SSIS] 功能表上的 [變數] 顯示視窗。  
+ 依預設，[變數] 視窗位於 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中 [SSIS 設計師] 的 [連線管理員] 區域下方。 如果您未看見 [變數] 視窗，請按一下 [SSIS] 功能表上的 [變數] 來顯示視窗。  
   
  您可以將 View.Variables 命令對應到您在 [選項] 對話方塊的 [鍵盤] 頁面中所選擇的組合鍵，以選擇性地顯示 [變數] 視窗。  
   

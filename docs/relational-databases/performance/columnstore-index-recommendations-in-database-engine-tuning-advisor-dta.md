@@ -13,12 +13,12 @@ ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 620152bc083e5847f09161cd8209ba201ad1baca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0e6c5641983c3528114120feb17c4f93948e926
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775846"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403013"
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>Database Engine Tuning Advisor (DTA) 中的資料行存放區索引建議
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,12 +15,12 @@ ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b3a57de7e071a66fa1b8a6091d51fb4d799f2cbd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8dc91a21f83283a78e5d47e49dbe1a36ec166e05
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610306"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419959"
 ---
 # <a name="navigational-access-master-data-services"></a>導覽存取權 (Master Data Services)
 

@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2d9dcbb729c09ef327861430a36f4565c2645d3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d9d870762becec1ff0717c4e9d7aef5eda7be94c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642796"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541905"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>狀態列 (Database Engine 查詢編輯器)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "51642796"
 ##  <a name="SetOEServerColor"></a> 為 [物件總管] 中的伺服器設定狀態色彩  
  **設定 [物件總管] 中的伺服器狀態色彩**  
   
-1.  在 **[物件總管]** 中，選取 **[連接]** 按鈕，然後選取 **[Database Engine…]**。  
+1.  在 [物件總管] 中，選取 [連接] 按鈕，然後選取 [資料庫引擎…]。  
   
 2.  在 [連接到伺服器] 對話方塊中選取 [選項 >>]。  
   
 3.  選取 **[使用自訂色彩]** 核取方塊。  
   
-4.  選取 **[選取…]** 按鈕，可選取色彩。  
+4.  選取 [選取...] 按鈕，可選取色彩。  
   
 5.  選取基本色彩或自訂色彩，然後選取 [確定]。  
   
@@ -51,13 +51,13 @@ ms.locfileid: "51642796"
 ##  <a name="SetRegServerColor"></a> 為已註冊的伺服器設定狀態色彩  
  **為已註冊的伺服器設定伺服器色彩**  
   
-1.  在 **[已註冊的伺服器]** 中，以滑鼠右鍵按一下伺服器節點，然後選取 **[屬性…]**。  
+1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器節點，然後選取 [屬性…]。  
   
 2.  在 **[編輯伺服器註冊屬性]** 對話方塊上，選取 **[連接屬性]** 索引標籤。  
   
 3.  選取 **[使用自訂色彩]** 核取方塊。  
   
-4.  選取 **[選取…]** 按鈕，可選取色彩。  
+4.  選取 [選取...] 按鈕，可選取色彩。  
   
 5.  選取基本色彩或自訂色彩，然後選取 [確定]。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "51642796"
   
 -   選取 **[使用自訂色彩]** 核取方塊。  
   
--   選取 **[選取…]** 按鈕，可選取色彩。  
+-   選取 [選取...] 按鈕，可選取色彩。  
   
 -   選取基本色彩或自訂色彩，然後選取 [確定]。  
   

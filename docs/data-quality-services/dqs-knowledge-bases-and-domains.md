@@ -5,19 +5,18 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1bb4a6f9013f9b8bf4f6334489f1799fe4e0cbb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81dba339c76674e2f8d1268c40a7762d15d7786d
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619332"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617468"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 知識庫與定義域
 
@@ -125,13 +124,13 @@ ms.locfileid: "47619332"
  在定義域管理中，您可以針對單一定義域指定以詞彙為基礎的關聯，以便指定對單一值的變更。  
   
 ### <a name="composite-domains"></a>複合定義域  
- 複合定義域是以兩個或多個單一定義域組成的結構，其中每個定義域都包含有關一般資料的知識。 複合是定義域可以處理之資料的範例為名稱欄位中的名字、中間名和姓氏，以及地址欄位中的門牌號碼和街道、城市、省/市、郵遞區號與國家。 當您將某個單一欄位對應到複合定義域時，DQS 會資料從某個欄位剖析到組成複合的多個定義域。  
+ 複合定義域是以兩個或多個單一定義域組成的結構，其中每個定義域都包含有關一般資料的知識。 複合是定義域可以處理之資料的範例為名稱欄位中的名字、中間名和姓氏，以及地址欄位中的門牌號碼和街道、城市、省/市、郵遞區號與國家/地區。 當您將某個單一欄位對應到複合定義域時，DQS 會資料從某個欄位剖析到組成複合的多個定義域。  
   
  單一定義域有時候並不完全表示欄位資料。 在複合定義域中群組兩個或多個定義域可讓您以有效率的方式表示資料。 以下是使用複合定義域的優點：  
   
 -   分析組成複合定義域的不同單一定義域可能是更有效率的評估資料品質方式。  
   
--   當您使用複合定義域時，也可以建立跨定義域的規則，這些規則可讓您驗證多個定義域中的資料之間的關聯性是否適當。 例如，您可以驗證城市定義域中的 “London” 字串是否對應到國家定義域中的 “England” 字串。 請注意，跨定義域規則會在定義域規則之後納入考量。  
+-   當您使用複合定義域時，也可以建立跨定義域的規則，這些規則可讓您驗證多個定義域中的資料之間的關聯性是否適當。 例如，您可以驗證城市定義域中的 "London" 字串是否對應到國家/地區定義域中的 "England" 字串。 請注意，跨定義域規則會在定義域規則之後納入考量。  
   
 -   複合定義域中的資料可以附加到參考資料來源，在該情況下，系統會將複合定義域傳送至參考資料提供者。 這通常會透過地址資料完成。  
   

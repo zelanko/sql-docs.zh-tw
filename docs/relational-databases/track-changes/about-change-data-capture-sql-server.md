@@ -14,12 +14,12 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e8df90ce7038506855a3dbba9c7376ae352342c3
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 5fc24683d4272a4e93ac7d1e30581fa202588e1e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559205"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402743"
 ---
 # <a name="about-change-data-capture-sql-server"></a>關於異動資料擷取 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51559205"
   
  ![Change data capture data flow](../../relational-databases/track-changes/media/cdcdataflow.gif "Change data capture data flow")  
   
- 異動資料擷取的變更資料來源是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易記錄。 當插入、更新和刪除作業套用至追蹤來源資料表時，描述這些變更的項目就會加入記錄。 此記錄會當做擷取程序的輸入。 這樣就會讀取記錄並將變更的相關資訊加入至追蹤資料表的相關聯變更資料表。 系統會提供一些函數，以便列舉指定之範圍內出現在變更資料表中的變更，並以篩選結果集的形式傳回此資訊。 應用程式處理序通常會使用篩選結果集，在某些外部環境中更新來源的表示法。  
+ 異動資料擷取的變更資料來源是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易記錄。 當插入、更新和刪除作業套用至追蹤來源資料表時，描述這些變更的項目就會加入記錄。 此記錄會當做擷取程序的輸入。 這樣就會讀取記錄並將變更之相關資訊新增至追蹤資料表的相關聯變更資料表。 系統會提供一些函數，以便列舉指定之範圍內出現在變更資料表中的變更，並以篩選結果集的形式傳回此資訊。 應用程式處理序通常會使用篩選結果集，在某些外部環境中更新來源的表示法。  
   
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>了解異動資料擷取和擷取執行個體  
  您必須先針對資料庫明確啟用異動資料擷取，然後才能追蹤該資料庫內部任何個別資料表的變更。 這項作業是使用 [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)預存程序完成的。 啟用資料庫之後，您就可以使用 [sys.sp_cdc_enable_table](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)預存程序，將來源資料表識別為追蹤資料表。 當某個資料表啟用異動資料擷取時，系統就會建立相關聯的擷取執行個體，以便支援來源資料表中變更資料的散播。 此擷取執行個體包含一個變更資料表以及最多兩個查詢函數。 描述擷取執行個體之組態詳細資料的中繼資料會包含在變更資料擷取中繼資料資料表 **cdc.change_tables**、 **cdc.index_columns**和 **cdc.captured_columns**中。 您可以使用 [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)預存程序來擷取這項資訊。  

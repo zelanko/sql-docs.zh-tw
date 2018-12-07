@@ -14,12 +14,12 @@ ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe71c72bfd7211a3ee73de7cc95a3d7ddb0bd405
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19acf085cfde3c0247e7c3d5d3316a1cc4f853e6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683666"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528349"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>建立資料表別名 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47683666"
   
 -   讓 [SQL 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) 中的陳述式更簡短、更容易閱讀。  
   
--   在查詢中會經常參考資料表名稱，例如在檢查資料行名稱是否合格時，以及想要確保符合查詢指定的字元長度限制 (某些資料庫會限制查詢的最大長度)。  
+-   您經常在查詢中參閱資料表名稱 - 例如在限定資料行名稱中 - 並且希望確保維持在查詢的特定字元長度限制內。 (某些資料庫會限制查詢的最大長度)。  
   
 -   您使用相同資料表的多個執行個體 (例如自我聯結)，然後需要參考到一個或另外一個執行個體的方式。  
   

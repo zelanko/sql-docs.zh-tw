@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.administration.rdsconfiguration.f1
@@ -16,12 +15,12 @@ ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23a2f4a8b3c9af1918e0d4e34f2525204846a7ad
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bd0987cfe98f8cb72531bf807494af1867646dcf
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701436"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617230"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>設定 DQS 使用參考資料
 
@@ -74,7 +73,7 @@ ms.locfileid: "51701436"
   
     4.  在 [結構描述] 方塊中，指定可定義要從直接參考資料服務提供者使用之欄位字串 (資料行名稱) 的結構描述。 欄位名稱不能包含空格，而且應該以逗號分隔欄位。 例如： `FirstName, LastName, City, State`。  
   
-    5.  在 **[URI]** 方塊中，輸入直接參考資料服務提供者的 URI。 DQS 中只允許安全的 URI (以 “https://” 開頭的位址)。  
+    5.  在 **[URI]** 方塊中，輸入直接參考資料服務提供者的 URI。 DQS 中只允許安全的 URI (以 "https://" 開頭的位址)。  
   
     6.  在 **[最大批次大小]** 方塊中，輸入將傳送給參考資料服務提供者進行清理之每個批次的最大記錄數目。 每個批次最多可以針對清理活動指定 100 筆記錄。  
   

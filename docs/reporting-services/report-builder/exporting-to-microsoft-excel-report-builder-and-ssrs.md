@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d1e0f1af0b3dff47607960d8c2d37af84f4b00fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71ba67e4abb97a0de9ed4143adcd072b2f3eef8a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663116"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400022"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 轉譯延伸模組會將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表轉譯成 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 格式 (.xlsx)。 使用 Excel 轉譯延伸模組，Excel 中的資料行寬度就可以更精確地反映報表中的資料行寬度。  
@@ -161,7 +161,7 @@ ms.locfileid: "47663116"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- EXCELOPENXML 延伸模組會定義目前 (.xlsx) Excel 檔案的 Excel 轉譯器。 EXCEL 延伸模組會定義 EXCEL 2003 版本。 `Visible = “false”` 表示隱藏 Excel 2003 轉譯器。 如需詳細資訊，請參閱 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 和 [RSReportDesigner 組態檔](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。  
+ EXCELOPENXML 延伸模組會定義目前 (.xlsx) Excel 檔案的 Excel 轉譯器。 EXCEL 延伸模組會定義 EXCEL 2003 版本。 `Visible = "false"` 表示隱藏 Excel 2003 轉譯器。 如需詳細資訊，請參閱 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 和 [RSReportDesigner 組態檔](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。  
   
 ### <a name="differences-between-the-current-xlsx-excel-and-excel-2003-renderers"></a>目前 (.xlsx) Excel 與 Excel 2003 轉譯器之間的差異  
  使用目前 (.xlsx) Excel 或 Excel 2003 轉譯器所轉譯的報表通常完全相同。只有在極少數的情況下，您才會發現兩種格式之間的差異。 下表將比較 Excel 與 Excel 2003 轉譯器。  
@@ -251,10 +251,10 @@ ms.locfileid: "47663116"
  地圖的根節點即為報表名稱 \<報表名稱>.rdl，且無法互動。 文件引導模式連結字型為 Arial，10pt。  
   
 ### <a name="drillthrough-links"></a>鑽研連結  
- 系統會將文字方塊中出現的鑽研連結轉譯為轉譯文字之資料格中的 Excel 超連結。 而影像和圖表的鑽研連結則會在轉譯時，轉譯為影像上的 Excel 超連結。 當您按一下鑽研連結時，用戶端的預設瀏覽器會開啟，並導覽至目標的 HTML 檢視。  
+ 系統會將文字方塊中出現的鑽研連結轉譯為轉譯文字之資料格中的 Excel 超連結。 而影像和圖表的鑽研連結則會在轉譯時，轉譯為影像上的 Excel 超連結。 當您按一下鑽研連結時，用戶端的預設瀏覽器會開啟，並巡覽至目標的 HTML 檢視。  
   
 ### <a name="hyperlinks"></a>超連結  
- 系統會將文字方塊中出現的超連結轉譯為轉譯文字之資料格中的 Excel 超連結。 而影像和圖表的超連結則會在轉譯時，轉譯為影像上的 Excel 超連結。 當您按一下超連結時，用戶端的預設瀏覽器會開啟，並導覽至目標 URL。  
+ 系統會將文字方塊中出現的超連結轉譯為轉譯文字之資料格中的 Excel 超連結。 而影像和圖表的超連結則會在轉譯時，轉譯為影像上的 Excel 超連結。 當您按一下超連結時，用戶端的預設瀏覽器會開啟，並巡覽至目標 URL。  
   
 ### <a name="interactive-sorting"></a>互動式排序  
  Excel 不支援互動式排序。  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 608021d678f57bda86b1fc77950e029efceea7ad
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ef9d3882a00792606daa357508677b1af6fbe570
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663607"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502785"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>將 JSON 文件儲存在 SQL Server 或 SQL Database
 SQL Server 和 Azure SQL Database 有原生 JSON 函式，可讓您使用標準 SQL 語言剖析 JSON 文件。 現在您可以在 SQL Server 或 SQL Database 中儲存 JSON 文件和查詢 JSON 資料，如同在 NoSQL 資料庫中一樣。 本文描述將 JSON 文件儲存在 SQL Server 或 SQL Database 中的選項。
@@ -48,17 +48,17 @@ ALTER TABLE WebSite.Logs
 當您將 JSON 文件儲存到資料表中時，您可以使用標準的 Transact-SQL 語言來查詢文件。 例如：
 
 ```sql
-SELECT TOP 100 JSON_VALUE(log, ‘$.severity’), AVG( CAST( JSON_VALUE(log,’$.duration’) as float))
+SELECT TOP 100 JSON_VALUE(log, '$.severity'), AVG( CAST( JSON_VALUE(log,'$.duration') as float))
  FROM WebSite.Logs
- WHERE CAST( JSON_VALUE(log,’$.date’) as datetime) > @datetime
- GROUP BY JSON_VALUE(log, ‘$.severity’)
- HAVING AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) > 100
- ORDER BY AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) DESC
+ WHERE CAST( JSON_VALUE(log,'$.date') as datetime) > @datetime
+ GROUP BY JSON_VALUE(log, '$.severity')
+ HAVING AVG( CAST( JSON_VALUE(log,'$.duration') as float) ) > 100
+ ORDER BY AVG( CAST( JSON_VALUE(log,'$.duration') as float) ) DESC
 ```
 
 有一項強大的優點，就是您可以使用「任何」T-SQL 函式和查詢子句來查詢 JSON 文件。 SQL Server 和 SQL Database 不會導入查詢中您可用來分析 JSON 文件的任何條件約束。 您可以使用 `JSON_VALUE` 函式從 JSON 文件擷取值，並像任何其他值將其用於查詢。
 
-可使用豐富的 T-SQL 查詢語法的這項功能是 SQL Server 和 SQL Database 與傳統 NoSQL 資料庫之間的主要差異 – 在 Transact-SQL 中，您可能有處理 JSON 資料所需的任何函式。
+可使用豐富 T-SQL 查詢語法這項功能是 SQL Server 和 SQL Database 與傳統 NoSQL 資料庫之間的主要差異；在 Transact-SQL 中，您可能有處理 JSON 資料所需的任何函式。
 
 ## <a name="indexes"></a>索引
 
@@ -76,7 +76,7 @@ create table WebSite.Logs (
 );
 ```
 
-此範例中使用的計算資料行，是不會將額外的空間新增至資料表的非持續性或虛擬資料行。 它由索引 `ix_severity` 用來改善查詢的效能，如下列範例所示：
+此範例中使用的計算資料行，是不會將額外空間新增至資料表的非持續性或虛擬資料行。 它由索引 `ix_severity` 用來改善查詢的效能，如下列範例所示：
 
 ```sql
 SELECT log
@@ -107,7 +107,7 @@ CLUSTERED COLUMNSTORE 索引能提供高資料壓縮 (最多 25 倍)，大幅減
 
 ## <a name="frequently-changing-documents--memory-optimized-tables"></a>經常變更的文件和記憶體最佳化的資料表
 
-如果您預期在集合中會有大量的更新、插入和刪除作業，您可以在記憶體最佳化資料表中儲存 JSON 文件。 記憶體最佳化的 JSON 集合一律會將資料保存在記憶體中，因此沒有儲存體 I/O 額外負荷。 此外，記憶體最佳化 JSON 集合完全無鎖定 – 也就是對文件的動作不會封鎖任何其他作業。
+如果您預期在集合中會有大量的更新、插入和刪除作業，您可以在記憶體最佳化資料表中儲存 JSON 文件。 記憶體最佳化的 JSON 集合一律會將資料保存在記憶體中，因此沒有儲存體 I/O 額外負荷。 此外，記憶體最佳化 JSON 集合完全無鎖定，也就是對文件採取的動作不會封鎖任何其他作業。
 
 要將傳統集合轉換成記憶體最佳化的集合，您唯一要做的是在資料表定義之後指定 **with (memory_optimized=on)** 選項，如下列範例所示。 然後，您便有記憶體最佳化版本的 JSON 集合。
 

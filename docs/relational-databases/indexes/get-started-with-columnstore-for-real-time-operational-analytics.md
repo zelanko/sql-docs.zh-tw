@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49e547f591debaf4bfd3497a2a4c2d1d5580bca8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 907cd0278119351c9bfabf2c2c64e514a7840c7a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739736"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531538"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>開始使用資料行存放區進行即時作業分析
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "47739736"
   
 ```  
 --Use a filtered condition to separate hot data in a rowstore table  
--- from “warm” data in a columnstore index.  
+-- from "warm" data in a columnstore index.  
   
 -- create the table  
 CREATE TABLE  orders (  
@@ -218,7 +218,7 @@ WHERE object_id = object_id('FactOnlineSales2')
 ORDER BY created_time DESC  
 ```  
   
- 如果壓縮資料列群組中已刪除的資料列數 > 20%，在變化 < 5% 的較舊資料列群組中達到平穩階段 (稱為冷資料列群組) 時，設定 COMPRESSION_DELAY = (youngest_rowgroup_created_time –  current_time)。 請注意，這種方法最適合搭配穩定且相對同質的工作負載來使用。  
+ 如果壓縮資料列群組中已刪除的資料列數 > 20%，在變化 < 5% 的較舊資料列群組中達到平穩階段 (稱為冷資料列群組) 時，設定 COMPRESSION_DELAY = (youngest_rowgroup_created_time -  current_time)。 請注意，這種方法最適合搭配穩定且相對同質的工作負載來使用。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料行存放區索引指南](../../relational-databases/indexes/columnstore-indexes-overview.md)   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f8e1ebaaeaf6ea6ee413bf20f83beaddcbdd465
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 85d63fa9515552f2c2acc5851f36e38f52017dda
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020352"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539097"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>使用共用資料集 - Web 入口網站
 

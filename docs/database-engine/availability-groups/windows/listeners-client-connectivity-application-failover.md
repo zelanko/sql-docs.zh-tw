@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 177d49376d7ed69c8a6ed14fa68326b1d54003fc
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b02b430acbc2fc56942e1c7287ea1c7e4527ccc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603568"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408885"
 ---
 # <a name="listeners-client-connectivity-application-failover"></a>接聽程式、用戶端連接和應用程式容錯移轉
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +141,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 ###  <a name="ReadOnlyAppIntent"></a> 唯讀應用程式意圖和唯讀路由  
  應用程式意圖連接字串屬性表示用戶端應用程式要導向至讀寫或唯讀可用性群組資料庫版本的要求。 若要使用唯讀路由，在連接到可用性群組接聽程式時，用戶端必須使用連接字串中設為唯讀的應用程式意圖。 如果沒有唯讀的應用程式意圖，可用性群組接聽程式的連接會被導向至主要複本的資料庫。  
   
- 應用程式意圖屬性在登入期間是儲存在用戶端的工作階段，然後 SQL Server 會處理此意圖，並依據可用性群組的組態和次要複本中目標資料庫的目前讀寫狀態，決定要執行的動作。  
+ 應用程式意圖屬性在登入期間是儲存在用戶端的工作階段，然後 SQL Server 會處理此意圖，並依據可用性群組的設定和次要複本中目標資料庫的目前讀寫狀態，決定要執行的動作。  
   
  指定唯讀應用程式意圖之 ADO.NET 提供者 (System.Data.SqlClient) 的連接字串範例如下：  
   
@@ -180,10 +180,10 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 ##  <a name="CCBehaviorOnFailover"></a> 容錯移轉時用戶端連接的行為  
  當可用性群組發生容錯移轉時，對可用性群組的現有持續連線會終止，而且用戶端必須建立新連接，才能繼續使用相同的主要資料庫或唯讀次要資料庫。  在伺服器端發生容錯移轉時，對可用性群組的連接可能會失敗，而強制用戶端連接重試連接，直到主要資料庫恢復上線為止。  
   
- 如果在用戶端應用程式嘗試連接期間，但在連接逾時之前，可用性群組恢復上線，用戶端驅動程式在其中一個內部重試期間可能會成功連接，而應用程式在此情況下不會發生錯誤。  
+ 如果在用戶端應用程式嘗試連線期間，但在連線逾時之前，可用性群組恢復上線，用戶端驅動程式在其中一個內部重試期間可能會成功連線，而應用程式在此情況下不會發生錯誤。  
   
 ##  <a name="SupportAgMultiSubnetFailover"></a> 支援可用性群組多重子網路容錯移轉  
- 若所用的用戶端程式庫可以在連接字串中使用 MultiSubnetFailover 連接選項，即可根據所使用之提供者的語法，將 MultiSubnetFailover 設定為 “True” 或 "Yes"，以最佳化可用性群組容錯移轉至不同的子網路。  
+ 若所用的用戶端程式庫可以在連接字串中使用 MultiSubnetFailover 連線選項，即可根據所使用之提供者的語法，將 MultiSubnetFailover 設定為 "True" 或 "Yes"，來最佳化可用性群組容錯移轉至不同的子網路。  
   
 > [!NOTE]  
 >  對於可用性群組接聽程式以及 SQL Server 容錯移轉叢集執行名稱的單一和多重子網路連接，建議使用此設定。  啟用此選項會增加額外的最佳化，甚至在單一子網路案例也一樣。  

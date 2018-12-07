@@ -25,12 +25,12 @@ ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e93a5f78129b0d3ca9d687600a99b35dbf2be203
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4580926a6aff40e5c2d4b7da588cf394b6bdfcda
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651776"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516170"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

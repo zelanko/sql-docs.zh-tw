@@ -12,12 +12,12 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7bfbcea3785b15396e4ee02615cb860d250d45c0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0460c654e9403b2d607197580462186e1ae1b805
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601086"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512497"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>建立可用性群組 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "51601086"
   
 |工作|Transact-SQL 陳述式|在何處執行工作**\***|  
 |----------|----------------------------------|---------------------------------|  
-|建立資料庫鏡像端點 (每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體一次)|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *endpointName* … FOR DATABASE_MIRRORING|在缺少資料庫鏡像端點的每一個伺服器執行個體上執行。|  
+|建立資料庫鏡像端點 (每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體一次)|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *endpointName* ...FOR DATABASE_MIRRORING|在缺少資料庫鏡像端點的每一個伺服器執行個體上執行。|  
 |建立可用性群組|[CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)|於裝載初始主要複本的伺服器執行個體上執行。|  
 |將次要複本加入可用性群組|[ALTER AVAILABILITY GROUP](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name* JOIN|在裝載次要複本的每一個伺服器執行個體上執行。|  
 |準備次要資料庫|[BACKUP](../../../t-sql/statements/backup-transact-sql.md) 和 [RESTORE](../../../t-sql/statements/restore-statements-transact-sql.md)。|在裝載主要複本的伺服器執行個體上建立備份。<br /><br /> 使用 RESTORE WITH NORECOVERY，還原裝載次要複本之每個伺服器執行個體上的備份。|  

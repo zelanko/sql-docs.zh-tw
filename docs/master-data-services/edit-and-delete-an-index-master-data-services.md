@@ -12,12 +12,12 @@ ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1cca850d11231e26e4025428b7b8a9285b3163b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cf2439b7cd85f145d2326b8949e5e882c1e6089
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809306"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402493"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>編輯和刪除索引 (Master Data Services)
 

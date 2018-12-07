@@ -11,12 +11,12 @@ ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4ca842edd22eb0b4eadd7a44ededcd30530654f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42d00e95ad228d38b3984cb38a3ef5f976a2dad6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644476"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414115"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>設定適用於 Excel 之 Master Data Services 增益集的屬性
 
@@ -42,7 +42,7 @@ ms.locfileid: "47644476"
 |資料：篩選|最大資料列數|選取所載入之資料列數目的臨界值，超出此臨界值將會公佈篩選警告。|  
 |資料：篩選|最大資料行數|選取所載入之資料行數目的臨界值，超出此臨界值將會公佈篩選警告。|  
 |資料：資料格格式|變更色彩的時機：屬性值變更|按一下此選項可指定資料格的色彩將會在以下情況中變更：如果當您使用 MDS 儲存機制中的新資料重新整理 Excel 增益集資料表，該資料格中的屬性值會變更。|  
-|資料：資料格格式|變更色彩的時機：已加入成員|按一下此選項可指定資料列之資料格的色彩將會在以下情況中變更：如果當您使用 MDS 儲存機制中的新資料重新整理 Excel 增益集資料表，新的成員會加入至此資料列。|  
+|資料：資料格格式|變更色彩的時機：已加入成員|按一下此選項可指定資料列資料格的色彩將會在以下情況中變更：如果當您使用 MDS 存放庫中的新資料來重新整理 Excel 增益集資料表時，新的成員會新增至此資料列。|  
 |資料：資料格格式|顯示格式|選取顯示網域屬性值的慣用格式。 選項為 [代碼 {Name}]、[代碼] 和 [名稱 {Code}]。|  
   
   

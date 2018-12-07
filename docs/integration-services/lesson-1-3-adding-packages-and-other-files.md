@@ -11,12 +11,12 @@ ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97d46e8f04afac405e625952b077a00abb29415d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9cca20997ed2bfe8b32d09376186691253d6e90
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607228"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528596"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>課程 1-3 - 加入封裝和其他檔案
 在這項工作中，您會將現有的封裝、支援個別封裝的輔助檔案以及讀我檔案，加入至前一項工作所建立的「部署教學課程」專案中。 例如，您將會加入包含封裝資料的 XML 資料檔，還會加入一個文字檔，以提供有關專案中所有封裝的讀我資訊。  

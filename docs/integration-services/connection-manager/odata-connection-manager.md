@@ -14,12 +14,12 @@ f1_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 790c7b1e50b029ab2cf2cbf4ad41bd80cf11cb0c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: aa18c7b1a6aeaccb448c7006e8d4430d436a2516
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641821"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511258"
 ---
 # <a name="odata-connection-manager"></a>OData 連接管理員
  使用 OData 連線管理員連線到 OData 資料來源。 OData 來源元件會使用 OData 連線管理員連線到 OData 資料來源，並取用服務中的資料。 如需詳細資訊，請參閱＜ [OData Source](../../integration-services/data-flow/odata-source.md)＞。  
@@ -27,7 +27,7 @@ ms.locfileid: "51641821"
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>將 OData 連接管理員加入 SSIS 封裝中  
  您可以使用三種方式，將新的 OData 連線管理員新增至 SSIS 套件：  
   
--   按一下 [新增…]  按鈕 (位於 [OData 來源編輯器]   
+-   按一下 [OData 來源編輯器] 中的 [新增...] 按鈕  
   
 -   在 **方案總管** 中，以滑鼠右鍵按一下 [連線管理員] 資料夾，然後按一下 [新增連線管理員] 。 針對 [連線管理員類型]  選取 [ODATA] 。  
   

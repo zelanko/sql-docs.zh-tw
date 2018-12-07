@@ -17,12 +17,12 @@ ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73ae0b025ff20bd7b269329b8045816de97d6888
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3ed1838c956a6870b277c9e71a6df17e474229f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651356"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504528"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>以指令碼元件建立來源
   您在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用來源元件，以從資料來源載入資料，進而將其傳遞至下游轉換與目的地。 通常您會透過現有的連接管理員來連接到資料來源。  

@@ -13,12 +13,12 @@ ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca2831d69f454c1a8488946644c3f83ccac0ca29
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 45c47dcde8bfa7546c62741e1130b33b6883b316
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697616"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504014"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>檢查條件約束對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "51697616"
 顯示已選取之檢查條件約束的名稱。 若要變更這個條件約束的名稱，請直接在屬性欄位中輸入文字。  
   
 **說明**  
-描述此檢查條件約束。 您可以在屬性欄位中鍵入來編輯說明，或按一下屬性欄位右方的省略符號按鈕 (**…**)，編輯 [描述屬性] 對話方塊中的說明。  
+描述此檢查條件約束。 您可以在屬性欄位中鍵入來編輯描述，或按一下屬性欄位右側的省略符號按鈕 (**...**)，並編輯 [描述屬性] 對話方塊中的描述。  
   
 **資料表設計工具類別目錄**  
 展開以顯示 [檢查建立或重新啟用時的現有資料]、[於 INSERT 及 UPDATE 時強制套用] 與 [強制複寫] 的屬性。  

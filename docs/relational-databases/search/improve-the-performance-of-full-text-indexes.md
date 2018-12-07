@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18579eba7d7a66b9efd1a10de4a0815d2503744e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d79d404e72f13ade55f6bd64f261741d86b78347
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672527"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532543"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改善全文檢索索引的效能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -132,23 +132,23 @@ ms.locfileid: "51672527"
   
 如需下列公式的基本資訊，請參閱資料表後面的附註。  
   
-|平台|以 MB 為單位估計 fdhost.exe 記憶體需求—*F*^1|計算最大伺服器記憶體的公式—*M*^2|  
+|平台|以 MB 為單位估計 fdhost.exe 記憶體需求-*F*^1|計算最大伺服器記憶體的公式-*M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *編目範圍數目* * 50|*M* =minimum(*T*, 2000) – F – 500|  
-|x64|*F* = *編目範圍數目* * 10 * 8|*M* = *T* – *F* – 500|  
+|x86|*F* = *編目範圍數目* * 50|*M* =minimum(*T*, 2000) - F - 500|  
+|x64|*F* = *編目範圍數目* * 10 * 8|*M* = *T* - *F* - 500|  
 
 **公式的附註**
-1.  如果有多個完整母體擴展正在進行中，請個別計算每個母體擴展的 fdhost.exe 記憶體需求，例如 *F1*、*F2* 等。 然後將 *M* 計算為 *T***–** sigma **(***F*i**)**。  
+1.  如果有多個完整母體擴展正在進行中，請個別計算每個母體擴展的 fdhost.exe 記憶體需求，例如 *F1*、*F2* 等。 然後將 *M* 計算為 _T_**-** sigma **(**_F_i **)**。  
 2.  500 MB 是系統中其他處理序所需記憶體的估計值。 如果系統正在進行其他工作，請據此增加這個值。  
 3.  。*ism_size* 在 x64 平台假設為 8 MB。  
   
  #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>範例：估計 fdhost.exe 的記憶體需求  
   
- 這個範例適用於具有 8GM RAM 和 4 個雙核心處理器的 64 位元電腦。 第一個計算會估計 fdhost.exe 所需的記憶體—*F*。 搜耙範圍的數目是 `8`。  
+ 這個範例適用於具有 8GM RAM 和 4 個雙核心處理器的 64 位元電腦。 第一個計算會估計 fdhost.exe 所需的記憶體-*F*。 搜耙範圍的數目是 `8`。  
   
  `F = 8*10*8=640`  
   
- 下一個計算會取得 [最大伺服器記憶體] 的最佳值—*M*。 此系統上可用的實體記憶體總計 (以 MB 為單位) *T* 為 `8192`。  
+ 下一個計算會取得**最大伺服器記憶體**-*M* 的最佳值。 此系統上可用的實體記憶體總計-*T* (以 MB 為單位) 為 `8192`。  
   
  `M = 8192-640-500=7052`  
   

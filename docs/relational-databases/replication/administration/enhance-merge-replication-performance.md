@@ -20,12 +20,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4319663f79c07772bb3b72c9de9d4120f8d83ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5cb5603b98701597847e1997c17714affa7b923
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718976"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535277"
 ---
 # <a name="enhance-merge-replication-performance"></a>增強合併式複寫效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "47718976"
   
      在合併處理期間聯結篩選五個 (含) 以上資料表可能對效能有很大影響。 建議要產生包含五個 (含) 以上資料表的聯結篩選時，考慮使用其他解決方案：  
   
-    -   不要篩選主要為下列類型的資料表：查閱資料表、小型資料表以及內容不會變更的資料表。 讓這些資料表整體成為發行集的一部分。 建議僅在必須分割給「訂閱者」的資料表之間使用聯結篩選。 如需相關資訊，請參閱 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
+    -   不要篩選主要為下列類型的資料表：查閱資料表、小型資料表以及內容不會變更的資料表。 讓這些資料表整體成為發行集的一部分。 建議僅在必須分割給「訂閱者」的資料表之間使用聯結篩選。 如需詳細資訊，請參閱 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)。  
   
     -   如果聯結中有大量資料表，請考慮去除資料庫正規化的設計或使用對應資料表。 例如，如果業務員僅需其客戶的資料，但需要六個聯結以將客戶與業務員關聯，請考慮在客戶資料表中新增一個資料行以識別該業務員。 業務員資料有所重複，但複寫資料分割的效能益處可能要超過去除資料表正規化的成本。  
   
@@ -102,9 +102,9 @@ ms.locfileid: "47718976"
   
      將「訂閱者」升級到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新本會升級該「訂閱者」端之訂閱所使用的「合併代理程式」。 若要利用各項新功能與效能最佳化，則需要使用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本的「合併代理程式」。  
   
--   如果訂閱透過快速連接進行同步處理，且變更從「發行者」和「訂閱者」端送出，請使用「合併代理程式」的 **–ParallelUploadDownload** 參數。  
+-   如果訂閱透過快速連線進行同步處理，且變更從「發行者」和「訂閱者」端送出，請使用「合併代理程式」的 **-ParallelUploadDownload** 參數。  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引進新的「合併代理程式」參數： **–ParallelUploadDownload**。 設定此參數可讓「合併代理程式」平行處理上傳至「發行者」以及下載至「訂閱者」的變更。 這對於高網路頻寬的高容量環境非常有用。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引進新的「合併代理程式」參數：**-ParallelUploadDownload**。 設定此參數可讓「合併代理程式」平行處理上傳至「發行者」以及下載至「訂閱者」的變更。 這對於高網路頻寬的高容量環境非常有用。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
   
     -   [處理複寫代理程式設定檔](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   

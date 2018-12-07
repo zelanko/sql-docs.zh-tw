@@ -1,7 +1,7 @@
 ---
 title: STRING_SPLIT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 11/28/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: daad1b738030efa48d5a85f91b70ebf747d4702c
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 5fb13510e4894e3f2bc77293a1f4aac0b186f1f0
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812523"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586251"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,13 +31,15 @@ ms.locfileid: "51812523"
 > [!div class="nextstepaction"]
 > [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
-使用指定的分隔符號來分割字元運算式。  
-  
-> [!NOTE]  
-> **STRING_SPLIT** 函式僅適用於相容性層級 130 及以上。 如果您的資料庫相容性層級低於 130，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將找不到且無法執行 **STRING_SPLIT** 函式。 若要變更資料庫的相容性層級，請參閱[檢視或變更資料庫的相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)。
-> 請注意，即使是新的 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，其預設的相容性層級也可能會是 120。  
-  
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+資料表值函式，會根據指定的分隔符號字元，將字串分割成子字串資料列。
+
+#### <a name="compatibility-level-130"></a>相容性層級 130
+
+STRING_SPLIT 需要為至少 130 的相容性層級。 當層級小於 130 時，SQL Server 無法找到 STRING_SPLIT 函式。
+
+若要變更資料庫的相容性層級，請參閱[檢視或變更資料庫的相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)。
+
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,26 +52,37 @@ STRING_SPLIT ( string , separator )
  這是任何字元類型 (例如 **nvarchar**、**varchar**、**nchar** 或 **char**) 的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *separator*  
- 這是任何字元類型 (例如 **nvarchar(1)**、**varchar(1)**、**nchar(1)** 或 **char(1)**) 的單一字元[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，可作為串連字串的分隔符號。  
+ 這是任何字元類型 (例如 **nvarchar(1)**、**varchar(1)**、**nchar(1)** 或 **char(1)**) 的單一字元[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，可作為串連子字串的分隔符號。  
   
 ## <a name="return-types"></a>傳回類型  
- 傳回有片段的單一資料行資料表。 資料行的名稱是 **value**。 如果任何輸入引數是 **nvarchar** 或 **nchar**，則傳回 **nvarchar**。 否則傳回 **varchar**。 傳回類型的長度與字串引數的長度相同。  
+
+傳回資料列為子字串的單資料行資料表。 資料行的名稱是 **value**。 如果任何輸入引數是 **nvarchar** 或 **nchar**，則傳回 **nvarchar**。 否則傳回 **varchar**。 傳回類型的長度與字串引數的長度相同。  
   
 ## <a name="remarks"></a>Remarks  
-**STRING_SPLIT** 會使用應該分割的字串和將用來分割字串的分割符號。 它會傳回有子字串的單一資料行資料表。 例如，使用空白字元當做分隔符號的下列陳述式 `SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');`，會傳回下列結果資料表：  
+
+**STRING_SPLIT** 輸入有已分隔之子字串的字串，並輸入一個字元作為分隔符號 (delimiter) 或分隔符號 (separator)。 STRING_SPLIT 輸出單一資料行資料表，其資料列包含子字串。 輸出資料行的名稱為 **value**。
+
+輸出資料列可能為任何順序。 子字串的順序「不」保證與輸入字串的相同。 您可以在 SELECT 陳述式上使用 ORDER BY 子句的 (`ORDER BY value`)，以覆寫最終的排序次序。
+
+當輸入字串包含兩個或更多個連續出現的分隔符號字元時，會出現長度為零的空白子字串。 空白子字串視為純文字子字串來處理。 您可以使用 WHERE 子句將包含空白字串的任何資料列篩選掉 (`WHERE value <> ''`)。 如果輸入字串是 NULL，則 STRING_SPLIT 資料表值函數會傳回空白資料表。  
+
+例如，下列 SELECT 陳述式使用空白字元作為分隔符號：
+
+```sql
+SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');
+```
+
+在練習執行中，上述 SELECT 傳回下列結果資料表：  
   
 |value|  
-|-----------|  
+| :-- |  
 |Lorem|  
 |ipsum|  
 |dolor|  
 |sit|  
 |amet.|  
-  
-如果輸入的字串是 **NULL**則 **STRING_SPLIT** 資料表值函數會傳回空白資料表。  
-  
-**STRING_SPLIT** 至少需要相容性模式 130。  
-  
+| &nbsp; |
+
 ## <a name="examples"></a>範例  
   
 ### <a name="a-split-comma-separated-value-string"></a>A. 分割逗號分隔值字串  
@@ -157,9 +170,9 @@ FROM Product
 JOIN STRING_SPLIT('1,2,3',',')   
     ON value = ProductId;  
 ```  
-  
-這是常見反向模式的取代，例如在應用程式層或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中建立動態 SQL 字串，或透過使用 LIKE 運算子：  
-  
+
+上述 STRING_SPLIT 使用方式是常見反面模式的替代作法。 這種反面模式可涉及在應用程式層中或在 Transact-SQL 中建立動態 SQL 字串。 反面模式也可以使用 LIKE 運算子來達成。 請參閱下列範例 SELECT 陳述式：
+
 ```sql  
 SELECT ProductId, Name, Tags  
 FROM Product  

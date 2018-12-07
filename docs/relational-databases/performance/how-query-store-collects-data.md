@@ -1,7 +1,7 @@
 ---
 title: 查詢存放區如何收集資料 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/13/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb78849cf72f9cb38a6d99082e21e8c4d0c6b4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5d262b72fec278e037c99662d1d5aecd93190cf
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775056"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711070"
 ---
 # <a name="how-query-store-collects-data"></a>查詢存放區如何收集資料
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   查詢存放區可當作 **飛行資料記錄器** 來使用，不斷地收集與查詢和計畫相關的編譯和執行階段資訊。 查詢相關的資料會保存於內部資料表，並透過一組檢視呈現給使用者。  
   
@@ -30,19 +30,18 @@ ms.locfileid: "47775056"
  下圖顯示查詢存放區檢視及其邏輯關聯性，以及顯示為藍色實體的編譯時間資訊︰  
   
  ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
-  
- **檢視描述**  
+**檢視描述**  
   
 |檢視|Description|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|顯示針對資料庫執行的唯一查詢文字。 查詢文字前後的註解和空格會被忽略。 不會忽略文字內的註解和空格。 批次中的每個陳述式都會產生個別的查詢文字項目。|  
 |**sys.query_context_settings**|顯示會影響執行查詢之設定的獨特計畫組合。 使用影響設定的不同計畫來執行的相同查詢文字，會在查詢存放區中產生不同的查詢項目，因為 `context_settings_id` 是查詢索引鍵的一部分。|  
-|**sys.query_store_query**|在查詢存放區中個別追蹤和強制執行的查詢項目。 如果它是在不同的內容設定下執行，或是在不同 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組 (預存程序、觸發程序等) 的內部與外部執行，則單一查詢文字可以產生多個查詢項目。|  
+|**sys.query_store_query**|在查詢存放區中個別追蹤和強制執行的查詢項目。 如果單一查詢文字會在不同的內容設定下執行或在不同的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組 (預存程序、觸發程序等) 內部與外部執行，則它可以產生多個查詢項目。|  
 |**sys.query_store_plan**|顯示查詢的估計計畫以及編譯時間統計資料。 預存的計畫相當於您使用 `SET SHOWPLAN_XML ON`所得到的計畫。|  
 |**sys.query_store_runtime_stats_interval**|查詢存放區會將時間細分為自動產生的時間範圍 (間隔)，並在每個執行計畫的該間隔中儲存彙總統計資料。 間隔的大小是透過組態選項 「統計資料收集間隔」 (在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中) 或使用 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) 的 `INTERVAL_LENGTH_MINUTES` 來控制。|  
 |**sys.query_store_runtime_stats**|針對執行計畫彙總的執行階段統計資料。 所有擷取的計量均會以 4 個統計函數形式來表示︰平均值、最小值、最大值及標準差。|  
   
- 如需查詢存放區檢視的詳細資訊，請參閱 **使用查詢存放區監視效能** 中的 [相關檢視、函數與程序](monitoring-performance-by-using-the-query-store.md)一節。  
+ 如需查詢存放區檢視的詳細資訊，請參閱[使用查詢存放區監視效能](monitoring-performance-by-using-the-query-store.md)中的**相關檢視、函數與程序**一節。  
   
 ## <a name="query-processing"></a>查詢處理  
  查詢存放區會在下列關鍵時刻，與查詢處理管線互動︰  
@@ -63,10 +62,10 @@ ms.locfileid: "47775056"
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   
- 萬一發生系統損毀，查詢存放區就會遺失執行階段資料，最多遺失使用 `DATA_FLUSH_INTERVAL_SECONDS`所定義的數量。 預設值 900 秒 (15 分鐘) 是查詢擷取效能與資料可用性之間的最佳平衡。  
-萬一有記憶體壓力，執行階段統計資料可以在使用 `DATA_FLUSH_INTERVAL_SECONDS`定義的時間之前排清至磁碟。  
+ 如果系統損毀，查詢存放區就會遺失執行階段資料，最多遺失使用 `DATA_FLUSH_INTERVAL_SECONDS` 所定義的數量。 預設值 900 秒 (15 分鐘) 是查詢擷取效能與資料可用性之間的最佳平衡。  
+如果有記憶體壓力，執行階段統計資料就能在使用 `DATA_FLUSH_INTERVAL_SECONDS` 所定義的時間之前排清至磁碟。  
 讀取查詢存放區期間，記憶體內部資料和磁碟上的資料會完全一樣。
-如不記錄工作階段終止或用戶端應用程式重新啟動/當機查詢統計資料。  
+如果工作階段終止，或者用戶端應用程式重新啟動或當機，將不會記錄查詢統計資料。  
   
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

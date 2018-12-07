@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a9aaa281d1d91c8031182133976f1395417c4502
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a57b58490f6a2bfd8f0d5e8880402f1e136abd7e
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812591"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710859"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>使用 SQL Server 行動報表發行工具建立行動報表
 深入了解有各種資料視覺效果的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表，針對行動裝置最佳化並可連接到內部部署資料。 
 
 >[!NOTE]
->  您需要將儀表板和 KPI 等 Datazen 伺服器內容移轉至 SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 伺服器嗎？ 請嘗試 [適用於 Datazen 的 SQL Server 移轉小幫手](https://www.microsoft.com/download/details.aspx?id=53128)。 
+>  您需要將儀表板和 KPI 等 Datazen 伺服器內容移轉至 SQL Server[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 伺服器嗎？ 請嘗試 [適用於 Datazen 的 SQL Server 移轉小幫手](https://www.microsoft.com/download/details.aspx?id=53128)。 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -35,7 +35,7 @@ ms.locfileid: "51812591"
 這些文件會協助您開始。
 -  下載 [SQL Server 行動報表發行工具](https://go.microsoft.com/fwlink/?LinkID=733527)  
 -  [建立 Reporting Services 行動報表](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
--  [端對端逐步解說︰在 SQL Server 2016 Reporting Services 中建立行動報表及 KPI](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (Christopher Finlan 的部落格)  
+-  [端對端逐步解說︰在 SQL Server Reporting Services 中建立行動報表及 KPI](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (Christopher Finlan 的部落格，英文)  
 - [設計優先或資料優先](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md)：決定要先以模擬的資料來設計報表，或先以您自有的資料開始。  
 - [Reporting Services 行動報表的資料](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)：使用來自共用資料集的資料，或從 Excel 活頁簿準備用於行動報表的資料。
 - [Reporting Services 中行動報表和 KPI 的資料重新整理如何運作](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (Christopher Finlan 的部落格)：閱讀有關針對共用資料集設定快取的內容，這樣您就能控制資料重新整理的頻率並提升報表的效能。

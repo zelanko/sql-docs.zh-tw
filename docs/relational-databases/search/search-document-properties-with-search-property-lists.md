@@ -20,12 +20,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bce4439473aa19790435fc89dff3e4107311bb7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1f6bb16f3e6b7c2cd7c2e2a01a40132f7df6e585
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661078"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503049"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>使用搜索屬性清單搜索文件屬性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "51661078"
   
  ![使用搜尋屬性清單的全文檢索索引](../../relational-databases/search/media/ifts-spl-and-fti.gif "使用搜尋屬性清單的全文檢索索引")  
   
- Title 屬性中的搜尋詞彙 ("Favorite"、"Biking" 和 "Trails") 會與針對此索引指派給 Title 的內部屬性識別碼 1 相關聯。 Keywords 屬性中的搜尋詞彙 ("biking" 和 "mountain") 會與針對此索引指派給 Tags 的內部屬性識別碼 2 相關聯。 若為 Author 屬性中的搜尋詞彙 ("Jane" 和 "Doe") 以及文件本文中的搜尋詞彙，其內部屬性識別碼為 0。 詞彙 "biking" 出現在 [標題] 屬性、[關鍵字]\(標籤) 屬性和文件本文中。 Title 或 Keywords (Tags) 屬性中 "biking" 的屬性搜尋會在結果中傳回這份文件。 "biking" 的一般全文檢索查詢也會傳回這份文件，就像是沒有對屬性搜尋設定索引一樣。 Author 屬性中 "biking" 的屬性搜尋則不會傳回這份文件。  
+ Title 屬性中的搜尋字詞 ("Favorite"、"Biking" 和 "Trails") 會與針對此索引指派給 Title 的內部屬性識別碼 1 建立關聯。 Keywords 屬性中的搜尋字詞 ("biking" 和 "mountain") 會與針對此索引指派給 Tags 的內部屬性識別碼 2 建立關聯。 若為 Author 屬性中的搜尋字詞 ("Jane" 和 "Doe") 以及文件本文中的搜尋字詞，內部屬性識別碼為 0。 詞彙 "biking" 出現在 [標題] 屬性、[關鍵字]\(標籤) 屬性和文件本文中。 Title 或 Keywords (Tags) 屬性中 "biking" 的屬性搜尋會在結果中傳回這份文件。 "biking" 的一般全文檢索查詢也會傳回這份文件，就像是沒有對屬性搜尋設定索引一樣。 Author 屬性中 "biking" 的屬性搜尋則不會傳回這份文件。  
   
  屬性範圍的全文檢索查詢會使用針對全文檢索索引之目前搜尋屬性清單註冊的內部屬性識別碼。  
   

@@ -10,12 +10,12 @@ helpviewer_keywords: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 63425a2a280154522c0219a89033e67c4e8bdeda
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 179573dbe83167067ea2b6b4ec6ffd856dcb42e2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703257"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409721"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 隱私權補充
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51703257"
 - SQL Server 移轉小幫手
 - MS-SQL 延伸模組
 
-「允許的使用方式情節」的定義。 在本文內容中，Microsoft 定義「允許的使用方式情節」作為 Microsoft 所啟始的動作或活動。
+「允許的使用方式情節」的定義。 在本文內容中，Microsoft 定義「允許的使用方式情節」作為 Microsoft 所啟始動作或活動。
 
 ## <a name="access-control"></a>存取控制
 
@@ -137,7 +137,7 @@ Microsoft 會檢查其他程式使用 SQL Server 所設定的應用程式名稱�
 |狀況  |存取限制  |保留需求|
 |---------|---------|---------|
 |Microsoft 可以用來改善功能及 (或) 修正目前功能中的 Bug。|限制為供 Microsoft 內部使用且協力廠商不可存取。 |最少 90 天 - 最多 3 年 |
-|可以用來對客戶提出建議。  例如，「根據您對產品的使用方式，請考慮使用執行效果更佳的功能 *X*。」 |Microsoft 可以向原始客戶公開資料，例如透過儀表板。 |客戶資料安全性記錄：最少 3 年 - 最多 6 年 |
+|可以用來對客戶提出建議。  例如，「根據所使用產品方式，請考慮使用執行效果更佳的功能 *X*。」 |Microsoft 可以向原始客戶公開資料，例如透過儀表板。 |客戶資料安全性記錄：最少 3 年 - 最多 6 年 |
 Microsoft 可以用來進行未來的產品規劃。 |Microsoft 可能會與其他硬體和軟體廠商共用這項資訊，以改善其產品如何與 Microsoft 軟體搭配執行。 |最少 90 天 - 最多 3 年|
 |Microsoft 可以用來根據發出的「使用意見反應」來提供雲端服務。 例如，客戶儀表板顯示跨組織之所有 SQL Server 安裝的功能使用方式。 |Microsoft 可以向原始客戶公開資料，例如透過儀表板。 |最少 90 天 - 最多 3 年 |
 |客戶與其同意可以傳送包含給 Microsoft 之「客戶內容」的「使用者意見反應」。 |限制為供 Microsoft 內部使用且協力廠商不可存取。 Microsoft 可以向原始客戶公開資料。 |使用者意見反應：最多 1 年 |

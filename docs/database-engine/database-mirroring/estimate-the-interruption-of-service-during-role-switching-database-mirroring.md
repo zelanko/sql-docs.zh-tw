@@ -18,12 +18,12 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 405c8ed92f76c2b08baf8c4fd7b7e29a366344f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85dc2bd0bb86362e71aa99ee277f2edaafbb53fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720626"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534093"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>預估角色切換期間的服務中斷時間 (資料庫鏡像)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

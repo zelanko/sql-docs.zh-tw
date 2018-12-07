@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 058272ca68136c3a1f00a20ef3036c5c9704c659
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 863e28c5a2545523161135821c420c1711ebf4e5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602538"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513766"
 ---
 # <a name="install-sql-server-with-sysprep"></a>使用 SysPrep 安裝 SQL Server
 
@@ -114,13 +114,13 @@ ms.locfileid: "51602538"
   
 11. 在 [執行個體組態] 頁面上，指定執行個體的執行個體識別碼。 按 **[下一步]** ，繼續進行。 
   
-     **執行個體識別碼** ：執行個體識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果已備妥的執行個體在完成步驟期間當做預設執行個體來完成，執行個體名稱會覆寫為 MSSQLSERVER。 執行個體識別碼仍然與指定的識別碼相同。 
+     **執行個體識別碼** - 執行個體識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果已備妥的執行個體在完成步驟期間當做預設執行個體來完成，執行個體名稱會覆寫為 MSSQLSERVER。 執行個體識別碼仍然與指定的識別碼相同。 
   
-     **執行個體根目錄** ：根據預設，執行個體根目錄為 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]。 若要指定非預設的根目錄，請使用提供的欄位，或是按一下 [瀏覽] 找出安裝資料夾。 準備步驟所指定的目錄將會在完成步驟的組態設定期間使用。 
+     **執行個體根目錄** - 根據預設，執行個體根目錄為 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]。 若要指定非預設的根目錄，請使用提供的欄位，或是按一下 [瀏覽] 找出安裝資料夾。 準備步驟所指定的目錄將會在完成步驟的組態設定期間使用。 
   
      所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級項目都會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的每一個元件。 
   
-     **安裝的執行個體** ：此方格會顯示執行安裝程式之電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 
+     **安裝的執行個體** - 此方格會顯示執行安裝程式之電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 
   
 12. **[磁碟空間需求]** 頁面會計算您所指定之功能的所需磁碟空間。 然後，它會比較所需的空間與可用的磁碟空間。 
   
@@ -163,17 +163,17 @@ ms.locfileid: "51602538"
   
 9. 在 [執行個體組態] 頁面上，指定已備妥之執行個體的執行個體名稱。 這就是當您完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態之後的執行個體名稱。 按 **[下一步]** ，繼續進行。 
   
-     **執行個體識別碼** ：執行個體識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果已備妥的執行個體在完成步驟期間當做預設執行個體來完成，執行個體名稱會覆寫為 MSSQLSERVER。 執行個體識別碼仍然與準備步驟期間指定的識別碼相同。 
+     **執行個體識別碼** - 執行個體識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果已備妥的執行個體在完成步驟期間當做預設執行個體來完成，執行個體名稱會覆寫為 MSSQLSERVER。 執行個體識別碼仍然與準備步驟期間指定的識別碼相同。 
   
-     **執行個體根目錄** ：將會使用準備步驟中所指定的目錄，而且無法在這個步驟中加以修改。 
+     **執行個體根目錄** - 將會使用準備步驟中所指定的目錄，而且無法在這個步驟中加以修改。 
   
      所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級項目都會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的每一個元件。 
   
-     **安裝的執行個體** ：此方格會顯示執行安裝程式之電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 
+     **安裝的執行個體** - 此方格會顯示執行安裝程式之電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 
   
 10. 依據您在準備步驟期間選取的功能而定，本文其餘部分的工作流程會有所不同。 您可能不會看到所有頁面，這取決於您的選取項目而定。 
   
-11. 在 **[伺服器組態 - 服務帳戶]** 頁面中，指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的登入帳戶。 在這個頁面上所設定的實際服務隨著您選取要安裝的功能而不同。 
+11. 在 [伺服器設定 - 服務帳戶] 頁面中，指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的登入帳戶。 在這個頁面上所設定的實際服務隨著您選取要安裝的功能而不同。 
   
      您可以將相同登入帳戶指派給所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務，或個別設定每一個服務帳戶。 此外，您也可以指定要自動啟動服務、手動啟動服務或停用服務。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您個別設定服務帳戶，以針對各項服務提供最低權限，其中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務會授與必須完成工作的最小權限。 如需詳細資訊，請參閱 [伺服器組態 - 服務帳戶](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 和 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。 
   

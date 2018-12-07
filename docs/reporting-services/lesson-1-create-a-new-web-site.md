@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9766b511d5dfce57dd91a4f19466249e00ad7ad8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14d0cb8c5b4f5c11ee979724a7ebe519abfdf3f0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816316"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396442"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>第 1 課：建立新的網站
-在這一課，您將學習如何使用 Visual C# 的 ASP.NET 網站範本建立新的網站專案。  
+在本課中，您將學習如何使用 Visual C# 的 ASP.NET 網站範本來建立新網站專案。  
   
 ## <a name="to-create-a-new-website"></a>建立新網站  
   

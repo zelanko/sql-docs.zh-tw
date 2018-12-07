@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32f201e6eb386119fd61aa9fb34fdc90a7ab4b25
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 67e1f72fef6c10551f3d0670aff694777f52e391
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559446"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512122"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -374,7 +374,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
   
 -   透過 BEGIN/COMMIT TRANSACTION 使用明確的交易，並讓交易越短越好。 交易越久表示記錄鎖定越久，而且發生死結的可能性也就越大。  
   
--   請針對程序內部的錯誤處理使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY…CATCH 功能。 TRY…CATCH 可以封裝 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的整個區塊。 這樣不但會使效能負擔較小，而且還會使用更少的程式讓錯誤報告更精確。  
+-   請針對程序內部的錯誤處理使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY...CATCH 功能。 TRY...CATCH 可以封裝 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的整個區塊。 這樣不但會使效能負擔較小，而且還會使用更少的程式讓錯誤報告更精確。  
   
 -   在程序主體中 CREATE TABLE 或 ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式所參考的所有資料表資料行上使用 DEFAULT 關鍵字。 這會防止將 NULL 傳遞到不允許 null 值的資料行。  
   
@@ -498,7 +498,7 @@ GO
 |[基本語法](#BasicSyntax)|CREATE PROCEDURE|  
 |[傳遞參數](#Parameters)|@parameter <br> &nbsp;&nbsp;  • = 預設值 <br> &nbsp;&nbsp; • 輸出 <br> &nbsp;&nbsp; • 資料表值參數類型 <br> &nbsp;&nbsp; • CURSOR VARYING|  
 |[使用預存程序修改資料](#Modify)|UPDATE|  
-|[錯誤處理](#Error)|TRY…CATCH|  
+|[錯誤處理](#Error)|TRY...CATCH|  
 |[模糊化程序定義](#Encrypt)|WITH ENCRYPTION|  
 |[強制程序重新編譯](#Recompile)|WITH RECOMPILE|  
 |[設定安全性內容](#Security)|EXECUTE AS|  
@@ -797,8 +797,8 @@ EXEC HumanResources.Update_VacationHours 40;
 ###  <a name="Error"></a> 錯誤處理  
  本節範例將示範如何處理在執行預存程序時可能會發生的錯誤。  
   
-#### <a name="j-using-trycatch"></a>J. 使用 TRY…CATCH  
- 下列範例使用 TRY…CATCH 建構傳回預存程序執行期間所攔截到的錯誤資訊。  
+#### <a name="j-using-trycatch"></a>J. 使用 TRY...CATCH  
+ 下列範例使用 TRY...CATCH 建構傳回預存程序執行期間所攔截到的錯誤資訊。  
   
 ```sql  
 CREATE PROCEDURE Production.uspDeleteWorkOrder ( @WorkOrderID int )  

@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15d83a8f15492e0d1f9c0cf1d804645f4b14c867
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 6e89d2803fda21563b69bb2ba658df2f9a8f0bef
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814351"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545447"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL) 
 
@@ -1079,7 +1079,7 @@ OFF
   
 為每個資料庫指定間接檢查點的頻率。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，新資料庫的預設值為 1 分鐘，這表示資料庫將會使用間接檢查點。 舊版的預設值為 0，這表示資料庫將使用自動檢查點，其頻率取決於伺服器執行個體的復原間隔設定。 對於大多數的系統，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 1 分鐘。  
   
-TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
 *目標復原時間*  
 指定萬一發生損毀時，復原指定之資料庫的時間上限。  
   
@@ -1910,7 +1910,7 @@ OFF
   
 為每個資料庫指定間接檢查點的頻率。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，新資料庫的預設值為 1 分鐘，這表示資料庫將會使用間接檢查點。 舊版的預設值為 0，這表示資料庫將使用自動檢查點，其頻率取決於伺服器執行個體的復原間隔設定。 對於大多數的系統，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 1 分鐘。  
   
-TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
 *目標復原時間*  
 指定萬一發生損毀時，復原指定之資料庫的時間上限。  
   
@@ -2638,7 +2638,7 @@ OFF
   
 為每個資料庫指定間接檢查點的頻率。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，新資料庫的預設值為 1 分鐘，這表示資料庫將會使用間接檢查點。 舊版的預設值為 0，這表示資料庫將使用自動檢查點，其頻率取決於伺服器執行個體的復原間隔設定。 對於大多數的系統，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 1 分鐘。  
   
-TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
 *目標復原時間*  
 指定萬一發生損毀時，復原指定之資料庫的時間上限。  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eaa61ab4f13bb96b2ee9d00bae31f76056929622
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: aa2b5df78043d202d87cc01849aa9a9d10911b0a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031237"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397130"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的部署和版本支援 (SSDT) | Microsoft Docs
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 支援以下案例：  

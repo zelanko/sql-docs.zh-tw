@@ -19,12 +19,12 @@ ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f0b85a5127a71b19e090ccc9bff1f018cc803b1d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a482767c416e1adf4de30d6493c4c79ca07d2398
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685382"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420371"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
  順序物件會傳回的下一個值。 如果提供的話，RESTART WITH 值必須是小於或等於順序物件最大值，而且大於或等於最小值的整數。 如果省略 WITH 值，順序編號會依據原始 CREATE SEQUENCE 選項重新啟動。  
   
  INCREMENT BY \<constant>  
- 每次呼叫 NEXT VALUE FOR 函數時，用來遞增順序物件基底值的值 (如果是負數則遞減)。 如果增量是負值，則會遞減順序物件，否則會遞增。 增量不能為 0。  
+ 每次呼叫 NEXT VALUE FOR 函式時，用來遞增順序物件基底值的值 (如果是負數則遞減)。 如果增量是負值，則會遞減順序物件，否則會遞增。 增量不能為 0。  
   
  [ MINVALUE \<常數> | NO MINVALUE ]  
  指定順序物件的界限。 如果指定 NO MINVALUE，則使用順序資料類型的最小可能值。  

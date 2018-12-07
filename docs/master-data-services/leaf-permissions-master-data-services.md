@@ -18,12 +18,12 @@ ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 441eb998a0191c24678f0c68635778458e00208a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 78c12d0b6595378acf382d53af6dbc807c4c2b84
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828986"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416008"
 ---
 # <a name="leaf-permissions-master-data-services"></a>分葉權限 (Master Data Services)
 

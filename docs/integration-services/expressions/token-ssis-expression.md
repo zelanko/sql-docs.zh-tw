@@ -11,12 +11,12 @@ ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 447e132edc25da64984ec6fb165ab0d032cdb1ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19e2499bddf07720bdeba3ba49dd4a07258dd31b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747936"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396953"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (SSIS 運算式)
   依據字串中用來分隔 Token 的指定分隔符號，以及表示要傳回哪個 Token 的 Token 號碼，從字串傳回 Token (子字串)。  
@@ -58,13 +58,13 @@ TOKEN(character_expression, delimiter_string, occurrence)
 -   您可以使用變數和資料行來做為運算式中所有引數的值。  
   
 ## <a name="expression-examples"></a>運算式範例  
- 在下列範例中，TOKEN 函數會傳回 "a"。 “a little white dog” 字串中有 4 個 Token：“a”、“little”、“white”、“dog”，並以分隔符號 " " (空格字元) 分隔。 第二個引數 (分隔符號字串) 僅指定一個分隔符號 (空格字元)，以用來將輸入字串分割成 Token。 最後一個引數 1 指定要傳回的第一個 Token。 此範例字串中的第一個 Token 是 “a”。  
+ 在下列範例中，TOKEN 函數會傳回 "a"。 "a little white dog" 字串中有 4 個權杖："a"、"little"、"white"、"dog"，並以分隔符號 " " (空格字元) 分隔。 第二個引數 (分隔符號字串) 僅指定一個分隔符號 (空格字元)，以用來將輸入字串分割成 Token。 最後一個引數 1 指定要傳回的第一個 Token。 此範例字串中的第一個權杖是 "a"。  
   
 ```  
 TOKEN("a little white dog"," ",1)  
 ```  
   
- 在下列範例中，TOKEN 函數會傳回 "dog"。 此範例中的分隔符號字串包含 5 個分隔符號。 輸入字串中包含 "a"、"little"、"white"、"dog" 四個 Token。  
+ 在下列範例中，TOKEN 函數會傳回 "dog"。 此範例中的分隔符號字串包含 5 個分隔符號。 輸入字串中包含 "a"、"little"、"white"、"dog" 4 個權杖。  
   
 ```  
 TOKEN("a:little|white dog","| ,.:",4)  
@@ -94,7 +94,7 @@ TOKEN("        a little white dog", " ", 1)
 TOKEN("2009/01/01", "/"), 1  
 ```  
   
- 在下列範例中，TOKEN 函數會從指定路徑傳回檔名。 例如，如果 User::Path 的值為 "c:\program files\data\myfile.txt"，TOKEN 函數就會傳回 "myfile.txt"。 TOKENCOUNT 函數會傳回 4，而 TOKEN 函數會傳回第 4 個 TOKEN "myfile.txt"。  
+ 在下列範例中，TOKEN 函數會從指定路徑傳回檔名。 例如，如果 User::Path 的值為 "c:\program files\data\myfile.txt"，TOKEN 函式就會傳回 "myfile.txt"。 TOKENCOUNT 函式會傳回 4，而 TOKEN 函式會傳回第 4 個權杖 "myfile.txt"。  
   
 ```  
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  

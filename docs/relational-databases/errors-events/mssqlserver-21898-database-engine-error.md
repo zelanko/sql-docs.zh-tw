@@ -12,12 +12,12 @@ ms.assetid: 02405b21-3d4e-4c2d-b4b3-d7b1ec05edb4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd8f3051f1de73a8eabb60401af176a92a04c4d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d96408100616f6939c7a61ea7a76a69e8b4a1e7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855866"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398712"
 ---
 # <a name="mssqlserver21898"></a>MSSQLSERVER_21898
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,5 +40,5 @@ ms.locfileid: "47855866"
 請執行 **sp_changedistpublisher** 預存程序，將新發行者的散發資料庫變更為原始發行者所使用的散發資料庫。  
   
 > [!NOTE]  
-> 在發行者的散發者上執行 **sp_adddistpublisher** 時，如果輸入了錯誤的散發資料庫，執行 **sp_changedistpublisher** 便可解決問題。 不過，如果遠端發行者的現有發行集來自使用已識別散發資料庫的另一個發行資料庫，這項變更則不適用。 您必須有系統地移除使用具名散發資料庫的複寫，然後再使用原始發行者的散發資料庫來重新建立複寫，才能讓新的發行者當做適合的主機。  
+> 在發行者的散發者上執行 **sp_adddistpublisher** 時，如果輸入了錯誤的散發資料庫，執行 **sp_changedistpublisher** 便可解決問題。 不過，如果遠端發行者的現有發行集來自使用已識別散發資料庫的另一個發行資料庫，這項變更則不適用。 您必須有系統地移除使用具名散發資料庫的複寫，然後使用原始發行者的散發資料庫來重新建立複寫，才能讓新的發行者當作適合的主機。  
   

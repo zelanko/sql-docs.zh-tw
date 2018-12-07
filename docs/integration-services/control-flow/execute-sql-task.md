@@ -21,12 +21,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd627ea368aea84611863b491ee3b0aaab1cc190
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 674dd31df5acbe93fd48ad9b0b3ab504cebbc98a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641816"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504068"
 ---
 # <a name="execute-sql-task"></a>執行 SQL 工作
   「執行 SQL」工作會執行封裝中的 SQL 陳述式或預存程序。 工作可以包含逐次執行的單一 SQL 陳述式或多重 SQL 陳述式。 您可將執行 SQL 工作用於下列用途：  
@@ -181,7 +181,7 @@ ms.locfileid: "51641816"
   
 #### <a name="sqlsourcetype--direct-input"></a>SQLSourceType = 直接輸入  
  **SQLStatement**  
- 在選項方塊中輸入要執行的 SQL 陳述式，或按一下瀏覽按鈕 (…) 在 [輸入 SQL 查詢] 對話方塊中輸入 SQL 陳述式，或按一下 [建立查詢] 使用 [查詢產生器] 對話方塊來撰寫陳述式。  
+ 在選項方塊中鍵入要執行的 SQL 陳述式，或者按一下瀏覽按鈕 (...) 在 [輸入 SQL 查詢] 對話方塊中鍵入 SQL 陳述式，或按一下 [建置查詢] 使用 [查詢產生器] 對話方塊來撰寫陳述式。  
   
  **相關主題**︰[查詢產生器](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
@@ -278,10 +278,10 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
 |連接類型|參數標記|參數名稱|範例 SQL 命令|  
 |---------------------|----------------------|--------------------|-------------------------|  
-|ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ADO|?|Param1, Param2, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<參數名稱>|\@\<參數名稱>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
-|ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|EXCEL 和 OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|EXCEL 和 OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
 #### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>搭配 ADO.NET 和 ADO 連線管理員使用參數  
  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 和 ADO 連線管理員對於使用參數的 SQL 命令，擁有特定的需求：  
@@ -440,10 +440,10 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
     |連接類型|參數名稱|  
     |---------------------|--------------------|  
-    |ADO|Param1, Param2, …|  
+    |ADO|Param1, Param2, ...|  
     |ADO.NET 和 SQLMOBILE|\@\<參數名稱>|  
-    |ODBC|1, 2, 3, …|  
-    |EXCEL 和 OLE DB|0, 1, 2, 3, …|  
+    |ODBC|1, 2, 3, ...|  
+    |EXCEL 和 OLE DB|0, 1, 2, 3, ...|  
   
 10. 從 [變數名稱] 清單中，選取一個變數。 如需詳細資訊，請參閱[加入、刪除、變更封裝中使用者定義變數的範圍](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)。  
   
@@ -464,7 +464,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
 ##  <a name="Return_codes"></a> 取得傳回碼的值  
  預存程序可以傳回稱為傳回碼的整數值，以指出程序的執行狀態。 若要在「執行 SQL」工作中實作傳回碼，請使用 **ReturnValue** 類型的參數。  
   
- 下表依據連接類型列出實作傳回碼的部分 EXEC 命令範例。 所有的範例都使用 **Input** 參數。 所有參數類型 (**Input**、 **Output**和 **ReturnValue**) 之使用參數標記和參數名稱的規則都相同。  
+ 下表依據連接類型列出實作傳回碼的部分 EXEC 命令範例。 所有的範例都使用 **Input** 參數。 在所有參數類型 (**Input**、**Output** 和 **ReturnValue**) 中，如何使用參數標記和參數名稱的規則都相同。  
   
  部分語法不支援參數常值。 在這種情況下，您必須使用變數來提供參數值。  
   

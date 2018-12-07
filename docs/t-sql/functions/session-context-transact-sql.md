@@ -18,12 +18,12 @@ ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c86460fa6e06a6bc0ab25edfb2787547583092f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de4b1ac25cfefe1df9e8e3a0db8d8019d63763bb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673400"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404433"
 ---
 # <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3cb1aef270d2fb512d6234227b5ed6ab8b09a51
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e997b12f84189ac738c5a93b513d19696beb6c10
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812861"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710789"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>設定原生模式報表伺服器進行本機管理 (SSRS)
-  如果您想要在本機管理報表伺服器執行個體，則在下列其中一個作業系統上部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器需要其他組態步驟。 本主題說明如何設定報表伺服器以進行本機管理。 如果您尚未安裝或設定報表伺服器，請參閱[從安裝精靈安裝 SQL Server 2016 &#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) 和[管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)。  
+  如果您想要在本機管理報表伺服器執行個體，則在下列其中一個作業系統上部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器需要其他組態步驟。 本主題說明如何設定報表伺服器以進行本機管理。 如果您尚未安裝或設定報表伺服器，請參閱[從安裝精靈 &#40;安裝程式&#41; 安裝 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) 和[管理 Reporting Services 原生模式報表伺服器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)。  
   
 ||  
 |-|  
@@ -160,7 +160,7 @@ ms.locfileid: "51812861"
   
 -   當您嘗試將報表項目部署到本機報表伺服器時，您會在 **[錯誤清單]** 視窗中看到類似下列的錯誤訊息：  
   
-    -   授與使用者 ‘Domain\\<使用者名稱\>’ 的權限不足，無法執行此作業。  
+    -   授與使用者 'Domain\\<使用者名稱\>' 的權限不足，無法執行此作業。  
   
  **若要在每次開啟 SSDT 時都以更高權限執行：**  
   

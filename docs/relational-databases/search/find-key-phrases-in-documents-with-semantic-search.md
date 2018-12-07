@@ -13,12 +13,12 @@ ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 859199d83fedbb08ba181ea063ea4defe4d16337
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a6a3fd55b29c0366b0a8cdf6308c2d42f9dd8cc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846358"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412565"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>使用語意搜尋找到文件中的主要片語
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ GO
  **SEMANTICKEYPHRASETABLE** 函數會使用索引搜尋有效率地擷取這些結果，而不會使用資料表掃描。  
   
 ###  <a name="HowToTopDocuments"></a> Example 2: Find the top documents that contain a specific key phrase  
- 下列範例會從 AdventureWorks 範例資料庫之 Production.Document 資料表的 Document 資料行中，擷取前 25 份包含主要片語的 "Bracket" 的文件。  
+ 下列範例會從 AdventureWorks 範例資料庫 Production.Document 資料表的 Document 資料行中，擷取前 25 份包含主要片語的 "Bracket" 的文件。  
   
 ```sql  
 SELECT TOP (25) DOC_TBL.DocumentID, DOC_TBL.DocumentSummary  

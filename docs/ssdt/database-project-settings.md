@@ -41,12 +41,12 @@ ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8eb14ed03dc43a1a27254a1998f84b786e39694d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 94eea6f9e8d76875c11a6e52de423812c16b255e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671400"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516021"
 ---
 # <a name="database-project-settings"></a>資料庫專案設定
 您可以使用資料庫專案設定，控制資料庫、偵錯與組建組態的各個部分。 這些設定可分類如下：  
@@ -102,7 +102,7 @@ ms.locfileid: "51671400"
 > [!IMPORTANT]  
 > 擴充的 Transact-SQL 驗證功能將從 SQL Server Data Tools 的下一個功能版本以及 Visual Studio 的下一個主要版本中移除。  
   
-擴充的 Transact-SQL 驗證是資料庫專案系統中的一項功能，可讓開發人員在建置階段將其資料庫專案提交至 Transact-SQL Compiler Service，以便根據 SQL Server 引擎的剖析器和解譯器驗證程式碼。  
+擴充的 Transact-SQL 驗證是資料庫專案系統中的一項功能，可讓開發人員在建置階段將其資料庫專案提交至 Transact-SQL 編譯器服務，以便根據 SQL Server 引擎的剖析器和解譯器驗證程式碼。  
   
 ### <a name="transact-sql-compiler-service"></a>Transact-SQL Compiler Service  
 Transact-SQL 編譯器服務是以 Microsoft SQL Server 2012 資料庫引擎為基礎的元件。 這項服務可以驗證 DDL 陳述式的語法和語意，而且其精確度與 Microsoft SQL Server 2012 資料庫引擎相同。 這也就表示編譯器服務不支援 Microsoft SQL Server 2012 中已淘汰的語法或功能。 如需已取代功能的詳細資訊，請參閱 [SQL Server 2012 中已中止的資料庫引擎功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)。  
@@ -162,7 +162,7 @@ Compiler Service 具有兩種限制分類。
 如需簽署的詳細資訊，請參閱 **專案設計工具、簽署頁** 主題的＜ [組件簽署](https://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) ＞一節。  
   
 ## <a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR 與 SQLCLR 建置  
-**[SQLCLR]** 和 **[SQLCLR 建置]** 屬性頁包含許多在專案中使用 SQL CLR 物件的設定。 具體來說， **[SQLCLR]** 屬性頁含有權限等級設定，可設定對 SQLCLR 組件的權限。 此頁亦提供「產生 DDL」設定，可控制是否要為已加入至專案的 SQLCLR 物件產生動態資料語言 (DDL)。 **[SQLCLR 建置]** 屬性頁包含所有的編譯器選項，可用來設定專案中 SQLCLR 程式碼的編譯組態。  
+**[SQLCLR]** 和 **[SQLCLR 建置]** 屬性頁包含許多在專案中使用 SQL CLR 物件的設定。 具體來說， **[SQLCLR]** 屬性頁含有權限等級設定，可設定對 SQLCLR 組件的權限。 此頁亦提供「產生 DDL」設定，可控制是否要為已新增至專案的 SQLCLR 物件產生動態資料語言 (DDL)。 **[SQLCLR 建置]** 屬性頁包含所有的編譯器選項，可用來設定專案中 SQLCLR 程式碼的編譯組態。  
   
 **[SQLCLR 建置]** 屬性頁包含了建置 SQL CLR 物件時所用的進階建置設定。 根據 (VB or C#) 用於撰寫 SQL CLR 物件程式碼的語言而定，提供的選項有所不同。  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f980f4bb625fb0686911c7aa1cad28ca574faaf6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 23227bc3b7863610a94998ebd4c69350edadd21b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030947"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710799"
 ---
 # <a name="configure-report-builder-access"></a>設定報表產生器的存取
   報表產生器是一個隨選報表工具，它會與設定原生模式或 SharePoint 整合模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器一起安裝。  
@@ -33,7 +33,7 @@ ms.locfileid: "50030947"
  若要使用報表產生器，您必須具有要使用的已發行報表模型。  
   
 ## <a name="prerequisites"></a>Prerequisites  
- 並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中都可使用報表產生器。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+ 並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中都可使用報表產生器。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2017 版本支援的功能](~/sql-server/editions-and-components-of-sql-server-2017.md)。  
   
  用戶端電腦必須已經安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供了執行 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 應用程式的基礎結構。  
   

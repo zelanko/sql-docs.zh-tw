@@ -15,12 +15,12 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 290008818b5cd486535e9b14f437729e4cab07e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3fc363a3ea7922c6c486f250222b5ce62da8e6e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731396"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514270"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>設定及管理全文檢索搜尋的同義字檔案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47731396"
 2.  然後，系統會針對通用同義字重複這些步驟。 不過，如果某個詞彙已經是語言特有同義字檔案中相符項目的一部分，該詞彙就不適用於在通用同義字中比對。  
 
 ##  <a name="structure"></a> 同義字檔案的結構  
- 每個同義字檔案都會定義識別碼為 `Microsoft Search Thesaurus`的 XML 容器以及 `<!--` … `-->`(包含範例同義字的註解)。 您可在包含子元素範例的 `<thesaurus>` 元素中定義同義字，而這些子元素會定義變音符號設定、展開集和取代集。
+ 每個同義字檔案都會定義識別碼為 `Microsoft Search Thesaurus` 的 XML 容器，以及包含範例同義字的 `<!--` ... `-->` 註解。 您可在包含子元素範例的 `<thesaurus>` 元素中定義同義字，而這些子元素會定義變音符號設定、展開集和取代集。
 
 典型的空白同義字檔案包含下列 XML 文字：  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0bed1d8109d49b7c6f2ba57734f2daa1a5eb056d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800568"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410705"
 ---
 # <a name="tutorial-introducing-expressions"></a>教學課程：運算式簡介
 在此 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教學課程中，您將使用含有一般函數和運算子的運算式，來建立功能強大且靈活的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 編頁報表。 
@@ -422,7 +422,7 @@ ms.locfileid: "47800568"
 ## <a name="Indicator"></a>7.使用指標顯示銷售比較  
 在本節中，您會新增資料行，並使用指標顯示某人今年到目前 (YTD) 的購買為高於或低於平均 YTD 購買。 **Round** 函數會移除值的小數。  
   
-設定指標和其狀態需要許多步驟。 您可以跳過「設定指標」程序，再從本教學課程將完成的運算式複製/貼上至 [運算式] 對話方塊中。  
+設定指標和其狀態需要許多步驟。 您可以視需要跳過「設定指標」程序，並從本教學課程將完成的運算式複製/貼上至 [運算式] 對話方塊中。  
   
 ### <a name="to-add-the--or---avg-sales-column"></a>若要加入平均銷售增減資料行  
   
@@ -587,9 +587,9 @@ ms.locfileid: "47800568"
   
 8. 按一下 [參數]，然後在 [值] 清單中按兩下 [RowColor]。  
   
-22. 緊接在 `Parameters!RowColor.Value`之後，輸入 **, “White”)**  
+22. 緊接在 `Parameters!RowColor.Value` 之後，鍵入 **, "White")**  
   
-    完成的運算式為： `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, “White”)`  
+    完成的運算式為： `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`  
     
     ![report-builder-expression-tutorial-banded-color-expressn](../reporting-services/media/report-builder-expression-tutorial-banded-color-expressn.png)
   

@@ -12,12 +12,12 @@ ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8bea5913c58f98b3631d4bac3e91c7f20b84c013
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fb568ca1e1f5410762da9744598dbfba743f470
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816136"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416379"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>監視和疑難排解資料移轉 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47816136"
  開啟動態管理檢視 **sys.dm_db_rda_migration_status** 查看已移轉的批次和資料列數目。 如需詳細資訊，請參閱 [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md)。  
   
 ##  <a name="Firewall"></a> 對資料移轉進行疑難排解  
- **已啟用 Stretch 之資料表中的資料列沒有移轉到 Azure。是什麼問題？**  
+ **已啟用 Stretch 之資料表中的資料列沒有移轉到 Azure。發生什麼問題？**  
  有幾個問題會影響移轉。 請檢查下列事項。  
   
 -   檢查 SQL Server 電腦的網路連線。  

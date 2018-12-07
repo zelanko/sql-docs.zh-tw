@@ -12,12 +12,12 @@ ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: b229fb722c1a6de85e4c26179c776ba605909441
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 2ae5eb35be423a7b0dedc85d9c7cd589f75c781e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269931"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395561"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料載入 Azure SQL 資料倉儲
 

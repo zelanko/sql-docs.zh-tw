@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 92b4b124f2cf76d0fedd2f22e32f10204ed06ad6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50c62db9ef3d635f8486285aef75f6e3d9bfc06c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733808"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534842"
 ---
 # <a name="about-log-shipping-sql-server"></a>關於記錄傳送 (SQL Server)
 
@@ -119,7 +119,7 @@ ms.locfileid: "47733808"
 ### <a name="a-typical-log-shipping-configuration"></a>典型記錄傳送組態  
  下圖顯示的記錄傳送組態含有主要伺服器執行個體、三個次要伺服器執行個體和一個監視伺服器執行個體。 此圖說明備份、複製和還原作業執行的步驟，如下所示：  
   
-1.  主要伺服器執行個體執行備份作業來備份主要資料庫上的交易記錄。 此伺服器執行個體將記錄備份放在主要記錄備份檔中，再將它傳送到備份資料夾。  在此圖中，備份資料夾位於共用目錄— *「備份共用」*。  
+1.  主要伺服器執行個體執行備份作業來備份主要資料庫上的交易記錄。 此伺服器執行個體將記錄備份放在主要記錄備份檔中，再將它傳送到備份資料夾。  在此圖中，備份資料夾位於共用目錄，亦即「備份共用」。  
   
 2.  三個次要伺服器執行個體的每一個都執行它自己的複製作業，將主要記錄備份檔複製到它自己的本機目的資料夾。  
   

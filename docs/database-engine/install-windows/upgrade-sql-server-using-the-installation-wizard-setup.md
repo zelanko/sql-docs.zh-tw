@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 840849b3d08feac21dd5b96235405773fc06f64c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9ce14b9cbc983987072eb9433a20823c8721e3db
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607158"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533973"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>使用安裝精靈升級 SQL Server (安裝程式)
 
@@ -102,11 +102,11 @@ ms.locfileid: "51607158"
   
 12. 在 [執行個體組態] 頁面上，指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的執行個體識別碼。  
   
-     **執行個體識別碼** ：根據預設，此執行個體名稱會當做執行個體識別碼使用。 這是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果是預設執行個體，執行個體名稱和執行個體識別碼將會是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請提供 [執行個體識別碼] 文字方塊的值。  
+     **執行個體識別碼** ：依預設，此執行個體名稱會當作執行個體識別碼使用。 這是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果是預設執行個體，執行個體名稱和執行個體識別碼將會是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請提供 [執行個體識別碼] 文字方塊的值。  
   
-     所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級項目都會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的每一個元件。  
+     所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級項目都會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的每一個元件。  
   
-     **安裝的執行個體**  ：此方格會顯示執行安裝程式之電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果預設執行個體已經安裝在電腦上，您就必須安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]的具名執行個體。  
+     **安裝的執行個體**：此方格會顯示執行安裝程式之電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果預設執行個體已經安裝在電腦上，您就必須安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]的具名執行個體。  
   
 13. 根據您針對安裝所指定的功能而定，本文其餘部分的工作流程會有所不同。 您可能不會看到所有頁面，端視您的選取項目而定。  
   
@@ -135,9 +135,9 @@ ms.locfileid: "51607158"
 ## <a name="next-steps"></a>Next Steps  
  在升級為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之後，請完成下列工作：  
   
--   **註冊伺服器** ：升級會移除先前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的登錄設定。 在升級之後，您必須重新註冊伺服器。  
+-   **註冊伺服器**：升級會移除先前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的登錄設定。 在升級之後，您必須重新註冊伺服器。  
   
--   **更新統計資料** ：若要協助最佳化查詢效能，我們建議您在升級之後，更新所有資料庫的統計資料。 請使用 **sp_updatestats** 預存程序來更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中使用者定義資料表的統計資料。  
+-   **更新統計資料**：若要協助最佳化查詢效能，我們建議您在升級之後，更新所有資料庫的統計資料。 請使用 **sp_updatestats** 預存程序來更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中使用者定義資料表的統計資料。  
   
 -   **設定新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝**：為了減少系統的可攻擊介面區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會選擇性地安裝及啟用主要服務和功能。 如需有關介面區組態的詳細資訊，請參閱這一版的讀我檔案。  
   

@@ -19,12 +19,12 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9c2284e6e60dfce00888f836da060cb4362db5b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d73910b856702b2785a39fc2b8ad021f1a6d9405
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814696"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519012"
 ---
 # <a name="delete-a-data-tier-application"></a>刪除資料層應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47814696"
   
 2.  展開 **[管理]** 節點。  
   
-3.  展開 [資料層應用程式] 節點。  
+3.  展開 **資料層應用程式** 節點。  
   
 4.  以滑鼠右鍵按一下要刪除的 DAC，然後選取 [刪除資料層應用程式…]  
   
@@ -238,6 +238,6 @@ $dacName  = "MyApplication"
  [部署資料層應用程式](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [將資料庫註冊為 DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md)   
  [SQL Server 資料庫的備份與還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
+ [資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   
   

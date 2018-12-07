@@ -5,19 +5,18 @@ ms.date: 09/11/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c32d42292c9d16984fe37b72741da7941852ff8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 273d0e9df4a5cd5a2649fcd8ada4fe9891393dcd
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699676"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617938"
 ---
 # <a name="install-data-quality-services"></a>安裝 Data Quality Services
 

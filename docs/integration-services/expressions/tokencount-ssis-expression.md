@@ -11,12 +11,12 @@ ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 508f752b04307e8930b19f0175608667c5ef1d90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24f5bb65aa7c9545bbe1842f97e8f43546c14848
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788536"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411485"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (SSIS 運算式)
   傳回包含以分隔符號分隔之 Token 的字串中的 Token 數。  
@@ -51,13 +51,13 @@ TOKENCOUNT(character_expression, delimiter_string)
 -   您可以使用變數和資料行做為此運算式的引數。  
   
 ## <a name="expression-examples"></a>運算式範例  
- 在下列範例中，因為字串包含 "01"、"12"、"2011" 三個 Token，因此 TOKENCOUNT 函數會傳回 3。  
+ 在下列範例中，因為字串包含 "01"、"12"、"2011" 三個權杖，所以 TOKENCOUNT 函式會傳回 3。  
   
 ```  
 TOKENCOUNT("01/12/2011", "/")  
 ```  
   
- 下列範例中因有四個 Token ("a"、"little"、"white"、"dog")，所以 TOKENCOUNT 函數會傳回 4。  
+ 下列範例中因有四個權杖 ("a"、"little"、"white"、"dog")，所以 TOKENCOUNT 函式會傳回 4。  
   
 ```  
 TOKENCOUNT("a little white dog"," ")  
@@ -69,7 +69,7 @@ TOKENCOUNT("a little white dog"," ")
 TOKENCOUNT("a little white dog","|")  
 ```  
   
- 在下列範例中，TOKENCOUNT 函數會傳回 4。 此範例中的分隔符號字串包含 5 個分隔符號。 輸入字串中包含 "a"、"little"、"white"、"dog" 四個 Token。  
+ 在下列範例中，TOKENCOUNT 函數會傳回 4。 此範例中的分隔符號字串包含 5 個分隔符號。 輸入字串中包含 "a"、"little"、"white"、"dog" 4 個權杖。  
   
 ```  
 TOKENCOUNT("a:little|white dog","| ,.:")  

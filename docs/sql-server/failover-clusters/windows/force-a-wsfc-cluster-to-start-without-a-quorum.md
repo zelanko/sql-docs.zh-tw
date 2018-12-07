@@ -13,12 +13,12 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4cde2a5c082da3c87684ff6a32a12feb171c70ef
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 068d92c4913a59e9c18c601d2c21b8b3c80a0a19
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697576"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520231"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>在無仲裁情況下強制啟動 WSFC 叢集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51697576"
   
 1.  開啟容錯移轉叢集管理員，並連接到所要的叢集節點來強制連線。  
   
-2.  在 **[動作]** 窗格中，按一下 **[強制啟動叢集]**，然後按一下 **[是 -- 強制啟動我的叢集]**。  
+2.  在 [動作] 窗格中，按一下 [強制啟動叢集]，然後按一下 [是 - 強制啟動我的叢集]。  
   
 3.  在左窗格的 **[容錯移轉叢集管理員]** 樹狀目錄中，按一下叢集名稱。  
   
@@ -60,9 +60,9 @@ ms.locfileid: "51697576"
   
 3.  使用 `Stop-ClusterNode` 來確定叢集服務已停止。  
   
-4.  搭配 `Start-ClusterNode` 使用 `–FixQuorum` 來強制啟動叢集服務。  
+4.  搭配 `Start-ClusterNode` 使用 `-FixQuorum` 來強制啟動叢集服務。  
   
-5.  搭配 `Get-ClusterNode` 使用 `–Propery NodeWieght = 1` 來設定值，該值保證節點為仲裁的投票成員。  
+5.  搭配 `Get-ClusterNode` 使用 `-Propery NodeWieght = 1` 來設定值，該值保證節點為仲裁的投票成員。  
   
 6.  以可讀格式輸出叢集節點屬性。  
   
@@ -73,8 +73,8 @@ ms.locfileid: "51697576"
 Import-Module FailoverClusters  
   
 $node = "Always OnSrv02"  
-Stop-ClusterNode –Name $node  
-Start-ClusterNode –Name $node -FixQuorum  
+Stop-ClusterNode -Name $node  
+Start-ClusterNode -Name $node -FixQuorum  
   
 (Get-ClusterNode $node).NodeWeight = 1  
   

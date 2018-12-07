@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: b8b6a33afa780324d6dd3271111a99c4ea68e486
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d4346f3c30020d49f49deab4988b754a31ec401f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699684"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503488"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ SQL Server 2014 SP2 包含適用於 SQL Server 2014 SP1 CU7 的已發行 Hotfix 
 此外，請注意下列修正：
 - Xevent 呼叫堆疊現在包含模組名稱和位移，而不是絕對位址。
 - 診斷 XE 和 DMV 之間的較佳關聯性 - 系統會使用 Query_hash 和 query_plan_hash 來唯一識別查詢。 DMV 會將其定義為 varbinary(8)，而 XEvent 會將其定義為 UINT64。 由於 SQL Server 沒有「不帶正負號的 Bigint」，因此轉型不一定會成功。 這項改善引進了相當於 query_hash 和 query_plan_hash 的新 XEvent 動作/篩選資料行 (但當這些資料行定義為 INT64 時則例外)。 此修正有助於將 XE 和 DMV 之間的查詢相互關聯。
-- BULK INSERT 和 BCP 中的 UTF-8 支援 – 現在，BULK INSERT 和 BCP 中已啟用支援匯出和匯入以 UTF-8 字元集編碼的資料。
+- BULK INSERT 和 BCP 中的 UTF-8 支援 - 現在，BULK INSERT 和 BCP 中已啟用支援匯出和匯入以 UTF-8 字元集編碼的資料。
 
 ### <a name="download-pages-and-more-information-for-sp2"></a>SP2 的下載頁面和詳細資訊
 
@@ -82,7 +82,7 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 到 (含) CU 5 中所提供的�
 ### <a name="download-pages-and-more-information-for-sp1"></a>SP1 的下載頁面和詳細資訊
 
 - [下載 Microsoft SQL Server 2014 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=46694)
-- [SQL Server 2014 Service Pack 1 已發行 – 已更新](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
+- [SQL Server 2014 Service Pack 1 已發行 - 已更新](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
 - [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=46697)
 - [Microsoft SQL Server 2014 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=46696)
 
@@ -292,7 +292,7 @@ DATEPART(weekday, @d)
 ### <a name="SSRS"></a>Reporting Services (RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>SQL Server 2012 Reporting Services 原生模式報表伺服器無法與 SQL Server 2014 Reporting Services SharePoint 元件並存執行  
-**問題**：如果在相同的伺服器上安裝 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 元件，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式 Windows 服務 ’SQL Server Reporting Services’ (ReportingServicesService.exe) 便無法啟動。  
+**問題：** 如果在相同的伺服器上安裝 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 元件，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式 Windows 服務 'SQL Server Reporting Services' (ReportingServicesService.exe) 便無法啟動。  
   
 **因應措施** ：解除安裝 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 元件，並重新啟動 Microsoft SQL Server 2012 Reporting Services Windows 服務。  
   
@@ -359,7 +359,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **因應措施：**  
   
-1.  從 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能套件下載 MSOLAP.5 提供者。 在執行 Excel Services 的應用程式伺服器上安裝提供者。 如需詳細資訊，請參閱＜ [Microsoft SQL Server 2012 SP1 功能套件](https://www.microsoft.com/download/details.aspx?id=35580)＞中的＜Microsoft Analysis Services OLE DB 提供者的 Microsoft SQL Server 2012 SP1＞一節。  
+1.  從 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能套件下載 MSOLAP.5 提供者。 在執行 Excel Services 的應用程式伺服器上安裝提供者。 如需詳細資訊，請參閱 [Microsoft SQL Server 2012 SP1 功能套件](https://www.microsoft.com/download/details.aspx?id=35580)中的＜Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1＞一節。  
   
 2.  向 SharePoint Excel Services 註冊 MSOLAP.5 當做信任的提供者。 如需詳細資訊，請參閱＜ [加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者](https://technet.microsoft.com/library/hh758436.aspx)＞。  
   
@@ -374,7 +374,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **因應措施：**  
   
-1.  從 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能套件下載 MSOLAP.5 提供者。 在執行 Excel Services 的應用程式伺服器上安裝提供者。 如需詳細資訊，請參閱＜ [Microsoft SQL Server 2012 SP1 功能套件](https://www.microsoft.com/download/details.aspx?id=35580)＞中的＜Microsoft Analysis Services OLE DB 提供者的 Microsoft SQL Server 2012 SP1＞一節。  
+1.  從 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能套件下載 MSOLAP.5 提供者。 在執行 Excel Services 的應用程式伺服器上安裝提供者。 如需詳細資訊，請參閱 [Microsoft SQL Server 2012 SP1 功能套件](https://www.microsoft.com/download/details.aspx?id=35580)中的＜Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1＞一節。  
   
 2.  向 SharePoint Excel Services 註冊 MSOLAP.5 當做信任的提供者。 如需詳細資訊，請參閱＜ [加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者](https://technet.microsoft.com/library/hh758436.aspx)＞。  
   
@@ -389,7 +389,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **因應措施：**  
   
-1.  在 Microsoft Excel 中，清除自訂進階屬性。 請參閱知識庫文章 [KB 2927748](https://support.microsoft.com/kb/2927748) 的＜因應措施＞一節。  
+1.  在 Microsoft Excel 中，清除自訂進階屬性。 請參閱下列知識庫文章 [KB 2927748](https://support.microsoft.com/kb/2927748) 的＜因應措施＞一節。  
   
 **詳細資訊：**  
   

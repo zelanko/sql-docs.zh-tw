@@ -11,12 +11,12 @@ ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8fa6573f852eebe34801db57ba62cd29f9da3e5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9841763f003b0a177913da72cf6dd3efd0c4d3d3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659137"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523416"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>逐步解說：擴充資料庫專案組建，以產生模型統計資料
 您可以建立組建參與者，以便在建置資料庫時執行自訂動作。 在這個逐步解說，會建立名為 ModelStatistics 的組建參與者，以便在建置資料庫專案時從 SQL 資料庫模型輸出統計資料。 因為在建置時這個組建參與者採用參數，所以需要某些其他步驟。  
@@ -57,7 +57,7 @@ ms.locfileid: "51659137"
 |**類別**|**方法/屬性**|**說明**|  
 |-------------|------------------------|-------------------|  
 |[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|查詢模型以取得物件資訊，這是模型應用程式開發介面的主要進入點。 只可以查詢最上層型別，例如資料表或檢視表，資料行這類的型別只可以透過周遊模型找到。 如果未指定 ModelTypeClass 篩選，會傳回所有最上層型別。|  
-|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|尋找與目前 TSqlObject 參考之項目的關聯性。 例如，針對資料表，這會傳回例如資料表資料行的物件。 在此情況下，ModelRelationshipClass 篩選可用來指定查詢的精確關聯性 (例如使用 “Table.Columns” 篩選確保只會傳回資料行)。<br /><br />有一些類似的方法，例如 GetReferencingRelationshipInstances、GetChildren 和 GetParent。 如需詳細資訊，請參閱應用程式開發介面文件。|  
+|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|尋找與目前 TSqlObject 參考之項目的關聯性。 例如，針對資料表，這會傳回例如資料表資料行的物件。 在此情況下，ModelRelationshipClass 篩選可用來指定查詢的精確關聯性 (例如使用 "Table.Columns" 篩選確保只會傳回資料行)。<br /><br />有一些類似的方法，例如 GetReferencingRelationshipInstances、GetChildren 和 GetParent。 如需詳細資訊，請參閱應用程式開發介面文件。|  
   
 **唯一識別您的參與者**  
   
@@ -68,7 +68,7 @@ ms.locfileid: "51659137"
   
 ```  
   
-在此案例中，屬性的第一個參數應該是唯一識別碼，用來識別專案檔中的參與者。 最佳作法是結合程式庫的命名空間 (在這個逐步解說中為 “ExampleContributors”) 與類別名稱 (在這個逐步解說中為 “ModelStatistics”)，以產生識別碼。 在這個逐步解說後面，您會看到這個命名空間如何用來指定應該執行參與者。  
+在此案例中，屬性的第一個參數應該是唯一識別碼，用來識別專案檔中的參與者。 最佳作法是結合程式庫的命名空間 (在這個逐步解說中為 "ExampleContributors") 與類別名稱 (在這個逐步解說中為 "ModelStatistics")，以產生識別碼。 在這個逐步解說後面，您會看到這個命名空間如何用來指定應該執行參與者。  
   
 ## <a name="CreateBuildContributor"></a>建立組建參與者  
 若要建立組建參與者，您必須執行下列工作：  
@@ -87,7 +87,7 @@ ms.locfileid: "51659137"
   
 1.  建立名稱為 MyBuildContributor 的 Visual Basic 或 Visual C# 類別庫專案。  
   
-2.  將 “Class1.cs” 檔案重新命名為 “ModelStatistics.cs”。  
+2.  將 "Class1.cs" 檔案重新命名為 "ModelStatistics.cs"。  
   
 3.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後按一下 [新增參考]。  
   
@@ -480,7 +480,7 @@ ms.locfileid: "51659137"
   
     ```  
     /// <PropertyGroup>  
-    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'”>  
+    ///     <ContributorArguments Condition="'$(Configuration)' == 'Debug'">  
     ///         $(ContributorArguments);ModelStatistics.GenerateModelStatistics=true;ModelStatistics.SortModelStatisticsBy="name";  
     ///     </ContributorArguments>  
     /// <PropertyGroup>  
@@ -493,9 +493,9 @@ ms.locfileid: "51659137"
   
     1.  巡覽至 %Program Files%\MSBuild\\。  
   
-    2.  建立將儲存目標檔案的新資料夾 “MyContributors”。  
+    2.  建立將儲存目標檔案的新資料夾 "MyContributors"。  
   
-    3.  在這個目錄中建立新檔案 “MyContributors.targets”，在檔案中加入下列文字，然後儲存檔案：  
+    3.  在這個目錄中建立新檔案 "MyContributors.targets"，在檔案中加入下列文字，然後儲存檔案：  
   
         ```  
         <?xml version="1.0" encoding="utf-8"?>  
@@ -517,7 +517,7 @@ ms.locfileid: "51659137"
 遵循其中一個方法之後，您可以使用 MSBuild，傳入命令列建置的參數。  
   
 > [!NOTE]  
-> 您一定要更新 "BuildContributors" 屬性指定您的參與者識別碼。 這是參與者原始程式檔中 “ExportBuildContributor” 屬性所用相同的識別碼。 如果沒有這個識別碼，當您建置專案時不會執行參與者。 只有在您有參與者執行所需的引數時，才必須更新 “ContributorArguments” 屬性。  
+> 您一定要更新 "BuildContributors" 屬性指定您的參與者識別碼。 這是參與者原始程式檔中 "ExportBuildContributor" 屬性所用相同的識別碼。 如果沒有這個識別碼，當您建置專案時不會執行參與者。 只有在您有參與者執行所需的引數時，才必須更新 "ContributorArguments" 屬性。  
   
 ### <a name="build-the-sql-project"></a>建置 SQL 專案  
   

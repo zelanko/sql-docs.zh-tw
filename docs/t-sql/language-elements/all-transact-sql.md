@@ -19,12 +19,12 @@ ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45d5aa53bc64b8146b4afe8de98d8136c0abbec8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d30c93cd56467c6137db647e52ea97f2cc7641ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818316"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509578"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **布林**  
   
 ## <a name="result-value"></a>結果值  
- 若各組 (*scalar_expression ***,*** x)* 的指定比較都是 TRUE，當 *x* 是單一資料行集中的值時，會傳回 TRUE；否則，會傳回 FALSE。  
+ 若各組 (_scalar_expression_**,**_x)_ 的指定比較都是 TRUE (其中 *x* 是單一資料行集中的值)，則傳回 TRUE；否則，會傳回 FALSE。  
   
 ## <a name="remarks"></a>Remarks  
  ALL 需要正面比較 *scalar_expression* 與子查詢所傳回的每個值。 例如，如果子查詢傳回 2 和 3 的值，*scalar_expression* <= ALL (子查詢) 會針對值為 2 的 *scalar_expression* 評估為 TRUE。 如果子查詢傳回 2 和 3 的值，*scalar_expression* = ALL (子查詢) 就會評估為 FALSE，因為子查詢 (值為 3) 的某些值不符合運算式的準則。  

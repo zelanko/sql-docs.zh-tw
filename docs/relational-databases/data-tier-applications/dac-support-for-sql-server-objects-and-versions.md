@@ -13,12 +13,12 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85f07a1380cf59db3944ab905d6aca9156a4b94b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ec1a3488a8b28054f211e4d68dc329371e4cfb6b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672037"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513205"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server 物件與版本的 DAC 支援
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "51672037"
   
     -   MONEY、SMALLMONEY、NUMERIC、DECIMAL 基底類型：不會保存有效位數。  
   
-        -   DECIMAL/NUMERIC 基底類型的有效位數為 38：“TotalBytes” sql_variant 中繼資料一定會設定為 21。  
+        -   DECIMAL/NUMERIC 基底類型的有效位數為 38："TotalBytes" sql_variant 中繼資料一定會設定為 21。  
   
     -   所有文字基底類型：所有文字都會套用資料庫的預設定序。  
   
@@ -110,20 +110,20 @@ ms.locfileid: "51672037"
   
 3.  部署作業會因為 sql_variant 資料行內的以下情況而失敗。 在受影響的案例中，您將會看見包含下列訊息的對話方塊：  **由於 DAC Framework 中的資料限制，所以作業失敗。**  
   
-    -   DATETIME2、SMALLDATETIME 和 DATE 基底類型：如果此值超出 DATETIME 範圍，例如，年份小於 1753。  
+    -   DATETIME2、SMALLDATETIME 和 DATE 基底類型：如果此值超出 DATETIME 範圍，例如年份小於 1753。  
   
     -   DECIMAL、NUMERIC 基底類型：如果值的有效位數大於 28。  
   
 ##  <a name="Considerations"></a> 部署動作的其他考量  
  請注意，DAC Framework 資料部署動作有下列考量：  
   
--   **擷取/匯出** - 使用 DAC Framework 從資料庫建立封裝的動作 – 例如，擷取 .dacpac 檔案、匯出 .bacpac 檔案 - 這些限制都不適用。 封裝中的資料為來源資料庫中資料的不失真表示法。 如果封裝中有上述的任一情況，則擷取/匯出記錄將會透過上述的訊息包含問題摘要。 這是為了警告使用者，他們所建立的封裝中可能會發生資料部署問題。 使用者也會在記錄中看到以下摘要訊息：**這些限制不會影響 DAC Framework 所建立之 DAC 封裝中儲存之資料類型和值的精確度，而只適用於將 DAC 封裝部署到資料庫所產生的資料類型和值。如需受影響的資料以及如何解決這個限制的詳細資訊，請參閱**[這個主題](https://go.microsoft.com/fwlink/?LinkId=267086)。  
+-   **擷取/匯出** - 使用 DAC Framework 從資料庫建立套件的動作 (例如擷取 .dacpac 檔案、匯出 .bacpac 檔案)，這些限制都不適用。 封裝中的資料為來源資料庫中資料的不失真表示法。 如果封裝中有上述的任一情況，則擷取/匯出記錄將會透過上述的訊息包含問題摘要。 這是為了警告使用者，他們所建立的封裝中可能會發生資料部署問題。 使用者也會在記錄中看到以下摘要訊息：**這些限制不會影響 DAC Framework 所建立之 DAC 封裝中儲存之資料類型和值的精確度，而只適用於將 DAC 封裝部署到資料庫所產生的資料類型和值。如需受影響的資料以及如何解決這個限制的詳細資訊，請參閱**[這個主題](https://go.microsoft.com/fwlink/?LinkId=267086)。  
   
--   **部署/發行/匯入** - 使用 DAC Framework 將封裝部署到資料庫的動作，例如部署或發行 .dacpac 檔案以及匯入 .bacpac 檔案，這些限制都適用。 目標資料庫中產生的資料可能不包含封裝中資料的不失真表示法。 部署/匯入記錄將會在每個執行個體遇到問題時包含一則訊息 (如上所述)。 錯誤將封鎖此作業 – 請參閱上面的類別目錄 3 - 但是在其他警告的情況下將會繼續。  
+-   **部署/發行/匯入** - 使用 DAC Framework 將封裝部署到資料庫的動作，例如部署或發行 .dacpac 檔案以及匯入 .bacpac 檔案，這些限制都適用。 目標資料庫中產生的資料可能不包含封裝中資料的不失真表示法。 部署/匯入記錄將會在每個執行個體遇到問題時包含一則訊息 (如上所述)。 錯誤將封鎖此作業 (請參閱上面的類別目錄 3)，但在其他警告的情況下將會繼續。  
   
      如需此案例中受影響的資料以及如何解決部署/發行/匯入動作之這項限制的詳細資訊，請參閱 [這個主題](https://go.microsoft.com/fwlink/?LinkId=267087)。  
   
--   **因應措施** - 擷取和匯出作業會將不失真的 BCP 資料檔寫入 .dacpac 或 .bacpac 檔案中。 為了避免限制，請使用 SQL Server BCP.exe 命令列公用程式，將不失真的資料從 DAC 封裝部署到目標資料庫。  
+-   **因應措施** - 擷取和匯出作業會將不失真的 BCP 資料檔案寫入 .dacpac 或 .bacpac 檔案中。 為了避免限制，請使用 SQL Server BCP.exe 命令列公用程式，將不失真的資料從 DAC 封裝部署到目標資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)  

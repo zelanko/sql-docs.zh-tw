@@ -14,12 +14,12 @@ ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6664e93697cca238dff535df1b3c2518ba79b577
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 040377ce7f0879b11ec19f0abd21dd984ef363d4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596186"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399793"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>保護 SQL Server 智慧財產權
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47596186"
 軟體開發人員通常會問，要如何將其 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 資料應用程式散發給客戶，同時防止客戶分析和解構其應用程式。 這裡的重要原則在於保護智慧財產權、本身為法律問題，而且透過授權合約進行保護。 在其他人所管理的電腦上安裝 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 時，原本就會遺失一些控制權。 
 
 ## <a name="nature-of-the-problem"></a>問題本質
-電腦的擁有者/系統管理員一律可以存取該電腦上安裝的 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 執行個體。 如果您將應用程式部署到客戶的電腦，則因為他們是系統管理員，所以可以使用 **sysadmin** 固定伺服器角色成員的身分連線到 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]。 這包括可以授與權限、管理備份 (包括將備份還原到其他電腦)、解密以及移動資料檔案等等。如需詳細資訊，請參閱 [當系統管理員遭到鎖定時連接到 SQL Server](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)。 
+電腦的擁有者/系統管理員一律可以存取該電腦上安裝的 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 執行個體。 如果您將應用程式部署到客戶的電腦，因為他們是系統管理員，所以可以使用 **sysadmin** 固定伺服器角色成員的身分連線到 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]。 這包括可以授與權限、管理備份 (包括將備份還原到其他電腦)、解密以及移動資料檔案等等。如需詳細資訊，請參閱 [當系統管理員遭到鎖定時連接到 SQL Server](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)。 
 
 預存程序和資料可以進行加密，但無法隱藏資料結構，而且將偵錯工具附加至伺服器處理序的使用者可以在執行階段從記憶體中擷取已解密的程序和資料。
 

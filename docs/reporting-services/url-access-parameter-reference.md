@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 701c91f58f4629385b70ec2abc750f0edb8d8059
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: e0848c1574a5ca46c1db922be72b0dceedf091ed
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813721"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515096"
 ---
-# <a name="url-access-parameter-reference"></a>URL 存取參數參考
+# <a name="url-access-parameter-reference"></a>URL 存取參數參考URL 存取參數參考
   您可以使用下列參數當做 URL 的一部分，以設定 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]報表的外觀及操作。 本章節中將列出最常用的參數。 參數會區分大小寫，而且如果是導向至報表伺服器，則以參數前置字元 *rs:* 開頭，如果是導向至 HTML 檢視器，則以 *rc:* 開頭。 您也可以指定裝置或轉譯延伸模組特定的參數。 如需裝置特定參數的詳細資訊，請參閱 [在 URL 中指定裝置資訊設定](../reporting-services/specify-device-information-settings-in-a-url.md)。  
   
 > [!IMPORTANT]  
@@ -117,7 +117,7 @@ ms.locfileid: "51813721"
   
 -   *Stylesheet*：指定要套用至 HTML 檢視器的樣式表。  
   
--   裝置資訊設定：將裝置資訊設定指定為 `rc:tag=value`的形式，其中 *tag* 是指定給目前所使用轉譯延伸模組的裝置資訊設定名稱 (請參閱 *Format* 參數的說明)。 例如，您可以利用 IMAGE 轉譯延伸模組的 *OutputFormat* 裝置資訊設定，使用下列 URL 存取字串的參數將報表轉譯為 JPEG 影像： `…&rs:Format=IMAGE&rc:OutputFormat=JPEG`。 如需所有延伸模組特定裝置資訊設定的詳細資訊，請參閱[轉譯延伸模組的裝置資訊設定 &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)。  
+-   裝置資訊設定：將裝置資訊設定指定為 `rc:tag=value`的形式，其中 *tag* 是指定給目前所使用轉譯延伸模組的裝置資訊設定名稱 (請參閱 *Format* 參數的說明)。 例如，您可以利用 IMAGE 轉譯延伸模組的 *OutputFormat* 裝置資訊設定，使用下列 URL 存取字串的參數將報表轉譯為 JPEG 影像： `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`。 如需所有延伸模組特定裝置資訊設定的詳細資訊，請參閱[轉譯延伸模組的裝置資訊設定 &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)。  
   
 ##  <a name="bkmk_reportserver"></a> 報表伺服器命令 (rs:)  
  報表伺服器命令前面會加上 *rs:* ，而且用來針對下列報表伺服器︰  
@@ -310,7 +310,7 @@ ms.locfileid: "51813721"
   
 -   *AsyncRender*：控制是否要以非同步方式轉譯報表。 預設值為 **true**，此值指定以非同步方式轉譯報表。 此值必須為 **true** 或 **false**的布林值。  
   
--   *ParamMode*：控制報表檢視器 Web 組件的參數提示區域在整頁模式中的顯示方式。 預設值是 **Full**秒。 有效值為：  
+-   *ParamMode*：控制報表檢視器網頁組件的參數提示區域在整頁模式中的顯示方式。 預設值是 **Full**秒。 有效值為：  
   
     -   **Full**：顯示參數提示區域。  
   
@@ -324,7 +324,7 @@ ms.locfileid: "51813721"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
--   *DocMapMode*：控制報表檢視器 Web 組件的文件引導模式區域在整頁模式中的顯示方式。 預設值是 **Full**秒。 有效值為：  
+-   *DocMapMode*：控制報表檢視器網頁組件的文件引導模式區域在整頁模式中的顯示方式。 預設值是 **Full**秒。 有效值為：  
   
     -   **Full**：顯示文件引導模式區域。  
   
@@ -332,7 +332,7 @@ ms.locfileid: "51813721"
   
     -   **Hidden**：隱藏文件引導模式區域。  
   
--   *DockToolBar*：控制報表檢視器 Web 組件工具列是否停駐在頂部或底部。 有效值為 **Top** 和 **Bottom**。 預設值是 **Top**秒。  
+-   *DockToolBar*：控制報表檢視器網頁組件工具列是否停駐在頂部或底部。 有效值為 **Top** 和 **Bottom**。 預設值是 **Top**秒。  
   
      例如，在 **SharePoint** 模式中，將工具列停駐在底部。  
   
@@ -340,7 +340,7 @@ ms.locfileid: "51813721"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
--   *ToolBarItemsDisplayMode*：控制要顯示的工具列項目。 這是位元列舉值。 若要包含工具列項目，請將項目的值加入總值。 例如：針對沒有動作功能表，請使用 rv:ToolBarItemsDisplayMode=63 (或 0x3F)，這就是 1+2+4+8+16+ 32；僅針對動作功能表項目，請使用 rv:ToolBarItemsDisplayMode=960 (或 0x3C0)。 預設值是 **-1**，其中包含所有的工具列項目。 有效值為：  
+-   *ToolBarItemsDisplayMode*：控制要顯示的工具列項目。 這是位元列舉值。 若要包含工具列項目，請將項目的值新增總值。 例如：針對沒有動作功能表，請使用 rv:ToolBarItemsDisplayMode=63 (或 0x3F)，這就是 1+2+4+8+16+ 32；僅針對動作功能表項目，請使用 rv:ToolBarItemsDisplayMode=960 (或 0x3C0)。 預設值是 **-1**，其中包含所有的工具列項目。 有效值為：  
   
     -   1 (0x1)：[上一步] 按鈕  
   

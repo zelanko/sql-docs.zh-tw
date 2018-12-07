@@ -15,12 +15,12 @@ ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: afedc37f2ee6b2b6b1eb87b7e3a024e51697a724
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd175d4d66cfea79f1449ae7da9d06d5c9f247c3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603895"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542276"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>手動建立自我聯結 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -118,7 +118,7 @@ Cheryl Carson       Abraham Bennet
   
 3.  在聯結線上按一下滑鼠右鍵，然後在捷徑功能表中選擇 [屬性]。  
   
-4.  在 [屬性] 視窗中，按一下 [聯結條件及類型]，再按一下屬性右邊的省略符號 (**…**)。  
+4.  在 [屬性] 視窗中，按一下 [聯結條件及類型]，再按一下屬性右邊的省略符號 ([...])。  
   
 5.  在[聯結對話方塊](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md)中，在必要時變更主索引鍵之間的比較運算子。 例如，您可以會將運算子變更為小於 (<)。  
   

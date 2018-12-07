@@ -16,12 +16,12 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34a278c1ec90d9ddc49771850cf6226e9ee702ba
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4a2468c9c129c1c2e06101d7d7d1ec44c712f9bb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642185"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400700"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>封裝的 SQL Server Agent 作業
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，自動化並排程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的執行。 您可以排程部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器，並且儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統的封裝。  
@@ -175,7 +175,7 @@ ms.locfileid: "51642185"
     |**記錄**|讓記錄提供者與執行封裝產生關聯。<br /><br /> **文字檔的 SSIS 記錄提供者**<br /> 將記錄項目寫入 ASCII 文字檔中<br /><br /> **SQL Server 的 SSIS 記錄提供者**<br /> 將記錄項目寫入 MSDB 資料庫中的 sysssislog 資料表。<br /><br /> **SQL Server Profiler 的 SSIS 記錄提供者**<br /> 寫入您可以使用 SQL Server Profiler 檢視的追蹤檔。<br /><br /> **Windows 事件記錄檔的 SSIS 記錄提供者**<br /> 將記錄項目寫入 Windows 事件記錄檔中的應用程式記錄檔。<br /><br /> **XML 檔案的 SSIS 記錄提供者**<br /> 將記錄檔寫入 XML 檔案。<br /><br /> 對於文字檔、XML 檔案和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler 記錄提供者，請選取包含在封裝中的檔案連接管理員。 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄提供者，請選取包含在封裝中的 OLE DB 連線管理員。<br /><br /> 此選項對應至 **dtexec** 的 **/Logger**選項。|  
     |**設定值**|覆寫封裝屬性設定。 在 [屬性] 方塊的 [屬性路徑] 和 [值] 資料行中輸入值。 在您輸入某個屬性的值之後，[屬性] 對話方塊中就會出現一個空白資料列，讓您輸入其他屬性的值。<br /><br /> 若要從 [屬性] 方塊中移除屬性，請按一下資料列，然後按一下 [移除]。<br /><br /> 您可以執行下列其中一個動作來尋找屬性路徑：<br /><br /> -從 XML 組態檔 (\*.dtsconfig) 檔案複製屬性路徑。 路徑會在檔案的 [組態] 區段中列出，做為 [路徑] 屬性的值。 以下是 MaximumErrorCount 屬性的路徑範例：\Package.Properties[MaximumErrorCount]<br /><br /> -執行 [封裝組態精靈]，並從最後的 [正在完成精靈] 頁面複製屬性路徑。 然後您就可以取消精靈。|  
     |**驗證**|**只執行簽署的封裝**<br /> 指出是否已檢查封裝簽章。 如果此封裝未簽署或是簽章無效，此封裝就會失敗。 此選項對應至 **dtexec** 的 **/VerifySigned**選項。<br /><br /> **確認封裝組建**<br /> 指出是否已對照此選項旁的 [組建] 方塊中所輸入的組建編號，驗證封裝的組建編號。 如果發生不符的情形，將不會執行封裝。 此選項對應至 **dtexec** 的 **/VerifyBuild**選項。<br /><br /> **確認封裝識別碼**<br /> 指出是否已驗證封裝的 GUID，方法是將它與此選項旁的 [封裝識別碼] 方塊中所輸入的封裝識別碼相比較。 此選項對應至 **dtexec** 的 **/VerifyPackageID**選項。<br /><br /> **確認版本識別碼**<br /> 指出是否已驗證封裝的版本 GUID，方法是將它與此選項旁的 [版本識別碼] 方塊中所輸入的版本識別碼相比較。 此選項對應至 **dtexec** 的 **/VerifyVersionID**選項。|  
-    |**命令列**|修改 dtexec 的命令列選項。 如需選項的詳細資訊，請參閱 [dtexec 公用程式](../../integration-services/packages/dtexec-utility.md)。<br /><br /> **還原原始選項**<br /> 使用您在 [Job Set Properties (作業集屬性)] 對話方塊的 [封裝]、[組態]、[命令檔]、[資料來源]、[執行選項]、[記錄]、[設定值] 和 [驗證] 索引標籤中設定的命令列選項。<br /><br /> **手動編輯命令**<br /> 在 [命令列] 方塊中輸入其他命令列選項。<br /><br /> 在您按一下 [確定] 儲存作業步驟的變更之前，可以先按一下 [還原原始選項]，移除您在 [命令列] 方塊中輸入的所有其他選項。<br /><br /> **\*\* 提示 \*\*** 您可以將命令列複製到 [命令提示字元] 視窗中，加入 `dtexec`，然後從命令列執行封裝。 這是產生命令列文字的簡單方式。|  
+    |**命令列**|修改 dtexec 的命令列選項。 如需選項的詳細資訊，請參閱 [dtexec 公用程式](../../integration-services/packages/dtexec-utility.md)。<br /><br /> **還原原始選項**<br /> 使用您在 [Job Set Properties (作業集屬性)] 對話方塊的 [封裝]、[組態]、[命令檔]、[資料來源]、[執行選項]、[記錄]、[設定值] 和 [驗證] 索引標籤中設定的命令列選項。<br /><br /> **手動編輯命令**<br /> 在 [命令列] 方塊中輸入其他命令列選項。<br /><br /> 在您按一下 [確定] 儲存作業步驟的變更之前，可以先按一下 [還原原始選項] 來移除您在 [命令列] 方塊中鍵入的所有其他選項。<br /><br /> **\*\* 提示 \*\*** 您可以將命令列複製到 [命令提示字元] 視窗中，加入 `dtexec`，然後從命令列執行封裝。 這是產生命令列文字的簡單方式。|  
   
 9. 按一下 [確定]，儲存設定並關閉 [新增作業步驟] 對話方塊。  
   

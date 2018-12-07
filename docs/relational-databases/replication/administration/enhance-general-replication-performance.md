@@ -22,12 +22,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c57fd45ac2633e8027e916055b2850033bf69e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d10759ad75dd1df48aa3f59d3c17ab9f632755d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665036"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539191"
 ---
 # <a name="enhance-general-replication-performance"></a>增強一般複寫效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -154,11 +154,11 @@ ms.locfileid: "47665036"
   
 -   減少複寫代理程式的詳細資訊層級，僅初始化測試、監視或偵錯時除外。  
   
-     減少散發代理程式和合併代理程式的 **–HistoryVerboseLevel** 參數和 **–OutputVerboseLevel** 參數。 如此可減少插入追蹤代理程式記錄和輸出中的新資料列數目。 反之，具有相同狀態的先前記錄訊息會更新為新的記錄資訊。 提高測試、監視及偵錯的詳細資訊層級，以便您能盡可能多地獲得代理程式活動的相關資訊。  
+     減少散發代理程式或合併代理程式的 **-HistoryVerboseLevel** 參數和 **-OutputVerboseLevel** 參數。 如此可減少插入追蹤代理程式記錄和輸出中的新資料列數目。 反之，具有相同狀態的先前記錄訊息會更新為新的記錄資訊。 提高測試、監視及偵錯的詳細資訊層級，以便您能盡可能多地獲得代理程式活動的相關資訊。  
   
--   使用快照集代理程式、合併代理程式以及散發代理程式的 **–MaxBCPThreads** 參數 (指定的執行緒數目不應超過電腦上的處理器數目)。 此參數指定在建立和套用快照集時可平行執行的大量複製作業數目。  
+-   使用快照集代理程式、合併代理程式以及散發代理程式的 **-MaxBCPThreads** 參數 (指定的執行緒數目不應超過電腦上的處理器數目)。 此參數指定在建立和套用快照集時可平行執行的大量複製作業數目。  
   
--   使用散發代理程式和合併代理程式的 **–UseInprocLoader** 參數 (如果發行的資料表包括 XML 資料行，則不可使用此參數)。 此參數會使代理程式在套用快照集時使用 BULK INSERT 命令。  
+-   使用散發代理程式和合併代理程式的 **-UseInprocLoader** 參數 (如果發行的資料表包括 XML 資料行，則不可使用此參數)。 此參數會使代理程式在套用快照集時使用 BULK INSERT 命令。  
   
  可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
   

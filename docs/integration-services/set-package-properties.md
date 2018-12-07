@@ -26,12 +26,12 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb0840c67ff34759e9d17426b33ce2d32f4e1143
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bb7ed2c7f9989344a44a2ad2de9a59d2c4a2e1fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642233"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525256"
 ---
 # <a name="set-package-properties"></a>設定封裝屬性
   當您使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 所提供的圖形介面，在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立封裝時，可以在 [屬性] 視窗中設定封裝物件的屬性。  
@@ -118,8 +118,8 @@ ms.locfileid: "51642233"
   
 |屬性|Description|  
 |--------------|-----------------|  
-|**組態**|封裝使用的組態集合。 請按一下瀏覽按鈕 **(…)** 以檢視和設定封裝組態。|  
-|**運算式**|請按一下瀏覽按鈕 **(…)** 以建立封裝屬性的運算式。<br /><br /> 請注意，您可以為物件模型中包含的所有封裝屬性建立屬性運算式，而不是只有 [屬性] 視窗中所列的屬性而已。<br /><br /> 如需詳細資訊，請參閱[在封裝中使用屬性運算式](../integration-services/expressions/use-property-expressions-in-packages.md)。<br /><br /> 若要檢視現有的屬性運算式，請展開 **Expressions**。 按一下運算式文字方塊中的瀏覽按鈕 **(…)** ，以修改及評估運算式。|  
+|**組態**|封裝使用的組態集合。 請按一下瀏覽按鈕 ([...]) 以檢視和設定封裝組態。|  
+|**運算式**|請按一下瀏覽按鈕 ([...]) 以建立封裝屬性的運算式。<br /><br /> 請注意，您可以為物件模型中包含的所有封裝屬性建立屬性運算式，而不是只有 [屬性] 視窗中所列的屬性而已。<br /><br /> 如需詳細資訊，請參閱[在封裝中使用屬性運算式](../integration-services/expressions/use-property-expressions-in-packages.md)。<br /><br /> 若要檢視現有的屬性運算式，請展開 **Expressions**。 按一下運算式文字方塊中的瀏覽按鈕 ([...])，以修改及評估運算式。|  
 |**ForceExecutionResult**|封裝的執行結果。 可能的值為 **None**、 **Success**、 **Failure**和 **Completion**。 此屬性的預設值為 **None**。 如需詳細資訊，請參閱 T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult。|  
 |**LocaleId**|Microsoft Win32 地區設定。 此屬性的預設值為本機電腦作業系統的地區設定。|  
 |**LoggingMode**|指定封裝記錄行為的值。 這些值為 **Disabled**、 **Enabled**和 **UseParentSetting**。 此屬性的預設值為 **UseParentSetting**。 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>。|  

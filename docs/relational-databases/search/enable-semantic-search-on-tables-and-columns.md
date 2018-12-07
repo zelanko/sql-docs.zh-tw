@@ -13,12 +13,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a369cf9f73508f5d891b0b2af8807c490eb9fd47
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 502403eab1376679471b6825fb6b58333947c47f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672467"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522315"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>在資料表和資料行上啟用語意搜尋
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

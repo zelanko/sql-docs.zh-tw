@@ -19,12 +19,12 @@ ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d4ae3628252f20b1f56d54e1ad08c2eada426aea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00453cc3aacdaf644f1009c1564745c0b4a9f402
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839916"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412445"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>重新啟用成員或集合 (Master Data Services)
 

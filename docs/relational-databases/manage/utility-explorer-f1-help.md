@@ -20,12 +20,12 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 84db1d36a782fc054129b1ff753b620e82684499
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0468195ebe718db73dfa4a302185b677f76c6896
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675367"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413165"
 ---
 # <a name="utility-explorer-f1-help"></a>公用程式總管 F1 說明
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -152,7 +152,7 @@ ms.locfileid: "51675367"
   
     -   綠色向下箭頭 - 至少一個檔案群組或記錄檔群組的健全狀態表示使用量過低，而沒有任何檔案群組或記錄檔群組的使用量過高。  
   
-    -   紅色向上箭頭 - 至少一個檔案群組或記錄檔群組的健全狀態指出使用量過高。 請注意，如果資料庫處於「緊急」狀態，則健全狀態會顯示記錄檔空間過度使用。  
+    -   紅色向上箭頭 - 至少一個檔案群組或記錄檔群組的健全狀態指出使用量過高。 請注意，如果資料庫處於「緊急」狀態，則健康狀態會顯示記錄檔空間過度使用。  
   
      若要檢視或變更檔案空間原則限制，請按一下 [儲存使用量] 索引標籤。  
   
@@ -216,7 +216,7 @@ ms.locfileid: "51675367"
   
 -   綠色向下箭頭 - 檔案群組中至少有一個資料檔案的檔案空間使用量過低，而且檔案群組中沒有任何檔案的使用量過高。  
   
--   紅色向上箭頭 - 檔案群組中所有資料檔案的檔案空間使用量過高。 請注意，如果資料庫處於「緊急」狀態，則健全狀態會顯示記錄檔空間過度使用。  
+-   紅色向上箭頭 - 檔案群組中所有資料檔案的檔案空間使用量過高。 請注意，如果資料庫處於「緊急」狀態，則健康狀態會顯示記錄檔空間過度使用。  
   
  若要依磁碟區檢視檔案，請選取 [檔案群組依據] 選項中的 [磁碟區] 選項按鈕。 儲存使用量歷程記錄的圖形會顯示存放磁碟區上所有資料檔案和記錄檔所使用的檔案空間。 針對個別資料庫資料檔案和記錄檔展開此樹狀目錄來檢視詳細資料。  
   

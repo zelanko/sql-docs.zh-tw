@@ -19,12 +19,12 @@ ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 71a88e2909a1f335dbf6014aa8d53a1e0b08c93b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3654e06666c4b8d9639cf3d6ce792cdf80e4cdd6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667246"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396811"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +57,9 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 ## <a name="arguments"></a>引數  
  data_source_name 指定資料來源的使用者定義名稱。 名稱必須是唯一的。
   
- LOCATION = ‘server_name_or_IP’ 指定伺服器名稱或 IP 位址。
+ LOCATION = 'server_name_or_IP' 指定伺服器名稱或 IP 位址。
   
- RESOURCE_MANAGER_LOCATION = ‘\<IP address;Port>’ 指定 Hadoop 資源管理員位置。 指定時，查詢最佳化工具可能會使用 Hadoop 的計算功能，選擇對適用於 PolyBase 查詢的資料進行前置處理。 這是成本型決策。 稱為述詞下推，這可大幅降低在 Hadoop 與 SQL 之間傳送的資料量，因而改善查詢效能。
+ RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' 指定 Hadoop 資源管理員位置。 指定時，查詢最佳化工具可能會使用 Hadoop 的計算功能，選擇對適用於 PolyBase 查詢的資料進行前置處理。 這是成本型決策。 稱為述詞下推，這可大幅降低在 Hadoop 與 SQL 之間傳送的資料量，因而改善查詢效能。
   
  CREDENTIAL = Credential_Name 指定具名認證。 請參閱 [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
 

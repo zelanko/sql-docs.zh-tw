@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d129704681c308c093033ff69e1f1e3ec2bc5fb
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 2273d2c0108d96478aa5f5645abcb0034f6c89e5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021832"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710779"
 ---
 # <a name="clickthrough-reports-ssrs"></a>點選連結報表 (SSRS)
   點選連結報表是一個提供有關主報表所含資料之詳細資訊的報表。 當使用者按一下出現在主報表中的互動式資料時，就會顯示點選連結報表。 報表伺服器會自動產生這些報表。 模型設計師必須設定指派給報表模型中實體的 **DefaultDetailAttribute** 和 **DefaultAggregateAttribute** 屬性，以決定要在點選連結報表中顯示的內容。  
   
 > [!NOTE]  
->  並非 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都可使用點選連結報表。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。 如果不確定您的組織執行哪個版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請連絡資料庫管理員。  
+>  並非 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都可使用點選連結報表。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2017 版本支援的功能](~/sql-server/editions-and-components-of-sql-server-2017.md)。 如果不確定您的組織執行哪個版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，請連絡資料庫管理員。  
   
 ## <a name="using-default-templates"></a>使用預設範本  
  依預設，報表伺服器會為每個實體產生兩種 clickthrough 範本類型：單一執行個體範本和多執行個體範本。 您所按的項目會決定所用的範本。 如果讀取報表的人按一下純量屬性，則會使用單一執行個體範本。 如果讀取報表的人按一下彙總屬性，則會使用多執行個體範本。  

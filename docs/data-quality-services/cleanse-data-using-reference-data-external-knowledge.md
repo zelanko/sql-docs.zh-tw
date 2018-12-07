@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 04193939b04167f3103d72b162f41044c89b435c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05fd04b48f878fc157e8f4c7bb8237e4f3c3f515
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736516"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617188"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>使用參考資料 (外部) 知識清理資料
 
@@ -54,7 +53,7 @@ ms.locfileid: "47736516"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_kb_operator 角色，才能執行資料清理。  
   
 ##  <a name="Cleanse"></a> 使用參考資料知識清理您的資料  
@@ -72,7 +71,7 @@ ms.locfileid: "47736516"
     > [!NOTE]  
     >  在 **[清理]** 頁面上，DQS 會以下列兩種方式顯示附加至參考資料服務之定義域的相關資訊：  
     >   
-    >  -   在 [開始] 按鈕下方顯示一則訊息：「定義域 \<Domain1>、\<Domain2>、… \<DomainN> 是使用 Reference Data Service 提供者清理的」。 在此範例中，則會顯示下列訊息：「使用參考資料服務提供者清理了網域位址驗證」。  
+    >  -   在 [開始] 按鈕下方顯示一則訊息：「定義域 \<Domain1>、\<Domain2>、...\<DomainN> 是使用 Reference Data Service 提供者清理的」。 在此範例中，則會顯示下列訊息：「使用參考資料服務提供者清理了網域位址驗證」。  
     > -   圖示 (![定義域已附加至 RDS](../data-quality-services/media/dqs-rdsindicator.JPG "定義域已附加至 RDS")) 會出現在附加至 Reference Data Service 提供者的定義域旁邊的 [分析工具] 區域中。 在此範例中，該圖示會顯示在 **[地址驗證]** 複合定義域旁邊。  
   
 4.  在 **[管理和檢視結果]** 頁面上，檢閱您的定義域值。 根據將定義域對應至參考資料服務期間在 **[建議的候選值]** 方塊中指定的最大建議數目，參考資料服務可能會針對一個值顯示多項建議 (如果有的話)。 例如，下列美國地址會顯示兩項建議：  

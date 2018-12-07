@@ -17,12 +17,12 @@ ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0451f0bdb394d66fa8477c43aee801bd25ead1db
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6787b6dff349baea30c40b70af21cc9079cda6ae
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638755"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506440"
 ---
 # <a name="execute-process-task"></a>執行處理工作
   「執行處理」工作會隨 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝工作流程執行應用程式或批次檔。 雖然可以使用「執行處理」工作來開啟任何標準應用程式，例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 或 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]，但通常您會使用它來執行處理資料來源的商業應用程式或批次檔。 例如，您可以使用「執行處理」工作展開壓縮的文字檔。 然後封裝就可以使用文字檔做為封裝中資料流程的資料來源。 另一項範例為：您可以使用「執行處理」工作來執行產生每日銷售報表的自訂 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 應用程式。 接著，您就可將報告附加至「傳送郵件」工作，並將報告轉寄到通訊群組清單。  
@@ -110,7 +110,7 @@ ms.locfileid: "51638755"
  提供命令提示字元引數。  
   
  **WorkingDirectory**  
- 輸入包含可執行檔的資料夾路徑，或按一下瀏覽按鈕 **(…)** 並尋找資料夾。  
+ 鍵入包含可執行檔的資料夾路徑，或按一下瀏覽按鈕 **(...)** 並尋找資料夾。  
   
  **StandardInputVariable**  
  選取變數來提供處理序的輸入，或按一下 [\<新增變數...>] 建立新的變數：  

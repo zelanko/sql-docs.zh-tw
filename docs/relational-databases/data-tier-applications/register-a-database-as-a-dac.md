@@ -19,12 +19,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53ca1a857e08b538f61067ba6a035a6ceab1e8c6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: a9a3359957c543c809003c4289207cd4b325ee0c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813991"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513228"
 ---
 # <a name="register-a-database-as-a-dac"></a>將資料庫註冊為 DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "51813991"
   
 2.  展開 **[資料庫]** 節點。  
   
-3.  以滑鼠右鍵按一下要註冊的資料庫，然後指向 [工作]，再選取 [註冊為資料層應用程式…]  
+3.  以滑鼠右鍵按一下要註冊的資料庫，指向 [工作]，然後選取 [註冊為資料層應用程式…]  
   
 4.  完成精靈對話方塊：  
   
@@ -109,7 +109,7 @@ ms.locfileid: "51813991"
  [使用註冊資料層應用程式精靈](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>驗證物件  
- **正在檢查**  *SchemaName* **＞。** *ObjectName* **＞。** - 當精靈驗證擷取之物件的相依性，並驗證這些對於 DAC 都是有效的物件時，將會顯示進度列。 *SchemaName ***.*** ObjectName* 識別目前正在驗證哪一個物件。  
+ **正在檢查**  *SchemaName* **＞。** *ObjectName* **＞。** - 當精靈驗證擷取之物件的相依性，並驗證這些對於 DAC 都是有效的物件時，將會顯示進度列。 _SchemaName_**.**_ObjectName_ 識別目前正在驗證哪一個物件。  
   
  **< 上一步** - 回到 [設定屬性] 頁面來變更輸入。  
   

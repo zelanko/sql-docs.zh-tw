@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b22342b9f73ad87a2b6474772cd542b6a96ba55
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0e248ef60abf94ece20d93a6715c53cfc39660be
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030627"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531466"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint 服務和服務應用程式
 
@@ -61,19 +61,19 @@ ms.locfileid: "50030627"
 1.  將應用程式集區名稱的應用程式集區物件加入至要傳遞到 [新增] 動作的變數中。  
   
     ```  
-    $appPoolName = get-spserviceapplicationpool “<application pool name>”  
+    $appPoolName = get-spserviceapplicationpool "<application pool name>"  
     ```  
   
 2.  使用您提供的名稱與應用程式集區名稱建立服務應用程式。  
   
     ```  
-    New-SPRSServiceApplication –Name ‘MyServiceApplication’ –ApplicationPool $appPoolName –DatabaseName ‘MyServiceApplicationDatabase’ –DatabaseServer ‘<Server Name>’  
+    New-SPRSServiceApplication -Name 'MyServiceApplication' -ApplicationPool $appPoolName -DatabaseName 'MyServiceApplicationDatabase' -DatabaseServer '<Server Name>'  
     ```  
   
 3.  取得新的服務應用程式物件，並且將物件以管道傳送至 Pipe 新 Proxy Cmdlet。  
   
     ```  
-    Get-SPRSServiceApplication –name MyServiceApplication | New-SPRSServiceApplicationProxy “MyServiceApplicationProxy”  
+    Get-SPRSServiceApplication -name MyServiceApplication | New-SPRSServiceApplicationProxy "MyServiceApplicationProxy"  
     ```  
   
 ## <a name="related-tasks"></a>相關工作

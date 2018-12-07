@@ -15,12 +15,12 @@ ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 052c7f8374fbdc047af6452dc117d1651bc35edc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e55e29f428185f195b65ae046df3aa63b8c35c3a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782006"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539693"
 ---
 # <a name="create-a-credential"></a>建立認證
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47782006"
   
 -   **若要使用下列項目建立認證：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47782006"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要 ALTER ANY CREDENTIAL 權限才能建立或修改認證，以及 ALTER ANY LOGIN 權限才能將登入對應至認證。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -63,7 +63,7 @@ ms.locfileid: "47782006"
   
 1.  在物件總管中，展開 [安全性]  資料夾。  
   
-2.  以滑鼠右鍵按一下 [認證] 資料夾，然後選取 [新增認證…]。  
+2.  以滑鼠右鍵按一下 [認證] 資料夾，然後選取 [新增認證]。  
   
 3.  在 **[新增認證]** 對話方塊的 **[認證名稱]** 方塊中，輸入認證的名稱。  
   

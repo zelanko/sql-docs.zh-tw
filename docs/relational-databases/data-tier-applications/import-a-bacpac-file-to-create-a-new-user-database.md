@@ -26,16 +26,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2227cb838c52bf309373a6d67f4d006841e30a4f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c92dc9aad30134f0d9b8b834798a416fb610e142
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673667"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521237"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>匯入 BACPAC 檔案以建立新的使用者資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  匯入資料層應用程式 (DAC) 檔案 (.bacpac 檔案)，可在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上，建立原始資料庫連同其資的複本，或將該檔案匯入 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 匯出-匯入作業可以進行合併以在執行個體之間移轉 DAC 或資料庫，或建立邏輯備份 (例如建立 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中所部署資料庫的內部部署複本)。  
+  匯入資料層應用程式 (DAC) 檔案 (.bacpac 檔案)，可在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上，建立原始資料庫連同其資料的複本，或將該檔案匯入 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 匯出-匯入作業可以進行合併以在執行個體之間移轉 DAC 或資料庫，或建立邏輯備份 (例如建立 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中所部署資料庫的內部部署複本)。  
   
 ## <a name="before-you-begin"></a>開始之前  
  匯入程序會使用兩個階段來建立新的 DAC。  
@@ -90,16 +90,16 @@ ms.locfileid: "51673667"
   
  **選項**  
   
--   **不要再顯示此頁面。** - 按一下此核取方塊可不再顯示 [簡介] 頁面。  
+-   **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示 [簡介] 頁面。  
   
--   **下一步** - 繼續進行 **[匯入設定]** 頁面。  
+-   **下一步** - 繼續進行 [匯入設定] 頁面。  
   
 -   **取消** - 取消作業並關閉精靈。  
   
 ###  <a name="Import_settings"></a> 匯入設定頁面  
  您可以使用此頁面來指定要匯入之 .bacpac 檔案的位置。  
   
--   **從本機磁碟匯入** - 按一下 [瀏覽] **[瀏覽]** 瀏覽本機電腦，或在提供的空間中指定路徑。 路徑名稱必須包含檔案名稱和 .bacpac 副檔名。  
+-   **從本機磁碟匯入** - 按一下 [瀏覽...] 巡覽本機電腦，或在提供的空間中指定路徑。 路徑名稱必須包含檔案名稱和 .bacpac 副檔名。  
   
 -   **從 Azure 匯入** - 從 Microsoft Azure 容器匯入 BACPAC 檔案。 您必須連接到 Microsoft Azure 容器，才能驗證此選項。 請注意，此選項也會要求您指定暫存檔的本機目錄。 暫存檔將建立在指定的位置，而且作業完成之後，將保留在該位置。  
   
@@ -114,9 +114,9 @@ ms.locfileid: "51673667"
   
 -   **新資料庫名稱** - 針對匯入的資料庫提供名稱。  
   
--   **資料檔路徑** - 提供資料檔的本機目錄。 按一下 **[瀏覽]** 瀏覽本機電腦，或在提供的空間中指定路徑。  
+-   **資料檔案路徑** - 提供資料檔案的本機目錄。 按一下 [瀏覽...] 巡覽本機電腦，或在提供的空間中指定路徑。  
   
--   **記錄檔路徑** - 提供記錄檔的本機目錄。 按一下 **[瀏覽]** 瀏覽本機電腦，或在提供的空間中指定路徑。  
+-   **記錄檔路徑** - 提供記錄檔的本機目錄。 按一下 [瀏覽...] 巡覽本機電腦，或在提供的空間中指定路徑。  
   
  若要繼續進行，請按 **[下一步]**。  
   

@@ -11,12 +11,12 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be26ab7526d4ff270efc1ed11e592ad8552b0b22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9ce064f0d1e629ea8492dfbee3292d9a580d676
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634766"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505763"
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>課程 5-2 - 啟用和設定套件設定
 在此工作中，您會將專案轉換成封裝部署模型，並使用封裝組態精靈來啟用封裝組態。 您將利用這個精靈來產生 XML 組態檔，它包含 Foreach 迴圈容器的 **Directory** 屬性的組態設定。 Directory 屬性的值是由新的封裝層級變數提供，您可以在執行階段更新它。 另外，您還會擴展一個要在測試期間使用的新範例資料夾。  
@@ -40,11 +40,11 @@ ms.locfileid: "47634766"
   
 7.  回到 [控制流程] 索引標籤，按兩下 [資料夾的 Foreach 檔案] 容器。  
   
-8.  在 [Foreach 迴圈編輯器] 的 [集合] 頁面上，按一下 [運算式]，然後按一下省略符號按鈕 **(…)**。  
+8.  在 [Foreach 迴圈編輯器] 的 [集合] 頁面上，按一下 [運算式]，然後按一下省略符號按鈕 **(...)**。  
   
 9. 在 [屬性運算式編輯器] 中，按一下 [屬性] 清單，然後選取 [目錄]。  
   
-10. 在 [運算式] 方塊中，按一下省略符號按鈕 **(…)**。  
+10. 在 [運算式] 方塊中，按一下省略符號按鈕 **(...)**。  
   
 11. 在 [運算式產生器] 中，展開 [變數] 資料夾，將 **User::varFolderName** 變數拖曳至 [運算式] 方塊中。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "47634766"
   
 16. 按一下 [ **關閉**]。  
   
-17. 精靈會建立一個稱為 SSISTutorial.dtsConfig 的組態檔，它包含變數**值** 的組態設定，再由這個變數設定列舉值的 **Directory** 屬性。  
+17. 精靈會建立一個名為 SSISTutorial.dtsConfig 的設定檔，它包含變數**值**的組態設定，再由這個變數設定列舉值的 **Directory** 屬性。  
   
     > [!NOTE]  
     > 組態檔通常包含關於封裝屬性的複雜資訊，但在此教學課程中，唯一的組態資訊應該是  

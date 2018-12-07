@@ -13,12 +13,12 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0304d7e1a27d9ff31be603ee4d3248f9b4c472eb
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 621d19785793115c924243fd750b2d78c503c1ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638796"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545789"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>在封裝工作流程中納入資料分析工作
   在早期階段中，資料分析和清除並非自動化處理序的候選項目。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，資料分析工作的輸出通常需要進行視覺化分析和人為判斷，才能決定報告的違規項目是否有意義，或是否為過度報告。 甚至在辨識出資料品質問題之後，您仍然必須仔細地全盤規劃，尋求最佳的清除方法。  
@@ -264,7 +264,7 @@ ms.locfileid: "51638796"
   
 8.  關閉指令碼開發環境，然後關閉 [指令碼工作編輯器]。  
   
-#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>替代程式碼 - 從變數中讀取設定檔輸出  
+#### <a name="alternative-code-reading-the-profile-output-from-a-variable"></a>替代程式碼 - 從變數中讀取設定檔輸出  
  上一個程序說明如何從檔案載入資料分析工作的輸出。 不過，我們提供了替代方法，可從封裝變數載入這個輸出。 若要從變數載入封裝，您必須針對範例程式碼進行下列變更：  
   
 -   呼叫 **LoadXml** 類別的 **XmlDocument** 方法，而非 **Load** 方法。  

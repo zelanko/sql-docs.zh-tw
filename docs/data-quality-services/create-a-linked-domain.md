@@ -5,8 +5,7 @@ ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.linkeddomain.f1
@@ -14,12 +13,12 @@ ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0bce721aec2958cca21a4ac002b0da5a90682fb9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 40757d069ce849b71f93d7f420247dddcc8d229a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702226"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617888"
 ---
 # <a name="create-a-linked-domain"></a>建立連結的定義域
 

@@ -34,12 +34,12 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 851f89487199b1deae2086352a255374621688c6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ad931e49146aacdfcae92cca008ffce681ae5dd4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638815"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540889"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查閱轉換
   「模糊查閱」轉換會執行資料清除工作，例如標準化資料、更正資料及提供遺漏值。  

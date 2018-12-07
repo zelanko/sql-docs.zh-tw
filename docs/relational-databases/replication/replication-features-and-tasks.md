@@ -15,16 +15,16 @@ ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e14fb28098d46265bd962ee86ccb559fe706c4c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e66e135262c31f5e793c5609049ff13092e5d33
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831682"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511233"
 ---
 # <a name="replication-features-and-tasks"></a>複寫功能及工作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  尋找任何人 (設計人員、開發人員、分析師或管理員) 設計及實作複寫解決方案所需的資訊。  
+  尋找任何人 (設計師、開發人員、分析師或系統管理員) 設計及實作複寫解決方案所需的資訊。  
   
 ## <a name="in-this-section"></a>本節內容  
   

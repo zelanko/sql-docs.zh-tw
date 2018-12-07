@@ -18,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3041f983b1d5aec55ac3727c322558ed22e69315
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 29682619886dc257ba2b2583f4c4d256158df797
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658627"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535306"
 ---
 # <a name="tempdb-database"></a>tempdb 資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -204,7 +204,7 @@ GO
 
 如需 tempdb 中效能改進的詳細資訊，請參閱下列部落格文章：
 
-[TEMPDB – 檔案與追蹤旗標及更新，太棒了！](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
+[TEMPDB - 檔案與追蹤旗標及更新，太棒了！](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server 中的 tempdb 容量規劃
  在決定 SQL Server 生產環境中的 tempdb 適當大小時，您需要考量許多因素。 如本文先前所述，這些因素包括現有的工作負載和使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 我們建議您在 SQL Server 測試環境中執行下列工作來分析現有的工作負載：

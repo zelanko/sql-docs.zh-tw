@@ -16,12 +16,12 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3913196ff2d9ea967915a5e61ab2d2aafee9f22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4710cf3a1c89a87d5dbe12b5579ca7aaa3489f0a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799872"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506564"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 命令轉換
   OLE DB 命令轉換為資料流程中每個資料列執行 SQL 陳述式。 例如，可以執行在資料庫資料表中插入、更新或刪除資料列的 SQL 陳述式。  
@@ -61,13 +61,13 @@ ms.locfileid: "47799872"
   
 3.  按一下 **[資料流程]** 索引標籤，然後將「OLE DB 命令」轉換從 **[工具箱]** 拖曳至設計介面。  
   
-4.  將連接子 (綠色或紅色的箭頭) 從資料來源或前一個轉換拖曳至「OLE DB 命令」轉換，將「OLE DB 命令」轉換連接到資料流程。  
+4.  將連接子 (綠色或紅色的箭頭) 從資料來源或前一個轉換拖曳至「OLE DB 命令」轉換，將「OLE DB 命令」轉換連線到資料流程。  
   
 5.  以滑鼠右鍵按一下元件，選取 [編輯] 或顯示 [進階編輯器]。  
   
 6.  在 **[連接管理員]** 索引標籤上，選取 **[連接管理員]** 清單中的 OLE DB 連接管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
-7.  按一下 [元件屬性] 索引標籤，然後按一下 [SqlCommand] 方塊中的刪節號按鈕 [...]。  
+7.  按一下 [元件屬性] 索引標籤，然後按一下 [SqlCommand] 方塊中的省略符號按鈕 **(...)**。  
   
 8.  在 [字串值編輯器] 中，輸入參數化 SQL 陳述式，並使用問號 (?) 作為每個參數的參數標記。  
   

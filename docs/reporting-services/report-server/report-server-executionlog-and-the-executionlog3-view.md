@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0a76c8c745101a6327be13f6865bcbc392cc40c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17819ebf76409602108fe6eaa656a44190a12ab0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808756"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414096"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>報表伺服器執行記錄和 ExecutionLog3 檢視
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]報表伺服器執行記錄包含有關在伺服器上執行，或在原生模式向外延展部署或 SharePoint 伺服器陣列中多個伺服器上執行之報表的資訊。 您可以使用報表執行記錄來了解要求報表的頻率、最常使用的輸出格式，以及每一個處理階段所花費處理時間的毫秒數。 此記錄會包含執行報表之資料集查詢所花費時間長度的資訊，以及處理資料所花費的時間。 如果您是報表伺服器管理員，可以檢閱記錄資訊、識別長時間執行工作，並且向報表作者提出有關他們能夠改善之報表區域 (資料集或處理) 的建議。  
@@ -26,7 +26,7 @@ ms.locfileid: "47808756"
 ##  <a name="bkmk_top"></a> 檢視記錄資訊  
  報表伺服器執行會將有關報表執行的資料記錄到內部資料庫資料表中。 您可以從 SQL Server 檢視取得此資料表的資訊。  
   
- 報表執行記錄會儲存在預設名為 **ReportServer**的報表伺服器資料庫中。 SQL 檢視會提供執行記錄資訊。 “2” 和 “3” 檢視是在較新版本中加入，而且包含新欄位或是名稱比舊版更易記的欄位。 舊版檢視仍然保留在產品中，因此相依於這些檢視的自訂應用程式不受影響。 如果您沒有舊版檢視 (例如 ExecutionLog) 的相依性，建議您使用最新檢視 ExecutionLog**3**。  
+ 報表執行記錄會儲存在預設名為 **ReportServer**的報表伺服器資料庫中。 SQL 檢視會提供執行記錄資訊。 "2" 和 "3" 檢視是在較新版本中新增，而且包含新欄位或是名稱比舊版更易記的欄位。 舊版檢視仍然保留在產品中，因此相依於這些檢視的自訂應用程式不受影響。 如果您沒有舊版檢視 (例如 ExecutionLog) 的相依性，建議您使用最新檢視 ExecutionLog**3**。  
   
  本主題內容：  
   
@@ -324,7 +324,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |「資料行」|Description|  
 |------------|-----------------|  
 |InstanceName|處理要求的報表伺服器執行個體名稱。|  
-|ReportPath|報表的路徑結構。  例如，名為 ”test” 且位於報表管理員根資料夾中的報表會具有 “/test” 的 ReportPath。<br /><br /> 名為 ”test” 且儲存在報表管理員 “samples” 資料夾中的報表會具有 “/Samples/test/” 的 ReportPath。|  
+|ReportPath|報表的路徑結構。  例如，名為 "test" 且位於報表管理員根資料夾中報表會具有 "/test" 的 ReportPath。<br /><br /> 名為 "test" 且儲存在報表管理員 "samples" 資料夾中報表會具有 "/Samples/test/" 的 ReportPath|  
 |UserName|使用者識別碼。|  
 |ExecutionID||  
 |RequestType|要求類型 (使用者或系統)。|  

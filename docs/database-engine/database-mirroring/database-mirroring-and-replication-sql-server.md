@@ -14,12 +14,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a88bb5e660d992139ed9bf748544a52ed9839b0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 029ad55778a1c4239bdb83d587ca9a1f21bcaf20
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637486"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534439"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>資料庫鏡像和複寫 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47637486"
   
     -   將 **@working_directory** 參數的值設定為主體所用的快照集資料夾。  
   
-4.  指定 **–PublisherFailoverPartner** 代理程式參數的鏡像名稱。 下列代理程式需要使用這個參數在容錯移轉後識別鏡像：  
+4.  指定 **-PublisherFailoverPartner** 代理程式參數的鏡像名稱。 下列代理程式需要使用這個參數在容錯移轉後識別鏡像：  
   
     -   快照集代理程式 (針對所有發行集)。  
   
@@ -97,9 +97,9 @@ ms.locfileid: "47637486"
   
     -   [檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [複寫代理程式可執行檔概念](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     建議您將 **–PublisherFailoverPartner** 加入代理程式設定檔，然後在設定檔中指定鏡像名稱。 例如，如果您要設定使用預存程序的複寫：  
+     建議您將 **-PublisherFailoverPartner** 加入代理程式設定檔，然後在設定檔中指定鏡像名稱。 例如，如果您要設定使用預存程序的複寫：  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  

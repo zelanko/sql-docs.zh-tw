@@ -13,12 +13,12 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 9b4036967c0e542aa418fe80cf42c60c602a1ae1
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 1549c672211d328a723ab8eb056e8f227f1107ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169298"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521108"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>將 TDE 保護的資料庫移至另一個 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "49169298"
   
 4.  在 **[新增資料庫]** 對話方塊的 **[資料庫名稱]** 方塊中，輸入新資料庫的名稱。  
   
-5.  在 **[擁有者]** 方塊中，輸入新資料庫擁有者的名稱。 或者，按一下省略符號 **(...)** ，開啟 **[選取資料庫擁有者]** 對話方塊。 如需有關建立新資料庫的詳細資訊，請參閱＜ [Create a Database](../../../relational-databases/databases/create-a-database.md)＞。  
+5.  在 **[擁有者]** 方塊中，輸入新資料庫擁有者的名稱。 或者，按一下省略符號 **(...)**，開啟 [選取資料庫擁有者] 對話方塊。 如需有關建立新資料庫的詳細資訊，請參閱＜ [Create a Database](../../../relational-databases/databases/create-a-database.md)＞。  
   
 6.  在 [物件總管] 中，按一下加號展開 **[資料庫]** 資料夾。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "49169298"
   
 ###  <a name="SSMSMove"></a> 使用 SQL Server Management Studio  
   
-1.  在 [物件總管] 中，以滑鼠右鍵按一下上方加密的資料庫，指向 **[工作]** ，然後選取 **[卸離]**。  
+1.  在 [物件總管] 中，以滑鼠右鍵按一下上方加密的資料庫，指向 [工作] ，然後選取 [卸離...]。  
   
      **[卸離資料庫]** 對話方塊有下列選項。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "49169298"
   
     -   當資料庫涉及複寫時， **[狀態]** 為 **[尚未備妥]** 且 **[訊息]** 資料行會顯示 **[資料庫已複寫]**。  
   
-    -   當資料庫有一或多個使用中的連線時，[狀態] 為 [未就緒] 且 [訊息] 資料行顯示 [<使用中連線數目> 個使用中的連線]_\<\_\_\_\>_ — 例如：[1 個使用中的連線]。 您必須選取 **[卸除連接]** 中斷任何使用中的連接之後，才能卸離資料庫。  
+    -   當資料庫有一或多個使用中的連線時，[狀態] 為 [未就緒] 且 [訊息] 資料行顯示 [_\<number\_of\_active\_connections\>_ 個使用中的連線] - 例如：[1 個使用中的連線]。 您必須選取 **[卸除連接]** 中斷任何使用中的連接之後，才能卸離資料庫。  
   
      若要取得有關訊息的詳細資訊，請按一下超連結文字，以開啟活動監視器。  
   
@@ -184,13 +184,13 @@ ms.locfileid: "49169298"
   
 5.  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的目的地執行個體上，建立資料庫主要金鑰。 如需詳細資訊，請參閱下面的 **使用 Transact-SQL** 。  
   
-6.  使用原始伺服器憑證備份檔案重新建立伺服器憑證。 如需詳細資訊，請參閱下面的＜ **使用 Transact-SQL** ＞。  
+6.  使用原始伺服器憑證備份檔案重新建立伺服器憑證。 如需詳細資訊，請參閱下面的 **使用 Transact-SQL** 。  
   
-7.  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]的 [物件總管] 中，以滑鼠右鍵按一下 **[資料庫]** 資料夾，然後選取 **[附加]**。  
+7.  在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的 [物件總管] 中，以滑鼠右鍵按一下 [資料庫] 資料夾，然後選取 [附加...]。  
   
 8.  在 **[附加資料庫]** 對話方塊中，按一下 **[要附加的資料庫]** 底下的 **[加入]**。  
   
-9. 在 [尋找資料庫檔案 – <伺服器名稱>]_\__ 對話方塊中，選取要附加至新伺服器的資料庫檔案，然後按一下 [確定]。  
+9. 在 [尋找資料庫檔案 -_server\_name_] 對話方塊中，選取要附加至新伺服器的資料庫檔案，然後按一下 [確定]。  
   
      **[附加資料庫]** 對話方塊有下列選項。  
   
@@ -234,7 +234,7 @@ ms.locfileid: "49169298"
      從 **[要附加的資料庫]** 方格中移除選取的檔案。  
   
      **"** *<database_name>* **" 資料庫詳細資料**  
-     顯示要附加之檔案的名稱。 若要確認或變更檔案的路徑名稱，請按一下 **[瀏覽]** 按鈕 (**[…]**)。  
+     顯示要附加之檔案的名稱。 若要確認或變更檔案的路徑名稱，請按一下 [瀏覽] 按鈕 (**...**)。  
   
     > [!NOTE]  
     >  如果檔案不存在， **[訊息]** 資料行就會顯示「找不到」。 如果找不到記錄檔，它就存在於其他目錄中，或是已遭刪除。 您必須更新 **[資料庫詳細資料]** 方格中的檔案路徑，以指向正確的位置，或是從方格中移除該記錄檔。 如果找不到 .ndf 資料檔，您就必須更新該檔案在方格中的路徑，以指向正確的位置。  

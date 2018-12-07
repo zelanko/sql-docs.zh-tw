@@ -11,18 +11,18 @@ ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6361994dfc613ef3a3d9367574047b92555bfe3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed28d44aaa89e89ca4769007a5057a97577d2a05
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854356"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419299"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>以電子郵件傳送捷徑查詢檔案 (適用於 Excel 的 MDS 增益集)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您想要確定其他人跟您使用的資料相同時，請將捷徑查詢檔案以電子郵件傳送給其他人。 您應該共用查詢，而不是儲存工作表並以電子郵件傳送。  
+  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，當您想要確定其他人與您使用的資料相同時，請將捷徑查詢檔案以電子郵件傳送給其他人。 您應該共用查詢，而不是儲存工作表並以電子郵件傳送。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  若要執行此程序：  

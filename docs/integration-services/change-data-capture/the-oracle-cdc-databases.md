@@ -11,12 +11,12 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 040fea749664fb63fa2911a2d4fcaab5185af912
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2dc364cc2665d800e311625d754716e4582b6b65
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638898"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392861"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 資料庫
   Oracle CDC 執行個體與目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上同名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關聯。 此資料庫稱為 Oracle CDC 資料庫 (或 CDC 資料庫)。  
@@ -115,7 +115,7 @@ ms.locfileid: "51638898"
 |target_max_batched_transactions|100|1|1000|True|可以在 SQL Server CT 資料表更新中當做一筆交易來處理的最大 Oracle 交易數目。|  
 |target_idle_lsn_update_interval|10|0|1|False|當擷取的資料表沒有活動時，用來更新 **lsn_time_mapping** 資料表的間隔 (以秒數為單位)。|  
 |trace_retention_period|24|1|24*31|False|時間數量 (將訊息保留在追蹤資料表中的時數)。|  
-|sql_reconnect_interval|2|2|3600|False|重新連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前所等候的時間數量 (以秒數為單位)。 除了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端的連接逾時之外，也會使用這個間隔。|  
+|sql_reconnect_interval|2|2|3600|False|重新連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前所等候的時間數量 (以秒數為單位)。 除了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端的連線逾時之外，也會使用此間隔。|  
 |sql_reconnect_limit|-1|-1|-1|False|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新連接的最大數目。 預設值 -1 表示此程序會嘗試重新連接，直到停止。|  
 |cdc_restart_limit|6|-1|3600|False|在大多數情況下，CDC 服務會重新啟動異常情況下自動結束的 CDC 執行個體。 此屬性會定義每個小時有多少失敗次數，此服務才會停止並重新啟動執行個體。 -1 的值表示執行個體永遠都應該重新啟動。<br /><br /> 在組態資料表的任何更新之後，此服務會返回來重新啟動執行個體。|  
 |cdc_memory_report|0|0|1000|False|如果參數的值已變更，CDC 執行個體會將它的記憶體報表列印在追蹤資料表上。|  

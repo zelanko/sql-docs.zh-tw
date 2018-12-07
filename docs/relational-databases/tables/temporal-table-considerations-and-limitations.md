@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a238d92b6fbb9e025f304f0c5e957ff2d15a6975
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f88363967571c2f6401be42659b5b00ec3811b07
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770456"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410085"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>時態表考量與限制
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "47770456"
   
     -   **異動資料擷取和變更資料追蹤︰** 僅支援目前的資料表  
   
-    -   **快照集與異動複寫**：僅支援未啟用時態的單一發行者，以及已啟用時態的單一訂閱者。 在此情況下，當訂閱者執行卸載報表時會針對 OLTP 工作負載使用發行者 (包括 ‘AS OF’ 查詢)。    
+    -   **快照集與異動複寫**：僅支援未啟用時態的單一發行者，以及已啟用時態的單一訂閱者。 在此情況下，當訂閱者執行卸載報表時會針對 OLTP 工作負載使用發行者 (包括 'AS OF' 查詢)。    
         不支援使用多位訂閱者，這是因為在此案例中每個時態資料皆取決於本機系統時鐘，因此會導致這些資料出現不一致。  
   
     -   **合併式複寫︰** 不支援時態表  

@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ee365b25b272d0a442632d23cbd407bb21090a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d12db3ef11d3dc4d658b7126319ea53ddf12a91f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603576"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535357"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 設定永遠加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ SSMS 不支援下列兩者之間的角色隔離：管理資料庫的人員 (DBA)
 >  [!TIP] 
 >  在已針對現有的 [查詢編輯器] 視窗啟用和停用的 Always Encrypted 之間進行切換：   
 >  1.   以滑鼠右鍵按一下 [查詢編輯器] 視窗中的任何位置。
->  2.   選取 [連接] > [變更連接...]， 
+>  2.   選取 [連接] > [變更連接]， 
 >  3.   按一下 [選項] >>，
 >  4.   選取 [其他屬性] 索引標籤，然後輸入 `Column Encryption Setting=Enabled` (以啟用 Always Encrypted 行為) 或移除設定 (以停用 Always Encrypted 行為)。   
 >  5.   按一下 **[連接]**。   
@@ -121,14 +121,14 @@ WHERE [SSN] = @SSN
 
 針對目前的 [查詢編輯器] 視窗啟用/停用 [Always Encrypted 的參數化]：   
 1.  從主功能表選取 [查詢]  。   
-2.  選取 [查詢選項...]。   
+2.  選取 [查詢選項]。   
 3.  瀏覽至 [執行] > [進階]。   
 4.  選取或取消選取 [啟用 Always Encrypted 的參數化] 。   
 5.  按一下 [確定] 。   
 
 針對未來的 [查詢編輯器] 視窗啟用/停用 [Always Encrypted 的參數化]：   
 1.  從主功能表選取 [工具]  。   
-2.  選取 [選項...]。   
+2.  選取 [選項]。   
 3.  瀏覽至 [查詢執行] > [SQL Server] > [進階]。   
 4.  選取或取消選取 [啟用 Always Encrypted 的參數化]。   
 5.  按一下 [確定] 。   
@@ -226,9 +226,9 @@ WHERE [SSN] = @SSN;
 2.  以滑鼠右鍵按一下 [資料行主要金鑰] 資料夾，然後選取 [新增資料行主要金鑰]。 
 3.  在 [新增資料行主要金鑰]  對話方塊中，輸入資料行主要金鑰中繼資料物件的名稱。
 4.  選取金鑰存放區︰
-    - **憑證存放區 – 目前使用者** - 指出 Windows 憑證存放區中的目前使用者憑證存放區位置 (即個人存放區)。 
-    - **憑證存放區 – 本機電腦** - 指出 Windows 憑證存放區中的本機電腦憑證存放區位置。 
-    - **Azure 金鑰保存庫** - 您需要登入 Azure (按一下 [登入] )。 登入之後，就可以挑選其中一個 Azure 訂用帳戶和金鑰保存庫。
+    - **憑證存放區 - 目前使用者** - 指出 Windows 憑證存放區中的目前使用者憑證存放區位置 (即個人存放區)。 
+    - **憑證存放區 - 本機電腦** - 指出 Windows 憑證存放區中的本機電腦憑證存放區位置。 
+    - **Azure Key Vault** - 您需要登入 Azure (按一下 [登入])。 登入之後，就可以挑選其中一個 Azure 訂用帳戶和金鑰保存庫。
     - **金鑰存放區提供者 (CNG)** - 指出金鑰存放區，而金鑰存放區可透過實作新一代密碼編譯 (CNG) API 的金鑰存放區提供者 (KSP) 進行存取。 這種類型的存放區通常是硬體安全性模組 (HSM)。 在您選取此選項之後，需要挑選 KSP。 預設會選取 [ (Microsoft 軟體金鑰存放區提供者)] 。 如果您想要使用 HSM 中所儲存的資料行主要金鑰，請選取裝置的 KSP (它必須先安裝和設定於電腦上，您才能開啟對話方塊)。
     -   **密碼編譯服務提供者 (CAPI)** - 一種金鑰存放區，可透過實作密碼編譯 API (CAPI) 的密碼編譯服務提供者 (CSP) 進行存取。 這類存放區通常是硬體安全性模組 (HSM)。 在您選取此選項之後，需要挑選 CSP。  如果您想要使用 HSM 中所儲存的資料行主要金鑰，請選取裝置的 CSP (它必須先安裝和設定於電腦上，您才能開啟對話方塊)。
     
@@ -249,7 +249,7 @@ SQL Server Management Studio 將會在資料庫中建立資料行主要金鑰的
 [新增資料行加密金鑰]  對話方塊可讓您產生資料行加密金鑰、使用資料行主要金鑰進行加密，以及在資料庫中建立資料行加密金鑰中繼資料。
 
 1.  使用物件總管 ，巡覽至資料庫下的 [安全性]/[永遠加密金鑰]  資料夾。
-2.  以滑鼠右鍵按一下 [資料行加密金鑰]  資料夾，然後選取 [新增資料行加密金鑰] 。 
+2.  以滑鼠右鍵按一下 [資料行加密金鑰] 資料夾，然後選取 [新增資料行加密金鑰]。 
 3.  在 [新增資料行加密金鑰]  對話方塊中，輸入資料行加密金鑰中繼資料物件的名稱。
 4.  選取代表資料庫中資料行主要金鑰的中繼資料物件。
 5.  按一下 [確定] 。 
@@ -261,17 +261,17 @@ SQL Server Management Studio 將會產生新的資料行加密金鑰，接著會
 
 您需要具有資料庫中的 *ALTER ANY ENCRYPTION MASTER KEY* 和 *VIEW ANY COLUMN MASTER KEY DEFINITION* 資料庫權限，對話方塊才能建立資料行加密金鑰中繼資料以及存取資料行主要金鑰中繼資料。
 若要存取金鑰存放區，並使用資料行主要金鑰，您可能需要金鑰存放區和/或金鑰的權限︰
-- **憑證存放區 – 本機電腦** - 您必須具有當成資料行主要金鑰使用之憑證的讀取權，或為電腦上的系統管理員。
-- **Azure 金鑰保存庫** - 您需要具有包含資料行主要金鑰之保存庫的 *get*、 *unwrapKey*、 *wrapKey*、 *sign*和 *verify*  權限。
-- **金鑰存放區提供者 (CNG)** - 使用金鑰存放區或金鑰時，系統可能會提示您提供必要權限和認證 (取決於存放區和 KSP 組態)。
-- **密碼編譯服務提供者 (CAPI)** - 使用金鑰存放區或金鑰時，系統可能會提示您提供必要權限和認證 (取決於存放區和 CSP 組態)。
+- **憑證存放區 - 本機電腦** - 您必須具有當成資料行主要金鑰使用之憑證的讀取權，或為電腦上的系統管理員。
+- **Azure 金鑰保存庫** - 您需要有包含資料行主要金鑰之保存庫的 *get*、*unwrapKey*、*wrapKey*、*sign* 和 *verify* 權限。
+- **金鑰存放區提供者 (CNG)** - 使用金鑰存放區或金鑰時，系統可能會提示您提供必要權限和認證 (取決於存放區和 KSP 設定)。
+- **密碼編譯服務提供者 (CAPI)** - 使用金鑰存放區或金鑰時，系統可能會提示您提供必要權限和認證 (取決於存放區和 CSP 設定)。
 
 如需詳細資訊，請參閱 [建立及儲存資料行主要金鑰 (永遠加密)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
 <a name="rotatecmk"></a>
 ## <a name="rotating-column-master-keys"></a>輪替資料行主要金鑰
 
-資料行主要金鑰輪替是一項以新資料行主要金鑰來取代現有資料行主要金鑰的程序。 如果金鑰已遭洩漏，或是為了符合您的組織原則或必須定期更換授權密碼編譯金鑰的標準規定，您可能必須更換金鑰。 資料行主要金鑰輪替包含解密目前資料行主要金鑰所保護的資料行加密金鑰、使用新的資料行主要金鑰重新進行加密，以及更新金鑰中繼資料。 如需詳細資訊，請參閱 [永遠加密的金鑰管理概觀](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)。
+資料行主要金鑰輪替是一項以新資料行主要金鑰來取代現有資料行主要金鑰的程序。 如果金鑰已遭洩漏，或是為了符合您的組織原則或必須定期輪替授權密碼編譯金鑰的標準規定，您可能必須輪替金鑰。 資料行主要金鑰輪替包含解密目前資料行主要金鑰所保護的資料行加密金鑰、使用新的資料行主要金鑰重新進行加密，以及更新金鑰中繼資料。 如需詳細資訊，請參閱 [永遠加密的金鑰管理概觀](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)。
 
 **步驟 1︰佈建新的資料行主要金鑰**
 
@@ -297,8 +297,8 @@ SQL Server Management Studio 將會取得舊資料行主要金鑰所保護之資
 
 在此步驟中，您需要確定查詢輪替中資料行主要金鑰所保護的資料庫資料行 (也就是使用資料行加密金鑰加密的資料庫資料行，而該加密金鑰由輪替中資料行主要金鑰加密) 的所有用戶端應用程式，皆可以存取新資料行主要金鑰。 此步驟取決於新資料行主要金鑰所在金鑰存放區的類型。 例如：
 - 若新資料行主要金鑰是儲存在 Windows 憑證存放區的憑證，則您需要將憑證部署至同一個憑證存放區位置 (「目前使用者」 或「本機電腦」 )，作為資料庫中資料行主要金鑰的金鑰路徑中所指定的位置。 應用程式必須能夠存取憑證︰
-    - 如果憑證儲存在「目前使用者」  憑證存放區位置中，憑證必須匯入應用程式的 Windows 身分識別 (使用者) 的「目前使用者」存放區。
-    - 如果憑證儲存在「本機電腦」  憑證存放區位置中，應用程式的 Windows 身分識別必須有權存取憑證。
+    - 如果憑證儲存在「目前使用者」憑證存放區位置中，憑證必須匯入應用程式的 Windows 身分識別 (使用者) 的「目前使用者」存放區。
+    - 如果憑證儲存在「本機電腦」憑證存放區位置中，應用程式的 Windows 身分識別必須有權存取憑證。
 - 若新資料行主要金鑰儲存在 Microsoft Azure 金鑰保存庫中，就必須實作應用程式，使其可以向 Azure 驗證並有權存取金鑰。
 
 如需詳細資訊，請參閱 [建立和儲存資料行主要金鑰 (永遠加密)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
@@ -342,10 +342,10 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 - **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** - 存取和讀取資料行加密金鑰中繼資料時的必要項目。 
 
 您也需要可以在金鑰存放區中存取舊資料行主要金鑰和新資料行主要金鑰。 若要存取金鑰存放區，並使用資料行主要金鑰，您可能需要金鑰存放區和/或金鑰的權限︰
-- **憑證存放區 – 本機電腦** - 您必須具有當成資料行主要金鑰使用之憑證的讀取權，或為電腦上的系統管理員。
-- **Azure 金鑰保存庫** - 您需要具有包含資料行主要金鑰之保存庫的 *create*、 *get*、 *unwrapKey*、 *wrapKey*、 *sign*和 *verify* 權限。
-- **金鑰存放區提供者 (CNG)** - 使用金鑰存放區或金鑰時，系統可能會提示您提供必要權限和認證 (取決於存放區和 KSP 組態)。
-- **密碼編譯服務提供者 (CAPI)** - 使用金鑰存放區或金鑰時，系統可能會提示您提供必要權限和認證 (取決於存放區和 CSP 組態)。
+- **憑證存放區 - 本機電腦** - 您必須具有當成資料行主要金鑰使用之憑證的讀取權，或為電腦上的系統管理員。
+- **Azure Key Vault** - 您需要有包含資料行主要金鑰之保存庫的 *create*、*get*、*unwrapKey*、*wrapKey*、*sign* 和 *verify* 權限。
+- **金鑰存放區提供者 (CNG)** - 使用金鑰存放區或金鑰時，系統可能會提示您提供必要權限和認證 (取決於存放區和 KSP 設定)。
+- **密碼編譯服務提供者 (CAPI)** - 使用金鑰存放區或金鑰時，系統可能會提示您提供必要權限和認證 (取決於存放區和 CSP 設定)。
 
 如需詳細資訊，請參閱 [建立及儲存資料行主要金鑰 (永遠加密)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
@@ -361,7 +361,7 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 1.  開啟資料庫的精靈：以滑鼠右鍵按一下資料庫，並指向 [工作] ，然後按一下 [加密資料行] 。
 2.  檢閱[簡介]  頁面，然後按一下 [下一步] 。
 3.  在 [資料行選取]  頁面上，展開資料表，然後找出舊資料行加密金鑰目前所加密且您想要取代的所有資料行。
-4.  對於舊資料行加密金鑰所加密的每個資料行，將 [加密金鑰]  設定為新的自動產生金鑰。 **注意：** 或者，您可以先建立新的資料行加密金鑰，再執行精靈 – 請參閱上述的＜佈建資料行加密金鑰＞  一節。
+4.  對於舊資料行加密金鑰所加密的每個資料行，將 [加密金鑰]  設定為新的自動產生金鑰。 **注意：** 您也可以先建立新的資料行加密金鑰，再執行精靈，請參閱上述的＜佈建資料行加密金鑰＞一節。
 5.  在 [主要金鑰組態]  頁面上，選取要儲存新金鑰的位置，並選取主要金鑰來源，然後按一下 [下一步] 。 **注意：** 如果您使用的是現有資料行加密金鑰，而非自動產生的資料行加密金鑰，則不需要在這個頁面上執行任何動作。
 6.  在 [驗證] 頁面上，選擇是否要立即執行指令碼或建立 PowerShell 指令碼，然後按一下 [下一步] 。
 7.  在 [摘要]  頁面上，檢閱您已選取的選項，並按一下 [完成]  ，然後在完成時關閉精靈。
@@ -369,22 +369,22 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 
 ### <a name="permissions"></a>[權限]
 
-輪替資料行加密金鑰需要下列的資料庫權限︰ **ALTER ANY COLUMN MASTER KEY** - 如果您使用新的自動產生資料行加密金鑰 (也會產生新的資料行主要金鑰和其新的中繼資料)，則其為必要項目。
-**ALTER ANY COLUMN ENCRYPTION KEY** - 新增新資料行加密金鑰之中繼資料時的必要項目。
+輪替資料行加密金鑰需要下列的資料庫權限︰**ALTER ANY COLUMN MASTER KEY** - 如果您使用新的自動產生資料行加密金鑰 (也會產生新的資料行主要金鑰和其新的中繼資料)，則其為必要項目。
+**ALTER ANY COLUMN ENCRYPTION KEY** - 為新的資料行加密金鑰增新中繼資料時的必要項目。
 **VIEW ANY COLUMN MASTER KEY DEFINITION** - 存取和讀取資料行主要金鑰中繼資料時的必要項目。
 **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** - 存取和讀取資料行加密金鑰中繼資料時的必要項目。
 
 您也需要可以存取新和舊資料行加密金鑰的資料行主要金鑰。 若要存取金鑰存放區，並使用資料行主要金鑰，您可能需要金鑰存放區和/或金鑰的權限︰
-- **憑證存放區 – 本機電腦** - 您必須具有當成資料行主要金鑰使用之憑證的讀取權，或為電腦上的系統管理員。
-- **Azure 金鑰保存庫** - 您需要具有包含資料行主要金鑰之保存庫的 get、unwrapKey 和 verify 權限。
-- **金鑰存放區提供者 (CNG)** - 使用金鑰存放區或金鑰時，系統可能會提示您提供必要權限和認證 (取決於存放區和 KSP 組態)。
-- **密碼編譯服務提供者 (CAPI)** - 使用金鑰存放區或金鑰時，系統可能會提示您提供必要權限和認證 (取決於存放區和 CSP 組態)。
+- **憑證存放區 - 本機電腦** - 您必須具有當成資料行主要金鑰使用之憑證的讀取權，或為電腦上的系統管理員。
+- **Azure Key Vault** - 您需要有包含資料行主要金鑰之保存庫的 get、unwrapKey 和 verify 權限。
+- **金鑰存放區提供者 (CNG)** - 使用金鑰存放區或金鑰時，系統可能會提示您提供必要權限和認證 (取決於存放區和 KSP 設定)。
+- **密碼編譯服務提供者 (CAPI)** - 使用金鑰存放區或金鑰時，系統可能會提示您提供必要權限和認證 (取決於存放區和 CSP 設定)。
 
 如需詳細資訊，請參閱 [建立及儲存資料行主要金鑰 (永遠加密)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
 ## <a name="performing-dac-upgrade-operations-when-database-or-dacpac-uses-always-encrypted"></a>當資料庫或 DACPAC 使用永遠加密時，執行 DAC 升級作業
 
-在具有包含加密資料行之結構描述的 DACPAC 檔案和資料庫上，支援[DAC 作業](../../data-tier-applications/data-tier-applications.md) 。 特殊考量適用於 DAC 升級作業 - 請參閱 [升級資料層應用程式](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) 的有關如何使用各種工具 (包含 SSMS) 執行 DAC 升級作業。 
+在具有包含加密資料行之結構描述的 DACPAC 檔案和資料庫上，支援[DAC 作業](../../data-tier-applications/data-tier-applications.md) 。 特殊考量適用於 DAC 升級作業 - 請參閱 [升級資料層應用程式](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)，以了解如何使用各種工具 (包含 SSMS) 執行 DAC 升級作業。 
 
 如果您使用 DACPAC 升級資料庫，而且 DACPAC 或目標資料庫包含加密資料行，則升級作業會在符合下列所有條件時觸發資料加密作業︰
 - 資料庫包含具有資料的資料行。
@@ -407,10 +407,10 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 *ALTER ANY COLUMN MASTER KEY*、 *ALTER ANY COLUMN ENCRYPTION KEY*、 *VIEW ANY COLUMN MASTER KEY DEFINITION*、 *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION*
 
 如果升級作業觸發資料加密作業，則您也需要可以存取針對受影響資料行所設定的資料行主要金鑰︰
-- **憑證存放區 – 本機電腦** - 您必須具有當成資料行主要金鑰使用之憑證的讀取權，或為電腦上的系統管理員。
-- **Azure 金鑰保存庫** - 您需要具有包含資料行主要金鑰之保存庫的 *create*、 *get*、 *unwrapKey*、 *wrapKey*、 *sign*和 *verify* 權限。
-- **金鑰存放區提供者 (CNG)** - 使用金鑰存放區或金鑰時，系統可能會提示您提供必要權限和認證 (取決於存放區和 KSP 組態)。
-- **密碼編譯服務提供者 (CAPI)** - 使用金鑰存放區或金鑰時，系統可能會提示您提供必要權限和認證 (取決於存放區和 CSP 組態)。
+- **憑證存放區 - 本機電腦** - 您必須具有當成資料行主要金鑰使用之憑證的讀取權，或為電腦上的系統管理員。
+- **Azure Key Vault** - 您需要有包含資料行主要金鑰之保存庫的 *create*、*get*、*unwrapKey*、*wrapKey*、*sign* 和 *verify* 權限。
+- **金鑰存放區提供者 (CNG)** - 使用金鑰存放區或金鑰時，系統可能會提示您提供必要權限和認證 (取決於存放區和 KSP 設定)。
+- **密碼編譯服務提供者 (CAPI)** - 使用金鑰存放區或金鑰時，系統可能會提示您提供必要權限和認證 (取決於存放區和 CSP 設定)。
 
 如需詳細資訊，請參閱 [建立及儲存資料行主要金鑰 (永遠加密)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
@@ -451,10 +451,10 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 若要 **加密** 或 **解密** 資料來源中所儲存的資料，您需要具有來源資料庫的 *VIEW ANY COLUMN MASTER KEY DEFINITION* 和 *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* 權限。
 
 您也需要存取針對資料行所設定的資料行主要金鑰，而資料行主要金鑰用來儲存所加密或解密的資料：
-- **憑證存放區 – 本機電腦** - 您必須具有當成資料行主要金鑰使用之憑證的讀取權，或為電腦上的系統管理員。
-- **Azure 金鑰保存庫** - 您需要具有包含資料行主要金鑰之保存庫的 get、unwrapKey、wrapKey、sign 和 verify 權限。
-- **金鑰存放區提供者 (CNG)** - 必要權限和認證 (您在使用金鑰存放區或金鑰時可能收到提示) 取決於存放區和 KSP 組態。
-- **密碼編譯服務提供者 (CAPI)** - 必要權限和認證 (您在使用金鑰存放區或金鑰時可能會收到提示) 取決於存放區和 CSP 組態。
+- **憑證存放區 - 本機電腦** - 您必須具有當成資料行主要金鑰使用之憑證的讀取權，或為電腦上的系統管理員。
+- **Azure Key Vault** - 您需要有包含資料行主要金鑰之保存庫的 get、unwrapKey、wrapKey、sign 和 verify 權限。
+- **金鑰存放區提供者 (CNG)** - 必要權限和認證 (您在使用金鑰存放區或金鑰時可能收到提示) 取決於存放區和 KSP 設定。
+- **密碼編譯服務提供者 (CAPI)** - 必要權限和認證 (您在使用金鑰存放區或金鑰時可能會收到提示) 取決於存放區和 CSP 設定。
 如需詳細資訊，請參閱 [建立及儲存資料行主要金鑰 (永遠加密)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
 ## <a name="see-also"></a>另請參閱

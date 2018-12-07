@@ -19,12 +19,12 @@ ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7de1896d8c94113070dbfc57e31e7af8851b5ce0
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 48881cbff003b37e0a58dd7d6eb3c11c220ed268
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560178"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507725"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>將資料或記錄檔加入資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

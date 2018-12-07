@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 檔案及檔案群組選項 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 11/16/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -43,12 +43,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9a07b7c9536f3d1f98293317f56e4c10dbae25e0
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 1191ae28c9683a89d06830c942a22941fccfb943
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252145"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403553"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 檔案及檔案群組選項 
 
@@ -145,7 +145,7 @@ REMOVE FILE *logical_file_name*
 這是在參考檔案時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的邏輯名稱。  
   
 > [!WARNING]  
-> 移除具有與它關聯之 FILE_SNAPSHOT 備份的資料庫會成功，但將不會刪除任何相關聯的快照集，以避免備份參考資料庫檔案會不正確。 檔案將會被截斷，但實體不會被刪除，以保存完整的 FILE_SNAPSHOT 備份。 如需詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
+> 移除具有與其建立關聯之 `FILE_SNAPSHOT` 備份的資料庫會成功，但將不會刪除任何相關聯的快照集，以避免使備份參考資料庫檔案不正確。 檔案將會被截斷，但實體不會被刪除，以保存完整的 FILE_SNAPSHOT 備份。 如需詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
 MODIFY FILE  
 指定應該修改的檔案。 每次只能變更一個 \<filespec> 屬性。 您必須在 \<filespec> 中指定 NAME，以識別要修改的檔案。 如果指定了 SIZE，新的大小必須大於目前檔案大小。  
@@ -171,7 +171,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
 您可以將 FILESTREAM 檔案設定為 OFFLINE。 當 FILESTREAM 檔案離線時，它的父檔案群組會在內部標示為離線；因此，該檔案群組內 FILESTREAM 資料的所有存取都將失敗。  
   
 > [!NOTE]  
->  「自主資料庫」無法使用 \<add_or_modify_files> 選項。
+> 「自主資料庫」無法使用 \<add_or_modify_files> 選項。
   
 **\<filespec>::=**  
   
@@ -195,7 +195,8 @@ FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** | **'**_mem
 ' *os_file_name* '  
 如果是標準 (ROWS) 檔案群組，這就是當您建立檔案時，作業系統所用的路徑和檔案名稱。 這個檔案必須在安裝了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的伺服器中。 在執行 ALTER DATABASE 陳述式之前，指定的路徑必須已經存在。  
   
-當指定檔案的 UNC 路徑時，無法設定 SIZE、MAXSIZE 和 FILEGROWTH 參數。  
+> [!NOTE]
+> 當指定檔案的 UNC 路徑時，無法設定 SIZE、MAXSIZE 和 FILEGROWTH 參數。  
   
 > [!NOTE]  
 > 系統資料庫無法位於 UNC 共用目錄。  
@@ -205,16 +206,20 @@ FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** | **'**_mem
 如果檔案在原始磁碟分割中，*os_file_name* 只能指定現有原始磁碟分割的磁碟機代號。 每個原始分割區只能放置一個檔案。  
   
 **'** *filestream_path* **'**  
-如果是 FILESTREAM 檔案群組，FILENAME 會參考儲存 FILESTREAM 資料所在的路徑。 到最後一個資料夾為止的路徑必須存在，而最後一個資料夾則不得存在。 例如，如果您指定 C:\MyFiles\MyFilestreamData 路徑，則在您執行 ALTER DATABASE 之前，C:\MyFiles 必須存在，但是 MyFilestreamData 資料夾不得存在。  
+如果是 FILESTREAM 檔案群組，FILENAME 會參考儲存 FILESTREAM 資料所在的路徑。 到最後一個資料夾為止的路徑必須存在，而最後一個資料夾則不得存在。 例如，如果您指定 `C:\MyFiles\MyFilestreamData` 路徑，則在您執行 ALTER DATABASE 之前，`C:\MyFiles` 必須存在；但是 `MyFilestreamData` 資料夾不得存在。  
   
-SIZE 和 FILEGROWTH 屬性不會套用到 FILESTREAM 檔案群組。  
+> [!NOTE]
+> SIZE 和 FILEGROWTH 屬性不會套用到 FILESTREAM 檔案群組。  
   
 **'** *memory_optimized_data_path* **'**  
-如果是記憶體最佳化的檔案群組，FILENAME 會參考將儲存記憶體最佳化資料的路徑。 到最後一個資料夾為止的路徑必須存在，而最後一個資料夾則不得存在。 例如，如果您指定 C:\MyFiles\MyData 路徑，則在您執行 ALTER DATABASE 之前，C:\MyFiles 必須存在，但是 MyData 資料夾不得存在。  
+如果是記憶體最佳化的檔案群組，FILENAME 會參考將儲存記憶體最佳化資料的路徑。 到最後一個資料夾為止的路徑必須存在，而最後一個資料夾則不得存在。 例如，如果您指定 `C:\MyFiles\MyData` 路徑，則在您執行 ALTER DATABASE 之前，`C:\MyFiles` 必須存在；但是 `MyData` 資料夾不得存在。  
   
 檔案群組和檔案 (`<filespec>`) 必須在相同的陳述式中建立。  
   
-SIZE、MAXSIZE 和 FILEGROWTH 屬性不會套用到記憶體最佳化的檔案群組。  
+> [!NOTE]
+> SIZE 和 FILEGROWTH 屬性不適用 MEMORY_OPTIMIZED_DATA 檔案群組。  
+
+如需記憶體最佳化檔案群組的詳細資訊，請參閱[記憶體最佳化檔案群組](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)。
   
 SIZE *size*  
 指定檔案大小。 SIZE 不會套用到 FILESTREAM 檔案群組。  
@@ -227,6 +232,11 @@ SIZE *size*
 當 *size* 未提供主要檔案的大小時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 **model** 資料庫中的主要檔案大小。 當已指定次要資料檔或記錄檔，但未指定檔案的 *size* 時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會讓檔案的大小變成 1 MB。  
   
 您可以利用 KB、MB、GB 和 TB 後置詞來指定千位元組、百萬位元組、十億位元組或兆位元組。 預設值是 MB。 請指定不包括小數的整數。 若要指定 MB 的小數，請將數字乘以 1024，以便將值轉換成 KB。 例如，請指定 1536 KB，而不要指定 1.5 MB (1.5 x 1024 = 1536)。  
+
+> [!NOTE] 
+> 無法設定 `SIZE`：
+> - 為檔案指定 UNC 路徑時  
+> - 若為 `FILESTREAM` 與 `MEMORY_OPTIMIZED_DATA` 檔案群組   
   
 MAXSIZE { *max_size*| UNLIMITED }  
 指定檔案所能成長的大小上限。  
@@ -236,6 +246,9 @@ MAXSIZE { *max_size*| UNLIMITED }
   
 UNLIMITED  
 指定檔案可成長直到磁碟已滿。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，指定為無限成長的記錄檔，大小上限是 2 TB，資料檔案的大小上限是 16 TB。 為 FILESTREAM 容器指定這個選項時沒有最大大小。 它會繼續成長，直到磁碟已滿。  
+
+> [!NOTE] 
+> 為檔案指定 UNC 路徑時，無法設定 `MAXSIZE`。
   
 FILEGROWTH *growth_increment*  
 指定檔案的自動成長遞增。 檔案的 FILEGROWTH 設定不能超過 MAXSIZE 設定。 FILEGROWTH 不會套用到 FILESTREAM 檔案群組。  
@@ -254,12 +267,17 @@ FILEGROWTH *growth_increment*
 |從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始|資料 64 MB。 記錄檔 64 MB。|  
 |從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始|資料 1 MB。 記錄檔 10%。|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前|資料 10%。 記錄檔 10%。|  
-  
+
+> [!NOTE] 
+> 無法設定 `FILEGROWTH`：
+> - 為檔案指定 UNC 路徑時  
+> - 若為 `FILESTREAM` 與 `MEMORY_OPTIMIZED_DATA` 檔案群組   
+
 OFFLINE  
 將檔案設成離線，使檔案群組中的所有物件都無法存取。  
   
 > [!CAUTION]  
->  請只在檔案損毀且可以還原時，才使用這個選項。 設為 OFFLINE 的檔案，只能藉由從備份中還原檔案來設成線上狀態。 如需有關還原單一檔案的詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)。  
+> 請只在檔案損毀且可以還原時，才使用這個選項。 設為 OFFLINE 的檔案，只能藉由從備份中還原檔案來設成線上狀態。 如需有關還原單一檔案的詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)。  
   
 > [!NOTE]  
 > 自主資料庫中無法使用 \<filespec> 選項。  
@@ -278,21 +296,13 @@ CONTAINS MEMORY_OPTIMIZED_DATA
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
-指定檔案群組將記憶體最佳化的資料儲存在檔案系統中。 如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。 每個資料庫只允許一個 MEMORY_OPTIMIZED_DATA 檔案群組。 若要建立記憶體最佳化的資料表，檔案群組不能空白。 至少必須有一個檔案。 *filegroup_name* 參考至路徑。 到最後一個資料夾為止的路徑必須存在，而最後一個資料夾則不得存在。  
-  
-下列範例會建立檔案群組並將其加入至名為 xtp_db 的資料庫中，然後將檔案加入檔案群組中。 檔案群組儲存記憶體最佳化的資料。  
-  
-```sql  
-ALTER DATABASE xtp_db ADD FILEGROUP xtp_fg CONTAINS MEMORY_OPTIMIZED_DATA;  
-GO  
-ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO FILEGROUP xtp_fg;  
-```  
-  
+指定檔案群組將記憶體最佳化的資料儲存在檔案系統中。 如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。 每個資料庫只允許一個 `MEMORY_OPTIMIZED_DATA` 檔案群組。 若要建立記憶體最佳化的資料表，檔案群組不能空白。 至少必須有一個檔案。 *filegroup_name* 參考至路徑。 到最後一個資料夾為止的路徑必須存在，而最後一個資料夾則不得存在。  
+ 
 REMOVE FILEGROUP *filegroup_name*  
 從資料庫中移除檔案群組。 除非檔案群組是空的，否則無法移除檔案群組。 請先移除檔案群組中的所有檔案。 如需詳細資訊，請參閱本主題中稍早的 "REMOVE FILE *logical_file_name*"。  
   
 > [!NOTE]  
-> 除非 FILESTREAM 記憶體回收行程已移除 FILESTREAM 容器中的所有檔案，否則移除 FILESTREAM 容器的 ALTER DATABASE REMOVE FILE 作業會失敗並傳回錯誤訊息。 請參閱本主題後面的＜備註＞中的＜移除 FILESTREAM 容器＞一節。  
+> 除非 FILESTREAM 記憶體回收行程已移除 FILESTREAM 容器中的所有檔案，否則移除 FILESTREAM 容器的 `ALTER DATABASE REMOVE FILE` 作業會失敗並傳回錯誤訊息。 請參閱本主題稍後的[移除 FILESTREAM 容器](#removing-a-filestream-container)一節。  
   
 MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } 透過將狀態設定為 READ_ONLY 或 READ_WRITE 來修改檔案群組，讓檔案群組成為資料庫的預設檔案群組，或變更檔案群組名稱。  
   
@@ -327,21 +337,21 @@ READ_ONLY | READONLY
 將檔案群組指定成唯讀狀態。 不允許更新其中的物件。 主要檔案群組不能設為唯讀。 若要變更這個狀態，您必須具有資料庫的獨佔存取權。 如需詳細資訊，請參閱 SINGLE_USER 子句。  
   
 由於唯讀資料庫不允許修改資料，因此，會出現下列情況：  
-  
 - 在系統開機時跳過自動復原。  
 - 不可能壓縮資料庫。  
 - 唯讀資料庫不會出現鎖定。 因此，查詢效能會比較快。  
   
 > [!NOTE]  
->  在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 READONLY 關鍵字。 請避免在新的開發工作中使用 READONLY，並規劃修改目前在使用 READONLY 的應用程式。 請改用 READ_ONLY。  
+> 在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `READONLY` 關鍵字。 請避免在新的開發工作中使用 `READONLY`，並規劃修改目前使用 `READONLY` 的應用程式。 請改用 `READ_ONLY` 。  
   
 READ_WRITE | READWRITE  
 將群組指定成 READ_WRITE 狀態。 檔案群組中的物件可以更新。 若要變更這個狀態，您必須具有資料庫的獨佔存取權。 如需詳細資訊，請參閱 SINGLE_USER 子句。  
   
 > [!NOTE]  
->  在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `READWRITE` 關鍵字。 請避免在新的開發工作中使用 `READWRITE`，並規劃修改目前在使用 `READWRITE` 的應用程式，改為使用 `READ_WRITE`。  
+> 在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `READWRITE` 關鍵字。 請避免在新的開發工作中使用 `READWRITE`，並規劃修改目前在使用 `READWRITE` 的應用程式，改為使用 `READ_WRITE`。  
   
-您可以檢查 **sys.databases** 目錄檢視中的 **is_read_only** 資料行或 `DATABASEPROPERTYEX` 函數的 **Updateability** 屬性來判斷這些選項的狀態。  
+> [!TIP]
+> 您可以檢查 **sys.databases** 目錄檢視中的 **is_read_only** 資料行或 `DATABASEPROPERTYEX` 函數的 **Updateability** 屬性來判斷這些選項的狀態。  
   
 ## <a name="remarks"></a>Remarks  
 若要縮小資料庫大小，請使用 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
@@ -352,7 +362,15 @@ READ_WRITE | READWRITE
   
 自 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 起，資料庫檔案狀態 (如線上或離線) 的維護與資料庫狀態無關。 如需詳細資訊，請參閱[檔案狀態](../../relational-databases/databases/file-states.md)。 
 - 檔案群組內的檔案狀態決定了整個檔案群組的可用性。 若要使某個檔案群組為可用的，則在檔案群組中的所有檔案必須都在線上。 
-- 如果檔案群組離線，SQL 陳述式存取檔案群組的任何嘗試都會失敗，且會出現錯誤。 當您建置 `SELECT` 陳述式的查詢計劃時，查詢最佳化工具會避開在離線檔案群組中的非叢集索引和索引檢視表。 這樣會讓這些陳述式能夠執行成功。 不過，如果離線檔案群組包含目標資料表的堆積或叢集索引，`SELECT` 陳述式將會失敗。 此外，在離線檔案群組中，以 `INSERT`、`UPDATE` 或 `DELETE` 陳述式修改含有索引的資料表將會失敗。  
+- 如果檔案群組離線，SQL 陳述式存取檔案群組的任何嘗試都會失敗，且會出現錯誤。 當您建置 `SELECT` 陳述式的查詢計劃時，查詢最佳化工具會避開在離線檔案群組中的非叢集索引和索引檢視表。 這樣會讓這些陳述式能夠執行成功。 不過，如果離線檔案群組包含目標資料表的堆積或叢集索引，`SELECT` 陳述式將會失敗。 此外，在離線檔案群組中，以 `INSERT`、`UPDATE` 或 `DELETE` 陳述式修改含有索引的資料表將會失敗。 
+
+當指定檔案的 UNC 路徑時，無法設定 SIZE、MAXSIZE 和 FILEGROWTH 參數。 
+
+無法為記憶體最佳化檔案群組設定 SIZE 和 FILEGROWTH 參數。 
+
+在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `READONLY` 關鍵字。 請避免在新的開發工作中使用 `READONLY`，並規劃修改目前使用 READONLY 的應用程式。 請改用 `READ_ONLY` 。 
+
+在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `READWRITE` 關鍵字。 請避免在新的開發工作中使用 `READWRITE`，並規劃修改目前在使用 `READWRITE` 的應用程式，改為使用 `READ_WRITE`。 
   
 ## <a name="moving-files"></a>移動檔案  
 您可以在 FILENAME 中指定新位置來移動系統或使用者定義資料檔和記錄檔。 在下列狀況中，這非常有用：  
@@ -373,8 +391,8 @@ READ_WRITE | READWRITE
   
 資料檔可以立即初始化。 這可以加快這些檔案作業的執行速度。 如需詳細資訊，請參閱 [資料庫檔案初始化](../../relational-databases/databases/database-instant-file-initialization.md)。 
   
-## <a name="removing-a-filestream-container"></a>移除 FILESTREAM 容器  
-即使 FILESTREAM 容器已使用 "DBCC SHRINKFILE" 作業來清空，基於各種系統維護原因，資料庫可能仍然需要維護已刪除之檔案的參考。 [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md) 會在可安全執行時，執行 FILESTREAM 記憶體回收行程來移除這些檔案。 除非 FILESTREAM 記憶體回收行程已移除 FILESTREAM 容器中的所有檔案，否則 ALTER DATABASE REMOVE FILE 作業會無法移除 FILESTREAM 容器並傳回錯誤。 以下是移除 FILESTREAM 容器的建議處理序。  
+## <a name="removing-a-filestream-container"></a> 移除 FILESTREAM 容器  
+即使 FILESTREAM 容器已使用 "DBCC SHRINKFILE" 作業來清空，基於各種系統維護原因，資料庫可能仍然需要維護已刪除檔案的參考。 [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md) 會在可安全執行時，執行 FILESTREAM 記憶體回收行程來移除這些檔案。 除非 FILESTREAM 記憶體回收行程已移除 FILESTREAM 容器中的所有檔案，否則 ALTER DATABASE REMOVE FILE 作業會無法移除 FILESTREAM 容器並傳回錯誤。 以下是移除 FILESTREAM 容器的建議處理序。  
   
 1. 搭配 EMPTYFILE 選項執行 [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)，以將此容器內的作用中內容移動到其他容器。  
   
@@ -408,7 +426,6 @@ ADD FILE
     FILEGROWTH = 5MB  
 );  
 GO  
-  
 ```  
   
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. 將含有兩個檔案的檔案群組加入資料庫中  
@@ -438,7 +455,6 @@ ADD FILE
 )  
 TO FILEGROUP Test1FG1;  
 GO  
-  
 ```  
   
 ### <a name="c-adding-two-log-files-to-a-database"></a>C. 將兩個記錄檔加入資料庫中  
@@ -464,7 +480,6 @@ ADD LOG FILE
     FILEGROWTH = 5MB  
 );  
 GO  
-  
 ```  
   
 ### <a name="d-removing-a-file-from-a-database"></a>D. 從資料庫中移除檔案  
@@ -586,8 +601,7 @@ GO
 下列範例會將包含 `FILEGROUP` 子句的 `FILESTREAM` 加入 `FileStreamPhotoDB` 資料庫。  
   
 ```sql  
---Create and add a FILEGROUP that CONTAINS the FILESTREAM clause to  
---the FileStreamPhotoDB database.  
+--Create and add a FILEGROUP that CONTAINS the FILESTREAM clause.  
 ALTER DATABASE FileStreamPhotoDB  
 ADD FILEGROUP TodaysPhotoShoot  
 CONTAINS FILESTREAM;  
@@ -602,7 +616,27 @@ ADD FILE
 )  
 TO FILEGROUP TodaysPhotoShoot;  
 GO  
-```      
+```     
+
+下列範例會將包含 `FILEGROUP` 子句的 `MEMORY_OPTIMIZED_DATA` 加入 `xtp_db` 資料庫。 檔案群組儲存記憶體最佳化的資料。  
+  
+```sql 
+--Create and add a FILEGROUP that CONTAINS the MEMORY_OPTIMIZED_DATA clause.
+ALTER DATABASE xtp_db 
+ADD FILEGROUP xtp_fg 
+CONTAINS MEMORY_OPTIMIZED_DATA;  
+GO  
+
+--Add a file for storing memory optimized data to FILEGROUP
+ALTER DATABASE xtp_db 
+ADD FILE 
+(
+    NAME='xtp_mod', 
+    FILENAME='d:\data\xtp_mod'
+) 
+TO FILEGROUP xtp_fg;  
+GO
+```  
         
 ### <a name="j-change-filegroup-so-that-when-a-file-in-the-filegroup-meets-the-autogrow-threshold-all-files-in-the-filegroup-grow"></a>J. 變更檔案群組，以在當檔案群組中的某個檔案達到自動成長閾值時，檔案群組中的所有檔案都會成長
  下列範例會產生 `ALTER DATABASE` 陳述式，以使用 `AUTOGROW_ALL_FILES` 設定來修改讀寫檔案群組。  
@@ -1057,6 +1091,6 @@ GO
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
-[DBCC SHRINKFIL](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)  
- 
-::: moniker-end
+[DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
+[記憶體最佳化的檔案群組](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) 
+

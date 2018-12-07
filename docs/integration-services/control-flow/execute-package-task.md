@@ -20,12 +20,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8cb0ba9c72da4fe69988fa580ba3080237b3b078
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2148cf2e25e6cdddab20a29751cea82238159668
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640675"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535700"
 ---
 # <a name="execute-package-task"></a>執行封裝工作
   「執行封裝」工作可讓封裝將其他封裝當做工作流程的一部分執行，以延伸 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企業功能。  
@@ -103,7 +103,7 @@ ms.locfileid: "51640675"
  如需詳細資訊，請參閱 [Use the Values of Variables and Parameters in a Child Package](../../integration-services/packages/legacy-package-deployment-ssis.md#child)(在子封裝中使用變數和參數的值)。  
   
 ### <a name="accessing-parent-package-variables"></a>存取父封裝變數  
- 子封裝可藉由使用指令碼工作存取父封裝變數。 當你在 **[指令碼工作編輯器]** 的 **[指令碼]** 頁面上輸入父封裝變數的名稱時，變數名稱中請勿加上 **User:** 。 否則，在您執行父封裝時子封裝會找不到該變數。  
+ 子封裝可藉由使用指令碼工作存取父封裝變數。 當你在 [指令碼工作編輯器] 的 [指令碼]頁面上輸入父封裝變數的名稱時，變數名稱中請勿加上 **User:**。 否則，在您執行父封裝時子封裝會找不到該變數。  
   
 ## <a name="configuring-the-execute-package-task"></a>設定執行封裝工作  
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
@@ -158,7 +158,7 @@ ms.locfileid: "51640675"
 >  [ReferenceType] 選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]。 [部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
  **密碼**  
- 如果子封裝受到密碼保護，請提供子封裝的密碼，或按一下省略符號 (...) 按鈕，然後建立子封裝的新密碼。  
+ 如果子封裝受到密碼保護，請提供子封裝的密碼，或按一下省略符號 ([...]) 按鈕，然後建立子封裝的新密碼。  
   
  **ExecuteOutOfProcess**  
  指定子封裝是在父封裝的處理序中執行，還是在個別的處理序中執行。 依預設，[執行封裝] 工作的 ExecuteOutOfProcess 屬性會設定為 [False]，而且子封裝會在與父封裝的相同處理序中執行。 如果您將此屬性設定為 [True]，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 另外，如果此屬性設定為 [True]，則無法在僅限工具安裝中偵錯封裝；您必須安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 產品。 如需詳細資訊，請參閱[安裝 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
@@ -193,7 +193,7 @@ ms.locfileid: "51640675"
  **相關主題：**[OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **PackageName**  
- 輸入子封裝的名稱，或按一下省略符號 (…)，然後找出該封裝。  
+ 輸入子封裝的名稱，或按一下省略符號 ([...])，然後找出該封裝。  
   
 ##### <a name="location--file-system"></a>位置 = 檔案系統  
  **[連接]**  

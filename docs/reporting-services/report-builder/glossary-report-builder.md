@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6e96093d286fa9ca7d5d76fd30206043ef8396b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bddefafa610718710a6b8a41d267ceb8e3b5515d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857156"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541800"
 ---
 # <a name="glossary-report-builder"></a>詞彙 (報表產生器)
   
@@ -186,7 +186,7 @@ ms.locfileid: "47857156"
 |KPI|請參閱其他詞彙：關鍵效能指標|  
 |標籤欄位 (label field)|一種報表資料集欄位，可識別對應之索引鍵欄位的標籤。 參數和資料區可以顯示索引鍵欄位的標籤，而非值。|  
 |latency|從一部伺服器完成資料變更，到變更出現在另一部伺服器所經歷的時間量。|  
-|緯度 (latitude)|World Geodetic System (WGS 84) 資料中，以十進位度數值表示的緯度座標。 有效範圍是從 –90.0 到 +90.0。|  
+|緯度 (latitude)|World Geodetic System (WGS 84) 資料中，以十進位度數值表示的緯度座標。 有效範圍是從 -90.0 到 +90.0。|  
 |圖層 (layer)|在地圖報表項目中，圖層會指定空間資料單一類型的類型和呈現。 地圖報表項目是多個圖層的容器。|  
 |LCID|用於識別 Windows 架構地區設定的號碼。|  
 |圖例 (legend)|在報表圖表、地圖或量測計資料區中，在顯示資料呈現與基礎資料值之間提供導引的元素。|  
@@ -199,7 +199,7 @@ ms.locfileid: "47857156"
 |記錄檔 (log file)|包含資料庫修改記錄的檔案或檔案集合。|  
 |邏輯名稱 (logical name)|SQL Server 用於識別檔案的名稱。|  
 |邏輯運算子 (logical operators)|運算子 AND、OR 和 NOT。 這些運算子可用於連接 WHERE 子句中的搜尋條件。|  
-|經度 (longitude)|World Geodetic System (WGS 84) 資料中，以十進位度數值表示的座標。 有效範圍是從 –180.0 到 +180.0。|  
+|經度 (longitude)|World Geodetic System (WGS 84) 資料中，以十進位度數值表示的座標。 有效範圍是從 -180.0 到 +180.0。|  
 |多對多關聯性 (many-to-many relationship)|兩份資料表之間的一種關聯性，每份資料表中的資料列，在相關資料表中都有多個相符的資料列。 例如，每張銷售發票都可以包含多個產品，但每個產品也都可以出現在多張銷售發票上。|  
 |多對一關聯性 (many-to-one relationship)|兩份資料表之間的一種關聯性，一份資料表中的單一資料列可以關聯於另一份資料表中的多個資料列。|  
 |地圖 (map)|一種報表項目，這個報表項目是存放標題、各種圖例以及地圖圖層的容器。|  

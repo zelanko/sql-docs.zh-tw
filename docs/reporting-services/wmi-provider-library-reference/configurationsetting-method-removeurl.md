@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce67865100e9540a191019e9f3d1f9914817e45e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 043cf48d208378ab3fee65c52b9f7fb9c4e98f67
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761317"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509117"
 ---
 # <a name="configurationsetting-method---removeurl"></a>ConfigurationSetting 方法 - RemoveURL
   移除針對報表伺服器所保留的 URL。 如果有多個需要移除的 URL，您就必須呼叫這個 API 來逐一進行此作業。  

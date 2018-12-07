@@ -7,18 +7,18 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd469eb38d23a72037ab34dc6cceb45da39411a6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 01c93f13a94533c6562516ca398d76034564beb7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812991"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397705"
 ---
 # <a name="branding-the-web-portal"></a>建立入口網站品牌形象
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-您可以在入口網站上打造您的企業品牌形象，藉以變更入口網站的外觀。 這是透過品牌封裝來完成。 品牌封裝已完成設計，因此您不需要具備深度階層式樣式表 (CSS) 的知識，就能建立它。  
+您可以在入口網站上打造您的企業品牌形象，藉以變更入口網站的外觀。 這是透過品牌封裝來完成。 品牌套件已完成設計，因此您不需要具備深度階層式樣式表 (CSS) 的知識，就能建立它。  
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    

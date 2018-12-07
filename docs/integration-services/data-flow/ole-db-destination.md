@@ -24,12 +24,12 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fb8aaaabd83d6e5f5f234c58f3c9dcfab1ee7fa
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e9eccb240bbce57f16442092996698dc619f5fab
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640128"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525320"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目的地
   OLE DB 目的地會使用資料庫的資料表、檢視或 SQL 命令將資料載入各種符合 OLE DB 標準的資料庫。 例如，OLE DB 來源可以將資料載入至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表中。  
@@ -161,7 +161,7 @@ ms.locfileid: "51640128"
 > [!NOTE]  
 >  當您按一下 **[新增]** 時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會根據連接的資料來源來產生預設 CREATE TABLE 陳述式。 這個預設 CREATE TABLE 陳述式將不會包含 FILESTREAM 屬性，即使來源資料表包含有宣告 FILESTREAM 屬性的資料行亦然。 若要執行具有 FILESTREAM 屬性的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件，請先在目的地資料庫上實作 FILESTREAM 儲存體。 然後在 **[建立資料表]** 對話方塊中，將 FILESTREAM 屬性加入至 CREATE TABLE 陳述式。 如需詳細資訊，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
-#### <a name="data-access-mode--table-or-view--fast-load"></a>資料存取模式 = 資料表或檢視 - 快速載入  
+#### <a name="data-access-mode--table-or-view---fast-load"></a>資料存取模式 = 資料表或檢視 - 快速載入  
  **資料表或檢視的名稱**  
  使用此清單從資料庫選取資料表或檢視，或按一下 [新增] 建立新的資料表。  
   
@@ -204,7 +204,7 @@ ms.locfileid: "51640128"
  **變數名稱**  
  請選取包含資料表或檢視名稱的變數。  
   
-#### <a name="data-access-mode--table-name-or-view-name-variable--fast-load"></a>資料存取模式 = 資料表名稱或檢視名稱變數 - 快速載入)  
+#### <a name="data-access-mode--table-name-or-view-name-variable---fast-load"></a>資料存取模式 = 資料表名稱或檢視名稱變數 - 快速載入)  
  **變數名稱**  
  請選取包含資料表或檢視名稱的變數。  
   

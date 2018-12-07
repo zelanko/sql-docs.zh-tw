@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: aa3decb1f8abd44dc9e35f75de63ebae24a885e9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e0481611eb666b893395581805c923cf03921ad9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704016"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509376"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -155,7 +155,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 USE master  
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a trailing forward slash.  
    WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.   
-   , SECRET = 'sharedaccesssignature' –- this is the shared access signature token   
+   , SECRET = 'sharedaccesssignature' -- this is the shared access signature token   
 GO    
 ```  
   

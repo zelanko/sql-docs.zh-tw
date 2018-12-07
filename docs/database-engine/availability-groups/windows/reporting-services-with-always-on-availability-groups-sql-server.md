@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 8dde773d49f9f53c6c35a7a4508b3666180480fd
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 66a1663a0411f91dcf89c294f10f087704ec96e3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604948"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418667"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 與 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "51604948"
   
  使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 搭配  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 及更早版本時，您必須下載並安裝 .Net 3.5 SP1 的 Hotfix。 此 Hotfix 會加入 SQL 用戶端對於 AG 功能的支援，以及連接字串屬性 **ApplicationIntent** 和 **MultiSubnetFailover**的支援。 如果裝載報表伺服器的每部電腦沒有安裝此 Hotfix，則嘗試預覽報表的使用者將會看見類似下面的錯誤訊息，而且該錯誤訊息將寫入報表伺服器追蹤記錄：  
   
-> **錯誤訊息** ：「不支援關鍵字 ‘applicationintent’」  
+> **錯誤訊息：**「不支援關鍵字 'applicationintent'」  
   
- 當您在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 連接字串中加入其中一個 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 屬性，但是伺服器無法辨識該屬性時，就會出現此訊息。 如果報表伺服器已啟用遠端錯誤，當您在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用者介面中按一下 [測試連接] 按鈕以及預覽報表時，就會看見上述錯誤訊息。  
+ 當您在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 連接字串中加入其中一個 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 屬性，但是伺服器無法辨識該屬性時，就會出現此訊息。 如果報表伺服器已啟用遠端錯誤，當您在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用者介面中按一下 [測試連線] 按鈕以及預覽報表時，就會看見上述錯誤訊息。  
   
  如需有關必要 Hotfix 的詳細資訊，請參閱 [KB 2654347A hotfix introduces support for the AlwaysOn features from SQL Server 2012 to the .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkId=242896) (KB 2654347A Hotfix 從 SQL Server 2012 將 AlwaysOn 功能支援引進 .NET Framework 3.5 SP1 中)。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "51604948"
   
 -   主要與次要複本之間的地理位置和距離。 例如，如果次要複本與主要複本位於不同的資料中心，其延遲通常會比次要複本與主要複本位於相同建築物的延遲要長。  
   
--   每個複本之可用性模式的組態。 可用性模式會決定在次要複本將交易寫入磁碟之前，主要複本是否要等候認可資料庫上的交易。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 中的「可用性模式」一節。  
+-   每個複本之可用性模式的組態。 可用性模式會決定在次要複本將交易寫入磁碟之前，主要複本是否要等候認可資料庫上的交易。 如需詳細資訊，請參閱[可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 中的＜可用性模式＞一節。  
   
  使用唯讀次要複本做為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料來源時，請務必確定資料更新延遲符合報表使用者的需求。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "51604948"
   
 -   **遠端或伺服器模式預覽：** 如果將報表發行至報表伺服器或在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)]中使用預覽功能之後，您看見類似下面的錯誤，就表示您正在根據報表伺服器預覽報表，而且報表伺服器尚未安裝 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 .Net Framework 3.5 SP1 Hotfix。  
   
-> **錯誤訊息** ：「不支援關鍵字 ‘applicationintent’」  
+> **錯誤訊息：**「不支援關鍵字 'applicationintent'」  
   
 ##  <a name="bkmk_reportserverdatabases"></a> 報表伺服器資料庫和可用性群組  
  Reporting Services 和 Power BI 報表伺服器針對 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 與報表伺服器資料庫搭配使用提供有限的支援。 您可以在 AG 中將報表伺服器資料庫設定為複本的一部分，但在容錯移轉時， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 不會自動為報表伺服器資料庫使用不同的複本。 不支援搭配報表伺服器資料庫使用 MultiSubnetFailover。  
@@ -142,7 +142,7 @@ ms.locfileid: "51604948"
   
 -   ReportServerTempDB  
   
- 原生模式不支援或使用警示資料庫及相關功能。 您可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態管理員中設定原生模式報表伺服器。 若為 SharePoint 模式，您可以將服務應用程式資料庫名稱設定為進行 SharePoint 組態設定時所建立之「用戶端存取點」的名稱。 如需使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 來設定 SharePoint 的詳細資訊，請參閱 [Configure and manage SQL Server availability groups for SharePoint Server (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165) (設定及管理 SharePoint Server 的 SQL Server 可用性群組)。  
+ 原生模式不支援或使用警示資料庫及相關功能。 您可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態管理員中設定原生模式報表伺服器。 若為 SharePoint 模式，您可以將服務應用程式資料庫名稱設定為 SharePoint 設定期間所建立的「用戶端存取點」名稱。 如需使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 來設定 SharePoint 的詳細資訊，請參閱 [Configure and manage SQL Server availability groups for SharePoint Server (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165) (設定及管理 SharePoint Server 的 SQL Server 可用性群組)。  
   
 > [!NOTE]  
 >  SharePoint 模式報表伺服器會在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務應用程式資料庫與 SharePoint 內容資料庫之間使用同步處理程序。 請務必一起維護報表伺服器資料庫和內容資料庫。 您應該考慮將它們設定在相同的可用性群組中，以便一起容錯移轉和復原。 請考慮下列案例：  
@@ -158,7 +158,7 @@ ms.locfileid: "51604948"
   
 -   **主要複本** ：將報表伺服器資料庫設定為單一可用性群組的一部分，並且建立包含所有報表伺服器資料庫的主要複本。  
   
--   **次要複本** ：建立一個或多個次要複本。 將資料庫從主要複本複製到次要複本的常見方法是使用 ‘RESTORE WITH NORECOVERY’，將資料庫還原至每個次要複本。 如需有關建立次要複本以及驗證資料同步處理是否運作的詳細資訊，請參閱 [Start Data Movement on an AlwaysOn Secondary Database &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md) (於 AlwaysOn 次要資料庫啟動資料移動 (SQL Server))。  
+-   **次要複本** ：建立一個或多個次要複本。 將資料庫從主要複本複製到次要複本的常見方法是使用 'RESTORE WITH NORECOVERY'，將資料庫還原至每個次要複本。 如需有關建立次要複本以及驗證資料同步處理是否運作的詳細資訊，請參閱 [Start Data Movement on an AlwaysOn Secondary Database &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md) (於 AlwaysOn 次要資料庫啟動資料移動 (SQL Server))。  
   
 -   **報表伺服器認證** ：您必須在次要與主要複本上建立適當的報表伺服器認證。 確切步驟主要取決於您在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 環境中使用的驗證類型：Windows [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務帳戶、Windows 使用者帳戶或 SQL Server 驗證。 如需詳細資訊，請參閱[設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   

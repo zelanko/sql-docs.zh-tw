@@ -17,12 +17,12 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49902e85a1d70fe39f74429999312c4f6263b04e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 254fa32ff939f7e84c361cd5baae4c99d4c42715
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702816"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539678"
 ---
 # <a name="ssms-utility"></a>Ssms 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -15,12 +15,12 @@ ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 76a3fe793e43af89dbbf29c934604d1e3102076a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: beda08746db1d0632c237afe1312f84d934b8924
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661114"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502672"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>建立新原則或開啟原則對話方塊，一般頁面
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "51661114"
  使用 **[視需要]** 評估模式執行的原則不會使用這個核取方塊。  
   
  **檢查條件**  
- 選取這個原則使用之以原則為基礎的管理條件。 伺服器上關聯之以原則為基礎之管理 Facet 的條件都會列出來。 按一下 **[新增條件]** 即可建立新條件。 按一下省略符號 (**…**) 按鈕即可修改條件。  
+ 選取這個原則使用之以原則為基礎的管理條件。 伺服器上關聯之以原則為基礎之管理 Facet 的條件都會列出來。 按一下 **[新增條件]** 即可建立新條件。 按一下省略符號 (**...**) 按鈕即可修改條件。  
   
  **[針對目標]**  
  選取可供這個 Facet 使用的目標類型，以完成篩選運算式。  

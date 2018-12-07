@@ -23,17 +23,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e0b6dacfa0facce9da804dac8406885e7228e4c
-ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
+ms.openlocfilehash: 7a8784072fe01c8da2af3af601126957583f9ebf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49359278"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515796"
 ---
 # <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-此函式會在發生錯誤且該錯誤造成執行 TRY…CATCH 建構的 CATCH 區塊時，傳回錯誤的嚴重性值。  
+此函式會在發生錯誤且該錯誤造成執行 TRY...CATCH 建構的 CATCH 區塊時，傳回錯誤的嚴重性值。  
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

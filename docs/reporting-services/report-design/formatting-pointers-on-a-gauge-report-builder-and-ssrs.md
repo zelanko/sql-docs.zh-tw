@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 17ecab14fce7cc302fafb64e949a7ed896e2ccdb
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b4ebed5355fdbbd4185301fa87e4c525a89b3171
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028587"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504036"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>格式化量測計上的指標 (報表產生器及 SSRS)
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，量測計指標會指出量測計目前的值。   
@@ -37,7 +37,7 @@ ms.locfileid: "50028587"
 ##  <a name="DisplayingMultiple"></a> 在量測計上顯示多個指標  
  您可以將多個指標加入到量測計中，以便在相同的標尺上指出多個值。 這對於同時顯示最低值和最高值可能相當實用。 若要在量測計上針對相同的標尺指定一個以上的指標，以滑鼠右鍵按一下量測計內部的任何位置，然後在快速鍵功能表上按一下 [新增指標]。 或者，您可以用滑鼠右鍵按一下量測計的任何位置，然後按一下 [新增標尺]，即可新增標尺。 接著，您可以加入新的指標，該指標就會與最後一個標尺自動產生關聯。  
   
- 當指標重疊時，指標的繪圖順序取決於指標加入到量測計中的順序。 您無法透過變更資料窗格中的欄位順序來重新排列指標的繪製順序。 若要變更多個指標的繪製順序，開啟 [屬性] 窗格，然後按一下 [指標 (…)]。 然後變更 [指標] 集合中的指標順序。  
+ 當指標重疊時，指標的繪圖順序取決於指標加入到量測計中的順序。 您無法透過變更資料窗格中的欄位順序來重新排列指標的繪製順序。 若要變更多個指標的繪製順序，請開啟 [屬性] 窗格，然後按一下 [指標 (...)]。然後變更 [指標] 集合中的指標順序。  
   
 ##  <a name="SettingGradients"></a> 在指針端點上設定漸層  
  您可以指定僅能在星形量測計之指標上方或下方繪製的指針端點。 所有指針端點樣式都可以使用無法修改的內建漸層繪製。 但 **RoundedDark** 樣式除外，您可以在其中指定漸層色彩與漸層樣式。  

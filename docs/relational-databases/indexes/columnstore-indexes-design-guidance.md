@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01be3d3e15f85a5b95a0d704f40bfb0cc0017732
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 085764ce76a5a6eb18d23c1c77ef67dd63282a56
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625766"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545702"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>資料行存放區索引 - 設計指導
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -183,7 +183,7 @@ ms.locfileid: "47625766"
 |從資料行存放區索引刪除資料列|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|使用 [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) 刪除資料列。<br /><br /> **資料行存放區** 資料列： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將該資料列標示為邏輯刪除，但在重建索引之前，不會回收該資料列的實體儲存體。<br /><br /> **差異存放區** 資料列： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會以邏輯方式實際刪除該資料列。|  
 |更新資料行存放區索引中的資料列|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|使用 [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) 更新資料列。<br /><br /> **資料行存放區** 資料列：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將該資料列標示為邏輯刪除，然後將更新的資料列插入差異存放區中。<br /><br /> **差異存放區** 資料列： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會更新差異存放區中的該資料列。|  
 |強制將差異存放區中的所有資料列移入資料行存放區。|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ...REBUILD<br /><br /> [資料行存放區索引 - 重組](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)|ALTER INDEX 搭配 REBUILD 選項會強制將所有資料列移入資料行存放區。|  
-|重組資料行存放區索引|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX … REORGANIZE 會線上重組資料行存放區索引。|  
+|重組資料行存放區索引|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX ...REORGANIZE 會線上重組資料行存放區索引。|  
 |合併具有資料行存放區索引的資料表。|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)|
 
 

@@ -26,12 +26,12 @@ ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c4c3cd3a35cd15d1e9751ba939809a5d596bd2ae
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 1c9c330ab53b83eb46fa60002bc8aa6c0ed72e13
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603978"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534671"
 ---
 # <a name="database-engine-service-startup-options"></a>Database Engine 服務啟動選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,13 +71,13 @@ ms.locfileid: "51603978"
 |**-E**|增加針對檔案群組內每一個檔案所配置的範圍數。 這個選項對於有限制執行索引或資料掃描之使用者數目的資料倉儲應用程式可能會很有幫助。 其他應用程式內不應該使用這個選項，因為它對於效能可能有負面影響。 32 位元的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中不支援這個選項。|  
   
 ## <a name="using-startup-options-for-troubleshooting"></a>使用啟動選項進行疑難排解  
- 有些啟動選項 (例如單一使用者模式和最低組態模式) 主要是在疑難排解期間使用。 手動啟動 sqlservr.exe 時，使用 **–m** 或 **–f** 選項來啟動伺服器進行疑難排解是在命令列中最容易的作業。  
+ 有些啟動選項 (例如單一使用者模式和最低組態模式) 主要是在疑難排解期間使用。 手動啟動 sqlservr.exe 時，使用 **-m** 或 **-f** 選項來啟動伺服器進行疑難排解是在命令列中最容易的作業。  
   
 > [!NOTE]  
 >  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net start **啟動**時，啟動選項會使用斜線 (/)，而非連字號 (-)。  
   
 ## <a name="using-startup-options-during-normal-operations"></a>在正常作業期間使用啟動選項  
- 在您每次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，可能都會想要使用一些啟動選項。 只要使用 **組態管理員來設定啟動參數，很容易就可以完成這些選項 (例如** –g [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或以追蹤旗標啟動)。 這些工具會將啟動選項儲存成登錄機碼，這樣 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就一定會使用這些啟動選項來啟動。  
+ 在您每次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，可能都會想要使用一些啟動選項。 只要使用 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員] 來設定啟動參數，很容易就可以完成這些選項 (例如 **-g** 或以追蹤旗標啟動)。 這些工具會將啟動選項儲存成登錄機碼，這樣 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就一定會使用這些啟動選項來啟動。  
   
 ## <a name="compatibility-support"></a>相容性支援  
  **不支援**  -h [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]參數。 舊版 32 位元 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體使用此參數，在啟用 AWE 的狀況下保留 Hot Add Memory 中繼資料的虛擬記憶體位址空間。 如需詳細資訊，請參閱 [SQL Server 2016 中已取代及已中止的 SQL Server 功能](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da)。  

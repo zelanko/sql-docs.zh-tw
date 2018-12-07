@@ -14,17 +14,17 @@ ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae1f86ce6127a963256bfb88f00621af1fb2cb14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 963c6f24cd5aea9e84544b1b3d0e05045f8aa588
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681654"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511345"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>開發自訂連接管理員的使用者介面
   在您覆寫基底類別的屬性與方法的實作，以提供自訂功能之後，可能會想要建立連接管理員的自訂使用者介面。 如果您不建立自訂使用者介面，使用者只能透過使用 [屬性] 視窗設定您的連接管理員。  
   
- 在自訂使用者介面專案或是組件中，通常有兩個類別：實作 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> 的類別，以及它所顯示的 Windows Form，以蒐集使用者資訊。  
+ 在自訂使用者介面專案或組件中，通常有兩個類別：實作 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> 的類別，以及它所顯示的 Windows Form，以收集使用者資訊。  
   
 > [!IMPORTANT]  
 >  在簽署和建立自訂使用者介面，以及在全域組件快取中安裝它之後 (如[撰寫自訂連線管理員的程式碼](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)中所述)，請記得在 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> 屬性中提供這個類別的完整名稱。  

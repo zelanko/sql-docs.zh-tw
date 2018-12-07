@@ -15,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88ed8266a4de04df116989953b3e5b43a162e265
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbe7f38f6132e79f1938936c0914bae236ea5a03
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818130"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543624"
 ---
 # <a name="create-synonyms"></a>建立同義字
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47818130"
   
 -   **若要使用下列項目來建立同義字：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47818130"
 ###  <a name="Security"></a> 安全性  
  若要以給定結構描述建立同義字，使用者必須擁有 CREATE SYNONYM 權限，並擁有該結構描述或 ALTER SCHEMA 權限。 CREATE SYNONYM 權限是可授與的權限。  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   

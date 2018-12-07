@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 71e15d2c5bec349b20a87023912a80864563e8ca
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 61b886408c25f2200140609879421623f25cb81b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696167"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521672"
 ---
 # <a name="implement-sql-server-agent-security"></a>實作 SQL Server Agent 安全性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -64,17 +64,17 @@ ms.locfileid: "51696167"
   
 -   請勿將 NT 管理員帳戶指定為服務帳戶或 Proxy 帳戶。  
   
--   請注意， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 有存取對方資產的權限。 這兩個服務共用單一處理序空間，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務上的系統管理員 (sysadmin)。  
+-   請注意，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 有存取對方資產的權限。 這兩個服務共用單一處理序空間，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務上的系統管理員 (sysadmin)。  
   
 -   當 TSX 在 MSX 上編列時，MSX 系統管理員 (sysadmin) 會取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]TSX 執行個體的完整控制權。  
   
 -   ACE 是延伸模組，並不能叫用它本身。 ACE 是由 Chainer ScenarioEngine.exe (也稱為 Microsoft.SqlServer.Chainer.Setup.exe) 叫用，也可由另一個主機處理序叫用。  
   
--   ACE 取決於 SSDP 所擁有的下列組態 DLL，因為 ACE 會呼叫 DLL 的這些 API：  
+-   ACE 取決於 SSDP 所擁有的下列設定 DLL，因為 ACE 會呼叫 DLL 的這些 API：  
   
     -   **SCO** - Microsoft.SqlServer.Configuration.Sco.dll，包括虛擬帳戶的新 SCO 驗證  
   
-    -    - Microsoft.SqlServer.Configuration.Cluster.dll  
+    -   **叢集** - Microsoft.SqlServer.Configuration.Cluster.dll  
   
     -   **SFC** - Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
   

@@ -24,12 +24,12 @@ ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9be3d672d96ffc686ea38f81caa3ecea62b0a578
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d3405aa23caf7df2f0f2f02425a681d84197d8f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759753"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521565"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY Service Broker 權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +58,19 @@ DENY permission  [ ,...n ] ON
  *permission*  
  指定 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 安全性實體可以拒絕的權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- CONTRACT **::***contract_name*  
+ CONTRACT **::**_contract_name_  
  指定正在拒絕權限的合約。 範圍限定詞 **::** 為必要項目。  
   
- MESSAGE TYPE **::***message_type_name*  
+ MESSAGE TYPE **::**_message_type_name_  
  指定正在拒絕權限的訊息類型。 範圍限定詞 **::** 為必要項目。  
   
- REMOTE SERVICE BINDING **::***remote_binding_name*  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  指定正在拒絕權限的遠端服務繫結。 範圍限定詞 **::** 為必要項目。  
   
- ROUTE **::***route_name*  
+ ROUTE **::**_route_name_  
  指定正在拒絕權限的路由。 範圍限定詞 **::** 為必要項目。  
   
- SERVICE **::***message_type_name*  
+ SERVICE **::**_message_type_name_  
  指定正在拒絕權限的服務。 範圍限定詞 **::** 為必要項目。  
   
  *database_principal*  

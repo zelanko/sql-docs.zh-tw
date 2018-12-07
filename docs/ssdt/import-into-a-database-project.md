@@ -15,12 +15,12 @@ ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7a570dda05c5fe83227b7f88209eecdc25529e0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c5cf17437f97aa649ee81f2fb0f71061df04fec8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667097"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400391"
 ---
 # <a name="import-into-a-database-project"></a>匯入資料庫專案中
 您可以使用 [匯入]，將即時資料庫或 .dacpac 中的新物件填入專案，或者使用指令碼中的新定義來更新專案中的現有物件。 這三種路徑之間存在一些需要注意的行為差異，下面將詳細說明。  
@@ -40,7 +40,7 @@ ms.locfileid: "51667097"
 ## <a name="bkmk_import_source_db"></a>匯入來源：資料庫或資料層應用程式 (*.dacpac)  
 只有當專案尚未定義任何結構描述物件時，才能使用從資料庫或 .dacpac 檔案匯入結構描述的功能。 這不包括 RefactorLog 或預先部署/部署後指令碼。  
   
-匯入時，系統會針對新物件使用 SSDT 的組織預設值，將物件定義編碼成專案檔：新檔案代表最上層物件、階層子系與父系定義於相同的檔案中，並且盡可能以內嵌方式定義資料表/資料行條件約束。 如需提高每個物件的目標可見性和控制能力，請使用 [結構描述比較] 而非 [匯入]。  
+匯入時，系統會針對新物件使用 SSDT 的組織預設，將物件定義編碼成專案檔：新檔案代表最上層物件、階層子系與父系定義於相同的檔案中，並且盡可能以內嵌方式定義資料表/資料行條件約束。 如需提高每個物件的目標可見性和控制能力，請使用 [結構描述比較] 而非 [匯入]。  
   
 如果匯入來源包含預先部署和部署後指令碼、RefactorLog 或 SQLCMD 變數定義，它們將匯入專案中。 如果專案已經包含上述任何一種成品，匯入的檔案將加入至專案中的 [匯入時忽略] 資料夾。  
   

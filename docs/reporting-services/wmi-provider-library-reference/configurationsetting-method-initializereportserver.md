@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9dca016cd56035a9973dd649744f7bca08e2e58a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4084310c0c01b7a06a752783db74615a92aa83ff
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626226"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405544"
 ---
 # <a name="configurationsetting-method---initializereportserver"></a>ConfigurationSetting 方法 - InitializeReportServer
   初始化指定的報表服務執行個體。  
@@ -53,11 +53,11 @@ public void InitializeReportServer(string InstallationID,
 ## <a name="remarks"></a>Remarks  
  呼叫這個方法時，系統會使用 *InstallationID*所識別之報表伺服器的公開金鑰來加密存取報表伺服器資料庫安全資訊的加密金鑰。  
   
- 指定之報表伺服器的公開金鑰必須已經事先寫入報表伺服器資料庫中。  
+ 所指定報表伺服器的公開金鑰必須已經事先寫入報表伺服器資料庫中。  
   
  您必須針對已經擁有安全資訊之存取權的報表伺服器呼叫 *InitializeReportServer* 方法，才能讓它解密加密金鑰。 然後，所產生且已加密的加密金鑰密就會儲存在報表伺服器資料庫中。  
   
- 如果呼叫 InitializeReportServer 方法時，報表伺服器的 [IsInitialized](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-isinitialized.md) 屬性設定為 **true** ，此方法就會傳回成功但不會嘗試加密加密金鑰。  
+ 如果呼叫 InitializeReportServer 方法時，報表伺服器的 [IsInitialized](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-isinitialized.md) 屬性設定為 **true**，此方法就會傳回成功但不會嘗試加密加密金鑰。  
   
 ## <a name="requirements"></a>需求  
  **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
