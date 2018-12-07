@@ -50,7 +50,7 @@ ms.locfileid: "51660567"
 |關鍵字|傳回清單？|選擇性？|描述|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|是|是|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的名稱。|  
-|LANGUAGE|是|是|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的國家語言。|  
+|LANGUAGE|是|是|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的國家/地區語言。|  
   
  **SQLBrowseConnect**會忽略儲存在 ODBC 資料來源定義中的資料庫和語言關鍵字的值。 如果資料庫或連接字串中指定的語言傳遞給**SQLBrowseConnect**無效**SQLBrowseConnect**會傳回 SQL_NEED_DATA 和層級 3 連接屬性。  
   

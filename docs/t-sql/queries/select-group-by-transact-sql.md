@@ -254,7 +254,7 @@ GROUP BY CUBE (Country, Region);
 SQL 不會合併針對 GROUPING SETS 清單所產生的重複群組。 例如，在 `GROUP BY ( (), CUBE (Country, Region) )` 中，兩個元素都傳回總計的資料列，但兩個資料列都會列在結果中。 
 
  ### <a name="group-by-"></a>GROUP BY ()  
-指定產生總計的空群組。 當其中一個元素是 GROUPING SET 時，這非常有用。 例如，此陳述式計算每個國家的銷售總額，然後計算所有國家的總計。
+指定產生總計的空群組。 當其中一個元素是 GROUPING SET 時，這非常有用。 例如，此陳述式計算每個國家/地區的銷售總額，然後計算所有國家/地區的總計。
 
 ```sql
 SELECT Country, SUM(Sales) AS TotalSales

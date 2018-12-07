@@ -16,7 +16,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5300285872c0c03ce25410ba0bfd636c7ccf6bca
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48208517"
@@ -46,7 +46,7 @@ ms.locfileid: "48208517"
 |關鍵字|傳回清單？|選擇性？|描述|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|是|是|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的名稱。|  
-|LANGUAGE|是|是|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的國家語言。|  
+|LANGUAGE|是|是|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的國家/地區語言。|  
   
  **SQLBrowseConnect**會忽略儲存在 ODBC 資料來源定義中的資料庫和語言關鍵字的值。 如果資料庫或連接字串中指定的語言傳遞給**SQLBrowseConnect**無效**SQLBrowseConnect**會傳回 SQL_NEED_DATA 和層級 3 連接屬性。  
   

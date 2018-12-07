@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 090621c73636199d5a811c9cbd158c53c4499556
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53220459219e1e218b80cb997b0749a85b3c0480
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650886"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516772"
 ---
 # <a name="sql-server-browser-properties-log-on-tab"></a>SQL Server Browser 屬性 (登入索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47650886"
  確認安全性主體的密碼。  
   
  **服務狀態**  
- 表示這項服務為執行中、已停止或已停用。 "" 表示狀態變更已暫止。  
+ 表示這項服務為執行中、已停止或已停用。 "**...**" 表示狀態變更已暫止。  
   
  **啟動**  
  啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器服務。  
