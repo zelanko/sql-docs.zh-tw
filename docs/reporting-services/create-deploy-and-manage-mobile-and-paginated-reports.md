@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8fe389985659013e88009822eb20cf21302423e6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 2d69df56647cb378bee2627344a8db09df2bfa57
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029427"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712549"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>什麼是 SQL Server Reporting Services (SSRS)？
 
@@ -36,9 +36,9 @@ ms.locfileid: "50029427"
 
 SQL Server Reporting Services 是客戶可在自己的內部部署的解決方案，以便建立、發行和管理報表，然後以不同的方式將報表提供給正確的使用者，而不論使用者是在其行動裝置上的網頁瀏覽器中檢視報表，還是將報表當做 [收件匣] 中的電子郵件進行檢視。
 
-SQL Server 2016 版的 Reporting Services 提供更新產品套件：
+SQL Server Reporting Services 提供更新產品套件：
 
-* **「傳統」分頁報表** 已經過更新，因此您可以建立具有現代化外觀的報表，並提供更新工具和新功能來建立這些報表。
+* **「傳統」分頁報表**已經過更新，因此您可以建立具有現代化外觀的報表，並提供更新工具和新功能來建立這些報表。
 * **新的行動報表** 具有可配合不同裝置和不同保留方式調整的回應式配置。
 * 您可以在任何新式瀏覽器中檢視的**新式入口網站** 。 在新的入口網站，您可以組織並顯示行動與分頁的 Reporting Services 報表和 KPI。 您也可以在入口網站上儲存 Excel 活頁簿。
 
@@ -46,7 +46,7 @@ SQL Server 2016 版的 Reporting Services 提供更新產品套件：
 
 ### <a name="whats-new-in-reporting-services"></a>Reporting Services 的新功能
 
-這些資訊來源可讓您持續掌握最新的 SQL Server 2016 Reporting Services 新功能。
+這些資訊來源可讓您持續掌握最新的 SQL Server Reporting Services 新功能。
 
 * [Reporting Services 的新功能](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
 * [SQL Server Reporting Services 小組部落格](https://blogs.msdn.microsoft.com/sqlrsteamblog/)
@@ -73,7 +73,7 @@ Reporting Services 與「傳統」分頁文件樣式報表相關聯，您擁有�
 
 針對這些各式各樣的螢幕板型規格，您需要的不是固定式配置，而是可配合這些不同裝置和不同保留方式調整的回應式配置。 我們為此新增了一個報表類型，那就是行動報表；該報表是以我們約在一年前整合到產品的 Datazen 技術為基礎。 您可以使用 [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/download/details.aspx?id=53128)，將現有的 Datazen 報表移轉至 Reporting Services。 
 
-您可以在新的 [行動報表發行工具](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 應用程式中建立這些行動報表。 接著在適用於 Windows 10、iOS、Android 和 HTML5 之 [行動裝置的原生 Power BI 應用程式](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) 中，您可以存取 Power BI 中的雲端資料，以及您的內部部署 SQL Server 2016 Reporting Services 資料。 當您建立視覺效果時，行動報表發行工具會自動為每個視覺效果產生範例資料，因此您會看到資料的視覺效果，並了解每種視覺效果適用的資料類型。
+您可以在新的 [行動報表發行工具](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 應用程式中建立這些行動報表。 接著在適用於 Windows 10、iOS、Android 和 HTML5 之 [行動裝置的原生 Power BI 應用程式](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) 中，您可以存取 Power BI 中的雲端資料，以及您的內部部署 SQL Server Reporting Services 資料。 當您建立視覺效果時，行動報表發行工具會自動為每個視覺效果產生範例資料，因此您會看到資料的視覺效果，並了解每種視覺效果適用的資料類型。
 
 ## <a name="web-portal"></a>入口網站
 

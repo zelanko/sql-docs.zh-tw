@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be1056992fea4b9b1ee7bcd0857ca566d67cab40
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 2a720f17e43dc22c5bb554c1e7a83cc7e845b835
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813851"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711299"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>教學課程：如何尋找及啟動 Reporting Services 工具 (SSRS)
 
@@ -132,7 +132,7 @@ ms.locfileid: "51813851"
  若要著手建立第一份報表，請參閱[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。 若要深入了解可在報表設計師中使用的查詢設計工具，請參閱 [查詢設計工具 &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)的技巧。  
   
 ##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
- [SQL Server 2016 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) 是獨立的應用程式，可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]外建立分頁報表。 不論報表是使用報表設計師還是舊版 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]所建立，您都可以自訂與更新所有現有的報表。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入口網站或 Microsoft 下載中心進行安裝。  
+ [SQL Server 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) 是獨立的應用程式，可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外建立分頁報表。 不論報表是使用報表設計師還是舊版 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]所建立，您都可以自訂與更新所有現有的報表。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入口網站或 Microsoft 下載中心進行安裝。  
   
  從 Microsoft 下載中心[下載報表產生器](https://go.microsoft.com/fwlink/?LinkID=219138) 。  
   

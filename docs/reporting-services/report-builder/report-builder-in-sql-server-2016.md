@@ -1,6 +1,6 @@
 ---
-title: SQL Server 2016 的報表產生器 | Microsoft Docs
-ms.date: 03/30/2017
+title: SQL Server 的報表產生器 | Microsoft Docs
+ms.date: 11/29/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15762e449c61642989dd507897682d30b4c1421d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 381f0070a8e045aeec707c1f8dc9a6df9cd157d9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690956"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711416"
 ---
-# <a name="report-builder-in-sql-server-2016"></a>SQL Server 2016 的報表產生器
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是製作分頁報表的工具，適用於喜歡在獨立環境中工作的商務使用者，而非使用 Visual Studio 報表設計師。  當您設計分頁報表時，您建立的報表定義會指定資料的取得位置、要取得的資料，以及資料的顯示方式。 當您執行報表時，報表處理器會採用已指定的報表定義、擷取資料，然後將它與報表配置結合，以便產生報表。 您可以在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中預覽報表，然後將報表發行至原生模式或 SharePoint 整合模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器，讓其他人執行報表。  
+# <a name="report-builder-in-sql-server"></a>SQL Server 的報表產生器
+  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是製作分頁報表的工具，適用於喜歡在獨立環境中工作的商務使用者，而非使用 Visual Studio 報表設計師。  當您設計分頁報表時，您建立的報表定義會指定資料的取得位置、要取得的資料，以及資料的顯示方式。 當您執行報表時，報表處理器會採用已指定的報表定義、擷取資料，然後將它與報表配置結合，以便產生報表。 您可以在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中預覽報表。 然後，您可在原生模式或 SharePoint 整合模式 (2016 或更舊版本) 發佈至 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器。 您也可以將編頁報表發佈至 Power BI 服務。 深入了解 [Power BI Premium 中的編頁報表](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (預覽)。
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47690956"
   
   [安裝報表產生器](../../reporting-services/install-windows/install-report-builder.md)
 
-  [SQL Server 2016 Reporting Services 和報表產生器的新功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+  [SQL Server Reporting Services 和報表產生器的新功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   描述此版本 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]的新功能。   
   [教學課程：離線建立快速圖表報表](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  介紹 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 以及可協助您建立報表的精靈。 此教學課程會提供一組資料供您使用，所以您不需要連接至資料來源以便開始作業。  
@@ -89,6 +89,6 @@ ms.locfileid: "47690956"
  說明共用資料集設計檢視的不同窗格和區域。  
   
  [鍵盤快速鍵 &#40;報表產生器&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
- 概述 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中可用於導覽及設計報表的快速鍵。  
+ 概述 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中可用於導覽及設計報表的快速鍵。  
   
 

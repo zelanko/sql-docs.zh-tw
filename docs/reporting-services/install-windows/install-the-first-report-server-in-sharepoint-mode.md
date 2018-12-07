@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f89e3d512c76557548ef3fc707861e708a28dc64
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 8e65d1f965b45d808ba68a9cdffc87fad6f08814
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814131"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712309"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>以 SharePoint 模式安裝第一部報表伺服器
 
@@ -108,7 +108,7 @@ ms.locfileid: "51814131"
   
 2.  在精靈的左側選取 [安裝]，然後選取 [新增 SQL Server 獨立安裝或將功能新增至現有安裝]。  
 
-3.  如果您看見 **[產品金鑰]** 頁面，請輸入您的金鑰或接受 "Enterprise Evaluation" 版本的預設值。  
+3.  如果您看見 [產品金鑰] 頁面，請輸入您的金鑰或接受 "Enterprise Evaluation" 版本的預設值。  
   
      選取 **[下一步]**。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "51814131"
 3.  Reporting Services 服務的狀態會從 **[已停止]** 變更為 **[已啟動]**。 如果清單中沒有 Reporting Services 服務，請使用 PowerShell 安裝該服務。  
   
     > [!NOTE]  
-    >  如果 Reporting Services 服務停留在 **[啟動中]** 狀態，而未變更為 **[已啟動]**，請確認已在 Windows 伺服器管理員中啟動 "SharePoint 2013 Administration" 服務。  
+    >  如果 Reporting Services 服務停留在 [啟動中] 狀態，而未變更為 [已啟動]，請確認已在 Windows 伺服器管理員中啟動 'SharePoint 2013 Administration' 服務。  
   
 ##  <a name="bkmk_create_serrviceapplication"></a> 步驟 3：建立 Reporting Services 服務應用程式  
  本節提供建立服務應用程式的步驟，以及屬性的描述 (如果您要檢閱現有的服務應用程式)。  
@@ -256,7 +256,7 @@ ms.locfileid: "51814131"
   
  ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") 如需使用 PowerShell 建立 Reporting Services 服務應用程式的資訊，請參閱：  
   
--   請參閱下一節＜ [步驟 1 到 4 的 Windows PowerShell 指令碼](#bkmk_full_script)＞。  
+-   請參閱下一節[步驟 1 到 4 的 Windows PowerShell 指令碼](#bkmk_full_script)。  
   
 -   [使用 PowerShell 建立 Reporting Services 服務應用程式](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)主題。  
 
@@ -289,9 +289,9 @@ ms.locfileid: "51814131"
   
 -   安裝 Reporting Services 服務和服務 Proxy，以及啟動服務。  
   
--   建立名為 “Reporting Services” 的服務 Proxy。  
+-   建立名為 "Reporting Services" 的服務 Proxy。  
   
--   建立名為 “Reporting Services Application” 的 Reporting Services 服務應用程式。  
+-   建立名為 "Reporting Services Application" 的 Reporting Services 服務應用程式。  
   
 -   啟用網站集合的 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 功能。  
   
@@ -299,9 +299,9 @@ ms.locfileid: "51814131"
   
 -   更新服務 Proxy 的 **-Account** 。 帳戶必須是 SharePoint 伺服器陣列中受管理的服務帳戶。 如需詳細資訊，請參閱 SharePoint 主題＜ [規劃 SharePoint 2013 管理帳戶及服務帳戶](https://technet.microsoft.com/library/cc263445.aspx)＞。  
   
--   更新服務應用程式的 **–DatabaseServer** 參數。 這個參數是 Database Engine 執行個體  
+-   更新服務應用程式的 **-DatabaseServer** 參數。 這個參數是 Database Engine 執行個體  
   
--   更新您想要啟用 **功能之網站的** –url [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 參數。  
+-   更新您想要啟用 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 功能之網站的 **-url** 參數。  
   
  **若要使用指令碼：**  
   
@@ -318,7 +318,7 @@ $starttime=Get-Date
 write-host -foregroundcolor DarkGray StartTime>> $starttime   
   
 Write-Host -ForegroundColor Green "Import the SharePoint PowerShell snappin"  
-Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0  
+Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0  
   
 Write-Host -ForegroundColor Green "Install SSRS Service and Service Proxy, and start the service"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
@@ -428,7 +428,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
 
 [Reporting Services SharePoint 模式的 PowerShell Cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
 [升級和移轉 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+[SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-components-of-sql-server-2016.md)   
 [Reporting Services SharePoint 服務和服務應用程式](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a9a62e1258bb5c7babda59f9c3b64b9afd16afe1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833286"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712359"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教學課程：將參數加入至報表 (報表產生器)
 在本教學課程中，您可以將參數新增至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表，讓報表讀者可以篩選報表資料中的一或多個值。 
@@ -501,5 +501,5 @@ ms.locfileid: "47833286"
   
 ## <a name="see-also"></a>另請參閱  
 * [報表產生器教學課程](../reporting-services/report-builder-tutorials.md)
-* [SQL Server 2016 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+* [SQL Server 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 *  [Lookup 函數](../reporting-services/report-design/report-builder-functions-lookup-function.md)   

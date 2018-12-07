@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36fc882093d13b366419015f058d6e889dfe4f05
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029387"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712709"
 ---
 # <a name="tutorial-map-report-report-builder"></a>教學課程：地圖報表 (報表產生器)
 在此 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教學課程中，您會了解在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表的地理背景上，可用來顯示資料的地圖功能。 
@@ -543,7 +543,7 @@ ms.locfileid: "50029387"
   
 ## <a name="see-also"></a>另請參閱  
 [報表產生器教學課程](../reporting-services/report-builder-tutorials.md)  
-[SQL Server 2016 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[SQL Server 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [地圖精靈與地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
 [使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   

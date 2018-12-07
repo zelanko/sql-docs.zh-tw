@@ -6,12 +6,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dced97164a9ba37fe6a2f5102f109c4c3c4ac90f
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 60ed9bf8c11dba87df9c41ed1caae0413ed32bc5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050897"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712219"
 ---
 # <a name="create-a-report-server-database"></a>建立報表伺服器資料庫
 
@@ -43,7 +43,7 @@ ms.locfileid: "50050897"
   
  **SharePoint 模式：**[報表伺服器安裝選項] 頁面只有一個用於 SharePoint 模式的選項 [只安裝]。 此選項會安裝所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 檔案和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共用服務。 下一步是透過下列其中一種方式建立至少一個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式：  
   
--   使用 SharePoint 管理中心建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 如需詳細資訊，請參閱 [步驟 3：建立 Reporting Services 服務應用程式](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)的＜服務應用程式＞一節。  
+-   使用 SharePoint 管理中心建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 如需詳細資訊，請參閱[步驟 3：建立 Reporting Services 服務應用程式](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)的＜服務應用程式＞一節。  
   
 -   使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell 指令程式建立服務應用程式和報表伺服器資料庫。 如需詳細資訊，請參閱 [Reporting Services SharePoint 模式的 PowerShell Cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)主題中的建立服務應用程式範例。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "50050897"
 >  報表伺服器與主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，可以在不同的網域中。 針對網際網路部署，常會使用位於防火牆後方的伺服器。 如果您要設定供網際網路存取的報表伺服器，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，以連接到位於防火牆後方之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，並使用 IPSEC 來保護連接的安全。  
   
 ## <a name="database-server-edition-requirements"></a>資料庫伺服器版本需求  
- 當您建立報表伺服器資料庫時，請注意，並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可以用來主控資料庫。 如需詳細資訊，請參閱 [SQL Server 2016 版本支援的 Reporting Services 功能](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)的[報表伺服器資料庫伺服器版本需求](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements)。  
+ 當您建立報表伺服器資料庫時，請注意，並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可以用來主控資料庫。 如需詳細資訊，請參閱 [SQL Server 2017 版本支援的 Reporting Services 功能](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)的[報表伺服器資料庫伺服器版本需求](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#report-server-database-server-edition-requirements)。  
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 292b6a00e92ced31fc57c604c5d614df832dd9fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b250f4ec67db43c975d61f5944b7d6eaee8ccc73
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666677"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712000"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>監視與疑難排解記憶體使用量
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "51666677"
 ##  <a name="bkmk_Monitoring"></a> 監視記憶體使用狀況  
   
 ###  <a name="bkmk_UsingSSMS"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 隨附內建的標準報表，可用來監視記憶體中資料表耗用的記憶體。 您可以使用物件總管存取這些報表，如 [此處](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)所述。 您也可以使用物件總管監視個別記憶體最佳化資料表耗用的記憶體。  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 隨附內建的標準報表，可用來監視記憶體中資料表耗用的記憶體。 您可以使用 [物件總管] 存取這些報表。 您也可以使用物件總管監視個別記憶體最佳化資料表耗用的記憶體。  
   
 #### <a name="consumption-at-the-database-level"></a>資料庫層級的耗用量  
  您可以監視資料庫層級的記憶體使用量，如下所述。  

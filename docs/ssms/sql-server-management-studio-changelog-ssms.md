@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - 變更記錄 (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 11/22/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fd9e5b79aaf16454e74eb1e63325f95bf5f45a40
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: db6f79e16f65494bdb45b297324541668d69d567
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703986"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712729"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 
@@ -198,10 +198,10 @@ SSMS 不會新增至 PATH 環境變數：
 
 - SSMS.EXE (和一般工具) 的路徑不再新增至路徑中。 使用者可以自行新增；或者，可以在新式 Windows 上仰賴 [開始] 功能表。
 
-支援 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]
+支援 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
-- 此版本是第一個完整「感知」[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)](compatLevel 150 等) 的 SSMS 版本。
-- 支援 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 中的 "BATCH_STARTED_GROUP" 和 "BATCH_COMPLETED_GROUP"，以及 SSMS 中的受控執行個體。
+- 此版本是第一個完整「感知」[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)](compatLevel 150 等) 的 SSMS 版本。
+- 支援 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中的 "BATCH_STARTED_GROUP" 和 "BATCH_COMPLETED_GROUP"，以及 SSMS 中的受控執行個體。
 - GraphDB：在 Graph TC 序列的執行程序表中新增旗標。
 - Always Encrypted：新增[具有安全記憶體保護區的 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md) 支援。
   - 當使用者按一下 [選項] 按鈕來啟用及設定記憶體保護區支援時，連線對話方塊會有新的 [Always Encrypted] 索引標籤。
@@ -418,7 +418,7 @@ SSMS 中不再提供下列功能：
 下列為目前版本中的已知問題：
 
 > [!IMPORTANT]
-> 搭配使用 SQL 查詢編輯器和 *支援 MFA 的 Active Directory – Universal* 驗證時，使用者可能會遇到每一次查詢叫用時連線都會關閉並重新開啟的問題。 這類關閉的副作用包括在未預期的情況下卸除全域暫存資料表，以及有時候會給予連線新的 SPID。 若連線上有開啟中的交易，則不會發生此關閉。 若要因應此問題，使用者可在連線參數中設定 `persist security info=true`。
+> 搭配使用 SQL 查詢編輯器和 *支援 MFA 的 Active Directory - Universal* 驗證時，使用者可能會遇到每一次查詢叫用時連線都會關閉並重新開啟的問題。 這類關閉的副作用包括在未預期的情況下卸除全域暫存資料表，以及有時候會給予連線新的 SPID。 若連線上有開啟中的交易，則不會發生此關閉。 若要因應此問題，使用者可在連線參數中設定 `persist security info=true`。
 
 SSMS
 
@@ -430,7 +430,36 @@ SSIS
 - 當套件的目標為舊版 SQL Server 且同時包含指令碼工作/指令碼元件時，將無法成功部署或執行套件。
 - SSMS 無法連線到遠端 Integration Services。
 
-## <a name="ssms-179-latest-ga-release"></a>SSMS 17.9 (最新的 GA 版本)
+
+## <a name="ssms-1791-latest-ga-release"></a>SSMS 17.9.1 (最新的 GA 版本)
+
+![下載](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+
+- 版本編號：17.9.1<br>
+- 組建編號：14.0.17289.0<br>
+- 發行日期：2018 年 11 月 21 日
+
+17.9.1 是 17.9 的小型更新，其中包括下列錯誤修正：
+
+- 修正在搭配使用 SQL 查詢編輯器和「支援 MFA 的 Active Directory - Universal」驗證時，使用者可能會遇到每一次查詢叫用時連線都會關閉並重新開啟的問題。 這類連線關閉的副作用包括在未預期的情況下卸除全域暫存資料表，以及有時候會給予連線新的 SPID。
+- 修正一個長期未解決的問題，即還原計畫找不到還原計畫，或者在某些情況下會產生無效率的還原計畫。
+- 修正 [匯入資料層應用程式] 精靈中的一個問題，該問題會在連接到 Azure SQL Database 時導致錯誤。
+
+
+
+> [!NOTE]
+> 非英文的 SSMS 17.x 語言版本如果安裝在 Windows 8、Windows 7、Windows Server 2012 及 Windows Server 2008 R2 上，就需要 [KB 2862966 安全性更新程式套件](https://support.microsoft.com/kb/2862966)。
+
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
+
+
+
+
+
+
+
+
+## <a name="ssms-179"></a>SSMS 17.9
 
 ![下載](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
 
@@ -496,7 +525,7 @@ Azure SQL：
 
 Microsoft Azure 整合： 
 
-- 修正 SSMS 只顯示前 50 的訂用帳戶 (Always Encrypted 對話、來自 URL 的備份/還原等…) 的問題。 
+- 修正 SSMS 只顯示前 50 的訂用帳戶 (Always Encrypted 對話、來自 URL 對話方塊的備份/還原等…) 的問題。 
 - 修正 SSMS 在嘗試登入沒有任何儲存體帳戶的 Microsoft Azure 帳戶時擲回例外狀況 (「索引超出範圍」) 的問題 (在 [從 URL 還原備份] 對話方塊中)。 
 
 物件指令碼： 
@@ -513,7 +542,7 @@ Microsoft Azure 整合：
 
 
 > [!IMPORTANT]
-> 搭配使用 SQL 查詢編輯器和 *支援 MFA 的 Active Directory – Universal* 驗證時，使用者可能會遇到每一次查詢叫用時連線都會關閉並重新開啟的問題。 這類關閉的副作用包括在未預期的情況下卸除全域暫存資料表，以及有時候會給予連線新的 SPID。 若連線上有開啟中的交易，則不會發生此關閉。 若要因應此問題，使用者可在連線參數中設定 `persist security info=true`。
+> 搭配使用 SQL 查詢編輯器和 *支援 MFA 的 Active Directory - Universal* 驗證時，使用者可能會遇到每一次查詢叫用時連線都會關閉並重新開啟的問題。 這類關閉的副作用包括在未預期的情況下卸除全域暫存資料表，以及有時候會給予連線新的 SPID。 若連線上有開啟中的交易，則不會發生此關閉。 若要因應此問題，使用者可在連線參數中設定 `persist security info=true`。
 
 
 
@@ -867,7 +896,7 @@ XE 分析工具：
 已修正某些情況下使用者無法載入整個 XEL 檔案的問題。
 - XEvent 分析工具：修正當使用者沒有 *VIEW SERVER STATE* 權限時，造成 SSMS 當機的問題。
 已修正關閉 [XE 分析工具即時資料] 視窗無法停止底層工作階段的問題。
-- 已註冊的伺服器：修正 [移至…] 命令停止運作的問題 - [Connect 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) 和 [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/)。
+- 已註冊的伺服器：修正 [移至...] 命令停止運作的問題 - [Connect 3142862](https://connect.microsoft.com/SQLServer/feedback/details/3142862) 和 [Connect 3144359](https://connect.microsoft.com/SQLServer/feedback/details/3144359/)。
 - SMO：修正 TransferData 方法在傳送物件上無法運作的問題。
 已修正 Server 資料庫針對暫停的 SQL DW 資料庫擲回例外狀況的問題。
 已修正針對 SQL DW 編寫 SQL 資料庫指令碼時，產生不正確 T-SQL 參數值的問題。
@@ -978,14 +1007,14 @@ XE 分析工具：
 **一般 SSMS**
 
 - 使用具 MFA 之 UA 的 Azure AD 驗證不支援下列 SSMS 功能：
-   - Azure AD 驗證不支援 Database Engine Tuning Advisor；有一個已知問題，亦即向使用者呈現不太容易了解的錯誤訊息：「無法載入檔案或組件 'Microsoft.IdentityModel.Clients.ActiveDirectory'…」，而非預期的：「Database Engine Tuning Advisor 不支援 Microsoft Azure SQL Database。 (DTAClient)」。
+   - Azure AD 驗證不支援 Database Engine Tuning Advisor；有一個已知問題，亦即向使用者呈現不太容易了解的錯誤訊息：「無法載入檔案或組件 'Microsoft.IdentityModel.Clients.ActiveDirectory'...」，而非預期的：「Database Engine Tuning Advisor 不支援 Microsoft Azure SQL Database。 (DTAClient)」。
 - 嘗試分析 DTA 中的查詢會導致錯誤：「物件必須實作 IConvertible (mscorlib)」。
 - 物件總管中報表的 [查詢存放區] 清單遺漏「迴歸查詢」。
    - 因應措施：以滑鼠右鍵按一下 [查詢存放區] 節點，然後選取 [檢視迴歸查詢]。
 
 **Integration Services (IS)**
 
-- [catalog].[event_messagea] 中的 [execution_path] 不是 Scale Out 中正確的套件執行路徑。[execution_path] 會以 “\Package” 開頭，而不是套件可執行檔的物件名稱。 在 SSMS 中檢視套件執行的概觀報表時，[執行概觀] 中 [執行路徑] 的連結無法運作。 因應措施是按一下概觀報表中的 [檢視訊息] 以檢查所有事件訊息。
+- [catalog].[event_messagea] 中的 [execution_path] 不是 Scale Out 中正確的套件執行路徑。[execution_path] 會以 "\Package" 開頭，而不是套件可執行檔的物件名稱。 在 SSMS 中檢視套件執行的概觀報表時，[執行概觀] 中 [執行路徑] 的連結無法運作。 因應措施是按一下概觀報表中的 [檢視訊息] 以檢查所有事件訊息。
 
 
 ## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![下載](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
@@ -1061,7 +1090,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - [新增資料表/檢視] 設計工具會顯示舊式登入提示，並不適用於 Azure AD 驗證。
   - [編輯前 200 個資料列] 功能不支援 Azure AD 驗證。
   - [已註冊的伺服器] 元件不支援 Azure AD 驗證。
-  - 不支援 **Database Engine Tuning Advisor** 進行 Azure AD 驗證。 有一個已知問題，其向使用者呈現的錯誤訊息較無幫助：*無法載入檔案或組件 'Microsoft.IdentityModel.Clients.ActiveDirectory,…* 而不是預期的 *Database Engine Tuning Advisor 不支援 Microsoft Azure SQL Database。(DTAClient)*.
+  - 不支援 **Database Engine Tuning Advisor** 進行 Azure AD 驗證。 有一個已知問題，亦即向使用者呈現不太有用的錯誤訊息：「無法載入檔案或組件 'Microsoft.IdentityModel.Clients.ActiveDirectory'...」，而非預期的：「Database Engine Tuning Advisor 不支援 Microsoft Azure SQL Database。*(DTAClient)*.
 
 **Analysis Services (AS)**
 
@@ -1271,8 +1300,8 @@ https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-mana
 - 修正 [新增伺服器註冊] 對話方塊上的 UI 截斷問題
 - 修正 DMF 條件 UI 未正確更新其字串常值中有引號的運算式
 - 修正執行自訂報表時可能造成 SSMS 損毀的問題
-- 將 [向外延展中的執行...] 功能表項目 新增到資料夾節點
-- 修正 Azure SQL DB 防火牆白名單 IP 地址功能的問題
+- 將 [Scale Out 中的執行...] 功能表項目新增至資料夾節點
+- 修正 Azure SQL DB 防火牆允許清單 IP 地址功能的問題
 - 修正 SSMS 中在編輯 AS 多維磁碟分割來源時，導致物件參考未設定例外狀況的問題
 - 修正 SSMS 中從多維 AS 伺服器刪除客戶組件時，導致物件參考未設定例外狀況的問題
 - 修正重新命名 AS 表格式 1400 資料庫失敗的問題

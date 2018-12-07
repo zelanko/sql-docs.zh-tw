@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb5c0c7e3e955bb4489e93943303cce4bd42c8d6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 37868fcc35bc5ba09339a24151f2d8d6e4c1f6ba
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021862"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712179"
 ---
 # <a name="project-property-pages-dialog-box"></a>專案屬性頁對話方塊
 
-  使用專案屬性頁，即可設定報表伺服器專案的部署屬性。 若要開啟此對話方塊，請從 [專案] 功能表按一下 [*\<報表專案名稱>* 屬性]。  
+  使用專案屬性頁，即可設定報表伺服器專案的部署屬性。 若要開啟此對話方塊，請從 專案 功能表按一下 \<報表專案名稱>屬性。  
   
  在您定義組態屬性之後，可以從工具列的 [方案組態] 下拉式清單中選取組態。  
 
@@ -54,7 +54,7 @@ ms.locfileid: "50021862"
  選取 **True** ，即可在發行報表時，以專案中的資料來源覆寫伺服器上的資料來源。 選取 **False** ，即可保留伺服器上現有的資料來源。  
   
  **TargetServerVersion**  
- 選取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，或選取 [偵測版本] 自動判斷安裝在 **TargetServer URL** 屬性所識別之伺服器上的版本。 預設值是 **SQL Server 2016**。  
+ 選取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，或選取 [偵測版本] 自動判斷安裝在 **TargetServer URL** 屬性所識別之伺服器上的版本。 預設值是 **SQL Server 2017**。  
   
  **TargetDataSourceFolder**  
  用來儲存已發行共用資料來源的資料夾名稱。 如果您未指定資料夾，資料來源就會發行到與報表相同的資料夾。 如果報表伺服器上沒有此資料夾，報表設計師會在發行報表時建立資料夾。  

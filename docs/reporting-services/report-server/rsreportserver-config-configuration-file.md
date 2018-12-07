@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23938f5885fd207aed8143686f7b762d81fc8130
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 92655853880919ba29b4736404fe1637471e8f15
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813891"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712629"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 組態檔
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** 檔案會儲存報表伺服器 Web 服務和背景處理所使用的設定。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式都是在讀取 RSReportServer.config 檔中儲存之組態設定的單一處理序中執行。 原生模式和 SharePoint 模式的報表伺服器都使用 RSReportServer.config，不過，這兩個模式不會使用組態檔中的所有相同設定。 SharePoint 模式版本的檔案較小，因為 SharePoint 模式的許多設定是儲存在 SharePoint 組態資料庫中，而不是檔案中。 本主題描述針對原生模式和 SharePoint 模式所安裝的預設組態檔，以及由組態檔控制的部分重要設定和行為。  
@@ -29,20 +29,22 @@ RSReportServer.config 位於下列資料夾，端視報表伺服器模式而定�
 
 
   
-### <a name="native-mode-report-server"></a>原生模式報表伺服器  
+### <a name="native-mode-report-server"></a>原生模式報表伺服器 
 
  
-**[!INCLUDE[applies](../../includes/applies-md.md)]**  SQL Server 2016
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
+
 ```  
 C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
 ```
 
-**[!INCLUDE[applies](../../includes/applies-md.md)]** SQL Server Reporting Services 中的 Power BI 報表 2017 年 1 月技術預覽
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
 ```  
 C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
 ```  
   
-### <a name="sharepoint-mode-report-server"></a>SharePoint 模式報表伺服器
+### <a name="sharepoint-mode-report-server"></a>SharePoint 模式報表伺服器 
 
 > [!NOTE]
 > SQL Server Reporting Services 中的 Power BI 報表 2017 年 1 月技術預覽未提供 SharePoint 整合模式。
@@ -139,7 +141,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**Realm**|這個值是用於 **RSWindowsBasic**。 它會指定資源分割區，其中包含用於控制組織中受保護資源之存取權的授權和驗證功能。|N|  
 |**DefaultDomain**|這個值是用於 **RSWindowsBasic**。 它可用於決定伺服器用以驗證使用者的網域。 雖然這個值是選擇性的，但是如果您省略它，報表伺服器將使用電腦名稱當做網域。 如果您在網域控制站上安裝了報表伺服器，則使用的網域就是電腦所控制的網域。|N|  
 |**RSWindowsExtendedProtectionLevel**|預設值是 **off**。 如需詳細資訊，請參閱＜ [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)＞|N|  
-|**RSWindowsExtendedProtectionScenario**|The default value is <bpt id="p1">**</bpt>Proxy<ept id="p1">**</ept>|N|  
+|**RSWindowsExtendedProtectionScenario**| |N|  
 |**EnableAuthPersistence**|決定要在連接時或針對每個要求執行驗證。<br /><br /> 有效值為 **True** (預設值) 或 **False**。 如果設定為 **True**，來自相同連接的後續要求就會採用第一個要求的模擬內容。<br /><br /> 如果您正使用 Proxy 伺服器軟體 (例如 ISA Server) 來存取報表伺服器，這個值就必須設定為 **False** 。 使用 Proxy 伺服器可讓多位使用者使用 Proxy 伺服器的單一連接。 在這個狀況中，您應該停用驗證持續性機制，以便個別驗證每個使用者要求。 如果您沒有將 **EnableAuthPersistence** 設定為 **False**，則所有使用者都將使用第一個要求的模擬內容來進行連接。|N、S|  
   
 ##  <a name="bkmk_service"></a> Service (RSReportServer.config 檔)  

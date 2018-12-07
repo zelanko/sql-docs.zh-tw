@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cd0827109cff1cda866ed8a0d85f9cb37ab54f6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c9612cb4cf45ec71bb511750bab9a84914a0e7f5
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021582"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712489"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>使用 Reporting Services 中的 KPI
 
@@ -21,7 +21,7 @@ ms.locfileid: "50021582"
 
 關鍵效能指標 (KPI) 是用以傳達達成目標之進度量的視覺提示。  關鍵效能指標是對於團隊、管理人員及企業而言非常重要，此指標使其可快速評估對可測量目標所做的進度。   
   
-使用 SQL Server 2016 Reporting Services 中的 KPI，您就能輕鬆地以視覺化方式回答下列問題︰  
+使用 SQL Server Reporting Services 中的 KPI，您就能輕鬆地以視覺化方式回答下列問題︰  
   
 -   我現在正處於哪個階段前後？  
   

@@ -7,12 +7,12 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.date: 11/06/2018
-ms.openlocfilehash: 67866bf7c201d9a00eb56195d3db10cdf272ef2b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2e7c5d6ecaebcdad5b3e2d9d23b4660f12e0bad7
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602938"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712419"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>移轉 Reporting Services 安裝 (原生模式)
 
@@ -147,9 +147,9 @@ ms.locfileid: "51602938"
   
  按一下下列其中一個連結，即可檢視有關如何安裝新 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]執行個體的指示：  
   
-* [從安裝精靈安裝 SQL Server 2016 &#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
+* [從安裝精靈 &#40;安裝程式&#41; 安裝 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
   
-* [從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
+* [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
 
 ## <a name="bkmk_move_database"></a> 移動報表伺服器資料庫
 

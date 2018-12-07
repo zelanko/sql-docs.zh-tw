@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da0c23b3fcc746fa2ad8614f88ce539386e71b6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42fdd43e7e535452d01701fd7d230484ae30fcae
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775316"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712159"
 ---
 # <a name="report-design-view-report-builder"></a>報表設計檢視 (報表產生器)
   [報表產生器] 視窗的設計目的是要協助您輕鬆地組織報表資源和快速地建立所需的編頁報表。 設計介面位於視窗中央，並且具有功能區和窗格。 設計介面是您可以加入和組織報表項目的位置。 本文所說明的窗格可用來加入、選取並組織報表資源，以及變更報表項目屬性。  
@@ -169,7 +169,7 @@ ms.locfileid: "47775316"
   
   
 ## <a name="see-also"></a>另請參閱  
- [尋找、檢視和管理報表 &#40;報表產生器和 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [SQL Server 2016 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+ [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [SQL Server 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: 使用查詢存放區監視效能 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2018
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,15 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c8daab3f7a68ee846d8f02012d572a1687058cc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e36a66564564bb468592df491e12d97a87d5dc4b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673327"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711499"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查詢存放區監視效能
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢存放區功能為您提供關於查詢計劃選擇及效能的深入資訊。 其可協助您您快速找出由於查詢計劃變更所導致的效能差異，以簡化效能疑難排解作業。 查詢存放區會自動擷取查詢、計劃和執行階段統計資料的歷程記錄，並將其保留供您檢閱。 其會以時段來區分資料、供您查看資料庫使用模式，並了解何時在伺服器上發生查詢計劃變更。 使用 [[ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md)] 選項可設定查詢存放區。 
   
@@ -101,18 +101,30 @@ INNER JOIN sys.query_store_query_text AS Txt
 ```  
  
 ##  <a name="Regressed"></a> 使用迴歸查詢功能  
- 啟用查詢存放區之後，重新整理物件總管窗格中的資料庫部分，以加入＜ **查詢存放區** ＞一節。  
+啟用查詢存放區之後，重新整理物件總管窗格中的資料庫部分，以加入＜ **查詢存放區** ＞一節。  
   
- ![物件總管中的查詢存放區樹狀結構](../../relational-databases/performance/media/objectexplorerquerystore.PNG "物件總管中的查詢存放區樹狀結構")  
+![SSMS 物件總管中的 SQL Server 2016 查詢存放區樹狀結構](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SSMS 物件總管中的 SQL Server 2016 查詢存放區樹狀結構")![SSMS 物件總管中的 SQL Server 2017 查詢存放區樹狀結構](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SSMS 物件總管中的 SQL Server 2017 查詢存放區樹狀結構") 
   
- 選取 [迴歸查詢]  ，開啟 **中的 [迴歸查詢]**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]窗格。 [迴歸查詢] 窗格會顯示查詢存放區中的查詢與計劃。 頂端的下拉式清單方塊，可供您依據各種條件選取查詢。 選取計劃即可以圖形方式檢視查詢計劃。 提供有按鈕可供檢視來源查詢、強制執行或取消強制執行查詢計劃，以及重新整理顯示畫面。  
+選取 [迴歸查詢]  ，開啟 **中的 [迴歸查詢]**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]窗格。 [迴歸查詢] 窗格會顯示查詢存放區中的查詢與計劃。 使用頂端的下拉式清單方塊，根據各種準則來篩選查詢：**持續時間 (毫秒)** (預設值)、CPU 時間 (毫秒)、邏輯讀取 (KB)、邏輯寫入 (KB)、實體讀取 (KB)、CLR 時間 (毫秒)、DOP、記憶體耗用量 (KB)、資料列計數、已使用的記錄記憶體 (KB)、已使用的 DB 記憶體 (KB)，以及等候時間 (毫秒)。  
+選取計劃即可以圖形方式檢視查詢計劃。 按鈕可用來檢視來源查詢、強制執行及取消強制執行查詢計畫、在格線和圖表格式之間切換、比較所選取的計畫 (如果選取了多個)，以及重新整理顯示。  
   
- ![物件總管中的迴歸查詢](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "物件總管中的迴歸查詢")  
+![SSMS 物件總管中的 SQL Server 2016 迴歸查詢](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SSMS 物件總管中的 SQL Server 2016 迴歸查詢")  
   
- 若要強制執行計劃，請選取查詢與計劃，然後按一下 [強制執行計劃] 。 您只可以強制執行由查詢計劃功能所儲存且仍保留在查詢計劃快取中的計劃。  
+若要強制執行計劃，請選取查詢與計劃，然後按一下 [強制執行計劃] 。 您只可以強制執行由查詢計劃功能所儲存且仍保留在查詢計劃快取中的計劃。
+
 ##  <a name="Waiting"></a>尋找等候查詢
 
-從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 開始，可在查詢存放區中使用每個查詢經過一段時間的等候統計資料。 在查詢存放區中，等候類型會合併到**等候類別**。 [sys.query_store_wait_stats & #40;TRANSACT-SQL & #41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table) 可將等候類別對應至等候類型。
+從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 開始，可在查詢存放區中使用每個查詢經過一段時間的等候統計資料。 在查詢存放區中，等候類型會合併到**等候類別**。 [sys.query_store_wait_stats & #40;TRANSACT-SQL & #41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table) 可將等候類別對應至等候類型。
+
+選取 [查詢等候統計資料]，以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 或更新版本中開啟 [查詢等候統計資料] 窗格。 [查詢等候統計資料] 窗格會在查詢存放區中顯示包含前幾個等候類別的長條圖。 使用頂端的下拉式清單來選取等候時間的彙總準則：平均值、最大值、最小值、標準差及**總計** (預設值)。
+
+ ![SSMS 物件總管中的 SQL Server 2017 查詢等候統計資料](../../relational-databases/performance/media/query-store-waits.PNG "SSMS 物件總管中的 SQL Server 2017 查詢等候統計資料")
+
+按一下長條圖來選取等候類別，隨即顯示有關所選取等候類別的詳細資料檢視。 這個新的長條圖包含提供給該等候類別的查詢。 
+  
+ ![SSMS 物件總管中的 SQL Server 2017 查詢等候統計資料詳細資料檢視](../../relational-databases/performance/media/query-store-waits-detail.PNG "SSMS 物件總管中的 SQL Server 2017 查詢等候統計資料詳細資料檢視")
+
+使用頂端的下拉式清單方塊，根據所選取等候類別的各種等候時間準則來篩選查詢：平均值、最大值、最小值、標準差及**總計** (預設值)。 選取計劃即可以圖形方式檢視查詢計劃。 提供有按鈕可供檢視來源查詢、強制執行或取消強制執行查詢計劃，以及重新整理顯示畫面。  
 
 **等候類別**會將不同的等候類型合併到本質類似的貯體中。 不同的等候類別需要不同的後續操作分析來解決問題，但同類別的等候類型會導致非常類似的疑難排解體驗，而提供受影響的前幾項查詢可能就是順利完成大部分這類調查所缺少的片段。
 
@@ -124,10 +136,9 @@ INNER JOIN sys.query_store_query_text AS Txt
 |每個資料庫的高 RESOURCE_SEMAPHORE 等候|查詢存放區特定查詢的高記憶體等候|尋找查詢存放區中前幾項最耗記憶體的查詢。 這些查詢可能會延遲受影響查詢的進度。 請考慮對這些查詢或受影響的查詢使用 MAX_GRANT_PERCENT 查詢提示。|
 |每個資料庫的高 LCK_M_X 等候|查詢存放區特定查詢的高鎖定等候|檢查受影響查詢的查詢文字，找出目標項目。 在查詢存放區中尋找修改相同項目的其他查詢，這些查詢經常執行且/或持續時間很長。 找出這些查詢之後，請考慮變更應用程式邏輯以改善並行，或使用較不嚴格的隔離等級。|
 |每個資料庫的高 PAGEIOLATCH_SH 等候|查詢存放區特定查詢的高緩衝區 IO 等候|在查詢存放區中尋找有大量實體讀取次數的查詢。 如果它們符合高 IO 等候的查詢，請考慮引入基礎實體索引搜尋，以執行搜尋而不是掃描，進而將查詢的 IO 負擔降至最低。|
-|每個資料庫的高 SOS_SCHEDULER_YIELD 等候|查詢存放區特定查詢的高 CPU 等候|尋找查詢存放區中前幾項最耗 CPU 的查詢。 在它們中間找出高 CPU 趨勢與受影響查詢之高 CPU 等候相互關聯的查詢。 專注於最佳化這些查詢，它們可能有計劃迴歸或缺少索引。|
+|每個資料庫的高 SOS_SCHEDULER_YIELD 等候|查詢存放區特定查詢的高 CPU 等候|尋找查詢存放區中前幾項最耗 CPU 的查詢。 在它們中間找出高 CPU 趨勢與受影響查詢之高 CPU 等候相互關聯的查詢。 專注於將那些查詢最佳化，可能存在計畫迴歸或缺少索引。|
 
 ##  <a name="Options"></a> 組態選項 
-
 設定查詢存放區參數可使用下列選項。
 
 *OPERATION_MODE*  
@@ -555,19 +566,23 @@ OPTION (MERGE JOIN);
 ```  
  
 ###  <a name="Stability"></a> 維護查詢效能穩定性  
- 若是執行多次的查詢，您可會注意到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用不同的計劃，而產生了不同的資源使用率與持續時間。 您可利用查詢存放區，輕鬆偵測查詢效能何時低下，以及判斷在意時段中的最佳計劃。 然後可以對未來的查詢強制執行該最佳計劃。  
+若是執行多次的查詢，您可會注意到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用不同的計劃，而產生了不同的資源使用率與持續時間。 您可利用查詢存放區，輕鬆偵測查詢效能何時低下，以及判斷在意時段中的最佳計劃。 然後可以對未來的查詢強制執行該最佳計劃。  
   
- 也可以為具有參數 (自動設定參數或手動設定參數) 的查詢，找出不一致的查詢效能。 您可以在不同的計劃間，找出適合所有或大部分參數值的良好且快速之計劃，並強制執行該計劃，為更多使用者案例留下可預測的效能。  
+您也可以為具有參數 (自動設定參數或手動設定參數) 的查詢，找出不一致的查詢效能。 您可以在不同的計劃間，找出適合所有或大部分參數值的良好且快速之計劃，並強制執行該計劃，為更多使用者案例留下可預測的效能。  
   
- **為查詢強制執行計劃 (套用強制原則)。** 若要為特定的查詢強制執行一項計劃，則每次查詢執行時，就會強制以該計劃執行。  
-  
+ ### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>為查詢強制執行計畫 (套用強制原則)
+
+針對特定查詢強制執行計畫時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試在最佳化工具中強制執行該計畫。 如果計劃強制失敗，會引發 XEvent，系統會指示最佳化工具以一般方式最佳化。
+
 ```sql  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
- 使用 **sp_query_store_force_plan** 時，只能強制執行查詢存放區所記錄的計劃，作為該查詢的計劃。 換句話說，可用於查詢的計劃，是已經用於執行該查詢的計劃 (查詢存放區當時在作用中)。  
+使用 **sp_query_store_force_plan** 時，只能強制執行查詢存放區所記錄的計劃，作為該查詢的計劃。 換句話說，可用於查詢的計劃，是已經用於執行該查詢的計劃 (查詢存放區當時在作用中)。  
   
- **為查詢移除強制執行計劃。** 若要再次依賴 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具來計算最佳的查詢計劃，請使用 **sp_query_store_unforce_plan** 以取消為該查詢所選取的強制計劃。  
+### <a name="remove-plan-forcing-for-a-query"></a>針對查詢移除強制執行計畫
+
+若要再次依賴 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具來計算最佳的查詢計劃，請使用 **sp_query_store_unforce_plan** 以取消為該查詢所選取的強制計劃。  
   
 ```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  

@@ -1,7 +1,7 @@
 ---
 title: 使用查詢存放區的最佳做法 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/24/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8903afa017c51439e023dd40b33abadba5282885
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a727c599dc5a2b7c21d07a415f6ba9490c7e96cd
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657837"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712116"
 ---
 # <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   此文章概述搭配您的工作負載使用查詢存放區的最佳做法。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "51657837"
   
 ##  <a name="Insight"></a> 在 Azure SQL 資料庫中使用查詢效能深入解析  
  如果您在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中執行查詢存放區，您可以使用「查詢效能深入解析」  分析經過一段時間的 DTU 耗用量。  
-雖然您可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 取得您所有查詢的資源耗用量詳細資訊 (CPU、記憶體、IO 等等)，「查詢效能深入解析」能提供您一個快速且有效率的方式來判斷資源耗用對您的資料庫之整體 DTU 耗用量的影響。  
+雖然您可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來取得所有查詢的資源耗用量詳細資訊 (CPU、記憶體、IO 等等)，但查詢效能深入解析能夠為您提供一個快速且有效率的方式，來判斷資源耗用量對資料庫整體 DTU 耗用量的影響。  
 如需詳細資訊，請參閱 [Azure SQL 資料庫查詢效能深入解析](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)。    
 
 ##  <a name="using-query-store-with-elastic-pool-databases"></a>搭配彈性集區資料庫使用查詢存放區
@@ -48,11 +48,11 @@ ms.locfileid: "51657837"
   
  以下是設定參數值時可遵循的指導方針：  
   
- **大小上限 (MB)：** 指定查詢存放區將在您的資料庫內使用的資料空間的上限。  這是最重要的設定，它會直接影響查詢存放區的作業模式。  
+ **大小上限 (MB)：** 指定查詢存放區將在您的資料庫內使用的資料空間的上限。 這是最重要的設定，它會直接影響查詢存放區的作業模式。  
   
  因為查詢存放區會收集查詢、執行計劃和統計資料，它在資料庫中的大小會逐漸增加，直到達到此限制為止。 發生此情況時，查詢存放區會自動將作業模式變更為唯讀，並停止收集新的資料，這表示您的效能分析已不再正確。  
   
- 如果您的工作負載會產生很多不同的查詢和計劃，或者是如果您希望保留更長時間的查詢記錄，預設值 (100 MB) 可能不足。 追蹤目前的空間使用量，並增加大小上限 (MB) 以防止查詢存放區轉換為唯讀模式。  使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或執行下列指令碼取得有關查詢存放區大小的最新資訊：  
+ 如果您的工作負載會產生很多不同的查詢和計劃，或者是如果您希望保留更長時間的查詢記錄，預設值 (100 MB) 可能不足。 追蹤目前的空間使用量，並增加大小上限 (MB) 以防止查詢存放區轉換為唯讀模式。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或執行下列指令碼取得有關查詢存放區大小的最新資訊：  
   
 ```sql 
 USE [QueryStoreDB];  
@@ -69,11 +69,24 @@ FROM sys.database_query_store_options;
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
-  
- **統計資料收集間隔：** 定義已收集之執行階段統計資料的資料粒度層級 (預設值是 1 小時)。 如果您需要更精細的資料粒度或使用較短的時間偵測與解決問題，請考慮使用較低的值，但請注意，它會直接影響查詢存放區資料的大小。 使用 SSMS 或 Transact-SQL 來針對統計資料收集間隔設定不同的值：  
+
+ **資料排清間隔：** 以秒為單位來定義頻率，將收集到的執行階段統計資料保存到磁碟 (預設值為 900 秒，即 15 分鐘)。 如果您的工作負載不會產生各種大量的查詢與計畫，或者您可以在資料庫關閉之前忍受較長的時間來保存資料，請考慮使用較高的值。 
+ 
+> [!NOTE]
+> 使用追蹤旗標 7745，會在發生容錯移轉或關機命令時，防止將查詢存放區資料寫入到磁碟。 如需詳細資訊，請參閱[在任務關鍵性伺服器上使用追蹤旗標來改善災害復原](#Recovery)一節。
+
+使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或[!INCLUDE[tsql](../../includes/tsql-md.md)]，針對資料排清間隔設定不同的值：  
   
 ```sql  
-ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
+```  
+
+ **統計資料收集間隔：** 定義收集到之執行階段統計資料的資料粒度層級 (預設值是 60 分鐘)。 如果您需要更精細的資料粒度或使用較短的時間偵測與解決問題，請考慮使用較低的值，但請注意，它會直接影響查詢存放區資料的大小。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，針對統計資料收集間隔設定不同的值：  
+  
+```sql  
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
  **過時的查詢臨界值 (天)：** 以時間為基礎的清除原則，可控制保存的執行階段統計資料和非使用中查詢的保留期限。  
@@ -97,11 +110,11 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  **查詢存放區擷取模式** ：指定查詢存放區的查詢擷取模式。  
   
--   **All** – 擷取所有的查詢。 這是預設選項。  
+-   **All**：擷取所有查詢。 這是預設選項。  
   
--   **Auto** – 忽略不頻繁的查詢及包含無意義的編譯和執行期間的查詢。 執行計數、編譯和執行階段持續時間的臨界值會在內部決定。  
+-   **Auto**：忽略不頻繁的查詢及包含無意義的編譯和執行期間的查詢。 執行計數、編譯和執行階段持續時間的臨界值會在內部決定。  
   
--   **None** – 查詢存放區會停止擷取新的查詢。  
+-   **None**：查詢存放區會停止擷取新的查詢。  
   
  下列指令碼會將查詢擷取模式設定為 [Auto]：  
   
@@ -132,7 +145,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
  下圖顯示顯示如何找出查詢存放區檢視 ︰  
   
- ![query-store-views](../../relational-databases/performance/media/query-store-views.png "query-store-views")  
+ ![查詢存放區檢視](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "查詢存放區檢視")  
   
  下表說明每個查詢存放區檢視的使用時機：  
   
@@ -143,10 +156,11 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |熱門資源取用查詢|選擇一個感興趣的執行計量，並識別針對提供的時間間隔具有最極端值的查詢。 <br />使用此檢視將注意力放在最相關的查詢， 也就是對資料庫資源耗用量有最大影響的查詢。|  
 |強制計畫的查詢|使用查詢存放區列出先前的強制計畫。 <br />使用此檢視快速存取所有目前的強制計畫。|  
 |高變化的查詢|在關聯到任何可用的維度 (例如，所需時間間隔的持續時間、CPU 時間、IO 和記憶體使用量) 時，分析高執行變化的查詢。<br />您可以使用此檢視來識別含有廣泛變體效能的查詢，此效能會影響不同應用程式的使用者體驗。|  
+|查詢等候統計資料|分析資料庫中最常使用的等候類別，以及哪些查詢最常參與所選取的等候類別。<br />使用此檢視來分析等候統計資料，並識別可能影響使用者在應用程式間之體驗的查詢。<br /><br />**適用於：** 從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始|  
 |追蹤查詢|即時追蹤最重要的查詢的執行。 一般而言，當您有包含強制計畫的查詢且想要確定查詢效能是否穩定時，會使用此檢視。|
   
 > [!TIP]  
->  如需如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 識別熱門資源取用查詢並修正那些因為計畫選擇變更而迴歸之查詢的詳細說明，請參閱[查詢存放區@Azure 部落格](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)。  
+> 如需如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 識別熱門資源取用查詢並修正那些因為計畫選擇變更而迴歸之查詢的詳細說明，請參閱[查詢存放區@Azure 部落格](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)。  
   
  當您識別效能次佳的查詢時，您的動作取決於問題的本質。  
   

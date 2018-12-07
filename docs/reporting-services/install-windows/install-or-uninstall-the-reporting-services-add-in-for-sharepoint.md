@@ -8,12 +8,12 @@ ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6b6abe93a63e24a2526da7b29caeb469db0c1750
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 55c88749d84290636fd6a9fc3ac3866f5499450f
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051170"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711609"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>安裝或解除安裝 SharePoint 的 Reporting Services 增益集
 
@@ -51,7 +51,7 @@ ms.locfileid: "50051170"
 ##  <a name="bkmk_3ways_to_install"></a> 安裝方法概觀  
  您可以使用下列兩種方法的其中一種，安裝適用於 SharePoint 產品的 SQL Server 2016 Reporting Services 增益集：  
   
--   **安裝精靈**：![注意](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")這是 SQL Server 2016 的新功能，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈可以安裝此增益集。 在精靈的 [功能選擇] 頁面上，選擇 [適用於 SharePoint 產品的 Reporting Services 增益集]。  
+-   **安裝精靈**：![注意](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")在 SQL Server 2016 中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈可以安裝此增益集。 在精靈的 [功能選擇] 頁面上，選擇 [適用於 SharePoint 產品的 Reporting Services 增益集]。  
   
 -   **rsSharepoint.msi** ：該增益集可以直接從安裝媒體安裝，或下載後安裝。 rsSharepoint.msi 同時支援圖形化使用者介面和命令列安裝。 您必須以系統管理員權限執行 .msi，方式是先開啟提高權限的命令提示字元，然後從命令列執行 rsSharepoint.msi。 如需下載此增益集的詳細資訊，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   

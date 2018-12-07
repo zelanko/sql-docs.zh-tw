@@ -1,7 +1,7 @@
 ---
 title: 查詢存放區使用案例 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/02/2018
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,36 +14,32 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d556922a6bdb0e6edd538630e34dd21d428f2953
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c28419488adc2f0d8123c9052466659fb9fdfd9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673827"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711199"
 ---
 # <a name="query-store-usage-scenarios"></a>查詢存放區使用案例
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   若追蹤並確保可預測的工作負載效能非常重要，就能在整組案例中廣泛使用查詢存放區。 以下是您可以考慮的一些範例︰  
   
 -   透過計畫選擇迴歸找出並修正查詢  
-  
 -   找出並調整熱門資源取用查詢  
-  
 -   A/B 測試  
-  
 -   在升級到新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 期間保持效能穩定性  
-  
 -   找出並改善臨機操作工作負載  
   
 ## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>透過計畫選擇迴歸找出並修正查詢  
- 在查詢最佳化工具的一般查詢執行期間，其可能因重要的輸入已改變，而決定採取不同的計畫：資料基數已變更；索引已建立、改變或卸除；統計資料已更新等。在大多數情況下，比起先前使用的計畫，新計畫會更好或不相上下。 不過，還是會出現新計畫明顯較糟的情況，而這類情況則稱為計畫選擇變更迴歸。 在具有查詢存放區功能之前，這是項很難找出並修正的問題，原因是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並未提供內建資料存放區，讓使用者可查看某一段時間內所使用的執行計畫。  
+ 在查詢最佳化工具的一般查詢執行期間，其可能因重要的輸入已改變，而決定採取不同的計畫：資料基數已變更；索引已建立、改變或卸除；統計資料已更新等。在大多數情況下，比起先前使用的計畫，新計畫會更好或不相上下。 不過，還是會出現新計畫明顯較糟的情況，而這類情況則稱為計畫選擇變更迴歸。 在具有查詢存放區功能之前，這是個難以找出並修正的問題，原因是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並未提供內建資料存放區，讓使用者可查看某一段時間內所使用的執行計畫。  
   
  有了查詢存放區，您就可快速地：  
   
 -   識別在感興趣的時段 (過去小時、天、週等) 中執行計量已降低的所有查詢。 使用 **中的** 迴歸查詢 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來加速您的分析。  
   
--   在迴歸查詢之間，很容易就能找出具有多個計畫的查詢，以及因選擇不正確的計畫造成執行計量降低的查詢。 使用 [迴歸查詢]  中的 [計畫摘要]  窗格，以視覺化方式顯示某個迴歸查詢的所有計畫及其在某一段期間內的查詢效能。  
+-   在迴歸查詢之間，輕易地就能找出具有多個計畫的查詢，以及因選擇不正確的計畫而造成執行計量降低的查詢。 使用 [迴歸查詢]  中的 [計畫摘要]  窗格，以視覺化方式顯示某個迴歸查詢的所有計畫及其在某一段期間內的查詢效能。  
   
 -   從歷程記錄強制執行先前的計畫 (如果已證實該計畫比較好)。 使用 [迴歸查詢] 中的 [強制計劃] 按鈕，強制執行針對查詢所選取的計劃。  
   
@@ -60,7 +56,7 @@ ms.locfileid: "51673827"
   
  查看右邊的計畫摘要來分析執行歷程記錄，並了解不同的計畫及其執行階段統計資料。 使用下方窗格來檢查不同的計畫，或是以視覺化的並排顯示方式來比較它們 (使用 [比較] 按鈕)。  
   
-當您識別效能次佳的查詢時，您的動作取決於問題的本質：  
+當您識別出效能次佳的查詢時，您的動作將取決於問題的本質：  
   
 1.  如果是以多個計畫來執行查詢，且最後一個計畫明顯比前一個計畫差，則您可以使用計畫強制執行機制，以確保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將一律使用最佳計畫來進行未來的執行。  
   
@@ -81,7 +77,7 @@ ms.locfileid: "51673827"
   
 -   在資料表上建立耗用資源之查詢所參考的遺漏索引。  
   
--   套用安全性原則以取得資料列層級安全性。 如需詳細資料，請參閱[使用查詢存放區將資料列層級安全性最佳化](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx)。  
+-   套用安全性原則以取得資料列層級安全性。 如需詳細資訊，請參閱[使用查詢存放區將資料列層級安全性最佳化](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx) \(英文\)。  
   
 -   將暫時性系統版本設定新增到您 OLTP 應用程式經常修改的資料表中。  
   
@@ -105,7 +101,7 @@ ms.locfileid: "51673827"
   
 ![query-store-usage-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
   
-此外，您可以將計畫在索引建立前後的情況並排顯示以進行比較 (「在另一個視窗中比較所選查詢的計畫」工具列選項，在工具列上會以紅色方塊標示。)  
+此外，您可以將計畫在索引建立前後的情況並排顯示以進行比較 ([在另一個視窗中比較所選查詢的計畫] 工具列選項，工具列上以紅色方塊標示的選項)。  
   
 ![query-store-usage-4](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
   
@@ -122,7 +118,7 @@ ms.locfileid: "51673827"
   
 ![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
   
-1.  升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 但不變更資料庫相容性層級。 它不會公開最新的查詢最佳化工具變更，卻仍會提供新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能 (包括查詢存放區)。  
+1.  升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 但不變更資料庫相容性層級。 它不會公開最新的查詢最佳化工具變更，但仍會提供較新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能 (包括查詢存放區)。  
   
 2.  啟用查詢存放區。 如需本主題的詳細資訊，請參閱[針對您的工作負載調整查詢存放區](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure)。
 
@@ -145,10 +141,10 @@ ms.locfileid: "51673827"
   
 使用 [執行計數] 計量來分析您排名最前面的查詢是否是特定的 (這需要您使用 `QUERY_CAPTURE_MODE = ALL` 來執行查詢存放區)。 您可以從上圖看見 90% 的 **前幾大耗用資源的查詢** 只執行了一次。  
   
-或者，您可以執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼來取得系統中查詢文字、查詢和計畫的總數，並透過比較其 query_hash 和 plan_hash 判斷其相互差異：  
+或者，您可以執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼來取得系統中查詢文字、查詢和計畫的總數，並藉由比較 query_hash 和 plan_hash 來判斷其中的差異：  
   
 ```sql  
-/*Do cardinality analysis when suspect on ad hoc workloads*/  
+--Do cardinality analysis when suspect on ad hoc workloads
 SELECT COUNT(*) AS CountQueryTextRows FROM sys.query_store_query_text;  
 SELECT COUNT(*) AS CountQueryRows FROM sys.query_store_query;  
 SELECT COUNT(DISTINCT query_hash) AS CountDifferentQueryRows FROM  sys.query_store_query;  
@@ -169,7 +165,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
 使用個別查詢範本的方法需要建立計畫指南︰  
   
 ```sql  
-/*Apply plan guide for the selected query template*/  
+--Apply plan guide for the selected query template 
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
 EXEC sp_get_query_template   
@@ -188,10 +184,10 @@ EXEC sp_create_plan_guide
   
 含有計畫指南的解決方案來得更精確，但需要更多工作。  
   
-如果您所有查詢 (或大部分查詢) 是適用於自動參數化的候選項目，則為整個資料庫變更 `FORCED PARAMETERIZATION` 可能會更好：  
+如果您的所有查詢 (或大部分查詢) 均為適用於自動參數化的候選項目，則針對整個資料庫變更 `FORCED PARAMETERIZATION` 可能是更好的選項：  
   
 ```sql  
-/*Apply forced parameterization for entire database*/  
+--Apply forced parameterization for entire database  
 ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;  
 ```  
 

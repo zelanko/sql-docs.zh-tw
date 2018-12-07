@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eba94f256e5b8a9f8d335076e65765d507622cea
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 05f63018eb5af5ec4c3a12c9bce14b550512471e
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030167"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711940"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>啟用和停用 Reporting Services 的用戶端列印功能
 
   報表檢視器工具列上的 [列印] 按鈕使用可攜式文件格式 (PDF)，提供用戶端在瀏覽器中檢視之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表的列印。 新的遠端列印體驗使用包含 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的 PDF 轉譯延伸模組，以將報表轉譯為 PDF 模式。 您可以下載 .PDF 格式的報表，或如果您已安裝可檢視 .PDF 檔案的應用程式，列印按鈕會顯示列印對話方塊，提供頁面常用設定項目，例如頁面大小方向及 .PDF 檔案的預覽。 雖然依預設會啟用用戶端列印，但如果您不想提供此功能，也可以停用它。  
   
- 舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用 ActiveX 控制項，它必須從報表伺服器下載至用戶端電腦。 如果您將報表伺服器升級至 SQL Server 2016，列印控制項不會從報表伺服器或用戶端電腦移除。  
+ 舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用 ActiveX 控制項，它必須從報表伺服器下載至用戶端電腦。 如果您將報表伺服器升級至 SQL Server 2016 或更新版本，列印控制項不會從報表伺服器或用戶端電腦移除。  
 
 ##  <a name="bkmk_clientside_printexpereince"></a> 列印體驗  
  當您按一下報表檢視器工具列上的 [列印] ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") 按鈕，其體驗會依用戶端電腦上安裝的 .PDF 檢視應用程式及正在使用的瀏覽器而有所不同。   您可以下載 PDF 檔案，或從對話方塊設定列印選項，取決於用戶端電腦。  
@@ -98,7 +98,7 @@ Dim rs As New ReportingService()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  

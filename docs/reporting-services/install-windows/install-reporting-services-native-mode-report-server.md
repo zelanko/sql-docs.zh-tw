@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ac129843dafffbc53c32f639e0ed1113d53eec6b
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 8598ed98c9a7f8876d210b8b358b66ffb8cbff7c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813661"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712379"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>安裝 Reporting Services 2016 原生模式報表伺服器
 
@@ -64,7 +64,7 @@ ms.locfileid: "51813661"
 ##  <a name="bkmk_requirements"></a> 需求  
  預設組態選項會使用預設值來設定讓報表伺服器運作所需的核心設定， 它的需求如下：  
   
--   檢閱 [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) 。  
+-   檢閱[安裝 SQL Server 的硬體和軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 必須一起安裝在相同的執行個體中。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體會主控安裝程式所建立及設定的報表伺服器資料庫。  
   

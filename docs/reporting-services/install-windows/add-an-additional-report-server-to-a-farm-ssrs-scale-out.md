@@ -8,19 +8,19 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 530b37d346235f829c0ac1e8ccacd4cbcfb157cc
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: c68f8070bba8f392ded453f36078f0141d80ee04
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051200"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711891"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>將其他報表伺服器加入至伺服器陣列 (SSRS 向外延展)
 
   在 SharePoint 伺服器陣列中加入第二個或更多的 SharePoint 模式報表伺服器，可以改善報表伺服器的處理效能和回應時間。 如果您發現新增更多使用者、報表和其他應用程式到報表伺服器時效能降低了，那麼新增額外的報表伺服器可以改善效能。 此外，當硬體發生問題或者您在環境中的個別伺服器上執行一般維護作業時，也建議您加入第二個報表伺服器以提高報表伺服器的可用性。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版開始，在 SharePoint 模式中向外延展 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 環境的步驟會遵循標準 SharePoint 伺服器陣列部署，並且運用 SharePoint 負載平衡功能。  
   
 > [!IMPORTANT]  
->  並非所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本都支援向外延展 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 2016 版本支援的功能 [的＜](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)＞一節。  
+>  並非所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本都支援向外延展 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 [SQL Server 版本支援的功能](~/sql-server/editions-and-components-of-sql-server-2017.md#SSRS)的＜[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]＞一節。  
   
 > [!TIP]  
 >  從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版開始，您不會使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來加入伺服器以及向外延展報表伺服器。 SharePoint 產品會在具有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務的 SharePoint 伺服器加入至伺服器陣列時，管理向外延展 Reporting Services。  
@@ -59,7 +59,7 @@ ms.locfileid: "50051200"
   
 |步驟|說明和連結|  
 |----------|--------------------------|  
-|將 SharePoint 伺服器加入伺服器陣列中。|您需安裝 SharePoint 以部署其他 Reporting Services 應用程式。<br/><br/>若是 SharePoint 2013，請參閱 [Add SharePoint server to a farm in SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)(在 SharePoint Server 2013 中將 SharePoint 伺服器加入伺服陣列)。<br/><br/>若是 SharePoint 2016，請參閱 [Add SharePoint server to a farm in SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)(在 SharePoint Server 2016 中將 SharePoint 伺服器加入伺服器陣列)。|  
+|將 SharePoint 伺服器加入伺服器陣列中。|您需安裝 SharePoint 以部署其他 Reporting Services 應用程式。<br/><br/>若是 SharePoint 2013，請參閱 [在 SharePoint Server 2013 中將 SharePoint 伺服器加入伺服陣列](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)(在 SharePoint Server 2013 中將 SharePoint 伺服器加入伺服陣列)。<br/><br/>若是 SharePoint 2016，請參閱 [Add SharePoint server to a farm in SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)(在 SharePoint Server 2016 中將 SharePoint 伺服器加入伺服器陣列)。|  
 |安裝和設定 Reporting Services SharePoint 模式。|執行 SQL Server 安裝。 如需安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式的詳細資訊，請參閱[以 SharePoint 模式安裝第一部報表伺服器](install-the-first-report-server-in-sharepoint-mode.md)<br /><br /> 如果伺服器只會當作應用程式伺服器使用，而不會當作 WFE 使用，您就不需要選取 [適用於 SharePoint 產品的 Reporting Services 增益集]。<br /><br /> 1) 在 [安裝程式角色] 頁面上，選取 [SQL Server 功能安裝]<br /><br /> 2) 在 [功能選擇] 頁面上，選取 [Reporting Services - SharePoint]<br /><br /> 3) 在 [Reporting Services 設定] 頁面上，確認已針對 [Reporting Services SharePoint 模式] 選取 [只安裝] 選項。|  
 |確認 Reporting Services 可以運作。|1) 在 SharePoint 管理中心內，按一下 [系統設定] 群組中的 [管理此伺服器陣列中的伺服器]。<br /><br /> 2) 確認 [SQL Server Reporting Services 服務] 正在執行。<br /><br />如需詳細資訊，請參閱＜ [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)＞|  
   
@@ -78,7 +78,7 @@ ms.locfileid: "50051200"
 
 ## <a name="next-steps"></a>後續步驟
 
-[Add SharePoint server to a farm in SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
-[Add SharePoint server to a farm in SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
+[將 SharePoint 伺服器加入至 SharePoint Server 2016 中的伺服器陣列](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
+[將 SharePoint 伺服器加入至 SharePoint Server 2016 中的伺服器陣列](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

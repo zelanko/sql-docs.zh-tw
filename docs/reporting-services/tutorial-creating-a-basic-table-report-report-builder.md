@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6a241d0c1bde3eea57c21ca8a14b465a79aa89c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627886"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712349"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教學課程：建立基本資料表報表 (報表產生器)
 本教學課程將教導您根據範例銷售資料建立基本資料表報表。 下圖顯示您將建立的報表。  
@@ -312,7 +312,7 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
 4.  按一下 **[儲存]**。  
   
 ## <a name="Export"></a>7.匯出報表  
-報表可匯出為不同的格式，例如 Microsoft Excel 和逗號分隔值 (CSV) 檔案。 如需詳細資訊，請參閱[匯出報表 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
+報表可匯出為不同的格式，例如 Microsoft Excel 和逗號分隔值 (CSV) 檔案。 如需詳細資訊，請參閱 [匯出報表 &#40;報表產生器及 SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)中之分頁的規則。  
   
 在本教學課程中，您會將報表匯出到 Excel，並且設定報表上的屬性，為活頁簿索引標籤提供自訂名稱。  
   
@@ -355,6 +355,6 @@ SalesDate 值會顯示月份的名稱，而不是月份的數字。
   
 ## <a name="see-also"></a>另請參閱  
 [報表產生器教學課程](../reporting-services/report-builder-tutorials.md)  
-[SQL Server 2016 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[SQL Server 的報表產生器](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

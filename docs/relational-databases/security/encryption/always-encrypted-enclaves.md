@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 742c3dfb66add1a8e81fb9f530923b11e17bfea8
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 9dfc5e2cf7bab164d650f2da1767b2a0e7c399aa
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307112"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711179"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -48,14 +48,14 @@ Always Encrypted 會使用安全記憶體保護區，如下圖所示：
 
 運用安全記憶體保護區，Always Encrypted 可保護敏感性資料的機密性，同時提供下列好處：
 
-- **就地加密** – 敏感性資料的密碼編譯作業 (例如：初始資料加密或輪替資料行加密金鑰) 會在安全記憶體保護區內執行，而不需要將資料移出資料庫。 您可以使用 ALTER TABLE Transact-SQL 陳述式來發出就地加密，而不需要使用 SSMS 中的 [Always Encrypted 精靈] 或 Set-SqlColumnEncryption PowerShell Cmdlet 等工具。
+- **就地加密** - 敏感性資料的密碼編譯作業 (例如：初始資料加密或輪替資料行加密金鑰) 會在安全記憶體保護區內執行，而不需要將資料移出資料庫。 您可以使用 ALTER TABLE Transact-SQL 陳述式來發出就地加密，而不需要使用 SSMS 中的 [Always Encrypted 精靈] 或 Set-SqlColumnEncryption PowerShell Cmdlet 等工具。
 
-- **豐富計算 (預覽)** – 安全記憶體保護區內支援加密資料行作業，包括模式比對 (LIKE 述詞) 及範圍比較，這可為需要在資料庫系統內執行這類計算的各種應用程式和案例解除鎖定 Always Encrypted 功能。
+- **豐富計算 (預覽)** - 安全記憶體保護區內支援加密資料行作業，包括模式比對 (LIKE 述詞) 及範圍比較，這可為需要在資料庫系統內執行這類計算的各種應用程式和案例解除鎖定 Always Encrypted 功能。
 
 > [!IMPORTANT]
-> 在 [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] 中，豐富計算會暫止數個效能最佳化 (包含無編製索引等這類有限功能)，而且目前預設會予以停用。 若要啟用豐富計算，請參閱[啟用豐富計算](configure-always-encrypted-enclaves.md#configure-a-secure-enclave)。
+> 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中，豐富計算會暫止數個效能最佳化 (包含無編製索引等這類有限功能)，而且目前預設會予以停用。 若要啟用豐富計算，請參閱[啟用豐富計算](configure-always-encrypted-enclaves.md#configure-a-secure-enclave)。
 
-在 [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] 中，具有安全記憶體保護區的 Always Encrypted 會使用[虛擬化安全性 (VBS)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) 來保護 Windows 中的記憶體保護區 (也稱為虛擬安全模式或 VSM 記憶體保護區)。
+在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中，具有安全記憶體保護區的 Always Encrypted 會使用[虛擬式安全性 (VBS)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) \(英文\) 來保護 Windows 中的記憶體保護區 (也稱為虛擬安全模式或 VSM 記憶體保護區)。
 
 ## <a name="secure-enclave-attestation"></a>安全記憶體保護區證明
 
@@ -63,18 +63,18 @@ SQL Server 引擎內部的安全記憶體保護區能夠以純文字形式存取
 
 確認記憶體保護區的處理序稱為**記憶體保護區證明**，它通常包含應用程式 (有時也包括 SQL Server) 內的用戶端驅動程式與外部證明服務連絡。 證明處理序的細節取決於記憶體保護區技術和證明服務。
 
-SQL Server 在 [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] 中支援 VBS 安全記憶體保護區的證明處理序是 Windows Defender 系統防護執行階段證明，它會使用主機守護者服務 (HGS) 作為證明服務。 您需要在環境中設定 HGS，並在 HGS 中註冊裝載 SQL Server 執行個體的電腦。 您還必須使用 HGS 證明來設定用戶端應用程式或工具 (例如 SQL Server Management Studio)。
+SQL Server 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中支援 VBS 安全記憶體保護區的證明處理序是 Windows Defender 系統防護執行階段證明，它會使用主機守護者服務 (HGS) 作為證明服務。 您需要在環境中設定 HGS，並在 HGS 中註冊裝載 SQL Server 執行個體的電腦。 您還必須使用 HGS 證明來設定用戶端應用程式或工具 (例如 SQL Server Management Studio)。
 
 ## <a name="secure-enclave-providers"></a>安全記憶體保護區提供者
 
-若要使用具有安全記憶體保護區的 Always Encrypted，應用程式必須使用支援此功能的用戶端驅動程式。 在 [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] 中，您的應用程式必須使用 .NET Framework 4.7.2 和 .NET Framework Data Provider for SQL Server。 此外，.NET 應用程式還必須設有記憶體保護區類型 (例如 VBS) 專用的 **安全記憶體保護區提供者**，以及您要使用的證明服務 (例如 HGS)。 支援的記憶體保護區提供者隨附於個別 NuGet 套件，您必須將其與您的應用程式整合。 記憶體保護區提供者會實作用戶端邏輯，用於證明通訊協定以及與指定類型的記憶體保護區建立安全通道。
+若要使用具有安全記憶體保護區的 Always Encrypted，應用程式必須使用支援此功能的用戶端驅動程式。 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中，您的應用程式必須使用 .NET Framework 4.7.2 和 .NET Framework Data Provider for SQL Server。 此外，.NET 應用程式還必須設有記憶體保護區類型 (例如 VBS) 專用的 **安全記憶體保護區提供者**，以及您要使用的證明服務 (例如 HGS)。 支援的記憶體保護區提供者隨附於個別 NuGet 套件，您必須將其與您的應用程式整合。 記憶體保護區提供者會實作用戶端邏輯，用於證明通訊協定以及與指定類型的記憶體保護區建立安全通道。
 
 ## <a name="enclave-enabled-keys"></a>已啟用記憶體保護區的金鑰
 
 具有安全記憶體保護區的 Always Encrypted 引入了已啟用記憶體保護區的金鑰概念：
 
-- **已啟用記憶體保護區的資料行主要金鑰** – 在資料庫內部資料行主要金鑰中繼資料物件中已指定 ENCLAVE_COMPUTATIONS 屬性的資料行主要金鑰。 資料行主要金鑰中繼資料物件也必須包含中繼資料屬性的有效簽章。
-- **已啟用記憶體保護區的資料行加密金鑰** – 以已啟用記憶體保護區的資料行主要金鑰進行加密的資料行加密金鑰。
+- **已啟用記憶體保護區的資料行主要金鑰** - 在資料庫內部資料行主要金鑰中繼資料物件中已指定 ENCLAVE_COMPUTATIONS 屬性的資料行主要金鑰。 資料行主要金鑰中繼資料物件也必須包含中繼資料屬性的有效簽章。
+- **已啟用記憶體保護區的資料行加密金鑰** - 以已啟用記憶體保護區的資料行主要金鑰進行加密的資料行加密金鑰。
 
 當 SQL Server 引擎判斷查詢中指定的作業需要在安全記憶體保護區內部執行時，SQL Server 引擎會要求用戶端驅動程式共用使用安全記憶體保護區進行計算所需的資料行加密金鑰。 只有在金鑰是已啟用記憶體保護區的金鑰 (亦即，以已啟用記憶體保護區的資料行主要金鑰進行加密)，並已正確簽署時，用戶端驅動程式才會共用資料行加密金鑰。 否則，此查詢會失敗。
 

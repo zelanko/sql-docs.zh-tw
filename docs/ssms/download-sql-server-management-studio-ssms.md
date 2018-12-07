@@ -1,7 +1,7 @@
 ---
 title: 下載 SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 11/22/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d36dd71c7b67b079f2a87ca2875412a38f14aa93
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: efc8c7ec6408e2f6c5fe7fb2262d581e82c4b1b9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699430"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712079"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,33 +43,42 @@ SSMS 是整合式環境，用於管理任何 SQL 基礎結構，從 SQL Sever �
 
 **SSMS 是免費的！**
 
-**[SSMS 18.0 公開預覽 5 現在已可供使用](#ssms-180-preview-5)，它是最新一代的 *SQL Server Management Studio*，可提供 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 的支援！**
+**[SSMS 18.0 公開預覽 5 現在已可供使用](#ssms-180-preview-5)，它是最新一代的 *SQL Server Management Studio*，可提供 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]** 的支援！
 
-## <a name="ssms-179-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9 是目前正式運作 (GA) 版本的 SSMS
+## <a name="ssms-1791-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9.1 是目前正式運作 (GA) 版本的 SSMS
 
-**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.9](https://go.microsoft.com/fwlink/?linkid=2014306)**
-<br>**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.9 升級套件 (從 17.x 升級至 17.9)](https://go.microsoft.com/fwlink/?linkid=2014215)**
+**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154)**
+<br>**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.9.1 升級套件 (從 17.x 升級至 17.9.1)](https://go.microsoft.com/fwlink/?linkid=2043430)**
 
-### <a name="available-languages-ssms-179"></a>可用語言 (SSMS 17.9)
+**版本資訊**
 
-[簡體中文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
+- 版本編號：17.9.1<br>
+- 組建編號：14.0.17289.0<br>
+- 發行日期：2018 年 11 月 21 日
 
-如需 SSMS 17.9 的其他資訊，請參閱 [SSMS 17.9 變更記錄](sql-server-management-studio-changelog-ssms.md#ssms-179-latest-ga-release)。
+### <a name="available-languages-ssms-1791"></a>可用語言 (SSMS 17.9.1)
 
-## <a name="ssms-installation-tips-and-issues-ssms-179"></a>SSMS 安裝祕訣與問題 (SSMS 17.9)
+> [!NOTE]
+> 非英文的 SSMS 17.x 語言版本如果安裝在 Windows 8、Windows 7、Windows Server 2012 及 Windows Server 2008 R2 上，就需要 [KB 2862966 安全性更新程式套件](https://support.microsoft.com/kb/2862966)。
+
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
+
+如需 SSMS 17.9.1 的其他資訊，請參閱 [SSMS 17.9.1 變更記錄](sql-server-management-studio-changelog-ssms.md#ssms-1791-latest-ga-release)。
+
+## <a name="ssms-installation-tips-and-issues-ssms-1791"></a>SSMS 安裝祕訣與問題 (SSMS 17.9.1)
 
 ### <a name="minimize-installation-reboots"></a>最小化安裝重新開機
 
 * 請採取下列動作，以降低 SSMS 安裝程式需要在安裝結束時重新開機的機會：
   * 請確定您執行的是最新版的 Visual C++ 2013 可轉散發套件。 需要 12.0.40649.5 版 (或更新版本)。 只需要 x64 版本。
   * 請確認電腦上的 .NET Framework 版本是 4.6.1 (或更新版本)。
-  * 關閉電腦上開啟的所有 Visual Studio 執行個體。
+  * 關閉電腦上開啟的每一個 Visual Studio 執行個體。
   * 請確定電腦上安裝了所有最新的作業系統更新。
   * 所述的動作通常只需要執行一次。 只有極少數的情況，需要在另外升級至相同主要版本的 SSMS 時重新開機。 針對次要升級，電腦上已安裝好所有 SSMS 必要條件。
 
 ## <a name="ssms-180-preview-5"></a>SSMS 18.0 (Preview 5)
 
-**SSMS 18.0 公開預覽 5 現在已可供使用，它是最新一代的 *SQL Server Management Studio*，可提供 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 的支援！**
+**SSMS 18.0 公開預覽 5 現在已可供使用，它是最新一代的 *SQL Server Management Studio*可提供 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]** 的支援！
 
 **[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 18.0 (Preview 5)](https://go.microsoft.com/fwlink/?linkid=2041155)**
 
@@ -111,7 +120,7 @@ SSMS 18.0 (Preview 5) 是 SQL Server Management Studio 的最新版本。 18.x �
 
 ## <a name="supported-sql-offerings-ssms-180-preview-5"></a>支援的 SQL 供應項目 (SSMS 18.0 Preview 5)
 
-* 此版本的 SSMS 適用於所有[支援的 SQL Server 2008 - [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044)，並提供最高層級的支援以使用 Azure SQL Database 和 Azure SQL 資料倉儲中最新雲端功能。
+* 此版本的 SSMS 適用於所有[支援的 SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044)，並提供最高層級的支援以使用 Azure SQL Database 和 Azure SQL 資料倉儲中最新雲端功能。
 * 此外，SSMS 18.x 可以與 SSMS 17.x、SSMS 16.x 或 SQL Server 2014 SSMS 及更早的版本並存安裝。
 * SQL Server Integration Services (SSIS) - SSMS 17.x 或更新版本不支援連線至舊版 SQL Server Integration Services 服務。 若要連線至舊版 Integration Services 的舊版本，請使用與 SQL Server 版本一致的 SSMS 版本。 例如，使用 SSMS 16.x 連線至舊版 SQL Server 2016 Integration Services 服務。 SSMS 17.x 和 SSMS 16.x 可以並存安裝在相同電腦上。 自 SQL Server 2012 發行之後，建議使用 SSIS Catalog 資料庫 SSISDB 來儲存、管理、執行和監視 Integration Services 套件。 如需詳細資訊，請參閱 [SSIS 目錄](../integration-services/catalog/ssis-catalog.md)。
 

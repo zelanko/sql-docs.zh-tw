@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fafda7376f5c44c795fab85c6659cf5824522e1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 91709818cad0609fda4c624f9bd7585af0c9eea9
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677897"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712604"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的變更記錄
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "51677897"
 
 **SSIS：**
 
-1. 新增 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 的支援。
+1. 新增 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的支援。
 2. 移除 SQL Server 2012 的支援。
 
 ### <a name="known-issues"></a>已知問題：
@@ -138,7 +138,7 @@ ms.locfileid: "51677897"
 
 **SSIS：**
 
-- 修正自發的系統處理工作在目標為 SQLServer2016 和 SQLServer2017 時，不會記錄任何處理步驟的問題
+- 修正下列問題：以 SQLServer2016 和 SQLServer2017 為目標時，AS 處理工作不會記錄任何處理步驟
 - 修正在 SSDT 中以非常長的英文工作名稱開啟 dtsx 時，會發生存取違規的問題
 - 修正 ScriptTask 的變數清單有時候會從工作 UI 消失的問題
 - 修正當套件位置為 SQL Server 時，新增現有套件複本會失敗的問題
@@ -207,7 +207,7 @@ Visual Studio 2017 (15.5.1) 是與 15.5.0 版相同的版本，但安裝程式�
 1. 將圖示取代為較高品質的版本。
 
 **Integration Services (IS)**
-1. 在 ADF 中部署至 Azure SSIS IR 時，已在 [部署精靈] 中新增套件驗證步驟，這可探索要在 Azure SSIS IR 中執行之 SSIS 套件中的潛在相容性問題。 如需詳細資訊，請參閱[驗證部署到 Azure 的 SSIS 套件](..\integration-services\lift-shift\ssis-azure-validate-packages.md)。
+1. 在 ADF 中部署至 Azure SSIS IR 時，已在 [部署精靈] 中新增套件驗證步驟，這可探索要在 Azure SSIS IR 中執行之 SSIS 套件中的潛在相容性問題。 如需詳細資訊，請參閱[驗證部署到 Azure 的 SSIS 套件](../integration-services/lift-shift/ssis-azure-validate-packages.md)。
 1. 已將 SSIS 延伸模組當地語系化。
 
 ### <a name="bug-fixes"></a>錯誤修正
@@ -234,7 +234,7 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
   - 執行背景分析 - 啟用時，如果載入查詢以分析查詢的輸出結構描述，則現代資料來源的查詢編輯器將對資料來源執行查詢。
 
 **Integration Services (IS)**
-- 在 ADF 中部署至 Azure SSIS IR 時，已在 [部署精靈] 中新增套件驗證步驟，這可探索要在 Azure SSIS IR 中執行之 SSIS 套件中的潛在相容性問題。 如需詳細資訊，請參閱[驗證部署到 Azure 的 SSIS 套件](..\integration-services\lift-shift\ssis-azure-validate-packages.md)。
+- 在 ADF 中部署至 Azure SSIS IR 時，已在 [部署精靈] 中新增套件驗證步驟，這可探索要在 Azure SSIS IR 中執行之 SSIS 套件中的潛在相容性問題。 如需詳細資訊，請參閱[驗證部署到 Azure 的 SSIS 套件](../integration-services/lift-shift/ssis-azure-validate-packages.md)。
 
 
 ### <a name="bug-fixes"></a>錯誤修正
@@ -543,7 +543,7 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 - 表格式：修正從特定應用程式貼入 DAX 資料編輯列時會貼上影像或其他內容，而非文字的問題。
 - 表格式：修正 1103 中有些舊模型因為具有特定定義的量值存在而無法開啟的問題。
 - 表格式：修正無法刪除 XEvent 工作階段的問題。
-- 修正嘗試使用 devenv.com 建置 AS “smproj” 檔案會失敗的問題
+- 修正嘗試使用 devenv.com 建置 AS "smproj" 檔案會失敗的問題
 - 修正在 AS 表格式模型工作表索引標籤標題中使用韓文輸入法時，會太頻繁地完成文字變更的問題
 - 修正 DAX Related() 函數的 IntelliSense 無法正確顯示其他資料表之資料行的問題
 - 透過針對 AS 資料庫清單進行排序，改進從資料庫對話方塊的 AS 表格式專案匯入
@@ -608,7 +608,7 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 
 針對 SqlPackage 的 Publish 和 Script 動作，加入兩個新的引數。
 
-* DeployScriptPath (簡短名稱︰dsp)。 這是要撰寫部署指令碼的選擇性路徑。 對於 Azure 部署，如果有 TSQL 命令要建立或修改資料庫，將會對主要指令碼寫入相同的路徑，但會使用 “Filename_Master.sql” 做為輸出檔案名稱。
+* DeployScriptPath (簡短名稱︰dsp)。 這是要撰寫部署指令碼的選擇性路徑。 對於 Azure 部署，如果有 TSQL 命令要建立或修改資料庫，將會對主要指令碼寫入相同的路徑，但會使用 "Filename_Master.sql" 做為輸出檔案名稱。
 * DeployReportPath (簡短名稱︰drp)。 這是要撰寫部署報表的選擇性路徑。
 
 請注意，Script 動作應使用現有的「輸出路徑」引數或新的指令碼/報表特定引數，但不是同時使用兩者。
@@ -617,11 +617,11 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 
 **Publish 動作**
 
-```Sqlpackage.exe /a:Publish /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:”My\DeployScript.sql” /deployreportpath:”My\DeployReport.xml”```
+```Sqlpackage.exe /a:Publish /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
 **Script 動作**
 
-```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:”My\DeployScript.sql” /deployreportpath:”My\DeployReport.xml”```
+```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
 DacFx 中已加入兩個新的 API：DacServices.Publish() 和 DacServices.Script()。 這些 API 也支援在單一作業中執行發行 + 編寫指令碼 + 報告的動作。 範例使用方式︰
 
@@ -658,7 +658,7 @@ Console.WriteLine(result.DeploymentReport);
 
 **資料庫工具**
 
-* [連接錯誤 3055711](https://connect.microsoft.com/SQLServer/feedback/details/3055711/columns-cannot-be-selected-from-cross-apply-openjson-with-explicit-schema) – Columns cannot be selected from CROSS APPLY OPENJSON with explicit schema (無法從有明確結構描述的 CROSS APPLY OPENJSON 選取資料行)
+* [連接錯誤 3055711](https://connect.microsoft.com/SQLServer/feedback/details/3055711/columns-cannot-be-selected-from-cross-apply-openjson-with-explicit-schema) - Columns cannot be selected from CROSS APPLY OPENJSON with explicit schema (無法從有明確結構描述的 CROSS APPLY OPENJSON 選取資料行)
 * 已修正 - 在自動產生的歷程記錄資料表索引中，DacFx 在重新部署時會卸除索引的問題
 * 已修正 - DacFx 批次剖析器未剖析逸出括號 ']' 字元而導致發行失敗的問題
 * 已改進 - SqlPackage 現在在說明輸出中會包含每個動作的描述
@@ -704,7 +704,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 - [連接問題 1026648](https://connect.microsoft.com/SQLServer/feedback/details/1026648)：IsPersistedNullable shows as different in SSDT Comparison (IsPersistedNullable 在 SSDT 比較中顯示為不同)
 - [連接問題 2054735](https://connect.microsoft.com/SQLServer/feedback/details/2054735)︰Identity is reset when importing a BACPAC (匯入 BACPAC 時會重設識別)
 - [連接問題 2900167](https://connect.microsoft.com/SQLServer/feedback/details/2900167)︰Running SSDT unit tests leaves temp files behind (執行 SSDT 單元測試留下暫存檔案)
-- [連接問題 1807712](https://connect.microsoft.com/SQLServer/feedback/details/1807712)︰Backwards compatibility breakage – AppLocal and Nugetization (回溯相容性損毀 - AppLocal 和 Nugetization)
+- [連接問題 1807712](https://connect.microsoft.com/SQLServer/feedback/details/1807712)︰Backwards compatibility breakage - AppLocal and Nugetization (回溯相容性損毀 - AppLocal 和 Nugetization)
 
 **Analysis Services 與 Reporting Services**
 

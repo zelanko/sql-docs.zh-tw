@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a08ece8729125bf1cc60bb96385d58ba5c3a6ee
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 13e03572ee4ce886288f1c72b89a97b476d3b35c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813861"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712569"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services (SSRS) 支援的資料來源
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會透過使用資料處理延伸模組的模組化與可延伸資料層，擷取資料來源中的報表資料。 若要擷取資料來源中的報表資料，您必須選取資料處理延伸模組，其同時支援資料來源的類型 (也就是在資料來源上執行的軟體版本) 與資料來源平台 (32 位元或 64 位元 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])。  
@@ -68,7 +68,7 @@ ms.locfileid: "51813861"
  如需有關自訂資料處理延伸模組的詳細資訊，請參閱＜ [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)＞。 如需標準 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者的詳細資訊，請參閱 <xref:System.Data> 命名空間。   
   
 ## <a name="platform-support-for-report-data-sources"></a>報表資料來源的平台支援  
- 您可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署中使用的資料來源會隨著 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本與平台而有所不同。 如需功能的詳細資訊，請參閱 [SQL Server 2016 版本支援的 Reporting Services 功能](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。 此主題稍後的資料表會依版本及平台，提供關於支援之資料來源的詳細資訊。  
+ 您可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署中使用的資料來源會隨著 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本與平台而有所不同。 如需功能的詳細資訊，請參閱 [SQL Server 版本支援的 Reporting Services 功能](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。 此主題稍後的資料表會依版本及平台，提供關於支援之資料來源的詳細資訊。  
   
  關於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料來源的平台考量，則會分別針對報表撰寫用戶端與報表伺服器。  
   

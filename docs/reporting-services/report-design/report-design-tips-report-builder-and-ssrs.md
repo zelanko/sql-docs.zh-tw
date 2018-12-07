@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51983605c640bddafae41463c27843282820041e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a68a953609b8f76b4ea441d3d35fbf04a72af7a
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764076"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711239"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>報表設計提示 (報表產生器及 SSRS)
   請採用下列秘訣協助設計您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表。  
@@ -156,7 +156,7 @@ ms.locfileid: "47764076"
  這種行為、報表項目的寬度和高度屬性、報表主體的大小、頁面高度和頁面寬度定義、父報表的邊界設定以及轉譯器特有的分頁支援都會一起決定哪些報表項目會一起容納在轉譯的頁面上。 如需詳細資訊，請參閱 [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2016 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [SQL Server 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Reporting Services 教學課程 &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [報表產生器教學課程](../../reporting-services/report-builder-tutorials.md)  
   

@@ -7,16 +7,16 @@ ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd029f997770dd78269f58bed5daddc60699fb8a
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 9352bd7a073701686961a2924a374d28d645748e
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813401"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712529"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>移轉 Reporting Services 安裝 (SharePoint 模式)
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] (../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
   本主題概述將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式部署從一個 SharePoint 環境移轉至另一個 SharePoint 環境所需的步驟。 特定的步驟可能會因為您移轉的來源版本而有所不同。 如需有關 SharePoint 模式升級及移轉案例的詳細資訊，請參閱＜ [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)＞。 如果您只是要將報表項目從某部伺服器複製到另一部，請參閱 [在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "51813401"
 |**3**|建立新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。|建立新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。|當您建立新的服務應用程式時，請將它設定為使用複製的報表伺服器資料庫。<br /><br /> 如需使用 SharePoint 管理中心的詳細資訊，請參閱 [在 SharePoint 模式中安裝第一部報表伺服器](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md)中的＜步驟 3：建立 Reporting Services 服務應用程式＞一節。<br /><br /> 如需使用 PowerShell 的範例，請參閱 [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)中的＜使用 PowerShell 建立 Reporting Services 服務應用程式＞一節。|  
 |**4**|還原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態檔。|簡單檔案複製。|檔案的範例預設位置如下：C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting。|  
 |||||  
-|**5**|還原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]加密金鑰。|使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的 “SystemSettings” 頁面還原金鑰備份檔。<br /><br /> **或**<br /><br /> PowerShell。|請參閱 [管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)主題中的＜金鑰管理＞一節。|   
+|**5**|還原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]加密金鑰。|使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的 “SystemSettings” 頁面還原金鑰備份檔。<br /><br /> **或**<br /><br /> PowerShell。|請參閱[管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)主題中的＜金鑰管理＞一節。|   
   
 ##  <a name="bkmk_migrate_from_ctp"></a> 從 SQL Server 2012 或 SQL Server 2014 部署移轉  
  在多伺服器陣列中，使用者在不同電腦上可能會擁有內容資料庫和目錄資料庫，此時您只需要將已安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務的新伺服器加入至 SharePoint 伺服器陣列，然後移除舊的伺服器。 您應該不需要複製資料庫。  
@@ -111,7 +111,7 @@ ms.locfileid: "51813401"
   
 2.  還原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密金鑰。  
   
-     請參閱 [管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)主題中的＜金鑰管理＞一節。  
+     請參閱[管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)主題中的＜金鑰管理＞一節  
   
 3.  在服務應用程式上設定 UEA 和 Windows 認證。  
   

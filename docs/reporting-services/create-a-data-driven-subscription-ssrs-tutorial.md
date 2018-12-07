@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa047ea7506c4fd9111345e0b5cbb6beca877356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20bcd05c479debbbb17883d354390899c1a1f10c
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815402"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712519"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>建立資料驅動訂閱 (SSRS 教學課程)
 本 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 教學課程將告訴您資料驅動訂閱概念，方法是逐步解說建立資料驅動訂閱的簡單範例來產生篩選過的報表輸出，並將其儲存至檔案共用。 
@@ -56,7 +56,7 @@ ms.locfileid: "47815402"
   
 您的電腦必須安裝下列項目，才能使用此教學課程：  
   
--   支援資料驅動訂閱的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 如需詳細資訊，請參閱 [SQL Server 2016 的版本和元件](../sql-server/editions-and-components-of-sql-server-2016.md)。  
+-   支援資料驅動訂閱的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 如需詳細資訊，請參閱 [SQL Server 2017 的版本及功能](../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
 -   報表伺服器必須以原生模式執行。 此教學課程中描述的使用者介面是以原生模式報表伺服器為基礎。 雖然 SharePoint 模式報表伺服器也支援訂閱，不過其使用者介面與此教學課程所描述的使用者介面有所不同。  
   

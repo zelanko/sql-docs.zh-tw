@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9bb61746e2794faa9fab5f2fbc89c42fbe9ccd5f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c5f8405a36595b7a5ddaade9aa00952642625c65
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814331"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711219"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>入口網站 (SSRS 原生模式)
 
@@ -54,7 +54,7 @@ Reporting Services 入口網站是一種 Web 體驗，可讓您檢視報表、�
 
 入口網站僅適用於以原生模式執行的報表伺服器。 不支援針對 SharePoint 整合模式設定的報表伺服器。
 
-部分入口網站功能只在指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中提供。 如需詳細資訊，請參閱 [SQL Server 2016 版本所支援的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+部分入口網站功能只在指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中提供。 如需詳細資訊，請參閱 [SQL Server 版本所支援的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
 
 在新的安裝上，只有本機管理員才有足夠的權限處理內容和設定。 若要授與權限給其他使用者，本機管理員必須建立角色指派，提供報表伺服器的存取權。 使用者在這之後可以存取的應用程式頁面和工作，會視該使用者的角色指派而定。 如需詳細資訊，請參閱[將報表伺服器的存取權授與使用者](security/grant-user-access-to-a-report-server-report-manager.md)
 
@@ -126,6 +126,6 @@ Reporting Services 入口網站是一種 Web 體驗，可讓您檢視報表、�
 [設定 URL (SSRS 組態管理員)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
 [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)  
 [規劃 Reporting Services 瀏覽器支援](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
-[SQL Server 2016 版本所支援的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
+[SQL Server 版本所支援的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 
 更多問題嗎？ [試試 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

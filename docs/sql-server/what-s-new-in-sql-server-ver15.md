@@ -9,18 +9,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55cf8c1bc9a7a74928ebe2f5c0c7060c94068e48
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4cafa82c6c5dd7712daa930b9b9aaf4be2bf66fc
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703906"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711829"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019 的新功能
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 是以舊版本為基礎，可讓 SQL Server 成長為平台，以供您選擇開發語言、資料類型、內部部署或雲端以及作業系統。 本文摘要說明 SQL Server 2019 的新功能。 如需詳細資訊和已知問題，請參閱 [SQL Server 2019 版本資訊](sql-server-ver15-release-notes.md)。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 是以舊版本為基礎，可讓 SQL Server 成長為平台，以供您選擇開發語言、資料類型、內部部署或雲端以及作業系統。 本文摘要說明 SQL Server 2019 的新功能。 如需詳細資訊和已知問題，請參閱 [SQL Server 2019 版本資訊](sql-server-ver15-release-notes.md)。
 
 **試用 SQL Server 2019！**
 - [![從評估中心下載](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [下載 SQL Server 2019 以安裝於 Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
@@ -29,7 +29,7 @@ ms.locfileid: "51703906"
 
 ## <a name="ctp-21"></a>CTP 2.1
 
-Community Technology Preview (CTP) 2.1 是 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 的最新公開版本。 下列是針對 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.1 所新增或強化的功能。
+Community Technology Preview (CTP) 2.1 是 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最新公開版本。 下列是針對 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1 所新增或強化的功能。
 
 - [巨量資料叢集](#bigdatacluster)
   - 部署 Python 和 R 應用程式
@@ -46,7 +46,7 @@ Community Technology Preview (CTP) 2.1 是 [!INCLUDE[sql-server-2019](..\include
 
 ## <a name="ctp-20"></a>CTP 2.0 
 
-Community Technology Preview (CTP) 2.0 是第一個 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 公用版本。 下列是針對 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] CTP 2.0 所新增或強化的功能。
+Community Technology Preview (CTP) 2.0 是第一個 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 公用版本。 下列是針對 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 所新增或強化的功能。
 
 - [巨量資料叢集](#bigdatacluster)
   - 在 Kubernetes 上部署具有 SQL 和 Spark Linux 容器的巨量資料叢集
@@ -163,7 +163,7 @@ SQL Server 2019 預覽引進靜態資料遮罩。 您可以使用靜態資料遮
 
 例如，`LATIN1_GENERAL_100_CI_AS_SC` 至 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`。 UTF-8 僅適用於支援增補字元 (在 SQL Server 2012 中引進) 的 Windows 定序。 `NCHAR` 和 `NVARCHAR` 只允許 UTF-16 編碼，並維持不變。
 
-此功能可能會節省大量儲存空間 (視使用的字元集而定)。 例如，使用啟用 UTF-8 的定序，將具有拉丁文字串的現有資料行資料類型從 `NCHAR(10)` 變更為 `CHAR(10)` 會使儲存體需求減少接近 50%。 這項減少的原因是 `NCHAR(10)` 需要 22 個位元組作為儲存空間，而 `CHAR(10)` 針對相同的 Unicode 字串需要 12 個位元組。
+此功能可能會節省大量儲存空間 (視使用的字元集而定)。 例如，使用啟用 UTF-8 的定序，將具有拉丁文字串的現有資料行資料類型從 `NCHAR(10)` 變更為 `CHAR(10)` 會使儲存體需求減少 50%。 這項減少的原因是 `NCHAR(10)` 需要 20 個位元組作為儲存空間，而 `CHAR(10)` 針對相同的 Unicode 字串需要 10 個位元組。
 
 ### <a name="resumable-online-index-create-ctp-20"></a>可繼續的線上索引建立 (CTP 2.0)
 

@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7c7a9e61ff2cda1d0760a1ae28ab7e79fbddf09e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b33173a3a37ba9b4a8e71ee33661b85e60e759c0
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028087"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711261"
 ---
 # <a name="how-to-find-the-product-key-for-sql-server-2017-reporting-services"></a>如何尋找 SQL Server 2017 Reporting Services 的產品金鑰
 
@@ -40,8 +40,8 @@ ms.locfileid: "50028087"
 
 ## <a name="related-information"></a>相關資訊
 
-- 如需安裝 SQL Server 2016 Reporting Services 原生模式的資訊，請參閱[安裝 Reporting Services 原生模式報表伺服器](install-reporting-services-native-mode-report-server.md)。 
-- 如需以 SharePoint 整合模式安裝 SQL Server 2016 Reporting Services 的資訊，請參閱[在 SharePoint 模式中安裝第一部報表伺服器](install-the-first-report-server-in-sharepoint-mode.md)。
+- 如需安裝 SQL Server Reporting Services 原生模式的資訊，請參閱[安裝 Reporting Services 原生模式報表伺服器](install-reporting-services-native-mode-report-server.md)。 
+- 如需以 SharePoint 整合模式安裝 SQL Server 2016 Reporting Services (和更早版本) 的資訊，請參閱[在 SharePoint 模式中安裝第一部報表伺服器](install-the-first-report-server-in-sharepoint-mode.md)。
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: bdc74a8f-046c-4aa0-bfbd-4f1711dfb9ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 510c5dc33aa70f988b5f69e66fd93d5f4aaf4ebd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bb08af2be944093346f3769ef5cc533592ad86f
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666876"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711229"
 ---
 # <a name="files-only-installation-reporting-services"></a>僅限檔案安裝 (Reporting Services)
   「僅限檔案安裝」是指安裝程式會建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 程式檔案的資料夾結構、將檔案複製到磁碟、在本機電腦上註冊報表伺服器服務、設定服務帳戶、授與檔案權限給此服務帳戶，並註冊 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供者的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝。  
@@ -40,9 +40,9 @@ ms.locfileid: "47666876"
   
  您可以透過命令列或安裝精靈來指定僅限檔案安裝。 下列主題提供逐步指示：  
   
--   [從安裝精靈安裝 SQL Server 2016 &#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
+-   [從安裝精靈 &#40;安裝程式&#41; 安裝 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
   
--   [從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
+-   [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
 #### <a name="example-command-line-script"></a>命令列指令碼範例  
  為了清楚起見，此範例包含 /RSINSTALLMODE="FilesOnlyMode"。 但是，由於僅限檔案模式為預設值，所以當您忽略此設定時，仍然可以得到僅限檔案模式的安裝。  

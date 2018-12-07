@@ -1,7 +1,7 @@
 ---
 title: 記憶體內部 OLTP 的範例資料庫 | Microsoft 文件
 ms.custom: ''
-ms.date: 12/16/2016
+ms.date: 11/30/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7e6bf628b30bedb157e17bd7dc785061dbc2d26
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4d7adb7156a6f61ef76f62d1eeff9a4689208815
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665617"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712479"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>記憶體內部 OLTP 的範例資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "51665617"
   
 -   安裝範例及執行工作負載示範的[必要條件](#Prerequisites)  
   
--   [安裝以 AdventureWorks 為基礎的 In-Memory OLTP 範例](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的指示  
+-    [安裝以 AdventureWorks 為基礎的 In-Memory OLTP 範例](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的指示  
   
--   [範例資料表和程序描述](#Descriptionofthesampletablesandprocedures) – 這包含記憶體內部 OLTP 範例加入 AdventureWorks 中的資料表和程序的描述，以及將部分原始 AdventureWorks 資料表移轉至記憶體最佳化資料表的考量  
+-   [範例資料表和程序描述](#Descriptionofthesampletablesandprocedures) - 這包含 In-Memory OLTP 範例加入 AdventureWorks 中的資料表和程序的描述，以及將部分原始 AdventureWorks 資料表移轉至記憶體最佳化資料表的考量  
   
--   執行 [使用工作負載示範的效能度量](#PerformanceMeasurementsusingtheDemoWorkload) 之指示 – 包括安裝及執行 ostress (用於驅動工作負載的工具) 的指示，以及執行工作負載示範本身的指示。  
+-   執行 [使用工作負載示範的效能度量](#PerformanceMeasurementsusingtheDemoWorkload) 之指示 - 包括安裝及執行 ostress (用於驅動工作負載的工具) 的指示，以及執行工作負載示範本身的指示  
   
 -   [範例中的記憶體和磁碟空間使用量](#MemoryandDiskSpaceUtilizationintheSample)  
   
@@ -48,8 +48,8 @@ ms.locfileid: "51665617"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   基於效能測試考量，伺服器的規格必須與您的實際執行環境類似。 您應為此特定範例準備至少 16GB 的記憶體供 SQL Server 使用。 如需記憶體內部 OLTP 的硬體一般指導方針，請參閱下列部落格文章：[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
-  
+-   基於效能測試考量，伺服器的規格必須與您的實際執行環境類似。 您應為此特定範例準備至少 16GB 的記憶體供 SQL Server 使用。 如需 In-Memory OLTP 之硬體的一般方針，請參閱以下部落格文章：[SQL Server 2014 中 In-Memory OLTP 的硬體考量](blog-hardware-in-memory-oltp.md)
+
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>安裝以 AdventureWorks 為基礎的 In-Memory OLTP 範例  
  請遵循下列步驟來安裝範例：  
   
@@ -84,7 +84,7 @@ ms.locfileid: "51665617"
 ##  <a name="Descriptionofthesampletablesandprocedures"></a> 範例資料表和程序描述  
  此範例以 AdventureWorks 中的現有資料表為基礎，為產品和銷售訂單建立新資料表。 新資料表的結構描述類似現有的資料表，但有一些差異 (如下所述)。  
   
- 新的記憶體最佳化資料表具有後置詞 ‘_inmem’。 此範例也會包含具有後置詞 ‘_ondisk’ 的對應資料表，這些資料表可用來在系統上的記憶體最佳化資料表與磁碟資料表之間，進行一對一的效能比較。  
+ 新的記憶體最佳化資料表具有後置詞 '_inmem'。 此範例也會包含具有後置詞 '_ondisk' 的對應資料表，這些資料表可用來在系統上的記憶體最佳化資料表與磁碟資料表之間，進行一對一的效能比較。  
   
  請注意，工作負載中用於比較效能的記憶體最佳化資料表是完全持久且完整記錄的。 這些資料表不會為了提升效能而犧牲持久性或可靠性。  
   
@@ -158,15 +158,15 @@ ms.locfileid: "51665617"
   
  Sales.SalesOrderDetail  
   
--   「預設條件約束」 - 類似 SalesOrderHeader，預設條件約束要求不得移轉系統日期/時間，而是由插入銷售訂單的預存程序在第一次插入時，負責插入目前的系統日期/時間。  
+-   *預設條件約束* - 類似 SalesOrderHeader，預設條件約束要求不得移轉系統日期/時間，而是由插入銷售訂單的預存程序在第一次插入時，負責插入目前的系統日期/時間。  
   
--   「計算資料行」 – 由於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]的記憶體最佳化資料表不支援計算資料行，因此不會移轉計算資料行 LineTotal。 若要存取此資料行，請使用 Sales.vSalesOrderDetail_extended_inmem 檢視。  
+-   *計算資料行* - 由於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的記憶體最佳化資料表不支援計算資料行，因此不會移轉計算資料行 LineTotal。 若要存取此資料行，請使用 Sales.vSalesOrderDetail_extended_inmem 檢視。  
   
 -   *Rowguid* - Rowguid 資料行會遭到省略。 如需詳細資訊，請參閱 SalesOrderHeader 資料表的描述。  
   
  Production.Product  
   
--   「別名 UDT」 - 原始資料表使用使用者定義資料類型 dbo.Flag，相當於系統資料類型 bit。 移轉的資料表會改用 bit 資料類型。  
+-   *別名 UDT* - 原始資料表使用使用者定義資料類型 dbo.Flag，相當於系統資料類型 bit。 移轉的資料表會改用 bit 資料類型。  
   
 -   *Rowguid* - Rowguid 資料行會遭到省略。 如需詳細資訊，請參閱 SalesOrderHeader 資料表的描述。  
   
@@ -229,7 +229,7 @@ ms.locfileid: "51665617"
   
     -   輸出參數：  
   
-        -   @SalesOrderID int – 剛插入之銷售訂單的 SalesOrderID  
+        -   @SalesOrderID int - 剛插入之銷售訂單的 SalesOrderID  
   
     -   輸入參數 (必要)：  
   
@@ -243,7 +243,7 @@ ms.locfileid: "51665617"
   
         -   @ShipMethodID [int]  
   
-        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem – 包含訂單明細項目的 TVP  
+        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem - 包含訂單明細項目的 TVP  
   
     -   輸入參數 (選擇性)：  
   
@@ -299,7 +299,7 @@ ms.locfileid: "51665617"
   
 1.  dbo.usp_ValidateIntegrity  
   
-    -   選擇性參數： @object_id – 要驗證完整性的物件識別碼  
+    -   選擇性參數：@object_id - 要驗證完整性的物件識別碼  
   
     -   此程序依賴資料表 dbo.DomainIntegrity、dbo.ReferentialIntegrity 和 dbo.UniqueIntegrity 取得需要驗證的完整性規則 - 此範例會根據 AdventureWorks 資料庫中原始資料表的檢查、外部索引鍵及唯一條件約束，以填入這些資料表。  
   
@@ -313,8 +313,8 @@ ms.locfileid: "51665617"
   
  安裝步驟：  
   
-1.  從以下頁面下載並執行 RML 公用程式的 x64 安裝套件：[https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
-  
+1.  從以下頁面下載並執行 RML 公用程式的 x64 安裝套件：[下載適用於 SQL Server 的報表標記語言 (RML)](https://www.microsoft.com/en-us/download/details.aspx?id=4511)
+
 2.  如果出現對話方塊，指出特定檔案正在使用，請按一下 [繼續]  
   
 ### <a name="running-ostress"></a>執行 ostress  
@@ -322,7 +322,7 @@ ms.locfileid: "51665617"
   
  若要開啟 RML CMD 命令提示字元，請遵循下列指示：  
   
- 在 Windows Server 2012 [R2] 以及 Windows 8 和 8.1 中，按一下 Windows 鍵開啟 [開始] 功能表，然後輸入 ‘rml’。 按一下搜尋結果清單中的 “RML CMD Prompt”。  
+ 在 Windows Server 2012 [R2] 以及 Windows 8 和 8.1 中，按一下 Windows 鍵開啟 [開始] 功能表，然後輸入 'rml'。 按一下搜尋結果清單中的 "RML Cmd Prompt"。  
   
  確定命令提示字元位於 RML 公用程式安裝資料夾中。  
   
@@ -375,12 +375,12 @@ END
   
  利用此指令碼，每個建構的範例訂單會透過以 WHILE 迴圈執行的 20 個預存程序被插入 20 次。 此迴圈可用來說明使用資料庫建構範例訂單的情況。 在一般實際執行環境中，中間層應用程式會建構要插入的銷售訂單。  
   
- 上述指令碼會將銷售訂單插入記憶體最佳化資料表。 以 ‘_ondisk’ 取代出現兩次的 ‘_inmem’，即可衍生將銷售訂單插入磁碟資料表的指令碼。  
+ 上述指令碼會將銷售訂單插入記憶體最佳化資料表。 以 '_ondisk' 取代出現兩次的 '_inmem'，即可衍生將銷售訂單插入磁碟資料表的指令碼。  
   
- 我們將在數個並行連接下，使用 ostress 工具執行這些指令碼。 我們將使用參數 ‘-n’ 來控制連接數目，並使用參數 ‘r’ 來控制每個連接上執行指令碼的次數。  
+ 我們將在數個並行連接下，使用 ostress 工具執行這些指令碼。 我們將使用參數 '-n' 來控制連接數目，並使用參數 'r' 來控制每個連接上執行指令碼的次數。  
   
 #### <a name="running-the-workload"></a>執行工作負載  
- 為了進行規模測試，我們使用 100 個連接插入 1,000 萬個銷售訂單。 此測試會在適合的伺服器 (例如 8 個實體、16 個邏輯核心) 上適當地執行，並使用基本 SSD 儲存體儲存記錄檔。 如果此測試無法在您的硬體上正常執行，請檢閱 [為執行緩慢的測試疑難排解](#Troubleshootingslow-runningtests)一節。如果您想要降低此測試的壓力程度，請變更參數 ‘-n’ 以減少連線數目。 例如，若要將連接計數減少到 40，請將參數 ‘-n100’ 變更為 ‘-n40’。  
+ 為了進行規模測試，我們使用 100 個連接插入 1,000 萬個銷售訂單。 此測試會在適合的伺服器 (例如 8 個實體、16 個邏輯核心) 上適當地執行，並使用基本 SSD 儲存體儲存記錄檔。 如果此測試無法在您的硬體上正常執行，請檢閱 [為執行緩慢的測試疑難排解](#Troubleshootingslow-runningtests)一節。如果您想要降低此測試的壓力程度，請變更參數 '-n' 以減少連線數目。 例如，若要將連接計數減少到 40，請將參數 '-n100' 變更為 '-n40'。  
   
  我們使用執行工作負載之後由 ostress.exe 報告的經過時間，做為工作負載的效能度量。  
   
@@ -394,7 +394,7 @@ END
  按一下 [複製] 按鈕複製命令，然後將其貼入 RML 公用程式命令提示字元。  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  在具有 8 顆實體 (16 顆邏輯) 核心的測試伺服器上，此作業約需 2 分 5 秒。 在具有 24 個實體 (48 個邏輯) 核心的第二部測試伺服器上，此作業需要 1 分 0 秒。  
@@ -409,7 +409,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
  按一下 [複製] 按鈕複製命令，然後將其貼入 RML 公用程式命令提示字元。  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  在具有總數 8 個實體 (16 個邏輯) 核心的測試伺服器上，此作業需要 41 分 25 秒。 在具有 24 個實體 (48 個邏輯) 核心的第二部測試伺服器上，此作業需要 52 分 16 秒。  
@@ -418,7 +418,7 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2016CTP3 -q -Q"DECLARE @i in
   
  您可以觀察執行工作負載時的 CPU 使用率，例如使用工作管理員。 您會看到磁碟資料表的 CPU 使用率遠低於 100%。 在具有 16 個邏輯處理器的測試組態中，使用率保持在 24% 左右。  
   
- 或者，您可以使用效能監視器搭配效能計數器 ‘\SQL Server:Latches\Latch Waits/sec’，檢視每秒的閂鎖等候次數。  
+ 或者，您可以使用效能監視器搭配效能計數器 '\SQL Server:Latches\Latch Waits/sec'，檢視每秒的閂鎖等候次數。  
   
 #### <a name="resetting-the-demo"></a>重設示範  
  若要重設示範，請開啟 RML CMD 命令提示字元，然後執行下列命令：  
