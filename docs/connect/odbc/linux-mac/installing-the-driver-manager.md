@@ -52,7 +52,7 @@ ms.locfileid: "51605818"
   
 5.  當您準備好要安裝，而且您的電腦可透過 FTP 存取外部網站時，請執行下列命令：**./build_dm.sh**。
 
-如果您的電腦無法透過 FTP 存取外部網站，請取得 `unixODBC-2.3.0.tar.gz`。 您可以取得`unixODBC-2.3.0.tar.gz`從[ https://www.unixodbc.org ](https://www.unixodbc.org/)。按一下頁面左側的 [下載]** 連結，以移至下載頁面。 然後，按一下適當的連結，以下載 unixODBC-2.3.0 (不是 unixODBC-2.3.1)。 此版本的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不支援 UnixODBC-2.3.1。 執行下列命令以開始進行 unixODBC 驅動程式管理員安裝： **./build_dm.sh-下載 url = file://unixODBC-2.3.0.tar.gz**。  
+如果您的電腦無法透過 FTP 存取外部網站，請取得 `unixODBC-2.3.0.tar.gz`。 您可以取得`unixODBC-2.3.0.tar.gz`從[ https://www.unixodbc.org ](https://www.unixodbc.org/)。按一下頁面左側的 [下載]** 連結，以移至下載頁面。 然後，按一下適當的連結，以下載 unixODBC-2.3.0 (不是 unixODBC-2.3.1)。 此版本的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不支援 UnixODBC-2.3.1。 執行下列命令以開始進行 unixODBC 驅動程式管理員安裝： **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**。  
 
 6.  鍵入 **YES**，繼續將檔案解壓縮。 這部分的處理序最多需要 5 分鐘才能完成。  
 
@@ -68,15 +68,15 @@ ms.locfileid: "51605818"
   
 2.  移至 [https://www.unixodbc.org](https://www.unixodbc.org/)。按一下頁面左側的 [下載] 連結，以移至下載頁面。 然後按一下適當的連結，以將檔案 unixODBC-2.3.0.tar.gz 儲存至您的電腦。 此版本的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不支援 UnixODBC-2.3.1。  
   
-3.  在您的 Linux 電腦上執行命令： **tar xvzf unixODBC-2.3.0.tar.gz 儲存**。  
+3.  在您的 Linux 電腦上執行命令： **tar xvzf unixODBC-2.3.0.tar.gz**。  
   
 4.  切換至 unixODBC-2.3.0 目錄。  
   
 5.  在命令提示字元，執行下列命令： **CPPFLAGS ="-DSIZEOF_LONG_INT = 8"**。  
   
-6.  在命令提示字元，執行下列命令：**匯出 CPPFLAGS**。  
+6.  在命令提示字元，執行下列命令：**export CPPFLAGS**。  
   
-7.  在命令提示字元，執行下列命令： **"。 / configure--前置詞 = / usr-libdir = / usr/lib64-sysconfdir = / etc-啟用 gui = 否-啟用驅動程式 = 否-啟用 iconv-與-iconv-char-enc = UTF8-與-iconv-ucode-enc = UTF16LE 」**.  
+7.  在命令提示字元，執行下列命令： **"./configure --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc --enable-gui=no --enable-drivers=no --enable-iconv --with-iconv-char-enc=UTF8 --with-iconv-ucode-enc=UTF16LE"**.  
   
 8.  在命令提示字元中 (以根使用者身分登入)，執行下列命令：**make**。  
   
