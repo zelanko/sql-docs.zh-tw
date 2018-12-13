@@ -24,7 +24,7 @@ ms.locfileid: "52503795"
 
   Stretch Database 以透明且安全的方式，將您的原始資料遷移到 Microsoft Azure 雲端。  
   
- 如果您想要立即開始使用 Stretch Database，請參閱 [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)。  
+ 如果您想要立即開始使用 Stretch Database，請參閱 [開始執行啟用資料庫的延展功能精靈d](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)。  
   
 ## <a name="what-are-the-benefits-of-stretch-database"></a>Stretch Database 有什麼優勢？  
  Stretch Database 提供下列優勢：  

@@ -48,7 +48,7 @@ ms.locfileid: "51670237"
 ## <a name="firewalls"></a>防火牆  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Windows 防火牆規則適用所有連線，並對登入 (傳統模型連線) 與自主資料庫使用者具備相同的效果。 如需 Windows 防火牆的詳細資訊，請參閱＜ [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)＞。  
+ Windows 防火牆規則適用所有連線，並對登入 (傳統模型連線) 與自主資料庫使用者具備相同的效果。 如需 Windows 防火牆的詳細資訊，請參閱＜ [設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)＞。  
   
 ### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 防火牆  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 允許對伺服器層級連線 (登入) 和資料庫層級連線 (自主資料庫使用者) 使用不同的防火牆規則。 連接到使用者資料庫時，會檢查第一個資料庫的防火牆規則。 如果沒有允許存取資料庫的規則，就會勾選伺服器層級防火牆規則，它需要存取邏輯伺服器的 master 資料庫。 結合自主資料庫使用者的資料庫層級防火牆規則，不必在連線期間存取伺服器的 master 資料庫，藉此提供改善的連線延展性。  

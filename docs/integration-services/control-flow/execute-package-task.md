@@ -42,7 +42,7 @@ ms.locfileid: "52535700"
   
  執行其他封裝的封裝一般稱為父封裝，而父工作流程執行的封裝則稱為子封裝。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含執行工作流程作業的工作，例如執行可執行檔和批次檔。 如需詳細資訊，請參閱＜ [Execute Process Task](../../integration-services/control-flow/execute-process-task.md)＞。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含執行工作流程作業的工作，例如執行可執行檔和批次檔。 如需詳細資訊，請參閱＜ [執行處理工作](../../integration-services/control-flow/execute-process-task.md)＞。  
   
 ## <a name="running-packages"></a>執行封裝  
  「執行封裝」工作可以執行包含父封裝之相同專案中所含的子封裝。 您可以透過將 **[ReferenceType]** 屬性設定為 **[專案參考]**，然後設定 **[PackageNameFromProjectReference]** 屬性，以便從專案中選取子封裝。  
@@ -63,10 +63,10 @@ ms.locfileid: "52535700"
  依預設，「執行封裝」工作的 ExecuteOutOfProcess 屬性會設定為 **False**，而且子封裝會在與父封裝的相同處理序中執行。 如果您將此屬性設定為 **True**，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 此外，如果您將此屬性設定為 **True**，則無法在僅限工具安裝中偵錯封裝。 您必須安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 如需詳細資訊，請參閱 [安裝 Integration Services](../../integration-services/install-windows/install-integration-services.md)。  
   
 ## <a name="extending-transactions"></a>延伸交易  
- 父封裝使用的交易可延伸至子封裝；因此，這兩種封裝執行的工作都能認可或回復。 例如，根據子封裝執行的資料庫插入，可以認可或回復父封裝所執行的資料庫插入，反之亦然。 如需詳細資訊，請參閱＜ [Inherited Transactions](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)＞。  
+ 父封裝使用的交易可延伸至子封裝；因此，這兩種封裝執行的工作都能認可或回復。 例如，根據子封裝執行的資料庫插入，可以認可或回復父封裝所執行的資料庫插入，反之亦然。 如需詳細資訊，請參閱＜ [繼承的事務](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)＞。  
   
 ## <a name="propagating-logging-details"></a>傳播記錄詳細資料  
- 「執行封裝」工作執行的子封裝不一定會設定為使用記錄，但是子封裝永遠會將記錄的詳細資料轉送給父封裝。 如果「執行封裝」工作設定為使用記錄，則此工作會記錄來自子封裝的記錄詳細資料。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
+ 「執行封裝」工作執行的子封裝不一定會設定為使用記錄，但是子封裝永遠會將記錄的詳細資料轉送給父封裝。 如果「執行封裝」工作設定為使用記錄，則此工作會記錄來自子封裝的記錄詳細資料。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 ## <a name="passing-values-to-child-packages"></a>將值傳遞給子封裝  
  子封裝通常使用由另一個呼叫它的封裝傳遞給它的值，該封裝一般是其父封裝。 使用來自父封裝的值在下列類似狀況中很有用：  
@@ -85,7 +85,7 @@ ms.locfileid: "52535700"
   
 -   **參數**  
   
-     您可以設定「執行封裝」工作將父封裝變數或參數 (或專案參數) 對應到子封裝參數。 專案必須使用專案部署模型，而且子封裝必須包含在包含父封裝的相同專案中。 如需詳細資訊，請參閱＜ [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md)＞。  
+     您可以設定「執行封裝」工作將父封裝變數或參數 (或專案參數) 對應到子封裝參數。 專案必須使用專案部署模型，而且子封裝必須包含在包含父封裝的相同專案中。 如需詳細資訊，請參閱＜ [執行封裝工作編輯器](../../integration-services/control-flow/execute-package-task-editor.md)＞。  
   
     > [!NOTE]  
     >  如果子封裝參數不區分大小寫，但對應到區分大小寫的父參數，則子封裝將無法執行。  
@@ -100,7 +100,7 @@ ms.locfileid: "52535700"
   
  父封裝變數可在「執行封裝」工作的範圍內定義，或是在諸如封裝的父容器中定義。 如果有多個名稱相同的變數可用，則會使用在「執行封裝」工作範圍內所定義的變數，或是最接近工作範圍的變數。  
   
- 如需詳細資訊，請參閱 [Use the Values of Variables and Parameters in a Child Package](../../integration-services/packages/legacy-package-deployment-ssis.md#child)(在子封裝中使用變數和參數的值)。  
+ 如需詳細資訊，請參閱 [在子封裝中使用變數和參數的值](../../integration-services/packages/legacy-package-deployment-ssis.md#child)。  
   
 ### <a name="accessing-parent-package-variables"></a>存取父封裝變數  
  子封裝可藉由使用指令碼工作存取父封裝變數。 當你在 [指令碼工作編輯器] 的 [指令碼]頁面上輸入父封裝變數的名稱時，變數名稱中請勿加上 **User:**。 否則，在您執行父封裝時子封裝會找不到該變數。  
