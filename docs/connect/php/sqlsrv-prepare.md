@@ -84,7 +84,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 如需寫入和讀取大量資訊的替代策略，請參閱 [SQL 陳述式的批次](../../odbc/reference/develop-app/batches-of-sql-statements.md) 和 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
-如需詳細資訊，請參閱 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
+如需詳細資訊，請參閱 [如何：使用 SQLSRV 驅動程式擷取輸出參數](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)。  
   
 ## <a name="example"></a>範例  
 下列範例會準備及執行陳述式。 若執行陳述式 (請參閱 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md))，其會更新 AdventureWorks 資料庫之 *Sales.SalesOrderDetail* 資料表中的欄位。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  

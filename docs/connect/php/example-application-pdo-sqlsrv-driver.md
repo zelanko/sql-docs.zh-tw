@@ -25,7 +25,7 @@ AdventureWorks Product Reviews 範例應用程式是一種 Web 應用程式，�
   
 ### <a name="running-the-example-application"></a>執行範例應用程式  
   
-1.  安裝 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 如需詳細資訊，請參閱[Getting Started with Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+1.  安裝 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 如需詳細資訊，請參閱[SQL驅動程序的PHP驅動程序入門](../../connect/php/getting-started-with-the-php-sql-driver.md)
 2.  將本文件稍後所列的程式碼複製到兩個檔案中：adventureworks_demo.php 和 photo.php。  
 3.  將 adventureworks_demo.php 和 photo.php 檔案放入您的 Web 伺服器的根目錄中。  
 4.  執行應用程式啟動 https://localhost/adventureworks_demo.php從瀏覽器。  

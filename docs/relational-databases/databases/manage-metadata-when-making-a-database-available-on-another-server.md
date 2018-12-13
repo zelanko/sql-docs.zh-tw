@@ -148,7 +148,7 @@ ms.locfileid: "51559467"
  使用者定義錯誤訊息位於 [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) 目錄檢視中。 此目錄檢視會存放在 **master**內。 如果資料庫應用程式仰賴使用者定義錯誤訊息，而且此資料庫可在另一個伺服器執行個體上使用時，請使用 [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) ，在目的地伺服器執行個體上加入這些使用者定義訊息。  
 
   
-##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
+##  <a name="event_notif_and_wmi_events"></a> 事件通知和 Windows Management Instrumentation (WMI) 事件 （伺服器層級）  
   
 ### <a name="server-level-event-notifications"></a>伺服器層級事件通知  
  伺服器層級事件通知會存放在 **msdb**中。 因此，如果資料庫應用程式依賴伺服器層級事件通知，就必須在目的地伺服器執行個體上重新建立該事件通知。 若要檢視伺服器執行個體上的事件通知，請使用 [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) 目錄檢視。 如需詳細資訊，請參閱 [Event Notifications](../../relational-databases/service-broker/event-notifications.md)。  
