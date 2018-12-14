@@ -1,20 +1,22 @@
 ---
-title: 什麼是 SQL Server 的巨量資料叢集控制器？ | Microsoft Docs
-description: 本文說明 SQL Server 2019 巨量資料叢集的控制站。
+title: 什麼是控制器？
+titleSuffix: SQL Server 2019 big data clusters
+description: 本文說明 SQL Server 2019 巨量資料叢集 （預覽） 中的控制站。
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: abf8c174379ad444cd29b5115240ad7c404b2c4b
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 954f3fa220d2bd379dc5d6666015b2be759aafc7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221514"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206717"
 ---
-# <a name="what-is-the-sql-server-big-data-clusters-controller"></a>什麼是 SQL Server 的巨量資料叢集控制站？
+# <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>什麼是 SQL Server 2019 巨量資料叢集上的控制器？
 
 控制站會裝載部署及管理巨量資料叢集的核心邏輯。 它會負責與 Kubernetes 叢集與 HDFS 和 Spark 等其他元件的一部分的 SQL Server 執行個體的所有互動。 
 
@@ -26,8 +28,8 @@ ms.locfileid: "51221514"
 - 若要觀察的叢集狀態的監視工具公開 （expose)
 - 公開 （expose) 來偵測並修復未預期的問題的疑難排解工具
 - 管理叢集安全性： 確保安全的叢集端點、 管理使用者和角色、 設定叢集間通訊的認證
-- 管理升級的工作流程，以便安全地實作 （不適用於 CTP 2.1）
-- （不適用於 CTP 2.1） 叢集中具狀態服務的管理高可用性和 DR
+- 管理升級的工作流程，以便安全地實作 （不適用於 CTP 2.2）
+- （不適用於 CTP 2.2） 叢集中具狀態服務的管理高可用性和 DR
 
 ## <a name="deploying-the-controller-service"></a>部署控制器服務
 
@@ -40,6 +42,7 @@ mssqlctl create cluster <name of your cluster>
 增建工作流程會在 Kubernetes 上的版面配置功能完整的 SQL Server 巨量資料叢集，其中包含所述的所有元件[概觀](big-data-cluster-overview.md)文章。 啟動程序的工作流程首先會建立控制器服務，以及安裝和設定的主機、 計算、 資料和儲存體集區的服務一部分的其餘部分，這部署之後，將協調控制器服務。
 
 ## <a name="managing-the-cluster-through-the-controller-service"></a>管理透過控制器服務叢集
+
 您可以管理純粹是透過使用控制器服務在叢集`mssqlctl`Api 或裝載於叢集內的叢集系統管理入口網站。 如果您將其他像是 pod 的 Kubernetes 物件部署到相同的命名空間時，不受管理或監視的控制器服務。
 
 建立適用於巨量資料叢集的 Kubernetes 物件 （可設定狀態的集合，pod、 密碼等） 和的控制站位於專用的 Kubernetes 命名空間。 控制器服務將 Kubernetes 叢集系統管理員可以管理該命名空間內的所有資源授與權限。  在初始叢集部署使用自動設定此案例中的 RBAC 原則`mssqlctl`。 
@@ -50,23 +53,19 @@ mssqlctl create cluster <name of your cluster>
 
 ### <a name="cluster-administration-portal"></a>叢集系統管理入口網站
 
-一旦在控制器服務已啟動並執行，叢集系統管理員可以使用叢集系統管理員入口網站來監視部署進度、 偵測，以及針對在叢集內的服務問題進行疑難排解。 
-
-## <a name="monitoring-and-troubleshooting-the-controller-service"></a>監視和疑難排解控制器服務
-
-即將推出...
+一旦控制器服務已啟動並執行，叢集系統管理員可以使用[叢集管理網站](cluster-admin-portal.md)若要監視部署進度，偵測及疑難排解在叢集內的服務。
 
 ## <a name="controller-service-security"></a>控制器服務的安全性
+
 Controller 服務的所有通訊是透過 REST API 都進行 HTTPS。 自我簽署的憑證將會自動產生為您在啟動程序時之用。 
 
 控制器服務端點的驗證根據使用者名稱和密碼。 這些認證會在叢集啟動程序時使用環境變數的輸入佈建`CONTROLLER_USERNAME`和`CONTROLLER_PASSWORD`。
-```
 
 > [!NOTE]
-> You must provide a password that is in compliance with [SQL Server password complexity requirements](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017).
+> 您必須提供的密碼均遵守[SQL Server 密碼複雜性需求](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017)。
 
-## Next steps
+## <a name="next-steps"></a>後續步驟
 
-To learn more about the SQL Server big data clusters, see the following overview:
+若要深入了解 SQL Server 巨量資料叢集，請參閱下列概觀：
 
-- [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
+- [什麼是 SQL Server 2019 巨量資料叢集？](big-data-cluster-overview.md)
