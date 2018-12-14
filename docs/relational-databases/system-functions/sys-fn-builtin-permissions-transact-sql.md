@@ -1,5 +1,5 @@
 ---
-title: sys.fn_builtin_permissions & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.fn_builtin_permissions (transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
 ms.prod: sql

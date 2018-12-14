@@ -1,5 +1,5 @@
 ---
-title: sys.columns & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.columns (transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/21/2017
 ms.prod: sql
@@ -23,7 +23,7 @@ manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 40209fae182a31a701fe1a8ccad0149cc66dff58
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51681296"
@@ -94,7 +94,7 @@ ms.locfileid: "51681296"
  [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢 SQL Server 系統目錄常見問題集](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [sys.all_columns &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys.system_columns &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)  
+ [sys.all_columns &#40;-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.system_columns &#40;-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)  
   
   

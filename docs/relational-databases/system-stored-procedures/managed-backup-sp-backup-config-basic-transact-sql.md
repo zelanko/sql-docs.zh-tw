@@ -23,12 +23,12 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7722193dc643b4fd5afaa9a21559febe137cba6b
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51662847"
 ---
-# <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic & Amp;#40;transact-SQL&AMP;#41;
+# <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   會設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]針對特定資料庫或執行個體的基本設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

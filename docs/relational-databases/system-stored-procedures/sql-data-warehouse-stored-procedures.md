@@ -40,7 +40,7 @@ ms.locfileid: "51657147"
  [sp_special_columns_100 &#40;SQL 資料倉儲&#41;](../../relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md)  
   
 > [!NOTE]  
->  某些額外的系統預存程序，只能用在執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或透過 Api 並不供一般客戶的用戶端使用。 這些程序會列在[系統預存程序 & Amp;#40;transact-SQL&AMP;#41;](https://msdn.microsoft.com/library/ms187961.aspx)。 這些程序會受到變更，而且不保證相容性。 在清單上的所有程序不適用於[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
+>  某些額外的系統預存程序，只能用在執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或透過 Api 並不供一般客戶的用戶端使用。 這些程序會列在[系統預存程序 (transact-SQL)](https://msdn.microsoft.com/library/ms187961.aspx)。 這些程序會受到變更，而且不保證相容性。 在清單上的所有程序不適用於[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存函式&#40;Transact SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md)   

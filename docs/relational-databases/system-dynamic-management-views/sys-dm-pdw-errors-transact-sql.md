@@ -20,7 +20,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51672917"
 ---
-# <a name="sysdmpdwerrors-transact-sql"></a>sys.dm_pdw_errors & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdmpdwerrors-transact-sql"></a>sys.dm_pdw_errors (transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   保留所有的要求或查詢執行期間所遇到的錯誤相關資訊。  

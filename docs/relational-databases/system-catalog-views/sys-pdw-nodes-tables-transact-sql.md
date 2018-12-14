@@ -20,7 +20,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51665887"
 ---
-# <a name="syspdwnodestables-transact-sql"></a>sys.pdw_nodes_tables & Amp;#40;transact-SQL&AMP;#41;
+# <a name="syspdwnodestables-transact-sql"></a>sys.pdw_nodes_tables (transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   包含主體所擁有，或已授與主體某些權限的每個資料表物件的資料列。  

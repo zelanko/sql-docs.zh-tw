@@ -23,15 +23,15 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51669787"
 ---
-# <a name="i-o-related-dynamic-management-views-and-functions-transact-sql"></a>我 O 相關動態管理檢視和函數 & Amp;#40;transact-SQL&AMP;#41
+# <a name="i-o-related-dynamic-management-views-and-functions-transact-sql"></a>我 O 相關動態管理檢視和函數 (transact-SQL&AMP;#41
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   此章節包含下列動態管理物件。  
   
 |||  
 |-|-|  
-|[sys.dm_io_backup_tapes &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)|[sys.dm_io_cluster_shared_drives &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)|  
-|[sys.dm_io_pending_io_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-pending-io-requests-transact-sql.md)|[sys.dm_io_virtual_file_stats &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)|  
+|[sys.dm_io_backup_tapes &#40;-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)|[sys.dm_io_cluster_shared_drives &#40;-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)|  
+|[sys.dm_io_pending_io_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-pending-io-requests-transact-sql.md)|[sys.dm_io_virtual_file_stats &#40;-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)|  
 |[sys.dm_io_cluster_valid_path_names &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)||  
   
 ## <a name="see-also"></a>另請參閱  

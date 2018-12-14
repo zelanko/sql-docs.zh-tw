@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_disable_db & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.sp_cdc_disable_db (transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0a3d2fb2eca31ed820665d89a68fdb814233a44c
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51672507"
@@ -70,7 +70,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.sp_cdc_enable_db &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)   
- [sys.sp_cdc_disable_table &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)  
+ [sys.sp_cdc_enable_db &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)   
+ [sys.sp_cdc_disable_table &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)  
   
   

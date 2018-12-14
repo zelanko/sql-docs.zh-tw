@@ -33,11 +33,11 @@ ms.locfileid: "51670827"
   
 |||  
 |-|-|  
-|[sys.backup_devices &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)|[sys.database_recovery_status &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)|  
+|[sys.backup_devices &#40;-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)|[sys.database_recovery_status &#40;-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)|  
 |[sys.database_connection_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-connection-stats-azure-sql-database.md)|[sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)|  
 |[sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|[sys.database_usage &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md)|  
 |[sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)|[sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)|  
-|[sys.database_mirroring &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)||  
+|[sys.database_mirroring &#40;-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)||  
   
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

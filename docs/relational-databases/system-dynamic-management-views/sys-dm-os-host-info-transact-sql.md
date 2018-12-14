@@ -22,12 +22,12 @@ manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 55291c5cc30b9fe16d7bd259bab03677f6df45db
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51672947"
 ---
-# <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 傳回一個資料列會顯示作業系統版本資訊。  

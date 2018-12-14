@@ -31,7 +31,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51677217"
 ---
-# <a name="system-catalog-views-transact-sql"></a>系統目錄檢視 & Amp;#40;transact-SQL&AMP;#41
+# <a name="system-catalog-views-transact-sql"></a>系統目錄檢視 (transact-SQL&AMP;#41
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   目錄檢視會傳回 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 所用的資訊。 建議您使用目錄檢視，因為它們是目錄中繼資料最一般性的介面，提供了取得、轉換和呈現這項資訊之自訂形式的最有效方法。 所有使用者能夠使用的目錄中繼資料都是利用目錄檢視公開的。  

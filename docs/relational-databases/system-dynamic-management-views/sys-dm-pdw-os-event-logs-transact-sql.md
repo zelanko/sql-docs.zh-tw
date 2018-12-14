@@ -21,7 +21,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51656463"
 ---
-# <a name="sysdmpdwoseventlogs-transact-sql"></a>sys.dm_pdw_os_event_logs & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdmpdwoseventlogs-transact-sql"></a>sys.dm_pdw_os_event_logs (transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   保存不同的節點上的不同的 Windows 事件的相關資訊記錄檔。  

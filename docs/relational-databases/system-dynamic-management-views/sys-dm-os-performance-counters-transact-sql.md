@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_performance_counters & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.dm_os_performance_counters (transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql

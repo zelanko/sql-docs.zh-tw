@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_compute_node_status & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.dm_exec_compute_node_status (transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -29,7 +29,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51671057"
 ---
-# <a name="sysdmexeccomputenodestatus-transact-sql"></a>sys.dm_exec_compute_node_status & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdmexeccomputenodestatus-transact-sql"></a>sys.dm_exec_compute_node_status (transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   保留所有的 PolyBase 節點的狀態與效能相關的其他資訊。 列出每個節點的一個資料列。  

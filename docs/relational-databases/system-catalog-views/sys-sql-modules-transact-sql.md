@@ -1,5 +1,5 @@
 ---
-title: sys.sql_modules & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.sql_modules (transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/06/2018
 ms.prod: sql
@@ -23,7 +23,7 @@ manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59f65e8743dab760b54cec9b088f5feca8d49e0b
 ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/07/2018
 ms.locfileid: "51221534"

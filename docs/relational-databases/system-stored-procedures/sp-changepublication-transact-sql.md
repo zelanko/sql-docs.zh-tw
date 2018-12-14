@@ -1,5 +1,5 @@
 ---
-title: sp_changepublication & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_changepublication (transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2017
 ms.prod: sql
@@ -19,7 +19,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e80f468f917a240981fc6e4c16df862d72084541
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51670167"
@@ -78,7 +78,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**sub wins**|更新訂閱者的衝突解決原則，訂閱者在衝突中獲勝。 只有在沒有使用中的訂閱時，才能改變這個屬性。 不支援 Oracle 發行者使用這個值。|  
 |**conflict_retention**||**int** ，指定衝突保留期限，以天為單位。 預設保留 14 天。 **0**表示，就需要清除任何衝突。 不支援 Oracle 發行者使用這個值。|  
 |**description**||描述發行集的選擇性項目。|  
-|**enabled_for_het_sub**|**true**|啟用發行集以支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 **enabled_for_het_sub**有發行集的訂閱時，無法變更。 您可能需要執行[複寫預存程序 & Amp;#40;transact-SQL&AMP;#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)遵守下列需求，才能設定**enabled_for_het_sub**設為 true:<br /> - **allow_queued_tran**必須是**false**。<br /> - **allow_sync_tran**必須是**false**。<br /> 變更**enabled_for_het_sub**要 **，則為 true**可能會變更現有的發行集設定。 如需詳細資訊，請參閱 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
+|**enabled_for_het_sub**|**true**|啟用發行集以支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 **enabled_for_het_sub**有發行集的訂閱時，無法變更。 您可能需要執行[複寫預存程序 (transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)遵守下列需求，才能設定**enabled_for_het_sub**設為 true:<br /> - **allow_queued_tran**必須是**false**。<br /> - **allow_sync_tran**必須是**false**。<br /> 變更**enabled_for_het_sub**要 **，則為 true**可能會變更現有的發行集設定。 如需詳細資訊，請參閱 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
 ||**false**|發行集不支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
 |**enabled_for_internet**|**true**|啟用發行集的網際網路功能，以及可以利用檔案傳輸通訊協定 (FTP)，將快照集檔案傳送給訂閱者。 發行集的同步處理檔案會放在下列目錄中：C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp。 *ftp_address*不能是 NULL。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
 ||**false**|不啟用發行集的網際網路功能。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
@@ -173,8 +173,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [變更發行集與發行項屬性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addpublication &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_droppublication &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_addpublication &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_droppublication &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

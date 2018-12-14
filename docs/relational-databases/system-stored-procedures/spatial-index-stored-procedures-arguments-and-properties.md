@@ -32,13 +32,13 @@ ms.locfileid: "51666597"
 ## <a name="syntax"></a>語法  
  如需特定空間索引預存程序的語法，請參閱下列主題：  
   
--   [sp_help_spatial_geometry_index &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>引數  
  [  **@tabname =**] **'***tabname***'**  
@@ -312,19 +312,19 @@ ms.locfileid: "51666597"
 ## <a name="examples"></a>範例  
  如需範例，請參閱下列主題：  
   
--   [sp_help_spatial_geometry_index &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="requirements"></a>需求  
   
 ## <a name="see-also"></a>另請參閱  
  [空間索引預存程序&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
- [sp_help_spatial_geometry_index &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
+ [sp_help_spatial_geometry_index &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [XQuery 基本概念](../../xquery/xquery-basics.md)   
  [XQuery 語言參考 &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  

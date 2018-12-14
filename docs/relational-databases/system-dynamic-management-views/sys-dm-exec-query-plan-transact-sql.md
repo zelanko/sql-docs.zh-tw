@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_plan & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.dm_exec_query_plan (transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql

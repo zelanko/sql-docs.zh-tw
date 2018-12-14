@@ -1,5 +1,5 @@
 ---
-title: sys.availability_groups & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.availability_groups (transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,7 +23,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e3bd8688a2e9b66eab7187720d96d823f8d943c
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51668667"

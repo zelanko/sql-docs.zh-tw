@@ -25,12 +25,12 @@ manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c02ea165ceec8af546d092d955e9275dcc96b240
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51661184"
 ---
-# <a name="sysdmexecdistributedrequests-transact-sql"></a>sys.dm_exec_distributed_requests & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdmexecdistributedrequests-transact-sql"></a>sys.dm_exec_distributed_requests (transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   保留目前或最近使用 PolyBase 查詢中的所有要求的相關資訊。 它會列出每個要求/查詢的一個資料列。  

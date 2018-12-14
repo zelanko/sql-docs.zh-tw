@@ -1,5 +1,5 @@
 ---
-title: sp_filestream_force_garbage_collection & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_filestream_force_garbage_collection (transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
 ms.prod: sql
@@ -21,7 +21,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 145bfe599fa0117b689a002d47807eca217ba7bc
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51669087"
@@ -111,6 +111,6 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 <br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream 及 FileTable 動態管理檢視 (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Filestream 和 FileTable 目錄檢視 (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
-<br>[sp_kill_filestream_non_transacted_handles & Amp;#40;transact-SQL&AMP;#41;](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
+<br>[sp_kill_filestream_non_transacted_handles (transact-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
   
   

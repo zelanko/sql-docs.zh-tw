@@ -20,7 +20,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51657189"
 ---
-# <a name="sysdmpdwdmscores-transact-sql"></a>sys.dm_pdw_dms_cores & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdmpdwdmscores-transact-sql"></a>sys.dm_pdw_dms_cores (transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   保留所有設備的計算節點上執行的 DMS 服務的相關資訊。 它會列出每個服務執行個體，也就是目前的每個節點的一個資料列的一個資料列。  

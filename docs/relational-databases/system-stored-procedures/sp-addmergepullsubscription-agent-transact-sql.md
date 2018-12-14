@@ -1,5 +1,5 @@
 ---
-title: sp_addmergepullsubscription_agent & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_addmergepullsubscription_agent (transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,7 +19,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: abd4893368069217003ca9fa5a6f4dca9e4229de
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51681366"
@@ -354,10 +354,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="see-also"></a>另請參閱  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addmergepullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_changemergepullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

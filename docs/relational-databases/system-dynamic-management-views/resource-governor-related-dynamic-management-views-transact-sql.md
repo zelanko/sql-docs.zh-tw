@@ -29,10 +29,10 @@ ms.locfileid: "50743153"
   
 |||  
 |-|-|  
-|[sys.dm_resource_governor_configuration &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)|[sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)|  
+|[sys.dm_resource_governor_configuration &#40;-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)|[sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)|  
 |[sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)|[sys.dm_resource_governor_resource_pool_volumes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-volumes-transact-sql.md)|  
-|[sys.dm_resource_governor_resource_pool_affinity &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)|[sys.dm_resource_governor_workload_groups &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)|  
-|[sys.dm_resource_governor_external_resource_pools &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)| |   
+|[sys.dm_resource_governor_resource_pool_affinity &#40;-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)|[sys.dm_resource_governor_workload_groups &#40;-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)|  
+|[sys.dm_resource_governor_external_resource_pools &#40;-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)| |   
 ## <a name="see-also"></a>另請參閱  
  [Resource Governor 目錄檢視&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
  [資源管理員](../../relational-databases/resource-governor/resource-governor.md)  

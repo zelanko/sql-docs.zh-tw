@@ -30,7 +30,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51660347"
 ---
-# <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications & Amp;#40;transact-SQL&AMP;#41;
+# <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications (transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 傳回資料庫中的每個分類的項目資料列。

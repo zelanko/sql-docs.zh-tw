@@ -25,7 +25,7 @@ manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 30e21750568bde69da2da66d50dabbcc0255b3a9
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51659827"
@@ -41,7 +41,7 @@ ms.locfileid: "51659827"
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**nvarchar(32)**|查詢此 DMS 背景工作角色是部分 of.request_id，step_index，，和 dms_step_index 形成這個檢視的索引鍵。||  
 |step_index|**int**|查詢此 DMS 背景工作角色是一部分的步驟。|請參閱中的步驟索引[sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)。|  
-|dms_step_index|**int**|此工作者執行的 DMS 計劃中的步驟。|請參閱[sys.dm_exec_dms_workers & Amp;#40;transact-SQL&AMP;#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
+|dms_step_index|**int**|此工作者執行的 DMS 計劃中的步驟。|請參閱[sys.dm_exec_dms_workers (transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |compute_node_id|**int**|Worker 執行所在的節點。|請參閱[sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
 |distribution_id|**int**|||  
 |型別|**nvarcha(32)**|||  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_sys_info & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.dm_os_sys_info (transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql

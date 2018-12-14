@@ -20,7 +20,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51667807"
 ---
-# <a name="sysdmpdwwaitstats-transact-sql"></a>sys.dm_pdw_wait_stats & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdmpdwwaitstats-transact-sql"></a>sys.dm_pdw_wait_stats (transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   保存有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]OS 狀態與不同節點上執行的執行個體相關。 如需等候的類型和其描述的清單，請參閱 < [sys.dm_os_wait_stats](https://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx)。  
@@ -37,6 +37,6 @@ ms.locfileid: "51667807"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲和平行處理資料倉儲動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
- [sys.dm_pdw_waits &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
+ [sys.dm_pdw_waits &#40;-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
   
   

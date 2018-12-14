@@ -1,5 +1,5 @@
 ---
-title: sys.fn_get_audit_file & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.fn_get_audit_file (transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/16/2017
 ms.prod: sql
