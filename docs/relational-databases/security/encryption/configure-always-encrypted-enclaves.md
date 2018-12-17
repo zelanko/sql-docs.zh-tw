@@ -820,13 +820,13 @@ GO;
 2. 建立新的 Visual C\# 專案，或開啟現有專案。
 3. 請確定您專案的目標至少為 .NET Framework 4.7.2。 以滑鼠右鍵按一下 [方案總管] 中的專案，並選取 [屬性]，然後將 [目標架構] 設定為 .NET Framework 4.7.2。
 
-4. 移至 [工具] (主功能表) > [NuGet 套件管理員] > [套件管理員主控台]，以安裝下列 NuGet 套件。 在 [套件管理員主控台] 中，執行下列程式碼。
+4. 移至 [工具]\(主功能表) > [NuGet 套件管理員] > [套件管理員主控台]，以安裝下列 NuGet 套件。 在 [套件管理員主控台] 中，執行下列程式碼。
 
   ```powershell
   Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider --IncludePrerelease 
   ```
 
-5. 如果您使用 Azure Key Vault 來儲存資料行主要金鑰，請移至 [工具] (主功能表) > [NuGet 套件管理員] > [套件管理員主控台]，以安裝下列 NuGet 套件。 在 [套件管理員主控台] 中，執行下列程式碼。
+5. 如果您使用 Azure Key Vault 來儲存資料行主要金鑰，請移至 [工具]\(主功能表) > [NuGet 套件管理員] > [套件管理員主控台]，以安裝下列 NuGet 套件。 在 [套件管理員主控台] 中，執行下列程式碼。
 
   ```powershell
   Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider --IncludePrerelease -Version 2.2.0

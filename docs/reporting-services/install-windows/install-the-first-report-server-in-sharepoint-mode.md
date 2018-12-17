@@ -104,7 +104,7 @@ ms.locfileid: "52712309"
  
  ### <a name="install-reporting-services"></a>安裝 Reporting Services
   
-1.  執行 [SQL Server 安裝精靈] (Setup.exe)。  
+1.  執行 [SQL Server 安裝精靈] \(Setup.exe)。  
   
 2.  在精靈的左側選取 [安裝]，然後選取 [新增 SQL Server 獨立安裝或將功能新增至現有安裝]。  
 

@@ -115,7 +115,7 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ```
 
 > [!IMPORTANT]
-> 如果您有資料行存放區索引，請參閱 [Considerations when you tune the queries with Columnstore indexes on clone databases](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) (在複製資料庫上使用資料行存放區索引調整查詢時的考量) 更新資料行存放區索引統計資料，再執行 **DBCC CLONEDATABASE** 命令。  從 SQL Server 2019 開始，將不再需要上述文章中所述的手動步驟，因為 **DBCC CLONEDATABASE** 命令會自動收集此資訊。
+> 如果您有資料行存放區索引，請參閱 [使用克隆數據庫上的Columnstore索引調優查詢時的注意事項](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) (在複製資料庫上使用資料行存放區索引調整查詢時的考量) 更新資料行存放區索引統計資料，再執行 **DBCC CLONEDATABASE** 命令。  從 SQL Server 2019 開始，將不再需要上述文章中所述的手動步驟，因為 **DBCC CLONEDATABASE** 命令會自動收集此資訊。
 
 如需複製資料庫上資料安全性的相關資訊，請參閱 [Understanding data security in cloned databases](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/) (了解複製資料庫中的資料安全性)。
 
