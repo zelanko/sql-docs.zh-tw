@@ -31,7 +31,7 @@ ms.locfileid: "50020182"
   
  針對包含動態資料的報表，每次執行報表之後，報表大小有可能會大幅變更。 在此情況下，您應監視資料來源以判斷資料的變動性對您的報表有何影響，以及您是否必須遵循本主題中所指定的步驟。  
   
- 如需如何診斷逾時錯誤和記憶體不足錯誤的詳細資訊和提示，請參閱 blogs.msdn.com 上的 [How to diagnose issues when running reports in the report server](https://go.microsoft.com/fwlink/?LinkId=85634) (如何在報表伺服器中執行報表時診斷錯誤) 文章。  
+ 如需如何診斷逾時錯誤和記憶體不足錯誤的詳細資訊和提示，請參閱 blogs.msdn.com 上的 [如何在報表伺服器中執行報表時診斷錯誤](https://go.microsoft.com/fwlink/?LinkId=85634) 文章。  
   
 ## <a name="configuration-recommendations"></a>組態建議  
  報表執行、報表轉譯與報表存取的建議包括下列項目：  

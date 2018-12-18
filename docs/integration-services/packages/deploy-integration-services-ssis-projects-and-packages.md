@@ -416,7 +416,7 @@ static void Main()
 > 2.  以滑鼠右鍵按一下封裝，然後按一下 [執行]。  
 > 3.  請視需要在 **[進階]** 索引標籤中設定參數值、連接管理員屬性和選項，例如記錄層次。  
 >   
->      如需有關記錄層級的詳細資訊，請參閱＜ [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)＞。  
+>      如需有關記錄層級的詳細資訊，請參閱＜ [在 SSIS 伺服器上啟用封裝執行的記錄功能](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)＞。  
 > 4.  在按一下 **[確定]** 執行封裝之前，請按一下 **[指令碼]**。 Transact-SQL 會出現在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [查詢編輯器] 視窗中。  
   
 ### <a name="to-deploy-and-execute-a-package-using-stored-procedures"></a>若要使用預存程序部署及執行封裝  
