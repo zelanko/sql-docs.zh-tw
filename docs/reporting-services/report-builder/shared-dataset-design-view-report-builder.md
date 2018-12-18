@@ -31,7 +31,7 @@ ms.locfileid: "50020463"
 > [!NOTE]  
 >  共用資料集必須以共用資料來源為基礎。 如果您需要的資料來源無法使用，則需要在報表伺服器上建立一個資料來源。 如需詳細資訊，請參閱[建立、修改和刪除共用資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)。  
   
- 如需詳細資訊，請參閱＜ [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)＞。  
+ 如需詳細資訊，請參閱＜ [資料連接、資料來源及連接字串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)＞。  
   
 ### <a name="dataset"></a>資料集  
  使用 **[設定選項]** 按鈕可設定共用資料集屬性。 這些選項包括：  
