@@ -163,7 +163,7 @@ SSMS 17.x 以及 VS 2015 和 2017 使用說明檢視器 2.x，其支援 SQL Serv
 
 **使用說明檢視器 v1.x 檢視離線說明內容**
 
-11. 若要檢視已安裝的說明，請開啟 [Help Library 管理員]，並按一下 [選擇線上或本機說明]，然後按一下 [I want to use local help] (我要使用本機說明)。
+11. 若要檢視已安裝的說明，請開啟 [Help Library 管理員]，並按一下 [選擇線上或本機說明]，然後按一下 [I want to use local help]  (我要使用本機說明)。
 12. 按一下 [說明] 功能表上的 [檢視說明]，開啟說明檢視器查看內容。 您已安裝的內容會列在左窗格中。  
    
    ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
@@ -176,7 +176,7 @@ SSMS 17.x 以及 VS 2015 和 2017 使用說明檢視器 2.x，其支援 SQL Serv
 
 **在 SSMS 17.x 中檢視 SQL Server 線上說明**
 
-- 在 [說明] 功能表中，按一下 [檢視說明]。 來自 [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) 的最新 SQL Server 2016/2017 文件即會在瀏覽器中顯示。 
+- 在 [說明] 功能表中，按一下 [檢視說明]。 來自 [https://docs.microsoft.com/sql/ https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) 的最新 SQL Server 2016/2017 文件即會在瀏覽器中顯示。 
 
    ![檢視說明](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
@@ -192,7 +192,7 @@ SSMS 17.x 以及 VS 2015 和 2017 使用說明檢視器 2.x，其支援 SQL Serv
    
    ![HelpLibraryManager_MainPage_ChooseOnlineORLocal.png](../sql-server/media/sql-server-help-installation/helplibrarymanager-mainpage-chooseonlineorlocal.png.png)  
    
-3. 依序按一下 [I want to use online help] (我要使用線上說明)、[確定] 和 [結束]。  
+3. 依序按一下 [I want to use online help]  (我要使用線上說明)、[確定] 和 [結束]。  
    
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../sql-server/media/sql-server-help-installation/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
    
