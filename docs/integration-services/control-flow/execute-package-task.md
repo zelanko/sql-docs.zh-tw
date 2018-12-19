@@ -50,7 +50,7 @@ ms.locfileid: "52535700"
 > [!NOTE]  
 >  [ReferenceType] 選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]。 [部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
- 「執行封裝」工作也可執行儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 資料庫中的封裝，以及儲存在檔案系統中的封裝。 此工作使用 OLE DB 連接管理員連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，或使用檔案連接管理員存取檔案系統。 如需詳細資訊，請參閱＜ [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) ＞和＜ [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)＞。  
+ 「執行封裝」工作也可執行儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 資料庫中的封裝，以及儲存在檔案系統中的封裝。 此工作使用 OLE DB 連接管理員連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，或使用檔案連接管理員存取檔案系統。 如需詳細資訊，請參閱＜ [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) ＞和＜ [般檔案連線管理員](../../integration-services/connection-manager/flat-file-connection-manager.md)＞。  
   
  「執行封裝」工作也可執行資料庫維護計畫，讓您管理相同 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 方案中的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝和資料庫維護計畫。 資料庫維護計畫與 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝類似，不過計畫只能包含資料庫維護工作，而且一律儲存在 msdb 資料庫中。  
   
