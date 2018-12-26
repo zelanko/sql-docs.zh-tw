@@ -75,7 +75,7 @@ ms.locfileid: "52418029"
  預存程序的所有參數都是選擇性的。 如果您在不提供任何參數值的情況下呼叫預存程序，預存程序就會為您可存取的所有擷取執行個體建立包裝函數。  
   
 > [!NOTE]  
->  如需此預存程序之語法及其參數的詳細資訊，請參閱 [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)。  
+>  如需此預存程序之語法及其參數的詳細資訊，請參閱 [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)。  
   
  預存程序永遠會產生一個包裝函數來傳回每個擷取執行個體的所有變更。 如果 *@supports_net_changes* 參數在建立擷取執行個體時設定，預存程序也會產生一個包裝函式來傳回每個適用之擷取執行個體的淨變更。  
   
@@ -140,7 +140,7 @@ deallocate #hfunctions
  如果您的封裝呼叫查詢所有變更的包裝函式，該包裝函式也會傳回 __CDC_STARTLSN 和 \__CDC_SEQVAL 資料行。 這兩個資料行會分別成為結果集的第一和第二個資料行。 此包裝函數也會根據這兩個資料行，排序結果集。  
   
 ## <a name="writing-your-own-table-value-function"></a>撰寫您自己的資料表值函式  
- 您也可以改用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 撰寫呼叫異動資料擷取查詢函數的資料表值包裝函式，並將資料表值包裝函式儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 如需如何建立 Transact-SQL 函數的詳細資訊，請參閱 [CREATE FUNCTION &#40;Transact-SQL&#41](../../t-sql/statements/create-function-transact-sql.md)。  
+ 您也可以改用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 撰寫呼叫異動資料擷取查詢函數的資料表值包裝函式，並將資料表值包裝函式儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 如需如何建立 Transact-SQL 函數的詳細資訊，請參閱 [CREATE FUNCTION &#40;Transact-SQL &#41](../../t-sql/statements/create-function-transact-sql.md)。  
   
  下列範例定義的資料表值函式可從 Customer 資料表中擷取指定之變更間隔的變更。 此函數會使用異動資料擷取函數，將 **datetime** 值對應到變更資料表在內部使用的二進位記錄序號 (LSN) 值。 此函數也會處理數個特殊狀況：  
   

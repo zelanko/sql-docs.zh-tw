@@ -26,7 +26,7 @@ ms.locfileid: "52509280"
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組概觀 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- 此主題介紹在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中設定與管理一個或多個可用性群組的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中心概念。 如需可用性群組所提供的優點摘要以及 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 術語的概觀，請參閱 [AlwaysOn 可用性群組 &amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。  
+ 此主題介紹在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中設定與管理一個或多個可用性群組的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中心概念。 如需可用性群組所提供的優點摘要以及 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 術語的概觀，請參閱 [AlwaysOn 可用性群組 &#40;SQL Server &#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。  
   
  「可用性群組」支援一組離散使用者資料庫 (稱為「可用性資料庫」) 的複寫環境。 您可以建立可用性群組的高可用性 (HA) 或讀取級別。 HA 可用性群組是一組可一起進行容錯移轉的資料庫。 讀取級別可用性群組是針對唯讀工作負載複製至其他 SQL Server 執行個體的一組資料庫。 可用性群組支援一組主要資料庫，以及一到八組對應的次要資料庫。 次要資料庫「並非」  備份。 請持續定期備份您的資料庫及其交易記錄。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "52509280"
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
--   [開始使用 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)  
+-   [開始使用 AlwaysOn 可用性群組 &#40;SQL Server &#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)  
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
