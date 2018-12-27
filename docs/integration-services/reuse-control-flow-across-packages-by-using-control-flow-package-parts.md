@@ -116,7 +116,7 @@ ms.locfileid: "52542650"
 -   **值**。 已設定的值。 這個值會覆寫預設值。  
   
 ### <a name="connection-managers-tab"></a>[連線管理員] 索引標籤  
- 使用 [Package Part Configuration] (封裝組件組態)   對話方塊的 [連線管理員]   索引標籤來指定組件執行個體的連線管理員屬性。  
+ 使用 [Package Part Configuration]\(封裝組件組態)   對話方塊的 [連線管理員]   索引標籤來指定組件執行個體的連線管理員屬性。  
   
  ![[範本設定] 對話方塊的 [連線管理員] 索引標籤](../integration-services/media/template-configuration-connection-managers-tab.png "[範本設定] 對話方塊的 [連線管理員] 索引標籤")  
   
