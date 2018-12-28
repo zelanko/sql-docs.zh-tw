@@ -104,7 +104,7 @@ RDL (報表定義語言) 沙箱功能可在多個租用戶使用報表伺服器�
   
 -   某個類型的靜態成員。  
   
--    [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **新** 方法。  
+-   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **新** 方法。  
   
 -   報表定義中的 **\<Classes>** 項目。  
   

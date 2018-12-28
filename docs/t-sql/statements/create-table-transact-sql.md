@@ -397,7 +397,7 @@ column_name <data_type>
 >  在您建立分割區資料表之後，請考慮將資料表的 LOCK_ESCALATION 選項設定為 AUTO。 如此一來可以讓鎖定從資料表擴大至分割區 (HoBT) 階層，進而改善並行作業。 如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)。  
   
  TEXTIMAGE_ON { *filegroup*| **"** default **"** }  
- 指示 **text**、**ntext**、**image**、**xml****varchar(max)****nvarchar(max)****varbinary(max)** 及 CLR 使用者自訂類型資料行 (包含幾何及地理位置) ，儲存在指定的檔案群組。  
+ 指示 **text**、**ntext**、**image**、**xml** **varchar(max)** **nvarchar(max)** **varbinary(max)** 及 CLR 使用者自訂類型資料行 (包含幾何及地理位置) ，儲存在指定的檔案群組。  
   
  如果資料表中沒有大數值資料行，即不可使用 TEXTIMAGE_ON。 如果指定了 *partition_scheme*，便不能指定 TEXTIMAGE_ON。 如果指定了 **"** default **"**，或完全未指定 TEXTIMAGE_ON，大數值資料行就會儲存在預設檔案群組中。 CREATE TABLE 所指定的任何大數值資料行的儲存體，無法進行後續的改變。  
 

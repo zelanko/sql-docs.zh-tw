@@ -337,7 +337,7 @@ RETURNS return_data_type
   
  在內嵌 TVF 中，TABLE 傳回值是透過單一 SELECT 陳述式定義。 內嵌函數沒有相關聯的傳回變數。  
   
- <a name="mstvf"></a> 在 MSTVF 中，@*return_variable* 是一個 TABLE 變數，可用來儲存及累積應作為函式值傳回的資料列。您只能針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式指定  @*return_variable*，不能針對 CLR 函式指定。  
+ <a name="mstvf"></a> 在 MSTVF 中，@*return_variable* 是一個 TABLE 變數，可用來儲存及累積應作為函式值傳回的資料列。您只能針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式指定  @ *return_variable*，不能針對 CLR 函式指定。  
   
  *select_stmt*  
  這是單一 SELECT 陳述式，可定義內嵌資料表值函式 (TVF) 的傳回值。  
