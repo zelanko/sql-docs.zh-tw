@@ -12,7 +12,7 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
 ms.openlocfilehash: b1ae9056ecbaf158b275798d69d691ae64e6ef06
 ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 11/06/2018
 ms.locfileid: "51033625"
@@ -147,7 +147,7 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
 
 2. 按下**F1**顯示命令選擇區。
 
-3.  在命令選擇區輸入 **sql** 以顯示 SQL 命令，或輸入 **sqluse** 以顯示 **MS SQL:Use Database** 命令。
+3. 在命令選擇區輸入 **sql** 以顯示 SQL 命令，或輸入 **sqluse** 以顯示 **MS SQL:Use Database** 命令。
 
 4. 按一下  **MS sql: use-cdata 資料庫**，然後選取**TutorialDB**資料庫。 這是在上一節中建立新資料庫變更的內容。
 
@@ -252,7 +252,7 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
 
 如果您不熟悉 T-SQL，請參閱[教學課程：撰寫 Transact-SQL 陳述式]和 [Transact-SQL 參考 (Database Engine)]。
 
-如需有關使用或促成 mssql 擴充功能的詳細資訊，請參閱 < [mssql 擴充功能專案 wiki]。
+如需有關使用或促成 mssql 擴充功能的詳細資訊，請參閱 < [mssql 延伸模組專案 wiki]。
 
 如需有關使用 VS Code 的詳細資訊，請參閱[Visual Studio Code 文件](https://code.visualstudio.com/docs)。
 
@@ -267,4 +267,4 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
 [Visual Studio Code documentation]:https://code.visualstudio.com/docs
 [Windows 10 通用 C 執行階段]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
 [自訂延伸模組選項]: https://github.com/Microsoft/vscode-mssql/wiki/customize-options
-[mssql 擴充功能專案 wiki]: https://github.com/Microsoft/vscode-mssql/wiki
+[mssql 延伸模組專案 wiki]: https://github.com/Microsoft/vscode-mssql/wiki
