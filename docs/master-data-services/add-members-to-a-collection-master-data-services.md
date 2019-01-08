@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], adding members
@@ -14,12 +13,12 @@ ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a551b6961664b8a2d068fd6a09d3c998ec621ae3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 28c4f892a96839a7e79b5d284a642a77cb6577dd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654858"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777380"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>將成員加入至集合 (Master Data Services)
 
@@ -38,7 +37,7 @@ ms.locfileid: "47654858"
   
 ### <a name="to-add-members-to-a-collection"></a>若要將成員加入至集合  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 **[模型]** 清單中的模型。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 首頁上，選取 [模型]  清單中的模型。  
   
 2.  從 **[版本]** 清單中選取版本。  
   
