@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - table dependencies [SQL Server]
@@ -16,15 +15,15 @@ ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1ce3195b114969a44f818ca0eb69d2979087e55
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 111a0664a61a586558dd4792525c7adf2d68646d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169118"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772300"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>檢視資料表的相依性
-  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視資料表的相依性。  
+  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中檢視資料表的相依性。  
   
  **本主題內容**  
   
@@ -32,9 +31,9 @@ ms.locfileid: "49169118"
   
      [Security](#Security)  
   
--   **若要使用下列項目來檢視資料表的相依性：**  
+-   **使用下列項目來檢視資料表的相依性：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -65,7 +64,7 @@ ms.locfileid: "49169118"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -82,7 +81,7 @@ ms.locfileid: "49169118"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  下列範例會傳回相依於 `Production.Product`資料表的物件。 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  下列範例會傳回相依於 `Production.Product`資料表的物件。 將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;   

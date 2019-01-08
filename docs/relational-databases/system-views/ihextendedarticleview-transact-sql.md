@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - IHextendedArticleView_TSQL
@@ -19,12 +18,12 @@ ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ed3cb8ca49a22d9358941554cdef2030d584fb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bc5734c0c8bed79516d94b96e7c6060e3650066
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848956"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771400"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

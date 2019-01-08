@@ -14,19 +14,19 @@ ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8d37ee863bbc14bbaa3c73a2c5781e080e81ee63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50e6eeb4c2f2a8ba5b1ce6430111586e6e3b8207
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161768"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516546"
 ---
 # <a name="data-mining-solutions"></a>資料採礦方案
   資料採礦方案是包含一個或多個資料採礦專案的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 方案。  
   
  本節的主題會提供有關如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]來設計及實作整合式資料採礦方案的資訊。 如需資料採礦設計程序與相關工具的概觀，請參閱 [資料採礦概念](data-mining-concepts.md)。  
   
- 如需有關對資料採礦非常實用之其他專案類型的詳細資訊，請參閱[資料採礦方案的相關專案](data-mining-solutions.md)。  
+ 如需有關對資料採礦非常實用之其他專案類型的詳細資訊，請參閱 [資料採礦方案的相關專案](data-mining-solutions.md)。  
   
  [關聯式與多維度方案](#bkmk_RelMD)  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48161768"
  [方案逐步解說](#bkmk_Walkthru)  
   
 ##  <a name="bkmk_RelMD"></a> 關聯式與多維度方案的比較  
- 資料採礦方案可以根據多維度資料 (也就是現有的 Cube) 或是單純的關聯式資料 (例如資料倉儲中的資料表和檢視表)，或是根據文字檔、Excel 活頁簿或其他外部資料來源。  
+ 資料採礦方案可以是根據多維度資料-也就是現有的 cube-或單純的關聯式資料，例如資料表和資料倉儲中的檢視，或是根據文字檔、 Excel 活頁簿或其他外部資料來源。  
   
 -   您可以在現有的多維度資料庫方案內建立資料採礦物件。  
   
@@ -79,13 +79,13 @@ ms.locfileid: "48161768"
   
 |工作|主題|  
 |-----------|------------|  
-|測試您建立的模型、驗證定型資料的品質，然後建立代表資料採礦模型精確度的圖表。|[測試和驗證&#40;資料採礦&#41;](testing-and-validation-data-mining.md)|  
+|測試您建立的模型、驗證定型資料的品質，然後建立代表資料採礦模型精確度的圖表。|[測試及驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)|  
 |將資料填入結構和相關模型中來定型模型。 使用新的資料來更新和擴充模型。|[處理資料採礦物件](processing-data-mining-objects.md)|  
 |將篩選套用到定型資料、選擇不同的演算法或是設定進階演算法參數來自訂採礦模型。|[自訂採礦模型和結構](customize-mining-models-and-structure.md)|  
-|將篩選套用到定型模式時所使用的資料來自訂採礦模型。|[將採礦模型加入結構中&#40;Analysis Services-資料採礦&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|將篩選套用到定型模式時所使用的資料來自訂採礦模型。|[將採礦模型加入結構 &#40;Analysis Services - 資料採礦&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |更新和管理資料採礦方案。|Link TBD|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦教學課程&#40;Analysis Services&#41;](../data-mining-tutorials-analysis-services.md)  
+ [資料採礦教學課程 &#40;Analysis Services&#41;](../data-mining-tutorials-analysis-services.md)  
   
   

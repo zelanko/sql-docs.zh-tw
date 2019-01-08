@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 59c9af7037c51490e93352849957ec57bc7e4eb3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0f6af7eecb4a77adb4d53440753da1c9b6ef6e1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662297"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509822"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>註解解譯 - sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 大量載入處理序**sql： 對應**如預期般的 XSD 結構描述中的註釋，也就是，如果對應結構描述指定**sql： 對應 ="false"** 任何項目或屬性，XML 大量載入不嘗試將相關聯的資料儲存在對應的資料行。  
+  XML 大量載入處理序**sql： 對應**註解 XSD 結構描述，預期是，如果對應結構描述指定**sql： 對應 ="false"** 任何項目或屬性，XML 大量載入則否嘗試將相關聯的資料儲存在對應的資料行。  
   
  XML 大量載入會忽略未對應的元素和屬性 (因為它們不在結構描述中，或是因為它們註解式 XSD 結構描述中**sql： 對應 ="false"**)。 所有未對應的資料進入溢位資料行中，如果這類資料行指定使用**sql: overflow-field-欄位**。  
   

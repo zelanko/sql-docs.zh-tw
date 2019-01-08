@@ -15,12 +15,12 @@ ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33259a56faa19dda2403996b6d6d8930ec2a87be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705996"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514505"
 ---
 # <a name="escape-sequences-in-odbc"></a>ODBC 中的逸出序列
 語言功能，例如外部聯結和純量函式呼叫的數目通常是由 Dbms 實作。 不過，這些功能的語法通常 DBMS 而異，即使是標準的語法由各種不同的標準內文。 因為這個緣故，ODBC 會定義包含下列語言功能的標準語法的逸出序列：  
@@ -44,12 +44,12 @@ ms.locfileid: "47705996"
 ```  
   
 ## <a name="remarks"></a>備註  
- 逸出序列會辨識並剖析驅動程式，逸出序列取代為特定 DBMS 的文法。 如需逸出序列語法的詳細資訊，請參閱[ODBC 逸出序列](../../../odbc/reference/appendixes/odbc-escape-sequences.md)附錄 c: SQL 文法中。  
+ 逸出序列會辨識並剖析驅動程式，逸出序列取代為特定 DBMS 的文法。 如需逸出序列語法的詳細資訊，請參閱[ODBC 逸出序列](../../../odbc/reference/appendixes/odbc-escape-sequences.md)附錄 c:SQL 文法。  
   
 > [!NOTE]  
->  在 ODBC 2。*x*，這是逸出序列的標準語法: **-(\*廠商 (***廠商名稱***)，產品 (***產品名稱***) * * * 延伸模組* **\*)--**  
+>  在 ODBC 2。*x*，這是逸出序列的標準語法： **-(\*廠商 (**_廠商名稱_**)，產品 (** _產品名稱_**)**_擴充功能_  **\*)-**  
 >   
->  這個語法中，除了速記語法定義的格式： **{***延伸模組***}**  
+>  這個語法中，除了速記語法定義的格式： **{**_擴充功能_**}**  
 >   
 >  在 ODBC 3。*x*、 逸出序列的完整格式已被取代，，和以獨佔方式使用簡短形式。  
   

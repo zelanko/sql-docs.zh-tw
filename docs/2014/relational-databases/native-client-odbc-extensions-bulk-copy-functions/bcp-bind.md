@@ -18,12 +18,12 @@ ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff7fe566c7547dc4e0755762d37764cd8b5bc50b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 027800860166b511b0a548313de30b3d237d9930
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069728"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513796"
 ---
 # <a name="bcpbind"></a>bcp_bind
   將程式變數中的資料繫結至資料表資料行，以便在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中進行大量複製。  
@@ -146,7 +146,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>備註  
  使用**bcp_bind**快速、 有效率的方法，來將資料從程式變數複製到資料表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- 呼叫[bcp_init](bcp-init.md)之前呼叫這個或其他任何大量複製函數。 呼叫**bcp_init**設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大量複製的目標資料表。 呼叫時**bcp_init**搭配**bcp_bind**並[bcp_sendrow](bcp-sendrow.md)，則**bcp_init** *szDataFile*參數，指出資料檔中，設定為 NULL，**bcp_init * * * eDirection*參數設定為 DB_IN。  
+ 呼叫[bcp_init](bcp-init.md)之前呼叫這個或其他任何大量複製函數。 呼叫**bcp_init**設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大量複製的目標資料表。 呼叫時**bcp_init**搭配**bcp_bind**並[bcp_sendrow](bcp-sendrow.md)，則**bcp_init** *szDataFile*參數，指出資料檔中，設定為 NULL，**bcp_init**_eDirection_參數設定為 DB_IN。  
   
  個別**bcp_bind**呼叫中的每個資料行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您要複製的資料表。 必要後**bcp_bind**呼叫已被設，然後呼叫**bcp_sendrow**若要從程式變數来傳送的資料列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不支援重新繫結資料行。  
   

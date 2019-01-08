@@ -23,12 +23,12 @@ ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 761e0c000666fc413c060bf4f01ea24b307d3fbd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 413a9519cbfcb036c5e7242889c4eaf4ec89d413
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665397"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515388"
 ---
 # <a name="quantified-expressions-xquery"></a>定量運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51665397"
  XQuery 支援下列形式的定量運算式：  
   
 ```  
-( some | every ) <variable> in <Expression> (,…) satisfies <Expression>  
+( some | every ) <variable> in <Expression> (,...) satisfies <Expression>  
 ```  
   
  您可以在查詢中使用這些運算式，以明確地將存在或通用定量套用至一或多個時序中的運算式。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，`satisfies` 子句中的運算式必須產生下列其中一個：節點時序、空白時序或布林值。 該運算式所產生的有效布林值結果將用於定量中。 使用的存在定量**某些**會傳回 True，如果至少一個與數量詞繫結的值有符合的運算式，則為 True 的結果。 使用通用定量**每個**與數量詞繫結的所有值必須為 True。  

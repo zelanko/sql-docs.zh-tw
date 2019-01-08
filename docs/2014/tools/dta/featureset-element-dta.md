@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f489fba4c9ea113cffd608b496d04448399481a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4bf6fac03eab1e096c0ac5dc63285c11bd3f114
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191578"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754470"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet 元素 (DTA)
   包含在分析期間，Database Engine Tuning Advisor 所要使用的實體設計結構 (索引或索引檢視)。  
@@ -42,19 +41,19 @@ ms.locfileid: "48191578"
 |**資料類型和長度**|`string`，沒有最大長度。|  
 |**允許的值**|**IDX_IV**<br /> 索引和索引檢視表。<br /><br /> **IDX**<br /> 只有索引。<br /><br /> **IV**<br /> 只有索引檢視表。<br /><br /> **NCL_IDX**<br /> 只有非叢集索引。<br /><br /> 這個元素使用這些值的其中之一。|  
 |**預設值**|**IDX**|  
-|**出現次數**|除非使用 `TuningOptions` 元素，否則，每個 `DropOnlyMode` 元素都需要使用這個元素一次。 如果`DropOnlyMode`是，您不能使用`FeatureSet`。 這些元素互斥。|  
+|**出現次數**|除非使用 `TuningOptions` 元素，否則，每個 `DropOnlyMode` 元素都需要使用這個元素一次。 如果使用 `DropOnlyMode`，您便無法使用 `FeatureSet`。 這些元素互斥。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[TuningOptions 元素&#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**父元素**|[TuningOptions 元素 &#40;DTA&#41;](tuningoptions-element-dta.md)|  
 |**子元素**|無。|  
   
 ## <a name="example"></a>範例  
  如需此元素的使用範例，請參閱[簡單 XML 輸入檔範例 &#40;DTA&#41;](simple-xml-input-file-sample-dta.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

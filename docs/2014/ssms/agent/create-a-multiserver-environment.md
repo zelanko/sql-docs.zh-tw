@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, multiserver environments
@@ -15,12 +15,12 @@ ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bacf87c25d7949580eb3d366467e1dae9381e8a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115588"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795611"
 ---
 # <a name="create-a-multiserver-environment"></a>建立多伺服器環境
   多伺服器管理會要求您設定一部主要伺服器 (MSX) 以及一或多部目標伺服器 (TSX)。 將在所有目標伺服器上處理的作業會先在主要伺服器上定義，然後再下載至目標伺服器。  

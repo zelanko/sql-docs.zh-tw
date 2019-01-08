@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ef5b5b551d06281cef03dbfd68d5bea190126285
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9be76f5f308213f905224de5ade9b604ec119c30
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674338"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514655"
 ---
 # <a name="sysdmpdwresourcewaits-transact-sql"></a>sys.dm_pdw_resource_waits & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47674338"
 |acquire_time|**datetime**|取得的鎖定或資源的時間。||  
 |state|**nvarchar(50)**|等候狀態的狀態。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |priority|**int**|等候項目的優先順序。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|concurrency_slots_used|**int**|並行存取插槽數目 (最大值 32) 保留給此要求。|1 – SmallRC<br /><br /> 3 – MediumRC<br /><br /> LargeRC 的 7<br /><br /> 22 – 對於 XLargeRC|  
+|concurrency_slots_used|**int**|並行存取插槽數目 (最大值 32) 保留給此要求。|1-為 SmallRC<br /><br /> 3-為 MediumRC<br /><br /> LargeRC 的 7<br /><br /> 22-若為 XLargeRC|  
 |resource_class|**nvarchar(20)**|此要求的資源類別。|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
   
 ## <a name="see-also"></a>另請參閱  

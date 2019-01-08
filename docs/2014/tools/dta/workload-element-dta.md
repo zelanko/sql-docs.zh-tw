@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1bc86764dce10dfad5c25ca7a1bd7f3d2bc519c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e81ea0aac9cfe7676abba18bc7dffb2e1561597b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087298"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759791"
 ---
 # <a name="workload-element-dta"></a>Workload 元素 (DTA)
   指定微調工作階段所用的工作負載。  
@@ -41,19 +40,19 @@ ms.locfileid: "48087298"
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  
-|**出現次數**|必須出現一次，每個`DTAInput`項目。|  
+|**出現次數**|每個 `DTAInput` 元素需要使用這個元素一次。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   
 |關聯性|元素|  
 |------------------|--------------|  
 |**父元素**|[啟動及使用 Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
-|**子元素**|[檔案項目&#40;DTA&#41;](file-element-dta.md)<br /><br /> [工作負載的 database 元素&#40;DTA&#41;](database-element-for-workload-dta.md)<br /><br /> [EventString 元素&#40;DTA&#41;](eventstring-element-dta.md)|  
+|**子元素**|[File 元素 &#40;DTA&#41;](file-element-dta.md)<br /><br /> [工作負載的 Database 元素 &#40;DTA&#41;](database-element-for-workload-dta.md)<br /><br /> [EventString 元素 &#40;DTA&#41;](eventstring-element-dta.md)|  
   
 ## <a name="remarks"></a>備註  
  工作負載是針對需要微調的一或多個資料庫來執行的一組 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 Database Engine Tuning Advisor 可以利用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼、追蹤檔和追蹤資料表來作為工作負載。  
   
- 如果您在 XML 輸入檔中指定工作負載，以及在命令列中利用 **dta** 工具來指定工作負載，就會利用命令列所指定的工作負載來進行微調。 命令列所指定的所有微調選項都會覆寫 XML 輸入檔中所指定的微調選項。 XML 輸入檔中以評估模式輸入的使用者指定組態是唯一例外。 例如，如果您在輸入組態`Configuration`元素的 XML 輸入檔和`EvaluateConfiguration`元素也指定成一個微調選項，在 XML 輸入檔中指定的微調選項會覆寫在輸入的任何微調選項命令列中。  
+ 如果您在 XML 輸入檔中指定工作負載，以及在命令列中利用 **dta** 工具來指定工作負載，就會利用命令列所指定的工作負載來進行微調。 命令列所指定的所有微調選項都會覆寫 XML 輸入檔中所指定的微調選項。 XML 輸入檔中以評估模式輸入的使用者指定組態是唯一例外。 例如，如果在 XML 輸入檔的 `Configuration` 元素中輸入了某項組態，`EvaluateConfiguration` 元素也指定成某個微調選項，XML 輸入檔所指定的微調選項會覆寫在命令列中輸入的任何微調選項。  
   
  每個微調工作階段都必須指定一個工作負載。  
   
@@ -83,6 +82,6 @@ ms.locfileid: "48087298"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

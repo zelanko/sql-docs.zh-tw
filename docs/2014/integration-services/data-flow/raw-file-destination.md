@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledest.f1
@@ -19,12 +18,12 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 515f6ffe76b451b621ceded394a22483ce59b2cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ebcc0ff9c9c2baae93ac31258ff994b463fc3b0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188088"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753670"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
   「原始檔案」目的地會將原始資料寫入檔案。 由於資料的格式對於目的地而言是原生的，因此資料不需翻譯，也幾乎不需要剖析。 這表示，「原始檔案」目的地可比其他目的地更快地寫入資料，例如「一般檔案」和 OLE DB 目的地。  
@@ -103,7 +102,7 @@ ms.locfileid: "48188088"
   
 5.  使用原始檔案目的地寫入 RawFile2。  
   
-     在資料流程中，RawFile1 因為是讀取來源而遭到鎖定。  
+     在資料流程中，由於 RawFile1 是讀取來源，因此遭到鎖定。  
   
 6.  將 RawFile1 取代成 RawFile2。  
   

@@ -11,12 +11,12 @@ ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f88a82a1d59e9d41f9816b8fbc4e335ab2ad8c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 923467270901b91c35b40005c75207e7b1799194
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119298"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518966"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>資料集篩選器或模型篩選器對話方塊
   這個對話方塊可協助您建立能套用至資料集的篩選器。  資料集可以是用於字串的外部資料集，或採礦模型的案例資料。 對話方塊的名稱會根據篩選器是用於外部資料集或採礦模型而變更。  
@@ -32,7 +32,7 @@ ms.locfileid: "48119298"
 > [!TIP]  
 >  若要測試原始定型資料子集的精確度，您可以加入曾用來將定型集定義為外部測試資料的資料來源檢視，然後在 [資料集篩選器] 方格中加入條件。  
   
- **如需詳細資訊，請參閱**：[測試和驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **如需詳細資訊：＜＞**[測試及驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>選項。  
  **條件**  
@@ -43,7 +43,7 @@ ms.locfileid: "48119298"
 |**及/或**|選擇運算子來聯結多個條件。|  
 |**採礦結構資料行**|按一下以選取資料來源，然後再按一下方格中的連續行來從資料來源新增資料行。<br /><br /> 方格中的第一行會指定資料來源檢視。 在選取資料來源檢視之後，[採礦結構資料行] 會顯示資料表圖示，而 [值] 欄位則顯示已為此資料來源所定義之所有準則的組合。<br /><br /> 在選取資料來源之後，[採礦結構資料行] 方塊會提供資料來源中個別資料行的下拉式清單。|  
 |**運算子**|從清單選取運算子。|  
-|**值**|對於資料表而言，[值] 欄位會顯示套用至資料來源的所有篩選組合。 您也可以按一下文字方塊右側的建立按鈕 **(…)**，以開啟 [篩選] 對話方塊並建立條件。|  
+|**值**|對於資料表而言，[值] 欄位會顯示套用至資料來源的所有篩選組合。 您也可以按一下組建 **（...）**  按鈕，在文字方塊的右推以打開**篩選**對話方塊並建立條件。|  
   
  **運算式**  
  顯示您使用方格所建立的準則集。  

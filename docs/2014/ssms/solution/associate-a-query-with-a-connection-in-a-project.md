@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server Management Studio], query associations
@@ -15,12 +15,12 @@ ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 015d961d2b6ae10e6594788707a6c3816062e357
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a28982b3dcf8136e7981899b50aed1aa8f9904c9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105918"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781440"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>在專案中建立查詢與連接的關聯性
   如果建立不含連接的查詢，或在專案之間移動查詢，這項查詢都不會與目前專案中的連接相關聯。  

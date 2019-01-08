@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmltask.f1
@@ -16,12 +15,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06fa137e5be6f664ae40e7c195e88a99bf87e9c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b696dd451c5b6f76419e4fb4cb501e2e62bba24
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204188"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759320"
 ---
 # <a name="xml-task"></a>XML 工作
   XML 工作用於處理 XML 資料。 使用此工作，封裝可以擷取 XML 文件、使用「可延伸樣式表語言轉換」(XSLT) 樣式表和 XPath 運算式將作業套用到文件、合併多個文件，或者驗證、比較更新的文件，並將其儲存至檔案和變數。  
@@ -54,7 +53,7 @@ ms.locfileid: "48204188"
 ## <a name="predefined-xml-operations"></a>預先定義的 XML 作業  
  XML 工作包括一組預先定義的作業，用於處理 XML 文件。 下表描述這些作業。  
   
-|作業|描述|  
+|運算|描述|  
 |---------------|-----------------|  
 |Diff|比較兩份 XML 文件。 差異作業使用來源 XML 文件做為基底文件，將其與第二個 XML 文件相比較，偵測兩者的差異，並將差異寫入 XML Diffgram 文件。 此作業包含用於自訂比較的屬性。|  
 |合併式|合併兩份 XML 文件。 「合併」作業使用來源 XML 文件做為基底文件，將第二個文件的內容加入此基底文件。 此作業可以指定基底文件中的合併位置。|  
@@ -71,7 +70,7 @@ ms.locfileid: "48204188"
 |選項|描述|  
 |------------|-----------------|  
 |**IgnoreComments**|指定是否要比較註解節點的值。|  
-|**IgnoreNamespaces**|指定是否要比較元素的命名空間統一資源識別碼 (URI) 及其屬性名稱的值。 如果此選項設定為`true`，具有相同本機名稱但不同的命名空間的兩個元素會被視為相同。|  
+|**IgnoreNamespaces**|指定是否要比較元素的命名空間統一資源識別碼 (URI) 及其屬性名稱的值。 如果此選項設定為 `true`，則本機名稱相同但命名空間不同的兩個元素會被視為一樣。|  
 |**IgnorePrefixes**|指定是否要比較元素前置詞和屬性名稱的值。 如果此選項設定為 `true,`，則本機名稱相同但命名空間 URI 和前置詞不同的兩個元素會被視為一樣。|  
 |**IgnoreXMLDeclaration**|指定是否要比較 XML 宣告的值。|  
 |**IgnoreOrderOfChildElements**|指定是否要比較子元素順序的值。 如果此選項設定為 `true`，則同層級清單中只有位置不同的子元素會被視為一樣。|  
@@ -94,7 +93,7 @@ ms.locfileid: "48204188"
 ### <a name="validation-operation"></a>驗證作業  
  可以將「驗證」作業設定為使用「文件類型定義」(DTD) 或「XML 結構描述定義」(XSD) 結構描述。  
   
- 啟用`ValidationDetails`以取得詳細的錯誤輸出。 如需詳細資訊，請參閱＜ [Validate XML with the XML Task](xml-task.md)＞。  
+ 啟用 `ValidationDetails` 可取得詳細的錯誤輸出。 如需詳細資訊，請參閱＜ [Validate XML with the XML Task](xml-task.md)＞。  
   
 ## <a name="xml-document-encoding"></a>XML 文件編碼  
  XML 工作只支援 Unicode 文件的合併。 這表示只能對具有 Unicode 編碼的文件套用「合併」作業。 使用其他編碼將造成 XML 工作失敗。  
@@ -120,9 +119,9 @@ ms.locfileid: "48204188"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [XML 工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [XML 工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [以 XML 工作驗證 XML](xml-task.md)  
+-   [Validate XML with the XML Task](xml-task.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

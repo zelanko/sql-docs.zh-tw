@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: table-view-index
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.managepartition.getstart.f1
@@ -23,12 +23,12 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e706a867c9192f4b447badc70db46dc4b0abc338
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a19bfa830b8f57d8df891fb2cfea9435c2716b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130668"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781000"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>管理資料分割精靈 F1 說明
   使用 [管理資料分割精靈]，即可透過資料分割切換或滑動視窗案例的實作，管理和修改現有的資料分割資料表。 這個精靈可以讓資料分割的管理更方便，並且簡化將資料移轉入和移轉出資料表的一般作業。  
@@ -247,7 +247,7 @@ ms.locfileid: "48130668"
 ### <a name="one-time-schedule-types-options"></a>僅執行一次的排程類型選項  
  如果您將作業排程為僅執行一次，就必須選取未來的日期和時間。  
   
- **Date**  
+ **日期**  
  選取作業要執行的日期。  
   
  **Time**  
@@ -303,6 +303,6 @@ ms.locfileid: "48130668"
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [本節內容](#Top)  
   
 ## <a name="see-also"></a>另請參閱  
- [Partitioned Tables and Indexes](partitioned-tables-and-indexes.md)  
+ [分割資料表與索引](partitioned-tables-and-indexes.md)  
   
   

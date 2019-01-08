@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9594191e604d70ef71ad7db00ce840d010398b92
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 99ccf53ab36d68ab0b03fa042d08e00d65703228
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147993"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393421"
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>在 Analysis Services 中使用 XMLA 進行開發
   XML for Analysis (XMLA) 是以 SOAP 為基礎的 XML 通訊協定，它是特別針對可透過 HTTP 連接存取的任何標準多維度資料來源進行通用資料存取而設計。 當與用戶端應用程式通訊時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用 XMLA 做為它唯一的通訊協定。 基本上，Analysis Services 支援的所有用戶端程式庫都會以 XMLA 編寫要求和回應。  
@@ -52,7 +52,7 @@ ms.locfileid: "50147993"
 ## <a name="namespace-and-schema"></a>命名空間與結構描述  
   
 ### <a name="namespace"></a>命名空間  
- 在這個規格中定義的結構描述使用 XML 命名空間 `http://schemas.microsoft.com/AnalysisServices/2003/Engine` 以及標準縮寫"DDL"。  
+ 在這個規格中定義的結構描述使用 XML 命名空間`http://schemas.microsoft.com/AnalysisServices/2003/Engine`以及標準縮寫"DDL"。  
   
 ### <a name="schema"></a>結構描述  
  對於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件定義語言，XML 結構描述定義語言 (XSD) 的定義是根據本章節中的結構描述元素與階層的定義。  

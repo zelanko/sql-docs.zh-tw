@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - external programs [Database Mail]
@@ -15,12 +14,12 @@ ms.assetid: bc124164-eb6e-4b7f-bf66-98a3113d02f7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b565a18009346f5f49d47e2336993bd4d27c899
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c617e4f7c069a869935fa4ed83d28c02d0b0b9a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096498"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799280"
 ---
 # <a name="database-mail-external-program"></a>Database Mail 外部程式
   Database Mail 外部可執行檔是 **DatabaseMail.exe**，位於 **安裝的** MSSQL\Binn 目錄 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 有電子郵件訊息需要處理時，Database Mail 會使用「Service Broker 啟用」來啟動外部程式。 Database Mail 會啟動一個外部程式的執行個體。 外部程式則於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務帳戶的安全性內容中執行。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - administering replication, frequently asked questions
@@ -14,12 +13,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 30058e297e22ed63a9e22a4755f22c4cc35ab213
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fa90f7732b504000696ad2977ae465b392ff565
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105158"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748721"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>複寫管理員的常見問題集
   透過下列問題和答覆可以了解複寫的資料庫管理員所面臨的各種工作。  
@@ -102,7 +101,7 @@ ms.locfileid: "48105158"
   
 -   虛擬私人網路 (VPN)。 如需詳細資訊，請參閱[使用 VPN 透過網際網路發行資料](../publish-data-over-the-internet-using-vpn.md)。  
   
--   合併式複寫的 Web 同步處理選項。 如需詳細資訊，請參閱＜ [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)＞。  
+-   合併式複寫的 Web 同步處理選項。 如需詳細資訊，請參閱 [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)。  
   
  所有類型的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫都可以透過 VPN 複寫資料，但是您若是使用合併式複寫，則應考慮 Web 同步處理。  
   
@@ -122,7 +121,7 @@ ms.locfileid: "48105158"
   
 -   物件的定義，例如 CREATE TABLE 陳述式。 依預設，複寫將所有複寫物件的定義複製到「訂閱者」。  
   
--   在其中建立物件的命名空間：\<資料庫>.\<結構描述>.\<物件>。 結構描述使用 CREATE SCHEMA 陳述式來定義。  
+-   在其中建立物件的命名空間：\<資料庫 >。\<結構描述 >。\<物件 >。 結構描述使用 CREATE SCHEMA 陳述式來定義。  
   
 -   針對結構描述和物件擁有權，複寫在新增複寫精靈中具有下列預設行為：  
   
@@ -134,7 +133,7 @@ ms.locfileid: "48105158"
   
 -   針對使用字元模式快照集之發行集內的發行項 (用於非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者和 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 訂閱者)：依預設，會將擁有者保留空白。 擁有者預設為與散發代理程式或合併代理程式用於連接到訂閱者之帳戶相關聯的擁有者。  
   
- 物件擁有者可以透過 [發行項屬性 -\<發行項>]**** 對話方塊和透過下列預存程序變更︰**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 如需詳細資訊，請參閱[檢視和修改發行集屬性](../publish/view-and-modify-publication-properties.md)、[定義發行項](../publish/define-an-article.md)和[檢視和修改發行項屬性](../publish/view-and-modify-article-properties.md)。  
+ 物件擁有者可以透過 [發行項屬性 -\<發行項>] **** 對話方塊和透過下列預存程序變更︰**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 如需詳細資訊，請參閱[檢視和修改發行集屬性](../publish/view-and-modify-publication-properties.md)、[定義發行項](../publish/define-an-article.md)和[檢視和修改發行項屬性](../publish/view-and-modify-article-properties.md)。  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>如何將訂閱資料庫中的授權設定為與發行集資料庫中的授權相符？  
  依預設，複寫不執行訂閱資料庫中的 GRANT 陳述式。 如果您要使訂閱資料庫中的授權與發行集資料庫中的授權相符，請使用以下其中一種方法：  
@@ -185,7 +184,7 @@ ms.locfileid: "48105158"
  首先使用 [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)、[sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) 或 [發行集屬性 - \<發行集>] 對話方塊從發行集中卸除發行項，然後使用 `DROP <Object>` 將其從資料庫中卸除。 訂閱已加入之後，不可從快照集或交易式發行集卸除發行項，必須先卸除訂閱。 如需詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>如何在已發行的資料表中新增或卸除資料行？  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援在已發行物件上進行各種結構描述變更，包括新增和卸除資料行。 例如，在發行者端執行 ALTER TABLE ... DROP COLUMN，並將陳述式複寫至訂閱者，然後執行以卸除資料行。 執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本的「訂閱者」支援透過預存程序 [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) 和 [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql)新增和卸除資料行。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../publish/make-schema-changes-on-publication-databases.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援在已發行物件上進行各種結構描述變更，包括新增和卸除資料行。 例如，在發行者端執行 ALTER TABLE ...DROP COLUMN，並將陳述式複寫至訂閱者，然後執行以卸除資料行。 執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 版本的「訂閱者」支援透過預存程序 [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) 和 [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql)新增和卸除資料行。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../publish/make-schema-changes-on-publication-databases.md)。  
   
 ## <a name="replication-maintenance"></a>複寫維護  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], adding
@@ -16,12 +14,12 @@ ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8ec7501a3a1d554d3437ea37f208f60fc66555f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a5e5ab2d0dba0d7d39fcf3223f0aeec5ab6a058
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191548"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767921"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>將擴充預存程序加入至 SQL Server
     

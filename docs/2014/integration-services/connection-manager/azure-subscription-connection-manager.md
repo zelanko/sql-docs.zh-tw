@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpsubscrconn.f1
@@ -14,15 +13,15 @@ ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bd5b0c92a1f4b089d86660af0766686708c1a06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 991b65c5a0b9ef78811bd1dbc543ffb9c4ad0e31
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183838"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774140"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 訂用帳戶連線管理員
-  Azure HDInsight 連線管理員可讓 SSIS 封裝連接到 Azure 訂用帳戶所使用的屬性所指定的值： Azure 訂用帳戶 ID 和管理憑證。  
+  Azure HDInsight 連線管理員可讓 SSIS 封裝連接到 Azure 訂用帳戶所使用的屬性所指定的值：Azure 訂用帳戶 ID 和管理憑證。  
   
 1.  在上方顯示的 [加入 SSIS 連線管理員] 對話方塊中，選取 [Azure 訂用帳戶]，然後按一下 [加入]。  [Azure Subscription Connection Manager Editor (Azure 訂用帳戶連線管理員編輯器)] 對話方塊應會隨即出現。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "48183838"
   
 3.  從下拉式清單中選擇 [Management certificate store location (管理憑證存放區位置)] 和 [Management certificate store name (管理憑證存放區名稱)]。  
   
-4.  輸入 [管理憑證指紋]，或按一下 [瀏覽] 可從選取的存放區選擇憑證 以從選取的存放區中選擇憑證。 憑證必須上傳為訂用帳戶的管理憑證。 若要這樣做，請按一下 Azure 入口網站下一個頁面上的 [上傳] (如需詳細資訊，請參閱此 [MSDN 文章](https://msdn.microsoft.com/library/azure/gg551722.aspx))。  
+4.  輸入 [管理憑證指紋]，或按一下 [瀏覽...] 可從選取的存放區選擇憑證。 憑證必須上傳為訂用帳戶的管理憑證。 若要這樣做，請按一下 Azure 入口網站下一個頁面上的 [上傳] (如需詳細資訊，請參閱此 [MSDN 文章](https://msdn.microsoft.com/library/azure/gg551722.aspx))。  
   
      ![SSIS-AzureSettings-ManagementCertificate](../media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
   

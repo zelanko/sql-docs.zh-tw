@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0926afa9cb434f105dfbd817f5c6bac9663fa5d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9f8ded0dfc540ab695342fc1765bf53e880ec0e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644147"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538059"
 ---
 # <a name="spcolumnprivileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
  如果目前使用者擁有一份含指定名稱的資料表，就會傳回這份資料表的資料行。 如果*table_owner*未指定且目前使用者並未擁有指定的資料表*table_name*，sp_column 權限指定的資料表看起來*table_name*資料庫擁有者所擁有。 如果資料表存在，就會傳回它的資料行。  
   
  [ @table_qualifier=] '*table_qualifier*'  
- 這是資料表限定詞的名稱。 *table_qualifier*已*sysname*，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (*限定詞 ***。*** 擁有者 ***。*** 名稱*)。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+ 這是資料表限定詞的名稱。 *table_qualifier*已*sysname*，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (_限定詞_**。**_擁有者_**。**_名稱_)。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
  [ @column_name=] '*資料行*'  
  這是個單一資料行，當只取得一個目錄資訊資料行時，便使用這個單一資料行。 *資料行*已**nvarchar (** 384 **)**，預設值是 NULL。 如果*資料行*是未指定，會傳回所有資料行。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*資料行*代表符合 sys.columns 資料表所示的資料行名稱。 *資料行*可包含使用萬用字元相符模式的基礎 DBMS 萬用字元。 若要有最大交互操作能力，閘道用戶端應該只採用 ISO 標準模式比對 (% 和 _ 萬用字元)。  

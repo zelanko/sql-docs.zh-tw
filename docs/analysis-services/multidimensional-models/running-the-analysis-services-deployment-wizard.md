@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f7362e216213bc27efab0fd49f3ded2f15c37bdb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d459bafe395a10af75f8c0a721f0a8a08f39b3c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050786"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509678"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>執行 Analysis Services 部署精靈
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "38050786"
 -   **從命令提示字元**命令提示字元中，當執行[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈會產生部署指令碼，根據您用來執行精靈的參數。 此精靈可以是下列其中之一：提示使用者輸入並依據該輸入來修改輸入檔；依現狀使用輸入檔來執行無訊息自動部署；或建立可稍後使用的部署指令碼。  
   
 ## <a name="running-the-analysis-services-deployment-wizard-interactively"></a>以互動方式執行 Analysis Services 部署精靈  
- 當您以互動方式執行時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈會從輸入檔讀取值，並呈現此資訊。 您可以修改這些輸入值—例如部署目的地、組態設定、部署選項和連接字串密碼—或保留現狀。 如果您變更任何輸入的值時，精靈產生部署指令碼時，就會使用這些變更。 不過，精靈不會對輸入檔中的值做任何變更。  
+ 當您以互動方式執行時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈會從輸入檔讀取值，並呈現此資訊。 您可以修改這些值這類的輸入作為部署目的地、 組態設定、 部署選項和連接字串密碼-或保留現狀。 如果您變更任何輸入的值時，精靈產生部署指令碼時，就會使用這些變更。 不過，精靈不會對輸入檔中的值做任何變更。  
   
 > [!NOTE]  
 >  如果您想要讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈修改輸入值，請在命令提示字元下執行精靈，並設定精靈在回應檔案模式中執行。  
@@ -37,7 +37,7 @@ ms.locfileid: "38050786"
   
 -   按一下 **開始** > **Microsoft SQL Server** > **部署精靈**。  
   
-     – 或 –  
+     -或-  
   
 -   在 **專案**的資料夾[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案中，按兩下\<專案名稱 >.asdatabase 檔案。
     > [!NOTE]  
@@ -73,6 +73,6 @@ ms.locfileid: "38050786"
   
 ## <a name="see-also"></a>另請參閱  
  [了解 Analysis Services 部署指令碼](../../analysis-services/multidimensional-models/understanding-the-analysis-services-deployment-script.md)   
- [使用部署精靈來部署模型方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Deploy Model Solutions Using the Deployment Wizard](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

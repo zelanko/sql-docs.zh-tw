@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_add_agent_profile
@@ -17,12 +16,12 @@ ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b5c6b2c03ff9956a58bf7da8426c87b692d5f879
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edb5fc6c24ce8e59c82b35ac10e6dddb67adeaf4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670432"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752150"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +46,10 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
  [  **@profile_id=** ] *profile_id*  
  這是與新插入之設定檔相關聯的識別碼。 *profile_id*已**int**是選擇性的 OUTPUT 參數。 如果指定的話，這個值會設為新設定檔識別碼。  
   
- [  **@profile_name=** ] **'***profile_name***'**  
+ [  **@profile_name=** ] **'**_profile_name_**'**  
  這是設定檔的名稱。 *profile_name*已**sysname**，沒有預設值。  
   
- [ **@agent_type=** ] **'***agent_type***'**  
+ [  **@agent_type=** ] **'**_agent_type_**'**  
  這是複寫代理程式的類型。 *agent_type*已**int**，沒有預設值，它可以是下列值之一。  
   
 |值|描述|  
@@ -66,7 +65,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
  **0**表示系統設定檔。 **1**表示自訂設定檔。 使用此預存程序，就可以建立自訂的設定檔因此，唯一有效的值是**1**。 只有[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會建立系統設定檔。  
   
- [  **@description=** ] **'***描述***'**  
+ [  **@description=** ] **'**_描述_**'**  
  這是設定檔的描述。 *描述*已**nvarchar(3000)**，沒有預設值。  
   
  [  **@default=** ]*預設*  

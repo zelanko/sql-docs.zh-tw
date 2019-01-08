@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3736ebcdcf189ab377624b962a119de864130668
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: daa62b343adca72d28da5d83469409ed476a210e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184498"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782500"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 補充記錄指令碼
   此對話方塊會顯示 Oracle 補充記錄指令碼。  
@@ -34,11 +33,11 @@ ms.locfileid: "48184498"
  **另存新檔**  
  將指令碼儲存至文字檔。 如果 Oracle 資料庫管理員 (DBA) 需要檢查及執行補充記錄指令碼，就會使用這個方式。此程式可讓您將指令碼儲存成文字檔，之後可以將此文字檔透過電子郵件或其他方式傳送給 Oracle DBA 以供日後執行 (使用 SQL*Plus Oracle 公用程式或其他工具，在 Oracle 資料庫上執行指令碼)。  
   
- **複製**  
+ **[複製]**  
  將指令碼複製到剪貼簿。 備妥之後，您可以將指令碼貼到所需的任何位置，萬一 Oracle 資料庫管理員 (DBA) 需要檢查及執行補充記錄指令碼時，就可以派上用場。  
   
 ## <a name="see-also"></a>另請參閱  
- [如何管理 CDC 執行個體](manage-a-cdc-instance.md)   
+ [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [管理 CDC 執行個體](manage-a-cdc-instance.md)  
   
   

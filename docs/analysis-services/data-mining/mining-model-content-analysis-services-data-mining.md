@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 64aeaec2c78360fa082f98db33ebd47a91171348
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 5fe10a98910f54e4317d0191753d40b9b6b0b94f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146223"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508537"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -160,7 +160,7 @@ ms.locfileid: "50146223"
   
  例如在分類樹狀結構中，support 值表示具有描述之屬性組合的案例數。  
   
- 在決策樹中，樹狀結構每一層的 support 總和是其父節點的 support 總和。 例如，如果包含 1200 個案例的模型依性別區分，然後再依收入 (低、中、高) 的三個值均分，則節點 (2) 的子節點 (也就是節點 (4)、(5) 和 (6)) 總數一定與節點 (2) 的案例數相同。  
+ 在決策樹中，樹狀結構每一層的 support 總和是其父節點的 support 總和。 例如，如果包含 1200年個案例的模型是依性別，平均分配，然後再依收入低、 中度和高的子節點的節點 (2)，也就是節點 (4)、 (5) 的三個值和 (6)，一律加總為節點 (2) 相同的案例數目。  
   
 |節點識別碼和節點屬性|支持度計數|  
 |---------------------------------|-------------------|  
@@ -208,7 +208,7 @@ ms.locfileid: "50146223"
 |3|Continuous|表示屬性值是一個連續數值，因此可以由平均值連同變異數和標準差來表示。|  
 |4|Discrete|表示一個視為離散的值 (數值或文字)。<br /><br /> **注意** ：Discrete 值也可以是 missing 值；但是在計算時會以不同方式處理這兩個值。 如需相關資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)。|  
 |5|Discretized|表示此屬性包含已經離散化的數值。 此值將會是一個描述離散化值區的格式化字串。|  
-|6|現有的|表示此屬性具有連續數值，而且資料中已經提供值 (遺漏或推斷的值)。|  
+|6|Existing|表示此屬性具有連續數值，而且資料中已經提供值 (遺漏或推斷的值)。|  
 |7|Coefficient|表示代表著係數的數值。<br /><br /> 係數是計算相依變數的值時所套用的值。 例如，如果您的模型建立一個迴歸公式來根據年齡預測收入，則讓年齡與收入產生關聯的公式中會使用係數。|  
 |8|Score gain|表示代表著屬性之得分的數值。|  
 |9|Statistics|表示代表著迴歸輸入變數之統計資料的數值。|  
@@ -238,7 +238,7 @@ ms.locfileid: "50146223"
   
 -   **節點機率** ：一定會小於或等於 **臨界機率**。  
   
- 例如，如果決策樹中所有客戶的母體擴展依性別均分 (而且沒有遺漏任何值)，則子節點的機率應該是 5。 但是，假設性別的每一個節點是依收入等級均分，也就是高、中、低。 在此情況下，每一個子節點的 MARGINAL_PROBABILITY 分數應該是 .33，但是 NODE_PROBABILTY 值將會是導致該節點之所有機率的乘積，因此一定小於 MARGINAL_PROBABILITY 值。  
+ 例如，如果決策樹中所有客戶的母體擴展依性別均分 (而且沒有遺漏任何值)，則子節點的機率應該是 5。 不過，假設每個節點的性別會平均分配依收入等級為高、 中和低。 在此情況下，每一個子節點的 MARGINAL_PROBABILITY 分數應該是 .33，但是 NODE_PROBABILTY 值將會是導致該節點之所有機率的乘積，因此一定小於 MARGINAL_PROBABILITY 值。  
   
 |節點/屬性的等級和值|臨界機率|節點機率|  
 |----------------------------------------|--------------------------|----------------------|  
@@ -256,9 +256,9 @@ ms.locfileid: "50146223"
   
  下表提供每一種演算法之主題的連結。  
   
--   **模型內容主題** ：針對每一個演算法類型說明每一個節點類型的意義，並提供哪些節點在特定模型類型中最有用的相關指引。  
+-   **模型內容主題：** 說明針對每一個演算法類型，每個節點類型的意義，並且提供哪些節點屬於在特定模型類型中最有用的指引。  
   
--   **查詢主題** ：提供針對特定模型類型查詢的範例以及有關如何解譯結果的指引。  
+-   **查詢主題：** 提供有關如何解譯結果的查詢，針對特定模型類型和指引的範例。  
   
 |演算法或模型類型|model content|查詢採礦模型|  
 |-----------------------------|-------------------|----------------------------|  

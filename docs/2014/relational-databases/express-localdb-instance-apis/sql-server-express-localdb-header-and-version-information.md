@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_location:
 - sqluserinstance.dll
@@ -14,12 +12,12 @@ ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1e00084b0a50dbb9ca542f22aba3e9001070ca01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e390430115daf394c5e94267dad30a87851375d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122268"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795350"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB 標頭和版本資訊
   SQL Server Express LocalDB 執行個體 API 沒有個別的標頭檔；LocalDB 函數簽章和錯誤碼會定義在 SQL Server Native Client 標頭檔 (sqlncli.h) 中。 若要使用 LocalDB 執行個體 API，您必須在專案中包含 sqlncli.h 標頭檔。  
@@ -84,15 +82,15 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
 // The #define has to take place BEFORE the API header file (sqlncli.h) is included  
 #define LOCALDB_DEFINE_PROXY_FUNCTIONS  
 #include <sqlncli.h>  
-…  
+...  
 HRESULT hr = S_OK;  
   
 // Create LocalDB instance by calling the create API proxy function included by macro  
 if (FAILED(hr = LocalDBCreateInstance( L"12.0", L"name", 0)))  
 {  
-…  
+...  
 }  
-…  
+...  
   
 ```  
   

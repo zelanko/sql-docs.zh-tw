@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - proxies [SQL Server Agent], creating
@@ -12,12 +12,12 @@ ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef4a623dca8ecdc92753b80438682f12521bfe8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfaba668e4f2328610656db6a61f01960814bff0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108808"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784420"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>建立 SQL Server Agent Proxy
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立 SQL Server Agent Proxy。  
@@ -56,7 +56,7 @@ ms.locfileid: "48108808"
   
 ####  <a name="Permissions"></a> 權限  
   
--   只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員才擁有建立、修改或刪除 Proxy 帳戶的權限。 非 **系統管理員 (sysadmin)** 固定伺服器角色成員的使用者，必須加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫中的下列其中一個** Agent 固定資料庫角色，才可使用 Proxy： **SQLAgentUserRole**、 **SQLAgentReaderRole**或 **SQLAgentOperatorRole**。  
+-   只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員才擁有建立、修改或刪除 Proxy 帳戶的權限。 使用者不是成員的**sysadmin**固定的伺服器角色必須新增到下列其中一種[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 固定資料庫角色**msdb**資料庫才可使用 proxy:**SQLAgentUserRole**， **SQLAgentReaderRole**，或**SQLAgentOperatorRole**。  
   
 -   如果除了 Proxy 之外還要建立認證，需要 `ALTER ANY CREDENTIAL` 權限。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48108808"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- creates credential CatalogApplicationCredential  

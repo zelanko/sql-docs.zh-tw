@@ -1,5 +1,5 @@
 ---
-title: NameToSet (MDX) |Microsoft 文件
+title: NameToSet (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5bb38614d9c83b0624d76f9f09c377c9fcbf82fb
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: d42a94ce4e878a3f4ac0ef14a48872bf5d32a144
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742357"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542464"
 ---
 # <a name="nametoset-mdx"></a>NameToSet (MDX)
 
 
-  傳回包含多維度運算式 (MDX) 指定成員的集合 –格式化字串。  
+  傳回一個集合，包含多維度運算式 (MDX） 格式化的字串所指定的成員。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,7 +33,7 @@ NameToSet(Member_Name)
  代表成員名稱的有效字串運算式。  
   
 ## <a name="remarks"></a>備註  
- 如果指定的成員名稱存在， **NameToSet**函式會傳回包含該成員的集合。 否則，函數會傳回空的集合。  
+ 如果指定的成員名稱的話**NameToSet**函式會傳回包含該成員的集合。 否則，函數會傳回空的集合。  
   
 > [!NOTE]  
 >  指定的成員名稱只能是成員名稱，不能是成員運算式。 若要使用成員運算式，請參閱[StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)。  
@@ -47,6 +47,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

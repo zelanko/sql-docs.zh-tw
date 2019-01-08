@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.security.SSA.f1
@@ -15,12 +14,12 @@ ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 476ca2bc3c82e7551472cf61fe0cb5138b91b545
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a3125ef66a88b8d7c47324e67b1a263581a925d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130048"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788720"
 ---
 # <a name="snapshot-agent-security"></a>快照集代理程式安全性
   **[快照集代理程式安全性]** 對話方塊可讓您指定：  

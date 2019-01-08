@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - auditing [SQL Server]
@@ -17,12 +16,12 @@ ms.assetid: 846589ee-5fe5-4ab3-b335-0c253e569f99
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab0b6276a94f57ec08046a12415e025f45b04ae8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e500eb47af39502e1bcf59f60b3dd24fed0713fa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088148"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787240"
 ---
 # <a name="database-mail-log-and-audits"></a>Database Mail 記錄與稽核
   Database Mail 記錄功能的設計目的是要提供方法來隔離並更正問題。 Database Mail 會將記錄資訊儲存至 **msdb** 資料庫。 Database Mail 電子郵件內容、電子郵件狀態和任何收到之訊息 (例如錯誤) 的相關資訊，是透過 Database Mail 進行記錄，而且可用於進行疑難排解和稽核。  
@@ -42,6 +41,6 @@ ms.locfileid: "48088148"
 |封存資料庫電子郵件訊息和記錄檔|[建立 SQL Server Agent 作業以封存 Database Mail 訊息及事件記錄檔](create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [監視資源使用狀況 &#40;系統監視器&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [監視資源使用狀況 &#40;System Monitor&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

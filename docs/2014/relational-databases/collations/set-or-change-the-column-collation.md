@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tempdb database [SQL Server], collations
@@ -14,15 +13,15 @@ ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e864a2e4320bbdac3af4f5db2fd0cccfe32fd712
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154988"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795070"
 ---
 # <a name="set-or-change-the-column-collation"></a>設定或變更資料行定序
-  您可以覆寫的資料庫定序`char`， `varchar`， `text`， `nchar`， `nvarchar`，和`ntext`藉由指定資料表中特定資料行不同的定序，並使用下列其中一種資料：  
+  您可以透過為資料表中特定資料行指定不同的定序並使用下列其中一種方法，覆寫 `char`、`varchar`、`text`、`nchar`、`nvarchar` 和 `ntext` 資料的資料庫定序：  
   
 -   [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 和 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)的 COLLATE 子句。 例如：  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48154988"
  當您使用 **tempdb**時， [COLLATE](/sql/t-sql/statements/collations) 子句會包含 *database_default* 選項，將暫存資料表中的資料行指定為使用連線的目前使用者資料庫預設定序，而非 **tempdb**的定序。  
   
 ## <a name="collations-and-text-columns"></a>定序與 text 資料行  
- 您可以插入或更新中的值`text`定序與資料庫的預設定序的字碼頁不同的資料行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以隱含方式將該值轉換為資料行定序。  
+ 您可以插入或更新 `text` 資料行的值，該資料行定序與資料庫預設定序的字碼頁不同。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以隱含方式將該值轉換為資料行定序。  
   
 ## <a name="collations-and-tempdb"></a>定序與 tempdb  
  **tempdb** 資料庫在每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時建置，且預設定序與 **model** 資料庫相同。 通常與執行個體的預設定序相同。 如果建立使用者資料庫，並指定與 **model**不同的預設定序，使用者資料庫的預設定序就會與 **tempdb**不同。 所有暫存預存程序或暫存資料表會在 **tempdb**中建立及儲存。 這表示暫存資料表中所有隱含的資料行，與暫存預存程序中所有可強迫的常數、變數與參數，都會與建在永久資料表和預存程序中的同等物件具有不同的定序。  
@@ -88,7 +87,7 @@ GO
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
- 因為 **tempdb** 使用預設伺服器定序，而 `TestPermTab.Col1` 使用不同的定序，所以 SQL Server 會傳回此錯誤訊息：「無法解析等於作業中，'Latin1_General_CI_AS_KS_WS' 與 'Estonian_CS_AS' 之間的定序衝突」。  
+ 因為**tempdb**會使用預設伺服器定序和`TestPermTab.Col1`使用不同的定序，SQL Server 傳回此錯誤訊息：「 無法解析定序衝突，'Latin1_General_CI_AS_KS_WS' 與 'Estonian_CS_AS' 中等作業。 」  
   
  為避免此錯誤，您可以使用以下任一種替代方法：  
   

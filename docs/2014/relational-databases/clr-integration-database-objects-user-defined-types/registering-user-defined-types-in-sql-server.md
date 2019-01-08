@@ -33,12 +33,12 @@ ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 158f71abbe82a3b15b497ea8cbd6e74aec2ed6ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19ea6e9f077b5097b8c5daa6d967a17336553ba7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216188"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508451"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>在 SQL Server 中註冊使用者定義型別
   若要使用的使用者定義的型別 (UDT) 中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您必須註冊它。 註冊 UDT 包括註冊組件，以及在要使用該型別的資料庫中建立它。 UDT 的使用範圍為單一資料庫，而且除非已經向每個資料庫註冊相同的組件及 UDT，否則無法在多個資料庫中使用。 一旦註冊 UDT 組件並建立此型別之後，您便可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 及用戶端程式碼中使用該 UDT。 如需詳細資訊，請參閱 [CLR 使用者定義型別](clr-user-defined-types.md)。  
@@ -83,7 +83,7 @@ WITH PERMISSION_SET = SAFE;
 ```  
 USE AdventureWorks;  
 CREATE ASSEMBLY Point  
-FROM 0xfeac4 … 21ac78  
+FROM 0xfeac4 ... 21ac78  
 ```  
   
 ### <a name="using-create-type"></a>使用 CREATE TYPE  

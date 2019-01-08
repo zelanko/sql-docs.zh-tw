@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - loading data
@@ -15,12 +14,12 @@ ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2b1c32cfebdfb1ca3237764d88eedfd70803652d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 865ff640cb64fe212afa5ece8bbdaa7f0be4a14c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072734"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749503"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>使用 OLE DB 目的地來載入資料
   若要加入及設定 OLE DB 目的地，封裝必須已包括至少一個「資料流程」工作與來源。  
@@ -41,11 +40,11 @@ ms.locfileid: "48072734"
   
 7.  選取資料存取方法：  
   
-    -   **資料表或檢視**：在資料庫中選取包含資料的資料表或檢視。  
+    -   **資料表或檢視** ：在資料庫中選取包含資料的資料表或檢視。  
   
-    -   **資料表或檢視 - 快速載入**：在資料庫中選取包含資料的資料表或檢視，然後設定快速載入選項：[保留識別]、[保留 Null]、[資料表鎖定]、[檢查條件約束]、[每批次的資料列] 或 [插入認可大小上限]。  
+    -   **資料表或檢視-快速載入**選取包含資料的資料庫中的資料表或檢視表，然後將 快速載入選項：**保留識別**，**保持 null**， **Table lock**，**檢查條件約束**，**每個批次的資料列**，或**最大值插入認可大小**。  
   
-    -   **資料表名稱或檢視名稱變數**：選取使用者自訂變數，該變數包含資料庫中資料表或檢視的名稱。  
+    -   **資料表名稱或檢視名稱變數** ：選取使用者自訂變數，該變數包含資料庫中資料表或檢視的名稱。  
   
     -   **資料表名稱或檢視名稱變數 - 快速載入**：選取使用者自訂變數，該變數含有資料庫中包含該資料之資料表或檢視的名稱，然後設定快速載入選項。  
   

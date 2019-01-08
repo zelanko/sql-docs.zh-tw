@@ -14,15 +14,15 @@ ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 526eb1e020a7e2a2e1228b55062013088355bcb2
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 147fe717919035c365ef2e3507e46a4323694570
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018343"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542156"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>將功能加入至 SQL Server 2014 的執行個體 (安裝程式)
-  本主題提供將功能加入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體的逐步程序。 某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件或服務是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所特有， 也可感知執行個體。 這些元件或服務也會與裝載它們的執行個體共用相同的版本，並專門用於該執行個體。 如果還未安裝感知執行個體元件及其共用元件，可以將其加入執行個體 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+  本主題提供將功能加入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體的逐步程序。 某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件或服務是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所特有， 也可感知執行個體。 這些元件或服務也會與裝載它們的執行個體共用相同的版本，並專門用於該執行個體。 如果還未安裝感知執行個體元件及其共用元件，可以將其加入執行個體 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  若要將功能加入至執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從命令提示字元中，請參閱[從命令提示字元安裝 SQL Server 2014](install-sql-server-from-the-command-prompt.md)。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "51018343"
   
 10. 本主題其餘部分的工作流程會因您針對安裝所指定的功能而不同。 您可能不會看到所有頁面，端視您的選取項目而定。  
   
-11. 在 [伺服器組態 - 服務帳戶] 頁面中，指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的登入帳戶。 在這個頁面上所設定的實際服務隨著您選取要安裝的功能而不同。  
+11. 在 [伺服器設定 - 服務帳戶] 頁面中，指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的登入帳戶。 在這個頁面上所設定的實際服務隨著您選取要安裝的功能而不同。  
   
      您可以將相同登入帳戶指派給所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務，或個別設定每一個服務帳戶。 此外，您也可以指定要自動啟動服務、手動啟動服務或停用服務。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您個別設定服務帳戶，以針對各項服務提供最低權限，其中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務會授與必須完成工作的最小權限。 如需詳細資訊，請參閱 [伺服器組態 - 服務帳戶](../../sql-server/install/server-configuration-service-accounts.md) 和 [設定 Windows 服務帳戶與權限](../configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "51018343"
   
 12. 使用 [伺服器組態 - 定序] 索引標籤，為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指定非預設的定序。 如需詳細資訊，請參閱[伺服器組態 - 定序](../../sql-server/install/server-configuration-collation.md)。  
   
-13. 使用 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態 - 帳戶提供] 頁面來指定以下項目：  
+13. 使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [組態 - 帳戶提供] 頁面來指定以下項目：  
   
     -   安全性模式 - 為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體選取 Windows 驗證或混合模式驗證。 如果您選取混合模式驗證，就必須為內建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶提供增強式密碼。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "51018343"
   
      當您完成清單的編輯之後，請按一下 **[確定]**。 然後，在組態對話方塊中確認管理員的清單。 當此清單完成時，請按 **[下一步]**。  
   
-14. 使用 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態 - 資料目錄] 頁面來指定非預設的安裝目錄。 若要安裝到預設目錄，請按 **[下一步]**。  
+14. 使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [組態 - 資料目錄] 頁面來指定非預設的安裝目錄。 若要安裝到預設目錄，請按 **[下一步]**。  
   
     > [!IMPORTANT]  
     >  如果您要指定非預設的安裝目錄，請確定安裝資料夾對於此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的目錄共用。  
@@ -94,11 +94,11 @@ ms.locfileid: "51018343"
   
 15. 使用 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態 - FILESTREAM] 頁面來針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體啟用 FILESTREAM。 如需 FILESTREAM 的詳細資訊，請參閱 [Database Engine 組態 - Filestream](../../sql-server/install/database-engine-configuration-filestream.md)。 若要繼續進行，請按 [下一步]。  
   
-16. 您可以使用 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態 - 帳戶提供] 頁面指定伺服器模式以及要擁有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之管理員權限的使用者或帳戶。 伺服器模式會決定在伺服器上所要使用的記憶體及儲存體子系統。 不同方案類型會在不同的伺服器模式中執行。 如果要在伺服器上執行多維度 Cube 資料庫，請選擇預設選項 [多維度及資料採礦伺服器模式]。 無論系統管理員權限為何，至少須為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定一名系統管理員。 如果要加入執行 SQL Server 安裝程式的帳戶，請按一下 [加入目前使用者] 。 若要在系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中將會有管理員權限的使用者、群組或電腦清單。 如需伺服器模式及系統管理員權限的詳細資訊，請參閱 [Analysis Services 組態 - 帳戶提供](../../sql-server/install/analysis-services-configuration-account-provisioning.md)。  
+16. 您可以使用 [[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態 - 帳戶提供] 頁面指定伺服器模式以及要擁有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 之管理員權限的使用者或帳戶。 伺服器模式會決定在伺服器上所要使用的記憶體及儲存體子系統。 不同方案類型會在不同的伺服器模式中執行。 如果要在伺服器上執行多維度 Cube 資料庫，請選擇預設選項 [多維度及資料採礦伺服器模式]。 無論系統管理員權限為何，至少須為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定一名系統管理員。 如果要加入執行 SQL Server 安裝程式的帳戶，請按一下 [加入目前使用者] 。 若要在系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中將會有管理員權限的使用者、群組或電腦清單。 如需伺服器模式及系統管理員權限的詳細資訊，請參閱 [Analysis Services 組態 - 帳戶提供](../../sql-server/install/analysis-services-configuration-account-provisioning.md)。  
   
      當您完成清單的編輯之後，請按一下 **[確定]**。 然後，在組態對話方塊中確認管理員的清單。 當此清單完成時，請按 **[下一步]**。  
   
-17. 使用 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態 - 資料目錄] 頁面來指定非預設的安裝目錄。 若要安裝到預設目錄，請按 **[下一步]**。  
+17. 使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [組態 - 資料目錄] 頁面來指定非預設的安裝目錄。 若要安裝到預設目錄，請按 **[下一步]**。  
   
     > [!IMPORTANT]  
     >  如果您要指定非預設的安裝目錄，請確定安裝資料夾對於此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的目錄共用。  

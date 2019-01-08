@@ -12,12 +12,12 @@ ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 078ccc5951bc0bf607bcc14d3bddcd11a9a12264
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd19cb92f2d2f333954adeb97229feb718c4b592
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142638"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399551"
 ---
 # <a name="conversions-from-sql-to-c"></a>從 SQL 轉換成 C
   下表將列出當您從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/時間類型轉換成 C 類型時應該考量的問題。  
@@ -62,7 +62,7 @@ ms.locfileid: "48142638"
 |21|如果緩衝區夠大，足以容納 SQL_SS_TIMESTAMPOFFSET_STRUCT，此值就會傳回成 SQL_SS_TIMESTAMPOFFSET_STRUCT。 否則，系統會產生含有 SQLSTATE 22003 和訊息「數值超出範圍」的診斷記錄。|  
 |22|在擷取日期之前，此值會轉換成用戶端時區。 這樣做會在其他含有時間戳記時差類型的轉換中提供一致性。 如果進行這項轉換期間發生錯誤，就會產生含有 SQLSTATE 22008 和訊息「日期時間欄位溢位」的診斷記錄。 這可能會產生與簡單截斷所取得之值不同的日期。|  
   
- 本主題中的表格描述傳回用戶端之類型與繫結中之類型之間的轉換。 當做輸出參數，如果在指定的伺服器類型 SQLBindParameter 不符合伺服器上的實際類型、 伺服器將會執行隱含的轉換和類型傳回給用戶端會比對透過 SQLBindParameter 中指定的型別。 當伺服器的轉換規則與上述表格中所列的規則不同時，這可能會導致非預期的轉換結果。 例如，必須提供預設日期時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 1900-1-1 而非目前的日期。  
+ 本主題中的表格描述傳回用戶端之類型與繫結中之類型之間的轉換。 當做輸出參數，如果在指定的伺服器類型 SQLBindParameter 不符合伺服器上的實際類型、 伺服器將會執行隱含的轉換和類型傳回給用戶端會比對透過 SQLBindParameter 中指定的型別。 這可能會導致非預期的轉換結果與上表所列的不同伺服器的轉換規則時。 例如，必須提供預設日期時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 1900-1-1 而非目前的日期。  
   
 ## <a name="see-also"></a>另請參閱  
  [日期和時間改善&#40;ODBC&#41;](date-and-time-improvements-odbc.md)  

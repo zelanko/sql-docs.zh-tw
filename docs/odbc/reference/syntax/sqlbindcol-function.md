@@ -20,16 +20,16 @@ ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5092ae588c69c28fcfa243101b57f97da75e8681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab434e90f1b92911bfdfb9f66da67244e26ef776
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755316"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515949"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ISO 92  
+ 導入的版本：ODBC 1.0 標準的合規性：ISO 92  
   
  **摘要**  
  **SQLBindCol**繫結至結果集資料行的應用程式資料緩衝區。  
@@ -52,10 +52,10 @@ SQLRETURN SQLBindCol(
  [輸入]陳述式控制代碼。  
   
  *ColumnNumber*  
- [輸入]結果數目設定繫結的資料行。 資料行的編號 0 開始，資料行 0 的書籤資料行的遞增資料行順序。 如果未使用書籤 — 也就是 SQL_ATTR_USE_BOOKMARKS 陳述式屬性設定為 SQL_UB_OFF — 然後欄號從 1 開始。  
+ [輸入]結果數目設定繫結的資料行。 資料行的編號 0 開始，資料行 0 的書籤資料行的遞增資料行順序。 如果書籤不會使用-SQL_ATTR_USE_BOOKMARKS 陳述式屬性設定為 SQL_UB_OFF-也就是資料行數字開始 1。  
   
  *TargetType*  
- [輸入]C 資料類型的識別項\* *TargetValuePtr*緩衝區。 當它與資料來源擷取資料**SQLFetch**， **SQLFetchScroll**， **SQLBulkOperations**，或**SQLSetPos**，驅動程式會將資料轉換成此型別;當傳送資料到資料來源**SQLBulkOperations**或是**SQLSetPos**，驅動程式會將資料轉換從這個型別。 如需有效的 C 資料類型和類型識別碼的清單，請參閱 < [C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)附錄 d： 資料型別中的區段。  
+ [輸入]C 資料類型的識別項\* *TargetValuePtr*緩衝區。 當它與資料來源擷取資料**SQLFetch**， **SQLFetchScroll**， **SQLBulkOperations**，或**SQLSetPos**，驅動程式會將資料轉換成此型別;當傳送資料到資料來源**SQLBulkOperations**或是**SQLSetPos**，驅動程式會將資料轉換從這個型別。 如需有效的 C 資料類型和類型識別碼的清單，請參閱 < [C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)節附錄 d:資料類型。  
   
  如果*TargetType*引數是 SQL_DESC_DATETIME_INTERVAL_PRECISION 和 SQL_DESC_PRECISION 的欄位中所設定的間隔資料類型，則預設間隔開頭有效位數 (2) 和預設的間隔秒數有效位數 (6)，ARD，分別用於資料。 如果*TargetType*引數是 SQL_C_NUMERIC，（驅動程式定義） 的預設有效位數和預設 ARD SQL_DESC_PRECISION 和 SQL_DESC_SCALE 欄位中所設定的小數位數 (0)，、 所用的資料。 應用程式如果任何預設有效位數或小數位數不適用，應該明確設定適當的描述項欄位呼叫**SQLSetDescField**或是**SQLSetDescRec**。  
   
@@ -126,7 +126,7 @@ SQLRETURN SQLBindCol(
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足情況。|  
 |HY090|字串或緩衝區長度無效|(DM) 引數指定的值*Columnsize*為小於 0。<br /><br /> (DM) 驅動程式的 ODBC 2。*x*驅動程式*ColumnNumber*引數設定為 0，並指定引數的值*Columnsize*不是等於 4。|  
 |HY117|連接已因為未知的交易狀態暫止。 只中斷連線，並允許唯讀的函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函式](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYC00|未實作選擇性功能|驅動程式或資料來源不支援指定的組合來轉換*TargetType*引數和驅動程式特有的 SQL 資料類型，對應資料行。<br /><br /> 引數*ColumnNumber*為 0，且驅動程式不支援書籤。<br /><br /> 此驅動程式支援只有 ODBC 2。*x*和引數*TargetType*是下列其中之一：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 任何間隔 C 資料類型會列在[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)附錄 d： 資料型別中。<br /><br /> 此驅動程式只支援之前 3.50 元，並將引數的 ODBC 版本*TargetType*已 SQL_C_GUID。|  
+|HYC00|未實作選擇性功能|驅動程式或資料來源不支援指定的組合來轉換*TargetType*引數和驅動程式特有的 SQL 資料類型，對應資料行。<br /><br /> 引數*ColumnNumber*為 0，且驅動程式不支援書籤。<br /><br /> 此驅動程式支援只有 ODBC 2。*x*和引數*TargetType*是下列其中之一：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 任何間隔 C 資料類型會列在[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)附錄 d:資料類型。<br /><br /> 此驅動程式只支援之前 3.50 元，並將引數的 ODBC 版本*TargetType*已 SQL_C_GUID。|  
 |HYT01|連接逾時過期|連接逾時期限到期之前的資料來源回應要求。 透過設定連接逾時期限**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
 |IM001|驅動程式不支援此函式|(DM) 驅動程式相關聯*StatementHandle*不支援此函式。|  
   
@@ -144,7 +144,7 @@ SQLRETURN SQLBindCol(
 ## <a name="binding-columns"></a>繫結資料行  
  要繫結資料行，應用程式會呼叫**SQLBindCol**並傳遞資料行數目、 類型、 位址，以及資料緩衝區的長度和長度/指標緩衝區的位址。 如需如何使用這些位址的資訊，請參閱本節稍後的 「 緩衝區位址 」。 如需有關繫結資料行的詳細資訊，請參閱[使用 SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)。  
   
- 使用這些緩衝區會延後;也就是應用程式繫結中加以**SQLBindCol**但驅動程式會從其他函式存取它們，也就是**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**。 應用程式必須負責確定中指定的指標**SQLBindCol**保持有效，只要繫結會持續有效。 如果應用程式可讓這些指標變成無效 — 比方說，它會釋出緩衝區，並期望他們在有效的函式的呼叫，結果便未定義。 如需詳細資訊，請參閱 <<c0> [ 延後的緩衝區](../../../odbc/reference/develop-app/deferred-buffers.md)。  
+ 使用這些緩衝區會延後;也就是應用程式繫結中加以**SQLBindCol**驅動程式存取它們的其他函式-也就是，但**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**。 應用程式必須負責確定中指定的指標**SQLBindCol**保持有效，只要繫結會持續有效。 如果應用程式可讓這些指標變成無效-例如，釋放緩衝區-，而接著會呼叫必須是有效的函式，結果會是未定義。 如需詳細資訊，請參閱 <<c0> [ 延後的緩衝區](../../../odbc/reference/develop-app/deferred-buffers.md)。  
   
  繫結會持續有效，直到它被新的繫結、 資料行解除繫結時，或釋放陳述式。  
   
@@ -232,7 +232,7 @@ SQLRETURN SQLBindCol(
 ## <a name="buffer-addresses"></a>緩衝區位址  
  *緩衝區位址*是實際的資料或長度/指標緩衝區的位址。 驅動程式會計算緩衝區位址之前它會寫入至緩衝區 （例如期間擷取時間）。 它會計算下列公式，它會使用指定的地址*TargetValuePtr*並*StrLen_or_IndPtr*引數、 繫結位移和資料列數目：  
   
- *繫結位址* + *繫結位移*+ ((*資料列編號*– 1) x*項目大小*)  
+ *繫結位址* + *繫結位移*+ ((*資料列編號*-1) x*項目大小*)  
   
  下表中所述，其中會定義公式的變數。  
   

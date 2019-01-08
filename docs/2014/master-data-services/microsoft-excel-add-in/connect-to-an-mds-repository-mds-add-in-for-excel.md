@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8f427312-4c09-4c8b-b9f9-8b235557a74b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 655980ec11c3e8865219b1429e412068348a36b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28afdb4a07177f9ba34b946c4c9c4e1e12e672c0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122578"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797930"
 ---
 # <a name="connect-to-an-mds-repository-mds-add-in-for-excel"></a>連接到 MDS 儲存機制 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，您必須先連接到 MDS 儲存機制，然後才能載入或發行資料。  
@@ -39,7 +38,7 @@ ms.locfileid: "48122578"
 5.  在 [MDS 伺服器位址] 方塊中，鍵入 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式的 URL，例如 http://contoso/mds。  
   
     > [!NOTE]  
-    >  請確認您使用電腦名稱，不要使用 “localhost”。  
+    >  請確認您使用的是電腦名稱，請不要使用 "localhost"。  
   
 6.  按一下 [確定] 。 此名稱就會顯示在 [現有連接] 區段中。  
   

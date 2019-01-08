@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - 0x8007052f (WMI error)
@@ -14,12 +12,12 @@ ms.assetid: a33f12bd-15c4-42a8-b343-de44c3e87729
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3634e8f3b32cb612ba3a28680b17f361171a38dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1668c2b4c96f23283f0eca87fdbac591f52b75f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204478"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770270"
 ---
 # <a name="wmi-error-0x8007052f"></a>WMI 錯誤 0x8007052f
     

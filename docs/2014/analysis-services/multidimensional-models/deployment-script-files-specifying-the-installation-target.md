@@ -18,12 +18,12 @@ ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9e8ecad7b3d9df0974d7f7548438f2464d75fd35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d98c06131029f804476fe1f3779352a34ccd81e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225056"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537481"
 ---
 # <a name="specifying-the-installation-target"></a>指定安裝目標
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈 」 會讀取安裝目標資訊，從\<*專案名稱*>.deploymenttargets 檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會在您建立 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案時建立此檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用的資料庫和伺服器上指定**部署**頁*\<專案名稱 >* **屬性頁**對話方塊來建立\<*專案名稱*>.targets 檔案。  
@@ -37,11 +37,11 @@ ms.locfileid: "48225056"
   
 -   以互動方式執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈。 在 [安裝目標] 頁面上，指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體和資料庫的新目的地。  
   
-     – 或 –  
+     -或-  
   
 -   在命令提示字元下執行 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈]，並將精靈設定為以回應檔案模式執行。 如需回應檔案模式的詳細資訊，請參閱 [執行 Analysis Services 部署精靈](running-the-analysis-services-deployment-wizard.md)。  
   
-     – 或 –  
+     -或-  
   
 -   修改\<*專案名稱*>.deploymenttargets 檔案使用任何文字編輯器。  
   

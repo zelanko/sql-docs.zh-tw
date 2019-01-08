@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], opening
@@ -17,12 +16,12 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cadd1de9ee94c89ab0b1604321423238a9a8c7e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20b6109b5622fb78366ab24886b991185c8dbc76
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111228"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777810"
 ---
 # <a name="ssms-utility"></a>Ssms 公用程式
   **Ssms** 公用程式會開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 如果有指定， **Ssms** 也會建立伺服器的連接，且會開啟查詢、指令碼、檔案、專案和方案。  
@@ -79,7 +78,7 @@ ms.locfileid: "48111228"
 ## <a name="remarks"></a>備註  
  所有參數都是選擇性的，除了用逗號來分隔的檔案之外，您必須用空格來分隔它們。 如果您沒有指定任何參數，**Ssms** 會依照 [工具] 功能表上，[選項] 設定中所指定的內容來開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 例如，如果 [環境/一般] 頁面的 [啟動時] 選項指定 [開啟新增查詢視窗]，**Ssms** 會以空白的查詢編輯器開啟。  
   
- **-log** 參數必須出現在命令列結尾，位於所有其他參數之後。 檔名引數是選擇性的。 如果指定了檔名，但該檔案不存在，便會建立檔案。 若因寫入權限不足等緣故而無法建立檔案，則會改將記錄寫入未當地語系化的 APPDATA 位置 (請參閱下文)。 如果未指定檔名引數，便會將兩個檔案寫入至目前使用者的未當地語系化應用程式儲存資料夾。 SQL Server 的未當地語系化應用程式儲存資料夾可以由 APPDATA 環境變數查知。 例如，SQL Server 2012 的資料夾是 \<系統磁碟機>:\Users\\<使用者名稱\>\AppData\Roaming\Microsoft\AppEnv\10.0\\。 兩個檔案依預設將名為 ActivityLog.xml 和 ActivityLog.xsl。 前者包含活動記錄資料，後者則是 XML 樣式表以讓您更方便檢視此 XML 檔案。 請使用下列步驟，在您的預設 XML 檢視器 (如 Internet Explorer) 中檢視記錄檔：按一下 [開始]，再按一下 [執行]，然後在提供的欄位內鍵入「\<系統磁碟機>:\Users\\<使用者名稱\>\AppData\Roaming\Microsoft\AppEnv\10.0\ActivityLog.xml」，然後按 Enter 鍵。  
+ **-log** 參數必須出現在命令列結尾，位於所有其他參數之後。 檔名引數是選擇性的。 如果指定了檔名，但該檔案不存在，便會建立檔案。 若因寫入權限不足等緣故而無法建立檔案，則會改將記錄寫入未當地語系化的 APPDATA 位置 (請參閱下文)。 如果未指定檔名引數，便會將兩個檔案寫入至目前使用者的未當地語系化應用程式儲存資料夾。 SQL Server 的未當地語系化應用程式儲存資料夾可以由 APPDATA 環境變數查知。 例如，SQL Server 2012 的資料夾是 \<系統磁碟機>:\Users\\<使用者名稱\>\AppData\Roaming\Microsoft\AppEnv\10.0\\。 兩個檔案依預設將名為 ActivityLog.xml 和 ActivityLog.xsl。 前者包含活動記錄資料，後者則是 XML 樣式表以讓您更方便檢視此 XML 檔案。 若要在您的預設 XML 檢視，例如 Internet Explorer 中檢視記錄檔中使用下列步驟：按一下 開始，然後按一下 執行"，然後輸入 「\<系統磁碟機 >: \Users\\< 使用者名稱\>\AppData\Roaming\Microsoft\AppEnv\10.0\ActivityLog.xml 」 到提供欄位，然後再按 Enter 鍵。  
   
  如果提供了連接資訊，且檔案類型與這個類型的伺服器相關聯，便會發出包含查詢的檔案連接到伺服器的提示。 例如，.sql 檔會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中開啟一個 [SQL 查詢編輯器] 視窗，.mdx 檔會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中開啟一個 [MDX 查詢編輯器] 視窗。 而**SQL Server 方案和專案** 會在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中開啟。  
   

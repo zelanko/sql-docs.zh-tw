@@ -10,12 +10,12 @@ ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8929a59cbffc8a9aad3ed3c6be4504fe7937be69
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d6bb42e4b35a74ef2bd6eefb85ea81b0ed18e40
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109308"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416969"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>建立及管理記憶體最佳化物件的儲存體
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎已整合到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，讓您在同一資料庫中可擁有記憶體最佳化資料表和 (傳統) 磁碟資料表。 不過，記憶體最佳化資料表的儲存體結構和磁碟資料表不同。  
@@ -26,7 +26,7 @@ ms.locfileid: "48109308"
   
 -   每個檔案會分成 8 頁的範圍，每頁大小為 8K 位元組。  
   
--   範圍可以跨多個資料表共用，但配置的頁面和資料表或索引之間有 1 對 1 的對應。 換句話說，一頁裡的資料列不能來自兩個或多個資料表或索引。  
+-   範圍可以跨多個資料表共用，但配置的頁面和資料表或索引之間有 1 對 1 的對應。 換句話說，一頁中的資料列不能來自兩個或多個資料表或索引。  
   
 -   資料會依需要移入記憶體 (緩衝集區)，已修改或新建的頁面則非同步寫入大部分產生隨機 IO 的磁碟。  
   

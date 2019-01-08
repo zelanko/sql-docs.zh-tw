@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d69ded06359dfc7f5f7c71864d3be6b64de6f7af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f79b52e62a8080c70865ae8ebe33d1a8a87faa04
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227320"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779310"
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL Server 屬性 (服務索引標籤)
   您可以使用 [MSSQLSERVER 屬性] 對話方塊的 [服務] 索引標籤來檢視或指定下列選項。  
@@ -50,9 +49,9 @@ ms.locfileid: "48227320"
   
 -   自動：這部電腦啟動時，這項服務會嘗試啟動。  
   
--   停用：這項服務無法啟動。  
+-   已停用：這項服務無法啟動。  
   
- **State**  
- 表示這項服務為執行中、已停止或已停用。 "" 表示狀態變更已暫止。  
+ **狀態**  
+ 表示這項服務為執行中、已停止或已停用。 "**...**" 表示狀態變更已暫止。  
   
   

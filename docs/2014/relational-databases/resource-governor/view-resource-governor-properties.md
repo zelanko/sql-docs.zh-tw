@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.rg.properties.f1
@@ -15,19 +14,19 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a3e2caa3c2b89ead6ee109ea13fa6783cc61dab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1093297892ea2e03cb9583a1e5c40a1c2a85b19
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116408"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781261"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 [資源管理員屬性] 頁面來建立或設定資源管理員實體，例如資源集區和工作負載群組。  
   
-1.  **Before you begin:**  [Permissions](#Permissions)  
+1.  **開始之前：**[Permissions](#Permissions)  
   
-2.  **若要檢視資源管理員屬性，請使用：**  [資源管理員屬性頁面](#ViewRGProp)  
+2.  **若要檢視資源管理員屬性，請使用：**[資源管理員屬性頁面](#ViewRGProp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  除了檢視資源管理員實體的屬性之外，還可以使用 **[資源管理員屬性]** 頁面執行多個組態工作。 如需詳細資訊，請參閱下列主題：  

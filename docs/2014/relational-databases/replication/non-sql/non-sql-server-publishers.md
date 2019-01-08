@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - heterogeneous database replication, non-SQL Server Publishers
@@ -16,12 +15,12 @@ ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dcf0a38f9dedcae80badaa0ca7ba2462b1b808c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19db106c43007259754bace7f0e9d2938ad9cf1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190758"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752570"
 ---
 # <a name="non-sql-server-publishers"></a>非 SQL Server 發行者
   從非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 來源發行資料，可讓您合併 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的資料。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可訂閱從 Oracle 資料庫發行的快照或交易資料。 如需從 Oracle 發行的詳細資訊，請參閱 [Oracle 發行概觀](oracle-publishing-overview.md)。  

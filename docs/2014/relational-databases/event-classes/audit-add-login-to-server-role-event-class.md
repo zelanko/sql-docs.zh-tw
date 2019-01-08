@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 7a8ed1c3-a98f-4f93-a6ba-e3901d941db9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7110f9b234644096a200b4962e80130a01424b1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f957283f2d667a9e75c30fae9d9b45401f06c499
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152428"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816560"
 ---
 # <a name="audit-add-login-to-server-role-event-class"></a>Audit Add Login to Server Role 事件類別
   新增登入至固定伺服器角色，或從固定伺服器角色移除登入時，會發生 **Audit Add Login to Server Role** 事件類別。 此事件類別會用於 **sp_addsrvrolemember** 和 **sp_dropsrvrolemember** 預存程序。  
@@ -44,7 +43,7 @@ ms.locfileid: "48152428"
 |**NTDomainName**|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |**NTUserName**|**nvarchar**|Windows 使用者名稱。|6|是|  
 |**ObjectName**|**nvarchar**|正在參考之物件的名稱。|34|是|  
-|**ObjectType**|**int**|代表參與事件之物件類型的值。 這個值會對應到 **sys.objects** 目錄檢視中的類型資料行。 如需各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
+|**ObjectType**|**int**|代表參與事件之物件類型的值。 這個值會對應到 **sys.objects** 目錄檢視中的類型資料行。 針對各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
 |**OwnerName**|**nvarchar**|物件擁有者的資料庫使用者名稱。|37|是|  
 |**RequestID**|**int**|包含陳述式之要求的識別碼。|49|是|  
 |**RoleName**|**nvarchar**|其成員資格遭修改的固定伺服器角色名稱。|38|是|  

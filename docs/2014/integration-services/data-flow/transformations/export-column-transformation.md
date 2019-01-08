@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exportcolumntrans.f1
@@ -20,12 +19,12 @@ ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc32abc07dd76137e735692a4ed1e1f392e9ae29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 790e7b0aeb6ec7ec73c6eed8f3dc8dd67e0b28ce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205119"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767500"
 ---
 # <a name="export-column-transformation"></a>匯出資料行轉換
   「匯出資料行」轉換會讀取資料流程中的資料，並將資料插入檔案中。 例如，如果資料流程包含產品資訊 (例如每一項產品的圖片)，則可使用「匯出資料行」轉換將影像儲存到檔案中。  
@@ -56,7 +55,7 @@ ms.locfileid: "48205119"
     > [!NOTE]  
     >  BOM 只有在資料未附加至現有檔案，且資料類型為 DT_NTEXT 時才寫入。  
   
- 轉換使用成對的輸入資料行：一個資料行包含一個檔案名稱，另一個資料行則包含資料。 資料集中的每一個資料列都可指定不同的檔案。 當轉換處理資料列時，會將資料插入指定的檔案中。 在執行階段，轉換會建立檔案 (如果檔案不存在)，然後將資料寫入這些檔案中。 要寫入的資料的資料類型必須為 DT_TEXT、DT_NTEXT 或 DT_IMAGE。 如需詳細資訊，請參閱 [Integration Services 資料類型](../integration-services-data-types.md)。  
+ 轉換使用成對的輸入資料行：一個資料行包含檔案名稱，和其他資料行包含資料。 資料集中的每一個資料列都可指定不同的檔案。 當轉換處理資料列時，會將資料插入指定的檔案中。 在執行階段，轉換會建立檔案 (如果檔案不存在)，然後將資料寫入這些檔案中。 要寫入的資料的資料類型必須為 DT_TEXT、DT_NTEXT 或 DT_IMAGE。 如需詳細資訊，請參閱 [Integration Services 資料類型](../integration-services-data-types.md)。  
   
  這個轉換有一個輸入、一個輸出與一個錯誤輸出。  
   
@@ -70,6 +69,6 @@ ms.locfileid: "48205119"
   
 -   [轉換自訂屬性](transformation-custom-properties.md)  
   
- 如需如何設定屬性的詳細資訊，請參閱[設定資料流程元件的屬性](../set-the-properties-of-a-data-flow-component.md)。  
+ 如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../set-the-properties-of-a-data-flow-component.md)。  
   
   

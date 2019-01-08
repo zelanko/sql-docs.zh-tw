@@ -20,12 +20,12 @@ ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b8b642797808b023e200f1f59ae162f09cea514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 061636210c76bace7ae483e277c624bb291cdeb8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780316"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510003"
 ---
 # <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47780316"
 |**server_specification_id**|**整數**|識別碼**server_specification**。|  
 |**create_date**|**Datetime**|建立稽核伺服器規格的日期。|  
 |**modified_date**|**Datetime**|上次修改稽核伺服器規格的日期。|  
-|**is_state_enabled**|**tinyint**|稽核規格狀態：<br /><br /> 0 – 已停用<br /><br /> 1 – 已啟用|  
+|**is_state_enabled**|**tinyint**|稽核規格狀態：<br /><br /> 0-已停用<br /><br /> 1-已啟用|  
 |**audit_GUID**|**uniqueidentifier**|包含這個規格之稽核的 GUID。 用在伺服器啟動期間列舉成員伺服器稽核規格時。|  
   
 ## <a name="permissions"></a>Permissions  

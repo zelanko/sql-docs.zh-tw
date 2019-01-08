@@ -11,12 +11,12 @@ ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ed50f8107b1ee12109eedc904ef07c6a5342df7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c34694012a69285ee92fa90c58f293654c961890
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133548"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524192"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>使用 Analysis Services 匯入精靈匯入資料採礦專案
   本主題描述如何在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中使用 [從伺服器匯入 (多維度和資料採礦)] 範本，從另一部伺服器上的現有資料採礦專案匯入中繼資料來建立新的資料採礦專案。  
@@ -24,7 +24,7 @@ ms.locfileid: "48133548"
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>從現有的資料採礦專案匯入資料來源、採礦結構和採礦模型  
  當您使用 [從伺服器匯入 (多維度和資料採礦)] 範本時，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會建立新的資料採礦專案，然後從指定的資料採礦專案複製中繼資料。 新的專案所包含的資料來源、資料來源檢視、採礦結構和採礦模型與您匯入的來源 ssASnoversion 資料庫相同。 但是，要等到您依照以下所述的內容更新某些屬性及處理物件之後，才能使用專案：  
   
--   資料本身並不會從來源伺服器複製到新的資料採礦專案，只會匯入資料來源和資料來源檢視的定義。 因此，當您完成匯入程序及建立物件之後，您必須定型採礦結構和相依模型來以資料擴展物件。 您可以使用資料採礦設計師中的 **[全部處理]** 命令來定型模型和結構。  
+-   資料本身不會複製從來源伺服器到新的資料採礦專案僅匯入資料來源和資料來源檢視的定義。 因此，當您完成匯入程序及建立物件之後，您必須定型採礦結構和相依模型來以資料擴展物件。 您可以使用資料採礦設計師中的 **[全部處理]** 命令來定型模型和結構。  
   
 -   如果您正在匯入之前在舊版 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中所建立的專案，則資料來源可能會使用匯入專案之目標伺服器上所未安裝的提供者。 如果您在處理匯入的採礦結構時遇到錯誤，請以滑鼠右鍵按一下每一個資料來源，然後選取 [開啟設計工具] 來編輯連接字串，並檢閱提供者屬性。  
   
@@ -60,6 +60,6 @@ ms.locfileid: "48133548"
      隨即使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]自動開啟新的專案。  
   
 ## <a name="see-also"></a>另請參閱  
- [專案屬性&#40;SSAS 表格式&#41;](../tabular-models/properties-ssas-tabular.md)  
+ [專案屬性 &#40;SSAS 表格式&#41;](../tabular-models/properties-ssas-tabular.md)  
   
   

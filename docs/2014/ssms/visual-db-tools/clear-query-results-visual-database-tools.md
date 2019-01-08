@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [SQL Server], queries
@@ -16,12 +16,12 @@ ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 424d923593de62afc96988730e88bf052504f210
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c53b87f01cd8bbcba4ff8377a98606737654877
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177238"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812534"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>清除查詢結果 (Visual Database Tools)
   在查詢和檢視表設計工具中執行查詢之後，您可以清除 [結果] 窗格。 此程序可套用至使用物件總管的 [開啟檢視] 或 [開啟資料表] 選項所建立的查詢。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，於 [查詢編輯器] 中執行查詢後，除非關閉 [查詢編輯器] 視窗或執行另一個查詢，否則無法清除 [結果] 窗格。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29e8c0afa66e5f6f667ef9435470146109f5676d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a96c531302c92e61e2a2e0b9feb875d0a1097c43
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140656"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805190"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>使用 CDC 來源擷取變更資料
   若要加入及設定 CDC 來源，封裝至少必須包含一個資料流程工作及一個 CDC 控制工作。  
@@ -45,15 +44,15 @@ ms.locfileid: "48140656"
   
 8.  選取可有效處理處理需求的處理模式。 可能的選項包括：  
   
-    -   **全部**：傳回目前 CDC 範圍中的變更，不含 [更新之前] 值。  
+    -   **所有**:傳回不含目前 CDC 範圍中的變更**Before Update**值。  
   
-    -   **全部 (含舊值)**：傳回目前 CDC 處理範圍中的變更，包括舊值 ([更新之前])。 每個更新作業都有兩個資料列：一個包含更新之前的值，另一個則包含更新之後的值。  
+    -   **所有含舊值**:傳回目前 CDC 處理範圍，包括舊值中的變更 (**Before Update**)。 每個更新作業都有兩個資料列：一個包含更新之前的值，另一個則包含更新之後的值。  
   
-    -   **淨**：只針對目前 CDC 處理範圍中修改的每個來源資料列傳回一項變更。 如果來源資料列更新了許多次，就會產生結合的變更 (例如，插入+更新會產生為單一更新，而更新+刪除則產生為單一刪除)。 在淨變更處理模式中工作時，您可以將變更分割成刪除、插入和更新輸出，並且以平行方式處理它們，因為單一來源資料列會出現在多個輸出中。  
+    -   **Net**:傳回只有一個變更資料列，每個目前 CDC 處理範圍中修改的來源資料列。 如果來源資料列更新了許多次，就會產生結合的變更 (例如，插入+更新會產生為單一更新，而更新+刪除則產生為單一刪除)。 在淨變更處理模式中工作時，您可以將變更分割成刪除、插入和更新輸出，並且以平行方式處理它們，因為單一來源資料列會出現在多個輸出中。  
   
-    -   **淨 (含更新遮罩)**：這種模式與一般的淨模式很相似，但還新增了名稱模式為 **__$\<資料行名稱>\__Changed** 的布林資料行，表示目前變更資料列中的變更資料行。  
+    -   **Net 含更新遮罩**:此模式類似於一般的淨模式，但它也加入了名稱模式的布林資料行 **__ $\<資料行名稱 >\__Changed** ，表示在目前的變更資料行變更資料列。  
   
-    -   **淨 (含合併)**：這種模式與一般的淨模式很相似，但是插入和更新作業會合併成單一合併作業 (UPSERT)。  
+    -   **Net 合併**:此模式非常類似於一般的淨模式但是 Insert 和 Update 作業會合併成單一合併作業 (UPSERT)。  
   
 9. 選取針對目前 CDC 內容維護 CDC 狀態的 SSIS 字串封裝變數。 如需 CDC 狀態變數的詳細資訊，請參閱[定義狀態變數](define-a-state-variable.md)。  
   
@@ -72,8 +71,8 @@ ms.locfileid: "48140656"
 15. 按一下 [確定] 。  
   
 ## <a name="see-also"></a>另請參閱  
- [CDC 來源編輯器&#40;連線管理員頁面&#41;](../cdc-source-editor-connection-manager-page.md)   
- [CDC 來源編輯器&#40;資料行頁面&#41;](../cdc-source-editor-columns-page.md)   
- [CDC 來源編輯器&#40;錯誤輸出頁面&#41;](../cdc-source-editor-error-output-page.md)  
+ [CDC 來源編輯器 &#40;連線管理員頁面&#41;](../cdc-source-editor-connection-manager-page.md)   
+ [CDC 來源編輯器 &#40;資料行頁面&#41;](../cdc-source-editor-columns-page.md)   
+ [CDC 來源編輯器 &#40;錯誤輸出頁面&#41;](../cdc-source-editor-error-output-page.md)  
   
   

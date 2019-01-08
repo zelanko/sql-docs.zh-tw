@@ -18,17 +18,17 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86ddad2fe62bcd84c55cd97d3765dc898db8e39f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3647937630b259d60670cc470bbd1014dd288404
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108248"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513345"
 ---
 # <a name="use-the-sqlcmd-utility"></a>使用 sqlcmd 公用程式
   `sqlcmd` 公用程式是命令列公用程式，可用來執行特定的互動式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式和指令碼，以及用於自動化 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼工作。 若要以互動方式使用 `sqlcmd`，或是要建立透過 `sqlcmd` 執行的指令碼檔案，使用者必須了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 一般而言，`sqlcmd` 公用程式的使用方式如下：  
   
--   使用者可以像是在命令提示字元中工作一般，以互動的方式輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 結果會顯示在命令提示字元視窗中。 若要開啟 [命令提示字元] 視窗，請按一下 **[開始]**、按一下 **[所有程式]**、指向 **[附屬應用程式]**，然後按一下 **[命令提示字元]**。 在命令提示字元中，輸入`sqlcmd`後面接著一份您想要的選項。 如需所支援的選項的完整清單`sqlcmd`，請參閱 < [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)。  
+-   使用者可以像是在命令提示字元中工作一般，以互動的方式輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 結果會顯示在命令提示字元視窗中。 若要開啟 [命令提示字元] 視窗，請按一下 **[開始]**、按一下 **[所有程式]**、指向 **[附屬應用程式]**，然後按一下 **[命令提示字元]**。 在命令提示字元中，輸入 `sqlcmd`，後面接著您要使用的一串選項。 如需所支援的選項的完整清單`sqlcmd`，請參閱 < [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)。  
   
 -   使用者可指定要執行的單一 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，或者將公用程式指向包含要執行之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的文字檔，來提交 `sqlcmd` 工作。 輸出通常會導向文字檔，不過，也可以在命令提示字元上顯示。  
   
@@ -110,9 +110,9 @@ ms.locfileid: "48108248"
   
  如果在沒有輸入檔或查詢的情況下執行命令，`sqlcmd` 會連接到指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後顯示新的一行，其中在 `1>` 後面跟著的閃爍底線，即稱為 `sqlcmd` 提示字元。 `1` 表示此處是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的第一行，而 `sqlcmd` 提示字元則是您開始輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的位置。  
   
- 在 `sqlcmd` 提示字元中，您可以輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式及 `sqlcmd` 命令 (例如 `GO` 及 `EXIT`)。 每個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會放在稱為陳述式快取的緩衝區中。 這些陳述式傳送到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]輸入後`GO`命令並按 ENTER。 若要結束`sqlcmd`，輸入`EXIT`或`QUIT`在新的一行的開頭。  
+ 在 `sqlcmd` 提示字元中，您可以輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式及 `sqlcmd` 命令 (例如 `GO` 及 `EXIT`)。 每個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會放在稱為陳述式快取的緩衝區中。 這些陳述式會在您輸入 `GO` 命令並按 ENTER 後，傳送至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 若要結束`sqlcmd`，輸入`EXIT`或`QUIT`在新的一行的開頭。  
   
- 若要清除陳述式快取，請輸入`:RESET`。 鍵入`^C`會導致`sqlcmd`結束。 在發出 `^C` 命令後，也可以使用 `GO` 來停止執行陳述式快取。  
+ 若要清除陳述式快取，請輸入 `:RESET`。 鍵入`^C`會導致`sqlcmd`結束。 在發出 `^C` 命令後，也可以使用 `GO` 來停止執行陳述式快取。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 在互動式工作階段中的陳述式都可以編輯輸入 **: ED**命令和`sqlcmd`提示字元。 此時會開啟編輯器，而在編輯過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式並關閉編輯器之後，修訂的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式即顯示於命令視窗。 請輸入`GO`執行修訂[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "48108248"
   
  這表示資料夾 `C:\` 是目前的資料夾，如果您指定了檔案名稱，則 Windows 將會在該資料夾中尋找這個檔案。  
   
- 型別`sqlcmd`連接到預設執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]視窗會是本機電腦上，於命令提示字元的內容：  
+ 輸入 `sqlcmd`，連接到本機電腦的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設執行個體，[命令提示字元] 視窗的內容如下：  
   
  `C:\>sqlcmd`  
   
@@ -485,7 +485,7 @@ ms.locfileid: "48108248"
   
 -   -N 參數是由用戶端用來要求加密的連接。 這個選項相當於 ADO.net 選項 `ENCRYPT = true`。  
   
--   –C 參數是由用戶端所設定，以隱含方式信任伺服器憑證而且不進行驗證。 這個選項相當於 ADO.net 選項 `TRUSTSERVERCERTIFICATE = true`。  
+-   -C 參數是由用戶端所設定，以隱含方式信任伺服器憑證而且不進行驗證。 這個選項相當於 ADO.net 選項 `TRUSTSERVERCERTIFICATE = true`。  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服務不支援 SQL Server 執行個體上的所有可用 `SET` 選項。 當對應的 `SET` 選項設定為 `ON` 或 `OFF`時，下列選項會擲回錯誤：  
   
@@ -511,21 +511,21 @@ ms.locfileid: "48108248"
  使用 Windows 認證來連接，並加密通訊：  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  使用 Windows 認證及信任伺服器憑證進行連接：  
   
 ```  
-SQLCMD –E –C  
+SQLCMD -E -C  
   
 ```  
   
  使用 Windows 認證進行連接、加密通訊並信任伺服器憑證：  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   
@@ -534,28 +534,28 @@ SQLCMD –E –N –C
  使用 Windows 認證進行連接、加密通訊並信任伺服器憑證：  
   
 ```  
-SQLCMD –E  
+SQLCMD -E  
   
 ```  
   
  使用 Windows 認證進行連接、加密通訊並信任伺服器憑證：  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  使用 Windows 認證進行連接、加密通訊並信任伺服器憑證：  
   
 ```  
-SQLCMD –E –T  
+SQLCMD -E -T  
   
 ```  
   
  使用 Windows 認證進行連接、加密通訊並信任伺服器憑證：  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   

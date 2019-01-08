@@ -12,12 +12,12 @@ ms.assetid: 7b15a5e6-fd41-47ce-ba87-54f72acea4bb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c03a181ee815af7b84a5019719c1ff7b532a0198
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a73f2469c38d611b95e3446e80755687f40346e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169252"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507037"
 ---
 # <a name="mssqlserver17128"></a>MSSQLSERVER_17128
     
@@ -30,7 +30,7 @@ ms.locfileid: "48169252"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|INIT_NOBUFSPACE|  
-|訊息文字|initdata: 未提供記憶體給核心緩衝區。|  
+|訊息文字|initdata:沒有記憶體給核心緩衝區。|  
   
 ## <a name="explanation"></a>說明  
  緩衝集區的初始記憶體配置或保留已經失敗，而且 SQL Server 結束。  

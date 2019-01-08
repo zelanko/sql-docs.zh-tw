@@ -14,12 +14,12 @@ ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 90bc2c9f6f268bf03904d768fd25b25b3ade3fbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9dd6b8e754ea4bc56884b456d673e5af31a013d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157988"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518262"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>適用 SQL Server 的雲端配接器
   雲端配接器服務會隨 Windows Azure VM 上佈建的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 一併建立。 雲端配接器服務會在其初次執行時產生自我簽署 SSL 憑證，然後以 **本機系統** 帳戶執行。 它會產生用來設定本身的組態檔。 雲端配接器還會建立 Windows 防火牆規則，允許其內送 TCP 連接使用預設通訊埠 11435。  
@@ -44,7 +44,7 @@ ms.locfileid: "48157988"
 ## <a name="cloud-adapter-configuration-settings"></a>雲端配接器組態設定  
  請使用下列雲端配接器組態詳細資料修改雲端配接器的設定。  
   
--   **組態檔的預設路徑**– C:\Program Files\Microsoft SQL server\120\tools\cloudadapter \  
+-   **組態檔的預設路徑**-C:\Program Files\Microsoft SQL server\120\tools\cloudadapter \  
   
 -   **設定檔參數** -  
   
@@ -62,9 +62,9 @@ ms.locfileid: "48157988"
   
     -   \</configuration >  
   
--   **憑證詳細資料** - 憑證包含下列值：  
+-   **憑證詳細資料**-憑證包含下列值：  
   
-    -   主旨 –"CN = Cloudadapter<vmname\<VMName >，DC = SQL Server，DC = Microsoft"  
+    -   主旨-"CN = Cloudadapter<vmname\<VMName >，DC = SQL Server，DC = Microsoft"  
   
     -   憑證應只啟用伺服器驗證 EKU。  
   
@@ -79,13 +79,13 @@ ms.locfileid: "48157988"
 |ExposeExceptionDetails|True/False|False||  
   
 ## <a name="cloud-adapter-troubleshooting"></a>雲端配接器疑難排解  
- 請利用下列資訊對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 適用的雲端配接器進行疑難排解：  
+ 請利用下列資訊對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]適用的雲端配接器進行疑難排解：  
   
--   **錯誤處理和記錄** - 錯誤和狀態訊息會寫入應用程式事件記錄。  
+-   **錯誤處理和記錄**-錯誤和狀態訊息會寫入至應用程式事件記錄檔。  
   
--   **追蹤、事件** - 所有事件都會寫入應用程式事件記錄中。  
+-   **追蹤、 事件**-所有事件都會都寫入應用程式記錄檔。  
   
--   **控制項、 組態**– 使用組態檔位於： C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\。  
+-   **控制項、 組態**-使用組態檔位於：C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\。  
   
 |錯誤|錯誤識別碼|原因|解決方案|  
 |-----------|--------------|-----------|----------------|  

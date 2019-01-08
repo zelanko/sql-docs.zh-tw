@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - expired password [SQL Server], SQL Server Agent
@@ -20,12 +19,12 @@ ms.assetid: 5b6dcc03-6cae-45d3-acef-6f85ca6d615f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 11ea271e7cdf79f2fcc649746d6dc0fce1dd86f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 865c23dc88571e0c9ee317eca280286a6c37118f
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056168"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641359"
 ---
 # <a name="change-the-password-of-the-accounts-used-by-sql-server-sql-server-configuration-manager"></a>變更 SQL Server 所使用之帳戶的密碼 (SQL Server 組態管理員)
   此主題描述如何使用 SQL Server 組態管理員，在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Agent 所使用之帳戶的密碼。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會使用安裝過程中最初提供的認證，在電腦上當做服務執行。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在網域帳戶下執行，而且該帳戶的密碼已變更時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所使用的密碼就必須更新為新的密碼。 如果沒有更新密碼， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會喪失某些網域資源的存取權，而且如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 停止，服務就要等到密碼更新後才會重新啟動。  
@@ -50,7 +49,7 @@ ms.locfileid: "48056168"
     >  因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理主控台程式的嵌入式管理單元，而不是獨立的程式，所以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員在較新版本的 Windows 中不會作為應用程式出現。  
     >   
     >  -   **Windows 10**：  
-    >          若要開啟  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager，請在**起始頁**，輸入 SQLServerManager12.msc (如[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 針對先前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以較小的數字取代 12。 按一下 SQLServerManager12.msc 開啟 Configuration Manager。 組態管理員釘選到起始頁或工作列，SQLServerManager12.msc，以滑鼠右鍵按一下，然後按一下**開啟檔案位置**。 在 Windows 檔案總管 中，SQLServerManager12.msc，以滑鼠右鍵按一下，然後按一下**釘選到開始**或是**釘選到工作列**。  
+    >          若要開啟  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager，請在**起始頁**，輸入 SQLServerManager12.msc (如[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 針對先前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以較小的數字取代 12。 按一下 SQLServerManager12.msc 開啟 Configuration Manager。 組態管理員釘選到起始頁或工作列，SQLServerManager12.msc，以滑鼠右鍵按一下，然後按一下**開啟檔案位置**。 在 Windows 檔案總管 中，SQLServerManager12.msc，以滑鼠右鍵按一下，然後按一下**釘選到開始**或是**釘選到工作列**。  
     > -   **Windows 8**：  
     >          若要開啟  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager，請在**搜尋**快速鍵**應用程式**，型別**SQLServerManager\<版本 >.msc**例如`SQLServerManager12.msc`，然後按下**Enter**。  
   

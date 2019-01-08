@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
@@ -14,15 +13,15 @@ ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 575acd7d4fb264ebb8cba218c1e37b45e9af5a33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80827416661c613393bbf3657bf2bb9d4cd25ec3
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062958"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639406"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>設定 default full-text language 伺服器組態選項
-  本主題描述如何設定`default full-text language`中的伺服器組態選項[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]利用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]。 `default full-text language`選項會指定全文檢索索引的預設語言值。 語言分析會針對已全文檢索索引的所有資料執行，而且相依於資料的語言。 這個選項的預設值是伺服器使用的語言。 如需當地語系化的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定集`default full-text language`選項設定為伺服器的語言有適當的相符項目。 如需非當地語系化的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則`default full-text language`選項會是英文。  
+  本主題描述如何設定`default full-text language`中的伺服器組態選項[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]利用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]。 `default full-text language`選項會指定全文檢索索引的預設語言值。 語言分析會針對已全文檢索索引的所有資料執行，而且相依於資料的語言。 這個選項的預設值是伺服器使用的語言。 如需當地語系化的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定集`default full-text language`選項設定為伺服器的語言有適當的相符項目。 若 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為非當地語系化的版本時，則 `default full-text language` 選項會是英文。  
   
  **本主題內容**  
   
@@ -40,7 +39,7 @@ ms.locfileid: "48062958"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續步驟**  [設定預設全文檢索語言選項之後](#FollowUp)  
+-   **後續操作：**[設定預設全文檢索語言選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -77,7 +76,7 @@ ms.locfileid: "48062958"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `default full-text` 選項的值設定為荷蘭文 (`1043`)。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `default full-text` 選項的值設定為荷蘭文 (`1043`)。  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -95,7 +94,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 待處理：設定 default full-text language 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定預設全文檢索語言選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -11,23 +11,23 @@ ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 28366043f6681ab01cd3d1912d5180ae06914ae8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19d1fdd45018e436dddab95cfe01173ec63f794d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157648"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511667"
 ---
 # <a name="error-page-report-manager"></a>錯誤頁面 (報表管理員)
-  使用 [錯誤] 頁面即可檢視錯誤狀況的詳細資料。 以伺服器為基礎或工作階段為基礎的錯誤，會顯示在此頁面上。 有關特定頁面控制項的驗證錯誤，則會內嵌顯示於該控制項旁。  
+  使用 [錯誤] 頁面即可檢視錯誤狀況的詳細資料。 伺服器或工作階段為基礎的錯誤會出現此頁面上。 有關特定頁面控制項的驗證錯誤，則會內嵌顯示於該控制項旁。  
   
--   如果您瀏覽至本機報表伺服器，而且您會看到類似下列的錯誤，請參閱：[設定為原生模式報表伺服器進行本機管理&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
+-   如果您正在瀏覽至本機報表伺服器，而您看到類似下列的錯誤，請參閱：[設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
   
      使用者 ' 網域\\[使用者名稱]' 並沒有必要權限。 請確認已授與足夠的權限，而且滿足 Windows 使用者帳戶控制 (UAC) 的限制。  
   
--   如果您看到類似下面的錯誤訊息，請參閱[設定報表伺服器進行遠端管理](report-server/configure-a-report-server-for-remote-administration.md)。  
+-   如果您看見類似下面的錯誤訊息，請參閱＜ [Configure a Report Server for Remote Administration](report-server/configure-a-report-server-for-remote-administration.md)＞。  
   
-     找不到電腦。 *RPC 伺服器無法使用。 (來自 HRESULT 的例外狀況: 0x800706BA)」。  
+     找不到電腦。 *RPC 伺服器無法使用。 (發生例外狀況於 HRESULT：0x800706BA) 」。  
   
 -   您可以在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器上設定伺服器屬性，以便傳回有關遠端伺服器上發生之錯誤狀況的其他資訊。 如果錯誤訊息包含文字，「 如需有關此錯誤的詳細資訊，請瀏覽至報表伺服器的本機伺服器電腦上，或啟用遠端錯誤 」，請參閱[啟用遠端錯誤&#40;Reporting Services&#41;](report-server/enable-remote-errors-reporting-services.md)。  
   

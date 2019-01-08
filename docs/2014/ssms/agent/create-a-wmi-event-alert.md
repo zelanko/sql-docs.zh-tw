@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - WMI event alerts [SQL Server Management Studio]
@@ -12,12 +12,12 @@ ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0916acc815ecff5c994b57850b8ce218ff4f2b18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5af4472d80e74c9d2845e6397f815ffb1c27f4d8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181958"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764190"
 ---
 # <a name="create-a-wmi-event-alert"></a>建立 WMI 事件警示
   此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立在伺服器事件的 WMI 提供者所監視的特定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 事件發生時，所引發的 [!INCLUDE[tsql](../../includes/tsql-md.md)]Agent 警示。  
@@ -83,7 +83,7 @@ ms.locfileid: "48181958"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- creates a WMI event alert that retrieves all event properties for any ALTER_TABLE event that occurs on table AdventureWorks2012.Sales.SalesOrderDetail  
@@ -94,7 +94,7 @@ ms.locfileid: "48181958"
     EXEC dbo.sp_add_alert  
         @name = N'Test Alert 2',  
         @message_id = 54001  
-        @notification_message = N'Error 54001 has occurred on the Sales.SalesOrderDetail table on the AdventureWorks2012 database. Please see the following information…',  
+        @notification_message = N'Error 54001 has occurred on the Sales.SalesOrderDetail table on the AdventureWorks2012 database. Please see the following information...',  
         @wmi_namespace = '\\.\root\Microsoft\SqlServer\ServerEvents\,  
         @wmi_query = N'SELECT * FROM ALTER_TABLE   
     WHERE DatabaseName = 'AdventureWorks2012' AND SchemaName = 'Sales'   

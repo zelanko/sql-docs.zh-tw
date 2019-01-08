@@ -12,12 +12,12 @@ ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 95a6724ab836fb3dddb54fadc82821ad68f29e98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3fd443ff2ad58aa503fac2960016cb55f35b8a7f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746356"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514944"
 ---
 # <a name="creating-test-cases-sybasetosql"></a>建立測試案例 (SybaseToSQL)
 使用測試案例精靈以建立測試。 此精靈可讓您建立測試案例，藉由選擇測試並確認物件和測試的參數。  

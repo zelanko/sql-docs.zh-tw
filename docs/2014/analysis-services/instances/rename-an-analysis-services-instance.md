@@ -16,12 +16,12 @@ ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d76840f084f40b77b6b6539d41d2c9f8a1e1ff5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88a87802574290dee1cf0faaea2474e9fce408ce
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077568"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401443"
 ---
 # <a name="rename-an-analysis-services-instance"></a>重新命名 Analysis Services 執行個體
   您可以重新命名現有的執行個體[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用**重新命名執行個體**對話方塊。  
@@ -58,7 +58,7 @@ ms.locfileid: "48077568"
   
      如果您使用虛擬帳戶佈建服務，將需要更新資料庫登入或檔案權限。 虛擬帳戶是以執行個體名稱為基礎，因此，如果您重新命名執行個體，同時也會更新虛擬帳戶。 也就是說，您針對先前的執行個體所建立的任何先前登入或權限都不再有效。  
   
-     下列範例提供說明。 假設您使用預設虛擬帳戶，以名稱為 “Tabular” 的執行個體安裝表格式模式伺服器，導致下列設定：  
+     下列範例提供說明。 假設您已安裝表格式模式伺服器執行個體名為"Tabular"使用預設虛擬帳戶，導致下列設定：  
   
     1.  執行個體名稱 =\<伺服器 > \TABULAR  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48077568"
   
     3.  虛擬帳戶 = NT Service\ MSOLAP$TABULAR  
   
-     現在，假設您將執行個體重新命名為 “TAB2”。 名稱變更之後，您的設定現在看起來如下：  
+     現在假設您重新命名為"TAB2"的執行個體。 名稱變更之後，您的設定現在看起來如下：  
   
     1.  執行個體名稱 =\<伺服器 > \TAB2  
   
@@ -74,6 +74,6 @@ ms.locfileid: "48077568"
   
     3.  虛擬帳戶 = NT Service\ MSOLAP$TAB2  
   
-     如您所見，先前授與 “NT Service\ MSOLAP$TABULAR” 的資料庫和檔案權限不再有效。 為確保服務所執行的工作和作業如以往般執行，您現在需要授與新資料庫和檔案權限給 “NT Service\ MSOLAP$TAB2”。  
+     如您所見，先前授與"NT Service\ MSOLAP$ TABULAR"的資料庫和檔案權限已不再有效。 若要確保工作和服務所執行的作業執行之前，現在會需要新的資料庫和檔案權限授與"NT Service\ MSOLAP$TAB2"。  
   
   

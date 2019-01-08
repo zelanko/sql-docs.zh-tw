@@ -13,12 +13,12 @@ ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aa283164549ba6c675632b65e40cfe636a0491eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6225e17feef079fba352b0656fb8fc9d28c86748
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177818"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518980"
 ---
 # <a name="define-database-dimensions"></a>定義資料庫維度
   使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的維度設計師來設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或資料庫中的現有資料庫維度。 您可以使用 [維度設計師] 執行下列動作：  
@@ -43,8 +43,8 @@ ms.locfileid: "48177818"
   
 |索引標籤|描述|  
 |---------|-----------------|  
-|**維度結構**|使用此索引標籤搭配維度的結構使用 - 檢查或建立維度的資料來源檢視結構描述、使用屬性，以及組織使用者自訂階層中的屬性。|  
-|**中，使用 [維度設計師] 的**|使用這個索引標籤，即可建立、修改或刪除維度的屬性關聯性。|  
+|**維度結構**|使用此索引標籤，以使用結構的維度來檢查或建立資料來源檢視結構描述的維度，可使用屬性，以及組織使用者定義階層中的屬性。|  
+|**屬性關聯性**|使用這個索引標籤，即可建立、修改或刪除維度的屬性關聯性。|  
 |**翻譯**|使用此索引標籤，以不同語言加入及編輯維度中繼資料的翻譯。|  
 |**瀏覽器**|使用此索引標籤，檢查已處理維度的成員，以及檢閱維度中繼資料的翻譯。|  
   

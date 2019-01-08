@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.validate.allsubscriptions.f1
@@ -15,12 +14,12 @@ ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fb48398e41816c19aedd45ee19db579d77e3d5a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0f9161e0b083afe8a57c396ba9d6e1db68755c1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111963"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799600"
 ---
 # <a name="validate-all-subscriptions"></a>驗證所有訂閱
   使用 **[驗證所有訂閱]** 對話方塊來指定下次執行每個訂閱的合併代理程式時，應驗證合併發行集的所有訂閱。 驗證的結果會在複寫監視器中顯示。 如需詳細資訊，請參閱 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)。  

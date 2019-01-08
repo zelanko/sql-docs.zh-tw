@@ -16,15 +16,15 @@ ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a6b77f61c8eadd8ef58d9eb475aaeb3faf88c57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ba05cb9079514750cf087149bae476efe0d8d41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661856"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510765"
 ---
 # <a name="relative-and-absolute-scrolling"></a>相對與絕對的捲動
-捲動選項中的大部分**SQLFetchScroll**游標的位置，相對於目前的位置或絕對位置。 **SQLFetchScroll**支援提取下一步 之前，第一個和最後一個資料列集，做為也為相對提取 (提取資料列集*n*從目前的資料列集開始的資料列) 和絕對提取 （提取的資料列集開始在資料列*n*)。 如果*n*是負的絕對提取中，會計算資料列從結果集的結尾。 因此，絕對提取的資料列 – 1 表示提取結果集內的最後一個資料列的開頭資料列集。  
+捲動選項中的大部分**SQLFetchScroll**游標的位置，相對於目前的位置或絕對位置。 **SQLFetchScroll**支援提取下一步 之前，第一個和最後一個資料列集，做為也為相對提取 (提取資料列集*n*從目前的資料列集開始的資料列) 和絕對提取 （提取的資料列集開始在資料列*n*)。 如果*n*是負的絕對提取中，會計算資料列從結果集的結尾。 因此，絕對提取的資料列-1 表示提取結果集內的最後一個資料列的開頭資料列集。  
   
  動態資料指標偵測資料列插入和刪除結果集中，所以沒有簡單的方法來擷取結果集，這可能會變慢的開頭位於以外讀取的特定數字的資料列的動態資料指標。 此外，絕對提取不是很有用的動態資料指標因為資料列數字變更為插入和刪除; 資料列因此，後續擷取相同的資料列數目可能會產生不同的資料列。  
   

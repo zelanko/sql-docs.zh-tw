@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 16808ae1ceccd64a109a78c33d861ab45076b98d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ad3963cd7b0b2b40e6b3a08cab68ad809378bff1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146413"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526787"
 ---
 # <a name="understanding-tabular-object-model-at-levels-1050-through-1103"></a>了解 1050 到 1103 層級的表格式物件模型
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "50146413"
   
  請參閱[階層表示法&#40;表格式&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-hierarchy-representation.md)如需如何建立及操作階層表示法的詳細說明。  
   
-### <a name="key-performance-indicator-kpi--representation"></a>關鍵效能指標 (KPI) 表示法  
+### <a name="key-performance-indicator--kpi--representation"></a>關鍵效能指標-KPI 表示法  
  KPI 是用來針對目標值，測量由基底量值定義之值的效能。 就 AMO 物件而言，KPI 表示法具有一對多的對應關聯性。 使用下列 AMO 物件來表示 KPI:`xref:Microsoft.AnalysisServices.MdxScript.Commands%2A`和`xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A`是主要的必備的物件。  請務必注意，這並不表示上述 AMO 物件中包含的所有物件都可以在進行模型化時使用。  
   
 > [!NOTE]  

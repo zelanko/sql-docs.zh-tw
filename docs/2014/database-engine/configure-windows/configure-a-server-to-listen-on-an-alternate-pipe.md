@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Named Pipes [SQL Server], configuring
@@ -16,12 +15,12 @@ ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 00c80ace18295a253019e3ddd71b97b35dbdfd4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68b082d125650d150676d545cfdf6ab27bd25da2
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105108"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640455"
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe-sql-server-configuration-manager"></a>設定接聽替代管道的伺服器 (SQL Server 組態管理員)
   此主題描述如何使用 SQL Server 組態管理員，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定伺服器於替代管道接聽。 根據預設， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的預設執行個體會接聽具名管道 \\\\.\pipe\sql\query。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 與 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 的具名執行個體會在其他管道上接聽。  

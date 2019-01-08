@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2ea71a918ab9ceb1afba41e5af0148212f33044b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0e7ca6765ee44201badc54d15fb2a20aa9a863a5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607138"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521186"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -119,7 +119,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  您可以使用參數清單調整採礦模型的效能與功能。 參數清單的語法如下：  
   
 ```  
-[<parameter> = <value>, <parameter> = <value>,…]  
+[<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
  如需每一種演算法相關聯的參數，請參閱[資料採礦演算法&#40;Analysis Services-Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bc66fdf7eff698cf89a02fd194d1b5affe8ed397
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c6d507a2471b363cd55eea75e20128ef18f354dd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220118"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784270"
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>建立 Master Data Services 資料庫與 Web 應用程式的關聯
   將 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫產生關聯，以指定要用於 Web 作業的資料庫。  

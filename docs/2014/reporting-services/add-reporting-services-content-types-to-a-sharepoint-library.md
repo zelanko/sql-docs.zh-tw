@@ -11,28 +11,28 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 96b7c2c1c3f603a7b71c823a61f4e2e31cc44b70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 380a257fd72ec776b92581895f85859a0a622003
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155448"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617138"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>將報表伺服器內容類型加入至文件庫 (SharePoint 整合模式中的 Reporting Services)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供預先定義的 SharePoint 內容類型，可用來管理共用的資料來源 (.rsds) 檔、 報表模型 (.smdl)，以及報表產生器報表定義 (.rdl) 檔案。 將 **[報表產生器報表]**、 **[報表模型]** 和 **[報表資料來源]** 內容類型加入至文件庫會啟用 **[新增]** 命令，讓您能夠建立該類型的新文件。  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 會提供預先定義的 SharePoint 內容類型，可用來管理共用資料來源檔案 (.rsds)、報表模型檔案 (.smdl)，以及報表產生器的報表定義檔案 (.rdl)。 將 **[報表產生器報表]**、 **[報表模型]** 和 **[報表資料來源]** 內容類型加入至文件庫會啟用 **[新增]** 命令，讓您能夠建立該類型的新文件。  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式  
   
  若要將內容類型加入至文件庫，您必須是網站管理員或具有「完整控制」等級的權限。  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]內容類型和內容類型管理將會自動啟用下列建立的現有網站集合的所有文件庫**商業智慧中心**網站範本。  
+ 系統會針對從下列 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [商務智慧中心] **網站範本建立的現有網站集合，在所有文件庫中自動啟用** 內容類型與內容類型管理。  
   
  在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 整合之後建立的網站將不會啟用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 內容類型。  
   
 > [!TIP]  
->  如果您有**未**先前設定的內容類型程式庫，第一次啟用管理內容類型，然後再啟用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]內容類型。 請參閱在單一文件庫中啟用內容類型管理的程序。  
+>  如果您先前 **沒有** 設定文件庫的內容類型，請先啟用內容類型的管理，然後再啟用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 內容類型。 請參閱在單一文件庫中啟用內容類型管理的程序。  
   
- **短片：** [(SSRS) 啟用 SharePoint2010.wmv 中的內容類型](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w)。  
+ **簡短視訊：**[(SSRS)啟用 Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w)。  
   
  **本主題內容：**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48155448"
   
 5.  重新整理瀏覽器，然後按一下 **[報表伺服器整合功能]** 的 **[啟動]**。  
   
-     ![rs_reportserver_integration_deactive](media/rs-reportserver-integration-deactive.gif "rs_reportserver_integration_deactive")  
+    ![停用](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
   
 ##  <a name="bkmk_enable_content_management"></a> 啟用單一文件庫的內容類型管理 (SharePoint 2013)  
   
@@ -113,11 +113,11 @@ ms.locfileid: "48155448"
   
     -   安裝了增益集，但網站集合功能的 [報表伺服器整合功能] 未啟用。 請確認 [網站設定] 中的網站集合功能。  
   
-    -   所有[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]內容類型已經加入至程式庫。 如果所有內容類型是文件庫的一部分，則該群組已從 **[新增內容類型]** 頁面中移除。 如果您刪除一個或多個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 內容類型，就會在 **[新增內容類型]** 頁面上看到群組 **[SQL Server Reporting Services 內容類型]** 。  
+    -   所有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 內容類型已經加入至文件庫。 如果所有內容類型是文件庫的一部分，則該群組已從 **[新增內容類型]** 頁面中移除。 如果您刪除一個或多個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 內容類型，就會在 **[新增內容類型]** 頁面上看到群組 **[SQL Server Reporting Services 內容類型]** 。  
   
 ##  <a name="bkmk_enable_content_management_2010"></a> 啟用單一文件庫的內容類型管理 (SharePoint 2010)  
   
-1.  開啟要啟用多個內容類型的文件庫。 在文件庫功能表列上，您應該會看見下列功能表： **[新增]**、 **[上傳]**、 **[動作]** 及 **[設定]**。 如果您看不到 **[設定]**，表示您沒有加入內容類型的權限。  
+1.  開啟要啟用多個內容類型的文件庫。 您應會在文件庫功能表列上，看見下列功能表：**新**，**上傳**，**動作**，和**設定**。 如果您看不到 **[設定]**，表示您沒有加入內容類型的權限。  
   
 2.  在 **[文件庫工具]** 功能區中，按一下 **[文件庫]**。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "48155448"
 4.  按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [SharePoint 網站和清單權限參考報表伺服器項目](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
+ [報表伺服器項目的 SharePoint 網站和清單權限參考](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [啟動報表產生器&#40;報表產生器&#41;](report-builder/start-report-builder.md)  
   
   

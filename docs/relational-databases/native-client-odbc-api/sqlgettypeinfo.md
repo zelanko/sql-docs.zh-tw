@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ea75578bdd1cfd67255ab8c76149920452d1245
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e6d813848a45326ee9a74ea38616ceef9dd02cd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670797"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524047"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "51670797"
  針對**xml**資料類型， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式針對 COLUMN_SIZE 報告 SQL_SS_LENGTH_UNLIMITED 指出大小沒有限制。  
   
 ## <a name="sqlgettypeinfo-and-table-valued-parameters"></a>SQLGetTypeInfo 和資料表值參數  
- 資料表值參數的資料表類型實際上就是中繼類型，亦即，用來定義其他類型的類型。 因此，它沒有透過 SQLGetTypeInfo 公開。 應用程式必須使用 SQLTables，而不是 SQLGetTypeInfo，來擷取資料表值參數搭配使用的資料表類型的中繼資料。  
+ 資料表值參數的資料表類型實際上是中繼類型-，是，用來定義其他類型的類型。 因此，它沒有透過 SQLGetTypeInfo 公開。 應用程式必須使用 SQLTables，而不是 SQLGetTypeInfo，來擷取資料表值參數搭配使用的資料表類型的中繼資料。  
   
  如需詳細資訊，關於擷取之中繼資料的資料表值參數，請參閱[陳述式屬性該 Affect Table-Valued 參數](../../relational-databases/native-client-odbc-table-valued-parameters/statement-attributes-that-affect-table-valued-parameters.md)。  
   

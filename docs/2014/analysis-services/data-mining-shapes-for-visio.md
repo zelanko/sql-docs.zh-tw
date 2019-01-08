@@ -16,27 +16,27 @@ ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3dab107fb57ab2e6d0abaa97bd76a1ce8082b726
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92630f90d7b18ad668dcffc02feeb65990cf3c84
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055228"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512626"
 ---
 # <a name="data-mining-shapes-for-visio"></a>適用於 Visio 的資料採礦圖形
   適用於 Visio 的資料採礦圖形提供了針對顯示資料採礦模型所自訂的範本。 使用這些範本就能連接到您已建立的模型，也可建立互動式簡報以說明資料採礦的結果。  
   
- 範本提供許多優於靜態圖形和螢幕擷取畫面的優點，將會與存放在 Analysis Services 執行個體中的基礎資料採礦模型互動，而且可讓您自訂採礦模型中各種模式的顯示方式。 您可以摺疊和展開樹狀模型、依資料節點或屬性進行篩選，以及顯示模型統計資料 (例如機率和係數)。  
+ 範本提供許多優於靜態圖形和螢幕擷取畫面-它們互動基礎的資料採礦模型，儲存在 Analysis Services 的執行個體，並可讓您自訂採礦模型中的模式的顯示方式。 您可以摺疊和展開樹狀模型、依資料節點或屬性進行篩選，以及顯示模型統計資料 (例如機率和係數)。  
   
  ![DM](media/dm-stencil.gif "DM")  
   
  Visio 範本包含下列精靈：  
   
--   **相依性網路圖表：** 使用這個精靈來建立決策樹和類神經網路的圖形。  
+-   **相依性網路圖表：** 您可以使用這個精靈來建立決策樹和類神經網路的圖形。  
   
--   **決策樹圖表：** 使用這個精靈來建立圖表，顯示的決策點和決策樹模型相關聯的公式。 這類圖表也可以搭配迴歸模型使用。  
+-   **決策樹圖表：** 您可以使用這個精靈來建立圖表，顯示的決策點和決策樹模型相關聯的公式。 這類圖表也可以搭配迴歸模型使用。  
   
--   **叢集圖表：** 使用這個精靈來建立分割模型的彩色圖形。 您可以在各種檢視 (例如屬性辨識、叢集設定檔與相依性) 之間切換，以及自訂叢集的外觀。  
+-   **叢集圖表：** 您可以使用此精靈來建立分割模型的彩色圖形。 您可以在各種檢視 (例如屬性辨識、叢集設定檔與相依性) 之間切換，以及自訂叢集的外觀。  
   
 ## <a name="installation"></a>安裝  
  當您安裝適用於 Visio 的資料採礦範本時，根據預設會安裝下列檔案到\<磁碟機 > files\microsoft SQL Server 2012 DM Add-ins (或\<磁碟機 > \ 或 Program Files (x86) \Microsoft SQL Server 2012 DMAdd-Ins):  

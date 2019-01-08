@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -18,12 +17,12 @@ ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca43600ff55bad24bc607eeeb30eadcd6f3c087e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b90fb6d2a85d30179e630d292f8fc11250958344
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226138"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786150"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>指定發行項類型 (複寫 Transact-SQL 程式設計)
   複寫的預設發行項類型為資料表發行項，但是您可以將其他資料庫物件發行為發行項，包括檢視、預存程序、使用者定義函數及預存程序執行。 您可以使用複寫預存程序，於定義發行項時以程式設計方式指定發行項類型。 使用哪些預存程序取決於複寫的類型和發行項類型而定。  

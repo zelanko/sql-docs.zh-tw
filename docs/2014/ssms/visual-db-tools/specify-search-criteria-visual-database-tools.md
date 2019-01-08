@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], Criteria pane
@@ -22,12 +22,12 @@ ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 579a93f6553abac8556b8d21cbce4f9e9c897370
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52b569ba68e6693c5b720e118a4500e2e768b3dc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194458"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773570"
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>指定搜尋準則 (Visual Database Tools)
   您可以使用搜尋準則來限制查詢所傳回的資料列數目。  
@@ -75,7 +75,7 @@ ms.locfileid: "48194458"
  說明如何建立子查詢或巢狀查詢。  
   
 ## <a name="related-sections"></a>相關章節  
- [使用查詢執行基本作業 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
+ [執行查詢的基本作業 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
  提供最常見查詢工作之主題及步驟的連結。  
   
  [查詢類型 &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)  

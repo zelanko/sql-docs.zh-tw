@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a9d7d8e73dc61afc90485c0d5cd36b3bb009fda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b16deb7ed2bd43cc45966d27b79729897e76405c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658946"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532365"
 ---
 # <a name="sysexternalfileformats-transact-sql"></a>sys.external_file_formats & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47658946"
 |field_terminator|**nvarchar(10)**|Format_type = DELIMITEDTEXT，這是將欄位結束字元。||  
 |string_delimiter|**nvarchar(10)**|Format_type = DELIMITEDTEXT，此為字串分隔符號。||  
 |date_format|**nvarchar(50)**|Format_type = DELIMITEDTEXT，這是使用者定義的日期和時間格式。||  
-|use_type_default|**bit**|Format_type = 分隔的文字，會指定如何處理遺漏值，PolyBase 會從 HDFS 文字檔案，將項目匯入資料時[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。|0 – 會將遺漏的值儲存為 'NULL' 字串。<br /><br /> 1 – 將遺漏的值儲存為資料行預設值。|  
+|use_type_default|**bit**|Format_type = 分隔的文字，會指定如何處理遺漏值，PolyBase 會從 HDFS 文字檔案，將項目匯入資料時[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。|0-會將遺漏的值儲存為 'NULL' 字串。<br /><br /> 1-將遺漏的值儲存為資料行預設值。|  
 |serde_method|**nvarchar(255)**|Format_type = RCFILE，這是序列化/還原序列化方法。||  
 |row_terminator|**nvarchar(10)**|Format_type = DELIMITEDTEXT，這是結束外部 Hadoop 檔案中的每個資料列的字元字串。|一律 ' \n。 '|  
 |編碼|**nvarchar(10)**|Format_type = DELIMITEDTEXT，這是適用於外部 Hadoop 檔案編碼的方法。|一律 ' UTF8。 '|  

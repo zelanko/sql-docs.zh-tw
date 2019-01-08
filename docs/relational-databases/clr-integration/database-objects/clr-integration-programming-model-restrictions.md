@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7c39bb3499302ef1b60744a4332c665506c7fd21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 828608b5c00cdcf0ed625a302359bb5c271381b4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809036"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538532"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 整合程式設計模型限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "47809036"
  執行階段會檢查程式碼組件是否有下列條件。 如果找到這些條件的任何一個，將不允許執行 Managed 程式碼，而且將會擲回例外狀況。  
   
 ### <a name="unsafe"></a>UNSAFE  
- 載入組件，可以明確地呼叫**System.Reflection.Assembly.Load()** 方法從位元組陣列，或透過使用隱含**Reflection.Emit**命名空間 — 不允許。  
+ 載入組件-可能明確地呼叫**System.Reflection.Assembly.Load()** 方法從位元組陣列，或透過使用隱含**Reflection.Emit**命名空間-不允許。  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  所有**UNSAFE**條件都會檢查。  

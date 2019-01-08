@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic joins
@@ -14,12 +14,12 @@ ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87d4ea836aa77899985555f0f103651d74578b03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bab311878966087ef9b6c3f05bb3023d02fdeb20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112920"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780431"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>自動聯結資料表 (Visual Database Tools)
   當您將兩個或多個資料表新增至查詢時， [查詢和檢視表設計工具](visual-database-tools.md) 會嘗試判斷它們是否相關。 如果相關聯，查詢和檢視設計師會自動在代表資料表或表格化物件的矩形之間加上聯結線 (Join Line)。  

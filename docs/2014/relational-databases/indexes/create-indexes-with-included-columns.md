@@ -20,12 +20,12 @@ ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2168e339fb6485035a2a1249dbf109a1560889a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a593812709e62a02645cdd0ce1ee2fa53461b4d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168808"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540838"
 ---
 # <a name="create-indexes-with-included-columns"></a>建立內含資料行的索引
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中加入內含 (或非索引鍵) 資料行，以擴充非叢集索引的功能。 藉由加入非索引鍵資料行，您可以建立涵蓋更多查詢的非叢集索引。 這是因為非索引鍵之索引資料行有下列好處：  
@@ -67,7 +67,7 @@ ms.locfileid: "48168808"
   
 -   非索引鍵資料行只能在非叢集索引上定義。  
   
--   以外的所有資料類型`text`， `ntext`，和`image`可用來當做非索引鍵資料行。  
+-   除了 `text`、`ntext` 和 `image`，所有資料類型都可以做為非索引鍵資料行。  
   
 -   具決定性之精確或非精確的計算資料行都可以當做非索引鍵資料行。 如需詳細資訊，請參閱 [計算資料行的索引](indexes-on-computed-columns.md)。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48168808"
   
     -   將資料行的 Null 屬性從 NOT NULL 變更為 NULL。  
   
-    -   長度增加`varchar`， `nvarchar`，或`varbinary`資料行。  
+    -   增加 `varchar`、`nvarchar` 或 `varbinary` 資料行的長度。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -96,17 +96,17 @@ ms.locfileid: "48168808"
   
 3.  按一下加號展開要建立非索引鍵資料行之索引的資料表。  
   
-4.  以滑鼠右鍵按一下 [索引] 資料夾，指向 [新增索引]，然後選取 [非叢集索引]。  
+4.  以滑鼠右鍵按一下 [索引] 資料夾，指向 [新增索引]，然後選取 [非叢集索引…]。  
   
 5.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
-6.  按一下 **[索引鍵資料行]** 索引標籤底下的 **[加入]**。  
+6.  按一下 [索引鍵資料行] 索引標籤底下的 [加入...]。  
   
 7.  在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要新增至索引之一或多個資料表資料行的核取方塊。  
   
 8.  按一下 [確定] 。  
   
-9. 按一下 **[包含的資料行]** 索引標籤底下的 **[加入]**。  
+9. 按一下 [包含的資料行] 索引標籤底下的 [加入...]。  
   
 10. 在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要新增至索引中作為非索引鍵資料行之資料表資料行的核取方塊。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48168808"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;  

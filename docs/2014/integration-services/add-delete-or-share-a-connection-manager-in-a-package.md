@@ -14,15 +14,15 @@ ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fba1fff373ad7d9ea4371715bcc2ca2b72a38477
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fdbea022082e2606fe991176524127a615464a98
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148308"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533382"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>加入、刪除或共用封裝中的連接管理員
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括各種連接管理員，用來連接至不同的資料來源，例如關聯式資料庫、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫，以及 CSV 和 XML 格式檔案。 您可以在封裝層級或專案層級建立連接管理員。 在專案層級建立的連接管理員可在專案中的所有封裝上使用。 而在封裝層級建立的連接管理員則可在該特定封裝上使用。  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括用來連接到其他資料來源 (例如，關聯式資料庫、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫，以及 CSV 和 XML 格式的檔案) 的各種連線管理員類型。 您可以在封裝層級或專案層級建立連接管理員。 在專案層級建立的連接管理員可在專案中的所有封裝上使用。 而在封裝層級建立的連接管理員則可在該特定封裝上使用。  
   
  您將使用在專案層級建立的連接管理員取代資料來源，以共用來源的連接。 若要在專案層級加入連接管理員，則 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案必須使用專案部署模型。 當專案設定為使用該模型時，[連線管理員] 資料夾會出現在方案總管中，而 [資料來源] 資料夾則會從方案總管移除。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48148308"
   
     -   按一下要加入封裝的連接管理員類型。  
   
-         – 或 –  
+         -或-  
   
     -   如果未列出要加入的類型，請按一下 [新增連接]，以開啟 [加入 SSIS 連線管理員] 對話方塊、選取連線管理員類型，然後按一下 [確定]。  
   
@@ -78,15 +78,15 @@ ms.locfileid: "48148308"
     |[檔案連線管理員](connection-manager/file-connection-manager.md)|[檔案連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)|  
     |[多重檔案連線管理員](connection-manager/multiple-files-connection-manager.md)|[加入檔案連線管理員對話方塊 UI 參考](connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
     |[一般檔案連線管理員](connection-manager/flat-file-connection-manager.md)|[一般檔案連線管理員編輯器 &#40;[一般]頁面&#41;](general-page-of-integration-services-designers-options.md)<br /><br /> [一般檔案連線管理員編輯器 &#40;[資料行] 頁面&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [一般檔案連線管理員編輯器 &#40;[進階] 頁面&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [一般檔案連接管理員編輯器 &#40;[預覽] 頁面&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
-    |[多重一般檔案連線管理員](connection-manager/multiple-flat-files-connection-manager.md)|[多個一般檔案連接管理員編輯器&#40;一般頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [多個一般檔案連接管理員編輯器&#40;資料行頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [多個一般檔案連接管理員編輯器&#40;進階頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [多個一般檔案連接管理員編輯器&#40;預覽頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
+    |[多重一般檔案連線管理員](connection-manager/multiple-flat-files-connection-manager.md)|[多個一般檔案連接管理員編輯器 &#40;一般頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [多個一般檔案連接管理員編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [多個一般檔案連接管理員編輯器 &#40;進階頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [多個一般檔案連線管理員編輯器 &#40;預覽頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
     |[FTP 連線管理員](connection-manager/ftp-connection-manager.md)|[FTP 連線管理員編輯器](../../2014/integration-services/ftp-connection-manager-editor.md)|  
-    |[HTTP 連線管理員](connection-manager/http-connection-manager.md)|[HTTP 連接管理員編輯器&#40;伺服器 頁面&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP 連接管理員編輯器] &#40;[Proxy] 頁面&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
+    |[HTTP 連線管理員](connection-manager/http-connection-manager.md)|[HTTP 連線管理員編輯器 &#40;伺服器頁面&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP 連接管理員編輯器 &#40;Proxy 頁面&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
     |[MSMQ 連線管理員](connection-manager/msmq-connection-manager.md)|[MSMQ 連線管理員編輯器](../../2014/integration-services/msmq-connection-manager-editor.md)|  
     |[ODBC 連線管理員](connection-manager/odbc-connection-manager.md)|[ODBC 連線管理員 UI 參考](../../2014/integration-services/odbc-connection-manager-ui-reference.md)|  
     |[OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)|[設定 OLE DB 連線管理員](configure-ole-db-connection-manager.md)|  
     |[SMO 連線管理員](connection-manager/smo-connection-manager.md)|[SMO 連線管理員編輯器](../../2014/integration-services/smo-connection-manager-editor.md)|  
     |[SMTP 連線管理員](connection-manager/smtp-connection-manager.md)|[SMTP 連線管理員編輯器](../../2014/integration-services/smtp-connection-manager-editor.md)|  
-    |[SQL Server Compact Edition 連線管理員](connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 連接管理員編輯器&#40;連接頁面&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [SQL Server Compact Edition 連接管理員編輯器&#40;所有的頁面&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
+    |[SQL Server Compact Edition 連線管理員](connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 連線管理員編輯器 &#40;連接頁面&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [SQL Server Compact Edition 連線管理員編輯器 &#40;全部頁面&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
     |[WMI 連線管理員](connection-manager/wmi-connection-manager.md)|[WMI 連線管理員編輯器](../../2014/integration-services/wmi-connection-manager-editor.md)|  
   
      [連線管理員] 區域會列出加入的連線管理員。  
@@ -114,15 +114,15 @@ ms.locfileid: "48148308"
     |[檔案連線管理員](connection-manager/file-connection-manager.md)|[檔案連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)|  
     |[多重檔案連線管理員](connection-manager/multiple-files-connection-manager.md)|[加入檔案連線管理員對話方塊 UI 參考](connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
     |[一般檔案連線管理員](connection-manager/flat-file-connection-manager.md)|[一般檔案連線管理員編輯器 &#40;[一般]頁面&#41;](general-page-of-integration-services-designers-options.md)<br /><br /> [一般檔案連線管理員編輯器 &#40;[資料行] 頁面&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [一般檔案連線管理員編輯器 &#40;[進階] 頁面&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [一般檔案連接管理員編輯器 &#40;[預覽] 頁面&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
-    |[多重一般檔案連線管理員](connection-manager/multiple-flat-files-connection-manager.md)|[多個一般檔案連接管理員編輯器&#40;一般頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [多個一般檔案連接管理員編輯器&#40;資料行頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [多個一般檔案連接管理員編輯器&#40;進階頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [多個一般檔案連接管理員編輯器&#40;預覽頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
+    |[多重一般檔案連線管理員](connection-manager/multiple-flat-files-connection-manager.md)|[多個一般檔案連接管理員編輯器 &#40;一般頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [多個一般檔案連接管理員編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [多個一般檔案連接管理員編輯器 &#40;進階頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [多個一般檔案連線管理員編輯器 &#40;預覽頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
     |[FTP 連線管理員](connection-manager/ftp-connection-manager.md)|[FTP 連線管理員編輯器](../../2014/integration-services/ftp-connection-manager-editor.md)|  
-    |[HTTP 連線管理員](connection-manager/http-connection-manager.md)|[HTTP 連接管理員編輯器&#40;伺服器 頁面&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP 連接管理員編輯器] &#40;[Proxy] 頁面&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
+    |[HTTP 連線管理員](connection-manager/http-connection-manager.md)|[HTTP 連線管理員編輯器 &#40;伺服器頁面&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP 連接管理員編輯器 &#40;Proxy 頁面&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
     |[MSMQ 連線管理員](connection-manager/msmq-connection-manager.md)|[MSMQ 連線管理員編輯器](../../2014/integration-services/msmq-connection-manager-editor.md)|  
     |[ODBC 連線管理員](connection-manager/odbc-connection-manager.md)|[ODBC 連線管理員 UI 參考](../../2014/integration-services/odbc-connection-manager-ui-reference.md)|  
     |[OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)|[設定 OLE DB 連線管理員](configure-ole-db-connection-manager.md)|  
     |[SMO 連線管理員](connection-manager/smo-connection-manager.md)|[SMO 連線管理員編輯器](../../2014/integration-services/smo-connection-manager-editor.md)|  
     |[SMTP 連線管理員](connection-manager/smtp-connection-manager.md)|[SMTP 連線管理員編輯器](../../2014/integration-services/smtp-connection-manager-editor.md)|  
-    |[SQL Server Compact Edition 連線管理員](connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 連接管理員編輯器&#40;連接頁面&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [SQL Server Compact Edition 連接管理員編輯器&#40;所有的頁面&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
+    |[SQL Server Compact Edition 連線管理員](connection-manager/sql-server-compact-edition-connection-manager.md)|[SQL Server Compact Edition 連線管理員編輯器 &#40;連接頁面&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [SQL Server Compact Edition 連線管理員編輯器 &#40;全部頁面&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
     |[WMI 連線管理員](connection-manager/wmi-connection-manager.md)|[WMI 連線管理員編輯器](../../2014/integration-services/wmi-connection-manager-editor.md)|  
   
      您加入的連線管理員將會顯示在方案總管的 [連線管理員] 節點底下。 針對專案中的所有封裝，它也會顯示在 [SSIS 設計師] 視窗的 [連線管理員] 索引標籤中。 此索引標籤中連線管理員名稱的前置詞將是 **(專案)**，以區分此專案層級連線管理員以及封裝層級連線管理員。  

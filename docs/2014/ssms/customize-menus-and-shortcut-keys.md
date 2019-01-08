@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
@@ -20,12 +20,12 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0df572c5e939504222bd0f24884e7b00ac9b075
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183118"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778170"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>自訂功能表與快速鍵
   鍵盤對應鍵可讓您選取功能表命令或按鈕，按 ALT +*\<單一字母 >*。 例如，若要開啟 [編輯] 功能表，請按下 ALT+E。 您可以利用 [自訂] 對話方塊來重新安排和修改工具列按鈕、功能表及功能表命令。 提供的指示將協助您利用滑鼠以及只用鍵盤來變更設定。  

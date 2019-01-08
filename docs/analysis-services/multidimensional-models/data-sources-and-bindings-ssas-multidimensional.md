@@ -1,5 +1,5 @@
 ---
-title: 資料來源和繫結 (SSAS 多維度) |Microsoft 文件
+title: 資料來源和繫結 (SSAS 多維度) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2461bbdc3707ed30e130aaa32e117f24f9fe379d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 76afbfcd2cd7668cfc65fc5078a1015ac33bc964
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025036"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529113"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>資料來源和繫結 (SSAS 多維度)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,19 +26,19 @@ ms.locfileid: "34025036"
   
  這表示，資料來源的表示會因資料來源的類型而有所不同。 例如，關聯式資料來源會以連接字串來區分。 如需資料來源的詳細資訊，請參閱 [多維度模型中的資料來源](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)。  
   
- 不論使用的資料來源為何，資料來源檢視 (DSV) 都包含資料來源的中繼資料。 因此，Cube 或其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的繫結會表示為 DSV 的繫結。 這些繫結可包括邏輯物件的繫結，例如檢視、計算資料行和未實際存在於資料來源中之關聯性等物件。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將封裝此運算式的導出資料行加入 DSV，然後將對應的 OLAP 量值繫結至 DSV 中的該資料行。 如需 DSV 的詳細資訊，請參閱 [多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
+ 不論使用的資料來源為何，資料來源檢視 (DSV) 都包含資料來源的中繼資料。 因此，Cube 或其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的繫結會表示為 DSV 的繫結。 這些繫結可以包含繫結，例如檢視、 計算結果的欄和未實際存在於資料來源的關聯性的邏輯物件物件。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將封裝此運算式的導出資料行加入 DSV，然後將對應的 OLAP 量值繫結至 DSV 中的該資料行。 如需 DSV 的詳細資訊，請參閱 [多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
   
  每一個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件都會以它自己的方式繫結至資料來源。 此外，可以使用符合資料繫結物件定義 (如維度) 的方式提供這些物件的資料繫結及資料來源的定義，或是以不符合的方式提供一組個別的定義。  
   
 ## <a name="analysis-services-data-types"></a>Analysis Services 資料類型  
  繫結中所用的資料類型必須與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]所支援的資料類型相符。 下列資料類型定義於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中：  
   
-|Analysis Services 資料類型|Description|  
+|Analysis Services 資料類型|描述|  
 |---------------------------------|-----------------|  
 |BigInt|64 位元帶正負號的整數。 這個資料類型會對應至 Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Int64 資料類型和 OLE DB 內部的 DBTYPE_I8 資料類型。|  
-|Bool|布林值。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Boolean 資料類型和 OLE DB 內部的 DBTYPE_BOOL 資料類型。|  
+|Bool|布林值 (Boolean)。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Boolean 資料類型和 OLE DB 內部的 DBTYPE_BOOL 資料類型。|  
 |CURRENCY|貨幣值，範圍從 -263 (或 -922,337,203,685,477.5808) 到 263-1 (或 +922,337,203,685,477.5807)，正確率為貨幣單位的千分之十。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Decimal 資料類型和 OLE DB 內部的 DBTYPE_CY 資料類型。|  
-|日期|儲存成雙精確度浮點數的日期資料。 整數部分為自 1899 年 12 月 30 日起的天數，而分數部分則為一天的分數部分。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 DateTime 資料類型和 OLE DB 內部的 DBTYPE_DATE 資料類型。|  
+|date|儲存成雙精確度浮點數的日期資料。 整數部分為自 1899 年 12 月 30 日起的天數，而分數部分則為一天的分數部分。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 DateTime 資料類型和 OLE DB 內部的 DBTYPE_DATE 資料類型。|  
 |Double|在 -1.79E +308 到 1.79E +308 範圍中的雙精確度浮點數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Double 資料類型和 OLE DB 內部的 DBTYPE_R8 資料類型。|  
 |Integer|32 位元帶正負號的整數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Int32 資料類型和 OLE DB 內部的 DBTYPE_I4 資料類型。|  
 |Single|在 -3.40E +38 到 3.40E +38 範圍中的單精確度浮點數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Single 資料類型和 OLE DB 內部的 DBTYPE_R4 資料類型。|  
@@ -52,7 +52,7 @@ ms.locfileid: "34025036"
  所有從資料來源收到的資料都會轉換成繫結中指定 (通常在處理期間指定) 的 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 類型。 如果無法執行轉換 (例如從 String 轉換成 Int)，就會引發錯誤。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 通常會將繫結中的資料類型設定為最符合資料來源中來源類型的資料類型。 例如，SQL 類型 Date、DateTime、SmallDateTime、DateTime2 和 DateTimeOffset 會對應至 [!INCLUDE[ssAS](../../includes/ssas-md.md)] Date，而 SQL 類型 Time 則會對應至 String。  
   
 ## <a name="bindings-for-dimensions"></a>維度的繫結  
- 維度的每一個屬性都會繫結至 DSV 中的資料行。 維度的所有屬性都必須來自於單一資料來源。 但是，屬性可繫結至不同資料表中的資料行。 資料表之間的關聯性會定義在 DSV 中。 如果相同資料表中有一組以上的關聯性存在，可能需要在 DSV 中導入具名查詢當做「別名」資料表。 運算式和篩選會使用具名計算和具名查詢定義在 DSV 中。  
+ 維度的每一個屬性都會繫結至 DSV 中的資料行。 維度的所有屬性都必須來自於單一資料來源。 但是，屬性可繫結至不同資料表中的資料行。 資料表之間的關聯性會定義在 DSV 中。 在相同資料表的一組以上的關聯性存在的情況下，可能必須導入做為 「 別名 」 資料表 DSV 中的具名的查詢。 運算式和篩選會使用具名計算和具名查詢定義在 DSV 中。  
   
 ## <a name="bindings-for-measuregroups-measures-and-partitions"></a>量值群組、量值和資料分割的繫結  
  每個量值群組都有下列預設繫結：  
@@ -145,7 +145,7 @@ ms.locfileid: "34025036"
   
  非正規繫結的指定方式，是使用處理命令來包含選擇性 **Bindings** 集合物件。 選擇性 **Bindings** 集合包含下列元素。  
   
-|屬性|基數|型別|Description|  
+|屬性|基數|類型|描述|  
 |--------------|-----------------|----------|-----------------|  
 |**繫結**|0-n|**繫結**|提供新繫結的集合。|  
 |**DataSource**|0-1|**DataSource**|取代原本會使用之伺服器中的 **DataSource** 。|  
@@ -154,9 +154,9 @@ ms.locfileid: "34025036"
  與非正規繫結相關的所有元素都是選擇性的。 如果是未指定的任何元素，ASSL 會使用保存之物件 DDL 中所包含的指定內容。 **Process** 命令中 **DataSource** 或 **DataSourceView** 的指定是選擇性的。 如果指定了 **DataSource** 或 **DataSourceView** ，則在 **Process** 命令完成之後，不會將它們具現化及保存下來。  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>非正規繫結類型的定義  
- 在非正規 **Bindings** 集合內，ASSL 允許多個物件的繫結集合，每一個都是 **Binding**。 每一個 **Binding** 都有擴充物件參考 (類似於物件參考)，但是也可意指次要物件 (例如維度屬性和量值群組屬性)。 這個物件會使用典型的一般格式**物件**中的項目**程序**命令，不同處\<*物件*> \< */物件*> 標記並不存在。  
+ 在非正規 **Bindings** 集合內，ASSL 允許多個物件的繫結集合，每一個都是 **Binding**。 每一個 **Binding** 都有擴充物件參考 (類似於物件參考)，但是也可意指次要物件 (例如維度屬性和量值群組屬性)。 這個物件會典型的一般格式**物件**中的項目**程序**命令，除了\<*物件*> \< */物件*> 標記並不存在。  
   
- 每個物件，其指定的繫結由 XML 項目表單的\<*物件*> ID (例如， **DimensionID**)。 識別物件之後盡量明確地使用此表單\<*物件*> 識別碼，您會識別的項目所指定的繫結，這通常是**來源**. 值得注意的常見情況是哪一個 **Source** 是 **DataItem**上的屬性，這是屬性中資料行繫結的情況。 在此情況下，您不會指定 **DataItem** 標記，而只會指定 **Source** 屬性，就像它直接位於要繫結的資料行上一樣。  
+ 指定繫結的每個物件都會由 XML 項目表單的\<*物件*> 識別碼 (例如**DimensionID**)。 識別物件之後盡量明確地與表單\<*物件*> 識別碼，您會識別為其已指定繫結，這通常是元素**來源**. 值得注意的常見情況是哪一個 **Source** 是 **DataItem**上的屬性，這是屬性中資料行繫結的情況。 在此情況下，您不會指定 **DataItem** 標記，而只會指定 **Source** 屬性，就像它直接位於要繫結的資料行上一樣。  
   
  **KeyColumns** 是由其在 **KeyColumns** 集合內的順序加以識別。 例如，在這裡無法僅指定屬性的第一和第三個索引鍵資料行，因為沒有方法可以指示要略過第二個索引鍵資料行。 所有的索引鍵資料行都必須位於維度屬性的非正規繫結中。  
   

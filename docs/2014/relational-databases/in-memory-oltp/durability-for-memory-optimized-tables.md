@@ -10,12 +10,12 @@ ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 981b0b57debf6e1916adb65620feca7025bd3803
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063488"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392022"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>記憶體最佳化資料表的持久性
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 為記憶體最佳化的資料表提供完整的持久性。 當變更記憶體最佳化資料表的交易認可時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (對磁碟基礎的資料表也一樣) 會保證這些變更是永久的 (即使資料庫重新啟動後也會存在)，前提是要提供基礎儲存。 持久性有兩個重要元件：交易記錄及磁碟儲存的保存資料變更。  
@@ -24,7 +24,7 @@ ms.locfileid: "48063488"
  磁碟基礎的資料表或持久記憶體最佳化資料表的所有變更，都可以在一個或多個交易記錄檔記錄上擷取。 當交易認可時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會將與交易相關聯的記錄檔記錄寫入磁碟，然後才與交易已認可之應用程式或使用者工作階段進行通訊。 這樣可保證交易所做的變更是持久的。 記憶體最佳化資料表的交易記錄檔會與磁碟資料表所使用的相同記錄檔資料流完全整合在一起。 這項整合允許現有的交易記錄檔備份、復原及還原作業繼續運作，而不需要進行其他任何步驟。 不過，因為 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 會大幅增加工作負載的交易輸送量，所以您需要確定交易記錄檔儲存體的設定正確，以處理增加的 IO 需求。  
   
 ## <a name="data-and-delta-files"></a>資料和差異檔案  
- 記憶體最佳化資料表中的資料會在記憶體中儲存為自由格式的資料列，並透過一個或多個記憶體中的索引加以連結。 資料列沒有任何頁面結構，例如用於磁碟基礎的資料表頁面結構。 當應用程式已準備好認可交易，[!INCLUDE[hek_2](../../../includes/hek-2-md.md)]會產生交易記錄檔記錄。 記憶體最佳化的資料表持續性會透過一組資料和差異檔案使用背景執行緒完成。 資料和差異檔案位於一個或多個容器 (和 FILESTREAM 資料使用相同的機制)。 這些容器會對應到新的檔案群組類型，稱為記憶體最佳化的檔案群組。  
+ 記憶體最佳化資料表中的資料會在記憶體中儲存為自由格式的資料列，並透過一個或多個記憶體中的索引加以連結。 資料列沒有任何頁面結構，例如用於磁碟基礎的資料表頁面結構。 當應用程式準備認可交易時，[!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 會產生交易的記錄檔記錄。 記憶體最佳化的資料表持續性會透過一組資料和差異檔案使用背景執行緒完成。 資料和差異檔案位於一個或多個容器 (和 FILESTREAM 資料使用相同的機制)。 這些容器會對應到新的檔案群組類型，稱為記憶體最佳化的檔案群組。  
   
  資料會遵循嚴格的順序寫入，使轉動式媒體的磁碟延遲減到最少。 您可以在不同的磁碟上使用多個容器以散發 I/O 活動。 從磁碟上的資料檔案和差異檔案將資料讀入記憶體時，不同磁碟上多個容器內的資料檔案和差異檔案將會提升復原效能。  
   
@@ -106,12 +106,12 @@ ms.locfileid: "48063488"
 |CFP0 (30%)、CFP1 (20%)、CFP2 (50%)、CFP3 (10%)|(CFP0、CFP1、CFP2)。 從左邊開始選擇檔案。<br /><br /> 未選擇 CTP3 是因為此項目會使得產生的資料檔案超過理想大小的 100%。|  
 |CFP0 (80%)、CFP1 (30%)、CFP2 (10%)、CFP3 (40%)|(CFP1、CFP2、CFP3)。 從左邊開始選擇檔案。<br /><br /> 略過 CFP0 是因為此項目若與 CFP1 合併，產生的資料檔案將會超過理想大小的 100%。|  
   
- 並非所有餘留可用空間的 CFP 都有資格進行合併。 例如，若兩個相鄰的 CFP 都是 60% 已滿，就沒有資格進行合併，而且這些 CFP 各自仍將有 40% 未使用的儲存空間。 最糟的情況是所有 CFP 皆為 50% 已滿，儲存空間利用率只達 50%。 已刪除的資料列可能由於 CFP 沒有資格進行合併而仍存在於儲存體中，但是記憶體中記憶體回收行程可能已從記憶體移除已刪除的資料列。 儲存體和記憶體的管理與記憶體回收無關。 使用中 CFP 所佔的儲存空間 (未必所有 CFP 一概更新) 最多可達記憶體中持久性資料表大小的 2 倍。  
+ 並非所有餘留可用空間的 CFP 都有資格進行合併。 例如，若兩個相鄰的 CFP 都是 60% 已滿，就沒有資格進行合併，而且這些 CFP 各自仍將有 40% 未使用的儲存空間。 最糟的情況是所有 CFP 皆為 50% 已滿，儲存空間利用率只達 50%。 已刪除的資料列可能由於 CFP 沒有資格進行合併而仍存在於儲存體中，但是記憶體內部記憶體回收可能已從記憶體移除已刪除的資料列。 儲存體和記憶體的管理與記憶體回收無關。 使用中 CFP 所佔的儲存空間 (未必所有 CFP 一概更新) 最多可達記憶體中持久性資料表大小的 2 倍。  
   
  如有需要可以藉由呼叫明確執行手動合併[sys.sp_xtp_merge_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)。  
   
 ### <a name="life-cycle-of-a-cfp"></a>CFP 的生命週期  
- CPF 解除配置之前會歷經幾個過渡狀態。 在任何給定的時間，CFP 都會處於以下其中一個階段：已預先建立、建構中、使用中、合併目標、已合併來源、備份/高可用性所需、正在轉換為標記和標記。 如需這些階段的說明，請參閱 [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)。  
+ CPF 解除配置之前會歷經幾個過渡狀態。 在任何時間內，CFP 將處於下列階段之一：PRECREATED、UNDER CONSTRUCTION、ACTIVE、MERGE TARGET、MERGED SOURCE、REQUIRED FOR BACKUP/HA、IN TRANSITION TO TOMBSTONE 以及 TOMBSTONE。 如需這些階段的說明，請參閱 [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)。  
   
  在考量到 CFP 在各個不同階段所佔的儲存空間之後，持久的記憶體最佳化資料表所佔的整體儲存空間可能遠大於該資料表在記憶體中大小的 2 倍。 DMV [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)可查詢來列出所有 Cfp 記憶體最佳化檔案群組中，包括其階段。 將 CFP 從「合併來源」狀態轉換為「標記」狀態且最後為記憶體回收的程序，最多可能會使用五個檢查點，每個檢查點後面都接著交易記錄備份 (如果資料庫有設定完整或大量記錄復原模式)。  
   

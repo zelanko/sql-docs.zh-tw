@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], data type mapping
@@ -15,12 +14,12 @@ ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 27bf94ce5204e17fa694d8a9f9044aed59f13299
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a07b93ccdaf5512836db1c3474ad6efa3656997
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116418"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777880"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>指定 Oracle 發行者的資料類型對應
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中指定 Oracle 發行者的資料類型對應。 雖然有針對 Oracle 發行者提供一組預設的資料類型對應，但是可能需要針對給定的發行集指定不同的對應。  
@@ -46,7 +45,7 @@ ms.locfileid: "48116418"
   
     -   針對某些資料類型，只有一個可能的對應，在此情況下，屬性方格中的資料行為唯讀。  
   
-    -   對於某些資料類型，有多種類型可供您選擇。 除非您的應用程式需要不同的對應，否則[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您使用預設對應。 如需詳細資訊，請參閱＜ [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md)＞。  
+    -   對於某些資料類型，有多種類型可供您選擇。 除非您的應用程式需要不同的對應，否則[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議您使用預設對應。 如需詳細資訊，請參閱 [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md)。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
@@ -14,12 +13,12 @@ ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 17df4d4f8d311be311907d18ad61cbbce05ea397
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf14f942857361256febd4329a116c2d349659a0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217590"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747930"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>建立訂閱檢視 (Master Data Services)
   當您想要建立的檢視中的資料，請建立訂閱檢視[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料庫以供訂閱系統。  
@@ -29,7 +28,7 @@ ms.locfileid: "48217590"
   
 -   您必須擁有存取 **[整合管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 ### <a name="to-create-a-subscription-view"></a>若要建立訂閱檢視  
   
@@ -54,11 +53,11 @@ ms.locfileid: "48217590"
   
 9. 如果您從 **[格式]** 清單中選擇 **[明確層級]** 或 **[衍生層級]** ，請輸入階層內要加入檢視中的層級數。  
   
-10. 按一下 **[儲存]**。  
+10. 按一下 [儲存] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [將資料匯出&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   
  [刪除訂閱檢視 &#40;Master Data Services&#41;](delete-a-subscription-view-master-data-services.md)   
- [建立版本旗標&#40;Master Data Services&#41;](create-a-version-flag-master-data-services.md)  
+ [建立版本旗標 &#40;Master Data Services&#41;](create-a-version-flag-master-data-services.md)  
   
   

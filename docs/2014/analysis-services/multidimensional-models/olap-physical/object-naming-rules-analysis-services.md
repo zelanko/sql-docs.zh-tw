@@ -14,12 +14,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8cd63693c18b380d328a33ed4f7f947991787313
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 4c8bcf9fc52ef26837d32fa765472e0056469a2a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147843"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511316"
 ---
 # <a name="object-naming-rules-analysis-services"></a>物件命名規則 (Analysis Services)
   本主題將描述物件命名慣例以及任何物件名稱 (以 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的程式碼或指令碼形式) 中無法使用的保留字和字元。  
@@ -33,7 +33,7 @@ ms.locfileid: "50147843"
   
  下列規則會套用到 `Name` 和 `ID` 屬性。  
   
--   名稱不區分大小寫。 您在相同資料庫中不能同時有一個名為 "sales" 的 Cube 和另一個名為 "Sales" 的 Cube。  
+-   名稱不區分大小寫。 您不能有一個名為"sales"的 cube 和另一個相同的資料庫中名為"Sales"。  
   
 -   物件名稱中不允許有任何開頭或尾端空白，但是您可以在名稱中內嵌空白。 開頭和尾端空白會以隱含方式加以修剪。 這同樣適用於物件的 `Name` 和 `ID`。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "50147843"
 |`Dimension` 或 `Hierarchy`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = （) [] {} \<，>|  
 |所有其他物件|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
   
- **例外狀況： 當允許保留的字元是**  
+ **例外狀況：當允許保留的字元**  
   
  如前所述，具有特定模式和相容性層級的資料庫可以擁有包含保留字元的物件名稱。 如果是允許使用擴充字元的表格式資料庫 (1103 或更高層級)，維度屬性、階層、層級、量值和 KPI 物件名稱可以包含保留字元：  
   
@@ -85,7 +85,7 @@ ms.locfileid: "50147843"
 |MOLAP (所有版本)|否|  
 |表格式 - 1050|否|  
 |表格式 - 1100|否|  
-|表格式 – 1130 和更高版本|是|  
+|表格式-1130年和更高版本|是|  
   
  資料庫可以有 ModelType 預設值。 預設值相當於多維度，因此不支援在資料行名稱中使用保留的字元。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - FINDSTRING function
@@ -13,12 +12,12 @@ ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b2ea62bd49073d7da87fd0e8218b656ded7f96f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc77f0d87be4595e672cec61b43d041f0b89a22a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105670"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782530"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (SSIS 運算式)
   傳回字元運算式中字串的指定出現位置。 傳回結果是以 1 為主的索引出現位置。 string 參數的評估結果必須為字串運算式，且 occurrence 參數的評估結果必須為整數。 如果找不到字串，傳回值將為 0。 如果字串出現的次數少於 occurrence 引數指定的次數，傳回值也是 0。  
@@ -78,7 +77,7 @@ FINDSTRING(Name,Size,1)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [取代&#40;SSIS 運算式&#41;](replace-ssis-expression.md)   
- [函式&#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
+ [REPLACE &#40;SSIS 運算式&#41;](replace-ssis-expression.md)   
+ [函數 &#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
   
   

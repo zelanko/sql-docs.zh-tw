@@ -14,12 +14,12 @@ ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 20c4cc7fe03d9c57ea45575b243a24da690ba88d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f70ddfc241a902a59dff989323a75b17f7af55e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064468"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541895"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>允許資料庫鏡像端點使用傳入連接的憑證 (Transact-SQL)
   此主題描述設定伺服器執行個體，以使用憑證來驗證資料庫鏡像之傳入連接的步驟。 在設定傳入連接之前，您必須先在每一個伺服器執行個體上設定傳出連接。 如需詳細資訊，請參閱[允許資料庫鏡像端點使用傳出連接的憑證 &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)。  
@@ -121,7 +121,7 @@ ms.locfileid: "48064468"
     GO  
     ```  
   
-     如需詳細資訊，請參閱 [GRANT 端點權限和 &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)。  
+     如需詳細資訊，請參閱 [GRANT 端點權限 &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)。  
   
  如此即完成為 HOST_B 設定憑證驗證來登入到 HOST_A。  
   
@@ -157,7 +157,7 @@ GO
   
  如需建立鏡像資料庫的相關資訊，包括 Transact-SQL 範例在內，請參閱[準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)。  
   
- 如需建立高效能模式工作階段的 Transact-SQL 範例，請參閱 [範例：使用憑證設定資料庫鏡像 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
+ 建立高效能模式工作階段的 TRANSACT-SQL 範例，請參閱[範例：設定資料庫鏡像使用憑證&#40;TRANSACT-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  將憑證複製到另一個系統時，請使用安全複製方法。 務必將您所有的憑證小心保管。  

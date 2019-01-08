@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
@@ -14,12 +14,12 @@ ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a2c9966dfbb270165ea5245fd59e0793d165bdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3254ae226a0ac955f2cf5b2f39077853ebf3e057
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127458"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762780"
 ---
 # <a name="create-a-job-category"></a>建立作業類別目錄
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 管理物件，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立作業類別目錄。  
@@ -34,7 +34,7 @@ ms.locfileid: "48127458"
  多伺服器類別只存在於主要伺服器上。 主要伺服器上只有一個預設作業類別目錄：**未分類 (多伺服器)**。 下載多伺服器作業之後，其類別目錄會變更為目標伺服器上的 **[來自 MSX 的作業]** 。  
   
 ###  <a name="Security"></a> 安全性  
- 如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)＞。  
+ 如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
   
 
   
@@ -58,7 +58,7 @@ ms.locfileid: "48127458"
   
 8.  在 [管理作業類別目錄 <伺服器名稱>] 對話方塊中，按一下 [重新整理]，以確定新作業類別目錄為作用中。 如果一切如預期，關閉此對話方塊。  
   
- 如需有關這些對話方塊的詳細資訊，請參閱 <<c0> [ 作業類別目錄： 管理作業類別目錄](job-categories-manage-job-categories.md)並[作業類別目錄屬性和新增作業類別目錄](job-categories-properties-new-job-category.md)。  
+ 如需有關這些對話方塊的詳細資訊，請參閱[作業類別目錄：管理作業類別目錄](job-categories-manage-job-categories.md)並[作業類別目錄屬性和新增作業類別目錄](job-categories-properties-new-job-category.md)。  
   
  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48127458"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- creates a local job category named AdminJobs   
@@ -90,7 +90,7 @@ ms.locfileid: "48127458"
 ##  <a name="SMO"></a> 使用 SQL Server 管理物件  
  **若要建立作業類別目錄**  
   
- 呼叫`JobCategory`藉由使用您選擇，例如 Visual Basic、 Visual C# 或 PowerShell 的程式語言的類別。 如需範例程式碼，請參閱 [使用 SQL Server Agent 排程自動管理工作](sql-server-agent.md)。  
+ 使用所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell 呼叫 `JobCategory` 類別。 如需範例程式碼，請參閱 [使用 SQL Server Agent 排程自動管理工作](sql-server-agent.md)。  
   
  
   

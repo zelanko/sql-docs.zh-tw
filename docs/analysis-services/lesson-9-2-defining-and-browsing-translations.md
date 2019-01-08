@@ -1,5 +1,5 @@
 ---
-title: 定義和瀏覽翻譯 |Microsoft 文件
+title: 定義和瀏覽翻譯 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a63fd44d7ec62b9033f4371e7e2d38306757c647
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b8d5e7cd1d1696624ebb6fe919cfa3b1ba6ee5c7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018915"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535006"
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>課程 9-2-定義和瀏覽翻譯
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,9 +45,9 @@ ms.locfileid: "34018915"
   
 6.  在 [月份名稱] 屬性的 [標題] 物件資料列中，在 [西班牙文 (西班牙)] 翻譯資料行輸入 **Mes del Año**，然後在 [法文 (法國)] 翻譯資料行輸入 **Mois d'Année**。  
   
-    請注意，當您輸入這些翻譯時，會出現省略符號 (**…**)。 按一下這個省略符號，可讓您在基礎資料表中指定一個資料行，以便提供屬性階層每個成員的翻譯。  
+    請注意，當您輸入這些翻譯，省略符號 (**...**) 隨即出現。 按一下這個省略符號，可讓您在基礎資料表中指定一個資料行，以便提供屬性階層每個成員的翻譯。  
   
-7.  按一下 [月份名稱] 屬性的 [西班牙文 (西班牙)] 翻譯的省略符號 (**…**)。  
+7.  按一下省略符號 (**...**) 的**西班牙文 （西班牙）** 翻譯**月份**屬性。  
   
     此時會出現 [屬性資料翻譯] 對話方塊。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "34018915"
   
     ![屬性資料翻譯對話方塊](../analysis-services/media/l9-translations-4.gif "屬性資料翻譯對話方塊")  
   
-9. 按一下 [確定]，然後按一下 [月份名稱] 屬性的 [法文 (法國)] 翻譯的省略符號 (**…**)。  
+9. 按一下  **確定**，然後按一下省略符號 (**...**) 的**法文 （法國）** 翻譯**月份**屬性。  
   
 10. 在 翻譯資料行 清單中選取 **FrenchMonthName**，然後按一下 確定。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "34018915"
   
     此時會出現每一個 Cube 物件以預設語言表示的中繼資料，如下圖所示。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 的預設語言是英文。  
   
-    ![預設語言翻譯索引標籤中](../analysis-services/media/l9-translations-5.gif "預設語言翻譯索引標籤中")  
+    ![預設的翻譯索引標籤中的語言](../analysis-services/media/l9-translations-5.gif "預設翻譯索引標籤中的語言")  
   
 2.  在 [翻譯] 索引標籤的工具列上，按一下 [新增翻譯] 按鈕。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "34018915"
     請注意，現在月份會以法文顯示，與量值名稱一樣。  
   
 ## <a name="next-lesson"></a>下一課  
-[第 10 課： 定義管理角色](../analysis-services/lesson-10-defining-administrative-roles.md)  
+[第 10 課：定義系統管理角色](../analysis-services/lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [維度翻譯](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)  

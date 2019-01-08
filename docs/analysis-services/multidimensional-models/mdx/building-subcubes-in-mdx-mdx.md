@@ -1,5 +1,5 @@
 ---
-title: 建置 MDX (MDX) 中的 Subcube |Microsoft 文件
+title: 建置 MDX (MDX) 中的 Subcube |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9f9bcc170883c9c663903d17f3355e27b2b14177
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7bf6396ebe7cfe18aa7d1005d39095a35713e10b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026245"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419049"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>在 MDX 中建立 Subcube (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  此外，Subcube 內的彙總值都是以視覺化的方式總計。 例如，Subcube 包含 `USA`、 `WA`及 `OR`。 因為 Subcube 定義的狀態只有 `USA` 及 `{WA,OR}` ，所以 `WA` 的彙總值將會是 `OR` 的總和。 其他狀態都會被忽略。  
   
- 此外，明確參考 Subcube 外部的資料格，則會傳回在整個 Cube 內容中評估的資料格值。 例如，您可以建立限制在目前年度的 Subcube。 然後，您可以使用 [ParallelPeriod](../../../mdx/parallelperiod-mdx.md) 函數比較目前年度與前一個年度。 即使前一個年度的值在 Subcube 外部，也將會傳回值中的差異。  
+ 此外，明確參考 Subcube 外部的資料格，則會傳回在整個 Cube 內容中評估的資料格值。 例如，您可以建立限制在目前年度的 Subcube。 然後，您可以使用 [ParallelPeriod](../../../mdx/parallelperiod-mdx.md) 函數比較目前年度與前一個年度。 即使在 subcube 外部，位於前一個年度的值，則會傳回值的差異。  
   
  最後，如果原始的內容未被覆寫，就會在子選擇的內容中評估曾在子選擇中評估的集合函數。 如果內容會被覆寫，就會在整個 Cube 的內容中評估集合函數。  
   
@@ -60,7 +60,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
  `SELECT [Account].[Account].Members ON 0, Measures.Members ON 1 FROM Budget`  
   
 ## <a name="see-also"></a>另請參閱  
- [建立查詢 & #40; 中的 Cube 內容MDX & #41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
- [MDX 查詢基礎觀念 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [建立查詢中的 Cube 內容 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
+ [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

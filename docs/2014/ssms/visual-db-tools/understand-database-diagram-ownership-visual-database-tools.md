@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.diagnostic.CannotOpenWithInvalidOwner
@@ -16,12 +16,12 @@ ms.assetid: 4a27a48e-c4ef-4017-82b8-0cac4d0bbcac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fef70305887b7d0b2d5face1dc31a2e7ea451c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6056a5136d8aceab338a18b32ecfac35a1af0364
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102448"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773610"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>了解資料庫圖表擁有權 (Visual Database Tools)
   若要使用資料庫圖表設計工具，必須先由 db_owner 角色 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的角色) 的成員進行設定，才能控制圖表的存取權。 每個圖表必定有一個，也只能有一個擁有者，也就是建立該圖表的使用者。 如需設定圖表化的詳細資訊，請參閱[設定資料庫圖表設計工具&#40;Visual Database Tools&#41;](visual-database-tools.md)。  

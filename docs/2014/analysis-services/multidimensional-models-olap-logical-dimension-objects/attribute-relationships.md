@@ -26,12 +26,12 @@ ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45ade4f79f2433d6f5841605cbbb8112e6a9b63f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4401eea7e5c5b42c1706095e4c14aee348298bc5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081590"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512776"
 ---
 # <a name="attribute-relationships"></a>中，使用 [維度設計師] 的
   在  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，維度內的屬性一律相關直接或間接與索引鍵屬性。 當您根據所有維度屬性都是衍生自相同關聯式資料表的星狀結構描述來定義維度時，便會在索引鍵屬性和維度的每個非索引鍵屬性之間，自動定義屬性關聯性。 而根據維度屬性是衍生自多個相關資料表的雪花式結構描述來定義維度時，便會自動定義下列的屬性關聯性：  
@@ -80,7 +80,7 @@ ms.locfileid: "48081590"
   
 -   城市屬性與客戶屬性之間的屬性關聯性。  
   
- 瀏覽 cube 中的資料，您也可以建立不代表自然階層資料中的使用者定義階層 (稱為*臨機操作*或是*reporting*階層)。 例如，您可以根據 `{Age, Gender}` 建立使用者自訂階層。 雖然自然階層可以利用彙總和索引結構獲得好處，其中含有來源資料中的自然關聯性，但使用者對於這兩個階層的行為並不會察覺到任何差異，因為這對於使用者是隱藏。  
+ 瀏覽 cube 中的資料，您也可以建立不代表自然階層資料中的使用者定義階層 (稱為*臨機操作*或是*reporting*階層)。 例如，您可以根據 `{Age, Gender}` 建立使用者自訂階層。 使用者不會看到任何差異，在兩個階層的行為方式，雖然自然階層受惠於彙總並編製索引的結構-對使用者隱藏的-該帳戶中的來源資料的自然關聯性。  
   
  層級的 `SourceAttribute` 屬性 (Property) 會決定該使用哪個屬性 (Attribute) 來描述層級。 屬性 (Attribute) 上的 `KeyColumns` 屬性 (Property) 會指定資料來源檢視中，提供成員的資料行。 屬性 (Attribute) 上的 `NameColumn` 屬性 (Property) 可為成員指定不同的名稱資料行。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48081590"
   
 ## <a name="see-also"></a>另請參閱  
  [屬性和屬性階層](attributes-and-attribute-hierarchies.md)   
- [維度屬性 （Property） 參考](../multidimensional-models/dimension-attribute-properties-reference.md)   
+ [維度屬性 (attribute) 屬性 (property) 參考](../multidimensional-models/dimension-attribute-properties-reference.md)   
  [使用者階層](user-hierarchies.md)   
  [使用者階層屬性](user-hierarchies-properties.md)  
   

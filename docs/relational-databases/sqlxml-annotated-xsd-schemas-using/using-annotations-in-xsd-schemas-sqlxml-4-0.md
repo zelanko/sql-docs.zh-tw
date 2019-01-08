@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80aa9ae1fd19f9f7ed0e90436604095f091ca781
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a03e78298bc2bea8d0c6bf33484dbda28a2d5319
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618328"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511142"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>在 XSD 結構描述中使用註釋 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47618328"
   
  如果您沒有指定註解，就會使用預設對應。 根據預設，包含複雜類型的 XSD 元素會對應到指定之資料庫中的資料表 (檢視) 名稱，而包含簡單類型的元素或屬性會對應到具有相同名稱的資料行，做為元素或屬性。  
   
- 這些註解也可以用於指定 XML 中的階層式關聯性以代表資料庫中的關聯性，因為 XSD 結構描述只是關聯式資料的 XML 檢視。  
+ 這些註解也可用來指定在 XML-因此代表在資料庫中，關聯性的階層式關聯性，因為 XSD 結構描述只是關聯式資料的 XML 檢視。  
   
  本節提供您可搭配 XSD 結構描述一起使用之註解的描述以及其使用方式的範例。  
   

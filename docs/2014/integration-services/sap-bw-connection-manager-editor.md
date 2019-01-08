@@ -11,12 +11,12 @@ ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e73545b8417b92abf57747441b49531736ecdd48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52a7ceaa177c223363f4c14313cf14f70a0e52f3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120810"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508676"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>SAP BW 連接管理員編輯器
   使用 [SAP BW 連線管理員編輯器] 可以指定要用來連接到 SAP Netweaver BW 版本 7 系統的屬性。  
@@ -28,13 +28,13 @@ ms.locfileid: "48120810"
   
  **若要開啟 SAP BW 連接管理員編輯器**  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，開啟包含 SAP BW 連線管理員的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟包含 SAP BW 連線管理員的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  
   
 2.  在 [控制流程] 索引標籤上的 [連線管理員] 區域中，執行下列其中一個步驟：  
   
     -   按兩下 SAP BW 連接管理員。  
   
-         – 或 –  
+         -或-  
   
     -   以滑鼠右鍵按一下 SAP BW 連線管理員，然後選取 [編輯]。  
   

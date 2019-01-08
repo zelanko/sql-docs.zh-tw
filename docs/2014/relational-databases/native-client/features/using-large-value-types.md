@@ -17,12 +17,12 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9553eb4a9993186e3864a9ae0014ce702b7a8f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5416684273d74a5f40ff6219eaab95323de6a0d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136188"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414595"
 ---
 # <a name="using-large-value-types"></a>使用大數值類型
   在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，使用大數值資料類型時需要進行特殊處理。 大數值資料類型是指那些最大資料列大小超過 8 KB 的資料類型。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引進**max**規範**varchar**， **nvarchar**並**varbinary**資料類型，以允許的值的儲存體的最大達 2 ^31-1位元組。 資料表資料行及[!INCLUDE[tsql](../../../includes/tsql-md.md)]變數可以指定**varchar （max)**， **nvarchar （max)** 或是**varbinary （max)** 資料型別。  
@@ -43,7 +43,7 @@ ms.locfileid: "48136188"
   
  在 **max** 大小設定為無限制的資料行中，**varchar(max)**、**varbinary(max)** 和 **nvarchar(max)** 資料類型會在傳回資料行資料類型的核心 OLE DB 結構描述資料列集和介面中表示為 ISLONG。  
   
- 命令物件的 **IAccessor** 實作已變更為允許以 DBTYPE_IUNKNOWN 的形式進行繫結。 如果取用者指定 DBTYPE_IUNKNOWN 並將 *pObject* 設定為 null，則提供者會將 **ISequentialStream** 介面傳回給取用者，讓取用者可以將 **varchar(max)**、**nvarchar(max)** 或 **varbinary(max)** 用資料流的形式傳出輸出變數。  
+ 命令物件的**IAccessor**實作已變更為允許繫結為 DBTYPE_IUNKNOWN。 如果取用者指定 DBTYPE_IUNKNOWN 並將 *pObject* 設定為 null，則提供者會將 **ISequentialStream** 介面傳回給取用者，讓取用者可以將 **varchar(max)**、**nvarchar(max)** 或 **varbinary(max)** 用資料流的形式傳出輸出變數。  
   
  以資料流傳輸的輸出參數值會在任何結果資料列之後傳回。 如果應用程式藉由呼叫 **IMultipleResults::GetResult** (而不取用所有的傳回輸出參數值) 嘗試繼續前往下一個結果集，就會傳回 DB_E_OBJECTOPEN。  
   

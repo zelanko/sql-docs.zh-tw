@@ -1,5 +1,5 @@
 ---
-title: 設定模擬選項 (SSAS-多維度) |Microsoft 文件
+title: 設定模擬選項 (SSAS-多維度) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6c11064ecc87744999c31080e6a4d57a3849f5d2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 279aff4acd671318b75988919d7625591f17812f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026155"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533809"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>設定模擬選項 (SSAS - 多維度)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34026155"
  對話方塊中的所有選項都可以使用，但並非所有選項都適合所有案例。 請使用下列資訊來確定最適合您案例的選項。  
   
  **使用特定的使用者名稱和密碼**  
- 選取此選項即可讓[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件使用依照以下格式指定 Windows 使用者帳戶的安全性認證： *\<網域名稱 >***\\***\<使用者帳戶名稱 >*。  
+ 選取此選項即可讓[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件使用依照以下格式指定的 Windows 使用者帳戶的安全性認證：*\<網域名稱 >***\\***\<使用者帳戶名稱 >*。  
   
  選擇此選項，即可使用您專為資料存取目的所建立的專用最低權限 Windows 使用者識別。 例如，如果您習慣建立一般用途帳戶來擷取報表中使用的資料，則可以在此指定該帳戶。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34026155"
  若是 DMX OPENQUERY 陳述式、本機 Cube 和採礦模型，即使選擇服務帳戶選項，也會使用目前使用者的認證。 非正規 (out-of-line) 繫結不支援服務帳戶選項。  
   
 > [!NOTE]  
->  如果服務帳戶沒有 Analysis Services 執行個體的管理員權限，則從 Cube 處理資料採礦模型時可能會發生錯誤。 如需詳細資訊，請參閱 [採礦結構：當資料來源為 OLAP Cube 時的處理問題](http://go.microsoft.com/fwlink/?LinkId=251610)。  
+>  如果服務帳戶沒有 Analysis Services 執行個體的管理員權限，則從 Cube 處理資料採礦模型時可能會發生錯誤。 如需詳細資訊，請參閱[採礦結構：當資料來源為 OLAP Cube 時的處理問題](http://go.microsoft.com/fwlink/?LinkId=251610)。  
   
  **使用目前使用者的認證**  
  選取此選項即可讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件使用目前使用者的安全性認證來進行非正規 (out-of-line) 繫結、DMX OPENQUERY、本機 Cube 和採礦模型。  
@@ -76,7 +76,7 @@ ms.locfileid: "34026155"
  **預設值**或**繼承**  
  此對話方塊會針對在資料庫層級設定的模擬選項使用 [預設值]，而針對在資料來源層級設定的模擬選項使用 [繼承]。  
   
- **資料來源 – 繼承選項**  
+ **資料來源-繼承選項**  
   
  在資料來源層級，[繼承] 會指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 應該使用父物件的模擬選項。 在多維度模型中，父物件是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。 選擇 [繼承] 選項，可讓您集中管理這個資料來源及屬於相同資料庫之其他資料來源的模擬設定。 您必須在資料庫層級選擇特定 Windows 使用者名稱和密碼，這個選項才有意義。 否則，在資料來源上使用 [繼承] 搭配在資料庫上使用 [預設值]，會相當於使用服務帳戶選項。  
   
@@ -90,13 +90,13 @@ ms.locfileid: "34026155"
   
  如需資料庫層級之預設設定的詳細資訊，請參閱[設定多維度資料庫屬性 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/set-multidimensional-database-properties-analysis-services.md)。  
   
- **資料庫 – 預設選項**  
+ **資料庫的預設選項**  
 
  若為多維度資料庫，[預設值] 表示使用服務帳戶和目前使用者進行資料採礦作業。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立資料來源 &#40;SSAS 多維度&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [設定資料來源屬性 & #40;SSAS 多維度 & #41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
+ [設定資料來源屬性 &#40;SSAS 多維度&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 
   
   

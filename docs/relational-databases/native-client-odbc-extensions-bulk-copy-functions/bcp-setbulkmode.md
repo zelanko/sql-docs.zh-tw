@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea0f839fb1f1366827279d2a9254a88dbe0f8de6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5dcea48b96087770ff90202a9e0758c35203316
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854646"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532159"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,10 +72,10 @@ RETCODE bcp_setbulkmode (
   
 |屬性|描述|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應至在 BCP 中的 – c 選項。EXE，並使用 bcp_setcolfmt **BCP_FMT_TYPE**屬性設定為**SQLCHARACTER**。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應至在 BCP 中的 – w 選項。EXE 和與 bcp_setcolfmt **BCP_FMT_TYPE**屬性設定為**SQLNCHAR**。|  
-|BCP_OUT_NATIVE_TEXT_MODE|指定非字元類型的原生類型和字元類型的 Unicode。<br /><br /> 對應到 BCP 中的 – N 選項。EXE 和與 bcp_setcolfmt **BCP_FMT_TYPE**屬性設定為**SQLNCHAR**如果資料行類型是字串 （預設值如果不是字串）。|  
-|BCP_OUT_NATIVE_MODE|指定原生資料庫類型。<br /><br /> 對應到 BCP 中的 – n 選項。EXE 和與 bcp_setcolfmt **BCP_FMT_TYPE**屬性設為預設值。|  
+|BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應到 BCP 中的-c 選項。EXE，並使用 bcp_setcolfmt **BCP_FMT_TYPE**屬性設定為**SQLCHARACTER**。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應到 BCP 中的-w 選項。EXE 和與 bcp_setcolfmt **BCP_FMT_TYPE**屬性設定為**SQLNCHAR**。|  
+|BCP_OUT_NATIVE_TEXT_MODE|指定非字元類型的原生類型和字元類型的 Unicode。<br /><br /> 對應到 BCP 中的-N 選項。EXE 和與 bcp_setcolfmt **BCP_FMT_TYPE**屬性設定為**SQLNCHAR**如果資料行類型是字串 （預設值如果不是字串）。|  
+|BCP_OUT_NATIVE_MODE|指定原生資料庫類型。<br /><br /> 對應到 BCP 中的-n 選項。EXE 和與 bcp_setcolfmt **BCP_FMT_TYPE**屬性設為預設值。|  
   
  您不應該使用 bcp_setbulkmode 具有包含 bcp_setcolfmt、 bcp_control 和 bcp_readfmt 函式呼叫的順序。 例如，您不應該呼叫 bcp_control(BCPTEXTFILE) 和 bcp_setbulkmode。  
   
@@ -86,30 +86,30 @@ RETCODE bcp_setbulkmode (
  以下是產生函數順序錯誤的函式呼叫的一些範例：  
   
 ```  
-bcp_init(“table”, DB_IN);  
+bcp_init("table", DB_IN);  
 bcp_setbulkmode();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_setbulkmode();  
 bcp_readfmt();  
 ```  
   
 ```  
 bcp_init(NULL, DB_OUT);  
-bcp_control(BCPHINTS, “select …”);  
+bcp_control(BCPHINTS, "select ...");  
 bcp_setbulkmode();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_setbulkmode();  
 bcp_setcolfmt();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_readfmt();  
 bcp_setcolfmt();  
@@ -119,18 +119,18 @@ bcp_setcolfmt();
 bcp_init(NULL, DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_setbulkmode();  
-bcp_control(BCPHINTS, “select …”);  
+bcp_control(BCPHINTS, "select ...");  
 bcp_readfmt();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_columns();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_setcolfmt();  
 ```  

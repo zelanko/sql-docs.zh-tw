@@ -11,12 +11,12 @@ ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50997645272c5ec900a8a89a8da41a1da421ac5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c05e45f5641c2d325c5e7d05472e3881ee7c807
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105428"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531162"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>定義多對多關聯性
   定義維度時，通常每一個事實只聯結到一個維度成員，而單一維度成員可以與許多不同事實相關聯。 例如，每個客戶可以有許多張訂單，但是每張訂單只會屬於單一客戶。 在關聯式資料庫詞彙中，這稱為「一對多關聯性」。 不過，有時候單一事實可聯結到多個維度成員。 在關聯式資料庫詞彙中，這稱為「多對多關聯性」。 例如，客戶進行採購有許多原因，而採購原因可能與多個採購相關聯。 聯結資料表是用來定義與每項採購相關的銷售原因。 從這樣的關聯性建構的 [銷售原因] 維度會有多個成員與單一銷售交易有關。 當維度與事實資料表無直接相關時，多對多維度會將維度模型可擴展到典型星形結構描述之外，來支援複雜分析。  
@@ -26,7 +26,7 @@ ms.locfileid: "48105428"
  多對多維度的值是相異加總，也就是說，這些值最多只會彙總一次到 [所有成員] 中。  
   
 > [!NOTE]  
->  為了支援多對多維度關聯性，必須在資料來源檢視的所有相關資料表之間定義主索引鍵–外部索引鍵關聯性。 否則，當您在 [Cube 設計師] 的 [維度使用方式] 索引標籤中建立關聯性時，將無法選取正確的中繼量值群組。  
+>  為了支援多對多維度關聯性，必須定義主索引鍵-外部索引鍵關聯性中涉及的所有資料表之間的資料來源檢視。 否則，當您在 [Cube 設計師] 的 [維度使用方式] 索引標籤中建立關聯性時，將無法選取正確的中繼量值群組。  
   
  如需詳細資訊，請參閱[維度關聯性](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)和[定義多對多關聯性及多對多關聯性屬性](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48105428"
   
 5.  在 [新增/移除資料表] 對話方塊中，將 [DimSalesReason] 資料表和 [FactInternetSalesReason] 資料表新增至 [包含的物件] 清單，然後按一下 [確定]。  
   
-     請注意，會自動建立相關資料表之間的主索引鍵–外部索引鍵關聯性，因為那些關聯性已定義在基礎關聯式資料庫中 如果這些關聯性未定義在基礎關聯式資料庫中，您必須在資料來源檢視中定義它們。  
+     請注意，因為基礎關聯式資料庫中定義這些關聯性主索引鍵-外部索引鍵之間的關聯性相關的資料表會自動建立。 如果這些關聯性未定義在基礎關聯式資料庫中，您必須在資料來源檢視中定義它們。  
   
 6.  在 [格式] 功能表上，指向 [自動配置]，然後按一下 [圖表]。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48105428"
   
 1.  請針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師]，然後按一下 [Cube 結構] 索引標籤。  
   
-2.  以滑鼠右鍵按一下 [量值] 窗格中的任何位置，然後按一下 [新增量值群組]。 如需詳細資訊，請參閱[在多維度模型中建立量值和量值群組](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)。  
+2.  以滑鼠右鍵按一下 [量值] 窗格中的任何位置，然後按一下 [新增量值群組]。 如需詳細資訊，請參閱 [在多維度模型中建立量值和量值群組](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)。  
   
 3.  在 **新的量值群組**對話方塊中，選取`InternetSalesReason`中**從資料來源檢視中選取資料表**清單，然後再按**確定**。  
   
@@ -174,7 +174,7 @@ ms.locfileid: "48105428"
  [在量值群組內定義維度資料粒度](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [在 資料來源檢視設計師中使用圖表&#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [在資料來源檢視設計工具中使用圖表 &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [維度關聯性](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [定義多對多關聯性及多對多關聯性屬性](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

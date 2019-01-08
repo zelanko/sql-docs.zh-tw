@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: f683fdc6-0d4c-4793-8143-567616cb2094
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7bb964c435a641afb1fb5ac288d1f341ba45d716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c8ef9f6a2bcc4fb9b5f78bbc968693d348319e0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147014"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793340"
 ---
 # <a name="data-quality-matching-columns-mds-add-in-for-excel"></a>資料品質比對資料行 (適用於 Excel 的 MDS 增益集)
   在[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您比對資料之後，可在功能區的 [資料品質] 群組中按一下 [顯示詳細資料]，以顯示提供比對詳細資料的資料行。  
@@ -31,7 +30,7 @@ ms.locfileid: "48147014"
 |**SCORE**|表示群組中的記錄與樞紐記錄的相似度。 此分數由 DQS 決定。 如果沒有顯示分數，表示記錄是其他記錄的樞紐，或是找不到相符結果。|  
   
 ## <a name="see-also"></a>另請參閱  
- [比對的 MDS 增益集適用於 Excel 的資料品質](data-quality-matching-in-the-mds-add-in-for-excel.md)   
+ [適用於 Excel 的 MDS 增益集中的資料品質比對](data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [比對相似資料 &#40;適用於 Excel 的 MDS 增益集&#41;](match-similar-data-mds-add-in-for-excel.md)   
  [資料比對](../../data-quality-services/data-matching.md)  
   

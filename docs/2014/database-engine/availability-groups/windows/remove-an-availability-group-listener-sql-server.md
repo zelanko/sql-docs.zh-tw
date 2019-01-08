@@ -14,12 +14,12 @@ ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 102c116e24cc194590ff9ac91abf4c234700acc6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f5c1ee253c6fedde6b0954f36eb115253f876d0b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102128"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408490"
 ---
 # <a name="remove-an-availability-group-listener-sql-server"></a>移除可用性群組接聽程式 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell，從 AlwaysOn 可用性群組中移除可用性群組接聽程式。  
@@ -88,13 +88,13 @@ ms.locfileid: "48102128"
      下列範例會刪除 `AccountsAG` 可用性群組的接聽程式。 DNS 名稱是 AccountsAG_Listener。  
   
     ```  
-    ALTER AVAILABILITY GROUP AccountsAG REMOVE LISTENER ‘AccountsAG_Listener’;  
+    ALTER AVAILABILITY GROUP AccountsAG REMOVE LISTENER 'AccountsAG_Listener';  
     ```  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要移除可用性群組接聽程式**  
   
-1.  設為預設值 (`cd`) 裝載主要複本的伺服器執行個體。  
+1.  將預設值 (`cd`) 設定為裝載主要複本的伺服器執行個體。  
   
 2.  使用內建的 `Remove-Item` 指令程式移除接聽程式。 例如，下列命令會從名為 `MyListener` 的可用性群組中移除名為 `MyAg`的接聽程式。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "48102128"
     ```  
   
     > [!NOTE]  
-    >  若要檢視 cmdlet 的語法，請使用`Get-Help`指令程式在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 環境。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境中使用 `Get-Help` 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   

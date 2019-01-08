@@ -15,12 +15,12 @@ ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a792063b76beebfba4d0d7179e5bc5ed394d3f6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207748"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519867"
 ---
 # <a name="create-a-new-plan-guide"></a>建立新的計畫指南
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立計畫指南。 計畫指南是將查詢提示或固定的查詢計畫附加至查詢，以影響查詢的最佳化。 在計畫指南中，指定您要最佳化的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或包含您想要使用的查詢提示的 OPTION 子句，或者是您想要用來將查詢進行最佳化的特定查詢計畫。 在執行查詢的時候，查詢最佳化工具會比對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式與計畫指南，在執行階段將 OPTION 子句附加至查詢，或是使用特定的查詢計畫。  
@@ -43,7 +43,7 @@ ms.locfileid: "48207748"
   
 ###  <a name="Restrictions"></a> 限制事項  
   
--   sp_create_plan_guide 的引數必須依照顯示順序提供。 當您提供的參數值`sp_create_plan_guide`，或是完全不必須明確地指定名稱的所有參數。 例如，如果指定了 `@name =`，您也必須指定 `@stmt =`、`@type =` 等等。 同樣地，如果`@name =`省略，而且只提供參數值，也必須省略其餘參數名稱，並提供它們的值。 引數名稱僅供描述用途，以協助您了解語法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會驗證指定的參數名稱是否與使用該名稱之位置中的參數名稱相符。  
+-   sp_create_plan_guide 的引數必須依照顯示順序提供。 當您提供 `sp_create_plan_guide` 的參數值時，必須明確指定所有的參數名稱，或是完全不指定。 例如，如果指定了 `@name =`，您也必須指定 `@stmt =`、`@type =` 等等。 同樣地，如果省略 `@name =`，而只提供參數值，您也必須省略其餘參數名稱，只提供它們的值。 引數名稱僅供描述用途，以協助您了解語法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會驗證指定的參數名稱是否與使用該名稱之位置中的參數名稱相符。  
   
 -   您可以針對相同的查詢和批次或模組，建立一個以上的 OBJECT 或 SQL 計畫指南。 但是，在任何指定的時間內，只能啟用一個計畫指南。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48207748"
   
 1.  按一下加號，展開您要在其中建立計畫指南的資料庫，然後按一下加號展開 **[可程式性]** 資料夾。  
   
-2.  以滑鼠右鍵按一下 [計畫指南] 資料夾，然後選取 [新增計畫指南…]。  
+2.  以滑鼠右鍵按一下**計畫指南**資料夾，然後選取**新增計畫指南...**.  
   
 3.  在 **[新增維護計畫]** 對話方塊中的 **[名稱]** 方塊，輸入計畫指南的名稱。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48207748"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- creates a plan guide named Guide1 based on a SQL statement  

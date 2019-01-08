@@ -20,16 +20,16 @@ ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12fe4ceda2a6ee219763b2d07b23e73508e84363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0a075b96e7a29cef4a10f034147732bf03f64b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778366"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538877"
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle 函式
 **合規性**  
- 版本導入： ODBC 3.0 版的標準符合性： ISO 92  
+ 導入的版本：ODBC 3.0 版的標準合規性：ISO 92  
   
  **摘要**  
  **SQLAllocHandle**會配置環境、 連接、 陳述式或描述元控制代碼。  
@@ -96,7 +96,7 @@ SQLRETURN SQLAllocHandle(
 |HY010|函數順序錯誤|(DM) *HandleType*引數是利用 SQL_HANDLE_DBC，及**SQLSetEnvAttr** se nevolala 設定 SQL_ODBC_VERSION 環境屬性。<br /><br /> (DM) 的呼叫以非同步方式執行的函式**InputHandle**仍執行時並**SQLAllocHandle**呼叫函式與**HandleType**設定利用 SQL_HANDLE_STMT 或 SQL_HANDLE_DESC。|  
 |HY013|記憶體管理錯誤|*HandleType*引數已利用 SQL_HANDLE_DBC、 SQL_HANDLE_STMT 或 SQL_HANDLE_DESC;，因為基礎記憶體的物件無法存取，可能是因為記憶體不足，無法處理函式呼叫條件。|  
 |HY014|超出處理數目限制|所指定的驅動程式定義可獲配置的控制代碼類型的控制代碼的數目限制*HandleType*已達到引數。|  
-|HY092|屬性/選項識別碼無效|(DM) *HandleType*引數不是： SQL_HANDLE_ENV、 利用 SQL_HANDLE_DBC、 SQL_HANDLE_STMT，還是 SQL_HANDLE_DESC。|  
+|HY092|屬性/選項識別碼無效|(DM) *HandleType*引數不是：SQL_HANDLE_ENV、 利用 SQL_HANDLE_DBC、 SQL_HANDLE_STMT，還是 SQL_HANDLE_DESC。|  
 |HY117|連接已因為未知的交易狀態暫止。 只中斷連線，並允許唯讀的函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函式](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYC00|未實作選擇性功能|*HandleType*引數是 SQL_HANDLE_DESC，且驅動程式的 ODBC 2。*x*驅動程式。|  
 |HYT01|連接逾時過期|連接逾時期限到期之前的資料來源回應要求。 透過設定連接逾時期限**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  

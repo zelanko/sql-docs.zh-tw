@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6aabfe5664f5370cc1d5699403cde84c5108886b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098049"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780114"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 屬性 (啟動參數索引標籤)
   您可以使用這個對話方塊來加入或移除 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的啟動參數。 啟動參數可能會對 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 效能產生很大的影響。 加入或變更啟動參數之前，請先參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動選項＞主題。  
@@ -78,6 +77,6 @@ ms.locfileid: "48098049"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的網域帳戶 (如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 設定為使用網域帳戶來執行的話)。  
   
 ## <a name="books-online-references"></a>線上叢書參考  
- 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動參數的其他資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜如何：設定伺服器啟動選項 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員)＞。  
+ 如需其他資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]啟動參數，請參閱 「 如何：《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用：設定伺服器啟動選項 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員)＞。  
   
   

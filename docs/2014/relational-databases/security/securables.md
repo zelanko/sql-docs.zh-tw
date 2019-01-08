@@ -18,17 +18,17 @@ ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa9af5a2542581cad1b3a5f4be956cce9651d4f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170178"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532466"
 ---
 # <a name="securables"></a>[安全性實體]
   安全性實體是一種資源， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 授權系統會管理其存取權。 例如，資料表是安全性實體。 有些安全性實體可以包含在其他安全性實體內，因而建立稱為「範圍」的巢狀階層，以保護它們自己本身的安全。 安全性實體範圍為 **伺服器**、 **資料庫**以及 **結構描述**。  
   
-## <a name="securable-scope-server"></a>安全性實體範圍：伺服器  
+## <a name="securable-scope-server"></a>安全性實體範圍：[伺服器]  
  **伺服器** 安全性實體範圍包含下列安全性實體：  
   
 -   可用性群組  
@@ -41,7 +41,7 @@ ms.locfileid: "48170178"
   
 -   [資料庫]  
   
-## <a name="securable-scope-database"></a>安全性實體範圍：資料庫  
+## <a name="securable-scope-database"></a>安全性實體範圍：[資料庫]  
  **資料庫** 安全性實體範圍包含下列安全性實體：  
   
 -   應用程式角色  
@@ -83,7 +83,7 @@ ms.locfileid: "48170178"
   
 -   XML 結構描述集合  
   
--   物件 – 物件類別有下列成員：  
+-   物件 - 物件類別有下列成員：  
   
     -   Aggregate  
   

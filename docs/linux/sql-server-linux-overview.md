@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: bf1d3b2b494377eb964f4a30ea97a48bd1dfcff7
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 37cd2269d6d8fe413b730a111ad0a5f604ed8994
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269522"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408875"
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
 

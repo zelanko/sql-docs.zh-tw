@@ -13,15 +13,15 @@ ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c28b74a271fc2da7c99aeb1ab7b990b11e90fd3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6bcd9aa80170719a32ff3bf75f0ac36dc83cf021
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118710"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399773"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>根據範本建立單一預測查詢
-  如果您具有一個要用於預測的模型，但不希望將該模型對應至外部輸入資料集或產生大量預測，則單一查詢很有用。 使用單一查詢，您可以向模型提供一個或多個值，並且立即會看到預測值。  
+  當您有一種模型，您想要用於預測，但不想要將它對應至外部輸入資料集，或進行大量預測時，單一查詢便很有用。 使用單一查詢，您可以向模型提供一個或多個值，並且立即會看到預測值。  
   
  例如，下列 DMX 查詢表示針對目標郵寄模型 TM_Decision_Tree 的單一查詢。  
   
@@ -89,11 +89,11 @@ AS [t]
   
 10. 在查詢文字窗格中，尋找逗號和省略符號底下的紅色不規則曲線，表示語法錯誤。 請刪除省略符號，然後加入所需的任何其他查詢條件。 如果您沒有加入任何其他條件，請刪除逗號。  
   
-     本主題開頭所顯示的範例程式碼，其他查詢條件設定為`'45' as [Age]`。  
+     若為本主題開頭所顯示的範例程式碼，其他查詢條件設定為 `'45' as [Age]`。  
   
 11. 按一下 **[執行]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立預測&#40;基本資料採礦教學課程&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [建立預測 &#40;資料採礦基本教學課程&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

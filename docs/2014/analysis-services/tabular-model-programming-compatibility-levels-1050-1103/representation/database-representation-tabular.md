@@ -12,12 +12,12 @@ ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02fd33d8adf1ccee042f09c8b102401d5ba94435
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4470dc85b33930e136a9c2c1bbf47b1597753be5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116279"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519876"
 ---
 # <a name="database-representationtabular"></a>資料庫表示法 (表格式)
   在表格式模式下，資料庫是表格式模型中所有物件的容器。  
@@ -38,10 +38,10 @@ ms.locfileid: "48116279"
   
 ```csharp  
 using ADOMD = Microsoft.AnalysisServices.AdomdClient;  
-…  
+...  
    ADOMD.AdomdConnection currrentCnx = new ADOMD.AdomdConnection("Data Source=<<server\instance>>;Catalog=<<database>>");  
    currrentCnx.Open();  
-…  
+...  
   
 ```  
   
@@ -55,7 +55,7 @@ currentCnx.ChangeDatabase("myOtherDatabase");
 ## <a name="database-in-amo"></a>AMO 中的資料庫  
  當您要使用 AMO 管理資料庫物件時，請從 <xref:Microsoft.AnalysisServices.Server> 物件開始著手。 接著在資料庫集合中搜尋您的資料庫，或透過加入資料庫至該集合的方式建立新的資料庫。  
   
- 以下程式碼片段示範連接至伺服器及檢查出資料庫不存在之後建立空資料庫的步驟：  
+ 下列程式碼片段顯示的步驟，連接到伺服器，並建立空白資料庫，請檢查後的資料庫不存在：  
   
 ```  
   
@@ -88,6 +88,6 @@ catch (Exception createDBxc)
   
 ```  
   
- 實際了解如何使用 AMO 建立及操作資料庫表示法，請參閱表格式 AMO 2012 範例; 中的原始程式碼特別要檢查以下的原始程式檔： Database.cs。 提供此範例程式碼的用意只是為了支援這裡所說明的邏輯概念，您不應將其用於生產環境。  
+ 若想實際了解如何使用 AMO 建立及操作資料庫表示法，請參閱「表格式 AMO 2012」範例的原始程式碼，特別要檢查以下的原始程式檔：Database.cs。 提供此範例程式碼的用意只是為了支援這裡所說明的邏輯概念，您不應將其用於生產環境。  
   
   

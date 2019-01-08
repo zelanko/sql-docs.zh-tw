@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server], resource usage
@@ -25,12 +25,12 @@ ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ef07f6885b99393b05b85b530464040490dd7bd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135068"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777060"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>監視資源使用狀況 (系統監視器)
   如果您正在執行 Microsoft Windows 伺服器作業系統，請使用系統監視器圖形工具，測量 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的效能。 您可以檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件、效能計數器及其他物件 (如處理器、記憶體、快取、執行緒和處理序) 的行為。 這些物件每一個都有一組關聯的計數器，可測量裝置的使用狀況 (Usage)、佇列長度 (Queue Length)、延遲 (Delay) 和產能 (Throughput) 及內部壅塞的其他指示器。  

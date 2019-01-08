@@ -13,12 +13,12 @@ ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3086eff0e4a774e7f63e7ff876a9675668d5912
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 632703a1f7817986a6bc192006ef079af20cfb08
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707876"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527446"
 ---
 # <a name="comments-on-hellodata"></a>HelloData 的註解
 HelloData 應用程式會逐步引導一般的 ADO 應用程式的基本作業： 取得、 檢查、 編輯和更新資料。 當您啟動應用程式時，按一下第一個按鈕中，**取得資料**。 這會執行**GetData**副程式。  
@@ -74,4 +74,4 @@ HelloData 應用程式會逐步引導一般的 ADO 應用程式的基本作業�
  如需如何更新資料的詳細資訊，包括時該怎麼做資料時的伺服器變更您**資料錄集**是中斷連接，請參閱[正在更新及保存資料](../../../ado/guide/data/updating-and-persisting-data.md)。  
   
 ## <a name="formunload"></a>Form_Unload  
- **Form_Unload**副程式十分重要的幾個原因。 首先，因為這是一個範例應用程式，Form_Unload 就會清除資料庫應用程式結束前所做的變更。 第二，程式碼會示範如何執行命令，直接從開放**連接**使用的物件**Execute**方法。 最後，它會顯示執行不傳回資料列 – 查詢 （更新） 對資料來源的範例。
+ **Form_Unload**副程式十分重要的幾個原因。 首先，因為這是一個範例應用程式，Form_Unload 就會清除資料庫應用程式結束前所做的變更。 第二，程式碼會示範如何執行命令，直接從開放**連接**使用的物件**Execute**方法。 最後，它會顯示執行非資料列傳回查詢 （更新） 對資料來源的範例。

@@ -13,12 +13,12 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb1f29a3037cafdddc14973f77d7bb3d8c52f296
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: a284254c058eae0362fe23860e1b406a97f0bf49
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350266"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507253"
 ---
 # <a name="working-with-multidimensional-data"></a>使用多維度資料
 A*資料格集*是多維度資料的查詢的結果。 它包含的軸、 通常不超過四個座標軸通常只有兩個或三個集合。 *軸*是用來找出或篩選 cube 中的特定值的一或多個維度的成員集合。  
@@ -33,13 +33,13 @@ A*資料格集*是多維度資料的查詢的結果。 它包含的軸、 通常
   
 -   銷售人員  
   
--   地理位置 （也就是自然階層），各大洲、 國家/地區、 州等等  
+-   地理位置 （自然階層）-大陸、 國家/地區、 州等等  
   
--   季 — 季、 月數天  
+-   季-季數個月，天  
   
 -   Years  
   
--   量值： 銷售、 PercentChange，BudgetedSales  
+-   量值-銷售、 PercentChange BudgetedSales  
   
 -   產品  
   
@@ -50,19 +50,19 @@ A*資料格集*是多維度資料的查詢的結果。 它包含的軸、 通常
   
  此資料格集的特性如下所示：  
   
--   座標軸維度： 季銷售人員，地理位置  
+-   座標軸維度：季銷售人員，地理位置  
   
--   篩選的維度： 量值、 年，產品  
+-   篩選的維度：量值、 年，產品  
   
--   兩個座標軸: （x 或 0 軸） 的資料行和資料列 （y 或軸 1）  
+-   兩個座標軸：（x 或 0 軸） 的資料行和資料列 （y 或軸 1）  
   
 -   x 軸： 兩個巢狀維度，銷售人員和地理位置  
   
--   y 軸： 季維度  
+-   y 軸：季中的維度  
   
- X 軸有兩個巢狀的維度： 銷售人員和地理位置。 從地理位置，選取四個成員： 西雅圖、 波士頓舉行，美國南部和日本。 從銷售人員選取兩個成員： 情人和 Nash。 這會產生此軸 (8 = 4 * 2) 上為 8 個位置的總計。  
+ X 軸有兩個巢狀的維度：銷售人員和地理位置。 從地理位置，會選取四個成員：西雅圖、 波士頓舉行，美國南部和日本。 從銷售人員，會選取兩個成員：情人和 Nash。 這會產生此軸 (8 = 4 * 2) 上為 8 個位置的總計。  
   
- 每個座標以含有兩個成員的位置，從 [銷售員] 維度，而另一個從 [Geography] 維度的其中一個：  
+ 每個座標被以含有兩個成員-一個銷售人員維度中，從 [Geography] 維度的另一個位置：  
   
 ```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
@@ -76,7 +76,7 @@ A*資料格集*是多維度資料的查詢的結果。 它包含的軸、 通常
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- 資料格集、 資料格、 軸和位置全都是以 ADO MD 中對應的物件： [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)，[資料格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)，[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)，和[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
+ 資料格集、 資料格、 軸和位置全都被以 ADO MD 中對應的物件：[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)，[資料格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)，[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)，和[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [ADO MD 物件模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)   

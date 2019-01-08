@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 4ea55922-608c-4db2-8b3f-873862755bba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a040a25f541e3d11e47fcbb14b76002004b2371
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9692b27e2c9c366808ba70ca9bd7ff0c14771bf7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079718"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814680"
 ---
 # <a name="audit-add-role-event-class"></a>Audit Add Role 事件類別
   將資料庫角色加入資料庫或從資料庫移除資料庫角色時，就會發生 **Audit Add Role** 事件類別。 此事件類別會由 **sp_addrole** 和 **sp_droprole** 預存程序所使用。  

@@ -10,12 +10,12 @@ ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: caf97b65c9c7b2a0ce49cfcf42e2f90cd0db74cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 286e7b466e4868ab698168e6ac573d7e25422829
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679386"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407845"
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>使用範例主控台指令碼 FilesExecuting SSMA 主控台 (AccessToSQL)
 幾個範例檔案，以及產品提供的使用者參考和使用方式。 本章節描述的方式，輕鬆地自訂這些指令碼，以符合使用者需求。  
@@ -39,11 +39,11 @@ ms.locfileid: "47679386"
   
     -   如需有關如何連接到來源和目標伺服器的詳細資訊，請參閱 <<c0> [ 建立伺服器連線檔案&#40;AccessToSQL&#41; ](../../ssma/access/creating-the-server-connection-files-accesstosql.md) 。</c0>  
   
--   **VariableValueFileSample.xml:** 所有的變數，已使用範例主控台指令碼檔案和`ServersConnectionFileSample.xml`已定序，此檔案中。 使用者已取代範例變數的範例主控台指令碼的執行值與使用者定義的並將這個檔案傳遞做為其他命令列引數，以及指令碼檔案。  
+-   **VariableValueFileSample.xml:** 已使用範例主控台中的所有變數指令都碼檔案和`ServersConnectionFileSample.xml`已定序，此檔案中。 使用者已取代範例變數的範例主控台指令碼的執行值與使用者定義的並將這個檔案傳遞做為其他命令列引數，以及指令碼檔案。  
   
     如需有關變數值檔案的詳細資訊，請參閱[建立變數值檔案&#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)。  
   
--   **AssessmentReportGenerationSample.xml:** 此範例可讓使用者產生的 xml 評定報告可以用於由使用者分析他開始轉換並移轉資料之前。  
+-   **AssessmentReportGenerationSample.xml:** 此範例中，可讓使用者產生的 xml 評定報告可以用於由使用者分析他開始轉換並移轉資料之前。  
   
     在`generate-assessment-report`命令的使用者具有 mandatorily 變更變數的值 (請參閱**VariableValueFileSample.xml**) 中`object-name`屬性加入資料庫使用者所使用的名稱所。 根據指定的物件種類`object-type`值也會變更。  
   
@@ -59,8 +59,8 @@ ms.locfileid: "47679386"
   
     |命令名稱|描述|attribute|  
     |----------------|---------------|-------------|  
-    |`map-schema`|目標結構描述的來源資料庫的結構描述對應。|`source-schema:` 指定轉換所需的來源資料庫。<br /><br />`sql-server-schema`： 指定所要移轉到目標資料庫|  
-    |`convert-schema`|執行從來源到目標結構描述的結構描述轉換。<br /><br />如果使用者需要評估多個物件 / 資料庫他可以指定多個`metabase-object`節點中所示`convert-schema`命令的範例 4 的範例主控台指令碼檔案。|`object-name`： 指定來源資料庫/物件轉換所需的名稱。 請確認對應`object-type`會依據物件中指定的類型變更 `object-name`|  
+    |`map-schema`|目標結構描述的來源資料庫的結構描述對應。|`source-schema:` 指定轉換所需的來源資料庫。<br /><br />`sql-server-schema`:指定要移轉至目標資料庫|  
+    |`convert-schema`|執行從來源到目標結構描述的結構描述轉換。<br /><br />如果使用者需要評估多個物件 / 資料庫他可以指定多個`metabase-object`節點中所示`convert-schema`命令的範例 4 的範例主控台指令碼檔案。|`object-name`:指定來源資料庫/物件轉換所需的名稱。 請確認對應`object-type`會依據物件中指定的類型變更 `object-name`|  
     |`synchronize-target`|會使用目標資料庫，同步處理的目標物件。<br /><br />如果使用者需要評估多個物件 / 資料庫他可以指定多個`metabase-object`節點中所示`synchronize-target`命令的範例 3 的範例主控台指令碼檔案。|`object-name:` 指定 sql server 資料庫/物件建立時所需的名稱。 請確認對應`object-type`會依據物件中指定的類型變更 `object-name`|  
     |`migrate-data`|將來源資料移轉至目標。<br /><br />如果使用者需要評估多個物件 / 資料庫他可以指定多個`metabase-object`節點中所示`migrate-data`命令的範例 2 的範例主控台指令碼檔案。|`object-name:` 指定來源資料庫/資料表移轉所需的名稱。 請確認對應`object-type`會依據物件中指定的類型變更 `object-name`|  
   

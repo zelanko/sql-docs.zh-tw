@@ -17,12 +17,12 @@ ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f36432352d7b8351e7ae51840906c0d00ff67d78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4959243f633702fb0f0afd9b2444ae65666ef680
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076298"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506962"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>監視 Reporting Services 訂閱
   您可以透過使用者介面、Windows PowerShell 或記錄檔來監視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱。 您可以使用的監視選項取決於正在執行的報表伺服器模式。  
@@ -62,7 +62,7 @@ ms.locfileid: "48076298"
 |無法寫入檔案 \<檔案名稱>：\<訊息>|指出未成功傳遞到檔案共用位置；此訊息來自檔案共用傳遞延伸模組。|  
 |\<自訂狀態訊息>|關於傳遞成功與傳遞失敗的狀態訊息，是由傳遞延伸模組所提供。 如果您使用協力廠商或自訂傳遞延伸模組，就可能會提供其他的狀態訊息。|  
   
- 報表伺服器管理員也可以監視目前正在處理的標準訂閱。 無法監視資料驅動訂閱。 如需詳細資訊，請參閱 <<c0> [ 管理執行的處理序](manage-a-running-process.md)。  
+ 報表伺服器管理員也可以監視目前正在處理的標準訂閱。 無法監視資料驅動訂閱。 如需詳細資訊，請參閱 [管理執行中的處理序](manage-a-running-process.md)。  
   
  如果無法傳遞訂閱 (例如，若郵件伺服器無法使用)，傳遞延伸模組就會重試傳遞。 組態設定會指定嘗試傳遞的次數。 預設值為不重試。 在某些情況下，報表可能會在無資料狀況下處理 (例如，若資料來源為離線)，此時，訊息內文將會說明此一狀況。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48076298"
   
  下列是與訂閱相關的追蹤記錄檔範例錯誤訊息：  
   
--   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO: 將 EnableExecutionLogging 初始化至 'True'  如同 Server 系統所示 properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR: **傳送電子郵件時發生錯誤**。 例外狀況：System.Net.Mail.SmtpException: SMTP 伺服器需要安全的連線或是用戶端未經認證。 伺服器回應為：5.7.1 用戶端未經認證   於 System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   程式庫 ！WindowsService_7 ！ b60 ！ 05/20/2014年-22: 34:36:: i INFO:將 EnableExecutionLogging 初始化至 'True' 所指定的伺服器系統 properties.emailextension ！WindowsService_7 ！ b60 ！ 05/20/2014年-22: 34:41:: e ERROR:**傳送電子郵件時發生錯誤**。 Exception:System.Net.Mail.SmtpException:The SMTP server requires a secure connection or the client was not authenticated. The server response was:5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  記錄檔不包括有關報表是否開啟或實際上是否成功傳遞的資訊。 成功傳遞是指排程與傳遞處理器未產生錯誤，且報表伺服器已連接到郵件伺服器。 如果電子郵件在使用者信箱產生無法傳遞訊息錯誤，該資訊將不會包含在記錄檔中。 如需記錄檔的詳細資訊，請參閱 [Reporting Services 記錄檔和來源](../report-server/reporting-services-log-files-and-sources.md)。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48076298"
   
 2.  開啟報表的內容功能表 (**…**)。  
   
-3.  選取展開的功能表選項 (**...**)。  
+3.  選取展開的功能表選項 (**…**)。  
   
 4.  選取 [管理訂閱]   
   
@@ -100,7 +100,7 @@ ms.locfileid: "48076298"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |date|處理|區域|類別目錄|層級|Correlation|訊息|  
-|5/21/2014 14:34:06:15|應用程式集區：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|報表伺服器電子郵件延伸模組|未預期|(空的)|**Error sending email.** 例外狀況：System.net.mail.smtpexception: 信箱無法使用。 伺服器回應為：5.7.1 用戶端不具權限，無法以此寄件者傳送  於 System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  於 System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  於 System.Net.Mail.SmtpClient.Send(MailMessage message)  於 Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|5/21/2014 14:34:06:15|應用程式集區：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|報表伺服器電子郵件延伸模組|未預期|(空的)|**Error sending email.** Exception:System.Net.Mail.SmtpException:Mailbox unavailable. The server response was:5.7.1 Client does not have permissions to send as this sender  at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage message)  at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> 使用 PowerShell 監視訂閱  
  例如，您可以使用 PowerShell 指令碼查看原生模式或 SharePoint 模式訂閱的狀態，請參閱 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md)。  

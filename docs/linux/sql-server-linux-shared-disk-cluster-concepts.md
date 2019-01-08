@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 668bf72f2673b123ce5a238dbbf5cd7af43604d4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cabebb91ecb7d276066cb0f1c6a2f09c633d0ba0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676527"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420529"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>容錯移轉叢集執行個體-在 Linux 上的 SQL Server
 
@@ -59,7 +59,7 @@ Pacemaker 叢集只能有最多 16 個節點包含 Corosync，因此單一 FCI �
 FCI 在 DNS 中的名稱應該與建立 Pacemaker 叢集內的 FCI 資源名稱相同。
 必須在 DNS 中註冊的名稱和 IP 位址。
 
-## <a name="shared-storage"></a>共用儲存
+## <a name="shared-storage"></a>共用存放裝置
 所有 Fci，無論它們是在 Linux 或 Windows Server，都需要某種形式的共用存放裝置。 此存放裝置會向所有的伺服器，可能可以裝載 FCI 中，但只有一部伺服器可以在任何時候 fci 中使用的儲存體。 適用於 Linux 下的共用儲存體的選項如下：
 
 - iSCSI

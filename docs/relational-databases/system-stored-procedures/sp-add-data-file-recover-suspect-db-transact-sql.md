@@ -18,12 +18,12 @@ ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e6c7d43646f63d54cca08c736e41077883e30053
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: adc6a2c927c885e42afaf177a2e5a2703bf207c0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720582"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520307"
 ---
 # <a name="spadddatafilerecoversuspectdb-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,27 +46,27 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@dbName=** ] **'***database* **'**  
+ [  **@dbName=** ] **'**_資料庫_ **'**  
  這是資料庫的名稱。 *資料庫*已**sysname**，沒有預設值。  
   
- [ **@filegroup=** ] **'***filegroup_name* **'**  
+ [  **@filegroup=** ] **'**_filegroup_name_ **'**  
  這是檔案要加入其中的檔案群組。 *filegroup_name*已**nvarchar(260)**，預設值是 NULL，表示主要檔案。  
   
- [ **@name=** ] **'***logical_file_name* **'**  
+ [  **@name=** ] **'**_logical_file_name_ **'**  
  這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中用來參考檔案的名稱。 在伺服器中，這個名稱必須是唯一的。 *logical_file_name*已**nvarchar(260)**，沒有預設值。  
   
- [ **@filename=** ] **'***os_file_name* **'**  
+ [  **@filename=** ] **'**_os_file_name_ **'**  
  這是作業系統針對檔案所用的路徑和檔案名稱。 這個檔案必須在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體中。 *os_file_name*已**nvarchar(260)**，沒有預設值。  
   
- [ **@size=** ] **'***size* **'**  
+ [  **@size=** ] **'**_大小_ **'**  
  這是檔案的初始大小。 *大小*已**nvarchar(20)**，預設值是 NULL。 請指定一個整數，不包括小數點。 您可以利用 MB 和 KB 後置詞來指定百萬位元組或千位元組。 預設值是 MB。 最小值是 512 KB。 如果*大小*未指定，預設值為 1 MB。  
   
- [ **@maxsize=** ] **'***max_size* **'**  
+ [  **@maxsize=** ] **'**_max_size_ **'**  
  這是檔案所能成長的大小上限。 *max_size*已**nvarchar(20)**，預設值是 NULL。 請指定一個整數，不包括小數點。 您可以利用 MB 和 KB 後置詞來指定百萬位元組或千位元組。 預設值是 MB。  
   
  如果*max_size*未指定，檔案會成長到磁碟已滿。 當磁碟將滿時，[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄檔會警告管理員。  
   
- [ **@filegrowth=** ] **'***growth_increment* **'**  
+ [  **@filegrowth=** ] **'**_growth_increment_ **'**  
  這是每次需要新空間時，檔案所增加的空間量。 *growth_increment*已**nvarchar(20)**，預設值是 NULL。 0 值表示不成長。 請指定一個整數，不包括小數點。 您可以用 MB、KB 或百分比 (%) 來指定這個值。 當指定 % 時，成長的遞增是增量發生時之指定的檔案大小百分比。 如果指定的數字不含 MB、KB 或 % 後置詞，預設值是 MB。  
   
  如果*growth_increment*是 NULL，預設值是 10%，而且最小值為 64 KB。 指定的大小會捨入到最接近 64 KB。  

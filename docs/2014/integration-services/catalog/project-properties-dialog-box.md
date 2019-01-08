@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isprojectprop.general.f1
@@ -14,12 +13,12 @@ ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d657e1339f454045a4a1e536610a58cd27e94c8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48e299e72343987d0738c739404284314f23dcf5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054228"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759040"
 ---
 # <a name="project-properties-dialog-box"></a>專案屬性對話方塊
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案是部署單位。 每個專案可以包含封裝、參數和環境參考。 專案為安全性物件，且可以定義資料庫主體的權限。 重新部署專案時，可以將舊版專案儲存到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中。  
@@ -38,7 +37,7 @@ ms.locfileid: "48054228"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
-     您正在連接到主控 SSISDB 資料庫之 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體。  
+     您正在連線到裝載 SSISDB 資料庫的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體。  
   
 2.  在 [物件總管] 中，展開樹狀目錄以顯示 **[Integration Services 目錄]** 節點。  
   

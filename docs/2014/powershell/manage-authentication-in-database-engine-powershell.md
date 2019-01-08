@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 61dbea86eabc0395b2f314f170aa97c5067880fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0992e3a956a2b498d92186fa91c0ed4fbddf6102
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163558"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778520"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>管理 Database Engine PowerShell 中的驗證
-  依預設，連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體時， [!INCLUDE[ssDE](../includes/ssde-md.md)]PowerShell 元件會使用 Windows 驗證。 您可以使用 SQL Server 驗證，藉由定義 PowerShell 虛擬磁碟機，或藉由指定`–Username`並`–Password`參數`Invoke-Sqlcmd`。  
+  依預設，連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體時， [!INCLUDE[ssDE](../includes/ssde-md.md)]PowerShell 元件會使用 Windows 驗證。 藉由定義 PowerShell 虛擬磁碟機，或指定 `-Username` 的 `-Password` 和 `Invoke-Sqlcmd` 參數，即可使用 SQL Server 驗證。  
   
-1.  **Before you begin:**  [Permissions](#Permissions)  
+1.  **開始之前：**[Permissions](#Permissions)  
   
-2.  **使用下列項目，設定驗證：**[虛擬磁碟機](#SQLAuthVirtDrv)、[Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
+2.  **若要設定驗證，請使用：**[虛擬磁碟機](#SQLAuthVirtDrv)， [Invoke-sqlcmd](#SQLAuthInvSqlCmd)  
   
 ##  <a name="Permissions"></a> 權限  
  您在 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的執行個體中可執行的所有動作，都是透過授與用來連接至執行個體之驗證認證的權限所控制。 依預設， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者和 Cmdlet 會使用用來建立 [!INCLUDE[ssDE](../includes/ssde-md.md)]之 Windows 驗證連接的 Windows 帳戶。  
@@ -41,7 +40,7 @@ ms.locfileid: "48163558"
   
     3.  使用 `new-object` 建立認證物件。  
   
-    4.  使用`new-psdrive`建立虛擬磁碟機具有已提供認證。  
+    4.  使用 `new-psdrive` 建立具有已提供認證的虛擬磁碟機。  
   
 2.  呼叫此函數，以建立具有已提供認證的虛擬磁碟機。  
   
@@ -71,7 +70,7 @@ cd SQLAuth
 ##  <a name="SQLAuthInvSqlCmd"></a> 使用 Invoke-Sqlcmd 的 SQL Server 驗證  
  **搭配使用 Invoke-Sqlcmd 與 SQL Server 驗證**  
   
-1.  使用`–Username`參數來指定登入識別碼，而`–Password`參數來指定相關聯的密碼。  
+1.  使用 `-Username` 參數指定登入識別碼，而 `-Password` 參數則可指定相關聯的密碼。  
   
 ### <a name="example-invoke-sqlcmd"></a>範例 (Invoke-Sqlcmd)  
  此範例使用 read-host Cmdlet 提示使用者輸入密碼，然後使用 SQL Server 驗證進行連接。  
@@ -80,12 +79,12 @@ cd SQLAuth
 ## Prompt the user for their password.  
 $pwd = read-host -AsSecureString -Prompt "Password"  
   
-Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" –Username “MyLogin” –Password $pwd  
+Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" -Username "MyLogin" -Password $pwd  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server PowerShell](sql-server-powershell.md)   
  [SQL Server PowerShell 提供者](sql-server-powershell-provider.md)   
- [Invoke-Sqlcmd Cmdlet](../database-engine/invoke-sqlcmd-cmdlet.md)  
+ [Invoke-Sqlcmd 指令程式](../database-engine/invoke-sqlcmd-cmdlet.md)  
   
   

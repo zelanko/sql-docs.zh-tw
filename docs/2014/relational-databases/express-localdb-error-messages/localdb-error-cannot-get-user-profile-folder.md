@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: supportability
+ms.technology: performance
 ms.topic: reference
 ms.assetid: 3625c9cb-579c-4b4b-be74-0d4de7b64bb6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04996d4b965eb8f9a267251f37f3287d28993e0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 976f672285104b559112d91cf1f83276883cf543
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228358"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780880"
 ---
 # <a name="localdberrorcannotgetuserprofilefolder"></a>LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER
     

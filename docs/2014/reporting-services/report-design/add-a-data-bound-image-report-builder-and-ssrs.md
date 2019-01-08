@@ -11,12 +11,12 @@ ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a82bf63ca0c70543d816cbd191b1ff9a36ced317
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9883e7e21e58424fbc6280ad99ac323becd9b00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211468"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526337"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>加入資料繫結影像 (報表產生器及 SSRS)
   報表可以包含儲存在資料庫內之影像的參考。 這類影像稱為「資料繫結影像」。 出現在產品清單中產品名稱旁邊的圖片就是資料繫結影像的範例。  
@@ -42,16 +42,16 @@ ms.locfileid: "48211468"
   
 7.  在 **[使用此欄位]** 中，選取包含您報表中之影像的欄位。  
   
-8.  在 **[使用此 MIME 類型]** 中，選取影像的 MIME 類型或檔案格式，例如 bmp。  
+8.  在 [使用此 MIME 類型]中，選取影像的 MIME 類型或檔案格式，例如 bmp。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      影像預留位置會出現在報表設計介面上。  
   
 ## <a name="see-also"></a>另請參閱  
- [映像&#40;報表產生器及 SSRS&#41;](images-report-builder-and-ssrs.md)   
- [將影像內嵌在報表中&#40;報表產生器及 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [加入外部影像&#40;報表產生器及 SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
+ [影像 &#40;報表產生器及 SSRS&#41;](images-report-builder-and-ssrs.md)   
+ [在報表中內嵌影像 &#40;報表產生器及 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [加入外部影像 &#40;報表產生器及 SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
  [影像屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

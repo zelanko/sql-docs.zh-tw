@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 720956a936127cf3fec82fabc4e140782fe2e0da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f76729b419fccf3d17e66ddd8ab00e8b54b1b264
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144833"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398071"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>了解 DMX Select 陳述式
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "50144833"
   
      在此情況下，您需要鑽研採礦結構 (也就是您的資料網域)，並查看 [Gender]、[Bike Buyer] 等資料行中的個別資料列。  
   
- **重要事項︰** 任何項目是否包含在運算式清單，或在**所在**子句都必須來自所定義的資料網域**FROM**子句。 您不能混用資料網域。  
+ **重要：** 任何項目是否包含在運算式清單，或在**何處**子句都必須來自所定義的資料網域**FROM**子句。 您不能混用資料網域。  
   
 ##  <a name="Select_Types"></a> 選取類型  
  語法**選取**陳述式支援許多不同的工作。 請使用下列模式執行這些工作：  

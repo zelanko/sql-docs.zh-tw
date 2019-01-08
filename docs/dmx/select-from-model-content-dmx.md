@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e00a7f272362a103e94d8cac686201ce79c06322
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3498e841b70ca7a19d9353d277221a88b9cbf86f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040346"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512248"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM&lt;模型&gt;。內容 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  選擇性。 傳回純量值的運算式。  
   
 ## <a name="remarks"></a>備註  
- **SELECT FROM** *\<模型 > * * *。內容** 陳述式會傳回每個演算法特定的內容。 例如，您可能想要使用自訂應用程式中關聯規則模型之所有規則的描述。 您可以使用**SELECT FROM\<模型 >。內容**陳述式來傳回模型之 NODE_RULE 資料行中的值。  
+ **SELECT FROM** _\<模型 >_**。內容**陳述式會傳回每個演算法特定的內容。 例如，您可能想要使用自訂應用程式中關聯規則模型之所有規則的描述。 您可以使用**SELECT FROM\<模型 >。內容**陳述式來傳回模型之 NODE_RULE 資料行中的值。  
   
  下表列出包含在採礦模型內容中的資料行。  
   
@@ -62,7 +62,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |ATTRIBUTE_NAME|對應至節點之屬性的名稱。|  
 |NODE_NAME|節點的名稱。|  
 |NODE_UNIQUE_NAME|模型內節點的唯一名稱。|  
-|NODE_TYPE|代表節點類型的整數。 執行個體時提供 SQL Server 登入。|  
+|NODE_TYPE|代表節點類型的整數。 .|  
 |NODE_GUID|節點 GUID。 如果沒有 GUID，則為 NULL。|  
 |NODE_CAPTION|與節點相關聯的標籤或標題。 主要用於顯示用途。 如果標題不存在，就會傳回 NODE_NAME。|  
 |CHILDREN_CARDINALITY|節點擁有的子系數目。|  
@@ -102,7 +102,7 @@ WHERE ISDESCENDANT('0')
   
  預期的結果：  
   
- 由於此模型是決策樹模型，因此模型父節點的下階包含單一臨界統計資料節點、代表可預測屬性的節點，以及包含輸入屬性與值的多個節點。 如需詳細資訊，請參閱[決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)。  
+ 由於此模型是決策樹模型，因此模型父節點的下階包含單一臨界統計資料節點、代表可預測屬性的節點，以及包含輸入屬性與值的多個節點。 如需詳細資訊，請參閱 [決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)。  
   
 ## <a name="using-the-flattened-keyword"></a>使用 FLATTENED 關鍵字  
  採礦模型內容經常包含巢狀資料表資料行中，關於模型的有趣資訊。 FLATTENED 關鍵字可讓您從巢狀資料表資料行擷取資料，而不必使用支援階層式資料列集的提供者。  
@@ -137,7 +137,7 @@ WHERE NODE_TYPE = 26
   
  範例結果：  
   
-|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
+|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
 |TM_NaiveBayes|Bike Buyer|Missing|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  

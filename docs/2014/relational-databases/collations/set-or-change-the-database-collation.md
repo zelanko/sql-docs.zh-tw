@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - collations [SQL Server], database
@@ -14,12 +13,12 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c554ec2d49e9e03c3381a54b8c834514bd16e34
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa7359fc1436cfbb4222dcc63f9bb700720bf3cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071908"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772560"
 ---
 # <a name="set-or-change-the-database-collation"></a>設定或變更資料庫定序
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中設定及變更資料庫定序。 如果沒有指定定序，會使用伺服器定序。  
@@ -58,7 +57,7 @@ ms.locfileid: "48071908"
   
     -   預存程序與使用者定義函數的任何現有 `char`、`varchar`、`text`、`nchar`、`nvarchar`，或 `ntext` 參數和純量傳回值，都會變更為新定序。  
   
-    -   `char`， `varchar`， `text`， `nchar`， `nvarchar`，或`ntext`系統資料類型，以及根據這些系統資料類型的所有使用者定義資料類型都會變更為新的預設定序。  
+    -   `char`、`varchar`、`text`、`nchar`、`nvarchar`，或 `ntext` 系統資料類型，以及以這些系統資料類型為基礎的所有使用者定義資料類型，都會變更為新的預設定序。  
   
 -   您可以使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 陳述式的 COLLATE 子句，變更在使用者資料庫中建立的任何新物件的定序。 此陳述式不會變更現有使用者自訂資料表中的資料行定序。 您可以使用 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)的 COLLATE 子句進行變更。  
   
@@ -91,7 +90,7 @@ ms.locfileid: "48071908"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [COLLATE](/sql/t-sql/statements/collations) 子句來指定定序名稱。 範例會建立使用 `MyOptionsTest` 定序的 `Latin1_General_100_CS_AS_SC` 資料庫。 在您建立資料庫之後，執行 `SELECT` 陳述式以驗證設定。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例示範如何使用 [COLLATE](/sql/t-sql/statements/collations) 子句來指定定序名稱。 範例會建立使用 `MyOptionsTest` 定序的 `Latin1_General_100_CS_AS_SC` 資料庫。 在您建立資料庫之後，執行 `SELECT` 陳述式以驗證設定。  
   
 ```tsql  
 USE master;  
@@ -117,7 +116,7 @@ GO
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何在 [ALTER DATABASE](/sql/t-sql/statements/collations) 陳述式中使用 [COLLATE](/sql/t-sql/statements/alter-database-transact-sql) 子句，以變更定序名稱。 執行 `SELECT` 陳述式以驗證變更。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例示範如何在 [ALTER DATABASE](/sql/t-sql/statements/collations) 陳述式中使用 [COLLATE](/sql/t-sql/statements/alter-database-transact-sql) 子句，以變更定序名稱。 執行 `SELECT` 陳述式以驗證變更。  
   
 ```tsql  
 USE master;  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1716b3b6e5794d8dbb8d9ee0195ed642db6df054
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 37c313484b2ee7ff87668cbfdd0b87ed52cdaf98
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981100"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523966"
 ---
 # <a name="import-data-by-using-a-native-query"></a>使用原生查詢匯入資料
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "37981100"
 2. 在 **查詢編輯器**，按一下**查詢** > **新查詢** > **空白查詢**
 3. 在公式列中，輸入
     ```
-    = Value.NativeQuery(#"DATA SOURCE NAME", "SELECT * FROM …")
+    = Value.NativeQuery(#"DATA SOURCE NAME", "SELECT * FROM ...")
     ```
 4. 在中建立資料表時，**查詢**，以滑鼠右鍵按一下查詢，然後選取**建立新的資料表**。 新的資料表會有同名的查詢。
 
