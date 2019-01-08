@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], servers
@@ -13,12 +13,12 @@ ms.assetid: 938bb035-e07a-4082-9f93-229d9feb6b06
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de4714d28808bc208154abbfba400f3ece888642
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d57657d47f28dc0502b83375f563fa9df737831
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196518"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751100"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>利用 SQL Server Management Studio 管理伺服器
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是一個豐富的整合式管理用戶端設計用來滿足[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]系統管理員的伺服器管理需求。 在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中可以使用 [物件總管] 來完成管理工作，其中可以讓您連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系列的任何伺服器，並以圖形方式瀏覽其內容。 伺服器可以是 [!INCLUDE[ssDE](../includes/ssde-md.md)]、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的執行個體。  

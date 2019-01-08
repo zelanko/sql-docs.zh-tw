@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
@@ -14,12 +13,12 @@ ms.assetid: 6a0ad817-3d8d-4495-889d-c66a7ef9e8bb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 163332d281309ff2a3deef16ac8f96f0517346da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e80a18cef595ae3543aba8a656aca9267607e38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147301"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809550"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>重新執行追蹤資料表 (SQL Server Profiler)
   重新執行是開啟儲存的追蹤並重新執行該追蹤的能力。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 多執行緒播放引擎功能，可以模擬使用者連接及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。 重新執行在排解應用程式或處理序的疑難問題時很有用。 您識別問題並實作更正時，針對更正的應用程式或處理序執行發現可能問題的追蹤。 然後，重新執行原始追蹤並比較結果。  

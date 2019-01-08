@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd497cc466d7dfb11e471be2472b7d7b8bf534fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71fb4daabcdb0eef03e615f595df20d555673a24
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764776"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980204"
 ---
 # <a name="sysdmiopendingiorequests-transact-sql"></a>sys.dm_io_pending_io_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,14 +39,15 @@ ms.locfileid: "47764776"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**io_completion_request_address**|**varbinary(8)**|IO 要求的記憶體位址。 不可為 Null。|  
-|**io_type**|**varchar(7)**|暫止 I/O 要求的類型。 不可為 Null。|  
+|**io_type**|**nvarchar(60)**|暫止 I/O 要求的類型。 不可為 Null。|  
+|**io_pending_ms_ticks**|**bigint**|僅供內部使用。 不可為 Null。| 
 |**io_pending**|**int**|指出 I/O 要求是否暫止，或已由 Windows 完成。 I/O 要求仍然暫止，即使 Windows 已完成該要求，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尚未執行內容切換，來處理 I/O 要求及從這份清單中移除它。 不可為 Null。|  
 |**io_completion_routine_address**|**varbinary(8)**|完成 I/O 要求時要呼叫的內部函數。 可為 Null。|  
 |**io_user_data_address**|**varbinary(8)**|僅供內部使用。 可為 Null。|  
 |**scheduler_address**|**varbinary(8)**|發出這項 I/O 要求所在的排程器。 I/O 要求將出現在排程器的暫止 I/O 清單上。 如需詳細資訊，請參閱 < [sys.dm_os_schedulers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。 不可為 Null。|  
 |**io_handle**|**varbinary(8)**|用於 I/O 要求之檔案的檔案控制代碼。 可為 Null。|  
 |**io_offset**|**bigint**|I/O 要求的位移。 不可為 Null。|  
-|**io_pending_ms_ticks**|**int**|僅供內部使用。 不可為 Null。|  
+|**io_handle_path**|**nvarchar(256)**| 會在 I/O 要求的檔案路徑。 可為 Null。|
 |**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   
 ## <a name="permissions"></a>Permissions  

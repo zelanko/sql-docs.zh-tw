@@ -1,5 +1,5 @@
 ---
-title: SQL Server R Services-結果和資源的效能 |Microsoft Docs
+title: SQL Server R Services-「 結果 」 和 「 資源 」-SQL Server Machine Learning 服務的效能
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 81176a5a63b0cd8319d985ef72889a5c972fac63
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 3ee5a1d2c656ef420c410c75333546ab8fbf539c
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697496"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645467"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R services 的效能： 結果和資源
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51697496"
 
 本主題列出第一個案例研究的詳細的結果。 針對第二個案例研究，摘要說明整體的結果。 在本主題結尾處是連結至所有指令碼和範例資料，以及原始作者所使用的資源。
 
-## <a name="performance-case-study-airline-dataset"></a>效能案例研究： 航班資料集
+## <a name="performance-case-study-airline-dataset"></a>效能案例研究：航班資料集
 
 此案例研究，由 SQL Server R Services 開發小組測試各種最佳化的效果。 建立單一 rxLogit 模型和計分方式航線資料集上執行。 在訓練和評分來評估個別影響的程序期間套用最佳化。
 
@@ -62,7 +62,7 @@ ms.locfileid: "51697496"
 
 **範例時間**
 
-```
+```text
 Running IntCol Test. Using airlineWithIntCol table.
 run 1 took 3.66 seconds
 run 2 took 3.44 seconds
@@ -90,7 +90,7 @@ metric time pct
 
 第一項測試會比較使用壓縮和單欄式資料表，以減少資料的大小。
 
-| 資料表名稱            | 資料列     | 已保留   | data       | index_size | 未使用  | 節省 % (已保留) |
+| 資料表名稱            | 資料列     | 已保留   | 資料       | index_size | 未使用  | 節省 % (已保留) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816 KB | 2972160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784 KB  | 623744 KB  | 1352 KB    | 688 KB  | 79%                 |
@@ -273,7 +273,7 @@ Cube 參數引數使用明顯改善效能。
 
 從資料表載入定型的模型，顯然是更快的方法，來進行預測。 我們建議您避免建立模型，以及執行評分全都放在相同的指令碼。
 
-## <a name="case-study-optimization-for-the-resume-matching-task"></a>案例研究： 繼續比對工作的最佳化
+## <a name="case-study-optimization-for-the-resume-matching-task"></a>案例研究：繼續比對工作的最佳化
 
 繼續比對的模型開發由 Microsoft 資料科學家 Ke Huang 來測試 SQL Server 中的 R 程式碼的效能和進行如此說明資料科學家建立可調整的企業級解決方案。
 
@@ -349,9 +349,9 @@ RevoScaleR 和 MicrosoftML 套件用來訓練預測模型中複雜的 R 解決�
 
 + 效能測試指令碼和資料的連結：[範例資料和 SQL Server 最佳化研究的指令碼](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
 
-+ 文件說明繼續比對的解決方案：[最佳化祕訣和訣竅 SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
++ 描述繼續比對解決方案的文章：[最佳化提示和訣竅 SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
-+ 用於繼續比對方案最佳化 SQL 指令碼： [GitHub 存放庫](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
++ 用於繼續比對方案最佳化 SQL 指令碼：[GitHub 存放庫](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
 
 ### <a name="learn-about-windows-server-management"></a>深入了解 Windows server 管理
 
@@ -365,11 +365,11 @@ RevoScaleR 和 MicrosoftML 套件用來訓練預測模型中複雜的 R 解決�
 
 ### <a name="learn-about-sql-server-optimizations"></a>深入了解 SQL Server 最佳化
 
-+ [重新組織與重建索引](../../relational-databases\indexes\reorganize-and-rebuild-indexes.md)
++ [重新組織與重建索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
 + [記憶體最佳化的資料表簡介](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
 
-+ [示範： 記憶體內部 oltp 的效能改善](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
++ [示範：記憶體中 OLTP 的效能改善](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
 
 + [資料壓縮](../../relational-databases/data-compression/data-compression.md)
 
@@ -400,7 +400,7 @@ RevoScaleR 和 MicrosoftML 套件用來訓練預測模型中複雜的 R 解決�
 
 ## <a name="other-articles-in-this-series"></a>在這一系列其他文章
 
-[效能微調 – 簡介](sql-server-r-services-performance-tuning.md)
+[效能微調的 R-簡介](sql-server-r-services-performance-tuning.md)
 
 [R-SQL Server 組態的效能微調](sql-server-configuration-r-services.md)
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], Windows Synchronization Manager
@@ -14,17 +13,17 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d12b1cc5b4626ab9093639d69a7ee724f2cc745d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb3e20913a2a7232aeeb93132fb6a8d0bb69e532
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147428"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782790"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>使用 Windows Synchronization Manager 同步處理訂閱 (Windows Synchronization Manager)
   如果 Microsoft[!INCLUDE[msCoName](../../includes/msconame-md.md)] 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows Synchronization Manager 在相同的電腦上執行，則 Synchronization Manager 只能用於同步處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的訂閱 (它也可以用於同步處理離線檔案和網頁)。 若要使用 Synchronization Manager：  
   
-1.  在 [訂閱屬性 - \<訂閱者>: \<訂閱資料庫>] 對話方塊中，啟用同步處理提取訂閱與 Windows Synchronization Manager。 如需存取此對話方塊的詳細資訊，請參閱[檢視及修改提取訂閱屬性](view-and-modify-pull-subscription-properties.md)。  
+1.  啟用提取訂閱與在 Windows Synchronization Manager 同步處理**訂用帳戶屬性-\<訂閱者 >:\<訂閱資料庫 >**  對話方塊。 如需存取此對話方塊的詳細資訊，請參閱[檢視及修改提取訂閱屬性](view-and-modify-pull-subscription-properties.md)。  
   
 2.  透過 Windows 中的 **[開始]** 功能表存取 Synchronization Manager。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "48147428"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>若要使用 Windows Synchronization Manager 啟用提取訂閱同步處理  
   
-1.  在 [訂閱屬性 - \<訂閱者>: \<訂閱資料庫>] 對話方塊的 [一般] 頁面中，針對 [使用 Windows Synchronization Manager] 選項選取 [啟用]。  
+1.  在上**一般**頁**訂用帳戶屬性-\<訂閱者 >:\<訂閱資料庫 >**  對話方塊中，選取為值**啟用**如**使用 Windows Synchronization Manager**選項。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -59,7 +58,7 @@ ms.locfileid: "48147428"
   
 2.  在 **[SQL Server 訂閱屬性]** 對話方塊中，按一下 **[重新初始化訂閱]**。  
   
-3.  按一下 **[是]**。  
+3.  按一下 [ **是**]。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -1,5 +1,5 @@
 ---
-title: 教學課程：建立矩陣報表 (報表產生器) | Microsoft Docs
+title: 教學課程：建立矩陣報表 （報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 659afc2b2d1536abcf34dad5a40a48efe0f17169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45e488f189cf9068531b927b1b28bfde621555da
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159498"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353388"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>教學課程：建立矩陣報表 (報表產生器)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>教學課程：建立矩陣報表 （報表產生器）
   本教學課程將教導您如何根據範例銷售資料建立基本矩陣報表。 矩陣具有巢狀資料列和資料行群組，以及一個相鄰資料行群組。 此外，您還將學習如何格式化資料行和旋轉文字。 下圖顯示報表，與您將要建立的報表相似。  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
   
- 本教學課程即將建立的報表另有一個增強型版本，可從範例 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 報表產生器報表取得。 如需有關下載這個範例報表和其他人的詳細資訊，請參閱[報表產生器範例報表](http://go.microsoft.com/fwlink/?LinkId=184851)。  
+ 本教學課程即將建立的報表另有一個增強型版本，可從範例 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 報表產生器報表取得。 如需有關下載這個範例報表和其他人的詳細資訊，請參閱[報表產生器範例報表](https://go.microsoft.com/fwlink/?LinkId=184851)。  
   
 ##  <a name="BackToTop"></a> 您將了解  
  在本教學課程中，您將學會如何：  
@@ -48,7 +48,7 @@ ms.locfileid: "48159498"
   
 1.  [將文字方塊旋轉 270 度](#RotateTextBox)  
   
- 完成這個教學課程的估計時間：30 分鐘。  
+ 完成本教學課程的估計時間：20 分鐘。  
   
 ## <a name="requirements"></a>需求  
  如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/report-builder-tutorials.md)。  
@@ -74,7 +74,7 @@ ms.locfileid: "48159498"
   
 5.  按 [下一步] 。  
   
-6.  在 **選擇資料來源的連接**頁面，選取現有的資料來源或瀏覽至報表伺服器，然後再選取 資料來源。 如果沒有資料來源可用，或無法存取報表伺服器，您可以改用內嵌資料來源。 如需建立內嵌的資料來源的詳細資訊，請參閱 <<c0> [ 教學課程： 建立基本資料表報表&#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。</c0>  
+6.  在 **選擇資料來源的連接**頁面，選取現有的資料來源或瀏覽至報表伺服器，然後再選取 資料來源。 如果沒有資料來源可用，或無法存取報表伺服器，您可以改用內嵌資料來源。 如需建立內嵌的資料來源的詳細資訊，請參閱[教學課程：建立基本資料表報表&#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 7.  按 [下一步] 。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "48159498"
   
 13. 按一下 **[完成]**。  
   
-     矩陣會加入至設計介面。 [資料列群組] 窗格將顯示兩個資料列群組：Territory 和 SalesDate。 [資料行群組] 窗格則顯示這兩個資料行群組：Subcategory 和 Product。 詳細資料是資料集查詢擷取的所有資料。  
+     矩陣會加入至設計介面。 資料列群組 窗格會顯示兩個資料列群組：Territory 和 SalesDate。 資料行群組 窗格會顯示兩個資料行群組：子類別目錄和產品。 詳細資料是資料集查詢擷取的所有資料。  
   
 14. 按一下 **[執行]** 預覽報表。  
   
@@ -342,7 +342,7 @@ ms.locfileid: "48159498"
   
 4.  在 [名稱] 中，將預設名稱取代為 **SalesByTerritorySubcategory**。  
   
-5.  按一下 **[儲存]**。  
+5.  按一下 [儲存] 。  
   
  報表就會儲存至報表伺服器。 您連接之報表伺服器的名稱會顯示在視窗底部的狀態列中。  
   
@@ -354,7 +354,7 @@ ms.locfileid: "48159498"
   
 3.  在 [名稱] 中，將預設名稱取代為 **SalesByTerritorySubcategory**。  
   
-4.  按一下 **[儲存]**。  
+4.  按一下 [儲存] 。  
   
 ##  <a name="RotateTextBox"></a> 9。(選擇性) 將文字方塊旋轉 270 度  
  含有矩陣的報表在執行時，可能會水平且垂直地展開。 如果將文字方塊旋轉 270 度 (垂直旋轉)，就比較不佔水平空間。 這樣轉譯後的報表將會變窄，且若匯出為 Microsoft Word 等格式，則大概都能容納於單一列印頁面上。  

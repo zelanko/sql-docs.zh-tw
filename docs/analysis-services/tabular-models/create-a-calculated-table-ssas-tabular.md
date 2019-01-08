@@ -1,6 +1,6 @@
 ---
-title: 建立導出的資料表 |Microsoft 文件
-ms.date: 05/07/2018
+title: 在 Analysis Services 表格式模型中建立導出的資料表 |Microsoft Docs
+ms.date: 12/19/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,23 +9,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f920d7ef7ae8a8fb5016e4bb4833b3637b325f8a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 199096efcdf9212e19e1055f1276079eddfb1a75
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041992"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626257"
 ---
 # <a name="create-a-calculated-table"></a>建立導出的資料表 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   *導出資料表* 是以 DAX 查詢或運算式為基礎的計算物件，衍生自相同模型中其他資料表的全部或部分。  
   
- 導出資料表可以解決的一個常見的設計問題就是呈現特定內容中的角色扮演維度，以便您將它公開為用戶端應用程式中的查詢結構。  您可能還記得，角色扮演維度只是一個顯示在多個內容中的資料表 — 典型的例子就是 [Date] 資料表，根據外部索引鍵關聯性可顯示為 OrderDate、ShipDate 或 DueDate。 藉由明確地建立 ShipDate 的導出資料表，您可以取得一個和其他資料表一樣可以完全運作，用來進行查詢的獨立資料表。  
+ 導出資料表可以解決的一個常見的設計問題就是呈現特定內容中的角色扮演維度，以便您將它公開為用戶端應用程式中的查詢結構。  您可能還記得，角色扮演維度只是一個顯示在多個內容中的資料表 — 典型的例子就是 [Date] 資料表，根據外部索引鍵關聯性可顯示為 OrderDate、ShipDate 或 DueDate。 藉由明確地建立 ShipDate 的導出資料表，您可以取得一個和其他資料表一樣可以完全運作，用來進行查詢的獨立資料表。 另一個使用包含設定已篩選的資料列集的子集或超集資料行，從現有的資料表。 這可讓您保留原始的資料表，同時建立該資料表的變化以支援特定案例。  
   
- 導出資料表的第二個使用包含從現有的資料表設定已篩選的資料列集，或是資料行的子集或超集。 這可讓您保留原始的資料表，同時建立該資料表的變化以支援特定案例。  
-  
- 若要使用導出資料表的最佳優勢 ，您將至少需要了解部分 DAX。 當您針對資料表使用運算式時，了解導出資料表包含具有 DAXSource (其中運算式為 DAX 運算式) 的單一資料分割可能有所幫助。  
-運算式傳回的每個資料行都有一個 CalculatedTableColumn，其中傳回的資料行名稱為 SourceColumn (類似於非導出資料表上的 DataColumns)。  
+ 若要使用導出資料表的最佳優勢 ，您將至少需要了解部分 DAX。 當資料表使用運算式，它可能有助於了解導出的資料表包含具有 DAXSource，其中的運算式是 DAX 運算式的單一資料分割。  
+運算式傳回的每個資料行都有一個 CalculatedTableColumn，其中傳回的資料行名稱為 SourceColumn (類似於非導出資料表上的 DataColumns)。 
+
+您可以建立導出的資料表之前，至少一個資料表必須已經存在。 如果您要建立導出的資料表做為獨立計算的資料表物件，您可以先匯入資料來源的檔案 （csv、 xls、 xml） 來建立資料表。 您從匯入的檔案可以有單一資料行和單一值。 然後，您可以隱藏該資料表。 
   
 ## <a name="how-to-create-a-calculated-table"></a>如何建立導出資料表  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34041992"
   
 5.  命名資料表。  
   
-6.  建立與模型中的其他資料表的關聯性。 請參閱[建立資料表之間的關聯兩個](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)如果您需要這個步驟的說明。  
+6.  建立與模型中的其他資料表的關聯性。 請參閱[建立關聯性資料表之間的兩個](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)如果您需要協助進行這個步驟。  
   
 7.  參考模型中計算或運算式中的資料表，或使用 [在 Excel 中進行分析]  進行隨選資料瀏覽。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "34041992"
   
 ## <a name="see-also"></a>另請參閱  
  [相容性層級](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [Data Analysis Expressions &#40;DAX&#41;在 Analysis Services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
+ [Analysis Services 中的資料分析運算式 &#40;DAX&#41;](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
  [了解表格式模型中的 DAX](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  
   
   

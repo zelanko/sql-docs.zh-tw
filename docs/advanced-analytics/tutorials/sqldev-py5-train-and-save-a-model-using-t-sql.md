@@ -1,5 +1,6 @@
 ---
-title: 訓練及儲存使用 T-SQL Python 模型 |Microsoft Docs
+title: 訓練及儲存使用 T-SQL-SQL Server Machine Learning Python 模型
+description: 示範如何訓練及儲存模型，使用 TRANSACT-SQL 在 SQL Server 上的 Python 教學課程。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
@@ -7,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d3917678cb16462f065754dd389be53ae8cd6016
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: a0991f43ed7446cc9b86325d4f536a0787b8dcc1
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032715"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645169"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>訓練及儲存使用 T-SQL Python 模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "51032715"
 
     這個預存程序應該已建立，但您可以執行下列程式碼來建立它：
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyTrainTestSplit;
     GO
 
@@ -48,20 +49,10 @@ ms.locfileid: "51032715"
 
 2. 若要將使用自訂的分割資料，請執行預存程序中，並輸入整數，表示至定型集的資料配置的百分比。 例如，下列陳述式會配置 60%的定型集的資料。
 
-    ```SQL
+    ```sql
     EXEC PyTrainTestSplit 60
     GO
     ```
-
-## <a name="add-a-name-column-in-nyctaximodels"></a>Nyc_taxi_models 中加入名稱資料行
-
-在本教學課程中的指令碼儲存成產生的模型標籤的模型名稱。 模型名稱用於查詢中，選取 revoscalepy 或 Scikit-learn 模型。
-
-1. 在 Management Studio 中開啟**nyc_taxi_models**資料表。
-
-2. 以滑鼠右鍵按一下**資料行**然後按一下**新的資料行**。 若要設定的資料行名稱*名稱*，與型別**nchar(250)**，並允許 null 值。
-
-    ![名稱資料行，以儲存模型名稱](media/sqldev-python-newcolumn.png)
 
 ## <a name="build-a-logistic-regression-model"></a>建立羅吉斯迴歸模型
 
@@ -78,7 +69,7 @@ ms.locfileid: "51032715"
 
 1.  在  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，開啟新**查詢**視窗，然後執行下列陳述式來建立預存程序**PyTrainScikit**。  預存程序包含輸入資料，的定義，因此您不必提供輸入的查詢。
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyTrainScikit;
     GO
 
@@ -117,7 +108,7 @@ ms.locfileid: "51032715"
 
 2. 執行下列 SQL 陳述式來插入到定型的模型資料表 nyc\_taxi_models。
 
-    ```SQL
+    ```sql
     DECLARE @model VARBINARY(MAX);
     EXEC PyTrainScikit @model OUTPUT;
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
@@ -136,11 +127,11 @@ ms.locfileid: "51032715"
 
 這個預存程序會使用新**revoscalepy**封裝，也就是適用於 Python 的新封裝。 它包含的物件、 轉換及所提供的 R 語言的類似的演算法**RevoScaleR**封裝。 
 
-藉由使用**revoscalepy**，您可以建立遠端計算內容之間移動資料計算內容，轉換資料，並訓練預測模型使用熱門的演算法，例如羅吉斯和線性迴歸、 決策樹和更多。 如需詳細資訊，請參閱[revoscalepy 是什麼？](../python/what-is-revoscalepy.md)
+藉由使用**revoscalepy**，您可以建立遠端計算內容之間移動資料計算內容，轉換資料，並訓練預測模型使用熱門的演算法，例如羅吉斯和線性迴歸、 決策樹和更多。 如需詳細資訊，請參閱 < [SQL Server 中的 revoscalepy 模組](../python/ref-py-revoscalepy.md)並[revoscalepy 函式參考](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)。
 
 1. 在  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，開啟新**查詢**視窗，然後執行下列陳述式來建立預存程序_TrainTipPredictionModelRxPy_。  預存程序已經包含輸入資料的定義，因為您不必提供輸入的查詢。
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS TrainTipPredictionModelRxPy;
     GO
 
@@ -181,7 +172,7 @@ ms.locfileid: "51032715"
 
 2. 執行預存程序，如下所示插入定型**revoscalepy**模型到資料表*nyc_taxi_models*。
 
-    ```SQL
+    ```sql
     DECLARE @model VARBINARY(MAX);
     EXEC TrainTipPredictionModelRxPy @model OUTPUT;
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);

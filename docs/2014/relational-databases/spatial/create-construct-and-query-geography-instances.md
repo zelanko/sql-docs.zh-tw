@@ -14,12 +14,12 @@ ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a576a6d047148675fd50730bcb4a5e76a5684b14
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 0224f32fde76aa406d90c98fe7280237d09a04e5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018743"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369490"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>建立、建構並查詢地理位置執行個體
   地理位置空間資料類型 (`geography`) 代表圓形表面座標系統中的資料。 這種類型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中是實作為 .NET Common Language Runtime (CLR) 資料類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography`資料類型會儲存橢圓體 （圓形地球） 資料，例如 GPS 經緯度座標。  
@@ -105,7 +105,7 @@ ms.locfileid: "51018743"
 ###  <a name="gml"></a> 從 GML 文字輸入建構地理位置執行個體  
  `geography`資料類型提供的方法，會產生`geography`執行個體，GML 的 XML 表示法`geography`執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可支援 GML 的子集。  
   
- 如需地理標記語言的詳細資訊，請參閱 OGC 規格： [OGC 規格、地理標記語言](http://go.microsoft.com/fwlink/?LinkId=93629)。  
+ 如需有關地理標記語言的詳細資訊，請參閱 OGC 規格：[OGC 規格，地理標記語言。](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
  **從 GML 輸入建構任何類型的地理位置執行個體**  
  [GeomFromGML &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  

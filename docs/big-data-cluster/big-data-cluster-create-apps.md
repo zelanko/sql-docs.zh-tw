@@ -1,24 +1,26 @@
 ---
-title: 如何部署巨量資料的 SQL Server 叢集上的應用程式 |Microsoft Docs
+title: 如何部署應用程式
+titleSuffix: SQL Server 2019 big data clusters
 description: 將 Python 或 R 指令碼部署為 SQL Server 2019 巨量資料叢集 （預覽） 上的應用程式。
 author: TheBharath
 ms.author: bharaths
 manager: craigg
-ms.date: 11/07/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: dd24b4379f50a5b974e7a0a90412d1e13bf6db22
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.custom: seodec18
+ms.openlocfilehash: cca0ac5e7b81318d95fbb133758fca83e1a0742e
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272556"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246402"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>如何部署 SQL Server 2019 巨量資料叢集 （預覽） 上的應用程式
 
 本文說明如何部署和管理 R 和 Python 指令碼中的 SQL Server 2019 巨量資料叢集 （預覽） 的應用程式。
 
-部署與管理使用 R 和 Python 應用程式**mssqlctl-pre** CTP 2.1 中所含的命令列公用程式。 這篇文章提供如何將這些 R 和 Python 指令碼部署為應用程式，從命令列的範例。
+部署與管理使用 R 和 Python 應用程式**mssqlctl-pre** CTP 2.2 中所含的命令列公用程式。 這篇文章提供如何將這些 R 和 Python 指令碼部署為應用程式，從命令列的範例。
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -29,12 +31,12 @@ ms.locfileid: "51272556"
 **Mssqlctl-pre**命令列公用程式可用來預覽的 Python 和 R 應用程式部署功能。 您可以使用下列命令來安裝公用程式：
 
 ```cmd
-pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctlpre
+pip install -r https://private-repo.microsoft.com/python/ctp-2.2/mssqlctlpre/mssqlctlpre.txt --trusted-host https://private-repo.microsoft.com
 ```
 
 ## <a name="capabilities"></a>Capabilities
 
-在 CTP 2.1 中可以建立、 刪除、 列出及執行 R 或 Python 應用程式。 下表描述您可以搭配使用的應用程式部署命令**mssqlctl-pre**。
+CTP 2.2 中您可以建立、 刪除、 列出及執行 R 或 Python 應用程式。 下表描述您可以搭配使用的應用程式部署命令**mssqlctl-pre**。
 
 | 命令 | 描述 |
 |---|---|
@@ -54,15 +56,16 @@ mssqlctl-pre app create --help
 
 ## <a name="log-in"></a>登入
 
-設定 R 和 Python 應用程式時，第一次登入您使用叢集的巨量資料的 SQL Server`mssqlctl-pre login`命令。 指定的 IP 位址 （外部） `service-proxy-lb` (例如： `https://ip-address:30777`) 以及使用者名稱和密碼，在叢集中。
+設定 R 和 Python 應用程式時，第一次登入您使用叢集的巨量資料的 SQL Server`mssqlctl-pre login`命令。 指定的外部 IP 位址`service-proxy-lb`或是`service-proxy-nodeport`服務 (例如： `https://ip-address:30777`) 以及使用者名稱和密碼，在叢集中。
 
-您可以在 bash 或 cmd 視窗執行下列命令來取得服務-proxy-l b 服務的 IP 位址：
+您可以取得的 IP 位址**服務-proxy-lb**或**服務-proxy-nodeport**服務中的 bash 或 cmd 視窗執行下列命令：
+
 ```bash 
 kubectl get svc service-proxy-lb -n <name of your cluster>
 ```
 
 ```bash
-mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb> -u <user-name> -p <password>
+mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb>:30777 -u <user-name> -p <password>
 ```
 
 ## <a name="create-an-app"></a>建立應用程式

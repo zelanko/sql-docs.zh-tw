@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -25,12 +23,12 @@ ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b892fda3a54752cdd7e11e758a5e4ad58a330eb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e264922c991b3c8297838d920961cd390ee0eabc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089288"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357548"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>使用資料流程元件中的錯誤輸出
   您可以將呼叫錯誤輸出的特殊 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> 物件加入元件，讓元件將無法在執行期間處理的資料列重新導向。 元件可能遇到的問題通常會歸類為錯誤或是截斷，而且是每個元件特有的。 提供錯誤輸出的元件透過從結果集篩選出錯誤資料列、當問題發生時讓元件失敗，以及忽略錯誤並繼續，讓元件的使用者有處理錯誤狀況的彈性。  
@@ -432,7 +430,7 @@ Public  Overrides Sub PrimeOutput(ByVal outputs As Integer, ByVal outputIDs As I
 End Sub  
 ```  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料中的錯誤處理](../../data-flow/error-handling-in-data.md)   

@@ -18,12 +18,12 @@ ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d994e44e3db00921ca184ed063bcf1bdff487297
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 484890cfe30ace1c65ea45fe2d9e447a6396b52e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753596"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591452"
 ---
 # <a name="spprimarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,16 +43,16 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@table_server =** ] **' * * * table_server&lt '*  
+ [  **@table_server =** ] **'**_table_server&lt '_  
  這是傳回主索引鍵資訊的連結伺服器名稱。 *table_server&lt*已**sysname**，沒有預設值。  
   
- [  **@table_name =** ] **'***table_name***'**  
+ [  **@table_name =** ] **'**_table_name_**'**  
  這是提供主索引鍵資訊的資料表名稱。 *table_name*已**sysname**，預設值是 NULL。  
   
- [  **@table_schema =** ] **'***table_schema***'**  
+ [  **@table_schema =** ] **'**_table_schema_**'**  
  這是資料表結構描述。 *table_schema*已**sysname**，預設值是 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境中，這相當於資料表擁有者。  
   
- [  **@table_catalog =** ] **'***table_catalog 排列***'**  
+ [  **@table_catalog =** ] **'**_table_catalog 排列_**'**  
  所在目錄的名稱指定*table_name*所在。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境中，這相當於資料庫名稱。 *table_catalog 排列*已**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  

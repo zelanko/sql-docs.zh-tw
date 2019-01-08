@@ -12,12 +12,12 @@ ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51f83f4bc0cfc60a2e8137407a7efc9635dd9f70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 41bd489752dc1b4084d9c012cad97413c6ff98b5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229218"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368590"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
   本主題討論 SQLGetDescRec 功能特有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端。  
@@ -31,7 +31,7 @@ ms.locfileid: "48229218"
   
 |參數|資料表值參數|資料表值參數資料行和其他參數|  
 |---------------|-----------------------------|----------------------------------------------------------|  
-|*[名稱]*|預存程序呼叫的型式參數名稱，否則為 0 長度字串。|資料表值參數資料行名稱。|  
+|*名稱*|預存程序呼叫的型式參數名稱，否則為 0 長度字串。|資料表值參數資料行名稱。|  
 |*TypePtr*|SQL_DESC_TYPE。 如果是資料表值參數，這就是 SQL_SS_TABLE。|SQL_DESC_TYPE|  
 |*SubTypePtr*|未定義|SQL_DESC_DATETIME_INTERVAL_CODE (如果是 SQL_DATETIME 或 SQL_INTERVAL 類型的記錄)。|  
 |*LengthPtr*|0|SQL_DESC_OCTET_LENGTH|  
@@ -59,7 +59,7 @@ ms.locfileid: "48229218"
  `SQLGetDescRec` 支援大型 CLR 使用者定義型別 (UDT)。 如需詳細資訊，請參閱 < [Large CLR User-Defined 類型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLGetDescRec](http://go.microsoft.com/fwlink/?LinkId=80707)   
+ [SQLGetDescRec](https://go.microsoft.com/fwlink/?LinkId=80707)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

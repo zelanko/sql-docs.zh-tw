@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9648e78567bbddf9209c53923cfe6c12d046d1a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bd9e036baa91991352d00f97fcf2c8e689bae6c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200898"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372150"
 ---
 # <a name="deployment-of-projects-and-packages"></a>部署專案和封裝
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援兩種部署模型：專案部署模型和封裝部署模型。 專案部署模型可讓您將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
- 如需將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的詳細資訊，請參閱[將專案部署至 Integration Services 伺服器](../deploy-projects-to-integration-services-server.md)。  
+ 如需將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的詳細資訊，請參閱 [將專案部署至 Integration Services 伺服器](../deploy-projects-to-integration-services-server.md)。  
   
  如需封裝部署模型的詳細資訊，請參閱[封裝部署&#40;SSIS&#41;](legacy-package-deployment-ssis.md)。  
   
@@ -37,7 +36,7 @@ ms.locfileid: "48200898"
 |資料庫引擎上需要 CLR 整合。|資料庫引擎上不需要 CLR 整合。|  
 |環境特定變數參數值會儲存在環境變數中。|環境特定組態值會儲存在組態檔中。|  
 |在執行之前，可以先在伺服器上驗證目錄中的專案和封裝。 您可以使用 SQL Server Management Studio、預存程序或 Managed 程式碼來執行驗證。|臨執行前才驗證封裝。 您也可以用 dtExec 或 Managed 程式碼來驗證封裝。|  
-|在資料庫引擎上啟動執行，藉以執行封裝。 在執行啟動之前，將專案識別碼、明確的參數值 (選擇性) 和環境參考 (選擇性) 指派給執行。<br /><br /> 您也可以使用 `dtExec` 執行封裝。|使用執行封裝`dtExec`和`DTExecUI`執行公用程式。 以命令提示字元引數 (選擇性) 來識別適用的組態。|  
+|在資料庫引擎上啟動執行，藉以執行封裝。 在執行啟動之前，將專案識別碼、明確的參數值 (選擇性) 和環境參考 (選擇性) 指派給執行。<br /><br /> 您也可以使用 `dtExec` 執行封裝。|這些封裝是使用 `dtExec` 與 `DTExecUI` 執行公用程式執行的。 以命令提示字元引數 (選擇性) 來識別適用的組態。|  
 |在執行期間，會自動擷取封裝所產生的事件，並儲存至目錄。 您可以用 Transact-SQL 檢視來查詢這些事件。|在執行期間，不會自動擷取封裝所產生的事件。 必須將記錄提供者加入封裝，才能擷取事件。|  
 |封裝是在單獨的 Windows 處理序中執行。|封裝是在單獨的 Windows 處理序中執行。|  
 |使用 SQL Server Agent 來排定封裝執行的時程。|使用 SQL Server Agent 來排定封裝執行的時程。|  
@@ -61,7 +60,7 @@ ms.locfileid: "48200898"
 -   [將專案部署至 Integration Services 伺服器](../deploy-projects-to-integration-services-server.md)  
   
 ## <a name="related-content"></a>相關內容  
- mattmasson.com 上的部落格文章： [Thoughts on Branching Strategies for SSIS Projects](http://go.microsoft.com/fwlink/?LinkId=245739)。  
+ mattmasson.com 上的部落格文章： [Thoughts on Branching Strategies for SSIS Projects](https://go.microsoft.com/fwlink/?LinkId=245739)。  
   
 ## <a name="see-also"></a>另請參閱  
  [dtexec 公用程式](dtexec-utility.md)  

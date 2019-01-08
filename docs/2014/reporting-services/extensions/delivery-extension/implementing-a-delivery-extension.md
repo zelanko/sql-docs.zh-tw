@@ -17,17 +17,17 @@ ms.assetid: 600cd229-efcd-480e-8c95-3c3c39ff4e7a
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5e310dafaafabb55af520bc20ebea5cdceea8b82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e00ae48ff528f9d877debe89f0dd8ca69f117fd6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175916"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376710"
 ---
 # <a name="implementing-a-delivery-extension"></a>實作傳遞延伸模組
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 可讓使用者建立和發行報表，一旦建立和發行，就可以傳遞給各個位置。 除此之外，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括數個傳遞延伸模組以及一個傳遞 API，可讓開發人員建立其他的傳遞延伸模組，以進一步擴充在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的傳遞功能。  
   
- 如需傳遞延伸模組的範例實作，請參閱 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
+ 如需傳遞延伸模組的範例實作，請參閱 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [傳遞延伸模組概觀] 傳遞-擴充功能-overview.md)  

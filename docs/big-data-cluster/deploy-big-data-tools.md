@@ -1,67 +1,59 @@
 ---
-title: 連接到 SQL Server 巨量資料叢集使用 Azure Data Studio |Microsoft Docs
-description: 了解如何連線到 SQL Server 2019 的巨量資料叢集使用 Azure Data Studio。
+title: 安裝巨量資料工具
+titleSuffix: SQL Server 2019 big data clusters
+description: 了解如何安裝 SQL Server 2019 巨量資料叢集 （預覽） 搭配使用的工具。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/05/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 18df937cfed15d7302a58267eb392a1933d73052
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 2327b7db3b21c972a98719a1126c46011bd9691a
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643786"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431302"
 ---
-# <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>連線到 SQL Server 的巨量資料叢集使用 Azure Data Studio
+# <a name="install-sql-server-2019-big-data-tools"></a>安裝 SQL Server 2019 巨量資料工具
 
-本文說明如何安裝 Azure Data Studio，SQL Server 2019 擴充功能 （預覽），然後連線至巨量資料叢集。 新的 SQL Server 2019 延伸模組包含的預覽支援[SQL Server 2019 巨量資料叢集](big-data-cluster-overview.md)，整合[notebook 體驗](notebooks-guidance.md)，和 PolyBase [Create External Table 精靈](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json).
+這篇文章說明應安裝於管理，來建立，用戶端工具，並使用 SQL Server 2019 巨量資料叢集 （預覽）。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="install-azure-data-studio"></a>安裝 Azure Data Studio
+## <a name="big-data-cluster-tools"></a>巨量資料叢集工具
 
-若要安裝 Azure Data Studio，請參閱[下載並安裝最新版的 Azure Data Studio](../azure-data-studio/download.md)。
+下表列出常見的巨量資料叢集工具和如何加以安裝：
 
-## <a name="install-the-sql-server-2019-extension-preview"></a>安裝 SQL Server 2019 擴充功能 （預覽）
+| 工具 | 必要項 | 描述 | 安裝 |
+|---|---|---|---|
+| **mssqlctl** | 是 | 安裝和管理的巨量資料叢集的命令列工具。 | [安裝](deploy-install-mssqlctl.md) |
+| **kubectl**<sup>1</sup> | 是 | 監視基礎 Kuberentes 叢集的命令列工具 ([進一歩](https://kubernetes.io/docs/tasks/tools/install-kubectl/))。 | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
+| **Azure Data Studio** | 是 | 查詢 SQL Server 的跨平台圖形化工具 ([進一歩](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15))。 | [安裝](../azure-data-studio/download.md) |
+| **SQL Server 2019 延伸模組** | 是 | 適用於支援連接至巨量資料叢集的 Azure 資料 Studio 的延伸模組。 也提供資料虛擬化精靈。 | [安裝](../azure-data-studio/sql-server-2019-extension.md) |
+| **Azure CLI**<sup>2</sup> | 供 AKS 使用 | 現代的命令列介面來管理 Azure 服務。 搭配 AKS 巨量資料叢集部署 ([進一歩](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest))。 | [安裝](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
+| **mssql-cli** | 選擇性 | 查詢 SQL Server 的新式命令列介面 ([進一歩](https://github.com/dbcli/mssql-cli/blob/master/README.rst))。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
+| **sqlcmd** | 如需一些指令碼 | 查詢 SQL Server 的傳統命令列工具 ([進一歩](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15))。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
+| **curl** <sup>3</sup> | 如需一些指令碼 | 使用 Url 的資料傳輸的命令列工具。 | [Windows](https://curl.haxx.se/windows/) \| Linux： 安裝 curl 的套件 |
 
-若要安裝擴充功能，請參閱[安裝 SQL Server 2019 擴充功能 （預覽）](../azure-data-studio/sql-server-2019-extension.md)。
+<sup>1</sup>您必須使用 kubectl 1.10 或更新版本的版本。 此外，Kubectl 的版本應該是加號或減號的 Kubernetes 叢集中的一個次要版本。 如果您想要安裝 kubectl 用戶端上的特定版本，請參閱[安裝 kubectl 二進位透過 curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) （Windows 10 上使用 cmd.exe，而非 Windows PowerShell 來執行 curl）。
 
-## <a name="connect-to-the-cluster"></a>連線到叢集
+<sup>2</sup>您必須使用 Azure CLI 2.0.4 版或更新版本。 執行`az --version`以尋找版本，如有需要。
 
-當您連線至巨量資料叢集時，您可以選擇連接到 SQL Server[主要執行個體](concept-master-instance.md)或 HDFS/Spark 閘道。 下列各節示範如何連接到每個。
+<sup>3</sup>如果您在 Windows 10 上執行**curl**已在您的路徑時從命令提示字元執行。 對於其他版本的 Windows 中，下載**curl**使用連結，並將它放在您的路徑。
 
-## <a id="master"></a> 主要執行個體
+## <a name="which-tools-are-required"></a>需要哪些工具？
 
-1. 在 Azure Data Studio，按下**F1** > **新連線**。
+先前的表格會提供所有常用的工具與巨量資料叢集搭配使用。 必要的工具取決於您的案例。 但在一般情況下，下列工具是最重要的管理、 連線和查詢叢集：
 
-1. 在 **連線類型**，選取**Microsoft SQL Server**。
+- **mssqlctl**
+- **kubectl**
+- **Azure Data Studio**
+- **SQL Server 2019 延伸模組**
 
-1. 輸入中的 SQL Server 主要執行個體的 IP 位址**伺服器名稱**(例如：  **\<IP 位址\>31433、**)。
-
-1. 輸入 SQL 登入**使用者名**並**密碼**。
-
-1. 變更**資料庫名稱**要**high_value_data**資料庫。
-
-   ![連接到主要執行個體](./media/deploy-big-data-tools/connect-to-cluster.png)
-
-1. 按下**Connect**，而**Server 儀表板**應該會出現。
-
-## <a id="hdfs"></a> HDFS/Spark 閘道
-
-1. 在 Azure Data Studio，按下**F1** > **新連線**。
-
-1. 在 **連線類型**，選取**巨量資料的 SQL Server 叢集**。
-
-1. 輸入中的巨量資料叢集的 IP 位址**伺服器名稱**。
-
-1. 請輸入`root`for**使用者**並指定**密碼**到您的巨量資料叢集。
-
-   ![連線到 HDFS/Spark 閘道](./media/deploy-big-data-tools/connect-to-cluster-hdfs-spark.png)
-
-1. 按下**Connect**，而**Server 儀表板**應該會出現。
+在某些情況下只需要其餘的工具。 **Azure CLI**可用來管理與 AKS 部署相關聯的 Azure 服務。 **mssql cli**是選擇性的但很有用的工具，可讓您連接到 SQL Server 主要執行個體在叢集中，並從命令列執行查詢。 並**sqlcmd**並**curl**是必要的如果您打算使用 GitHub 的指令碼安裝範例資料。
 
 ## <a name="next-steps"></a>後續步驟
 
-若要執行 notebook，在 Azure Data Studio，請參閱[如何在 SQL Server 2019 預覽中使用 notebook](notebooks-guidance.md)。
+如需巨量資料叢集的詳細資訊，請參閱[什麼是 SQL Server 2019 巨量資料叢集？](big-data-cluster-overview.md)。

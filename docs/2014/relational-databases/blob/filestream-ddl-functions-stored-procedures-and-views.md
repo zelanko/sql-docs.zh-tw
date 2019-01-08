@@ -10,12 +10,12 @@ ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7ec7d554c8dedd2fb48d1af8a44dbee550e376ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b69cb7d47c70b6c34015c90252875c81c231d0a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189848"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356008"
 ---
 # <a name="filestream-ddl-functions-stored-procedures-and-views"></a>FILESTREAM DDL、函數、預存程序和檢視表
   列出支援 FILESTREAM 的 Transact-SQL 陳述式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫物件。  
@@ -62,6 +62,6 @@ ms.locfileid: "48189848"
   
 -   [使用 OpenSqlFilestream 存取 FILESTREAM 資料](access-filestream-data-with-opensqlfilestream.md)  
   
--   [Managed API - SqlFileStream 類別](http://go.microsoft.com/fwlink/?LinkId=220875)  
+-   [Managed API - SqlFileStream 類別](https://go.microsoft.com/fwlink/?LinkId=220875)  
   
   

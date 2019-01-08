@@ -11,12 +11,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51d3206e4df57c42c0245e13757cdcac1686a313
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 5dc6ccd51a1ce8c64ef301e7435ee9ce21879cb5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148403"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364100"
 ---
 # <a name="tabular-model-data-access"></a>表格式模型資料存取
   Analysis Services 中的表格式模型資料庫可由您用來擷取多維度模型中之資料或中繼資料的大部分相同用戶端、介面和語言所存取。 如需詳細資訊，請參閱[多維度模型資料存取 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
@@ -27,7 +27,7 @@ ms.locfileid: "50148403"
  下列 Microsoft 用戶端應用程式支援 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式模型資料庫的原生連接。  
   
 ### <a name="excel"></a>[匯出]  
- 您可以使用 Excel 中的資料視覺效果與分析功能，從 Excel 連接至表格式模型資料庫，以處理您的資料。 若要存取資料，您要定義 Analysis Services 資料連接、指定在表格式伺服器模式下執行的伺服器，然後選擇您要使用的資料庫。 如需詳細資訊，請參閱＜ [連接到 SQL Server Analysis Services 或是從中匯入資料](http://go.microsoft.com/fwlink/?linkID=215150)＞。  
+ 您可以使用 Excel 中的資料視覺效果與分析功能，從 Excel 連接至表格式模型資料庫，以處理您的資料。 若要存取資料，您要定義 Analysis Services 資料連接、指定在表格式伺服器模式下執行的伺服器，然後選擇您要使用的資料庫。 如需詳細資訊，請參閱＜ [連接到 SQL Server Analysis Services 或是從中匯入資料](https://go.microsoft.com/fwlink/?linkID=215150)＞。  
   
  Excel 也是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中瀏覽表格式模型的建議應用程式。 這個工具包含 [在 Excel 中進行分析] 選項，此選項可啟動新的 Excel 執行個體、建立 Excel 活頁簿，並開啟活頁簿與模型工作空間資料庫之間的資料連接。 在 Excel 中瀏覽表格式模型資料時，請注意 Excel 會使用 Excel 樞紐分析表用戶端，針對模型發出查詢。 因此，Excel 活頁簿中的作業會導致 MDX 查詢傳送給工作空間資料庫，而不是 DAX 查詢。 如果您要使用 SQL Profiler 或其他監視工具來監視查詢，您預期可以在 Profiler 追蹤內看到 MDX 而非 DAX。 如需 [在 Excel 中進行分析] 功能的詳細資訊，請參閱[在 Excel 中進行分析 &#40;SSAS 表格式&#41;](analyze-in-excel-ssas-tabular.md)。  
   

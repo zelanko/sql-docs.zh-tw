@@ -18,15 +18,15 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 405bb71bc5ceaee65afa70d055c88a75a2326ca9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b59f544894677c75f923c2dd6185c229495e42ea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107462"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372780"
 ---
 # <a name="schedules"></a>[排程]
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供共用的排程和報表特定排程來協助您控制如何處理和散發報表。 這兩種排程類型之間的差異是定義、儲存和管理它們的方式。 兩種排程類型的內部建構則相同。 所有排程都會指定一個循環類型：每月、每週或每日。 在循環類型內，您可以設定發生事件之頻率的間隔和範圍。 不論您是建立共用排程還是報表特定排程，循環模式的類型和指定這些模式的方式相同。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供共用排程和報表特定排程來協助您控制報表的處理和散發。 這兩種排程類型之間的差異是定義、儲存和管理它們的方式。 兩種排程類型的內部建構則相同。 所有排程都會指定一個循環類型：每月、每週或每日。 在循環類型內，您可以設定發生事件之頻率的間隔和範圍。 不論您是建立共用排程還是報表特定排程，循環模式的類型和指定這些模式的方式相同。  
   
  本主題內容：  
   
@@ -64,10 +64,10 @@ ms.locfileid: "48107462"
   
  當您建立排程時，報表會將排程資訊儲存在報表伺服器資料庫中；如果是 SharePoint 模式，則會儲存在服務應用程式資料庫中。 報表伺服器也會建立用來觸發排程的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。 排程的處理會依據包含該排程之報表伺服器的本地時間。 時間的格式會依照 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 作業系統的標準。  
   
- 如需如何建立及管理排程的詳細資訊，請參閱 < [Create，Modify，and Delete Schedules](create-modify-and-delete-schedules.md)。  
+ 如需如何建立及管理排程的詳細資訊，請參閱＜ [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)＞。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供排程作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供排程作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)。  
   
 ##  <a name="bkmk_compare"></a> 比較共用排程與報表特定排程  
  這兩種排程類型會產生相同的輸出：  
@@ -101,7 +101,7 @@ ms.locfileid: "48107462"
 |建立、修改或刪除使用者自訂訂閱中的報表特定排程|管理個別訂閱|瀏覽器、報表產生器、我的報表和內容管理員|訪客、成員|  
 |建立、修改或刪除所有其他已排程之作業的報表特定排程|管理報表記錄、管理所有訂閱、管理報表|內容管理員|擁有者|  
   
- 如需有關在原生模式的安全性[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，請參閱 <<c2> [ 預先定義的角色](../security/role-definitions-predefined-roles.md)，[原生模式報表伺服器上的 授與權限](../security/granting-permissions-on-a-native-mode-report-server.md)和[工作和權限](../security/tasks-and-permissions.md). 如果是 SharePoint 模式，請參閱＜ [將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)＞  
+ 如需原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中安全性的詳細資訊，請參閱 [Predefined Roles](../security/role-definitions-predefined-roles.md)(預先定義的角色)、 [在原生模式報表伺服器上授與權限](../security/granting-permissions-on-a-native-mode-report-server.md) 和 [工作和權限](../security/tasks-and-permissions.md)。 如果是 SharePoint 模式，請參閱＜ [將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)＞  
   
 ##  <a name="bkmk_how_scheduling_works"></a> 排程與傳遞處理器的運作方式  
  排程與傳遞處理器提供下列功能：  
@@ -126,7 +126,7 @@ ms.locfileid: "48107462"
   
      處理事件前，排程與傳遞處理器會執行驗證步驟，以確認訂閱擁有者具有檢視報表的權限。  
   
- Reporting Services 會針對所有排程的作業維護事件佇列， 也會定期輪詢此佇列，以檢查是否有新的事件。 依預設，每隔 10 秒鐘會掃描一次佇列。 您可以變更間隔，藉由修改`PollingInterval`， `IsNotificationService`，和`IsEventService`RSReportServer.config 檔案中的組態設定。 SharePoint 模式也會將 RSreporserver.config 用於這些設定，而且這些值會套用到所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 如需詳細資訊，請參閱 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)。  
+ Reporting Services 會針對所有排程的作業維護事件佇列， 也會定期輪詢此佇列，以檢查是否有新的事件。 依預設，每隔 10 秒鐘會掃描一次佇列。 您可以變更此間隔，其方式是在 RSReportServer.config 檔中修改 `PollingInterval`、`IsNotificationService` 和 `IsEventService` 組態設定。 SharePoint 模式也會將 RSreporserver.config 用於這些設定，而且這些值會套用到所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 如需詳細資訊，請參閱 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)。  
   
 ##  <a name="bkmk_serverdependencies"></a> 伺服器相依性  
  排程與傳遞處理器需要啟動報表伺服器服務與 SQL Server Agent。 排程與傳遞處理功能必須透過啟用`ScheduleEventsAndReportDeliveryEnabled`的屬性**Reporting Services 的介面區組態**中原則式管理 facet。 SQL Server Agent 與報表伺服器服務都必須執行，排程的作業才會發生。  
@@ -144,11 +144,11 @@ ms.locfileid: "48107462"
  如果停止報表伺服器服務，SQL Server Agent 會繼續將報表處理要求加入佇列。 SQL Server Agent 中的狀態資訊會指出作業成功。 但是，因為報表伺服器服務已停止，因此實際上沒有任何報表處理發生。 要求將繼續在佇列中累積，直到您重新啟動報表伺服器服務為止。 一旦您重新啟動報表伺服器服務之後，佇列中的所有報表處理要求都會依照順序處理。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立、 修改及刪除報表記錄中的快照集](../report-server/create-modify-and-delete-snapshots-in-report-history.md)   
- [訂閱與傳遞&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [資料驅動訂閱](data-driven-subscriptions.md)   
+ [建立、修改及刪除報表記錄中的快照集](../report-server/create-modify-and-delete-snapshots-in-report-history.md)   
+ [訂閱與傳遞 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [快取多個報表 &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)   
- [報表伺服器內容管理&#40;SSRS 原生模式&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [快取共用資料集&#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)  
+ [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [快取共用資料集 &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)  
   
   

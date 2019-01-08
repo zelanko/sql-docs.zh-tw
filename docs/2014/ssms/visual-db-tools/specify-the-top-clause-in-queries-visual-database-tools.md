@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - TOP clause, queries
@@ -20,12 +20,12 @@ ms.assetid: ba7d7c10-9bb3-4d9b-90b0-5fa94ecae59b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8565a5b24f6cd9d1005ea50bee8f2c4deccbc091
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f9587a5e653d2df8cbe169fe5030542b86d8aaf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130428"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757360"
 ---
 # <a name="specify-the-top-clause-in-queries-visual-database-tools"></a>在查詢中指定 TOP 子句 (Visual Database Tools)
   TOP 子句只傳回查詢中的前 *n* 或百分之 *n* 個資料列。 當您要調查結果的一部份，以了解查詢是否如預期運作時，TOP 子句會很有用，它不會使用傳回全部查詢結果所需的資源。  

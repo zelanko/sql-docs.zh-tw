@@ -15,12 +15,12 @@ ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1af27b0571ef073a5ada2937b93b6cc0487974d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3d385ae733c44e403ba9de412c0c2a3e0eacd3c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143740"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365550"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>SharePoint 2010 中的 PowerPivot 資料重新整理
   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 資料重新整理是一項查詢外部資料來源的排程伺服器端作業，可更新儲存在內容庫中 Excel 2010 活頁簿的內嵌 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 資料。  
@@ -30,25 +30,25 @@ ms.locfileid: "48143740"
  **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 和 SharePoint Server 2013 Excel Services 會使用不同的架構進行的資料重新整理[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]資料模型。 新的架構會運用 Excel Services 做為主要元件來載入 PowerPivot 資料模型。 先前的資料重新整理架構會使用並仰賴在 SharePoint 模式下執行 PowerPivot 系統服務和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的伺服器來載入資料模型。 如需詳細資訊，請參閱 < [PowerPivot Data Refresh with SharePoint 2013](power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md)。  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 和 SharePoint Server 2013 Excel Services 會使用不同的架構來進行 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 資料模型的資料重新整理。 新的架構會運用 Excel Services 做為主要元件來載入 PowerPivot 資料模型。 先前的資料重新整理架構會使用並仰賴在 SharePoint 模式下執行 PowerPivot 系統服務和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的伺服器來載入資料模型。 如需詳細資訊，請參閱 < [PowerPivot Data Refresh with SharePoint 2013](power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md)。  
   
  **本主題內容：**  
   
- [步驟 1： 啟用 Secure Store Service 並產生主要金鑰](#bkmk_services)  
+ [步驟 1:啟用 Secure Store Service 並產生主要金鑰](#bkmk_services)  
   
- [步驟 2： 關閉您不想要支援的認證選項](#bkmk_creds)  
+ [步驟 2:關閉您不想要支援的認證選項](#bkmk_creds)  
   
- [步驟 3： 建立目標應用程式來儲存用於資料重新整理的認證](#bkmk_stored)  
+ [步驟 3:建立目標應用程式來儲存用於資料重新整理的認證](#bkmk_stored)  
   
- [步驟 4： 設定為可調整的資料重新整理伺服器](#bkmk_scale)  
+ [步驟 4:針對可擴充的資料重新整理設定伺服器](#bkmk_scale)  
   
- [步驟 5： 安裝用來匯入 PowerPivot 資料的資料提供者](#bkmk_installdp)  
+ [步驟 5:安裝用於匯入 PowerPivot 資料的資料提供者](#bkmk_installdp)  
   
- [步驟 6： 授與建立排程及存取外部資料來源的權限](#bkmk_accounts)  
+ [步驟 6:授與建立排程及存取外部資料來源的權限](#bkmk_accounts)  
   
- [步驟 7： 啟用資料重新整理的活頁簿升級](#bkmk_upgradewrkbk)  
+ [步驟 7:啟用資料重新整理的活頁簿升級](#bkmk_upgradewrkbk)  
   
- [步驟 8： 驗認資料重新整理組態](#bkmk_verify)  
+ [步驟 8:驗認資料重新整理組態](#bkmk_verify)  
   
  [針對資料重新整理修改組態設定](#bkmk_config)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48143740"
   
  在確定伺服器環境和權限已設定之後，資料重新整理已備妥可供使用。 若要使用資料重新整理，SharePoint 使用者必須建立 PowerPivot 活頁簿的排程，指定進行資料重新整理的頻率。 排程建立通常是由發行檔案至 SharePoint 的活頁簿擁有者或作者所完成。 這位人員會建立並管理他所擁有之活頁簿的資料重新整理排程。 如需詳細資訊，請參閱 <<c0> [ 排程資料重新整理&#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)。</c0>  
   
-##  <a name="bkmk_services"></a> 步驟 1： 啟用 Secure Store Service 並產生主要金鑰  
+##  <a name="bkmk_services"></a> 步驟 1:啟用 Secure Store Service 並產生主要金鑰  
  PowerPivot 資料重新整理功能仰賴 Secure Store Service 提供認證以供執行資料重新整理作業，以及連接至使用預存認證的外部資料來源之用。  
   
  您若是使用 [新伺服器] 選項安裝 PowerPivot for SharePoint，即會為您設定 Secure Store Service。 除此之外的其他安裝狀況皆須建立及設定服務應用程式，並產生 Secure Store Service 的主要加密金鑰。  
@@ -96,9 +96,9 @@ ms.locfileid: "48143740"
   
 15. 按一下 [確定] 。  
   
- 可供疑難排解之用的 Store Service 作業稽核記錄必須在作業開始之前啟用。 如需如何啟用記錄的詳細資訊，請參閱[設定 Secure Store Service (SharePoint 2010)](http://go.microsoft.com/fwlink/p/?LinkID=223294)。  
+ 可供疑難排解之用的 Store Service 作業稽核記錄必須在作業開始之前啟用。 如需如何啟用記錄的詳細資訊，請參閱[設定 Secure Store Service (SharePoint 2010)](https://go.microsoft.com/fwlink/p/?LinkID=223294)。  
   
-##  <a name="bkmk_creds"></a> 步驟 2： 關閉您不想要支援的認證選項  
+##  <a name="bkmk_creds"></a> 步驟 2:關閉您不想要支援的認證選項  
  PowerPivot 資料重新整理在資料重新整理排程方面提供三種認證。 當活頁簿擁有者排程資料重新整理時，必須從中選擇一個選項，以決定執行資料重新整理作業時所要使用的帳戶。 您身為管理員，可以決定排程擁有者所能使用的認證選項。  
   
  您至少必須提供一個選項，資料重新整理功能才能運作。  
@@ -117,13 +117,13 @@ ms.locfileid: "48143740"
   
  ![SSAS_PPS_ScheduleDataRefreshCreds](media/ssas-pps-scheduledatarefreshcreds.gif "SSAS_PPS_ScheduleDataRefreshCreds")  
   
- 預設會啟用這個認證選項。 啟用此認證選項之後，PowerPivot 系統服務會在 Secure Store Service 中產生目標應用程式，以儲存排程擁有者所輸入的使用者名稱及密碼。 產生的目標應用程式會建立使用此命名慣例： PowerPivotDataRefresh_\<guid >。 每一組 Windows 認證各會建立一個目標應用程式。 假使 PowerPivot 系統服務已有目標應用程式可以用於儲存排程定義者所輸入的使用者名稱及密碼，PowerPivot 系統服務將會使用該目標應用程式，而不會建立新的目標應用程式。  
+ 預設會啟用這個認證選項。 啟用此認證選項之後，PowerPivot 系統服務會在 Secure Store Service 中產生目標應用程式，以儲存排程擁有者所輸入的使用者名稱及密碼。 產生的目標應用程式會使用下列命名慣例加以建立：PowerPivotDataRefresh_\<guid >。 每一組 Windows 認證各會建立一個目標應用程式。 假使 PowerPivot 系統服務已有目標應用程式可以用於儲存排程定義者所輸入的使用者名稱及密碼，PowerPivot 系統服務將會使用該目標應用程式，而不會建立新的目標應用程式。  
   
- 此認證選項的主要優點在於簡單易用。 因為它會為您建立目標應用程式，所以不太需要額外的工夫。 除此之外，使用排程擁有者 (極有可能是活頁簿的建立者) 的認證執行資料重新整理也可簡化下游的權限需求。 此使用者極有可能已經具備目標資料庫的權限。 當資料重新整理以此使用者的 Windows 使用者識別執行時，所有指定「目前使用者」的資料連接皆會自動運作。  
+ 此認證選項的主要優點在於簡單易用。 因為它會為您建立目標應用程式，所以不太需要額外的工夫。 除此之外，使用排程擁有者 (極有可能是活頁簿的建立者) 的認證執行資料重新整理也可簡化下游的權限需求。 此使用者極有可能已經具備目標資料庫的權限。 這位人員的 Windows 使用者識別，任何資料執行資料重新整理指定的連接時 「 目前使用者 」 會自動運作。  
   
  其缺點是管理能力有限。 雖然會自動建立目標應用程式，但卻不會隨著帳戶資訊變更而自動刪除或更新。 密碼到期原則可能會造成目標應用程式過期。 使用過期認證的資料重新整理作業將無法啟動。 當發生此狀況時，排程擁有者必須在資料重新整理排程中提供目前的使用者名稱及密碼值，以更新其認證。 如此之後，即會建立新的目標應用程式。 使用者會在其資料重新整理排程中加入及修訂認證資訊，因此，在經過一段時間之後，您的系統上可能會出現大量自動產生的目標應用程式。  
   
- 目前尚無法區分使用中及非使用中的目標應用程式，也無法循著特定的目標應用程式追溯回使用該目標應用程式的資料重新整理排程。 一般而言，您應保留這些目標應用程式，因為刪除這些應用程式可能會破壞現有的資料重新整理排程。 刪除仍在使用中的目標應用程式會導致資料重新整理失敗，並傳回下列訊息：「找不到目標應用程式」，該訊息顯示在活頁簿的資料重新整理記錄頁面中。  
+ 目前尚無法區分使用中及非使用中的目標應用程式，也無法循著特定的目標應用程式追溯回使用該目標應用程式的資料重新整理排程。 一般而言，您應保留這些目標應用程式，因為刪除這些應用程式可能會破壞現有的資料重新整理排程。 刪除仍在使用目標應用程式將會失敗並出現訊息，「 目標應用程式找不到 」，不會出現在活頁簿的資料重新整理記錄頁面的資料重新整理。  
   
  您若是選擇停用此認證選項，可以放心刪除針對 PowerPivot 資料重新整理所產生的所有目標應用程式。  
   
@@ -139,14 +139,14 @@ ms.locfileid: "48143740"
   
      ![SSAS_PowerPivotDatarefreshOptions_AllowUser](media/ssas-powerpivotdatarefreshoptions-allowuser.gif "SSAS_PowerPivotDatarefreshOptions_AllowUser")  
   
-##  <a name="bkmk_stored"></a> 步驟 3： 建立目標應用程式來儲存用於資料重新整理的認證  
+##  <a name="bkmk_stored"></a> 步驟 3:建立目標應用程式來儲存資料重新整理時所使用的認證  
  當您設定 Secure Store Service 之後，SharePoint 管理員即可建立目標應用程式，將預存認證提供給資料重新整理作業使用，包括 PowerPivot 自動資料重新整理帳戶，或是其他用於執行此作業或連接至外部資料來源的帳戶。  
   
  一如前文所述，您必須建立目標應用程式，才可使用某些認證選項。 特別是您必須為 PowerPivot 自動資料重新整理帳戶建立目標應用程式，以及其他您要在資料重新整理作業中使用的預存認證。  
   
  如需如何建立包含預存的認證的目標應用程式的詳細資訊，請參閱[設定 PowerPivot 無人看管資料重新整理帳戶&#40;PowerPivot for SharePoint&#41; ](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)並[設定 PowerPivot 資料重新整理的預存的認證&#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。  
   
-##  <a name="bkmk_scale"></a> 步驟 4： 設定為可調整的資料重新整理伺服器  
+##  <a name="bkmk_scale"></a> 步驟 4:針對可擴充的資料重新整理設定伺服器  
  每個 PowerPivot for SharePoint 安裝預設都會支援視需要的查詢及排程資料重新整理功能。  
   
  您可為每個安裝指定 Analysis Services 伺服器執行個體要同時支援查詢與排程資料重新整理功能，或只要執行某種特定類型的作業。 您的伺服器陣列中如有多個 PowerPivot for SharePoint 安裝，而且作業出現延遲或失敗的狀況，也可考慮使用專用的伺服器執行資料重新整理作業。  
@@ -155,15 +155,15 @@ ms.locfileid: "48143740"
   
  如需詳細資訊，請參閱 < [Configure Dedicated Data Refresh or Query-Only &#40;PowerPivot for SharePoint&#41;](configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)。  
   
-##  <a name="bkmk_installdp"></a> 步驟 5： 安裝用來匯入 PowerPivot 資料的資料提供者  
+##  <a name="bkmk_installdp"></a> 步驟 5:安裝用於匯入 PowerPivot 資料的資料提供者  
  資料重新整理作業基本上就是重複擷取原始資料的匯入作業。 這表示，用於在 PowerPivot 用戶端應用程式中匯入資料的相同資料提供者也必須安裝在 PowerPivot 伺服器上。  
   
  您必須是本機系統管理員，才能在 Windows 伺服器上安裝資料提供者。 您若是安裝其他驅動程式，請務必在安裝有 PowerPivot for SharePoint 之 SharePoint 伺服器陣列的每部電腦上安裝這些驅動程式。 如果伺服器陣列中有多部 PowerPivot 伺服器，您就必須在每部伺服器上安裝提供者。  
   
  請記住，SharePoint 伺服器是 64 位元應用程式。 請務必安裝您所使用的 64 位元版資料提供者來支援資料重新整理作業。  
   
-##  <a name="bkmk_accounts"></a> 步驟 6： 授與建立排程及存取外部資料來源的權限  
- 活頁簿擁有者或作者必須具備 **[參與]** 權限，才能排程活頁簿的資料重新整理。 具備此權限等級的使用者可以開啟或編輯活頁簿的資料重新整理組態頁面，以指定用於重新整理資料的認證及排程資訊。  
+##  <a name="bkmk_accounts"></a> 步驟 6:授與建立排程及存取外部資料來源的權限  
+ 活頁簿擁有者或作者必須具備 **[參與]** 權限，才能排程活頁簿的資料重新整理。 指定此權限等級，，他或她可以開啟和編輯活頁簿的資料重新整理組態頁面來指定認證和排程來重新整理資料的資訊。  
   
  除了 SharePoint 權限之外，也必須檢閱外部資料來源的資料庫權限，確保重新整理資料期間所使用的帳戶，也具備足夠的權限可以存取資料。 決定權限需求時應謹慎評估，因為您所要授與的權限會隨活頁簿中的連接字串，以及執行資料重新整理作業時所用的使用者識別而不同。  
   
@@ -171,11 +171,11 @@ ms.locfileid: "48143740"
   
  當資料重新整理執行時，伺服器會傳送連接要求給使用一開始匯入資料時所建立之連接字串的外部資料來源。 資料重新整理期間將會重複使用該連接字串中所指定的伺服器位置、資料庫名稱及驗證參數，以存取相同的資料來源。 您無法針對不同的資料重新整理用途，修改連接字串及其整體建構， 只可以現況重複用於資料重新整理。 在某些情況下，您若是使用 Windows 以外的驗證方式連接資料來源，可以覆寫連接字串中的使用者名稱及密碼。 本主題將會就此提供進一步的詳細資料。  
   
- 對於大多數的活頁簿而言，連接時的預設驗證選項是使用信任的連接或 Windows 整合式安全性，因此連接字串中會包含 `SSPI=IntegratedSecurity` 或 `SSPI=TrustedConnection`。 將此連接字串用於資料重新整理時，用於執行資料重新整理作業的帳戶會變成「目前使用者」。 因此，該帳戶必須有權讀取所有透過信任連接進行存取的外部資料來源。  
+ 對於大多數的活頁簿而言，連接時的預設驗證選項是使用信任的連接或 Windows 整合式安全性，因此連接字串中會包含 `SSPI=IntegratedSecurity` 或 `SSPI=TrustedConnection`。 使用此連接字串時，資料重新整理期間，用來執行資料重新整理作業的帳戶會變成 「 目前使用者 」。 因此，該帳戶必須有權讀取所有透過信任連接進行存取的外部資料來源。  
   
  **您是否已啟用 PowerPivot 無人看管的資料重新整理帳戶？**  
   
- 如有啟用，即應授與帳戶對於資料重新整理期間所要存取之資料來源的讀取權限。 此帳戶之所以需要讀取權限，是因為在使用預設驗證選項的活頁簿中，自動帳戶在資料重新整理期間將會變成「目前使用者」。 除非排程擁有者覆寫了連接字串中的認證，否則此帳戶必須有權讀取貴組織中目前正在使用之任何數量的資料來源。  
+ 如有啟用，即應授與帳戶對於資料重新整理期間所要存取之資料來源的讀取權限。 重新整理此帳戶為何需要讀取權限是因為在使用預設的驗證選項的活頁簿，無人看管的帳戶將期間資料是 「 目前使用者 」 的原因。 除非排程擁有者覆寫了連接字串中的認證，否則此帳戶必須有權讀取貴組織中目前正在使用之任何數量的資料來源。  
   
  **您要使用認證選項 2： 允許排程擁有者輸入 Windows 使用者名稱和密碼嗎？**  
   
@@ -225,17 +225,17 @@ ms.locfileid: "48143740"
   
  當您確認需要存取資料的帳戶之後，即可開始檢查 PowerPivot 活頁簿中最常使用之資料來源的權限。 您可以先從目前正在使用的任何資料倉儲或報告資料庫著手，並向目前正在使用 PowerPivot 的使用者收集意見，了解其所使用的資料來源。 當您列出資料來源之後，即可逐項檢查其權限設定是否正確。  
   
-##  <a name="bkmk_upgradewrkbk"></a> 步驟 7： 啟用資料重新整理的活頁簿升級  
+##  <a name="bkmk_upgradewrkbk"></a> 步驟 7:針對資料重新整理啟用活頁簿升級  
  根據預設，使用 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 版本的 PowerPivot for Excel 所建立的活頁簿不得在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 版本的 PowerPivot for SharePoint 上設定排程資料重新整理。 如果您在 SharePoint 環境中裝載較新和較舊版本的 PowerPivot 活頁簿，您必須先升級任何 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 活頁簿，然後才可在伺服器上排程自動資料重新整理。  
   
-##  <a name="bkmk_verify"></a> 步驟 8： 驗認資料重新整理組態  
+##  <a name="bkmk_verify"></a> 步驟 8:驗認資料重新整理組態  
  若要確認資料重新整理，您必須擁有發行到 SharePoint 網站的 PowerPivot 活頁簿。 您必須具備活頁簿的「參與」權限，以及存取資料重新整理排程中所含之任何資料來源所需的各項權限。  
   
  當您建立排程時時，請選取**並且重新整理儘速**立即執行資料重新整理 核取方塊。 接著您可以查看該活頁簿的資料重新整理記錄頁面，確認其執行是否成功。 請注意，PowerPivot 資料重新整理計時器工作會每隔一分鐘執行一次， 因此，您至少必須等候一分鐘，才能確認資料重新整理是否成功。  
   
  請務必試用您打算支援的所有認證選項。 例如，您若是設定 PowerPivot 自動資料重新整理帳戶，請使用該選項驗證資料重新整理是否成功。 如需有關排程和檢視狀態資訊的詳細資訊，請參閱 <<c0> [ 排程資料重新整理&#40;PowerPivot for SharePoint&#41; ](schedule-a-data-refresh-powerpivot-for-sharepoint.md)並[檢視資料重新整理記錄&#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).</c0>  
   
- 如果資料重新整理失敗，請參閱[疑難排解 PowerPivot 資料重新整理](http://go.microsoft.com/fwlink/?LinkID=223279)尋找可能的解決方案的 TechNet wiki 上的頁面。  
+ 如果資料重新整理失敗，請參閱[疑難排解 PowerPivot 資料重新整理](https://go.microsoft.com/fwlink/?LinkID=223279)尋找可能的解決方案的 TechNet wiki 上的頁面。  
   
 ##  <a name="bkmk_config"></a> 針對資料重新整理修改組態設定  
  每個 PowerPivot 服務應用程式各有其影響資料重新整理作業的組態設定。 本節說明如何修改這些設定。  

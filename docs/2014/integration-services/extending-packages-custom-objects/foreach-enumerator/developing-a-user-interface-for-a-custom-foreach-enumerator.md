@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - custom user interface [Integration Services], custom foreach enumerators
@@ -15,12 +13,12 @@ ms.assetid: 8aa4aa80-c9ba-42b3-ba87-ae5ea5d3cac3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 95223c47925b55edbe9357cd04387fd54185a9f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b60b320b217a7e0c3520a28d56e06cb4622d7f2b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088868"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369370"
 ---
 # <a name="developing-a-user-interface-for-a-custom-foreach-enumerator"></a>開發自訂 ForEach 列舉值的使用者介面
   在您已覆寫可提供自訂功能的基底類別之屬性與方法的實作之後，可能會想要針對 Foreach 列舉值建立自訂使用者介面。 如果您未建立自訂使用者介面，使用者可以使用 [屬性] 視窗來設定新的自訂 Foreach 列舉值。  
@@ -41,7 +39,7 @@ ms.locfileid: "48088868"
 ### <a name="saving-settings"></a>節省設定  
  您會覆寫 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI.SaveSettings%2A> 方法，以便在使用者關閉編輯器時，從控制項將使用者選取的值複製到列舉值的屬性。  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立自訂的 Foreach 列舉值](creating-a-custom-foreach-enumerator.md)   

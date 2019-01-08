@@ -11,12 +11,12 @@ ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4543c518d1fbc845793e994682df7df1bccc26dc
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 739723a42580c404d0529a6d84d907cf665f8270
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145217"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368510"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>用於 Analysis Services 連接的資料提供者
   Analysis Services 會為伺服器和資料存取提供三個資料提供者。 所有連接到 Analysis Services 的應用程式都會使用其中一個提供者來進行存取。 其中兩個提供者 ADOMD.NET 和 Analysis Services 管理物件 (AMO) 為 Managed 資料提供者。 Analysis Services OLE DB 提供者 (MSOLAP DLL) 是原生資料提供者。  
@@ -44,7 +44,7 @@ ms.locfileid: "50145217"
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 最初發行版本的主要組建編號為 12.0.2000.9。  
   
- 如需有關版本與組建資訊取得方式的詳細資訊，請參閱＜ [如何判斷 SQL Server 的版本及其元件](http://support.microsoft.com/kb/321185)＞。  
+ 如需有關版本與組建資訊取得方式的詳細資訊，請參閱＜ [如何判斷 SQL Server 的版本及其元件](https://support.microsoft.com/kb/321185)＞。  
   
 ##  <a name="bkmk_LibUpdate"></a> 如何判斷 Analysis Services 資料提供者版本  
  資料提供者會隨 Analysis Services 一起安裝，而例行性連接到 Analysis Services 資料庫的用戶端應用程式 (例如 Excel) 也會加以安裝。  
@@ -74,7 +74,7 @@ ms.locfileid: "50145217"
   
 #### <a name="find-the-data-providers-on-the-download-site"></a>從下載網站找到資料提供者  
   
-1.  移至 [Microsoft 下載中心](http://go.microsoft.com/fwlink/p/?LinkID=296473)。  
+1.  移至 [Microsoft 下載中心](https://go.microsoft.com/fwlink/p/?LinkID=296473)。  
   
 2.  展開 **[安裝指示]**。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "50145217"
   
  MSOLAP130.dll 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]隨附的 Analysis Services OLE DB 提供者版本。 其他最近的舊版本包括 MSOLAP10.dll (適用於 SQL Server 2008 和 2008 R2) 以及 MSOLAP90.dll (適用於 SQL Server 2005)。  
   
- 連接字串中經常要指定 OLE DB 提供者。 Analysis Services 連接字串使用不同的命名法來指稱 OLE DB 提供者： MSOLAP。\<版本 >.dll  
+ 連接字串中經常要指定 OLE DB 提供者。 Analysis Services 連接字串會使用不同的命名法來指稱 OLE DB 提供者：MSOLAP。\<版本 >.dll  
   
  MSOLAP.5.dll 是目前和 Excel 2013 搭配安裝的 Analysis Services OLE DB 提供者。 較舊的版本如 MSOLAP.4.dll 或 MSOLAP.3.dll 則通常會在執行舊版 Excel 的工作站上找到。 部分 Analysis Services 功能 (例如 PowerPivot 增益集) 需要特定版本的 OLE DB 提供者。 如需詳細資訊，請參閱[連接字串屬性 &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md)。  
   

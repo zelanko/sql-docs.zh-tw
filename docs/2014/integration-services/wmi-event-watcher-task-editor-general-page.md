@@ -15,17 +15,17 @@ ms.assetid: 5813279b-52ca-4232-8826-38001467d9bd
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b284f16b082c174b0e3f335819fd11e6800f24f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 598ce51e4270e419e925d7aa82516e27ed3bf230
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189308"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370730"
 ---
 # <a name="wmi-event-watcher-task-editor-general-page"></a>WMI 事件監看員工作編輯器 (一般頁面)
   使用 [WMI 事件監看員工作編輯器] 對話方塊的 [一般] 頁面，即可命名和描述 WMI 事件監看員工作。  
   
- 若要了解這項工作，請參閱 [WMI 事件監看員工作](control-flow/wmi-event-watcher-task.md)。 如需 WMI 查詢語言 (WQL) 的詳細資訊，請參閱 MSDN Library 中的 Windows Management Instrumentation 主題 [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)(使用 WQL 查詢)。  
+ 若要了解這項工作，請參閱 [WMI 事件監看員工作](control-flow/wmi-event-watcher-task.md)。 如需 WMI 查詢語言 (WQL) 的詳細資訊，請參閱 MSDN Library 中的 Windows Management Instrumentation 主題 [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)(使用 WQL 查詢)。  
   
 ## <a name="options"></a>選項。  
  **名稱**  

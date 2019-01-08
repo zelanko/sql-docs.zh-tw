@@ -15,12 +15,12 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ee420b28442909af74a17a196ffac653b6089eb5
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: a0f004a2d145356e38816b65fc2cd5c2a1972074
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072322"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362910"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地圖精靈與地圖圖層精靈 (報表產生器及 SSRS)
   地圖精靈與地圖圖層精靈會將建立地圖、加入地圖圖層，或變更現有圖層上之地圖圖層選項的程序自動化。  
@@ -32,7 +32,7 @@ ms.locfileid: "49072322"
   
 -   **空間資料來源：** 提供空間資料 (例如，包含空間資料之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體和資料庫的名稱，或環境系統研究協會 (Environmental Systems Research Institute, Inc.，ESRI) 形狀檔的名稱) 之來源的位置或連接。(ESRI) 形狀檔。  
   
--   **空間資料：** 來自空間資料來源，包含指定位置之座標位置組的欄位。  
+-   **Spatial data.** 來自空間資料來源，包含指定位置之座標位置組的欄位。  
   
 -   **分析資料：** 用於改變地圖顯示 (如商店的年度銷售量) 的分析資料。  
   
@@ -79,11 +79,11 @@ ms.locfileid: "49072322"
   
     -   [基本地圖、泡泡地圖與分析地圖之間的差異為何？](#MapType)  
   
-    -   **選擇地圖視覺效果： 多邊形**  
+    -   **選擇地圖視覺效果：多邊形**  
   
-    -   **選擇地圖視覺效果： 線條**  
+    -   **選擇地圖視覺效果：程式行**  
   
-    -   **選擇地圖視覺效果： 點**  
+    -   **選擇地圖視覺效果：點**  
   
 4.  **選擇與資料來源的連接**。 選擇資料來源連接，或建立一個外部資料來源的連接，其中包含要顯示在地圖上的分析資料。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "49072322"
   
  在您加入地圖或地圖圖層並預覽報表之後，可以變更您在精靈中設定的地圖和地圖圖層選項。 如需詳細資訊，請參閱[自訂地圖或地圖圖層的資料和顯示 &#40;報表產生器及 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
- 如需地圖的詳細資訊，請參閱 [地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)。 如需將地圖加入報表中的逐步指示，請參閱[教學課程：地圖報表 &#40;報表產生器&#41;](../tutorial-map-report-report-builder.md)。  
+ 如需地圖的詳細資訊，請參閱 [地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)。 若要將地圖加入至報表的逐步指示，請參閱[教學課程：地圖報表&#40;報表產生器&#41;](../tutorial-map-report-report-builder.md)。  
   
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
   
@@ -139,7 +139,7 @@ ms.locfileid: "49072322"
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的報表設計師中，將 .shp 檔和 .dbf 檔同時加入至報表專案，然後將 .shp 檔案的名稱指定為空間資料來源。  
   
 ###  <a name="GetShapefiles"></a> 哪裡可以取得 ESRI 形狀檔？  
- ESRI 形狀檔可上網取得。 如需詳細資訊，請參閱 [尋找地圖的 ESRI 形狀檔](http://go.microsoft.com/fwlink/?linkid=178814)。  
+ ESRI 形狀檔可上網取得。 如需詳細資訊，請參閱 [尋找地圖的 ESRI 形狀檔](https://go.microsoft.com/fwlink/?linkid=178814)。  
   
 ###  <a name="SqlServerSpatial"></a> 何謂 SQL Server 空間查詢？  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 空間查詢是一種資料集查詢，可以指定來自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 關聯式資料庫之 SQLGeometry 或 SQLGeography 資料類型的資料。  
@@ -149,7 +149,7 @@ ms.locfileid: "49072322"
   
  當您在查詢設計工具中執行查詢時，結果集會顯示一個資料行，其中包含顯示為文字的空間資料。 例如，一個資料列可能包含單一點的空間資料，而下一個資料列則可能包含定義一組點的空間資料。 每個資料列都會變成一個地圖元素。 您可以將每個地圖元素的顯示變更為個別的單位。  
   
- 如需詳細資訊，請參閱《 [SQL Server 線上叢書](http://go.microsoft.com/fwlink/?linkid=120955)》中的＜空間資料的類型＞。  
+ 如需詳細資訊，請參閱《 [SQL Server 線上叢書](https://go.microsoft.com/fwlink/?linkid=120955)》中的＜空間資料的類型＞。  
   
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
   
@@ -196,9 +196,9 @@ ms.locfileid: "49072322"
   
 -   **混合：** 顯示 **[路段圖]** 和 **[空照圖]** 檢視的組合。  
   
- 如需有關圖格的詳細資訊，請參閱＜ [Bing 地圖底圖系統](http://go.microsoft.com/fwlink/?LinkId=147315)＞。 如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](http://go.microsoft.com/fwlink/?LinkId=151371) 和 [隱私權聲明](http://go.microsoft.com/fwlink/?LinkId=151372)。  
+ 如需有關圖格的詳細資訊，請參閱＜ [Bing 地圖底圖系統](https://go.microsoft.com/fwlink/?LinkId=147315)＞。 如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](https://go.microsoft.com/fwlink/?LinkId=151371) 和 [隱私權聲明](https://go.microsoft.com/fwlink/?LinkId=151372)。  
   
- 若要在設計檢視下查看圖格背景，您必須能夠存取網際網路。 若要從報表伺服器上的報表查看預覽中的圖格背景，則必須將報表伺服器設定為支援 Bing 地圖底圖。 如需詳細資訊，請參閱 <<c0> [ 報表疑難排解： 地圖報表&#40;報表產生器及 SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)和 < 規劃地圖 」 中[Reporting Services 文件](http://go.microsoft.com/fwlink/?linkid=121312)SQL Server 線上叢書 》 中。</c0>  
+ 若要在設計檢視下查看圖格背景，您必須能夠存取網際網路。 若要從報表伺服器上的報表查看預覽中的圖格背景，則必須將報表伺服器設定為支援 Bing 地圖底圖。 如需詳細資訊，請參閱[報表疑難排解：將報表對應&#40;報表產生器及 SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)及 < 規劃地圖 」 中[Reporting Services 文件](https://go.microsoft.com/fwlink/?linkid=121312)SQL Server 線上叢書 》 中。  
   
  如需自訂圖格圖層之其他方式的詳細資訊，請參閱[加入、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
@@ -271,7 +271,7 @@ ms.locfileid: "49072322"
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
   
 ## <a name="see-also"></a>另請參閱  
- [報表疑難排解：地圖報表 &#40;報表產生器及 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [報表疑難排解：將報表對應&#40;報表產生器及 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [規劃地圖報表 &#40;報表產生器及 SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)   
  [地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)  
   

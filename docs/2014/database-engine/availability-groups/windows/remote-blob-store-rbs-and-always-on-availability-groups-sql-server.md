@@ -10,12 +10,12 @@ ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 16480ffcaf73a88f5983bef41b90f2276709d947
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b2ab48c3406c9820ca264a1cef236a041a5924
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212058"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359110"
 ---
 # <a name="remote-blob-store-rbs-and-alwayson-availability-groups-sql-server"></a>遠端 BLOB 存放區 (RBS) 及 AlwaysOn 可用性群組 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 可以為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][遠端 BLOB 存放區 (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) BLOB 物件 (Blob) 提供高可用性和災害復原方案。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 會透過將儲存在可用性資料庫中的任何 RBS 中繼資料和結構描述複寫到次要複本，予以保護。 這是 SharePoint 內容資料庫。 一般而言， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分開儲存此 RBS 中繼資料與 BLOB。  
@@ -39,11 +39,11 @@ ms.locfileid: "48212058"
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [維護遠端 BLOB 存放區](http://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) (在《 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 線上叢書》中)  
+-   [維護遠端 BLOB 存放區](https://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) (在《 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 線上叢書》中)  
   
--   [執行 RBS 維護程式](http://blogs.msdn.com/b/sqlrbs/archive/2010/03/19/running-rbs-maintainer.aspx) (部落格)  
+-   [執行 RBS 維護程式](https://blogs.msdn.com/b/sqlrbs/archive/2010/03/19/running-rbs-maintainer.aspx) (部落格)  
   
--   [使用 FILESTREAM 提供者設定遠端 BLOB 儲存 (RBS) (SharePoint 2010)](http://blogs.msdn.com/b/mvpawardprogram/archive/2012/04/02/configure-remote-blob-storage-rbs-with-the-filestream-provider-sharepoint-2010.aspx) (部落格)  
+-   [使用 FILESTREAM 提供者設定遠端 BLOB 儲存 (RBS) (SharePoint 2010)](https://blogs.msdn.com/b/mvpawardprogram/archive/2012/04/02/configure-remote-blob-storage-rbs-with-the-filestream-provider-sharepoint-2010.aspx) (部落格)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 用戶端連接性&#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md)   

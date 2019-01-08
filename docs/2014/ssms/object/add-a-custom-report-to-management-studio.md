@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
@@ -12,17 +12,17 @@ ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 89a427c841aa904565fae1fa8a0a1043778d58c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12108fb9d52081b70b87929bacb6882b3463a4a8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207228"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357175"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>將自訂報表加入 Management Studio
   本主題描述如何建立儲存為 .rdl 檔案的簡單 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表，然後將該 rdl 檔案加入至 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 做為自訂報表。 [!INCLUDE[ssRS](../../includes/ssrs.md)] 可以建立多種精密報表。 若要使用本主題來建立報表，您必須先在電腦上安裝 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 。 您不需要在 [!INCLUDE[ssRS](../../includes/ssrs.md)] 上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，即可使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]執行自訂報表。  
   
- [報表範例](http://go.microsoft.com/fwlink/?LinkId=81792)(其中包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)]所建立的標準報表) 可供您下載。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]來修改這些範例。  
+ [報表範例](https://go.microsoft.com/fwlink/?LinkId=81792)(其中包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)]所建立的標準報表) 可供您下載。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]來修改這些範例。  
   
 ### <a name="to-create-a-simple-report-saved-as-an-rdl-file"></a>建立儲存成 .rdl 檔的簡單報表  
   

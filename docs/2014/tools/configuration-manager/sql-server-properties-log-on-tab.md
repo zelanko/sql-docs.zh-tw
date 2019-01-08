@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 48746f150d12342b8ab0c5b95ab6a1164d7b2500
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0bb23beae7bcf8e47166ea205a3ce4e5a72f0493
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062878"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364970"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>SQL Server 屬性 (登入索引標籤)
   您可以使用 **[SQL Server 屬性]** 對話方塊的 **[登入]** 索引標籤，來指定要供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務使用的帳戶、變更帳戶的密碼，以及啟動和停止該服務。 帳戶密碼的變更會立即生效。  
@@ -62,7 +61,7 @@ ms.locfileid: "48062878"
  繼續已暫停的服務。  
   
 > [!IMPORTANT]  
->  根據預設，只有本機 Administrators 群組的成員能夠啟動、停止、暫停、繼續或重新啟動服務。 若要將管理服務的能力授與非系統管理員，請參閱 [How to grant users rights to manage services in Windows Server 2003](http://support.microsoft.com/kb/325349)(如何在 Windows Server 2003 中，將管理服務的權限授與使用者)。 (其他 Windows 版本的程序都很相似)。  
+>  根據預設，只有本機 Administrators 群組的成員能夠啟動、停止、暫停、繼續或重新啟動服務。 若要將管理服務的能力授與非系統管理員，請參閱 [How to grant users rights to manage services in Windows Server 2003](https://support.microsoft.com/kb/325349)(如何在 Windows Server 2003 中，將管理服務的權限授與使用者)。 (其他 Windows 版本的程序都很相似)。  
   
 > [!NOTE]  
 >  啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，包含「未實作 [0x80004001]」片語的 WMI 錯誤，可能表示目標電腦上並未安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

@@ -13,17 +13,17 @@ ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 387cb0f529858efc858004c9c0d2a382f52cf048
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da65bc5c3879a20ff178e27747a9bf5b267ff2c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222638"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372180"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼
   本主題將討論如何取得將屬性加入至搜尋屬性清單，使全文檢索搜尋能夠進行搜尋所需的值。 這些值包括文件屬性的屬性集 GUID 和屬性整數識別碼。  
   
- 文件擷取的 Ifilter 從二進位資料 – 也就是儲存在資料的屬性`varbinary`， `varbinary(max)` (包括`FILESTREAM`)，或`image`資料類型資料行 – 可供進行全文檢索搜尋。 若要使擷取的屬性可搜尋，則必須手動將屬性加入至搜尋屬性清單。 同時，搜尋屬性清單必須與一個或多個全文檢索索引產生關聯。 如需詳細資訊，請參閱 [使用搜索屬性清單搜索文件屬性](search-document-properties-with-search-property-lists.md)。  
+ 文件擷取的 Ifilter 從二進位資料-也就是儲存在資料的屬性`varbinary`， `varbinary(max)` (包括`FILESTREAM`)，或`image`資料類型資料行-可供進行全文檢索搜尋。 若要使擷取的屬性可搜尋，則必須手動將屬性加入至搜尋屬性清單。 同時，搜尋屬性清單必須與一個或多個全文檢索索引產生關聯。 如需詳細資訊，請參閱 [使用搜索屬性清單搜索文件屬性](search-document-properties-with-search-property-lists.md)。  
   
  在屬性清單中加入可用屬性之前，您必須先找到有關屬性的兩項資訊：  
   
@@ -43,9 +43,9 @@ ms.locfileid: "48222638"
 |Authors|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|給定項目的一位或多位作者。|  
 |Tags|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|指派給項目的關鍵字集合 (也稱為標記)。|  
 |類型|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|以正式類型為基礎的認知檔案類型。|  
-|Title|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|項目的標題。 例如文件的標題、郵件的主旨、相片的標題或音樂曲目的名稱。|  
+|標題|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|項目的標題。 例如文件的標題、郵件的主旨、相片的標題或音樂曲目的名稱。|  
   
- 為了鼓勵檔案格式的一致性，Microsoft 已經針對許多文件類別識別了常用且高優先順序的文件屬性子集。 這些類別包括通訊、連絡人、文件、音樂檔案、圖片和視訊。 如需每個類別目錄前幾項排名屬性的詳細資訊，請參閱 Windows Search 文件集中的 [system-defined properties for custom file formats](http://go.microsoft.com/fwlink/?LinkId=144336) (自訂檔案格式的系統定義屬性)。  
+ 為了鼓勵檔案格式的一致性，Microsoft 已經針對許多文件類別識別了常用且高優先順序的文件屬性子集。 這些類別包括通訊、連絡人、文件、音樂檔案、圖片和視訊。 如需每個類別目錄前幾項排名屬性的詳細資訊，請參閱 Windows Search 文件集中的 [system-defined properties for custom file formats](https://go.microsoft.com/fwlink/?LinkId=144336) (自訂檔案格式的系統定義屬性)。  
   
  特定檔案格式可能會實作三種類型的屬性：  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48222638"
   
  您可以從命令提示字元執行 **filtdump.exe** ，並提供單一引數。 此引數是個別檔案的名稱，而該檔案具有已安裝 IFilter 的檔案類型。 此公用程式顯示文件中 IFilter 所找到之所有屬性的清單，還包含其屬性集 GUID、整數識別碼和其他資訊。  
   
- 如需安裝此軟體的相關資訊，請參閱 [Microsoft Windows SDK for Windows 7 和 .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=212980)。 在您下載並安裝 SDK 之後，請查看下列資料夾中是否有 filtdump.exe 公用程式。  
+ 如需安裝此軟體的相關資訊，請參閱 [Microsoft Windows SDK for Windows 7 和 .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=212980)。 在您下載並安裝 SDK 之後，請查看下列資料夾中是否有 filtdump.exe 公用程式。  
   
 -   針對 64 位版本，請查看 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`。  
   
@@ -75,15 +75,15 @@ ms.locfileid: "48222638"
 .  
 propertyDescription  
 name = System.Author  
-…  
+...  
 formatID = F29F85E0-4FF9-1068-AB91-08002B27B3D9  
 propID = 4  
-…  
+...  
 ```  
   
- 如需此屬性的完整描述，請參閱 Windows Search 文件集中的 [System.Author](http://go.microsoft.com/fwlink/?LinkId=144337) 。  
+ 如需此屬性的完整描述，請參閱 Windows Search 文件集中的 [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) 。  
   
- 如需 Windows 屬性的完整清單，請參閱同樣在 Windows Search 文件集中的 [Windows Properties](http://go.microsoft.com/fwlink/?LinkId=215013)Windows 屬性)。  
+ 如需 Windows 屬性的完整清單，請參閱同樣在 Windows Search 文件集中的 [Windows Properties](https://go.microsoft.com/fwlink/?LinkId=215013)Windows 屬性)。  
   
 ##  <a name="examples"></a> 將屬性加入至搜尋屬性清單  
  下列範例示範如何將屬性加入至搜尋屬性清單。 此範例會使用 [ALTER SEARCH PROPERTY LIST](/sql/t-sql/statements/alter-search-property-list-transact-sql) 陳述式將 `System.Author` 屬性加入名為 `PropertyList1`的搜尋屬性清單，並且為屬性提供使用者易記名稱 `Author`。  

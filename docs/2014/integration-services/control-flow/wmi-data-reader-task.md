@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.f1
@@ -16,12 +15,12 @@ ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d0262328fd3f5a2ed948fb8f2c62781dc19ae17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23a6e6fd3c6639abedc0324d2f8831e782270bc1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229778"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363120"
 ---
 # <a name="wmi-data-reader-task"></a>WMI 資料讀取器工作
   「WMI 資料讀取器」工作使用「Windows Management Instrumentation (WMI) 查詢語言」執行查詢，該查詢語言會從 WMI 傳回有關電腦系統的資訊。 您可將「WMI 資料讀取器」工作用於下列用途：  
@@ -49,7 +48,7 @@ ms.locfileid: "48229778"
  「WMI 資料讀取器」工作使用 WMI 連接管理員連接到可從中讀取 WMI 資訊的伺服器。 如需相關資訊，請參閱 [WMI Connection Manager](../connection-manager/wmi-connection-manager.md)。  
   
 ## <a name="wql-query"></a>WQL 查詢  
- WQL 是 SQL 用語，其包含的延伸模組可支援 WMI 事件通知和其他 WMI 特定功能。 如需有關 WQL 的詳細資訊，請參閱 [MSDN Library](http://go.microsoft.com/fwlink/?linkid=7022)中的 Windows Management Instrumentation 文件集。  
+ WQL 是 SQL 用語，其包含的延伸模組可支援 WMI 事件通知和其他 WMI 特定功能。 如需 WQL 的詳細資訊，請參閱 [MSDN Library](https://go.microsoft.com/fwlink/?linkid=7022)中的 Windows Management Instrumentation 文件。  
   
 > [!NOTE]  
 >  不同 Windows 版本的 WMI 類別也有所不同。  

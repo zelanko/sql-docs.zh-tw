@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -16,12 +15,12 @@ ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3748c28fe790000dc01b73fddea01e00e9ef1b54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 865cf1ca025c27be7cd71f3c8699348dda163dfb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216058"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764110"
 ---
 # <a name="compare-replicated-tables-for-differences-replication-programming"></a>比較複寫資料表的差異 (複寫程式設計)
   發行項驗證可用來判斷「發行者」和「訂閱者」端資料表發行項的發行資料是否互異，若有則可能代表無法聚合。 如需詳細資訊，請參閱[驗證複寫的資料](../validate-replicated-data.md)。 不過，驗證只會傳回通過或失敗資訊，而不會針對來源及目的地資料表之間的差異提供任何相關資訊。 **tablediff** 命令提示字元公用程式會傳回兩個資料表之間差異的詳細資訊，甚至可能產生 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼，將訂閱向發行者端的資料聚合。  

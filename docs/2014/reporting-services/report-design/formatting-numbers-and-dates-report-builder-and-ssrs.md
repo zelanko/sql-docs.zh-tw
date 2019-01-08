@@ -20,12 +20,12 @@ ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e911f31751ed0ef2d6fedb17c1b79affde79eef3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 400b7ca37d5eef130df855b3519079e2ccc8799e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166158"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376120"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>格式化數字和日期 (報表產生器及 SSRS)
   您可以從對應資料區之 **[屬性]** 對話方塊的 **[數字]** 頁面選取一種格式，藉以格式化資料區中的數字和日期。  
@@ -47,21 +47,21 @@ ms.locfileid: "48166158"
   
 -   根據預設，數字會經過格式化以反映用戶端電腦上的文化特性設定。 使用格式字串來指定顯示數字的方式，因此不管檢視報表的人身在何處，格式都是一致的。  
   
--   在 **[數字]** 頁面上提供的格式為 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 標準數值格式字串的子集。 若要使用對話方塊中沒有顯示的自訂格式來格式化數字或日期，您可以針對數字或日期使用任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串。 如需有關自訂格式字串的詳細資訊，請參閱 MSDN 上的＜ [格式化型別](http://go.microsoft.com/fwlink/?LinkId=112024) ＞主題。  
+-   在 **[數字]** 頁面上提供的格式為 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 標準數值格式字串的子集。 若要使用對話方塊中沒有顯示的自訂格式來格式化數字或日期，您可以針對數字或日期使用任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串。 如需有關自訂格式字串的詳細資訊，請參閱 MSDN 上的＜ [格式化型別](https://go.microsoft.com/fwlink/?LinkId=112024) ＞主題。  
   
 -   如果已經指定自訂格式字串，其優先順序會高於文化專用的預設值。 例如，假設您設定 "#,###" 的自訂格式字串，將數字 1234 顯示為 1,234。 這對於美國的使用者與歐洲的使用者可能代表不同的意義。 在您指定自訂格式之前，請考慮您選擇的格式影響不同文化的使用者檢視報表的方式。  
   
 -   如果您指定無效的格式字串，格式化的文字會解譯為覆寫格式的常值字串。  
   
--   如果您要在相同的文字方塊中格式化數字和字串的混合時，請考慮使用預留位置來分別格式化數字與其餘文字。 如需詳細資訊，請參閱[格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)。 如果在文字方塊上針對 Format 屬性指定的格式字串無效，則會略過該格式字串。 如果在圖表或量測計上針對 Format 屬性指定的格式字串無效，您所指定的格式字串會解譯為字串，而且不會套用該格式。  
+-   如果您要在相同的文字方塊中格式化數字和字串的混合時，請考慮使用預留位置來分別格式化數字與其餘文字。 如需詳細資訊，請參閱 [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)。 如果在文字方塊上針對 Format 屬性指定的格式字串無效，則會略過該格式字串。 如果在圖表或量測計上針對 Format 屬性指定的格式字串無效，您所指定的格式字串會解譯為字串，而且不會套用該格式。  
   
 -   如果您選取 **[類別目錄]** 底下的 **[貨幣]** ，並核取 **[值的顯示單位]**，您可以選取 **[千]**、 **[百萬]** 或 **[十億]** 來使用財務格式顯示數值。 例如，如果欄位值為 1,789,905,394，而且您選取 **[十億]** 並指定 2 位小數位數，顯示在報表中的值為 1.78。  
   
 ## <a name="see-also"></a>另請參閱  
- [格式化文字和預留位置&#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [格式化線條、色彩和影像 &#40;報表產生器及 SSRS&#41;](images-report-builder-and-ssrs.md)   
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [將軸標籤格式化成日期或貨幣 &#40;報表產生器及 SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [格式化量測計的標尺&#40;報表產生器及 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [格式化量測計上的標尺 &#40;報表產生器及 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

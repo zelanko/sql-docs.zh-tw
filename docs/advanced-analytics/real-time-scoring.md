@@ -1,5 +1,5 @@
 ---
-title: 在 SQL Server machine learning 中的即時評分 |Microsoft Docs
+title: 進行即時評分使用 sp_rxPredict 預存程序-SQL Server Machine Learning 服務
 description: 產生使用 sp_rxPredict，評分資料輸入，針對預先定型的模型，以 R 撰寫 SQL Server 上的預測。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: dce0928c0675172c503e6783aa25d6cbcaec9b5f
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: def60a6de7d5a6f3641a6de88410543e9e592ba4
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713511"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645157"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>使用 SQL Server machine learning 中的 sp_rxPredict 進行即時評分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -177,7 +177,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 因為二進位的格式相同，可由 PREDICT 函式，您可以使用前述範例中的模型和資料的資料表。
 
-```SQL
+```sql
 DECLARE @irismodel varbinary(max)
 SELECT @irismodel = [native_model_object] from [ml_models]
 WHERE model_name = 'iris.dtree' 

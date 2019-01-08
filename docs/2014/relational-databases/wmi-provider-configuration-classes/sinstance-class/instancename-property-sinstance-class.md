@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - InstanceName Property (SInstance Class)
@@ -20,12 +18,12 @@ ms.assetid: e6472fae-870d-4fb3-84d0-0c8f6599d1d2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6c5aea22290f618e8d99fce4c405a05a12b71bd2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ecc010dde59028b95896d6c00fa4f55cdc82c40
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210868"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365560"
 ---
 # <a name="instancename-property-sinstance-class"></a>InstanceName 屬性 (SInstance 類別)
   取得 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的名稱。  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定伺服器網路通訊協定和網路程式庫](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [設定伺服器網路通訊協定和網路程式庫](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

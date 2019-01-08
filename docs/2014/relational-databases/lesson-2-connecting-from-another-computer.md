@@ -1,22 +1,21 @@
 ---
-title: 第 2 課：從另一部電腦連接 | Microsoft Docs
+title: 第 2 課：從另一部電腦連接 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bb12113055da47358baf4c14403c4b95b433cf86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6efa9ab6ec2733c67a00b4c16e08d6b4e435cf9b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183208"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367190"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 課：從另一部電腦連接
   為了加強安全性，初始安裝時，您不能從另一部電腦存取 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer Edition、Express Edition 和 Evaluation Edition 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 這一課教您如何啟用通訊協定、設定通訊埠以及設定 Windows 防火牆，以便從其他電腦連接。  
@@ -58,7 +57,7 @@ ms.locfileid: "48183208"
  為了加強安全性，Windows Server 2008、 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]和 Windows 7 都會開啟 Windows 防火牆。 若要從另一部電腦連接到這個執行個體，您必須在防火牆中開啟通訊埠。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體會接聽通訊埠 1433，因此，您不需要設定固定通訊埠。 但是，包括 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 在內的具名執行個體則會接聽動態通訊埠。 在防火牆中開啟通訊埠之前，您必須先設定 [!INCLUDE[ssDE](../includes/ssde-md.md)] 接聽特定的通訊埠 (稱為固定通訊埠或靜態通訊埠)，否則每次 [!INCLUDE[ssDE](../includes/ssde-md.md)] 啟動時可能會接聽不同的通訊埠。 如需防火牆、預設 Windows 防火牆設定的詳細資訊以及影響 Database Engine、Analysis Services、Reporting Services 和 Integration Services 之 TCP 通訊埠的描述，請參閱 [設定 Windows 防火牆以允許 SQL Server 存取](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
 > [!NOTE]  
->  通訊埠編號指派是由 Internet Assigned Numbers Authority 所管理，而且列於 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)。您應該從 49152 到 65535 指派通訊埠編號。  
+>  通訊埠編號指派是由 Internet Assigned Numbers Authority 所管理，而且列於 [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844)。您應該從 49152 到 65535 指派通訊埠編號。  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>設定 SQL Server 在特定通訊埠接聽  
   

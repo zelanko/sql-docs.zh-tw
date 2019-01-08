@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - mapping XDR types to XPath types [SQLXML]
@@ -29,12 +27,12 @@ ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78c7890449a68770d6c6a14a100af061b1394040
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b490a0f4876f911923ed0429f33d332b96768792
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054748"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796411"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 資料類型 (SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XPath 和 XML 結構描述 (XSD) 所擁有的資料類型非常不同。 例如，XPath 沒有整數或日期資料類型，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 XSD 則有許多。 XSD 會將奈秒的有效位數用於時間值，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 則至多使用 1/300 秒的有效位數。 因此，並非永遠都能將一個資料類型對應到另一個。 如需有關對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型到 XSD 資料類型，請參閱[資料類型強制型轉和 sql: datatype 註解&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)。  
@@ -65,7 +63,7 @@ ms.locfileid: "48054748"
 |都不是節點集。|將兩個運算元同時轉換為 `number`，然後進行比較。|將兩個運算元同時轉換為一般類型，然後進行比較。 如果其中一個是 `boolean`，轉換為 `boolean`，如果其中一個是 `number`，轉換為 `number`，否則，轉換為 `string`。|  
   
 > [!NOTE]  
->  XPath 關係運算子會將其運算元一律轉換為 `number`，因此無法進行 `string` 比較。 若要加入日期比較，SQL Server 2000 會將此變數提供給 XPath 規格：當關係運算子將 `string` 與 `string` 相比較、將節點集與 `string` 相比較，或將兩個字串值節點集相比較時，會執行 `string` 比較 (而非 `number` 比較)。  
+>  XPath 關係運算子會將其運算元一律轉換為 `number`，因此無法進行 `string` 比較。 若要加入日期比較，SQL Server 2000 此變數提供給 XPath 規格：當關係運算子比較`string`要`string`的節點集`string`，或字串值節點集字串值節點集，`string`比較 (不`number`比較) 會執行。  
   
 ## <a name="node-set-conversions"></a>節點集轉換  
  節點集轉換並不一定直覺式。 藉由在節點集中只採用第一個節點的字串值，節點集就會轉換為 `string`。 節點集會轉換為 `number`，方法是，將其先轉換為 `string`，然後再將 `string` 轉換為 `number`。 系統會測試節點集是否存在，然後再轉換為 `boolean`。  
@@ -89,7 +87,7 @@ ms.locfileid: "48054748"
   
 |XDR 資料類型|對等用法<br /><br /> XPath 資料類型|使用的 SQL Server 轉換|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|不適用|NoneEmployeeID|  
+|Nonebin.base64bin.hex|N/A|NoneEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
 |number、int、float、i1、i2、i4、i8、r4、r8ui1、ui2、ui4、ui8|number|CONVERT(float(53), EmployeeID)|  
 |id、idref、idrefsentity、entities、enumerationnotation、nmtoken、nmtokens、chardate、Timedate、Time.tz、string、uri、uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  

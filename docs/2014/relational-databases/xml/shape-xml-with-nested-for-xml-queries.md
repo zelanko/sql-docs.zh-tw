@@ -14,12 +14,12 @@ ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 917e6a4b5e354b95207e9293879bdb9fb1effb28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49978eaceed27e2cfd363cc6a4654d581a91e4c4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155028"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372690"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>使用巢狀 FOR XML 查詢組成 XML
   以下範例會查詢 `Production.Product` 資料表，以擷取特定產品的 `ListPrice` 及 `StandardCost` 值。 兩個價格都會以 <`Price`> 元素傳回，而且每個 <`Price`> 元素都有一個 `PriceType` 屬性，使查詢值得關注。  
@@ -28,8 +28,8 @@ ms.locfileid: "48155028"
  以下是預期的 XML 外觀：  
   
 ```  
-<xsd:schema xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet2" elementFormDefault="qualified">  
-  <xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
+<xsd:schema xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet2" elementFormDefault="qualified">  
+  <xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
   <xsd:element name="Production.Product" type="xsd:anyType" />  
 </xsd:schema>  
 <Production.Product xmlns="urn:schemas-microsoft-com:sql:SqlRowSet2" ProductID="520">  
@@ -86,7 +86,7 @@ WHERE ProductID = 520
 FOR XML AUTO, TYPE  
 ```  
   
- 先前的範例使用`query()`方法的`xml`資料類型來查詢內部 FOR XML 查詢所傳回的 XML，並建構預期的結果。  
+ 先前的範例使用 `query()` 資料類型的 `xml` 方法，以查詢內部 FOR XML 查詢傳回的 XML，並建構預期的結果。  
   
  以下是結果：  
   

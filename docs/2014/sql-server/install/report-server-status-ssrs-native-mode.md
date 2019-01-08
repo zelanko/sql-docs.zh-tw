@@ -13,12 +13,12 @@ ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: de8c0b06607ef2a9716229fff7e972c96c916fca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ac754d9c27afb277701342855107d973f3f625d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128618"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374110"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>報表伺服器狀態 (SSRS 原生模式)
   使用此頁面可檢視目前所連接之報表伺服器執行個體的相關資訊。 此頁面是報表伺服器組態的起始頁面。 其他頁面可用於設定 URL、服務帳戶、報表伺服器資料庫、報表伺服器電子郵件傳遞、向外延展部署和加密金鑰。  
@@ -30,17 +30,17 @@ ms.locfileid: "48128618"
 > [!TIP]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態管理員 (RSConfigTool.exe) 使用"highestAvailable"權限層級安裝。 這是依據設計的行為。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員需要與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API 進行通訊。 某些 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 通訊需要更高層級或系統管理權限。  
   
- 如果您連接至報表伺服器，而且所有頁面連結都呈現灰色，請確認報表伺服器服務是否已啟動。 **報表服務狀態：** 應該為「已啟動」。 您也可以使用 [系統管理工具] 中的 [服務] 主控台應用程式來檢查服務狀態。  
+ 如果您連接至報表伺服器，而且所有頁面連結都呈現灰色，請確認報表伺服器服務是否已啟動。 **報告服務狀態：** 應該是 「 已啟動 」。 您也可以使用 [系統管理工具] 中的 [服務] 主控台應用程式來檢查服務狀態。  
   
 ## <a name="options"></a>選項。  
  **SQL Server 執行個體**  
- 顯示目前所連接報表伺服器執行個體的相關資訊。 報表伺服器執行個體名稱根據[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具名執行個體。 預設執行個體為 MSSQLSERVER。 具名執行個體將會是您在安裝期間所指定的值。 如需有關執行個體的詳細資訊，請參閱[使用多個版本和 SQL Server 執行個體](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
+ 顯示目前所連接報表伺服器執行個體的相關資訊。 報表伺服器執行個體名稱是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具名執行個體為基礎。 預設執行個體為 MSSQLSERVER。 具名執行個體將會是您在安裝期間所指定的值。 如需有關執行個體的詳細資訊，請參閱[使用多個版本和 SQL Server 執行個體](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
   
 > [!NOTE]  
 >  在 SQL Server Express with Advanced Services 中，預設執行個體為 SQLExpress。  
   
  **執行個體識別碼**  
- 對應至檔案系統上儲存您所連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的程式檔案的資料夾。 **執行個體識別碼**安裝程式會指派值格式*元件*。*執行個體*，其中*元件*是一個值，表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件並*執行個體*是執行個體名稱。 預設執行個體名稱是 MSSQLSERVER。 例如，如果您安裝的預設執行個體[!INCLUDE[ssDE](../../includes/ssde-md.md)]， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]元件，對應的資料夾名稱如下所示：  
+ 對應至檔案系統上儲存您所連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的程式檔案的資料夾。 **[執行個體識別碼]** 值是由安裝程式使用 *&lt;component&gt;*.*&lt;instance&gt;* 格式指派的，其中 *&lt;component&gt;* 是表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的值，而 *&lt;instance&gt;* 是執行個體名稱。 預設執行個體名稱是 MSSQLSERVER。 例如，如果您安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件的預設執行個體，對應的資料夾名稱如下：  
   
 -   MSSQL12.MSSQLSERVER  
   
@@ -51,16 +51,16 @@ ms.locfileid: "48128618"
  如果您安裝第二個元件的執行個體，您已安裝，這類[!INCLUDE[ssDE](../../includes/ssde-md.md)]，而且您將執行個體 Contoso**執行個體識別碼**是 MSSQL12。Contoso。  
   
  **版本(Edition)**  
- 顯示版本資訊。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 版本支援的功能](http://go.microsoft.com/fwlink/?linkid=232473)。  
+ 顯示版本資訊。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473)。  
   
  **產品版本**  
- 顯示的版本[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]您安裝。  
+ 顯示您安裝的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本。  
   
  **報表伺服器資料庫**  
  顯示可儲存目前報表伺服器執行個體之應用程式資料的報表伺服器資料庫名稱。  
   
  **報表伺服器模式**  
- 這裡顯示的值應該一律為 **[原生]**。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration manager 僅支援原生模式報表伺服器。 如果您看見 **SharePoint 整合模式**這個值，可能表示您的原生模式部署未正確設定，而且您需要連接到原生模式報表目錄。 使用組態管理員的 **[資料庫]** 頁面可變更資料庫，以及建立新的資料庫或連接到現有的原生模式報表伺服器資料庫目錄。  
+ 這裡顯示的值應該一律為 **[原生]**。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員僅支援原生模式報表伺服器。 如果您看見 **SharePoint 整合模式**這個值，可能表示您的原生模式部署未正確設定，而且您需要連接到原生模式報表目錄。 使用組態管理員的 **[資料庫]** 頁面可變更資料庫，以及建立新的資料庫或連接到現有的原生模式報表伺服器資料庫目錄。  
   
  **伺服器狀態**  
  顯示報表伺服器服務是否在執行。  

@@ -1,29 +1,28 @@
 ---
-title: 步驟 4：新增套件設定 | Microsoft Docs
+title: 步驟 4：加入封裝組態 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20d4e13b765e58ef5bfd7464bbf46b6106e4f525
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8284f25e54cadbedd4cb14e07970af249fe4521
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085390"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364010"
 ---
 # <a name="step-4-adding-package-configurations"></a>步驟 4：加入封裝組態
   在這項工作中，您會為每個封裝加入組態。 組態會在執行階段更新封裝屬性和封裝物件的值。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供各種組態類型。 您可以將組態儲存在環境變數、登錄項目、使用者自訂變數、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表和 XML 檔案中。 為了提供更大的彈性， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 還支援使用間接組態。 這表示您可以使用環境變數來指定組態的位置，進而指定實際的值。 「部署教學課程」專案中的封裝會使用 XML 組態檔和間接組態的組合。 XML 組態檔可以包含多個屬性的組態，而且在適當的情況下，可以由多個封裝參考。 在這個教學課程中，您會針對各個封裝使用不同的組態檔。  
   
- 組態檔通常會包含像是連接字串等機密資訊。 因此，您應該使用存取控制清單 (ACL) 來限制對儲存檔案所在位置或資料夾的存取，只將存取權授與給允許執行封裝的使用者或帳戶。 如需詳細資訊，請參閱[對封裝使用之檔案的存取權](../../2014/integration-services/access-to-files-used-by-packages.md)。  
+ 組態檔通常會包含像是連接字串等機密資訊。 因此，您應該使用存取控制清單 (ACL) 來限制對儲存檔案所在位置或資料夾的存取，只將存取權授與給允許執行封裝的使用者或帳戶。 如需詳細資訊，請參閱 [對封裝使用之檔案的存取權](../../2014/integration-services/access-to-files-used-by-packages.md)。  
   
  您在前一項工作中加入至「部署教學課程」專案的封裝 (DataTransfer 和 LoadXMLData) 需要設定，才能在部署到目標伺服器之後順利執行。 若要實作組態，必須先為 XML 組態檔建立間接組態，然後再建立 XML 組態檔。  
   
@@ -130,9 +129,9 @@ ms.locfileid: "48085390"
 12. 在 [Package Configuration Organizer (封裝組態組合管理)] 對話方塊中，確認第一個列出的是「LoadXMLData 環境變數組態」，第二個列出的是「LoadXMLData 組態」，然後按一下 [關閉]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 5：測試更新的套件](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+ [步驟 5:測試更新的封裝](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [封裝組態](../../2014/integration-services/package-configurations.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services, SSIS Designer
@@ -17,12 +16,12 @@ ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c307d7c31b3599a358346812279d79c37705b533
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89fdb4d112d37a61b377bbac768d94012a703664
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074158"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362747"
 ---
 # <a name="integration-services-user-interface"></a>Integration Services 使用者介面
   除了 [ [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 索引標籤上的設計介面以外，使用者介面還提供對下列視窗和對話方塊 (用以將功能加入封裝及設定封裝物件屬性) 的存取權：  
@@ -40,7 +39,7 @@ ms.locfileid: "48074158"
   
  下表列出 [SSIS] 功能表和 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 之設計介面中可用的對話方塊。  
   
-|對話方塊|目的|存取|  
+|對話方塊|用途|存取|  
 |----------------|-------------|------------|  
 |**快速入門**|存取範例、教學課程和影片。|在 [控制流程] 索引標籤或 [資料流程] 索引標籤的設計介面上按一下滑鼠右鍵，然後按一下 [使用者入門]。<br /><br /> 若要在建立新 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案時自動顯示 [使用者入門] 視窗，請選取視窗最下方的 [Always show in new project (永遠在新專案中顯示)]。|  
 |**[設定 SSIS 記錄]**|透過加入記錄和設定記錄詳細資料來設定封裝及其工作的記錄。|在 **[SSIS]** 功能表上，按一下 **[記錄]**。<br /><br /> -或-<br /><br /> 以滑鼠右鍵按一下 [控制流程] 索引標籤之設計介面的任意位置，然後按一下 [記錄]。|  
@@ -56,11 +55,11 @@ ms.locfileid: "48074158"
   
  `- <SamplesSites>`  
   
- `<GettingStartedSamples>http://go.microsoft.com/fwlink/?LinkID=203147</GettingStartedSamples>`  
+ `<GettingStartedSamples>https://go.microsoft.com/fwlink/?LinkID=203147</GettingStartedSamples>`  
   
  `- <ToolboxSamples>`  
   
- `<Site>http://go.microsoft.com/fwlink/?LinkID=203286&query=SSIS%20{0}</Site>`  
+ `<Site>https://go.microsoft.com/fwlink/?LinkID=203286&query=SSIS%20{0}</Site>`  
   
  `</ToolboxSamples>`  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48074158"
   
  下表列出 [SSIS] 和 [檢視] 功能表，以及 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 之設計介面中可用的視窗。  
   
-|視窗|目的|存取|  
+|視窗|用途|存取|  
 |------------|-------------|------------|  
 |**變數**|加入並管理自訂變數。|在 **[SSIS]** 功能表上，按一下 **變數**。<br /><br /> -或-<br /><br /> 以滑鼠右鍵按一下 [控制流程] 和 [資料流程] 索引標籤之設計介面的任意位置，然後按一下 [變數]。<br /><br /> -或-<br /><br /> 在 [檢視] 功能表上，指向 [其他視窗]，然後按一下 [變數]。|  
 |**記錄事件**|檢視執行階段的記錄項目。|在 **[SSIS]** 功能表上，按一下 **記錄事件**。<br /><br /> -或-<br /><br /> 以滑鼠右鍵按一下 [控制流程] 和 [資料流程] 索引標籤之設計介面的任意位置，然後按一下 [記錄事件]。<br /><br /> -或-<br /><br /> 在 [檢視] 功能表上，指向 [其他視窗]，然後按一下 [記錄事件]。|  
@@ -118,6 +117,6 @@ ms.locfileid: "48074158"
  如需如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中建立封裝的資訊，請參閱 [在 SQL Server 資料工具中建立封裝](create-packages-in-sql-server-data-tools.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [SSIS 設計工具](ssis-designer.md)  
+ [SSIS 設計師](ssis-designer.md)  
   
   

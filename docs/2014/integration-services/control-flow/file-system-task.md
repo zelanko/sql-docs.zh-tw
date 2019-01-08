@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.filesystemtask.f1
@@ -15,12 +14,12 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45b0323ffea075bc914de54b58e922eb6bcbb4b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd924464331b144040f33797d0333b1ddb5a4032
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226028"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790940"
 ---
 # <a name="file-system-task"></a>檔案系統工作
   「檔案系統」工作會在檔案系統中的檔案和目錄上執行作業。 例如，封裝可使用「檔案系統」工作建立、移動或刪除目錄和檔案。 您也可以使用「檔案系統」工作設定檔案和目錄的屬性。 例如，「檔案系統」工作可將檔案設為隱藏或唯讀。  
@@ -32,7 +31,7 @@ ms.locfileid: "48226028"
 ## <a name="predefined-file-system-operations"></a>預先定義的檔案系統作業  
  「檔案系統」工作包括一組預先定義的作業。 下表描述這些作業。  
   
-|作業|描述|  
+|運算|描述|  
 |---------------|-----------------|  
 |複製目錄|將資料夾從一個位置複製到另一個。|  
 |複製檔案|將檔案從一個位置複製到另一個。|  
@@ -63,7 +62,7 @@ ms.locfileid: "48226028"
   
  如需有關可在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請參閱下列主題：  
   
--   [檔案系統工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [檔案系統工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

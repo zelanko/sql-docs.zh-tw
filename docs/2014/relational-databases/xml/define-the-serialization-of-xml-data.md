@@ -18,12 +18,12 @@ ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51f65bc99f5fa4ac3840c283c110594eeb48800c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 268204e17083d5ddfe02fefca97a3cea6c857c88
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156108"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814550"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>定義 XML 資料的序列化
   將 XML 資料類型明確或隱含轉換成 SQL 字串或二進位類型時，會根據本主題中所列的規則來序列化 XML 資料類型的內容。  
@@ -34,7 +34,7 @@ ms.locfileid: "48156108"
  例如：  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
+select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))  
 ```  
   
  以下是結果：  
@@ -48,13 +48,13 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
  例如：  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
+select CAST(CAST(N'<??/>' as XML) as NVARCHAR(MAX))  
 ```  
   
  以下是結果：  
   
 ```  
-<Δ/>  
+<??/>  
 ```  
   
  如果 SQL 目標類型是 VARCHAR 或 NCHAR，其結果會以對應於資料庫定序字碼頁的編碼序列化，但沒有位元組順序標示或 XML 宣告。 如果目標類型太小，或值無法對應至目標定序字碼頁，則會引發錯誤。  
@@ -62,10 +62,10 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
  例如：  
   
 ```  
-select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
+select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))  
 ```  
   
- 如果目前定序的字碼頁無法表示 Unicode 字元 Δ，這樣會產生錯誤，否則會以特定編碼表示該字元。  
+ 這可能會導致發生錯誤時，如果目前的定序字碼頁無法表示 Unicode 字元 」，或它會表示該特定的編碼方式。  
   
  將 XML 結果傳回至用戶端時，資料是以 UTF-16 編碼格式傳送。 接著，用戶端提供者會根據其 API 規則來公開此資料。  
   
@@ -100,7 +100,7 @@ select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))
   
 ```  
 <a a="  
-    𐌀>">     
+    ????>">     
 </a>  
 ```  
   

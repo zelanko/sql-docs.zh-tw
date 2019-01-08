@@ -18,12 +18,12 @@ ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c3ef9f2aa7ec6f5608e55f84efd35af25c1776a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0fc8552157e9864ed45306ec268fefb4eec87bf
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605176"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589941"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,32 +46,32 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@table_server =** ] **'***table_server&lt***'**  
+ [  **@table_server =** ] **'**_table_server&lt_**'**  
  這是傳回資料表資訊所屬的連結伺服器名稱。 *table_server&lt*已**sysname**，沒有預設值。  
   
- [  **@pktab_name =** ] **'***pktab_name***'**  
+ [  **@pktab_name =** ] **'**_pktab_name_**'**  
  這是含主索引鍵的資料表名稱。 *pktab_name*已**sysname**，預設值是 NULL。  
   
- [  **@pktab_schema =** ] **'***pktab_schema***'**  
+ [  **@pktab_schema =** ] **'**_pktab_schema_**'**  
  這是含主索引鍵的結構描述名稱。 *pktab_schema*已**sysname**，預設值是 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這包含擁有者名稱。  
   
- [  **@pktab_catalog =** ] **'***pktab_catalog***'**  
+ [  **@pktab_catalog =** ] **'**_pktab_catalog_**'**  
  這是含主索引鍵的目錄名稱。 *pktab_catalog*已**sysname**，預設值是 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這包含資料庫名稱。  
   
- [  **@fktab_name =** ] **'***fktab_name***'**  
+ [  **@fktab_name =** ] **'**_fktab_name_**'**  
  這是含外部索引鍵的資料表名稱。 *fktab_name*已**sysname**，預設值是 NULL。  
   
- [  **@fktab_schema =** ] **'***fktab_schema***'**  
+ [  **@fktab_schema =** ] **'**_fktab_schema_**'**  
  這是含外部索引鍵的結構描述名稱。 *fktab_schema*已**sysname**，預設值是 NULL。  
   
- [  **@fktab_catalog =** ] **'***fktab_catalog***'**  
+ [  **@fktab_catalog =** ] **'**_fktab_catalog_**'**  
  這是含外部索引鍵的目錄名稱。 *fktab_catalog*已**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
   
 ## <a name="result-sets"></a>結果集  
- 各種 DBMS 產品都支援三部分的資料表命名 (*catalog ***。*** 結構描述 ***。*** 資料表*)，它會呈現在結果集中。  
+ 各種 DBMS 產品都支援三部分的資料表命名 (_catalog_**。**_結構描述_**。**_資料表_)，它會呈現在結果集中。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

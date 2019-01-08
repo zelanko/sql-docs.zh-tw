@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetCurrentCertificate Method (ServerSettings Class)
@@ -20,12 +18,12 @@ ms.assetid: f9c6e172-11be-42de-b19b-a5b3436e84da
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5b1b6089a04bf4ca8d67134ecad97de2c4a62538
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a485cc23a399496a4c86cc2eab0e8d26b360066e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092798"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370910"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>SetCurrentCertificate 方法 (ServerSettings 類別)
   設定目前的安全性憑證。  
@@ -57,6 +55,6 @@ SHA
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定伺服器網路通訊協定和網路程式庫](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [設定伺服器網路通訊協定和網路程式庫](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

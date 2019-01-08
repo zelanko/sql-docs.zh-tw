@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic database diagram table sizing
@@ -15,12 +15,12 @@ ms.assetid: eaf2b862-6649-410e-ba8a-2d92ca159a16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84dbc664cf9804ee7fa276371ed7f3f90be7f71b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37ea46f7cae616e39b4d2b459c2d0768a03117b9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210748"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812400"
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>自動調整圖表中所選資料表的大小 (Visual Database Tools)
   您可以將圖表中的資料表快速調整成可以顯示所有欄位的最小尺寸。  

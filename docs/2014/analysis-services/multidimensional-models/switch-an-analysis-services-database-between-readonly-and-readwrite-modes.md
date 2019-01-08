@@ -15,12 +15,12 @@ ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b271d597f9941e83e9ad8ce6993831a738108e7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 48bb00cba9a01029da31146f9e98e2ef8b3627d6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147873"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362610"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>在 ReadOnly 和 ReadWrite 模式之間切換 Analysis Services 資料庫
   通常在很多情況下，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要變更表格式或多維度資料庫的讀取/寫入模式。 這些情況通常是由商務需求所驅使，例如在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器集區之間共用資料庫，以便改善使用者經驗。  
@@ -44,7 +44,7 @@ ms.locfileid: "50147873"
     > [!IMPORTANT]  
     >  一旦資料庫卸離之後，[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 便無法再協助您取得資料庫位置。  
   
-3.  以滑鼠右鍵按一下該資料庫，然後選取 [卸離…]  
+3.  以滑鼠右鍵按一下資料庫，然後選取**卸離...**  
   
 4.  將密碼指派給要卸離的資料庫，然後按一下 [確定] 執行卸離命令。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "50147873"
   
 6.  以滑鼠右鍵按一下**資料庫**資料夾，然後選取**附加...**  
   
-7.  在 [資料夾] 文字方塊中，輸入資料庫資料夾的原始位置。 或者，您也可以使用瀏覽按鈕 (**…**) 來找出資料庫資料夾。  
+7.  在 [資料夾] 文字方塊中，輸入資料庫資料夾的原始位置。 或者，您可以使用瀏覽按鈕 (**...**) 來找出資料庫資料夾。  
   
 8.  選取資料庫的讀取/寫入模式。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "50147873"
   
 4.  複製下列 XMLA 指令碼範本：  
   
- `<Detach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Detach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Object>`  
   
@@ -155,11 +155,11 @@ ms.locfileid: "50147873"
   
 3.  將下列 XMLA 指令碼範本複製到新的 XMLA 索引標籤中：  
   
- `<Attach xmlns="http://schemas.microsoft.com/analysisservices/2003` `/engine` `">`  
+ `<Attach xmlns="https://schemas.microsoft.com/analysisservices/2003` `/engine` `">`  
   
  `<Folder>%dbFolder%</Folder>`  
   
- `<ReadWriteMode xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
+ `<ReadWriteMode xmlns="https://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
   
  `</Attach>`  
   

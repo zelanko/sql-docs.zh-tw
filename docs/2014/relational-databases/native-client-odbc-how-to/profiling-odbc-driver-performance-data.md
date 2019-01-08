@@ -12,18 +12,18 @@ ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d6c9b42b89b20e2a4f72f1cf78a0a67c4f77c64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7de38f3c91814dbd364caee84b34dacdfbdf475
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194718"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357123"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>分析驅動程式效能資料 (ODBC)
   此範例顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式專用選項，以記錄效能統計資料。 此範例會建立一個檔案： Odbcperf.log 範例顯示如何建立效能資料記錄檔並直接從 SQLPERF 資料結構 （SQLPERF 結構定義於 Odbcss.h） 顯示效能資料。 此範例是針對 ODBC 3.0 版或更新版本所開發。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>使用 ODBC 管理員記錄驅動程式效能資料  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48194718"
 3.  呼叫[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)利用 SQL_COPT_SS_PERF_DATA 和 SQL_PERF_STOP 停止記錄效能資料。  
   
 ## <a name="example"></a>範例  
- 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫  (您可以從 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案) 首頁下載 AdventureWorks 範例資料庫)。此資料來源必須以作業系統提供的 ODBC 驅動程式為基礎 (驅動程式名稱為 "SQL Server")。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
+ 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫  (您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案) 首頁下載 AdventureWorks 範例資料庫)。此資料來源必須以作業系統提供的 ODBC 驅動程式為基礎 (驅動程式名稱為 "SQL Server")。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   

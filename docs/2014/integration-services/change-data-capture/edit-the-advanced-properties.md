@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - advanced
@@ -13,12 +12,12 @@ ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ae2bab96234a52ba58de68f87bf24455b12256d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94476576eac6c466a0667af8cf1b5e166eaec941
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183768"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804611"
 ---
 # <a name="edit-the-advanced-properties"></a>編輯進階屬性
   使用 **[進階]** 索引標籤，將特殊屬性加入至 CDC 執行個體。  
@@ -35,7 +34,7 @@ ms.locfileid: "48183768"
  如需您可以輸入之屬性的描述，請參閱 [cdc.xdbcdc_config](the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config)中的可用選項資料表。  
   
 ## <a name="see-also"></a>另請參閱  
- [如何管理 CDC 執行個體](manage-a-cdc-instance.md)   
+ [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [如何編輯 CDC 執行個體屬性](how-to-edit-the-cdc-instance-properties.md)  
   
   

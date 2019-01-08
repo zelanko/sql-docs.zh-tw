@@ -12,12 +12,12 @@ ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fb7c388d3a3e46b8f56a4bf002701e5be16e598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f966d8aa907c6a92f4ac964fd7d937dab94afa95
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155554"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366800"
 ---
 # <a name="obtain-a-fastforward-cursor"></a>取得 FAST_FORWARD 資料指標
   若要取得順向的唯讀資料指標，將資料列集屬性 DBPROP_SERVERCURSOR、DBPROP_OTHERINSERT、DBPROP_OTHERUPDATEDELETE、DBPROP_OWNINSERT 和 DBPROP_OWNUPDATEDELETE 設為 VARIANT_TRUE。  
@@ -25,7 +25,7 @@ ms.locfileid: "48155554"
  完整的範例示範如何設定資料列集屬性，以取得 FAST_FORWARD 資料指標。 在設定屬性之後，會執行 SELECT 陳述式，擷取並顯示 **AdventureWorks** 資料庫中 **Purchasing.Vendor** 資料表的 **Name** 資料行。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
   
 ### <a name="to-obtain-fastforward-cursor"></a>取得 FAST_FORWARD 資料指標  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48155554"
 ## <a name="example"></a>範例  
  以下範例顯示如何設定資料列集屬性，以取得 FAST_FORWARD 資料指標。 在設定屬性之後，會執行 SELECT 陳述式，擷取並顯示 AdventureWorks 資料庫中 Purchasing.Vendor 資料表的 Name 資料行。 IA64 不支援此範例。  
   
- 此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
+ 此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
  使用 ole32.lib oleaut32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連線到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   

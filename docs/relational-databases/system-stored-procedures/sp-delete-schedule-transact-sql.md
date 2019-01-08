@@ -18,12 +18,12 @@ ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dd7f01df2c381ae4ee13b62e196efbc33809e23d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ec2fe4ba5ad90d044a9407be04acc850ae16b73
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803766"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591492"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
 > **注意：** 任一*schedule_id*或是*schedule_name&lt*必須指定，但不可同時指定兩者。  
   
- [  **@schedule_name=** ] **'***schedule_name&lt***'**  
+ [  **@schedule_name=** ] **'**_schedule_name&lt_**'**  
  這是要刪除的排程名稱。 *schedule_name&lt*已**sysname**，預設值是 NULL。  
   
 > **注意：** 任一*schedule_id*或是*schedule_name&lt*必須指定，但不可同時指定兩者。  

@@ -1,5 +1,5 @@
 ---
-title: 工作 5： 匯出清理結果到 Excel 檔案 |Microsoft Docs
+title: 工作 5:匯出清理結果到 Excel 檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: eaeafd65-d0d4-4a7d-a3ad-110ef644e90b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2d52304ff9a8dae16e74d9d5aa7324adb2aac4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9b01c9394419a4e526969c4a8ecccaf262f576d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138168"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368210"
 ---
-# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>工作 5：將清理結果匯出到 Excel 檔案
-  在這項工作中，您會將清理活動的結果匯出到 Excel 檔案。 請參閱[匯出階段](http://msdn.microsoft.com/library/hh213061.aspx#Export)如需詳細資訊。  
+# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>工作 5:將清理結果匯出到 Excel 檔案
+  在這項工作中，您會將清理活動的結果匯出到 Excel 檔案。 請參閱[匯出階段](https://msdn.microsoft.com/library/hh213061.aspx#Export)如需詳細資訊。  
   
 1.  在右窗格中，選取**Excel** for**目的型別**。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48138168"
   
 7.  開啟**Cleansed Supplier List.xls**並執行下列動作：  
   
-    1.  在工作表中搜尋 adventure-work.com，以確定沒有任何電子郵件地址的結尾為 adventure-work.com (沒有 ‘s’ 字元)。  
+    1.  請確定沒有任何電子郵件地址結尾為 adventure-work.com (沒有字元的 ') 藉由搜尋 adventure-work.com 工作表中。  
   
     2.  發現有任何**USA**中的值**國家/地區**資料行。  
   
@@ -50,6 +50,6 @@ ms.locfileid: "48138168"
     5.  刪除**地址驗證**從試算表，並將 excel 檔案儲存的資料行。 此額外資料行對應至「地址驗證」複合定義域。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 6：從 Cleanse Supplier List 專案匯入值](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
+ [工作 6:匯入值從 Cleanse Supplier List 專案](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
   
   

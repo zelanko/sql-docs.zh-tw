@@ -11,21 +11,21 @@ ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 860102dff3b20bd42da048dbd33960c8f936cea1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8ee32faea8c8390c0ecb1540e6115a3baedfc92
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120250"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357708"
 ---
 # <a name="create-the-ssis-catalog"></a>建立 SSIS 目錄
-  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中設計和測試封裝之後，可以將包含封裝的專案，部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 您可以部署專案之前[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]伺服器，該伺服器必須包含`SSISDB`目錄。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 的安裝程式不會自動建立目錄，您必須依照下列指示手動建立目錄。  
+  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中設計和測試封裝之後，可以將包含封裝的專案，部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 在您將專案部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器之前，該伺服器必須包含 `SSISDB` 目錄。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 的安裝程式不會自動建立目錄，您必須依照下列指示手動建立目錄。  
   
  您可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中建立 SSISDB 目錄。 您也可以使用 Windows PowerShell 以程式設計方式建立目錄。  
   
 ### <a name="to-create-the-ssisdb-catalog-in-sql-server-management-studio"></a>若要在 SQL Server Management Studio 中建立 SSISDB 目錄  
   
-1.  開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
+1.  開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。  
   
 2.  連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine。  
   
@@ -69,10 +69,10 @@ ms.locfileid: "48120250"
   
     ```  
   
-     如需如何使用 Windows PowerShell 和 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間的其他範例，請參閱 blogs.msdn.com 上的部落格文章：[SQL Server 2012 中的 SSIS 和 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)。 如需此命名空間的概觀和程式碼範例，請參閱 blogs.msdn.com 上的部落格文章： [SSIS 目錄管理物件模型初探](http://go.microsoft.com/fwlink/?LinkId=254267)。  
+     如需如何使用 Windows PowerShell 和 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空間的其他範例，請參閱 blogs.msdn.com 上的部落格文章：[SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。 如需此命名空間的概觀和程式碼範例，請參閱 blogs.msdn.com 上的部落格文章： [SSIS 目錄管理物件模型初探](https://go.microsoft.com/fwlink/?LinkId=254267)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SSIS 目錄](catalog/ssis-catalog.md)   
- [備份、還原和移動 SSIS 目錄](../../2014/integration-services/backup-restore-and-move-the-ssis-catalog.md)  
+ [備份、 還原和移動的 SSIS 目錄](../../2014/integration-services/backup-restore-and-move-the-ssis-catalog.md)  
   
   

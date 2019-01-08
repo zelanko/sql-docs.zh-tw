@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], other SQL Server features and
@@ -13,12 +12,12 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 75fa2640cae19ce441c467672c1b66e85bd3c169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87fcd7656ff1e86522e4ea398fc49d91acde9a34
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213612"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747744"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>異動資料擷取和其他 SQL Server 功能
   此主題描述下列功能如何與變更資料擷取互動：  
@@ -48,9 +47,9 @@ ms.locfileid: "48213612"
  如需資料庫鏡像的相關資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
 ##  <a name="TransReplication"></a> Transactional Replication  
- 雖然變更資料擷取和異動複寫可以同時存在同一個資料庫中，但是同時啟用這兩項功能時，系統會以不同的方式處理變更資料表的擴展。 變更資料擷取和異動複寫一定會使用相同的程序 [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql)，從交易記錄中讀取變更。 時，啟用異動資料擷取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式作業就會呼叫`sp_replcmds`。 當相同的資料庫上同時啟用這兩項功能時，「 記錄讀取器代理程式會呼叫`sp_replcmds`。 這個代理程式會同時擴展變更資料表和散發資料庫資料表。 如需詳細資訊，請參閱 [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md)。  
+ 雖然變更資料擷取和異動複寫可以同時存在同一個資料庫中，但是同時啟用這兩項功能時，系統會以不同的方式處理變更資料表的擴展。 變更資料擷取和異動複寫一定會使用相同的程序 [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql)，從交易記錄中讀取變更。 單獨啟用變更資料擷取時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業就會呼叫 `sp_replcmds`。 當相同的資料庫上同時啟用這兩項功能時，「 記錄讀取器代理程式會呼叫`sp_replcmds`。 這個代理程式會同時擴展變更資料表和散發資料庫資料表。 如需詳細資訊，請參閱 [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md)。  
   
- 假設您在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫上啟用了變更資料擷取，而且有兩份資料表啟用了擷取。 為了擴展變更資料表，擷取作業會呼叫`sp_replcmds`。 資料庫啟用了異動複寫，而且建立了發行集。 此時，會針對資料庫建立記錄讀取器代理程式，並且刪除擷取作業。 記錄讀取器代理程式會繼續掃描記錄，從變更資料表所認可的最後一個記錄序號開始。 如此可確保變更資料表中的資料保持一致。 如果這個資料庫停用了異動複寫，系統就會移除記錄讀取器代理程式並且重新建立擷取作業。  
+ 假設您在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫上啟用了變更資料擷取，而且有兩份資料表啟用了擷取。 為了擴展變更資料表，擷取作業會呼叫 `sp_replcmds`。 資料庫啟用了異動複寫，而且建立了發行集。 此時，會針對資料庫建立記錄讀取器代理程式，並且刪除擷取作業。 記錄讀取器代理程式會繼續掃描記錄，從變更資料表所認可的最後一個記錄序號開始。 如此可確保變更資料表中的資料保持一致。 如果這個資料庫停用了異動複寫，系統就會移除記錄讀取器代理程式並且重新建立擷取作業。  
   
 > [!NOTE]  
 >  當記錄讀取器代理程式同時用於變更資料擷取和異動複寫時，複寫的變更會先寫入散發資料庫。 然後，擷取的變更才會寫入變更資料表。 這兩項作業會一起認可。 如果寫入散發資料庫時發生延遲，系統會建立對應的延遲，然後變更才會出現在變更資料表中。  
@@ -64,7 +63,7 @@ ms.locfileid: "48213612"
   
 -   如果資料庫還原至其他伺服器，預設會停用變更資料擷取並且刪除所有相關的中繼資料。  
   
-     若要保留變更資料擷取，請使用`KEEP_CDC`選項還原資料庫時。 如需有關這個選項的詳細資訊，請參閱＜ [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)＞。  
+     若要保留變更資料擷取，請在還原資料庫時使用 `KEEP_CDC` 選項。 如需有關這個選項的詳細資訊，請參閱＜ [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)＞。  
   
 -   如果資料庫卸離並附加至相同伺服器或其他伺服器，變更資料擷取就會維持啟用狀態。  
   

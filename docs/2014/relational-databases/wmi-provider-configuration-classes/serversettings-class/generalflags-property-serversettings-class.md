@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - GeneralFlags Property (ServerSettings Class)
@@ -20,12 +18,12 @@ ms.assetid: 129bff8d-d2bc-4297-952f-d0a919d169f7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0a849ec790d72d506e9e0b351fb34d3e2b6e76d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44f3f5bbfe183136ee8bf1a8d602a50e638b89b1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148768"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369230"
 ---
 # <a name="generalflags-property-serversettings-class"></a>GeneralFlags 屬性 (ServerSettings 類別)
   取得與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體相關的一般旗標。  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定伺服器網路通訊協定和網路程式庫](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [設定伺服器網路通訊協定和網路程式庫](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

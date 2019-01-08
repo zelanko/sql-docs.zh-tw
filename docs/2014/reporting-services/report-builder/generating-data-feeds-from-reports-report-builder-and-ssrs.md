@@ -11,21 +11,21 @@ ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6d02f24574d6a49edcdbeca2ccfc6fea95893356
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ff83364a11c50ce5403b434052bdb28d53aaf2b3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224208"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377590"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>從多個報表產生資料摘要 (報表產生器及 SSRS)
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom 轉譯延伸模組會產生 Atom 服務文件，其中列出可從報表資料摘要，並從資料摘要的資料在報表中的區域。 您可以使用此延伸模組產生符合 Atom 的資料摘要，這些資料摘要可以使用可取用報表產生之資料摘要的應用程式讀取與交換。 例如，您可以使用 Atom 轉譯延伸模組產生您之後可用於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 用戶端的資料摘要。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom 轉譯延伸模組會產生 Atom 服務文件，其中會列出可從報表取得的資料摘要，以及來自報表中之資料區的資料摘要。 您可以使用此延伸模組產生符合 Atom 的資料摘要，這些資料摘要可以使用可取用報表產生之資料摘要的應用程式讀取與交換。 例如，您可以使用 Atom 轉譯延伸模組產生您之後可用於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 用戶端的資料摘要。  
   
- Atom 服務文件在報表中，每個資料區至少會列出一個資料摘要。 根據的資料區域，以及資料區域顯示的資料類型[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]取自資料區域，可能會產生多個資料摘要。 例如，矩陣或圖表可以提供多個資料摘要。 當 Atom 轉譯延伸模組建立 Atom 服務文件時，系統會針對每個資料摘要建立一個唯一的識別碼，而您會在 URL 中使用該識別碼來存取資料摘要的內容。  
+ Atom 服務文件在報表中，每個資料區至少會列出一個資料摘要。 根據資料區的類型以及該資料區顯示的資料， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 可能會產生來自某個資料區的多個資料摘要。 例如，矩陣或圖表可以提供多個資料摘要。 當 Atom 轉譯延伸模組建立 Atom 服務文件時，系統會針對每個資料摘要建立一個唯一的識別碼，而您會在 URL 中使用該識別碼來存取資料摘要的內容。  
   
  Atom 轉譯延伸模組針對資料摘要產生資料的方式類似於逗點分隔值 (CSV) 轉譯延伸模組將資料轉譯為 CSV 檔案的方式。 資料摘要就像是 CSV 檔案，是報表資料的扁平化表示法。 例如，包含加總群組內銷售量之資料列群組的資料表會在每個資料列中重複顯示這個總和，而且沒有僅包含總和的個別資料列。  
   
- 您可以使用報表管理員、報表伺服器或是與 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 整合的 SharePoint 網站，產生 Atom 服務文件與資料摘要。  
+ 您可以使用報表管理員、報表伺服器或是與 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]整合的 SharePoint 網站，產生 Atom 服務文件與資料摘要。  
   
  Atom 適用於成對的相關標準。 Atom 服務文件符合 RFC 5023 Atom 發行通訊協定規格，而資料摘要符合 RFC 4287 Atom 同步發佈格式通訊協定規格。  
   
@@ -57,21 +57,21 @@ ms.locfileid: "48224208"
   
  ![RS_Atom_PeerDynamicColumns](../media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- 從此報表產生的 Atom 服務文件包含兩個資料摘要 (每個動態對等資料行各一個)：Territory 和 Year。 下列圖表顯示每個資料摘要的內容。  
+ 從此報表產生 Atom 服務文件包含兩個資料摘要，其中每個動態對等資料行：Territory 和 Year。 下列圖表顯示每個資料摘要的內容。  
   
  ![RS_Atom_PeerDynamicDataFeeds](../media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
 
   
 ##  <a name="DataFeeds"></a> 資料摘要  
- 資料摘要是一種 XML 檔案，這個檔案擁有一致的表格格式 (不會隨時間而變更) 與變數資料 (每次執行報表時都可能不同)。 所產生的資料摘要[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]位於由 ADO.NET Data Services 所產生的那些相同的格式。  
+ 資料摘要是一種 XML 檔案，這個檔案擁有一致的表格格式 (不會隨時間而變更) 與變數資料 (每次執行報表時都可能不同)。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 所產生的資料摘要與 ADO.NET Data Services 所產生的資料摘要格式相同。  
   
  一個資料摘要包含兩個區段：標頭和資料。 Atom 規格會定義每個區段中的元素。 標頭包含搭配資料摘要使用之字元編碼結構描述之類的資訊。  
   
 ### <a name="header-section"></a>標頭區段  
  下列 XML 程式碼顯示資料摘要的標頭區段。  
   
- `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">`  
+ `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="https://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="https://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">`  
   
  `<title type="text"></title>`  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48224208"
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- 下列 XML 會說明 <`entry`> 項目從資料摘要中該報表。 請注意，<`entry`> 項目包含銷售量與訂單的所有群組的總計，以及銷售量與訂單群組的總計。 <`entry`> 元素包含報表上所有的值。  
+ 下列 XML 顯示來自資料摘要中該報表的 <`entry`> 元素。 請注意，<`entry`> 元素包含群組之銷售量與訂單的總計，以及所有群組之銷售量與訂單的總計。 <`entry`> 元素包含報表上所有的值。  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48224208"
   
  巢狀資料區的資料列通常很寬，特別是巢狀資料表和矩陣包含群組和總計時更是如此。 將報表匯出至資料摘要，以及檢視資料摘要以確認產生的資料就是預期的資料時，您可能會發現這個功能相當實用。  
   
- 當 Atom 轉譯延伸模組建立 Atom 服務文件時，系統會針對資料摘要建立一個唯一的識別碼，而您會在 URL 中使用該識別碼來檢視資料摘要的內容。 範例 Atom 服務文件，如上所示，包含 URL http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1" 。 此 URL 會識別報表 (Product Sales Summary)、Atom 轉譯延伸模組 (ATOM)，以及資料摘要的名稱 (xAx0x1)。  
+ 當 Atom 轉譯延伸模組建立 Atom 服務文件時，系統會針對資料摘要建立一個唯一的識別碼，而您會在 URL 中使用該識別碼來檢視資料摘要的內容。 範例 Atom 服務文件，如上所示，包含 URL <http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1>" 。 此 URL 會識別報表 (Product Sales Summary)、Atom 轉譯延伸模組 (ATOM)，以及資料摘要的名稱 (xAx0x1)。  
   
  報表項目名稱預設為報表項目的報表定義語言 (RDL) 元素名稱，而且這些名稱通常不容易了解或是不容易記住。 例如，置於報表中之第一個矩陣的預設名稱為 Tablix 1。 資料摘要會使用這些名稱。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "48224208"
 
   
 ## <a name="see-also"></a>另請參閱  
- [匯出至 CSV 檔案&#40;報表產生器及 SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)   
+ [匯出至 CSV 檔案 &#40;報表產生器及 SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)   
  [匯出報表&#40;報表產生器及 SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
   
   

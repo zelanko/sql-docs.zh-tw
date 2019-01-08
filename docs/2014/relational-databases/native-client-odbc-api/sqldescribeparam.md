@@ -14,19 +14,19 @@ ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cde0718a387fa197e7aeb7d157ecb9b0a0aa4ae6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d52d68cc0cd31e9dbb3da25c46901e126252607
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135136"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359490"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
   若要描述的任何 SQL 陳述式中，參數[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式會建置並執行[!INCLUDE[tsql](../../includes/tsql-md.md)]SQLDescribeParam 備妥的 ODBC 陳述式控制代碼上呼叫時，SELECT 陳述式。 結果集的中繼資料則會決定已備妥之陳述式中的參數特性。 SQLDescribeParam 可以傳回 SQLExecute 或 SQLExecDirect 可能會傳回任何錯誤程式碼。  
   
  在開始 database engine 的改進[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]允許 SQLDescribeParam 以取得更精確的預期結果的描述。 這些更精確的結果可能不同於在舊版的 SQLDescribeParam 傳回的值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 中繼資料探索](../native-client/features/metadata-discovery.md)。  
   
- 新功能[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]， *ParameterSizePtr*現在傳回值，這個值會配合中所定義的大小，以字元為單位的資料行或運算式的對應參數標記定義[ODBC規格](http://go.microsoft.com/fwlink/?LinkId=207044)。 在舊版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端*ParameterSizePtr*可能的對應值`SQL_DESC_OCTET_LENGTH`型別或型別的值提供給 SQLBindParameter 不相關的資料行大小值要忽略的 (`SQL_INTEGER`，例如)。  
+ 新功能[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]， *ParameterSizePtr*現在傳回值，這個值會配合中所定義的大小，以字元為單位的資料行或運算式的對應參數標記定義[ODBC規格](https://go.microsoft.com/fwlink/?LinkId=207044)。 在舊版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端*ParameterSizePtr*可能的對應值`SQL_DESC_OCTET_LENGTH`型別或型別的值提供給 SQLBindParameter 不相關的資料行大小值要忽略的 (`SQL_INTEGER`，例如)。  
   
  在下列情況下，驅動程式不支援呼叫 SQLDescribeParam:  
   
@@ -88,7 +88,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
  `SQLDescribeParam` 支援大型 CLR 使用者定義型別 (UDT)。 如需詳細資訊，請參閱 < [Large CLR User-Defined 類型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLDescribeParam 函數](http://go.microsoft.com/fwlink/?LinkId=59339)   
+ [SQLDescribeParam 函數](https://go.microsoft.com/fwlink/?LinkId=59339)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2d0db051e473a5b84bef5139137e33b91b62d2d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 749aaffe61033564649f9cd70871f2cb01340757
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559373"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363590"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性群組概觀 (SQL Server)
   此主題介紹在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中設定與管理一個或多個可用性群組的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中心概念。 如需可用性群組所提供的優點摘要以及 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 術語的概觀，請參閱 [AlwaysOn 可用性群組 &amp;#40;SQL Server&amp;#41;](always-on-availability-groups-sql-server.md)。  
@@ -29,9 +29,9 @@ ms.locfileid: "51559373"
  *「可用性群組」* (Availability Group) 支援一組可一起容錯移轉之離散化使用者資料庫的容錯移轉環境，也就是所謂的 *「可用性資料庫」*(Availability Database)。 可用性群組支援一組主要的資料庫，以及一到八組對應的次要資料庫。 次要資料庫「並非」  備份。 請持續定期備份您的資料庫及其交易記錄。  
   
 > [!TIP]  
->  您可為主要資料庫建立任何類型的備份。 或者，您亦可為次要資料庫建立記錄備份和僅限複製的完整備份。 如需詳細資訊，請參閱[使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+>  您可為主要資料庫建立任何類型的備份。 或者，您亦可為次要資料庫建立記錄備份和僅限複製的完整備份。 如需詳細資訊，請參閱[作用中次要複本：在次要複本上備份&#40;AlwaysOn 可用性群組&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
- 每一組可用性資料庫都是由 *「可用性複本」*(Availability Replica) 主控。 有兩種類型的可用性複本：單一 *「主要複本」*(Primary Replica)， 以及一到八個「次要複本」 (Secondary Replica)。前者裝載主要資料庫，後者各裝載一組次要資料庫，而且可以當做可用性群組的潛在容錯移轉目標。 可用性群組會在可用性複本層級容錯移轉。 可用性複本僅在資料庫層級針對某個可用性群組中的一組資料庫提供備援性。 資料庫問題，例如資料庫因為資料檔案遺失而變得可疑或交易記錄損毀，並不會造成容錯移轉。  
+ 每一組可用性資料庫都是由 *「可用性複本」*(Availability Replica) 主控。 有兩種類型的可用性複本：單一 *「主要複本」*(Primary Replica)， 以及一到八個「次要複本」 (Secondary Replica)。前者裝載主要資料庫，後者各裝載一組次要資料庫，而且可以當做可用性群組的潛在容錯移轉目標。 可用性群組會在可用性複本層級容錯移轉。 可用性複本僅在資料庫層級針對某個可用性群組中的一組資料庫提供備援。 資料庫問題，例如資料庫因為資料檔案遺失而變得可疑或交易記錄損毀，並不會造成容錯移轉。  
   
  主要複本提供主要資料庫，以供用戶端讀寫連接使用。 另外，在資料庫層級發生的 *「資料同步處理」*(Data Synchronization) 程序中， 主要複本會將每個主要資料庫的交易記錄檔記錄傳送到每個次要資料庫。 每個次要複本都會快取交易記錄檔記錄 (「強行寫入」 記錄檔)，然後將它們套用到對應的次要資料庫。 資料同步處理在主要資料庫和每個連接的次要資料庫之間發生，與其他資料庫無關。 因此，次要資料庫可以暫停或失敗，而不影響其他次要資料庫，主要資料庫也可以暫停或失敗，而不影響其他主要資料庫。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "51559373"
   
  給定的執行個體只能裝載每個可用性群組的一個可用性複本。 但是，每一個執行個體都可以用於多個可用性群組。 給定的執行個體可以是獨立執行個體或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI)。 如果您需要伺服器層級的備援性，請使用容錯移轉叢集執行個體。  
   
- 每個可用性複本都會獲指派一個初始角色，即 *「主要角色」* (Primary Role) 或 *「次要角色」*(Secondary Role)，這個角色是由該複本的可用性資料庫所繼承。 給定複本的角色會決定所裝載的是讀寫資料庫還是唯讀資料庫。 其中一個複本 (也就是所謂的「主要複本」) 會獲指派主要角色並裝載讀寫資料庫，也就是「主要資料庫」。 至少有一個其他複本 (也就是所謂的 「次要複本」) 會獲指派次要角色。 次要複本會裝載唯讀資料庫，也就是次要資料庫。  
+ 每個可用性複本都會獲指派一個初始角色，即「主要角色」或「次要角色」，這個角色是由該複本的可用性資料庫所繼承。 給定複本的角色會決定所裝載的是讀寫資料庫還是唯讀資料庫。 其中一個複本 (也就是所謂的「主要複本」) 會獲指派主要角色並裝載讀寫資料庫，也就是「主要資料庫」。 至少有一個其他複本 (也就是所謂的 「次要複本」) 會獲指派次要角色。 次要複本會裝載唯讀資料庫，也就是次要資料庫。  
   
 > [!NOTE]  
 >  當可用性複本的角色未定 (例如在容錯移轉期間) 時，其資料庫會暫時處於 NOT SYNCHRONIZING 狀態。 在可用性複本的角色解析之前，會將其角色設為 RESOLVING。 如果可用性複本解析為主要角色，其資料庫會變成主要資料庫。 如果可用性複本解析為次要角色，其資料庫會變成次要資料庫。  
@@ -118,11 +118,11 @@ ms.locfileid: "51559373"
   
 -   **對次要複本執行備份作業**  
   
-     次要複本可以備份記錄以及完整資料庫、檔案或檔案群組的 [只複製](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 備份。 您可以設定可用性群組來指定應該執行備份之處的喜好設定。 請務必了解，喜好設定並不是由 SQL Server 強制施行，所以它對於隨選備份沒有任何影響。 這個喜好設定的解譯取決於您在給定可用性群組之每個資料庫的備份作業中所編寫的邏輯 (如果有的話)。 對於各個可用性複本，您可以指定此複本與同一個可用性群組中之其他複本的備份優先權。 如需詳細資訊，請參閱[使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+     次要複本可以備份記錄以及完整資料庫、檔案或檔案群組的 [只複製](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 備份。 您可以設定可用性群組來指定應該執行備份之處的喜好設定。 請務必了解，喜好設定並不是由 SQL Server 強制施行，所以它對於隨選備份沒有任何影響。 這個喜好設定的解譯取決於您在給定可用性群組之每個資料庫的備份作業中所編寫的邏輯 (如果有的話)。 對於各個可用性複本，您可以指定此複本與同一個可用性群組中之其他複本的備份優先權。 如需詳細資訊，請參閱[作用中次要複本：在次要複本上備份&#40;AlwaysOn 可用性群組&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
 -   **對一個或多個次要複本進行唯讀存取 (可讀取的次要複本)**  
   
-     以次要角色執行時，您可以將任何可用性複本設定為允許對其本機資料庫進行唯讀存取，但有一些作業則不一定受到支援。 此外，若要避免在主要複本上執行唯讀工作負載，可以在以主要角色執行時，將複本設定為僅允許讀寫存取。 如需詳細資訊，請參閱[使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+     以次要角色執行時，您可以將任何可用性複本設定為允許對其本機資料庫進行唯讀存取，但有一些作業則不一定受到支援。 此外，若要避免在主要複本上執行唯讀工作負載，可以在以主要角色執行時，將複本設定為僅允許讀寫存取。 如需詳細資訊，請參閱[作用中次要複本：可讀取次要複本&#40;AlwaysOn 可用性群組&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
      若可用性群組目前擁有可用性群組接聽程式及一或多個可讀取的次要複本，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會將讀取意圖的連接要求路由至其中一個複本 (「唯讀路由」)。 如需詳細資訊，請參閱 [可用性群組接聽程式、用戶端連接及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)中心概念。  
   
@@ -149,23 +149,23 @@ ms.locfileid: "51559373"
   
 -   **部落格：**  
   
-     [AlwaysON-HADRON 學習系列： Worker Pool Usage for HADRON 功能之資料庫](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON-HADRON 學習系列：Worker Pool Usage for HADRON 功能之資料庫](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [SQL Server AlwaysOn 團隊部落格： 官方 SQL Server AlwaysOn 團隊部落格](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server 工程師部落格](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
 -   **影片：**  
   
-     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分： 產生高可用性解決方案簡介](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分：下一代高可用性解決方案簡介](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分： 建立使用 AlwaysOn 的任務關鍵性的高可用性解決方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分：建立使用 AlwaysOn 任務關鍵性的高可用性解決方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **白皮書：**  
   
-     [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Microsoft 的 SQL Server 2012 白皮書](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Microsoft 的 SQL Server 2012 白皮書](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 客戶諮詢團隊白皮書](http://sqlcat.com/)  
   
@@ -177,8 +177,8 @@ ms.locfileid: "51559373"
  [記憶體內部 OLTP 資料庫的高可用性支援](../../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)   
  [必要條件、 限制和建議，AlwaysOn 可用性群組的&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [建立及設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [使用中次要： 可讀取的次要複本&#40;AlwaysOn 可用性群組&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [使用中次要： 在次要複本上備份&#40;AlwaysOn 可用性群組&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
+ [使用中次要：可讀取次要複本&#40;AlwaysOn 可用性群組&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [使用中次要：在次要複本上備份&#40;AlwaysOn 可用性群組&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [可用性群組接聽程式、用戶端連線及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)  
   
   

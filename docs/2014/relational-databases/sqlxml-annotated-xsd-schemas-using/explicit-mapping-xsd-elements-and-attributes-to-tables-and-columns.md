@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - explicit schema mapping [SQLXML]
@@ -30,12 +28,12 @@ ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26fa0d203edf479e93ae95323bc469b506025cf0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4f6244ee58619e48a1fb17b9eb803f013e2120b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222278"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798790"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和屬性對資料表和資料行的明確對應 (SQLXML 4.0)
   使用 XSD 結構描述提供關聯式資料庫的 XML 檢視表時，必須將結構描述的元素但屬性對應到資料庫的資料表和資料行。 資料庫資料表/檢視表中的資料列將會對應到 XML 文件中的元素。 資料庫中的資料行值會對應到屬性或元素。  
@@ -108,7 +106,7 @@ ms.locfileid: "48222278"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 < [Ba6e326154d2"&gt;using ADO to Execute SQLXML Queries&lt](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 [使用ADO執行SQLXML查詢](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  部分結果集如下：  
   

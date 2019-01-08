@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,19 +14,19 @@ ms.assetid: 48919fcb-3a22-43ca-a63c-b210cf2c32d5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78b7f0027b92671328b835aa7ec2af6695eb3eea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61ae582c2b35f96ccb21d16b19b0191017e05366
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081958"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369670"
 ---
 # <a name="showplan-xml-for-query-compile-event-class"></a>Showplan XML For Query Compile 事件類別
   當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 編譯 SQL 陳述式時，會發生 Showplan XML For Query Compile 事件類別。 加入此事件類別，可識別 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上的 Showplan 運算子。  
   
  Showplan XML For Query Compile 事件類別會顯示完整的編譯時期資料，因此包含此事件類別的追蹤會造成顯著的效能負擔。 若要減少此問題，此事件類別請限用於追蹤對特定問題的短期監視。  
   
- Showplan XML 文件有與其相關聯的結構描述。 您可以在 [Microsoft 網站](http://go.microsoft.com/fwlink/?LinkId=41740)上找到這個結構描述，或者它會成為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的一部分。  
+ Showplan XML 文件有與其相關聯的結構描述。 您可以在 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkId=41740)上找到這個結構描述，或者它會成為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的一部分。  
   
 ## <a name="showplan-xml-for-query-compile-event-class-data-columns"></a>Showplan XML for Query Compile 事件類別資料行  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48081958"
 |NTUserName|`nvarchar`|Windows 使用者名稱。|6|是|  
 |ObjectID|`int`|系統指派給物件的識別碼。|22|是|  
 |ObjectName|`nvarchar`|被參考的物件名稱。|34|是|  
-|ObjectType|`int`|代表參與事件之物件類型的值。 此值對應至 sys.objects 中的類型資料行。 如需各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
+|ObjectType|`int`|代表參與事件之物件類型的值。 此值對應至 sys.objects 中的類型資料行。 針對各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
 |RequestID|`int`|包含陳述式之要求的識別碼。|49|是|  
 |ServerName|`nvarchar`|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
 |SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  

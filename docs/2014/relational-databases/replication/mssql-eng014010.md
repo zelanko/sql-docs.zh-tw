@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG014010 error
@@ -13,12 +12,12 @@ ms.assetid: 6ea84f2f-e7a2-4028-9ea9-af0d2eba660e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40d6284d5f392224152b6e96a22a35fcfea53281
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb0387cebdda52817143e0e3da98c20f4c49da50
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106968"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806020"
 ---
 # <a name="mssqleng014010"></a>MSSQL_ENG014010
     

@@ -16,17 +16,17 @@ ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6afb64b852ac6050a2705c1c4d7da7d2d9b52f1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c40d22c19f8398ef9499cb23c80ab80dab16b5b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059448"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353219"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>使用 OpenSqlFilestream 存取 FILESTREAM 資料
-  OpenSqlFilestream API 會取得 Win32 相容的檔案控制代碼的 FILESTREAM 二進位大型物件 (BLOB) 儲存在檔案系統中。 此控制代碼可傳遞給下列任何 Win32 API： [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)或 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)。 如果您將此控制代碼傳遞給其他任何 Win32 API，將會傳回錯誤 ERROR_ACCESS_DENIED。 在認可或回復交易之前，必須將此控制代碼傳遞給 Win32 的 [CloseHandle API](http://go.microsoft.com/fwlink/?LinkId=86428) 來關閉此控制代碼。 如果無法關閉此控制代碼，將會導致伺服器端資源洩露。  
+  OpenSqlFilestream API 會取得 Win32 相容的檔案控制代碼的 FILESTREAM 二進位大型物件 (BLOB) 儲存在檔案系統中。 控制代碼可傳遞至任何下列的 Win32 Api:[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)， [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)， [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)， [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)， [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)，或[FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)。 如果您將此控制代碼傳遞給其他任何 Win32 API，將會傳回錯誤 ERROR_ACCESS_DENIED。 在認可或回復交易之前，必須將此控制代碼傳遞給 Win32 的 [CloseHandle API](https://go.microsoft.com/fwlink/?LinkId=86428) 來關閉此控制代碼。 如果無法關閉此控制代碼，將會導致伺服器端資源洩露。  
   
- 必須在執行所有的 FILESTREAM 資料容器存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]交易。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式也可在同一交易中執行。 以維護 SQL 資料與 FILESTREAM 資料之間的一致性。  
+ 所有 FILESTREAM 資料容器存取都必須於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 異動中執行。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式也可在同一交易中執行。 以維護 SQL 資料與 FILESTREAM 資料之間的一致性。  
   
  若要使用 Win32 存取 FILESTREAM BLOB，必須啟用 [Windows 授權](../security/choose-an-authentication-mode.md) 。  
   
@@ -51,7 +51,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
  [in]已`nvarchar(max)`所傳回的路徑[PathName](/sql/relational-databases/system-functions/pathname-transact-sql)函式。 PathName 必須從具有 FILESTREAM 資料表與資料行之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT 或 UPDATE 權限的帳戶內容中呼叫。  
   
  *DesiredAccess*  
- [in] 設定用來存取 FILESTREAM BLOB 資料的模式。 此值會傳遞給 [DeviceIoControl 函式](http://go.microsoft.com/fwlink/?LinkId=105527)。  
+ [in] 設定用來存取 FILESTREAM BLOB 資料的模式。 此值會傳遞給 [DeviceIoControl 函式](https://go.microsoft.com/fwlink/?LinkId=105527)。  
   
 |名稱|值|意義|  
 |----------|-----------|-------------|  
@@ -78,7 +78,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
  [in] 此值由 [GET_FILESTREAM_TRANSACTION_CONTEXT](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql) 函式傳回。  
   
  *FilestreamTransactionContextLength*  
- [in]中的位元組數目`varbinary(max)`由 GET_FILESTREAM_TRANSACTION_CONTEXT 函數傳回的資料。 此函數會傳回 N 個位元組的陣列。 N 是由此函數所決定，而且是所傳回之位元組陣列的屬性。  
+ [in] `varbinary(max)` 中由 GET_FILESTREAM_TRANSACTION_CONTEXT 函數傳回之資料的位元組數。 此函數會傳回 N 個位元組的陣列。 N 是由此函數所決定，而且是所傳回之位元組陣列的屬性。  
   
  *AllocationSize*  
  [in] 指定資料檔的初始配置大小 (以位元組為單位)。 在讀取模式下將會被忽略。 這個參數可以是 NULL，此時會使用預設檔案系統行為。  

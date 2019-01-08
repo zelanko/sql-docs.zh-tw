@@ -1,20 +1,20 @@
 ---
-title: 什麼&#39;的新功能 SQL Server 機器學習服務 |Microsoft Docs
+title: 什麼&#39;新的-s SQL Server Machine Learning 服務
 description: 新功能通知每個版本的 SQL Server 2016 R Services、 R Server、 SQL Server 2017 Machine Learning 服務。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d00757a8676540be420edd972857ce6cf6ced6d1
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: f9e98d59318c9c7d43fd6f99195da972c4eca0c9
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269652"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432491"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>什麼是 SQL Server Machine Learning 服務的新功能 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,9 +28,10 @@ ms.locfileid: "51269652"
 
 | 版本 | 功能更新 |
 |---------|----------------|
-| CTP 2.0 | R 和 Python 機器學習服務，再加上新的 Java 延伸模組的 Linux 平台支援。 如需入門的說明，請參閱[安裝 SQL Server Machine Learning 服務在 Linux 上](../linux/sql-server-linux-setup-machine-learning.md)。 |
-| CTP 2.0 | [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)包含兩個新的參數可讓您輕鬆地從資料分割的資料產生多個模型。 進一步了解本教學課程[在 R 中建立資料分割為基礎的模型](tutorials/r-tutorial-create-models-per-partition.md)。 |
-| CTP 2.0 | 容錯移轉叢集支援現在支援 Windows 和 Linux，假設所有節點上啟動 SQL Server Launchpad 服務。 如需詳細資訊，請參閱 < [SQL Server 容錯移轉叢集安裝](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)。 |
+| CTP 2.0 | R 和 Python 機器學習服務的 Linux 平台支援。 快速入門[安裝 SQL Server Machine Learning 服務在 Linux 上](../linux/sql-server-linux-setup-machine-learning.md)。 |
+|   | [Java 語言擴充功能](java/extension-java.md)是 Windows 和 Linux 上的 SQL Server 2019 preview 的新功能。 您可以將已編譯的 Java 程式碼提供給 SQL Server 藉由指派權限，以及設定路徑。 存取 SQL Server 的用戶端應用程式可以使用資料，並執行您的程式碼，藉由呼叫[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)，相同的程序用於 SQL Server 上的 R 和 Python 整合。 | 
+|  | [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)導入了兩個新的參數可讓您輕鬆地從資料分割的資料產生多個模型。 進一步了解本教學課程[在 R 中建立資料分割為基礎的模型](tutorials/r-tutorial-create-models-per-partition.md)。 |
+|   | 容錯移轉叢集支援現在支援 Windows 和 Linux，假設所有節點上啟動 SQL Server Launchpad 服務。 如需詳細資訊，請參閱 < [SQL Server 容錯移轉叢集安裝](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)。 |
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -54,7 +55,7 @@ SQL Server 2017 Machine Learning 服務的 R 元件是新一代的 SQL Server 20
 
 | 封裝 | 描述 |
 |---------|-------------|
-| [**MicrosoftML**](using-the-microsoftml-package.md) | 在此版本中，MicrosoftML 包含在預設 R 安裝中，刪除在先前的 SQL Server 2016 R Services 所需的升級步驟。 MicrosoftML 提供的圖案狀態機器學習服務演算法和可調整，或在遠端計算內容中執行資料轉換。 演算法會包括可自訂的深度類神經網路、 迅速的決策樹及決策樹、 線性迴歸和羅吉斯迴歸。  |
+| [**MicrosoftML**](r/ref-r-microsoftml.md) | 在此版本中，MicrosoftML 包含在預設 R 安裝中，刪除在先前的 SQL Server 2016 R Services 所需的升級步驟。 MicrosoftML 提供的圖案狀態機器學習服務演算法和可調整，或在遠端計算內容中執行資料轉換。 演算法會包括可自訂的深度類神經網路、 迅速的決策樹及決策樹、 線性迴歸和羅吉斯迴歸。  |
 
 ### <a name="python-integration-for-in-database-analytics"></a>在資料庫內分析 Python 整合
 
@@ -70,8 +71,8 @@ T-SQL 和 Python 整合透過支援[sp_execute_external_script](https://docs.mic
 
 | 封裝 | 描述 |
 |---------|-------------|
-[**revoscalepy**](python/what-is-revoscalepy.md)| RevoScaleR 的 Python 相當。 您可以建立用於線性及羅吉斯迴歸、 決策樹、 梯度上升的樹和隨機樹系，所有可平行執行，且能夠在遠端計算內容中執行的 Python 模型。 此套件支援使用多個資料來源和遠端計算內容。 資料科學家或開發人員可以執行 Python 程式碼的遠端 SQL 伺服器上，瀏覽資料，或建立模型，而不移動資料。 |
-|[**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) |Python 相當的 MicrosoftML R 封裝。 |
+[**revoscalepy**](python/ref-py-revoscalepy.md)| RevoScaleR 的 Python 相當。 您可以建立用於線性及羅吉斯迴歸、 決策樹、 梯度上升的樹和隨機樹系，所有可平行執行，且能夠在遠端計算內容中執行的 Python 模型。 此套件支援使用多個資料來源和遠端計算內容。 資料科學家或開發人員可以執行 Python 程式碼的遠端 SQL 伺服器上，瀏覽資料，或建立模型，而不移動資料。 |
+|[**microsoftml**](python/ref-py-microsoftml.md) |Python 相當的 MicrosoftML R 封裝。 |
 
 ### <a name="pre-trained-models"></a>預先定型的模型
 
@@ -99,13 +100,13 @@ T-SQL 和 Python 整合透過支援[sp_execute_external_script](https://docs.mic
 
 當您安裝的機器學習服務與資料庫引擎執行個體的封裝時，SQL Server 2019 CTP 2.0 會新增 R、 Python 和 Java 的 Linux 支援。 如需詳細資訊，請參閱 <<c0> [ 安裝 SQL Server Machine Learning 服務在 Linux 上](../linux/sql-server-linux-setup-machine-learning.md)。
 
-在 Linux 上，SQL Server 2017 沒有 R 或 Python 整合，但您可以使用[原生評分](sql-native-scoring.md)Linux 上因為該功能是透過 T-SQL [PREDICT]()，以在 Linux 上執行。 原生評分，可讓高效能評分從預先定型的模型，而不需要呼叫，或甚至需要 R 執行階段。
+在 Linux 上，SQL Server 2017 沒有 R 或 Python 整合，但您可以使用[原生評分](sql-native-scoring.md)Linux 上因為該功能是透過 T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md)，以在 Linux 上執行。 原生評分，可讓高效能評分從預先定型的模型，而不需要呼叫，或甚至需要 R 執行階段。
 
 <a name="azure-sql-database-roadmap"></a>
 
 ## <a name="machine-learning-services-in-azure-sql-database"></a>機器學習 Azure SQL Database 中的服務
 
-Machine Learning 服務 （使用 R) Azure SQL Database 中處於公開預覽狀態。 如需詳細資訊，請參閱 <<c0> [ 快速入門： 使用 Machine Learning 服務 （使用 R) Azure SQL Database （預覽） 中](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r)。
+Machine Learning 服務 （使用 R) Azure SQL Database 中處於公開預覽狀態。 如需詳細資訊，請參閱[快速入門：使用 Azure SQL Database （預覽） 中的 Machine Learning 服務 （使用 R)](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r)。
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_startpublication_snapshot
@@ -17,12 +16,12 @@ ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f44d4edac88887d8869aa4a3885218733acd6fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50657e6a14f68ef297871001bc611f1d7cf9337b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660056"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211607"
 ---
 # <a name="spstartpublicationsnapshot-transact-sql"></a>sp_startpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
  這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
  [  **@publisher=** ] **'***發行者***'**  
- 這是非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者的名稱。 *發行者*已**sysname**，預設值是 NULL。 您不應該將這個參數指定給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。  
+ 名稱為非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。 您不應該將這個參數指定給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -52,7 +51,7 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
 ## <a name="remarks"></a>備註  
  **sp_startpublication_snapshot**搭配所有類型的複寫。  
   
- 對於非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者而言，這個預存程序執行於散發資料庫的散發者端。  
+ 針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者，此預存程序執行於散發資料庫的散發者端。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_startpublication_snapshot**。  

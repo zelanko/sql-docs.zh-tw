@@ -1,5 +1,5 @@
 ---
-title: 建立日期類型維度 |Microsoft 文件
+title: 建立日期類型維度 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 957f47bbb185f6d9029b9dfbb036aa3738448098
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d92f7748478695ccb9cfe8a6474eb83839170657
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024505"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524374"
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>資料庫維度-建立日期類型維度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,19 +40,19 @@ ms.locfileid: "34024505"
 ### <a name="calendars"></a>日曆  
  在時間維度或伺服器時間維度中，會在階層中將時間週期屬性加以分組。 這種階層通常稱為日曆。  
   
- 商業智慧應用程式通常會需要多個日曆定義。 例如，人力資源部門可能會使用 *「標準」* (standard) 日曆來追蹤員工，這個日曆是具有 12 個月的西曆，從 1 月 1 日開始，到 12 月 31 日結束。 然而，相同的人力資源部門也可以使用 *「會計」* (fiscal) 日曆來追蹤支出，這個日曆是具有 12 個月的日曆，用以定義組織所使用的會計年度。  
+ 商業智慧應用程式通常會需要多個日曆定義。 例如，人力資源部門時，可能會使用追蹤員工*標準*行事曆的 12 個月的西曆年 1 月 1 日開始年 12 月 31 日結束。 不過，該相同的人力資源部門時，可能會使用追蹤支出*會計*行事曆的 12 個月日曆，用以定義組織所使用的會計年度。  
   
  您可以在維度設計師中，手動建構這些不同的日曆。 不過，維度精靈有提供數個階層範本，當您建立時間維度或伺服器時間維度時，可以使用這些範本來自動產生數種類型的日曆。 下表描述可由維度精靈產生的各種日曆。  
   
-|日曆|Description|  
+|行事曆|描述|  
 |--------------|-----------------|  
 |標準日曆|12 個月的西曆，從 1 月 1 日開始，到 12 月 31 日結束。<br /><br /> 不論您使用維度精靈來建立時間維度或伺服器時間維度，在您定義代表維度時間週期的屬性之後，精靈都會產生標準日曆的階層。 如果您使用維度精靈來建立伺服器時間維度，您可以調整標準日曆的起始日期，成為從 1 月 1 日以外的日期開始。|  
 |會計日曆|十二月份會計日曆。 當您選取此日曆時，請指定組織所使用會計年度起始日期和月份。<br /><br /> 注意：唯有使用維度精靈建立伺服器時間維度時，才能使用這個日曆。|  
-|報表日曆(或行銷日曆)|12 個月的報表日曆，包含兩個四週的月份以及一個五週的月份，且每三個月 (每季) 重複一次的模式。 當您選取此日曆時，請指定起始的日期和月份，以及 4–4–5、4–5–4 或 5–4–4 的三個月週期模式之一，其中每一個數字代表月份的週數。<br /><br /> 注意：唯有使用維度精靈建立伺服器時間維度時，才能使用這個日曆。|  
+|報表日曆(或行銷日曆)|12 個月的報表日曆，包含兩個四週的月份以及一個五週的月份，且每三個月 (每季) 重複一次的模式。 當您選取此日曆時，指定起始的日期和月份，以及 4-4-5、 4-5-4 或 5-4-4 週，其中每一個數字代表一個月的週數的三個月模式。<br /><br /> 注意：唯有使用維度精靈建立伺服器時間維度時，才能使用這個日曆。|  
 |製造日曆|使用 13 週期 (每一期四週) 的日曆，分成三個週期三季和四個週期一季。 當您選取這個日曆時，請指定您組織所採用製造年的起始週 (在 1 和 4 之間) 和月份，也請找出哪一季要包含四個週期。<br /><br /> 注意：唯有使用維度精靈建立伺服器時間維度時，才能使用這個日曆。|  
 |ISO 8601 日曆|日期和時間標準日曆 (8601) 的國際標準組織 (ISO) 表示法。 此日曆含有 7 天一週的整數。 新的年份可以在西曆的新年之前幾天或之後幾天開始。 此日曆的第一週，是由西曆包含星期四的第一週。 因此，本週的第一天 (星期日)有可能會出現在上一個年份。<br /><br /> 注意：唯有使用維度精靈建立伺服器時間維度時，才能使用這個日曆。|  
   
- 當您建立伺服器時間維度，並指定在該維度使用的時間週期和日曆時，維度精靈會為每一個指定的日曆，加入適當的時間週期屬性。 例如，如果您建立使用年份做為時間週期的伺服器時間維度，並同時包含會計和報表日曆，則精靈會將 FiscalYear 和 ReportingYears 屬性以及標準的 Year 屬性都加入維度中。 伺服器時間維度也會有所選取時間週期的組合之屬性，例如包含 Days 和 Weeks 之維度的 DayOfWeek 屬性。 維度精靈會藉由結合屬於單一日曆類型的屬性，來建立日曆階層。 例如，會計日曆階層可包含下列層級：會計年、會計半年、會計季、會計月和會計日。  
+ 當您建立伺服器時間維度，並指定在該維度使用的時間週期和日曆時，維度精靈會為每一個指定的日曆，加入適當的時間週期屬性。 例如，如果您建立使用年份做為時間週期的伺服器時間維度，並同時包含會計和報表日曆，則精靈會將 FiscalYear 和 ReportingYears 屬性以及標準的 Year 屬性都加入維度中。 伺服器時間維度也會有所選取時間週期的組合之屬性，例如包含 Days 和 Weeks 之維度的 DayOfWeek 屬性。 維度精靈會藉由結合屬於單一日曆類型的屬性，來建立日曆階層。 例如，會計日曆階層可能包含下列層級：會計年度、 會計半年、 會計季度、 會計月和會計日。  
   
 ## <a name="adding-time-intelligence-with-the-business-intelligence-wizard"></a>使用商業智慧精靈加入時間智慧  
  在定義時間維度並將該維度加入至 Cube 之後，您可以使用商業智慧精靈來加入時間智慧功能，例如某週期至今、某週期至另一週期和滾動平均量值。 如需詳細資訊，請參閱 [使用商業智慧精靈定義時間智慧計算](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)。  
@@ -61,7 +61,7 @@ ms.locfileid: "34024505"
 >  您不能使用商業智慧精靈將時間智慧加入至伺服器時間維度。 商業智慧精靈會加入支援時間智慧的階層，而此階層必須繫結到時間維度資料表的資料行。 伺服器時間維度沒有對應的時間維度資料表，因此無法支援此額外階層。  
   
 ## <a name="see-also"></a>另請參閱  
- [產生時間資料表來建立時間維度](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
+ [Create a Time Dimension by Generating a Time Table](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
  [商業智慧精靈 F1 說明](http://msdn.microsoft.com/library/155ac80c-63ae-47aa-9e86-9396e3d920eb)   
  [維度類型](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   

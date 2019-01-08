@@ -16,12 +16,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e59fe6624c84c9918e659063d4d46ca0d7337b4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa5c6b607fa7523380950ecd89f9cae20ffc6f21
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135908"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356589"
 ---
 # <a name="performing-distributed-transactions"></a>執行分散式交易
   Microsoft 分散式交易協調器 (MS DTC) 可讓應用程式在兩個或多個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之間擴充交易。 也可讓應用程式參與交易管理員所管理且符合 Open Group DTP XA 標準的交易。  
@@ -30,7 +30,7 @@ ms.locfileid: "48135908"
   
  當使用 MS DTC，不過，MS DTC 會變成交易管理員和應用程式不會再使用**SQLEndTran**。  
   
- 當編列在分散式交易內，然後編列在第二個分散式交易內時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會從原始分散式交易脫離，並編列在新的交易中。 如需詳細資訊，請參閱 < [DTC 程式設計人員參考](http://msdn.microsoft.com/library/ms686108\(VS.85\).aspx)。  
+ 當編列在分散式交易內，然後編列在第二個分散式交易內時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會從原始分散式交易脫離，並編列在新的交易中。 如需詳細資訊，請參閱 < [DTC 程式設計人員參考](https://msdn.microsoft.com/library/ms686108\(VS.85\).aspx)。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行交易&#40;ODBC&#41;](../../../database-engine/dev-guide/performing-transactions-odbc.md)  

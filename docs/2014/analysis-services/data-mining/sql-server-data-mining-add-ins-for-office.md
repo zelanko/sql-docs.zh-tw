@@ -11,12 +11,12 @@ ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1f27a9834fb8a33ab98f9a8e7c6d309d10056484
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 3126726849b0f434eb0edb33c9f97cb227ca5b2e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099879"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357240"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>適用於 Office 的 SQL Server 資料採礦增益集
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 適用於 Office 的資料採礦增益集是一組輕量型的預測分析工具，可讓您使用 Excel 中的資料建立用於預測、建議或探索的分析模型。  
@@ -43,11 +43,11 @@ ms.locfileid: "50099879"
   
      進階使用者則可以使用具有拖放功能的 **[進階查詢編輯器]** 來建立自訂 DMX 查詢，或使用 Excel VBA 來將預測自動化。  
   
--   **記載和管理。** 建立了資料集以及一些模型之後，就可以透過產生資料的統計摘要和模型參數來記載您的工作與您的見解。  
+-   **記載和管理。** 您已建立了資料集以及一些模型之後，文件公司和您的深入解析，藉由產生的資料和模型參數的統計摘要。  
   
--   **探索和視覺化。** 資料採礦並不是一種可以全面自動化的活動，您需要探索及了解結果並採取有意義的動作。 增益集可藉由提供 Excel 的互動式檢視器、讓您自訂模型圖表的 Visio 範本，以及將圖表和資料表匯出到 Excel 進行額外的篩選或修改的功能，幫助您進行探索。  
+-   **探索和視覺化。** 資料採礦並不是可以完全自動化的活動，您需要探索及了解您的結果才有意義的動作。 增益集可藉由提供 Excel 的互動式檢視器、讓您自訂模型圖表的 Visio 範本，以及將圖表和資料表匯出到 Excel 進行額外的篩選或修改的功能，幫助您進行探索。  
   
--   **部署與整合。** 當您建立了實用的模型時，使用管理工具將模型從試驗伺服器匯出到另一個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體，讓您的模型實際執行。  
+-   **部署與整合。** 當您建立了實用的模型，到生產環境，讓您的模型，將模型從試驗伺服器匯出到其他執行個體使用的管理工具[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
   
      您也可以將模型留在當初建立的伺服器上，但是使用 Integration Services 或 DMX 指令碼重新整理定型資料並執行預測。  
   
@@ -84,6 +84,6 @@ ms.locfileid: "50099879"
   
  根據您連接的 SQL Server Analysis Services 版本而定，某些進階演算法可能會無法使用。 如需詳細資訊，請參閱＜ [SQL Server 2014 版本支援的功能](https://msdn.microsoft.com/library/cc645993.aspx)＞。  
   
- 如需其他安裝的詳細說明，請參閱此頁面下載中心： [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ 如需其他安裝的詳細說明，請參閱此頁面下載中心： [https://www.microsoft.com/download/details.aspx?id=29061](https://www.microsoft.com/download/details.aspx?id=29061)  
   
   

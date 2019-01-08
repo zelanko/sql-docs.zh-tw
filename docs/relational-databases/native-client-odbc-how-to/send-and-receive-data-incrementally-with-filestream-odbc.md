@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1df7792f5850ad9d312baefc374bcb9f99e904c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 685e8e2147066e8bdb1f34de3d5271bc56c7aac3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618266"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206637"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>利用 FILESTREAM 累加地傳送和接收資料 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "47618266"
 ## <a name="example"></a>範例  
  在編譯和執行此範例之前，啟用 FILESTREAM 支援 ([啟用及設定 FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md))。  
   
- 第一個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的資料庫。 您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體必須擁有執行這個指令碼的寫入存取權 (例如，以本機系統帳戶的身分登入)。  
+ 第一個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的資料庫。 您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體必須擁有執行這個指令碼的寫入存取權 (例如，以本機系統帳戶的身分登入)。  
   
  第二個程式碼清單是 C++ 程式碼。 您必須指定伺服器，然後在 C++ 程式碼清單中，將 "MyServer" 變更為有效的伺服器名稱。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。 請使用 odbc32.lib、user32.lib、/D "_UNICODE"、/D "UNICODE"、odbc32.lib 和 /EHsc 編譯 C++ 程式碼清單。  
   
- 第三個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會刪除此範例所使用的資料庫。  
+ 第三個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會刪除此範例所使用的資料庫。  
   
 ```  
 USE master  

@@ -18,12 +18,12 @@ ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e7ddb90a20b8d7d3c5aab323b803ca9fe3fcecf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a4d8a511fe163907de4cec6e12c6f884c7ad983
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605236"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589574"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,18 +41,18 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="arguments"></a>引數  
  *progid*  
- 這是要建立的 OLE 物件之程式化識別碼 (ProgID)。 這個字元字串描述 OLE 物件的類別，且具有下列形式： **'***OLEComponent***。***物件***'**  
+ 這是要建立的 OLE 物件之程式化識別碼 (ProgID)。 這個字元字串描述 OLE 物件的類別，且具有以下格式：**'**_OLEComponent_**。**_物件_**'**  
   
  *OLEComponent*是 OLE Automation 伺服器的元件名稱及*物件*是 OLE 物件的名稱。 指定的 OLE 物件必須有效，而且必須支援**IDispatch**介面。  
   
  比方說，是 SQLDMO。SQLServer，則 SQL-DMO 的 ProgID **SQLServer**物件。 SQL-DMO 已的元件名稱是 SQLDMO， **SQLServer**物件是否有效，而且 （例如所有 SQL-DMO 物件） **SQLServer**物件支援**IDispatch**。  
   
  *clsid*  
- 這是要建立的 OLE 物件之類別識別碼 (CLSID)。 這個字元字串描述 OLE 物件的類別，且具有下列形式： **' {***nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn***}'**。 指定的 OLE 物件必須有效，而且必須支援**IDispatch**介面。  
+ 這是要建立的 OLE 物件之類別識別碼 (CLSID)。 這個字元字串描述 OLE 物件的類別，且具有下列形式： **' {**_nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_**}'**。 指定的 OLE 物件必須有效，而且必須支援**IDispatch**介面。  
   
  例如，{00026BA1-0000-0000-C000-000000000046} 是 SQL-DMO 的 CLSID **SQLServer**物件。  
   
- *objecttoken* **輸出**  
+ _objecttoken_ **輸出**  
  為傳回的物件 token，且必須使用的資料型別區域變數**int**。這個物件 Token 會識別所建立的 OLE 物件，且用來呼叫其他 OLE Automation 預存程序。  
   
  *context*  

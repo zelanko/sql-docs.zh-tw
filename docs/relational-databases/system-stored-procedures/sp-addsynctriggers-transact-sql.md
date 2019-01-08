@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addsynctriggers_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c69681e396065f1881ff9ea81468ef85c8b26da4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89a6a997fd272985bd60d0b5d574fea07463f54d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799716"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588283"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,46 +58,46 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@sub_table=**] **'***sub_table&lt***'**  
+ [  **@sub_table=**] **'**_sub_table&lt_**'**  
  這是訂閱者資料表的名稱。 *sub_table&lt*已**sysname**，沒有預設值。  
   
- [  **@sub_table_owner=**] **'***sub_table_owner***'**  
+ [  **@sub_table_owner=**] **'**_sub_table_owner_**'**  
  這是訂閱者資料表的擁有者名稱。 *sub_table_owner*已**sysname**，沒有預設值。  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_發行者_**'**  
  這是發行者伺服器的名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  這是發行者資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。 如果是 NULL，就會使用目前的資料庫。  
   
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_發行集_**'**  
  這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@ins_proc=**] **'***ins_proc***'**  
+ [  **@ins_proc=**] **'**_ins_proc_**'**  
  這是支援在發行者端之同步交易插入的預存程序名稱。 *ins_proc*已**sysname**，沒有預設值。  
   
- [  **@upd_proc=**] **'***upd_proc***'**  
+ [  **@upd_proc=**] **'**_upd_proc_**'**  
  這是支援在發行者端之同步交易更新的預存程序名稱。 *ins_proc*已**sysname**，沒有預設值。  
   
- [  **@del_proc=**] **'***del_proc***'**  
+ [  **@del_proc=**] **'**_del_proc_**'**  
  這是支援在發行者端之同步交易刪除的預存程序名稱。 *ins_proc*已**sysname**，沒有預設值。  
   
- [  **@cftproc =** ] **'***cftproc***'**  
+ [  **@cftproc =** ] **'**_cftproc_**'**  
  這是允許佇列更新的發行集所用的自動產生程序名稱。 *cftproc*已**sysname**，沒有預設值。 如果是允許立即更新的發行集，這個值便是 NULL。 這個參數適用於允許佇列更新 (佇列更新和以佇列更新進行容錯移轉的立即更新) 的發行集。  
   
- [  **@proc_owner =** ] **'***proc_owner***'**  
+ [  **@proc_owner =** ] **'**_proc_owner_**'**  
  在發行者中，指定用來建立更新發行集 (佇列和/或立即) 所有自動產生的預存程序之使用者帳戶。 *proc_owner*已**sysname**沒有預設值。  
   
- [  **@identity_col=**] **'***identity_col***'**  
+ [  **@identity_col=**] **'**_identity_col_**'**  
  這是在發行者端之識別欄位的名稱。 *identity_col*已**sysname**，預設值是 NULL。  
   
- [  **@ts_col=**] **'***timestamp_col***'**  
+ [  **@ts_col=**] **'**_timestamp_col_**'**  
  是的名稱**時間戳記**在發行者端的資料行。 *timestamp_col*已**sysname**，預設值是 NULL。  
   
- [  **@filter_clause=**] **'***filter_clause***'**  
+ [  **@filter_clause=**] **'**_filter_clause_**'**  
  這是定義水平篩選的限制 (WHERE) 子句。 當輸入限制子句時，請省略 WHERE 關鍵字。 *filter_clause*已**nvarchar(4000)**，預設值是 NULL。  
   
- [  **@primary_key_bitmap =**] **'***primary_key_bitmap***'**  
+ [  **@primary_key_bitmap =**] **'**_primary_key_bitmap_**'**  
  這是資料表中之主索引鍵資料行的點陣圖。 *primary_key_bitmap*已**varbinary(4000)**，沒有預設值。  
   
  [  **@identity_support =** ] *identity_support*  
@@ -107,7 +106,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  [  **@independent_agent =** ] *independent_agent*  
  指出這個發行集有單一散發代理程式 (獨立代理程式)，或每一組發行集資料庫和訂閱資料庫有一個散發代理程式 (共用代理程式)。 這個值反映發行者端所定義之發行集的 independent_agent 屬性值。 *independent_agent*是 bit，預設值是**0**。 如果**0**，代理程式會共用代理程式。 如果**1**，代理程式是獨立的代理程式。  
   
- [  **@distributor =** ] **'***散發者***'**  
+ [  **@distributor =** ] **'**_散發者_**'**  
  這是散發者的名稱。 *散發者*已**sysname**，沒有預設值。  
   
  [ **@pubversion**=] *pubversion&lt*  

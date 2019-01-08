@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - PropertyNumValue Property (SqlServiceAdvancedProperty Class)
@@ -20,12 +18,12 @@ ms.assetid: 2c740dee-8911-443c-981f-7f224598ad21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f527f1ce4257804688d098214cff27243d365f9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7ac997caa099136c5b03bcb48bfcd5ecfd0b8f3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179188"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365450"
 ---
 # <a name="propertynumvalue-property-sqlserviceadvancedproperty-class"></a>PropertyNumValue 屬性 (SqlServiceAdvancedProperty 類別)
   取得進階屬性的數值。  
@@ -44,6 +42,6 @@ object
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [啟動及停止服務](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [啟動及停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

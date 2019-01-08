@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - HAVING clause, query summary results
@@ -15,12 +15,12 @@ ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8671fb9fe3de95d4480f7f293668dd124d2cc3a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c14608a34c2df5a0e93fea985d8135a37d5ffa53
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127918"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795940"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>在彙總查詢中使用資料行 (Visual Database Tools)
   當您建立彙總查詢時， [查詢和檢視表設計工具](visual-database-tools.md) 會做出特定假設，以便建構有效的查詢。 例如，如果您要建立彙總查詢並標記某資料行進行輸出，查詢和檢視設計師會自動將該資料行變成 GROUP BY 子句的一部分，如此一來您便不會不慎在摘要中顯示個別資料列的內容。  

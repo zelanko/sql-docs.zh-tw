@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], stopping
@@ -14,12 +14,12 @@ ms.assetid: 4249328a-24d8-4284-9d1d-7d04ed90e3d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2f2d7a8e7ae1e8e6972f98f50eb52a1b31a7ab70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f334834ff1deecebbc719ec71fb8348c13e4f68e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057480"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358760"
 ---
 # <a name="stop-a-job"></a>停止作業
   此主題描述如何停止 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。 作業是 SQL Server Agent 執行的一系列指定動作。  
@@ -47,7 +47,7 @@ ms.locfileid: "48057480"
 -   對於多伺服器作業，作業的 STOP 指令會發佈到作業的所有目標伺服器。  
   
 ###  <a name="Security"></a> 安全性  
- 如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)＞。  
+ 如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
   
 ##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48057480"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- stops a job named Weekly Sales Data Backup  
@@ -84,6 +84,6 @@ ms.locfileid: "48057480"
 ##  <a name="SMO"></a> 使用 SQL Server 管理物件  
  **若要停止作業**  
   
- 使用所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell，呼叫 `Stop` 類別的 `Job` 方法。 如需詳細資訊，請參閱 [SQL Server 管理物件 (SMO)](http://msdn.microsoft.com/library/ms162169.aspx)。  
+ 使用所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell，呼叫 `Stop` 類別的 `Job` 方法。 如需詳細資訊，請參閱 [SQL Server 管理物件 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  
   
   

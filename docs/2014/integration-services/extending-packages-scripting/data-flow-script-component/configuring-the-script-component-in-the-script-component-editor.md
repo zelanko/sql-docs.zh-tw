@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,12 +17,12 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f2b36eef7c358fde58316bafc06697c992f3918b
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: a702321888ad49a9ca5e3bea90abdde6924c8dc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461025"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360100"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>在指令碼元件編輯器中設定指令碼元件
   您在指令碼元件中撰寫自訂程式碼之前，必須選取您要建立的資料流程元件的類型 (來源、轉換或是目的地)，然後在 [指令碼轉換編輯器] 中設定元件的中繼資料與屬性。  
@@ -86,9 +84,9 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 > [!NOTE]  
 >  當**指令碼轉換編輯器**建立第一個輸出時，編輯器設定`SynchronousInputID`屬性的輸出，`ID`元件的輸入。 然而，當編輯器建立後續的輸出時，編輯器會將這些輸出的 `SynchronousInputID` 屬性設定為零。  
 >   
->  如果您以同步輸出建立元件，每個輸出都必須將其 `SynchronousInputID` 屬性設定為元件輸入的 `ID`。 因此，編輯器在第一個輸出之後所建立的每個輸出，都必須將其 `SynchronousInputID` 值從零變更為元件輸入的 `ID`。  
+>  如果您要在具有同步輸出建立元件，每一個輸出必須將其`SynchronousInputID`屬性設定為`ID`元件的輸入。 因此，編輯器在第一個輸出之後所建立的每個輸出，都必須將其 `SynchronousInputID` 值從零變更為元件輸入的 `ID`。  
 >   
->  如果您以非同步輸出建立元件，每個輸出都必須將其 `SynchronousInputID` 屬性設定為零。 因此，第一個輸出必須將其 `SynchronousInputID` 值從元件的輸入 `ID` 變更為零。  
+>  如果您以非同步輸出建立元件，每個輸出都必須將其 `SynchronousInputID` 屬性設定為零。 因此，第一個輸出必須將其`SynchronousInputID`值從變更`ID`元件的輸入為零。  
   
  如需將資料列導向指令碼元件中兩個同步輸出的其中一個的範例，請參閱[使用指令碼元件建立同步轉換](../../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)。  
   
@@ -128,7 +126,7 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
   
  如需詳細資訊，請參閱[在指令碼元件中連線至資料來源](connecting-to-data-sources-in-the-script-component.md)。  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [編碼和偵錯指令碼元件](coding-and-debugging-the-script-component.md)  

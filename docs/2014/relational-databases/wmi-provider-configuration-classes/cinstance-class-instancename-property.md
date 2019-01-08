@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - InstanceName Property (CInstance Class)
@@ -20,12 +18,12 @@ ms.assetid: 806fafa8-bf89-4ce8-a082-8081dde9fcc3
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: af3d20f424a79f6e3a4cc4fdf7acf5eaaa7c5156
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 309991d7dd187ca40d3eba40d43c0e58692b24bc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097788"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353367"
 ---
 # <a name="instancename-property-cinstance-class"></a>InstanceName 屬性 (CInstance 類別)
   取得 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端的執行個體名稱。  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定用戶端通訊協定](http://technet.microsoft.com/library/ms181035.aspx)  
+ [設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

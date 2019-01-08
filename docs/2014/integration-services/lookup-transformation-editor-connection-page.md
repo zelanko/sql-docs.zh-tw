@@ -15,12 +15,12 @@ ms.assetid: e90d6b69-5a26-43c5-8433-5c3c9588e08c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ecacc7fa89256cf5efb42ee792a08251a9af013
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37d42dde548394599cec00020a91383fde97e034
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063708"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371540"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>查閱轉換編輯器 (連接頁面)
   使用 **[查閱轉換編輯器]** 對話方塊的 **[連接]** 頁面，來選取連接管理員。 如果您選取 OLE DB 連接管理員，也可以選取查詢、資料表或檢視來產生參考資料集。  
@@ -69,13 +69,13 @@ ms.locfileid: "48063708"
  使用 [預覽查詢結果] 對話方塊來預覽結果。 此選項最多可顯示 200 個資料列。  
   
 ## <a name="external-resources"></a>外部資源  
- blogs.msdn.com 上的部落格文章： [查閱快取模式](http://go.microsoft.com/fwlink/?LinkId=219518)   
+ blogs.msdn.com 上的部落格文章： [查閱快取模式](https://go.microsoft.com/fwlink/?LinkId=219518)   
   
 ## <a name="see-also"></a>另請參閱  
- [查閱轉換編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [查閱轉換編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [查閱轉換編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
- [查閱轉換編輯器&#40;進階頁面&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [查閱轉換編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
+ [查閱轉換編輯器 &#40;進階頁面&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [模糊查閱轉換](data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

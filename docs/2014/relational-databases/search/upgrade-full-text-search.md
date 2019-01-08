@@ -16,12 +16,12 @@ ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a9a9a8db6c84bfde40ec7c71012d4cc528d57efd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ceeb9a6d964dadd35c725a7ae4cd9e6db7c8d090
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163538"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363640"
 ---
 # <a name="upgrade-full-text-search"></a>升級全文檢索搜尋
   將全文檢索搜尋升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的作業會在安裝期間完成，而且當您使用 [複製資料庫精靈] 以附加、還原或複製舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料庫檔案和全文檢索目錄時，也會完成此作業。  
@@ -126,7 +126,7 @@ ms.locfileid: "48163538"
 ## <a name="backup-and-imported-full-text-catalogs"></a>備份與匯入的全文檢索目錄  
  對於升級期間重建或重設的全文檢索目錄 (以及新的全文檢索目錄) 而言，此全文檢索目錄是邏輯概念，而且不會位於檔案群組中。 因此，若要備份 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的全文檢索目錄，您必須識別包含此目錄之全文檢索索引的每個檔案群組，然後逐一備份它們。 如需詳細資訊，請參閱 [備份並還原全文檢索目錄與索引](back-up-and-restore-full-text-catalogs-and-indexes.md)。  
   
- 對於已經從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]匯入的全文檢索目錄而言，此全文檢索目錄仍然是位於其檔案群組中的資料庫檔案。 全文檢索目錄的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 備份程序仍然適用，但是 MSFTESQL 服務不存在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中。 如需 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 程序的相關資訊，請參閱《SQL Server 2005 線上叢書》中的 [備份與還原全文檢索目錄](http://go.microsoft.com/fwlink/?LinkId=209154) 。  
+ 對於已經從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]匯入的全文檢索目錄而言，此全文檢索目錄仍然是位於其檔案群組中的資料庫檔案。 全文檢索目錄的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 備份程序仍然適用，但是 MSFTESQL 服務不存在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中。 如需 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 程序的相關資訊，請參閱《SQL Server 2005 線上叢書》中的 [備份與還原全文檢索目錄](https://go.microsoft.com/fwlink/?LinkId=209154) 。  
   
 ##  <a name="Upgrade_Db"></a> 升級資料庫時移轉全文檢索索引 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  您可以使用附加、還原或 [複製資料庫精靈]，將舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料庫檔案和全文檢索目錄升級為現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 伺服器執行個體。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 系統會匯入、重設或重建全文檢索索引 (如果有的話)。 **upgrade_option** 伺服器屬性會控制此伺服器執行個體在這些資料庫升級期間所使用的全文檢索升級選項。  
@@ -135,9 +135,9 @@ ms.locfileid: "48163538"
   
  **變更伺服器執行個體的全文檢索升級行為**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]：使用 [sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql) 的 **upgrade\_option** 動作  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]:使用**升級\_選項**動作[sp\_fulltext\_服務](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**：** 使用 [伺服器屬性] 對話方塊的 [全文檢索升級選項]。 如需詳細資訊，請參閱 [管理及監視伺服器執行個體的全文檢索搜尋](manage-and-monitor-full-text-search-for-a-server-instance.md)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** 使用**全文檢索升級選項**的**伺服器屬性** 對話方塊。 如需詳細資訊，請參閱 [管理及監視伺服器執行個體的全文檢索搜尋](manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
 ##  <a name="Considerations_for_Restore"></a> 還原 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文檢索目錄的考量 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  將全文檢索資料從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的其中一種方法是將完整資料庫備份還原至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -148,7 +148,7 @@ ms.locfileid: "48163538"
   
 -   如果全文檢索目錄處於離線狀態，備份將會失敗。  
   
- 如需備份和還原 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文檢索目錄的詳細資訊，請參閱《 [線上叢書》中的](http://go.microsoft.com/fwlink/?LinkId=121052) 備份與還原全文檢索目錄 [和](http://go.microsoft.com/fwlink/?LinkId=121053)檔案備份、還原及全文檢索目錄 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
+ 如需備份和還原 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文檢索目錄的詳細資訊，請參閱《 [線上叢書》中的](https://go.microsoft.com/fwlink/?LinkId=121052) 備份與還原全文檢索目錄 [和](https://go.microsoft.com/fwlink/?LinkId=121053)檔案備份、還原及全文檢索目錄 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中還原資料庫時，系統會針對此全文檢索目錄建立新的資料庫檔案。 這個檔案的預設名稱為 ftrow_*catalog-name*.ndf。 例如，如果您的 *catalog-name* 是 `cat1`， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫檔案的預設名稱會是 `ftrow_cat1.ndf`。 但是，如果預設名稱已經用於目標目錄中，新的資料庫檔案就會命名為 `ftrow_`*catalog-name*`{`*GUID*`}.ndf`，其中 *GUID* 是新檔案的全域唯一識別碼。  
   

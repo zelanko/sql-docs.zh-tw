@@ -14,12 +14,12 @@ ms.assetid: 4fd003e7-808e-4b0e-b28a-47d9f2616f06
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1aa901fe3230a76af3127af41630b075414d77a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 895e65f9538b588299520e9e22192935535b7931
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096870"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374250"
 ---
 # <a name="data-synchronization-state-of-availability-database-is-not-healthy"></a>可用性資料庫的資料同步處理狀態不健全
     
@@ -29,14 +29,14 @@ ms.locfileid: "48096870"
 |-|-|  
 |**原則名稱**|可用性資料庫資料同步處理狀態|  
 |**問題**|可用性資料庫的資料同步處理狀態不良。|  
-|**類別目錄**|**警告**|  
+|**分類**|**警告**|  
 |**Facet**|可用性資料庫|  
   
 ## <a name="description"></a>描述  
  這項原則會積存可用性複本中所有可用性資料庫 (也稱為「資料庫複本」) 的資料同步處理狀態。 當任何資料庫複本不在預期的資料同步處理狀態時，原則為狀況不良。 否則原則為狀況良好。  
   
 > [!NOTE]  
->  在此版本 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [可用性資料庫的資料同步處理狀態不良](http://go.microsoft.com/fwlink/p/?LinkId=220858) 。  
+>  在此版本 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [可用性資料庫的資料同步處理狀態不良](https://go.microsoft.com/fwlink/p/?LinkId=220858) 。  
   
 ## <a name="possible-causes"></a>可能的原因  
  此可用性資料庫的資料同步處理狀態不良。 在非同步認可可用性複本上，每個可用性資料庫都應該處於 SYNCHRONIZING 狀態。 在同步認可複本上，每個可用性資料庫都必須處於 SYNCHRONIZED 狀態。  

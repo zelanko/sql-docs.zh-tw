@@ -1,7 +1,7 @@
 ---
 title: SQL Server 移轉小幫手 |Microsoft Docs
 ms.custom: ''
-ms.date: 09/30/2017
+ms.date: 01/04/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssma
@@ -10,12 +10,12 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a90d7bd53433bd0db027787cdcd83f53b8227804
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a5cc32ab3579555bff85e4e18052bd0126372517
+ms.sourcegitcommit: d040bab6f826f0c37cd207a6c7cef04a8963c5d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668397"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031714"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server 移轉小幫手
 Microsoft SQL Server 移轉小幫手 (SSMA) 是設計來自動化 SQL Server 從 Microsoft Access、 DB2、 MySQL、 Oracle 和 SAP ASE 資料庫移轉工具。  
@@ -42,9 +42,10 @@ SSMA 支援下列版本的目標。
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
+- 在 Windows 和 Linux 上的 SQL Server 2017
+- 在 Windows 和 Linux 上的 SQL Server 2019
 - Azure SQL Database
-- 在 Windows 和 Linux （預覽） 上的 SQL Server 2017
-- * * Azure SQL 資料倉儲
+- Azure SQL 資料倉儲
 
 * * 此目標，只有支援 SSMA for Oracle。
  
@@ -60,17 +61,17 @@ SSMA 支援下列版本的目標。
   
 -   **產品說明**-若要存取產品支援、 啟動 SSMA，然後選取 [說明] 功能表或按 F1 鍵。  
   
--   **SQL Server 社群論壇**– 在 SQL Server 社群中發問  
+-   **SQL Server 社群論壇**-在 SQL Server 社群中發問  
   
     -   [SQL Server 社群](https://go.microsoft.com/fwlink/?LinkId=42455)-新聞群組和由 SQL Server 社群監視的論壇。 此網站還會列出社群資訊來源，例如部落格或網站。  
   
     -   [SQL Server 開發人員中心社群](https://go.microsoft.com/fwlink/?LinkId=42456)-新聞群組、 論壇和其他社群資源，SQL Server 開發人員很有用  
   
--   協助支援-請移至[ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts) ，並搜尋 [SQL Server 移轉小幫手]。  選取您的版本，然後選取 [啟動要求]。  包含使用 SQL Server 移轉小幫手工具協助的支援。  
+-   協助支援-請移至[ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts)並搜尋 ' SQL Server Migration Assistant'。  選取您的版本，然後選取 [啟動要求]。  包含使用 SQL Server 移轉小幫手工具協助的支援。  
   
 -   頂級支援-如果您有頂級支援合約，您可以取得頂級支援[Premier Online 入口網站](https://premier.microsoft.com/)。  
   
--   諮詢服務 – 夥伴協助移轉，go [Partner 入口網站](https://www.platformmodernization.org/Pages/default.aspx)。  
+-   諮詢服務-合作夥伴的協助移轉，go [Partner 入口網站](https://www.platformmodernization.org/Pages/default.aspx)。  
   
 ## <a name="legal-notice-ssma"></a>法律注意事項 (SSMA)  
 本文件集 (包括其中所用的範例應用程式) 僅為資訊用途而提供，本文件集亦不提供任何明示或默示之擔保。 本文件集中的資訊，包括 URL 及其他網際網路網站參考資料，如有變更恕不另行通知。 本文件集之使用或因使用本文件集所衍生之一切後果，概由使用者自行承擔所有風險。  
@@ -81,7 +82,7 @@ SSMA 支援下列版本的目標。
   
 Microsoft 可能擁有本文件集所提及內容中所含之專利權、專利優先權、商標、著作權，或其他智慧財產權。 除非 Microsoft 書面授權合約所明示規定者外，提供本文件集並不授與貴用戶上述專利權、商標、著作權或其他智慧財產權。  
   
-© 2017 Microsoft Corporation. 著作權所有，並保留一切權利。  
+© Microsoft Corporation 2019。 著作權所有，並保留一切權利。  
   
 Microsoft、Windows、Windows NT、Windows Server、Active Directory、ActiveX、BackOffice、bCentral、BizTalk、DirectX、Excel、Hotmail、IntelliSense、J/Direct、Jscript、Microsoft Press、MSDN、MS-DOS、Outlook、PivotChart、PivotTable、PowerPoint、SharePoint、SQL Server、Visual Basic、Visual C#、Visual C++、Visual FoxPro、Visual InterDev、Visual J#、Visual J++、Visual SourceSafe、Visual Studio、Win32、Win32s、Windows Mobile、Windows Server System 及 WinFX 係 Microsoft Corporation 在美國及 (或) 其他國家/地區的註冊商標或商標。  
   
@@ -90,7 +91,7 @@ SAP NetWeaver 是 SAP AG 在德國和其他數個國家/地區的註冊商標。
 所有其他商標為各所有人所有之商標。  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>SQL Server 支援及升級的文件集原則  
-SQL Server 文件集中的內容均經過充分測試才發佈。 《SQL Server 線上叢書》、讀我檔案、已知問題文件和知識庫文件等產品文件的內容均有關 SQL Server 功能，這些功能的強固程度足以供所有客戶安全地用於一般用途。 此原則適用於所有 SQL Server 文件集，包括版本及 Service Pack 的讀我檔案；讀我檔案可視為《線上叢書》的延伸部分。  
+SQL Server 文件集中的內容均經過充分測試才發佈。 產品文件-SQL Server 線上叢書 》、 讀我檔案、 已知的問題文件，以及知識庫文件-包含有關 SQL Server 特性與功能非常強大，足以供一般客戶使用的所有安全的內容。 此原則適用於所有 SQL Server 文件集，包括版本及 Service Pack 的讀我檔案；讀我檔案可視為《線上叢書》的延伸部分。  
   
 在某些情況下，某項特定功能未供客戶直接使用，因此未受記載。 除非 Microsoft 所發佈的 SQL Server 文件集也討論到某項功能，否則 Microsoft 客戶支援並不支援來自協力廠商叢書或網站的內容，並且不得用於產品資料庫或應用程式。  
   

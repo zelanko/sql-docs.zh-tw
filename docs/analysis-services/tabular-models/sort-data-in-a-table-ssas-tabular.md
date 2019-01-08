@@ -1,5 +1,5 @@
 ---
-title: 排序資料表中的資料 |Microsoft 文件
+title: 排序 Analysis Services 表格式模型資料表中的資料 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ef0a5de0958fbea806063c17dd5f9f1912449be4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4ab79de3551f1ef4613bb3c6f14b44ca660e2dfc
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039625"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072065"
 ---
 # <a name="sort-data-in-a-table"></a>排序資料表中的資料 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

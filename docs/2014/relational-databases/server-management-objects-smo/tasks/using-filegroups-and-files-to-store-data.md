@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - filegroups [SMO]
@@ -18,12 +16,12 @@ ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95edb24e7b26ef6cb80d7a0d707f89b6eb79c7da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efeb2de880834723f37755a47618ece97d31af65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196448"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814785"
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>使用檔案群組和檔案來儲存資料
   資料檔案可用於儲存資料庫檔案。 資料檔案被分成檔案群組。 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件具有 <xref:Microsoft.SqlServer.Management.Smo.Database.FileGroups%2A> 屬性，這個屬性會參考 <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> 物件。 該集合中的每個 <xref:Microsoft.SqlServer.Management.Smo.FileGroup> 物件都具有 <xref:Microsoft.SqlServer.Management.Smo.FileGroup.Files%2A> 屬性。 這個屬性會參考 <xref:Microsoft.SqlServer.Management.Smo.DataFileCollection> 集合，其中包含資料庫所屬的所有資料檔。 檔案群組的主要功能是將用於儲存資料庫物件的檔案放入群組。 將一個資料庫物件散佈到數個檔案的其中一個理由就是改善效能，特別是如果檔案儲存在不同的磁碟機上。  

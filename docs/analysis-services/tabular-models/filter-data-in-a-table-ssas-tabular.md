@@ -1,5 +1,5 @@
 ---
-title: 篩選資料表中的資料 |Microsoft 文件
+title: 篩選 Analysis Services 表格式模型資料表中的資料 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 65b3e9bfc1b4e3c8a246d2732484d835065e82bb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9b1fcdda5bd49f8056a6035ec10da8fb52f1c5d1
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039235"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072122"
 ---
 # <a name="filter-data-in-a-table"></a>篩選資料表中的資料 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "34039235"
   
          如果值的數量非常大，在清單中可能不會顯示個別的項目。 但是您會看到「要顯示的項目太多」這個訊息。  
   
-    -   按一下 [數字篩選] 或 [文字篩選] \(視資料行的類型而定)，然後按一下其中一個比較運算子命令 (例如 [等於])，或按一下 [自訂篩選]。 在 **[自訂篩選]** 對話方塊中，建立篩選，然後按一下 **[確定]**。  
+    -   按一下 [數字篩選] 或 [文字篩選] (視資料行的類型而定)，然後按一下其中一個比較運算子命令 (例如 [等於])，或按一下 [自訂篩選]。 在 **[自訂篩選]** 對話方塊中，建立篩選，然後按一下 **[確定]**。  
   
 ### <a name="to-clear-a-filter-for-a-column"></a>若要清除資料行的篩選  
   
 1.  按一下您要清除篩選之資料行標頭中的箭號。  
   
-2.  按一下**清除篩選器，從\<資料行名稱 >**。  
+2.  按一下 **清除篩選器，從\<資料行名稱 >**。  
   
 ### <a name="to-clear-all-filters-for-a-table"></a>清除資料表的所有篩選  
   

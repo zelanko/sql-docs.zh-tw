@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -16,12 +15,12 @@ ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 362e5046207d28be934c382b5e5dd2054d5f2a97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16cb4a7d0ac1cec33f3f9907b1b49e5588f45247
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204660"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799061"
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement 事件類別
   當您使用的功能將從 **未來版本中移除，但不會從下一個主要版本中移除時，就會發生** Deprecation Announcement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件類別。 為了使應用程式的使用壽命達到最久，請避免使用會造成 **Deprecation Announcement** 事件類別或 **Deprecation Final Support** 事件類別的功能。  
@@ -32,7 +31,7 @@ ms.locfileid: "48204660"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |ClientProcessID|`int`|由主機電腦指派給處理序 (用戶端應用程式執行所在) 的識別碼。 如果用戶端提供用戶端處理序識別碼，這個資料行就會擴展。|9|是|  
-|DatabaseID|`int`|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 顯示資料庫的名稱，如果`ServerName`則表示追蹤中擷取資料行，而且伺服器可以使用。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
+|DatabaseID|`int`|由 USE *database* 陳述式所指定的資料庫識別碼，或者如果沒有針對指定執行個體發出 USE *database* 陳述式，則是預設的資料庫。 如果在追蹤中擷取到 `ServerName` 資料行，而且伺服器可以使用，則 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會顯示資料庫名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |DatabaseName|`nvarchar`|正在執行使用者陳述式的資料庫名稱。|35|是|  
 |EventClass|`int`|事件類型 = 125。|27|否|  
 |EventSequence|`int`|要求中的給定事件順序。|51|否|  

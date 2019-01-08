@@ -20,16 +20,16 @@ ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1316ad29a31872d149201f31d60ede14a8a9051
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: faa88d18a5b682b98a56b6426ba6a94ee4687cab
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855076"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591812"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ISO 92  
+ 導入的版本：ODBC 1.0 標準的合規性：ISO 92  
   
  **摘要**  
  **SQLGetCursorName**傳回與指定的陳述式相關聯的資料指標名稱。  
@@ -81,9 +81,9 @@ SQLRETURN SQLGetCursorName(
 |IM001|驅動程式不支援此函式|(DM) 驅動程式相關聯*StatementHandle*不支援此函式。|  
   
 ## <a name="comments"></a>註解  
- 資料指標名稱僅用於定位的 update 和 delete 陳述式 (例如**更新***資料表名稱*...**WHERE CURRENT OF** *資料指標名稱*)。 如需詳細資訊，請參閱 <<c0> [ 定位更新和刪除陳述式](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)。 如果應用程式不會呼叫**SQLSetCursorName**來定義資料指標名稱，此驅動程式產生的名稱。 這個名稱開頭為字母 SQL_CUR。  
+ 資料指標名稱僅用於定位的 update 和 delete 陳述式 (例如**更新**_資料表名稱_...**WHERE CURRENT OF** _資料指標名稱_)。 如需詳細資訊，請參閱 <<c0> [ 定位更新和刪除陳述式](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)。 如果應用程式不會呼叫**SQLSetCursorName**來定義資料指標名稱，此驅動程式產生的名稱。 這個名稱開頭為字母 SQL_CUR。  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2 *.x*，在沒有任何開啟的資料指標和已設定沒有名稱的呼叫所**SQLSetCursorName**，來呼叫**SQLGetCursorName**傳回 SQLSTATE HY015 （沒有資料指標名稱有的話）。 在 ODBC 3 *.x*，這不會再為 true，不論何時**SQLGetCursorName**是呼叫，驅動程式會傳回資料指標名稱。  
   
  **SQLGetCursorName**傳回名稱是否建立明確或隱含資料指標的名稱。 如果資料指標名稱就會以隱含方式產生**SQLSetCursorName**就不會呼叫。 **SQLSetCursorName**可以呼叫來重新命名的資料指標陳述式，只要游標處於已配置或已備妥狀態。  

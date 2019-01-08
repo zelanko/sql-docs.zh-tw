@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - nullvalue attribute
@@ -18,12 +16,12 @@ ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9097ed23a228a48500d9f40ca8f8e3b3f12b1ba0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d0d9c0ad613a4453fad62e387a0eb7b0fd67aaa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113738"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777000"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>將參數傳遞至 Updategrams (SQLXML 4.0)
   Updategrams 是範本，所以您可以將參數傳遞給它們。 如需參數傳遞給範本的詳細資訊，請參閱[Updategram 安全性考量&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)。  
@@ -41,7 +39,7 @@ ms.locfileid: "48113738"
 -   此範例會使用預設對應 (也就是說，updategram 中不會指定任何對應結構描述)。 如需使用對應結構描述的 updategram 的範例，請參閱[在 Updategram 中指定註解式對應結構描述&#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
   
 ### <a name="a-passing-parameters-to-an-updategram"></a>A. 傳遞參數給 updategram  
- 在此範例中，updategram 會變更 umanResources.Shift 資料表內員工的姓氏。 有兩個參數會傳遞給 updategram：用來唯一識別移位的 ShiftID 及 Name。  
+ 在此範例中，updategram 會變更 umanResources.Shift 資料表內員工的姓氏。 Updategram 會傳遞兩個參數：ShiftID，用來唯一識別移位和名稱。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

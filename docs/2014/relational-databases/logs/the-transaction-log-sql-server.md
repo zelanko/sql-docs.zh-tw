@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 01/04/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
@@ -14,15 +14,15 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f22f0ea25b141cf7ee5a3130153837dcf4a1132
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072888"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807010"
 ---
 # <a name="the-transaction-log-sql-server"></a>交易記錄 (SQL Server)
-  每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫都有交易記錄來記錄所有交易及每項交易所作的資料庫修改。 必須定期截斷交易記錄，以免被填滿。 但是，某些因素會影響記錄的截斷，所以監控記錄大小非常重要。 某些作業可使用最低限度記錄，以減少其對交易記錄大小的影響。  
+  每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫都擁有交易記錄檔來記錄所有交易，以及交易在資料庫中所作的修改。 必須定期截斷交易記錄，以免被填滿。 但是，某些因素會影響記錄的截斷，所以監控記錄大小非常重要。 某些作業可使用最低限度記錄，以減少其對交易記錄大小的影響。  
   
  交易記錄是資料庫的重要元件，而且如果系統故障，就可能需要交易記錄讓資料庫返回一致的狀態。 永遠不要刪除或移動交易記錄，除非您完全了解執行這些動作的詳細情形。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "48072888"
   
  **本主題內容：**  
   
--   [優點： 交易記錄所支援的作業](#Benefits)  
+-   [優點：交易記錄所支援的作業](#Benefits)  
   
 -   [交易記錄截斷](#Truncation)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48072888"
   
 -   [相關工作](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 優點： 交易記錄所支援的作業  
+##  <a name="Benefits"></a> 優點：交易記錄檔所支援的作業  
  交易記錄檔支援下列作業：  
   
 -   復原個別的交易。  
@@ -88,12 +88,12 @@ ms.locfileid: "48072888"
 |7|DATABASE_SNAPSHOT_CREATION|正在建立資料庫快照集。 (所有復原模式)<br /><br /> 這是延遲記錄截斷的一般原因 (通常也是暫時的原因)。|  
 |8|LOG_SCAN|正在進行記錄掃描。 (所有復原模式)<br /><br /> 這是延遲記錄截斷的一般原因 (通常也是暫時的原因)。|  
 |9|AVAILABILITY_REPLICA|可用性群組的次要複本正在將這個資料庫的交易記錄檔記錄套用到對應的次要資料庫。 (完整復原模式)<br /><br /> 如需詳細資訊，請參閱 < [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。|  
-|10|—|僅供內部使用|  
-|11|—|僅供內部使用|  
-|12|—|僅供內部使用|  
+|10|-|僅供內部使用|  
+|11|-|僅供內部使用|  
+|12|-|僅供內部使用|  
 |13|OLDEST_PAGE|如果將資料庫設定為使用間接檢查點，資料庫中最舊的頁面可能會比檢查點 LSN 更舊。 在此情況下，最舊的頁面可能會延遲記錄截斷。 (所有復原模式)<br /><br /> 如需間接檢查點的相關資訊，請參閱 [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md)。|  
 |14|OTHER_TRANSIENT|這個值目前尚未使用。|  
-|16|XTP_CHECKPOINT|當資料庫具有記憶體最佳化檔案群組時，交易記錄檔可能不會一直截斷之前自動[!INCLUDE[hek_2](../../includes/hek-2-md.md)]檢查點觸發 （這發生在記錄檔成長的每 512 MB）。<br /><br /> 注意： 512 MB 的大小之前的交易記錄截斷，發出 Checkpoint 命令手動對有問題。|  
+|16|XTP_CHECKPOINT|當資料庫具有記憶體最佳化的檔案群組時，交易記錄檔可能會等到自動 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 檢查點觸發 (當記錄大小每成長 512 MB 時執行) 時，才會截斷記錄。<br /><br /> 注意：若要在達到 512 MB 之前，先截斷交易記錄，請手動對有問題的資料發出 Checkpoint 命令。|  
   
 ##  <a name="MinimallyLogged"></a> 可以進行最低限度記錄的作業  
  「最低限度記錄」 包含僅記錄復原交易所需的資訊，不支援時間點復原。 這個主題將識別在大量記錄復原模式下 (以及簡單復原模式下，但備份正在執行時除外) 會進行最低限度記錄的作業。  
@@ -135,7 +135,7 @@ ms.locfileid: "48072888"
     -   DROP INDEX 新堆積重建 (如果適用)。  
   
         > [!NOTE]  
-        >  索引頁取消配置期間[DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql)一定會完整記錄作業。  
+        >  [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) 作業期間的索引頁取消配置永遠都是完整記錄。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
  `Managing the transaction log`  

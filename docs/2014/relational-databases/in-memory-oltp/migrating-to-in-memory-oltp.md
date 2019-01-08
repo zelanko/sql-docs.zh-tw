@@ -10,12 +10,12 @@ ms.assetid: 405cdac5-a0d4-47a4-9180-82876b773b82
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31fbfaefa9efed6e00ae69338b8f4db346176167
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89fc6a74486cad96be0baee374721e06520acfcb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116168"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362792"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>移轉至 In-Memory OLTP
   本節討論如何將資料庫物件移轉為使用記憶體中 OLTP。  
@@ -44,7 +44,7 @@ ms.locfileid: "48116168"
   
 -   [在記憶體最佳化資料表中實作 IDENTITY](implementing-identity-in-a-memory-optimized-table.md)  
   
- 如需移轉方法的資訊，請參閱 [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx)(記憶體內部 OLTP - 一般工作負載模式和移轉考量)。  
+ 如需移轉方法的資訊，請參閱 [In-Memory OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](in-memory-oltp-in-memory-optimization.md)   

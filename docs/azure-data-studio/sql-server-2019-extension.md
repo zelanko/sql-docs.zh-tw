@@ -1,7 +1,8 @@
 ---
-title: Azure 資料 Studio SQL Server 2019 擴充功能 （預覽） |Microsoft Docs
+title: SQL Server 2019 擴充功能 （預覽）
+titleSuffix: Azure Data Studio
 description: Azure Data Studio 的 SQL Server 2019 Preview 延伸模組
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 11/06/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -11,16 +12,16 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ce04a8f41ec466980bd13d3d032660696e50870
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 6ce44d22675be344aaa1f08632e39bfdf9c190b3
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269811"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432811"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 擴充功能 （預覽）
 
-SQL Server 2019 擴充功能 （預覽） 提供的預覽支援的新功能和工具支援的出貨[!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]。 這包括提供的預覽支援[SQL Server 2019 巨量資料叢集](../big-data-cluster/big-data-cluster-overview.md)，整合[notebook 體驗](../big-data-cluster/notebooks-guidance.md)，PolyBase [Create External Table 精靈](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json)，以及[Azure 資源總管](azure-resource-explorer.md)。
+SQL Server 2019 擴充功能 （預覽） 提供的預覽支援的新功能和工具支援的出貨[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。 這包括提供的預覽支援[SQL Server 2019 巨量資料叢集](../big-data-cluster/big-data-cluster-overview.md)，整合[notebook 體驗](../big-data-cluster/notebooks-guidance.md)，PolyBase [Create External Table 精靈](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json)，以及[Azure 資源總管](azure-resource-explorer.md)。
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>安裝 SQL Server 2019 擴充功能 （預覽）
 
@@ -30,9 +31,9 @@ SQL Server 2019 擴充功能 （預覽） 提供的預覽支援的新功能和�
 
    |平台|下載|發行日期|版本
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038184)|2018 年 11 月 6日日 |0.8.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038178)|2018 年 11 月 6日日 |0.8.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038246)|2018 年 11 月 6日日 |0.8.0
+   |視窗|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038184)|2018 年 11 月 6 日 |0.8.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038178)|2018 年 11 月 6 日 |0.8.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038246)|2018 年 11 月 6 日 |0.8.0
 
 1. 在 Azure Data Studio 選擇**VSIX 套件安裝延伸模組**從**檔案**功能表，然後選取已下載的.vsix 檔案。
 
@@ -41,6 +42,8 @@ SQL Server 2019 擴充功能 （預覽） 提供的預覽支援的新功能和�
 1. 選取**重新載入**以啟用該擴充功能 (只有第一次安裝擴充功能時需要)。
 
 1. 重新載入後，擴充功能會安裝相依性。 您可以看到在 [輸出] 視窗中，進度，並可能需要幾分鐘的時間。
+
+1. 在相依性後面完成安裝，關閉再重新開啟 Azure Data Studio。 **巨量資料的 SQL Server 叢集**連接類型不可以使用，直到您重新啟動 Azure Data Studio。
 
 ## <a name="release-notes-v080"></a>版本資訊 (0.8.0)
 *Notebook*:

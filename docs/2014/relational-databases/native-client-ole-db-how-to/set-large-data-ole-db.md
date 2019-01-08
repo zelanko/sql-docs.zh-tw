@@ -12,22 +12,22 @@ ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: add630c98373a9b49cbb2469ab3eccfbe41b4f05
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24d05ef704e37af9d0d8c1e2a9e9eefe0b20f1d8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161076"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355979"
 ---
 # <a name="set-large-data-ole-db"></a>設定大型資料 (OLE DB)
   此範例會示範如何設定 BLOB 資料、建立資料表、加入範例記錄、在資料列集中提取該記錄，然後設定 BLOB 欄位的值。 IA64 不支援此範例。  
   
  若要傳遞自己的儲存物件指標，取用者會建立一個繫結 BLOB 資料行值的存取子，然後呼叫 `IRowsetChange::SetData` 或 `IRowsetChange::InsertRow` 方法。  
   
- 此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
+ 此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
   
 ## <a name="procedures"></a>程序  
   

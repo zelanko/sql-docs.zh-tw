@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptrans.f1
@@ -20,12 +19,12 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c4491baada6f3a378a1704608c4dd8427c526ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66c285e24c2a981464c93001c1df41f164e60b1e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229848"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353798"
 ---
 # <a name="lookup-transformation"></a>查閱轉換
   「查閱」轉換會藉由聯結輸入資料行中的資料與參考資料集中的資料行來執行查閱。 您可以使用查閱在相關資料表中存取以通用資料行中的值為基礎的其他資訊。  
@@ -130,15 +129,15 @@ ms.locfileid: "48229848"
   
 ## <a name="related-content"></a>相關內容  
   
--   位於 msdn.microsoft.com 的影片： [如何：在完整快取模式中實作查閱轉換 (SQL Server 影片)](http://go.microsoft.com/fwlink/?LinkId=131031)  
+-   視訊[How to:在完整快取模式實作查閱轉換](https://go.microsoft.com/fwlink/?LinkId=131031)，msdn.microsoft.com 上  
   
--   位於 blogs.msdn.com 的部落格項目： [Best Practices for Using the Lookup Transformation Cache Modes](http://go.microsoft.com/fwlink/?LinkId=146623)(使用查閱轉換快取模式的最佳做法)  
+-   位於 blogs.msdn.com 的部落格項目： [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)(使用查閱轉換快取模式的最佳做法)  
   
--   位於 blogs.msdn.com 的部落格項目： [Lookup Pattern: Case Insensitive](http://go.microsoft.com/fwlink/?LinkId=157782)(查閱模式：不區分案例)  
+-   部落格文章[查閱模式：不區分大小寫](https://go.microsoft.com/fwlink/?LinkId=157782)，blogs.msdn.com 上  
   
--   位於 msftisprodsamples.codeplex.com 上的範例： [Lookup Transformation](http://go.microsoft.com/fwlink/?LinkId=267528)(查閱轉換)。  
+-   位於 msftisprodsamples.codeplex.com 上的範例： [Lookup Transformation](https://go.microsoft.com/fwlink/?LinkId=267528)(查閱轉換)。  
   
-     如需安裝 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 產品範例和範例資料庫的資訊，請參閱 [SQL Server Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=267527)(SQL Server Integration Services 產品範例)。  
+     如需安裝 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 產品範例和範例資料庫的資訊，請參閱 [SQL Server Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=267527)(SQL Server Integration Services 產品範例)。  
   
 ## <a name="see-also"></a>另請參閱  
  [模糊查閱轉換](fuzzy-lookup-transformation.md)   

@@ -12,15 +12,15 @@ ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff63ea72b88658d9504030612f77bb948e7462ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ef5193919d57fc5867dc45cafafd847f9767f48
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226518"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353644"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>將現有資料行變更為 XML 資料行
-  ALTER TABLE 陳述式支援`xml`資料型別。 例如，您可以修改任何字串類型的資料行`xml`資料型別。 請注意在這些情況下，資料行中所包含的文件必須格式正確。 另外，如果您要將資料行的類型從字串變更為具 xml 類型，將會根據指定的 XSD 結構描述來驗證資料行中的文件。  
+  ALTER TABLE 陳述式支援 `xml` 資料類型。 例如，您可以將任何字串類型資料行修改成 `xml` 資料類型。 請注意在這些情況下，資料行中所包含的文件必須格式正確。 另外，如果您要將資料行的類型從字串變更為具 xml 類型，將會根據指定的 XSD 結構描述來驗證資料行中的文件。  
   
 ```  
 CREATE TABLE T (Col1 int primary key, Col2 nvarchar(max))  
@@ -40,7 +40,7 @@ CREATE TABLE T (Col1 int primary key, Col2 xml)
 GO  
 INSERT INTO T   
 values (1, '<p1:ProductDescription ProductModelID="1"   
-xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
             </p1:ProductDescription>')  
 GO   
 -- Make it a typed xml column by specifying a schema collection.  
@@ -55,7 +55,7 @@ GO
  在上述範例中，將會根據指定集合中的 XSD 結構描述，來驗證所有儲存在資料行中的執行個體並設定其類型。 根據指定的結構描述，如果資料行包含一個或多個無效的 XML 執行個體， `ALTER TABLE` 陳述式將會失敗，而且將無法使不具類型的 XML 資料行變更為具類型的 XML。  
   
 > [!NOTE]  
->  如果資料表很大，修改`xml`類型資料行可能會很費時。 這是因為每個文件都必須檢查其格式是否正確、是否具 XML 類型，而且也必須加以驗證。  
+>  如果資料表很大，修改 `xml` 類型的資料行可能會很費時。 這是因為每個文件都必須檢查其格式是否正確、是否具 XML 類型，而且也必須加以驗證。  
   
  如需具類型之 XML 的詳細資訊，請參閱 [比較具類型的 XML 與不具類型的 XML](compare-typed-xml-to-untyped-xml.md)。  
   

@@ -21,15 +21,15 @@ ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 369e6f836c11f69a37b5cdd72f227c3b120e71b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2adbf40b3fe0b0e079198087a47f525d464a41b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228828"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808620"
 ---
 # <a name="using-user-defined-types"></a>使用使用者定義型別
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 導入了使用者定義型別 (UDT)。 UDT 會擴充 SQL 類型系統，其方式是允許您將物件和自訂資料結構儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中。 UDT 可以包含多個資料類型並可以具有行為，使其有別於由單一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系統資料類型組成的傳統別名資料類型。 UDT 是使用會產生可驗證程式碼之 .NET Common Language Runtime (CLR) 支援的任何語言所定義。 這包括 Microsoft Visual C#<sup>®</sup> 和 Visual Basic<sup>®</sup> .NET。 資料會公開為 .NET 類別或結構的欄位及屬性，並且其行為是由類別或結構的方法來定義。  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 導入了使用者定義型別 (UDT)。 UDT 會擴充 SQL 類型系統，其方式是允許您將物件和自訂資料結構儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中。 UDT 可以包含多個資料類型並可以具有行為，使其有別於由單一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系統資料類型組成的傳統別名資料類型。 UDT 是使用會產生可驗證程式碼之 .NET Common Language Runtime (CLR) 支援的任何語言所定義。 這包括 Microsoft Visual C# <sup>??</sup> 和 Visual Basic<sup>??</sup> .NET。 資料會公開為 .NET 類別或結構的欄位及屬性，並且其行為是由類別或結構的方法來定義。  
   
  UDT 可用作資料表的資料行定義、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 批次中的變數，或是 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函式或預存程序的引數。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "48228828"
 |DBTYPE_STR|支援<sup>3、6</sup>|N/A<sup>2</sup>|支援<sup>4、6</sup>|N/A<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|不支援|N/A<sup>2</sup>|不支援|N/A<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支援<sup>6</sup>|N/A<sup>2</sup>|支援<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|支援<sup>3、6</sup>|N/A<sup>2</sup>|不適用|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|支援<sup>3、6</sup>|N/A<sup>2</sup>|N/A|N/A<sup>2</sup>|  
   
- <sup>1</sup>如果使用 **ICommandWithParameters::SetParameterInfo** 指定 DBTYPE_UDT 以外的伺服器類型，而且存取子類型為 DBTYPE_UDT，則當執行陳述式時會發生錯誤 (DB_E_ERRORSOCCURRED；參數狀態為 DBSTATUS_E_BADACCESSOR)。 否則資料會傳給伺服器，但是伺服器會傳回一則錯誤，指示從 UDT 到參數的資料類型之間沒有隱含轉換。  
+ <sup>1</sup>如果使用 **ICommandWithParameters::SetParameterInfo** 指定 DBTYPE_UDT 以外的伺服器類型，而且存取子類型為 DBTYPE_UDT，則當執行陳述式時會發生錯誤 (DB_E_ERRORSOCCURRED；參數狀態為 DBSTATUS_E_BADACCESSOR)。 否則資料會傳送到伺服器，但是伺服器會傳回錯誤，指出從 UDT 到參數的資料類型的隱含轉換。  
   
  <sup>2</sup>超出本主題的範圍。  
   

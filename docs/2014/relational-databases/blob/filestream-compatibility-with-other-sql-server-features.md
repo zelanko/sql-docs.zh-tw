@@ -13,12 +13,12 @@ ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 287392869ef22492f0f3b5ac850ec4ecd58515ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 623b0139d70cec0574aaf9b68e37a1ad6f4f9eaf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084628"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355215"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM 與其他 SQL Server 功能的相容性
   由於 FILESTREAM 資料位於檔案系統中，所以本主題提供了搭配下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能使用 FILESTREAM 的一些考量、指導方針和限制：  
@@ -69,7 +69,7 @@ ms.locfileid: "48084628"
  在簽發者上啟用 FILESTREAM 屬性的 `varbinary(max)` 資料行可以複寫到訂閱者上 (不論有沒有 FILESTREAM 屬性)。 若要指定複寫資料行的方式，請使用 [發行項屬性 - \<發行項>] 對話方塊或是 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 或 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 的 @schema_option 參數。 複寫到沒有 FILESTREAM 屬性之 `varbinary(max)` 資料行的資料不能超過該資料類型的 2-GB 限制，否則會產生執行階段錯誤。 我們建議您複寫 FILESTREAM 屬性，除非您要複寫資料至[!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)]不支援訂閱者，不論指定的結構描述選項為何。  
   
 > [!NOTE]  
->  將大型資料值從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 複寫到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 訂閱者受到最大 256 MB 資料值的限制。 如需詳細資訊，請參閱＜ [SQL Server 2005 的最大容量規格](http://go.microsoft.com/fwlink/?LinkId=103810)＞。  
+>  將大型資料值從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 複寫到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 訂閱者受到最大 256 MB 資料值的限制。 如需詳細資訊，請參閱＜ [SQL Server 2005 的最大容量規格](https://go.microsoft.com/fwlink/?LinkId=103810)＞。  
   
 ### <a name="considerations-for-transactional-replication"></a>異動複寫考量  
  如果您在針對異動複寫發行之資料表中使用 FILESTREAM 資料行，請注意以下考量：  
@@ -78,18 +78,18 @@ ms.locfileid: "48084628"
   
 -   max text repl size 選項會指定可以插入要發行以供複寫之資料行中的資料數量上限。 此選項可用來控制所複寫之 FILESTREAM 資料的大小。  
   
--   如果您指定的結構描述選項來複寫 FILESTREAM 屬性，但是您篩選出`uniqueidentifier`FILESTREAM 所需的資料行，或是指定不要為複寫 UNIQUE 條件約束資料行，則複寫不會複寫 FILESTREAM屬性。 此資料行只會複寫為 `varbinary(max)` 資料行。  
+-   如果您指定此結構描述選項來複寫 FILESTREAM 屬性，但是您篩選出 FILESTREAM 所需的 `uniqueidentifier` 資料行，或是指定不要為此資料行複寫 UNIQUE 條件約束，則複寫作業不會複寫 FILESTREAM 屬性。 此資料行只會複寫為 `varbinary(max)` 資料行。  
   
 ### <a name="considerations-for-merge-replication"></a>合併式複寫考量  
  如果您在針對合併式複寫發行之資料表中使用 FILESTREAM 資料行，請注意以下考量：  
   
--   合併式複寫和 FILESTREAM 都需要資料類型的資料行`uniqueidentifier`來識別資料表中的每個資料列。 如果資料表沒有資料行，合併式複寫會自動加入資料行。 合併式複寫會要求此資料行設定 ROWGUIDCOL 屬性及具有 NEWID() 或 NEWSEQUENTIALID() 的預設值。 除了這些需求以外，FILESTREAM 也要求必須針對此資料行定義 UNIQUE 條件約束。 這些需求的結果如下：  
+-   合併式複寫和 FILESTREAM 都需要 `uniqueidentifier` 資料類型的資料行，以識別資料表中的每一個資料列。 如果資料表沒有資料行，合併式複寫會自動加入資料行。 合併式複寫會要求此資料行設定 ROWGUIDCOL 屬性及具有 NEWID() 或 NEWSEQUENTIALID() 的預設值。 除了這些需求以外，FILESTREAM 也要求必須針對此資料行定義 UNIQUE 條件約束。 這些需求的結果如下：  
   
     -   如果您將 FILESTREAM 資料行加入至已針對合併式複寫發行的資料表中，請確定 `uniqueidentifier` 資料行具有 UNIQUE 條件約束。 如果它沒有 UNIQUE 條件約束，請將具名條件約束加入至發行集資料庫內的資料表。 根據預設，合併式複寫將會發行這個結構描述變更，並將此變更套用到每一個訂閱資料庫。  
   
          如果您如所述的內容手動加入 UNIQUE 條件約束，而且您想要移除合併式複寫，您就必須先移除 UNIQUE 條件約束，否則複寫移除將會失敗。  
   
-    -   根據預設，合併式複寫會使用 NEWSEQUENTIALID()，因為它可以提供比 NEWID() 更好的效能。 如果您新增`uniqueidentifier`發行資料表中，將會針對合併式複寫中，newsequentialid （） 指定為預設值的資料行。  
+    -   根據預設，合併式複寫會使用 NEWSEQUENTIALID()，因為它可以提供比 NEWID() 更好的效能。 如果您將 `uniqueidentifier` 資料行加入將針對合併式複寫發行的資料表中，請將 NEWSEQUENTIALID() 指定為預設值。  
   
 -   合併式複寫包括複寫大型物件類型的最佳化， 此最佳化作業是由 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 的 @stream_blob_columns 參數所控制。 如果您設定此結構描述選項來複寫 FILESTREAM 屬性，則 @stream_blob_columns 參數值會設定為 `true`。 可以使用 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)來覆寫此最佳化。 這個預存程序可讓您將 @stream_blob_columns 設定為 `false`。 如果您將 FILESTREAM 資料行加入至已針對合併式複寫發行的資料表中，我們建議您使用 sp_changemergearticle 將此選項設定為 `true`。  
   

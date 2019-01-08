@@ -30,12 +30,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 159dd55d8573af5b23dcb71c3393539fa8a0ac37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af52376ae4749d42c8d746a64518632e6a047591
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160128"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367730"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>重新組織與重建索引
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新組織或重建片段索引。 只要對基礎資料進行插入、更新或刪除作業， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 就會自動維護索引。 過一段時間後，這些修改就可能使索引中的資訊變成散佈於資料庫中 (片段)。 當根據索引鍵值的邏輯順序頁面，與資料檔中的實體順序不相符時，就會有片段產生。 片段化嚴重的索引可能會造成查詢效能降低並使應用程式回應變慢。  
@@ -167,7 +167,7 @@ ms.locfileid: "48160128"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -259,7 +259,7 @@ ms.locfileid: "48160128"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;   
@@ -294,7 +294,7 @@ ms.locfileid: "48160128"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會在 `Employee` 資料表上重建單一索引。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例會在 `Employee` 資料表上重建單一索引。  
   
      [!code-sql[IndexDDL#AlterIndex1](../../snippets/tsql/SQL14/tsql/indexddl/transact-sql/alterindex.sql#alterindex1)]  
   
@@ -311,6 +311,6 @@ ms.locfileid: "48160128"
  如需詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Microsoft SQL Server 2000 索引重組最佳作法](http://technet.microsoft.com/library/cc966523.aspx)  
+ [Microsoft SQL Server 2000 索引重組最佳作法](https://technet.microsoft.com/library/cc966523.aspx)  
   
   

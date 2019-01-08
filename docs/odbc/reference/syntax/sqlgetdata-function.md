@@ -20,16 +20,16 @@ ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70ee26274d101d1b18b00c83a89bd0c946da6742
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b42339c74102b86fe08c84b15da3266a1040dfd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855812"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212447"
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ISO 92  
+ 導入的版本：ODBC 1.0 標準的合規性：ISO 92  
   
  **摘要**  
  **SQLGetData**擷取結果集中單一資料行或之後的單一參數資料**SQLParamData**傳回 SQL_PARAM_DATA_AVAILABLE。 它可以呼叫多次來擷取組件中的可變長度資料。  
@@ -57,7 +57,7 @@ SQLRETURN SQLGetData(
  正在擷取參數資料，則是從 1 開始的參數的序數。  
   
  *TargetType*  
- [輸入]C 資料類型的類型識別碼 **TargetValuePtr*緩衝區。 如需有效的 C 資料類型和類型識別碼的清單，請參閱 < [C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)附錄 d： 資料型別中的區段。  
+ [輸入]C 資料類型的類型識別碼 **TargetValuePtr*緩衝區。 如需有效的 C 資料類型和類型識別碼的清單，請參閱 < [C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)節附錄 d:資料類型。  
   
  如果*TargetType*是 SQL_ARD_TYPE，型別識別項欄位中指定 SQL_DESC_CONCISE_TYPE ARD 的驅動程式使用。 如果*TargetType*是 SQL_APD_TYPE， **SQLGetData**會使用相同的 C 資料類型中指定**SQLBindParameter**。 C 資料類型中的指定，否則為**SQLGetData**覆寫中指定的 C 資料類型**SQLBindParameter**。 如果是 SQL_C_DEFAULT，驅動程式就會選取來源的 SQL 資料類型為基礎的預設 C 資料類型。  
   
@@ -105,8 +105,8 @@ SQLRETURN SQLGetData(
 |07009|描述項索引無效|指定的引數的值*Col_or_Param_Num*為 0，且 SQL_ATTR_USE_BOOKMARKS 陳述式屬性已設定為 SQL_UB_OFF。<br /><br /> 指定的引數的值*Col_or_Param_Num*大於結果集中的資料行數目。<br /><br /> *Col_or_Param_Num*值不是等於所提供的參數的序數。<br /><br /> (DM) 指定的資料行已繫結。 此描述不適用於傳回 SQL_GD_BOUND 位元遮罩 SQL_GETDATA_EXTENSIONS 選項中的驅動程式**SQLGetInfo**。<br /><br /> (DM) 指定的資料行數目是小於或等於最高的繫結資料行數目。 此描述不適用於傳回 SQL_GD_ANY_COLUMN 位元遮罩 SQL_GETDATA_EXTENSIONS 選項中的驅動程式**SQLGetInfo**。<br /><br /> (DM) 應用程式已呼叫**SQLGetData**目前資料列; 目前的呼叫中指定的資料行數目小於上述的呼叫; 中所指定的資料行數目和驅動程式不會傳回 SQL_SQL_GETDATA_EXTENSIONS 選項中的位元遮罩 GD_ANY_ORDER **SQLGetInfo**。<br /><br /> (DM) *TargetType*引數為 SQL_ARD_TYPE，而*Col_or_Param_Num* ARD 中的描述項記錄未通過一致性檢查。<br /><br /> (DM) *TargetType*引數是 SQL_ARD_TYPE，且 ARD SQL_DESC_COUNT 欄位中的值小於*Col_or_Param_Num*引數。|  
 |08S01|通訊連結失敗|函式已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
 |22002|指標變數但未提供|*StrLen_or_IndPtr*是 null 指標，並擷取 NULL 的資料。|  
-|22003|數值超出範圍|傳回數字的值 （做為數值或字串），資料行可能已造成要截斷的數字 （相對於小數） 的整數部分。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 附錄 d： 資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。|  
-|22007|無效的日期時間格式|在結果集中的字元資料行已繫結至 C 日期、 時間或時間戳記結構和資料行中的值可為無效的日期、 時間戳記，分別。 如需詳細資訊，請參閱 <<c0> [ 附錄 d： 資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。|  
+|22003|數值超出範圍|傳回數字的值 （做為數值或字串），資料行可能已造成要截斷的數字 （相對於小數） 的整數部分。<br /><br /> 如需詳細資訊，請參閱[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。|  
+|22007|無效的日期時間格式|在結果集中的字元資料行已繫結至 C 日期、 時間或時間戳記結構和資料行中的值可為無效的日期、 時間戳記，分別。 如需詳細資訊，請參閱[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。|  
 |22012|除數為零|傳回從導致除數為零的算術運算式的值。|  
 |22015|間隔欄位溢位|將指派從精確數值或時間間隔 SQL 型別，給 C 間隔類型造成有效位數的遺失開頭的欄位中。<br /><br /> C 間隔類型以傳回資料，當發生 C 間隔類型中的 SQL 類型的值不表示。|  
 |22018|轉換規格的字元值無效|字元 C 的緩衝區，以傳回結果集內的字元資料行和資料行包含緩衝區的字元集中未表示的字元。<br /><br /> C 類型為精確或近似數值、 日期時間或間隔資料類型;資料行的 SQL 類型是字元資料類型;和資料行中的值不是有效的常值的繫結的 C 類型。|  
@@ -121,7 +121,7 @@ SQLRETURN SQLGetData(
 |HY090|字串或緩衝區長度無效|(DM) 引數指定的值*Columnsize*為小於 0。<br /><br /> 指定引數的值*Columnsize*為小於 4 *Col_or_Param_Num*引數設定為 0，且驅動程式的 ODBC 2 *.x*驅動程式。|  
 |HY109|無效的資料指標位置|指標置於 (由**SQLSetPos**， **SQLFetch**， **SQLFetchScroll**，或**SQLBulkOperations**) 已刪除的資料列無法擷取或。<br /><br /> 資料指標是順向資料指標，但大於一的資料列集大小。|  
 |HY117|連接已因為未知的交易狀態暫止。 只中斷連線，並允許唯讀的函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函式](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYC00|未實作選擇性功能|驅動程式或資料來源不支援使用**SQLGetData**中的多個資料列**SQLFetchScroll**。 此描述不適用於傳回 SQL_GD_BLOCK 位元遮罩 SQL_GETDATA_EXTENSIONS 選項中的驅動程式**SQLGetInfo**。<br /><br /> 驅動程式或資料來源不支援指定的組合來轉換*TargetType*引數和對應的資料行的 SQL 資料類型。 SQL 資料類型資料行的已對應至驅動程式專屬的 SQL 資料型別時，就會適用這項錯誤。<br /><br /> 此驅動程式支援只有 ODBC 2 *.x*，並將引數*TargetType*是下列其中之一：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 任何間隔 C 資料類型會列在[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)附錄 d： 資料型別中。<br /><br /> 此驅動程式只支援之前 3.50 元，並將引數的 ODBC 版本*TargetType*已 SQL_C_GUID。|  
+|HYC00|未實作選擇性功能|驅動程式或資料來源不支援使用**SQLGetData**中的多個資料列**SQLFetchScroll**。 此描述不適用於傳回 SQL_GD_BLOCK 位元遮罩 SQL_GETDATA_EXTENSIONS 選項中的驅動程式**SQLGetInfo**。<br /><br /> 驅動程式或資料來源不支援指定的組合來轉換*TargetType*引數和對應的資料行的 SQL 資料類型。 SQL 資料類型資料行的已對應至驅動程式專屬的 SQL 資料型別時，就會適用這項錯誤。<br /><br /> 此驅動程式支援只有 ODBC 2 *.x*，並將引數*TargetType*是下列其中之一：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 任何間隔 C 資料類型會列在[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)附錄 d:資料類型。<br /><br /> 此驅動程式只支援之前 3.50 元，並將引數的 ODBC 版本*TargetType*已 SQL_C_GUID。|  
 |HYT01|連接逾時過期|連接逾時期限到期之前的資料來源回應要求。 透過設定連接逾時期限**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
 |IM001|驅動程式不支援此函式|(DM) 對應的驅動程式*StatementHandle*不支援此函式。|  
 |IM017|輪詢已停用非同步通知模式|每次使用通知模型時，會停用輪詢。|  
@@ -153,11 +153,11 @@ SQLRETURN SQLGetData(
   
  如果*TargetType*引數是 SQL_DESC_DATETIME_INTERVAL_PRECISION 和 SQL_DESC_PRECISION 的欄位中所設定的間隔資料類型，則預設間隔開頭有效位數 (2) 和預設的間隔秒數有效位數 (6)，ARD，分別用於資料。 如果*TargetType*引數是 SQL_C_NUMERIC 資料類型，則預設有效位數 （驅動程式定義） 和預設 ARD SQL_DESC_PRECISION 和 SQL_DESC_SCALE 欄位中所設定的小數位數 (0)，、 所用的資料。 應用程式如果任何預設有效位數或小數位數不適用，應該明確設定適當的描述項欄位呼叫**SQLSetDescField**或是**SQLSetDescRec**。 它可以將 SQL_DESC_CONCISE_TYPE 欄位為 SQL_C_NUMERIC 然後呼叫**SQLGetData**具有*TargetType* SQL_ARD_TYPE，這會導致有效位數和小數位數的值，描述項欄位中的引數若要使用。  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2 *.x*，應用程式組*TargetType* SQL_C_DATE、 SQL_C_TIME，或 SQL_C_TIMESTAMP 表示\* *TargetValuePtr*是日期、 時間，或時間戳記結構。 在 ODBC 3 *.x*，應用程式組*TargetType* SQL_C_TYPE_DATE、 SQL_C_TYPE_TIME，或 SQL_C_TYPE_TIMESTAMP。 驅動程式管理員會建立適當的對應必要時，根據的應用程式和驅動程式版本。  
   
 ## <a name="retrieving-variable-length-data-in-parts"></a>擷取組件中的可變長度資料  
- **SQLGetData**可用來擷取包含在組件中的可變長度資料的資料行中的資料 — 亦即，當 SQL 資料類型的資料行的識別碼是 SQL_CHAR、 SQL_VARCHAR、 SQL_LONGVARCHAR、 SQL_WCHAR、 SQL_WVARCHAR、 SQL_WLONGVARCHAR、 SQL_BINARY、 SQL_VARBINARY、 SQL_LONGVARBINARY、 或可變長度類型的驅動程式專屬識別碼。  
+ **SQLGetData**可用來擷取 SQL_CHAR、 SQL_VARCHAR、 SQL_LONGVARCHAR、 SQL_WCHAR、 SQL_WVARCHAR、 SQL_ SQL 資料類型的資料行的識別碼時，也就是包含組件-中的可變長度資料的資料行中的資料WLONGVARCHAR、 SQL_BINARY、 SQL_VARBINARY、 SQL_LONGVARBINARY、 或可變長度類型的驅動程式專屬識別碼。  
   
  若要從組件中的資料行擷取資料，應用程式會呼叫**SQLGetData**中相同的資料行的連續數次。 每次呼叫中， **SQLGetData**傳回資料的下一個部分。 它是由應用程式重新組合的組件，並小心移除之 null 結束字元的字元資料的中間部分。 如果沒有更多的資料，以傳回，或未終止的字元，則請配置足夠的緩衝區**SQLGetData**傳回 SQL_SUCCESS_WITH_INFO 和 SQLSTATE 01004 （資料已截斷）。 當它傳回的資料，最後的一部分**SQLGetData**都會傳回 SQL_SUCCESS。 SQL_NO_TOTAL 」 和 「 零 」 都不可以在最後一個有效的呼叫來擷取資料行中的資料傳回，因為應用程式接著會有沒有辦法知道多少應用程式緩衝區中的資料有效。 如果**SQLGetData**呼叫之後，它會傳回 sql_no_data 為止。 如需詳細資訊，請參閱下一步 區段中，「 使用 SQLGetData 擷取資料 」。  
   
@@ -194,7 +194,7 @@ SQLRETURN SQLGetData(
   
 7.  會放置在資料的長度\* *StrLen_or_IndPtr*。 如果*StrLen_or_IndPtr*是 null 指標， **SQLGetData**不會傳回長度。  
   
-    -   針對字元或二進位資料，這是資料的長度轉換後再因為截斷*Columnsize*。 如果驅動程式無法在轉換之後，判斷資料的長度，因為有時候是 long 資料的情況，它會傳回 SQL_SUCCESS_WITH_INFO，並將長度設定為 SQL_NO_TOTAL。 (在上次呼叫**SQLGetData**必須一律會傳回資料，而不為零或 SQL_NO_TOTAL 的長度。)如果資料已截斷 SQL_ATTR_MAX_LENGTH 陳述式屬性，此屬性的值，而不是實際長度 — 會置於\* *StrLen_or_IndPtr*。 這是因為此屬性可讓驅動程式有沒有辦法找出的實際長度會截斷轉換之前, 在伺服器上的資料。 當**SQLGetData**是連續的多次呼叫相同的資料行中，這是在目前的呼叫開頭的可用資料的長度; 長度也就是減少與每個後續的呼叫。  
+    -   針對字元或二進位資料，這是資料的長度轉換後再因為截斷*Columnsize*。 如果驅動程式無法在轉換之後，判斷資料的長度，因為有時候是 long 資料的情況，它會傳回 SQL_SUCCESS_WITH_INFO，並將長度設定為 SQL_NO_TOTAL。 (在上次呼叫**SQLGetData**必須一律會傳回資料，而不為零或 SQL_NO_TOTAL 的長度。)如果資料已截斷由於 SQL_ATTR_MAX_LENGTH 陳述式屬性，這個屬性-而不是實際的長度-值會置於\* *StrLen_or_IndPtr*。 這是因為此屬性可讓驅動程式有沒有辦法找出的實際長度會截斷轉換之前, 在伺服器上的資料。 當**SQLGetData**是連續的多次呼叫相同的資料行中，這是在目前的呼叫開頭的可用資料的長度; 長度也就是減少與每個後續的呼叫。  
   
     -   對於所有其他資料類型，這是在轉換後資料的長度也就是說，它是已轉換的目標資料類型的大小。  
   

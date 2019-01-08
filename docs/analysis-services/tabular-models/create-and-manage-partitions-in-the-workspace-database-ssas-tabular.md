@@ -1,5 +1,5 @@
 ---
-title: 建立及管理工作空間資料庫中的資料分割 |Microsoft 文件
+title: 建立及管理 Analysis Services 工作空間資料庫中的資料分割 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3912002c016508b36f200f2786e2d5f00e05c48b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9ddeefe9fb7b391fc3bc3948f5f5cbdb8296b7de
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38045356"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072365"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database"></a>建立及管理工作空間資料庫中的資料分割 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0a1091e56ee505731fb9ce0d683975caa9c3d29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193188"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823482"
 ---
 # <a name="sql-trace"></a>SQL 追蹤
   在 SQL 追蹤中，如果事件是列在追蹤定義中之事件類別的執行個體，這些事件就會被蒐集起來。 您可將這些事件篩選掉，也可以放入分配目的地的佇列中。 目的地可以是檔案或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO)，後者會在用於管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的應用程式中使用這些追蹤資訊。  
@@ -74,8 +73,8 @@ ms.locfileid: "48193188"
 |資料行|資料行編號|描述|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName** <sup>1</sup>|10|建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的名稱。|  
-|**BigintData1**|52|值 (`bigint`資料類型)，會視追蹤指定的事件類別。|  
-|**BigintData2**|53|值 (`bigint`資料類型)，會視追蹤指定的事件類別。|  
+|**BigintData1**|52|值 (`bigint` 資料類型)，會視追蹤指定的事件類別而定。|  
+|**BigintData2**|53|值 (`bigint` 資料類型)，會視追蹤指定的事件類別而定。|  
 |**Binary Data**|2|二進位值，依據在追蹤中所擷取的事件類別而定。|  
 |**ClientProcessID** <sup>1</sup>|9|主機電腦指派給用戶端應用程式執行中處理序的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|  
 |**ColumnPermissions**|44|指出是否設定資料行權限。 您可以剖析陳述式文字，以判斷資料行所套用的權限。|  
@@ -127,7 +126,7 @@ ms.locfileid: "48193188"
 |**SPID**|12|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指派給用戶端相關聯之處理序的伺服器處理序識別碼 (SPID)。|  
 |**SqlHandle**|63|這是一個 64 位元雜湊，以隨選查詢的文字或 SQL 物件的資料庫和物件識別碼為基礎。 這個值可以傳給 **sys.dm_exec_sql_text()** ，以擷取相關聯的 SQL 文字。|  
 |**StartTime** <sup>1</sup>|14|事件啟動的時間 (如果有的話)。|  
-|**State**|30|錯誤狀態碼。|  
+|**狀態**|30|錯誤狀態碼。|  
 |**成功**|23|代表事件成功與否。 數值包括：<br /><br /> **1** = 成功<br /><br /> **0** = 失敗<br /><br /> 例如， **1** 表示權限檢查成功， **0** 表示檢查失敗。|  
 |**TargetLoginName**|42|對於目標為登入的動作，這是目標登入的名稱；例如，要加入新登入。|  
 |**TargetLoginSid**|43|對於目標為登入的動作，這是目標登入的 SID；例如，要加入新登入。|  

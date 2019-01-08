@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -19,12 +18,12 @@ ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a46975d15b9e1aecaabf704d34a749f157b1f74d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21ae1c8019617005bd87e426ec314f6237fdab38
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084928"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355970"
 ---
 # <a name="define-an-article"></a>定義發行項
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定義發行項。  
@@ -52,7 +51,7 @@ ms.locfileid: "48084928"
 -   發行項名稱不能包含下列任何字元：% , * , [ , ] , | , : , " , ? '、 \、 /、 \< ，>。 如果資料庫中的物件包含這些字元的任何一個，而且您要複寫它們，則必須指定一個不同於物件名稱的發行項名稱。  
   
 ##  <a name="Security"></a> 安全性  
- 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](http://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
+ 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  使用「新增發行集精靈」建立發行集並定義發行項。 建立發行集之後，您可以在 [發行集屬性 - \<發行集>] 對話方塊中，檢視及修改發行集屬性。 如需從 Oracle 資料庫建立發行集的詳細資訊，請參閱[從 Oracle 資料庫建立發行集](create-a-publication-from-an-oracle-database.md)。  

@@ -28,15 +28,15 @@ ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6d91a6c21bc162ff1f6100e88101f34a0a275cd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084548"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371210"
 ---
 # <a name="principals-database-engine"></a>主體 (Database Engine)
-  「主體」是可要求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源的實體。 主體就像其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授權模型的元件一樣，可以階層方式安排。 主體的影響範圍視主體的定義範圍 (Windows、伺服器、資料庫)，以及主體是否可分割或者是一個集合而定。 「Windows 登入」是不可分割主體的一個範例，而「Windows 群組」則是主體為集合的範例。 每個主體都有一個安全性識別碼 (SID)。  
+  「主體」是可要求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源的實體。 主體就像其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授權模型的元件一樣，可以階層方式安排。 主體的影響範圍視主體定義的範圍而定：Windows server、 database;和不可分割主體是否或集合。 「Windows 登入」是不可分割主體的一個範例，而「Windows 群組」則是主體為集合的範例。 每個主體都有一個安全性識別碼 (SID)。  
   
  **Windows 層級主體**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48084548"
  每個資料庫使用者都屬於 public 資料庫角色。 當使用者未被授與或拒絕安全性實體的特定權限時，該使用者會繼承授與給該安全性實體之 public 的權限。  
   
 ## <a name="informationschema-and-sys"></a>INFORMATION_SCHEMA 與 sys  
- 每個資料庫都包含兩個在目錄檢視中顯示為使用者的實體：INFORMATION_SCHEMA 和 sys。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]需要這些實體。 它們並非主體，也不能被修改或卸除。  
+ 每個資料庫包含會顯示為使用者在目錄檢視中的兩個實體：INFORMATION_SCHEMA 與 sys。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]需要這些實體。 它們並非主體，也不能被修改或卸除。  
   
 ## <a name="certificate-based-sql-server-logins"></a>以憑證為基礎的 SQL Server 登入  
  以兩個 ## 符號括住的伺服器主體名稱僅供內部系統使用。 在安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，將會從憑證建立下列主體，而且不應該刪除它們。  
@@ -88,7 +88,7 @@ ms.locfileid: "48084548"
  每個資料庫都包括 **guest**。 具有資料庫存取權但在資料庫中沒有使用者帳戶的使用者，將繼承授與 **guest** 使用者的權限。 **客體**無法卸除使用者，但可透過撤銷其停用的`CONNECT`權限。 `CONNECT`權限可以執行撤銷`REVOKE CONNECT FROM GUEST`master 或 tempdb 以外的任何資料庫中。  
   
 ## <a name="client-and-database-server"></a>用戶端和資料庫伺服器  
- 根據定義，用戶端和資料庫伺服器都是安全性主體，而且可以維護其安全。 建立安全的網路連接之前，這些實體可以進行相互驗證。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援[Kerberos](http://go.microsoft.com/fwlink/?LinkId=100758)驗證通訊協定，可定義用戶端與網路驗證服務互動的方式。  
+ 根據定義，用戶端和資料庫伺服器都是安全性主體，而且可以維護其安全。 建立安全的網路連接之前，這些實體可以進行相互驗證。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援[Kerberos](https://go.microsoft.com/fwlink/?LinkId=100758)驗證通訊協定，可定義用戶端與網路驗證服務互動的方式。  
   
 ## <a name="related-tasks"></a>相關工作  
  《 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》的本節中包括下列主題：  

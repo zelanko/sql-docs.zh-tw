@@ -11,37 +11,37 @@ ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 04cc82d92c1b2fecb79bbe044408c90295ac1226
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 4382ecd50979efb6877d8eb19e8aff7dc340d847
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851911"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355660"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>含有 Reporting Services 的驗證擴充保護
-  「擴充保護」是 [!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 作業系統最新版本的一組增強功能。 擴充保護會增強認證與驗證受到應用程式保護的方式。 此功能本身並不會針對認證轉送之類的特定攻擊直接提供保護，但是它會為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 之類的應用程式提供基礎結構，以增強驗證擴充保護。  
+  「擴充保護」是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 作業系統最新版本的一組增強功能。 擴充保護會增強認證與驗證受到應用程式保護的方式。 此功能本身並不會針對認證轉送之類的特定攻擊直接提供保護，但是它會為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 之類的應用程式提供基礎結構，以增強驗證擴充保護。  
   
- 屬於擴充保護一部分的主要驗證增強功能為服務繫結與通道繫結。 通道繫結使用通道繫結 Token (CBT) 驗證兩點端點之間建立的通道是否未受到危害。 服務繫結使用服務主要名稱 (SPN) 驗證預期的驗證 Token 目的地。 如需擴充保護的詳細背景資訊，請參閱 [Integrated Windows Authentication with Extended Protection](http://go.microsoft.com/fwlink/?LinkId=179922)(具有擴充保護的整合式 Windows 驗證)。  
+ 屬於擴充保護一部分的主要驗證增強功能為服務繫結與通道繫結。 通道繫結使用通道繫結 Token (CBT) 驗證兩點端點之間建立的通道是否未受到危害。 服務繫結使用服務主要名稱 (SPN) 驗證預期的驗證 Token 目的地。 如需擴充保護的詳細背景資訊，請參閱 [Integrated Windows Authentication with Extended Protection](https://go.microsoft.com/fwlink/?LinkId=179922)(具有擴充保護的整合式 Windows 驗證)。  
   
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會支援並強制執行已在作業系統中啟用，且在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中設定的擴充保護。 依預設， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會接受指定交涉或 NTLM 驗證的要求，因此可以在作業系統與 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 擴充保護功能中獲得擴充保護支援。  
   
 > [!IMPORTANT]  
->  Windows 預設不會啟用 [擴充保護]。 如需如何在 Windows 中啟用 [擴充保護] 的資訊，請參閱 [驗證延伸保護](http://go.microsoft.com/fwlink/?LinkID=178431)。 作業系統與用戶端驗證堆疊必須同時支援擴充保護，驗證才會成功。 對於舊版作業系統，您可能需要針對完整具備擴充保護的電腦安裝多個更新。 如需擴充保護之最近開發狀況的詳細資訊，請參閱 [擴充保護的更新資訊](http://go.microsoft.com/fwlink/?LinkId=183362)。  
+>  Windows 預設不會啟用 [擴充保護]。 如需如何在 Windows 中啟用 [擴充保護] 的資訊，請參閱 [驗證延伸保護](https://go.microsoft.com/fwlink/?LinkID=178431)。 作業系統與用戶端驗證堆疊必須同時支援擴充保護，驗證才會成功。 對於舊版作業系統，您可能需要針對完整具備擴充保護的電腦安裝多個更新。 如需擴充保護之最近開發狀況的詳細資訊，請參閱 [擴充保護的更新資訊](https://go.microsoft.com/fwlink/?LinkId=183362)。  
   
 ## <a name="reporting-services-extended-protection-overview"></a>Reporting Services 擴充保護概觀  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 支援並強制執行已在作業系統中啟用的擴充保護。 如果作業系統不支援擴充保護，或者尚未啟用作業系統中的功能， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 擴充保護功能將會無法驗證。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 擴充保護也需要 SSL 憑證。 如需詳細資訊，請參閱 [在原生模式報表伺服器上設定 SSL 連接](configure-ssl-connections-on-a-native-mode-report-server.md)  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 預設為不會啟用 [擴充保護]。 修改 `rsreportserver.config` 組態檔或使用 WMI API 更新組態檔，即可啟用該功能。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 未提供使用者介面，以修改或檢視擴充保護設定。 如需詳細資訊，請參閱本主題中的 [組態設定](#ConfigurationSettings) 一節。  
   
  因為擴充保護設定變更或進行之設定錯誤所造成的常見問題，不會以明顯的錯誤訊息或對話方塊視窗公開。 與擴充保護組態和相容性相關的問題會導致驗證失敗，並將錯誤記錄在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 追蹤記錄中。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  某些資料存取技術可能不支援擴充保護。 資料存取技術可用於連接 SQL Server 資料來源與 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 目錄資料庫。 無法支援擴充保護的資料存取技術會以下列方式對 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 造成影響：  
->   
+> 
 >  -   執行 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 目錄資料庫的 SQL Server 無法啟用擴充功能，否則報表伺服器將無法成功連接至目錄資料庫，並傳回驗證錯誤。  
 > -   當作 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表資料來源使用的 SQL Servers 無法啟用擴充保護，否則報表伺服器為連接報表資料來源所做的嘗試將會失敗，並傳回驗證錯誤。  
->   
+> 
 >  資料存取技術的文件應具有支援擴充保護的資訊。  
   
 ### <a name="upgrade"></a>UPGRADE  
@@ -98,7 +98,7 @@ ms.locfileid: "48851911"
   
 |狀況|案例圖表|如何保護安全|  
 |--------------|----------------------|-------------------|  
-|間接和直接從存取用戶端到報表伺服器服務，而不需要 SSL 用戶端到 proxy 或報表伺服器連接的用戶端上。|1) 用戶端應用程式<br /><br /> 2) 報表伺服器<br /><br /> 3) Proxy<br /><br /> 4) 用戶端應用程式|可以強制執行從用戶端到報表伺服器的服務繫結。<br /><br /> 報表伺服器必須知道 Proxy 名稱，而且報表伺服器管理員應該為該 Proxy 建立一個包含主機標頭的保留 URL，或在 Windows 登錄項目 `BackConnectionHostNames` 中設定 Proxy 名稱。<br /><br /> 將 `RSWindowsExtendedProtectionLevel` 設定為 `Allow` 或 `Require`。<br /><br /> 將 `RSWindowsExtendedProtectionScenario` 設定為 `Any`。|  
+|在用戶端到 Proxy 或用戶端到報表伺服器連線沒有 SSL 的情況下，從用戶端到報表伺服器服務的間接和直接存取。|1) 用戶端應用程式<br /><br /> 2) 報表伺服器<br /><br /> 3) Proxy<br /><br /> 4) 用戶端應用程式|可以強制執行從用戶端到報表伺服器的服務繫結。<br /><br /> 報表伺服器必須知道 Proxy 名稱，而且報表伺服器管理員應該為該 Proxy 建立一個包含主機標頭的保留 URL，或在 Windows 登錄項目 `BackConnectionHostNames` 中設定 Proxy 名稱。<br /><br /> 將 `RSWindowsExtendedProtectionLevel` 設定為 `Allow` 或 `Require`。<br /><br /> 將 `RSWindowsExtendedProtectionScenario` 設定為 `Any`。|  
 |在用戶端建立與 Proxy 或報表伺服器的 SSL 連接時，從用戶端到報表伺服器服務的間接和直接存取。|![RS_ExtendedProtection_CombinationSSL](../media/rs-extendedprotection-combinationssl.gif "RS_ExtendedProtection_CombinationSSL")<br /><br /> 1) 用戶端應用程式<br /><br /> 2) 報表伺服器<br /><br /> 3) Proxy<br /><br /> 4) 用戶端應用程式|可以使用通道繫結。<br /><br /> 報表伺服器必須知道 Proxy 名稱，而且報表伺服器管理員應該為該 Proxy 建立一個包含主機標頭的保留 URL，或在 Windows 登錄項目 `BackConnectionHostNames` 中設定 Proxy 名稱。<br /><br /> 將 `RSWindowsExtendedProtectionLevel` 設定為 `Allow` 或 `Require`。<br /><br /> 將 `RSWindowsExtendedProtectionScenario` 設為 `Proxy`。|  
   
 ## <a name="configuring-reporting-rervices-extended-protection"></a>設定 Reporting Services 擴充保護  
@@ -113,8 +113,8 @@ ms.locfileid: "48851911"
   
 |設定|描述|  
 |-------------|-----------------|  
-|`RSWindowsExtendedProtectionLevel`|指定擴充保護的強制執行程度。 有效值是 `Off`、`Allow` 和 `Require`。<br /><br /> 預設值為 `Off`。<br /><br /> 值為 `Off` 時，不會指定通道繫結或服務繫結驗證。<br /><br /> 值為 `Allow` 時，則支援擴充保護但並不需要它。 Allow 這個值會指定：<br /><br /> 擴充保護將會針對在支援擴充保護之作業系統上執行的用戶端應用程式強制執行。 您可以設定 `RsWindowsExtendedProtectionScenario` 來決定強制執行保護的方式。<br /><br /> 對於在不支援擴充保護之作業系統上執行的應用程式，不允許執行驗證。<br /><br /> `Require` 這個值會指定：<br /><br /> 擴充保護將會針對在支援擴充保護之作業系統上執行的用戶端應用程式強制執行。<br /><br /> 驗證會**不**允許不支援擴充的保護之作業系統執行的應用程式。|  
-|`RsWindowsExtendedProtectionScenario`|指定什麼擴充保護的形式要經過驗證：通道繫結、服務繫結，或兩者。 有效值是 `Any`、`Proxy` 和 `Direct`。<br /><br /> 預設值為 `Proxy`。<br /><br /> `Any` 這個值會指定：<br /><br /> - Windows NTLM、Kerberos 和交涉驗證，而不需要通道繫結。<br /><br /> - 服務繫結會強制執行。<br /><br /> `Proxy` 這個值會指定：<br /><br /> - Windows NTLM、Kerberos 和交涉驗證 (當通道繫結權杖存在時)。<br /><br /> - 服務繫結會強制執行。<br /><br /> `Direct` 這個值會指定：<br /><br /> - Windows NTLM、Kerberos 和交涉驗證 (當 CBT 存在、目前服務的 SSL 連線存在，而且 SSL 連線的 CBT 與 NTLM、Kerberos 或交涉權杖的 CBT 相符時)。<br /><br /> - 服務繫結不會強制執行。<br /><br /> <br /><br /> 注意： 此設定如果會忽略`RsWindowsExtendedProtectionLevel`設為`OFF`。|  
+|`RSWindowsExtendedProtectionLevel`|指定擴充保護的強制執行程度。 有效值是 `Off`、`Allow` 和 `Require`。<br /><br /> 預設值是 `Off`。<br /><br /> 值為 `Off` 時，不會指定通道繫結或服務繫結驗證。<br /><br /> 值為 `Allow` 時，則支援擴充保護但並不需要它。 Allow 這個值會指定：<br /><br /> 擴充保護將會針對在支援擴充保護之作業系統上執行的用戶端應用程式強制執行。 您可以設定 `RsWindowsExtendedProtectionScenario` 來決定強制執行保護的方式。<br /><br /> 對於在不支援擴充保護之作業系統上執行的應用程式，不允許執行驗證。<br /><br /> `Require` 這個值會指定：<br /><br /> 擴充保護將會針對在支援擴充保護之作業系統上執行的用戶端應用程式強制執行。<br /><br /> 驗證會**不**允許不支援擴充的保護之作業系統執行的應用程式。|  
+|`RsWindowsExtendedProtectionScenario`|指定要驗證的擴充保護的形式：通道繫結、服務繫結或兩者。 有效值是 `Any`、`Proxy` 和 `Direct`。<br /><br /> 預設值是 `Proxy`。<br /><br /> `Any` 這個值會指定：<br /><br /> - Windows NTLM、Kerberos 和交涉驗證，而不需要通道繫結。<br /><br /> - 服務繫結會強制執行。<br /><br /> `Proxy` 這個值會指定：<br /><br /> - Windows NTLM、Kerberos 和交涉驗證 (當通道繫結權杖存在時)。<br /><br /> - 服務繫結會強制執行。<br /><br /> `Direct` 這個值會指定：<br /><br /> - Windows NTLM、Kerberos 和交涉驗證 (當 CBT 存在、目前服務的 SSL 連線存在，而且 SSL 連線的 CBT 與 NTLM、Kerberos 或交涉權杖的 CBT 相符時)。<br /><br /> - 服務繫結不會強制執行。<br /><br /> <br /><br /> 注意：如果 `RsWindowsExtendedProtectionLevel` 設定為 `OFF`，會忽略此設定。|  
   
  `rsreportserver.config` 組態檔中的範例項目：  
   
@@ -164,9 +164,9 @@ ms.locfileid: "48851911"
   
 ## <a name="see-also"></a>另請參閱  
  [使用擴充保護連接至 Database Engine](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
- [驗證擴充保護概觀](http://go.microsoft.com/fwlink/?LinkID=177943)   
- [Integrated Windows Authentication with Extended Protection](http://go.microsoft.com/fwlink/?LinkId=179922)   
- [Microsoft 安全性摘要報告：驗證擴充保護](http://go.microsoft.com/fwlink/?LinkId=179923)   
+ [驗證擴充保護概觀](https://go.microsoft.com/fwlink/?LinkID=177943)   
+ [Integrated Windows Authentication with Extended Protection](https://go.microsoft.com/fwlink/?LinkId=179922)   
+ [Microsoft 資訊安全公告：驗證擴充的保護](https://go.microsoft.com/fwlink/?LinkId=179923)   
  [報表伺服器服務追蹤記錄](../report-server/report-server-service-trace-log.md)   
  [RSReportServer 組態檔](../report-server/rsreportserver-config-configuration-file.md)   
  [SetExtendedProtectionSettings 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

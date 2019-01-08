@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46572a9fac9e3d1749c65acf9370718fbc8b3dd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e4d8da5c0b352964fe9017be902557e29e1e2ed3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125500"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781420"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 目的地編輯器 (連接管理員頁面)
   使用 **[SAP BW 目的地編輯器]** 的 **[連接管理員]** 頁面可以選取 SAP BW 目的地將使用的 SAP BW 連接管理員。 在這個頁面上，您也可以選取將資料載入 SAP Netweaver BW 系統中所用的參數。  
@@ -80,7 +79,7 @@ ms.locfileid: "48125500"
  輸入閘道器主機的伺服器名稱或 IP 位址。 此名稱或 IP 位址通常與 SAP 應用程式伺服器相同。  
   
  **閘道器服務**  
- 輸入閘道服務的名稱格式`sapgwNN`，其中`NN`是系統編號。  
+ 以 `sapgwNN` 格式輸入閘道服務的名稱，其中 `NN` 是系統編號。  
   
  **程式識別碼**  
  輸入與 RFC 目的地相關聯的程式識別碼。  
@@ -111,7 +110,7 @@ ms.locfileid: "48125500"
 |**InfoPackage**|使用 **[建立 InfoPackage]** 對話方塊來建立新的 InfoPackage。 如需有關此對話方塊的詳細資訊，請參閱＜ [Create InfoPackage](create-infopackage.md)＞。|  
   
 ## <a name="see-also"></a>另請參閱  
- [SAP BW 目的地編輯器&#40;對應頁面&#41;](sap-bw-destination-editor-mappings-page.md)   
+ [SAP BW 目的地編輯器 &#40;對應頁面&#41;](sap-bw-destination-editor-mappings-page.md)   
  [SAP BW 目的地編輯器 &#40;錯誤輸出頁面&#41;](sap-bw-destination-editor-error-output-page.md)   
  [SAP BW 目的地編輯器 &#40;進階頁面&#41;](sap-bw-destination-editor-advanced-page.md)   
  [Microsoft Connector 1.1 for SAP BW F1 說明](../microsoft-connector-for-sap-bw-f1-help.md)  

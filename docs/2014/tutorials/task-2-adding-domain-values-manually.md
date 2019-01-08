@@ -1,5 +1,5 @@
 ---
-title: 工作 2： 手動加入定義域值 |Microsoft Docs
+title: 工作 2：手動加入定義域值 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: aa6898db-f54b-4e98-84e4-ac64e48c3561
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b0383bc30f93afd893abcf86717df3a4e3a06d7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 756f69f172c1c901ffdf15658a6fefdcee64df1e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138388"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359950"
 ---
 # <a name="task-2-adding-domain-values-manually"></a>工作 2：手動加入定義域值
-  在這個工作中，您新增值**國家/地區**網域以手動方式。 請參閱[Change Domain Values](http://msdn.microsoft.com/library/hh510408.aspx)主題，如需詳細資訊在此頁面上的欄位。  
+  在這個工作中，您新增值**國家/地區**網域以手動方式。 請參閱[Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx)主題，如需詳細資訊在此頁面上的欄位。  
   
 1.  按一下 **國家/地區**中的網域**定義域清單**。  
   
@@ -36,6 +36,6 @@ ms.locfileid: "48138388"
      ![定義域值的 United States](../../2014/tutorials/media/et-addingdomainvaluesmanually-02.jpg "United States 的定義域值")  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 3：從 Excel 檔案匯入定義域值](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
+ [工作 3:從 Excel 檔案匯入定義域值](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
   
   

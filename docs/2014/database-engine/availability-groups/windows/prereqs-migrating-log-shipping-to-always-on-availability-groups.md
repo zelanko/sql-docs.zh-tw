@@ -13,12 +13,12 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbe9d1338e3b64bf829eec0be1cf33bee3d8591e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 865e8d720e9977f582ac5ae8a0e75d995fc82629
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161938"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364390"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>從記錄傳送移轉至 AlwaysOn 可用性群組的必要條件 (SQL Server)
   本主題描述將記錄傳送主要資料庫與其一個或多個次要資料庫轉換成 AlwaysOn 主要資料庫和次要資料庫的必要條件。  
@@ -66,7 +66,7 @@ ms.locfileid: "48161938"
   
  **如需詳細資訊：＜＞**  
   
- [Converting a logshipping configuration to Availability Group](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (將記錄傳送組態轉換成可用性群組) (SQL Server 部落格)  
+ [Converting a logshipping configuration to Availability Group](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (將記錄傳送組態轉換成可用性群組) (SQL Server 部落格)  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
  **記錄傳送**  
@@ -93,19 +93,19 @@ ms.locfileid: "48161938"
   
 -   **部落格：**  
   
-     [Converting a logshipping configuration to Availability Group](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
+     [Converting a logshipping configuration to Availability Group](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
   
-     [將記錄傳送主要資料庫和次要資料庫加入至現有的可用性群組](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
+     [將記錄傳送主要資料庫和次要資料庫加入至現有的可用性群組](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
   
-     [SQL Server AlwaysOn 團隊部落格： 官方 SQL Server AlwaysOn 團隊部落格](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server 工程師部落格](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
 -   **白皮書：**  
   
-     [移轉至 AlwaysOn 可用性群組的移轉指南： 從先前的部署結合資料庫鏡像與記錄傳送](http://msdn.microsoft.com/library/jj635217)  
+     [移轉指南：移轉至 AlwaysOn 可用性群組從先前的部署結合資料庫鏡像與記錄傳送](https://msdn.microsoft.com/library/jj635217)  
   
-     [Microsoft 的 SQL Server 2012 白皮書](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Microsoft 的 SQL Server 2012 白皮書](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 客戶諮詢團隊白皮書](http://sqlcat.com/)  
   

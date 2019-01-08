@@ -1,19 +1,19 @@
 ---
-title: 在 SQL Server 的獨立式 R Server 或 Machine Learning Server 安裝 |Microsoft Docs
+title: 獨立式 R Server 或 Machine Learning 伺服器安裝-SQL Server Machine Learning 服務
 description: 概觀簡介獨立的 R Server 和 SQL Server 安裝程式中的 Machine Learning Server
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 12/18/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9cb0cecaef28d512cf36e694344e62b01df88ebf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f1cbc4a7c02597c6c8bece8c47976fabdb4959e7
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657497"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53731975"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server （獨立式） 和 SQL Server 中的 Machine Learning Server （獨立式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,17 +25,17 @@ SQL Server 提供獨立的 R Server 或 SQL Server 獨立執行的 Machine Learn
 > [!Note]
 > 安裝 SQL Server 安裝程式，在獨立伺服器功能上相當於非 SQL 品牌版本[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)，支援相同的使用者情節，包括遠端執行，運算化和 web 服務，以及一組完整的 R 和 Python 程式庫。
 
-## <a name="components"></a>Components
+## <a name="components"></a>元件
 
 SQL Server 2016 只是 R。 SQL Server 2017 支援 R 和 Python。 下表描述每個版本的功能。
 
 | 元件 | 描述 |
 |-----------|-------------|
-| R 套件 | [**RevoScaleR** ](revoscaler-overview.md)可調整的 R 與資料操作、 轉換、 視覺化和分析的函式中為主要媒體櫃。  <br/>[**MicrosoftML** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)新增機器學習演算法來建立自訂文字分析、 影像分析和情緒分析模型。 <br/>[**sqlRUtils** ](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)提供 helper 函式將 R 指令碼放入 T-SQL 預存程序、 註冊預存程序使用資料庫時，以及從 R 開發環境執行預存程序。<br/>[**mrsdeploy** ](operationalization-with-mrsdeploy.md)提供 web 服務部署 (SQL Server 2017 中只有）。 <br/>[**olapR** ](how-to-create-mdx-queries-using-olapr.md)用於指定 MDX 查詢|
+| R 套件 | [**RevoScaleR** ](ref-r-revoscaler.md)可調整的 R 與資料操作、 轉換、 視覺化和分析的函式中為主要媒體櫃。  <br/>[**MicrosoftML** ](ref-r-microsoftml.md)新增機器學習演算法來建立自訂文字分析、 影像分析和情緒分析模型。 <br/>[**sqlRUtils** ](ref-r-sqlrutils.md)提供 helper 函式將 R 指令碼放入 T-SQL 預存程序、 註冊預存程序使用資料庫時，以及從 R 開發環境執行預存程序。<br/>[**mrsdeploy** ](operationalization-with-mrsdeploy.md)提供 web 服務部署 (SQL Server 2017 中只有）。 <br/>[**olapR** ](ref-r-olapr.md)用於指定 MDX 查詢|
 | Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open)是 Microsoft 的開放原始碼散發套件的。會包含封裝和解譯器。 一律使用 MRO 配套在安裝程式中的版本。 |
 | R 工具 | R 主控台視窗和命令提示字元是標準的工具，在 R 散發。 在 \Program files\Microsoft SQL Server\140\R_SERVER\bin\x64 中找到它們。 |
 | R 範例和指令碼 |  開放原始碼 R 和 RevoScaleR 套件包含內建的資料集，讓您可以建立並使用預先安裝的資料執行指令碼。 在 \Program files\Microsoft SQL Server\140\R_SERVER\library\datasets 和 \library\RevoScaleR 尋找它們。 |
-| Python 套件 | [**revoscalepy** ](../python/what-is-revoscalepy.md)是主要的程式庫適用於可調整的 Python 搭配資料操作、 轉換、 視覺效果和分析的函式。 <br/>[**microsoftml** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)新增機器學習演算法來建立自訂文字分析、 影像分析和情緒分析模型。  |
+| Python 套件 | [**revoscalepy** ](../python/ref-py-revoscalepy.md)是主要的程式庫適用於可調整的 Python 搭配資料操作、 轉換、 視覺效果和分析的函式。 <br/>[**microsoftml** ](../python/ref-py-microsoftml.md)新增機器學習演算法來建立自訂文字分析、 影像分析和情緒分析模型。  |
 | Python 工具 | 內建的 Python 命令列工具可用於臨機操作測試和工作項目。 在 \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe 中找到此工具。 |
 | Anaconda | Anaconda 是開放原始碼散發套件的 Python 和基本封裝。 |
 | Python 範例和指令碼 | 在使用 R、 Python 會包含內建的資料集與指令碼。 尋找 revoscalepy 資料在 \Program files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site packages\revoscalepy\data\sample 資料。 |
@@ -53,33 +53,41 @@ R 和 Python 開發人員通常會選擇獨立伺服器，以超越開放原始�
 
 啟動安裝程式、 將二進位檔附加至您最愛的開發工具和撰寫第一個指令碼。
 
-### <a name="step-1-install-the-software"></a>步驟 1： 安裝軟體
+### <a name="step-1-install-the-software"></a>步驟 1：安裝軟體
 
 安裝這些版本其中之一：
 
 + [SQL Server 2017 Machine Learning Server （獨立式）](../install/sql-machine-learning-standalone-windows-install.md)
 + [SQL Server 2016 R Server （獨立式）-只有 R](../install/sql-r-standalone-windows-install.md)
 
-### <a name="step-2-configure-a-development-tool"></a>步驟 2： 設定開發工具
+### <a name="step-2-configure-a-development-tool"></a>步驟 2：設定開發工具
 
 在獨立伺服器上，通常會在本機上使用安裝在同一部電腦上的開發工作。
 
 + [設定 R 工具](set-up-a-data-science-client.md)
 + [設定 Python 工具](../python/setup-python-client-tools-sql.md)
 
-### <a name="step-3-write-your-first-script"></a>步驟 3： 撰寫您的第一個指令碼
+### <a name="step-3-write-your-first-script"></a>步驟 3：撰寫第一個指令碼
 
 撰寫使用來自 RevoScaleR、 revoscalepy 和機器學習演算法的函式中的 R 或 Python 指令碼。
   
-  + [探索 R 和 25 個函數中的 RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)： 開始使用 R 的基本命令，然後進行 RevoScaleR 可散布分析函數，提供高效能和調整 R 解決方案。 包含許多最熱門 R 模型建立套件 (例如 	K-Means 叢集、決策樹及決策樹系) 的可平行處理版本，以及資料操作工具。
+  + [探索 R 和 25 個函數中的 RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler):開始使用 R 的基本命令，再進展到 RevoScaleR 可散布分析函數，提供高效能和調整 R 解決方案。 包含許多最熱門 R 模型建立套件 (例如 	K-Means 叢集、決策樹及決策樹系) 的可平行處理版本，以及資料操作工具。
 
-  + [快速入門： 使用 microsoftml Python 套件的二進位分類的範例](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml)： 建立使用 microsoftml 與已知乳癌特徵資料集的函式的二元分類模型。
+  + [快速入門：使用 microsoftml Python 套件的二進位分類範例](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml):建立使用 microsoftml 與已知乳癌特徵資料集的函式的二元分類模型。
 
 選擇工作的最佳語言。 R 是最適合使用 SQL 實作困難的統計計算。 資料的集合式作業，利用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以達到最大效能。 使用記憶體中資料庫引擎進行非常快速的計算資料行。
 
-### <a name="step-4-operationalize-your-solution"></a>步驟 4： 操作您的解決方案
+### <a name="step-4-operationalize-your-solution"></a>步驟 4：操作您的方案
 
 獨立伺服器可以使用[operationalization](https://docs.microsoft.com//machine-learning-server/what-is-operationalization)功能的非 SQL-品牌[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)。 您可以設定獨立的伺服器進行運作，提供下列優點： 部署和裝載您的程式碼，因為 web 服務、 執行診斷，測試 web 服務的容量。
+
+### <a name="step-5-maintain-your-server"></a>步驟 5：維護您的伺服器
+
+SQL Server 版本上定期執行的累計更新。 套用累計更新將安全性和功能的增強功能加入至現有安裝。 
+
+描述新的或已變更的功能可以中找到[CAB 下載](../install/sql-ml-cab-downloads.md)文章和為網頁上[SQL Server 2016 累積更新](https://support.microsoft.com/help/3177312/sql-server-2016-build-versions)和[SQL Server 2017 累積更新](https://support.microsoft.com/help/4047329). 
+
+如需有關如何將更新套用至現有的執行個體的詳細資訊，請參閱 <<c0> [ 套用更新](../install/sql-machine-learning-standalone-windows-install.md#apply-cu)中的安裝指示。
 
 ## <a name="see-also"></a>另請參閱
 

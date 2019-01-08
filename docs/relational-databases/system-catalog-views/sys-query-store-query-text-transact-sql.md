@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_query_text (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,15 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22691879e773939f1c70260460434ee04030f3da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b5fe04b5852eeebc858067505eaa0342ad8cb87
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747138"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712239"
 ---
 # <a name="sysquerystorequerytext-transact-sql"></a>sys.query_store_query_text & Amp;#40;transact-SQL&AMP;#41;
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   包含[!INCLUDE[tsql](../../includes/tsql-md.md)]文字和查詢的 SQL 控制代碼。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "47747138"
  需要**VIEW DATABASE STATE**權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.database_query_store_options &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.database_query_store_options &#40;-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [sys.query_context_settings &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
  [sys.query_store_query &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   

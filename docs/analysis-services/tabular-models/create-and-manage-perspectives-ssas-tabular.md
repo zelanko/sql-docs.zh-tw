@@ -1,5 +1,5 @@
 ---
-title: 建立及管理檢視方塊 |Microsoft 文件
+title: 建立和管理 Analysis Services 表格式模型中的檢視方塊 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 56c8f35aa15debbc064cacd73205234377224a28
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 962b6b90de6d95107d1a4cdd3484a44205afb630
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040592"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071845"
 ---
 # <a name="create-and-manage-perspectives"></a>建立及管理檢視方塊 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,22 +31,22 @@ ms.locfileid: "34040592"
   
 ###  <a name="bkmk_edit"></a> 若要編輯檢視方塊  
   
--   若要修改檢視方塊，請在檢視方塊的資料行中核取及取消核取欄位，如此即可在檢視方塊中加入和移除欄位物件。  
+-   若要修改檢視方塊，請檢查並取消選取檢視方塊的資料行，可新增和移除檢視方塊中的欄位物件中的欄位。  
   
 ###  <a name="bkmk_rename"></a> 重新命名檢視方塊  
   
--   當您將滑鼠停留在檢視方塊的資料行標頭 (檢視方塊的名稱) 上方時，[重新命名] 按鈕隨即顯示。 若要重新命名檢視方塊，請按一下 **[重新命名]**，然後輸入新名稱或編輯現有名稱。  
+-   當您將滑鼠停留在檢視方塊的資料行標頭 （檢視方塊的名稱），**重新命名**按鈕隨即顯示。 若要重新命名檢視方塊，請按一下 **[重新命名]**，然後輸入新名稱或編輯現有名稱。  
   
 ###  <a name="bkmk_delete"></a> 刪除檢視方塊  
   
--   當您將滑鼠停留在檢視方塊的資料行標頭 (檢視方塊的名稱) 上方時，[刪除] 按鈕隨即顯示。 若要刪除檢視方塊，請按一下 **[刪除]** 按鈕，然後在確認視窗中按一下 **[是]** 。  
+-   當您將滑鼠停留在檢視方塊的資料行標頭 （檢視方塊的名稱），**刪除**按鈕隨即顯示。 若要刪除檢視方塊，請按一下 **[刪除]** 按鈕，然後在確認視窗中按一下 **[是]** 。  
   
 ###  <a name="bkmk_copy"></a> 複製檢視方塊  
   
--   當您將滑鼠停留在檢視方塊的資料行標頭上方時， **[複製]** 按鈕隨即顯示。 若要複製檢視方塊，請按一下 **[複製]** 按鈕。 在現有檢視方塊的右邊就會加入選定檢視方塊的副本，做為新檢視方塊。 新檢視方塊會繼承原本檢視方塊的名稱，並且於名稱結尾處加上 *- 複本* 註記。 例如，建立 *Sales* 檢視方塊的副本時，新的檢視方塊名稱會是 *Sales – 複製*。  
+-   當您將滑鼠停留在檢視方塊的資料行標頭，**複製**按鈕隨即顯示。 若要複製檢視方塊，請按一下 **[複製]** 按鈕。 在現有檢視方塊的右邊就會加入選定檢視方塊的副本，做為新檢視方塊。 新檢視方塊會繼承原本檢視方塊的名稱，並且於名稱結尾處加上 *- 複本* 註記。 例如，如果一份*銷售額*建立檢視方塊中，新的檢視方塊名稱會是*Sales-複製*。  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視方塊](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [階層架構](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
+ [階層](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 定義資料庫維度 |Microsoft 文件
+title: 定義資料庫維度 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3f9d827bbbcb50dc352ba8987cf04704a18e4ef0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 94fa4e719e99928a56694b748e11fff1ad16db9c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025855"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534707"
 ---
 # <a name="define-database-dimensions"></a>定義資料庫維度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,16 +38,16 @@ ms.locfileid: "34025855"
   
  維度設計師有三個不同的索引標籤，下表就是這些索引標籤的描述。  
   
-|索引標籤|說明|  
+|索引標籤|描述|  
 |---------|-----------------|  
-|**維度結構**|使用此索引標籤搭配維度的結構使用 - 檢查或建立維度的資料來源檢視結構描述、使用屬性，以及組織使用者自訂階層中的屬性。|  
-|**中，使用 [維度設計師] 的**|使用這個索引標籤，即可建立、修改或刪除維度的屬性關聯性。|  
+|**維度結構**|使用此索引標籤，以使用結構的維度來檢查或建立資料來源檢視結構描述的維度，可使用屬性，以及組織使用者定義階層中的屬性。|  
+|**屬性關聯性**|使用這個索引標籤，即可建立、修改或刪除維度的屬性關聯性。|  
 |**翻譯**|使用此索引標籤，以不同語言加入及編輯維度中繼資料的翻譯。|  
 |**瀏覽器**|使用此索引標籤，檢查已處理維度的成員，以及檢閱維度中繼資料的翻譯。|  
   
  下列主題描述可以在 [維度設計師] 中執行的工作。  
   
- [維度屬性 （Property） 參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [維度屬性內容參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
  描述如何定義及設定維度屬性。  
   
  [建立使用者定義階層](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  

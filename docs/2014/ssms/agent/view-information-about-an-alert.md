@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, alerts
@@ -16,12 +16,12 @@ ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7bb9ec006ee49a7b446fd2700df81debea1012d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 693c36cf0c23004f0538595ac75e1aa5d5039a33
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167588"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768470"
 ---
 # <a name="view-information-about-an-alert"></a>檢視有關警示的資訊
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示的相關資訊。  
@@ -63,7 +63,7 @@ ms.locfileid: "48167588"
   
     -   [警示屬性-新增警示&#40;回應頁面&#41;](alert-properties-new-alert-response-page.md)  
   
-    -   [警示的內容： 新的警示&#40;選項頁面&#41;](alert-properties-new-alert-options-page.md)  
+    -   [警示的內容：新的警示&#40;選項頁面&#41;](alert-properties-new-alert-options-page.md)  
   
     -   [警示屬性 &#40;記錄頁面&#41;](alert-properties-history-page.md)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48167588"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- reports information about the Demo: Sev. 25 Errors alert  

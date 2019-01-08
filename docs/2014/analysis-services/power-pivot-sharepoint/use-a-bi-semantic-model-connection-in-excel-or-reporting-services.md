@@ -11,12 +11,12 @@ ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fae71e74f2c8498b537f1d93d951de76f5625094
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1356eeaabf8de5d406e7fbc11d86cbb043f64be2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123538"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366290"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>在 Excel 或 Reporting Services 使用 BI 語意模型連接
   本主題說明如何使用透過其他主題的指示所建立的 BI 語意模型連接。 如果您尚未建立 BI 語意模型，請參閱[建立 PowerPivot 活頁簿的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)並[建立 BI 語意模型連接到表格式模型資料庫](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
@@ -46,9 +46,9 @@ ms.locfileid: "48123538"
   
 5.  在最後一個頁面上，您可以提供易記名稱和描述。 按一下 **[完成]**，然後按一下 [匯入資料] 對話方塊上的 **[確定]** 來匯入資料。  
   
- 若要讓連接成功，您必須將 Excel 2010 和 MSOLAP.5.dll 安裝在用戶端電腦上。 您可以藉由安裝版本的 PowerPivot for Excel 的目前這一版來取得提供者，或者您可以下載只從 Analysis Services OLE DB 提供者[功能套件下載頁面](http://go.microsoft.com/fwlink/?linkid=214066)。  
+ 若要讓連接成功，您必須將 Excel 2010 和 MSOLAP.5.dll 安裝在用戶端電腦上。 您可以藉由安裝版本的 PowerPivot for Excel 的目前這一版來取得提供者，或者您可以下載只從 Analysis Services OLE DB 提供者[功能套件下載頁面](https://go.microsoft.com/fwlink/?linkid=214066)。  
   
- 若要確認 MSOLAP.5.dll 是最新版本，請檢查`HKEY_CLASSES_ROOT\MSOLAP`在登錄中。 `CurVer` 應該設定為 MSOLAP.5。  
+ 若要確認 MSOLAP.5.dll 是最新的版本，請檢查登錄中的 `HKEY_CLASSES_ROOT\MSOLAP`。 `CurVer` 應該設定為 MSOLAP.5。  
   
  在 SharePoint 中，您也必須擁有 BI 語意模型檔案的「讀取」權限。 「讀取」權限包含下載權限。 Excel 會從 SharePoint 下載 BI 語意模型連接資訊，然後透過 `HTTP Get` 開啟與資料庫的直接連接。 一旦 BI 語意模型連接資訊在本機上儲存，連接要求就不會流經 SharePoint。  
   

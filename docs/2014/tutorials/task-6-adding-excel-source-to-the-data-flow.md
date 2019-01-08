@@ -1,5 +1,5 @@
 ---
-title: 工作 6： 將 Excel 來源加入至資料流程 |Microsoft Docs
+title: 工作 6：將 Excel 來源加入至資料流程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f51d2f6f48263e764d73eb9fcd8ee0dcd27b26da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb79a52e8ce910425de44b5cf475400daa3f40aa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071757"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356544"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>工作 6：將 Excel 來源加入至資料流程
   在這項工作中，您會將 Excel 來源加入至資料流程，以便從來源 Excel 檔案讀取供應商資料。 Excel 來源會從 Microsoft Excel 活頁簿中的工作表或範圍擷取資料。 請參閱[Excel 來源](../integration-services/data-flow/excel-source.md)如需詳細資訊。  
@@ -45,9 +45,9 @@ ms.locfileid: "48071757"
   
 9. 按一下 **[確定]** ，關閉對話方塊。  
   
-10. 拖放**DQS 清理**轉換**其他轉換**上**SSIS 工具箱**至**資料流程**索引標籤下**從 Excel 檔案讀取供應商資料**。 DQS 清理轉換會使用 Data Quality Services (DQS)，藉由套用知識庫中核准的規則來更正資料。 這項轉換在執行階段會在 DQS 伺服器上建立 DQS 清理專案。 請參閱[DQS 清理轉換](http://msdn.microsoft.com/library/ee677619.aspx)如需詳細資訊。  
+10. 拖放**DQS 清理**轉換**其他轉換**上**SSIS 工具箱**至**資料流程**索引標籤下**從 Excel 檔案讀取供應商資料**。 DQS 清理轉換會使用 Data Quality Services (DQS)，藉由套用知識庫中核准的規則來更正資料。 這項轉換在執行階段會在 DQS 伺服器上建立 DQS 清理專案。 請參閱[DQS 清理轉換](https://msdn.microsoft.com/library/ee677619.aspx)如需詳細資訊。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 7：將 DQS 清理轉換新增至資料流程](../integration-services/data-flow/data-flow.md)  
+ [工作 7:將 DQS 清理轉換加入資料流程](../integration-services/data-flow/data-flow.md)  
   
   

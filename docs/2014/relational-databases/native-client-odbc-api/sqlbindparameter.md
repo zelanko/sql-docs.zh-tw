@@ -14,12 +14,12 @@ ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3bea7e5bac71c3e4fdd90253f30a503dc44f44d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cba973be9b4dc2ec0da286b2d01b636f0ca4e2b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208998"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364690"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
   `SQLBindParameter` 可以排除資料轉換時用來提供資料的負擔[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式，導致效能大幅提升應用程式的用戶端和伺服器元件。 其他優點包括插入或更新近似的數值資料類型時，降低有效位數的損失。  
@@ -57,6 +57,6 @@ ms.locfileid: "48208998"
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)   
- [SQLBindParameter 函式](http://go.microsoft.com/fwlink/?LinkId=59328)  
+ [SQLBindParameter 函式](https://go.microsoft.com/fwlink/?LinkId=59328)  
   
   

@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c762c5ebb679460686dbf38958d097de687b1052
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c4a21f9ccbf1dd8bcb7918c67b98aa51a0956d41
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673527"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590952"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "51673527"
 |**severity**|**int**|錯誤的嚴重性。 可能的值為：<br /><br /> 0 = 資訊<br />1 = 警告<br />2 = 錯誤|  
 |**event_count**|**int**|這個事件發生的次數指定的資料庫指定的時間間隔內 (**start_time**並**end_time**)。|  
 |**description**|**nvarchar(max)**|事件的詳細描述。<br /><br /> 請參閱[事件類型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)取得一份可能的值。|  
-|**additional_data**|**XML**|*注意： 這個值一律為 Azure SQL Database V12 的 NULL。請參閱[範例](#Deadlock)一節以取得如何適用於 V12 擷取死結事件。*<br /><br /> 針對**死結**事件，此資料行包含死結圖表。 對於其他事件類型，這個資料行為 NULL。 |  
+|**additional_data**|**XML**|*注意：這個值一律為 NULL 的 Azure SQL Database V12 的。請參閱[範例](#Deadlock)一節以取得如何適用於 V12 擷取死結事件。*<br /><br /> 針對**死結**事件，此資料行包含死結圖表。 對於其他事件類型，這個資料行為 NULL。 |  
   
 ##  <a name="EventTypes"></a> 事件類型  
  在此檢視中的每個資料列所記錄的事件均依類別目錄 (**event_category**)，事件類型 (**event_type**)，和子類型 (**event_subtype**)。 下表列出這個檢視中所收集事件的類型。  
@@ -69,18 +69,18 @@ ms.locfileid: "51673527"
 |**連線能力**|**connection_failed**|3|**change_password_not_supported**|2|不支援使用者要求變更使用者登入的密碼。|  
 |**連線能力**|**connection_failed**|4|**login_failed_for_user**|2|使用者登入失敗。|  
 |**連線能力**|**connection_failed**|5|**login_disabled**|2|登入已停用。|  
-|**連線能力**|**connection_failed**|6|**failed_to_open_db**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 資料庫無法開啟。 可能原因是資料庫不存在，或缺少開啟資料庫的驗證。|  
+|**連線能力**|**connection_failed**|6|**failed_to_open_db**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 資料庫無法開啟。 可能原因是資料庫不存在，或缺少開啟資料庫的驗證。|  
 |**連線能力**|**connection_failed**|7|**blocked_by_firewall**|2|不允許用戶端 IP 位址存取伺服器。|  
-|**連線能力**|**connection_failed**|8|**client_close**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 用戶端可能在建立連接時逾時。 嘗試建立連接時發生逾時。|  
-|**連線能力**|**connection_failed**|9|**重新設定**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 連接失敗，因為資料庫當時正在進行重新組態。|  
-|**連線能力**|**connection_terminated**|0|**idle_connection_timeout**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 連接已閒置超過系統定義的臨界值。|  
-|**連線能力**|**connection_terminated**|1|**重新設定**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 由於資料庫重新設定，已終止工作階段。|  
-|**連線能力**|**節流設定**|*\<原因代碼 >*|**reason_code**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 要求已節流。  節流原因代碼： *\<原因代碼 >*。 如需詳細資訊，請參閱 <<c0> [ 引擎節流](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
-|**連線能力**|**throttling_long_transaction**|40549|**long_transaction**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 工作階段已終止，因為您有長時間執行的交易。 請嘗試縮短您的交易。 如需詳細資訊，請參閱 <<c0> [ 資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**連線能力**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它取得太多鎖定。 請嘗試在單一交易中讀取或修改較少的資料列。 如需詳細資訊，請參閱 <<c0> [ 資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**連線能力**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用 TEMPDB。 請嘗試修改查詢，減少使用暫存資料表空間。 如需詳細資訊，請參閱 <<c0> [ 資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**連線能力**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用交易記錄檔空間。 請嘗試在單一交易中修改較少的資料列。 如需詳細資訊，請參閱 <<c0> [ 資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**連線能力**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注意： 僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用記憶體。 請嘗試修改查詢以處理較少的資料列。 如需詳細資訊，請參閱 <<c0> [ 資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**連線能力**|**connection_failed**|8|**client_close**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 用戶端可能在建立連接時逾時。 嘗試建立連接時發生逾時。|  
+|**連線能力**|**connection_failed**|9|**重新設定**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 連接失敗，因為資料庫當時正在進行重新組態。|  
+|**連線能力**|**connection_terminated**|0|**idle_connection_timeout**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 連接已閒置超過系統定義的臨界值。|  
+|**連線能力**|**connection_terminated**|1|**重新設定**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 由於資料庫重新設定，已終止工作階段。|  
+|**連線能力**|**節流設定**|*\<原因代碼 >*|**reason_code**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 要求已節流。  節流原因代碼： *\<原因代碼 >*。 如需詳細資訊，請參閱 <<c0> [ 引擎節流](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
+|**連線能力**|**throttling_long_transaction**|40549|**long_transaction**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 工作階段已終止，因為您有長時間執行的交易。 請嘗試縮短您的交易。 如需詳細資訊，請參閱 <<c0> [ 資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**連線能力**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它取得太多鎖定。 請嘗試在單一交易中讀取或修改較少的資料列。 如需詳細資訊，請參閱 <<c0> [ 資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**連線能力**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用 TEMPDB。 請嘗試修改查詢，減少使用暫存資料表空間。 如需詳細資訊，請參閱 <<c0> [ 資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**連線能力**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用交易記錄檔空間。 請嘗試在單一交易中修改較少的資料列。 如需詳細資訊，請參閱 <<c0> [ 資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**連線能力**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注意：僅適用於 Azure SQL Database V11。*<br /><br /> 已終止工作階段，因為它過度使用記憶體。 請嘗試修改查詢以處理較少的資料列。 如需詳細資訊，請參閱 <<c0> [ 資源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**引擎**|**死結**|0|**死結**|2|發生死結。|  
   
 ## <a name="permissions"></a>Permissions  
@@ -101,7 +101,7 @@ ms.locfileid: "51673527"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
 ### <a name="interval-starttime-and-endtime"></a>間隔的 start_time 和 end_time  
- 在事件發生時，事件是否包含在彙總間隔*上*或*之後 * * * start_time** 並*之前 * * * end_time** 對於該間隔。 例如，正巧發生在 `2012-10-30 19:25:00.0000000` 的事件只會納入到以下所示的第二段間隔：  
+ 在事件發生時，事件是否包含在彙總間隔*上*或_之後_**start_time**並_之前_**end_time**對於該間隔。 例如，正巧發生在 `2012-10-30 19:25:00.0000000` 的事件只會納入到以下所示的第二段間隔：  
   
 ```  
 start_time                    end_time  

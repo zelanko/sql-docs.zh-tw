@@ -1,11 +1,10 @@
 ---
-title: 教學課程：利用行動用戶端複寫資料 | Microsoft 文件
+title: 教學課程：利用行動用戶端複寫資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -13,12 +12,12 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e5a95b157761cc9a61d09271b5e081a65cd45998
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c36eae0ca3d9613dfdaf13bce3a5e748f91b123f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056238"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750970"
 ---
 # <a name="tutorial-replicating-data-with-mobile-clients"></a>教學課程：利用行動用戶端複寫資料
   對於在中央伺服器與只是偶爾連接的行動用戶端之間移動資料的問題，複寫是一個很好的解決方案。 您可以使用複寫的精靈，輕鬆設定及管理複寫拓撲。 本教學課程告訴您，如何為行動用戶端設定複寫拓撲。  
@@ -27,7 +26,7 @@ ms.locfileid: "48056238"
  在本教學課程中，您將使用合併複寫，從中央資料庫發行資料給一個或多個行動用戶端使用者，讓每一個使用者都取得獨一無二篩選的資料子集。 第 1 課告訴您如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立發行集。 接下來的課程會告訴您，如何建立及同步處理訂閱。  
   
 ## <a name="requirements"></a>需求  
- 此教學課程是特別提供給熟悉基本資料庫作業但對複寫經驗有限的使用者。 開始進行本教學課程之前，必須先完成 [教學課程：準備伺服器進行複寫](tutorial-preparing-the-server-for-replication.md)。  
+ 此教學課程是特別提供給熟悉基本資料庫作業但對複寫經驗有限的使用者。 開始本教學課程之前，必須先完成[教學課程：準備伺服器進行複寫](tutorial-preparing-the-server-for-replication.md)。  
   
  若要使用這個教學課程，系統上必須已安裝下列元件：  
   
@@ -47,7 +46,7 @@ ms.locfileid: "48056238"
 > [!NOTE]  
 >  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，您必須使用 sysadmin 固定伺服器角色成員的登入，連接到發行者和訂閱者。  
   
- **完成本教學課程的估計時間：30 分鐘。**  
+ **完成這個教學課程的估計時間：30 分鐘。**  
   
 ## <a name="lessons-in-this-tutorial"></a>本教學課程中的課程  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.f1
@@ -17,12 +16,12 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 38586615ce582ed4534bf23612bfca64b53af461
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc99090255eb0667c09f180be0b52d570b6cb682
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224408"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371320"
 ---
 # <a name="script-task"></a>指令碼工作
   指令碼工作提供程式碼，用來執行無法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的內建工作和轉換中使用的函數。 指令碼工作亦可在一個指令碼中結合函數，而不使用多項工作和轉換。 您可以使用指令碼工作處理必須在封裝中執行一次 (或是每個列舉物件一次) 的工作，而非每個資料列執行一次的工作。  
@@ -69,13 +68,13 @@ ms.locfileid: "48224408"
   
 |記錄項目|描述|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|報告在指令碼內實作記錄的結果。 工作寫入記錄項目，每次呼叫`Log`方法的`Dts`物件。 工作會在程式碼執行時撰寫這些項目。 如需詳細資訊，請參閱 [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md)。|  
+|`ScriptTaskLogEntry`|報告在指令碼內實作記錄的結果。 每次呼叫 `Log` 物件的 `Dts` 方法時，工作都會寫入記錄項目。 工作會在程式碼執行時撰寫這些項目。 如需詳細資訊，請參閱 [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md)。|  
   
  如需有關可在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請參閱下列主題：  
   
--   [指令碼工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [指令碼工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [指令碼工作編輯器&#40;指令碼 頁面&#41;](../script-task-editor-script-page.md)  
+-   [指令碼工作編輯器 &#40;指令碼頁面&#41;](../script-task-editor-script-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   
@@ -90,6 +89,6 @@ ms.locfileid: "48224408"
   
 ## <a name="related-content"></a>相關內容  
   
--   shareourideas.com 上的技術文件： [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625)(如何在 C# 中傳送包含傳遞通知的電子郵件)  
+-   shareourideas.com 上的技術文件： [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625)(如何在 C# 中傳送包含傳遞通知的電子郵件)  
   
   

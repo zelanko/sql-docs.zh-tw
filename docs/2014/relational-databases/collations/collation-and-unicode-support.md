@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - binary collations [SQL Server]
@@ -28,15 +27,15 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f313854119094b4407dc8bf4f6e62fdf7a31677
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1985e7c3fc55f6783c88569c196713050fa40287
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126528"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377868"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的定序會提供資料的排序規則、大小寫和區分腔調字屬性。 搭配使用的定序這類字元資料類型`char`和`varchar`指示字碼頁，以及可針對該資料型別表示的對應字元。 不論您是安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的新執行個體、還原資料庫備份，還是將伺服器連接至用戶端資料庫，請務必了解您即將使用之資料的地區設定需求、排序次序和區分大小寫與腔調字。 若要列出您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所提供的定序，請參閱 [sys。fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的定序會提供資料的排序規則、大小寫和區分腔調字屬性。 與字元資料類型 (例如 `char` 和 `varchar`) 搭配使用的定序會指示字碼頁，以及可針對該資料類型表示的對應字元。 不論您是安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的新執行個體、還原資料庫備份，還是將伺服器連接至用戶端資料庫，請務必了解您即將使用之資料的地區設定需求、排序次序和區分大小寫與腔調字。 若要列出您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所提供的定序，請參閱 [sys。fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)。  
   
  當您針對伺服器、資料庫、資料行或運算式選取定序時，就是將某些特性指派給資料，而這些特性會影響資料庫中許多作業的結果。 例如，當您使用 ORDER BY 來建構查詢時，結果集的排序次序可能會相依於套用至資料庫的定序或在查詢運算式層級指定於 COLLATE 子句中的定序。  
   
@@ -53,8 +52,8 @@ ms.locfileid: "48126528"
 |選項|描述|  
 |------------|-----------------|  
 |區分大小寫 (_CS)|區分大寫和小寫字母。 如果選取此選項，小寫字母會排序在大寫字母的前面。 如果未選取此選項，則定序不區分大小寫。 也就是說，在排序用途上，SQL Server 會將大寫和小寫字母視為相同。 指定 _CI，就可以明確地選取不區分大小寫。|  
-|區分腔調字 (_AS)|區分有腔調和無腔調的字元。 例如，'a' 不等於 'ấ'。 如果未選取此選項，則定序不區分腔調字。 也就是說，在排序用途上，SQL Server 會將有腔調和無腔調字母視為相同。 指定 _AI，就可以明確地選取不區分腔調字。|  
-|區分假名 (_KS)|區分兩種類型的日文假名字元：平假名和片假名。 如果未選取此選項，定序就不會區分假名。 也就是說，在排序用途上，SQL Server 會將平假名和片假名視為相同。 省略此選項，是指定不區分假名的唯一方法。|  
+|區分腔調字 (_AS)|區分有腔調和無腔調的字元。 例如，' a' 不等於 ' 篇 '。 如果未選取此選項，則定序不區分腔調字。 也就是說，在排序用途上，SQL Server 會將有腔調和無腔調字母視為相同。 指定 _AI，就可以明確地選取不區分腔調字。|  
+|區分假名 (_KS)|區分兩種類型的日文假名字元：平假名與片假名。 如果未選取此選項，定序就不會區分假名。 也就是說，在排序用途上，SQL Server 會將平假名和片假名視為相同。 省略此選項，是指定不區分假名的唯一方法。|  
 |區分全半形 (_WS)|區分全形與半形字元。 如果未選取此選項，在排序用途上，SQL Server 會將相同字元的全形和半形表示法視為相同。 省略此選項，是指定不區分全形與半形的唯一方法。|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列定序集：  
@@ -70,9 +69,9 @@ ms.locfileid: "48126528"
  SQL Server 定序  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序 (SQL_*) 會提供與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]舊版之間的排序次序相容性。 非 Unicode 資料的字典排序規則與 Windows 作業系統提供的任何排序常式不相容。 不過，Unicode 資料的排序與 Windows 排序規則的特定版本相容。 因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序對非 Unicode 和 Unicode 資料使用不同的比較規則，所以您會看到相同資料的比較有不同的結果，這取決於基礎資料類型而定。 如需詳細資訊，請參閱 [SQL Server 定序名稱 &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)。  
   
-> [!NOTE]  
+> [!NOTE]
 >  當您升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的英文執行個體時，可基於與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 現有的執行個體相容而指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序 (SQL_*)。 因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的預設定序是在安裝期間定義，所以當下列條件成立時，請一定要小心指定定序設定：  
->   
+> 
 >  -   應用程式的程式碼視先前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序行為而定。  
 > -   您必須儲存反映多國語言的字元資料。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48126528"
   
  除非變更伺服器的定序，否則無法變更系統資料庫的定序。  
   
- 資料庫定序是用於資料庫中的所有中繼資料，而且是資料庫中使用之所有字串資料行、暫存物件、變數名稱和任何其他字串的預設值。 請注意，如果變更使用者資料庫的定序，則在資料庫中的查詢存取暫存資料表時，可能會發生定序衝突。 暫存資料表一律儲存在`tempdb`系統資料庫，將會使用執行個體的定序。 如果定序導致評估字元資料發生衝突，則比較使用者資料庫與 `tempdb` 間之字元資料的查詢可能會失敗。 您可以在查詢中指定 COLLATE 子句以解決此問題。 如需詳細資訊，請參閱 [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations)。  
+ 資料庫定序是用於資料庫中的所有中繼資料，而且是資料庫中使用之所有字串資料行、暫存物件、變數名稱和任何其他字串的預設值。 請注意，如果變更使用者資料庫的定序，則在資料庫中的查詢存取暫存資料表時，可能會發生定序衝突。 暫存資料表一律儲存在 `tempdb` 系統資料庫中，以使用執行個體的定序。 如果定序導致評估字元資料發生衝突，則比較使用者資料庫與 `tempdb` 間之字元資料的查詢可能會失敗。 您可以在查詢中指定 COLLATE 子句以解決此問題。 如需詳細資訊，請參閱 [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations)。  
   
  資料行層級定序  
  建立或改變資料表時，可以使用 COLLATE 子句來指定每個字元字串資料行的定序。 若未指定任何定序，就會將資料庫的預設定序指派給此資料行。  
@@ -102,7 +101,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ###  <a name="Locale_Defn"></a> 地區設定  
- 地區設定是一組與某個地點或文化特性相關聯的資訊。 這項資訊包括口語的名稱和識別碼、用來撰寫該語言的指令碼及文化習慣。 定序可與一個或多個地區設定產生關聯。 如需詳細資訊，請參閱 [Microsoft 指派的地區設定識別碼](http://msdn.microsoft.com/goglobal/bb964664.aspx)。  
+ 地區設定是一組與某個地點或文化特性相關聯的資訊。 這項資訊包括口語的名稱和識別碼、用來撰寫該語言的指令碼及文化習慣。 定序可與一個或多個地區設定產生關聯。 如需詳細資訊，請參閱 [Microsoft 指派的地區設定識別碼](https://msdn.microsoft.com/goglobal/bb964664.aspx)。  
   
   
 ###  <a name="Code_Page_Defn"></a> Code Page  
@@ -114,7 +113,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Unicode_Defn"></a> Unicode 支援  
- Unicode 是將字碼指標對應到字元的標準用法。 由於 Unicode 主要設計為涵蓋世界上所有語言的字元，因此不需要使用不同的字碼頁來處理不同的字元集。 如果您儲存能夠反映多種語言的字元資料時，一定要使用 Unicode 資料類型 (`nchar`， `nvarchar`，並`ntext`) 而不要使用非 Unicode 資料類型 (`char`， `varchar`，和`text`)。  
+ Unicode 是將字碼指標對應到字元的標準用法。 由於 Unicode 主要設計為涵蓋世界上所有語言的字元，因此不需要使用不同的字碼頁來處理不同的字元集。 如果您儲存能夠反映多種語言的字元資料，一定要使用 Unicode 資料類型 (`nchar`、`nvarchar` 及 `ntext`) 而不要使用非 Unicode 資料類型 (`char`、`varchar` 及 `text`)。  
   
  重要限制會與非 Unicode 資料類型相關聯。 這是因為非 Unicode 電腦受限於使用單一字碼頁。 透過使用 Unicode，您可能會發現效能獲得明顯改善，因為所需要的字碼頁轉換減少。 您必須在資料庫、資料行或運算式層級個別選取 Unicode 定序，因為伺服器層級不支援這些定序。  
   
@@ -211,11 +210,11 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Related_Content"></a> 相關內容  
- [SQL Server 最佳作法定序變更](http://go.microsoft.com/fwlink/?LinkId=113891)  
+ [SQL Server 最佳作法定序變更](https://go.microsoft.com/fwlink/?LinkId=113891)  
   
- [＜SQL Server 最佳作法：移轉至 Unicode＞](http://go.microsoft.com/fwlink/?LinkId=113890)  
+ [＜SQL Server 最佳作法：移轉至 Unicode＞](https://go.microsoft.com/fwlink/?LinkId=113890)  
   
- [Unicode Consortium 網站](http://go.microsoft.com/fwlink/?LinkId=48619)  
+ [Unicode Consortium 網站](https://go.microsoft.com/fwlink/?LinkId=48619)  
   
 ## <a name="see-also"></a>另請參閱  
  [自主資料庫定序](../databases/contained-database-collations.md)   

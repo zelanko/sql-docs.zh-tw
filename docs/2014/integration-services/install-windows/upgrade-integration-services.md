@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, upgrading
@@ -16,12 +15,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b6abc8e9e025bc24b4f456b58e0e9625e66b4b71
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: d1e40954a5a5eb7a69ba4f70b798356f38175fed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072022"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365390"
 ---
 # <a name="upgrade-integration-services"></a>升級 Integration Services
   如果您的電腦上目前有安裝 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]，您可以升級到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]。  
@@ -36,16 +35,16 @@ ms.locfileid: "49072022"
 ## <a name="before-upgrading-integration-services"></a>在升級 Integration Services 之前  
  我們建議您在升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之前，最好先執行 Upgrade Advisor。 Upgrade Advisor 會報告當您將現有的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝移轉至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所使用的新封裝格式時可能會遇到的問題。 如需詳細資訊，請參閱＜ [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)＞。  
   
-> [!NOTE]  
+> [!NOTE]
 >  在目前的版本中，已停用針對移轉或執行 Data Transformation Services (DTS) 封裝的支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 下列 DTS 功能已停用：  
->   
+> 
 >  -   DTS 執行階段  
 > -   DTS API  
 > -   可將 DTS 封裝移轉到下一版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
 > -   DTS 封裝維護的支援 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   執行 DTS 2000 封裝工作  
 > -   DTS 封包的 Upgrade Advisor 掃描。  
->   
+> 
 >  如需其他已停止的功能資訊，請參閱[SQL Server 2014 中已停止的 Integration Services 功能](../discontinued-integration-services-functionality-in-sql-server-2014.md)。  
   
 ## <a name="upgrading-integration-services"></a>升級 Integration Services  
@@ -145,6 +144,6 @@ ms.locfileid: "49072022"
 -   您無法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 電腦上的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Agent 作業來執行已升級之 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 執行個體中所儲存的 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 封裝。  
   
 ## <a name="external-resources"></a>外部資源  
- blogs.msdn.com 上的部落格文章： [在 Denali 中製作現有的自訂 SSIS 延伸模組和應用程式工作](http://go.microsoft.com/fwlink/?LinkId=238157)。  
+ blogs.msdn.com 上的部落格文章： [在 Denali 中製作現有的自訂 SSIS 延伸模組和應用程式工作](https://go.microsoft.com/fwlink/?LinkId=238157)。  
   
   

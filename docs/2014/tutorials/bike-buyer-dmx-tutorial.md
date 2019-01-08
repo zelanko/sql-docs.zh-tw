@@ -17,12 +17,12 @@ ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 25ca6a8a5769da023da506c25c858a012b7f7a7c
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: af20e220b4f1c2010606fec0d50e51025c73d31f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462014"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366720"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Bike Buyer DMX 教學課程
   您將在此教學課程中學會如何使用資料採礦延伸模組 (DMX) 查詢語言，來建立、培訓和探索採礦模型。 您將使用這些採礦模型來建立預測，以判斷客戶是否要購買自行車。  
@@ -50,7 +50,7 @@ ms.locfileid: "49462014"
   
  資料採礦延伸模組 (DMX) 是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的一種查詢語言，您可以使用它來建立及處理採礦模型。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 決策樹演算法建立可用來預測某人是否會購買自行車的模型。 產生的模型可以用個別使用者或客戶資料表做為輸入。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 群集演算法可依共用特性建立客戶群組。 此教學課程的目標是要提供用於自訂應用程式的 DMX 指令碼。  
   
- **如需詳細資訊：** [資料採礦方案](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **如需詳細資訊：＜＞**[資料採礦方案](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>採礦結構和採礦模型  
  開始建立 DMX 陳述式之前，一定要先了解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用來建立採礦模型的主要物件。 資料採礦結構是定義資料網域 (從中建立採礦模型) 的資料結構。 單一採礦結構可包含共用相同網域的多個採礦模型。 採礦模型會將採礦模型演算法套用至以採礦結構表示的資料。  
@@ -83,13 +83,13 @@ ms.locfileid: "49462014"
  [第 1 課：建立自行車買主採礦結構](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
  在這一課，您將學會如何使用 `CREATE` 陳述式來建立採礦結構。  
   
- [第 2 課：將採礦模型新增至自行車買主採礦結構中](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [第 2 課：將採礦模型加入 Bike Buyer 採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
  在這一課，您將學會如何使用 `ALTER` 陳述式將採礦模型加入至採礦結構。  
   
  [第 3 課：處理自行車買主採礦結構](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
  在這一課，您將學會如何使用 `INSERT INTO` 陳述式來處理採礦結構及其相關聯的採礦模型。  
   
- [第 4 課：瀏覽自行車買主採礦模型](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [第 4 課：瀏覽 Bike Buyer 採礦模型](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
  在這一課，您將學會如何使用 `SELECT` 陳述式來探索採礦模型的內容。  
   
  [第 5 課：執行預測查詢](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
@@ -102,7 +102,7 @@ ms.locfileid: "49462014"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)][!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)]， [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]，或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫。 為了加強安全性，系統預設不會安裝範例資料庫。 若要安裝的正式範例資料庫[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請瀏覽[Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417)頁面，然後選取您想要安裝的資料庫...  
+-   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫。 為了加強安全性，系統預設不會安裝範例資料庫。 若要安裝的正式範例資料庫[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請瀏覽[Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417)頁面，然後選取您想要安裝的資料庫...  
   
 > [!NOTE]  
 >  當檢閱教學課程時，我們建議您將新增**下一個主題**並**上一個主題**文件檢視器工具列的按鈕。  

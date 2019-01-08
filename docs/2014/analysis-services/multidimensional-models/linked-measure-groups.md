@@ -17,12 +17,12 @@ ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a1377552b3e50fe5c536ae0d7d854346ccb062d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7695f971504744d42056d0067217e102ef3d990
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140348"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368451"
 ---
 # <a name="linked-measure-groups"></a>連結量值群組
   連結的量值群組會以相同資料庫或不同的 Analysis Services 資料庫中不同之 Cube 中的另一個量值群組為基礎。 如果您想要重複使用多個 Cube 中的一組量值及對應的資料值，您可使用連結量值群組。  
@@ -47,7 +47,7 @@ ms.locfileid: "48140348"
   
 -   連結量值群組不支援回寫。  
   
--   連結量值群組無法用於多個多對多關聯性，特別是當這些關聯性位於不同 Cube 時。 這樣做可能會導致模糊不清的彙總。 如需詳細資訊，請參閱 [包含多對多關聯性之 Cube 中連結量值的數量不正確](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)。  
+-   連結量值群組無法用於多個多對多關聯性，特別是當這些關聯性位於不同 Cube 時。 這樣做可能會導致模糊不清的彙總。 如需詳細資訊，請參閱 [包含多對多關聯性之 Cube 中連結量值的數量不正確](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)。  
   
  連結量值群組中所包含的量值，只能和從同一個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫擷取的連結維度直接進行組織。 但是，您可以使用導出成員，將連結量值群組的資訊與您 Cube 中其他非連結維度產生關聯。 您也可以使用間接關聯性，例如參考或多對多關聯性，將非連結維度與連結量值群組產生關聯。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48140348"
 ## <a name="secure-a-linked-measure"></a>維護連結量值的安全  
  定義連結之後，管理連結量值群組中量值的存取權方式，就和管理其他量值群組存取權的方式一樣。 連結物件會連同其非連結的對應項目一起出現在角色設計工具中。 如需管理量值群組之安全性的詳細資訊，請參閱[授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)。  
   
- 若要定義或使用連結量值群組，Windows 服務帳戶[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體必須屬於[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫角色具有`ReadDefinition`並`Read`存取來源上的權限[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體來源 cube 和量值群組，或必須屬於[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]來源的系統管理員角色[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體。  
+ 若要定義或使用連結量值群組，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的 Windows 服務帳戶必須屬於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫角色 (而此角色擁有來源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上對來源 Cube 和量值群組的 `ReadDefinition` 和 `Read` 存取權限)，或必須屬於來源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理員角色。  
   
 ## <a name="see-also"></a>另請參閱  
  [定義連結維度](define-linked-dimensions.md)  

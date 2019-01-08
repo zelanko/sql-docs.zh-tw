@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.query.addtable
@@ -13,12 +13,12 @@ ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c48943a14c4b49a58b60e25a954cda04bf2dbad8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 374014ee4ccdd783cee3eeb7bad5c5e728906299
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052218"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781500"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>加入資料表對話方塊 (查詢和檢視表設計工具) (Visual Database Tools)
   這個對話方塊可讓您將資料表、檢視、使用者自訂函數或同義字加入查詢或檢視中。  

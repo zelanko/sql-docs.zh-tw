@@ -16,12 +16,12 @@ ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2de2791ff4dcb52c50a57dbc91322756c10a7c13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8ccc6581e48a44e636fad07891bd8ec51596fbf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110668"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797640"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>針對 xs:dateTime、xs:date 和 xs:time 類型之儲存格式所做的變更
   XMLDATETIME 規則會識別您的資料庫是否包含升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之後將成為無效的具類型 XML 資料。  
@@ -43,14 +43,14 @@ ms.locfileid: "48110668"
   
  下列查詢將會搜尋參考受影響類型的 XML 結構描述集合以及每個具類型的 XML 資料行。 這會告訴您含有負年份值的執行個體是否存在。  
   
-```  
+```sql
 CREATE PROCEDURE DateTimeInvestigation(@withdata bit)  
 -- @withdata = 0: only get the affected meta data information  
 -- @withdata = 1: get the affected meta data and instance information  
 AS  
 BEGIN  
 -- First get XML containing all schema collections containing affected element and attributes  
--- components (model groups????)   
+-- components (model groups?)   
 -- and columns that are affected by the schema collections.   
 CREATE table #_dt_collector(x xml);   
 ;with dttypes as  

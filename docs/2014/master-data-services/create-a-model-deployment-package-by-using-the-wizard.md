@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 40eb14cb2cc0b09a461ba621d29d636e2a2b9c91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96e5ef33776e1b8d7e78bec22b6cc46dee6055d9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108198"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797682"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>使用精靈建立模型部署封裝
   使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 模型部署精靈僅建立模型物件的封裝。 如果您需要在套件中包含資料，請參閱 [使用 MDSModelDeploy 建立模型部署封裝](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
@@ -30,7 +29,7 @@ ms.locfileid: "48108198"
   
 -   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中，您必須擁有存取 [系統管理] 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 -   模型必須存在，才能建立其封裝。 如需詳細資訊，請參閱[建立模型 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)。  
   
@@ -57,6 +56,6 @@ ms.locfileid: "48108198"
 -   [使用精靈部署模型部署套件](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [部署模型&#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+ [部署模型 &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

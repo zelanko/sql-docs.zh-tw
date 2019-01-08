@@ -11,12 +11,12 @@ ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: fce2675b361b3b6d4d8ffc46afdabb0b6d128cc7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 321c0f95d92536d816b365362cd119a292ac1004
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180858"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370600"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>RunningValue 函數 (報表產生器及 SSRS)
   傳回運算式指定的所有非 Null 數值的執行彙總 (在給定範圍中評估)。  
@@ -36,20 +36,20 @@ RunningValue(expression, function, scope)
  要執行彙總的運算式，例如 `[Quantity]`。  
   
  *函數*  
- (`Enum`) 套用至運算式，例如，彙總函式的名稱`Sum`。 此函式不可`RunningValue`， `RowNumber`，或`Aggregate`。  
+ (`Enum`) 運算式所要套用的彙總函式名稱，例如 `Sum`。 此函數可以是 `RunningValue`、`RowNumber` 或 `Aggregate`。  
   
  *範圍 (scope)*  
- (`String`) 字串常數，它是資料集、資料區域或群組的名稱，或為 Null (在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中為 `Nothing`)，可指定要在其中評估彙總的內容。 `Nothing` 指定最外層的內容，通常為報表資料集。  
+ (`String`) 字串常數，它是資料集、資料區域或群組的名稱，或為 Null (在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中為 `Nothing`)，可指定要在其中評估彙總的內容。 `Nothing` 指定最外層的內容，這通常為報表資料集。  
   
 ## <a name="return-type"></a>傳回類型  
  取決於 *function* 參數所指定的彙總函式。  
   
 ## <a name="remarks"></a>備註  
- 值`RunningValue`重設為 0 表示每個範圍的新執行個體。 如果已指定群組，當群組運算式變更時，執行中的值也會重設。 如果已指定資料區域，就會為每個資料區域的新執行個體重設執行中的值。 如果已指定資料集，則整個資料集不會重設執行中的值。  
+ `RunningValue` 的值會針對範圍的每個新執行個體重設為 0。 如果已指定群組，當群組運算式變更時，執行中的值也會重設。 如果已指定資料區域，就會為每個資料區域的新執行個體重設執行中的值。 如果已指定資料集，則整個資料集不會重設執行中的值。  
   
  `RunningValue` 不能用於篩選或排序運算式。  
   
- 評估執行值的資料集合必須具有相同的資料類型。 若要將轉換成相同的資料類型的多個數值資料類型的資料，請使用 等轉換函數`CInt`，`CDbl`或`CDec`。 如需詳細資訊，請參閱 [類型轉換函數](http://go.microsoft.com/fwlink/?LinkId=96142)。  
+ 評估執行值的資料集合必須具有相同的資料類型。 若要將具有多個數值資料類型的資料轉換成相同的資料類型，請使用 `CInt`、`CDbl` 或 `CDec` 等轉換函數。 如需詳細資訊，請參閱 [類型轉換函數](https://go.microsoft.com/fwlink/?LinkId=96142)。  
   
  *Scope* 不能是運算式。  
   
@@ -89,9 +89,9 @@ RunningValue(expression, function, scope)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

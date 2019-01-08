@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowtask.f1
@@ -19,12 +18,12 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48a40f38706ad9562f5dde3f4ec5472e678250c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2afaa918e25c9473513dfdac82cde3223e83df38
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069578"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366860"
 ---
 # <a name="data-flow-task"></a>資料流程工作
   資料流程工作會封裝在來源與目的地之間移動資料的資料流程引擎，並讓使用者在資料移動時轉換、清除及修改資料。 將資料流程工作加入封裝控制流程，使得封裝擷取、轉換和載入資料成為可能。  
@@ -45,14 +44,14 @@ ms.locfileid: "48069578"
  ![資料流程](../media/mw-dts-09.gif "資料流程")  
   
 ## <a name="log-entries"></a>記錄項目  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供一組可用於所有工作的記錄事件。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 也提供自訂記錄項目，為許多工作。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../custom-messages-for-logging.md)。 資料流程工作包含下列自訂記錄項目：  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供一組可用於所有工作的記錄事件。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 也為許多工作提供自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../custom-messages-for-logging.md)。 資料流程工作包含下列自訂記錄項目：  
   
 |記錄項目|描述|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|指出資料流程工作已經變更緩衝區的大小。 記錄項目會描述大小變更的原因，並列出暫存的新緩衝區大小。|  
-|`OnPipelinePostEndOfRowset`|表示元件具有已指定其結束的資料列集信號，設定的最後一個呼叫所`ProcessInput`方法。 處理輸入之資料流程中的每個元件都會寫入一個項目。 項目中包含元件的名稱。|  
-|`OnPipelinePostPrimeOutput`|指出元件已經完成其最後一次呼叫`PrimeOutput`方法。 根據資料流程而定，可能會寫入多個記錄項目。 如果元件是來源，這個記錄項目則表示元件已經完成資料列的處理。|  
-|`OnPipelinePreEndOfRowset`|指出元件即將接收其結束的資料列集訊號，它會設定的最後一個呼叫所`ProcessInput`方法。 處理輸入之資料流程中的每個元件都會寫入一個項目。 項目中包含元件的名稱。|  
+|`OnPipelinePostEndOfRowset`|表示已經為元件指定了資料列集結尾信號，此信號是由 `ProcessInput` 方法的最後一次呼叫所設定。 處理輸入之資料流程中的每個元件都會寫入一個項目。 項目中包含元件的名稱。|  
+|`OnPipelinePostPrimeOutput`|指出元件已經完成 `PrimeOutput` 方法的最後一次呼叫。 根據資料流程而定，可能會寫入多個記錄項目。 如果元件是來源，這個記錄項目則表示元件已經完成資料列的處理。|  
+|`OnPipelinePreEndOfRowset`|指出元件即將接收其資料列集結尾信號，此信號是由 `ProcessInput` 方法的最後一次呼叫所設定。 處理輸入之資料流程中的每個元件都會寫入一個項目。 項目中包含元件的名稱。|  
 |`OnPipelinePrePrimeOutput`|指出元件即將從 `PrimeOutput` 方法接收其呼叫。 根據資料流程而定，可能會寫入多個記錄項目。|  
 |`OnPipelineRowsSent`|報告由 `ProcessInput` 方法之呼叫提供給元件輸入的資料列數目。 記錄項目會包含元件名稱。|  
 |`PipelineBufferLeak`|提供在緩衝區管理員停止之後使緩衝區保持運作之任何元件的相關資訊。 如果緩衝區仍然在作用中，就不會釋放緩衝區資源，並可能造成記憶體遺漏的問題。 記錄項目會提供元件的名稱和緩衝區的識別碼。|  
@@ -67,7 +66,7 @@ ms.locfileid: "48069578"
   
 -   [效能計數器](../performance/performance-counters.md)  
   
--   [資料流程效能功能](../data-flow/data-flow-performance-features.md)  
+-   [Data Flow Performance Features](../data-flow/data-flow-performance-features.md)  
   
 ### <a name="sample-messages-from-a-data-flow-task"></a>來自資料流程工作的範例訊息  
  下表為非常簡單的封裝列出了記錄項目的範例訊息。 該封裝會使用 OLE DB 來源擷取資料表的資料、使用「排序」轉換來排序資料，以及使用 OLE DB 目的地將資料寫入不同的資料表。  
@@ -87,13 +86,13 @@ ms.locfileid: "48069578"
   
  許多記錄事件會寫入多個項目，並且有些記錄項目的訊息包含複雜的資料。 若要更容易了解和溝通複雜訊息的內容，您可以剖析訊息文字。 視記錄的位置而定，您可以使用 Transact-SQL 陳述式或指令碼元件，將複雜的文字區分成資料行或其他更有用的格式。  
   
- 例如，下表包含剖析成資料行的訊息：「資料列是提供給資料流程元件做為輸入。 :  : 1185 : OLE DB 來源輸出 : 1180 : 排序 : 1181 : 排序輸入 : 76」。 這個訊息是在資料列從 OLE DB 來源傳送到「排序」轉換時，由 `OnPipelineRowsSent` 事件寫入。  
+ 例如，下表包含剖析成資料行的訊息：「資料列是提供給資料流程元件做為輸入。 :  :1185:OLE DB 來源輸出：1180:排序：1181:排序輸入：76 」 剖析成資料行。 這個訊息是在資料列從 OLE DB 來源傳送到「排序」轉換時，由 `OnPipelineRowsSent` 事件寫入。  
   
 |「資料行」|描述|值|  
 |------------|-----------------|-----------|  
-|**PathID**|從值`ID`的 OLE DB 來源和 「 排序 」 轉換之間路徑的屬性。|1185|  
-|**PathName**|從值`Name`路徑屬性。|OLE DB 來源輸出|  
-|**ComponentID**|值`ID`「 排序 」 轉換的屬性。|1180|  
+|**PathID**|OLE DB 來源和「排序」轉換之間路徑的 `ID` 屬性的值。|1185|  
+|**PathName**|路徑之 `Name` 屬性的值。|OLE DB 來源輸出|  
+|**ComponentID**|「排序」轉換之 `ID` 屬性的值。|1180|  
 |**ComponentName**|「排序」轉換之 `Name` 屬性的值。|排序|  
 |**InputID**|「排序」轉換之輸入的 `ID` 屬性的值。|1181|  
 |**InputName**|「排序」轉換之輸入的 `Name` 屬性的值。|排序輸入|  
@@ -109,12 +108,12 @@ ms.locfileid: "48069578"
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>資料流程工作的程式設計組態  
  如需有關以程式設計方式將資料流程工作加入封裝，並設定資料流程屬性的詳細資訊，請按下列主題：  
   
--   [以程式設計方式新增資料流程工作](../building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
+-   [以程式設計方式加入資料流程工作](../building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>相關工作  
  [設定工作或容器的屬性](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-content"></a>相關內容  
- technet.microsoft.com 上的影片： [Balanced Data Distributer](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)(平衡型資料散發者)。  
+ technet.microsoft.com 上的影片： [Balanced Data Distributer](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)(平衡型資料散發者)。  
   
   

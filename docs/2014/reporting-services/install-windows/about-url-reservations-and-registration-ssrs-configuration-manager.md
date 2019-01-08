@@ -15,12 +15,12 @@ ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 31ff1f88e55905e8d67dd96c91cd80c8b6677fe2
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: fb50a9f9674e13c1032091fbae6da55170d44863
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905978"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374320"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>關於 URL 保留項目和註冊 (SSRS 組態管理員)
   Reporting Services 應用程式的 URL 會當做 URL 保留項目定義在 HTTP.SYS 中。 URL 保留項目會定義 Web 應用程式之 URL 端點的語法。 當您在報表伺服器上設定應用程式時，會同時針對報表伺服器 Web 服務和報表管理員定義 URL 保留項目。 當您透過安裝程式或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具設定 URL 時，將會自動為您建立 URL 保留項目：  
@@ -32,7 +32,7 @@ ms.locfileid: "48905978"
  安裝程式和此工具也都將指派報表伺服器服務之 URL 的權限、檢查是否有重複的執行個體，然後將此 URL 保留項目加入到 HTTP.SYS。 絕對不要直接使用 HttpCfg.exe 或其他工具來建立或修改 Reporting Services URL 保留項目。 如果您略過某個步驟或是設定無效的值，您將會遇到可能很難診斷或修復的問題。  
   
 > [!NOTE]  
->  HTTP.SYS 是一個作業系統元件，它可接聽網路要求，並將這些要求路由傳送到要求佇列。 在這一版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，HTTP.SYS 會建立及維護報表伺服器 Web 服務和報表管理員的要求佇列。 將不再使用 Internet Information Services (IIS) 來主控或存取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式。 如需有關 HTTP.SYS 功能的詳細資訊，請參閱 MSDN 上的＜ [HTTP 伺服器 API](http://go.microsoft.com/fwlink/?LinkId=92652) ＞。  
+>  HTTP.SYS 是一個作業系統元件，它可接聽網路要求，並將這些要求路由傳送到要求佇列。 在這一版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，HTTP.SYS 會建立及維護報表伺服器 Web 服務和報表管理員的要求佇列。 將不再使用 Internet Information Services (IIS) 來主控或存取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式。 如需有關 HTTP.SYS 功能的詳細資訊，請參閱 MSDN 上的＜ [HTTP 伺服器 API](https://go.microsoft.com/fwlink/?LinkId=92652) ＞。  
   
 ##  <a name="ReportingServicesURLs"></a> Reporting Services 中的 URL  
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝中，您可以透過 URL 存取下列工具、應用程式和項目：  
@@ -51,7 +51,7 @@ ms.locfileid: "48905978"
 >  本主題並未說明可存取報表產生器或報表伺服器上儲存之特定報表的 URL。 如需這些項目之 URL 存取的詳細資訊，請參閱《 [線上叢書》中的](../access-report-server-items-using-url-access.md) 使用 URL 存取權存取報表伺服器項目 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ##  <a name="URLreservation"></a> URL 保留項目和註冊  
- URL 保留項目會定義可用於存取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式的 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 將會保留一個或多個 URL 以供 HTTP.SYS 中的報表伺服器 Web 服務和報表管理員使用，然後在此服務啟動時加以註冊。 報表產生器和報表的 URL 是根據報表伺服器 Web 服務的 URL 保留項目。 您可以將參數附加到 URL，透過此 Web 服務開啟報表產生器或報表。 保留項目和註冊是由 HTTP.SYS 所提供。 如需詳細資訊，請參閱 MSDN 上的＜ [命名空間保留、註冊和路由](http://go.microsoft.com/fwlink/?LinkId=92653) ＞。  
+ URL 保留項目會定義可用於存取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式的 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 將會保留一個或多個 URL 以供 HTTP.SYS 中的報表伺服器 Web 服務和報表管理員使用，然後在此服務啟動時加以註冊。 報表產生器和報表的 URL 是根據報表伺服器 Web 服務的 URL 保留項目。 您可以將參數附加到 URL，透過此 Web 服務開啟報表產生器或報表。 保留項目和註冊是由 HTTP.SYS 所提供。 如需詳細資訊，請參閱 MSDN 上的＜ [命名空間保留、註冊和路由](https://go.microsoft.com/fwlink/?LinkId=92653) ＞。  
   
  *「URL 保留」* 是建立 Web 應用程式的 URL 端點，並將其儲存在 HTTP.SYS 中的一項程序。 HTTP.SYS 是所有定義於電腦上之 URL 保留項目的通用儲存機制，而且會定義一組通用規則來保證唯一的 URL 保留項目。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48905978"
   
  如果您停止此服務或是回收此 Web 服務或報表管理員應用程式定義域，URL 會取消註冊。 如果您在此服務執行時修改 URL 保留項目，報表伺服器將會立即回收應用程式定義域，好讓舊的 URL 可以取消註冊，並使用新的 URL。  
   
- 幾個簡單範例將可說明 URL 保留項目的概念，以及它如何與用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式的 URL 位址相關。 要注意的重點是 URL 保留項目有不同的語法比您用來存取應用程式的 URL:  
+ 幾個簡單範例將可說明 URL 保留項目的概念，以及它如何與用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式的 URL 位址相關。 請注意一個要點，URL 保留項目的語法與用於存取此應用程式 URL 的語法不同：  
   
 |HTTP.SYS 中的 URL 保留項目|URL|說明|  
 |---------------------------------|---------|-----------------|  

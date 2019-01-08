@@ -28,12 +28,12 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 59a80fcb9fdbd758f1ca76e73d279cdc6b3810d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 619f96921f1fbbaf3d1eec8d2c89a25491b46180
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137624"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364770"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>加入、變更或刪除地圖或地圖圖層 (報表產生器及 SSRS)
   地圖是圖層的集合。 將地圖加入至報表時，您會定義第一個圖層。 您可以使用地圖圖層精靈建立其他圖層。  
@@ -57,7 +57,7 @@ ms.locfileid: "48137624"
   
  [地圖] 窗格的底部為地圖檢視區域。 若要變更地圖的置中或縮放選項，請使用方向鍵調整檢視置中，並使用滑動軸調整縮放層級。  
   
- 如需圖層的詳細資訊，請參閱[Maps&#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)。  
+ 如需圖層的詳細資訊，請參閱 [地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -66,7 +66,7 @@ ms.locfileid: "48137624"
   
 -   從功能區中，按一下 [插入] 功能表上的 [地圖]，然後按一下 [地圖精靈]。 此精靈可讓您將圖層加入至現有的地圖。 地圖精靈與地圖圖層精靈的大部分精靈頁面都相同。  
   
-     如需詳細資訊，請參閱[地圖精靈和地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
+     如需詳細資訊，請參閱 [地圖精靈與地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48137624"
   
 -   執行地圖圖層精靈。 這個精靈可讓您變更您使用地圖圖層精靈所建立的圖層選項。 在 [地圖] 窗格中，以滑鼠右鍵按一下此圖層，然後在工具列上按一下圖層精靈按鈕 (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
   
-     如需詳細資訊，請參閱[地圖精靈和地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
+     如需詳細資訊，請參閱 [地圖精靈與地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48137624"
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
   
-2.  在工具列上，按一下 [新增圖層] 按鈕，然後從下拉式清單中按一下您要新增的圖層類型：[點]、[線條] 或 [多邊形]。  
+2.  在工具列上，按一下**加入圖層**按鈕，然後從下拉式清單中，按一下您想要新增的圖層類型：**點**，**線條**，或**多邊形**。  
   
     > [!NOTE]  
     >  雖然您可以手動加入地圖圖層並加以設定，我們建議您最好使用地圖圖層精靈來新增圖層。 若要在 [地圖] 窗格工具列啟動精露，請以滑鼠右鍵按一下圖層精靈按鈕 (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
@@ -125,9 +125,9 @@ ms.locfileid: "48137624"
   
 1.  選取 [地圖點屬性] 對話方塊上的 [一般] 來變更下列地圖元素的標籤、工具提示和標記類型選項：  
   
-    -   點圖層上的所有動態或內嵌的點。 點的色彩規則、大小規則與標記類型規則會覆寫這些選項。 若要覆寫特定內嵌點的選項，請使用[地圖內嵌點屬性對話方塊、 標記](../map-embedded-point-properties-dialog-box-marker.md)頁面。  
+    -   點圖層上的所有動態或內嵌的點。 點的色彩規則、大小規則與標記類型規則會覆寫這些選項。 若要覆寫特定內嵌點的選項，請使用 [地圖內嵌點屬性對話方塊、標記](../map-embedded-point-properties-dialog-box-marker.md) 頁面。  
   
-    -   在多邊形圖層上，所有動態或內嵌之多邊形的中心點。 中心點的色彩規則、大小規則與標記類型規則會覆寫這些選項。 若要覆寫特定中心點的選項，請使用[地圖內嵌點屬性對話方塊、標記](../map-embedded-point-properties-dialog-box-marker.md)頁面。  
+    -   在多邊形圖層上，所有動態或內嵌之多邊形的中心點。 中心點的色彩規則、大小規則與標記類型規則會覆寫這些選項。 若要覆寫特定中心點的選項，請使用 [地圖內嵌點屬性對話方塊、標記](../map-embedded-point-properties-dialog-box-marker.md) 頁面。  
   
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
   
@@ -161,7 +161,7 @@ ms.locfileid: "48137624"
 4.  在 [檔案名稱] 中，鍵入 ESRI 形狀檔的位置，或按一下 [瀏覽] 以選取 ESRI 形狀檔。  
   
     > [!NOTE]  
-    >  如果此形狀檔在您的本機電腦上，空間資料會內嵌在報表定義中。 若要在處理報表時動態擷取資料，您必須將 ESRI .shp 檔及其支援檔案 .dbf 上傳至報表伺服器。 如需詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件](http://go.microsoft.com/fwlink/?linkid=121312) 的＜如何：上傳檔案或報表 (報表管理員)＞。  
+    >  如果此形狀檔在您的本機電腦上，空間資料會內嵌在報表定義中。 若要在處理報表時動態擷取資料，您必須將 ESRI .shp 檔及其支援檔案 .dbf 上傳至報表伺服器。 如需詳細資訊，請參閱 「 如何：上傳檔案或報表 （報表管理員） 」 中[Reporting Services 文件](https://go.microsoft.com/fwlink/?linkid=121312)SQL Server 線上叢書 》 中。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -190,7 +190,7 @@ ms.locfileid: "48137624"
 2.  在工具列上，按一下 [加入圖層] 按鈕，然後從下拉式清單中按一下 [圖格圖層]。  
   
     > [!NOTE]  
-    >  如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](http://go.microsoft.com/fwlink/?LinkId=151371) 和 [隱私權聲明](http://go.microsoft.com/fwlink/?LinkId=151372)。  
+    >  如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](https://go.microsoft.com/fwlink/?LinkId=151371) 和 [隱私權聲明](https://go.microsoft.com/fwlink/?LinkId=151372)。  
   
 3.  以滑鼠右鍵按一下 [圖層] 窗格中的圖格圖層，然後按一下 [圖格屬性]。  
   
@@ -283,6 +283,6 @@ ms.locfileid: "48137624"
   
 ## <a name="see-also"></a>另請參閱  
  [地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [報表疑難排解： 地圖報表&#40;報表產生器及 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [報表疑難排解：將報表對應&#40;報表產生器及 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

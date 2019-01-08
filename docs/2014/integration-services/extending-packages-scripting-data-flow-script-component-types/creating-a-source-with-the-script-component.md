@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce31c50c613809ba865e4ec28b5712cd8b67ac88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 688c62101d7831966b8c4c7a96d232272c3329de
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197288"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375210"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>以指令碼元件建立來源
   您在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用來源元件，以從資料來源載入資料，進而將其傳遞至下游轉換與目的地。 通常您會透過現有的連接管理員來連接到資料來源。  
@@ -104,7 +102,7 @@ ms.locfileid: "48197288"
   
 1.  覆寫 `AcquireConnections` 方法以連接至外部資料來源。 從連接管理員擷取連接物件，或是必要的連接資訊。  
   
-2.  如果您可以同時載入所有的來源資料，請覆寫 `PreExecute` 方法以載入資料。 例如，您可以針對連至 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接，執行 `SqlCommand`，並同時將所有的來源資料載入 `SqlDataReader`。 如果您必須一次載入一個資料列的來源資料 (例如，在讀取文字檔時)，可以在 `CreateNewOutputRows` 中循環使用資料列時載入資料。  
+2.  如果您可以同時載入所有的來源資料，請覆寫 `PreExecute` 方法以載入資料。 例如，您可以針對連至 `SqlCommand` 資料庫的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接，執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並同時將所有的來源資料載入 `SqlDataReader`。 如果您必須一次載入一個資料列的來源資料 (例如，在讀取文字檔時)，可以在 `CreateNewOutputRows` 中循環使用資料列時載入資料。  
   
 3.  使用覆寫的 `CreateNewOutputRows` 方法將新資料列加入空的輸出緩衝區，並將新輸出資料列中的每個資料行填入值。 使用每個輸出緩衝區的 `AddRow` 方法，加入空的新資料列，然後設定每個資料行的值。 通常您會複製從外部來源載入的資料行值。  
   
@@ -136,7 +134,7 @@ ms.locfileid: "48197288"
   
 5.  在 [指令碼] 頁面上，按一下 [編輯指令碼]，並輸入以下指令碼。 然後關閉指令碼開發環境以及 [指令碼轉換編輯器]。  
   
-6.  建立和設定目的地元件，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，或是在[使用指令碼元件建立目的地](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件，它需要 **AddressID** 和 **City** 資料行。 然後將來源元件連接到目的地  (不需要任何轉換，就可以直接將來源連接到目的地)。您可以在 `AdventureWorks` 資料庫中執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，以建立目的地資料表：  
+6.  建立和設定目的地元件，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，或是在[使用指令碼元件建立目的地](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件，它需要 **AddressID** 和 **City** 資料行。 然後將來源元件連接到目的地  (不需要任何轉換，就可以直接將來源連接到目的地)。您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料庫中執行下列 `AdventureWorks` 命令，以建立目的地資料表：  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -269,7 +267,7 @@ ms.locfileid: "48197288"
   
 6.  在 [指令碼] 頁面上，按一下 [編輯指令碼]，並輸入以下指令碼。 然後關閉指令碼開發環境以及 [指令碼轉換編輯器]。  
   
-7.  建立和設定目的地元件，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，或是在[使用指令碼元件建立目的地](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件。 然後將來源元件連接到目的地  (不需要任何轉換，就可以直接將來源連接到目的地)。您可以在 `AdventureWorks` 資料庫中執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令，以建立目的地資料表：  
+7.  建立和設定目的地元件，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，或是在[使用指令碼元件建立目的地](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中所示範的範例目的地元件。 然後將來源元件連接到目的地  (不需要任何轉換，就可以直接將來源連接到目的地)。您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料庫中執行下列 `AdventureWorks` 命令，以建立目的地資料表：  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -388,7 +386,7 @@ ms.locfileid: "48197288"
     }  
     ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用指令碼元件建立目的地](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   

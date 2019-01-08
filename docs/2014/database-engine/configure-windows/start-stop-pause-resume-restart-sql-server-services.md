@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, start and stop services
@@ -41,12 +40,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8e451c01400fcf32a3676e0904bf44f226718985
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b70ae7a69ce316b98c892c4dbf4059bfbc97ca4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140705"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360900"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務
   本主題描述如何啟動、 停止、 暫停、 繼續或重新啟動[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，則[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式，或有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的瀏覽器服務[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]， **net**在命令提示字元中，命令[!INCLUDE[tsql](../../includes/tsql-md.md)]，或 PowerShell。  
@@ -116,7 +115,7 @@ ms.locfileid: "48140705"
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> 權限  
- 根據預設，只有本機 Administrators 群組的成員能夠啟動、停止、暫停、繼續或重新啟動服務。 若要將管理服務的能力授與非系統管理員，請參閱 [How to grant users rights to manage services in Windows Server 2003](http://support.microsoft.com/kb/325349)(如何在 Windows Server 2003 中，將管理服務的權限授與使用者)。 (其他 Windows 版本的程序都很相似)。  
+ 根據預設，只有本機 Administrators 群組的成員能夠啟動、停止、暫停、繼續或重新啟動服務。 若要將管理服務的能力授與非系統管理員，請參閱 [How to grant users rights to manage services in Windows Server 2003](https://support.microsoft.com/kb/325349)(如何在 Windows Server 2003 中，將管理服務的權限授與使用者)。 (其他 Windows 版本的程序都很相似)。  
   
  停止[!INCLUDE[ssDE](../../includes/ssde-md.md)]利用[!INCLUDE[tsql](../../includes/tsql-md.md)]`SHUTDOWN`命令需要的成員資格**sysadmin**或是**serveradmin**固定伺服器角色，而且無法移轉。  
   

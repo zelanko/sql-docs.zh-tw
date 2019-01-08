@@ -1,5 +1,5 @@
 ---
-title: 資料表屬性 |Microsoft 文件
+title: Analysis Services 表格式模型資料表屬性 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c479fd46f5303d95e5c0390eb97246f8eeb08890
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e5104eacafe60ab3fd1ea1ff29cc64b8453e4ff7
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040442"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072005"
 ---
-# <a name="table-properties"></a>Table Properties 
+# <a name="table-properties"></a>資料表屬性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   這篇文章描述表格式模型資料表屬性。 這裡所述的屬性與 [編輯資料表屬性] 對話方塊中的屬性不同，後者會定義從來源匯入的資料行。  
   
@@ -27,11 +27,11 @@ ms.locfileid: "34040442"
 -   [設定資料表屬性設定](#bkmk_config_prop)  
   
 ##  <a name="bkmk_properties"></a> 資料表屬性  
- **Basic**  
+ **基本**  
   
-|屬性|預設值|說明|  
+|屬性|預設值|描述|  
 |--------------|---------------------|-----------------|  
-|**連接名稱**|\<連線名稱 >|資料表之資料來源連接的名稱。<br /><br /> 若要編輯連接，請按一下此按鈕。|  
+|**連接名稱**|\<連線名稱 >|資料表的資料來源的連接名稱。<br /><br /> 若要編輯連接，請按一下此按鈕。|  
 |**Hidden**|False|指定是否在報表用戶端欄位清單中隱藏資料表。|  
 |**資料分割**||資料表的資料分割無法在 **[屬性]** 視窗中顯示。 若要檢視、建立或編輯資料分割，請按一下此按鈕以開啟 [資料分割管理員]。|  
 |**來源資料**||資料表的來源資料無法在 **[屬性]** 視窗中顯示。 若要檢視或編輯來源資料，請按一下此按鈕以開啟 [編輯資料表屬性] 對話方塊。|  
@@ -40,9 +40,9 @@ ms.locfileid: "34040442"
   
  **報表屬性**  
   
- 如需詳細的說明與報表屬性的組態資訊，請參閱[Power View 報表屬性](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)。  
+ 詳細的描述和報告屬性的組態資訊，請參閱[Power View 報表屬性](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)。  
   
-|屬性|預設值|說明|  
+|屬性|預設值|描述|  
 |--------------|---------------------|-----------------|  
 |**預設欄位集**|||  
 |資料表行為|||  

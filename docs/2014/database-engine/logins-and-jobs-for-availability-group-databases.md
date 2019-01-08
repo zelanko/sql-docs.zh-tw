@@ -14,12 +14,12 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: af539339b2a0a2792fa5ac9838eb7ed297fa29f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8653161775a35e326a7ed85ed982f1cb75bee03
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062228"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361491"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>管理可用性群組之資料庫的登入及工作 (SQL Server)
   您應該在每個 AlwaysOn 可用性群組的主要資料庫及其對應的次要資料庫上，固定維護一組相同的使用者登入和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理程式作業。 登入和作業必須在裝載可用性群組之可用性複本的每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體上重新產生。  
@@ -30,7 +30,7 @@ ms.locfileid: "48062228"
   
      裝載可用性群組之可用性複本的伺服器執行個體可能會以不同的磁帶機代號或之類的方式予以個別設定。 每個可用性複本的作業都必須允許這類差異。  
   
-     請注意，備份作業可以使用 [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) 函數根據可用性群組備份喜好設定，識別本機複本是否為備份慣用的複本。 使用 [維護計畫精靈](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) 建立的備份作業原本使用此函數。 至於其他備份作業，我們建議您使用此函數做為備份作業中的條件，如此備份作業就只會在慣用複本上執行。 如需詳細資訊，請參閱 <<c0> [ 作用中次要複本： 備份在次要複本 （AlwaysOn 可用性群組） 上](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+     請注意，備份作業可以使用 [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) 函數根據可用性群組備份喜好設定，識別本機複本是否為備份慣用的複本。 使用 [維護計畫精靈](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) 建立的備份作業原本使用此函數。 至於其他備份作業，我們建議您使用此函數做為備份作業中的條件，如此備份作業就只會在慣用複本上執行。 如需詳細資訊，請參閱[作用中次要複本：在次要複本 （AlwaysOn 可用性群組） 上備份](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
 -   **登入**  
   
@@ -48,12 +48,12 @@ ms.locfileid: "48062228"
 ##  <a name="SSauthentication"></a> Logins Of Applications That Use SQL Server Authentication or a Local Windows Login  
  如果應用程式使用 SQL Server 驗證或本機 Windows 登入，可能會由於 SID 不相符造成遠端 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體無法解析該應用程式的登入。 SID 不相符將導致此登入成為遠端伺服器執行個體上的被遺棄使用者。 若應用程式是在容錯移轉後連接到鏡像資料庫或記錄傳送資料庫，或者連接到從備份初始化的複寫訂閱者資料庫，可能就會發生這個問題。  
   
- 建議您在設定這類應用程式而要使用由遠端 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體所裝載的資料庫時，應採取預防措施以避免此問題。 預防的方法包括從本機 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體傳送登入和密碼到遠端 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。 如需如何預防此問題的詳細資訊，請參閱知識庫文件 918992：[如何在SQL Server 的執行個體之間傳送登入和密碼](http://support.microsoft.com/kb/918992/)。  
+ 建議您在設定這類應用程式而要使用由遠端 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體所裝載的資料庫時，應採取預防措施以避免此問題。 預防的方法包括從本機 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體傳送登入和密碼到遠端 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。 如需如何預防此問題的詳細資訊，請參閱知識庫文件 918992：[如何在 SQL Server 的執行個體之間傳送登入和密碼](https://support.microsoft.com/kb/918992/)。  
   
 > [!NOTE]  
 >  此問題會影響位於不同電腦上的 Windows 本機帳戶。 但是，網域帳戶不至於發生此問題，因為每一部電腦上的 SID 都相同。  
   
- 如需詳細資訊，請參閱 Database Engine 部落格文章： [Orphaned Users with Database Mirroring and Log Shipping](http://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (孤立的使用者與資料庫鏡像及記錄傳送)。  
+ 如需詳細資訊，請參閱 Database Engine 部落格文章： [Orphaned Users with Database Mirroring and Log Shipping](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (孤立的使用者與資料庫鏡像及記錄傳送)。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   

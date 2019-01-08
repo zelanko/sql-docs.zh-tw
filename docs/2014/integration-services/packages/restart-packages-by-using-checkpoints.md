@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 703514e884ede08db13fbb70f5fa27247e75503b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 945bb384f522aa483c490fccd92768078a2d315a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133374"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365052"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>使用檢查點來重新啟動封裝
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可以從失敗點重新啟動失敗的封裝，而無需重新執行整個封裝。 如果封裝設定為使用檢查點，則封裝執行的相關資訊會寫入檢查點檔案。 當失敗的封裝重新執行時，檢查點檔案會用於從失敗點重新啟動封裝。 如果封裝順利執行，則會刪除檢查點檔案，然後在下次封裝執行時重新建立檢查點檔案。  
@@ -33,7 +32,7 @@ ms.locfileid: "48133374"
   
 -   避免重複彙總值。 例如，使用資料流程工作執行每個彙總以計算許多彙總 (例如，平均和總和) 的封裝，可以在計算一個彙總失敗之後重新啟動，且只重新計算該彙總。  
   
- 如果封裝設定為使用檢查點，則 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會擷取檢查點檔案中的重新啟動點。 失敗的容器類型和功能的實作 (例如，交易) 會影響檢查點檔案中記錄的重新啟動點。 檢查點檔案中也會擷取變數目前的值。 然而，變數的值具有`Object`資料型別不會儲存在檢查點檔案。  
+ 如果封裝設定為使用檢查點，則 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會擷取檢查點檔案中的重新啟動點。 失敗的容器類型和功能的實作 (例如，交易) 會影響檢查點檔案中記錄的重新啟動點。 檢查點檔案中也會擷取變數目前的值。 然而，具有 `Object` 資料類型之變數的值不會儲存於檢查點檔案中。  
   
 ## <a name="defining-restart-points"></a>定義重新啟動點  
  封裝單一工作的工作主機容器是可以重新啟動的最小基本單位工作。 「Foreach 迴圈」容器和交易容器也會視為最小基本單位工作。  
@@ -43,7 +42,7 @@ ms.locfileid: "48133374"
 > [!NOTE]  
 >  在相同的封裝中使用檢查點與交易可能會造成非預期的結果。 例如，當封裝失敗並從檢查點重新啟動時，封裝可能會重複已經過成功認可的交易。  
   
- 不會儲存 For 迴圈和 Foreach 迴圈容器的檢查點資料。 當封裝重新啟動時，For 迴圈和 Foreach 迴圈容器及其子容器會再次執行。 如果迴圈中的子容器順利執行，則不會在檢查點檔案中記錄它，而是重新執行。 如需詳細資訊和因應措施，請參閱 [For 迴圈或 Foreach 迴圈容器項目都不接受 SSIS 檢查點](http://go.microsoft.com/fwlink/?LinkId=241633)。  
+ 不會儲存 For 迴圈和 Foreach 迴圈容器的檢查點資料。 當封裝重新啟動時，For 迴圈和 Foreach 迴圈容器及其子容器會再次執行。 如果迴圈中的子容器順利執行，則不會在檢查點檔案中記錄它，而是重新執行。 如需詳細資訊和因應措施，請參閱 [For 迴圈或 Foreach 迴圈容器項目都不接受 SSIS 檢查點](https://go.microsoft.com/fwlink/?LinkId=241633)。  
   
  如果封裝重新啟動，則不會重新載入封裝組態，該封裝會使用寫入檢查點檔案的組態資訊。 這會確保封裝在重新執行時使用與其失敗時相同的組態。  
   
@@ -81,13 +80,13 @@ ms.locfileid: "48133374"
   
 ### <a name="to-configure-the-checkpoint-properties"></a>設定檢查點屬性  
   
--   [設定檢查點以重新啟動失敗的套件](../configure-checkpoints-for-restarting-a-failed-package.md)  
+-   [設定檢查點以重新啟動失敗的封裝](../configure-checkpoints-for-restarting-a-failed-package.md)  
   
 ## <a name="external-resources"></a>外部資源  
   
--   位於 social.technet.microsoft.com 的技術文件： [發生容錯移轉或失敗之後 SSIS 封裝自動重新啟動](http://go.microsoft.com/fwlink/?LinkId=200407)。  
+-   位於 social.technet.microsoft.com 的技術文件： [發生容錯移轉或失敗之後 SSIS 封裝自動重新啟動](https://go.microsoft.com/fwlink/?LinkId=200407)。  
   
--   support.microsoft.com 上的技術支援文件： [For 迴圈或 Foreach 迴圈容器項目都不接受 SSIS 檢查點](http://go.microsoft.com/fwlink/?LinkId=241633)。  
+-   support.microsoft.com 上的技術支援文件： [For 迴圈或 Foreach 迴圈容器項目都不接受 SSIS 檢查點](https://go.microsoft.com/fwlink/?LinkId=241633)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

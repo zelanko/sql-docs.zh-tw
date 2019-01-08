@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergepullsubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e6e3a2ddd7c046051b0d7f89097c7c0a075ca6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98d31c0d4895573059104d43a1ebddd879ba1967
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659009"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813120"
 ---
 # <a name="spaddmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,28 +44,28 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_發行集_**'**  
  這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_發行者_**'**  
  這是發行者的名稱。 *發行者*已**sysname**，預設值是本機伺服器名稱。 發行者必須是有效伺服器。  
   
- [  **@publisher_db =**] **'***publisher_db***'**  
+ [  **@publisher_db =**] **'**_publisher_db_**'**  
  這是發行者資料庫的名稱。 *publisher_db*已**sysname**，預設值是 NULL。  
   
- [  **@subscriber_type=**] **'***subscriber_type***'**  
+ [  **@subscriber_type=**] **'**_subscriber_type_**'**  
  這是訂閱者的類型。 *subscriber_type*已**nvarchar(15)**，而且可以是**全域**，**本機**或是**匿名**。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本中，本機訂閱稱為客訂閱，而全域訂閱稱為主訂閱。  
   
  [  **@subscription_priority=**] *subscription_priority*  
  這是訂閱優先權。 *subscription_priority*已**實際**，預設值是 NULL。 本機和匿名訂閱，是優先權就是**0.0**。 在偵測到衝突時，預設解析程式會利用優先權挑選贏的一方。 如果是全域訂閱者，訂閱優先權必須小於 100，也就是發行者的優先權。  
   
- [  **@sync_type=**] **'***sync_type***'**  
+ [  **@sync_type=**] **'**_sync_type_**'**  
  這是訂閱同步處理類型。 *sync_type*已**nvarchar(15)**，預設值是**自動**。 可以是**自動**或是**無**。 如果**自動**，結構描述和發行資料表的初始資料傳送給 「 訂閱者 」 第一次。 如果**無**，便假設訂閱者端已有的結構描述和初始資料已發行資料表。 一律會傳送系統資料表和資料。  
   
 > [!NOTE]  
 >  不建議您指定的值是**無**。  
   
- [  **@description=**] **'***描述***'**  
+ [  **@description=**] **'**_描述_**'**  
  這是這項提取訂閱的簡要描述。 *描述*已**nvarchar(255)**，預設值是 NULL。 這個值會顯示在複寫監視器**易記名稱**資料行，可用來排序受監視發行集的訂閱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -89,9 +88,9 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergepullsubscription_agent &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
- [sp_changemergepullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

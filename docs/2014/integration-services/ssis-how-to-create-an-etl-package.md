@@ -1,11 +1,10 @@
 ---
-title: SSIS 教學課程： 建立簡易 ETL 套件 |Microsoft Docs
+title: SSIS 教學課程：建立簡易 ETL 套件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS, tutorials
@@ -18,12 +17,12 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b246e9d0badb30027d2971437ebdde5f0d1effde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a99169168eb21f0a7d42f133e7e882141c776e6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066598"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357901"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS 教學課程：建立簡易 ETL 封裝
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 是用於建立高效能資料整合方案，包括擷取、 轉換和載入 (ETL) 封裝的資料倉儲的平台。 SSIS 包含建立和偵錯封裝的圖形工具及精靈；執行工作流程功能 (例如 FTP 作業、執行 SQL 陳述式和傳送電子郵件訊息) 的工作；擷取和載入資料的資料來源和目的地；清除、彙總、合併和複製資料的轉換；管理封裝執行和儲存的管理服務 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ；以及設計 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件模型之程式的應用程式開發介面 (API)。  
@@ -40,7 +39,7 @@ ms.locfileid: "48066598"
   
  若要使用這個教學課程，系統上必須已安裝下列元件：  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的 **資料庫的** 。 為了加強安全性，依預設，不會安裝範例資料庫。 若要下載 **AdventureWorksDW2012** 資料庫，請參閱 [Adventure Works for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=275026)。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的 **資料庫的** 。 為了加強安全性，依預設，不會安裝範例資料庫。 若要下載 **AdventureWorksDW2012** 資料庫，請參閱 [Adventure Works for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=275026)。  
   
     > [!IMPORTANT]  
     >  當您附加資料庫 (\*.mdf 檔案) 時， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 預設會搜尋 .ldf 檔案。 您必須先手動移除 .ldf 檔案，然後再按一下 **[附加資料庫]** 對話方塊中的 [確定]。  
@@ -49,7 +48,7 @@ ms.locfileid: "48066598"
   
 -   範例資料。 範例資料隨附在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 課程封裝中。 若要下載範例資料和課程封裝，請執行下列動作。  
   
-    1.  導覽至 [Integration Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  導覽至 [Integration Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  按一下 **[下載]** 索引標籤。  
   
@@ -59,19 +58,19 @@ ms.locfileid: "48066598"
  [第 1 課：建立專案和基本套件](lesson-1-create-a-project-and-basic-package-with-ssis.md)  
  在這一課，您將建立一個從單個一般檔案擷取資料的簡易 ETL 封裝，使用查閱轉換元件來轉換資料，最後將結果載入至事實資料表目的地。  
   
- [第 2 課：新增迴圈](lesson-2-adding-looping-with-ssis.md)  
+ [第 2 課：加入迴圈](lesson-2-adding-looping-with-ssis.md)  
  在這一課，您將擴充在第 1 課建立的封裝，利用新的迴圈功能，將多個一般檔案擷取到單一資料流程處理序中。  
   
  [第 3 課：新增記錄](lesson-3-add-logging-with-ssis.md)  
  在這一課，您將擴充在第 2 課建立的封裝，來利用新的記錄功能。  
   
- [課程 4：新增錯誤流程重新導向](lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [第 4 課：加入錯誤流程重新導向](lesson-4-add-error-flow-redirection-with-ssis.md)  
  在這一課，您將擴充在第 3 課建立的封裝，來利用新的錯誤輸出組態。  
   
- [第 5 課：新增套件部署模型的套件設定](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+ [第 5 課：加入封裝部署模型的封裝組態](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
  在這一課，您將擴充在第 4 課建立的封裝，來利用新的封裝組態選項。  
   
- [課程 6：搭配專案部屬模型使用參數](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [第 6 課：搭配專案部署模型使用參數](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
  在這一課，您將擴充在第 5 課建立的封裝，以充分搭配專案部署模型來使用新的參數。  
   
   

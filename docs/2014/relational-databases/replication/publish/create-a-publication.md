@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], creating
@@ -16,12 +15,12 @@ ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ce1f698224a7e1938ac30e94565033e3c32f5c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 142dd6544cafde4cea2839f955f23685a3a673f5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195568"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365963"
 ---
 # <a name="create-a-publication"></a>建立發行集
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來建立 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的發行集。  
@@ -49,7 +48,7 @@ ms.locfileid: "48195568"
 -   發行集與發行項名稱不能包含下列任何字元：%、\*、[、]、|、:、"、? '、 \、 /、 \< ，>。 如果資料庫中的物件包含這些字元的任何一個，而且您要複寫它們，則必須指定一個不同於 [發行項屬性 - \<發行項>] 對話方塊中之物件名稱的發行項名稱，您可以從精靈的 [發行項] 頁面存取此對話方塊。  
   
 ###  <a name="Security"></a> 安全性  
- 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](http://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
+ 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  使用「新增發行集精靈」建立發行集並定義發行項。 建立發行集之後，您可以在 [發行集屬性 - \<發行集>] 對話方塊中，檢視及修改發行集屬性。 如需從 Oracle 資料庫建立發行集的詳細資訊，請參閱[從 Oracle 資料庫建立發行集](create-a-publication-from-an-oracle-database.md)。  
@@ -163,16 +162,16 @@ ms.locfileid: "48195568"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別以建立連線至發行者。  
   
-2.  為發行集資料庫建立 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 類別的執行個體、將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 執行個體，並呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果<xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>傳回`false`，確認此資料庫確實存在。  
+2.  為發行集資料庫建立 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 類別的執行個體、將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 執行個體，並呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 傳回 `false`，請確認此資料庫確實存在。  
   
 3.  如果 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> 屬性為 `false`，請將它設定為 `true`。  
   
-4.  如果是交易式發行集，請檢查 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> 屬性的值。 如果此屬性為`true`，記錄讀取器代理程式作業已存在這個資料庫。 如果此屬性為`false`，執行下列動作：  
+4.  如果是交易式發行集，請檢查 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> 屬性的值。 如果這個屬性為 `true`，則表示記錄讀取器代理程式作業已存在此資料庫中。 如果這個屬性為 `false`，請執行下列動作：  
   
-    -   設定<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A>並<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A>或<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A>的欄位<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A>提供的認證[!INCLUDE[msCoName](../../../includes/msconame-md.md)]執行記錄讀取器代理程式的 Windows 帳戶。  
+    -   設定 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> 或 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> 欄位，以提供執行記錄讀取器代理程式所使用之 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 帳戶的認證。  
   
         > [!NOTE]  
-        >  設定<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A>的成員所建立的發行集時不需`sysadmin`固定的伺服器角色。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../security/replication-agent-security-model.md)。  
+        >  當發行集是由 `sysadmin` 固定伺服器角色的成員所建立時，不需要設定 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A>。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../security/replication-agent-security-model.md)。  
   
     -   (選擇性) 在使用「SQL Server 驗證」連接到「發行者」時，設定 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (或 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentPublisherSecurity%2A> ) 欄位。  
   
@@ -191,7 +190,7 @@ ms.locfileid: "48195568"
     -   <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 和 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 欄位，以提供執行快照集代理程式所使用之 Windows 帳戶的認證。 當快照集代理程式要連接本機散發者及進行任何遠端連接 (使用 Windows 驗證) 時，也會使用此帳戶。  
   
         > [!NOTE]  
-        >  設定<xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>的成員所建立的發行集時不需`sysadmin`固定的伺服器角色。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../security/replication-agent-security-model.md)。  
+        >  當發行集是由 `sysadmin` 固定伺服器角色的成員所建立時，不需要設定 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../security/replication-agent-security-model.md)。  
   
     -   (選擇性) 在使用「SQL Server 驗證」連接到發行者時，請設定 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 的 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 和 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (或 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A> ) 欄位。  
   
@@ -210,9 +209,9 @@ ms.locfileid: "48195568"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與發行者的連接。  
   
-2.  為發行集資料庫建立 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 類別的執行個體、將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 執行個體，並呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果<xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>傳回`false`，確認此資料庫確實存在。  
+2.  為發行集資料庫建立 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 類別的執行個體、將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 執行個體，並呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 傳回 `false`，請確認此資料庫確實存在。  
   
-3.  如果<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A>屬性是`false`，將它設定為`true`，並呼叫<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>。  
+3.  如果 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 屬性為 `false`，請將它設定為 `true` 然後呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>。  
   
 4.  建立 <xref:Microsoft.SqlServer.Replication.MergePublication> 類別的執行個體，並為此物件設定下列屬性：  
   
@@ -225,7 +224,7 @@ ms.locfileid: "48195568"
     -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 欄位，可提供執行快照集代理程式所使用之 Windows 帳戶的認證。 當快照集代理程式要連接本機散發者及進行任何遠端連接 (使用 Windows 驗證) 時，也會使用此帳戶。  
   
         > [!NOTE]  
-        >  設定<xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>的成員所建立的發行集時不需`sysadmin`固定的伺服器角色。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../security/replication-agent-security-model.md)。  
+        >  當發行集是由 `sysadmin` 固定伺服器角色的成員所建立時，不需要設定 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../security/replication-agent-security-model.md)。  
   
     -   (選擇性) 使用包含的邏輯 OR 運算子 (Visual C# 中的 `|` 和 Visual Basic 中的 `Or`)，並使用排除的邏輯 OR 運算子 (Visual C# 中的 `^` 和 Visual Basic 中的 `Xor`)，為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性設定 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
   

@@ -1,22 +1,21 @@
 ---
-title: 步驟 1：複製第 1 課套件 | Microsoft Docs
+title: 步驟 1：複製第 1 課套件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0237707fb5342b490806e3d0b8a2f32b3929ab38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87b0564ddd3fada522b70858341da4ab08c5092e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118648"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376062"
 ---
 # <a name="step-1-copying-the-lesson-1-package"></a>步驟 1：複製第 1 課的套件
   在這項工作中，您將為第 1 課所建立的 Lesson 1.dtsx 套件建立複本。 如果您並未完成第 1 課，可以將此教學課程中隨附之已完成的第 1 課封裝加入至專案中，然後改為複製該封裝。 在第 2 課其餘的課程中，您將使用這個新的複本。  
@@ -47,13 +46,13 @@ ms.locfileid: "48118648"
   
 2.  在方案總管中，以滑鼠右鍵按一下 [SSIS 套件]，然後按一下 [新增現有的套件]。  
   
-3.  在 [新增現有套件的複本] 對話方塊的 [套件位置] 中，選取 [檔案系統]。  
+3.  在 [加入現有封裝的複本] 對話方塊的 [封裝位置] 中，選取 [檔案系統]。  
   
-4.  按一下瀏覽 **(…)** 按鈕，導覽至電腦上的 [Lesson 1.dtsx]，然後按一下 [開啟]。  
+4.  按一下瀏覽 **(…)** 按鈕，巡覽至電腦上的 **Lesson 1.dtsx**，然後按一下 [開啟]。  
   
      若要下載此教學課程的所有課程封裝，請執行下列動作。  
   
-    1.  導覽至 [Integration Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  導覽至 [Integration Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  按一下 **[下載]** 索引標籤。  
   
@@ -62,6 +61,6 @@ ms.locfileid: "48118648"
 5.  複製並貼上第 1 課套件，如上一個程序的步驟 3-8 所述。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 2：新增和設定 Foreach 迴圈容器](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
+ [步驟 2:加入和設定 Foreach 迴圈容器](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
   

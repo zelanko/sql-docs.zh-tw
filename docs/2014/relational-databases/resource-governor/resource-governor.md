@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, overview
@@ -14,12 +13,12 @@ ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e911fc797777c9c428cb43dd584d05b2dd30df28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d2cdad589ac9c669ae06672260bd99a1de72e8f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214750"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807310"
 ---
 # <a name="resource-governor"></a>[資源管理員]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源管理員是一項功能，可讓您用於管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工作負載和系統資源耗用量。 資源管理員可讓您針對內送應用程式要求可用的 CPU、實體 IO 和記憶體數量指定限制。  

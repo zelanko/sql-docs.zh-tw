@@ -15,17 +15,17 @@ ms.assetid: fe364ddc-576e-42fc-9ced-baa399992f92
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eba304a7e525b9466787ad1314acd52c4368f9a2
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3112efa1b2eec2f25abe35315ecec13bedbf8871
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144803"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375480"
 ---
 # <a name="plugin-algorithms"></a>外掛程式演算法
   除了 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的演算法以外，還有其他許多演算法可用於資料採礦。 因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會為協力廠商所建立的「外掛程式」演算法提供一項機制。 只要演算法遵循特定的標準，就可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 內使用，就像使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法一樣。 外掛程式演算法具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的所有演算法功能。  
   
- 如需 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用於與外掛程式演算法通訊之介面的完整描述，請參閱建立自訂演算法和自訂模型檢視器的範例，這些範例會在 [CodePlex](http://go.microsoft.com/fwlink/?LinkID=87843) 網站上發佈。  
+ 如需 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用於與外掛程式演算法通訊之介面的完整描述，請參閱建立自訂演算法和自訂模型檢視器的範例，這些範例會在 [CodePlex](https://go.microsoft.com/fwlink/?LinkID=87843) 網站上發佈。  
   
 ## <a name="algorithm-requirements"></a>演算法需求  
  若要將演算法外掛至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，您必須實作下列 COM 介面：  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.viewfacet.f1
@@ -12,12 +12,12 @@ ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d71909b4f7fefd5c31e5b16991da7ebd6abb1401
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2b84ce093c25faa284033065c329bb14f254a8f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200598"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818242"
 ---
 # <a name="view-facets-dialog-box"></a>檢視 Facet 對話方塊
   使用此對話方塊可檢視以原則為基礎之管理 Facet 的屬性。 建立 Facet 時會定義 Facet 的屬性，而且不能使用這個對話方塊加以變更。  

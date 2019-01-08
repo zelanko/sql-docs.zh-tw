@@ -15,12 +15,12 @@ ms.assetid: e72b1dc7-8cda-4ee6-abb5-d438370f04df
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b9a41fb224d5042c1cc826785ead32376727444
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2e926047d5423d31307dc344bca5717ca7a77dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105578"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535527"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>傳送作業工作編輯器 (作業頁面)
   使用 [傳送作業工作編輯器] 對話方塊的 [作業] 頁面，即可指定屬性用來將一或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業，從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一個執行個體複製到另一個。 如需有關傳送作業工作的詳細資訊，請參閱＜ [Transfer Jobs Task](control-flow/transfer-jobs-task.md)＞。  
@@ -46,7 +46,7 @@ ms.locfileid: "48105578"
 |**False**|只複製指定的作業。|  
   
  **JobsList**  
- 按一下瀏覽按鈕 **(…)** 來選取要複製的作業。 必須至少選取一個作業。  
+ 按一下瀏覽按鈕 **(...)** 來選取要複製的作業。 必須至少選取一個作業。  
   
 > [!NOTE]  
 >  選取要複製的作業之前，請指定 **SourceConnection** 。  

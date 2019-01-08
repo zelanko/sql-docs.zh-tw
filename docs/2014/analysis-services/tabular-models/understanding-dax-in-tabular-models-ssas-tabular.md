@@ -11,12 +11,12 @@ ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4bc835d09f02e170c3b5595495eb6554c1319df5
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: fc2274fc3342c1a6cc11053c0f226232632bc225
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906378"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374140"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>了解表格式模型中的 DAX (SSAS 表格式)
   資料分析運算式 (DAX) 是公式語言，可用來在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Microsoft Excel 活頁簿和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式模型專案中建立自訂計算。 DAX 公式包含函數、運算子和值，可對資料表和資料行中的資料執行進階計算。  
@@ -52,7 +52,7 @@ ms.locfileid: "48906378"
 ##  <a name="bkmk_DAXintm"></a> 表格式模型中的 DAX  
  在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和表格式模型中，DAX 公式計算值的方式及其個別資料集之間在功能上沒有任何差異。 不過，DAX 公式在活頁簿中建立的位置和模型撰寫工具不同，而且評估某些量值內容的位置也不同。  
   
- 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中，計算公式通常是由活頁簿使用者所建立，用於自助商業智慧分析。 資料表的導出資料行是在 PowerPivot 視窗中建立，量值則是在樞紐分析表或計算區域中建立。 PowerPivot 活頁簿與表格式模型專案不同，前者不會提供以角色為基礎的安全性，可使用 DAX 公式保護資料安全。  
+ 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]中，計算公式通常是由活頁簿使用者所建立，用於自助商業智慧分析。 資料表的導出資料行是在 PowerPivot 視窗中建立，量值則是在樞紐分析表或計算區域中建立。 PowerPivot 活頁簿與表格式模型專案不同，前者不會提供以角色為基礎的安全性，可使用 DAX 公式保護資料安全。  
   
  在表格式模型專案中，計算公式是由模型作者在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 模型設計師中所建立。 導出資料行的值是透過使用 DAX 公式計算的，會立即出現在模型設計師的資料表中 (但量值方格中的量值預覽功能除外)，而量值必須等到使用者在報表用戶端 (例如 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 或 Microsoft Excel 的樞紐分析表) 中指定篩選之後才會計算。  
   
@@ -78,16 +78,16 @@ ms.locfileid: "48906378"
   
  您無法立即看到計算 (已篩選) 結果的原因如下：在沒有內容的情況下無法判定量值的結果。 評估量值需要報告用戶端應用程式可以提供擷取每一個資料格之相關資料所需的內容，然後為每一個資料格評估運算式。 用戶端可能是 Excel 樞紐分析表或樞紐分析圖、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 報表，或是 MDX 查詢。 不論報告用戶端為何，都會針對結果中的每一個資料格執行個別的查詢。 也就是說，樞紐分析表中資料列和資料行標頭的每一個組合或是 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 報表中交叉分析篩選器和篩選的每一個選擇都會產生不同的資料子集 (量值是針對該子集計算而來)。 例如在具有公式 `Total Sales:=SUM([Sales Amount])`的量值中，當使用者將 Total Sales 量值放入樞紐分析表中的 [值] 視窗，然後將 Product Category 資料行從 Product 資料表放入 [篩選] 視窗時，會為每個產品類別目錄計算並顯示 Sales Amount 的加總。  
   
- 與導出資料行和資料列篩選不同的是，量值的語法會在公式前加上量值的名稱。 在剛才提供的範例中，名稱 **Total Sales:** 會出現在公式之前。 當您建立量值之後，名稱及其定義會出現在報告用戶端應用程式的欄位清單中，而且可以提供給模型的所有使用者使用 (視檢視方塊和角色而定)。  
+ 不同於導出資料行和資料列篩選器，量值的語法會包含在公式之前的量值的名稱。 在剛才提供的範例中，名稱 **Total Sales:** 會出現在公式之前。 當您建立量值之後，名稱及其定義會出現在報告用戶端應用程式的欄位清單中，而且可以提供給模型的所有使用者使用 (視檢視方塊和角色而定)。  
   
  如需詳細資訊，請參閱[量值 &#40;SSAS 表格式&#41;](measures-ssas-tabular.md)。  
   
 ### <a name="row-filters"></a>資料列篩選  
  資料列篩選會定義特定角色的成員可以看到的資料表資料列。 您可以使用 DAX 公式，為模型中的每個資料表建立資料列篩選。 系統會針對特定角色，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的角色管理員建立資料列篩選。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 [角色屬性] 也可以為已部署的模型定義資料列篩選。  
   
- 在資料列篩選中，必須評估為布林 TRUE/FALSE 條件的 DAX 公式會定義該特定角色成員的查詢結果可傳回的資料列。 無法傳回 DAX 公式中未包含的資料列。 例如，對於 Sales 角色成員來說，Customers 資料表具有下列 DAX 公式 `=Customers[Country] = “USA”`，因此 Sales 角色成員只能檢視美國客戶的資料，以及彙總，例如只針對美國客戶傳回的 SUM。  
+ 在資料列篩選中，必須評估為布林 TRUE/FALSE 條件的 DAX 公式會定義該特定角色成員的查詢結果可傳回的資料列。 無法傳回 DAX 公式中未包含的資料列。 例如，對於 Sales 角色成員來說，Customers 資料表具有下列 DAX 公式 `=Customers[Country] = "USA"`，因此 Sales 角色成員只能檢視美國客戶的資料，以及彙總，例如只針對美國客戶傳回的 SUM。  
   
- 當您透過使用 DAX 公式定義資料列篩選時，會建立允許的資料列集。 這並不會拒絕存取其他資料列；而是它們根本不會做為允許的資料列集一部分傳回。 其他角色可以允許存取 DAX 公式所排除的資料列。 如果使用者是另一個角色的成員，而且該角色的資料列篩選允許存取該特定資料列集，使用者就可以檢視該資料列的資料。  
+ 當您透過使用 DAX 公式定義資料列篩選時，會建立允許的資料列集。 這並不會拒絕存取其他資料列；而是它們根本不會做為允許的資料列集一部分傳回。 其他角色可以允許存取 DAX 公式所排除的資料列。 如果使用者是另一個角色的成員，而且該角色的資料列篩選允許存取該特定資料列集，使用者可以檢視該資料列的資料。  
   
  資料列篩選會套用至指定的資料列及相關的資料列。 當資料表具有多個關聯性時，篩選會對作用中關聯性套用安全性。 資料列篩選會與針對相關資料表定義的其他資料列篩選進行交叉篩選。  
   
@@ -106,11 +106,11 @@ ms.locfileid: "48906378"
 |文字|String|Unicode 字元資料字串。 可以是字串或數字，或以文字格式表示的日期。|  
 |date|日期/時間|採用可接受之日期時間表示方式的日期和時間。<br /><br /> 有效日期為 1900 年 3 月 1 日之後的所有日期。|  
 |CURRENCY|CURRENCY|貨幣資料類型允許的值是從 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 且固定有效位數為四個小數位數。|  
-|不適用|空白|空白是 DAX 中表示和取代 SQL Null 的資料類型。 您可以使用 BLANK 函數建立空白，然後使用邏輯函數 ISBLANK 來測試空白。|  
+|N/A|空白|空白是 DAX 中表示和取代 SQL Null 的資料類型。 您可以使用 BLANK 函數建立空白，然後使用邏輯函數 ISBLANK 來測試空白。|  
   
  表格式模型也包含資料表資料類型，做為許多 DAX 函數的輸入或輸出。 例如，FILTER 函數會採用資料表做為輸入，並輸出只包含符合篩選條件之資料列的另一份資料表。 您可以結合資料表函數與彙總函式，透過動態定義的資料集執行複雜的計算。  
   
- 資料類型通常會自動設定，因此，了解資料類型以及套用方式 (尤其是套用至 DAX 公式) 相當重要。 例如，公式中的錯誤或非預期的結果通常是因為使用無法搭配引數中指定之資料類型使用的特定運算子所造成。 例如，公式 `= 1 & 2`會傳回字串結果 12。 不過，公式 `= “1” + “2”`會傳回整數結果 3。  
+ 資料類型通常會自動設定，因此，了解資料類型以及套用方式 (尤其是套用至 DAX 公式) 相當重要。 例如，公式中的錯誤或非預期的結果通常是因為使用無法搭配引數中指定之資料類型使用的特定運算子所造成。 例如，公式 `= 1 & 2`會傳回字串結果 12。 不過，公式 `= "1" + "2"`會傳回整數結果 3。  
   
  如需 DAX 中表格式模型之資料類型與資料類型的明確和隱含轉換的詳細資訊，請參閱[支援的資料類型 &#40;SSAS 表格式&#41;](data-types-supported-ssas-tabular.md)。  
   
@@ -265,7 +265,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  內容可分為以下不同類型： *「資料列內容」*(Row Context)、 *「查詢內容」*(Query Context) 和 *「篩選內容」*(Filter Context)。  
   
 ###  <a name="bkmk_row_context"></a> 資料列內容  
- *「資料列內容」* (Row context) 可以被視為「目前的資料列」。 如果您已經在導出資料行中建立公式，該公式的「資料列內容」(Row Context) 就會包含目前資料列中所有資料行的值。 如果資料表與另一個資料表相關，則內容也會包含後者中與目前資料列相關的所有值。  
+ *資料列內容*可以視為 「 目前的資料列 」。 如果您已經在導出資料行中建立公式，該公式的「資料列內容」(Row Context) 就會包含目前資料列中所有資料行的值。 如果資料表與另一個資料表相關，則內容也會包含後者中與目前資料列相關的所有值。  
   
  例如，假設您建立導出資料行 `=[Freight] + [Tax]`，將相同資料表中兩個資料行 Freight 和 Tax 的值相加。 此公式只會從指定之資料行中目前的資料列自動取得值。  
   
@@ -387,7 +387,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  *「重新計算」* (Recalculation) 是更新公式結果，以反映公式本身的任何變更與基礎資料的變更之程序。 重新計算可能會以下列方式影響效能：  
   
--   系統會計算導出資料行中的值並將其儲存在模型中。 若要更新導出資料行中的值，您必須使用三個處理命令的其中一個來處理模型：[完整處理]、[處理資料] 或 [處理重新計算]。 每當您變更公式時，公式的結果一定會針對整個資料行重新計算。  
+-   系統會計算導出資料行中的值並將其儲存在模型中。 若要更新導出資料行中的值，您必須處理使用其中三個處理命令的完整程序、 處理資料或處理重新計算的模型。 每當您變更公式時，公式的結果一定會針對整個資料行重新計算。  
   
 -   每當使用者將量值加入樞紐分析表中或開啟報表時，就會動態評估量值所導出的值；當使用者修改內容時，量值傳回的值就會變更。 量值的結果永遠會反映記憶體中最新快取。  
   
@@ -417,9 +417,9 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="bkmk_addional_resources"></a> 其他資源  
  [表格式模型化 &#40;Adventure Works 教學課程&#41;](../tabular-modeling-adventure-works-tutorial.md) 對於如何建立在導出資料行、量值和資料列篩選中包含許多計算的表格式模型，提供逐步指示。 對於大部分的公式，則會提供該公式用途的描述。  
   
- [Analysis Services 和 PowerPivot 小組部落格](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409)提供有關的資訊、 提示、 新聞和公告[!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]和 PowerPivot。  
+ [Analysis Services 和 PowerPivot 小組部落格](https://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409)提供有關的資訊、 提示、 新聞和公告[!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]和 PowerPivot。  
   
- [DAX 資源中心](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) 會提供關於 DAX 的內外部資訊，包括由主要的 Business Intelligence 專業人員所提交的多個 DAX 解決方案。  
+ [DAX 資源中心](https://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) 會提供關於 DAX 的內外部資訊，包括由主要的 Business Intelligence 專業人員所提交的多個 DAX 解決方案。  
   
 ## <a name="see-also"></a>另請參閱  
  [Data Analysis Expressions &#40;DAX&#41;參考](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)   

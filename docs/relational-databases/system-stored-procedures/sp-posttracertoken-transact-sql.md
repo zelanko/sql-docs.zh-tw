@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - posttracerttoken
@@ -19,12 +18,12 @@ ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bb03feff3c695e3711bc51702ebbe2f4f9141ee7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41053bee3449ae44f843c24069c11a288131950b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704676"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589347"
 ---
 # <a name="spposttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +42,13 @@ sp_posttracertoken [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication**=] **'***發行集***'**  
+ [ **@publication**=] **'**_發行集_**'**  
  這是在測量延遲的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@tracer_token_id=** ] *tracer_token_id * * * 輸出**  
+ [  **@tracer_token_id=** ] _tracer_token_id_**輸出**  
  這是插入之追蹤 Token 的識別碼。 *tracer_token_id*已**int**預設值是 NULL，它是一個 OUTPUT 參數。 這個值可以用來執行[sp_helptracertokenhistory &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)或是[sp_deletetracertokenhistory &#40;-&#41; ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)不需事先執行[sp_helptracertokens &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)。  
   
- [  **@publisher=** ] **'***發行者***'**  
+ [  **@publisher=** ] **'**_發行者_**'**  
  指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL，而且不應該指定為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
   
 ## <a name="return-code-values"></a>傳回碼值  

@@ -14,12 +14,12 @@ ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20cc9df0fa7a52dfd92ea645eca289bd49860b97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21d788db62fe39b86eb801c028450c16cf845845
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063318"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355419"
 ---
 # <a name="availability-database-is-suspended"></a>可用性資料庫已暫停
     
@@ -29,14 +29,14 @@ ms.locfileid: "48063318"
 |-|-|  
 |**原則名稱**|可用性資料庫暫停狀態|  
 |**問題**|可用性資料庫已暫停。|  
-|**類別目錄**|**警告**|  
+|**分類**|**警告**|  
 |**Facet**|可用性資料庫|  
   
 ## <a name="description"></a>描述  
  此原則會檢查次要資料庫 (也稱為「次要資料庫複本」) 的資料移動。 當資料移動已暫停時，原則為狀況不良。 否則原則為狀況良好。  
   
 > [!NOTE]  
->  在此版本 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [可用性資料庫已暫停](http://go.microsoft.com/fwlink/p/?LinkId=220860) 。  
+>  在此版本 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [可用性資料庫已暫停](https://go.microsoft.com/fwlink/p/?LinkId=220860) 。  
   
 ## <a name="possible-causes"></a>可能的原因  
  由於下列原因，此可用性資料庫上的資料同步處理可能已暫停：  

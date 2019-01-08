@@ -1,22 +1,24 @@
 ---
-title: 如何在 SQL Server 的巨量資料叢集查詢 HDFS |Microsoft Docs
+title: 查詢存放區集區中的 HDFS 資料
+titleSuffix: SQL Server 2019 big data clusters
 description: 本教學課程會示範如何查詢 SQL Server 2019 巨量資料叢集 （預覽） 中的 HDFS 資料。 您建立儲存體集區中資料的外部資料表，然後再執行查詢。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/11/2018
+ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: c6f0f01936d5b6e570c2bff53d19ae7a64f151ab
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 78b78fafa8b2dce197fae98ef42b763cc0fa2f4e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644117"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432171"
 ---
-# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>教學課程： SQL Server 的巨量資料叢集以查詢 HDFS
+# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>教學課程：查詢 HDFS 中的 SQL Server 的巨量資料叢集
 
-本教學課程會示範如何查詢中的 SQL Server 2019 巨量資料叢集的 HDFS 資料。
+本教學課程會示範如何查詢 SQL Server 2019 巨量資料叢集 （預覽） 中的 HDFS 資料。
 
 在本教學課程中，您將了解如何：
 
@@ -27,19 +29,19 @@ ms.locfileid: "49644117"
 > [!TIP]
 > 如果您想，您可以下載並執行命令的指令碼，在本教學課程。 如需相關指示，請參閱 <<c0> [ 資料虛擬化範例](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)GitHub 上。
 
-## <a name="prerequisites"></a>先決條件
+## <a id="prereqs"></a> 必要條件
 
-- [將巨量資料叢集的 Kubernetes 上部署](deployment-guidance.md)。
-- [安裝 Azure Data Studio 和 SQL Server 2019 副檔名](deploy-big-data-tools.md)。
-- [將範例資料載入叢集](#sampledata)。
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [巨量資料工具](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 延伸模組**
+- [將範例資料載入您的巨量資料叢集](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-to-hdfs"></a>建立外部資料表到 HDFS
 
 存放集區包含儲存在 HDFS 中的 CSV 檔案中的 web 點選流資料。 您可以使用下列步驟來定義外部資料表可存取該檔案中的資料。
 
-1. 在 Azure Data Studio，連接到您的巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱 <<c0> [ 連接到 SQL Server 的主要執行個體](deploy-big-data-tools.md#master)。
+1. 在 Azure Data Studio，連接到您的巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱 <<c0> [ 連接到 SQL Server 的主要執行個體](connect-to-big-data-cluster.md#master)。
 
 2. 在連線 中按兩下**伺服器**視窗以顯示 SQL Server 的主要執行個體的伺服器儀表板。 選取 **新的查詢**。
 

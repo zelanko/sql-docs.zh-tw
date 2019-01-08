@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ce74bb210e3d5d3cd01120b0bd406672db6dd5ed
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975096"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785819"
 ---
 # <a name="server-properties-in-analysis-services"></a>Analysis Services 中的伺服器屬性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -30,7 +30,7 @@ SQL Server Management Studio 的 [屬性] 頁會顯示最有可能修改的屬�
 > 
 > 其他會影響伺服器組態的屬性包括 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的部署組態屬性。 如需這些屬性的詳細資訊，請參閱 [指定方案部署的組態設定](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)。
  
-##  <a name="bkmk_config"></a> 在 Management Studio 中設定屬性 
+## <a name="configure-properties-in-management-studio"></a>在 Management Studio 中設定屬性 
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
   
@@ -40,12 +40,11 @@ SQL Server Management Studio 的 [屬性] 頁會顯示最有可能修改的屬�
   
      只有表格式模式和多維度模式伺服器支援修改伺服器屬性。 如果您已安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，除非 Microsoft 支援服務另有指示，否則請一律使用預設值。  
   
-     如需如何透過伺服器屬性處理操作或效能問題的指示，請參閱＜ [SQL Server 2008 R2 Analysis Services 作業指南](http://go.microsoft.com/fwlink/?LinkID=225539)＞。  
   
-     您也可以在此 Microsoft 技術白皮書 [SQL Server 2005 Analysis Services (SSAS) 伺服器屬性](http://go.microsoft.com/fwlink/?LinkID=199102)中閱讀有關伺服器屬性 (在最後幾個版本中大部分未變更) 的資訊。    
+## <a name="configure-properties-in-msmdsrvini"></a>設定 msmdsrv.ini 中的屬性
   
-##  <a name="bkmk_msmdsrvini"></a> 設定 msmdsrv.ini 中的屬性
-  部分屬性只能在 msmdrsrv.ini 檔中設定。 如果即使在顯示進階屬性之後仍看不到您要設定的屬性，可能需要直接編輯 msmdsrv.ini 檔。
+部分屬性只能在 msmdrsrv.ini 檔中設定。 這些屬性並不適用於 Azure Analysis Services。
+如果即使在顯示進階屬性之後仍看不到您要設定的屬性，可能需要直接編輯 msmdsrv.ini 檔。 
   
 1.  請檢查 Management Studio 中 [一般] 屬性頁的 **DataDir** 屬性，以確認 Analysis Services 程式檔的位置，包括 msmdsrv.ini 檔。
 
@@ -59,7 +58,7 @@ SQL Server Management Studio 的 [屬性] 頁會顯示最有可能修改的屬�
   
 5.  儲存檔案後再重新啟動服務。  
   
-##  <a name="bkmk_ref"></a> 伺服器屬性參考  
+##  <a name="server-property-reference"></a>伺服器屬性參考  
   
  下列主題說明各種 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態屬性：  
   

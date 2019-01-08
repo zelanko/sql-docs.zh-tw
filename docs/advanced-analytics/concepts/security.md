@@ -1,5 +1,5 @@
 ---
-title: 適用於 SQL Server machine learning 的安全性 |Microsoft Docs
+title: R 和 Python 擴充功能-SQL Server 機器學習服務的安全性概觀
 description: SQL Server Machine Learning 服務的擴充性架構的安全性概觀。 登入和使用者帳戶、 SQL Server Launchpad 服務、 背景工作帳戶，執行多個指令碼和檔案權限的安全性。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a5d109e16c81481f9e4267dc4963ecea74cfa736
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 5fd8850271ab4ebf7ac69ff32cfa0877394f1d89
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419373"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596569"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning 服務的擴充性架構的安全性概觀
 
@@ -71,7 +71,7 @@ SQL Server 的資料安全性模型的資料庫登入和角色將延伸到 R 和
 
 ## <a name="services-used-in-external-processing-launchpad"></a>外部處理 （啟動控制板） 中所用的服務
 
-擴充性架構新增一個新 NT 服務才[的服務清單](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)SQL Server 安裝中： [ **SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad)。
+擴充性架構新增一個新 NT 服務才[的服務清單](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)在 SQL Server 安裝中：[**SQL Server Launchpad (MSSSQLSERVER)**](extensibility-framework.md#launchpad)。
 
 Database engine 會使用 SQL Server Launchpad 服務，具現化的 R 或 Python 的工作階段做為個別的處理序。 此程序的帳戶下執行低權限;不同於 SQL Server、 啟動控制板本身，以及執行預存程序或主應用程式查詢使用者識別。 以個別的處理序，在低權限帳戶下執行指令碼是 R 和 Python 中 SQL Server 的安全性和隔離模型的基礎。
 

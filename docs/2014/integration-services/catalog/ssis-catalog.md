@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1984802df92929cb4a311f1de8527f764d96d0fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9eb4de07ad7bd564578462b053637bb472b22f6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201338"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353979"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
   `SSISDB`目錄是使用的中央點[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)](SSIS) 專案，您已部署至[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]伺服器。 例如，您可以設定專案和封裝參數、設定環境以指定封裝的執行值、執行和疑難排解封裝，以及管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器作業。  
@@ -27,7 +26,7 @@ ms.locfileid: "48201338"
   
  若要維護 `SSISDB` 資料庫，建議您套用管理使用者資料庫的標準企業原則。 如需有關建立維護計畫的詳細資訊，請參閱＜ [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)＞。  
   
- `SSISDB`目錄和`SSISDB`資料庫都支援 Windows PowerShell。 如需有關使用 SQL Server 搭配 Windows PowerShell 的詳細資訊，請參閱＜ [SQL Server PowerShell](../../powershell/sql-server-powershell.md)＞。 如需有關如何使用 Windows PowerShell 完成部署專案等工作的範例，請參閱 blogs.msdn.com 上的部落格文章： [SQL Server 2012 中的 SSIS 和 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)。  
+ `SSISDB`目錄和`SSISDB`資料庫都支援 Windows PowerShell。 如需有關使用 SQL Server 搭配 Windows PowerShell 的詳細資訊，請參閱＜ [SQL Server PowerShell](../../powershell/sql-server-powershell.md)＞。 如需有關如何使用 Windows PowerShell 完成部署專案等工作的範例，請參閱 blogs.msdn.com 上的部落格文章： [SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。  
   
  如需有關檢視作業資料的詳細資訊，請參閱 <<c0> [ 監視封裝執行和其他作業](../performance/monitor-running-packages-and-other-operations.md)。  
   
@@ -98,7 +97,7 @@ ms.locfileid: "48201338"
  下列`SSISDB`目錄屬性會定義如何將這個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式作業的行為模式。 您可以使用 [目錄屬性] 對話方塊或使用 [catalog.catalog_properties &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) 和 [catalog.configure_catalog &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database) 檢視及修改屬性。  
   
  **定期清除記錄檔**  
- 當這個屬性設定為執行作業清除的作業步驟`True`。  
+ 當這個屬性設定為 `True` 時，便會執行作業清除的作業步驟。  
   
  **保留週期 (天)**  
  定義可允許的作業資料存在時間上限 (以天為單位)。 移除較舊的資料。  
@@ -106,7 +105,7 @@ ms.locfileid: "48201338"
  最小值是一天。 最大值只會受到的最大值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`int`資料。 如需此資料類型的資訊，請參閱 [int、bigint、smallint 和 tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)。  
   
  **定期移除舊版本**  
- 當這個屬性設定為執行專案版本清除的作業步驟`True`。  
+ 當這個屬性設定為 `True` 時，便會執行專案版本清除的作業步驟。  
   
  **每一專案的版本數目上限**  
  定義多少個專案版本儲存在目錄中。 移除專案的舊版。  
@@ -128,7 +127,7 @@ ms.locfileid: "48201338"
   
 -   DES  
   
- 當您將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]伺服器時，目錄會自動將封裝資料與敏感值加密。 當您擷取時，目錄也會自動解密資料。 SSISDB 目錄會使用`ServerStorage`保護層級。 如需詳細資訊，請參閱 [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md)。  
+ 當您將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]伺服器時，目錄會自動將封裝資料與敏感值加密。 當您擷取時，目錄也會自動解密資料。 SSISDB 目錄會使用 `ServerStorage` 保護等級。 如需詳細資訊，請參閱 [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md)。  
   
  變更加密演算法是需要大量時間的作業。 首先，伺服器必須使用先前指定的演算法來解密所有組態值。 然後，伺服器必須使用新的演算法來重新加密值。 在這段期間，伺服器上不能有其他的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 作業。 因此，為了讓 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 作業持續不受干擾，在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的此對話方塊中，加密演算法會是唯讀值。  
   
@@ -280,14 +279,14 @@ ms.locfileid: "48201338"
   
 -   [建立 SSIS 目錄](ssis-catalog.md)  
   
--   [備份、還原和移動 SSIS 目錄](../backup-restore-and-move-the-ssis-catalog.md)  
+-   [備份、 還原和移動的 SSIS 目錄](../backup-restore-and-move-the-ssis-catalog.md)  
   
 ## <a name="related-content"></a>相關內容  
   
--   blogs.msdn.com 上的部落格文章： [SQL Server 2012 中的 SSIS 和 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)。  
+-   blogs.msdn.com 上的部落格文章： [SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。  
   
--   blogs.msdn.com 上的部落格文章： [SSIS 目錄存取控制提示](http://go.microsoft.com/fwlink/?LinkId=246669)。  
+-   blogs.msdn.com 上的部落格文章： [SSIS 目錄存取控制提示](https://go.microsoft.com/fwlink/?LinkId=246669)。  
   
--   blogs.msdn.com 上的部落格文章 [SSIS 目錄管理物件模型初探](http://go.microsoft.com/fwlink/?LinkId=254267)。  
+-   blogs.msdn.com 上的部落格文章 [SSIS 目錄管理物件模型初探](https://go.microsoft.com/fwlink/?LinkId=254267)。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 第 9 課： Defining Perspectives and Translations |Microsoft Docs
+title: 第 9 課：Defining Perspectives and Translations |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: edc7a43485acd7c0e2d1c4a914867d8de9d1bc19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a9bad2db754aca80d6cf1501a0c178f694e9210
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094058"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362230"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>第 9 課：定義檢視方塊和翻譯
   在這一課中，您要學習定義檢視方塊和翻譯。 您可以定義檢視方塊，來減少 Cube 明顯的複雜性，以及定義翻譯，讓使用者自己選擇語言來檢視 Cube 中繼資料。  
   
 > [!NOTE]  
->  此教學課程中，所有課程已完成的專案都可在線上取得。 您可以從先前的課程中使用已完成的專案做為起點，向前跳到任何課程。 [按一下這裡](http://go.microsoft.com/fwlink/?LinkID=221866) ，下載此教學課程隨附的範例專案。  
+>  此教學課程中，所有課程已完成的專案都可在線上取得。 您可以從先前的課程中使用已完成的專案做為起點，向前跳到任何課程。 [按一下這裡](https://go.microsoft.com/fwlink/?LinkID=221866) ，下載此教學課程隨附的範例專案。  
   
  這一課包含下列工作：  
   

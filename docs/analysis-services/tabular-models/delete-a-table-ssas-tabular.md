@@ -1,5 +1,5 @@
 ---
-title: 刪除資料表 |Microsoft 文件
+title: 刪除 Analysis Services 表格式模型中的資料表 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: de1fa5d58beb36a5f3a7ce6eee0c09c5636acfd4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f47b8eec9642fa9553f6b2e25196b82b38b56a91
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039982"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072116"
 ---
 # <a name="delete-a-table"></a>刪除資料表
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

@@ -20,12 +20,12 @@ ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cab25279fe7842d21b3657d34edef8234ae058cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 895eeeea22b305236d263827156c6717b458a96a
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738857"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785919"
 ---
 # <a name="sysdmxepackages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "47738857"
  
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(60)**|封裝的名稱。 描述會從封裝本身公開。 不可為 Null。|  
+|NAME|**nvarchar(256)**|封裝的名稱。 描述會從封裝本身公開。 不可為 Null。|  
 |guid|**uniqueidentifier**|識別此封裝的 GUID。 不可為 Null。|  
-|description|**nvarchar(256)**|封裝的描述。 descriptionis 由封裝作者所設定，且不為 null。|  
+|description|**nvarchar(3072)**|封裝的描述。 descriptionis 由封裝作者所設定，且不為 null。|  
 |capabilities|**int**|描述這個封裝之功能的點陣圖。 可為 Null。|  
 |capabilities_desc|**nvarchar(256)**|此封裝所有可能之功能的清單。 可為 Null。|  
-|module_guid|**uniqueidentifier**|公開此封裝之模組的 GUID。 不可為 Null。|  
+|module_guid|**nvarchar(60)**|公開此封裝之模組的 GUID。 不可為 Null。|  
 |module_address|**varbinary(8)**|載入包含封裝之模組的基底位址。 單一模組可能會公開數個封裝。 不可為 Null。|  
   
 ## <a name="permissions"></a>Permissions  

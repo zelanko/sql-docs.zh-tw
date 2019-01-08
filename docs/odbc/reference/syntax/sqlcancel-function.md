@@ -20,16 +20,16 @@ ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c1c0c178fd1a448a86c5b5ce61fd12530eb4263
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9d0c756db7f84e6bcec46a61ef805f885f39d28
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646376"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214649"
 ---
 # <a name="sqlcancel-function"></a>SQLCancel 函式
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ISO 92  
+ 導入的版本：ODBC 1.0 標準的合規性：ISO 92  
   
  **摘要**  
  **SQLCancel**取消的陳述式處理。  
@@ -41,7 +41,7 @@ ms.locfileid: "47646376"
 ```  
   
 SQLRETURN SQLCancel(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>引數  

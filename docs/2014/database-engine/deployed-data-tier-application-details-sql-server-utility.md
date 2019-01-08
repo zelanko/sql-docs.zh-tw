@@ -18,12 +18,12 @@ ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb7b23b6ff9bf81d9c156f52dd93797203c1161f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073291"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354918"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>部署的資料層應用程式詳細資料 (SQL Server 公用程式)
   公用程式總管之 [部署的資料層應用程式] 檢視中的資訊提供了個別資料層應用程式的使用量資料、CPU 使用量歷程記錄、檔案層級的儲存使用量詳細資料，以及檢視和更新原則臨界值的功能。 原則臨界值可以針對 CPU 使用量及資料庫的資料檔案和記錄檔，於資料層應用程式層級進行控制。 您也可以針對個別的資料層應用程式來檢視屬性詳細資料。  
@@ -60,7 +60,7 @@ ms.locfileid: "48073291"
   
     -   綠色向下箭頭 - 至少一個檔案群組或記錄檔群組的健全狀態表示使用量過低，而沒有任何檔案群組或記錄檔群組的使用量過高。  
   
-    -   紅色向上箭頭 - 至少一個檔案群組或記錄檔群組的健全狀態指出使用量過高。 請注意，如果資料庫處於「緊急」狀態，則健全狀態會顯示記錄檔空間過度使用。  
+    -   紅色向上箭頭 - 至少一個檔案群組或記錄檔群組的健全狀態指出使用量過高。 請注意，如果資料庫處於「緊急」狀態，則健康狀態會顯示記錄檔空間過度使用。  
   
      若要檢視或變更檔案空間原則限制，請按一下 [儲存使用量] 索引標籤。  
   
@@ -76,17 +76,17 @@ ms.locfileid: "48073291"
   
 -   部署日期  
   
--   可信任：(True 或 False)  
+-   可信任：（true 或 False）  
   
 -   定序  
   
 -   相容性層級：(例如 Version100)  
   
--   加密已啟用：(True 或 False)  
+-   加密已啟用：（true 或 False）  
   
--   復原模式：(簡單、完整或大量記錄)  
+-   復原模式：（簡單、 完整或大量記錄）  
   
--   上次報告時間：此資料行會使用 datetime 資料類型來顯示 UCP 本機日期和時間。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 主題。  
+-   上次報告的時間：此欄顯示 UCP 本機日期和時間使用 datetime 資料類型。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主題。  
   
  CPU 使用量索引標籤  
  [CPU 使用量] 索引標籤會針對資料層應用程式和電腦的 CPU 使用量顯示歷程記錄資料的並排圖形。  
@@ -104,7 +104,7 @@ ms.locfileid: "48073291"
 -   1 年，每隔 1 個月顯示。  
   
  儲存使用量索引標籤  
- [儲存使用量] 索引標籤的樹狀檢視會針對屬於清單檢視中選取之資料層應用程式的資料庫檔案和記錄檔來顯示儲存使用量詳細資料。 請注意，時間資料會使用 datetime 資料類型來顯示 UCP 本機日期和時間。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 主題。  
+ [儲存使用量] 索引標籤的樹狀檢視會針對屬於清單檢視中選取之資料層應用程式的資料庫檔案和記錄檔來顯示儲存使用量詳細資料。 請注意，時間資料會使用 datetime 資料類型來顯示 UCP 本機日期和時間。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主題。  
   
  顯示畫面可以依檔案群組或磁碟區來分組。 若要使用檔案群組樹狀檢視，請選取 [檔案群組依據] 選項中的 [檔案群組] 選項按鈕。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48073291"
   
 -   綠色向下箭頭 - 檔案群組中至少有一個資料檔案的檔案空間使用量過低，而且檔案群組中沒有任何檔案的使用量過高。  
   
--   紅色向上箭頭 - 檔案群組中所有資料檔案的檔案空間使用量過高。 請注意，如果資料庫處於「緊急」狀態，則健全狀態會顯示記錄檔空間過度使用。  
+-   紅色向上箭頭 - 檔案群組中所有資料檔案的檔案空間使用量過高。 請注意，如果資料庫處於「緊急」狀態，則健康狀態會顯示記錄檔空間過度使用。  
   
  若要依磁碟區檢視檔案，請選取 [檔案群組依據] 選項中的 [磁碟區] 選項按鈕。 儲存使用量歷程記錄的圖形會顯示存放磁碟區上所有資料檔案和記錄檔所使用的檔案空間。 針對個別資料庫資料檔案和記錄檔展開此樹狀目錄來檢視詳細資料。  
   
@@ -153,17 +153,17 @@ ms.locfileid: "48073291"
   
 -   部署日期  
   
--   可信任：(True 或 False)  
+-   可信任：（true 或 False）  
   
 -   定序  
   
 -   相容性層級：(例如 Version100)  
   
--   加密已啟用：(True 或 False)  
+-   加密已啟用：（true 或 False）  
   
--   復原模式：(簡單、完整或大量記錄)  
+-   復原模式：（簡單、 完整或大量記錄）  
   
--   上次報告時間：此資料行會使用 datetime 資料類型來顯示 UCP 本機日期和時間。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 主題。  
+-   上次報告的時間：此欄顯示 UCP 本機日期和時間使用 datetime 資料類型。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主題。  
   
 ## <a name="see-also"></a>另請參閱  
  [受管理的執行個體詳細資料 &#40;SQL Server 公用程式&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   

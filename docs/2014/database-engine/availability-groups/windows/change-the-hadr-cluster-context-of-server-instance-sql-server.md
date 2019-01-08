@@ -13,17 +13,17 @@ ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3309d3754d8d4842ed238a54f0120b54bba1d596
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de783ffdb5480a9cdebec2380f81e50a9cba11ec
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219178"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361347"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>變更伺服器執行個體的 HADR 叢集內容 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和更新版本中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 切換 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 執行個體的 HADR 叢集內容。 「HADR 叢集內容」會決定哪個 Windows Server 容錯移轉叢集 (WSFC) 叢集管理伺服器執行個體所裝載可用性複本的中繼資料。  
   
- 僅在跨叢集移轉 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 至新 WSFC 叢集上的 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 執行個體時，才切換 HADR 叢集內容。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的跨叢集移轉支援以最短的可用性群組停機時間升級為 [!INCLUDE[win8](../../../includes/win8-md.md)] 或 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]。 如需詳細資訊，請參閱[針對作業系統升級進行 AlwaysOn 可用性群組的跨叢集移轉](http://msdn.microsoft.com/library/jj873730.aspx)。  
+ 僅在跨叢集移轉 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 至新 WSFC 叢集上的 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 執行個體時，才切換 HADR 叢集內容。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的跨叢集移轉支援以最短的可用性群組停機時間升級為 [!INCLUDE[win8](../../../includes/win8-md.md)] 或 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]。 如需詳細資訊，請參閱[針對作業系統升級進行 AlwaysOn 可用性群組的跨叢集移轉](https://msdn.microsoft.com/library/jj873730.aspx)。  
   
 
   
@@ -52,7 +52,7 @@ ms.locfileid: "48219178"
   
     |複本角色|動作|連結|  
     |------------------|------------|----------|  
-    |Primary|讓可用性群組離線。|[讓可用性群組離線 &#40;SQL Server&#41;](../../take-an-availability-group-offline-sql-server.md)|  
+    |主要|讓可用性群組離線。|[讓可用性群組離線 &#40;SQL Server&#41;](../../take-an-availability-group-offline-sql-server.md)|  
     |次要|從本身的可用性群組移除複本|[將次要複本從可用性群組移除 &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
   
 -   所有同步認可複本都必須是 SYNCHRONIZED，您才能從遠端叢集切換至本機叢集。  
@@ -154,9 +154,9 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [SQL Server 2012 技術文件](http://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
+-   [SQL Server 2012 技術文件](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server AlwaysOn 團隊部落格： 官方 SQL Server AlwaysOn 團隊部落格](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
   
   
   

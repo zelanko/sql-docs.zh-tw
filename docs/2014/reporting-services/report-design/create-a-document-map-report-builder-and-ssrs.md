@@ -11,17 +11,17 @@ ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 15ffda591bf3a27ff5599428abb63b652b61d8bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc01da68aeaa393631aca6146a41e6eb88ecb14e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073468"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376630"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>建立文件引導模式 (報表產生器及 SSRS)
   文件引導模式提供了與轉譯報表中之報表項目連結的一組導覽連結。 您檢視包含文件引導模式的報表時，報表旁邊會出現另一個側窗格。 使用者按一下文件引導模式中的連結，即可跳到顯示該項目的報表頁面。 報表區段與群組會以連結的階層排列。 按一下文件引導模式中的項目，會重新整理報表並顯示文件引導模式中之項目所對應的報表區域。  
   
- 若要將連結新增至文件引導模式中，您將`DocumentMapLabel`您所建立的文字或運算式，評估為文字，您會希望顯示於文件引導模式的報表項目屬性。 您也可以將資料表或矩陣群組的唯一值加入到文件引導模式。 例如，如果是以色彩為根據的群組，每一個唯一色彩就是報表頁面的連結，可顯示該色彩的群組執行個體。  
+ 若要在文件引導模式中加入連結，您可將報表項目的 `DocumentMapLabel` 屬性設定為您所建立的文字，或是將它設定為某個運算式，該運算式會評估為您希望顯示於文件引導模式中的文字。 您也可以將資料表或矩陣群組的唯一值加入到文件引導模式。 例如，如果是以色彩為根據的群組，每一個唯一色彩就是報表頁面的連結，可顯示該色彩的群組執行個體。  
   
  您也可以建立報表的 URL 來覆寫文件引導模式的顯示，讓您可以執行報表而不顯示文件引導模式，然後按一下報表檢視器工具列上的 **[顯示/隱藏文件引導模式]** 按鈕來切換顯示。  
   
@@ -113,9 +113,9 @@ ms.locfileid: "48073468"
 4.  在報表管理員中貼上此 URL，然後按 ENTER 鍵。 報表便會執行，而且文件引導模式會隱藏起來。  
   
 > [!NOTE]  
->  如需有關下載範例報表的詳細資訊，請參閱 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][報表產生器與報表設計師範例報表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
+>  如需有關下載範例報表的詳細資訊，請參閱 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][報表產生器與報表設計師範例報表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
 >   
->  如需詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](http://go.microsoft.com/fwlink/?linkid=121312) 的＜URL 存取＞。  
+>  如需詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](https://go.microsoft.com/fwlink/?linkid=121312) 的＜URL 存取＞。  
   
  
   

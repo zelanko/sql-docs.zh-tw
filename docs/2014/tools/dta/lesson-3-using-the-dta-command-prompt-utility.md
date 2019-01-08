@@ -1,11 +1,10 @@
 ---
-title: 第 3 課： 使用 dta 命令提示字元公用程式 |Microsoft Docs
+title: 第 3 課：使用 dta 命令提示字元公用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
@@ -13,19 +12,19 @@ ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f74b3e156a078630d7f9f96e6f6244b771077b55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2881a2a118306f9d567236516f05bb29ad2d60a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195168"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370530"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>第 3 課：使用 dta 命令提示字元公用程式
   除了 Database Engine Tuning Advisor 所提供的功能，**dta** 命令提示字元公用程式還提供額外的功能。  
   
- 您可以利用您愛用的 XML 工具和 Database Engine Tuning Advisor XML 結構描述來建立這個公用程式的輸入檔。 這個結構描述會在您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時一併安裝，並且位於：C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd。  
+ 您可以利用您愛用的 XML 工具和 Database Engine Tuning Advisor XML 結構描述來建立這個公用程式的輸入檔。 當您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，此結構描述會安裝在下列位置：C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd。  
   
- 您也可以透過 [Microsoft 網站](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)，線上取得 Database Engine Tuning Advisor XML 結構描述。  
+ 您也可以透過 [Microsoft 網站](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)，線上取得 Database Engine Tuning Advisor XML 結構描述。  
   
  在微調選項的設定上，Database Engine Tuning Advisor XML 結構描述非常靈活。 例如，它可讓您進行「假設」分析。 「假設」分析包括針對您要微調的資料庫來指定一組現有的實體設計結構和假設的實體設計結構，再利用 Database Engine Tuning Advisor 來分析它，以了解這個假設的實體設計是否能改進查詢處理效能。 這類分析的好處是既能夠評估新的組態，又免除了實際實作的負擔。 如果假設的實體設計所改進的效能不符需求，您很容易改變它，再分析它，直到產生的結果符合需求的組態出現為止。  
   

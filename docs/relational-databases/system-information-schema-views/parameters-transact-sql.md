@@ -20,24 +20,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 611a7545bfe13a2c9d835abee021c3117be846cd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 14001680cd4cf92086ab797f77e2233222d36b67
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657745"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590712"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   針對目前資料庫中目前的使用者所能存取之使用者自訂函數或預存程序的每個參數，各傳回一個資料列。 如果是函數，這份檢視也會傳回一個含有傳回值資訊的資料列。  
   
- 若要從這些檢視擷取資訊，請指定 完整格式的名稱 **INFORMATION_SCHEMA。 * * * view_name*。  
+ 若要從這些檢視擷取資訊，請指定 完整格式的名稱**INFORMATION_SCHEMA。**_view_name_。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**nvarchar(** 128 **)**|以這個項目為參數的常式之目錄名稱。|  
-|**SPECIFIC_SCHEMA**|**nvarchar(** 128 **)**|以這個項目為參數的常式之結構描述名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**SPECIFIC_SCHEMA**|**nvarchar(** 128 **)**|以這個項目為參數的常式之結構描述名稱。<br /><br /> <strong>\*\* 重要\* \*</strong> 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**SPECIFIC_NAME 排列順序**|**nvarchar(** 128 **)**|以這個項目為參數的常式名稱。|  
 |**ORDINAL_POSITION**|**int**|參數的序數位置從 1 開始。 若為函數的傳回值，則是 0。|  
 |**PARAMETER_MODE**|**nvarchar (** 10 **)**|如果是輸入參數，便傳回 IN；如果是輸出參數，便傳回 OUT，如果是輸入/輸出參數，便傳回 INOUT。|  

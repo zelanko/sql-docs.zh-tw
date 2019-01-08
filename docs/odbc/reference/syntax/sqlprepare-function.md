@@ -20,16 +20,16 @@ ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d64f536b88d3b6fd8f10fc36b75cd3395c818af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e4c15cfe0d82fc4b68115c029334fa7d3ec7410
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814976"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590280"
 ---
 # <a name="sqlprepare-function"></a>SQLPrepare 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ISO 92  
+ 導入的版本：ODBC 1.0 標準的合規性：ISO 92  
   
  **摘要**  
  **SQLPrepare**準備執行的 SQL 字串。  
@@ -63,13 +63,13 @@ SQLRETURN SQLPrepare(
 |SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|驅動程式特有的告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|01S02|選項值已變更|指定的陳述式屬性是實作運作的情況，因為不正確的因此已暫時替代成類似的值。 (**SQLGetStmtAttr**可以呼叫以判斷其暫時已取代的值為何。)取代值是適用於*StatementHandle*直到關閉資料指標。 您可以變更的陳述式屬性是： sql_attr_concurrency 設定 SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|01S02|選項值已變更|指定的陳述式屬性是實作運作的情況，因為不正確的因此已暫時替代成類似的值。 (**SQLGetStmtAttr**可以呼叫以判斷其暫時已取代的值為何。)取代值是適用於*StatementHandle*直到關閉資料指標。 您可以變更的陳述式屬性是：SQL_ATTR_CONCURRENCY 設定 SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08S01|通訊連結失敗|函式已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
 |21S01|插入的值清單不符合資料行清單|\**StatementText*包含**插入**陳述式，以及要插入的值數目不符，衍生資料表的程度。|  
 |21S02|衍生資料表的程度與資料行清單不符|\**StatementText*包含**CREATE VIEW**陳述式和指定的名稱數目不是做為查詢規格所定義的衍生資料表相同的程度。|  
 |22018|轉換規格的字元值無效|**StatementText*包含 SQL 陳述式包含的常值或參數，且值為與之相關聯的資料表資料行的資料類型不相容。|  
 |22019|無效的逸出字元|引數*StatementText*包含**像是**述詞，以及**逸出**中**其中**子句和逸出的長度之後的字元**逸出**不是等於 1。|  
-|22025|無效的逸出序列|引數*StatementText*包含 「**像是***模式值***逸出***逸出字元*"中**其中**子句，並遵循模式值的逸出字元的字元不是"%"或"_"。|  
+|22025|無效的逸出序列|引數*StatementText*包含 「**像是**_模式值_**逸出**_逸出字元_"中**其中**子句，並遵循模式值的逸出字元的字元不是"%"或"_"。|  
 |24000|指標狀態無效|(DM) 上開啟游標的*StatementHandle*，並**SQLFetch**或是**SQLFetchScroll**呼叫。<br /><br /> 資料指標是開啟*StatementHandle*，但**SQLFetch**或是**SQLFetchScroll**尚未呼叫。|  
 |34000|指標名稱無效|\**StatementText*包含定位**刪除**或定位**更新**，和正在準備的陳述式所參考的資料指標並未開啟。|  
 |3D000|無效的目錄名稱|中指定的目錄名稱*StatementText*無效。|  
@@ -102,7 +102,7 @@ SQLRETURN SQLPrepare(
 > [!NOTE]  
 >  如果應用程式使用**SQLPrepare**準備並**SQLExecute**提交**認可**或**回復**陳述式，它不會DBMS 的產品之間的互通性。 若要認可或回復交易，呼叫**SQLEndTran**。  
   
- 驅動程式可以修改要使用 SQL 資料來源所使用的形式，然後將它提交至資料來源來準備的陳述式。 特別是，驅動程式會修改用來定義特定功能的 SQL 語法的逸出序列。 (如需 SQL 陳述式語法的說明，請參閱[ODBC 中的逸出序列](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)並[附錄 c: SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。)驅動程式，陳述式控制代碼是類似的陳述式識別項中內嵌的 SQL 程式碼。 如果資料來源支援陳述式的識別項，驅動程式可以傳送到資料來源的陳述式識別項和參數值。  
+ 驅動程式可以修改要使用 SQL 資料來源所使用的形式，然後將它提交至資料來源來準備的陳述式。 特別是，驅動程式會修改用來定義特定功能的 SQL 語法的逸出序列。 (如需 SQL 陳述式語法的說明，請參閱[ODBC 中的逸出序列](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)和[附錄 c:SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。)驅動程式，陳述式控制代碼是類似的陳述式識別項中內嵌的 SQL 程式碼。 如果資料來源支援陳述式的識別項，驅動程式可以傳送到資料來源的陳述式識別項和參數值。  
   
  備妥的陳述式之後，應用程式會使用參考至更新版本的函式呼叫的陳述式的陳述式控制代碼。 藉由呼叫可以重新執行陳述式控制代碼相關聯的已備妥之陳述式**SQLExecute**應用程式會釋放呼叫的陳述式直到**SQLFreeStmt** SQL_DROP 選項或等到陳述式控制代碼會在呼叫**SQLPrepare**， **SQLExecDirect**，或其中一個目錄函數 (**SQLColumns**， **SQLTables**等等)。 一旦應用程式會準備陳述式，它可以要求結果集的格式的相關資訊。 針對某些實作中，呼叫**SQLDescribeCol**或是**SQLDescribeParam**之後**SQLPrepare**可能不是那麼有效率，做為呼叫函式之後**SQLExecute**或是**SQLExecDirect**。  
   

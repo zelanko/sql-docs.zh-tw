@@ -14,12 +14,12 @@ ms.assetid: ec41f017-f5e0-40ef-913a-65d206068631
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: feb5cd9df428ec09441ae1ebe0ff1cb051660754
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0001f1d6e45e855b884028a595a2b61263c2e58
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203988"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365990"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
   所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序都會傳回值。 **SQLProcedures**會針對結果集資料行 PROCEDURE_TYPE 報告 sql_pt_function。  
@@ -31,7 +31,7 @@ ms.locfileid: "48203988"
  **SQLProcedures**傳回名稱符合任何程序的相關資訊*ProcName*而且由目前的使用者，或目前使用者已被授與 VIEW DEFINITION 權限可以執行。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLProcedures 函數](http://go.microsoft.com/fwlink/?LinkId=59364)   
+ [SQLProcedures 函數](https://go.microsoft.com/fwlink/?LinkId=59364)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

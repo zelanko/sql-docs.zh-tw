@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined types [SQL Server replication]
@@ -42,12 +41,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e50f1c65133a0e33c142962af8e768d1daa5bef8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8cdc2ee8c14e62106775438f932957c69c7c0daa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227108"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777130"
 ---
 # <a name="publish-data-and-database-objects"></a>發行資料和資料庫物件
   在建立發行集時，您可以選擇想要發行的資料表和其他資料庫物件。 您可以使用複寫發行下列資料庫物件。  
@@ -56,8 +55,8 @@ ms.locfileid: "48227108"
 |---------------------|--------------------------------------------------------|-----------------------|  
 |資料表|X|X|  
 |分割區資料表|X|X|  
-|預存程序 – 定義 ([!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 CLR)|X|X|  
-|預存程序 – 執行 ([!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 CLR)|X|否|  
+|預存程序 - 定義 ([!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 CLR)|X|X|  
+|預存程序 - 執行 ([!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 CLR)|X|否|  
 |檢視|X|X|  
 |索引檢視表|X|X|  
 |將索引檢視表做為資料表|X|否|  
@@ -248,7 +247,7 @@ ms.locfileid: "48227108"
   
      如需這些參數的詳細資訊，請參閱 [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 和 [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)。  
   
--   異動複寫和未篩選的合併式複寫支援在多個發行集中發行資料表，然後在訂閱資料庫中的單一資料表內進行訂閱 (通常稱為積存狀況)。 積存通常用於從中央訂閱者端一個資料表中的多個位置彙總資料子集。 篩選的合併式發行集不支援中央「訂閱者」狀況。 對於合併式複寫，積存通常透過具有參數化資料列篩選器的單一發行集實作。 如需詳細資訊，請參閱 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)。  
+-   異動複寫和未篩選的合併式複寫支援在多個發行集中發行資料表，然後在訂閱資料庫中的單一資料表內進行訂閱 (通常稱為積存狀況)。 積存通常用於從中央訂閱者端一個資料表中的多個位置彙總資料子集。 篩選的合併式發行集不支援中央「訂閱者」狀況。 對於合併式複寫，積存通常透過具有參數化資料列篩選器的單一發行集實作。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [在現有發行集中新增和卸除發行項](add-articles-to-and-drop-articles-from-existing-publications.md)   

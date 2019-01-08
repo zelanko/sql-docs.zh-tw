@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - CHECK constraints, modifying
@@ -16,12 +15,12 @@ ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa91f2910fabac44c4c434f70ae3d8bb0ae78c8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f90f0f332aff728699a92daadec2c28a71552dd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114038"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803250"
 ---
 # <a name="modify-check-constraints"></a>修改檢查條件約束
   當您想要變更條件約束運算式或是針對特定條件啟用或停用條件約束的選項時，可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中修改檢查條件約束。  
@@ -51,7 +50,7 @@ ms.locfileid: "48114038"
   
 1.  在 [物件總管] 中，以滑鼠右鍵按一下包含檢查條件約束的資料表，並選取 [設計]。  
   
-2.  在 **[資料表設計工具]** 功能表上，按一下 **[檢查條件約束]**。  
+2.  在 [資料表設計工具] 功能表上，按一下 [檢查條件約束...]。  
   
 3.  在 **[檢查條件約束]** 對話方塊的 **[選取的檢查條件約束]** 底下，選取您想要編輯的條件約束。  
   

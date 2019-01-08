@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.f1
@@ -16,12 +15,12 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 806752a22315586ecd730dad89761a079dc7038e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 463dd8395fd8cd4b696ef54c0a4b0523da0fadd8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064178"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360370"
 ---
 # <a name="bulk-insert-task"></a>大量插入工作
   「大量插入」工作提供有效的方式，將大量資料複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或檢視。 例如，假設您的公司將百萬個資料列的產品清單儲存在大型電腦系統上，但公司的電子商務系統是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴展網頁。 您必須在晚上以大型電腦的主產品清單更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品資料表。 若要更新資料表，請以 Tab 分隔的格式儲存產品清單，並使用「大量插入」工作將資料直接複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。  
@@ -90,11 +89,11 @@ ms.locfileid: "48064178"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [大量插入工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [大量插入工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [大量插入工作編輯器&#40;連接頁面&#41;](../bulk-insert-task-editor-connection-page.md)  
+-   [大量插入工作編輯器 &#40;連接頁面&#41;](../bulk-insert-task-editor-connection-page.md)  
   
--   [大量插入工作編輯器&#40;選項頁面&#41;](../bulk-insert-task-editor-options-page.md)  
+-   [大量插入工作編輯器 &#40;選項頁面&#41;](../bulk-insert-task-editor-options-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   
@@ -112,10 +111,10 @@ ms.locfileid: "48064178"
   
 ## <a name="related-content"></a>相關內容  
   
--   support.microsoft.com 上的技術文件： [您可能會在啟用 UAC 的系統上收到「無法準備 SSIS 大量插入來進行資料插入」錯誤](http://go.microsoft.com/fwlink/?LinkId=233693)。  
+-   support.microsoft.com 上的技術文件： [You may get "Unable to prepare the SSIS bulk insert for data insertion" error on UAC enabled systems](https://go.microsoft.com/fwlink/?LinkId=233693)(您可能會在啟用 UAC 的系統上收到「無法準備 SSIS 大量插入來進行資料插入」錯誤)。  
   
--   msdn.microsoft.com 上的技術文章： [資料載入效能指南](http://go.microsoft.com/fwlink/?LinkId=233700)。  
+-   msdn.microsoft.com 上的技術文章： [資料載入效能指南](https://go.microsoft.com/fwlink/?LinkId=233700)。  
   
--   simple-talk.com 上的技術文件： [Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701)(使用 SQL Server Integration Services 大量載入資料)。  
+-   simple-talk.com 上的技術文件： [Using SQL Server Integration Services to Bulk Load Data](https://go.microsoft.com/fwlink/?LinkId=233701)(使用 SQL Server Integration Services 大量載入資料)。  
   
   

@@ -1,6 +1,6 @@
 ---
-title: 在 SQL Server Machine Learning 服務調整並行執行外部指令碼 |Microsoft Docs
-description: 如何修改使用者帳戶集區擴充 SQL Server Machine Learning 服務。
+title: 小數位數的同時執行的外部指令碼-SQL Server Machine Learning 服務
+description: 設定平行處理或並行 R 和 Python 指令碼執行來調整 SQL Server Machine Learning 服務的使用者帳戶集區中。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cc51f5034614de950f0c0f51b7a83425f1a30d3d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 9f32e51122df8d2d13d6eada726a1a5e9bea82f0
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419433"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596809"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>小數位數的同時執行的 SQL Server Machine Learning 服務中的外部指令碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -21,8 +21,6 @@ ms.locfileid: "49419433"
 在 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 安裝程序中，會建立新的 Windows「使用者帳戶集區」，以支援 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 服務的執行作業。 這些工作者帳戶的目的是要隔離並行執行由不同的 SQL 使用者的外部指令碼。
 
 這篇文章描述的預設組態和容量的背景工作帳戶，以及如何變更預設組態，以在 SQL Server Machine Learning 服務來調整的同時執行外部指令碼的數目。
-
-**適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]， [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## <a name="worker-account-group"></a>背景工作帳戶群組
 
@@ -53,7 +51,7 @@ Windows 帳戶群組由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 2. 按兩下 SQL Server Launchpad 服務，如果服務正在執行請將它停止。
 3.  在 [服務] 索引標籤上，請確定 [啟動模式] 設為 [自動]。 Launchpad 未執行時，無法啟動外部指令碼。
 4.  按一下 [進階] 索引標籤，並視需要編輯 [外部使用者計數] 的值。 此設定控制多少不同的 SQL 使用者可以執行外部指令碼同時工作階段。 預設為 20 個帳戶。 使用者數目上限為 100。
-5. 如果您的組織要求定期變更密碼，您可以選擇將 [重設外部使用者密碼] 選項設為 [是]。 如此會重新產生 Launchpad 為使用者帳戶維護的加密密碼。 如需詳細資訊，請參閱[強制密碼原則](#bkmk_EnforcePolicy)。
+5. 如果您的組織要求定期變更密碼，您可以選擇將 [重設外部使用者密碼] 選項設為 [是]。 如此會重新產生 Launchpad 為使用者帳戶維護的加密密碼。 如需詳細資訊，請參閱[強制密碼原則](../security/sql-server-launchpad-service-account.md#bkmk_EnforcePolicy)。
 6.  重新啟動 Launchpad 服務。
 
 ## <a name="managing-workloads"></a>管理工作負載
@@ -64,9 +62,11 @@ Windows 帳戶群組由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 背景工作帳戶，您可以支援的數目和任何單一使用者可以執行，並行工作階段的數目是只受限於伺服器資源。 一般而言，使用 R 執行階段時，記憶體將會是您遇到的第一個瓶頸。
 
-SQL Server 所控管可供 Python 或 R 指令碼的資源。 建議您使用 SQL Server DMV 來監視資源使用狀況，或是查看 Windows 工作物件相關的效能計數器，並隨之調整伺服器記憶體的使用。 如果您有 SQL Server Enterprise Edition 時，您可以配置用來執行外部指令碼所設定的資源[外部資源集區](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)。
+SQL Server 所控管可供 Python 或 R 指令碼的資源。 建議您使用 SQL Server DMV 來監視資源使用狀況，或是查看 Windows 工作物件相關的效能計數器，並隨之調整伺服器記憶體的使用。 如果您有 SQL Server Enterprise Edition 時，您可以配置用來執行外部指令碼所設定的資源[外部資源集區](how-to-create-a-resource-pool.md)。
 
-如需有關管理機器學習工作的容量，請參閱下列文章：
+## <a name="see-also"></a>另請參閱
+
+如需有關設定容量的詳細資訊，請參閱下列文章：
 
 - [R services 的 SQL Server 組態](../../advanced-analytics/r/sql-server-configuration-r-services.md)
 - [R Services 的效能案例研究](../../advanced-analytics/r/performance-case-study-r-services.md)

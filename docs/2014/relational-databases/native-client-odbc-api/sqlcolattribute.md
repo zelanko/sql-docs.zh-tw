@@ -14,12 +14,12 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8029a3a2fb059ebfc764c8e29d9f893d1434b2dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204918"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361270"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   您可以使用`SQLColAttribute`來擷取已備妥或已執行的 ODBC 陳述式的結果集資料行的屬性。 呼叫`SQLColAttribute`上備妥陳述式造成的往返[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會接收結果集資料行資料做為陳述式執行，因此，呼叫的一部分`SQLColAttribute`完成後**SQLExecute**或是**SQLExecDirect**沒有不會造成伺服器往返。  
@@ -107,7 +107,7 @@ ms.locfileid: "48204918"
  如需詳細資訊，請參閱 <<c0> [ 疏鬆資料行支援&#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLColAttribute 函數](http://go.microsoft.com/fwlink/?LinkId=59334)   
+ [SQLColAttribute 函數](https://go.microsoft.com/fwlink/?LinkId=59334)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](sqlsetstmtattr.md)  
   

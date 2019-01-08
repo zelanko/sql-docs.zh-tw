@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: ef55e579-080d-4650-a7fc-4dd03ed8e391
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a2d16976b78013cf373f8fa7e1895a225b13ff0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaa44fe3a5b6e7009057f351d06258b5ab809aa5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223908"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801280"
 ---
 # <a name="spstarting-event-class"></a>SP:Starting 事件類別
   SP:Starting 事件類別指出正在開始執行預存程序。  
@@ -46,7 +45,7 @@ ms.locfileid: "48223908"
 |NTUserName|`nvarchar`|Windows 使用者名稱。|6|是|  
 |ObjectID|`int`|系統指派的預存程序識別碼。|22|是|  
 |ObjectName|`nvarchar`|正在啟動的預存程序名稱。|34|是|  
-|ObjectType|`int`|正在啟動的預存程序類型。 這個值會對應到 sys.objects 目錄檢視中的類型資料行。 如需各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
+|ObjectType|`int`|正在啟動的預存程序類型。 這個值會對應到 sys.objects 目錄檢視中的類型資料行。 針對各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
 |RequestID|`int`|包含陳述式之要求的識別碼。|49|是|  
 |ServerName|`nvarchar`|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
 |SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  

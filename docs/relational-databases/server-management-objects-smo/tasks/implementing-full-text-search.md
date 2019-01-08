@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 489c9e0b34ac0653e30e563a847e873b0f9b488d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a81993eff54c38ae0249e5e1dfbdc92f623d08e3
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613786"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979542"
 ---
 # <a name="implementing-full-text-search"></a>實作全文檢索搜尋
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -73,7 +73,7 @@ Public Class A
       Dim fti As FullTextIndex = Nothing  
       fti = New FullTextIndex(tb)  
   
-      ' Define a FullTextIndexColumn object variable by supplying the parent index and column name arguements in the constructor.  
+      ' Define a FullTextIndexColumn object variable by supplying the parent index and column name arguments in the constructor.  
       Dim ftic As FullTextIndexColumn = Nothing  
       ftic = New FullTextIndexColumn(fti, "Name")  
   
@@ -133,7 +133,7 @@ public class A {
       FullTextIndex fti = default(FullTextIndex);  
       fti = new FullTextIndex(tb);  
   
-      // Define a FullTextIndexColumn object variable by supplying the parent index and column name arguements in the constructor.  
+      // Define a FullTextIndexColumn object variable by supplying the parent index and column name arguments in the constructor.  
       FullTextIndexColumn ftic = default(FullTextIndexColumn);  
       ftic = new FullTextIndexColumn(fti, "Name");  
   

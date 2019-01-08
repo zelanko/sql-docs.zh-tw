@@ -15,15 +15,15 @@ ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ddefd0e0096748f6a333313881fdc7ba25f6e3fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 230ee06508cf5dab0a89371202b8e7623f7652dc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117928"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373160"
 ---
 # <a name="integrating-reporting-services-using-the-reportviewer-controls"></a>使用 ReportViewer 控制項整合 Reporting Services
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 提供兩個 ReportViewer 控制項將報表檢視功能納入應用程式整合。 一個版本是用於 Windows Form 應用程式，另一個版本則是用於 Web Form 應用程式。 每個控制項都提供類似的功能，但是每個功能都是針對其個別的環境所設計的。 兩個控制項都可以處理已經部署到報表伺服器的報表 (遠端處理模式)，或是已經複製到尚未安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之電腦上的報表 (本機處理模式)。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 提供兩個 ReportViewer 控制項將報表檢視功能納入應用程式整合。 一個版本是用於 Windows Form 應用程式，另一個版本則是用於 Web Form 應用程式。 每個控制項都提供類似的功能，但是每個功能都是針對其個別的環境所設計的。 兩個控制項都可以處理已經部署到報表伺服器 (遠端處理模式) 的報表，或是已經複製到尚未安裝 (本機處理模式) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之電腦上的報表。  
   
  ReportViewer 控制項並未內建支援動態適應具備不同螢幕解析度之不同裝置的功能。  
   
@@ -44,6 +44,6 @@ ms.locfileid: "48117928"
   
 ## <a name="see-also"></a>另請參閱  
  [將 Reporting Services 整合到應用程式](../application-integration/integrating-reporting-services-into-applications.md)   
- [建立 SSRS 報表，使用 Visual Studio (Curated Answer)](http://go.microsoft.com/fwlink/?LinkId=321991)  
+ [建立 SSRS 報表，使用 Visual Studio (Curated Answer)](https://go.microsoft.com/fwlink/?LinkId=321991)  
   
   

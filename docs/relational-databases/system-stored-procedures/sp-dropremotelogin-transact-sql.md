@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a834dbb26bfc8c712531084e528f82bba50cd05e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa52c7e66a690b54c33330e09fe4373962ea2f9b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800696"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589312"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@remoteserver =** ] **'***remoteserver***'**  
+ [  **@remoteserver =** ] **'**_remoteserver_**'**  
  這是對應至即將移除之遠端登入的遠端伺服器名稱。 *remoteserver*已**sysname**，沒有預設值。 *remoteserver*必須已經存在。  
   
- [ **@loginame =** ] **'***login***'**  
+ [  **@loginame =** ] **'**_登入_**'**  
  這是本機伺服器上與遠端伺服器相關聯的選擇性登入名稱。 *login* 是預設值為 NULL 的 **sysname**。 *登入*必須已經存在，如果指定。  
   
- [  **@remotename =** ] **'***remote_name***'**  
+ [  **@remotename =** ] **'**_remote_name_**'**  
  對應至的遠端登入的選擇性名稱*登入*登入時，從遠端伺服器。 *remote_name*已**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  

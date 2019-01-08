@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 361b672fa6185bb5c119491128118de8f7030a8c
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 0e0af29d348ff55b415d22d44bc8e8e48a35d290
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018373"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355127"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>從安裝精靈安裝 SQL Server 2014 (安裝程式)
   本主題提供使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式的安裝精靈安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之新執行個體的逐步程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈會針對所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的安裝提供單一功能樹狀目錄，所以您不需要個別予以安裝。 如需有關可安裝的各種元件的詳細資訊，請參閱[安裝 SQL Server 2014](installation-for-sql-server.md)。  如需有關如何安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件個別，請參閱 <<c2> [ 安裝 SQL Server 2014](install-sql-server.md)。  
@@ -42,7 +42,7 @@ ms.locfileid: "51018373"
 > [!NOTE]  
 >  如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。  
   
-### <a name="to-install-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]若要安裝   
+### <a name="to-install-includesscurrentincludessscurrent-mdmd"></a>安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體。 在根資料夾中，按兩下 Setup.exe。 若要從網路共用進行安裝，請找出共用上的根資料夾，然後按兩下 Setup.exe。  
   
@@ -84,14 +84,14 @@ ms.locfileid: "51018373"
   
 12. 在 [執行個體組態] 頁面上，請指定要安裝預設執行個體還是具名執行個體。 如需詳細資訊，請參閱＜ [Instance Configuration](../../sql-server/install/instance-configuration.md)＞。  
   
-     **執行個體識別碼** ：根據預設，此執行個體名稱會當做執行個體識別碼使用。 這是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果是預設執行個體，執行個體名稱和執行個體識別碼將會是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請為 [執行個體識別碼]  文字方塊指定其他值。  
+     **執行個體識別碼** ：依預設，此執行個體名稱會當作執行個體識別碼使用。 這是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果是預設執行個體，執行個體名稱和執行個體識別碼將會是 MSSQLSERVER。 若要使用非預設的執行個體識別碼，請為 [執行個體識別碼]  文字方塊指定其他值。  
   
     > [!NOTE]  
     >  標準的獨立 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體 (不論是預設還是具名執行個體) 都不會針對 [執行個體識別碼] 使用非預設的值。  
   
      所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級項目都會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的每一個元件。  
   
-     **安裝的執行個體** ：此方格會顯示執行安裝程式之電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果預設執行個體已經安裝在電腦上，您就必須安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的具名執行個體。  
+     **安裝的執行個體** - 此方格會顯示執行安裝程式之電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果預設執行個體已經安裝在電腦上，您就必須安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的具名執行個體。  
   
      其餘的安裝工作流程會因您對安裝所指定的功能而不同。 您可能不會看到所有頁面，端視您的選取項目而定。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "51018373"
   
      使用 [伺服器組態 - 定序] 頁面，為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指定非預設的定序。 如需詳細資訊，請參閱[伺服器組態 - 定序](../../sql-server/install/server-configuration-collation.md)。  
   
-14. 使用 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態 - 伺服器組態] 頁面指定以下項目：  
+14. 使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [組態 - 伺服器組態] 頁面指定以下項目：  
   
     -   安全性模式 - 為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體選取 Windows 驗證或混合模式驗證。 如果您選取混合模式驗證，就必須為內建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶提供增強式密碼。  
   
@@ -117,20 +117,20 @@ ms.locfileid: "51018373"
      使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [組態 - 資料目錄] 頁面來指定非預設的安裝目錄。 若要安裝到預設目錄，請按 **[下一步]**。  
   
     > [!IMPORTANT]  
-    >  如果您要指定非預設的安裝目錄，請確定安裝資料夾對於此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的目錄共用。 此外，使用磁碟機或掛接點之根資料夾的資料目錄來安裝 SQL Server，將會失敗。 如需詳細資訊，請檢閱[掛接的磁碟區的 SQL Server 支援。](http://support.microsoft.com/kb/819546/en-us)  
+    >  如果您要指定非預設的安裝目錄，請確定安裝資料夾對於此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的目錄共用。 此外，使用磁碟機或掛接點之根資料夾的資料目錄來安裝 SQL Server，將會失敗。 如需詳細資訊，請檢閱[掛接的磁碟區的 SQL Server 支援。](https://support.microsoft.com/kb/819546/en-us)  
   
      如需詳細資訊，請參閱 [Database Engine 組態 - 資料目錄](../../sql-server/install/database-engine-configuration-data-directories.md)。  
   
      使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [組態 - FILESTREAM] 頁面來針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體啟用 FILESTREAM。 如需詳細資訊，請參閱 [Database Engine 組態 - Filestream](../../sql-server/install/database-engine-configuration-filestream.md)。  
   
-15. 您可以使用 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態 - 帳戶提供] 頁面指定伺服器模式以及要擁有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之管理員權限的使用者或帳戶。 伺服器模式會決定在伺服器上所要使用的記憶體及儲存體子系統。 不同方案類型會在不同的伺服器模式中執行。 如果要在伺服器上執行多維度 Cube 資料庫，請選擇預設選項 [多維度及資料採礦伺服器模式]。 無論系統管理員權限為何，至少須為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定一名系統管理員。 如果要加入執行 SQL Server 安裝程式的帳戶，請按一下 [加入目前使用者] 。 若要在系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中將會有管理員權限的使用者、群組或電腦清單。 如需伺服器模式及系統管理員權限的詳細資訊，請參閱 [Analysis Services 組態 - 帳戶提供](../../sql-server/install/analysis-services-configuration-account-provisioning.md)。  
+15. 您可以使用 [[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態 - 帳戶提供] 頁面指定伺服器模式以及要擁有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 之管理員權限的使用者或帳戶。 伺服器模式會決定在伺服器上所要使用的記憶體及儲存體子系統。 不同方案類型會在不同的伺服器模式中執行。 如果要在伺服器上執行多維度 Cube 資料庫，請選擇預設選項 [多維度及資料採礦伺服器模式]。 無論系統管理員權限為何，至少須為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定一名系統管理員。 如果要加入執行 SQL Server 安裝程式的帳戶，請按一下 [加入目前使用者] 。 若要在系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中將會有管理員權限的使用者、群組或電腦清單。 如需伺服器模式及系統管理員權限的詳細資訊，請參閱 [Analysis Services 組態 - 帳戶提供](../../sql-server/install/analysis-services-configuration-account-provisioning.md)。  
   
      當您完成清單的編輯之後，請按一下 **[確定]**。 然後，在組態對話方塊中確認管理員的清單。 當此清單完成時，請按 **[下一步]**。  
   
-     使用 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態 - 資料目錄] 頁面來指定非預設的安裝目錄。 若要安裝到預設目錄，請按 **[下一步]**。  
+     使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [組態 - 資料目錄] 頁面來指定非預設的安裝目錄。 若要安裝到預設目錄，請按 **[下一步]**。  
   
     > [!IMPORTANT]  
-    >  如果您要指定非預設的安裝目錄，請確定安裝資料夾對於此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的目錄共用。 此外，使用磁碟機或掛接點之根資料夾的資料目錄來安裝 SQL Server，將會失敗。 如需詳細資訊，請檢閱[掛接的磁碟區的 SQL Server 支援。](http://support.microsoft.com/kb/819546/en-us)  
+    >  如果您要指定非預設的安裝目錄，請確定安裝資料夾對於此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體是唯一的。 此對話方塊上的任何目錄都不應該與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中的目錄共用。 此外，使用磁碟機或掛接點之根資料夾的資料目錄來安裝 SQL Server，將會失敗。 如需詳細資訊，請檢閱[掛接的磁碟區的 SQL Server 支援。](https://support.microsoft.com/kb/819546/en-us)  
   
      如需詳細資訊，請參閱 [Analysis Services 組態 - 資料目錄](../../sql-server/install/analysis-services-configuration-data-directories.md)。  
   

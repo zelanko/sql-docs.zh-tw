@@ -20,24 +20,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 862d07d3a27549f8bb0b45a807d1a04c7b13e364
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8ecfff92b5865ebe9bf255f4bcc1b02150cffb31
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659627"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588378"
 ---
 # <a name="routinecolumns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   針對目前資料庫中目前使用者所能存取的資料表值函式所能傳回的每個資料行，各傳回一個資料列。  
   
- 若要從這個檢視中擷取資訊，請指定 完整格式的名稱 **INFORMATION_SCHEMA。 * * * view_name*。  
+ 若要從這個檢視中擷取資訊，請指定 完整格式的名稱**INFORMATION_SCHEMA。**_view_name_。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG 排列**|**nvarchar(** 128 **)**|資料表值函式的目錄或資料庫名稱。|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含資料表值函式的結構描述名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含資料表值函式的結構描述名稱。<br /><br /> <strong>\*\* 重要\* \*</strong> 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|資料表值函式的名稱。|  
 |**COLUMN_NAME**|**nvarchar(** 128 **)**|資料行名稱。|  
 |**ORDINAL_POSITION**|**int**|資料行識別碼。|  
@@ -57,7 +57,7 @@ ms.locfileid: "51659627"
 |**COLLATION_SCHEMA**|**varchar (** 3 **)**|一律傳回 NULL。|  
 |**COLLATION_NAME**|**nvarchar(** 128 **)**|傳回排序順序的唯一名稱，如果資料行是字元資料或**文字**資料型別。 否則，便傳回 NULL。|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|如果資料行是別名資料類型，這個資料行就是建立使用者自訂資料類型的資料庫名稱。 否則，便傳回 NULL。|  
-|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|如果資料行是一個使用者自訂資料類型，這個資料行就是包含使用者自訂資料類型之結構描述的名稱。 否則，便傳回 NULL。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|如果資料行是一個使用者自訂資料類型，這個資料行就是包含使用者自訂資料類型之結構描述的名稱。 否則，便傳回 NULL。<br /><br /> <strong>\*\* 重要\* \*</strong> 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**網域名稱**|**nvarchar(** 128 **)**|如果資料行是一個使用者自訂資料類型，這個資料行就是使用者自訂資料類型的名稱。 否則，便傳回 NULL。|  
   
 ## <a name="see-also"></a>另請參閱  

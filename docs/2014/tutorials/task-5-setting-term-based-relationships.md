@@ -1,5 +1,5 @@
 ---
-title: 工作 5： 設定以詞彙為主的關聯性 |Microsoft Docs
+title: 工作 5:設定以詞彙為主的關聯性 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 6569d512-637d-4f7b-82e1-1e8582278b37
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 122bd2276705e2485afb296adb66accdaf1ccaaf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: caf0cb1f3d22c41fdc551988556a49f12ee22f36
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150078"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375250"
 ---
-# <a name="task-5-setting-term-based-relationships"></a>工作 5：設定以詞彙為主的關聯
-  在這個工作中，您可以定義一些以詞彙為主的關聯，值**Supplier Name**網域。 以詞彙為主的關聯可讓您針對屬於定義域值的詞彙進行更正。 它會啟用多個值，這些值除了被視為相同同義字的共同部分拼字以外，都是相同的。 例如， **Inc.** 可以以下列方式更正**Incorporated**。 DQS 會在知識探索、清理或比對程序中使用這些關聯。 請參閱[建立以詞彙為主的關聯](http://msdn.microsoft.com/library/hh510404.aspx)如需詳細資訊。  
+# <a name="task-5-setting-term-based-relationships"></a>工作 5:設定以詞彙為主的關聯
+  在這個工作中，您可以定義一些以詞彙為主的關聯，值**Supplier Name**網域。 以詞彙為主的關聯可讓您針對屬於定義域值的詞彙進行更正。 它會啟用多個值，這些值除了被視為相同同義字的共同部分拼字以外，都是相同的。 例如， **Inc.** 可以以下列方式更正**Incorporated**。 DQS 會在知識探索、清理或比對程序中使用這些關聯。 請參閱[建立以詞彙為主的關聯](https://msdn.microsoft.com/library/hh510404.aspx)如需詳細資訊。  
   
 1.  選取  **Supplier Name**中**定義域清單**。  
   
@@ -41,6 +41,6 @@ ms.locfileid: "48150078"
      ![詞彙為主的關聯](../../2014/tutorials/media/et-settingtermbasedrelations.jpg "詞彙為主的關聯")  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 6：設定同義字](../../2014/tutorials/task-6-setting-synonyms.md)  
+ [工作 6:設定同義字](../../2014/tutorials/task-6-setting-synonyms.md)  
   
   

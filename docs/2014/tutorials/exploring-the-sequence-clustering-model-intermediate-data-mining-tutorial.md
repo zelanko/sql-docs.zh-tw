@@ -11,15 +11,15 @@ ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a30991f6104263d4c6f497a721cee340f3dc9e2b
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: fe57736160762f90f574f835673e55d19107fa15
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085474"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590182"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>探索時序群集模型 (中繼資料採礦教學課程)
-  既然您已建立**Sequence Clustering with Region**模型，您可以使用瀏覽它[!INCLUDE[msCoName](../includes/msconame-md.md)]中的時序叢集檢視器**採礦模型檢視器**資料採礦設計師 索引標籤。 [!INCLUDE[msCoName](../includes/msconame-md.md)]時序叢集檢視器包含五個索引標籤：**群集圖表**，**群集設定檔**，**群集特性**， **ClusterDiscrimination**，並**的狀態轉換**。 如需如何使用這個檢視器的詳細資訊，請參閱[瀏覽模型，使用 Microsoft 時序叢集檢視器](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)。  
+  既然您已建立**Sequence Clustering with Region**模型，您可以使用瀏覽它[!INCLUDE[msCoName](../includes/msconame-md.md)]中的時序叢集檢視器**採礦模型檢視器**資料採礦設計師 索引標籤。 [!INCLUDE[msCoName](../includes/msconame-md.md)]時序叢集檢視器包含五個索引標籤：**叢集圖表**，**叢集設定檔**，**群集特性**， **ClusterDiscrimination**，以及**狀態轉換**. 如需如何使用這個檢視器的詳細資訊，請參閱[瀏覽模型，使用 Microsoft 時序叢集檢視器](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)。  
   
 -   [群集圖表索引標籤](#bkmk_CDiagram)  
   
@@ -171,7 +171,7 @@ ms.locfileid: "49085474"
  [回到頁首](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_CDiscrim2"></a> 群集辨識索引標籤  
- **群集辨識** 索引標籤可協助您比較兩個群集，來判斷哪一個屬性可區分特定群集從另一個叢集。 這個索引標籤包含四個資料行：**變數**，**值**，**叢集 1**，以及**Cluster 2**。  您可以選擇任何群集當做**群集 1**並**Cluster 2**。  
+ **群集辨識** 索引標籤可協助您比較兩個群集，來判斷哪一個屬性可區分特定群集從另一個叢集。 這個索引標籤包含四個資料行：**變數**，**值**，**群集 1**，和**Cluster 2**。  您可以選擇任何群集當做**群集 1**並**Cluster 2**。  
   
  **變數**資料行告訴您該屬性，這可以是資料行名稱或資料行名稱和這個字的組合名稱**轉換**。 **值**資料行會顯示之確切值的屬性或轉換。 中的資料行的陰影長的條**群集 1**並**Cluster 2**指出您要比較之群集的屬性強度。 長條越長，就表示此群集包含具有該屬性之案例的可能性越高。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "49085474"
   
 1.  在**群集辨識**索引標籤上，如**群集 1**，選取`Pacific Cluster`。  
   
-     根據預設，選取**Cluster 2**變更為**補數的太平洋 * * * 叢集**。  
+     根據預設，選取**Cluster 2**變更為**Pacific Cluster 補數**。  
   
      最上層屬性，可區別`Pacific Cluster`從所有其他情況下是區域。 地區是一個很強的群集屬性，它會讓其他屬性相形失色。 為了避免這樣的影響，請嘗試互相比較幾個較小的群集。 當您這樣做時，屬性的清單會變更，而且可能包括模型之間的更多轉換。  
   

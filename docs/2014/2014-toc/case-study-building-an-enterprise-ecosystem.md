@@ -1,5 +1,5 @@
 ---
-title: 案例研究： 建置 Microsoft Dynamics ERP 和 SQL Server 2014 複製的延展性和效能的企業生態系統 |Microsoft Docs
+title: 案例研究：建置使用 Microsoft Dynamics ERP 和 SQL Server 2014 複製的延展性和效能的企業生態系統 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,14 +9,14 @@ ms.assetid: 2b0b5ab7-4e08-431a-bd59-360177c4565c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1de233ed0f659438c46cab69cec79119fc5291c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3b7652cf67fff68b1a9e6d87e02c2776317af19
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113622"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365231"
 ---
-# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>案例研究：使用 Microsoft Dynamics ERP 和 SQL Server 2014 複寫建置具有延展性和效能的企業生態系統。
+# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>案例研究：建置使用 Microsoft Dynamics ERP 和 SQL Server 2014 複製的延展性和效能的企業生態系統
   **摘要：** 本白皮書涵蓋下列案例：  
 如何使用 SQL Server 2014 中的異動複寫，從 Dynamics AX 用戶端的交易分散到多個節點。 因為資料為跨節點進行即時維護，所以異動複寫提供資料備援來增加資料的可用性，包含可用來讓效能分析更有效率的資料。  
 如何在運用異動複寫來建置 Microsoft Dynamics ERP 中高擴充性的企業生態系統時，了解所涉及的詳細規格。 提供高效能和延展性，且不需自訂 AX 的立即可用功能。  
@@ -34,6 +34,6 @@ ms.locfileid: "48113622"
  **適用於：** SQL Server 2008、SQL Server 2012 及 SQL Server 2014  
   
  若要檢閱文件，請下載  
-        [案例研究： 建置 Microsoft Dynamics ERP 和 SQL Server 2014 複製的企業生態系統的延展性和效能](http://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/A%20Case%20Study%20Using%20Replication%20to%20Build%20an%20Enterprise%20Ecosystem%20in%20Microsoft%20Dynamics%20ERP%20for%20Scalability%20and%20Performance.docx)Word 文件。  
+        [案例研究：建置使用 Microsoft Dynamics ERP 和 SQL Server 2014 複製的企業生態系統的延展性和效能](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/A%20Case%20Study%20Using%20Replication%20to%20Build%20an%20Enterprise%20Ecosystem%20in%20Microsoft%20Dynamics%20ERP%20for%20Scalability%20and%20Performance.docx)Word 文件。  
   
   

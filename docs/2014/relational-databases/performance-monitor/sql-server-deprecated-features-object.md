@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -15,12 +15,12 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8296657608d2633cc57ed4b3e30a532b7a24e2b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211848"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763940"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server、Deprecated Features 物件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 SQLServer:Deprecated Features 物件提供了計數器來監視指定為已被取代的功能。 在每一個案例中，此計數器都會提供一個使用計數，列出上一次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後所遇到之已被取代功能的次數。  
@@ -46,7 +46,7 @@ ms.locfileid: "48211848"
 |CREATE TRIGGER WITH APPEND|遇到了具有 WITH APPEND 子句的 CREATE TRIGGER 陳述式。 請改為重新建立整個觸發程序。 每次在 DDL 陳述式中使用時發生一次。|  
 |CREATE_DROP_DEFAULT|遇到了 CREATE DEFAULT 或 DROP DEFAULT 語法。 請使用 CREATE TABLE 或 ALTER TABLE 的 DEFAULT 選項來重寫命令。 每次編譯時發生一次。|  
 |CREATE_DROP_RULE|遇到了 CREATE RULE 語法。 請使用條件約束重寫命令。 每次編譯時發生一次。|  
-|資料類型：text、ntext 或 image|遇到了 `text`、`ntext` 或 `image` 資料類型。 請重寫應用程式以使用`varchar(max)`資料類型，並移除`text`， `ntext`，和`image`資料類型語法。 每次查詢時發生一次。|  
+|資料類型：text、ntext 或 image|遇到了 `text`、`ntext` 或 `image` 資料類型。 請重寫應用程式來使用 `varchar(max)` 資料類型及移除 `text`、`ntext` 和 `image` 資料類型語法。 每次查詢時發生一次。|  
 |資料庫相容性層級 80|資料庫已變更為相容性層級 80 的總次數。 請在下次發行之前，規劃升級資料庫和應用程式。 啟動相容性層級為 80 的資料庫時也會發生。|  
 |資料庫相容性層級 90|資料庫已變更為相容性層級 90 的總次數。 請針對將來的版本規劃升級資料庫和應用程式。 啟動相容性層級為 90 的資料庫時也會發生。|  
 |DATABASE_MIRRORING|遇到針對資料庫鏡像功能的參考。 計劃升級至 AlwaysOn 可用性群組，如果您執行不支援 AlwaysOn 可用性群組的 SQL Server 版本，則計劃移轉至記錄傳送。|  
@@ -112,14 +112,14 @@ ms.locfileid: "48211848"
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|遇到了已被取代之 sys.numbered_procedure_parameters 的參考。 請勿使用。 每次編譯時發生一次。|  
 |numbered_procedures|遇到了已被取代之 deprecated sys.numbered_procedures 的參考。 請勿使用。 每次編譯時發生一次。|  
-|Oldstyle RAISEERROR|遇到了已被取代的 RAISERROR (格式：RAISERROR 整數字串) 語法。 請使用目前的 RAISERROR 語法重寫陳述式。 每次編譯時發生一次。|  
+|Oldstyle RAISEERROR|已被取代的 RAISERROR (格式：遇到 RAISERROR 整數字串) 語法。 請使用目前的 RAISERROR 語法重寫陳述式。 每次編譯時發生一次。|  
 |隨選連接的 OLEDB。|SQLOLEDB 不是支援的提供者。 請針對隨選連接使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。|  
 |PERMISSIONS|遇到了 PERMISSIONS 內建函數的參考。 請改為查詢 sys.fn_my_permissions。 每次查詢時發生一次。|  
 |ProcNums|遇到了已被取代的 ProcNums 語法。 請重寫陳述式來移除參考。 每次編譯時發生一次。|  
 |READTEXT|遇到 READTEXT 語法。 請重寫應用程式來使用 `varchar(max)` 資料類型及移除 `text` 資料類型語法。 每次查詢時發生一次。|  
-|RESTORE DATABASE 或 LOG WITH DBO_ONLY|遇到 RESTORE … WITH DBO_ONLY 語法。 請改用 RESTORE … RESTRICTED_USER。|  
-|RESTORE DATABASE 或 LOG WITH MEDIAPASSWORD|遇到 RESTORE … WITH MEDIAPASSWORD 語法。 WITH MEDIAPASSWORD 提供的安全性很弱，應該移除。|  
-|RESTORE DATABASE 或 LOG WITH PASSWORD|遇到 RESTORE … WITH PASSWORD 語法。 WITH PASSWORD 提供的安全性很弱，應該移除。|  
+|RESTORE DATABASE 或 LOG WITH DBO_ONLY|RESTORE ...WITH DBO_ONLY 語法。 請改用 RESTORE ...RESTRICTED_USER。|  
+|RESTORE DATABASE 或 LOG WITH MEDIAPASSWORD|RESTORE ...WITH MEDIAPASSWORD 語法。 WITH MEDIAPASSWORD 提供的安全性很弱，應該移除。|  
+|RESTORE DATABASE 或 LOG WITH PASSWORD|RESTORE ...WITH PASSWORD 語法。 WITH PASSWORD 提供的安全性很弱，應該移除。|  
 |從觸發程序傳回結果|每次叫用觸發程序時，都會發生這個事件。 請重寫觸發程序，好讓它不會傳回結果集。|  
 |ROWGUIDCOL|遇到 ROWGUIDCOL 語法。 請重寫陳述式來使用 $rowguid 語法。 每次編譯時發生一次。|  
 |SET ANSI_NULLS OFF|遇到 SET ANSI_NULLS OFF 語法。 請移除這個已被取代的語法。 每次編譯時發生一次。|  
@@ -156,13 +156,13 @@ ms.locfileid: "48211848"
 |sp_configure 'ft notify bandwidth (min)'|遇到 sp_configure 的 ft notify bandwidth (min) 選項。 請勿使用。 每次查詢時發生一次。|  
 |sp_configure 'locks'|遇到 sp_configure 的 locks 選項。 Locks 不再可以設定， 請勿使用。 每次查詢時發生一次。|  
 |sp_configure 'open objects'|遇到 sp_configure 的 open objects 選項。 open objects 的數目不再可以設定， 請勿使用。 每次查詢時發生一次。|  
-|sp_configure 'priority boost'|遇到 sp_configure 的 priority boost 選項。 請勿使用。 每次查詢時發生一次。 請改用 Windows start /high … program.exe 選項。|  
+|sp_configure 'priority boost'|遇到 sp_configure 的 priority boost 選項。 請勿使用。 每次查詢時發生一次。 請改用 Windows start /high ... program.exe 選項。|  
 |sp_configure 'remote proc trans'|遇到 sp_configure 的 remote proc trans 選項。 請勿使用。 每次查詢時發生一次。|  
 |sp_configure 'set working set size'|遇到 sp_configure 的 set working set size 選項。 working set size 不再可以設定， 請勿使用。 每次查詢時發生一次。|  
 |sp_control_dbmasterkey_password|sp_control_dbmasterkey_password 預存程序不會檢查主要金鑰是否存在。 這可允許回溯相容性，但是會顯示警告。 這個行為已被取代。 在未來版本中，主要金鑰必須存在，而且預存程序 sp_control_dbmasterkey_password 中使用的密碼必須與用來加密資料庫主要金鑰的其中一個密碼相同。|  
 |sp_create_removable|遇到 sp_create_removable 程序。 請改用 CREATE DATABASE。 每次查詢時發生一次。|  
-|sp_db_vardecimal_storage_format|使用`vardecimal`遇到儲存體格式。 請改用資料壓縮。|  
-|sp_dbcmptlevel|遇到 sp_dbcmptlevel 程序。 請改用 ALTER DATABASE … SET COMPATIBILITY_LEVEL。 每次查詢時發生一次。|  
+|sp_db_vardecimal_storage_format|遇到 `vardecimal` 儲存格式的使用。 請改用資料壓縮。|  
+|sp_dbcmptlevel|遇到 sp_dbcmptlevel 程序。 使用 ALTER DATABASE ...SET COMPATIBILITY_LEVEL。 每次查詢時發生一次。|  
 |sp_dbfixedrolepermission|遇到 sp_dbfixedrolepermission 程序。 請勿使用。 每次查詢時發生一次。|  
 |sp_dboption|遇到 sp_dboption 程序。 請改用 ALTER DATABASE 和 DATABASEPROPERTYEX。 每次編譯時發生一次。|  
 |sp_dbremove|遇到 sp_dbremove 程序。 請改用 DROP DATABASE。 每次查詢時發生一次。|  
@@ -179,7 +179,7 @@ ms.locfileid: "48211848"
 |sp_droprole|遇到 sp_droprole 程序。 請改用 DROP ROLE。 每次查詢時發生一次。|  
 |sp_droptype|遇到 sp_droptype 程序。 請改用 DROP TYPE。|  
 |sp_dropuser|遇到 sp_dropuser 程序。 請改用 DROP USER。 每次查詢時發生一次。|  
-|sp_estimated_rowsize_reduction_for_vardecimal|使用`vardecimal`遇到儲存體格式。 請改用資料壓縮及 sp_estimate_data_compression_savings。|  
+|sp_estimated_rowsize_reduction_for_vardecimal|遇到 `vardecimal` 儲存格式的使用。 請改用資料壓縮及 sp_estimate_data_compression_savings。|  
 |sp_fulltext_catalog|遇到 sp_fulltext_catalog 程序。 請改用 CREATE/ALTER/DROP FULLTEXT CATALOG。 每次編譯時發生一次。|  
 |sp_fulltext_column|遇到 sp_fulltext_column 程序。 請改用 ALTER FULLTEXT INDEX。 每次編譯時發生一次。|  
 |sp_fulltext_database|遇到 sp_fulltext_database 程序。 請改用 ALTER DATABASE。 每次編譯時發生一次。|  
@@ -249,13 +249,13 @@ ms.locfileid: "48211848"
 |sysusers|遇到 sysusers 的參考。 請改用 sys.database_principals。 每次編譯時發生一次。|  
 |沒有 WITH 的資料表提示|遇到了一個使用資料表提示但未使用 WITH 關鍵字的陳述式。 請修改陳述式，使其包含 WITH 字。 每次編譯時發生一次。|  
 |Text in row 資料表選項|遇到 'text in row' 資料表選項的參考。 請改用 sp_tableoption 'large value types out of row'。 每次查詢時發生一次。|  
-|TEXTPTR|遇到 TEXTPTR 函數的參考。 請重寫應用程式以使用`varchar(max)`資料類型，並移除`text`， `ntext`，和`image`資料類型語法。 每次查詢時發生一次。|  
-|TEXTVALID|遇到 TEXTVALID 函數的參考。 請重寫應用程式以使用`varchar(max)`資料類型，並移除`text`， `ntext`，和`image`資料類型語法。 每次查詢時發生一次。|  
-|timestamp|總次數已被取代`timestamp`DDL 陳述式中發現資料類型。 使用`rowversion`請改為輸入資料。|  
-|UPDATETEXT 或 WRITETEXT|遇到 UPDATETEXT 或 WRITETEXT 陳述式。 請重寫應用程式以使用`varchar(max)`資料類型，並移除`text`， `ntext`，和`image`資料類型語法。 每次查詢時發生一次。|  
+|TEXTPTR|遇到 TEXTPTR 函數的參考。 請重寫應用程式來使用 `varchar(max)` 資料類型及移除 `text`、`ntext` 和 `image` 資料類型語法。 每次查詢時發生一次。|  
+|TEXTVALID|遇到 TEXTVALID 函數的參考。 請重寫應用程式來使用 `varchar(max)` 資料類型及移除 `text`、`ntext` 和 `image` 資料類型語法。 每次查詢時發生一次。|  
+|timestamp|DDL 陳述式中遇到之已被取代的 `timestamp` 資料類型的總次數。 請改用 `rowversion` 資料類型。|  
+|UPDATETEXT 或 WRITETEXT|遇到 UPDATETEXT 或 WRITETEXT 陳述式。 請重寫應用程式來使用 `varchar(max)` 資料類型及移除 `text`、`ntext` 和 `image` 資料類型語法。 每次查詢時發生一次。|  
 |USER_ID|遇到 USER_ID 函數的參考。 請改用 DATABASE_PRINCIPAL_ID 函數。 每次編譯時發生一次。|  
 |針對連結的伺服器使用 OLEDB||  
-|Vardecimal 儲存格式|使用`vardecimal`遇到儲存體格式。 請改用資料壓縮。|  
+|Vardecimal 儲存格式|遇到 `vardecimal` 儲存格式的使用。 請改用資料壓縮。|  
 |XMLDATA|遇到 FOR XML 語法。 針對 RAW 和 AUTO 模式使用 XSD 產生。 明確的模式不會有任何取代項目。 每次編譯時發生一次。|  
 |XP_API|遇到擴充預存程序陳述式。 請勿使用。|  
 |xp_grantlogin|遇到 xp_grantlogin 程序。 請改用 CREATE LOGIN。 每次編譯時發生一次。|  

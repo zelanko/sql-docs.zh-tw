@@ -1,22 +1,21 @@
 ---
-title: 步驟 4：測試第 2 課的教學課程封裝 | Microsoft Docs
+title: 步驟 4：測試第 2 課的教學課程封裝 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f9344531e59bd0b22ae99de4664c1433411b7f6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5fd9233061b51da56b036526c3cac55c96a4e7fb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055978"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802840"
 ---
 # <a name="step-4-testing-the-lesson-2-tutorial-package"></a>步驟 4：測試第 2 課的教學課程封裝
   利用現在已設定的 Foreach 迴圈容器和一般檔案連接管理員，第 2 課的封裝可反覆進行範例資料夾之 14 個一般檔案的集合。 每次一找到符合指定檔案名稱準則的檔案名稱時，Foreach 迴圈容器就會以該檔案名稱擴展使用者自訂變數。 然後，這個變數會更新一般檔案連接管理員的 ConnectionString 屬性，並建立與新的一般檔案之連接。 在連接到資料夾的下一個檔案之前，Foreach 迴圈容器會對新的一般檔案中的資料執行未修改過的資料流程工作。  
@@ -46,9 +45,9 @@ ms.locfileid: "48055978"
 2.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]**。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 5 課：新增套件部署模型的套件設定](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+ [第 5 課：加入封裝部署模型的封裝組態](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [執行專案和套件](packages/run-integration-services-ssis-packages.md)  
+ [執行專案和封裝](packages/run-integration-services-ssis-packages.md)  
   
   

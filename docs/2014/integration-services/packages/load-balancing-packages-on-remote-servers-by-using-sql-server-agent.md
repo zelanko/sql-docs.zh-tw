@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - load-balancing [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dd8b82c7cb8e33e525a6b82730a138fb42759a6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77394dc55b6f8146e9c98ffd55a21bfb41785ec9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187528"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756450"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>使用 SQL Server Agent 在遠端伺服器上設定封裝負載平衡
   當您必須執行許多封裝時，使用其他可用的伺服器會更方便。 當封裝全都受單一父封裝控制時，使用其他伺服器來執行封裝的這種方法，即稱為負載平衡。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，負載平衡是一種必須由封裝擁有者建構的手動程序。 伺服器並不會自動執行負載平衡。 此外，遠端伺服器上執行的封裝也必須是完整的封裝，而不是其他封裝中的個別工作。  
@@ -57,11 +56,11 @@ ms.locfileid: "48187528"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[子套件的實作](../implementation-of-child-packages.md)|描述如何安裝封裝，以及建立 SQL Server Agent 作業來執行封裝。|  
-|[父套件的實作](../implementation-of-the-parent-package.md)|描述如何建立包含許多「執行 SQL Server Agent 作業」工作的父封裝。 每項工作將分別執行其中一個子封裝。|  
-|[遠端伺服器上負載平衡套件的記錄](../logging-for-load-balanced-packages-on-remote-servers.md)|描述遠端封裝的記錄狀況。|  
+|[子封裝的實作](../implementation-of-child-packages.md)|描述如何安裝封裝，以及建立 SQL Server Agent 作業來執行封裝。|  
+|[父封裝的實作](../implementation-of-the-parent-package.md)|描述如何建立包含許多「執行 SQL Server Agent 作業」工作的父封裝。 每項工作將分別執行其中一個子封裝。|  
+|[遠端伺服器上負載平衡封裝的記錄](../logging-for-load-balanced-packages-on-remote-servers.md)|描述遠端封裝的記錄狀況。|  
   
 ## <a name="related-tasks"></a>相關工作  
- [使用 SQL Server Agent 排程套件](../schedule-a-package-by-using-sql-server-agent.md)  
+ [使用 SQL Server Agent 排程封裝](../schedule-a-package-by-using-sql-server-agent.md)  
   
   

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b365ad16ce7f96ba3e0dd14f278b1ce4db60a32
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4bed4614f3d38ca7700d40b73347430f27e9d82b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657130"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591702"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,24 +47,24 @@ sp_statistics [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@table_name=** ] **'***table_name***'**  
+ [  **@table_name=** ] **'**_table_name_**'**  
  指定用來傳回目錄資訊的資料表。 *table_name*已**sysname**，沒有預設值。 不支援萬用字元的模式比對。  
   
- [  **@table_owner=** ] **'***擁有者***'**  
+ [  **@table_owner=** ] **'**_擁有者_**'**  
  這是用來傳回目錄資訊之資料表的資料表擁有者名稱。 *table_owner*已**sysname**，預設值是 NULL。 不支援萬用字元的模式比對。 如果*擁有者*未指定，套用基礎 dbms 的預設資料表可見性規則。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定名稱的資料表，就會傳回這份資料表的索引。 如果*擁有者*未指定且目前使用者並未擁有指定的資料表*名稱*，此程序會尋找具有指定的資料表*名稱*所擁有資料庫擁有者。 如果資料表存在，就會傳回這份資料表的索引。  
   
- [  **@table_qualifier=** ] **'***限定詞***'**  
- 這是資料表限定詞的名稱。 *限定詞*已**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (*限定詞 ***。*** 擁有者 ***。*** 名稱*)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個參數代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+ [  **@table_qualifier=** ] **'**_限定詞_**'**  
+ 這是資料表限定詞的名稱。 *限定詞*已**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (_限定詞_**。**_擁有者_**。**_名稱_)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個參數代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
- [  **@index_name=** ] **'***index_name***'**  
+ [  **@index_name=** ] **'**_index_name_**'**  
  這是索引名稱。 *index_name*已**sysname**，預設值是 %。 支援萬用字元的模式比對。  
   
- [  **@is_unique=** ] **'***is_unique***'**  
+ [  **@is_unique=** ] **'**_is_unique_**'**  
  是是否唯一索引 (如果**Y**) 要傳回。 *is_unique*已**char(1)**，預設值是**N**。  
   
- [  **@accuracy=** ] **'***精確度***'**  
+ [  **@accuracy=** ] **'**_精確度_**'**  
  這是統計資料的基數層級和頁面精確度。 *精確度*已**char(1)**，預設值是**Q**。指定**E**以確定會更新統計資料，以便基數和頁面都精確。  
   
  該值**E** (SQL_ENSURE) 會要求驅動程式無條件地擷取統計資料。  

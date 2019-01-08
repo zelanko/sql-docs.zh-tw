@@ -11,12 +11,12 @@ ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 74e98548349d073cf5f008c6015ce55ac3768acb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40b08c40b8b327ad26bb2974627e81000846a1b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067192"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350654"
 ---
 # <a name="clear-the-analysis-services-caches"></a>清除 Analysis Services 快取
   Analysis Services 會快取資料以提高查詢效能。 此主題提供有關如何使用 XMLA ClearCache 命令，清除回應 MDX 查詢時所建立之快取的建議。 根據您使用的是表格式或多維度模型，執行 ClearCache 的影響有所不同。  
@@ -33,7 +33,7 @@ ms.locfileid: "48067192"
   
  執行 ClearCache 也會清除 xVelocity 記憶體中分析引擎 (VertiPaq) 中的記憶體中快取。 xVelocity 引擎維護小型的快取結果集。 執行 ClearCache 會導致 xVelocity 引擎中的這些快取無效。  
   
- 最後，執行 ClearCache 也會移除剩餘的資料在記憶體中的表格式模型重新設定為當`DirectQuery`模式。 如果模型包含受到嚴格控制的敏感性資料，這是特別重要的。 在此情況下，執行 ClearCache 是可採取的預防動作，以確保敏感性資料只存在於預期的地方。 如果您使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 部署模型及變更查詢模式，則需要手動清除快取。 相反地，使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 在模型和資料分割上指定 `DirectQuery`，則會在您將模型切換為使用該查詢模式時自動清除快取。  
+ 最後，在表格式模型重新設定為 `DirectQuery` 模式時，執行 ClearCache 也會移除記憶體中的剩餘資料。 如果模型包含受到嚴格控制的敏感性資料，這是特別重要的。 在此情況下，執行 ClearCache 是可採取的預防動作，以確保敏感性資料只存在於預期的地方。 如果您使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 部署模型及變更查詢模式，則需要手動清除快取。 相反地，使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 在模型和資料分割上指定 `DirectQuery`，則會在您將模型切換為使用該查詢模式時自動清除快取。  
   
  相較於效能測試期間清除多維度模型快取的建議，並沒有清除表格式模型快取的廣泛建議。 如果您未管理包含敏感性資料的表格式模型部署，則沒有需要清除快取的特定管理工作。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48067192"
  若要清除快取，請使用 XMLA 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 您可以清除資料庫、Cube、維度、資料表或量值群組層級的快取。 下列清除資料庫層級快取的步驟適用於多維度模型和表格式模型。  
   
 > [!NOTE]  
->  嚴格的效能測試可能需要更完整的方法來清除快取。 如需如何排清 Analysis Services 和檔案系統快取的指示，請參閱 [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?linkID=http://go.microsoft.com/fwlink/?LinkID=225539)(SQL Server 2008 R2 Analysis Services 操作指南) 中關於清除快取的章節。  
+>  嚴格的效能測試可能需要更完整的方法來清除快取。 如需如何排清 Analysis Services 和檔案系統快取的指示，請參閱 [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?linkID=https://go.microsoft.com/fwlink/?LinkID=225539)(SQL Server 2008 R2 Analysis Services 操作指南) 中關於清除快取的章節。  
   
  對於多維度和表格式模型，清除部分快取是兩步驟的程序，包含在執行 ClearCache 時導致快取無效，接著在接收下一個查詢時清空快取。 記憶體耗用量只在快取實際上清空後才會明顯減少。  
   
@@ -57,10 +57,10 @@ ms.locfileid: "48067192"
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，以滑鼠右鍵按一下資料庫，並指向 [新增查詢]，然後選取 [XMLA]。  
   
-2.  將下列程式碼範例複製到 XMLA 查詢視窗。 變更`DatabaseID`目前連接上的資料庫識別碼。  
+2.  將下列程式碼範例複製到 XMLA 查詢視窗。 將 `DatabaseID` 變更為目前連接上的資料庫識別碼。  
   
     ```  
-    <ClearCache xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <ClearCache xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
       <Object>  
         <DatabaseID> Adventure Works DW Multidimensional</DatabaseID>  
       </Object>  
@@ -71,7 +71,7 @@ ms.locfileid: "48067192"
      或者，您也可以指定子物件 (例如量值群組) 的路徑，只清除該物件的快取。  
   
     ```  
-    <ClearCache xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <ClearCache xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
       <Object>  
         <DatabaseID>Adventure Works DW Multidimensional</DatabaseID>  
             <CubeID>Adventure Works</CubeID>  
@@ -89,7 +89,7 @@ ms.locfileid: "48067192"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 中編寫管理工作](../script-administrative-tasks-in-analysis-services.md)   
+ [在 Analysis Services 中編寫管理工作的指令碼](../script-administrative-tasks-in-analysis-services.md)   
  [監視 Analysis Services 執行個體](monitor-an-analysis-services-instance.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: SQL Server Machine Learning 上安裝新的 Python 套件 |Microsoft Docs
-description: 將新的 Python 套件新增至 SQL Server 2017 Machine Learning 服務 （資料庫內） 和 Machine Learning Server （獨立式）
+title: 安裝新的 Python 語言套件-SQL Server Machine Learning
+description: 將新的 Python 套件新增至 SQL Server 2017 Machine Learning 服務 （資料庫內） 和 Machine Learning Server （獨立式）。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/10/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4e7ad9382f1e85bd5f816065116b5a52c6745c8b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fc038f94fc24b8c0f795efc18c62acc1656877a7
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697638"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432311"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server 上安裝新的 Python 套件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51697638"
 
 + [SQL Server 2017 Machine Learning 服務 （資料庫）](../install/sql-machine-learning-services-windows-install.md)與 Python 語言選項。 
 
-+ 套件必須是 Windows 上符合規定及執行的 Python 3.5。 
++ 套件必須是 Windows 上的 Python 3.5 相容和執行。 
 
 + 系統管理伺服器的存取權才可安裝套件。
 
@@ -46,13 +46,6 @@ ms.locfileid: "51697638"
 
 在此範例中所安裝的套件[CNTK](https://docs.microsoft.com/cognitive-toolkit/)，來自 Microsoft 的支援自訂項目，教育訓練，以及不同類型的類神經網路共用的深度學習架構。
 
-> [!TIP]
-> 需要設定您的 Python 工具的協助嗎？ 請參閱這些部落格：
-> 
-> [開始使用 Python 的 Web 服務使用 Machine Learning Server](https://blogs.msdn.microsoft.com/mlserver/2017/12/13/getting-started-with-python-web-services-using-machine-learning-server/)
-> 
-> [David 臂： Microsoft Cognitive Toolkit + VS Code](https://dacrook.com/cntk-vs-code-awesome/)
-
 ### <a name="step-1-download-the-windows-version-of-the-python-package"></a>步驟 1： 下載 Windows 版本的 Python 套件
 
 + 如果您要在沒有網際網路存取伺服器上安裝 Python 套件，您必須下載到不同的電腦的 WHL 檔案，並再將它複製到伺服器。
@@ -64,7 +57,7 @@ ms.locfileid: "51697638"
 > [!IMPORTANT]
 > 請確定您取得封裝的 Windows 版本。 如果檔案結尾.gz，很可能不正確的版本。
 
-此頁面包含多個平台以及多個 Python 版本的下載：[設定 CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
+此頁面包含多個平台以及多個 Python 版本的下載項目：[設定 CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
 
 ### <a name="step-2-open-a-python-command-prompt"></a>步驟 2： 開啟 Python 命令提示字元
 
@@ -116,7 +109,7 @@ Successfully installed cntk-2.1
 
 安裝完成時，您可以立即開始使用的封裝下, 一個步驟中所述。
 
-如需使用 CNTK、 深度學習的範例，請參閱這些教學課程： [cntk Python API](https://cntk.ai/pythondocs/tutorials.html)
+如需使用 CNTK 的深度學習的範例，請參閱這些教學課程：[Cntk Python API](https://cntk.ai/pythondocs/tutorials.html)
 
 若要使用封裝中的函式，在您的指令碼中，插入標準`import <package_name>`陳述式中的指令碼前面幾行：
 

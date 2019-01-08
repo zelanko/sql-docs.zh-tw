@@ -1,5 +1,5 @@
 ---
-title: 第 2 課： 使用 xsd 工具的 RDL 結構描述產生類別 |Microsoft Docs
+title: 第 2 課：使用 xsd 工具的 RDL 結構描述產生類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: a81c87f1-7977-4b30-b6ac-b38b3e2b6398
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34c279f44df33bddf12b3fd9ec3e128514d1f50c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 818400a678b16f524e79da607a25775ad756ca5d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065978"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374490"
 ---
-# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>第 2 課：使用 xsd 工具，從 RDL 結構描述產生類別
+# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>第 2 課：使用 xsd 工具的 RDL 結構描述產生類別
   建立 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 專案之後，下一個步驟就是擷取報表定義結構描述的本機副本，並執行 XML 結構描述定義工具 (Xsd.exe)。  
   
 ### <a name="to-generate-the-rdl-classes"></a>產生 RDL 類別  
@@ -26,7 +26,7 @@ ms.locfileid: "48065978"
 1.  開啟的執行個體[!INCLUDE[msCoName](../includes/msconame-md.md)]Internet Explorer （或對等的網頁瀏覽器），並瀏覽至下列 URL:  
   
     ```  
-    http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition/ReportDefinition.xsd  
+    https://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition/ReportDefinition.xsd  
     ```  
   
 2.  一旦在瀏覽器中開啟 RDL 結構描述後，瀏覽至**檔案**功能表，然後選取**另存新檔**。  
@@ -53,7 +53,7 @@ ms.locfileid: "48065978"
     >  ReportDefinition.xsd 檔案加入專案之後，您會發現**方案總管 中**，ReportDefinition.cs (.vb) 檔案不存在。 若要顯示檔案，請按一下 ReportDefinition.xsd 檔案旁邊的展開/摺疊按鈕。  
   
 ## <a name="next-lesson"></a>下一課  
- 在下一課，您將撰寫程式碼，使用您從 RDL 結構描述產生的類別，從報表伺服器載入報表定義。 請參閱[第 3 課： 從報表伺服器載入報表定義](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)。  
+ 在下一課，您將撰寫程式碼，使用您從 RDL 結構描述產生的類別，從報表伺服器載入報表定義。 請參閱[第 3 課：從報表伺服器載入報表定義](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用從 RDL 結構描述產生的類別更新報表&#40;SSRS 教學課程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
