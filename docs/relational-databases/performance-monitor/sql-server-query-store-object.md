@@ -5,21 +5,21 @@ ms.date: 03/17/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Store object
 - SQL Server:Query Store
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 9da34a3bcf208e433b62a29a34b8cd87e5269cbe
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: aba8942612be6c7b33883bb109146170583b5b95
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158633"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380319"
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, 查詢存放區物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

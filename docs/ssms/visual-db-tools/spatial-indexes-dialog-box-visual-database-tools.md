@@ -13,12 +13,12 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb31f067ceb052a165cd6e3830e778d6af15e875
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9e5b9b4d25c7fd6f0384c3390e09c4b427228ebb
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509365"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589612"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>空間索引對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "52509365"
 顯示空間索引的名稱。 在建立新的索引時，會根據 [資料表設計工具] 作用中視窗的資料表，給予預設的名稱。 您可以隨時變更名稱。  
   
 **說明**  
-描述此索引。 若要寫入更詳細的描述，請按一下 [描述]，然後按一下屬性欄位右邊的省略符號按鈕 (**…**)。 如此便可提供較大的區域以寫入文字。  
+描述此索引。 若要寫入更詳細的描述，請按一下 [描述]，然後按一下屬性欄位右邊出現的省略符號按鈕 (**...**)。 如此便可提供較大的區域以寫入文字。  
   
 **資料表設計工具類別目錄**  
 展開時會顯示此空間索引的屬性相關資訊。  
@@ -111,7 +111,7 @@ ms.locfileid: "52509365"
 **允許頁面鎖定**  
 指定是否在此索引中允許頁面層級的鎖定。 允許或不允許頁面層級的鎖定會影響資料庫效能。  
   
-重新計算統計資料  
+**重新計算統計資料**  
 指定是否會在建立索引時計算新的統計資料。 重新計算統計資料會減緩索引的建置，但是通常會提升查詢效能。  
   
 **允許資料列鎖定**  

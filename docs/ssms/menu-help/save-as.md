@@ -15,12 +15,12 @@ ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8f64fb29a90f38d777d0963b9f985bb65e2e2a8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6c48e1dd5a5fbcdc2141f14288e10f452b64c850
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701337"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201437"
 ---
 # <a name="save-as"></a>另存新檔
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "51701337"
 **檔案名稱**  
 使用此選項來檢視目前的檔案名稱、變更檔案名稱，或篩選顯示的檔案和資料夾。 若要篩選顯示的檔案和資料夾，請輸入要篩選的完整或部份的檔案名稱。 您可以使用星號 (`*`) 作為萬用字元。  
   
-> [!TIP]  
-> 若要顯示位於網路及網路位置上的檔案，請在 [檔案名稱] 方塊中輸入 URL 或網路路徑。 例如，"https://mywebsite" 會顯示在 "mywebsite" Web 位置上的可用檔案，而 "\\\myserver\myshare" 則會顯示在 "myserver" 的 "myshare" 位置上的可用檔案。  
+> [!TIP]
+> 若要顯示位於網路及網路位置上的檔案，請在 [檔案名稱] 方塊中輸入 URL 或網路路徑。 例如，"<https://mywebsite>" 會顯示在 "mywebsite" Web 位置上的可用檔案，而 "\\\myserver\myshare" 則會顯示在 "myserver" 的 "myshare" 位置上的可用檔案。  
   
 **存檔類型**  
 使用此選項為所選項目選取新的檔案類型。 顯示的檔案類型都是適用於所選取項目進行轉換的可用檔案類型。  

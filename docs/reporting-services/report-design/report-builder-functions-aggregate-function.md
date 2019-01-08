@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b97d2a45a0312e2d2db0425f89262526ddbe76ae
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ea1a6e2a0cca043fc7465a3dd7408ec24ab98286
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030527"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202587"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>報表產生器函式 - Aggregate 函式
   傳回指定之運算式的自訂彙總，由資料提供者定義。  
@@ -47,7 +47,7 @@ Aggregate(expression, scope)
   
  您可以藉由變更 **[資料集屬性]** 對話方塊的 **[將小計當做詳細資料列]** 選項值來變更這項預設行為。 當這個選項是設定為 **True**時，所有的資料 (包括伺服器彙總) 會顯示為詳細資料。 當設定為 **False**時，伺服器彙總會顯示為總計。 這個屬性的設定會影響連結至這個資料集的所有資料區域。  
   
-> [!NOTE]  
+> [!NOTE]
 >  所有參考 **Aggregate** 之報表項目的包含群組都必須有其群組運算式的簡單欄位參考，例如 `[FieldName]`。 您不能在使用複雜群組運算式的資料區域中使用 **Aggregate** 。 若是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料處理延伸模組，則您的查詢必須包含 **LevelProperty** 類型 (而非 **MemberProperty**) 的 MDX 欄位，才可支援使用 **Aggregate**函數的彙總。  
   
  *Expression* 可以包含巢狀彙總函式的呼叫，其中包含下列例外和條件：  

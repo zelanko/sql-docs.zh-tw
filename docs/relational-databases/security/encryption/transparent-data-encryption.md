@@ -19,12 +19,12 @@ ms.author: aliceku
 ms.reviewer: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac89fa10f34d8c6f4d06c26a3be063cf00fcad2a
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: d2fda42994bb86d1087f22024205f8a521ec530d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383783"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210577"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明資料加密 (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,11 +33,11 @@ ms.locfileid: "49383783"
   
  TDE 會執行資料和記錄檔的即時 I/O 加密和解密。 此加密會使用資料庫加密金鑰 (DEK)，該金鑰儲存於資料庫開機記錄中，以便在復原期間可供使用。 DEK 是對稱金鑰，而其維護安全的方式是使用儲存於伺服器之 master 資料庫內的憑證或是受到 EKM 模組所保護的非對稱金鑰。 TDE 會保護休眠的資料，也就是資料檔和記錄檔。 它提供了與各個不同業界內建立的許多法令、規章和指導方針相符的能力， 如此可讓軟體開發人員使用 AES 和 3DES 加密演算法加密資料，而不需要變更現有的應用程式。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  TDE 不會提供跨通訊通道的加密。 如需如何跨通訊通道加密資料的詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
->   
+> 
 >  **相關主題：**  
->   
+> 
 >  -   [Azure SQL Database 的透明資料加密](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
 > -   [開始使用 SQL 資料倉儲中的透明資料加密 (TDE)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)  
 > -   [將 TDE 保護的資料庫移至另一個 SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)  

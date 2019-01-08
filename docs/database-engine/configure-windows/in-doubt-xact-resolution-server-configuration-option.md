@@ -15,12 +15,12 @@ ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0b42584dfc1e77ad6c9e214e8c755828bd758307
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4a61d8d593c9adcedbc454e052817594bab71479
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513795"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209367"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>不能肯定的交易解析伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ GO
   
  [不能肯定的交易解析] 選項屬於進階選項。 如果您要使用 **sp_configure** 系統預存程序來變更此設定，只有在 [顯示進階選項] 設為 1 時，才能變更 [不能肯定的交易解析]。 設定會立即生效，伺服器不必重新啟動。  
   
-> [!NOTE]  
+> [!NOTE]
 >  在與分散式交易相關的所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上，讓此選項的組態都維持一致，將有助於避免資料不一致。  
   
 ## <a name="see-also"></a>另請參閱  

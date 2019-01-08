@@ -11,15 +11,15 @@ helpviewer_keywords:
 - resource pool [SQL Server], overview
 - resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: e53c61ed06282553be01d383753b8a45db56de8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37d6a896057085353d81e8c9acbd161a25014d51
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624886"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380949"
 ---
 # <a name="resource-governor-resource-pool"></a>資源管理員資源集區
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +124,7 @@ ms.locfileid: "47624886"
 |描述如何刪除資源集區。|[刪除資源集區](../../relational-databases/resource-governor/delete-a-resource-pool.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
+ [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [資源管理員工作負載群組](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [資源管理員分類函數](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   
  [使用範本來設定資源管理員](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)   

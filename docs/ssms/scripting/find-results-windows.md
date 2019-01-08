@@ -8,8 +8,6 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
-- vs.findresults1
-- findresultswindow
 - vs.findresults2
 helpviewer_keywords:
 - Find Results Windows dialog box
@@ -18,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: daeaef85b0fd00436afc3ccfd5f4f5dbc28acce2
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ffacc517013d64d8f12c9008f604febc50de819a
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642976"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328185"
 ---
 # <a name="find-results-windows"></a>尋找結果視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,5 +97,3 @@ ms.locfileid: "51642976"
  而且可能會以此行的統計資料結束：  
   
  `Total replaced: 57  Matching files: 23  Total files searched: 59`  
-  
-  

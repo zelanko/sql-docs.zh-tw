@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance"
+ms.technology: performance"
 ms.topic: conceptual
 helpviewer_keywords:
 - database monitoring [SQL Server], disk usage
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - database performance [SQL Server], disk usage
 - monitoring server performance [SQL Server], disk usage
 ms.assetid: 1525449c-ea7d-4222-b294-1ba1fe99c9ac
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 586842219df99ca940ed4710c620b0b77a1074a7
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: dc8b9edea97ab4a14d3d977e04c9d10e929f8d15
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158846"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53379062"
 ---
 # <a name="monitor-disk-usage"></a>監視磁碟使用量
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

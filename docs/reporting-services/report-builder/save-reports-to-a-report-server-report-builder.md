@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13b71430d1d07eb8c33492bfe18c7c2b2395b951
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 90a9a377391e04a97adf3d542c8493b31649141e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027813"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590812"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>將報表儲存到報表伺服器 (報表產生器)
   在報表產生器中，您可以將報表定義儲存至報表伺服器 (也稱為發行報表)。 當報表儲存至報表伺服器時，其他使用者就可以檢視此報表。 每當您執行已發行的報表時，您將會擷取最新的資料。 若要儲存已轉譯之報表的靜態複本，請將此報表匯出到另一個檔案格式並儲存起來，或是使用報表記錄功能來儲存已轉譯的報表版本。  
@@ -23,7 +23,7 @@ ms.locfileid: "50027813"
   
 ### <a name="to-save-a-report-to-a-report-server"></a>若要將報表儲存到報表伺服器  
   
-1.  在報表產生器的按鈕中，按一下 **[儲存]**。 [另存為 <報表項目\<] 對話方塊隨即開啟。  
+1.  在報表產生器的按鈕中，按一下 **[儲存]**。 [另存為 \<報表項目>] 對話方塊隨即開啟。  
   
     > [!NOTE]  
     >  如果您重新儲存報表，報表會自動重新儲存到之前的位置。 使用 [另存新檔] 選項可變更位置。  
@@ -38,7 +38,7 @@ ms.locfileid: "50027813"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>若要將報表儲存成不同的名稱  
   
-1.  在 [報表產生器] 按鈕中，按一下 **[另存新檔]**。 [另存為 <報表項目\<] 對話方塊隨即開啟。  
+1.  在 [報表產生器] 按鈕中，按一下 **[另存新檔]**。 [另存為 \<報表項目>] 對話方塊隨即開啟。  
   
 2.  瀏覽至報表伺服器位置，或您想要儲存報表的檔案共用。  
   

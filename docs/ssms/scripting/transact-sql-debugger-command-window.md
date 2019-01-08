@@ -6,8 +6,6 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- VS.CommandWindow
 helpviewer_keywords:
 - Command Window [Transact-SQL]
 ms.assetid: e567ebf9-0793-451b-92c7-26193a02d9da
@@ -15,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ec8bc61454647bd553fa73513a1b06b71edc85b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f884fedf974e863636de39c126c583498564d79e
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701206"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328498"
 ---
 # <a name="transact-sql-debugger---command-window"></a>Transact-SQL 偵錯工具 - 命令視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,5 +43,3 @@ ms.locfileid: "51701206"
   
 ## <a name="see-also"></a>另請參閱  
  [Transact-SQL 偵錯工具](../../relational-databases/scripting/transact-sql-debugger.md)  
-  
-  

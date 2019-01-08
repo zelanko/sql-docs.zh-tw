@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d1afb4913b758397d4d072859c3fb80879f2e46
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0999d5011df80bae97c767ac910b2a5fd810127c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642791"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211807"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>使用查詢編輯器編輯 SQLCMD 指令碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "51642791"
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器支援環境變數和定義成 SQLCMD 指令碼一部分的變數，但不支援內建的 SQLCMD 或 **osql** 變數。 由 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 所處理的 SQLCMD 對變數而言，是區分大小寫的。 例如，PRINT '$(COMPUTERNAME)' 會產生正確的結果，但是 PRINT '$(ComputerName)' 會傳回錯誤。  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient 以便在正規和 SQLCMD 模式中執行。 從命令列執行時，SQLCMD 會使用 OLE DB 提供者。 由於可能套用不同的預設選項，因此，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] SQLCMD 模式中，以及在 SQLCMD 公用程式中執行相同的查詢時，可能會出現不同的行為。  
   
 ## <a name="supported-sqlcmd-syntax"></a>支援的 SQLCMD 語法  

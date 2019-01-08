@@ -7,8 +7,6 @@ ms.prod_service: sql-tools
 ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.location.file
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint location
 ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
@@ -16,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1fa7badf8ed1db3ccec310a81e7de7ee628428a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0e1525b5210d94f4a1a9f219a757daa893731f5d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642852"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328348"
 ---
 # <a name="edit-a-breakpoint-location"></a>編輯中斷點位置
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,5 +45,3 @@ ms.locfileid: "51642852"
  [指定中斷點動作](../../relational-databases/scripting/specify-a-breakpoint-action.md)   
  [指定中斷點條件](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
  [指定中斷點篩選條件](../../relational-databases/scripting/specify-a-breakpoint-filter.md)  
-  
-  

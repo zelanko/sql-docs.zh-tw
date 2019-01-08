@@ -5,19 +5,18 @@ ms.date: 12/20/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2fec17446829d39deae233c205360d768aec313c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fff6e1ab9f6394c34c60356fdd4f5eb76ab89c6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682456"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212377"
 ---
 # <a name="master-data-manager-web-application"></a>主資料管理員 Web 應用程式
 
@@ -25,12 +24,12 @@ ms.locfileid: "47682456"
 
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式主要是供管理員執行管理工作使用。 例如，只有管理員才能建立模型、商務規則或資料的版本。 如需管理員的詳細資訊，請參閱[管理員 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 僅適用於 Internet Explorer (IE) 9 或更新版本。 不支援 IE 8 和更早版本、Microsoft Edge 和 Chrome。  
-
+> 
 > **無法建立 MDS 網站嗎？**
->>如需如何解決此問題的指示，請參閱這份 Microsoft 技術支援文件。
-[無法透過 SQL Server 2016 中的低權限帳戶建立 MDS 網站](https://aka.ms/mdssupport) 
+> >如需如何解決此問題的指示，請參閱這份 Microsoft 技術支援文件。
+> [無法透過 SQL Server 2016 中的低權限帳戶建立 MDS 網站](https://aka.ms/mdssupport) 
   
  Web 應用程式的 [總管] 功能區域是管理員未使用的唯一區域。 [總管] 適用於頻繁地更新主要資料的人員。 這些使用者具有執行其工作所需之資料的權限。  
   

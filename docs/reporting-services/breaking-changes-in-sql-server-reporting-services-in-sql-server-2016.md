@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5e183d0aee0bfdaeb80af16b26e7fa0045b60be1
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ae42e66047d54b305fef2cb48a9d69c0ebb25a44
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028827"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591852"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 中 SQL Server Reporting Services 的重大變更
 

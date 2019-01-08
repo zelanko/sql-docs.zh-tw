@@ -14,12 +14,12 @@ ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a145b7ae7194720c8366f0c647a511e086fe4a2d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ad890736cf0536c5f4f776d2bd4949e195dd26d6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412635"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205417"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 向外延展群組
 
@@ -46,7 +46,7 @@ ms.locfileid: "52412635"
 例如，假設您有個外部 SQL Server 資料表，其具有 12 個月的分割區，以及有 3 個節點的 PolyBase 向外延展群組，則每個節點各會使用 4 個 PolyBase 讀取器來處理這 12 個分割區。 如下圖所示。 
 
 > [!NOTE]
- 這與透過 Hadoop 進行的向外延展讀取不同。 
+>  這與透過 Hadoop 進行的向外延展讀取不同。 
 
 ![PolyBase 向外延展群組](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase 向外延展群組")
   

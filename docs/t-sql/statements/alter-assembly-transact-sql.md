@@ -24,19 +24,19 @@ ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c405884f8ff87cb0b37991dc5639bf69068a6ffd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ac4fde8a0058d05125346167e07c3d99e687a8e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503093"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203967"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   修改組件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄屬性來改變組件。 ALTER ASSEMBLY 會將它重新整理為保留其實作的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模組最新備份，並且加入或移除其相關檔案。 組件是利用 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) 加以建立的。  
 
->  [!WARNING]
+> [!WARNING]
 >  CLR 使用 .NET Framework 中的程式碼存取安全性 (CAS)，而這不再作為安全性界限受支援。 使用 `PERMISSION_SET = SAFE` 所建立的 CLR 組件可以存取外部系統資源、呼叫 Unmanaged 程式碼，以及取得系統管理員權限。 從 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 開始，引進稱為 `clr strict security` 的 `sp_configure` 選項，來增強 CLR 組件的安全性。 `clr strict security` 會依預設啟用，且將 `SAFE` 與 `EXTERNAL_ACCESS` 組件視作已標記為 `UNSAFE` 一樣。 可以基於回溯相容性停用 `clr strict security` 選項，但不建議這麼做。 Microsoft 建議透過具有已獲授與 master 資料庫中 `UNSAFE ASSEMBLY` 權限之對應登入的憑證或非對稱金鑰簽署所有組件。 如需詳細資訊，請參閱 [CLR 嚴格安全性](../../database-engine/configure-windows/clr-strict-security.md)。  
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -85,11 +85,11 @@ ALTER ASSEMBLY assembly_name
  必須針對同樣需要更新的每一個相依組件分別發出 ALTER ASSEMBLY 陳述式。  
   
  PERMISSION_SET = { SAFE | EXTERNAL_ACCESS | UNSAFE }    
->  [!IMPORTANT]  
+> [!IMPORTANT]
 >  `PERMISSION_SET` 選項會受到開啟警告中所述的 `clr strict security` 選項影響。 當 `clr strict security` 已啟用時，所有組件會被視為 `UNSAFE`。  
- 指定組件的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 程式碼存取權限集合屬性。 如需有關此屬性的詳細資訊，請參閱 [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)。  
-  
-> [!NOTE]  
+>  指定組件的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 程式碼存取權限集合屬性。 如需有關此屬性的詳細資訊，請參閱 [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)。  
+> 
+> [!NOTE]
 >  自主資料庫無法使用 EXTERNAL_ACCESS 和 UNSAFE 選項。  
   
  VISIBILITY = { ON | OFF }   

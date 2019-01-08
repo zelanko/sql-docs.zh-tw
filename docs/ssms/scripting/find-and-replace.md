@@ -7,10 +7,6 @@ ms.prod_service: sql-tools
 ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- vs.findreplace.quickfind
-- vs.find
-- vs.findreplace.quickreplace
 helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
@@ -18,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d955b56fdb9e0da2263d0b8576fbc98b5d540304
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3cb60eac3800c29b2eb95c250f843b0a66a8a131
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642880"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328518"
 ---
 # <a name="find-and-replace"></a>尋找和取代
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -129,5 +125,3 @@ ms.locfileid: "51642880"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Management Studio 鍵盤快速鍵](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

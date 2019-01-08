@@ -102,8 +102,9 @@ items:
     href: execute-sql-server-agent-job-task.md
   - name: 執行 SQL 工作
     href: execute-sql-task.md
-  - name: MERGE in Integration Services Packages
-    href: merge-in-integration-services-packages.md
+    items:
+    - name: MERGE in Integration Services Packages
+      href: merge-in-integration-services-packages.md
   - name: 執行 T-SQL 陳述式工作
     href: execute-t-sql-statement-task.md
   - name: 運算式工作
@@ -173,9 +174,9 @@ items:
       href: validate-xml-with-the-xml-task.md
 - name: 優先順序條件約束
   href: precedence-constraints.md
-ms.openlocfilehash: 71692b371dbb280515e35e270e0e0c11aecf876d
-ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
+ms.openlocfilehash: 22ac40c444fc52df8c0c29b9908b1d4d30fc4ee8
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45533951"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991851"

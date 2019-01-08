@@ -17,12 +17,12 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3da52bc9b6014f5a2a553fc24e844299dd4ab4e8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4eebf51a73a6d5f4665c418b6f6b03078777bd0f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515776"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590372"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>將現有的索引移至不同的檔案群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "52515776"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要將現有的索引移至不同的檔案群組，使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "52515776"
   
 8.  按一下 [確定] 。  
   
- 下列資訊可從 [索引屬性 - *index_name*] 對話方塊的 [儲存體] 頁面取得：  
+ 下列資訊可從 [索引屬性 - _index_name_] 對話方塊的 [儲存體] 頁面取得：  
   
  **檔案群組**  
  在指定的檔案群組中儲存索引。 清單僅顯示標準 (資料列) 檔案群組。 預設清單選取項目為資料庫的 PRIMARY 檔案群組。  
@@ -152,7 +152,7 @@ ms.locfileid: "52515776"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;  

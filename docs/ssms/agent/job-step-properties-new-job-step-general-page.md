@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a0afcc9e97bf2518dc0e3fc400842f17c9442543
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92f106346e9e1e3d292c1d1a0f40b41da6067fae
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744816"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215707"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>作業步驟屬性 - 新增作業步驟 (一般頁面)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47744816"
   
 ## <a name="options-for-activex-script-job-steps"></a>ActiveX 指令碼作業步驟的選項  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > 將從未來 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 中移除 ActiveX Scripting 子系統。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。  
   
 **VBScript**  

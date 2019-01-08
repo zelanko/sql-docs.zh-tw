@@ -17,12 +17,12 @@ ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d743652fa35a5f3cb6a8438d0ad6dffd66e7a01d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7367a3f3ce663966b583f6946923e3c312a5eb41
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736006"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213607"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>清除查詢結果 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

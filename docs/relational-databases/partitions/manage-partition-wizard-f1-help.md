@@ -21,15 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 61cf0d2acb9dbe2e2f5a9ec68be92cecf16ce22b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0bcc98052bf076515ff3d961fee24e6550830118
+ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731676"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414163"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>管理資料分割精靈 F1 說明
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -249,7 +249,7 @@ ms.locfileid: "47731676"
 ### <a name="one-time-schedule-types-options"></a>僅執行一次的排程類型選項  
  如果您將作業排程為僅執行一次，就必須選取未來的日期和時間。  
   
- **Date**  
+ **日期**  
  選取作業要執行的日期。  
   
  **Time**  

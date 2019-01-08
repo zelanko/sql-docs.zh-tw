@@ -18,12 +18,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 803ce49a254bc6f0e969828192d914facf46ef3c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 650c5bd55365fbf1729fe3514bd31b6af73f6981
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523027"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978814"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>建立伺服器稽核與伺服器稽核規格
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "52523027"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目建立伺服器稽核和伺服器稽核規格：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -164,10 +164,10 @@ ms.locfileid: "52523027"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
-    -- Creates a server audit called "HIPPA_Audit" with a binary file as the target and no options.  
+    -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
     CREATE SERVER AUDIT HIPAA_Audit  
         TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
     ```  
@@ -178,14 +178,14 @@ ms.locfileid: "52523027"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
-    /*Creates a server audit specification called "HIPPA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPPA_Audit" created above.  
+    /*Creates a server audit specification called "HIPAA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPAA_Audit" created above.  
     */  
   
-    CREATE SERVER AUDIT SPECIFICATION HIPPA_Audit_Specification  
-    FOR SERVER AUDIT HIPPA_Audit  
+    CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
+    FOR SERVER AUDIT HIPAA_Audit  
         ADD (FAILED_LOGIN_GROUP);  
     GO  
     -- Enables the audit.   

@@ -18,12 +18,12 @@ ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 02afdd859faf63e7317b49971591ab4ef49037be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8e85590f094595b73cd2279ee61ae698b42d2e9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706296"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590274"
 ---
 # <a name="scm-services---prevent-automatic-startup-of-an-instance"></a>SCM 服務 - 避免自動啟動執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "47706296"
   
 3.  在 [詳細資料] 窗格中，以滑鼠右鍵按一下 [MSSQLServer]，然後按一下 [屬性]。  
   
-4.  在 [SQL Server \<執行個體名稱> 屬性]**** 對話方塊之 [服務] 索引標籤的 [一般] 方塊中，將 [啟動模式] 的值設定為 [手動]。  
+4.  在 [SQL Server \<執行個體名稱> 屬性] 對話方塊之 [服務] 索引標籤的 [一般] 方塊中，將 [啟動模式] 的值設定為 [手動]。  
   
-5.  按一下 [確定] 關閉 [SQL Server \<執行個體名稱> 屬性]**** 對話方塊，然後關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定管理員。  
+5.  按一下 [確定] 關閉 [SQL Server \<執行個體名稱> 屬性] 對話方塊，然後關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  

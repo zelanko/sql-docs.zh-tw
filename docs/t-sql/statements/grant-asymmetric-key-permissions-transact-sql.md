@@ -18,12 +18,12 @@ ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 86d21ac71916d492e058cfd3f1193b0e6b9d8979
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20bcf2732ddc71ad218f97715266cc70b77df6f2
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779996"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589172"
 ---
 # <a name="grant-asymmetric-key-permissions-transact-sql"></a>GRANT 非對稱金鑰權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ GRANT { permission  [ ,...n ] }
  *permission*  
  指定非對稱金鑰可以授與的權限。 如下所列。  
   
- ON ASYMMETRIC KEY **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::**_asymmetric_key_name_  
  指定正在授與權限的非對稱金鑰。 需要範圍限定詞 "::"。  
   
  *database_principal*  

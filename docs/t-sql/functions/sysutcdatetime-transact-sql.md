@@ -25,12 +25,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 305fbf35deccf81c127e6b53f2c2b2f946c06aae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ef7e85b7ae4734c78c40723abc11594c416d524
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658063"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53265949"
 ---
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,12 +68,12 @@ SYSUTCDATETIME ( )
  下列範例示範日期和時間函數所傳回的不同格式。  
   
 ```  
-SELECT SYSDATETIME() AS SYSDATETIME  
-    ,SYSDATETIMEOFFSET() AS SYSDATETIMEOFFSET  
-    ,SYSUTCDATETIME() AS SYSUTCDATETIME  
-    ,CURRENT_TIMESTAMP AS CURRENT_TIMESTAMP  
-    ,GETDATE() AS GETDATE  
-    ,GETUTCDATE() AS GETUTCDATE;  
+SELECT SYSDATETIME() AS [SYSDATETIME()]  
+    ,SYSDATETIMEOFFSET() AS [SYSDATETIMEOFFSET()]  
+    ,SYSUTCDATETIME() AS [SYSUTCDATETIME()]  
+    ,CURRENT_TIMESTAMP AS [CURRENT_TIMESTAMP]  
+    ,GETDATE() AS [GETDATE()]  
+    ,GETUTCDATE() AS [GETUTCDATE()];  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

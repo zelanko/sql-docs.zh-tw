@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 86ff5bb9df79c23ba0bfb04954790ba0c475a3d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d80ec6d5087735602b05326e874263c083657a6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775816"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211467"
 ---
 # <a name="secure-my-reports"></a>保護我的報表
   [我的報表] 功能會提供用於報表之使用者管理的工作空間。 為達成其目的，[我的報表] 資料夾的權限，應較一般用途的其他資料夾為寬鬆。 使用者如果只有檢視及執行其他資料夾中之報表的權限，則需要一組擴充的權限來管理其 [我的報表] 資料夾和擁有的內容。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供此用途的特殊角色指派及角色定義。  
   
-> [!NOTE]  
+> [!NOTE]
 >  只有在報表管理員中，才能使用 [我的報表]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中無法使用它。  
   
 ## <a name="role-assignment-for-my-reports"></a>[我的報表] 的角色指派  

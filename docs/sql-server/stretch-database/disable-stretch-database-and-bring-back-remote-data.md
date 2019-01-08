@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Stretch Database, disabling
 - disabling Stretch Database
 ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbfe0a9f6927e1dd62469c8d3e7c3be542cbda76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb71506fabe25de06e991574bcdf013e3c111d19
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794806"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596769"
 ---
 # <a name="disable-stretch-database-and-bring-back-remote-data"></a>停用 Stretch Database 並帶回遠端資料
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

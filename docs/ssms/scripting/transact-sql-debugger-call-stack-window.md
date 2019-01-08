@@ -6,8 +6,6 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.callstack
 helpviewer_keywords:
 - Call Stack Window [Transact-SQL]
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
@@ -15,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9954ba8e0a05711388c69d56901b124c1cba04d2
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c1eaa1a58028b84992d8313aed6db8f63e0d69ce
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642807"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328209"
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Transact-SQL 偵錯工具 - 呼叫堆疊視窗
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,5 +71,3 @@ ms.locfileid: "51642807"
  [Transact-SQL 偵錯工具](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Transact-SQL 偵錯工具資訊](../../relational-databases/scripting/transact-sql-debugger-information.md)   
  [逐步執行 Transact-SQL 程式碼](../../relational-databases/scripting/step-through-transact-sql-code.md)  
-  
-  

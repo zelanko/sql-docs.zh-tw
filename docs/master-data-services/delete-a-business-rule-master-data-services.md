@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting business rules [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f69b633ef95c569be5f14c9127e8215c919198de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41229ed69a75e86f8b37199fa392ae5e277ce7cf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828944"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769940"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>刪除商務規則 (Master Data Services)
 

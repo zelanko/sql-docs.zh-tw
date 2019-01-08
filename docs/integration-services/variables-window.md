@@ -16,12 +16,12 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eaa6caf40a44ba8579b5e5cff31f0c4c10f2eb4a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9c34a12bf9532d87c599ea02ee7be068facda93a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420509"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205947"
 ---
 # <a name="variables-window"></a>變數視窗
   使用 [變數] 視窗，即可建立和修改使用者定義的變數，並檢視系統變數。  
@@ -30,7 +30,7 @@ ms.locfileid: "52420509"
   
  您可以將 View.Variables 命令對應到您在 [選項] 對話方塊的 [鍵盤] 頁面中所選擇的組合鍵，以選擇性地顯示 [變數] 視窗。  
   
-> [!NOTE]  
+> [!NOTE]
 >  **Name** 和 **Namespace** 屬性的值必須以 Unicode Standard 2.0 中定義的字母字元或底線 (_) 為開頭。 後續的字元可以是 Unicode Standard 2.0 中定義的字母或數字，或是底線 (\_)。  
   
 ## <a name="options"></a>選項。  

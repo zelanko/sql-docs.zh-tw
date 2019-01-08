@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a7f0849e5549c904c63225b817a0548c13155247
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fab92b86d9df1ca0000fb762602280b14e6a1aa7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687942"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760430"
 ---
 # <a name="attribute-groups-master-data-services"></a>屬性群組 (Master Data Services)
 

@@ -7,20 +7,18 @@ ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: supportability
 ms.topic: reference
-f1_keywords:
-- vs.toolbox
 helpviewer_keywords:
 - Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a948e4a1e787756517482c5b62b46cdab625e6bf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 40e4dac5c3efaf4df04b8afec3d028d39978e397
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667377"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328798"
 ---
 # <a name="toolbox-component-f1-help"></a>工具箱元件 F1 說明
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,5 +42,3 @@ ms.locfileid: "51667377"
 ## <a name="see-also"></a>另請參閱  
  [使用工具箱](../../ssms/use-the-toolbox.md)   
  [選擇工具箱項目 &#40;維護工作頁面&#41;](https://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  
-  
-  

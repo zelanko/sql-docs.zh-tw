@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5d52335f4b80a4cd1ff06e9fe8084d46a8d0d089
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8fc6c932dd3cb75a01cd5ad328ca47f1c51f9879
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854996"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759680"
 ---
 # <a name="custom-index-master-data-services"></a>自訂索引 (Master Data Services)
 

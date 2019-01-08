@@ -9,17 +9,16 @@ ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.openfile
-- vs.openproject
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e23ffa7cba5f2c8d4349c6d32b47353bb94e27d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f504d7d2369f2cdb1014ec2f1f27854e9275075c
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674156"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53327892"
 ---
 # <a name="open-file-dialog-box"></a>開啟檔案對話方塊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,4 +98,3 @@ ms.locfileid: "47674156"
   
 **連線網路磁碟機**  
 開啟 [連線網路磁碟機] 對話方塊。  
-  

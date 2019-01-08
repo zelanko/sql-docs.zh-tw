@@ -7,20 +7,18 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.windows
 helpviewer_keywords:
 - Windows dialog box
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9dffd3854e2ccf153b099bce26a916b53b7c221a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 004ac3bc70ca52efbd13336067bc958a0e975cde
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660346"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328069"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>視窗對話方塊 (Microsoft 文件總管說明)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,4 +39,3 @@ ms.locfileid: "47660346"
   
 **關閉視窗**  
 關閉在清單中選取的文件和視窗。  
-  

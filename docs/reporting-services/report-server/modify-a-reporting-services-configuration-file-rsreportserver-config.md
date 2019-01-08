@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 412cb586d306da13791a956a01a1a217d5fc0d7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54ca89e75da4bf5ce5d0666ec479b870deda2848
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758652"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202137"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將應用程式設定儲存在組態檔集合中。 安裝程式會針對您所安裝的每個報表伺服器執行個體建立組態檔。 在每個檔案內部，其值是在安裝期間設定，或當您使用工具和應用程式來設定作業的伺服器時設定。 在某些情況下，您必須直接修改檔案，以便加入或修改進階設定。 組態設定會指定為 XML 元素或屬性。 如果您了解 XML 和組態檔，就可以使用文字或程式碼編輯器來修改可由使用者定義的設定。  
   
  某些組態設定只能透過某個工具進行設定。 您必須透過 Reporting Services 組態工具、安裝程式或 **rsconfig** 命令列公用程式來修改包含加密值的設定。 您必須是本機管理員群組的成員才能執行這些工具。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  修改組態檔時，請特別小心。 如果您修改保留給內部使用的設定，可能會停用安裝程序。 除非您嘗試解決特定問題，否則一般而言不建議您修改組態設定。 如需哪些設定可安全變更的詳細資訊，請參閱 [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 或 [RSReportDesigner 組態檔](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)。 如需組態檔的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 產品文件。  
   
  本主題內容：  
@@ -101,7 +101,7 @@ ms.locfileid: "47758652"
   
 ## <a name="see-also"></a>另請參閱  
  [RsReportServer.config 組態檔](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [ReportingServicesService 設定檔](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
+ [ReportingServicesService 組態檔](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
  [RSReportDesigner 組態檔](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [部署資料處理延伸模組](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [部署傳遞延伸模組](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   

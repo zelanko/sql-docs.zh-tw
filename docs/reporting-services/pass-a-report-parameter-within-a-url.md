@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b0848b6c5d34470964bc363b827e82c466f78326
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a78727d3b0ab3ee1909f9e86032ab392642b5603
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390481"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211207"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>在 URL 內傳遞報表參數
   您可以在報表 URL 中包括報表參數，以便將它們傳遞給報表。 這些 URL 參數不會加上前置詞，因為它們會直接傳遞給報表處理引擎。  
@@ -28,12 +28,12 @@ ms.locfileid: "52390481"
   
  所有查詢參數都可以有相對應的報表參數。 您可以傳遞相對應的報表參數，即可傳遞查詢參數。 如需詳細資訊，請參閱[在關聯式查詢設計工具中建立查詢 &#40;報表產生器和 SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  報表參數會區分大小寫。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  報表參數會區分大小寫，而且使用下列特殊字元：  
->   
+> 
 >  -   根據 URL 編碼標準，在 URL 字串中的任何空格字元都會使用字元 "%20" 來取代。  
 > -   URL 參數部分中的空格字元會取代成加號字元 (+)。  
 > -   任何字串部分中的分號都會取代成 "%3A" 字元。  

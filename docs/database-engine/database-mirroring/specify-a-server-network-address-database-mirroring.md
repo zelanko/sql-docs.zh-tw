@@ -16,12 +16,12 @@ ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7217be66fa41328d2483bc42fa66f2f71fcc1beb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cbc26b45f5845cf563bb1cc8855ecf6b600b999
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789036"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588702"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>指定伺服器網路位址 (資料庫鏡像)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47789036"
 ##  <a name="Syntax"></a> 伺服器網路位址的語法  
  伺服器網路位址的語法採用下列格式：  
   
- TCP**://***\<system-address>***:***\<port>*  
+ TCP<strong>://</strong>*\<系統位址>*<strong>:</strong>*\<通訊埠>*  
   
  其中  
   
@@ -41,15 +41,15 @@ ms.locfileid: "47789036"
   
     -   如果系統位於同一個網域，您可以使用電腦系統的名稱，例如 `SYSTEM46`。  
   
-    -   若要使用 IP 位址，則它在您的環境中必須是唯一的。 建議您只使用靜態的 IP 位址。 此 IP 位址可以是 IP 第 4 版 (IPv4) 或 IP 第 6 版 (IPv6)。 IPv6 位址必須使用方括弧括住，例如：**[<IPv6 位址>]**。  
+    -   若要使用 IP 位址，則它在您的環境中必須是唯一的。 建議您只使用靜態的 IP 位址。 此 IP 位址可以是 IP 第 4 版 (IPv4) 或 IP 第 6 版 (IPv6)。 IPv6 位址必須使用方括弧括住，例如：**[**<IPv6 位址>**]**。  
   
          若要取得系統的 IP 位址，請在 Windows 命令提示字元下，輸入 **ipconfig** 命令。  
   
     -   完整網域名稱保證可以運作。 這是在不同位置會有不同格式的本機定義位址字串。 完整網域名稱通常 (但不一定) 都是複合名稱，包含電腦名稱及一系列以句號分隔的網域區段，並採用下列格式：  
   
-         *電腦名稱* **。** *domain_segment*[...**.***domain_segment*]  
+         _電腦名稱_ **。** _網域區段_[...**.**_網域區段_]  
   
-         其中 *computer_name* 是執行伺服器執行個體之電腦的網路名稱，而 *domain_segment*[...**.***domain_segment*] 則是伺服器的其餘網域資訊；例如：`localinfo.corp.Adventure-Works.com`。  
+         其中 *電腦名稱*是執行伺服器執行個體之電腦的網路名稱，而 *網域區段*[...**.**_網域區段_] 則是伺服器的其餘網域資訊；例如： `localinfo.corp.Adventure-Works.com`。  
   
          網域區段的內容和數目是在公司或組織的內部決定的。 如果您不知道伺服器的完整網域名稱，請洽詢您的系統管理員。  
   
@@ -109,7 +109,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  若要形成完整的網域名稱，請串連 <主機名稱> 和 <主要 DNS 尾碼> 的值，如下所示：  
   
- <主機名稱> **.** *<主要 DNS 尾碼>*  
+ <主機名稱> **.** _<主要 DNS 尾碼>_  
   
  例如，IP 組態  
   

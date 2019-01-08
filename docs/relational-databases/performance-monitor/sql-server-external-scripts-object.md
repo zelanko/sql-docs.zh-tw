@@ -5,7 +5,7 @@ ms.date: 03/21/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - External Scripts object
 - SQLServer:External Scripts
 ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 136abcc97e91424972e67c7e9f49fc872ca77865
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: aae70901fe5422b035a147e11b228fb224028c08
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158776"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380022"
 ---
 # <a name="sql-server-external-scripts-object"></a>SQL Server, 外部指令碼物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

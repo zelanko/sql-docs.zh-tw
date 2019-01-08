@@ -5,21 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Errors object
 - SQLServer:SQL Errors
 ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 0372670c89a2367bf12bc646d6aada5ceba29776
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: c399521f26cd2372451122e6d5e9ea828148d32d
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158586"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380329"
 ---
 # <a name="sql-server-sql-errors-object"></a>SQL Server 的 SQL Errors 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
