@@ -1,6 +1,6 @@
 ---
 title: 啟用和停用異動資料擷取 (SQL Server) | Microsoft Docs
-ms.date: 03/06/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01dd23b4c7143280c54137b0e1474eb59fdcd0d3
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 61ca34394e2cab5cf16862f6ddae20573c4e17a0
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558779"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991831"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>啟用和停用異動資料擷取 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   此主題描述如何針對資料庫和資料表啟用及停用異動資料擷取。  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>針對資料庫啟用異動資料擷取  
@@ -142,7 +142,7 @@ EXEC sys.sp_cdc_enable_table
 GO  
 ```  
   
-> [!NOTE]  
+> [!NOTE]
 >  如果在含有現有主索引鍵的資料表上啟用 [異動資料擷取]，而且並未使用 *@index_name* 參數來識別替代的唯一索引鍵，異動資料擷取功能就會使用此主索引鍵。 如果沒有先針對資料表停用異動資料擷取，系統就不允許對主索引鍵進行後續變更。 不論設定異動資料擷取時是否要求淨變更查詢的支援，都是如此。 如果啟用異動資料擷取時，資料表沒有任何主索引鍵，則異動資料擷取就會忽略後續加入主索引鍵的作業。 由於異動資料擷取不會使用啟用資料表之後所建立的主索引鍵，因此您可以移除此索引鍵和索引鍵資料行，而且沒有任何限制。  
   
 ## <a name="disable-change-data-capture-for-a-table"></a>針對資料表停用異動資料擷取  

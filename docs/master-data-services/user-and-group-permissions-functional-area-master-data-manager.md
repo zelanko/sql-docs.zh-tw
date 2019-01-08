@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a36068cb17f38388dd411a7cab2927e518dc408d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5d9f97f58747ecde143a1c2244a68d8bdaf7d91c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395341"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769669"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>使用者及群組的權限功能區域 (主資料管理員)
 

@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: leolimsft
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: 706da94bfae2b4d00904e354f32af4237f902570
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c291ad016664cf8ac7dcbe2deb9cc04680a707c0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700227"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765020"
 ---
 # <a name="tracing-master-data-services"></a>追蹤 (Master Data Services)
 

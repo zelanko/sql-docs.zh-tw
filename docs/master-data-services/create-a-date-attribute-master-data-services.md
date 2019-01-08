@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating date attributes [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: aa31a8e2601eba31d1f7579b5f110945a47f4d79
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8f7c2dece1ac25d99348080c9c6f338c7db8f50c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395291"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753450"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>建立日期屬性 (Master Data Services)
 

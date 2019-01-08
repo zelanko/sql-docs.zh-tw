@@ -18,12 +18,12 @@ ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 144bc0915836fadf0965a305d8d10014106a85b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf66db2279aa6400f96564d0b364fb998009e1c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598447"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979274"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,11 +68,11 @@ FOR SERVER AUDIT audit_name
  一旦建立伺服器稽核規格之後，就可以使用具有 CONTROL SERVER 或 ALTER ANY SERVER AUDIT 權限的主體、系統管理員 (sysadmin) 帳戶或具有此稽核之明確存取權的主體來加以檢視。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立稱為 `HIPPA_Audit_Specification` 的伺服器稽核規格，它會針對稱為 `HIPPA_Audit` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 稽核來稽核失敗的登入。  
+ 下列範例會建立稱為 `HIPAA_Audit_Specification` 的伺服器稽核規格，它會針對稱為 `HIPAA_Audit` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 稽核來稽核失敗的登入。  
   
 ```  
-CREATE SERVER AUDIT SPECIFICATION HIPPA_Audit_Specification  
-FOR SERVER AUDIT HIPPA_Audit  
+CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
+FOR SERVER AUDIT HIPAA_Audit  
     ADD (FAILED_LOGIN_GROUP);  
 GO  
 ```  

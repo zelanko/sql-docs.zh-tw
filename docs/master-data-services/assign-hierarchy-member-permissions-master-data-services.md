@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], assigning member permissions
@@ -15,12 +14,12 @@ ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 795bf22648b8d159fda5cf59f7e5cb87fb1380a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8bbf04fb23dc780b0f30c5e5b276b8666c974bc9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797868"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777220"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>指派階層成員權限 (Master Data Services)
 

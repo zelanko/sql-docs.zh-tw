@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - functional area permissions [Master Data Services], about functional area permissions
@@ -16,12 +15,12 @@ ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: eca31682d6c184bbbff5426fcf523971adcc9fcd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b16b70e4956caa7a2f5bffbdc484a725cfee937d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628747"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773820"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>功能區域權限 (Master Data Services)
 

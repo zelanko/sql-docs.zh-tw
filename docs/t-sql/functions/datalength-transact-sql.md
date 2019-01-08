@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f42078a809e083db1b2219be90c83290f59960df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0155cc073fb8a1379879605945855ee2c2fba051
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609446"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979206"
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,9 +58,6 @@ DATALENGTH ( expression )
 - **nvarchar**
 - **text**
 - **varbinary**
-
-及
-
 - **varchar**
 
 資料類型搭配使用時尤其有用，因為這些資料類型可以儲存可變長度的資料。

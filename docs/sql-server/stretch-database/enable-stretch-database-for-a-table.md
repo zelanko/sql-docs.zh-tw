@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Stretch Database, enabling table
 - enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2101d73b7e76cbc842277980b22c239dc826233c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4fdb8995798b408e0418e2170631f3b331acff0
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824216"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596689"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47824216"
   
  **權限**。 在資料庫或資料表上啟用 Stretch Database 需要 db_owner 權限。 在資料表上啟用 Stretch Database 也需要資料表的 ALTER 權限。  
 
- >   [!NOTE]
+ > [!NOTE]
  > 稍後，如果您停用 Stretch Database，請記住針對資料表或資料庫停用 Stretch Database，並不會刪除遠端物件。 若您想要刪除遠端資料表或遠端資料庫，則必須使用 Azure 管理入口網站將其卸除。 遠端物件會繼續產生 Azure 成本，直到您手動將其刪除為止。
  
 ##  <a name="EnableWizardTable"></a> 使用精靈在資料表上啟用 Stretch Database  
@@ -71,7 +71,7 @@ ms.locfileid: "47824216"
 -   如果資料表同時包含作用及原始資料，您可以選擇使用 `FILTER_PREDICATE = <function>` 子句指定函數來選取要遷移的資料列。 此述詞必須呼叫內嵌資料表值函數。 如需詳細資訊，請參閱 [Select rows to migrate by using a filter function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)(使用篩選函數選取要移轉的資料列)。 若您未指定篩選函數，則會移轉整個資料表。  
   
     > [!IMPORTANT]  
-    >  若您提供執行狀況不佳的篩選函數，資料移轉也無法順利執行。 Stretch Database 使用 CROSS APPLY 運算子，將篩選函數套用至資料表。  
+    > 若您提供執行狀況不佳的篩選函數，資料移轉也無法順利執行。 Stretch Database 使用 CROSS APPLY 運算子，將篩選函數套用至資料表。  
   
 -   指定 `MIGRATION_STATE = OUTBOUND` 立即啟動資料移轉，或指定  `MIGRATION_STATE = PAUSED` 延後啟動資料移轉。  
   

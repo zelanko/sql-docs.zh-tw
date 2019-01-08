@@ -11,12 +11,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3421dd1189edf648f1e512851223f5baceaef8ff
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: ad41d2f0c0274aeaefdfcbe0b33fca6de1e0454a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018873"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978924"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>查詢最接近像素的空間資料
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,16 +77,15 @@ SELECT TOP ( number )
  建議您針對最接近像素查詢中使用的索引使用新的空間索引鑲嵌。 如需空間索引鑲嵌的詳細資訊，請參閱 [空間資料 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例會顯示可使用空間索引的最接近像素查詢。 此範例會使用 `Person.Address` 資料庫中的 `AdventureWorks2012` 資料表。  
+ 下列程式碼範例會顯示可使用空間索引的最接近像素查詢。 此範例會使用 `Person.Address` 資料庫中的 `AdventureWorks2016` 資料表。  
   
 ```sql  
-USE AdventureWorks2012  
+USE AdventureWorks2016  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
 SELECT TOP(7) SpatialLocation.ToString(), City FROM Person.Address  
 WHERE SpatialLocation.STDistance(@g) IS NOT NULL  
 ORDER BY SpatialLocation.STDistance(@g);  
-  
 ```  
   
  您可以針對 SpatialLocation 資料行建立空間索引，以便查看最接近像素查詢如何使用空間索引。 如需建立空間索引的詳細資訊，請參閱 [建立、修改及卸除空間索引](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)。  
@@ -95,12 +94,11 @@ ORDER BY SpatialLocation.STDistance(@g);
  下列程式碼範例會顯示無法使用空間索引的最接近像素查詢。  
   
 ```sql  
-USE AdventureWorks2012  
+USE AdventureWorks2016  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
 SELECT TOP(7) SpatialLocation.ToString(), City FROM Person.Address  
 ORDER BY SpatialLocation.STDistance(@g);  
-  
 ```  
   
  這個查詢缺少按照語法區段中指定之格式使用 **的** WHERE `STDistance()` 子句，因此這個查詢無法使用空間索引。  

@@ -5,8 +5,7 @@ ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], reactivating
@@ -19,12 +18,12 @@ ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 00453cc3aacdaf644f1009c1564745c0b4a9f402
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 85653036f4e5348e7bb9d53959b0d6957564f18a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412445"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783050"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>重新啟用成員或集合 (Master Data Services)
 

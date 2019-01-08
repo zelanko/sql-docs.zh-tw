@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting model object permissions [Master Data Services]
@@ -16,12 +15,12 @@ ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 418e73192b20a4d104221611a66b046b92fd022d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e05fe2b5001ce54681c8600f943f4fdb361ede5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712414"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749280"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>刪除模型物件權限 (Master Data Services)
 

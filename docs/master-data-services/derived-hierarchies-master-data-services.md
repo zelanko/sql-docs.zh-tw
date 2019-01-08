@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies
@@ -16,12 +15,12 @@ ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5a51b9abf3365e3882db321876241c295813516c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2158ebe21779866fbdc3c356164eb3a17d1eed04
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753546"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767810"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>衍生階層 (Master Data Services)
 

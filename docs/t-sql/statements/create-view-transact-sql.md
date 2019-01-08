@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e91131cdd88d9439ad51432f18e7c88a65432e64
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: 7f0e93aaff4ed0f8eb02de0acb3e9362c1a390a1
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991241"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991911"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -181,7 +181,7 @@ OR ALTER
   
 -   檢視所修改的資料行必須直接參考資料表資料行中的基礎資料。 您無法利用任何其他方法來衍生這些資料行，例如：  
   
-    -   彙總函式：AVG、COUNT、SUM、MIN、MAX、GROUPING、STDEV、STDEVP、VAR 和 VARP。  
+    -   彙總函數：AVG、COUNT、SUM、MIN、MAX、GROUPING、STDEV、STDEVP、VAR 和 VARP。  
   
     -   計算。 您不能從使用其他資料行的運算式計算資料行。 利用設定運算子 UNION、UNION ALL、CROSSJOIN、EXCEPT 和 INTERSECT 形成的資料行會得出一項計算，這些資料行無法更新。  
   
@@ -458,7 +458,7 @@ UNION ALL
 SELECT supplyID, supplier  
   FROM dbo.SUPPLY4;  
 GO
-INSERT dbo.SUPPLY1 VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd')  
+INSERT dbo.all_supplier_view VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd')    
 , ('231', 'FarEast'), ('280', 'NZ')  
 , ('321', 'EuroGroup'), ('442', 'UKArchip')  
 , ('475', 'India'), ('521', 'Afrique');  

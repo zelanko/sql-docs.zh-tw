@@ -6,8 +6,7 @@ ms.date: 05/18/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: douglasl
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSCM.F1
@@ -16,12 +15,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: a4bcd7368d457b9648baf04285f8e48bcc2a6841
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d544999b83645e40b7579d7c5e049cff2d36439
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691806"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782060"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Azure Data Lake Analytics 連線管理員
 
@@ -42,14 +41,14 @@ Data Lake Analytics 連線管理員是 [SQL Server Integration Services (SSIS) F
    A. 如果您選取 [Azure AD 使用者身分識別] 驗證選項：
    
       i. 提供 [使用者名稱] 和 [密碼] 欄位的值。    
-      ii. 選取 [測試連線] 來測試連線。 如果您或租用戶系統管理員之前未同意允許 SSIS 存取您的 Data Lake Analytics 帳戶，當提示出現時請選取 [接受]。 如需此同意體驗的詳細資訊，請參閱[整合應用程式與 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application)。
+      ii. 選取 [測試連線] 來測試連線。 如果您或租用戶系統管理員之前未同意允許 SSIS 存取您的 Data Lake Analytics 帳戶，當提示出現時請選取 [接受]。 如需此同意體驗的詳細資訊，請參閱 [整合應用程式與 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application)。
     
    > [!NOTE] 
    > 當您選取 [Azure AD 使用者身分識別] 驗證選項時，不支援多重要素驗證和 Microsoft 帳戶驗證。
     
    B. 如果您選取 [Azure AD 服務身分識別] 驗證選項：
    
-      i. 建立 Azure AD 應用程式和服務主體來存取 Data Lake Analytics 帳戶。 如需此驗證選項的詳細資訊，請參閱 [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal) (使用入口網站建立可存取資源的 Active Directory 應用程式和服務主體)。    
+      i. 建立 Azure AD 應用程式和服務主體來存取 Data Lake Analytics 帳戶。 如需此驗證選項的詳細資訊，請參閱 [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)(使用入口網站建立可存取資源的 Active Directory 應用程式和服務主體)。    
       ii. 指派合適的權限，讓此 Azure AD 應用程式存取您的 Data Lake Analytics 帳戶。 了解如何[使用新增使用者精靈](https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user)將權限授與 Data Lake Analytics 帳戶。    
       iii. 為 [應用程式識別碼]、[驗證金鑰] 及 [租用戶識別碼] 欄位提供值。    
       iv. 選取 [測試連線] 來測試連線。  

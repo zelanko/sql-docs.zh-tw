@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 61cb3f71d8296d4b0f7d728639348dbd19c19a34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49145808ae875b6c4fa66a52c4972a8f7a392a7a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782086"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759172"
 ---
 # <a name="business-rules-extension-master-data-services"></a>商務規則延伸模組 (Master Data Services)
 

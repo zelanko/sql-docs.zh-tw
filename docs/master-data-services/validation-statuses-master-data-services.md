@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2bb8030d493baa62cadff47608bae897a2997d97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9428a6462efac8643fcbb5343cb5cb3c8343aff9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767206"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769750"
 ---
 # <a name="validation-statuses-master-data-services"></a>驗證狀態 (Master Data Services)
 

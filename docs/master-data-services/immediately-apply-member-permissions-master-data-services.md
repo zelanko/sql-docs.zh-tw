@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - members [Master Data Services], applying permissions immediately
@@ -15,12 +14,12 @@ ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 842474be46bb7c8d2dd878e872c66048736aacc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd7fd390010096e943e397a95c018c967f09d21a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793828"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760150"
 ---
 # <a name="immediately-apply-member-permissions-master-data-services"></a>立即套用成員權限 (Master Data Services)
 

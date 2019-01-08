@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e15f069c14131f6e75c1062e981b04aa6ef93a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a23f24cc0ad15ab217f328a1a2dd42737e7c6b57
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835918"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991791"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (字串串連) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ expression + expression
   
  當串連二進位字串和二進位字串之間的任何字元時，必須使用指向字元資料的明確轉換。 下列範例會顯示 `CONVERT` 或 `CAST` 何時必須搭配二進位串連來使用，何時不需要使用 `CONVERT` 或 `CAST`。  
   
-```  
+```sql
 DECLARE @mybin1 varbinary(5), @mybin2 varbinary(5)  
 SET @mybin1 = 0xFF  
 SET @mybin2 = 0xA5  
@@ -78,7 +78,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ### <a name="a-using-string-concatenation"></a>A. 使用字串串連  
  下列範例會根據多個字元資料行，在 `Name` 資料行標題底下建立單一資料行，其中人員姓氏後面接著一個逗號、一個空格，再接著人員的名字。 結果集的排序，按先姓後名的字母順序來遞增。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ', ' + FirstName) AS Name  
@@ -89,7 +89,7 @@ ORDER BY LastName ASC, FirstName ASC;
 ### <a name="b-combining-numeric-and-date-data-types"></a>B. 組合數值和日期資料類型  
  下列範例利用 `CONVERT` 函數來串連 **numeric** 和 **date** 資料類型。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT 'The order is due on ' + CONVERT(varchar(12), DueDate, 101)  
@@ -109,7 +109,7 @@ GO
 ### <a name="c-using-multiple-string-concatenation"></a>C. 使用多重字串串連  
  下列範例串連多個字串來形成一個長字串，以顯示 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 副總裁的姓氏和第一個首字母。 在姓氏之後，加上逗號，在第一個首字母之後，加上句點。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ',' + SPACE(1) + SUBSTRING(FirstName, 1, 1) + '.') AS Name, e.JobTitle  
@@ -136,7 +136,7 @@ GO
 ### <a name="d-using-large-strings-in-concatenation"></a>D. 在串連中使用大型字串
 下列範例會串連多個字串來形成一個長字串，然後嘗試計算最終字串的長度。 結果集的最終長度是 16000，因為運算式評估是從左邊開始的，亦即 @x + @z + @y => (@x + @z) + @y。 在此情況下，(@x + @z) 的結果會被截斷為 8000 個位元組，接著 @y 再加入至結果集，使最終字串長度為 16000。 因為 @y 是大型實值型別字串，因此不會發生截斷。
 
-```
+```sql
 DECLARE @x varchar(8000) = replicate('x', 8000)
 DECLARE @y varchar(max) = replicate('y', 8000)
 DECLARE @z varchar(8000) = replicate('z',8000)
@@ -159,7 +159,7 @@ GO
 ### <a name="e-using-multiple-string-concatenation"></a>E. 使用多重字串串連  
  下列範例串連多個字串來形成一個長字串，以顯示簡單資料庫中副總裁的姓氏和第一個首字母。 在姓氏之後，加上逗號，在第一個首字母之後，加上句點。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ', ' + SUBSTRING(FirstName, 1, 1) + '.') AS Name, Title  

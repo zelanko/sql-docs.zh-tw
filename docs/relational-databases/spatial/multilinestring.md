@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5190e1b6fdcd83719b84142bee49dff55c824c55
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 04fdc9eb5b22a9c3f88ab635c456e3fa81cf88e4
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018233"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979528"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,29 +47,29 @@ ms.locfileid: "51018233"
 ### <a name="accepted-instances"></a>已接受的執行個體  
  若要接受 **MultiLineString** 執行個體，則該執行個體必須是空的，或是僅由可接受的 **LineString** 執行個體組成。 如需已接受之 **LineString** 執行個體的詳細資訊，請參閱 [LineString](../../relational-databases/spatial/linestring.md)。 以下為已接受之 **MultiLineString** 執行個體的範例。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
 DECLARE @g2 geometry = 'MULTILINESTRING((1 1, 3 5), (-5 3, -8 -2))';  
 DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';  
 DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';  
 ```  
   
- 下列範例會擲回 `System.FormatException` ，因為第二個 **LineString** 執行個體無效。  
+下列範例會擲回 `System.FormatException` ，因為第二個 **LineString** 執行個體無效。  
   
-```  
+```sql  
 DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';  
 ```  
   
 ### <a name="valid-instances"></a>有效的執行個體  
- **MultiLineString** 執行個體必須符合下列準則，才會是有效的：  
+**MultiLineString** 執行個體必須符合下列準則，才會是有效的：  
   
 1.  組成 **MultiLineString** 執行個體的所有執行個體必須都是有效的 **LineString** 執行個體。  
   
 2.  組成 **MultiLineString** 執行個體的任兩個 **LineString** 執行個體都不可在間隔上重疊。 **LineString** 執行個體只能在有限的點數內彼此交集或接觸，或是接觸其他 **LineString** 執行個體。  
   
- 下列範例示範三個有效的 **MultiLineString** 執行個體和一個無效的 **MultiLineString** 執行個體。  
+下列範例示範三個有效的 **MultiLineString** 執行個體和一個無效的 **MultiLineString** 執行個體。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
 DECLARE @g2 geometry = 'MULTILINESTRING((1 1, 3 5), (-5 3, -8 -2))';  
 DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';  
@@ -77,19 +77,19 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` 無效，因為第二個 **LineString** 執行個體與第一個 **LineString** 執行個體於間隔處重疊。 兩者以無限點數接觸。  
+`@g4` 無效，因為第二個 **LineString** 執行個體與第一個 **LineString** 執行個體於間隔處重疊。 兩者以無限點數接觸。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立包含兩個具有 SRID 0 之 `geometry``MultiLineString` 元素的簡單 `LineString` 執行個體。  
+下列範例會建立包含兩個具有 SRID 0 之 `geometry``MultiLineString` 元素的簡單 `LineString` 執行個體。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');  
 ```  
   
- 若要使用不同的 SRID 來具現化這個執行個體，請使用 `STGeomFromText()` 或 `STMLineStringFromText()`。 您也可以使用 `Parse()` ，然後修改 SRID，如下列範例所示。  
+若要使用不同的 SRID 來具現化這個執行個體，請使用 `STGeomFromText()` 或 `STMLineStringFromText()`。 您也可以使用 `Parse()` ，然後修改 SRID，如下列範例所示。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');  
 SET @g.STSrid = 13;  
