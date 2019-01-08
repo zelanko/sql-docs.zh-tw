@@ -22,12 +22,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2df9244f042098be8b0e7898b70254a2b4c50d85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 714bfb68234a10a61b8ed41651da4f9f7037320e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072648"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351739"
 ---
 # <a name="server-level-roles"></a>伺服器層級角色
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會提供伺服器層級角色來協助您管理伺服器的權限。 這些角色是將其他主體組成群組的安全性主體。 伺服器層級角色的權限範圍為整個伺服器  (「角色」就像是 Windows 作業系統中的「群組」)。  
@@ -54,10 +54,10 @@ ms.locfileid: "48072648"
 |public|每一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入都屬於 public 伺服器角色。 當伺服器主體未被授與或拒絕安全性實體物件的特定權限時，該使用者會繼承授與給該物件之 public 的權限。 只有當您想要將任何物件提供給所有使用者使用時，才指派該物件的 public 權限。 您無法變更 public 的成員資格。<br /><br /> 注意：public 的實作方式與其他角色不同。 不過，您可以在 public 中授與、拒絕或撤銷權限。|  
   
 ## <a name="permissions-of-fixed-server-roles"></a>固定伺服器角色的權限  
- 每個固定伺服器角色都擁有指派給它的特定權限。 如需指派給伺服器角色之權限的圖表，請參閱 [資料庫引擎固定伺服器與固定資料庫角色](http://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx)。  
+ 每個固定伺服器角色都擁有指派給它的特定權限。 如需指派給伺服器角色之權限的圖表，請參閱 [資料庫引擎固定伺服器與固定資料庫角色](https://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx)。  
   
 > [!IMPORTANT]  
->  `CONTROL SERVER`類似，但不是完全相同的權限`sysadmin`固定的伺服器角色。 權限不代表角色成員資格，角色成員資格也不會授與權限。 (例如， `CONTROL SERVER` 不代表 `sysadmin` 固定伺服器角色中的成員資格)。不過，角色與相等權限之間有時候可以互相模擬。 大部分 `DBCC` 命令與許多系統程序都需要 `sysadmin` 固定伺服器角色中的成員資格。 取得一份 171 個系統預存程序，需要`sysadmin`成員資格，請參閱以下由 Andreas Wolter 張貼的部落格[CONTROL SERVER vs.sysadmin/sa： 權限、 系統程序、 DBCC、 自動結構描述建立和權限escalation-警告](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)。  
+>  `CONTROL SERVER` 權限與 `sysadmin` 固定伺服器角色類似但沒有完全相同。 權限不代表角色成員資格，角色成員資格也不會授與權限。 (例如， `CONTROL SERVER` 不代表 `sysadmin` 固定伺服器角色中的成員資格)。不過，角色與相等權限之間有時候可以互相模擬。 大部分 `DBCC` 命令與許多系統程序都需要 `sysadmin` 固定伺服器角色中的成員資格。 取得一份 171 個系統預存程序，需要`sysadmin`成員資格，請參閱以下由 Andreas Wolter 張貼的部落格[CONTROL SERVER vs.sysadmin/sa： 權限、 系統程序、 DBCC、 自動結構描述建立和權限escalation-警告](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)。  
   
 ## <a name="server-level-permissions"></a>伺服器層級權限  
  只有伺服器層級權限可加入至使用者定義伺服器角色。 若要列出伺服器層級權限，請執行以下陳述式。 伺服器層級權限為：  

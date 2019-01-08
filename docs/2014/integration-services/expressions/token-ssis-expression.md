@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6312332a6c0c8cc9cf07a93f67aa71ebd61b62ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 009a2eda2bf0690ee9657a156a02eb4659a3224d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054238"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793558"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (SSIS 運算式)
   依據字串中用來分隔 Token 的指定分隔符號，以及表示要傳回哪個 Token 的 Token 號碼，從字串傳回 Token (子字串)。  
@@ -58,13 +57,13 @@ TOKEN(character_expression, delimiter_string, occurrence)
 -   您可以使用變數和資料行來做為運算式中所有引數的值。  
   
 ## <a name="expression-examples"></a>運算式範例  
- 在下列範例中，TOKEN 函數會傳回 "a"。 “a little white dog” 字串中有 4 個 Token：“a”、“little”、“white”、“dog”，並以分隔符號 " " (空格字元) 分隔。 第二個引數 (分隔符號字串) 僅指定一個分隔符號 (空格字元)，以用來將輸入字串分割成 Token。 最後一個引數 1 指定要傳回的第一個 Token。 此範例字串中的第一個 Token 是 “a”。  
+ 在下列範例中，TOKEN 函數會傳回 "a"。 "a little white dog" 字串中有 4 個權杖："a"、"little"、"white"、"dog"，並以分隔符號 " " (空格字元) 分隔。 第二個引數 (分隔符號字串) 僅指定一個分隔符號 (空格字元)，以用來將輸入字串分割成 Token。 最後一個引數 1 指定要傳回的第一個 Token。 此範例字串中的第一個權杖是 "a"。  
   
 ```  
 TOKEN("a little white dog"," ",1)  
 ```  
   
- 在下列範例中，TOKEN 函數會傳回 "dog"。 此範例中的分隔符號字串包含 5 個分隔符號。 輸入字串中包含 "a"、"little"、"white"、"dog" 四個 Token。  
+ 在下列範例中，TOKEN 函數會傳回 "dog"。 此範例中的分隔符號字串包含 5 個分隔符號。 輸入字串中包含 "a"、"little"、"white"、"dog" 4 個權杖。  
   
 ```  
 TOKEN("a:little|white dog","| ,.:",4)  
@@ -94,13 +93,13 @@ TOKEN("        a little white dog", " ", 1)
 TOKEN("2009/01/01", "/"), 1  
 ```  
   
- 在下列範例中，TOKEN 函數會從指定路徑傳回檔名。 例如，如果 User::Path 的值為 "c:\program files\data\myfile.txt"，TOKEN 函數就會傳回 "myfile.txt"。 TOKENCOUNT 函數會傳回 4，而 TOKEN 函數會傳回第 4 個 TOKEN "myfile.txt"。  
+ 在下列範例中，TOKEN 函數會從指定路徑傳回檔名。 例如，如果 User::Path 的值為 "c:\program files\data\myfile.txt"，TOKEN 函式就會傳回 "myfile.txt"。 TOKENCOUNT 函式會傳回 4，而 TOKEN 函式會傳回第 4 個權杖 "myfile.txt"。  
   
 ```  
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [函式&#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
+ [函數 &#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
   
   

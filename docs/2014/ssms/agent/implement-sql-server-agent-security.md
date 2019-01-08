@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, security
@@ -15,12 +15,12 @@ ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af4556f5acf21616ebfd94cf038b8f453263a34c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210798"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754230"
 ---
 # <a name="implement-sql-server-agent-security"></a>實作 SQL Server Agent 安全性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 讓資料庫管理員可以在只具有執行作業步驟所需權限的安全內容中執行每個作業步驟，此權限由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 決定。 若要設定特定作業步驟的權限，請建立具有必要權限的 Proxy，然後將該 Proxy 指派給作業步驟。 您可以將 Proxy 指派給多個作業步驟。 對於要求相同權限的作業步驟，可以使用相同的 Proxy。  
@@ -57,17 +57,17 @@ ms.locfileid: "48210798"
   
 -   請勿將 NT 管理員帳戶指定為服務帳戶或 Proxy 帳戶。  
   
--   請注意， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 有存取對方資產的權限。 這兩個服務共用單一處理序空間，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務上的系統管理員 (sysadmin)。  
+-   請注意，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 有存取對方資產的權限。 這兩個服務共用單一處理序空間，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務上的系統管理員 (sysadmin)。  
   
 -   當 TSX 在 MSX 上編列時，MSX 系統管理員 (sysadmin) 會取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]TSX 執行個體的完整控制權。  
   
 -   ACE 是延伸模組，並不能叫用它本身。 ACE 是由 Chainer ScenarioEngine.exe (也稱為 Microsoft.SqlServer.Chainer.Setup.exe) 叫用，也可由另一個主機處理序叫用。  
   
--   ACE 取決於 SSDP 所擁有的下列組態 DLL，因為 ACE 會呼叫 DLL 的這些 API：  
+-   ACE 取決於 SSDP 所擁有的下列設定 DLL，因為 ACE 會呼叫 DLL 的這些 API：  
   
     -   **SCO** - Microsoft.SqlServer.Configuration.Sco.dll，包括虛擬帳戶的新 SCO 驗證  
   
-    -    - Microsoft.SqlServer.Configuration.Cluster.dll  
+    -   **叢集** - Microsoft.SqlServer.Configuration.Cluster.dll  
   
     -   **SFC** - Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
   

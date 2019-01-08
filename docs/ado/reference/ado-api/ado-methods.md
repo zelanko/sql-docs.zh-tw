@@ -14,12 +14,12 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb7cf0945eb15d0f741e5b5fcba6c6e28fbe4955
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12b78faed3c45a92c1b20796ade5ce0a6844a84e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660586"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530236"
 ---
 # <a name="ado-methods"></a>ADO 方法
 |||  
@@ -27,7 +27,7 @@ ms.locfileid: "47660586"
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|建立可更新的新記錄**資料錄集**物件。|  
 |[附加](../../../ado/reference/ado-api/append-method-ado.md)|將物件附加至集合。 如果集合很**欄位**，新**欄位**在附加至集合之前，可能會建立物件。|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|將資料附加至大型文字或二進位資料**欄位**，或**參數**物件。|  
-|[BeginTrans、 CommitTrans 和 RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|管理交易中處理**連線**物件，如下所示：<br /><br /> **BeginTrans** — 開始新交易。<br /><br /> **CommitTrans** — 儲存任何變更，並結束目前的交易。 它也可以啟動新的交易。<br /><br /> **RollbackTrans** — 取消任何變更並結束目前的交易。 它也可以啟動新的交易。|  
+|[BeginTrans、 CommitTrans 和 RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|管理交易中處理**連線**物件，如下所示：<br /><br /> **BeginTrans** -開始新交易。<br /><br /> **CommitTrans** -儲存任何變更，並結束目前的交易。 它也可以啟動新的交易。<br /><br /> **RollbackTrans** -取消任何變更並結束目前的交易。 它也可以啟動新的交易。|  
 |[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|取消執行暫止狀態，非同步方法呼叫。|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|取消擱置中的批次更新。|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|取消的現有或新資料列所做的任何變更**Recordset**物件，或**欄位**集合**記錄**物件，然後再呼叫**更新**方法。|  
@@ -85,7 +85,7 @@ ms.locfileid: "47660586"
  [ADO 集合](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 動態屬性](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO 列舉常數](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [附錄 B:ADO 錯誤](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [附錄 B：ADO 錯誤](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO 事件](../../../ado/reference/ado-api/ado-events.md)   
  [ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO 物件與介面](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   

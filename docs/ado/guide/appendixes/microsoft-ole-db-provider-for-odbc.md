@@ -14,12 +14,12 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: be6edd514530acca7ac79cebf959a09d20562ac5
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350642"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535546"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概觀
 ADO 或 RDS 程式設計人員，理想的世界就是每個資料來源會公開 OLE DB 介面，可讓 ADO 無法呼叫直接將資料來源。 雖然有更多資料庫廠商實作的 OLE DB 介面，但某些資料來源不是尚未公開這種方式。 不過，大部分的 DBMS 系統目前使用中可以透過 ODBC 存取。
@@ -107,14 +107,14 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Order By (KAGPROP_MAXCOLUMNSINORDERBY) 中的最大資料行|表示可以在 SELECT 陳述式的 ORDER BY 子句中列出的資料行的數目上限。|
 |在 選取 (KAGPROP_MAXCOLUMNSINSELECT) 的最大資料行|表示可以在 SELECT 陳述式的 SELECT 部分中列出的資料行的數目上限。|
 |資料表 (KAGPROP_MAXCOLUMNSINTABLE) 中的最大資料行|表示允許在資料表中的資料行數目上限。|
-|數值函式 (KAGPROP_NUMERICFUNCTIONS)|指出 ODBC 驅動程式支援的數值函式。 如需函式名稱和相關聯的值，這個位元遮罩中所使用的清單，請參閱 <<c0> [ 附錄 e： 純量函式](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)，ODBC 文件中。|
+|數值函式 (KAGPROP_NUMERICFUNCTIONS)|指出 ODBC 驅動程式支援的數值函式。 如需函式名稱和相關聯的值，這個位元遮罩中所使用的清單，請參閱[附錄 e:純量函數](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)，ODBC 文件中。|
 |外部聯結功能 (KAGPROP_OJCAPABILITY)|指出提供者支援外部聯結的類型。|
 |外部聯結 (KAGPROP_OUTERJOINS)|指出提供者是否支援外部聯結。|
 |特殊字元 (KAGPROP_SPECIALCHARACTERS)|指出哪些字元有特殊的意義，ODBC 驅動程式。|
 |預存程序 (KAGPROP_PROCEDURES)|指出預存程序是否可用於此 ODBC 驅動程式。|
-|字串函數 (KAGPROP_STRINGFUNCTIONS)|指出 ODBC 驅動程式支援哪些字串函式。 如需函式名稱和相關聯的值，這個位元遮罩中所使用的清單，請參閱 <<c0> [ 附錄 e： 純量函式](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)，ODBC 文件中。|
-|系統函式 (KAGPROP_SYSTEMFUNCTIONS)|指出 ODBC 驅動程式支援哪些系統函式。 如需函式名稱和相關聯的值，這個位元遮罩中所使用的清單，請參閱 <<c0> [ 附錄 e： 純量函式](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)，ODBC 文件中。|
-|日期/時間函式 (KAGPROP_TIMEDATEFUNCTIONS)|指出 ODBC 驅動程式支援的日期和時間函數。 如需函式名稱和相關聯的值，這個位元遮罩中所使用的清單，請參閱 <<c0> [ 附錄 e： 純量函式](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)，ODBC 文件中。|
+|字串函數 (KAGPROP_STRINGFUNCTIONS)|指出 ODBC 驅動程式支援哪些字串函式。 如需函式名稱和相關聯的值，這個位元遮罩中所使用的清單，請參閱[附錄 e:純量函數](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)，ODBC 文件中。|
+|系統函式 (KAGPROP_SYSTEMFUNCTIONS)|指出 ODBC 驅動程式支援哪些系統函式。 如需函式名稱和相關聯的值，這個位元遮罩中所使用的清單，請參閱[附錄 e:純量函數](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)，ODBC 文件中。|
+|日期/時間函式 (KAGPROP_TIMEDATEFUNCTIONS)|指出 ODBC 驅動程式支援的日期和時間函數。 如需函式名稱和相關聯的值，這個位元遮罩中所使用的清單，請參閱[附錄 e:純量函數](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)，ODBC 文件中。|
 |SQL 文法支援 (KAGPROP_ODBCSQLCONFORMANCE)|指出 ODBC 驅動程式支援的 SQL 文法。|
 
 ## <a name="provider-specific-recordset-and-command-properties"></a>提供者特定資料錄集和命令屬性
@@ -137,7 +137,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
  ODBC 會提供特定的語法來呼叫預存程序。 針對[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)屬性**命令**物件*CommandText*引數**Execute**方法[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，或有*來源*引數**開啟**方法[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，在字串中使用此語法的階段：
 
 ```
-"{ [ ? = ] call procedure [ ( ? [, ? [ , … ]] ) ] }"
+"{ [ ? = ] call procedure [ ( ? [, ? [ , ... ]] ) ] }"
 ```
 
  每個**嗎？** 參考的物件[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。 第一個**嗎？** 參考**參數**(0)，下一步**嗎？** 參考**參數**(1)，依此類推。
@@ -173,7 +173,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  標準的 ADO 的可用性**資料錄集**屬性：
 
-|屬性|ForwardOnly|動態|索引鍵集|靜態|
+|屬性|ForwardOnly|動態|索引鍵集|Static|
 |--------------|-----------------|-------------|------------|------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|無法使用|無法使用|讀取/寫入|讀取/寫入|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|無法使用|無法使用|讀取/寫入|讀取/寫入|
@@ -192,14 +192,14 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|讀取/寫入|讀取/寫入|讀取/寫入|讀取/寫入|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|讀取/寫入|無法使用|唯讀|唯讀|
 |[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|讀取/寫入|讀取/寫入|讀取/寫入|讀取/寫入|
-|[State](../../../ado/reference/ado-api/state-property-ado.md)|唯讀|唯讀|唯讀|唯讀|
+|[狀態](../../../ado/reference/ado-api/state-property-ado.md)|唯讀|唯讀|唯讀|唯讀|
 |[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)|唯讀|唯讀|唯讀|唯讀|
 
  [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)並[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)屬性是唯寫 ADO 使用 1.0 版的 Microsoft OLE DB Provider for ODBC 時。
 
  標準的 ADO 的可用性**資料錄集**方法：
 
-|方法|ForwardOnly|動態|索引鍵集|靜態|
+|方法|ForwardOnly|動態|索引鍵集|Static|
 |------------|-----------------|-------------|------------|------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|是|是|是|是|
 |[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|是|是|是|是|
@@ -227,7 +227,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="dynamic-properties"></a>動態屬性
  Microsoft OLE DB Provider for ODBC 插入到數個動態屬性**屬性**未開啟的集合[連線](../../../ado/reference/ado-api/connection-object-ado.md)，[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，以及[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。
 
- 下表是 cross-index 的 ADO 和 OLE DB 的名稱，為每個動態屬性。 OLE DB 程式設計人員參考是參考的 ADO 屬性名稱的詞彙，「 說明 」。 您可以在 OLE DB 程式設計人員參考中找到這些屬性的詳細資訊。 搜尋索引中的 OLE DB 屬性名稱，或請參閱[附錄 c: OLE DB 屬性](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)。
+ 下表是 cross-index 的 ADO 和 OLE DB 的名稱，為每個動態屬性。 OLE DB 程式設計人員參考是參考的 ADO 屬性名稱的詞彙，「 說明 」。 您可以在 OLE DB 程式設計人員參考中找到這些屬性的詳細資訊。 搜尋索引中的 OLE DB 屬性名稱，或參閱[附錄 c:OLE DB 屬性](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)。
 
 ## <a name="connection-dynamic-properties"></a>連接的動態屬性
  下列屬性會新增至**連接**物件的**屬性**集合。
@@ -261,7 +261,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |資料列大小上限|DBPROP_MAXROWSIZE|
 |資料列大小上限包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |在選取的最大資料表|DBPROP_MAXTABLESINSELECT|
-|[模式]|DBPROP_INIT_MODE|
+|模式|DBPROP_INIT_MODE|
 |多個參數集|DBPROP_MULTIPLEPARAMSETS|
 |多個結果|DBPROP_MULTIPLERESULTS|
 |多個儲存體物件|DBPROP_MULTIPLESTORAGEOBJECTS|

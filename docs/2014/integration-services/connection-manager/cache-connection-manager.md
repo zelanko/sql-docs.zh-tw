@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Cache connection manager
@@ -13,12 +12,12 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c0d3513446c930d41ef9163708e60ad063244479
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa2c26f086ea67a83308945990375b19164a7d0d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064278"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769140"
 ---
 # <a name="cache-connection-manager"></a>快取連接管理員
   快取連接管理員會從快取轉換或快取檔案 (.caw) 中讀取資料，而且可以將資料儲存至快取檔案。 不論您是否將快取連接管理員設定為使用快取檔案，資料一定會儲存在記憶體中。  
@@ -26,10 +25,10 @@ ms.locfileid: "48064278"
  「快取轉換」轉換會將資料流程中已連接之資料來源的資料寫入快取連接管理員。 封裝中的「查閱」轉換會在資料上執行查閱。  
   
 > [!NOTE]  
->  快取連接管理員不支援二進位大型物件 (BLOB) 資料類型 DT_TEXT、DT_NTEXT 和 DT_IMAGE。 如果參考資料集包含 BLOB 資料類型，則在您執行封裝時元件會失敗。 您可以使用 **[快取連接管理員編輯器]** 修改資料行資料類型。 如需詳細資訊，請參閱[快取連線管理員編輯器](../cache-connection-manager-editor.md)。  
+>  快取連接管理員不支援二進位大型物件 (BLOB) 資料類型 DT_TEXT、DT_NTEXT 和 DT_IMAGE。 如果參考資料集包含 BLOB 資料類型，則在您執行封裝時元件會失敗。 您可以使用 **[快取連接管理員編輯器]** 修改資料行資料類型。 如需詳細資訊，請參閱 [快取連線管理員編輯器](../cache-connection-manager-editor.md)。  
   
 > [!NOTE]  
->  封裝保護等級不會套用至快取檔案。 如果快取檔案包含機密資訊，請使用存取控制清單 (ACL) 限制對其中儲存檔案的位置或資料夾的存取權。 您應該只啟用特定帳戶的存取權。 如需詳細資訊，請參閱[對封裝使用之檔案的存取權](../access-to-files-used-by-packages.md)。  
+>  封裝保護等級不會套用至快取檔案。 如果快取檔案包含機密資訊，請使用存取控制清單 (ACL) 限制對其中儲存檔案的位置或資料夾的存取權。 您應該只啟用特定帳戶的存取權。 如需詳細資訊，請參閱 [對封裝使用之檔案的存取權](../access-to-files-used-by-packages.md)。  
   
 ## <a name="configuration-of-the-cache-connection-manager"></a>快取連接管理員的組態  
  您可以利用下列方式設定快取連接管理員：  
@@ -52,9 +51,9 @@ ms.locfileid: "48064278"
   
  如需可在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 設計師中設定之屬性的詳細資訊，請參閱 [快取連線管理員編輯器](../cache-connection-manager-editor.md)。  
   
- 如需如何以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和[以程式設計方式新增連線](../building-packages-programmatically/adding-connections-programmatically.md)。  
+ 如需如何以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
- [使用快取連線管理員以完整快取模式來實作查閱轉換](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+ [使用快取連接管理員以完整快取模式實作查閱轉換](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
   

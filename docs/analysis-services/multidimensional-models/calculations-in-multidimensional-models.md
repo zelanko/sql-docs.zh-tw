@@ -1,5 +1,5 @@
 ---
-title: 多維度模型中的計算 |Microsoft 文件
+title: 多維度模型中的計算 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b51dc3cbb0ad98b5f14fdd278c03dc54b43a6b9d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c72d43c95013074051356c690ac2d7abf0a575e0
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023715"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983989"
 ---
 # <a name="calculations-in-multidimensional-models"></a>多維度模型中的計算
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,8 +28,6 @@ ms.locfileid: "34023715"
   
 -   [計算運算式] 窗格支援表單檢視與指令碼檢視。  
   
-> [!NOTE]  
->  如需 MDX 指令碼的詳細資訊，請參閱 [Introduction to MDX Scripting in Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892)(Microsoft SQL Server 2005 中 MDX 指令碼的簡介)，以及 Microsoft TechNet 網站上 [Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=80853) 頁面中的＜其他資源＞一節。 如需與 Cube 設計相關之效能問題的詳細資訊，請參閱 [SQL Server 2005 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=81621)(SQL Server 2005 Analysis Services 效能指南)。  
   
 ## <a name="creating-a-new-calculation"></a>建立新的計算  
  若要建立新的計算，請在 [Cube 設計師] 之 [計算] 索引標籤的 [Cube] 功能表上，依照您要建立的計算類型，按一下 [新增導出成員]、[新增命名集] 或 [新增指令碼命令]。 您也可以在工具列上按一下任何對應的按鈕，或以滑鼠右鍵按一下 [指令碼組合管理] 窗格中的任何位置，然後按一下快速鍵功能表上的其中一個命令。 此動作會將新計算加入 [指令碼組合管理] 窗格，並在 [計算運算式] 窗格的計算表單中顯示其欄位。 如果您建立新的指令碼，此動作會在 [計算運算式] 窗格中開啟 [指令碼] 檢視。 如需建立三種計算類型的詳細資訊，請參閱 [建立導出成員](../../analysis-services/multidimensional-models/create-calculated-members.md)、 [建立命名集](../../analysis-services/multidimensional-models/create-named-sets.md)和 [定義指派和其他指令碼命令](../../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)。  

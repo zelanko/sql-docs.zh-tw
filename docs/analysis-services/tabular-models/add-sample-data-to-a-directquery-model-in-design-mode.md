@@ -1,5 +1,5 @@
 ---
-title: 將範例資料加入至設計模式中的 DirectQuery 模型 |Microsoft 文件
+title: 將範例資料加入至設計模式中的 Analysis Services 的 DirectQuery 模型 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ca4c4c2a00eed80e709602084cf5de427134977
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: db5ef518a715553b1eecbeeaf5a5ba248b365bf5
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041632"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071535"
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>在設計模式中將範例資料加入 DirectQuery 模型中
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -30,13 +30,13 @@ ms.locfileid: "34041632"
 >  即使是在空模型的 DirectQuery 模式中，您一律可以檢視每個資料表的小型內建資料列集。 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，按一下 [資料表] > [資料表屬性] 以檢視 50 列的資料集。  
   
 ## <a name="create-a-sample-partition"></a>建立範例資料分割
- 這些指示是在建立或升級至 1200年或更高的相容性層級的表格式模型。 較低相容性層級的模型會使用不同的屬性來取得快取資料。 如需屬性描述，請參閱 [在 SSMS 中啟用 DirectQuery 模式](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md) 。  
+ 這些指示是針對在建立或升級為 1200年或更高的相容性層級的表格式模型。 較低相容性層級的模型會使用不同的屬性來取得快取資料。 如需屬性描述，請參閱 [在 SSMS 中啟用 DirectQuery 模式](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md) 。  
   
 1.  在 SQL Server Data Tools 的圖表檢視或資料檢視中，按一下事實資料表以開啟其屬性頁面。 事實資料表提供模型中彙總的數值資料以及量值。 您可能會擁有一個以上的表格。  
   
 2.  按一下 [資料表] > [屬性] 以開啟 [資料分割管理] 對話方塊。  
   
-    請注意預設資料分割是 **（直接查詢）\<資料表名稱 >**。 這是完整資料檢視。 請勿刪除此資料分割。 部署模型時，將會使用此資料分割。  
+    請注意預設資料分割 **(Directquery)\<資料表名稱 >**。 這是完整資料檢視。 請勿刪除此資料分割。 部署模型時，將會使用此資料分割。  
   
 4.  選取資料分割，然後按一下 [複製]。  
 

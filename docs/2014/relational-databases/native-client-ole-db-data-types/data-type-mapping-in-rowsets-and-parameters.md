@@ -21,12 +21,12 @@ ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b79afdc8917e3a14055b8ada17cbd3d57a8c9f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0979892b6770b9a9c2d0d9c4e8a0d734d873c085
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186408"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766040"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>資料列集和參數中的資料類型對應
   在資料列集和參數值， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者代表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用下列的 OLE DB 資料定義資料類型，函數中報告**icolumnsinfo:: Getcolumninfo**並**Icommandwithparameters:: Getparameterinfo**。  
@@ -68,7 +68,7 @@ ms.locfileid: "48186408"
  **sql_variant** 物件可保存任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的資料，下列類型除外：text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、timestamp 和 Microsoft .NET Framework Common Language Runtime (CLR) 使用者定義型別。 sql_variant 資料的執行個體不能用 sql_variant 做為它的基礎基底資料類型。 例如，資料行可以在某些資料列中包含 **smallint** 值，在其他資料列中包含 **float** 值，而在剩餘的資料列中包含 **char**/**nchar** 值。  
   
 > [!NOTE]  
->  **sql_variant** 資料類型類似於 Microsoft Visual Basic® 中的 Variant 資料類型，以及 OLEDB 中的 DBTYPE_VARIANT、DBTYPE_SQLVARIANT。  
+>  **Sql_variant**資料型別是類似於 Microsoft Visual Basic 中的 Variant 資料類型 」 和 DBTYPE_VARIANT、 DBTYPE_SQLVARIANT OLEDB 中。  
   
  以 DBTYPE_VARIANT 擷取 **sql_variant** 資料時，會將該資料置於緩衝區的 VARIANT 結構中。 但是 VARIANT 結構中的子類型可能不會對應到定義於 **sql_variant** 資料類型中的子類型。 接下來必須以 DBTYPE_SQLVARIANT 擷取 **sql_variant** 資料，才能讓所有的子類型相互對應。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48186408"
   
 |||  
 |-|-|  
-|SSPROP_ALLOWNATIVEVARIANT|類型：VT_BOOL<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：決定所提取的資料是否為 DBTYPE_VARIANT 或 DBTYPE_SQLVARIANT。<br /><br /> VARIANT_TRUE：資料行類型是以 DBTYPE_SQLVARIANT 傳回，在此種情況下，緩衝區會保存 SSVARIANT 結構。<br /><br /> VARIANT_FALSE：資料行類型是以 DBTYPE_VARIANT 傳回，而且緩衝區將具有 VARIANT 結構。|  
+|SSPROP_ALLOWNATIVEVARIANT|類型：VT_BOOL<br /><br /> R/W：讀取/寫入<br /><br /> 預設：VARIANT_FALSE<br /><br /> 描述：判斷是否為 DBTYPE_VARIANT 或 DBTYPE_SQLVARIANT 提取的資料。<br /><br /> VARIANT_TRUE：資料行類型會傳回為 DBTYPE_SQLVARIANT，在此案例的緩衝區會保存 SSVARIANT 結構。<br /><br /> VARIANT_FALSE：資料行類型以 DBTYPE_VARIANT 傳回，緩衝區將具有 VARIANT 結構。|  
   
 ## <a name="see-also"></a>另請參閱  
  [資料型別&#40;OLE DB&#41;](data-types-ole-db.md)  

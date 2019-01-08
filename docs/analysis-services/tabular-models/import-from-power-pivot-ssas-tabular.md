@@ -1,5 +1,5 @@
 ---
-title: 從 Power Pivot 匯入 |Microsoft 文件
+title: 從 Analysis Services 中的 Power Pivot 匯入 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 63a1619b09475bfa0ec8d4a1f21aaf88791a5b6c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 21abcfbec94808df6560af887ff0598d97fcb068
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041701"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072375"
 ---
 # <a name="import-from-power-pivot"></a>從 Power Pivot 匯入 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  本文說明如何建立新的表格式模型專案匯入中繼資料和資料從[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]使用從匯入活頁簿[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]中的專案範本[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
+  本文說明如何匯入中繼資料和從資料建立新的表格式模型專案[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]使用從匯入的活頁簿[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]中的專案範本[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
   
 ## <a name="create-a-new-tabular-model-from-a-power-pivot-for-excel-file"></a>從 Power Pivot for Excel 檔案建立新的表格式模型  
  從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿匯入來建立新的表格式模型專案時，會使用定義活頁簿結構的中繼資料來建立及定義 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中表格式模型專案的結構。 資料表、資料行、量值和關聯性等物件會保留，並以其在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的顯示方式出現在表格式模型專案中。 .xlsx 活頁簿檔案將不會做任何變更。  
@@ -26,11 +26,11 @@ ms.locfileid: "34041701"
 > [!NOTE]  
 >  表格式模型不支援連結資料表。 從包含連結資料表的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿匯入時，會將連結資料表資料視為複製/貼上的資料，並儲存在 Model.bim 檔案中。 檢視複製/貼上的資料表之屬性時，會停用 [來源資料] 屬性，並停用 [資料表] 功能表上的 [資料表屬性] 對話方塊。  
 >   
->  可以加入至模型中內嵌資料的上限為 10,000 個資列列。 如果您從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 匯入模型且看到錯誤：「資料已截斷。 貼上的資料表不能包含超過 10000 個資料列」，您應該將內嵌資料移到另一個資料來源 (例如 SQL Server 中的資料表) 來修訂 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 模型，然後重新匯入。  
+>  可以加入至模型中內嵌資料的上限為 10,000 個資列列。 如果您匯入模型，以從[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]且看到錯誤，「 資料已截斷。 貼上的資料表不能包含超過 10000 個資料列 」 您應該修改[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]藉由將內嵌的資料移到另一個資料來源，例如 SQL Server 中的資料表建立模型，然後重新匯入。  
   
  根據工作空間資料庫位於與 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 相同之電腦 (本機) 的 Analysis Services 執行個體還是遠端 Analysis Services 執行個體上而有特殊考量。  
   
- 如果工作空間資料庫位於本機 Analysis Services 執行個體上，您可以從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿匯入中繼資料和資料。 中繼資料會從活頁簿複製，並用來建立表格式模型專案。 然後會從活頁簿複製資料並儲存在專案的工作空間資料庫中 (複製/貼上的資料除外，該資料儲存在 Model.bim 檔中)。  
+ 如果工作空間資料庫位於本機 Analysis Services 執行個體上，您可以從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿匯入中繼資料和資料。 中繼資料會從活頁簿複製，並用來建立表格式模型專案。 然後從活頁簿複製並儲存在專案的工作區資料庫 （複製/貼上資料除外，它會儲存在 Model.bim 檔案） 資料。  
   
  如果工作空間資料庫位於遠端 Analysis Services 執行個體上，您不能從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 活頁簿匯入資料。 您依然可以匯入活頁簿中繼資料；不過，這會導致指令碼在遠端 Analysis Services 執行個體上執行。 您應只從受信任的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿匯入中繼資料。 必須從資料來源連接中定義的來源匯入資料。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿中複製/貼上和連結資料表的資料必須複製及貼到表格式模型專案中。  
   

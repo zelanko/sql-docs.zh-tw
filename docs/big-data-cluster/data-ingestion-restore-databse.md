@@ -1,20 +1,22 @@
 ---
-title: 將資料庫還原到 SQL Server 的巨量資料叢集 |Microsoft Docs
-description: 這篇文章會示範如何將資料庫還原到 SQL Server 的巨量資料叢集的主要執行個體。
+title: 還原資料庫
+titleSuffix: SQL Server 2019 big data clusters
+description: 這篇文章會示範如何將資料庫還原到 SQL Server 2019 巨量資料叢集 （預覽） 的主要執行個體。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/09/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: f3a15d63b38ac92a6dcdba7363d1fa5ccd05534b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.custom: seodec18
+ms.openlocfilehash: 854f31f6ac04e9767ff1fc12cfb04f5d28c2aa13
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700726"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030822"
 ---
-# <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>將資料庫還原到 SQL Server 巨量資料叢集主要執行個體
+# <a name="restore-a-database-into-the-sql-server-2019-big-data-cluster-master-instance"></a>將資料庫還原到 SQL Server 2019 巨量資料叢集主要執行個體
 
 本文說明如何將現有的資料庫還原至 SQL Server 2019 巨量資料叢集 （預覽） 的主要執行個體。 建議的方法是使用備份、 複製和還原方法。
 

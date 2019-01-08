@@ -11,12 +11,12 @@ ms.assetid: 9d8233bb-117e-4563-9302-8a5a8ad1fae2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 06e8e220f5ab51a3dbc2ca4248023918879956d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cba5f339987c42c79c3d982d64d37879a7c3e2d6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101344"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402573"
 ---
 # <a name="processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>處理目標郵寄結構中的模型 (基本資料採礦教學課程)
   在您可以瀏覽或使用採礦模型之前，必須先部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案並處理採礦結構和採礦模型。  
@@ -47,7 +47,7 @@ ms.locfileid: "48101344"
 4.  請輸入`12`for **HoldoutSeed**。  
   
 ## <a name="deploying-and-processing-the-models"></a>部署及處理模型  
- 在資料採礦設計師中，您可以決定要處理哪些物件，視您對模型或基礎資料所做變更的範圍而定：  
+ 在資料採礦設計師中，您可以決定哪一個要處理物件，視您已對您的模型或基礎資料變更的範圍而定：  
   
  這項工作由於資料和模型都是新的，您將要同時處理此結構和所有模型。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48101344"
   
 1.  在 **採礦模型**功能表上，選取**處理採礦結構和所有模型**。  
   
-     如果您變更了結構，系統將會提示您建立及部署專案，然後才能處理模型。 按一下 **[是]**。  
+     如果您變更了結構，系統將會提示您建立及部署專案，然後才能處理模型。 按一下 [ **是**]。  
   
 2.  按一下 [**執行**中**處理採礦結構 – 目標郵寄**] 對話方塊。  
   
@@ -69,9 +69,9 @@ ms.locfileid: "48101344"
  [將新模型加入至目標的郵寄結構&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>下一課  
- [第 4 課： 探索目標的郵寄模型&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
+ [第 4 課：探索目標的郵寄模型&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [處理需求和考量&#40;資料採礦&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [處理需求和考量 (資料採礦)](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

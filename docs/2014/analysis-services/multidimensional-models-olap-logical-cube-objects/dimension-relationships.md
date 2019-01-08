@@ -22,12 +22,12 @@ ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 269cc4c9c8459154fd422ed7896304cc3da27db3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91cba3e301a98c905b157959094a7075b0e3357d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164518"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512768"
 ---
 # <a name="dimension-relationships"></a>維度關聯性
   維度使用方式會定義 Cube 維度和 Cube 內量值群組之間的關聯性。 Cube 維度是在特定 Cube 中使用之資料庫維度的執行個體。 Cube 可以，而且經常會，具有與量值群組沒有直接關聯的 Cube 維度，但可能會透過其他維度或量值群組，間接地與此量值群組相關。 當您將資料庫維度或量值群組加入至 cube 中， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]嘗試決定維度使用方式，藉由檢查 cube 的資料來源檢視 中的事實資料表與維度資料表之間的關聯性，以及透過檢查維度內屬性之間關聯性。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會自動設定其可偵測到之關聯性的維度使用方式設定。  
@@ -35,7 +35,7 @@ ms.locfileid: "48164518"
  維度與量值群組之間的關聯性，是由維度和參與關聯性的事實資料表所組成的，而資料粒度屬性則會指定特定量值群組中之維度的資料粒度。  
   
 ## <a name="regular-dimension-relationships"></a>一般維度關聯性  
- 當維度的索引鍵資料行直接聯結到事實資料表時，在 Cube 維度與量值群組之間會存在一般維度關聯性。 這項直接關聯性是以基礎關聯式資料庫中的主索引鍵與外部索引鍵關聯性為基礎，但也可能是以資料來源檢視中所定義的邏輯關聯性為基礎。 一般維度關聯性代表在傳統星狀結構描述設計中，維度資料表與事實資料表之間的關聯性。 如需有關一般關聯性的詳細資訊，請參閱 <<c0> [ 定義一般關聯性及一般關聯性屬性](../multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)。  
+ 當維度的索引鍵資料行直接聯結到事實資料表時，在 Cube 維度與量值群組之間會存在一般維度關聯性。 此直接的關聯性根據主索引鍵-外部索引鍵關聯性在基礎關聯式資料庫中，但也可能會根據資料來源檢視中定義邏輯關聯性。 一般維度關聯性代表在傳統星狀結構描述設計中，維度資料表與事實資料表之間的關聯性。 如需有關一般關聯性的詳細資訊，請參閱 <<c0> [ 定義一般關聯性及一般關聯性屬性](../multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)。  
   
 ## <a name="reference-dimension-relationships"></a>參考維度關聯性  
  當維度的索引鍵資料行透過其他維度資料表中的索引鍵間接聯結到事實資料表時，Cube 維度與量值群組之間就會有參考維度關聯性 (如下圖所示)。  
@@ -61,7 +61,7 @@ ms.locfileid: "48164518"
   
  ![資料行資料表可支援維度的事實上](../../../2014/analysis-services/dev-guide/media/as-factdim.gif "資料行事實上資料表可支援維度")  
   
- 此資料表所包含的屬性資訊，不但有零售商所發出的訂單產品線，還有關於訂單本身的資訊。 在上圖中圈起來的屬性識別中的資訊**FactResellerSales**可用來作為維度中之屬性的資料表。 在此情況下，還有另外兩項資訊，即轉售商發出的貨運追蹤編號和訂單號碼，是由 CarrierTrackingNumber 和 CustomerPONumber 屬性資料行來表示。 此資訊值得令人關注；例如，使用者肯定會希望知道以單一追蹤編號出貨之所有訂單的彙總資訊 (例如，產品的總成本)。 但沒有維度，也無法組織或彙總這兩個屬性的資料。  
+ 此資料表所包含的屬性資訊，不但有零售商所發出的訂單產品線，還有關於訂單本身的資訊。 在上圖中圈起來的屬性識別中的資訊**FactResellerSales**可用來作為維度中之屬性的資料表。 在此情況下，還有另外兩項資訊，即轉售商發出的貨運追蹤編號和訂單號碼，是由 CarrierTrackingNumber 和 CustomerPONumber 屬性資料行來表示。 此資訊值得-例如，使用者會肯定會希望知道看到彙總的資訊，例如產品的總成本，單一追蹤編號出貨的所有訂單。 但沒有維度，也無法組織或彙總這兩個屬性的資料。  
   
  理論上，您可以建立與 FactResellerSales 資料表使用相同索引鍵資訊的維度資料表，並將其他兩個屬性資料行 (CarrierTrackingNumber 和 CustomerPONumber) 移到該維度資料表。 不過，這樣做會重複大量資料，並在資料倉儲中增加了不必要的複雜性，而這一切只為了以個別維度來表示兩個屬性。  
   
@@ -86,6 +86,6 @@ ms.locfileid: "48164518"
  如需有關多對多關聯性的詳細資訊，請參閱 <<c0> [ 定義多對多關聯性及多對多關聯性屬性](../multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [維度 &#40;Analysis Services-多維度資料 &#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [維度 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

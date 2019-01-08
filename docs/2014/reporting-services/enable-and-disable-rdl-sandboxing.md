@@ -11,12 +11,12 @@ ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f3acf241fbc5737daff76c408159b17b27affe9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f49c20c8efe233bb49194364943f7ebb95ed6497
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220658"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415276"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>啟用或停用 RDL 沙箱
   RDL (報表定義語言) 沙箱功能可在多個租用戶使用報表伺服器之單一 Web 伺服陣列的環境中，讓您偵測及限制個別租用戶使用特定資源類型的情形。 這種情形的一個範例是裝載服務案例，在此案例中，您可能要為由多個可能分屬不同公司的租用戶所使用的報表伺服器，維護單一 Web 伺服器陣列。 您身為報表伺服器管理員，可以啟用此功能來幫助您達成下列目標：  
@@ -35,10 +35,10 @@ ms.locfileid: "48220658"
   
 -   運算式中的指名參數。  
   
- 本主題說明中的每個項目 <`RDLSandboxing`> RSReportServer.Config 檔案中的項目。 如需如何編輯此檔案的詳細資訊，請參閱[Modify a Reporting Services Configuration File (RSreportserver.config)](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) (修改 Reporting Services 組態檔 (RSreportserver.config))。 伺服器追蹤記錄會記錄與 RDL 沙箱功能有關的活動。 如需有關追蹤記錄檔的詳細資訊，請參閱 <<c0> [ 報表伺服器服務追蹤記錄](report-server/report-server-service-trace-log.md)。  
+ 這個主題描述 RSReportServer.Config 檔中 <`RDLSandboxing`> 元素內的每一個元素。 如需如何編輯此檔案的詳細資訊，請參閱[Modify a Reporting Services Configuration File (RSreportserver.config)](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) (修改 Reporting Services 組態檔 (RSreportserver.config))。 伺服器追蹤記錄會記錄與 RDL 沙箱功能有關的活動。 如需追蹤紀錄的詳細資訊，請參閱 [報表伺服器服務追蹤記錄](report-server/report-server-service-trace-log.md)。  
   
 ## <a name="example-configuration"></a>範例組態  
- 下列範例示範設定和範例值 <`RDLSandboxing`> RSReportServer.Config 檔案中的項目。  
+ 下列範例會示範 RSReportServer.Config 檔中 <`RDLSandboxing`> 元素的設定和範例值。  
   
 ```  
 <RDLSandboxing>  
@@ -47,8 +47,8 @@ ms.locfileid: "48220658"
    <MaxStringResultLength>3000</MaxStringResultLength>  
    <MaxArrayResultLength>250</MaxArrayResultLength>  
    <Types>  
-      <Allow Namespace=”System.Drawing” AllowNew=”True”>Bitmap</Allow>  
-      <Allow Namespace=”TypeConverters.Custom” AllowNew=”True”>*</Allow>  
+      <Allow Namespace="System.Drawing" AllowNew="True">Bitmap</Allow>  
+      <Allow Namespace="TypeConverters.Custom" AllowNew="True">*</Allow>  
    </Types>  
    <Members>  
       <Deny>Format</Deny>  
@@ -62,17 +62,17 @@ ms.locfileid: "48220658"
   
 |設定|描述|  
 |-------------|-----------------|  
-|**MaxExpressionLength**|RDL 運算式中允許的最大字元數。<br /><br /> 預設值：1000|  
-|**MaxResourceSize**|外部資源允許的最大 KB 數。<br /><br /> 預設值：100|  
-|**MaxStringResultLength**|RDL 運算式的傳回值中允許的最大字元數。<br /><br /> 預設值：1000|  
-|**MaxArrayResultLength**|RDL 運算式的陣列傳回值中允許的最大項目數。<br /><br /> 預設值：100|  
+|**MaxExpressionLength**|RDL 運算式中允許的最大字元數。<br /><br /> 預設：1000|  
+|**MaxResourceSize**|外部資源允許的最大 KB 數。<br /><br /> 預設：100|  
+|**MaxStringResultLength**|RDL 運算式的傳回值中允許的最大字元數。<br /><br /> 預設：1000|  
+|**MaxArrayResultLength**|RDL 運算式的陣列傳回值中允許的最大項目數。<br /><br /> 預設：100|  
 |**類型**|RDL 運算式中允許的成員清單。|  
 |**Allow**|RDL 運算式中允許的類型或類型集合。|  
 |**Namespace**|**Allow** 的屬性，這是包含一或多個套用至 Value 之類型的命名空間。 這個屬性不區分大小寫。|  
-|`AllowNew`|**Allow** 的布林屬性，可控制 RDL 運算式或 RDL **\<Class>** 項目中是否允許建立此類型的新執行個體。<br /><br /> 注意： 當`RDLSandboxing`啟用時，無法建立新的陣列，在 RDL 運算式中，不論設定為何`AllowNew`。|  
+|`AllowNew`|**Allow** 的布林屬性，可控制 RDL 運算式或 RDL **\<Class>** 項目中是否允許建立此類型的新執行個體。<br /><br /> 注意：當`RDLSandboxing`啟用時，無法建立新的陣列，在 RDL 運算式中，不論設定為何`AllowNew`。|  
 |**值**|**Allow** 的值，這是 RDL 運算式中允許之類型的名稱。 **\*** 值表示允許命名空間中的所有類型。 這個屬性不區分大小寫。|  
 |**成員**|如果是 **\<Types>** 項目中所包含的類型清單，則為 RDL 運算式中不允許的成員名稱清單。|  
-|**拒絕**|RDL 運算式中不允許的成員名稱。 這個屬性不區分大小寫。<br /><br /> 注意： 當**拒絕**指定成員，不允許具有這個名稱的所有類型的所有成員。|  
+|**拒絕**|RDL 運算式中不允許的成員名稱。 這個屬性不區分大小寫。<br /><br /> 注意：為成員指定 **Deny** 時，將不會允許所有類型中具有這個名稱的所有成員。|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>在啟用 RDL 沙箱功能時使用運算式  
  您可以修改 RDL 沙箱功能，透過下列方式幫助管理運算式所使用的資源：  
@@ -119,7 +119,7 @@ ms.locfileid: "48220658"
   
 -   將這個新類別加入至允許清單。  
   
- 若要新增[!INCLUDE[vbprvb](../includes/vbprvb-md.md)].NET Framework 函數加入允許清單中，將對應的型別 Microsoft.VisualBasic 命名空間新增至允許清單。  
+ 若要將 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 函數加入允許清單，請將 Microsoft.VisualBasic 命名空間中的對應類型加入允許清單。  
   
  若要將 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 類型關鍵字加入至允許清單，請將對應的 CLR 類型加入至允許清單。 例如，若要使用[!INCLUDE[vbprvb](../includes/vbprvb-md.md)].NET Framework 關鍵字`Integer`，將下列 XML 片段来加入 **\<RDLSandboxing >** 項目：  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48220658"
   
 -   將 Proxy 類型加入至允許清單。  
   
- 將自訂組件中的類型加入至允許清單並不會以隱含方式授與此組件的執行權限。 您必須特別修改程式碼存取安全性檔案，並提供組件的執行權限。 如需詳細資訊，請參閱 [Code Access Security in Reporting Services](extensions/secure-development/code-access-security-in-reporting-services.md) (Reporting Services 中的程式碼存取安全性)。  
+ 將自訂組件中的類型加入至允許清單並不會以隱含方式授與此組件的執行權限。 您必須特別修改程式碼存取安全性檔案，並提供組件的執行權限。 如需詳細資訊，請參閱 [Code Access Security in Reporting Services](extensions/secure-development/code-access-security-in-reporting-services.md)(Reporting Services 中的程式碼存取安全性)。  
   
 #### <a name="maintaining-the-deny-list-of-members"></a>維護\<拒絕 > 清單中的成員  
  當您將新的類型加入至允許清單時，請使用下列清單來判斷何時可能需要更新成員的封鎖清單：  
@@ -142,9 +142,9 @@ ms.locfileid: "48220658"
   
 -   當您將成員加入至允許清單中的類型時。  
   
--   當您更新[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]報表伺服器上。  
+-   當您在報表伺服器上更新 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 時。  
   
--   當您將報表伺服器升級到更新版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時。  
+-   當您將報表伺服器升級到更新版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]時。  
   
 -   當您因為新的成員可能已加入至 RDL 類型，而更新報表伺服器來處理較新的 RDL 結構描述時。  
   

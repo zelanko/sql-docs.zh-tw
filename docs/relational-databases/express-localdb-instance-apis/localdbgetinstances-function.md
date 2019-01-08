@@ -16,12 +16,12 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a562aa5947444fe149c5e24f3a5a1b9cd74fe4d3
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: d04bc4e669faad149a4dccbfc1b40a82a9a1aae0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571218"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398171"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>參數  
  *pInstanceNames*  
- [輸出] 當傳回此函數時，包含使用者工作站上之具名及預設 LocalDB 執行個體的名稱。  
+ [輸出]此函式傳回時，包含名稱的具名和預設 LocalDB 執行個體，在使用者的工作站上。  
   
  *lpdwNumberOfInstances*  
- [輸入/輸出]輸入時，包含的執行個體名稱中的位置數目*pInstanceNames*緩衝區。 輸出時，包含在使用者工作站上找到的 LocalDB 執行個體數目。  
+ [輸入/輸出]輸入時，包含的執行個體名稱中的位置數目*pInstanceNames*緩衝區。 在輸出時，包含使用者工作站上找到的 LocalDB 執行個體數目。  
   
 ## <a name="returns"></a>傳回值  
  S_OK  

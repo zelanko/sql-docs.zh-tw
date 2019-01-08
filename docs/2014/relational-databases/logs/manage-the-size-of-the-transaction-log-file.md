@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], size management
@@ -12,15 +12,15 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a681921eb1db363f8a2ddf7fc14836e0d9b781b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066758"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816610"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理交易記錄檔的大小
-  在某些情況下，很適合用來實際壓縮或展開實體記錄檔的交易記錄檔[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。 本主題包含下列作業的資訊：如何監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易記錄大小、壓縮交易記錄、加入或加大交易記錄檔、最佳化 **tempdb** 交易記錄成長率，以及控制交易記錄檔的成長。  
+  在部分情況下，實際壓縮或擴充 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫之交易記錄的實體記錄檔十分有用。 本主題包含下列作業的資訊：如何監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易記錄大小、壓縮交易記錄、加入或加大交易記錄檔、最佳化 **tempdb** 交易記錄成長率，以及控制交易記錄檔的成長。  
   
   
 ##  <a name="MonitorSpaceUse"></a> 監視記錄空間的使用  
@@ -55,7 +55,7 @@ ms.locfileid: "48066758"
 -   [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (請參閱一或多個記錄檔的 **size**、**max_size** 和 **growth** 資料行。)  
   
 > [!NOTE]  
->  壓縮資料庫和記錄檔的作業可設定為自動進行。 不過，我們建議您不要進行自動壓縮，而且 `autoshrink` 資料庫屬性預設為 FALSE。 如果 `autoshrink` 設定為 TRUE，只有當超過 25% 的空間未使用時，自動壓縮才會減少檔案的大小。 此時，檔案會壓縮成只有 25% 的檔案是未使用空間的大小，或檔案的原始大小，以較大者為準。 如需有關變更的設定資訊`autoshrink`屬性，請參閱 <<c2> [ 檢視或變更資料庫的屬性](../databases/view-or-change-the-properties-of-a-database.md)— 使用**Auto Shrink**屬性**選項**頁面，或[ALTER DATABASE SET 選項&#40;-&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)— 使用 AUTO_SHRINK 選項。</c2>  
+>  壓縮資料庫和記錄檔的作業可設定為自動進行。 不過，我們建議您不要進行自動壓縮，而且 `autoshrink` 資料庫屬性預設為 FALSE。 如果 `autoshrink` 設定為 TRUE，只有當超過 25% 的空間未使用時，自動壓縮才會減少檔案的大小。 此時，檔案會壓縮成只有 25% 的檔案是未使用空間的大小，或檔案的原始大小，以較大者為準。 如需有關變更的設定資訊`autoshrink`屬性，請參閱 <<c2> [ 檢視或變更資料庫的屬性](../databases/view-or-change-the-properties-of-a-database.md)-使用**Auto Shrink**屬性**選項**頁面-或[ALTER DATABASE SET 選項&#40;-&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-使用 AUTO_SHRINK 選項。</c2>  
   
   
 ##  <a name="AddOrEnlarge"></a> 加入或加大記錄檔  
