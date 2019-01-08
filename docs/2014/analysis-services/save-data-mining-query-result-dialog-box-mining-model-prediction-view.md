@@ -15,12 +15,12 @@ ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c4736083dedc6899a55e49926d1010ef39fc4444
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6b5c5f74ba8951bae27193b6796f09dcbdb8302
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090271"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511209"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>儲存資料採礦查詢結果對話方塊 (採礦模型預測檢視)
   使用 **[儲存資料採礦查詢結果]** 對話方塊，即可將資料採礦查詢的結果儲存到新的資料表。  
@@ -53,10 +53,10 @@ ms.locfileid: "48090271"
  **加入至 DSV**  
  (選擇性) 如果您要將資料表加入至現有的資料來源，請選取專案中包含的資料來源檢視。  
   
- 如果您想要在相同的資料來源中保留模型的所有相關資料表 (例如定型資料、預測來源資料和查詢結果)，這個選項就很有用。  
+ 這個選項非常有用，如果您想要保留所有相關的資料表模型-例如定型資料、 預測來源資料和查詢結果-在相同的資料來源。  
   
 ## <a name="see-also"></a>另請參閱  
- [預測查詢產生器&#40;資料採礦&#41;](prediction-query-builder-data-mining.md)   
+ [預測查詢產生器 &#40;資料採礦&#41;](prediction-query-builder-data-mining.md)   
  [資料採礦查詢介面](data-mining/data-mining-query-tools.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](/sql/dmx/data-mining-extensions-dmx-statements)  
   

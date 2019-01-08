@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
@@ -18,12 +17,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab581202049b9dab362de4278950e0597cf5b3b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154750"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817560"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層式資料 (SQL Server)
   內建`hierarchyid`資料類型讓儲存與查詢階層式資料更容易。 `hierarchyid` 最適合表示樹狀目錄，這被最常見的階層式資料的類型。  
@@ -43,7 +42,7 @@ ms.locfileid: "48154750"
  使用 [hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) 做為資料類型來建立具有階層式結構的資料表，或描述儲存在另一個位置的階層式資料結構。 使用 [中的](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) hierarchyid 函數 [!INCLUDE[tsql](../includes/tsql-md.md)] 來查詢及管理階層式資料。  
   
 ##  <a name="keyprops"></a> hierarchyid 的主要屬性  
- 值為`hierarchyid`資料類型代表樹狀結構階層中的位置。 `hierarchyid` 的值具有下列屬性：  
+ `hierarchyid` 資料類型的值代表樹狀目錄階層中的位置。 `hierarchyid` 的值具有下列屬性：  
   
 -   極度壓縮  
   
@@ -61,11 +60,11 @@ ms.locfileid: "48154750"
 ##  <a name="limits"></a> hierarchyid 的限制  
  `hierarchyid`資料型別具有下列限制：  
   
--   類型的資料行`hierarchyid`自動代表樹狀結構。 應用程式負責決定是否要產生並指派 `hierarchyid` 值，以便讓資料列之間所需的關聯性反映在值中。 有些應用程式可能有 `hierarchyid` 類型的資料行，表示在另一個資料表中定義之階層的位置。  
+-   `hierarchyid` 類型的資料行不會自動代表樹狀目錄。 應用程式負責決定是否要產生並指派 `hierarchyid` 值，以便讓資料列之間所需的關聯性反映在值中。 有些應用程式可能有 `hierarchyid` 類型的資料行，表示在另一個資料表中定義之階層的位置。  
   
--   它是取決於應用程式來管理產生與指派的並行存取`hierarchyid`值。 除非應用程式使用唯一索引鍵條件約束或透過自己的邏輯強制本身的唯一性，否則，不保證資料行中的 `hierarchyid` 值是唯一的。  
+-   應用程式負責管理產生與指派 `hierarchyid` 值的並行。 除非應用程式使用唯一索引鍵條件約束或透過自己的邏輯強制本身的唯一性，否則，不保證資料行中的 `hierarchyid` 值是唯一的。  
   
--   所表示的階層式關聯性`hierarchyid`值不會強制執行類似的外部索引鍵關聯性。 如果 A 擁有子系 B，然後刪除 A 留下 B，讓關聯性變成不存在的記錄，這種階層式關聯性是可能發生而且有時候是恰當的。 如果無法接受這種行為，應用程式必須在刪除父系前，查詢下階。  
+-   由 `hierarchyid` 值代表的階層式關聯性不會像外部索引鍵關聯性般強制執行。 如果 A 擁有子系 B，然後刪除 A 留下 B，讓關聯性變成不存在的記錄，這種階層式關聯性是可能發生而且有時候是恰當的。 如果無法接受這種行為，應用程式必須在刪除父系前，查詢下階。  
   
   
 ##  <a name="alternatives"></a> 使用 hierarchyid 替代選項的時機  
@@ -95,17 +94,17 @@ GO
   
  比較父子式和 `hierarchyid` 的一般作業  
   
--   子樹查詢時大幅提升與`hierarchyid`。  
+-   使用 `hierarchyid` 進行子樹查詢時，速度明顯加快。  
   
 -   而使用 `hierarchyid` 進行直接下階查詢時，速度則稍慢。  
   
--   移動非分葉節點時，使用慢`hierarchyid`。  
+-   使用 `hierarchyid` 移動非分葉節點時，速度比較慢。  
   
 -   使用 `hierarchyid` 插入非分葉節點與插入或移動分葉節點時，其複雜程度相同。  
   
  下列狀況存在時，最好使用父子式：  
   
--   索引鍵的大小很重要。 相同的節點數目，如`hierarchyid`值會等於或大於整數系列 (`smallint`， `int`， `bigint`) 值。 這是要在罕見的情況下，使用 父子式的唯一原因，因為`hierarchyid`有位置明顯較好的 I/O 和 CPU 的複雜性比您使用 [父子式] 結構時所需的通用資料表運算式。  
+-   索引鍵的大小很重要。 如果節點數目相同，`hierarchyid` 值會等於或大於整數系列 (`smallint`、`int`、`bigint`) 值。 這是要在罕見的情況下，使用 父子式的唯一原因，因為`hierarchyid`有位置明顯較好的 I/O 和 CPU 的複雜性比您使用 [父子式] 結構時所需的通用資料表運算式。  
   
 -   查詢很少會查詢整個階層的區段。 換句話說，查詢通常只處理階層中的單一點。 在這些情況下，共同位置就不重要。 例如，如果組織資料表僅用於處理個別員工的薪資，最好使用 [父子式]。  
   
@@ -160,7 +159,7 @@ GO
   
      在廣度優先的索引中，節點的所有直接子系都會位於相同位置。 因此，廣度優先的索引在回應關於下層子系的查詢 (例如，「尋找直接回報給此經理的所有員工」) 時很有效率。  
   
- 不論是讓深度優先、廣度優先，或是兩者，還是那個要產生叢集索引鍵 (如果有的話)，都取決於上述查詢類型的相對重要性，以及 SELECT 和DML 作業的相對重要性。 如需索引策略的詳細範例，請參閱＜ [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)＞。  
+ 不論是讓深度優先、廣度優先，或是兩者，還是那個要產生叢集索引鍵 (如果有的話)，都取決於上述查詢類型的相對重要性，以及 SELECT 和DML 作業的相對重要性。 索引策略的詳細範例，請參閱[教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)。  
   
   
 ### <a name="creating-indexes"></a>建立索引  
@@ -266,11 +265,11 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> 相關工作  
   
 ###  <a name="migrating"></a> 從父子式移轉到 hierarchyid  
- 大部分的樹狀目錄都是使用 [父子式] 代表。 最簡單的方式，從 [父子式] 結構移轉至資料表，使用`hierarchyid`是使用暫存資料行或暫存資料表來追蹤每個階層的層級的節點數目。 如需遷移 [父子式] 資料表的範例，請參閱 [教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 課。  
+ 大部分的樹狀目錄都是使用 [父子式] 代表。 從 [父子式] 結構移轉到使用 `hierarchyid` 的資料表最簡單的方式，就是使用暫存資料行或暫存資料表來追蹤每個階層層級的節點數。 如需移轉的父/子資料表的範例，請參閱第 1 課的[教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)。  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> 使用 hierarchyid 管理樹狀結構  
- 雖然`hierarchyid`資料行不一定代表樹狀結構、 應用程式可以輕易地確認這就。  
+ 雖然 `hierarchyid` 資料行不需要代表樹狀結構，但是應用程式可以輕易地確認這就是樹狀結構。  
   
 -   產生新值時，請執行下列其中之一：  
   
@@ -526,7 +525,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [Hierarchyid 資料類型方法參考](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [教學課程：使用 hierarchyid 資料類型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

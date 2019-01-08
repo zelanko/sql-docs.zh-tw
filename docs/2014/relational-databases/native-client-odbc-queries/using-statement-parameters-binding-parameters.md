@@ -20,12 +20,12 @@ ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 071ef09e796f5b44076c4b6d00b780f2822e7168
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9dfe88f11cc26d4a9711b7f21caf4c4475ec954b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227908"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351327"
 ---
 # <a name="binding-parameters"></a>繫結參數
   SQL 陳述式中的每一個參數標記都必須與應用程式的變數相關聯或繫結，才能執行該陳述式。 這是藉由呼叫[SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)函式。 **SQLBindParameter**描述驅動程式之程式變數 （位址、 C 資料類型，等等）。 它也會藉由指定序數值以辨識參數標記，然後描述它所代表的 SQL 物件的特性 (SQL 資料類型、有效位數等)。  
@@ -56,7 +56,7 @@ ms.locfileid: "48227908"
   
  使用時，才會支援具名的參數[!INCLUDE[tsql](../../includes/tsql-md.md)]`EXECUTE`陳述式或 ODBC CALL 逸出序列執行預存程序。  
   
- 如果針對預存程序參數設定 `SQL_DESC_NAME`，則查詢中的所有預存程序參數也都應該設定 `SQL_DESC_NAME`。  如果常值會使用在預存程序呼叫中，其中參數已`SQL_DESC_NAME`設定，則常值應該使用格式 *' 名稱*=*值*'，其中*名稱*是預存程序參數名稱 (例如@p1)。 如需詳細資訊，請參閱 <<c0> [ 依名稱 （具名參數） 的繫結參數](http://go.microsoft.com/fwlink/?LinkId=167215)。  
+ 如果針對預存程序參數設定 `SQL_DESC_NAME`，則查詢中的所有預存程序參數也都應該設定 `SQL_DESC_NAME`。  如果常值會使用在預存程序呼叫中，其中參數已`SQL_DESC_NAME`設定，則常值應該使用格式 *' 名稱*=*值*'，其中*名稱*是預存程序參數名稱 (例如@p1)。 如需詳細資訊，請參閱 <<c0> [ 依名稱 （具名參數） 的繫結參數](https://go.microsoft.com/fwlink/?LinkId=167215)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用陳述式參數](using-statement-parameters.md)  

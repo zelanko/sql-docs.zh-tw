@@ -17,12 +17,12 @@ ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b617305a8766ff94a699a054ac394be406dc7873
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee4a7a09471078753589463c058ba5ea2e39c4d2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057088"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420000"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>叢集圖表逐步解說 (資料採礦增益集)
   您已建立叢集模型之後，您可以匯入它使用 Visio**叢集**圖形，然後繼續自訂並增強配置。 **適用於 Visio 的資料採礦圖形**包含下列用於處理資料採礦圖表的自訂控制項：  
@@ -73,9 +73,9 @@ ms.locfileid: "48057088"
   
 7.  保留選項，**圖表中的資料列數目**，為 5。  
   
-     這個選項不會變更模型中的叢集數目，只會限制可顯示成每個叢集之特性的屬性數目而已。  
+     此選項不會變更模型中的叢集數目它只會限制可顯示為每個叢集功能的屬性數目。  
   
-     不過，此選項會做為圖表資料的篩選，因此您之後將無法增加項目數。  
+     不過，此選項會做做為篩選條件，在圖表的資料，因此您無法增加的更新版本的項目數。  
   
 8.  按一下 **[進階]**。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48057088"
   
      ![按一下 [進階] 選擇形狀色彩](media/dm13-visio-clusteroptions-advanced.gif "按一下 [進階] 選擇形狀色彩")  
   
-     **提示：** 可以稍後再更改部分色彩，使用 Visio 佈景主題和圖形編輯控制項。 不過，Visio 佈景主題也會覆寫其中部分色彩選擇，因此我們建議您從預設色彩開始，逐漸套用變更。  
+     **提示：** 使用 Visio 佈景主題和圖形編輯控制項，並可以稍後更改部分色彩。 不過，Visio 佈景主題也會覆寫其中部分色彩選擇，因此我們建議您從預設色彩開始，逐漸套用變更。  
   
 9. 按一下 **完成**建立圖形。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48057088"
   
      不過，如果您套用精靈產生之預設格式設定以外的任何特殊格式設定，包括部分背景，可能就不會顯示這些數字。  
   
-     **滑桿**  
+     **Slider**  
      篩選叢集之間的線條。 將滑動軸向上移就會移除最重要關聯以外的所有關聯。  
   
      **陰影**  

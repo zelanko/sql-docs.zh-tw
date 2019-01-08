@@ -1,7 +1,8 @@
 ---
-title: 若要監視伺服器和資料庫，在 Azure 資料 Studio 中的使用深入解析小工具 |Microsoft Docs
-description: 深入了解 Azure Data Studio 中的深入解析小工具。
-ms.custom: tools|sos
+title: 使用深入解析小工具來監視伺服器和資料庫
+titleSuffix: Azure Data Studio
+description: 深入了解 Azure Data Studio 中的深入解析小工具
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d669b72aadb9fe1ea2ec61c2059a1d932ee52d4d
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 7fa7317d048d2bb9e19b6e82f5323a3b8ed15751
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356329"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030192"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 使用 insight 小工具管理資料庫與伺服器
 

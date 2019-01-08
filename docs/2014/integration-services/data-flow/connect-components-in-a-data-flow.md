@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - components [Integration Services], connections
@@ -14,12 +13,12 @@ ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd6904980e160b027147649751d076085307a3ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14bbe37b0b13c9325c56bd0892a4b660c202c313
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204458"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796000"
 ---
 # <a name="connect-components-in-a-data-flow"></a>連接資料流程中的元件
   此程序描述如何將資料流程中的元件輸出，連接到同一資料流程中的其他元件。  
@@ -42,8 +41,8 @@ ms.locfileid: "48204458"
 6.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [加入或刪除資料流中的元件](data-flow.md)   
- [資料流程元件中設定錯誤輸出](../configure-an-error-output-in-a-data-flow-component.md)   
+ [在資料流程中加入或刪除元件](data-flow.md)   
+ [在資料流程元件中設定錯誤輸出](../configure-an-error-output-in-a-data-flow-component.md)   
  [資料流程](data-flow.md)  
   
   

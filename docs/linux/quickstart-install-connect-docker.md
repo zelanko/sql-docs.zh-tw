@@ -1,5 +1,6 @@
 ---
-title: 開始使用 Docker 上的 SQL Server 容器 |Microsoft Docs
+title: 開始使用 Docker （Linux 上執行 SQL Server） 上的 SQL Server 容器
+titleSuffix: SQL Server
 description: 本快速入門示範如何使用 Docker 來執行 SQL Server 2017 和 2019年容器映像。 您隨後便可使用 sqlcmd 來建立及查詢資料庫。
 author: rothja
 ms.author: jroth
@@ -8,18 +9,18 @@ ms.date: 11/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: b0b123fbf42c81dd4f755855a2c71b0bb799a2a8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a8ed1a9be24ab071bc3e202902b2a56f3ab3c046
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667007"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266009"
 ---
-# <a name="quickstart-run-sql-server-container-images-with-docker"></a>使用 Docker 的快速入門： 執行 SQL Server 容器映像
+# <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入門：以 Docker 執行 SQL Server 容器映像
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -87,7 +88,7 @@ any changes to one section should be duplicated in the other-->
    ```
 
    > [!NOTE]
-   > 密碼應遵循 SQL Server 預設密碼原則，否則容器將無法設定 SQL Server 並停止運作。 根據預設，密碼長度必須至少有 8 個字元，並包含下列四種字元組合中其中三種組合的字元：大寫字母、小寫字母、以 10 為底數的數字以及符號。 執行 [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) 命令即可查看錯誤記錄。
+   > 密碼應遵循 SQL Server 預設密碼原則，否則容器將無法設定 SQL Server 並停止運作。 根據預設，密碼必須至少為 8 個字元，且包含下列四組的三種字元：大寫字母、 小寫字母、 10 進位數字和符號。 執行 [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) 命令即可查看錯誤記錄。
 
    > [!NOTE]
    > 根據預設，這會建立 SQL Server 2017 Developer 版本的映像。 在容器中執行生產版本的程序將有些微差異。 如需詳細資訊，請參閱[執行生產容器映像](sql-server-linux-configure-docker.md#production)。
@@ -140,11 +141,11 @@ SELECT @@SERVERNAME,
 1. 從 Docker Hub 提取 SQL Server 2019 預覽 Linux 容器映像。
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
 
    > [!TIP]
@@ -159,17 +160,17 @@ SELECT @@SERVERNAME,
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
 
    > [!NOTE]
-   > 密碼應遵循 SQL Server 預設密碼原則，否則容器將無法設定 SQL Server 並停止運作。 根據預設，密碼長度必須至少有 8 個字元，並包含下列四種字元組合中其中三種組合的字元：大寫字母、小寫字母、以 10 為底數的數字以及符號。 執行 [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) 命令即可查看錯誤記錄。
+   > 密碼應遵循 SQL Server 預設密碼原則，否則容器將無法設定 SQL Server 並停止運作。 根據預設，密碼必須至少為 8 個字元，且包含下列四組的三種字元：大寫字母、 小寫字母、 10 進位數字和符號。 執行 [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) 命令即可查看錯誤記錄。
 
    > [!NOTE]
    > 根據預設，這會建立容器與 Developer 版本的 SQL Server 2019 預覽。
@@ -182,7 +183,7 @@ SELECT @@SERVERNAME,
    | **-e ' SA_PASSWORD =\<YourStrong ！Passw0rd\>'** | 指定您自己的強式密碼，該密碼長度至少需為 8 個字元且符合 [SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 此為 SQL Server 映像的必要設定。 |
    | **-p 1433:1433** | 將主機環境上的 TCP 通訊埠 (第一個值) 對應至容器中的 TCP 連接埠 (第二個值)。 在此範例中，SQL Server 正在容器中的 TCP 1433 上接聽，這公開給連接埠 1433，在主機上。 |
    | **--name sql1** | 指定容器名稱，而不隨機產生名稱。 執行多個容器時無法重複使用此相同名稱。 |
-   | **mcr.microsoft.com/mssql/server:2019-CTP2.1-ubuntu** | SQL Server 2019 CTP 2.1 Linux 容器映像。 |
+   | **mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu** | SQL Server 2019 CTP 2.2 Linux 容器映像。 |
 
 3. 若要檢視 Docker 容器，請使用 `docker ps` 命令。
 

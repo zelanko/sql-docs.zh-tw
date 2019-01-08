@@ -11,26 +11,26 @@ ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd9aaf7f069cd9454a9f735dd08f2956aaf582c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 263cdf9ddd1c140a4cb2d3142c8b3db29e558791
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159318"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543886"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>設定編輯器 (SQL Server Management Studio)
   您可以設定各個 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 編輯器的選項，以自訂其作業。  
   
 ## <a name="settng-editor-options"></a>設定編輯器選項  
- 利用 **[工具]** 功能表，然後選取 **[選項…]** 以顯示 **[選項]** 對話方塊，可設定大部分的編輯器選項設定。 在 **[選項]** 對話方塊於左窗格中開啟 **[文字編輯器]** 節點，可設定編碼與文字編輯選項。 文字編輯器下的節點適用於特定的編輯器：  
+ 使用 [工具] 功能表並選取 [選項...] 來顯示 [選項] 對話方塊，即可設定大部分的編輯器選項。 在 **[選項]** 對話方塊於左窗格中開啟 **[文字編輯器]** 節點，可設定編碼與文字編輯選項。 文字編輯器下的節點適用於特定的編輯器：  
   
 1.  **所有語言** - 使用此節點設定的選項會套用至所有 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 編輯器。 使用其他節點為特定的編輯器設定不同之選項，可以覆寫這些設定。  
   
 2.  **純文字** - 使用此節點設定的選項會套用至 MDX、DMX 與文字編輯器。  
   
-3.  **Transact-SQL** - 使用此節點設定的選項會套用至 Database Engine 查詢編輯器。  
+3.  **Transact-SQL** - 使用此節點設定的選項會套用至資料庫引擎查詢編輯器。  
   
-4.  **XML** - 使用此節點設定的選項會套用至分析編輯器的 XML。  
+4.  **XML**使用此節點設定的選項會套用至 XML for Analysis 編輯器。  
   
  開啟 **[查詢執行]** 或 **[查詢結果]** 節點，以自訂查詢的執行方式與結果的顯示方式。  
   

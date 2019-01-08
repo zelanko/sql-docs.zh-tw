@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 17911fd8b2c4fbc310ec87950cdb5ed10164a05b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 058010d0e32fb26cf4c12e720342af04bd784768
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202448"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804780"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
   此程序描述如何使用 CDC 設計工具主控台，於執行階段管理 CDC 執行個體操作。  
@@ -35,19 +34,19 @@ ms.locfileid: "48202448"
   
      您可以執行以下工作：  
   
-    -   **啟動**：開始擷取變更。  
+    -   **啟動**:若要開始擷取變更。  
   
-    -   **停止**：停止擷取變更。  
+    -   **停止**:若要停止擷取變更  
   
-    -   **重設**：按一下 [重設]，將 CDC 執行個體重設為初始 (空白) 狀態。 當 CDC 執行個體停止時可以使用這個選項。 變更資料表及 CDC 執行個體內部狀態的所有變更都會遭到刪除。 之後啟動 CDC 執行個體時，異動擷取將會從該時間點開始，而且只包含 CDC 執行個體啟動之後所開始的交易。  
+    -   **重設**:按一下 [重設]，將 CDC 執行個體重設為初始 (空白) 狀態。 當 CDC 執行個體停止時可以使用這個選項。 變更資料表及 CDC 執行個體內部狀態的所有變更都會遭到刪除。 之後啟動 CDC 執行個體時，異動擷取將會從該時間點開始，而且只包含 CDC 執行個體啟動之後所開始的交易。  
   
-    -   **刪除**：刪除 CDC 執行個體。  
+    -   **刪除**:若要刪除 CDC 執行個體。  
   
-    -   **Oracle 記錄指令碼**：按一下 [Oracle 記錄指令碼] 可顯示 [Oracle 記錄指令碼] 對話方塊，其中包含 Oracle 補充記錄指令碼。 如需有關您可以在此對話方塊中執行之操作的詳細資訊，請參閱＜ [Oracle Supplemental Logging Script](oracle-supplemental-logging-script.md)＞。  
+    -   **Oracle 記錄指令碼**:按一下  **Oracle 記錄指令碼**以顯示 Oracle 記錄指令碼 對話方塊中使用 Oracle 補充記錄指令碼。 如需有關您可以在此對話方塊中執行之操作的詳細資訊，請參閱＜ [Oracle Supplemental Logging Script](oracle-supplemental-logging-script.md)＞。  
   
-         **注意**：當您執行補充記錄指令碼時，將會開啟 [執行指令碼的 Oracle 認證] 對話方塊，您可以在此提供有效的 Oracle 使用者名稱和密碼。 如需有關如何提供適當之 Oracle 認證的詳細資訊，請參閱＜ [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md)＞。  
+         **注意**:當您執行補充記錄指令碼時，將會開啟 [執行指令碼的 Oracle 認證] 對話方塊，您可以在此提供有效的 Oracle 使用者名稱和密碼。 如需有關如何提供適當之 Oracle 認證的詳細資訊，請參閱＜ [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md)＞。  
   
-    -   **CDC 執行個體部署**：產生 CDC 執行個體的部署指令碼。 如需有關此對話方塊的詳細資訊，請參閱＜ [CDC Instance Deployment Script](cdc-instance-deployment-script.md)＞。  
+    -   **CDC 執行個體部署**:CDC 執行個體產生部署指令碼。 如需有關此對話方塊的詳細資訊，請參閱＜ [CDC Instance Deployment Script](cdc-instance-deployment-script.md)＞。  
   
      如需有關這些工作的詳細資訊，請參閱＜ [Manage a CDC Instance](manage-a-cdc-instance.md)＞。  
   

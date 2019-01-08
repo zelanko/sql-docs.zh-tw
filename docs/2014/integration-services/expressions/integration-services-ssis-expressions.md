@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -17,23 +16,23 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 050f82b51537cc7d375ddd04a86e67b8e48a9f06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2a8dba54a8e638da5777456341321d38abbb01f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192168"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352324"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) 運算式
   運算式是產生單一資料值的符號組合 (識別碼、常值、函數和運算子)。 簡單的運算式可以是單一常數、變數或函數。 通常運算式都比較複雜，更常使用多個運算子和函數，並參考多個資料行和變數。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，運算式可用於定義 CASE 陳述式的條件、建立和更新資料行中的值、指派值到變數、在執行階段更新或擴展屬性、定義優先順序條件約束中的條件約束和提供「For 迴圈」容器所使用的運算式。  
   
  運算式以運算式語言和運算式評估工具為基礎。 運算式評估工具會剖析運算式，並判斷運算式是否遵循運算式語言的規則。 如需有關運算式語法以及支援的常值和識別碼的詳細資訊，請參閱下列主題。  
   
--   [語法&#40;SSIS&#41;](syntax-ssis.md)  
+-   [語法 &#40;SSIS&#41;](syntax-ssis.md)  
   
--   [常值&#40;SSIS&#41;](numeric-string-and-boolean-literals.md)  
+-   [常值 &#40;SSIS&#41;](numeric-string-and-boolean-literals.md)  
   
--   [識別碼&#40;SSIS&#41;](identifiers-ssis.md)  
+-   [識別項 &#40;SSIS&#41;](identifiers-ssis.md)  
   
 ## <a name="components-that-use-expressions"></a>使用運算式的元件  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的下列元素可使用運算式：  
@@ -44,7 +43,7 @@ ms.locfileid: "48192168"
   
 -   變數會使用運算式來設定其值。 例如，GETDATE() 會將變數值設為目前的日期。  
   
--   優先順序條件約束可使用運算式，指定決定受條件約束的工作或封裝中的容器是否執行的條件。 優先順序條件約束中使用的運算式必須評估為`true`或`false`。 例如，運算式 \@A > \@B 將兩個使用者定義變數進行比較，以決定受條件約束的工作是否執行。  
+-   優先順序條件約束可使用運算式，指定決定受條件約束的工作或封裝中的容器是否執行的條件。 優先順序條件約束中使用的運算式必須評估為 `true` 或 `false`。 例如，運算式 \@A > \@B 將兩個使用者定義變數進行比較，以決定受條件約束的工作是否執行。  
   
 -   「For 迴圈」容器可使用運算式建立迴圈結果使用的初始化、評估和累加陳述式。 例如，運算式 \@Counter = 1 會初始化迴圈計數器。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48192168"
  [在資料流程元件中使用運算式](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>相關內容  
- social.technet.microsoft.com 上的技術文件： [SSIS 運算式範例](http://go.microsoft.com/fwlink/?LinkId=220761)  
+ social.technet.microsoft.com 上的技術文件： [SSIS 運算式範例](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

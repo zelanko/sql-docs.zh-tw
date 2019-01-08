@@ -1,7 +1,8 @@
 ---
-title: 在 Azure 資料 Studio 中的整合式終端機 |Microsoft Docs
+title: 整合式終端機
+titleSuffix: Azure Data Studio
 description: 深入了解在 Azure Data Studio 整合式終端機。
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 91adc56e93a7dc1b065b77169ad18fd977231d9f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355979"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030432"
 ---
 # <a name="integrated-terminal"></a>整合式終端機
 
@@ -89,7 +90,7 @@ ms.locfileid: "49355979"
 
 ## <a id="key-bindings"></a>終端機的按鍵繫結
 
-**檢視： 整合式切換終端機**命令繫結至**Ctrl +'** 快速切換流入和流出檢視整合式終端機 面板。
+**檢視：切換 [整合式終端機**命令已繫結至**Ctrl +'** 快速切換流入和流出檢視整合式終端機] 面板。
 
 以下是快速瀏覽整合式終端機中的鍵盤快速鍵：
 
@@ -109,16 +110,16 @@ ms.locfileid: "49355979"
 
 其中包括：
 
-* `workbench.action.terminal.focus`： 專注終端機。 這就像是切換，但著重的終端機，而非隱藏它，它是否可見。
-* `workbench.action.terminal.focusNext`： 著重的下一步 的終端機執行個體。
-* `workbench.action.terminal.focusPrevious`： 將重點放上一個終端機執行個體。
-* `workbench.action.terminal.kill`： 移除目前的終端機執行個體。
-* `workbench.action.terminal.runSelectedText`： 在終端機執行個體中執行選取的文字。
-* `workbench.action.terminal.runActiveFile`： 在終端機執行個體中執行作用中的檔案。
+* `workbench.action.terminal.focus`:焦點終端機。 這就像是切換，但著重的終端機，而非隱藏它，它是否可見。
+* `workbench.action.terminal.focusNext`:著重的下一步 的終端機執行個體。
+* `workbench.action.terminal.focusPrevious`:將重點放上一個終端機執行個體。
+* `workbench.action.terminal.kill`:移除目前的終端機執行個體。
+* `workbench.action.terminal.runSelectedText`:在終端機執行個體中執行選取的文字。
+* `workbench.action.terminal.runActiveFile`:在終端機執行個體中執行作用中的檔案。
 
 ### <a name="run-selected-text"></a>執行選取的文字
 
-若要使用`runSelectedText`命令，在編輯器中選取文字，並執行命令**終端機： 執行作用中終端機中選取的文字**透過**命令選擇區**(**Ctrl + Shift + P**). 終端機中嘗試執行選取的文字：
+若要使用`runSelectedText`命令，在編輯器中選取文字，並執行命令**終端機：在使用中的終端機中執行已選取的文字**經由**命令選擇區**(**Ctrl + Shift + P**)。 終端機中嘗試執行選取的文字：
 
 ![執行選取的文字](media/integrated-terminal/terminal_run_selected.png)
 
@@ -128,9 +129,9 @@ ms.locfileid: "49355979"
 
 複製並貼上的按鍵繫結關係，請依照下列平台標準：
 
-* Linux: **Ctrl + Shift + C**和**Ctrl + Shift + V**
-* Mac: **Cmd + C**和**Cmd + V**
-* Windows: **Ctrl + C**和**Ctrl + V**
+* Linux:**Ctrl + Shift + C**和**Ctrl + Shift + V**
+* Mac:**Cmd + C**和**Cmd + V**
+* Windows:**Ctrl + C**和**Ctrl + V**
 
 ### <a name="find"></a>尋找
 
@@ -145,7 +146,7 @@ ms.locfileid: "49355979"
 
 ### <a name="rename-terminal-sessions"></a>重新命名終端機工作階段
 
-整合式終端機工作階段可以現在會使用重新命名**終端機： 重新命名**(`workbench.action.terminal.rename`) 命令。 新的名稱會顯示終端機的選取範圍下拉式清單中。
+整合式終端機工作階段可以立即重新命名使用**終端機：重新命名**(`workbench.action.terminal.rename`) 命令。 新的名稱會顯示終端機的選取範圍下拉式清單中。
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>強制將透過終端機中的索引鍵繫結
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publishersettings.f1
@@ -15,12 +14,12 @@ ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 098eb9610a07531249246970ac9cca71e449209f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d07ea418d89b36a6d759eb1fa6b71e8b909ee5cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135988"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777770"
 ---
 # <a name="publisher-settings"></a>發行者設定
   **[發行者設定]** 對話方塊，可讓您針對已加入至複寫監視器之左窗格的發行者變更設定。  

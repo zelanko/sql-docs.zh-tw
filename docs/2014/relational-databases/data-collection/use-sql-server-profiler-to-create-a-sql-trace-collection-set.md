@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
@@ -12,12 +12,12 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d057ee45a14550b1ba56b9b15b9e7011e5238db1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143438"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798690"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>使用 SQL Server Profiler 來建立 SQL 追蹤收集組 (SQL Server Management Studio)
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，您可以利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的伺服器端追蹤功能來匯出追蹤定義，以便用來建立使用一般 SQL 追蹤收集器類型的收集組。 這個程序可以分成兩個部分：  
@@ -54,7 +54,7 @@ ms.locfileid: "48143438"
   
 6.  在 [一般] 索引標籤上，執行下列動作：  
   
-    1.  在 [追蹤名稱] 方塊中，輸入您想要用於追蹤的名稱。 此範例中，追蹤名稱是`SPgt80`。  
+    1.  在 [追蹤名稱] 方塊中，輸入您想要用於追蹤的名稱。 在這則範例中，追蹤名稱為 `SPgt80`。  
   
     2.  在 [使用範本] 清單中，選取要用於追蹤的範本。 在這則範例中，請按一下 [TSQL_SPs]。  
   
@@ -94,9 +94,9 @@ ms.locfileid: "48143438"
   
 3.  捲動指令碼並進行下列取代 (這些取代會以指令碼註解文字顯示)：  
   
-    -   將 **SQLTrace Collection Set Name Here** 取代成您想要針對收集組使用的名稱。 此範例中，命名為此收集組`SPROC_CollectionSet`。  
+    -   將 **SQLTrace Collection Set Name Here** 取代成您想要針對收集組使用的名稱。 針對此範例，請將收集組命名為 `SPROC_CollectionSet`。  
   
-    -   將 **SQLTrace Collection Item Name Here** 取代成您想要針對收集項使用的名稱。 此範例中，命名集合項目`SPROC_Collection_Item`。  
+    -   將 **SQLTrace Collection Item Name Here** 取代成您想要針對收集項使用的名稱。 針對此範例，請將收集項命名為 `SPROC_Collection_Item`。  
   
 4.  按一下 [執行] 執行查詢並建立收集組。  
   

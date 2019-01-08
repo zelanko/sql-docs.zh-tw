@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - groups [Master Data Services], adding
@@ -14,12 +13,12 @@ ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d78b69946ebb068933a7691d454a792ad8f1ed07
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1245b637eeb31ab8dee9bf498a6d076925d1dae3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056788"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814210"
 ---
 # <a name="add-a-group-master-data-services"></a>加入群組 (Master Data Services)
   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的 [群組] 清單中加入群組，開始指派 Web 應用程式權限的程序。 在群組中的使用者存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 之前，您必須提供群組一個或多個功能區域和模型物件的權限。  
@@ -48,7 +47,7 @@ ms.locfileid: "48056788"
   
 ## <a name="next-steps"></a>後續步驟  
   
--   [指派功能區域權限&#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
+-   [指派功能區域權限 &#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [安全性 &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  

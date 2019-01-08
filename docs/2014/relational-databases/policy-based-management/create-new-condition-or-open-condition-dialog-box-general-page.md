@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.condition.f1
@@ -12,12 +12,12 @@ ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 61aeebb9b0a3fa815d39d57fc9bcf536a14324de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 296cdebc8a7a290cf8cdd848359ad776fa290c30
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085238"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798290"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>建立新條件或開啟條件對話方塊，一般頁面
   使用此對話方塊可建立或變更以原則為基礎的管理條件。 條件是一種布林運算式，可指定以原則為基礎之管理 Managed 目標所允許的一組狀態 (與 Facet 有關)。 可以在 [運算式/欄位] 方塊中選取的屬性需視所使用的 Facet 而定。 如需條件如何與 Facet 和原則相關的詳細資訊，請參閱[使用原則式管理來管理伺服器](administer-servers-by-using-policy-based-management.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "48085238"
  為這個運算式選取比較運算子。 運算子如下：=、!=、>、>=、<、<=、[NOT]LIKE、[NOT]IN。 並非所有運算子都適用於某些屬性。  
   
  **值**  
- 這個運算式的值設定。 允許的值取決於此 Facet 而定。 值可以是 TRUE/FALSE、字串或數字。 字串值必須括在單引號中，例如 **'AdventureWorks'**。 並非所有運算子都適用於某些屬性。  
+ 這個運算式的值設定。 允許的值取決於此 Facet 而定。 值可以是 TRUE/FALSE、字串或數字。 字串值必須括在單引號括住，例如：**'AdventureWorks'**。 並非所有運算子都適用於某些屬性。  
   
 ## <a name="group-clauses"></a>群組子句  
  子句可加以群組，使其當成單一單位來運作，並與查詢的其餘部分區隔開來，這種方式與在數學方程式或邏輯陳述式的運算式周圍放置括號類似。 當您建立複雜的查詢時，群組子句將會很實用。  

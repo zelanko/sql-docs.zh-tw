@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - REVERSE function
@@ -14,12 +13,12 @@ ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42b74657402e3e4b8ade0deaf2505217ceb0c0de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e28592369427d480fc46eb8d7e8801272a7554a2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093640"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801730"
 ---
 # <a name="reverse-ssis-expression"></a>REVERSE (SSIS 運算式)
   傳回反向順序的字元運算式。  
@@ -57,6 +56,6 @@ REVERSE(@Name)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [函式&#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
+ [函數 &#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
   
   

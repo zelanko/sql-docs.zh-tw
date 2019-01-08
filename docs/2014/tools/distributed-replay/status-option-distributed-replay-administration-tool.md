@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9805f9b14222d8b12b052c3a340ec7ee7183d749
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42e06144f35ab2db8f124dddff74fb836b6d9c4c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177048"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761010"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>狀態選項 (Distributed Replay 管理工具)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具， `DReplay.exe`，是命令列工具，可用來與 distributed 的 replay controller 通訊。 此主題描述 **status** 命令列選項與對應的語法。  
@@ -46,7 +46,7 @@ dreplay status [-mcontroller] [-fstatus_interval]
  在下列範例中，每隔 60 秒顯示目前狀態。 `localhost` 值指出控制器服務與管理工具在同一部電腦上執行。  
   
 ```  
-dreplay status –m localhost -f 60  
+dreplay status -m localhost -f 60  
 ```  
   
 ## <a name="permissions"></a>Permissions  
@@ -55,7 +55,7 @@ dreplay status –m localhost -f 60
  如需詳細資訊，請參閱 [Distributed Replay 安全性](distributed-replay-security.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Distributed 的 Replay](sql-server-distributed-replay.md)   
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Transact-SQL 偵錯工具](../../relational-databases/scripting/transact-sql-debugger.md)  
   
   

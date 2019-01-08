@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - concatenation [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 809586f89288a930a672e2f6daa45fafe7901ec6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00886e865600da44f5b1e92adf175f975d446996
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146238"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811810"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (串連) (SSIS 運算式)
   將兩個運算式串連成一個運算式。  
@@ -49,7 +48,7 @@ character_expression1 + character_expression2
   
  兩個運算式的資料類型必須相同，或者其中一個運算式必須隱含轉換成另一個運算式的資料類型。 例如，如果串連 "Order date is " 字串和 **OrderDate** 資料行，則 **OrderDate** 中的值會隱含轉換成字串資料類型。 若要串連兩個數值，這兩個數值都必須明確轉換成字串資料類型。  
   
- 串連只能使用一種 BLOB 資料類型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
+ 串連可以使用只有一個 BLOB 資料類型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
   
  如果任一元素為 Null，則結果為 Null。  
   
@@ -69,7 +68,7 @@ FirstName + ' ' + LastName
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [運算子優先順序和關聯性](operator-precedence-and-associativity.md)   
- [運算子&#40;SSIS 運算式&#41;](operators-ssis-expression.md)  
+ [運算子優先順序與關聯性](operator-precedence-and-associativity.md)   
+ [運算子 &#40;SSIS 運算式&#41;](operators-ssis-expression.md)  
   
   

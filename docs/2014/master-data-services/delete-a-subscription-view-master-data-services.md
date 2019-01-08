@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting subscription views [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3601916dd2ff9692283d393ff6a1c7dd28d18217
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e01209b78acb778d39d376172192ca7ee0f1a9e7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057468"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796802"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>刪除訂閱檢視 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除不再需要的訂閱檢視。 在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中刪除訂閱檢視會從 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中移除該檢視。  
@@ -29,7 +28,7 @@ ms.locfileid: "48057468"
   
 -   您必須擁有存取 **[整合管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 ### <a name="to-delete-a-subscription-view"></a>若要刪除訂閱檢視  
   

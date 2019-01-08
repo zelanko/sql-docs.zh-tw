@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 2c61859b-00c9-4267-aef3-bc3ad075db69
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4cbf619c33963980b4b6c975a817d601317ae82c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d4559c13091f809cc222128d0f9e991ea424628
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122428"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808020"
 ---
 # <a name="exec-prepared-sql-event-class"></a>Exec Prepared SQL 事件類別
   Exec Prepared SQL 事件類別代表 SqlClient、ODBC、OLE DB 或 DB-Library 已經執行備妥的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  

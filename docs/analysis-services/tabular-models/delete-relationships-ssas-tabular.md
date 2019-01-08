@@ -1,5 +1,5 @@
 ---
-title: 刪除關聯性 |Microsoft Docs
+title: 刪除 Analysis Services 表格式模型中的關聯性 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 115d72bd0b833d1f392b2349d3ed4e4970f58453
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 360de0e85048a491f3cfc750ac5288de73c65c95
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999177"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072767"
 ---
 # <a name="delete-relationships"></a>刪除關聯性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

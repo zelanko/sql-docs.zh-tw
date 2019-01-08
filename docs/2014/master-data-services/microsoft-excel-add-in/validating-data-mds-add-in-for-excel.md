@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a01af53372a8be1fce6ffa2e4ee8d4cddce8d057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98844917c047e2e52018e9ed8b050f708617ae2f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135338"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799100"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>驗證資料 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您發行資料時，會進行下列兩種驗證類型：  
@@ -46,7 +45,7 @@ ms.locfileid: "48135338"
   
 |[狀態]|描述|  
 |------------|-----------------|  
-|錯誤|資料列中一個或多個值不符合系統需求，如長度或資料類型。 MDS 儲存機制中的值未更新。|  
+|錯誤|資料列中一或多個值不符合系統需求，如長度或資料類型。 MDS 儲存機制中的值未更新。|  
 |新資料列|資料列中的值尚未發行到 MDS 儲存機制。|  
 |唯讀|登入的使用者有資料列中一個或多個值的唯讀權限，而且值無法更新。|  
 |未變更|工作表中尚未變更資料列中的任何值。 這不表示儲存機制中的值尚未變更；若要取得工作表中最新的資料，請在 [連接和載入] 群組中，請按一下 [載入或重新整理]。<br /><br /> 這是每個資料列的預設值。|  
@@ -55,7 +54,7 @@ ms.locfileid: "48135338"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|判斷哪些值未通過已定義的商務規則。|[套用商務規則&#40;MDS 增益集的 Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)|  
+|判斷哪些值未通過已定義的商務規則。|[套用商務規則 &#40;適用於 Excel 的 MDS 增益集&#41;](apply-business-rules-mds-add-in-for-excel.md)|  
 |若要更正驗證錯誤，請檢視成員進行的所有交易。|[檢視成員的所有註解或交易 &#40;適用於 Excel 的 MDS 增益集&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>相關內容  

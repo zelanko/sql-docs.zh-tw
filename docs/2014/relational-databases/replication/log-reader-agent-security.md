@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.security.LRA.f1
@@ -15,12 +14,12 @@ ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: adecb551ab312f307489927225974e6679dc6f74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 03455e0ae31712d4ce02beab7eebb697978a1a1a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163578"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799920"
 ---
 # <a name="log-reader-agent-security"></a>記錄讀取器代理程式安全性
   **[記錄讀取器代理程式安全性]** 對話方塊可以讓您指定：  

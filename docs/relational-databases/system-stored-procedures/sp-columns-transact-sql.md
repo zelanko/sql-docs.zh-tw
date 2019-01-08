@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c768b2d64c38fdda66d6abeea0aef2010b4dfe35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d61c0d2a7c7b15db9e96a354d5b7f062d10ca8f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652996"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514082"
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ sp_columns [ @table_name = ] object
  如果目前使用者擁有一個含有指定名稱的物件，就會傳回該物件的資料行。 如果*擁有者*未指定且目前使用者並未擁有具有指定的物件*物件*， **sp_columns**尋找具有指定之物件*物件*資料庫擁有者所擁有。 如果存在，就會傳回該物件的資料行。  
   
  [ **@table_qualifier****=**] *qualifier*  
- 這是物件限定詞的名稱。 *限定詞*已**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分命名物件 (*限定詞 ***。*** 擁有者 ***。*** 名稱*)。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表物件之資料庫環境的伺服器名稱。  
+ 這是物件限定詞的名稱。 *限定詞*已**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分命名物件 (_限定詞_**。**_擁有者_**。**_名稱_)。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表物件之資料庫環境的伺服器名稱。  
   
  [  **@column_name=**]*資料行*  
  這是個單一資料行，當只需要一個目錄資訊的資料行時，就會使用這個單一資料行。 *資料行*已**nvarchar(384)**，預設值是 NULL。 如果*資料行*是未指定，會傳回所有資料行。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*資料行*代表的資料行名稱，如下所示**syscolumns**資料表。 支援萬用字元的模式比對。 若要有最大交互操作能力，閘道用戶端應該只採用 SQL-92 標準模式比對 (% 和 _ 萬用字元)。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], database roles
@@ -18,12 +17,12 @@ ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f7fd2e31b87725419f7b9c9bf6b5e76249e9def1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b7430a12c64ab669182ab2877bb6620b42b2f48
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208988"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795411"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>資料庫登入、使用者和角色 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包含的登入、使用者和角色會自動安裝在主控 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 資料庫的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 執行個體上。 不應對這些登入、使用者和角色進行修改。  
@@ -40,7 +39,7 @@ ms.locfileid: "48208988"
 |使用者|描述|  
 |----------|-----------------|  
 |`mds_clr_user`|未使用。<br /><br /> 對應至 mds_dlp_login。|  
-|`mds_email_user`|用於通知。<br /><br /> 對應至 mds_email_login。<br /><br /> 為 DatabaseMailUserRole 角色的成員。|  
+|`mds_email_user`|用於通知。<br /><br /> 對應至 mds_email_login。<br /><br /> 為角色的成員：DatabaseMailUserRole。|  
   
 ## <a name="master-data-services-database-users"></a>Master Data Services 資料庫使用者  
   
@@ -65,6 +64,6 @@ ms.locfileid: "48208988"
 |**stg**|包含 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫資料表、預存程序以及與暫存處理序有關的檢視表。 請勿刪除這些物件的任何一個。 如需有關暫存處理序的詳細資訊，請參閱 <<c0> [ 匯入資料&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)。</c0>|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫物件安全性&#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
+ [資料庫物件安全性 &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
   
   

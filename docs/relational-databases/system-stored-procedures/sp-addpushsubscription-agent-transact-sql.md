@@ -5,8 +5,7 @@ ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpushsubscription_agent_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f037d88ed536cf3fecc0b658dcba3f62d1e1bd47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e438e8584312964d3d16651cb5551a4fb949597d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832316"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209799"
 ---
 # <a name="spaddpushsubscriptionagent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -188,7 +187,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  這是發行者的名稱。 *發行者*已**sysname**，預設值是 NULL。  
   
  [  **@subscriber_provider=** ] **'***subscriber_provider***'**  
- 這是用來登錄非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源之 OLE DB 提供者的唯一程式化識別碼 (PROGID)。 *subscriber_provider*已**sysname**，預設值是 NULL。 *subscriber_provider*必須是唯一的 「 散發者 」 上安裝 OLE DB 提供者。 *subscriber_provider*僅支援非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者。  
+ 是的唯一程式設計識別項 (PROGID) 與 OLE DB 提供者，非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]註冊資料來源。 *subscriber_provider*已**sysname**，預設值是 NULL。 *subscriber_provider*必須是唯一的 「 散發者 」 上安裝 OLE DB 提供者。 *subscriber_provider*僅支援非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者。  
   
  [  **@subscriber_datasrc=** ] **'***subscriber_datasrc***'**  
  這是 OLE DB 提供者所了解的資料來源名稱。 *subscriber_datasrc*已**nvarchar(4000)**，預設值是 NULL。 *subscriber_datasrc*被當做 DBPROP_INIT_DATASOURCE 屬性傳入來初始化 OLE DB 提供者。 *subscriber_datasrc*僅支援非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者。  

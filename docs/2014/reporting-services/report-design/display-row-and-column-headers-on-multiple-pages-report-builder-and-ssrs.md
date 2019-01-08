@@ -11,12 +11,12 @@ ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 60bfb038d6712f44d6a0b5cd6cc57863f0f76ade
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 79565c22eab900eb152f8b5fa52748b3e5a09a16
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48904978"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394249"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>在多個頁面上顯示資料列和資料行標頭 (報表產生器及 SSRS)
   您可以控制是否要針對跨多個頁面的 Tablix 資料區，在每個頁面上重複資料列和資料行標頭。 Tablix 資料區可以是資料表、矩陣或清單。  
@@ -25,7 +25,7 @@ ms.locfileid: "48904978"
   
  ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
- 當您新增群組，使用 新增資料表或矩陣精靈 或 新增圖表精靈、 將欄位加入至 群組 窗格中，或使用操作功能表時，會自動建立資料列和資料行群組標頭。 如果 Tablix 資料區只有 Tablix 主體而沒有群組頁首，則資料行和資料列就是 Tablix 成員。  
+ 當您藉由使用 [新增資料表] 或 [矩陣精靈] 或 [新增圖表精靈]、在 [群組] 窗格中新增欄位或使用內容選單來新增群組時，會自動建立資料列和資料行的群組標頭。 如果 Tablix 資料區只有 Tablix 主體而沒有群組頁首，則資料行和資料列就是 Tablix 成員。  
   
  對靜態成員而言，您可以在多個頁面上顯示頂端相鄰的資料列或側邊相鄰的資料行。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48904978"
   
 3.  按一下對應至要在捲動時保持可見之靜態成員 (資料列或資料行) 的靜態成員。 [屬性] 窗格會顯示 **[Tablix 成員]** 屬性。  
   
-     如果看不到 [屬性] 窗格，請按一下報表產生器視窗最上方的 **[檢視]** 索引標籤，然後按一下 **[屬性]**。  
+     如果看不到 [屬性] 窗格，請按一下報表產生器視窗最上方的 [檢視] 索引標籤，然後按一下 [屬性]。  
   
 4.  在 [屬性] 窗格中，將 **[RepeatOnNewPage]** 設定為 [True]。  
   

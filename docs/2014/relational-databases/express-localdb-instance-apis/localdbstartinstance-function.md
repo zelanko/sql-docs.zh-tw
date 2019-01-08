@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBStartInstance
@@ -18,12 +16,12 @@ ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 99bec66e77a8ac5fd742ffb85b6f87dfefe88510
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad86f5989fe9ff90132637d062b708423f23eef1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159558"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799640"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 函數
   啟動指定的 SQL Server Express LocalDB 執行個體。  
@@ -111,10 +109,10 @@ HRESULT LocalDBStartInstance(
   
 |緩衝區|緩衝區大小|基本原理|動作|  
 |------------|-----------------|---------------|------------|  
-|NULL|NULL|使用者想要啟動執行個體，但不需要管道名稱。|啟動執行個體 (不傳回管道且不傳回所需的緩衝區大小)。|  
+|NULL|NULL|使用者想要啟動的執行個體，但不需要管道名稱。|啟動執行個體 (不傳回管道且不傳回所需的緩衝區大小)。|  
 |NULL|存在|使用者要求輸出緩衝區大小。 (在下一個呼叫中，使用者可能會要求實際啟動。)|傳回所需的緩衝區大小 (不啟動且不傳回管道)。 結果為 S_OK。|  
 |存在|NULL|不允許；輸入不正確。|傳回的結果為 LOCALDB_ERROR_INVALID_PARAMETER。|  
-|存在|存在|使用者想要啟動執行個體，且在啟動後，需要管道名稱以連接至此執行個體。|檢查緩衝區大小、啟動執行個體，然後傳回緩衝區中的管道名稱。 <br />緩衝區大小引數會傳回 “server=” 字串的長度，但不包括結束的 Null。|  
+|存在|存在|使用者想要啟動執行個體，且在啟動後，需要管道名稱以連接至此執行個體。|檢查緩衝區大小、啟動執行個體，然後傳回緩衝區中的管道名稱。 <br />緩衝區大小引數傳回的長度"server ="字串，不包括結束的 null 值。|  
   
  使用 LocalDB API 的程式碼範例，請參閱 < [SQL Server Express LocalDB 參考](../sql-server-express-localdb-reference.md)。  
   

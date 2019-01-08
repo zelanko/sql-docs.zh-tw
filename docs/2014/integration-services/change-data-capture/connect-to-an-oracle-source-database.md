@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - oraDb
@@ -13,12 +12,12 @@ ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 565f88565a797c2f902b2df4f42deea631b34bb4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f22b5d71aa2d6d4ac63fe597e9da6b9dfb0a15c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114218"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202187"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>連接到 Oracle 來源資料庫
   使用 [Oracle 來源] 頁面可提供連接至 Oracle 來源資料庫所需的資訊。 此 CDC 執行個體將會讀取您所連接之 Oracle 資料庫的重做記錄。  
@@ -35,13 +34,13 @@ ms.locfileid: "48114218"
  **Oracle 記錄採礦驗證**  
  若要輸入已被授權進行記錄採礦之 Oracle 資料庫使用者的認證，請選取下列其中一項：  
   
--   **Windows 驗證**：選取此選項可使用目前的 Windows 網域認證。 只有當設定 Oracle 資料庫使用 Windows 驗證時，才可使用這個選項。  
+-   **Windows 驗證**:選取此選項可使用目前的 Windows 網域認證。 只有當設定 Oracle 資料庫使用 Windows 驗證時，才可使用這個選項。  
   
--   **Oracle 驗證**：如果您選取這個選項，您必須在您所連接的 Oracle 資料庫中輸入使用者的 **[使用者名稱]** 和 **[密碼]** 。  
+-   **Oracle 驗證**:如果您選取此選項時，您必須輸入**使用者名**並**密碼**中您要連接到 Oracle 資料庫使用者。  
   
-> [!NOTE]  
+> [!NOTE]
 >  使用者必須擁有 Oracle 資料庫中授與的以下權限，才能成為記錄採礦使用者。  
->   
+> 
 >  -   SELECT on \<任何擷取的資料表>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE on DBMS LOGMNR  
@@ -55,7 +54,7 @@ ms.locfileid: "48114218"
 > -   SELECT on ALL OBJECTS  
 > -   SELECT on DBA OBJECTS  
 > -   SELECT on ALL TABLES  
->   
+> 
 >  如果有任何權限不能授與給 V$xxx，則將該權限授與給 V_S$xxx。  
   
  **測試連接**  

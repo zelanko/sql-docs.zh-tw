@@ -1,5 +1,5 @@
 ---
-title: 第 11 課： 建立資料分割 |Microsoft Docs
+title: 第 11 課：建立資料分割 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: caea636c7c319bfb4db2cc54e062bb00de9bb3b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0817db540c9db8f17fbc71da68f43cc68645190
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089642"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391711"
 ---
 # <a name="lesson-11-create-partitions"></a>第 11 課：建立資料分割
-  在這一課，您將建立資料分割，以便將 [網際網路銷售] 資料表分成更小的邏輯部分，讓其他資料分割能夠單獨處理 (重新整理)。 根據預設，加入模型中的每個資料表都有一個資料分割，其中包括資料表的所有資料行和資料列。 我們要依年度分割 [網際網路銷售] 資料表的資料，一個資料分割代表每個資料表的五年。  接著，每個資料分割就可以單獨處理。 如需詳細資訊，請參閱[資料分割 &#40;SSAS 表格式&#41;](tabular-models/partitions-ssas-tabular.md)。  
+  在這一課，您將建立資料分割，以便將 [網際網路銷售] 資料表分成更小的邏輯部分，讓其他資料分割能夠單獨處理 (重新整理)。 根據預設，您加入模型中每個資料表會有一個分割區會包含所有資料表的資料行和資料列。 網際網路銷售 資料表中，我們想要將資料依年度;針對每個資料表的五年的一個資料分割。  接著，每個資料分割就可以單獨處理。 如需詳細資訊，請參閱[資料分割 &#40;SSAS 表格式&#41;](tabular-models/partitions-ssas-tabular.md)。  
   
- 完成本課程的估計時間： **15 分鐘**  
+ 完成本課程的估計時間：**15 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
- 本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課中的工作之前，您應已完成上一課：[第 10 課：建立階層](lesson-9-create-hierarchies.md)。  
+ 本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 10 課：建立階層](lesson-9-create-hierarchies.md)。  
   
 ## <a name="create-partitions"></a>建立資料分割  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48089642"
   
 6.  按一下 **[驗證]**。  
   
-     請注意，此時會顯示一個警告，指出特定資料行不存在來源中。 這是因為在[第 3 課： 重新命名資料行](rename-columns.md)，重新命名成與來源相同的資料行不同模型中的網際網路銷售 資料表中資料行。  
+     請注意，此時會顯示一個警告，指出特定資料行不存在來源中。 這是因為在[第 3 課：重新命名資料行](rename-columns.md)，重新命名成與來源相同的資料行不同模型中的網際網路銷售 資料表中資料行。  
   
 #### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>2006 年網際網路銷售 資料表中建立的資料分割  
   
@@ -154,6 +154,6 @@ ms.locfileid: "48089642"
      **資料處理程序** 對話方塊隨即出現，並顯示每個資料分割的處理序詳細資料。 您會發現每個資料分割傳送了不同數目的資料列。 這是因為每個資料分割只包含 SQL 陳述式中的 WHERE 子句所指定年度的資料列。 2010 年則沒有資料。  
   
 ## <a name="next-steps"></a>後續步驟  
- 若要繼續進行本教學課程，請前往下一課：[第 12 課：建立角色](lesson-11-create-roles.md)。  
+ 若要繼續本教學課程，請移至下一課：課程：[第 12 課：建立角色](lesson-11-create-roles.md)。  
   
   

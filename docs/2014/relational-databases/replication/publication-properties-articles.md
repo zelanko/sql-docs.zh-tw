@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.articles.f1
@@ -13,12 +12,12 @@ ms.assetid: bdeea318-a153-44b8-9e51-9155f3bad18b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 74fb3d14d9b4776cc7085b45bbf19c55de88d4ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f46fbc99145f9a372a2c1bf5d40919b87c782454
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136968"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804360"
 ---
 # <a name="publication-properties-articles"></a>發行集屬性，發行項
   **[發行集屬性]** 對話方塊的 **[發行項]** 頁面：包含有關發行集內所含發行項的資訊；可讓您將發行項加入至現有的發行集或從現有的發行集卸除發行項；以及可讓您變更發行項屬性和資料行篩選。  

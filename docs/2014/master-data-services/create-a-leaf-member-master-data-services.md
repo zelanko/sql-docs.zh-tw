@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - leaf members [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 132d4acdbe47d3e790131834c6a71486dcd660d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bbfd5a806badca4a8d24f57a9b3791a1fdf7ff68
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136588"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782390"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>建立分葉成員 (Master Data Services)
   在  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]，建立分葉成員，當您想要將主要資料新增至您的系統，而不要使用暫存資料表或[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]匯入資料。  
@@ -52,7 +51,7 @@ ms.locfileid: "48136588"
   
 ## <a name="see-also"></a>另請參閱  
  [載入或更新 Master Data Services 中的成員，使用暫存處理序](add-update-and-delete-data-master-data-services.md)   
- [建立合併的成員&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
- [成員&#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
+ [建立合併成員 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
+ [成員 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
   

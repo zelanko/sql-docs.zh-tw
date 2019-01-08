@@ -11,12 +11,12 @@ ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b76142fe806e7a294eb67e5e3d43cbf56713760
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cea836d49b46bd7931d7230d3d22824af9506961
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080348"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350874"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>使用 SQL Server Agent 排程 SSAS 管理工作
   您可以使用 SQL Server Agent 服務來為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理工作排程，以便按照所需的順序和時間執行工作。 為工作排程可協助您將處理自動化，以便定期或依照可預測的週期執行。 您可以排程管理工作 (例如 Cube 處理) 在商務活動較少的時間執行。 此外，您也可以在 SQL Server Agent 作業內建立作業步驟，決定工作執行的順序。 例如，您可以先處理 Cube，然後再執行 Cube 的備份。  
@@ -32,7 +32,7 @@ ms.locfileid: "48080348"
   
  您也應該擁有要使用的測試資料庫。 您可以部署 AdventureWorks 多維度範例資料庫或是要用於此逐步解說之 Analysis Services 多維度教學課程中的專案。 如需詳細資訊，請參閱 [安裝 Analysis Services 多維度模型化教學課程的範例資料和專案](../install-sample-data-and-projects.md)。  
   
-## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>範例 1：在排程工作中處理維度  
+## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>範例 1：處理維度，以在排定的工作  
  這則範例會示範如何建立和排程處理維度的作業。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 排程工作是內嵌至 SQL Server Agent 作業中的 XMLA 指令碼。 這項作業已排程在所要的時間與頻率執行。 由於 SQL Server Agent 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的一部分，因此，您會同時使用 Database Engine 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 來建立並排程管理工作。  
@@ -54,7 +54,7 @@ ms.locfileid: "48080348"
      此步驟會將 XMLA 指令碼複製到 Windows [剪貼簿]。 您可以將 XMLA 指令碼保留在 [剪貼簿] 中，也可以將它貼入 [記事本] 或其他文字編輯器。 下面是 XMLA 指令碼的範例。  
   
     ```  
-    <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
      <Parallel>  
       <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
         <Object>  
@@ -106,7 +106,7 @@ ms.locfileid: "48080348"
   
 15. 當作業完成時，請按一下 **[關閉]**。  
   
-## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>範例 2：在排程工作中批次處理維度和資料分割  
+## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>範例 2：批次處理維度和分割區在排定的工作  
  這則範例中的程序會示範如何建立和排程批次處理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫維度的作業，同時處理相依於此維度進行彙總的 Cube 資料分割。 如需批次處理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的詳細資訊，請參閱[批次處理 &#40;Analysis Services&#41;](../multidimensional-models/batch-processing-analysis-services.md)。  
   
 ###  <a name="bkmk_BatchProcess"></a> 在 SQL Server Agent 作業中建立批次處理維度和資料分割的指令碼  
@@ -156,7 +156,7 @@ ms.locfileid: "48080348"
      下列範例顯示已修訂的 XMLA 指令碼。  
   
     ```  
-    <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
      <Parallel>  
       <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
         <Object>  
@@ -223,7 +223,7 @@ ms.locfileid: "48080348"
 16. 當作業完成時，請按一下 **[關閉]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [處理選項和設定&#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Analysis Services 中編寫管理工作](../script-administrative-tasks-in-analysis-services.md)  
+ [處理選項和設定 &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [在 Analysis Services 中編寫管理工作的指令碼](../script-administrative-tasks-in-analysis-services.md)  
   
   

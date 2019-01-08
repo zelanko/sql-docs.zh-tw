@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBGetVersions
@@ -18,12 +16,12 @@ ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 333cd5a6793c335a0003ac6b39ddd6abba710f74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 431124cff2fcf293ccf1e8e8bcb74321245a661e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077808"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807950"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 函數
   傳回電腦上所有可用的 SQL Server Express LocalDB 版本。  
@@ -38,7 +36,7 @@ ms.locfileid: "48077808"
   
 ## <a name="parameters"></a>參數  
  *pVersionNames*  
- [輸出] 包含使用者工作站上可用 LocalDB 版本的名稱。  
+ [輸出]包含使用者的工作站可用 LocalDB 版本的名稱。  
   
  *lpdwNumberOfVersions*  
  [輸入/輸出]在輸入上保存的版本中的位置數目*pVersionNames*緩衝區。   

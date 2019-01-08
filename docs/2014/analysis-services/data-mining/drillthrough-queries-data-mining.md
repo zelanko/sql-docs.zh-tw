@@ -15,12 +15,12 @@ ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a84857925cd4f9db7088ec922a3cceccb0d64895
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 89900ccb182c58041af7b428af336ddab217d245
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147614"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538871"
 ---
 # <a name="drillthrough-queries-data-mining"></a>鑽研查詢 (資料採礦)
   *「鑽研查詢」* (Drillthrough query) 可讓您傳送查詢至採礦模型，以擷取基礎案例或結構的詳細資料。 如果您想要檢視用來定型模型的案例與用來測試模型的案例，或者您想要查看案例資料的其他詳細資料，鑽研就很有用。  
@@ -29,7 +29,7 @@ ms.locfileid: "50147614"
   
 -   鑽研到 **模型案例**  
   
-     若您想從模型的特定模式 (如叢集或決策樹分支) 開始鑽研，並檢視有關個別案例的詳細資料，便會使用鑽研到模型案例。  
+     您想從特定的模式，例如模型中做為叢集或決策樹的分支時，系統會使用鑽研模型案例-並檢視有關個別案例的詳細資料。  
   
 -   鑽研到 **結構案例**  
   

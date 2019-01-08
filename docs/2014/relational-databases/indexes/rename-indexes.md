@@ -14,12 +14,12 @@ ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ed26bf1d1ccdf0b523a24edf0d38c41c581709e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5925e277b6e1585612147918b469427e4aa92968
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158708"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395781"
 ---
 # <a name="rename-indexes"></a>重新命名索引
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新命名索引。 重新命名索引將以您提供的新索引名稱來取代目前的名稱。 指定的名稱在資料表或檢視內必須是唯一的。 例如，兩個資料表可以同時擁有名稱為 **XPK_1**的索引，但同一個資料表不能具有兩個名稱為 **XPK_1**的索引。 您不能使用與現有停用之索引相同的名稱來建立索引。 重新命名索引並不會重建索引。  
@@ -80,7 +80,7 @@ ms.locfileid: "48158708"
   
 5.  以滑鼠右鍵按一下您要重新命名的索引，然後選取 [重新命名]。  
   
-6.  輸入索引的新名稱，再按 ENTER 鍵。  
+6.  鍵入索引的新名稱，然後按 Enter 鍵。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48158708"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;  

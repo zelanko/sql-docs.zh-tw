@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3bc06bbc38809f3ae3921fb59f11aedad0f3ce1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9358d3d7d014f7dc69dad00605ebdaaa2ef70707
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135218"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352238"
 ---
 # <a name="integration-services-ssis-parameters"></a>Integration Services (SSIS) 參數
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 參數可讓您在封裝執行時，將值指派給封裝內的屬性。 您可以在專案層級建立 *「專案參數」* (Project Parameter)，並在封裝層級建立 *「封裝參數」* (Package Parameter)。 專案參數可用於向專案中的一個或多個封裝提供專案接收的任何外部輸入。 封裝參數可讓您修改封裝執行，而不需要編輯和重新部署封裝。  
   
- 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中您使用 **[Project.params]** 視窗建立、修改或刪除專案參數。 您可使用 **設計師中的** [參數] [!INCLUDE[ssIS](../includes/ssis-md.md)] 索引標籤建立、修改或刪除封裝參數。 您可使用 **[參數化]** 對話方塊將新的或現有的參數與工作屬性產生關聯。 如需使用**Project.params**視窗和**參數**索引標籤上，請參閱[Create Parameters](create-parameters.md)。 如需詳細資訊**參數化** 對話方塊中，請參閱[Parameterize Dialog Box](parameterize-dialog-box.md)。  
+ 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中您使用 **[Project.params]** 視窗建立、修改或刪除專案參數。 您可使用 **設計師中的** [參數] [!INCLUDE[ssIS](../includes/ssis-md.md)] 索引標籤建立、修改或刪除封裝參數。 您可使用 **[參數化]** 對話方塊將新的或現有的參數與工作屬性產生關聯。 如需使用 **[Project.params]** 視窗和 **[參數]** 索引標籤的詳細資訊，請參閱＜ [Create Parameters](create-parameters.md)＞。 如需 **[參數化]** 對話方塊的詳細資訊，請參閱＜ [Parameterize Dialog Box](parameterize-dialog-box.md)＞。  
   
 ## <a name="parameters-and-package-deployment-model"></a>參數及封裝部署模型  
  一般而言，若您是使用封裝部署模型部署封裝，就應該使用組態而不是參數。  
@@ -81,14 +80,14 @@ ms.locfileid: "48135218"
  [catalog.set_execution_parameter_value &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)  
  為 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 目錄中執行的執行個體設定參數值。  
   
- 您也可以在 **中使用** [執行封裝] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊修改參數值。 如需詳細資訊，請參閱 < [Execute Package Dialog Box&lt](../../2014/integration-services/execute-package-dialog-box.md)。  
+ 您也可以在 **中使用** [執行封裝] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊修改參數值。 如需詳細資訊，請參閱＜ [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md)＞。  
   
- 您也可以使用 dtexec`/Parameter`選項修改參數值。 如需詳細資訊，請參閱 [dtexec Utility](packages/dtexec-utility.md)。  
+ 您也可以使用 dtexec `/Parameter` 選項修改參數值。 如需詳細資訊，請參閱 [dtexec Utility](packages/dtexec-utility.md)。  
   
 ### <a name="parameter-validation"></a>參數驗證  
  如果無法解析參數值，則對應的封裝執行將會失敗。 若要避免失敗，您可以使用 **中的** [驗證] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]對話方塊來驗證專案及封裝。 驗證可讓您確認所有參數都有必要的值，或是可以用特定的環境參考來解析必要的值。 驗證也會檢查其他常見的封裝問題。  
   
- 如需詳細資訊，請參閱 < [Validate Dialog Box](catalog/validate-dialog-box.md)。  
+ 如需詳細資訊，請參閱＜ [Validate Dialog Box](catalog/validate-dialog-box.md)＞。  
   
 ### <a name="parameter-example"></a>參數範例  
  此範例描述一個名為 **pkgOptions** 的參數，可用來指定其所在之封裝的選項。  
@@ -103,6 +102,6 @@ ms.locfileid: "48135218"
  [部署專案之後設定參數值](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   
 ## <a name="related-content"></a>相關內容  
- mattmasson.com 上的部落格文章： [SSIS 快速提示：必要參數](http://go.microsoft.com/fwlink/?LinkId=239781)。  
+ 部落格文章[SSIS 快速提示：必要參數](https://go.microsoft.com/fwlink/?LinkId=239781)，mattmasson.com 上。  
   
   

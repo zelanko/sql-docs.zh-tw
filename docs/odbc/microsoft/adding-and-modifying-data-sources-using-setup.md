@@ -18,18 +18,18 @@ ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28f7fb52cb4babdce6e90452f40d81ba643466ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 953563285d3c62a8523079a604cf607f2e0edf62
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767756"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526854"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>使用安裝程式新增和修改資料來源
 > [!IMPORTANT]  
 >  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用所提供的 ODBC 驅動程式。  
   
- 資料來源識別資料可包含網路程式庫、 伺服器、 資料庫和其他屬性的路徑，在此情況下，資料來源是 Oracle 資料庫的路徑。 若要連接到資料來源，則驅動程式管理員會檢查 Windows 登錄中的特定連接資訊。  
+ 資料來源識別路徑。 可包含網路程式庫、 伺服器、 資料庫和其他屬性的資料-在此情況下，資料來源是 Oracle 資料庫的路徑。 若要連接到資料來源，則驅動程式管理員會檢查 Windows 登錄中的特定連接資訊。  
   
  ODBC 驅動程式管理員和 ODBC 驅動程式會使用建立的 ODBC 資料來源管理員 」 中的登錄項目。 此項目包含每個資料來源和其相關聯的驅動程式的相關資訊。 您可以連接到資料來源之前，就必須連線資訊新增至登錄。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47767756"
   
     -   **轉譯**-按一下 選取，選擇 載入的資料轉譯器。 預設值是\<No 轉譯程式 >。  
   
-    -   **效能**— 的包含註解，目錄函數 核取方塊可讓您指定驅動程式是否會傳回如 < 備註 > 一資料行[SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)結果集。 未設定此值時，ODBC Driver for Oracle 將提供更快速的存取。  
+    -   **效能**-的包含註解，目錄函數 核取方塊可讓您指定驅動程式是否會傳回如 < 備註 > 一資料行[SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)結果集。 未設定此值時，ODBC Driver for Oracle 將提供更快速的存取。  
   
          SQL 資料行 核取方塊包含同義字指定驅動程式是否會傳回資料行資訊。 **緩衝區大小**指定大小，以位元組為單位，配置給接收已擷取的資料。 驅動程式會將最佳化擷取，讓從 Oracle 伺服器的一個擷取傳回足夠的資料列，以填滿指定大小的緩衝區。 較大的值，通常會在擷取大量資料時提升效能。  
   

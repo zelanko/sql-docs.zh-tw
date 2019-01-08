@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - RIGHT function
@@ -13,12 +12,12 @@ ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 07ea1ca12b442116ff191bb7fbd6ac9a96b0128b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e8d1cfdda299c786aa926aad26f724009a683ec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070928"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796105"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (SSIS 運算式)
   傳回來自給定字元運算式最右邊部分的指定字元數。  
@@ -74,6 +73,6 @@ RIGHT(Name, (DT_I2)@Times))
   
 ## <a name="see-also"></a>另請參閱  
  [LEFT &#40;SSIS 運算式&#41;](left-ssis-expression.md)   
- [函式&#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
+ [函數 &#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
   
   

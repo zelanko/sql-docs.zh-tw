@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], traces
@@ -14,12 +13,12 @@ ms.assetid: 25a3b845-affb-4b2a-a382-198a4bdd9ad1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8379e4b539c2de9ccca048de79ae1995af43fe93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 659a6d76fabd2b01d91ae993fc818d81874350c1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212786"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810850"
 ---
 # <a name="derive-a-template-from-a-running-trace-sql-server-profiler"></a>從執行中追蹤衍生範本 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]從現有執行中的追蹤建立追蹤範本。  
@@ -37,7 +36,7 @@ ms.locfileid: "48212786"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler 範本和權限](sql-server-profiler-templates-and-permissions.md)   
- [建立追蹤範本&#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
+ [建立追蹤範本 &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [修改追蹤範本 &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   

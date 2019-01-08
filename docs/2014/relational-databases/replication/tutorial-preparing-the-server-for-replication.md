@@ -1,11 +1,10 @@
 ---
-title: 教學課程：準備伺服器進行複寫 | Microsoft 文件
+title: 教學課程：準備伺服器進行複寫 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -13,12 +12,12 @@ ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e68be637511fb00774d35b564b0e5ec5979b60d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e82c71834a2d41a7620f549bc6335fa15df84bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228238"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813990"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>教學課程：準備伺服器進行複寫
   在設定複寫拓撲之前，規劃安全性是很重要的步驟。 此教學課程為您示範：如何讓複寫拓撲有更強固的保護，以及如何設定散發，這是複寫資料的第一步。 您必須完成此教學課程，才能進行任何其他教學課程。  
@@ -36,11 +35,11 @@ ms.locfileid: "48228238"
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 與 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫。 為了加強安全性，依預設，不會安裝範例資料庫。  
   
- **完成本教學課程的估計時間：30 分鐘。**  
+ **完成這個教學課程的估計時間：30 分鐘。**  
   
 ## <a name="lessons-in-this-tutorial"></a>本教學課程中的課程  
   
--   [第 1 課：建立用於複寫的 Windows 帳戶](lesson-1-creating-windows-accounts-for-replication.md)  
+-   [第 1 課：建立 Windows 帳戶的複寫](lesson-1-creating-windows-accounts-for-replication.md)  
   
 -   [第 2 課：準備快照集資料夾](lesson-2-preparing-the-snapshot-folder.md)  
   

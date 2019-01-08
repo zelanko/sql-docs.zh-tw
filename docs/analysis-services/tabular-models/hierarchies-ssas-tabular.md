@@ -1,5 +1,5 @@
 ---
-title: 階層 |Microsoft 文件
+title: Analysis Services 表格式模型中的階層 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e6ce881fb0b423744316027faeec7210ae76f296
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d4e16aa049dbebd6a5d3d9e7f996748cabb3c236
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043542"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072295"
 ---
 # <a name="hierarchies"></a>階層
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -25,11 +25,11 @@ ms.locfileid: "34043542"
   
  例如，您可以在 Date 資料表中建立 Calendar 階層。 Calendar Year 做為最上層的父層級，而 Month、Week 和 Day 則加入做為子層級 (Calendar Year->Month->Week->Day)。 此階層顯示從 [日曆年度] 到 [天] 的邏輯關聯性。 用戶端使用者可以接著從 [欄位清單] 中選取 [日曆年度]，以在樞紐分析表中包含所有層級，或者展開階層，然後僅選取要包含在樞紐分析表中的特定層級。  
   
- 由於階層中的每個層級各代表資料表中的一個資料行，因此您可以重新命名層級。 重新命名並不僅限於階層 (表格式模型中的任何資料行都可以重新命名)，而重新命名階層層級可讓使用者更容易在報表中尋找及包含層級。 重新命名層級只會讓層級更容易識別，並不會重新命名層級參考的資料行。 以 [日曆年度] 階層為例，在 [資料檢視] 的 Date 資料表中，[CalendarYear]、[CalendarMonth]、[CalendarWeek] 及 [CalendarDay] 資料行已分別重新命名為 [日曆年度]、[月]、[週] 及 [天]，因此更容易識別。 重新命名層級還有一個優點，那就是提供報表內容的一致性，因為使用者比較不可能需要變更資料行名稱，以便在樞紐分析表、圖表等中更容易閱讀。  
+ 由於階層中的每個層級各代表資料表中的一個資料行，因此您可以重新命名層級。 重新命名並不僅限於階層 (表格式模型中的任何資料行都可以重新命名)，而重新命名階層層級可讓使用者更容易在報表中尋找及包含層級。 重新命名層級只會讓層級更容易識別，並不會重新命名層級參考的資料行。 在日曆年度階層範例中，資料檢視 資料行中的 Date 資料表中：CalendarYear、 CalendarMonth、 CalendarWeek 和 CalendarDay 已重新命名為日曆年、 月、 週和日，使其更容易識別。 重新命名層級還有一個優點，那就是提供報表內容的一致性，因為使用者比較不可能需要變更資料行名稱，以便在樞紐分析表、圖表等中更容易閱讀。  
   
- 階層可以包含在檢視方塊中。 檢視方塊會定義可檢視之模型子集，對模型提供具體的商務特有或應用程式特有視點。 例如，檢視方塊可以根據使用者特定的報表需求，提供必要資料項目的可檢視清單 (階層)。 如需詳細資訊，請參閱[檢視方塊](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)。  
+ 階層可以包含在檢視方塊中。 檢視方塊會定義可檢視之模型子集，對模型提供具體的商務特有或應用程式特有視點。 例如，檢視方塊可以根據使用者特定的報表需求，提供必要資料項目的可檢視清單 (階層)。 如需詳細資訊，請參閱 <<c0> [ 檢視方塊](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)。  
   
- 階層並非用來做為安全性機制，而是用來提供較佳使用者體驗的工具。 特定階層的所有安全性，都是繼承自基礎模型。 如果使用者沒有模型物件的存取權，階層也無法提供這些存取權。 必須先解決模型資料庫的安全性，才能透過階層提供模型中物件的存取權。 您可使用安全性角色來保護模型中繼資料和資料的安全。 如需詳細資訊，請參閱[角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)。  
+ 階層並非用來做為安全性機制，而是用來提供較佳使用者體驗的工具。 特定階層的所有安全性，都是繼承自基礎模型。 如果使用者沒有模型物件的存取權，階層也無法提供這些存取權。 必須先解決模型資料庫的安全性，才能透過階層提供模型中物件的存取權。 您可使用安全性角色來保護模型中繼資料和資料的安全。 如需詳細資訊，請參閱 <<c0> [ 角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)。  
   
 ##  <a name="bkmk_define"></a> Defining hierarchies  
  您可以在 [圖表檢視] 中，使用模型設計師建立及管理階層。 不支援在模型設計師的 [資料檢視] 中建立及管理階層。 若要在 [圖表檢視] 中檢視模型設計師，請按一下 **[模型]** 功能表，指向 **[模型檢視]**，然後按一下 **[圖表檢視]**。  
@@ -40,11 +40,11 @@ ms.locfileid: "34043542"
   
  根據預設，新階層會命名為「階層 1」、「階層 2」等。您應變更階層名稱，以反映父子式關聯性的本質，讓使用者更容易識別。  
   
- 建立階層之後，您可以使用 [在 Excel 中進行分析] 功能測試階層的功效。 如需詳細資訊，請參閱[在 Excel 中的進行分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)。  
+ 建立階層之後，您可以使用 [在 Excel 中進行分析] 功能測試階層的功效。 如需詳細資訊，請參閱 <<c0> [ 在 Excel 中的進行分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)。  
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|工作|Description|  
+|工作|描述|  
 |----------|-----------------|  
 |[建立及管理階層](../../analysis-services/tabular-models/create-and-manage-hierarchies-ssas-tabular.md)|描述如何在 [圖表檢視] 中，使用模型設計師建立及管理階層。|  
   

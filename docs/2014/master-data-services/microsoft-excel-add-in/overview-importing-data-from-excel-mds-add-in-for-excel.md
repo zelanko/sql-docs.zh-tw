@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: aaeab2123eba4cfe19c03094bef6dac5a013e418
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ed014aaed74ea9da70485b73d089e8ddaae0f43
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100788"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760260"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>發行資料 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，如果您想要與其他使用者共用資料，請將資料發行至 MDS 存放庫。 一旦發行資料之後，這項資料就可供此增益集的其他使用者下載。  
   
- 發行資料時，您已加入或更新的任何資料都會發行至 MDS 儲存機制。 不過，您已刪除的資料則不會發行。您必須個別刪除資料。 如需詳細資訊，請參閱[刪除資料列 &#40;MDS 適用於 Excel 的增益集&#41;](delete-a-row-mds-add-in-for-excel.md)。  
+ 發行資料時，您已新增或更新的任何資料都會發行至 MDS 存放庫。 不過，您已刪除的資料則不會發行；您必須個別刪除資料。 如需詳細資訊，請參閱 [刪除資料列 &#40;適用於 Excel 的 MDS 增益集&#41;](delete-a-row-mds-add-in-for-excel.md)。  
   
 > [!NOTE]  
 >  發行無法用來建立新的實體。 如需建立實體的詳細資訊，請參閱[建立實體 &#40;MDS 適用於 Excel 的增益集&#41;](create-an-entity-mds-add-in-for-excel.md)。  
@@ -46,19 +45,19 @@ ms.locfileid: "48100788"
 >  如果您輸入了超過 500 個字元的註解，系統將自動截斷註解。  
   
 ## <a name="business-rule-and-other-validation"></a>商務規則和其他驗證  
- 發行資料時，系統會在資料加入至 MDS 儲存機制之前執行驗證，確保資料正確無誤。 如果資料不符合指定的準則，就不會發行至儲存機制。 如需詳細資訊，請參閱[驗證資料 &#40;MDS 適用於 Excel 的增益集&#41;](validating-data-mds-add-in-for-excel.md)。  
+ 發行資料時，系統會在資料新增至 MDS 存放庫之前執行驗證，確保資料正確無誤。 如果資料不符合指定的準則，就不會發行至儲存機制。 如需詳細資訊，請參閱[驗證資料 &#40;MDS 適用於 Excel 的增益集&#41;](validating-data-mds-add-in-for-excel.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
 |將資料從使用中工作表發行回 MDS 儲存機制。|[從 Excel 發行資料給 MDS &#40;MDS 增益集的 Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
-|同時從 MDS 儲存機制和工作表中刪除資料列。|[刪除資料列&#40;MDS 增益集的 Excel&#41;](delete-a-row-mds-add-in-for-excel.md)|  
+|同時從 MDS 儲存機制和工作表中刪除資料列。|[刪除資料列 &#40;適用於 Excel 的 MDS 增益集&#41;](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
 -   [重新整理資料 &#40;適用於 Excel 的 MDS 增益集&#41;](refreshing-data-mds-add-in-for-excel.md)  
   
--   [Master Data Services 增益集適用於 Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [適用於 Microsoft Excel 的 Master Data Services 增益集](master-data-services-add-in-for-microsoft-excel.md)  
   
   

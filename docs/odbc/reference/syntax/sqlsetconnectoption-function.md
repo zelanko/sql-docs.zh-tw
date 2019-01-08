@@ -20,21 +20,21 @@ ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2a4965fedc7da47751742e863119b818a9fcba9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62d22d1bf5fc3d01bf62afd2da6b3ebbc2bb0289
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646356"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204348"
 ---
 # <a name="sqlsetconnectoption-function"></a>SQLSetConnectOption 函式
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： 已被取代  
+ 導入的版本：ODBC 1.0 標準的合規性：已被取代  
   
  **摘要**  
  在 ODBC 3 *.x*，ODBC 2.0 函式**SQLSetConnectOption**已被取代**SQLSetConnectAttr**。 如需詳細資訊，請參閱 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)。  
   
-> [!NOTE]  
+> [!NOTE]
 >  如需有關什麼驅動程式管理員會對應到此函式時 ODBC 2 *.x*應用程式使用 ODBC 3 *.x*驅動程式，請參閱[對應已被取代的函式](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)".  
   
 ## <a name="remarks"></a>備註  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - namespaces [SQLXML], annotated XSD schemas
@@ -21,12 +19,12 @@ ms.assetid: f3df9877-6672-4444-8245-2670063c9310
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 40739c6aa044b4ae632b38e26fe8776451673103
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d297b8516cb09db317ba835b49fe41b3e13be9e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125058"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793580"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>使用 targetNamespace 屬性來指定目標命名空間 (SQLXML 4.0)
   在撰寫 XSD 結構描述，您可以使用 XSD **targetNamespace**屬性來指定目標命名空間。 本主題描述如何 XSD **targetNamespace**， **elementFormDefault**，並**attributeFormDefault**屬性運作，它們如何影響的 XML 執行個體產生，以及與命名空間指定 XPath 查詢的方式。  
@@ -129,7 +127,7 @@ ms.locfileid: "48125058"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱 < [Ba6e326154d2"&gt;using ADO to Execute SQLXML Queries&lt](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 [使用ADO執行SQLXML查詢](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  如果指定了結構描述**elementFormDefault**並**attributeFormDefault**屬性值 **"qualified"**，執行個體文件將會擁有所有的本機限定的項目和屬性。 您可以變更要包含這些屬性在先前的結構描述 **\<2&gt;xsd:schema&lt;2} >** 項目，再重新執行範本。 因為這些屬性現在也會在此執行個體中限定，所以 XPath 查詢將會變更為可包含命名空間前置詞。  
   

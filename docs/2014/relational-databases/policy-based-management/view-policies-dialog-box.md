@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.managepolicies.general.f1
@@ -12,12 +12,12 @@ ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6150d7b819c6cd31dbc8d09fa43d1ed66de0f8c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40ce89f518dfdbf4d1c782121dc5ec0e935752ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145080"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814990"
 ---
 # <a name="view-policies-dialog-box"></a>檢視原則對話方塊
   使用此對話方塊可檢視對這個目標有效的原則。 此對話方塊會顯示相關的原則、其原則類別目錄以及有關原則的資訊。  
@@ -32,7 +32,7 @@ ms.locfileid: "48145080"
  **原則**  
  每一個適用的原則名稱。  
   
- **類別目錄**  
+ **分類**  
  選定原則所屬的原則類別目錄。  
   
  **評估模式**  

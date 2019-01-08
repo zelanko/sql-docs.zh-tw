@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - editTabProps
@@ -13,12 +12,12 @@ ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de312eefac0c9eaa61374bbf79a628dd3ed9cd36
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca7f7a34989719565950153c53932f36dc92d2ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105524"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804810"
 ---
 # <a name="edit-the-table-properties"></a>編輯資料表屬性
   使用此對話方塊，從正在擷取變更的選定資料表中編輯特定資料行。 您也可以編輯 **[安全性角色]** 和 **[擷取執行個體]** 資訊。  
@@ -41,18 +40,18 @@ ms.locfileid: "48105524"
   
 2.  將擷取執行個體儲存為下列其中一項：  
   
-    -   **新的擷取執行個體**：此情況下會儲存新的擷取執行個體，而且不會刪除舊的擷取執行個體。  
+    -   **新的擷取執行個體**:新的擷取執行個體儲存在此情況下，不會刪除舊的擷取執行個體。  
   
-         **注意**：每一個資料表不能有兩個以上的擷取執行個體。 如果已經有兩個擷取執行個體，就無法使用這個選項。  
+         **注意**:您可以讓每個資料表的不只兩個擷取執行個體。 如果已經有兩個擷取執行個體，就無法使用這個選項。  
   
-    -   **取代現有的**：此情況下會刪除目前的擷取執行個體，並由您建立的擷取執行個體取代。 如果已經為此資料表定義兩個擷取執行個體，您必須選取其中一個來替換。  
+    -   **取代現有**:在此情況下目前的擷取執行個體已刪除，換您所建立的擷取執行個體。 如果已經為此資料表定義兩個擷取執行個體，您必須選取其中一個來替換。  
   
- **注意**：您可以從 **[資料表]** 索引標籤的資料表清單中移除擷取執行個體。  
+ **注意**:您可以從清單中的資料表移除擷取執行個體**資料表** 索引標籤。  
   
  在此對話方塊中輸入資訊完畢後，請按一下 **[確定]** 接受變更。  
   
 ## <a name="see-also"></a>另請參閱  
  [如何編輯 CDC 執行個體屬性](how-to-edit-the-cdc-instance-properties.md)   
- [針對為了擷取變更所選取的資料表進行變更](make-changes-to-the-tables-selected-for-capturing-changes.md)  
+ [變更為了擷取變更所選取的資料表](make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
   

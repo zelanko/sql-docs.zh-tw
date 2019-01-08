@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], SQL Server Agent
@@ -16,12 +16,12 @@ ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e6369fc45ffd26bf28064735c23a1d9d7f75e37c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 798d9f09bcfa2c9f73b0b70b795ebb53cfb97a79
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073808"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823062"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>檢視 SQL Server Agent 錯誤記錄檔 (SQL Server Management Studio)
   此主題描述如何使用  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢視 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Agent 錯誤記錄檔。  
@@ -70,7 +70,7 @@ ms.locfileid: "48073808"
   
 4.  以滑鼠右鍵按一下要檢視的錯誤記錄檔，然後選取 [檢視代理程式記錄]。  
   
-     [記錄檔檢視器 - <伺服器名稱>] 對話方塊有下列選項：  
+     *[記錄檔檢視器 -***server_name] 對話方塊有下列選項：  
   
      **載入記錄**  
      開啟對話方塊供您指定所要載入的記錄檔。  
@@ -99,7 +99,7 @@ ms.locfileid: "48073808"
      **執行個體**  
      發生事件之執行個體的名稱。 顯示為 *&lt;電腦名稱*\\*執行個體名稱&gt;*。  
   
-     **Date**  
+     **日期**  
      顯示事件的日期。  
   
      **Source**  

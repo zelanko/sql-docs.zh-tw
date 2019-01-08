@@ -12,12 +12,12 @@ ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12ea22b773613fc274af29de1a28ba214a10cce4
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 574614976a9d24f6c9cedbfede2fd5a150211416
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148426"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525789"
 ---
 # <a name="understanding-the-tabular-object-model"></a>了解表格式物件模型
   表格式模型是資料表、關聯性、階層、檢視方塊、量值和關鍵效能的邏輯表示法。 本節介紹使用 AMO 進行的內部實作。 請參閱[使用分析管理物件開發&#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)如果您未曾使用過 AMO。  
@@ -57,7 +57,7 @@ ms.locfileid: "50148426"
   
  請參閱[階層表示法&#40;表格式&#41;](tables-hierarchy-representation.md)如需如何建立及操作階層表示法的詳細說明。  
   
-### <a name="key-performance-indicator-kpi--representation"></a>關鍵效能指標 (KPI) 表示法  
+### <a name="key-performance-indicator--kpi--representation"></a>關鍵效能指標-KPI 表示法  
  KPI 是用來針對目標值，測量由基底量值定義之值的效能。 就 AMO 物件而言，KPI 表示法具有一對多的對應關聯性。 KPI 是使用下列 AMO 物件來表示：<xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> 和 <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> 是主要的必備物件。  請務必注意，這並不表示上述 AMO 物件中包含的所有物件都可以在進行模型化時使用。  
   
 > [!NOTE]  

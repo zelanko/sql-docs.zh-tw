@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65541
@@ -13,12 +13,12 @@ ms.assetid: 2db60e24-79b5-4943-8891-f1684e16ce3d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1e69d1bd526b9971037a35049e9c34d349ce72d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f0c4b1dbdaa7a2b4a15dd8e28586b182d93374a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089868"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800220"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>儲存對話方塊 (Visual Database Tools)
   當您在 [資料表設計師] 中儲存工作，且該工作影響其他資料表時，便會出現此對話方塊。 此對話方塊可讓您確認將要儲存的資料表。  

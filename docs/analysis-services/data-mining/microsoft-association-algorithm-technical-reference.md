@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b6b3d44410e4d3cf889bc99e7057b6c420f37d7a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 21f779f1e0b1764fd35d6399aa220e244574d576
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145903"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545587"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 關聯分析演算法技術參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "50145903"
  您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的資料採礦設計師，隨時變更採礦模型的參數。 您也可以變更參數以程式設計方式使用<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>集合中 AMO，或使用[MiningModels 元素&#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) XMLA 中。 下表描述每一個參數。  
   
 > [!NOTE]  
->  您不能使用 DMX 陳述式變更現有模型中的參數；而必須在建立模型時，在 DMX CREATE MODEL 或 ALTER STRUCTURE… ADD MODEL 中指定參數。  
+>  您無法使用 DMX 陳述式，來變更現有模型中的參數您必須指定參數在 DMX CREATE MODEL 或 ALTER STRUCTURE...ADD MODEL 中指定參數。  
   
  *MAXIMUM_ITEMSET_COUNT*  
  指定要產生的最大項目集數目。 如果沒有指定任何數目，則會使用預設值。  
@@ -133,7 +133,7 @@ ms.locfileid: "50145903"
  適用於採礦結構資料行。  
   
  MODEL_EXISTENCE_ONLY  
- 表示資料行將被視為擁有兩個可能狀態： **Missing** 和 **Existing**。 Null 為遺漏值。  
+ 表示資料行將被視為擁有兩個可能狀態： **遺漏**並**現有**。 Null 為遺漏值。  
   
  適用於採礦模型資料行。  
   

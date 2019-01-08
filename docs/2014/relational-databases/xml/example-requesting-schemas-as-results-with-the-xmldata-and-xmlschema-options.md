@@ -1,5 +1,5 @@
 ---
-title: 範例：使用 XMLDATA 和 XMLSCHEMA 選項要求結構描述當作結果 | Microsoft Docs
+title: 範例做為結果，含 XMLDATA 和 XMLSCHEMA 選項要求結構描述 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dfbd60d67bc768eb50387ad7b86250acd9006550
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2f6a8395db11179d78a6f513890fd307acbd82c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159228"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352048"
 ---
-# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>範例：使用 XMLDATA 和 XMLSCHEMA 選項要求結構描述當做結果
+# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>範例做為結果，含 XMLDATA 和 XMLSCHEMA 選項要求結構描述
   下列查詢會傳回用於描述文件結構的 XML-DATA 結構描述。  
   
 ## <a name="example"></a>範例  
@@ -51,7 +51,7 @@ GO
 <row xmlns="x-schema:#Schema1" ProductModelID="119" Name="Bike Wash" />  
 ```  
   
-> [!NOTE]  
+> [!NOTE]
 >  <`Schema`> 會宣告為命名空間。 為了在不同 FOR XML 查詢中要求多個 XML-Data 結構描述時避免命名空間衝突，所以在每次執行查詢時都會變更命名空間識別碼 (此範例中為 `Schema1` )。 命名空間識別項是由 **Schema*n*** 所組成，其中 ***n*** 是整數。  
   
  指定 `XMLSCHEMA` 選項，則可要求結果傳回 XSD 結構描述。  
@@ -69,8 +69,8 @@ GO
  以下是結果：  
   
 ```  
-<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
-  <xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
+<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
+  <xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
   <xsd:element name="row">  
     <xsd:complexType>  
       <xsd:attribute name="ProductModelID" type="sqltypes:int" use="required" />  
@@ -104,8 +104,8 @@ GO
  以下是結果：  
   
 ```  
-<xsd:schema targetNamespace="urn:example.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
-  <xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
+<xsd:schema targetNamespace="urn:example.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
+  <xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
   <xsd:element name="row">  
     <xsd:complexType>  
       <xsd:attribute name="ProductModelID" type="sqltypes:int" use="required" />  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.f1
@@ -19,20 +18,20 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43e7e3e85567b74b2195214c37f9761cde5f0d91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b672d602666fd51f98cf1854917dd2a035157d5e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072158"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352109"
 ---
 # <a name="ado-net-source"></a>ADO NET 來源
   ADO NET 來源會從 .NET 提供者取用資料，並使該資料可供資料流程使用。  
   
- 您可以使用 ADO NET 來源連接至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 不過，不支援使用 OLE DB 連接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 如需 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的詳細資訊，請參閱 [Azure SQL Database 一般限制與方針](http://go.microsoft.com/fwlink/?LinkId=248228)。  
+ 您可以使用 ADO NET 來源連接至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 不過，不支援使用 OLE DB 連接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 如需 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的詳細資訊，請參閱 [Azure SQL Database 一般限制與方針](https://go.microsoft.com/fwlink/?LinkId=248228)。  
   
 ## <a name="data-type-support"></a>資料類型支援  
- 此來源會將未對應到特定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型的所有資料類型轉換成 DT_NTEXT [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 即使資料類型，就會發生這種轉換`System.Object`。  
+ 此來源會將未對應到特定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型的所有資料類型轉換成 DT_NTEXT [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 即使資料類型為 `System.Object`，還是會發生轉換。  
   
  您可以將 DT_NTEXT 資料類型變更為 DT_WSTR 資料類型，或是將 DT_WSTR 資料類型變更為 DT_NTEXT 資料類型。 您可以在 ADO NET 來源的 **[進階編輯器]** 對話方塊中設定 **[DataType]** 屬性，以變更資料類型。 如需詳細資訊，請參閱 [Common Properties](../common-properties.md)。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "48072158"
  如需將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型對應至 Managed 資料類型的詳細資訊，請參閱 [使用資料流程中的資料類型](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)。  
   
 ## <a name="ado-net-source-troubleshooting"></a>疑難排解 ADO NET 來源  
- 您可以記錄 ADO NET 來源對外部資料提供者所執行的呼叫。 您可以使用這項記錄功能，疑難排解 ADO NET 來源執行的從外部資料來源載入資料的作業。 若要記錄 ADO NET 來源對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級上選取 **[診斷]** 事件。 如需詳細資訊，請參閱[封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+ 您可以記錄 ADO NET 來源對外部資料提供者所執行的呼叫。 您可以使用這項記錄功能，疑難排解 ADO NET 來源執行的從外部資料來源載入資料的作業。 若要記錄 ADO NET 來源對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級上選取 **[診斷]** 事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
 ## <a name="ado-net-source-configuration"></a>ADO NET 來源組態  
  您可藉由提供定義結果集的 SQL 陳述式，以設定 ADO NET 來源。 例如，連接到 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 資料庫並使用 SQL 陳述式 `SELECT * FROM Production.Product` 的 ADO NET 來源會從 **Production.Product** 資料表擷取所有資料列，並提供資料集給下游元件。  
@@ -68,7 +67,7 @@ ms.locfileid: "48072158"
 >  當您使用 SQL 陳述式呼叫從暫存資料表傳回結果的預存程序時，請使用 WITH RESULT SETS 選項定義結果集的中繼資料。  
   
 > [!NOTE]  
->  如果您使用 SQL 陳述式來執行預存程序，則封裝會失敗，發生下列錯誤，您可以藉由新增解決錯誤`SET FMTONLY OFF`exec 陳述式前面的陳述式。  
+>  如果您使用 SQL 陳述式執行預存程序，封裝就會失敗且出現下列錯誤。透過在 exec 陳述式前面加上 `SET FMTONLY OFF` 陳述式也許能夠解決這項錯誤。  
 >   
 >  **在資料來源中找不到資料行 <資料行名稱>。**  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48072158"
   
 -   [ADO NET 自訂屬性](ado-net-custom-properties.md)  
   
- 如需如何設定屬性的詳細資訊，請參閱[設定資料流程元件的屬性](set-the-properties-of-a-data-flow-component.md)。  
+ 如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [DataReader 目的地](datareader-destination.md)   

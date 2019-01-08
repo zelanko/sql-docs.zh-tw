@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - breakpoints [SQL Server]
@@ -14,19 +13,19 @@ ms.assetid: 3caf751e-df3b-40c7-b5e8-4490ae178e0c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d40fd8e92eb7c3453c700eb2ae7f2a45ea6c0b41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33860d4e84e828b404236527dbe3c8c8cf6becc2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166408"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808380"
 ---
 # <a name="replay-to-a-breakpoint-sql-server-profiler"></a>重新執行至中斷點 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，在您要重新執行的追蹤檔案或資料表中設定中斷點。 開始重新執行追蹤之前，在追蹤檔案或資料表中設定中斷點，可以讓您在特定事件上暫停重新執行追蹤。 在重新執行追蹤時使用中斷點可以支援偵錯，因為您可以將很長的追蹤指令碼的重新執行過程，分解為可累加分析的短片段。  
   
 ### <a name="to-replay-to-a-breakpoint"></a>若要重新執行至中斷點  
   
-1.  開啟您要重新執行的追蹤檔案或追蹤資料表。 如需詳細資訊，請參閱[開啟追蹤檔案 &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) 或[開啟追蹤資料表 &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)。  
+1.  開啟您要重新執行的追蹤檔案或追蹤資料表。 如需詳細資訊，請參閱 [開啟追蹤檔案 &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) 或 [開啟追蹤資料表 &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)隨附的預先定義「微調」範本。  
   
      確定您開啟的追蹤檔案或資料表包含重新執行所需的事件類別。 如需詳細資訊，請參閱 [Replay Requirements](replay-requirements.md)。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "48166408"
 6.  重複步驟 5 至追蹤結束。  
   
 ## <a name="see-also"></a>另請參閱  
- [重新執行至游標處&#40;SQL Server Profiler&#41;](replay-to-a-cursor-sql-server-profiler.md)   
+ [重新執行至資料指標處 &#40;SQL Server Profiler&#41;](replay-to-a-cursor-sql-server-profiler.md)   
  [重新執行追蹤](replay-traces.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   

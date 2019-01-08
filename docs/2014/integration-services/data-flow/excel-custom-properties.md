@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4d9ef1b6727a80beb5e1f55427479a6a5acf53e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed4f6f89091b3e8d46a13f0a93e685b4520c697f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151318"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790510"
 ---
 # <a name="excel-custom-properties"></a>Excel 自訂屬性
   **來源自訂屬性**  
@@ -47,12 +46,12 @@ ms.locfileid: "48151318"
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|AccessMode|整數 (列舉)|一個值，指定目的地如何存取其目的地資料庫。<br /><br /> 此屬性可以有下列其中一個值：<br /><br /> `OpenRowset` (0)，提供資料表或檢視表的名稱。<br /><br /> `OpenRowset from Variable` (1) — 提供包含資料表或檢視名稱變數的名稱。<br /><br /> `OpenRowset Using Fastload` (3) - 您必須提供資料表或檢視表的名稱。<br /><br /> `OpenRowset Using Fastload from Variable` (4) — 提供包含資料表或檢視名稱變數的名稱。<br /><br /> `SQL Command` (2) - 您要提供 SQL 陳述式。|  
-|CommandTimeout|Integer|逾時之前 SQL 命令可以執行的秒數上限。值為 **0** 指出無限的時間。 這個屬性的預設值為 **0**。<br /><br /> 注意：雖然您無法在 [Excel 目的地編輯器] 中使用這個屬性，但是可以使用 [進階編輯器] 來設定這個屬性。|  
+|AccessMode|整數 (列舉)|一個值，指定目的地如何存取其目的地資料庫。<br /><br /> 此屬性可以有下列其中一個值：<br /><br /> `OpenRowset` (0)-您提供的資料表或檢視表名稱。<br /><br /> `OpenRowset from Variable` (1)-您可以提供包含資料表或檢視名稱變數的名稱。<br /><br /> `OpenRowset Using Fastload` (3)-您提供的資料表或檢視表名稱。<br /><br /> `OpenRowset Using Fastload from Variable` (4)-您可以提供包含資料表或檢視名稱變數的名稱。<br /><br /> `SQL Command` (2)-您提供的 SQL 陳述式。|  
+|CommandTimeout|Integer|逾時之前 SQL 命令可以執行的秒數上限。值為 **0** 指出無限的時間。 這個屬性的預設值為 **0**。<br /><br /> 注意：這個屬性不適用於**Excel 目的地編輯器**，但可以透過設定**進階編輯器**。|  
 |FastLoadKeepIdentity|布林|一個值，指定載入資料時是否要複製識別值。 只有在您使用其中一個快速載入選項時，才能使用這個屬性。 此屬性的預設值為 **False**。|  
 |FastLoadKeepNulls|布林|一個值，指定載入資料時是否要複製 Null 值。 這個屬性只能搭配其中一個快速載入選項使用。 此屬性的預設值為 **False**。|  
 |FastLoadMaxInsertCommitSize|Integer|一個值，指定快速載入作業期間，Excel 目的地嘗試認可的批次大小。 預設值為 **2147483647**。 **0** 的值表示處理所有資料列之後的單一認可作業。|  
-|FastLoadOptions|String|快速載入選項的集合。 快速載入選項包括資料表的鎖定和條件約束的檢查。 您可以指定其中一個選項、兩個選項或不指定任何選項。<br /><br /> 注意：雖然您無法在 [Excel 目的地編輯器] 中使用這個屬性的某些選項，但是可以使用 [進階編輯器] 來設定這些選項。|  
+|FastLoadOptions|String|快速載入選項的集合。 快速載入選項包括資料表的鎖定和條件約束的檢查。 您可以指定其中一個選項、兩個選項或不指定任何選項。<br /><br /> 注意：這個屬性的某些選項不適用於**Excel 目的地編輯器**，但可以透過設定**進階編輯器**。|  
 |[OpenRowset]|String|當 AccessMode 為`OpenRowset`，資料表或檢視 Excel 目的地所存取的名稱。|  
 |OpenRowsetVariable|String|當 AccessMode 為`OpenRowset from Variable`，包含名稱的資料表或檢視 Excel 目的地所存取的變數名稱。|  
 |SqlCommand|String|當 AccessMode 為`SQL Command`，是 Excel 目的地用來指定資料的目的地資料行的 TRANSACT-SQL 陳述式。|  

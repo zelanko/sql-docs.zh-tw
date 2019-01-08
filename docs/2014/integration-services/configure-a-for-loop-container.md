@@ -14,17 +14,17 @@ ms.assetid: b9cd7ea7-b198-4a35-8b16-6acf09611ca5
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2adcb3e79e3733b5fb8151bfa7f65e7bebb4d910
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a88ca178770bb3326202b603318be30119b2febe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126160"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350848"
 ---
 # <a name="configure-a-for-loop-container"></a>設定 For 迴圈容器
   此程序描述如何使用 [For 迴圈編輯器] 對話方塊設定「For 迴圈」容器。  
   
- 如需 For 迴圈容器的範例，請參閱 bimonkey.com 上的 [SSIS Loops that do not fail](http://go.microsoft.com/fwlink/?LinkId=240295)。  
+ 如需 For 迴圈容器的範例，請參閱 bimonkey.com 上的 [SSIS Loops that do not fail](https://go.microsoft.com/fwlink/?LinkId=240295)。  
   
 ### <a name="to-configure-the-for-loop-container"></a>設定 For 迴圈容器  
   
@@ -48,6 +48,6 @@ ms.locfileid: "48126160"
 ## <a name="see-also"></a>另請參閱  
  [For 迴圈容器](control-flow/for-loop-container.md)   
  [Integration Services &#40;SSIS&#41; 運算式](expressions/integration-services-ssis-expressions.md)   
- [在套件中使用屬性運算式](expressions/use-property-expressions-in-packages.md)  
+ [在封裝中使用屬性運算式](expressions/use-property-expressions-in-packages.md)  
   
   

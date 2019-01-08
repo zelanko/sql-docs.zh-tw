@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.xmlindexes
@@ -12,12 +12,12 @@ ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d0b162e8eb232f605e837a42fa55d3d39dcccd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0c946e0e195937dd2e722ac3f092a57e40427b8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100078"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792271"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML 索引對話方塊 (Visual Database Tools)
   使用 [XML 索引] 對話方塊可建立 XML 資料類型資料行的索引，但是此類資料行無法以 [索引/索引鍵] 對話方塊進行索引。 各個 XML 資料行可以具有一個以上的 XML 索引，但是首先建立 (主要) 的索引將成為其他索引 (次要) 的基準。 如果刪除主要的 XML 索引，次要索引也將一併刪除。  
@@ -57,7 +57,7 @@ ms.locfileid: "48100078"
  顯示 XML 索引的名稱。 在建立新索引時，會根據 [資料表設計師] 作用中視窗的資料表，給予預設的名稱。 您可以隨時變更名稱。  
   
  **說明**  
- 描述索引。 若要寫入更詳細的描述，請按一下 [描述]，再按屬性欄位右邊的省略符號按鈕 (**…**)。 如此便可提供較大的區域以寫入文字。  
+ 描述索引。 若要寫入更詳細的描述，請按一下 [描述]，然後按一下屬性欄位右邊出現的省略符號按鈕 (**...**)。 如此便可提供較大的區域以寫入文字。  
   
  **資料表設計工具類別目錄**  
  展開時會顯示此 XML 索引的屬性相關資訊。  

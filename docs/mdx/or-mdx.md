@@ -1,5 +1,5 @@
 ---
-title: 或者 (MDX) |Microsoft 文件
+title: 或者 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 668e8f1955290c31ee63ca5b81fc5e9c286d54c4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: ae6b6602d7968bb444dcf4838537bb000b97dd53
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742447"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418392"
 ---
 # <a name="or-mdx"></a>OR (MDX)
 
@@ -36,10 +36,10 @@ Expression1 OR Expression2
  傳回數值的有效 MDX 運算式。  
   
 ## <a name="return-value"></a>傳回值  
- 布林值，傳回**true**如果任一個或兩個引數都評估為**true**，否則**false**。  
+ 布林值，傳回 **，則為 true**如果任一個或兩個引數都評估為 **，則為 true**，否則**false**。  
   
 ## <a name="remarks"></a>備註  
- **或者**運算子將兩個引數視為布林值 (零 （0) 做為**false**，否則**true**) 運算子執行邏輯分離之前。 下表將說明如何**或**運算子執行邏輯分離。  
+ **或者**運算子會將兩個引數視為布林值 (零 （0) 作為**false**，否則**true**) 運算子執行邏輯分離之前。 下表將說明如何**或**運算子執行邏輯分離。  
   
 |*Expression1*|*Expression2*|傳回值|  
 |-------------------|-------------------|------------------|  
@@ -49,7 +49,7 @@ Expression1 OR Expression2
 |**false**|**false**|**false**|  
   
 ## <a name="example"></a>範例  
- 如果 Customer 維度 Gender 階層上的目前成員為 Male，或者 Customer 維度 Marital Status 階層上的目前成員為 Married，下列包含導出量值的查詢會傳回字串 "MARRIED OR MALE"，否則會傳回字串 "UNMARRIED OR FEMALE"。  
+ 下列查詢包含導出量值會傳回的字串"MARRIED OR MALE"如果 Customer 維度 Gender 階層上的目前成員為 Male，或者在 [客戶] 維度的婚姻狀態階層上的目前成員為 Married;否則會傳回字串"UNMARRIED 或 FEMALE"。  
   
 ```  
 WITH  

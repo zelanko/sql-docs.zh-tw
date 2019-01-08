@@ -10,12 +10,12 @@ ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 65c45ab0696792268cc6268503054a894161114a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6c2580e17c204b534ec4c8ebadec3a1e992a4d6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162748"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529272"
 ---
 # <a name="delete-user-defined-functions"></a>刪除使用者定義函數
   您可以透過使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或下列項目，刪除 (卸除) [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的使用者定義函數： [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -68,7 +68,7 @@ ms.locfileid: "48162748"
 5.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]**。  
   
     > [!IMPORTANT]  
-    >  在 [刪除物件] 對話方塊中按一下 [顯示相依性]，開啟 *function_name***Dependencies** 對話方塊。 這就會顯示相依於函數的所有物件以及函數所相依的所有物件。  
+    >  在 [刪除物件] 對話方塊中按一下 [顯示相依性]，開啟 _function_name_[相依性] 對話方塊。 這就會顯示相依於函數的所有物件以及函數所相依的所有物件。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -78,10 +78,10 @@ ms.locfileid: "48162748"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
-    -- creates function called “Sales.ufn_SalesByStore”  
+    -- creates function called "Sales.ufn_SalesByStore"  
     USE AdventureWorks2012;  
     GO  
     CREATE FUNCTION Sales.ufn_SalesByStore (@storeid int)  

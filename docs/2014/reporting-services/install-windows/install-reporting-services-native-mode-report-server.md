@@ -15,12 +15,12 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9bfbae24063bfa3daa7fbafd1004125e826f6886
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 39f3b68f816594d275f48723865c7497f5352fbb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851863"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527713"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>安裝 Reporting Services 原生模式報表伺服器
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式報表伺服器可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈或命令列安裝。 在安裝精靈中，您也可以選擇 1) 安裝檔案並以預設值設定伺服器，或 2) 僅安裝檔案但不要由安裝精靈設定伺服器。 本主題檢閱 *「原生模式的預設組態」* (Default Configuration for Native Mode)，其中安裝程式會安裝及設定報表伺服器執行個體。 當安裝程式完成之後，報表伺服器會執行及備妥使用。 原生模式報表伺服器會當做獨立的應用程式伺服器來執行。 原生模式為預設伺服器模式。  
@@ -88,7 +88,7 @@ ms.locfileid: "48851863"
   
 -   安裝程式必須能夠使用預設值，以建立報表伺服器資料庫。 這些值為 **ReportServer** 和 **ReportServerTempDB**。 如果您現有的資料庫是來自之前的安裝，安裝程式將會被封鎖，因為它無法在原生模式的預設組態中設定報表伺服器。 您必須重新命名、移動或刪除這些資料庫，才能解除封鎖安裝程式。  
   
- 如果您的電腦未能滿足預設安裝的所有需求，就必須在僅限檔案模式中安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，然後在安裝程式完成之後使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來進行設定。  
+ 如果您的電腦未能滿足預設安裝的所有需求，就必須在僅限檔案模式中安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，然後在安裝程式完成之後使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來進行設定。  
   
  不要只是為了讓預設安裝能夠繼續就嘗試重新設定電腦， 這樣做可能需要好幾個小時的工作，讓原本可從安裝選項獲得的省時優點消失殆盡。 最佳的解決方案是在僅限檔案模式中安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，然後設定報表伺服器使用特定值。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "48851863"
   
     -   **Reporting Services 原生**。  
   
-    -   **[管理工具 - 基本]**。 管理工具並非必要，但建議您使用這些工具，除非您安裝了其他管理工具。 預設組態選項會產生可運作的報表伺服器，但您可能想要在日後變更組態選項。 某些選項 (像是 [我的報表]) 是透過 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 加以管理。  
+    -   **管理工具-基本**。 管理工具並非必要，但建議您使用這些工具，除非您安裝了其他管理工具。 預設組態選項會產生可運作的報表伺服器，但您可能想要在日後變更組態選項。 透過所管理的一些選項，例如 [我的報表] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
      ![特徵選取中的 SSRS 原生模式選取](../../../2014/sql-server/install/media/rs-setupfeatureselection-native-withcircles.gif "特徵選取中的 SSRS 原生模式選取")  
   

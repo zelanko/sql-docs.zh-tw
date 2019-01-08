@@ -18,12 +18,12 @@ ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90f0d34d522f27fd29c0c1103076632c3cb4bbee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77cb1127b7dbb7b2a49e3bafcd0b3eccc45b92ed
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086838"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800373"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>使用搜索屬性清單搜索文件屬性
   文件屬性的內容與文件本文的內容之間原本無法區別。 這項限制會將全文檢索查詢限制為整個文件的一般搜尋。 不過，現在您可以針對 `varbinary`、`varbinary(max)` (包括 `FILESTREAM`) 或 `image` 二進位資料行中支援的文件類型設定全文檢索索引，以便支援特定屬性 (例如 Author 和 Title) 的屬性範圍搜尋作業。 這種搜尋形式稱為「屬性搜尋」。  
@@ -52,7 +52,7 @@ ms.locfileid: "48086838"
   
  ![使用搜尋屬性清單的全文檢索索引](../../database-engine/media/ifts-spl-and-fti.gif "使用搜尋屬性清單的全文檢索索引")  
   
- Title 屬性中的搜尋詞彙 ("Favorite"、"Biking" 和 "Trails") 會與針對此索引指派給 Title 的內部屬性識別碼 1 相關聯。 Keywords 屬性中的搜尋詞彙 ("biking" 和 "mountain") 會與針對此索引指派給 Tags 的內部屬性識別碼 2 相關聯。 若為 Author 屬性中的搜尋詞彙 ("Jane" 和 "Doe") 以及文件本文中的搜尋詞彙，其內部屬性識別碼為 0。 請注意，詞彙 "biking" 出現在 Title 屬性、Keywords (Tags) 屬性和文件本文中。 Title 或 Keywords (Tags) 屬性中 "biking" 的屬性搜尋會在結果中傳回這份文件。 "biking" 的一般全文檢索查詢也會傳回這份文件，就像是沒有針對屬性搜尋設定索引一樣。 Author 屬性中 "biking" 的屬性搜尋則不會傳回這份文件。  
+ Title 屬性中的搜尋字詞 ("Favorite"、"Biking" 和 "Trails") 會與針對此索引指派給 Title 的內部屬性識別碼 1 建立關聯。 Keywords 屬性中的搜尋字詞 ("biking" 和 "mountain") 會與針對此索引指派給 Tags 的內部屬性識別碼 2 建立關聯。 若為 Author 屬性中的搜尋字詞 ("Jane" 和 "Doe") 以及文件本文中的搜尋字詞，內部屬性識別碼為 0。 請注意，詞彙 "biking" 出現在 Title 屬性、Keywords (Tags) 屬性和文件本文中。 Title 或 Keywords (Tags) 屬性中 "biking" 的屬性搜尋會在結果中傳回這份文件。 "biking" 的一般全文檢索查詢也會傳回這份文件，就像是沒有針對屬性搜尋設定索引一樣。 Author 屬性中 "biking" 的屬性搜尋則不會傳回這份文件。  
   
  屬性範圍的全文檢索查詢會使用針對全文檢索索引之目前搜尋屬性清單註冊的內部屬性識別碼。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48086838"
 ##  <a name="impact"></a> 啟用屬性搜索的影響  
  如果您設定全文檢索索引來支援一個或多個屬性的搜尋，就會根據您在搜尋屬性清單中指定的屬性數目以及每個屬性的內容，稍微增加索引的大小。  
   
- 在測試 Microsoft word 的一般主體<sup>®</sup>，Excel<sup>®</sup>，和 PowerPoint<sup>®</sup>文件中，我們設定全文檢索索引來建立一般搜尋屬性。 建立這些屬性的索引大約增加了 5% 的全文檢索索引大小。 我們預期大部分文件主體的這個近似大小增加量應該相同。 不過，此大小增加量最終將取決於給定文件主體中的屬性資料量相對於整體資料量。  
+ 在測試 Microsoft word 的一般主體<sup>??</sup>，Excel<sup>??</sup>，和 PowerPoint<sup>??</sup> 文件中，我們設定全文檢索索引來建立一般搜尋屬性。 建立這些屬性的索引大約增加了 5% 的全文檢索索引大小。 我們預期大部分文件主體的這個近似大小增加量應該相同。 不過，此大小增加量最終將取決於給定文件主體中的屬性資料量相對於整體資料量。  
   
   
   
@@ -115,7 +115,7 @@ ms.locfileid: "48086838"
   
      屬性名稱可以是下列任何一個值：  
   
-    -   Windows 正式名稱的屬性，例如`System.Author`或`System.Contact.HomeAddress`。  
+    -   屬性的 Windows 正式名稱，例如 `System.Author` 或 `System.Contact.HomeAddress`。  
   
     -   使用者易記的名稱，方便使用者記憶。 某些屬性會與已知的使用者易記名稱相關聯 (例如「作者」或「住家地址」)，不過您也可以指定最適合使用者使用的任何名稱。  
   

@@ -20,16 +20,16 @@ ms.assetid: 9a3b4f8b-982b-44b9-ade6-754ff026dc90
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b531feb33d9d555296f428fb01778a7b7627d851
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ef98000391ec6c39012603795b7f11a34c68183
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778876"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208137"
 ---
 # <a name="sqlremovedriver-function"></a>SQLRemoveDriver 函式
 **合規性**  
- 版本導入： ODBC 3.0  
+ 導入的版本：ODBC 3.0  
   
  **摘要**  
  **SQLRemoveDriver**變更或移除 Odbcinst.ini 中的項目系統資訊中的驅動程式的相關資訊。  
@@ -51,7 +51,7 @@ BOOL SQLRemoveDriver(
  *fRemoveDSN*  
  [輸入]有效值為：  
   
- TRUE： 移除在指定的驅動程式相關聯的 Dsn *lpszDriver*。 FALSE： 不會移除在指定的驅動程式相關聯的 Dsn *lpszDriver*。  
+ TRUE:移除在指定的驅動程式相關聯的 Dsn *lpszDriver*。 FALSE:請勿移除在指定的驅動程式相關聯的 Dsn *lpszDriver*。  
   
  *lpdwUsageCount*  
  [輸出]驅動程式在呼叫此函式之後的使用計數。  

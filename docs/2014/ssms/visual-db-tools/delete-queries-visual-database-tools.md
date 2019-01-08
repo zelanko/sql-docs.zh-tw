@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - dropping queues
@@ -15,12 +15,12 @@ ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a302423f432e1fd1c5d51fd4436d835f4497fc82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e046aef7cd5fb4049b4bfb92c99272f625224c2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178318"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815940"
 ---
 # <a name="delete-queries-visual-database-tools"></a>刪除查詢 (Visual Database Tools)
   您可以刪除查詢，將它從專案中移除並從檔案系統中永久刪除。 使用下列程序刪除的查詢不會移到資源回收筒，也不能復原。  

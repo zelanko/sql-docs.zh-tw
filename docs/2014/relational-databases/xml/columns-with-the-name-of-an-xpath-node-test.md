@@ -13,15 +13,15 @@ ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c6d2ed88feef80027a7c52c89b3fe891d8f589c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2ac7154d80a33907cb27bf191dcb41bca866894
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096138"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783920"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>具有 XPath 節點測試名稱的資料行
-  如果資料行名稱是其中一個 XPath 節點測試，將會對應內容，如下表所示。 如果資料行名稱是 XPath 節點測試，會將內容對應至對應的節點。 如果資料行的 SQL 類型是`xml`，則會傳回錯誤。  
+  如果資料行名稱是其中一個 XPath 節點測試，將會對應內容，如下表所示。 如果資料行名稱是 XPath 節點測試，會將內容對應至對應的節點。 如果資料行的 SQL 類型是 `xml`，就會傳回錯誤。  
   
 |資料行名稱|行為|  
 |-----------------|--------------|  
@@ -71,7 +71,7 @@ FOR XML PATH;
   
  `<First>Ken</First>`  
   
- `<Last>Sánchez</Last>`  
+ `<Last>S??nchez</Last>`  
   
  `</EmpName>`  
   

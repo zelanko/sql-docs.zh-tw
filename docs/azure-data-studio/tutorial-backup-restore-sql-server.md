@@ -1,7 +1,8 @@
 ---
-title: 備份和還原資料庫，使用 Azure Data Studio |Microsoft Docs
+title: 備份與還原的資料庫
+titleSuffix: Azure Data Studio
 description: 了解如何備份和還原資料庫，使用 Azure Data Studio
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2d9b4cbee5ab4da44961927809bf1fb4c771cc1
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 0e6025c59206f48fe6cf5cd5bf5182ea73090bbf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355909"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207127"
 ---
-# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]備份及還原
+# <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>備份和還原資料庫時使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 您可以在本教學課程，了解如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]:
 > [!div class="checklist"]
@@ -33,10 +34,11 @@ ms.locfileid: "49355909"
 
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 SQL Server](quickstart-sql-server.md)
 
+本教學課程需要連接至 SQL Server 資料庫。 Azure SQL Database 有自動備份，讓 Azure Data Studio 不執行 Azure SQL Database 備份和還原。 如需詳細資訊，請參閱 <<c0> [ 深入了解自動 SQL Database 備份](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups)。
 
 ## <a name="backup-a-database"></a>備份資料庫
 
-1. 開啟 TutorialDB 資料庫儀表板 (開啟**伺服器**[資訊看板] (**CTRL + G**)，展開**資料庫**，以滑鼠右鍵點選 **TutorialDB** ，選取**管理**)。 
+1. 開啟 TutorialDB 資料庫儀表板 (開啟**伺服器**[資訊看板] (**CTRL + G**)，展開**資料庫**，以滑鼠右鍵點選 **TutorialDB** ，選取**管理**)。
 
 2. 開啟**Backup database**  對話方塊 (按一下**備份**上**工作**小工具)。
 
@@ -79,7 +81,7 @@ ms.locfileid: "49355909"
    ![還原](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
 
 
-在本教學課程中，您已了解如何：
+在本教學課程中，您將了解如何：
 > [!div class="checklist"]
 > * 備份資料庫 
 > * 檢視備份狀態

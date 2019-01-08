@@ -1,5 +1,6 @@
 ---
-title: SUSE Linux Enterprise Server 上的 SQL Server 的自動的安裝 |Microsoft Docs
+title: SUSE Linux Enterprise Server 上的 SQL Server 的自動的安裝
+titleSuffix: SQL Server
 description: SQL Server 指令碼範例-SUSE Linux Enterprise Server 上的自動安裝
 author: rothja
 ms.author: jroth
@@ -7,16 +8,16 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: 9eb7c5585cd752719e7294fea96abe0c0d66a512
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33341becf4c441383fda90fbc6f3d95e09a6d56d
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650826"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160506"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>SUSE Linux Enterprise Server 的範例： 無人看管的 SQL Server 安裝指令碼
+# <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>範例：適用於 SUSE Linux Enterprise Server 的自動安裝的 SQL Server 安裝指令碼
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

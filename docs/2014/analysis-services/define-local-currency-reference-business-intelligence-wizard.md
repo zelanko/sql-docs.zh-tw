@@ -13,12 +13,12 @@ ms.assetid: 74993b0d-dfca-476b-acba-d66c593680a5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 364c86c5b908408dc3212593612467abade93735
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d6616f5f09ce39682a24c74808ca90084ee775f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048620"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507889"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>定義本地貨幣參考 (商業智慧精靈)
   使用 [定義本地貨幣參考] 頁面，即可定義貨幣轉換功能的本地貨幣，這會涵蓋 [選取轉換類型] 頁面上指定的多對多或多對一轉換類型。 本地貨幣為 **[選取量值]** 頁面中，選取之量值用於儲存交易的貨幣。  
@@ -30,7 +30,7 @@ ms.locfileid: "48048620"
  **事實資料表中的識別碼**  
  選取即可指定屬性，在包含 [選取量值] 頁面上所選取量值的事實資料表所參考的貨幣維度中，提供本地貨幣的貨幣識別碼 (貨幣維度`Type`屬性設定為*貨幣*。)  
   
- 當交易自行決定該交易的本地貨幣時，請使用此選項。 例如，在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 範例資料庫[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]中，網際網路銷售量值群組和貨幣維度之間存在一般維度關聯性。 該量值群組的事實資料表包含外部索引鍵資料行，此資料行參考該維度之維度資料表中的貨幣識別碼。  
+ 當交易自行決定該交易的本地貨幣時，請使用此選項。 例如，在[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]範例資料庫-[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]，網際網路銷售量值群組有一般維度關聯性和貨幣維度。 該量值群組的事實資料表包含外部索引鍵資料行，此資料行參考該維度之維度資料表中的貨幣識別碼。  
   
  **貨幣維度與事實資料所參考的屬性**  
  在貨幣維度中選取貨幣屬性，其成員代表本地貨幣的貨幣識別碼。 (貨幣屬性是其`Type`屬性設定為*貨幣*。)  
@@ -41,7 +41,7 @@ ms.locfileid: "48048620"
  **維度資料表中的屬性**  
  選取即可從與量值群組相關的維度中指定屬性，該量值群組包含本地貨幣的貨幣識別碼。  
   
- 當交易與其他商務實體 (例如位置) 間的關聯性，會決定該交易的本地貨幣時，請使用此選項。 例如，在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 範例資料庫[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]中，財務報表量值群組是透過組織維度，而對貨幣維度有參考式維度關聯性。 也就是說，財務報表量值群組的事實資料表中包含的外部索引鍵資料行，參考到組織維度之維度資料表中的成員。 而組織維度的維度資料表包含外部索引鍵資料行，此資料行參考貨幣維度之維度資料表中的貨幣識別碼。  
+ 當交易與其他商務實體 (例如位置) 間的關聯性，會決定該交易的本地貨幣時，請使用此選項。 例如，在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]範例資料庫-[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]，財務報表量值群組有透過組織維度的貨幣維度參考的維度關聯性。 也就是說，財務報表量值群組的事實資料表中包含的外部索引鍵資料行，參考到組織維度之維度資料表中的成員。 而組織維度的維度資料表包含外部索引鍵資料行，此資料行參考貨幣維度之維度資料表中的貨幣識別碼。  
   
  **參考貨幣的維度屬性**  
  在維度中選取屬性，其成員參考本地貨幣的貨幣識別碼。  

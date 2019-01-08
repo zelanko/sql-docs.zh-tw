@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.partitioncolumnlist
@@ -12,12 +12,12 @@ ms.assetid: b554b6e6-3435-4b43-89ab-7a4c7a241236
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9faa987b5cd7dc00cde0d691177c722bd73eaa26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227403"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767430"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>資料分割資料行清單對話方塊 (Visual Database Tools)
   如果資料表有相關資料分割配置，您可以使用此對話方塊選擇資料分割函數要套用到哪個或哪些資料行。 為了讓資料函數運作，您所切換的資料行資料類型必須與在資料分割函數中定義的資料行資料類型相同。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.selectsourcetablesandviews.f1
@@ -13,12 +12,12 @@ ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2f99b94c133ba2a8bfd8bbe6d7b78bd455061409
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 074fb9aff14a2d173658c0a8ed8e31740e957a37
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050130"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760310"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>選取來源資料表和檢視 (SQL Server 匯入和匯出精靈)
   使用**選取來源資料表和檢視**頁面以指定的資料表和檢視，以從資料來源複製到目的地。  
@@ -40,7 +39,7 @@ ms.locfileid: "48050130"
  從每個來源資料表的清單中選取目的地資料表。  
   
 > [!NOTE]  
->  如果您暫停在此精靈來建立目的地資料表的這一點[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]或另一個工具，新的資料表沒有立即顯示在清單中可用的目的地資料表。 若要重新整理目的地資料表清單，請退後兩頁要**選擇目的地**頁面上，重新選取目的地資料庫，然後再次前進到**選取來源資料表和檢視**。  
+>  如果此時在精靈中暫停，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或其他工具在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中建立目的地資料表，並不能立刻在可用的目的地資料表清單中看到新的資料表。 若要重新整理目的地資料表清單，請退後兩頁要**選擇目的地**頁面上，重新選取目的地資料庫，然後再次前進到**選取來源資料表和檢視**。  
   
 ### <a name="other-options"></a>其他選項  
  **編輯對應**  

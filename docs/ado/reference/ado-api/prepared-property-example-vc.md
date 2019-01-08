@@ -15,15 +15,15 @@ ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb7e726b506ab913d99d3024a4dc6f64a71bf543
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7be1a190773483e198a005b91470dbdbcfc50663
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846486"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532598"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared 屬性範例 (VC++)
-此範例示範[已準備](../../../ado/reference/ado-api/prepared-property-ado.md)藉由開啟兩個屬性[命令](../../../ado/reference/ado-api/command-object-ado.md)物件 — 一個已備妥，尚未備妥的另一個。  
+此範例示範[已準備](../../../ado/reference/ado-api/prepared-property-ado.md)藉由開啟兩個屬性[命令](../../../ado/reference/ado-api/command-object-ado.md)物件-一個已備妥，另一個尚未備妥。  
   
 ## <a name="example"></a>範例  
   
@@ -142,8 +142,8 @@ void PrintComError(_com_error &e) {
 ```  
   
  **效能結果：**  
-**尚未備妥： 0.016 秒**  
-**備妥： 0.016 秒**   
+**尚未備妥：0.016 秒**  
+**準備：    0.016 秒**   
 ## <a name="see-also"></a>另請參閱  
  [Command 物件 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Prepared 屬性 (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

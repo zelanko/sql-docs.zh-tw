@@ -17,12 +17,12 @@ ms.assetid: e9e50817-908e-4210-bc3d-8e2957568241
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 450cc656d22d471225e013bfcd2664f6eb27dba9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f5b58434e16d5c3bc17f2d37430d60539ac5bfd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173195"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514783"
 ---
 # <a name="specifying-processing-options"></a>指定處理選項
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈 」 會讀取處理選項，從\<*專案名稱*>.deploymentoptions 檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會在您建立 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案時建立此檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用指定的處理選項**部署**頁*\<專案名稱 >* **屬性頁**對話方塊來建立\<*專案名稱*>.deploymentoptions 檔案。  
@@ -48,9 +48,9 @@ ms.locfileid: "48173195"
   
 -   **交易式部署** 此設定控制中繼資料變更與處理命令的部署是發生於單一交易或個別交易中。  
   
-    -   如果這個選項`True`（預設）、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署所有的中繼資料變更與所有的程序命令，在單一交易中。  
+    -   如果此選項為 `True` (預設值)，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會在單一交易中部署所有的中繼資料變更與所有的處理命令。  
   
-    -   如果這個選項`False`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署中繼資料的變更，在單一交易中，然後部署在自己的交易中每個處理命令。  
+    -   如果此選項為 `False`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會在單一交易中部署中繼資料變更，並在個別的交易中部署每個處理命令。  
   
 ## <a name="modifying-the-processing-options-for-deployment"></a>修改部署的處理選項  
  不過，您可能需要部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用不同的處理選項所儲存的專案\<*專案名稱*>.deploymentoptions 檔案。 例如，您可能需要完整地處理所有的物件、或使用預設處理選項處理、或不進行處理。 如果 Cube 或維度是可寫入的，您可以指定使用新的或現有的回寫資料表。  
@@ -61,11 +61,11 @@ ms.locfileid: "48173195"
   
 -   以互動方式執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈。 在 [處理選項] 頁面上，指定正在部署之專案的處理選項。  
   
-     – 或 –  
+     -或-  
   
 -   在命令提示字元下執行 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈]，並將精靈設定為以回應檔案模式執行。 如需回應檔案模式的詳細資訊，請參閱 [執行 Analysis Services 部署精靈](running-the-analysis-services-deployment-wizard.md)。  
   
-     – 或 –  
+     -或-  
   
 -   修改\<*專案名稱*>.deploymentoptions 檔案所使用任何文字編輯器。  
   

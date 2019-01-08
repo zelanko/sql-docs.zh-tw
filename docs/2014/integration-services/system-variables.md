@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], variables
@@ -17,12 +16,12 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7c77ca84cd844b5c49f704d44f2eca3ba34c4269
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0798b78aebb308d76585df0e5c7e6e9200e20b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163468"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792311"
 ---
 # <a name="system-variables"></a>系統變數
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一組儲存執行封裝及其物件之資訊的系統變數。 這些變數可以用於運算式及屬性運算式，以自訂封裝、容器、工作及事件處理常式。  
@@ -90,7 +89,7 @@ ms.locfileid: "48163468"
 |**ProgressCountHigh**|Int32|64 位元值的較高部份，指示 OnProgress 事件處理的作業總數。|OnProgress 事件處理常式|  
 |`ProgressCountLow`|Int32|64 位元值的較低部份，指示 OnProgress 事件處理的作業總數。|OnProgress 事件處理常式|  
 |**ProgressDescription**|String|進度的描述。|OnProgress 事件處理常式|  
-|`Propagate`|布林|指示是否將事件傳播至較高層級的事件處理常式。<br /><br /> 附註： 值的`Propagate`驗證封裝期間，會忽略變數。<br /><br /> 如果您在子封裝中，將 `Propagate` 設定為 `False`，這就無法防止事件向上擴展到父封裝。|所有事件處理常式|  
+|`Propagate`|布林|指示是否將事件傳播至較高層級的事件處理常式。<br /><br /> 注意：驗證封裝期間，會忽略 `Propagate` 變數的值。<br /><br /> 如果您在子封裝中，將 `Propagate` 設定為 `False`，這就無法防止事件向上擴展到父封裝。|所有事件處理常式|  
 |`SourceDescription`|String|事件處理常式中引發事件之可執行檔的描述。|所有事件處理常式|  
 |`SourceID`|String|事件處理常式中引發事件之可執行檔的唯一識別碼。|所有事件處理常式|  
 |**SourceName**|String|事件處理常式中引發事件之可執行檔的名稱。|所有事件處理常式|  
@@ -105,6 +104,6 @@ ms.locfileid: "48163468"
  此規則也適用於使用者自訂變數。 但是，由於系統變數的資料類型無法變更，而且您必須修改這些變數的用法以符合其資料類型，因此使用者自訂變數比較有彈性。 參數繫結中使用之使用者自訂變數所定義的資料類型，通常與其對應參數的資料類型相容。  
   
 ## <a name="related-tasks"></a>相關工作  
- [在執行 SQL 工作中將查詢參數對應至變數](control-flow/execute-sql-task.md)  
+ [在執行 SQL 工作中將查詢參數對應到變數](control-flow/execute-sql-task.md)  
   
   

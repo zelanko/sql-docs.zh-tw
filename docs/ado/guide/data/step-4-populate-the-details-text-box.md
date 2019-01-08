@@ -1,5 +1,5 @@
 ---
-title: 步驟 4： 填入 [詳細資料] 文字方塊中 |Microsoft Docs
+title: 步驟 4：填入詳細資料 文字方塊 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5bb2a49043857cfe9278862efd9e540e4597808
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 060de551afa266dae4d5384fe765e16b997bcccd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706835"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206647"
 ---
-# <a name="step-4-populate-the-details-text-box"></a>步驟 4：填入 [詳細資料] 文字方塊
+# <a name="step-4-populate-the-details-text-box"></a>步驟 4：填入詳細資料 文字方塊
 若要填入 [詳細資料] 文字方塊中，建立一個名為新的副程式**recFields**並插入下列程式碼：  
   
 ```  
@@ -49,4 +49,4 @@ End Sub
   
 ## <a name="see-also"></a>另請參閱  
  [網際網路發佈案例](../../../ado/guide/data/internet-publishing-scenario.md)   
- [步驟 3：填入 [欄位] 清單方塊](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+ [步驟 3:填入 [欄位] 清單方塊](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

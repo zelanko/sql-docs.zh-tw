@@ -1,5 +1,5 @@
 ---
-title: 工作 8： 加入條件式分割轉換來分割清理輸出 |Microsoft Docs
+title: 工作 8:加入條件式分割轉換來分割清理輸出 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e43f90743b2449b4be99a0169a061f76fdcf3fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa9f529e286951aab08bb2d29f8dcc06f837e8c2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084588"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408960"
 ---
-# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>工作 8：加入條件式分割轉換來分割清理輸出
+# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>工作 8:加入條件式分割轉換來分割清理輸出
   在這項轉換中，您會將條件式分割轉換加入至資料流程。 「條件式分割」轉換可根據資料的內容，將資料列路由傳送至不同的輸出。 在您使用本教學課程**記錄狀態**從 DQS 清理轉換的輸出資料行。 在本教學課程中，您只會將正確或已更正的記錄上傳到 MDS 伺服器。 因此您會先檢查**記錄狀態**是**更正**或是**更正**，並結合記錄，再將記錄上傳至 MDS。  
   
 1.  拖放**條件式分割轉換**從**常見**一節中**SSIS 工具箱**至**資料流程** 索引標籤下**清理供應商資料**。  
@@ -48,6 +48,6 @@ ms.locfileid: "48084588"
 10. 按一下 [ **[確定]** 以關閉**Conditional Split Transformation Editor** ] 對話方塊。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 9：新增聯集全部轉換來結合正確和更正的記錄](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
+ [工作 9:加入聯集全部轉換來結合正確和更正的記錄](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
   
   

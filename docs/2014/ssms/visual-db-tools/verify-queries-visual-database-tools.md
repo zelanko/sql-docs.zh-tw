@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:100644
@@ -16,12 +16,12 @@ ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a36cdaae35bcc58b04e082108596e035b0a45f6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9f959d3c4b61a6231a0d4b3806b57cfa935445e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124158"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803340"
 ---
 # <a name="verify-queries-visual-database-tools"></a>驗證查詢 (Visual Database Tools)
   為避免發生問題，您可以檢查所建立的查詢，確定語法是否正確。 當您在 [SQL 窗格](visual-database-tools.md)輸入陳述式時，這個選項特別有用。  

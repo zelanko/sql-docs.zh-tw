@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 168e98315469da3daba8d228b69fe0ee10794e4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 263bc590c43899c3b9531549f4e73eefbde81c9c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097148"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792970"
 ---
 # <a name="model-deployment-options-master-data-services"></a>模型部署選項 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您要部署模型封裝檔案時，必須決定要部署新的或複製的模型，還是更新之前複製的模型。  
@@ -36,12 +35,12 @@ ms.locfileid: "48097148"
 |選項|描述|注意|  
 |------------|-----------------|-----------|  
 |新增|建立具有唯一名稱的新模型。 將會建立所有模型物件的新識別碼。|如果建立具有新識別碼的新模型，稍後您無法使用模型部署工具將更新套用至此模型。 在 Web 應用程式中使用精靈來部署模型封裝時，只在已經有相同名稱或識別碼的模型時，您才可以選擇建立新的模型。|  
-|複製|建立新的模型，它是封裝中模型的完整複製。 只在此模型不存在於目標環境中 (依名稱或識別碼) 時才有效。 如果要在多個環境中有相同的模型，而且經過一段時間後要更新複製的模式，請使用 [複製]。|這是在 Web 應用程式中精靈的預設行為。 如果已經有相同名稱或識別碼的模型，系統會提示您改為建立新的模型。|  
+|複製|建立新的模型，它是封裝中模型的完整複製。 只在此模型不存在於目標環境中 (依名稱或識別碼) 時才有效。 如果要在多個環境中具有相同的模型，且經過一段時間後要更新複製的模式，請使用 [複製]。|這是在 Web 應用程式中精靈的預設行為。 如果已經有相同名稱或識別碼的模型，系統會提示您改為建立新的模型。|  
 |Update|以封裝中的模型來更新現有模型。 這兩個模型中的識別碼必須相同。 這是用來更新之前複製的模型。|您只可以更新之前複製的模型 (名稱和識別碼必須相符)。|  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 MDSModelDeploy 部署模型部署封裝](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   
- [使用精靈部署模型部署套件](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)   
- [部署模型&#40;Master Data Services&#41;](deploying-models-master-data-services.md)  
+ [使用精靈部署模型部署封裝](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)   
+ [部署模型 &#40;Master Data Services&#41;](deploying-models-master-data-services.md)  
   
   

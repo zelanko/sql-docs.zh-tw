@@ -20,16 +20,16 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22ccf063486df9a8afc810d4adeffeb96041a8b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 386b2352db8912c0af4a1571cbfc2d7e7f5384c6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826196"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203977"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 函數
 **合規性**  
- 版本導入： ODBC 3.0 版的標準符合性： ISO 92  
+ 導入的版本：ODBC 3.0 版的標準合規性：ISO 92  
   
  **摘要**  
  **SQLGetDiagField**傳回目前的診斷資料結構 （與指定的控制代碼相關聯），其中包含錯誤、 警告和狀態資訊的記錄欄位的值。  
@@ -100,13 +100,13 @@ SQLRETURN SQLGetDiagField(
 ## <a name="diagnostics"></a>診斷  
  **SQLGetDiagField**不會將本身的診斷記錄。 它會使用下列傳回值報告自己執行的結果：  
   
--   SQL_SUCCESS： 函式成功地傳回診斷資訊。  
+-   SQL_SUCCESS:此函式會成功地傳回診斷資訊。  
   
--   SQL_SUCCESS_WITH_INFO: \* *DiagInfoPtr*是太小無法容納要求的診斷欄位。 因此，在 [診斷] 欄位的資料已遭截斷。 若要判斷發生截斷，應用程式必須比較*Columnsize*實際的位元組數目，會寫入至 **StringLengthPtr*。  
+-   SQL_SUCCESS_WITH_INFO:\**DiagInfoPtr*是太小無法容納要求的診斷欄位。 因此，在 [診斷] 欄位的資料已遭截斷。 若要判斷發生截斷，應用程式必須比較*Columnsize*實際的位元組數目，會寫入至 **StringLengthPtr*。  
   
--   SQL_INVALID_HANDLE： 所指定的控制代碼*HandleType*並*處理*不是有效的控制代碼。  
+-   SQL_INVALID_HANDLE:所表示的控制代碼*HandleType*並*處理*不是有效的控制代碼。  
   
--   SQL_ERROR： 下列其中一項發生：  
+-   SQL_ERROR:發生下列其中一項：  
   
     -   *Sqlgetdiagfield*引數不是其中一個有效的值。  
   
@@ -118,7 +118,7 @@ SQLRETURN SQLGetDiagField(
   
     -   當使用非同步通知時，控制代碼的非同步作業未完成。  
   
--   SQL_NO_DATA: *RecNumber*中所指定的控制代碼已存在的診斷記錄的數目大於*處理。* 函式也會傳回 SQL_NO_DATA 任何正*RecNumber*沒有診斷記錄是否*處理*。  
+-   SQL_NO_DATA 為止：*RecNumber*中指定的控制代碼已存在的診斷記錄的數目大於*處理。* 函式也會傳回 SQL_NO_DATA 任何正*RecNumber*沒有診斷記錄是否*處理*。  
   
 ## <a name="comments"></a>註解  
  應用程式通常會呼叫**SQLGetDiagField**完成三個目標的其中一個：  
@@ -178,7 +178,7 @@ SQLRETURN SQLGetDiagField(
 |SQL_DIAG_COLUMN_NUMBER|SQLINTEGER|如果 SQL_DIAG_ROW_NUMBER 欄位是有效的資料列中的數字的資料列集或一組參數，此欄位會包含表示結果集中的資料行編號或參數中的數字的一組參數的值。 結果集資料行數字一律從 1 開始;如果此狀態記錄屬於書籤資料行，則欄位可以是零。 參數編號是從 1 開始。 如果狀態記錄的逸出序列所關聯的資料行數或參數數目，它就會有 SQL_NO_COLUMN_NUMBER 的值。 如果驅動程式無法判斷此記錄相關聯的參數數目的資料行數目，此欄位有 SQL_COLUMN_NUMBER_UNKNOWN 的值。<br /><br /> 此欄位的內容會定義只適用於陳述式控制代碼。|  
 |SQL_DIAG_CONNECTION_NAME|SQLCHAR *|字串，表示連接的診斷記錄與產生的名稱。 此欄位是驅動程式定義。 環境控制代碼相關聯的診斷資料結構，以及任何連線不相關的診斷，則這個欄位會是零長度字串。|  
 |SQL_DIAG_MESSAGE_TEXT|SQLCHAR *|參考用錯誤或警告訊息。 此欄位格式中所述[診斷訊息](../../../odbc/reference/develop-app/diagnostic-messages.md)。 沒有任何診斷訊息文字的最大長度。|  
-|SQL_DIAG_NATIVE|SQLINTEGER|驅動程式/資料來源特定原生錯誤碼。 如果沒有原生錯誤程式碼，此驅動程式會傳回 0。|  
+|SQL_DIAG_NATIVE|SQLINTEGER|驅動程式/資料來源特有的原生錯誤的程式碼。 如果沒有原生錯誤程式碼，此驅動程式會傳回 0。|  
 |SQL_DIAG_ROW_NUMBER|SQLLEN|此欄位包含資料列中的數字資料列集或與狀態記錄相關聯的參數集合中的參數號碼。 資料列編號和參數的數字開頭為 1。 此欄位有值 SQL_NO_ROW_NUMBER，如果此狀態記錄的逸出序列所關聯的資料列數目或參數數目。 如果這個記錄相關聯的參數數目的資料列數目，則無法判斷驅動程式，此欄位有 SQL_ROW_NUMBER_UNKNOWN 的值。<br /><br /> 此欄位的內容會定義只適用於陳述式控制代碼。|  
 |SQL_DIAG_SERVER_NAME|SQLCHAR *|表示診斷記錄與相關的伺服器名稱的字串。 它等同於呼叫的傳回值**SQLGetInfo** SQL_DATA_SOURCE_NAME 選項。 環境控制代碼相關聯的診斷資料結構和不相關的任何伺服器的診斷，則這個欄位會是零長度字串。|  
 |SQL_DIAG_SQLSTATE|SQLCHAR *|五個字元 SQLSTATE 診斷程式碼。 如需詳細資訊，請參閱 < [Sqlstate](../../../odbc/reference/develop-app/sqlstates.md)。|  
@@ -229,11 +229,11 @@ n-定義 *|[建立定義域]|SQL_DIAG_CREATE_DOMAIN|
   
 -   因為 SQL_NO_ROW_NUMBER 會定義為-1，不會對應至任何資料列的記錄會出現在對應到特定的資料列中，記錄之前。  
   
--   因為 SQL_ROW_NUMBER_UNKNOWN 會定義為 – 2，資料列數目是未知的記錄會出現在所有其他的記錄之前。  
+-   因為 SQL_ROW_NUMBER_UNKNOWN 會定義為-2，資料列數目是未知的記錄會出現在所有其他的記錄之前。  
   
 -   屬於特定的資料列的所有記錄，記錄會依照 SQL_DIAG_ROW_NUMBER 欄位中的值。 列出所有錯誤和警告的第一個資料列受到影響，並接著所有錯誤和警告的下一個資料都列受影響，依此類推。  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 3 *.x*驅動程式管理員不會排序狀態記錄診斷的佇列中如果 SQLSTATE 01S01 （資料列中的錯誤） 由 ODBC 2 *.x*驅動程式或如果 SQLSTATE 01S01 （資料列中的錯誤） 由 ODBC3 *.x*驅動程式時**SQLExtendedFetch**稱為或**SQLSetPos**已將其置於使用資料指標上呼叫**SQLExtendedFetch**.  
   
  中每個資料列，或所有未對應的資料列或資料列數目是未知，這些記錄或資料列數等於 SQL_NO_ROW_NUMBER 所有這些記錄，列出的第一個記錄取決於使用一組的排序規則。 之後第一筆記錄，會影響資料列的其他記錄的順序是未定義。 應用程式不能假設錯誤之前的警告之後第一筆記錄。 應用程式應該掃描完整的診斷資料結構，以取得成功呼叫函式的完整資訊。  

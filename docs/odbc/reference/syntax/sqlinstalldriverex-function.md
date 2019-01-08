@@ -20,16 +20,16 @@ ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b6bae692efdb1d89642eea52e499b0fb2800377
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 0ec40b97f8953f114081292ac82069fd4a81692a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169318"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208630"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx 函式
 **合規性**  
- 版本導入： ODBC 3.0  
+ 導入的版本：ODBC 3.0  
   
  **摘要**  
  **SQLInstallDriverEx**將驅動程式的相關資訊加入至 Odbcinst.ini 中的項目系統資訊，並遞增駕*UsageCount* 1。 不過，如果新版驅動程式已經存在但*UsageCount*驅動程式不存在，值的新*UsageCount*值設定為 2。  
@@ -71,9 +71,9 @@ BOOL SQLInstallDriverEx(
  *常見*  
  [輸入]要求的類型。 *常見*引數必須包含下列值之一：  
   
- ODBC_INSTALL_INQUIRY： 詢問有關驅動程式安裝。  
+ ODBC_INSTALL_INQUIRY:查詢驅動程式安裝。  
   
- ODBC_INSTALL_COMPLETE： 完成安裝要求。  
+ ODBC_INSTALL_COMPLETE:完成安裝要求。  
   
  *lpdwUsageCount*  
  [輸出]驅動程式在呼叫此函式之後的使用計數。  

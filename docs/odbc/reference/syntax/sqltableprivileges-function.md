@@ -20,16 +20,16 @@ ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 099582fa557d9e970db3b38c4fb95ae677bb5274
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe1b3a3420ad882136b13b131938169dbdb224bd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678316"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204077"
 ---
 # <a name="sqltableprivileges-function"></a>SQLTablePrivileges 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ODBC  
+ 導入的版本：ODBC 1.0 標準的合規性：ODBC  
   
  **摘要**  
  **SQLTablePrivileges**傳回一份資料表和每個資料表相關聯的權限。 驅動程式會傳回在指定的陳述式上當作結果集的資訊。  
@@ -130,7 +130,7 @@ SQLRETURN SQLTablePrivileges(
 |TABLE_NAME (ODBC 1.0)|3|非 NULL Varchar|資料表名稱。|  
 |授與者 (ODBC 1.0)|4|Varchar|授與權限; 使用者名稱如果不適用於資料來源，則為 NULL。<br /><br /> 為被授與者的資料行中值的物件擁有者的所有資料列，GRANTOR 資料行就是"（_s） 」。|  
 |被授與者 (ODBC 1.0)|5|非 NULL Varchar|對被授與權限的使用者名稱。|  
-|權限 (ODBC 1.0)|6|非 NULL Varchar|資料表權限。 可能是其中一個下列的資料來源特定權限。<br /><br /> 選取： 被授與者可以擷取一或多個資料行之資料表的資料。<br /><br /> INSERT: 被授與者可以插入新的資料列插入資料表中包含一或多個資料行的資料。<br /><br /> 更新： 允許 grantee 更新一或多個資料行的資料表中的資料。<br /><br /> 刪除： 從資料表刪除的資料列會允許被授與者。<br /><br /> 參考： 參考條件約束內資料表的一或多個資料行，是否允許 grantee (比方說，唯一、 參考，或檢查條件約束的資料表)。<br /><br /> 動作的特定的資料表權限允許被授與者的範圍是資料來源而定。 例如，UPDATE 權限可能會允許 grantee 更新在上一個資料來源的資料表中的所有資料行並為其中 grantor 有 UPDATE 權限在另一個資料來源這些資料行。|  
+|權限 (ODBC 1.0)|6|非 NULL Varchar|資料表權限。 可能是其中一個下列的資料來源特有權限。<br /><br /> 選取此項目：被授與者可以擷取一或多個資料行之資料表的資料。<br /><br /> 插入：被授與者可以插入新的資料列插入資料表中包含一或多個資料行的資料。<br /><br /> 更新：允許 grantee 更新一或多個資料行的資料表中的資料。<br /><br /> 刪除：被授與者可以從資料表刪除的資料列。<br /><br /> 參考：是否允許 grantee 將參考條件約束內資料表的一或多個資料行 (例如，唯一、 參考，或檢查條件約束的資料表)。<br /><br /> 動作的特定的資料表權限允許被授與者的範圍是資料來源而定。 例如，UPDATE 權限可能會允許 grantee 更新在上一個資料來源的資料表中的所有資料行並為其中 grantor 有 UPDATE 權限在另一個資料來源這些資料行。|  
 |IS_GRANTABLE (ODBC 1.0)|7|Varchar|指出是否允許被授與者的權限授與給其他使用者;"YES"、"NO"，或如果無法辨識或不適用資料來源，則為 NULL。<br /><br /> 可授與或不但非兩者皆可授與權限。 所傳回的結果集**SQLColumnPrivileges**絕不會包含兩個資料列除了 IS_GRANTABLE 資料行以外的所有資料行包含相同的值。|  
   
 ## <a name="code-example"></a>程式碼範例  

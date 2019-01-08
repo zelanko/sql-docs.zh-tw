@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], Flat File
@@ -18,12 +17,12 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a87cf5f7f9f6b81a989b67b2a68484280498aba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65cebbe74b1be5cc0d625a70c8c5b87e8f515150
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147160"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815290"
 ---
 # <a name="flat-file-connection-manager"></a>一般檔案連接管理員
   「一般檔案」連接管理員可讓封裝存取一般檔案中的資料。 例如，「一般檔案」來源與目的地可以使用「一般檔案」連接管理員來擷取並載入資料。  
@@ -38,7 +37,7 @@ ms.locfileid: "48147160"
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>設定一般檔案連接管理員  
  當您新增一般檔案連接管理員加入封裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]建立連接管理員，會解析為在執行階段的一般檔案連接、 設定一般檔案 」 連接屬性，以及將一般檔案連接管理員加入`Connections`封裝的集合。  
   
- `ConnectionManagerType`連接管理員屬性設定為`FLATFILE`。  
+ 連接管理員的 `ConnectionManagerType` 屬性會設為 `FLATFILE`。  
   
  根據預設，「一般檔案」連接管理員一律會檢查未加引號之資料中的資料列分隔符號，並在找到資料列分隔符號時開始一個新資料列。 這可讓連接管理員正確地剖析資料列缺少資料行欄位的檔案。  
   
@@ -80,6 +79,6 @@ ms.locfileid: "48147160"
   
 -   [一般檔案連接管理員編輯器 &#40;[預覽] 頁面&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
- 以程式設計方式設定連接管理員的相關資訊，請參閱<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>並[連線以程式設計方式加入](../building-packages-programmatically/adding-connections-programmatically.md)。  
+ 如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../building-packages-programmatically/adding-connections-programmatically.md)。  
   
   

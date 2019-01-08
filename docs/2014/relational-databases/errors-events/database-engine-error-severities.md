@@ -16,12 +16,12 @@ ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec0157d30495166aba0a001997d843dafb5ba916
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9de758c6a54ca1993efc8873a02293331a129b33
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180148"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529702"
 ---
 # <a name="database-engine-error-severities"></a>Database Engine 錯誤嚴重性
   當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]產生錯誤時，錯誤的嚴重性會指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所發生的問題類型。  
@@ -56,17 +56,17 @@ ms.locfileid: "48180148"
   
  RAISERROR 可以用來產生使用者定義的錯誤訊息，其嚴重性為 1 到 25。 RAISERROR 可以參考儲存在 **sys.messages** 目錄檢視的使用者定義錯誤訊息，或是動態建立訊息。 當在產生錯誤時使用 **sys.messages** 中的使用者自訂錯誤訊息，RAISERROR 指定的嚴重性會覆寫 **sys.messages** 所指定的嚴重性。 如需詳細資訊，請參閱 [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql)。  
   
-## <a name="error-severity-and-trycatch"></a>錯誤嚴重性和 TRY…CATCH  
- TRY…CATCH 建構會捕捉嚴重性大於 10 而並未終止資料庫連接的所有執行錯誤。  
+## <a name="error-severity-and-trycatch"></a>錯誤嚴重性和 TRY...CATCH  
+ TRY...CATCH 建構會捕捉嚴重性大於 10 而並未終止資料庫連接的所有執行錯誤。  
   
- 嚴重性 0-10 的錯誤是參考訊息，不會使執行動作跳出 TRY…CATCH 建構的 CATCH 區塊。  
+ 嚴重性 0-10 的錯誤是資訊訊息，不會使執行動作跳出 TRY...CATCH 建構的 CATCH 區塊。  
   
  CATCH 區塊不會處理嚴重性通常是 20-25 的終止資料庫連接的錯誤，因為在連接終止時，會中止執行動作。  
   
  如需詳細資訊，請參閱 [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)所發生的問題類型。  
   
 ## <a name="retrieving-error-severity"></a>擷取錯誤嚴重性  
- 您可以利用 ERROR_SEVERITY 系統函數來擷取造成執行 TRY…CATCH 建構的 CATCH 區塊之錯誤的嚴重性。 如果是在 CATCH 區塊範圍之外呼叫，ERROR_SEVERITY 會傳回 NULL。 如需詳細資訊，請參閱 [ERROR_SEVERITY &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-severity-transact-sql)。  
+ 您可以利用 ERROR_SEVERITY 系統函式來擷取造成執行 TRY...CATCH 建構的 CATCH 區塊之錯誤的嚴重性。 如果是在 CATCH 區塊範圍之外呼叫，ERROR_SEVERITY 會傳回 NULL。 如需詳細資訊，請參閱 [ERROR_SEVERITY &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-severity-transact-sql)。  
   
 ## <a name="see-also"></a>另請參閱  
  [了解 Database Engine 錯誤](../native-client-ole-db-errors/errors.md)   

@@ -20,21 +20,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55291c5cc30b9fe16d7bd259bab03677f6df45db
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: 32ef1fff3b5309da587aacc2fca14099e6bf2cac
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672947"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209547"
 ---
-# <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (transact-SQL)
+# <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 傳回一個資料列會顯示作業系統版本資訊。  
   
 |資料行名稱 |資料類型 |描述 |  
 |-----------------|---------------|-----------------|  
-|**host_platform** |**nvarchar(256)** |一種作業系統： Windows 或 Linux |
+|**host_platform** |**nvarchar(256)** |作業系統類型：Windows 或 Linux |
 |**host_distribution** |**nvarchar(256)** |作業系統的描述。 |
 |**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 作業系統版本 (版本號碼)。 如需值和描述的清單，請參閱 < [Operating System Version (Windows)](/windows/desktop/SysInfo/operating-system-version)。 <br> 針對 Linux，會傳回空字串。 |  
 |**host_service_pack_level**|**nvarchar(256)**|Windows 作業系統的 Service Pack 層級。 <br> 針對 Linux，會傳回空字串。 |  
@@ -49,7 +49,7 @@ ms.locfileid: "51672947"
 ### <a name="permissions"></a>Permissions  
 `SELECT`權限`sys.dm_os_host_info`授與`public`預設的角色。 如果撤銷，需要`VIEW SERVER STATE`伺服器的權限。   
  
->  [!CAUTION]
+> [!CAUTION]
 >  從版[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.3[!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]第 17 版需要`SELECT`權限`sys.dm_os_host_info`才能連線到[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]。 如果`SELECT`權限撤銷`public`，使用的登入`VIEW SERVER STATE`權限可以使用最新版的 SSMS 連線。 (其他工具，例如`sqlcmd.exe`可以連接，而不`SELECT`權限`sys.dm_os_host_info`。)
 
   
@@ -66,7 +66,7 @@ FROM sys.dm_os_host_info;
  
  |host_platform |host_distribution |host_release |host_service_pack_level |host_sku |os_language_version |
  |----- |----- |----- |----- |----- |----- |
- |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
+ |視窗   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
 
 以下是在 Linux 上設定的範例結果：
  

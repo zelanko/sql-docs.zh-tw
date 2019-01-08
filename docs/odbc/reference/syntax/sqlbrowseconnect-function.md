@@ -20,16 +20,16 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d86f2aa373b120d2ecf1ea47b021b327fc57dc21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe1b9c7d3d93604e2f19de754ff25517ef23cb07
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651966"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211708"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ODBC  
+ 導入的版本：ODBC 1.0 標準的合規性：ODBC  
   
  **摘要**  
  **SQLBrowseConnect**支援探索和列舉的屬性和屬性值連接到資料來源所需的反覆式方法。 每次呼叫**SQLBrowseConnect**傳回後續的層級的屬性和屬性值。 當已經列舉所有層級時，在完成資料來源的連接而完整連接字串由**SQLBrowseConnect**。 傳回碼為 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，指出已指定所有連接資訊，以及應用程式現在已連接到資料來源。  

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 406b6b6602cb39fc7d4c979d68421e8122220442
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a808c1ece5e7fdecceadd22f881040466c38a9e9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653592"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210481"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>使用 IRowsetFastUpload 將資料傳送到 FILESTREAM 資料行 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47653592"
   
  執行此範例時，您必須傳遞伺服器的名稱或 server\instance_name，以及一個介於 4 MB (0x400001) 和 4 GB (0xFFFFFFFF) 之間的值，表示要寫入的資料量。  
   
- 第四個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單會刪除此範例所建立的資料庫。  
+ 第四個 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單會刪除此範例所建立的資料庫。  
   
 ```  
 // ISSHelper.h: interface for the CISSHelper class.  

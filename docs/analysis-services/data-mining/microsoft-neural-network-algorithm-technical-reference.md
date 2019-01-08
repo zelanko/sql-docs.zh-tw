@@ -1,5 +1,5 @@
 ---
-title: Microsoft 類神經網路演算法技術參考 |Microsoft 文件
+title: Microsoft 類神經網路演算法技術參考 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 76e71ae9c0ceb236c49df8e7fc8ec67713ef3e76
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a9895eb3e52c83c1ee3594b40fa7257fc53fd4d0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018241"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525491"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "34018241"
   
  **離散值**  
   
- `μ = p` (狀態的優先機率)  
+ `μ = p` -狀態的優先機率  
   
  `StdDev  = sqrt(p(1-p))`  
   
@@ -119,7 +119,7 @@ ms.locfileid: "34018241"
  HOLDOUT_SEED  
  在演算法隨機決定鑑效組資料時，指定用來植入虛擬隨機產生器的數字。 如果此參數設定為 0，此演算法會依據採礦模型的名稱產生種子，以保證在重新處理期間，模型內容保持不變。  
   
- 預設值是 0。  
+ 預設值為 0。  
   
  MAXIMUM_INPUT_ATTRIBUTES  
  決定在運用特徵選取之前可提供給演算法之輸入屬性的最大數目。 將此值設定為 0，會停用輸入屬性的特徵選取。  
@@ -174,7 +174,7 @@ ms.locfileid: "34018241"
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法支援下表所列的特定輸入資料行和可預測資料行。  
   
-|資料行|內容類型|  
+|「資料行」|內容類型|  
 |------------|-------------------|  
 |輸入屬性|Continuous、Cyclical、Discrete、Discretized、Key、Table 和 Ordered|  
 |可預測屬性|Continuous、Cyclical、Discrete、Discretized 和 Ordered|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],retrieving data
@@ -13,12 +12,12 @@ ms.assetid: af366697-6942-42bb-aea5-18fdef018965
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b19ad6aba7f81094c08a93c1bcccd1bca466f80d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc856bcee4aa873d2359c444af6147b0ca0909d0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193648"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762050"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>擷取與了解變更資料
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中，第一個工作是執行可擷取變更資料的查詢。 您可以在「資料流程」工作的來源元件內部執行這個查詢。 然後，您可以使用下游轉換和目的地，將變更資料套用到您的目的地。  
@@ -58,6 +57,6 @@ ms.locfileid: "48193648"
 ## <a name="next-step"></a>下一個步驟  
  設定 OLE DB 來源以擷取變更資料後，下一個步驟是開始在封裝中設計資料流程。  
   
- **下一個主題** [處理插入、更新與刪除](process-inserts-updates-and-deletes.md)  
+ **下一個主題：**[處理插入、更新與刪除作業](process-inserts-updates-and-deletes.md)  
   
   

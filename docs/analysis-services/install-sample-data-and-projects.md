@@ -1,5 +1,5 @@
 ---
-title: 安裝範例資料和專案 |Microsoft Docs
+title: 安裝 Analysis Services 範例資料和專案 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,30 +9,30 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0ec266a98e3a27dd277ccd9f790ae73d1793ec38
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: df7311aad9c356376fffafc8a4882af8e29e746b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057966"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072725"
 ---
 # <a name="install-sample-data-and-multidimensional-projects"></a>安裝範例資料和多維度專案 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
 
 若要安裝 Analysis Services 教學課程中所使用的資料和專案檔案中使用的指示與本文章中提供的連結。 
   
-## <a name="step-1-install-prerequisites"></a>步驟 1： 安裝必要條件 
+## <a name="step-1-install-prerequisites"></a>步驟 1：安裝必要條件 
 本教學課程中的課程假設您已安裝下列軟體。 您可以在單一電腦上安裝的所有功能。 若要安裝這些功能，請執行 SQL Server 安裝程式，並從 [特徵選取] 頁面中選取這些功能。  
   
 -   SQL Server Database Engine  
   
 -   SQL Server Analysis Services (SSAS) 
   
-    Analysis Services 僅適用於下列版本：Evaluation、Enterprise、Business Intelligence、Standard。 Azure Analysis Services 中不支援多維度模型。
+    Analysis Services 會在下列版本：Evaluation、 Enterprise、 Business Intelligence、 Standard。 Azure Analysis Services 中不支援多維度模型。
   
     預設情況下，Analysis Services 2016 和更新版本會安裝成表格式執行個體，您可以選擇覆寫多維度伺服器模式中的伺服器安裝精靈 的 組態 頁面。
   
-## <a name="step-2-download-and-install-developer-and-management-tools"></a>步驟 2： 下載並安裝開發人員和管理工具
+## <a name="step-2-download-and-install-developer-and-management-tools"></a>步驟 2：下載並安裝開發人員和管理工具
 SQL Server Data Tools (SSDT) for Visual Studio 會下載並與其他 SQL Server 功能分開安裝。 設計工具和用來建立 BI 模型和報表的專案範本會包含在 SSDT for Visual Studio 2015，或做為[Nuget 套件](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)for Visual Studio 2017。  
   
 [下載 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=827542)。   
@@ -45,10 +45,10 @@ SQL Server Management Studio (SSMS) 是下載並與其他 SQL Server 功能分�
   
 或者，您可以使用內建到 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的內建 MDX 查詢設計工具來瀏覽資料。 查詢設計工具會傳回相同的資料，但以一般資料列集呈現的資料除外。  
   
-## <a name="step-3-install-databases"></a>步驟 3： 安裝資料庫  
+## <a name="step-3-install-databases"></a>步驟 3：安裝資料庫  
 Analysis Services 多維度模型使用您從關聯式資料庫管理系統匯入的交易資料。 基於本教學課程的目的，您可以使用下列關聯式資料庫做為資料來源。  
   
--   **AdventureWorksDW2012 或更新版本**– 這是 Database Engine 執行個體執行的關聯式資料倉儲。 它提供 Analysis Services 資料庫和專案的建置和部署教學課程所使用的原始資料。 此教學課程假設您使用的 AdventureWorksDW2012，不過，更新版本執行的工作。
+-   **AdventureWorksDW2012 或更新版本**-這是 Database Engine 執行個體執行的關聯式資料倉儲。 它提供 Analysis Services 資料庫和專案的建置和部署教學課程所使用的原始資料。 此教學課程假設您使用的 AdventureWorksDW2012，不過，更新版本執行的工作。
   
     您可以使用這個範例資料庫用於[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]和更新版本。 在一般，您應該使用符合您的資料庫引擎版本範例資料庫版本。
   
@@ -62,7 +62,7 @@ Analysis Services 多維度模型使用您從關聯式資料庫管理系統匯�
   
 4.  還原資料庫。  
   
-## <a name="step-4-grant-database-permissions"></a>步驟 4： 授與資料庫權限  
+## <a name="step-4-grant-database-permissions"></a>步驟 4：Grant 資料庫權限  
 範例專案會使用指定匯入或處理資料所使用之安全性內容的資料來源模擬設定。 根據預設，模擬設定會指定 Analysis Services 服務帳戶來存取資料。 若要使用此預設設定，您必須確定執行 Analysis Services 的服務帳戶具有資料讀取器權限**AdventureWorksDW**資料庫。  
   
 > [!NOTE]  
@@ -80,7 +80,7 @@ Analysis Services 多維度模型使用您從關聯式資料庫管理系統匯�
   
 6.  選取此核取方塊旁**AdventureWorksDW**資料庫。 角色成員資格應該會自動包含 **db_datareader** 和 **public**。 按一下 [確定]，接受預設值。  
   
-## <a name="step-5-install-projects"></a>步驟 5： 安裝專案  
+## <a name="step-5-install-projects"></a>步驟 5：安裝專案  
 
 教學課程包含範例專案，讓您可以對照完成的專案比較您的結果，或開始順序中比較後面的課程。  
   
@@ -88,7 +88,7 @@ Analysis Services 多維度模型使用您從關聯式資料庫管理系統匯�
   
     本教學課程專案適用於[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]和更新版本。  
   
-2.  將 .zip 檔案移至根磁碟機的正下方資料夾 (例如 C:\Tutorial)。 如果您嘗試解壓縮 [下載] 資料夾中的檔案，此步驟會防止「路徑太長」的錯誤。  
+2.  將 .zip 檔案移至根磁碟機的正下方資料夾 (例如 C:\Tutorial)。 此步驟中可以降低 「 路徑太長 」 錯誤，有時候就會發生，如果您嘗試解壓縮 [下載] 資料夾中的檔案。  
   
 3.  解壓縮範例專案、以滑鼠右鍵按一下該檔案，然後選取 [全部解壓縮]。 之後將檔案解壓縮，您應該會有資料夾第 1 課 2、 3、 5、 6、 7、 8、 9、 10 完成和 Lesson 4 Start。 
   

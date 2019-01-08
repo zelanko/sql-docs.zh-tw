@@ -20,16 +20,16 @@ ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d02e60d22f2e3489c7cd7943f7f0ed2fa26fd89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf81d013ccf449288791b1875752d5b6067770a1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848876"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207597"
 ---
 # <a name="sqlremovetranslator-function"></a>SQLRemoveTranslator 函式
 **合規性**  
- 版本導入： ODBC 3.0  
+ 導入的版本：ODBC 3.0  
   
  **摘要**  
  **SQLRemoveTranslator**移除轉譯器的相關資訊 Odbcinst.ini 這一節的系統資訊和遞減，轉譯器元件使用計數 1。  

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf9299896fb03ea8eb947b5fb5ab9f1967e7d7c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfd6485955cbdee7bece7ae8ab18c5138a5529f3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649199"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403533"
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,13 +64,13 @@ ms.locfileid: "47649199"
 |**last_elapsed_time**|**bigint**|這個觸發程序最近完成執行經歷的時間 (以微秒為單位)。|  
 |**min_elapsed_time**|**bigint**|最小耗用時間 （毫秒），此觸發程序的任何已完成執行。|  
 |**max_elapsed_time**|**bigint**|耗用時間上限，以百萬分之一秒為單位，任何在完成執行的此觸發程序。| 
-|**total_spills**|**bigint**|編譯以來執行此觸發程序溢出的頁面總數。<br /><br /> **適用於**： 從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**last_spills**|**bigint**|頁數溢出最後一個觸發程序執行的時間。<br /><br /> **適用於**： 從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**min_spills**|**bigint**|此觸發程序曾經有在單次執行期間溢出的頁面最小數目。<br /><br /> **適用於**： 從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
-|**max_spills**|**bigint**|此觸發程序曾經有在單次執行期間溢出的頁面數目上限。<br /><br /> **適用於**： 從[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**total_spills**|**bigint**|編譯以來執行此觸發程序溢出的頁面總數。<br /><br /> **適用於**：從開始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**last_spills**|**bigint**|頁數溢出最後一個觸發程序執行的時間。<br /><br /> **適用於**：從開始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**min_spills**|**bigint**|此觸發程序曾經有在單次執行期間溢出的頁面最小數目。<br /><br /> **適用於**：從開始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
+|**max_spills**|**bigint**|此觸發程序曾經有在單次執行期間溢出的頁面數目上限。<br /><br /> **適用於**：從開始[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
   
 ## <a name="remarks"></a>備註  
- 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，動態管理檢視不可以公開可能會影響資料庫內含項目的資訊或公開有關使用者可存取之其他資料庫的資訊。 為了避免公開此資訊，包含不屬於連接租用戶之資料的每個資料列都會被篩選出來。  
+ 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，動態管理檢視不可以公開可能會影響資料庫內含項目的資訊或公開有關使用者可存取之其他資料庫的資訊。 若要避免公開此資訊，每個資料列，其中包含不屬於連接租用戶的資料會被篩選掉。  
 
 完成查詢時，會更新檢視中的統計資料。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],processing data
@@ -13,12 +12,12 @@ ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7cf579c8839b2f990486f9bf5dcca1700dac50e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22c944306fd73b6acd2dc2d107d5bfdff69d1439
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066408"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804903"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>處理插入、更新與刪除
   在執行累加式變更資料載入之 Integration Services 封裝的資料流程中，第二個工作是分隔插入、更新與刪除。 然後，您可以使用適當的命令，將其套用到目的地。  
@@ -68,7 +67,7 @@ select
 ## <a name="next-step"></a>下一個步驟  
  分割要處理的資料列後，下一個步驟是將變更套用到目的地。  
   
- **下一個主題︰** [將變更套用到目的地](apply-the-changes-to-the-destination.md)  
+ **下一個主題：**[將變更套用到目的地](apply-the-changes-to-the-destination.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [條件式分割轉換](../data-flow/transformations/conditional-split-transformation.md)   

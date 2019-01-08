@@ -1,5 +1,5 @@
 ---
-title: 從採礦模型刪除篩選器 |Microsoft 文件
+title: 從採礦模型刪除篩選器 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fb3897d851c398b9703bf9514fc36cf30922727d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 66293cf1be2ced3106e2966a930639c12330a660
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014395"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545656"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>從採礦模型刪除篩選
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "34014395"
 3.  按退格鍵或 Delete 鍵。  
   
 ## <a name="see-also"></a>另請參閱  
- [從採礦模型鑽研到案例資料](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)   
- [採礦模型的工作與操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [篩選採礦模型 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [鑽研採礦模型的案例資料](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)   
+ [採礦模型工作和使用說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

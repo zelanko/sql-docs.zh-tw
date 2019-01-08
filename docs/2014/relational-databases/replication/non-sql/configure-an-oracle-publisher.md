@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], configuring
@@ -13,12 +12,12 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3a84224e68be8b5d4c5ad9fcd3f2be1ddce78fdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057458"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804437"
 ---
 # <a name="configure-an-oracle-publisher"></a>設定 Oracle 發行者
   「Oracle 發行者」之發行集的建立方式與典型的快照式及交易式發行集的建立方式相同，但是在從「Oracle 發行者」端建立發行集之前，您必須完成下列步驟 (步驟一、三和四在本主題中有詳細描述)：  
@@ -123,7 +122,7 @@ ms.locfileid: "48057458"
 > [!NOTE]  
 >  Oracle 發行者的名稱不能與其 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者相同，也不能與使用同一散發者的任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行者相同。  
   
- 將 Oracle 資料庫視為「發行者」時，您必須選擇 Oracle 發行選項：[完整] 或 [Oracle 閘道]。 識別發行者之後，除非卸除並重新設定發行者，否則無法變更此選項。 [完整] 選項設計用於為 Oracle 發行提供具備全部支援功能的快照式和交易式發行集。 [Oracle 閘道] 選項在複寫充當系統間閘道的情況下提供特定的設計最佳化以增進效能。  
+ 當您識別為 「 發行者 」 的 Oracle 資料庫時，您必須選擇 Oracle 發行選項：完成或 Oracle Gateway。 識別發行者之後，除非卸除並重新設定發行者，否則無法變更此選項。 [完整] 選項設計用於為 Oracle 發行提供具備全部支援功能的快照式和交易式發行集。 [Oracle 閘道] 選項在複寫充當系統間閘道的情況下提供特定的設計最佳化以增進效能。  
   
  在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端識別「Oracle 發行者」後，複寫會建立名稱與 Oracle 資料庫之 TNS 服務名稱相同的連結伺服器。 此連結伺服器只能由複寫使用。 若您必須透過連結伺服器連線來連接到 Oracle 發行者，請建立另一個 TNS 服務名稱，然後在呼叫 [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) 時使用這個名稱。  
   

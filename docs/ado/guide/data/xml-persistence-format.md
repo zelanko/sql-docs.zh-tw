@@ -13,12 +13,12 @@ ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b6acbf2f674abd60e2cfc55600d04a727e9647b9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0f794267904ec1c84595b4b627722a1ca935c15a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600189"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211007"
 ---
 # <a name="xml-persistence-format"></a>XML 保存格式
 ADO 使用 utf-8 編碼方式，它會保存為 XML 資料流。  
@@ -32,36 +32,36 @@ ADO 使用 utf-8 編碼方式，它會保存為 XML 資料流。
 xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"   
 xmlns:rs="urn:schemas-microsoft-com:rowset"   
 xmlns:z="#RowsetSchema">   
-  <s:Schema id="RowsetSchema">   
-    <s:ElementType name="row" content="eltOnly" rs:updatable="true">   
-      <s:AttributeType name="ShipperID" rs:number="1"   
-        rs:basetable="shippers" rs:basecolumn="ShipperID"  
-        rs:keycolumn="true">   
-        <s:datatype dt:type="int" dt:maxLength="4" rs:precision="10"   
-          rs:fixedlength="true" rs:maybenull="false"/>   
-      </s:AttributeType>   
-      <s:AttributeType name="CompanyName" rs:number="2"   
-        rs:nullable="true" rs:write="true" rs:basetable="shippers"   
-        rs:basecolumn="CompanyName">   
-        <s:datatype dt:type="string" dt:maxLength="40" />   
-      </s:AttributeType>   
-      <s:AttributeType name="Phone" rs:number="3" rs:nullable="true"   
-        rs:write="true" rs:basetable="shippers"   
-        rs:basecolumn="Phone">   
-        <s:datatype dt:type="string" dt:maxLength="24"/>   
-      </s:AttributeType>   
-      <s:extends type="rs:rowbase"/>   
-    </s:ElementType>   
-  </s:Schema>   
+  <s:Schema id="RowsetSchema">   
+    <s:ElementType name="row" content="eltOnly" rs:updatable="true">   
+      <s:AttributeType name="ShipperID" rs:number="1"   
+        rs:basetable="shippers" rs:basecolumn="ShipperID"  
+        rs:keycolumn="true">   
+        <s:datatype dt:type="int" dt:maxLength="4" rs:precision="10"   
+          rs:fixedlength="true" rs:maybenull="false"/>   
+      </s:AttributeType>   
+      <s:AttributeType name="CompanyName" rs:number="2"   
+        rs:nullable="true" rs:write="true" rs:basetable="shippers"   
+        rs:basecolumn="CompanyName">   
+        <s:datatype dt:type="string" dt:maxLength="40" />   
+      </s:AttributeType>   
+      <s:AttributeType name="Phone" rs:number="3" rs:nullable="true"   
+        rs:write="true" rs:basetable="shippers"   
+        rs:basecolumn="Phone">   
+        <s:datatype dt:type="string" dt:maxLength="24"/>   
+      </s:AttributeType>   
+      <s:extends type="rs:rowbase"/>   
+    </s:ElementType>   
+  </s:Schema>   
   
-  <rs:data>   
-    <z:row ShipperID="1" CompanyName="Speedy Express"   
-      Phone="(503) 555-9831"/>   
-    <z:row ShipperID="2" CompanyName="United Package"   
-      Phone="(503) 555-3199"/>   
-    <z:row ShipperID="3" CompanyName="Federal Shipping"   
-      Phone="(503) 555-9931"/>   
-  </rs:data>   
+  <rs:data>   
+    <z:row ShipperID="1" CompanyName="Speedy Express"   
+      Phone="(503) 555-9831"/>   
+    <z:row ShipperID="2" CompanyName="United Package"   
+      Phone="(503) 555-3199"/>   
+    <z:row ShipperID="3" CompanyName="Federal Shipping"   
+      Phone="(503) 555-9931"/>   
+  </rs:data>   
 </xml>  
 ```  
   

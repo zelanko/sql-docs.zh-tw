@@ -10,18 +10,18 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 448c9de27422c01d68602c00945b1ea72bcddd61
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: e48d40d78c25431fd6e5592dacfa410723b31f82
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400911"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617958"
 ---
 # <a name="configure-auto-statistics"></a>設定自動統計資料
 
 了解如何設定要用於建立和自動更新統計資料的自動統計資料的平行處理資料倉儲。  使用這項功能來改善查詢計劃，並因而改善查詢效能。
 
-**適用於：** AP （從 2016 AU7 開始）
+**適用於：** APS （從 2016 AU7 開始）
 
 ## <a name="what-are-statistics"></a>統計資料有哪些？
 查詢最佳化統計資料是包含資料表的一個或多個資料行中值分佈的統計資訊的物件。 查詢最佳化工具會使用這些統計資料來預估基數，或數字的資料列，在查詢中產生結果。 這些的基數估計值，讓查詢最佳化工具建立高品質的查詢計劃。 例如，在 AP，MPP 查詢最佳化工具使用基數估計值選擇隨機播放或複寫中較小的兩個資料表，用在 join 子句，並在此情況下會改善查詢效能。  如需詳細資訊，請參閱 <<c0> [ 統計資料](../relational-databases/statistics/statistics.md)和[DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)

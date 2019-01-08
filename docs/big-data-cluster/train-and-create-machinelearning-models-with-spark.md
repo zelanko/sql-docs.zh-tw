@@ -1,25 +1,27 @@
 ---
-title: 訓練及建立 Spark 機器學習服務模型
-description: 使用 PySpark 來定型和建立 Spark 機器學習服務模型 |SQL Server
-services: SQL Server 2019 Big Data Cluster Spark
-ms.service: SQL Server 2019 Big Data Cluster Spark
+title: 使用 Spark 的訓練/建立 ML 模型
+titleSuffix: SQL Server 2019 big data clusters
+description: 使用 PySpark 來訓練及 SQL Server 的巨量資料叢集 （預覽） 上建立 Spark 機器學習服務模型。
 author: lgongmsft
 ms.author: shivprashant
+ms.manager: craigg
 ms.reviewer: jroth
-ms.custom: ''
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/10/2018
-ms.openlocfilehash: fceced831ba7b100f29e2fc70811f50c95b1b715
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.prod: sql
+ms.custom: seodec18
+ms.openlocfilehash: c1a23ebb390c2276d1ce47c2936b8fe682a4e9b7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753485"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213097"
 ---
 # <a name="train-and-create-machine-learning-models-with-spark"></a>訓練及建立 Spark 機器學習服務模型
+
 在巨量資料的 SQL Server 叢集的 Spark 可讓人工智慧和機器學習服務。 此範例會示範如何訓練機器學習模型使用 Python 中使用資料的 Spark (PySpark) 儲存在 HDFS。 
 
-此範例是有可用的程式碼片段的逐步解說指南，從 Azure Data Studio Notebook 和每個資料格執行一個步驟一次。 如需如何從 notebook 與 Spark 連接的詳細資訊，請參閱 [這裡] (notebook guidance.md)
+此範例是有可用的程式碼片段的逐步解說指南，從 Azure Data Studio Notebook 和每個資料格執行一個步驟一次。 如需如何從 notebook 與 Spark 連接的詳細資訊，請參閱[這裡](notebooks-guidance.md)
 
 在範例中︰
 
@@ -33,11 +35,9 @@ ms.locfileid: "50753485"
 
 E2E 機器學習服務牽涉到數個額外的步驟、 例如、 資料探索、 功能選取項目和主體元件分析、 模型選取項目。 為求簡單明瞭這裡忽略其中許多步驟。
 
-
 ## <a name="step-1---understanding-the-data-and-prediction-desired"></a>步驟 1-了解資料和所需的預測
 
 這個範例會使用收入資料成人人口普查[此處]( https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv )。 在  `AdultCensusIncome.csv`、 每個資料列都代表收入範圍和其他特性，例如 age，每週時數教育、 職業等等的指定成人。 建立模型，如果可預測的收入範圍。 會採用存留期和小時每週做為特徵的模型，並將其預測如果收入 > 50k 或 < 50 k。 
-
 
 ## <a name="step-2---upload-the-data-to-hdfs-and-basic-explorations-on-data"></a>步驟 2-將資料上傳至 HDFS 和基本資料上的探勘
 從 Azure Data Studio 連接到 HDFS/Spark 閘道，並建立名為的目錄`spark_ml`下 HDFS。 下載[AdultCensusIncome.csv]( https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv )您的本機電腦和上的傳至 HDFS。 上傳`AdultCensusIncome.csv`至您所建立的資料夾。
@@ -85,7 +85,6 @@ data = data_all.select(select_cols)
 
 ```
 
-
 ## <a name="step-4---split-as-training-and-test-set"></a>步驟 4-分割為訓練和測試集
 
 來定型模型和 25%，以評估模型的其餘部分使用的資料列的 75%。 此外，保存定型和測試資料集，HDFS 儲存體。 步驟並非必要，但要示範顯示儲存及載入以 ORC 格式。 其他格式，例如`Parquet `也可以使用。
@@ -109,9 +108,8 @@ print("train and test datasets saved to {} and {}".format(train_data_path, test_
 
 ```
 
-
 ## <a name="step-5---put-together-a-pipeline-and-build-a-model"></a>步驟 5-匯集了管線和建立模型
-[Spark ML 管線]( https://spark.apache.org/docs/2.3.1/ml-pipeline.html ) 允許順序做為工作流程的所有步驟，並讓您更輕鬆地試驗不同的演算法和其參數。 下列程式碼先建構階段，並接著將這些階段一起放在 Ml 管線。  LogisticRegression 用來建立模型。
+[Spark ML 管線](https://spark.apache.org/docs/2.3.1/ml-pipeline.html)允許順序做為工作流程的所有步驟，並讓您更輕鬆地試驗不同的演算法和其參數。 下列程式碼先建構階段，並接著將這些階段一起放在 Ml 管線。  LogisticRegression 用來建立模型。
 
 ```python
 from pyspark.ml import Pipeline, PipelineModel
@@ -211,6 +209,6 @@ assert str(model2) == str(model)
 print("loaded model from {}".format(model_fs))
 ```
 
-## <a name="references"></a>參考
-1. 開始使用 PySpark notebook，請參閱[這裡。](notebooks-guidance.md)
+## <a name="next-steps"></a>後續步驟
 
+如需有關如何開始使用 PySpark notebook 的詳細資訊，請參閱 <<c0> [ 如何使用 notebook](notebooks-guidance.md)。

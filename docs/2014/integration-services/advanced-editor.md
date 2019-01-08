@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.advancededitor.columnmappings.f1
@@ -17,12 +16,12 @@ ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 85155dec153c3d50f12efd5ddb9ada2c6d0a73a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43cf4ea4b228226bb12be8a47befd6f55513c40d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178038"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756790"
 ---
 # <a name="advanced-editor"></a>進階編輯器
   使用 **[進階編輯器]** 對話方塊設定所選取之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件的屬性。  

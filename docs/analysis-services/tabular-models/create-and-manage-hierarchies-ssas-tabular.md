@@ -1,5 +1,5 @@
 ---
-title: 建立及管理階層 |Microsoft 文件
+title: 建立及管理 Analysis Services 表格式模型中的階層 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c9282c3b28ca5998cc21d2906f06d50f862e49a9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5e9e5fc942aa7b03cd4cb9a15d8b474a12f12a8d
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044832"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072595"
 ---
 # <a name="create-and-manage-hierarchies"></a>建立及管理階層 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34044832"
   
 2.  輸入階層的名稱。  
   
- 您可以將額外的資料行拖曳至階層的父層級中，以複製資料行。 將子層級置於階層中要顯示的位置。  
+ 您可以將其他資料行拖曳到您的階層父層級，這會將複製的資料行。 將子層級置於階層中要顯示的位置。  
   
 > [!NOTE]  
 >  如果您複選量值及一個或多個資料行，或者選取多個資料表的資料行，即會停用內容功能表中的 [建立階層] 命令。  
@@ -95,7 +95,7 @@ ms.locfileid: "34044832"
   
 ## <a name="see-also"></a>另請參閱  
  [表格式模型設計師 ](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
- [階層架構](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
+ [階層](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
  [量值](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 父子式維度 |Microsoft 文件
+title: 父子式維度 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a9f9cda883822d093db624a4580a94093120ba41
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6f9990103da1de5107ceaf3432f4da2a9a4486c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021425"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510206"
 ---
 # <a name="parent-child-dimension"></a>父子式維度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34021425"
   
  然而，父子式維度會檢查維度主資料表所含的資料，然後評估資料表中之記錄間的父子式關聯性，以建構父子式階層。 如需父子式階層的詳細資訊，請參閱 [使用者階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)。  
   
- 父子式階層並不會從用來建立階層的屬性中，衍生出父子式階層中的層級名稱。 這些維度會改為使用命名範本以自動建立層級名稱，這個命名範本是您在父屬性之層級指定的字串運算式，而父屬性會控制屬性產生屬性階層的方式。 如需如何設定父屬性之命名範本的詳細資訊，請參閱 [屬性和屬性階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
+ 父子式階層並不會從用來建立階層的屬性中，衍生出父子式階層中的層級名稱。 相反地，這些維度建立層級名稱會自動使用命名範本的字串運算式，您可以在指定的父屬性，控制如何將屬性產生屬性階層的層級。 如需如何設定父屬性之命名範本的詳細資訊，請參閱 [屬性和屬性階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
   
 ## <a name="data-members"></a>資料成員  
  通常，維度中的分葉成員會包含直接衍生自基礎資料來源的資料，而非分葉成員則會包含衍生自子成員上所執行之彙總的資料。  

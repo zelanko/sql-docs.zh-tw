@@ -13,12 +13,12 @@ ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3200f4c83511f176c4d23af34f398a76047fe9a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ca0a5094e40f13aef4b4f87d5642e51e7a9b765
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701081"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523438"
 ---
 # <a name="asynchronous-execution-polling-method"></a>非同步執行 (輪詢方法)
 之前 ODBC 3.8，而且 Windows 7 SDK，只被允許陳述式的函式的非同步作業。 如需詳細資訊，請參閱 <<c0>  **非同步執行陳述式作業**稍後在本主題中。  
@@ -135,9 +135,9 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 }  
 ```  
   
- 當應用程式呼叫的函式，來判斷是否仍在執行以非同步方式時，它必須使用原始的陳述式控制代碼。 這是因為非同步執行會追蹤每個陳述式為基礎。 應用程式也必須提供有效的引數的值 — 原始的引數會執行，以通過檢查驅動程式管理員時發生錯誤。 不過，驅動程式會檢查陳述式控制代碼，並判斷該陳述式會以非同步方式執行之後，它就會忽略所有其他引數。  
+ 當應用程式呼叫的函式，來判斷是否仍在執行以非同步方式時，它必須使用原始的陳述式控制代碼。 這是因為非同步執行會追蹤每個陳述式為基礎。 應用程式也必須提供有效的值，其他引數： 原始的引數的作用為何-通過檢查驅動程式管理員時發生錯誤。 不過，驅動程式會檢查陳述式控制代碼，並判斷該陳述式會以非同步方式執行之後，它就會忽略所有其他引數。  
   
- 以非同步方式執行函式時，也就是它已傳回 SQL_STILL_EXECUTING 之後之前, 它會傳回不同的程式碼 — 應用程式可以呼叫來取消它**SQLCancel**或**SQLCancelHandle**具有相同的陳述式控制代碼。 這不保證取消函式執行。 例如，可能已經完成函式。 此外，程式碼會由**SQLCancel**或是**SQLCancelHandle**只會指出是否要取消此函式的嘗試成功，不是它實際取消函式是否。 若要判斷函式是否已取消，應用程式會再次呼叫此函式。 如果函式已取消，則會傳回 SQL_ERROR，而且 SQLSTATE HY008 （已取消的作業）。 如果未取消函式，它會傳回另一個程式碼，例如 SQL_SUCCESS、 SQL_STILL_EXECUTING 或 sql_error，其中包含不同的 SQLSTATE。  
+ 以非同步方式-執行函式時，也就是它已傳回 SQL_STILL_EXECUTING 後之前它會傳回不同的程式碼-, 應用程式可以取消它藉由呼叫**SQLCancel**或**SQLCancelHandle**具有相同的陳述式控制代碼。 這不保證取消函式執行。 例如，可能已經完成函式。 此外，程式碼會由**SQLCancel**或是**SQLCancelHandle**只會指出是否要取消此函式的嘗試成功，不是它實際取消函式是否。 若要判斷函式是否已取消，應用程式會再次呼叫此函式。 如果函式已取消，則會傳回 SQL_ERROR，而且 SQLSTATE HY008 （已取消的作業）。 如果未取消函式，它會傳回另一個程式碼，例如 SQL_SUCCESS、 SQL_STILL_EXECUTING 或 sql_error，其中包含不同的 SQLSTATE。  
   
  若要停用的特定陳述式的非同步執行，當驅動程式支援的陳述式層級非同步處理，應用程式會呼叫**SQLSetStmtAttr** SQL_ATTR_ASYNC_ENABLE 屬性，並將它設定為 SQL_ASYNC_ENABLE_OFF。 如果驅動程式支援連接層級非同步處理，應用程式會呼叫**SQLSetConnectAttr**將 SQL_ATTR_ASYNC_ENABLE 設定為 SQL_ASYNC_ENABLE_OFF，停用的所有陳述式的非同步執行連接。  
   

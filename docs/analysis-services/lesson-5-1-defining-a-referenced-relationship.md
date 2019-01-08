@@ -1,5 +1,5 @@
 ---
-title: 定義參考的關聯性 |Microsoft 文件
+title: 定義參考關聯性 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e7d27a648f91448cd6c53f34149851b255aa6aa2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 032756aefd5b84e030435152cc759a0b86c2fa18
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018685"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507620"
 ---
-# <a name="lesson-5-1---defining-a-referenced-relationship"></a>課程 5-1-定義參考的關聯性
+# <a name="lesson-5-1---defining-a-referenced-relationship"></a>課程 5-1-定義參考關聯性
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 本教學課程最特別要注意的事就是，您定義的每一個 Cube 維度所依據的資料表，是透過主索引鍵對外部索引鍵的關聯性，直接連結到量值群組的事實資料表。 在本主題的工作中，您會透過 [轉售商] 維度 (稱為「參考維度」)，將 [地理位置] 維度連結到事實資料表。 這樣可讓使用者按地理位置建立轉售商銷售的維度。 如需詳細資訊，請參閱 [定義參考的關聯性及參考的關聯性屬性](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
@@ -31,7 +31,7 @@ ms.locfileid: "34018685"
   
     請注意，[區域] 階層中的 [國家地區] 屬性成員未正確設定 [轉售商銷售 - 銷售量] 量值的維度。 針對每個 [國家地區] 屬性成員，[轉售商銷售 - 銷售量] 的值會重複。  
   
-    ![建立轉售商銷售-銷售量的量值維度](../analysis-services/media/l5-referencedrelationship-1.gif "建立維度 Reseller Sales-sales Amount 量值")  
+    ![建立維度的轉售商銷售-銷售量 量值](../analysis-services/media/l5-referencedrelationship-1.gif "建立維度 Reseller Sales-sales Amount 量值")  
   
 4.  請針對 **Adventure Works DW 2012** 資料來源檢視，開啟資料來源檢視設計師。  
   
@@ -47,17 +47,17 @@ ms.locfileid: "34018685"
   
     請注意，目前 [地理位置] Cube 維度與 [網際網路銷售] 量值群組或 [轉售商銷售] 量值群組之間沒有關聯性。  
   
-8.  按一下 [全名] 資料格中的省略符號按鈕 (**…**)，這個資料格位於 [客戶] 維度和 [網際網路銷售] 量值群組的交集處。  
+8.  按一下省略符號按鈕 (**...**) 中**全名**交集處的儲存格**客戶**維度和**網際網路銷售**量值群組。  
   
     請注意，在 [定義關聯性] 對話方塊中，[DimCustomer] 維度資料表和 [FactInternetSales] 量值群組資料表之間定義的 [一般] 關聯性，是依據這些資料表中的 [CustomerKey] 資料行。 到目前為止，您在這個教學課程中定義的所有關聯性都是一般關聯性。  
   
     下圖顯示 [定義關聯性] 對話方塊，其中在 [DimCustomer] 維度資料表和 [FactInternetSales] 量值群組資料表之間有一般關聯性。  
   
-    ![定義關聯性對話方塊](../analysis-services/media/l5-referencedrelationship-4.gif "定義關聯性對話方塊")  
+    ![定義關聯性 對話方塊](../analysis-services/media/l5-referencedrelationship-4.gif "定義關聯性對話方塊")  
   
 9. 按一下 [取消]。  
   
-10. 按一下未命名的資料格中的省略符號按鈕 (**…**)，這個資料格位於 [地理位置] 維度和 [轉售商銷售] 量值群組的交集處。  
+10. 按一下省略符號按鈕 (**...**) 中未命名的儲存格的交集處**地理**維度和**轉售商銷售**量值群組。  
   
     在 [定義關聯性] 對話方塊中，請注意，[地理位置] Cube 維度和 [轉售商銷售] 量值群組之間目前並未定義關聯性。 您不能定義一般關聯性，因為 [Geography] 維度的維度資料表和 [Reseller Sales] 量值群組的事實資料表之間沒有直接關聯性。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "34018685"
   
     [Reseller] 維度中的 [Geography Key] 屬性只用來連結 [Geography] 維度與 [Reseller Sales] 事實資料表。 因為它不用於瀏覽，所以定義這個屬性階層的值沒有一個會顯示出來。 而且，屬性階層的排序和最佳化對處理效能只有負面影響。 不過，必須啟用屬性才能做為兩個維度之間的連結。  
   
-4.  請針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程的 Cube，切換到 [Cube 設計師]，按一下 [維度使用方式] 索引標籤，然後按一下 [轉售商銷售] 量值群組和 [地理位置] Cube 維度的交集處的省略符號按鈕 (**…**)。  
+4.  切換到 Cube 設計師[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]教學課程 cube，按一下**維度使用方式**索引標籤，然後再按一下省略符號按鈕 (**...**) 的交集處**轉售商銷售**量值群組和**Geography** cube 維度。  
   
 5.  在 [選取關聯性類型] 清單中，選取 [參考的]。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "34018685"
   
     請注意，已選取 [具體化] 核取方塊。 這項設定是 MOLAP 維度的預設值。 具體化維度屬性連結，會在處理期間使事實資料表與每個資料列的參考維度之間的連結值具體化，或是儲存在維度的 MOLAP 結構中。 這對處理效能及儲存體需求上會有一點影響，但會提升 (偶爾也會大幅提升) 查詢效能。  
   
-8.  按一下 **[確定]**。  
+8.  按一下 [確定] 。  
   
     請注意，[地理位置] Cube 維度現在是連結到 [轉售商銷售] 量值群組。 這個圖示指出其關聯性是參考維度關聯性。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "34018685"
   
     請注意，[地理位置] 使用者定義階層的 [國家地區] 屬性現在已正確設定 [轉售商銷售 - 銷售量] 量值的維度，如下圖所示。  
   
-    ![定義關聯性對話方塊](../analysis-services/media/l5-referencedrelationship-5.gif "定義關聯性對話方塊")  
+    ![定義關聯性 對話方塊](../analysis-services/media/l5-referencedrelationship-5.gif "定義關聯性對話方塊")  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [定義事實關聯性](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  

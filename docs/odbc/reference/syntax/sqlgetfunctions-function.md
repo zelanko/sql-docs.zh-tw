@@ -20,16 +20,16 @@ ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98fb29265c17970fbcef0f21778d7a9130e52771
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644516"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206967"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ISO 92  
+ 導入的版本：ODBC 1.0 標準的合規性：ISO 92  
   
  **摘要**  
  **SQLGetFunctions**傳回驅動程式是否支援特定的 ODBC 函式的相關資訊。 此函式被實作在驅動程式管理員;它也可以實作驅動程式中。 如果驅動程式會實作**SQLGetFunctions**，驅動程式管理員驅動程式中呼叫函式。 否則，它會執行函式本身。  
@@ -83,7 +83,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="comments"></a>註解  
  **SQLGetFunctions**一律會傳回所**SQLGetFunctions**， **SQLDataSources**，和**SQLDrivers**支援。 這是因為會實作這些函式可以在驅動程式管理員。 驅動程式管理員會將 ANSI 函式對應至對應的 Unicode 函式，如果 Unicode 函式存在，而且如果 ANSI 函式存在，將對應 Unicode 函式的對應的 ANSI 函式。 如需有關如何使用應用程式資訊**SQLGetFunctions**，請參閱[介面一致性層級](../../../odbc/reference/develop-app/interface-conformance-levels.md)。  
   
- 下列是有效值的清單*FunctionId*符合 ISO 92 標準-相容性層級的函式：  
+ 下列是有效值的清單*FunctionId*符合 ISO 92 標準相容性層級的函式：  
   
 |FunctionId 值|FunctionId 值|  
 |----------|----------|  
@@ -109,14 +109,14 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLGETCURSORNAME|SQL_API_SQLSETSTMTATTR|  
 |SQL_API_SQLGETDATA| |  
   
- 下列是有效值的清單*FunctionId*符合 Open Group 標準-相容性層級的函式：  
+ 下列是有效值的清單*FunctionId*符合 Open Group 標準相容性層級的函式：  
   
 |FunctionId 值|FunctionId 值|  
 |-|-|  
 |SQL_API_SQLCOLUMNS|SQL_API_SQLSTATISTICS|  
 |SQL_API_SQLSPECIALCOLUMNS|SQL_API_SQLTABLES|  
   
- 下列是有效值的清單*FunctionId*符合 ODBC 標準-相容性層級的函式。  
+ 下列是有效值的清單*FunctionId*符合 ODBC 標準相容性層級的函式。  
   
 |FunctionId 值|FunctionId 值|  
 |-|-|  
@@ -142,7 +142,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS 巨集  
  SQL_FUNC_EXISTS (*SupportedPtr*， *FunctionID*) 巨集用來判斷支援的 ODBC 3 *.x*或先前的函式之後**SQLGetFunctions**已使用呼叫*FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS 引數。 應用程式會呼叫與 SQL_FUNC_EXISTS *SupportedPtr*引數設定為*SupportedPtr*傳入*SQLGetFunctions*，並使用*FunctionID*引數設定為 **#define**函式。 SQL_FUNC_EXISTS 否則傳回支援的函式，如果 SQL_TRUE 和 SQL_FALSE。  
   
-> [!NOTE]  
+> [!NOTE]
 >  使用 ODBC 2 時 *.x*驅動程式，而 ODBC 3 *.x*驅動程式管理員會傳回 SQL_TRUE，如**SQLAllocHandle**並**SQLFreeHandle**因為**SQLAllocHandle**會對應到**SQLAllocEnv**， **SQLAllocConnect**，或**SQLAllocStmt**，及因為**SQLFreeHandle**對應至**SQLFreeEnv**， **SQLFreeConnect**，或**SQLFreeStmt**。 **SQLAllocHandle**或是**SQLFreeHandle**具有*HandleType* SQL_HANDLE_DESC 引數不支援，不過，即使函式中，會傳回 SQL_TRUE，因為沒有任何ODBC 2 *.x*將在此情況下對應至函式。  
   
 ## <a name="code-example"></a>程式碼範例  

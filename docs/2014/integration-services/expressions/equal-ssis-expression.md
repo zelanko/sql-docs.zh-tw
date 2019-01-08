@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - equal operator (==)
@@ -14,12 +13,12 @@ ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ac0cdceaa69a6d98862d464994e0fbdb127d42c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2f539a48bf503de1f84bf490d565782ca685f05
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135528"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796150"
 ---
 # <a name="-equal-ssis-expression"></a>== (等於) (SSIS 運算式)
   執行比較來決定兩個運算式是否相等。 運算式評估工具會在執行比較之前，自動轉換許多資料類型。 如需詳細資訊，請參閱 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)。  
@@ -53,7 +52,7 @@ expression1 == expression2
     > [!NOTE]  
     >  字串比較有區分大小寫、腔調字、假名與全半形。  
   
--   **日期、時間或日期/時間** ： *expression1* 和 *expression2* 都必須評估為下列其中一種資料類型：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **日期、 時間或日期/時間**兩者*expression1*並*expression2*必須評估為下列資料類型的其中一個：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系統不支援評估為時間資料類型之運算式與評估為日期或日期/時間資料類型之運算式之間的比較。 系統會產生錯誤。  
@@ -82,7 +81,7 @@ expression1 == expression2
   
 -   **二進位** ： *expression1* 和 *expression2* 都必須評估為 DT_BYTES 資料類型。  
   
--   **BLOB** ： *expression1* 和 *expression2* 都必須評估為相同的二進位大型物件區塊 (BLOB) 資料類型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
+-   **BLOB**兩者*expression1*並*expression2*必須評估為相同的二進位大型物件區塊 (BLOB) 資料類型：DT_TEXT、DT_NTEXT 或 DT_IMAGE。  
   
  如需有關資料類型的詳細資訊，請參閱＜ [Integration Services Data Types](../data-flow/integration-services-data-types.md)＞。  
   
@@ -104,8 +103,8 @@ ListPrice == 500
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [\!= &#40;不等於&#41; &#40;SSIS 運算式&#41;](equal-ssis-expression.md)   
- [運算子優先順序和關聯性](operator-precedence-and-associativity.md)   
- [運算子&#40;SSIS 運算式&#41;](operators-ssis-expression.md)  
+ [!= &#40;不等於&#41; &#40;SSIS 運算式&#41;](equal-ssis-expression.md)   
+ [運算子優先順序與關聯性](operator-precedence-and-associativity.md)   
+ [運算子 &#40;SSIS 運算式&#41;](operators-ssis-expression.md)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: 8e23845e-97f0-4907-9d57-f1acd338b1f0
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 255ce8c94b73142847b11c6dd9261d853aaa38b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3525f28864c3260bd2b50d98f441f6ed5072accb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225758"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530791"
 ---
 # <a name="connect-to-windows-azure-storage"></a>連接到 Windows Azure 儲存體
   使用 [Windows Azure 儲存體連接] 對話方塊可以指定儲存體帳戶並且驗證 Windows Azure 的連接。  

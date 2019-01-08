@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, running
@@ -19,12 +18,12 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7138207d6f612fa8ee9075b9994e9d8f4f63e552
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b54c533fd86c780f69583acc2a329d7f348502c7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158858"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799000"
 ---
 # <a name="execution-of-projects-and-packages"></a>執行專案和封裝
   若要執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，您可以根據這些封裝的儲存位置使用數種工具的其中一種。 工具會列在下表中。  
@@ -46,7 +45,7 @@ ms.locfileid: "48158858"
 |**Managed API (使用** <xref:Microsoft.SqlServer.Dts.Runtime> 命名空間中的類型和成員)|非目前|是|是|  
   
 ## <a name="execution-and-logging"></a>執行與記錄  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝可以啟用記錄功能，您可以在記錄檔中擷取執行階段資訊。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝可以啟用記錄功能，您可以在記錄檔中擷取執行階段資訊。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)。  
   
  您可以使用作業報表監視部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器並在其中執行的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中可提供此報告。 如需詳細資訊，請參閱 [Reports for the Integration Services Server](../reports-for-the-integration-services-server.md)。  
   

@@ -1,5 +1,5 @@
 ---
-title: 主要效能指標表示法 （表格式） |Microsoft 文件
+title: 主要效能指標表示法 （表格式） |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3a536272f6e41e3aaf1abe6404139b67e0e558f0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 690c82c020f509e7dec816ca64a11dc2828ad4cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039655"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513985"
 ---
-# <a name="tables---key-performance-indicator-representation"></a>資料表的關鍵效能指標表示法
+# <a name="tables---key-performance-indicator-representation"></a>資料表 - 關鍵效能指標表示法
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   KPI 是用來針對目標值，測量由基底量值定義之值的效能。  
   
 ## <a name="key-performance-indicator-representation"></a>關鍵效能指標表示法  
- 在表格式物件模型中，關鍵效能指標 kpi 是包含其他資訊的一種量值，可讓用戶端應用程式以圖形方式加以顯示。 kpi 通常包含有關要取得之目標的資訊、要與目標相比較之量值的狀態，以及有關如何以圖形方式顯示狀態的用戶端工具資訊。  
+ 在表格式物件模型 關鍵效能指標 kpi-以圖形方式顯示它的用戶端應用程式的其他資訊的量值。 kpi 通常包含有關要取得之目標的資訊、要與目標相比較之量值的狀態，以及有關如何以圖形方式顯示狀態的用戶端工具資訊。  
   
 ### <a name="key-performance-indicator-in-amo"></a>AMO 中的關鍵效能指標  
  當您使用 AMO 管理表格式模型 kpi 時，物件與 AMO 中的 kpi 之間有一對一的相符關係，AMO <xref:Microsoft.AnalysisServices.Kpi> 物件不會用於這個目的；在 AMO 中的表格式模型內，kpi 是由 <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> 集合和 <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> 中其中一個元素內建立的一系列物件所表示。  
@@ -221,6 +221,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>AMO2Tabular 範例  
- 若要了解如何使用 AMO 建立及操作關鍵效能指標表示法，請參閱 「 AMO 對表格式範例的原始程式碼特別要檢查以下的原始程式檔： AddKPIs.cs。 您可以在 Codeplex 上取得範例。 有關此程式碼的重要注意事項：此程式碼的提供目的只是為了支援這裡所說明的邏輯概念，不應該用於實際執行環境，也不應該用於教學以外的其他用途。  
+ 若要了解如何使用 AMO 建立及操作關鍵效能指標表示法，請參閱「AMO 對表格式」範例的原始程式碼，特別要檢查以下的原始程式檔：AddKPIs.cs。 您可以在 Codeplex 上取得範例。 有關此程式碼的重要注意事項：此程式碼的提供目的只是為了支援這裡所說明的邏輯概念，不應該用於實際執行環境，也不應該用於教學以外的其他用途。  
   
   

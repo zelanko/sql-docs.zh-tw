@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting tables
@@ -13,12 +13,12 @@ ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ebc0a3ef5a9ad8f452c96e8294dc46847ee6e982
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26c13eb6c9cb142cac3ba0981177fb2c605ab5fa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181128"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812440"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>將資料表加入圖表 (Visual Database Tools)
   您可以加入資料表至資料庫圖表中，以編輯其結構或使它關聯圖表中的其他資料表。 也可以加入現有的資料庫資料表至圖表中，或插入尚未在資料庫中定義的新資料表。  

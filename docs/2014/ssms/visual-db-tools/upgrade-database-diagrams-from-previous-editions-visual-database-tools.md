@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - old diagrams [SQL Server]
@@ -18,15 +18,15 @@ ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cd94322c3d4314f2fb8705cc2d770a7ad5b4751d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 311285545abae9ae9f80b264204b88485aac71aa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065148"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812910"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>升級舊版的資料庫圖表 (Visual Database Tools)
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上設定資料庫圖表化時，會自動升級在舊版 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫上所建立的資料庫圖表。 如需設定圖表化，請參閱詳細步驟[設定資料庫圖表設計工具&#40;Visual Database Tools&#41;](visual-database-tools.md)。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上設定資料庫圖表化時，會自動升級在舊版 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]資料庫上所建立的資料庫圖表。 如需設定圖表化，請參閱詳細步驟[設定資料庫圖表設計工具&#40;Visual Database Tools&#41;](visual-database-tools.md)。  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>升級舊版資料庫圖表  
   

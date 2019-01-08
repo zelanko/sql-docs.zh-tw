@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - multiuser environments [Visual Database Tools]
@@ -12,12 +12,12 @@ ms.assetid: c09a6bb7-efc3-4471-819e-c60f11de96f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 99b5e0298d8e86043edebf825670dc4f2274cf5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 35bed6e63aa352986e1072bfad1b5ddf836845e0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069180"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763140"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>權限和 Visual Database Tools (Visual Database Tools)
   允許使用者存取資料來源物件之使用權限，是在資料來源而非在 Visual Database Tools 中授與。 資料來源物件上所授與的存取使用權限，是由您安裝的安全性原則控制。 如果沒有存取某些資料庫物件的權限，您應該連絡資料庫管理員。  

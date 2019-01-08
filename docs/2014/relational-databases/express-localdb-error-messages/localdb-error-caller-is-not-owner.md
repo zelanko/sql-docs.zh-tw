@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: supportability
+ms.technology: performance
 ms.topic: reference
 ms.assetid: f3303072-2b44-4443-936c-f024b0b2a8c5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1b3f5b8140f2e03d87dbf1f4ba5d5dd01293d3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57d05a00a157a8e5bffec8720a4c8e0716a802f6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141141"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776300"
 ---
 # <a name="localdberrorcallerisnotowner"></a>LOCALDB_ERROR_CALLER_IS_NOT_OWNER
     

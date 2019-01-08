@@ -1,5 +1,5 @@
 ---
-title: 時間序列模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft 文件
+title: 時間序列模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4661c13dd33b8b0c329f93297475fc4185fcbe0a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 18013587c8c6eb23989f8f22150b8980d0e5afc1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019545"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513784"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>時間序列模型的採礦模型內容 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34019545"
   
  下圖顯示使用預設設定 (建立混合模型) 所建立的時間序列資料採礦模型範例。 因此，您可以更輕鬆地比較這兩個模型之間的差異。其中，ARTXP 模型顯示於圖表的左側，而 ARIMA 模型顯示於圖表的右側。  雖然 ARTXP 是分割成較小分支的樹狀結構，不過 ARIMA 演算法所建立的結構則更像從較小元件向上建立而成的金字塔。  
   
- ![時間序列模型的模型內容結構](../../analysis-services/data-mining/media/modelcontentstructure-ts.gif "的時間序列模型的模型內容結構")  
+ ![結構的時間序列模型的模型內容](../../analysis-services/data-mining/media/modelcontentstructure-ts.gif "的時間序列模型的模型內容結構")  
   
  此時要記住的重點是，資訊會以完全不同的方式在 ARIMA 和 ARTXP 樹狀結構內排列，而且您應該將這兩個樹狀結構視為只有在根節點相關。 雖然這兩種表示法是為求方便而以單一模型呈現，不過您應該將它們視為兩個獨立的模型。 ARTXP 代表實際的樹狀結構，但是 ARIMA 則沒有。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34019545"
 >  如果您想要檢視這些公式，可以在分葉節點層級找到完整的迴歸公式，但是在中繼或根節點則找不到。  
   
 ### <a name="structure-of-an-arima-model"></a>ARIMA 模型的結構  
- ARIMA 演算法會針對每個資料數列 (例如 [Region]) 和可預測屬性 (例如 [Sales Amount]) 的組合建立單一資訊片段：描述可預測屬性隨著時間而變更的方程式。  
+ ARIMA 演算法會建立單一資料序列的每個組合的資訊片段 (例如 **[Region]**) 和可預測的屬性 (例如 **[Sales Amount]**)-可描述的方程式可預測屬性隨著時間改變。  
   
  每個數列的方程式都衍生自多個元件，而且在資料中找到的每個週期結構都有一個元件。 例如，如果您擁有每月收集的銷售資料，此演算法可能會偵測每月、每季或每年的週期結構。  
   
@@ -97,11 +97,11 @@ ms.locfileid: "34019545"
  NODE_UNIQUE_NAME  
  節點的唯一名稱。 模型父節點一律名為 **TS**。  
   
- **ARTXP** ：每個節點都由 TS 及緊接在後的十六進位數值表示。 這些節點的順序並不重要。  
+ **ARTXP**每個節點都由 TS 而且後面的十六進位數值表示的。 這些節點的順序並不重要。  
   
  例如，直接位於 TS 樹狀結構底下的 ARTXP 節點可能會編號為 TS00000001-TS0000000b。  
   
- **ARIMA** ：ARIMA 樹狀結構中的每個節點都由 TA 及緊接在後的十六進位數值表示。 這些子節點包含父節點的唯一名稱，而且後面接著另一個十六進位數字，代表節點內部的順序。  
+ **ARIMA**ARIMA 樹狀結構中的每個節點是由 ta 及緊接在後面的十六進位數值表示。 這些子節點包含父節點的唯一名稱，而且後面接著另一個十六進位數字，代表節點內部的順序。  
   
  所有 ARIMA 樹狀結構的結構都完全相同。 每個根都包含下表所示的節點和命名慣例：  
   
@@ -117,7 +117,7 @@ ms.locfileid: "34019545"
   
  **ARTXP**  
   
-|節點類型識別碼|Description|  
+|節點類型識別碼|描述|  
 |------------------|-----------------|  
 |1 (模型)|時間序列|  
 |3 (內部)|代表 ARTXP 時間序列樹中的內部分支。|  
@@ -126,7 +126,7 @@ ms.locfileid: "34019545"
   
  **ARIMA**  
   
-|節點類型識別碼|Description|  
+|節點類型識別碼|描述|  
 |------------------|-----------------|  
 |27 (ARIMA 根)|ARIMA 樹狀結構的最上層節點。|  
 |28 (ARIMA 週期結構)|描述單一週期結構之 ARIMA 樹狀結構的元件。|  
@@ -138,9 +138,9 @@ ms.locfileid: "34019545"
   
  這個屬性主要是供顯示之用。  
   
- **ARTXP** ：包含節點的分割條件，顯示為屬性與值範圍的組合。  
+ **ARTXP**包含節點，顯示為屬性與值範圍的組合的分割條件。  
   
- **ARIMA** ：包含 ARIMA 方程式的簡短形式。  
+ **ARIMA**包含 ARIMA 方程式的簡短形式。  
   
  如需 ARIMA 方程式之格式的資訊，請參閱 [ARIMA 的採礦圖例](#bkmk_ARIMA_2)。  
   
@@ -153,33 +153,33 @@ ms.locfileid: "34019545"
  NODE_DESCRIPTION  
  目前節點中規則、分割或公式的文字描述。  
   
- **ARTXP** ：如需詳細資訊，請參閱 [了解 ARTXP 樹狀結構](#bkmk_ARTXP_1)。  
+ **ARTXP**如需詳細資訊，請參閱 <<c0> [ 了解 ARTXP 樹狀結構](#bkmk_ARTXP_1)。  
   
- **ARIMA** ：如需詳細資訊，請參閱 [了解 ARIMA 樹狀結構](#bkmk_ARIMA_1)。  
+ **ARIMA**如需詳細資訊，請參閱 <<c0> [ 了解 ARIMA 樹狀結構](#bkmk_ARIMA_1)。  
   
  NODE_RULE  
  目前節點中規則、分割或公式的 XML 描述。  
   
- **ARTXP** ：NODE_RULE 通常會對應至 NODE_CAPTION。  
+ **ARTXP**NODE_RULE 通常會對應至 NODE_CAPTION。  
   
- **ARIMA** ：如需詳細資訊，請參閱 [了解 ARIMA 樹狀結構](#bkmk_ARIMA_1)。  
+ **ARIMA**如需詳細資訊，請參閱 <<c0> [ 了解 ARIMA 樹狀結構](#bkmk_ARIMA_1)。  
   
  MARGINAL_RULE  
  該節點特有之分割或內容的 XML 描述。  
   
- **ARTXP** ： MARGINAL_RULE 通常會對應至 NODE_DESCRIPTION。  
+ **ARTXP**MARGINAL_RULE 通常會對應至 NODE_DESCRIPTION。  
   
- **ARIMA** ：一律空白，請改用 NODE_RULE。  
+ **ARIMA**永遠為空白;請改用 NODE_RULE。  
   
  NODE_PROBABILITY  
- **ARTXP** ：若為樹狀節點，就一律為 1。 若為分葉節點，則為從模型根節點到達此節點的機率。  
+ **ARTXP**為樹狀節點中，永遠為 1。 若為分葉節點，則為從模型根節點到達此節點的機率。  
   
- **ARIMA** ：一律為 0。  
+ **ARIMA**一律是 0。  
   
  MARGINAL_PROBABILITY  
- **ARTXP** ：若為樹狀節點，就一律為 1。 若為分葉節點，則為從直屬父節點到達此節點的機率。  
+ **ARTXP**為樹狀節點中，永遠為 1。 若為分葉節點，則為從直屬父節點到達此節點的機率。  
   
- **ARIMA** ：一律為 0。  
+ **ARIMA**一律是 0。  
   
  NODE_DISTRIBUTION  
  包含節點之機率長條圖的資料表。 在時間序列模型中，這個巢狀資料表包含組合實際迴歸公式所需的所有元件。  
@@ -193,28 +193,28 @@ ms.locfileid: "34019545"
  NODE_SUPPORT  
  支援這個節點的案例數目。  
   
- **ARTXP**：若為 [(全部)] 節點，表示分支所包含之時間配量的總數。  
+ **ARTXP**針對 **（全部）** 節點，表示分支所包含之時間配量的總數。  
   
  若為終端節點，則表示 NODE_CAPTION 所描述之範圍所包含的時間配量數目。 終端節點中的時間配量數目一律會加總成分支 [(全部)] 節點的 NODE_SUPPORT 值。  
   
- **ARIMA**：支援目前週期結構的案例計數。 支援的值會在目前週期結構的所有節點中重複。  
+ **ARIMA**支援目前週期結構的案例計數。 支援的值會在目前週期結構的所有節點中重複。  
   
  MSOLAP_MODEL_COLUMN  
- 在節點中表示之資料序列的可預測屬性  (與 ATTRIBUTE_NAME 的值相同)。  
+ 在節點中表示之資料序列的可預測屬性 (與 ATTRIBUTE_NAME 的值相同)。  
   
  MSOLAP_NODE_SCORE  
  指出樹狀結構或分割之資訊值特性的數值。  
   
- **ARTXP** ：若為沒有分割的節點，值一律為 0.0。 若為含有分割的節點，該值代表分割的有趣性分數。  
+ **ARTXP**值一律為 0.0 沒有分割的節點。 若為含有分割的節點，該值代表分割的有趣性分數。  
   
  如需這些計分方法的詳細資訊，請參閱[特徵選取 &#40;資料採礦&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)。  
   
- **ARIMA**：ARIMA 模型的 Bayesian Information Criterion (BIC) 分數。 系統會針對與方程式相關的所有 ARIMA 節點設定相同的分數。  
+ **ARIMA**ARIMA 模型的 Bayesian Information Criterion (BIC) 分數。 系統會針對與方程式相關的所有 ARIMA 節點設定相同的分數。  
   
  MSOLAP_NODE_SHORT_CAPTION  
- **ARTXP**  ：與 NODE_DESCRIPTION 的資訊相同。  
+ **ARTXP**與 NODE_DESCRIPTION 的資訊相同。  
   
- **ARIMA** ：與 NODE_CAPTION 的資訊相同：亦即 ARIMA 方程式的簡短形式。  
+ **ARIMA**與 NODE_CAPTION 的資訊相同： 亦即 ARIMA 方程式的簡短形式。  
   
 ##  <a name="bkmk_ARTXP_1"></a> 了解 ARTXP 樹狀結構  
  ARTXP 模型會清楚地分隔線性資料區域與根據某些其他因數分割的資料區域。 只要可預測屬性中的變更可直接表示成獨立變數的函數，迴歸公式就會計算成代表該關聯性。  
@@ -242,12 +242,12 @@ ms.locfileid: "34019545"
 ### <a name="elements-of-the-artxp-time-series-formula"></a>ARTXP 時間序列公式的元素  
  若要檢視 ARTXP 樹狀結構或分支的完整公式，我們建議您使用 [Microsoft 時間序列檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)的 [採礦圖例]，這項功能會以可讀取的格式呈現所有常數。  
   
--   [檢視時間序列公式模式 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [檢視時間序列模型的公式 &#40;資料採礦&#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
  以下章節將呈現範例方程式並說明基本詞彙。  
   
 #### <a name="mining-legend-for-an-artxp-formula"></a>ARTXP 公式的採礦圖例  
- 下列範例會針對一部分的模型顯示 ARTXP 公式，如 [採礦圖例] 所示。 若要檢視這個公式，請使用 [Microsoft 時間序列檢視器] 來開啟您在＜資料採礦基本教學課程＞中建立的 [Forecasting] 模型，並按一下 [模型] 索引標籤，然後選取 R250: Europe 資料數列的樹狀結構。  
+ 下列範例會針對一部分的模型顯示 ARTXP 公式，如 [採礦圖例] 所示。 若要檢視這個公式，開啟您在資料採礦基本教學課程中，Microsoft 時間序列檢視器中建立的 [Forecasting] 模型，請按一下**模型**索引標籤，然後選取 R250 樹狀結構：Europe 資料數列。  
   
  若要查看此範例所使用的方程式，請按一下代表 2003 年 7 月 5 日當天或之後日期之資料數列的節點。  
   
@@ -367,32 +367,32 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 ### <a name="time-series-formula-for-arima"></a>ARIMA 的時間序列公式  
  若要檢視任何 ARIMA 節點的完整公式，我們建議您使用 [Microsoft 時間序列檢視器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)的 [採礦圖例]，這項功能會以一致的格式呈現已經撰寫之方程式的自動迴歸順序、移動平均和其他元素。  
   
--   [檢視時間序列公式模式 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [檢視時間序列模型的公式 &#40;資料採礦&#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
  本章節將呈現範例方程式並說明基本詞彙。  
   
 ####  <a name="bkmk_ARIMA_2"></a> ARIMA 公式的採礦圖例  
- 下列範例會針對一部分的模型顯示 ARIMA 公式，如 [採礦圖例] 所示。 若要檢視這個公式，請使用 [Microsoft 時間序列檢視器] 來開啟 **Forecasting** 模型，按一下 [模型] 索引標籤、選取 **R250: Europe** 資料數列的樹狀結構，然後按一下代表 7/5/2003 當日或之後之日期數列的節點。 此採礦圖例會以可讀取的格式來撰寫所有常數，如這個範例所示：  
+ 下列範例會針對一部分的模型顯示 ARIMA 公式，如 [採礦圖例] 所示。 若要檢視這個公式，開啟**Forecasting**模型利用**Microsoft 時間序列檢視器**，按一下 **模型**索引標籤上，選取的樹狀結構**R250:歐洲**資料數列，然後按一下 代表上或在 2003 年 7 月 5 日之後之日期序列的節點。 此採礦圖例會以可讀取的格式來撰寫所有常數，如這個範例所示：  
   
  ARIMA 方程式：  
   
 `ARIMA ({1,1},0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) Intercept:56.8888888888889`  
   
- 這個方程式是冗長的 ARIMA 格式，其中包括係數和攔截的值。 這個方程式的簡短形式為{1,0,7}，其中 1 表示的時間配量計數的期間，0 表示差異順序，而 7 表示係數數目。  
+ 這個方程式是冗長的 ARIMA 格式，其中包括係數和攔截的值。 這個方程式的簡短形式為{1,0,7}，其中 1 表示之時間配量計數的期間，0 表示差異順序，而 7 表示係數數目。  
   
 > [!NOTE]  
 >  雖然 Analysis Services 會計算常數以便求出變異數，但是此常數本身不會顯示在使用者介面中的任何位置。 不過，如果您在 [圖表] 檢視中選取了 [顯示偏差]，就可以將數列中任何一點的變異數當做這個常數的函數進行檢視。 每個資料序列的工具提示都會顯示特定預測點的變異數。  
   
 #### <a name="model-content-for-arima-formula"></a>ARIMA 公式的模型內容  
- ARIMA 模型會遵循標準結構，但是在不同類型的節點中包含不同的資訊。 若要檢視 ARIMA 模型的模型內容，請將檢視器變更為 [Microsoft 一般內容樹狀檢視器]，然後展開具有屬性名稱 **R250 Europe: Quantity** 的節點。  
+ ARIMA 模型會遵循標準結構，但是在不同類型的節點中包含不同的資訊。 若要檢視 ARIMA 模型的模型內容，請變更 檢視器**Microsoft 一般內容樹狀檢視器**，然後展開具有屬性名稱的節點**R250 Europe:數量**。  
   
  資料序列的 ARIMA 模型包含採用四種不同格式的基本週期方程式，而且您可以根據應用程式從這些格式中選擇。  
   
- **NODE_CAPTION** ：顯示方程式的簡短格式。 此簡短格式會告知您代表的週期結構數目，以及它們擁有的係數數目。 例如，如果方程式的簡短形式為 `{4,0,6}`，則節點代表一個擁有 6 個係數的週期結構。 如果簡短格式類似於 `{2,0,8} x {1,0,0}(4)`，此節點就會包含兩個週期結構。  
+ **NODE_CAPTION:** 顯示方程式的簡短格式。 此簡短格式會告知您代表的週期結構數目，以及它們擁有的係數數目。 例如，如果方程式的簡短形式為 `{4,0,6}`，則節點代表一個擁有 6 個係數的週期結構。 如果簡短格式類似於 `{2,0,8} x {1,0,0}(4)`，此節點就會包含兩個週期結構。  
   
- **NODE DESCRIPTION**：顯示長格式的方程式，這也是顯示在 [採礦圖例] 中的方程式形式。 方程式的冗長形式與簡短形式很相似，但是它會顯示而非計算係數的實際值。  
+ **節點描述：** 顯示長格式的方程式，這也是方程式中出現的表單**採礦圖例**。 方程式的冗長形式與簡短形式很相似，但是它會顯示而非計算係數的實際值。  
   
- **NODE_RULE** ：顯示方程式的 XML 表示。 根據節點類型而定，XML 表示可能包括單一或多個週期結構。 下表將說明 XML 節點如何積存至 ARIMA 模型的更高層級。  
+ **NODE_RULE:** 顯示方程式的 XML 表示法。 根據節點類型而定，XML 表示可能包括單一或多個週期結構。 下表將說明 XML 節點如何積存至 ARIMA 模型的更高層級。  
   
 |節點類型|XML 內容|  
 |---------------|-----------------|  
@@ -401,14 +401,14 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 |29 (ARIMA 自動迴歸)|列出單一週期結構的詞彙。|  
 |30 (ARIMA 移動平均)|列出單一週期結構的係數。|  
   
- **NODE_DISTRIBUTION** ：在巢狀資料表中顯示方程式的詞彙，而且您可以查詢此資料表以便取得特定詞彙。 節點分佈資料表會與 XML 規則遵循相同的階層式結構。 也就是說，ARIMA 序列 (NODE_TYPE = 27) 的根節點包含完整方程式的攔截值和週期性，而且此方程式可能包括多個週期性，而子節點僅包含特定週期結構或該週期結構之子節點特有的資訊。  
+ **NODE_DISTRIBUTION:** 巢狀資料表，您可以查詢以取得特定詞彙中顯示方程式的詞彙。 節點分佈資料表會與 XML 規則遵循相同的階層式結構。 也就是說，ARIMA 序列 (NODE_TYPE = 27) 的根節點包含完整方程式的攔截值和週期性，而且此方程式可能包括多個週期性，而子節點僅包含特定週期結構或該週期結構之子節點特有的資訊。  
   
-|節點類型|Attribute|值類型|  
+|節點類型|attribute|值類型|  
 |---------------|---------------|----------------|  
 |27 (ARIMA 根)|Intercept<br /><br /> Periodicity|11|  
 |28 (ARIMA 週期結構)|Periodicity<br /><br /> 自動迴歸順序<br /><br /> Difference order<br /><br /> Moving average order|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
 |29 (ARIMA 自動迴歸)|Coefficient<br /><br /> (係數的補充)|7|  
-|30 (ARIMA 移動平均)|t 的值<br /><br /> t-1 的值<br /><br /> …<br /><br /> t-n 的值|7|  
+|30 (ARIMA 移動平均)|t 的值<br /><br /> t-1 的值<br /><br /> ...<br /><br /> t-n 的值|7|  
   
  「移動平均順序」的值表示數列中移動平均的數目。 一般而言，如果數列中含有 `n-1` 個詞彙，移動平均就會計算 `n` 次，但是此數目可能會縮減以方便計算。  
   
@@ -425,15 +425,15 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  如果您知道包含所需序列之節點的識別碼，就有兩個選項可以擷取此方程式的元件：  
   
--   巢狀資料表格式：使用 DMX 查詢或透過 OLEDB 用戶端查詢。  
+-   巢狀的資料表格式：使用 DMX 查詢或透過 OLEDB 用戶端的查詢。  
   
--   XML 表示：使用 XML 查詢。  
+-   XML 表示法：使用 XML 查詢。  
   
 ## <a name="remarks"></a>備註  
  從 ARTXP 樹狀結構中擷取資訊可能會很困難，因為每個分割的資訊都位於樹狀結構內的不同位置。 因此，您必須透過 ARTXP 模型取得所有片段，然後進行某些處理，才能重新組成完整的公式。 從 ARIMA 模型中擷取方程式會比較方便，因為您在整個樹狀結構中都可以使用此公式。 如需如何建立查詢來擷取這項資訊的資訊，請參閱 [時間序列模型查詢範例](../../analysis-services/data-mining/time-series-model-query-examples.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型內容 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 時間序列演算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [時間序列模型查詢範例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Microsoft 時間序列演算法技術參考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  

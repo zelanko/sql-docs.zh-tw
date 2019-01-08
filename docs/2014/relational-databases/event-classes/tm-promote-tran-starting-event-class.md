@@ -1,11 +1,10 @@
 ---
-title: 'TM: Promote Tran Starting 事件類別 | Microsoft 文件'
+title: TM:Promote Tran Starting 事件類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,17 +14,17 @@ ms.assetid: 32da85bb-d980-4044-8572-31372867649b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8ad93db74cc0cdc7ea450fa1b47653c1f7bf85d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43deb215fded67055c069dd629dcb5553b663f71
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145301"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823072"
 ---
-# <a name="tm-promote-tran-starting-event-class"></a>TM: Promote Tran Starting 事件類別
-  TM: Promote Tran Starting 事件類別指出正在開始 PROMOTE TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。  
+# <a name="tm-promote-tran-starting-event-class"></a>TM:Promote Tran Starting 事件類別
+  TM:Promote Tran Starting 事件類別指出正在啟動 PROMOTE TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。  
   
-## <a name="tm-promote-tran-starting-event-class-data-columns"></a>TM: Promote Tran Starting 事件類別資料行  
+## <a name="tm-promote-tran-starting-event-class-data-columns"></a>TM:Promote Tran Starting 事件類別資料行  
   
 |資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  

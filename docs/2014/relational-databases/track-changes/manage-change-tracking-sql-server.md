@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tracking data changes [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 97ed62336cad7f3e1bc0bbe70edd895384336205
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be3f9c61d3c035959def4a46f91eff605e475569
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197748"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808800"
 ---
 # <a name="manage-change-tracking-sql-server"></a>管理變更追蹤 (SQL Server)
   本主題描述如何管理變更追蹤。 此外，本主題也會描述如何設定安全性，以及判斷使用變更追蹤對儲存和效能產生的影響。  
@@ -52,7 +51,7 @@ ms.locfileid: "48197748"
 ## <a name="understanding-change-tracking-overhead"></a>了解變更追蹤負擔  
  在針對資料表啟用變更追蹤時，某些管理作業會受到影響。 下表將列出這些作業以及您應該考量的影響。  
   
-|作業|啟用變更追蹤時|  
+|運算|啟用變更追蹤時|  
 |---------------|-------------------------------------|  
 |DROP TABLE|針對卸除的資料表移除了所有變更追蹤資訊。|  
 |ALTER TABLE DROP CONSTRAINT|嘗試卸除 PRIMARY KEY 條件約束但卻失敗。 在可以卸除 PRIMARY KEY 條件約束之前，必須先停用變更追蹤。|  

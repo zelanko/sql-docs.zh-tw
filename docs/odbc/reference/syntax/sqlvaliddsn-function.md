@@ -20,16 +20,16 @@ ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e376d10f21fa00c6bbe86fc692b0185f3c8d8d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb490b475c5795125d11915729693eb630934eb8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642846"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201457"
 ---
 # <a name="sqlvaliddsn-function"></a>SQLValidDSN 函式
 **合規性**  
- 版本導入： ODBC 2.0  
+ 導入的版本：ODBC 2.0  
   
  **摘要**  
  **SQLValidDSN**名稱新增至 系統資訊之前會檢查長度和有效的資料來源的名稱。  
@@ -39,7 +39,7 @@ ms.locfileid: "47642846"
 ```  
   
 BOOL SQLValidDSN(  
-     LPCSTR    lpszDSN);  
+     LPCSTR    lpszDSN);  
 ```  
   
 ## <a name="arguments"></a>引數  

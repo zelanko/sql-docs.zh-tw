@@ -14,12 +14,12 @@ ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c71098b580891ddb0c1975e429ede783856cf223
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab0560e0df37c80a82017e5f076af969931a79e2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182908"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519026"
 ---
 # <a name="create-a-credential"></a>建立認證
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立認證。  
@@ -61,7 +61,7 @@ ms.locfileid: "48182908"
   
 1.  在物件總管中，展開 [安全性]  資料夾。  
   
-2.  以滑鼠右鍵按一下 [認證] 資料夾，然後選取 [新增認證…]。  
+2.  以滑鼠右鍵按一下 [認證] 資料夾，然後選取 [新增認證]。  
   
 3.  在 **[新增認證]** 對話方塊的 **[認證名稱]** 方塊中，輸入認證的名稱。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48182908"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- Creates the credential called "AlterEgo.".   

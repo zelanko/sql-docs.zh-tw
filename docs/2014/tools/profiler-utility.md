@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], profiler90 utility
@@ -17,12 +16,12 @@ ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ec9ce68b6c1838507cbb139130a4bcf7bf986ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 572644cf673c70000cee7de77f2bca9199f19675
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128291"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780770"
 ---
 # <a name="profiler-utility"></a>Profiler 公用程式
   **profiler** 公用程式會啟動 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 工具。 這個主題稍後列出的選擇性引數可讓您控制應用程式啟動的方式。  

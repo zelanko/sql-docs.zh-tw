@@ -13,12 +13,12 @@ ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e7686f2db3e033fa6d38e0f7a7f9616d93c11a1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa14cea178d732332ab4729b1c653ef6d19cfab9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048778"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528937"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>維度設計師 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [維度設計師]，即可瀏覽維度所包含的資料，以及修改現有維度的各種屬性 (Property)：屬性 (Attribute)、階層、層級、屬性 (Attribute) 關聯性和翻譯。  
@@ -29,7 +29,7 @@ ms.locfileid: "48048778"
   
     -   以滑鼠右鍵按一下維度，然後按一下 [開啟] 或 [檢視表設計工具]。  
   
-         – 或 –  
+         -或-  
   
     -   按兩下維度。  
   

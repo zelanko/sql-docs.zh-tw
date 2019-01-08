@@ -14,12 +14,12 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3a6d6197cb525ba4ad395da590ea113bdd0a1f0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5089aaa229f77c6f0012f4ceae0d5d1b17a9c11a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220338"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792260"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>設定及管理全文檢索搜尋的同義字檔案
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，全文檢索查詢可以透過使用同義字 (Thesaurus) 搜尋使用者指定之詞彙的同義字 (Synonym)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]「同義字」 (thesaurus) 會針對特定語言定義一組同義字 (synonym)。 系統管理員可以定義兩種同義字形式：展開集和取代集。 透過開發符合全文檢索資料的同義字，您可以有效地擴大針對該資料進行全文檢索查詢的範圍。 同義字比對會針對所有 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 查詢以及指定 FORMSOF THESAURUS 子句的任何 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 查詢進行。  
@@ -29,7 +29,7 @@ ms.locfileid: "48220338"
   
 -   變音符號設定  
   
-     對於給定的同義字而言，所有搜尋模式都會區分或不區分變音符號，例如波狀符號 (**~**)、尖重音符號 (**´**) 或母音變化 (**¨**) (亦即，「區分腔調字」或「不區分腔調字」)。 例如，假設您在全文檢索查詢中，指定以其他模式取代模式 "café"。 如果同義字不區分腔調字，全文檢索搜尋就會取代模式 "café" 和 "cafe"。 如果同義字區分腔調字，全文檢索搜尋只會取代模式 "café"。 根據預設，同義字不會區分腔調字。  
+     針對給定的同義字而言，所有搜尋模式都都會區分或區分變音符號標記，例如波狀符號 (**~**)，重音符號 (**??**)，或母音變化 (**??**) (亦即*區分*或是*不區分腔調字*)。 例如，假設您指定 「 外 」 」 的模式 要取代的全文檢索查詢中的其他模式。 如果不區分腔調字的同義字，全文檢索搜尋會取代模式 」 外？ 」 和"咖啡廳 」。 如果同義字不會區分腔調字、 全文檢索搜尋就會取代只模式 」 外??"。 根據預設，同義字不會區分腔調字。  
   
 -   展開集  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48220338"
   
   
 ##  <a name="structure"></a> 了解同義字檔案的結構  
- 每個同義字檔案都會定義識別碼為 `Microsoft Search Thesaurus`的 XML 容器以及 `<!--` … `-->`(包含範例同義字的註解)。 同義字定義於\<同義字 > 項目，其中包含的子元素會定義變音符號設定、 展開集和取代集的範例，如下所示：  
+ 每個同義字檔案都會定義識別碼為 `Microsoft Search Thesaurus` 的 XML 容器，以及包含範例同義字的 `<!--` ... `-->` 註解。 同義字定義於\<同義字 > 項目，其中包含的子元素會定義變音符號設定、 展開集和取代集的範例，如下所示：  
   
 -   變音符號設定的 XML 結構  
   

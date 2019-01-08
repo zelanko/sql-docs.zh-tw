@@ -20,16 +20,16 @@ ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5901a2c3e126674b1157177a6c7937c58058764
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e0db81314355b987d139b678d292f5cfe293a7e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601046"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206477"
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ODBC  
+ 導入的版本：ODBC 1.0 標準的合規性：ODBC  
   
  **摘要**  
  **SQLForeignKeys**可以傳回：  
@@ -180,8 +180,8 @@ SQLRETURN SQLForeignKeys(
 |FKTABLE_NAME (ODBC 1.0)|7|非 NULL Varchar|外部索引鍵資料表名稱。|  
 |FKCOLUMN_NAME (ODBC 1.0)|8|非 NULL Varchar|外部索引鍵資料行名稱。 驅動程式會傳回沒有名稱的資料行的空字串。|  
 |KEY_SEQ 來排序 (ODBC 1.0)|9|Smallint 非 NULL|（從 1 開始） 的索引鍵資料行順序編號。|  
-|UPDATE_RULE (ODBC 1.0)|10|Smallint|當 SQL 作業是套用至外部索引鍵的動作**更新**。 可以有下列值之一。 （參考的資料表是具有主索引鍵的資料表，參考的資料表會具有外部索引鍵的資料表）。<br /><br /> SQL_NO_ACTION： 所參考之資料表的主索引鍵更新時，參考資料表的外部索引鍵也會更新。<br /><br /> SQL_NO_ACTION： 如果更新的主索引鍵參考的資料表會導致 「 懸吊參考 」 參考資料表中的 （也就是參考資料表中的資料列會有任何對應項目中參考的資料表），就會拒絕更新。 如果參考資料表的外部索引鍵更新會導入值做為參考資料表的主索引鍵的值不存在，則會拒絕更新。 (這個動作等同於 ODBC 2 SQL_RESTRICT 動作 *.x*。)<br /><br /> SQL_SET_NULL： 當受參考的資料表中的一或多個資料列會更新的方式，會變更的主索引鍵的一或多個元件時，對應至已變更元件的主索引鍵的外部索引鍵參考資料表中的元件會設定若要在參考資料表的所有相符的資料列中的 NULL。<br /><br /> SQL_SET_DEFAULT： 參考的資料表中的一或多個資料列會更新的方式，會變更的主索引鍵的一或多個元件，對應至已變更元件的主索引鍵的外部索引鍵參考資料表中的元件時設定為參考資料表的所有相符的資料列中的適用的預設值。<br /><br /> 如果不適用於資料來源，則為 NULL。|  
-|DELETE_RULE (ODBC 1.0)|11|Smallint|當 SQL 作業是套用至外部索引鍵的動作**刪除**。 可以有下列值之一。 （參考的資料表是具有主索引鍵的資料表，參考的資料表會具有外部索引鍵的資料表）。<br /><br /> SQL_NO_ACTION： 刪除參考的資料表中的資料列時，參考資料表中的所有相符資料列會一併刪除。<br /><br /> SQL_NO_ACTION： 如果刪除資料列，在參考的資料表會導致 「 懸吊參考 」 參考資料表中的 （也就是參考資料表中的資料列會有任何對應項目中參考的資料表），就會拒絕更新。 (這個動作等同於 ODBC 2 SQL_RESTRICT 動作 *.x*。)<br /><br /> SQL_SET_NULL： 刪除參考的資料表中的一或多個資料列，每個元件的參考資料表的外部索引鍵是設為 NULL 參考資料表的所有相符的資料列中。<br /><br /> SQL_SET_DEFAULT： 刪除參考的資料表中的一或多個資料列，每個元件的參考資料表的外部索引鍵設定為適用的預設值，在參考資料表的所有相符的資料列。<br /><br /> 如果不適用於資料來源，則為 NULL。|  
+|UPDATE_RULE (ODBC 1.0)|10|Smallint|當 SQL 作業是套用至外部索引鍵的動作**更新**。 可以有下列值之一。 （參考的資料表是具有主索引鍵的資料表，參考的資料表會具有外部索引鍵的資料表）。<br /><br /> SQL_NO_ACTION:當更新所參考之資料表的主索引鍵時，也會更新參考資料表的外部索引鍵。<br /><br /> SQL_NO_ACTION:如果所參考之資料表的主索引鍵更新會導致參考資料表中的 < 懸吊參考 > （也就是參考資料表中的資料列會有任何對應項目中參考的資料表），就會拒絕更新。 如果參考資料表的外部索引鍵更新會導入值做為參考資料表的主索引鍵的值不存在，則會拒絕更新。 (這個動作等同於 ODBC 2 SQL_RESTRICT 動作 *.x*。)<br /><br /> SQL_SET_NULL:對應至已變更元件的主索引鍵的外部索引鍵參考資料表中的元件時參考的資料表中的一或多個資料列會更新的方式，會變更的主索引鍵的一或多個元件，都會在所有設為 NULL參考資料表的相符的資料列。<br /><br /> SQL_SET_DEFAULT:當參考資料表中的一或多個資料列會更新的方式，會變更的主索引鍵的一或多個元件時，對應至已變更元件的主索引鍵的外部索引鍵參考資料表中的元件會設定為 applicable 參考資料表的所有相符的資料列中的預設值。<br /><br /> 如果不適用於資料來源，則為 NULL。|  
+|DELETE_RULE (ODBC 1.0)|11|Smallint|當 SQL 作業是套用至外部索引鍵的動作**刪除**。 可以有下列值之一。 （參考的資料表是具有主索引鍵的資料表，參考的資料表會具有外部索引鍵的資料表）。<br /><br /> SQL_NO_ACTION:刪除參考的資料表中的資料列時，會一併刪除參考的資料表中的所有相符資料列。<br /><br /> SQL_NO_ACTION:如果參考的資料表中的資料列刪除會導致 「 懸吊參考 」 參考資料表中的 （也就是參考資料表中的資料列會有任何對應項目中參考的資料表），就會拒絕更新。 (這個動作等同於 ODBC 2 SQL_RESTRICT 動作 *.x*。)<br /><br /> SQL_SET_NULL:參考的資料表中的一或多個資料列已刪除時，參考資料表的外部索引鍵的每個元件設為 NULL 參考資料表的所有相符的資料列中。<br /><br /> SQL_SET_DEFAULT:刪除參考的資料表中的一或多個資料列，每個元件的參考資料表的外部索引鍵設為適用的預設值，在參考資料表的所有相符的資料列。<br /><br /> 如果不適用於資料來源，則為 NULL。|  
 |FK_NAME (ODBC 2.0)|12|Varchar|外部索引鍵的名稱。 如果不適用於資料來源，則為 NULL。|  
 |PK_NAME (ODBC 2.0)|13|Varchar|主索引鍵的名稱。 如果不適用於資料來源，則為 NULL。|  
 |延遲性 (ODBC 3.0)|14|Smallint|SQL_INITIALLY_DEFERRED，SQL_INITIALLY_IMMEDIATE，SQL_NOT_DEFERRABLE。|  

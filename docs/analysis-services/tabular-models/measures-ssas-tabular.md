@@ -1,5 +1,5 @@
 ---
-title: 量值 |Microsoft 文件
+title: Analysis Services 表格式模型中的量值 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cbd53d9d49c937967e88cefa95750dca41631876
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 508558f4458496ab4d376ec8906544f6656a25a5
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38045326"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072195"
 ---
 # <a name="measures"></a>量值
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -50,13 +50,13 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |**總計**|**$4,691,673,731.53**|  
   
 ##  <a name="bkmk_def_mg"></a> Defining measures by using the measure grid  
- 量值是在設計階段透過使用模型設計師中的量值方格而建立的。 每一個資料表都有量值方格。 根據預設，量值方格會顯示在模型設計師中的每一個資料表下方。 您也可以選擇不檢視特定資料表的量值方格。 若要切換資料表的量值方格顯示，請按一下 **[資料表]** 功能表，然後按一下 **[顯示量值方格]**。  
+ 量值是在設計階段透過使用模型設計師中的量值方格而建立的。 每一個資料表都有量值方格。 根據預設，量值方格會顯示在模型設計師中的每一個資料表下方。 您也可以選擇不檢視特定資料表的量值方格。 若要切換資料表的量值方格顯示，請按一下**表格**功能表，然後再按一下**顯示量值方格**。  
   
  在量值方格中，您可用下列方式建立量值：  
   
 -   按一下量值方格中的空白資料格，然後在公式列中輸入 DAX 公式。 按 ENTER 完成公式，量值即會出現在量值方格中。  
   
--   若要使用標準彙總函式建立量值，請按一下資料行，然後按一下工具列上的 [自動加總] 按鈕 (∑)，再按一下標準彙總函式。 標準彙總包括：Sum、Average、Count、DistinctCount、Max、Min。 使用 [自動加總] 按鈕建立的量值一律會出現在量值方格資料行的下方。  
+-   若要使用標準彙總函式建立量值，請按一下資料行，然後按一下工具列上的 [自動加總] 按鈕 (∑)，再按一下標準彙總函式。 標準彙總如下：總和、 平均值、 計數、 DistinctCount、 Max、 Min。 使用 [自動加總] 按鈕建立的量值一律會出現在量值方格資料行的下方。  
   
  依預設，使用自動加總時，量值的名稱會由相關聯的資料行名稱所定義，後面接著冒號和公式。 您可在公式列或 [屬性] 視窗的 **[量值名稱]** 屬性設定中變更名稱。 使用自訂公式建立量值時，您可在公式列中輸入名稱，後接冒號和公式，或者，您可在 [屬性] 視窗的 **[量值名稱]** 屬性設定中輸入名稱。  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], queries
@@ -13,12 +13,12 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c30244128ea15d010c9fe179b06424434325574d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6cd83135da7e5c9f4dac9e41ff562551d14ab20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159998"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768540"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>使用資料表以外的項目建立查詢 (Visual Database Tools)
   當您編寫擷取查詢時，應該明白指出您要的資料行、您要的資料列和查詢處理器尋找原始資料的位置。 通常其原始資料是由某資料表組成或由數個資料表聯結在一起。 但原始資料可能源自資料表以外的來源。 其實，原始資料可以來自檢視、查詢、同義資料表或傳回資料表的使用者定義函數。  
@@ -57,7 +57,7 @@ FROM sales
  如需新增檢視至查詢的詳細資訊，請參閱[將資料表新增至查詢 &#40;Visual Database Tools&#41;](visual-database-tools.md)。  
   
 ## <a name="using-a-query-in-place-of-a-table"></a>使用查詢取代資料表  
- 您可以選取查詢中的資料列。 例如，假設您已編寫某查詢來擷取書名和合著書籍 (具有一位以上作者的書籍) 的識別碼。 產生的 SQL 將如下所示：  
+ 您可以選取查詢中的資料列。 例如，假設您已撰寫某查詢來擷取合著書籍 (具有一位以上作者的書籍) 的書名和識別碼。 產生的 SQL 將如下所示：  
   
 ```  
 SELECT   
@@ -136,7 +136,7 @@ FROM
 ## <a name="using-a-user-defined-function-in-place-of-a-table"></a>使用使用者定義函數取代資料表  
  在 SQL Server 2000 (含) 以上版本中，您可以建立可傳回資料表的使用者定義函數。 執行複雜或程序邏輯時，這類函數便非常有用。  
   
- 例如，假設員工資料表含有額外的資料行 employee.manager_emp_id，而且外部索引鍵存在於 manager_emp_id 到 employee.emp_id 之間。 在員工資料表的每個資料列中，manager_emp_id 資料行將指出員工的上司。 更明確地說，它會指出員工上司的 emp_id。 您可以建立傳回資料表的使用者定義函數，其中該資料表將包含一資料列列出在特定職等管理人員的組織結構中工作的員工。 您可以呼叫 fn_GetWholeTeam 函數，並設計該函數使用輸入變數，即管理人員 (想要擷取該管理人員所管理的團隊) 的 emp_id。  
+ 例如，假設員工資料表含有額外的資料行 employee.manager_emp_id，而且外部索引鍵存在於 manager_emp_id 到 employee.emp_id 之間。 在員工資料表的每個資料列中，manager_emp_id 資料行將指出員工的上司。 更明確地說，它會指出員工上司的 emp_id。 您可以建立傳回資料表的使用者定義函數，其中該資料表將包含一資料列列出在特定職等管理人員的組織結構中工作的員工。 您可以呼叫 fn_GetWholeTeam 函式，並設計該函式採用輸入變數，即管理人員 (您想要擷取該管理人員所屬小組) 的 emp_id。  
   
  您可以編寫使用 fn_GetWholeTeam 函數做為資料來源的查詢。 產生的 SQL 將如下所示：  
   

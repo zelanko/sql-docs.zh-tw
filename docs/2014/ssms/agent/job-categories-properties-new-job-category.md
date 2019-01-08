@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.categoriesproperties
@@ -12,12 +12,12 @@ ms.assetid: d0f4d53a-cc13-48cf-ae90-a2937b548c45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71ff1db4687a779c35d062e978afed28a2618c64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d6748956dcfe0b880ffe3b384e49a8ccc00ebf12
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143576"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806720"
 ---
 # <a name="job-categories-properties-and-new-job-category"></a>作業類別目錄屬性及新增作業類別目錄
   列出一項作業類別目錄或所有作業類別目錄中的作業，並讓您能夠加入新的作業類別目錄。  

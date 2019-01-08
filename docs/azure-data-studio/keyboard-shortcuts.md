@@ -1,7 +1,8 @@
 ---
-title: 建立及自訂 Azure Data Studio 中的鍵盤快速鍵 |Microsoft Docs
-description: 了解如何建立及自訂 Azure Data Studio 中的鍵盤快速鍵。
-ms.custom: tools|sos
+title: 建立及自訂鍵盤快速鍵
+titleSuffix: Azure Data Studio
+description: 了解如何建立及自訂 Azure Data Studio 中的鍵盤快速鍵
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,38 +11,38 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3452e2e19d237f8ba5135c723e9971c0932ba61c
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: dd58bb28fe5969fcf0553576d70dd62314f5f974
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356469"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030252"
 ---
 # <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>中的鍵盤快速鍵 [!INCLUDE[name-sos](../includes/name-sos.md)]
 
 這篇文章提供快速檢視、 編輯和建立鍵盤快速鍵中的步驟[!INCLUDE[name-sos](../includes/name-sos-short.md)]。
 
-因為 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的按鍵繫結功能繼承自 Visual Studio Code，有關使用不同鍵盤配置等進階自訂內容的詳細資訊，請見 [Visual Studio Code 的按鍵繫結](https://code.visualstudio.com/docs/getstarted/keybindings) 文章。 某些按鍵功能可能無法使用 (例如，[!INCLUDE[name-sos](../includes/name-sos-short.md)] 中不支援按鍵對應延伸模組)。
+因為 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的按鍵繫結功能繼承自 Visual Studio Code，有關使用不同鍵盤配置等進階自訂內容的詳細資訊，請見 [Visual Studio Code 的按鍵繫結](https://code.visualstudio.com/docs/getstarted/keybindings) 文章。 某些索引鍵繫結功能可能無法使用 (比方說，快速鍵延伸模組不支援在[!INCLUDE[name-sos](../includes/name-sos-short.md)])。
 
 
 ## <a name="open-the-keyboard-shortcuts-editor"></a>開啟 鍵盤快速鍵編輯器
 
 若要檢視所有目前定義的鍵盤快速鍵：
 
-從 **檔案** 功能表開啟 **鍵盤快速鍵** 編輯器：**檔案**  >  **喜好設定**  >  **鍵盤快速鍵** (Mac：**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >  **喜好設定**  >  **鍵盤快速鍵**)。
+開啟**鍵盤快速鍵**從編輯器**檔案**功能表：**檔案** > **喜好設定** > **鍵盤快速鍵**(**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >  **偏好** > **鍵盤快速鍵**Mac 上)。
 
-除了顯示目前按鍵繫結關係**鍵盤快速鍵**編輯器會列出可用的命令沒有定義的鍵盤快速鍵。 **鍵盤快速鍵**編輯器可讓您輕鬆地變更、 移除、 重設，並定義新按鍵繫結關係。  
+除了顯示目前的索引鍵繫結**鍵盤快速鍵**編輯器會列出可用的命令沒有定義的鍵盤快速鍵。 **鍵盤快速鍵**編輯器可讓您輕鬆地變更、 移除、 重設，並定義新的索引鍵繫結。  
 
 
 ## <a name="edit-existing-keyboard-shortcuts"></a>編輯現有的鍵盤快速鍵
 
-若要變更現有的鍵盤快速鍵的按鍵繫結關係：
+若要變更現有的鍵盤快速鍵的按鍵繫結：
 
 1. 找出您想要變更藉由使用 [搜尋] 方塊或清單中捲動的鍵盤快速鍵。
    > [!TIP]
    > 您可以依按鍵、 命令、 來源...等條件進行搜尋，以得到所有相關的鍵盤快速鍵搜尋結果。
 
-1. 以滑鼠右鍵按一下所需的項目，然後選取**變更按鍵繫結關係**
+1. 以滑鼠右鍵按一下所需的項目，然後選取**變更索引鍵繫結**
 
    ![編輯鍵盤快速鍵](media/keyboard-shortcuts/change-keybinding.png)
 
@@ -53,7 +54,7 @@ ms.locfileid: "49356469"
 
 若要建立新的鍵盤快速鍵：
 
-1. 以滑鼠右鍵選取沒有按鍵綁定的命令，並選取**新增按鍵繫結**。
+1. 以滑鼠右鍵按一下 沒有任何索引鍵繫結，然後選取命令**新增金鑰繫結**。
 
    ![建立鍵盤快速鍵](media/keyboard-shortcuts/add-keybinding.png)
 

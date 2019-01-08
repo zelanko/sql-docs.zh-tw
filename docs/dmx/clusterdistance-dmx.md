@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2d8eb879d23a344e5de6bad3c9fb6042fdadb3e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ad3d0d06016fe8684cacaf73286b229a423aa7c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985394"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533666"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,15 +37,15 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="remarks"></a>備註  
  **ClusterDistance**函式會傳回輸入的案例與輸入案例機率最高的叢集之間的距離。  
   
- 如果是 K-Means 群集，由於任何案例都可能僅屬於一個群集，而且成員資格加權為 1.0，則群集距離永遠為 0。 不過，在 K-Means 中，系統會假設每個群集都有一個距心。 您可以在採礦模型內容中，查詢或瀏覽 NODE_DISTRIBUTION 巢狀資料表來取得距心的值。 如需詳細資訊，請參閱[叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)。  
+ 如果是 K-Means 群集，由於任何案例都可能僅屬於一個群集，而且成員資格加權為 1.0，則群集距離永遠為 0。 不過，在 K-Means 中，系統會假設每個群集都有一個距心。 您可以在採礦模型內容中，查詢或瀏覽 NODE_DISTRIBUTION 巢狀資料表來取得距心的值。 如需詳細資訊，請參閱 [叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)。  
   
  如果是預設的 EM 群集方法，群集內部所有的點都會被視為可能性相等，因此，根據設計，沒有用於群集的距心。 值**ClusterDistance**特定案例與特定群集之間*N*的計算方式如下：  
   
- ClusterDistance(N) =1–(membershipWeight(N))  
+ ClusterDistance(N) =1-(membershipWeight(N))  
   
  或：  
   
- ClusterDistance(N) = 1 – ClusterProbability (N))  
+ ClusterDistance(N) = 1 ClusterProbability (N))  
   
 ## <a name="related-prediction-functions"></a>相關的預測函數  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供下列額外的函數來查詢群集模型：  
@@ -58,7 +58,7 @@ ClusterDistance([<ClusterID expression>])
   
 -   使用[PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md)函數傳回 0 到 1，表示輸入的案例可能性的量值存在於模型學習演算法。  
   
-## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>範例 1：取得最可能之群集的群集距離  
+## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>範例 1:取得最可能之群集的群集距離  
  下列範例會傳回指定之案例與該案力最可能所屬之群集間的距離。  
   
 ```  
@@ -88,7 +88,7 @@ NATURAL PREDICTION JOIN
 |--------------|  
 |叢集 6|  
   
-## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>範例 2：取得指定之群集的距離  
+## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>範例 2:取得指定之群集的距離  
  下列語法使用採礦模型內容結構描述資料列集，傳回節點識別碼的清單，以及採礦模型中之群集的節點標題。 您可以使用節點標題中的叢集識別碼引數作為**ClusterDistance**函式。  
   
 ```  
@@ -129,6 +129,6 @@ NATURAL PREDICTION JOIN
  [叢集&#40;DMX&#41;](../dmx/cluster-dmx.md)   
  [資料採礦延伸模組&#40;DMX&#41;函式參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [叢集模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

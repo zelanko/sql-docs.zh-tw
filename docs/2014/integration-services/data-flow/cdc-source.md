@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.f1
@@ -13,12 +12,12 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bf104479ab03525ed648d73911931263206d07b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af2f56c92947cd8e210b8532cb6899c52486707e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063088"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349818"
 ---
 # <a name="cdc-source"></a>CDC 來源
   CDC 來源會從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 變更資料表中讀取變更資料的範圍，並將這些變更向下游傳遞至其他 SSIS 元件。  
@@ -29,7 +28,7 @@ ms.locfileid: "48063088"
   
  CDC 來源使用下列組態：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 連接管理員，用以存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 資料庫。 如需有關設定 CDC 來源連接的詳細資訊，請參閱 < [CDC 來源編輯器&#40;連線管理員頁面&#41;](../cdc-source-editor-connection-manager-page.md)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 連接管理員，用以存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 資料庫。 如需設定 CDC 來源連接的詳細資訊，請參閱 [CDC 來源編輯器 &#40;連線管理員頁面&#41;](../cdc-source-editor-connection-manager-page.md)。  
   
 -   啟用 CDC 的資料表。  
   
@@ -46,13 +45,13 @@ ms.locfileid: "48063088"
 ## <a name="error-handling"></a>錯誤處理  
  CDC 來源有錯誤輸出。 此元件的錯誤輸出包含下列輸出資料行：  
   
--   **錯誤碼**：值一定是 -1。  
+-   **錯誤碼**:這個值一律是-1。  
   
--   **錯誤資料行**：造成錯誤 (用於轉換錯誤) 的來源資料行。  
+-   **錯誤資料行**:造成錯誤 （用於轉換錯誤） 的來源資料行。  
   
--   **錯誤資料列資料行**：造成錯誤的記錄資料。  
+-   **錯誤資料列資料行**:造成錯誤的記錄資料。  
   
- 根據錯誤行為設定，CDC 來源支援在錯誤輸出中傳回擷取程序期間發生的錯誤 (資料轉換、截斷)。 如需詳細資訊，請參閱 < [CDC 來源編輯器&#40;錯誤輸出頁面&#41;](../cdc-source-editor-error-output-page.md)。  
+ 根據錯誤行為設定，CDC 來源支援在錯誤輸出中傳回擷取程序期間發生的錯誤 (資料轉換、截斷)。 如需詳細資訊，請參閱 [CDC 來源編輯器 &#40;錯誤輸出頁面&#41;](../cdc-source-editor-error-output-page.md)。  
   
 ## <a name="data-type-support"></a>資料類型支援  
  Microsoft 的 CDC 來源元件支援所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，這些資料類型都會對應至正確的 SSIS 資料類型。  
@@ -98,11 +97,11 @@ use <cdc-enabled-database-name>
   
  如需詳細資訊，請參閱下列其中一個主題：  
   
--   [CDC 來源編輯器&#40;連線管理員頁面&#41;](../cdc-source-editor-connection-manager-page.md)  
+-   [CDC 來源編輯器 &#40;連線管理員頁面&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [CDC 來源編輯器&#40;資料行頁面&#41;](../cdc-source-editor-columns-page.md)  
+-   [CDC 來源編輯器 &#40;資料行頁面&#41;](../cdc-source-editor-columns-page.md)  
   
--   [CDC 來源編輯器&#40;錯誤輸出頁面&#41;](../cdc-source-editor-error-output-page.md)  
+-   [CDC 來源編輯器 &#40;錯誤輸出頁面&#41;](../cdc-source-editor-error-output-page.md)  
   
  **[進階編輯器]** 對話方塊包含可以程式設計方式設定的屬性。  
   
@@ -114,11 +113,11 @@ use <cdc-enabled-database-name>
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [CDC 來源編輯器&#40;連線管理員頁面&#41;](../cdc-source-editor-connection-manager-page.md)  
+-   [CDC 來源編輯器 &#40;連線管理員頁面&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [CDC 來源編輯器&#40;資料行頁面&#41;](../cdc-source-editor-columns-page.md)  
+-   [CDC 來源編輯器 &#40;資料行頁面&#41;](../cdc-source-editor-columns-page.md)  
   
--   [CDC 來源編輯器&#40;錯誤輸出頁面&#41;](../cdc-source-editor-error-output-page.md)  
+-   [CDC 來源編輯器 &#40;錯誤輸出頁面&#41;](../cdc-source-editor-error-output-page.md)  
   
 -   [CDC 來源自訂屬性](cdc-source-custom-properties.md)  
   
@@ -126,6 +125,6 @@ use <cdc-enabled-database-name>
   
 ## <a name="related-content"></a>相關內容  
   
--   mattmasson.com 上的部落格文章：[Processing Modes for the CDC Source](http://go.microsoft.com/fwlink/?LinkId=242541)。  
+-   mattmasson.com 上的部落格文章：[Processing Modes for the CDC Source](https://go.microsoft.com/fwlink/?LinkId=242541)。  
   
   

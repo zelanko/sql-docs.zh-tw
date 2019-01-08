@@ -18,23 +18,23 @@ ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 03971bcd487016fbc1fadc07203ebe2ab73555d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40bf5851663840dac27252aa5cdfdadb0e76da93
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163168"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205697"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明資料加密 (TDE)
   *透明資料加密* (TDE) 會加密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 資料檔案，一般稱之為靜止的加密資料。 您可以採取幾個預防措施來維護資料庫安全，例如設計安全的系統、加密機密的資產，以及在資料庫伺服器周圍建立防火牆。 但是，當發生實體媒體 (如磁碟機或備份磁帶) 遭竊的狀況時，惡意人士可以還原或附加資料庫，並瀏覽資料。 一個解決方案是加密資料庫中的敏感性資料，並使用憑證來保護用來加密資料的金鑰。 如此可防止沒有金鑰的任何人使用資料，但是這種防護類型必須事先規劃。  
   
  TDE 會執行資料和記錄檔的即時 I/O 加密和解密。 此加密會使用資料庫加密金鑰 (DEK)，該金鑰儲存於資料庫開機記錄中，以便在復原期間可供使用。 DEK 是對稱金鑰，而其維護安全的方式是使用儲存於伺服器之 master 資料庫內的憑證或是受到 EKM 模組所保護的非對稱金鑰。 TDE 會保護休眠的資料，也就是資料檔和記錄檔。 它提供了與各個不同業界內建立的許多法令、規章和指導方針相符的能力， 如此可讓軟體開發人員使用 AES 和 3DES 加密演算法加密資料，而不需要變更現有的應用程式。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  TDE 不會提供跨通訊通道的加密。 如需如何跨通訊通道加密資料的詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
->   
+> 
 >  **相關主題：**  
->   
+> 
 >  -   [Azure SQL Database 的透明資料加密](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
 > -   [將 TDE 保護的資料庫移至另一個 SQL Server](move-a-tde-protected-database-to-another-sql-server.md)  
 > -   [使用 EKM 啟用 TDE](enable-tde-on-sql-server-using-ekm.md)  
@@ -118,7 +118,7 @@ GO
 ## <a name="catalog-views-and-dynamic-management-views"></a>目錄檢視和動態管理檢視  
  下表顯示 TDE 目錄檢視和動態管理檢視。  
   
-|目錄檢視或動態管理檢視|目的|  
+|目錄檢視或動態管理檢視|用途|  
 |---------------------------------------------|-------------|  
 |[sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)|顯示資料庫資訊的目錄檢視。|  
 |[sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)|顯示資料庫中之憑證的目錄檢視。|  

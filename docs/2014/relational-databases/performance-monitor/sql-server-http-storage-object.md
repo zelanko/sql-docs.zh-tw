@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b0e18bf80d03f12a0e797d38499d23925377cea0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a33585b216da10bd09a604905c50ce97b528de49
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078707"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752850"
 ---
 # <a name="sql-server-httpstorageobject"></a>SQL Server：HTTP_STORAGE_OBJECT
   **SQLServer:HTTP_STORAGE_OBJECT** 效能物件包含監視 Windows Azure 儲存體帳戶的效能計數器。 使用[在 Windows Azure 中的 SQL Server 資料檔案](../databases/sql-server-data-files-in-microsoft-azure.md)功能，您可以將資料庫檔案儲存在 Windows Azure 儲存體 Blob 中。 這個效能物件會將每個 Windows Azure 儲存體帳戶視為不同的磁碟機。  
@@ -38,6 +38,6 @@ ms.locfileid: "48078707"
 |**HTTP Storage I/O Retry/sec**|每秒傳送至 HTTP 儲存體的重試要求數目。|  
   
 ## <a name="see-also"></a>另請參閱  
- [監視資源使用狀況 &#40;系統監視器&#41;](monitor-resource-usage-system-monitor.md)  
+ [監視資源使用狀況 &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)  
   
   

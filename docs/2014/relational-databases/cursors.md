@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - results [SQL Server], cursors
@@ -19,12 +18,12 @@ ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 10e6590da7d5efdb704a3f4005c278e2add41a5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8123179285b94377fff758121f535175705f29af
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134068"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774260"
 ---
 # <a name="cursors"></a>資料指標
   關聯式資料庫中的作業會針對完整的資料列集運作。 例如，由 SELECT 陳述式所傳回的資料列集包括所有滿足陳述式 WHERE 子句之條件的資料列。 由陳述式傳回的完整資料列稱為結果集。 應用程式 (尤其是互動式線上應用程式) 不一定能夠以一個單位有效地運用整個結果集。 這些應用程式需要一個機制，一次運用一個資料列或小型資料列區塊。 資料指標就是一種結果集的擴充，提供此種機制。  
@@ -62,7 +61,7 @@ ms.locfileid: "48134068"
   
  雖然資料庫 API 資料指標模型會將順向資料指標視為不同的資料指標類型，但是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 並不會。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會將順向和捲動視為可以套用至靜態、索引鍵集驅動和動態資料指標的選項。 [!INCLUDE[tsql](../includes/tsql-md.md)] 資料指標支援順向、靜態、索引鍵集驅動和動態資料指標。 資料庫 API 資料指標模式會假設靜態、索引鍵集驅動和動態資料指標一律可以捲動。 當資料庫 API 資料指標屬性 (Attribute 或 Property) 設為順向時， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會將此資料指標實作為順向動態資料指標。  
   
- 靜態  
+ Static  
  資料指標開啟時，靜態資料指標的完整結果集會內建於 **tempdb** 。 資料指標開啟的同時，靜態資料指標會將結果集的原貌展現出來。 靜態資料指標可以偵測少量的變更或是沒有變更，但是在捲動時所耗用的資源相當少。  
   
  即使資料庫中的變更影響結果集的成員資格，或構成結果集的資料列之資料行數值有所變動時，此類資料指標並不會反映出其中的變更。 靜態資料指標並不會將資料指標開啟後插入資料庫的新資料列顯示出來，即使資料列符合資料指標 SELECT 陳述式的搜尋條件。 如果構成結果集的資料列被其他使用者更新，新資料值不會顯示在靜態資料指標上。 靜態資料指標會顯示資料指標開啟後從資料庫刪除的資料列。 總結以上，靜態資料指標中並不會反映出 UPDATE、INSERT 或 DELETE 作業帶來的變動 (除非資料指標經過關閉後重新開啟)，即使是使用同一連接開啟資料指標後的修改也不顯示。  

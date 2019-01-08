@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBGetInstances
@@ -18,12 +16,12 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7e35b7b2a3551882ce8b244c5e93aa8ad107b8fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92aa65bd2d3aad71f2467efaa7a09f75f20d8f63
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128588"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795030"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 函數
   傳回指定之版本的所有 SQL Server Express LocalDB 執行個體。  
@@ -42,10 +40,10 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>參數  
  *pInstanceNames*  
- [輸出] 當傳回此函數時，包含使用者工作站上之具名及預設 LocalDB 執行個體的名稱。  
+ [輸出]此函式傳回時，包含名稱的具名和預設 LocalDB 執行個體，在使用者的工作站上。  
   
  *lpdwNumberOfInstances*  
- [輸入/輸出]輸入時，包含的執行個體名稱中的位置數目*pInstanceNames*緩衝區。 輸出時，包含在使用者工作站上找到的 LocalDB 執行個體數目。  
+ [輸入/輸出]輸入時，包含的執行個體名稱中的位置數目*pInstanceNames*緩衝區。 在輸出時，包含使用者工作站上找到的 LocalDB 執行個體數目。  
   
 ## <a name="returns"></a>傳回值  
  S_OK  

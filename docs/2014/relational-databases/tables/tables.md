@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acdc9600b7d1081492893f3cc8497359df65fdb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153714"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782880"
 ---
 # <a name="tables"></a>資料表
   資料表是資料庫物件，其中包含資料庫內所有的資料。 在資料表中，會以邏輯的方式將資料整理成資料列與資料行格式，這與試算表相似。 每個資料列都代表唯一的記錄，而每個資料行則代表記錄中的一個欄位。 例如，包含公司員工資料的資料表可能會包含每個員工的資料列，並以資料行來顯示員工資訊 (例如，員工編號、姓名、地址、工作職稱和住家電話號碼)。  
@@ -34,7 +33,7 @@ ms.locfileid: "48153714"
  除了基本使用者定義資料表的標準角色之外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還提供在資料庫中具有特殊用途的下列資料表類型。  
   
  分割區資料表  
- 資料分割資料表的資料會水平劃分成數個單元，分散於資料庫中的多個檔案群組。 資料分割使大型資料表或索引的管理更為容易，這是因為您可以快速有效地存取或管理資料的子集，同時維持整體集合的完整性。 依預設， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 最多支援 15,000 個資料分割。 如需詳細資訊，請參閱 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
+ 資料分割資料表的資料會水平劃分成數個單元，分散於資料庫中的多個檔案群組。 資料分割使大型資料表或索引的管理更為容易，這是因為您可以快速有效地存取或管理資料的子集，同時維持整體集合的完整性。 依預設， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 最多支援 15,000 個資料分割。 如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。  
   
  暫存資料表  
  暫存資料表儲存在 `tempdb` 中。 暫存資料表有兩種：區域與全域。 它們在名稱、可見性和可用性方面有些差異。 本機暫存資料表是以單一數字符號 (#) 作為名稱的第一個字元；只有目前連接的使用者才能看見它們，當使用者中斷與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的連接時，就會刪除它們。 全域暫存資料表是以兩個數字符號 (##) 做為名稱的前兩個字元；只要一建立好，任何使用者都能看見它們，只有當所有參考這些資料表的使用者都中斷與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的連接時，才會刪除它們。  

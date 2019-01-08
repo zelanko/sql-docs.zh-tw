@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- replication
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - replication [SQL Server], planning
@@ -16,12 +14,12 @@ ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11ea6b99818a1f1ffaf4b38019a234aa54294d2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d66c7950a5d610a50ca6bce84f4b973c4ec9983
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186928"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789001"
 ---
 # <a name="replication-programming-concepts"></a>複寫程式設計概念
   在開發使用複寫功能的應用程式之前，您應該遵循下列一般規劃步驟：  

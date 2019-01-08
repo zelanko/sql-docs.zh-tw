@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.slowlychangingdimtrans.f1
@@ -18,12 +17,12 @@ ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c417f01f7256863902f4e446bcb04c0732be832c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2fae586ee68a75127d5085b57f5f200498967d1d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056188"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352129"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>緩時變維度轉換
   「緩時變維度」轉換可在資料倉儲維度資料表中協調記錄的更新與插入。 例如，您可利用此轉換來設定轉換輸出，該轉換輸出會使用 AdventureWorks OLTP 資料庫中 Production.Products 資料表的資料，在 [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] 資料庫的 DimProduct 資料表內插入和更新記錄。  
@@ -47,7 +46,7 @@ ms.locfileid: "48056188"
   
 -   變更屬性變更會覆寫現有記錄。 此種變更相當於「類型 1」變更。 「緩時變維度」轉換會將這些資料列導向稱為 [變更屬性更新輸出] 的輸出。  
   
--   記錄屬性變更會新建記錄，而不是更新現有記錄。 現有記錄中唯一允許的變更，是更新指示記錄為目前記錄還是過期記錄的資料行。 此種變更相當於「類型 2」變更。 「緩時變維度」轉換會將這些資料列導向至兩個輸出：[記錄屬性插入輸出] 及 [新輸出]。  
+-   記錄屬性變更會新建記錄，而不是更新現有記錄。 現有記錄中唯一允許的變更，是更新指示記錄為目前記錄還是過期記錄的資料行。 此種變更相當於「類型 2」變更。 「 緩時變維度 」 轉換會將導向至兩個輸出這些資料列：**歷程記錄屬性插入輸出**並**新輸出**。  
   
 -   固定屬性變更指示資料行的值不得變更。 「緩時變維度」轉換會偵測變更，並可將具有變更的資料列導向稱為 [固定屬性輸出] 的輸出。  
   
@@ -69,7 +68,7 @@ ms.locfileid: "48056188"
 |------------|-----------------|----------------------------|  
 |**[變更屬性更新輸出]**|會更新查閱資料表中的記錄。 此輸出用於變更屬性資料列。|「OLE DB 命令」轉換會使用 UPDATE 陳述式更新記錄。|  
 |**[固定屬性輸出]**|不得變更之資料列中的值與查閱資料表中的值不相符。 此輸出用於固定屬性資料列。|不會建立任何預設資料流程。 如果轉換已設定為遇到固定屬性資料行的變更之後繼續，則應該建立擷取這些資料列的資料流程。|  
-|**[記錄屬性插入輸出]**|查閱資料表至少包含一個相符的資料列。 標示為「目前的」的資料列現在必須標示為「已過期」。 此輸出用於記錄屬性資料列。|「衍生的資料行」轉換會為過期資料列和目前資料列指標建立資料行。 「OLE DB 命令」轉換會更新現在必須標示為「已過期」的記錄。 具有新資料行值的資料列會導向至「新輸出」，在此會插入該資料列並將其標示為「目前」。|  
+|**[記錄屬性插入輸出]**|查閱資料表至少包含一個相符的資料列。 標示為「目前」的資料列現在必須標示為「已過期」。 此輸出用於記錄屬性資料列。|「衍生的資料行」轉換會為過期資料列和目前資料列指標建立資料行。 「OLE DB 命令」轉換會更新現在必須標示為「已過期」的記錄。 具有新資料行值的資料列會導向至「新輸出」，在此會插入該資料列並將其標示為「目前」。|  
 |**[推斷的成員更新輸出]**|會插入推斷之維度成員的資料列。 此輸出用於推斷的成員資料列。|「OLE DB 命令」轉換會使用 SQL UPDATE 陳述式更新記錄。|  
 |**[新輸出]**|查閱資料表不包含相符的資料列。 會將資料列加入維度資料表。 此輸出用於新資料列和記錄屬性資料列的變更。|「衍生的資料行」轉換會設定目前資料列指標，而 OLE DB 目的地則會插入該資料列。|  
 |**[不變更輸出]**|查閱資料表中的值與資料列值相符。 此輸出用於不變更的資料列。|因為「緩時變維度」轉換不執行任何工作，所以不會建立任何預設資料流程。 如果您要擷取這些資料列，則應該為此輸出建立資料流程。|  
@@ -83,7 +82,7 @@ ms.locfileid: "48056188"
  如需如何改善緩時變維度轉換效能的建議，請參閱 [資料流程效能功能](../data-flow-performance-features.md)。  
   
 ## <a name="troubleshooting-the-slowly-changing-dimension-transformation"></a>疑難排解緩時變維度轉換  
- 您可以記錄緩時變維度轉換對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，疑難排解緩時變維度轉換對外部資料來源執行的連接、命令和查詢。 若要記錄緩時變維度轉換對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱[封裝執行的疑難排解工具](../../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+ 您可以記錄緩時變維度轉換對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，疑難排解緩時變維度轉換對外部資料來源執行的連接、命令和查詢。 若要記錄緩時變維度轉換對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
 ## <a name="configuring-the-slowly-changing-dimension-transformation"></a>設定緩時變維度轉換  
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
@@ -94,7 +93,7 @@ ms.locfileid: "48056188"
   
 -   [轉換自訂屬性](transformation-custom-properties.md)  
   
- 如需如何設定屬性的詳細資訊，請參閱[設定資料流程元件的屬性](../set-the-properties-of-a-data-flow-component.md)。  
+ 如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="configuring-the-slowly-changing-dimension-transformation-outputs"></a>設定緩時變維度轉換輸出  
  在維度資料表中協調記錄的更新與插入是一項複雜的工作，特別是如果同時使用「類型 1」和「類型 2」變更。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師提供兩種方法，以設定緩時變維度的支援：  
@@ -108,6 +107,6 @@ ms.locfileid: "48056188"
   
 ## <a name="related-content"></a>相關內容  
   
--   blogs.msdn.com 上的部落格項目 [Optimizing the Slowly Changing Dimension Wizard](http://go.microsoft.com/fwlink/?LinkId=199481)(最佳化緩時變維度精靈)。  
+-   blogs.msdn.com 上的部落格項目 [Optimizing the Slowly Changing Dimension Wizard](https://go.microsoft.com/fwlink/?LinkId=199481)(最佳化緩時變維度精靈)。  
   
   

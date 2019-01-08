@@ -11,12 +11,12 @@ ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ec1406b5259a68eadc821092bea3cccd10e032d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0bd0382906d3ee56055cc026036816af64b55dc6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185818"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408959"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>將 Integration Services 服務設定為叢集資源
   本節針對認為將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務設定為叢集資源的優點多於缺點的客戶，提供必要的設定指示。 不過， [!INCLUDE[msCoName](../includes/msconame-md.md)] 並不建議將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務設定為叢集資源。  
@@ -79,7 +79,7 @@ ms.locfileid: "48185818"
   
 4.  在 [檔案] 功能表上，指向 [開新檔案]，然後按一下 [資源]。  
   
-5.  在 [資源精靈] 的 [新資源] 頁面上輸入名稱，然後選取 [一般服務] 作為 [服務類型]。 請不要變更 [群組] 的值。 按 [下一步] 。  
+5.  在 [資源精靈] 的 [新資源] 頁面上鍵入名稱，然後選取 [一般服務] 作為 [服務類型]。 請不要變更 [群組] 的值。 按 [下一步] 。  
   
 6.  在 [可能的擁有者] 頁面中，加入或移除作為資源之可能擁有者的叢集節點。 按 [下一步] 。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48185818"
   
 2.  在共用磁碟上，建立名為 **Packages** 的新資料夾作為封裝存放區。 請將新資料夾的「列出資料夾」和寫入權限授與適當的使用者和群組。  
   
-3.  在共用磁碟上，在文字或 XML 編輯器中開啟組態檔。 值變更`ServerName`的虛擬名稱的項目[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]位於相同的資源群組。  
+3.  在共用磁碟上，在文字或 XML 編輯器中開啟組態檔。 將 `ServerName` 元素的值變更成位在相同資源群組中的虛擬 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 名稱。  
   
 4.  值變更`StorePath`的完整路徑的項目**封裝**在上一個步驟中的共用磁碟上建立資料夾。  
   

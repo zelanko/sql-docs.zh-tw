@@ -17,19 +17,19 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7aca52e23bf392c411063ab48ddd3e4ce9b6ae41
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a5560379c07e3f6a5ff21ca2db19dbe0e8a420a1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809814"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798370"
 ---
 # <a name="validate-a-dac-package"></a>驗證 DAC 封裝
   最好先檢閱 DAC 封裝的內容，再將它部署至實際執行環境，以及先驗證升級動作，再升級現有 DAC。 當您部署的封裝之前不是在組織內開發時，特別會是這個情況。  
   
-1.  **開始之前：**  [必要條件](#Prerequisites)  
+1.  **開始之前：**[必要條件](#Prerequisites)  
   
-2.  **使用下列項目，升級 DAC**  [檢視 DAC 內容](#ViewDACContents)、 [檢視資料庫變更](#ViewDBChanges)、 [檢視升級動作](#ViewUpgradeActions)、 [Compare DACs](#CompareDACs)  
+2.  **若要升級 DAC，使用：**[檢視 DAC 內容](#ViewDACContents)，[檢視資料庫變更](#ViewDBChanges)，[檢視升級動作](#ViewUpgradeActions)，[比較 Dac](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> 必要條件  
  建議您不要部署來源不明或來源不受信任的 DAC 封裝。 這類 DAC 可能包含惡意程式碼，因此可能會執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述而造成錯誤。 使用來源不明或來源不受信任的 DAC 之前，請先將它部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的隔離測試執行個體，並在資料庫上執行 [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)，然後檢查資料庫中的程式碼，例如預存程序或其他使用者定義的程式碼。  
@@ -39,15 +39,15 @@ ms.locfileid: "43809814"
   
  **在 SQL Server Developer Tools 中檢視 DAC**  
   
-1.  開啟 **[檔案]** 功能表，並選取 **[開新檔案]**，然後選取 **[專案]**。  
+1.  開啟 [檔案] 功能表，選取 [開新檔案]，然後選取 [專案...]。  
   
 2.  選取 **[SQL Server]** 專案範本，並指定 **[名稱]**、 **[位置]** 及 **[方案名稱]**。  
   
-3.  在 **[方案總管]** 中，以滑鼠右鍵按一下專案節點，並選取 **[屬性]**。  
+3.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後選取 [屬性...]。  
   
 4.  在 [專案設定] 索引標籤的 [輸出類型] 區段中，選取 [資料層應用程式 (.dacpac 檔案)] 核取方塊，然後關閉屬性對話方塊。  
   
-5.  在方案總管中，以滑鼠右鍵按一下專案節點，並選取 [匯入資料層應用程式]。  
+5.  在 [方案總管] 中，以滑鼠右鍵按一下專案節點，然後選取 [匯入資料層應用程式...]。  
   
 6.  使用方案總管開啟 DAC 中的所有檔案，例如伺服器選取原則和部署前後指令碼。  
   
@@ -78,11 +78,11 @@ ms.locfileid: "43809814"
   
 1.  建立 SMO Server 物件，並將它設定為包含要檢視之 DAC 的執行個體。  
   
-2.  開啟`ServerConnection`物件，並連接到相同的執行個體。  
+2.  開啟 `ServerConnection` 物件，並連接到相同的執行個體。  
   
 3.  指定變數中的 DAC 名稱。  
   
-4.  使用`GetDatabaseChanges()`方法來擷取`ChangeResults`物件，並將管道傳送至文字檔以產生簡單的報告新，物件刪除，而且已變更之物件。  
+4.  使用 `GetDatabaseChanges()` 方法擷取 `ChangeResults` 物件，並將該物件以管道傳送至文字檔以產生新的、已刪除和已變更之物件的簡單報表。  
   
 ### <a name="view-database-changes-example-powershell"></a>檢視資料庫變更範例 (PowerShell)  
  **檢視資料庫變更範例 (PowerShell)**  
@@ -123,13 +123,13 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 1.  建立 SMO Server 物件，並將它設定為包含已部署之 DAC 的執行個體。  
   
-2.  開啟`ServerConnection`物件，並連接到相同的執行個體。  
+2.  開啟 `ServerConnection` 物件，並連接到相同的執行個體。  
   
-3.  使用`System.IO.File`以載入 DAC 封裝檔案。  
+3.  使用 `System.IO.File` 以載入 DAC 封裝檔案。  
   
 4.  指定變數中的 DAC 名稱。  
   
-5.  使用`GetIncrementalUpgradeScript()`方法以取得升級的 TRANSACT-SQL 陳述式的清單會執行，並使用管線將清單傳送至文字檔。  
+5.  使用 `GetIncrementalUpgradeScript()` 方法以取得升級要執行的 Transact-SQL 陳述式清單，並將該清單以管道傳送至文字檔。  
   
 6.  關閉用來讀取 DAC 封裝檔案的檔案資料流。  
   

@@ -12,12 +12,12 @@ ms.assetid: e579d104-3307-4edd-8587-b14ecbc02ed9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8b3796b97b92c56618e1b9fa98198f83206c825d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95d0da610a8030c68bcf25d650e68aef4ae83128
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215638"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396543"
 ---
 # <a name="mssqlserver17084"></a>MSSQLSERVER_17084
     
@@ -39,7 +39,7 @@ ms.locfileid: "48215638"
  `ATOMIC` 區塊需要 `WITH` 選項 `TRANSACTION ISOLATION LEVEL` 和 `LANGUAGE` 的值。 例如：  
   
 ```  
-BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N’us_english’)  
+BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N'us_english')  
 ```  
   
  如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  

@@ -20,16 +20,16 @@ ms.assetid: d863179f-12a9-4b55-ac6b-7d84202d3da3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7eb460efdd7915eb1f376ec3b640896b6fdd186e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87f2e46c5b774983ecac2f4bbaf377b3e7260bef
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825308"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208897"
 ---
 # <a name="sqlnumresultcols-function"></a>SQLNumResultCols 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ISO 92  
+ 導入的版本：ODBC 1.0 標準的合規性：ISO 92  
   
  **摘要**  
  **SQLNumResultCols**結果集中傳回的資料行數目。  

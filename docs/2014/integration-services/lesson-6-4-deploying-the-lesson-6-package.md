@@ -1,24 +1,23 @@
 ---
-title: 步驟 4：部署第 6 課的套件 | Microsoft Docs
+title: 步驟 4：部署第 6 課套件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e7cc4a80849f9dfd12bd7148351c0230e30e64ed
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 02491a0773a3ecbaaf6384bf88d7c07d1549745b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905038"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752626"
 ---
-# <a name="step-4-deploying-the-lesson-6-package"></a>步驟 4：部署第 6 課的套件
+# <a name="step-4-deploying-the-lesson-6-package"></a>步驟 4：部署第 6 課封裝
   部署封裝時，需要將封裝新增至 SSISDB 目錄中的 SQL Server 執行個體上的整合服務。 在本課程中您會將第 6 課封裝加入至 SSISDB 目錄、 設定參數，以及執行封裝。 本課程中引導您使用 SQL Server Management Studio 來將第 6 課封裝加入至 SSISDB 目錄，以及部署封裝。 在部署封裝之後，您將修改參數指向新位置，然後執行封裝。  
   
  在這一課中，您將會：  

@@ -19,12 +19,12 @@ ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13a011ab9545b9e5b9f02daf46654b0f8253a66d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bcca4bc6161526d1bd78e55bc9452f2d7d9d69d3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142511"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776180"
 ---
 # <a name="mapping-data-types-odbc"></a>對應資料類型 (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]至 ODBC SQL 資料類型的 SQL 資料類型。 下列章節討論 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL 資料類型和它們所對應的 ODBC SQL 資料類型。 這些章節也討論 ODBC SQL 資料類型及其對應的 ODBC C 資料類型，以及支援的和預設的轉換。  
@@ -35,7 +35,7 @@ ms.locfileid: "48142511"
 ## <a name="dealing-with-sqlvariant-data-type-in-odbc"></a>處理 ODBC 中的 sql_variant 資料類型  
  **Sql_variant**資料類型資料行可以包含任何資料類型，在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]除大型物件 (Lob)**文字**， **ntext**，以及**映像**。 比方說，資料行可以包含**smallint**某些資料列的值**float**值的其他資料列，並**char/nchar**其餘部分的值。  
   
- **Sql_variant**資料類型是類似**Variant** Microsoft Visual Basic® 中的資料類型。  
+ **Sql_variant**資料類型是類似**Variant** Microsoft Visual Basic 中的資料類型 」。  
   
 ### <a name="retrieving-data-from-the-server"></a>從伺服器擷取資料  
  ODBC 沒有變數的類型，概念限制使用**sql_variant** ODBC 驅動程式中使用的資料型別[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如果指定繫結，則**sql_variant**資料型別必須繫結至其中一個所記錄的 ODBC 資料類型。 **SQL_CA_SS_VARIANT_TYPE**，以特定的新屬性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式，傳回的資料類型之執行個體**sql_variant**給使用者的資料行。  

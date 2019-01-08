@@ -1,5 +1,5 @@
 ---
-title: 從範本建立 Cube，而不使用資料來源檢視 |Microsoft 文件
+title: 從範本建立 Cube，而不使用資料來源檢視 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 654278ee171666564771a3e620c903e598039a74
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 28f87d9cbe6dfa0bf41a0d0547e8da7bec5659bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025894"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521353"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>從範本建立 Cube，而不使用資料來源檢視
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   在 [Cube 精靈] 的第一頁上，選取 [Build the cube without using a data source (不使用資料來源而建立 Cube)] 建立 Cube，而不使用資料來源檢視。 稍後，您可以使用 [結構描述產生精靈]，根據 Cube 及其他可能的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件結構，來產生資料來源檢視的關聯式結構描述。 如需產生結構描述的詳細資訊，請參閱[結構描述產生精靈 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)。  
   
 ## <a name="selecting-the-build-method"></a>選取建立方法  
- 在 [Cube 精靈] 的 [Select Build Method (選取建立方法)] 頁面上，按一下 [Build the cube without using a data source (不使用資料來源而建立 Cube)]。 若要使用現有的 Cube 範本建立 Cube，請選取 [Use a cube template (使用 Cube 範本)] 核取方塊。 。 如果您不選取使用範本，則必須手動設定選項。  
+ 在 [Cube 精靈] 的 [Select Build Method (選取建立方法)] 頁面上，按一下 [Build the cube without using a data source (不使用資料來源而建立 Cube)]。 若要使用現有的 Cube 範本建立 Cube，請選取 [Use a cube template (使用 Cube 範本)] 核取方塊。 . 如果您不選取使用範本，則必須手動設定選項。  
   
- Cube 範本包含預先定義的量值、量值群組、維度、階層及屬性。 如果選取範本，精靈會使用範本中的物件定義做為基礎，來設定下列頁面中的選項。 標準 Cube 的數個範本隨附安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 伺服器管理員也可以加入專為您的組織資料所設定的 Cube 或維度範本。  
+ Cube 範本包含預先定義的量值、量值群組、維度、階層及屬性。 如果選取範本，精靈會使用範本中的物件定義做為基礎，來設定下列頁面中的選項。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 標準 Cube 的數個範本隨附安裝。 伺服器管理員也可以加入專為您的組織資料所設定的 Cube 或維度範本。  
   
 ## <a name="selecting-dimensions"></a>選取維度  
  使用精靈的 [Select Dimensions (選取維度)] 頁面，將現有的維度加入 Cube。 只有當專案或資料庫中已含有不使用資料來源的共用維度時，才會顯示此頁面。 此頁面不會列出使用資料來源的維度。  
@@ -39,7 +39,7 @@ ms.locfileid: "34025894"
   
  [從範本選取量值] 方格和 [加入新的量值] 方格會在下表所述的資料行下顯示值。 您可以按一下任一清單中的值予以變更。  
   
-|資料行|說明|  
+|「資料行」|描述|  
 |------------|-----------------|  
 |**[量值名稱]**|此資料行中的值可定義 Cube 中的量值名稱。 按一下此資料行中的值，即可輸入名稱。 按一下此資料行中的 [加入新的量值]，即可建立新的量值。 此資料行會設定量值物件的 **Name** 屬性。|  
 |**量值群組**|包含量值的量值群組名稱。 按一下此值，即可選擇名稱或輸入名稱。 如果刪除屬於特定量值群組的所有量值，也會移除量值群組。 此資料行會設定量值群組物件的 **Name** 屬性。|  
@@ -55,7 +55,7 @@ ms.locfileid: "34025894"
   
  [從範本選取維度] 方格和 [加入新的維度] 方格會在下表所述的資料行下顯示值。 您可以按一下任一清單中的值予以變更。  
   
-|資料行|說明|  
+|「資料行」|描述|  
 |------------|-----------------|  
 |**型別**|顯示範本維度的維度類型。 按一下此資料格，即可變更維度的維度類型。 此資料行會設定維度物件的 **Type** 屬性。|  
 |**名稱**|顯示維度名稱。 按一下此資料格，即可輸入其他名稱。 此值會設定維度物件的 **Name** 屬性。|  
@@ -74,15 +74,15 @@ ms.locfileid: "34025894"
   
  完成建立 Cube 之後，您可以使用維度設計師加入或移除時間屬性。 由於 Date 屬性是維度的索引鍵屬性，因此不能予以移除。 若要對使用者隱藏 Date 屬性 (Attribute)，您可以將 **AttributeHierarchyVisible** 屬性 (Property) 變更為 **False**。  
   
- 維度設計師的 [時間週期] 窗格中會顯示所有可用的時間週期  (此窗格取代以維度資料表為基礎之維度的 [資料來源檢視] 窗格)。您可以變更維度的 [來源]\(時間繫結) 屬性設定，以變更維度的日期範圍。 由於這是結構性變更，因此您必須重新處理維度及任何使用維度的 Cube，再瀏覽資料。  
+ 維度設計師的 [時間週期] 窗格中會顯示所有可用的時間週期  (此窗格取代以維度資料表為基礎之維度的 [資料來源檢視] 窗格)。您可以變更維度的 [來源] (時間繫結) 屬性設定，以變更維度的日期範圍。 由於這是結構性變更，因此您必須重新處理維度及任何使用維度的 Cube，再瀏覽資料。  
   
 ## <a name="specifying-additional-calendars"></a>指定其他日曆  
  在精靈的 [指定其他日曆] 頁面上，選取以維度中的階層為基礎的日曆。 您可以選擇下列任何一個日曆。  
   
-|日曆|說明|  
+|日曆|描述|  
 |--------------|-----------------|  
 |會計日曆|十二月份會計日曆。 如果您選取此日曆，請指定組織所使用會計年度起始日期和月份。|  
-|報表 (或行銷) 日曆|十二個月的報表日曆，包含兩個四週的月份以及一個五週的月份，且每三個月 (每季) 重複執行一次的模式。 如果您選取此日曆，請指定起始的日期和月份，以及 4–4–5、4–5–4 或 5–4–4 的三個月週期模式之一，其中每一個數字代表月份的週數。|  
+|報表 (或行銷) 日曆|十二個月的報表日曆，包含兩個四週的月份以及一個五週的月份，且每三個月 (每季) 重複執行一次的模式。 如果您選取此日曆時，指定起始的日期和月份，以及 4-4-5、 4-5-4 或 5-4-4 週，其中每一個數字代表一個月的週數的三個月模式。|  
 |製造日曆|使用 13 週期 (每一期四週) 的日曆，分成四個週期三季和五個週期一季。 如果您選取這個日曆，請指定製造年份的起始週 (在 1 和 4 之間) 和月份，以及延長期間的季度。|  
 |ISO 8601 日曆|日期和時間標準日曆 (8601) 的國際標準組織 (ISO) 表示法。 此日曆含有 7 天一週的整數。 為避免分割週，此日曆會在 1 月 1 日前後幾天開始新年度。|  
   

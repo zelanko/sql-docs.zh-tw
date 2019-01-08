@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 8c830d11-7e88-4c3e-98e9-ba72c8c99b02
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b54f54f90467dd95c188e0bb8f237609c23b4ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 205b0a7cfeab4d512eac86c39be78bdfd42abe90
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137438"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795650"
 ---
 # <a name="rpc-output-parameter-event-class"></a>RPC Output Parameter 事件類別
   RPC Output Parameter 事件類別會追蹤遠端程序呼叫 (RPC) 執行之後的輸出參數值。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG014162 error
@@ -13,12 +12,12 @@ ms.assetid: a15eef3f-219f-45d3-8286-6a864c85a723
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d31ee6f6f94006ac4bf6cababcf89832c51472f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16180621b22534adca219aa3c36be78853a506c8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193811"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805583"
 ---
 # <a name="mssqleng014162"></a>MSSQL_ENG014162
     

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: cfcbdd9d-d83b-46ae-9caa-d1833b5913f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91aafd30e5c2c9765a2b2d7a467854142694cf4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aeb6709930190017487476d0d19b105261ae7acd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225778"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801400"
 ---
 # <a name="unprepare-sql-event-class"></a>Unprepare SQL 事件類別
   Unprepare SQL 事件類別指出 SqlClient、ODBC、OLE DB 或 DB-Library 已取消準備 (已刪除) 一或多個備妥的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  

@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f71635386de926bcf74b108f6bbebaacd3b10282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7773774d15cb6d6bdfd9e2335eac40bbf00652e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133358"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349212"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多重子網路叢集 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集是一個組態，當中每個容錯移轉叢集節點都會連接到不同的子網路或不同的子網路集。 這些子網路可以位於相同位置，或位於散佈於不同地理區域的站台。 跨越散佈於不同地理區域之站台的叢集有時候又稱為「延展叢集」。 由於沒有可供所有節點存取的共用儲存體，資料應該在多重子網路上的資料儲存體之間複寫。 透過資料複寫，可用資料就可以擁有多份複本。 因此，除了具有高可用性之外，多重子網路容錯移轉叢集也提供了災害復原方案。  
@@ -69,7 +69,7 @@ ms.locfileid: "48133358"
 ##  <a name="DNS"></a> 容錯移轉期間的用戶端復原延遲  
  多重子網路 FCI 預設會針對其網路名稱啟用 RegisterAllProvidersIP 叢集資源。 在多重子網路組態中，網路名稱的線上或離線 IP 位址都會在 DNS 伺服器註冊。 然後用戶端應用程式會從 DNS 伺服器擷取所有註冊的 IP 位址，並依序或平行嘗試連接到位址。 這表示，多重子網路容錯移轉時用戶端復原時間不再取決於 DNS 更新延遲。 根據預設，用戶端會依序嘗試 IP 位址。 當用戶端在其連接字串中使用新的選擇性 `MultiSubnetFailover=True` 參數時，它會改為同時嘗試 IP 位址並連接到第一個回應的伺服器。 這有助於在發生容錯移轉時將用戶端復原延遲降至最低。 如需詳細資訊，請參閱 < [AlwaysOn 用戶端連接性 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)並[建立或設定可用性群組接聽程式&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
- 對於舊版用戶端程式庫或協力廠商資料提供者，您無法使用`MultiSubnetFailover`連接字串中的參數。 為確保用戶端應用程式以最佳方式與 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]多重子網路 FCI 搭配使用，針對每個額外 IP 位址，請嘗試將用戶端連接字串中的連接逾時調增 21 秒。 這可確保在完成多重子網路 FCI 中的所有 IP 位址之間循環前，用戶端的重新連接嘗試不會逾時。  
+ 對於舊版用戶端程式庫或協力廠商資料提供者，您不能在連接字串中使用 `MultiSubnetFailover` 參數。 為確保用戶端應用程式以最佳方式與 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]多重子網路 FCI 搭配使用，針對每個額外 IP 位址，請嘗試將用戶端連接字串中的連接逾時調增 21 秒。 這可確保在完成多重子網路 FCI 中的所有 IP 位址之間循環前，用戶端的重新連線嘗試不會逾時。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio 和 **sqlcmd** 的預設用戶端連接逾時期限是 15 秒。  
   
@@ -81,10 +81,10 @@ ms.locfileid: "48133358"
 |-------------------------|-----------|  
 |安裝 SQL Server 容錯移轉叢集|[建立新的 SQL Server 容錯移轉叢集 &#40;安裝程式&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |現有 SQL Server 容錯移轉叢集的就地升級|[升級 SQL Server 容錯移轉叢集執行個體 &#40;安裝程式&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
-|維護現有 SQL Server 容錯移轉叢集|[在 SQL Server 容錯移轉叢集中加入或移除節點 &#40;安裝程式&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
-|Windows 容錯移轉叢集|[Windows 2008 R2 容錯移轉多站台叢集](http://www.microsoft.com/windowsserver2008/en/us/failover-clustering-multisite.aspx)|  
-|使用容錯移轉叢集管理嵌入式管理單元檢視 WSFC 事件和記錄|[檢視容錯移轉叢集的事件和記錄檔](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
-|使用 Windows PowerShell 建立 WSFC 容錯移轉叢集中所有節點 (或特定節點) 的記錄檔|[Get-ClusterLog 容錯移轉叢集指令程式](http://technet.microsoft.com/library/ee461045.aspx)|  
+|維護現有 SQL Server 容錯移轉叢集|[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
+|Windows 容錯移轉叢集|[Windows 2008 R2 容錯移轉多站台叢集](https://www.microsoft.com/windowsserver2008/en/us/failover-clustering-multisite.aspx)|  
+|使用容錯移轉叢集管理嵌入式管理單元檢視 WSFC 事件和記錄|[檢視容錯移轉叢集的事件和記錄檔](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
+|使用 Windows PowerShell 建立 WSFC 容錯移轉叢集中所有節點 (或特定節點) 的記錄檔|[Get-ClusterLog 容錯移轉叢集指令程式](https://technet.microsoft.com/library/ee461045.aspx)|  
   
  
   

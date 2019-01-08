@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - totals [SQL Server], row counts
@@ -17,12 +17,12 @@ ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbd948e79669348311fa2ff177e52496e91f173c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04b836a53b4b9928118221053d1fbc2c3a89dfdd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185378"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794140"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>計算資料表中的資料列 (Visual Database Tools)
   您可以計算資料表中的資料列，以判斷：  

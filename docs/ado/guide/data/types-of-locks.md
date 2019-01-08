@@ -18,12 +18,12 @@ ms.assetid: 12a978c0-b8a0-4ef0-87f0-a43c13659272
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 039f09a1d3731b316359acd03e72312b4485df89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b66b87b0c741bf943cc2558862a0e1853c386b5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726816"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510728"
 ---
 # <a name="types-of-locks"></a>鎖定的類型
 ## <a name="adlockbatchoptimistic"></a>adLockBatchOptimistic  
@@ -32,7 +32,7 @@ ms.locfileid: "47726816"
  許多應用程式一次擷取的資料列數目，然後必須進行協調包括一整組的插入、 更新或刪除的資料列的更新。 與批次資料指標，只有一個需要往返伺服器，進而改善更新效能並降低網路流量。 您可以使用批次的資料指標程式庫，來建立靜態資料指標，然後中斷連接資料來源的項目。 此時您可以變更資料列和之後重新連線，而且將變更公佈到批次中的資料來源。  
   
 ## <a name="adlockoptimistic"></a>adLockOptimistic  
- 指出提供者會使用開放式鎖定，鎖定資料錄，只有當您呼叫時，才**更新**方法。 這表示會有另一位使用者可能會變更的時間之間的資料有機會您編輯的記錄和當您呼叫**更新**，這會建立衝突。 在其中的衝突很低的情況下使用此鎖定類型，或可以輕易地解決衝突。  
+ 指出提供者會使用開放式鎖定-只有當您呼叫時鎖定資料錄**更新**方法。 這表示會有另一位使用者可能會變更的時間之間的資料有機會您編輯的記錄和當您呼叫**更新**，這會建立衝突。 在其中的衝突很低的情況下使用此鎖定類型，或可以輕易地解決衝突。  
   
 ## <a name="adlockpessimistic"></a>adLockPessimistic  
  表示封閉式鎖定，記錄。 提供者會執行什麼是為了確保成功編輯記錄，通常是透過在資料來源編輯之前，立即鎖定記錄。 當然，這表示一旦您開始編輯時，您藉由呼叫釋放鎖定之前的記錄是其他使用者無法使用**更新。** 您不得將並行的變更資料，例如，在保留系統在系統中使用這種類型的鎖定。  

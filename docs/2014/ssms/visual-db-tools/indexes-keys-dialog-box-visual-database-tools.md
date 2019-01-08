@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65539
@@ -13,12 +13,12 @@ ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a960d003d998cfdd5d87009e7ef34f434d4f1d43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076791"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806940"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>索引和索引鍵對話方塊 (Visual Database Tools)
   使用此對話方塊可建立或修改索引、主索引鍵和唯一鍵。 若要存取此對話方塊，請開啟具有索引或索引鍵之資料表的資料表定義，在資料表定義方格上按一下滑鼠右鍵，再按一下 [索引/索引鍵]。  
@@ -40,7 +40,7 @@ ms.locfileid: "48076791"
  展開時會顯示 [資料行]、[是唯一的] 和 [類型] 屬性。  
   
  **資料行**  
- 列出索引鍵或索引中資料行的選擇排序次序，並且提供存取可在其中定義排序次序的對話方塊。 若要顯示對話方塊，可按一下 [資料行]，再按一下屬性欄位右邊的省略符號按鈕 (…)。  
+ 列出索引鍵或索引中資料行的選擇排序次序，並且提供存取可在其中定義排序次序的對話方塊。 若要顯示對話方塊，請按一下 [資料行]，然後按一下屬性欄位右邊出現的省略符號按鈕 (...)。  
   
  **是唯一的**  
  指示此索引或索引鍵中輸入的資料是否必須是唯一的。 這不適用於 XML 索引。  
@@ -55,7 +55,7 @@ ms.locfileid: "48076791"
  顯示索引鍵或索引的名稱。 在建立新索引時，會根據 [資料表設計師] 作用中視窗的資料表，給予預設的名稱。 您可以隨時變更名稱。  
   
  **說明**  
- 提供描述索引鍵或索引的位置。 若要寫入更詳細的描述，請按一下 [描述]，再按屬性欄位右邊的省略符號按鈕 (**…**)。 如此便可提供較大的區域以寫入文字。  
+ 提供描述索引鍵或索引的位置。 若要寫入更詳細的描述，請按一下 [描述]，然後按一下屬性欄位右邊出現的省略符號按鈕 (**...**)。 如此便可提供較大的區域以寫入文字。  
   
  **資料表設計工具類別目錄**  
  展開時會顯示 [建立成 CLUSTERED] 的資訊。  

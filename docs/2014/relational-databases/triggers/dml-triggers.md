@@ -14,12 +14,12 @@ ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d99c70928dfc1d3de2ff02499c0b33a173cf888a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195138"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797740"
 ---
 # <a name="dml-triggers"></a>DML 觸發程序
   DML 觸發程序是一種特殊類型的預存程序，會在影響觸發程序中所定義之資料表或檢視表的資料操作語言 (DML) 事件執行時自動執行。 DML 事件包括 INSERT、UPDATE 或 DELETE 陳述式。 DML 觸發程序可用以強制執行商務規則和資料完整性、查詢其他資料表，以及包括複雜的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 觸發程序和引發它的陳述式會被視為單一交易處理，而這樣的交易可以從觸發程序內部回復。 如果偵測到伺服器錯誤 (例如，磁碟空間不足)，整個交易就會自動回復。  

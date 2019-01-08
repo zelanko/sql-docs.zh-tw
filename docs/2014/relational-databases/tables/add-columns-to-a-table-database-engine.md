@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting columns
@@ -15,12 +14,12 @@ ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 05ecf02c8fcc706e2f3823fd52538e375a091019
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eed258c78e76c5ec3f6aeeeb6bdd647166592613
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124308"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768770"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>將資料行加入資料表 (Database Engine)
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中將新的資料行加入至資料表。  
@@ -69,7 +68,7 @@ ms.locfileid: "48124308"
     > [!NOTE]  
     >  資料行屬性的預設值會在您建立新資料行時加入，但是您可以在 [資料行屬性] 索引標籤中變更預設值。  
   
-6.  當您完成新增資料行，從**檔案**功能表上，選擇 **儲存 * * * 的資料表名稱*。  
+6.  加入資料行完成之後，請從 [檔案]  功能表中，選擇 [儲存] _table name_。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

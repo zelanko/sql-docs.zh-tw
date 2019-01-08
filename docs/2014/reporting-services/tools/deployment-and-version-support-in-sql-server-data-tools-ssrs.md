@@ -11,12 +11,12 @@ ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aa6994d4bcf01cc1de7036a45d52a7a090af80b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 251ec4db1d1f1cb4ddebe447e095c3c2338ee0bb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218168"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352141"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>SQL Server 資料工具中的部署和版本支援 (SSRS)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 支援以下案例：  
@@ -53,7 +53,7 @@ ms.locfileid: "48218168"
 ##  <a name="bkmk_SupportedVersions"></a> 支援的版本  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] (報表伺服器專案的 32 位元開發環境) 不是設計成要在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 架構電腦上執行，而且未安裝在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 架構伺服器上。 不過， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 仍支援 x64 架構的電腦。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)](報表伺服器專案的 32 位元開發環境) 不是設計成要在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]架構電腦上執行，而且未安裝在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]架構伺服器上。 不過， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 仍支援 x64 架構的電腦。  
   
  下表描述在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中撰寫及發行報表所支援的版本。  
   
@@ -69,9 +69,9 @@ ms.locfileid: "48218168"
 |報表伺服器專案<br /><br /> 中的多個<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|2005 RDL 結構描述|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或是[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]報表伺服器||  
 |報表伺服器專案|[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|2003 RDL 結構描述|不支援||  
 |[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] RDLC 報表設計師|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|2005 RDL 結構描述|不支援|不支援 2008 RDL 結構描述。|  
-|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 檢視器控制項|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|本機模式中不支援 2008 RDL|不適用|可以在伺服器模式下於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器上檢視 2008 RDL 報表。|  
+|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 檢視器控制項|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|本機模式中不支援 2008 RDL|N/A|可以在伺服器模式下於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器上檢視 2008 RDL 報表。|  
   
- 如需在舊版報表定義結構描述中開啟報表的詳細資訊，請參閱[升級報表](../install-windows/upgrade-reports.md)。 如需有關特定報表定義結構描述的詳細資訊，請參閱＜ [報表定義語言規格](http://go.microsoft.com/fwlink/?linkid=116865)＞。  
+ 如需在舊版報表定義結構描述中開啟報表的詳細資訊，請參閱[升級報表](../install-windows/upgrade-reports.md)。 如需有關特定報表定義結構描述的詳細資訊，請參閱＜ [報表定義語言規格](https://go.microsoft.com/fwlink/?linkid=116865)＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [發行資料來源與報表](../reports/publishing-data-sources-and-reports.md)  

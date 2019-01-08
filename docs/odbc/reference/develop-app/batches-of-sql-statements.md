@@ -15,12 +15,12 @@ ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb6d91fef3e12a26d7082defa5b579e00dbae4ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09805ab73af76bc55890222fc1ffd0e1857d0f33
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775099"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531238"
 ---
 # <a name="batches-of-sql-statements"></a>SQL 陳述式的批次
 批次的 SQL 陳述式是一組兩個或多個 SQL 陳述式或單一的 SQL 陳述式具有一組兩個或多個 SQL 陳述式相同的效果。 在某些實作中，會將整個批次陳述式執行之前未提供任何結果。 這通常會較有效率，比個別提交陳述式，因為通常可降低網路流量，而且資料來源有時可以最佳化執行 SQL 陳述式的批次。 在其他實作中，呼叫**SQLMoreResults**觸發的批次中的下一個陳述式。 ODBC 支援下列類型的批次：  
@@ -40,7 +40,7 @@ ms.locfileid: "47775099"
        VALUES (2002, 4, 412, 500)  
     ```  
   
--   **程序**如果程序包含一個以上的 SQL 陳述式，它會被視為 SQL 陳述式的批次。 例如，下列 SQL Server 特有的陳述式會建立傳回包含客戶和結果集，列出該客戶所有開啟銷售訂單資訊的結果集的程序：  
+-   **程序**如果程序包含一個以上的 SQL 陳述式，它會被視為 SQL 陳述式的批次。 例如，下列 SQL Server 專屬的陳述式會建立傳回包含客戶和結果集，列出該客戶所有開啟銷售訂單資訊的結果集的程序：  
   
     ```  
     CREATE PROCEDURE GetCustInfo (@CustomerID INT) AS  

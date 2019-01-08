@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Publishers [SQL Server replication], Replication Monitor tasks
@@ -15,12 +14,12 @@ ms.assetid: 1e777e95-377a-4de3-b965-867464aadaaf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 133b451da15eed84a10e4bfa998aa3a6d942a858
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd4ed25444107f5a6eb7656da285661515cb8c68
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124624"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763000"
 ---
 # <a name="view-information-and-perform-tasks-for-a-publisher-replication-monitor"></a>檢視發行者的資訊並執行工作 (複寫監視器)
   「複寫監視器」提供下列顯示所選取「發行者」之資訊的索引標籤：  

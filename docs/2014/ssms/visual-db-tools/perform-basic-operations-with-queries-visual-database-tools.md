@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -13,12 +13,12 @@ ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b1cb510420ed224191d8eea25b6d3acc9fb0a79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cca8d20555a2221842a6962081a0880c1a820745
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065440"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812780"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>執行查詢的基本作業 (Visual Database Tools)
   下列的基本操作適用於大部份或所有的查詢。  
@@ -87,7 +87,7 @@ ms.locfileid: "48065440"
  [使用查詢和檢視表設計工具操作國際資料 &#40;Visual Database Tools&#41;](use-the-query-and-view-designer-with-international-data-visual-database-tools.md)  
  描述 [查詢和檢視設計師] 所提供可更方便使用國際資料的功能。  
   
-## <a name="reference"></a>參考  
+## <a name="reference"></a>參考資料  
  [查詢和檢視表設計工具 &#40;Visual Database Tools&#41;](query-and-view-designer-tools-visual-database-tools.md)  
  描述 [查詢和檢視設計師] 的功能和能力。  
   

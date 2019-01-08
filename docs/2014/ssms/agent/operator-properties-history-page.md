@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.operator.history.f1
@@ -12,12 +12,12 @@ ms.assetid: d25f79da-1ec1-4683-8ceb-5026b62b7364
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 788568fbc191a6d4a2e0440d9158e53fce6743b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01ef137ef7297be5171bcfdcacd13c80e4da4624
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119568"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814150"
 ---
 # <a name="operator-properties-history-page"></a>操作員屬性 (記錄頁面)
   使用此頁面即可檢視最近傳送給操作員之通知的日期、時間及類型。  

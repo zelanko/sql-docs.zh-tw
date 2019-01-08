@@ -13,12 +13,12 @@ ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9c74d39a74529845cc5eaaf0d47536c4a3c39f3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136778"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542905"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>監視資料庫鏡像 (SQL Server)
   本節介紹「資料庫鏡像監視器」和 **sp_dbmmonitor** 系統預存程序、說明資料庫鏡像監視功能 (包括 [資料庫鏡像監視器作業] ) 的運作方式，以及摘要說明您可以監視的資料庫鏡像工作階段相關資訊。 另外，本節還會介紹如何為一組預先定義的資料庫鏡像事件定義警告臨界值，以及如何在任何資料庫鏡像事件上設定警示。  

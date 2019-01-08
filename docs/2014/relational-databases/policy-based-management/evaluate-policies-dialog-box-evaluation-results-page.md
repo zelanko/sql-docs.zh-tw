@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.evalpoliciesresults.f1
@@ -12,33 +12,33 @@ ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 44d526c2c2e3d0c722a76fb97a15bd2a668690d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5efb31c8fa537c1483635128755aa20fc9c898db
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136868"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798320"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>評估原則對話方塊，評估結果頁面
   使用此對話方塊可檢視原則評估結果，然後將以原則為基礎的管理原則套用到不符合原則的目標集。  
   
 ## <a name="options"></a>選項。  
- **結果: 原則**  
+ **結果：原則**  
  所評估的原則名稱。 這個方塊是唯讀的。  
   
- **結果: 訊息**  
+ **結果：訊息**  
  發生錯誤時的資訊連結。  
   
- **目標詳細資料: 伺服器**  
+ **目標詳細資料：伺服器**  
  評估原則所針對的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
- **目標詳細資料: 目標**  
+ **目標詳細資料：目標**  
  評估原則所針對的目標。  
   
- **目標詳細資料: 詳細資料**  
+ **目標詳細資料：詳細資料**  
  [結果詳細檢視] 對話方塊的連結，其中會顯示原則評估的詳細資料。  
   
- **目標詳細資料: 訊息**  
+ **目標詳細資料：訊息**  
  發生錯誤時的資訊連結。  
   
 ## <a name="see-also"></a>另請參閱  

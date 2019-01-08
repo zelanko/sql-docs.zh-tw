@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - <before> block
@@ -22,12 +20,12 @@ ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d92e86b5e548d5a828a9d20c00c69dd600f1c632
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 639071b9526c70477fd081bd94d61380a79beb2d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127498"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797010"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>在 Updategram (SQLXML 4.0) 中處理資料庫並行的問題
   與其他資料庫更新機制一樣，Updategram 必須處理在多使用者環境中的資料並行更新。 Updategram 使用開放式並行控制，該控制使用選取欄位資料的比較為快照集，以確保自從要更新的資料從資料庫讀取後，尚未受到其他使用者應用程式改變。 Updategram 包含在這些快照集的值**\<之前 >** 在 updategram 的區塊。 在之前更新資料庫，updategram 會檢查中所指定的值**\<之前 >** 區塊以確保已正確更新資料庫中目前的值。  

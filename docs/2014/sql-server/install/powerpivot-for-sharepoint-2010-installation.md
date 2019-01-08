@@ -11,12 +11,12 @@ ms.assetid: 8d47dde7-c941-4280-a934-e2fe3f9a938f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e44342686c8de426032a3f0147b867d6eb1b19e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42c6f97e23ea36e606047f683c7fc118b1726a4b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202948"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403954"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>PowerPivot for SharePoint 2010 安裝
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 是一種伺服器元件的集合，針對發行至 SharePoint 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿提供查詢處理和管理控制。 服務包括 Analysis Services 引擎和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務。  
@@ -28,9 +28,9 @@ ms.locfileid: "48202948"
   
  Analysis Services 會為含有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的 Excel 工作簿，提供伺服器端的處理。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務會與 Analysis Services 一起運作，並加入 SharePoint 整合、負載平衡及連接管理。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 其大規模資料處理功能，與 Excel 提供的資料轉譯服務配對，來擴充 Excel Services。  
   
- 若要安裝[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，使用[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]安裝媒體。  
+ 若要安裝 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，請使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 安裝媒體。  
   
- 如需進階的部署案例的指示，請參閱 <<c0> [ 部署檢查清單： Reporting Services、 Power View 和 PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)和[部署檢查清單： 藉由新增 PowerPivot 伺服器的向外SharePoint 2010 伺服陣列](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)。  
+ 如需進階的部署案例的指示，請參閱[部署檢查清單：Reporting Services、 Power View 及 PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)和[部署檢查清單：藉由將 PowerPivot 伺服器加入至 SharePoint 2010 伺服器陣列的向外](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [安裝 PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  

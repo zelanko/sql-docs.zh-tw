@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - control flow [Integration Services], copying objects
@@ -16,12 +15,12 @@ ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43378e9129b40324144a2f20f2039f6f376fa39d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c1ebef7107ed58629502457bdc81bfe3e07f337
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200518"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805670"
 ---
 # <a name="copy-package-objects"></a>複製封裝物件
   此主題描述如何在某個封裝內或兩個封裝之間複製控制流程項目、資料流程項目和連接管理員。  
@@ -65,7 +64,7 @@ ms.locfileid: "48200518"
 ## <a name="see-also"></a>另請參閱  
  [控制流程](control-flow/control-flow.md)   
  [資料流程](data-flow/data-flow.md)   
- [Integration Services &#40;SSIS&#41; 連線](connection-manager/integration-services-ssis-connections.md)   
+ [Integration Services &#40;SSIS&#41; 連接](connection-manager/integration-services-ssis-connections.md)   
  [複製專案項目](../../2014/integration-services/copy-project-items.md)  
   
   

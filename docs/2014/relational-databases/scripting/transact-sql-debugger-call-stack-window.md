@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.callstack
 helpviewer_keywords:
 - Call Stack Window [Transact-SQL]
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c2f69398562a11c466d3772389c326b32cb6e6cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb1838890edb044ca3f1bbe5dfd5ebd3dad51c9d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220723"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328688"
 ---
 # <a name="call-stack-window"></a>呼叫堆疊視窗
   [呼叫堆疊] 視窗會顯示呼叫堆疊上的模組以及傳遞給模組之任何參數的資料類型和值。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組包括預存程序、函數及觸發程序 若要顯示呼叫堆疊，您必須在偵錯模式中。  
@@ -72,5 +70,3 @@ ms.locfileid: "48220723"
  [Transact-SQL 偵錯工具](transact-sql-debugger.md)   
  [Transact-SQL 偵錯工具資訊](transact-sql-debugger-information.md)   
  [逐步執行 Transact-SQL 程式碼](step-through-transact-sql-code.md)  
-  
-  

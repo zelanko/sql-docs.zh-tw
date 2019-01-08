@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdest.f1
@@ -21,12 +20,12 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 39f15609f326699c77688cfef599eed9c01adab6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0aedda782c65cbe8d28f066b7e5e97d3e7fc87cd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058128"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790770"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目的地
   OLE DB 目的地會使用資料庫的資料表、檢視或 SQL 命令將資料載入各種符合 OLE DB 標準的資料庫。 例如，OLE DB 來源可以將資料載入至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表中。  
@@ -46,7 +45,7 @@ ms.locfileid: "48058128"
 > [!NOTE]  
 >  OLE DB 目的地不支援參數。 如果需要執行參數化 INSERT 陳述式，請考慮 OLE DB 命令轉換。 如需相關資訊，請參閱 [OLE DB Command Transformation](transformations/ole-db-command-transformation.md)。  
   
- 當 OLE DB 目的地載入使用雙位元組字元集 (DBCS) 的資料時，如果資料存取模式未使用快速載入選項，而 OLE DB 連接管理員使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，則資料可能會損毀。 若要確定 DBCS 資料的完整性，您應該將 OLE DB 連線管理員設定為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，或使用下列其中一個快速載入存取模式：[資料表或檢視表 - 快速載入] 或 [資料表名稱或檢視名稱變數 - 快速載入]。 兩個選項都可從 [OLE DB 目的地編輯器] 對話方塊使用。 當程式設計[!INCLUDE[ssIS](../../includes/ssis-md.md)]物件模型中，您應該將 AccessMode 屬性設`OpenRowset Using FastLoad`，或`OpenRowset Using FastLoad From Variable`。  
+ 當 OLE DB 目的地載入使用雙位元組字元集 (DBCS) 的資料時，如果資料存取模式未使用快速載入選項，而 OLE DB 連接管理員使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，則資料可能會損毀。 若要確定 DBCS 資料的完整性，您應該設定 OLE DB 連接管理員使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端或使用其中一個快速載入存取模式：**資料表或檢視-快速載入**或是**資料表名稱或檢視名稱變數-快速載入**。 兩個選項都可從 [OLE DB 目的地編輯器] 對話方塊使用。 當程式設計[!INCLUDE[ssIS](../../includes/ssis-md.md)]物件模型中，您應該將 AccessMode 屬性設`OpenRowset Using FastLoad`，或`OpenRowset Using FastLoad From Variable`。  
   
 > [!NOTE]  
 >  如果使用「[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中的 [OLE DB 目的地編輯器] 對話方塊來建立 OLE DB 目的地插入資料的目的地資料表，則您可能必須手動選取新建立的資料表。 當 OLE DB 提供者 (例如 DB2 的 OLE DB 提供者) 自動將結構描述識別碼加入資料表名稱時，需進行手動選取。  
@@ -95,18 +94,18 @@ ms.locfileid: "48058128"
  若要深入了解有關快速載入選項的詳細資訊，請參閱 [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)。  
   
 ## <a name="troubleshooting-the-ole-db-destination"></a>疑難排解 OLE DB 目的地  
- 您可以記錄 OLE DB 目的地對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，針對 OLE DB 目的地所執行的將資料儲存至外部資料來源的作業進行疑難排解。 若要記錄 OLE DB 目的地對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱[封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+ 您可以記錄 OLE DB 目的地對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，針對 OLE DB 目的地所執行的將資料儲存至外部資料來源的作業進行疑難排解。 若要記錄 OLE DB 目的地對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
 ## <a name="configuring-the-ole-db-destination"></a>設定 OLE DB 目的地  
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  如需有關可以在 [OLE DB 目的地編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [OLE DB 目的地編輯器&#40;連線管理員頁面&#41;](../ole-db-destination-editor-connection-manager-page.md)  
+-   [OLE DB 目的地編輯器 &#40;連線管理員頁面&#41;](../ole-db-destination-editor-connection-manager-page.md)  
   
--   [OLE DB 目的地編輯器&#40;對應頁面&#41;](../ole-db-destination-editor-mappings-page.md)  
+-   [OLE DB 目的地編輯器 &#40;對應頁面&#41;](../ole-db-destination-editor-mappings-page.md)  
   
--   [OLE DB 目的地編輯器&#40;錯誤輸出頁面&#41;](../ole-db-destination-editor-error-output-page.md)  
+-   [OLE DB 目的地編輯器 &#40;錯誤輸出頁面&#41;](../ole-db-destination-editor-error-output-page.md)  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
@@ -123,7 +122,7 @@ ms.locfileid: "48058128"
 ## <a name="related-content"></a>相關內容  
  [OLE DB 來源](ole-db-source.md)  
   
- [Integration Services &#40;SSIS&#41;變數](../integration-services-ssis-variables.md)  
+ [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)  
   
  [資料流程](data-flow.md)  
   

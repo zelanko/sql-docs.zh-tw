@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, backward compatibility
@@ -19,12 +18,12 @@ ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60cf56b2d230435c42f1ef1402d55938e89af2b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ddbf842839e917477269c0de7886055d585a196c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206618"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797070"
 ---
 # <a name="replication-backward-compatibility"></a>複寫回溯相容性
   「回溯相容性」一節中的主題描述 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫版本之間行為上的變更。 如果您要升級，或是複寫拓撲中有不只一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，則一定要了解回溯相容性。  

@@ -21,12 +21,12 @@ ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d731c5fbb7a90e69b7e1b1502411f57e80219892
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae0d84ba18a350adb47ca9a9aeeaf966a90af2a8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687226"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409575"
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47687226"
 ## <a name="syntax"></a>語法  
   
 ```sql  
-managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)  
+managed_backup.fn_backup_db_config ('database_name' | '' | NULL)  
 ```  
   
 ##  <a name="Arguments"></a> 引數  
@@ -69,7 +69,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
  需要的成員資格**db_backupoperator**資料庫角色**ALTER ANY CREDENTIAL**權限。 使用者不應被拒絕**VIEW ANY DEFINITION**權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回 'TestDB' 的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]組態  
+ 下列範例會傳回[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]'TestDB' 的組態  
   
  針對每個程式碼片段，請在語言屬性欄位中選取 'tsql'。  
   

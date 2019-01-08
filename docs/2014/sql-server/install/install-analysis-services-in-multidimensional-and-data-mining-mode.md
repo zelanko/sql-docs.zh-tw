@@ -17,12 +17,12 @@ ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 92460328b9d85ab5818679b12639618ffe2b0a14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 100bac6834825af1e22658279d26be02c30f3f39
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149898"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349267"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>以多維度及資料採礦模式安裝 Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供商業智慧應用程式的線上分析處理 (OLAP) 和資料採礦功能。 在此版本中，OLAP 資料庫和資料採礦模型都提供當您安裝[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中*多維度模式*。 多維度模式是執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的三種伺服器模式之一， 也是預設模式。 如果您使用預設值安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，則會取得執行多維度資料庫和資料採礦模型的執行個體。  
@@ -67,13 +67,13 @@ ms.locfileid: "48149898"
   
  [判斷 Analysis Services 執行個體的伺服器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
- [SQL Server 資料採礦增益集](http://go.microsoft.com/fwlink/?LinkId=197091)  
+ [SQL Server 資料採礦增益集](https://go.microsoft.com/fwlink/?LinkId=197091)  
   
- 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程序中不會安裝範例資料庫、範例程式碼和用戶端應用程式增益集。 若要安裝範例資料庫和範例程式碼，請參閱 [CodePlex 網站](http://go.microsoft.com/fwlink/?LinkId=87843)。  
+ 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程序中不會安裝範例資料庫、範例程式碼和用戶端應用程式增益集。 若要安裝範例資料庫和範例程式碼，請參閱 [CodePlex 網站](https://go.microsoft.com/fwlink/?LinkId=87843)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL server 2012 版本支援的功能](http://go.microsoft.com/fwlink/?linkid=232473)   
- [語言和定序&#40;Analysis Services&#41;](../../../2014/analysis-services/languages-and-collations-analysis-services.md)   
+ [SQL server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473)   
+ [語言和定序 &#40;Analysis Services&#41;](../../../2014/analysis-services/languages-and-collations-analysis-services.md)   
  [升級 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df78a4890658ec83a62eeccbce23d891d5afc56d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74d4ceb4532ee09004f035958860833aef488aaa
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812099"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206204"
 ---
 # <a name="interface-conformance-levels"></a>介面一致性層級
 調節的目的是通知應用程式所提供功能給它的驅動程式。 函式為基礎的層級配置夠無法達到此目標。 在 ODBC 3。*x*，驅動程式就會歸類在根據他們擁有的功能。 支援的功能，才能包含支援此函式;它也可以包含支援所傳回的資訊類型的描述項欄位、 陳述式屬性、"Y"值**SQLGetInfo**，依此類推。  
@@ -34,9 +34,9 @@ ms.locfileid: "47812099"
   
  驅動程式可自行實作他們所宣告完整的一致性層級以外的功能。 應用程式探索任何這類額外的功能，藉由呼叫**SQLGetFunctions** （若要判斷哪些 ODBC 函式存在） 並**SQLGetInfo** （若要查詢各種其他的 ODBC 功能）。  
   
- 有三個 ODBC 介面一致性層級： Core、 層級 1 和層級 2。  
+ 有三個 ODBC 介面一致性層級：Core、 層級 1 和層級 2。  
   
-> [!NOTE]  
+> [!NOTE]
 >  這些一致性層級比 ODBC 2 中的相同名稱的 ODBC API 的一致性層級有不同的需求 *.x*。 ODBC 2 的所有功能特別的是，都隱含 *.x* API 一致性層級 1 現在是核心介面一致性層級的一部分。 如此一來，許多 ODBC 驅動程式可能會報告層級的核心介面一致性。  
   
  此章節包含下列主題。  

@@ -19,19 +19,19 @@ ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 69e0eb339ee66da1f91956555a931a71ac94406b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab1ed7614ff315986f38d497f00687784785790b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743516"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213688"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回要求之物件目前的大小，並針對要求的壓縮狀態預估物件大小。 可以針對整個資料表或部分資料表評估壓縮， 這包括堆積、 叢集索引、 非叢集的索引、 資料行存放區索引、 索引檢視和資料表及索引分割區。 可以使用資料列、 頁面、 資料行存放區或資料行存放區封存壓縮來壓縮物件。 如果資料表、索引或資料分割已經壓縮，您可以使用此程序來估計已重新壓縮之資料表、索引或資料分割的大小。  
   
-> [!NOTE]  
+> [!NOTE]
 >  壓縮並**sp_estimate_data_compression_savings**不是每個版本都可使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  若要預估使用要求壓縮設定之物件的大小，此預存程序會取樣來源物件，並將此資料載入 tempdb 內所建立的同等資料表和索引中。 然後會將 tempdb 內所建立的資料表或索引壓縮成要求的設定，並計算預估的壓縮節省程度。  
@@ -72,7 +72,7 @@ sp_estimate_data_compression_savings
  若要指定資料分割，您也可以指定[$partition](../../t-sql/functions/partition-transact-sql.md)函式。 若要傳回主控物件之所有資料分割的相關資訊，請指定 NULL。  
   
  [ @data_compression=] '*data_compression*'  
- 這是要評估的壓縮類型。 *data_compression*可以是下列值之一： 無、 資料列、 頁面、 資料行存放區或 COLUMNSTORE_ARCHIVE。  
+ 這是要評估的壓縮類型。 *data_compression*可以是下列值之一：NONE、 資料列、 頁面、 資料行存放區或 COLUMNSTORE_ARCHIVE。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

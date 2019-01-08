@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
@@ -21,12 +20,12 @@ ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20fe82c5ca0060d5a373f90fe72b8f4468240af8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085838"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794730"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 鍵盤快速鍵
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 為使用者提供了兩種鍵盤配置。 根據預設，它會使用 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 配置，其鍵盤快速鍵是以 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 為基礎。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 也提供了類似於 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]中標準配置的鍵盤配置。 若要變更鍵盤配置或加入其他鍵盤快速鍵，請在 [工具] 功能表上，按一下 [選項]。 請在 [環境]、[鍵盤] 頁面上，選取所需要的鍵盤配置。  
@@ -235,7 +234,7 @@ ms.locfileid: "48085838"
 |------------|-----------------------------|---------------------------------|  
 |插入新行|ENTER 或 SHIFT+ENTER|ENTER 或 SHIFT+ENTER|  
 |交換游標兩邊的字元 (不適用於 SQL 編輯器)。|CTRL+T|CTRL+T|  
-|刪除游標右側的一個字元|Delete|Delete|  
+|刪除游標右側的一個字元|DELETE|DELETE|  
 |刪除游標左側的一個字元|退格鍵<br /><br /> 中的多個<br /><br /> SHIFT+<br /><br /> 退格鍵|退格鍵<br /><br /> 中的多個<br /><br /> SHIFT+<br /><br /> 退格鍵|  
 |在選取範圍中刪除空白字元，如果未選取任何範圍則刪除游標旁邊的空白字元|CTRL+K、C|沒有對等項目|  
 |插入為編輯器所設定的空格數|TAB|TAB|  
@@ -243,7 +242,7 @@ ms.locfileid: "48085838"
 |在游標下插入空白行|CTRL+SHIFT+ ENTER|CTRL+SHIFT+ ENTER|  
 |將所選的文字改成小寫|CTRL+SHIFT+L|CTRL+SHIFT+L|  
 |將所選的文字改成大寫|CTRL+SHIFT+U|CTRL+SHIFT+U|  
-|切換插入模式和取代模式|INSERT|Insert|  
+|切換插入模式和取代模式|Insert|Insert|  
 |將所選的行向左移到定位停駐點|SHIFT+TAB|SHIFT+TAB|  
 |刪除游標右側的單字|CTRL+DELETE|CTRL+DELETE|  
 |刪除游標左側的單字|CTRL+空白鍵|CTRL+空白鍵|  

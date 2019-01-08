@@ -20,16 +20,16 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99d7f84f2153f57cc9bc392c22d79739deaf6b1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599616"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211987"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 函式
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ODBC  
+ 導入的版本：ODBC 1.0 標準的合規性：ODBC  
   
  **摘要**  
  **SQLSetPos**設定資料列集中的資料指標位置，並允許應用程式來重新整理資料列集中的資料，或是更新或刪除在結果集中的資料。  
@@ -59,7 +59,7 @@ SQLRETURN SQLSetPos(
   
  SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
-> [!NOTE]  
+> [!NOTE]
 >  SQL_ADD algoritmus*作業*引數已被取代的 ODBC 3 *.x*。 ODBC 3。*x*支援回溯相容性的 SQL_ADD 所需的驅動程式。 這項功能已取代的呼叫所**SQLBulkOperations**具有*作業*SQL_ADD。 當 ODBC 3。*x*應用程式會使用 ODBC 2。*x*驅動程式，驅動程式管理員會對應至呼叫**SQLBulkOperations**具有*作業*的 SQL_ADD 來**SQLSetPos**與*作業*SQL_ADD。  
   
  如需詳細資訊，請參閱 「 註解。 」  
@@ -108,7 +108,7 @@ SQLRETURN SQLSetPos(
 |HY010|函數順序錯誤|(DM) 以非同步方式執行的函式呼叫的連接控制代碼相關聯*StatementHandle*。 此非同步函式仍執行時呼叫 SQLSetPos 函式。<br /><br /> (DM) 指定*StatementHandle*不處於執行狀態。 已呼叫的函式，但是未先呼叫**SQLExecDirect**， **SQLExecute**，或目錄函式。<br /><br /> 以非同步方式執行的函式 （不是此一） 已呼叫 」 (DM) *StatementHandle*和仍在呼叫此函式時所執行。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。<br /><br /> (DM) 驅動程式的 ODBC 2。*x*驅動程式，並**SQLSetPos**針對呼叫*StatementHandle*之後**SQLFetch**呼叫。|  
 |HY011|現在無法設定屬性|(DM) 驅動程式的 ODBC 2。*x*驅動程式; sql_attr_row_status_ptr 設定陳述式屬性已設定，然後**SQLSetPos**之前已呼叫**SQLFetch**， **SQLFetchScroll**，或**SQLExtendedFetch**呼叫。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足情況。|  
-|HY090|字串或緩衝區長度無效|*作業*引數為 SQL_UPDATE、 資料值是 null 指標，和資料行長度值不是 0，SQL_DATA_AT_EXEC，SQL_COLUMN_IGNORE SQL_NULL_DATA，或是小於或等於 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> *作業*引數為 SQL_UPDATE; 的資料值不是 null 指標; C 資料類型是否 SQL_C_BINARY SQL_C_CHAR; 和資料行的長度值小於 0，但不是等於 SQL_DATA_AT_EXEC，SQL_COLUMN_IGNORESQL_NTS 或 SQL_NULL_DATA，或是小於或等於 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 長度/指標緩衝區中的值為 SQL_DATA_AT_EXEC;SQL 類型是 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或很長的資料來源特定的資料類型使用;和中的 SQL_NEED_LONG_DATA_LEN 資訊類型**SQLGetInfo**是"Y"。|  
+|HY090|字串或緩衝區長度無效|*作業*引數為 SQL_UPDATE、 資料值是 null 指標，和資料行長度值不是 0，SQL_DATA_AT_EXEC，SQL_COLUMN_IGNORE SQL_NULL_DATA，或是小於或等於 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> *作業*引數為 SQL_UPDATE; 的資料值不是 null 指標; C 資料類型是否 SQL_C_BINARY SQL_C_CHAR; 和資料行的長度值小於 0，但不是等於 SQL_DATA_AT_EXEC，SQL_COLUMN_IGNORESQL_NTS 或 SQL_NULL_DATA，或是小於或等於 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 長度/指標緩衝區中的值為 SQL_DATA_AT_EXEC;SQL 類型是 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或很長的資料來源特有的資料類型使用;和中的 SQL_NEED_LONG_DATA_LEN 資訊類型**SQLGetInfo**是"Y"。|  
 |HY092|無效的屬性識別碼|(DM) 指定的值*作業*引數無效。<br /><br /> (DM) 指定的值*LockType*引數無效。<br /><br /> *作業*引數是 SQL_UPDATE 或 SQL_DELETE，而 SQL_ATTR_CONCURRENCY 陳述式屬性是 SQL_ATTR_CONCUR_READ_ONLY。|  
 |HY107|資料列值超出範圍|指定的引數的值*RowNumber*大於資料列集中的資料列數目。|  
 |HY109|無效的資料指標位置|與相關聯的游標*StatementHandle*定義為順向的因此資料指標不可以位於資料列集內。 請參閱中的 SQL_ATTR_CURSOR_TYPE 屬性的描述**SQLSetStmtAttr**。<br /><br /> *作業*引數為 SQL_UPDATE、 SQL_DELETE 或 SQL_REFRESH，以及所識別的資料列*RowNumber*引數都已刪除或尚未擷取。<br /><br /> (DM) *RowNumber*引數為 0，而*作業*引數為 SQL_POSITION。<br /><br /> **SQLSetPos**後才呼叫**SQLBulkOperations**呼叫，以及之前**SQLFetchScroll**或是**SQLFetch**呼叫。|  
@@ -122,7 +122,7 @@ SQLRETURN SQLSetPos(
   
 ## <a name="comments"></a>註解  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  針對陳述式上的資訊指出**SQLSetPos**可以呼叫，而且需要執行的 ODBC 2 的相容性 *.x*應用程式，請參閱[區塊資料指標、 可捲動資料指標，並回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)。  
   
 ## <a name="rownumber-argument"></a>RowNumber 引數  
@@ -146,7 +146,7 @@ SQLRETURN SQLSetPos(
 ## <a name="operation-argument"></a>運算引數  
  *作業*引數支援下列作業。 若要判斷資料來源所支援的選項，應用程式會呼叫**SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1、 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、 SQL_KEYSET_CURSOR_ATTRIBUTES1，或 SQL_STATIC_CURSOR_ATTRIBUTES1 （取決於資料指標類型） 的資訊類型。  
   
-|*運算*<br /><br /> 引數 (argument)|作業|  
+|*運算*<br /><br /> 引數 (argument)|運算|  
 |------------------------------|---------------|  
 |SQL_POSITION|驅動程式會將游標置於指定的資料列*RowNumber*。<br /><br /> SQL_ATTR_ROW_OPERATION_PTR 陳述式屬性所指的資料列狀態陣列的內容會忽略 SQL_POSITION*作業*。|  
 |SQL_REFRESH|驅動程式會將游標置於指定的資料列*RowNumber*重新整理該資料列的資料列集緩衝區中的資料。 如需驅動程式的資料列集的緩衝區中所傳回的資料的詳細資訊，請參閱中的資料列取向和資料行取向繫結的說明**SQLBindCol**。<br /><br /> **SQLSetPos**具有*作業*SQL_REFRESH 的更新 狀態 和 目前的已擷取資料列集內的資料列的內容。 這包括重新整理書籤。 因為緩衝區中的資料重新整理，但不是 refetched，被固定的資料列集中的成員資格。 這點不同於呼叫所執行的重新整理**SQLFetchScroll**具有*Sqlfetchscroll*的 sql_fetch_relative，但並*RowNumber*等於 0，refetches如果驅動程式和資料指標支援這些作業，從結果集，讓它可以顯示加入的資料，並移除資料列集刪除資料。<br /><br /> 成功重新整理**SQLSetPos**不會變更資料列狀態為 SQL_ROW_DELETED。 已刪除的資料列集中的資料列會繼續將會標示為下一個擷取，才能刪除。 如果資料指標支援封裝，將會消失在下一個擷取的資料列 (在其中的後續**SQLFetch**或是**SQLFetchScroll**不會傳回已刪除的資料列)。<br /><br /> 加入資料列時的重新整理不會出現**SQLSetPos**會執行。 此行為是不同於**SQLFetchScroll**具有*FetchType*的 sql_fetch_relative 但和*RowNumber*等於 0，這也會重新整理但將目前資料列集顯示已新增的記錄，或組件已刪除的記錄，如果資料指標所支援這些作業。<br /><br /> 成功重新整理**SQLSetPos**會變成資料列狀態為 SQL_ROW_ADDED SQL_ROW_SUCCESS （如果資料列狀態陣列的話）。<br /><br /> 成功重新整理**SQLSetPos**會變成 SQL_ROW_UPDATED 資料列狀態的資料列的新狀態 （如果資料列狀態陣列的話）。<br /><br /> 如果發生錯誤時**SQLSetPos**作業的資料列，資料列狀態設定為 SQL_ROW_ERROR （如果資料列狀態陣列的話）。<br /><br /> 資料指標開啟 SQL_CONCUR_ROWVER 或 SQL_CONCUR_VALUES，以重新整理的陳述式屬性 SQL_ATTR_CONCURRENCY **SQLSetPos**可能會更新用來偵測到資料來源的開放式並行存取值資料列已經變更。 如果發生這種情況，用來確保資料指標並行值的資料列版本會會更新每次資料列集的緩衝區會從伺服器重新整理。 發生這種情況會重新整理每個資料列。<br /><br /> SQL_ATTR_ROW_OPERATION_PTR 陳述式屬性所指的資料列狀態陣列的內容會忽略 SQL_REFRESH*作業*。|  
@@ -226,7 +226,7 @@ SQLRETURN SQLSetPos(
   
     -   執行資料的資料行，應用程式置於應用程式定義值，例如資料行編號 *\*TargetValuePtr*緩衝區。 值可以用來識別的資料行的更新版本。  
   
-         應用程式會放 SQL_LEN_DATA_AT_EXEC 的結果 (*長度*) 中的巨集 **StrLen_or_IndPtr*緩衝區。 如果 SQL 資料類型的資料行是 SQL_LONGVARBINARY、 SQL_LONGVARCHAR 或 long 資料來源特定的資料類型和驅動程式會傳回"Y"表示 SQL_NEED_LONG_DATA_LEN 類型資訊，請在**SQLGetInfo**，*長度*是參數; 傳送資料的位元組數目，否則必須為非負數值，並會被忽略。  
+         應用程式會放 SQL_LEN_DATA_AT_EXEC 的結果 (*長度*) 中的巨集 **StrLen_or_IndPtr*緩衝區。 如果 SQL 資料類型的資料行是 SQL_LONGVARBINARY、 SQL_LONGVARCHAR 或 long 資料來源特有的資料類型和驅動程式會傳回"Y"表示 SQL_NEED_LONG_DATA_LEN 類型資訊，請在**SQLGetInfo**，*長度*是參數; 傳送資料的位元組數目，否則必須為非負數值，並會被忽略。  
   
 2.  呼叫**SQLSetPos**具有*作業*引數設定為 SQL_UPDATE，以更新資料的資料列。  
   
@@ -245,7 +245,7 @@ SQLRETURN SQLSetPos(
     > [!NOTE]  
     >  資料在執行中資料行是資料會傳送使用資料列集中的資料行**SQLPutData**與更新資料列時**SQLSetPos**。 使用繫結**SQLBindCol**。 所傳回的值**SQLParamData**是中的資料列的地址 **TargetValuePtr*正在處理的緩衝區。  
   
-4.  呼叫**SQLPutData**一或多次來傳送資料行的資料。 如果無法以傳回所有資料值，則需要一個以上的通話 *\*TargetValuePtr*中指定的緩衝區**SQLPutData**; 多次呼叫**SQLPutData**或傳送二進位的 C 資料行的字元、 二進位，傳送字元 C 資料行的字元、 二進位檔或資料來源特定的資料型別時，只允許相同的資料行或資料來源特有的資料型別。  
+4.  呼叫**SQLPutData**一或多次來傳送資料行的資料。 如果無法以傳回所有資料值，則需要一個以上的通話 *\*TargetValuePtr*中指定的緩衝區**SQLPutData**; 多次呼叫**SQLPutData**或傳送二進位的 C 資料行的字元、 二進位，傳送字元 C 資料行的字元、 二進位檔或資料來源特有的資料型別時，只允許相同的資料行或資料來源特定的資料類型。  
   
 5.  呼叫**SQLParamData**再次來表示，所有資料都傳送的資料行。  
   

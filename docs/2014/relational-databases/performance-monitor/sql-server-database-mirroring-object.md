@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Database Mirroring
@@ -15,12 +15,12 @@ ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8a24e7ad7a6acb6f9c639a89d8cdc30b8301db49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7834d2f5d0fc8a8e849f796eab93259682ea377c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084358"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753031"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server 的 Database Mirroring 物件
   **SQLServer:Database Mirroring** 效能物件含有效能計數器，可報告 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫鏡像的相關資訊。 下表列出這個物件包含的計數器。  
@@ -56,6 +56,6 @@ ms.locfileid: "48084358"
  效能計數器可讓您監視資料庫鏡像效能。 例如，您可以檢查 **[Transaction Delay]** 計數器，以查看資料庫鏡像是否影響主體伺服器的效能；您可以檢查 **[Redo Queue]** 與 **[Log Send Queue]** 計數器，以查看鏡像資料庫是否跟得上主體資料庫。 您可以檢查 **Log Bytes Sent/sec** 計數器，以監視每秒傳送的記錄量。  
   
 ## <a name="see-also"></a>另請參閱  
- [監視資源使用狀況 &#40;系統監視器&#41;](monitor-resource-usage-system-monitor.md)  
+ [監視資源使用狀況 &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)  
   
   

@@ -23,19 +23,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c02ea165ceec8af546d092d955e9275dcc96b240
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: 78604c723c4c19e68a6c29fd3113de3d69d36d44
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661184"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532789"
 ---
-# <a name="sysdmexecdistributedrequests-transact-sql"></a>sys.dm_exec_distributed_requests (transact-SQL)
+# <a name="sysdmexecdistributedrequests-transact-sql"></a>sys.dm_exec_distributed_requests & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   保留目前或最近使用 PolyBase 查詢中的所有要求的相關資訊。 它會列出每個要求/查詢的一個資料列。  
   
- 根據工作階段和要求識別碼，使用者便可以擷取要執行 – 透過 sys.dm_exec_distributed_requests 產生實際的分散式的要求。 比方說，關於一般的 SQL 和外部的 SQL 資料表的查詢將會分解成各種陳述式/要求跨各種不同的計算節點執行。 若要追蹤所有計算節點的分散式的步驟，我們將介紹可用來都追蹤相關聯一個特定的要求和運算子，分別在計算節點上的所有作業的 'global' 的執行識別碼。  
+ 根據工作階段和要求識別碼，使用者便可以擷取要執行的-透過 sys.dm_exec_distributed_requests 產生實際的分散式的要求。 比方說，關於一般的 SQL 和外部的 SQL 資料表的查詢將會分解成各種陳述式/要求跨各種不同的計算節點執行。 若要追蹤所有計算節點的分散式的步驟，我們將介紹可用來都追蹤相關聯一個特定的要求和運算子，分別在計算節點上的所有作業的 'global' 的執行識別碼。  
   
 |資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  

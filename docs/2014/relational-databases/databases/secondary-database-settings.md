@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.logshipping.settings.dest.f1
@@ -13,12 +12,12 @@ ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aceac781da7dcbf5fa41786f006af6040cdd66bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57131b757dfc66df990f0ddf8a3c5f28f4e04396
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061388"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816400"
 ---
 # <a name="secondary-database-settings"></a>次要資料庫設定
   您可以使用此對話方塊，來設定和修改記錄傳送組態中，次要資料庫的屬性。  

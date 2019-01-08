@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.f1
@@ -15,12 +14,12 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b07bc36ebf3ca16bac2a2134d1054d850c19886
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da6fd76284caf53ff6a3d46d1bbfd0f514615c2e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203358"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805550"
 ---
 # <a name="transfer-database-task"></a>傳送資料庫工作
   「傳送資料庫」工作會在兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。 與其他只能透過複製 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件來傳送它們的工作不同，「傳送資料庫」工作可以複製或移動資料庫。 這項工作也可用來在同一部伺服器內複製資料庫。  
@@ -39,7 +38,7 @@ ms.locfileid: "48203358"
 ## <a name="execution-value"></a>執行值  
  執行值 (在工作的 `ExecutionValue` 屬性中定義) 會傳回值 1，因為與其他傳送工作不同，「傳送資料庫」工作只能傳送一個資料庫。  
   
- 藉由指派的使用者定義變數`ExecValueVariable`屬性傳送資料庫工作的錯誤訊息傳送相關的資訊以供其他物件在封裝中。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)和[在封裝中使用變數](../use-variables-in-packages.md)。  
+ 透過將使用者自訂變數指派給「傳送資料庫」工作的 `ExecValueVariable` 屬性，可將與錯誤訊息傳送相關的資訊用於封裝中的其他物件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)和[在封裝中使用變數](../use-variables-in-packages.md)。  
   
 ## <a name="log-entries"></a>記錄項目  
  「傳送資料庫」工作包含下列自訂記錄項目：  
@@ -50,7 +49,7 @@ ms.locfileid: "48203358"
   
 -   SourceDB    此記錄項目列出傳送之資料庫的名稱。  
   
- 此外，記錄項目`OnInformation`覆寫目的地資料庫時，寫入事件。  
+ 另外，在覆寫目的地資料庫時，會寫入 `OnInformation` 事件的記錄項目。  
   
 ## <a name="security-and-permissions"></a>安全性和權限  
  若要使用離線模式傳送資料庫，執行封裝的使用者必須是 sysadmin 伺服器角色的成員。  
@@ -72,9 +71,9 @@ ms.locfileid: "48203358"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [傳送資料庫工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [傳送資料庫工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [傳送資料庫工作編輯器&#40;資料庫頁面&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [傳送資料庫工作編輯器 &#40;資料庫頁面&#41;](../transfer-database-task-editor-databases-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

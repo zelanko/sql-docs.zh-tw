@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7e7412074cbea2baecf2a3437f7bbc267ed1e2ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 783bb0c879688bae668c164ce00b6ad8ed3eb9db
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199748"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747470"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-f1-help"></a>Microsoft Connector 1.1 for SAP BW F1 說明
   本節包含 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW 之三個元件的 F1 說明主題。 在使用者介面中按下 F1 鍵，或在精靈頁面和對話方塊中按一下 [說明]，也可以存取這些主題。  
@@ -28,17 +27,17 @@ ms.locfileid: "48199748"
   
 ### <a name="sap-bw-connection-manager-f1-help"></a>SAP BW 連接管理員 F1 說明  
   
--   [SAP BW 連線管理員編輯器](sap-bw-connection-manager-editor.md)  
+-   [SAP BW 連接管理員編輯器](sap-bw-connection-manager-editor.md)  
   
 ### <a name="sap-bw-source-f1-help"></a>SAP BW 來源 F1 說明  
   
--   [SAP BW 來源編輯器&#40;連線管理員頁面&#41;](data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [SAP BW 來源編輯器 &#40;連線管理員頁面&#41;](data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
--   [SAP BW 來源編輯器&#40;資料行頁面&#41;](data-flow/sap-bw-source-editor-columns-page.md)  
+-   [SAP BW 來源編輯器 &#40;資料行頁面&#41;](data-flow/sap-bw-source-editor-columns-page.md)  
   
--   [SAP BW 來源編輯器&#40;錯誤輸出頁面&#41;](data-flow/sap-bw-source-editor-error-output-page.md)  
+-   [SAP BW 來源編輯器 &#40;錯誤輸出頁面&#41;](data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [SAP BW 來源編輯器&#40;進階頁面&#41;](data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [SAP BW 來源編輯器 &#40;進階頁面&#41;](data-flow/sap-bw-source-editor-advanced-page.md)  
   
 -   [查閱 RFC 目的地](data-flow/look-up-rfc-destination.md)  
   
@@ -50,15 +49,15 @@ ms.locfileid: "48199748"
   
 ### <a name="sap-bw-destination-f1-help"></a>SAP BW 目的地 F1 說明  
   
--   [SAP BW 目的地編輯器&#40;連線管理員頁面&#41;](data-flow/sap-bw-destination-editor-connection-manager-page.md)  
+-   [SAP BW 目的地編輯器 &#40;連線管理員頁面&#41;](data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [SAP BW 目的地編輯器&#40;對應頁面&#41;](data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [SAP BW 目的地編輯器 &#40;對應頁面&#41;](data-flow/sap-bw-destination-editor-mappings-page.md)  
   
--   [SAP BW 目的地編輯器&#40;錯誤輸出頁面&#41;](data-flow/sap-bw-destination-editor-error-output-page.md)  
+-   [SAP BW 目的地編輯器 &#40;錯誤輸出頁面&#41;](data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [SAP BW 目的地編輯器&#40;進階頁面&#41;](data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [SAP BW 目的地編輯器 &#40;進階頁面&#41;](data-flow/sap-bw-destination-editor-advanced-page.md)  
   
--   [ InfoPackage](data-flow/look-up-infopackage.md)  
+-   [查閱 InfoPackage](data-flow/look-up-infopackage.md)  
   
 -   [建立新的 InfoObject](data-flow/create-new-infoobject.md)  
   

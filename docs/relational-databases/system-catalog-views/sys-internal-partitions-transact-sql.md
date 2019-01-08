@@ -14,12 +14,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82b3e432321260a5efa1d25537202d351b89a380
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a86c559adeeca787ac0e278eed5fb832b8c00bfd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603426"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537899"
 ---
 # <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47603426"
 |index_id|**int**|在資料表上定義的資料行存放區索引的索引識別碼。<br /><br /> 1 = 叢集資料行存放區索引<br /><br /> 2 = 非叢集資料行存放區索引|  
 |partition_number|**int**|資料分割數目。<br /><br /> 1 = 資料分割資料表，第一個資料分割或非資料分割資料表的單一資料分割。<br /><br /> 2 = 第二個資料分割，等等。|  
 |internal_object_type|**tinyint**|追蹤資料行存放區索引的內部資料的資料列集物件。<br /><br /> 2 = COLUMN_STORE_DELETE_BITMAP<br /><br /> 3 = COLUMN_STORE_DELTA_STORE<br /><br /> 4 = COLUMN_STORE_DELETE_BUFFER<br /><br /> 5 = COLUMN_STORE_MAPPING_INDEX|  
-|internal_object_type_desc|**nvarchar(60)**|COLUMN_STORE_DELETE_BITMAP – 此點陣圖索引會追蹤已標示為已刪除的資料行存放區的資料列。 點陣圖會為每個資料列群組，因為分割區可以有多個資料列群組中的資料列。 資料列的仍是實際存在且佔用著空間中的資料行存放區。<br /><br /> COLUMN_STORE_DELTA_STORE – 存放區資料列群組稱為資料列群組，尚未壓縮成單欄式儲存體。 每個資料表資料分割可以有零個或多個差異存放區資料列群組。<br /><br /> COLUMN_STORE_DELETE_BUFFER – 維護可更新的非叢集資料行存放區索引的刪除動作。 當查詢從基礎資料列存放區資料表刪除資料列時，刪除緩衝區會追蹤刪除的資料行存放區。 當已刪除的資料列數目超過 1048576 時，它們會合併回刪除點陣圖背景 Tuple Mover 執行緒或明確的 Reorganize 命令。  在任何給定的時間點，刪除點陣圖] 和 [刪除緩衝區的聯集表示所有已刪除的資料列。<br /><br /> COLUMN_STORE_MAPPING_INDEX – 使用時的叢集資料行存放區索引只有次要非叢集的索引。 這會對應至正確的資料列群組和資料行存放區中的資料列識別碼的非叢集索引鍵。 它只會儲存索引鍵的資料列，移至不同的資料列群組;會發生這種情況是當差異資料列群組壓縮到資料行存放區，以及當合併作業會合併兩個不同的資料列群組中的資料列。|  
+|internal_object_type_desc|**nvarchar(60)**|COLUMN_STORE_DELETE_BITMAP-此點陣圖索引會追蹤已標示為已刪除的資料行存放區的資料列。 點陣圖會為每個資料列群組，因為分割區可以有多個資料列群組中的資料列。 資料列的仍是實際存在且佔用著空間中的資料行存放區。<br /><br /> COLUMN_STORE_DELTA_STORE-存放區資料列群組稱為資料列群組，尚未壓縮成單欄式儲存體。 每個資料表資料分割可以有零個或多個差異存放區資料列群組。<br /><br /> COLUMN_STORE_DELETE_BUFFER-維護可更新的非叢集資料行存放區索引的刪除動作。 當查詢從基礎資料列存放區資料表刪除資料列時，刪除緩衝區會追蹤刪除的資料行存放區。 當已刪除的資料列數目超過 1048576 時，它們會合併回刪除點陣圖背景 Tuple Mover 執行緒或明確的 Reorganize 命令。  在任何給定的時間點，刪除點陣圖] 和 [刪除緩衝區的聯集表示所有已刪除的資料列。<br /><br /> COLUMN_STORE_MAPPING_INDEX-只有在叢集資料行存放區索引有次要非叢集的索引時，才使用。 這會對應至正確的資料列群組和資料行存放區中的資料列識別碼的非叢集索引鍵。 它只會儲存索引鍵的資料列，移至不同的資料列群組;會發生這種情況是當差異資料列群組壓縮到資料行存放區，以及當合併作業會合併兩個不同的資料列群組中的資料列。|  
 |Row_group_id|**int**|差異存放區 rowgroup 的識別碼。 每個資料表資料分割可以有零個或多個差異存放區資料列群組。|  
 |hobt_id|**bigint**|內部資料列集物件的識別碼。 這是良好的索引鍵來聯結其他 Dmv 以取得有關內部的資料列集的實體特性的詳細資訊。|  
 |rows|**bigint**|這個資料分割中的近似資料列數。|  

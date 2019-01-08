@@ -1,10 +1,10 @@
 ---
-title: 作業屬性： 新增作業 （目標頁面） |Microsoft Docs
+title: 作業屬性：新增作業 （目標頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.targets.f1
@@ -12,14 +12,14 @@ ms.assetid: 7e7ba084-af0e-4356-bb43-4d1c232129e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b5ac69773cf1920e2cbc77a1827666599ca7990
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f47054e2f0260db272ad25cbed549fd14df8c8e8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202048"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822032"
 ---
-# <a name="job-properties-new-job-targets-page"></a>作業屬性：新增作業 (目標頁面)
+# <a name="job-properties-new-job-targets-page"></a>作業屬性：新增作業 （目標頁面）
   使用此頁面來管理作業的目標伺服器。  
   
 ## <a name="options"></a>選項。  

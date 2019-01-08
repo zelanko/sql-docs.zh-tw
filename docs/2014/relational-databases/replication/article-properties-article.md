@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.articleproperties.f1
@@ -15,12 +14,12 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d9c136f2eb27f4c999d71c398b14b67405cee108
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c426781f52a513cca1e90e5f83eac7feab79fdaf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128318"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785220"
 ---
 # <a name="article-properties---ltarticlegt"></a>發行項屬性 - &lt;發行項&gt;
   從新增發行集精靈和 **[發行集屬性]** 對話方塊中，可以使用 **[發行項屬性]** 對話方塊。 它可讓您檢視和設定所有類型之發行項的屬性。 某些屬性只有在建立發行集時才能設定，而其他的則只有在發行集沒有使用中的訂閱時才能設定。 無法設定的屬性會以唯讀顯示。  
@@ -89,7 +88,7 @@ ms.locfileid: "48128318"
  此選項僅適用於儲存程序。 它決定是否要複寫預存程序 (CREATE PROCEDURE 陳述式) 或其執行的定義。 如果您複寫程序的執行，程序定義會在初始化訂閱之後複寫到訂閱者端；在發行者端執行程序時，複寫會在訂閱者端執行對應的程序。 這可在執行大量批次作業時大幅提升效能。 如需詳細資訊，請參閱＜ [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md)＞。  
   
 ## <a name="options-for-merge-publications"></a>合併式發行集的選項  
- 合併式發行集的 **[發行項屬性]** 對話方塊有兩個索引標籤： **[屬性]** 和 **[解析程式]**。  
+ **發行項屬性**合併式發行集 對話方塊中有兩個索引標籤：**屬性**並**解析程式**。  
   
 ### <a name="properties-tab"></a>屬性索引標籤  
  **同步處理方向**  
@@ -136,7 +135,7 @@ ms.locfileid: "48128318"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供的所有以 COM 為基礎的解析程式都已簽署。 選取此選項即可驗證同步處理時解析程式是有效的。  
   
 ## <a name="options-for-oracle-publications"></a>Oracle 發行集的選項  
- Oracle 發行集的 **[發行項屬性]** 對話方塊有兩個索引標籤： **[屬性]** 和 **[資料對應]**。 Oracle 發行集並不支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集支援的所有屬性。 如需詳細資訊，請參閱＜ [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)＞。  
+ **發行項屬性**Oracle 發行集的對話方塊有兩個索引標籤：**屬性**並**資料對應**。 Oracle 發行集並不支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集支援的所有屬性。 如需詳細資訊，請參閱＜ [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)＞。  
   
 ### <a name="properties-tab"></a>屬性索引標籤  
  **複製 INSERT、UPDATE 和 DELETE 預存程序**  

@@ -20,16 +20,16 @@ ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a04daf57a348f20c8a5febe8d56f8ed9358b9053
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 530a5acf9cc7c0de375906279aff2bc6a05ec8a0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631986"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213694"
 ---
 # <a name="sqlconnect-function"></a>SQLConnect 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ISO 92  
+ 導入的版本：ODBC 1.0 標準的合規性：ISO 92  
   
  **摘要**  
  **SQLConnect**建立驅動程式和資料來源的連接。 連接控制代碼所參考 連線到資料來源，包括狀態、 交易狀態和錯誤資訊的所有資訊的儲存的體。  

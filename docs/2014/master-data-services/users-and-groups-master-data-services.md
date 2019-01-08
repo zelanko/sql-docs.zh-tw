@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services]
@@ -16,12 +15,12 @@ ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 301b570ca52780222c97091db6b8fe6ec138e452
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: debbf9ef55412c2111acf777e3b428bcb250798b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154198"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814633"
 ---
 # <a name="users-and-groups-master-data-services"></a>使用者和群組 (Master Data Services)
   若要存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式，使用者必須擁有 Windows 網域帳戶或安裝 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 之伺服器電腦上的帳戶。 若要授與 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 存取權，您可以執行下列其中一項作業：  
@@ -35,7 +34,7 @@ ms.locfileid: "48154198"
   
  若要在 UI 的 [總管] 功能區域內執行動作，群組或使用者必須獲得指派 [總管] 功能區域存取權以及模型物件權限。  
   
- 如果使用者或群組需要存取其他功能區域，使用者或群組必須是管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md) (管理員 (Master Data Services))。  
+ 如果使用者或群組需要存取其他功能區域，使用者或群組必須是管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 ## <a name="best-practice"></a>最佳作法  
  若要簡化管理，請建立群組，然後指派每個群組的功能區域和模型物件權限。 您即可在群組中新增及移除使用者，而不需存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] UI。  
@@ -43,7 +42,7 @@ ms.locfileid: "48154198"
  請勿指派其他權限給個別使用者，也不要在具有 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]存取權的多個群組中加入使用者。 此外，除非您希望群組擁有特定成員的受限存取權，否則請勿使用階層成員權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [新增使用者&#40;Master Data Services&#41;](../../2014/master-data-services/add-a-user-master-data-services.md)   
+ [新增使用者 &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-user-master-data-services.md)   
  [新增群組 &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)   
  [刪除使用者或群組 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-users-or-groups-master-data-services.md)   
  [測試使用者的權限 &#40;Master Data Services&#41;](../../2014/master-data-services/test-a-user-s-permissions-master-data-services.md)  

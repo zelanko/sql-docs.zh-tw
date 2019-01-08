@@ -4,10 +4,10 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- • vs.solutionexplorer.file.query
+- vs.solutionexplorer.file.query
 helpviewer_keywords:
 - queries [Visual Database Tools]
 - View Designer, about View Designer
@@ -20,12 +20,12 @@ ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1652e8a15b973e46a6692fcc2f79bc56cc2fdff8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108358"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328378"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>設計查詢和檢視操作說明主題 (Visual Database Tools)
   查詢和檢視設計師可以協助您建立與維護應用程式的資料擷取和資料操作部分。  
@@ -61,5 +61,3 @@ ms.locfileid: "48108358"
 ## <a name="related-sections"></a>相關章節  
  [設計資料表 &#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)  
  透過資料表、資料行、索引鍵、索引及預存程序等等來設計和維護資料庫結構的詳細步驟。  
-  
-  

@@ -14,17 +14,17 @@ ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 479cc73538bf94499f2762cca528d2cec72ff3b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb02dd54ea57af668e56fe910ca92830fb09c418
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675357"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514694"
 ---
 # <a name="data-sources"></a>資料來源
 A*資料來源*是資料的來源。 它可以是檔案、 DBMS 或甚至是即時的資料摘要上特定資料庫。 資料可能位於程式，在同一部電腦或網路上的某個位置的另一部電腦上。 例如，資料來源可能 OS/2® 作業系統，存取 Novell® Netware; 上執行 Oracle DBMS透過閘道; 存取 IBM DB2 DBMS在伺服器目錄; Xbase 檔案的集合或本機的 Microsoft® Access 資料庫檔案。  
   
- 資料來源的目的是要收集的所有技術存取資料所需的資訊 — 驅動程式名稱、 網路位址、 網路軟體等等 — 為單一放置，並隱藏使用者。 使用者應該能夠查看清單，其中包含薪資、 清查和人員、 從清單中，選擇 薪資和連接到薪資資料，無須了解在 payroll data 的所在位置，或應用程式獲得給它的方式將應用程式。  
+ 資料來源的目的是收集到單一位置的所有存取的資料-驅動程式名稱、 網路位址、 網路軟體等等-所需的技術資訊，並向使用者隱藏它。 使用者應該能夠查看清單，其中包含薪資、 清查和人員、 從清單中，選擇 薪資和連接到薪資資料，無須了解在 payroll data 的所在位置，或應用程式獲得給它的方式將應用程式。  
   
  詞彙*資料來源*不應混淆與類似的詞彙。 在本手冊中， *DBMS*或是*資料庫*是指資料庫程式或引擎。 進一步區分*桌面的資料庫*設計在個人電腦上執行，且通常加改編，完整的 SQL 和交易支援和*server 資料庫*設計成在用戶端執行 /伺服器的情況並以獨立的資料庫引擎和豐富的 SQL 和交易支援。 *資料庫*也是指特定集合的資料，例如 SQL Server 上的 Xbase 檔案目錄或資料庫中的集合。 它通常相當於這個詞彙*目錄中，* 本手冊中或一詞在其他地方使用*限定詞*在舊版的 ODBC。  
   

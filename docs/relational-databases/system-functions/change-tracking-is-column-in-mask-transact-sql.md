@@ -20,17 +20,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e34dc41b4fbd0bf8b7a3a16db3edf21799926954
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 534df29b5ad3422ed3290ce4037490f69f988832
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673095"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535746"
 ---
 # <a name="changetrackingiscolumninmask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  解譯由 CHANGETABLE(CHANGES …) 函數傳回的 SYS_CHANGE_COLUMNS 值。 這可讓應用程式決定指定的資料行是否要包含在針對 SYS_CHANGE_COLUMNS 傳回的值中。  
+  解譯 CHANGETABLE(CHANGES...) 函式所傳回的 SYS_CHANGE_COLUMNS 值。 這可讓應用程式決定指定的資料行是否要包含在針對 SYS_CHANGE_COLUMNS 傳回的值中。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

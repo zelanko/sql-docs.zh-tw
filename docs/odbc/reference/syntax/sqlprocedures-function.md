@@ -20,16 +20,16 @@ ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a044f3122f3f553e068d474901e52cce3eef1c9
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 260406eddd6caef88035376a764c3e140547e6c4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120079"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204667"
 ---
 # <a name="sqlprocedures-function"></a>SQLProcedures 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ODBC  
+ 導入的版本：ODBC 1.0 標準的合規性：ODBC  
   
  **摘要**  
  **SQLProcedures**傳回儲存在特定資料來源中的程序名稱的清單。 *程序*是泛型的詞彙，用來描述*可執行物件*，或 具名的實體，可以使用輸入和輸出參數來叫用。 如需有關程序的詳細資訊，請參閱[程序](../../../odbc/reference/develop-app/procedures-odbc.md)。  
@@ -131,11 +131,11 @@ SQLRETURN SQLProcedures(
 |PROCEDURE_CAT (ODBC 2.0)|1|Varchar|程序類別目錄識別碼;如果不適用於資料來源，則為 NULL。 如果驅動程式支援目錄對於某些程序，但不適用於其他項目，例如當驅動程式會擷取不同 Dbms 中的資料，它會傳回空字串 ("") 沒有目錄這些程序。|  
 |PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|程序結構描述識別碼;如果不適用於資料來源，則為 NULL。 如果驅動程式支援結構描述對於某些程序，但不適用於其他項目，例如當驅動程式會擷取不同 Dbms 中的資料，它會傳回空字串 ("") 並沒有結構描述的程序。|  
 |程序名稱 (ODBC 2.0)|3|非 NULL Varchar|程序識別碼。|  
-|NUM_INPUT_PARAMS (ODBC 2.0)|4|不適用|保留供日後使用。 應用程式不應依賴這些結果資料行中傳回的資料。|  
-|NUM_OUTPUT_PARAMS (ODBC 2.0)|5|不適用|保留供日後使用。 應用程式不應依賴這些結果資料行中傳回的資料。|  
-|NUM_RESULT_SETS (ODBC 2.0)|6|不適用|保留供日後使用。 應用程式不應依賴這些結果資料行中傳回的資料。|  
+|NUM_INPUT_PARAMS (ODBC 2.0)|4|N/A|保留供日後使用。 應用程式不應依賴這些結果資料行中傳回的資料。|  
+|NUM_OUTPUT_PARAMS (ODBC 2.0)|5|N/A|保留供日後使用。 應用程式不應依賴這些結果資料行中傳回的資料。|  
+|NUM_RESULT_SETS (ODBC 2.0)|6|N/A|保留供日後使用。 應用程式不應依賴這些結果資料行中傳回的資料。|  
 |註解 (ODBC 2.0)|7|Varchar|程序的描述。|  
-|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|定義的程序類型：<br /><br /> SQL_PT_UNKNOWN： 無法判斷此程序是否會傳回值。<br /><br /> SQL_PT_PROCEDURE： 傳回的物件是一個程序;也就是說，它並沒有傳回值。<br /><br /> 會： 傳回的物件是函式;也就是說，它具有傳回值。|  
+|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|定義的程序類型：<br /><br /> SQL_PT_UNKNOWN:無法判斷此程序是否會傳回值。<br /><br /> SQL_PT_PROCEDURE:傳回的物件是一個程序;也就是說，它並沒有傳回值。<br /><br /> 會：傳回的物件是函式;也就是說，它具有傳回值。|  
   
  *SchemaName*並*ProcName*引數接受搜尋模式。 如需有關有效的搜尋模式的詳細資訊，請參閱[模式值引數](../../../odbc/reference/develop-app/pattern-value-arguments.md)。  
   

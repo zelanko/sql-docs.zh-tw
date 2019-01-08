@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multi-homed computer
@@ -15,12 +14,12 @@ ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4460b94a758a60abe27d8e9f3a90567ecbcbaa13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163508"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785620"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>設定多重主目錄電腦進行 SQL Server 存取
   當伺服器必須提供兩個或多個網路或子網路的連接時，一般會使用多重主目錄電腦。 這部電腦通常位於周邊網路 (也稱為 DMZ 或篩選的子網路) 中。 此主題描述如何設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和具有進階安全性的 Windows 防火牆，以便在多重主目錄環境中提供給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的網路連接。  
@@ -58,7 +57,7 @@ ms.locfileid: "48163508"
   
 1.  電腦上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是安裝，請按一下 **開始**，按一下 **執行**，型別`cmd`，然後[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
-2.  在 [命令提示字元] 視窗中，輸入`ipconfig,`然後按 ENTER，即可列出這部電腦上可用的 IP 位址。  
+2.  在 [命令提示字元] 視窗中，輸入 `ipconfig,`，然後按下 ENTER，即可列出這部電腦可用的 IP 位址。  
   
     > [!NOTE]  
     >  **ipconfig** 命令有時會列出許多可能的連結，包含已中斷連線的連結。 **ipconfig** 命令可以同時列出 IPv4 及 IPv6 的位址。  
@@ -100,7 +99,7 @@ ms.locfileid: "48163508"
   
 8.  在 [通訊協定及連接埠] 頁面上，選取 [TCP]。  
   
-9. 選取 [特定本機連接埠]。 輸入以逗號隔開的通訊埠編號，然後按 [下一步]。 在此範例中，您將設定預設的連接埠;因此，請輸入`1433`。  
+9. 選取 [特定本機連接埠]。 輸入以逗號隔開的通訊埠編號，然後按 [下一步]。 在這則範例中，您將設定預設通訊埠。因此，請輸入 `1433`。  
   
 10. 在 [動作] 頁面上，檢閱這些選項。 在這則範例中，您不會使用防火牆來強制執行安全連接。 因此，請按一下 [允許該連線]，然後按 [下一步]。  
   

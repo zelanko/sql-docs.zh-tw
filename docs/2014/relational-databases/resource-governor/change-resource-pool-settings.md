@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, resource pool alter
@@ -14,19 +13,19 @@ ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9c81b1c82932fe09a89ffb32f17fd32de34ad8d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6392c8211e073183b68d2d04e9c949317d6a33a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183018"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763310"
 ---
 # <a name="change-resource-pool-settings"></a>變更資源集區設定
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]來變更資源集區設定。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **開始之前：**[限制事項](#LimitationsRestrictions)，[權限](#Permissions)  
   
--   **使用下列項目變更資源集區的設定**  [SQL Server Management Studio](#ChgRPProp)、 [Transact-SQL](#ChgRPTSQL)  
+-   **若要變更資源集區中，設定使用：**[SQL Server Management Studio](#ChgRPProp)， [Transact SQL](#ChgRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   

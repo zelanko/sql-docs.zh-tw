@@ -11,12 +11,12 @@ ms.assetid: bc5bcd87-663f-41d9-bb7b-b3e083cd63df
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 04c0170d33b07ea39b8c08ee194eb0cd63b4e64e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 276d37b97cfe0a2a4194aa8aed713834a20c8674
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128308"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522854"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>將原則匯入至單一執行個體
   在這項工作中，您將會針對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的單一執行個體，匯入您要排程到以原則為基礎之管理的最佳作法原則。  

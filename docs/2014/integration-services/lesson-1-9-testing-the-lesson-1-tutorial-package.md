@@ -1,22 +1,21 @@
 ---
-title: 步驟 9：測試第 1 課的教學課程套件 | Microsoft Docs
+title: 步驟 9：測試第 1 課的教學課程封裝 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba98c694b99eb1ab81836a5d1f23a5cd4ea0d545
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 069f9ca26aa59c8edb8b97f1acbdf336a61b7d9b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196998"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793980"
 ---
 # <a name="step-9-testing-the-lesson-1-tutorial-package"></a>步驟 9：測試第 1 課的教學課程封裝
   在這一課，您完成了下列工作：  
@@ -49,9 +48,9 @@ ms.locfileid: "48196998"
 2.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]**。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 2 課：新增迴圈](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+ [第 2 課：加入迴圈](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [執行專案和套件](packages/run-integration-services-ssis-packages.md)  
+ [執行專案和封裝](packages/run-integration-services-ssis-packages.md)  
   
   

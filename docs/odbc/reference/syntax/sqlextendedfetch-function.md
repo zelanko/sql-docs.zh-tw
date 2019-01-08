@@ -20,22 +20,22 @@ ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1896ec473caf1af8a3fa2bdaa4156ddca3c0a6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e8844d3152f9465c8bb61acca9351f58834087f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697047"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204037"
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch 函式
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： 已被取代  
+ 導入的版本：ODBC 1.0 標準的合規性：已被取代  
   
  **摘要**  
  **SQLExtendedFetch**提取從結果集的指定資料列集的資料，並傳回所有繫結的資料行的資料。 在絕對或相對位置或依書籤，則可以指定資料列集。  
   
-> [!NOTE]  
->  在 ODBC 3 *.x*， **SQLExtendedFetch**已被取代**SQLFetchScroll**。 ODBC 3 *.x*應用程式不應該呼叫**SQLExtendedFetch**; 改為呼叫**SQLFetchScroll**。 驅動程式管理員會將對應**SQLFetchScroll**要**SQLExtendedFetch**時使用的 ODBC 2 *.x*驅動程式。 ODBC 3 *.x*驅動程式應支援**SQLExtendedFetch**如果他們想要使用 ODBC 2 *.x*呼叫它的應用程式。 如需詳細資訊，請參閱 「 註解 」 以及[區塊資料指標、 可捲動的資料指標和回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)附錄 g： 驅動程式指導方針，為了與舊版相容。  
+> [!NOTE]
+>  在 ODBC 3 *.x*， **SQLExtendedFetch**已被取代**SQLFetchScroll**。 ODBC 3 *.x*應用程式不應該呼叫**SQLExtendedFetch**; 改為呼叫**SQLFetchScroll**。 驅動程式管理員會將對應**SQLFetchScroll**要**SQLExtendedFetch**時使用的 ODBC 2 *.x*驅動程式。 ODBC 3 *.x*驅動程式應支援**SQLExtendedFetch**如果他們想要使用 ODBC 2 *.x*呼叫它的應用程式。 如需詳細資訊，請參閱 「 註解 」 以及[區塊資料指標、 可捲動的資料指標和回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)在 < 附錄 g:為了與舊版相容的驅動程式指導方針。  
   
 ## <a name="syntax"></a>語法  
   
@@ -65,7 +65,7 @@ SQLRETURN SQLExtendedFetch(
  *RowStatusArray*  
  [輸出]若要在其中傳回每個資料列狀態陣列的指標。 這個陣列用在 sql_attr_row_status_ptr 設定陳述式屬性所指定之陣列相同的方式。  
   
- 不過，這個陣列的位址不會儲存在 IRD SQL_DESC_STATUS_ARRAY_PTR 欄位中。 此外，這個陣列僅供**SQLExtendedFetch** ，經由**SQLBulkOperations**具有*作業*的 SQL_ADD 或**SQLSetPos**呼叫之後時**SQLExtendedFetch**。 它不是由**SQLFetch**或**SQLFetchScroll**，而且它不會由**SQLBulkOperations**或是**SQLSetPos**之後的呼叫時**SQLFetch**或是**SQLFetchScroll**。 它也不是時，使用**SQLBulkOperations**具有*作業*SQL_ADD 的呼叫之前呼叫任何提取函式。 換句話說，它只適用於陳述式狀態 S7。 在 S5 或 S6 的陳述式狀態中不使用它。 如需詳細資訊，請參閱 <<c0> [ 陳述式轉換](../../../odbc/reference/appendixes/statement-transitions.md)附錄 b: ODBC 狀態轉換資料表中。  
+ 不過，這個陣列的位址不會儲存在 IRD SQL_DESC_STATUS_ARRAY_PTR 欄位中。 此外，這個陣列僅供**SQLExtendedFetch** ，經由**SQLBulkOperations**具有*作業*的 SQL_ADD 或**SQLSetPos**呼叫之後時**SQLExtendedFetch**。 它不是由**SQLFetch**或**SQLFetchScroll**，而且它不會由**SQLBulkOperations**或是**SQLSetPos**之後的呼叫時**SQLFetch**或是**SQLFetchScroll**。 它也不是時，使用**SQLBulkOperations**具有*作業*SQL_ADD 的呼叫之前呼叫任何提取函式。 換句話說，它只適用於陳述式狀態 S7。 在 S5 或 S6 的陳述式狀態中不使用它。 如需詳細資訊，請參閱 <<c0> [ 陳述式轉換](../../../odbc/reference/appendixes/statement-transitions.md)中附錄 b:狀態轉換資料表。  
   
  應用程式應該提供中的有效指標*RowStatusArray*引數; 如果沒有，行為**SQLExtendedFetch**和 呼叫行為**SQLBulkOperations**或是**SQLSetPos**已藉由維持資料指標之後**SQLExtendedFetch**為未定義。  
   
@@ -86,7 +86,7 @@ SQLRETURN SQLExtendedFetch(
 |07009|描述項索引無效|使用繫結資料行 0 **SQLBindCol**，且 SQL_ATTR_USE_BOOKMARKS 陳述式屬性已設定為 SQL_UB_OFF。|  
 |08S01|通訊連結失敗|函式已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
 |22002|指標變數但未提供|NULL 的資料擷取成資料行其*StrLen_or_IndPtr*情況下設**SQLBindCol**是 null 指標。<br /><br /> （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|22003|數值超出範圍|傳回數字的值 （做為數值或字串），一或多個資料行可能已造成要截斷的數字 （相對於小數） 的整數部分。<br /><br /> （函式會傳回 SQL_SUCCESS_WITH_INFO）。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 間隔和數值資料類型的方針](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md)附錄 d： 資料型別中。|  
+|22003|數值超出範圍|傳回數字的值 （做為數值或字串），一或多個資料行可能已造成要截斷的數字 （相對於小數） 的整數部分。<br /><br /> （函式會傳回 SQL_SUCCESS_WITH_INFO）。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 間隔和數值資料類型的方針](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md)附錄 d:資料類型。|  
 |22007|無效的日期時間格式|在結果集中的字元資料行已繫結至日期、 時間或時間戳記 C 結構，但資料行的值，分別無效的日期、 時間戳記。<br /><br /> （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |22012|除數為零|算術運算式的值傳回，因而導致除數為零。<br /><br /> （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |22015|間隔欄位溢位|將指派從精確數值或時間間隔 SQL 型別，給 C 間隔類型造成有效位數的遺失開頭的欄位中。<br /><br /> 當 C 間隔類型以提取資料時，發生 C 間隔類型中的 SQL 類型的值不表示。<br /><br /> （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
@@ -121,7 +121,7 @@ SQLRETURN SQLExtendedFetch(
   
 -   **SQLExtendedFetch**不支援繫結位移 （SQL_ATTR_ROW_BIND_OFFSET_PTR 陳述式屬性）。  
   
--   呼叫**SQLExtendedFetch**不能呼叫的方式來混合**SQLFetch**或**SQLFetchScroll**，而如果**SQLBulkOperations**稱為呼叫任何提取函式之前，請**SQLExtendedFetch**之前的資料指標已關閉並重新開啟，無法呼叫。 亦即**SQLExtendedFetch**可以只能在陳述式狀態 S7 中呼叫。 如需詳細資訊，請參閱 <<c0> [ 陳述式轉換](../../../odbc/reference/appendixes/statement-transitions.md)附錄 b: ODBC 狀態轉換資料表中。  
+-   呼叫**SQLExtendedFetch**不能呼叫的方式來混合**SQLFetch**或**SQLFetchScroll**，而如果**SQLBulkOperations**稱為呼叫任何提取函式之前，請**SQLExtendedFetch**之前的資料指標已關閉並重新開啟，無法呼叫。 亦即**SQLExtendedFetch**可以只能在陳述式狀態 S7 中呼叫。 如需詳細資訊，請參閱 <<c0> [ 陳述式轉換](../../../odbc/reference/appendixes/statement-transitions.md)中附錄 b:狀態轉換資料表。  
   
  當應用程式呼叫**SQLFetchScroll**時使用的 ODBC 2 *.x*驅動程式，驅動程式管理員會對應至這個呼叫**SQLExtendedFetch**。 如需詳細資訊，請參閱 「 SQLFetchScroll 和 ODBC 2 *.x*驅動程式 」 中[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)。  
   

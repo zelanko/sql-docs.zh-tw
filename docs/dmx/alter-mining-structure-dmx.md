@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f26ffdf21519a1b5aa2ce26060a2c6d36a53d6ff
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 65374ec0499d6dbb549a14af239c03c06dca4062
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145923"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545425"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -128,7 +128,7 @@ USING <algorithm> [(<parameter list>)]
 ## <a name="filter-criteria-expressions"></a>篩選準則運算式  
  您可以定義篩選來限制用於採礦模型中的案例。 篩選可套用至案例資料表中的資料行或巢狀資料表中的資料列，或套用至兩者。  
   
- 篩選準則運算式是經過簡化的 DMX 述詞，與 WHERE 子句類似。 篩選運算式限於使用基本數學運算子、純量和資料行名稱的公式。 EXISTS 運算子則是例外；如果子查詢至少傳回一個資料列，該運算子就會評估為 True。 述詞可以使用常見的邏輯運算子 AND、OR 和 NOT 等來結合。  
+ 篩選準則運算式是經過簡化的 DMX 述詞，與 WHERE 子句類似。 篩選運算式限於使用基本數學運算子、純量和資料行名稱的公式。 EXISTS 運算子則是例外；如果子查詢至少傳回一個資料列，該運算子就會評估為 True。 使用常見的邏輯運算子，可以結合述詞：AND、 OR 和 NOT。  
   
  如需有關搭配採礦模型的篩選條件的詳細資訊，請參閱[採礦模型的篩選&#40;Analysis Services-Data Mining&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)。  
   
@@ -143,10 +143,10 @@ USING <algorithm> [(<parameter list>)]
  參數清單的語法如下：  
   
 ```  
-[<parameter> = <value>, <parameter> = <value>,…]  
+[<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
-## <a name="example-1-add-a-model-to-a-structure"></a>範例 1：將模型加入至結構  
+## <a name="example-1-add-a-model-to-a-structure"></a>範例 1：將模型加入結構  
  下列範例會將貝氏機率分類採礦模型來**New Mailing**採礦結構和限制為 50，指出屬性的最大數目。  
   
 ```  
@@ -161,7 +161,7 @@ ADD MINING MODEL [Naive Bayes]
 USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)  
 ```  
   
-## <a name="example-2-add-a-filtered-model-to-a-structure"></a>範例 2：將篩選模型加入至結構  
+## <a name="example-2-add-a-filtered-model-to-a-structure"></a>範例 2：將篩選的模型加入結構  
  下列範例會將採礦模型時， `Naive Bayes Women`，以**New Mailing**採礦結構。 新模型的基本結構與在範例 1 中加入的採礦模型相同；不過這個模型將取自採礦結構的案例限制為年過 50 的女性客戶。  
   
 ```  
@@ -177,7 +177,7 @@ USING Microsoft_Naive_Bayes
 WITH FILTER([Gender] = 'F' AND [Age] >50)  
 ```  
   
-## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>範例 3：將篩選模型加入至具有巢狀資料表的結構  
+## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>範例 3：將篩選的模型加入具有巢狀資料表的結構  
  下列範例將採礦模型加入至購物籃採礦結構的修改版本中。 在範例中使用的採礦結構已經過修改，加入**區域**資料行，其中包含客戶地區的屬性，以及**Income Group**資料行中，將客戶收入分類使用值**高**，**中等**，或**低**。  
   
  此採礦結構也會包含列出客戶已購買之項目清單的巢狀資料表。  

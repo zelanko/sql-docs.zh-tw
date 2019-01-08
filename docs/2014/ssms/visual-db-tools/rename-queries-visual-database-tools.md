@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - renaming queries
@@ -13,12 +13,12 @@ ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da49c86d16f502ce16d462c4f156a72ab92c7963
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab0a4af42a6137a78d1d884d7f00dd37911f9ff4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102808"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817010"
 ---
 # <a name="rename-queries-visual-database-tools"></a>重新命名查詢 (Visual Database Tools)
   您可以為目前沒有開啟以供編輯的任何查詢重新命名。 下列的程序假設您要重新命名的查詢已經關閉。  

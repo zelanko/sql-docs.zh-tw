@@ -16,12 +16,12 @@ ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64655ad666954b2fb63448cb1e55430dd6191491
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: da87199347052189e5af8b881154b37723408d1f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350462"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214177"
 ---
 # <a name="jscript-ado-programming"></a>JScript ADO 程式設計
 ## <a name="creating-an-ado-project"></a>建立 ADO 專案  
@@ -58,7 +58,7 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 <%  
 var Source = "SELECT * FROM Authors";  
 var Connect =  "Provider=sqloledb;Data Source=srv;" +  
-    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
+    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
 var Rs1 = Server.CreateObject( "ADODB.Recordset.2.5" );  
 Rs1.Open(Source,Connect,adOpenForwardOnly);  
 Response.Write("Success!");  

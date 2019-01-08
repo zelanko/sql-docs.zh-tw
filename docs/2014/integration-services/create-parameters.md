@@ -8,17 +8,17 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 f1_keywords:
-- sql12.dts.designer.paramterwindow.f1
+- sql12.dts.designer.parameterwindow.f1
 ms.assetid: cd5d675b-dd5d-49cc-8b1f-dc717a973f99
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12a896b305d15f33cf5fc1eb58562ca6b249ae63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75c36c5e061a10ec6fc5b2af17334d134a7bd9d2
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173998"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858633"
 ---
 # <a name="create-parameters"></a>Create Parameters
   您可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 來建立專案參數和封裝參數。 下列程序會提供建立封裝/專案參數的逐步指示。  
@@ -62,7 +62,7 @@ ms.locfileid: "48173998"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中開啟專案。  
   
-2.  以滑鼠右鍵按一下方案總管中的 **Project.params**，然後按一下 [開啟] (或) 按兩下 **Project.params** 來開啟它。  
+2.  以滑鼠右鍵按一下方案總管中的 **Project.params**，然後按一下 [開啟] \(或) 按兩下 **Project.params** 來開啟它。  
   
      ![專案參數視窗](media/denali-project-parameters.gif "專案參數視窗")  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.configureflatfiledest.f1
@@ -13,12 +12,12 @@ ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 931c04a8a038612edcdaa48f40231c5fb6faed00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa4a96e70975a98835ca8debdc5bad232db72f15
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071488"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773190"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>設定一般檔案目的地 (SQL Server 匯入和匯出精靈)
   使用**設定一般檔案目的地**頁面，即可指定目的地一般檔案的格式化選項，並繼續之前預覽結果。  

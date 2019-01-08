@@ -4,21 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 4070580b-880d-4f4c-abcc-626a4fe0c9a2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 628e93e1ceef7bd34b55860370fc7b1ab98a020c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50e62a9232690deb368096723f428118e9de7aa2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227629"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803430"
 ---
 # <a name="xtp-storage"></a>XTP 儲存體
-  XTP Storage 效能物件包含與 XTP 儲存體中相關的計數器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  XTP 儲存體效能物件包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中與 XTP 儲存體相關的計數器。  
   
  下表描述**XTP 儲存體**計數器。  
   

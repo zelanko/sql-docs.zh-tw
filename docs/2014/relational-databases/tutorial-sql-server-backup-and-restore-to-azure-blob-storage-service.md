@@ -1,22 +1,21 @@
 ---
-title: 教學課程： SQL Server 備份及還原至 Windows Azure Blob 儲存體服務 |Microsoft Docs
+title: 教學課程：SQL Server 備份及還原至 Windows Azure Blob 儲存體服務 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 65015ec9175bc1e09b97486794f7bdd44d1c1038
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2216674bec52dd4d4800aa1b03aa4a2834667974
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056128"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811240"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>教學課程：SQL Server 備份及還原至 Windows Azure Blob 儲存體服務
   歡迎使用「SQL Server 備份及還原與 Windows Azure Blob 儲存體服務使用者入門」教學課程。 本教學課程可協助您了解如何將備份寫入 Windows Azure Blob 儲存體服務以及從中還原。  
@@ -30,7 +29,7 @@ ms.locfileid: "48056128"
  [第 2 課：建立 SQL Server 認證](../tutorials/lesson-2-create-a-sql-server-credential.md)  
  在這一課，您會建立認證以儲存用來存取 Windows Azure 儲存體帳戶的安全性資訊。  
   
- [第 3 課：將完整資料庫備份寫入 Windows Azure Blob 儲存體服務](../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)  
+ [第 3 課：完整資料庫備份寫入 Windows Azure Blob 儲存體服務](../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)  
  在這一課，您會發出 T-SQL 陳述式，以便將 AdventureWorks2012 資料庫的備份寫入 Windows Azure Blob 儲存體服務。  
   
  [第 4 課：從完整資料庫備份執行還原](../tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)  

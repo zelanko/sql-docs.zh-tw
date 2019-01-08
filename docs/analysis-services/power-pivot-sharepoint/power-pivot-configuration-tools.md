@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ab3e6eb8839b87f1145501cd0b30895bf181ec60
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: e2d15054f3d6ebbcd25627df42aab5b9248db1f6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984470"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207497"
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot 組態工具
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "38984470"
   
 -   您必須是 Analysis Services 執行個體的伺服器管理員 (僅限 SharePoint 2010)。  
   
--   您必須是伺服器陣列的組態資料庫上的 db_owner。  
+-   您必須是伺服陣列組態資料庫的 db_owner。  
   
 -   使用組態工具沒有 TCP/IP 通訊埠要求，因此，您應該不必設定防火牆來容納組態工具。 組態工具預期 Web 應用程式和共用服務為 SharePoint 平台的一部分。 您可能必須為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器設定防火牆。 如需詳細資訊，請參閱 [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "38984470"
 |名稱|支援的 SharePoint 版本|詳細組態|  
 |----------|-------------------------------------|----------------------------|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態|SharePoint 2013|[設定或修復 Power Pivot for SharePoint 2013 &#40;Power Pivot 組態工具&#41;](../../analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具|SharePoint 2010 含 SharePoint 2010|[設定或修復 Power Pivot for SharePoint 2010 （Power Pivot 組態工具）](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具|SharePoint 2010 含 SharePoint 2010|[設定或修復 Power Pivot for SharePoint 2010 (Power Pivot 組態工具)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)|  
   
 ###  <a name="bkmk_sum_differences_betweentools"></a> 兩種組態工具之間的差異  
  這兩個版本的組態工具很類似，但是兩者執行的組態設定步驟有些差異。 這些差異是因為 SharePoint 2010 和 SharePoint 2013 之間的變更，以及 SQL Server 2012 SP1 版的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 與舊版 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 之間的架構差異而產生。  
@@ -83,9 +83,9 @@ ms.locfileid: "38984470"
   
 -   [Power Pivot for SharePoint 的 PowerShell 參考](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
-> [!NOTE]  
+> [!NOTE]
 >  此工具不會設定 Reporting Services。 如果您要將 Reporting Services 加入至 SharePoint 環境，則需要另外安裝及設定 Reporting Services。 如需詳細資訊，請參閱下列內容：  
->   
+> 
 >  -   [以 SharePoint 模式安裝第一部報表伺服器](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md)。  
 > -   [Install Reporting Services SharePoint Mode for SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "38984470"
   
      ![兩個 PowerPivot 組態工具](../../analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "兩個 PowerPivot 組態工具")  
   
-     **注意** ：只有在本機伺服器上安裝了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 時，才可以使用這些工具。  
+     **注意：** 這些工具會時才可使用[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]安裝在本機伺服器上。  
   
 2.  在啟動時，組態工具會檢查您安裝的狀態，並提供適用於您安裝的工作。  
   

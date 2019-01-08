@@ -5,8 +5,7 @@ ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_adddistpublisher
@@ -17,12 +16,12 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b8233a5ba3d4610e43dc2c9fb47ba9107ffad268
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 171618db612b77de63feb2a7e53b248a6ac847b0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716986"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206567"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  這是散發資料庫的名稱。 *distributor_db*已**sysname**，沒有預設值。 複寫代理程式利用這個參數來連接發行者。  
   
  [  **@security_mode=**] *security_mode*  
- 這是實作的安全性模式。 此參數只供複寫代理程式用來連接佇列更新訂閱的發行者，或連接非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *security_mode*已**int**，而且可以是下列值之一。  
+ 這是實作的安全性模式。 這個參數只由複寫代理程式用來連接到發行者之佇列更新訂閱，或與非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *security_mode*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  

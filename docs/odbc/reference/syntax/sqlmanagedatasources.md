@@ -20,16 +20,16 @@ ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd3604b6de03d6344470758c4de14c15ad47e572
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f22fc952f0394f9e59ca8d67c76d0b00594b0759
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602676"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212422"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **合規性**  
- 版本導入： ODBC 2.0  
+ 導入的版本：ODBC 2.0  
   
  **摘要**  
  **SQLManageDataSources**會顯示一個對話方塊，使用者可以設定、 新增和刪除資料來源中的系統資訊。  
@@ -39,7 +39,7 @@ ms.locfileid: "47602676"
 ```  
   
 BOOL SQLManageDataSources(  
-     HWND     hwnd);  
+     HWND     hwnd);  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -64,7 +64,7 @@ BOOL SQLManageDataSources(
   
  ![ODBC 資料來源管理員 對話方塊](../../../odbc/reference/syntax/media/ch23e.gif "CH23E")  
   
- 對話方塊會顯示在三個索引標籤下的系統資訊中所列的資料來源：**使用者 DSN**，**系統 DSN**，並**檔案 DSN**。 如果使用者按兩下資料來源或選取資料來源並按一下**設定**， **SQLManageDataSources**呼叫**ConfigDSN**中安裝 DLL ODBC_CONFIG_資料來源名稱的選項。  
+ 對話方塊會顯示在三個索引標籤下的系統資訊中所列的資料來源：**使用者 DSN**，**系統 DSN**，以及**檔案 DSN**。 如果使用者按兩下資料來源或選取資料來源並按一下**設定**， **SQLManageDataSources**呼叫**ConfigDSN**中安裝 DLL ODBC_CONFIG_資料來源名稱的選項。  
   
  如果使用者按一下**新增**， **SQLManageDataSources**顯示**建立新的資料來源**對話方塊中，如下圖所示。  
   

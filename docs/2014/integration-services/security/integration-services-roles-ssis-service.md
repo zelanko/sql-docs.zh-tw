@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Integration Services], roles
@@ -19,12 +18,12 @@ ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa7e52cd88e4eb07c0df515ebba3e10284be02b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c6f7ef38c779b07b9cbeffc2b9300360620e350
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132418"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792867"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 角色 (SSIS 服務)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含三個固定的資料庫層級角色中， `db_ssisadmin`， **db_ssisltduser**，以及**db_ssisoperator**，用於控制封裝的存取權。 只能在儲存至封裝上實作角色`msdb`資料庫中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]將角色指派給封裝。 角色指派會儲存到`msdb`資料庫。  
@@ -82,6 +81,6 @@ ms.locfileid: "48132418"
   
 -   [建立使用者定義角色](../create-a-user-defined-role.md)  
   
--   [連線到 Integration Services](../connect-to-integration-services.md)  
+-   [連接到 Integration Services](../connect-to-integration-services.md)  
   
   

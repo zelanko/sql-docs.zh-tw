@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 519289337d35ebd0cc8d59d54e624d1dfa819792
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c73a91a461f78687d390e4ef620416325e7672df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676337"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524912"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>設定容錯移轉叢集執行個體-iSCSI-Linux 上的 SQL Server
 
@@ -93,7 +93,7 @@ iSCSI 使用網路來呈現從已知做為目標伺服器的伺服器的磁碟�
 6.  檢查 iSCSI 連接磁碟
 
     ```bash
-    sudo grep “Attached SCSI” /var/log/messages
+    sudo grep "Attached SCSI" /var/log/messages
     ```
     ![30 iSCSIattachedDisks][7]
 
@@ -187,7 +187,7 @@ iSCSI 使用網路來呈現從已知做為目標伺服器的伺服器的磁碟�
    *    從現有的 SQL Server 資料目錄中刪除檔案。 如果成功，則不會收到任何通知。
 
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    *    請確認已刪除的檔案。 下圖顯示從 c 到 h 整個序列的範例。
@@ -337,7 +337,7 @@ iSCSI 使用網路來呈現從已知做為目標伺服器的伺服器的磁碟�
 14. 因此，唯一的 Pacemaker 可以啟用磁碟區群組，請設定伺服器。
 
     ```bash
-    sudo lvmconf --enable-halvm --services –startstopservices
+    sudo lvmconf --enable-halvm --services -startstopservices
     ```
  
 15. 產生伺服器上的磁碟區群組的清單。 列出的任何項目不是 iSCSI 磁碟是由系統，例如針對 OS 磁碟。
@@ -367,7 +367,7 @@ iSCSI 使用網路來呈現從已知做為目標伺服器的伺服器的磁碟�
 
 18. 重新啟動伺服器。
 
-19. 在要參與 FCI 的另一部伺服器，執行步驟 1 – 6。 這將會顯示的 iSCSI 目標 SQL server。 
+19. 在要參與 FCI 的另一部伺服器，執行步驟 1-6。 這將會顯示的 iSCSI 目標 SQL server。 
  
 20. 產生伺服器上的磁碟區群組的清單。 它應該會顯示先前建立的磁碟區群組。 
 

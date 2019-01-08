@@ -20,19 +20,19 @@ ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0240d5fe1f701715f11adc4f68e80abed896d704
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b8453d76dc2af0499dc8d8af2ca1ec3024aee83
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742686"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523814"
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ISO 92  
+ 導入的版本：ODBC 1.0 標準的合規性：ISO 92  
   
  **摘要**  
- **SQLDescribeCol**傳回的結果描述項 — 資料行名稱、 類型、 資料行大小、 小數位數和可 null 性 — 在結果中的單一資料行的設定。 這項資訊也可在 IRD 欄位中。  
+ **SQLDescribeCol**傳回的結果描述項-資料行名稱、 類型、 資料行大小、 小數位數和可 null 性-針對結果集中的一個資料行。 這項資訊也可在 IRD 欄位中。  
   
 ## <a name="syntax"></a>語法  
   
@@ -75,22 +75,22 @@ SQLRETURN SQLDescribeCol(
   
  當*ColumnNumber*等於為 0 （表示書籤資料行中），傳回 SQL_BINARY  *\*DataTypePtr*可變長度的書籤。 （如果書籤由 ODBC 3，則傳回 SQL_INTEGER。*x*應用程式使用 ODBC 2。*x*驅動程式或 ODBC 2。*x*應用程式使用 ODBC 3。*x*驅動程式。)  
   
- 如需有關這些資料類型的詳細資訊，請參閱 < [SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)附錄 d： 資料型別中。 如需驅動程式專用的 SQL 資料類型資訊，請參閱驅動程式的文件。  
+ 如需有關這些資料類型的詳細資訊，請參閱 < [SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)附錄 d:資料類型。 如需驅動程式專用的 SQL 資料類型資訊，請參閱驅動程式的文件。  
   
  *ColumnSizePtr*  
- [輸出]在其中傳回資料來源上的資料行的大小 （以字元為單位） 的緩衝區指標。 如果無法判別資料行大小，則驅動程式會傳回 0。 如需有關資料行大小的詳細資訊，請參閱 <<c0> [ 資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d： 資料型別中。  
+ [輸出]在其中傳回資料來源上的資料行的大小 （以字元為單位） 的緩衝區指標。 如果無法判別資料行大小，則驅動程式會傳回 0。 如需有關資料行大小的詳細資訊，請參閱 <<c0> [ 資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d:資料類型。  
   
  *DecimalDigitsPtr*  
- [輸出]在其中傳回的資料行的小數位數的資料來源上之緩衝區的指標。 如果無法判斷的小數位數，或不適用，則驅動程式會傳回 0。 如需有關十進位數字的詳細資訊，請參閱[資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d： 資料型別中。  
+ [輸出]在其中傳回的資料行的小數位數的資料來源上之緩衝區的指標。 如果無法判斷的小數位數，或不適用，則驅動程式會傳回 0。 如需有關十進位數字的詳細資訊，請參閱[資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d:資料類型。  
   
  *NullablePtr*  
  [輸出]若要在其中傳回值，指出資料行是否允許 NULL 值的緩衝區的指標。 這個值會從 IRD 的 SQL_DESC_NULLABLE 欄位讀取。 這是下列值之一：  
   
- SQL_NO_NULLS： 資料行不允許 NULL 值。  
+ SQL_NO_NULLS:資料行不允許 NULL 值。  
   
- SQL_NULLABLE： 資料行允許 NULL 值。  
+ SQL_NULLABLE:資料行允許 NULL 值。  
   
- SQL_NULLABLE_UNKNOWN： 驅動程式無法判斷是否資料行允許 NULL 值。  
+ SQL_NULLABLE_UNKNOWN:無法判斷驅動程式，是否資料行允許 NULL 值。  
   
 ## <a name="returns"></a>傳回值  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_STILL_EXECUTING、 SQL_ERROR 或 SQL_INVALID_HANDLE。  

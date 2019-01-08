@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37ef852cea67ee021cee7dd182dc4a11132abcea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d491467d16b34207ab74f6ec4d892747e26165e4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201258"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802040"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 來源編輯器 (連接管理員頁面)
   使用 **[SAP BW 來源編輯器]** 的 **[連接管理員]** 頁面可以選取 SAP BW 來源的 SAP BW 連接管理員。 在這個頁面上，您也可以選取執行模式以及從 SAP Netweaver BW 系統中擷取資料所用的參數。  
@@ -84,7 +83,7 @@ ms.locfileid: "48201258"
  輸入閘道器主機的伺服器名稱或 IP 位址。 此名稱或 IP 位址通常與 SAP 應用程式伺服器相同。  
   
  **閘道器服務**  
- 輸入閘道服務的名稱格式`sapgwNN`，其中`NN`是系統編號。  
+ 以 `sapgwNN` 格式輸入閘道服務的名稱，其中 `NN` 是系統編號。  
   
  **程式識別碼**  
  輸入與 RFC 目的地相關聯的程式識別碼。  
@@ -110,7 +109,7 @@ ms.locfileid: "48201258"
  輸入閘道器主機的伺服器名稱或 IP 位址。 此名稱或 IP 位址通常與 SAP 應用程式伺服器相同。  
   
  **閘道器服務**  
- 輸入閘道服務的名稱格式`sapgwNN`，其中`NN`是系統編號。  
+ 以 `sapgwNN` 格式輸入閘道服務的名稱，其中 `NN` 是系統編號。  
   
  **程式識別碼**  
  輸入與 RFC 目的地相關聯的程式識別碼。  
@@ -123,7 +122,7 @@ ms.locfileid: "48201258"
  輸入與擷取相關聯的要求識別碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [SAP BW 來源編輯器&#40;資料行頁面&#41;](sap-bw-source-editor-columns-page.md)   
+ [SAP BW 來源編輯器 &#40;資料行頁面&#41;](sap-bw-source-editor-columns-page.md)   
  [SAP BW 來源編輯器 &#40;錯誤輸出頁面&#41;](sap-bw-source-editor-error-output-page.md)   
  [SAP BW 來源編輯器 &#40;進階頁面&#41;](sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector 1.1 for SAP BW F1 說明](../microsoft-connector-for-sap-bw-f1-help.md)  

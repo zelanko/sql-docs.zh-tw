@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.ispackageprop.general.f1
@@ -14,12 +13,12 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d3bb5f71617371d4ff360242cf3076e73fdbbea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 727c6e221accc9cc0d1ce46a5907a5e450d6e21b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070670"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813350"
 ---
 # <a name="package-properties-dialog-box"></a>封裝屬性對話方塊
   使用 [封裝屬性] 對話方塊，檢視儲存在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器上之封裝的屬性。  
@@ -36,7 +35,7 @@ ms.locfileid: "48070670"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
-     您正在連接到主控 SSISDB 資料庫之 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體。  
+     您正在連線到裝載 SSISDB 資料庫的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體。  
   
 2.  在 [物件總管] 中，展開樹狀目錄以顯示 **[Integration Services 目錄]** 節點。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48070670"
  列出封裝識別碼。  
   
  **進入點**  
- 值`True`表示封裝直接啟動。 值`False`表示封裝由使用 「 執行封裝 」 工作的另一個封裝啟動。 預設值是 `True`。  
+ `True` 的值表示封裝是直接啟動。 `False` 的值表示封裝是使用「執行封裝」，由另一個封裝啟動。 預設值是 `True`。  
   
  以滑鼠右鍵按一下方案總管中的封裝，然後按一下 [進入點封裝]，就可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中為父封裝和子封裝設定此屬性。  
   

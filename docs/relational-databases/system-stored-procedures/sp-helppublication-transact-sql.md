@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helppublication_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1293084c422c73bba83ee66e2242b9416368db6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a0e823731ff80c714bc31a54210dbcd0e0fea18
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624216"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205207"
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
  這是表示傳回資料列的旗標。 *找到*已**int**和一個 OUTPUT 參數，預設值是**23456**。 **1**表示找到發行集。 **0**指出找不到發行集。  
   
  [ **@publisher** = ] **'***publisher***'**  
- 指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *發行者*是 sysname，預設值是 NULL。  
+ 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*是 sysname，預設值是 NULL。  
   
 > [!NOTE]  
 >  *發行者*應要求從發行集資訊時未指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
@@ -92,19 +91,19 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |centralized_conflicts|**bit**|指定是否將衝突記錄儲存在發行者端：<br /><br /> **0** = 將衝突記錄儲存在發行者端和造成衝突的訂閱者端。<br /><br /> **1** = 將衝突記錄儲存在 「 發行者 」。|  
 |conflict_retention|**int**|指定衝突保留週期 (以天為單位)。|  
 |conflict_policy|**int**|指定使用佇列更新訂閱者選項時，所遵照的衝突解決原則。 它可以是下列值之一：<br /><br /> **1** = 造訪發行者為優先的衝突。<br /><br /> **2** = 訂閱者優先衝突。<br /><br /> **3** = 重新初始化訂閱。|  
-|queue_type||指定所用的佇列類型。 它可以是下列值之一：<br /><br /> **msmq** = 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]Message Queuing 來儲存交易。<br /><br /> **sql** = 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來儲存交易。<br /><br /> 注意： 已不再支援訊息佇列。|  
+|queue_type||指定所用的佇列類型。 它可以是下列值之一：<br /><br /> **msmq** = 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]Message Queuing 來儲存交易。<br /><br /> **sql** = 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來儲存交易。<br /><br /> 注意：已不再支援使用 Message Queuing。|  
 |backward_comp_level||資料庫相容性層級，它可以是下列項目之一：<br /><br /> **90** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-|publish_to_AD|**bit**|指定發行集是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory™ 中發行。 值為**1**表示，會將它發佈，並針對**0**表示不發行。|  
+|publish_to_AD|**bit**|指定是否要將發行集發行在[!INCLUDE[msCoName](../../includes/msconame-md.md)]Active Directory 篇。 值為**1**表示，會將它發佈，並針對**0**表示不發行。|  
 |allow_initialize_from_backup|**bit**|指出訂閱者是否能夠從備份中，而不是從初始快照集中，對這個發行集的訂閱進行初始化。 **1**表示，從備份初始化訂閱並**0**表示無法。 如需詳細資訊，請參閱 <<c0> [ 初始化 Transactional Subscription Without a Snapshot&lt](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)不使用快照集的交易式訂閱者。|  
 |replicate_ddl|**int**|指出是否支援發行集的結構描述複寫。 **1**表示複寫在發行者端執行的資料定義語言 (DDL) 陳述式，並**0**表示不複寫 DDL 陳述式。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。|  
 |enabled_for_p2p|**int**|發行集是否可用於點對點複寫拓撲中。 **1**表示發行集支援端對端複寫。 如需相關資訊，請參閱 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。|  
 |publish_local_changes_only|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |enabled_for_het_sub|**int**|指定發行集是否支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 值為**1**表示非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援訂閱者。 值為**0**表示僅[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援訂閱者。 如需詳細資訊，請參閱 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。|  
-|enabled_for_p2p_conflictdetection|**int**|指定散發代理程式是否會偵測啟用點對點複寫之發行集的衝突。 值為**1**表示會偵測衝突。 如需詳細資訊，請參閱 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
+|enabled_for_p2p_conflictdetection|**int**|指定散發代理程式是否會偵測啟用點對點複寫之發行集的衝突。 值為**1**表示會偵測衝突。 如需相關資訊，請參閱 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
 |originator_id|**int**|針對點對點拓撲中的節點指定識別碼。 此識別碼用於衝突偵測，如果**enabled_for_p2p_conflictdetection**設為**1**。 如需已經使用的識別碼清單，請查詢 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) 系統資料表。|  
 |p2p_continue_onconflict|**int**|指定散發代理程式是否會在偵測到衝突時繼續處理變更。 值為**1**表示代理程式會繼續處理變更。<br /><br /> **\*\* 請小心\* \*** 建議，您使用的預設值**0**。 當此選項設定為**1**，散發代理程式嘗試聚合拓撲中的資料所套用的衝突資料列從節點具有最高的訂閱者識別碼。 但是，這個方法無法保證聚合。 您應該確定在偵測到衝突之後，拓撲是一致的。 如需詳細資訊，請參閱＜ [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)＞中的「處理衝突」。|  
-|allow_partition_switch|**int**|指定 ALTER TABLE…SWITCH 陳述式是否可以針對發行的資料庫來執行。 如需詳細資訊，請參閱[複寫資料分割資料表及索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
-|replicate_partition_switch|**int**|指定針對發行資料庫執行的 ALTER TABLE…SWITCH 陳述式是否應該複寫到訂閱者。 這個選項才有效才*allow_partition_switch*設為**1**。|  
+|allow_partition_switch|**int**|指定是否改變資料表...SWITCH 陳述式可以針對已發行的資料庫來執行。 如需詳細資訊，請參閱[複寫資料分割資料表及索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
+|replicate_partition_switch|**int**|指定是否改變資料表...針對已發行的資料庫執行的 SWITCH 陳述式應該複寫到訂閱者。 這個選項才有效才*allow_partition_switch*設為**1**。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -120,13 +119,13 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>Permissions  
  只有發行者端的系統管理員 (sysadmin) 固定伺服器角色成員、發行集資料庫的 db_owner 固定資料庫角色成員，或發行集存取清單 (PAL) 中的使用者，才能夠執行 sp_helppublication。  
   
- 如果是非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者，只有散發者端的系統管理員 (sysadmin) 固定伺服器角色成員、散發資料庫的 db_owner 固定資料庫角色成員，或 PAL 中的使用者，才能夠執行 sp_helppublication。  
+ 針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者，只有 sysadmin 的固定伺服器角色成員在散發者或 db_owner 固定的資料庫角色的成員在散發資料庫上，或 PAL 中的使用者能夠執行 sp_helppublication。  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [sp_addpublication &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_addpublication &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_droppublication &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_droppublication &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

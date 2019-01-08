@@ -13,16 +13,16 @@ ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f3d0058e798fe9bdbcbfcbc1ed3adea8e405a98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d36224329fa29a54f7163cb4e1ce6228f460875
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776386"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414994"
 ---
 # <a name="sqlrateconnection-function"></a>SQLRateConnection 函式
 **合規性**  
- 版本導入： ODBC 3.81 標準相容性： ODBC  
+ 導入的版本：ODBC 3.81 標準合規性：ODBC  
   
  **摘要**  
  **SQLRateConnection**判斷驅動程式可以重複使用現有的連接，連接集區中。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - event end times [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23c9ca00077d64fe72f775d343640a15dfc38f50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48f0ada8740735e64fe57c35bc17553f59aa444c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194378"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823842"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>根據事件結束時間篩選事件 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]根據事件結束時間篩選追蹤事件。  
@@ -46,7 +45,7 @@ ms.locfileid: "48194378"
 6.  依序展開**Greater than**或**小於**，然後輸入`datetime`比較運算子下出現的欄位中的值。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Profiler](sql-server-profiler.md)   
+ [[SQL Server Profiler]](sql-server-profiler.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

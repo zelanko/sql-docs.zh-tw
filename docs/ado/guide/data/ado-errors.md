@@ -13,12 +13,12 @@ ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4fadb19aac4700738f4c6ec43449b3de7d4a4a18
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5b2d3f43067750d2fc70a86c6a23bc74dd3bbc4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776366"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509114"
 ---
 # <a name="ado-run-time-errors"></a>執行階段錯誤
 ADO 錯誤會回報到您的程式中，為執行階段錯誤。 您可以使用您的程式語言的錯誤捕捉機制來攔截並處理它們。 例如，在 Visual Basic 中使用**On Error**陳述式。 Visual c + + 中，這取決於您用來存取 ADO 程式庫的方法。 有了 #import，使用**try / catch**區塊。 否則，c + + 程式設計人員必須明確地呼叫以擷取物件時發生錯誤**GetErrorInfo**。 下列 Visual Basic sub 程序示範如何捕捉 ADO 錯誤：
@@ -87,7 +87,7 @@ Error reported by: ADODB.Connection
 Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
 ```
 
- 錯誤訊息會包含每個 Visual Basic 所提供的資訊片段**Err**物件除了**LastDLLError**這裡不適用的值。 錯誤號碼會告訴您發生了什麼錯誤。 描述可用於在其中您不想自行處理錯誤的情況。 您只可以將它傳遞給使用者。 雖然您通常會想要使用您的應用程式的自訂訊息，您不能預期每項錯誤;描述會提供一些線索，所發生的錯誤。 範例程式碼中所報告的錯誤**連線**物件。 您會看到物件的型別或以下的程式設計識別碼 — 不是變數的名稱。
+ 錯誤訊息會包含每個 Visual Basic 所提供的資訊片段**Err**物件除了**LastDLLError**這裡不適用的值。 錯誤號碼會告訴您發生了什麼錯誤。 描述可用於在其中您不想自行處理錯誤的情況。 您只可以將它傳遞給使用者。 雖然您通常會想要使用您的應用程式的自訂訊息，您不能預期每項錯誤;描述會提供一些線索，所發生的錯誤。 範例程式碼中所報告的錯誤**連線**物件。 您會看到物件的型別或程式設計識別碼-不是變數的名稱。
 
 > [!NOTE]
 >  Visual Basic **Err**物件只會包含最常見的錯誤相關資訊。 ADO**錯誤**的集合**連線**物件包含一個**錯誤**最近的 ADO 作業所引發的每個錯誤的物件。 使用**錯誤**集合而非**Err**物件，以處理多個錯誤。 如需詳細資訊**錯誤**集合，請參閱[提供者錯誤](../../../ado/guide/data/provider-errors.md)。 不過，如果無法有效**連接**物件， **Err**物件是 ADO 錯誤的相關資訊的唯一來源。

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - NULL function
@@ -14,12 +13,12 @@ ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6659b9390f52bc27c52f82b875d50da3fd37b5ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 379706092613ae7fa3f53fccb493bf756d656b01
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102929"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823292"
 ---
 # <a name="null-ssis-expression"></a>NULL (SSIS 運算式)
   傳回所要求資料類型的 Null 值。  
@@ -53,7 +52,7 @@ NULL(typespec)
 |DT_TEXT|*codepage*|(DT_TEXT,1252) 將值轉換為 DT_TEXT 資料類型，使用 1252 字碼頁。|  
   
 ## <a name="expression-examples"></a>運算式範例  
- 這些範例會傳回下列資料類型的 Null 值：DT_STR、DT_DATE 和 DT_BOOL。  
+ 這些範例會傳回 null 值的資料類型：DT_STR、 DT_DATE 和 DT_BOOL。  
   
 ```  
 NULL(DT_STR,10,1252)  
@@ -63,6 +62,6 @@ NULL(DT_BOOL)
   
 ## <a name="see-also"></a>另請參閱  
  [ISNULL &#40;SSIS 運算式&#41;](null-ssis-expression.md)   
- [函式&#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
+ [函數 &#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
   
   

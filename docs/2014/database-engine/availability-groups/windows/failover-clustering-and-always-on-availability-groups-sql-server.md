@@ -17,12 +17,12 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: edb2632b0c523bb1ecf49eef767ff3540694f2af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8d4858d55d9c37529e44cdf7759bf9fe6ce2630
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167939"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352315"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (也就是 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中所引進的高可用性和災害復原解決方案) 需要 Windows Server 容錯移轉叢集 (WSFC)。 此外，雖然 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 不依賴 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，但是您可以使用容錯移轉叢集執行個體 (FCI) 來裝載可用性群組的可用性複本。 請務必了解每個叢集技術的角色，也要知道設計您的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 環境時所必須考量的事項。  
@@ -49,7 +49,7 @@ ms.locfileid: "48167939"
 ### <a name="cross-cluster-migration-of-alwayson-availability-groups-for-os-upgrade"></a>針對作業系統升級進行 AlwaysOn 可用性群組的跨叢集移轉  
  從 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 開始，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 對於部署至新的 Windows Server 容錯移轉叢集 (WSFC) 叢集的情況，支援跨叢集移轉可用性群組。 跨叢集移轉是指以最短的停機時間，將一個可用性群組或一批可用性群組移到新的目的地 WSFC 叢集。 跨叢集移轉程序可讓您在升級至 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] 叢集的同時，維護您的服務等級協定 (SLA)。 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] (或更新版本) 必須針對目的地 WSFC 叢集上的 AlwaysOn 安裝及啟用。 跨叢集移轉是否成功，取決於目的地 WSFC 叢集整套計畫和準備工作。  
   
- 如需詳細資訊，請參閱[針對作業系統升級進行 AlwaysOn 可用性群組的跨叢集移轉](http://msdn.microsoft.com/library/jj873730.aspx)。  
+ 如需詳細資訊，請參閱[針對作業系統升級進行 AlwaysOn 可用性群組的跨叢集移轉](https://msdn.microsoft.com/library/jj873730.aspx)。  
   
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 和可用性群組  
  您可以藉由實作 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集連同 WSFC 叢集，在伺服器執行個體層級設定容錯移轉的第二層。 可用性複本可由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 獨立執行個體或 FCI 執行個體所裝載。 只有一個 FCI 夥伴可以裝載給定可用性群組的複本。 在 FCI 上執行可用性複本時，可用性群組的可能擁有者清單只包含使用中 FCI 節點。  
@@ -76,7 +76,7 @@ ms.locfileid: "48167939"
  **可用性群組的容錯移轉原則設定適用於所有複本，無論複本裝載於獨立執行個體或 FCI 執行個體。  
   
 > [!NOTE]  
->  如需詳細資訊**的節點數目**中容錯移轉叢集並**AlwaysOn 可用性群組**針對不同版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請參閱[支援的功能SQL Server 2012 版本](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
+>  如需詳細資訊**的節點數目**中容錯移轉叢集並**AlwaysOn 可用性群組**針對不同版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請參閱[支援的功能SQL Server 2012 版本](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473)。  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI 裝載可用性複本的考量  
   
@@ -112,19 +112,19 @@ ms.locfileid: "48167939"
   
 -   **部落格：**  
   
-     [以有限安全性設定 SQL Server 的 Windows 容錯移轉叢集 (可用性群組或 FCI)](http://blogs.msdn.com/b/sqlalwayson/archive/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security.aspx)  
+     [以有限安全性設定 SQL Server 的 Windows 容錯移轉叢集 (可用性群組或 FCI)](https://blogs.msdn.com/b/sqlalwayson/archive/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security.aspx)  
   
-     [SQL Server AlwaysOn 團隊部落格： 官方 SQL Server AlwaysOn 團隊部落格](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server 工程師部落格](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
 -   **白皮書：**  
   
-     [AlwaysOn 架構指南： 使用容錯移轉叢集執行個體和可用性群組建置高可用性和災害復原解決方案](http://msdn.microsoft.com/library/jj215886.aspx)  
+     [AlwaysOn 架構指南：使用容錯移轉叢集執行個體和可用性群組建置高可用性和災害復原解決方案](https://msdn.microsoft.com/library/jj215886.aspx)  
   
-     [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Microsoft 的 SQL Server 2012 白皮書](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Microsoft 的 SQL Server 2012 白皮書](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 客戶諮詢團隊白皮書](http://sqlcat.com/)  
   

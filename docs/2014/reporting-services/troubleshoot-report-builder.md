@@ -11,12 +11,12 @@ ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e7ddb7f9ffd0aa44db250df00df78b9f20d307e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61965f9d07ebef7d3f30623df318125e67587890
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082280"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349389"
 ---
 # <a name="troubleshoot-report-builder"></a>疑難排解報表產生器
   報表產生器是一個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表撰寫工具，可用來根據許多不同類型的資料來源建立報表，以及將報表發行至報表伺服器或 SharePoint 網站。 可以在報表產生器，檢視您所建立的報表，在 Web 瀏覽器，或做為一部分[!INCLUDE[msCoName](../includes/msconame-md.md)]Windows 應用程式或 SharePoint 網站。  
@@ -26,16 +26,16 @@ ms.locfileid: "48082280"
  下列主題可協助您針對報表進行疑難排解，這將取決於您是報表作者還是報表伺服器管理員。  
   
 ## <a name="report-authors"></a>報表作者  
- [報表疑難排解： 地圖報表&#40;報表產生器及 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [報表疑難排解：將報表對應&#40;報表產生器及 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
  [疑難排解報表組件&#40;報表產生器及 SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
- [疑難排解圖表&#40;報表產生器及 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
+ [疑難排解圖表 &#40;報表產生器及 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
 ## <a name="administrators"></a>系統管理員  
  [安裝、解除安裝和報表產生器支援](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
- 此外，請參閱下列主題中的[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的文件[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][線上叢書 》](http://go.microsoft.com/fwlink/?linkid=121312):  
+ 此外，請參閱下列主題中的[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的文件[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][線上叢書 》](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [對應報表支援規劃](../../2014/reporting-services/plan-for-map-report-support.md)  
   
@@ -46,9 +46,9 @@ ms.locfileid: "48082280"
   
  例如，您可以參與討論群組，以便在線上與經驗豐富的報表產生器使用者群組交談，包括 Reporting Services 最有價值專家 (Most Valued Professional，MVP)，而且這些專家都願意花時間回答問題並提供解決方案、提示和專業知識。  
   
- 閱讀 Reporting Services 小組成員中抒發的意見[Reporting Services 小組部落格](http://go.microsoft.com/fwlink/?LinkId=118788)。
+ 閱讀 Reporting Services 小組成員中抒發的意見[Reporting Services 小組部落格](https://go.microsoft.com/fwlink/?LinkId=118788)。
   
- 如果您仍然找不到答案，請[傳送意見反應](http://go.microsoft.com/fwlink/?LinkId=118791)。  
+ 如果您仍然找不到答案，請[傳送意見反應](https://go.microsoft.com/fwlink/?LinkId=118791)。  
   
 ## <a name="see-also"></a>另請參閱  
  [安裝、解除安裝和報表產生器支援](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  

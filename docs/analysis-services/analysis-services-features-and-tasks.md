@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 功能及工作 |Microsoft 文件
+title: Analysis Services 功能及工作 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 50a0649891fa26a01a83bf633d4f8cea60cef213
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: db75799b3f26543f1e4a3ba9995fee99a909ee1d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014005"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206938"
 ---
 # <a name="analysis-services-features-and-tasks"></a>Analysis Services 功能及工作
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34014005"
 ## <a name="in-this-section"></a>本節內容  
  [比較表格式和多維度解決方案 ](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  
   
- [工具和 Analysis Services 中使用的應用程式](../analysis-services/tools-and-applications-used-in-analysis-services.md)  
+ [Analysis Services 中使用的工具和應用程式](../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
  [Analysis Services 執行個體管理](../analysis-services/instances/analysis-services-instance-management.md)  
   

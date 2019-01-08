@@ -11,12 +11,12 @@ ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6450b85b00906facfb291d8085d729474577bd32
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 77d37fff5b22e15656ef2eb76f33ada44572ba4c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753575"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526112"
 ---
 # <a name="modifying-the-date-dimension"></a>修改 Date 維度
   在這個主題的工作中，您會建立一個使用者定義階層，以及變更針對 [日期]、[月]、[日曆季] 和 [日曆半年] 屬性所顯示的成員名稱。 您也會定義屬性的複合索引鍵、控制維度成員的排序次序，以及定義屬性關聯性。  
@@ -65,7 +65,7 @@ ms.locfileid: "50753575"
   
 3.  如果 [屬性] 視窗未開啟，請開啟 [屬性] 視窗，然後按一下標題列上的 [自動隱藏] 按鈕，如此它就會保持開啟狀態。  
   
-4.  在靠近視窗底部的地方按一下 [NameColumn] 屬性欄位，然後按一下省略符號瀏覽 (**…**) 按鈕，即可開啟 [名稱資料行] 對話方塊。  
+4.  按一下 [ **NameColumn**屬性欄位] 視窗中，底部附近，，然後按一下 [省略符號瀏覽 (**...**) 按鈕，即可開啟**名稱資料行**] 對話方塊。  
   
 5.  選取 `SimpleDate`底部**來源資料行**清單，然後再按**確定**。  
   

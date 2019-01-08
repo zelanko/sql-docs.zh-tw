@@ -1,22 +1,24 @@
 ---
-title: 匯出 MLeap Spark 機器學習模型 |SQL Server
-description: 匯出 Spark 機器學習服務模型與 MLeap
-services: SQL Server 2019 Big Data Cluster Spark
-ms.service: SQL Server 2019 Big Data Cluster Spark
+title: 匯出 MLeap 使用 Spark ML 模型
+titleSuffix: SQL Server 2019 big data clusters
+description: 了解如何匯出 Spark 機器學習服務模型與 MLeap。
 author: lgongmsft
 ms.author: shivprashant
 ms.reviewer: jroth
-ms.custom: ''
+manager: craigg
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/10/2018
-ms.openlocfilehash: 546e46c6e9c5b2875f817fbf9a5fc3107afeb8a2
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.prod: sql
+ms.custom: seodec18
+ms.openlocfilehash: db6e980441c2037311cf2dc35a8f9de01acb045b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411845"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211167"
 ---
-# <a name="export-models-using-mleap"></a>使用 Mleap 匯出模型
+# <a name="export-spark-machine-learning-models-with-mleap"></a>匯出 Spark 機器學習服務模型與 MLeap
+
 典型的機器學習案例牽涉到在 Spark 上的模型訓練和評分 Spark 之外。 匯出的可攜式格式的模型，使它可以使用外部 Spark。 [MLeap](https://github.com/combust/mleap)是一種這類模型交換格式。 它可讓 Spark 機器學習服務管線和模型，以匯出為可移植的格式和用於 JVM 為基礎系統`Mleap`執行階段。
 
 本指南示範如何將匯出使用 Mleap spark 模型。 步驟摘要如下，並使用下一節中的程式碼的詳細。
@@ -27,8 +29,7 @@ ms.locfileid: "50411845"
 4. 若要驗證，我們將匯入`Mleap`再次配套後，並使用它來在 Spark 中評分。
 
 ## <a name="step-1---start-by-creating-a-spark-model"></a>步驟 1-建立的 Spark 模型開始
-執行 [與 Spark 的訓練和建立機器學習服務模型] (train-and-create-machinelearning-models-with-spark.md) 來建立訓練/測試集和模型，並保存至 HDFS 儲存體。 模型應該匯出為`AdultCensus.mml`下`spark_ml`目錄。
-
+執行[定型集和建立機器學習服務模型與 Spark](train-and-create-machinelearning-models-with-spark.md)建立訓練/測試集和模型，並保存到 HDFS 儲存體。 模型應該匯出為`AdultCensus.mml`下`spark_ml`目錄。
 
 ## <a name="step-2---import-the-trainingtest-data-and-the-model"></a>步驟 2-匯入 training\test 資料和模型
 
@@ -49,7 +50,6 @@ model = PipelineModel.load(model_fs)
 print("Model is " , model)
 print("Model stages", model.stages)
 ```
-
 
 ## <a name="step-3---export-the-model-as-mleap-bundle"></a>步驟 3-匯出模型`Mleap`套件組合
 

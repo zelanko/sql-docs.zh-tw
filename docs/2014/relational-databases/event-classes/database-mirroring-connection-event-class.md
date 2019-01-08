@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 ms.assetid: b59dccc9-f40d-4c82-aa35-ac40acea86ff
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2306ed07bb2b685fe781a2b5e77b8f5c13e5c53e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffcd52ff5db3d6f04f0af1d3119aabbc4f5229c2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055871"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797460"
 ---
 # <a name="database-mirroring-connection-event-class"></a>資料庫鏡像連接事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生 **資料庫鏡像連接** 事件，以報告資料庫鏡像所管理的傳輸連線狀態。  

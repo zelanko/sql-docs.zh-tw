@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquerytrans.f1
@@ -16,12 +15,12 @@ ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1be2f23cbcf39b1b3775ef0a8de592ed71240a45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00b8b6e5004878c3d6c7174ed375f68a2c4d7b4c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058598"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796101"
 ---
 # <a name="data-mining-query-transformation"></a>資料採礦查詢轉換
   「資料採礦查詢」轉換會對資料採礦模型執行預測查詢。 這項轉換包含用來建立「資料採礦延伸模組」(DMX) 查詢的查詢產生器。 查詢產生器可讓您建立自訂陳述式，以便使用 DMX 語言對照現有採礦模型評估轉換輸入資料。 如需詳細資訊，請參閱[資料採礦延伸模組 &#40;DMX&#41; 參考](/sql/dmx/data-mining-extensions-dmx-reference)。  
@@ -37,9 +36,9 @@ ms.locfileid: "48058598"
   
  如需可在 **[資料採礦查詢轉換編輯器]** 對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
   
--   [資料採礦查詢轉換編輯器&#40;採礦模型 索引標籤&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [資料採礦查詢轉換編輯器 &#40;採礦模型索引標籤&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
--   [資料採礦查詢轉換編輯器&#40;採礦模型 索引標籤&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [資料採礦查詢轉換編輯器 &#40;採礦模型索引標籤&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
@@ -47,6 +46,6 @@ ms.locfileid: "48058598"
   
 -   [轉換自訂屬性](transformation-custom-properties.md)  
   
- 如需如何設定屬性的詳細資訊，請參閱[設定資料流程元件的屬性](../set-the-properties-of-a-data-flow-component.md)。  
+ 如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../set-the-properties-of-a-data-flow-component.md)。  
   
   

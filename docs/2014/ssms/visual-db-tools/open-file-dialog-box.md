@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.openfile
-- vs.openproject
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f197c90dc20c3c3cff031e58af2e1cac19bcb706
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070851"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328598"
 ---
 # <a name="open-file-dialog-box"></a>開啟檔案對話方塊
   使用 [開啟檔案] 對話方塊來開啟磁碟中的現有檔案。 您也可以使用這個對話方塊，以不同的語言編碼選項來開啟已開啟的檔案。  
@@ -97,5 +96,3 @@ ms.locfileid: "48070851"
   
  **連線網路磁碟機**  
  開啟 [連線網路磁碟機] 對話方塊。  
-  
-  

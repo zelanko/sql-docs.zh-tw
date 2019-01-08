@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Replication Monitor, performance
@@ -17,12 +16,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e87c43039294526a253f514be250bf89a6428d3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180678"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813900"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>針對異動複寫測量延遲及驗證連接
   本主題描述如何使用複寫監視器、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中測量延遲及驗證異動複寫的連接。 異動複寫具有追蹤 Token 功能，該功能會提供便利的方式來計算異動複寫拓撲中的延遲並驗證「發行者」、「散發者」及「訂閱者」之間的連接。 Token (即少量的資料) 會寫入發行集資料庫的交易記錄，會標示為典型的已複寫交易並且會透過系統傳送，它可允許計算：  
@@ -89,7 +88,7 @@ ms.locfileid: "48180678"
   
 3.  按一下 **[插入追蹤]**。  
   
-4.  在下列資料行中檢視追蹤 Token 的經過時間： **[發行者到散發者]**、 **[散發者到訂閱者]**、 **[延遲總計]**。 **[暫止]** 表示 Token 尚未到達給定點。  
+4.  在下列資料行中檢視追蹤 Token 的經過時間：**發行者到散發者**，**散發者到訂閱者**，**總延遲**。 **[暫止]** 表示 Token 尚未到達給定點。  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>若要檢視先前插入之追蹤 Token 上的訊息  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48180678"
   
 3.  從 **[插入的時間]** 下拉式清單中選取時間。  
   
-4.  在下列資料行中檢視追蹤 Token 的經過時間： **[發行者到散發者]**、 **[散發者到訂閱者]**、 **[延遲總計]**。 **[暫止]** 表示 Token 尚未到達給定點。  
+4.  在下列資料行中檢視追蹤 Token 的經過時間：**發行者到散發者**，**散發者到訂閱者**，**總延遲**。 **[暫止]** 表示 Token 尚未到達給定點。  
   
     > [!NOTE]  
     >  追蹤 Token 資訊與其他記錄資料的保留時間週期相同，這會由散發資料庫的記錄保留期限控制。 如需變更散發資料庫屬性的詳細資訊，請參閱[檢視及修改散發者和發行者屬性](../view-and-modify-distributor-and-publisher-properties.md)。  
@@ -143,7 +142,7 @@ ms.locfileid: "48180678"
   
 3.  設定發行集的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的連接。  
   
-4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回`false`，在步驟 3 中的發行集屬性定義不正確，或發行集不存在。  
+4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 `false`，則表示步驟 3 中的發行集屬性定義不正確，或者該發行集不存在。  
   
 5.  呼叫 <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A> 方法。 此方法會將追蹤 Token 插入至發行集的交易記錄。  
   

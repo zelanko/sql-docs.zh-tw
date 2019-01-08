@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tool windows
@@ -13,12 +13,12 @@ ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3cc2885149a4056fdf7a007003a48ad526feff83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 398a808ab90ab3ea8b97304d4e22865b40cc0ac4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069339"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806270"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 中的工具視窗
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 提供了許多功能強大的工具視窗，讓您可以在不同的開發及管理階段中使用。 有些工具適用於所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件，有些工具只適用於特定元件。 下表指出 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的所有元件都能使用的工具。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], about transactions
@@ -14,12 +13,12 @@ ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 33b5bab2bb9d812686b6afbc65e0a8292247634b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b309669027da801681c1386abe604fce2f915f3d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129048"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798120"
 ---
 # <a name="transactions-master-data-services"></a>交易 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，每次對成員採取動作時，就會記錄交易。 交易可由所有使用者檢視，並由系統管理員反轉。 交易會顯示日期、時間、採取動作的使用者以及其他詳細資料。 使用者可以在交易中加入註解，指出交易發生的原因。  
@@ -57,12 +56,12 @@ ms.locfileid: "48129048"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|藉由反轉交易來復原一個動作 (僅限系統管理員)。|[反轉交易&#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
+|藉由反轉交易來復原一個動作 (僅限系統管理員)。|[反轉交易 &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
--   [系統管理員&#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
+-   [管理員 &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)  
   
--   [附註&#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
+-   [註解 &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
   
   

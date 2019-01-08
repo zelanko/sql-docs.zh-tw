@@ -17,12 +17,12 @@ ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e8c8867b932d291415f584f93a09478bbd05725
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 244161359910896533a1d7179f2ce80b5cb03d86
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152718"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749422"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
   為了定義全文檢索搜尋，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文檢索查詢會使用全文檢索述詞 (CONTAINS 和 FREETEXT) 與函數 (CONTAINSTABLE 和 FREETEXTTABLE)。 這些項目支援豐富的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法，而這種語法支援各種形式的查詢詞彙。 若要撰寫全文檢索查詢，您必須了解使用這些述詞與函數的時機和方式。  
@@ -39,7 +39,7 @@ ms.locfileid: "48152718"
   
 -   使用 CONTAINS (或 CONTAINSTABLE) 以進行下列各種比對：單字和片語的精確或模糊 (較不精確) 比對、單字彼此在一定距離之間的接近度，或加權相符。 使用 CONTAINS 時，您至少必須指定一個指定您要搜尋之文字的搜尋條件，以及判斷是否相符的條件。  
   
-     您可以在搜尋條件之間使用邏輯作業。 如需詳細資訊，請參閱本主題後面的[使用布林運算子 - AND、OR、AND NOT (在 CONTAINS 和 CONTAINSTABLE 中)](#Using_Boolean_Operators)。  
+     您可以在搜尋條件之間使用邏輯作業。 如需詳細資訊，請參閱 <<c0> [ 使用布林運算子-AND、 OR、 AND NOT （在 CONTAINS 和 CONTAINSTABLE 中）](#Using_Boolean_Operators)稍後在本主題中。  
   
 -   使用 FREETEXT (或 FREETEXTTABLE) 來比對指定之單字、片語或句子 (「Freetext 字串」(Freetext String)) 的意義，但不比對確切的用字。 如果在指定之資料行的全文檢索索引中找到任何詞彙或任何形式的詞彙，就會產生相符項目。  
   
@@ -165,8 +165,8 @@ GO
   
  
   
-##  <a name="Using_Boolean_Operators"></a> 使用布林運算子： AND、 OR 和 NOT CONTAINS 和 CONTAINSTABLE 中  
- CONTAINS 述詞與 CONTAINSTABLE 函數會使用相同的搜尋條件。 這兩個項目都支援使用布林運算子 (AND、OR、AND NOT) 來結合許多搜尋詞彙，以便執行邏輯作業。 例如，您可以使用 AND 來尋找同時包含 "latte" 和 "New York-style bagel" 的資料列。 例如，您可以使用 AND NOT 來尋找包含 "bagel" 但不包含 "cream cheese" 的資料列。  
+##  <a name="Using_Boolean_Operators"></a> 使用布林運算子-，OR，而不要-在 CONTAINS 和 CONTAINSTABLE  
+ CONTAINS 述詞與 CONTAINSTABLE 函數會使用相同的搜尋條件。 兩者都支援的結合許多搜尋詞彙使用布林運算子-AND、 OR 和 NOT-以便執行邏輯作業。 例如，您可以使用 AND 來尋找同時包含 "latte" 和 "New York-style bagel" 的資料列。 例如，您可以使用 AND NOT 來尋找包含 "bagel" 但不包含 "cream cheese" 的資料列。  
   
 > [!NOTE]  
 >  相較之下，FREETEXT 和 FREETEXTTABLE 會將布林詞彙視為要搜尋的單字。  
@@ -214,10 +214,10 @@ GO
  如果已建立 `varbinary(max)`、`varbinary` 或 `xml` 資料行的全文檢索索引，您就可以使用全文檢索述詞 (CONTAINS 和 FREETEXT) 與函數 (CONTAINSTABLE 和 FREETEXTTABLE) 來查詢它，就像查詢任何其他全文檢索索引資料行一樣。  
   
 > [!IMPORTANT]  
->  全文檢索搜尋也會處理 image 資料行。 不過，`image`的未來版本將移除的資料型別[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請避免在新的開發作業中使用此資料類型，並且計畫修改目前使用此資料類型的應用程式。 使用`varbinary(max)`請改為輸入資料。  
+>  全文檢索搜尋也會處理 image 資料行。 不過，`image` 資料類型將在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未來版本中移除。 請避免在新的開發作業中使用此資料類型，並且計畫修改目前使用此資料類型的應用程式。 請改用 `varbinary(max)` 資料類型。  
   
 ### <a name="varbinarymax-or-varbinary-data"></a>varbinary(max) 或 varbinary 資料  
- 單一`varbinary(max)`或`varbinary`資料行可以儲存許多類型的文件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援已在作業系統中安裝並提供篩選的任何文件類型。 每份文件的文件類型都是由文件的副檔名所識別。 例如，全文檢索搜尋會針對 .doc 副檔名使用支援 Microsoft Word 文件的篩選。 如需可用文件類型的清單，請查詢 [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) 目錄檢視。  
+ 單一 `varbinary(max)` 或 `varbinary` 資料行可以儲存多種類型的文件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援已在作業系統中安裝並提供篩選的任何文件類型。 每份文件的文件類型都是由文件的副檔名所識別。 例如，全文檢索搜尋會針對 .doc 副檔名使用支援 Microsoft Word 文件的篩選。 如需可用文件類型的清單，請查詢 [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) 目錄檢視。  
   
  請注意，全文檢索引擎可以運用安裝在作業系統中的現有篩選。 您必須先將作業系統篩選、斷詞工具和字幹分析器載入伺服器執行個體中，然後才能使用它們，如下所示：  
   
@@ -230,7 +230,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
  
   
 ### <a name="xml-data"></a>xml 資料  
- `xml`資料類型資料行只會儲存 XML 文件和片段，而且只有 XML 篩選用於文件。 因此，類型資料行是不必要的。 在 `xml`資料行，全文檢索索引的 XML 項目內容但忽略 XML 標記。 屬性值是全文檢索索引的值 (除非它們是數值)。 元素標記會當做 Token 界限來使用。 系統支援包含多種語言且格式正確的 XML 或 HTML 文件和片段。  
+ `xml` 資料類型資料行只會儲存 XML 文件和片段，而且只有 XML 篩選會用於這些文件。 因此，類型資料行是不必要的。 在 `xml` 資料行上，全文檢索索引會建立 XML 元素內容的索引，但忽略 XML 標記。 屬性值是全文檢索索引的值 (除非它們是數值)。 元素標記會當做 Token 界限來使用。 系統支援包含多種語言且格式正確的 XML 或 HTML 文件和片段。  
   
  如需查詢的詳細資訊`xml`資料行，請參閱 <<c2> [ 使用 XML 資料行全文檢索搜尋](../xml/use-full-text-search-with-xml-columns.md)。  
   
@@ -244,17 +244,17 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
 |查詢詞彙形式|描述|支援者|  
 |----------------------|-----------------|------------------|  
-|一或多個特定的單字或片語 (「不可分割的詞彙」(Simple Term))|在全文檢索搜尋中，字詞 (或 *token*) 是一種字串，其邊界是由適當的斷詞工具所識別，後面緊接著指定之語言的語言規則。 有效的片語是由多個字詞所組成 (不論字詞之間是否有標點符號)。<br /><br /> 例如，"croissant" 是一個單字，而 "café au lait" 則是一個片語。 這類字詞與片語稱為簡單詞彙。<br /><br /> 如需詳細資訊，請參閱本主題稍後的 [搜尋特定字詞或片語 (簡單詞彙)](#Simple_Term)。|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 會尋找完全相符的片語。<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 會將片語分解成個別的字詞。|  
+|一或多個特定的單字或片語 (「不可分割的詞彙」(Simple Term))|在全文檢索搜尋中，字詞 (或 *token*) 是一種字串，其邊界是由適當的斷詞工具所識別，後面緊接著指定之語言的語言規則。 有效的片語是由多個字詞所組成 (不論字詞之間是否有標點符號)。<br /><br /> 例如，"可頌麵包 」 是 word 和 「 外 」 au lait 」 這個詞彙。 這類字詞與片語稱為簡單詞彙。<br /><br /> 如需詳細資訊，請參閱本主題稍後的 [搜尋特定字詞或片語 (簡單詞彙)](#Simple_Term)。|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 會尋找完全相符的片語。<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 會將片語分解成個別的字詞。|  
 |以指定之文字開頭的單字或片語 (「前置詞彙」(Prefix Term))|前置詞彙是指附加至單字前面以便產生衍生字或字形變化的字串。<br /><br /> 對於單一前置詞彙而言，任何以指定之詞彙為開頭的單字都會成為結果集的一部分。 例如，詞彙 "auto*" 與 "automatic"、"automobile" 等字相符。<br /><br /> 對於片語而言，片語中的每個單字都會被視為前置詞彙。 例如，"auto tran\*" 詞彙符合 "automatic transmission" 及 "automobile transducer"，但不符合 "automatic motor transmission"。<br /><br /> 如需詳細資訊，請參閱本主題稍後的 [執行前置詞搜尋 (前置詞彙)](#Prefix_Term)。|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
-|特定字詞的變化形式 (「衍生詞彙 - 變化」(Generation Term - Inflectional))|變化形式是指動詞的不同時態和變化或是名詞的單複數。 例如，搜尋 "drive" 單字的變化形式。 如果資料表的不同資料列中包括 "drive"、"drives"、"drove"、"driving" 及 "driven" 等字，因為所有這些單字都是從 "drive" 這個字所變化產生，所以它們都會出現在結果集中。<br /><br /> 如需詳細資訊，請參閱本主題稍後的 [搜尋特定單字的變化形式 (衍生詞彙)](#Inflectional_Generation_Term)。|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 預設會尋找所有指定之單字的變化詞彙。<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 支援選擇性 INFLECTIONAL 引數。|  
-|特定單字的同義字形式 (「衍生詞彙 - 同義字」(Generation Term - Thesaurus))|同義字 (Thesaurus) 會針對詞彙定義使用者指定的同義字 (Synonym)。 例如，如果將 "{car, automobile, truck, van}" 這個項目加入同義字中，則您可搜尋 "car" 這個字的同義字變化。 由於 "automobile"、"truck"、"van" 或 "car" 這些字都是屬於內含 "car" 這個字的同義字展開集，因此所查詢之資料表中含有這些字的所有資料列都會出現在結果集中。<br /><br /> 如需同義字檔案的結構詳細資訊，請參閱 [設定及管理全文檢索搜尋的同義字檔案](configure-and-manage-thesaurus-files-for-full-text-search.md)。|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 預設會使用同義字。<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 支援選擇性 THESAURUS 引數。|  
+|特定單字的字形變化 (*詞彙-變化產生*)|變化形式是指動詞的不同時態和變化或是名詞的單複數。 例如，搜尋 "drive" 單字的變化形式。 如果資料表的不同資料列中包括 "drive"、"drives"、"drove"、"driving" 及 "driven" 等字，因為所有這些單字都是從 "drive" 這個字所變化產生，所以它們都會出現在結果集中。<br /><br /> 如需詳細資訊，請參閱本主題稍後的 [搜尋特定單字的變化形式 (衍生詞彙)](#Inflectional_Generation_Term)。|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 預設會尋找所有指定之單字的變化詞彙。<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 支援選擇性 INFLECTIONAL 引數。|  
+|特定單字的同義字形式 (*產生詞彙-同義字*)|同義字 (Thesaurus) 會針對詞彙定義使用者指定的同義字 (Synonym)。 例如，如果將 "{car, automobile, truck, van}" 這個項目加入同義字中，則您可搜尋 "car" 這個字的同義字變化。 由於 "automobile"、"truck"、"van" 或 "car" 這些字都是屬於內含 "car" 這個字的同義字展開集，因此所查詢之資料表中含有這些字的所有資料列都會出現在結果集中。<br /><br /> 如需同義字檔案的結構詳細資訊，請參閱 [設定及管理全文檢索搜尋的同義字檔案](configure-and-manage-thesaurus-files-for-full-text-search.md)。|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 預設會使用同義字。<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 支援選擇性 THESAURUS 引數。|  
 |靠近另一個單字或片語的單字或片語 (「相近詞彙」(Proximity Term))|相近詞彙表示彼此互相靠近的字詞或片語。您也可以指定分隔第一個和最後一個搜尋詞彙的非搜尋詞彙數目上限。 此外，您可以依任何順序或是您所指定的順序來搜尋字詞或片語。<br /><br /> 例如，您要尋找 "ice" 單字接近 "hockey" 單字或 "ice skating" 片語接近 "ice hockey" 片語的資料列。<br /><br /> 如需詳細資訊，請參閱 [使用 NEAR 搜尋靠近另一個單字的字詞](search-for-words-close-to-another-word-with-near.md).|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
 |使用加權值的單字或片語 (「加權詞彙」)|加權值是表示每個字詞與片語在一組字詞與片語中的重要程度。 最小的加權值是 0.0，最大則為 1.0。<br /><br /> 例如，在搜尋多個詞彙的查詢中，您可以指派每個搜尋單字的加權值，以指出它與搜尋條件中之其他單字的相對重要性。 這類型之查詢的結果會根據您指派給搜尋單字的相對加權，先傳回最相關的資料列。 結果集包含具有任何指定之詞彙的文件或資料列 (或它們之間的內容)。不過，因為與不同搜尋詞彙相關聯的加權值具有變化，所以某些結果會被視為比其他結果更相關。<br /><br /> 如需詳細資訊，請參閱本主題稍後的 [使用加權值來搜尋字詞或片語 (加權詞彙)](#Weighted_Term)。|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
   
 
   
 ###  <a name="Simple_Term"></a> 搜尋特定單字或片語 （簡單詞彙）  
- 您可以使用 [CONTAINS](/sql/t-sql/queries/contains-transact-sql)、 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)、 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)或 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 來搜尋資料表中的特定片語。 例如，如果您想要搜尋`ProductReview`資料表中[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]資料庫以尋找所有產品的註解具有"learning curve"片語，您可以使用 CONTAINS 述詞，如下所示：  
+ 您可以使用 [CONTAINS](/sql/t-sql/queries/contains-transact-sql)、 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)、 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)或 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 來搜尋資料表中的特定片語。 例如，如果您要搜尋 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 資料庫中的 `ProductReview` 資料表，以尋找具有 "learning curve" 片語之產品的所有註解，可依照下列方式使用 CONTAINS 述詞：  
   
 ```  
 USE AdventureWorks2012  

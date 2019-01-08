@@ -20,12 +20,12 @@ ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c89ec6b6054f6a681550fa3fb12aa925476bc0c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf8e911f8b8e871cf7389bf40d6a84bc455bffa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742672"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506358"
 ---
 # <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "47742672"
 |**create_date**|**datetime**|建立稽核的 UTC 日期。|  
 |**modify_date**|**datetime**|上次修改稽核的 UTC 日期。|  
 |**principal_id**|**int**|對伺服器註冊之稽核擁有者的識別碼。|  
-|**type**|**char(2)**|稽核類型：<br /><br /> SL – NT 安全性事件記錄檔<br /><br /> AL – NT 應用程式事件記錄檔<br /><br /> FL – 檔案系統上的檔案|  
+|**type**|**char(2)**|稽核類型：<br /><br /> SL-NT 安全性事件記錄檔<br /><br /> AL-NT 應用程式事件記錄檔<br /><br /> FL-檔案系統上的檔案|  
 |**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION LOG<br /><br /> FILE|  
-|**on_failure**|**tinyint**|寫入動作項目失敗：<br /><br /> 0 – 繼續<br /><br /> 1 – 關閉伺服器執行個體<br /><br /> 2 – 讓作業失敗|  
+|**on_failure**|**tinyint**|寫入動作項目失敗：<br /><br /> 0-繼續<br /><br /> 1-關閉伺服器執行個體<br /><br /> 2-讓作業失敗|  
 |**on_failure_desc**|**nvarchar(60)**|寫入動作項目失敗：<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
-|**is_state_enabled**|**tinyint**|0 – 已停用<br /><br /> 1 - 已啟用|  
+|**is_state_enabled**|**tinyint**|0-已停用<br /><br /> 1 - 已啟用|  
 |**queue_delay**|**int**|寫入磁碟前等候的最大時間值 (以毫秒計)。 如果為 0，則表示稽核將會保證寫入，然後事件才可以繼續。|  
 |**述詞**|**nvarchar(3000)**|套用至事件的述詞運算式。|  
   

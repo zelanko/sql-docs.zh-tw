@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
@@ -13,12 +12,12 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5025524fb0f414a3a419b53d51868009eafc9820
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab881af80386badae624b1d5910ba99ba67a4a43
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147010"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767820"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-ole-db-connection-manager"></a>使用 OLE DB 連接管理員，以完整快取模式來實作查閱轉換
   您可以將查閱轉換設定為使用完整快取模式以及 OLE DB 連接管理員。 在完整快取模式中，參考資料集會在查閱轉換執行之前載入快取。  
@@ -52,11 +51,11 @@ ms.locfileid: "48147010"
   
     -   按一下 **[使用資料表或檢視]**，然後選取資料表或檢視，或按一下 **[新增]** 建立資料表或檢視。  
   
-         – 或 –  
+         -或-  
   
     -   按一下 **[使用 SQL 查詢的結果]**，然後在 **[SQL 命令]** 視窗中建立查詢，或是按一下 **[建立查詢]** ，使用 **[查詢產生器]** 提供的圖形工具來建立查詢。  
   
-         – 或 –  
+         -或-  
   
     -   或者，按一下 **[瀏覽]** ，從檔案匯入 SQL 陳述式。  
   
@@ -83,8 +82,8 @@ ms.locfileid: "48147010"
 13. 按一下 **[確定]** ，將變更儲存至查閱轉換，然後再執行封裝。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用快取連線管理員以完整快取模式來實作查閱轉換](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
- [以沒有快取或部分快取模式來實作查閱](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [使用快取連接管理員以完整快取模式實作查閱轉換](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [以沒有快取或部分快取模式實作查閱](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services 轉換](../data-flow/transformations/integration-services-transformations.md)  
   
   

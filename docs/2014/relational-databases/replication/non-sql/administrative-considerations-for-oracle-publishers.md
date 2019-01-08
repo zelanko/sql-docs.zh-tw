@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], administrative considerations
@@ -14,12 +13,12 @@ ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9b46cca225d0c5abdb912910ee7bb9849c81c831
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42791ed9e60ad633ee1331dfc8326d58c0546000
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050470"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756290"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Oracle 發行者的管理考量
   在設定「Oracle 發行者」並且複寫變更追蹤機制到位之後，Oracle 資料庫系統的管理員仍可使用標準 Oracle 資料庫公用程式並執行一般的系統管理工作。 但是，您應該留意執行特定管理工作對已發行資料的影響。  

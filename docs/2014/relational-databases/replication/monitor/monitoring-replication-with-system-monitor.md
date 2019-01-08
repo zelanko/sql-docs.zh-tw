@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], System Monitor
@@ -15,12 +14,12 @@ ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7ebe259824ab5c5efb2d85cda72e32bc15df429d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b5d1a63937a11da4703ec4ef0338dee89a5c33f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072178"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815580"
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>使用系統監視器監視複寫
   「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 系統監視器」可讓您使用圖形、圖表和報告來量測電腦的效率、識別和排除可能的問題 (例如不平衡的資源用量、硬體不足或不良的程式設計)，以及規劃其他硬體需求。 如需詳細資訊，請參閱[監視資源使用狀況 &#40;系統監視器&#41;](../../performance-monitor/monitor-resource-usage-system-monitor.md)。  
@@ -29,18 +28,18 @@ ms.locfileid: "48072178"
   
 |Agent|效能物件|計數器|描述|  
 |-----------|------------------------|-------------|-----------------|  
-|所有代理程式|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫代理程式|執行中|目前正在執行的複寫代理程式數。|  
-|快照集代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫快照|Snapshot:Delivered Cmds/sec|每秒傳送到散發者的命令數。|  
-|快照集代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫快照|Snapshot:Delivered Trans/sec|每秒傳送到散發者的交易數。|  
-|記錄讀取器代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫 Logreader|Logreader:Delivered Cmds/sec|每秒傳送到散發者的命令數。|  
-|記錄讀取器代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫 Logreader|Logreader:Delivered Trans/sec|每秒傳送到散發者的交易數。|  
-|記錄讀取器代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫 Logreader|Logreader:Delivery Latency|「發行者」套用交易時，該交易傳送至「散發者」所花費的時間，以毫秒為單位。|  
-|散發代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Dist.|Dist:Delivered Cmds/sec|每秒傳遞至「訂閱者」的命令數。|  
-|散發代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Dist.|Dist:Delivered Trans/sec|每秒傳遞至「訂閱者」的交易數。|  
-|散發代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Dist.|Dist:Delivery Latency|目前從交易傳送到分配者到交易在「訂閱者」套用所經過的時間 (毫秒)。|  
-|[合併代理程式]|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫合併|Conflicts/sec|合併處理期間每秒所發生的衝突數。|  
-|[合併代理程式]|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫合併|Downloaded Changes/sec|每秒從「發行者」複寫至「訂閱者」的資料列數。|  
-|[合併代理程式]|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 複寫合併|Uploaded Changes/sec|每秒從「訂閱者」複寫至「發行者」的資料列數。|  
+|所有代理程式|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:複寫代理程式|執行中|目前正在執行的複寫代理程式數。|  
+|快照集代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:複寫快照|快照集：已傳遞的命令數/秒|每秒傳送到散發者的命令數。|  
+|快照集代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:複寫快照|快照集：已傳遞的交易/秒|每秒傳送到散發者的交易數。|  
+|記錄讀取器代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:在複寫 Logreader|Logreader:已傳遞的命令數/秒|每秒傳送到散發者的命令數。|  
+|記錄讀取器代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:在複寫 Logreader|Logreader:已傳遞的交易/秒|每秒傳送到散發者的交易數。|  
+|記錄讀取器代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:在複寫 Logreader|Logreader:傳遞延遲|「發行者」套用交易時，該交易傳送至「散發者」所花費的時間，以毫秒為單位。|  
+|散發代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:複寫： replication dist|Dist:已傳遞的命令數/秒|每秒傳遞至「訂閱者」的命令數。|  
+|散發代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:複寫： replication dist|Dist:已傳遞的交易/秒|每秒傳遞至「訂閱者」的交易數。|  
+|散發代理程式|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:複寫： replication dist|Dist:傳遞延遲|目前從交易傳送到分配者到交易在「訂閱者」套用所經過的時間 (毫秒)。|  
+|[合併代理程式]|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:複寫合併|Conflicts/sec|合併處理期間每秒所發生的衝突數。|  
+|[合併代理程式]|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:複寫合併|Downloaded Changes/sec|每秒從「發行者」複寫至「訂閱者」的資料列數。|  
+|[合併代理程式]|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:複寫合併|Uploaded Changes/sec|每秒從「訂閱者」複寫至「發行者」的資料列數。|  
   
 ## <a name="see-also"></a>另請參閱  
  [監視 &#40;複寫&#41;](../monitoring-replication.md)  

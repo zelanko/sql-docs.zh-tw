@@ -1,5 +1,5 @@
 ---
-title: 使用 SSMS 管理角色 |Microsoft Docs
+title: 使用 SSMS 管理 Analysis Services 表格式模型角色 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 08cd1e2c1244304f0a6310485b4cac49d3174e33
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 22fd8242de50f73eee634d1bc6bc3fcf5e887f0b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38045346"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072615"
 ---
 # <a name="manage-roles-by-using-ssms"></a>使用 SSMS 管理角色 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

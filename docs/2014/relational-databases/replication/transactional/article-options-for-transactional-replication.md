@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], transactional replication options
@@ -14,12 +13,12 @@ ms.assetid: 3469b185-0ea5-4690-a71c-717230d886b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7e003ab7a1928c98e2e4e004d53d71fc001227d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 992b479ea0867aef1ca75e42cc865db2cc5a735f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190718"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816720"
 ---
 # <a name="article-options-for-transactional-replication"></a>異動複寫的發行項選項
   針對交易式發行集中的發行項提供了一些選項。 使用異動複寫，您可以執行下列項目：  

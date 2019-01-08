@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/31/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
@@ -18,12 +17,12 @@ ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 42af9ddf36f60980ae1bdf2b6152e91159178467
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8592517c71651b457c660e1d73e683c1c5ed332
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137068"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813980"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "48137068"
   
  若要為交易式發行集啟用可更新的訂閱，請參閱＜ [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)＞。  
   
- 若要建立交易式發行集的可更新訂閱，請參閱[建立交易式發行集的可更新訂閱](../create-updatable-subscription-transactional-publication-transact-sql.md)  
+ 若為交易式發行集建立可更新的訂閱，請參閱＜ [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)＞。  
   
 ## <a name="switching-between-update-modes"></a>切換更新模式  
  使用可更新訂閱時，可以指定訂閱應使用一個更新模式，如果應用程式有所要求，再切換至另一個更新模式。 例如，您可以指定訂閱應使用立即更新，但是如果系統錯誤造成失去網路連接，則切換至佇列更新。  
@@ -65,7 +64,7 @@ ms.locfileid: "48137068"
   
 -   不支援重新發行資料。  
   
--   複寫將 **msrepl_tran_version** 資料行加入已發行的資料表中，用來進行追蹤。 此額外的資料行，因為所有`INSERT`陳述式均應包含資料行清單。  
+-   複寫將 **msrepl_tran_version** 資料行加入已發行的資料表中，用來進行追蹤。 因為這是新增的資料行，所以所有 `INSERT` 陳述式均應包含資料行清單。  
   
 -   若要在支援更新訂閱的發行集之資料表中進行結構描述變更，則必須停止「發行者」和「訂閱者」上所有資料表的活動，且暫止資料變更必須在進行任何結構描述變更前傳播至所有節點。 這會確保未處理完畢的交易不與暫止結構描述變更發生衝突。 結構描述變更傳播至所有節點之後，可於已發行的資料表上繼續進行活動。 如需詳細資訊，請參閱[停止複寫拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)。  
   
@@ -77,13 +76,13 @@ ms.locfileid: "48137068"
   
 -   即使訂閱已過期或為非使用中，訂閱者端的更新也會傳播至發行者。 請確定所有此類訂閱都已卸除或重新初始化。  
   
--   如果`TIMESTAMP`或`IDENTITY`資料行，且複寫為其基底資料型別，這些資料行中的值不應更新訂閱者端。  
+-   若使用 `TIMESTAMP` 或 `IDENTITY` 資料行，且這兩個資料行在複寫時成為其基底資料類型，就不應更新訂閱者中這些資料行中的值。  
   
--   訂閱者無法更新或插入`text`，`ntext`或`image`值，因為它不可能從複寫變更追蹤觸發程序內插入或刪除資料表中讀取。 同樣地，「 訂閱者 」 無法更新或插入`text`或是`image`使用值`WRITETEXT`或`UPDATETEXT`因為發行者所覆寫的資料。 相反地，您可以將分割`text`和`image`到不同的資料行的資料表，並修改在交易內的兩個資料表。  
+-   因為訂閱者無法從複寫變更追蹤觸發器中所插入或刪除的資料表中讀取 `text`、`ntext` 或 `image` 值，所以訂閱者無法更新或插入這些值。 因為資料會由發行者所覆寫，所以訂閱者也同樣無法使用 `WRITETEXT` 或 `UPDATETEXT` 更新或插入 `text` 或 `image` 值。 您反而可以將 `text` 及 `image` 資料行分割到不同的資料表，並在交易中修改這兩個資料表。  
   
-     若要更新的訂閱者端的大型物件，請使用 資料型別`varchar(max)`， `nvarchar(max)`，`varbinary(max)`而非`text`， `ntext`，和`image`資料類型，分別。  
+     若要更新訂閱者中的大型物件，請使用資料類型 `varchar(max)`、`nvarchar(max)`、`varbinary(max)`，而不要個別使用 `text`、`ntext` 及 `image` 資料類型。  
   
--   若更新專用索引鍵 (包含主索引鍵) 會造成重複 (例如更新格式 `UPDATE <column> SET <column> =<column>+1` )，將無法執行此作業，而且會因為違反不重複原則而遭到拒絕。 這是因為訂閱者端進行的設定更新會透過複寫方式個別傳播`UPDATE`陳述式中的每個資料列受到影響。  
+-   若更新專用索引鍵 (包含主索引鍵) 會造成重複 (例如更新格式 `UPDATE <column> SET <column> =<column>+1` )，將無法執行此作業，而且會因為違反不重複原則而遭到拒絕。 這是因為在訂閱者進行的設定更新，會在每個資料列受到影響時，透過複寫方式個別的 `UPDATE` 陳述式進行傳播。  
   
 -   如果「訂閱者」資料庫是水平分割，且在此分割中有存在於「訂閱者」端，而非在「發行者」端的資料列，則「訂閱者」無法更新這些已經存在的資料列。 嘗試更新這些資料列會傳回錯誤。 資料列應該從資料表刪除，然後再次插入。  
   
@@ -91,7 +90,7 @@ ms.locfileid: "48137068"
   
 -   若應用程式在訂閱者需要觸發器，便應使用 `NOT FOR REPLICATION` 選項同時在發行者與訂閱者定義觸發器。 這會確保觸發器僅為原始資料變更而引發，而不會在複寫變更時引發。  
   
-     請確保複寫觸發器更新資料表時不會引發使用者自訂的觸發器。 這可以藉由呼叫程序`sp_check_for_sync_trigger`的使用者定義的觸發程序主體中。 如需詳細資訊，請參閱 [sp_check_for_sync_trigger &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql)。  
+     請確保複寫觸發器更新資料表時不會引發使用者自訂的觸發器。 這可藉由在使用者定義的觸發程式主體中呼叫 `sp_check_for_sync_trigger` 程序達成。 如需詳細資訊，請參閱 [sp_check_for_sync_trigger &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql)。  
   
 ### <a name="immediate-updating"></a>立即更新  
   
@@ -107,11 +106,11 @@ ms.locfileid: "48137068"
   
 -   在使用佇立更新時，不建議更新主索引鍵資料行，這是因為主索引鍵是所有查詢的記錄定位器。 若衝突解決原則是設為「訂閱者優先」，則應在更新主索引鍵時多加注意。 若「發行者」與「訂閱者」的主索引鍵均更新，則結果將會是有著不同主索引鍵的兩資料列。  
   
--   資料類型的資料行`SQL_VARIANT`： 當資料插入或更新訂閱者，它會對應以下列方式由佇列讀取器代理程式從 「 訂閱者 」 複製到佇列時：  
+-   對於資料類型為 `SQL_VARIANT` 的資料行：當在訂閱者插入或更新資料後，資料會在從訂閱者複製到佇列時，由佇列讀取器代理程式以下列方式加以對應：  
   
-    -   `BIGINT``DECIMAL`， `NUMERIC`， `MONEY`，以及`SMALLMONEY`會對應至`NUMERIC`。  
+    -   `BIGINT`、`DECIMAL`、`NUMERIC`、`MONEY` 和 `SMALLMONEY` 對應至 `NUMERIC`。  
   
-    -   `BINARY` 並`VARBINARY`對應至`VARBINARY`資料。  
+    -   `BINARY` 和 `VARBINARY` 對應至 `VARBINARY` 資料。  
   
 ### <a name="conflict-detection-and-resolution"></a>衝突偵測與解決方案  
   

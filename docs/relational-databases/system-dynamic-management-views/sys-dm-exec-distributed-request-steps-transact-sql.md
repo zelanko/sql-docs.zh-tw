@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ccf2d3bc2b9bd40a141cae19a22ffde56ea16dd6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 27df857e8863272f2b502c4950b4cc36ad936978
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674297"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401953"
 ---
 # <a name="sysdmexecdistributedrequeststeps-transact-sql"></a>sys.dm_exec_distributed_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51674297"
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**int**|execution_id 和 step_index 組成此檢視的索引鍵。 與要求相關聯的唯一數值識別碼。|請參閱中的識別碼[sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  
 |step_index|**int**|此步驟中的要求，以進行的步驟順序的位置。|0 到 (n-1) 代表 n 的要求。|  
-|operation_type|**nvarchar(128)**|此步驟中所代表的作業類型。|'MoveOperation','OnOperation','RandomIDOperation','RemoteOperation','ReturnOperation','ShuffleMoveOperation','TempTablePropertiesOperation','DropDiagnosticsNotifyOperation', ‘HadoopShuffleOperation', ‘HadoopBroadCastOperation', ‘HadoopRoundRobinOperation'|  
+|operation_type|**nvarchar(128)**|此步驟中所代表的作業類型。|'執行'、 '下列'、 'RandomIDOperation'、 '執行'、 '3a:onoperation、remoteoperation、returnoperation'、 'ShuffleMoveOperation'、 'TempTablePropertiesOperation'、 'DropDiagnosticsNotifyOperation'、 'HadoopShuffleOperation'、 'HadoopBroadCastOperation'，' HadoopRoundRobinOperation'|  
 |distribution_type|**nvarchar(32)**|執行步驟的地方。|' AllComputeNodes '、' AllDistributions'、 'ComputeNode'、 'Distribution'、 'AllNodes'、 'SubsetNodes'、 'SubsetDistributions'，' 未指定 '。|  
 |location_type|**nvarchar(32)**|執行步驟的地方。|'Compute'、 'Head' 或者 'DMS'。 所有的資料移動步驟示範 'DMS'。|  
 |status|**nvarchar(32)**|此步驟的狀態|'暫止'、 'Running'，'Complete'、 'Failed'、 'UndoFailed'、 'PendingCancel'，' 已取消 '，'復原'、 '中止'|  

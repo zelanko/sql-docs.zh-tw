@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - removing solutions
@@ -14,12 +14,12 @@ ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6106b8dd542f24bd937e581ca3dc26e0eb3b32e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a16d7565bb36eb7895db94da088927be7595f5d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125231"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781660"
 ---
 # <a name="delete-a-solution"></a>刪除方案
   永久刪除方案，會從實體儲存體中清除檔案，也會從方案中清除檔案項目。  

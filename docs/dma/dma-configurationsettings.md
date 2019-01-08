@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 9801afda1a876f486e7b7042d3dad082c70c99fa
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: ceca358e47a2cabbe01e64498d61603717a0d370
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643816"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419249"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>設定 Data Migration assistant
 
@@ -40,7 +40,7 @@ ms.locfileid: "49643816"
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>要評估以平行方式的資料庫數目
 
-Data Migration Assistant 評估多個資料庫，以平行方式。 在評估期間 Data Migration Assistant 中擷取資料層應用程式 (dacpac) 以了解資料庫結構描述。 這項作業可以逾時，如果相同的伺服器上的多個資料庫以平行方式來評估。 
+Data Migration Assistant 評估多個資料庫，以平行方式。 在評估期間 Data Migration Assistant 中擷取資料層應用程式 (dacpac) 以了解資料庫結構描述。 這項作業可以逾時，如果相同的伺服器上的多個資料庫以平行方式來評估。 
 
 開始使用 Data Migration Assistant v2.0，您可以控制這藉由設定 parallelDatabases 組態值。 預設值為 8。
 
@@ -70,7 +70,7 @@ Data Migration Assistant 移轉多個資料庫，以平行方式，之前移轉�
 
 <workflowSettings>
 
-<migration parallelDatabases=”8″ />
+<migration parallelDatabases="8″ />
 
 </workflowSettings>
 
@@ -87,22 +87,22 @@ Data Migration Assistant 移轉多個資料庫，以平行方式，之前移轉�
 
 - commandTimeout
 
-   此參數中設定 IDbCommand.CommandTimeout 屬性*秒*。 (預設值 = 60)
+   此參數中設定 IDbCommand.CommandTimeout 屬性*秒*。 (預設值 = 60)
 
 - databaseLockTimeout
 
-   此參數相當於[設定的鎖定\_逾時等候逾時\_期間](../t-sql/statements/set-lock-timeout-transact-sql.md)中*毫秒*。 (預設 = 5000)
+   此參數相當於[設定的鎖定\_逾時等候逾時\_期間](../t-sql/statements/set-lock-timeout-transact-sql.md)中*毫秒*。 (預設 = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  此參數會設定要使用的 SQL 連接集區連線的數目。 (預設值 = 8)
+  此參數會設定要使用的 SQL 連接集區連線的數目。 (預設值 = 8)
 
 ```
 <advisorGroup>
 
 <advisorSettings>
 
-<dacFx  commandTimeout="60" databaseLockTimeout="5000"
+<dacFx  commandTimeout="60" databaseLockTimeout="5000"
 maxDataReaderDegreeOfParallelism="8"/>
 
 </advisorSettings>
@@ -110,7 +110,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 </advisorGroup>
 ```
 
-## <a name="stretch-database-recommendation-threshold"></a>Stretch Database： 建議的臨界值
+## <a name="stretch-database-recommendation-threshold"></a>Stretch Database:建議的臨界值
 
 具有[SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database)，您可以動態延展暖資料與冷交易資料從 Microsoft SQL Server 2016 至 Azure。 Stretch Database 交易資料庫為目標與大量的冷資料。 Stretch Database 的建議事項，在儲存體功能建議，首先會找出資料表，它會認為將受益於這項功能，然後它會識別要啟用這項功能的資料表所需的變更。
 
@@ -121,7 +121,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 <advisorSettings>
 
-<stretchDBAdvisor  recommendedNumberOfRows="100000" />
+<stretchDBAdvisor  recommendedNumberOfRows="100000" />
 
 </advisorSettings>
 
@@ -136,7 +136,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 ```
 <appSettings>
 
-<add key="ConnectionTimeout" value="15" />
+<add key="ConnectionTimeout" value="15" />
 
 </appSettings>
 ```

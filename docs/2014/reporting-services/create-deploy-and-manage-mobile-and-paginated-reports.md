@@ -17,12 +17,12 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b6837fdc076db7abfe4a085c2bb98201e1a298d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea6a5ef9a9ced2399ba5539f8117cc40e5c13db0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055258"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352034"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供各種已準備好要使用的工具和服務，協助您建立、 部署及管理您組織的報表。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含可讓您擴充和自訂報表功能的程式設計功能。  
@@ -67,6 +67,6 @@ ms.locfileid: "48055258"
  ![資料夾圖示](media/hlp-16folder.gif "的資料夾圖示")[功能參考&#40;Reporting Services&#41;](feature-reference-reporting-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 資源中心](http://go.microsoft.com/fwlink/?linkID=219676)  
+ [SQL Server 資源中心](https://go.microsoft.com/fwlink/?linkID=219676)  
   
   

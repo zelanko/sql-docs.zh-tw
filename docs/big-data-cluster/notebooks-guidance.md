@@ -1,30 +1,34 @@
 ---
-title: 如何在 SQL Server 2019 預覽中使用 notebook |Microsoft Docs
-description: ''
+title: 在 Azure 資料 Studio 中執行 notebook
+titleSuffix: SQL Server 2019 big data clusters
+description: 這篇文章說明如何在 Azure Data Studio conneected 連往 SQL Server 2019 巨量資料叢集執行的 Jupyter Notebook。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9f9db16431cd6c3befbb32383725ec008f5a9081
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: af1393b38b297e451903d5a39942a3e878c88ee6
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221634"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246607"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>如何在 SQL Server 2019 預覽中使用 notebook
 
-本文說明如何在叢集上啟動 Jupyter Notebook，並開始撰寫自己的 Notebook。 它也會示範如何將針對叢集的作業提交。
+本文說明如何在巨量資料叢集上啟動 Jupyter Notebook 以及如何開始撰寫自己的 Notebook。 它也會示範如何將針對叢集的作業提交。
 
 ## <a name="prerequisites"></a>先決條件
 
 若要使用 notebook，您必須安裝下列必要條件：
 
 - [SQL Server 2019 巨量資料叢集](deployment-guidance.md)
-- [Azure Data Studio](../azure-data-studio/what-is.md)
-- [SQL Server 2019 擴充功能 （預覽版）](../azure-data-studio/sql-server-2019-extension.md)。
+- [SQL Server 2019 巨量資料工具](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **SQL Server 2019 延伸模組**
+   - **kubectl**
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -62,7 +66,7 @@ ms.locfileid: "51221634"
 
   ![image5](media/notebooks-guidance/image5.png)
 
-  提供您的 Notebook 的名稱，例如`Test.ipynb`。 按一下 **[儲存]**。
+  提供您的 Notebook 的名稱，例如`Test.ipynb`。 按一下 [儲存] 。
 
 ![image6](media/notebooks-guidance/image6.png)
 
@@ -105,15 +109,15 @@ Notebook 安裝支援 PySpark 和 Spark，Spark Magic 的核心，可讓您撰�
 
 ![Image12](media/notebooks-guidance/image12.png)
 
-您也可以檢視 [資料格選項]，當您按一下下面的 – 的選項圖示
+您也可以檢視 [資料格選項]，當您按一下下方的 [選項] 圖示
 
 ![Image13](media/notebooks-guidance/image13.png)
 
-以下是每個資料格-選項
+以下是針對每個資料格集的選項
 
 ![Image14](media/notebooks-guidance/image14.png)-
 
-在下拉式清單中的核心和資料格類型/貼上 – 現在，請選擇 Spark 核心
+現在，請選擇 Spark 核心，在下拉式清單中的核心和資料格輸入/貼上:-
 
 ![Image15](media/notebooks-guidance/image15.png)
 

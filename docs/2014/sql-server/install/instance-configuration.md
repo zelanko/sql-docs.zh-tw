@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 2016-05-04
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
@@ -16,12 +15,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5008096ef5c10dbd3f14198194cec4e7795d9f4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9177aa0abe0a5f2a3746486c5cf71163bcd1e1be
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202308"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791296"
 ---
 # <a name="instance-configuration"></a>執行個體組態
   請使用 **安裝精靈的** [執行個體組態] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面，指定要建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的預設執行個體還是具名執行個體。 如果尚未安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，則除非您指定具名執行個體，否則將會建立預設執行個體。  
@@ -40,7 +39,7 @@ ms.locfileid: "48202308"
 ## <a name="options"></a>選項。  
  僅限容錯移轉叢集執行個體 - 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集網路名稱。 這個名稱會在網路上識別容錯移轉叢集執行個體。  
   
- 預設或具名執行個體 - 在決定要安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的預設執行個體還是具名執行個體時，請考量以下資訊：  
+ 預設或具名執行個體 - 在決定要安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設執行個體還是具名執行個體時，請考量以下資訊：  
   
 -   如果您計劃在資料庫伺服器上安裝單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，它應該是預設執行個體。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48202308"
   
 -   如果您為執行個體名稱指定 MSSQLServer，將會建立預設執行個體。  
   
--   安裝[!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]永遠都會安裝成 'Powerpivot' 具名執行個體。 您無法針對這個功能角色指定不同的執行個體名稱。  
+-   安裝 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 時，一律會安裝成 'PowerPivot' 的具名執行個體。 您無法針對這個功能角色指定不同的執行個體名稱。  
   
 -   執行個體名稱限制為 16 個字元。  
   

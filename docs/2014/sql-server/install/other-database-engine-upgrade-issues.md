@@ -13,12 +13,12 @@ ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5cbaa1d648b3de2cdd0b16d233db93bf52635b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fe890744f546e02c91630c5bb0115f5b5c8cb9a
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176058"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321634"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>其他 Database Engine 升級問題
   目前的 Upgrade Advisor 版本無法偵測到下列升級問題。 請檢閱下列問題，以便評估它們可能對您系統造成的影響。  
@@ -64,7 +64,7 @@ ms.locfileid: "48176058"
 -   HierarchyID  
   
 ## <a name="target-table-of-the-output-into-clause-cannot-have-any-defined-triggers"></a>OUTPUT INTO 子句的目標資料表不得具有任何已定義的觸發程序  
- 當資料表中有任何已啟用的觸發程序不受支援時，OUPUT INTO 該資料表。  
+ 不支援 OUTPUT INTO 目標資料表時的資料表有任何啟用的觸發程序。  
   
 ## <a name="compile-time-error-for-udfs-when-the-target-of-an-output-into-clause-is-a-table"></a>當 OUTPUT INTO 子句的目標是資料表時，就會針對 UDF 發生編譯時間錯誤  
  使用者定義函數 (UDF) 無法用於執行修改資料庫狀態的動作。 例如，UDF 無法針對任何物件 (資料表變數除外) 執行任何 DDL (CREATE/ALTER/DROP) 或 DML (INSERT/UPDATE/DELETE) 動作。  
