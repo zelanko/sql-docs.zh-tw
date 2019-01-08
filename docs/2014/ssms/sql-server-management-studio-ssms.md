@@ -4,24 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ae78c114b9c46fd23d066a37837620441c6e6a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181148"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812350"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是用於管理您的 SQL Server 基礎結構的整合式的環境。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 提供工具來設定、監視以及管理 SQL Server 執行個體。 也提供工具來部署、監視以及升級資料層元件 (例如應用程式所使用的資料庫和資料倉儲)，以及建立查詢和指令碼。  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是用於管理 SQL Server 基礎結構的整合式環境。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 提供工具來設定、監視以及管理 SQL Server 執行個體。 也提供工具來部署、監視以及升級資料層元件 (例如應用程式所使用的資料庫和資料倉儲)，以及建立查詢和指令碼。  
   
 ## <a name="benefits-of-sql-server-management-studio"></a>SQL Server Management Studio 的優點  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是用於管理 SQL Server 的綜合性公用程式物件，結合簡單易用的圖形介面以及非常豐富的指令碼功能。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 可以用來管理[!INCLUDE[ssDE](../includes/ssde-md.md)]， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]，和[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是用於管理 SQL Server 物件的綜合性公用程式，結合簡單易用的圖形介面以及非常豐富的指令碼功能。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 可用來管理 [!INCLUDE[ssDE](../includes/ssde-md.md)]、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 及 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。  
   
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 元件  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48181148"
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 描述如何使用  語言編輯器，以互動方式建立與偵錯查詢和指令碼。|[查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [教學課程： SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)   
- [教學課程：撰寫國際性通用的 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [教學課程：SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)   
+ [教學課程：撰寫 TRANSACT-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

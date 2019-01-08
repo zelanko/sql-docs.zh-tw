@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ff3f6c31389622dc424c42e06bfa78477c70cde2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b2a17f1fd57b70dbee056e66a76c0416b0a25c1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769366"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533566"
 ---
 # <a name="sysdmpdwnodes-transact-sql"></a>sys.dm_pdw_nodes & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47769366"
 |型別|**nvarchar(32)**|節點型別。|' COMPUTE'、 'CONTROL'，[管理]|  
 |NAME|**nvarchar(32)**|節點的邏輯名稱。|任何適當的長度的字串。|  
 |address|**nvarchar(32)**|此節點的 IP 位址。|在 [0-255] 格式。[0-255]。[0-255]。[0-255]。|  
-|is_passive|**int**|指出執行節點的虛擬機器指派的伺服器上執行或已容錯移轉到備援伺服器。|0 – 節點 VM 會在原始伺服器上執行。<br /><br /> 1 – 節點 VM 會在備用的伺服器上執行。|  
+|is_passive|**int**|指出執行節點的虛擬機器指派的伺服器上執行或已容錯移轉到備援伺服器。|0-節點 VM 會在原始伺服器上執行。<br /><br /> 1-節點 VM 會在備用的伺服器上執行。|  
 |區域|**nvarchar(32)**|節點正在執行的所在區域。|' PDW'，'HDINSIGHT'|  
   
 ## <a name="see-also"></a>另請參閱  

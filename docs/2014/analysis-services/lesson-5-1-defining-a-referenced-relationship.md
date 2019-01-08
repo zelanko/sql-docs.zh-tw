@@ -11,12 +11,12 @@ ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 892b00f07f9a316ba856e8be97e4159fd3889bcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b006a2d5ef8c6de9b915f73fe68223329c6393d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141888"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519904"
 ---
 # <a name="defining-a-referenced-relationship"></a>定義參考關聯性
   本教學課程最特別要注意的事就是，您定義的每一個 Cube 維度所依據的資料表，是透過主索引鍵對外部索引鍵的關聯性，直接連結到量值群組的事實資料表。 在本主題的工作中，您會透過 [轉售商] 維度 (稱為「參考維度」)，將 [地理位置] 維度連結到事實資料表。 這樣可讓使用者按地理位置建立轉售商銷售的維度。 如需詳細資訊，請參閱 [定義參考的關聯性及參考的關聯性屬性](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
@@ -47,7 +47,7 @@ ms.locfileid: "48141888"
   
      請注意，目前 [地理位置] Cube 維度與 [網際網路銷售] 量值群組或 [轉售商銷售] 量值群組之間沒有關聯性。  
   
-8.  按一下 [全名] 資料格中的省略符號按鈕 (**…**)，這個資料格位於 [客戶] 維度和 [網際網路銷售] 量值群組的交集處。  
+8.  按一下省略符號按鈕 (**...**) 中**全名**交集處的儲存格**客戶**維度和**網際網路銷售**量值群組。  
   
      請注意，在 [定義關聯性] 對話方塊中，[DimCustomer] 維度資料表和 [FactInternetSales] 量值群組資料表之間定義的 [一般] 關聯性，是依據這些資料表中的 [CustomerKey] 資料行。 到目前為止，您在這個教學課程中定義的所有關聯性都是一般關聯性。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48141888"
   
 9. 按一下 [取消]。  
   
-10. 按一下未命名的資料格中的省略符號按鈕 (**…**)，這個資料格位於 [地理位置] 維度和 [轉售商銷售] 量值群組的交集處。  
+10. 按一下省略符號按鈕 (**...**) 中未命名的儲存格的交集處**地理**維度和**轉售商銷售**量值群組。  
   
      在 [定義關聯性] 對話方塊中，請注意，[地理位置] Cube 維度和 [轉售商銷售] 量值群組之間目前並未定義關聯性。 您不能定義一般關聯性，因為 [Geography] 維度的維度資料表和 [Reseller Sales] 量值群組的事實資料表之間沒有直接關聯性。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48141888"
   
      [Reseller] 維度中的 [Geography Key] 屬性只用來連結 [Geography] 維度與 [Reseller Sales] 事實資料表。 因為它不用於瀏覽，所以定義這個屬性階層的值沒有一個會顯示出來。 而且，屬性階層的排序和最佳化對處理效能只有負面影響。 不過，必須啟用屬性才能做為兩個維度之間的連結。  
   
-4.  請針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程的 Cube，切換到 [Cube 設計師]，按一下 [維度使用方式] 索引標籤，然後按一下 [轉售商銷售] 量值群組和 [地理位置] Cube 維度的交集處的省略符號按鈕 (**…**)。  
+4.  切換到 Cube 設計師[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]教學課程 cube，按一下**維度使用方式**索引標籤，然後再按一下省略符號按鈕 (**...**) 的交集處**轉售商銷售**量值群組和**Geography** cube 維度。  
   
 5.  在 [選取關聯性類型] 清單中，選取 [參考的]。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48141888"
  [定義事實關聯性](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [屬性關聯性](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
+ [中，使用 [維度設計師] 的](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
  [定義參考的關聯性及參考的關聯性屬性](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   
   

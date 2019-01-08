@@ -13,12 +13,12 @@ ms.assetid: 4e0344e9-1822-4698-ad22-05f1f341ced7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b81207d2cb045b330560c652e98b2488aad421b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94a830bba0339262148a0a7f826f3bcb89371274
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149208"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372890"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>連接到 Azure SQL 資料庫 (SSAS)
   [資料表匯入精靈] 的這個頁面可讓您連接到 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
@@ -26,7 +26,7 @@ ms.locfileid: "48149208"
 > [!NOTE]  
 >  如果您要連接到 Azure DataMarket 資料集，請參閱[連接到報表或資料摘要 &#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md)。  
   
- [!INCLUDE[ssSDS](../includes/sssds-md.md)] 是裝載型的關聯式資料庫，您可以使用 SQL Server 驗證與其連接。 如需有關 [!INCLUDE[ssSDS](../includes/sssds-md.md)]的詳細資訊，請參閱 [SQL 資料庫](http://go.microsoft.com/fwlink/?LinkID=157856)網站。 若要連接至資料來源，您必須先在電腦上安裝適當的提供者。  
+ [!INCLUDE[ssSDS](../includes/sssds-md.md)] 是裝載型的關聯式資料庫，您可以使用 SQL Server 驗證與其連接。 如需有關 [!INCLUDE[ssSDS](../includes/sssds-md.md)]的詳細資訊，請參閱 [SQL 資料庫](https://go.microsoft.com/fwlink/?LinkID=157856)網站。 若要連接至資料來源，您必須先在電腦上安裝適當的提供者。  
   
 > [!NOTE]  
 >  在這個頁面中選取資料庫時，會使用目前使用者的認證。 不過，如果在 [模擬資訊] 頁面中指定的使用者未具備從所選取資料庫讀取的權限，則匯入將不會成功。  

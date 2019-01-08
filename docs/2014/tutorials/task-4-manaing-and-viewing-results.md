@@ -1,5 +1,5 @@
 ---
-title: 工作 4： 管理和檢視結果 |Microsoft Docs
+title: 工作 4:管理和檢視結果 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb0cc2f091ce6365e91dd285e553498cc595c76e
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 5062f24c679d2d85da09a1dc81d9c487d6536f1f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119867"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377530"
 ---
-# <a name="task-4-manaing-and-viewing-results"></a>工作 4：管理和檢視結果
-  在這項工作中，您會檢閱電腦輔助清理的結果，同時針對供應商資料執行互動式清理。 請參閱[互動式清理階段](http://msdn.microsoft.com/library/hh213061.aspx#Interactive)如需詳細資訊。  
+# <a name="task-4-manaing-and-viewing-results"></a>工作 4:管理和檢視結果
+  在這項工作中，您會檢閱電腦輔助清理的結果，同時針對供應商資料執行互動式清理。 請參閱[互動式清理階段](https://msdn.microsoft.com/library/hh213061.aspx#Interactive)如需詳細資訊。  
   
 1.  選取  **Contact Email**網域的網域清單。  
   
-2.  若要切換**無效**右窗格中的索引標籤。 請注意在結尾遺漏 ‘s’ 字元的兩個電子郵件地址。 找不到為無效的定義域規則需要所有的電子郵件地址結尾為這些兩個電子郵件**@adventure-works.com** (使用的 ')。 DQS 會在清理時使用此定義域規則，以判斷電子郵件是否有效。 此索引標籤會顯示在知識庫中標示為無效或未能通過定義域規則的定義域值。 在此情況下，這些值未通過定義域規則 (電子郵件驗證)。  
+2.  若要切換**無效**右窗格中的索引標籤。 請注意，兩個電子郵件地址的遺漏字元 ' 結尾。 找不到為無效的定義域規則需要所有的電子郵件地址結尾為這些兩個電子郵件**@adventure-works.com** (使用的 ')。 DQS 會在清理時使用此定義域規則，以判斷電子郵件是否有效。 此索引標籤會顯示在知識庫中標示為無效或未能通過定義域規則的定義域值。 在此情況下，這些值未通過定義域規則 (電子郵件驗證)。  
   
 3.  在 **更正為**資料行中輸入正確的電子郵件地址結尾**@adventure-works.com** (使用的 ')。  
   
@@ -90,6 +90,6 @@ ms.locfileid: "49119867"
 25. 按一下 **下一步**轉為**匯出**頁面。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 5：將清理結果匯出到 Excel 檔案](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
+ [工作 5:匯出清理結果到 Excel 檔案](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

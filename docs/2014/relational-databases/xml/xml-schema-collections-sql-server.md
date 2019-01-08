@@ -21,12 +21,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8a2b5668ba75c2825ab62b2a86aafb84f1f1488
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a86a39aa3473495b5eed6bc2eff92376a5a68cc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054731"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362780"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 結構描述集合 (SQL Server)
   主題中所述[xml &#40;TRANSACT-SQL&#41;](/sql/t-sql/xml/xml-transact-sql)，SQL Server 提供原生的 XML 資料，透過儲存`xml`資料類型。 您可以選擇性地關聯的 XSD 結構描述的變數或資料行`xml`透過 XML 結構描述集合的型別。 XML 結構描述集合會儲存匯入的 XML 結構描述，然後用來執行下列作業：  
@@ -48,7 +48,7 @@ ms.locfileid: "48054731"
  您也可以使用 XML 結構描述集合來輸入 XML 變數、參數及資料行。  
   
 ##  <a name="ddl"></a> 管理結構描述集合的 DDL  
- 您可以在資料庫中建立 XML 結構描述集合，並將其與變數和資料行關聯`xml`型別。 為了管理資料庫中的結構描述集合， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了下列 DDL 陳述式：  
+ 您可以在資料庫中建立 XML 結構描述集合，然後將它們與 `xml` 類型的變數和資料行產生關聯。 為了管理資料庫中的結構描述集合， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了下列 DDL 陳述式：  
   
 -   [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql) 將結構描述元件匯入資料庫中。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48054731"
   
 -   [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql) 刪除整個 XML 結構描述集合及其所有的元件。  
   
- 若要使用 XML 結構描述集合及其包含的結構描述，您必須先使用 CREATE XML SCHEMA COLLECTION 陳述式來建立集合和結構描述。 建立結構描述集合之後，您可以接著建立變數和資料行`xml`輸入和與其建立關聯的結構描述集合。 請注意，建立結構描述集合之後，各種結構描述元件會儲存在中繼資料內。 您也可以使用 ALTER XML SCHEMA COLLECTION 將更多元件加入現有的結構描述，或將新的結構描述加入現有的集合。  
+ 若要使用 XML 結構描述集合及其包含的結構描述，您必須先使用 CREATE XML SCHEMA COLLECTION 陳述式來建立集合和結構描述。 在建立結構描述集合之後，您就可以建立 `xml` 類型的變數和資料行，並將結構描述集合與它們產生關聯。 請注意，建立結構描述集合之後，各種結構描述元件會儲存在中繼資料內。 您也可以使用 ALTER XML SCHEMA COLLECTION 將更多元件加入現有的結構描述，或將新的結構描述加入現有的集合。  
   
  若要卸除結構描述集合，請使用 DROP XML SCHEMA COLLECTION 陳述式。 這會卸除集合中包含的所有結構描述，並移除集合物件。 請注意，必須符合 [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql) 中描述的條件，才能卸除結構描述集合。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "48054731"
   
  如下列範例所示。  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>範例：列舉 XML 結構描述集合中的 XML 命名空間  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>範例列舉 XML 結構描述集合中的 XML 命名空間  
  針對 XML 結構描述集合 "myCollection" 來使用下列查詢：  
   
 ```  
@@ -181,7 +181,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>範例：列舉 XML 結構描述集合的內容  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>範例列舉 XML 結構描述集合的內容  
  下列陳述式會列舉關聯式結構描述 dbo 中之 XML 結構描述集合 "myCollection" 的內容。  
   
 ```  
@@ -190,12 +190,12 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  在集合內的個別 XML 結構描述可以做為取得`xml`資料類型執行個體所做的第三個引數中指定的目標命名空間**xml_schema_namespace （)**。 下列範例會顯示這一點。  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>範例：從 XML 結構描述集合輸出指定的結構描述  
- 下列陳述式會從關聯式結構描述 dbo 中的 XML 結構描述集合 "myCollection"，輸出含有目標命名空間 "http://www.microsoft.com/books" 的 XML 結構描述。  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>範例輸出指定的結構描述，從 XML 結構描述集合  
+ 下列陳述式會從關聯式結構描述 dbo 中的 XML 結構描述集合 "myCollection"，輸出含有目標命名空間 "<https://www.microsoft.com/books>" 的 XML 結構描述。  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'http://www.microsoft.com/books')  
+N'https://www.microsoft.com/books')  
 ```  
   
 ### <a name="querying-xml-schemas"></a>查詢 XML 結構描述  
@@ -203,7 +203,7 @@ N'http://www.microsoft.com/books')
   
 -   在 XML 結構描述命名空間的目錄檢視上撰寫 Transact-SQL 查詢。  
   
--   建立一個包含 `xml` 資料類型資料行的資料表來儲存您的 XML 結構描述，並將其載入至 XML 類型系統。 您可以使用來查詢 XML 資料行`xml`資料類型方法。 您也可以在此資料行上建立 XML 索引。 然而，使用這個方法時，應用程式必須維護儲存在 XML 資料行中之 XML 結構描述與 XML 類型系統之間的一致性。 例如，若您從 XML 類型系統中卸除 XML 結構描述命名空間，就必須也將它從資料表中卸除，以維持一致性。  
+-   建立一個包含 `xml` 資料類型資料行的資料表來儲存您的 XML 結構描述，並將其載入至 XML 類型系統。 您可以使用 `xml` 資料類型方法來查詢 XML 資料行。 您也可以在此資料行上建立 XML 索引。 然而，使用這個方法時，應用程式必須維護儲存在 XML 資料行中之 XML 結構描述與 XML 類型系統之間的一致性。 例如，若您從 XML 類型系統中卸除 XML 結構描述命名空間，就必須也將它從資料表中卸除，以維持一致性。  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視儲存的 XML 結構描述集合](../xml/view-a-stored-xml-schema-collection.md)   

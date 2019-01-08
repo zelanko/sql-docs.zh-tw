@@ -13,12 +13,12 @@ ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2758227de47509e62c9f7874c70bbcf30e01d364
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fdf98d461039c5c6fb4f25c8cdf543422e5a0a2c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191088"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359621"
 ---
 # <a name="service-broker-with-alwayson-availability-groups-sql-server"></a>Service Broker 與 AlwaysOn 可用性群組 (SQL Server)
   本主題包含將 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Service Broker 設定為使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的相關資訊。  
@@ -74,7 +74,7 @@ ms.locfileid: "48191088"
     > [!NOTE]  
     >  根據預設，每個使用者資料庫 (包括 **msdb**) 都包含 **AutoCreatedLocal**路由。 此路由會比對所有服務名稱和 Broker 執行個體，並指定訊息應在目前執行個體內傳遞。 **AutoCreatedLocal** 的優先權低於明確指定與遠端執行個體通訊之特定服務的路由。  
   
-     如需建立路由的相關資訊，請參閱 [Service Broker 路由範例](http://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (在 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 版本的《線上叢書》中) 和 [CREATE ROUTE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql)的相關資訊。  
+     如需建立路由的相關資訊，請參閱 [Service Broker 路由範例](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (在 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 版本的《線上叢書》中) 和 [CREATE ROUTE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql)的相關資訊。  
   
 ##  <a name="SendRemoteMessages"></a> 將訊息傳送至可用性群組中之遠端服務的需求  
   

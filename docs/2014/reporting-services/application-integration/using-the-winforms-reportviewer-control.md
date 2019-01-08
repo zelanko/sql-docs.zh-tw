@@ -14,12 +14,12 @@ ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 01149b1f75c78ba5ca6da467abf8955adf41f2f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54a38a78f990ff4c2cc48c7277146dd0c2a07ee2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170398"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354824"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>使用 WinForms ReportViewer 控制項
   若要檢視已部署至報表伺服器或存在於本機檔案系統的報表，您可以使用 WinForms ReportViewer 控制項在 Windows 應用程式中加以轉譯。  
@@ -42,7 +42,7 @@ ms.locfileid: "48170398"
   
  將控制項新增至表單後，[ReportViewer 工作] 智慧標籤會顯示，並提示您選取報表。  
   
- 如果您希望檢視的報表已部署到報表伺服器，請從 [選擇報表] 下拉式清單，選取 [\<伺服器報表>] 選項。 選取 [\<伺服器報表>] 選項之後，會出現兩個額外屬性：[報表伺服器 URL] 和 [報表路徑]。 [報表伺服器 URL] 是報表伺服器的位址，[報表路徑] 則是要轉譯之報表的完整路徑。  
+ 如果您希望檢視的報表已部署到報表伺服器，請從 [選擇報表] 下拉式清單，選取 [\<伺服器報表>] 選項。 在後**\<伺服器報表 >** 選取選項，則會顯示兩個額外屬性：**報表伺服器 Url**並**報表路徑**。 [報表伺服器 URL] 是報表伺服器的位址，[報表路徑] 則是要轉譯之報表的完整路徑。  
   
  ![選取伺服器報表](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "選取伺服器報表")  
   
@@ -154,7 +154,7 @@ End Class
   
 3.  瀏覽到安裝「[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 報表範例」專案的位置。  
   
-     如果要下載報表範例，請移至 [AdventureWorks 2012 報表範例](http://go.microsoft.com/fwlink/?LinkId=404153)  
+     如果要下載報表範例，請移至 [AdventureWorks 2012 報表範例](https://go.microsoft.com/fwlink/?LinkId=404153)  
   
 4.  選取 Sales Order Detail.rdl 檔案，然後按一下 [新增] 按鈕。  
   

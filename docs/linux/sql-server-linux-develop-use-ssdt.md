@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 2053e338bf14d11f25e6e12b3d6c5aee6b8e636e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 874fd8948d4098e9003fb2c54e1feb8b5cbbe4e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033575"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750360"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 來建立 Linux 上的 SQL Server 資料庫
 
@@ -51,7 +51,7 @@ SSDT 17.0 RC 或更新版本的版本支援在 Linux 上的 SQL Server。
 
     <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
 
-3. 按一下 **[建立]**。 建立本機 Git 存放庫之後，按兩下**SSDTRepo**。
+3. 按一下 [建立] 。 建立本機 Git 存放庫之後，按兩下**SSDTRepo**。
 
 4. 按一下 **的新**中**解決方案**一節。 選取  **SQL Server**下方**其他語言**節點中的**新專案**對話方塊。
 
@@ -99,7 +99,7 @@ SSDT 17.0 RC 或更新版本的版本支援在 Linux 上的 SQL Server。
 
 5. 簽入的發行狀態**資料工具作業**視窗。
 
-6. 按一下 **檢視 Reulst**或是**檢視指令碼**以查看詳細資料的資料庫發行您的 SQL Server on Linux 上的結果。
+6. 按一下 **檢視結果**或是**檢視指令碼**以查看詳細資料的資料庫發行您的 SQL Server on Linux 上的結果。
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
@@ -107,12 +107,12 @@ SSDT 17.0 RC 或更新版本的版本支援在 Linux 上的 SQL Server。
 
 ## <a name="next-steps"></a>後續步驟
 
-如果您不熟悉 T-SQL，請參閱[教學課程：撰寫 Transact-SQL 陳述式]和 [Transact-SQL 參考 (Database Engine)]。
+如果您還不熟悉 T-SQL，請參閱[教學課程：撰寫 TRANSACT-SQL 陳述式]而[TRANSACT-SQL 參考 (Database Engine)]。
 
 如需有關如何開發使用 SQL Data Tools 資料庫的詳細資訊，請參閱[SSDT MSDN 文件]
 
 [下載並安裝 Visual Studio]:https://www.visualstudio.com/downloads/
-[Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
+[Download and Install SSDT]:https://aka.ms/ssdt-download
 [SSDT MSDN 文件]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[教學課程：撰寫 Transact-SQL 陳述式]:https://msdn.microsoft.com/library/ms365303.aspx
+[教學課程：撰寫 TRANSACT-SQL 陳述式]:https://msdn.microsoft.com/library/ms365303.aspx
 [Transact-SQL 參考 (Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergeconflictrows_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26bf2e89462c0096c9a6fd2a081cb72c68e9a32a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af247734b941a0d9fd7010d4699f9ddb296c890e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746576"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589162"
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,16 +42,16 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_發行集_**'**  
  這是發行集的名稱。 *發行集*已**sysname**，預設值是**%**。 如果指定發行集的話，就會傳回發行集所限定的所有衝突。 比方說，如果**MSmerge_conflict_Customers**資料表中有衝突資料列**WA**並**CA**發行集，在發行集名稱中傳遞**CA**擷取相關衝突**CA**發行集。  
   
- [  **@conflict_table=**] **'***conflict_table***'**  
- 這是衝突資料表的名稱。 *conflict_table*已**sysname**，沒有預設值。 在  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]及更新版本中，衝突資料表會使用命名與格式名稱 **MSmerge_conflict_* 發行集 *_* 文章 * 中，使用一個資料表針對每個發行發行項。  
+ [  **@conflict_table=**] **'**_conflict_table_**'**  
+ 這是衝突資料表的名稱。 *conflict_table*已**sysname**，沒有預設值。 在  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更新版本中，衝突資料表名為使用格式名稱，搭配**MSmerge_conflict\__發行集\_文章_**，與針對每個已發行的發行項的一個資料表。  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_發行者_**'**  
  這是發行者的名稱。 *發行者*已**sysname**，預設值是 NULL。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  是發行者資料庫的名稱。*publisher_db*是**sysname**，預設值是 NULL。  
   
  [  **@logical_record_conflicts=** ] *logical_record_conflicts&lt*  
@@ -64,7 +63,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**origin_datasource**|**varchar(255)**|衝突的來源。|  
-|**conflict_type**|**int**|衝突類型的代碼：<br /><br /> **1** = 更新衝突： 在資料列層級偵測到衝突。<br /><br /> **2** = 資料行更新衝突： 資料行層級偵測到衝突。<br /><br /> **3** = 更新刪除成功衝突： 刪除在衝突中獲勝。<br /><br /> **4** = 更新成功刪除衝突： 衝突失敗已刪除的 rowguid 會記錄在此資料表。<br /><br /> **5** = 上傳插入失敗： 訂閱者的插入無法套用在發行者端。<br /><br /> **6** = 下載插入失敗： 發行者的插入無法套用在訂閱者。<br /><br /> **7** = 上傳刪除失敗： 訂閱者端刪除無法上傳到 「 發行者 」。<br /><br /> **8** = 下載刪除失敗： 發行者的刪除無法下載到訂閱者。<br /><br /> **9** = 上傳更新失敗： 無法在發行者端套用訂閱者端的更新。<br /><br /> **10** = 下載更新失敗： 發行者端的更新無法套用到訂閱者。<br /><br /> **12** = 邏輯記錄更新成功刪除： 刪除在衝突中失敗的邏輯記錄會記錄在此資料表。<br /><br /> **13** = 邏輯記錄衝突插入更新： 插入邏輯記錄衝突的更新。<br /><br /> **14** = 邏輯記錄刪除成功更新衝突： 衝突失敗更新的邏輯記錄會記錄在此資料表。|  
+|**conflict_type**|**int**|衝突類型的代碼：<br /><br /> **1** = 更新衝突：資料列層級偵測到衝突。<br /><br /> **2** = 資料行更新衝突：資料行層級偵測到衝突。<br /><br /> **3** = 更新刪除成功衝突：刪除在衝突中獲勝。<br /><br /> **4** = 更新成功刪除衝突：已刪除在衝突中失敗的 rowguid 會記錄在此資料表。<br /><br /> **5** = 上傳插入失敗：訂閱者的插入無法套用在發行者端。<br /><br /> **6** = 下載插入失敗：發行者的插入無法套用在訂閱者。<br /><br /> **7** = 上傳刪除失敗：在訂閱者端刪除無法上傳到 「 發行者 」。<br /><br /> **8** = 下載刪除失敗：在發行者端刪除無法下載到訂閱者。<br /><br /> **9** = 上傳更新失敗：無法在發行者端套用訂閱者端的更新。<br /><br /> **10** = 下載更新失敗：發行者端的更新無法套用到訂閱者。<br /><br /> **12** = 邏輯記錄更新 Wins 刪除：刪除在衝突中失敗的邏輯記錄會記錄在此資料表。<br /><br /> **13** = 邏輯記錄衝突插入更新：插入與更新邏輯記錄衝突。<br /><br /> **14** = 邏輯記錄刪除成功更新衝突：更新的邏輯記錄衝突失敗會記錄在此資料表。|  
 |**reason_code**|**int**|可為內容相關的錯誤碼。|  
 |**reason_text**|**varchar(720)**|可為內容相關的錯誤描述。|  
 |**pubid**|**uniqueidentifier**|發行集識別碼。|  

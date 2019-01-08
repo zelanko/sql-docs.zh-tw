@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergefilter
@@ -17,12 +16,12 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72d29fca659426075f4c7ee07f82ac6507fc0709
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31ada2bfb184e24011ee91dde82fc9abfb319320
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595207"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777910"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +46,16 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=** ] **'***發行集***'**  
+ [  **@publication=** ] **'**_發行集_**'**  
  這是加入合併篩選時所在發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@article=** ] **'***文章***'**  
+ [  **@article=** ] **'**_文章_**'**  
  這是加入合併篩選所在的發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
   
- [  **@filtername=** ] **'***filtername***'**  
+ [  **@filtername=** ] **'**_filtername_**'**  
  這是篩選的名稱。 *filtername*是必要的參數。 *filtername*已**sysname**，沒有預設值。  
   
- [  **@join_articlename=** ] **'***join_articlename***'**  
+ [  **@join_articlename=** ] **'**_join_articlename_**'**  
  所指定的子發行項的父發行*一文*，必須使用所指定的聯結子句中加入*join_filterclause*，以判斷子發行項中符合的資料列合併篩選之篩選準則。 *join_articlename*已**sysname**，沒有預設值。 發行項必須是所指定的發行集中*發行集*。  
   
  [  **@join_filterclause=** ] *join_filterclause*  

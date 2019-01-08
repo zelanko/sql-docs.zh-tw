@@ -11,12 +11,12 @@ ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f34ff1942ff742a5040d7fa16fedf31f6d806768
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d13d7b7f65ca1f121145815555afa055926c81fe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126840"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374270"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
   使用 Kerberos 相互驗證用戶端和服務識別時，服務主要名稱 (SPN) 可唯一識別在 Active Directory 網域中的服務執行個體。 SPN 與服務執行個體的執行登入帳戶有關。  
@@ -30,10 +30,10 @@ ms.locfileid: "48126840"
  如果服務在網域管理員所建立之預先定義的受管理服務帳戶之下執行，就不需要註冊 SPN。 請注意，視您網域的功能層級而定，可能需要網域管理員權限才能註冊 SPN。  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 是一種診斷工具，可幫助排除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發生的 Kerberos 相關連接問題。 如需詳細資訊，請參閱 [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046)。  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 是一種診斷工具，可幫助排除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發生的 Kerberos 相關連接問題。 如需詳細資訊，請參閱 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 是一種診斷工具，可幫助排除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發生的 Kerberos 相關連接問題。 如需詳細資訊，請參閱 [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046)。  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 是一種診斷工具，可幫助排除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發生的 Kerberos 相關連接問題。 如需詳細資訊，請參閱 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。  
   
  本主題包含下列幾節：  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48126840"
  [為接聽固定通訊埠的 SSAS 執行個體註冊 SPN](#bkmk_spnFixedPorts)  
   
 ##  <a name="bkmk_scnearios"></a> 必須註冊 SPN 的時機  
- 在連接字串中指定 “SSPI=Kerberos” 的所有用戶端連接都有 Analysis Services 執行個體的 SPN 註冊需求。  
+ 所有用戶端連接，指定"SSPI = Kerberos"連接字串將介紹 Analysis Services 執行個體的 SPN 註冊需求。  
   
  在下列情況下，您必須註冊 SPN。 如需更詳細的資訊，請參閱＜ [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md)＞。  
   
@@ -67,14 +67,14 @@ ms.locfileid: "48126840"
 -   使用 DirectQuery 模式從表格式資料庫的 SQL Server 關聯式資料庫擷取資料時，Analysis Services 會委派使用者識別。 唯有在此狀況下 Analysis Services 才會將使用者識別委派給其他服務。  
   
 ##  <a name="bkmk_SPNSyntax"></a> Analysis Services 的 SPN 格式  
- 使用 **setspn** 註冊 SPN。 在新版作業系統上， **setspn** 是以系統公用程式的形式安裝。 如需詳細資訊，請參閱＜ [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)＞。  
+ 使用 **setspn** 註冊 SPN。 在新版作業系統上， **setspn** 是以系統公用程式的形式安裝。 如需詳細資訊，請參閱＜ [SetSPN](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx)＞。  
   
  下表說明 Analysis Services SPN 的每一個部分。  
   
 |元素|描述|  
 |-------------|-----------------|  
 |服務類別|MSOLAPSvc.3 會將服務識別為 Analysis Services 執行個體， 其中 .3 是 Analysis Services 傳輸時所使用 XMLA-over-TCP/IP 通訊協定版本的參考， 與產品版本無關。 因此，除非通訊協定本身有異動，否則 MSOLAPSvc.3 都會是 SQL Server 2005、2008、2008 R2、2012 以及未來所有 Analysis Services 版本的正確服務類別。|  
-|主機名稱|識別執行服務的電腦。 可以是完整網域名稱或 NetBIOS 名稱 您應該針對這兩者註冊 SPN。<br /><br /> 當您針對伺服器的 NetBIOS 名稱註冊 SPN 時，請務必使用 `SetupSPN –S` 來檢查是否有重複註冊。 樹系中可能會有重複的 NetBIOS 名稱，而重複的 SPN 註冊將會導致連接失敗。<br /><br /> 如果是 Analysis Services 負載平衡叢集，主機名稱必須是指派給叢集的虛擬名稱。<br /><br /> 請絕對不要使用 IP 位址來建立 SPN， 因為 Kerberos 會使用 DNS 網域解析功能， 如果指定 IP 位址則會略過這項功能。|  
+|主機名稱|識別執行服務的電腦。 可以是完整網域名稱或 NetBIOS 名稱 您應該針對這兩者註冊 SPN。<br /><br /> 當您針對伺服器的 NetBIOS 名稱註冊 SPN 時，請務必使用 `SetupSPN -S` 來檢查是否有重複註冊。 樹系中可能會有重複的 NetBIOS 名稱，而重複的 SPN 註冊將會導致連接失敗。<br /><br /> 如果是 Analysis Services 負載平衡叢集，主機名稱必須是指派給叢集的虛擬名稱。<br /><br /> 請絕對不要使用 IP 位址來建立 SPN， 因為 Kerberos 會使用 DNS 網域解析功能， 如果指定 IP 位址則會略過這項功能。|  
 |通訊埠編號|雖然通訊埠編號是 SPN 語法的一部分，但是在註冊 Analysis Services SPN 時，請絕對不要指定通訊埠編號。 冒號 (:) 字元在標準 SPN 語法中通常是用來提供通訊埠編號，但是 Analysis Services 則是用來指定執行個體名稱。 Analysis Services 執行個體的通訊埠會假設是預設的通訊埠 (TCP 2383) 或 SQL Server Browser 服務指派的通訊埠 (TCP 2382)。|  
 |執行個體名稱|Analysis Services 是可在相同電腦上安裝多次的可複寫服務。 每個執行個體都是透過其執行個體名稱加以識別。<br /><br /> 執行個體名稱會以冒號 (:) 字元當做開頭。 例如，有名稱為 SRV01 的主機電腦和名稱為 SSAS-Tabular 的執行個體，則 SPN 應該是 SRV01:SSAS-Tabular。<br /><br /> 請注意，指定的 Analysis Services 具名執行個體的語法與其他 SQL Server 執行個體所使用的語法有所不同。 其他服務都會使用反斜線 (\) 在 SPN 中附加執行個體名稱。|  
 |服務帳戶|這是 **MSSQLServerOLAPService** Windows 服務的啟動帳戶。 可以是 Windows 網域使用者帳戶、虛擬帳戶、受管理的服務帳戶 (MSA) 或內建帳戶 (如個別服務 SID、NetworkService 或 LocalSystem)。 Windows 網域使用者帳戶可格式化為 「 網域 \ 使用者或user@domain。|  
@@ -113,7 +113,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02
  此範例會顯示在 AdventureWorks 網域中，以網域使用者帳戶 **SSAS-Service** 執行之 Analysis Services 預設執行個體的 **setspn**語法。  
   
 ```  
-Setspn –s msolapsvc.3\AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service  
+Setspn -s msolapsvc.3\AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service  
 ```  
   
 > [!TIP]  
@@ -131,7 +131,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
 ```  
   
 ##  <a name="bkmk_spnNamed"></a> 為具名執行個體註冊 SPN  
- Analysis Services 的具名執行個體會使用 SQL Server Browser 服務所偵測到的動態通訊埠指定。 當使用具名執行個體時，請同時為 SQL Server Browser 服務和 Analysis Services 具名執行個體註冊 SPN。 如需詳細資訊，請參閱 [建立連接至 SQL Server Analysis Services 或 SQL Server 的具名執行個體時，需要 SQL Server Browser 服務的 SPN](http://support.microsoft.com/kb/950599)(機器翻譯)。  
+ Analysis Services 的具名執行個體會使用 SQL Server Browser 服務所偵測到的動態通訊埠指定。 當使用具名執行個體時，請同時為 SQL Server Browser 服務和 Analysis Services 具名執行個體註冊 SPN。 如需詳細資訊，請參閱 [建立連接至 SQL Server Analysis Services 或 SQL Server 的具名執行個體時，需要 SQL Server Browser 服務的 SPN](https://support.microsoft.com/kb/950599)(機器翻譯)。  
   
  **以 LocalService 身分執行之 SQL Browser 服務的 SPN 語法範例**  
   
@@ -147,13 +147,13 @@ Setspn -S MSOLAPDisco.3/AW-SRV01.AdventureWorks.com AW-SRV01
  **Analysis Services 叢集的 SPN 語法**  
   
 ```  
-Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>  
+Setspn -s msolapsvc.3/<virtualname.FQDN > <domain user account>  
 ```  
   
- 請記得 Analysis Services 叢集中的節點都必須使用預設通訊埠 (TCP 2383)，而且必須以相同的網域使用者帳戶來執行，如此每個節點才有相同的 SID。 如需詳細資訊及範例，請參閱 [如何建立 SQL Server Analysis Services 叢集](http://msdn.microsoft.com/library/dn736073.aspx) 。  
+ 請記得 Analysis Services 叢集中的節點都必須使用預設通訊埠 (TCP 2383)，而且必須以相同的網域使用者帳戶來執行，如此每個節點才有相同的 SID。 如需詳細資訊及範例，請參閱 [如何建立 SQL Server Analysis Services 叢集](https://msdn.microsoft.com/library/dn736073.aspx) 。  
   
 ##  <a name="bkmk_spnHTTP"></a> 為設定使用 HTTP 存取的 SSAS 執行個體註冊 SPN  
- 根據方案需求，您可能已經設定使用 HTTP 存取 Analysis Services。 如果您的方案包含 IIS 做為中間層元件，而且必須使用 Kerberos 驗證，則必須為 IIS 手動註冊 SPN。 如需詳細資訊，請參閱＜ [如何設定 SQL Server 2008 Analysis Services 和 SQL Server 2005 Analysis Services 使用 Kerberos 驗證](http://support.microsoft.com/kb/917409)＞(機器翻譯) 中的＜對執行 IIS 的電腦進行設定＞。  
+ 根據方案需求，您可能已經設定使用 HTTP 存取 Analysis Services。 如果您的方案包含 IIS 做為中間層元件，而且必須使用 Kerberos 驗證，則必須為 IIS 手動註冊 SPN。 如需詳細資訊，請參閱 [設定執行 IIS 的電腦上的設定]，在[如何設定 SQL Server 2008 Analysis Services 和 SQL Server 2005 Analysis Services 使用 Kerberos 驗證](https://support.microsoft.com/kb/917409)。  
   
  為 Analysis Services 執行個體註冊 SPN 時，設定要使用 TCP 還是 HTTP 來存取執行個體並沒有差異。 使用 MSMDPUMP ISAPI 擴充程式從 IIS 連接至 Analysis Services 時，通訊協定一律是 TCP。  
   
@@ -167,16 +167,16 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
  Analysis Services 執行個體只能接聽單一通訊埠， 因此不支援使用多個通訊埠。 如需通訊埠組態的詳細資訊，請參閱＜ [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [Microsoft BI 驗證及識別委派](http://go.microsoft.com/fwlink/?LinkID=286576)   
- [使用 Kerberos 進行相互驗證](http://go.microsoft.com/fwlink/?LinkId=299283)   
- [如何設定 SQL Server 2008 Analysis Services 和 SQL Server 2005 Analysis Services 使用 Kerberos 驗證](http://support.microsoft.com/kb/917409)   
- [服務主體名稱 (Spn) SetSPN 語法 (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
- [請勿使用何種 SPN，以及如何其運作？](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
- [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
- [服務帳戶的逐步指南](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
+ [Microsoft BI 驗證及識別委派](https://go.microsoft.com/fwlink/?LinkID=286576)   
+ [使用 Kerberos 進行相互驗證](https://go.microsoft.com/fwlink/?LinkId=299283)   
+ [如何設定 SQL Server 2008 Analysis Services 和 SQL Server 2005 Analysis Services 使用 Kerberos 驗證](https://support.microsoft.com/kb/917409)   
+ [服務主體名稱 (SPN) SetSPN 語法 (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [我應使用何種 SPN？其運作方式為何？](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [SetSPN](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
+ [服務帳戶的逐步指南](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
  [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [如何設定 Internet Information Services 上裝載的 Web 應用程式時使用 Spn](http://support.microsoft.com/kb/929650)   
- [什麼是服務帳戶的新功能](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
- [設定適用於 SharePoint 2010 產品 （白皮書） 的 Kerberos 驗證](http://technet.microsoft.com/library/ff829837.aspx)  
+ [在設定 Internet Information Services 所裝載的 Web 應用程式時如何使用 SPN](https://support.microsoft.com/kb/929650)   
+ [什麼是服務帳戶的新功能](https://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
+ [設定適用於 SharePoint 2010 產品的 Kerberos 驗證 (白皮書)](https://technet.microsoft.com/library/ff829837.aspx)  
   
   

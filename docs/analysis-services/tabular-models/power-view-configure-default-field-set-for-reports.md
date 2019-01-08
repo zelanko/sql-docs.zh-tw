@@ -1,5 +1,5 @@
 ---
-title: 設定 Power View 報表的預設欄位集 |Microsoft 文件
+title: 在 Analysis Services 中設定 Power View 報表的預設欄位集 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 32d8d9c4acbc1c5eae47e90709c4ffdedd269f11
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4b8549a384b8eb0e7625d354ccf4d5c4e8b5e664
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041852"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072055"
 ---
 # <a name="power-view---configure-default-field-set-for-reports"></a>Power View-設定報表的預設欄位集
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -41,6 +41,6 @@ ms.locfileid: "34041852"
 6.  針對活頁簿中的其他資料表重複這些步驟。  
   
 ## <a name="next-step"></a>下一個步驟  
- 您建立預設欄位集之後，可以透過指定預設標籤、預設影像、預設群組行為，或包含相同值的資料列是否群組在一資料列或是個別列出，進一步影響報表設計體驗。 如需詳細資訊，請參閱[Power View 報表的設定資料表行為屬性](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)。  
+ 您建立預設欄位集之後，可以透過指定預設標籤、預設影像、預設群組行為，或包含相同值的資料列是否群組在一資料列或是個別列出，進一步影響報表設計體驗。 如需詳細資訊，請參閱 < [Power View 報表的設定資料表行為屬性](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)。  
   
   

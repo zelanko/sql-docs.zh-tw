@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.checkconstraint
@@ -12,12 +12,12 @@ ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f1840adadfe059939563dd2945db2883345fc51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d41cc9f3b52c0c5e70ead6b93c0b929ef521f673
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204978"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763750"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>檢查條件約束對話方塊 (Visual Database Tools)
   當您在資料表設計工具的資料表定義方格上按一下滑鼠右鍵，再按 [檢查條件約束] 時，這個對話方塊便會出現。 此對話方塊包含一組附加至資料庫資料表的非唯一條件約束的屬性。 套用至唯一條件約束的屬性會出現在 [索引/索引鍵] 對話方塊中。  
@@ -48,7 +48,7 @@ ms.locfileid: "48204978"
  顯示已選取之檢查條件約束的名稱。 若要變更這個條件約束的名稱，請直接在屬性欄位中輸入文字。  
   
  **說明**  
- 描述此檢查條件約束。 您可以在屬性欄位中鍵入來編輯說明，或按一下屬性欄位右方的省略符號按鈕 (**…**)，編輯 [描述屬性] 對話方塊中的說明。  
+ 描述此檢查條件約束。 您可以在屬性欄位中鍵入來編輯描述，或按一下屬性欄位右側的省略符號按鈕 (**...**)，並編輯 [描述屬性] 對話方塊中的描述。  
   
  **資料表設計工具類別目錄**  
  展開以顯示 [檢查建立或重新啟用時的現有資料]、[於 INSERT 及 UPDATE 時強制套用] 與 [強制複寫] 的屬性。  

@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f8a5dc68eed10ea6afce1a1aa0f75c2c2e9e09a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50cf289af9c2b29f7239596ff04102308048456b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764666"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502294"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server 共用管理物件 (SMO) 授權條款
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47764666"
 &nbsp;&nbsp;**a.  可散布程式碼。**
 
 &nbsp;&nbsp;&nbsp;&nbsp;**i.  使用及散布權利。若　貴用戶遵守以下條款：**
-*   貴用戶得於所開發的程式中以目的碼形式複製與散布軟體 (以下稱「可散布程式碼」)； 以及
+*   您可以複製並散發軟體 （「 可散發程式碼 」） 的目的碼形式; 開發的程式中和
 *   貴用戶得同意程式經銷商將「可散布程式碼」視為　貴用戶之程式的一部分，進行複製與散布。
 
 &nbsp;&nbsp;&nbsp;&nbsp;**ii. 散布要件。針對　貴用戶散布的任何「可散布程式碼」，　貴用戶必須**
@@ -55,11 +55,11 @@ ms.locfileid: "47764666"
 * 針對任何可散發程式碼的.dll 檔案的副檔名，將只能透過您的程式; 之連結器執行這類可散發程式碼的結果
 * 要求散布者及外部終端使用者同意保護可散布程式碼的程度不得低於本合約之相關條款； 
 * 在程式中顯示有效的著作權標示；以及
-* 若因散布或使用 貴用戶之程式而使 Microsoft 遭他人提出索賠時， 貴用戶應賠償 Microsoft 之損失 (包括律師費)，使之免遭損害，並出面代為辯護。
+* 賠償、 保護和維護 microsoft 免於任何宣告，包括律師費用、 與散布或使用您的程式。
 
 &nbsp;&nbsp;&nbsp;&nbsp;**iii.散布限制。貴用戶不得**
 * 變更可散布程式碼中之任何著作權、商標或專利聲明；
-* 於　貴用戶的程式名稱使用 Microsoft 的商標，或暗示程式來自 Microsoft 或經由 Microsoft 背書；
+* 使用 Microsoft 的商標，在您的程式名稱或暗示程式來自 microsoft 或會經由 Microsoft 背書;
 * 將可散布程式碼置於惡意、欺騙或違法的程式中；或
 * 修改或散布任何可散布程式碼的原始碼，使其任何部分受到除外授權之約束。 除外授權係指在使用、修改或散布時，應遵守下列條件
   * 程式碼必須以原始碼形式揭露或散布；或
@@ -81,7 +81,7 @@ ms.locfileid: "47764666"
 
 **7.  出口限制。** 本軟體受到美國出口法令規定之規範。 貴用戶必須遵守適用於軟體之一切本國及國際出口法規。 這些法規包括目的地限制、終端使用者限制和終端使用用途限制。 如需詳細資訊，請參閱 www.microsoft.com/exporting。
 
-**8.  支援服務。** 由於本軟體係依「現況」提供，本公司可能不提供該軟體之支援服務。
+**8.  支援服務。** 由於此軟體是 「 現狀 」，我們可能不會提供支援服務。
 
 **9.  整份合約**。 本合約以及　貴用戶所使用的增補程式、更新程式、網際網路服務和支援服務之條款構成關於軟體和支援服務之整份合約。
 
@@ -95,7 +95,7 @@ ms.locfileid: "47764666"
 
 **12. 不為瑕疵擔保之聲明。本軟體僅以「現況」授權。　貴用戶應自行承擔使用本軟體的風險。MICROSOFT 不提供明示擔保、保證或條件。　貴用戶所在地區的法律可能會提供額外的消費者權利或法定保證，而這些額外的消費者權利是本合約無法改變的。在　貴用戶所屬之當地法律許可下，Microsoft 可排除適售性、適合某特定用途或未侵權之默示擔保責任。**
 
-**適用於澳大利亞 –　貴用戶依據澳大利亞消費者法律 (Australian Consumer Law) 享有法定保證，本合約條款並不意圖影響該些權利。**
+**適用於澳大利亞-您享有法定保證，澳洲消費者法律，和任何條款試圖影響這些權利。**
 
 **13. 救濟權與損害賠償責任之限制與排除。　貴用戶僅得就直接損害，要求 MICROSOFT 及其供應商負擔損害賠償責任，且其金額不得超過 $5.00 美元。　貴用戶無法就其他損害 (包括衍生性損害、利潤損失、特殊損害、間接損害或附隨性損害) 請求損害賠償。**
 這項限制適用於

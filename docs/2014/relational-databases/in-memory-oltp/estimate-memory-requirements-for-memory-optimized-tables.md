@@ -10,15 +10,15 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3471abb7a551de576dfdf01de2a5fcf980b60527
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37931bd25b0a2024e555a7881397fd558d2f260a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061268"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509233"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估計記憶體最佳化資料表的記憶體需求
-  不論是建立新的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體最佳化資料表或將現有的磁碟資料表移轉至記憶體最佳化資料表，都應合理估計每個資料表所需的記憶體，才能佈建記憶體充足的伺服器。 本節描述如何估計保存記憶體最佳化資料表的資料所需的記憶體數目。  
+  無論您要建立新[!INCLUDE[hek_2](../../includes/hek-2-md.md)]記憶體最佳化的資料表或將現有磁碟型資料表移轉至記憶體最佳化資料表中，務必要有適當地估計的每個資料表的記憶體需求，因此您可以佈建的伺服器具有足夠記憶體。 本節描述如何估計保存記憶體最佳化資料表的資料所需的記憶體數目。  
   
  如果您想從磁碟資料表移轉至記憶體最佳化資料表，請在進行本主題之前，先參閱 [判斷是否應將資料表或預存程序匯出至記憶體中 OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 主題，以取得最適合移轉之資料表的指引。 [移轉至 In-Memory OLTP](migrating-to-in-memory-oltp.md) 底下的所有主題，提供從磁碟資料表移轉至記憶體最佳化資料表的指引。  
   
@@ -115,7 +115,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  如需雜湊索引在 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體最佳化資料表中運作方式的相關資訊，請參閱 [雜湊索引](../../database-engine/hash-indexes.md)。  
   
- **注意：** 您無法變更即時雜湊索引陣列大小。 若要變更雜湊索引陣列大小，您必須卸除資料表、變更 bucket_count 值，然後重新建立資料表。  
+ **注意：** 您無法立即變更雜湊索引陣列大小。 若要變更雜湊索引陣列大小，您必須卸除資料表、變更 bucket_count 值，然後重新建立資料表。  
   
  **設定雜湊索引陣列大小**  
   

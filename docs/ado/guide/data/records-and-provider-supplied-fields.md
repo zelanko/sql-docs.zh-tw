@@ -14,12 +14,12 @@ ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3eb100042c36d86d604d48e716023dc0c0c4b04c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c64555e0035de8a06d3bb9227262f4202f73f9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679966"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538037"
 ---
 # <a name="records-and-provider-supplied-fields"></a>記錄和提供者提供的欄位
 當[記錄](../../../ado/reference/ado-api/record-object-ado.md)開啟物件、 其來源可以是已開啟的目前資料列[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，絕對 URL 或開啟搭配的相對 URL[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件.  
@@ -41,7 +41,7 @@ ms.locfileid: "47679966"
 ## <a name="special-fields-for-document-source-providers"></a>文件的特殊欄位來源提供者  
  是特殊類別的提供者，呼叫*文件來源提供者*、 管理資料夾和文件。 當**記錄**物件表示文件或**資料錄集**物件表示文件的資料夾、 文件的來源提供者會填入這些物件具有一組唯一的描述欄位文件的特性而是實際文件本身。 一般而言，一個欄位包含的參考**Stream**表示的文件。  
   
- 這些欄位會構成資源**記錄**或是**資料錄集**並列出支援中的特定提供者[附錄 a： 提供者](../../../ado/guide/appendixes/appendix-a-providers.md)。  
+ 這些欄位會構成資源**記錄**或是**資料錄集**並列出特定提供者支援在[附錄 a:提供者](../../../ado/guide/appendixes/appendix-a-providers.md)。  
   
  兩個常數索引**欄位**的資源集合**記錄**或是**資料錄集**擷取有兩個常用的欄位。 **欄位**物件[值](../../../ado/reference/ado-api/value-property-ado.md)屬性會傳回所需的內容。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47679966"
 |RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|唯讀。 表示資源，也就是串連 PARENTNAME 和 PARSENAME 絕對的 URL。|  
 |RESOURCE_ISHIDDEN|adBoolean|如果資源已隱藏，則為 true。 除非明確地建立資料列集的命令會選取其中 RESOURCE_ISHIDDEN 為 True 的資料列，則會不傳回任何資料列。|  
 |RESOURCE_ISREADONLY|adBoolean|如果資源是唯讀，則為 true。 嘗試開啟此資源 DBBINDFLAG_WRITE 與將會失敗並 DB_E_READONLY。 可以編輯這個屬性，即使資源只開啟進行讀取。|  
-|RESOURCE_CONTENTTYPE|AdVarWChar|表示文件的可能用法，例如諮詢法律顧問的簡短。 這可能會對應至 Office 範本用來建立文件。|  
+|RESOURCE_CONTENTTYPE|AdVarWChar|表示文件的可能用法-例如諮詢法律顧問的簡短。 這可能會對應至 Office 範本用來建立文件。|  
 |RESOURCE_CONTENTCLASS|AdVarWChar|表示 MIME 類型的文件，表示的格式，例如"`text/html`」。|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|表示用來儲存內容的語言。|  
 |RESOURCE_CREATIONTIME|adFileTime|唯讀。 指示 FILETIME 結構，其中包含已建立資源的時間。 被報告的時間，格式為 Coordinated Universal Time (UTC)。|  

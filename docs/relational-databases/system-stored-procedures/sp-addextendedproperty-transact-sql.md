@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1eced8802504704506402d2ffb75609a096cb51a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40437cd27af345aff91314f07888c66e2bdff2d0
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689216"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321744"
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,14 +66,13 @@ sp_addextendedproperty
  有效輸入如下：ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE、PLAN GUIDE 和 NULL。  
   
 > [!IMPORTANT]  
->  將 USER 指定為層級 1 類型物件擴充屬性中之層級 0 類型的功能，將在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中移除。 請改用 SCHEMA 做為層級 0 類型。 例如，在資料表上定義擴充屬性時，請指定資料表的結構描述代替使用者名稱。 將 TYPE 指定為層級 0 類型的功能，將在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中移除。 如果是 TYPE，請使用 SCHEMA 當做層級 0 類型，並使用 TYPE 當做層級 1 類型。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將 USER 指定為層級 1 類型物件擴充屬性中之層級 0 類型的功能，將在未來的 版本中移除。 請改用 SCHEMA 做為層級 0 類型。 例如，在資料表上定義擴充屬性時，請指定資料表的結構描述代替使用者名稱。 將 TYPE 指定為層級 0 類型的功能，將在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中移除。 如果是 TYPE，請使用 SCHEMA 當做層級 0 類型，並使用 TYPE 當做層級 1 類型。  
   
  [ @level0name=] {'*level0_object_name&lt*'}  
  這是所指定之層級 0 物件類型的名稱。 *level0_object_name&lt*已**sysname**預設值是 NULL。  
   
  [ @level1type=] {'*level1_object_type&lt*'}  
- 這是層級 1 物件的類型。 *level1_object_type&lt*已**varchar(128)**，預設值是 NULL。 有效輸入如下：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
-  
+ 這是層級 1 物件的類型。 *level1_object_type&lt*已**varchar(128)**，預設值是 NULL。 有效輸入如下，彙總、 預設、 函式、 LOGICAL FILE NAME、 程序、 佇列、 規則、 序列、 同義字、 資料表、 TABLE_TYPE、 類型、 檢視、 XML SCHEMA COLLECTION 和 NULL。    
  [ @level1name=] {'*level1_object_name&lt*'}  
  這是所指定之層級 1 物件類型的名稱。 *level1_object_name&lt*已**sysname**，預設值是 NULL。  
   
@@ -87,7 +86,7 @@ sp_addextendedproperty
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 為了指定擴充屬性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的物件分為三種層級：0、1 與 2。 層級 0 是最高層級，且定義為包含在資料庫範圍的物件。 層級 1 物件包含在結構描述或使用者範圍中，層級 2 物件包含在層級 1 物件中。 任何這些層級的物件都可以定義擴充屬性。  
+ 為了指定擴充屬性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的物件分為三種層級：0、1 和 2。 層級 0 是最高層級，且定義為包含在資料庫範圍的物件。 層級 1 物件包含在結構描述或使用者範圍中，層級 2 物件包含在層級 1 物件中。 任何這些層級的物件都可以定義擴充屬性。  
   
  對一個層級中物件的參考必須用擁有或包含其較高層級物件的名稱來限定。 例如，當您將擴充屬性加入至資料表資料行 (層級 2) 時，您也必須指定包含該資料行的資料表名稱 (層級 1) 和包含該資料表的結構描述 (層級 0)。  
   

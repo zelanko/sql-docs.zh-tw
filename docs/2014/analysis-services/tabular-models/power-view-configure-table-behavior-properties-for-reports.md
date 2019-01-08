@@ -13,12 +13,12 @@ ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7a4d0b4c7bcb7867eb58618c3860d2e50ddfeccc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84060846dc19862e057e55e4096df7e97fa4d825
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219238"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352886"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>設定 Power View 報表的資料表行為屬性 (SSAS 表格式)
   如果您要將表格式模型當作 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 的資料模型使用，可以設定資料表行為屬性，在更細微的層級公開詳細資料列。 設定資料表行為屬性會變更詳細資料列的群組行為，並讓識別資訊 (例如姓名、相片識別碼或標誌影像) 在圖格、卡片和圖表版面配置中有更好的預設位置。  
@@ -41,7 +41,7 @@ ms.locfileid: "48219238"
 -   **預設影像** ：指定哪個資料行提供代表資料列資料的影像 (例如員工記錄的相片識別碼)。  
   
 > [!NOTE]  
->  請參閱下列章節，以了解從特定呈現格式觀點來最佳化配置的方式：  [為特定配置最佳化](#bkmk_optimizeforlayout)。  
+>  請參閱下列章節，以配置最佳化的方式觀點來看從特定呈現格式：[為特定配置最佳化](#bkmk_optimizeforlayout)。  
   
 ## <a name="opening-the-table-behavior-dialog-box"></a>開啟資料表行為對話方塊  
   
@@ -52,11 +52,11 @@ ms.locfileid: "48219238"
 3.  在 [資料表行為] 對話方塊中，設定 [資料列識別碼]，然後在此對話方塊中指定其他屬性。  
   
 ## <a name="setting-the-row-identifier-property"></a>設定資料列識別碼屬性  
- 在資料表內，資料列識別碼會指定只包含唯一值且沒有空白值的單一資料行。 [資料列識別碼] 屬性是用來變更群組，使其不根據資料列的欄位組成，而是根據永遠用來唯一識別資料列的固定資料行 (無論特定報表配置中使用的欄位為何)。  
+ 在資料表內，資料列識別碼會指定只包含唯一值且沒有空白值的單一資料行。 資料列識別碼屬性用來變更群組，使其不根據上一個資料列欄位組成，但一律會用來唯一識別資料列，無論特定報表配置中使用的欄位的固定資料行上，而不是。  
   
  設定此屬性會將預設群組行為從動態群組變更為固定群組行為，前者根據畫布中出現的資料行，後者則會根據資料列識別碼進行摘要。 變更預設群組行為與報表配置相關，例如針對資料列中的每個資料行進行群組 (或顯示小計) 的矩陣。  
   
- 在 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 中設定資料列識別碼會啟用下列其他屬性：[保留唯一資料列] 屬性、[預設標籤] 屬性和 [預設影像] 屬性。  
+ 在  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，設定資料列識別碼會啟用下列額外屬性：**保留唯一資料列**屬性，**預設標籤**屬性，以及**Default Image**屬性。  
   
  您也可以單獨使用 [資料列識別碼] 屬性，以啟用下列功能：  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48219238"
  藉由設定 [保留唯一資料列] 屬性，您可以指定每當加入至報表畫布時，一或多個永遠應該重複的資料行，即使有重複的例項也一樣。 與資料列相關聯的計算值現在會根據每個個別的資料列來配置，而不積存至單一資料列。 當您為 [保留唯一資料列] 屬性選擇資料行時，請選擇包含唯一值或幾乎是唯一值的資料行。  
   
 > [!NOTE]  
->  因為使用者選取的資料行會影響群組，因而變更運算式計算的篩選內容，所以模型設計人員必須費心思，建立可傳回正確結果的量值。 如需詳細資訊，請參閱 [Power View 常見問題集](http://go.microsoft.com/fwlink/?LinkId=220674)。  
+>  因為使用者選取的資料行會影響群組，因而變更運算式計算的篩選內容，所以模型設計人員必須費心思，建立可傳回正確結果的量值。 如需詳細資訊，請參閱 [Power View 常見問題集](https://go.microsoft.com/fwlink/?LinkId=220674)。  
   
 ## <a name="setting-a-default-label"></a>設定預設標籤  
  此屬性會指定在圖格報表的導覽帶中顯示的標籤。 與預設影像一起使用時，預設標籤會出現在影像之下。 如果沒有影像，則會顯示預設標籤本身。 選擇預設標籤時，請選擇最能傳達資料列資訊的資料行 (例如姓名)。  
@@ -130,7 +130,7 @@ ms.locfileid: "48219238"
   
  ![根據預設在欄位層級群組的圖表](../media/ssas-rptprop-chartfieldgroup.gif "圖表會根據預設在欄位層級群組")  
   
- **之後：群組行為根據資料列識別碼 (資料列識別碼變成軸)**  
+ **之後：群組行為根據資料列識別碼 （資料列識別碼變成軸）**  
   
  ![根據資料列識別碼群組的圖表](../media/ssas-rptprop-chartrowid.gif "圖表會根據資料列識別碼群組")  
   

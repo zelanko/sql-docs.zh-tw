@@ -13,46 +13,46 @@ ms.assetid: 0de4995c-85ec-4d4c-aaef-fbd30edfb20f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fc501bc9a6fee37551166e7d72c39ca58a10e23b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbec3514c7910896e35690be8262b006325f3ef7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098652"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372800"
 ---
 # <a name="run-a-reporting-services-script-file"></a>執行 Reporting Services 指令碼檔案
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 指令碼檔案是使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 指令碼環境 (RS.exe)，從命令提示字元執行。 RS.exe 包含多個命令提示字元引數供您使用。 如需命令提示字元選項的詳細資訊，請參閱 [RS.exe 公用程式 &#40;SSRS&#41;](rs-exe-utility-ssrs.md)。 如需其他指令碼範例，請參閱 [SQL Server Reporting Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 指令碼檔案是使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 指令碼環境 (RS.exe)，從命令提示字元執行。 RS.exe 包含多個命令提示字元引數供您使用。 如需命令提示字元選項的詳細資訊，請參閱 [RS.exe 公用程式 &#40;SSRS&#41;](rs-exe-utility-ssrs.md)。 如需其他指令碼範例，請參閱 [SQL Server Reporting Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
   
 ## <a name="sample-command-lines"></a>範例命令列  
   
 -   在指令碼環境中執行 Script.rss 以指定目標報表伺服器。 預設會套用 Windows 驗證：  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver  
+    rs -i Script.rss -s http://servername/reportserver  
     ```  
   
 -   在指令碼環境中執行 Script.rss 以指定驗證 Web 服務呼叫的使用者名稱和密碼：  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -u myusername -p mypassword  
+    rs -i Script.rss -s http://servername/reportserver -u myusername -p mypassword  
     ```  
   
 -   在指令碼環境中執行 Script.rss 以指定 30 秒的伺服器逾時：  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -l 30  
+    rs -i Script.rss -s http://servername/reportserver -l 30  
     ```  
   
 -   在指令碼環境中執行 Script.rss 以指定稱為 *report*的全域指令碼 (Global Script) 變數。  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -v report="Company Sales"  
+    rs -i Script.rss -s http://servername/reportserver -v report="Company Sales"  
     ```  
   
 -   在指令碼環境中執行 Script.rss 以指定指令碼檔案中的 Web 服務作業以批次方式執行。  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -b  
+    rs -i Script.rss -s http://servername/reportserver -b  
     ```  
   
 ## <a name="see-also"></a>另請參閱  

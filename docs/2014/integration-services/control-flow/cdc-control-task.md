@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdccontroltask.f1
@@ -13,12 +12,12 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f178c968a6460841e12aa3d0e675bc7f4de56e2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbac13f1d65a984a90ffbeb3ee0b1ae4e0cec719
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086368"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376080"
 ---
 # <a name="cdc-control-task"></a>CDC 控制工作
   CDC 控制工作是用來控制異動資料擷取 (CDC) 封裝的開發週期。 它會處理 CDC 封裝與初始載入封裝的同步處理，以及 CDC 封裝執行中所處理之記錄序號 (LSN) 範圍的管理。 此外，CDC 控制工作也會處理錯誤狀況和復原。  
@@ -29,7 +28,7 @@ ms.locfileid: "48086368"
   
  下列作業會處理初始載入和變更處理的同步處理：  
   
-|作業|描述|  
+|運算|描述|  
 |---------------|-----------------|  
 |ResetCdcState|此作業是用來重設與目前 CDC 內容相關聯的永續性 CDC 狀態。 執行此作業之後，LSN 時間戳記 `sys.fn_cdc_get_max_lsn` 資料表中的目前最大 LSN 就會變成下一個處理範圍的範圍開頭。 此作業需要來源資料庫的連接。|  
 |MarkInitialLoadStart|在初始載入封裝開始時使用此作業，以便在初始載入封裝開始讀取來源資料表之前記錄來源資料庫中目前的 LSN。 這需要來源資料庫的連接，以呼叫 `sys.fn_cdc_get_max_lsn`。<br /><br /> 如果您在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (亦即，非 Oracle) 上工作時選取了 MarkInitialLoadStart，連線管理員中指定的使用者就必須是 db_owner 或系統管理員。|  
@@ -38,19 +37,19 @@ ms.locfileid: "48086368"
   
  下列作業用來管理處理範圍：  
   
-|作業|描述|  
+|運算|描述|  
 |---------------|-----------------|  
 |GetProcessingRange|此作業是在叫用使用 CDC 來源資料流程的資料流程之前使用。 叫用此作業時，它會建立 CDC 來源資料流程所讀取的 LSN 範圍。 此範圍會儲存在資料流程處理期間 CDC 來源所使用的 SSIS 封裝變數中。<br /><br /> 如需儲存之狀態的詳細資訊，請參閱 [定義狀態變數](../data-flow/define-a-state-variable.md)。|  
-|MarkProcessedRange|在每個 CDC 執行之後 (CDC 資料流程順利完成之後) 執行此作業，以便記錄 CDC 執行期間完整處理的最後一個 LSN。 下次執行 GetProcessingRange 時，這個位置就是下一個處理範圍的開頭。|  
+|MarkProcessedRange|所解碼的字元：每個 CDC 執行 （CDC 資料流程順利完成） 之後，記錄 CDC 回合已完全處理的最後一個 LSN 之後執行這項作業。 下次執行 GetProcessingRange 時，這個位置就是下一個處理範圍的開頭。|  
   
 ## <a name="handling-cdc-state-persistency"></a>處理 CDC 狀態持續性  
  CDC 控制工作會在啟動之間維護永續性狀態。 儲存在 CDC 狀態中的資訊用來決定及維護 CDC 封裝的處理範圍，以及用於偵測錯誤狀態。 永續性狀態儲存為字串。 如需詳細資訊，請參閱 [定義狀態變數](../data-flow/define-a-state-variable.md)。  
   
  CDC 控制工作支援兩種狀態持續性類型。  
   
--   手動狀態持續性：在此情況下，CDC 控制工作會管理儲存在封裝變數中的狀態，但是封裝開發人員必須在呼叫 CDC 控制之前從永續性存放區讀取變數，然後在最後一次呼叫 CDC 控制而且 CDC 執行完成之後將變數寫回該永續性存放區。  
+-   手動狀態持續性：在此情況下，CDC 控制工作管理封裝變數中儲存的狀態，但封裝開發人員必須在呼叫 CDC 控制之前從持續性存放區中讀取變數，並接著呼叫最後一個 CDC 控制之後回該永續性存放區的寫入和 CDC 回合完成。  
   
--   自動狀態持續性：CDC 狀態會儲存在資料庫資料表中。 此狀態是在 **[要用於儲存狀態的資料表]** 屬性 (位於儲存狀態的選定連接管理員) 所指名資料表中， **StateName** 屬性所提供的名稱下儲存。 預設是來源連接管理員，但常見作法是將它做為目標連接管理員。 CDC 控制工作會更新狀態資料表中的狀態值，並認可此值做為環境交易的一部分。  
+-   自動狀態持續性：CDC 狀態會儲存在資料庫中的資料表。 此狀態是在 **[要用於儲存狀態的資料表]** 屬性 (位於儲存狀態的選定連接管理員) 所指名資料表中， **StateName** 屬性所提供的名稱下儲存。 預設是來源連接管理員，但常見作法是將它做為目標連接管理員。 CDC 控制工作會更新狀態資料表中的狀態值，並認可此值做為環境交易的一部分。  
   
 ## <a name="error-handling"></a>錯誤處理  
  在下列情況下，CDC 控制工作可能會報告錯誤：  
@@ -79,10 +78,10 @@ ms.locfileid: "48086368"
   
 ## <a name="related-content"></a>相關內容  
   
--   social.technet.microsoft.com 上的技術文章： [安裝 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](http://go.microsoft.com/fwlink/?LinkId=252958)。  
+-   social.technet.microsoft.com 上的技術文章： [安裝 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252958)。  
   
--   social.technet.microsoft.com 上的技術文章： [疑難排解 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity 中的組態問題](http://go.microsoft.com/fwlink/?LinkId=252960)。  
+-   social.technet.microsoft.com 上的技術文章： [疑難排解 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity 中的組態問題](https://go.microsoft.com/fwlink/?LinkId=252960)。  
   
--   social.technet.microsoft.com 上的技術文章： [疑難排解 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity 中的 CDC 執行個體錯誤](http://go.microsoft.com/fwlink/?LinkId=252961)。  
+-   social.technet.microsoft.com 上的技術文章： [疑難排解 Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity 中的 CDC 執行個體錯誤](https://go.microsoft.com/fwlink/?LinkId=252961)。  
   
   

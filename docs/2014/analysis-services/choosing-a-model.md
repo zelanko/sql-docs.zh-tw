@@ -17,12 +17,12 @@ ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4cbde25ffc504e2e2c41bcf6b46cde9d464daa7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d91e282ebfe0299fd6015530e8af1b6d10e6547
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113288"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400511"
 ---
 # <a name="choosing-a-model"></a>選擇模型
   **採礦演算法：** 資料採礦*演算法*是從資料建立模式的機制。 此演算法會定義資料的計算方式、關聯性的衍生方式以及模式的儲存方式。 演算法的選擇部分取決於您想要分析的資料類型。 例如，有些演算法只能搭配連續數字使用，有些演算法則最適合與有限數目的相異值搭配使用。  
@@ -39,7 +39,7 @@ ms.locfileid: "48113288"
   
 -   *節點*在網路中，以連接*邊緣*。 這些節點表示項目或項目群組。 邊緣會根據節點間關聯的強度來計分。  
   
- **使用模型：** 之後建立的模型，您可以使用提供的檢視器來探索它，或是您可以針對模型建立查詢。 查詢可用於：  
+ **使用模型：** 您已建立模型之後，您可以使用提供的檢視器來探索它，或您可以針對模型建立查詢。 查詢可用於：  
   
 -   預測未來值。  
   

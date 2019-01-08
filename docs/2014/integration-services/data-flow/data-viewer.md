@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataviewer.f1
@@ -15,12 +14,12 @@ ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e4744860e9a220771374863be2bfd4138b2f553f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d310dfc5add8771ae0369da46eb42095f2f36a17
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156848"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790490"
 ---
 # <a name="data-viewer"></a>資料檢視器
   如果路徑設定為使用資料檢視器，當資料在資料流程元件之間移動時，資料檢視器會一一顯示緩衝區的資料。  

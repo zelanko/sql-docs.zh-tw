@@ -1,5 +1,5 @@
 ---
-title: 新增 SQLRUserGroup 作為資料庫使用者 （SQL Server 機器學習服務） |Microsoft Docs
+title: 新增 SQLRUserGroup 作為資料庫使用者-SQL Server Machine Learning 服務
 description: 對於使用隱含的驗證的回送連線，新增 SQLRUserGroup 作為資料庫使用者，使背景工作帳戶可以登入伺服器上，以傳回給呼叫使用者的身分識別轉換。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4685288eb383c486556efba1eb4861ca9d708c0f
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: abd0745126a4f2a23cf559500b93d2fa53fa2cf9
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419083"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432351"
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>新增 SQLRUserGroup 作為資料庫使用者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

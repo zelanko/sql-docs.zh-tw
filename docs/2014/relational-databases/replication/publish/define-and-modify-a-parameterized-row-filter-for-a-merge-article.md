@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/02/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], defining
@@ -19,17 +18,17 @@ ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef51e4b20fb96f76bbcfa8e9f5a2d4dccaa75d42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 86a96f938a036edf39b3602278f9b6b6d2d46719
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116384"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771660"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>針對合併發行項定義及修改參數化資料列篩選
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定義及修改參數化資料列篩選。  
   
- 在建立資料表發行項時，您可以使用參數化資料列篩選器。 這些篩選器會使用 [WHERE](/sql/t-sql/queries/where-transact-sql) 子句來選取要發行的適當資料。 您可以指定下列系統函數的其中之一或兩者，而不要在子句中指定常值 (如同處理靜態資料列篩選)： [SUSER_SNAME](/sql/t-sql/functions/suser-sname-transact-sql) 和 [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql)。 如需詳細資訊，請參閱 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)。  
+ 在建立資料表發行項時，您可以使用參數化資料列篩選器。 這些篩選器會使用 [WHERE](/sql/t-sql/queries/where-transact-sql) 子句來選取要發行的適當資料。 您可以指定以下系統函數的其中一個或兩個，而不要在子句中指定常值 (如同對靜態資料列篩選的處理一樣)：[SUSER_SNAME](/sql/t-sql/functions/suser-sname-transact-sql)並[HOST_NAME](/sql/t-sql/functions/host-name-transact-sql)。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, what's new
@@ -15,12 +14,12 @@ ms.assetid: c8642a96-3a09-4ec7-a9c3-c539147e6330
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 92e363dacc893931073fb53e64db539ecb8b1775
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c48c3aac77d845fba9df72819bc0503eca337ce9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206164"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752060"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>SQL Server 安裝的新增功能
   Windows Vista 不是 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 支援的作業系統。 Service Pack 1 會保留 [!INCLUDE[win7](../../includes/win7-md.md)] 和 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 作業系統的最低需求。 如需有關作業系統需求的詳細資訊，請參閱 <<c0> [ 硬體和軟體需求，安裝 SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)。  

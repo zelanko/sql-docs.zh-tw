@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: table-view-index
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partitioned tables [SQL Server], about partitioned tables
@@ -15,12 +15,12 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8d3342c6a45b705c72c113f58bde7d8df2ae71c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 946b447b974be9c24403957681f26df627094084
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229818"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353405"
 ---
 # <a name="partitioned-tables-and-indexes"></a>分割資料表與索引
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援資料表和索引資料分割。 資料分割資料表和索引的資料，已分成可以在資料庫中的多個檔案群組之間分佈的單位。 資料是以水平方式分割，因此資料列的群組可對應至個別的資料分割。 單一索引或資料表的所有分割區必須在同一個資料庫中。 在資料上執行查詢或更新時，資料表或索引會被視為單一邏輯實體。 並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用資料分割資料表和索引。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
@@ -45,13 +45,13 @@ ms.locfileid: "48229818"
  下列詞彙適用於資料表和索引資料分割。  
   
  分割區函數  
- 一種資料庫物件，可定義資料表或索引的資料列如何根據某些資料行 (稱為分割資料行) 的值對應至資料分割集。 也就是說，分割區函數會定義資料表擁有的分割區數目，以及分割區界限的定義方式。 比方說，如果資料表包含銷售訂單資料，您可能想要將資料表分割為 12 個 （每月） 分割區，根據`datetime`例如銷售日期的資料行。  
+ 一種資料庫物件，可定義資料表或索引的資料列如何根據某些資料行 (稱為分割資料行) 的值對應至資料分割集。 也就是說，分割區函數會定義資料表擁有的分割區數目，以及分割區界限的定義方式。 例如，如果資料表包含銷售訂單資料，您可能想要根據 `datetime` 資料行 (例如銷售日期) 將資料表分割為 12 個 (每月) 分割區。  
   
  分割區配置  
  將分割區函數的資料分割對應至一組檔案群組的資料庫物件。 將分割區放在不同檔案群組的主要理由是可以確保能夠對分割區獨立執行備份作業。 這是因為您可以對個別檔案群組執行備份。  
   
  資料分割資料行  
- 分割區函數用於分割資料表或索引的資料表或索引資料行。 參與分割區函數的計算資料行必須明確地標示為 PERSISTED。 索引資料行可用來當做資料分割的資料行，除了做為所有的資料類型的有效值`timestamp`。 無法指定 `ntext`、`text`、`image`、`xml`、`varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 資料類型。 此外，也無法指定 Microsoft .NET Framework Common Language Runtime (CLR) 使用者定義型別及別名資料類型資料行。  
+ 分割區函數用於分割資料表或索引的資料表或索引資料行。 參與分割區函數的計算資料行必須明確地標示為 PERSISTED。 所有適用於做為索引資料行的資料類型都可以做為分割資料行，但 `timestamp` 除外。 無法指定 `ntext`、`text`、`image`、`xml`、`varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 資料類型。 此外，也無法指定 Microsoft .NET Framework Common Language Runtime (CLR) 使用者定義型別及別名資料類型資料行。  
   
  對齊的索引  
  在與對應資料表相同的分割區配置上建立的索引。 資料表與其索引對齊時，SQL Server 可以在維護資料表及其索引之分割區結構的同時，快速且有效地切換分割區。 索引不需要參與相同的具名分割區函數，即可對齊其基底資料表。 不過，索引和基底資料表的分割區函數本質上必須相同，也就是說 1) 這兩種分割區函數的引數具有相同的資料類型，2) 它們都定義相同數目的分割區，3) 對分割區都定義相同的界限值。  
@@ -81,7 +81,7 @@ ms.locfileid: "48229818"
   
  建立和重建對齊索引所需的執行時間，可能會隨著分割區數目的增加而增加。 建議您不要同時執行多個建立和重建索引命令，這樣做可能會造成效能和記憶體問題。  
   
- SQL Server 執行排序以建立資料分割索引時，會先對每個分割區建立一個排序表。 它接著會建置排序資料表中的個別檔案群組的每個資料分割或`tempdb`，如果指定了 SORT_IN_TEMPDB 索引選項。 每個排序表都需要最小量的記憶體才能建立。 當您在建立對齊基底資料表的資料分割索引時，會使用少量記憶體一次建立一個排序表。 不過，當您在建立非對齊資料分割索引時，則會同時建立排序表。 因此，必須有足夠的記憶體才能處理這些並行排序作業。 分割區的數量越大的話，則需要越多記憶體。 對每個分割區來說，每個排序表的大小下限為 40 個頁面，而每一頁都為 8 KB。 例如，具有 100 個分割區的非對齊資料分割索引，需要足夠的記憶體，才能同時連續排序 4,000 (40 * 100) 頁。 如果有可用的記憶體，則建立作業會成功，但效能會變差。 如果無法使用這個數量的記憶體，建立作業會失敗。 此外，具有 100 個分割區的對齊資料分割索引只需要足夠排序 40 頁的記憶體，因為並不會同時執行排序作業。  
+ SQL Server 執行排序以建立資料分割索引時，會先對每個分割區建立一個排序表。 接著會在每個分割區的個別檔案群組中建立排序表，而如果指定 SORT_IN_TEMPDB 索引選項，則會在 `tempdb` 中建立排序表。 每個排序表都需要最小量的記憶體才能建立。 當您在建立對齊基底資料表的資料分割索引時，會使用少量記憶體一次建立一個排序表。 不過，當您在建立非對齊資料分割索引時，則會同時建立排序表。 因此，必須有足夠的記憶體才能處理這些並行排序作業。 分割區的數量越大的話，則需要越多記憶體。 對每個分割區來說，每個排序表的大小下限為 40 個頁面，而每一頁都為 8 KB。 例如，具有 100 個分割區的非對齊資料分割索引，需要足夠的記憶體，才能同時連續排序 4,000 (40 * 100) 頁。 如果有可用的記憶體，則建立作業會成功，但效能會變差。 如果無法使用這個數量的記憶體，建立作業會失敗。 此外，具有 100 個分割區的對齊資料分割索引只需要足夠排序 40 頁的記憶體，因為並不會同時執行排序作業。  
   
  若為對齊和非對齊索引，如果 SQL Server 將平行處理原則的程度套用至多處理器電腦上的建立作業，則記憶體需求會比較大。 這是因為平行處理原則的程度越大，則記憶體需求也越大。 例如，如果 SQL Server 將平行處理原則的程度設為 4，則具有 100 個分割區的非對齊資料分割索引需要四個處理器的足夠記憶體，才能同時排序 4,000 頁或 16,000 頁。 如果已對齊資料分割索引，則記憶體需求會降低為四個處理器排序 40 頁，或 160 (4 * 40) 頁。 您可以使用 MAXDOP 索引選項，以手動方式降低平行處理原則的程度。  
   
@@ -109,15 +109,15 @@ ms.locfileid: "48229818"
 ## <a name="related-content"></a>相關內容  
  您可能會發現下列資料分割資料表和索引策略和實作白皮書十分有用。  
   
--   [使用 SQL Server 2008 的資料分割資料表和索引策略](http://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
+-   [使用 SQL Server 2008 的資料分割資料表和索引策略](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
   
--   [如何實作自動滑動視窗](http://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
+-   [如何實作自動滑動視窗](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
--   [大量載入至資料分割資料表](http://msdn.microsoft.com/library/cc966380.aspx)  
+-   [大量載入至資料分割資料表](https://msdn.microsoft.com/library/cc966380.aspx)  
   
--   [專案 REAL：資料生命週期 -- 資料分割](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
+-   [專案 REAL:資料生命週期--資料分割](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
   
--   [分割資料表和索引上的查詢處理增強功能](http://msdn.microsoft.com/library/ms345599.aspx)  
+-   [分割資料表和索引上的查詢處理增強功能](https://msdn.microsoft.com/library/ms345599.aspx)  
   
 -   [建立大規模關聯式資料倉儲的前 10 大最佳作法](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   

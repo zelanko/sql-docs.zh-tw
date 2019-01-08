@@ -13,12 +13,12 @@ ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 638a79e5785c74a11cb2e424739c3d80959a4d40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 233b6824ef527a9ed4e7e02164a08e31e41f3699
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843076"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409496"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>連線到 MySQL (MySQLToSQL)
 若要將 MySQL 資料庫移轉至 SQL Server 或 SQL Azure，您必須連接至您想要移轉的 MySQL 資料庫。 當您連線時，SSMA 中取得所有 MySQL 結構描述的相關中繼資料，然後顯示 MySQL 中繼資料總管 窗格中。 SSMA 會儲存在資料庫伺服器的相關資訊，但不會儲存密碼。  
@@ -62,7 +62,7 @@ MySQL 資料庫的相關中繼資料不會自動更新。 相反地，如果您�
   
     3.  在 **密碼**方塊中，指定的使用者名稱輸入的密碼。  
   
-5.  **SSL:** 如果您想要安全地連線至 MySQL，請檢查使用的安全通訊端層 (SSL) **SSL**核取方塊。  
+5.  **SSL:** 如果您想要安全地連線至 MySQL，請使用的安全通訊端層 (SSL)，藉由檢查**SSL**核取方塊。  
   
 6.  **設定：** 它提供一個選項來設定 MySQL 透過安全通訊端層 (SSL) 連線。  
   

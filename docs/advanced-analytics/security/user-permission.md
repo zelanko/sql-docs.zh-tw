@@ -1,6 +1,6 @@
 ---
-title: SQL Server Machine Learning 服務的權限授與使用者 |Microsoft Docs
-description: 如何為使用者提供 SQL Server Machine Learning 服務的權限。
+title: R 和 Python 指令碼執行-SQL Server Machine Learning 服務的 Grant 資料庫權限
+description: 如何授與資料庫使用者權限，以便在 SQL Server 機器學習服務上的 R 和 Python 指令碼執行。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 07268386ad66350eed7f1382348fa4d698863600
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: e281f1712163aeee1846565458c2b037077c8588
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419063"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644837"
 ---
 # <a name="give-users-permission-to-sql-server-machine-learning-services"></a>SQL Server Machine Learning 服務的權限授與使用者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "49419063"
 
 不過，大部分的使用者，不需要這類更高的權限。 例如，在組織中使用 SQL 登入通常存取資料庫的使用者沒有提高權限。 因此，對於每個使用者使用 R 或 Python，您必須授與使用者的機器學習服務會使用語言每個資料庫中執行外部指令碼的權限。 方法：
 
-```SQL
+```sql
 USE <database_name>
 GO
 GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
@@ -49,7 +49,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
 
 例如，下列[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式可提供 SQL 登入*MySQLLogin*執行的 T-SQL 查詢的權限*ML_Samples*資料庫。 SQL 登入必須存在於伺服器的安全性內容中，才能執行此陳述式。
 
-```SQL
+```sql
 USE ML_Samples
 GO
 EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'

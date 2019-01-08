@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.tableproperties.storage.f1
@@ -17,12 +16,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2b518a0044c4d4778fa2b94a6643c805e7c19ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096658"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356285"
 ---
 # <a name="table-properties"></a>資料表屬性
   本主題描述在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]之 [資料表屬性] 對話方塊中顯示的資料表屬性。 如需如何顯示這些屬性的詳細資訊，請參閱 [檢視資料表定義](view-the-table-definition.md)。  
@@ -66,7 +65,7 @@ ms.locfileid: "48096658"
  指出物件是否使用設定為 ON 的引號識別碼選項建立。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)。  
   
  **鎖定擴大**  
- 表示資料表的鎖定擴大資料粒度。 如需有關 Database Engine 中鎖定的詳細資訊，請參閱 [SQL Server 交易鎖定與資料列版本設定指南](http://msdn.microsoft.com/library/jj856598.aspx)。 可能的值為：  
+ 表示資料表的鎖定擴大資料粒度。 如需有關 Database Engine 中鎖定的詳細資訊，請參閱 [SQL Server 交易鎖定與資料列版本設定指南](https://msdn.microsoft.com/library/jj856598.aspx)。 可能的值為：  
   
  AUTO  
  此選項允許 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 選取適用於資料表結構描述的鎖定擴大資料粒度。  
@@ -136,7 +135,7 @@ ms.locfileid: "48096658"
  可能的值是 `True` 和 `False`。  
   
  **檔案資料流檔案群組**  
- 指定 FILESTREAM 資料檔案群組的名稱，如果資料表有`varbinary(max)`具有 FILESTREAM 屬性的資料行。 預設值為預設的 FILESTREAM 資料檔案群組。  
+ 如果資料表擁有具有 FILESTREAM 屬性的 `varbinary(max)` 資料行，則指定 FILESTREAM 資料檔案群組的名稱。 預設值為預設的 FILESTREAM 資料檔案群組。  
   
  如果資料表不包含 FILESTREAM 資料，則此欄位空白。  
   
@@ -154,7 +153,7 @@ ms.locfileid: "48096658"
  資料在資料表中所佔的空間量 (以 MB 表示)。  
   
 ### <a name="partitioning"></a>資料分割  
- 只有在資料表為資料分割時，才能使用此區段。 如需相關資訊，請參閱 [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)。  
+ 只有在資料表為資料分割時，才能使用此區段。 如需詳細資訊，請參閱 [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)。  
   
  **資料分割資料行**  
  用以分割資料表之資料行的名稱。  

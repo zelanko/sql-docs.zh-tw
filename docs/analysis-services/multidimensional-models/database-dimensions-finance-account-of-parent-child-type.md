@@ -1,5 +1,5 @@
 ---
-title: 建立父子式類型維度的財務帳戶 |Microsoft 文件
+title: 建立父子式類型維度的財務帳戶 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 39c08417c421a39c15ab995a5e5d2f9ca26d5c95
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a9db268d931d46f6254501e95d68739c3e71db3b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023255"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517235"
 ---
-# <a name="database-dimensions---finance-account-of-parent-child-type"></a>資料庫維度為父子式類型的財務帳戶
+# <a name="database-dimensions---finance-account-of-parent-child-type"></a>資料庫維度-父子式類型的財務帳戶
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的帳戶類型維度，是其屬性代表財務報表用途之帳戶圖表的維度。  
   
@@ -27,21 +27,21 @@ ms.locfileid: "34023255"
 ## <a name="dimension-structure"></a>維度結構  
  帳戶維度至少包含兩個屬性：  
   
--   索引鍵屬性—在帳戶維度的維度資料表中，會識別個別帳戶的屬性。  
+-   索引鍵屬性的屬性，識別帳戶維度之維度資料表中的個別帳戶。  
   
--   帳戶屬性—描述在帳戶維度中，如何以階層方式排列帳戶的父屬性。  
+-   描述如何帳戶以階層方式排列帳戶維度中帳戶屬性的父屬性。  
   
      若要將屬性 (Attribute) 識別為帳戶屬性，請將屬性 (Attribute) 的 **Type** 屬性 (Property) 設定為 **Account** 和 **Usage** 屬性 (Property) 設定為 **Parent**。  
   
  帳戶維度可選擇性地包含下列屬性：  
   
--   帳戶類型屬性—針對維度中的每一個帳戶，定義帳戶類型的屬性。 帳戶類型屬性的成員名稱會對應到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫或專案之已定義的帳戶類型，並指出 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 針對那些帳戶使用的彙總函式。 您也可以使用一元運算子或自訂積存公式來決定帳戶屬性的彙總行為，但帳戶類型可讓您輕易地將一致的行為套用至帳戶的圖表中，而不需要變更基礎關聯式資料庫。  
+-   帳戶類型屬性的屬性，定義每個帳戶的帳戶類型維度中。 帳戶類型屬性的成員名稱會對應到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫或專案之已定義的帳戶類型，並指出 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 針對那些帳戶使用的彙總函式。 您也可以使用一元運算子或自訂積存公式來決定帳戶屬性的彙總行為，但帳戶類型可讓您輕易地將一致的行為套用至帳戶的圖表中，而不需要變更基礎關聯式資料庫。  
   
      若要識別帳戶類型屬性 (Attribute)，請將屬性 (Attribute) 的 **Type** 屬性 (Property) 設定為 **AccountType**。  
   
--   帳戶名稱屬性—用於報表的屬性。 若要識別帳戶名稱屬性 (Attribute)，請將屬性 (Attribute) 的 **Type** 屬性 (Property) 設定為 **AccountName**。  
+-   帳戶名稱屬性的屬性用於報告用途。 若要識別帳戶名稱屬性 (Attribute)，請將屬性 (Attribute) 的 **Type** 屬性 (Property) 設定為 **AccountName**。  
   
--   帳戶號碼屬性—用於報表的屬性。 若要識別帳戶號碼屬性 (Attribute)，請將屬性 (Attribute) 的 **Type** 屬性 (Property) 設定為 **AccountNumber**。  
+-   帳戶號碼屬性的屬性用於報告用途。 若要識別帳戶號碼屬性 (Attribute)，請將屬性 (Attribute) 的 **Type** 屬性 (Property) 設定為 **AccountNumber**。  
   
  如需屬性類型的詳細資訊，請參閱 [設定屬性類型](../../analysis-services/multidimensional-models/attribute-properties-configure-attribute-types.md)。  
   

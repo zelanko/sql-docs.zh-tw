@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -20,12 +19,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 72a781fb802609ed778c46e50459a4253dbb3507
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 82452c5e0d4ddff21870ff341673da6d11b18f40
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175654"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772018"
 ---
 # <a name="enhance-merge-replication-performance"></a>增強合併式複寫效能
   除了考慮＜ [增強一般複寫效能](enhance-general-replication-performance.md)＞中所述的一般效能提示之外，還要考慮合併式複寫特定的以下幾個其他方面。  
@@ -42,7 +41,7 @@ ms.locfileid: "48175654"
   
 -   考慮包括大型物件 (LOB) 資料類型的過度正規化資料表。  
   
-     發生同步處理時，「合併代理程式」可能需要從「發行者」或「訂閱者」讀取及傳送整個資料列。 如果資料列包含使用 LOB 的資料行，則上述處理可能需要額外的記憶體配置，且即使這些資料行並未更新仍會對效能造成負面影響。 為了降低這一效能影響的可能性，請考慮將 LOB 資料行置於另一個資料表，對資料列資料的其餘部分使用一對一關聯性。 資料型別`text`， `ntext`，和`image`已被取代。 若您納入 Lob，建議您使用的資料型別`varchar(max)`， `nvarchar(max)`，`varbinary(max)`分別。  
+     發生同步處理時，「合併代理程式」可能需要從「發行者」或「訂閱者」讀取及傳送整個資料列。 如果資料列包含使用 LOB 的資料行，則上述處理可能需要額外的記憶體配置，且即使這些資料行並未更新仍會對效能造成負面影響。 為了降低這一效能影響的可能性，請考慮將 LOB 資料行置於另一個資料表，對資料列資料的其餘部分使用一對一關聯性。 資料類型 `text`、`ntext` 和 `image` 已被取代。 若您納入 LOB，建議您分別依序使用資料類型 `varchar(max)`、`nvarchar(max)`、`varbinary(max)`。  
   
 ## <a name="publication-design"></a>發行集設計  
   
@@ -64,17 +63,17 @@ ms.locfileid: "48175654"
   
 -   使用有參數化篩選的預先計算的資料分割 (預設為使用這項功能)。 如需詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)。  
   
-     預先計算的資料分割會對篩選行為造成許多限制。 如果您的應用程式無法遵守這些限制，請將 **keep_partition_changes** 選項設定為 **True**，以改善效能。 如需詳細資訊，請參閱 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)。  
+     預先計算的資料分割會對篩選行為造成許多限制。 如果您的應用程式無法遵守這些限制，請將 **keep_partition_changes** 選項設定為 **True**，以改善效能。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
 -   如果資料已篩選，但是未在使用者之間共用，則使用非重疊資料分割。  
   
-     複寫可以最佳化未在資料分割或訂閱間共用之資料的效能。 如需詳細資訊，請參閱 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)。  
+     複寫可以最佳化未在資料分割或訂閱間共用之資料的效能。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
 -   不要建立複雜的聯結篩選階層。  
   
      在合併處理期間聯結篩選五個 (含) 以上資料表可能對效能有很大影響。 建議要產生包含五個 (含) 以上資料表的聯結篩選時，考慮使用其他解決方案：  
   
-    -   不要篩選主要為下列類型的資料表：查閱資料表、小型資料表以及內容不會變更的資料表。 讓這些資料表整體成為發行集的一部分。 建議僅在必須分割給「訂閱者」的資料表之間使用聯結篩選。 如需相關資訊，請參閱 [Join Filters](../merge/join-filters.md)。  
+    -   不要篩選主要為下列類型的資料表：查閱資料表、小型資料表以及內容不會變更的資料表。 讓這些資料表整體成為發行集的一部分。 建議僅在必須分割給「訂閱者」的資料表之間使用聯結篩選。 如需詳細資訊，請參閱 [Join Filters](../merge/join-filters.md)。  
   
     -   如果聯結中有大量資料表，請考慮去除資料庫正規化的設計或使用對應資料表。 例如，如果業務員僅需其客戶的資料，但需要六個聯結以將客戶與業務員關聯，請考慮在客戶資料表中新增一個資料行以識別該業務員。 業務員資料有所重複，但複寫資料分割的效能益處可能要超過去除資料表正規化的成本。  
   
@@ -101,9 +100,9 @@ ms.locfileid: "48175654"
   
      將「訂閱者」升級到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新本會升級該「訂閱者」端之訂閱所使用的「合併代理程式」。 若要利用各項新功能與效能最佳化，則需要使用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本的「合併代理程式」。  
   
--   如果訂閱透過快速連接進行同步處理，且變更從「發行者」和「訂閱者」端送出，請使用「合併代理程式」的 **–ParallelUploadDownload** 參數。  
+-   如果訂閱透過快速連線進行同步處理，且變更從「發行者」和「訂閱者」端送出，請使用「合併代理程式」的 **-ParallelUploadDownload** 參數。  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引進新的「合併代理程式」參數： **–ParallelUploadDownload**。 設定此參數可讓「合併代理程式」平行處理上傳至「發行者」以及下載至「訂閱者」的變更。 這對於高網路頻寬的高容量環境非常有用。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引進新的「合併代理程式」參數：**-ParallelUploadDownload**。 設定此參數可讓「合併代理程式」平行處理上傳至「發行者」以及下載至「訂閱者」的變更。 這對於高網路頻寬的高容量環境非常有用。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
   
     -   [處理複寫代理程式設定檔](../agents/replication-agent-profiles.md)  
   
@@ -141,7 +140,7 @@ ms.locfileid: "48175654"
   
 -   偶爾重新索引合併式複寫系統資料表。  
   
-     做為合併式複寫維護的一部份，請不時檢查與合併式複寫相關聯的系統資料表成長： **MSmerge_contents**、 **MSmerge_genhistory**、 **MSmerge_tombstone**、 **MSmerge_current_partition_mappings**和 **MSmerge_past_partition_mappings**。 定期重新整理資料表的索引。 如需詳細資訊，請參閱 [重新組織與重建索引](../../indexes/reorganize-and-rebuild-indexes.md)。  
+     做為合併式複寫維護的一部份，不時檢查與合併式複寫相關聯的系統資料表成長：**MSmerge_contents**， **MSmerge_genhistory**，以及**MSmerge_tombstone**， **MSmerge_current_partition_mappings**，以及**MSmerge_past_partition_mappings**。 定期重新整理資料表的索引。 如需詳細資訊，請參閱 [重新組織與重建索引](../../indexes/reorganize-and-rebuild-indexes.md)。  
   
 -   使用複寫監視器內的 **[同步處理記錄]** 索引標籤監視同步處理效能。  
   

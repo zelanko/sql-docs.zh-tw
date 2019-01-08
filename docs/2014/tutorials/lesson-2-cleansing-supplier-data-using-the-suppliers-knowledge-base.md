@@ -1,5 +1,5 @@
 ---
-title: 第 2 課： 使用來清理供應商資料供應商知識庫 |Microsoft Docs
+title: 第 2 課：清理供應商資料使用供應商知識庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,23 @@ ms.assetid: 215c14de-fc3f-46de-a022-bf69b9ea2a96
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d957c5ddb394828ed29f169796bcb2bf19cea6a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8366781f25829b0063479c2874a56c184e73bad
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162588"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355707"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>第 2 課：使用供應商知識庫清理供應商資料
-  您可以在這一課中，清理 Excel 檔案中的供應商資料來使用**供應商**您在第 1 課中建立的知識庫。 DQS 中的資料清理包含**電腦輔助的程序**，以分析資料符合知識庫中的知識，以及**互動式處理序**，可讓您檢閱並修改電腦輔助的程序的結果。 資料清理功能會識別資料來源中不正確的資料，然後針對不正確的資料進行更正或建議更正。 它也會使用定義域值、同義字的前置值、定義域規則、以詞彙為主的關聯及參考資料來標準化及豐富客戶資料。 您可以用互動方式核准或拒絕電腦輔助程序所提議的變更。 請參閱[資料清理](http://msdn.microsoft.com/library/gg524800.aspx)如需詳細資訊。  
+  您可以在這一課中，清理 Excel 檔案中的供應商資料來使用**供應商**您在第 1 課中建立的知識庫。 DQS 中的資料清理包含**電腦輔助的程序**，以分析資料符合知識庫中的知識，以及**互動式處理序**，可讓您檢閱並修改電腦輔助的程序的結果。 資料清理功能會識別資料來源中不正確的資料，然後針對不正確的資料進行更正或建議更正。 它也會使用定義域值、同義字的前置值、定義域規則、以詞彙為主的關聯及參考資料來標準化及豐富客戶資料。 您可以用互動方式核准或拒絕電腦輔助程序所提議的變更。 請參閱[資料清理](https://msdn.microsoft.com/library/gg524800.aspx)如需詳細資訊。  
   
  電腦輔助程序會使用以下的臨界值，您可以在 DQS 用戶端主頁面上使用 [組態] 選項設定此值。  
   
--   **建議的最低分數：** 的最低分數或信賴等級，可由 DQS 為了建議替換某個值。  
+-   **建議的最低分數：** DQS 為了建議替換某個值而使用的最低分數或信賴等級。  
   
--   **自動更正的最低分數：** 的最低分數或信賴等級，可由 DQS 來自動更正某個值。  
+-   **自動更正的最低分數：** DQS 為了自動更正某個值而使用的最低分數或信賴等級。  
   
- 請參閱[設定清理和比對的臨界值](http://msdn.microsoft.com/library/hh510415.aspx)如需有關如何設定這些設定。  
+ 請參閱[設定清理和比對的臨界值](https://msdn.microsoft.com/library/hh510415.aspx)如需有關如何設定這些設定。  
   
  在這一課，您會使用供應商知識庫來執行下列工作，以清理輸入資料。  
   
@@ -43,9 +43,9 @@ ms.locfileid: "48162588"
   
 5.  將清理程序的結果匯出到 Excel 檔案。  
   
-6.  將清理專案的值匯入到定義域，以新的規則、值、更正等內容來增強知識庫中的知識。  
+6.  清理專案值匯網域來增強知識庫中的知識與新的規則、 值、 更正等...  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 1：建立資料品質專案](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  
+ [工作 1:建立資料品質專案](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  
   
   

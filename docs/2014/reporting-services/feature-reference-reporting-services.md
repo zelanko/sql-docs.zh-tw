@@ -16,17 +16,17 @@ ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a2cfa74b5f85b17c8f4dca36884943ad283422ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9306340695cffd621335d094e182898512c757c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081000"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367830"
 ---
 # <a name="feature-reference-reporting-services"></a>功能參考 (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含可用於建立、管理及檢視報表的數個工具和應用程式。 此章節提供描述這些工具和應用程式之對話方塊、網頁以及精靈的特定主題。  
   
- 若要在工具或應用程式執行時存取使用者介面主題，請在開啟對話方塊、網頁或精靈之後，按下 F1 或是按一下 **[說明]** 。 如需啟動 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 工具的詳細資訊，請參閱[教學課程：如何尋找及啟動 Reporting Services 工具 &#40;SSRS&#41;](tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)。  
+ 若要在工具或應用程式執行時存取使用者介面主題，請在開啟對話方塊、網頁或精靈之後，按下 F1 或是按一下 **[說明]** 。 如需有關啟動[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]工具，請參閱[教學課程：如何尋找及啟動 Reporting Services 工具&#40;SSRS&#41;](tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [報表設計師 F1 說明](tools/report-designer-f1-help.md)  
@@ -48,7 +48,7 @@ ms.locfileid: "48081000"
  [Reporting Services 概念 &#40;SSRS&#41;](reporting-services-concepts-ssrs.md)   
  [Reporting Services 報表 &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)   
  [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [開始使用報表產生器](http://www.microsoft.com/download/en/details.aspx?id=29072)   
- [使用報表產生器 1.0 來設計和實作報表](http://go.microsoft.com/fwlink/?LinkId=142601)  
+ [開始使用報表產生器](https://www.microsoft.com/download/en/details.aspx?id=29072)   
+ [使用報表產生器 1.0 來設計和實作報表](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

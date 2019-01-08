@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, administering
@@ -23,12 +22,12 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b4ac9c592ae353b61388fa37ff3fe18cb26e35ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49729948f284af9ec2a638f7da3da4b248521653
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131168"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762490"
 ---
 # <a name="replication-agent-administration"></a>複寫代理程式管理
   複寫代理程式可執行許多有關複寫的工作，包含建立結構描述和資料的副本、偵測「發行者」或「訂閱者」端的更新，以及在伺服器之間傳播變更。 依預設，複寫代理程式在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 作業步驟之下執行。 此代理程式只不過是可執行檔，所以也可以從命令列和批次指令碼直接呼叫。 每個複寫代理程式都支援一組用於控制其執行方式的執行時期參數；這些參數在代理程式設定檔或命令列中指定。  
@@ -52,10 +51,10 @@ ms.locfileid: "48131168"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和複寫監視器：[啟動和停止複寫代理程式&#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md)。  
   
--   複寫程式設計：[複寫代理程式可執行檔概念](../concepts/replication-agent-executables-concepts.md)  
+-   複寫程式設計：[Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
   
 ## <a name="agent-profiles"></a>代理程式設定檔  
- 設定複寫時，會在散發者上安裝一組代理程式設定檔。 代理程式設定檔包含一組參數，代理程式每次執行時都會使用這組參數：每個代理程式在啟動過程中都會登入散發者，並查詢其設定檔內的參數。 複寫為每個代理程式提供預設的設定檔，並為記錄讀取代理程式、散發代理程式及合併代理程式提供其他預先定義的設定檔。 除了提供的設定檔之外，您也可以建立適合自己的應用程式需求的設定檔。 如需詳細資訊，請參閱 [Replication Agent Profiles](replication-agent-profiles.md)。  
+ 設定複寫時，會在散發者上安裝一組代理程式設定檔。 代理程式設定檔包含一組參數，代理程式每次執行時都會使用這組參數：每個代理程式在啟動過程中都會登入散發者，並查詢其設定檔內的參數。 複寫為每個代理程式提供預設的設定檔，並為記錄讀取代理程式、散發代理程式及合併代理程式提供其他預先定義的設定檔。 除了提供的設定檔之外，您也可以建立適合自己的應用程式需求的設定檔。 如需相關資訊，請參閱 [Replication Agent Profiles](replication-agent-profiles.md)。  
   
  如需直接指定命令列參數的資訊，請參閱[複寫代理程式可執行檔概念](../concepts/replication-agent-executables-concepts.md)。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "48131168"
   
     -   [合併代理程式]  
   
-     透過下列索引標籤，存取與這些代理程式相關聯的資訊和工作： **[訂閱監看清單]** (每個發行者皆可用) 或者 **[所有訂閱]** 索引標籤 (每個發行者皆可用)。 如需詳細資訊，請參閱[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+     透過下列索引標籤，可存取與這些代理程式相關聯的資訊和工作：**訂閱監看清單**（適用於每個 「 發行者 」） 或**所有訂用帳戶**（適用於每個發行集） 索引標籤。 如需詳細資訊，請參閱[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
   
 ## <a name="independent-and-shared-agents"></a>獨立與共用的代理程式  
  獨立代理程式即服務一個訂閱的代理程式。 共用的代理程式會服務多個訂閱；如果使用相同共用代理程式的多個訂閱需要同步，依預設，它們會在佇列中等候，該共用代理程式會一次服務其中之一。 使用獨立代理程式會降低延遲，因為代理程式會在訂閱需要同步時就緒。 合併式複寫通常使用獨立代理程式，依預設，異動複寫會使用在「新增發行集精靈」中建立的發行集之獨立代理程式 (在舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，依預設，異動複寫則使用共用代理程式)。  
@@ -88,8 +87,8 @@ ms.locfileid: "48131168"
   
 |清除作業|描述|預設排程|  
 |------------------|-----------------|----------------------|  
-|代理程式記錄清除：散發|從散發資料庫移除複寫代理程式的記錄。|每 10 分鐘執行|  
-|散發清除：散發|從散發資料庫移除複寫的交易。 停用在最長散發保留期限內未同步的訂閱。|每 10 分鐘執行|  
+|代理程式記錄清除：Distribution|從散發資料庫移除複寫代理程式的記錄。|每 10 分鐘執行|  
+|散發清除：Distribution|從散發資料庫移除複寫的交易。 停用在最長散發保留期限內未同步的訂閱。|每 10 分鐘執行|  
 |到期的訂閱清除|偵測並移除散發資料庫中到期的訂閱。|每天早上 1:00 執行|  
 |重新初始化資料驗證失敗的訂閱|偵測使資料驗證失敗的所有訂閱，並將其標示為重新初始化。 下次「合併代理程式」或「散發代理程式」執行時，將在「訂閱者」端套用新的快照集。|沒有預設排程 (依預設值未啟動)|  
 |複寫代理程式檢查|偵測並未動態記錄歷程的複寫代理程式。 如果作業步驟失敗，則其會寫入 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 事件記錄檔。|每十分鐘執行一次。|  

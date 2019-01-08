@@ -1,7 +1,7 @@
 ---
 title: sys.query_context_settings (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/22/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,15 +21,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de36098ec2c2792e45724cdb023897b1482ac9cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ccf638687f5022554abd6b3cf8e57445858ae4a
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638486"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710649"
 ---
 # <a name="sysquerycontextsettings-transact-sql"></a>sys.query_context_settings & Amp;#40;transact-SQL&AMP;#41;
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   包含會影響內容設定與查詢相關聯的語意資訊。 多個內容設定中有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的影響 （定義查詢的正確的結果） 的查詢語意。 在不同設定下所編譯的相同查詢文字可能會產生不同的結果 （取決於基礎資料中）。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47638486"
 |**language_id**|**smallint**|語言識別碼。 如需詳細資訊，請參閱 < [sys.syslanguages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。|  
 |**date_format**|**smallint**|日期格式。 如需詳細資訊，請參閱 [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md)。|  
 |**date_first**|**tinyint**|日期的第一個值。 如需詳細資訊，請參閱 [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)。|  
-|**status**|**varbinary(2)**|位元遮罩欄位，指出查詢或查詢執行所在的內容類型。 <br />資料行的值可以是 （以十六進位表示） 的多個旗標的組合：<br /><br /> 0x0-一般查詢 （沒有特定的旗標）<br /><br /> 0x1-透過資料指標 Api 預存程序的其中一個執行的查詢<br /><br /> 0x2-通知查詢<br /><br /> 0x4： 內部查詢<br /><br /> 0x8-沒有通用的參數化的自動參數化查詢<br /><br /> 0x10-資料指標提取重新整理查詢<br /><br /> 0x20-資料指標更新要求中所使用的查詢<br /><br /> 0x40-初始結果集時，會傳回開啟的資料指標 （游標自動擷取）<br /><br /> 0x80-加密的查詢<br /><br /> 0x100 – 中資料列層級安全性述詞的內容查詢|  
+|**status**|**varbinary(2)**|位元遮罩欄位，指出查詢或查詢執行所在的內容類型。 <br />資料行的值可以是 （以十六進位表示） 的多個旗標的組合：<br /><br /> 0x0-一般查詢 （沒有特定的旗標）<br /><br /> 0x1-透過資料指標 Api 預存程序的其中一個執行的查詢<br /><br /> 0x2-通知查詢<br /><br /> 0x4-內部查詢<br /><br /> 0x8-沒有通用的參數化的自動參數化查詢<br /><br /> 0x10-資料指標提取重新整理查詢<br /><br /> 0x20-資料指標更新要求中所使用的查詢<br /><br /> 0x40-初始結果集時，會傳回開啟的資料指標 （游標自動擷取）<br /><br /> 0x80-加密的查詢<br /><br /> 0x100-中資料列層級安全性述詞的內容查詢|  
 |**required_cursor_options**|**int**|使用者指定的資料指標選項，例如資料指標類型。|  
 |**acceptable_cursor_options**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會隱含轉換的目標資料指標選項，以支援執行陳述式。|  
 |**sys.dm_exec_plan_attributes**|**smallint**|觸發程序執行計畫，做為結果的型別**合併**陳述式。<br /><br /> 0 表示非觸發程序計劃，因為不會執行觸發程序計畫**合併**陳述式或觸發程序計劃執行的結果**合併**陳述式，只指定**刪除**動作。<br /><br /> 1 表示**插入**形式的結果執行的觸發程序計畫**合併**陳述式。<br /><br /> 2 表示**更新**形式的結果執行的觸發程序計畫**合併**陳述式。<br /><br /> 3 表示**刪除**形式的結果執行的觸發程序計畫**合併**陳述式包含對應**插入**或是**更新**動作。<br /><br /> <br /><br /> 這個值將會巢狀觸發程序的串聯式動作所執行的動作**合併**造成串聯的陳述式。|  
@@ -52,7 +52,7 @@ ms.locfileid: "47638486"
  需要**VIEW DATABASE STATE**權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.database_query_store_options &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.database_query_store_options &#40;-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
  [sys.query_store_query &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
  [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   

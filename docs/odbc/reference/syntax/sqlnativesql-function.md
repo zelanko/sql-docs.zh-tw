@@ -20,16 +20,16 @@ ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2e5596948a9e764ca0005d6cc41e62d65421866
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab39d1fca288196dcf42da70083dad323c406ba0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692296"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208629"
 ---
 # <a name="sqlnativesql-function"></a>SQLNativeSql 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ODBC  
+ 導入的版本：ODBC 1.0 標準的合規性：ODBC  
   
  **摘要**  
  **SQLNativeSql**為已修改驅動程式所傳回的 SQL 字串。 **SQLNativeSql**不會執行 SQL 陳述式。  

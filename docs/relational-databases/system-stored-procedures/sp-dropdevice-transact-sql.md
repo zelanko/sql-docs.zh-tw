@@ -19,12 +19,12 @@ ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 10b3eb7107af97e8c67491117a8e5542118ef00b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee0703a0dca2c6ba958f52dee0f8850ea2c8244e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598266"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536387"
 ---
 # <a name="spdropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@logicalname=** ] **'***device***'**  
+ [  **@logicalname=** ] **'**_裝置_**'**  
  是資料庫裝置或備份裝置的邏輯名稱，如下所示**master.dbo.sysdevices.name**。 *裝置*已**sysname**，沒有預設值。  
   
- [  **@delfile=** ] **'***delfile***'**  
+ [  **@delfile=** ] **'**_delfile_**'**  
  指定是否應該刪除實體備份裝置檔。 *delfile*已**varchar(7)**。 如果指定為**DELFILE**，刪除實體備份裝置磁碟檔。  
   
 ## <a name="return-code-values"></a>傳回碼值  

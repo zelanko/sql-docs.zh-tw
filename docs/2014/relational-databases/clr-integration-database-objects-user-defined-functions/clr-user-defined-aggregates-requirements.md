@@ -20,18 +20,18 @@ ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 44aee43742fdc451012a9516249c0558b3ce0d35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31b22b1dce53bb82f85ae946290024408d2facd3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129178"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376063"
 ---
 # <a name="requirements-for-clr-user-defined-aggregates"></a>CLR 使用者定義彙總的需求
   在 Common Language Runtime (CLR) 組件中的類型只要實作需要的彙總合約，就可以註冊為使用者定義彙總函式。 此合約由 `SqlUserDefinedAggregate` 屬性及彙總合約方法組成。 彙總合約包括儲存彙總中繼狀態的機制，以及累積新值的機制，它是由四種方法組成：`Init`、`Accumulate`、`Merge` 和 `Terminate`。 當您已符合這些需求時，您將能夠充分利用使用者定義彙總[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 本主題的下列章節提供關於如何建立和使用使用者定義彙總的其他相關資訊。 如需範例，請參閱[Invoking CLR User-Defined 彙總函式](clr-user-defined-aggregate-invoking-functions.md)。  
   
 ## <a name="sqluserdefinedaggregate"></a>SqlUserDefinedAggregate  
- 如需詳細資訊，請參閱 < [SqlUserDefinedAggregateAttribute](http://go.microsoft.com/fwlink/?LinkId=124626)。  
+ 如需詳細資訊，請參閱 < [SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626)。  
   
 ## <a name="aggregation-methods"></a>彙總方法  
  註冊為使用者定義彙總的類別應該會支援下列執行個體方法。 查詢處理器用以計算彙總的方法：  

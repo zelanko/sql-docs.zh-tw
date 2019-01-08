@@ -15,19 +15,19 @@ ms.assetid: e3986870-5be4-458b-b671-5ff12a27b022
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7e2a3ff2f7e0f1a224b837eb46aad42840b057c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dbc80b6f50ea023a998b6a7958577933afd007a7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190708"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362341"
 ---
 # <a name="server-configuration---collation"></a>伺服器組態 - 定序
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 [伺服器組態 - 定序] 頁面上，您可以修改 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用於排序的定序設定。 選取選項來比對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或另一部電腦之不同安裝的定序設定。  
   
 ## <a name="options"></a>選項。  
  針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 而自訂  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供兩組定序： Windows 定序和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定序。 您可以對 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定個別的定序設定，也可以對這兩者指定相同的定序。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供兩組定序：Windows 定序和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定序。 您可以對 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]指定個別的定序設定，也可以對這兩者指定相同的定序。  
   
  根據預設，系統會針對 US-English 系統地區設定選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序。 當地語系化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的預設定序是由電腦的 Windows 系統地區設定所決定。  
   
@@ -35,10 +35,10 @@ ms.locfileid: "48190708"
   
  **注意** [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 只會使用 Windows 定序。 如果您打算安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，請在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間選取 Windows 定序，以便確保 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之間產生一致的結果。  
   
- 如需詳細資訊，請參閱 [安裝程式中的定序設定](http://go.microsoft.com/fwlink/?LinkId=190977)。  
+ 如需詳細資訊，請參閱 [安裝程式中的定序設定](https://go.microsoft.com/fwlink/?LinkId=190977)。  
   
 ## <a name="best-practices"></a>最佳作法  
- 如需 Windows 系統地區設定和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式所使用之對應預設定序的資料表的詳細資訊，請參閱 [安裝程式中的定序設定](http://go.microsoft.com/fwlink/?LinkId=190977)。  
+ 如需 Windows 系統地區設定和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式所使用之對應預設定序的資料表的詳細資訊，請參閱 [安裝程式中的定序設定](https://go.microsoft.com/fwlink/?LinkId=190977)。  
   
  如果可能的話，請針對組織使用單一定序。 這樣您就不需要針對每個資料庫、資料行、運算式或識別碼明確指定定序。 如果您必須使用多重定序和字碼頁設定，則在編寫查詢程式碼時，必須考量定序優先順序的規則。 如需詳細資訊，請參閱[定序優先順序 &#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql) 的線上叢書主題。  
   

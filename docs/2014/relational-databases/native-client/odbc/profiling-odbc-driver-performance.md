@@ -19,12 +19,12 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8990539dcee3be8eb8101050a9f9f11d880fcd7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f2c16e66c03eee8c5e1616fdaa0f0d1b154b85e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138668"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350394"
 ---
 # <a name="profiling-odbc-driver-performance"></a>分析 ODBC 驅動程式效能
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式可以分析兩種類型的效能資料：  
@@ -82,7 +82,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|在 SQL_PERF_START 之後處理的 SELECT 陳述式數目。|  
 |SQLSelectRows|在 SQL_PERF_START 之後選取的資料列數目。|  
 |交易|SQL_PERF_START 之後的使用者交易數目，包括回復。 當 ODBC 應用程式使用 SQL_AUTOCOMMIT_ON 執行時，會將每個命令視為交易。|  
-|SQLPrepares|數目[SQLPrepare 函數](http://go.microsoft.com/fwlink/?LinkId=59360)SQL_PERF_START 之後呼叫。|  
+|SQLPrepares|數目[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)SQL_PERF_START 之後呼叫。|  
 |ExecDirects|數目**SQLExecDirect**在 SQL_PERF_START 之後呼叫。|  
 |SQLExecutes|數目**SQLExecute**在 SQL_PERF_START 之後呼叫。|  
 |CursorOpens|驅動程式在 SQL_PERF_START 之後已經開啟伺服器資料指標的次數。|  

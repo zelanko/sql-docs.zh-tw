@@ -14,12 +14,12 @@ ms.assetid: 409c5076-c4c3-4f09-8f30-d3297df45f13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae0e86016d21e33507544747a44e5fc48b273ae2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9109f47ba1173c115234f9040445fb110e3f0e3c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094118"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419679"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>分類精靈 (適用於 Excel 的資料採礦增益集)
   ![資料採礦功能區中的 「 分類精靈 」](media/dmc-classify.gif "資料採礦功能區中的分類精靈")  
@@ -34,7 +34,7 @@ ms.locfileid: "48094118"
   
 2.  在 **選取來源資料**頁面上，選擇要分析的資料。  
   
-     此精靈支援多種資料類型：Excel 資料表、Excel 範圍和外部資料來源。 使用外部資料時，您可以將資料加入 Excel，或者在 Analysis Services 資料來源中選擇一組資料表或檢視。 您也可以新增資料表並變更資料行，以建立隨選資料來源。  
+     此精靈支援多個類型的資料：Excel 資料表、 Excel 範圍和外部資料來源。 使用外部資料時，您可以將資料加入 Excel，或者在 Analysis Services 資料來源中選擇一組資料表或檢視。 您也可以新增資料表並變更資料行，以建立隨選資料來源。  
   
 3.  在 **分類**頁面上，選擇您想要分類的資料行。  
   

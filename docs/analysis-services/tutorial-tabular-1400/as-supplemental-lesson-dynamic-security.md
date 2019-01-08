@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 教學課程補充課程： 動態安全性 |Microsoft 文件
+title: Analysis Services 教學課程補充課程：動態安全性 |Microsoft Docs
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: 15ff0eebd7cbbb0815544b18f0f042ef411a3657
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4abe105c2bb083ba4479d4d23418e0e73adce5f7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084591"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398423"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>補充課程 - 動態安全性
 
@@ -24,11 +24,11 @@ ms.locfileid: "43084591"
   
 若要實作動態安全性，您可以加入資料表至包含這些使用者可以連接至模型，並瀏覽模型物件和資料的使用者名稱。 使用本教學課程中您所建立的模型位於 Adventure Works; 的內容不過，若要完成這一課，您必須新增資料表，其中包含您自有網域中的使用者。 您不需要新增的使用者名稱的密碼。 若要建立 EmployeeSecurity 資料表，使用您自己的網域使用者的小型範例，您使用 [貼上] 功能中，貼上的 Excel 試算表中的員工資料。 在真實世界案例中，包含使用者名稱的資料表通常是來自實際資料庫的資料表做為資料來源;例如，實際的 DimEmployee 資料表。  
   
-若要實作動態安全性，您可以使用兩個 DAX 函數︰ [USERNAME 函數 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)並[LOOKUPVALUE 函數 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)。 這兩個函數是在新角色中定義，並且會套用至資料列篩選器公式。 藉由使用 LOOKUPVALUE 函式，此公式會指定 EmployeeSecurity 表中的值。 此公式接著將傳遞至 USERNAME 函式，其指定登入之使用者的使用者名稱的值屬於此角色。 之後使用者就只能瀏覽角色的資料列篩選器所指定的資料。 在此案例中，您指定的銷售員工只能瀏覽不是成員的銷售地區的網際網路銷售資料。  
+若要實作動態安全性，您可以使用兩個 DAX 函數：[USERNAME 函數 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)並[LOOKUPVALUE 函數 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)。 這兩個函數是在新角色中定義，並且會套用至資料列篩選器公式。 藉由使用 LOOKUPVALUE 函式，此公式會指定 EmployeeSecurity 表中的值。 此公式接著將傳遞至 USERNAME 函式，其指定登入之使用者的使用者名稱的值屬於此角色。 使用者可以再瀏覽該角色的資料列篩選器所指定的資料。 在此案例中，您指定的銷售員工只能瀏覽不是成員的銷售地區的網際網路銷售資料。  
   
 例如此 Adventure Works 表格式模型案例專屬的工作就是這類工作，但不一定適用於真實案例。 每一項工作都包含描述工作目的的其他資訊。  
   
-完成本課程的估計時間： **30 分鐘**  
+完成本課程的估計時間：**30 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 
@@ -42,7 +42,7 @@ ms.locfileid: "43084591"
   
 1.  在表格式模型總管 中 >**資料來源**，以滑鼠右鍵按一下您的連線，然後按一下**匯入新資料表**。  
 
-    如果出現 [模擬認證] 對話方塊，請輸入您在第 2 課＜加入資料＞中使用的模擬認證。
+    如果出現 [模擬認證] 對話方塊中，輸入您所使用的模擬認證在第 2 課：加入資料。
   
 2.  在 導覽器中，選取**DimSalesTerritory**資料表，然後按一下**確定**。    
   
@@ -116,7 +116,7 @@ FactInternetSales、 DimGeography 和 DimSalesTerritory 資料表全都包含常
 在這個工作中，您可以建立使用者角色。 這個角色包含定義 DimSalesTerritory 資料表的資料列會對使用者顯示的資料列篩選器。 篩選條件則會套用至 DimSalesTerritory 相關的所有其他資料表的一對多關聯性方向中。 您也可以套用篩選條件，以防止任何使用者角色的成員可以查詢整個 EmployeeSecurity 資料表。  
   
 > [!NOTE]  
-> 您在這個課程中建立的 Sales Employees by Territory 角色會限制成員只能瀏覽 (或查詢) 本身所屬銷售地區的銷售資料。 如果您將使用者新增為成員 Sales employees by Territory 角色同時也是在中建立的角色中的成員[第 11 課： 建立角色](../tutorial-tabular-1400/as-lesson-11-create-roles.md)，您會獲得合併的權限。 當使用者是多個角色的成員時，針對每個角色定義的權限和資料列篩選器會累計。 也就是說，使用者會有更高的權限的角色組合所決定的。  
+> 您在這個課程中建立的 Sales Employees by Territory 角色會限制成員只能瀏覽 (或查詢) 本身所屬銷售地區的銷售資料。 如果您將使用者新增為成員 Sales employees by Territory 角色同時也是在中建立的角色中的成員[第 11 課：建立角色](../tutorial-tabular-1400/as-lesson-11-create-roles.md)，您會獲得合併的權限。 當使用者是多個角色的成員時，針對每個角色定義的權限和資料列篩選器會累計。 也就是說，使用者會有更高的權限的角色組合所決定的。  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>若要建立 Sales Employees by Territory 使用者角色  
   
@@ -188,6 +188,6 @@ FactInternetSales、 DimGeography 和 DimSalesTerritory 資料表全都包含常
   
 ## <a name="see-also"></a>另請參閱  
 
-[使用者名稱的函式 (DAX)](https://msdn.microsoft.com/library/hh230954.aspx)  
-[LOOKUPVALUE 函式 (DAX)](https://msdn.microsoft.com/library/gg492170.aspx)  
-[CUSTOMDATA 函式 (DAX)](https://msdn.microsoft.com/library/hh213140.aspx)  
+[USERNAME 函數 (DAX)](https://msdn.microsoft.com/library/hh230954.aspx)  
+[LOOKUPVALUE 函數 (DAX)](https://msdn.microsoft.com/library/gg492170.aspx)  
+[CUSTOMDATA 函數 (DAX)](https://msdn.microsoft.com/library/hh213140.aspx)  

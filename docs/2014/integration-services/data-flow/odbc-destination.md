@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.f1
@@ -13,12 +12,12 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b28d456d299c0f408ec2c9f4a284156dadfe9491
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd6980bd66e4aeca0672fd4c8c1bffb95e09b9ae
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079138"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770960"
 ---
 # <a name="odbc-destination"></a>ODBC 目的地
   ODBC 目的地會將資料大量載入到 ODBC 支援的資料庫資料表。 ODBC 目的地使用 ODBC 連接管理員來連接到資料來源。  
@@ -30,16 +29,16 @@ ms.locfileid: "48079138"
 ##  <a name="BKMK_odbcdestination_loadoptions"></a> 載入選項  
  ODBC 目的地可以使用兩種存取載入模組其中之一。 您會在 [ODBC 來源編輯器 &#40;連線管理員頁面&#41;](../odbc-source-editor-connection-manager-page.md) 設定模式。 兩種模式為：  
   
--   **批次**：在此模式中，ODBC 目的地會根據所見的 ODBC 提供者功能，嘗試使用最有效率的插入方法。 對於最新的 ODBC 提供者，這表示準備含有參數的 INSERT 陳述式，然後使用資料列取向的陣列參數繫結 (陣列大小是由 **BatchSize** 屬性所控制)。 如果您選取 [批次]，而提供者不支援此方法，ODBC 目的地會自動切換為**逐列**模式。  
+-   **批次**:在此模式中將 ODBC 目的地會嘗試使用最有效率的插入方法，根據所見的 ODBC 提供者功能。 對於最新的 ODBC 提供者，這表示準備含有參數的 INSERT 陳述式，然後使用資料列取向的陣列參數繫結 (陣列大小是由 **BatchSize** 屬性所控制)。 如果您選取 [批次]，而提供者不支援此方法，ODBC 目的地會自動切換為**逐列**模式。  
   
--   **逐列**：在此模式中，ODBC 目的地會準備含有參數的 INSERT 陳述式，然後使用 **SQL Execute**，一次插入一個資料列。  
+-   **逐列**:在此模式中，ODBC 目的地會準備具有參數，並使用 INSERT 陳述式**SQL Execute**一次插入一個資料列。  
   
 ## <a name="error-handling"></a>錯誤處理  
  ODBC 目的地有錯誤輸出。 此元件的錯誤輸出包含下列輸出資料行：  
   
--   **錯誤碼**：對應至目前錯誤的編號。 如需錯誤清單，請參閱來源資料庫的文件集。 如需 SSIS 錯誤碼清單，請參閱＜SSIS 錯誤碼和訊息參考＞。  
+-   **錯誤碼**:對應至目前錯誤的編號。 如需錯誤清單，請參閱來源資料庫的文件集。 如需 SSIS 錯誤碼清單，請參閱＜SSIS 錯誤碼和訊息參考＞。  
   
--   **錯誤資料行**：造成錯誤 (用於轉換錯誤) 的來源資料行。  
+-   **錯誤資料行**:造成錯誤 （用於轉換錯誤） 的來源資料行。  
   
 -   標準輸出資料行。  
   
@@ -60,11 +59,11 @@ ms.locfileid: "48079138"
   
  如需詳細資訊，請參閱下列其中一個主題：  
   
--   [ODBC 目的地編輯器&#40;連線管理員頁面&#41;](../odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC 目的地編輯器 &#40;連線管理員頁面&#41;](../odbc-destination-editor-connection-manager-page.md)  
   
--   [ODBC 目的地編輯器&#40;對應頁面&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [ODBC 目的地編輯器 &#40;對應頁面&#41;](../odbc-destination-editor-mappings-page.md)  
   
--   [ODBC 目的地編輯器&#40;錯誤輸出頁面&#41;](../odbc-destination-editor-error-output-page.md)  
+-   [ODBC 目的地編輯器 &#40;錯誤輸出頁面&#41;](../odbc-destination-editor-error-output-page.md)  
   
  **[進階編輯器]** 對話方塊包含可以程式設計方式設定的屬性。  
   
@@ -76,14 +75,14 @@ ms.locfileid: "48079138"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [ODBC 目的地編輯器&#40;錯誤輸出頁面&#41;](../odbc-destination-editor-error-output-page.md)  
+-   [ODBC 目的地編輯器 &#40;錯誤輸出頁面&#41;](../odbc-destination-editor-error-output-page.md)  
   
--   [ODBC 目的地編輯器&#40;對應頁面&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [ODBC 目的地編輯器 &#40;對應頁面&#41;](../odbc-destination-editor-mappings-page.md)  
   
--   [ODBC 目的地編輯器&#40;連線管理員頁面&#41;](../odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC 目的地編輯器 &#40;連線管理員頁面&#41;](../odbc-destination-editor-connection-manager-page.md)  
   
 -   [使用 ODBC 目的地來載入資料](odbc-destination.md)  
   
--   [ODBC 目的地自訂屬性](odbc-destination-custom-properties.md)  
+-   [ODBC Destination Custom Properties](odbc-destination-custom-properties.md)  
   
   

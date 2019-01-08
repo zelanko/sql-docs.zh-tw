@@ -13,12 +13,12 @@ ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: da18ee258d12a667280c601526f0433c1a5b0600
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93914da7f225fca03a5a078d1dd1d5b2c7890546
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070488"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514372"
 ---
 # <a name="createsslcertificatebinding-method-wmi-msreportserverconfigurationsetting"></a>CreateSSLCertificateBinding 方法 (WMI MSReportServer_ConfigurationSetting)
   建立 SSL 憑證繫結。  
@@ -74,7 +74,7 @@ public void CreateSSLCertificateBinding(string application,
   
 2.  指定的 IPAddress 並未對應至這部電腦的 IPAddress。  
   
-3.  指定的 IPAddress 是 DHCP IPAddress (定期變更) – 請改用萬用字元 IP 位址 (0.0.0.0)。  
+3.  指定的 IPAddress 是 DHCP IPAddress (定期變更) - 請改用萬用字元 IP 位址 (0.0.0.0)。  
   
 4.  指定的 IPAddress 與 URL 保留項目的 IP 位址不符，而且萬用字元或主機名稱 URL 保留項目不存在。  
   

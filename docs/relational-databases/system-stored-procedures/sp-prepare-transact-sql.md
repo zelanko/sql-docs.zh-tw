@@ -19,24 +19,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42d5912b67a4039ccd16421413a20763aa8015c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b52f71577bed8a0433c8d516cdc9cbd877066e4
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644218"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785929"
 ---
 # <a name="spprepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  準備參數化[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式，並傳回陳述式*處理*執行。 sp_prepare 的叫用方式指定 ID = 11 中的表格式資料流 (TDS) 封包。  
+準備參數化[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式，並傳回陳述式*處理*執行。  `sp_prepare` 叫用指定 ID = 11 中的表格式資料流 (TDS) 封包。  
   
  ![文章連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 sp_prepare handle OUTPUT, params, stmt, options  
 ```  
   
@@ -58,20 +57,57 @@ sp_prepare handle OUTPUT, params, stmt, options
 |0x0001|RETURN_METADATA|  
   
 ## <a name="examples"></a>範例  
- 下列範例會準備及執行簡單陳述式。  
+A. 下列範例會準備及執行簡單陳述式。  
   
-```  
-Declare @P1 int;  
-Exec sp_prepare @P1 output,   
+```sql  
+DECLARE @P1 int;  
+EXEC sp_prepare @P1 output,   
     N'@P1 nvarchar(128), @P2 nvarchar(100)',  
     N'SELECT database_id, name FROM sys.databases WHERE name=@P1 AND state_desc = @P2';  
-Exec sp_execute @P1, N'tempdb', N'ONLINE';  
+EXEC sp_execute @P1, N'tempdb', N'ONLINE';  
 EXEC sp_unprepare @P1;  
-```  
+```
 
+B. 下列範例會準備在 AdventureWorks2016 資料庫中，陳述式，並稍後執行它使用的控制代碼。
+
+```sql
+-- Prepare query
+DECLARE @P1 int;  
+EXEC sp_prepare @P1 output,   
+    N'@Param int',  
+    N'SELECT *
+FROM Sales.SalesOrderDetail AS sod
+INNER JOIN Production.Product AS p ON sod.ProductID = p.ProductID
+WHERE SalesOrderID = @Param
+ORDER BY Style DESC;';  
+
+-- Return handle for calling application
+SELECT @P1;
+GO
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+-----------
+1
+
+(1 row affected)
+```
+
+然後應用程式會執行兩次才予以捨棄已備妥計劃使用控制代碼值 1 的查詢。
+
+```sql
+EXEC sp_execute 1, 49879;  
+GO
+
+EXEC sp_execute 1, 48766;
+GO
+
+EXEC sp_unprepare 1; 
+GO
+```
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   
 

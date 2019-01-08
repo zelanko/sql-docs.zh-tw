@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 050269e2c7183c8b4c318749bc3adc93be056119
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ab3a864d9f93700fdb9aa646bba0d244d1ea17c5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664827"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414075"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51664827"
   
  **SQLColumns**可以在靜態伺服器資料指標上執行。 嘗試執行**SQLColumns**上可更新的 （動態或索引鍵集） 資料指標會傳回 SQL_SUCCESS_WITH_INFO，指出資料指標類型已變更。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援的報告資訊的連結伺服器上的資料表所接受的兩部分名稱*CatalogName*參數： *Linked_Server_Name.Catalog_Name*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援的報告資訊的連結伺服器上的資料表所接受的兩部分名稱*CatalogName*參數：*Linked_Server_Name.Catalog_Name*。  
   
  ODBC 2。*x*應用程式中不使用萬用字元*TableName*， **SQLColumns**會傳回資料表的名稱相符的任何相關資訊*TableName*和目前的使用者所擁有。 如果目前使用者擁有其名稱符合任何資料表*TableName*參數**SQLColumns**傳回其他使用者所擁有的任何資料表的相關資訊，其中資料表名稱必須符合*TableName*參數。 ODBC 2。*x*應用程式使用萬用字元**SQLColumns**會傳回所有資料表其名稱符合*TableName*。 ODBC 3。*x*應用程式**SQLColumns**會傳回所有資料表其名稱符合*TableName*無論擁有者或是否使用萬用字元。  
   

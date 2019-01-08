@@ -21,17 +21,17 @@ ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cbcd8616fc743ee749b3adb9b30f343939fa7f3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23495d6f2d18964bb35395666c3c7b867e508e20
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819236"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211217"
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  根據保留原則，從管理資料倉儲中移除資料。 此程序執行每日 mdw_purge_data[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與指定的執行個體相關聯的代理程式管理資料倉儲工作。 您可以使用這個預存程序，從管理資料倉儲執行視需要的資料移除動作。  
+  根據保留原則，從管理資料倉儲中移除資料。 mdw_purge_data [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業會每天針對與指定之執行個體相關聯的管理資料倉儲執行這項程序。 您可以使用這個預存程序，從管理資料倉儲執行視需要的資料移除動作。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

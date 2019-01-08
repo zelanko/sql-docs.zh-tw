@@ -1,5 +1,5 @@
 ---
-title: 第 4 課：定義子報表的資料連線和資料表 | Microsoft Docs
+title: 第 4 課：定義子報表的資料連接和資料表 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3403d416ed7945d4f980ef4c15d89ff0e56c8720
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0aed81ff4ac2daa517bb17ddb53ebaf7eacdcbe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184308"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365410"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>第 4 課：定義子報表的資料連接和資料表
   設計父報表之後，下一步是要建立子報表的資料連接和資料表。 在本教學課程中，資料連接是指 AdventureWorks2008 資料庫。 您也可以選擇連接到 AdventureWorks2012 資料庫。  
@@ -57,11 +57,11 @@ ms.locfileid: "48184308"
     SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail  
     ```  
   
-     您也可以建立查詢，即可**查詢產生器**，然後按一下 [驗證查詢**執行查詢**] 按鈕。 如果查詢未傳回預期的資料，表示您可能使用較舊的 AdventureWorks 版本。 如需安裝的詳細資訊**AdventureWorks2008**版本的 AdventureWorks，請參閱[逐步解說： 安裝 AdventureWorks 資料庫](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx)。  
+     您也可以建立查詢，即可**查詢產生器**，然後按一下 [驗證查詢**執行查詢**] 按鈕。 如果查詢未傳回預期的資料，表示您可能使用較舊的 AdventureWorks 版本。 如需安裝的詳細資訊**AdventureWorks2008**版本的 AdventureWorks，請參閱[逐步解說：安裝 AdventureWorks 資料庫](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx)。  
   
 10. 在上**選擇要產生的方法**頁面上，取消核取**建立方法，以便將更新傳送至資料庫 (GenerateDBDirectMethods) 直接**，然後按一下**完成**。  
   
-     您現在已完成設定 ADO.NET [DataTable](http://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx)做為報表資料來源。 在 Visual Studio 中的 DataSet 設計工具頁面上，應該會看到您加入的 **DataTable** ，並且列出查詢中指定的資料行。 根據查詢，DataSet2 包含 PurhcaseOrderDetail 資料表中的資料。  
+     您現在已完成設定 ADO.NET [DataTable](https://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx)做為報表資料來源。 在 Visual Studio 中的 DataSet 設計工具頁面上，應該會看到您加入的 **DataTable** ，並且列出查詢中指定的資料行。 根據查詢，DataSet2 包含 PurhcaseOrderDetail 資料表中的資料。  
   
 11. 儲存檔案。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication logical records [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2fba7ca3af280beaea72e4055d29e9fc7e444c52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b05d3b02c4fcd0d90b0b96a1a32c792537818e1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177188"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757920"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>使用邏輯記錄分組相關資料列的變更
     
@@ -98,7 +97,7 @@ ms.locfileid: "48177188"
   
 -   對於邏輯記錄中包含的發行項，不支援使用商務邏輯處理常式或自訂解析程式進行自訂衝突解決。  
   
--   如果在包含了參數化篩選的發行集中使用邏輯記錄，您必須使用「訂閱者」資料分割的快照集來初始化「訂閱者」。 如果您使用其他方法初始化「訂閱者」，「合併代理程式」將失敗。 如需詳細資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)。  
+-   如果在包含了參數化篩選的發行集中使用邏輯記錄，您必須使用「訂閱者」資料分割的快照集來初始化「訂閱者」。 如果您使用其他方法初始化「訂閱者」，「合併代理程式」將失敗。 如需相關資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)。  
   
 -   「衝突檢視器」中不會顯示涉及邏輯記錄的衝突。 若要檢視這些衝突的相關資訊，請使用複寫預存程序。 如需詳細資訊，請參閱[檢視合併式發行集的衝突資訊 &#40;複寫 Transact-SQL 程式設計&#41;](../view-conflict-information-for-merge-publications.md)。  
   

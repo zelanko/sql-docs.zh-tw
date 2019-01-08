@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fcd118e2690414c868f105c50e1c4b92c3ef9af5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26da2a16462b9853489c6430a6c80e1ab2a6f3b8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228540"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770630"
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction 事件類別
   使用 **DTCTransaction** 事件類別，可監視透過 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 分散式交易協調器 (DTC) 進行協調之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 交易的狀態。 這些包括牽涉到同一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體中兩個以上資料庫的交易，以及牽涉到兩個以上 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的分散式交易。  

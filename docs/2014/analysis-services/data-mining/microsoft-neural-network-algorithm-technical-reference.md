@@ -29,12 +29,12 @@ ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 118c20c16890edb50bdc19686da40c77b362c29d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51551dd92ee0cca193abd88041e4ad7cc183718a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217648"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521125"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路使用「多層認知」(Multilayer Perceptron) 網路，亦稱為「倒傳播差異規則」(Back-Propagated Delta Rule) 網路，它包含最多 3 層神經 (Neuron) 或「認知器」(Perceptron)。 這 3 層分別是輸入層、選擇性隱藏層和輸出層。  
@@ -103,7 +103,7 @@ ms.locfileid: "48217648"
   
  **離散值**  
   
- Μ = p – 狀態的優先機率  
+ Μ = p-狀態的優先機率  
   
  StdDev = sqrt(p(1-p))  
   
@@ -138,7 +138,7 @@ ms.locfileid: "48217648"
  HOLDOUT_SEED  
  在演算法隨機決定鑑效組資料時，指定用來植入虛擬隨機產生器的數字。 如果此參數設定為 0，此演算法會依據採礦模型的名稱產生種子，以保證在重新處理期間，模型內容保持不變。  
   
- 預設值是 0。  
+ 預設值為 0。  
   
  MAXIMUM_INPUT_ATTRIBUTES  
  決定在運用特徵選取之前可提供給演算法之輸入屬性的最大數目。 將此值設定為 0，會停用輸入屬性的特徵選取。  
@@ -203,7 +203,7 @@ ms.locfileid: "48217648"
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 類神經網路演算法](microsoft-neural-network-algorithm.md)   
- [類神經網路模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [類神經網路模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [類神經網路模型查詢範例](neural-network-model-query-examples.md)  
   
   

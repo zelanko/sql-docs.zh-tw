@@ -1,5 +1,5 @@
 ---
-title: 字串儲存體和表格式模型中的定序 |Microsoft 文件
+title: 字串儲存體和 Analysis Services 表格式模型中的定序 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 38a79073648bdab889913050118d7318ca3f536b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 84bd7e70c5ff3c1ee41bdcc331fefdd2422937ed
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044946"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071805"
 ---
-# <a name="string-storage-and-collation-in-tabular-models"></a>字串儲存體和表格式模型中的定序
+# <a name="string-storage-and-collation-in-tabular-models"></a>表格式模型中的字串儲存和定序
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   字串 (文字值) 以高度壓縮的格式儲存在表格式模型中；由於此壓縮，您在擷取整個或部分字串時可能會得到意外結果。 此外，因為字串地區設定和定序是繼承自階層結構上最接近的父物件，所以如果未明確定義字串語言，父物件的地區設定和定序可能會影響各字串的儲存方式以及字串是唯一還是與父定序所定義的相似字串合併。  
   
- 本文描述的字串會壓縮和儲存的機制，並提供的定序和語言如何影響表格式模型中文字公式的結果範例。  
+ 這篇文章描述的壓縮和儲存，字串的機制，並提供的定序和語言如何影響表格式模型中文字公式的結果範例。  
   
-## <a name="storage"></a>儲存空間  
+## <a name="storage"></a>Storage  
  在表格式模型中，所有資料都是高度壓縮，以更好地放入記憶體中。 因此，可視為語彙相等的所有字串只儲存一次。 該字串的第一個執行個體做為標準表示，並將此後每個相等字串編制索引為與第一次出現字串相同的壓縮值。  
   
  關鍵問題是：語彙相等字串的構成要素為何？ 如果兩個字串可視為相同字組，它們就是視為語彙相等。 例如，在英語中，當您在字典中搜尋 **violin** 一字時，根據字典的編輯原則，可能會找到項目 **Violin** 或 **violin**，但通常您會認為這兩個字是相等的，並且忽略大小寫的差異。 在表格式模型中，決定兩個字串是否語彙相等的因素不是編輯原則或甚至是使用者喜好設定，而是指派給資料行的地區設定和定序順序。  
@@ -54,7 +54,7 @@ ms.locfileid: "34044946"
 |trEE|  
 |PlAnT|  
   
- 如果您在模型中使用 **Classification – English**資料行，只要您顯示植物分類，看不到有各種大小寫用法的原始值，而是只看到第一個執行個體。 原因是 **tree** 的所有大小寫變體在此定序和地區設定中都是視為相等；因此，只保存一個字串，系統遇到的該字串的第一個執行個體就是儲存的字串。  
+ 如果您使用資料行**Classification-English**，在您的模型，只要您顯示植物分類您會看到不到原始值，其不同用法的和大小寫，但第一個執行個體。 原因是 **tree** 的所有大小寫變體在此定序和地區設定中都是視為相等；因此，只保存一個字串，系統遇到的該字串的第一個執行個體就是儲存的字串。  
   
 > [!WARNING]  
 >  您可能決定要根據自己的判斷，來定義哪個字串做為第一個儲存的字串，但可能很難這樣做。 因為有鑑於所有值都是視為相同，沒有簡單的方法可以事先判斷引擎應該先處理哪個資料列。 反之，如果您需要設定標準值，則應在載入模型前清理所有字串。  

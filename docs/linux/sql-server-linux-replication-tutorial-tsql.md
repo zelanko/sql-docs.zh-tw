@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 13359f151ef1453a7bc8b2020dc4cd8db9a13b80
-ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
+ms.openlocfilehash: 9b1d86b56e836a9b9b7bf575d5e9353a962894ce
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49390830"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405313"
 ---
 # <a name="configure-replication-with-t-sql"></a>使用 T-SQL 設定複寫
 
@@ -291,6 +291,6 @@ ms.locfileid: "49390830"
 
 ## <a name="next-steps"></a>後續步驟
 
-[在 Linux 上的概念： SQL Server 複寫](sql-server-linux-replication.md)
+[概念：在 Linux 上的 SQL Server 複寫](sql-server-linux-replication.md)
 
 [複寫預存程序](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。

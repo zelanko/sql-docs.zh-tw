@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.allsubscriptions.snapshot.f1
@@ -13,12 +12,12 @@ ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 86b43caccd6117d7371b201938acc593b6d63da9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30f407c862bdc0b4cc38b225b9ff6842e8fbcce0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081068"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776940"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>發行集資訊，所有訂閱 (快照式發行集)
   **[所有訂閱]** 索引標籤，會顯示所選取快照式發行集之所有訂閱的資訊。  
@@ -26,13 +25,13 @@ ms.locfileid: "48081068"
 ## <a name="options"></a>選項。  
  如需詳細資訊以及與訂閱相關的工作，請以滑鼠右鍵按一下該訂閱的資料列，然後按一下捷徑功能表上的選項。 若要變更方格顯示資料的方式，請以滑鼠右鍵按一下方格，然後按一下下列其中一個選項：  
   
--   **排序**：在 **[排序資料行]** 對話方塊中排序一個或多個資料行。  
+-   **排序**:中的一或多個資料行的排序**排序資料行** 對話方塊。  
   
--   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及在 **[選擇資料行]** 對話方塊中顯示這些資料行所依循的順序。  
+-   **選擇要顯示的欄**:選取要顯示的順序來顯示它們在哪一個資料行 **[選擇資料行**] 對話方塊。  
   
--   **篩選**：根據 **[篩選設定]** 對話方塊中的資料行值，篩選方格中的資料列。  
+-   **篩選**:篩選依據的資料行值的方格中的資料列**篩選設定** 對話方塊。  
   
--   **清除篩選**：清除方格的所有篩選設定。  
+-   **清除篩選**:清除方格的所有篩選設定。  
   
  篩選設定是每個方格特有的設定。 資料行選取和排序會套用至所有相同類型的方格，例如每個發行者的發行集方格。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "48081068"
  唯有設定了臨界值時，才會顯示 **[即將過期/已過期]** 狀態值。 如需設定閾值的資訊，請參閱[在複寫監視器中設定閾值和警告](monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
  **訂閱**  
- 每一個訂閱的名稱，格式為： *SubscriberName: SubscriptionDatabaseName*。  
+ 每個訂用帳戶，在表單中的名稱：*SubscriberName:SubscriptionDatabaseName*。  
   
  **上次同步處理日期**  
  散發代理程式上次執行的時間。 如果正在進行同步處理，就會顯示 **[進行中]** 。  

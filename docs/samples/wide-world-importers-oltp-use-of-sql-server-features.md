@@ -11,12 +11,12 @@ ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 629494b298f9eacee0b7217522698897be401e04
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 866b32abbc7f7e754b11fd286dd0c35eeeb92165
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669889"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400691"
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>使用 SQL Server 功能和功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ WideWorldImporters 被設計來展示的許多重要功能的 SQL Server，包�
 |SQL Server 功能或功能|用於 WideWorldImporters|
 |-----------------------------|---------------------|
 |時態表|有許多的時態表，包括所有的查閱樣式參考資料表和主要實體，例如 StockItems、 客戶及供應商。 使用時態表可讓以方便地追蹤這些實體的歷程記錄。|
-|適用於 JSON 的 AJAX 呼叫|應用程式經常使用 AJAX 呼叫來查詢這些資料表： 人員、 客戶、 供應商和 StockItems。 呼叫會傳回 JSON 承載 （也就是會傳回的資料會格式化為 JSON 資料）。 請參閱，例如預存程序`Website.SearchForCustomers`。|
+|適用於 JSON 的 AJAX 呼叫|應用程式經常會使用 AJAX 呼叫來查詢這些資料表：人員、 客戶、 供應商和 StockItems。 呼叫會傳回 JSON 承載 （也就是會傳回的資料會格式化為 JSON 資料）。 請參閱，例如預存程序`Website.SearchForCustomers`。|
 |JSON 屬性/值包|一些資料表有包含擴充資料表中的關聯式資料的 JSON 資料的資料行。 例如，`Application.SystemParameters`有應用程式設定的資料行和`Application.People`具有記錄的使用者偏好設定的資料行。 這些資料表會使用`nvarchar(max)`要記錄的 JSON 資料，以及使用內建函式的 CHECK 條件約束的資料行`ISJSON`以確保資料行值都是有效的 JSON。|
 |資料列層級安全性 (RLS)|資料列層級安全性 (RLS) 用來限制存取權 [客戶] 資料表中，根據角色成員資格。 每個銷售領域有角色和使用者。 若要查看此動作，請使用對應的指令碼範例-script.zip，也就是組件中的[版本的範例](https://go.microsoft.com/fwlink/?LinkID=800630)。|
 |即時作業分析|（完整版的資料庫）核心交易資料表`Sales.InvoiceLines`和`Sales.OrderLines`兩者都有支援有效率的分析查詢的執行上作業的工作負載的影響降到最低的交易式資料庫中的非叢集資料行存放區索引。 在相同的資料庫執行交易和分析也稱為[混合式交易/分析處理 (HTAP)](https://wikipedia.org/wiki/Hybrid_Transactional/Analytical_Processing_(HTAP))。 若要查看此動作，請使用對應的指令碼範例-script.zip，也就是組件中的[版本的範例](https://go.microsoft.com/fwlink/?LinkID=800630)。|

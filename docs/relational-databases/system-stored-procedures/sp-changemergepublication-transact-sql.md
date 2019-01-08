@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergepublication_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 89e1ca46f323bb565eea9080a0118fb19b39af08
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 9eb6d52d72dec4efab7e744fd4eafd2d9a5eb612
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072292"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788480"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|從 Active Directory 中移除發行集資訊。|  
 |**replicate_ddl**|**1**|在發行者上執行的資料定義語言 (DDL) 陳述式會進行複寫。|  
 ||**0**|不複寫 DDL 陳述式。|  
-|**保留期**||這是**int**表示數*retention_period_unit*單位用來儲存給定發行集的變更。 如果未在保留期限內同步處理訂閱，且散發者端的清除作業移除了它已收到的暫止變更，訂閱便會到期，必須重新初始化。 允許的最大保留期限是 9999 年 12 月 31 日和目前日期之間的天數。<br /><br /> 注意： 合併式發行集的保留期限有 24 小時寬限期內，以配合不同時區的訂閱者。|  
+|**保留期**||這是**int**表示數*retention_period_unit*單位用來儲存給定發行集的變更。 如果未在保留期限內同步處理訂閱，且散發者端的清除作業移除了它已收到的暫止變更，訂閱便會到期，必須重新初始化。 允許的最大保留期限是 9999 年 12 月 31 日和目前日期之間的天數。<br /><br /> 注意：合併式發行集的保留期限有 24 小時的寬限期，以便配合不同時區的訂閱者。|  
 |**retention_period_unit**|**day**|以天為保留週期的指定單位。|  
 ||**week**|以星期為保留週期的指定單位。|  
 ||**month**|以月為保留週期的指定單位。|  
@@ -119,7 +118,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**非使用中**|發行集在非使用狀態中。|  
 |**sync_mode**|**原生**或<br /><br /> **原生 bcp**|所有資料表的原生模式大量複製程式輸出會用在初始快照集上。|  
 ||**character**<br /><br /> 或**bcp 字元**|所有資料表的字元模式大量複製程式輸出會用在初始快照集上，所有非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者也需要如此。|  
-|**use_partition_groups**<br /><br /> 注意： 如果在使用 partition_groups 之後, 您要還原成使用**setupbelongs**，並將**use_partition_groups = false**中**changemergearticle**，這可能不是在取得快照集之後，請正確反映。 快照集所產生的觸發程序與資料分割群組相容。<br /><br /> 此案例的因應措施是將狀態設為非作用中、 修改**use_partition_groups**，然後將狀態設定為 作用中。|**true**|發行集使用預先計算的資料分割。|  
+|**use_partition_groups**<br /><br /> 注意：如果在使用 partition_groups 之後, 您要還原成使用**setupbelongs**，並將**use_partition_groups = false**中**changemergearticle**，這可能不正確在取得快照集後反映。 快照集所產生的觸發程序與資料分割群組相容。<br /><br /> 此案例的因應措施是將狀態設為非作用中、 修改**use_partition_groups**，然後將狀態設定為 作用中。|**true**|發行集使用預先計算的資料分割。|  
 ||**false**|發行集不使用預先計算的資料分割。|  
 |**validate_subscriber_info**||列出用來擷取訂閱者資訊的函數。 然後驗證用來針對訂閱者確認資訊分割一致的動態篩選準則。|  
 |**web_synchronization_url**||Web 同步處理所用的網際網路 URL 預設值。|  

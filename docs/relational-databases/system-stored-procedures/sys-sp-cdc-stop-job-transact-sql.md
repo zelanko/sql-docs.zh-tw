@@ -20,12 +20,12 @@ ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 931b25de9acbf851f3a68475000833080d25ae93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e39a456e9d6c6479f6dab95270dcbd2d549c986
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846519"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589152"
 ---
 # <a name="sysspcdcstopjob-transact-sql"></a>sys.sp_cdc_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [[  **@job_type=** ] **'* * * job_type&lt*']  
+ [[  **@job_type=** ] **'**_job_type&lt_']  
  要加入的作業類型。 *job_type&lt*已**nvarchar(20)** 預設值是**擷取**。 有效輸入如下**擷取**並**清除**。  
   
 ## <a name="return-code-values"></a>傳回碼值  

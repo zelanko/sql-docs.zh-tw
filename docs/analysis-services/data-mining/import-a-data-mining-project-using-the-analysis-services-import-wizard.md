@@ -1,5 +1,5 @@
 ---
-title: 匯入資料採礦專案，使用 Analysis Services 匯入精靈 |Microsoft 文件
+title: 匯入資料採礦專案，使用 Analysis Services 匯入精靈 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 85c2dcce84447c1a6c9d3baa3dcd99cd01e877bd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 52e98d6916b66c4ab26b2791d023d25bffc4cab8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014985"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525502"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>使用 Analysis Services 匯入精靈匯入資料採礦專案
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34014985"
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>從現有的資料採礦專案匯入資料來源、採礦結構和採礦模型  
  當您使用 [從伺服器匯入 (多維度和資料採礦)] 範本時，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會建立新的資料採礦專案，然後從指定的資料採礦專案複製中繼資料。 新的專案所包含的資料來源、資料來源檢視、採礦結構和採礦模型與您匯入的來源 ssASnoversion 資料庫相同。 但是，要等到您依照以下所述的內容更新某些屬性及處理物件之後，才能使用專案：  
   
--   資料本身並不會從來源伺服器複製到新的資料採礦專案，只會匯入資料來源和資料來源檢視的定義。 因此，當您完成匯入程序及建立物件之後，您必須定型採礦結構和相依模型來以資料擴展物件。 您可以使用資料採礦設計師中的 **[全部處理]** 命令來定型模型和結構。  
+-   資料本身不會複製從來源伺服器到新的資料採礦專案僅匯入資料來源和資料來源檢視的定義。 因此，當您完成匯入程序及建立物件之後，您必須定型採礦結構和相依模型來以資料擴展物件。 您可以使用資料採礦設計師中的 **[全部處理]** 命令來定型模型和結構。  
   
 -   如果您正在匯入之前在舊版 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中所建立的專案，則資料來源可能會使用匯入專案之目標伺服器上所未安裝的提供者。 如果您在處理匯入的採礦結構時遇到錯誤，請以滑鼠右鍵按一下每一個資料來源，然後選取 [開啟設計工具] 來編輯連接字串，並檢閱提供者屬性。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "34014985"
     > [!WARNING]  
     >  您不能指定您想要匯入的物件；當您選擇現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫時，所有多維度和資料採礦物件都會匯入。  
   
-     按一下 **[下一步]**。  
+     按 [下一步] 。  
   
 5.  **[正在完成精靈]** 頁面會顯示匯入作業的進度。 您不能取消此作業或是變更正在匯入的物件。 完成時按一下 **[完成]** 。  
   

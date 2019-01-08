@@ -21,12 +21,12 @@ ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1a82c376481b5c0bb563ea5c48be8053d70f0d52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8945ba72471855b2c3de5b169b12bea4cc2b656e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636566"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391343"
 ---
 # <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ EXEC managed_backup.sp_backup_on_demand
  執行備份所在之資料庫的名稱。 @database_name已**SYSNAME**。  
   
  @type  
- 要執行的備份類型：資料庫或記錄。 @type參數是**NVARCHAR(32)**。  
+ 要執行的備份類型。資料庫或記錄。 @type參數是**NVARCHAR(32)**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -65,7 +65,7 @@ EXEC managed_backup.sp_backup_on_demand
  需要的成員資格**db_backupoperator**資料庫角色，使用**ALTER ANY CREDENTIAL**權限，並**EXECUTE**的權限**sp_delete_backuphistory**預存程序。  
   
 ## <a name="examples"></a>範例  
- 下列範例提出資料庫 'TestDB' 的資料庫備份要求。 此資料庫已啟用[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
+ 下列範例會使資料庫 'TestDB' 的資料庫備份要求。 此資料庫已啟用[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
   
 ```  
 Use MSDB  

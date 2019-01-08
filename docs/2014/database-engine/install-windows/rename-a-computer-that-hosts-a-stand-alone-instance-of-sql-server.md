@@ -19,12 +19,12 @@ ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4e8026d5611b2f48ff622dd0b45e21a5f2c9c13
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 1bd9e18d1dfe7226d043a7c8c968999da680da08
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018903"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363850"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>重新命名主控 SQL Server 獨立執行個體的電腦
   當您變更了執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的電腦名稱之後，便會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動期間辨識這個新名稱。 您不必重新執行安裝程式，即可重設電腦名稱。 請改用下列步驟來更新儲存在 sys.servers 中而且由系統函式 @@SERVERNAME 所報告的系統中繼資料。 您可以更新系統中繼資料，以便反映使用 @@SERVERNAME 或從 sys.servers 中查詢伺服器名稱之遠端連接和應用程式的電腦名稱變更。  
@@ -107,7 +107,7 @@ ms.locfileid: "51018903"
   
  **連結的伺服器組態** - 連結的伺服器組態將會受到電腦重新命名作業影響。 您可以使用 `sp_addlinkedserver` 或 `sp_setnetname` 更新電腦名稱參考。 如需詳細資訊，請參閱 [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) 或 [sp_setnetname &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setnetname-transact-sql)。  
   
- **用戶端別名名稱** - 使用具名管道的用戶端別名將會受到電腦重新命名作業影響。 例如，如果您建立了指向 SRVR1 的別名 "PROD_SRVR" 並且使用具名管道通訊協定，此管道名稱將會類似這樣： `\\SRVR1\pipe\sql\query`。 重新命名電腦之後，具名管道的路徑將不再有效。 如需具名管道的詳細資訊，請參閱 [使用具名管道建立有效的連接字串](http://go.microsoft.com/fwlink/?LinkId=111063)。  
+ **用戶端別名名稱** - 使用具名管道的用戶端別名將會受到電腦重新命名作業影響。 例如，如果您建立了指向 SRVR1 的別名 "PROD_SRVR" 並且使用具名管道通訊協定，此管道名稱將會類似這樣： `\\SRVR1\pipe\sql\query`。 重新命名電腦之後，具名管道的路徑將不再有效。 如需具名管道的詳細資訊，請參閱 [使用具名管道建立有效的連接字串](https://go.microsoft.com/fwlink/?LinkId=111063)。  
   
 ## <a name="see-also"></a>另請參閱  
  [安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  

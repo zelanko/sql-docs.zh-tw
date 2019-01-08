@@ -20,16 +20,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ca3206315b4b8c0738d9a1ce0534000b30bdd52
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f749e5c37742ac4e52a9cf0fc9dcb417d07aede0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666368"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545434"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>使用 sql:is-constant 建立常數元素 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  若要指定常數元素，也就是 XSD 結構描述沒有對應到任何資料庫資料表或資料行中的項目 — 您可以使用**sql: is-constant&lt**註釋。 此註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。 **Sql: is-constant&lt**註解，請指定沒有任何屬性的項目上。 如果該註解是在值為 True (或 1) 的元素上指定，該元素不會對應到資料庫，但是仍會出現在 XML 文件中。  
+  若要指定常數元素-也就是 XSD 結構描述沒有對應到任何資料庫資料表或資料行中的項目-您可以使用**sql: is-constant&lt**註釋。 此註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。 **Sql: is-constant&lt**註解，請指定沒有任何屬性的項目上。 如果該註解是在值為 True (或 1) 的元素上指定，該元素不會對應到資料庫，但是仍會出現在 XML 文件中。  
   
  **Sql: is-constant&lt**註解可用於：  
   

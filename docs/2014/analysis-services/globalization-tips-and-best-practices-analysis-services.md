@@ -17,12 +17,12 @@ ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 026c1bf822a6493c6605128582f7142178ad6776
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8713ed58df138efbaacd8f6ff4b5d31ef0708d85
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188258"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357315"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>全球化秘訣和最佳作法 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  僅限多維度  
@@ -50,7 +50,7 @@ ms.locfileid: "48188258"
   
  由於空格字元可以半形 (SBCS) 或全形 (DBCS) Unicode 字元集來表示，因此是「特殊大小寫」。 在關聯式引擎中，兩個以空格分隔的複合字串 (一個使用 SBCS，另一個使用 DBCS) 會視為相同。 在 Analysis Services 中，兩個相同的複合字串在處理期間並不相同，並且第二個執行個體會標示為重複項目。  
   
- 如需詳細資訊和建議的解決方法，請參閱 [Unicode 字串中的空格根據定序而有不同的處理結果](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx)。  
+ 如需詳細資訊和建議的解決方法，請參閱 [Unicode 字串中的空格根據定序而有不同的處理結果](https://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx)。  
   
 ##  <a name="bkmk_recos"></a> 常見的定序建議  
  Analysis Services 一律會顯示所有可用語言和定序的完整清單，而不會依據您所選取的語言篩選定序。 請務必選擇可用的組合。  
@@ -84,7 +84,7 @@ ms.locfileid: "48188258"
   
 |字集|區分大小寫|  
 |---------------------|----------------------|  
-|**基本拉丁字母**|以拉丁文字 (26 個英文大小寫字母的任何幾個字母) 表示的物件識別碼會視為區分大小寫，而不論定序為何。 例如，下列物件識別碼會視為相同：54321**abcdef**、54321**ABCDEF**、54321**AbCdEf**。 Analysis Services 會在內部將字串中的字元視為全部大寫，然後執行與語言無關的簡單全半形比較。<br /><br /> 請注意，只有 26 個字元會受到影響。 如果是西歐語言，但使用斯堪地那維亞字元，其他字元不會使用大寫。|  
+|**基本拉丁字母**|以拉丁文字 (26 個英文大小寫字母的任何幾個字母) 表示的物件識別碼會視為區分大小寫，而不論定序為何。 例如，下列物件識別碼會視為相同：54321**abcdef**、 54321**ABCDEF**、 54321**AbCdEf**。 Analysis Services 會在內部將字串中的字元視為全部大寫，然後執行與語言無關的簡單全半形比較。<br /><br /> 請注意，只有 26 個字元會受到影響。 如果是西歐語言，但使用斯堪地那維亞字元，其他字元不會使用大寫。|  
 |**斯拉夫文、希臘文、科普特文、亞美尼亞文**|非拉丁文複合字集的物件識別碼 (例如斯拉夫文) 則一律會區分大小寫。 例如，Измерение 和 измерение 的唯一差異是第一個字母的大小寫，即便如此，這兩個字仍會視為兩個相異值。|  
   
  **物件識別碼的區分大小寫含意**  
@@ -140,7 +140,7 @@ ms.locfileid: "48188258"
   
 3.  **針對通用的日期和時間資訊使用 ISO 日期格式**  
   
-     某位 [Analysis Services 專家](http://geekswithblogs.net/darrengosbell/Default.aspx) 有這項建議：「針對要傳入 SQL 或 MDX 查詢的任何日期字串，我一律會使用 ISO 日期格式 yyyy-mm-dd，這樣做不僅可避免模擬兩可，且不論用戶端或伺服器的地區設定為何都有效。 我同意當剖析模稜兩可的日期格式時，伺服器應該遵循其地區設定，但我也認為如果您已有一個不開放轉譯的選項時，何不選擇這個選項。」  
+     一[Analysis Services 專家](http://geekswithblogs.net/darrengosbell/Default.aspx)有這項建議：「針對要傳入 SQL 或 MDX 查詢的任何日期字串，我一律會使用 ISO 日期格式 yyyy-mm-dd，這樣做不僅可避免模擬兩可，且不論用戶端或伺服器的地區設定為何都有效。 我同意當剖析模稜兩可的日期格式時，伺服器應該遵循其地區設定，但我也認為如果您已有一個不開放轉譯的選項時，何不選擇這個選項。」  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   

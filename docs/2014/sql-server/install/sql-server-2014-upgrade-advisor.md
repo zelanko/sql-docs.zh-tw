@@ -11,17 +11,17 @@ ms.assetid: d28a5ca8-ea9f-443f-af4f-b7e77987f8f0
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c6e49e9c5c5306ba5d1986c7fd8e09ea463c8b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 18a88e4c6029705e5587dffce1803208186dfcd0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129018"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361310"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>SQL Server 2014 Upgrade Advisor
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor 會分析的設定已安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件，然後產生問題，您必須解決才能確保升級成功的報表。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor 會分析已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的組態，然後產生問題的報表，其中列出您必須解決才能確保升級成功的問題。  
   
- 取得可轉散發套件資料夾中 Upgrade Advisor 安裝檔案 (sqlua.msi) 的安裝媒體，或做為一部分的 [SQL 2014 功能套件下載](http://www.microsoft.com/download/details.aspx?id=42295)。  
+ 取得可轉散發套件資料夾中 Upgrade Advisor 安裝檔案 (sqlua.msi) 的安裝媒體，或做為一部分的 [SQL 2014 功能套件下載](https://www.microsoft.com/download/details.aspx?id=42295)。  
   
 |主題|描述|  
 |-----------|-----------------|  

@@ -1,5 +1,5 @@
 ---
-title: 建立採礦模型的副本 |Microsoft 文件
+title: 建立採礦模型的複本 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 23770ec59e31a51b7aca7badf5b827baa6181155
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7c5479a43a07a6398ff45635828a2a9c88b7cb11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014585"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502156"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>建立採礦模型的複本
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34014585"
   
 1.  選取採礦模型。  
   
-2.  在 [屬性] 視窗中，按一下 **Filter** 屬性的文字方塊，然後按一下建置 **(...)** 按鈕。  
+2.  在 [**屬性**] 視窗中，按一下文字方塊，讓**篩選**屬性，然後按一下 [組建 **（...）** ] 按鈕。  
   
 3.  變更篩選條件。  
   
@@ -53,8 +53,8 @@ ms.locfileid: "34014585"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [篩選採礦模型 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [採礦模型的工作與操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [採礦模型工作和使用說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [從採礦模型刪除篩選](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82df10e6b8effeb040b362dcf466eb173dfce4f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629676"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541867"
 ---
 # <a name="odbc-dynamic-cursors"></a>ODBC 動態資料指標
 動態資料指標只是： 動態。 它可以偵測到的成員資格、 順序和值之結果集資料指標開啟後所做的變更。 比方說，假設是動態資料指標擷取兩個資料列，而另一個應用程式然後更新其中一個資料列，並刪除其他。 如果動態資料指標則會嘗試重新提取這些資料列，它不會尋找已刪除的資料列，但會傳回更新的資料列的新值。  
@@ -41,6 +41,6 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
    ORDER BY Name, CustID  
 ```  
   
- 此陳述式會建立第二個結果集，其中的第一個資料列集是原始結果集中的下一個資料列集，在此案例中的 Customers 資料表中的資料列集。 資料指標會傳回這個資料列集，應用程式。  
+ 此陳述式會在 「 客戶 」 資料表中建立第二個結果集，其中是原始的結果集-下一個資料列集在此情況下的第一個資料列集的資料列集。 資料指標會傳回這個資料列集，應用程式。  
   
  有趣的是要注意這種方式實作的動態資料指標實際上會建立許多的結果集，以允許它偵測到原始的結果集的變更。 應用程式永遠不會了解這些輔助結果集; 存在它只會出現如資料指標能夠偵測到原始的結果集的變更。

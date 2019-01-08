@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.internetsynchronization.f1
@@ -13,12 +12,12 @@ ms.assetid: 8e0198c3-5e4e-418c-9920-78ccbbfc1323
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9fcbf216468fd3d42b00daf41e4c9b7d7d97ea79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72d53ea0cf2d1abff25b7b97a1fe66cc9d9646b7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146763"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784840"
 ---
 # <a name="publication-properties-ftp-snapshot-and-internet"></a>發行集屬性，FTP 快照集和網際網路
   此頁面可以讓您：  

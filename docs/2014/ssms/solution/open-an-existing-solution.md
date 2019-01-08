@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - opening solutions
@@ -13,12 +13,12 @@ ms.assetid: 6cffd5ec-239a-4b21-a14c-15899ada3d27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 371fdad45e55a3d34c545d44de122f2d71148213
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80f13a2818810c71703fb5cccb82a1066361c3c1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218012"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755460"
 ---
 # <a name="open-an-existing-solution"></a>開啟現有的方案
   在 [方案總管] 中，每次只能開啟一個方案。  

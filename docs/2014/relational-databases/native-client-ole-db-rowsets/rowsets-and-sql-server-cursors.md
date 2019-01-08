@@ -16,12 +16,12 @@ ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c1682525f57c2a251cda46202f06737b87d030b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d87706d53190552734785b5310cba7ec81056a40
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147258"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535449"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>資料列集和 SQL Server 資料指標
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用兩個方法將結果集傳回給取用者：  
@@ -89,7 +89,7 @@ ms.locfileid: "48147258"
   
  若要使用某種類型的資料指標模型，請找出對應至此資料指標模型的資料行，並尋找此資料行中具有 'T' 值的所有資料列集屬性。 將這些資料列集屬性設定為 VARIANT_TRUE，以便使用特定的資料指標模型。 具有 '-' 值的資料列集屬性可以設定為 VARIANT_TRUE 或 VARIANT_FALSE。  
   
-|資料列集屬性/資料指標模型|預設<br /><br /> result<br /><br /> 集合<br /><br /> (RO)|快速<br /><br /> 順<br /><br /> 向<br /><br /> (RO)|靜態<br /><br /> (RO)|索引鍵集<br /><br /> 驅動<br /><br /> (RO)|  
+|資料列集屬性/資料指標模型|預設<br /><br /> result<br /><br /> 集合<br /><br /> (RO)|快速<br /><br /> 順<br /><br /> 向<br /><br /> (RO)|Static<br /><br /> (RO)|索引鍵集<br /><br /> 驅動<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  

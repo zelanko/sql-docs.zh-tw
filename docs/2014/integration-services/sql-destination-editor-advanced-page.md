@@ -15,12 +15,12 @@ ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a251b8599ba194a151790c2a781e49c643b00048
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a70bcc9e853908022147ef02e9d2019179c90875
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089028"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545492"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>SQL 目的地編輯器 (進階頁面)
   使用 [SQL 目的地編輯器] 對話方塊的 [進階] 頁面，即可指定進階大量插入選項。  
@@ -29,19 +29,19 @@ ms.locfileid: "48089028"
   
 ## <a name="options"></a>選項。  
  **保留識別**  
- 指定工作是否應該將值插入識別欄位中。 這個屬性的預設值是`False`。  
+ 指定工作是否應該將值插入識別欄位中。 此屬性的預設值為 `False`。  
   
  **保留 Null**  
- 指定工作是否應該保留 Null 值。 這個屬性的預設值是`False`。  
+ 指定工作是否應該保留 Null 值。 此屬性的預設值為 `False`。  
   
  **資料表鎖定**  
- 指定載入資料時是否鎖定資料表。 這個屬性的預設值是`True`。  
+ 指定載入資料時是否鎖定資料表。 此屬性的預設值為 `True`。  
   
  **檢查條件約束**  
- 指定工作是否應該檢查條件約束。 這個屬性的預設值是`True`。  
+ 指定工作是否應該檢查條件約束。 此屬性的預設值為 `True`。  
   
  **引發觸發程序**  
- 指定大量插入是否應該引發資料表上的觸發程序。 這個屬性的預設值是`False`。  
+ 指定大量插入是否應該引發資料表上的觸發程序。 此屬性的預設值為 `False`。  
   
  **第一個資料列**  
  指定要插入的第一個資料列。 此屬性的預設值為 **-1**，表示未指派任何值。  
@@ -69,8 +69,8 @@ ms.locfileid: "48089028"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [SQL 目的地編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
- [SQL 目的地編輯器&#40;對應頁面&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
+ [SQL 目的地編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
+ [SQL 目的地編輯器 &#40;對應頁面&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
  [使用 SQL Server 目的地來大量載入資料](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

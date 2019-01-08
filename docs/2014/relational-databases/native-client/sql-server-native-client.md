@@ -10,17 +10,17 @@ ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 68acf1991e3d1b5af44f6335f59635fcc1eacefc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2a01b9d9d13bf5e9135d287553beb8b87c2dcd5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144518"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361300"
 ---
 # <a name="what39s-new-in-sql-server-native-client"></a>什麼&#39;SQL Server Native Client 的新功能
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 會安裝 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client。 沒有 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client。  
   
- 未來 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的 ODBC 驅動程式不會再更新。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 隨附安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Native Client ODBC 驅動程式的後續版本 (在 Windows 上稱為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC Driver 11 for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 如需詳細資訊[!INCLUDE[msCoName](../../includes/msconame-md.md)]ODBC Driver 11 for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 Windows，請參閱[Microsoft ODBC Driver 11 for SQL Server-Windows](http://www.microsoft.com/download/details.aspx?id=36434)。  
+ 未來 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的 ODBC 驅動程式不會再更新。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 隨附安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Native Client ODBC 驅動程式的後續版本 (在 Windows 上稱為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC Driver 11 for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 如需詳細資訊[!INCLUDE[msCoName](../../includes/msconame-md.md)]ODBC Driver 11 for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 Windows，請參閱[Microsoft ODBC Driver 11 for SQL Server-Windows](https://www.microsoft.com/download/details.aspx?id=36434)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 OLE DB 提供者上次在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 中更新。 開發人員若要使用 OLE DB 提供者連接到最新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，必須使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 隨附的 OLE DB 提供者。  
   
@@ -38,13 +38,13 @@ ms.locfileid: "48144518"
   
  此外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 現在支援三項已加入至 Windows 7 SDK 中之標準 ODBC 的功能：  
   
--   連接相關作業的非同步執行。 如需詳細資訊，請參閱 <<c0> [ 非同步執行](http://go.microsoft.com/fwlink/?LinkID=191493)。  
+-   連接相關作業的非同步執行。 如需詳細資訊，請參閱 <<c0> [ 非同步執行](https://go.microsoft.com/fwlink/?LinkID=191493)。  
   
--   C 資料類型擴充性。 如需詳細資訊，請參閱 < [ODBC 中的 C 資料類型](http://go.microsoft.com/fwlink/?LinkID=191495)。  
+-   C 資料類型擴充性。 如需詳細資訊，請參閱 < [ODBC 中的 C 資料類型](https://go.microsoft.com/fwlink/?LinkID=191495)。  
   
      若要支援這項功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端，可以傳回 SQLGetDescField `SQL_C_SS_TIME2` (的`time`類型) 或`SQL_C_SS_TIMESTAMPOFFSET`(如`datetimeoffset`) 而不是`SQL_C_BINARY`，如果您的應用程式會使用 ODBC 3.8。 如需詳細資訊，請參閱 <<c0> [ 資料類型對 ODBC 日期和時間改善支援](features/date-and-time-improvements.md)。  
   
--   使用小型緩衝區多次呼叫 `SQLGetData`，以便擷取大型參數值。 如需詳細資訊，請參閱 <<c0> [ 使用 SQLGetData 擷取輸出參數](http://go.microsoft.com/fwlink/?LinkID=191494)。  
+-   使用小型緩衝區多次呼叫 `SQLGetData`，以便擷取大型參數值。 如需詳細資訊，請參閱 <<c0> [ 使用 SQLGetData 擷取輸出參數](https://go.microsoft.com/fwlink/?LinkID=191494)。  
   
  下列主題描述的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 行為變更。  
   

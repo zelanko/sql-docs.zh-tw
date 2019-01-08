@@ -11,12 +11,12 @@ ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb2d3f6ead3482a9f36807883f685eaed4225f29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55bf692e1b24bb0184f9b126a0bde5c0ee7e0657
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178118"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513272"
 ---
 # <a name="modifying-the-customer-dimension"></a>修改 [客戶] 維度
   您有許多不同方式可以增加 Cube 中維度的可用性和功能性。 在這個主題的工作中，您會修改 Customer 維度。  
@@ -32,11 +32,11 @@ ms.locfileid: "48178118"
   
 3.  請以相同方式變更下列屬性的名稱：  
   
-    -   **English Education**屬性 — 變更為 `Education`  
+    -   **English Education**屬性-變更為 `Education`  
   
-    -   **English Occupation**屬性 — 變更為 `Occupation`  
+    -   **English Occupation**屬性-變更為 `Occupation`  
   
-    -   **State Province Name**屬性 — 變更為 `State-Province`  
+    -   **State Province Name**屬性-變更為 `State-Province`  
   
 4.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48178118"
   
 4.  在 **名稱**屬性欄位中，輸入`Full Name`。  
   
-5.  在底部的 [NameColumn] 屬性欄位中按一下，然後按一下瀏覽 (**…**) 按鈕，即可開啟 [名稱資料行] 對話方塊。  
+5.  在中按一下**NameColumn**屬性欄位底部，然後按一下 [瀏覽 (**...**) 按鈕，即可開啟**名稱資料行**] 對話方塊。  
   
 6.  選取 `FullName`底部**來源資料行**清單，然後再按**確定**。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "48178118"
 9. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
 ## <a name="defining-composite-keycolumns"></a>定義複合 KeyColumns  
- [KeyColumns] 屬性 (property) 包含代表屬性 (attribute) 之索引鍵的一或多個資料行。 在這一課，您會建立複合索引鍵**城市**和`State-Province`屬性。 當您需要唯一識別某個屬性時，複合索引鍵便很有用。 比方說，當您定義屬性關聯性在此教學課程中，稍後**城市**屬性就必須唯一地識別`State-Province`屬性。 不過，不同省份可能會有許多相同名稱的縣 (市) 存在。 因此，您將建立由 [縣 (市)] 屬性之 [StateProvinceName] 和 [City] 資料行所組成的複合索引鍵。 如需詳細資訊，請參閱[修改屬性 (Attribute) 的 KeyColumn 屬性 (Property)](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)。  
+ [KeyColumns] 屬性 (property) 包含代表屬性 (attribute) 之索引鍵的一或多個資料行。 在這一課，您會建立複合索引鍵**城市**和`State-Province`屬性。 當您需要唯一識別某個屬性時，複合索引鍵便很有用。 比方說，當您定義屬性關聯性在此教學課程中，稍後**城市**屬性就必須唯一地識別`State-Province`屬性。 不過，不同省份可能會有許多相同名稱的縣 (市) 存在。 因此，您將建立由 [縣 (市)] 屬性之 [StateProvinceName] 和 [City] 資料行所組成的複合索引鍵。 如需詳細資訊，請參閱 [修改屬性 (Attribute) 的 KeyColumn 屬性 (Property)](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)。  
   
 #### <a name="to-define-composite-keycolumns-for-the-city-attribute"></a>針對 [縣 (市)] 屬性定義複合 KeyColumns  
   
@@ -213,7 +213,7 @@ ms.locfileid: "48178118"
 8.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
 ## <a name="defining-attribute-relationships"></a>定義屬性關聯性  
- 如果基礎資料支援屬性關聯性，您就應該定義屬性之間的屬性關聯性。 定義屬性關聯性可加快維度、資料分割和查詢處理的速度。 如需詳細資訊，請參閱[定義屬性關聯性](multidimensional-models/attribute-relationships-define.md)和[屬性關聯性](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
+ 如果基礎資料支援屬性關聯性，您就應該定義屬性之間的屬性關聯性。 定義屬性關聯性可加快維度、資料分割和查詢處理的速度。 如需詳細資訊，請參閱 [定義屬性關聯性](multidimensional-models/attribute-relationships-define.md) 和 [屬性關聯性](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
   
 #### <a name="to-define-attribute-relationships"></a>定義屬性關聯性  
   
@@ -263,12 +263,12 @@ ms.locfileid: "48178118"
 7.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [修改產品維度](lesson-3-3-modifying-the-product-dimension.md)  
+ [修改 [產品] 維度](lesson-3-3-modifying-the-product-dimension.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [維度屬性 （Property） 參考](multidimensional-models/dimension-attribute-properties-reference.md)   
+ [維度屬性 (attribute) 屬性 (property) 參考](multidimensional-models/dimension-attribute-properties-reference.md)   
  [從維度中移除屬性](multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)   
  [重新命名屬性](multidimensional-models/attribute-properties-rename-an-attribute.md)   
- [在資料來源檢視中定義具名的計算&#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

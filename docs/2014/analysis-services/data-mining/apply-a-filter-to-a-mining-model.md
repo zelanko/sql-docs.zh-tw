@@ -16,12 +16,12 @@ ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b851f631535008d1655a35c4b4af5321c8c4534
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b26f246b85f708976fd792247996cfb2084af5e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159980"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512644"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>將篩選套用至採礦模型
   如果採礦結構包含巢狀資料表，則篩選可以套用至案例資料表、巢狀資料表或兩者。  
@@ -67,7 +67,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  按一下 [值] 文字方塊，然後在方塊中輸入值。  
   
-     例如，選取`Income`做為資料行，然後選取大於運算子 (>)、，然後輸入`30000`。  
+     例如，選取 `Income` 為資料行，然後選取大於運算子 (>)，再輸入 `30000`。  
   
 9. 在方格中，按下一個資料列。  
   
@@ -79,7 +79,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. 選取運算子並輸入值，如步驟 7 和 8 所述。  
   
-     例如，選取`Income`一次的資料行，請選取小於運算子 (<)、，然後輸入`40000`。  
+     例如，再次選取 `Income` 為資料行，然後選取小於運算子 (<)，再輸入 `40000`。  
   
 12. 在方格中，按下一個資料列。  
   
@@ -97,7 +97,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      這是 [模組篩選器] 對話方塊中，唯一可用於巢狀資料表的條件，因為您將案例資料表限制為僅在巢狀資料表中包含特定值的案例。 下一個步驟將設定巢狀資料表的條件值。  
   
-4.  按一下 [值] 方塊，然後按一下 **(…)** 按鈕建置運算式。  
+4.  按一下 **值**方塊，然後再按一下 **（...）** 按鈕建置運算式。  
   
      **\<名稱 > 篩選**對話方塊隨即開啟。 這個對話方塊只能在目前的資料表上設定條件，在此例中為巢狀資料表。  
   
@@ -127,8 +127,8 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
   
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型的篩選&#40;Analysis Services-資料採礦&#41;](mining-models-analysis-services-data-mining.md)   
+ [採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](mining-models-analysis-services-data-mining.md)   
  [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)   
- [從採礦模型中刪除篩選](delete-a-filter-from-a-mining-model.md)  
+ [從採礦模型刪除篩選](delete-a-filter-from-a-mining-model.md)  
   
   

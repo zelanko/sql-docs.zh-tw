@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2e060b546287b1a56a103086b8a4d6fc7e120be9
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 58afef163d7c46c69556ad00bfd201751e61e943
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753565"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514556"
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>課程 3-4-修改 [日期] 維度
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "50753565"
   
 3.  如果 [屬性] 視窗未開啟，請開啟 [屬性] 視窗，然後按一下標題列上的 [自動隱藏] 按鈕，如此它就會保持開啟狀態。  
   
-4.  在靠近視窗底部的地方按一下 [NameColumn] 屬性欄位，然後按一下省略符號瀏覽 (**…**) 按鈕，即可開啟 [名稱資料行] 對話方塊。  
+4.  按一下 [ **NameColumn**屬性欄位] 視窗中，底部附近，，然後按一下 [省略符號瀏覽 (**...**) 按鈕，即可開啟**名稱資料行**] 對話方塊。  
   
 5.  選取 [來源資料行] 清單底部的 [SimpleDate]，然後按一下 [確定]。  
   

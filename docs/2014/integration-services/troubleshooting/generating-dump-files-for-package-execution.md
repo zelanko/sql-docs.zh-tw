@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc56a469d6fb75f3d5a70fc323788ff726519474
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00b75a698a372466dfe46d8997c730bb77ac2d1b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111968"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799180"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>產生封裝執行的傾印檔案
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，您可以建立偵錯傾印檔案，以便提供封裝執行的相關資訊。 這些檔案中的資訊可協助您疑難排解封裝執行問題。  
@@ -34,7 +33,7 @@ ms.locfileid: "48111968"
   
      呼叫此預存程序，使執行中的封裝暫停並建立傾印檔案。  
   
- 如果您要使用封裝部署模型部署封裝，請使用 **dtexec** 公用程式或 **dtutil** 公用程式，在命令列指定偵錯傾印選項以建立偵錯傾印檔案。 如需詳細資訊，請參閱 [dtexec 公用程式](../packages/dtexec-utility.md)和 [dtutil 公用程式](../dtutil-utility.md)。 如需封裝部署模型的詳細資訊，請參閱[Deployment Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)並[封裝部署&#40;SSIS&#41;](../packages/legacy-package-deployment-ssis.md)。  
+ 如果您要使用封裝部署模型部署封裝，請使用 **dtexec** 公用程式或 **dtutil** 公用程式，在命令列指定偵錯傾印選項以建立偵錯傾印檔案。 如需詳細資訊，請參閱 [dtexec 公用程式](../packages/dtexec-utility.md) 和 [dtutil 公用程式](../dtutil-utility.md)。 如需封裝部署模型的詳細資訊，請參閱[Deployment Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)並[封裝部署&#40;SSIS&#41;](../packages/legacy-package-deployment-ssis.md)。  
   
 ## <a name="debug-dump-file-format"></a>偵錯傾印檔案格式  
  當您指定偵錯傾印選項時， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 就會建立下列偵錯傾印檔案：  
@@ -49,9 +48,9 @@ ms.locfileid: "48111968"
   
 |資訊類型|描述|範例|  
 |-------------------------|-----------------|-------------|  
-|環境|作業系統版本、記憶體使用量資料、處理序識別碼及處理序影像名稱。 環境資訊位於 .tmp 檔案的開頭。|# SSIS Textual Dump taken at 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Image Name [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Running on 2 amd64 processors under WOW64<br /><br /> # Memory: 58% in use. Physical: 845M/2044M  Paging: 2404M/4095M (avail/total)|  
-|動態連結程式庫 (DLL) 路徑和版本|在處理封裝期間，系統載入之每個 DLL 的路徑和版本號碼。|# Loaded Module: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Loaded Module: C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Loaded Module: C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  
-|最近的訊息|最近系統所發出的訊息。 包括每則訊息的時間、類型、描述和執行緒識別碼。|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         描述：元件遺漏、未註冊、無法升級或遺漏必要的介面。 這個元件的連絡資訊是 "__"。|  
+|環境|作業系統版本、記憶體使用量資料、處理序識別碼及處理序影像名稱。 環境資訊位於 .tmp 檔案的開頭。|# SSIS Textual Dump taken at 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Image Name [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Running on 2 amd64 processors under WOW64<br /><br /> # 記憶體：使用中的第 58%。 實體：845 M/2044 M 分頁：2404 M/4095 M (avail/total)|  
+|動態連結程式庫 (DLL) 路徑和版本|在處理封裝期間，系統載入之每個 DLL 的路徑和版本號碼。|# Loaded Module: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # 已載入的模組：C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # 已載入的模組：C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  
+|最近的訊息|最近系統所發出的訊息。 包括每則訊息的時間、類型、描述和執行緒識別碼。|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]        時間戳記：2007-09-13 13:50:32.786 (szTimeStamp)<br /><br /> [E:3]        執行緒識別碼：2368 (ThreadID)<br /><br /> [E:3]        事件名稱：OnError 事件 （名稱）<br /><br /> [E:3]        來源名稱：              (SourceName)<br /><br /> [E:3]        來源識別碼：                      (SourceID)<br /><br /> [E:3]        執行識別碼：               (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]        描述：元件遺漏、未註冊、無法升級或遺漏必要的介面。 這個元件的連絡資訊是 "__"。|  
   
 ## <a name="related-content"></a>相關內容  
  [執行套件對話方塊](../execute-package-dialog-box.md)  

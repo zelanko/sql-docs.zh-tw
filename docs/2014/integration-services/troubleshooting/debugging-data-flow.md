@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - progress reporting [Integration Services]
@@ -17,12 +16,12 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdbf8626ec1eb50218d01b0eefd96cea2cba9dea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00ada7a047d323f143403b56632b8863d75e6ac2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108448"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792120"
 ---
 # <a name="debugging-data-flow"></a>偵錯資料流程
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」提供許多功能和工具，讓您用來疑難排解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中的資料流程。  
@@ -50,7 +49,7 @@ ms.locfileid: "48108448"
   
 #### <a name="to-add-a-data-viewer"></a>若要加入資料檢視器  
   
--   [將資料檢視器新增到資料流程](../add-a-data-viewer-to-a-data-flow.md)  
+-   [將資料檢視器加入資料流程](../add-a-data-viewer-to-a-data-flow.md)  
   
 ## <a name="row-counts"></a>資料列計數  
  經過某個路徑傳送的資料列數目，會顯示在「 **設計師」中** [資料流程] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 索引標籤之設計介面上的該路徑旁邊。 隨著資料不斷經由路徑移動，該數目會定期更新。  
@@ -62,7 +61,7 @@ ms.locfileid: "48108448"
   
  下表描述色彩編碼。  
   
-|Color|描述|  
+|色彩|描述|  
 |-----------|-----------------|  
 |無色彩|正在等候由資料流程引擎呼叫。|  
 |黃色|正在執行轉換、擷取資料或載入資料。|  
@@ -70,6 +69,6 @@ ms.locfileid: "48108448"
 |紅色|已執行但發生錯誤。|  
   
 ## <a name="see-also"></a>另請參閱  
- [套件開發的疑難排解工具](troubleshooting-tools-for-package-development.md)  
+ [疑難排解封裝開發的工具](troubleshooting-tools-for-package-development.md)  
   
   

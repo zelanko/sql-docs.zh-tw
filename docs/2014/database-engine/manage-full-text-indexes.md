@@ -10,12 +10,12 @@ ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d55a1a8bef5e3d4a74aa2bb09c27e3f7c2a8dc82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066804"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591832"
 ---
 # <a name="manage-full-text-indexes"></a>管理全文檢索索引
      
@@ -37,7 +37,7 @@ ms.locfileid: "48066804"
     |----------|-----------------|  
     |**一般**|顯示全文檢索索引的基本屬性。 這些屬性包括許多可修改的屬性和一些無法變更的屬性，例如資料庫名稱、資料表名稱，以及全文檢索索引鍵資料行的名稱。 可修改的屬性包括：<br /><br /> **全文檢索索引停用字詞表**<br /><br /> **全文檢索索引已啟用**<br /><br /> **變更追蹤**<br /><br /> **搜尋屬性清單**<br /><br /> <br /><br /> 如需詳細資訊，請參閱[全文檢索搜尋 &#40;一般頁面&#41;](full-text-index-properties-general-page.md)。|  
     |**資料行**|顯示可用於全文檢索索引的資料表資料行。 系統會針對選取的資料行建立全文檢索索引。 您可以選取任意數目的可用資料行，以便包含在全文檢索索引中。 如需詳細資訊，請參閱[全文檢索搜尋 &#40;資料行頁面&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md)。|  
-    |**排程**|您可以使用這個頁面來建立或管理 SQL Server Agent 作業的排程，以便針對全文檢索索引母體擴展啟動累加資料表母體擴展。 如需詳細資訊，請參閱 [擴展全文檢索索引](../relational-databases/indexes/indexes.md)。<br /><br /> **\*\* 重要\* \*** 結束之後**全文檢索索引屬性** 對話方塊中，任何新建立的排程都會與 SQL Server Agent 作業 （啟動累加資料表母體擴展相關聯*database_name*。*table_name*)。|  
+    |**排程**|您可以使用這個頁面來建立或管理 SQL Server Agent 作業的排程，以便針對全文檢索索引母體擴展啟動累加資料表母體擴展。 如需詳細資訊，請參閱 [擴展全文檢索索引](../relational-databases/indexes/indexes.md)。<br /><br /> <strong>\*\* 重要\* \*</strong> 結束之後**全文檢索索引屬性** 對話方塊中，任何新建立的排程都會與 SQL Server Agent 作業 （啟動累加資料表母體擴展相關聯*database_name*。*table_name*)。|  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 儲存任何變更並結束 [全文檢索索引屬性] 對話方塊。  
   
@@ -126,7 +126,7 @@ GO
  這個範例會傳回名為 `Unique Key Column`的結果集資料行，其中顯示包含 Document 資料表之唯一索引鍵資料行名稱的單一資料列 DocumentID。 請注意，如果這個查詢包含無效的索引名稱、索引名稱沒有對應至資料表，或者資料表不存在等，它就會傳回 NULL。  
   
 ##  <a name="disable"></a> 停用或重新啟用全文檢索索引的資料表  
- 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，所有使用者建立的資料庫預設都會啟用全文檢索。 此外，個別資料表也會在建立全文檢索索引並將資料行加入索引中後，立即自動啟用全文檢索索引。 從全文檢索索引中卸除最後一個資料行之後，資料表便會自動停用全文檢索索引。  
+ 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中，所有使用者建立的資料庫預設都會啟用全文檢索。 此外，個別資料表也會在建立全文檢索索引並將資料行加入索引中後，立即自動啟用全文檢索索引。 從全文檢索索引中卸除最後一個資料行之後，資料表便會自動停用全文檢索索引。  
   
  在具有全文檢索索引的資料表上，您可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 來手動為資料表停用或重新啟用全文檢索索引。  
   

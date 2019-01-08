@@ -14,12 +14,12 @@ ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b269c4c3decfa2a4d7523666841e7cb04b441b3f
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461013"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508871"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>全文檢索搜尋的行為變更
   本主題描述全文檢索搜尋的行為變更。 行為變更會影響 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 功能的運作或互動方式 (相較於舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])。  
@@ -79,7 +79,7 @@ ms.locfileid: "49461013"
 ## <a name="behavior-changes-in-full-text-search-in-sql-server-2008"></a>SQL Server 2008 中全文檢索搜尋的行為變更  
  在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]和更新版本中，全文檢索引擎已整合為資料庫服務到關聯式資料庫做為伺服器查詢和儲存引擎基礎結構的一部分。 新的全文檢索搜尋架構可達成下列目標：  
   
--   整合式儲存和管理 — 全文檢索搜尋現在直接與固有的儲存體和管理功能的整合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，而且 MSFTESQL 服務不再存在。  
+-   整合式儲存體及管理全文檢索搜尋現在直接與固有的儲存體和管理功能的整合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，而且 MSFTESQL 服務不再存在。  
   
     -   全文檢索索引會儲存在資料庫檔案群組內部，而非儲存在檔案系統中。 資料庫的管理作業 (例如建立備份) 會自動影響其全文檢索索引。  
   
@@ -88,9 +88,9 @@ ms.locfileid: "49461013"
         > [!NOTE]  
         >  指定全文檢索目錄正常運作的 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] DDL 陳述式。  
   
--   整合式查詢處理—新的全文檢索搜尋查詢處理器屬於 Database Engine 的一部分，而且與 SQL Server 查詢處理器完全整合。 這表示，查詢最佳化工具會辨識全文檢索查詢述詞並且盡可能有效率地自動執行它們。  
+-   整合式的查詢處理的新全文檢索搜尋查詢處理器屬於 Database Engine，且與 SQL Server 查詢處理器完全整合。 這表示，查詢最佳化工具會辨識全文檢索查詢述詞並且盡可能有效率地自動執行它們。  
   
--   強化的管理和疑難排解—整合式全文檢索搜尋會提供一些工具，可協助您分析搜尋結構，例如全文檢索索引、給定斷詞工具的輸出和停用字詞組態。  
+-   增強的管理和疑難排解整合式全文檢索搜尋提供工具，可協助您分析搜尋結構，例如全文檢索索引、 給定的斷詞工具、 停用字詞組態等等的輸出。  
   
 -   停用字詞和停用字詞表已經取代了非搜尋字和非搜尋字檔案。 停用字詞表是一個資料庫物件，可加快停用字詞管理工作的速度並且改善不同伺服器執行個體與環境之間的完整性。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   

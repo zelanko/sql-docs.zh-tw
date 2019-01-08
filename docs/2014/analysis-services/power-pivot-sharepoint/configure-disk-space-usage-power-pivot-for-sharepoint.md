@@ -11,12 +11,12 @@ ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bff9e3f913ee432988bd7a666673e8f27bc4d04e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ffd00cde83f99f1147a85b06e93e3816fb6e376
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069637"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354509"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>設定磁碟空間使用量 (PowerPivot for SharePoint)
   PowerPivot for SharePoint 部署會使用主機電腦的磁碟空間來快取 PowerPivot 資料庫，讓重新載入更快速。 在記憶體中載入的每個 PowerPivot 資料庫都會先快取至磁碟中，因此稍後可以快速重新載入該資料庫來服務新的要求。 根據預設，PowerPivot for SharePoint 會使用所有可用磁碟空間來快取其資料庫，但是您可以藉由設定限制磁碟空間使用量的屬性來修改這個行為。  
@@ -51,11 +51,11 @@ ms.locfileid: "48069637"
   
  您可以在系統層級建立磁碟空間不足時通知您的電子郵件警示。 Microsoft System Center 包含電子郵件警示功能。 您也可以使用「檔案伺服器資源管理員」、「工作排程器」或 PowerShell 指令檔來設定警示。 下列連結提供實用的資訊來設定有關磁碟空間不足的通知：  
   
--   [檔案伺服器資源管理員 」 中最新消息](http://technet.microsoft.com/library/hh831746.aspx)(http://technet.microsoft.com/library/hh831746.aspx)。  
+-   [檔案伺服器資源管理員 」 中最新消息](https://technet.microsoft.com/library/hh831746.aspx)(https://technet.microsoft.com/library/hh831746.aspx)。  
   
--   [適用於 Windows Server 2008 R2 的檔案伺服器資源管理員逐步指南](http://go.microsoft.com/fwlink/?LinkID=204875)(http://go.microsoft.com/fwlink/?LinkID=204875)。  
+-   [適用於 Windows Server 2008 R2 的檔案伺服器資源管理員逐步指南](https://go.microsoft.com/fwlink/?LinkID=204875)(https://go.microsoft.com/fwlink/?LinkID=204875)。  
   
--   [Windows Server 2008 上設定低的磁碟空間警示](http://go.microsoft.com/fwlink/?LinkID=204870)( http://go.microsoft.com/fwlink/?LinkID=204870)。  
+-   [Windows Server 2008 上設定低的磁碟空間警示](https://go.microsoft.com/fwlink/?LinkID=204870)( https://go.microsoft.com/fwlink/?LinkID=204870)。  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>如何限制儲存快取檔案所使用的磁碟空間量  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48069637"
   
 3.  在 [磁碟使用量] 中，設定 [磁碟空間總計] 的值 (以 GB 為單位)，以便設定用於快取的空間量上限。 預設值為 0，這樣會允許 Analysis Services 使用所有可用的磁碟空間。  
   
-4.  在 [磁碟使用量] 的 [Delete cached databases in last ‘n’ hours (刪除前 ‘n’ 個小時的快取資料庫)] 設定中，指定當磁碟空間達到上限時，上次使用的清空快取準則。  
+4.  在 磁碟使用量，在**刪除快取中最後一個 'n' 個資料庫小時**設定中，指定上次使用的磁碟空間達到上限時清空快取準則。  
   
      預設為 4 小時，這表示沒有任何活動達 4 小時以上的所有資料庫都會從檔案系統刪除。 非使用中但仍在記憶體中的資料庫會先遭到卸載，然後才從檔案系統刪除。  
   

@@ -1,5 +1,5 @@
 ---
-title: 設定預設資料模型和部署屬性 |Microsoft 文件
+title: 設定 Analysis Services 預設資料模型化和部署屬性 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 926cb59f263b5dfbfb4178d4d512b07511cdc0cc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 938ef21a83a6e08336c9e9c53a95e3886ab24dab
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044062"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072575"
 ---
-# <a name="configure-default-data-modeling-and-deployment-properties"></a>設定預設資料模型和部署屬性 
+# <a name="configure-default-data-modeling-and-deployment-properties"></a>設定預設的資料模型和部署屬性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  本文說明如何設定預設相容性層級，在中建立的部署和工作空間資料庫屬性設定，為每個新的表格式模型專案，您可以是預先定義[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 建立新專案之後，這些屬性仍可依據您的特殊需求進行變更。  
+  這篇文章說明如何設定預設相容性層級、 部署和工作區資料庫屬性，設定這些設定可以預先定義的每個新的表格式模型專案中建立[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 建立新專案之後，這些屬性仍可依據您的特殊需求進行變更。  
   
 #### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>若要針對新的模型專案設定預設相容性層級屬性設定  
   
@@ -28,7 +28,7 @@ ms.locfileid: "34044062"
   
 3.  設定下列屬性設定：  
   
-    |屬性|預設設定|Description|  
+    |屬性|預設設定|描述|  
     |--------------|---------------------|-----------------|  
     |**新專案的預設相容性層級**|SQL Server 2016 (1200)|此設定會指定建立新的表格式模型專案時的預設相容性層級。 如果您要部署到未套用 SP1 的 Analysis Services 執行個體，可以選擇 SQL Server 2012 (1100)；如果您的部署執行個體已套用 SP1，可以選擇 SQL Server 2012 SP1 或更新版本。 如需詳細資訊，請參閱 [Analysis Services 中表格式模型的相容性層級](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。|  
     |**相容性層級選項**|所有已核取|指定新表格式模型專案以及在部署至其他 Analysis Services 執行個體時的相容性層級選項。|  
@@ -41,7 +41,7 @@ ms.locfileid: "34044062"
   
 3.  設定下列屬性設定：  
   
-    |屬性|預設設定|Description|  
+    |屬性|預設設定|描述|  
     |--------------|---------------------|-----------------|  
     |**預設部署伺服器**|localhost|此設定會指定部署模型時使用的預設伺服器。 您可以按一下向下箭頭，瀏覽可以使用的區域網路 Analysis Services 伺服器，或是輸入遠端伺服器的名稱。|  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34044062"
   
 3.  設定下列屬性設定：  
   
-    |屬性|預設設定|Description|  
+    |屬性|預設設定|描述|  
     |--------------|---------------------|-----------------|  
     |**預設工作空間伺服器**|**localhost**|此屬性指定在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中撰寫模型時，用來主控工作空間資料庫的預設伺服器。 在本機電腦上執行的所有可用 Analysis Services 執行個體都包含在清單方塊中。<br /><br /> <br /><br /> 注意：建議您一律將本機 Analysis Services 伺服器指定為工作空間伺服器。 若是遠端伺服器上的工作空間資料庫，則不支援從 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 匯入資料，也無法在本機備份資料，而且使用者介面在查詢期間可能會遇到延遲。|  
     |**在關閉模型之後保留工作空間資料庫**|**將工作空間資料庫保留在磁碟上，但是從記憶體卸載**|指定在關閉模型之後，如何保留工作空間資料庫。 工作空間資料庫包含模型中繼資料、匯入模型的資料，以及模擬認證 (已加密)。 在某些情況下，工作空間資料庫可能會非常大，因此耗用大量的記憶體。 依預設，工作空間資料庫會從記憶體中移除。 變更此設定時，最好考慮您的可用記憶體資源，以及您打算處理模型的頻率。 此屬性設定具有以下選項：<br /><br /> **將工作空間保留在記憶體中** ：指定在關閉模型後，將工作空間保留在記憶體中。 此選項會耗用較多的記憶體，但是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中開啟模型時，會耗用較少的資源，而且工作空間將會更快載入。<br /><br /> **‭將工作空間資料庫保留在磁碟上，但是從記憶體中卸載** ：指定在關閉模型後，將工作空間資料庫保留在磁碟上，但不再保留在記憶體中。 此選項將耗用較少的記憶體，但是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]開啟模型時，將耗用額外的資源，而且模型的載入速度比將工作空間資料庫保留在記憶體中更慢。 當記憶體中的資源有限，或者當處理遠端工作空間資料庫時，請使用此選項。<br /><br /> **刪除工作空間** ：指定在關閉模型後，即從記憶體刪除工作空間資料庫，而且不將工作空間資料庫保留在磁碟上。 此選項將耗用較少的記憶體，但是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]開啟模型時，將耗用額外的資源，而且模型的載入速度比將工作空間資料庫保留在記憶體中更慢。 只有在偶爾處理模型時，才使用此選項。|  

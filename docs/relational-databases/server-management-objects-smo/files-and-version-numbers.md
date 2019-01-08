@@ -18,22 +18,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 991efd9798b371c24c5c68c595c6ef86446d79e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a72b776add3dc1fb31886711b3f812b65d1176c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836416"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203698"
 ---
 # <a name="files-and-version-numbers"></a>檔案和版本號碼
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   所有必要的 SQL Server 管理物件 (SMO) 元件包含在 Microsoft.SqlServer.SqlManagementObjects NuGet 套件。 SMO 是實作於數個 Managed 組件中。 您可以在用戶端或伺服器上開發 SMO 應用程式。  
 
->>[!Important]
-SMO 組件的檔案版本會顯示為主要。**0**。Build.Revision。 但內嵌組件的版本為主要。**100**。Build.Revision。 這是為了讓其中一個更新並不會影響任何其他人將 SMO 在每個應用程式中使用的版本是分開。
->>
->>因此您應該**不**安裝這些版本的組件至全域組件快取 (GAC) 中。 這樣可能會造成其他應用程式，例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Studio 中，若要中斷。 
+> > [!Important]
+> > SMO 組件的檔案版本會顯示為主要。**0**。Build.Revision。 但內嵌組件的版本為主要。**100**。Build.Revision。 這是為了讓其中一個更新並不會影響任何其他人將 SMO 在每個應用程式中使用的版本是分開。
+> > 
+> > 因此您應該**不**安裝這些版本的組件至全域組件快取 (GAC) 中。 這樣可能會造成其他應用程式，例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Studio 中，若要中斷。 
   
 |檔案|描述|  
 |-----------|-----------------|  

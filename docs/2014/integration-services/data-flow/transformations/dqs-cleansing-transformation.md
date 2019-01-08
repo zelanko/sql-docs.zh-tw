@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data correction
@@ -14,12 +13,12 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c597a99a0762efe2098696fe8d582d6a3c56f1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3642f15f60811d9a918c410ee2429084e63d74c1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079048"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363580"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 清理轉換
   DQS 清理轉換會使用 Data Quality Services (DQS) 來更正連接之資料來源的資料，方法是套用針對所連接資料來源或相似資料來源而建立的核准規則。 如需有關資料更正規則的詳細資訊，請參閱＜ [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md)＞。 如需有關 DQS 的詳細資訊，請參閱＜ [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md)＞。  
@@ -51,6 +50,6 @@ ms.locfileid: "48079048"
   
 -   [管理&#40;開啟、 解除鎖定、 重新命名和刪除&#41;的資料品質專案](../../../data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)  
   
--   social.technet.microsoft.com 上的文章： [使用複合定義域清理複雜的資料](http://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx)。  
+-   social.technet.microsoft.com 上的文章： [使用複合定義域清理複雜的資料](https://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx)。  
   
   

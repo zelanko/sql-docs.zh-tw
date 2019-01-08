@@ -1,5 +1,5 @@
 ---
-title: 記憶體屬性 |Microsoft Docs
+title: Analysis Services 記憶體屬性 |Microsoft Docs
 ms.date: 10/03/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a080bed935a8f981376ff40dc36e19ef61a3c144
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 763c085e9a4dbc6ecb459ffcd17f5185531b98fb
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264878"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071995"
 ---
 # <a name="memory-properties"></a>記憶體屬性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Managed Backup to Windows Azure： 互通性與共存性 |Microsoft Docs
+title: SQL Server Managed 的 Backup，到 Windows Azure 位置表示：互通性與共存性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c825ca99e120dce81cb4a18dc65413c1f5d03c4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4d883d54a1ad933d4e248f292d9b6a222915a00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184238"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509127"
 ---
-# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>SQL Server Managed Backup 到 Windows Azure：互通性與共存性
-  本主題說明[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]與 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中之數項功能的互通性與並存性。 這些功能包括：AlwaysOn 可用性群組、資料庫鏡像、備份維護計劃、記錄傳送、隨選備份、卸離資料庫及卸除資料庫。  
+# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>SQL Server Managed 的 Backup，到 Windows Azure 位置表示：互通性與共存性
+  本主題說明[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]與 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中之數項功能的互通性與並存性。 這些功能包括：AlwaysOn 可用性群組、 資料庫鏡像、 備份維護計劃、 記錄傳送、 隨選備份、 卸離資料庫和卸除資料庫。  
   
 ### <a name="alwayson-availability-groups"></a>AlwaysOn Availability Groups  
- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]支援完全設定為 Windows Azure 方案的 AlwaysOn 可用性群組。 僅限內部部署或混合式 AlwaysOn 可用性群組組態皆不予支援。 如需詳細資訊和其他考量，請參閱[設定可用性群組的 SQL Server Managed Backup to Windows Azure](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
+ 設定為 Windows 支援的僅 Azure 」 方案的 AlwaysOn 可用性群組[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]。 僅限內部部署或混合式 AlwaysOn 可用性群組組態皆不予支援。 如需詳細資訊和其他考量，請參閱[設定可用性群組的 SQL Server Managed Backup to Windows Azure](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
   
 ### <a name="database-mirroring"></a>資料庫鏡像  
  只有主體資料庫才支援[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]。 若主體與鏡像皆設定成使用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]，將會略過鏡像資料庫不予備份。 但在容錯移轉事件時，[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會在鏡像完成角色切換並上線之後，開始執行備份程序。 在此情況下，備份會儲存在新容器中。 在容錯移轉事件時，若未將鏡像設定成使用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]，便不會執行備份。 建議將主體及鏡像均設為使用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]，如此一來在容錯移轉事件時，才能執行備份。  

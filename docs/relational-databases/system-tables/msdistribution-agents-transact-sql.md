@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSdistribution_agents_TSQL
@@ -19,12 +18,12 @@ ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc908623e3979943214132605a1ab92ceaad657b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 357d0cf774d3e95d700c840f88bb0165bdb9a12f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846626"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785750"
 ---
 # <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47846626"
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**anonymous_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**creation_date**|**datetime**|散發或合併代理程式的建立日期時間。|  
-|**queue_id**|**sysname**|用來尋找佇列更新訂閱之佇列的識別碼。 如果是非佇列訂閱，這個值就是 NULL。 如果是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing 為基礎的訂閱，這個值是一個 GUID，用來唯一識別訂閱要用的佇列。 對於 SQL Server 為基礎的佇列發行集，資料行包含值**SQL**。<br /><br /> 注意： 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]Message Queuing 已被取代，不再支援。|  
+|**queue_id**|**sysname**|用來尋找佇列更新訂閱之佇列的識別碼。 如果是非佇列訂閱，這個值就是 NULL。 如果是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing 為基礎的訂閱，這個值是一個 GUID，用來唯一識別訂閱要用的佇列。 對於 SQL Server 為基礎的佇列發行集，資料行包含值**SQL**。<br /><br /> 注意：[!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing 已被取代，不再受到支援。|  
 |**queue_status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offload_enabled**|**bit**|指出是否能從遠端啟動代理程式。<br /><br /> **0**指定不能從遠端啟動代理程式。<br /><br /> **1**指定代理程式會在遠端電腦上，並指定在遠端電腦上啟動*offload_server*屬性。|  
 |**offload_server**|**sysname**|將用來啟用遠端代理程式之伺服器的網路名稱。|  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.proxy.general.f1
@@ -12,12 +12,12 @@ ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d601f6bca0af7fe5e730b1b947bd73d462fa932
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196538"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797620"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>Proxy 帳戶屬性及新增 Proxy 帳戶 (一般頁面)
   使用此頁面檢視或變更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 Proxy 帳戶屬性。  

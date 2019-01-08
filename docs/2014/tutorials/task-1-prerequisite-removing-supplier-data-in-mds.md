@@ -1,5 +1,5 @@
 ---
-title: 工作 1 （必要條件）： 在 MDS 中移除供應商資料 |Microsoft Docs
+title: 工作 1 (必要條件)：在 MDS 中移除供應商資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74862c1db4ad3c34afc759ba94f36ba5fb896e7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a922d01d0085830cde30bbc16fcd6f79e106ff03
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227698"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394239"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>工作 1 (必要條件)：在 MDS 中移除供應商資料
   在這項工作中，您會移除儲存在 MDS 中的供應商資料。 使用以手動方式將資料上傳**MDS Excel 增益集**上一課。 您在這一課建立的 SSIS 封裝會將資料自動上傳至 MDS。 因此，在測試 SSIS 封裝之前，您必須從 MDS 中移除供應商資料、移除衍生階層、移除 supplier 和 state 實體，並且建立不含任何資料的 supplier 實體。  
@@ -43,7 +43,7 @@ ms.locfileid: "48227698"
   
 10. 切換到 Excel 視窗具有**Cleansed and Matched Suppliers.xls**檔案開啟。 若要切換**Sheet1**底部的索引標籤。  
   
-11. 選取 僅**第一個資料列包含標頭**。 請勿選取其他任何資料列。 您會想要根據 Excel 資料行建立實體，而不要上傳任何資料。 因此，您只選取有標頭的第一個資料列。  
+11. 選取 僅**第一個資料列包含標頭**。 未選取任何其他資料列。 您想要建立的 Excel 資料行的實體，但不想要上傳任何資料。 因此，您只選取有標頭的第一個資料列。  
   
 12. 按一下 **主要資料**功能表列上。  
   
@@ -86,6 +86,6 @@ ms.locfileid: "48227698"
 22. 按一下 **[總管]**。 請注意，**供應商**實體的所有屬性會透過**沒有任何值**。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 2&#40;選擇性&#41;： 建立 MDS 訂閱檢視，使用主資料管理員](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
+ [工作 2&#40;選擇性&#41;:建立 MDS 訂閱檢視，使用主資料管理員](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
   
   

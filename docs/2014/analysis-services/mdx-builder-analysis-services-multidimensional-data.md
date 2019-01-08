@@ -15,15 +15,15 @@ ms.assetid: fecbf093-65ea-4e1b-b637-f04876f1cb0f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9a023065ad0e2a72036fe5fbdebd72682ceb6546
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3121646cbcfee823be71b575349b814fbf36c1a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121462"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512484"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>MDX 產生器 (Analysis Services - 多維度資料)
-  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [MDX 產生器] 對話方塊，即可建立多維度運算式 (MDX) 運算式。 在 [角色設計師] 的 [資料格資料] 頁面上，按一下 [允許讀取 Cube 內容] 選項、[允許讀取資料格內容 (視資料格安全性而定)] 選項，或是 [允許 Cube 內容的讀取和寫入] 選項的 [編輯 MDX] 省略符號按鈕 (**…**)，即可顯示 [MDX 產生器] 對話方塊。  
+  使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [MDX 產生器] 對話方塊，即可建立多維度運算式 (MDX) 運算式。 您可以顯示**MDX 產生器**對話方塊中，依序按一下**編輯 MDX**省略符號按鈕 (**...**) 的**允許讀取 cube 內容**選項，**允許讀取資料格內容的資料格安全性而定**選項，或**允許讀取和寫入 cube 內容**選項**資料格資料**頁面**角色設計工具**。  
   
 ## <a name="options"></a>選項。  
   

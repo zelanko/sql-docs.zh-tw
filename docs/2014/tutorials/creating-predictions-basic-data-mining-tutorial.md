@@ -11,12 +11,12 @@ ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3940f7c214ab3f9d5d48e83acef5ed2237ceeac3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0001b04a93c1aacfbf2e7701faada815cb6316ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206528"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515450"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>建立預測 (基本資料採礦教學課程)
   您已測試好採礦模型的精確度，並決定您滿意結果之後，您可以上使用預測查詢產生器，然後產生預測**採礦模型預測**在資料採礦 索引標籤設計工具。  
@@ -157,7 +157,7 @@ ms.locfileid: "48206528"
   
         2.  輸入將包含查詢結果之資料表的名稱。  
   
-        3.  使用選項，**加入至 DSV**，以建立資料表，並將它新增至現有的資料來源檢視。 如果您想要在相同的資料來源檢視中保留模型的所有相關資料表 (例如定型資料、預測來源資料和查詢結果)，這樣做就很有用。  
+        3.  使用選項，**加入至 DSV**，以建立資料表，並將它新增至現有的資料來源檢視。 這非常有用，如果您想要保留所有相關的資料表模型-例如定型資料、 預測來源資料和查詢結果-在相同的資料來源檢視。  
   
         4.  使用選項，**時，覆寫存在**、 使用最新的結果來更新現有的資料表。  
   

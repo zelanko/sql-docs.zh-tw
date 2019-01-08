@@ -11,12 +11,12 @@ ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8936d7c79538f4cb609f9208c6bd458369093076
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: e1d7b619cb711938f07ae7902dc1b9544adc5890
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460923"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512295"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>在量值群組內定義維度資料粒度
   使用者希望維度事實資料基於不同的用途有不同的資料粒度或具體性。 例如可能記錄每一天轉售商的銷售資料或網際網路銷售，但銷售配額資訊可能只有當月或當季才有。 在這些案例中，使用者希望時間維度對每一個不同的事實資料表有不同的資料粒度或詳細層級。 雖然您能夠以這種不同的資料粒度將新資料庫維度定義為時間維度，但有更容易的方法，就是使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
@@ -127,7 +127,7 @@ ms.locfileid: "49460923"
   
      請注意，**員工**並`Date`cube 維度連結至**銷售 Quotasand 銷售配額 1**量值群組，透過一般關聯性。 也請注意，[銷售領域] Cube 維度並未連結到其中任何量值群組。  
   
-4.  按一下資料格的交集處**Sales Territory**維度並`Sales Quotas`量值群組，然後按一下 瀏覽按鈕 (**...**). 此時會開啟 [定義關聯性] 對話方塊。  
+4.  按一下資料格的交集處**Sales Territory**維度並`Sales Quotas`量值群組，然後按一下 瀏覽按鈕 (**...**).此時會開啟 定義關聯性 對話方塊。  
   
 5.  在 [選取關聯性類型] 清單中，選取 [參考的]。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "49460923"
   
 10. 按一下 [確定] 。  
   
-11. 在 [銷售領域] 維度和 [銷售配額 1] 量值群組的交集處，按一下資料格，然後按一下瀏覽按鈕 (**…**)。 此時會開啟 [定義關聯性] 對話方塊。  
+11. 按一下資料格的交集處**Sales Territory**維度並**銷售配額 1**量值群組，然後按一下 瀏覽按鈕 (**...**).此時會開啟 定義關聯性 對話方塊。  
   
 12. 在 [選取關聯性類型] 清單中，選取 [參考的]。  
   

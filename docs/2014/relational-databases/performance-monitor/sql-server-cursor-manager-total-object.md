@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Cursor Manager Total
@@ -13,12 +13,12 @@ ms.assetid: e2c60a6d-be6f-4bb1-aaee-e464a4dc892c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 608f606433d8e6ac0cb30f791def251111739fe5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f80eb2cc31d58c231645c8fcbe9a745feb2d2382
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153528"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776260"
 ---
 # <a name="sql-server-cursor-manager-total-object"></a>SQL Server 的 Cursor Manager Total 物件
   **SQLServer:Cursor Manager Total** 物件提供用以監視資料指標的計數器。  
@@ -32,6 +32,6 @@ ms.locfileid: "48153528"
 |**Cursor flushes**|資料指標在執行階段重建陳述式的總數。|  
   
 ## <a name="see-also"></a>另請參閱  
- [監視資源使用狀況 &#40;系統監視器&#41;](monitor-resource-usage-system-monitor.md)  
+ [監視資源使用狀況 &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)  
   
   

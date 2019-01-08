@@ -1,5 +1,5 @@
 ---
-title: 多維度模型組件管理 |Microsoft 文件
+title: 多維度模型組件管理 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df015e99df80915c68fa8f45e9f31ec475e22bc2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5b7b04f074dcd11eec022a689f865454681d2ae8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025665"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215787"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多維度模型組件管理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供許多的內建函數搭配多維度運算式 (MDX) 和資料採礦延伸模組 (DMX) 語言，設計來完成從標準統計計算周遊成員在階層中的所有項目。 但是，就如同其他複雜且強固的產品一樣，總是有進一步擴充產品功能的需求。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供許多可與多維度運算式 (MDX) 和資料採礦延伸模組 (DMX) 語言搭配使用的內建函數，其設計目的是要完成從標準統計計算一直到階層中周遊成員間的各種運算。 但是，就如同其他複雜且強固的產品一樣，總是有進一步擴充產品功能的需求。  
   
  因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可讓您將組件加入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體或資料庫中。 組件可讓您使用任何 Common Language Runtime (CLR) 語言 (例如 Microsoft Visual Basic .NET 或 Microsoft Visual C#) 來建立外部使用者自訂函數。 您也可以使用元件物件模型 (COM) 自動化語言 (例如 Microsoft Visual Basic 或 Microsoft Visual C++)。  
   
@@ -68,16 +68,16 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  *AssemblyName*!*InterfaceID*!*ProcedureName*(*Argument1*, *Argument2*, ...)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  組件的安全性是以 .NET Framework 安全性模型為基礎，它是一種程式碼存取安全性模型。 .NET Framework 支援程式碼存取安全性機制，而這個機制假設執行階段可以主控完全信任和部份信任的程式碼。 受 .NET Framework 程式碼存取安全性保護的資源，一般都是以 Managed 程式碼包裝，而 Managed 程式碼在存取資源前會要求對應的權限。 唯有在呼叫堆疊中所有的呼叫者 (在組件層級) 都具有對應的資源權限時，權限的要求才會被滿足。  
   
- 針對組件，執行的權限會透過 **Assembly** 物件的 **PermissionSet** 屬性傳遞。 Managed 程式碼所接收的權限是由實行中的安全性原則決定。 在非[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 主控環境中，已實行三個層級的原則：企業、電腦和使用者。 程式碼所接收的有效權限清單是由這三個層級所取得的權限交集決定。  
+ 針對組件，執行的權限會透過 **Assembly** 物件的 **PermissionSet** 屬性傳遞。 Managed 程式碼所接收的權限是由實行中的安全性原則決定。 已經有三個層級的原則，實際上在非[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]託管環境： 企業、 電腦和使用者。 程式碼所接收的有效權限清單是由這三個層級所取得的權限交集決定。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在主控 CLR 時，會將主機層級的安全性原則層級提供給該 CLR；這項原則是位在永遠會實行之三個原則層級下的其他原則層級。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]建立的每一個應用程式網域都會設定此原則。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 主機層級原則，是系統組件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 固定原則，以及使用者組件的使用者指定原則的組合。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 主機原則之使用者自訂部份根據的是指定每個組件之下列其中一種權限值區 (共三種) 的組件擁有者：  
   
-|權限設定|Description|  
+|權限設定|描述|  
 |------------------------|-----------------|  
 |**Safe**|提供內部計算權限。 這個權限值區不會指派權限，來存取 .NET Framework 中的所有受保護資源。 如果未使用 **PermissionSet** 屬性指定任何權限，這就會是組件的預設權限值區。|  
 |**ExternalAccess**|提供和 **Safe** 設定相同的存取權，並附帶存取外部系統資源的能力。 這個權限值區不提供安全性保證 (雖然是可以確保此情況的安全)，但是可以提供可靠性的保證。|  
@@ -102,7 +102,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  因為應用程式網域界限和每個網域中的組件都是由實作所定義，所以您不應該依賴在同一應用程式網域中尋找組件。  
   
 ## <a name="see-also"></a>另請參閱  
- [正在設定預存程序安全性](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
+ [設定預存程序的安全性](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
  [定義預存程序](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

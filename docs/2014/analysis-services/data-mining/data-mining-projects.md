@@ -11,12 +11,12 @@ ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7e0d0abca91a6d9a17d7f7e55eb881208f8a16a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6370034c90acf91bcf69fc0dee697f48458b7e22
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106588"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356400"
 ---
 # <a name="data-mining-projects"></a>資料採礦專案
   資料採礦專案為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 方案的一部分。 在設計過程中，您在此專案中建立的物件可當做工作空間資料庫的一部分來測試及查詢。 當您希望使用者能夠查詢或瀏覽專案中的物件時，您必須將此專案部署到以多維度模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
@@ -27,10 +27,10 @@ ms.locfileid: "48106588"
 ##  <a name="bkmk_Overview"></a> 建立資料採礦專案  
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，您會使用 [OLAP 和資料採礦專案] 範本建立資料採礦專案。 您也可以使用 AMO 來以程式設計的方式建立資料採礦專案。 個別資料採礦物件則可以使用 Analysis Services 指令碼語言 (ASSL) 來編寫指令碼。 如需詳細資訊，請參閱[多維度模型資料存取 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
   
- 如果您在現有方案中建立資料採礦專案，預設會將資料採礦物件部署到與方案檔同名的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中。 您可以使用 [專案屬性] 對話方塊來變更這個名稱和目標伺服器。 如需詳細資訊，請參閱[設定 Analysis Services 專案屬性 &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
+ 如果您在現有方案中建立資料採礦專案，預設會將資料採礦物件部署到與方案檔同名的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中。 您可以使用 [專案屬性] 對話方塊來變更這個名稱和目標伺服器。 如需詳細資訊，請參閱 [設定 Analysis Services 專案屬性 &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
   
 > [!WARNING]  
->  若要成功建立及部署專案，您必須能夠存取以 OLAP/資料採礦模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。 您無法開發或部署的執行個體上的資料採礦方案[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支援表格式模型，也不能直接從 PowerPivot 活頁簿，或使用記憶體中的資料存放區之表格式模型的資料。 若要判斷您具有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體是否可以支援資料採礦，請參閱 [判斷 Analysis Services 執行個體的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
+>  若要成功建立及部署專案，您必須能夠存取以 OLAP/資料採礦模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。 您不能在支援表格式模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上開發或部署資料採礦方案，也不能直接使用來自 PowerPivot 活頁簿或使用記憶體中資料存放區之表格式模型中的資料。 若要判斷您具有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體是否可以支援資料採礦，請參閱 [判斷 Analysis Services 執行個體的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
   
  在您建立的每一個資料採礦專案中，您將遵循以下步驟進行：  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48106588"
   
  單一資料採礦專案可以參考多個資料來源。 雖然採礦模型一次只能使用一個資料來源，但是專案可以有多個模型在不同的資料來源上繪製。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援許多外部提供者的資料，而且 SQL Server 資料採礦可以同時使用關聯式資料和 Cube 資料當做資料來源。 但是，如果您開發這兩種類型的專案 (以關聯式來源為根據的模型和以 OLAP Cube 為根據的模型)，您可能會想要在不同的專案中開發及管理這些項目。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援許多外部提供者的資料，而且 SQL Server 資料採礦可以同時使用關聯式資料和 Cube 資料當做資料來源。 不過，如果您要開發兩種類型的專案-關聯式來源為基礎的模型和 OLAP cube 為基礎的模型-您可能想要開發及管理這些個別的專案中。  
   
 -   通常以 OLAP Cube 為根據的模型應該在 OLAP 設計方案內開發。 其中一個原因是因為以 Cube 為根據的模型必須處理此 Cube 才能更新資料。 一般來說，只有當 Cube 資料是資料儲存和存取的主要方式，或者您需要多維度專案所建立的彙總、維度和屬性時，才應該使用 Cube 資料。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48106588"
   
  資料來源只會識別伺服器或提供者及一般類型的資料。 如果您需要變更資料格式和彙總，請使用資料來源檢視物件。  
   
- 若要控制處理資料來源中之資料的方式，您可以加入衍生的資料行或計算、修改彙總，或是重新命名資料來源檢視中的資料行  (您也可以處理下游資料，方法是修改採礦結構資料行，或是在採礦模型資料行層級使用模型旗標和篩選)。  
+ 若要控制處理資料來源中之資料的方式，您可以加入衍生的資料行或計算、修改彙總，或是重新命名資料來源檢視中的資料行 (您也可以處理下游資料，方法是修改採礦結構資料行，或是在採礦模型資料行層級使用模型旗標和篩選)。  
   
  如果需要清理資料，或者資料倉儲中的資料必須加以修改才能建立其他變數、變更資料類型或建立替代彙總，您可能需要建立其他專案類型來支援資料採礦。 如需這些相關專案的詳細資訊，請參閱 [資料採礦方案的相關專案](data-mining-solutions.md)。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48106588"
 > [!WARNING]  
 >  如果您要篩選資料，您可以在資料來源檢視中進行，但是也可以在採礦模型層級建立資料的篩選。 因為篩選定義儲存在採礦模型中，所以使用模型篩選器會更容易判斷之前用來定型模型的資料。 此外，您也可以使用不同的篩選準則建立多個相關模型。 如需詳細資訊，請參閱[採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](mining-models-analysis-services-data-mining.md)。  
   
- 請注意，您建立的資料來源檢視可以包含未直接用於分析的其他資料。 例如，您可能會將用於測試、預測或鑽研的資料加入至資料來源檢視。 如需這些用途的詳細資訊，請參閱[測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md) 和[鑽研](drillthrough-queries-data-mining.md)。  
+ 請注意，您建立的資料來源檢視可以包含未直接用於分析的其他資料。 例如，您可能會將用於測試、預測或鑽研的資料加入至資料來源檢視。 如需這些用途的詳細資訊，請參閱 [測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md) 和 [鑽研](drillthrough-queries-data-mining.md)。  
   
 
   
@@ -161,7 +161,7 @@ ms.locfileid: "48106588"
   
  這些視覺效果是暫時性的，而且當您結束 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的工作階段時會關閉而不儲存。 因此，如果您需要將這些視覺效果匯出到另一個應用程式或簡報或是進行進一步分析，請使用檢視器介面上每一個索引標籤或窗格中提供的 [複製] 命令。  
   
- 適用於 Excel 的資料採礦增益集也提供一個 Visio 範本，您可用來在 Visio 圖表中呈現您的模型，並使用 Visio 工具為圖表加上註解和修改圖表。 如需詳細資訊，請參閱 [Microsoft Office 2007 適用之 Microsoft SQL Server 2008 SP2 資料採礦增益集](http://go.microsoft.com/fwlink/?LinkID=123146)。  
+ 適用於 Excel 的資料採礦增益集也提供一個 Visio 範本，您可用來在 Visio 圖表中呈現您的模型，並使用 Visio 工具為圖表加上註解和修改圖表。 如需詳細資訊，請參閱 [Microsoft Office 2007 適用之 Microsoft SQL Server 2008 SP2 資料採礦增益集](https://go.microsoft.com/fwlink/?LinkID=123146)。  
   
 
   
@@ -174,7 +174,7 @@ ms.locfileid: "48106588"
   
  請注意，這些報表和圖表不會與專案一起儲存或儲存在 ssASnoversion 資料庫中，所以如果您需要保留或複製結果，您應該儲存結果，或是使用 DMX 或 AMO 來撰寫物件的指令碼。 您也可以使用預存程序進行交叉驗證。  
   
- 如需詳細資訊，請參閱[測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)。  
+ 如需詳細資訊，請參閱 [測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)。  
   
 
   
@@ -198,16 +198,16 @@ ms.locfileid: "48106588"
 |工作|主題|  
 |-----------|------------|  
 |描述如何處理採礦結構資料行|[建立關聯式採礦結構](create-a-relational-mining-structure.md)|  
-|提供有關如何加入新的採礦模型及處理結構和模型的詳細資訊|[將採礦模型加入結構中&#40;Analysis Services-資料採礦&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|提供有關如何加入新的採礦模型及處理結構和模型的詳細資訊|[將採礦模型加入結構 &#40;Analysis Services - 資料採礦&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |提供資源的連結，這些資源可幫助您自訂演算法來建立採礦模型|[自訂採礦模型和結構](customize-mining-models-and-structure.md)|  
 |提供有關每一個採礦模型檢視器之資訊的連結|[資料採礦模型檢視器](data-mining-model-viewers.md)|  
-|了解如何建立增益圖、收益圖或分類矩陣，或是測試採礦結構|[測試和驗證&#40;資料採礦&#41;](testing-and-validation-data-mining.md)|  
+|了解如何建立增益圖、收益圖或分類矩陣，或是測試採礦結構|[測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)|  
 |了解如何處理選項和權限|[處理資料採礦物件](processing-data-mining-objects.md)|  
-|提供有關 Analysis Services 的詳細資訊|[多維度模型資料庫&#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|提供有關 Analysis Services 的詳細資訊|[多維度模型資料庫 &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦設計師](data-mining-designer.md)   
- [建立多維度模型使用 SQL Server Data Tools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [工作空間資料庫&#40;SSAS 表格式&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
+ [Data Mining Designer](data-mining-designer.md)   
+ [使用 SQL Server 資料工具建立多維度模型 &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [工作空間資料庫 &#40;SSAS 表格式&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
   
   

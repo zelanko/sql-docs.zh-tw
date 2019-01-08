@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 171c6e7893aa30a1fbdc6ed0c836ba0d1f8323c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d81180c9cbadec8816c401bc6b8c8d200e76e28b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128448"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806030"
 ---
 # <a name="uninstall-sql-server-2014"></a>解除安裝 SQL Server 2014
   遵循以下的主題完整地解除安裝現存的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體，並將系統準備好可重新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -41,7 +40,7 @@ ms.locfileid: "48128448"
   
 -   [移除 SQL Server 容錯移轉叢集執行個體 &#40;安裝程式&#41;](../failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md)  
   
--   [在 SQL Server 容錯移轉叢集中加入或移除節點 &#40;安裝程式&#41;](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
+-   [在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
 -   [卸除 SQL Server 2014 安裝](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
   

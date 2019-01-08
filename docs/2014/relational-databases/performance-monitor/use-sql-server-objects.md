@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - server performance [SQL Server], objects for monitoring
@@ -30,12 +30,12 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0678c741387e6b9e3a252d03fcebad8dcb5e5a52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de0e30a3d0b7daf014753c225ca34bf7a1b0cd17
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133028"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753590"
 ---
 # <a name="use-sql-server-objects"></a>使用 SQL Server 物件
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所提供的物件與計數器，可供「系統監視器」用來對執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的電腦監視其中的活動。 物件可以是任何一種 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定或 Windows 處理序。 每個物件都包含一個或多個計數器，可決定欲監視之物件的不同層面。 例如， **SQL Server Locks** 物件包含了稱為 **Number of Deadlocks/sec** 與 **Lock Timeouts/sec**的計數器。  
@@ -105,20 +105,20 @@ ms.locfileid: "48133028"
 |[SQLServer:Locks](sql-server-locks-object.md)|提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所提出之個別鎖定要求的相關資訊，例如鎖定逾時和死結。 本物件中含有多項執行個體。|  
 |[SQLServer:Memory Manager](sql-server-memory-manager-object.md)|提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體使用狀況的相關資訊，例如目前配置的鎖定結構總數。|  
 |[SQLServer:Plan Cache](sql-server-plan-cache-object.md)|提供用來儲存物件 (例如預存程序、觸發程序和查詢計畫) 之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 快取的相關資訊。|  
-|[SQLServer: Resource Pool Stats](sql-server-resource-pool-stats-object.md)|提供有關資源管理員資源集區統計資料的資訊。|  
+|[SQLServer:資源集區統計資料](sql-server-resource-pool-stats-object.md)|提供有關資源管理員資源集區統計資料的資訊。|  
 |[SQLServer:SQL Errors](sql-server-sql-errors-object.md)|提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤的相關資訊。|  
 |[SQLServer:SQL Statistics](sql-server-sql-statistics-object.md)|提供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢方面的相關資訊，例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 所接收之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]陳述式的批次數。|  
 |[SQLServer:Transactions](sql-server-transactions-object.md)|提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的使用中交易相關資訊，例如交易總數與快照集交易的數量。|  
 |[SQLServer:User Settable](sql-server-user-settable-object.md)|執行自訂監視。 每個計數器皆可為自訂的預存程序，或任何可傳回監視數值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。|  
-|[SQLServer：等待統計資料](sql-server-wait-statistics-object.md)|提供等候的相關資訊。|  
-|[SQLServer: Workload Group Stats](sql-server-workload-group-stats-object.md)|提供有關資源管理員工作負載群組統計資料的資訊。|  
+|[SQLServer:等候統計資料](sql-server-wait-statistics-object.md)|提供等候的相關資訊。|  
+|[SQLServer:工作負載群組統計資料](sql-server-workload-group-stats-object.md)|提供有關資源管理員工作負載群組統計資料的資訊。|  
   
 ##  <a name="SQLServerReplicationPOs"></a> SQL Server 複寫效能物件  
  下表列出針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫提供的效能物件：  
   
 |效能物件|描述|  
 |------------------------|-----------------|  
-|**SQLServer:Replication Agents**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist**<br /><br /> **SQLServer:Replication Merge**<br /><br /> 如需相關資訊，請參閱 [Monitoring Replication with System Monitor](../replication/monitor/monitoring-replication-with-system-monitor.md)。|提供複寫代理程式活動的相關資訊。|  
+|**SQLServer:Replication Agents**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist**<br /><br /> **SQLServer:Replication Merge**<br /><br /> 如需詳細資訊，請參閱 [使用系統監視器監視複寫](../replication/monitor/monitoring-replication-with-system-monitor.md)。|提供複寫代理程式活動的相關資訊。|  
   
 ##  <a name="SsisPipelineCounters"></a> SSIS 管線計數器  
  如需 **SSIS Pipeline** 計數器的相關資訊，請參閱 [效能計數器](../../integration-services/performance/performance-counters.md)。  

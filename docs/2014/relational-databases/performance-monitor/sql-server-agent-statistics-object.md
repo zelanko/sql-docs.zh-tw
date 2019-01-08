@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Statistics object
@@ -13,12 +13,12 @@ ms.assetid: ebe92bfa-0721-48aa-9ba6-e7904ad265a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e018696c9add0e9c73436aa3d2b89b3aa16a09b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34539c79bc0e2d90841837abef895bdceb2eb20d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124268"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801450"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server Agent、Statistics 物件
   SQL Server Agent 的「 **統計資料** 」效能物件包含效能計數器，用來報告 SQL Server Agent 的詳細資訊。  
@@ -31,6 +31,6 @@ ms.locfileid: "48124268"
   
 ## <a name="see-also"></a>另請參閱  
  [使用效能物件](../../ssms/agent/use-performance-objects.md)   
- [監視資源使用狀況 &#40;系統監視器&#41;](monitor-resource-usage-system-monitor.md)  
+ [監視資源使用狀況 &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)  
   
   

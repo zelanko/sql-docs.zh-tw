@@ -17,12 +17,12 @@ ms.assetid: 953814a3-85ef-40cc-b46a-d532aa7a6569
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 126a0814bb30018c6bcc8fca21c71dd8da84a6c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3f0f24aec895c482ba357dbc4330baaf2798ba6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179518"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519407"
 ---
 # <a name="specifying-configuration-settings-for-solution-deployment"></a>指定方案部署的組態設定
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈 讀取的資料分割和角色部署選項，您在部署指令碼中，從\<*專案名稱*>.configsettings 檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會在您建立 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案時建立此檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 若要建立會使用目前專案的組態設定\<*專案名稱*>.configsettings 檔案。  
@@ -46,17 +46,17 @@ ms.locfileid: "48179518"
  若要修改的資料分割和角色部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案中，您必須變更這項資訊內\<*專案名稱*>.configsettings 檔案，如下列程序中所述。 您無法變更專案內的資料分割與角色設定，因為*\<專案名稱 >* **屬性頁** 對話方塊中的[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]並未顯示這些選項。  
   
 > [!NOTE]  
->  組態設定可以套用至所有物件，或僅套用至新建立的物件。 唯有將其他物件部署到先前部署的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，而且不想要覆寫現有的物件時，才會將組態設定套用至新建立的物件。 若要指定組態設定套用到所有物件或僅至新建立的項目，請將此選項設定\<*專案名稱*>.deploymentoptions 檔案。 如需詳細資訊，請參閱[指定資料分割和角色部署選項](deployment-script-files-partition-and-role-deployment-options.md)。  
+>  組態設定可以套用至所有物件，或僅套用至新建立的物件。 唯有將其他物件部署到先前部署的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，而且不想要覆寫現有的物件時，才會將組態設定套用至新建立的物件。 若要指定組態設定套用到所有物件或僅至新建立的項目，請將此選項設定\<*專案名稱*>.deploymentoptions 檔案。 如需詳細資訊，請參閱 [指定資料分割和角色部署選項](deployment-script-files-partition-and-role-deployment-options.md)。  
   
 #### <a name="to-change-configuration-settings-after-the-input-files-have-been-generated"></a>在已產生輸入檔之後，變更組態設定  
   
 -   以互動方式執行 [[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈]，並在 [組態設定] 頁面上，指定正在部署之物件的組態設定。  
   
-     – 或 –  
+     -或-  
   
 -   在命令提示字元下執行 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈]，並將精靈設定為以回應檔案模式執行。 如需回應檔案模式的詳細資訊，請參閱 [執行 Analysis Services 部署精靈](running-the-analysis-services-deployment-wizard.md)。  
   
-     – 或 –  
+     -或-  
   
 -   修改\<*專案名稱*> placeholder>>.configsettings 檔案使用任何文字編輯器。  
   

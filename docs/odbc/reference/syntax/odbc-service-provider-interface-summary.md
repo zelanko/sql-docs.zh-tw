@@ -11,17 +11,17 @@ ms.assetid: ace6085b-355b-435b-8734-503fc3c12ec2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e351f08a5e72966c92a7452872532b90e4127964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5f3c133b105c905b79589d86952658b6d39f0f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837466"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390441"
 ---
 # <a name="odbc-service-provider-interface-summary"></a>ODBC 服務提供者介面摘要
 下表描述 ODBC 服務提供者介面函式。 如需語法和語意，每個函式的詳細資訊，請參閱[ODBC 服務提供者介面 (SPI) 參考](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)。  
   
-|函數名稱|目的|  
+|函數名稱|用途|  
 |-------------------|-------------|  
 |[SQLSetConnectAttrForDbcInfo](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|與相同[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)，但它的連線資訊語彙基元而不是在連接控制代碼上設定的屬性。|  
 |[SQLSetDriverConnectInfo](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|設定的連接字串至應用程式的連線資訊語彙基元[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)呼叫。|  

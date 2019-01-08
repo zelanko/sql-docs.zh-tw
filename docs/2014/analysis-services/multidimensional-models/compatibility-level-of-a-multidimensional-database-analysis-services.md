@@ -11,12 +11,12 @@ ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ebe649261a1f97093f40ad2aa3f20f96306fd1b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fcf32b558d34340d727a357136884b8d6530887b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219118"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363760"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>設定多維度資料庫的相容性層級 (Analysis Services)
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，資料庫相容性層級屬性會決定資料庫的功能層級。 每個模型類型都有唯一的相容性層級。 例如，相容性層級`1100`的意義會根據資料庫是否為多維度或表格式。  
@@ -24,7 +24,7 @@ ms.locfileid: "48219118"
  本主題描述只適用於多維度資料庫的相容性層級。 如需有關表格式解決方案的詳細資訊，請參閱 <<c0> [ 相容性層級&#40;SSAS 表格式 SP1&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。</c0>  
   
 > [!NOTE]  
->  表格式模型具有另外的資料庫相容性層級，並不適用於多維度模型。 相容性層級`1103`的多維度模型不存在。 請參閱[表格式模型 SQL Server 2012 SP1 和相容性層級中最新消息](http://go.microsoft.com/fwlink/?LinkId=301727)如需詳細資訊`1103`適用於表格式方案。  
+>  表格式模型具有另外的資料庫相容性層級，並不適用於多維度模型。 多維度模型不存在相容性層級 `1103`。 請參閱[表格式模型 SQL Server 2012 SP1 和相容性層級中最新消息](https://go.microsoft.com/fwlink/?LinkId=301727)如需詳細資訊`1103`適用於表格式方案。  
   
  **多維度資料庫的相容性層級**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48219118"
 ## <a name="determine-the-existing-database-compatibility-level-for-a-multidimensional-database"></a>判斷多維度資料庫的現有資料庫相容性層級  
  檢視或修改資料庫相容性層級的唯一方式是透過 XMLA。 您可以在 SQL Server Management Studio 中檢視或修改指定資料庫的 XMLA 指令碼。  
   
- 如果您的搜尋屬性的資料庫的 XMLA 定義`CompatibilityLevel`並不存在，您很有可能該資料庫是位於`1050`層級。  
+ 如果您在資料庫的 XMLA 定義中搜尋屬性 `CompatibilityLevel` 而此屬性並不存在，很有可能該資料庫是位於 `1050` 層級。  
   
  下一節中會提供檢視及修改 XMLA 指令碼的指示。  
   
@@ -90,9 +90,9 @@ ms.locfileid: "48219118"
 3.  只有共用相同版本與資料庫相容性層級的伺服器，才支援同步處理伺服器。  
   
 ## <a name="next-steps"></a>後續步驟  
- 提高資料庫相容性層級之後，您可以設定`StringStoresCompatibilityLevel`屬性中的[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。 這樣做會增加量值和維度的字串儲存體。 如需這項功能的詳細資訊，請參閱 [設定維度及資料分割的字串存放區](configure-string-storage-for-dimensions-and-partitions.md)。  
+ 在您提高資料庫相容性層級之後，就可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中設定 `StringStoresCompatibilityLevel` 屬性。 這樣做會增加量值和維度的字串儲存體。 如需這項功能的詳細資訊，請參閱 [設定維度及資料分割的字串存放區](configure-string-storage-for-dimensions-and-partitions.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [備份、 還原和同步處理資料庫&#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [備份、還原和同步處理資料庫 &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

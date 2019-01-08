@@ -14,12 +14,12 @@ ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90b8f11b303c72eedbf116ae4154ce9d611a401c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1d563b4cefc2e074c437fa0ab3b66bfea9796fb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164858"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372220"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services 個人化延伸模組
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 個人化延伸模組是概念的實作外掛程式架構的基礎。 在外掛程式架構中，您可以動態開發新的 Cube 物件和功能，並輕鬆地與其他開發人員共用。 因此，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]個人化延伸模組提供的功能可讓您能夠達成以下目標：  
@@ -43,7 +43,7 @@ ms.locfileid: "48164858"
  正在啟動服務，當[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]載入必要的組件，並判斷哪些類別具有<xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute>自訂屬性。  
   
 > [!NOTE]  
->  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 會使用可描述程式碼及影響執行階段行為的方式來定義自訂屬性。 如需詳細資訊，請參閱本主題中，「[屬性概觀](http://go.microsoft.com/fwlink/?LinkId=82929)，「 在[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]MSDN 上的開發人員指南。  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 會使用可描述程式碼及影響執行階段行為的方式來定義自訂屬性。 如需詳細資訊，請參閱本主題中，「[屬性概觀](https://go.microsoft.com/fwlink/?LinkId=82929)，「 在[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]MSDN 上的開發人員指南。  
   
  對於所有類別<xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute>自訂屬性，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]叫用其預設建構函式。 叫用在啟動的所有建構函式提供的常用的位置，要從其中建立新的物件，而這是獨立於任何使用者活動。  
   
@@ -117,13 +117,13 @@ ms.locfileid: "48164858"
 #### <a name="adomdcommand-class"></a>AdomdCommand 類別  
  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> 類別現在支援下列 MDX 命令：  
   
--   [CREATE MEMBER 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
+-   [CREATE MEMBER 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
   
 -   [UPDATE MEMBER 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-update-member)  
   
 -   [DROP MEMBER 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-member)  
   
--   [CREATE SET 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
+-   [CREATE SET 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
   
 -   [DROP SET 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-set)  
   
@@ -141,10 +141,10 @@ ms.locfileid: "48164858"
  CREATE KPI 和 DROP KPI 命令會加入到 MDX 語法。 KPI 可以從任何 MDX 指令碼動態建立。  
   
 ### <a name="schema-rowsets-extensions"></a>結構描述資料列集延伸模組  
- On MDSCHEMA_MEMBERS*範圍*加入資料行。 範圍值如下：MDMEMBER_SCOPE_GLOBAL=1、MDMEMBER_SCOPE_SESSION=2。  
+ On MDSCHEMA_MEMBERS*範圍*加入資料行。 範圍值如下所示：MDMEMBER_SCOPE_GLOBAL = 1、 MDMEMBER_SCOPE_SESSION = 2。  
   
- On MDSCHEMA_SETS *set_evaluation_context*加入資料行。 設定評估內容值，如下所示：MDSET_RESOLUTION_STATIC = 1、MDSET_RESOLUTION_DYNAMIC = 2。  
+ On MDSCHEMA_SETS *set_evaluation_context*加入資料行。 設定評估內容值如下所示：MDSET_RESOLUTION_STATIC = 1、MDSET_RESOLUTION_DYNAMIC = 2。  
   
- 加入 On MDSCHEMA_KPIS 範圍資料行。 範圍值如下所示：MDKPI_SCOPE_GLOBAL=1、MDKPI_SCOPE_SESSION=2。  
+ 加入 On MDSCHEMA_KPIS 範圍資料行。 範圍值如下所示：MDKPI_SCOPE_GLOBAL = 1、 MDKPI_SCOPE_SESSION = 2。  
   
   

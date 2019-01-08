@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ecfed53ebcecf38bbd46a6d3b15d1a8a8c741fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156018"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769510"
 ---
 # <a name="eventstring-element-dta"></a>EventString 元素 (DTA)
   在 XML 輸入檔中，直接指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼工作負載。  
@@ -40,27 +39,27 @@ ms.locfileid: "48156018"
   
 |attribute|描述|  
 |---------------|-----------------|  
-|`Weight`|選擇性。 針對指定事件來指定查詢加權因數 (重要性因數)。 使用`float`資料型別來指定加權。 例如，`Weight`="100.01"。 `Weight` 所能指定的最小值是 "0"。|  
+|`Weight`|選擇性。 針對指定事件來指定查詢加權因數 (重要性因數)。 請利用 `float` 資料類型來指定加權。 例如，`Weight`="100.01"。 `Weight` 所能指定的最小值是 "0"。|  
   
 ## <a name="element-characteristics"></a>元素特性  
   
 |特性|描述|  
 |--------------------|-----------------|  
-|**資料類型和長度**|`string`長度沒有限制。|  
+|**資料類型和長度**|`string`，沒有長度限制。|  
 |**預設值**|無。|  
-|**出現次數**|如果未指定任何其他工作負載類型，便需要使用這個元素一次。 您必須指定`EventString`，則`File`，或有`Database`子元素`Workload`父代，但只有一個型別使用。 例如，如果您指定工作負載`EventString`項目，則您不能同時指定工作負載`File`相同 XML 輸入檔中的項目。|  
+|**出現次數**|如果未指定任何其他工作負載類型，便需要使用這個元素一次。 您必須指定 `EventString` 父系的 `File`、`Database` 或 `Workload` 子元素，但只能使用一種類型。 例如，如果您利用 `EventString` 元素指定了工作負載，便不能在相同 XML 輸入檔中，同時利用 `File` 元素來指定工作負載。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[Workload 元素&#40;DTA&#41;](workload-element-dta.md)|  
+|**父元素**|[Workload 元素 &#40;DTA&#41;](workload-element-dta.md)|  
 |**子元素**|無。|  
   
 ## <a name="example"></a>範例  
  此元素的使用方式範例，請參閱 [XML Input File Sample with Inline Workload &#40;DTA&#41;](xml-input-file-sample-with-inline-workload-dta.md) (內嵌工作負載的 XML 輸入檔範例 (DTA))。  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

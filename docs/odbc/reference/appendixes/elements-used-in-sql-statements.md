@@ -15,12 +15,12 @@ ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23eef4c33afbbfd287bb9be083cfe0990a6dd6a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e33beff29463172a26d53953dd5f563fe1f3f5c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729028"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512189"
 ---
 # <a name="elements-used-in-sql-statements"></a>SQL 陳述式中使用的項目
 先前所列的 SQL 陳述式中，會使用下列項目。  
@@ -52,9 +52,9 @@ ms.locfileid: "47729028"
   
  *動態參數*:: =？  
   
- *運算式*:: = 詞彙&#124;運算式 {+&#124;–} 詞彙  
+ *運算式*:: = 詞彙&#124;運算式 {+&#124;-} 詞彙  
   
- *係數*:: = [*+*&#124;*–*]*主要*  
+ *係數*:: = [*+*&#124;*-*]*主要*  
   
  *插入值*:: =  
   

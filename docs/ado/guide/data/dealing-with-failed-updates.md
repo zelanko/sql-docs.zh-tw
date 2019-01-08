@@ -13,12 +13,12 @@ ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ba4b4189691bf907b3ad67db91a8534268a8ec0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9930e76c902080cb7df22bf2a28afc1ae18b3cfd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616426"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202217"
 ---
 # <a name="dealing-with-failed-updates"></a>處理失敗的更新
 當更新已結束但發生錯誤時，解決錯誤的方式而定的本質和 錯誤嚴重性以及您的應用程式的邏輯。 不過，如果資料庫與其他使用者共用，常見的錯誤將會有其他人修改的欄位，然後才執行。 此類錯誤稱為 「 衝突 」。 ADO 會偵測這種情況，並回報錯誤。  
@@ -29,10 +29,10 @@ ms.locfileid: "47616426"
  若要通知使用者有更新衝突的程式碼看起來像這樣：  
   
 ```  
-objRs.Filter = adFilterConflictingRecords  
+objRs.Filter = adFilterConflictingRecords  
 objRs.MoveFirst  
-Do While Not objRst.EOF  
-   Debug.Print "Conflict: Name =  "; objRs!au_fname; " "; objRs!au_lname  
+Do While Not objRst.EOF  
+   Debug.Print "Conflict: Name =  "; objRs!au_fname; " "; objRs!au_lname  
    objRs.MoveNext  
 Loop  
 ```  

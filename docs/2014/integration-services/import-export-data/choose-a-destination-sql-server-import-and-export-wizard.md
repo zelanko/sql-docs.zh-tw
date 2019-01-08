@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadestination.f1
@@ -13,19 +12,19 @@ ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bc83fa7dc0d9692456cf99f5a77d3723a137963f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40f234a7091d923dd08c943ca884d6075d953fb3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117002"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360883"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>選擇目的地 (SQL Server 匯入和匯出精靈)
   使用**選擇目的地**頁面，即可指定您想要複製之資料的目的地。  
   
  若要深入了解此精靈，請參閱[SQL Server 匯入和匯出精靈](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要深入了解啟動精靈，以及成功執行精靈所需的權限的選項，請參閱[執行 SQL Server 匯入和匯出精靈](start-the-sql-server-import-and-export-wizard.md)。  
   
- 目的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈是將資料從來源複製到目的地。 這個精靈也可以為您建立目的地資料庫和目的地資料表。 不過，如果您必須複製多個資料庫或資料表，或複製其他種類的資料庫物件，則應該改用「複製資料庫精靈」。 如需詳細資訊，請參閱 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
+ 「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈」的用途是將資料從來源複製到目的地。 這個精靈也可以為您建立目的地資料庫和目的地資料表。 不過，如果您必須複製多個資料庫或資料表，或複製其他種類的資料庫物件，則應該改用「複製資料庫精靈」。 如需詳細資訊，請參閱 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
 ## <a name="static-options"></a>靜態選項  
  **目的地**  
@@ -47,10 +46,10 @@ ms.locfileid: "48117002"
  指定封裝是否使用 Microsoft Windows 驗證來登入資料庫。 建議使用 Windows 驗證，以獲得較佳的安全性。  
   
  **[使用 SQL Server 驗證]**  
- 指定封裝是否應該使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證來登入到資料庫。 如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，就必須提供使用者名稱和密碼。  
+ 指定封裝是否應使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來登入資料庫。 如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，就必須提供使用者名稱和密碼。  
   
  **使用者名稱**  
- 指定資料庫連接的使用者名稱，當您使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證時，請指定資料庫連接的使用者名稱。  
   
  **密碼**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證時，請提供資料庫連接的密碼。  
@@ -110,7 +109,7 @@ ms.locfileid: "48117002"
  選取目的地活頁簿所使用的 Excel 版本。  
   
 > [!NOTE]  
->  當您將資料匯出至[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]目的地，精靈會使用[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Excel 目的地元件。 如需一些使用方式考量與已知的問題的資訊，請參閱[Excel 目的地](../data-flow/excel-destination.md)。  
+>  當您將資料匯出至 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 目的地時，精靈會使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Excel 目的地元件。 如需一些使用方式考量與已知的問題的資訊，請參閱[Excel 目的地](../data-flow/excel-destination.md)。  
   
 ### <a name="destination--microsoft-access"></a>目的地 = Microsoft Access  
   
@@ -130,6 +129,6 @@ ms.locfileid: "48117002"
  當工作群組資訊檔案與資料庫相關聯時，請提供該資料庫連接的使用者密碼。 不過，如果所有使用者的單一密碼保護資料庫，您必須提供此值**資料連結屬性** 對話方塊中，該對話方塊可由**進階** 按鈕。  
   
  **進階**  
- 使用 [資料連結屬性] 對話方塊來指定進階選項，例如資料庫密碼或非預設工作群組資訊檔案。 如需有關 OLE DB 提供者屬性的詳細資訊，請搜尋中的 [資料存取] 區段[MSDN Library](http://go.microsoft.com/fwlink/?linkid=62553)。  
+ 使用 [資料連結屬性] 對話方塊來指定進階選項，例如資料庫密碼或非預設工作群組資訊檔案。 如需有關 OLE DB 提供者屬性的詳細資訊，請搜尋中的 [資料存取] 區段[MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553)。  
   
   

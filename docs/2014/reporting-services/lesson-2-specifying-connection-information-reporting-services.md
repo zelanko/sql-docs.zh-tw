@@ -1,5 +1,5 @@
 ---
-title: 第 2 課：指定連線資訊 (Reporting Services) | Microsoft Docs
+title: 第 2 課：指定連接資訊 (Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 75022350450358c22c53851939faa2ae7b10c8e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fce2ad94feef0a59113ce6c7cfd715405ab17a9e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200038"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503507"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>第 2 課：指定連接資訊 (Reporting Services)
   將報表加入教學課程專案之後，您需要定義「資料來源」，這是讓報表從關聯式資料庫、多維度資料庫或其他資源存取資料所用的連接資訊。  
@@ -25,12 +25,12 @@ ms.locfileid: "48200038"
   
 ### <a name="to-set-up-a-connection"></a>設定連接  
   
-1.  在 [報表資料] 窗格中，按一下 [新增]，然後按一下 [資料來源…]。  
+1.  在 **報表資料**窗格中，按一下**新增**，然後按一下 **資料來源...**.  
   
     > [!NOTE]  
     >  如果看不到 [報表資料] 窗格，請按一下 [檢視] 功能表上的 [報表資料]。  
   
-2.  在 **名稱**，輸入[!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]。  
+2.  在 **[名稱]** 中，輸入 [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]。  
   
 3.  確認 [內嵌連接] 已選取。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48200038"
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 資料來源[!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)]新增至**報表資料**窗格。  
   
 ## <a name="next-task"></a>下一項工作  
- 您已順利定義 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 範例資料庫的連接。 下一步，您將建立報表。 請參閱[第 3 課：定義資料表報表的資料集 &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)。  
+ 您已順利定義 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 範例資料庫的連接。 下一步，您將建立報表。 請參閱[第 3 課：定義資料表報表的資料集&#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [報表產生器中的資料連接、資料來源及連接字串](data-connections-data-sources-and-connection-strings-in-reporting-services.md)  

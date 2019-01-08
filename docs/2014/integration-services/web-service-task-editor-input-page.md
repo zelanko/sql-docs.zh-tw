@@ -15,12 +15,12 @@ ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: adc1283b3917bd82478ee4ed2e537926e73aa7e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7eec6368855b52088d5ed5ff253ec6020286aadf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056688"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515154"
 ---
 # <a name="web-service-task-editor-input-page"></a>Web 服務工作編輯器 (輸入頁面)
   使用 [Web 服務工作編輯器] 對話方塊的 [輸入] 頁面，即可指定 Web 服務、Web 方法，以及提供給 Web 方法的輸入值。 在 [值] 資料行中直接輸入字串，或是在 [值] 資料行中選取變數，即可提供這些值。  
@@ -35,7 +35,7 @@ ms.locfileid: "48056688"
  從清單中選取要用於執行工作的 Web 方法。  
   
  **WebMethodDocumentation**  
- 輸入 Web 方法的描述，或按一下瀏覽按鈕 **(...)**，然後在 [Web 方法文件集] 對話方塊中輸入描述。  
+ 鍵入 Web 方法的描述，或按一下瀏覽按鈕 **(...)**，然後在 [Web 方法文件集] 對話方塊中鍵入描述。  
   
  **名稱**  
  列出 Web 方法之輸入的名稱。  
@@ -54,8 +54,8 @@ ms.locfileid: "48056688"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Web 服務工作編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
- [Web 服務工作編輯器&#40;輸出頁面&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Web 服務工作編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [Web 服務工作編輯器 &#40;輸出頁面&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [運算式頁面](expressions/expressions-page.md)  
   
   

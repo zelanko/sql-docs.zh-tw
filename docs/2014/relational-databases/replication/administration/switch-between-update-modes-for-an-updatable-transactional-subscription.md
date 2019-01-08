@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
@@ -15,12 +14,12 @@ ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbe5d710c29f8f63a1ee09eab322b23f74dbe2ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ee768eb4e50e4501af204c885916cd14409df2c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057898"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785190"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>切換可更新之交易式訂閱的更新模式
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中切換可更新之交易訂閱的更新模式。 使用「新增訂閱精靈」指定可更新訂閱的模式。 如需使用此精靈時設定模式的資訊，請參閱[檢視及修改提取訂閱屬性](../view-and-modify-pull-subscription-properties.md)。  
@@ -50,17 +49,17 @@ ms.locfileid: "48057898"
   
 3.  以滑鼠右鍵按一下您要設定更新模式的訂閱，再按一下 **[設定更新方法]**。  
   
-4.  在 [設定更新方法 - \<訂閱者>: \<訂閱資料庫>] 對話方塊中，選取 [立即更新] 或 [佇列更新]。  
+4.  在 **設定更新方法-\<訂閱者 >:\<訂閱資料庫 >** 對話方塊中，選取**立即更新**或是**佇列更新**。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>若要設定提取訂閱的更新模式  
   
-1.  在 [訂閱屬性 - \<發行者>: \<發行資料庫>] 對話方塊中，選取 [立即複寫變更] 的值或 [訂閱者更新方法] 選項的 [佇列變更]。  
+1.  在 [**訂用帳戶屬性-\<發行者 >:\<發行集資料庫 >** ] 對話方塊中，選取為值**立即複寫變更**或是**佇列變更**如**訂閱者更新方法**選項。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- 如需存取 [訂閱屬性 - \<發行者>: \<發行集資料庫>] 對話方塊的詳細資訊，請參閱[檢視及修改提取訂閱屬性](../view-and-modify-pull-subscription-properties.md)。  
+ 如需有關存取**訂用帳戶屬性-\<發行者 >:\<發行集資料庫 >**  對話方塊中，請參閱 <<c2> [ 檢視及修改提取訂閱屬性](../view-and-modify-pull-subscription-properties.md)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

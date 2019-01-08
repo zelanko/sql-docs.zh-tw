@@ -14,12 +14,12 @@ ms.assetid: 4db6462f-93c7-443f-8ff7-39474dc7029e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9288c6a4f01cff6c3c4a19ff79a1d49775035cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e5ee759c4a23ab2891597fd3a5c884ce7332ea4e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179428"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400471"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>關聯精靈 (適用於 Excel 的資料採礦用戶端)
   ![資料採礦功能區中的關聯精靈](media/dmc-associate.gif "資料採礦功能區中的關聯精靈")  
@@ -62,7 +62,7 @@ ms.locfileid: "48179428"
   
     -   當您降低規則的機率時，您會降低組合必須達到的門檻需求，才能在總資料集的內容中視為是重要的。  
   
-     **提示：** 是個不錯的主意，若要建立使用支援與機率的不同組合的多個採礦模型。 若要追蹤您用於每個模型的設定，您可以使用**文件模型**for Excel 和使用資料採礦用戶端中提供精靈**Detailed**報表選項。 如需詳細資訊，請參閱 <<c0> [ 記載的採礦模型&#40;適用於 Excel 的資料採礦增益集&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)。</c0>  
+     **提示：** 它是個不錯的主意，若要建立使用支援與機率的不同組合的多個採礦模型。 若要追蹤您用於每個模型的設定，您可以使用**文件模型**for Excel 和使用資料採礦用戶端中提供精靈**Detailed**報表選項。 如需詳細資訊，請參閱 <<c0> [ 記載的採礦模型&#40;適用於 Excel 的資料採礦增益集&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)。</c0>  
   
 6.  （選擇性） 按一下**參數**以變更演算法參數，並自訂採礦模型的行為。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48179428"
   
          例如，如果您想按一下特定項目集以查看來源資料，鑽研是很有用的方式。  
   
-    -   **使用暫時性模型**。 如果您不想將模型儲存到伺服器上，請選取這個選項。 當您關閉 Excel 時，即會刪除暫時性模型。  
+    -   **使用暫時性模型**。 如果您不想將模型儲存在伺服器上，請選取此選項。 當您關閉 Excel 時，即會刪除暫時性模型。  
   
 9. 精靈會分析所有可能的組合，並且建立包含項目集和規則的報表。  
   

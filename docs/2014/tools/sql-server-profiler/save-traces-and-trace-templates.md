@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - saving traces
@@ -20,12 +19,12 @@ ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80781d3b32ef33fa844c5df96f837aaa14ba06c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4baca63080a3f67c1f9e54a8a0aa955a27029df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159598"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796980"
 ---
 # <a name="save-traces-and-trace-templates"></a>儲存追蹤及追蹤範本
   區分儲存追蹤檔案與儲存追蹤範本是很重要的。 儲存追蹤檔案牽涉到將擷取的事件資料儲存到指定的位置上。 儲存追蹤範本則牽涉到儲存追蹤的定義，例如指定的資料行、事件類別或篩選等。  
@@ -63,11 +62,11 @@ ms.locfileid: "48159598"
  [sp_trace_create &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)  
   
 ## <a name="see-also"></a>另請參閱  
- [將追蹤結果儲存至資料表&#40;SQL Server Profiler&#41;](save-trace-results-to-a-table-sql-server-profiler.md)   
- [建立追蹤範本&#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
+ [將追蹤結果儲存到資料表 &#40;SQL Server Profiler&#41;](save-trace-results-to-a-table-sql-server-profiler.md)   
+ [建立追蹤範本 &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [從執行中的追蹤衍生範本 &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [從追蹤檔案或追蹤資料表衍生範本 &#40;SQL Server Profiler&#41;](derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [匯出追蹤範本 &#40;SQL Server Profiler&#41;](export-a-trace-template-sql-server-profiler.md)   
- [匯入追蹤範本 &#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)  
+ [匯出追蹤範本 &#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)  
   
   

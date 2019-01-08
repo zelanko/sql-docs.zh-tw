@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 73550597-a3f3-4454-8678-0bf39db80a7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 892a3aee2236c93953825d3414b402ce5b49d174
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7acd72b5386eed5e78ddcd2fe1cd0344905fa833
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115868"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761490"
 ---
 # <a name="spstmtstarting-event-class"></a>SP:StmtStarting 事件類別
   SP:StmtStarting 事件類別指出已啟動預存程序內的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
@@ -47,7 +46,7 @@ ms.locfileid: "48115868"
 |NTUserName|`nvarchar`|Windows 使用者名稱。|6|是|  
 |ObjectID|`int`|系統指派給物件的識別碼。|22|是|  
 |ObjectName|`nvarchar`|正在參考之物件的名稱。|34|是|  
-|ObjectType|`int`|代表參與事件之物件類型的值。 這個值會對應到 sys.objects 目錄檢視中的類型資料行。 如需各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
+|ObjectType|`int`|代表參與事件之物件類型的值。 這個值會對應到 sys.objects 目錄檢視中的類型資料行。 針對各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
 |Offset|`int`|預存程序或批次內之陳述式的起始位移。|61|是|  
 |RequestID|`int`|包含陳述式之要求的識別碼。|49|是|  
 |ServerName|`nvarchar`|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  

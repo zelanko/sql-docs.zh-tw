@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c529ee0a8fcfa9b25a64a307b81610944b51fd88
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: bbf518fa74c15afbc990bf4a5c1349bdfd6c4f78
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864216"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418479"
 ---
 # <a name="using-large-value-types"></a>使用大數值類型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47864216"
   
  在 **max** 大小設定為無限制的資料行中，**varchar(max)**、**varbinary(max)** 和 **nvarchar(max)** 資料類型會在傳回資料行資料類型的核心 OLE DB 結構描述資料列集和介面中表示為 ISLONG。  
   
- 命令物件的 **IAccessor** 實作已變更為允許以 DBTYPE_IUNKNOWN 的形式進行繫結。 如果取用者指定 DBTYPE_IUNKNOWN 並將 *pObject* 設定為 null，則提供者會將 **ISequentialStream** 介面傳回給取用者，讓取用者可以將 **varchar(max)**、**nvarchar(max)** 或 **varbinary(max)** 用資料流的形式傳出輸出變數。  
+ 命令物件的**IAccessor**實作已變更為允許繫結為 DBTYPE_IUNKNOWN。 如果取用者指定 DBTYPE_IUNKNOWN 並將 *pObject* 設定為 null，則提供者會將 **ISequentialStream** 介面傳回給取用者，讓取用者可以將 **varchar(max)**、**nvarchar(max)** 或 **varbinary(max)** 用資料流的形式傳出輸出變數。  
   
  以資料流傳輸的輸出參數值會在任何結果資料列之後傳回。 如果應用程式藉由呼叫 **IMultipleResults::GetResult** (而不取用所有的傳回輸出參數值) 嘗試繼續前往下一個結果集，就會傳回 DB_E_OBJECTOPEN。  
   

@@ -15,12 +15,12 @@ ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 788aead525e8a4d21728de60a2162aafb5d286cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e0ceb2ef7e152829cbb6bd33cdcb3d0812a69bf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163288"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355649"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>開啟資料表設計工具 (Visual Database Tools)
   資料表設計工具是一項視覺化工具，可讓您設計要連接的資料庫資料表，並將該資料庫資料表視覺化。 您可以使用 [資料表設計工具] 建立、編輯或刪除資料表、資料行、索引鍵、索引、關聯性和條件約束。  
@@ -34,7 +34,7 @@ ms.locfileid: "48163288"
      [資料表設計工具] 功能表會新增至主功能表中，而且會開啟設計工具窗格。  
   
 > [!NOTE]  
->  如果您連接到 SQL Azure 資料庫，新的資料表選項將會啟動建立資料表範本指令碼。 請編輯參數，然後執行指令碼來建立新的資料表。 如需詳細資訊，請參閱＜ [SQL Azure 概觀](http://go.microsoft.com/fwlink/?LinkId=163948)＞。  
+>  如果您連接到 SQL Azure 資料庫，新的資料表選項將會啟動建立資料表範本指令碼。 請編輯參數，然後執行指令碼來建立新的資料表。 如需詳細資訊，請參閱＜ [SQL Azure 概觀](https://go.microsoft.com/fwlink/?LinkId=163948)＞。  
   
 ### <a name="open-an-existing-table"></a>開啟現有的資料表  
   

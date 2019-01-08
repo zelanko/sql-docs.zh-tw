@@ -18,12 +18,12 @@ ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce9e002b3a01b3cb6e13de5176bd0826870796f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0f1add0f2d249922f00fc1b16d5da12bb903faf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070922"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524992"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>在執行 SQL 工作中將查詢參數對應到變數
   此主題描述如何在「執行 SQL」工作中使用參數化 SQL 陳述式，以及建立 SQL 陳述式中變數和參數之間的對應。  
@@ -82,10 +82,10 @@ ms.locfileid: "48070922"
   
     |連接類型|參數名稱|  
     |---------------------|--------------------|  
-    |ADO|Param1, Param2, …|  
+    |ADO|Param1, Param2, ...|  
     |ADO.NET 和 SQLMOBILE|@\<參數名稱>|  
-    |ODBC|1, 2, 3, …|  
-    |EXCEL 和 OLE DB|0, 1, 2, 3, …|  
+    |ODBC|1, 2, 3, ...|  
+    |EXCEL 和 OLE DB|0, 1, 2, 3, ...|  
   
 10. 從 [變數名稱] 清單中，選取一個變數。 如需詳細資訊，請參閱[加入、刪除、變更封裝中使用者定義變數的範圍](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)。  
   
@@ -106,6 +106,6 @@ ms.locfileid: "48070922"
 ## <a name="see-also"></a>另請參閱  
  [執行 SQL 工作](control-flow/execute-sql-task.md)   
  [參數和傳回碼中執行 SQL 工作](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
- [Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)  
+ [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)  
   
   

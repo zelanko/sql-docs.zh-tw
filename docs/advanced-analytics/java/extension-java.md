@@ -1,38 +1,38 @@
 ---
-title: 在 SQL Server 2019 的 Java 語言擴充功能 |Microsoft Docs
-description: 使用 Java 語言擴充功能的 SQL Server 2019 上執行 Java 程式碼。
+title: 在 SQL Server 2019-SQL Server Machine Learning 服務的 Java 語言擴充功能
+description: 安裝、 設定及驗證的 Java 語言擴充功能於 SQL Server 2019 適用於 Linux 和 Windows 系統。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/12/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b11025a69a0e72bb7cea1c478350da0f6ede85bf
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a258573ff7506f2533c2f91edb5751cfd1121dc8
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696412"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431712"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>在 SQL Server 2019 的 Java 語言擴充功能 
 
-從 SQL Server 2019 開始，您可以自訂的 Java 程式碼中執行[擴充性架構](../concepts/extensibility-framework.md)資料庫引擎執行個體的附加元件。 
+從 Windows 和 Linux 上的 SQL Server 2019 預覽中，您可以自訂的 Java 程式碼中執行[擴充性架構](../concepts/extensibility-framework.md)資料庫引擎執行個體的附加元件。 
 
-擴充性架構，是執行外部程式碼的架構： Java （從 SQL Server 2019）， [（從 SQL Server 2017） 的 Python](../concepts/extension-python.md)，並[（從 SQL Server 2016） 的 R](../concepts/extension-r.md)。 執行程式碼是與核心引擎處理序隔離，但與 SQL Server 查詢執行完全整合。 這表示您可以將資料從任何 SQL Server 查詢推送至外部的執行階段，並取用或保存回 SQL Server 中的結果。
+擴充性架構是執行外部程式碼的架構：（從 SQL Server 2019，） 的 Java [（從 SQL Server 2017） 的 Python](../concepts/extension-python.md)，並[（從 SQL Server 2016） 的 R](../concepts/extension-r.md)。 執行程式碼是與核心引擎處理序隔離，但與 SQL Server 查詢執行完全整合。 這表示您可以將資料從任何 SQL Server 查詢推送至外部的執行階段，並取用或保存回 SQL Server 中的結果。
 
 如同任何程式設計語言擴充功能，系統預存程序[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)是執行預先編譯的 Java 程式碼的介面。
 
 ## <a name="prerequisites"></a>先決條件
 
-需要 SQL Server 2019。 較早版本不需要 Java 整合。 
+需要 SQL Server 2019 預覽執行個體。 較早版本不需要 Java 整合。 
 
 Java 版本需求是根據 Windows 和 Linux 而異。 Java Runtime Environment (JRE) 是最低需求，但 Jdk 適用於您需要的 Java 編譯器或開發套件。 因為 JDK 是全部 （含），如果您安裝 JDK、 JRE 不是必要的。
 
 | 作業系統 | Java 版本 | JRE 下載 | JDK 下載 |
 |------------------|--------------|--------------|--------------|
-| Windows          | 1.10         | [JRE 10](https://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html) | [JDK 10](https://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html)  |
+| 視窗          | 1.10         | [JRE 10](https://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html) | [JDK 10](https://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html)  |
 | Linux            | 1.8          |  [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) | [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  |  
 
 在 Linux 上， **mssql 伺服器擴充性-java**套件會自動安裝 JRE 1.8，如果尚未安裝。 安裝指令碼也會新增至名為 JAVA_HOME 環境變數的 JVM 路徑。
@@ -46,7 +46,7 @@ Java 版本需求是根據 Windows 和 Linux 而異。 Java Runtime Environment 
 
 ## <a name="install-on-linux"></a>在 Linux 上安裝
 
-您可以安裝[資料庫引擎和 Java 延伸模組一起](../../linux/sql-server-linux-setup-machine-learning.md#chained-installation)，或將 Java 支援新增至現有的執行個體。 下列範例會將 Java 延伸模組新增至現有安裝。  
+您可以安裝[資料庫引擎和 Java 延伸模組一起](../../linux/sql-server-linux-setup-machine-learning.md#install-all)，或將 Java 支援新增至現有的執行個體。 下列範例會將 Java 延伸模組新增至現有安裝。  
 
 ```bash
 # RedHat install commands
@@ -65,6 +65,29 @@ sudo zypper install mssql-server-extensibility-java
 
 > [!Note]
 > 在連線網際網路的裝置，會下載套件相依性，並將其安裝主套件安裝過程中。 如需詳細資訊，包括離線安裝程式，請參閱[在 Linux 上安裝 SQL Server Machine Learning](../../linux/sql-server-linux-setup-machine-learning.md)。
+
+### <a name="grant-permissions-on-linux"></a>在 Linux 上的 授與權限
+
+若要提供 SQL Server 權限才能執行 Java 類別，您需要設定權限。
+
+若要授與讀取及執行 jar 檔案或類別檔案的存取權，請執行下列**chmod**命令在每一個類別或 jar 檔案。 我們建議您將類別檔案放在 jar 中，當您使用 SQL Server。 如需建立 jar 的說明，請參閱[如何建立的 jar 檔案](#create-jar)。
+
+```cmd
+chmod ug+rx <MyJarFile.jar>
+```
+您也需要授與目錄或 jar 檔案，以進行讀取/執行的 mssql_satellite 權限。
+
+* 如果您從 SQL Server 呼叫類別檔案，mssql_satellite 會需要讀取/執行權限*每個*在資料夾階層中，從根目錄下的直接父目錄。
+
+* 如果您從 SQL Server 呼叫 jar 檔案，就足以 jar 檔案本身上執行命令。
+
+```cmd
+chown mssql_satellite:mssql_satellite <directory>
+```
+
+```cmd
+chown mssql_satellite:mssql_satellite <MyJarFile.jar>
+```
 
 <a name="install-on-windows"></a>
 
@@ -86,7 +109,7 @@ JAVA_HOME 是環境變數，可指定 Java 解譯器的位置。 在此步驟中
 
   在 CTP 2.0 中，將 JAVA_HOME 設定為基底的 jdk 資料夾僅適用於 Java 1.10。 
 
-  適用於 Java 1.8，擴充到您 JDK (例如，"C:\Program Files\Java\jdk1.8.0_181\bin\server"在 Windows 上的 jvm.dll 路徑。 或者，您可以指向 JRE 的基底資料夾:"C:\Program Files\Java\jre1.8.0_181"。
+  適用於 Java 1.8，擴充到您 JDK (例如，"C:\Program Files\Java\jdk1.8.0_181\bin\server"在 Windows 上的 jvm.dll 路徑。 或者，您可以指向 JRE 的基底資料夾："C:\Program Files\Java\jre1.8.0_181"。
 
 2. 在控制台中，開啟**系統及安全性**，開啟**系統**，然後按一下**進階系統屬性**。
 
@@ -98,38 +121,32 @@ JAVA_HOME 是環境變數，可指定 Java 解譯器的位置。 在此步驟中
 
 <a name="perms-nonwindows"></a>
 
-### <a name="grant-permissions-to-java-executables"></a>Java 可執行檔的權限授與
+### <a name="grant-access-to-non-default-jdk-folder-windows-only"></a>授與存取非預設 JDK 資料夾 (僅 Windows)
 
-根據預設，外部處理序所執行的帳戶沒有存取 JRE 或 JDK 檔案。 在本節中，執行下列 PowerShell 指令碼，以允許存取的權限授與。
+如果您安裝 JDK/JRE 的預設資料夾中，您可以略過此步驟。 
 
-1. 尋找並複製 JDK 或 JRE 安裝位置。 比方說，它可能會是 C:\Program Files\Java\jdk-10.0.2。
+針對非預設資料夾安裝，執行**icacls**命令*提升權限*授與存取權的列**SQLRUsergroup**和 SQL Server 服務帳戶 （在**ALL_APPLICATION_PACKAGES**) 來存取 JVM 和 Java 類別路徑。 命令會以遞迴方式存取權授與所有檔案和資料夾下的指定的目錄路徑。
 
-2. 使用系統管理員權限開啟 PowerShell。 如果您不熟悉這項工作，請參閱[這篇文章](https://www.top-password.com/blog/5-ways-to-run-powershell-as-administrator-in-windows-10/)的提示。
+#### <a name="sqlrusergroup-permissions"></a>SQLRUserGroup 權限
 
-3. 執行下列程式碼授與**SQLRUserGroup** Java 可執行檔的權限。 
+具名的執行個體中，執行個體名稱附加至 SQLRUsergroup (比方說， `SQLRUsergroupINSTANCENAME`)。
 
-  **SQLRUserGroup**指定下執行的外部處理序的權限。 根據預設，此群組的成員有權限的 R 和 Python 程式安裝 SQL Server，但不能在 Java 檔案。 若要執行 Java 可執行檔，您必須提供**SQLRUserGroup**執行這項操作的權限。
+```cmd
+icacls "<PATH TO CLASS or JAR FILES>" /grant "SQLRUsergroup":(OI)(CI)RX /T
+```
 
-   ```powershell
-   $Acl = Get-Acl "<YOUR PATH TO JDK / CLASSPATH>"
-   $Ar = New-Object  system.security.accesscontrol.filesystemaccessrule("SQLRUsergroup","FullControl","Allow")
-   $Acl.SetAccessRule($Ar)
-   Set-Acl "<YOUR PATH TO JDK / CLASSPATH>" $Acl 
-   ```
-4. 執行下列程式碼授與**ALL APPLICATION PACKAGES**以及權限。 
+#### <a name="appcontainer-permissions"></a>AppContainer 權限
 
-  在 SQL Server 2019，容器將做為隔離機制，背景工作帳戶與 Launchpad 服務帳戶，也就是成員的身分識別之下的容器內執行的程序**SQLRUserGroup**。 如需詳細資訊，請參閱 <<c0> [ 安裝 SQL Server 2019 差異](../install/sql-machine-learning-services-ver15.md)。
+```cmd
+icacls "PATH to JDK/JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
+```
 
-   ```powershell
-   $Acl = Get-Acl "<YOUR PATH TO JDK / CLASSPATH>" 
-   $Ar = New-Object  system.security.accesscontrol.filesystemaccessrule("ALL APPLICATION PACKAGES","FullControl","Allow") 
-   $Acl.SetAccessRule($Ar) 
-   Set-Acl "<YOUR PATH TO JDK / CLASSPATH>" $Acl 
-   ```
+### <a name="add-the-jre-path-to-javahome"></a>新增的 JRE 路徑 JAVA_HOME
+您也需要新增的 jre JAVA_HOME 系統環境變數中的路徑。 如果您只需要安裝的 JRE，您可以提供 JRE 資料夾路徑。 不過，如果您有安裝 JDK，您必須在 jvm，像這樣在 JDK、 JRE 資料夾中提供的完整路徑："C:\Program Files\Java\jdk1.8.0_191\jre\bin\server"。
 
-5. 重複前的兩個步驟，在包含您想要在 SQL Server 上執行的.class 或.jar 檔案的任何 Java classpath 資料夾。 例如，如果您在路徑，例如 C:\JavaPrograms\my-app 中編譯的程式，授與**SQLRUserGroup**並**ALL APPLICATION PACKAGES**資料夾的權限，讓程式可以載入。
+若要建立的系統變數，使用 [控制台] > 系統及安全性 > 系統來存取**進階系統屬性**。 按一下 **環境變數**JAVA_HOME 然後建立新的系統變數。
 
-  請務必授與權限的完整路徑，從根資料夾開始。 包含的資料夾的權限無法滿足載入您的程式碼。
+![環境變數中的 Java 首頁](../media/java/env-variable-java-home.png "設定適用於 Java")
 
 <a name="configure-script-execution"></a>
 
@@ -162,6 +179,18 @@ JAVA_HOME 是環境變數，可指定 Java 解譯器的位置。 在此步驟中
 * 使用串流 sp_execute_external_script 參數@r_rowsPerRead此 CTP 中不支援。
 
 * 資料分割使用 sp_execute_external_script 參數@input_data_1_partition_by_columns此 CTP 中不支援。
+
+<a name="create-jar"></a>
+
+## <a name="how-to-create-a-jar-file-from-class-files"></a>如何從類別檔案中建立的 jar 檔案
+
+瀏覽至包含您的類別檔案的資料夾，然後執行此命令：
+
+```cmd
+jar -cf <MyJar.jar> *.class
+```
+
+請確定路徑**jar.exe**屬於系統 path 變數。 或者，指定可以找到下 /bin JDK 資料夾中的 jar 的完整路徑： `C:\Users\MyUser\Desktop\jdk-10.0.2\bin\jar -cf <MyJar.jar> *.class`
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -19,15 +19,15 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1fe8a78047be763aecb898a48a882b8f08d3bfb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb61a77aca509393143d4abae98af0a9efb5e888
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734027"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407145"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回所有以類別組織之閂鎖等候的相關資訊。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47734027"
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|閂鎖類別的名稱。|  
 |waiting_requests_count|**bigint**|這個類別中的閂鎖等候數。 這個計數器是從開始閂鎖等候時逐量遞增計算。|  
-|wait_time_ms|**bigint**|這個類別的總閂鎖等候時間 (以毫秒為單位)。<br /><br /> **注意：** 本專欄會更新每隔五分鐘期間閂鎖等候及閂鎖等候結束。|  
+|wait_time_ms|**bigint**|這個類別的總閂鎖等候時間 (以毫秒為單位)。<br /><br /> **注意：** 這個資料行在閂鎖等候期間，每隔五分鐘更新一次，一直到閂鎖等候結束。|  
 |max_wait_time_ms|**bigint**|這是記憶體物件可以等候這個閂鎖的最長時間。 如果這個值超乎尋常地高，可能是發生內部死結。|  
 |pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   
@@ -166,14 +166,14 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|僅供內部使用。|  
 |SERVICE_BROKER_HOST_NAME|僅供內部使用。|  
 |SERVICE_BROKER_READ_CACHE|僅供內部使用。|  
-|SERVICE_BROKER_WAITFOR_MANAGER| 用來同步等候者佇列的執行個體層級對應。 每個資料庫的識別碼、 資料庫版本和佇列識別碼的 tuple，有一個佇列。 許多連線時，可能會發生這個類別的閂鎖爭用： WAITFOR(RECEIVE) 在等候狀態;呼叫 WAITFOR(RECEIVE);超過的 WAITFOR 逾時;接收訊息;認可或回復交易，其中包含 WAITFOR(RECEIVE);您可以在 WAITFOR(RECEIVE) 等候狀態中的執行緒數目，從而減少爭用情況。 |  
+|SERVICE_BROKER_WAITFOR_MANAGER| 用來同步等候者佇列的執行個體層級對應。 每個資料庫的識別碼、 資料庫版本和佇列識別碼的 tuple，有一個佇列。 許多連線時，可能會發生這個類別的閂鎖爭用：在 WAITFOR(RECEIVE) 等候狀態;呼叫 WAITFOR(RECEIVE);超過的 WAITFOR 逾時;接收訊息;認可或回復交易，其中包含 WAITFOR(RECEIVE);您可以在 WAITFOR(RECEIVE) 等候狀態中的執行緒數目，從而減少爭用情況。 |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|僅供內部使用。|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|僅供內部使用。|  
 |SERVICE_BROKER_TRANSPORT|僅供內部使用。|  
 |SERVICE_BROKER_MIRROR_ROUTE|僅供內部使用。|  
 |TRACE_ID|僅供內部使用。|  
 |TRACE_AUDIT_ID|僅供內部使用。|  
-|TRACE|僅供內部使用。|  
+|追蹤|僅供內部使用。|  
 |TRACE_CONTROLLER|僅供內部使用。|  
 |TRACE_EVENT_QUEUE|僅供內部使用。|  
 |TRANSACTION_DISTRIBUTED_MARK|僅供內部使用。|  

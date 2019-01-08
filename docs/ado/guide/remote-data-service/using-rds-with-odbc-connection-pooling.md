@@ -13,12 +13,12 @@ ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a65472e57d5ecc15f0e7302aa2f0b7972e5e7c78
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 7fbc75772a48b4990ebbc31877a3f7a95b442087
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559595"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506346"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>搭配 ODBC 連線集區使用 RDS
 如果您使用 ODBC 資料來源，您可以使用連接共用選項在網際網路資訊服務 (IIS)，以達到高效能處理的用戶端負載。 連接共用是資源管理員的連接，維護常用的連接上的 [開啟] 狀態。  
@@ -49,7 +49,7 @@ ms.locfileid: "51559595"
   
 2.  按一下 繼續兩次。  
   
-3.  Microsoft SQL Server 中 — 選項] 對話方塊中，選取 [變更網路支援，，然後按一下 [繼續]。  
+3.  Microsoft SQL Server 中的選項] 對話方塊中，選取 [變更網路支援，，然後按一下 [繼續]。  
   
 4.  請確定已選取 TCP/IP 通訊端 核取方塊，並按一下 確定。  
   

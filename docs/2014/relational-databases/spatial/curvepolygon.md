@@ -9,18 +9,18 @@ ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7783517c21317c8d0a162b869f7d57329d89b15c
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 435786ca85904cc2164ae2a3983163265465d9d1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018923"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350569"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   `CurvePolygon` 是由一個外部週框環形以及零或多個內部環形所定義的拓撲封閉介面。  
   
 > [!IMPORTANT]  
->  詳細的說明和中空間功能的範例[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，包括`CurvePolygon`子類型，請下載技術白皮書： [SQL Server 2012 中的新空間功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  
+>  詳細的說明和中空間功能的範例[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，包括`CurvePolygon`子類型，請下載技術白皮書： [SQL Server 2012 中的新空間功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
   
  下列準則會定義屬性`CurvePolygon`執行個體：  
   

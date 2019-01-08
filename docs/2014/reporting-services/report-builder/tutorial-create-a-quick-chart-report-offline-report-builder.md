@@ -1,5 +1,5 @@
 ---
-title: 教學課程：離線建立快速圖表報表 (報表產生器) | Microsoft Docs
+title: 教學課程：建立快速圖表報表離線 （報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: da0f35362a329974f8044da21b125d545c7bb323
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 677469c2110bee76870e9f30ed470f894200d2ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091368"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526996"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教學課程：離線建立快速圖表報表 (報表產生器)
-  在此教學課程中，您將使用精靈來建立圓形圖，然後稍微進行修改，以便了解可行的作業。 您可以採用兩種不同的方式進行此教學課程。 這兩種方法結果都一樣，會是如下圖所示的圓形圖：  
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教學課程：建立快速圖表報表離線 （報表產生器）
+  在此教學課程中，您將使用精靈來建立圓形圖，然後稍微進行修改，以便了解可行的作業。 您可以採用兩種不同的方式進行此教學課程。 這兩種方法有相同結果的圓形圖如下圖所示：  
   
  ![「 我第一個圓形圖 」 回合中檢視](../media/rs-my1stpierunview.gif "執行檢視中的我第一個圓形圖")  
   
@@ -42,11 +42,11 @@ ms.locfileid: "48091368"
  [使用 XML 資料建立圓形圖](#CreatePieChartXML)  
   
 ### <a name="using-a-transact-sql-query-that-contains-data-for-this-tutorial"></a>在此教學課程中使用包含資料的 Transact-SQL 查詢  
- 您可以從本主題複製包含資料的查詢，並將它貼入精靈中。 您需要的執行個體名稱[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]和能夠以唯讀方式存取任何資料庫的認證。 教學課程中的資料集查詢會使用常值資料，但是查詢必須經過 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體處理，才能傳回報表資料集所需的中繼資料。  
+ 您可以從本主題複製包含資料的查詢，並將它貼入精靈中。 您將需要 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體的名稱，以及能夠以唯讀方式存取任何資料庫的認證。 教學課程中的資料集查詢會使用常值資料，但是查詢必須經過 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體處理，才能傳回報表資料集所需的中繼資料。  
   
  使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查詢的優點在於，所有其他報表產生器教學課程都使用相同的方法，因此當您進行其他教學課程時，已經知道要執行哪些作業。  
   
- [!INCLUDE[tsql](../../../includes/tsql-md.md)]查詢需要其他幾項必要條件。 如需詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../report-builder-tutorials.md)。  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查詢需要其他幾項必要條件。 如需詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../report-builder-tutorials.md)。  
   
  [建立含資料之 Transact-SQL 查詢的圓形圖](#CreatePieQueryData)  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48091368"
   
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#TwoWays)  
   
-##  <a name="CreatePieQueryData"></a> 建立圓形圖[!INCLUDE[tsql](../../../includes/tsql-md.md)]查詢  
+##  <a name="CreatePieQueryData"></a> 使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查詢建立圓形圖  
   
 #### <a name="to-create-the-pie-chart-with-a-includetsqlincludestsql-mdmd-query-that-contains-data"></a>若要建立含資料之 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查詢的圓形圖  
   
@@ -203,7 +203,7 @@ ms.locfileid: "48091368"
   
 3.  型別`#PERCENT{P0}`for**標籤資料**選項。  
   
-     `{P0}`提供您沒有小數位數的百分比。 如果您只輸入`#PERCENT`，數字將具有兩個小數位數。 `#PERCENT` 為您; 執行計算或函式的關鍵字有許多其他項目。  
+     `{P0}` 提供您沒有小數位數的百分比。 如果您只輸入 `#PERCENT`，數字會有兩個小數位數。 `#PERCENT` 是為您執行計算或函數的關鍵字，還有其他關鍵字可以使用。  
   
  如需自訂圖表標籤和圖例的詳細資訊，請參閱 [在圓形圖上顯示百分比值 &#40;報表產生器及 SSRS&#41;](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) 和[變更圖例項目的文字 &#40;報表產生器及 SSRS&#41;](../report-design/chart-legend-change-item-text-report-builder.md)。  
   
@@ -212,7 +212,7 @@ ms.locfileid: "48091368"
 ##  <a name="WhatsNext"></a> 下一步  
  既然您已經在報表產生器中建立第一份報表，可以準備嘗試進行其他教學課程，並且根據自己的資料開始建立報表。 若要執行報表產生器，您需要存取您的資料來源，例如資料庫、 與的權限*連接字串*，這會您實際連接到資料來源。 系統管理員會提供這項資訊而且可能會為您設定。  
   
- 若要進行其他教學課程，您需要的執行個體的名稱[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]和能夠以唯讀方式存取任何資料庫的認證。 系統管理員可能也會為您進行該設定。  
+ 若要進行其他教學課程，您需要 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體的名稱，以及能夠以唯讀方式存取任何資料庫的認證。 系統管理員可能也會為您進行該設定。  
   
  最後，若要將報表儲存至報表伺服器或與報表伺服器整合的 SharePoint 網站，您將需要 URL 和權限。 雖然您可以直接從電腦執行任何已建立的報表，不過從報表伺服器或 SharePoint 網站執行時，報表會提供更多功能。 您需要權限才能從發行報表的報表伺服器或 SharePoint 網站執行您的報表或其他報表。 請連絡系統管理員以取得存取權。  
   

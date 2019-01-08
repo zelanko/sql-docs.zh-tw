@@ -1,5 +1,5 @@
 ---
-title: 建立及管理 Kpi |Microsoft 文件
+title: 建立及管理 Analysis Services 表格式模型中的 Kpi |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8740cfbcf8448a0344d68e182a7cbf379c458a68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ae17e727367b702967ec879ed8469973ab3b812
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042112"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072085"
 ---
 # <a name="create-and-manage-kpis"></a>建立及管理 Kpi 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  本文說明如何建立、 編輯或刪除表格式模型中的 KPI （關鍵效能指標）。 若要建立 KPI，請選取判斷為 KPI 基底值的量值。 然後使用 [關鍵效能指標] 對話方塊選取判斷為目標值的第二個量值或絕對值。 接著您可以定義測量基底和目標量值之間效能的狀態臨界值。  
+  本文說明如何建立、 編輯或刪除表格式模型中的 KPI （關鍵效能指標）。 若要建立 KPI，您可以選取的量值會評估為 KPI 基底值。 然後使用 [關鍵效能指標] 對話方塊選取判斷為目標值的第二個量值或絕對值。 接著您可以定義測量基底和目標量值之間效能的狀態臨界值。  
   
 ## <a name="tasks"></a>工作  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34042112"
 5.  按一下 **[描述]**，然後輸入 KPI、值、狀態和目標的描述。  
   
 > [!TIP]  
->  您可以使用 [在 Excel 中進行分析] 功能測試 KPI。 如需詳細資訊，請參閱[在 Excel 中的進行分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)。  
+>  您可以使用 [在 Excel 中進行分析] 功能測試 KPI。 如需詳細資訊，請參閱 <<c0> [ 在 Excel 中的進行分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)。  
   
 ###  <a name="bkmk_edit_KPI"></a> 編輯 KPI  
   

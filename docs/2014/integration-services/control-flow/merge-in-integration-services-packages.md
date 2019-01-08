@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MERGE statement [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7ee44b0524dffb85892f016581f9c6a7f480a5e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cffe029abd6774262e7aad12ad7aade07717bc80
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075828"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359280"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services Packages
   目前版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]之「執行 SQL」工作中的 SQL 陳述式可能會包含 MERGE 陳述式。 這個 MERGE 陳述式可讓您在單一陳述式中完成多項 INSERT、UPDATE 及 DELETE 作業。  
@@ -36,7 +35,7 @@ ms.locfileid: "48075828"
   
  本主題的其餘部分將討論 MERGE 陳述式的其他某些用途。  
   
- 如需支援使用 MERGE 陳述式的範例目的地元件，請參閱 CodePlex 社群範例： [MERGE Destination](http://go.microsoft.com/fwlink/?LinkId=141215)。  
+ 如需支援使用 MERGE 陳述式的範例目的地元件，請參閱 CodePlex 社群範例： [MERGE Destination](https://go.microsoft.com/fwlink/?LinkId=141215)。  
   
 ## <a name="using-merge"></a>使用 MERGE  
  一般而言，當您想要在資料表之間套用包含插入、更新和刪除的變更時，就可以使用 MERGE 陳述式。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]之前，這項程序需要查閱轉換和多項 OLE DB 命令轉換。 查閱轉換會執行逐列查閱，以便判斷每個資料列是新的或已變更。 然後，OLE DB 命令轉換會執行必要的 INSERT、UPDATE 及 DELETE 作業。 從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]開始，單一 MERGE 陳述式即可取代查閱轉換及對應的 OLE DB 命令轉換。  
@@ -53,12 +52,12 @@ ms.locfileid: "48075828"
  資料倉儲中的 FactBuyingHabits 資料表會追蹤某位客戶上次購買給定產品的日期。 此資料表包含 ProductID、CustomerID 及 PurchaseDate 資料行。 交易式資料庫每週都會產生一份 PurchaseRecords 資料表，其中包含當週的購買記錄。 我們的目標是要使用單一 MERGE 陳述式，將 PurchaseRecords 資料表中的資訊合併至 FactBuyingHabits 資料表中。 若為不存在的產品-客戶配對，MERGE 陳述式會插入新的資料列。 若為存在的產品-客戶配對，MERGE 陳述式就會更新最近的購買日期。  
   
 ###### <a name="track-price-history"></a>追蹤價格記錄  
- DimBook 資料表代表書店存貨的書籍清單並識別每本書的價格記錄。 此資料表具有下列資料行：ISBN、ProductID、Price、Shelf 和 IsCurrent。 此資料表也針對書籍的每個價格具有一個資料列。 其中一個資料列包含目前的價格。 為了指出哪一個資料列包含目前的價格，該資料列之 IsCurrent 資料行的值會設定為 1。  
+ DimBook 資料表代表書店存貨的書籍清單並識別每本書的價格記錄。 此資料表具有下列資料行：ISBN、 ProductID、 Price、 Shelf 和 IsCurrent。 此資料表也針對書籍的每個價格具有一個資料列。 其中一個資料列包含目前的價格。 為了指出哪一個資料列包含目前的價格，該資料列之 IsCurrent 資料行的值會設定為 1。  
   
  資料庫每週都會產生一份 WeeklyChanges 資料表，其中包含該週的價格變更以及當週加入的新書。 透過使用單一 MERGE 陳述式，您就可以將 WeeklyChanges 資料表中的變更套用至 DimBook 資料表。 MERGE 陳述式會針對新加入的書籍插入新的資料列，然後針對價格已經變更之現有書籍的資料列，將 IsCurrent 資料行更新為 0。 此外，MERGE 陳述式也會針對價格已經變更的書籍插入新的資料列，然後針對這些新的資料列，將 IsCurrent 資料行的值設定為 1。  
   
 ### <a name="merge-a-table-with-new-data-against-the-old-table"></a>合併內含新資料的資料表與舊資料表  
- 資料庫會使用「開放式結構描述」來設定物件屬性的模型。也就是說，資料表包含每個屬性的名稱-值配對。 Properties 資料表包含三個資料行：EntityID、PropertyID 和 Value。 NewProperties 資料表 (更新的資料表版本) 必須與 Properties 資料表同步處理。 若要同步處理這兩份資料表，您可以使用單一 MERGE 陳述式來執行下列作業：  
+ 資料庫會使用「開放式結構描述」來設定物件屬性的模型；亦即，資料表包含每個屬性的成對名稱及數值。 Properties 資料表包含三個資料行：EntityID、 PropertyID 和 Value。 NewProperties 資料表 (更新的資料表版本) 必須與 Properties 資料表同步處理。 若要同步處理這兩份資料表，您可以使用單一 MERGE 陳述式來執行下列作業：  
   
 -   從 Properties 資料表中刪除屬性 (如果它們不存在 NewProperties 資料表中的話)。  
   

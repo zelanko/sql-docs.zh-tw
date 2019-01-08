@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication]
@@ -21,12 +20,12 @@ ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac56fd795f819fe308dee9980e12883e73b0172d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222624"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810640"
 ---
 # <a name="filter-published-data"></a>篩選發行的資料
   篩選資料表發行項可讓您建立即將發行的資料分割。 利用篩選發行的資料，您可以：  
@@ -53,7 +52,7 @@ ms.locfileid: "48222624"
   
 -   參數化資料列篩選器，僅適用於合併式複寫。  
   
-     參數化資料列篩選器可用於選擇要發行的資料列子集。 靜態篩選是將相同的資料列子集傳送給每位「訂閱者」，參數化資料列篩選器則不同，它使用「訂閱者」提供的資料值，將不同的資料列子集傳送給「訂閱者」。 如需詳細資訊，請參閱 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)。  
+     參數化資料列篩選器可用於選擇要發行的資料列子集。 靜態篩選是將相同的資料列子集傳送給每位「訂閱者」，參數化資料列篩選器則不同，它使用「訂閱者」提供的資料值，將不同的資料列子集傳送給「訂閱者」。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
 -   聯結篩選，僅適用於合併式複寫。  
   
@@ -130,7 +129,7 @@ ms.locfileid: "48222624"
   
 -   異動複寫可讓您將索引檢視複寫為檢視或資料表。 如果將檢視複寫為資料表，則無法從資料表篩選資料行。  
   
- 資料列篩選並非設計為跨資料庫運作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 刻意限制執行`sp_replcmds`（底下執行的篩選） 為資料庫擁有者 (`dbo`)。 `dbo`沒有跨資料庫權限。 透過 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 加入的 CDC (異動資料擷取)，`sp_replcmds` 邏輯會將使用者可以傳回及查詢的資訊填入變更追蹤資料表。 基於安全性理由[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會限制這個邏輯的執行，讓惡意`dbo`無法劫持這個執行路徑。 例如，惡意 `dbo` 可能會加入 CDC 資料表的觸發程序，然後這些觸發程序就會在呼叫 `sp_replcmds` 的使用者內容底下執行 (在本例中，即為 Logreader 代理程式)。  如果用來執行代理程式的帳戶擁有更高的權限，惡意 `dbo` 可能會提高其權限。  
+ 資料列篩選並非設計為跨資料庫運作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會刻意將 `sp_replcmds` (在底下執行的篩選) 的執行範圍限制為資料庫擁有者 (`dbo`)。 `dbo` 沒有跨資料庫權限。 透過 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 加入的 CDC (異動資料擷取)，`sp_replcmds` 邏輯會將使用者可以傳回及查詢的資訊填入變更追蹤資料表。 基於安全性理由[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會限制這個邏輯的執行，讓惡意`dbo`無法劫持這個執行路徑。 例如，惡意 `dbo` 可能會加入 CDC 資料表的觸發程序，然後這些觸發程序就會在呼叫 `sp_replcmds` 的使用者內容底下執行 (在本例中，即為 Logreader 代理程式)。  如果用來執行代理程式的帳戶擁有更高的權限，惡意 `dbo` 可能會提高其權限。  
   
 ## <a name="see-also"></a>另請參閱  
  [發行資料和資料庫物件](publish-data-and-database-objects.md)  

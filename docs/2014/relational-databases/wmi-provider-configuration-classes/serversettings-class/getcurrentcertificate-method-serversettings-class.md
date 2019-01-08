@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - GetCurrentCertificate Method (ServerSettings Class)
@@ -20,12 +18,12 @@ ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: af928b31db241ef23e9463f1d8cd9bc951584c38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30b704d26d2b6ac080f32034bb78fddcee446bdb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105658"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366330"
 ---
 # <a name="getcurrentcertificate-method-serversettings-class"></a>GetCurrentCertificate 方法 (ServerSettings 類別)
   取得目前的安全性憑證。  
@@ -43,7 +41,7 @@ SHA
   
 ## <a name="parts"></a>組件  
  *object*  
- 表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上之伺服器設定的 `ServerSettings` 物件。  
+ 表示 `ServerSettings` 執行個體上之伺服器設定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 物件。  
   
 #### <a name="parameters"></a>參數  
   
@@ -57,6 +55,6 @@ SHA
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定伺服器網路通訊協定和網路程式庫](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [設定伺服器網路通訊協定和網路程式庫](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

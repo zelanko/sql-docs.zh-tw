@@ -1,5 +1,5 @@
 ---
-title: 第 3 課：使用報表精靈設計父報表 | Microsoft Docs
+title: 第 3 課：設計父報表使用報表精靈 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d2b872449bf553a00b53bcf6153befd68b6053d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 331d073082ce68f3ad1b58749256c5a177897e07
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219988"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395063"
 ---
-# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>第 3 課：使用報表精靈設計父報表
+# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>第 3 課：設計父報表使用報表精靈
   在您建立父報表的資料連接和資料表之後，下一步是要使用報表設計師中的 [報表精靈] 設計父報表。 如需報表設計師的詳細資訊，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)。  
   
 ### <a name="to-design-the-parent-report-using-the-report-wizard"></a>若要使用報表精靈設計父報表  
@@ -31,7 +31,7 @@ ms.locfileid: "48219988"
   
      這樣會啟動 [報表精靈]。  
   
-4.  在 [資料集屬性] 頁面的 [資料來源] 方塊中，選取您在[第 2 課：定義父報表的資料連線和資料表](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)中建立的 [DataSet1]。  
+4.  在 **資料集屬性**頁面上，於**資料來源**方塊中，選取**DataSet1**您在建立[第 2 課：定義父報表的資料連接和資料表](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)。  
     [可用資料集] 方塊會自動更新為您如上所建立的 **DataTable**。  
   
 5.  按 [下一步] 。  

@@ -14,22 +14,22 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 90c42f4eaafac152305c50a855f1bce1388def3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8972427f2ba2529880715ca12d85a560a02eb31f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095878"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404999"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>報表伺服器執行記錄和 ExecutionLog3 檢視
   報表伺服器執行記錄包含有關在伺服器上執行，或在原生模式向外延展部署或 SharePoint 伺服器陣列中多個伺服器上執行之報表的資訊。 您可以使用報表執行記錄來了解要求報表的頻率、最常使用的輸出格式，以及每一個處理階段所花費處理時間的毫秒數。 此記錄會包含執行報表之資料集查詢所花費時間長度的資訊，以及處理資料所花費的時間。 如果您是報表伺服器管理員，可以檢閱記錄資訊、識別長時間執行工作，並且向報表作者提出有關他們能夠改善之報表區域 (資料集或處理) 的建議。  
   
- 設定為 SharePoint 模式的報表伺服器也可以利用 SharePoint ULS 記錄。 如需詳細資訊，請參閱[開啟 SharePoint 追蹤記錄的 Reporting Services 事件 &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ 設定為 SharePoint 模式的報表伺服器也可以利用 SharePoint ULS 記錄。 如需詳細資訊，請參閱 [開啟 SharePoint 追蹤記錄的 Reporting Services 事件 &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ##  <a name="bkmk_top"></a> 檢視記錄資訊  
  報表伺服器執行會將有關報表執行的資料記錄到內部資料庫資料表中。 您可以從 SQL Server 檢視取得此資料表的資訊。  
   
- 報表執行記錄會儲存在預設名為 **ReportServer**的報表伺服器資料庫中。 SQL 檢視會提供執行記錄資訊。 “2” 和 “3” 檢視是在較新版本中加入，而且包含新欄位或是名稱比舊版更易記的欄位。 舊版檢視仍然保留在產品中，因此相依於這些檢視的自訂應用程式不受影響。 如果您沒有舊版檢視 (例如 ExecutionLog) 的相依性，建議您使用最新檢視 ExecutionLog**3**。  
+ 報表執行記錄會儲存在預設名為 **ReportServer**的報表伺服器資料庫中。 SQL 檢視會提供執行記錄資訊。 "2" 和 "3" 檢視是在較新版本中新增，而且包含新欄位或是名稱比舊版更易記的欄位。 舊版檢視仍然保留在產品中，因此相依於這些檢視的自訂應用程式不受影響。 如果您沒有舊版檢視 (例如 ExecutionLog) 的相依性，建議您使用最新檢視 ExecutionLog**3**。  
   
  本主題內容：  
   
@@ -116,7 +116,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |UserName|使用者識別碼。|  
 |ExecutionID|與要求相關聯的內部識別碼。 相同使用者工作階段上的要求會共用相同的執行識別碼。|  
 |RequestType|可能的值如下：<br />**互動式**<br />**訂閱**<br /><br /> <br /><br /> 分析依 RequestType=Subscription 所篩選並且依 TimeStart 所排序的記錄資料可能會顯現訂閱使用量龐大的週期，而且您可能會想要將某些報表訂閱修改成不同的時間。|  
-|[格式]|轉譯格式。|  
+|格式|轉譯格式。|  
 |參數|報表執行所使用的參數值。|  
 |ItemAction|可能的值如下：<br /><br /> **轉譯**<br /><br /> **排序**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **執行**<br /><br /> **RenderEdit**|  
 |TimeStart|指出報表處理持續期間的開始與結束時間。|  
@@ -124,7 +124,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|擷取資料所花費的毫秒數。|  
 |TimeProcessing|處理報表所花費的毫秒數。|  
 |TimeRendering|轉譯報表所花費的毫秒數。|  
-|來源|報表執行的來源。 可能的值如下：<br /><br /> **即時**<br /><br /> **快取**： 表示快取的執行，例如，查詢不會執行即時的資料集。<br /><br /> **快照式**<br /><br /> **記錄**<br /><br /> **臨機操作**： 表示動態產生的報表基礎的模型鑽研報表，或者使用 處理與轉譯的報表伺服器的用戶端上預覽的報表產生器報表。<br /><br /> **工作階段**： 表示已經建立的工作階段內的後續要求。  例如，初始要求是檢視頁面 1，而後續要求則是匯出到 Excel (包含目前的工作階段狀態)。<br /><br /> **Rdce**： 表示報表定義自訂延伸模組。 RDCE 自訂延伸模組可以動態地自訂報表定義，然後在執行報表時將其傳遞至處理引擎。|  
+|原始程式檔|報表執行的來源。 可能的值如下：<br /><br /> **即時**<br /><br /> **快取**:表示快取的執行，例如，查詢不會執行即時的資料集。<br /><br /> **快照式**<br /><br /> **記錄**<br /><br /> **臨機操作**:表示根據鑽研報表且動態產生的報表模型，或者在使用報表伺服器處理與轉譯的用戶端上預覽的報表產生器報表。<br /><br /> **工作階段**:表示已經建立之工作階段內的後續要求。  例如，初始要求是檢視頁面 1，而後續要求則是匯出到 Excel (包含目前的工作階段狀態)。<br /><br /> **Rdce**:表示報表定義自訂延伸模組。 RDCE 自訂延伸模組可以動態地自訂報表定義，然後在執行報表時將其傳遞至處理引擎。|  
 |[狀態]|狀態 (不是 rsSuccess 就是錯誤碼；如果發生多個錯誤，就只會記錄第一個錯誤)。|  
 |ByteCount|轉譯報表的大小 (以位元組為單位)。|  
 |RowCount|從查詢傳回的資料列數目。|  
@@ -225,11 +225,11 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  以下說明一些您會看到在 AdditionalInfo 欄位中的屬性：  
   
--   **ProcessingEngine**: 1 = SQL Server 2005，2 = 新的視需要處理引擎。 如果大部分報表仍然顯示 1 值，可以調查重新設計報表的方式，讓它們都利用較新且更有效率的視需要處理引擎。  
+-   **ProcessingEngine**:1= SQL Server 2005，2= 新的視需要處理引擎。 如果大部分報表仍然顯示 1 值，可以調查重新設計報表的方式，讓它們都利用較新且更有效率的視需要處理引擎。  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
--   **ScalabilityTime**： 執行所花費的毫秒數延展相關的作業中處理引擎。 0 值表示沒有針對延展作業花費任何額外時間，而且 0 也表示要求沒有承受記憶體不足的壓力。  
+-   **ScalabilityTime**:在處理引擎中執行延展相關作業所花費的毫秒數。 0 值表示沒有針對延展作業花費任何額外時間，而且 0 也表示要求沒有承受記憶體不足的壓力。  
   
     ```  
     <ScalabilityTime>  
@@ -237,7 +237,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ScalabilityTime>  
     ```  
   
--   **EstimatedMemoryUsageKB**： 尖峰數量的記憶體，以 kb 為單位，每個元件所耗用的特定要求期間的估計值。  
+-   **EstimatedMemoryUsageKB**:在特定要求期間，每個元件所耗用之記憶體尖峰數量的估計值 (以 KB 為單位)。  
   
     ```  
     <EstimatedMemoryUsageKB>  
@@ -245,7 +245,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </EstimatedMemoryUsageKB>  
     ```  
   
--   **DataExtension**： 資料延伸模組或報表中使用的資料來源的類型。 其數字為特定資料來源的出現次數。  
+-   **DataExtension**:用於報表之資料延伸模組或資料來源的類型。 其數字為特定資料來源的出現次數。  
   
     ```  
     <DataExtension>  
@@ -263,7 +263,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **連線**： 多層的結構。 已新增至[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
+-   **連線**:多層的結構。 已新增至[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
   
     ```  
     <Connections>  
@@ -311,11 +311,11 @@ select * from ExecutionLog2 order by TimeStart DESC
 |「資料行」|描述|  
 |------------|-----------------|  
 |InstanceName|處理要求的報表伺服器執行個體名稱。|  
-|ReportPath|報表的路徑結構。  例如，名為 ”test” 且位於報表管理員根資料夾中的報表會具有 “/test” 的 ReportPath。<br /><br /> 名為 ”test” 且儲存在報表管理員 “samples” 資料夾中的報表會具有 “/Samples/test/” 的 ReportPath。|  
+|ReportPath|報表的路徑結構。  例如，名為 "test" 且位於報表管理員根資料夾中報表會具有 "/test" 的 ReportPath。<br /><br /> 名為 "test" 且儲存在報表管理員 "samples" 資料夾中報表會具有 "/Samples/test/" 的 ReportPath|  
 |UserName|使用者識別碼。|  
 |ExecutionID||  
 |RequestType|要求類型 (使用者或系統)。|  
-|[格式]|轉譯格式。|  
+|格式|轉譯格式。|  
 |參數|報表執行所使用的參數值。|  
 |ReportAction|可能的值如下：Render、Sort、BookMarkNavigation、DocumentNavigation、GetDocumentMap、Findstring|  
 |TimeStart|指出報表處理持續期間的開始與結束時間。|  
@@ -323,7 +323,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |TimeDataRetrieval|擷取資料、處理報表和轉譯報表所花費的毫秒數。|  
 |TimeProcessing||  
 |TimeRendering||  
-|來源|報表執行的來源 (1= 即時、2= 快取、3= 快照集、4= 記錄)。|  
+|原始程式檔|報表執行的來源 (1= 即時、2= 快取、3= 快照集、4= 記錄)。|  
 |[狀態]|狀態 (不是 rsSuccess 就是錯誤碼；如果發生多個錯誤，就只會記錄第一個錯誤)。|  
 |ByteCount|轉譯報表的大小 (以位元組為單位)。|  
 |RowCount|從查詢傳回的資料列數目。|  
@@ -346,21 +346,21 @@ select * from ExecutionLog order by TimeStart DESC
 |ReportID|報表識別碼。|  
 |UserName|使用者識別碼。|  
 |RequestType|可能的值如下：<br /><br /> True= 訂閱要求<br /><br /> False= 互動式要求|  
-|[格式]|轉譯格式。|  
+|格式|轉譯格式。|  
 |參數|報表執行所使用的參數值。|  
 |TimeStart|指出報表處理持續期間的開始與結束時間。|  
 |TimeEnd||  
 |TimeDataRetrieval|擷取資料、處理報表和轉譯報表所花費的毫秒數。|  
 |TimeProcessing||  
 |TimeRendering||  
-|來源|報表執行的來源。 可能的值如下：(1= 即時、2= 快取、3= 快照集、4= 記錄、5= 特定、6= 工作階段、7= RDCE)。|  
+|原始程式檔|報表執行的來源。 可能的值如下：(1= 即時、2= 快取、3= 快照集、4= 記錄、5= 特定、6= 工作階段、7= RDCE)。|  
 |[狀態]|可能的值如下：rsSuccess、rsProcessingAborted 或錯誤碼。 如果發生多個錯誤，只會記錄第一個錯誤。|  
 |ByteCount|轉譯報表的大小 (以位元組為單位)。|  
 |RowCount|從查詢傳回的資料列數目。|  
   
 ## <a name="see-also"></a>另請參閱  
- [開啟 SharePoint 追蹤記錄的 Reporting Services 事件&#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
+ [開啟 SharePoint 追蹤記錄的 Reporting Services 事件 &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Reporting Services 記錄檔和來源](../report-server/reporting-services-log-files-and-sources.md)   
- [錯誤和事件參考&#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [錯誤和事件參考 &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

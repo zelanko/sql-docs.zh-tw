@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - WMI Classes
@@ -21,12 +19,12 @@ ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4c7df5e46c6f552ead1144eae97b44700faa0820
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b83388ff3be4c8cfdfec72968230f957358b1960
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182358"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811280"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>組態管理類別的 WMI 提供者
   組態管理的 Windows Management Instrumentation (WMI) 提供者提供了以下類別的功能：  

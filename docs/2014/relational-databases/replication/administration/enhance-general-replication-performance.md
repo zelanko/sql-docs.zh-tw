@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -22,12 +21,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ffc277e43bf48975da92e5463b4e157e266b55b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 465e43422616d5d0202bf31959fab5f56c4f35d8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138186"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806250"
 ---
 # <a name="enhance-general-replication-performance"></a>增強一般複寫效能
   透過使用本主題中所述的指導方針，您可以提升應用程式及網路上所有複寫類型的一般效能：  
@@ -81,7 +80,7 @@ ms.locfileid: "48138186"
   
 -   限制使用大型物件 (LOB) 資料類型。  
   
-     LOB 比其他資料行資料類型需要更多儲存空間和處理。 除非您的應用程式需要，否則不要在發行項中包含這些資料行。 資料型別`text`， `ntext`，和`image`已被取代。 若您納入 Lob，建議您使用的資料型別`varchar(max)`， `nvarchar(max)`，`varbinary(max)`分別。  
+     LOB 比其他資料行資料類型需要更多儲存空間和處理。 除非您的應用程式需要，否則不要在發行項中包含這些資料行。 資料類型 `text`、`ntext` 和 `image` 已被取代。 若您納入 LOB，建議您分別依序使用資料類型 `varchar(max)`、`nvarchar(max)`、`varbinary(max)`。  
   
      對於異動複寫，請考慮使用名為 **OLEDB 資料流的散發設定檔**的「散發代理程式」設定檔。 如需詳細資訊，請參閱 [Replication Agent Profiles](../agents/replication-agent-profiles.md)。  
   
@@ -97,7 +96,7 @@ ms.locfileid: "48138186"
   
      變更可透過發行資料子集到每個「訂閱者」或透過使用可直接變更給定資料列到給定節點的應用程式來進行分割：  
   
-    -   合併式複寫支援使用具有單一發行集的參數化篩選來發行資料子集。 如需詳細資訊，請參閱 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)。  
+    -   合併式複寫支援使用具有單一發行集的參數化篩選來發行資料子集。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
     -   異動複寫支援使用具有多個發行集的靜態篩選來發行資料子集。 如需詳細資訊，請參閱[篩選發行的資料](../publish/filter-published-data.md)。  
   
@@ -153,11 +152,11 @@ ms.locfileid: "48138186"
   
 -   減少複寫代理程式的詳細資訊層級，僅初始化測試、監視或偵錯時除外。  
   
-     減少散發代理程式和合併代理程式的 **–HistoryVerboseLevel** 參數和 **–OutputVerboseLevel** 參數。 如此可減少插入追蹤代理程式記錄和輸出中的新資料列數目。 反之，具有相同狀態的先前記錄訊息會更新為新的記錄資訊。 提高測試、監視及偵錯的詳細資訊層級，以便您能盡可能多地獲得代理程式活動的相關資訊。  
+     減少散發代理程式或合併代理程式的 **-HistoryVerboseLevel** 參數和 **-OutputVerboseLevel** 參數。 如此可減少插入追蹤代理程式記錄和輸出中的新資料列數目。 反之，具有相同狀態的先前記錄訊息會更新為新的記錄資訊。 提高測試、監視及偵錯的詳細資訊層級，以便您能盡可能多地獲得代理程式活動的相關資訊。  
   
--   使用快照集代理程式、合併代理程式以及散發代理程式的 **–MaxBCPThreads** 參數 (指定的執行緒數目不應超過電腦上的處理器數目)。 此參數指定在建立和套用快照集時可平行執行的大量複製作業數目。  
+-   使用快照集代理程式、合併代理程式以及散發代理程式的 **-MaxBCPThreads** 參數 (指定的執行緒數目不應超過電腦上的處理器數目)。 此參數指定在建立和套用快照集時可平行執行的大量複製作業數目。  
   
--   使用散發代理程式和合併代理程式的 **–UseInprocLoader** 參數 (如果發行的資料表包括 XML 資料行，則不可使用此參數)。 此參數會使代理程式在套用快照集時使用 BULK INSERT 命令。  
+-   使用散發代理程式和合併代理程式的 **-UseInprocLoader** 參數 (如果發行的資料表包括 XML 資料行，則不可使用此參數)。 此參數會使代理程式在套用快照集時使用 BULK INSERT 命令。  
   
  可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
   

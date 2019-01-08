@@ -1,5 +1,5 @@
 ---
-title: 執行緒集區屬性 |Microsoft Docs
+title: Analysis Services 執行緒集區屬性 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ea8ea712579b4d9c96d793a0c633c63508c376b1
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ee8f8c4a222b2949f49c8be019b6e4f6724cfa04
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392729"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785959"
 ---
 # <a name="thread-pool-properties"></a>執行緒集區屬性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -23,24 +23,8 @@ ms.locfileid: "40392729"
   
  每個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體各自維護一組執行緒集區。 表格式執行個體和多維度執行個體使用執行緒集區的方式不同。 例如，只有多維度執行個體使用 **IOProcess** 執行緒集區。 因此， **PerNumaNode**在本文中描述的屬性不是針對表格式執行個體有意義。 在下面的 [屬性參考](#bkmk_propref) 區段中，會呼叫每個屬性的模式需求。
   
- 本文包含下列各節：  
-  
--   [Analysis Services 的執行緒管理](#bkmk_threadarch)  
-  
--   [執行緒集區屬性參考](#bkmk_propref)  
-  
--   [設定 GroupAffinity 將執行緒相似化為處理器群組中的處理器](#bkmk_groupaffinity)  
-  
--   [設定 PerNumaNode 將 IO 執行緒相似化為 NUMA 節點中的處理器](#bkmk_pernumanode)  
-  
--   [判斷目前的執行緒集區設定](#bkmk_currentsettings)  
-  
--   [相依或相關屬性](#bkmk_related)  
-  
--   [關於 MSMDSRV.INI](#bkmk_msmdrsrvini)  
-  
 > [!NOTE]  
->  NUMA 系統上的表格式部署超出本主題的範圍。 雖然表格式方案可以在 NUMA 系統上成功部署，但是表格式模型使用之記憶體中資料庫技術的效能特性在高度向上延展的架構上成效有限。 如需詳細資訊，請參閱 [Analysis Services Case Study: Using Tabular Models in Large-scale Commercial Solutions](http://msdn.microsoft.com/library/dn751533.aspx) (Analysis Services 案例研究：在大規模商業解決方案中使用表格式模型) 和 [Hardware Sizing a Tabular Solution](http://go.microsoft.com/fwlink/?LinkId=330359)(調整表格式解決方案的硬體)。  
+>  NUMA 系統上的表格式部署超出本主題的範圍。 雖然表格式方案可以在 NUMA 系統上成功部署，但是表格式模型使用之記憶體中資料庫技術的效能特性在高度向上延展的架構上成效有限。 如需詳細資訊，請參閱[Analysis Services 案例研究：在大規模商業解決方案中使用表格式模型](http://msdn.microsoft.com/library/dn751533.aspx)並[調整表格式解決方案的硬體](http://go.microsoft.com/fwlink/?LinkId=330359)。  
   
 ##  <a name="bkmk_threadarch"></a> Analysis Services 的執行緒管理  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用多執行緒處理，透過增加平行執行的工作數，利用可用的 CPU 資源。 儲存引擎是多執行緒。 在儲存引擎內執行的多執行緒作業範例包含平行處理物件、處理發送至儲存引擎的個別查詢，或傳回查詢所要求的資料值。 公式引擎由於其評估之計算的序列本質，是單一執行緒。 每個查詢主要會在單一執行緒上執行，並要求 (且通常需要等候) 儲存引擎傳回資料。 查詢執行緒的執行時間較長，並且僅在完成整個查詢之後釋出。  
@@ -62,7 +46,7 @@ ms.locfileid: "40392729"
     > [!NOTE]  
     >  您可以使用任何剖析集區中的執行緒來執行查詢。 快速執行的查詢 (例如快速探索或取消要求) 有時會立即執行，而不會排入查詢執行緒集區的佇列中。 
   
--   **ThreadPool \ Query** 是執行剖析執行緒集區不會處理之所有要求的執行緒集區。 此執行緒集區中的執行緒會執行所有類型的作業，例如探索、DAX、MDX、DMX 和 DDL 命令。 只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時，
+-   **ThreadPool \ Query** 是執行剖析執行緒集區不會處理之所有要求的執行緒集區。 此執行緒集區中的執行緒會執行所有類型的作業，例如探索、DAX、MDX、DMX 和 DDL 命令。 A
   
 -   **ThreadPool \ IOProcess** 用於與多維度引擎中之儲存引擎查詢相關聯的 IO 作業。 這些執行緒完成的工作預期不會相依於其他執行緒。 這些執行緒通常會掃描單一分割區區段，並對區段資料執行篩選和彙總。 **IOProcess** 執行緒對 NUMA 硬體組態特別敏感。 因此，此執行緒集區具有 **PerNumaNode** 組態屬性，可視需要用來微調效能。 
   
@@ -82,7 +66,7 @@ ms.locfileid: "40392729"
   
  屬性是依照字母順序列出。  
   
-|名稱|類型|描述|預設值|指引|  
+|名稱|類型|描述|預設|指引|  
 |----------|----------|-----------------|-------------|--------------|  
 |**IOProcess** \ **Concurrency**|double|此為雙精確度浮點數值，決定可以一次佇列之執行緒數目的設定目標演算法。|2.0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。<br /><br /> 並行可用來初始化執行緒集區，會透過 Windows 的 I/O 完成通訊埠來實作。 如需詳細資料，請參閱 [I/O 完成連接埠](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 。<br /><br /> 僅適用於多維度模型。|  
 |**IOProcess** \ **GroupAffinity**|string|對應至系統上之處理器群組的十六進位值陣列，可用來設定 IOProcess 執行緒集區中的執行緒與每個處理器群組中的邏輯處理器之相似性。|無|您可以使用此屬性來建立自訂相似性。 此屬性預設為空白。<br /><br /> 如需詳細資訊，請參閱＜ [設定 GroupAffinity 將執行緒相似化為處理器群組中的處理器](#bkmk_groupaffinity) ＞。<br /><br /> 僅適用於多維度模型。|  
@@ -175,7 +159,7 @@ ms.locfileid: "40392729"
  若為多維度 Analysis Service 執行個體，您可以在 **IOProcess** 執行緒集區上設定 **PerNumaNode** ，以進一步最佳化執行緒排程與執行作業。 **GroupAffinity** 會識別要用於指定執行緒集區的一組邏輯處理器，而 **PerNumaNode** 則更進一步地指定是否要建立多個執行緒集區，並將這些執行緒集區進一步相似化為允許的一部分邏輯處理器。  
   
 > [!NOTE]  
->  在 Windows Server 2012 上，請使用工作管理員來檢視電腦上的 NUMA 節點數目。 在工作管理員的 [效能] 索引標籤上選取 **[CPU]** ，再以滑鼠右鍵按一下圖表區域來檢視 NUMA 節點。 或者也可以從 Windows Sysinternals [下載](http://technet.microsoft.com/sysinternals/cc835722.aspx) Coreinfo 公用程式並執行 `coreinfo –n` ，傳回每個節點中的 NUMA 節點與邏輯處理器。  
+>  在 Windows Server 2012 上，請使用工作管理員來檢視電腦上的 NUMA 節點數目。 在工作管理員的 [效能] 索引標籤上選取 **[CPU]** ，再以滑鼠右鍵按一下圖表區域來檢視 NUMA 節點。 或者也可以從 Windows Sysinternals [下載](http://technet.microsoft.com/sysinternals/cc835722.aspx) Coreinfo 公用程式並執行 `coreinfo -n` ，傳回每個節點中的 NUMA 節點與邏輯處理器。  
   
  如本主題的 **執行緒集區屬性參考** 一節所述， [PerNumaNode](#bkmk_propref) 的有效值為 -1、0、1、2。  
   
@@ -247,17 +231,17 @@ ms.locfileid: "40392729"
   
  `"10/28/2013 9:20:52 AM) Message: The Query thread pool now has 1 minimum threads, 16 maximum threads, and a concurrency of 16.  Its thread pool affinity mask is 0x00000000000000ff. (Source: \\?\C:\Program Files\Microsoft SQL Server\MSAS11.MSSQLSERVER\OLAP\Log\msmdsrv.log, Type: 1, Category: 289, Event ID: 0x4121000A)"`  
   
- 請注意，設定 **MinThread** 和 **MaxThread** 的演算法會合併系統組態，特別是處理器數目。 下列部落格文章提供如何計算值的資訊： [Analysis Services 2012 Configuration settings (Wordpress Blog)](http://go.microsoft.com/fwlink/?LinkId=330387)(Analysis Services 2012 組態設定 (Wordpress 部落格))。 請注意，後續版本可能會調整這些設定和行為。  
+ 請注意，設定 **MinThread** 和 **MaxThread** 的演算法會合併系統組態，特別是處理器數目。 下列部落格文章深入探討值的計算方式：[Analysis Services 2012 組態設定 （Wordpress 部落格）](http://go.microsoft.com/fwlink/?LinkId=330387)。 請注意，後續版本可能會調整這些設定和行為。  
   
  下列清單會針對不同處理器組合顯示其他相似性遮罩設定的範例：  
   
--   8 核心系統上處理器 3-2-1-0 的相似性會產生這個位元遮罩 00001111 和十六進位值 0xF  
+-   8 核心系統上處理器 3-2-1-0 的相似性會產生此位元遮罩：00001111 和十六進位值：0xF  
   
--   8 核心系統上處理器 7-6-5-4 的相似性會產生這個位元遮罩 11110000 和十六進位值 0xF0  
+-   8 核心系統上的處理器 7-6-5-4 的相似性會產生這個位元遮罩：11110000 和十六進位值：0xF0  
   
--   8 核心系統上處理器 5-4-3-2 的相似性會產生這個位元遮罩 00111100 和十六進位值 0x3C  
+-   8 核心系統上的處理器 5-4-3-2 的相似性會產生這個位元遮罩：00111100 和十六進位值：0x3C  
   
--   8 核心系統上處理器 7-6-1-0 的相似性會產生這個位元遮罩 11000011 和十六進位值 0xC3  
+-   8 核心系統上的處理器 7-6-1-0 的相似性會產生這個位元遮罩：11000011 和十六進位值：0xC3  
   
  請注意，在具有多個處理器群組的系統上，每個群組會產生個別的相似性遮罩，並以逗號分隔清單來表示。  
   
@@ -272,12 +256,12 @@ ms.locfileid: "40392729"
 >  如需如何設定屬性的指示，請參閱 [Analysis Services 的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [處理序和執行緒](/windows/desktop/ProcThread/about-processes-and-threads)   
+ [關於處理序和執行緒](/windows/desktop/ProcThread/about-processes-and-threads)   
  [多個處理器](/windows/desktop/ProcThread/multiple-processors)   
  [處理器群組](/windows/desktop/ProcThread/processor-groups)   
- [Analysis Services 執行緒集區 SQL Server 2012 中的變更](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
- [Analysis Services 2012 組態設定 （Wordpress 部落格）](http://go.microsoft.com/fwlink/?LinkId=330387)   
- [支援具有超過 64 個處理器系統](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
+ [SQL Server 2012 中 Analysis Services 執行緒集區的變更](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
+ [Analysis Services 2012 Configuration settings (Wordpress Blog)](http://go.microsoft.com/fwlink/?LinkId=330387)   
+ [支援具有超過 64 個處理器的系統](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
  [SQL Server Analysis Services 作業指南](http://go.microsoft.com/fwlink/?LinkID=225539)  
   
   

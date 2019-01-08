@@ -18,12 +18,12 @@ ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e8d29c2a9b273425510342d87349091348c1c7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd0273e27ec20f23d683347f9501b72355f560d6
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806802"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588597"
 ---
 # <a name="spcantlogbeapplied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@backup_file_name=** ] **'***backup_file_name***'**  
+ [  **@backup_file_name=** ] **'**_backup_file_name_**'**  
  這是備份檔的名稱。 *backup_file_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**。  
   
- [ **@database_name=** ] **'***database_name***'**  
+ [  **@database_name=** ] **'**_database_name_**'**  
  這是資料庫的名稱。 *database_name* 為 **sysname**。  
   
- [  **@result=** ]*結果***輸出**  
+ [  **@result=** ]_結果_**輸出**  
  指出資料庫是否可以套用交易記錄。 *結果*已**元**。  
   
  1 = 可以套用記錄  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas
@@ -19,12 +17,12 @@ ms.assetid: eecd0d5f-d3dd-4d20-9586-19820410ad47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 69a3d624119c3193ee3525067780f0c4a91fd37e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85142b248fe8e734aeb1700d8eee353df1684d51
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093618"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810860"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0 中的註解式 XSD 結構描述
   本章節提供在 SQLXML 4.0 中使用註解式 XSD 結構描述的相關資訊。 在舊版的 SQLXML 中，XML-Data Reduced (XDR) 結構描述有提供類似的功能。 本章節也提供用於舊版應用程式的 XDR 資訊。  
@@ -48,9 +46,9 @@ ms.locfileid: "48093618"
 ## <a name="other-resources"></a>其他資源  
  您可以在下列網站上找到有關 XML 結構描述定義語言 (XSD)、XML 路徑語言 (XPath) 和可延伸樣式表語言轉換 (XSLT) 的資訊：  
   
--   XML 結構描述第 0 部： 入門，W3C 建議事項 (http://www.w3.org/TR/xmlschema-0/)  
+-   XML 結構描述第 0 部分：入門，W3C 建議事項 (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML 結構描述第 1 部分： 結構、 W3C 建議事項 (http://www.w3.org/TR/xmlschema-1/)  
+-   XML 結構描述第 1 部分：結構，W3C 建議事項 (http://www.w3.org/TR/xmlschema-1/)  
   
 -   XML 結構描述第 2:Datatypes，W3C 建議事項 (http://www.w3.org/TR/xmlschema-2/)  
   

@@ -1,5 +1,5 @@
 ---
-title: 預測查詢 （資料採礦） |Microsoft 文件
+title: 預測查詢 （資料採礦） |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7a8bc3dac0b76adc326b5beab8444475fb76af8d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 19d555e988ecc1093388d751ea9f66a720b21def
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017845"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506036"
 ---
 # <a name="prediction-queries-data-mining"></a>預測查詢 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "34017845"
 ###  <a name="bkmk_PredFunc"></a> 加入預測函數  
  除了預測值之外，您也可以自訂預測查詢以傳回與預測相關的各種資訊類型。 例如，如果預測建立一份建議客戶購買的產品清單，您可能也想傳回每個預測的機率，以進行排名，並只向使用者呈現熱門建議。  
   
- 若要這樣做，您需要將 *「預測函數」* (Prediction Function) 加入至查詢。 每個模型或查詢類型都支援特定的函數。 例如，叢集模型支援特殊的預測函數，可針對模型建立的叢集提供額外的詳細資料，而時間序列模型則含有可計算一段時間之差異的函數。 也有可用於幾乎所有模型類型的一般預測函數。 如需不同查詢類型所支援的預測函數清單，請參閱本 DMX 參考主題：[一般預測函數 &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)。  
+ 若要這樣做，您需要將 *「預測函數」* (Prediction Function) 加入至查詢。 每個模型或查詢類型都支援特定的函數。 例如，叢集模型支援特殊的預測函數，可針對模型建立的叢集提供額外的詳細資料，而時間序列模型則含有可計算一段時間之差異的函數。 也有可用於幾乎所有模型類型的一般預測函數。 如需不同查詢類型所支援的預測函數的清單，請參閱本 DMX 參考主題：[一般預測函數&#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)。  
   
 ###  <a name="bkmk_SingletonQuery"></a> 建立單一預測查詢  
  當您想要即時建立快速預測時，單一預測查詢便很有用。 常見的案例可能是您已經向客戶取得資訊 (或許是使用網站上的表單)，而且您想要以單一預測查詢的輸入形式提交該資料。 例如，當客戶從清單中選擇產品時，您可以使用選取內容當做預測最佳建議產品的查詢輸入。  
@@ -68,7 +68,7 @@ ms.locfileid: "34017845"
  單一預測查詢不需要包含輸入的個別資料表。 相反地，您會提供一個或多個資料列值做為模型的輸入，然後再即時傳回一個或多個預測。  
   
 > [!WARNING]  
->  不論名稱為何，單一預測查詢不會只做出單一預測，您可以針對每一組輸入產生多個預測。 若要提供多個輸入案例，您會針對每一個輸入案例建立 SELECT 陳述式，並將其與 UNION 運算子結合。  
+>  儘管其名稱中，單一預測查詢不會只做出單一預測-您可以產生多個預測的每一組輸入。 若要提供多個輸入案例，您會針對每一個輸入案例建立 SELECT 陳述式，並將其與 UNION 運算子結合。  
   
  當您建立單一預測查詢時，必須以 PREDICTION JOIN 的形式為模型提供新資料。 這表示即使不是對應至實際的資料表，也必須確定新資料符合採礦模型中現有的資料行。 如果新資料行和新資料完全相符，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會為您對應資料行。 這稱為 *NATURAL PREDICTION JOIN*。 不過，如果資料行不相符，或者新資料所包含的資料類型和數量與模型中的不同，您必須指定模型中與新資料對應的資料行，或指定遺漏的值。  
   
@@ -148,7 +148,7 @@ FROM
  如果提供者無法處理階層式資料列集，則您可以在預測查詢中使用 FLATTEN 關鍵字將結果扁平化。 如需包括扁平化資料列集範例的詳細資訊，請參閱 [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [內容查詢 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
- [資料定義查詢 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [內容查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
+ [資料定義查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
   

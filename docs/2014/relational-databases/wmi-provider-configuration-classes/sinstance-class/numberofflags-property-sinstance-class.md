@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - NumberOfFlags Property (SInstance Class)
@@ -20,12 +18,12 @@ ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ccdeac58aa4aa8eed7943dbbc0e762b90ad0cb74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fe7d2bf1ef6b8932704242e94c377a2b11c0619
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061528"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353648"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>NumberOfFlags 屬性 (SInstance 類別)
   取得旗標數目的執行個體[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
@@ -43,11 +41,11 @@ object
  [SInstance 類別](sinstance-class.md)物件，表示伺服器執行個體。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- 指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之旗標數目的 `uint32` 值。  
+ 指定 `uint32` 執行個體之旗標數目的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 值。  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定伺服器網路通訊協定和網路程式庫](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [設定伺服器網路通訊協定和網路程式庫](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 第 2 課：準備快照集資料夾 | Microsoft Docs
+title: 第 2 課：準備快照集資料夾 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9ee7028a14cebadd6d49fac1a081e8db78ea7990
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d15b08a5ff98392961c3f4fb01c397f220303e86
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157028"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591022"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>第 2 課：準備快照集資料夾
   在這一課，您將學習設定用於建立及儲存發行集快照集的快照集資料夾。  
@@ -37,9 +37,9 @@ ms.locfileid: "48157028"
   
 6.  在 **[安全性]** 索引標籤上，按一下 **[編輯]**。  
   
-7.  在 [權限] 對話方塊中，按一下 [新增]。 在 [選取使用者、電腦、服務帳戶或群組] 文字方塊中，鍵入第 1 課所建立的快照集代理程式帳戶名稱，如 \<電腦名稱>****\repl_snapshot**，其中 \<電腦名稱>** 是「發行者」的名稱。 按一下 [檢查名稱]，然後按一下 [確定]。  
+7.  在 [權限] 對話方塊中，按一下 [新增]。 在 [選取使用者、電腦、服務帳戶或群組] 文字方塊中，輸入第 1 課所建立的快照集代理程式帳戶名稱，如 \<_電腦名稱>_**\repl_snapshot**，其中 \<*電腦名稱>* 是「發行者」的名稱。 按一下 [檢查名稱]，然後按一下 [確定]。  
   
-8.  重複上一個步驟，為散發代理程式 \<電腦名稱>****\repl_distribution** 以及合併代理程式 \<電腦名稱>****\repl_merge** 新增權限。  
+8.  重複上一個步驟，為散發代理程式 \<_電腦名稱>_**\repl_distribution** 以及合併代理程式 \<_電腦名稱>_**\repl_merge** 新增權限。  
   
 9. 確認允許下列權限；  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48157028"
 10. 按一下 [確定] 關閉 [repldata 屬性] 對話方塊，並建立 repldata 共用。  
   
 ## <a name="next-steps"></a>後續步驟  
- 您已順利設定快照集資料夾的共用。 下一步，您將設定散發。 請參閱 [第 3 課：設定散發](lesson-3-configuring-distribution.md)。  
+ 您已順利設定快照集資料夾的共用。 下一步，您將設定散發。 請參閱[第 3 課：設定散發](lesson-3-configuring-distribution.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [保護快照集資料夾](security/secure-the-snapshot-folder.md)  

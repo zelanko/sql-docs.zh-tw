@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG020554 error
@@ -13,12 +12,12 @@ ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35bea347563f775570bb8f605ec1b2a76163e51b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cdb16831ec27c647645ae0d63f2aa899ec49d590
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217780"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806820"
 ---
 # <a name="mssqleng020554"></a>MSSQL_ENG020554
     
@@ -80,6 +79,6 @@ ms.locfileid: "48217780"
  [複寫記錄讀取器代理程式](agents/replication-log-reader-agent.md)   
  [複寫合併代理程式](agents/replication-merge-agent.md)   
  [複寫佇列讀取器代理程式](agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
+ [複寫快照集代理程式](agents/replication-snapshot-agent.md)  
   
   

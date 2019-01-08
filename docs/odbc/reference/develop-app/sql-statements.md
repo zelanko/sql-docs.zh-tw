@@ -11,15 +11,15 @@ ms.assetid: 78133ee0-1e2f-4dc8-81f6-3bac8eb21332
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36bfe99cdf473c865ec15103b62729f37a02206f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1445f89200a876b5ac945ea1a577d6cc3f7445a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600416"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544164"
 ---
 # <a name="sql-statements"></a>SQL 陳述式
-ODBC 應用程式執行的 SQL 陳述式執行幾乎所有資料庫存取權。 這些陳述式的形式 — 硬式編碼或建構在執行的階段，可交互操作或資料來源特有的並依此類推，取決於應用程式的需求。  
+ODBC 應用程式執行的 SQL 陳述式執行幾乎所有資料庫存取權。 這些陳述式-硬式編碼，或在執行的階段，互通性或資料來源相關，等位建構的形式取決於應用程式的需求。  
   
  此章節包含下列主題。  
   

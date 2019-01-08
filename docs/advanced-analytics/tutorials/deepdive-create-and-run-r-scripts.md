@@ -1,170 +1,122 @@
 ---
-title: 建立和執行 R 指令碼 （SQL 與 R 深入探討） |Microsoft 文件
+title: 計算摘要統計資料 RevoScaleR 教學課程-SQL Server Machine Learning
+description: 教學課程逐步解說，如何計算 SQL Server 上使用 R 語言的統計摘要統計資料。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1ff4b72b535f97ba0132dd5e2712b56f90effb10
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: dea877323911b3965f7fef5d52ffc121b3990f7d
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31204690"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645247"
 ---
-# <a name="create-and-run-r-scripts-sql-and-r-deep-dive"></a>建立和執行 R 指令碼 （SQL 與 R 深入探討）
+# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>計算摘要統計資料，在 R 中 （SQL Server 和 RevoScaleR 教學課程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文是資料科學深入探討教學課程中，有關如何使用一部分[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server。
+這一課是屬於[RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)如何使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server。
 
-現在您已設定資料來源並建立一或數個計算內容，您已準備好要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來執行一些強大的 R 指令碼。  在這一課，您可以使用 server 計算內容來執行一些常見的機器學習服務工作：
+它會使用已建立的資料來源與先前的課程中建立的計算內容，在此影片中執行強大的 R 指令碼。 在這一課，您將使用本機和遠端伺服器計算內容，來執行下列工作：
 
-- 將資料視覺化，並產生一些摘要統計資料
-- 建立線性迴歸模型
-- 建立羅吉斯迴歸模型
-- 對新資料計分，並建立分數的長條圖
+> [!div class="checklist"]
+> * 將計算內容切換至 SQL Server
+> * 取得遠端資料物件上的摘要統計資料
+> * 計算本機摘要
 
-## <a name="change-compute-context-to-the-server"></a>變更計算至伺服器的內容
+如果您已完成先前的課程，您應該有這些遠端計算內容： sqlCompute 和 sqlComputeTrace。 邁向未來，您使用將 sqlCompute 和本機計算內容在後續課程中。
 
-執行任何 R 程式碼之前，您必須指定「目前」或「使用中」的計算內容。
+使用 R IDE 或**Rgui**在這一課中執行 R 指令碼。
 
-1. 若要啟用您已使用 R 定義的計算內容，請使用 **rxSetComputeContext** 函數，如下所示：
+## <a name="compute-summary-statistics-on-remote-data"></a>計算對遠端資料的摘要統計資料
+
+您可以從遠端執行所有 R 程式碼之前，您需要指定遠端計算內容。 所有後續的計算上進行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中指定的電腦*sqlCompute*參數。
+
+計算內容保持作用中，直到您變更為止。 不過，任何 R 指令碼都*無法*執行遠端伺服器內容中的將會自動在本機執行。
+
+若要查看計算內容的運作方式，產生 sqlFraudDS 資料來源上的遠端 SQL Server 上的摘要統計資料。 在建立此資料來源物件[兩個課程](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)和代表 ccFraudSmall 資料庫中的資料表 RevoDeepDive。 
+
+1. 若要在上一課中建立的 sqlCompute 切換計算內容：
   
     ```R
     rxSetComputeContext(sqlCompute)
     ```
-  
-    當您執行此陳述式時，所有後續的計算發生在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中指定電腦*sqlCompute*參數。
-  
-2. 如果您決定在工作站上執行 R 程式碼，您可以使用  **local** 關鍵字，將計算內容切換回本機電腦。
-  
-    ```R
-    rxSetComputeContext ("local")
-    ```
-  
-    如需此函數支援之其他關鍵字的清單，請從 R 命令列輸入 `help("rxSetComputeContext")` 。
-  
-3. 指定計算內容之後，它會保持使用中，直到您變更為止。 不過，任何「無法」在遠端伺服器內容中執行的 R 指令碼都將在本機執行。
 
-## <a name="compute-some-summary-statistics"></a>計算部分的摘要統計資料
-
-若要查看計算內容的運作方式，請嘗試產生某些摘要統計資料使用`sqlFraudDS`資料來源。  請記住，資料來源物件只定義使用; 的資料它不會變更計算內容。
-
-+ 若要執行的摘要在本機，使用**rxSetComputeContext**並指定_本機_關鍵字。
-+ 若要在 SQL Server 電腦上建立相同的計算，請切換至您稍早定義的 SQL 計算內容。
-
-1. 呼叫[rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary)函式，並傳遞必要的引數，例如公式和資料來源，並將結果指派給變數`sumOut`。
+2. 呼叫[rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary)函式，並傳遞必要引數，例如公式、 資料來源，並將結果指派給變數`sumOut`。
   
     ```R
     sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    R 語言提供許多摘要函式，但**rxSummary**支援在各種遠端計算內容，包括上執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 類似功能的相關資訊，請參閱[資料摘要使用 RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)。
+    R 語言提供許多摘要函式，但**rxSummary**中**RevoScaleR**支援在各種遠端計算內容，包括上執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需類似函數的詳細資訊，請參閱[資料摘要使用 RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)。
   
-2. 當處理完成時，您可以列印的內容`sumOut`變數至主控台。
+3. 列印到主控台 sumOut 的內容。
   
     ```R
     sumOut
     ```
-  
     > [!NOTE]
-    > 請勿嘗試在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦傳回結果之前就列印結果，否則可能會收到錯誤。
+    > 如果您收到錯誤，請等候幾分鐘的時間才能完成，然後再重試此命令執行。
 
 **結果**
 
-*Summary Statistics Results for: ~gender + balance + numTrans +*
+```R
+Summary Statistics Results for: ~gender + balance + numTrans + numIntlTrans + creditLine
+Data: sqlFraudDS (RxSqlServerData Data Source)
+Number of valid observations: 10000
 
- *numIntlTrans + creditLine*
+ Name  Mean    StdDev  Min Max ValidObs    MissingObs
+ balance       4075.0318 3926.558714            0   25626 100000
+ numTrans        29.1061   26.619923 0     100 10000    0           100000
+ numIntlTrans     4.0868    8.726757 0      60 10000    0           100000
+ creditLine       9.1856    9.870364 1      75 10000    0          100000
+ 
+ Category Counts for gender
+ Number of categories: 2
+ Number of valid observations: 10000
+ Number of missing observations: 0
 
- *Data: sqlFraudDS (RxSqlServerData Data Source)*
+ gender Counts
+  Male   6154
+  Female 3846
+```
 
- *Number of valid observations: 10000*
+## <a name="create-a-local-summary"></a>建立本機摘要
 
- *Name  Mean    StdDev  Min Max ValidObs    MissingObs*
-
- *balance       4075.0318 3926.558714            0   25626 100000*
-
- *numTrans        29.1061   26.619923 0     100 10000    0           100000*
-
- *numIntlTrans     4.0868    8.726757 0      60 10000    0           100000*
-
- *creditLine       9.1856    9.870364 1      75 10000    0          100000*
-
- *性別類別計數*
-
- *Number of categories: 2*
-
- *Number of valid observations: 10000*
-
- *Number of missing observations: 0*
-
- *gender Counts*
-
- *Male   6154*
-
-  *Female 3846*
-
-## <a name="add-maximum-and-minimum-values"></a>加入最大和最小值
-
-根據計算的摘要統計資料，您發現與資料相關的一些實用資訊，並想要放入資料來源，以供進一步計算使用。 例如，最小和最大值可以用來計算長條圖。 基於這個理由，讓我們加入的高低值**RxSqlServerData**資料來源。
-
-幸運的是[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]包含最佳化的函式可以有效率地轉換成類別因數資料的整數資料。
-
-1. 一開始先設定一些暫存變數。
+1. 變更計算內容，以在本機執行所有工作。
   
     ```R
-    sumDF <- sumOut$sDataFrame
-    var <- sumDF$Name
+    rxSetComputeContext ("local")
     ```
   
-2. 使用稍早建立的變數 `ccColInfo` 來定義資料來源中的資料行。
-  
-    此外，請加入一些新的計算資料行 (`numTrans`， `numIntlTrans`，和`creditLine`) 資料行集合。
-  
-    ```R 
-    ccColInfo <- list(
-        gender = list(type = "factor",
-          levels = c("1", "2"), 
-          newLevels = c("Male", "Female")),
-        cardholder = list(type = "factor",
-          levels = c("1", "2"), 
-          newLevels = c("Principal", "Secondary")), 
-        state = list(type = "factor", 
-          levels = as.character(1:51), 
-          newLevels = stateAbb), 
-        balance  = list(type = "numeric"),
-        numTrans = list(type = "factor", 
-          levels = as.character(sumDF[var == "numTrans", "Min"]:sumDF[var == "numTrans", "Max"])),
-        numIntlTrans = list(type = "factor",  
-            levels = as.character(sumDF[var == "numIntlTrans", "Min"]:sumDF[var =="numIntlTrans", "Max"])),
-        creditLine = list(type = "numeric")
-            )
-    ```
-  
-3. 具有更新的資料行集合中，套用下列陳述式來建立更新的版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]先前定義的資料來源。
+2. 當從 SQL Server 擷取資料，通常就可以取得較佳的效能增加每個讀取，擷取的資料列數假設增加的區塊大小可以容納在記憶體中。 執行下列命令，以增加的值*rowsPerRead*資料來源上的參數。 之前， *rowsPerRead* 的值已設為 5000。
   
     ```R
-    sqlFraudDS <- RxSqlServerData(
-        connectionString = sqlConnString,
-        table = sqlFraudTable,
-        colInfo = ccColInfo,
-        rowsPerRead = sqlRowsPerRead)
+    sqlServerDS1 <- RxSqlServerData(
+       connectionString = sqlConnString,
+       table = sqlFraudTable,
+       colInfo = ccColInfo,
+       rowsPerRead = 10000)
+    ```
+
+3. 呼叫**rxSummary**上新的資料來源。
+  
+    ```R
+    rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlServerDS1)
     ```
   
-    `sqlFraudDS`資料來源現在包含新的資料行加入使用`ccColInfo`。
-  
+   實際的結果應該與您在 **電腦的內容中執行** rxSummary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時相同。 不過，作業可能會更快或更慢。 大部分取決於資料庫連線，因為正在將資料傳輸至本機電腦進行分析。
 
-此時，所做的修改會影響只有資料來源物件中 R;任何新資料寫入資料庫資料表尚未。 不過，您可以使用所擷取的資料`sumOut`變數來建立視覺效果和摘要。 下一個步驟中，您會學習如何執行此動作時切換計算內容。
+4. 切換回遠端計算內容的 [下一步] 的數個課程。
 
-> [!TIP]
-> 如果您忘記您所使用的計算內容，執行`rxGetComputeContext()`。  [RxLocalSeq 計算內容] 的傳回值會指出您在本機計算內容執行。
+    ```R
+    rxSetComputeContext(sqlCompute)
+    ```
 
-## <a name="next-step"></a>下一步
+## <a name="next-steps"></a>後續步驟
 
-[使用 R 製作 SQL Server 資料的圖表](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
-
-## <a name="previous-step"></a>上一個步驟
-
-[定義及使用計算內容](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
+> [!div class="nextstepaction"]
+> [使用 R 製作 SQL Server 資料的圖表](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)

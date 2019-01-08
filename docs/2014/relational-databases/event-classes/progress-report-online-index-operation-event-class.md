@@ -1,11 +1,10 @@
 ---
-title: 進度報表：Online Index Operation 事件類別 | Microsoft Docs
+title: 進度報表：線上索引作業事件類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,17 +14,17 @@ ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a366fe0d64943506160a748f56a43bf7f2b44c9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a09b4c8f6f6c600ac7b14faf35966a82c0b6905
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124578"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756120"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>進度報表：線上索引作業事件類別
-  Progress Report: Online Index Operation 事件類別指出在執行建立程序時，線上索引建立作業的進度。  
+  Progress Report:Online Index Operation 事件類別指出在建置程序執行時的線上索引建立作業的進度。  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Progress Report: Online Index Operation 事件類別資料行  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>進度報表：線上索引作業事件類別資料行  
   
 |資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  

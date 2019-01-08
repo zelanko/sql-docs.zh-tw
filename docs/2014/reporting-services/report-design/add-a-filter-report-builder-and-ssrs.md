@@ -11,12 +11,12 @@ ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 1df28dfd9e260f09da8eabcc6613e82e8a720e72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d258a21fe4e6e0be3f0cf33230d6e8c5928780b1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086888"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516565"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>加入篩選 (報表產生器及 SSRS)
   當您想要針對計算或顯示包含或排除特定值時，請將篩選加入至資料集、資料區或群組。 篩選會在執行階段先套用至資料集、套用至資料區，然後套用至群組 (按照群組階層的由上而下順序)。 在資料表、矩陣或清單中，系統會針對資料列群組、資料行群組和相鄰群組獨立套用篩選。 在圖表中，系統會針對類別目錄群組和數列群組獨立套用篩選。  
@@ -34,7 +34,7 @@ ms.locfileid: "48086888"
   
 1.  在 **[設計]** 檢視中，開啟報表。  
   
-2.  選取設計介面上的資料區，然後以滑鼠右鍵按一下 [*\<資料區>*屬性]。若為量測計，請選取 **[量測計面板屬性]**。[*\<資料區>***屬性**] 對話方塊隨即開啟。  
+2.  選取設計介面上的資料區，然後以滑鼠右鍵按一下 [\<data region>Properties (<資料區>屬性)]。 若為量測計，請選取 **[量測計面板屬性]**。 [\<data region>Properties (<資料區>屬性)] 對話方塊隨即開啟。  
   
     > [!NOTE]  
     >  在 Tablix 資料區上，以滑鼠右鍵按一下邊角資料格或是資料列或資料行控制代碼，然後按一下 [Tablix 屬性]。  
@@ -130,8 +130,8 @@ ms.locfileid: "48086888"
 ## <a name="see-also"></a>另請參閱  
  [新增資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [量測計&#40;報表產生器及 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [量測計 &#40;報表產生器及 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [清單 &#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

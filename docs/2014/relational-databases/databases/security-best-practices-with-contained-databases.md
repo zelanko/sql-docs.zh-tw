@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, threats
@@ -13,18 +12,18 @@ ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 649d92089f8e46a9618e7416ee959d153385f1c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89a988a5d664e460a3148cf910c0be31ba07a5dd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193668"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816330"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>自主資料庫的安全性最佳做法
-  自主資料庫具有一些 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 系統管理員應該了解並降低的獨特威脅。 其中大部分威脅都與相關`USER WITH PASSWORD`驗證處理程序，將驗證界限從[!INCLUDE[ssDE](../../includes/ssde-md.md)]層級為資料庫層級。  
+  自主資料庫具有一些 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 系統管理員應該了解並降低的獨特威脅。 其中大部分威脅都與 `USER WITH PASSWORD` 驗證處理序相關，而這個處理序會將驗證界限從 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 層級移至資料庫層級。  
   
 ## <a name="threats-related-to-users"></a>與使用者相關的威脅  
- 可在自主資料庫使用者`ALTER ANY USER`權限，例如的成員**db_owner**並**db_securityadmin**固定資料庫角色，可以授與不含資料庫的存取權認可或同意如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]系統管理員。 將自主資料庫的存取權授與使用者會針對整個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體增加潛在的攻擊面區域。 系統管理員應該了解此委派的存取控制，並且非常謹慎地授與自主資料庫中的使用者的相關`ALTER ANY USER`權限。 所有資料庫擁有者都有`ALTER ANY USER`權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員應定期稽核自主資料庫中的使用者。  
+ 可在自主資料庫使用者`ALTER ANY USER`權限，例如的成員**db_owner**並**db_securityadmin**固定資料庫角色，可以授與不含資料庫的存取權認可或同意如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]系統管理員。 將自主資料庫的存取權授與使用者會針對整個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體增加潛在的攻擊面區域。 系統管理員應該了解此存取控制的委派，並且非常謹慎地將 `ALTER ANY USER` 權限授與自主資料庫中的使用者。 所有資料庫擁有者都擁有 `ALTER ANY USER` 權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員應定期稽核自主資料庫中的使用者。  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>使用 Guest 帳戶來存取其他資料庫  
  擁有 `ALTER ANY USER` 權限的資料庫擁有者與資料庫使用者可以建立自主資料庫使用者。 連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上之自主資料庫之後，如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)]上的其他資料庫已啟用 **Guest** 帳戶，自主資料庫使用者就可以存取其他資料庫。  
@@ -46,7 +45,7 @@ CREATE USER Carlo WITH PASSWORD = '<same password>', SID = <SID from DB1>;
 GO  
 ```  
   
- 若要執行跨資料庫查詢時，您必須設定`TRUSTWORTHY`呼叫的資料庫上的選項。 例如，如果上述定義的使用者 (Carlo) 位於 DB1 中，為了執行 `SELECT * FROM db2.dbo.Table1;`，則必須開啟資料庫 DB1 的 `TRUSTWORTHY` 設定。 執行下列程式碼，以設定`TRUSTWORHTY`上設定。  
+ 若要執行跨資料庫查詢，您必須針對呼叫的資料庫設定 `TRUSTWORTHY` 選項。 例如，如果上述定義的使用者 (Carlo) 位於 DB1 中，為了執行 `SELECT * FROM db2.dbo.Table1;`，則必須開啟資料庫 DB1 的 `TRUSTWORTHY` 設定。 請執行下列程式碼，將 `TRUSTWORHTY` 設定設為開啟。  
   
 ```  
 ALTER DATABASE DB1 SET TRUSTWORTHY ON;  

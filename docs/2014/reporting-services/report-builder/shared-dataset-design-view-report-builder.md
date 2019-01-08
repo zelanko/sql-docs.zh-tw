@@ -11,12 +11,12 @@ ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: aff516055e1bfce27408aed1d0779d3956424b82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 897f44349c04f02a6b41823590998b09221e3a03
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057755"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354198"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共用資料集設計檢視 (報表產生器)
   [共用資料集設計] 視窗可協助您建立資料集查詢來與其他人共用。 此視窗可讓您選取共用資料來源、指定共用資料集的屬性，以及在查詢設計工具中建立查詢。  
@@ -32,9 +32,9 @@ ms.locfileid: "48057755"
  使用 [連接] 群組中的 **[選取]** 按鈕，可選取報表中的共用資料來源，或瀏覽到報表伺服器上的共用資料來源。  
   
 > [!NOTE]  
->  共用資料集必須以共用資料來源為基礎。 如果您需要的資料來源無法使用，就必須在報表伺服器上建立一個資料來源。 如需詳細資訊，請參閱 <<c0> [ 建立、 刪除或修改共用資料來源&#40;報表管理員&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md) Reporting Services 文件中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][線上叢書 》](http://go.microsoft.com/fwlink/?linkid=121312)。</c0>  
+>  共用資料集必須以共用資料來源為基礎。 如果您需要的資料來源無法使用，就必須在報表伺服器上建立一個資料來源。 如需詳細資訊，請參閱 <<c0> [ 建立、 刪除或修改共用資料來源&#40;報表管理員&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md) Reporting Services 文件中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][線上叢書 》](https://go.microsoft.com/fwlink/?linkid=121312)。</c0>  
   
- 如需詳細資訊，請參閱 <<c0> [ 資料連接、 資料來源和報表產生器中的連接字串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)。  
+ 如需詳細資訊，請參閱＜ [資料連接、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)＞。  
   
 ### <a name="dataset"></a>資料集  
  使用 **[設定選項]** 按鈕可設定共用資料集屬性。 這些選項包括：  
@@ -53,7 +53,7 @@ ms.locfileid: "48057755"
   
  如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
- 如需有關快取重新整理計劃的詳細資訊，請參閱 <<c0> [ 快取共用資料集&#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) Reporting Services 文件中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][線上叢書 》](http://go.microsoft.com/fwlink/?linkid=121312)。</c0>  
+ 如需有關快取重新整理計劃的詳細資訊，請參閱 <<c0> [ 快取共用資料集&#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) Reporting Services 文件中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][線上叢書 》](https://go.microsoft.com/fwlink/?linkid=121312)。</c0>  
   
 ### <a name="query-designer"></a>查詢設計工具  
  使用查詢設計工具工具列可協助建立查詢，以指定從資料連接擷取的資料。 您所看到的工具列，會視與資料連接的資料來源類型關聯的查詢設計工具而定。  
@@ -69,7 +69,7 @@ ms.locfileid: "48057755"
   
  某些資料來源類型則支援以文字為基礎的查詢設計工具，可用來貼上您已在其他工具 (如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) 中建立的查詢。  
   
- 每種資料來源類型對於在外部資料來源執行的查詢都有特定需求。 如需詳細資訊，請參閱主題中的資料來源類型對應[從外部資料來源加入資料&#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md)並[Reporting Services 所支援的資料來源&#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) Reporting Services 文件中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][線上叢書 》](http://go.microsoft.com/fwlink/?linkid=121312)。  
+ 每種資料來源類型對於在外部資料來源執行的查詢都有特定需求。 如需詳細資訊，請參閱主題中的資料來源類型對應[從外部資料來源加入資料&#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md)並[Reporting Services 所支援的資料來源&#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) Reporting Services 文件中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][線上叢書 》](https://go.microsoft.com/fwlink/?linkid=121312)。  
   
 
   
@@ -87,7 +87,7 @@ ms.locfileid: "48057755"
   
  如果報表包含參數，所有參數都必須具有預設值，然後報表才能自動執行。 如果某個參數沒有預設值，當您執行報表時，就必須選擇該參數的值，然後按一下 **[執行]** 索引標籤上的 **[檢視報表]** 。  
   
- 如需詳細資訊，請參閱[報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 如需詳細資訊，請參閱 [報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)。  
   
 
   

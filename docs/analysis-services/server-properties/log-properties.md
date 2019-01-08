@@ -1,4 +1,5 @@
 ---
+title: Analysis Services 記錄屬性 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4e76f53329280caa589b2e45c19a967dc7c4e7dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: db79a57c3e63cf09f36cd1b9af2d529811b67ea0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999340"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071925"
 ---
 # <a name="log-properties"></a>記錄屬性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -131,7 +132,7 @@ ms.locfileid: "37999340"
  此屬性的預設值是空白，因而會預設為 FlightRecorderTraceDef.xml。  
   
 ## <a name="query-log"></a>查詢記錄  
- **適用於** ：僅限於多維度伺服器模式  
+ **適用於：** 僅限於多維度伺服器模式  
   
  **QueryLog\QueryLogFileName**  
  此為字串屬性，指定查詢記錄檔的名稱。 這個屬性只適用於當記錄會儲存到磁碟檔案，而非資料庫資料表時 (預設行為)。  
@@ -156,9 +157,6 @@ ms.locfileid: "37999340"
  此為布林值屬性，指定是否建立查詢記錄資料表。  
   
  此屬性的預設值為 False，表示伺服器不會自動建立記錄資料表，也不會記錄查詢事件。  
-  
-> [!NOTE]  
->  如需設定查詢記錄的詳細資訊，請參閱 [設定 Analysis Services 查詢記錄](http://go.microsoft.com/fwlink/?LinkId=81890)。  
   
 ## <a name="trace"></a>追蹤  
  **Trace\TraceBackgroundDistributionPeriod**  

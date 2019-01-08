@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6757868bf492a08caec1b8062776d6634331f868
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a568fdfcf2e6dc6abd59d060f2e374339e13341
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666726"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534718"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>舊版 SQL Server 的新日期和時間功能 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47666726"
   使用增強型的日期和時間功能的用戶端應用程式進行通訊的版本時，本主題會說明預期的行為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早於[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，以及當編譯版本的用戶端[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端早於[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]將命令傳送到伺服器支援增強型日期和時間功能。  
   
 ## <a name="down-level-client-behavior"></a>下層用戶端行為  
- 使用新版的用戶端應用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端之前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]查看新的日期/時間類型為**nvarchar**資料行。 資料行內容是常值表示法。 如需詳細資訊，請參閱 「 資料格式： 字串和常值 」 一節[OLE DB 日期和時間改善的資料型別支援](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。 資料行大小是針對資料行指定之有效位數的最大常值長度。  
+ 使用新版的用戶端應用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端之前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]查看新的日期/時間類型為**nvarchar**資料行。 資料行內容是常值表示法。 如需詳細資訊，請參閱 「 資料格式：字串和常值 > 一節[OLE DB 日期和時間改善的資料型別支援](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)。 資料行大小是針對資料行指定之有效位數的最大常值長度。  
   
  資料庫目錄 Api 將會傳回中繼資料一致，以傳回至用戶端之下層資料型別程式碼 (例如**nvarchar**) 和相關聯的下層表示法 （例如，適當常值格式）。 不過，傳回的資料類型名稱將會是實際的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 類型名稱。  
   
@@ -38,8 +38,8 @@ ms.locfileid: "47666726"
 |DBTYPE_DBTIMESTAMP|||時間欄位會設定為零。|如果時間欄位為非零，IRowsetChange 將會因為字串截斷而失敗。|  
 |DBTYPE_DBTIME||Time(0)|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP|||日期欄位設定為目前的日期。|如果小數秒數為非零，IRowsetChange 會因為字串截斷而失敗。<br /><br /> 忽略日期。|  
-|DBTYPE_DBTIME||Time(7)|失敗 – 無效的時間間隔。|[確定]|  
-|DBTYPE_DBTIMESTAMP|||失敗 – 無效的時間間隔。|[確定]|  
+|DBTYPE_DBTIME||Time(7)|失敗-無效的時間間隔。|[確定]|  
+|DBTYPE_DBTIMESTAMP|||失敗-無效的時間間隔。|[確定]|  
 |DBTYPE_DBTIMESTAMP||Datetime2(3)|[確定]|[確定]|  
 |DBTYPE_DBTIMESTAMP||datetime2(7)|[確定]|[確定]|  
 |DBTYPE_DBDATE|Smalldatetime|date|[確定]|[確定]|  
@@ -136,8 +136,8 @@ ms.locfileid: "47666726"
 |TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|LITERAL_PREFIX|'|'|'|'|'|'|  
+|LITERAL_SUFFIX|'|'|'|'|'|'|  
 |CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e9bb58b72cb4a4e785c4dc94b448e5e754ac0c80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b11aa11f942e6f0f801de36c7d15e17cae4141b7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129738"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353284"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>發行資料庫 (SQL Server Management Studio)
   您可以使用 **[產生和發佈指令碼]** 精靈，將整個資料庫或個別的資料庫物件發行至 Web 主控提供者。  
@@ -25,7 +24,7 @@ ms.locfileid: "48129738"
 >  本主題所述的功能在過去是由發行資料庫精靈所提供。 發行功能已經加入至產生和發佈指令碼精靈，而且發行資料庫精靈已經停用。  
   
 ## <a name="generate-and-publish-scripts-wizard"></a>[產生和發佈指令碼]  
- 產生和發佈指令碼精靈可用來將資料庫或選定的資料庫物件發行至 Web 主控提供者。 SQL Server Web 主控提供者是與 Web 服務之間的連接介面。 此 Web 服務是使用 CodePlex 上 SQL Server Hosting Toolkit 中的資料庫發行服務專案所建立。 此 Web 服務可讓 Web 主控者客戶輕鬆地使用產生和發佈指令碼精靈，將他們的資料庫發行到此服務。 如需有關下載 SQL Server Hosting Toolkit 的詳細資訊，請參閱 [SQL Server 資料庫發行服務](http://go.microsoft.com/fwlink/?LinkId=142025)。  
+ 產生和發佈指令碼精靈可用來將資料庫或選定的資料庫物件發行至 Web 主控提供者。 SQL Server Web 主控提供者是與 Web 服務之間的連接介面。 此 Web 服務是使用 CodePlex 上 SQL Server Hosting Toolkit 中的資料庫發行服務專案所建立。 此 Web 服務可讓 Web 主控者客戶輕鬆地使用產生和發佈指令碼精靈，將他們的資料庫發行到此服務。 如需有關下載 SQL Server Hosting Toolkit 的詳細資訊，請參閱 [SQL Server 資料庫發行服務](https://go.microsoft.com/fwlink/?LinkId=142025)。  
   
  產生和發佈指令碼精靈也可以用來建立傳輸資料庫的指令碼。  
   

@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpullsubscription
@@ -17,12 +16,12 @@ ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d3c09a2d625f8b1a8c92d3fc55d8b571336a020
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c003b103c7957e737f53eb8733022e68073b3aef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857026"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802500"
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  指定這個發行集是否有獨立的散發代理程式。 *independent_agent*已**nvarchar(5)**，預設值是 TRUE。 如果 **，則為 true**，沒有獨立的散發代理程式，針對這個發行集。 如果**false**，還有一個散發代理程式，每個發行者資料庫/訂閱者資料庫配對。 *independent_agent*是發行集的屬性，而且必須具有相同的值與 「 發行者 」 在這裡。  
   
  [  **@subscription_type=**] **'***subscription_type***'**  
- 這是訂閱的類型。 *subscription_type*已**nvarchar(9)**，預設值是**匿名**。 您必須指定值**提取**for *subscription_type*，除非您想要建立訂用帳戶，而不需註冊的訂用帳戶，在 「 發行者 」。 在此情況下，您必須指定值**匿名**。 這是必要的情況下，您無法建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在訂用帳戶設定期間連線到 「 發行者 」。  
+ 這是訂閱的類型。 *subscription_type*已**nvarchar(9)**，預設值是**匿名**。 您必須指定值**提取**for *subscription_type*，除非您想要建立訂用帳戶，而不需註冊的訂用帳戶，在 「 發行者 」。 在此情況下，您必須指定值**匿名**。 在訂閱組態期間，無法建立與發行者的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接時，需要此訂閱。  
   
  [  **@description=**] **'***描述***'**  
  這是發行集的描述。 *描述*已**nvarchar(100)**，預設值是 NULL。  

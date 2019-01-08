@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 135d7998939c7b92de541221f89355d625a54c0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5976aa648d216f1a56cb03990be9ffb212d48022
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094628"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779980"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>如何從 CDC 設計工具主控台管理 CDC 服務
   此程序描述如何使用 CDC 設計工具主控台來管理 CDC 服務。  
@@ -29,7 +28,7 @@ ms.locfileid: "48094628"
   
 3.  選取您要管理的服務。  
   
-     **注意**：如果 CDC 設計工具主控台中未列出任何服務，您必須使用 CDC 服務組態主控台來建立新的執行個體。 如需有關建立新服務的詳細資訊，請參閱服務組態主控台所隨附的線上說明。  
+     **注意**:如果不有列出在 CDC 設計工具主控台中任何服務，您必須建立使用 CDC 服務組態主控台的新執行個體。 如需有關建立新服務的詳細資訊，請參閱服務組態主控台所隨附的線上說明。  
   
 4.  您可以針對 CDC 服務執行以下工作：  
   

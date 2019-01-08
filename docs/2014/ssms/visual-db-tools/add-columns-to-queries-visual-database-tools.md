@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting columns
@@ -15,18 +15,18 @@ ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5cc5cca6090d7a7069b294620e25229ccd14445e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065828"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778940"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>將資料行加入查詢 (Visual Database Tools)
   若要在查詢中使用資料行，您必須將資料行加入至查詢。 您可能會加入資料行以便在查詢輸出中顯示資料行、使用資料行進行排序、搜尋資料行內容，或者摘要資料行內容。 您可以決定在執行查詢時，結果窗格中包含哪些查詢中所使用的資料行。 如需詳細資訊，請參閱[移除查詢結果的資料行 &#40;Visual Database Tools&#41;](visual-database-tools.md)。  
   
 > [!NOTE]  
->  若要在查詢和檢視表設計工具中檢視資料類型，可以在 [圖表] 窗格中選取資料表或資料表值物件，並且在 [屬性] 視窗中按一下 [資料行清單]。 再按省略符號 (**…**) 以開啟 [資料行清單] 對話方塊。  
+>  若要在查詢和檢視表設計工具中檢視資料類型，可以在 [圖表] 窗格中選取資料表或資料表值物件，並且在 [屬性] 視窗中按一下 [資料行清單]。 然後按一下**省略符號 (…)** 以開啟 [資料行清單] 對話方塊。  
   
  無論在何處使用查詢中的資料行，您也可以使用由任何資料行、常值、運算子和函數組合所組成的運算式。  
   

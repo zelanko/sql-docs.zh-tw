@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c93e226ea61d9d427b236a31247d01346c8d5cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c0e18f728c48975aa6f09209f87aeca3e3abb2c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077348"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804990"
 ---
 # <a name="error-handling"></a>錯誤處理
   Oracle CDC 執行個體會針對單一 Oracle 來源資料庫中的變更進行採礦處理 (Oracle RAC 叢集會視為單一資料庫)，並將認可的變更寫入目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中 CDC 資料庫內的變更資料表。  
@@ -38,11 +37,11 @@ ms.locfileid: "48077348"
 |[狀態]|使用中狀態碼|錯誤狀態碼|說明|  
 |------------|------------------------|-----------------------|------------------|  
 |ABORTED|0|1|Oracle CDC 執行個體未在執行中。 ABORTED 子狀態表示 Oracle CDC 執行個體為 ACTIVE 狀態然後在未預期的情況下停止。<br /><br /> 如果 Oracle CDC 服務偵測到當 Oracle CDC 執行個體於 ACTIVE 狀態下未在執行中時，Oracle CDC 服務的主要執行個體會建立 ABORTED 子狀態。|  
-|error|0|1|Oracle CDC 執行個體未在執行中。 ERROR 狀態表示 CDC 執行個體在 ACTIVE 狀態下，然後遇到無法復原的錯誤於是將自己停用。 ERROR 狀態包含以下的子狀態碼：<br /><br /> MISCONFIGURED：偵測到無法復原的組態錯誤。<br /><br /> PASSWORD-REQUIRED：Attunity Oracle Change Data Capture (CDC) 設計工具未設定任何密碼，或是設定的密碼無效。 這可能是因為服務的非對稱金鑰密碼發生變更。|  
-|RUNNING|1|0|CDC 執行個體正在執行及處理變更記錄。 RUNNING 狀態包含以下的子狀態碼：<br /><br /> IDLE：所有變更記錄都已經處理並儲存在目標控制 (**_CT**) 資料表中。 控制資料表沒有使用中的交易。<br /><br /> PROCESSING：目前有正在處理但是尚未寫入控制 (**_CT**) 資料表的變更記錄。|  
+|error|0|1|Oracle CDC 執行個體未在執行中。 ERROR 狀態表示 CDC 執行個體在 ACTIVE 狀態下，然後遇到無法復原的錯誤於是將自己停用。 ERROR 狀態包含以下的子狀態碼：<br /><br /> 設定錯誤：偵測到無法復原的組態錯誤。<br /><br /> 需要密碼：Change Data Capture Designer for Oracle by Attunity for 設定任何密碼，或設定的密碼不正確。 這可能是因為服務的非對稱金鑰密碼發生變更。|  
+|RUNNING|1|0|CDC 執行個體正在執行及處理變更記錄。 RUNNING 狀態包含以下的子狀態碼：<br /><br /> 閒置率：所有變更記錄已處理並儲存在目標控制 (**_CT**) 資料表。 控制資料表沒有使用中的交易。<br /><br /> 處理：正在處理但是尚未寫入至控制項，變更記錄 (**_CT**) 資料表。|  
 |STOPPED|0|0|CDC 執行個體未在執行中。 STOP 子狀態表示 CDC 執行個體為 ACTIVE 狀態然後在正確的情況下停止。|  
-|SUSPENDED|1|1|CDC 執行個體正在執行中，但是因為發生可復原的錯誤所以暫停處理。 SUSPENDED 狀態包含以下的子狀態碼：<br /><br /> DISCONNECTED：無法建立與來源 Oracle 資料庫的連接。 一旦還原連接時，處理作業便會繼續。<br /><br /> STORAGE：儲存體已滿。 當有儲存體可用時，處理作業便會繼續。 某些情況下可能不會出現這個狀態，因為無法更新狀態資料表。<br /><br /> LOGGER：記錄器已連接到 Oracle，但是因為暫時性問題所以無法讀取 Oracle 交易記錄。|  
-|DATAERROR|x|x|此狀態碼僅用於 **xdbcdc_trace** 資料表。 不會出現在 **xdbcdc_state** 資料表中。 具有此狀態的追蹤記錄表示 Oracle 記錄檔記錄發生問題。 錯誤的記錄檔記錄會儲存在 [資料] 資料行中當做 BLOB。 DATAERROR 狀態包含以下的子狀態碼：<br /><br /> BADRECORD：無法剖析附加的記錄檔記錄。<br /><br /> CONVERT-ERROR：某些資料行中的資料無法轉換為擷取資料表中的目標資料行。 只有當組態指定轉換錯誤應該產生追蹤記錄時，才可能會出現這個狀態。|  
+|SUSPENDED|1|1|CDC 執行個體正在執行中，但是因為發生可復原的錯誤所以暫停處理。 SUSPENDED 狀態包含以下的子狀態碼：<br /><br /> 中斷連線：無法建立與來源 Oracle 資料庫的連接。 一旦還原連接時，處理作業便會繼續。<br /><br /> 儲存體：儲存體已滿。 當有儲存體可用時，處理作業便會繼續。 某些情況下可能不會出現這個狀態，因為無法更新狀態資料表。<br /><br /> 記錄器：記錄器已連接到 Oracle，但它無法讀取 Oracle 交易記錄，因為暫時性問題。|  
+|DATAERROR|x|x|此狀態碼僅用於 **xdbcdc_trace** 資料表。 不會出現在 **xdbcdc_state** 資料表中。 具有此狀態的追蹤記錄表示 Oracle 記錄檔記錄發生問題。 錯誤的記錄檔記錄會儲存在 [資料] 資料行中當做 BLOB。 DATAERROR 狀態包含以下的子狀態碼：<br /><br /> BADRECORD:無法剖析附加的記錄檔記錄。<br /><br /> 轉換錯誤：無法擷取資料表中的目標資料行轉換某些資料行中的資料。 只有當組態指定轉換錯誤應該產生追蹤記錄時，才可能會出現這個狀態。|  
   
  因為 Oracle CDC 服務狀態會儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，所以資料庫中的狀態值可能不會影響此服務的實際狀態。 最常見的情況是此服務遺失與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連接，而且基於任何理由無法繼續。 在此情況下，儲存在 **cdc.xdbcdc_state** 中的狀態會過時。 如果上次更新時間戳記 (UTC) 已超過一分鐘，則狀態可能已過時。 在此情況下，請使用 Windows 事件檢視器來尋找有關此服務之狀態的其他資訊。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48077348"
   
 -   MSXDBCDC.dbo.xdbcdc_trace 資料表，它是由 Oracle CDC 服務主要處理序用於一般記錄和追蹤。  
   
--   \<cdc-database>.cdc.xdbcdc_trace 資料表，它是由 Oracle CDC 執行個體用於一般記錄和追蹤。 這表示與特定 Oracle CDC 執行個體有關的錯誤都會記錄到該執行個體的追蹤資料表。  
+-   \<cdc-database>.cdc.xdbcdc_trace 資料表，它是由 Oracle CDC 執行個體用於一般記錄和追蹤。 這表示與特定 Oracle CDC 執行個體相關之錯誤都會記錄到該執行個體的追蹤資料表。  
   
  當 Oracle CDC 服務在以下情況時會記錄資訊：  
   
@@ -114,7 +113,7 @@ ms.locfileid: "48077348"
  Oracle CDC 服務會監視其 CDC 執行個體子處理序。 當 CDC 執行個體子處理序中止時，CDC 服務會在 MSXDBCDC.dbo.xdbcdc_databases 資料表中停用它，並將其 cdc.xdbcdc_state 狀態更新為 ABORTED。 在此情況下，標準 Windows 錯誤報告對話方塊會用來報告這個錯誤，以供進一步分析。  
   
 ## <a name="see-also"></a>另請參閱  
- [Attunity oracle 異動資料擷取設計工具](change-data-capture-designer-for-oracle-by-attunity.md)   
+ [Attunity Oracle 異動資料擷取設計工具](change-data-capture-designer-for-oracle-by-attunity.md)   
  [Oracle CDC 執行個體](the-oracle-cdc-instance.md)  
   
   

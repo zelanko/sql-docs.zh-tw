@@ -1,5 +1,5 @@
 ---
-title: 工作 1： 定義比對原則 |Microsoft Docs
+title: 工作 1:定義比對原則 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a94030fdf0f4ef42e0253022913f06f109e4dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55739fd6cf7b6c395c2e7a66c3d80fad22607a83
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107438"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394191"
 ---
-# <a name="task-1-defining-a-matching-policy"></a>工作 1：定義比對原則
-  在這項工作中，您會建立包含一個規則的比對原則。 此規則將會有一個必要條件： **Supplier ID**，也就是說，Supplier Id 必須符合才能使用規則中的其他定義域。 此規則會使用其他兩個定義域： **Supplier Name**與**相似度**值設定為**70%** 並**Contact Email**使用**相似度**值設定為**30%**。  
+# <a name="task-1-defining-a-matching-policy"></a>工作 1:定義比對原則
+  在這項工作中，您會建立包含一個規則的比對原則。 此規則將會有一個必要條件：**Supplier ID**，也就是說，Supplier Id 必須符合才能使用規則中的其他定義域。 此規則會使用其他兩個定義域：**Supplier Name**與**相似度**值設定為**70%** 並**Contact Email**使用**相似度**值設定為**30%**。  
   
 1.  中的主頁面**DQS 用戶端**，按一下**向右箭號**旁**供應商**知識，然後選取**比對原則**。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48107438"
   
 10. 按一下 **加入新的定義域項目**再次從工具列。  
   
-11. 選取**Supplier Name**網域，選取**類似**如**相似度**，並輸入**70**的**權數**.  您在此指定供應商名稱不需要完全相同但可以類似，以便讓記錄視為相符。 加權表示此欄位的分數佔整體比對分數的比重。  
+11. 選取**Supplier Name**網域，選取**類似**如**相似度**，並輸入**70**的**權數**.  您在此指定供應商名稱不需要完全相同但可以類似，以便讓記錄視為相符。 加權表示此欄位的分數之整體符合分數的比重。  
   
 12. 重複上述兩個步驟來加入**Contact Email**網域**30** for**權數**。  
   
@@ -69,6 +69,6 @@ ms.locfileid: "48107438"
 16. 按一下 **下一步**轉為**比對結果**頁面。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 2：測試和發佈比對原則](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
+ [工作 2:測試和發行比對原則](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
   
   

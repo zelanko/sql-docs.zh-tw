@@ -18,12 +18,12 @@ ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07145e608c850a877a984c7467da6b8974f0d151
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8978c40141d0cd6031b9569ab0daa945666e7e85
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744596"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415155"
 ---
 # <a name="spdbselectivexmlindex-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47744596"
  要啟用或停用選擇性 XML 索引所在的資料庫名稱。 如果*db_name*是 NULL，會假設目前的資料庫。  
   
  [  **@action =** ] **'***動作***'**  
- 判斷要啟用或停用索引。 如果傳遞 'on'、'true'、'off' 或 'false' 以外的值，則會引發錯誤。  
+ 判斷要啟用或停用索引。 如果 'on'、 'true'、 'off' 或 'false' 傳遞以外的值，就會引發錯誤。  
   
 ```  
   

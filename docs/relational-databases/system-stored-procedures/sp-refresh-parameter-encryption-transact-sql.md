@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58d2d159d0788d3a32c793899b253b66c62a0dbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9a24c843ed45a42fe4072b47c5642d81520a75e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703299"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214137"
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 若要重新整理伺服器層級 DDL 觸發程序，請從任何資料庫的內容執行此預存程序。
 
->  [!NOTE]   
+> [!NOTE]
 >  當您執行時，會卸除與物件相關聯的任何簽章`sp_refresh_parameter_encryption`。
 
 ## <a name="permissions"></a>Permissions
