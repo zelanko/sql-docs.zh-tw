@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6df05fc03563c88a10a7c56b71536e41068ffb05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af0251b5a493eb757b16dfb01b08304751eaa4dc
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845476"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589522"
 ---
 # <a name="duplicate-tables"></a>複製資料表
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47845476"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目來複製資料表：**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47845476"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要目的地資料庫中的 CREATE TABLE 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -67,7 +67,7 @@ ms.locfileid: "47845476"
   
 6.  從 **[編輯]** 功能表中，按一下 **[貼上]**。  
   
-7.  從 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]。  
+7.  從 [檔案]  功能表中，按一下 [儲存] _table name_。  
   
 8.  在 **[選擇名稱]** 對話方塊中，輸入新資料表的名稱，並按一下 **[確定]**。  
   

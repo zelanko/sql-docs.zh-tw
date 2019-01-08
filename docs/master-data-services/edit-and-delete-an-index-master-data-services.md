@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0cf2439b7cd85f145d2326b8949e5e882c1e6089
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b4683e1cb859617481f235bbebcc128e812c7cf5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402493"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752040"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>編輯和刪除索引 (Master Data Services)
 

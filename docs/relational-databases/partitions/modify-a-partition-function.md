@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84c4c13cf1382fd757e2e7ad8832d6170edf3302
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b529ce2337fa92a5c5ae6fe3ed2810a8b6c7ec11
+ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391042"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414143"
 ---
 # <a name="modify-a-partition-function"></a>修改資料分割函數
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "52391042"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目來修改資料分割函數：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "52391042"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
@@ -119,7 +119,7 @@ ms.locfileid: "52391042"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  

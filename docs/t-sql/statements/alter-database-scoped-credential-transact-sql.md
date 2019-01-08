@@ -18,12 +18,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f29f5b662266a789f7aad6bdfb151df999e8ad67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26e845e9d4e7d1ad34e902b0d37fe60cda33f5f0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807896"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206927"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
  SECRET **='***secret***'**  
  指定外寄驗證所需的秘密。 從 Azure Blob 儲存體匯入檔案需要 *secret*。 針對其他用途，*secret* 可能為選擇性的。   
->  [!WARNING]
+> [!WARNING]
 >  SAS 金鑰值的開頭可能是 '?' (問號)。 當您使用 SAS 金鑰時，您必須移除前置字元 '?'。 否則您的工作可能會受阻。    
   
 ## <a name="remarks"></a>Remarks  

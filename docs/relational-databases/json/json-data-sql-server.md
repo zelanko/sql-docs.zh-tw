@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b772ebe8af00bee81c6034745b2e21311d09f23a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b25ee3d20432b5cba03fb745f8d95e51771619ec
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537404"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886933"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 資料
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -214,27 +214,27 @@ FOR JSON PATH
 
 ## <a name="use-cases-for-json-data-in-sql-server"></a>SQL Server 中 JSON 資料的使用案例
 
-SQL Server 與 Azure SQL Database 中的 JSON 支援，可讓您能結合關聯式概念與 NoSQL 概念。 您可以輕鬆地將關聯式資料轉換為半結構化的資料，反之亦然。 但 JSON 並非取代現有的關聯式模型。 以下是一些受益於 SQL Server 與 SQL Database 中 JSON 支援的特定使用案例。 如需詳細資訊，請參閱 [SQL Server 中的 JSON - 使用案例](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/)。
+SQL Server 與 Azure SQL Database 中的 JSON 支援，可讓您能結合關聯式概念與 NoSQL 概念。 您可以輕鬆地將關聯式資料轉換為半結構化的資料，反之亦然。 但 JSON 並非取代現有的關聯式模型。 以下是一些受益於 SQL Server 與 SQL Database 中 JSON 支援的特定使用案例。
 
 ### <a name="simplify-complex-data-models"></a>簡化複雜的資料模型
 
-請考慮將您的資料模型去除正規化，用 JSON 欄位來取代多個子資料表。 如需詳細資訊，請參閱[使用去除正規化模型來簡化資料存取](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/24/simplify-data-access-using-de-normalized-models/)。
+請考慮將您的資料模型去除正規化，用 JSON 欄位來取代多個子資料表。
 
 ### <a name="store-retail-and-e-commerce-data"></a>儲存零售及電子商務資料
 
-將具有各式各樣變化特質的產品相關資訊，儲存在非正規化模型中以保留彈性。 如需詳細資訊，請參閱[使用 JSON 於 SQL Server 中設計產品類別目錄](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/12/21/designing-product-catalogs-in-sql-server-2016-using-json/)以及[編製 JSON 產品類別目錄中資料的索引](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/12/21/indexing-data-in-json-product-catalogs/)。
+將具有各式各樣變化特質的產品相關資訊，儲存在非正規化模型中以保留彈性。
 
 ### <a name="process-log-and-telemetry-data"></a>處理記錄檔與遙測資料
 
-載入、查詢及分析儲存為 JSON 檔案的記錄資料，同時具備 TRANSACT-SQL 語言的所有功能。 如需詳細資訊，請參閱 [SQL Server 中的 JSON - 使用案例](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/)內的*記錄與遙測資料分析*。
+載入、查詢及分析儲存為 JSON 檔案的記錄資料，同時具備 TRANSACT-SQL 語言的所有功能。
 
 ### <a name="store-semi-structured-iot-data"></a>儲存半結構化的 IoT 資料
 
-當您需要即時的 IoT 資料分析時，請將內送資料直接載入資料庫，而非將其暫置於儲存體位置。 如需詳細資訊，請參閱[使用 Azure SQL Database 中的 Azure IoT 資料](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/23/working-with-azure-iot-data-in-azure-sql-database/)。
+當您需要即時的 IoT 資料分析時，請將內送資料直接載入資料庫，而非將其暫置於儲存體位置。
 
 ### <a name="simplify-rest-api-development"></a>簡化 REST API 開發
 
-輕鬆地將您資料庫中的關聯式資料，轉換為支援您的網站之 REST API 所使用的 JSON 格式。 如需詳細資訊，請參閱[利用 SQL Server 簡化現代化單一頁面應用程式的 REST API 開發](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/29/simplify-rest-api-development-modern-single-page-apps-sql-server/)。
+輕鬆地將您資料庫中的關聯式資料，轉換為支援您的網站之 REST API 所使用的 JSON 格式。
 
 ## <a name="combine-relational-and-json-data"></a>合併關聯式資料和 JSON 資料
 SQL Server 提供混合模型，讓您使用標準 Transact-SQL 語言儲存兼處理關聯式與 JSON 資料。 您可以使用完整的 Transact-SQL 在資料表中組織 JSON 文件的集合、建立它們之間的關聯性、結合儲存於資料表中的強類型純量資料行和儲存於 JSON 資料行中的彈性索引鍵/值組，以及在一或多個資料表中查詢純量和 JSON 值。
@@ -258,7 +258,7 @@ JSON 是文字格式，因此 JSON 文件都可以儲存在 SQL Database 的 `NV
 
 您可以將儲存在檔案中的資訊格式化為標準 JSON 或以行分隔的 JSON。 SQL Server 可匯入 JSON 檔案的內容，使用 **OPENJSON** 或 **JSON_VALUE** 函式對其剖析，並將其載入資料表。  
   
--   如果您的 JSON 文件儲存於本機檔案、共用網路磁碟機，或可透過 SQL Server 存取的 Azure 檔案位置，您就能使用大量匯入將 JSON 資料載入 SQL Server。 如需此案例的詳細資訊，請參閱[使用 OPENROWSET (BULK) 將 JSON 檔案匯入 SQL Server](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)。  
+-   如果您的 JSON 文件儲存於本機檔案、共用網路磁碟機，或可透過 SQL Server 存取的 Azure 檔案位置，您就能使用大量匯入將 JSON 資料載入 SQL Server。
   
 -   如果以行分隔的 JSON 檔案儲存在 Azure Blob 儲存體或 Hadoop 檔案系統中，您就可以使用 Polybase 來載入 JSON 文字、在 Transact-SQL 程式碼中對其剖析，並將其載入資料表。  
 
@@ -305,10 +305,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
   AS SalesOrderJsonData;  
 ```  
   
-您可以透過外部 REST 服務提供 JSON 變數的內容、從用戶端的 JavaScript 架構以參數形式加以傳送，或從外部檔案載入。 您可以輕鬆地將 JSON 文字的結果插入、更新或合併至 SQL Server 資料表。 如需此案例的詳細資訊，請參閱下列部落格文章：
--   [在 SQL Server 中匯入 JSON 資料](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/09/22/openjson-the-easiest-way-to-import-json-text-into-table/)
--   [SQL Server 2016 中的 Upsert JSON 文件](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/03/upsert-json-documents-in-sql-server-2016)
--   [將 GeoJSON 資料載入 SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/loading-geojson-data-into-sql-server/)  
+您可以透過外部 REST 服務提供 JSON 變數的內容、從用戶端的 JavaScript 架構以參數形式加以傳送，或從外部檔案載入。 您可以輕鬆地將 JSON 文字的結果插入、更新或合併至 SQL Server 資料表。
 
 ## <a name="analyze-json-data-with-sql-queries"></a>使用 SQL 查詢分析 JSON 資料  
 如果您基於報表用途而必須篩選或彙總 JSON 資料，可以使用 **OPENJSON**，將 JSON 轉換為關聯式格式。 然後使用標準 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和內建函式來準備報表。  
@@ -351,7 +348,7 @@ WHERE ProductID = 1
 FOR JSON AUTO  
 ```  
   
-此查詢的輸出是完全符合 OData 規格的 JSON 文字。格式設定和逸出是由 SQL Server 處理。 SQL Server 也能以任何格式將查詢結果格式化，例如 OData JSON 或 GeoJSON。 如需詳細資訊，請參閱 [Returning spatial data in GeoJSON format](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/returning-spatial-data-in-geojson-format-part-1) (以 GeoJSON 格式傳回空間資料)。  
+此查詢的輸出是完全符合 OData 規格的 JSON 文字。格式設定和逸出是由 SQL Server 處理。 SQL Server 也能以任何格式將查詢結果格式化，例如 OData JSON 或 GeoJSON。  
   
 ## <a name="test-drive-built-in-json-support-with-the-adventureworks-sample-database"></a>隨附 AdventureWorks 範例資料庫的內建 JSON 支援試用產品
 若要取得 AdventureWorks 範例資料庫，至少要從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=49502)下載資料庫檔案、資料庫範本和指令碼檔案。 
@@ -378,10 +375,6 @@ FOR JSON AUTO
   
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>深入了解 SQL Server 和 Azure SQL Database 中的 JSON  
   
-### <a name="microsoft-blog-posts"></a>Microsoft 部落格文章  
-  
-如需特定的解決方案、使用案例和建議，請參閱這些[部落格文章](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)，了解 SQL Server 和 Azure SQL Database 中的內建 JSON 支援。  
-
 ### <a name="microsoft-videos"></a>Microsoft 影片
 
 如需 SQL Server 和 Azure SQL Database 中內建 JSON 支援的觀看式簡介，請參閱下列影片：

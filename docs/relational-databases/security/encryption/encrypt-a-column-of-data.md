@@ -1,7 +1,7 @@
 ---
 title: 加密資料行 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -17,61 +17,52 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f104edbe976f516fac1d7439a454054d05ef7e30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f8238abce193ea7582c278d0c843f5f1b695fc8
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650366"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997540"
 ---
 # <a name="encrypt-a-column-of-data"></a>加密資料行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   本文描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中透過對稱加密來加密資料行。 這有時候稱為資料行層級加密或資料格層級加密。  
+
+## <a name="security"></a>Security  
   
- **本文內容**  
-  
--   **開始之前：**  
-  
-     [Security](#Security)  
-  
--   [若要使用 Transact-SQL 來加密資料行](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> 開始之前  
-  
-###  <a name="Security"></a> 安全性  
-  
-####  <a name="Permissions"></a> 權限  
+### <a name="permissions"></a>[權限]  
  需要下列權限，才能執行以下步驟：  
   
--   資料庫的 CONTROL 權限。  
+- 資料庫的 CONTROL 權限。  
   
--   資料庫的 CREATE CERTIFICATE 權限。 只有 Windows 登入、SQL Server 登入，以及應用程式角色可以擁有憑證。 群組和角色無法擁有憑證。  
+- 資料庫的 CREATE CERTIFICATE 權限。 只有 Windows 登入、SQL Server 登入，以及應用程式角色可以擁有憑證。 群組和角色無法擁有憑證。  
   
--   資料表的 ALTER 權限。  
+- 資料表的 ALTER 權限。  
   
--   金鑰的某種權限，而且絕不能被拒絕 VIEW DEFINITION 權限。  
+- 金鑰的某種權限，而且絕不能被拒絕 VIEW DEFINITION 權限。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+## <a name="using-transact-sql"></a>使用 Transact-SQL  
 
-若要使用下列範例，您必須有資料庫主要金鑰。 如果您的資料庫還沒有資料庫主要金鑰，請執行下列提供密碼的陳述式建立一個：   
-```  
+若要使用下列範例，您必須有資料庫主要金鑰。 如果您的資料庫還沒有資料庫主要金鑰，請執行下列提供密碼的陳述式建立一個：
+
+```sql  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  
 ```  
+
 一律備份您的資料庫主要金鑰。 如需資料庫主要金鑰的詳細資訊，請參閱 [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)。
 
-#### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>若要使用包含驗證器的對稱加密來加密資料行  
+### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>若要使用包含驗證器的對稱加密來加密資料行  
   
-1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
+1. 在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2. 在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3. 將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
-    ```  
+    ```sql
     USE AdventureWorks2012;  
-    
     GO  
   
     CREATE CERTIFICATE Sales09  
@@ -120,15 +111,15 @@ PASSWORD = '<some strong password>';
     GO  
     ```  
   
-#### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>若要使用簡單的對稱加密來加密資料行  
+### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>若要使用簡單的對稱加密來加密資料行  
   
-1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
+1. 在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-2.  在標準列上，按一下 **[新增查詢]**。  
+2. 在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3. 將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
-    ```  
+    ```sql
     USE AdventureWorks2012;  
     GO  
   
@@ -185,5 +176,3 @@ PASSWORD = '<some strong password>';
 -   [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)  
   
 -   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-symmetric-key-transact-sql.md)  
-  
-  
