@@ -14,12 +14,12 @@ ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a72bb27e95da931fac146fe6bc827b71cdb8460
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bde55939e974c6c879dcd126fac863ef0a866487
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828616"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520652"
 ---
 # <a name="current-record-and-size-of-recordset"></a>目前的記錄和資料錄集的大小
 本章節描述如何在此範例中找出目前的游標位置**Recordset**中[JScript 程式碼範例，以傳回資料錄集](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)。  
@@ -30,7 +30,7 @@ ms.locfileid: "47828616"
 ## <a name="size-of-recordset"></a>資料錄集的大小  
  若要了解的大小**Recordset**物件，取得的值**Recordset.RecordCount**屬性。 這個值是表示中的記錄數目的長整數**資料錄集**。 如果 Microsoft SQL server OLEDB 提供者傳回資料集，這個值會提供傳回資料列數目。 讀取**RecordCount**屬性已關閉**資料錄集**會造成錯誤。  
   
- 如果無法判別的記錄數目，則屬性的值為 – 1。  
+ 如果無法判別的記錄數目，則屬性的值為-1。  
   
  值**RecordCount**屬性也取決於提供者使用的資料指標類型的功能。 順向資料指標的值為-1。 靜態或索引鍵集資料指標的值是記錄中傳回的實際數目**資料錄集**物件。 動態資料指標值會是-1 或記錄，根據資料來源的實際數目。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47828616"
   
  在某些情況下，提供者或資料指標是無法判定**RecordCount**不含第一個資料來源中擷取所有記錄值。 若要確保正確計算，請呼叫**Recordset**。**MoveLast**方法之前呼叫**Recordset.RecordCount**。  
   
- 範例**Recordset**使用取得的物件[JScript 程式碼範例](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)使用順向資料指標，因此，呼叫**RecordCount**此物件上永遠會導致傳回 – 1。 如果您變更程式碼呼叫的一行**Recordset**。**開啟**方法，如下列範例所示**RecordCount**屬性會傳回實際擷取的記錄數目。  
+ 範例**Recordset**使用取得的物件[JScript 程式碼範例](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)使用順向資料指標，因此，呼叫**RecordCount**此物件上永遠會導致-1。 如果您變更程式碼呼叫的一行**Recordset**。**開啟**方法，如下列範例所示**RecordCount**屬性會傳回實際擷取的記錄數目。  
   
 ```  
 oRs.Open sSQL, sCnStr, adOpenStatic, adLockOptimistic, adCmdText   

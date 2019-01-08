@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG002601 error
@@ -13,12 +12,12 @@ ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 55a175f7ac4d7d00b84ea44cf04f34d81fcb35ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a3994aa8a442f0ec1522bdf2314e0d6023e94bcf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176100"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760241"
 ---
 # <a name="mssqleng002601"></a>MSSQL_ENG002601
     
@@ -30,7 +29,7 @@ ms.locfileid: "48176100"
 |事件識別碼|2601|  
 |事件來源|MSSQLSERVER|  
 |元件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|符號名稱|不適用|  
+|符號名稱|N/A|  
 |訊息文字|無法以唯一索引 '%.\*ls' 在物件 '%.*ls' 中插入重複的索引鍵資料列。|  
   
 ## <a name="explanation"></a>說明  
@@ -42,7 +41,7 @@ ms.locfileid: "48176100"
   
 -   已使用具有識別欄位的資料表，但並未適當管理資料行。  
   
--   在合併式複寫中，插入系統資料表 **MSmerge_contents**期間也可以發生此錯誤；引發的錯誤與以下類似：無法以唯一索引 'ucl1SycContents' 在物件 'MSmerge_contents' 中插入重複的索引鍵資料列。  
+-   在合併式複寫中，這項錯誤也可能在插入作業期間系統資料表**MSmerge_contents**; 引發的錯誤如下：無法以唯一索引 'ucl1syccontents'。' 物件 'MSmerge_contents' 中插入重複的索引鍵資料列  
   
 ## <a name="user-action"></a>使用者動作  
  必須依照錯誤產生的原因採取動作：  

@@ -1,24 +1,23 @@
 ---
-title: 步驟 3：部署第 6 課的封裝 | Microsoft Docs
+title: 步驟 3：測試第 6 課套件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ddacdc7ede5d65132912783464250ff5f0db6bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 027cea0f06d9a673c7c5216c548e907b6326544d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122028"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767451"
 ---
-# <a name="step-3-testing-the-lesson-6-package"></a>步驟 3：測試第 6 課的套件
+# <a name="step-3-testing-the-lesson-6-package"></a>步驟 3：測試第 6 課封裝
   在執行階段，您的封裝會從 VarFolderName 參數取得目錄屬性的值。  
   
  若要確認封裝在執行階段使用新值來更新 Directory 屬性，只要執行封裝即可。 因為只有 3 個範例資料檔會複製到新目錄，所以資料流程只會執行 3 次，而不是反覆執行原始資料夾的 14 個檔案。  
@@ -32,7 +31,7 @@ ms.locfileid: "48122028"
   
  **資料流程**  
   
- ![資料流](../../2014/tutorials/media/task3lesson6data.jpg "資料流程")  
+ ![資料流程](../../2014/tutorials/media/task3lesson6data.jpg "資料流程")  
   
 ### <a name="to-test-the-lesson-6-tutorial-package"></a>若要測試第 6 課的教學課程封裝  
   
@@ -41,6 +40,6 @@ ms.locfileid: "48122028"
 2.  在封裝完成執行之後，在 [偵錯] 功能表上，按一下 [停止偵錯]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 4：部署第 6 課的套件](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
+ [步驟 4:部署第 6 課封裝](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
   
   

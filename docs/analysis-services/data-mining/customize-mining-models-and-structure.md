@@ -1,5 +1,5 @@
 ---
-title: 自訂採礦模型和結構 |Microsoft 文件
+title: 自訂採礦模型和結構 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 57679e535c796f018cd535773e3766b54243e63e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7c4c951d294ab57e19b4114380fd4692b9fc8151
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019595"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411365"
 ---
 # <a name="customize-mining-models-and-structure"></a>自訂採礦模型和結構
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,14 +49,14 @@ ms.locfileid: "34019595"
   
 -   移除擁有許多唯一值的資料行或者實際上是參考資料而且對分析無用處的資料行，例如地址或中間名。  
   
- 您不需要實際從採礦結構中移除資料行，只需要將資料行標示為 **[忽略]**。 該資料行就會從採礦模型中移除，但是依然可由結構中的其他採礦模型所使用或是在鑽研查詢中參考。  
+ 您不需要實際從採礦結構中，移除資料行您只可以加上旗標做為資料行**忽略**。 該資料行就會從採礦模型中移除，但是依然可由結構中的其他採礦模型所使用或是在鑽研查詢中參考。  
   
 ### <a name="creating-aliases-for-model-columns"></a>建立模型資料行的別名  
  當 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 建立採礦模型時，它會使用採礦結構中存在的相同資料行名稱。 您可以將別名加入至採礦模型中的任何資料行。 這樣做可能會讓人較容易了解資料行的內容或使用方式，或者縮短名稱以便建立查詢。 當您想要建立資料行複本，並將它命名為具描述性的名稱時，別名也會很有幫助。  
   
  您會藉由編輯採礦模型資料行的 **Name** 屬性來建立別名。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會繼續使用原始名稱當做資料行的識別碼，而您針對 **[Name]** 所輸入的新值則會成為資料行別名，而且會顯示在資料行使用方式旁的方格中 (用括號括住)。  
   
- ![別名在採礦模型資料行](../../analysis-services/data-mining/media/modelcolumnalias-income.gif "別名在採礦模型資料行")  
+ ![別名在採礦模型資料行](../../analysis-services/data-mining/media/modelcolumnalias-income.gif "別名採礦模型資料行")  
   
  此圖形會顯示相關的模型，這些模型具有採礦結構資料行的多個複本 (全都與收入相關)。 每個結構資料行複本都已經透過不同的方式離散化。 此圖表中的每個模型與採礦結構使用不同的資料行。不過，為了方便比較模型之間的資料行，每個模型中的資料行已經重新命名為 [**Income**]。  
   
@@ -87,14 +87,14 @@ ms.locfileid: "34019595"
   
  每一個演算法類型的主題也會列出可以搭配以該演算法為根據之模型一起使用的預測函數。  
   
-|屬性名稱|適用對象|  
+|屬性名稱|適用於|  
 |-------------------|----------------|  
 |AUTO_DETECT_PERIODICITY|[Microsoft 時間序列演算法技術參考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
 |CLUSTER_COUNT|[Microsoft 群集演算法技術參考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 時序群集演算法技術參考](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)|  
 |CLUSTER_SEED|[Microsoft 群集演算法技術參考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)|  
 |CLUSTERING_METHOD|[Microsoft 群集演算法技術參考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)|  
 |COMPLEXITY_PENALTY|[Microsoft 決策樹演算法技術參考](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 時間序列演算法技術參考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
-|FORCE_REGRESSOR|[Microsoft 決策樹演算法技術參考](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 線性迴歸演算法技術參考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [模型旗標 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
+|FORCE_REGRESSOR|[Microsoft 決策樹演算法技術參考](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 線性迴歸演算法技術參考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [模型旗標 &#40;資料採礦&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
 |FORECAST_METHOD|[Microsoft 時間序列演算法技術參考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
 |HIDDEN_NODE_RATIO|[Microsoft 類神經網路演算法技術參考](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)|  
 |HISTORIC_MODEL_COUNT|[Microsoft 時間序列演算法技術參考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
@@ -126,7 +126,7 @@ ms.locfileid: "34019595"
 |STOPPING_TOLERANCE|[Microsoft 群集演算法技術參考](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [實體架構 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [實體架構 &#40;Analysis Services – 資料採礦&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
   
   

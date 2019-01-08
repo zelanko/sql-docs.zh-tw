@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - recovery [SQL Server replication], merge replication
@@ -16,12 +15,12 @@ ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 01e0d1d3214d9502d3c4a8db91cd16617dd9472a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4d1bdc1f39e7e8e40b75b02bcb258f23ee411a7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220888"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757478"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>備份與還原合併式複寫的策略
   對於合併式複寫，請定期備份下列資料庫：  
@@ -55,14 +54,14 @@ ms.locfileid: "48220888"
   
 -   如果發行集未篩選，您可以透過與最新的「訂閱者」進行同步處理，使發行集資料庫處於最新狀態。  
   
--   如果發行集已篩選，則可能無法使發行集資料庫處於最新狀態。 請考慮進行資料分割的資料表，這樣可以使每個訂閱僅接收單一地區 (「北區」、「南區」、「東區」和「西區」) 客戶資料。 如果每個資料分割至少有一個「訂閱者」，則與每個資料分割的「訂閱者」進行同步處理就可使發行集資料庫處於最新狀態。 不過，如果在「西區」資料分割中的資料未複寫到任何「訂閱者」(舉例來說)，則「發行者」端的此資料將無法處於最新狀態。  
+-   如果發行集已篩選，則可能無法使發行集資料庫處於最新狀態。 請考慮已分割，每個訂用帳戶接收只會針對單一區域的客戶資料的資料表：北美東部、 美國南部、 和西部。 如果每個資料分割至少有一個「訂閱者」，則與每個資料分割的「訂閱者」進行同步處理就可使發行集資料庫處於最新狀態。 不過，如果在「西區」資料分割中的資料未複寫到任何「訂閱者」(舉例來說)，則「發行者」端的此資料將無法處於最新狀態。  
   
 > [!IMPORTANT]  
 >  同步處理發行集資料庫與訂閱資料庫，可能會導致發行的資料表還原到的時間點比從備份處還原的其他未發行的資料表的時間點要新。  
   
  如果同步處理的「訂閱者」執行的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本早於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，則訂閱不可是匿名的，而必須是客訂閱或主訂閱 (在之前的版本中稱為本機訂閱與全域訂閱)。  
   
- 若要同步處理訂閱，請參閱＜ [同步處理發送訂閱](../synchronize-a-push-subscription.md) ＞和＜ [同步處理提取訂閱](../synchronize-a-pull-subscription.md) ＞。  
+ 若要同步處理訂閱，請參閱＜ [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) ＞和＜ [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md)＞。  
   
 ### <a name="reinitializing-all-subscriptions"></a>重新初始化所有訂閱  
  重新初始化所有訂閱可確保所有「訂閱者」的狀態均與還原的發行集資料庫保持一致。 若要將整個拓撲返回到給定發行集資料庫備份表示的之前狀態，則應使用此方法。 例如，如果您要將發行集資料庫還原到更早的時間點，即作為一種從錯誤執行的批次作業復原的機制，則您可能要重新初始化所有訂閱。  

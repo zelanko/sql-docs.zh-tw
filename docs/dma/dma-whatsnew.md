@@ -14,12 +14,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 094c49afc97436983417e1916091b150a50d8c4b
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 60145b2433d7b9d2b6cda4453e2d91599b865a86
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643946"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410405"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>資料移轉小幫手的新功能
 本文章列出新增的項目在每個版本的 Data Migration Assistant (DMA)。
@@ -33,9 +33,9 @@ DMA 的 v4.1 版本引進了支援的內部部署 SQL Server 資料庫移轉至 
 
 - **相容性問題**。 DMA 也會識別下列領域的相關的相容性問題：
 
-    - 重大變更： 可能會中斷移轉到目標資料庫的功能特定的結構描述物件。  我們建議修正資料庫移轉後的這些結構描述物件。
-    - 行為變更： 報告的結構描述物件可能會繼續運作，但它們可能會出現不同的行為，例如效能降低。
-    - 資訊的問題： 這些物件不會影響移轉，但可能已被取代的 SQL Server 版本的功能。
+    - 重大變更：可能會中斷移轉到目標資料庫的功能特定的結構描述物件。  我們建議修正資料庫移轉後的這些結構描述物件。
+    - 行為變更：報告的結構描述物件可能會繼續運作，但它們可能會出現不同的行為，例如效能降低。
+    - 告知性問題：這些物件不會影響移轉，但可能已被取代的 SQL Server 版本的功能。
 
 完成評估之後，使用我們[Azure 資料庫移轉服務](https://azure.microsoft.com/services/database-migration/)(DMS) 來執行的 SQL Server 資料庫到 Azure SQL Database 受控執行個體移轉。  同時支援 DMS[離線](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance)（單次） 和[線上](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online)（最少停機時間） 的資料庫移轉至 Azure SQL Database 受控執行個體。
 

@@ -30,12 +30,12 @@ ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9540e28716ef81717782e05aa98f173b3e47733f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e640f495d216495141131519e0b9aa51d48de4d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138088"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406005"
 ---
 # <a name="using-xml-data-types"></a>使用 XML 資料類型
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 推出的 **xml** 資料類型可讓您將 XML 文件和片段儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中。 **xml** 資料類型是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的內建資料類型，而且在某些狀況下類似於其他內建類型，例如 **int** 和 **varchar**。 如果是其他內建類型，當您建立資料表作為變數類型、參數類型、函式傳回型別，或是在 CAST 和 CONVERT 函式中時，可以使用 **xml** 資料類型作為資料行類型。  
@@ -87,10 +87,10 @@ ms.locfileid: "48138088"
 |DBTYPE_BSTR|通過<sup>6,10</sup>|N/A <sup>2</sup>|沒有問題 <sup>3</sup>|N/A <sup>2</sup>|  
 |DBTYPE_STR|確定<sup>6、 9、 10</sup>|N/A <sup>2</sup>|沒有問題<sup>5, 6, 12</sup>|N/A <sup>2</sup>|  
 |DBTYPE_IUNKNOWN|透過 **ISequentialStream** 的位元組資料流<sup>7</sup>|N/A <sup>2</sup>|透過 **ISequentialStream** 的位元組資料流<sup>11</sup>|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|通過<sup>6,7</sup>|N/A <sup>2</sup>|不適用|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|通過<sup>6,7</sup>|N/A <sup>2</sup>|N/A|N/A <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|通過<sup>6,10</sup>|N/A <sup>2</sup>|沒有問題<sup>3</sup>|N/A <sup>2</sup>|  
   
- <sup>1</sup>如果使用 **ICommandWithParameters::SetParameterInfo** 指定 DBTYPE_XML 以外的伺服器類型，而且存取子類型為 DBTYPE_XML，則在執行陳述式 (DB_E_ERRORSOCCURRED，參數狀態為 DBSTATUS_E_BADACCESSOR) 時會發生錯誤；否則，資料會傳送到伺服器，但是伺服器會傳回錯誤，指出沒有從 XML 隱含地轉換為參數的資料類型。  
+ <sup>1</sup>如果伺服器類型與指定 DBTYPE_XML 以外**icommandwithparameters:: Setparameterinfo**和存取子類型為 DBTYPE_XML，執行陳述式時，就會發生錯誤 (DB_E_ERRORSOCCURRED，參數狀態為 DBSTATUS_E_BADACCESSOR）;否則資料會傳送到伺服器，但是伺服器會傳回錯誤，指出從 XML 參數的資料類型的隱含轉換。  
   
  <sup>2</sup>超出本主題的範圍。  
   
@@ -212,7 +212,7 @@ ms.locfileid: "48138088"
 #### <a name="the-irowsetchange-interface"></a>IRowsetChange 介面  
  取用者可以在資料行中更新 XML 結構描述的方式有兩種。 第一種方式是透過提供者所建立的儲存物件 **ISequentialStream**。 取用者可以呼叫 **ISequentialStream::Write** 方法來直接更新提供者所傳回的 XML 執行個體。  
   
- 第二個方式是透過 **IRowsetChange::SetData** 或 **IRowsetChange::InsertRow** 方法。 利用這個方式，取用者緩衝區中的 XML 執行個體可以在類型 DBTYPE_BSTR、DBTYPE_WSTR、DBTYPE_VARIANT、DBTYPE_XML 或 DBTYPE_IUNKNOWN 的繫結中指定。  
+ 第二個方式是透過 **IRowsetChange::SetData** 或 **IRowsetChange::InsertRow** 方法。 這種方法，可以在類型 DBTYPE_BSTR、 DBTYPE_WSTR、 DBTYPE_VARIANT、 DBTYPE_XML 或 DBTYPE_IUNKNOWN 的繫結中指定取用者緩衝區中的 XML 執行個體。  
   
  如果是 DBTYPE_BSTR、DBTYPE_WSTR 或 DBTYPE_VARIANT，提供者會將位於取用者緩衝區中的 XML 執行個體儲存到適當的資料行中。  
   
@@ -251,19 +251,19 @@ ms.locfileid: "48138088"
 ### <a name="supported-conversions"></a>支援的轉換  
  從 SQL 轉換成 C 資料類型時，SQL_C_WCHAR、SQL_C_BINARY 和 SQL_C_CHAR 全都可以轉換成 SQL_SS_XML，其條件如下：  
   
--   SQL_C_WCHAR：格式為 UTF-16，無位元組順序標示 (BOM)，有 Null 結束。  
+-   SQL_C_WCHAR:格式為 utf-16，無位元組順序標示 (BOM)，以 null 結束。  
   
--   SQL_C_BINARY：格式為 UTF-16，無 Null 結束。 BOM 會加入到接收自伺服器的資料中。 如果伺服器傳回空字串，仍然會將 BOM 傳回到應用程式。 如果緩衝區長度為奇數位元組，則會正確地截斷資料。 如果在區塊中傳回整個值，可以串連這些區塊以重新組成正確的值。  
+-   SQL_C_BINARY:格式為 utf-16，無 null 結束。 BOM 會加入到接收自伺服器的資料中。 如果伺服器傳回空字串，仍然會將 BOM 傳回到應用程式。 如果緩衝區長度為奇數位元組，則會正確地截斷資料。 如果在區塊中傳回整個值，可以串連這些區塊以重新組成正確的值。  
   
--   SQL_C_CHAR：格式為以用戶端字碼頁搭配 Null 結束編碼的多位元組字元。 從伺服器提供的 UTF-16 進行轉換可能會造成資料損毀，因此，強烈建議您不要使用此繫結。  
+-   SQL_C_CHAR:格式為用戶端字碼頁搭配 null 結束編碼的多位元組字元。 從伺服器提供的 UTF-16 進行轉換可能會造成資料損毀，因此，強烈建議您不要使用此繫結。  
   
  當從 C 轉換成 SQL 資料類型時，SQL_C_WCHAR、SQL_C_BINARY 和 SQL_C_CHAR 全都可以轉換成 SQL_SS_XML，其條件如下：  
   
--   SQL_C_WCHAR：BOM 永遠會加入到傳送至伺服器的資料中。 如果資料已經以 BOM 開頭，這會在緩衝區的開頭產生兩個 BOM。 伺服器會使用第一個 BOM 將編碼識別為 UTF-16，然後再捨棄它。 第二個 BOM 會解譯為零寬度的不分行空格字元。  
+-   SQL_C_WCHAR:BOM 永遠會加入至傳送至伺服器的資料。 如果資料已經以 BOM 開頭，這會在緩衝區的開頭產生兩個 BOM。 伺服器會使用第一個 BOM 將編碼識別為 UTF-16，然後再捨棄它。 第二個 BOM 會解譯為零寬度的不分行空格字元。  
   
--   SQL_C_BINARY：沒有執行任何轉換，而且資料會以「現況」傳遞到伺服器。 UTF-16 資料必須以 BOM 開頭；如果不是，伺服器可能無法正確辨識編碼。  
+-   SQL_C_BINARY:不會執行轉換，而資料會傳遞至伺服器 」 現況。 」 UTF-16 資料必須以 BOM 開頭；如果不是，伺服器可能無法正確辨識編碼。  
   
--   SQL_C_CHAR：用戶端上的資料會轉換為 UTF-16，並傳送到伺服器，做為 SQL_C_WCHAR (包括 BOM 的加入項目)。 如果 XML 沒有在用戶端字碼頁中編碼，這可能會造成資料損毀。  
+-   SQL_C_CHAR:資料是在用戶端轉換為 utf-16，並傳送至伺服器，就如同 SQL_C_WCHAR （包括 BOM 加入）。 如果 XML 沒有在用戶端字碼頁中編碼，這可能會造成資料損毀。  
   
  XML 標準需要以 UTF-16 編碼的 XML 來開始位元組順序標示 (BOM)，UTF-16 字元程式碼 0xFEFF。 使用 SQL_C_BINARY 繫結時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端不需要或加入 BOM，因為繫結所默許的編碼。 其用意在於提供處理其他 XML 處理器和儲存系統的單純性。 在此情況下，BOM 應該以 UTF-16 編碼的 XML 呈現，而且應用程式不需要在意實際編碼，因為多數 XML 處理器 (包括 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) 都會檢查值的前幾個位元組來推算編碼。 從接收的 XML 資料[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端使用 SQL_C_BINARY 繫結會一律以編碼 utf-16 BOM 而內嵌的編碼宣告。  
   

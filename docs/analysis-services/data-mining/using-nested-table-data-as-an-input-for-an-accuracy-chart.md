@@ -1,5 +1,5 @@
 ---
-title: 使用巢狀的資料表資料做為輸入，精確度圖表 |Microsoft 文件
+title: 做為輸入使用巢狀的資料表資料，精確度圖表 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 68ab3e189bcf0637003f4ddae41e5f0209988241
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d4217962e6bb899cbf2a838c5214eb35bb576be0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015675"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505315"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>使用巢狀資料表當做精確度圖表的輸入
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34015675"
   
 3.  在 **[選取要用於精確度圖表的資料集]** 中選取 **[指定不同的資料集]** 選項。  
   
-4.  按一下瀏覽按鈕 **(…)**，即可從目前伺服器上的資料來源檢視清單選擇外部資料集。  
+4.  按一下 瀏覽按鈕 **（...）** 從目前的伺服器上的資料來源檢視的清單選擇外部資料集。  
   
 5.  按一下 [選取案例資料表] 。 在 **[選取資料表]** 對話方塊中，從資料來源檢視中選取包含案例資料的資料表，然後按一下 **[確定]**。  
   

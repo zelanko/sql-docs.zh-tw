@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - objects [SQL Server]
@@ -22,12 +21,12 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a766dcae2ac4e5fdba3fad3390c2a805177e1c17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49e86c8b47a3a0de48a0138d96cec22d585901c6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077578"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771770"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量規格
   下表指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件中已定義之各種物件的大小和數目上限。 若要導覽至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 技術的資料表，請按一下其連結：  
@@ -45,21 +44,21 @@ ms.locfileid: "48077578"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 物件 (object)|大小/數目上限[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]（32 位元）|大小/數目上限 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 位元)|  
 |---------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|  
-|批次大小<br /><br /> 注意： 網路封包大小是用來溝通應用程式與關聯式的表格式資料流 (TDS) 封包大小[!INCLUDE[ssDE](../includes/ssde-md.md)]。 預設封包大小是 4 KB，由 network packet size 組態選項所控制。|65,536 * 網路封包大小|65,536 * 網路封包大小|  
+|批次大小<br /><br /> 注意：網路封包大小是表格式資料流 (TDS) 封包的大小，這些封包用於應用程式與關聯式 [!INCLUDE[ssDE](../includes/ssde-md.md)]之間的通訊。 預設封包大小是 4 KB，由 network packet size 組態選項所控制。|65,536 * 網路封包大小|65,536 * 網路封包大小|  
 |每個短字串資料行的位元組數|8,000|8,000|  
 |每個 GROUP BY、ORDER BY 的位元組數|8,060|8,060|  
-|每個索引鍵的位元組數<br /><br /> 注意： 任何索引鍵中的位元組數目上限不能超過 900 中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 假設這些資料行內從未插入超過 900 位元組的資料，則您可使用大小上限累加超過 900 的可變長度資料行定義索引鍵。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，您可以在非叢集索引中包含非索引鍵資料行，以避免達到最大索引鍵大小 900 個位元組。|900|900|  
+|每個索引鍵的位元組數<br /><br /> 注意：任何索引鍵中的位元組數目上限不能超過 900 中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 假設這些資料行內從未插入超過 900 位元組的資料，則您可使用大小上限累加超過 900 的可變長度資料行定義索引鍵。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，您可以在非叢集索引中包含非索引鍵資料行，以避免達到最大索引鍵大小 900 個位元組。|900|900|  
 |每個外部索引鍵的位元組數|900|900|  
 |每個主索引鍵的位元組|900|900|  
 |每個資料列的位元組數<br /><br /> 注意：<br />        [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援資料列溢位儲存，好讓可變長度資料行可以非資料列形式推送。 只有 24 位元組的根會儲存在從資料列發送之可變長度資料行的主要記錄中；因此，有效資料列限制高於舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》中的＜超過 8 KB 的資料列溢位資料＞主題。|8,060|8,060|  
-|記憶體最佳化資料表中每個資料列的位元組數<br /><br /> 注意：<br />        [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體內部 OLTP 不支援資料列溢位儲存體。 可變長度資料行不是發送的資料列。 這會限制您可以在記憶體最佳化資料表中指定至最大資料列大小的可變長度資料行之最大寬度。 如需詳細資訊，請參閱 [記憶體最佳化資料表中的資料表和資料列大小](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)。|不支援|8,060|  
+|記憶體最佳化資料表中每個資料列的位元組數<br /><br /> 注意：<br />        [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體內部 OLTP 不支援資料列溢位儲存。 可變長度資料行不是發送的資料列。 這會限制您可以在記憶體最佳化資料表中指定至最大資料列大小的可變長度資料行之最大寬度。 如需詳細資訊，請參閱 [記憶體最佳化資料表中的資料表和資料列大小](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)。|不支援|8,060|  
 |預存程序之來源文字的位元組數|批次大小或 250 MB 當中較小者|批次大小或 250 MB 當中較小者|  
 |每個 `varchar(max)`、`varbinary(max)`、`xml`、`text` 或 `image` 資料行的位元組數|2^31-1|2^31-1|  
 |每個 `ntext` 或 `nvarchar(max)` 資料行的字元數|2^30-1|2^30-1|  
 |每份資料表的叢集索引數|1|1|  
 |GROUP BY、ORDER BY 的資料行|僅受限於位元組數|僅受限於位元組數|  
 |GROUP BY WITH CUBE 或 WITH ROLLUP 陳述式中的資料行或運算式|10|10|  
-|每個索引鍵的資料行數<br /><br /> 注意： 如果資料表包含一或多個 XML 索引，使用者資料表的叢集索引鍵是限制為 15 個資料行因為 XML 資料行會加入主要 XML 索引的叢集索引鍵。 在  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，您可以在以避免限制最多 16 個索引鍵資料行的非叢集索引包含非索引鍵資料行。 如需詳細資訊，請參閱 [建立內含資料行的索引](../relational-databases/indexes/create-indexes-with-included-columns.md)。|16|16|  
+|每個索引鍵的資料行數<br /><br /> 注意：如果資料表包含一個或多個 XML 索引，則使用者資料表的叢集索引鍵限制為 15 個資料行，因為 XML 資料行會加入主要 XML 索引的叢集索引鍵中。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中，您可以在非叢集索引中包含非索引鍵資料行，以避免達到最多 16 個索引鍵資料行的限制。 如需詳細資訊，請參閱 [建立內含資料行的索引](../relational-databases/indexes/create-indexes-with-included-columns.md)。|16|16|  
 |每個外部索引鍵的資料行數|16|16|  
 |每個主索引鍵的資料行數|16|16|  
 |每個非寬型資料表的資料行數|1,024|1,024|  
@@ -76,28 +75,28 @@ ms.locfileid: "48077578"
 |檔案大小 (記錄檔)|2 TB|2 TB|  
 |每個資料庫之記憶體最佳化資料的資料檔案|不支援|4.096|  
 |記憶體最佳化資料之每個資料檔案的差異檔案|不支援|1|  
-|每個資料表的外部索引鍵資料表參考數<br /><br /> 注意： 雖然資料表可以包含無限的數量的 FOREIGN KEY 條件約束，建議的最大值為 253。 根據主控 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的硬體組態而定，指定額外的 FOREIGN KEY 條件約束對於查詢最佳化工具的處理可能會耗費極大成本。|253|253|  
+|每個資料表的外部索引鍵資料表參考數<br /><br /> 注意：雖然資料表可以包含無限的數量的 FOREIGN KEY 條件約束，建議的最大值為 253。 根據主控 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的硬體組態而定，指定額外的 FOREIGN KEY 條件約束對於查詢最佳化工具的處理可能會耗費極大成本。|253|253|  
 |識別碼長度 (字元數)|128|128|  
 |每部電腦的執行個體數|所有的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本在獨立伺服器上可支援 50 個執行個體。<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 25 個執行個體在容錯移轉叢集為叢集安裝，使用共用的叢集磁碟做為預存選項時支援[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]支援 50 個執行個體在容錯移轉叢集，如果您選擇 SMB 檔案共用作為您的叢集安裝的儲存體選項如需詳細資訊，請參閱 <<c2> [ 硬體和軟體需求，安裝 SQL Server 2014](install/hardware-and-software-requirements-for-installing-sql-server.md)。|單機伺服器為 50 個執行個體。<br /><br /> 當使用共用叢集磁碟做為叢集安裝的預存選項時，在容錯移轉叢集上可支援 25 個執行個體，若您選擇 SMB 檔案共用為叢集安裝的儲存選項， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 則可在容錯移轉叢集上支援 50 個執行個體。|  
 |每個記憶體最佳化資料表的索引|不支援|8|  
-|包含 SQL 陳述式的字串長度 (批次大小)<br /><br /> 注意： 網路封包大小是用來溝通應用程式與關聯式的表格式資料流 (TDS) 封包大小[!INCLUDE[ssDE](../includes/ssde-md.md)]。 預設封包大小是 4 KB，由 network packet size 組態選項所控制。|65,536 * 網路封包大小|65,536 * 網路封包大小|  
+|包含 SQL 陳述式的字串長度 (批次大小)<br /><br /> 注意：網路封包大小是表格式資料流 (TDS) 封包的大小，這些封包用於應用程式與關聯式 [!INCLUDE[ssDE](../includes/ssde-md.md)]之間的通訊。 預設封包大小是 4 KB，由 network packet size 組態選項所控制。|65,536 * 網路封包大小|65,536 * 網路封包大小|  
 |每個連接的鎖定數|每部伺服器的最大鎖定數|每部伺服器的最大鎖定數|  
-|每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]<br /><br /> 注意： 此值是針對靜態鎖定配置。 動態鎖定僅受限於記憶體。|最多為 2,147,483,647|僅受限於記憶體|  
-|巢狀預存程序層級<br /><br /> 注意： 如果預存程序存取超過 64 個資料庫或以交錯方式超過 2 的資料庫，您會收到錯誤。|32|32|  
+|每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]<br /><br /> 注意：這個值是針對靜態鎖定配置。 動態鎖定僅受限於記憶體。|最多為 2,147,483,647|僅受限於記憶體|  
+|巢狀預存程序層級<br /><br /> 注意：如果預存程序存取超過 64 個資料庫或以交錯方式超過 2 個資料庫，您會收到錯誤訊息。|32|32|  
 |巢狀子查詢|32|32|  
 |巢狀觸發程序層級|32|32|  
 |每份資料表的非叢集索引數|999|999|  
-|當下列任何一個存在時，GROUP BY 子句內相異運算式的數目：CUBE、ROLLUP、GROUPING SETS、WITH CUBE、WITH ROLLUP|32|32|  
+|GROUP BY 子句中有下列任一項時的不同運算式數目：CUBE、 ROLLUP、 GROUPING SETS、 WITH CUBE、 WITH ROLLUP|32|32|  
 |GROUP BY 子句中由運算子產生的群組集合數目|4,096|4,096|  
 |每個預存程序的參數數目|2,100|2,100|  
 |每個使用者定義函數的參數數目|2,100|2,100|  
 |每份資料表的 REFERENCES|253|253|  
 |每份資料表的資料列數|受限於可用的儲存體|受限於可用的儲存體|  
-|每個資料庫的資料表數<br /><br /> 注意： 資料庫物件包括資料表、 檢視、 預存程序、 使用者定義函數、 觸發程序、 規則、 預設值和條件約束等物件。 資料庫中所有物件數的總和不得超過 2,147,483,647。|受限於資料庫的物件數|受限於資料庫的物件數|  
+|每個資料庫的資料表數<br /><br /> 注意：資料庫物件包含像資料表、檢視、預存程序、使用者定義函數、觸發程序、規則、預設值和條件約束等物件。 資料庫中所有物件數的總和不得超過 2,147,483,647。|受限於資料庫的物件數|受限於資料庫的物件數|  
 |每份分割區資料表或索引的分割區數|1,000<br /><br /> **\*\* 重要\* \*** 建立超過 1,000 個分割區資料表或索引可以在 32 位元系統上，但不是支援。|15,000|  
 |非索引資料行的統計資料|30,000|30,000|  
 |每個 SELECT 陳述式的資料表數|僅受限於可用的資源|僅受限於可用的資源|  
-|每份資料表的觸發程序數<br /><br /> 注意： 資料庫物件包括資料表、 檢視、 預存程序、 使用者定義函數、 觸發程序、 規則、 預設值和條件約束等物件。 資料庫中所有物件數的總和不得超過 2,147,483,647。|受限於資料庫的物件數|受限於資料庫的物件數|  
+|每份資料表的觸發程序數<br /><br /> 注意：資料庫物件包含像資料表、檢視、預存程序、使用者定義函數、觸發程序、規則、預設值和條件約束等物件。 資料庫中所有物件數的總和不得超過 2,147,483,647。|受限於資料庫的物件數|受限於資料庫的物件數|  
 |每個 UPDATE 陳述式 (寬型資料表) 的資料行數|4096|4096|  
 |使用者連線|32,767|32,767|  
 |XML 索引|249|249|  

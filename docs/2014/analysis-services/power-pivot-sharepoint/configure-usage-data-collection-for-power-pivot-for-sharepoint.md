@@ -11,17 +11,17 @@ ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12943c96c64c1a5d20ee94c76a9701fc7a983d85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f3544ce4297117be11b3ba68821e3b621fbc400
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083818"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411275"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>設定使用量資料收集的對象 (PowerPivot for SharePoint
   使用量資料收集是伺服陣列層級的 SharePoint 功能。 PowerPivot for SharePoint 會使用並擴充此系統來支援 PowerPivot 管理儀表板中的報表，以便顯示 PowerPivot 資料與服務的使用方式。 根據您安裝 SharePoint 的方式而定，可能會關閉伺服陣列的使用量資料收集。 伺服陣列管理員必須啟用使用量記錄，以建立會顯示在 PowerPivot 管理儀表板中的使用量資料。  
   
- 如需有關 PowerPivot 管理儀表板中使用量資料的資訊，請參閱[PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)。  
+ 如需有關 PowerPivot 管理儀表板中使用量資料的詳細資訊，請參閱＜ [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)＞。  
   
  **本主題內容：**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48083818"
     |**PowerPivot 連接**|PowerPivot 連接事件是用來監視以使用者身分建立的 PowerPivot 伺服器連接。|  
     |**PowerPivot 載入資料使用量**|PowerPivot 載入資料使用量是用來監視將 PowerPivot 資料載入伺服器記憶體的要求。 從內容資料庫或從快取載入的 PowerPivot 資料檔會產生載入事件。|  
     |**PowerPivot 卸載資料使用量**|PowerPivot 卸載資料使用量是用來監視在一段時間閒置後，卸載 PowerPivot 資料來源的要求。 將 PowerPivot 資料來源快取到磁碟將會報告成卸載事件。|  
-    |**PowerPivot 查詢使用量**|PowerPivot 查詢使用量用來監視資料的查詢處理時間中載入[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]執行個體。|  
+    |**PowerPivot 查詢使用量**|PowerPivot 查詢使用量是用來監視在 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 執行個體中載入之資料的查詢處理時間。|  
   
     > [!NOTE]  
     >  伺服器健全狀況和資料重新整理作業也會產生使用量資料，但是沒有任何事件與這些處理序相關聯。  
@@ -87,9 +87,9 @@ ms.locfileid: "48083818"
 ##  <a name="jobs"></a> 設定用於使用量資料收集的計時器工作  
  PowerPivot 伺服器健全狀況與使用量資料會透過兩個計時器工作，移到使用量資料收集系統中的不同位置：  
   
--   「Microsoft SharePoint Foundation 使用量資料匯入」計時器工作會將 PowerPivot 使用量資料移到 PowerPivot 服務應用程式資料庫。  
+-   「 Microsoft SharePoint Foundation 使用量資料匯入 」 計時器工作會將 PowerPivot 使用量移到 PowerPivot 服務應用程式資料庫。  
   
--   「PowerPivot 管理儀表板處理」計時器工作會將該資料移到做為內建系統管理報表之資料來源的 PowerPivot 活頁簿。  
+-   「 PowerPivot 管理儀表板處理計時器工作 」 的內建的系統管理報表的資料來源的 PowerPivot 活頁簿的資料。  
   
  如果您需要更頻繁地重新整理出現在 PowerPivot 管理儀表板中的系統管理報表，請按照以下的步驟進行。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48083818"
   
 6.  按一下 **[立即執行]**。  
   
-7.  檢查報表以檢視重新整理資料。 如需詳細資訊，請參閱 < [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)。  
+7.  檢查報表以檢視重新整理資料。 如需詳細資訊，請參閱＜ [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)＞。  
   
 ##  <a name="confighist"></a> 限制儲存使用量資料記錄的時間長度  
  事件 (連接、載入、卸載及視需要的查詢處理) 及資料重新整理 (已排程的資料處理) 都會儲存使用量資料記錄。 雖然使用量資料是透過 SharePoint 使用量資料收集系統來收集，但是會將報表資料移到 PowerPivot 應用程式資料庫及報表資料庫，以獲得較長期的儲存。 使用量資料記錄設定會控制使用量資料在 PowerPivot 應用程式資料庫中保留的時間長度。 相同的限制會同樣地套用至相同 PowerPivot 服務應用程式資料庫中所有類型之儲存的使用量資料。  
@@ -183,7 +183,7 @@ ms.locfileid: "48083818"
 |設定|預設值|類型|有效範圍|  
 |-------------|-------------------|----------|-----------------|  
 |**Analysis Services 使用量事件** (連接、載入、卸載、要求)|\<啟用 >|布林|啟用或停用這些值。|  
-|**查詢報告間隔**|300 (以秒為單位)|整數|1 到任何正整數。 預設值是 5 分鐘。|  
+|**查詢報告間隔**|300 (以秒為單位)|Integer|1 到任何正整數。 預設值是 5 分鐘。|  
 |**Usage data history**|365 (以天為單位)|Integer|0 表示無限制，但是您也可以設定歷程記錄資料到期的上限，並設成可自動刪除資料。 有限的保留週期有效值為 1 到 5000 (以天為單位)。|  
 |簡單式回應時間上限|500 (以毫秒為單位)|Integer|設定會定義簡單式要求-回應交換的上限。 任何介於 0 到 500 毫秒之間完成的要求都是簡單式要求，報告用途會加以忽略。|  
 |快速回應時間上限|1000 (以毫秒為單位)|Integer|設定會定義快速要求-回應交換的上限。|  

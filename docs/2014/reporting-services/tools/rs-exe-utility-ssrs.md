@@ -19,12 +19,12 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0ebd18967f892d0f40e5d5b0e3b15e1196935af8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3cbc3a76c1f6e5c67297f44c312fe0497666a9b8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141838"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505637"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe 公用程式會處理您在輸入檔中所提供的指令碼。 使用此公用程式可自動化報表伺服器部署和管理工作。  
@@ -75,7 +75,7 @@ ms.locfileid: "48141838"
  (選擇性) 指定用來連接到報表伺服器的使用者帳戶。 如果省略 `-u` 和 `-p`，則會使用目前的 Windows 使用者帳戶。  
   
  `-p` *密碼*  
- (需要`-u`指定) 指定要搭配使用的密碼`-u`引數。 此值區分大小寫。  
+ (如果已指定 `-u` 則是必要的) 指定要與 `-u` 引數一起使用的密碼。 此值區分大小寫。  
   
  `-e`  
  (選擇性) 指定要在其上執行指令碼的 SOAP 結束點。 有效的值如下：  
@@ -88,16 +88,16 @@ ms.locfileid: "48141838"
   
 -   Exec2005  
   
- 如果未指定值，則會使用 Mgmt2005 端點。 如需有關 SOAP 端點的詳細資訊，請參閱 <<c0> [ 報表伺服器 Web 服務端點](../report-server-web-service/methods/report-server-web-service-endpoints.md)。  
+ 如果未指定值，則會使用 Mgmt2005 端點。 如需有關 SOAP 端點的詳細資訊，請參閱＜ [Report Server Web Service Endpoints](../report-server-web-service/methods/report-server-web-service-endpoints.md)＞。  
   
  `-l` *time_out*  
  (選擇性) 指定與伺服器的連接逾時之前所經過的秒數。預設值是 60 秒。 若未指定逾時值，則使用預設值。 `0` 的值指定連接永不逾時。  
   
  **-b**  
- (選擇性) 指定以批次方式執行指令碼檔案中的命令。 若有任何命令失敗，便會回復此批次。 有些命令無法批次處理，而會依平常方式執行。 只有在指令碼中發生未處理的例外狀況會導致批次復原。 如果指令碼處理例外狀況，並從正常地傳回`Main`，會認可該批次。 如果忽略此參數，則會執行此命令而不會建立批次。 如需詳細資訊，請參閱 < [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md)。  
+ (選擇性) 指定以批次方式執行指令碼檔案中的命令。 若有任何命令失敗，便會回復此批次。 有些命令無法批次處理，而會依平常方式執行。 只有在指令碼中發生未處理的例外狀況會導致批次復原。 如果指令碼處理例外狀況並從 `Main` 正常地傳回，則會認可該批次。 如果忽略此參數，則會執行此命令而不會建立批次。 如需詳細資訊，請參閱 [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md)。  
   
  `-v` *globalvar*  
- (選擇性) 指定在指令碼中使用的全域變數。 如果指令碼使用全域變數，則必須指定此引數。 指定的值必須是 .rss 檔案中所定義的全域變數之有效值。 您必須為每個 **–v** 引數指定一個全域變數。  
+ (選擇性) 指定在指令碼中使用的全域變數。 如果指令碼使用全域變數，則必須指定此引數。 指定的值必須是 .rss 檔案中所定義的全域變數之有效值。 您必須為每個 **-v** 引數指定一個全域變數。  
   
  會在命令列上指定 `-v` 引數，以及用於設定在執行階段定義於指令碼中的全域變數值。 例如，如果您的指令碼包含名為 *parentFolder*的變數，您就可以在命令列上指定該資料夾的名稱：  
   
@@ -117,7 +117,7 @@ ms.locfileid: "48141838"
  下列範例說明如何指定指令碼檔案，其中包含您要執行的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 指令碼和 Web 服務方法。  
   
 ```  
-rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
+rs -i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
 ```  
   
  如需詳細的範例，請參閱＜ [在報表伺服器之間移轉內容的範例 Reporting Services rs.exe 指令碼](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)＞。  
@@ -125,7 +125,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
  如需其他範例，請參閱[執行 Reporting Services 指令碼檔案](run-a-reporting-services-script-file.md)  
   
 ## <a name="remarks"></a>備註  
- 您可以定義指令碼來設定系統屬性、發行報表等等。 您可以建立的指令碼包括 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API 的任何方法。 如需有關的方法和屬性可供您的詳細資訊，請參閱[報表伺服器 Web 服務](../report-server-web-service/report-server-web-service.md)。  
+ 您可以定義指令碼來設定系統屬性、發行報表等等。 您可以建立的指令碼包括 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API 的任何方法。 如需有關可供您使用的方法和屬性之詳細資訊，請參閱＜ [Report Server Web Service](../report-server-web-service/report-server-web-service.md)＞。  
   
  指令碼必須以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 程式碼撰寫，然後使用 .rss 副檔名將指令碼儲存在 Unicode 或 UTF-8 文字檔中。 您不可以使用 **rs** 公用程式來偵錯指令碼。 若要偵錯指令碼，請在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]中執行該程式碼。  
   
@@ -135,7 +135,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 ## <a name="see-also"></a>另請參閱  
  [執行 Reporting Services 指令碼檔案](run-a-reporting-services-script-file.md)   
  [編寫部署和管理工作的指令碼](script-deployment-and-administrative-tasks.md)   
- [利用 rs.exe 公用程式和 Web 服務編寫指令碼](script-with-the-rs-exe-utility-and-the-web-service.md)   
- [報表伺服器命令提示字元公用程式&#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
+ [利用 rs.exe 公用程式與 Web 服務編寫指令碼](script-with-the-rs-exe-utility-and-the-web-service.md)   
+ [報表伺服器命令提示字元公用程式 &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)  
   
   

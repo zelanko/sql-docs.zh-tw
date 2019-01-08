@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Publication Properties dialog box
@@ -13,12 +12,12 @@ ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b6a6dd7c143e334cbf1d5ffed9d3f9e7af17271
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2648051bae59a51c9c90ae215c7e7ccdc0351eb1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076838"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780390"
 ---
 # <a name="publication-properties----ltpublicationgt"></a>發行集屬性 - &lt;發行集&gt;
   此章節提供 **[發行集屬性]** 對話方塊之所有頁面的資訊：  

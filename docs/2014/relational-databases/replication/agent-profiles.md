@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.profiles.perfprofiles.f1
@@ -15,12 +14,12 @@ ms.assetid: 0422e99c-e688-419b-bb4c-c7bebeef1d8d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c469b6d3e4fa23b5b20b70671f2c6a211836a4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce4dff443e52ef214e7c43f5df7eb50140937c1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186318"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753000"
 ---
 # <a name="agent-profiles"></a>代理程式設定檔
   使用 **[代理程式設定檔]** 對話方塊，即可管理代理程式設定檔。 代理程式設定檔提供便於管理每一個代理程式執行階段參數的方式。 每一個代理程式都有預設的設定檔，有些代理程式還有其他預先定義的設定檔。 例如，合併代理程式有專為低頻寬連接設計的「慢速連結」設定檔。 預先定義的設定檔對大部份應用程式而言已經足夠，但您也可以建立使用者自訂設定檔，來自訂代理程式的行為。  
@@ -36,7 +35,7 @@ ms.locfileid: "48186318"
  設定檔的名稱。  
   
  **型別**  
- 設定檔的類型： **[使用者]** (使用者自訂) 或 **[系統]** (預先定義)。  
+ 設定檔的類型：**使用者**（使用者定義） 或**系統**（預先定義）。  
   
  **屬性 (...)**  
  按一下即可檢視代理程式設定檔中，每一個參數所使用的值。  

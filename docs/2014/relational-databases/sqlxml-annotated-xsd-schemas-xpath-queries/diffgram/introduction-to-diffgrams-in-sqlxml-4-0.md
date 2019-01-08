@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - annotations [SQLXML]
@@ -15,12 +13,12 @@ ms.assetid: 1902d67f-baf3-46e6-a36c-b24b5ba6f8ea
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f7f94ac060cc4f76472c56c284636c09349261de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f772e860509275c70ae4db05b2da0aa0b0d5418a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160768"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777088"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>DiffGrams 的 SQLXML 4.0 簡介
   本主題提供 DiffGram 的簡介。  
@@ -73,7 +71,7 @@ ms.locfileid: "48160768"
 ## <a name="understanding-the-diffgram-processing-logic"></a>了解 DiffGram 處理邏輯  
  DiffGram 處理邏輯會使用特定規則來判斷某項作業是插入、更新或刪除作業。 下表將描述這些規則。  
   
-|作業|描述|  
+|運算|描述|  
 |---------------|-----------------|  
 |Insert|中的項目出現時，DiffGram 就代表插入作業 **\<DataInstance >** 區塊但不是在對應**\<之前 >** 區塊，以及**diffgr: haschanges**指定屬性 (**diffgr: haschanges = 插入**) 項目上。 在此情況下，DiffGram 插入記錄執行個體中指定 **\<DataInstance >** 區塊至資料庫。<br /><br /> 如果**diffgr: haschanges**未指定屬性、 項目會被忽略，處理邏輯，會執行任何插入。 如需實用範例，請參閱[DiffGram 範例&#40;SQLXML 4.0&#41;](diffgram-examples-sqlxml-4-0.md)。|  
 |Update|中的項目時，DiffGram 就代表更新作業\<之前 > 區塊中的對應項目是 **\<DataInstance >** 區塊 （也就是這兩個元素具有**diffgr: id**具有相同值的屬性) 和**diffgr: haschanges**屬性會指定值**修改**中的項目上**\<DataInstance >** 區塊。<br /><br /> 如果**diffgr: haschanges**中的項目未指定屬性，則 **\<DataInstance >** 區塊，則會傳回錯誤，處理邏輯。 如需實用範例，請參閱[DiffGram 範例&#40;SQLXML 4.0&#41;](diffgram-examples-sqlxml-4-0.md)。<br /><br /> 如果**diffgr: parentid**中指定**\<之前 >** 區塊中，項目所指定的父子式關聯性**parentID**中使用決定更新記錄的順序。|  

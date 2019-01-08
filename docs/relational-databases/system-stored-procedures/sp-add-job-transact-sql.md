@@ -18,12 +18,12 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c9b6b7e6118fc23ef821d85ea6d0ac2f040e69b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6ac15a78e8689e76fc9687a6cd8784eb1fc4dd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603036"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537875"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,25 +55,25 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **'**_job_name_**'**  
  作業的名稱。 名稱必須是唯一的而且不能包含百分比 (**%**) 字元。 *job_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，沒有預設值。  
   
  [  **@enabled =** ]*啟用*  
  指出所加入作業的狀態。 *已啟用*已**tinyint**，預設值是 1 （已啟用）。 如果**0**，作業不會啟用，且不會執行根據其排程; 不過，它可以手動執行。  
   
- [ **@description =** ] **'***description***'**  
+ [  **@description =** ] **'**_描述_**'**  
  這是作業的描述。 *描述*已**nvarchar(512)**，預設值是 NULL。 如果*描述*已省略，會使用 「 沒有可用的說明 」。  
   
  [ **@start_step_id =** ] *step_id*  
  作業所要執行之第一個步驟的識別碼。 *step_id*已**int**，預設值是 1。  
   
- [ **@category_name =** ] **'***category***'**  
+ [  **@category_name =** ] **'**_分類_**'**  
  作業的類別目錄。 *類別目錄*已**sysname**，預設值是 NULL。  
   
  [ **@category_id =** ] *category_id*  
  用來指定作業類別目錄的不限特定語言機制。 *category_id*已**int**，預設值是 NULL。  
   
- [ **@owner_login_name =** ] **'***login***'**  
+ [  **@owner_login_name =** ] **'**_登入_**'**  
  擁有作業的登入名稱。 *登入*已**sysname**，預設值是 NULL，它解譯為目前的登入名稱。 只有成員**sysadmin**固定的伺服器角色可以設定或變更的值**@owner_login_name**。 如果使用者不是成員的**sysadmin**角色設定，或變更的值**@owner_login_name**，此預存程序的執行會失敗，且會傳回錯誤。  
   
  [ **@notify_level_eventlog =** ] *eventlog_level*  
@@ -95,13 +95,13 @@ sp_add_job [ @job_name = ] 'job_name'
  [ **@notify_level_page =** ] *page_level*  
  這個值表示在這項作業完成時，何時傳送頁面。 *page_level*已**int**，預設值是**0**，表示永不。 *page_level*會使用相同的值*eventlog_level*。  
   
- [ **@notify_email_operator_name =** ] **'***email_name***'**  
+ [  **@notify_email_operator_name =** ] **'**_email_name_**'**  
  要傳送電子郵件時的人員的電子郵件名稱*email_level*為止。 *email_name*已**sysname**，預設值是 NULL。  
   
- [ **@notify_netsend_operator_name =** ] **'***netsend_name***'**  
+ [  **@notify_netsend_operator_name =** ] **'**_netsend_name_**'**  
  這項作業完成時，網路訊息所要傳送的操作員名稱。 *netsend_name*已**sysname**，預設值是 NULL。  
   
- [ **@notify_page_operator_name =** ] **'***page_name***'**  
+ [  **@notify_page_operator_name =** ] **'**_page_name_**'**  
  這項作業完成時，所要呼叫的人員名稱。 *page_name*已**sysname**，預設值是 NULL。  
   
  [ **@delete_level =** ] *delete_level*  
@@ -110,7 +110,7 @@ sp_add_job [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  當*delete_level*是**3**一次執行作業，不論任何排程定義的作業。 此外，如果作業刪除作業本身，也會同時刪除作業的所有記錄。  
   
- [ **@job_id =** ] *job_id***OUTPUT**  
+ [  **@job_id =** ] _job_id_**輸出**  
  作業建立成功時，指派給作業的作業識別碼。 *job_id*是 output 變數型別的**uniqueidentifier**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  

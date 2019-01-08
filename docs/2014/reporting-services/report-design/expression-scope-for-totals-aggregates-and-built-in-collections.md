@@ -11,12 +11,12 @@ ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 60825f051b0e80cbd55ec36c5b3e49cf9838e77b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51f5315633939431bb6e8287773453e08de188a7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204878"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412025"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>總計、彙總與內建集合的運算式範圍 (報表產生器及 SSRS)
   撰寫運算式時，您會發現 *「範圍」* (Scope) 一詞用於多個內容。 範圍可以指定要用於評估運算式的資料、轉譯頁面上的文字方塊集合、可以根據切換顯示或隱藏之報表項目的集合。 您將會在與運算式評估、彙總函式語法、條件式可用性相關的主題中，以及與這些領域相關的錯誤訊息中看 *「範圍」* (Scope) 一詞。 使用下列描述來協助區分 *「範圍」* (Scope) 適用的意義：  
@@ -71,7 +71,7 @@ ms.locfileid: "48204878"
      下列運算式會產生 SellStartDate 與 LastReceiptDate 之間的間隔年數。 這些欄位位於兩個不同的資料集：DataSet1 和 DataSet2 中。 [First 函式 &#40;報表產生器及 SSRS&#41;](report-builder-functions-first-function.md) 為彙總函式，它會傳回 DataSet1 中 SellStartDate 的第一個值，以及 DataSet2 中 LastReceiptDate 的第一個值。  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
 -   **網域範圍** ：也稱為同步處理範圍。 一種資料範圍的類型，適用於巢狀資料區的運算式評估。 網域範圍用來跨所有群組執行個體指定彙總，讓系統可以對齊巢狀執行個體並輕鬆進行比較。 例如，您可以對齊資料表中內嵌之走勢圖的範圍和高度，讓這些值可以對齊。  
@@ -133,7 +133,7 @@ ms.locfileid: "48204878"
 ##  <a name="Indicators"></a> 同步處理指標的範圍  
  若要指定用於一組指標的資料值，您必須指定一個範圍。 根據包含指標之資料區的配置，您可以指定一個範圍或一個包含的範圍。 例如，在與 sales 類別目錄相關聯的群組標頭資料列中，一組箭頭 (向上、向下、側邊) 可以表示相對於臨界值的銷售值。 包含的範圍是包含指標之資料表或矩陣的名稱。  
   
- 如需詳細資訊，請參閱[設定同步處理範圍 &#40;報表產生器及 SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [設定同步處理範圍 &#40;報表產生器及 SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)。  
   
   
   
@@ -151,27 +151,27 @@ ms.locfileid: "48204878"
   
  在 Tablix 資料區中，若要建立向下鑽研效果，讓您按一下某個文字方塊就可以展開資料表來顯示更多資料，您必須在群組上設定 **[可見性]** 屬性，然後在與包含的群組相關聯之群組標頭中選取一個文字方塊做為切換。  
   
- 如需詳細資訊，請參閱[將展開或摺疊動作加入項目中 &#40;報表產生器及 SSRS&#41;](add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [將展開或摺疊動作加入項目中 &#40;報表產生器及 SSRS&#41;](add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)。  
   
   
   
 ##  <a name="Sort"></a> 指定要同步處理排序次序的排序運算式  
  當您將互動式排序按鈕加入至資料表資料行時，您可以針對擁有通用包含範圍的多個項目，同步處理排序。 例如，您可以將排序按鈕加入至矩陣中的資料行標頭，然後指定包含的範圍做為繫結至矩陣之資料集的名稱。 當使用者按一下排序按鈕時，除了會排序矩陣資料列之外，也會排序繫結至相同資料集之圖表的圖表數列群組。 利用這個方式，與該資料集相依的所有資料區都可以進行同步處理，以顯示相同的排序次序。  
   
- 如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)(將互動式排序加入資料表或矩陣 (報表產生器及 SSRS))。  
   
   
   
 ##  <a name="Nulls"></a> 在資料格中隱藏 Null 或零值  
- 對於許多報表而言，群組範圍的計算可能會建立許多值為零 (0) 或 Null 的資料格。 為減少報表中混亂的情形，加入一個運算式，以便在彙總值為 0 時，傳回空白。 詳細資訊，請參閱 「 範例隱藏 Null 或零值的"，在[運算式範例&#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)。  
+ 對於許多報表而言，群組範圍的計算可能會建立許多值為零 (0) 或 Null 的資料格。 為減少報表中混亂的情形，加入一個運算式，以便在彙總值為 0 時，傳回空白。 如需詳細資訊，請參閱 [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)。  
   
   
   
 ## <a name="see-also"></a>另請參閱  
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [群組運算式範例 &#40;報表產生器及 SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)   
- [建立遞迴階層群組&#40;報表產生器及 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [建立遞迴階層群組 &#40;報表產生器及 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [清單 &#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [格式化文字和預留位置&#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

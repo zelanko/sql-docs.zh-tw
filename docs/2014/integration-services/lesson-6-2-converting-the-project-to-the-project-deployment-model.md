@@ -1,22 +1,21 @@
 ---
-title: 步驟 2：將專案轉換成專案部署模型 | Microsoft Docs
+title: 步驟 2：將專案轉換為專案部署模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 459630f452458d4bbc9723133013c861619806bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfca842a547ac20365dbd79ad5ad3295fa83f75f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093928"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752550"
 ---
 # <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>步驟 2：將專案轉換成專案部署模型
   在這個工作中，您將使用 Integration Services 專案轉換精靈，將專案轉換為專案部署模型。  
@@ -52,6 +51,6 @@ ms.locfileid: "48093928"
 13. 按一下 [參數] 索引標籤，並確認封裝現在包含 VarFolderName 參數，而值的路徑同於從第 5 課組態檔的新範例資料資料夾所指定的路徑。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 3：測試第 6 課的套件](lesson-6-3-testing-the-lesson-6-package.md)  
+ [步驟 3:測試第 6 課封裝](lesson-6-3-testing-the-lesson-6-package.md)  
   
   

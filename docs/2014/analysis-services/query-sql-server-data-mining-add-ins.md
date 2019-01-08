@@ -16,12 +16,12 @@ ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b23083870b2f60e3d844d921705f4612ecc975f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b596612d711925687087a2263013fdf13a0c491e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079418"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418459"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>查詢 (SQL Server 資料採礦增益集)
   ![查詢模型按鈕、 資料採礦功能區](media/dmc-query.gif "查詢模型按鈕、 資料採礦功能區")  
@@ -30,7 +30,7 @@ ms.locfileid: "48079418"
   
  **查詢**精靈也提供了進階的編輯器，建立或修改資料採礦模型、 產生自訂查詢，或使用不支援在其他工具，例如巢狀資料集的結構。  
   
--   使用文字編輯器來輸入或貼入您在其他工具中建立的資料採礦延伸模組 (DMX) 陳述式。  
+-   您可以使用文字編輯器來輸入或貼上您已在其他地方建立資料採礦延伸模組 (DMX) 陳述式中。  
   
 -   使用互動式查詢產生器，透過範本和對話方塊的協助撰寫自訂 DMX 陳述式。  
   

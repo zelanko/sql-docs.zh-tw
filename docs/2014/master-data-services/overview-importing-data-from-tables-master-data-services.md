@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], about staging process
@@ -15,15 +14,15 @@ ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1c9113e8e3ae1f65d42b1e55a81cee4dcfc2152b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a3f9d1589c9e7434b16ce3f500b44eb1d9374cd8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217808"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756810"
 ---
 # <a name="data-import-master-data-services"></a>資料匯入 (Master Data Services)
-  一旦您已為您的資料來建立模型[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，您可以開始新增資料，並進行變更中的資料[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料庫。   可以使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 暫存資料表、預存程序及主資料管理員。  
+  為 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的資料建立模型之後，即可開始加入資料，並對 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中的資料進行變更。   可以使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 暫存資料表、預存程序及主資料管理員。  
   
  您也可以使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]，以將資料加入至 MDS 儲存機制 ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料庫)。 如需詳細資訊，請參閱 <<c0> [ 發行的資料&#40;MDS 增益集適用於 Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)。</c0>  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48217808"
      您可以使用暫存的預存程序或 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 來載入資料。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]已淘汰對 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 暫存處理序提供支援。  
+>  已淘汰對 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]暫存處理序提供 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 支援。  
   
 ## <a name="deactivating-and-deleting-members"></a>停用及刪除成員  
  停用表示可以重新啟用該成員。 如果重新啟用成員，即會還原成員在階層和集合中的屬性及成員資格。 之前的所有交易會完整無缺。 系統管理員可以在主要資料的 [版本管理]  功能區域中，看到停用的交易。  
@@ -70,11 +69,11 @@ ms.locfileid: "48217808"
 ## <a name="staging-tables-and-stored-procedures"></a>暫存資料表與預存程序  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫包含下列幾種可以填入您資料的暫存資料表類型。  
   
--   [分葉成員暫存資料表&#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
+-   [分葉成員暫存資料表 &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [合併成員暫存資料表&#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [合併成員暫存資料表 &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
--   [關聯性暫存資料表&#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
+-   [關聯性暫存資料表 &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
   
  模型中的每個實體，都有一個暫存資料表。 資料表名稱表示對應的實體以及像是分葉成員的實體類型。 下圖顯示貨幣、客戶及產品實體的暫存資料表。  
   
@@ -103,8 +102,8 @@ ms.locfileid: "48217808"
   
 ## <a name="related-content"></a>相關內容  
   
--   [驗證&#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
+-   [驗證 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
--   [商務規則&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [商務規則 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

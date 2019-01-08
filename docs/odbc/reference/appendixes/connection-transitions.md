@@ -15,12 +15,12 @@ ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46d480683a2d10f760a02049ab28bc590353fcbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f808460a1421a9ab4cb3a76c2810d810b9636b11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619096"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537502"
 ---
 # <a name="connection-transitions"></a>連線轉換
 ODBC 連接擁有以下狀態。  
@@ -266,7 +266,7 @@ ODBC 連接擁有以下狀態。
   
  [1] 的連接已在自動認可模式中，或資料來源未開始交易。  
   
- [2] 的連接在手動-認可模式下，且資料來源開始交易。  
+ [2] 的連接在手動認可模式，且資料來源開始交易。  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   

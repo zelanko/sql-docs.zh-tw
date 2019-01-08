@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8cb23239cde77810cae299f5c911889d21936194
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 898f16c0b0588fe61ae76e1e86e85713ba3f898a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057640"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764460"
 ---
 # <a name="sql-server-agent-properties-advanced-tab"></a>SQL Server Agent 屬性 (進階索引標籤)
   根據預設， **[進階]** 索引標籤會顯示五個屬性。 如果定義了自訂屬性，這些屬性與其值也會在這個索引標籤上顯示。  

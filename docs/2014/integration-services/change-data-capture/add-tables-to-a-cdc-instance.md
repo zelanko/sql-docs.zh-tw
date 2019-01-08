@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - addTabs
@@ -13,12 +12,12 @@ ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f437cf8a54efcd84f01757b72b278f14a524a8d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f82b6f68d7186d35fd1657cd56c4aa23fcf82b3e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107708"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769050"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>將資料表加入至 CDC 執行個體
   使用 [資料表選取範圍] 對話方塊，將 Oracle 來源中的其他資料表加入至 CDC 執行個體。 選取的資料表會加入至屬性編輯器中 **[資料表]** 索引標籤的清單。  
@@ -28,14 +27,14 @@ ms.locfileid: "48107708"
  **若要搜尋特定資料表**  
  依照以下方式輸入搜尋準則，然後按一下 [搜尋]：  
   
--   **結構描述**：從清單中選取資料庫結構描述。 清單中只會包含具有該結構描述的資料表。  
+-   **結構描述**:從清單中選取資料庫結構描述。 清單中只會包含具有該結構描述的資料表。  
   
--   **資料表名稱模式**：輸入任何字元字串。 只會顯示包含所輸入之字元字串的資料表。  
+-   **資料表名稱模式**:輸入任何字元字串。 只會顯示包含所輸入之字元字串的資料表。  
   
 > [!NOTE]  
 >  您可以在一個或兩個欄位中輸入準則。  
   
--   **顯示前 1000 個相符的資料表**：預設會選取這個核取方塊。 它會將顯示畫面限制為前 1000 個相符的資料表。 如果您清除此核取方塊，符合準則的所有資料表都會顯示。 如果有大量的資料表，則顯示清單可能需要很長的時間。  
+-   **顯示前 1000 個相符的資料表**:依預設會選取此核取方塊。 它會將顯示畫面限制為前 1000 個相符的資料表。 如果您清除此核取方塊，符合準則的所有資料表都會顯示。 如果有大量的資料表，則顯示清單可能需要很長的時間。  
   
  **若要選取包含在 CDC 執行個體中的資料表**  
  按一下您想要包含之任何資料表旁邊的核取方塊，然後按一下 [加入]。 資料表隨即加入至新增執行個體精靈中 **[選取資料表和資料行]** 頁面的清單中。  
@@ -50,7 +49,7 @@ ms.locfileid: "48107708"
   
 ## <a name="see-also"></a>另請參閱  
  [如何編輯 CDC 執行個體屬性](how-to-edit-the-cdc-instance-properties.md)   
- [如何管理 CDC 執行個體](manage-a-cdc-instance.md)   
- [選取 Oracle 資料表以擷取變更](select-oracle-tables-for-capturing-changes.md)  
+ [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
+ [選取 Oracle 資料表來擷取變更](select-oracle-tables-for-capturing-changes.md)  
   
   

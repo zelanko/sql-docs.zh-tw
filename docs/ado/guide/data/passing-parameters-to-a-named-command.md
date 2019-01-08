@@ -14,12 +14,12 @@ ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f7db54ca3cd3b7574896bac11bce87446b6d4b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c221030b54aef21ffa0a2df891561976aacff76
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773386"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505708"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>傳遞參數給具名命令
 就如同命令的結果會當做傳遞*出*具名命令，也就是參數的變數參數化的命令可以針對已傳入作為*中*具名命令的變數。  
@@ -83,7 +83,7 @@ Set objComm = Nothing
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- — 因為必要的輸入的參數是的會導致不相符的資料類型的錯誤**字串**型別，不是**整數**型別。  
+ -因為必要的輸入的參數是的會導致不相符的資料類型的錯誤**字串**型別，而非**整數**型別。  
   
  下列呼叫：  
   

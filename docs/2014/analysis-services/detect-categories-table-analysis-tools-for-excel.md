@@ -16,12 +16,12 @@ ms.assetid: 3c7e9ebb-d0c9-498e-a9ba-cc13eaa43520
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 65fc89bf8d93a957f7cb1e25664621a8ff6420a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 572c331cb5f9a88ee78cb26544772b126405c02c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087728"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420223"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>偵測類別目錄 (適用於 Excel 的資料表分析工具)
   ![功能區中的偵測類別目錄按鈕](media/tat-detectcat.gif "功能區中的 [偵測類別目錄] 按鈕")  

@@ -1,5 +1,5 @@
 ---
-title: 上階 (MDX) |Microsoft 文件
+title: 上階 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ef9cccb488cebb08c1b9721c40cb8037ea8687a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 3122b3aa2f53da69f88e6ffad508f12c8e10da1c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739617"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404343"
 ---
 # <a name="ascendants-mdx"></a>Ascendants (MDX)
 
@@ -33,10 +33,10 @@ Ascendants(Member_Expression)
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **上階**函式會傳回所有成員的上階成員本身的成員之階層最上方; 更明確地說，它會執行指定的成員的階層後序走訪和則傳回所有上階成員與相關的成員，包括它自己，集合中。 這是相對於[祖系](../mdx/ancestor-mdx.md)函式會傳回特定的上階成員或上的階，在特定層級。  
+ **上階**函式會傳回成員的祖系的所有成員本身的成員之階層最上方; 更具體來說，它會執行後序走訪，階層的指定的成員，然後傳回與成員，包括本身，在一組相關的所有上階成員。 這是相對於[祖系](../mdx/ancestor-mdx.md)函式會傳回特定的上階成員或上的階，在特定層級。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回的轉售商訂單計數`[Sales Territory].[Northwest]`成員，並從該成員的所有上階**Adventure Works** cube。 **上階**函式建構一個集合，包含`[Sales Territory].[Northwest]`成員和其資料列軸的上階。  
+ 下列範例會傳回的轉售商訂單計數`[Sales Territory].[Northwest]`成員以及從該成員的所有上階**Adventure Works** cube。 **上階**函式會建構集合，包括`[Sales Territory].[Northwest]`成員，而且它在 ROWS 軸的上階。  
   
 ```  
 SELECT  
@@ -52,6 +52,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

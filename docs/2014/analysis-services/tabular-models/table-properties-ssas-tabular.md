@@ -13,12 +13,12 @@ ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 13a1b980174fa04428b1c9d525554501360db1cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b9fbcb4aa054d261d47bea61edf1d1815cba27f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169018"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401031"
 ---
 # <a name="table-properties-ssas-tabular"></a>資料表屬性 (SSAS 表格式)
   此主題描述表格式模型資料表屬性。 這裡所述的屬性與 [編輯資料表屬性] 對話方塊中的屬性不同，後者會定義從來源匯入的資料行。  
@@ -34,7 +34,7 @@ ms.locfileid: "48169018"
   
 |屬性|預設值|描述|  
 |--------------|---------------------|-----------------|  
-|**連接名稱**|\<連線名稱 >|資料表之資料來源連接的名稱。<br /><br /> 若要編輯連接，請按一下此按鈕。|  
+|**連接名稱**|\<連線名稱 >|資料表的資料來源的連接名稱。<br /><br /> 若要編輯連接，請按一下此按鈕。|  
 |**Hidden**|False|指定是否在報表用戶端欄位清單中隱藏資料表。|  
 |**資料分割**||資料表的資料分割無法在 **[屬性]** 視窗中顯示。 若要檢視、建立或編輯資料分割，請按一下此按鈕以開啟 [資料分割管理員]。|  
 |**來源資料**||資料表的來源資料無法在 **[屬性]** 視窗中顯示。 若要檢視或編輯來源資料，請按一下此按鈕以開啟 [編輯資料表屬性] 對話方塊。|  

@@ -14,12 +14,12 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf2a1c84bab547e7b3dbc4bd1a930b4605f4052f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cba784ed6e81152e91b8320ac5e441187c07df9c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149638"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504826"
 ---
 # <a name="copy-only-backups-sql-server"></a>只複製備份 (SQL Server)
   「只複製備份」是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 通常，進行備份會變更資料庫，而且會影響往後其他備份的還原方式。 不過，偶爾為了特殊目的在不影響資料庫整體備份及還原程序的情況下進行備份，相當有用。 只複製備份即是供此目的之用。  
@@ -34,7 +34,7 @@ ms.locfileid: "48149638"
   
 -   只複製記錄備份 (僅完整復原模式和大量記錄復原模式)  
   
-     只複製記錄備份會保留現有的記錄封存點，因此不會影響一般記錄備份的順序。 只複製記錄備份通常是沒有必要的。 您反倒可以建立新的例行記錄備份 (使用 WITH NORECOVERY)，且一併使用此備份與還原順序所需之任何先前的記錄備份。 但是，只複製記錄備份有時相當利於進行線上還原。 如需這類範例，請參閱[範例：線上還原讀寫檔案 &#40;完整復原模式&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)。  
+     只複製記錄備份會保留現有的記錄封存點，因此不會影響一般記錄備份的順序。 只複製記錄備份通常是沒有必要的。 您反倒可以建立新的例行記錄備份 (使用 WITH NORECOVERY)，且一併使用此備份與還原順序所需之任何先前的記錄備份。 但是，只複製記錄備份有時相當利於進行線上還原。 這個範例，請參閱[範例：線上還原讀取 / 寫入檔案的&#40;完整復原模式&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)。  
   
      交易記錄永遠不會在只複製備份之後截斷。  
   
@@ -52,18 +52,18 @@ ms.locfileid: "48149638"
   
 -   用於只複製完整備份：  
   
-     BACKUP DATABASE *database_name* TO \<backup_device>*>* ... WITH COPY_ONLY …  
+     BACKUP DATABASE *database_name* TO \<backup_device>*>* ...WITH COPY_ONLY...  
   
     > [!NOTE]  
     >  指定 DIFFERENTIAL 選項時，COPY_ONLY 沒有任何作用。  
   
 -   用於只複製記錄備份：  
   
-     BACKUP LOG *資料庫名稱* TO *\<* 備份裝置*>* … WITH COPY_ONLY …  
+     BACKUP LOG *database_name* TO *\<* backup_device>*>* ...WITH COPY_ONLY...  
   
 ###  <a name="PowerShellProcedure"></a> 使用 PowerShell  
   
-1.  使用`Backup-SqlDatabase`cmdlet 搭配`-CopyOnly`參數。  
+1.  使用 `Backup-SqlDatabase` 指令程式搭配 `-CopyOnly` 參數。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
  **若要建立完整備份或記錄備份**  

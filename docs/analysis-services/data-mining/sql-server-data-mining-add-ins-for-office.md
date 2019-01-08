@@ -1,5 +1,5 @@
 ---
-title: SQL Server 資料採礦增益集，適用於 Office |Microsoft 文件
+title: SQL Server 資料採礦增益集適用於 Office |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2220bb48704fb29aa00236ebf1ec4ad46ecb4007
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 89986d3c8de4a1cbefbccf285a92a2dc19c6c7aa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014735"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504736"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>適用於 Office 的 SQL Server 資料採礦增益集
 
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 適用於 Office 的資料採礦增益集是一組輕量型的預測分析工具，可讓您使用 Excel 中的資料建立用於預測、建議或探索的分析模型。  
   
 > [!IMPORTANT]
-> 資料採礦增益集適用於 Office 不支援 Office 2016 或更新版本。
+> 資料採礦增益集適用於 Office 不支援在 Office 2016 或更新版本。
   
  此增益集中的精靈和資料管理工具會針對以下這些常見的資料採礦工作提供逐步指示：  
   
@@ -45,17 +45,17 @@ ms.locfileid: "34014735"
   
      進階使用者則可以使用具有拖放功能的 **[進階查詢編輯器]** 來建立自訂 DMX 查詢，或使用 Excel VBA 來將預測自動化。  
   
--   **記載和管理。** 建立了資料集以及一些模型之後，就可以透過產生資料的統計摘要和模型參數來記載您的工作與您的見解。  
+-   **記載和管理。** 您已建立了資料集以及一些模型之後，文件公司和您的深入解析，藉由產生的資料和模型參數的統計摘要。  
   
--   **探索和視覺化。** 資料採礦並不是一種可以全面自動化的活動，您需要探索及了解結果並採取有意義的動作。 增益集可藉由提供 Excel 的互動式檢視器、讓您自訂模型圖表的 Visio 範本，以及將圖表和資料表匯出到 Excel 進行額外的篩選或修改的功能，幫助您進行探索。  
+-   **探索和視覺化。** 資料採礦並不是可以完全自動化的活動，您需要探索及了解您的結果才有意義的動作。 增益集可藉由提供 Excel 的互動式檢視器、讓您自訂模型圖表的 Visio 範本，以及將圖表和資料表匯出到 Excel 進行額外的篩選或修改的功能，幫助您進行探索。  
   
--   **部署與整合。** 當您建立了實用的模型時，使用管理工具將模型從試驗伺服器匯出到另一個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體，讓您的模型實際執行。  
+-   **部署與整合。** 當您建立了實用的模型，到生產環境，讓您的模型，將模型從試驗伺服器匯出到其他執行個體使用的管理工具[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
   
      您也可以將模型留在當初建立的伺服器上，但是使用 Integration Services 或 DMX 指令碼重新整理定型資料並執行預測。  
   
      進階使用者還可使用 **[追蹤]** 功能查看傳送至伺服器的 XMLA 和 DMX 陳述式。  
   
-## <a name="getting-started"></a>快速入門  
+## <a name="getting-started"></a>使用者入門  
  如需詳細資訊，請參閱 [適用於 Office 的資料採礦增益集包含的內容](http://go.microsoft.com/fwlink/p/?LinkId=616849)  
   
 ## <a name="support-and-requirements"></a>支援與需求  
@@ -78,6 +78,6 @@ ms.locfileid: "34014735"
   
  根據您連接的 SQL Server Analysis Services 版本而定，某些進階演算法可能會無法使用。 如需詳細資訊，請參閱 [Features Supported by the Editions of SQL Server 2016](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)(SQL Server 2016 版本支援的功能)。  
   
- 其他安裝的說明，請參閱下載中心上的此頁面： [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ 如需其他安裝的詳細說明，請參閱此頁面下載中心： [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   
   

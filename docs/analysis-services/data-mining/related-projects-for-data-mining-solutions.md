@@ -1,5 +1,5 @@
 ---
-title: 資料採礦方案的相關專案 |Microsoft 文件
+title: 資料採礦方案的相關專案 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f884a7d70447771769ba2d6ff8928234095c7cae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5e7a1934a207beebca88e3939a211667e94be976
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019455"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415605"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>資料採礦方案的相關專案
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34019455"
  [語意索引](#bkmk_SemSearch)  
   
 ##  <a name="bkmk_SSIS"></a> SQL Server Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]提供元件和資料準備和資料採礦專案定型階段所需的功能。 雖然您可以使用類似指令碼的其他工具來執行許多資料清理或準備工作，但是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 擁有許多資料採礦的優點：  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了資料準備和資料採礦專案定型階段所需的元件與功能。 雖然您可以使用類似指令碼的其他工具來執行許多資料清理或準備工作，但是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 擁有許多資料採礦的優點：  
   
 -   將工作表示為工作流程的一部分，工作流程可以重複、自動化、建立分支及擴充。  
   
@@ -102,11 +102,11 @@ ms.locfileid: "34019455"
   
  如需有關如何搭配資料來源形式的 DMX 查詢使用 Reporting Services 的詳細資訊，請參閱以下連結：  
   
- [擷取資料，從資料採礦模型 & #40; DMX & #41;& #40;SSRS & #41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [從資料採礦模型擷取資料 &#40;DMX&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Analysis Services DMX 查詢設計工具使用者介面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [DMX & #40; analysis Services 連接類型SSRS & #41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  但是，使用 DMX 當做資料來源並不是必要的。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的資料採礦元件也支援將預測查詢結果儲存到關聯式資料庫。 如果您已經使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]建立更新模型的工作流程，則將預測和其他資料採礦查詢結果保存到 SQL Server 可讓您啟用報告用的 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 以及不與 DMX 接觸的其他工具。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "34019455"
   
  如需詳細資訊，請參閱 [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
- 儲存在全文檢索索引之後的字詞版本為壓縮形式的語彙基元。 全文檢索索引後續的查詢會根據該語言的規則產生特定字詞的多個變化形式，以確保能產生所有可能的相符項目。 例如，雖然儲存的語彙基元可能是 “run”，但是查詢引擎也會尋找 "running"、"ran" 和 "runner" 等詞彙，因為這些是根單字 "run" 所正常衍生的形態變化。  
+ 儲存在全文檢索索引之後的字詞版本為壓縮形式的語彙基元。 全文檢索索引後續的查詢會根據該語言的規則產生特定字詞的多個變化形式，以確保能產生所有可能的相符項目。 比方說，雖然儲存的語彙基元可能"run"，查詢引擎也會尋找例如詞彙"running"、"ran"和"runner，"因為這些是根單字"run"的正常衍生的形態變化。  
   
  您也可以建立及產生使用者同義字，以便儲存同義字並啟用更好的搜尋結果或分類詞彙。 透過開發符合全文檢索資料的同義字，您可以有效地擴大針對該資料進行全文檢索查詢的範圍。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的同義字檔案](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。  
   

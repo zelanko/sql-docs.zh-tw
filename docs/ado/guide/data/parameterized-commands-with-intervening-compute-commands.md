@@ -16,15 +16,15 @@ ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1675e80522feb0c0b2a46a89dfa6e3bba182198
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e892aed72ba1d74f9bdafc319c71a39546f4402
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851637"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527659"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>參數化命令與中介 COMPUTE 命令
-一般的參數化的圖形附加命令有一個子句，會建立父代**資料錄集**查詢命令與建立的子系的另一個子句**資料錄集**使用參數化的查詢命令：也就是將包含的參數預留位置的命令 (問號，"？")。 產生的形狀**資料錄集**有父代會佔用較高層級的兩個層級和子系會佔用低層級。  
+一般的參數化的圖形附加命令有一個子句，會建立父代**資料錄集**查詢命令與建立的子系的另一個子句**資料錄集**使用參數化的查詢命令-也就是將包含的參數預留位置的命令 (問號，"？")。 產生的形狀**資料錄集**有父代會佔用較高層級的兩個層級和子系會佔用低層級。  
   
  建立子子句**資料錄集**現在可能任意數目的巢狀圖形計算命令，其中最深的巢狀的命令包含參數化的查詢。 產生的形狀**資料錄集**有多個層級，父代所佔用的最上方的層級、 點陣圖最少的層級和任意數目的子系會佔用**資料錄集**所產生的 s圖形計算命令佔用的中介層級。  
   

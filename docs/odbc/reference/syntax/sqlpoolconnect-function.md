@@ -13,16 +13,16 @@ ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb9f7b9aa75311850efe4a26dcbc373b8697e652
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dda69fa741555f4402bded930f68260b154fd30
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801876"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404853"
 ---
 # <a name="sqlpoolconnect-function"></a>SQLPoolConnect 函式
 **合規性**  
- 版本導入： ODBC 3.8 標準相容性： ODBC  
+ 導入的版本：ODBC 3.8 標準合規性：ODBC  
   
  **摘要**  
  **SQLPoolConnect**用來建立新的連接，如果集區中的沒有連線可以重複使用。  

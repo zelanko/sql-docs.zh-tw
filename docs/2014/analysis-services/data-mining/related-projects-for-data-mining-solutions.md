@@ -11,12 +11,12 @@ ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a99d28697a25e2b8fc6d1550765e03e52a8fdc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92384d07e258423e08793b08afe45b6d14253cff
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106868"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400652"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>資料採礦方案的相關專案
   資料採礦方案至少需要資料採礦專案，專案中會定義資料來源、資料來源檢視、採礦結構和採礦模型。 但是，當使用資料採礦模型進行每日決策時，資料採礦一定要與預測性分析方案的其他部分整合，該方案可包含這些程序和元件：  
@@ -162,7 +162,7 @@ ms.locfileid: "48106868"
   
  如需詳細資訊，請參閱 [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
- 儲存在全文檢索索引之後的字詞版本為壓縮形式的語彙基元。 全文檢索索引後續的查詢會根據該語言的規則產生特定字詞的多個變化形式，以確保能產生所有可能的相符項目。 例如，雖然儲存的語彙基元可能是 “run”，但是查詢引擎也會尋找 "running"、"ran" 和 "runner" 等詞彙，因為這些是根單字 "run" 所正常衍生的形態變化。  
+ 儲存在全文檢索索引之後的字詞版本為壓縮形式的語彙基元。 全文檢索索引後續的查詢會根據該語言的規則產生特定字詞的多個變化形式，以確保能產生所有可能的相符項目。 比方說，雖然儲存的語彙基元可能"run"，查詢引擎也會尋找例如詞彙"running"、"ran"和"runner，"因為這些是根單字"run"的正常衍生的形態變化。  
   
  您也可以建立及產生使用者同義字，以便儲存同義字並啟用更好的搜尋結果或分類詞彙。 透過開發符合全文檢索資料的同義字，您可以有效地擴大針對該資料進行全文檢索查詢的範圍。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的同義字檔案](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)。  
   
@@ -202,7 +202,7 @@ ms.locfileid: "48106868"
 -   並非所有全文檢索語言都支援語意索引。 如需受支援語言的清單，請參閱 [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql)。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型方案 &#40;Ssas&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [表格式模型方案&#40;SSAS 表格式&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [多維度模型方案 &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [表格式模型方案 &#40;SSAS 表格式&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
   

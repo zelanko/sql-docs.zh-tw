@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - <= (less than or equal to operator)
@@ -14,12 +13,12 @@ ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 96575de74fcf783d4e21306770f8a31b3065a794
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d10d10388f6efa55fb2655a21b50b2ebdd58e5b2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063328"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754340"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= (小於或等於) (SSIS 運算式)
   執行比較來決定第一個運算式是否小於或等於第二個運算式。 運算式評估工具會在執行比較之前，自動轉換許多資料類型。  
@@ -59,7 +58,7 @@ expression1 <= expression2
     > [!NOTE]  
     >  字串比較有區分大小寫、腔調字、假名與全半形。  
   
--   **日期、時間或日期/時間** ： *expression1* 和 *expression2* 都必須評估為下列其中一種資料類型：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **日期、 時間或日期/時間**兩者*expression1*並*expression2*必須評估為下列資料類型的其中一個：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系統不支援評估為時間資料類型之運算式與評估為日期或日期/時間資料類型之運算式之間的比較。 系統會產生錯誤。  
@@ -104,10 +103,10 @@ ListPrice <= 500
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [&#62;&#40;大於&#41; &#40;SSIS 運算式&#41;](greater-than-ssis-expression.md)   
- [&#60;&#40;小於&#41; &#40;SSIS 運算式&#41;](less-than-ssis-expression.md)   
+ [&#62; &#40;大於&#41; &#40;SSIS 運算式&#41;](greater-than-ssis-expression.md)   
+ [&#60; &#40;小於&#41; &#40;SSIS 運算式&#41;](less-than-ssis-expression.md)   
  [&#62;= &#40;大於或等於&#41; &#40;SSIS 運算式&#41;](greater-than-or-equal-to-ssis-expression.md)   
- [運算子優先順序和關聯性](operator-precedence-and-associativity.md)   
- [運算子&#40;SSIS 運算式&#41;](operators-ssis-expression.md)  
+ [運算子優先順序與關聯性](operator-precedence-and-associativity.md)   
+ [運算子 &#40;SSIS 運算式&#41;](operators-ssis-expression.md)  
   
   

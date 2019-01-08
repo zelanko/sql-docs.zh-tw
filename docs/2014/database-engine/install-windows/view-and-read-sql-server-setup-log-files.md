@@ -18,12 +18,12 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6017cadea0039613f7e97dc6e78665e47c9e2575
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: d6a81258e87bf2422f3ae5a55afc5eb6429856b2
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018503"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858653"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>檢視與讀取 SQL Server 安裝程式記錄檔
   每次執行安裝程式會建立的記錄檔都會建立與新時間戳記記錄檔資料夾，位於 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\。 時間戳記記錄檔資料夾的名稱格式為 YYYYMMDD_hhmmss。 在自動安裝模式下執行安裝程式時，會在 % temp%\sqlsetup*.log 建立記錄檔。 記錄檔資料夾中的所有檔案都會封存到個別記錄檔資料夾的 Log\*.cab 檔中。  
@@ -141,11 +141,11 @@ ms.locfileid: "51018503"
   
  MSI 記錄檔的類型：  
   
--   \<功能>_\<架構>\_\<反覆運算>.log  
+-   \<功能>_\<架構>\_\<互動>.log  
   
--   \<功能>_\<架構>\_\<語言>\_\<反覆運算>.log  
+-   \<功能>_\<架構>\_\<語言>\_\<互動>.log  
   
--   \<功能>_\<架構>\_\<反覆運算>\_\<工作流程>.log  
+-   \<功能>_\<架構>\_\<互動>\_\<工作流程>.log  
   
 ### <a name="location"></a>位置  
  MSI 記錄檔位於 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< YYYYMMDD_HHMM&AMP;GT >\\< 名稱\>。 記錄檔。  

@@ -18,12 +18,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab407cac265c148b946380c58d48e2c98f231a81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73f3fcdb485d4fdfbb06392414086d25f405a77f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223168"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505456"
 ---
 # <a name="view-user-defined-functions"></a>檢視使用者定義函數
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，取得 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用者定義函數之定義或屬性的相關資訊。 您可能需要查看函數的定義才能了解如何從來源資料表衍生出資料；或是查看函數所定義的資料。  
@@ -52,7 +52,7 @@ ms.locfileid: "48223168"
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
-#### <a name="to-show-a-user-defined-functions-properties"></a>若要顯示使用者定義函數的屬性  
+#### <a name="to-show-a-user-defined-functions-properties"></a>顯示使用者定義函數的屬性  
   
 1.  在 **[物件總管]** 中，按一下資料庫旁邊的加號，此資料庫包含您要查看其屬性的函數，然後按一下加號展開 **[可程式性]** 資料夾。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48223168"
   
 4.  以滑鼠右鍵按一下要查看其屬性的函數，然後選取 [屬性]。  
   
-     下列屬性會出現在 [函數屬性 - *函數名稱*] 對話方塊中。  
+     下列屬性會出現在 [函數屬性 - *function_name*] 對話方塊中。  
   
      **[資料庫備份]**  
      包含此函數之資料庫的名稱。  
@@ -158,7 +158,7 @@ ms.locfileid: "48223168"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;  

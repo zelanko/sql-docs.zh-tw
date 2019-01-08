@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.peers.f1
@@ -13,12 +12,12 @@ ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5540401d4b0a05c3ebe87742f902e6e16b59498a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54de95fe39ea6b99139ee040b93160a1a93ff1bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208218"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776460"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>設定拓撲 (點對點複寫)
   您可以使用 **[設定拓撲]** 頁面來執行一些常見的組態設定工作，例如加入新的節點、刪除節點，以及在現有節點之間加入新連接。 您在此精靈之 **[發行集]** 頁面上選取的節點會顯示在設計介面上。 若要指定組態選項，請以滑鼠右鍵按一下節點、連接或設計介面。  
@@ -63,7 +62,7 @@ ms.locfileid: "48208218"
   
 ### <a name="options-for-each-node"></a>每個節點的選項  
  **加入新的對等連接**  
- 在兩個節點之間加入連接。 例如，如果您在節點 A 與節點 B 之間加入連接，複寫就會加入兩個訂閱：第一個訂閱可讓節點 A 收到位於節點 B 之發行集的變更，而第二個訂閱可讓節點 B 收到位於節點 A 之發行集的變更。  
+ 在兩個節點之間加入連接。 例如，如果您新增節點 A 與節點 B 之間的連線時，複寫會將兩個訂用帳戶：第一個可讓節點 A 收到位於節點 B 之發行集的變更和第二個可讓節點 B 收到位於節點 a 之發行集的變更  
   
  **刪除對等節點**  
  從拓撲中移除節點。 例如，如果您移除節點 C，就會一併移除位於該節點的發行集。 此外，系統也會移除節點 A 與節點 C 之間的訂閱，以及節點 B 與節點 C 之間的訂閱。 但是，系統不會刪除位於節點 C 的資料庫，而且不會停用發行和散發功能。  

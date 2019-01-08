@@ -19,12 +19,12 @@ ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e322ca0ed99c5c5b84c764cf0d89e2f365b6ed31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2163b7a264fc782cb1f05e98d0400dbd751c8b85
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221288"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502914"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseRightsScript 方法 (WMI MSReportServer_ConfigurationSetting)
   產生可用來將報表伺服器資料庫和其他資料庫 (執行報表伺服器所需) 之權限授與使用者的 SQL 指令碼。 呼叫者預期要連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫伺服器並執行此指令碼。  
@@ -84,20 +84,20 @@ out Int32 HRESULT);
 |LocalSystem|[本機系統]|\<網域>\\<電腦名稱\>$|  
 |(S-1-5-20)|網路服務|\<網域>\\<電腦名稱\>$|  
 |NT AUTHORITY\NetworkService|網路服務|\<網域>\\<電腦名稱\>$|  
-|(S-1-5-19)|本機服務|錯誤 – 請參閱下面。|  
-|NT AUTHORITY\LocalService|本機服務|錯誤 – 請參閱下面。|  
+|(S-1-5-19)|本機服務|錯誤 - 請參閱下列內容。|  
+|NT AUTHORITY\LocalService|本機服務|錯誤 - 請參閱下列內容。|  
   
  在 [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]上，如果您正在使用內建帳戶，而且報表伺服器資料庫位於遠端，就會傳回錯誤。  
   
- 如果`LocalService`指定內建帳戶，而且報表伺服器資料庫位於遠端，則會傳回錯誤。  
+ 如果指定了 `LocalService` 內建帳戶，而且報表伺服器資料庫位於遠端，就會傳回錯誤。  
   
  當 *IsWindowsUser* 為 true，且必須轉譯 *UserName* 提供的值時，WMI 提供者就會判斷報表伺服器資料庫位於同一部電腦或遠端電腦上。 為了判斷安裝是否位於本機，WMI 提供者會根據下列值清單評估 DatabaseServerName 屬性。 如果找到相符項目，表示資料庫位於本機。 否則，就表示資料庫位於遠端。 這項比較不區分大小寫。  
   
 |DatabaseServerName 的值|範例|  
 |---------------------------------|-------------|  
-|“.”||  
-|“(local)”||  
-|“LOCAL”||  
+|"."||  
+|"(local)"||  
+|"LOCAL"||  
 |localhost||  
 |\<機器名稱>|testlab14|  
 |\<機器 FQDN>|example.redmond.microsoft.com|  

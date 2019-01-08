@@ -11,12 +11,12 @@ ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec4b197c6c9588194531c2cc29ee1ba79d51fa6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6aa634f154eb0594c76ae7e65b8d237175a3f92e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669486"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543401"
 ---
 # <a name="asynchronous-execution-notification-method"></a>非同步執行 (通知方法)
 ODBC 可讓您連接和陳述式作業的非同步執行。 應用程式執行緒可以處於非同步模式下呼叫 ODBC 函數，並在作業完成時，可讓應用程式執行緒執行其他工作之前，函式可以傳回。 在 Windows 7 SDK 中，針對非同步的陳述式或連接作業，應用程式會判斷非同步作業已完成使用輪詢方法。 如需詳細資訊，請參閱 <<c0> [ 非同步執行 （輪詢的方法）](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)。 從 Windows 8 SDK 中，您就可以判斷非同步作業已完成使用的通知方法。  
@@ -327,7 +327,7 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
   
  連接屬性 SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE 和 SQL_ATTR_ASYNC_DBC_EVENT 決定 ODBC 是否處於非同步模式下執行，以及 ODBC 是否啟用連接控制代碼的通知模式。 SQL_ATTR_ASYNC_ENABLE 和 SQL_ATTR_ASYNC_STMT_EVENT 的陳述式屬性決定 ODBC 是否處於非同步模式下執行，以及 ODBC 是否啟用的陳述式控制代碼的通知模式。  
   
-|SQL_ATTR_ASYNC_ENABLE 或 SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT 或 SQL_ATTR_ASYNC_DBC_EVENT|[模式]|  
+|SQL_ATTR_ASYNC_ENABLE 或 SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT 或 SQL_ATTR_ASYNC_DBC_EVENT|模式|  
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
 |啟用|非 null|非同步通知|  
 |啟用|null|非同步輪詢|  

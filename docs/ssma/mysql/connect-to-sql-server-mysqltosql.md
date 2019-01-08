@@ -10,12 +10,12 @@ ms.assetid: d73abd3a-80df-4293-b973-1723069db049
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 254a2ee7d920d9a3296951f38094aefac9996241
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a6f3daadf8d26da15a5ef0d9a01cb7f491d974e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714506"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407945"
 ---
 # <a name="connect-to-sql-server-mysqltosql"></a>連線到 SQL Server (MySQLToSQL)
 使用**連接到 SQL Server**對話方塊中，連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您想要移轉到。 若要存取**連接到 SQL Server**對話方塊的 **檔案**功能表上，按一下 **連接到 SQL Server**。  

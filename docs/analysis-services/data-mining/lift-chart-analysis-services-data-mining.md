@@ -1,5 +1,5 @@
 ---
-title: 增益圖 (Analysis Services-資料採礦) |Microsoft 文件
+title: 增益圖 (Analysis Services-資料採礦) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9a72e7c40719511e8514c38d08cd7cd88a24055f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: cd4c0ea515020067cb7dd5c49b97db69ca6a756c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016405"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401286"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>增益圖 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  「增益圖」以圖形表示與隨機猜測相較下採礦模型所提供的改進，並測量「增益」分數的相關變更。 藉由比較不同模型的增益分數，您可以判斷哪一個模型是最佳選擇。 您也可以判斷模型的預測在哪個點變得較沒有用。 例如，藉由檢閱增益圖，您了解到促銷活動可能只對 30% 的客戶有效，並使用該圖來限制行銷活動的範圍。  
+  「增益圖」以圖形表示與隨機猜測相較下採礦模型所提供的改進，並測量「增益」分數的相關變更。 藉由比較不同模型的增益分數，您可以判斷哪一個模型是最佳選擇。 您也可以判斷處模型的預測變得較沒有用的點。 例如，藉由檢閱增益圖，您了解到促銷活動可能只對 30% 的客戶有效，並使用該圖來限制行銷活動的範圍。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦中，增益圖可以比較多個具有相同可預測屬性之模型的精確度。 您也可以評估單一結果 (可預測屬性的單一值) 或所有結果 (指定屬性的所有值) 的預測精確度。  
   
@@ -115,6 +115,6 @@ ms.locfileid: "34016405"
  [回到頁首](#bkmk_Top)  
   
 ## <a name="see-also"></a>另請參閱  
- [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [測試及驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

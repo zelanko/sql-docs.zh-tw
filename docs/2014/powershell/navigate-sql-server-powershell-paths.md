@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e13b3cde8681c4f717f0fa12d7426eea58d0caf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a5d9f7119730a904dd760f43d001f1a7734f47c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135888"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752081"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>導覽 SQL Server PowerShell 路徑
   [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell 提供者會公開一組物件，而這組物件位在類似於檔案路徑之結構的 SQL Server 執行個體中。 您可以使用 Windows PowerShell 指令程式導覽提供者路徑，以及建立自訂磁碟機來縮短必須輸入的路徑。  
@@ -115,9 +114,9 @@ Get-ChildItem -force
 ## <a name="create-a-custom-drive"></a>建立自訂磁碟機  
  **建立和使用自訂磁碟機**  
   
-1.  您可以使用 `New-PSDrive` 定義自訂磁碟機。 使用`Root`參數來指定以自訂磁碟機名稱呈現的路徑。  
+1.  您可以使用 `New-PSDrive` 定義自訂磁碟機。 您可以使用 `Root` 參數指定以自訂磁碟機名稱呈現的路徑。  
   
-2.  參考路徑導覽 cmdlet 中的自訂磁碟機名稱，例如`Set-Location`。  
+2.  參考路徑導覽 Cmdlet (例如 `Set-Location`) 中的自訂磁碟機名稱。  
   
 ### <a name="custom-drive-example-powershell"></a>自訂磁碟機範例 (PowerShell)  
  此範例會建立名為 AWDB 且對應至已部署 AdventureWorks2012 範例資料庫複本之節點的虛擬磁碟機。 然後，您可以使用虛擬磁碟機來導覽至資料庫中的資料表。  

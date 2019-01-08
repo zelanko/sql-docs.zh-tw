@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
@@ -13,12 +12,12 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecf61c3a073e43dc8ee5b385bf3d84a96d79332a
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 2fd8083c7043d5aeb7259e6a284b28ae66c82a02
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119836"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756960"
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定變更資料的間隔
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程中，第一個工作是計算變更間隔的端點。 這些端點是 `datetime` 值，而且將會以封裝變數儲存，以便稍後在封裝中使用。  
@@ -101,7 +100,7 @@ ms.locfileid: "49119836"
 3.  在 **[執行 SQL 工作編輯器]** 的 **[結果集]** 頁面上，將 ExtractStartTime 結果對應到 ExtractStartTime 封裝變數，並將 ExtractEndTime 結果對應到 ExtractEndTime 封裝變數。  
   
     > [!NOTE]  
-    >  當您使用運算式來設定的值[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]變數時，運算式會評估每次存取變數的值。  
+    >  當您使用運算式來設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 變數的值時，每次存取變數的值時，就會評估該運算式。  
   
 ## <a name="next-step"></a>下一個步驟  
  計算變更範圍的起點和結束點後，下一個步驟是判斷變更資料是否就緒。  

@@ -19,21 +19,21 @@ ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2ac74fa854d76431fd90232b79abd2dc4e32db3b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 872b14f2b9ced766086d98af74e5ea9d1129d6df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673517"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501930"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>運算式內容和查詢評估 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   運算式的內容是用來分析和評估它的資訊。 以下是評估 XQuery 的兩個階段：  
   
--   **靜態內容**– 這是在查詢編譯階段。 依據可用的資訊，有時候錯誤是在靜態分析查詢期間引發。  
+-   **靜態內容**-這是在查詢編譯階段。 依據可用的資訊，有時候錯誤是在靜態分析查詢期間引發。  
   
--   **動態內容**– 這是查詢執行階段。 即使查詢沒有靜態錯誤 (例如查詢編譯期間的錯誤)，查詢仍可能在其執行期間傳回錯誤。  
+-   **動態內容**-這是查詢執行階段。 即使查詢沒有靜態錯誤 (例如查詢編譯期間的錯誤)，查詢仍可能在其執行期間傳回錯誤。  
   
 ## <a name="static-context"></a>靜態內容  
  靜態內容初始化是指集中所有資訊，以進行運算式之靜態分析的過程。 在靜態內容初始化的過程中，會完成下列項目：  

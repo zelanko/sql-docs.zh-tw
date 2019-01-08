@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data flow [Integration Services], transformations
@@ -15,19 +14,19 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b98f377a24604abb1657a8e3a8c2b57024d84c38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1243f3cc6e7c8d7cd3ea2078e96e0f3844a8596
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229328"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767530"
 ---
 # <a name="transform-data-with-transformations"></a>使用轉換來轉換資料
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含三種類型的資料流程元件：來源、轉換與目的地。  
   
  下圖顯示包含一個來源、兩個轉換及一個目的地的簡單資料流程。  
   
- ![資料流](../../media/mw-dts-08.gif "資料流程")  
+ ![Data flow](../../media/mw-dts-08.gif "Data flow")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 轉換提供下列功能：  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48229328"
   
 ### <a name="to-add-a-transformation-to-a-data-flow"></a>將轉換加入資料流程  
   
--   [在資料流程中新增或刪除元件](../add-or-delete-a-component-in-a-data-flow.md)  
+-   [在資料流程中加入或刪除元件](../add-or-delete-a-component-in-a-data-flow.md)  
   
 ### <a name="to-connect-a-transformation-to-a-data-flow"></a>將轉換連接到資料流程  
   

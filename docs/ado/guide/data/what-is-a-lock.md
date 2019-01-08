@@ -14,17 +14,17 @@ ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 981b2b5dc1f76d879b18e5569e7fb70dbece1538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 744ae9a9541b5c73d579e097f375b4141e771fce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813076"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501757"
 ---
 # <a name="what-is-a-lock"></a>什麼是鎖定？
 鎖定是 DBMS 會存取限制多使用者環境中的資料列的程序。 資料列或資料行以獨佔方式鎖定時，不允許其他使用者存取已鎖定的資料，直到釋放鎖定為止。 這可確保兩位使用者無法同時更新相同資料列中的資料行。  
   
- 鎖定可能會耗費資源的觀點，並應只在需要時保留資料完整性。 其中數百或數千位使用者可能嘗試存取記錄每秒的資料庫中，例如資料庫連線到網際網路，在您的應用程式的效能變慢可能很快會造成不必要的鎖定。  
+ 鎖定可能會耗費資源的觀點，並應只在需要時保留資料完整性。 在其中數百或數千位使用者可能嘗試存取記錄每秒-例如連線到網際網路-資料庫的資料庫不必要的鎖定無法快速產生應用程式中的效能變慢。  
   
  您可以控制如何在資料來源和 ADO 資料指標程式庫管理並行存取選擇適當的鎖定選項。  
   

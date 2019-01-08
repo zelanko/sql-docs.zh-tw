@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 322160591d1e4ce741459e3a338bca30b0ea1603
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 87bffa2c93442aabc2dd6f193373e024466ecea6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085464"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397100"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>設定容錯移轉叢集執行個體-SQL Server 上 Linux (RHEL)
 
@@ -131,10 +131,10 @@ SQL Server 共用的磁碟的雙節點容錯移轉叢集執行個體提供高可
    sudo firewall-cmd --reload
    ```
 
-   > 如果您使用其他防火牆，其中沒有內建的高可用性設定，您需要開啟下列連接埠，Pacemaker 才能與叢集中的其他節點通訊
+   > 如果您使用其他防火牆沒有內建的高可用性組態，下列連接埠必須開啟 pacemaker 才能與叢集中其他節點通訊
    >
-   > * TCP：連接埠 2224、3121、21064
-   > * UDP：連接埠 5405
+   > * TCP：連接埠 2224，3121 21064
+   > * UDP:連接埠 5405
 
 1. 在每個節點上安裝 Pacemaker 套件。
 

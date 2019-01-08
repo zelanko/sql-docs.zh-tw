@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 317defb8c3efd99274421f169424cc09ec4caf58
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 62abd4d684c809e9dbf3f2863091f1f103808d87
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072062"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400631"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -69,7 +69,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**位元 NOT NULL**|指出資料行是為了用來瀏覽資訊而加入的額外資料行，且不會實際顯示在結果集中。|  
-|**column_ordinal**|**int NOT NULL**|包含資料行在結果集中的序數位置。 第一個資料行的位置將會指定為 1。|  
+|**column_ordinal**|**int NOT NULL**|包含資料行在結果集中的序數位置。 第一個資料行的位置會指定為 1。|  
 |**name**|**sysname 為 NULL**|如果可以判別名稱，則包含資料行名稱。 否則，它將會包含 NULL。|  
 |**is_nullable**|**位元 NOT NULL**|如果資料行允許 NULL 則包含值 1，如果資料行不允許 NULL 則包含 0，此外，如果無法判別資料行是否允許 NULL，則為 1。|  
 |**system_type_id**|**int NOT NULL**|包含 sys.types 中所指定的資料行的資料類型的 system_type_id。 針對 CLR 類型，即使 system_type_name 資料行將傳回 NULL，這個資料行將會傳回值 240。|  
@@ -259,7 +259,7 @@ ELSE
     SELECT a FROM t2;  
 ```  
   
- 結果： 錯誤，類型不相符 (**int**與**smallint**)。  
+ 結果：錯誤，類型不相符 (**int**與**smallint**)。  
   
 #### <a name="column-name-cannot-be-determined"></a>無法判別資料行名稱  
  在第一個可能的結果集中，在相同的變數長度類型、Null 屬性與資料行名稱等情況下，資料行的長度不同：  
@@ -301,7 +301,7 @@ ELSE
     SELECT c FROM t1;'  
 ```  
   
- 結果： 錯誤，類型不相符 (**varchar(10)** 與**nvarchar(10**)。  
+ 結果：錯誤，類型不相符 (**varchar(10)** 與**nvarchar(10**)。  
   
 #### <a name="result-set-can-return-an-error"></a>結果集可以傳回錯誤  
  第一個結果集為錯誤或結果集。  
@@ -373,7 +373,7 @@ EXEC(@SQL)
     ); '  
 ```  
   
- 結果： Column1 **bigint NOT NULL**  
+ 結果：Column1 **bigint NOT NULL**  
   
 #### <a name="error-caused-by-a-ambiguous-result-set"></a>因位結果集模稜兩可而發生錯誤  
  此範例假設名為 user1 的另一位使用者具有資料行的預設結構描述 s1 中名為 t1 的資料表 ( **int NOT NULL**)。  

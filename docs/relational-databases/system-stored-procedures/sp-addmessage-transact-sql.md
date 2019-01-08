@@ -18,12 +18,12 @@ ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a8b3f01c833e725fc807de11c15e39142509626
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b5ba2a19505d0d7a1493b997eda7d12f3a588f7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668326"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524113"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  [  **@severity =** ]*嚴重性*  
  這是錯誤的嚴重性層級。 *嚴重性*已**smallint**預設值是 NULL。 有效的層級範圍是 1 到 25。 如需有關嚴重性的詳細資訊，請參閱 [Database Engine 錯誤嚴重性](../../relational-databases/errors-events/database-engine-error-severities.md)。  
   
- [ **@msgtext =** ] **'***msg***'**  
+ [  **@msgtext =** ] **'**_msg_**'**  
  這是錯誤訊息的文字。 *msg*已**nvarchar(255)** 預設值是 NULL。  
   
- [  **@lang =** ] **'***語言***'**  
+ [  **@lang =** ] **'**_語言_**'**  
  這是此訊息的語言。 *語言*已**sysname**預設值是 NULL。 因為可以在相同的伺服器上安裝多種語言*語言*指定撰寫每個訊息的語言。 當*語言*已省略，語言是預設語言工作階段。  
   
  [  **@with_log =** ] { **'** TRUE **'** | **'FALSE'** }  
@@ -61,7 +61,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 > [!NOTE]  
 >  如果訊息寫入 Windows 應用程式記錄檔中，它也會寫入 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 錯誤記錄檔中。  
   
- [ **@replace** *=* ] **'***取代***'**  
+ [ **@replace** *=* ] **'**_取代_**'**  
  如果指定為字串*取代*，新訊息文字和嚴重性層級覆寫現有的錯誤訊息。 *取代*已**varchar(7)** 預設值是 NULL。 必須指定此選項，如果*msg_id*已經存在。 如果您取代 U.S. English 訊息，嚴重性層級會取代所有具有相同的其他語言中的所有訊息*msg_id*。  
   
 ## <a name="return-code-values"></a>傳回碼值  

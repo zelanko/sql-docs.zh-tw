@@ -13,12 +13,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: fe561dcba4a0cff5b58ef7810b27f30b1c95e228
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 5fafd1a86686b7609a8b6e0241c05cc858f2dc41
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906298"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409695"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的 Reporting Services (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 已[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]與商業智慧方案專用增強功能的環境。 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 隨附於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -49,7 +49,7 @@ ms.locfileid: "48906298"
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#bkmk_Top)  
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> 報表設計師視窗和窗格  
- 報表設計師支援兩種檢視：**設計**來定義報表資料和報表配置，以及**預覽**來顯示報表的轉譯的檢視。 在每個檢視中，您可以顯示多個視窗來協助設計或檢視轉譯的報表。  
+ 報表設計師支援兩種檢視：**設計**來定義報表資料和報表配置，並**預覽**來顯示報表的轉譯的檢視。 在每個檢視中，您可以顯示多個視窗來協助設計或檢視轉譯的報表。  
   
 ###  <a name="bkmk_ReportDataPane"></a> 報表資料窗格  
  [報表資料] 窗格顯示內建欄位、資料來源、資料集、欄位集合、報表參數和影像。  
@@ -62,7 +62,7 @@ ms.locfileid: "48906298"
   
 -   **資料集** ：每個資料集都會包含指定要從資料來源中擷取哪些資料的查詢。 您可以展開資料集，以便檢視資料集查詢所指定的欄位集合。  
   
-     在多維度資料集的某些查詢設計工具中，您可以在 [篩選] 窗格中指定篩選，然後指出是否要建立報表參數。 若您指定報表參數選項，系統就會自動建立特殊資料集，以擴展參數的有效值清單。  根據預設，此資料集不會出現在 [報表資料] 窗格內。 如需詳細資訊，請參閱[針對多維度資料的參數值顯示隱藏的資料集 &#40;報表產生器和 SSRS&#41;](../report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)。  
+     在多維度資料集的某些查詢設計工具中，您可以在 [篩選] 窗格中指定篩選，然後指出是否要建立報表參數。 若您指定報表參數選項，系統就會自動建立特殊資料集，以填入參數的有效值清單。  根據預設，此資料集不會出現在 [報表資料] 窗格內。 如需詳細資訊，請參閱[針對多維度資料的參數值顯示隱藏的資料集 &#40;報表產生器和 SSRS&#41;](../report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)。  
   
 -   **報表參數** ：報表參數清單。 資料集查詢包含查詢參數時，可以手動或自動建立參數。  
   
@@ -188,7 +188,7 @@ ms.locfileid: "48906298"
   
 -   **報表屬性** ：選取即可開啟 **[報表屬性]** 對話方塊。 在這個對話方塊中，您可以指派一般報表屬性，例如作者名稱和方格間距，以及指定報表配置的屬性，例如資料行數和頁面大小。 您也可以包括自訂程式碼、組件和類別的參考、資料輸出元素的名稱、資料轉換和資料結構描述。  
   
--   **檢視** ：在兩個報表設計師索引標籤之間切換：[設計] 和 [預覽]。  
+-   **檢視**兩個報表設計師索引標籤之間切換：[設計] 和 [預覽]。  
   
 -   **頁首** ：在報表中加入或刪除頁首。 當您刪除頁首時，就會刪除頁首中的所有項目。  
   

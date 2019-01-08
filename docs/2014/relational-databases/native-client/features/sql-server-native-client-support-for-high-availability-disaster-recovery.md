@@ -10,15 +10,15 @@ ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ce83a5fae673d32fd86523fa13ef8b67b74b780
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 267d39335cd0bf74134030f3bb2af4a11e652319
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137604"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391062"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>高可用性/災害復原的 SQL Server Native Client 支援
-  本主題將討論適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client 支援 (在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中所新增)。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的詳細資訊 , ，請參閱[可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md)、[建立及設定可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[容錯移轉叢集和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 和[使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+  本主題將討論適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client 支援 (在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中所新增)。 如需詳細資訊[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱 <<c2> [ 可用性群組接聽程式、 用戶端連接性及應用程式容錯移轉&#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md)，[建立和設定可用性群組&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[容錯移轉叢集和 AlwaysOn 可用性群組&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)，和[作用中次要複本：</c2>可讀取次要複本 （AlwaysOn 可用性群組）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  您可以在連接字串中指定給定可用性群組的可用性群組接聽程式。 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 應用程式連接到可用性群組中發生容錯移轉的資料庫，則原始連接會中斷，而且應用程式必須在容錯移轉後開啟新連接，才能繼續工作。  
   
@@ -30,11 +30,11 @@ ms.locfileid: "48137604"
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 進行連接  
  在連接到 SQL Server 2012 可用性群組接聽程式或 SQL Server 2012 容錯移轉叢集執行個體時，永遠指定 `MultiSubnetFailover=Yes`。 `MultiSubnetFailover` 對於 SQL Server 2012 中的所有可用性群組和容錯移轉叢集執行個體可促進更快的容錯移轉，並大幅縮短單一和多重子網路 AlwaysOn 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會平行嘗試連接。 在子網路容錯移轉期間，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會積極重試 TCP 連接。  
   
- `MultiSubnetFailover` 連接屬性指示，應用程式正在可用性群組或容錯移轉叢集執行個體中部署，而且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會透過嘗試連接到所有 IP 位址，嘗試連接到主要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的資料庫。 為連接指定 `MultiSubnetFailover=Yes` 時，用戶端重試 TCP 連線的速度會比作業系統的預設 TCP 重新傳輸間隔快。 這種方式可在容錯移轉 AlwaysOn 可用性群組或 AlwaysOn 容錯移轉叢集執行個體之後更快重新連線，且同時適用於單一和多重子網路可用性群組和容錯移轉叢集執行個體。  
+ `MultiSubnetFailover` 連接屬性指示，應用程式正在可用性群組或容錯移轉叢集執行個體中部署，而且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會透過嘗試連接到所有 IP 位址，嘗試連接到主要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的資料庫。 當`MultiSubnetFailover=Yes`指定連線，用戶端重試 TCP 連接的速度比作業系統的預設 TCP 重新傳輸間隔快。 這種方式可在容錯移轉 AlwaysOn 可用性群組或 AlwaysOn 容錯移轉叢集執行個體之後更快重新連線，且同時適用於單一和多重子網路可用性群組和容錯移轉叢集執行個體。  
   
  如需連接字串關鍵字的詳細資訊，請參閱[搭配 SQL Server Native Client 使用連接字串關鍵字](../applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
- 指定`MultiSubnetFailover=Yes`當連接到的項目以外的可用性群組接聽程式或容錯移轉叢集執行個體可能會導致負面效能影響，並不支援。  
+ 當連接到可用性群組接聽程式或容錯移轉叢集執行個體以外的某個項目時，指定 `MultiSubnetFailover=Yes` 將會產生負面效能影響，而且不支援這樣的處理方式。  
   
  請使用下列指導方針，連接到可用性群組或容錯移轉叢集執行個體中的伺服器：  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48137604"
   
 -   連接到設定超過 64 個 IP 位址的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體會導致連接失敗。  
   
--   使用 `MultiSubnetFailover` 連接屬性之應用程式的行為不受驗證類型影響：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證、Kerberos 驗證或 Windows 驗證。  
+-   使用 `MultiSubnetFailover` 連接屬性之應用程式的行為不受驗證類型影響：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication、Kerberos Authentication 或 Windows Authentication。  
   
 -   您可以增加 `loginTimeout` 的值，來容納容錯移轉時間並減少應用程式連接重試次數。  
   
@@ -56,23 +56,23 @@ ms.locfileid: "48137604"
   
 2.  如果應用程式使用 `ApplicationIntent=ReadWrite` (下文討論)，而且已針對唯讀存取設定次要複本位置。  
   
- 如果設定主要複本拒絕唯讀工作負載，而且連接字串包含，則連接會失敗`ApplicationIntent=ReadOnly`。  
+ 如果設定主要複本拒絕唯讀工作負載，而且連接字串包含 `ApplicationIntent=ReadOnly`，則連接會失敗。  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>從資料庫鏡像升級到使用多子重網路叢集  
  如果連接字串中有 `MultiSubnetFailover` 和 `Failover_Partner` 連接關鍵字，則會發生連接錯誤。 如果使用 `MultiSubnetFailover` 而且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 傳回容錯移轉夥伴回應，指出它是資料庫鏡像配對的一部分，也會發生錯誤。  
   
- 如果您將目前使用資料庫鏡像的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 應用程式升級為多重子網路案例，應該移除 `Failover_Partner` 連接屬性，以設為 `MultiSubnetFailover` 的 `Yes` 取代它，並以可用性群組接聽程式取代連接字串中的伺服器名稱。 如果連接字串使用`Failover_Partner`和`MultiSubnetFailover=Yes`，驅動程式會產生錯誤。 不過，如果使用的連接字串`Failover_Partner`並`MultiSubnetFailover=No`(或`ApplicationIntent=ReadWrite`)，應用程式會使用資料庫鏡像。  
+ 如果您將目前使用資料庫鏡像的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 應用程式升級為多重子網路案例，應該移除 `Failover_Partner` 連接屬性，以設為 `MultiSubnetFailover` 的 `Yes` 取代它，並以可用性群組接聽程式取代連接字串中的伺服器名稱。 如果連接字串使用 `Failover_Partner` 和 `MultiSubnetFailover=Yes`，驅動程式會發生錯誤。 不過，如果連接字串使用 `Failover_Partner` 和 `MultiSubnetFailover=No` (或 `ApplicationIntent=ReadWrite`)，應用程式就會使用資料庫鏡像。  
   
  如果可用性群組中的主要資料庫使用資料庫鏡像，而且如果在連接到主要資料庫 (而不是可用性群組接聽程式) 的連接字串中使用 `MultiSubnetFailover=Yes`，驅動程式會傳回錯誤。  
   
 ## <a name="specifying-application-intent"></a>指定應用程式意圖  
  當 `ApplicationIntent=ReadOnly` 時，用戶端在連接到啟用 AlwaysOn 的資料庫時會要求讀取工作負載。 伺服器會在連接時和在 USE 資料庫陳述式期間，只針對啟用 AlwaysOn 的資料庫強制執行此意圖。  
   
- `ApplicationIntent`關鍵字不適用於舊版唯讀資料庫。  
+ `ApplicationIntent` 關鍵字不適用於舊版唯讀資料庫。  
   
  資料庫可以允許或不允許 AlwaysOn 目標資料庫上的讀取工作負載 (這藉`ALLOW_CONNECTIONS`子句`PRIMARY_ROLE`並`SECONDARY_ROLE`[!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式。)  
   
- `ApplicationIntent`關鍵字用來啟用唯讀路由。  
+ `ApplicationIntent` 關鍵字用於啟用唯讀路由。  
   
 ## <a name="read-only-routing"></a>唯讀路由  
  唯讀路由是可確保資料庫的唯讀複本之可用性的功能。 若要啟用唯讀路由：  

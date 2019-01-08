@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
@@ -13,12 +12,12 @@ ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: afdab0c6817e65e1562a6768394d842a8e944c8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00910fdb6800921a2c6eeae79340eb5d2a79db20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129160"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756360"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>判斷變更資料是否就緒
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程中，第二個工作是確保所選間隔之變更資料已就緒。 由於非同步的擷取程序可能還沒有處理到所選端點的所有變更，因此這是必要的步驟。  
@@ -200,7 +199,7 @@ ms.locfileid: "48129160"
         > [!NOTE]  
         >  `Thread.Sleep` 方法應為以毫秒指定的引數。  
   
-7.  保留預設會傳回程式碼行`DtsExecResult.Success`從執行指令碼。  
+7.  保留從指令碼之執行傳回 `DtsExecResult.Success` 的預設程式碼行。  
   
 8.  關閉指令碼開發環境以及 **[指令碼工作編輯器]**。  
   
@@ -276,7 +275,7 @@ ms.locfileid: "48129160"
   
 6.  在 **[指令碼工作編輯器]** 的 **[指令碼]** 頁面上，按一下 **[編輯指令碼]** 來開啟指令碼開發環境。  
   
-7.  在 Main 程序中，輸入程式碼，以記錄錯誤，藉由呼叫`Dts.Log`方法，或藉由呼叫其中一個方法引發事件`Dts.Events`介面。 傳回 `Dts.TaskResult = Dts.Results.Failure`以通知封裝發生錯誤。  
+7.  在 Main 程序中，呼叫 `Dts.Log` 方法來輸入程式碼以記錄錯誤，或呼叫 `Dts.Events` 介面的其中一個方法來引發事件。 傳回 `Dts.TaskResult = Dts.Results.Failure`以通知封裝發生錯誤。  
   
      下列範例顯示如何將訊息寫入到記錄檔中。 如需相關資訊，請參閱 [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md)、 [Raising Events in the Script Task](../extending-packages-scripting/task/raising-events-in-the-script-task.md)及 [Returning Results from the Script Task](../extending-packages-scripting/task/returning-results-from-the-script-task.md)。  
   

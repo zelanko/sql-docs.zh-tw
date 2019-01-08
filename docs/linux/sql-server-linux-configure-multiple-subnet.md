@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 0952390e21d174d4d10e99f53904de4d11be6230
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 595add5d077136c4093776fae8e3a2f7ab04bb26
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637468"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396171"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>設定子網路的多個 Always On 可用性群組和容錯移轉叢集執行個體
 
@@ -24,7 +24,7 @@ ms.locfileid: "47637468"
 
 ## <a name="vlan-based-solution"></a>VLAN 為基礎的解決方案
  
-**必要條件**： 為 VLAN 架構的解決方案，參與 AG 或 FCI 的每一部伺服器需要兩張網路卡 (Nic) （雙重連接埠 NIC 會是單一實體伺服器上的失敗點） 適當的可用性，以便它可以在指派 IP 位址其原生的子網路，以及其中一個 VLAN 上。 這是任何其他網路需求，例如 iSCSI，也需要它自己的網路之外。
+**必要條件**:VLAN 架構的解決方案，參與 AG 或 FCI 的每一部伺服器需要兩張網路卡 (Nic)，以取得適當可用性 （雙重連接埠 NIC 會是單一實體伺服器上的失敗點），以便它可以將指派其原生的子網路，以及一個上的 IP 位址在 VLAN。 這是任何其他網路需求，例如 iSCSI，也需要它自己的網路之外。
 
 AG 或 FCI 的 IP 位址建立 VLAN 上執行。 在下列範例中，VLAN 有 192.168.3 的子網路。*x*，因此建立 AG 或 FCI 的 IP 位址是 192.168.3.104。 其他不需要設定，因為沒有單一 IP 位址指派給 FCI 的 AG。
 

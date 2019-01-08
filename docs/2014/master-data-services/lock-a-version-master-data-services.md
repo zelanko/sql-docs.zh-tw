@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - versions [Master Data Services], locking
@@ -14,12 +13,12 @@ ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ad236e42b0556ddef4e316b1b6b24280615b7e9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23e705dd936383db09b0a9eda37eb6d925dbffbb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140518"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750870"
 ---
 # <a name="lock-a-version-master-data-services"></a>鎖定版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，鎖定模型版本，以防止模型成員及其屬性的變更。  
@@ -32,7 +31,7 @@ ms.locfileid: "48140518"
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 -   版本的狀態必須是 [開啟]。  
   
@@ -48,12 +47,12 @@ ms.locfileid: "48140518"
   
 ## <a name="next-steps"></a>後續步驟  
   
--   [根據商務規則驗證版本&#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+-   [根據商務規則驗證版本 &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
--   [認可版本&#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)  
+-   [認可版本 &#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [版本&#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
- [解除鎖定版本， &#40;Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)  
+ [版本 &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
+ [解除鎖定版本 &#40;Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)  
   
   

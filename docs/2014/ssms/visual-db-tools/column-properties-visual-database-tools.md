@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
@@ -16,12 +16,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef49a4bee27339849cd7b2ec0f5d64701804284a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120300"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757580"
 ---
 # <a name="column-properties-visual-database-tools"></a>資料行屬性 (Visual Database Tools)
   有兩個集合的資料行屬性：您可以在資料表設計工具的 [資料行屬性] 索引標籤中看到的完整集合 (僅適用於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫)，以及使用伺服器總管可以在 [屬性] 視窗中看到的子集。  
@@ -111,7 +111,7 @@ ms.locfileid: "48120300"
  展開以顯示其餘屬性。  
   
  **定序**  
- 顯示選取之資料行的定序設定。 若要變更此設定，請按一下 [定序]，然後按一下值右邊的省略符號 (**…**)。  
+ 顯示選取之資料行的定序設定。 若要變更此設定，請按一下 [定序]，然後按一下值右邊的省略符號 (...)。  
   
  **計算資料行規格類別目錄**  
  展開以顯示 [公式] 和 [為永續性] 的屬性。 如果資料行為計算的，則也會顯示公式。 若要編輯公式，請展開此類別目錄，並在 [公式] 屬性中編輯它。  
@@ -126,7 +126,7 @@ ms.locfileid: "48120300"
  顯示欄位的資料類型資訊，使用與 SQL CREATE TABLE 陳述式相同的格式。 例如，包含可變長度字串 (最大長度為 20 個字元) 的欄位可表示為「varchar(20)」。 若要變更這個屬性，請直接輸入屬性值。  
   
  **說明**  
- 顯示資料行的描述。 若要查看完整的描述，或要編輯它，請按一下 [描述]，然後按一下屬性右邊的省略符號 ( **…** )。  
+ 顯示資料行的描述。 若要查看完整的描述，或要編輯它，請按一下 [描述]，然後按一下屬性右邊的省略符號 (...)。  
   
  **全文檢索規格類別目錄**  
  展開以顯示全文檢索資料行特定的屬性。  

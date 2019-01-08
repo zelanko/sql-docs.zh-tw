@@ -1,5 +1,5 @@
 ---
-title: 定義量值群組內的維度資料粒度 |Microsoft 文件
+title: 定義量值群組內的維度資料粒度 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9faa4c869591c6885a1856fca0ec63661af7799a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e047f955f9c4ecccc02404dc139d557935e0f090
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018815"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542237"
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>課程 5-4-量值群組內定義維度資料粒度
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "34018815"
   
 12. 從 [銷售配額] 量值群組中刪除 [日曆季] 量值。  
   
-    [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 偵測到做為 [日曆季] 量值基礎的資料行是包含量值的資料行。 不過，這個資料行和 CalendarYear 資料行都包含您稍後在這個主題中用於連結 [銷售配額] 量值群組與 [日期] 維度的值。  
+    [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 偵測到作為 [日曆季] 量值基礎的資料行是包含量值的資料行。 不過，這個資料行和 CalendarYear 資料行都包含您稍後在這個主題中用於連結 [銷售配額] 量值群組與 [日期] 維度的值。  
   
 13. 在 [量值] 窗格中，以滑鼠右鍵按一下 [銷售配額] 量值群組，然後按一下 [新增量值]。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "34018815"
   
 8.  在篩選中，按一下 [全選] 核取方塊以清除所有選取項目，然後只選擇 [北美洲]。  
   
-    ![篩選 窗格來選取北美的](../analysis-services/media/l5-granularity-1b.png "來選取北美的篩選 窗格")  
+    ![篩選窗格來選取北美](../analysis-services/media/l5-granularity-1b.png "來選取北美的篩選窗格")  
   
 9. 在樞紐分析表欄位清單中，展開 [日期]。  
   
@@ -113,13 +113,13 @@ ms.locfileid: "34018815"
   
     下圖顯示 [銷售量配額] 的值。  
   
-    ![值的銷售金額配額](../analysis-services/media/l5-granularity-3.png "銷售額的值數量配額")  
+    ![值的銷售金額配額](../analysis-services/media/l5-granularity-3.png "值 Sales Amount，配額")  
   
 ## <a name="defining-dimension-usage-properties-for-the-sales-quotas-measure-group"></a>定義 [銷售配額] 量值群組的維度使用方式屬性  
   
 1.  針對 [員工] 維度開啟 [維度設計師]，以滑鼠右鍵按一下 [資料來源檢視] 窗格中的 [SalesTerritoryKey]，然後按一下 [從資料行新增屬性]。  
   
-2.  在 [屬性]\(attribute) 窗格中，選取 [SalesTerritoryKey]，然後在 [屬性]\(property) 視窗中，將 [AttributeHierarchyVisible] 屬性 (property) 設定為 [False]、將 [AttributeHierarchyOptimizedState] 屬性 (property) 設定為 [NotOptimized]，並且將 [AttributeHierarchyOrdered] 屬性 (property) 設定為 [False]。  
+2.  在 [屬性] (attribute) 窗格中，選取 [SalesTerritoryKey]，然後在 [屬性] (property) 視窗中，將 [AttributeHierarchyVisible] 屬性 (property) 設定為 [False]、將 [AttributeHierarchyOptimizedState] 屬性 (property) 設定為 [NotOptimized]，並且將 [AttributeHierarchyOrdered] 屬性 (property) 設定為 [False]。  
   
     這是要將 [銷售領域] 維度連結至 [銷售配額] 和 [銷售配額 1] 量值群組成為參考維度時必要的屬性。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "34018815"
   
     請注意，[員工] 和 [日期] Cube 維度是透過一般關聯性連結到 [銷售配額] 和 [銷售配額 1] 量值群組。 也請注意，[銷售領域] Cube 維度並未連結到其中任何量值群組。  
   
-4.  在 [銷售領域] 維度和 [銷售配額] 量值群組的交集處，按一下資料格，然後按一下瀏覽按鈕 (**…**)。 此時會開啟 [定義關聯性] 對話方塊。  
+4.  按一下資料格的交集處**Sales Territory**維度並**銷售配額**量值群組，然後按一下 瀏覽按鈕 (**...**).此時會開啟 定義關聯性 對話方塊。  
   
 5.  在 [選取關聯性類型] 清單中，選取 [參考的]。  
   
@@ -139,9 +139,9 @@ ms.locfileid: "34018815"
   
 9. 確認已選取 [具體化] 核取方塊。  
   
-10. 按一下 **[確定]**。  
+10. 按一下 [確定] 。  
   
-11. 在 [銷售領域] 維度和 [銷售配額 1] 量值群組的交集處，按一下資料格，然後按一下瀏覽按鈕 (**…**)。 此時會開啟 [定義關聯性] 對話方塊。  
+11. 按一下資料格的交集處**Sales Territory**維度並**銷售配額 1**量值群組，然後按一下 瀏覽按鈕 (**...**).此時會開啟 定義關聯性 對話方塊。  
   
 12. 在 [選取關聯性類型] 清單中，選取 [參考的]。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "34018815"
   
 16. 確認已選取 [具體化] 核取方塊。  
   
-17. 按一下 **[確定]**。  
+17. 按一下 [確定] 。  
   
 18. 刪除 [日期] Cube 維度。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "34018815"
   
     將 [訂單日期] Cube 維度重新命名為**日期**，讓使用者可以更容易了解其在這個 Cube 中是扮演主要日期維度的角色。  
   
-20. 在 [銷售配額] 量值群組與 [日期] 維度的交集處上，按一下資料格中的瀏覽按鈕 (**…**)。  
+20. 按一下 瀏覽按鈕 (**...**) 的交集處的儲存格中**銷售配額**量值群組和**日期**維度。  
   
 21. 在 [定義關聯性] 對話方塊中，選取 [選取關聯性類型] 清單中的 [一般]。  
   
@@ -188,7 +188,7 @@ ms.locfileid: "34018815"
   
 3.  在 [建立屬性關聯性] 對話方塊中，[來源屬性] 是 [日曆季]。 將 [相關屬性] 設定為 [會計季度]。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
     請注意，此時會出現警告訊息，說明 [日期] 維度包含一或多個重複屬性關聯性。在使用非索引鍵屬性當作資料粒度屬性時，這些關聯性可能會讓您無法彙總資料。  
   
@@ -221,7 +221,7 @@ ms.locfileid: "34018815"
     ![銷售配額量值群組已正確建立維度](../analysis-services/media/l5-granularity-7.gif "已正確建立維度的銷售配額量值群組")  
   
 ## <a name="next-lesson"></a>下一課  
-[第 6 課： 定義計算](../analysis-services/lesson-6-defining-calculations.md)  
+[第 6 課：定義計算](../analysis-services/lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [維度關聯性](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  

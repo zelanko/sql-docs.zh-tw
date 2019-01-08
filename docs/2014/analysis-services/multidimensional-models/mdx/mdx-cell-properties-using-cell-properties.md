@@ -16,12 +16,12 @@ ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6b79e568f6dd8a3f0aac8e6f226f2b1719a41ff5
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 1a8b302391eb4e7384a54181b102f4ae8f3de522
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148244"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417749"
 ---
 # <a name="using-cell-properties-mdx"></a>使用資料格屬性 (MDX)
   多維度運算式 (MDX) 的資料格屬性包含有關多維度資料來源 (如 Cube) 中資料格的內容及格式的資訊。  

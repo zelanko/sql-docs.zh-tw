@@ -11,15 +11,15 @@ ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50ddca5c3cdb1b7e314ccc6650bbd8fcc3ed3841
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f71f7b3f8d2cb6f7bd50ef676742282ee73d540
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113438"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411675"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>判斷 Analysis Services 執行個體的伺服器模式
-  Analysis Services 可安裝為以下三種伺服器模式之一：多維度和資料採礦 (預設模式)、PowerPivot for SharePoint，以及表格式。 Analysis Services 執行個體的伺服器模式是在安裝期間您選擇安裝伺服器選項時決定。  
+  Analysis Services 可以安裝在三種伺服器模式的其中一個：多維度和資料採礦 (預設值)、PowerPivot for SharePoint、以及表格式。 Analysis Services 執行個體的伺服器模式是在安裝期間您選擇安裝伺服器選項時決定。  
   
  伺服器模式決定您所建立和部署的方案類型。 如果您沒有安裝伺服器軟體並且想要知道伺服器的安裝模式，可以使用本主題中的資訊來判斷模式。 如需特定模式下功能可用性的詳細資訊，請參閱[比較表格式和多維度解決方案 &#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md)。  
   
@@ -34,10 +34,10 @@ ms.locfileid: "48113438"
  或者，您可以在每個 Analysis Services 執行個體中的 msmdsrv.ini 檔案檢查 `DeploymentMode` 屬性。 此屬性的值會識別伺服器模式。 有效值為 0 (多維度)、1 (SharePoint) 或 2 (表格式)。 您必須是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 系統管理員 (亦即伺服器角色的成員)，才能開啟 msmdsrv.ini 檔案。 此檔案包含結構化 XML。 您可以使用記事本或任何文字編輯器來檢視此檔案。  
   
 > [!CAUTION]  
->  不會變更的值`DeploymentMode`屬性。 不支援在安裝伺服器後手動變更此屬性。  
+>  請不要變更 `DeploymentMode` 屬性的值。 不支援在安裝伺服器後手動變更此屬性。  
   
 ## <a name="about-the-deploymentmode-property"></a>關於 DeploymentMode 屬性  
- `DeploymentMode` 屬性會判斷 Analysis Services 伺服器執行個體的運作內容。 此屬性在對話方塊、訊息和文件集中稱為「伺服器模式」。 此屬性是由安裝程式根據您安裝 Analysis Services 的方式初始化。 此屬性應該僅被視為內部屬性，永遠使用安裝程式所指定的值。  
+ `DeploymentMode` 屬性會判斷 Analysis Services 伺服器執行個體的運作內容。 這個屬性被指在對話方塊、 訊息和文件中的 「 伺服器模式 」。 此屬性是由安裝程式根據您安裝 Analysis Services 的方式初始化。 此屬性應該僅被視為內部屬性，永遠使用安裝程式所指定的值。  
   
  這個屬性的有效值包括：  
   
@@ -54,8 +54,8 @@ ms.locfileid: "48113438"
  [以多維度及資料採礦模式安裝 Analysis Services](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [PowerPivot for SharePoint 2010 安裝](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
  [連接到 Analysis Services](connect-to-analysis-services.md)   
- [表格式模型方案&#40;SSAS 表格式&#41;](../tabular-model-solutions-ssas-tabular.md)   
- [多維度模型方案 &#40;Ssas&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [採礦模型&#40;Analysis Services-資料採礦&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
+ [表格式模型方案 &#40;SSAS 表格式&#41;](../tabular-model-solutions-ssas-tabular.md)   
+ [多維度模型方案 &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [採礦模型 &#40;Analysis Services - 資料採礦&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
   
   

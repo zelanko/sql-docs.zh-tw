@@ -13,12 +13,12 @@ ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 04e58ec9c40f62932c4a711c1e96c0bd4e8162e2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 168fced99d74cb2d3716929b4b47fda1c03b92ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666167"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532390"
 ---
 # <a name="using-test-repositories-oracletosql"></a>使用測試存放庫 (OracleToSQL)
 SSMA 測試儲存機制存放區 SSMA Tester 測試案例和測試結果以供稍後使用。 儲存機制資料會儲存在 SQL Server 資料表**TestCaseRepository**並**RunTestCaseResultRepository**結構描述中**ssma_oracle_utilities** 的**ssmatesterdb**資料庫。  
@@ -34,13 +34,13 @@ SSMA 測試儲存機制存放區 SSMA Tester 測試案例和測試結果以供�
   
 此方格會顯示每個測試案例的下列資訊：  
   
--   名稱： 測試案例名稱。  
+-   名稱：測試案例的名稱。  
   
--   建立： 測試案例建立日期。  
+-   建立：測試案例建立日期。  
   
--   修改過： 測試案例上次修改日期。  
+-   修改：測試案例上次修改日期。  
   
--   描述： 測試案例描述。  
+-   描述：測試案例描述中。  
   
 下列的按鈕可在測試案例 頁面上：  
   
@@ -57,17 +57,17 @@ SSMA 測試儲存機制存放區 SSMA Tester 測試案例和測試結果以供�
   
 您可以使用兩個篩選條件**測試結果**頁面：  
   
--   測試案例名稱篩選： 可選擇測試結果的測試案例的名稱。 此篩選條件**所有測試案例**值可允許顯示所有測試案例的測試結果。  
+-   測試案例名稱篩選：可選擇測試結果的測試案例的名稱。 此篩選條件**所有測試案例**值可允許顯示所有測試案例的測試結果。  
   
--   測試案例執行日期篩選： 篩選測試結果所儲存的日期。此篩選條件**所有期間**值可讓任何日期的節約顯示測試結果。  
+-   測試案例執行日期篩選條件：篩選測試結果所儲存的日期。此篩選條件**所有期間**值可讓任何日期的節約顯示測試結果。  
   
 下列測試結果的相關資訊會顯示在方格中。  
   
--   名稱： 測試案例的名稱。  
+-   名稱：測試案例的名稱。  
   
--   儲存： 測試案例儲存日期。  
+-   儲存：測試案例儲存日期。  
   
--   結果: （這個儲存格的工具提示會顯示測試執行的完整摘要） 的測試執行簡短摘要。  
+-   結果：（這個儲存格的工具提示會顯示測試執行的完整摘要） 的測試執行的簡短摘要。  
   
 下列的按鈕可在測試結果 頁面上：  
   

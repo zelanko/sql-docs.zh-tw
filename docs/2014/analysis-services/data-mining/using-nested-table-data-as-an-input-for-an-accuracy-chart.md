@@ -16,12 +16,12 @@ ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ffec1e01fd5e1c0c35a2088235cc2979a7694f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2cd9c01ada73773f826c8ff45c55687158480841
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196688"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518282"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>使用巢狀資料表當做精確度圖表的輸入
   當您使用外部資料測試採礦模型的精確度時，如果採礦模型包含巢狀資料表，則外部資料必須也包含案例資料表和相關聯的巢狀資料表。  
@@ -44,7 +44,7 @@ ms.locfileid: "48196688"
   
 3.  在 **[選取要用於精確度圖表的資料集]** 中選取 **[指定不同的資料集]** 選項。  
   
-4.  按一下瀏覽按鈕 **(…)**，即可從目前伺服器上的資料來源檢視清單選擇外部資料集。  
+4.  按一下 瀏覽按鈕 **（...）** 從目前的伺服器上的資料來源檢視的清單選擇外部資料集。  
   
 5.  按一下 [選取案例資料表] 。 在 **[選取資料表]** 對話方塊中，從資料來源檢視中選取包含案例資料的資料表，然後按一下 **[確定]**。  
   

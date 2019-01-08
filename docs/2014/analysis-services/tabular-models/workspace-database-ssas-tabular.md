@@ -11,12 +11,12 @@ ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 65d4a23044084f18662c3aca1cc68bfd157ea3dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d70cf1724eb67dbf8f1a75989df5f4021b5512d6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134988"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416699"
 ---
 # <a name="workspace-database-ssas-tabular"></a>工作空間資料庫 (SSAS 表格式)
   當您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中建立新的表格式模型專案時，會建立表格式模型工作空間資料庫 (模型撰寫期間所使用)。 工作空間資料庫存在於以表格式模式執行之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的記憶體中，通常會與 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 位在相同的電腦上。  
@@ -60,7 +60,7 @@ ms.locfileid: "48134988"
  工作區資料庫屬性包含在模型屬性中。 若要檢視模型屬性，請在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的方案總管中，按一下 [Model.bim] 檔案。 模型屬性可以使用 [屬性] 視窗進行設定。 工作空間資料庫的特定屬性包括：  
   
 > [!NOTE]  
->  當您建立新的模型專案時，[工作空間伺服器]、[工作空間保留] 及 [資料備份] 屬性會套用預設值。 您可以在 [資料模型化] 頁面之 [工具\選項] 對話方塊的 [Analysis Server] 設定中，變更新模型專案的預設設定。 您也可以在 [屬性] 視窗中，為每個模型專案設定上述屬性及其他屬性。 變更預設設定不會套用至已建立的模型專案。 如需詳細資訊，請參閱[設定預設的資料模型和部署屬性&#40;SSAS 表格式&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
+>  當您建立新的模型專案時，[工作空間伺服器]、[工作空間保留] 及 [資料備份] 屬性會套用預設值。 您可以在 [資料模型化] 頁面之 [工具\選項] 對話方塊的 [Analysis Server] 設定中，變更新模型專案的預設設定。 您也可以在 [屬性] 視窗中，為每個模型專案設定上述屬性及其他屬性。 變更預設設定不會套用至已建立的模型專案。 如需詳細資訊，請參閱 [設定預設的資料模型和部署屬性 &#40;SSAS 表格式&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
   
 |屬性|預設值|描述|  
 |--------------|---------------------|-----------------|  
@@ -78,10 +78,10 @@ ms.locfileid: "48134988"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[模型屬性的&#40;SSAS 表格式&#41;](model-properties-ssas-tabular.md)|提供模型的工作空間資料庫屬性之說明及組態步驟。|  
+|[模型屬性 &#40;SSAS 表格式&#41;](model-properties-ssas-tabular.md)|提供說明及組態步驟的模型工作空間資料庫屬性。|  
   
 ## <a name="see-also"></a>另請參閱  
- [設定預設的資料模型和部署屬性&#40;SSAS 表格式&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [專案屬性&#40;SSAS 表格式&#41;](properties-ssas-tabular.md)  
+ [設定預設的資料模型和部署屬性 &#40;SSAS 表格式&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [專案屬性 &#40;SSAS 表格式&#41;](properties-ssas-tabular.md)  
   
   

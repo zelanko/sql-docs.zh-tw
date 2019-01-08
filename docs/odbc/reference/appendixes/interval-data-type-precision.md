@@ -19,17 +19,17 @@ ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98be3b4a7e4db30f394a2834364ecab9a20ef182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8df4339ae30b9058e5a5864c37807c6b02e4fdd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706426"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532125"
 ---
 # <a name="interval-data-type-precision"></a>間隔資料類型精確度
 間隔資料類型的有效位數，其中包括間隔開頭有效位數、 間隔精確度和秒數有效位數。  
   
- 間隔的開頭欄位是帶正負號的數值。 [前置] 欄位的數字的最大數目取決於呼叫的數量*間隔開頭有效位數，* 這是資料型別宣告的一部分。 例如，宣告： 間隔 HOUR(5) 分鐘有間隔開頭有效位數 5;[小時] 欄位可以接受從 –99999 到 99999 之間的值。 間隔開頭有效位數欄位中包含 SQL_DESC_DATETIME_INTERVAL_PRECISION 的描述項記錄。  
+ 間隔的開頭欄位是帶正負號的數值。 [前置] 欄位的數字的最大數目取決於呼叫的數量*間隔開頭有效位數，* 這是資料型別宣告的一部分。 例如，宣告：間隔 HOUR(5) 分鐘有間隔開頭有效位數 5;[小時] 欄位可以接受從-99999 到 99999 之間的值。 間隔開頭有效位數欄位中包含 SQL_DESC_DATETIME_INTERVAL_PRECISION 的描述項記錄。  
   
  間隔資料類型組成的欄位清單會呼叫*間隔精確度*。 它不數值，因為 「 精確度 」 一詞可能暗示。 間隔類型的有效位數 INTERVAL DAY TO 比方說，第二個是清單日、 小時、 分、 秒。 沒有保存此值的描述項欄位時間間隔有效位數一律取決間隔資料類型。  
   

@@ -1,5 +1,5 @@
 ---
-title: 第 4 課： 建立關聯性 |Microsoft Docs
+title: 第 4 課：建立關聯性 | Microsoft Docs
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,22 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bbddc0966729b93b2e9ac202966dff645c28c32c
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: 2cfa28b4fa5575fbdda06ed64f8f52994b596186
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792028"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411295"
 ---
-# <a name="lesson-4-create-relationships"></a>第 4 課： 建立關聯性
+# <a name="lesson-4-create-relationships"></a>第 4 課：建立關聯性
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在這一課，您將驗證匯入資料時自動建立的關聯性，以及在不同資料表之間加入新的關聯性。 關聯性是在兩個資料表之間的一種連接，這種連接會建立這兩個資料表中資料相互關聯的方式。 例如，DimProduct 資料表和 DimProductSubcategory 資料表的關聯性是以每個產品都屬於某個子類別目錄為基礎。 若要進一步了解，請參閱[關聯性](../analysis-services/tabular-models/relationships-ssas-tabular.md)。
   
-完成本課程的估計時間： **10 分鐘**  
+完成本課程的估計時間：**10 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
-本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 3 課： 標記為日期資料表](../analysis-services/lesson-3-mark-as-date-table.md)。 
+本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 3 課：標記為日期資料表](../analysis-services/lesson-3-mark-as-date-table.md)。 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>檢閱現有的關聯性並加入新的關聯性  
 當您匯入資料，使用 [資料表匯入精靈] 時，您會取得七個資料表，從 AdventureWorksDW 資料庫。 一般而言，當您匯入資料，從關聯式來源，會與資料一起自動匯入現有的關聯性。 不過，在您繼續撰寫模型之前，應先確認資料表之間的關聯性已正確建立。 在這個教學課程中，您會另外加入三個新的關聯性。  
@@ -41,14 +41,14 @@ ms.locfileid: "42792028"
   
 2.  按一下 之間的實線**DimCustomer**資料表並**DimGeography**資料表。 這兩個資料表之間的實線說明這個關聯性為作用中狀態，也就是說，這是在計算 DAX 公式時預設使用的關聯性。  
   
-    請注意**GeographyKey**中的資料行**DimCustomer**資料表， **GeographyKey**中的資料行**DimGeography**資料表現在都每個出現在方塊內。 此節目這些是使用關聯性中的資料行。 現在關聯性的屬性也會出現在 [屬性] 視窗中。  
+    請注意**GeographyKey**中的資料行**DimCustomer**資料表， **GeographyKey**中的資料行**DimGeography**資料表現在都每個出現在方塊內。 此節目這些是使用關聯性中的資料行。 關聯性的屬性現在也會出現在**屬性**視窗。  
   
     > [!TIP]  
     > 除了使用模型設計師圖表檢視 中，您也可以使用 管理關聯性 對話方塊中顯示的資料表中的所有資料表之間的關聯性。 以滑鼠右鍵按一下**關聯性**在表格式模型總管 中，然後按一下**管理關聯性**。 [管理關聯性] 對話方塊會顯示您匯入資料時自動建立的關聯性。  
   
 3.  使用模型設計師圖表檢視 或 管理關聯性 對話方塊中的，以確認下列關聯性時所建立每個資料表匯入從 AdventureWorksDW 資料庫：  
   
-    |作用中|Table|相關查閱資料表|  
+    |作用中|資料表|相關查閱資料表|  
     |----------|---------|------------------------|  
     |是|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
     |是|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
@@ -56,7 +56,7 @@ ms.locfileid: "42792028"
     |是|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
     |是|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
   
-    如果遺漏任何上述表格中的關聯性，請確認您的模型包含下列資料表︰ DimCustomer、 DimDate、 DimGeography、 DimProduct、 DimProductCategory、 DimProductSubcategory 和 FactInternetSales。 如果在不同時間從相同的資料來源連接匯入資料表，則不會建立這些資料表之間的任何關聯性，必須手動建立。  
+    如果遺漏任何上述表格中的關聯性，請確認您的模型包含下列資料表：DimCustomer、 DimDate、 DimGeography、 DimProduct、 DimProductCategory、 DimProductSubcategory 和 FactInternetSales。 如果在不同時間從相同的資料來源連接匯入資料表，則不會建立這些資料表之間的任何關聯性，必須手動建立。  
 
 ### <a name="take-a-closer-look"></a>深入探討
 在圖表檢視中，您會發現有箭號、 星號和資料表之間的關聯性線條上的數字。
@@ -91,7 +91,7 @@ ms.locfileid: "42792028"
      ![做為表格式-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   
 ## <a name="whats-next"></a>下一步
-移至下一個課程︰[第 5 課： 建立導出資料行](../analysis-services/lesson-5-create-calculated-columns.md)。
+請移至下一課：[第 5 課：建立計算結果的欄](../analysis-services/lesson-5-create-calculated-columns.md)。
   
   
   

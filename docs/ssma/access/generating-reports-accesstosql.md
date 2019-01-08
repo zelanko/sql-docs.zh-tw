@@ -10,12 +10,12 @@ ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b5138dea4cfea23d77dae5d4bc766b4c2738f4e7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fe6f45b2e35761fac5f8c49012b1eb370645bcb1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659061"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412765"
 ---
 # <a name="generating-reports-accesstosql"></a>產生報表 (AccessToSQL)
 使用命令來執行某些活動的報表會產生物件樹狀結構層級的 SSMA 主控台中。  
@@ -45,8 +45,8 @@ ms.locfileid: "51659061"
     ||||  
     |-|-|-|  
     |**Sl。[否]。**|**命令與參數**|**輸出描述**|  
-    |1|verbose=”false”|產生之活動的摘要的報告。|  
-    |2|verbose=”true”|產生每個活動的摘要和詳細狀態報告。|  
+    |1|詳細資訊 ="false"|產生之活動的摘要的報告。|  
+    |2|詳細資訊 ="true"|產生每個活動的摘要和詳細狀態報告。|  
   
     > [!NOTE]  
     > 上面指定的報表詳細等級設定時產生評估報表、 轉換結構描述移轉資料的命令。  
@@ -56,8 +56,8 @@ ms.locfileid: "51659061"
     ||||  
     |-|-|-|  
     |**Sl。[否]。**|**命令與參數**|**輸出描述**|  
-    |1|report-errors=”false”|沒有詳細資料發生錯誤 / 警告 / 資訊訊息。|  
-    |2|report-errors=”true”|詳細的錯誤 / 警告 / 資訊訊息。|  
+    |1|報告錯誤 ="false"|沒有詳細資料發生錯誤 / 警告 / 資訊訊息。|  
+    |2|報告錯誤 ="true"|詳細的錯誤 / 警告 / 資訊訊息。|  
   
     > [!NOTE]  
     > 錯誤報告設定上述指定時產生評估報表、 轉換結構描述移轉資料的命令。  
@@ -87,7 +87,7 @@ ms.locfileid: "51659061"
 ### <a name="synchronize-target"></a>同步處理目標：  
 命令**同步處理目標**已**報告錯誤至**參數，指定同步處理作業的錯誤報表的位置。 然後，依名稱的檔案**TargetSynchronizationReport&lt;n&gt;。XML**會建立在指定的位置，其中**&lt;n&gt;** 是唯一的檔案數目，以每次執行相同的命令數字會遞增。  
   
-**注意：** 如果指定的資料夾路徑，則 '報表-錯誤-to' 參數變成選擇性的命令' 同步處理目標 ' 屬性。  
+**注意：** 如果指定的資料夾路徑，則 '報表-錯誤-to' 參數會變成命令' 同步處理目標 ' 的選擇性屬性。  
   
 ```xml  
 <!-- Example: Synchronize target entire Database with all attributes-->  
@@ -115,7 +115,7 @@ ms.locfileid: "51659061"
 ### <a name="refresh-from-database"></a>重新整理從-資料庫：  
 命令**從資料庫重新整理**已**報告錯誤至**參數，指定重新整理作業的錯誤報表的位置。 然後，依名稱的檔案**SourceDBRefreshReport&lt;n&gt;。XML**會建立在指定的位置，其中**&lt;n&gt;** 是唯一的檔案數目，以每次執行相同的命令數字會遞增。  
   
-**注意：** 如果指定的資料夾路徑，則 '報表-錯誤-to' 參數變成選擇性的命令' 同步處理目標 ' 屬性。  
+**注意：** 如果指定的資料夾路徑，則 '報表-錯誤-to' 參數會變成命令' 同步處理目標 ' 的選擇性屬性。  
   
 ```xml  
 <!-- Example: Refresh entire Schema (with all attributes)-->  
@@ -132,7 +132,7 @@ ms.locfileid: "51659061"
   
 />  
 ```  
-**物件名稱：** 指定視為重新整理 （它也可以有個別的物件名稱或群組的物件名稱） 的物件。  
+**物件名稱：** 指定重新整理 （它也可以有個別的物件名稱或群組的物件名稱） 被視為物件。  
   
 **錯誤：** 指定是否要指定重新整理錯誤視為警告或錯誤。 錯誤的可用選項：  
   

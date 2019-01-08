@@ -18,15 +18,15 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2647d65f91fff3c21a63a7b2e21dcd0d144e00c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2fd8058518d59e5eb3fcf8a8514425c69339dfb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189678"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525752"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>針對可用性群組手動準備次要資料庫 (SQL Server)
-  本主題描述如何準備次要資料庫以進行中的 AlwaysOn 可用性群組[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]利用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]， [!INCLUDE[tsql](../../../includes/tsql-md.md)]，或 PowerShell。 準備次要資料庫需要進行兩個步驟：(1) 使用 RESTORE WITH NORECOVERY，將主要資料庫的最新資料庫備份和後續記錄備份還原至裝載次要複本的每個伺服器執行個體，以及 (2) 將還原的資料庫聯結至可用性群組。  
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中準備 AlwaysOn 可用性群組的次要資料庫。 準備次要資料庫需要兩個步驟：（1） 還原主要資料庫的最近資料庫備份和後續記錄備份至裝載次要複本的每個伺服器執行個體、 使用 RESTORE WITH NORECOVERY，以及 （2） 將還原的資料庫加入可用性群組。  
   
 > [!TIP]  
 >  如果您有現有的記錄傳送組態，您可能可以將記錄傳送主要資料庫連同其一個或多個次要資料庫，一併轉換成 AlwaysOn 主要資料庫和一個或多個 AlwaysOn 次要資料庫。 如需詳細資訊，請參閱 <<c0> [ 必要條件的移轉記錄傳送至 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)。</c0>  
@@ -49,7 +49,7 @@ ms.locfileid: "48189678"
   
 -   [相關備份和還原工作](#RelatedTasks)  
   
--   **後續操作** [準備次要資料庫之後](#FollowUp)  
+-   **後續操作：**[準備次要資料庫之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -79,12 +79,12 @@ ms.locfileid: "48189678"
 ####  <a name="Permissions"></a> 權限  
  BACKUP DATABASE 和 BACKUP LOG 權限預設為 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)。  
   
- 當還原的資料庫不存在伺服器執行個體上時，RESTORE 陳述式就需要 CREATE DATABASE 權限。 如需詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)備份。  
+ 當還原的資料庫不存在伺服器執行個體上時，RESTORE 陳述式就需要 CREATE DATABASE 權限。 如需詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 > [!NOTE]  
->  如果主控主要複本的伺服器執行個體和主控次要複本的每個執行個體之間的備份和還原檔案路徑相同，則您應該可以使用[新增可用性群組精靈](use-the-availability-group-wizard-sql-server-management-studio.md)、[將複本加入至可用性群組精靈](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)或[將資料庫加入至可用性群組精靈](availability-group-add-database-to-group-wizard.md)建立次要資料庫。  
+>  如果主控主要複本的伺服器執行個體和主控次要複本的每個執行個體之間的備份和還原檔案路徑相同，則您應該可以使用 [新增可用性群組精靈](use-the-availability-group-wizard-sql-server-management-studio.md)、 [將複本加入至可用性群組精靈](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)或 [將資料庫加入至可用性群組精靈](availability-group-add-database-to-group-wizard.md)建立次要資料庫。  
   
  **若要準備次要資料庫**  
   
@@ -245,16 +245,16 @@ ms.locfileid: "48189678"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要準備次要資料庫**  
   
-1.  如果您需要建立主要資料庫的最新備份，將目錄變更 (`cd`) 裝載主要複本的伺服器執行個體。  
+1.  如果您需要建立主要資料庫的最新備份，請變更目錄 (`cd`) 為裝載主要複本的伺服器執行個體。  
   
 2.  使用 `Backup-SqlDatabase` 指令程式來建立每個備份。  
   
-3.  將目錄變更 (`cd`) 裝載次要複本的伺服器執行個體。  
+3.  將目錄切換到 (`cd`) 裝載次要複本的伺服器執行個體。  
   
 4.  若要還原每個主要資料庫的資料庫和記錄備份，請使用 `restore-SqlDatabase` 指令程式，並指定 `NoRecovery` 還原參數。 如果在裝載主要複本的電腦和裝載目標次要複本的電腦之間有檔案路徑差異，也要使用 `RelocateFile` 還原參數。  
   
     > [!NOTE]  
-    >  若要檢視 cmdlet 的語法，請使用`Get-Help`指令程式在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 環境。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境中使用 `Get-Help` 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
 5.  若要完成次要資料庫的組態設定，您必須將它聯結至可用性群組。 如需詳細資訊，請參閱[將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
@@ -273,7 +273,7 @@ Backup-SqlDatabase -Database "MyDB1" -BackupAction "Log" -BackupFile "\\share\ba
 # Restore database backup   
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
 # Restore log backup   
-Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery –ServerInstance "DestinationMachine\Instance"  
+Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
   
 ```  
   

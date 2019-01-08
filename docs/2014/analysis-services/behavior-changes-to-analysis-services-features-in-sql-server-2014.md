@@ -11,12 +11,12 @@ ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f8855fceb717ba210b8fc5c36960d660143be79
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 0f7cc154a79a329bc18d02535e3f3332aa7e8b61
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145837"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391781"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 中 Analysis Services 功能的行為變更
   本主題描述 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中多維度、表格式、資料採礦及 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 部署的行為變更。 行為變更會影響功能在目前版本中，與舊版 SQL Server 相較之下的運作或互動方式。  
@@ -40,7 +40,7 @@ ms.locfileid: "50145837"
   
 |問題|描述|  
 |-----------|-----------------|  
-|在 SQL Server 2012 SP1 PowerPivot for SharePoint 2013 中使用 SQL Server 2008 R2 PowerPivot 活頁簿時，這些活頁簿不會以無訊息方式升級並重新整理模型。 因此，排程的資料重新整理不會針對 SQL Server 2008 R2 PowerPivot 活頁簿運作。|2008 R2 活頁簿將在 [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)]中開啟，但是排程的重新整理不會運作。 如果您檢閱重新整理記錄，將會看到類似下面的錯誤訊息：<br /> 「活頁簿包含不受支援的 PowerPivot 模型。 活頁簿中的 PowerPivot 模型是採用 SQL Server 2008 R2 PowerPivot for Excel 2010 格式。 支援的 PowerPivot 模型如下: <br />SQL Server 2012 PowerPivot for Excel 2010<br />SQL Server 2012 PowerPivot for Excel 2013 」<br /><br /> **如何升級活頁簿** ：在您將活頁簿升級為 2012 活頁簿之前，排程的重新整理無法運作。 若要升級活頁簿及它所包含的模型，請完成下列其中一項作業：<br /><br /> 在已安裝 SQL Server 2012 PowerPivot for Excel 增益集的 Microsoft Excel 2010 中下載並開啟活頁簿。 然後，儲存活頁簿並重新發行至 SharePoint 伺服器。<br /><br /> 在 Microsoft Excel 2013 中下載並開啟活頁簿。 然後，儲存活頁簿並重新發行至 SharePoint 伺服器。<br /><br /> <br /><br /> 如需有關活頁簿升級的詳細資訊，請參閱 <<c0> [ 升級活頁簿和排程資料重新整理&#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。</c0>|  
+|在 SQL Server 2012 SP1 PowerPivot for SharePoint 2013 中使用 SQL Server 2008 R2 PowerPivot 活頁簿時，這些活頁簿不會以無訊息方式升級並重新整理模型。 因此，排程的資料重新整理不會針對 SQL Server 2008 R2 PowerPivot 活頁簿運作。|2008 R2 活頁簿將在 [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)]中開啟，但是排程的重新整理不會運作。 如果您檢閱重新整理記錄，將會看到類似以下的錯誤訊息：<br /> 「 活頁簿包含不支援的 PowerPivot 模型。 活頁簿中的 PowerPivot 模型是採用 SQL Server 2008 R2 PowerPivot for Excel 2010 格式。 支援的 PowerPivot 模型如下: <br />SQL Server 2012 PowerPivot for Excel 2010<br />SQL Server 2012 PowerPivot for Excel 2013 」<br /><br /> **如何升級活頁簿：** 在您將活頁簿升級為 2012 活頁簿之前，排程的重新整理無法運作。 若要升級活頁簿及它所包含的模型，請完成下列其中一項作業：<br /><br /> 在已安裝 SQL Server 2012 PowerPivot for Excel 增益集的 Microsoft Excel 2010 中下載並開啟活頁簿。 然後，儲存活頁簿並重新發行至 SharePoint 伺服器。<br /><br /> 在 Microsoft Excel 2013 中下載並開啟活頁簿。 然後，儲存活頁簿並重新發行至 SharePoint 伺服器。<br /><br /> <br /><br /> 如需有關活頁簿升級的詳細資訊，請參閱 <<c0> [ 升級活頁簿和排程資料重新整理&#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。</c0>|  
 |DAX [ALL Function](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx)中的行為變更。|在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]之前，如果您將標示的 [日期] 資料行指定為日期資料表以供時間智慧使用，則該 [日期] 資料行會傳遞為 ALL 函數的引數，接著會傳遞為 CALCULATE 函數的篩選條件，並且資料表中所有資料行的所有篩選條件都會被忽略，不論日期資料行上是否使用任何交叉分析篩選器。<br /><br /> 例如，<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> 在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]之前，日期資料表的所有資料行都會忽略所有篩選條件，不論 [日期] 資料行是否當做 ALL 的引數傳遞。<br /><br /> 在 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 和 Excel 2013 的 PowerPivot 中，此行為只會忽略當做 ALL 的引數傳遞之指定資料行的篩選條件。<br /><br /> 若要避開新的行為，事實上是忽略當做整個資料表之篩選條件的所有資料行，您可以從引數中排除 [日期] 資料行，例如，<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> 這樣會產生與之前 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]相同的行為結果。|  
   
 ##  <a name="bkmk_sql2012"></a> 中的行為變更 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
@@ -49,7 +49,7 @@ ms.locfileid: "50145837"
 ### <a name="analysis-services-multidimensional-mode"></a>Analysis Services 多維度模式  
   
 #### <a name="nullprocessing-option-set-to-preserve-is-no-longer-supported-for-distinct-count-measures"></a>相異計數量值不再支援將 NullProcessing 選項設為 Preserve  
- 之前[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，即可設定[NullProcessing 元素&#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl)來`Preserve`相異計數量值。  不幸的是，這種做法產生的結果時常無效，有時甚至會損毀正在處理的作業。 因此 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]將不再提供這項設定。 嘗試使用此設定將導致發生以下驗證錯誤：「中繼資料管理員發生錯誤。 Preserve 不是有效 NullProcessing 值\<measurename > 相異計數量值。 」  
+ 之前[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，即可設定[NullProcessing 元素&#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl)來`Preserve`相異計數量值。  不幸的是，這種做法產生的結果時常無效，有時甚至會損毀正在處理的作業。 因此 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]將不再提供這項設定。 嘗試使用它將會導致下列驗證錯誤發生：「 中繼資料管理員中的錯誤。 Preserve 不是有效 NullProcessing 值\<measurename > 相異計數量值。 」  
   
 #### <a name="cube-browser-in-management-studio-and-cube-designer-has-been-removed"></a>已經移除 Management Studio 和 Cube 設計師中的 Cube 瀏覽器  
  已經從產品中移除 Cube 瀏覽器控制項，此控制項可讓您將欄位拖放到 Management Studio 或 Cube 設計師中的樞紐分析表結構上。 此控制項為 Office Web 控制項 (OWC) 元件。 OWC 已被 Office 取代，無法再使用。  
@@ -61,7 +61,7 @@ ms.locfileid: "50145837"
   
  在此版本中，從外部檔案轉譯 PowerPivot 資料之 Excel 活頁簿的權限要求已變更。 在此版本中，您必須擁有 **[讀取]** 權限 (更具體來說，就是 **[開啟項目]** 權限)，才能從用戶端應用程式連接到外部的 PowerPivot 活頁簿。 額外的權限會指定使用者具備下載權限才能檢視活頁簿中內嵌的來源資料。 其他權限會反映模型資料完全可用於所連結的用戶端應用程式或活頁簿，導致在權限要求與實際資料連接行為之間獲得更好的協調。  
   
- 若要繼續使用 PowerPivot 活頁簿做為外部資料來源，您必須為連接到外部 PowerPivot 資料的使用者建立 SharePoint 權限。 除非您變更權限，否則使用者嘗試在資料來源連接中存取 PowerPivot 活頁簿時會收到下列錯誤：「PowerPivot Web 服務傳回錯誤 (拒絕存取。 您要求的文件不存在，或是您沒有開啟檔案的權限)。」  
+ 若要繼續使用 PowerPivot 活頁簿做為外部資料來源，您必須為連接到外部 PowerPivot 資料的使用者建立 SharePoint 權限。 除非您變更權限，否則使用者嘗試在資料來源連接中存取 PowerPivot 活頁簿時會收到下列錯誤：「 PowerPivot Web 服務傳回錯誤 （拒絕存取。 您所要求的文件不存在或您沒有開啟檔案的權限。） 」  
   
 > [!WARNING]  
 >  以下步驟說明如何在文件庫層級中斷權限繼承，並且將使用者對此文件庫中特定文件的權限從 **[僅檢視]** 提升為 **[讀取]** 。 在繼續進行之前，務必仔細檢越現有權限和文件，並且確認這些步驟適合您的網站。  

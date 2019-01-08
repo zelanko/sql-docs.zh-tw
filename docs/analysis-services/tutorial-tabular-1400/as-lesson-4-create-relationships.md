@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 教學課程第 4 課： 建立關聯性 |Microsoft Docs
+title: Analysis Services 教學課程第 4 課：建立關聯性 |Microsoft Docs
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1768bd38be49515012139f8cd93c749ac7e3c48c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a39978dc461bd660d932e13561ed4d00c4041e0e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063729"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394515"
 ---
 # <a name="create-relationships"></a>建立關聯性
 
@@ -22,11 +22,11 @@ ms.locfileid: "43063729"
 
 在這一課，您可以確認您匯入資料時自動建立的關聯性，並新增新不同資料表之間的關聯性。 關聯性是在兩個資料表之間的一種連接，這種連接會建立這兩個資料表中資料相互關聯的方式。 例如，DimProduct 資料表和 DimProductSubcategory 資料表的關聯性是以每個產品都屬於某個子類別目錄為基礎。 若要進一步了解，請參閱[關聯性](../tabular-models/relationships-ssas-tabular.md)。
   
-完成本課程的估計時間： **10 分鐘**  
+完成本課程的估計時間：**10 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 
-這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 3 課： 標記為日期資料表](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)。 
+這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 3 課：標記為日期資料表](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)。 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>檢閱現有的關聯性並加入新的關聯性  
 
@@ -50,14 +50,14 @@ ms.locfileid: "43063729"
   
 2.  按一下 之間的實線**DimCustomer**資料表並**DimGeography**資料表。 這兩個資料表之間的實線顯示此關聯性為作用中，也就是計算 DAX 公式時，它使用預設。  
   
-    請注意**GeographyKey**中的資料行**DimCustomer**資料表， **GeographyKey**中的資料行**DimGeography**資料表現在都每個出現在方塊內。 關聯性中，會使用這些資料行。 現在關聯性的屬性也會出現在 [屬性] 視窗中。  
+    請注意**GeographyKey**中的資料行**DimCustomer**資料表， **GeographyKey**中的資料行**DimGeography**資料表現在都每個出現在方塊內。 關聯性中，會使用這些資料行。 關聯性的屬性現在也會出現在**屬性**視窗。  
   
     > [!TIP]  
     > 您也可以使用 [管理關聯性] 對話方塊中，若要顯示的資料表中的所有資料表之間的關聯性。 在表格式模型總管 中，以滑鼠右鍵按一下**關聯性** > **管理關聯性**。
   
 3.  請確認下列關聯性時所建立每個資料表已從 AdventureWorksDW 資料庫匯入：  
   
-    |作用中|Table|相關查閱資料表|  
+    |作用中|資料表|相關查閱資料表|  
     |----------|---------|------------------------|  
     |是|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
     |是|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
@@ -65,7 +65,7 @@ ms.locfileid: "43063729"
     |是|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
     |是|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
   
-    如果遺漏任何關聯性，請確認您的模型包含下列資料表︰ DimCustomer、 DimDate、 DimGeography、 DimProduct、 DimProductCategory、 DimProductSubcategory 和 FactInternetSales。 如果從相同的資料來源連接的資料表在不同時間之間的關聯性匯入這些資料表則不會建立，而且必須手動建立。 如果不出現任何關聯性，這表示在資料來源沒有任何關聯性。 您可以加以手動建立資料模型中。
+    如果遺漏任何關聯性，請確認您的模型包含下列資料表：DimCustomer、 DimDate、 DimGeography、 DimProduct、 DimProductCategory、 DimProductSubcategory 和 FactInternetSales。 如果從相同的資料來源連接的資料表在不同時間之間的關聯性匯入這些資料表則不會建立，而且必須手動建立。 如果不出現任何關聯性，這表示在資料來源沒有任何關聯性。 您可以加以手動建立資料模型中。
 
 ### <a name="take-a-closer-look"></a>深入探討
 
@@ -102,7 +102,7 @@ ms.locfileid: "43063729"
   
 ## <a name="whats-next"></a>下一步
 
-[第 5 課： 建立計算結果的欄](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)。
+[第 5 課：建立計算結果的欄](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)。
   
   
   

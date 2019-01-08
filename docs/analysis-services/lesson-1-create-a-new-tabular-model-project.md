@@ -1,5 +1,5 @@
 ---
-title: 第 1 課： 建立新的表格式模型專案 |Microsoft Docs
+title: 第 1 課：建立新的表格式模型專案 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 61ac5b1a0bac9647e6163a13afd0bce6b251ac03
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6b0c376c6ab8625d2f31e6ad6ea132842315b1e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040856"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410768"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>第 1 課：建立新的表格式模型專案
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在這一課，您將在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中建立新的空白表格式模型專案。 建立新專案之後，您就可以使用 [資料表匯入精靈] 開始加入資料。 這一課也可讓您撰寫環境，在 SSDT 中的表格式模型的簡介。  
   
-完成本課程的估計時間： **10 分鐘**  
+完成本課程的估計時間：**10 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 本主題是表格式模型撰寫教學課程的第一課。 若要完成這一課，您必須使用 SQL Server 執行個體上安裝 AdventureWorksDW 範例資料庫。 若要進一步了解，請參閱[表格式模型化&#40;Adventure Works 教學課程&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)。  
@@ -50,7 +50,7 @@ ms.locfileid: "38040856"
       
     如果您沒有看到 SQL Server 2016 RTM (1200) 的相容性層級的清單方塊中，您不使用最新版的 SQL Server Data Tools。 若要取得最新版本，請參閱 [安裝 SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)。  
 
-    如果您使用最新版的 SSDT，您也可以選擇 SQL Server 2017 (1400)。 不過，為了完整第 13 課： 部署，您必須將部署到 SQL Server 2017 或 Azure 伺服器。
+    如果您使用最新版的 SSDT，您也可以選擇 SQL Server 2017 (1400)。 不過，為了完整第 13 課：部署，您必須將部署到 SQL Server 2017 或 Azure 伺服器。
       
     只建議選取較早的相容性層級，如果您想要將您已完成的表格式模型部署到執行舊版的 SQL Server 的不同 Analysis Services 執行個體。 舊版的相容性層級不支援整合式工作區。 若要深入了解，請參閱 [相容性層級](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。   
   
@@ -87,7 +87,7 @@ ms.locfileid: "38040856"
   
 
 ## <a name="whats-next"></a>下一步
-移至下一個課程︰[第 2 課： 將資料加入](../analysis-services/lesson-2-add-data.md)。
+請移至下一課：[第 2 課：將資料加入](../analysis-services/lesson-2-add-data.md)。
 
   
   

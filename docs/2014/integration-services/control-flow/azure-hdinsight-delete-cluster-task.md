@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 02/28/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpdelcltask.f1
@@ -14,12 +13,12 @@ ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fc5564e70c73830f89bc11cc2d6c59d3c2974862
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 513faad27977b3a4aef9b1e4907c85cd3a2905be
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078919"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767170"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Azure HDInsight 刪除叢集工作
 **Azure HDInsight 刪除叢集工作**可讓 SSIS 套件刪除指定之 Azure 訂用帳戶和資源群組中的 Azure HDInsight 叢集。

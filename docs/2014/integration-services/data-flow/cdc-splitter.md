@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsplitter.f1
@@ -13,12 +12,12 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03f677f8214fb086f3feb6077608fed83d7089d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd69d23338510b08a450504c477c23d076ffaf1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086250"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754690"
 ---
 # <a name="cdc-splitter"></a>CDC 分隔器
   CDC 分隔器會將 CDC 來源資料流程中變更資料列的單一流程分割為插入、更新和刪除作業的不同資料流程。 資料流程是根據 `__$operation` 變更資料表中的必要資料行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及其標準值分割的。  
@@ -41,11 +40,11 @@ ms.locfileid: "48086250"
   
  此元件的錯誤輸出包含下列輸出資料行：  
   
--   **錯誤碼**：設為 1。  
+-   **錯誤碼**:設定為 1。  
   
--   **錯誤資料行**：造成錯誤 (用於轉換錯誤) 的來源資料行。  
+-   **錯誤資料行**:造成錯誤 （用於轉換錯誤） 的來源資料行。  
   
--   **錯誤資料列資料行**：造成錯誤之資料列的輸入資料行。  
+-   **錯誤資料列資料行**:造成錯誤之資料列的輸入資料行。  
   
 ## <a name="configuring-the-cdc-splitter"></a>設定 CDC 分隔器  
  CDC 分隔器沒有可設定的屬性。  

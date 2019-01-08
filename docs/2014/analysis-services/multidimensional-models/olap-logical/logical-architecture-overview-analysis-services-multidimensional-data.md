@@ -15,12 +15,12 @@ ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 525e3d131e5bb2e53d35faa73f1c4c579c59cbd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fd2aad1cf57852c2b78db1128a972c0490a52a85
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091448"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416489"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>邏輯架構概觀 (Analysis Services - 多維度資料)
   Analysis Services 會以伺服器部署模式運作，該模式可判斷不同類型的 Analysis Services 模型所使用的記憶體架構和執行階段環境。 伺服器模式是在安裝期間決定。 **多維度和資料採礦模式**支援傳統 OLAP 和資料採礦。 **表格式模式**支援表格式模型。 **SharePoint 整合的模式**指的是安裝為 PowerPivot for SharePoint，用於載入和查詢 Excel 或 PowerPivot 活頁簿內的資料模型的 Analysis Services 的執行個體。  
@@ -48,7 +48,7 @@ ms.locfileid: "48091448"
  每個資料庫物件都包含一或多個 Cube 物件。 Cube 是由其量值和維度所定義。 Cube 中的量值和維度是衍生自 Cube 所依據之資料來源檢視中的資料表和檢視，或是從量值和維度定義所產生。  
   
 ## <a name="object-inheritance"></a>物件繼承  
- ASSL 物件模型包含許多重複元素群組。 例如，元素群組「`Dimensions` 包含 `Hierarchies`」可定義元素的維度階層。 `Cubes` 和 `MeasureGroups` 都包含元素群組「`Dimensions` 包含 `Hierarchies`」。  
+ ASSL 物件模型包含許多重複元素群組。 比方說，元素群組 「`Dimensions`包含`Hierarchies`，「 定義維度的階層項目。 `Cubes` 和 `MeasureGroups` 都包含元素群組「`Dimensions` 包含 `Hierarchies`」。  
   
  除非明確被覆寫，否則元素會從更高的層級繼承這些重複元素群組的詳細資料。 例如，`Translations` 對於 `CubeDimension` 與 `Translations` 對於它的上階項目 `Cube` 是相同的作用。  
   
@@ -126,6 +126,6 @@ ms.locfileid: "48091448"
  此處所顯示的範例只包含單一事實資料表。 當 Cube 具有多份事實資料表時，會將每份事實資料表的量值組成量值群組，並根據定義的維度關聯性讓量值群組與特定的維度集產生關聯。 而透過指定資料來源檢視的參與資料表和關聯性的資料粒度，即可建立這些關聯性。 **相關的主題：**[維度關聯性](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型資料庫&#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  
+ [多維度模型資料庫 &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  
   
   

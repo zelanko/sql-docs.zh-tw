@@ -1,5 +1,5 @@
 ---
-title: 將篩選套用至模型測試資料 |Microsoft 文件
+title: 將篩選套用至模型測試資料 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 03eb6a8b8a459f0d5d0769d1f7af16f06b81f560
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d9254d42d61fdf6bf087d83d0ced4ff1761dd077
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020035"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539947"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>將篩選套用至模型測試資料
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34020035"
   
  若要判斷模型是否包含可能會影響結果的預先定義篩選，您可以在 [屬性] 窗格中尋找 [篩選] 屬性，或透過使用資料採礦結構描述資料列集來查詢模型。 例如，下列查詢會傳回指定之模型的篩選文字：  
   
- `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model’`  
+ `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model'`  
   
 > [!WARNING]  
 >  如果您要從現有的採礦模型中移除篩選，或者變更篩選條件，則必須重新處理採礦模型。  
@@ -57,7 +57,7 @@ ms.locfileid: "34020035"
   
 3.  在 [輸入選擇] 索引標籤的 [選取要用於精確度圖表的資料集] 下，選取 [指定不同的資料集] 選項。  
   
-4.  按一下瀏覽按鈕 **(...)** 開啟對話方塊，並選擇外部資料集。  
+4.  按一下 瀏覽按鈕 **（...）** 開啟一個對話方塊，並選擇外部資料集。  
   
 5.  選擇案例資料表，並視需要新增巢狀資料表。 視需要將模型中的資料行對應至外部資料集中的資料行。 關閉 [指定資料行對應] 對話方塊，以儲存來源資料表定義。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "34020035"
   
 9. 按一下 [及/或] 文字方塊並選取邏輯運算子來定義多項條件的組合方式。  
   
-10. (選擇性) 按一下位於 [值] 文字方塊右側的瀏覽按鈕 **(…)** 來開啟 [篩選] 對話方塊，並針對巢狀資料表或個別的案例資料表資料行設定條件。  
+10. （選擇性） 按一下 瀏覽按鈕 **（...）** 右邊的**值**文字方塊中，以開啟**篩選**對話方塊方塊中，並設定條件，巢狀資料表或個別的案例資料表資料行。  
   
 11. 檢視 [運算式] 窗格中的文字，藉以確認完成的篩選條件是否正確。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "34020035"
   
 ## <a name="see-also"></a>另請參閱  
  [選擇和對應模型測試資料](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [使用巢狀資料表做為輸入用於精確度圖表](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [使用巢狀資料表當做精確度圖表的輸入](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [選擇精確度圖表類型及設定圖表選項](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

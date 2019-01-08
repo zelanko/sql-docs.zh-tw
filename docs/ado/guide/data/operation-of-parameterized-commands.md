@@ -14,12 +14,12 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d2d2f8fce7b70c760707bd0d384ffa9b72f7a1d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: faa4d4887079064ac6ccbe9536ac6c36fe8b9f79
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751766"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516986"
 ---
 # <a name="operation-of-parameterized-commands"></a>參數化命令的作業
 如果您正在使用大型的子系**資料錄集**，特別是相較於父代的大小**資料錄集**，但需要存取只有少數子章節中，您可能會發現它使用更有效率參數化的命令。  
@@ -53,7 +53,7 @@ SHAPE {SELECT * FROM customer}
   
 5.  擷取的子資料列的參考 (也就是子系的章節**Recordset**) 放在目前的資料列的父代的章節資料行**資料錄集**。  
   
-6.  存取另一個資料列的章節資料行時，會重複步驟 3 – 5。  
+6.  存取另一個資料列的章節資料行時，會重複步驟 3-5。  
   
  **快取子資料列**動態屬性設定為 **，則為 True**預設。 快取行為，會根據查詢的參數值而有所不同。 在具有單一參數，子查詢**資料錄集**給定的參數值將會快取之間值的子系的要求。 下列程式碼示範：  
   

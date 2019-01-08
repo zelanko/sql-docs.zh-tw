@@ -1,11 +1,10 @@
 ---
-title: 'TM: Save Tran Completed 事件類別 | Microsoft 文件'
+title: TM:儲存 Tran Completed 事件類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,17 +14,17 @@ ms.assetid: e6b37780-5ad8-4d50-89a3-d8a22496faac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb14b93ce3fd7cf4e04dd5ab47b3b6427dc9e57d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b50f4026daa390000a1a46377446abc3cee709e5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138108"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774360"
 ---
-# <a name="tm-save-tran-completed-event-class"></a>TM: Save Tran Completed 事件類別
-  TM: Save Tran Completed 事件類別指出已完成 SAVE TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。  
+# <a name="tm-save-tran-completed-event-class"></a>TM:儲存 Tran Completed 事件類別
+  TM:Save Tran Completed 事件類別指出 SAVE TRANSACTION 要求已完成。 要求是從用戶端透過交易管理介面傳送。  
   
-## <a name="tm-save-tran-completed-event-class-data-columns"></a>TM: Save Tran Completed 事件類別資料行  
+## <a name="tm-save-tran-completed-event-class-data-columns"></a>TM:儲存交易完成的事件類別資料行  
   
 |資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  

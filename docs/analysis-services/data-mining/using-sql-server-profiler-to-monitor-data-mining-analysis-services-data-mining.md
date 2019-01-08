@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server Profiler 監視資料採礦 |Microsoft 文件
+title: 使用 SQL Server Profiler 監視資料採礦 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a40a02e3fd19ac853c7c4b291bbc3875229c747f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4ba9720f87cd41849cc118482ffbf4731049e8c9
+ms.sourcegitcommit: 4182a1e8be69373dde2fe778f19cab9cd78e447c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016655"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51818494"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>使用 SQL Server Profiler 監視資料採礦 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34016655"
 ## <a name="using-traces-to-monitor-data-mining"></a>使用追蹤來監視資料採礦  
  當您在追蹤內擷取資訊時，可以指定該資訊是要儲存到檔案中還是 SQL Server 執行個體的資料表中。 不論您用來儲存資料的方法為何，您都可以使用 SQL Server Profiler 來檢視追蹤及根據事件篩選。 下表列出在預設 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 追蹤內對於資料採礦有興趣的一些事件和子類別。  
   
-|EventClass|EventSubclass|Description|  
+|EventClass|EventSubclass|描述|  
 |----------------|-------------------|-----------------|  
 |**查詢開始**<br /><br /> **查詢結束**|**0 - MDXQuery**|包含所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預存程序呼叫的文字。|  
 |**查詢開始**<br /><br /> **查詢結束**|**1 - DMXQuery**|包含資料採礦延伸模組 (DMX) 陳述式的文字和結果。|  
@@ -40,7 +40,7 @@ ms.locfileid: "34016655"
  您也可以藉由檢視追蹤記錄內的命令陳述式，查看用戶端傳送給 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器之複雜陳述式的語法，包括系統預存程序的呼叫。 此資訊對於偵錯很有幫助，或者您也可以使用有效的陳述式當做範本來建立新的預測查詢或模型。 如需您可以透過追蹤擷取之預存程序呼叫的一些範例，請參閱 [叢集模型查詢範例](../../analysis-services/data-mining/clustering-model-query-examples.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [監視 Analysis Services 執行個體](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
+
  [使用 SQL Server 擴充事件監視 Analysis Services](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   

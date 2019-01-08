@@ -12,17 +12,17 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6553984255843cf940b48d745d4494522b357159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d56d6068b842256bd450844c7b163727e5d35f3d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680826"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525062"
 ---
 # <a name="odbc-api-reference"></a>ODBC API 參考
 在本節中的主題描述依字母順序的每個 ODBC 函式。 每個函式定義為 C 程式設計語言函式。 描述包含下列各項：  
   
--   目的  
+-   用途  
   
 -   ODBC 版本  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47680826"
   
 -   相關的函式的參考  
   
- 標準的 CLI 一致性層級可以是下列其中之一： ISO 92、 Open Group、 ODBC 或已被取代。 標記為 ISO 92 – 符合標準也會出現在 Open Group 第 1 版中，因為 Open Group 是純粹的 ISO 92 函式。 標記為 開啟群組符合規範的函式也會出現在 ODBC 3。*x*，因為 ODBC 3。*x*純 Open Group 第 1 版的超集。 標記為符合 ODBC 規範的函式會出現在沒有標準。 標記為已被取代的函式已被取代，在 ODBC 3。*x*。  
+ 標準的 CLI 一致性層級可以是下列其中一項：ISO 92 開啟 [ODBC] 群組，或已被取代。 標記為 ISO 92 符合標準也會出現在 Open Group 第 1 版中，因為 Open Group 是純粹的 ISO 92 函式。 標記為 開啟群組符合規範的函式也會出現在 ODBC 3。*x*，因為 ODBC 3。*x*純 Open Group 第 1 版的超集。 標記為符合 ODBC 規範的函式會出現在沒有標準。 標記為已被取代的函式已被取代，在 ODBC 3。*x*。  
   
  處理診斷資訊所述[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函式描述。 SQLSTATE 值相關聯的文字就會包含提供條件的描述，但不是要指定特定的文字。  
   

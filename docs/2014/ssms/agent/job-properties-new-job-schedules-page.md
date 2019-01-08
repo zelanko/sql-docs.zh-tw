@@ -1,10 +1,10 @@
 ---
-title: 作業屬性： 新增作業 （排程頁面） |Microsoft Docs
+title: 作業屬性：新增作業 （排程頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.schedules.f1
@@ -12,14 +12,14 @@ ms.assetid: 0b03585b-a510-484d-8a63-9b32459def9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a49e028733d14570d527a7102925cc4ffec0aa8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98478b8ed61a49e74a70d576ccd3600319fce645
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192280"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760810"
 ---
-# <a name="job-properties-new-job-schedules-page"></a>作業屬性：新增作業 (排程頁面)
+# <a name="job-properties-new-job-schedules-page"></a>作業屬性：新增作業 （排程頁面）
   使用此頁面來檢視和組織 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的排程。  
   
 ## <a name="options"></a>選項。  

@@ -13,15 +13,15 @@ ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0cdbb90bfbca6994a875a0653ee9d34c8e8ffb9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d62c0864678e116e30a0673bdf2625d70de0cedd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775766"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501778"
 ---
 # <a name="binding-parameters-odbc"></a>繫結參數 ODBC
-SQL 陳述式中的每個參數必須是相關聯，或*繫結，* 給應用程式之前執行的陳述式中的變數。 當應用程式會將變數繫結至參數時，它會描述該變數，地址、 C 資料類型，等等 — 驅動程式。 它也會描述參數本身 — SQL 資料類型、 有效位數和等等。 驅動程式會將此資訊儲存在結構中，它會維護該陳述式，並從變數擷取值，陳述式執行時使用的資訊。  
+SQL 陳述式中的每個參數必須是相關聯，或*繫結，* 給應用程式之前執行的陳述式中的變數。 當應用程式會將變數繫結至參數時，它會描述該變數-位址、 C 資料類型等位，驅動程式。 它也會描述參數本身-SQL 資料類型、 有效位數和等等。 驅動程式會將此資訊儲存在結構中，它會維護該陳述式，並從變數擷取值，陳述式執行時使用的資訊。  
   
  參數可以繫結，或在任何時間執行的陳述式之前重新繫結。 如果在執行陳述式之後，會重新繫結參數，直到再次執行陳述式，不會套用繫結。 若要將參數繫結至不同的變數，應用程式只會重新繫結與新的變數; 參數先前的繫結就會自動釋放。  
   

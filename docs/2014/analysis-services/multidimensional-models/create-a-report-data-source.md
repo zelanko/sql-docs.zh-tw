@@ -11,12 +11,12 @@ ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 15034c7bdf1dd32f173e3c2f9eebacda8b72fc11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20e04f8192753b2ca8a5cb48715fac20118df3e3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187352"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407975"
 ---
 # <a name="create-a-report-data-source"></a>建立報表資料來源
   為了讓 Power View 連接到多維度模型，您必須在 SharePoint 文件庫中建立共用報表資料來源定義，也稱為 .rsds 檔。 .rsds 檔會指定 Analysis Services 伺服器執行個體的名稱、連接類型、連接字串，以及用來連接到多維度模型的認證。 當使用者按下 .rsds 時，新的空白 Power View 報表 (.rdlx 檔) 就會在瀏覽器中開啟。  
@@ -51,14 +51,14 @@ ms.locfileid: "48187352"
   
 5.  在 [連接字串] 中，指定 Analysis Services 伺服器名稱、資料庫名稱、Cube 名稱及任何選擇性設定。  
   
-     連接字串： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’`  
+     連接字串： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'`  
   
     > [!NOTE]  
     >  如果有多個 Cube，則必須指定 Cube 名稱。  
   
-     (選擇性) Cube 可以包含檢視方塊，為使用者提供在用戶端中只看到某些維度和/或量值群組的精選檢視。 若要指定檢視方塊，請輸入檢視方塊名稱做為 Cube 屬性的值： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>’`  
+     (選擇性) Cube 可以包含檢視方塊，為使用者提供在用戶端中只看到某些維度和/或量值群組的精選檢視。 若要指定檢視方塊，請輸入檢視方塊名稱做為 Cube 屬性的值： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>'`  
   
-     (選擇性) 在模型中，可以指定各種語言的 Cube 中繼資料和資料翻譯。 若要顯示翻譯 (資料和中繼資料)，您必須將 "Locale Identifier" 屬性加入連接字串： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’; Locale Identifier=<identifier number>`  
+     (選擇性) 在模型中，可以指定各種語言的 Cube 中繼資料和資料翻譯。 若要顯示翻譯 （資料和中繼資料），您需要將"Locale Identifier"屬性新增至連接字串： `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
 6.  在 [認證] 中，指定報表伺服器取得認證來存取外部資料來源的方式。  
   

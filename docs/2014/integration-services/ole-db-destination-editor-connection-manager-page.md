@@ -15,12 +15,12 @@ ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5db99f475b1fc1a71d36f8643dea56f99d00d0b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7688f3979f935b6d461c47fe2747eb7718835f01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188338"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504705"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>OLE DB 目的地編輯器 (連接管理員頁面)
   使用 **[OLE DB 目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面來選取目的地的 OLE DB 連接。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  
@@ -44,7 +44,7 @@ ms.locfileid: "48188338"
 |------------|-----------------|  
 |資料表或檢視|將資料載入 OLE DB 目的地中的資料表或檢視。|  
 |資料表或檢視 - 快速載入|將資料載入 OLE DB 目的地中的資料表或檢視，並使用快速載入選項。 如需有關快速載入資料存取模式 (已針對大量插入進行過最佳化) 的詳細資訊，請參閱＜ [OLE DB Destination](data-flow/ole-db-destination.md)＞。|  
-|資料表名稱或檢視名稱變數|請在變數中指定資料表或檢視名稱。<br /><br /> **相關資訊**︰ [在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  
+|資料表名稱或檢視名稱變數|請在變數中指定資料表或檢視名稱。<br /><br /> **相關的資訊**:[在套件中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  
 |資料表名稱或檢視名稱變數 - 快速載入|在變數中指定資料表或檢視名稱，並使用快速載入選項來載入資料。 如需有關快速載入資料存取模式 (已針對大量插入進行過最佳化) 的詳細資訊，請參閱＜ [OLE DB Destination](data-flow/ole-db-destination.md)＞。|  
 |SQL (命令)|使用 SQL 查詢，將資料載入到 OLE DB 目的地。|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48188338"
 > [!NOTE]  
 >  當您按一下 **[新增]** 時， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會根據連接的資料來源來產生預設 CREATE TABLE 陳述式。 這個預設 CREATE TABLE 陳述式將不會包含 FILESTREAM 屬性，即使來源資料表包含有宣告 FILESTREAM 屬性的資料行亦然。 若要執行具有 FILESTREAM 屬性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 元件，請先在目的地資料庫上實作 FILESTREAM 儲存體。 然後在 **[建立資料表]** 對話方塊中，將 FILESTREAM 屬性加入至 CREATE TABLE 陳述式。 如需詳細資訊，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
-### <a name="data-access-mode--table-or-view--fast-load"></a>資料存取模式 = 資料表或檢視 - 快速載入  
+### <a name="data-access-mode--table-or-view---fast-load"></a>資料存取模式 = 資料表或檢視 - 快速載入  
  **資料表或檢視的名稱**  
  使用此清單從資料庫選取資料表或檢視，或按一下 [新增] 建立新的資料表。  
   
@@ -75,16 +75,16 @@ ms.locfileid: "48188338"
 >  當您按一下 **[新增]** 時， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會根據連接的資料來源來產生預設 CREATE TABLE 陳述式。 這個預設 CREATE TABLE 陳述式將不會包含 FILESTREAM 屬性，即使來源資料表包含有宣告 FILESTREAM 屬性的資料行亦然。 若要執行具有 FILESTREAM 屬性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 元件，請先在目的地資料庫上實作 FILESTREAM 儲存體。 然後在 **[建立資料表]** 對話方塊中，將 FILESTREAM 屬性加入至 CREATE TABLE 陳述式。 如需詳細資訊，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  **保留識別**  
- 指定載入資料時是否複製識別值。 這個屬性只能搭配快速載入選項使用。 這個屬性的預設值是`false`。  
+ 指定載入資料時是否複製識別值。 這個屬性只能搭配快速載入選項使用。 此屬性的預設值為 `false`。  
   
  **保留 Null**  
- 指定載入資料時是否複製 Null 值。 這個屬性只能搭配快速載入選項使用。 這個屬性的預設值是`false`。  
+ 指定載入資料時是否複製 Null 值。 這個屬性只能搭配快速載入選項使用。 此屬性的預設值為 `false`。  
   
  **資料表鎖定**  
- 指定載入期間是否鎖定資料表。 這個屬性的預設值是`true`。  
+ 指定載入期間是否鎖定資料表。 此屬性的預設值為 `true`。  
   
  **檢查條件約束**  
- 指定目的地在載入資料時是否檢查條件約束。 這個屬性的預設值是`true`。  
+ 指定目的地在載入資料時是否檢查條件約束。 此屬性的預設值為 `true`。  
   
  **每批次的資料列**  
  指定批次中的資料列數目。 此屬性的預設值是 **-1**，表示未指派任何值。  
@@ -107,7 +107,7 @@ ms.locfileid: "48188338"
  **變數名稱**  
  請選取包含資料表或檢視名稱的變數。  
   
-### <a name="data-access-mode--table-name-or-view-name-variable--fast-load"></a>資料存取模式 = 資料表名稱或檢視名稱變數 - 快速載入)  
+### <a name="data-access-mode--table-name-or-view-name-variable---fast-load"></a>資料存取模式 = 資料表名稱或檢視名稱變數 - 快速載入)  
  **變數名稱**  
  請選取包含資料表或檢視名稱的變數。  
   
@@ -118,16 +118,16 @@ ms.locfileid: "48188338"
 >  當您按一下 **[新增]** 時， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會根據連接的資料來源來產生預設 CREATE TABLE 陳述式。 這個預設 CREATE TABLE 陳述式將不會包含 FILESTREAM 屬性，即使來源資料表包含有宣告 FILESTREAM 屬性的資料行亦然。 若要執行具有 FILESTREAM 屬性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 元件，請先在目的地資料庫上實作 FILESTREAM 儲存體。 然後在 **[建立資料表]** 對話方塊中，將 FILESTREAM 屬性加入至 CREATE TABLE 陳述式。 如需詳細資訊，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  **保留識別**  
- 指定載入資料時是否複製識別值。 這個屬性只能搭配快速載入選項使用。 這個屬性的預設值是`false`。  
+ 指定載入資料時是否複製識別值。 這個屬性只能搭配快速載入選項使用。 此屬性的預設值為 `false`。  
   
  **保留 Null**  
- 指定載入資料時是否複製 Null 值。 這個屬性只能搭配快速載入選項使用。 這個屬性的預設值是`false`。  
+ 指定載入資料時是否複製 Null 值。 這個屬性只能搭配快速載入選項使用。 此屬性的預設值為 `false`。  
   
  **資料表鎖定**  
- 指定載入期間是否鎖定資料表。 這個屬性的預設值是`false`。  
+ 指定載入期間是否鎖定資料表。 此屬性的預設值為 `false`。  
   
  **檢查條件約束**  
- 指定工作是否檢查條件約束。 這個屬性的預設值是`false`。  
+ 指定工作是否檢查條件約束。 此屬性的預設值為 `false`。  
   
  **每批次的資料列**  
  指定批次中的資料列數目。 此屬性的預設值是 **-1**，表示未指派任何值。  
@@ -159,8 +159,8 @@ ms.locfileid: "48188338"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 目的地編輯器&#40;對應頁面&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
- [OLE DB 目的地編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
+ [OLE DB 目的地編輯器 &#40;對應頁面&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [OLE DB 目的地編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
  [使用 OLE DB 目的地來載入資料](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

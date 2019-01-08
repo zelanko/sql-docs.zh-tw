@@ -10,12 +10,12 @@ ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4b791f83342d02fb003a14f48861ae992ddc37df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190288"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408625"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>備份含有記憶體最佳化資料表的資料庫
   記憶體最佳化資料表會當做正常資料庫備份的一部分進行備份。 如果是磁碟資料表，資料庫備份作業會驗證資料的 CHECKSUM 和差異檔案組，以便偵測是否有儲存體損毀。  
@@ -44,11 +44,11 @@ ms.locfileid: "48190288"
 ### <a name="estimating-size-of-full-database-backup"></a>估計完整資料庫備份的大小  
   
 > [!IMPORTANT]  
->  建議您不要使用 BackupSizeInBytes 值來估計記憶體中 OLTP 的備份大小。  
+>  建議您不要使用 BackupSizeInBytes 值來估計記憶體內部 OLTP 的備份大小。  
   
  第一個工作負載案例主要是為了插入。 在此案例中，大部分的資料檔案都處於作用中狀態，並且已完全載入，而且已刪除的資料列很少。 資料庫備份的大小將會與記憶體中的資料大小十分接近。  
   
- 第二個工作負載案例是頻繁的插入、刪除和更新作業：在最糟榚的情況下，在考量已刪除的資料列之後，每一個檢查點檔案組的載入程度為 50%。 因此，資料庫備份的大小至少為記憶體中資料大小的兩倍。 另外，處於「合併來源」和「備份/高可用性所需」狀態而且會讓資料庫備份大小增加的檢查點檔案組也很少。  
+ 第二個工作負載案例適用於頻繁的插入、刪除和更新作業：在最糟榚的情況下，在考量已刪除的資料列之後，每一個檢查點檔案組的載入程度為 50%。 因此，資料庫備份的大小至少為記憶體中資料大小的兩倍。 另外，處於「合併來源」和「備份/高可用性所需」狀態而且會讓資料庫備份大小增加的檢查點檔案組也很少。  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>使用記憶體最佳化資料表的資料庫差異備份  
  記憶體最佳化資料表的儲存體包含資料和差異檔案，如 [記憶體最佳化資料表的持久性](memory-optimized-tables.md)中所述。 具有記憶體最佳化資料表之資料庫的差異備份會包含下列資料：  

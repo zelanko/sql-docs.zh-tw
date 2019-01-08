@@ -15,12 +15,12 @@ ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 468823b10b4b97fb2a4fe7fcd0a83f28af6fc5b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67f750d134459b55e3d14772bf8b4c6db25b1ab1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119038"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504522"
 ---
 # <a name="execute-package-task-editor"></a>執行封裝工作編輯器
   使用「執行封裝工作編輯器」設定「執行封裝」工作。 「執行封裝」工作可讓封裝將其他封裝當做工作流程的一部分執行，以延伸 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的企業功能。  
@@ -37,7 +37,7 @@ ms.locfileid: "48119038"
   
 ##  <a name="open"></a> 開啟 [執行封裝工作編輯器]  
   
-1.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中開啟包含 [執行封裝] 工作的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
+1.  在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中開啟包含 [執行封裝] 工作的 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 專案。  
   
 2.  以滑鼠右鍵按一下 SSIS 設計師中的工作，然後按一下 [編輯]。  
   
@@ -56,10 +56,10 @@ ms.locfileid: "48119038"
  為專案中的子封裝選取 [專案參考]。 為封裝外部的子封裝選取 [外部參考]  
   
 > [!NOTE]  
->  [ReferenceType] 選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]。 如需轉換的詳細資訊，請參閱[將專案部署至 Integration Services 伺服器](../../2014/integration-services/deploy-projects-to-integration-services-server.md)。  
+>  [ReferenceType] 選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]。 如需轉換的詳細資訊，請參閱 [將專案部署至 Integration Services 伺服器](../../2014/integration-services/deploy-projects-to-integration-services-server.md)。  
   
  **密碼**  
- 如果子封裝受到密碼保護，請提供子封裝的密碼，或按一下省略符號 (...) 按鈕，然後建立子封裝的新密碼。  
+ 如果子封裝受到密碼保護，請提供子封裝的密碼，或按一下省略符號 ([...]) 按鈕，然後建立子封裝的新密碼。  
   
  `ExecuteOutOfProcess`  
  指定子封裝是在父封裝的處理序中執行，還是在個別的處理序中執行。 根據預設，「 執行封裝 」 工作的 ExecuteOutOfProcess 屬性設為`False`，並執行相同的處理序與父封裝中的子封裝。 如果您將此屬性設定為 `true`，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 另外，如果此屬性設定為 `true`，則無法在僅限工具安裝中偵錯封裝；您必須安裝 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 產品。 如需詳細資訊，請參閱[安裝 Integration Services](install-windows/install-integration-services.md)。  
@@ -70,7 +70,7 @@ ms.locfileid: "48119038"
  **位置**  
  選取子封裝的位置。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**SQL Server**|設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的位置。|  
 |**檔案系統**|設定檔案系統的位置。|  
@@ -91,16 +91,16 @@ ms.locfileid: "48119038"
  **[連接]**  
  在清單中選取 OLE DB 連線管理員，或按一下 [\<新增連線…>] 建立新的連線管理員。  
   
- **相關主題：**[OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)、[設定 OLE DB 連線管理員](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **相關的主題：**[OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)，[設定 OLE DB 連接管理員](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
- 輸入子封裝的名稱，或按一下省略符號 (…)，然後找出該封裝。  
+ 輸入子封裝的名稱，或按一下省略符號 ([...])，然後找出該封裝。  
   
 #### <a name="location--file-system"></a>位置 = 檔案系統  
  **[連接]**  
  在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關的主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **PackageNameReadOnly**  
  顯示封裝名稱。  

@@ -18,12 +18,12 @@ ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34a3ea4ac63a0ace769af174bbdbf433ad63b433
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29fbce7f3e8fee200384f6162b28576d96593b37
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700526"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502984"
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +58,19 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  卸除所指定的計畫指南*plan_guide_name*。 在卸除計畫指南之後，未來執行先前符合計畫指南的查詢時，不會受計畫指南的影響。  
   
  DROP ALL  
- 卸除目前資料庫中的所有計畫指南。 **N' * * * plan_guide_name*無法指定 DROP ALL 時指定。  
+ 卸除目前資料庫中的所有計畫指南。 **N'**_plan_guide_name_無法指定 DROP ALL 時指定。  
   
  DISABLE  
  停用所指定的計畫指南*plan_guide_name*。 在停用計畫指南之後，未來執行先前符合計畫指南的查詢時，不會受計畫指南的影響。  
   
  DISABLE ALL  
- 停用目前資料庫中的所有計畫指南。 **N' * * * plan_guide_name*不能指定當指定 DISABLE ALL。  
+ 停用目前資料庫中的所有計畫指南。 **N'**_plan_guide_name_不能指定當指定 DISABLE ALL。  
   
  ENABLE  
  可讓所指定的計畫指南*plan_guide_name*。 計畫指南在啟用之後，可以符合適合的查詢。 依預設，在建立計畫指南時，會啟用計畫指南。  
   
  ENABLE ALL  
- 啟用目前資料庫中的所有計畫指南。 **N'***plan_guide_name***'** 不能指定當指定 ENABLE ALL。  
+ 啟用目前資料庫中的所有計畫指南。 **N'**_plan_guide_name_**'** 不能指定當指定 ENABLE ALL。  
   
 ## <a name="remarks"></a>備註  
  試圖卸除或修改計畫指南所參考的函數、預存程序或 DML 觸發程序，不論是已啟用或已停用，都會造成錯誤。  

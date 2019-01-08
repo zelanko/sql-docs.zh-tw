@@ -19,12 +19,12 @@ ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5c6b02cba58b35472fc5d0224d7faf9534c332a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54971b2b71d37ec4b246d982429fac3d6abf5b9a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049488"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412475"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>建立資料來源 (SSAS 多維度)
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多維度模型中，資料來源物件代表資料來源的連接，您會從其中處理 (或匯入) 資料。 多維度模型至少必須包含一個資料來源物件，不過您可以加入更多資料來源物件，以便結合數個資料倉儲的資料。 使用本主題中的說明為您的模型建立資料來源物件。 如需設定這個物件之屬性的詳細資訊，請參閱[設定資料來源屬性 &#40;SSAS 多維度&#41;](set-data-source-properties-ssas-multidimensional.md)。  
@@ -67,7 +67,7 @@ ms.locfileid: "48049488"
 >  依預設， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 不會在連接字串中儲存密碼。 如果未儲存此密碼， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在需要時提示您輸入密碼。 如果您選擇儲存密碼，此密碼會以加密格式儲存在資料連接字串中。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用包含資料來源之資料庫的資料庫加密金鑰來加密資料來源的密碼資訊。 將連接資訊加密之後，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來變更 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶或密碼，否則將無法復原加密的資訊。 如需詳細資訊，請參閱 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)。  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>定義資料採礦物件的模擬資訊  
- 資料採礦查詢可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶的內容中執行，但是也可以在使用者提交查詢的內容或指定之使用者的內容中執行； 查詢執行所在的內容可能會影響查詢結果。 資料採礦`OPENQUERY`類型的作業，您可能會想要在目前的使用者，或指定的使用者 （不論執行查詢的使用者） 的內容中的內容，而不是服務帳戶的內容中執行的資料採礦查詢。 如此可使用有限的安全性認證來執行查詢。 如果您希望 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模擬目前的使用者或是模擬指定的使用者，請選取 [使用特定的使用者名稱和密碼] 或 [使用目前使用者的認證] 選項。  
+ 資料採礦查詢可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶的內容中執行，但是也可以在使用者提交查詢的內容或指定之使用者的內容中執行； 查詢執行所在的內容可能會影響查詢結果。 如果是資料採礦 `OPENQUERY` 類型的作業，您可能會希望資料採礦查詢在目前使用者的內容或指定之使用者的內容中執行 (不論執行查詢的使用者是誰)，而不是在此服務帳戶的內容中執行， 如此可使用有限的安全性認證來執行查詢。 如果您希望 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模擬目前的使用者或是模擬指定的使用者，請選取 [使用特定的使用者名稱和密碼] 或 [使用目前使用者的認證] 選項。  
   
 ##  <a name="bkmk_steps"></a> 使用資料來源精靈建立資料來源  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48049488"
   
 3.  在 [選取如何定義連接] 頁面上，選擇 [依據現有的或新的連接建立資料來源]，然後按一下 [新增] 開啟 [連線管理員]。  
   
-     新的連接是在連接管理員中建立。 在連接管理員中選取提供者，然後指定該提供者用來連接基礎資料的連接字串屬性。 所需的確切資訊需視所選的提供者而定，但是這類資訊通常包括伺服器或服務執行個體、用來登入此伺服器或服務執行個體的資訊、資料庫或檔案名稱，以及其他提供者特有的設定。 此程序的其餘部分將假設存在 SQL Server 資料庫連接。  
+     新的連接是在連接管理員中建立。 在連接管理員中選取提供者，然後指定該提供者用來連接基礎資料的連接字串屬性。 所需的確切資訊需視所選的提供者而定，但是這類資訊通常包括伺服器或服務執行個體、用來登入此伺服器或服務執行個體的資訊、資料庫或檔案名稱，以及其他提供者特有的設定。 此程序的其餘部分，我們假設 SQL Server 資料庫連接。  
   
 4.  選取連接所用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 或原生 OLE DB 提供者。  
   
@@ -152,13 +152,13 @@ ms.locfileid: "48049488"
  您可以建立多個資料來源物件，以支援與其他資料來源的連接。 每個資料來源都必須擁有可用來建立關聯性的資料行。  
   
 > [!NOTE]  
->  如果已定義多個資料來源和查詢單一查詢中的多個來源的資料，例如針對雪花維度中，您必須定義支援遠端查詢使用的資料來源`OpenRowset`。 一般來說，這會是 Microsoft SQL Server 資料來源。  
+>  如果已定義多個資料來源，而且在單一查詢中查詢多個來源的資料 (例如，針對雪花維度)，您必須使用 `OpenRowset` 定義支援遠端查詢的資料來源。 一般來說，這會是 Microsoft SQL Server 資料來源。  
   
  使用多個資料來源的需求如下：  
   
 -   指定一個資料來源做為主要資料來源。 主要資料來源會用來建立資料來源檢視。  
   
--   主要資料來源必須支援`OpenRowset`函式。  如需 SQL Server 中這個函數的詳細資訊，請參閱 <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>。  
+-   主要資料來源必須支援 `OpenRowset` 函數。  如需 SQL Server 中這個函數的詳細資訊，請參閱 <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>。  
   
  使用下列方法結合來自多個資料來源的資料：  
   

@@ -11,18 +11,18 @@ ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85fbcf7fdf8a15f9705c9b27ba838b41911f31db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91cc8740dfaeddcf489f3274b6766cdb803b1321
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113588"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416929"
 ---
 # <a name="use-powerpivot-gallery"></a>使用 PowerPivot 圖庫
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫是一種特殊用途的 SharePoint 文件庫，針對包含 PowerPivot 資料的已發行 Excel 活頁簿和 Reporting Services 報表，提供豐富的預覽與文件管理功能。  
   
 > [!NOTE]  
->  根據您伺服器設定的方式，可能會在特定文件的預覽區域中看到警告或錯誤訊息。 如果 Excel 活頁簿設定為每次開啟時都自動重新整理其資料，可能會出現訊息。 如果設定 Excel Services 來顯示資料重新整理時警告的錯誤訊息，資料重新整理警告訊息將會以預覽影像的形式出現。 伺服陣列或服務管理員可以修改組態設定，讓實際工作表的預覽可以顯示出來。 如需相關資訊，請參閱 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+>  根據您伺服器設定的方式，可能會在特定文件的預覽區域中看到警告或錯誤訊息。 如果 Excel 活頁簿設定為每次開啟時都自動重新整理其資料，可能會出現訊息。 如果設定 Excel Services 來顯示資料重新整理時警告的錯誤訊息，資料重新整理警告訊息將會以預覽影像的形式出現。 伺服陣列或服務管理員可以修改組態設定，讓實際工作表的預覽可以顯示出來。 如需相關資訊，請參閱 [在管理中心建立 PowerPivot 網站的信任位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 ##  <a name="bkmk_top"></a> 本主題內容  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48113588"
 >  Power Pivot 圖庫需要 Microsoft Silverlight，  但 Microsoft Edge 瀏覽器不支援 Silverlight。   
 > 若要檢視 Edge 中的程式庫內容，請按一下 Powerpivot 圖庫中的 [程式庫]  索引標籤，然後將文件庫檢視變更為 [所有文件] 。    
 > 若要變更預設檢視，請按一下 [程式庫]  索引標籤，然後按一下 [修改檢視]。 按一下 [設定為預設檢視]，然後按一下 [確定] 以儲存預設檢視。  
->  如需 Edge 支援項目的詳細資訊，請參閱 Windows 部落格 [揮別以往，第 2 部分：和 ActiveX、VBScript... 說再見](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  如需 Edge 支援的詳細資訊，請參閱 Windows 部落格[揮別以往，第 2 部分：ActiveX、 VBScript...說再見](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  如必要條件的完整清單，請參閱 <<c0> [ 建立及自訂 PowerPivot 圖庫](create-and-customize-power-pivot-gallery.md)。  
   
@@ -70,13 +70,13 @@ ms.locfileid: "48113588"
   
 1.  儲存檔案。  
   
-2.  1.  **Excel 2010：** 在 [檔案] 功能表中，按一下 [儲存和傳送]。  
+2.  1.  **Excel 2010:** 在 [檔案] 功能表中，按一下**儲存和傳送**。  
   
     2.  按一下 **[儲存至 SharePoint]**。  
   
     3.  如果您要使用 [Excel Services 選項] 來選取要發行的個別工作表或參數，請按一下 **[發行選項]** 。 例如，[Excel Services 選項] 中的 [參數] 索引標籤可讓您選擇哪些交叉分析篩選器要出現在發行的活頁簿中。  
   
-    1.  **Excel 2013**  ：在 [檔案] 功能表中，按一下 **[儲存]**。  
+    1.  **Excel 2013:** 在 [檔案] 功能表中，按一下**儲存**。  
   
     2.  如果您要使用 [Excel Services 選項] 來選取要發行的個別工作表或參數，請按一下 **[瀏覽器檢視選項]** 。 例如，[Excel Services 選項] 中的 [參數] 索引標籤可讓您選擇哪些交叉分析篩選器要出現在發行的活頁簿中。  
   
@@ -148,16 +148,16 @@ ms.locfileid: "48113588"
   
 3.  按一下右邊的向下箭號，然後選取 **[編輯屬性]**。  
   
-4.  按一下 **[儲存]**。 儲存文件會強制快照服務重新產生預覽影像。  
+4.  按一下 [儲存] 。 儲存文件會強制快照服務重新產生預覽影像。  
   
 ##  <a name="bkmk_known_issues"></a> 已知問題  
   
 ### <a name="document-type-is-not-supported"></a>不支援的文件類型  
  不支援 **[PowerPivot 圖庫文件]** 內容類型。 如果您啟用 **[PowerPivot 圖庫文件]** 內容類型做為文件庫，並嘗試建立該類型的新文件，則會看見類似下列其中一項的錯誤訊息：  
   
--   「新文件」需要與 Microsoft SharePoint Foundation 相容的應用程式和 Web 瀏覽器。 若要在此文件庫中加入文件，請按一下 [上傳文件] 按鈕。  
+-   [新文件] 需要 Microsoft Sharepoint Foundation 相容應用程式和 web 瀏覽器。 若要加入此文件庫中的文件，請按一下 [上載文件] 按鈕。  
   
--   「網際網路位址 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' 無效」。「Microsoft Excel 無法存取檔案 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'」。 有幾項可能的原因：  
+-   「 網際網路位址 'http://[server 名稱] / Reportgallery/Gallery/ReportGallery/Forms/Template.xlsx' 無效。""Microsoft Excel 無法存取檔案 ' http://[server 名稱] / Reportgallery/Gallery/ReportGallery/Forms/Template.xlsx '。 有幾項可能的原因：  
   
  **[PowerPivot 圖庫文件]** 內容類型不會自動加入至文件庫。除非您手動啟用不支援的內容類型，否則不會發生這個問題。  
   

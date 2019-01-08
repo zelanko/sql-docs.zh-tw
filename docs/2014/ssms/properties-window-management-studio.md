@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing properties
@@ -15,12 +15,12 @@ ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24b026183748ef6ca89b37eee0ed261e5886a856
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98b337c235363035d5cc5324257f51862f3f9a64
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099548"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760640"
 ---
 # <a name="properties-window-management-studio"></a>屬性視窗 (Management Studio)
   請利用這個視窗來檢視所選元素的屬性。 您也可以利用 [屬性] 視窗來檢視檔案、專案和方案屬性。 按一下 [檢視] 功能表上的 [屬性視窗]，就可以使用 [屬性] 視窗。  

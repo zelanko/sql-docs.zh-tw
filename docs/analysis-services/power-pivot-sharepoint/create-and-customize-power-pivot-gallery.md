@@ -1,5 +1,5 @@
 ---
-title: 建立及自訂 Power Pivot 圖庫 |Microsoft 文件
+title: 建立及自訂 Power Pivot 圖庫 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3c705a54d24b358593b1f1fafec328e3d2fa6fd9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0cc45718f864f14ade20348b5dae76286ea14f3a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025975"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417119"
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>建立及自訂 Power Pivot 圖庫
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34025975"
     >  Power Pivot 圖庫需要 Microsoft Silverlight，  但 Microsoft Edge 瀏覽器不支援 Silverlight。   
     > 若要檢視 Edge 中的程式庫內容，請按一下 Powerpivot 圖庫中的 [程式庫]  索引標籤，然後將文件庫檢視變更為 [所有文件] 。    
     > 若要變更預設檢視，請按一下 [程式庫]  索引標籤，然後按一下 [修改檢視]。 按一下 [設定為預設檢視]，然後按一下 [確定] 以儲存預設檢視。  
-    >  如需 Edge 支援項目的詳細資訊，請參閱 Windows 部落格 [揮別以往，第 2 部分：和 ActiveX、VBScript... 說再見](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  如需 Edge 支援的詳細資訊，請參閱 Windows 部落格[揮別以往，第 2 部分：ActiveX、 VBScript...說再見](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   您必須是網站擁有者才能建立文件庫。  
   
@@ -64,13 +64,13 @@ ms.locfileid: "34025975"
 ##  <a name="createlib"></a> 建立 Power Pivot 圖庫  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 時，將會為您建立 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 圖庫。 如果您將 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 加入至現有的伺服器陣列，或是您想要其他的文件庫，則可以為應用程式或網站建立一個新的文件庫。  
   
-1.  1.  **SharePoint 2010**：在網站首頁的左上角，按一下 **[網站動作]** 。  
+1.  1.  **SharePoint 2010**:按一下 **站台動作**在您的網站首頁的左上角。  
   
     2.  按一下 **[更多選項]**。  
   
     3.  在文件庫下，按一下 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫]。  
   
-    1.  **SharePoint 2013**： 按一下設定圖示![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")。 按一下 **[網站內容]**。  
+    1.  **SharePoint 2013**:按一下設定圖示![SharePoint 設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")。 按一下 **[網站內容]**。  
   
     2.  按一下 **[新增應用程式]**。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "34025975"
   
 2.  輸入文件庫的名稱。 請務必包含描述性資訊，以協助使用者將此文件庫識別為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿和 Reporting Services 報表的豐富預覽。  
   
-3.  按一下 **[建立]**。  
+3.  按一下 [建立] 。  
   
 4.  要求伺服陣列或服務管理員將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫新增為 Excel Service 的信任位置。 如果使用者為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料重新整理設定活頁簿，就需要這個步驟以避免錯誤。 如需這項工作的詳細資訊，請參閱 [在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
@@ -104,9 +104,9 @@ ms.locfileid: "34025975"
   
 2.  在功能區中，按一下 **[文件庫]**。  
   
-3.  **SharePoint 2010** ：在 [自訂檢視] 中，按一下 **[修改此檢視]**。  
+3.  **SharePoint 2010：** 在 自訂檢視中，按一下**修改此檢視**。  
   
-     **SharePoint 2013** ：在 **[管理檢視]** 中，按一下 **[修改檢視]**。  
+     **SharePoint 2013:** 在 **的 管理檢視**，按一下**修改檢視**。  
   
 4.  在 [排序] 中，指定將用來決定活頁簿會如何出現在清單中的準則。 依預設，文件會按照加入的順序列出。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "34025975"
   
  ![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
   
- 活頁簿擁有者或作者必須具備 **[參與]** 權限，才能排程活頁簿的資料重新整理。 具備「參與」權限的使用者可以開啟及編輯活頁簿的資料重新整理組態頁面，以指定用於重新整理資料的認證及排程資訊。  
+ 活頁簿擁有者或作者必須具備 **[參與]** 權限，才能排程活頁簿的資料重新整理。 具有 「 參與 」 權限的使用者可以開啟並編輯活頁簿的資料重新整理組態頁面來指定認證和排程來重新整理資料的資訊。  
   
  因此，只有 **[檢視]** 或 **[讀取]** 權限等級的使用者將無法存取此重新整理按鈕。 重新整理按鈕看得到，但是已停用。 如需詳細資訊，請參閱 [SharePoint 2013 的使用者權限與權限等級](http://technet.microsoft.com/library/cc721640.aspx)。  
   
@@ -132,11 +132,11 @@ ms.locfileid: "34025975"
   
  下表描述呈現每個預覽頁面之縮圖草圖的不同版面配置：  
   
-|檢視|Description|  
+|檢視|描述|  
 |----------|-----------------|  
 |圖庫檢視 (預設值)|圖庫是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫的預設檢視。 預覽會顯示在左邊。 預覽旁邊會顯示每個工作表的小型縮圖，由左至右循序排列。|  
 |所有文件|這是文件庫的標準版面配置。 您可以選擇此檢視來管理個別的文件，或以清單格式來檢視文件庫內容。<br /><br /> 使用此檢視來編輯屬性、刪除或移動個別的文件。<br /><br /> 如果您啟用版本控制，必須使用此檢視來檢查文件庫內外的文件。|  
-|劇場檢視和浮動切換檢視|如果您展示少數相關文件，這些都是效果最佳的特殊檢視。 完整的縮圖輪替包括文件庫中所有文件中的所有頁面。 如果您有大量的文件，這些檢視對想要尋找或開啟特定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的使用者來說，可能就不太實用。<br /><br /> 劇場檢視：預覽區域置中。 每個工作表的小型縮圖都會顯示頁面兩側下角。<br /><br /> 浮動切換檢視：預覽區域置中。 緊接在目前縮圖前後的縮圖與預覽區域相鄰。|  
+|劇場檢視和浮動切換檢視|如果您展示少數相關文件，這些都是效果最佳的特殊檢視。 完整的縮圖輪替包括文件庫中所有文件中的所有頁面。 如果您有大量的文件，這些檢視對想要尋找或開啟特定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的使用者來說，可能就不太實用。<br /><br /> 劇場檢視：預覽區域會置中。 每個工作表的小型縮圖都會顯示頁面兩側下角。<br /><br /> 浮動切換檢視：預覽區域會置中。 緊接在目前縮圖前後的縮圖與預覽區域相鄰。|  
   
 ### <a name="switch-to-a-different-view"></a>切換到不同的檢視  
   
