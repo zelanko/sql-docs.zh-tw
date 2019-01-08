@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, changing name
@@ -14,12 +13,12 @@ ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6ec68dfefbae6f521ec411418cb0612afe1df34c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20850dfb044fc39270644c0e52c8d35de0bdd4c6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819946"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774150"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>變更明確階層名稱 (Master Data Services)
 
