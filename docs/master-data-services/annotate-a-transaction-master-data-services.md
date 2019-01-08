@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - annotations [Master Data Services], for transactions
@@ -14,12 +13,12 @@ ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0354f514bcd668115742d4ed28b4505da746b4b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bdc60f20e33a63da3819d9f920eea51fef8f1d6c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711496"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754590"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>為交易加上註解 (Master Data Services)
 

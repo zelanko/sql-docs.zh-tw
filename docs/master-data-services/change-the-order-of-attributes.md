@@ -5,19 +5,18 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: def8f566a3feecb98882077c5952e91a70255b42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08df7b421795ad73090fe8edfbe6657ed7ffca11
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745696"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754830"
 ---
 # <a name="change-the-order-of-attributes"></a>變更屬性的順序
 

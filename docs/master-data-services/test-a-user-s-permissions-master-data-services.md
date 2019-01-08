@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 235c64cf0920ec27bedd4ba032f742e206e6e78a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ad4ee1957f295bf13d0346590f621ca87dc6387f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390353"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823402"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>測試使用者的權限 (Master Data Services)
 
