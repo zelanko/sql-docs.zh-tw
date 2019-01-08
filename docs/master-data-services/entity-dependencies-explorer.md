@@ -5,8 +5,7 @@ ms.date: 04/06/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 keywords:
 - Master Data Services
@@ -14,12 +13,12 @@ ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 87d9d0ea6ea2310f305eb6cb58ec8e39ecab8649
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 0665b6f7d54b7f83f3edda224be4e9efad670e90
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416669"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816120"
 ---
 # <a name="entity-dependencies-explorer"></a>Entity Dependencies (實體相依性) 總管
 

@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc6314ac1c24aa545e3f5c44749b755bf7e7174b
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: a40bf0e7f3758ca048f78f59177b7fc80a5e94ca
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018953"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979284"
 ---
 # <a name="multipolygon"></a>MultiPolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,21 +43,21 @@ ms.locfileid: "51018953"
   
 -   組成 **MultiPolygon** 執行個體的所有執行個體都是可接受的 **Polygon** 執行個體。 如需可接受的 **Polygon** 執行個體的詳細資訊，請參閱＜ [Polygon](../../relational-databases/spatial/polygon.md)＞。  
   
- 下列範例會顯示可接受的 **MultiPolygon** 執行個體。  
+下列範例會顯示可接受的 **MultiPolygon** 執行個體。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 ```  
   
- 下列範例示範會擲出 `System.FormatException`的 MultiPolygon 執行個體。  
+下列範例示範會擲出 `System.FormatException`的 MultiPolygon 執行個體。  
   
-```  
+```sql  
 DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3)))';  
 ```  
   
- MultiPolygon 中的第二個執行個體是 LineString 執行個體，不是可接受的 Polygon 執行個體。  
+MultiPolygon 中的第二個執行個體是 LineString 執行個體，不是可接受的 Polygon 執行個體。  
   
 ### <a name="valid-instances"></a>有效的執行個體  
  如果 **MultiPolygon** 執行個體是空的 **MultiPolygon** 執行個體或符合下列準則，則為有效的執行個體。  
@@ -66,29 +66,31 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
   
 2.  組成 **Polygon** 執行個體的所有 **MultiPolygon** 執行個體彼此不會重疊。  
   
- 下列範例示範兩個有效的 **MultiPolygon** 執行個體和一個無效的 **MultiPolygon** 執行個體。  
+下列範例示範兩個有效的 **MultiPolygon** 執行個體和一個無效的 **MultiPolygon** 執行個體。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` 有效，因為這兩個 **Polygon** 執行個體只在一個相切點接觸。 `@g3` 無效，因為這兩個 **Polygon** 執行個體的內部互相重疊。  
+`@g2` 有效，因為這兩個 **Polygon** 執行個體只在一個相切點接觸。 `@g3` 無效，因為這兩個 **Polygon** 執行個體的內部互相重疊。  
   
 ## <a name="examples"></a>範例  
- 下列範例示範 `geometry``MultiPolygon` 執行個體的建立作業，並傳回第二個元件的 Well-Known Text (WKT)。  
+### <a name="example-a"></a>範例 A。
+下列範例示範 `geometry``MultiPolygon` 執行個體的建立作業，並傳回第二個元件的 Well-Known Text (WKT)。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTIPOLYGON(((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1)), ((9 9, 9 10, 10 9, 9 9)))');  
 SELECT @g.STGeometryN(2).STAsText();  
 ```  
   
- 此範例會具現化空的 `MultiPolygon` 執行個體。  
+## <a name="example-b"></a>範例 B.
+此範例會具現化空的 `MultiPolygon` 執行個體。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTIPOLYGON EMPTY');  
 ```  

@@ -8,18 +8,17 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- vs.customize.toolbars
 - sql13.swb.vs.customizetool.f1
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c904a5df91083b7a1bf5d9b6df0219bfaca213d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b17a161964e47d6603af5d369e6dd448ca858602
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761066"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53327798"
 ---
 # <a name="customize-toolbars-page"></a>自訂 (工具列頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,4 +54,3 @@ ms.locfileid: "47761066"
   
 **鍵盤**  
 顯示 [選項] 對話方塊的 [鍵盤] 窗格，讓您能夠變更和定義命令的快速鍵組合。  
-  
