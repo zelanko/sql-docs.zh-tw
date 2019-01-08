@@ -21,12 +21,12 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 708b8c242098251211e3f0dc17df003669b68991
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1c6683da3464e094db8e85eca71baa45e3c2d031
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696636"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201868"
 ---
 # <a name="network-protocols-and-network-libraries"></a>網路通訊協定和網路程式庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "51696636"
 ## <a name="server-message-block-protocol"></a>伺服器訊息區塊通訊協定  
  周邊網路中的伺服器應該停用所有非必要的通訊協定，包括伺服器訊息區塊 (SMB) 在內。 Web 伺服器和網域名稱系統 (DNS) 伺服器不需要 SMB。 若要還擊使用者列舉方面的威脅，應該停用這個通訊協定。  
   
-> [!WARNING]  
+> [!WARNING]
 >  停用伺服器訊息區塊將會封鎖 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Windows 叢集服務存取遠端檔案共用。 如果您要或打算要執行下列其中一項，則不要停用 SMB：  
->   
+> 
 >  -   使用 Windows 叢集節點和檔案共用多數仲裁模式  
 > -   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間指定 SMB 檔案共用做為資料目錄  
 > -   在 SMB 檔案共用上建立資料庫檔案  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56ab751d420fe323b641d3fea0e7454d20447e15
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 90b1e966a2f62877e658658048b12427bca109cc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031857"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202407"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>資料集欄位集合 (報表產生器及 SSRS)
   資料集欄位代表資料連接中的資料。 欄位可以代表數值或非數值資料。 範例包括銷售量、總銷售額、客戶名稱、資料庫識別碼、URL、影像、空間資料及電子郵件地址。 在設計介面上，欄位會以報表項目 (如文字方塊、資料表和圖表) 中的運算式形式出現。  
@@ -55,7 +55,7 @@ ms.locfileid: "50031857"
 ### <a name="using-extended-field-properties"></a>使用擴充欄位屬性  
  支援多維度查詢的資料來源 (如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]) 可支援欄位上的欄位屬性。 欄位屬性會出現在查詢的結果集中，但是在 **[報表資料]** 窗格中則看不到。 欄位屬性仍然可供您的報表使用。 若要參考欄位的屬性，請將欄位拖曳到報表上，然後將預設屬性 **Value** 變更為您想要之屬性的欄位名稱。 例如在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 中，您可以針對 Cube 資料格中的值來定義格式。 可以使用欄位屬性 **FormattedValue**來取得格式化的值。 若要直接使用該值，而不是使用值並設定文字方塊的格式屬性，請將欄位拖曳到文字方塊，並將預設運算式 `=Fields!FieldName.Value` 變更為 `=Fields!FieldName.FormattedValue`。  
   
-> [!NOTE]  
+> [!NOTE]
 >  並非所有 **Field** 屬性都可用於所有資料來源。 **Value** 和 **IsMissing** 屬性是為所有資料來源定義的。 其他預先定義的屬性 (例如多維度資料來源的 **Key**、 **UniqueName**和 **ParentUniqueName** ) 只有在資料來源有提供這些屬性時，才受到支援。 某些資料提供者可支援自訂屬性。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。 例如，如果是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源，請參閱 [Analysis Services 資料庫的擴充欄位屬性 &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
   
