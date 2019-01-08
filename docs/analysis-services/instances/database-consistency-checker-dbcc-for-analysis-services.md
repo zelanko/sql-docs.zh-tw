@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3134ff97059efa61ab2df82a9b7d3c7aa4ee769e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bc158c0c5ba35da95fe3bf1af688e12a7b162045
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697008"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413085"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis services 的 database Consistency Checker (DBCC)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   DBCC 提供適用於 Analysis Services 執行個體上之多維度和表格式資料庫的隨選驗證。 您可以在 SQL Server Management Studio (SSMS) 的 MDX 或 XMLA 查詢視窗中執行 DBCC，並在 SSMS 的 SQL Server Profiler 或 xEvent 工作階段中追蹤 DBCC 輸出。  
-此命令會接受物件定義，並傳回空的結果集或詳細錯誤資訊 (如果物件已損毀)。   在本文中，您將了解如何執行命令、解譯結果，以及解決任何發生的問題。  
+此命令會接受物件定義，並傳回空的結果集或詳細錯誤資訊 (如果物件已損毀)。   在本文中，您將了解如何執行命令、 解譯結果，並解決任何發生的問題。  
   
  對於表格式資料庫，DBCC 所執行的一致性檢查相當於每次重新載入、同步處理或還原資料庫時自動發生的內建驗證。  相反地，多維度資料庫的一致性檢查只會在您依照需求執行 DBCC 時發生。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "51697008"
  只要資料庫是在 SQL Server 2016 執行個體上執行，DBCC for Analysis Services 便能在任何相容性層級的任何 Analysis Services 資料庫上執行。 只要確認您針對每個資料庫類型使用正確的命令語法即可。  
   
 > [!NOTE]  
->  如果您熟悉 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)，很快地您會發現 Analysis Services 中的 DBCC 範圍較狹隘。 Analysis Services 中的 DBCC 是專門針對整個資料庫或個別物件回報資料損毀的單一命令。 如果您需要將其他工作 (如收集資訊) 納入考量，請嘗試改用 AMO PowerShell 或 XMLA 指令碼。
+>  如果您熟悉[DBCC &#40;TRANSACT-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)，您會很快發現 Analysis Services 中的 DBCC，具有範圍較狹隘。 Analysis Services 中的 DBCC 是專門針對整個資料庫或個別物件回報資料損毀的單一命令。 如果您需要將其他工作 (如收集資訊) 納入考量，請嘗試改用 AMO PowerShell 或 XMLA 指令碼。
   
 ## <a name="permission-requirements"></a>權限需求  
  您必須是 Analysis Services 資料庫或伺服器管理員 (伺服器角色的成員) 才能執行命令。 如需相關指示，請參閱[授與資料庫權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) 或[將伺服器系統管理員權限授與 Analysis Services 執行個體](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
@@ -72,7 +72,7 @@ ms.locfileid: "51697008"
   
 ```  
   
- 若要針對上至物件鏈結的物件執行 DBCC，請刪除任何不需要的低層級物件識別碼項目︰  
+ 若要執行 DBCC 物件鏈結的更高的物件上，刪除您不需要任何較低層級物件識別碼項目：  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -92,7 +92,7 @@ ms.locfileid: "51697008"
   
 -   **PartitionID** 對應至分割區識別碼。  
   
-## <a name="usage"></a>使用方式  
+## <a name="usage"></a>使用量  
  在 SQL Server Management Studio 中，您可以使用 MDX 或 XMLA 查詢視窗來叫用 DBCC。 此外，您還可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Profiler 或 Analysis Services Xevent 來檢視 DBCC 輸出。 請注意，系統不會向 Windows 應用程式事件記錄檔或 msmdsrv.log 檔案報告 SSAS DBCC 訊息。  
   
  DBCC 會檢查實體資料損毀，以及區段出現被遺棄成員時發生的邏輯資料損毀。 資料庫必須經過處理，您才能執行 DBCC。 它會略過遠端、空白或未處理的分割區。  
@@ -200,7 +200,7 @@ Execution complete
   
      錯誤訊息如下所示。  
   
-## <a name="reference-consistency-checks-and-errors-for-multidimensional-databases"></a>參考資料︰多維度資料庫的一致性檢查和錯誤  
+## <a name="reference-consistency-checks-and-errors-for-multidimensional-databases"></a>參考：多維度資料庫的一致性檢查和錯誤  
  多維度資料庫的分割區索引是唯一需要驗證的部分。  在執行期間，DBCC 會建立每個分割區的暫存索引，再與磁碟上的保存索引比較。  建立暫存索引需要讀取磁碟上的所有分割區資料，然後將暫存索引保存在記憶體中，以供比較之用。 如果遭遇到額外的工作負載，伺服器可能會在 DBCC 執行期間發生大量的磁碟 IO 和記憶體耗用量。  
   
  多維度索引損毀偵測包含下列檢查。 下表中的錯誤會在發生物件層級失敗時出現在 xEvent 或 Profiler 追蹤內。  
@@ -212,7 +212,7 @@ Execution complete
 |分割區索引|驗證中繼資料。<br /><br /> 確認暫存索引中的每個成員是否都可以在磁碟的區段索引標頭檔中找到。|分割區區段已損毀。|  
 |分割區索引|掃描區段來尋找實體損毀。<br /><br /> 讀取磁碟上的索引檔案以尋找暫存索引中每個成員，並確認索引的大小記錄符合，且相同的資料頁面已標示為具有目前成員的記錄。|分割區區段已損毀。|  
   
-## <a name="reference-consistency-checks-and-errors-for-tabular-databases"></a>參考資料︰表格式資料庫的一致性檢查和錯誤  
+## <a name="reference-consistency-checks-and-errors-for-tabular-databases"></a>參考：表格式資料庫的一致性檢查和錯誤  
  下表是針對表格式物件執行之所有一致性檢查的清單，以及當檢查指出毀損時引發的錯誤。 下表中的錯誤會在發生物件層級失敗時出現在 xEvent 或 Profiler 追蹤內。  
   
 ||||  

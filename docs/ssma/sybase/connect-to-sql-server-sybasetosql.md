@@ -10,12 +10,12 @@ ms.assetid: 30179b25-409b-4e23-bc73-2f226657098f
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a33bce9949a91a7581a018ca2fd086a2e322f6a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d610ea44ff29056228d6bf788cba1f74a50db58
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626856"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406085"
 ---
 # <a name="connect-to-sql-server-sybasetosql"></a>連線到 SQL Server (SybaseToSQL)
 使用**連接到 SQL Server**對話方塊中，連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您想要移轉到。 若要存取**連接到 SQL Server**對話方塊的 **檔案**功能表上，按一下 **連接到 SQL Server**。  

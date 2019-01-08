@@ -13,15 +13,15 @@ ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39d8a1bdbc3a56cc03710bc6982b708235c47c45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2378d438c575ad54a89f09c4c9ddcb157c246ffd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762426"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508756"
 ---
 # <a name="working-with-recordsets"></a>使用資料錄集
-**資料錄集**物件具有內建功能，可讓您重新排列結果集中資料的順序，來搜尋特定的記錄，根據您提供的準則，並且即使最佳化使用索引搜尋作業。 這些功能是否可供使用取決於提供者，以及在某些情況下，例如屬於[索引](../../../ado/reference/ado-api/index-property.md)屬性 — 本身的資料來源的結構。  
+**資料錄集**物件具有內建功能，可讓您重新排列結果集中資料的順序，來搜尋特定的記錄，根據您提供的準則，並且即使最佳化使用索引搜尋作業。 這些功能是否可供使用取決於提供者以及在某些情況下-例如屬於[Index](../../../ado/reference/ado-api/index-property.md)屬性-資料來源本身的結構。  
   
 ## <a name="arranging-data"></a>排列資料  
  通常，最有效率的方式來排序的資料中您**資料錄集**是用來傳回結果的 SQL 命令中指定 ORDER BY 子句。 不過，您可能必須變更中的資料順序**資料錄集**，已建立。 您可以使用**排序**屬性，以建立順序中的哪些資料列**資料錄集**會周遊。 此外，**篩選**屬性會決定哪些資料列會周遊資料列時，可以存取。  
@@ -43,7 +43,7 @@ ms.locfileid: "47762426"
 ## <a name="finding-a-specific-record"></a>尋找特定的記錄  
  提供 ADO[尋找](../../../ado/reference/ado-api/find-method-ado.md)並[搜尋](../../../ado/reference/ado-api/seek-method.md)方法，找出特定資料錄中的**資料錄集**。 **尋找**方法支援的各種不同的提供者，但僅限於單一的搜尋準則。 **搜尋**方法支援搜尋多個條件，但不是支援的許多提供者。  
   
- 欄位的索引可以大幅增強的效能**尋找**方法和**排序**並**篩選**屬性**資料錄集**物件。 您可以建立的內部索引**欄位**物件，藉由設定其動態[最佳化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)屬性。 此動態屬性加入至**屬性**的集合**欄位**物件，當您設定[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設**adUseClient**. 請記住，此索引是 ado 內部，您無法取得其存取權，或將它用於其他用途。 此外，這個索引會區別[Index](../../../ado/reference/ado-api/index-property.md)屬性**資料錄集**物件。  
+ 欄位的索引可以大幅增強的效能**尋找**方法和**排序**並**篩選**屬性**資料錄集**物件。 您可以建立的內部索引**欄位**物件，藉由設定其動態[最佳化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)屬性。 此動態屬性加入至**屬性**的集合**欄位**物件，當您設定[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)屬性設**adUseClient**. 請記住這個索引是 ado 內部-您無法取得其存取權，或將它用於其他用途。 此外，這個索引會區別[Index](../../../ado/reference/ado-api/index-property.md)屬性**資料錄集**物件。  
   
  **尋找**方法快速找出資料行 （欄位） 的內部值**資料錄集**。 您時常可以增進的速度**尋找**方法所使用的資料行上**最佳化**在其上建立索引的屬性。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "47762426"
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|檢視上次所影響的記錄篩選**刪除**，**重新同步處理**， **UpdateBatch**，或**CancelBatch**呼叫。|  
 |**adFilterConflictingRecords**|檢視失敗的最後一個批次更新記錄的篩選條件。|  
-|**adFilterFetchedRecords**|檢視目前的快取中的記錄的篩選器 — 也就是從資料庫擷取記錄的最後一個呼叫的結果。|  
+|**adFilterFetchedRecords**|篩選器來檢視記錄中目前的快取-也就是從資料庫擷取記錄的最後一個呼叫的結果。|  
 |**adFilterNone**|移除目前的篩選條件，並還原所有記錄進行檢視。|  
 |**adFilterPendingRecords**|檢視只會記錄的篩選條件的已變更但尚未傳送至伺服器。 只適用於批次更新模式。|  
   

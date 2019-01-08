@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - table aliases [SQL Server]
@@ -13,19 +13,19 @@ ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 88b3bf7552d40fb914150b8cdc5cf6d53d22ab22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e7172a7b9b17dfa4553d3179d8cc1a880040f13
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227308"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821802"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>建立資料表別名 (Visual Database Tools)
   別名可以更容易使用資料表名稱。 在下列狀況時，使用別名會非常有用：  
   
 -   讓 [SQL 窗格](visual-database-tools.md) 中的陳述式更簡短、更容易閱讀。  
   
--   在查詢中會經常參考資料表名稱，例如在檢查資料行名稱是否合格時，以及想要確保符合查詢指定的字元長度限制 (某些資料庫會限制查詢的最大長度)。  
+-   您經常在查詢中參閱資料表名稱 - 例如在限定資料行名稱中 - 並且希望確保維持在查詢的特定字元長度限制內。 (某些資料庫會限制查詢的最大長度)。  
   
 -   您使用相同資料表的多個執行個體 (例如自我聯結)，然後需要參考到一個或另外一個執行個體的方式。  
   

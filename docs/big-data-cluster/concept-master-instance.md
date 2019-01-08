@@ -1,22 +1,24 @@
 ---
-title: 什麼是 SQL Server 的巨量資料叢集主要執行個體嗎？ | Microsoft Docs
-description: 本文說明中的 SQL Server 2019 巨量資料叢集的主要執行個體。
+title: 主要執行個體是什麼？
+titleSuffix: SQL Server 2019 big data clusters
+description: 本文說明 SQL Server 2019 巨量資料叢集 （預覽） 中的 SQL Server 主要執行個體。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 50955f8c781dcf370aa3f48ed72a0ed993854655
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 2ea25aeb5c7c39c5b00e545bc39974073132b1b2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221594"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208165"
 ---
-# <a name="what-is-the-sql-server-big-data-cluster-master-instance"></a>什麼是 SQL Server 的巨量資料叢集主要執行個體嗎？
+# <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>什麼是中的 SQL Server 2019 巨量資料叢集的主要執行個體？
 
-本文說明所扮演的角色*SQL Server 的主要執行個體*在 SQL Server 2019 巨量 ata 叢集中。 主要執行個體是在 SQL Server 的巨量資料叢集中執行的 SQL Server 執行個體[控制平面](big-data-cluster-overview.md#controlplane)。
+本文說明所扮演的角色*SQL Server 的主要執行個體*中 SQL Server 2019 巨量資料叢集。 主要執行個體是在 SQL Server 的巨量資料叢集中執行的 SQL Server 執行個體[控制平面](big-data-cluster-overview.md#controlplane)。
 
 SQL Server 的主要執行個體提供下列功能：
 
@@ -26,7 +28,7 @@ SQL Server 的主要執行個體提供叢集的外部可存取的 TDS 端點。 
 
 ## <a name="scale-out-query-management"></a>向外延展查詢管理
 
-SQL Server 的主要執行個體包含用來將查詢分散在節點上的 SQL Server 執行個體上的向外延展查詢引擎[計算集區](concept-compute-pool.md)。 向外延展查詢引擎也會提供所有的 Hive 資料表，而不需要任何額外的設定叢集中透過 Transact SQL 存取。 (Hive CTP 2.1 中不支援的資料表)
+SQL Server 的主要執行個體包含用來將查詢分散在節點上的 SQL Server 執行個體上的向外延展查詢引擎[計算集區](concept-compute-pool.md)。 向外延展查詢引擎也會提供所有的 Hive 資料表，而不需要任何額外的設定叢集中透過 Transact SQL 存取。 (Hive CTP 2.2 中不支援的資料表)
 
 ## <a name="metadata-and-user-databases"></a>中繼資料和使用者資料庫
 
@@ -43,7 +45,7 @@ SQL Server 的主要執行個體包含用來將查詢分散在節點上的 SQL S
 
 SQL Server machine learning 服務是 database engine，用於執行 SQL Server 中的 Java、 R 和 Python 程式碼的附加元件功能。 這項功能根據 SQL Server extensibility framework、 隔離核心引擎的程序，從外部程序，但完全整合的關聯式資料當做預存程序、 T-SQL 指令碼包含 R 或 Python 的陳述式，或 Java、 R 或包含 T-SQL 的 Python 程式碼。
 
-SQL Server 的巨量資料叢集的一部分，machine learning 服務將可在預設 SQL Serevr 主要執行個體上。 也就是說，一旦在 SQL Server 的主要執行個體上啟用外部指令碼執行時，它會就能夠執行 Java 中，使用 sp_execute_external_script 的 R 和 Python 指令碼。
+SQL Server 的巨量資料叢集的一部分，machine learning 服務會提供預設的 SQL Server 主要執行個體上。 也就是說，一旦在 SQL Server 的主要執行個體上啟用外部指令碼執行時，它會就能夠執行 Java 中，使用 sp_execute_external_script 的 R 和 Python 指令碼。
 
 ### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>巨量資料叢集中的機器學習服務的優點
 

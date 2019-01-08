@@ -13,17 +13,17 @@ ms.assetid: 68323f23-121e-44fc-be85-6f9915d6d3c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3168cc6e56e7563dae29794219c150face86f584
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f10fdf70b27f2bcea53ce32a1d64dec65e34893
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161677"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535056"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>屬性辨識索引標籤 (採礦模型檢視器)
   使用 [屬性辨識] 索引標籤，即可比較輸入屬性的狀態以及查看它們與結果屬性如何相關。 先列出造成兩個選取的可預測屬性狀態之間最大差異的屬性值。  
   
- **如需詳細資訊，請參閱** [Microsoft 貝氏機率分類演算法](data-mining/microsoft-naive-bayes-algorithm.md)、[使用 Microsoft 貝氏機率分類檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)。  
+ **如需詳細資訊：**[Microsoft 貝氏機率分類演算法](data-mining/microsoft-naive-bayes-algorithm.md)，[瀏覽模型，使用 Microsoft 貝氏機率分類檢視器](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -42,7 +42,7 @@ ms.locfileid: "48161677"
  選擇一種可預測屬性狀態，和 **[值 2]** 裡包含的狀態進行比較。  
   
  **值 2**  
- 選取一種可預測屬性狀態，和 **[值 1]** 裡包含的狀態進行比較。 還可以選取 [所有其他的狀態]，以比較 [值 1] 中的值與其補數 (即值 1 以外的所有其他值)。  
+ 選取一種可預測屬性狀態，和 **[值 1]** 裡包含的狀態進行比較。 您也可以選取**所有其他的狀態**為比較值**值 1**與其補數-也就是所有其他值 1 以外的值。  
   
  **辨識率\<值 1 > 和\<值 2 >**  
  圖形包含下列資料行，描述目標屬性與輸入屬性的特定狀態如何相關。  
@@ -55,8 +55,8 @@ ms.locfileid: "48161677"
 |**喜好\<值 2 >**|長條表示目前屬性和值是否喜好 [值 2] 中所選的目標結果。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [採礦模型檢視器&#40;資料採礦模型設計工具&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [採礦模型檢視器 &#40;資料採礦模型設計師&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [資料採礦模型檢視器](data-mining/data-mining-model-viewers.md)  
   
   

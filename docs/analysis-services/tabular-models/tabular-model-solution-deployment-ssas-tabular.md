@@ -1,5 +1,5 @@
 ---
-title: 表格式模型方案部署 |Microsoft Docs
+title: Analysis Services 表格式模型方案部署 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d913c16e2d81f016095cb7d60711177b5ae12ea4
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 77889113dd7987827426bae2357e89590754a545
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145973"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072337"
 ---
 # <a name="tabular-model-solution-deployment"></a>表格式模型方案部署 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "50145973"
 ##  <a name="bkmk_deploying_bism"></a> 部署表格式模型從 SQL Server Data Tools (SSDT)  
  部署是一個簡單的程序，不過，必須採取某些步驟來確認您的模型已使用正確的組態選項，部署到正確的 Analysis Services 執行個體。  
   
- 表格式模型會定義數個部署特定屬性。 部署時，會建立在 [伺服器] 屬性中指定之 Analysis Services 執行個體的連接。 接著會在該執行個體上建立具有 [資料庫] 屬性中指定之名稱的新模型資料庫 (如果尚未存在)。 來自模型專案之 Model.bim 檔案的中繼資料會在部署伺服器的模型資料庫中，用來設定物件。 透過 [處理選項]，您可以指定是否只要部署模型中繼資料，並建立模型資料庫；或者如果指定 [預設] 或 [完整]，用來連接到資料來源的模擬認證就會從記憶體中的模型工作空間資料庫傳遞到已部署的模型資料庫。 接著，Analysis Services 會執行處理，以便將資料擴展到已部署的模型中。 一旦部署程序完成，用戶端應用程式就可以使用資料連接或 SharePoint 中的 .bism 連接檔案，來連接模型。  
+ 表格式模型會定義數個部署特定屬性。 部署時，會建立在 [伺服器] 屬性中指定之 Analysis Services 執行個體的連接。 接著會在該執行個體上建立具有 [資料庫] 屬性中指定之名稱的新模型資料庫 (如果尚未存在)。 從模型專案之 Model.bim 檔案的中繼資料用來設定部署伺服器上的模型資料庫中的物件。 透過 [處理選項]，您可以指定是否只要部署模型中繼資料，並建立模型資料庫；或者如果指定 [預設] 或 [完整]，用來連接到資料來源的模擬認證就會從記憶體中的模型工作空間資料庫傳遞到已部署的模型資料庫。 接著，Analysis Services 會執行處理，以便將資料擴展到已部署的模型中。 一旦部署程序完成，用戶端應用程式就可以使用資料連接或 SharePoint 中的 .bism 連接檔案，來連接模型。  
   
 ##  <a name="bkmk_deploy_props"></a> 部署屬性  
  專案的部署選項與部署伺服器屬性會指定模型方式和位置部署至預備或生產環境的 Analysis Services 環境。 針對所有模型專案定義預設的屬性設定時，您可以根據特定部署需求，變更每個專案的這些屬性設定。 如需設定預設部署屬性的詳細資訊，請參閱[設定預設資料模型化和部署屬性](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
@@ -36,9 +36,9 @@ ms.locfileid: "50145973"
   
 |屬性|預設設定|描述|  
 |--------------|---------------------|-----------------|  
-|**處理選項**|**預設值**|此屬性會指定部署物件變更時所需的處理類型。 此屬性具有以下選項：<br /><br /> **預設值** ：此設定會指定 Analysis Services 決定所需的處理類型。 將會處理未處理的物件，並且根據需要重新計算屬性關聯性、屬性階層、使用者階層和導出資料行。 此設定通常會造成比使用 [完整] 處理選項更快的部署時間。<br /><br /> **不處理** ：此設定會指定僅部署中繼資料。 部署後，您可能必須在已部署的模型上執行處理作業，以更新及重新計算資料。<br /><br /> **完整** ：此設定會指定部署中繼資料，並執行完整處理作業。 如此可確保已部署模型的中繼資料和資料為最新。|  
+|**處理選項**|**預設值**|此屬性會指定部署物件變更時所需的處理類型。 此屬性具有以下選項：<br /><br /> **預設**-此設定會指定 Analysis Services 決定所需的處理類型。 將會處理未處理的物件，並且根據需要重新計算屬性關聯性、屬性階層、使用者階層和導出資料行。 此設定通常會造成比使用 [完整] 處理選項更快的部署時間。<br /><br /> **不處理**-此設定可讓您指定的中繼資料將會部署。 部署後，您可能必須在已部署的模型上執行處理作業，以更新及重新計算資料。<br /><br /> **完整**-此設定指定同時部署中繼資料，並執行完整處理作業。 如此可確保已部署模型的中繼資料和資料為最新。|  
 |**交易式部署**|**False**|此屬性會指定部署是否為交易式。 依預設，在處理這些已部署的物件時，所有物件或已變更之物件的部署並不是交易式。 即使處理失敗，部署仍可以成功，並持續存在。 您可以變更這項預設值，在單一交易中併入部署和處理。|  
-|**查詢模式**|**In-Memory**|此屬性會指定傳回查詢結果的來源模式執行記憶體 (快取) 模式或 DirectQuery 模式。 此屬性具有以下選項：<br /><br /> **DirectQuery** ：此設定會指定模型的所有查詢都應該只使用關聯式資料來源。<br /><br /> **搭配使用 DirectQuery 和 InMemory** ：根據預設，此設定會指定應該透過關聯式來源來回應查詢，除非在用戶端的連接字串中指定其他項目。<br /><br /> **InMemory** ：此設定會指定僅透過快取來回應查詢。<br /><br /> **搭配使用 InMemory 和 DirectQuery** ：根據預設，此設定會指定 應該透過快取來回應查詢，除非在用戶端的連接字串中指定其他項目。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 < [DirectQuery 模式](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。|  
+|**查詢模式**|**In-Memory**|此屬性會指定傳回查詢結果的來源模式執行記憶體 (快取) 模式或 DirectQuery 模式。 此屬性具有以下選項：<br /><br /> **DirectQuery** -此設定可讓您指定模型的所有查詢都應該都使用關聯式資料來源。<br /><br /> **搭配使用 DirectQuery 和 InMemory** ：根據預設，此設定會指定應該透過關聯式來源來回應查詢，除非在用戶端的連接字串中指定其他項目。<br /><br /> **InMemory** ：此設定會指定僅透過快取來回應查詢。<br /><br /> **搭配使用 InMemory 和 DirectQuery** ：根據預設，此設定會指定 應該透過快取來回應查詢，除非在用戶端的連接字串中指定其他項目。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 < [DirectQuery 模式](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。|  
   
 ### <a name="deployment-server-properties"></a>部署伺服器屬性  
  [部署伺服器] 屬性包括：  
@@ -55,7 +55,7 @@ ms.locfileid: "50145973"
   
 |屬性|預設設定|描述|  
 |--------------|---------------------|-----------------|  
-|**模擬設定**|**預設值**|此屬性會指定在 DirectQuery 模式下執行的模型連接到資料來源時所使用的模擬設定。 查詢記憶體中快取時，不會使用模擬認證。 此屬性設定具有以下選項：<br /><br /> **預設值** ：此設定會指定 Analysis Services 在使用 [資料表匯入精靈] 建立資料來源連接時，使用 [模擬資訊] 頁面上指定的選項。<br /><br /> **也就是 ImpersonateCurrentUser** – 此設定可讓您指定將在連接到所有的資料來源時，使用目前登入之使用者的使用者帳戶。|  
+|**模擬設定**|**預設值**|此屬性會指定在 DirectQuery 模式下執行的模型連接到資料來源時所使用的模擬設定。 查詢記憶體中快取時，不會使用模擬認證。 此屬性設定具有以下選項：<br /><br /> **預設**-此設定會指定 Analysis Services 會使用資料來源建立連接時使用 [資料表匯入精靈]，[模擬資訊] 頁面上指定的選項。<br /><br /> **也就是 ImpersonateCurrentUser** -此設定可讓您指定將在連接到所有的資料來源時，使用目前登入之使用者的使用者帳戶。|  
   
 ##  <a name="bkmk_meth"></a> 部署方法  
  有數種方法可用於部署表格式模型專案。 可用於其他 Analysis Services 專案 (例如多維度) 的大多數部署方法也可用於部署表格式模型專案。  
@@ -73,7 +73,7 @@ ms.locfileid: "50145973"
 ##  <a name="bkmk_connecting"></a> 設定部署伺服器並連接至已部署的模型  
  部署模型之後，保護模型資料存取、備份，以及可透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]在 Analysis Services 伺服器上設定的處理作業會有其他考量。 雖然這些屬性和組態設定超出本主題的範圍，但儘管如此，它們在確保已部署之模型資料安全、維持最新狀態上非常重要，而且會針對組織中的使用者，提供寶貴的資料分析資源。  
   
- 部署模型並設定選擇性伺服器設定之後，就可以透過報表用戶端應用程式連接模型，並將其用來瀏覽及分析模型中繼資料。 從用戶端應用程式連接到已部署的模型資料庫超出本主題的範圍。 若要深入了解如何從用戶端應用程式連接到模型資料庫，請參閱 [表格式模型資料存取](../../analysis-services/tabular-models/tabular-model-data-access.md)。  
+ 部署模型並設定選擇性伺服器設定之後，就可以透過報表用戶端應用程式連接模型，並將其用來瀏覽及分析模型中繼資料。 從用戶端應用程式連接到已部署的模型資料庫超出本主題的範圍。 
   
 ##  <a name="bkmk_rt"></a> Related tasks  
   

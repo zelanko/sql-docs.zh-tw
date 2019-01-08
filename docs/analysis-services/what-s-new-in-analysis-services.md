@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 的新功能 |Microsoft 文件
+title: 什麼是 SQL Server 2016 Analysis Services 的新功能 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 70fb50abdd9411e5f34b704d53e66302270fdfd7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 873fd4bc1e010b2f7e2795368f8f209dfee23ea0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145993"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210187"
 ---
 # <a name="what39s-new-in-analysis-services"></a>Analysis Services 的新功能
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -32,7 +32,7 @@ SQL Server 2016 Service SP1 Analysis Services 透過非統一記憶體存取 (NU
 
 具體而言，SQL Server 2016 SP1 Analysis Services 在下列主要領域做了改進：
 
--   **NUMA 感知** - 為了改進 NUMA 支援，Analysis Services 內部的記憶體內 (VertiPaq) 引擎現在可以在每個 NUMA 節點上維護個別工作佇列。 如此可確保區段掃描工作會在為區段資料配置記憶體的相同節點上執行。 請注意，預設只會在至少有四個 NUMA 節點的系統上啟用 NUMA 感知。 在兩個節點的系統上，存取遠端配置記憶體的成本通常不需要管理 NUMA 細節的額外負荷。
+-   **NUMA 感知** - 為了改進 NUMA 支援，Analysis Services 內部的記憶體內 (VertiPaq) 引擎現在可以在每個 NUMA 節點上維護個別工作佇列。 如此可確保區段掃描工作會在為區段資料配置記憶體的相同節點上執行。 請注意，預設只會在至少有四個 NUMA 節點的系統上啟用 NUMA 感知。 在兩個節點系統上的成本存取遠端配置記憶體，通常不需要管理 NUMA 細節的額外負荷。
 -   **記憶體配置** - Analysis Services 已透過 Intel Threading Building Blocks 加速，此可調式配置器會為每個核心提供不同的記憶體集區。 當核心數目增加時，系統幾乎能夠以線性方式調整。
 -   **堆積片段** - Intel TBB 型可調式配置器也有助於減輕因 Windows 堆積中已出現之堆積片段所造成的效能問題。
 
@@ -49,10 +49,6 @@ SQL Server 2016 Service SP1 Analysis Services 透過非統一記憶體存取 (NU
 - [下載 SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)   
 
 如果您有自訂的 AMO 相依應用程式，您可能需要安裝更新後的 AMO 版本。 如需指示，請參閱[安裝 Analysis Services 資料提供者 &#40;AMO、ADOMD.NET、MSOLAP&#41;](../analysis-services/instances/install-windows/install-analysis-services-data-providers-amo-adomd-net-msolap.md)。    
-
- #### <a name="technet-virtual-labs-sql-server-2016-analysis-services"></a>TechNet 虛擬實驗室︰SQL Server 2016 Analysis Services
-想要實機操作以深入了解嗎？ 請遵循 [SQL Server 2016 Analysis Services 虛擬實驗室的新功能](http://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23110&lod=true)中的逐步指示。
-在此實驗室中，您將建立及監視擴充事件 (xEvent)、將表格式專案升級至相容性層級 1200、使用 Visual Studio 組態、實作新的計算功能、實作新的資料表關聯性功能、設定顯示資料夾、管理模型轉換、使用新的表格式模型指令碼語言 (TMSL)、使用 PowerShell，以及試用新的 DirectQuery 模式功能。
 
 ## <a name="modeling"></a>模型化    
 ### <a name="improved-modeling-performance-for-tabular-1200-models"></a>提升表格式 1200 模型的模型化效能    
@@ -92,7 +88,7 @@ SQL Server 2016 Service SP1 Analysis Services 透過非統一記憶體存取 (NU
 
 ## <a name="scripting"></a>指令碼
  ### <a name="powershell-for-tabular-models"></a>表格式模型的 PowerShell    
- 此版本包含相容性層級 1200 之表格式模型的 PowerShell 增強功能。 您可以使用所有適用的 Cmdlet，再加上表格式模式特定的 Cmdlet︰ [Invoke-ProcessASDatabase](../analysis-services/powershell/invoke-processasdatabase.md) 和 [Invoke-ProcessTable Cmdlet](../analysis-services/powershell/invoke-processtable-cmdlet.md)。    
+ 此版本包含相容性層級 1200 之表格式模型的 PowerShell 增強功能。 您可以使用所有適用的 cmdlet，再加上表格式模式特有的 cmdlet:[Invoke-processasdatabase](../analysis-services/powershell/invoke-processasdatabase.md)並[Invoke-processtable cmdlet](../analysis-services/powershell/invoke-processtable-cmdlet.md)。    
  ### <a name="ssms-scripting-database-operations"></a>SSMS 指令碼資料庫作業    
  在 [最新版的 SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)中，現已針對資料庫命令啟用指令碼，包括 Create、Alter、Delete、Backup、Restore、Attach、Detach。 輸出是 JSON 格式的表格式模型指令碼語言 (TMSL)。 如需詳細資訊，請參閱[表格式模型指令碼語言 &#40;TMSL&#41; 參考](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)。    
  ### <a name="analysis-services-execute-ddl-task"></a>Analysis Services 執行 DDL 工作    
@@ -101,7 +97,7 @@ SQL Server 2016 Service SP1 Analysis Services 透過非統一記憶體存取 (NU
  SSAS PowerShell Cmdlet **Invoke-ASCmd** 現在接受表格式模型指令碼語言 (TMSL) 命令。 未來版本中可能會更新其他 SSAS PowerShell Cmdlet，以便使用新的表格式中繼資料 (版本資訊中將詳列例外狀況)。    
 如需詳細資訊，請參閱 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md) 。    
  ### <a name="tabular-model-scripting-language-tmsl-supported-in-ssms"></a>SSMS 中支援的表格式模型指令碼語言 (TMSL)    
-  您現在可以使用 [最新版的 SSMS](http://msdn.microsoft.com/library/mt238290.aspx)來建立指令碼，將表格式 1200 模型的大部分管理工作自動化。 目前可以編寫下列工作的指令碼︰任何層級的 Process，以及資料庫層級的 CREATE、ALTER、DELETE。    
+  您現在可以使用 [最新版的 SSMS](http://msdn.microsoft.com/library/mt238290.aspx)來建立指令碼，將表格式 1200 模型的大部分管理工作自動化。 目前，可以編寫下列工作：處理程序在任何層級，再加上 CREATE、 ALTER、 刪除資料庫層級。    
     
  在功能上，TMSL 相當於可提供多維度物件定義的 XMLA ASSL 延伸模組，不同之處在於 TMSL 會使用 **model**、 **table**和 **relationship** 等原生描述元來描述表格式中繼資料。 如需結構描述的詳細資訊，請參閱[表格式模型指令碼語言 &#40;TMSL&#41; 參考](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)。    
     
@@ -134,7 +130,7 @@ refresh|處理物件。 ASSL 對等項目為 PROCESS。
 
 ## <a name="dax"></a>DAX
 ### <a name="improved-dax-formula-editing"></a>改良的 DAX 公式編輯
-公式列更新使用語法顏色設定來區分函數、欄位和量值，協助您更輕鬆地撰寫公式，而語法顏色設定會提供智慧型函數和欄位建議，並使用錯誤「波浪線」 來告訴您 DAX 運算式是否有任何部分錯誤。 它也可讓您使用多行程式碼 (Alt + Enter 鍵) 和縮排 (Tab 鍵)。 公式列現在也可讓您撰寫註解做為您的量值的一部分，只要輸入 “//”，同一行上這些字元之後的一切將會被視為註解。
+公式列更新使用語法顏色設定來區分函數、欄位和量值，協助您更輕鬆地撰寫公式，而語法顏色設定會提供智慧型函數和欄位建議，並使用錯誤「波浪線」 來告訴您 DAX 運算式是否有任何部分錯誤。 它也可讓您使用多行程式碼 (Alt + Enter 鍵) 和縮排 (Tab 鍵)。 在公式列現在也可讓您撰寫註解做為您的量值的一部分，則只要輸入"/ /"之後的同一行上這些字元會被視為註解的一切。
 
 ### <a name="dax-variables"></a>DAX 變數    
 此版本現在會在 DAX 中包含變數的支援。 變數現在可以將運算式的結果儲存為具名變數，然後做為引數傳遞至其他量值運算式。 一旦計算變數運算式的結果值，這些值就不會變更，即使另一個運算式中參考的此變數。 如需詳細資訊，請參閱 [VAR 函數](http://msdn.microsoft.com/library/mt243785.aspx)。    
@@ -177,10 +173,10 @@ Visual Studio 2015 中的 [程式碼檢視] 現在會針對表格式 1200 模型
     }    
     ```    
     
-> [!WARNING]    
+> [!WARNING]
 > 請避免直接編輯 JSON。 這麼做可能會損毀模型。    
- ### <a name="new-elements-in-ms-csdlbi-20-schema"></a>MS-CSDLBI 2.0 結構描述中的新元素    
- 下列元素已新增至 [MS-CSDLBI] 2.0 結構描述中定義的 **TProperty** 複雜類型：    
+>  ### <a name="new-elements-in-ms-csdlbi-20-schema"></a>MS-CSDLBI 2.0 結構描述中的新元素    
+>  下列元素已新增至 [MS-CSDLBI] 2.0 結構描述中定義的 **TProperty** 複雜類型：    
     
 |元素|定義|    
 |-------------|----------------|    

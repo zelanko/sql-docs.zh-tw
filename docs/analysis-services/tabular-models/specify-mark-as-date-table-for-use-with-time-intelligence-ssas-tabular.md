@@ -1,5 +1,5 @@
 ---
-title: 指定標記為日期資料表 |Microsoft Docs
+title: Analysis Services 表格式模型中，指定標記為日期資料表 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f059292691904325e997f9089173ec8e39ffcf17
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: df4afbecebd3c076f80064dbd3d13f35ba2cbcf0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099331"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072435"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>指定標記為日期資料表以搭配時間智慧
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

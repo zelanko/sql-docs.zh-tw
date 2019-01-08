@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -20,12 +19,12 @@ ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c3d425e069d8a1e942ee5b7fd6277d4fc4037b15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce51b3fc6730b984c36aa44e87d3983233a3b006
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123508"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772091"
 ---
 # <a name="delete-an-article"></a>刪除發行項
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中刪除發行項。 如需可以卸除發行項的情況以及發行項是否需要新快照集或重新初始化訂閱的詳細資訊，請參閱[在現有發行集中加入和卸除發行項](add-articles-to-and-drop-articles-from-existing-publications.md)。  
@@ -69,7 +68,7 @@ ms.locfileid: "48123508"
   
 4.  針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定步驟 1 中的連接。  
   
-5.  檢查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 屬性，確認該發行項存在。 如果這個屬性的值為`false`，在步驟 3 中的發行項屬性定義不正確，或發行項不存在。  
+5.  檢查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 屬性，確認該發行項存在。 如果這個屬性的值為 `false`，則表示步驟 3 中的發行項屬性定義錯誤或是此發行項不存在。  
   
 6.  呼叫 <xref:Microsoft.SqlServer.Replication.Article.Remove%2A> 方法。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48123508"
   
 4.  針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定步驟 1 中的連接。  
   
-5.  檢查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 屬性，確認該發行項存在。 如果這個屬性的值為`false`，在步驟 3 中的發行項屬性定義不正確，或發行項不存在。  
+5.  檢查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 屬性，確認該發行項存在。 如果這個屬性的值為 `false`，則表示步驟 3 中的發行項屬性定義錯誤或是此發行項不存在。  
   
 6.  呼叫 <xref:Microsoft.SqlServer.Replication.Article.Remove%2A> 方法。  
   

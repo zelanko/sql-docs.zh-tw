@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_reinitsubscription
@@ -17,12 +16,12 @@ ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1e22ef6cd6ed820bf290125c109ab5e0f772cbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da8e0d9ab1959251bf5e41e35e4b3d647e072d8a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785136"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207328"
 ---
 # <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
  指出是否因發行集資料庫的結構描述變更而重新初始化。 *for_schema_change*已**元**，預設值是 0。 如果**0**，只要重新初始化整個發行集，而不只是某些發行項，就會重新啟動允許立即更新的發行集的作用中訂用帳戶。 這表示會因結構描述變更而重新初始化。 如果**1**，作用中訂用帳戶不會重新啟動快照集代理程式執行之前。  
   
  [  **@publisher=** ] **'***發行者***'**  
- 指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *發行者*已**sysname**，預設值是 NULL。  
+ 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  *發行者*不會用於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
@@ -83,7 +82,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
   
  如果是會自動套用初始快照集且發行集不允許可更新的訂閱之訂閱，就必須在執行這個預存程序之後執行快照集代理程式，以便準備結構描述和大量複製程式，然後散發代理程式就能夠重新同步處理訂閱。  
   
- 如果是會自動套用初始快照集且發行集允許可更新的訂閱之訂閱，散發代理程式會利用快照集代理程式先前所建立的大量複製程式和最新的結構描述，來重新同步處理訂閱。 散發代理程式會重新同步處理訂用帳戶的使用者執行之後，立即**sp_reinitsubscription**，如果 「 散發代理程式不忙碌中; 否則同步處理可能會發生在訊息間隔 （之後散發代理程式命令提示字元參數所指定： **MessageInterval**)。  
+ 如果是會自動套用初始快照集且發行集允許可更新的訂閱之訂閱，散發代理程式會利用快照集代理程式先前所建立的大量複製程式和最新的結構描述，來重新同步處理訂閱。 散發代理程式會重新同步處理訂用帳戶的使用者執行之後，立即**sp_reinitsubscription**，如果 「 散發代理程式不忙碌中; 否則同步處理可能會發生在訊息間隔 （之後指定散發代理程式命令提示字元參數：**MessageInterval**)。  
   
  **sp_reinitsubscription**沒有任何作用，在訂用帳戶上的手動套用初始快照集是。  
   

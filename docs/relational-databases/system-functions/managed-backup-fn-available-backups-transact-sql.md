@@ -21,12 +21,12 @@ ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d94d3127a5957b1684133019cf4991cba7adbff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e8e2af3150b6c0e8663c28a1342b68be57e043d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769425"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409796"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|備份檔案的 URL。|  
-|backup_type|NVARCHAR(6)|'DB' 表示資料庫備份，'LOG' 表示記錄備份|  
+|backup_type|NVARCHAR(6)|'DB' 表示資料庫備份，'LOG' 的記錄備份|  
 |expiration_date|DATETIME|此檔案預期要刪除的日期。 這會根據復原資料庫的能力設定為指定保留期限內的時間點。|  
 |database_guid|UNIQUEIDENTIFIER|指定資料庫的 GUID 值。  此 GUID 會唯一識別資料庫。|  
 |first_lsn|NUMERIC(25, 0)|備份組中第一個或最舊記錄檔記錄的記錄序號。 可以是 NULL。|  
@@ -75,7 +75,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
  需要**選取**這個函式上的權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例列出所有可用備份，透過資料庫 'MyDB' 的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 進行備份  
+ 下列範例會列出所有可用備份透過[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]資料庫 'MyDB'  
   
 ```  
 SELECT *   

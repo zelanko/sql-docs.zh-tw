@@ -5,8 +5,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.custom: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addsubscription
@@ -17,12 +16,12 @@ ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30dbaa3bc31135931fdceecb34ab454a4a46e495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663526"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206387"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |值|描述|  
 |-----------|-----------------|  
-|無|訂閱者已有發行資料表的結構描述和初始資料。<br /><br /> 注意： 此選項已被取代。 請改用 replication support only。|  
+|無|訂閱者已有發行資料表的結構描述和初始資料。<br /><br /> 注意：這個選項已被取代。 請改用 replication support only。|  
 |automatic (預設值)|先將發行資料表的結構描述和初始資料傳送給訂閱者。|  
 |replication support only|提供在訂閱者自動產生支援更新訂閱之發行項自訂預存程序和觸發程序的功能 (如果適用)。 假設訂閱者已有發行資料表的結構描述和初始資料。 當設定點對點異動複寫拓撲時，請確定拓撲中所有節點的資料都相同。 如需相關資訊，請參閱 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。<br /><br /> *不支援非 SQL Server 發行集的訂閱。*|  
 |initialize with backup|從發行集資料庫的備份中，取得發行資料表的結構描述和初始資料。 假設訂閱者有權存取發行集資料庫的備份。 備份的備份和媒體類型的位置由*backupdevicename*並*backupdevicetype&lt*。 當使用這個選項時，不需要在設定組態期間，默認點對點異動複寫拓撲。<br /><br /> *不支援非 SQL Server 發行集的訂閱。*|  
@@ -269,7 +268,7 @@ sp_addsubscription [ @publication = ] 'publication'
  指定記錄序號 (LSN)，而且訂閱應該從這個序號開始傳遞變更至點對點異動複寫拓撲中的節點。 搭配@sync_typeinitialize from lsn，以確保所有相關的交易都會複寫到新的節點的值。 如需相關資訊，請參閱 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。  
   
  [ @subscriptionstreams= ] *subscriptionstreams*  
- 這是在維護許多使用單一執行緒時所提供的交易式特性時，每個散發代理程式可用來將變更批次並行套用在訂閱者上的連接數目。 *subscriptionstreams*已**tinyint**，預設值是 NULL。 支援的值範圍是 1-64。 不支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者、Oracle 發行者或點對點訂閱使用這個參數。 每當使用訂閱資料流時，msreplication_subscriptions 資料表就會加入其他資料列 (每個資料流 1 個資料列) 並將 agent_id 設定為 NULL。  
+ 這是在維護許多使用單一執行緒時所提供的交易式特性時，每個散發代理程式可用來將變更批次並行套用在訂閱者上的連接數目。 *subscriptionstreams*已**tinyint**，預設值是 NULL。 支援的值範圍是 1-64。 這個參數不支援非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者 」、 「 Oracle 發行者 」 或 「 對等項目-訂用帳戶。 每當使用訂閱資料流時，msreplication_subscriptions 資料表就會加入其他資料列 (每個資料流 1 個資料列) 並將 agent_id 設定為 NULL。  
   
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../includes/tsql-md.md)]Subscriptionstreams 不適用於設定為傳遞  的發行項。 若要使用 subscriptionstreams，請改將發行項設定為傳遞預存程序呼叫。  

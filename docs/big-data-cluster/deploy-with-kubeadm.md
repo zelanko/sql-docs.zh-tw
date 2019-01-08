@@ -1,20 +1,22 @@
 ---
-title: 使用 SQL Server 2019 部署 kubeadm 設定 Kubernetes |Microsoft Docs
+title: 使用 kubeadm 設定 Kubernetes
+titleSuffix: SQL Server 2019 big data clusters
 description: 了解如何設定多個 Ubuntu 16.04 上的 Kubernetes 或適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署的 18.04 機器 （實體或虛擬）。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 842a23877290aec76f7813f27b68b4bccd7b5c9b
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 7b6c6aeced930bfdd17915e2acc130fc4446f4a5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221774"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210277"
 ---
-# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-deployments"></a>設定 SQL Server 2019 部署多部電腦上的 Kubernetes
+# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-big-data-cluster-preview-deployments"></a>設定適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署的多部電腦上的 Kubernetes
 
 這篇文章提供如何使用的範例**kubeadm**設定適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署的多部電腦上的 Kubernetes。 在此範例中，多個 Ubuntu 16.04 或 18.04 LTS 機器 （實體或虛擬） 為目標。 如果您要部署到不同的 Linux 平台，您必須更改一些命令，以符合您的系統。  
 
@@ -24,7 +26,7 @@ ms.locfileid: "51221774"
 ## <a name="prerequisites"></a>先決條件
 
 - 多個 Linux 實體機器或虛擬機器使用叢集
-- 建議的組態︰ 8 個 Cpu，32 GB 的記憶體，並至少 100 GB 的每個機器的存放裝置
+- 建議的設定：8 個 Cpu，32 GB 的記憶體，並至少 100 GB 的每個機器的存放裝置
 - 在叢集中的三部機器的最小值
 
 ## <a name="prepare-the-machines"></a>準備機器
@@ -143,4 +145,4 @@ kubectl get nodes
 
 這篇文章中的步驟設定多部 Ubuntu 電腦上的 Kubernetes 叢集。 下一個步驟是將 SQL Server 2019 巨量資料叢集部署。 如需指示，請參閱下列文章：
 
-[將 SQL Server 2019 CTP 2.1 在 Kubernetes 上部署](deployment-guidance.md#deploy)
+[部署 SQL Server 2019 CTP 2.2 上 Kubernetes](deployment-guidance.md#deploy)

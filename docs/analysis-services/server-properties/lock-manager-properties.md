@@ -1,5 +1,5 @@
 ---
-title: 鎖定管理員屬性 |Microsoft Docs
+title: Analysis Services 的鎖定管理員屬性 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 146bfef500424b7a587c3fb28616a3727086f265
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a5383fe83963a9b388413b9b829b4fac7fc11788
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033326"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071585"
 ---
 # <a name="lock-manager-properties"></a>鎖定管理員屬性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

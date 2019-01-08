@@ -15,12 +15,12 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5b8624bd3d3628c5c7499dd32bfa26afe048225c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5973d419bb87c4b53313afa3051865b4e746ef96
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061968"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211847"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services 中的 SharePoint 文件庫傳遞
   針對 SharePoint 整合所設定的報表伺服器包含您可以用來將報表傳送至 SharePoint 文件庫的傳遞延伸模組。  
@@ -71,11 +71,11 @@ ms.locfileid: "48061968"
  檔案名稱與副檔名  
  將報表的檔案名稱與副檔名指定為您要顯示在目標文件庫中的檔案名稱與副檔名。 如果您沒有指定副檔名，報表伺服器會依據報表輸出格式來建立副檔名。 這是必要的值。 檔案名稱不得包含下列字元：: \ / * ? 「 \< > |# { } %  
   
- Title  
- 指定選擇性`Title`目標文件庫中報表的屬性。 這是儲存在文件庫中之所有項目的標準屬性。 使用者可以在檢視 SharePoint 網站上的文件庫內容時，指定要顯示或隱藏此屬性。  
+ 標題  
+ 在目標文件庫中，指定報表的選用 `Title` 屬性。 這是儲存在文件庫中之所有項目的標準屬性。 使用者可以在檢視 SharePoint 網站上的文件庫內容時，指定要顯示或隱藏此屬性。  
   
  路徑  
- 指定指向 SharePoint 文件庫的完整 URL，包括 SharePoint Web 應用程式和網站。 例如： http://mySharePointWeb/MySite/MyDocLib; 其中 「 http://mySharePointWeb"指出的 Web 應用程式中，"MySite"是 SharePoint 網站，以及"MyDocLib"是 SharePoint 文件庫傳遞報表。  
+ 指定指向 SharePoint 文件庫的完整 URL，包括 SharePoint Web 應用程式和網站。 例如： <http://mySharePointWeb/MySite/MyDocLib>; 其中 「<http://mySharePointWeb>"指出的 Web 應用程式中，"MySite"是 SharePoint 網站，以及"MyDocLib"是 SharePoint 文件庫傳遞報表。  
   
  您無法指定頁面、網站或清單。 目標容器必須是相同網站或伺服陣列中的文件庫。  
   
@@ -86,8 +86,8 @@ ms.locfileid: "48061968"
  如果您要使用 [自動複製] 功能，將檔案的最新版本自動複製到多個位置，當啟用 [覆寫] 時，就會複製該檔案。 如果您使用**Autoincrement**或是**無**，傳遞將會失敗而`rsDeliveryError`就會發生錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立和管理 SharePoint 模式報表伺服器的訂用帳戶](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [訂閱與傳遞&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [建立及管理 SharePoint 模式報表伺服器的訂閱](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [訂閱與傳遞 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [指定報表資料來源的認證及連線資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f768d03f52adcf6bd17b4a97c7e509f4fb6922d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c6920be084265c010b6666559e8c66cc82085f9d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202738"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537766"
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>加入背景影像 (報表產生器及 SSRS)
   您可以將背景影像加入至報表項目 (如矩形、文字方塊、清單、矩陣、資料表和部分圖表) 或是加入至報表區段 (如頁首、頁尾或報表主體)。 您可以針對在 [屬性] 窗格中顯示 **[BackgroundImage]** 之報表設計介面上的任何選定項目來定義背景影像。 如同其他影像，背景影像可以是報表伺服器上影像的 URL、資料集欄位中的影像，或是報表定義中內嵌的影像。 若要使用內嵌在報表中的影像，您必須先將影像加入至報表定義，然後才可以將影像加入至設計介面。  
@@ -59,7 +59,7 @@ ms.locfileid: "48202738"
   
          將 **[值]** 設定為報表資料集中欄位的名稱。 如需詳細資訊，請參閱[新增資料繫結影像 &#40;報表產生器及 SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)。  
   
-         針對 **[MIMEType]** 或檔案格式，選取影像適當的 MIME 類型，例如 .bmp。  
+         針對 **MIMEType** 或檔案格式，選取適用於影像的 MIME 類型，例如 .bmp。  
   
         > [!NOTE]  
         >  唯有 **[來源]** 屬性設定為 **[資料庫]** 時，MIMEType 才適用。 如果 **[來源]** 屬性設定為 **[外部]** 或 **[內嵌]**，就會忽略 **[MIMEType]** 的值。  
@@ -69,7 +69,7 @@ ms.locfileid: "48202738"
          如果是圖表中的背景影像， **[BackgroundRepeat]** 可以設定為 **[Default]**、 **[Repeat]**、 **[Fit]** 和 **[Clip]**，但是不能設定為 **[RepeatX]** 或 **[RepeatY]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [映像&#40;報表產生器及 SSRS&#41;](images-report-builder-and-ssrs.md)   
+ [影像 &#40;報表產生器及 SSRS&#41;](images-report-builder-and-ssrs.md)   
  [影像屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

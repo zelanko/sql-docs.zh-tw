@@ -15,18 +15,18 @@ ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d044b8f245d3c3ce2c092b7b5f2b094122f75f1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 344d5706af4e7e963c0dbdd643efc3d0fb6b1b10
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101198"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205707"
 ---
 # <a name="clickthrough-reports-ssrs"></a>點選連結報表 (SSRS)
-  點選連結報表是一個提供有關主報表所含資料之詳細資訊的報表。 當使用者按一下出現在主報表中的互動式資料時，就會顯示點選連結報表。 報表伺服器會自動產生這些報表。 以模型設計師中，決定要顯示的內容在點選連結報表中設定`DefaultDetailAttribute`和`DefaultAggregateAttribute`您指派給報表模型中實體的屬性。  
+  點選連結報表是一個提供有關主報表所含資料之詳細資訊的報表。 當使用者按一下出現在主報表中的互動式資料時，就會顯示點選連結報表。 報表伺服器會自動產生這些報表。 模型設計師必須設定指派給報表模型中實體的 `DefaultDetailAttribute` 和 `DefaultAggregateAttribute` 屬性，以決定要在點選連結報表中顯示的內容。  
   
-> [!NOTE]  
->  點選連結報表不是每個版本都可使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如果不確定您的組織執行哪個版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，請連絡資料庫管理員。  
+> [!NOTE]
+>  並非 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的所有版本都可使用點選連結報表。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如果不確定您的組織執行哪個版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，請連絡資料庫管理員。  
   
 ## <a name="using-default-templates"></a>使用預設範本  
  依預設，報表伺服器會為每個實體產生兩種 clickthrough 範本類型：單一執行個體範本和多執行個體範本。 您所按的項目會決定所用的範本。 如果讀取報表的人按一下純量屬性，則會使用單一執行個體範本。 如果讀取報表的人按一下彙總屬性，則會使用多執行個體範本。  
@@ -50,6 +50,6 @@ ms.locfileid: "48101198"
 >  報表中使用的主要實體或基底實體，必須與連結報表的實體相同。  
   
 ## <a name="see-also"></a>另請參閱  
- [將報表連結至模型以作為點選連結報表](../link-a-report-to-a-model-as-a-clickthrough-report.md)  
+ [將報表連結至模型以做為點選連結報表](../link-a-report-to-a-model-as-a-clickthrough-report.md)  
   
   

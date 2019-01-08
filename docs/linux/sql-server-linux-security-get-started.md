@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
-ms.openlocfilehash: feae91ed25dafa499026b2cadf72a2eafa0c63ae
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: c3d3c4a6ac5d5d49e880fc2af1546bdcf9a73779
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906228"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211737"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的安全性功能的逐步解說
 
@@ -23,7 +23,7 @@ ms.locfileid: "48906228"
 
 如果您是剛接觸 SQL Server 的 Linux 使用者時，下列工作會引導您完成一些安全性工作。 這些不是唯一或特定 Linux，但它有助於讓您了解區域以進一步調查。 在每個範例中，會提供該區域的深入文件的連結。
 
->  [!NOTE]
+> [!NOTE]
 >  下列範例會使用**AdventureWorks2014**範例資料庫。 如需有關如何取得並安裝這個範例資料庫的指示，請參閱 <<c0> [ 從 Windows 的 SQL Server 資料庫還原到 Linux](sql-server-linux-migrate-restore-database.md)。
 
 
@@ -35,7 +35,7 @@ ms.locfileid: "48906228"
 CREATE LOGIN Larry WITH PASSWORD = '************';  
 ```
 
->  [!NOTE]
+> [!NOTE]
 >  在前一個命令中，永遠使用強式密碼取代星號。
 
 登入可以連接到 SQL Server，並具有 master 資料庫 （具有有限的權限） 存取。 若要連接至使用者資料庫，登入必須在資料庫層級，呼叫資料庫使用者對應的身分識別。 使用者只適用於每個資料庫，而且必須授與他們存取的每個資料庫中個別建立。 下列範例會將您移至 AdventureWorks2014 資料庫，並接著會使用[CREATE USER](../t-sql/statements/create-user-transact-sql.md)陳述式來建立名為 Larry 與名為 Larry 登入相關聯的使用者。 登入和使用者相關 （彼此對應），但它們是不同的物件。 登入是伺服器層級原則。 使用者是資料庫層級主體。
@@ -84,44 +84,44 @@ ALTER ROLE db_datareader ADD MEMBER Jerry;
 
 例如，下列陳述式建立名為的資料庫角色`Sales`，授與`Sales`分組的能力，請參閱、 更新和刪除資料列`Orders`資料表，然後再將使用者加入`Jerry`到`Sales`角色。   
    
-```   
-CREATE ROLE Sales;   
-GRANT SELECT ON Object::Sales TO Orders;   
-GRANT UPDATE ON Object::Sales TO Orders;   
-GRANT DELETE ON Object::Sales TO Orders;   
-ALTER ROLE Sales ADD MEMBER Jerry;   
-```   
+```   
+CREATE ROLE Sales;   
+GRANT SELECT ON Object::Sales TO Orders;   
+GRANT UPDATE ON Object::Sales TO Orders;   
+GRANT DELETE ON Object::Sales TO Orders;   
+ALTER ROLE Sales ADD MEMBER Jerry;   
+```   
 
-如需有關權限系統的詳細資訊，請參閱[Getting Started with Database Engine 權限](../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
+For more information about the permission system, see [Getting Started with Database Engine Permissions](../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
 
-## <a name="configure-row-level-security"></a>設定資料列層級安全性  
+## Configure row-level security  
 
-[資料列層級安全性](../relational-databases/security/row-level-security.md)可讓您根據執行查詢的使用者資料庫中的資料列限制存取。 這項功能可用於確保客戶只能存取他們自己的資料或背景工作角色只能存取其部門相關的資料等案例。   
+[Row-Level Security](../relational-databases/security/row-level-security.md) enables you to restrict access to rows in a database based on the user executing a query. This feature is useful for scenarios like ensuring that customers can only access their own data or that workers can only access data that is pertinent to their department.   
 
-下列步驟逐步引導您設定兩個具有不同的資料列層級存取權的使用者`Sales.SalesOrderHeader`資料表。 
+The following steps walk through setting up two Users with different row-level access to the `Sales.SalesOrderHeader` table. 
 
-建立測試資料列層級安全性的兩個使用者帳戶：    
+Create two user accounts to test the row level security:    
    
-```   
-USE AdventureWorks2014;   
-GO   
+```   
+USE AdventureWorks2014;   
+GO   
    
-CREATE USER Manager WITHOUT LOGIN;     
+CREATE USER Manager WITHOUT LOGIN;     
    
-CREATE USER SalesPerson280 WITHOUT LOGIN;    
-```   
+CREATE USER SalesPerson280 WITHOUT LOGIN;    
+```   
 
-授與讀取權限`Sales.SalesOrderHeader`兩個使用者的資料表：    
+Grant read access on the `Sales.SalesOrderHeader` table to both users:    
    
-```   
-GRANT SELECT ON Sales.SalesOrderHeader TO Manager;      
-GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280;    
-```   
+```   
+GRANT SELECT ON Sales.SalesOrderHeader TO Manager;      
+GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280;    
+```   
    
-建立新結構描述和內嵌資料表值函式。 此函數會傳回 1 中的資料列時`SalesPersonID`資料行比對識別碼`SalesPerson`登入或執行查詢的使用者如果是管理員使用者。   
+Create a new schema and inline table-valued function. The function returns 1 when a row in the `SalesPersonID` column matches the ID of a `SalesPerson` login or if the user executing the query is the Manager user.   
    
-```     
+```     
 CREATE SCHEMA Security;   
 GO   
    
@@ -131,66 +131,63 @@ WITH SCHEMABINDING
 AS     
    RETURN SELECT 1 AS fn_securitypredicate_result    
 WHERE ('SalesPerson' + CAST(@SalesPersonId as VARCHAR(16)) = USER_NAME())     
-    OR (USER_NAME() = 'Manager');    
-```   
+    OR (USER_NAME() = 'Manager');    
+```   
 
-建立安全性原則，做為篩選和封鎖述詞的資料表上加入函式：  
+Create a security policy adding the function as both a filter and a block predicate on the table:  
 
 ```
-CREATE SECURITY POLICY SalesFilter   
-ADD FILTER PREDICATE Security.fn_securitypredicate(SalesPersonID)    
-  ON Sales.SalesOrderHeader,   
-ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)    
-  ON Sales.SalesOrderHeader   
+建立安全性原則 SalesFilter   
+新增篩選器述詞 Security.fn_securitypredicate(SalesPersonID)    
+  在 Sales.SalesOrderHeader，   
+加入區塊述詞 Security.fn_securitypredicate(SalesPersonID)    
+  在 Sales.SalesOrderHeader   
 WITH (STATE = ON);   
 ```
 
-執行下列命令來查詢`SalesOrderHeader`資料表每個使用者。 確認`SalesPerson280`只會看到 95 的資料列，從他們自己的銷售，`Manager`可以查看資料表中的所有資料列。  
+Execute the following to query the `SalesOrderHeader` table as each user. Verify that `SalesPerson280` only sees the 95 rows from their own sales and that the `Manager` can see all the rows in the table.  
 
 ```    
-EXECUTE AS USER = 'SalesPerson280';   
-SELECT * FROM Sales.SalesOrderHeader;    
-REVERT; 
+EXECUTE AS 使用者 = 'SalesPerson280';   
+選取 * 從 Sales.SalesOrderHeader;    
+還原; 
  
-EXECUTE AS USER = 'Manager';   
-SELECT * FROM Sales.SalesOrderHeader;   
-REVERT;   
+EXECUTE AS 使用者 = 'Manager';   
+選取 * 從 Sales.SalesOrderHeader;   
+還原;   
 ```
  
-變更安全性原則，以停用原則。  現在兩個使用者可以存取所有資料列。 
+Alter the security policy to disable the policy.  Now both users can access all rows. 
 
 ```
-ALTER SECURITY POLICY SalesFilter   
-WITH (STATE = OFF);    
+改變安全性原則 SalesFilter   
+使用 (狀態 = 關閉);    
 ``` 
 
 
-## <a name="enable-dynamic-data-masking"></a>啟用動態資料遮罩
+## Enable dynamic data masking
 
-[動態資料遮罩](../relational-databases/security/dynamic-data-masking.md)可讓您完全或部分遮罩某些資料行來限制敏感性資料暴露的應用程式的使用者。 
+[Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md) enables you to limit the exposure of sensitive data to users of an application by fully or partially masking certain columns. 
 
-使用`ALTER TABLE`陳述式來新增遮罩函式，以`EmailAddress`中的資料行`Person.EmailAddress`資料表： 
+Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
  
 ```
-USE AdventureWorks2014;
-GO
-ALTER TABLE Person.EmailAddress    
-ALTER COLUMN EmailAddress    
-ADD MASKED WITH (FUNCTION = 'email()');
+使用 AdventureWorks2014;移的 ALTER 資料表 Person.EmailAddress     ALTER 資料行 EmailAddress    
+新增遮罩與 (函式 = ' email()');
 ``` 
  
-建立新的使用者`TestUser`具有`SELECT`權限的資料表，然後執行查詢`TestUser`檢視遮罩的資料：   
+Create a new user `TestUser` with `SELECT` permission on the table, then execute a query as `TestUser` to view the masked data:   
 
 ```  
-CREATE USER TestUser WITHOUT LOGIN;   
-GRANT SELECT ON Person.EmailAddress TO TestUser;    
+建立使用者 TestUser 沒有登入;   
+GRANT SELECT ON Person.EmailAddress 至 TestUser;    
  
-EXECUTE AS USER = 'TestUser';   
-SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;       
-REVERT;    
+EXECUTE AS 使用者 = 'TestUser';   
+選取 EmailAddressID，EmailAddress 從 Person.EmailAddress;       
+還原;    
 ```
  
-確認遮罩函式變更第一筆記錄，從電子郵件地址：
+Verify that the masking function changes the email address in the first record from:
   
 |EmailAddressID |EmailAddress |  
 |----|---- |   
@@ -203,88 +200,81 @@ into
 |1 |kXXX@XXXX.com |   
 
 
-## <a name="enable-transparent-data-encryption"></a>啟用透明資料加密
+## Enable Transparent Data Encryption
 
-您的資料庫的一個威脅是有人會竊取您硬碟機上的資料庫檔案的風險。 這可能發生問題的員工的或包含的檔案 （例如膝上型電腦） 的電腦遭竊的動作取得提升權限的系統的存取權，入侵。
+One threat to your database is the risk that someone will steal the database files off of your hard-drive. This could happen with an intrusion that gets elevated access to your system, through the actions of a problem employee, or by theft of the computer containing the files (such as a laptop).
 
-透明資料加密 (TDE) 會加密的資料檔案，因為它們儲存在硬碟機上。 Master 資料庫的 SQL Server database engine 的加密金鑰，以便資料庫引擎可以操作的資料。 無法讀取資料庫檔案，而不需要金鑰的存取權。 高層級的系統管理員可以管理、 備份，並重新建立索引鍵，所以可以移動資料庫，但只能由所選取人員。 當設定 TDE 時，`tempdb`資料庫也會自動加密。 
+Transparent Data Encryption (TDE) encrypts the data files as they are stored on the hard drive. The master database of the SQL Server database engine has the encryption key, so that the database engine can manipulate the data. The database files cannot be read without access to the key. High-level administrators can manage, backup, and recreate the key, so the database can be moved, but only by selected people. When TDE is configured, the `tempdb` database is also automatically encrypted. 
 
-因為資料庫引擎可以讀取資料，透明資料加密無法防止未經授權的存取，他們可以直接讀取記憶體，或透過系統管理員帳戶來存取 SQL Server 之電腦的系統管理員。
+Since the Database Engine can read the data, Transparent Data Encryption does not protect against unauthorized access by administrators of the computer who can directly read memory, or access SQL Server through an administrator account.
 
-### <a name="configure-tde"></a>設定 TDE
+### Configure TDE
 
-- 建立主要金鑰
-- 建立或取得受到主要金鑰保護的憑證
-- 建立資料庫加密金鑰，並使用憑證保護它
-- 設定資料庫使用加密
+- Create a master key
+- Create or obtain a certificate protected by the master key
+- Create a database encryption key and protect it by the certificate
+- Set the database to use encryption
 
-需要設定 TDE`CONTROL`主要資料庫的權限和`CONTROL`使用者資料庫的權限。 通常系統管理員設定 TDE。 
+Configuring TDE requires `CONTROL` permission on the master database and `CONTROL` permission on the user database. Typically an administrator configures TDE. 
 
-下列範例說明如何使用 `AdventureWorks2014` 伺服器上安裝的憑證來加密和解密 `MyServerCert`資料庫。
+The following example illustrates encrypting and decrypting the `AdventureWorks2014` database using a certificate installed on the server named `MyServerCert`.
 
 
 ```
 USE master;  
 GO  
 
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';  
+建立主要金鑰加密的密碼 = ' * ';  
 GO  
 
-CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
+建立憑證 MyServerCert 主體 = '我資料庫加密金鑰憑證';  
 GO  
 
-USE AdventureWorks2014;  
-GO
+使用 AdventureWorks2014; 移
   
 CREATE DATABASE ENCRYPTION KEY  
-WITH ALGORITHM = AES_256  
-ENCRYPTION BY SERVER CERTIFICATE MyServerCert;  
+演算法 = AES_256  
+ENCRYPTION BY SERVER 憑證 MyServerCert;  
 GO
   
 ALTER DATABASE AdventureWorks2014  
-SET ENCRYPTION ON;   
+設定加密   
 ```
 
-若要移除 TDE，請執行 `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
+To remove TDE, execute `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
 
-SQL server 加密和解密作業排定在背景執行緒。 您可以使用本主題稍後出現之清單內的目錄檢視和動態管理檢視，以檢視這些作業的狀態。   
+The encryption and decryption operations are scheduled on background threads by SQL Server. You can view the status of these operations using the catalog views and dynamic management views in the list that appears later in this topic.   
 
->  [!WARNING]
->  啟用了 TDE 的資料庫備份檔案也會使用資料庫加密金鑰來加密。 因此，當您要還原這些備份時，保護資料庫加密金鑰的憑證必須可以使用。 這表示，除了備份資料庫以外，您也必須確定可維護伺服器憑證的備份，以免資料遺失。 如果此憑證無法再使用，就會造成資料遺失。 如需詳細資訊，請參閱 [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。  
+> [!WARNING]
+>  Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you have to make sure that you maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available. For more information, see [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
 
-如需 TDE 的詳細資訊，請參閱[透明資料加密 (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md)。   
+For more information about TDE, see [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md).   
 
 
-## <a name="configure-backup-encryption"></a>設定備份加密
-SQL Server 必須能夠建立備份時加密資料。 藉由指定的加密演算法和加密程式 （憑證或非對稱金鑰） 時建立的備份，您可以建立已加密的備份檔案。    
+## Configure backup encryption
+SQL Server has the ability to encrypt the data while creating a backup. By specifying the encryption algorithm and the encryptor (a certificate or asymmetric key) when creating a backup, you can create an encrypted backup file.    
   
-> [!WARNING]  
->  備份憑證或非對稱金鑰是非常重要的，而且最好與其用以加密的備份檔案存放於不同位置。 若沒有憑證或非對稱金鑰，您將無法還原備份，而此備份檔案將無法使用。 
+> [!WARNING]  
+>  It is very important to back up the certificate or asymmetric key, and preferably to a different location than the backup file it was used to encrypt. Without the certificate or asymmetric key, you cannot restore the backup, rendering the backup file unusable. 
  
  
-下列範例會建立憑證，，，然後建立受憑證保護的備份。
+The following example creates a certificate, and then creates a backup protected by the certificate.
 ```
-USE master;  
-GO  
-CREATE CERTIFICATE BackupEncryptCert   
-   WITH SUBJECT = 'Database backups';  
-GO 
-BACKUP DATABASE [AdventureWorks2014]  
-TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
-WITH  
-  COMPRESSION,  
+使用主版; 移 建立憑證 BackupEncryptCert 主體 = '資料庫備份;' 請備份資料庫 [AdventureWorks2014] 磁碟 = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
+取代所有提及的  
+  壓縮，  
   ENCRYPTION   
    (  
-   ALGORITHM = AES_256,  
-   SERVER CERTIFICATE = BackupEncryptCert  
+   演算法 = AES_256，  
+   伺服器憑證 = BackupEncryptCert  
    ),  
   STATS = 10  
 GO  
 ```
 
-如需詳細資訊，請參閱＜ [備份加密](../relational-databases/backup-restore/backup-encryption.md)＞。
+For more information, see [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).
 
 
-## <a name="next-steps"></a>後續步驟
+## Next steps
 
-如需詳細的 SQL Server 的安全性功能的相關資訊，請參閱[SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)。
+For more information about the security features of SQL Server, see [Security Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).

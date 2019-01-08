@@ -11,12 +11,12 @@ ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b272d35b7d8796cd67f17a045def480cc2ade14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0f278f5d0d036bac02e53263acc023dcae7d808
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100088"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538128"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>連接到表格式模型資料庫 (SSAS)
   建置表格式模型，並將其部署到 Analysis Services 表格式模式伺服器之後，您需要設定權限，使其可供用戶端應用程式使用。 此主題說明如何設定權限和如何從用戶端應用程式連接到資料庫。  
@@ -51,7 +51,7 @@ ms.locfileid: "48100088"
   
 1.  在「管理中心」內，開啟 [設定服務帳戶] 頁面。  
   
-2.  選取 Excel Services 所使用的服務應用程式集區。 它可能是 [服務應用程式集區 - SharePoint Web 服務系統] 或自訂應用程式集區。 Excel Services 所使用的受管理帳戶將會出現在此頁面上。  
+2.  選取 Excel Services 所使用的服務應用程式集區。 它可能**服務應用程式集區-SharePoint Web 服務系統**或自訂應用程式集區。 Excel Services 所使用的受管理帳戶將會出現在此頁面上。  
   
      如果 SharePoint 伺服器陣列包含 SharePoint 模式的 Reporting Services，也要取得 Reporting Services 服務應用程式的帳戶資訊。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48100088"
   
 5.  選取資料庫。 有效的選項將會針對資料庫顯示一個 [模型] Cube。 按一下 [下一步]，然後按一下 [完成]。  
   
- 建立連接之後，您可以使用資料來建立樞紐分析表或樞紐分析圖。 如需詳細資訊，請參閱[在 Excel 中進行分析 &#40;SSAS 表格式&#41;](analyze-in-excel-ssas-tabular.md)。  
+ 建立連接之後，您可以使用資料來建立樞紐分析表或樞紐分析圖。 如需詳細資訊，請參閱本主題稍後的 [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](analyze-in-excel-ssas-tabular.md)中的 [角色管理員] 對話方塊來定義角色的表格式模型作者。  
   
 ##  <a name="bkmk_sharepoint"></a> 從 SharePoint 連接  
  如果您要使用 PowerPivot for SharePoint，可以在 SharePoint 中建立 BI 語意模型連接檔案，這個檔案會重新導向至 Analysis Services 表格式模式伺服器上執行的資料庫。 BI 語意模型連接會提供 HTTP 端點給資料庫。 它也會針對例行使用 SharePoint 網站之文件的知識工作者，簡化表格式模型存取。 知識工作者只需要知道 BI 語意模型連接檔案的位置或其 URL，就可以存取表格式模型資料庫。 關於伺服器位置或資料庫名稱的詳細資料，都會封裝在 BI 語意模型連接中。 如需有關建立及使用 BI 語意模型連接檔案的詳細資訊，請參閱 < [PowerPivot BI 語意模型連接&#40;.bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)並[建立 BI 語意模型連接到表格式模型資料庫](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
@@ -115,6 +115,6 @@ ms.locfileid: "48100088"
  在 SharePoint 上，當您嘗試使用模型資料之樞紐分析表中的資料互動 (如篩選資料) 時，就會發生這個 Microsoft Excel 錯誤。 此錯誤的發生，是因為使用者在活頁簿上沒有足夠的 SharePoint 權限。 使用者必須具有 [讀取] (含) 以上的權限。 [僅供檢視] 權限不足以進行資料存取。  
   
 ## <a name="see-also"></a>另請參閱  
- [表格式模型方案部署&#40;SSAS 表格式&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [表格式模型方案部署 &#40;SSAS 表格式&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

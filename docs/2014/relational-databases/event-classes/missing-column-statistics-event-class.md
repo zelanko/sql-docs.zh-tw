@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: b9321143-3f29-4a19-8471-7085669282ef
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5491c68b5b4349387917bee9fed513ab294479cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43a83d0b20bbcdb0b95dd727a51d59353f7675bc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131288"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808390"
 ---
 # <a name="missing-column-statistics-event-class"></a>Missing Column Statistics 事件類別
   Missing Column Statistics 事件類別指出無法取得原本對最佳化工具非常有用的資料行統計資料。  

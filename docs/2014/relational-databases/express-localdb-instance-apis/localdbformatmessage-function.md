@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBFormatMessage
@@ -18,12 +16,12 @@ ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e711b82bea95490fcf0188d5ed94c398f31c6335
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d287a7ceff1c38c829da91a8ae2e530f664fb4ef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070978"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823582"
 ---
 # <a name="localdbformatmessage-function"></a>LocalDBFormatMessage 函數
   傳回指定之 SQL Server Express LocalDB 錯誤的當地語系化文字描述。  

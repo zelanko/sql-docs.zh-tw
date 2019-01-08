@@ -1,5 +1,5 @@
 ---
-title: SSDT 中啟用 DirectQuery 模式 |Microsoft 文件
+title: 在 SSDT 中的 Analysis Services 的 DirectQuery 模式中啟用 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1d2a1ced9638a48dc02729c0f224b883974a7dde
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 83fa1cf8d99f18cd82e00b4020a2d846b1bdfdc6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040732"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206297"
 ---
 # <a name="enable-directquery-mode-in-ssdt"></a>在 SSDT 中啟用 DirectQuery 模式
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "34040732"
 
 您可以建立每個資料表的範例資料分割，以及加入範例資料，以便在建置模型時驗證其行為。 您加入的任何範例資料都是用於 **Excel 分析** 或其他可以連接到工作空間資料庫的用戶端工具。 如需詳細資訊，請參閱 [在設計模式中將範例資料加入 DirectQuery 模型中](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md) 。  
   
-> [!TIP]  
-    >  即使是在空模型的 DirectQuery 模式中，您一律可以檢視每個資料表的小型內建資料列集。 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，按一下 [資料表] > [資料表屬性] 以檢視 50 列的資料集。  
+> [!TIP]
+>  即使是在空模型的 DirectQuery 模式中，您一律可以檢視每個資料表的小型內建資料列集。 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中，按一下 [資料表] > [資料表屬性] 以檢視 50 列的資料集。  
   
   
 ## <a name="see-also"></a>另請參閱  

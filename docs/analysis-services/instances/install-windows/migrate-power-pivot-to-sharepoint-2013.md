@@ -1,5 +1,5 @@
 ---
-title: 將 Power Pivot 移轉至 SharePoint 2013 |Microsoft 文件
+title: 將 Power Pivot 移轉至 SharePoint 2013 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 877697915df0bd082ea4972464572f4236556e36
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8df7cc04ea0682212f5a046ca4c614e83ebe9c86
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018455"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206817"
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>將 Power Pivot 移轉至 SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "34018455"
   
 ##  <a name="bkmk_prepare_sharepoint2013"></a>準備 SharePoint 2013 伺服器陣列  
   
-  > [!TIP]  
-    >  請檢閱您現有 Web 應用程式所設定的驗證方法。 SharePoint 2013 Web 應用程式預設為宣告式驗證。 設定為傳統模式驗證的 SharePoint 2010 Web 應用程式需要進行其他步驟，才能將資料庫從 SharePoint 2010 移轉至 SharePoint 2013。 如果您的 Web 應用程式設定為傳統模式驗證，請檢閱 SharePoint 2013 文件集。  
+> [!TIP]
+>  請檢閱您現有 Web 應用程式所設定的驗證方法。 SharePoint 2013 Web 應用程式預設為宣告式驗證。 設定為傳統模式驗證的 SharePoint 2010 Web 應用程式需要進行其他步驟，才能將資料庫從 SharePoint 2010 移轉至 SharePoint 2013。 如果您的 Web 應用程式設定為傳統模式驗證，請檢閱 SharePoint 2013 文件集。  
   
 1.  安裝新的 SharePoint Server 2013 伺服器陣列。  
   
@@ -42,23 +42,23 @@ ms.locfileid: "34018455"
   
 3.  在 SharePoint 伺服器陣列中的每部伺服器上執行 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 安裝套件 **spPowerPivot.msi** 。 如需詳細資訊，請參閱 [安裝或解除安裝 Power Pivot for SharePoint 增益集 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
   
-4.  在 SharePoint 2013 管理中心內，將 Excel Services 服務應用程式設定為使用在先前步驟中建立的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint 模式伺服器。 如需詳細資訊，請參閱 [以 Power Pivot 模式安裝 Analysis Services](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)的＜設定基本 Analysis Services SharePoint 整合＞一節。  
+4.  在 SharePoint 2013 管理中心內，將 Excel Services 服務應用程式設定為使用在先前步驟中建立的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint 模式伺服器。 如需詳細資訊，請參閱的 < 設定基本 Analysis Services SharePoint 整合 > 一節[以 Power Pivot 模式安裝 Analysis Services](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)。  
   
 ##  <a name="bkmk_backup_restore"></a>備份、 複製和還原資料庫  
- 「SharePoint 資料庫附加升級」程序是指將 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 相關內容及服務應用程式資料庫備份、複製和還原至 SharePoint 2013 伺服器陣列的一連串步驟。  
+ 「 SharePoint 資料庫附加升級 」 程序是一連串的步驟來備份、 複製和還原[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]相關的內容和 SharePoint 2013 伺服器陣列服務應用程式資料庫。  
   
-1.  **將資料庫設定唯讀：** 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下資料庫名稱，然後按一下 [屬性]。 在 [選項] 頁面上，將 [資料庫唯讀] 屬性設定為 [True]。  
+1.  **將資料庫設定成唯讀：** 在  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，以滑鼠右鍵按一下資料庫名稱，然後按一下**屬性**。 在 [選項] 頁面上，將 [資料庫唯讀] 屬性設定為 [True]。  
   
-2.  **備份** ：備份您想要移轉至 SharePoint 2013 伺服器陣列的每個內容資料庫及服務應用程式資料庫。 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下資料庫名稱，按一下 [工作]，然後按一下 [備份]。  
+2.  **備份：** 備份每個內容資料庫和您想要移轉至 SharePoint 2013 伺服器陣列的服務應用程式資料庫。 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下資料庫名稱，按一下 [工作]，然後按一下 [備份]。  
   
 3.  將資料庫備份檔案 (.bak) 複製到所需的目的地伺服器。  
   
-4.  **還原** ：將資料庫還原至目的地 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]。 您可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 來完成這個步驟。  
+4.  **還原：** 將資料庫還原至目的地[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]。 您可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]來完成這個步驟。  
   
-5.  **將資料庫設定為讀寫：** 將 [資料庫唯讀]設定為 [False]。  
+5.  **將資料庫設定為讀寫：** 設定**資料庫唯讀**要**False**。  
   
 ##  <a name="bkmk_prepare_mount_databases"></a>準備 Web 應用程式和掛接內容資料庫  
- 如需下列程序的更詳細說明，請參閱[將資料庫從 SharePoint 2010 升級到 SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690)。  
+ 如下列程序的更詳細說明，請參閱[將資料庫從 SharePoint 2010 升級至 SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690)。  
   
 1.  **讓資料庫離線：**  
   
@@ -76,15 +76,15 @@ ms.locfileid: "34018455"
   
 -   **掛接內容資料庫：**  
   
-     使用 SharePoint 2013 管理命令介面中的 PowerShell 指令程式來掛接移轉的內容資料庫。 不需要掛接，服務應用程式資料庫內容的資料庫： ![PowerShell 相關內容](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容")  
+     使用 SharePoint 2013 管理命令介面中的 PowerShell 指令程式來掛接移轉的內容資料庫。 您不需要掛接服務應用程式資料庫，只要掛接內容資料庫即可：![PowerShell 相關內容](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容")  
   
     ```  
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
     ```  
   
-     如需詳細資訊，請參閱[附加或卸離內容資料庫 (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx)。  
+     如需詳細資訊，請參閱 <<c0> [ 附加或卸離內容資料庫 (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx)。  
   
-     **完成此步驟之後的狀態**  ：當掛接作業完成時，使用者可以看見原本位於舊內容資料庫中的檔案。 因此，使用者可以查看和開啟文件庫中的活頁簿。  
+     **當完成此步驟之後的狀態：** 掛接作業完成時，使用者可以看見原本位於舊內容資料庫中的檔案。 因此，使用者可以查看和開啟文件庫中的活頁簿。  
   
     -   > [!TIP]  
         >  此時，移轉程序可能會針對移轉的活頁簿建立新的排程。 不過，這些排程是建立在新的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式資料庫中，而非您從舊 SharePoint 伺服器陣列所複製的資料庫。 因此，資料庫不會包含任何舊排程。 在您完成下列步驟以使用舊資料庫並移轉舊排程之後，則無法使用新的排程。  
@@ -92,9 +92,9 @@ ms.locfileid: "34018455"
 ### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>疑難排解嘗試掛接資料庫時所發生的問題  
  本節將摘要說明掛接資料庫時可能會遇到的問題。  
   
-1.  **驗證錯誤** ：如果您看見與驗證有關的錯誤，請檢閱來源 Web 應用程式所使用的驗證模式。 此錯誤可能是由於 SharePoint 2013 Web 應用程式與 SharePoint 2010 Web 應用程式之間的驗證不符所造成。 如需詳細資訊，請參閱＜ [1) 準備 SharePoint 2013 伺服器陣列](#bkmk_prepare_sharepoint2013) ＞。  
+1.  **驗證錯誤：** 如果您看見與驗證有關的錯誤，請檢閱來源 Web 應用程式所使用的驗證模式。 此錯誤可能是由於 SharePoint 2013 Web 應用程式與 SharePoint 2010 Web 應用程式之間的驗證不符所造成。 如需詳細資訊，請參閱＜ [1) 準備 SharePoint 2013 伺服器陣列](#bkmk_prepare_sharepoint2013) ＞。  
   
-2.  **遺漏 PowerPivot. Files：** 如果您看見與遺漏 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] .dlls 相關的錯誤，表示 **spPowerPivot.msi** 尚未安裝，或並未使用 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 組態工具來設定 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]。  
+2.  **遺漏 PowerPivot.Files:** 如果您看到與遺失相關的錯誤[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]dll， **spPowerPivot.msi**尚未安裝或是[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]組態工具無法用來設定[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]。  
   
 ##  <a name="bkmk_upgrade_powerpivot_schedules"></a>升級 Power Pivot 排程  
  本節描述移轉 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 排程的詳細資料和選項。 排程移轉是兩個步驟的程序。 首先，請將 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式設定為使用移轉的服務應用程式資料庫。 接著，請選擇兩個排程移轉選項的其中之一。  
@@ -105,7 +105,7 @@ ms.locfileid: "34018455"
   
 1.  在 SharePoint 管理中心內，按一下 **[管理服務應用程式]**。  
   
-2.  尋找 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式，例如「預設的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式」，按一下服務應用程式的名稱，然後按一下 SharePoint 功能區中的 [屬性]。  
+2.  尋找[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]服務應用程式，例如 「 預設[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]服務應用程式 」，請按一下服務應用程式的名稱，然後按一下**屬性**SharePoint 功能區中。  
   
 3.  將資料庫伺服器名稱-執行個體以及資料庫名稱更新為 您所備份、複製和還原的正確資料庫名稱。 一旦您按一下 **[確定]** 之後，就會升級服務應用程式資料庫。 錯誤將列在 ULS 記錄中。  
   
@@ -113,9 +113,9 @@ ms.locfileid: "34018455"
   
  設定 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式以移轉重新整理排程。  
   
--   **移轉排程選項 1：SharePoint 伺服器陣列管理員**  
+-   **移轉排程選項 1:SharePoint 伺服陣列管理員**  
   
-    1.  在 SharePoint 2013 管理執行`Set-PowerPivotServiceApplication`cmdlet 搭配`-StartMigratingRefreshSchedules`參數以啟用自動視需要排程移轉![PowerShell 相關內容](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容"). 下列 Windows PowerShell 指令碼會假設只有一個 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式存在。  
+    1.  在 SharePoint 2013 管理執行`Set-PowerPivotServiceApplication`cmdlet 搭配`-StartMigratingRefreshSchedules`參數來啟用自動視需要排程移轉![PowerShell 相關內容](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容"). 下列 Windows PowerShell 指令碼會假設只有一個 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式存在。  
   
         ```  
         $app=Get-PowerPivotServiceApplication  
@@ -132,7 +132,7 @@ ms.locfileid: "34018455"
         Get-PowerPivotServiceApplication $appp | format-table -property displayname,id,StartMigratingRefreshSchedules  
         ```  
   
-     **移轉排程選項 2：使用者更新每個活頁簿**  
+     **移轉排程選項 2:使用者更新每個活頁簿**  
   
     1.  另一個移轉排程的選項是針對每個活頁簿啟用排程重新整理。 導覽到包含活頁簿的文件庫。  
   
@@ -159,8 +159,8 @@ ms.locfileid: "34018455"
   
 -   [SharePoint 2013 升級程序的概觀](http://go.microsoft.com/fwlink/p/?LinkId=256688)(http://go.microsoft.com/fwlink/p/?LinkId=256688)。  
   
--   [清除升級到 SharePoint 2013 之前的準備工作](http://go.microsoft.com/fwlink/p/?LinkId=256689)(http://go.microsoft.com/fwlink/p/?LinkId=256689)。  
+-   [清除準備工作，再升級為 SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256689) (http://go.microsoft.com/fwlink/p/?LinkId=256689)。  
   
--   [將資料庫從 SharePoint 2010 升級到 SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690)。  
+-   [將資料庫從 SharePoint 2010 升級至 SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690)。  
   
   

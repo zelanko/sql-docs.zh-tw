@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_articlecolumn
@@ -17,12 +16,12 @@ ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72d9238e5b0f8ad5480e05ded3a0154eb5510904
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 636a0a23c70170ce625b9e462e2715c1c884bda7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640716"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210117"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +48,16 @@ sp_articlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_發行集_**'**  
  這是包含發行項的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@article=**] **'***文章***'**  
+ [  **@article=**] **'**_文章_**'**  
  這是發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
   
- [  **@column=**] **'***資料行***'**  
+ [  **@column=**] **'**_資料行_**'**  
  這是要加入或卸除的資料行名稱。 *資料行*已**sysname**，預設值是 NULL。 如果是 NULL，就會發行所有資料行。  
   
- [  **@operation=**] **'***作業***'**  
+ [  **@operation=**] **'**_作業_**'**  
  指定要加入或卸除發行項中的資料行。 *作業*已**nvarchar(5)**，預設值是 add。 **新增**標示複寫的資料行。 **卸除**會取消標示資料行。  
   
  [  **@refresh_synctran_procs=**] *refresh_synctran_procs*  
@@ -82,13 +81,13 @@ sp_articlecolumn [ @publication = ] 'publication'
   
  **0**指定發行項的變更不會使訂閱重新初始化。 如果預存程序偵測到變更需要重新初始化訂閱，就會發生錯誤，且不會進行任何變更。 **1**指定發行項的變更會使現有的訂閱重新初始化，並提供發生之訂閱重新初始化的權限。  
   
- [  **@publisher=** ] **'***發行者***'**  
+ [  **@publisher=** ] **'**_發行者_**'**  
  指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  *發行者*不應使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
   
- [  **@internal=** ] **'***內部***'**  
+ [  **@internal=** ] **'**_內部_**'**  
  僅供內部使用。  
   
 ## <a name="return-code-values"></a>傳回碼值  

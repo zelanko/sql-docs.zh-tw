@@ -20,16 +20,16 @@ ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa5998d240b447b4204528af6c89e9c202e5963e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b47ef4c2df8a326d993a95e056b27d331dc649f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766536"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205597"
 ---
 # <a name="sqlprocedurecolumns-function"></a>SQLProcedureColumns 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ODBC  
+ 導入的版本：ODBC 1.0 標準的合規性：ODBC  
   
  **摘要**  
  **SQLProcedureColumns**傳回的輸入和輸出參數，以及構成結果集針對指定的程序的資料行清單。 驅動程式會傳回在指定的陳述式上當作結果集的資訊。  
@@ -161,21 +161,21 @@ SQLRETURN SQLProcedureColumns(
 |PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|程序結構描述名稱;如果不適用於資料來源，則為 NULL。 如果驅動程式支援結構描述對於某些程序，但不適用於其他項目，例如當驅動程式會擷取不同 Dbms 中的資料，它會傳回空字串 ("") 並沒有結構描述的程序。|  
 |程序名稱 (ODBC 2.0)|3|非 NULL Varchar|程序名稱。 沒有名稱的程序會傳回空的字串。|  
 |COLUMN_NAME (ODBC 2.0)|4|非 NULL Varchar|程序的資料行名稱。 驅動程式會傳回沒有名稱的程序資料行的空字串。|  
-|COLUMN_TYPE (ODBC 2.0)|5|Smallint 非 NULL|會定義程序資料行，做為參數或結果集資料行：<br /><br /> SQL_PARAM_TYPE_UNKNOWN： 程序的資料行是其類型是未知的參數。 ODBC (1.0)<br /><br /> SQL_PARAM_INPUT： 程序的資料行是輸入的參數。 ODBC (1.0)<br /><br /> SQL_PARAM_INPUT_OUTPUT： 程序的資料行是輸入/輸出參數。 ODBC (1.0)<br /><br /> SQL_PARAM_OUTPUT： 程序的資料行是一個 output 參數。 ODBC (2.0)<br /><br /> SQL_RETURN_VALUE： 程序的資料行是此程序的傳回值。 ODBC (2.0)<br /><br /> SQL_RESULT_COL： 程序的資料行是結果集資料行。 ODBC (1.0)|  
-|DATA_TYPE (ODBC 2.0)|6|Smallint 非 NULL|SQL 資料類型。 這可以是 ODBC SQL 資料類型或驅動程式專屬的 SQL 資料型別。 日期時間和間隔資料類型，此資料行都會傳回精確的資料類型 （例如 SQL_TYPE_TIME 或 SQL_INTERVAL_YEAR_TO_MONTH）。 如需有效的 ODBC SQL 資料類型的清單，請參閱 < [SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)附錄 d： 資料型別中。 如需驅動程式專用的 SQL 資料類型資訊，請參閱驅動程式的文件。|  
-|TYPE_NAME (ODBC 2.0)|7|非 NULL Varchar|資料來源而定的資料型別名稱;比方說，"CHAR"、"VARCHAR"、"MONEY"、"長 VARBINARY"或者"CHAR （） FOR BIT DATA"。|  
-|COLUMN_SIZE (ODBC 2.0)|8|Integer|程序上的資料行的資料來源的資料行大小。 會傳回 NULL 的資料類型資料行大小不適用。 如需有關有效位數，請參閱[資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d： 資料型別中。|  
-|BUFFER_LENGTH (ODBC 2.0)|9|Integer|資料傳輸的位元組長度**SQLGetData**或**SQLFetch**如果 SQL_C_DEFAULT 指定的作業。 針對數值資料，這個大小可能會不同的資料來源上儲存的資料大小。 如需詳細資訊，請參閱 <<c0> [ 資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)，附錄 d： 資料型別中。|  
-|DECIMAL_DIGITS (ODBC 2.0)|10|Smallint|資料來源上的程序資料行的小數位數。 會傳回 NULL 的資料類型小數位數不適用。 關於十進位數字的詳細資訊，請參閱[資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)，附錄 d： 資料型別中。|  
+|COLUMN_TYPE (ODBC 2.0)|5|Smallint 非 NULL|會定義程序資料行，做為參數或結果集資料行：<br /><br /> SQL_PARAM_TYPE_UNKNOWN:程序的資料行是其類型是未知的參數。 ODBC (1.0)<br /><br /> SQL_PARAM_INPUT:程序的資料行是輸入的參數。 ODBC (1.0)<br /><br /> SQL_PARAM_INPUT_OUTPUT:程序的資料行是輸入/輸出參數。 ODBC (1.0)<br /><br /> SQL_PARAM_OUTPUT:程序的資料行是一個 output 參數。 ODBC (2.0)<br /><br /> SQL_RETURN_VALUE:程序的資料行是此程序的傳回值。 ODBC (2.0)<br /><br /> SQL_RESULT_COL:程序的資料行是結果集資料行。 ODBC (1.0)|  
+|DATA_TYPE (ODBC 2.0)|6|Smallint 非 NULL|SQL 資料類型。 這可以是 ODBC SQL 資料類型或驅動程式專屬的 SQL 資料型別。 日期時間和間隔資料類型，此資料行都會傳回精確的資料類型 （例如 SQL_TYPE_TIME 或 SQL_INTERVAL_YEAR_TO_MONTH）。 如需有效的 ODBC SQL 資料類型的清單，請參閱 < [SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)附錄 d:資料類型。 如需驅動程式專用的 SQL 資料類型資訊，請參閱驅動程式的文件。|  
+|TYPE_NAME (ODBC 2.0)|7|非 NULL Varchar|資料來源相關的資料型別名稱;比方說，"CHAR"、"VARCHAR"、"MONEY"、"長 VARBINARY"或者"CHAR （） FOR BIT DATA"。|  
+|COLUMN_SIZE (ODBC 2.0)|8|Integer|程序上的資料行的資料來源的資料行大小。 會傳回 NULL 的資料類型資料行大小不適用。 如需有關有效位數，請參閱[資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d:資料類型。|  
+|BUFFER_LENGTH (ODBC 2.0)|9|Integer|資料傳輸的位元組長度**SQLGetData**或**SQLFetch**如果 SQL_C_DEFAULT 指定的作業。 針對數值資料，這個大小可能會不同的資料來源上儲存的資料大小。 如需詳細資訊，請參閱 <<c0> [ 資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)，附錄 d:資料類型。|  
+|DECIMAL_DIGITS (ODBC 2.0)|10|Smallint|資料來源上的程序資料行的小數位數。 會傳回 NULL 的資料類型小數位數不適用。 關於十進位數字的詳細資訊，請參閱[資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)，附錄 d:資料類型。|  
 |NUM_PREC_RADIX (ODBC 2.0)|11|Smallint|針對數值資料類型，10 或 2。<br /><br /> 如果是 10，COLUMN_SIZE 與 DECIMAL_DIGITS 中的值會提供所允許的資料行的小數位數。 比方說，DECIMAL(12,5) 資料行就會傳回為 10，COLUMN_SIZE 為 12，並為 5; DECIMAL_DIGITS NUM_PREC_RADIX浮點數資料行可能會傳回 NUM_PREC_RADIX 是 10，15，個 COLUMN_SIZE DECIMAL_DIGITS 的 null 值。<br /><br /> 若為 2，COLUMN_SIZE 與 DECIMAL_DIGITS 中的值會提供資料行中允許的位元數。 比方說，浮點數資料行可能會傳回 NUM_PREC_RADIX 為 2 的 53，COLUMN_SIZE 和 DECIMAL_DIGITS 的 null 值。<br /><br /> 會傳回 NULL 的資料型別 NUM_PREC_RADIX 不適用。|  
-|可為 NULL (ODBC 2.0)|12|Smallint 非 NULL|是否程序的資料行接受 NULL 值：<br /><br /> SQL_NO_NULLS： 程序的資料行不接受 NULL 值。<br /><br /> SQL_NULLABLE： 程序的資料行接受 NULL 值。<br /><br /> SQL_NULLABLE_UNKNOWN： 不知道如果程序的資料行接受 NULL 值。|  
+|可為 NULL (ODBC 2.0)|12|Smallint 非 NULL|是否程序的資料行接受 NULL 值：<br /><br /> SQL_NO_NULLS:程序的資料行不接受 NULL 值。<br /><br /> SQL_NULLABLE:程序的資料行接受 NULL 值。<br /><br /> SQL_NULLABLE_UNKNOWN:不知道如果程序的資料行接受 NULL 值。|  
 |註解 (ODBC 2.0)|13|Varchar|程序的資料行的描述。|  
 |COLUMN_DEF (ODBC 3.0)|14|Varchar|資料行的預設值。<br /><br /> NULL 指定為預設值，這個資料行為 NULL 一字，不包含在引號中。 無法表示的預設值，而不會截斷，則此資料行就會包含已截斷，沒有封入的單引號。 如果已指定沒有預設值，這個資料行就會是 NULL。<br /><br /> 包含已截斷的值時，產生新的資料行定義中，除了可用 COLUMN_DEF 的值。|  
-|SQL_DATA_TYPE (ODBC 3.0)|15|Smallint 非 NULL|SQL 資料類型，因為它的值會出現在描述子 SQL_DESC_TYPE 欄位。 這個資料行是與 DATA_TYPE 資料行，除了 datetime 和間隔資料類型相同。<br /><br /> 日期時間和間隔資料類型，結果集中的 SQL_DATA_TYPE 欄位會傳回 SQL_INTERVAL 或如果是 SQL_DATETIME，而且 SQL_DATETIME_SUB 欄位將會傳回特定的間隔或 datetime 資料類型的子代碼。 (請參閱[附錄 d： 資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)|  
+|SQL_DATA_TYPE (ODBC 3.0)|15|Smallint 非 NULL|SQL 資料類型，因為它的值會出現在描述子 SQL_DESC_TYPE 欄位。 這個資料行是與 DATA_TYPE 資料行，除了 datetime 和間隔資料類型相同。<br /><br /> 日期時間和間隔資料類型，結果集中的 SQL_DATA_TYPE 欄位會傳回 SQL_INTERVAL 或如果是 SQL_DATETIME，而且 SQL_DATETIME_SUB 欄位將會傳回特定的間隔或 datetime 資料類型的子代碼。 (請參閱[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)|  
 |SQL_DATETIME_SUB (ODBC 3.0)|16|Smallint|日期時間和間隔資料類型的子型別程式碼。 其他資料類型的這個資料行都會傳回 NULL。|  
 |CHAR_OCTET_LENGTH (ODBC 3.0)|17|Integer|以位元組為單位的最大長度的字元或二進位資料類型資料行。 所有其他資料類型的這個資料行都會傳回 NULL。|  
 |ORDINAL_POSITION (ODBC 3.0)|18|整數不是 NULL|對於輸入和輸出參數，參數的程序中的定義 （增加參數順序，從 1 開始） 中的序數位置。 傳回值 （如果有的話），就會傳回 0。 結果集資料行，結果中的資料行的序數位置設定，第一個資料行，結果集中要與數字 1。 如果有多個結果集，驅動程式專屬的方式傳回資料行的序數位置。|  
-|IS_NULLABLE (ODBC 3.0)|19|Varchar|[否] 如果資料行不包含 Null。<br /><br /> 「 是 」 如果資料行可以包括 NULLs。<br /><br /> 如果 Null 屬性不明，這個資料行會傳回長度為零的字串。<br /><br /> 遵照 ISO 規則來決定 Null 屬性。 – ISO SQL 標準 DBMS 無法傳回空字串。<br /><br /> 這個資料行的傳回值不同於 NULLABLE 資料行的傳回值。 （請參閱可為 NULL 的資料行的描述。）|  
+|IS_NULLABLE (ODBC 3.0)|19|Varchar|[否] 如果資料行不包含 Null。<br /><br /> 「 是 」 如果資料行可以包括 NULLs。<br /><br /> 如果 Null 屬性不明，這個資料行會傳回長度為零的字串。<br /><br /> 遵照 ISO 規則來決定 Null 屬性。 ISO SQL 標準 DBMS 無法傳回空字串。<br /><br /> 這個資料行的傳回值不同於 NULLABLE 資料行的傳回值。 （請參閱可為 NULL 的資料行的描述。）|  
   
 ## <a name="code-example"></a>程式碼範例  
  請參閱[程序呼叫](../../../odbc/reference/develop-app/procedure-calls.md)。  

@@ -13,12 +13,12 @@ ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: fa7e74d94fba34ebb3ae1e11ccaae308dd14e3e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57d66d48591304d5481cb86c7418ed0ac27051db
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685256"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204937"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>將轉換的資料庫物件載入 SQL Server (OracleToSQL)
 Oracle 結構描述轉換至 SQL Server 之後，您可以產生的資料庫物件載入 SQL Server。 您可以讓 SSMA 建立物件，或者您可以編寫物件指令碼，然後自己執行的指令碼。 此外，SSMA 也可讓您使用 SQL Server 資料庫的實際內容來更新目標中繼資料。  
@@ -99,7 +99,7 @@ Oracle 結構描述轉換至 SQL Server 之後，您可以產生的資料庫物�
   
 4.  若要執行一組陳述式，選取陳述式在查詢編輯器 視窗，然後按**F5**索引鍵。  
   
-如需如何使用查詢編輯器來執行指令碼的詳細資訊，請參閱 「[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]查詢 「 SQL Server 線上叢書 》 中。  
+如需如何使用查詢編輯器來執行指令碼的詳細資訊，請參閱 「 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]查詢 「 SQL Server 線上叢書 》 中。  
   
 您也可以執行從命令列指令碼，利用**sqlcmd**公用程式，並從 SQL Server Agent。 如需詳細資訊**sqlcmd**，請參閱 SQL Server 線上叢書 》 中的 「 sqlcmd 公用程式 」。 如需有關 SQL Server Agent 的詳細資訊，請參閱 「 自動化系統管理工作 (SQL Server Agent) 」 在 SQL Server 線上叢書 》 中。  
   

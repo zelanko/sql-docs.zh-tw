@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 02bd2846f4425a4849ab16170c76a55af16c2b76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7b24c20d468cadbe4f4c7268ac6696b366b792e4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130849"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214278"
 ---
 # <a name="publish-data-from-excel-to-mds-mds-add-in-for-excel"></a>將資料從 Excel 發行至 MDS (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，若您已結束使用 Excel 且想要儲存變更，以讓其他使用者能夠存取，請將資料發行至 MDS 儲存機制。  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   當您發行變更時，系統會刪除 MDS 管理之資料格的註解。  
 > -   MDS 管理的資料格中不支援公式。 MDS 管理之資料格中的公式會處理為文字值。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48130849"
 >  如果您要將新的成員 (資料列) 加入至工作表，但是無法順利將它們發行至 MDS 儲存機制，表示您可能沒有工作表中所有屬性的 [更新] 權限。 在 [檢閱] 索引標籤上，按一下 [變更] 群組中的 [取消保護工作表]，再次嘗試發行。  
   
 ## <a name="next-steps"></a>後續步驟  
- [套用商務規則&#40;MDS 增益集的 Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)  
+ [套用商務規則 &#40;適用於 Excel 的 MDS 增益集&#41;](apply-business-rules-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [發行資料&#40;MDS 增益集的 Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   

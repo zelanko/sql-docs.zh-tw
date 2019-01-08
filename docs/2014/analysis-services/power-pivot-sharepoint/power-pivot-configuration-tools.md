@@ -11,15 +11,15 @@ ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 62a5d85272aae56b7f54b780b863642b5ddac6d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 133f5db597dfd56464678c52273e576e3493f172
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102108"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210867"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
-  設定、 修復或移除[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]使用 PowerPivot 組態工具。  
+  使用 PowerPivot 組態工具設定、修復或移除 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈會安裝適用於 SharePoint 2010 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具，以及適用於 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具。 本主題描述這兩種工具的一般使用方式以及兩者之間的差異。  
   
@@ -41,12 +41,12 @@ ms.locfileid: "48102108"
   
 -   您必須是 Analysis Services 執行個體的伺服器管理員 (僅限 SharePoint 2010)。  
   
--   您必須是伺服器陣列的組態資料庫上的 db_owner。  
+-   您必須是伺服陣列組態資料庫的 db_owner。  
   
 -   使用組態工具沒有 TCP/IP 通訊埠要求，因此，您應該不必設定防火牆來容納組態工具。 組態工具預期 Web 應用程式和共用服務為 SharePoint 平台的一部分。 您可能必須為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器設定防火牆。 如需詳細資訊，請參閱 [設定 Windows 防火牆以允許 Analysis Services 存取](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
 ##  <a name="bkmk_twoversions"></a> 兩種版本的組態工具  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安裝精靈會安裝適用於 SharePoint 2010 的 PowerPivot 組態工具，以及適用於 SharePoint 2013 的 PowerPivot 組態工具。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈會安裝適用於 SharePoint 2010 的 PowerPivot 組態工具，以及適用於 SharePoint 2013 的 PowerPivot 組態工具。  
   
  這些工具僅能搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]執行個體使用。 請勿將它們用於 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 安裝。  
   
@@ -82,9 +82,9 @@ ms.locfileid: "48102108"
   
 -   [Powerpivot for SharePoint 的 PowerShell 參考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
-> [!NOTE]  
+> [!NOTE]
 >  此工具不會設定 Reporting Services。 如果您要將 Reporting Services 加入至 SharePoint 環境，則需要另外安裝及設定 Reporting Services。 如需詳細資訊，請參閱下列內容：  
->   
+> 
 >  -   [安裝 Reporting Services SharePoint Mode for SharePoint 2013](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)。  
 > -   [Install Reporting Services SharePoint Mode for SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48102108"
   
      ![兩個 PowerPivot 組態工具](../media/as-powerpivot-configtools-bothicons.gif "兩個 PowerPivot 組態工具")  
   
-     **注意** ：只有在本機伺服器上安裝了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 時，才可以使用這些工具。  
+     **注意：** 這些工具會時才可使用[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]安裝在本機伺服器上。  
   
 2.  在啟動時，組態工具會檢查您安裝的狀態，並提供適用於您安裝的工作。  
   
@@ -123,9 +123,9 @@ ms.locfileid: "48102108"
  當您按一下 [執行]，此工具就會以批次模式處理所有動作。 雖然每個動作都是當做個別項目出現在工作清單中，但是包含在工作中的所有動作都會一起處理。 只有通過驗證檢查的動作會進行處理。 您可能需要加入或變更某些輸入值，才能通過驗證檢查。  
   
 ## <a name="related-content"></a>相關內容  
- [升級 PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)描述升級現有安裝已經在伺服陣列中的工作流程。  
+ [Upgrade PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) 描述已經在伺服器陣列中升級現有安裝的工作流程。  
   
- [解除安裝 PowerPivot for SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md)描述移除 PowerPivot for SharePoint 服務、 解決方案和應用程式頁面，從伺服器陣列的工作流程。  
+ [Uninstall PowerPivot for SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) 描述從伺服器陣列移除 PowerPivot for SharePoint 服務、方案和應用程式頁面的工作流程。  
   
  [使用 Windows PowerShell 的 PowerPivot 設定](power-pivot-configuration-using-windows-powershell.md)  
   

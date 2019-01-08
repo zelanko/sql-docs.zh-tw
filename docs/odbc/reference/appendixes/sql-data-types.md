@@ -15,12 +15,12 @@ ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b932b7f102e304ad110e5073005d2623cee2693c
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: 623ac38791eebc6db84380dfadd499651af938af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324591"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507497"
 ---
 # <a name="sql-data-types"></a>SQL 資料類型
 每個 DBMS 定義自己的 SQL 類型。 每個 ODBC 驅動程式會顯示只有這些 SQL 資料型別相關聯的 DBMS 所定義。 驅動程式的對應方式的相關資訊 DBMS SQL 類型對 ODBC 定義的 SQL 型別識別項和驅動程式將 DBMS SQL 類型對應至它自己的驅動程式專屬 SQL 型別識別項的方式透過呼叫傳回**SQLGetTypeInfo**。 驅動程式也會傳回 SQL 資料類型，描述資料類型的資料行和參數，透過呼叫時**SQLColAttribute**， **SQLColumns**， **SQLDescribeCol**，**SQLDescribeParam**， **SQLProcedureColumns**，並**SQLSpecialColumns**。  
@@ -42,17 +42,17 @@ ms.locfileid: "49324591"
 |SQL_LONGVARCHAR|LONG VARCHAR|可變長度字元資料。 最大長度是資料來源而定。[9]|  
 |SQL_WCHAR|WCHAR (*n*)|固定的字串長度的 Unicode 字元字串*n*|  
 |SQL_WVARCHAR|VARWCHAR (*n*)|Unicode 可變長度字元字串的最大字串長度*n*|  
-|SQL_WLONGVARCHAR|LONGWVARCHAR|Unicode 可變長度字元資料。 最大長度是依資料來源而定|  
+|SQL_WLONGVARCHAR|LONGWVARCHAR|Unicode 可變長度字元資料。 最大長度是資料來源而定|  
 |SQL_DECIMAL|十進位 (*p*，*s*)|帶正負號的確切數值的有效位數至少*p*和小數位數*s。* （最大有效位數為驅動程式定義）。(1 < = *p* < = 15;*s* <= *p*)。 [4]|  
 |SQL_NUMERIC|數字 (*p*，*s*)|帶正負號的確切數值有效位數*p*和小數位數*s* (1 < = *p* < = 15;*s* <= *p*)。 [4]|  
-|SQL_SMALLINT|SMALLINT|確切的數值有效位數 5、 小數點位數為 0 (帶正負號: – 32768 < = *n* < = 32767，不帶正負號： 0 < = *n* < = 65,535) [3]。|  
-|SQL_INTEGER|INTEGER|確切的數值有效位數 10 的值和小數點位數為 0 (帶正負號: – 2 [31] < = *n* < = 2 [31] – 1，不帶正負號： 0 < = *n* < = 2 [32] – 1) [3]。|  
-|SQL_REAL|real|帶正負號的概略數值其二進位整數位數為 24 （零或絕對值 10 [–38] 到 10[38])。|  
+|SQL_SMALLINT|SMALLINT|確切的數值有效位數 5、 小數點位數為 0 (帶正負號:-32,768 < = *n* < = 32767，不帶正負號：0 < = *n* < = 65,535) [3]。|  
+|SQL_INTEGER|INTEGER|確切的數值有效位數 10 的值和小數點位數為 0 (帶正負號:-2 [31] < = *n* < = 2 [31]-1，不帶正負號：0 < = *n* < = 2 [32]-1) [3]。|  
+|SQL_REAL|real|帶正負號的概略數值其二進位整數位數為 24 （零或絕對值 10 [-38] 到 10[38])。|  
 |SQL_FLOAT|浮點數 (*p*)|帶正負號的概略數值二進位整數位數為至少*p*。 （最大有效位數為驅動程式定義）。[5]|  
-|SQL_DOUBLE|DOUBLE PRECISION|帶正負號的概略數值其二進位整數位數為 53 （零或絕對值 10 [–308] 到 10[308])。|  
+|SQL_DOUBLE|DOUBLE PRECISION|帶正負號的概略數值其二進位整數位數為 53 （零或絕對值 10 [-308] 到 10[308])。|  
 |SQL_BIT|BIT|單一位元的二進位資料。[8]|  
-|SQL_TINYINT|TINYINT|確切的數字位數為 3 的值和小數點位數為 0 (帶正負號: – 128 < = *n* < = 127，不帶正負號： 0 < = *n* < = 255) [3]。|  
-|SQL_BIGINT|bigint|確切的數值有效位數為 19 （如果帶正負號） 或 20 （如果不帶正負號）、 小數點位數為 0 (帶正負號: – 2 [63] < = *n* < = 2 [63] – 1，不帶正負號： 0 < = *n* < = 2 [64] – 1) [3]，[9]。|  
+|SQL_TINYINT|TINYINT|確切的數字位數為 3 的值和小數點位數為 0 (帶正負號:-128 < = *n* < = 127，不帶正負號：0 < = *n* < = 255) [3]。|  
+|SQL_BIGINT|bigint|確切的數值有效位數為 19 （如果帶正負號） 或 20 （如果不帶正負號）、 小數點位數為 0 (帶正負號:-2 [63] < = *n* < = 2 [63]-1，不帶正負號：0 < = *n* < = 2 [64]-1) [3]，[9]。|  
 |SQL_BINARY|二進位 (*n*)|固定長度的二進位資料*n*。 [9]|  
 |SQL_VARBINARY|VARBINARY (*n*)|可變長度二進位資料的最大長度*n*。 最大值是由使用者設定。[9]|  
 |SQL_LONGVARBINARY|長 VARBINARY|可變長度二進位資料。 最大長度是資料來源而定。[9]|  
@@ -78,7 +78,7 @@ ms.locfileid: "49324591"
   
  [1] 這是藉由呼叫在 DATA_TYPE 資料行中傳回的值**SQLGetTypeInfo**。  
   
- [2] 這是呼叫所傳回的名稱以及建立參數的資料行中的值**SQLGetTypeInfo**。 [名稱] 欄位會傳回指定的位置 — 比方說，CHAR — 而建立的參數資料行傳回有效位數、 小數位數和長度等的建立參數的逗號分隔的清單。  
+ [2] 這是呼叫所傳回的名稱以及建立參數的資料行中的值**SQLGetTypeInfo**。 [名稱] 欄位會傳回指定的位置-例如，CHAR-而建立的參數資料行傳回有效位數、 小數位數和長度等的建立參數的逗號分隔的清單。  
   
  [3] 應用程式使用**SQLGetTypeInfo**或是**SQLColAttribute**來判斷是否有不帶正負號的特定資料型別或結果集內的特定資料行。  
   

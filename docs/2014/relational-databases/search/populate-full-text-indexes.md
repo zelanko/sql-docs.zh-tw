@@ -24,12 +24,12 @@ ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c6bc03334003438fdefbe7feac1e321d9a2e9bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c8e9ea6b068f39e9e1e63bb5e9831f977619367f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137488"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545350"
 ---
 # <a name="populate-full-text-indexes"></a>擴展全文檢索索引
   建立和維護全文檢索索引包括使用稱為「母體擴展」(Population) (也稱為「搜耙」(Crawl)) 的處理序來擴展索引。  
@@ -48,9 +48,9 @@ ms.locfileid: "48137488"
  在初始完整母體擴展之後，您可以選擇性地使用變更追蹤來維護全文檢索索引。 因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會維護追蹤上一次母體擴展以來對基底資料表所做之變更的資料表，所以存在與變更追蹤相關聯的少量負擔。 使用變更追蹤時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在基底資料表或索引檢視表中維護已經由更新、刪除或插入所修改之資料列的記錄。 透過 WRITETEXT 和 UPDATETEXT 的資料變更並不會反映在全文檢索索引中，變更追蹤並不會收取這些變更。  
   
 > [!NOTE]  
->  資料表包含`timestamp` 欄中，您可以使用累加母體擴展。  
+>  如需包含 `timestamp` 資料行的資料表，您可以使用累加母體擴展。  
   
- 在建立索引期間啟用變更追蹤時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會在建立新的全文檢索索引之後，立即完整擴展新的全文檢索索引。 之後，系統會追蹤並傳播變更至全文檢索索引。 變更追蹤有兩種類型：自動 (CHANGE_TRACKING AUTO 選項) 和手動 (CHANGE_TRACKING MANUAL 選項)。 自動變更追蹤是預設的行為。  
+ 在建立索引期間啟用變更追蹤時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會在建立新的全文檢索索引之後，立即完整擴展新的全文檢索索引。 之後，系統會追蹤並傳播變更至全文檢索索引。 變更追蹤有兩種類型：自動 (CHANGE_TRACKING AUTO 選項) 和手動 (CHANGE_TRACKING MANUAL 選項)。 自動變更追蹤是預設的行為。  
   
  變更追蹤的類型會決定擴展全文檢索索引的方式，如下所示：  
   
@@ -60,40 +60,40 @@ ms.locfileid: "48137488"
   
      **若要設定追蹤變更，使用自動母體擴展**  
   
-    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING AUTO  
+    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ...WITH CHANGE_TRACKING AUTO  
   
-    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING AUTO  
+    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ...SET CHANGE_TRACKING AUTO  
   
      如需詳細資訊，請參閱本主題稍後的範例「E. 將全文檢索索引更改成使用自動變更追蹤」。  
   
 -   手動母體擴展  
   
-     如果您指定了 CHANGE_TRACKING MANUAL，全文檢索引擎就會針對全文檢索索引使用手動母體擴展。 初始完整母體擴展完成之後，系統就會追蹤變更，因為基底資料表中的資料已修改。 不過，在您執行 ALTER FULLTEXT INDEX … START UPDATE POPULATION 陳述式之前，它們不會傳播至全文檢索索引。 START UPDATE POPULATION 陳述式來手動套用變更。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來定期呼叫這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
+     如果您指定了 CHANGE_TRACKING MANUAL，全文檢索引擎就會針對全文檢索索引使用手動母體擴展。 初始完整母體擴展完成之後，系統就會追蹤變更，因為基底資料表中的資料已修改。 不過，它們不會傳播至全文檢索索引，直到您執行 ALTER FULLTEXT INDEX ...START UPDATE POPULATION 陳述式來手動套用變更。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來定期呼叫這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
      **若要使用手動母體擴展來啟動追蹤變更**  
   
-    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING MANUAL  
+    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ...WITH CHANGE_TRACKING MANUAL  
   
-    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING MANUAL  
+    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ...SET CHANGE_TRACKING MANUAL  
   
      如需詳細資訊，請參閱本主題稍後的範例「C. 使用手動變更追蹤來建立全文檢索索引」以及「D. 執行手動母體擴展」。  
   
  **若要關閉變更追蹤**  
   
--   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING OFF  
+-   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ...WITH CHANGE_TRACKING OFF  
   
--   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING OFF  
+-   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ...SET CHANGE_TRACKING OFF  
   
 
   
 ### <a name="incremental-timestamp-based-population"></a>以時間戳記為基礎的累加母體擴展  
  累加母體擴展是手動擴展全文檢索索引的替代機制。 您可以針對將 CHANGE_TRACKING 設定為 MANUAL 或 OFF 的全文檢索索引執行累加母體擴展。 如果全文檢索索引的第一個母體擴展是累加母體擴展，它就會建立所有資料列的索引，讓它相當於完整母體擴展。  
   
- 累加母體擴展的執行要件是索引的資料表必須包含的資料行`timestamp`資料型別。 少了 `timestamp` 資料行，就無法執行累加母體擴展。 累加母體擴展，而不需要在資料表上的要求`timestamp`資料行導致完整母體擴展作業。 此外，如果上一次母體擴展以來，影響資料表全文檢索索引的任何中繼資料已變更，便會以完整母體擴展的方式實作累加母體擴展。 這包括由於更改任何資料行、索引或全文檢索索引定義所導致的中繼資料變更。  
+ 累加母體擴展的執行要件是，索引資料表必須包含 `timestamp` 資料類型資料行。 少了 `timestamp` 資料行，就無法執行累加母體擴展。 對不含 `timestamp` 資料行的資料表提出累加母體擴展要求的話，會導致執行完整母體擴展作業。 此外，如果上一次母體擴展以來，影響資料表全文檢索索引的任何中繼資料已變更，便會以完整母體擴展的方式實作累加母體擴展。 這包括由於更改任何資料行、索引或全文檢索索引定義所導致的中繼資料變更。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 `timestamp` 資料行來識別上一次母體擴展以來已經變更的資料列。 然後，累加母體擴展會針對在上一次母體擴展之後或進行時加入、刪除或修改的資料列，更新全文檢索索引。 如果資料表遇到大量插入作業，使用累加母體擴展可能會比使用手動母體擴展更有效率。  
   
- 母體擴展結束時，全文檢索引擎會記錄新的 `timestamp` 值。 這個值是最大`timestamp`發現 SQL 收集程式 」 的值。 此值會在後續的累加母體擴展啟動時使用。  
+ 母體擴展結束時，全文檢索引擎會記錄新的 `timestamp` 值。 這個值就是「SQL 收集程式」所遇過的最大 `timestamp` 值。 此值會在後續的累加母體擴展啟動時使用。  
   
  若要執行累加母體擴展，請使用 START INCREMENTAL POPULATION 子句來執行 ALTER FULLTEXT INDEX 陳述式。  
   
@@ -184,7 +184,7 @@ GO
      您可以使用這個頁面來建立或管理 SQL Server Agent 作業的排程，以便針對全文檢索索引的基底資料表或索引檢視表啟動累加資料表母體擴展。  
   
     > [!IMPORTANT]  
-    >  如果基底資料表或檢視表不包含的資料行`timestamp`資料類型，會執行完整母體擴展。  
+    >  如果基底資料表或檢視表沒有包含 `timestamp` 資料類型的資料行，就會執行完整母體擴展。  
   
      選項如下：  
   

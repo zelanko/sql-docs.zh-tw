@@ -10,12 +10,12 @@ ms.assetid: efaa59e3-dbfa-407f-b1aa-cb0c6602ea17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04b2d0fdd00d9f3001ce1687744a9ecd992f44dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d047cbc4fe3ba3f4945acd9da4f627a05992e779
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144618"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406155"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>記憶體內部 OLTP 的系統檢視表、預存程序、DMV 和等候類型
   本主題提供支援 In-Memory OLTP 的許多資料庫物件的簡短說明及連結。  
@@ -30,7 +30,7 @@ ms.locfileid: "48144618"
 |[sys.all_sql_modules &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|檢查預存程序是否為原生編譯。|**uses_native_compilation**資料行。|  
 |[sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)|檢查預存程序是否為原生編譯。|**uses_native_compilation**資料行。|  
 |[sys.table_types &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|檢查資料表是否已針對記憶體最佳化。|**is_memory_optimized**資料行。|  
-|[sys.tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|檢查資料表是否已針對記憶體最佳化，並檢查資料表的持久性設定。|**持久性**， **durability_desc**，以及**is_memory_optimized**資料行。|  
+|[sys.tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|檢查是否為記憶體最佳化資料表，並檢查資料表的持久性設定。|**持久性**， **durability_desc**，以及**is_memory_optimized**資料行。|  
 |[sys.hash_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-hash-indexes-transact-sql)|顯示記憶體最佳化資料表的雜湊索引。|In-Memory OLTP 特定。|  
   
 ### <a name="metadata-functions"></a>中繼資料函數  

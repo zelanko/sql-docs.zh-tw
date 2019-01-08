@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio 常見問題集 |Microsoft Docs
-description: 常見問題集 (FAQ) 適用於 Azure 資料 Studio。
-ms.custom: tools|sos
+title: 常見問題集
+titleSuffix: Azure Data Studio
+description: 有關 Azure Data Studio 常見問題 (faq)。
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b34723e800d3dc21928dcdbb5dc9871ecbbcdb5f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 129e7de66e896e1f452c5d68fc4891d9cc5eafa3
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356349"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030328"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] 常見問題集
 
@@ -48,7 +49,7 @@ Azure Data Studio 和其資料提供者的原始程式碼可在 GitHub 上。 �
 
 ## <a name="do-we-plan-to-open-source-ssms"></a>我們計劃開放原始碼 SSMS？
 
-資料分割 不過下, 一代的多重作業系統 CLI 和 GUI 工具是開放原始碼。 比方說，VS Code、 mssql-scripter 和 msql CLI mssql 擴充功能是在 GitHub 上的所有開放原始碼。 Azure 資料 Studo 的原始程式碼位於 GitHub 上。  
+資料分割 不過下, 一代的多重作業系統 CLI 和 GUI 工具是開放原始碼。 比方說，VS Code、 mssql-scripter 和 msql CLI mssql 擴充功能是在 GitHub 上的所有開放原始碼。 使用 GitHub 上適用於 Azure 資料 Studio 原始程式碼。  
 
 ## <a name="now-that-there-is-azure-data-studio-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>現在已有 Azure Data Studio，沒有 Microsoft 計劃取代 SSMS 和 SSDT 嗎？ 
 

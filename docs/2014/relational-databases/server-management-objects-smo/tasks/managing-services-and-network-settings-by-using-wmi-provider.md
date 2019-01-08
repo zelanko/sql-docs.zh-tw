@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - WMI provider [SMO]
@@ -17,17 +15,17 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc42cd7c5f7670ed3ece73ee424de03891ed5781
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d16548f201f047ba83516469050e41380b7bc6f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211658"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762200"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>使用 WMI 提供者管理服務和網路設定
-  WMI 提供者是已發行的介面，以供[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Management Console (MMC) 來管理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務和網路通訊協定。 在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>物件都代表 WMI 提供者。  
+  WMI 提供者是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC) 用於管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務和網路通訊協定的已發行介面。 在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 物件表示 WMI 提供者。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>物件操作可建立的連線與不同<xref:Microsoft.SqlServer.Management.Smo.Server>物件的執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，並使用 Windows 認證來連接到 WMI 服務。  
+ <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 物件可獨立操作，不受使用 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所建立連接的影響，並會使用 Windows 認證連接到 WMI 服務。  
   
 ## <a name="example"></a>範例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

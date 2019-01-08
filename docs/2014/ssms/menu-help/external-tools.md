@@ -4,22 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.externaltools
 helpviewer_keywords:
 - External Tools dialog box
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cefca611c1f09db94c8e2df523121bdc9b2bf819
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 264eb3c9b16c5eb12a578090d55e4f64884177c8
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227634"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328785"
 ---
 # <a name="external-tools"></a>外部工具
   使用此對話方塊可將外部工具 (例如 SQL Server 組態管理員或記事本) 新增到 [工具] 功能表。 加入外部工具可以讓您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中工作時，輕易地啟動其他應用程式。 啟動工具時，您可以指定引數和工作目錄。 除此之外，某些工具的輸出也可以顯示在 [輸出] 視窗中。 [外部工具] 對話方塊列在 [工具] 功能表中。  
@@ -78,5 +76,3 @@ ms.locfileid: "48227634"
   
 > [!NOTE]  
 >  檢視 [開始][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**功能表上之**  捷徑的屬性，以確認這些檔案在您電腦上的位置。  
-  
-  

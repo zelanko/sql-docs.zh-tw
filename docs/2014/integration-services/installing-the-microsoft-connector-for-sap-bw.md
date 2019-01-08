@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c5ddd6957024d41962197d6c919412ca6e597ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80fef580e824fe3a668c5af990ef0955eebcad8d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089898"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806480"
 ---
 # <a name="installing-the-microsoft-connector-for-11-sap-bw"></a>安裝 Microsoft Connector for 1.1 SAP BW
   若要安裝[!INCLUDE[msCoName](../includes/msconame-md.md)]Connector 1.1 for SAP BW 及其文件中，下載並執行 SQL Server 功能套件網頁上的 Windows installer 套件。  

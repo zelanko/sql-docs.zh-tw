@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
@@ -14,12 +13,12 @@ ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7da91677755f2d7e808165bdc8361864e15ac2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131748"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819330"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>針對 Web 同步處理設定 IIS 7
   本主題中的程序將逐步引導您完成手動設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 7 及更新版本的程序，以搭配使用 Web 同步處理，並進行合併式複寫。 
@@ -29,7 +28,7 @@ ms.locfileid: "48131748"
  如需完整組態處理序的概觀，請參閱[設定 Web 同步處理](configure-web-synchronization.md)。  
   
 > [!IMPORTANT]  
->  確定您的應用程式只使用 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 或更新版本，而且 IIS 伺服器上未安裝較早版本的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 。 舊版 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 可能會導致錯誤，例如：「Web 同步處理期間，訊息的格式無效。 請確認已在 Web 伺服器正確地設定複寫元件」。  
+>  確定您的應用程式只使用 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 或更新版本，而且 IIS 伺服器上未安裝較早版本的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 。 舊版的[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]導致錯誤，例如：「Web 同步處理期間，訊息的格式無效。 請確認已在 Web 伺服器正確地設定複寫元件」。  
   
  若要使用 Web 同步處理，您必須完成下列步驟來設定 IIS 7。 本主題中有每個步驟的詳細描述。  
   

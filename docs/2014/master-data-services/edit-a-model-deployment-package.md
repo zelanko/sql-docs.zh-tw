@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a3f53b46116c05c9b6d51e5bccaa071375f4c36f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f001d290237bfb111b321800d79ff3c42921e5d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135578"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810620"
 ---
 # <a name="edit-a-model-deployment-package"></a>編輯模型部署封裝
   此主題描述如何在 MDS 中部署模型的選定部分，而不是整個模型。 若要這樣做，請使用模型封裝編輯器編輯 MDS 模型封裝。  
@@ -28,7 +27,7 @@ ms.locfileid: "48135578"
 ## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 -   模型封裝必須存在，才能供您編輯。 如需詳細資訊，請參閱[部署模型 &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md) 和 [使用精靈建立模型部署封裝](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)或[使用 MDSModelDeploy 建立模型部署封裝](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48135578"
   
 5.  驗證要部署之選取項目的清單。 若要變更，請按一下 [上一步]，並重複步驟 4。  
   
-6.  按一下 [瀏覽] 移至您想要用來儲存部分套件的資料夾，然後輸入部分套件的檔案名稱 (副檔名為 .pkg)。 按一下 **[儲存]**。  
+6.  按一下 [瀏覽] 移至您想要用來儲存部分套件的資料夾，然後輸入部分套件的檔案名稱 (副檔名為 .pkg)。 按一下 [儲存] 。  
   
 7.  按一下 **[完成]**。  
   
@@ -52,6 +51,6 @@ ms.locfileid: "48135578"
   
 -   [使用精靈部署模型部署套件](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
--   [使用 MDSModelDeploy 部署模型部署套件](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
+-   [使用 MDSModelDeploy 部署模型部署封裝](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
   

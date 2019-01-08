@@ -23,12 +23,12 @@ ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cc0c149ab222976d643eb65ebde540af514bd86c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffb6331f3e02c0974320d8d9c71df9aff7602874
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218909"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507795"
 ---
 # <a name="partition-storage-modes-and-processing"></a>資料分割儲存模式及處理
   資料分割的儲存模式會影響查詢及處理效能、儲存需求，以及此資料分割的儲存位置及其父量值群組和 Cube。 儲存模式的選擇也會影響處理選擇。  
@@ -76,18 +76,18 @@ ms.locfileid: "48218909"
   
 -   在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中，索引鍵的大小總計不可能超過 900 個位元組。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會判斷提示這個狀況時處理 CREATE INDEX 陳述式，根據固定的長度索引鍵資料行。 不過，如果在索引鍵中有可變長度資料行[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]也會判斷提示這個狀況的基底資料表的每個更新。 因為不同彙總有不同的檢視定義，所以會依彙總設計而定，使用索引檢視的 ROLAP 處理可能成功也可能失敗。  
   
--   建立索引檢視的工作階段必須將下列選項設為 ON：ARITHABORT、CONCAT_NULL_YEILDS_NULL、QUOTED_IDENTIFIER、ANSI_NULLS、ANSI_PADDING 和 ANSI_WARNING。 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中變更這項設定。  
+-   建立索引檢視的工作階段必須將下列選項設為 OFF：ARITHABORT、CONCAT_NULL_YEILDS_NULL、QUOTED_IDENTIFIER, ANSI_NULLS、ANSI_PADDING 和 ANSI_WARNING。 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中變更這項設定。  
   
 -   建立索引檢視的工作階段必須將下列選項設為 OFF：NUMERIC_ROUNDABORT。 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中變更這項設定。  
   
 ## <a name="holap"></a>HOLAP  
- HOLAP 儲存模式會結合 MOLAP 和 ROLAP 的屬性。 與 MOLAP 一樣，holap 也會儲存在多維度結構中的資料分割的彙總[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體。 HOLAP 不會儲存來源資料的副本。 針對只存取資料分割彙總之摘要資料的查詢，HOLAP 相當於 MOLAP。 存取來源資料的查詢 (例如，想要向下鑽研至沒有彙總資料的不可部分完成 Cube 資料格) 必須從關聯式資料庫擷取資料，且如果來源資料是儲存在 MOLAP 結構中，則它們的速度會不如預期的快。 在 HOLAP 儲存模式下，使用者經常會遇到查詢時間有大幅差異的情況，而這是根據可以從快取或彙總來解析查詢，還是從來源資料本身解析查詢而定。  
+ HOLAP 儲存模式會結合 MOLAP 和 ROLAP 的屬性。 與 MOLAP 一樣，holap 也會儲存在多維度結構中的資料分割的彙總[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體。 HOLAP 不會儲存來源資料的副本。 針對只存取資料分割彙總之摘要資料的查詢，HOLAP 相當於 MOLAP。 存取來源資料的查詢-例如，如果您想要向下鑽研至不可部分完成的 cube 資料格包括不沒有彙總的資料必須請從關聯式資料庫中擷取資料，並不會以最快速度如果來源資料儲存在 MOLAP structur，其方式是e。 在 HOLAP 儲存模式下，使用者經常會遇到查詢時間有大幅差異的情況，而這是根據可以從快取或彙總來解析查詢，還是從來源資料本身解析查詢而定。  
   
  因為儲存為 HOLAP 的資料分割不包含來源資料，所以會比同等的 MOLAP 資料分割還小，而且針對涉及摘要資料之查詢的回應速度也會比 ROLAP 資料分割還快。 HOLAP 儲存模式一般是適用於 Cube 中的資料分割，而這類資料分割需要根據大量來源資料以快速回應摘要查詢。 但是，如果使用者產生必須接觸分葉層級資料的查詢 (例如計算中間值)，MOLAP 通常是較好的選擇。  
   
 ## <a name="see-also"></a>另請參閱  
  [主動式快取&#40;資料分割&#41;](partitions-proactive-caching.md)   
  [同步處理 Analysis Services 資料庫](../multidimensional-models/synchronize-analysis-services-databases.md)   
- [資料分割&#40;Analysis Services-多維度資料&#41;](partitions-analysis-services-multidimensional-data.md)  
+ [資料分割 &#40;Analysis Services - 多維度資料&#41;](partitions-analysis-services-multidimensional-data.md)  
   
   

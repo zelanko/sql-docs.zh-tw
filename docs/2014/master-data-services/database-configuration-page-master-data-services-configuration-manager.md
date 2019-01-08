@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.dbpg.f1
@@ -13,12 +12,12 @@ ms.assetid: dd72220e-a599-465d-8b84-9bb6a7433216
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 32afe6cdb46187f48943ab8b6439bcb2533dbf82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b28eb8d2455584bae77d8a7b62707b8888da27cf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128108"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788470"
 ---
 # <a name="database-configuration-page-master-data-services-configuration-manager"></a>資料庫組態頁面 (Master Data Services 組態管理員)
   使用 **[資料庫組態]** 頁面，即可編輯 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的系統設定。 系統設定會影響與選定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫相關聯的所有 Web 應用程式和 Web 服務。 您必須先選取或建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫，才可啟用及使用系統設定進行組態設定。  
@@ -43,6 +42,6 @@ ms.locfileid: "48128108"
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Master Data Services 資料庫和網站](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
- [資料庫需求&#40;Master Data Services&#41;](install-windows/database-requirements-master-data-services.md)  
+ [資料庫需求 &#40;Master Data Services&#41;](install-windows/database-requirements-master-data-services.md)  
   
   

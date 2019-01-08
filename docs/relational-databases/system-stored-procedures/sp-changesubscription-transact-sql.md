@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - changesubscription
@@ -19,12 +18,12 @@ ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91c3b60aedb42c6d249920cb42da021c474faf5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a293be4b745f30f4ee4a9bff6226e4e2ef80676f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640706"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209837"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,22 +49,22 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication**=] **'***發行集***'**  
+ [ **@publication**=] **'**_發行集_**'**  
  這是要變更的發行集名稱。 *發行集*已**sysname**，沒有預設值  
   
- [ **@article** =] **'***文章***'**  
+ [ **@article** =] **'**_文章_**'**  
  這是要變更的發行項名稱。 *發行項*已**sysname**，沒有預設值。  
   
- [ **@subscriber** = ] **'***subscriber***'**  
+ [ **@subscriber** =] **'**_訂閱者_**'**  
  這是訂閱者的名稱。 *訂閱者*已**sysname**，沒有預設值。  
   
- [ **@destination_db** =] **'***destination_db***'**  
+ [ **@destination_db** =] **'**_destination_db_**'**  
  這是訂閱資料庫的名稱。 *destination_db*已**sysname**，沒有預設值。  
   
- [  **@property=**] **'***屬性***'**  
+ [  **@property=**] **'**_屬性_**'**  
  這是給定訂閱要變更的屬性。 *屬性*已**nvarchar(30)**，而且可以是下列其中一個資料表中的值。  
   
- [  **@value=**] **'***值***'**  
+ [  **@value=**] **'**_值_**'**  
  指定的新值*屬性*。 *值*已**nvarchar(4000)**，而且可以是下列其中一個資料表中的值。  
   
 |屬性|值|描述|  
@@ -86,8 +85,8 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|OLE DB 提供者|  
 |**memory_optimized**|**bit**|指出訂用帳戶支援記憶體最佳化的資料表。 *memory_optimized*已**元**，其中 1 等於 true （訂用帳戶支援記憶體最佳化的資料表）。|  
   
- [  **@publisher =** ] **'***發行者***'**  
- 指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *發行者*已**sysname**，預設值是 NULL。  
+ [  **@publisher =** ] **'**_發行者_**'**  
+ 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  *發行者*不應指定為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  

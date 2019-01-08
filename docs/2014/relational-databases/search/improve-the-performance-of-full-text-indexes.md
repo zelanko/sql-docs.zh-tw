@@ -17,12 +17,12 @@ ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9131bda927e123d3b718d9a769ef59efff157903
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a93abdc2c20b2aabc9da09ce875817ab92789b8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111560"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350859"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改善全文檢索索引的效能
   全文檢索索引與全文檢索查詢的效能會受硬體資源的影響，例如記憶體、磁碟速度、CPU 速度與電腦架構。  
@@ -37,7 +37,7 @@ ms.locfileid: "48111560"
 -   如果實體記憶體 (3 GB 的限制) 不足，表示記憶體可能是瓶頸。 實體記憶體限制可能會在所有系統上發生，而且在 32 位元系統上，虛擬記憶體不足的壓力可能會降低全文檢索索引的速度。  
   
     > [!NOTE]  
-    >  從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，全文檢索引擎就可以使用 AWE 記憶體，因為全文檢索引擎屬於 sqlservr.exe 的一部分。  
+    >  從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]開始，全文檢索引擎就可以使用 AWE 記憶體，因為全文檢索引擎屬於 sqlservr.exe 的一部分。  
   
  如果系統沒有任何硬體瓶頸，全文檢索搜尋的索引效能大多取決於下列條件：  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48111560"
   
 -   請使用 [UPDATE STATISTICS](/sql/t-sql/statements/update-statistics-transact-sql) 陳述式來更新基底資料表的統計資料。 更重要的是，請更新叢集索引上的統計資料或完整母體擴展的全文檢索索引鍵。 這有助於多重範圍母體擴展在資料表上產生良好的資料分割。  
   
--   在 建立次要索引`timestamp`資料行，如果您想要改善累加母體擴展的效能。  
+-   如果您想要改善累加母體擴展的效能，請在 `timestamp` 資料行上建立次要索引。  
   
 -   在大型的多重 CPU 電腦上執行完整母體擴展之前，我們建議您設定 `max server memory` 值來暫時限制緩衝集區的大小，以便保留足夠的記憶體供 fdhost.exe 處理序和作業系統使用。 如需詳細資訊，請參閱本主題稍後的＜估計篩選背景程式主機處理序 (fdhost.exe) 的記憶體需求＞一節。  
   
@@ -126,28 +126,28 @@ ms.locfileid: "48111560"
 > [!IMPORTANT]  
 >  如需公式的基本資訊，請參閱<sup>1</sup>， <sup>2</sup>，並<sup>3</sup>底下。  
   
-|平台|估計 fdhost.exe 記憶體需求，以 mb 為單位，*F*<sup>1</sup>|計算最大伺服器記憶體的公式 —*M*<sup>2</sup>|  
+|平台|估計 fdhost.exe 記憶體需求，在 MB*F*<sup>1</sup>|計算最大伺服器記憶體-公式*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= 最小值 (** *T* **，** 2000年 **) –*`F`*–** 500|  
-|x64|*F* **=** *Number of crawl ranges* **\*** 10 **\*** 8|*M* **=** *T* **–** *F* **–** 500|  
+|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= 最小值 (** *T* **，** 2000年 **)-*`F`* -** 500|  
+|x64|*F* **=** *Number of crawl ranges* **\*** 10 **\*** 8|*M* **=** *T* **-** *F* **-** 500|  
   
- <sup>1</sup>多個完整母體擴展正在進行中，如果計算的 fdhost.exe 記憶體需求，每個分別為*F1*， *F2*，依此類推。 然後將 *M* 計算為 *T***–** sigma **(***F*i**)**。  
+ <sup>1</sup>多個完整母體擴展正在進行中，如果計算的 fdhost.exe 記憶體需求，每個分別為*F1*， *F2*，依此類推。 然後計算*M*作為*T * * *-** sigma **(* **F*我**) * *。  
   
  <sup>2</sup> 500 MB 是系統中其他處理序所需記憶體的估計。 如果系統正在進行其他工作，請據此增加這個值。  
   
  <sup>3</sup> 。*ism_size*假設為 8 MB x64 平台。  
   
- **範例： 估計 fdhost.exe 記憶體需求**  
+ **範例：估計 fdhost.exe 記憶體需求**  
   
- 這個範例適用於具有 8GM RAM 和 4 個雙核心處理器的 AMD64 電腦。 第一個計算會估計 fdhost.exe 所需的記憶體—*F*。 搜耙範圍的數目是 `8`。  
+ 這個範例適用於具有 8GM RAM 和 4 個雙核心處理器的 AMD64 電腦。 第一個計算會估計 fdhost.exe 所需的記憶體-*F*。 搜耙範圍的數目是 `8`。  
   
  `F = 8*10*8=640`  
   
- 下一個計算會取得的最佳值`max server memory`—*M*。 此系統上可用的實體記憶體總計 (以 MB 為單位)—*T*—是`8192`。  
+ 下一個計算會取得的最佳值`max server memory` - *M*。 *T*MB-在此系統上可用的實體記憶體總計*T*-是`8192`。  
   
  `M = 8192-640-500=7052`  
   
- **範例： 設定 max server memory**  
+ **範例：設定 max server memory**  
   
  這個範例會使用[sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)並[重新設定](/sql/t-sql/language-elements/reconfigure-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式，將`max server memory`計算的值*M*在上述範例, `7052`:  
   
@@ -203,7 +203,7 @@ GO
   
  基於安全性理由，篩選是由篩選背景程式主機處理序載入。 伺服器執行個體會針對所有多執行緒篩選使用多執行緒處理序，而針對所有單一執行緒篩選使用單一執行緒處理序。 當使用多執行緒篩選的文件包含使用單一執行緒篩選的內嵌文件時，全文檢索引擎就會針對內嵌文件啟動單一執行緒處理序。 例如，如果遇到包含 PDF 文件的 Word 文件，全文檢索引擎就會針對 Word 內容啟動多執行緒處理序，而針對 PDF 內容啟動單一執行緒處理序。 不過，單一執行緒篩選在此環境下可能無法正常運作，而且可能會使篩選處理序不穩定。 在經常會有這類內嵌的特定情況下，不穩定可能會導致篩選處理序損毀。 發生這個狀況時，全文檢索引擎就會將任何失敗的文件 (例如，包含內嵌 PDF 內容的 Word 文件) 重新路由傳送至單一執行緒篩選處理序。 如果經常發生重新路由傳送的狀況，則會導致全文檢索索引處理序的效能降低。  
   
- 若要解決這個問題，請將容器文件 (在此範例中是 Word) 的篩選標示成單一執行緒篩選。 您可以變更篩選登錄值，以便將給定的篩選標示成單一執行緒篩選。 若要將篩選標示成單一執行緒篩選，您必須設定**ThreadingModel**登錄值，篩選出`Apartment Threaded`。 如需有關單一執行緒 Apartment 的詳細資訊，請參閱 [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159)(了解與使用 COM 執行緒模型) 技術白皮書。  
+ 若要解決這個問題，請將容器文件 (在此範例中是 Word) 的篩選標示成單一執行緒篩選。 您可以變更篩選登錄值，以便將給定的篩選標示成單一執行緒篩選。 若要將篩選標示成單一執行緒篩選，您必須設定**ThreadingModel**登錄值，篩選出`Apartment Threaded`。 如需有關單一執行緒 Apartment 的詳細資訊，請參閱 [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159)(了解與使用 COM 執行緒模型) 技術白皮書。  
   
   
   

@@ -21,19 +21,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddb5b45019f5e34102ffa068539f25898d3172d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2efc674ac7a89200ee550374a7878b711e8fe70
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846712"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214284"
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回全文檢索目錄的相關資訊，這些目錄正在伺服器上進行某個母體擴展活動。  
   
-> [!NOTE]  
+> [!NOTE]
 >  未來版本將移除下列資料行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: is_paused、 previous_status、 previous_status_description、 row_count_in_thousands、 狀態、 status_description 和 worker_count。 請避免在新的開發工作中使用這些資料行，並規劃修改目前使用這些資料行的應用程式。  
   
  

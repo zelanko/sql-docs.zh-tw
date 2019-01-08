@@ -1,5 +1,5 @@
 ---
-title: 處理表格式模型資料分割 |Microsoft Docs
+title: 處理 Analysis Services 表格式模型資料分割 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dea6ad8d7ef5d183990734042177f8053bb5969b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f4b4cb7307c30d03b80ef800d6808f5ce85deaa5
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640925"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072015"
 ---
 # <a name="process-tabular-model-partitions"></a>處理表格式模型資料分割 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "51640925"
   
 3.  在 **處理資料分割**對話方塊中，於**模式**清單方塊中，選取其中一個程序模式如下：  
   
-    |[模式]|描述|  
+    |模式|描述|  
     |----------|-----------------|  
     |**處理預設**|偵測資料分割物件的處理狀態，並且執行必要的處理，以便將尚未處理或部分處理的資料分割物件傳遞為完整處理的狀態。 載入空白資料表和資料分割的資料；建立或重新建立階層、導出資料行及關聯性。|  
     |**完整處理**|處理資料分割物件及其包含的所有物件。 對已處理過的物件執行完整處理時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會先卸除該物件中的所有資料，然後再處理該物件。 當物件已進行過任何結構性變更時，就需要這種處理。|  

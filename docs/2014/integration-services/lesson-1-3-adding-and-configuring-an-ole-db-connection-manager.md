@@ -1,22 +1,21 @@
 ---
-title: 步驟 3：加入和設定 OLE DB 連線管理員 | Microsoft Docs
+title: 步驟 3：加入和設定 OLE DB 連線管理員 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 01defa7e46da434cea49944d3cc127740635b1b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c04f6fe6e414e2468277644ef74bb2dab395af33
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093908"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757110"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>步驟 3：加入和設定 OLE DB 連接管理員
   在加入一般檔案連接管理員來連接到資料來源之後，下一項工作是加入 OLE DB 連接管理員來連接到目的地。 OLE DB 連接管理員可讓封裝從任何 OLE DB 相容資料來源擷取資料或載入資料至該處。 使用 OLE DB 連接管理員，您可以指定連接的伺服器、驗證方法和預設資料庫。  
@@ -48,9 +47,9 @@ ms.locfileid: "48093908"
 10. 按一下 [確定] 。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 4：將資料流程工作新增至套件中](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+ [步驟 4:將資料流程工作加入封裝](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)  
+ [OLE DB 連接管理員](connection-manager/ole-db-connection-manager.md)  
   
   

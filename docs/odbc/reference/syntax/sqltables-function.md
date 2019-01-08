@@ -20,16 +20,16 @@ ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0930f61ea43fb77e93b9b3ebcb9d20073f1950d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfe77cba535b78f387a786ddc56f65cf87172644
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708356"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212397"
 ---
 # <a name="sqltables-function"></a>SQLTables 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： Open Group  
+ 導入的版本：ODBC 1.0 標準的合規性：開啟群組  
   
  **摘要**  
  **SQLTables**傳回的資料表、 目錄或結構描述名稱和資料表類型，儲存在特定資料來源清單。 驅動程式會傳回資訊當作結果集。  
@@ -156,7 +156,7 @@ SQLRETURN SQLTables(
 |TABLE_CAT (ODBC 1.0)|1|Varchar|目錄名稱;如果不適用於資料來源，則為 NULL。 如果驅動程式支援目錄對於某些資料表，但不適用於其他項目，例如當驅動程式會擷取不同 Dbms 中的資料，它會傳回空字串 ("") 沒有目錄這些資料表。|  
 |再依據 TABLE_SCHEM 排列 (ODBC 1.0)|2|Varchar|結構描述名稱;如果不適用於資料來源，則為 NULL。 如果驅動程式支援結構描述對於某些資料表，但不適用於其他項目，例如當驅動程式會擷取不同 Dbms 中的資料，它會傳回空字串 ("") 並沒有結構描述這些資料表。|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar|資料表名稱。|  
-|TABLE_TYPE (ODBC 1.0)|4|Varchar|資料表類型名稱;下列其中之一: 「 資料表 」、 「 檢視 」、 「 系統資料表 」、 「 全域暫存 」、 「 本機暫存 」、 「 別名 」、 「 同義字 」 或資料來源特定型別名稱。<br /><br /> 「 別名 」 和 「 同義字 」 的意義是驅動程式特定的。|  
+|TABLE_TYPE (ODBC 1.0)|4|Varchar|資料表類型名稱;下列其中一項：「 資料表 」、 「 檢視 」、 「 系統資料表 」、 「 全域暫存 」、 「 本機暫存 」、 「 別名 」、 「 同義字 」 或資料來源特定的型別名稱。<br /><br /> 「 別名 」 和 「 同義字 」 的意義是驅動程式特定的。|  
 |註解 (ODBC 1.0)|5|Varchar|資料表的描述。|  
   
 ## <a name="example"></a>範例  

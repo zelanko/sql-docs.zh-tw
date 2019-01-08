@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_replcmds_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00fec83a709b1c3bfba352663784b5018134769d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c868fe69df1f3fd34fe0c1f550507e7db7b6c944
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783488"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823422"
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |-----------------|---------------|-----------------|  
 |**文章識別碼**|**int**|發行項的識別碼。|  
 |**部分指令**|**bit**|指出這是否為部分命令。|  
-|命令|**varbinary(1024)**|命令值。|  
+|**command**|**varbinary(1024)**|命令值。|  
 |**xactid**|**binary(10)**|交易識別碼。|  
 |**xact_seqno**|**varbinary(16)**|交易序號。|  
 |**publication_id**|**int**|發行集的識別碼。|  

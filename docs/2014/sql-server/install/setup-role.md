@@ -11,12 +11,12 @@ ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 77a3e61d36ce9661a9b01095c868c7d54de81f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33cc1b337666e1d628ae285a7df0ba43cc4fe140
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130558"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352838"
 ---
 # <a name="setup-role"></a>安裝程式角色
   您可以使用此頁面來指定要使用 [特徵選取] 頁面選取個別功能，還是使用安裝程式角色進行安裝。  
@@ -32,7 +32,7 @@ ms.locfileid: "48130558"
   
  如果需要關聯式資料庫引擎執行個體以裝載 SharePoint 伺服器陣列的資料庫，可以選擇在安裝中新增關聯式資料庫引擎執行個體。 如果已設定伺服器陣列，您就可以略過此選項。  
   
- 安裝完成後，必須使用下列其中一個方法設定軟體：PowerPivot 配置工具、PowerShell 指令程式或 SharePoint 2010 管理中心。 相對於舊版，安裝程式不再執行 PowerPivot 安裝的任何組態工作。  
+ 安裝程式完成之後，您必須設定使用下列方法之一的軟體：PowerPivot 組態工具、 PowerShell cmdlet 或 SharePoint 2010 管理中心。 相對於舊版，安裝程式不再執行 PowerPivot 安裝的任何組態工作。  
   
  以角色為基礎的安裝不包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerPivot for Excel 用戶端應用程式。 用戶端應用程式要另外安裝。  
   
@@ -44,8 +44,8 @@ ms.locfileid: "48130558"
  當作業系統不是網域控制站時，Database Engine 和 Reporting Services 預設會使用 NTAUTHORITY\NETWORK SERVICE 帳戶、Integration Services 會使用 NTAUTHORITY\NETWORK SERVICE 帳戶，而 SQL 全文檢索篩選背景程式啟動器則會使用 NTAUTHORITY\LOCAL SERVICE 帳戶。  
   
 ## <a name="see-also"></a>另請參閱  
- [安裝 PowerPivot for SharePoint](http://go.microsoft.com/fwlink/?LinkId=206906)   
- [硬體和軟體需求 (PowerPivot for SharePoint](http://go.microsoft.com/fwlink/?LinkId=216823)   
+ [安裝 PowerPivot for SharePoint](https://go.microsoft.com/fwlink/?LinkId=206906)   
+ [硬體和軟體需求 (PowerPivot for SharePoint](https://go.microsoft.com/fwlink/?LinkId=216823)   
  [功能選取](../../../2014/sql-server/install/feature-selection.md)  
   
   

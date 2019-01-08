@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e013e2764f0d26982106fde6e653ce05bfcfa986
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4424504ddbfd0dfa1b16169186988141bb7b4c41
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071298"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814160"
 ---
 # <a name="open-and-configure-object-explorer"></a>開啟和設定物件總管
   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用 [檢視] 功能表來開啟物件總管。 使用 [工具] 功能表上的 [選項] 來設定物件總管選項。  

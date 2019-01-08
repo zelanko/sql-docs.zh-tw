@@ -18,12 +18,12 @@ ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e043fd2ea37b9ff790a519311e8db78fa443422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a686f78ea5dff8a3ea551016d9fbe9c9046b110
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659046"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545505"
 ---
 # <a name="spcursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_cursoroption cursor, code, value
  *cursor*  
  已*處理*所產生的值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和 sp_cursoropen 預存程序所傳回。 *資料指標*需要**int**輸入值才能執行。  
   
- *程式碼*  
+ *代碼*  
  用來保證資料指標的各種因數一定會傳回值。 *程式碼*需要下列其中一種**int**輸入值：  
   
 |值|名稱|描述|  
@@ -53,7 +53,7 @@ sp_cursoroption cursor, code, value
 |0x0003|TEXTDATA|在後續的提取上，針對某些 text 或 image 資料行傳回實際資料，而不是文字指標 (也就是說，這樣會復原 TEXTPTR_ONLY 的作用)。<br /><br /> 如果針對特定的資料行啟用 TEXTDATA，將會重新提取或重新整理資料列，而且可以設定回 TEXTPTR_ONLY。 如果是 TEXTPTR_ONLY，值參數是一個指定資料行編號的整數，以及傳回所有 text 或 image 資料行的零值。|  
 |0x0004|SCROLLOPT|捲動選項。 如需詳細資訊，請參閱這個主題稍後的「傳回碼值」。|  
 |0x0005|CCOPT|並行控制選項。 如需詳細資訊，請參閱這個主題稍後的「傳回碼值」。|  
-|0x0006|ROWCOUNT|目前結果集中的資料列數目。<br /><br /> 附註： 如果正在使用非同步擴展，sp_cursoropen 傳回值之後可能已變更資料列計數。 如果資料列數目未知，則會傳回 –1 的值。|  
+|0x0006|ROWCOUNT|目前結果集中的資料列數目。<br /><br /> 注意：如果正在使用非同步擴展，自從 sp_cursoropen 傳回值之後 ROWCOUNT 可能已經變更。 如果資料列數目是未知，則傳回-1 的值。|  
   
  *value*  
  指定所傳回的值*程式碼*。 *值*是必要的參數呼叫 0x0001，0x0002 或 0x0003*程式碼*輸入值。  

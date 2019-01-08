@@ -7,21 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.findreplace.findinfiles
-- vs.findinfiles
 helpviewer_keywords:
 - Find in Files dialog box
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 882e13938e85db653dbe43e859bbc582833d68d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a7b8baf1eb666e6639e7e7f47cbf6c321dc217b
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114058"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328636"
 ---
 # <a name="find-in-files"></a>檔案中尋找
   [尋找和取代] 視窗的 [檔案中尋找] 索引標籤，可以讓您在指定檔案集的程式碼中搜尋字串或運算式。 找到的相符結果與採取的動作會列在 [結果選項] 所選取的 [尋找結果] 視窗中。  
@@ -137,5 +134,3 @@ ms.locfileid: "48114058"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Management Studio 鍵盤快速鍵](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

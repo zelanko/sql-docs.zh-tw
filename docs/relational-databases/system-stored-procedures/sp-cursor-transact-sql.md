@@ -18,12 +18,12 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1fa8689862184f0554eff0aefd3d39896f2abdf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e3277e64e4c4e04e270298d3532ebc0c2b1f93c5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662517"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210517"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51662517"
   
 ||  
 |-|  
-|**適用於**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[最新版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
+|**適用於**：SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]經由[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,12 +54,12 @@ sp_cursor  cursor, optype, rownum, table
 |值|名稱|描述|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|這是用來更新提取緩衝區內的一個或多個資料列。  在指定的資料列*rownum*會重新存取及更新。|  
-|0x0002|Delete|這是用來刪除提取緩衝區內的一個或多個資料列。 在指定的資料列*rownum*會重新存取及刪除。|  
+|0x0002|DELETE|這是用來刪除提取緩衝區內的一個或多個資料列。 在指定的資料列*rownum*會重新存取及刪除。|  
 |0X0004|Insert|將資料插入而不建置 SQL**插入**陳述式。|  
 |0X0008|REFRESH|這是用來從基礎資料表重新填滿緩衝區，而且在更新或刪除因為開放式並行控制而失敗或者在 UPDATE 之後，可用來重新整理資料列。|  
 |0X10|LOCK|會導致 SQL Server U-lock 包含指定的資料列的頁面上取得。 這個鎖定與 S-Locks 相容，但是與 X-Locks 或其他 U-Locks 不相容。 可用來實作短期鎖定。|  
 |0X20|SETPOSITION|僅當程式即將發出後續的 SQL Server 定位 DELETE 或 UPDATE 陳述式使用。|  
-|0X40|ABSOLUTE|只能搭配 UPDATE 或 DELETE 使用。  ABSOLUTE 只能搭配 KEYSET 資料指標使用 (DYNAMIC 資料指標和 STATIC 資料指標則會忽略，而且無法更新)。<br /><br /> 注意： 如果在尚未提取索引鍵集中的資料列上指定 ABSOLUTE 時，作業可能失敗的並行存取檢查，而且無法保證傳回結果。|  
+|0X40|ABSOLUTE|只能搭配 UPDATE 或 DELETE 使用。  ABSOLUTE 只能搭配 KEYSET 資料指標使用 (DYNAMIC 資料指標和 STATIC 資料指標則會忽略，而且無法更新)。<br /><br /> 注意：如果在尚未提取之索引鍵集內的資料列上指定 ABSOLUTE，該作業可能無法通過並行檢查，而且無法保證傳回結果。|  
   
  *rownum*  
  指定資料指標將要運作、更新或刪除提取緩衝區內的哪些資料列。  
@@ -137,7 +137,7 @@ sp_cursor  cursor, optype, rownum, table
   
  當使用單一參數時，可以使用下列語法來提交 UPDATE 陳述式：  
   
- `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,…n]`  
+ `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
 >  如果更新\<資料表名稱 > 指定，則指定的任何值*表格*參數將會被忽略。  
@@ -169,7 +169,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- 除非在指定 VALUES 的情況下，此時最後一個運算式後面必須有尾端 ")"。 在此情況下， *\<資料表名稱 >* 建構的 UDPATE 陳述式會指定或預設為依*表格*參數。  
+ 除非在指定 VALUES 的情況下，此時最後一個運算式後面必須有尾端 ")"。 在此情況下， *\<資料表名稱 >* 在建構的 UPDATE 陳述式是指定或預設為依*表格*參數。  
   
 > [!NOTE]  
 >  可以將一個參數當做具名參數來提交，也就是 "`@VALUES`"。 在此情況下，無法使用其他具名參數。  

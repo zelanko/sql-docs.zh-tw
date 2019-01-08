@@ -5,8 +5,7 @@ ms.date: 11/09/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergearticle_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b9a298cb35b21559e6f89c42c61ca606674b504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04a142b477749c9de20c4bac0d7cb17be243a359
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752266"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823142"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x10**|在發行者端套用訂閱者所建立的 INSERT 陳述式之前，先在發行者端檢查資料表層級權限。|  
 ||**0x20**|在發行者端套用訂閱者所建立的 UPDATE 陳述式之前，先檢查發行者端的資料表層級權限。|  
 ||**0x40**|在發行者端套用訂閱者所建立的 DELETE 陳述式之前，先檢查發行者端的資料表層級權限。|  
-|**column_tracking**|**true**|開啟資料行層級追蹤。 只適用於資料表發行項。<br /><br /> 注意： 發行的資料表超過 246 個資料行不能使用資料行層級追蹤。|  
+|**column_tracking**|**true**|開啟資料行層級追蹤。 只適用於資料表發行項。<br /><br /> 注意：發行資料行數目超過 246 行的資料表時，即無法使用資料行層級追蹤。|  
 ||**false**|關閉資料行層級追蹤，將衝突偵測保留在資料列層級。 只適用於資料表發行項。|  
 |**compensate_for_errors**|**true**|在同步處理期間，當發生錯誤時，執行補償動作。 如需詳細資訊，請參閱 < [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
 ||**false**|不執行補償動作，這是預設行為。 如需詳細資訊，請參閱 < [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。<br /><br /> **\*\* 重要\* \*** 雖然受影響的資料列中的資料可能會顯示為未聚合的表現，只要解決任何錯誤，可以套用變更，聚合資料。 如果發行項的來源資料表已在另一個發行集，則會將值的*compensate_for_errors*必須是兩個發行項相同。|  
@@ -86,7 +85,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**partition_options**|**0**|發行項的篩選是靜態的，或不產生每個資料分割的唯一資料子集，也就是「重疊」的資料分割。|  
 ||**1**|資料分割重疊，在訂閱者端進行的 DML 更新並不會變更資料列所屬的資料分割。|  
 ||**2**|發行項的篩選會產生非重疊的資料分割，但多個訂閱者可以接收相同的資料分割。|  
-||**3**|發行項的篩選會產生對每項訂閱而言都是唯一的非重疊資料分割。<br /><br /> 注意： 如果您指定的值**3** for **partition_options**，可以只有單一訂用帳戶每個資料分割的該文章中的資料。 如果建立第二項訂閱，將新訂閱的篩選準則解析成現有訂閱的相同資料分割，就會卸除現有的訂閱。|  
+||**3**|發行項的篩選會產生對每項訂閱而言都是唯一的非重疊資料分割。<br /><br /> 注意：如果您指定的值**3** for **partition_options**，可以只有單一訂用帳戶每個資料分割的該文章中的資料。 如果建立第二項訂閱，將新訂閱的篩選準則解析成現有訂閱的相同資料分割，就會卸除現有的訂閱。|  
 |**pre_creation_command**|**None**|如果訂閱者端已有資料表，就不會採取任何動作。|  
 ||**delete**|根據子集篩選中的 WHERE 子句來發出一項刪除。|  
 ||**卸除**|在重新建立資料表之前，先卸除資料表。|  

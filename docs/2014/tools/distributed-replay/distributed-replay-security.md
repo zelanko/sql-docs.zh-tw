@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79e21716c4d484aa9dfba994bf1b970fedfe4235
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c040bde90a54b9327023d1e1889efdd2930d81b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181398"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350818"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay 安全性
   安裝和使用 [ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay] 功能之前，您應該先檢閱本主題中的重要安全性資訊。 本主題描述的是使用 Distributed Replay 之前必須進行的安裝後安全性設定步驟。 本主題亦描述與資料保護和重要移除步驟有關的重要考量。  
@@ -29,7 +29,7 @@ ms.locfileid: "48181398"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務帳戶|可以是網域使用者帳戶或本機使用者帳戶。 如果您使用本機使用者帳戶，Controller、Client 和目標 SQL Server 都必須在同一部電腦上執行。<br /><br /> **\*\* 安全性注意事項 \*\*** 我們建議您不要將此帳戶設定為 Windows 本機 Administrators 群組的成員。|  
 |用來執行 Distributed Replay 管理工具的互動式使用者帳戶|可以是本機使用者或網域使用者帳戶。 若要使用本機使用者帳戶，管理工具和控制器必須在同一部電腦上執行。|  
   
- **重要事項**：當您設定 Distributed Replay Controller 時，可以指定將用來執行 Distributed Replay Client 服務的一或多個使用者帳戶。 下列是支援帳戶的清單：  
+ **重要**:當您設定 Distributed Replay Controller 時，可以指定將用來執行 Distributed Replay Client 服務的一或多個使用者帳戶。 下列是支援帳戶的清單：  
   
 -   網域使用者帳戶  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48181398"
   
  若要設定 Controller DCOM 權限，請遵循下列步驟進行：  
   
-1.  **開啟 dcomcnfg.exe，亦即 [元件服務] 嵌入式管理單元**：這是用來設定 DCOM 權限的工具。  
+1.  **開啟 dcomcnfg.exe，[元件服務] 嵌入式管理單元**:這是用來設定 DCOM 權限的工具。  
   
     1.  在 Controller 電腦上，按一下 [開始]。  
   
@@ -78,9 +78,9 @@ ms.locfileid: "48181398"
   
     3.  按 ENTER 鍵。  
   
-2.  **設定整部電腦的 DCOM 權限**：針對下表所列的每個帳戶授與對應的整部電腦 DCOM 權限。 如需如何設定整部電腦權限的詳細資訊，請參閱 [檢查清單：管理 DCOM 應用程式](http://go.microsoft.com/fwlink/?LinkId=185842)。  
+2.  **設定全電腦的 DCOM 權限**:授與對應的整部電腦 DCOM 權限下表所列每個帳戶。 如需如何設定全電腦權限的詳細資訊，請參閱[檢查清單：管理 DCOM 應用程式](https://go.microsoft.com/fwlink/?LinkId=185842)。  
   
-3.  **設定應用程式特定的 DCOM 權限**：針對下表所列的每個帳戶授與對應的應用程式特定 DCOM 權限。 控制器服務的 DCOM 應用程式名稱是 **DReplayController**。 如需如何設定應用程式特定權限的詳細資訊，請參閱 [檢查清單：管理 DCOM 應用程式](http://go.microsoft.com/fwlink/?LinkId=185842)。  
+3.  **設定應用程式特定 DCOM 權限**:授與對應的應用程式特定 DCOM 權限下表所列每個帳戶。 控制器服務的 DCOM 應用程式名稱是 **DReplayController**。 如需如何設定應用程式特定權限的詳細資訊，請參閱[檢查清單：管理 DCOM 應用程式](https://go.microsoft.com/fwlink/?LinkId=185842)。  
   
  下表描述哪些 DCOM 權限是管理工具互動式使用者帳戶和 Client 服務帳戶所需的權限：  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48181398"
 -   刪除用於測試的任何追蹤、中繼、分派和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫檔案。 中繼和分派檔案會分別儲存在 Controller 和 Client 的工作目錄中。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Distributed 的 Replay](sql-server-distributed-replay.md)   
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [安裝 Distributed Replay](install-distributed-replay-overview.md)  
   
   

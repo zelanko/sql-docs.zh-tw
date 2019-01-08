@@ -20,16 +20,16 @@ ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59199461d6a0d827cad043f0b6bdbe35d425815f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa1b2afec38116bef3ae90d75607d21c9a92cd80
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855916"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204557"
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran 函數
 **合規性**  
- 版本導入： ODBC 3.0 版的標準符合性： ISO 92  
+ 導入的版本：ODBC 3.0 版的標準合規性：ISO 92  
   
  **摘要**  
  **SQLEndTran**要求所有作用中的作業與連接相關聯的所有陳述式的認可或回復作業。 **SQLEndTran**也可以要求認可或復原作業會執行與環境相關聯的所有連線。  
@@ -132,13 +132,13 @@ SQLRETURN SQLEndTran(
   
 -   驅動程式未傳回下列訊息，確認交易未完成的其中一個：  
   
-    -   25S03： 回復交易  
+    -   25S03:回復交易  
   
-    -   40001： 序列化失敗  
+    -   40001:序列化失敗  
   
-    -   40002： 完整性條件約束  
+    -   40002:完整性條件約束  
   
-    -   HYC00： 未實作的選擇性功能  
+    -   HYC00:未實作選擇性功能  
   
  如果**SQLEndTran**呼叫安全的環境控制代碼和其連線的其中一個符合上述條件，連接到相同的驅動程式的所有連線將會都進入暫停狀態。  
   

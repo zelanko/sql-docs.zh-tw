@@ -22,12 +22,12 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0b9aad137958510f623308ef83f5d18c74d02164
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2fe55455a8302f4ca8a2784899211b772f2f09e6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148928"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213487"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 訂閱是在特定時間，或是為了回應某個事件時，以您指定的檔案格式所傳遞之報表組態。 例如，在每個星期三將 MonthlySales.rdl 報表以 Microsoft Word 文件儲存至檔案共用。 訂閱可用於排程及自動化報表的傳遞，並可搭配一組特定的報表參數值。  
@@ -38,8 +38,8 @@ ms.locfileid: "48148928"
   
  並非所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本都提供訂閱。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
-> [!NOTE]  
->  開頭[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]可以程式設計的方式傳送訂閱的擁有權。 沒有任何使用者介面可以用來傳送訂閱的擁有權。 如需詳細資訊，請參閱 <<c0> <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> 並[使用 PowerShell 變更及清單 Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md)。  
+> [!NOTE]
+>  從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 開始，您可以用程式設計的方式傳送訂閱的擁有權。 沒有任何使用者介面可以用來傳送訂閱的擁有權。 如需詳細資訊，請參閱 <<c0> <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> 並[使用 PowerShell 變更及清單 Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md)。  
   
  **本主題內容：**  
   
@@ -104,8 +104,8 @@ ms.locfileid: "48148928"
 |需求|描述|  
 |-----------------|-----------------|  
 |Permissions|您必須擁有報表存取權。 在訂閱報表之前，必須擁有檢視報表的權限。<br /><br /> 您的角色指派必須包括「管理個別訂閱」工作。|  
-|預存認證|若要建立訂閱，報表必須使用預存認證或不使用認證，才能在執行階段擷取資料。 您無法訂閱設定為使用目前使用者之模擬或委派認證來連接至外部資料來源的報表。 預存認證可以是 Windows 帳戶或資料庫使用者帳戶。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> 您必須擁有檢視報表和建立個別訂閱的權限。 報表伺服器必須啟用 **[排程的事件和報表傳遞]** 。 如需詳細資訊，請參閱 <<c0> [ 建立及管理原生模式報表伺服器的訂閱](../create-manage-subscriptions-native-mode-report-servers.md)。|  
-|報表中的使用者相依值|只有在標準訂閱中才可以建立報表的訂閱，將使用者帳戶資訊併入到篩選中，或是當做出現在報表中的文字來併入。 在報表中，透過指定的使用者帳戶名稱`User!UserID`解析為目前使用者的運算式。 在您建立訂閱時，會將建立訂閱的使用者視為目前的使用者。|  
+|預存認證|若要建立訂閱，報表必須使用預存認證或不使用認證，才能在執行階段擷取資料。 您無法訂閱設定為使用目前使用者之模擬或委派認證來連接至外部資料來源的報表。 預存認證可以是 Windows 帳戶或資料庫使用者帳戶。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)<br /><br /> 您必須擁有檢視報表和建立個別訂閱的權限。 報表伺服器必須啟用 **[排程的事件和報表傳遞]** 。 如需詳細資訊，請參閱 [建立和管理原生模式報表伺服器的訂閱](../create-manage-subscriptions-native-mode-report-servers.md)。|  
+|報表中的使用者相依值|只有在標準訂閱中才可以建立報表的訂閱，將使用者帳戶資訊併入到篩選中，或是當做出現在報表中的文字來併入。 在報表中，使用者帳戶名稱是透過解析為目前使用者的 `User!UserID` 運算式來指定。 在您建立訂閱時，會將建立訂閱的使用者視為目前的使用者。|  
 |沒有模型項目安全性|如果「報表產生器」報表是使用模型當做資料來源，而該模型包含模型項目安全性設定，您便無法訂閱此報表。 這項限制中只包含使用模型項目安全性的報表。|  
 |參數值|如果報表使用參數，則參數值必須在報表本身、或您所定義的訂閱中指定。 如果在報表中定義了預設值，您就可以設定參數值以使用預設值。|  
   

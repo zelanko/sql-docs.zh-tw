@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sequencecontainer.f1
@@ -18,12 +17,12 @@ ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: daaec371cae5f224201c7e4660574ec5734c90fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7c66b78b6e6e8af245b71994c92d505b3f85ef9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183278"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772970"
 ---
 # <a name="sequence-container"></a>時序容器
   「時序」容器會定義屬於封裝控制流程子集的控制流程。 「時序」容器會將封裝納入多個不同的控制流程中，而各流程中包含在整個封裝控制流程內執行的一項或多項工作和容器。  
@@ -57,8 +56,8 @@ ms.locfileid: "48183278"
  如需如何設定 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中元件屬性的資訊，請參閱 [設定工作或容器的屬性](../set-the-properties-of-a-task-or-container.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [新增或刪除工作或容器，以控制流程中](add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [使用預設的優先順序條件約束來連線工作和容器](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
+ [在控制流程中加入或刪除工作或容器](add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [使用預設的優先順序條件約束來連接工作和容器](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Integration Services 容器](integration-services-containers.md)  
   
   

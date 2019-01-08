@@ -22,17 +22,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5f671e8450255e9c03005c71d6f887c63559d3a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90ad88cfaae5c82b79d9da1fa7de5baa60fe46f3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603846"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403713"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **注意： 這只適用於[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11。**  
+  **注意：這只適用於[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11。**  
   
  傳回每個資料庫中所使用的網路頻寬的相關資訊 **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11 邏輯伺服器**。 針對所指資料庫傳回的每一個資料列都會摘要說明在一小時內的單一使用方向和類別。  
   
@@ -44,8 +44,8 @@ ms.locfileid: "47603846"
 |-----------------|-----------------|  
 |**time**|頻寬消耗的小時。 這個檢視中的資料列是以每小時為基礎。 例如，2009-09-19 02:00:00.000 表示頻寬是在 2009 年 9 月 19 日的上午 2:00  和 3:00 之間耗用。|  
 |**database_name**|使用頻寬的資料庫名稱。|  
-|**方向**|使用的頻寬類型，下列其中一個值：<br /><br /> 輸入： 資料移入[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 輸出： 移出資料[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
-|**class**|使用的頻寬類別，下列其中一個值：<br />內部： 移動 Azure 平台內的資料。<br />Azure 平台移出的外部： 資料。<br /><br /> 此類別在資料庫參與區域之間的連續複製關聯性時，才會傳回 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)])。 If a given database does not participate in any continuous copy relationship, then “Interlink” rows are not returned. 如需詳細資訊，請參閱本主題稍後的＜備註＞一節。|  
+|**direction**|使用的頻寬類型，下列其中一個值：<br /><br /> 輸入：移入 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的資料。<br /><br /> 輸出：從 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 移出的資料。|  
+|**class**|使用的頻寬類別，下列其中一個值：<br />內部：在 Azure 平台中移動的資料。<br />外部功能：從 Azure 平台移出的資料。<br /><br /> 這個類別只會在資料庫參與區域 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]) 之間的連續複製關聯性時傳回。 如果指定的資料庫未參與任何連續複製關聯性，則不會傳回"Interlink"資料列。 如需詳細資訊，請參閱本主題後面的＜備註＞一節。|  
 |**time_period**|發生使用時的時間週期是尖峰時間或離峰。 The Peak time is based on the region in which the server was created. 例如，如果伺服器是在 "US_Northwest" 區域中建立，則尖峰時間會定義為介於太平洋標準時間上午 10:00 到 和 06:00:00 執行報表， 之間。|  
 |**數量**|使用的頻寬數量，以 KB 為單位。|  
   

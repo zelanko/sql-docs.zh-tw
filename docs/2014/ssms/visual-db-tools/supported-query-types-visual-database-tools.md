@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Delete query
@@ -22,15 +22,15 @@ ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 543c70df2cda31251eb193f1acf04ab46ec8cddf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 752467d058a6618ccfa44d7e2f75ac33b632878e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065848"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792770"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>支援的查詢類型 (Visual Database Tools)
-  在[查詢和檢視表設計工具](visual-database-tools.md)的 [圖表] 和 [準則] 窗格 (圖形窗格) 中，您可以建立下列查詢類型：  
+  在 [查詢和檢視表設計工具](visual-database-tools.md)的 [圖表] 和 [準則] 窗格 (圖形窗格) 中，您可以建立下列查詢類型：  
   
 -   **選取查詢** ：從一或多個資料表或檢視擷取資料。 此類查詢將建立 SQL SELECT 陳述式。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48065848"
   
 -   **插入值** ：建立新資料列，並將新值插入至指定的資料行。 此類查詢將建立 SQL INSERT INTO...VALUES 陳述式。  
   
--   **更新查詢** ：變更資料表中一或多個現有資料列中的個別資料行值。 此類查詢將建立 SQL UPDATE…SET 陳述式。  
+-   **更新查詢** ：變更資料表中一或多個現有資料列中的個別資料行值。 此類查詢會建立 SQL UPDATE...SET 陳述式。  
   
 -   **刪除查詢** ：從資料表移除一或多個資料列。 這類查詢將建立 SQL DELETE 陳述式。  
   

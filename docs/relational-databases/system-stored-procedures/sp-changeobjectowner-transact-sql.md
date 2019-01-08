@@ -18,22 +18,22 @@ ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 30ae865060ff3d667de8f18c6d73f4b7087f0780
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16ba2e0130c766763c554d6ec256a8858db3373b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707696"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204927"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   變更目前資料庫中的物件擁有者。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  這個預存程序只能搭配中可用的物件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md)或是[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)改。 **sp_changeobjectowner**變更結構描述和擁有者。 為了保留與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的相容性，當目前擁有者和新擁有者同時擁有與資料庫使用者同名的結構描述時，這個預存程序只會變更物件擁有者。  
-  
-> [!IMPORTANT]  
+> 
+> [!IMPORTANT]
 >  新的權限需求已經加入這個預存程序中。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

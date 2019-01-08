@@ -20,16 +20,16 @@ ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d59e4d93b082312b6ae33fc3c2e2ca1e4177c771
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06a1997b482c45ea4b529c1230ef1cb2c61dc873
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815172"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212708"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations 函式
 **合規性**  
- 版本導入： ODBC 3.0 版的標準符合性： ODBC  
+ 導入的版本：ODBC 3.0 版的標準合規性：ODBC  
   
  **摘要**  
  **SQLBulkOperations**會執行大量插入以及大量的書籤的作業，包括更新、 刪除和擷取書籤。  
@@ -89,7 +89,7 @@ SQLRETURN SQLBulkOperations(
 |HY010|函數順序錯誤|(DM) 以非同步方式執行的函式呼叫的連接控制代碼相關聯*StatementHandle*。 此非同步函式仍在執行時**SQLBulkOperations**呼叫函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**針對呼叫*StatementHandle*並傳回 SQL_PARAM_DATA_可使用。 資料已擷取所有的資料流參數前呼叫此函式。<br /><br /> (DM) 指定*StatementHandle*不處於執行狀態。 已呼叫的函式，但是未先呼叫**SQLExecDirect**， **SQLExecute**，或目錄函式。<br /><br /> 以非同步方式執行的函式 （不是此一） 已呼叫 」 (DM) *StatementHandle*和仍在呼叫此函式時所執行。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLSetPos**針對呼叫*StatementHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。<br /><br /> (DM) 驅動程式的 ODBC 2。*x*驅動程式，並**SQLBulkOperations**針對呼叫*StatementHandle*之前**SQLFetchScroll**或**SQLFetch**呼叫。<br /><br /> (DM) **SQLBulkOperations**後才呼叫**SQLExtendedFetch**上呼叫*StatementHandle*。|  
 |HY011|現在無法設定屬性|(DM) 驅動程式的 ODBC 2。*x*驅動程式，以及 sql_attr_row_status_ptr 設定陳述式屬性設定呼叫之間**SQLFetch**或是**SQLFetchScroll**並**SQLBulkOperations**.|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足情況。|  
-|HY090|字串或緩衝區長度無效|*作業*引數為 SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK; 的資料值不是 null 指標; C 資料類型是否 SQL_C_BINARY SQL_C_CHAR; 和資料行的長度值小於 0，但不是等於 SQL_DATA_AT_EXECSQL_COLUMN_IGNORE、 SQL_NTS 或 SQL_NULL_DATA，或是小於或等於 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 長度/指標緩衝區中的值為 SQL_DATA_AT_EXEC;SQL 類型是 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或很長的資料來源特定的資料類型使用;和中的 SQL_NEED_LONG_DATA_LEN 資訊類型**SQLGetInfo**是"Y"。<br /><br /> *作業*引數為 SQL_ADD、 SQL_ATTR_USE_BOOKMARK 陳述式屬性設定為 SQL_UB_VARIABLE，且資料行 0 已繫結至其長度不等於此結果集的書籤的最大長度的緩衝區。 (這個長度的 SQL_DESC_OCTET_LENGTH IRD 欄位中而且可由呼叫**SQLDescribeCol**， **SQLColAttribute**，或**SQLGetDescField**。)|  
+|HY090|字串或緩衝區長度無效|*作業*引數為 SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK; 的資料值不是 null 指標; C 資料類型是否 SQL_C_BINARY SQL_C_CHAR; 和資料行的長度值小於 0，但不是等於 SQL_DATA_AT_EXECSQL_COLUMN_IGNORE、 SQL_NTS 或 SQL_NULL_DATA，或是小於或等於 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 長度/指標緩衝區中的值為 SQL_DATA_AT_EXEC;SQL 類型是 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或很長的資料來源特有的資料類型使用;和中的 SQL_NEED_LONG_DATA_LEN 資訊類型**SQLGetInfo**是"Y"。<br /><br /> *作業*引數為 SQL_ADD、 SQL_ATTR_USE_BOOKMARK 陳述式屬性設定為 SQL_UB_VARIABLE，且資料行 0 已繫結至其長度不等於此結果集的書籤的最大長度的緩衝區。 (這個長度的 SQL_DESC_OCTET_LENGTH IRD 欄位中而且可由呼叫**SQLDescribeCol**， **SQLColAttribute**，或**SQLGetDescField**。)|  
 |HY092|無效的屬性識別碼|(DM) 指定的值*作業*引數無效。<br /><br /> *作業*引數為 SQL_ADD、 SQL_UPDATE_BY_BOOKMARK 或 SQL_DELETE_BY_BOOKMARK，且 SQL_ATTR_CONCURRENCY 陳述式屬性已設定為 SQL_CONCUR_READ_ONLY。<br /><br /> *作業*引數為 SQL_DELETE_BY_BOOKMARK、 SQL_FETCH_BY_BOOKMARK 或 SQL_UPDATE_BY_BOOKMARK，且書籤資料行未繫結或 SQL_ATTR_USE_BOOKMARKS 陳述式屬性已設為 SQL_UB_OFF。|  
 |HY117|連接已因為未知的交易狀態暫止。 只中斷連線，並允許唯讀的函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函式](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYC00|未實作選擇性功能|驅動程式或資料來源不支援要求中的作業*作業*引數。|  
@@ -102,7 +102,7 @@ SQLRETURN SQLBulkOperations(
 ## <a name="comments"></a>註解  
   
 > [!CAUTION]  
->  如需有關哪個陳述式表示資訊**SQLBulkOperations**可以呼叫而且它必須執行的 ODBC 2 的相容性。*x*應用程式，請參閱[區塊資料指標、 可捲動的資料指標和回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)附錄 g： 驅動程式的指導方針提供回溯相容性一節。  
+>  如需有關哪個陳述式表示資訊**SQLBulkOperations**可以呼叫而且它必須執行的 ODBC 2 的相容性。*x*應用程式，請參閱[區塊資料指標、 可捲動的資料指標和回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)節 < 附錄 g:為了與舊版相容的驅動程式指導方針。  
   
  應用程式使用**SQLBulkOperations**來執行下列作業的基底資料表或檢視對應到目前的查詢：  
   
@@ -232,7 +232,7 @@ SQLRETURN SQLBulkOperations(
   
 1.  當它的資料繫結使用**SQLBindCol**，應用程式就會進入應用程式定義值，例如資料行編號 *\*TargetValuePtr*執行資料的緩衝區資料行。 值可以用來識別的資料行的更新版本。  
   
-     應用程式會放 SQL_LEN_DATA_AT_EXEC 的結果 (*長度*) 中的巨集 *\*StrLen_or_IndPtr*緩衝區。 如果 SQL 資料類型的資料行是 SQL_LONGVARBINARY、 SQL_LONGVARCHAR 或 long 資料來源特定的資料類型和驅動程式會傳回"Y"表示 SQL_NEED_LONG_DATA_LEN 類型資訊，請在**SQLGetInfo**，*長度*是參數; 傳送資料的位元組數目，否則必須為非負數值，並會被忽略。  
+     應用程式會放 SQL_LEN_DATA_AT_EXEC 的結果 (*長度*) 中的巨集 *\*StrLen_or_IndPtr*緩衝區。 如果 SQL 資料類型的資料行是 SQL_LONGVARBINARY、 SQL_LONGVARCHAR 或 long 資料來源特有的資料類型和驅動程式會傳回"Y"表示 SQL_NEED_LONG_DATA_LEN 類型資訊，請在**SQLGetInfo**，*長度*是參數; 傳送資料的位元組數目，否則必須為非負數值，並會被忽略。  
   
 2.  當**SQLBulkOperations**呼叫時，如果有資料在執行中資料行，函數會傳回 SQL_NEED_DATA，繼續進行步驟 3 中，哪一種。 （如果沒有執行資料的資料行，此程序已完成。）  
   
@@ -243,7 +243,7 @@ SQLRETURN SQLBulkOperations(
   
      資料在執行中資料行是資料會傳送使用資料列集中的資料行**SQLPutData**更新或插入資料列時**SQLBulkOperations**。 使用繫結**SQLBindCol**。 所傳回的值**SQLParamData**是中的資料列的地址 **TargetValuePtr*正在處理的緩衝區。  
   
-4.  應用程式會呼叫**SQLPutData**一或多次來傳送資料行的資料。 如果無法以傳回所有資料值，就需要超過一次呼叫 *\*TargetValuePtr*中指定的緩衝區**SQLPutData**; 多次呼叫**SQLPutData**或傳送二進位的 C 資料行的字元、 二進位，傳送字元 C 資料行的字元、 二進位檔或資料來源特定的資料型別時，只允許相同的資料行或資料來源特有的資料型別。  
+4.  應用程式會呼叫**SQLPutData**一或多次來傳送資料行的資料。 如果無法以傳回所有資料值，就需要超過一次呼叫 *\*TargetValuePtr*中指定的緩衝區**SQLPutData**; 多次呼叫**SQLPutData**或傳送二進位的 C 資料行的字元、 二進位，傳送字元 C 資料行的字元、 二進位檔或資料來源特有的資料型別時，只允許相同的資料行或資料來源特定的資料類型。  
   
 5.  應用程式會呼叫**SQLParamData**再次來表示，所有資料都傳送的資料行。  
   

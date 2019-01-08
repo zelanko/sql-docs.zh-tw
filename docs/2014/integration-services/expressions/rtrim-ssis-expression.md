@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - RTRIM function
@@ -14,12 +13,12 @@ ms.assetid: 529bd43e-3f8a-4682-a33e-569176aa7fc4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f6ace4587398ede5b55ef67599db2b6377596ee2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1af0eb05e1e6f93822e7c92a4b51ffb19a824e07
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201168"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808050"
 ---
 # <a name="rtrim-ssis-expression"></a>RTRIM (SSIS 運算式)
   傳回移除尾端空白之後的字元運算式。  
@@ -68,6 +67,6 @@ RTRIM(@FirstName)
 ## <a name="see-also"></a>另請參閱  
  [LTRIM &#40;SSIS 運算式&#41;](trim-ssis-expression.md)   
  [TRIM &#40;SSIS 運算式&#41;](trim-ssis-expression.md)   
- [函式&#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
+ [函數 &#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
   
   

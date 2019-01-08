@@ -20,16 +20,16 @@ ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c26111571eb505640acee035cba37d617b43c481
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a680f5579b241f6b279f5ecc994d32c8fad784f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849936"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205357"
 ---
 # <a name="sqlmoreresults-function"></a>SQLMoreResults 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ODBC  
+ 導入的版本：ODBC 1.0 標準的合規性：ODBC  
   
  **摘要**  
  **SQLMoreResults**判斷是否可以使用在上一個陳述式，其中包含更多結果**選取**，**更新**，**插入**，或**刪除**陳述式和初始化若是如此，處理這些結果。  
@@ -39,7 +39,7 @@ ms.locfileid: "47849936"
 ```  
   
 SQLRETURN SQLMoreResults(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -73,7 +73,7 @@ SQLRETURN SQLMoreResults(
 ## <a name="comments"></a>註解  
  **選取**陳述式會傳回結果集。 **更新**，**插入**，以及**刪除**陳述式會傳回受影響的資料列計數。 如果任何這些陳述式的批次處理送出陣列的參數 （以遞增的參數順序，批次中出現的順序編號），或在程序中，它們可以傳回多個結果集或資料列計數。 陳述式的批次和參數陣列的相關資訊，請參閱[批次的 SQL 陳述式](../../../odbc/reference/develop-app/batches-of-sql-statements.md)並[參數值的陣列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)。  
   
- 執行批次之後, 應用程式位於第一個結果集。 應用程式可以呼叫**SQLBindCol**， **SQLBulkOperations**， **SQLFetch**， **SQLGetData**， **SQLFetchScroll**， **SQLSetPos**，所有中繼資料函式，第一個或任何後續的結果集，就像它就只是單一結果集一樣。 一旦完成第一個結果集，應用程式會呼叫**SQLMoreResults**移至下一個結果集。 如果另一個結果集或計數，則**SQLMoreResults**都會傳回 SQL_SUCCESS，並初始化的結果集或進行其他處理的計數。 如果任何資料列計數 – 產生陳述式出現在結果集-產生的陳述式，請依呼叫逐步執行**SQLMoreResults**。之後呼叫**SQLMoreResults** for**更新**，**插入**，或**刪除**陳述式中，應用程式可以呼叫**SQLRowCount**。  
+ 執行批次之後, 應用程式位於第一個結果集。 應用程式可以呼叫**SQLBindCol**， **SQLBulkOperations**， **SQLFetch**， **SQLGetData**， **SQLFetchScroll**， **SQLSetPos**，所有中繼資料函式，第一個或任何後續的結果集，就像它就只是單一結果集一樣。 一旦完成第一個結果集，應用程式會呼叫**SQLMoreResults**移至下一個結果集。 如果另一個結果集或計數，則**SQLMoreResults**都會傳回 SQL_SUCCESS，並初始化的結果集或進行其他處理的計數。 如果任何資料列計數產生陳述式出現在結果集產生的陳述式，請依呼叫逐步執行**SQLMoreResults**。之後呼叫**SQLMoreResults** for**更新**，**插入**，或**刪除**陳述式中，應用程式可以呼叫**SQLRowCount**。  
   
  如果沒有目前未提取資料列結果集， **SQLMoreResults**會捨棄該結果集，並讓下一個結果集，或計算可用。 如果已處理所有結果， **SQLMoreResults**傳回 sql_no_data 為止。 有些驅動程式，為輸出參數和傳回值無法使用。 直到已經處理所有結果集和資料列計數 這類驅動程式中，輸出參數和傳回值變成可用時**SQLMoreResults**傳回 sql_no_data 為止。  
   
@@ -89,14 +89,14 @@ SQLRETURN SQLMoreResults(
   
  如果搜尋 update、 insert 或 delete 陳述式在批次陳述式不會影響資料來源，在任何資料列**SQLMoreResults**都會傳回 SQL_SUCCESS。 這點不同於大小寫的搜尋更新、 插入或刪除透過執行陳述式**SQLExecDirect**， **SQLExecute**，或**SQLParamData**，如果它不會影響在資料來源的任何資料列，則傳回 sql_no_data 為止。 如果應用程式呼叫**SQLRowCount**在呼叫之後擷取的資料列計數**SQLMoreResults**具有不受影響的任何資料列， **SQLRowCount**會傳回 sql_no_data 為止。  
   
- 如需有關有效的排序結果處理函式的詳細資訊，請參閱[附錄 b: ODBC 狀態轉換資料表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
+ 如需有關有效的排序結果處理函式的詳細資訊，請參閱[附錄 b:狀態轉換資料表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
   
  如需有關 SQL_PARAM_DATA_AVAILABLE 和資料流的輸出參數的詳細資訊，請參閱[使用 SQLGetData 擷取輸出參數](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。  
   
 ## <a name="availability-of-row-counts"></a>資料列計數的可用性  
- 當批次包含多個連續的資料列計數 – 產生陳述式時，就可以在這些資料列計數會彙總，到只在一個資料列計數。 比方說，如果批次中有五個 insert 陳述式，則某些資料來源是能夠傳回五個個別的資料列計數。 特定資料來源傳回只有一個資料列計數，表示五個個別的資料列計數的總和。  
+ 當批次包含多個連續的資料列計數產生陳述式時，就可以在這些資料列計數會彙總，到只在一個資料列計數。 比方說，如果批次中有五個 insert 陳述式，則某些資料來源是能夠傳回五個個別的資料列計數。 特定資料來源傳回只有一個資料列計數，表示五個個別的資料列計數的總和。  
   
- 當批次包含結果集 – 產生和資料列計數-產生的陳述式的組合時，資料列計數可能會或可能無法完全。 相對於資料列計數的可用性驅動程式的行為會列舉在 SQL_BATCH_ROW_COUNT 資訊類型，可透過呼叫**SQLGetInfo**。 例如，假設 批次包含**選取 **，後面兩個**插入**s，而另一個**選取**。 下列情況下便可以：  
+ 當批次包含結果集產生和資料列計數產生陳述式的組合時，資料列計數可能會或可能無法完全。 相對於資料列計數的可用性驅動程式的行為會列舉在 SQL_BATCH_ROW_COUNT 資訊類型，可透過呼叫**SQLGetInfo**。 例如，假設 批次包含**選取 **，後面兩個**插入**s，而另一個**選取**。 下列情況下便可以：  
   
 -   資料列計數對應到兩個**插入**陳述式完全不提供。 第一次呼叫**SQLMoreResults**放置您的第二個結果集上**選取**陳述式。  
   

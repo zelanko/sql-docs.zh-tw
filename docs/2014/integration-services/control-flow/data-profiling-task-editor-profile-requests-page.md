@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.profilerequests.f1
@@ -15,12 +14,12 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 712da8b3c08d5bb73913e0585b7d1f87f5ef7396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1541bc888c40916bf6ca613390685df9f816012
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189171"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815380"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
   您可以使用 **[資料分析工作編輯器]** 的 **[設定檔要求]** 頁面來選取並設定想要計算的設定檔。 在單一「資料分析」工作中，您可以針對多個資料表或檢視表中的多個資料行或資料行組合計算多個設定檔。  
@@ -49,15 +48,15 @@ ms.locfileid: "48189171"
 ### <a name="requests-pane-columns"></a>要求窗格資料行  
  要求窗格所顯示的資料行會根據您所選取的 **[檢視]** 而不同：  
   
--   如果您選取檢視 **[所有要求]**，要求窗格就會有兩個資料行： **[設定檔類型]** 和 **[要求識別碼]**。  
+-   如果您選取檢視**所有要求**，要求窗格就會有兩個資料行：**設定檔類型**並**要求識別碼**。  
   
--   如果您選取檢視五個資料行設定檔的其中一個，要求窗格就會有四個資料行： **[設定檔類型]**、 **[資料表或檢視表]**、 **[資料行]** 和 **[要求識別碼]**。  
+-   如果您選取檢視五個資料行設定檔的其中一個，要求窗格就會有四個資料行：**設定檔類型**，**資料表或檢視表**，**資料行**，和**要求識別碼**。  
   
--   如果您選取檢視候選索引鍵設定檔，要求窗格就會有四個資料行：[設定檔類型]、[資料表或檢視表]、[索引鍵資料行] 和 [要求識別碼]。  
+-   如果您選取檢視候選索引鍵設定檔，要求窗格就會有四個資料行：**設定檔類型**，**資料表或檢視表**， **KeyColumns**，和**要求識別碼**。  
   
--   如果您選取檢視功能相依性設定檔，要求窗格就會有五個資料行： **[設定檔類型]**、 **[資料表或檢視表]**、 **[行列式資料行]**、 **[相依資料行]** 和 **[要求識別碼]**。  
+-   如果您選取檢視功能相依性設定檔，要求窗格就會有五個資料行：**設定檔類型**，**資料表或檢視表**，**行列式資料行**，**相依資料行**，並**要求識別碼**。  
   
--   如果您選取檢視值包含設定檔，要求窗格就會有六個資料行： **[設定檔類型]**、 **[子集資料表或檢視表]**、 **[超集資料表或檢視表]**、 **[子集資料行]**、 **[超集資料行]** 和 **[要求識別碼]**。  
+-   如果您選取檢視值包含設定檔，要求窗格就會有六個資料行：**設定檔類型**，**子集資料表或檢視表**，**超集的端資料表或檢視表**，**子集資料行**，**超集資料行**，並**要求識別碼**。  
   
  下列各節會分別描述每個資料行。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "48189171"
 |**資料行長度散發設定檔要求**|計算資料行長度散發設定檔。<br /><br /> 資料行長度散發設定檔會報告選取之資料行中字串值的所有相異長度，以及該資料表中每個長度所代表之資料列的百分比。 這個設定檔可協助您識別資料中的問題，例如無效的值。 舉例來說，您分析了美國州名二字元代碼的資料行並發現長度超過兩個字元的值。|  
 |**資料行 Null 比例設定檔要求**|計算資料行 Null 比例設定檔。<br /><br /> 資料行 Null 比例設定檔會報告選取之資料行中 Null 值的百分比。 這個設定檔可協助您識別資料中的問題，例如某個資料行中 Null 值的比例過高。 舉例來說，您分析了「郵遞區號」資料行並發現遺漏郵遞區號的百分比過高。|  
 |**資料行模式設定檔要求**|計算資料行模式設定檔。<br /><br /> 資料行模式設定檔會報告一組規則運算式，其中涵蓋了字串資料行中值的指定百分比。 這個設定檔可協助您識別資料中的問題，例如屬於無效字串的字串。 這個設定檔也可以建議未來可用於驗證新值的規則運算式。 舉例來說，「郵遞區號」的資料行模式設定檔可能會產生規則運算式：\d{5}-\d{4}、\d{5} 和 \d{9}。 如果您看見其他規則運算式，表示資料可能包含無效或格式錯誤的值。|  
-|**資料行統計資料設定檔要求**|選取此選項，即可使用選取之資料表或檢視表中所有適用資料行的預設設定來計算資料行統計資料設定檔。<br /><br /> 資料行統計資料設定檔會報告統計資料，例如最小值、 最大值、 平均值和標準差的數字的資料行和最小和最大值`datetime`資料行。 這個設定檔可協助您識別資料中的問題，例如無效的日期。 舉例來說，您分析了歷程記錄日期的資料行，並發現屬於未來的最大日期。|  
+|**資料行統計資料設定檔要求**|選取此選項，即可使用選取之資料表或檢視表中所有適用資料行的預設設定來計算資料行統計資料設定檔。<br /><br /> 資料行統計資料設定檔會報告數值資料行的最小值、最大值、平均和標準差，以及 `datetime` 資料行的最小值和最大值等統計資料。 這個設定檔可協助您識別資料中的問題，例如無效的日期。 舉例來說，您分析了歷程記錄日期的資料行，並發現屬於未來的最大日期。|  
 |**資料行值散發設定檔要求**|計算資料行值散發設定檔。<br /><br /> 資料行值散發設定檔會報告選取之資料行中的所有相異值，以及該資料表中每個值所代表之資料列的百分比。 這個設定檔也可以報告代表超過資料表中指定之百分比的值。 這個設定檔可協助您識別資料中的問題，例如某個資料行中相異值的數目不正確。 舉例來說，您分析了包含美國州名的資料行並發現超過 50 個相異值。|  
 |**功能相依性設定檔要求**|計算功能相依性設定檔。<br /><br /> 功能相依性設定檔會報告某個資料行 (相依資料行) 中的值相依於另一個資料行或資料行集合 (行列式資料行) 中之值的程度。 這個設定檔也可協助您識別資料中的問題，例如無效的值。 舉例來說，您分析了「美國郵遞區號」資料行與「美國州名」資料行之間的相依性。 相同的郵遞區號應該永遠具有相同的州名，但是此設定檔卻發現了這個相依性的違規。|  
 |**值包含設定檔要求**|計算值包含設定檔。<br /><br /> 值包含設定檔會計算兩個資料行或資料行集合之間值的重疊。 這個設定檔也可以判斷資料行或資料行集合是否適合當做選取之資料表之間的外部索引鍵。 這個設定檔也可協助您識別資料中的問題，例如無效的值。 舉例來說，您分析了 Sales 資料表的 ProductID 資料行，並發現此資料行包含在 Products 資料表之 ProductID 資料行中找不到的值。|  
@@ -131,24 +130,24 @@ ms.locfileid: "48189171"
   
  這些選項會因選取的設定檔而不同。 如需有關個別設定檔類型之選項的詳細資訊，請參閱下列主題：  
   
--   [候選索引鍵設定檔要求選項&#40;資料分析工作&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [候選索引鍵設定檔要求選項 &#40;資料分析工作&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [資料行 Null 比例設定檔要求選項&#40;資料分析工作&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [資料行 Null 比例設定檔要求選項 &#40;資料分析工作&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [資料行統計資料設定檔要求選項&#40;資料分析工作&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [資料行統計資料設定檔要求選項 &#40;資料分析工作&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [資料行值散發設定檔要求選項&#40;資料分析工作&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [資料行值散發設定檔要求選項 &#40;資料分析工作&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [資料行長度散發設定檔要求選項&#40;資料分析工作&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [資料行長度散發設定檔要求選項 &#40;資料分析工作&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [資料行模式設定檔要求選項&#40;資料分析工作&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [資料行模式設定檔要求選項 &#40;資料分析工作&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [功能相依性設定檔要求選項&#40;資料分析工作&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [功能相依性設定檔要求選項 &#40;資料分析工作&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [值包含設定檔要求選項&#40;資料分析工作&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [值包含設定檔要求選項 &#40;資料分析工作&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [資料分析工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)   
+ [資料分析工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)   
  [單一資料表快速分析表單 &#40;資料分析工作&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

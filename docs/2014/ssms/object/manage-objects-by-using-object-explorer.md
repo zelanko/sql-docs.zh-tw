@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SQLSERVEROBJECTEXPLORER.DHELP
@@ -16,12 +16,12 @@ ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0469390d825761164f8222a835b913b65a8541ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ffd514fcdf5479f91e31d3bb5f261bba7ab4cd2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177228"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809030"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>使用物件總管管理物件
   您可以使用物件總管管理像是資料庫、資料表和預存程序等物件。  

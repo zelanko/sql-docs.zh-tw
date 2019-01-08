@@ -1,27 +1,31 @@
 ---
-title: 在 Azure 資料 Studio 中的 SQL Server 巨量資料叢集上提交 Spark 作業
-description: 在 Azure 資料 Studio 中的 SQL Server 巨量資料叢集上提交 Spark 作業
-services: SQL Server 2019 big data cluster spark
-ms.service: SQL Server 2019 big data cluster spark
+title: 在 Azure Data Studio 中執行 Spark 作業
+titleSuffix: SQL Server 2019 big data clusters
+description: 提交 Azure Data Studio 中的 SQL Server 巨量資料叢集上的 Spark 作業。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.custom: ''
+ms.date: 12/07/2018
 ms.topic: conceptual
-ms.date: 11/06/2018
-ms.openlocfilehash: 4ff29460ade2a3e32f3650d2c2701f22548bdb60
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: d0843315b44b52a38377068023b9d17ba2bd05a2
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221604"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246497"
 ---
-# <a name="submit-spark-job-on-sql-server-big-data-clusters-in-azure-data-studio"></a>在 Azure 資料 Studio 中的 SQL Server 巨量資料叢集上提交 Spark 作業
+# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>將 SQL Server 在 Azure 資料 Studio 中的巨量資料叢集上的 Spark 作業提交
 
-重要的案例之一是 SQL Server 2019 CTP 2.1 提交 Spark 作業的功能。 Spark 作業提交功能可讓您提交參考 SQL Server 2019 巨量資料叢集的 Jar 或 Py 本機檔案。 它也可讓您執行 Jar 或 Py 檔案，其中已經位於 HDFS 檔案系統。 
+巨量資料叢集的重要案例之一是提交 Spark 作業的 SQL Server 2019 預覽的功能。 Spark 作業提交功能可讓您提交參考 SQL Server 2019 巨量資料叢集的 Jar 或 Py 本機檔案。 它也可讓您執行 Jar 或 Py 檔案，其中已經位於 HDFS 檔案系統。 
 
-## <a name="prerequisite"></a>必要條件 
-安裝 SQL Server 的巨量資料工具並連線至巨量資料叢集，才能提交 Spark 作業。 安裝的詳細資訊，請參閱連結[部署巨量資料工具](deploy-big-data-tools.md)。
+## <a name="prerequisites"></a>先決條件
+
+- [SQL Server 2019 巨量資料工具](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **SQL Server 2019 延伸模組**
+   - **kubectl**
+
+- [將 Azure 資料 Studio 連線到您的巨量資料叢集的 HDFS/Spark 閘道](connect-to-big-data-cluster.md)。
 
 ## <a name="open-spark-job-submission-dialog"></a>開啟 Spark 作業提交對話方塊
 有幾種方式來開啟 Spark 作業提交對話方塊。 方式包括儀表板，在 [物件總管] 中和命令集合中心，以操作功能表。

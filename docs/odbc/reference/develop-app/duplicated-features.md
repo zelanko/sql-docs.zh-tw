@@ -17,17 +17,17 @@ ms.assetid: 641b16bc-f791-46d8-b093-31736473fe3d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c88175f314290c06c4239a9ca855ce41512be2b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84752b7e23c5394757764bf5ade57cb54004b01a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707226"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208307"
 ---
 # <a name="duplicated-features"></a>重複的功能
 下列的 ODBC 2。*x*函式有重複的 ODBC 3。*x*函式。 如此一來，ODBC 2。*x* ODBC 3 中的函式已被取代。*x*。 ODBC 3。*x*函式稱為取代函式。  
   
- 當應用程式會使用已被取代的 ODBC 2。*x*函式和基礎驅動程式是 ODBC 3。*x*驅動程式，驅動程式管理員會對應至相對應的取代函式的函式呼叫。 此規則唯一的例外是**SQLExtendedFetch**。 （請參閱下表的結尾註腳）。如需有關這些對應的詳細資訊，請參閱 <<c0> [ 對應已被取代的函式](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)附錄 g： 驅動程式指導方針，為了與舊版相容。  
+ 當應用程式會使用已被取代的 ODBC 2。*x*函式和基礎驅動程式是 ODBC 3。*x*驅動程式，驅動程式管理員會對應至相對應的取代函式的函式呼叫。 此規則唯一的例外是**SQLExtendedFetch**。 （請參閱下表的結尾註腳）。如需有關這些對應的詳細資訊，請參閱 <<c0> [ 對應已被取代的函式](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)在 < 附錄 g:為了與舊版相容的驅動程式指導方針。  
   
  當應用程式使用取代函式和基礎驅動程式為 ODBC 2。*x*驅動程式，驅動程式管理員會對應至對應已被取代的函式的函式呼叫。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47707226"
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] 函式**SQLExtendedFetch**是重複的功能;**SQLFetchScroll**提供相同的功能，在 ODBC 3。*x*。 不過，驅動程式管理員未對應**SQLExtendedFetch**要**SQLFetchScroll**時針對 ODBC 3。*x*驅動程式。 如需詳細資訊，請參閱 <<c0> [ 驅動程式管理員的用途](../../../odbc/reference/appendixes/what-the-driver-manager-does.md)附錄 g： 驅動程式指導方針，為了與舊版相容。 驅動程式管理員會將對應**SQLFetchScroll**要**SQLExtendedFetch**時針對 ODBC 2。*x*驅動程式。  
+ [1] 函式**SQLExtendedFetch**是重複的功能;**SQLFetchScroll**提供相同的功能，在 ODBC 3。*x*。 不過，驅動程式管理員未對應**SQLExtendedFetch**要**SQLFetchScroll**時針對 ODBC 3。*x*驅動程式。 如需詳細資訊，請參閱 <<c0> [ 驅動程式管理員的用途](../../../odbc/reference/appendixes/what-the-driver-manager-does.md)在 < 附錄 g:為了與舊版相容的驅動程式指導方針。 驅動程式管理員會將對應**SQLFetchScroll**要**SQLExtendedFetch**時針對 ODBC 2。*x*驅動程式。  
   
-> [!NOTE]  
+> [!NOTE]
 >  此函式**SQLBindParam**是特殊案例。 **SQLBindParam**是重複的功能。 這不是 ODBC 2 *.x*函式，但存在於 Open Group 和 ISO 標準中的函式。 此函式所提供的功能完全納入來**SQLBindParameter**。 如此一來，驅動程式管理員會將對應的呼叫**SQLBindParam**要**SQLBindParameter**基礎驅動程式時 ODBC 3。*x*驅動程式。 不過，當基礎驅動程式是 ODBC 2 時，才 *.x*驅動程式、 驅動程式管理員不會執行這項對應。

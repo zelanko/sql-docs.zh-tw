@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - void ExecuteNonQuery() method
@@ -32,12 +30,12 @@ ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0aba35418c1a7759f5c083bd5e5f7485118cbfc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 736345b7ee5b9c3e40f0ae34fe139cb911cad42f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207218"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807340"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand 物件 (SQLXML Managed 類別)
   這是 SqlXmlCommand 物件的建構函式：  
@@ -46,7 +44,7 @@ ms.locfileid: "48207218"
 public SqlXmlCommand(string cnString)  
 ```  
   
- 其中 `cnString` 是識別伺服器、資料庫以及登入資訊的 ADO 或 OLEDB 連接字串，例如，`Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`。  
+ 何處`cnString`是識別伺服器、 資料庫和登入資訊的 ADO 或 OLEDB 連接字串-例如`Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`。  
   
  在連接字串中，`Provider` 必須為 SQLOLEDB 而 `Data Provider` 不應包含在連接字串中。  
   

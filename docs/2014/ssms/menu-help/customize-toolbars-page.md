@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- vs.customize.toolbars
 - sql12.swb.vs.customizetool.f1
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b4435288069cbd465995d555de8653b39226b68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f16133abfa0d16e4b5614bdfefa5cf7c163516e1
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115084"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328478"
 ---
 # <a name="customize-toolbars-page"></a>自訂 (工具列頁面)
   [工具列] 索引標籤可以讓您建立、重新命名、移除和重設工具列。 您可以在 [工具] 功能表上按一下 [自訂]，然後按一下 [工具列] 來存取此索引標籤。  
@@ -53,5 +52,3 @@ ms.locfileid: "48115084"
   
  **鍵盤**  
  顯示 [選項] 對話方塊的 [鍵盤] 窗格，讓您能夠變更和定義命令的快速鍵組合。  
-  
-  

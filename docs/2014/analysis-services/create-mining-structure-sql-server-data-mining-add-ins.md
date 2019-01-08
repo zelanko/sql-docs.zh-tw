@@ -13,12 +13,12 @@ ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 166689f175485af66ca140f82fa968512baf8519
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2788c663553d8b01e6a047be70f101dc364d6042
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086338"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542972"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>建立採礦結構 (SQL Server 資料採礦增益集)
   ![建立採礦結構 按鈕，資料採礦功能區](media/dmc-createstruct.gif "Create Mining Structure] 按鈕，[資料採礦功能區")  

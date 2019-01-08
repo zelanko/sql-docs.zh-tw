@@ -11,15 +11,15 @@ ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9e2c54ec3c724e9fb43eff956e0bf96fd406d6bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6360770c57660ec62493b8ecd6c2aaea695289f7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091108"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395521"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>導出資料行 (SSAS 表格式)
-  表格式模型中的導出資料行可讓您將新資料加入至模型。 您可以建立定義資料行之資料列層級值的 DAX 公式，而不是將值貼上或匯入至資料行中。 然後就可以像是其他任何資料行一樣，在報表、樞紐分析表或樞紐分析圖中使用導出資料行。  
+  表格式模型中的導出資料行可讓您將新資料加入至模型。 不必貼上或匯入到資料行的值，您可以建立定義資料行的資料列層級值的 DAX 公式。 然後就可以像是其他任何資料行一樣，在報表、樞紐分析表或樞紐分析圖中使用導出資料行。  
   
 > [!NOTE]  
 >  在 DirectQuery 模式下的表格式模型不支援導出資料行。 如需詳細資訊，請參閱 [DirectQuery 模式 &#40;SSAS 表格式&#41;](directquery-mode-ssas-tabular.md)。  
@@ -82,11 +82,11 @@ ms.locfileid: "48091108"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[建立導出資料行&#40;SSAS 表格式&#41;](ssas-calculated-columns-create-a-calculated-column.md)|此主題中的工作描述如何將新導出資料行加入至資料表。|  
+|[建立導出資料行 &#40;SSAS 表格式&#41;](ssas-calculated-columns-create-a-calculated-column.md)|此主題中的工作描述如何將新導出資料行加入至資料表。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料表和資料行&#40;SSAS 表格式&#41;](tables-and-columns-ssas-tabular.md)   
- [量值&#40;SSAS 表格式&#41;](measures-ssas-tabular.md)   
- [計算&#40;SSAS 表格式&#41;](calculations-ssas-tabular.md)  
+ [資料表與資料行 &#40;SSAS 表格式&#41;](tables-and-columns-ssas-tabular.md)   
+ [量值 &#40;SSAS 表格式&#41;](measures-ssas-tabular.md)   
+ [計算 &#40;SSAS 表格式&#41;](calculations-ssas-tabular.md)  
   
   

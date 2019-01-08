@@ -20,16 +20,16 @@ ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f38a9c6814c65593ab452e646a8b1f184e2095de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edcffe36c0185276fae89f800e1bbcfc5bc33b33
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676576"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214519"
 ---
 # <a name="configtranslator-function"></a>ConfigTranslator 函式
 **合規性**  
- 版本導入： ODBC 2.0  
+ 導入的版本：ODBC 2.0  
   
  **摘要**  
  **ConfigTranslator**轉譯器會傳回預設轉譯選項。 它可以是轉譯程式 DLL 或個別的安裝程式 DLL。  

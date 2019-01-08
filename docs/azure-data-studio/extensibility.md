@@ -1,7 +1,8 @@
 ---
-title: 延伸 Azure Data Studio 的功能 | Microsoft Docs
-description: 了解有關擴充 Azure Data Studio
-ms.custom: tools|sos
+title: 新增額外的功能，透過擴充性
+titleSuffix: Azure Data Studio
+description: 了解的擴充性模型和金鑰的擴充性方面的擴充功能的 Azure Data Studio
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d218f80067c3dd5a03ced864b815c68aa84a582e
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: b595a353859ed7d69ccb6ad61ef6e5dc2a7073f3
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460243"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030012"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>開始使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]擴充性
 
@@ -68,7 +69,7 @@ Dashboard.tabs 建立儀表板頁面內的索引標籤區段。 它預期物件�
     "when": "connectionProvider == 'MSSQL' && !mssql:iscloud",
     "alwaysShow": true,
     "container": {
-        …
+        ...
     }
 }
 ]
@@ -83,13 +84,13 @@ Dashboard.tabs 建立儀表板頁面內的索引標籤區段。 它預期物件�
 {
     "id": "innerTab1",
     "container": {
-        …
+        ...
     }
 },
 {
     "id": "innerTab2",
     "container": {
-       …
+       ...
     }
 }
 ]
@@ -112,7 +113,7 @@ Dashboard.tabs 建立儀表板頁面內的索引標籤區段。 它預期物件�
 
 `dashboard.insights`
 
-您可以註冊使用 dashboard.insights 的深入解析。 這是類似於[教學課程： 建置自訂的深入解析小工具](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+您可以註冊使用 dashboard.insights 的深入解析。 這是類似於[教學課程：建置自訂的深入解析小工具](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
 
 ```json
 "dashboard.insights": {
@@ -241,7 +242,7 @@ Dashboard.tabs 建立儀表板頁面內的索引標籤區段。 它預期物件�
                     "dark": "./icons/tab1Icon_dark.svg"
                 }
                 "container": {
-                    …
+                    ...
                 }
             },
             {
@@ -252,7 +253,7 @@ Dashboard.tabs 建立儀表板頁面內的索引標籤區段。 它預期物件�
                     "dark": "./icons/tab2Icon_dark.svg"
                 }
                 "container": {
-                    …
+                    ...
                 }
             }
         ]
@@ -273,8 +274,8 @@ Dashboard.tabs 建立儀表板頁面內的索引標籤區段。 它預期物件�
 
 |內容變數| description|
 |:---|:---|
-|`connectionProvider` | 目前連接的提供者的識別項的字串。 例如 `connectionProvider == 'MSSQL'` 。|
-|`serverName`|目前連接的伺服器名稱的字串。 例如 `serverName == 'localhost'` 。|
-|`databaseName` | 目前連接的資料庫名稱的字串。 例如 `databaseName == 'master'` 。|
+|`connectionProvider` | 目前連接的提供者的識別項的字串。 例如 `connectionProvider == 'MSSQL'`.|
+|`serverName`|目前連接的伺服器名稱的字串。 例如 `serverName == 'localhost'`.|
+|`databaseName` | 目前連接的資料庫名稱的字串。 例如 `databaseName == 'master'`.|
 |`connection` | 完整的連線設定檔物件，目前的連接 (IConnectionProfile)|
 |`dashboardContext` | 儀表板頁面內容的字串，目前已開啟。 'Database' 或者 'server'。 例如 `dashboardContext == 'database'`|

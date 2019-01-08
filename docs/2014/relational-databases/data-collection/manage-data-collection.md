@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - data collection [SQL Server]
@@ -14,18 +14,18 @@ ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2209c8de9c65e5740b9a6ebdd62972c93596e396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 543f972f5c5805bb1508b6a256f7a7ed3a2aaa3b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104858"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768290"
 ---
 # <a name="manage-data-collection"></a>管理資料收集
   您可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序和函數來管理不同層面的資料收集，例如啟用或停用資料收集、 變更收集組的組態，或是檢視管理資料倉儲中的資料.  
   
 ## <a name="manage-data-collection-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 管理資料收集  
- 您可以使用 [物件總管] 中執行下列的資料收集器相關工作[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+ 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用 [物件總管] 來執行與資料收集器相關的下列工作：  
   
 -   [設定管理資料倉儲 &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48104858"
 > [!IMPORTANT]  
 >  不同於一般預存程序，資料收集器的預存程序會使用嚴格類型的參數，而且不支援資料類型的自動轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
   
- 您可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來建立和執行提供的程式碼範例。 如需詳細資訊，請參閱 [物件總管](../../ssms/object/object-explorer.md)。 另一個替代方法是使用任何編輯器建立查詢，並將它儲存為 .sql 副檔名的文字檔。 您可以執行查詢，從 Windows 命令提示字元使用`sqlcmd`公用程式。 如需詳細資訊，請參閱 [使用 sqlcmd 公用程式](../scripting/sqlcmd-use-the-utility.md)。  
+ 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立及執行所提供的程式碼範例。 如需詳細資訊，請參閱 [物件總管](../../ssms/object/object-explorer.md)。 另一個替代方法是使用任何編輯器建立查詢，並將它儲存為 .sql 副檔名的文字檔。 您可以使用 `sqlcmd` 公用程式，從 Windows 命令提示字元執行查詢。 如需詳細資訊，請參閱 [使用 sqlcmd 公用程式](../scripting/sqlcmd-use-the-utility.md)。  
   
 ### <a name="stored-procedures-and-views"></a>預存程序和檢視表  
  **使用資料收集器**  
@@ -173,6 +173,6 @@ ms.locfileid: "48104858"
 ## <a name="see-also"></a>另請參閱  
  [執行預存程序](../stored-procedures/execute-a-stored-procedure.md)   
  [使用 SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)   
- [[資料收集]](data-collection.md)  
+ [資料收集](data-collection.md)  
   
   

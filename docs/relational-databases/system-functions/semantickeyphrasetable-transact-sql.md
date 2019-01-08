@@ -18,12 +18,12 @@ ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b033342e8e6e7d3fb55d51d03705b2168d72209f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ac666af5ed24d526953dd8aa57c76871d2064f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785326"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414485"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ SEMANTICKEYPHRASETABLE
   
 ## <a name="examples"></a>範例  
   
-###  <a name="HowToTopPhrases"></a> 範例 1： 尋找在特定文件中的前幾個關鍵片語  
+###  <a name="HowToTopPhrases"></a> 範例 1:尋找在特定文件中的前幾個關鍵片語  
  下列範例會從 AdventureWorks 範例資料庫之 Production.Document 資料表 Document 資料行 @DocumentId 變數所指定的文件中，擷取前 10 個主要片語。 @DocumentId 變數是指來自全文檢索索引之索引鍵資料行的值。 **SEMANTICKEYPHRASETABLE** 函數會使用索引搜尋有效率地擷取這些結果，而不會使用資料表掃描。 此範例假設已針對全文檢索與語意索引配置資料行。  
   
 ```sql  
@@ -107,8 +107,8 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="HowToTopDocuments"></a> 範例 2： 尋找包含特定關鍵片語的最上層文件  
- 下列範例會從 AdventureWorks 範例資料庫之 Production.Document 資料表的 Document 資料行中，擷取前 25 份包含主要片語的 "Bracket" 的文件。 此範例假設已針對全文檢索與語意索引配置資料行。  
+###  <a name="HowToTopDocuments"></a> 範例 2:找到包含特定關鍵片語的最上層文件  
+ 下列範例會從 AdventureWorks 範例資料庫 Production.Document 資料表的 Document 資料行中，擷取前 25 份包含主要片語的 "Bracket" 的文件。 此範例假設已針對全文檢索與語意索引配置資料行。  
   
 ```sql  
 SELECT TOP (25) DOC_TBL.DocumentID, DOC_TBL.DocumentSummary  

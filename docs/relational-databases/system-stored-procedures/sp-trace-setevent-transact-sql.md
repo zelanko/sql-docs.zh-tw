@@ -18,12 +18,12 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59351e8ec30cf02dc74b2d47d6ef160cd5aff74e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cae733bf78928ccd83550adc8a4b525f6a996189
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739906"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266099"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -208,18 +208,18 @@ sp_trace_setevent [ @traceid = ] trace_id
 |177|Audit Server Principal Management Event|發生在建立、改變或卸除伺服器主體之時。|  
 |178|Audit Database Operation Event|發生在執行資料庫作業 (如檢查點或訂閱查詢通知) 之時。|  
 |180|Audit Database Object Access Event|發生在存取資料庫物件 (如結構描述) 之時。|  
-|181|TM: Begin Tran starting|發生在 BEGIN TRANSACTION 要求啟動之時。|  
-|182|TM: Begin Tran completed|發生在 BEGIN TRANSACTION 要求完成之時。|  
-|183|TM: Promote Tran starting|發生在 PROMOTE TRANSACTION 要求啟動之時。|  
-|184|TM: Promote Tran completed|發生在 PROMOTE TRANSACTION 要求完成之時。|  
-|185|TM: Commit Tran starting|發生在 COMMIT TRANSACTION 要求啟動之時。|  
-|186|TM: Commit Tran completed|發生在 COMMIT TRANSACTION 要求完成之時。|  
-|187|TM: Rollback Tran starting|發生在 ROLLBACK TRANSACTION 要求啟動之時。|  
-|188|TM: Rollback Tran completed|發生在 ROLLBACK TRANSACTION 要求完成之時。|  
+|181|TM:Begin Tran starting|發生在 BEGIN TRANSACTION 要求啟動之時。|  
+|182|TM:已完成 Begin Tran|發生在 BEGIN TRANSACTION 要求完成之時。|  
+|183|TM:升級 Tran starting|發生在 PROMOTE TRANSACTION 要求啟動之時。|  
+|184|TM:Promote Tran 完成|發生在 PROMOTE TRANSACTION 要求完成之時。|  
+|185|TM:Commit Tran starting|發生在 COMMIT TRANSACTION 要求啟動之時。|  
+|186|TM:Commit Tran 完成|發生在 COMMIT TRANSACTION 要求完成之時。|  
+|187|TM:正在啟動 rollback Tran|發生在 ROLLBACK TRANSACTION 要求啟動之時。|  
+|188|TM:已完成 rollback Tran|發生在 ROLLBACK TRANSACTION 要求完成之時。|  
 |189|Lock: Timeout (timeout > 0)|發生在資源 (如頁面) 鎖定要求逾時之時。|  
-|190|Progress Report: Online Index Operation|在建置處理序執行時，報告線上索引建置作業的進度。|  
-|191|TM: Save Tran starting|發生在 SAVE TRANSACTION 要求啟動之時。|  
-|192|TM: Save Tran completed|發生在 SAVE TRANSACTION 要求完成之時。|  
+|190|進度報表：線上索引作業|在建置處理序執行時，報告線上索引建置作業的進度。|  
+|191|TM:儲存 Tran starting|發生在 SAVE TRANSACTION 要求啟動之時。|  
+|192|TM:儲存完成的交易|發生在 SAVE TRANSACTION 要求完成之時。|  
 |193|Background Job Error|發生在背景作業異常結束之時。|  
 |194|OLEDB Provider Information|發生在執行分散式查詢及收集提供者連接的對應資訊之時。|  
 |195|Mount Tape|發生在收到磁帶掛載要求之時。|  
@@ -233,7 +233,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |212|點陣圖警告|指出查詢中已經停用點陣圖篩選。|  
 |213|Database Suspect Data Page|指出頁面何時加入至**suspect_pages**資料表中**msdb**。|  
 |214|CPU threshold exceeded|指出資源管理員偵測到查詢已超過 CPU 臨界值 (REQUEST_MAX_CPU_TIME_SEC)。|  
-|215|指出 LOGON 觸發程序或資源管理員分類函數開始執行。|指出 LOGON 觸發程序或資源管理員分類函數開始執行。|  
+|215|PreConnect:Starting|指出 LOGON 觸發程序或資源管理員分類函數開始執行。|  
 |216|PreConnect:Completed|指出 LOGON 觸發程序或資源管理員分類函數已完成執行。|  
 |217|Plan Guide Successful|指出 SQL Server 已成功為包含計畫指南的查詢或批次產生執行計畫。|  
 |218|Plan Guide Unsuccessful|指出 SQL Server 無法為包含計畫指南的查詢或批次產生執行計畫。 SQL Server 嘗試在未套用計畫指南的情況下，為這個查詢或批次產生執行計畫。 無效的計畫指南可能是造成這個問題的原因。 您可以使用 sys.fn_validate_plan_guide 系統函數驗證此計畫指南。|  
@@ -275,7 +275,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |27|**EventClass**|正在記錄之事件類別的類型。|  
 |28|**ObjectType**|物件類型，例如資料表、函數或預存程序。|  
 |29|**NestLevel**|這個預存程序正在執行的巢狀層級。 請參閱[@@NESTLEVEL &#40;TRANSACT-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md)。|  
-|30|**State**|發生錯誤時的伺服器狀態。|  
+|30|**狀態**|發生錯誤時的伺服器狀態。|  
 |31|**錯誤**|錯誤號碼。|  
 |32|**模式**|取得的鎖定之鎖定模式。 此資料行不會填入**鎖定： 發行**事件。|  
 |33|**Handle**|事件所參考之物件的控制代碼。|  

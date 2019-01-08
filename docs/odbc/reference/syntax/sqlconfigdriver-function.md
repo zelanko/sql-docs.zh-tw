@@ -20,16 +20,16 @@ ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90c1c31e6b4b33d662636d34fcebbd17393f69a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2b28b6380594150030e8f70a5b658a3bc18e258
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608246"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201767"
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver 函式
 **合規性**  
- 版本導入： ODBC 2.5  
+ 導入的版本：ODBC 2.5  
   
  **摘要**  
  **SQLConfigDriver**載入適當的驅動程式安裝程式 DLL 並呼叫**ConfigDriver**函式。  
@@ -57,11 +57,11 @@ BOOL SQLConfigDriver(
  *常見*  
  [輸入]要求的類型。 *常見*必須包含下列值之一：  
   
- ODBC_CONFIG_DRIVER： 變更連接共用的驅動程式所使用的逾時。  
+ ODBC_CONFIG_DRIVER:變更連接共用的驅動程式所使用的逾時。  
   
- ODBC_INSTALL_DRIVER： 安裝新的驅動程式。  
+ ODBC_INSTALL_DRIVER:安裝新的驅動程式。  
   
- ODBC_REMOVE_DRIVER： 移除現有的驅動程式。  
+ ODBC_REMOVE_DRIVER:移除現有的驅動程式。  
   
  此選項也可以是特定驅動程式，在此情況下*常見*的第一個選項必須開始從 ODBC_CONFIG_DRIVER_MAX + 1。 *常見*的任何其他選項也必須啟動從大於 ODBC_CONFIG_DRIVER_MAX + 1 的值。  
   

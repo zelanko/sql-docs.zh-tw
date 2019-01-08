@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - summarizing query results
@@ -13,12 +13,12 @@ ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a19834bc54a75e685782b0d73aadf0070bdff62
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227708"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812800"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>摘要或彙總資料表中所有資料列的值 (Visual Database Tools)
   使用彙總函式 (Aggregate Function) 可以在資料表中建立所有值的摘要。 例如，您可以建立如下所示的查詢，以顯示在 `titles` 資料表中所有書籍的總價格：  
@@ -57,7 +57,7 @@ FROM titles
   
      [查詢和檢視表設計工具] 會自動將資料行別名指派給您要加總的資料行。 您可以使用較有意義的別名取代這個別名。 如需詳細資訊，請參閱[建立資料行別名 &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md)。  
   
-4.  在 [群組依據] 方格資料行中，選取適當的彙總函式，例如：[Sum]、[Avg]、[Min]、[Max]、[Count]。 如果只要彙總結果集中的唯一資料列，請選擇含有 DISTINCT 選項的彙總函式，例如 [Min Distinct]。 不要選擇 [Group By]、[Expression] 或 [Where]，因為這些選項不適用於彙總所有資料列。  
+4.  在  **Group By**格線欄中，選取適當的彙總函式，例如：**總和**， **Avg**， **Min**， **Max**，**計數**。 如果只要彙總結果集中的唯一資料列，請選擇含有 DISTINCT 選項的彙總函式，例如 [Min Distinct]。 不要選擇 [Group By]、[Expression] 或 [Where]，因為這些選項不適用於彙總所有資料列。  
   
      查詢和檢視表設計工具會使用指定的彙總函式，取代 [SQL 窗格](sql-pane-visual-database-tools.md)中陳述式的資料行名稱。 例如，SQL 陳述式將如下所示：  
   

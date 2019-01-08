@@ -15,12 +15,12 @@ ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97abb785026fa4709e08526e8fb033e97120c97f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efaadce1425de4468056f0df5e3d7106432ca804
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095938"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516102"
 ---
 # <a name="message-queue-task-editor-send-page"></a>訊息佇列工作編輯器 (傳送頁面)
   使用 **[訊息佇列工作編輯器]** 對話方塊的 **[傳送]** 頁面，即可設定從 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝傳送訊息的訊息佇列工作。  
@@ -43,7 +43,7 @@ ms.locfileid: "48095938"
  **MessageType**  
  選取訊息類型。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**資料檔訊息**|訊息儲存在檔案中。 選取此值會顯示動態選項 **[DataFileMessage]**。|  
 |**變數訊息**|訊息儲存在變數中。 選取此值會顯示動態選項 **[VariableMessage]**。|  
@@ -53,22 +53,22 @@ ms.locfileid: "48095938"
   
 ### <a name="messagetype--data-file-message"></a>MessageType = 資料檔訊息  
  **[DataFileMessage]**  
- 輸入資料檔的路徑，或按一下省略符號 **(...)** ，然後再尋找檔案。  
+ 鍵入資料檔的路徑，或按一下省略符號 **(...)**，然後尋找檔案。  
   
 ### <a name="messagetype--variable-message"></a>MessageType = 變數訊息  
  **[VariableMessage]**  
- 輸入變數名稱，或按一下省略符號 **(...)** ，然後再選取變數。 變數以逗號分隔。  
+ 鍵入變數名稱，或按一下省略符號 **(...)**，然後選取變數。 變數以逗號分隔。  
   
- **相關主題：** 選取變數  
+ **相關的主題：** 選取變數  
   
 ### <a name="messagetype--string-message"></a>MessageType = 字串訊息  
  **[StringMessage]**  
- 輸入字串訊息，或按一下省略符號 **(...)**，然後在 [輸入字串訊息] 對話方塊中輸入訊息。  
+ 鍵入字串訊息，或按一下省略符號 **(...)**，然後在 [鍵入字串訊息] 對話方塊中鍵入訊息。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [訊息佇列工作編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
- [訊息佇列工作編輯器&#40;接收頁面&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [訊息佇列工作編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [訊息佇列工作編輯器 &#40;接收頁面&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [運算式頁面](expressions/expressions-page.md)  
   
   

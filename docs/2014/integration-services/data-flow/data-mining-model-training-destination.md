@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingmodeltrainingdest.f1
@@ -18,12 +17,12 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdef0e0ed6de3bf527a5b87bc05a12e1bc6ace5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47c43a668ba9d418ea93b9367edb110980720d1c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068954"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781160"
 ---
 # <a name="data-mining-model-training-destination"></a>資料採礦模型定型目的地
   「資料採礦模型培訓」目的地藉由傳送目的地接收的資料至資料採礦模型演算法，來培訓資料採礦模型。 如果多個資料採礦模型建立於同一資料採礦結構上，則可以由一個目的地來培訓這些模型。 如需詳細資訊，請參閱 [採礦結構資料行](../../analysis-services/data-mining/mining-structure-columns.md) 和 [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)。  
@@ -42,9 +41,9 @@ ms.locfileid: "48068954"
   
  如需可在 [資料採礦模型培訓編輯器] 對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
   
--   [資料採礦模型培訓編輯器&#40;連線 索引標籤&#41;](../data-mining-model-training-editor-connection-tab.md)  
+-   [資料採礦模型培訓編輯器 &#40;連接索引標籤&#41;](../data-mining-model-training-editor-connection-tab.md)  
   
--   [資料採礦模型培訓編輯器&#40;資料行索引標籤&#41;](../data-mining-model-training-editor-columns-tab.md)  
+-   [資料採礦模型培訓編輯器 &#40;資料行索引標籤&#41;](../data-mining-model-training-editor-columns-tab.md)  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
@@ -52,6 +51,6 @@ ms.locfileid: "48068954"
   
 -   [資料採礦模型定型目的地自訂屬性](data-mining-model-training-destination-custom-properties.md)  
   
- 如需如何設定屬性的詳細資訊，請參閱[設定資料流程元件的屬性](set-the-properties-of-a-data-flow-component.md)。  
+ 如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](set-the-properties-of-a-data-flow-component.md)。  
   
   

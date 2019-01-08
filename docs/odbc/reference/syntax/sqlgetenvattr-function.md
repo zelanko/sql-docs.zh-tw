@@ -20,16 +20,16 @@ ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a41829e9cb1f905c82e7cd5f8b179e5e1f777741
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70fe1ca95f5160f801eaf3528e625116705eda6d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771676"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203807"
 ---
 # <a name="sqlgetenvattr-function"></a>SQLGetEnvAttr 函式
 **合規性**  
- 版本導入： ODBC 3.0 版的標準符合性： ISO 92  
+ 導入的版本：ODBC 3.0 版的標準合規性：ISO 92  
   
  **摘要**  
  **SQLGetEnvAttr**傳回環境屬性的目前設定。  
@@ -88,7 +88,7 @@ SQLRETURN SQLGetEnvAttr(
   
  **SQLGetEnvAttr**可在配置和釋放環境控制代碼之間的任何時間加以呼叫。 已成功設定環境的應用程式的所有環境屬性一直都保存到**SQLFreeHandle**上呼叫*EnvironmentHandle*使用*HandleType*SQL_HANDLE_ENV。 可以同時配置一個以上的環境控制代碼，在 ODBC 3 *.x*。 已配置另一個環境時，不會影響一個環境的環境屬性。  
   
-> [!NOTE]  
+> [!NOTE]
 >  符合標準的應用程式支援 SQL_ATTR_OUTPUT_NTS 環境屬性。 當**SQLGetEnvAttr**呼叫時，ODBC 3 *.x*驅動程式管理員一定會傳回 SQL_TRUE 這個屬性。 SQL_ATTR_OUTPUT_NTS 可以只藉由呼叫設定為 SQL_TRUE **SQLSetEnvAttr**。  
   
 ## <a name="related-functions"></a>相關函數  

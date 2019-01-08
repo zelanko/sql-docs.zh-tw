@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], multiple conditions
@@ -16,12 +16,12 @@ ms.assetid: 2c006e36-56b1-4992-89b4-c6c0b19808f3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6d5eba192847c1778002c69d9afecb93efd5209c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 176d5a6586008d49ece1430ec03e2c54278eebce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170840"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809200"
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>指定單一資料行的多重搜尋條件 (Visual Database Tools)
   在一些執行個體中，可能要套用許多搜尋條件至相同的資料行。 例如，您可能要：  

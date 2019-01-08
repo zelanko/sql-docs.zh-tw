@@ -21,14 +21,14 @@ ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7722193dc643b4fd5afaa9a21559febe137cba6b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: f3345e2b27a14285f3b9a3bfffd1ec95549ef124
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662847"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201817"
 ---
-# <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (transact-SQL)
+# <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   會設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]針對特定資料庫或執行個體的基本設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -65,7 +65,7 @@ EXEC managed_backup.sp_backup_config_basic
  @credential_name  
  用來驗證 Windows Azure 儲存體帳戶之 SQL 認證的名稱。 @credentail_name 已**SYSNAME**。 指定時，備份會儲存至分頁 blob。 如果此參數為 NULL，則備份將儲存為區塊 blob。 備份至分頁 blob 已淘汰，因此最好使用新的區塊 blob 備份功能。 用來變更[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]組態時為選擇性參數。 如果未指定，會保留現有的組態值。  
   
-> [!WARNING]  
+> [!WARNING]
 >  **@credential_name**此時不支援參數。 支援只備份至區塊 blob，需要此參數為 NULL。  
   
 ## <a name="return-code-value"></a>傳回碼值  

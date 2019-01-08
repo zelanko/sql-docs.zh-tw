@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSsubscriber_schedule
@@ -19,19 +18,19 @@ ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91b04c358adcce0aa1cb02b702096d215298a11a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b11ff11d3d5ea8ea98bee18738a7c60450693ef
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856486"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202017"
 ---
 # <a name="mssubscriberschedule-transact-sql"></a>MSsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSsubscriber_schedule**資料表包含預設合併和交易式同步處理的每個發行者/訂閱者組的排程。 這份資料表儲存在散發資料庫中。  
   
-> [!NOTE]  
+> [!NOTE]
 >  這個系統資料表已被取代，而且正加以維護，以支援舊版[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 |資料行名稱|資料類型|描述|  

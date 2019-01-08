@@ -13,15 +13,15 @@ ms.assetid: 59440510-2d76-41dc-9b55-edc15259f9da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ca7b73e08941d42ceccd1ff3dab04a686b120d98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40e802ac33c7aa9b97267a725b20eb0d2f00dbb1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201398"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410355"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>建立導出資料行 (SSAS 表格式)
-  導出資料行可讓您將新資料加入至模型。 您可以建立定義資料行之資料列層級值的 DAX 公式，而不是將值貼上或匯入至資料行中。 當您建立有效的公式，然後按一下 ENTER 時，即會計算並填入導出資料行之每個資料列中的值。 然後導出資料行就可以像是其他任何資料行，加入至報表應用程式或分析應用程式。 此主題描述如何在模型設計師中使用 DAX 公式列，來建立新的導出資料行。  
+  導出資料行可讓您將新資料加入至模型。 不必貼上或匯入到資料行的值，您可以建立定義資料行的資料列層級值的 DAX 公式。 當您建立有效的公式，然後按一下 ENTER 時，即會計算並填入導出資料行之每個資料列中的值。 然後導出資料行就可以像是其他任何資料行，加入至報表應用程式或分析應用程式。 此主題描述如何在模型設計師中使用 DAX 公式列，來建立新的導出資料行。  
   
 #### <a name="to-create-a-new-calculated-column"></a>建立新的導出資料行  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48201398"
 >  您可以透過巢狀函數，在現有的公式中間使用 DAX 公式自動完成。 插入點前方的文字用於顯示下拉式清單中的值，而在插入點之後的所有文字則維持不變。  
   
 ## <a name="see-also"></a>另請參閱  
- [導出資料行&#40;SSAS 表格式&#41;](ssas-calculated-columns.md)   
- [量值&#40;SSAS 表格式&#41;](measures-ssas-tabular.md)  
+ [導出資料行 &#40;SSAS 表格式&#41;](ssas-calculated-columns.md)   
+ [量值 &#40;SSAS 表格式&#41;](measures-ssas-tabular.md)  
   
   

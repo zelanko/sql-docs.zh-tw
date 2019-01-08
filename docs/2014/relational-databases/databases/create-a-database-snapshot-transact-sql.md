@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], creating
@@ -13,12 +12,12 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7bb53467361cec415b95f2fe3477f3b0730f33b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212198"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768330"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>建立資料庫快照集 (Transact-SQL)
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是建立 [!INCLUDE[tsql](../../includes/tsql-md.md)]資料庫快照集的唯一方式。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不支援建立資料庫快照集。  
@@ -31,7 +30,7 @@ ms.locfileid: "48212198"
   
      [最佳作法：命名資料庫快照集](#Naming)  
   
--   **若要建立資料庫快照集，請使用：**[TRANSACT-SQL  ](#TsqlProcedure)  
+-   **若要建立資料庫快照集，使用：**[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -42,7 +41,7 @@ ms.locfileid: "48212198"
   
 -   除非來源資料庫是資料庫鏡像工作階段中的鏡像資料庫，否則該資料庫必須處於線上狀態。  
   
--   若要建立資料庫鏡像資料庫上快照集，資料庫必須處於同步處理[鏡像狀態](../../database-engine/database-mirroring/mirroring-states-sql-server.md)。  
+-   若要在鏡像資料庫上建立資料庫快照集，資料庫必須處於同步處理的[鏡像狀態](../../database-engine/database-mirroring/mirroring-states-sql-server.md)。  
   
 -   來源資料庫無法設定為可擴充的共用資料庫。  
   
@@ -54,9 +53,9 @@ ms.locfileid: "48212198"
   
 -   [最佳作法：命名資料庫快照集](#Naming)  
   
--   [最佳作法：限制資料庫快照集的數目](#Limiting_Number)  
+-   [最佳作法：限制資料庫快照集數目](#Limiting_Number)  
   
--   [最佳作法：用戶端連接到資料庫快照集](#Client_Connections)  
+-   [最佳作法：用戶端連線到資料庫快照集](#Client_Connections)  
   
 ####  <a name="Naming"></a> 最佳作法：命名資料庫快照集  
  建立快照集之前，務必先考慮如何命名快照集。 每個資料庫快照集都需要一個唯一的資料庫名稱。 為了方便管理，快照集的名稱可加入用於識別資料庫的資訊，例如：  

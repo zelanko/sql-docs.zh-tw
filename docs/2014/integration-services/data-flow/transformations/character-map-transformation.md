@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.charactertrans.f1
@@ -18,26 +17,26 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70fbac16859572c8b18f62fe7645ac6f1c5af77f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11aaa19aebce21cc8a0ba08038c1dc58f245ec2d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055867"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761820"
 ---
 # <a name="character-map-transformation"></a>字元對應轉換
   「字元對應」轉換會套用字串函數，例如從小寫轉換成大寫、字元資料。 此轉換只能在字串資料類型的資料行資料上操作。  
   
  「字元對應」轉換可就地轉換資料行資料，或將資料行加入至轉換輸出，並將轉換的資料放入新的資料行。 您可以將不同組的對應作業套用至同一輸入資料行，並將結果放入不同的資料行。 例如，您可以將同一資料行轉換成大寫和小寫，並將結果放入兩個不同的資料行。  
   
- 在某些情況下，對應可能會造成資料遭到截斷。 例如，當單一位元組字元對應到使用多位元組表示法的字元時，即可能發生截斷。 「字元對應」轉換包含錯誤輸出，可用來將截斷的資料導向不同的輸出。 如需詳細資訊，請參閱[處理資料中的錯誤](../error-handling-in-data.md)。  
+ 在某些情況下，對應可能會造成資料遭到截斷。 例如，當單一位元組字元對應到使用多位元組表示法的字元時，即可能發生截斷。 「字元對應」轉換包含錯誤輸出，可用來將截斷的資料導向不同的輸出。 如需詳細資訊，請參閱 [處理資料中的錯誤](../error-handling-in-data.md)。  
   
  這個轉換有一個輸入、一個輸出與一個錯誤輸出。  
   
 ## <a name="mapping-operations"></a>對應作業  
  下表描述「字元對應」轉換支援的對應作業。  
   
-|作業|描述|  
+|運算|描述|  
 |---------------|-----------------|  
 |位元組反轉|反轉位元組的順序。|  
 |全形|將半形字元對應到全形字元。|  

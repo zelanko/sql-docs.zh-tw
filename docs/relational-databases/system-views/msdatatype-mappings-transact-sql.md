@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSdatatype_mappings
@@ -19,12 +18,12 @@ ms.assetid: 13cdabb3-6e07-4e8d-ae80-4235022ccc7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00df6d73813fea7efebb3fa4db3c5e65187f2109
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5af1233e81c996e98287a637e01ad1d249671303
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636696"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785090"
 ---
 # <a name="msdatatypemappings-transact-sql"></a>MSdatatype_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47636696"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**dbms_name**|**nvarchar(128)**|是 DBMS 的名稱。 以下是可能的值和它們的描述。<br /><br /> **MSSQLSERVER**： 目的地是 SQL Server 資料庫。<br />**ORACLE**： 目的地是 Oracle 資料庫。<br />**DB2**： 目的地是 IBM DB2 資料庫。<br />**SYBASE**： 目的地是 Sybase 資料庫。|  
+|**dbms_name**|**nvarchar(128)**|是 DBMS 的名稱。 以下是可能的值和它們的描述。<br /><br /> **MSSQLSERVER**:目的地是 SQL Server 資料庫。<br />**ORACLE**:目的地是一個 Oracle 資料庫。<br />**DB2**:目的地是一個 IBM DB2 資料庫。<br />**SYBASE**:目的地是一個 Sybase 資料庫。|  
 |**sql_type**|**nvarchar(128)**|是 SQL Server 資料類型。|  
 |**dest_type**|**nvarchar(128)**|為非 SQL Server 資料類型的名稱。|  
 |**dest_prec**|**bigint**|為非 SQL Server 資料類型的有效位數。|  

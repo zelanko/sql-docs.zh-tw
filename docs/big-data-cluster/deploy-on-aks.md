@@ -1,22 +1,24 @@
 ---
-title: 設定適用於 SQL Server 2019 巨量資料叢集部署的 Azure Kubernetes 服務 |Microsoft Docs
+title: 設定 Azure Kubernetes 服務
+titleSuffix: SQL Server 2019 big data clusters
 description: 了解如何設定適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署的 Azure Kubernetes Service (AKS)。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 0eda19b4a241a066771afff1cfb682fa7234f81e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.custom: seodec18
+ms.openlocfilehash: b36a81b4fa99cf6c7db2c1638f63cd464646badf
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700381"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246557"
 ---
-# <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>設定 Azure Kubernetes Service 來進行 SQL Server 2019 （預覽） 部署
+# <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>設定適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署的 Azure Kubernetes 服務
 
-本文說明如何設定適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署的 Azure Kubernetes Service (AKS)。 
+本文說明如何設定適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署的 Azure Kubernetes Service (AKS)。
 
 AKS 可讓您更輕鬆地建立、 設定及管理預先設定的虛擬機器的叢集使用來執行容器化應用程式的 Kubernetes 叢集。 這可讓您使用現有技能，或運用大量且不斷成長的社群專業知識，來部署和管理 Microsoft Azure 上的容器型應用程式。
 
@@ -27,18 +29,15 @@ AKS 可讓您更輕鬆地建立、 設定及管理預先設定的虛擬機器的
 
 ## <a name="prerequisites"></a>先決條件
 
-- AKS 環境，以獲得最佳的體驗，同時驗證的基本案例，我們建議至少三個代理程式 （除了主機） 中的 Vm 具有至少 4 個 Vcpu 和 32 GB 的記憶體，每個。 Azure 基礎結構提供多個 Vm 的大小選項，請參閱 <<c0> [ 此處](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)針對您打算要部署的區域中選取項目。
-  
-- 本節中，您必須執行 Azure CLI 2.0.4 版或更新版本。 如果您需要安裝或升級，請參閱[安裝 Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli)。 執行`az --version`以尋找版本，如有需要。
+- [部署 SQL Server 2019 巨量資料的工具](deploy-big-data-tools.md):
+   - **kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 延伸模組**
+   - **Azure CLI**
 
-- 安裝[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)版本 1.10 的最少。 如果您想要安裝 kubectl 用戶端上的特定版本，請參閱[安裝 kubectl 二進位透過 curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)。 
+- 最小值 1.10 Kubernetes 伺服器版本。 您必須使用 AKS，`--kubernetes-version`參數來指定預設值不同的版本。
 
-- 適用於 Kubernetes 伺服器時的相同 1.10 的最小版本。 您必須使用 AKS，`--kubernetes-version`參數來指定預設值不同的版本。
-
-> [!NOTE]
-請注意，用戶端/伺服器版本也就是扭曲支援是 + /-1 的次要版本。 Kubernetes 文件中指出，「 用戶端應該扭曲有一個以上的次要版本，在主機上，但可能會導致主要由最多一個次要版本。 比方說，v1.3 主要應該使用 v1.1、 v1.2 和 v1.3 節點，並應該使用 v1.2、 v1.3 和 v1.4 用戶端。 」 如需詳細資訊，請參閱 < [Kubernetes 支援的版本和元件扭曲](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)。
-
-另請注意，`az aks kubernetes install-cli`都會安裝 kubectl 用戶端版本較低，需要的 1.10。 請遵循上述指示安裝 kubectl 用戶端的正確版本。
+- AKS 環境，以獲得最佳的體驗，同時驗證基本案例中，我們建議至少三個代理程式 Vm 具有至少 4 個 Vcpu 和 32 GB 的記憶體，每個。 Azure 基礎結構提供多個 Vm 的大小選項，請參閱 <<c0> [ 此處](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)針對您打算要部署的區域中選取項目。
 
 ## <a name="create-a-resource-group"></a>建立資源群組
 
@@ -73,20 +72,20 @@ Azure 資源群組是在哪一項 Azure 資源部署與管理的邏輯群組。 
 
 ## <a name="create-a-kubernetes-cluster"></a>建立 Kubernetes 叢集
 
-1. 在與 AKS 建立 Kubernetes 叢集[az aks 建立](https://docs.microsoft.com/cli/azure/aks)命令。 下列範例會建立名為 Kubernetes 叢集*kubcluster*使用一個 Linux 主要節點和兩個 Linux 代理程式節點。 請確定您在先前各節中使用的相同資源群組中建立 AKS 叢集。
+1. 在與 AKS 建立 Kubernetes 叢集[az aks 建立](https://docs.microsoft.com/cli/azure/aks)命令。 下列範例會建立名為 Kubernetes 叢集*kubcluster*具有三個 Linux 代理程式節點。 請確定您在先前各節中使用的相同資源群組中建立 AKS 叢集。
 
     ```bash
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
-    --node-vm-size Standard_E4s_v3 \
+    --node-vm-size Standard_L4s \
     --node-count 3 \
     --kubernetes-version 1.10.8
     ```
 
-    您可以增加或減少的 Kubernetes 代理程式節點數目，藉由變更`--node-count <n>`其中`<n>`是數字的您想要有代理程式節點，它不包含主要的 Kubernetes 節點。 因此在上述範例中，會有**4**大小的 Vm **Standard_E4s_v3**用於 AKS 叢集： **1** master 和**3**的代理程式節點。
+   您可以增加或減少的 Kubernetes 代理程式節點數目，藉由變更`--node-count <n>`其中`<n>`是您想要使用的代理程式節點數目。 這不包括 master 的 Kubernetes 節點，其在幕後受 AKS。 因此在上述範例中，有**3**大小的 Vm **Standard_L4s**用於 AKS 叢集中的代理程式節點。
 
-    幾分鐘之後，此命令會完成，並傳回 JSON 格式化叢集的相關資訊。
+   幾分鐘之後，此命令會完成，並傳回 JSON 格式化叢集的相關資訊。
 
 1. 儲存 JSON 輸出以供稍後使用前一個命令。
 
@@ -108,4 +107,4 @@ Azure 資源群組是在哪一項 Azure 資源部署與管理的邏輯群組。 
 
 這篇文章中的步驟會設定在 AKS 中 Kubernetes 叢集。 下一個步驟是將 SQL Server 2019 巨量資料部署到叢集。
 
-[快速入門： 部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集](quickstart-big-data-cluster-deploy.md)
+[快速入門：部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集](quickstart-big-data-cluster-deploy.md)

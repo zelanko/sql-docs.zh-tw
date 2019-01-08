@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8b70cb96a7ed5f0b7df229a0d5de59e14a4e6f77
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 33618c019e59c044e681c45130130adc79d53122
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983690"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414835"
 ---
 # <a name="data-types-supported-in-tabular-models"></a>支援表格式模型中的資料類型
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "38983690"
 |文字|String|Unicode 字元資料字串。 可以是字串、 數字或以文字格式表示的日期。|  
 |date|日期/時間|採用可接受之日期時間表示方式的日期和時間。<br /><br /> 有效日期為 1900 年 3 月 1 日之後的所有日期。|  
 |CURRENCY|CURRENCY|貨幣資料類型允許的值是從 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 且固定有效位數為四個小數位數。|  
-|不適用|空白|空白是 DAX 中表示和取代 SQL Null 的資料類型。 您可以使用 BLANK 函數建立空白，然後使用邏輯函數 ISBLANK 來測試空白。|  
+|N/A|空白|空白是 DAX 中表示和取代 SQL Null 的資料類型。 您可以使用 BLANK 函數建立空白，然後使用邏輯函數 ISBLANK 來測試空白。|  
   
  \* 如果您嘗試匯入有大數值的資料，匯入可能會失敗，發生下列錯誤：  
   
- 記憶體中資料庫錯誤： '\<資料行名稱 >' 的資料行'\<資料表名稱 >' 資料表包含的值 ' 1.7976931348623157 e + 308'，但並不支援。 已取消作業。  
+ 記憶體中資料庫錯誤：'\<資料行名稱 >' 的資料行'\<資料表名稱 >' 資料表包含的值 ' 1.7976931348623157 e + 308'，不受支援。 已取消作業。  
   
  這項錯誤發生的原因是，模型設計師使用該值來代表 Null。 下列清單中的值是前述 Null 值的同義字：  
   
@@ -67,7 +67,7 @@ ms.locfileid: "38983690"
   
  如果您指定的引數的資料行中的資料與函數所需的資料類型不相容，DAX 在許多情況下會傳回錯誤。 不過，只要可能的話，DAX 會嘗試隱含資料轉換成所需的資料類型。 例如：  
   
--   您可以輸入數字 (如 “123”) 做為字串。 DAX 剖析字串，並嘗試將指定為數字的資料類型。  
+-   您可以輸入一個數字，例如"123"，做為字串。 DAX 剖析字串，並嘗試將指定為數字的資料類型。  
   
 -   您可以加入 TRUE + 1 然後得到結果 2，因為 TRUE 會隱含地轉換為數字 1 並執行 1+1 的運算。  
   

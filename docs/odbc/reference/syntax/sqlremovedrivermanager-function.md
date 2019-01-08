@@ -20,16 +20,16 @@ ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa90a3ec804717ff23c249b8a54e23665933f1a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4949d84f75483bd4379366621e4a8921d9b4de39
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794266"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206657"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager 函式
 **合規性**  
- 版本引入： ODBC 3.0： 在 Windows XP Service Pack 2、 Windows Server 2003 Service Pack 1 和更新版本的作業系統中已被取代。  
+ 導入的版本：ODBC 3.0:在 Windows XP Service Pack 2、 Windows Server 2003 Service Pack 1 和更新版本的作業系統被取代。  
   
  **摘要**  
  **SQLRemoveDriverManager**變更或移除 Odbcinst.ini 中的項目系統資訊中的 ODBC 核心元件的相關資訊。  
@@ -39,7 +39,7 @@ ms.locfileid: "47794266"
 ```  
   
 BOOL SQLRemoveDriverManager(  
-     LPDWORD     pdwUsageCount);  
+     LPDWORD     pdwUsageCount);  
 ```  
   
 ## <a name="arguments"></a>引數  

@@ -16,12 +16,12 @@ ms.assetid: 594d3461-34d2-41e7-8ad4-bd2753601ab6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 53d6a76c8689ef4e8fc4e98ab44d7ec28862ecf5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c4cd4aff0a8868b8870374fcffb8c7b7169fe2e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221268"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349200"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
   將資料列加入至大量複製資料列集。 如需範例，請參閱[大量複製資料檔案 _ 使用 IRowsetFastLoad &#40;OLE DB&#41; ](../native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)並[將 BLOB 資料傳送到 SQL SERVER 使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM &#40;OLE DB&#41;](../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)。  
@@ -45,7 +45,7 @@ pData
  針對大量複製而定義資料列資料的存取子控制代碼。 所參考的存取子是資料列存取子，會繫結取用者所擁有的記憶體 (內含資料值)。  
   
  *pData*[in]  
- 取用者所擁有記憶體 (內含資料值) 的指標。 如需詳細資訊，請參閱 [DBBINDING 結構](http://go.microsoft.com/fwlink/?LinkId=65955)。  
+ 取用者所擁有記憶體 (內含資料值) 的指標。 如需詳細資訊，請參閱 [DBBINDING 結構](https://go.microsoft.com/fwlink/?LinkId=65955)。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  S_OK  

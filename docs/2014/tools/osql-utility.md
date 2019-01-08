@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -24,12 +23,12 @@ ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbf8009d078058e825360190b268c3cbb124bcdf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33b7d8f60bfef89aef49733cf193f8aad2678ee7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123700"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808870"
 ---
 # <a name="osql-utility"></a>osql 公用程式
   **osql** 公用程式可讓您輸入 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式、系統程序和指令碼檔案。 這個公用程式利用 ODBC 來與伺服器通訊。  
@@ -46,7 +45,7 @@ ms.locfileid: "48123700"
 [-L] |  
 [  
   {  
-     {-Ulogin_id [-Ppassword]} | –E }  
+     {-Ulogin_id [-Ppassword]} | -E }  
      [-Sserver_name[\instance_name]] [-Hwksta_name] [-ddb_name]  
      [-ltime_out] [-ttime_out] [-hheaders]  
      [-scol_separator] [-wcolumn_width] [-apacket_size]  
@@ -110,7 +109,7 @@ C:\>osql
  指定命令逾時之前的秒數。如果未指定 *time_out* 值，命令不會逾時。  
   
  **-h** *headers*  
- 指定資料行標頭之間所要列印的資料列數。 預設值是每一組查詢結果各列印一次標頭。 請利用 -1 來指定不列印任何標頭。 若使用 –1，則參數和設定之間不能有空格 (**-h-1**而非 **-h -1**)。  
+ 指定資料行標頭之間所要列印的資料列數。 預設值是每一組查詢結果各列印一次標頭。 請利用 -1 來指定不列印任何標頭。 若使用 -1，則參數和設定之間不能有空格 (**-h-1**，而非 **-h -1**)。  
   
  **-s** *col_separator*  
  指定資料行分隔字元，依預設，它是一個空格。 若要使用對作業系統有特殊意義的字元 (例如 |; （& s) \< >)、 雙引號 （"） 括住的字元。  
@@ -263,7 +262,7 @@ osql -E -i titles.qry -o titles.res
  您可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **提交給**的 Transact-SQL 陳述式中併入註解。 可用的註解樣式有兩種：-- 和 /*...\*/。  
   
 ## <a name="using-exit-to-return-results-in-osql"></a>在 osql 中利用 EXIT 傳回結果  
- 您可以利用 SELECT 陳述式的結果來做為 **osql**的傳回值。 如果為數值，則最後一個結果資料列的最後一個資料行會轉換成 4 位元組的整數 (long)。 MS-DOS 會將低位元組傳給父處理序或作業系統錯誤層級。 Windows 會傳遞整個 4 位元組整數。 語法如下：  
+ 您可以利用 SELECT 陳述式的結果來做為 **osql**的傳回值。 如果為數值，則最後一個結果資料列的最後一個資料行會轉換成 4 位元組的整數 (long)。 MS-DOS 會將低位元組傳給父處理序或作業系統錯誤層級。 Windows 會傳遞整個 4 位元組整數。 其語法為：  
   
 ```  
 EXIT ( < query > )  
@@ -336,7 +335,7 @@ GO
  這個陳述式會產生 `10.3496`的結果，這表示在儲存值時，所有小數點保留不動。  
   
 ## <a name="see-also"></a>另請參閱  
- [註解&#40;MDX&#41;](/sql/mdx/comment-mdx)   
+ [註解 &#40;MDX&#41;](/sql/mdx/comment-mdx)   
  [-- &#40;註解&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)   
  [CAST 和 CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)   
  [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql)  

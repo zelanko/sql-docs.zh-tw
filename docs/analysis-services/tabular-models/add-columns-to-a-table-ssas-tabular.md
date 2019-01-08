@@ -1,5 +1,5 @@
 ---
-title: 將資料行加入資料表 |Microsoft Docs
+title: 加入 Analysis Services 表格式模型資料表資料行 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 77be2e392add4811d011d85ebc1ee9efbf52191d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a726f7dd8ef72ad30bd055d2f76cc58c7db6183d
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991470"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072705"
 ---
-# <a name="add-columns-to-a-table"></a>將資料行加入資料表
+# <a name="add-columns-to-a-table"></a>在資料表新增資料行
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   本文說明如何將資料行新增至現有的資料表。  
   

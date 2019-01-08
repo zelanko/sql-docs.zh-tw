@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Configure Distribution Wizard
@@ -13,12 +12,12 @@ ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 55a795f192c1fdb3f6c8cbd7166be01dc34dc7d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f5d1c1012c9e482b09281fd11406017b4330dd6d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186644"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813690"
 ---
 # <a name="configure-distribution-wizard"></a>設定散發精靈
   此章節提供設定散發精靈之下列頁面的資訊：  

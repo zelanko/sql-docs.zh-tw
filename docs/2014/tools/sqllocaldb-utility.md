@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - SqlLocalDB utility [SQL Server]
@@ -15,12 +14,12 @@ ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41bdf706a4834ffb2f4e5d5df1b5b7633a20d603
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f13a16e7c8f507914abe8529e02b76161072c5bc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100508"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812980"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 公用程式
   使用`SqlLocalDB`公用程式來建立的執行個體[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**。 `SqlLocalDB`公用程式 (SqlLocalDB.exe) 是簡單的命令列工具，可以讓使用者與開發人員建立和管理的執行個體[!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**。 如需有關如何使用資訊**LocalDB**，請參閱[SQL Server 2014 Express Locald](../database-engine/configure-windows/sql-server-2016-express-localdb.md)。  
@@ -45,7 +44,7 @@ SqlLocalDB.exe
   
 ## <a name="arguments"></a>引數  
  [ **create** | **c** ] *\<執行個體名稱>* *\<執行個體版本>* [**-s** ]  
- 建立 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** 的新執行個體。 `SqlLocalDB` 使用新版[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]所指定的二進位檔*\<執行個體版本 >* 引數。 使用至少一個十進位數的數字格式指定版本號碼。 次要版本號碼 (Service Pack) 為選擇性。 例如，下列兩個版本號碼都可接受：11.0 或 11.0.1186。 電腦上必須安裝指定的版本。 如果未指定，版本號碼會預設新版`SqlLocalDB`公用程式。 加入 **–s** 會啟動新的 **LocalDB**執行個體。  
+ 建立 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** 的新執行個體。 `SqlLocalDB` 使用新版[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]所指定的二進位檔*\<執行個體版本 >* 引數。 使用至少一個十進位數的數字格式指定版本號碼。 次要版本號碼 (Service Pack) 為選擇性。 例如下列兩個版本號碼都可接受：11.0 或 11.0.1186。 電腦上必須安裝指定的版本。 如果未指定，版本號碼會預設新版`SqlLocalDB`公用程式。 加入 **-s** 會啟動新的 **LocalDB** 執行個體。  
   
  [ **share** | **h** ]  
  使用指定的共用名稱來共用指定的 **LocalDB** 私用執行個體。 如果省略使用者 SID 或帳戶名稱，會預設為目前的使用者。  
@@ -60,7 +59,7 @@ SqlLocalDB.exe
  啟動指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** 執行個體。 當成功的陳述式傳回 **LocalDB**的具名管道位址時。  
   
  [ **stop** | **p** ] *\<instance-name>* [**-i** ] [**-k** ]  
- 停止指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** 執行個體。 新增 **– i**要求關閉此執行個體，與`NOWAIT`選項。 加入 **–k** 會在未經連絡的情況下終止執行個體處理序。  
+ 停止指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** 執行個體。 新增 **-i**要求關閉此執行個體，與`NOWAIT`選項。 加入 **-k** 會在未經連絡的情況下終止執行個體處理序。  
   
  [ **info** | **i** ] [ *\<執行個體名稱>* ]  
  列出目前使用者擁有的所有 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** 執行個體。  
@@ -98,7 +97,7 @@ SqlLocalDB.exe share "DeptLocalDB" "DeptSharedLocalDB"
 SqlLocalDB.exe start "DeptLocalDB"  
 SqlLocalDB.exe info "DeptLocalDB"  
 REM The previous statement outputs the Instance pipe name for the next step  
-sqlcmd –S np:\\.\pipe\LOCALDB#<use your pipe name>\tsql\query  
+sqlcmd -S np:\\.\pipe\LOCALDB#<use your pipe name>\tsql\query  
 CREATE LOGIN NewLogin WITH PASSWORD = 'Passw0rd!!@52';   
 GO  
 CREATE USER NewLogin;  
@@ -109,7 +108,7 @@ EXIT
  使用 **登入執行以下程式碼以連接到** LocalDB `NewLogin` 的共用執行個體。  
   
 ```  
-sqlcmd –S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52  
+sqlcmd -S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

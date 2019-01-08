@@ -8,8 +8,6 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 f1_keywords:
-- vs.findresults1
-- findresultswindow
 - vs.findresults2
 helpviewer_keywords:
 - Find Results Windows dialog box
@@ -17,12 +15,12 @@ ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9fbb23c1e85d5c612ded5ddfefa53ca3ddc9f1c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10e5dfa6bd2ca34fe24433333bc20c99bcf25a66
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106488"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328458"
 ---
 # <a name="find-results-windows"></a>尋找結果視窗
   兩個尋找結果視窗使用 **[尋找和取代]** 對話方塊的 **[檔案中尋找]** 或 **[檔案中取代]** 索引標籤，顯示找到的相符結果。 **[檔案中尋找]** 和 **[檔案中取代]** 的 **[結果選項]** 命令允許您選擇 [尋找結果] 視窗，其中會列出所有找到的相符結果。  
@@ -97,5 +95,3 @@ ms.locfileid: "48106488"
  而且可能會以此行的統計資料結束：  
   
  `Total replaced: 57  Matching files: 23  Total files searched: 59`  
-  
-  

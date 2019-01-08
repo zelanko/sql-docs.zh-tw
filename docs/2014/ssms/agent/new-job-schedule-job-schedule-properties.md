@@ -1,10 +1,10 @@
 ---
-title: 新增作業排程： 作業排程屬性 |Microsoft Docs
+title: 新增作業排程：作業排程屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.editrecurringjobsched.f1
@@ -13,12 +13,12 @@ ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d220cf42df242b0cf7ff436d7ad711adf4a89fe7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094788"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822402"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>新增作業排程：作業排程屬性
   使用此頁面來檢視和變更排程的屬性。  
@@ -89,7 +89,7 @@ ms.locfileid: "48094788"
  請指定排程將無限期地保持有效。  
   
 ## <a name="one-time-schedule-types-options"></a>僅執行一次的排程類型選項  
- **Date**  
+ **日期**  
  選取作業要執行的日期。  
   
  **Time**  

@@ -1,5 +1,5 @@
 ---
-title: 導出資料行 |Microsoft Docs
+title: 計算 Analysis Services 表格式模型中的資料行 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e27c545e960c8c57178f099bfa99a7187795d959
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 087c30045fdee1e769471cb12188cf31b524c618
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982520"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072395"
 ---
 # <a name="calculated-columns"></a>導出資料行
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  導出資料行，在表格式模型中，可讓您將新資料加入至您的模型。 您可以建立定義資料行之資料列層級值的 DAX 公式，而不是將值貼上或匯入至資料行中。 然後就可以像是其他任何資料行一樣，在報表、樞紐分析表或樞紐分析圖中使用導出資料行。  
+  導出資料行，在表格式模型中，可讓您將新資料加入至您的模型。 不必貼上或匯入到資料行的值，您可以建立定義資料行的資料列層級值的 DAX 公式。 然後就可以像是其他任何資料行一樣，在報表、樞紐分析表或樞紐分析圖中使用導出資料行。  
  
   
   

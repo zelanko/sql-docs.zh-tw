@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - namespaces [SQLXML], annotated XSD schemas
@@ -23,12 +21,12 @@ ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d988713949f29671294f3897f62d2e0a2fb8677
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 744690e12569a46c184ec712eec48498e080e99b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189513"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807070"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>註解式 XSD 結構描述簡介 (SQLXML 4.0)
   您可以使用 XML 結構描述定義 (XSD) 語言來建立關聯式資料的 XML 檢視。 接著，您就可以使用 XML 路徑語言 (XPath) 查詢來查詢這些檢視。 這類似於使用 CREATE VIEW 陳述式來建立檢視，然後針對檢視指定 SQL 查詢。  
@@ -120,9 +118,9 @@ ms.locfileid: "48189513"
 ## <a name="other-resources"></a>其他資源  
  您可以在下列網站上找到有關 XML 結構描述定義語言 (XSD)、XML 路徑語言 (XPath) 和可延伸樣式表語言轉換 (XSLT) 的資訊：  
   
--   XML 結構描述第 0 部： 入門，W3C 建議事項 (http://www.w3.org/TR/xmlschema-0/)  
+-   XML 結構描述第 0 部分：入門，W3C 建議事項 (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML 結構描述第 1 部分： 結構、 W3C 建議事項 (http://www.w3.org/TR/xmlschema-1/)  
+-   XML 結構描述第 1 部分：結構，W3C 建議事項 (http://www.w3.org/TR/xmlschema-1/)  
   
 -   XML 結構描述第 2:Datatypes，W3C 建議事項 (http://www.w3.org/TR/xmlschema-2/)  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - User Settable object
@@ -13,17 +13,17 @@ ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cce5bf6a05cf84a66004066545a76cf8c7f00271
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ac802569356979f3a01da4c204a80272c2be43a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214960"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805360"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server 的 User Settable 物件
   Microsoft **的** User Settable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件可讓您建立自訂的計數器執行個體。 使用自訂計數器執行個體來監視現有計數器未監視的伺服器層面，例如您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫獨有的元件 (例如，記錄的客戶訂單數或產品庫存數)。  
   
- **User Settable** 物件包含從 **User counter 1** 到 **User counter 10**這 10 個查詢計數器執行個體。 這些計數器分別對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_user_counter1 **到** sp_user_counter10 **的**預存程序。 當使用者應用程式執行這些預存程序時，預存程序所設定的數值將顯示於「系統監視器」內。 計數器可監視任何一個整數值，例如計算特定產品在某天內發生的訂單數的預存程序。  
+ **User Settable**物件包含 10 個查詢計數器執行個體：**使用者計數器 1**經由**User counter 10**。 這些計數器分別對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_user_counter1 **到** sp_user_counter10 **的**預存程序。 當使用者應用程式執行這些預存程序時，預存程序所設定的數值將顯示於「系統監視器」內。 計數器可監視任何一個整數值，例如計算特定產品在某天內發生的訂單數的預存程序。  
   
 > [!NOTE]  
 >  「系統監視器」不會自動輪詢使用者計數器預存程序。 必須由使用者應用程式明確執行，才會更新計數器的值。 請利用觸發程序來自動更新計數器的值。 例如，若要建立計數器來監視資料表的資料列數目，請在資料表建立 INSERT 和 DELETE 觸發程序來執行下列陳述式： `SELECT COUNT(*) FROM table`。 每當資料表因 INSERT 或 DELETE 作業而引發觸發程序時，「系統監視器」計數器就會自動更新。  
@@ -41,7 +41,7 @@ ms.locfileid: "48214960"
 |**User counter 1**|使用 **sp_user_counter1**來定義。|  
 |**使用者計數器 2**|使用 **sp_user_counter2**來定義。|  
 |**使用者計數器 3**|使用 **sp_user_counter3**來定義。|  
-|…||  
+|...||  
 |**User counter 10**|使用 **sp_user_counter10**來定義。|  
   
  若要使用使用者計數器預存程序，只要從您自己的應用程式執行它們，並且以一個整數參數代表計數器的新數值。 例如若要將 **User counter 1** 設成數值 10，可執行下列的 Transact-SQL 陳述式：  
@@ -70,6 +70,6 @@ GO
  **sp_user_counter** 適用於所有使用者，但可以由任何查詢計數器來限制。  
   
 ## <a name="see-also"></a>另請參閱  
- [監視資源使用狀況 &#40;系統監視器&#41;](monitor-resource-usage-system-monitor.md)  
+ [監視資源使用狀況 &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)  
   
   

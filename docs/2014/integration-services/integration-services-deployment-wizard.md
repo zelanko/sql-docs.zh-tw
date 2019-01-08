@@ -13,12 +13,12 @@ ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8a5b2cea7ae8b0166c0190044524941ca28ddca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f90613d3c8e0204e2861008a5f7be0846eca64a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086294"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535895"
 ---
 # <a name="integration-services-deployment-wizard"></a>Integration Services 部署精靈
   「[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 部署精靈」會使用專案部署模型，將專案部署至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體上的 SSISDB 目錄。  
@@ -27,13 +27,13 @@ ms.locfileid: "48086294"
   
  此精靈會繼續進行下列四個步驟。 按一下 [**下一步]** 移至下一個步驟中，或**Previous**返回上一個步驟。  
   
-1.  **選取來源**– 選取[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]您想要部署的專案。  
+1.  **選取來源**-選取[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]您想要部署的專案。  
   
-2.  **選取目的地**– 選取專案目的地。  
+2.  **選取目的地**-選取專案目的地。  
   
-3.  **檢閱**– 顯示您的選取項目。  
+3.  **檢閱**-顯示您的選取項目。  
   
-4.  **部署/結果**– 部署專案，並顯示結果。  
+4.  **部署/結果**-部署專案，並顯示結果。  
   
 ## <a name="select-source"></a>選取來源  
  若要部署您所建立的專案部署檔案，選取**專案部署檔案**並輸入.ispac 檔案的路徑，或按一下**瀏覽**若要尋找在[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]專案資料夾。 若要部署位於 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 目錄中的專案，請選取 **[Integration Services 目錄]**，然後輸入伺服器名稱以及該專案在目錄中的路徑。  
@@ -55,6 +55,6 @@ ms.locfileid: "48086294"
   
 ## <a name="see-also"></a>另請參閱  
  [將專案部署至 Integration Services 伺服器](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
- [部署專案和套件](packages/deploy-integration-services-ssis-projects-and-packages.md)  
+ [部署專案和封裝](packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   

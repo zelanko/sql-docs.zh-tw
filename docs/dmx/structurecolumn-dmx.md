@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e1bf58c9477cc06855d332ec3bd69b50a6bf19dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b6f552f009a93caab2437a5ae6a1533833d6054b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992408"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412815"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,11 +49,11 @@ StructureColumn('structure column name')
 ## <a name="error-messages"></a>錯誤訊息  
  如果使用者沒有父採礦結構的鑽研權限，就會引發下列安全性錯誤：  
   
- '%{user/}' 使用者沒有權限可以鑽研到 ‘%{model/}’ 採礦模型的父採礦結構。  
+ '%{使用者 /}' 使用者無權鑽研的父採礦結構' %{模型 /}' 採礦模型。  
   
  如果指定了無效的結構資料行名稱，就會引發下列錯誤訊息：  
   
- 目前內容 (行 %{line/}，資料行 %{column/}) 中的 ‘%{structure/}’ 父採礦結構內找不到 ‘%{structure-column-name/}’ 採礦結構資料行。  
+ '%{結構資料行名稱 /}' 中找不到採礦結構資料行' %{結構 /}' 父採礦結構中目前的內容 (行 %{線條 /}，資料行 %{資料行 /})。  
   
 ## <a name="examples"></a>範例  
  我們將會針對這些範例使用以下採礦結構。 請注意，此採礦結構包含兩個巢狀資料表資料行 `Products` 和 `Hobbies`。 `Hobbies` 資料行中的巢狀資料表具有單一資料行，該資料行會當做巢狀資料表的索引鍵。 `Products` 資料行中的巢狀資料表是一個複雜巢狀資料表，它具有索引鍵資料行及用於輸入的其他資料行。 下列範例說明如何設計資料採礦結構來包含許多不同的資料行 (雖然模型可能不會使用每一個資料行)。 雖然某些資料行在模型層級上對於模式的一般化可能沒有什麼幫助，但是對於鑽研可能會很有幫助。  
@@ -98,7 +98,7 @@ WITH FILTER(EXISTS (Products))
  下列範例查詢會傳回定義為採礦模型之一部分的資料行 `CustomerName` 和 `Age`。 但是，此查詢也會傳回 `Age` 資料行 (該資料行是結構的一部分，但不是採礦模型的一部分)。  
   
 ```  
-SELECT CustomerName, Age, StructureColumn(‘Occupation’) FROM MyModel.CASES   
+SELECT CustomerName, Age, StructureColumn('Occupation') FROM MyModel.CASES   
 WHERE Age > 30  
 ```  
   
@@ -109,11 +109,11 @@ WHERE Age > 30
   
 ```  
 SELECT CustomerName, Age,  
-(SELECT ProductName, StructureColumn(‘Quantity’) FROM Products) FROM MA.CASES   
-WHERE StructureColumn(‘Occupation’) = ‘Architect’  
+(SELECT ProductName, StructureColumn('Quantity') FROM Products) FROM MA.CASES   
+WHERE StructureColumn('Occupation') = 'Architect'  
 ```  
   
- 請注意，在此範例中，篩選會套用到結構資料行，將案例限制為職業是 'Architect' 的客戶 (`WHERE StructureColumn(‘Occupation’) = ‘Architect’`)。 因為在建立模型時，模型篩選條件一定會套用到案例中，所以只有在 `Products` 資料表內至少包含一個限定資料列的案例才會包含在模型案例中。 因此，巢狀資料表 `Products` 的篩選及案例 `(‘Occupation’)` 的篩選都會套用。  
+ 請注意，在此範例中，篩選會套用到結構資料行，將案例限制為職業是 'Architect' 的客戶 (`WHERE StructureColumn('Occupation') = 'Architect'`)。 因為在建立模型時，模型篩選條件一定會套用到案例中，所以只有在 `Products` 資料表內至少包含一個限定資料列的案例才會包含在模型案例中。 因此，巢狀資料表 `Products` 的篩選及案例 `('Occupation')` 的篩選都會套用。  
   
 ### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>範例查詢 3：從巢狀資料表選取資料行  
  下列範例查詢會傳回當做模型中之定型案例使用的客戶名稱。 對於每一位客戶而言，此查詢也會傳回包含購買詳細資料的巢狀資料表。 雖然此模型包含`ProductName`資料行，模型不會使用的值`ProductName`資料行。 此模型只會檢查一般是否購買的產品 (`NOT``OnSale`) 價格。 此查詢不但會傳回產品名稱，也會傳回所購買的數量 (此模型中未包含數量)。  
@@ -126,7 +126,7 @@ FROM MyModel.CASES
   
  請注意，除非採礦模型上已啟用鑽研，否則您無法傳回 `ProductName` 資料行或 `Quantity` 資料行。  
   
-### <a name="sample-query-4-filtering-on-and-returning-nested-table-columns"></a>範例查詢 4：篩選及傳回巢狀資料表資料行  
+### <a name="sample-query-4-filtering-on-and-returning-nested-table-columns"></a>範例查詢 4：篩選及傳回巢狀的資料表資料行  
  下列範例查詢會傳回採礦結構中所包含，但是模型中所不包含的案例和巢狀資料表資料行。 此模型已經篩選 `OnSale` 產品，但是此查詢會在採礦結構資料行 `Quantity` 上加入篩選：  
   
 ```  

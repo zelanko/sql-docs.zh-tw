@@ -11,12 +11,12 @@ ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4332d78fef98d653029d0913c6b7da8cfe5a75f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e3bee7fa85c98e50fdb940d2dfb23f76f3a462c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048253"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504687"
 ---
 # <a name="dmx-templates"></a>DMX 範本
   資料採礦範本可幫助您快速建立複雜的查詢。 雖然 DMX 查詢的一般語法已完整記載，但是使用範本可直接按一下並指向引數和資料來源，讓您更容易建立查詢。  
@@ -29,7 +29,7 @@ ms.locfileid: "48048253"
   
 3.  在頁面上，**選取模型**，按一下**進階**。  
   
-     **祕訣︰** 如果您要在模型上建立預測查詢，您可以在第一次，選取的模型，然後按一下**進階**、 預先建立的範本使用的模型名稱。  
+     **提示：** 如果您要在模型上建立預測查詢，您可以在第一次，選取的模型，然後按一下**進階**、 預先建立的範本使用的模型名稱。  
   
 4.  在 **資料採礦進階查詢編輯器**，按一下**DMX 範本**，然後選取範本。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48048253"
   
  **建立**  
   
- 使用這些範本可建立自訂模型或資料結構。 您不受限於精靈支援的模型，可以使用所連接 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體支援的所有資料採礦演算法，包括外掛程式演算法。  
+ 使用這些範本可建立自訂模型或資料結構。 您並不限於精靈支援的模型-您可以使用的執行個體所支援的任何資料採礦演算法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，您要連線，包括外掛程式演算法。  
   
 -   採礦模型  
   

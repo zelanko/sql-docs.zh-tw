@@ -10,12 +10,12 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a21072b90c0e263e4ac561bdad23aea8f0b1fd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d89fefdf575cdb7961df0ceae811184ca31fc51
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084578"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822532"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>記憶體最佳化資料表中的資料表和資料列大小
   記憶體最佳化的表格由資料列與索引 (包含資料列的指標) 的集合組成。 在記憶體最佳化的資料表中，資料列的長度不得超過 8,060 個位元組。 了解記憶體最佳化的資料表大小將有助於您了解電腦是否有足夠的記憶體。  
@@ -40,7 +40,7 @@ ms.locfileid: "48084578"
  資料表的記憶體中大小 (以位元組為單位) 計算如下：  
   
 ```  
-[table size] = [size of index 1] + … + [size of index n] + ([row size] * [row count])  
+[table size] = [size of index 1] + ... + [size of index n] + ([row size] * [row count])  
 ```  
   
  雜湊索引的大小在資料表建立時就已固定，並且取決於實際值區計數。 使用索引規格指定的 bucket_count 會無條件進位到最接近的二乘冪，以取得 [實際值區計數]。 例如，如果指定的 bucket_count 是 100000，則索引的 [實際值區計數] 為 131072。  
@@ -93,7 +93,7 @@ ms.locfileid: "48084578"
   
  ![有兩個索引的資料表資料列結構。](../../database-engine/media/hekaton-tables-4.gif "有兩個索引的資料表資料列結構。")  
   
- 開始和結束時間戳記表示特定資料列版本有效的期間。 在這個間隔中啟動的交易可以看到這個資料列版本。 如需詳細資訊，請參閱[Transactions in Memory-Optimized Tables](memory-optimized-tables.md)。  
+ 開始和結束時間戳記表示特定資料列版本有效的期間。 在這個間隔中啟動的交易可以看到這個資料列版本。 如需詳細資料，請參閱 [Transactions in Memory-Optimized Tables](memory-optimized-tables.md) (記憶體最佳化的資料表中的交易)。  
   
  索引指標指向屬於雜湊值區之鏈結中的下一個資料列。 下圖說明有兩個資料行 (姓名、城市) 之資料表的結構，其中包含兩個索引，一個是姓名資料行的索引，另一個是城市資料行的索引。  
   
@@ -103,17 +103,17 @@ ms.locfileid: "48084578"
   
  因此，名稱雜湊索引的鏈結如下：  
   
--   第一個貯體：(John, Beijing)、(John, Paris)、(Jane, Prague)  
+-   第一個貯體：(John，Beijing;)(John，Paris;)(Jane，Prague)  
   
--   第二個貯體：(Susan, Bogota)  
+-   第二個貯體：(Susan，Bogota)  
   
  城市索引的鏈結如下：  
   
--   第一個貯體：(John, Beijing)、(Susan, Bogota)  
+-   第一個貯體：（John，Beijing）、 （Susan，Bogota）  
   
--   第二個貯體：(John, Paris)、(Jane, Prague)  
+-   第二個貯體：（John，Paris）、 （Jane，Prague）  
   
- 結束時間戳記 ∞ (無限大) 指出這是資料列的目前有效版本。 自從這個資料列版本寫入後，資料列尚未更新或刪除。  
+ 結束時間戳記篇 （無限大） 指出這是資料列的目前有效的版本。 自從這個資料列版本寫入後，資料列尚未更新或刪除。  
   
  對於大於 200 的時間，資料表包含下列資料列：  
   
@@ -149,7 +149,7 @@ GO
   
  請注意，此資料表具有一個雜湊索引與一個非叢集索引 (主索引鍵)。 它還有三個固定長度資料行和一個可變長度資料行，且其中一個資料行可為 NULL (OrderDescription)。 假設 Orders 資料表有 8379 個資料列，而且 OrderDescription 資料行中值的平均長度為 78 個字元。  
   
- 若要判斷資料表大小，請先判斷索引的大小。 這兩個索引的 bucket_count 都指定為 10000。 這會無條件進位到最接近的二乘冪：16384。 因此，Orders 資料表的索引大小總計為：  
+ 若要判斷資料表大小，請先判斷索引的大小。 這兩個索引的 bucket_count 都指定為 10000。 這會無條件進位到最接近 2 的乘冪：16384。 因此，Orders 資料表的索引大小總計為：  
   
 ```  
 8 * 16384 = 131072 bytes  
@@ -196,9 +196,9 @@ GO
   
     -   最接近的 8 倍數是 24。  
   
-    -   總填補為 24 – 22 = 2 個位元組。  
+    -   總填補為 24 - 22 = 2 個位元組。  
   
--   沒有固定長度的深層類型資料行 (固定長度的深層類型資料行：0)。  
+-   沒有固定長度的深層類型資料行 (固定長度深層類型資料行：0.)。  
   
 -   深層類型資料行的實際大小為 2 * 78 = 156。 單一深層類型資料行 OrderDescription 的類型為 nvarchar。  
   

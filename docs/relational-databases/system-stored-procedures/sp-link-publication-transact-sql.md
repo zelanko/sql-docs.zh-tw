@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_link_publication_TSQL
@@ -17,22 +16,22 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd0e41f54792978dd2adf8186d88dd4f07c1fa9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c713b4efcfd37c245f340769a4725b0792d7528b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683086"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210050"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   設定在連接到發行者時，立即更新訂閱的同步處理觸發程序所用的組態和安全性資訊。 這個預存程序執行於訂閱資料庫的訂閱者端。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  當利用遠端散發者來設定發行者時，提供給所有參數的值 (包括 *job_login* 和 *job_password*) 都會以純文字的方式傳給散發者。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再執行這個預存程序。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
-  
-> [!IMPORTANT]  
+> 
+> [!IMPORTANT]
 >  某些狀況下，如果 「 訂閱者 」 正在執行，可以失敗這個預存程序[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 或更新版本和 「 發行者 」 執行較早版本。 如果在此情況下預存程序失敗，請將「發行者」升級為 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 或更新版本。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -65,8 +64,8 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 |值|描述|  
 |-----------|-----------------|  
-|**0**|會使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]做為此預存程序中指定的登入的驗證*登入*並*密碼*。<br /><br /> 注意： 在舊版的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此選項用來指定動態遠端程序呼叫 (RPC)。|  
-|**1**|使用在訂閱者端進行變更之使用者的安全性內容 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證或 Windows 驗證)。<br /><br /> 注意： 此帳戶也必須存在於發行者端具有足夠權限。 當使用 Windows 驗證時，必須支援安全性帳戶的委派。|  
+|**0**|會使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]做為此預存程序中指定的登入的驗證*登入*並*密碼*。<br /><br /> 注意：在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個選項用來指定動態遠端程序呼叫 (RPC)。|  
+|**1**|使用在訂閱者端進行變更之使用者的安全性內容 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證或 Windows 驗證)。<br /><br /> 注意：這個帳戶也必須存在於發行者端，且具有足夠的權限。 當使用 Windows 驗證時，必須支援安全性帳戶的委派。|  
 |**2**|使用現有使用者定義連結的伺服器登入以建立**sp_link_publication**。|  
   
  [ **@login**=] **'***登入***'**  

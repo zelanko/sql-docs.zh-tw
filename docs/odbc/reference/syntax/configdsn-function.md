@@ -20,16 +20,16 @@ ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c1f199d5f3318181aa03499c31d9597f2348fec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d65b7f31010aeb768f7b04c06753f185d3cc792f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655376"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210088"
 ---
 # <a name="configdsn-function"></a>ConfigDSN 函式
 **合規性**  
- 版本導入： ODBC 1.0  
+ 導入的版本：ODBC 1.0  
   
  **摘要**  
  **ConfigDSN**新增、 修改或刪除資料來源的系統資訊。 它可能會提示使用者輸入連接資訊。 它可以是驅動程式 DLL 或個別的安裝程式 DLL。  
@@ -52,11 +52,11 @@ BOOL ConfigDSN(
  *常見*  
  [輸入]要求的類型。 *常見*引數必須包含下列值之一：  
   
- ODBC_ADD_DSN： 加入新的資料來源。  
+ ODBC_ADD_DSN:加入新的資料來源。  
   
- ODBC_CONFIG_DSN： 設定 （修改） 的現有資料來源。  
+ ODBC_CONFIG_DSN:設定 （修改） 的現有資料來源。  
   
- ODBC_REMOVE_DSN： 移除現有的資料來源。  
+ ODBC_REMOVE_DSN:移除現有的資料來源。  
   
  *lpszDriver*  
  [輸入]驅動程式描述 （通常是相關聯的 DBMS 的名稱） 呈現給使用者，而不是實體的驅動程式名稱。  

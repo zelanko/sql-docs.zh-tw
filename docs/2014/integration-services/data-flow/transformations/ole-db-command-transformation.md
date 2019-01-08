@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbcommandtrans.f1
@@ -16,12 +15,12 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: caa2c72308aedf1cb1f5467c355b9b8175849d6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6596785f3dd6ac7f89788b7741845602e1aeea54
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146398"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817870"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 命令轉換
   OLE DB 命令轉換為資料流程中每個資料列執行 SQL 陳述式。 例如，可以執行在資料庫資料表中插入、更新或刪除資料列的 SQL 陳述式。  
@@ -45,7 +44,7 @@ ms.locfileid: "48146398"
  這個轉換有一個輸入、一個規則輸出及一個錯誤輸出。  
   
 ## <a name="logging"></a>記錄  
- 您可以記錄 OLE DB 命令轉換對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，疑難排解 OLE DB 命令轉換對外部資料來源執行的連接和命令。 若要記錄 OLE DB 命令轉換對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱[封裝執行的疑難排解工具](../../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+ 您可以記錄 OLE DB 命令轉換對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，疑難排解 OLE DB 命令轉換對外部資料來源執行的連接和命令。 若要記錄 OLE DB 命令轉換對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
  您可以使用 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或物件模型來設定轉換。 如需使用 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師來設定轉換的詳細資訊，請參閱  [設定 OLE DB 命令轉換](../../configure-the-ole-db-command-transformation.md)。 如需有關以程式設計方式來設定此轉換的詳細資訊，請參閱《開發人員指南》。  

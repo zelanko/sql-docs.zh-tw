@@ -1,5 +1,5 @@
 ---
-title: 第 4 課： 定義進階屬性和維度屬性 |Microsoft 文件
+title: 第 4 課：定義進階屬性和維度屬性 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8a3f2d9a45233eba795e8f252723850bd9710f43
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e99a6db1198422f137e281ea52da6b135172fcd7
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015845"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951580"
 ---
-# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>第 4 課：定義進階屬性和維度屬性
+# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>第 4 課：定義進階的屬性和維度屬性
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 在這一課，您將會學會如何使用某些屬性 (Attribute) 的進階屬性 (Property)、屬性 (Attribute) 階層和維度屬性 (Property)。  
@@ -41,18 +41,18 @@ ms.locfileid: "34015845"
 [依次要屬性來排序屬性成員](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
 在這項工作中，您會學到如何依據次要屬性來排序維度成員，以達到您想要的排序順序。  
   
-[在使用者自訂階層的屬性之間指定屬性關聯性](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+[在使用者自訂階層的屬性之間指定屬性關聯性](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
 在這項工作中，您會學到如何定義屬性的成員屬性，以及指定彼此之間的彙總關聯性。 如需詳細資訊，請參閱 [定義屬性關聯性](../analysis-services/multidimensional-models/attribute-relationships-define.md) 和 [使用者階層屬性](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)。  
   
 [定義未知的成員和 Null 處理屬性](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
 在這項工作中，您會設定 UnknownMember 和 UnknownMemberName 屬性，處理 Null 維度成員所造成的錯誤狀況。  
   
 ## <a name="next-lesson"></a>下一課  
-[第 5 課：在維度和量值群組之間定義關聯性](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[第 5 課：定義維度和量值群組之間的關聯性](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [Analysis Services 教學課程案例](../analysis-services/analysis-services-tutorial-scenario.md)  
-[多維度模型化 &#40;Adventure Works 教學課程 &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[多維度模型化 &#40;Adventure Works 教學課程&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [多維度模型中的維度](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

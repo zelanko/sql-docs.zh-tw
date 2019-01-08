@@ -20,16 +20,16 @@ ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 169088bbd99de070bfff81ffd83f01fc0e4d44a7
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 83253faf14d1ccabaa39aabb52d7d1265e13e728
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120165"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207687"
 ---
 # <a name="sqlcolumnprivileges-function"></a>SQLColumnPrivileges 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ODBC  
+ 導入的版本：ODBC 1.0 標準的合規性：ODBC  
   
  **摘要**  
  **SQLColumnPrivileges**傳回的資料行和相關聯的權限指定的資料表清單。 驅動程式會傳回當作結果集上指定的資訊*StatementHandle*。  
@@ -143,7 +143,7 @@ SQLRETURN SQLColumnPrivileges(
 |COLUMN_NAME (ODBC 1.0)|4|非 NULL Varchar|資料行名稱。 驅動程式會傳回沒有名稱的資料行的空字串。|  
 |授與者 (ODBC 1.0)|5|Varchar|授與權限; 使用者名稱如果不適用於資料來源，則為 NULL。<br /><br /> 為被授與者的資料行中值的物件擁有者的所有資料列，GRANTOR 資料行就是"（_s） 」。|  
 |被授與者 (ODBC 1.0)|6|非 NULL Varchar|對被授與權限的使用者名稱。|  
-|權限 (ODBC 1.0)|7|非 NULL Varchar|識別資料行權限。 可能是下列其中之一 (或其他支援的資料來源時實作所定義):<br /><br /> 選取： 被授與者可以擷取資料行的資料。<br /><br /> INSERT: 被授與者可以提供新的資料列插入相關聯的資料表中的資料行的資料。<br /><br /> 更新： 更新資料行中的資料會允許被授與者。<br /><br /> 參考： 參考的資料行條件約束內，是否允許 grantee (比方說，唯一、 參考，或檢查條件約束的資料表)。|  
+|權限 (ODBC 1.0)|7|非 NULL Varchar|識別資料行權限。 可能是下列其中之一 (或其他支援的資料來源時實作所定義):<br /><br /> 選取此項目：被授與者可以擷取資料行的資料。<br /><br /> 插入：被授與者可以提供新的資料列插入相關聯的資料表中的資料行的資料。<br /><br /> 更新：允許 grantee 將更新資料行中的資料。<br /><br /> 參考：是否允許 grantee 將參考條件約束內資料行 (例如，唯一、 參考，或檢查條件約束的資料表)。|  
 |IS_GRANTABLE (ODBC 1.0)|8|Varchar|指出是否允許被授與者的權限授與給其他使用者;「 是 」、 「 不行 」 或 「 NULL 」 如果未知或不適用資料來源。<br /><br /> 權限為可授與或可授與，但非兩者皆是。 所傳回的結果集**SQLColumnPrivileges**絕不會包含兩個資料列除了 IS_GRANTABLE 資料行以外的所有資料行包含相同的值。|  
   
 ## <a name="code-example"></a>程式碼範例  

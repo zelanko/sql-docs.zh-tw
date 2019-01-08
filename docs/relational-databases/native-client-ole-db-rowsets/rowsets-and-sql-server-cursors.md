@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6d31038f5c392f5dde04af753e42874f495362e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f8c58f38f100258ed9c6b0b1a95cbd37273aaa1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601827"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507806"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>資料列集和 SQL Server 資料指標
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "47601827"
   
  若要使用某種類型的資料指標模型，請找出對應至此資料指標模型的資料行，並尋找此資料行中具有 'T' 值的所有資料列集屬性。 將這些資料列集屬性設定為 VARIANT_TRUE，以便使用特定的資料指標模型。 具有 '-' 值的資料列集屬性可以設定為 VARIANT_TRUE 或 VARIANT_FALSE。  
   
-|資料列集屬性/資料指標模型|預設<br /><br /> result<br /><br /> 集合<br /><br /> (RO)|快速<br /><br /> 順<br /><br /> 向<br /><br /> (RO)|靜態<br /><br /> (RO)|索引鍵集<br /><br /> 驅動<br /><br /> (RO)|  
+|資料列集屬性/資料指標模型|預設<br /><br /> result<br /><br /> 集合<br /><br /> (RO)|快速<br /><br /> 順<br /><br /> 向<br /><br /> (RO)|Static<br /><br /> (RO)|索引鍵集<br /><br /> 驅動<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  

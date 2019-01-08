@@ -1,7 +1,8 @@
 ---
-title: Azure 資料 Studio SQL Server Agent 擴充功能 |Microsoft Docs
-description: 適用於 Azure Data Studio 的 SQL Server Agent 擴充功能 （預覽）
-ms.custom: tools|sos
+title: SQL Server Agent 擴充功能
+titleSuffix: Azure Data Studio
+description: 安裝和使用適用於 Azure 資料 Studio 的 SQL Server Agent 擴充功能 （預覽）
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 1ad136bb5bda8534d722b3b89d6731db5b704cb6
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 077a3ae072c8a9f680162de5eb1813c15b1e7199
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356209"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030392"
 ---
 # <a name="sql-server-agent-extension-preview"></a>SQL Server Agent 擴充功能 （預覽）
 

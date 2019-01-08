@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - LN function
@@ -14,12 +13,12 @@ ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cf836d26c67276b6780392bef44e1d4e5a470f86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eea8fed6bb9330bd552aed042d6aac3557274376
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140226"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823672"
 ---
 # <a name="ln-ssis-expression"></a>LN (SSIS 運算式)
   傳回數值運算式的自然對數。  
@@ -63,7 +62,7 @@ LN(@Length)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [記錄&#40;SSIS 運算式&#41;](log-ssis-expression.md)   
- [函式&#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
+ [LOG &#40;SSIS 運算式&#41;](log-ssis-expression.md)   
+ [函數 &#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
   
   

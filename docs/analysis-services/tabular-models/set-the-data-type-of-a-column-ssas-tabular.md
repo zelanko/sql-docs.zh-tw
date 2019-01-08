@@ -1,5 +1,5 @@
 ---
-title: 設定資料行的資料類型 |Microsoft 文件
+title: Analysis Services 表格式模型中的資料行資料類型 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 18aa18d9c9ee7fbc0291d9961e144263053710dd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 595f2cf0c95cf09241dd2189c380deb3ce7b5760
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045802"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071955"
 ---
 # <a name="set-the-data-type-of-a-column"></a>設定資料行的資料類型 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "34045802"
   
  下列是商業智慧語意模型中可用的資料類型：  
   
--   **文字**  
+-   **Text**  
   
 -   **十進位數字**  
   
@@ -73,7 +73,7 @@ ms.locfileid: "34045802"
   
  如果資料類型受到支援，但是模型設計師卻發現不受新資料類型支援的值，您會接到另一項錯誤，並將需要修正資料值，才能再繼續進行。  
   
- 如需使用商業智慧語意模型中的資料類型的詳細資訊，它們都是隱含轉換以及不同資料類型的方式公式中使用，請參閱[支援的資料類型](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)。  
+ 如需使用商業智慧語意模型中的資料類型的詳細資訊，它們都以隱含方式轉換，和不同資料類型的方式可在公式中，請參閱 <<c0> [ 支援的資料類型](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [支援的資料類型](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  

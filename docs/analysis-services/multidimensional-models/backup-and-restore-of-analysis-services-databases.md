@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 資料庫的備份和還原 |Microsoft 文件
+title: Analysis Services 資料庫的備份與還原 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e43357e843f28133f7bb2f5cd9db078ee4bace27
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aa0e023b32418cd5eabee04819213955c517e0ee
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024445"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983999"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>備份與還原 Analysis Services 資料庫
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34024445"
   
  針對包含來源資料的完整備份，您必須備份包含詳細資料的資料庫。 更明確地說，如果您使用 ROLAP 或 DirectQuery 資料庫儲存，詳細資料會儲存在與 Analysis Services 資料庫分開的外部 SQL Server 關聯式資料庫中。 否則，如果所有物件都是表格式或多維度，Analysis Services 備份就會包含中繼資料和來源資料。  
   
- 自動備份的一個明顯好處，就是資料快照集可以按照自動備份頻率，保持在最新的狀態。 自動排程器可確保不會忘記備份。 還原資料庫也可以自動化，且是複寫資料的好方法，但一定要在您複寫至的執行個體上備份加密金鑰檔案。 同步處理功能是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的複寫專用，但僅針對過期的資料。 此處提到的所有功能可以透過使用者介面、利用 XML/A 命令或透過 AMO 以程式設計方式執行來實作。 如需備份策略的詳細資訊，請參閱 [SQL Server 2005 Analysis Services 的備份策略](http://go.microsoft.com/fwlink/?LinkId=81888)。  
+ 自動備份的一個明顯好處，就是資料快照集可以按照自動備份頻率，保持在最新的狀態。 自動排程器可確保不會忘記備份。 還原資料庫也可以自動化，且是複寫資料的好方法，但一定要在您複寫至的執行個體上備份加密金鑰檔案。 同步處理功能是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的複寫專用，但僅針對過期的資料。 此處提到的所有功能可以透過使用者介面、利用 XML/A 命令或透過 AMO 以程式設計方式執行來實作。
   
  本主題包含下列各節：  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34024445"
  系統管理員可以將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫備份至單一 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 備份檔 (.abf)，而不用考慮資料庫的大小。 如需逐步指示，請參閱 [如何備份 Analysis Services 資料庫 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) 和 [自動備份 Analysis Services 資料庫 (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]用於載入和查詢[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]資料模型，在 SharePoint 環境中，從 SharePoint 內容資料庫載入其模型。 這些內容資料庫為關聯式，而且會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫引擎上執行。 因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料模型沒有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 備份和還原策略。 如果您已經針對 SharePoint 內容設定災害復原計畫，此計畫會包含內容資料庫中所儲存的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料模型。  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)](用來在 SharePoint 環境中載入和查詢 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料模型) 會從 SharePoint 內容資料庫載入其模型。 這些內容資料庫為關聯式，而且會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫引擎上執行。 因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料模型沒有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 備份和還原策略。 如果您已經針對 SharePoint 內容設定災害復原計畫，此計畫會包含內容資料庫中所儲存的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料模型。  
   
  **遠端資料分割**  
   
@@ -105,7 +105,7 @@ ms.locfileid: "34024445"
 -   您可以選擇由還原命令變更每一個要還原之分割區的還原資料夾。 本機資料分割可以還原至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的任何本機資料夾位置，資料庫即還原至此處。 遠端分割區可以還原至本機伺服器以外之任何伺服器上的任何資料夾；遠端分割區無法變成本機式。  
   
     > [!IMPORTANT]  
-    >  對於每個備份檔案，執行還原命令的使用者必須擁有從針對每個檔案所指定之備份位置讀取的權限。 若要還原沒有安裝在伺服器上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，使用者也必須是該 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之伺服器角色的成員。 若要覆寫 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，使用者必須具有下列其中一個角色： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之伺服器角色的成員，或在即將還原之資料庫上擁有完整控制權 (管理員) 權限的資料庫角色成員。  
+    >  對於每個備份檔案，執行還原命令的使用者必須擁有從針對每個檔案所指定之備份位置讀取的權限。 若要還原沒有安裝在伺服器上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，使用者也必須是該 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之伺服器角色的成員。 若要覆寫 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，使用者必須具有下列其中一個角色： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之伺服器角色的成員，或在即將還原之資料庫上擁有「完整控制 (系統管理員)」權限的資料庫角色成員。  
   
     > [!NOTE]  
     >  還原現有的資料庫之後，還原資料庫的使用者可能會喪失已還原資料庫的存取權。 如果在執行備份時，使用者不是伺服器角色的成員，也不是擁有完整控制權 (管理員) 權限的資料庫角色成員，就可能會發生存取權喪失的情況。  
