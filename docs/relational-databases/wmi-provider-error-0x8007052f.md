@@ -13,13 +13,12 @@ ms.assetid: a33f12bd-15c4-42a8-b343-de44c3e87729
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 668cb77d2e15fc23981f6f32bcac44391567f0df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b21b44e4d4dd7e282793d9f10440749bea3757e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810380"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823542"
 ---
 # <a name="wmi-provider-error-0x8007052f"></a>WMI 提供者錯誤 0x8007052f
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
