@@ -10,12 +10,12 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ea86d548e509650f0ec237bb77097e3fb4b267ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143789"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367993"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>從資料存取應用程式呼叫原生編譯預存程序
   本主題討論從資料存取應用程式呼叫原生編譯之預存程序的相關指引。  
@@ -36,7 +36,7 @@ ms.locfileid: "48143789"
   
  下列建議適用於使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的 ODBC 驅動程式時的原生編譯預存程序呼叫。  
   
- 呼叫預存程序一次最有效率的方式是發出直接的 RPC 呼叫使用`SQLExecDirect`和 ODBC CALL 子句。 請勿使用[!INCLUDE[tsql](../../../includes/tsql-md.md)]`EXECUTE`陳述式。 如果預存程序多次呼叫，備妥的執行更有效率。  
+ 呼叫一次預存程序的最有效率的方式是使用 `SQLExecDirect` 和 ODBC CALL 子句來發出直接 RPC 呼叫。 請勿使用[!INCLUDE[tsql](../../../includes/tsql-md.md)]`EXECUTE`陳述式。 如果預存程序多次呼叫，備妥的執行更有效率。  
   
  多次呼叫 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預存程序最有效率的方式是透過備妥的 RPC 程序呼叫。 備妥的 RPC 呼叫是使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的 ODBC 驅動程式，執行如下：  
   
@@ -61,7 +61,7 @@ if (returnCode != SQL_SUCCESS && returnCode != SQL_SUCCESS_WITH_INFO) {
 }  
   
 // 2, 3, 4 - ItemNo, ProdCode, Qty  
-…  
+...  
   
 // Prepare stored procedure  
 returnCode = SQLPrepare(hstmt, (SQLTCHAR *) _T("{call ItemInsert(?, ?, ?, ?)}"),SQL_NTS);  
@@ -87,7 +87,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
   
 1.  建立含有記憶體最佳化資料檔案群組的範例資料庫。 如需如何建立具有記憶體最佳化資料檔案群組之資料庫的資訊，請參閱 [建立記憶體最佳化資料表和原生編譯的預存程序](creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
   
-2.  建立稱為 PrepExecSample 且指向資料庫的 ODBC 資料來源。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 驅動程式。 您也可以修改範例並使用 [Microsoft ODBC Driver for SQL Server](http://msdn.microsoft.com/library/jj730314.aspx)。  
+2.  建立稱為 PrepExecSample 且指向資料庫的 ODBC 資料來源。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 驅動程式。 您也可以修改範例並使用 [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/library/jj730314.aspx)。  
   
 3.  在範例資料庫上執行 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼 (如下)。  
   

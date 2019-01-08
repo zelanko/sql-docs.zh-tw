@@ -10,12 +10,12 @@ ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 325191a4355ec2b45a952fab72105b278b26d218
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ff434efd0a9f4fcb3316143e598e636bff85f487
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087118"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358200"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>記憶體最佳化的資料表簡介
   記憶體最佳化資料表是使用 [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) 所建立的資料表。  
@@ -24,7 +24,7 @@ ms.locfileid: "48087118"
   
  記憶體中 OLTP 的目標是與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 整合，以便在開發、部署、管理能力及支援能力等各方面提供完美無瑕的體驗。 資料庫可以包含位於記憶體中以及以磁碟為基礎的物件。  
   
- 記憶體最佳化資料表中的資料列會建立版本。 這表示，資料表的每個資料列可能有多個版本。 所有資料列版本都是在相同資料表資料結構中維護。 只要使用資料列版本設定功能，就能在同一個資料列並行讀取和寫入。 如需並行讀取和寫入相同的資料列上的詳細資訊，請參閱[Transactions in Memory-Optimized Tables](memory-optimized-tables.md)。  
+ 記憶體最佳化資料表中的資料列會建立版本。 這表示，資料表的每個資料列可能有多個版本。 所有資料列版本都是在相同資料表資料結構中維護。 只要使用資料列版本設定功能，就能在同一個資料列並行讀取和寫入。 如需有關同一個資料列的並行讀取和寫入的詳細資訊，請參閱＜ [Transactions in Memory-Optimized Tables](memory-optimized-tables.md)＞。  
   
  下圖說明多重版本設定。 此圖顯示一個資料表包含三個資料列，每個資料列各有不同的版本。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48087118"
   
 -   透過原生編譯的預存程序。  
   
- 從原生編譯的預存程序可以最有效率地存取記憶體最佳化資料表 ([原生編譯預存程序](natively-compiled-stored-procedures.md))。 使用 (傳統) 解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]也可以存取記憶體最佳化資料表。 解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 是指在不使用原生編譯之預存程序的情況下存取記憶體最佳化資料表。 解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存取範例包括從 DML 觸發程序、特定 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 批次、檢視和資料表值函式，存取記憶體最佳化資料表。  
+ 記憶體最佳化資料表可從原生編譯的預存程序 ([原生編譯的預存程序](natively-compiled-stored-procedures.md)) 存取以達到最高效率。 使用 (傳統) 解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]也可以存取記憶體最佳化資料表。 解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 是指在不使用原生編譯之預存程序的情況下存取記憶體最佳化資料表。 解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存取範例包括從 DML 觸發程序、特定 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 批次、檢視和資料表值函式，存取記憶體最佳化資料表。  
   
  下表摘要說明各種物件的原生和解譯 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存取。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48087118"
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |記憶體最佳化資料表|是|是|否 <sup>1</sup>|  
 |[記憶體最佳化資料表變數](../../database-engine/memory-optimized-table-variables.md)|是|是|否|  
-|[原生編譯的預存程序](http://msdn.microsoft.com/library/dn133184.aspx)|您無法使用 EXECUTE 陳述式從原生編譯的預存程序執行任何預存程序。|是|否 <sup>1</sup>|  
+|[原生編譯的預存程序](https://msdn.microsoft.com/library/dn133184.aspx)|您無法使用 EXECUTE 陳述式從原生編譯的預存程序執行任何預存程序。|是|否 <sup>1</sup>|  
   
  <sup>1</sup>您無法從內容連接存取記憶體最佳化的資料表或原生編譯的預存程序 (從連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行 CLR 模組時)。 不過，您可以建立及開啟另一個連接，並從中存取記憶體最佳化資料表和原生編譯預存程序。 如需詳細資訊，請參閱[一般 vs。內容連接](../clr-integration/data-access/context-connections-vs-regular-connections.md)。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48087118"
   
 |問題|記憶體中 OLTP 影響|  
 |-----------|----------------------------|  
-|效能<br /><br /> 高資源 (CPU、I/O、網路或記憶體) 使用量。|CPU<br /> 原生編譯的預存程序可大幅降低 CPU 使用量，因為它們執行 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式所需的指令比 (傳統) 解譯的預存程序少了許多。<br /><br /> 記憶體中 OLTP 有助於減少向外延展的工作負載中的硬體投資，因為一部伺服器具有提供五到十部伺服器輸送量的潛力。<br /><br /> I/O<br /> 如果處理資料或索引頁面時遭遇 I/O 瓶頸，記憶體中 OLTP 可減少瓶頸。 此外，記憶體中 OLTP 物件的檢查點是連續的，不會導致 I/O 作業突然增加。 不過，如果效能嚴重不足資料表的工作集無法納入記憶體中，記憶體中 OLTP 將無法改善效能，因為它要求資料必須是記憶體駐留。 如果在記錄時遭遇 I/O 瓶頸，記憶體中 OLTP 可減少瓶頸，因為它進行的記錄較少。 如果將一個或多個記憶體最佳化資料表設為非持久資料表，就可以消除記錄資料的作業。<br /><br /> 記憶體<br /> 記憶體中 OLTP 並未提供任何效能優勢。 此外，記憶體中 OLTP 可能會對記憶體造成額外的壓力，因為物件需駐留在記憶體中。<br /><br /> 網路<br /> 記憶體中 OLTP 並未提供任何效能優勢。 資料需要從資料層到應用程式層之間的通訊。|  
+|效能<br /><br /> 高資源 (CPU、I/O、網路或記憶體) 使用量。|CPU<br /> 原生編譯的預存程序可大幅降低 CPU 使用量，因為它們執行 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式所需的指令比 (傳統) 解譯的預存程序少了許多。<br /><br /> 記憶體中 OLTP 有助於減少向外延展的工作負載中的硬體投資，因為一部伺服器具有提供五到十部伺服器輸送量的潛力。<br /><br /> I/O<br /> 如果處理資料或索引頁面時遭遇 I/O 瓶頸，記憶體中 OLTP 可減少瓶頸。 此外，記憶體中 OLTP 物件的檢查點是連續的，不會導致 I/O 作業突然增加。 不過，如果效能嚴重不足資料表的工作集無法納入記憶體中，記憶體中 OLTP 將無法改善效能，因為它要求資料必須是記憶體駐留。 如果在記錄時遭遇 I/O 瓶頸，記憶體中 OLTP 可減少瓶頸，因為它進行的記錄較少。 如果將一個或多個記憶體最佳化資料表設為非持久資料表，就可以消除記錄資料的作業。<br /><br /> 記憶體<br /> 記憶體中 OLTP 並未提供任何效能優勢。 此外，記憶體中 OLTP 可能會對記憶體造成額外的壓力，因為物件需駐留在記憶體中。<br /><br /> Network<br /> 記憶體中 OLTP 並未提供任何效能優勢。 資料需要從資料層到應用程式層之間的通訊。|  
 |延展性<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 應用程式中大多數的擴充問題都是由並行問題所造成，例如競爭鎖定、閂鎖和執行緒同步鎖定。|閂鎖競爭<br /> 典型的案例是以索引鍵順序並行插入資料列時，競爭索引的最後一頁。 由於記憶體中 OLTP 存取資料時不會採用閂鎖，因此可完全消除與執行緒同步鎖定競爭相關的延展性問題。<br /><br /> 執行緒同步鎖定競爭<br /> 由於記憶體中 OLTP 存取資料時不會採用閂鎖，因此可完全消除與同步鎖定競爭相關的延展性問題。<br /><br /> 鎖定相關的競爭<br /> 如果資料庫應用程式在讀取和寫入作業之間發生封鎖問題，記憶體中 OLTP 可解決封鎖問題，因為它使用新的開放式並行控制形式來實作所有交易隔離層級。 記憶體中 OLTP 不會使用 TempDB 儲存資料列版本。<br /><br /> 如果由於兩項寫入作業之間的衝突導致延展問題發生，例如兩項並行交易嘗試更新同一個資料列，記憶體中 OLTP 會讓其中一項交易成功，而讓另一項交易失敗。 失敗的交易必須以明確或隱含的方式重新送出，以重試交易。 不論是哪一種情況，您都必須變更應用程式。<br /><br /> 如果您的應用程式在兩個寫入作業之間遇到常見的衝突，開放式鎖定的值會減少。 此應用程式不適用 In-Memory OLTP。 大部分的 OLTP 應用程式都沒有寫入衝突，除非衝突是由鎖定擴大所引發。|  
   
 ## <a name="see-also"></a>另請參閱  

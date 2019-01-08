@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
@@ -12,18 +12,18 @@ ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7198118f9eadbf58bab83727ed45899f5fd2a0df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09f3cf66d28a70eecd82adde490d02b521fd80ed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167668"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374400"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>使用自訂報表搭配物件總管節點屬性
   如果自訂報表參考選定 [物件總管] 節點的報表參數，自訂報表就可以在該節點的內容中執行。 這可讓自訂報表使用目前的內容 (例如目前的資料庫) 或資料庫或伺服器物件。  
   
 ## <a name="report-samples"></a>報表範例  
- 備有[報表範例](http://go.microsoft.com/fwlink/?LinkId=81792)(包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)]建立的標準報表) 供您下載。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]來修改這些範例。  
+ 備有[報表範例](https://go.microsoft.com/fwlink/?LinkId=81792)(包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)]建立的標準報表) 供您下載。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]來修改這些範例。  
   
 ## <a name="object-explorer-node-report-parameters"></a>物件總管節點報表參數  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48167668"
   
  `<?xml version="1.0" encoding="utf-8"?>`  
   
- `<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">`  
+ `<Report xmlns="https://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="https://schemas.microsoft.com/SQLServer/reporting/reportdesigner">`  
   
  `<ReportParameters>`  
   

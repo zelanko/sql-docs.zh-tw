@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.specifytablecopyorquery.f1
@@ -13,12 +12,12 @@ ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 69135b95383c8a00bbde4475717e68d2bbdaf770
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 53d97adb5252594bb38f85989e87742a557331ec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150758"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750400"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>指定資料表複製或查詢 (SQL Server 匯入和匯出精靈)
   使用**指定資料表複製或查詢**頁面，即可指定如何將資料複製。 您可以使用圖形介面來選取要複製的現有資料庫物件，或使用 Transact-SQL 來建立更複雜的查詢。  
@@ -31,7 +30,7 @@ ms.locfileid: "48150758"
  **從一個或多個資料表或檢視表複製資料**  
  將欄位從所選的來源資料表和檢視表複製到指定的目的地，使用**選取來源資料表和檢視** 對話方塊。 如果您要複製來源的所有資料，但不要篩選或排序記錄，請使用此選項。  
   
- 當您使用[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]連接到您的資料來源的資料提供者**將資料從一或多個資料表或檢視表複製**選項可能無法使用。 這個選項僅適用於在 ProviderDescriptors.xml 檔案中具有 ProviderDescription 區段的提供者。 每個 ProviderDescription 區段會包含從對應提供者擷取中繼資料所需的資訊。 根據預設，只有下列提供者的 ProviderDescriptors.xml 檔案包含 ProviderDescription 區段：  
+ 當您使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者來連接至資料來源時，可能會無法使用 **[從一或多個資料表或檢視表複製資料]** 選項。 這個選項僅適用於在 ProviderDescriptors.xml 檔案中具有 ProviderDescription 區段的提供者。 每個 ProviderDescription 區段會包含從對應提供者擷取中繼資料所需的資訊。 根據預設，只有下列提供者的 ProviderDescriptors.xml 檔案包含 ProviderDescription 區段：  
   
 -   System.Data.SqlClient  
   

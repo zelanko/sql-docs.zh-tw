@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -16,12 +16,12 @@ ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 009c83975aa730626858c793b53c51c309c218b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2036dd0624e8c2c6479c8ba039aa5646f374902d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222788"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356869"
 ---
 # <a name="use-tokens-in-job-steps"></a>在作業步驟中使用 Token
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 可讓您在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟指令碼中使用 Token。 撰寫作業步驟時使用 Token，所賦予您的彈性與撰寫軟體程式時使用的變數一樣。 在作業步驟指令碼中插入 Token 後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 就會先在執行階段取代此 Token，然後再由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子系統執行作業步驟。  
@@ -34,11 +34,11 @@ ms.locfileid: "48222788"
 ## <a name="understanding-using-tokens"></a>了解如何使用 Token  
   
 > [!IMPORTANT]  
->  對 Windows 事件記錄檔具有寫入權限的任何 Windows 使用者，都可以存取由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示或 WMI 警示啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些 token 包括： **A-DBN**， **A-SVR**， **A-ERR**， **A-SEV**， **A-MSG**。，和**WMI (*`property`*)**. 請注意在此版本中，Token 的使用擴充到所有警示。  
+>  對 Windows 事件記錄檔具有寫入權限的任何 Windows 使用者，都可以存取由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示或 WMI 警示啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些 Token 包括：**A-DBN**， **A-SVR**， **A-ERR**， **A-SEV**， **A-MSG**。、 及**WMI ( *`property`*)**. 請注意在此版本中，Token 的使用擴充到所有警示。  
 >   
 >  如果需要使用這些 Token，請先確定只有受信任的 Windows 安全性群組的成員 (例如 Administrators 群組) 才對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在電腦的事件記錄檔具有寫入權限。 然後以滑鼠右鍵按一下物件總管中的 [SQL Server Agent]、選取 [屬性]，然後在 [警示系統] 頁面上選取 [取代回應警示之所有作業的 Token]，以啟用這些 Token。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token 取代功能既簡單又有效率： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會使用精確的常值字串值來取代 Token。 所有 Token 需區分大小寫。 您的作業步驟必須將這點納入考量，並且必須正確引用您所用的 Token 或將取代字串轉換成正確的資料類型。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent token 取代功能既簡單又有效率：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式會取代語彙基元的確切的常值字串值。 所有 Token 需區分大小寫。 您的作業步驟必須將這點納入考量，並且必須正確引用您所用的 Token 或將取代字串轉換成正確的資料類型。  
   
  例如，您可能會使用下列陳述式，在作業步驟中列印資料庫的名稱：  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48222788"
 |**(A-SEV)**|錯誤的重要性。 若作業是由警示執行，則錯誤嚴重性值會自動取代作業步驟中的此 Token。|  
 |**(A-MSG)**|訊息文字。 若作業是由警示執行，則訊息文字值會自動取代作業步驟中的此 Token。|  
 |**(DATE)**|目前日期 (格式為 YYYYMMDD)。|  
-|**(INST)**|執行個體名稱。 如果是預設執行個體，此 Token 將具有預設執行個體名稱：MSSQLSERVER。|  
+|**(INST)**|執行個體名稱。 預設執行個體，此 token 將具有預設執行個體名稱：MSSQLSERVER。|  
 |**(JOBID)**|作業識別碼。|  
 |**(MACH)**|電腦名稱。|  
 |**(MSSA)**|主要 SQLServerAgent 服務名稱。|  
@@ -94,7 +94,7 @@ ms.locfileid: "48222788"
 ## <a name="updating-job-steps-to-use-macros"></a>將作業步驟更新成使用巨集  
  從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 開始，包含 Token 但不含逸出巨集的作業步驟將會失敗，而且會傳回一則錯誤訊息，表示作業步驟含有一或多個在執行作業之前必須使用巨集更新的 Token。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫文件 915845 中有提供指令碼： [SQL Server Agent Job Steps That Use Tokens Fail in SQL Server 2005 Service Pack 1](http://support.microsoft.com/kb/915845)(使用 Token 的 SQL Server Agent 作業步驟在 SQL Server 2005 Service Pack 1 中失敗)。您可以使用這個指令碼來更新使用 Token 搭配 **ESCAPE_NONE** 巨集的所有作業步驟。 使用這個指令碼之後，我們建議您盡快檢閱使用 Token 的作業步驟，並且使用適用於此作業步驟內容的逸出巨集來取代 **ESCAPE_NONE** 巨集。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫文件 915845 中有提供指令碼：[SQL Server 2005 Service Pack 1 中失敗的 SQL Server Agent 作業步驟使用 Token](https://support.microsoft.com/kb/915845)。您可以使用此指令碼來更新所有作業步驟使用 token 搭配**ESCAPE_NONE**巨集。 使用這個指令碼之後，我們建議您盡快檢閱使用 Token 的作業步驟，並且使用適用於此作業步驟內容的逸出巨集來取代 **ESCAPE_NONE** 巨集。  
   
  下表說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 如何處理取代 Token。 若要開啟或關閉取代 Token，請以滑鼠右鍵按一下物件總管中的 [SQL Server Agent]，並選取 [屬性]，然後在 [警示系統] 頁面上選取或清除 [取代回應警示之所有作業的 Token] 核取方塊。  
   

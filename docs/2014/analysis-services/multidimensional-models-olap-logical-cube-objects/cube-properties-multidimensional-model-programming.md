@@ -33,12 +33,12 @@ ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fdd7ff7f21bcf0dbd761e745fc1fcd42f7e2d3d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 315635739984bd76d79ff3a36b32f09783aecae3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084608"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371440"
 ---
 # <a name="cube-properties"></a>Cube 屬性
   Cube 有許多屬性，您可以設定這些屬性來影響整個 Cube 的行為。 這些屬性都摘要在下表中：  
@@ -70,7 +70,7 @@ ms.locfileid: "48084608"
 |`Visible`|決定 Cube 的可見性。|  
   
 > [!NOTE]  
->  如需有關如何設定 ErrorConfiguration 屬性的值，當使用 null 值和其他資料完整性議題的詳細資訊，請[Analysis Services 2005 中處理資料完整性問題](http://go.microsoft.com/fwlink/?LinkId=81891)。  
+>  如需有關如何設定 ErrorConfiguration 屬性的值，當使用 null 值和其他資料完整性議題的詳細資訊，請[Analysis Services 2005 中處理資料完整性問題](https://go.microsoft.com/fwlink/?LinkId=81891)。  
   
 ## <a name="see-also"></a>另請參閱  
  [主動式快取&#40;資料分割&#41;](partitions-proactive-caching.md)  

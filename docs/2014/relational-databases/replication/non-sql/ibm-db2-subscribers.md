@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - non-SQL Server Subscribers, IBM DB2
@@ -17,12 +16,12 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bedd4c228f540cd4277b4f77750e797b70424c30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155358"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356664"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 訂閱者
   透過[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Host Integration Server 所含的 OLE DB 提供者， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 支援向 IBM DB2/AS 400、DB2/MVS 和 DB2/Universal Database 的提取訂閱。  
@@ -32,11 +31,11 @@ ms.locfileid: "48155358"
   
 1.  在散發者上安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for DB2 的最新版本：  
   
-    -   如果您使用[!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]，請在[SQL Server 2008 下載](http://go.microsoft.com/fwlink/?LinkId=149256)網頁上**相關下載**區段中，按一下 Microsoft SQL Server 2008 Feature Pack 的最新版本的連結。 在 **[Microsoft SQL Server 2008 Feature Pack]** 網頁上，搜尋 **[Microsoft OLE DB Provider for DB2]**。  
+    -   如果您使用的是 [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]，請在 [SQL Server 2008 下載](https://go.microsoft.com/fwlink/?LinkId=149256) 網頁的 **[Related Downloads] (相關下載)** 區段中，按一下最新版 Microsoft SQL Server 2008 功能套件的連結。 在 **[Microsoft SQL Server 2008 Feature Pack]** 網頁上，搜尋 **[Microsoft OLE DB Provider for DB2]**。  
   
     -   如果您使用的是 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard，請安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS) 伺服器的最新版本，其中就包含此提供者。  
   
-     除了安裝提供者，我們建議您安裝資料存取工具，會在下一個步驟 (以預設的下載一起安裝[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Enterprise)。 如需有關安裝和使用「資料存取工具」的詳細資料，請參閱提供者文件集或 HIS 文件集。  
+     除了安裝提供者外，建議您同時安裝「資料存取工具」，該工具將在下一步中用到 (依預設，它會隨 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise 的下載一起安裝)。 如需有關安裝和使用「資料存取工具」的詳細資料，請參閱提供者文件集或 HIS 文件集。  
   
 2.  為「訂閱者」建立連接字串。 在任何文字編輯器中都可建立連接字串，但建議您使用「資料存取工具」。 若要在「資料存取工具」中建立字串：  
   
@@ -131,7 +130,7 @@ ms.locfileid: "48155358"
 |`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
-|`sql_variant`|不適用|  
+|`sql_variant`|N/A|  
 |`sysname`|VARCHAR(128)|  
 |`text`|VARCHAR(0)<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  

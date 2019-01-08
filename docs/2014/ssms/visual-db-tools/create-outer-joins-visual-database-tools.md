@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - outer joins
@@ -13,12 +13,12 @@ ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 276c377b6963c2c58be26187079bc60bf619a90a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141648"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778960"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>建立外部聯結 (Visual Database Tools)
   在預設狀況下， [查詢和檢視表設計工具](visual-database-tools.md) 會在資料表之間建立內部聯結 (Inner Join)。 內部聯結將刪除不符合其他資料表之資料列的資料列。 然而，外部聯結則至少傳回 FROM 子句提到的一個資料表或檢視，只要這些資料列符合任何 WHERE 或 HAVING 搜尋條件。 若要在不具有符合聯結資料表中資料的結果集中包含資料列，就可以建立外部聯結。  

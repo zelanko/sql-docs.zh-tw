@@ -19,12 +19,12 @@ ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2bcf7cb620a97578b921ca09d565ff2ef2fe77a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b18efaacb7ab891402e84b851735870c4c47e883
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080961"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360510"
 ---
 # <a name="analysis-services"></a>Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 是用於決策支援和商業智慧 (BI) 方案的線上分析資料引擎，可提供報表和用戶端應用程式 (例如 Excel、Reporting Services 報表和其他協力廠商 BI 工具) 的分析資料。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的一般工作流程包括建立 OLAP 或表格式資料模型，將模型以資料庫方式部署到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體，處理資料庫以載入該資料庫及資料，然後指派權限以允許資料存取。 準備好開始執行時，任何支援 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 作為資料來源的用戶端應用程式，即可存取這個多用途資料模型。  
@@ -67,7 +67,7 @@ ms.locfileid: "48080961"
  [Analysis Services 教學課程&#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
  [SQL Server 2014 安裝](../database-engine/install-windows/installation-for-sql-server.md)   
  [開發人員指南&#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
- [SQL Server 資源中心](http://go.microsoft.com/fwlink/?linkID=219676)   
- [SQLCat.com](http://go.microsoft.com/fwlink/?linkID=220963)  
+ [SQL Server 資源中心](https://go.microsoft.com/fwlink/?linkID=219676)   
+ [SQLCat.com](https://go.microsoft.com/fwlink/?linkID=220963)  
   
   

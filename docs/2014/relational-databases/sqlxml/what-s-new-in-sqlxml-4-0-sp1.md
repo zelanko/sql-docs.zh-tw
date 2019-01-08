@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - registry keys [SQLXML]
@@ -21,12 +19,12 @@ ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52ac84652bf5f1141ab40b2bcf1b3091a3dcf7de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8804132c280642ab4d79ee05417395c7ef9b5a76
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204118"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371230"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>什麼&#39;新功能 SQLXML 4.0 SP1
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 包含不同的更新和增強功能。 本主題摘要說明更新並提供詳細資訊的連結 (如果有的話)。 SQLXML 4.0 SP1 會提供其他的增強功能以支援 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中導入的新資料類型。 本主題包含下列主旨：  
@@ -50,7 +48,7 @@ ms.locfileid: "48204118"
 -   移轉問題  
   
 ## <a name="installing-sqlxml-40-sp1"></a>安裝 SQLXML 4.0 SP1  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的版本中，SQLXML 4.0 隨附於 SQL Server 而且是所有 SQL Server 版本 (SQL Server Express 除外) 之預設安裝的一部分。 不過，從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，SQL Server 已不再包含最新版的 SQLXML (SQLXML 4.0 SP1)。 若要安裝 SQLXML 4.0 SP1，下載從[SQLXML 4.0 SP1 的安裝位置](http://www.microsoft.com/download/details.aspx?id=30403)。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的版本中，SQLXML 4.0 隨附於 SQL Server 而且是所有 SQL Server 版本 (SQL Server Express 除外) 之預設安裝的一部分。 不過，從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，SQL Server 已不再包含最新版的 SQLXML (SQLXML 4.0 SP1)。 若要安裝 SQLXML 4.0 SP1，下載從[SQLXML 4.0 SP1 的安裝位置](https://www.microsoft.com/download/details.aspx?id=30403)。  
   
  SQLXML 4.0 SP1 檔案也會安裝於下列位置：  
   
@@ -201,7 +199,7 @@ ms.locfileid: "48204118"
 ### <a name="supportability-for-sqlxml-30-isapi-and-data-types-introduced-in-sql-server-2005"></a>SQL Server 2005 所導入之 SQLXML 3.0 ISAPI 和資料類型的可支援性  
  因為 ISAPI 支援已從 SQLXML 4.0 中，如果您的解決方案需要增強的資料輸入推出功能[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]這類[xml 資料型別](/sql/t-sql/xml/xml-transact-sql)或[使用者定義資料型別 (Udt)](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)和 Web 為基礎的存取，您必須使用另一個解決方案，例如[SQLXML managed 類別](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)或另一種 HTTP 處理常式，例如 SQL Server 2005 的原生 XML Web Service。  
   
- 或者，如果您不需要這些類型擴充功能，您可以繼續使用 SQLXML 3.0 以連接到[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]安裝。 SQLXML 3.0 ISAPI 支援可以用於這些較新的版本，但並不能支援或辨識 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中導入的 `xml` 資料類型或 UDT 類型支援。  
+ 或者，如果您不需要這些類型擴充功能，您可以繼續使用 SQLXML 3.0 以連接到[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]安裝。 SQLXML 3.0 ISAPI 支援可以用於這些較新的版本，但並不能支援或辨識 `xml` 中導入的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料類型或 UDT 類型支援。  
   
 ### <a name="xml-bulk-load-security-changes-for-temporary-files"></a>暫存檔案的 XML 大量載入安全性變更  
  對於 SQLXML 4.0 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，XML 大量載入檔案權限會授與執行大量載入作業的使用者。 讀取和寫入權限則是繼承自檔案系統。 在舊版的 SQLXML 和 SQL Server 中，在 SQLXML 下進行 XML 大量載入會建立暫存檔，這些暫存檔並未受到保護，可由任何人讀取。  

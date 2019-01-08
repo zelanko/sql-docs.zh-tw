@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3bf28d011f1b1387bfbf04358d4575232c768d6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dccbdee0e7db72a9946e92229d06dce519ca94a1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200328"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369870"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>可用性群組接聽程式、用戶端連接及應用程式容錯移轉 (SQL Server)
   此主題包含有關 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 用戶端連接和應用程式容錯移轉功能的考量資訊。  
@@ -47,7 +47,7 @@ ms.locfileid: "48200328"
  可用性群組接聽程式是由下列所定義：  
   
  唯一的 DNS 名稱  
- 這也稱為虛擬網路名稱 (VNN)。 套用 DNS 主機名稱的 Active Directory 命名規則。 如需詳細資訊，請參閱 [Active Directory 中的電腦、網域、站台及 OU 的命名慣例](http://support.microsoft.com/kb/909264) 知識庫文件。  
+ 這也稱為虛擬網路名稱 (VNN)。 套用 DNS 主機名稱的 Active Directory 命名規則。 如需詳細資訊，請參閱 [Active Directory 中的電腦、網域、站台及 OU 的命名慣例](https://support.microsoft.com/kb/909264) 知識庫文件。  
   
  一個或多個虛擬 IP 位址 (VIP)  
  為可用性群組可容錯移轉的一個或多個目標子網路設定 VIP。  
@@ -110,7 +110,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 ###  <a name="ReadOnlyAppIntent"></a> 唯讀應用程式意圖和唯讀路由  
  應用程式意圖連接字串屬性表示用戶端應用程式要導向至讀寫或唯讀可用性群組資料庫版本的要求。 若要使用唯讀路由，在連接到可用性群組接聽程式時，用戶端必須使用連接字串中設為唯讀的應用程式意圖。 如果沒有唯讀的應用程式意圖，可用性群組接聽程式的連接會被導向至主要複本的資料庫。  
   
- 應用程式意圖屬性在登入期間是儲存在用戶端的工作階段，然後 SQL Server 會處理此意圖，並依據可用性群組的組態和次要複本中目標資料庫的目前讀寫狀態，決定要執行的動作。  
+ 應用程式意圖屬性在登入期間是儲存在用戶端的工作階段，然後 SQL Server 會處理此意圖，並依據可用性群組的設定和次要複本中目標資料庫的目前讀寫狀態，決定要執行的動作。  
   
  指定唯讀應用程式意圖之 ADO.NET 提供者 (System.Data.SqlClient) 的連接字串範例如下：  
   
@@ -124,7 +124,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  請注意，應用程式意圖可從用戶端驅動程式傳送至舊版 SQL Server 執行個體。  在此情況下，會忽略唯讀應用程式意圖，而且連接照常進行。  
   
- 您可以略過唯讀路由： 不將 application intent 連接屬性設定為`ReadOnly`(若未指定，預設值是`ReadWrite`期間登入) 或直接連接到 SQL Server 的主要複本執行個體而不是使用可用性群組接聽程式名稱。  如果您直接連接到唯讀複本，也不會發生唯讀路由。  
+ 您可以透過下列方式略過唯讀路由：不將應用程式意圖連接屬性設為 `ReadOnly` (若未指定，登入期間預設值為 `ReadWrite`)，或者直接連接到主要複本的 SQL Server 執行個體，而不使用可用性群組接聽程式名稱。  如果您直接連接到唯讀複本，也不會發生唯讀路由。  
   
 ####  <a name="RelatedTasksApps"></a> 相關工作  
   
@@ -149,15 +149,15 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 ##  <a name="CCBehaviorOnFailover"></a> 容錯移轉時用戶端連接的行為  
  當可用性群組發生容錯移轉時，對可用性群組的現有持續連線會終止，而且用戶端必須建立新連接，才能繼續使用相同的主要資料庫或唯讀次要資料庫。  在伺服器端發生容錯移轉時，對可用性群組的連接可能會失敗，而強制用戶端連接重試連接，直到主要資料庫恢復上線為止。  
   
- 如果在用戶端應用程式嘗試連接期間，但在連接逾時之前，可用性群組恢復上線，用戶端驅動程式在其中一個內部重試期間可能會成功連接，而應用程式在此情況下不會發生錯誤。  
+ 如果在用戶端應用程式嘗試連線期間，但在連線逾時之前，可用性群組恢復上線，用戶端驅動程式在其中一個內部重試期間可能會成功連線，而應用程式在此情況下不會發生錯誤。  
   
 ##  <a name="SupportAgMultiSubnetFailover"></a> 支援可用性群組多重子網路容錯移轉  
- 若所用的用戶端程式庫可以在連接字串中使用 MultiSubnetFailover 連接選項，即可根據所使用之提供者的語法，將 MultiSubnetFailover 設定為 “True” 或 "Yes"，以最佳化可用性群組容錯移轉至不同的子網路。  
+ 若所用的用戶端程式庫可以在連接字串中使用 MultiSubnetFailover 連線選項，即可根據所使用之提供者的語法，將 MultiSubnetFailover 設定為 "True" 或 "Yes"，來最佳化可用性群組容錯移轉至不同的子網路。  
   
 > [!NOTE]  
 >  對於可用性群組接聽程式以及 SQL Server 容錯移轉叢集執行名稱的單一和多重子網路連接，建議使用此設定。  啟用此選項會增加額外的最佳化，甚至在單一子網路案例也一樣。  
   
- `MultiSubnetFailover`連接選項只適用於 TCP 網路通訊協定和連接到可用性群組接聽程式以及任何虛擬網路名稱連接到時，才支援[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  
+ `MultiSubnetFailover` 連接選項只適用於 TCP 網路通訊協定，而且只在連接到可用性群組接聽程式時以及任何虛擬網路名稱連接到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 時才受支援。  
   
  可啟用多重子網路容錯移轉之 ADO.NET 提供者 (System.Data.SqlClient) 的連接字串範例如下：  
   
@@ -165,7 +165,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
 ```  
   
- `MultiSubnetFailover`連接選項應該設定為`True`即使可用性群組只跨越單一子網路。  這可讓您將新用戶端預先設定為支援子網路的未來跨越，而不需要在未來變更用戶端連接字串，此外也會最佳化單一子網路容錯移轉的容錯移轉效能。  雖然`MultiSubnetFailover`連接選項不是必要，但是它提供更快速的子網路容錯移轉的好處。  這是因為用戶端驅動程式會嘗試對與可用性群組平行相關的每個 IP 位址開啟 TCP 通訊端。  用戶端驅動程式會等候第一個成功回應的 IP，一旦回應，就會將它用於連接。  
+ `MultiSubnetFailover` 連接選項應該設為 `True`，即使可用性群組只跨越單一子網路也一樣。  這可讓您將新用戶端預先設定為支援子網路的未來跨越，而不需要在未來變更用戶端連接字串，此外也會最佳化單一子網路容錯移轉的容錯移轉效能。  雖然 `MultiSubnetFailover` 連接選項不是必要，但是它提供更快子網路容錯移轉的好處。  這是因為用戶端驅動程式會嘗試對與可用性群組平行相關的每個 IP 位址開啟 TCP 通訊端。  用戶端驅動程式會等候第一個成功回應的 IP，一旦回應，就會將它用於連接。  
   
 ##  <a name="SSLcertificates"></a> 可用性群組接聽程式和 SSL 憑證  
  連接到可用性群組接聽程式時，如果參與的 SQL Server 執行個體同時使用 SSL 憑證和工作階段加密，連接的用戶端驅動程式需要支援 SSL 憑證中的主體替代名稱，才能強制加密。  我們已計劃針對 ADO.NET (SqlClient)、Microsoft JDBC 和 SQL Native Client (SNAC)，提供 SQL Server 驅動程式對憑證主體替代名稱的支援。  
@@ -206,17 +206,17 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Introduction to the Availability Group Listener](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (可用性群組接聽程式簡介) (SQL Server AlwaysOn 團隊部落格)  
+-   [Introduction to the Availability Group Listener](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (可用性群組接聽程式簡介) (SQL Server AlwaysOn 團隊部落格)  
   
--   [SQL Server AlwaysOn 團隊部落格： 官方 SQL Server AlwaysOn 團隊部落格](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 用戶端連接性&#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [關於可用性複本的用戶端連線存取 &#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [使用中次要： 可讀取的次要複本&#40;AlwaysOn 可用性群組&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [使用中次要：可讀取次要複本&#40;AlwaysOn 可用性群組&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)
   
   

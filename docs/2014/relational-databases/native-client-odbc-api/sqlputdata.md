@@ -14,12 +14,12 @@ ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3226e759ab1a92cdfa3a251c1803a54ed9ed010a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140778"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358550"
 ---
 # <a name="sqlputdata"></a>SQLPutData
   使用 SQLPutData 傳送 65,535 個位元組以上的資料時，適用下列限制 (如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]4.21a 版) 或 400 KB 的資料 （適用於 SQL Server 6.0 版和更新版本)，針對 SQL_LONGVARCHAR (`text`)、 SQL_WLONGVARCHAR (`ntext`) 或SQL_LONGVARBINARY (`image`) 資料行：  
@@ -51,7 +51,7 @@ ms.locfileid: "48140778"
   
  *DataPtr*參數會被忽略，但必須設定為非 NULL 值。 如需詳細資訊，請參閱節變數 TVP 資料列中的繫結[繫結和 Data Transfer of Table-Valued 參數和資料行值](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)。  
   
- 如果*Strlen_or_ind&lt* SQL_DEFAULT_PARAM 或介於 0 和 SQL_PARAMSET_SIZE 以外的任何值 (亦即*ColumnSize* SQLBindParameter 參數)，就會發生錯誤。 此錯誤會使 SQLPutData 傳回 SQL_ERROR：SQLSTATE=HY090，表示「無效的字串或緩衝區長度」。  
+ 如果*Strlen_or_ind&lt* SQL_DEFAULT_PARAM 或介於 0 和 SQL_PARAMSET_SIZE 以外的任何值 (亦即*ColumnSize* SQLBindParameter 參數)，就會發生錯誤。 此錯誤會使 SQLPutData 傳回 SQL_ERROR:SQLSTATE = HY090 以及 「 無效的字串或緩衝區長度 」。  
   
  如需有關資料表值參數的詳細資訊，請參閱 < [Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48140778"
  `SQLPutData` 支援大型 CLR 使用者定義型別 (UDT)。 如需詳細資訊，請參閱 < [Large CLR User-Defined 類型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLPutData 函數](http://go.microsoft.com/fwlink/?LinkId=59365)   
+ [SQLPutData 函數](https://go.microsoft.com/fwlink/?LinkId=59365)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

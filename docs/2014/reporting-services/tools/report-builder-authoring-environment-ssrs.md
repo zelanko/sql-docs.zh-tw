@@ -11,15 +11,15 @@ ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e9c5505aaed0fba7ff5097c059f11cd0af8f50f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67e1fe559e8bbb4c9c484671737223766c4a0554
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117488"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358150"
 ---
 # <a name="report-builder-ssrs"></a>報表產生器 (SSRS)
-  報表產生器是一種報表撰寫環境的商務使用者想要工作[!INCLUDE[msCoName](../../includes/msconame-md.md)]Office 環境。 當您設計報表時，可以指定要取得資料的位置、要取得的資料，以及要顯示資料的方式。 當您執行報表時，報表處理器會採用已指定的所有資訊、擷取資料，然後將它與報表配置結合，以便產生報表。  
+  報表產生器是一個報表撰寫環境，適合喜歡在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 環境中工作的商務使用者使用。 當您設計報表時，可以指定要取得資料的位置、要取得的資料，以及要顯示資料的方式。 當您執行報表時，報表處理器會採用已指定的所有資訊、擷取資料，然後將它與報表配置結合，以便產生報表。  
   
 ## <a name="benefits-of-report-builder"></a>報表產生器的優點  
  報表產生器讓您可以：  
@@ -42,7 +42,7 @@ ms.locfileid: "48117488"
   
 -   將報表和相關項目儲存至報表伺服器、SharePoint 文件庫或本機電腦。  
   
- 報表產生器與報表設計師可共用許多功能。 如需有關報表產生器的詳細資訊，請參閱 <<c0> [ 報表產生器文件](http://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com 上。  
+ 報表產生器與報表設計師可共用許多功能。 如需有關報表產生器的詳細資訊，請參閱 <<c0> [ 報表產生器文件](https://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com 上。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表產生器的存取](../report-server/configure-report-builder-access.md)   

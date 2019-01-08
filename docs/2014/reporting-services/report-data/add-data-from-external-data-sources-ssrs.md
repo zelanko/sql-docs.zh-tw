@@ -11,12 +11,12 @@ ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2f1dff5b37bdf608478105e684a09dab8cae9280
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 527c089b1fd1dc49330ea3ee3c9b3576f7c969ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161948"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369660"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>從外部資料來源加入資料 (SSRS)
   若要從外部資料來源擷取資料，可以使用資料連接。 資料連接資訊通常是由外部資料來源的擁有者提供，此擁有者負責授與權限和指定要使用的認證類型。 資料連接資訊會儲存為報表資料來源。 資料來源類型會指定要用來擷取資料的資料延伸模組。  
@@ -107,8 +107,8 @@ ms.locfileid: "48161948"
 |[報表產生器中的資料連接、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)|提供資料連接與資料來源的相關資訊。|  
 |[報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|提供內嵌與共用資料集的相關資訊。|  
 |[資料集欄位集合 &#40;報表產生器及 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)|提供查詢所產生之資料集欄位集合的相關資訊。|  
-|《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)。|提供支援每一個資料延伸模組之平台與版本的深入資訊。|  
-|《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](http://go.microsoft.com/fwlink/?linkid=121312)》中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文件的[資料處理延伸模組概觀](../extensions/data-processing/data-processing-extensions-overview.md)。|為進階使用者提供資料延伸模組的深入資訊。|  
+|《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)。|提供支援每一個資料延伸模組之平台與版本的深入資訊。|  
+|《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](https://go.microsoft.com/fwlink/?linkid=121312)》中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文件的[資料處理延伸模組概觀](../extensions/data-processing/data-processing-extensions-overview.md)。|為進階使用者提供資料延伸模組的深入資訊。|  
   
 
   

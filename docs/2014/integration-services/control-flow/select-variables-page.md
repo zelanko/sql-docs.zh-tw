@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.vstahostingui.variablepickermodaldialog.f1
@@ -16,17 +15,17 @@ ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9e623c8ee9212d8b05aae2bf1448dc201df503d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4cd2b211755884d1b93c19d6b639880ad4bd4a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201178"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769350"
 ---
 # <a name="select-variables-page"></a>選取變數頁面
   使用 [選取變數] 對話方塊，可在您設定指令碼工作或指令碼元件時，為 **ReadOnlyVariables** 和 **ReadWriteVariables** 屬性選取一或多個變數。  
   
- 若要開啟 [選取變數] 對話方塊，請在 [指令碼轉換編輯器] 對話方塊的 [指令碼] 頁面上，於 [自訂屬性] 底下尋找 [ReadOnlyVariables] 或 [ReadWriteVariables] 屬性，然後按一下與該屬性相關聯的省略符號 (...) 按鈕。  
+ 若要開啟 [選取變數] 對話方塊，請在 [指令碼轉換編輯器] 對話方塊的 [指令碼] 頁面上，於 [自訂屬性] 底下尋找 [ReadOnlyVariables] 或 [ReadWriteVariables] 屬性，然後按一下與該屬性相關聯的省略符號 ([...]) 按鈕。  
   
 ## <a name="options"></a>選項。  
  選取方塊  
@@ -39,6 +38,6 @@ ms.locfileid: "48201178"
  指定變數的資料類型。  
   
 ## <a name="see-also"></a>另請參閱  
- [指令碼工作編輯器&#40;指令碼 頁面&#41;](../script-task-editor-script-page.md)  
+ [指令碼工作編輯器 &#40;指令碼頁面&#41;](../script-task-editor-script-page.md)  
   
   

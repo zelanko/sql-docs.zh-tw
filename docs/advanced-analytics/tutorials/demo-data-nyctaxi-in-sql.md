@@ -1,5 +1,5 @@
 ---
-title: 下載 NYC 計程車示範資料和指令碼內嵌 R 和 Python （SQL Server 機器學習服務） |Microsoft Docs
+title: 下載內嵌 R 和 Python-SQL Server Machine Learning 的 NYC 計程車示範資料和指令碼
 description: 指示下載紐約市計程車資料的範例，並建立資料庫。 在 SQL Server Python 和 R 語言教學課程，示範如何在 SQL Server 預存程序和 T-SQL 函式中內嵌指令碼會使用資料。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ea4651c76d0c8fbc14d22a51c7789d65a20b8484
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 25ac1b4884b0d12de9de59f44ba02ac9fec7e952
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701342"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645022"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>如需 SQL Server Python 和 R 教學課程的 NYC 計程車示範資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-這篇文章說明如何設定從公用資料所組成的範例資料庫[紐約市計程車和禮車委託](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)。 這項資料可在數個 R 和 Python 教學課程中的 SQL Server 上的資料庫內分析。 若要讓範例程式碼執行更快速，我們建立具代表性的 1%取樣資料。 在您系統上，將資料庫備份檔案是稍微超過 90 MB，提供資料表中的主要資料的 1.7 百萬個資料列。
+這篇文章說明如何設定從公用資料所組成的範例資料庫[紐約市計程車和禮車委託](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)。 這項資料可在數個 R 和 Python 教學課程中的 SQL Server 上的資料庫內分析。 若要讓範例程式碼執行更快速，我們建立具代表性的 1%取樣資料。 在您系統上，將資料庫備份檔案是稍微超過 90 MB，提供資料表中的主要資料的 1.7 百萬個資料列。
 
 若要完成此練習中，您應該具備[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)或其他工具，可以還原資料庫備份檔案，並執行 T-SQL 查詢。
 
@@ -57,7 +57,7 @@ ms.locfileid: "51701342"
 
 |**物件名稱**|**物件類型**|**說明**|
 |----------|------------------------|---------------|
-|**NYCTaxi_Sample** | [資料庫] | 建立資料庫和兩個資料表：<br /><br />dbo.nyctaxi_sample 資料表： 包含主要紐約市計程車資料集。 叢集資料行存放區索引會加入資料表，以提升儲存體和查詢效能。 NYC 計程車資料集的 1%樣本會插入此資料表。<br /><br />dbo.nyc_taxi_models 資料表： 用來保存定型的進階的分析模型。|
+|**NYCTaxi_Sample** | [資料庫] | 建立資料庫和兩個資料表：<br /><br />dbo.nyctaxi_sample 資料表：包含主要紐約市計程車資料集。 叢集資料行存放區索引會加入資料表，以提升儲存體和查詢效能。 NYC 計程車資料集的 1%樣本會插入此資料表。<br /><br />dbo.nyc_taxi_models 資料表：用來保存定型的進階的分析模型。|
 |**fnCalculateDistance** |純量值函式 | 計算上車與下車位置之間的直線距離。 此函式會在[建立資料特徵](sqldev-create-data-features-using-t-sql.md)，[定型及儲存模型](sqldev-train-and-save-a-model-using-t-sql.md)並[R 模型作業化](sqldev-operationalize-the-model.md)。|
 |**fnEngineerFeatures** |資料表值函式 | 建立新的資料特徵來訓練模型。 此函式會在[建立資料特徵](sqldev-create-data-features-using-t-sql.md)並[R 模型作業化](sqldev-operationalize-the-model.md)。|
 
@@ -88,7 +88,7 @@ ms.locfileid: "51701342"
 
 3. 在資料庫內**nyctaxi_sample**資料表，其中包含資料集。 資料表已經過最佳化，以集合為基礎的計算，加上[資料行存放區索引](../../relational-databases/indexes/columnstore-indexes-overview.md)。 執行此陳述式來產生資料表的簡短摘要。
 
-    ```SQL
+    ```sql
     SELECT DISTINCT [passenger_count]
         , ROUND (SUM ([fare_amount]),0) as TotalFares
         , ROUND (AVG ([fare_amount]),0) as AvgFares

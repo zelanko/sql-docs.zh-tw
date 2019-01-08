@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.new.custom.report.f1
@@ -14,12 +14,12 @@ ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1a1f66753b1ff002a43f59fb065134967e15254
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3417b4905fd43734fb058d05db81f7318d87539d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208890"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354680"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio 中的自訂報表
   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，許多物件總管節點會顯示一組由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建立的標準報表。 這些報表會摘要列出經常要求的伺服器資訊。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 開始，管理員就可以從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 執行在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中建立的自訂報表。  
@@ -71,7 +71,7 @@ ms.locfileid: "48208890"
 >  您可以報表中內嵌任何有效 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，然後從報表中執行。 在高權限使用者帳戶底下執行報表可讓任何內嵌的指示執行，而不會受到挑戰。  
   
 ## <a name="report-samples"></a>報表範例  
- [報表範例](http://go.microsoft.com/fwlink/?LinkId=81792)，包括所建立的標準報表[!INCLUDE[msCoName](../../includes/msconame-md.md)]，可供下載。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]來修改這些範例。  
+ [報表範例](https://go.microsoft.com/fwlink/?LinkId=81792)，包括所建立的標準報表[!INCLUDE[msCoName](../../includes/msconame-md.md)]，可供下載。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]來修改這些範例。  
   
 ## <a name="see-also"></a>另請參閱  
  [將自訂報表加入 Management Studio](add-a-custom-report-to-management-studio.md)   

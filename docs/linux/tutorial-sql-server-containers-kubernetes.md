@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 1053f3a11bed9efbf75d7270f677c9f226221a3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 669d02d32642ba4723892a98a1f4d0f3bc6e51f6
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674193"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626318"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>部署 Kubernetes 使用 Azure Kubernetes Service (AKS) 中的 SQL Server 容器
 
@@ -41,11 +41,11 @@ Kubernetes 1.6 和更新版本可支援[儲存類別](https://kubernetes.io/docs
 
 在下列圖表中，`mssql-server`容器失敗。 作為協調者，Kubernetes 會保證正確的複本中狀況良好的執行個體計數設定，並啟動新的容器，根據組態。 Orchestrator 的相同節點上，啟動新的 pod 和`mssql-server`重新連線至相同的永續性儲存體。 服務連接到重新建立`mssql-server`。
 
-![Kubernetes SQL Server 叢集的圖表](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Kubernetes SQL Server 叢集的圖表](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 在下列圖表中，節點裝載`mssql-server`容器失敗。 Orchestrator 的不同節點上，啟動新的 pod 和`mssql-server`重新連線至相同的永續性儲存體。 服務連接到重新建立`mssql-server`。
 
-![Kubernetes SQL Server 叢集的圖表](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Kubernetes SQL Server 叢集的圖表](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -174,13 +174,15 @@ Kubernetes 1.6 和更新版本可支援[儲存類別](https://kubernetes.io/docs
          terminationGracePeriodSeconds: 10
          containers:
          - name: mssql
-           image: mcr.microsoft.com/mssql/server/mssql-server-linux
+           image: mcr.microsoft.com/mssql/server:2017-latest
            ports:
            - containerPort: 1433
            env:
+           - name: MSSQL_PID
+             value: "Developer"
            - name: ACCEPT_EULA
              value: "Y"
-           - name: SA_PASSWORD
+           - name: MSSQL_SA_PASSWORD
              valueFrom:
                secretKeyRef:
                  name: mssql
@@ -209,14 +211,14 @@ Kubernetes 1.6 和更新版本可支援[儲存類別](https://kubernetes.io/docs
 
    將上述程式碼複製到新的檔案，名為`sqldeployment.yaml`。 更新下列值： 
 
-   * `value: "Developer"`： 設定要執行的 SQL Server Developer edition 的容器。 開發人員版本未授權用於生產環境的資料。 如果是部署用於生產環境中，設定適當的版本 (`Enterprise`， `Standard`，或`Express`)。 
+   * MSSQL_PID `value: "Developer"`:設定要執行的 SQL Server Developer edition 的容器。 開發人員版本未授權用於生產環境的資料。 如果是部署用於生產環境中，設定適當的版本 (`Enterprise`， `Standard`，或`Express`)。 
 
       >[!NOTE]
       >如需詳細資訊，請參閱 < [SQL Server 授權如何](https://www.microsoft.com/sql-server/sql-server-2017-pricing)。
 
-   * `persistentVolumeClaim`︰ 此值需要的項目`claimName:`對應至用於永續性磁碟區宣告的名稱。 本教學課程使用`mssql-data`。 
+   * `persistentVolumeClaim`:此值需要的項目`claimName:`對應至用於永續性磁碟區宣告的名稱。 本教學課程使用`mssql-data`。 
 
-   * `name: SA_PASSWORD`： 設定容器映像，設定 SA 密碼，這一節中所定義。
+   * `name: SA_PASSWORD`:設定容器映像設定 SA 密碼，這一節中所定義。
 
      ```yaml
      valueFrom:

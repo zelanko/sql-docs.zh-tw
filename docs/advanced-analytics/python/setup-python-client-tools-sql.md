@@ -1,5 +1,5 @@
 ---
-title: 設定適用於 SQL Server Machine Learning 上的 Python 開發的資料科學用戶端 |Microsoft Docs
+title: 設定適用於 Python 開發-SQL Server Machine Learning 資料科學用戶端
 description: 設定遠端連線到 SQL Server Machine Learning 服務與 Python 的 Python 的本機環境 （Jupyter Notebook 或 PyCharm）。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,25 +8,25 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c3db7d215be8a43370969903adb9cf9518e9183c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 569b3d2fbd11cc978f1a810bab6b30ec1d33d2b5
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704096"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046528"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>設定適用於 SQL Server 機器學習服務上的 Python 開發的資料科學用戶端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Python 整合功能時包括中的 [Python] 選項啟動 SQL Server 2017 或更新版本[Machine Learning 服務 （資料庫） 安裝](../install/sql-machine-learning-services-windows-install.md)。 
 
-若要建立及部署 SQL Server 上的 Python 解決方案，請先安裝 Microsoft 的[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)和其他用戶端工作站上的 Python 程式庫。 Revoscalepy 程式庫，這也是遠端的 SQL Server 執行個體上，可協調計算這兩個系統之間的要求。 
+若要開發及部署 Python 解決方案，適用於 SQL Server，安裝 Microsoft [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)和其他的 Python 程式庫開發工作站。 Revoscalepy 程式庫，這也是遠端的 SQL Server 執行個體上，可協調計算這兩個系統之間的要求。 
 
-在這篇文章，了解如何設定 Python 開發工作站，以便您可以連接到遠端 SQL Server 進行機器學習服務和 Python 整合。 完成這篇文章中的步驟之後，您必須使用相同的 SQL Server 上的 Python 程式庫。 您也會知道如何將 SQL Server 上推送至遠端的 Python 工作階段的計算從本機 Python 工作階段。
+在這篇文章，了解如何設定 Python 開發工作站，以便您可以與遠端的 SQL Server machine learning 和 Python 整合啟用互動。 完成這篇文章中的步驟之後，您必須使用相同的 SQL Server 上的 Python 程式庫。 您也會知道如何將 SQL Server 上推送至遠端的 Python 工作階段的計算從本機 Python 工作階段。
 
 ![用戶端-伺服器元件](media/sqlmls-python-client-revo.png "本機和遠端的 Python 工作階段和程式庫")
 
-在本文中所述，您可以使用內建的 Jupyter Notebook 或[連結程式庫](#install-ide)PyCharm 或您通常會使用任何其他 IDE。
+若要驗證安裝，您可以使用內建的 Jupyter Notebook 在本文中所述或是[連結程式庫](#install-ide)PyCharm 或您通常會使用任何其他 IDE。
 
 > [!Tip]
 > 如需這些練習的影片示範，請參閱 <<c0> [ 執行的 R 和 Python，在從 Jupyter Notebook 的 SQL Server 中遠端](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)。
@@ -40,7 +40,7 @@ Python 整合功能時包括中的 [Python] 選項啟動 SQL Server 2017 或更�
 
 適用於 Python 開發，您可以使用出現在 SQL Server 安裝的 Anaconda 散發套件配套的 Jupyter Notebook。 這篇文章說明如何啟動 Jupyter Notebook，以便您可以在 SQL Server 上執行 Python 程式碼在本機或遠端。
 
-SSMS 屬於不同下載，用於建立和執行預存程序，在 SQL Server，包括包含 Python 程式碼。 幾乎任何您在 Jupyter Notebook 中撰寫的 Python 程式碼可以內嵌在預存程序中。 您可以逐步執行其他教學課程來了解[SSMS 和內嵌的 Python](../tutorials/train-score-using-python-in-tsql.md)。
+SSMS 屬於不同下載，用於建立和執行預存程序，在 SQL Server，包括包含 Python 程式碼。 幾乎任何您在 Jupyter Notebook 中撰寫的 Python 程式碼可以內嵌在預存程序中。 您可以逐步執行其他的快速入門，以了解[SSMS 和內嵌的 Python](../tutorials/quickstart-python-verify.md)。
 
 ## <a name="1---install-python-packages"></a>1-安裝 Python 套件
 
@@ -85,7 +85,7 @@ SSMS 屬於不同下載，用於建立和執行預存程序，在 SQL Server，�
 > [!Note] 
 > 安裝指令碼不會修改您在電腦上，這表示新的 python 解譯器和您剛才安裝的模組不會自動提供給您可能需要其他工具的 PATH 環境變數。 在將 Python 解譯器和程式庫連結至工具的協助，請參閱[安裝 IDE](#install-ide)。
 
-<a name="python-tool"></a>
+<a name="python-tools"></a>
 
 ## <a name="3---open-jupyter-notebooks"></a>3-開啟 Jupyter Notebook
 
@@ -111,7 +111,7 @@ Anaconda 包含 Jupyter Notebook。 下一個步驟中，建立 notebook，並�
 
 4. 輸入一系列更複雜的陳述式。 這個範例會產生摘要統計資料使用[rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary)透過本機的資料集。 其他函式會取得範例資料的位置，並建立本機的.xdf 檔案資料來源物件。
 
-  ```Python
+  ```python
   import os
   from revoscalepy import rx_summary
   from revoscalepy import RxXdfData
@@ -152,7 +152,7 @@ Anaconda 包含 Jupyter Notebook。 下一個步驟中，建立 notebook，並�
 
 ### <a name="1---create-the-irissql-database-remotely"></a>1-從遠端建立 irissql 資料庫
 
-```Python
+```python
 import pyodbc
 
 # creating a new db to load Iris sample in
@@ -169,7 +169,7 @@ print("Database created")
 
 ### <a name="2---import-iris-sample-from-sklearn"></a>2-從匯入 Iris 範例 SkLearn
 
-```Python
+```python
 from sklearn import datasets
 import pandas as pd
 
@@ -180,7 +180,7 @@ df = pd.DataFrame(iris.data, columns=iris.feature_names)
 
 ### <a name="3---use-revoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3-使用 Revoscalepy Api 來建立資料表，並將鳶尾花資料
 
-```Python
+```python
 from revoscalepy import RxSqlServerData, rx_data_step
 
 # Example of using RX APIs to load data into SQL table. You can also do this with pyodbc
@@ -253,9 +253,20 @@ display.Image(data=image)
 
 <a name="install-ide"></a>
 
-## <a name="7---link-tools-to-pythonexe"></a>7-連結至 python.exe 的工具
+## <a name="7---start-python-from-tools"></a>7-從工具中啟動 Python
 
 因為開發人員經常會使用多個版本的 Python，安裝程式不會不將 Python 新增至您的路徑。 若要使用的 Python 可執行檔和安裝程式安裝的程式庫，連結至您的 IDE **Python.exe**也會提供路徑**revoscalepy**並**microsoftml**。 
+
+### <a name="command-line"></a>命令列
+
+當您執行**Python.exe**從 C:\Program Files\Microsoft\PyForMLS （或指定的 Python 用戶端程式庫安裝的任何位置），您可以存取完整的 Anaconda 散發套件，再加上 Microsoft Python模組**revoscalepy**並**microsoftml**。
+
+1. 請移至 C:\Program Files\Microsoft\PyForMLS，然後按兩下**Python.exe**。
+2. 開啟互動式說明： `help()`
+3. 在說明提示時輸入模組名稱： `help> revoscalepy`。 說明傳回名稱、 封裝內容、 版本和檔案位置。
+4. 傳回在版本和套件資訊**協助 >** 提示字元： `revoscalepy`。 幾次按下 Enter 以結束說明。
+5. 匯入模組： `import revoscalepy`
+
 
 ### <a name="jupyter-notebooks"></a>Jupyter Notebook
 
@@ -291,7 +302,7 @@ display.Image(data=image)
 
 ## <a name="next-steps"></a>後續步驟
 
-既然您有工具和工作連接到 SQL Server，請使用提升您的技能[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)來建立和執行包含內嵌的 Python 程式碼的預存程序。
+既然您有工具和工作連接到 SQL Server，展開您的技能，透過 Python 快速入門使用執行[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 > [!div class="nextstepaction"]
-> [建立、 定型和使用 SQL Server 中的預存程序中的 Python 模型](../tutorials//train-score-using-python-in-tsql.md)
+> [快速入門：請確認有 SQL Server 中的 Python ](../tutorials/quickstart-python-verify.md)

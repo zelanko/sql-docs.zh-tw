@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
@@ -24,12 +23,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a97e86b66efee24757f7f09f04e7016a93417c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5fb7bfa7d068d8ea83fab4c98e6e8f733af7985a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049508"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361470"
 ---
 # <a name="data-flow-performance-features"></a>資料流程效能的功能
   本主題提供有關如何設計 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝以避免常見效能問題的建議。 本主題同時也提供有關您可以用於疑難排解封裝效能之功能與工具的資訊。  
@@ -73,15 +72,15 @@ ms.locfileid: "48049508"
  請勿增加發生分頁至磁碟之起始點的緩衝區大小。 分頁至磁碟所妨礙的效能超過尚未經過最佳化的緩衝區大小。 若要判斷是否發生分頁，請在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) 的效能嵌入式管理單元中監視 "Buffers spooled" 效能計數器。  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>設定平行執行的封裝  
- 平行執行會改善具有多個實體或邏輯處理器之電腦的效能。 若要在封裝中，支援平行執行不同的工作[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用兩個屬性：`MaxConcurrentExecutables`和`EngineThreads`。  
+ 平行執行會改善具有多個實體或邏輯處理器之電腦的效能。 為了在封裝中支援平行執行不同的工作，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用兩種屬性：`MaxConcurrentExecutables` 和 `EngineThreads`。  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables 屬性  
- `MaxConcurrentExecutables`屬性是封裝本身的屬性。 此屬性會定義可以同時執行多少工作。 預設值為 -1，表示實體或邏輯處理器的數目加上 2。  
+ `MaxConcurrentExecutables` 屬性是封裝本身的屬性。 此屬性會定義可以同時執行多少工作。 預設值為 -1，表示實體或邏輯處理器的數目加上 2。  
   
- 若要了解此屬性的運作方式，請考慮具有三個「資料流程」工作的範例封裝。 如果您將設定`MaxConcurrentExecutables`為 3，全部三個資料流程工作可以同時執行。 不過，這是假設每個「資料流程」工作都有 10 的來源到目的地的執行樹狀結構。 將 `MaxConcurrentExecutables` 設定為 3 不能確保每個「資料流程」工作內的執行樹狀結構都可以平行執行。  
+ 若要了解此屬性的運作方式，請考慮具有三個「資料流程」工作的範例封裝。 如果您將 `MaxConcurrentExecutables` 設定為 3，全部三個「資料流程」工作都可以同時執行。 不過，這是假設每個「資料流程」工作都有 10 的來源到目的地的執行樹狀結構。 將 `MaxConcurrentExecutables` 設定為 3 不能確保每個「資料流程」工作內的執行樹狀結構都可以平行執行。  
   
 #### <a name="the-enginethreads-property"></a>EngineThreads 屬性  
- `EngineThreads` 屬性是每個「資料流程」工作的屬性。 此屬性會定義資料流程引擎可以平行建立並執行多少執行緒。 `EngineThreads`屬性同樣適用於這兩個來源執行緒，資料流程引擎會建立來源以及該引擎針對轉換和目的地所建立的工作者執行緒。 因此，將 `EngineThreads` 設定為 10 表示引擎最多可以建立 10 個來源執行緒與 10 個工作者執行緒。  
+ `EngineThreads` 屬性是每個「資料流程」工作的屬性。 此屬性會定義資料流程引擎可以平行建立並執行多少執行緒。 `EngineThreads` 屬性同樣適用於資料流程引擎針對來源所建立的來源執行緒，以及該引擎針對轉換和目的地所建立的工作者執行緒。 因此，將 `EngineThreads` 設定為 10 表示引擎最多可以建立 10 個來源執行緒與 10 個工作者執行緒。  
   
  若要了解此屬性的運作方式，請考慮具有三個「資料流程」工作的範例封裝。 每個「資料流程」工作都包含 10 的來源到目的地的執行樹狀結構。 如果您將「資料流程」工作上的 EngineThreads 設定為 10，全部 30 個執行樹狀結構可能會同時執行。  
   
@@ -100,14 +99,14 @@ ms.locfileid: "48049508"
  若要建構查詢，您可以輸入查詢或使用「查詢產生器」。  
   
 > [!NOTE]  
->  當您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中執行封裝時， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [進度] 索引標籤會列出警告。 這些警告包括識別來源提供給資料流程使用，但是在下游資料流程元件後續作業中未使用的任何資料行。 您可以使用`RunInOptimizedMode`屬性自動移除這些資料行。  
+>  當您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中執行封裝時， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師的 [進度] 索引標籤會列出警告。 這些警告包括識別來源提供給資料流程使用，但是在下游資料流程元件後續作業中未使用的任何資料行。 您可以使用 `RunInOptimizedMode` 屬性自動移除這些資料行。  
   
 #### <a name="avoid-unnecessary-sorting"></a>避免不必要的排序  
  排序本質上就是很慢的作業，避免不必要的排序可以改善封裝資料流程的效能。  
   
  有時候來源資料在由下游元件使用前，就已經經過排序。 這種預先排序會在 SELECT 查詢使用 ORDER BY 子句時，或在將資料以排序的順序插入來源時發生。 對於這種預先排序的來源資料，您可以提供資料已排序的提示，因而避免使用「排序」轉換來滿足某些下游轉換的排序需求 (例如，「合併」和「合併聯結」轉換需要已排序的輸入)。若要提供資料已排序的提示，您必須執行下列工作：  
   
--   設定`IsSorted`上游資料流程元件的輸出屬性`True`。  
+-   將上游資料流程元件之輸出的 `IsSorted` 屬性設定為 `True`。  
   
 -   指定排序資料所依據的排序索引鍵資料行。  
   
@@ -131,20 +130,20 @@ ms.locfileid: "48049508"
  如果必須在資料流程中建立多個彙總，您應考慮使用一個「彙總」轉換來建立多個彙總，而不是建立多個轉換。 當一個彙總就是其他彙總的子集時，這個方法能夠改善效能，因為轉換可以最佳化內部儲存體，並且只會掃描一次傳入的資料。 例如，如果彙總使用 GROUP BY 子句和 AVG 彙總，則將它們組合成一個轉換可以改進效能。 不過，在一個「彙總」轉換內執行多個彙總會序列化彙總作業，因此，當多個彙總必須個別計算時，可能不會改善效能。  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>模糊查閱和模糊群組轉換  
- 如需有關最佳化「模糊查閱」和「模糊群組」轉換的詳細資訊，請參閱＜ [SQL Server Integration Services 2005 中的模糊查詢和模糊群組](http://go.microsoft.com/fwlink/?LinkId=96604)＞(英文) 白皮書。  
+ 如需有關最佳化「模糊查閱」和「模糊群組」轉換的詳細資訊，請參閱＜ [SQL Server Integration Services 2005 中的模糊查詢和模糊群組](https://go.microsoft.com/fwlink/?LinkId=96604)＞(英文) 白皮書。  
   
 #### <a name="lookup-transformation"></a>查閱轉換  
  輸入僅查閱所需資料行的 SELECT 陳述式可以將記憶體中的參考資料大小最小化。 這個選項的效能比選取會傳回大量不必要資料的整個資料表或檢視表更好。  
   
 #### <a name="merge-join-transformation"></a>Merge Join Transformation  
- 您不再需要的值設定`MaxBuffersPerInput`屬性因為 Microsoft 已做出變更，降低合併聯結 」 轉換會耗用過多記憶體的風險。 這個問題有時候會發生在合併聯結的多個輸入以不平均的速率產生資料時。  
+ 您再也不必設定 `MaxBuffersPerInput` 屬性的值，因為 Microsoft 已做出變更，降低合併聯結轉換會耗用過多記憶體的風險。 這個問題有時候會發生在合併聯結的多個輸入以不平均的速率產生資料時。  
   
 #### <a name="slowly-changing-dimension-transformation"></a>緩時變維度轉換  
  「緩時變維度精靈」和「緩時變維度精靈」轉換都是符合多數使用者需求的一般用途工具。 不過，精靈所產生的資料流程不會針對效能進行最佳化。  
   
  「緩時變維度」轉換中最緩慢的元件通常是一次針對一個單一資料列執行 UPDATE 的「OLE DB 命令」轉換。 因此，改善「緩時變維度」轉換效能最有效的方式就是取代「OLE DB 命令」轉換。 您可以將這些轉換取代為將要更新的所有資料列儲存到臨時資料表的目的地元件。 然後，您可以同時加入針對所有資料列執行以單一資料列集為基礎之 Transact-SQL UPDATE 的「執行 SQL」工作。  
   
- 進階使用者可以針對緩時變維度處理，設計針對大維度進行最佳化的自訂資料流程。 如需此方式的討論和範例，請參閱＜ [專案 REAL：Business Intelligence ETL 設計練習](http://go.microsoft.com/fwlink/?LinkId=96602)＞(英文) 白皮書中的「唯一的維度狀況」一節。  
+ 進階使用者可以針對緩時變維度處理，設計針對大維度進行最佳化的自訂資料流程。 如的討論和範例，這種方法，請參閱區段中中的 「 唯一的維度狀況 」 技術白皮書： [Project REAL:Business Intelligence ETL 設計練習](https://go.microsoft.com/fwlink/?LinkId=96602)。  
   
 ### <a name="destinations"></a>目的地  
  為達成較佳的目的地效能，請考慮使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地並測試目的地的效能。  
@@ -167,38 +166,38 @@ ms.locfileid: "48049508"
 ## <a name="related-content"></a>相關內容  
  **文件和部落格文章**  
   
--   technet.microsoft.com 上的技術文件： [SQL Server 2005 Integration Services：效能策略](http://go.microsoft.com/fwlink/?LinkId=98899)  
+-   技術文件： [SQL Server 2005 Integration Services:效能策略](https://go.microsoft.com/fwlink/?LinkId=98899)，technet.microsoft.com 上的  
   
--   technet.microsoft.com 上的技術文件： [Integration Services：效能微調技術](http://go.microsoft.com/fwlink/?LinkId=98900)  
+-   技術文件： [Integration Services:效能微調技術](https://go.microsoft.com/fwlink/?LinkId=98900)，technet.microsoft.com 上的  
   
 -   sqlcat.com 上的技術文件： [將同步轉換分割為多個工作來增加管線的輸送量](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)  
   
--   msdn.microsoft.com 上的技術文章： [資料載入效能指南](http://go.microsoft.com/fwlink/?LinkId=220816)。  
+-   msdn.microsoft.com 上的技術文章： [資料載入效能指南](https://go.microsoft.com/fwlink/?LinkId=220816)。  
   
--   msdn.microsoft.com 上的技術文件： [我們使用 SSIS 在短短 30 分鐘內載入了 1TB 的資料，您也可以](http://go.microsoft.com/fwlink/?LinkId=220817)。  
+-   msdn.microsoft.com 上的技術文件： [我們使用 SSIS 在短短 30 分鐘內載入了 1TB 的資料，您也可以](https://go.microsoft.com/fwlink/?LinkId=220817)。  
   
--   sqlcat.com 上的技術文件： [10 大 SQL Server Integration Services 的最佳作法](http://go.microsoft.com/fwlink/?LinkId=220818)。  
+-   sqlcat.com 上的技術文件： [10 大 SQL Server Integration Services 的最佳作法](https://go.microsoft.com/fwlink/?LinkId=220818)。  
   
--   sqlcat.com 上的技術文件及範例： [SSIS 的「平衡型資料散發者」](http://go.microsoft.com/fwlink/?LinkId=220822)。  
+-   sqlcat.com 上的技術文件及範例：[SSIS 的「平衡型資料散發者」](https://go.microsoft.com/fwlink/?LinkId=220822)。  
   
--   blogs.msdn.com 上的部落格文章： [疑難排解 SSIS 封裝效能問題](http://go.microsoft.com/fwlink/?LinkId=238156)  
+-   blogs.msdn.com 上的部落格文章： [疑難排解 SSIS 封裝效能問題](https://go.microsoft.com/fwlink/?LinkId=238156)  
   
  **視訊**  
   
--   影片系列， [Designing and Tuning for Performance your SSIS packages in the Enterprise (SQL Video Series)](http://go.microsoft.com/fwlink/?LinkId=400878)(設計及微調企業中 SSIS 封裝的效能 (SQL 影片系列))  
+-   影片系列， [Designing and Tuning for Performance your SSIS packages in the Enterprise (SQL Video Series)](https://go.microsoft.com/fwlink/?LinkId=400878)(設計及微調企業中 SSIS 封裝的效能 (SQL 影片系列))  
   
--   technet.microsoft.com 上的影片： [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](http://technet.microsoft.com/sqlserver/ff686901.aspx)(調整企業中的 SSIS 封裝資料流程 (SQL Server 視訊))  
+-   technet.microsoft.com 上的影片： [Tuning Your SSIS Package Data Flow in the Enterprise (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686901.aspx)(調整企業中的 SSIS 封裝資料流程 (SQL Server 視訊))  
   
--   technet.microsoft.com 上的影片： [Understanding SSIS Data Flow Buffers (SQL Server Video)](http://technet.microsoft.com/sqlserver/ff686905.aspx)(了解 SSIS 資料流程緩衝區 (SQL Server 視訊))  
+-   technet.microsoft.com 上的影片： [Understanding SSIS Data Flow Buffers (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686905.aspx)(了解 SSIS 資料流程緩衝區 (SQL Server 視訊))  
   
--   channel9.msdn.com 上的影片： [Microsoft SQL Server Integration Services 效能設計模式](http://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)。  
+-   channel9.msdn.com 上的影片： [Microsoft SQL Server Integration Services 效能設計模式](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)。  
   
--   sqlcat.com 上的簡報： [Microsoft IT 如何運用 SQL Server 2008 SSIS 資料流程引擎增強功能](http://go.microsoft.com/fwlink/?LinkId=217660)。  
+-   sqlcat.com 上的簡報： [Microsoft IT 如何運用 SQL Server 2008 SSIS 資料流程引擎增強功能](https://go.microsoft.com/fwlink/?LinkId=217660)。  
   
--   technet.microsoft.com 上的影片： [平衡型資料散發者](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)  
+-   technet.microsoft.com 上的影片： [平衡型資料散發者](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)  
   
 ## <a name="see-also"></a>另請參閱  
  [疑難排解封裝開發的工具](../troubleshooting/troubleshooting-tools-for-package-development.md)   
- [套件執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

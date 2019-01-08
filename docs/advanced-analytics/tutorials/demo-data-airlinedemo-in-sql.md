@@ -1,5 +1,5 @@
 ---
-title: 班機的班機抵達和延遲示範資料集的 SQL Server Python 和 R 教學課程 |Microsoft Docs
+title: 如需 SQL Server Python 和 R 教學課程-SQL Server Machine Learning airline 飛行示範資料集
 Description: Create a database containing the Airline dataset from R and Python. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2ba431ecbc4f7d63415fdf6b351c5135ed0cdd8d
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 10d2f013c103dee3de02335ca2acf82d4320b623
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49947439"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596979"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>航空公司航班抵達示範資料的 SQL Server Python 和 R 教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

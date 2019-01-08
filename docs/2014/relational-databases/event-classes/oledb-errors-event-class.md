@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c81cfcac808b5bf4055f968dadff018eadc4d8be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a0f4e99247fe1a4a80734e56d8db1e05b961e43
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174728"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803650"
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors 事件類別
   對 OLE DB 提供者的呼叫若傳回錯誤， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中就會產生 OLEDB Errors 事件類別。 在追蹤中包含此事件類別，以檢視 OLE DB 提供者的失敗 HRESULT。  

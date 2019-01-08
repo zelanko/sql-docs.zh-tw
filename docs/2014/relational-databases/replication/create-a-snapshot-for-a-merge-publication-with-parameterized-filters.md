@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], snapshots
@@ -15,12 +14,12 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 10e8c84af197c600c9b89f850ab84fc27fd56e2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 99aabef0bd8e7ba293c0e66428607fe7fb4642e6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217738"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361931"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>使用參數化篩選建立合併式發行集的快照集
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用參數化篩選建立合併式發行集的快照集。  
@@ -257,7 +256,7 @@ PAUSE
 >  當篩選發行項產生了對每個訂閱而言是唯一的非重疊資料分割時 (在建立合併發行項時，針對 <xref:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription> 指定 <xref:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption%2A> 的值)，則只要合併代理程式一執行，就會清除中繼資料。 這表示分割快照集會更快過期。 當使用這個選項時，您應該考慮允許訂閱者要求產生快照集。 如需詳細資訊，請參閱＜ [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)＞主題中的「使用適當的篩選選項」一節。  
   
 > [!IMPORTANT]  
->  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](http://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
+>  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
 #### <a name="to-create-a-publication-that-allows-subscribers-to-initiate-snapshot-generation-and-delivery"></a>建立可讓訂閱者初始化快照集產生和傳遞的發行集  
   
@@ -265,7 +264,7 @@ PAUSE
   
 2.  為發行集資料庫建立 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 類別的執行個體、將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 執行個體，並呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 傳回 `false`，請確認此資料庫確實存在。  
   
-3.  如果<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A>屬性是`false`，將它設定為`true`，並呼叫<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>。  
+3.  如果 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 屬性為 `false`，請將它設定為 `true` 然後呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>。  
   
 4.  建立 <xref:Microsoft.SqlServer.Replication.MergePublication> 類別的執行個體，並為此物件設定下列屬性：  
   
@@ -277,7 +276,7 @@ PAUSE
   
     -   將 <xref:Microsoft.SqlServer.Replication.MergePublication.MaxConcurrentDynamicSnapshots%2A>設定為動態快照集作業的最大數目。 由於訂閱者起始的快照集要求可在任何時間發生，所以當多個訂閱者同時要求其分割快照集時，這個屬性會限制可以同時執行的快照集代理程式作業數目。 當正在執行最大的作業數目時，其他分割快照集要求會排入佇列中，直到其中一個執行中的作業完成為止。  
   
-    -   使用位元邏輯 OR (`|` Visual C# 中並`Or`Visual Basic 中) 要將此值的運算子<xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot>來<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>。  
+    -   使用位元邏輯 OR (Visual C# 中為 `|` 且 Visual Basic 中為 `Or`) 運算子，將 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot> 值加入 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>。  
   
     -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 的 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 欄位，可提供執行快照集代理程式作業所使用之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的認證。  
   
@@ -291,7 +290,7 @@ PAUSE
   
 6.  使用 <xref:Microsoft.SqlServer.Replication.MergeArticle> 屬性將發行項加入發行集中。 至少針對定義參數化篩選的一個發行項指定 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 屬性。 (選擇性) 建立可在發行項之間定義聯結篩選的 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 物件。 如需詳細資訊，請參閱 [定義發行項](publish/define-an-article.md)。  
   
-7.  如果值<xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>已`false`，呼叫<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>建立這個發行集的初始快照集代理程式作業。  
+7.  如果 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> 的值是 `false`，請呼叫 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> 來針對這個發行集建立初始快照集代理程式作業。  
   
 8.  呼叫步驟 4 中建立之 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 物件的 <xref:Microsoft.SqlServer.Replication.MergePublication> 方法。 這樣會啟動可產生初始快照集的代理程式作業。 如需有關產生初始快照集以及為快照集代理程式定義自訂排程的詳細資訊，請參閱＜ [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)＞。  
   
@@ -305,11 +304,11 @@ PAUSE
   
 2.  使用 <xref:Microsoft.SqlServer.Replication.MergeArticle> 屬性將發行項加入發行集中。 至少針對定義參數化篩選的一個發行項指定 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 屬性，並建立可在兩個發行項之間定義聯結篩選的任何 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 物件。 如需詳細資訊，請參閱 [定義發行項](publish/define-an-article.md)。  
   
-3.  如果值<xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>已`false`，呼叫<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>建立這個發行集的快照集代理程式作業。  
+3.  如果 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> 的值是 `false`，請呼叫 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> 來針對這個發行集建立快照集代理程式作業。  
   
 4.  呼叫步驟 1 中建立之 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 物件的 <xref:Microsoft.SqlServer.Replication.MergePublication> 方法。 這個方法會啟動可產生初始快照集的代理程式作業。 如需有關產生初始快照集以及為快照集代理程式定義自訂排程的詳細資訊，請參閱＜ [建立和套用初始快照集](create-and-apply-the-initial-snapshot.md)＞。  
   
-5.  檢查是否有值的`true`針對<xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A>屬性，以判斷初始快照集何時可供使用。  
+5.  檢查是否有為 <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 屬性設定 `true` 的值，以判斷初始快照集何時可準備好供人使用。  
   
 6.  建立 <xref:Microsoft.SqlServer.Replication.MergePartition> 類別的執行個體，並使用以下其中一個或兩個屬性來為訂閱者設定參數化篩選準則：  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 4e175aa3-4f3d-4b23-a423-4a7a1bd4e84e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17dcca9345ce273e53b58d7dc8237a448f2c957e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de5a49853f08541cd617afb20273820f956ee660
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098968"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774390"
 ---
 # <a name="sqltransaction-event-class"></a>SQLTransaction 事件類別
   當交易開始和完成時 (尤其在測試應用程式、觸發程序或預存程序的時候)，可使用 SQLTransaction 事件類別來進行監視。  

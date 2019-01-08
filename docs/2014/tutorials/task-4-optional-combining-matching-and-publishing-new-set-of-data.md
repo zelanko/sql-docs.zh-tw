@@ -1,5 +1,5 @@
 ---
-title: 工作 4 （選擇性）： 結合、 比對及發行新的資料集 |Microsoft Docs
+title: 工作 4 （選擇性）：結合、 比對及發行新的資料集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2bfa1c59fb47a859bb680970617a81add871908e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05c8785427b905138e513ab7134d56def7cdcf4d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061748"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353077"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>工作 4 (選擇性)：結合、比對及發行新的資料集
-  經過一段時間後，您需要將更多的資料加入至 MDS 儲存機制。 在加入資料之前，比較新資料與已在 MDS 中管理的資料，有助於確保不會加入重複或不精準的資料。 在適用於 Excel 的 Master Data Services 增益集中，您可以結合兩個工作表中的資料然後比較資料，以識別重複項並加以移除，之後再將資料發行到 MDS。 MDS Excel 增益集的比對功能會使用 DQS 比對功能來識別資料中的相符內容。 在這項工作中，您會將兩個工作表中的資料結合到一個工作表，然後執行比對活動來識別重複項並加以移除，之後再將資料發行到 MDS。 請參閱[資料品質比對 MDS 增益集中適用於 Excel](http://msdn.microsoft.com/library/hh548681.aspx)並[結合資料](http://msdn.microsoft.com/library/hh548680.aspx)主題以取得詳細資料。  
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>工作 4 （選擇性）：結合、比對及發行新的資料集
+  經過一段時間後，您需要將更多的資料加入至 MDS 儲存機制。 然後再新增資料，它可用來比較新資料與已在 MDS 中，以確保，您不會加入重複或不正確的資料中受管理的資料。 在適用於 Excel 的 Master Data Services 增益集中，您可以結合兩個工作表中的資料然後比較資料，以識別重複項並加以移除，之後再將資料發行到 MDS。 MDS Excel 增益集的比對功能會使用 DQS 比對功能來識別資料中的相符內容。 在這項工作中，您會將兩個工作表中的資料結合到一個工作表，然後執行比對活動來識別重複項並加以移除，之後再將資料發行到 MDS。 請參閱[資料品質比對 MDS 增益集中適用於 Excel](https://msdn.microsoft.com/library/hh548681.aspx)並[結合資料](https://msdn.microsoft.com/library/hh548680.aspx)主題以取得詳細資料。  
   
 1.  啟動新執行個體**Excel**。 按一下**開始**，指向**執行**，型別**Excel**，然後按一下**確定**。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48061748"
   
 8.  開啟**Suppliers.xls**檔案 （教學課程檔案中包含原始輸入的檔），並將複製的所有 （三個） 的資料列**CombineAndCleanse**工作表**Sheet2**。  
   
-9. 切換回**供應商**工作表**Book 1 – Microsoft Excel** (不**Cleansed and Matched Supplier 清單**Excel)，連接到**MDS**.  
+9. 切換回**供應商**工作表**Book 1-Microsoft Excel** (不**Cleansed and Matched Supplier 清單**Excel)，連接到**MDS**.  
   
 10. 按一下 **主要資料**功能表列上。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48061748"
   
 25. 按一下 [確定] 。  
   
-26. 比對程序應該識別出具有**程式碼： S1**。  
+26. 比對程序應該識別出具有 **Code:S1**。  
   
      ![Excel-比對結果](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel-比對結果")  
   
@@ -111,9 +111,9 @@ ms.locfileid: "48061748"
   
 33. **排序**清單**程式碼**，並尋找記錄**S57**並**S66**碼。 您也可以使用**篩選**來搜尋特定的記錄，在清單中的工具列上的按鈕。  
   
-34. 現在，關閉**Book1 – Microsoft Excel**視窗，而不用儲存檔案。  
+34. 現在，關閉**Book1-Microsoft Excel**視窗，而不用儲存檔案。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 5：從 Excel 建立定義域屬性](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
+ [工作 5:從 Excel 建立的網域屬性](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
   
   

@@ -12,29 +12,29 @@ ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5299054716b644b5b6271dcc72d9e596e78da1cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: deab0fc5535b188016d018c34587995c65356fb3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192938"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354721"
 ---
 # <a name="process-odbc-errors-odbc"></a>處理 ODBC 錯誤 (ODBC)
-  兩個 ODBC 函數呼叫可以用來擷取 ODBC 訊息： [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402)並[SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md)。 若要在 **SQLState**、**pfNative** 和 **ErrorMessage** 診斷欄位中取得與主要 ODBC 相關的資訊，請呼叫 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402)，直到它傳回 SQL_NO_DATA 為止。 對於每個診斷記錄，可以呼叫 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 來擷取個別的欄位。 所有驅動程式專用的欄位都必須使用 `SQLGetDiagField` 擷取。  
+  可以用兩個 ODBC 函數呼叫，來擷取 ODBC 訊息：[SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402)並[SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md)。 若要在 **SQLState**、**pfNative** 和 **ErrorMessage** 診斷欄位中取得與主要 ODBC 相關的資訊，請呼叫 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402)，直到它傳回 SQL_NO_DATA 為止。 對於每個診斷記錄，可以呼叫 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 來擷取個別的欄位。 所有驅動程式專用的欄位都必須使用 `SQLGetDiagField` 擷取。  
   
- [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 和 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 是透過 ODBC 驅動程式管理員，而非個別的驅動程式處理。 在成功建立連接之前，ODBC 驅動程式管理員不會快取驅動程式專用的診斷欄位。 在成功連接之前，無法針對驅動程式專用的診斷欄位呼叫 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md)。 這包含 ODBC 連接命令，即使它們傳回 SQL_SUCCESS_WITH_INFO 也一樣。 在下次呼叫 ODBC 函數之前，將無法使用驅動程式專用的診斷欄位。  
+ [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 和 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 是透過 ODBC 驅動程式管理員，而非個別的驅動程式處理。 在成功建立連接之前，ODBC 驅動程式管理員不會快取驅動程式專用的診斷欄位。 在成功連接之前，無法針對驅動程式專用的診斷欄位呼叫 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md)。 這包含 ODBC 連接命令，即使它們傳回 SQL_SUCCESS_WITH_INFO 也一樣。 在下次呼叫 ODBC 函數之前，將無法使用驅動程式專用的診斷欄位。  
   
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 此範例會顯示呼叫標準 ODBC 資訊之 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 的簡單錯誤處理常式。 然後它會測試是否有有效連接，如果有，就會為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式專用的診斷欄位呼叫 `SQLGetDiagField`。 IA64 不支援此範例。  
+ 此範例會顯示呼叫標準 ODBC 資訊之 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 的簡單錯誤處理常式。 然後它會測試是否有有效連接，如果有，就會為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式專用的診斷欄位呼叫 `SQLGetDiagField`。 IA64 不支援此範例。  
   
  此範例是針對 ODBC 3.0 版或更新版本所開發。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
   
- 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫  (您可以從 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案) 首頁下載 AdventureWorks 範例資料庫)。此資料來源必須以作業系統提供的 ODBC 驅動程式為基礎 (驅動程式名稱為 "SQL Server")。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
+ 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫  (您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案) 首頁下載 AdventureWorks 範例資料庫)。此資料來源必須以作業系統提供的 ODBC 驅動程式為基礎 (驅動程式名稱為 "SQL Server")。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   

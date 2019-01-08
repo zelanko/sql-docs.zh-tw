@@ -11,12 +11,12 @@ ms.assetid: 49c3c1da-b106-41f6-9173-16ff225bade8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9ab1c8c07ed176632f98ed19251d616633480436
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ca96d67a219ff106d2eb3388c129f9b8af306f0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179028"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356648"
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>使用我的報表 (報表產生器及 SSRS)
   在設定為原生模式的報表伺服器上，[我的報表] 資料夾是個人的工作空間，可以用來儲存和使用您所擁有的報表。 其他報表伺服器資料夾都是公開的，通常使用者必須具備進階權限才可以加入或修改資料夾內容。 相對地，[我的報表] 資料夾是使用者自行管理的工作空間。 您可以加入或移除報表和資料夾，以及使用個人化的設定來儲存連結報表。  
@@ -25,7 +25,7 @@ ms.locfileid: "48179028"
   
  [我的報表] 功能是選擇性的，可以由報表伺服器管理員停用。 如果有啟用「我的報表」，您就會在 [主資料夾] 資料夾中看到 [我的報表] 資料夾，您可以使用報表管理員或 Web 瀏覽器來存取其內容。 如需詳細資訊，請參閱[在報表管理員中尋找及檢視報表 &#40;報表產生器及 SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)。  
   
- 在設定為 SharePoint 整合模式的報表伺服器上，[我的報表] 資料夾沒有任何對等項目。 如需詳細資訊，請參閱 < [Fa98e01c78a9">finding，Viewing，and Managing Reports&#40;報表產生器及 SSRS &#41; ](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
+ 在設定為 SharePoint 整合模式的報表伺服器上，[我的報表] 資料夾沒有任何對等項目。 如需詳細資訊，請參閱 [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -35,7 +35,7 @@ ms.locfileid: "48179028"
   
 -   建立個人的連結報表，並將它儲存至 [我的報表]。 並非所有的報表都可以連結。 如需詳細資訊，請參閱 [建立連結報表](../reports/create-a-linked-report.md)。  
   
--   從檔案系統上傳報表定義檔 (.rdl)、報表模型檔 (.smdl) 或其他檔案。 您可以上傳任何檔案，但報表伺服器只會處理副檔名為 .rdl 或 .smdl 的報表檔案。 如需詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件](http://go.microsoft.com/fwlink/?linkid=121312)的＜報表定義＞以及[上傳檔案或報表 &#40;報表管理員&#41;](../reports/upload-a-file-or-report-report-manager.md)。  
+-   從檔案系統上傳報表定義檔 (.rdl)、報表模型檔 (.smdl) 或其他檔案。 您可以上傳任何檔案，但報表伺服器只會處理副檔名為 .rdl 或 .smdl 的報表檔案。 如需詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件](https://go.microsoft.com/fwlink/?linkid=121312)的＜報表定義＞以及[上傳檔案或報表 &#40;報表管理員&#41;](../reports/upload-a-file-or-report-report-manager.md)。  
   
 -   建立並發行自己的報表至 [我的報表]。 如需詳細資訊，請參閱[報表設計檢視 &#40;報表產生器&#41;](report-design-view-report-builder.md)。  
   

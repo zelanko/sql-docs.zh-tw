@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [Analysis Services]
@@ -12,12 +12,12 @@ ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a87cde46f7382392764abc4836fc9dd50381c84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 832e49db5221c2e978cac584e8f1e406d33be30f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227338"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366110"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
   此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立和定義執行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Analysis Services 命令與查詢的 [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent 作業步驟。  
@@ -40,7 +40,7 @@ ms.locfileid: "48227338"
   
 ###  <a name="Restrictions"></a> 限制事項  
   
--   如果作業步驟使用 Analysis Services 命令，命令陳述式必須是 XML for Analysis Services **Execute** 方法。 此陳述式可能不包含完整的簡易物件存取通訊協定 (SOAP) Envelope 或 XML for Analysis **Discover** 方法。 雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支援完整的 SOAP Envelope 與 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟則不支援。 如需有關 XML for Analysis Services 的詳細資訊，請參閱 [XML for Analysis 概觀 (XMLA)](http://msdn.microsoft.com/library/ms187190.aspx)。  
+-   如果作業步驟使用 Analysis Services 命令，命令陳述式必須是 XML for Analysis Services **Execute** 方法。 此陳述式可能不包含完整的簡易物件存取通訊協定 (SOAP) Envelope 或 XML for Analysis **Discover** 方法。 雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支援完整的 SOAP Envelope 與 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟則不支援。 如需有關 XML for Analysis Services 的詳細資訊，請參閱 [XML for Analysis 概觀 (XMLA)](https://msdn.microsoft.com/library/ms187190.aspx)。  
   
 -   如果作業步驟使用 Analysis Services 查詢，查詢陳述式必須是多維度運算式 (MDX) 查詢。 如需有關 MDX 的詳細資訊，請參閱 < [MDX 查詢基礎觀念&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48227338"
   
 -   只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員可以將作業步驟輸出寫入檔案。 若作業步驟是由屬於 **msdb** 資料庫之 **SQLAgentUserRole** 資料庫角色 的使用者執行，則輸出只能寫入一個資料表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會將作業步驟輸出寫入到 **msdb** 資料庫中的 **sysjobstepslog** 資料表。  
   
--   如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)＞。  
+-   如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
   
 ##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48227338"
   
 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
-2.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]。 如需建立作業的詳細資訊，請參閱[建立作業](create-jobs.md)。  
+2.  展開 **SQL Server Agent**，建立新作業或以滑鼠右鍵按一下現有作業，然後按一下 [屬性]。 如需建立作業的詳細資訊，請參閱 [建立作業](create-jobs.md)。  
   
 3.  在 **[作業屬性]** 方塊中，按一下 **[步驟]** 頁面，然後按一下 **[新增]**。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "48227338"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48227338"
         @job_name = N'Weekly Sales Data Backup',  
         @step_name = N'Create a relational data source that references the AdventureWorks2012 Microsoft SQL Server database ',  
         @subsystem = N'ANALYSISCOMMAND',  
-        @command = N' <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+        @command = N' <Create xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
         <ParentObject>  
             <DatabaseID>AdventureWorks2012</DatabaseID>  
         </ParentObject>  
@@ -143,7 +143,7 @@ ms.locfileid: "48227338"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
   
@@ -168,6 +168,6 @@ ms.locfileid: "48227338"
 ##  <a name="SMO"></a> 使用 SQL Server 管理物件  
  **建立 PowerShell 指令碼作業步驟**  
   
- 透過所選的程式語言，例如 XMLA 或 MDX，使用 `JobStep` 類別。 如需詳細資訊，請參閱 [SQL Server 管理物件 (SMO)](http://msdn.microsoft.com/library/ms162169.aspx)。  
+ 透過所選的程式語言，例如 XMLA 或 MDX，使用 `JobStep` 類別。 如需詳細資訊，請參閱 [SQL Server 管理物件 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  
   
   

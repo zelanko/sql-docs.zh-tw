@@ -18,17 +18,17 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: cfa444356e2fbefe0e6fad2333b8e565257b3992
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2195c4efcec60b5a350475ab2600b42ef5c93b36
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192518"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359560"
 ---
 # <a name="securing-sql-server"></a>保護 SQL Server 的安全
   維護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安全可視為一系列的步驟，與下列四個方面有關：平台、驗證、物件 (包括資料) 和存取系統的應用程式。 下列主題將會引導您逐步建立及實施有效的安全性計畫。  
   
- 您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server [網站上找到有關](http://go.microsoft.com/fwlink/?LinkID=31629) 安全性的詳細資訊。 這包括最佳作法指南和安全性檢查清單。 該網站也提供了最新的 Service Pack 資訊和下載檔。  
+ 您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server [網站上找到有關](https://go.microsoft.com/fwlink/?LinkID=31629) 安全性的詳細資訊。 這包括最佳作法指南和安全性檢查清單。 該網站也提供了最新的 Service Pack 資訊和下載檔。  
   
 ## <a name="platform-and-network-security"></a>平台與網路安全性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的平台包括了將用戶端連接到資料庫伺服器的實體硬體和網路系統，以及用於處理資料庫要求的二進位檔案。  
@@ -50,7 +50,7 @@ ms.locfileid: "48192518"
 |如需詳細資訊|請參閱|  
 |---------------------------|---------|  
 |設定要搭配使用的防火牆 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
-|設定要搭配使用的防火牆 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[為 SSIS 服務的存取設定 Windows 防火牆](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
+|設定要搭配使用的防火牆 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[針對 SSIS 服務的存取設定 Windows 防火牆](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
 |設定要搭配使用的防火牆 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
 |開啟防火牆的特定通訊埠以啟用存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |使用通道繫結與服務繫結，設定驗證擴充保護的支援|[使用擴充保護連接至 Database Engine](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
@@ -76,7 +76,7 @@ ms.locfileid: "48192518"
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式檔案|[SQL Server 的預設和具名執行個體的檔案位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級提供增強的安全性。 如需得知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是否已有最新的 Service Pack 可供使用，請瀏覽 [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) 網站。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級提供增強的安全性。 如需得知 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是否已有最新的 Service Pack 可供使用，請瀏覽 [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) 網站。  
   
  您可以利用下列指令碼判斷系統上安裝的 Service Pack 版本。  
   

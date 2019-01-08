@@ -14,12 +14,12 @@ ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 35fdba2dff5f4b68040007c8c5d21c127bd1548c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d5e59264036380f6c8b5c9e73df5a6700c4b1ef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113768"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788800"
 ---
 # <a name="get-information-about-ddl-triggers"></a>取得 DDL 觸發程序的詳細資訊
   本章節所列的目錄檢視可用來取得 DDL 觸發程序的相關資訊。  

@@ -15,12 +15,12 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 6d89cd1ee72b39c3441a4aea70f3e0ad622b4e49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 853e85ea84b84f1ed0af040be5d8614feab193b0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204488"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365650"
 ---
 # <a name="choose-an-encryption-algorithm"></a>選擇加密演算法
   加密是全面防禦中的一環，可提供給想要維護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體安全的管理員使用。  
@@ -48,7 +48,7 @@ ms.locfileid: "48204488"
 >   
 >  在不同的資料區塊上重複使用相同的 RC4 或 RC4_128 KEY_GUID，結果會是相同的 RC4 金鑰，因為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會自動提供 Salt。 重複使用相同的 RC4 金鑰是已知的錯誤，此錯誤會造成加密變弱。 因此，我們取代了 RC4 和 RC4_128 關鍵字。 [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
   
- 如需加密演算法和加密技術的詳細資訊，請參閱 MSDN 上《.NET Framework 開發人員手冊》中的 [重要的安全性概念](http://go.microsoft.com/fwlink/?LinkId=62082) 。  
+ 如需加密演算法和加密技術的詳細資訊，請參閱 MSDN 上《.NET Framework 開發人員手冊》中的 [重要的安全性概念](https://go.microsoft.com/fwlink/?LinkId=62082) 。  
   
  **釐清有關 DES 演算法的資訊：**  
   

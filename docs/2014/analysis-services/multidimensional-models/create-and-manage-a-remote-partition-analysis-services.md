@@ -14,12 +14,12 @@ ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 584dea7a48b316a4e78a46b0ef1b014b8cc7cf02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5f451a9948315a32710bdb1755bb95a5b8d3b98
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106900"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356644"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>建立及管理遠端分割區 (Analysis Services)
   分割量值群組時，您可以在遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上設定次要資料庫作為分割區儲存。  
@@ -57,36 +57,36 @@ ms.locfileid: "48106900"
   
 #### <a name="specify-valid-server-names-for-cube-deployment-in-ssdt"></a>為 Cube 部署指定有效的伺服器名稱 (在 SSDT 中)  
   
-1.  在主要伺服器上：在方案總管中，以滑鼠右鍵按一下方案名稱，然後選取 [屬性]。 在 [屬性] 對話方塊中，依序按一下 [組態屬性]、[部署] 及 [伺服器]，然後設定主要伺服器的名稱。  
+1.  在主要伺服器：在 [方案總管] 中，以滑鼠右鍵按一下方案名稱，然後選取**屬性**。 在 [屬性] 對話方塊中，依序按一下 [組態屬性]、[部署] 及 [伺服器]，然後設定主要伺服器的名稱。  
   
-2.  在從屬伺服器上：在方案總管中，以滑鼠右鍵按一下方案名稱，然後選取 [屬性]。 在 [屬性] 對話方塊中，依序按一下 [組態屬性]、[部署] 及 [伺服器]，然後設定從屬伺服器的名稱。  
+2.  在從屬伺服器：在 [方案總管] 中，以滑鼠右鍵按一下方案名稱，然後選取**屬性**。 在 [屬性] 對話方塊中，依序按一下 [組態屬性]、[部署] 及 [伺服器]，然後設定從屬伺服器的名稱。  
   
 #### <a name="create-and-deploy-a-secondary-database-in-ssdt"></a>建立及部署次要資料庫 (在 SSDT 中)  
   
-1.  在從屬伺服器上：為儲存資料庫建立新的 Analysis Services 專案。  
+1.  在從屬伺服器：建立新的 Analysis Services 專案，儲存資料庫。  
   
-2.  在從屬伺服器上：在 [方案總管] 中，建立指向 Cube 資料庫 (db-master) 的新資料來源。 使用提供者 **Native OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0**。  
+2.  在從屬伺服器：在 [方案總管] 中，建立新的資料來源，指向 cube 資料庫 db master。 使用提供者 **Native OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0**。  
   
-3.  在從屬伺服器上：部署方案。  
+3.  在從屬伺服器：部署該方案。  
   
 #### <a name="enable-features-in-ssms"></a>啟用功能 (在 SSMS 中)  
   
-1.  在從屬伺服器上：在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下物件總管中已連接的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，然後選取 [屬性]。 將 **Feature\LinkToOtherInstanceEnabled** 和 **Feature\LinkFromOtherInstanceEnabled** 設為 **True**。  
+1.  在從屬伺服器：在  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，以滑鼠右鍵按一下 已連接[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體在 [物件總管] 並選取**屬性**。 將 **Feature\LinkToOtherInstanceEnabled** 和 **Feature\LinkFromOtherInstanceEnabled** 設為 **True**。  
   
-2.  在從屬伺服器上：以滑鼠右鍵按一下物件總管中的伺服器名稱，然後選取 [重新啟動] 以重新啟動伺服器。  
+2.  在從屬伺服器：重新啟動伺服器，以滑鼠右鍵按一下 [物件總管] 中的伺服器名稱，然後選取**重新啟動**。  
   
-3.  在主要伺服器上：在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下物件總管中已連接的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，然後選取 [屬性]。 將 **Feature\LinkToOtherInstanceEnabled** 和 **Feature\LinkFromOtherInstanceEnabled** 設為 **True**。  
+3.  在主要伺服器：在  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，以滑鼠右鍵按一下 已連接[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體在 [物件總管] 並選取**屬性**。 將 **Feature\LinkToOtherInstanceEnabled** 和 **Feature\LinkFromOtherInstanceEnabled** 設為 **True**。  
   
-4.  在主要伺服器上：若要重新啟動伺服器，請以滑鼠右鍵按一下物件總管中的伺服器名稱，然後選取 [重新啟動]。  
+4.  在主要伺服器：若要重新啟動伺服器，以滑鼠右鍵按一下 [物件總管] 中的伺服器名稱，然後選取**重新啟動**。  
   
 #### <a name="set-the-masterdatasourceid-database-property-on-the-remote-server-in-ssms"></a>設定遠端伺服器上的 MasterDataSourceID 資料庫屬性 (在 SSMS 中)  
   
-1.  在從屬伺服器上：在儲存資料庫 (db-storage) 上按一下滑鼠右鍵，並指向 [編寫資料庫的指令碼為] | [ALTER 至] | [新增查詢編輯器視窗]。  
+1.  在從屬伺服器：以滑鼠右鍵按一下 儲存體資料庫，資料庫儲存體，指向**編寫資料庫的指令碼作為** | **ALTER 至** | **新增查詢編輯器視窗**。  
   
 2.  將 **MasterDataSourceID** 加入 XMLA 中，然後指定 Cube 資料庫 db-master 的識別碼作為其值。 XMLA 看起來應該類似如下。  
   
     ```  
-    <Alter ObjectExpansion="ExpandFull" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Alter ObjectExpansion="ExpandFull" xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
     <Object>  
        <DatabaseID>DB-Storage</DatabaseID>  
     </Object>  
@@ -111,7 +111,7 @@ ms.locfileid: "48106900"
   
 #### <a name="set-up-the-remote-partition-in-ssdt"></a>設定遠端分割區 (在 SSDT 中)  
   
-1.  在主要伺服器上：開啟 Cube 設計師中的 Cube，然後按一下 [資料分割] 索引標籤。展開量值群組。 如果為多個資料分割設定量值群組，請按一下 [新增資料分割]；否則在 [來源] 資料行中按一下瀏覽 (. . ) 按鈕，以編輯現有的分割區。  
+1.  在主要伺服器：在 Cube 設計師中開啟 cube，然後按一下**分割區** 索引標籤。展開量值群組。 如果為多個資料分割設定量值群組，請按一下 [新增資料分割]；否則在 [來源] 資料行中按一下瀏覽 (. . ) 按鈕，以編輯現有的分割區。  
   
 2.  在 [資料分割精靈] 的 [指定來源資訊] 中，選取原始資料來源檢視和事實資料表。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48106900"
     > [!NOTE]  
     >  如果發生錯誤，指出集合中不存在此資料來源，您必須開啟儲存資料庫 db-storage 的專案，然後建立指向 master 資料庫 db-master 的資料來源。  
   
-5.  在主要伺服器上：以滑鼠右鍵按一下方案總管中的 Cube 名稱，然後選取 [處理] 並完整處理 Cube。  
+5.  在主要伺服器：在 [方案總管] 中，選取的 cube 名稱上按一下滑鼠右鍵**程序**和完整處理 cube。  
   
 ## <a name="administering-remote-partitions"></a>管理遠端分割區  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援遠端資料分割的平行和循序處理。 定義分割區的 master 資料庫會協調參與處理 Cube 之分割區所有執行個體之間的交易。 然後將處理報表傳送至處理分割區的所有執行個體。  
@@ -133,6 +133,6 @@ ms.locfileid: "48106900"
 >  雖然結構描述資料列集不會顯示專用於儲存遠端分割區的資料庫，但是使用分析管理物件 (AMO) 的應用程式仍可使用 XML for Analysis Discover 命令探索專用資料庫。 任何使用 TCP 或 HTTP 用戶端直接傳送至專用資料庫的 CREATE 或 DELETE 命令會成功完成，但是伺服器會傳回警告，指出這些動作可能會損毀此密切管理的資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料分割&#40;Analysis Services-多維度資料&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [資料分割 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

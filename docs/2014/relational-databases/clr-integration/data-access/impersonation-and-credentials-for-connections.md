@@ -19,12 +19,12 @@ ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 05f3255dac93940439174c20b11769a022bcb7bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50069ad5b96914d98f3d08e795467c2693fabe87
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072698"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360306"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>連接的模擬和認證
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Common Language Runtime (CLR) 整合中，使用 Windows 驗證是很複雜的工作，但是要比使用 SQL Server 驗證來得安全。 當使用 Windows 驗證時，請牢記以下的考量事項。  
@@ -73,7 +73,7 @@ catch
 > [!NOTE]  
 >  如需模擬中行為變更的資訊，請參閱[SQL Server 2014 中的 Database Engine 功能的突破性變更](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
   
- 此外，如果您已經取得 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 識別執行個體，在預設情況下您無法將該執行個體傳播至另一部電腦；Windows 安全性基礎結構會根據預設來限制這項作業。 但是，有一項機制稱為「委派」，它可啟用多部受信任電腦之間的 Windows 識別傳播。 您可以深入了解委派，在 TechNet 文章中，「[Kerberos 通訊協定轉換與限制委派](http://go.microsoft.com/fwlink/?LinkId=50419)"。  
+ 此外，如果您已經取得 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 識別執行個體，在預設情況下您無法將該執行個體傳播至另一部電腦；Windows 安全性基礎結構會根據預設來限制這項作業。 但是，有一項機制稱為「委派」，它可啟用多部受信任電腦之間的 Windows 識別傳播。 您可以深入了解委派，在 TechNet 文章中，「[Kerberos 通訊協定轉換與限制委派](https://go.microsoft.com/fwlink/?LinkId=50419)"。  
   
 ## <a name="see-also"></a>另請參閱  
  [SqlContext 物件](../../clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  

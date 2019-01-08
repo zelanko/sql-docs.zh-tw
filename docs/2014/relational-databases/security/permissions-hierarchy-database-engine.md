@@ -19,12 +19,12 @@ ms.assetid: f6d20a55-ef03-4e14-85f9-009902889866
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f5640fb6ab982b924d4669663da5f82da91b1601
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05cc0d47053d8ddef0962c4aceee75e61b8b4b64
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056980"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372450"
 ---
 # <a name="permissions-hierarchy-database-engine"></a>權限階層 (Database Engine)
   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 會管理階層式實體集合，這些實體可使用權限來確保安全性。 這些實體也稱為「安全性實體」。 最明顯的安全性實體為伺服器和資料庫，但是個別權限可以在更細微的層次進行設定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 透過驗證主體是否已被授與適當的權限，進而規範主體在安全性實體上的動作。  
@@ -34,7 +34,7 @@ ms.locfileid: "48056980"
  ![Database Engine 權限階層的圖表](../../database-engine/media/wj-security-layers.gif "Database Engine 權限階層的圖表")  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 權限的圖表  
- 如需所有 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 權限的 PDF 格式海報大小圖表，請參閱 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)。  
+ 如需所有 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 權限的 PDF 格式海報大小圖表，請參閱 [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)。  
   
 ## <a name="working-with-permissions"></a>使用權限  
  您可以透過常見的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢 GRANT、DENY 與 REVOKE 來操控權限。 您可以在 [sys.server_permissions](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql) 和 [sys.database_permissions](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql) 目錄檢視中查看權限的相關資訊。 此外，也支援使用內建函數來查詢權限資訊。  

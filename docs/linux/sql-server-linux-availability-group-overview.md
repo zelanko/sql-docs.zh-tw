@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 6bc375492034f4e9b05eda85805cd452fe6d3557
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1273d445d52c00db01cac884b171e8feedceb49a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723186"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206617"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux 上的可用性群組
 
@@ -43,7 +43,7 @@ ms.locfileid: "47723186"
 
 ## <a name="cluster-type-and-failover-mode"></a>叢集類型和容錯移轉模式
 
-剛接觸[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]是引進的叢集類型的 Ag。 針對 Linux，有兩個有效的值： External 和 None。 叢集類型的外部表示 Pacemaker 用以 AG 底下。 使用外部叢集類型需要容錯移轉模式設定為 外部也 (新功能[!INCLUDE[sssql17-md](../includes/sssql17-md.md)])。 支援自動容錯移轉，但不同於 WSFC 容錯移轉模式設定為外部，不是自動的當 Pacemaker 會使用。 不同於 WSFC AG 設定後，會建立 AG 的 Pacemaker 部分。
+剛接觸[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]是引進的叢集類型的 Ag。 針對 Linux，有兩個有效的值：External 和 None。 叢集類型的外部表示 Pacemaker 用以 AG 底下。 使用外部叢集類型需要容錯移轉模式設定為 外部也 (新功能[!INCLUDE[sssql17-md](../includes/sssql17-md.md)])。 支援自動容錯移轉，但不同於 WSFC 容錯移轉模式設定為外部，不是自動的當 Pacemaker 會使用。 不同於 WSFC AG 設定後，會建立 AG 的 Pacemaker 部分。
 
 叢集類型為 None 表示不需要，也將 AG 使用，Pacemaker。 即使在伺服器上已設定的 Pacemaker，AG 是否設有叢集類型為 None、 Pacemaker 將會看見或管理該 AG。 None 叢集類型只支援手動的容錯移轉從主要到次要複本。 建立具有無 AG 主要被針對讀取向外延展案例，以及升級。 雖然它可在災害復原或其中任何自動容錯移轉是必要的本機可用性等的情況下，不建議。 接聽程式的案例也是更複雜，而不需要 Pacemaker。
 
@@ -51,15 +51,15 @@ ms.locfileid: "47723186"
 
 ## <a name="requiredsynchronizedsecondariestocommit"></a>必要\_同步處理\_次要\_到\_認可
 
-剛接觸[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]設定，可由呼叫的 Ag `required_synchronized_secondaries_to_commit`。 這會告訴 AG 必須與主要的密集的次要複本的數目。 這可讓自動容錯移轉 （只與 Pacemaker 叢集類型的外部整合） 時，等項目，並控制的主要可用性等的行為，如果正確的次要複本的數目是線上或離線。 若要深入了解其運作方式，請參閱[可用性群組組態的高可用性和資料保護](sql-server-linux-availability-group-ha.md)。 `required_synchronized_secondaries_to_commit`值是預設設定和維護的 Pacemaker /[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 您可以手動覆寫此值。
+剛接觸[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]設定，可由呼叫的 Ag `required_synchronized_secondaries_to_commit`。 這會告訴 AG 必須與主要的密集的次要複本的數目。 這可讓自動容錯移轉 （只與 Pacemaker 叢集類型的外部整合） 時，等項目，並控制的主要可用性等的行為，如果正確的次要複本的數目是線上或離線。 若要深入了解其運作方式，請參閱[可用性群組組態的高可用性和資料保護](sql-server-linux-availability-group-ha.md)。 `required_synchronized_secondaries_to_commit`值是預設設定和維護的 Pacemaker / [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。 您可以手動覆寫此值。
 
 組合`required_synchronized_secondaries_to_commit`和新的序號 (其會儲存於`sys.availability_groups`) 會通知 Pacemaker 和[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]，比方說，自動容錯移轉可能會發生。 在此情況下，次要複本會有相同的順序編號為主要，也就是說，它最新狀態的最新的組態資訊。
 
-有三個值可以設給`required_synchronized_secondaries_to_commit`: 0、 1 或 2。 控制行為的複本變成無法使用時，會發生什麼事。 數字對應必須與主要同步的次要複本的數目。 行為會低於 Linux，如下所示：
+有三個值可以設給`required_synchronized_secondaries_to_commit`:0、 1 或 2。 控制行為的複本變成無法使用時，會發生什麼事。 數字對應必須與主要同步的次要複本的數目。 行為會低於 Linux，如下所示：
 
--   0 – 不自動容錯移轉是可能這是因為沒有次要複本需要同步處理。 隨時都可在主要資料庫。
--   1 – 一個次要複本必須位於與主要; 已同步處理狀態可以自動容錯移轉。 主要資料庫是無法使用，直到次要同步複本為止。
--   2 – 中的三個或多個節點 AG 組態兩個次要複本必須與主要; 同步處理可以自動容錯移轉。
+-   0-沒有自動容錯移轉是可能這是因為沒有次要複本需要同步處理。 隨時都可在主要資料庫。
+-   1-一個次要複本必須位於與主要; 已同步處理狀態可以自動容錯移轉。 主要資料庫是無法使用，直到次要同步複本為止。
+-   2-中的三個或多個節點 AG 組態兩個次要複本必須與主要; 同步處理可以自動容錯移轉。
 
 `required_synchronized_secondaries_to_commit` 控制不只具有同步複本，但資料遺失的容錯移轉行為。 值為 1 或 2，次要複本時一律需要同步處理，因此資料備援。 這表示不會遺失資料。
 
@@ -87,7 +87,7 @@ sudo crm resource param ms-<AGResourceName> set required_synchronized_secondarie
 -   主要和次要複本設定為同步資料移動。
 -   次要資料庫都有狀態的同步處理 （未進行同步處理），這表示兩個位於相同的資料點。
 -   叢集類型設定為外部。 自動容錯移轉不可能的叢集類型為 None。
--   `sequence_number`次要複本變成主要資料庫會有最高的順序號碼 – 亦即，次要複本的`sequence_number`符合從原始的主要複本。
+-   `sequence_number`次要複本變成主要資料庫會有最高的序號-亦即，次要複本的`sequence_number`符合從原始的主要複本。
 
 如果符合這些條件，而裝載主要複本的伺服器失敗，AG 會變成同步複本的擁有權。 同步複本的行為 (這可以有三個的總計： 一個主要複本和兩個次要複本) 可以進一步控制`required_synchronized_secondaries_to_commit`。 這適用於 Windows 與 Linux Ag，但設定的設定完全不同。 在 Linux 上，此值會自動由本身的 AG 資源上的叢集設定。
 
@@ -147,11 +147,11 @@ None 叢集類型 AG 可以跨 OS 界限，因此在相同 AG 中可能有兩個
 
 ![混合式無](./media/sql-server-linux-availability-group-overview/image1.png)
 
-分散式的 AG 也可以跨 OS 界限。 基礎 Ag 會繫結規則的設定方式，例如使用外部要設定 Linux 專用，但無法使用 WSFC 設定已加入至 AG。 請設想下列範例：
+分散式的 AG 也可以跨 OS 界限。 基礎 Ag 會繫結規則的設定方式，例如使用外部要設定 Linux 專用，但無法使用 WSFC 設定已加入至 AG。 參考下列範例：
 
 ![混合式 Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
 
-<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article “x”].
+<!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article "x"].
 
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 -->

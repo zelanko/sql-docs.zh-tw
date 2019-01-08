@@ -10,12 +10,12 @@ ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48a46b3f35b8ce19382996bf8c0667b6222dc5c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c90dd764a04b3eb470f0cf76d29e2ee2002d6b97
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059728"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364703"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>比較用於儲存 Blob 的選項 (SQL Server)
   討論和比較 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中儲存檔案和文件的可用選項。  
@@ -56,7 +56,7 @@ ms.locfileid: "48059728"
 |**檔案屬性的關聯式存取**|否|否|**是**|  
   
 ##  <a name="CompareRBS"></a> 比較 FILESTREAM 與遠端 BLOB 存放區 (RBS)  
- 如需此兩種功能的比較，請參閱 RBS 小組的這篇部落格文章： [SQL Server 遠端 BLOB 存放區和 FILESTREAM 功能比較](http://go.microsoft.com/fwlink/?LinkId=210317)。  
+ 如需這兩個功能的比較，請參閱此部落格文章 RBS 小組的：[SQL Server 遠端 BLOB 存放區和 FILESTREAM 功能比較](https://go.microsoft.com/fwlink/?LinkId=210317)。  
   
 ##  <a name="more"></a> 其他資訊  
  [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)  

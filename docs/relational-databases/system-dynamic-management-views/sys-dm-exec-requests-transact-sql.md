@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_requests (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 08/25/2017
+ms.date: 12/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,20 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 309970ba762b5e616cce10a21d1ef23bfd9097e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6320c20a9f27df7170caaba3e9749069f2365d7a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740466"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590112"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行之每項要求的相關資訊。  
-  
-> [!NOTE]  
->  若要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部的程式碼 (例如，擴充預存程序和分散式查詢)，執行緒必須在非先佔式排程器的控制之外執行。 若要這麼做，工作者必須切換到先佔式模式。 這個動態管理檢視傳回的時間值不包括先佔式模式所花費的時間。  
+傳回在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行之每項要求的相關資訊。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -42,7 +40,7 @@ ms.locfileid: "47740466"
 |request_id|**int**|要求的識別碼。 在工作階段的內容中是唯一的。 不可為 Null。|  
 |start_time|**datetime**|要求到達時的時間戳記。 不可為 Null。|  
 |status|**nvarchar(30)**|要求的狀態。 這可以是下列項目之一：<br /><br /> 背景<br />執行中<br />可執行的<br />休眠中<br />已暫停<br /><br /> 不可為 Null。|  
-|command|**nvarchar(32)**|識別目前所處理命令的類型。 常見命令類型包括下列項目：<br /><br /> SELECT<br />Insert<br />UPDATE<br />Delete<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 要求的文字可使用 sys.dm_exec_sql_text 加上要求的對應 sql_handle 來擷取。 內部系統處理序會根據其所執行工作的類型來設定命令。 工作包括下列項目：<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> 不可為 Null。|  
+|command|**nvarchar(32)**|識別目前所處理命令的類型。 常見命令類型包括下列項目：<br /><br /> SELECT<br />Insert<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 要求的文字可使用 sys.dm_exec_sql_text 加上要求的對應 sql_handle 來擷取。 內部系統處理序會根據其所執行工作的類型來設定命令。 工作包括下列項目：<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> 不可為 Null。|  
 |sql_handle|**varbinary(64)**|要求之 SQL 文字的雜湊對應。 可為 Null。|  
 |statement_start_offset|**int**|目前執行的批次或預存程序中的字元數，目前執行的陳述式即從該處開始。 可與 sql_handle、statement_end_offset 和 sys.dm_exec_sql_text 動態管理函數一起使用，來擷取該要求目前執行的陳述式。 可為 Null。|  
 |statement_end_offset|**int**|目前執行的批次或預存程序中的字元數，目前執行的陳述式即在該處結束。 可與 sql_handle、statement_end_offset 和 sys.dm_exec_sql_text 動態管理函數一起使用，來擷取該要求目前執行的陳述式。 可為 Null。|  
@@ -99,60 +97,97 @@ ms.locfileid: "47740466"
 |is_resumable |**bit** |**適用於**： [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指出要求是否可繼續索引作業。 |  
 |page_resource |**binary(8)** |**適用於**：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 8 個位元組的十六進位表示的頁面資源如果`wait_resource`資料行包含一頁。 |
 
-## <a name="permissions"></a>Permissions  
- 如果使用者擁有`VIEW SERVER STATE`伺服器的權限，使用者會看到所有執行的工作階段的執行個體上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 否則使用者會看到只有目前的工作階段。 `VIEW SERVER STATE` 無法授與在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]因此`sys.dm_exec_requests`會受限於目前的連接。 
+## <a name="remarks"></a>備註 
+若要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部的程式碼 (例如，擴充預存程序和分散式查詢)，執行緒必須在非先佔式排程器的控制之外執行。 若要這麼做，工作者必須切換到先佔式模式。 這個動態管理檢視傳回的時間值不包括先佔式模式所花費的時間。
+
+執行中的平行要求時[資料列模式](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指派背景工作執行緒來協調背景工作執行緒負責完成指派給他們的工作。 在這個 DMV 只有協調器執行緒會顯示要求的。 資料行**讀取**，**寫入**， **logical_reads**，以及**row_count**是**不更新**的協調器執行緒。 資料行**wait_type**， **wait_time**， **last_wait_type**， **wait_resource**，和**granted_query_memory**都**只更新**協調器執行緒。 如需詳細資訊，請參閱 <<c0> [ 執行緒和工作架構指南](../../relational-databases/thread-and-task-architecture-guide.md)。
+
+## <a name="permissions"></a>Permissions
+如果使用者擁有`VIEW SERVER STATE`伺服器的權限，使用者會看到所有執行的工作階段的執行個體上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 否則使用者會看到只有目前的工作階段。 `VIEW SERVER STATE` 無法授與在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]因此`sys.dm_exec_requests`會受限於目前的連接。
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-finding-the-query-text-for-a-running-batch"></a>A. 尋找執行中批次的查詢文字  
+### <a name="a-finding-the-query-text-for-a-running-batch"></a>A. 尋找執行中批次的查詢文字
+
  下列範例會查詢 `sys.dm_exec_requests` 來尋找重要查詢並且從輸出複製其 `sql_handle`。  
-  
-```  
+
+```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
-  
- 然後，若要取得陳述式文字，請使用複製的 `sql_handle` 搭配系統函數 `sys.dm_exec_sql_text(sql_handle)`。  
-  
-```  
+
+然後，若要取得陳述式文字，請使用複製的 `sql_handle` 搭配系統函數 `sys.dm_exec_sql_text(sql_handle)`。  
+
+```sql
 SELECT * FROM sys.dm_exec_sql_text(< copied sql_handle >);  
 GO  
-```  
-  
-### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. 尋找執行中批次持有的所有鎖定  
- 下列範例會查詢**sys.dm_exec_requests**來尋找有趣的批次和複製其`transaction_id`從輸出中。  
-  
-```  
+```
+
+### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. 尋找執行中批次持有的所有鎖定
+
+下列範例會查詢**sys.dm_exec_requests**來尋找有趣的批次和複製其`transaction_id`從輸出中。
+
+```sql
 SELECT * FROM sys.dm_exec_requests;  
+GO
+```
+
+然後，若要尋找鎖定資訊，請使用 複製`transaction_id`搭配系統函數**sys.dm_tran_locks**。  
+
+```sql
+SELECT * FROM sys.dm_tran_locks
+WHERE request_owner_type = N'TRANSACTION'
+    AND request_owner_id = < copied transaction_id >;
 GO  
-```  
-  
- 然後，若要尋找鎖定資訊，請使用 複製`transaction_id`搭配系統函數**sys.dm_tran_locks**。  
-  
-```  
-SELECT * FROM sys.dm_tran_locks   
-WHERE request_owner_type = N'TRANSACTION'   
-    AND request_owner_id = < copied transaction_id >;  
-GO  
-```  
-  
-### <a name="c-finding-all-currently-blocked-requests"></a>C. 尋找所有目前封鎖的要求  
- 下列範例會查詢**sys.dm_exec_requests**來尋找有關封鎖要求的資訊。  
-  
-```  
+```
+
+### <a name="c-finding-all-currently-blocked-requests"></a>C. 尋找所有目前封鎖的要求
+
+下列範例會查詢**sys.dm_exec_requests**來尋找有關封鎖要求的資訊。  
+
+```sql
 SELECT session_id ,status ,blocking_session_id  
-    ,wait_type ,wait_time ,wait_resource   
-    ,transaction_id   
-FROM sys.dm_exec_requests   
+    ,wait_type ,wait_time ,wait_resource
+    ,transaction_id
+FROM sys.dm_exec_requests
 WHERE status = N'suspended';  
 GO  
 ```  
-  
-## <a name="see-also"></a>另請參閱  
- [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [執行相關動態管理檢視和函式&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_os_memory_clerks &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
- [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys.dm_exec_query_memory_grants &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+
+### <a name="d-ordering-existing-requests-by-cpu"></a>D. 排序依 CPU 現有的要求
+
+```sql
+SELECT 
+   req.session_id
+   , req.start_time
+   , cpu_time 'cpu_time_ms'
+   , object_name(st.objectid,st.dbid) 'ObjectName' 
+   , substring
+      (REPLACE
+        (REPLACE
+          (SUBSTRING
+            (ST.text
+            , (req.statement_start_offset/2) + 1
+            , (
+               (CASE statement_end_offset
+                  WHEN -1
+                  THEN DATALENGTH(ST.text)  
+                  ELSE req.statement_end_offset
+                  END
+                    - req.statement_start_offset)/2) + 1)
+       , CHAR(10), ' '), CHAR(13), ' '), 1, 512)  AS statement_text  
+FROM sys.dm_exec_requests AS req  
+   CROSS APPLY sys.dm_exec_sql_text(req.sql_handle) as ST
+   ORDER BY cpu_time desc;
+GO
+```
+
+## <a name="see-also"></a>另請參閱
+
+- [動態管理檢視和函數](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [執行相關動態管理檢視和函數](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)
+- [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
+- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
+- [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
+- [sys.dm_exec_sql_text & #40](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  

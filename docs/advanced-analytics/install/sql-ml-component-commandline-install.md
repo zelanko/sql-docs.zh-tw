@@ -1,5 +1,6 @@
 ---
-title: 命令提示字元安裝 SQL Server 機器學習服務 R 和 Python 元件 |Microsoft Docs
+title: 命令提示字元安裝 R 和 Python 元件-SQL Server Machine Learning
+description: 執行 SQL Server 命令列安裝，以加入 SQL Server 資料庫引擎執行個體上的 R 語言和 Python 整合。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/21/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 77b68c6206e069a29821549998714a671239ca56
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 8e3c101eae8e02446a9e47b17255e2ca2b501774
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40434868"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645517"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>安裝 SQL Server machine learning R 和 Python 的元件，從命令列
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,11 +48,11 @@ ms.locfileid: "40434868"
 
 | 引數 | 描述 |
 |-----------|-------------|
-| / 功能 = AdvancedAnalytics | 會安裝在資料庫版本： SQL Server 2017 Machine Learning 服務 （資料庫） 或 SQL Server 2016 R Services （資料庫）。  |
+| / 功能 = AdvancedAnalytics | 會安裝在資料庫版本：SQL Server 2017 Machine Learning 服務 （資料庫） 或 SQL Server 2016 R Services （資料庫）。  |
 | / 功能 = SQL_INST_MR | 適用於僅 SQL Server 2017。 將它搭配 AdvancedAnalytics。 會安裝 （資料庫內） R 功能，包括 Microsoft R Open 和專屬的 R 套件。 SQL Server 2016 R Services 功能是 R 專用，因此沒有任何參數，該版本。|
 | / 功能 = SQL_INST_MPY | 適用於僅 SQL Server 2017。 將它搭配 AdvancedAnalytics。 會安裝 Python （資料庫） 的功能，包括 Anaconda 和專屬的 Python 套件。 |
-| / 功能 = SQL_SHARED_MR | 安裝獨立版本的 R 功能： SQL Server 2017 Machine Learning Server （獨立式） 或 SQL Server 2016 R Server （獨立式）。 未繫結至資料庫引擎執行個體的 「 共用的功能 」 的獨立伺服器。|
-| / 功能 = SQL_SHARED_MPY | 適用於僅 SQL Server 2017。 安裝獨立版本的 Python 功能： SQL Server 2017 Machine Learning Server （獨立式）。 未繫結至資料庫引擎執行個體的 「 共用的功能 」 的獨立伺服器。|
+| / 功能 = SQL_SHARED_MR | 會安裝獨立版本的 R 功能：SQL Server 2017 Machine Learning 伺服器 （獨立式） 或 SQL Server 2016 R Server （獨立式）。 未繫結至資料庫引擎執行個體的 「 共用的功能 」 的獨立伺服器。|
+| / 功能 = SQL_SHARED_MPY | 適用於僅 SQL Server 2017。 會安裝獨立版本的 Python 功能：SQL Server 2017 Machine Learning 伺服器 （獨立式）。 未繫結至資料庫引擎執行個體的 「 共用的功能 」 的獨立伺服器。|
 | /IACCEPTROPENLICENSETERMS  | 表示您接受授權條款，以使用開放原始碼 R 元件。 |
 | /IACCEPTPYTHONLICENSETERMS | 表示您接受授權條款，以使用 Python 元件。 |
 | /IACCEPTSQLSERVERLICENSETERMS | 表示您接受授權合約，以使用 SQL Server。|
@@ -72,7 +73,7 @@ ms.locfileid: "40434868"
 
 對於資料庫引擎執行個體並行安裝，提供執行個體名稱和系統管理員 (Windows) 登入。 包含安裝核心和語言元件，以及所有的授權條款的接受度的功能。
 
-```  
+```cmd
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<Windows-username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS
@@ -80,7 +81,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,
 
 這個相同的命令，但使用 SQL Server 上的登入資料庫引擎，使用混合驗證。
 
-```
+```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY
 /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<sql-username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS
@@ -88,7 +89,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 
 這個範例是 Python，顯示您可以藉由略過功能加入一種語言。
 
-```  
+```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY 
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" 
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTPYTHONLICENSETERMS
@@ -98,7 +99,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY
 
 此命令是相同的 SQL Server 2017 中，但是不會的 Python 項目，並不是 SQL Server 2016 安裝程式。
 
-```  
+```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<Windows-username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS 
@@ -122,7 +123,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 
 當資料庫內進階的分析加入現有的資料庫引擎執行個體，提供執行個體名稱。 比方說，如果您先前安裝的 SQL Server 2017 資料庫引擎和 Python，您可以使用此命令以新增。
 
-```  
+```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER 
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTROPENLICENSETERMS
 ```
@@ -133,7 +134,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 
 無訊息安裝會抑制.cab 檔案位置的檢查。 基於這個理由，您必須指定.cab 檔來解除封裝的位置。 您可以為此的暫存目錄。
  
-```  
+```cmd  
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY 
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS 
@@ -146,21 +147,21 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 
 SQL Server 2017 支援 Python 和 R，在獨立伺服器上：
 
-```
+```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_SHARED_MPY  
 /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 
 SQL Server 2016 是僅限 R:
 
-```
+```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR 
 /IACCEPTROPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
 
 安裝程式完成時，您會有伺服器、 Microsoft 套件、 開放原始碼散發套件的 R 和 Python，工具、 範例和屬於散發的指令碼。 
 
-若要開啟 R 主控台視窗中，移至 \Program files\Microsoft SQL Server\140 （或 130） \R_SERVER\bin\x64，然後按兩下**RGui.exe**。 不熟悉 R 嗎？ 嘗試此教學課程︰[基本 R 命令與 RevoScaleR 函式： 25 的常見範例](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)。
+若要開啟 R 主控台視窗中，移至 \Program files\Microsoft SQL Server\140 （或 130） \R_SERVER\bin\x64，然後按兩下**RGui.exe**。 不熟悉 R 嗎？ 請嘗試本教學課程：[R 的基本命令和 RevoScaleR 函式：25 的常見範例](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)。
 
 若要開啟 Python 命令，請移至 \Program files\Microsoft SQL Server\140\PYTHON_SERVER\bin\x64，然後按兩下**python.exe**。
 
@@ -178,12 +179,12 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 R 開發人員可以開始使用一些簡單的範例，並了解 R 與 SQL Server 的運作方式的基本概念。 下一個步驟中，請參閱下列連結：
 
-+ [教學課程： 在 T-SQL 中執行 R](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [適用於 R 開發人員教學課程： 在資料庫內分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [教學課程：在 T-SQL 中執行 R](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [教學課程：適用於 R 開發人員的資料庫內分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python 開發人員可以了解如何使用 SQL Server 中的 Python，遵循這些教學課程：
 
-+ [教學課程： 在 T-SQL 中執行 Python](../tutorials/run-python-using-t-sql.md)
-+ [適用於 Python 開發人員教學課程： 在資料庫內分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [教學課程：在 T-SQL 中執行 Python](../tutorials/run-python-using-t-sql.md)
++ [教學課程：適用於 Python 開發人員的資料庫內分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 若要檢視機器學習服務依據真實世界案例的範例，請參閱[機器學習服務教學課程](../tutorials/machine-learning-services-tutorials.md)。

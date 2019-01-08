@@ -13,12 +13,12 @@ ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0af3a454963474df483c56e5afddaede77b29dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 864f6fa78ab1ef23b7db3a0be4c85738b95ea72d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721066"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214220"
 ---
 # <a name="index-command"></a>INDEX 命令
 建立索引檔案來顯示和存取資料表記錄，依照邏輯順序。  

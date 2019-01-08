@@ -14,12 +14,12 @@ ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edd96f9927a5fe698dd47489beffc738b5456708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208514"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361281"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不支援混合式 (索引鍵集/動態) 資料指標模型。 如果設定的值不等於 0，使用 SQL_ATTR_KEYSET_SIZE 設定索引鍵值大小的嘗試將會失敗。  
@@ -64,7 +64,7 @@ ms.locfileid: "48208514"
   
 |*ValuePtr*值|描述|  
 |----------------------|-----------------|  
-|SQL_DP_ON|預設值。 之後呼叫[SQLPrepare 函數](http://go.microsoft.com/fwlink/?LinkId=59360)，陳述式準備會延遲，直到**SQLExecute**稱為或中繼屬性作業 (**SQLDescribeCol**或**SQLDescribeParam**) 執行。|  
+|SQL_DP_ON|預設值。 之後呼叫[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)，陳述式準備會延遲，直到**SQLExecute**稱為或中繼屬性作業 (**SQLDescribeCol**或**SQLDescribeParam**) 執行。|  
 |SQL_DP_OFF|在準備陳述式立即**SQLPrepare**執行。|  
   
 ### <a name="sqlsoptssregionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -122,7 +122,7 @@ ms.locfileid: "48208514"
   
  SQL_SOPT_SS_PARAM_FOCUS 的類型是 SQLULEN。  
   
- 預設值為 0，表示這些呼叫處理的參數會對應到 SQL 陳述式中的參數標記。 設定為資料表值參數的參數號碼時，這些呼叫會處理該資料表值參數的資料行。 設定為非資料表值參數之參數號碼的值時，這些呼叫會傳回錯誤 IM020：「參數焦點沒有參考資料表值參數」。  
+ 預設值為 0，表示這些呼叫處理的參數會對應到 SQL 陳述式中的參數標記。 設定為資料表值參數的參數號碼時，這些呼叫會處理該資料表值參數的資料行。 當設定為不是資料表值參數的參數號碼的值，這些呼叫會傳回錯誤 IM020:「 參數焦點未參考到資料表值參數。 」  
   
 ### <a name="sqlsoptssnamescope"></a>SQL_SOPT_SS_NAME_SCOPE  
  SQL_SOPT_SS_NAME_SCOPE 屬性會指定後續目錄函數呼叫的名稱範圍。 SQLColumns 所傳回的結果集取決於 SQL_SOPT_SS_NAME_SCOPE 的設定。  
@@ -146,7 +146,7 @@ ms.locfileid: "48208514"
  如果目錄函數則 SQLTables、 SQLColumns、 或 SQLPrimaryKeys SQL_SOPT_SS_NAME_SCOPE 以外的值時呼叫會傳回 SQL_SS_NAME_SCOPE_TABLE、 SQL_ERROR。 此時會產生包含 SQLSTATE HY010 與「函數順序錯誤 (SQL_SOPT_SS_NAME_SCOPE 未設定為 SQL_SS_NAME_SCOPE_TABLE)」訊息的診斷記錄。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLGetStmtAttr 函數](http://go.microsoft.com/fwlink/?LinkId=59355)   
+ [SQLGetStmtAttr 函數](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

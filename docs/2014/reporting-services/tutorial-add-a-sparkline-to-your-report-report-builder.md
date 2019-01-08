@@ -1,5 +1,5 @@
 ---
-title: 教學課程：將走勢圖新增至報表 (報表產生器) | Microsoft Docs
+title: 教學課程：將走勢圖加入至報表 （報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 542720be68e6fabd2cb16e25928d73efa4f41d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcadf726623b71daa0f9bf3e699c6bd8ac3ab122
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091478"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376670"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教學課程：將走勢圖加入至報表 (報表產生器)
   在本教學課程中，您要根據範例銷售資料建立基本資料表報表，然後將走勢圖加入至資料表中的儲存格。  
   
- 本教學課程所建立的報表另有一個增強型版本，可從範例 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 報表產生器報表取得。 如需有關下載這個範例報表和其他人的詳細資訊，請參閱[報表產生器範例報表](http://go.microsoft.com/fwlink/?LinkId=184851)。 下圖顯示與您將要建立的報表相似的範例報表。  
+ 本教學課程所建立的報表另有一個增強型版本，可從範例 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 報表產生器報表取得。 如需有關下載這個範例報表和其他人的詳細資訊，請參閱[報表產生器範例報表](https://go.microsoft.com/fwlink/?LinkId=184851)。 下圖顯示與您將要建立的報表相似的範例報表。  
   
  ![rs_SparklineMatrixTutorial](../../2014/tutorials/media/rs-sparklinematrixtutorial.gif "rs_SparklineMatrixTutorial")  
   
- 視訊[如何： 建立資料表 （報表產生器影片） 中的走勢圖](http://technet.microsoft.com/bi/ff871942.aspx)說明如何建立包含走勢圖的類似報表。  
+ 影片[How to:資料表 （報表產生器影片） 中建立走勢圖](https://technet.microsoft.com/bi/ff871942.aspx)說明如何建立包含走勢圖的類似報表。  
   
 ##  <a name="BackToTop"></a> 您將了解  
  在本教學課程中，您將學習如何執行下列作業：  
@@ -183,7 +183,7 @@ ms.locfileid: "48091478"
   
 14. 資料表會加入至設計介面。 該資料表具有三個資料行和三個資料列。  
   
-     請查看 [群組] 窗格。 如果未顯示 [群組] 窗格，請按一下 [檢視] 功能表上的 [群組]。 [資料列群組] 窗格會顯示一個資料列群組： **Product**。 [資料行群組] 窗格會顯示一個資料行群組： **SalesDate**。 詳細資料是資料集查詢擷取的所有資料。  
+     請查看 [群組] 窗格。 如果未顯示 [群組] 窗格，請按一下 [檢視] 功能表上的 [群組]。 [資料列群組] 窗格會顯示一個資料列群組：**產品**。 [資料行群組] 窗格會顯示一個資料行群組：**SalesDate**。 詳細資料是資料集查詢擷取的所有資料。  
   
 15. 按一下 **[執行]** 預覽報表。  
   
@@ -213,12 +213,12 @@ ms.locfileid: "48091478"
   
      請注意資料表的每一列內都有走勢圖，但是圖表並不正確。 圖表中的橫條沒有彼此切齊。 第二個資料列只有四個橫條，而第一列有六個，因此前者的橫條比後者的橫條還要寬。 這樣您無法比較各產品每日的值， 這些橫條必須彼此貼齊。  
   
-     同時請注意，每一列內最高的橫條都和該列等高。 這也會產生誤導，因為每一列的最大值其實並不相等：Budget Movie-Maker 的最大值為 $10,400，但 Slim Digital 的最大值為 $26,576，是其兩倍以上。 然而，這兩列內最大值橫條的高度幾乎一樣， 這些橫條需要能夠隨著其他走勢圖縮放。  
+     同時請注意，每一列內最高的橫條都和該列等高。 這也會產生誤導，因為每個資料列的最大值是否不相等： 針對 Budget Movie-maker 的最大值為 $10400，但 Slim Digital 的最大值是 $26,576-超過兩次一樣大。 然而，這兩列內最大值橫條的高度幾乎一樣， 這些橫條需要能夠隨著其他走勢圖縮放。  
   
      ![rs_SprklineMtrxUnaligndBars](../../2014/tutorials/media/rs-sprklinemtrxunaligndbars.gif "rs_SprklineMtrxUnaligndBars")  
   
 ##  <a name="AlignSparklines"></a> 4.垂直與水平對齊走勢圖  
- 如果不是所有走勢圖都使用相同的度量就很難讀取。 每一個走勢圖的水平和垂直軸都需要符合其餘的走勢圖。  
+ 走勢圖很難讀取時它們不都使用相同的度量。 每一個走勢圖的水平和垂直軸都需要符合其餘的走勢圖。  
   
 #### <a name="to-set-alignment-for-the-sparklines-in-the-table"></a>設定資料表中走勢圖的對齊方式  
   
@@ -345,7 +345,7 @@ ms.locfileid: "48091478"
   
 3.  將 [名稱] 中的預設名稱取代為 **Product Sales**。  
   
-4.  按一下 **[儲存]**。  
+4.  按一下 [儲存] 。  
   
 ## <a name="next-steps"></a>後續步驟  
  這總結本教學課程：建立含走勢圖的資料表報表。 如需走勢圖的詳細資訊，請參閱[走勢圖和資料橫條 &#40;報表產生器和 SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  

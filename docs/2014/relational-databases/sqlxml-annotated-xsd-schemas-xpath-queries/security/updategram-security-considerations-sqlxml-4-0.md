@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, updategrams
@@ -16,12 +14,12 @@ ms.assetid: 00dc6cf4-a2e8-4cca-bdd6-d5122102a82d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 22dbfec9d0be8e08f816d28b310df3025918724a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f039d06af6bff555de46ce2b15e87a1878a25ab3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096068"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781510"
 ---
 # <a name="updategram-security-considerations-sqlxml-40"></a>Updategram 安全性考量 (SQLXML 4.0)
   下面是使用 Updategram 的安全性指導方針：  

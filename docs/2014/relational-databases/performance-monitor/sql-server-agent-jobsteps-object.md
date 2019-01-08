@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - JobSteps object
@@ -13,12 +13,12 @@ ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5f268b9e0c90179e73395ad24500bcef0a4ebac2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 323bf0c943d12a2d05e5fde80194d35d9ab733cf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193948"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753610"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server Agent、JobSteps 物件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 **JobSteps** 效能物件包含可報告 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟相關資訊的效能計數器。 下表列出這個物件包含的計數器。  
@@ -52,6 +52,6 @@ ms.locfileid: "48193948"
 ## <a name="see-also"></a>另請參閱  
  [管理作業步驟](../../ssms/agent/manage-job-steps.md)   
  [使用效能物件](../../ssms/agent/use-performance-objects.md)   
- [監視資源使用狀況 &#40;系統監視器&#41;](monitor-resource-usage-system-monitor.md)  
+ [監視資源使用狀況 &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)  
   
   

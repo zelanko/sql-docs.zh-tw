@@ -1,5 +1,5 @@
 ---
-title: 第 2 課：定義父報表的資料連線和資料表 | Microsoft Docs
+title: 第 2 課：定義父報表的資料連接和資料表 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 13bb0c14b4458122ee94b4a674b86d20bf667d3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5dba0a87f34c794e22fa52274591bbec0db63f86
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162648"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358540"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>第 2 課：定義父報表的資料連接和資料表
   使用 Visual C# 的 ASP.NET 網站範本建立新的網站專案後，下一步是要建立父報表的資料連接和資料表。 在本教學課程中，資料連接是指 AdventureWorks2008 資料庫。 您也可以選擇連接到 AdventureWorks2012 資料庫。  
@@ -29,7 +29,7 @@ ms.locfileid: "48162648"
   
      這樣會將新的 XSD 檔 **DataSet1.xsd** 新增至專案，並開啟 DataSet 設計工具。  
   
-3.  從 [工具箱] 視窗中，拖曳**[TableAdapter](http://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** 控制項至設計介面。 這樣會啟動 [ **TableAdapter** 組態精靈]。  
+3.  從 [工具箱] 視窗將 **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** 控制項拖曳至設計介面。 這樣會啟動 [ **TableAdapter** 組態精靈]。  
   
 4.  在 **選擇資料連接**頁面上，按一下**新的連接**。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48162648"
     SELECT ProductID, Name, ProductNumber, SafetyStockLevel, ReorderPoint FROM  Production.Product Order By ProductID  
     ```  
   
-     您也可以建立查詢，即可**查詢產生器**，然後按一下 驗證查詢**執行查詢**。 如果查詢未傳回預期的資料，表示您可能使用較舊的 AdventureWorks 版本。 如需安裝的詳細資訊**AdventureWorks2008**版本的 AdventureWorks，請參閱[逐步解說： 安裝 AdventureWorks 資料庫](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx)。  
+     您也可以建立查詢，即可**查詢產生器**，然後按一下 驗證查詢**執行查詢**。 如果查詢未傳回預期的資料，表示您可能使用較舊的 AdventureWorks 版本。 如需安裝的詳細資訊**AdventureWorks2008**版本的 AdventureWorks，請參閱[逐步解說：安裝 AdventureWorks 資料庫](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx)。  
   
 11. 在上**選擇要產生的方法**頁面上，務必取消核取**建立方法，以便將更新傳送至資料庫 (GenerateDBDirectMethods) 直接**，然後按一下 **完成**.  
   

@@ -11,12 +11,12 @@ ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0830a6be96cbfdf85d53976b0a7c3ac2ec86b80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0be629b4c2b8c47ed191651260bf1a722b40f007
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214778"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355079"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>確認 PowerPivot for SharePoint 安裝
   您在 SharePoint 伺服器陣列中安裝的 PowerPivot for SharePoint 執行個體是透過 SharePoint 管理中心來進行管理。 您至少可以檢查管理中心和 SharePoint 網站上的頁面，以確認 PowerPivot 伺服器元件和功能是可用的。 但是，為了完整確認安裝作業，您必須擁有可以發行到 SharePoint 並從文件庫存取的 PowerPivot 活頁簿。 為了測試用途，您可以發行已經包含 PowerPivot 資料的範例活頁簿，並用它來確認 SharePoint 整合已正確設定。  
@@ -41,7 +41,7 @@ ms.locfileid: "48214778"
     5.  按一下 [關閉]，然後按一下 [確定]。  
   
         > [!NOTE]  
-        >  SharePoint 安裝文件集包括用來解決 Proxy 伺服器錯誤以及停用 Internet Explorer 中 [增強式安全性設定] 的其他指示，好讓您可以下載及安裝更新。 如需詳細資訊，請參閱 Microsoft 網站上 **以 SQL Server 部署單一伺服器** 中的 " [Perform additional tasks](http://go.microsoft.com/fwlink/?LinkId=177754) " 一節。  
+        >  SharePoint 安裝文件集包括用來解決 Proxy 伺服器錯誤以及停用 Internet Explorer 中 [增強式安全性設定] 的其他指示，好讓您可以下載及安裝更新。 如需詳細資訊，請參閱 Microsoft 網站上[以 SQL Server 部署單一伺服器](https://go.microsoft.com/fwlink/?LinkId=177754)中的 "**Perform additional tasks**" 一節。  
   
 3.  在管理中心的 [系統設定] 中，按一下 **[管理伺服器陣列功能]**。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48214778"
 ## <a name="verify-data-access-on-the-server"></a>確認伺服器上的資料存取。  
  若要在伺服器上確認 PowerPivot 資料存取，請執行以下作業：  
   
-1.  [下載](http://go.microsoft.com/fwlink/?LinkID=219108) Reporting Services 教學課程隨附的野餐資料範例。 您將使用此下載中的範例活頁簿確認 PowerPivot 資料存取。 解壓縮檔案。  
+1.  [下載](https://go.microsoft.com/fwlink/?LinkID=219108) Reporting Services 教學課程隨附的野餐資料範例。 您將使用此下載中的範例活頁簿確認 PowerPivot 資料存取。 解壓縮檔案。  
   
 2.  將 Excel 活頁簿 (.xlsx) 上傳至 Shared Documents。 此活頁簿包含內嵌的 PowerPivot 資料。  
   

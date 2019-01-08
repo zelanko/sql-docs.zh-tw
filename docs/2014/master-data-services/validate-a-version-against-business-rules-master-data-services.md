@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - validating versions [Master Data Services]
@@ -16,12 +15,12 @@ ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6c937e0d78b4c3e9ee1e2c0ab68d32d840173ae7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e3d554fe68eb488da90f4b6124c978e3430f2e8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187357"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793350"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>根據商務規則驗證版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，驗證版本，以便將商務規則套用到模型版本中的所有成員。  
@@ -36,7 +35,7 @@ ms.locfileid: "48187357"
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 -   版本的狀態必須是 [開啟] 或 [已鎖定]。  
   
@@ -59,13 +58,13 @@ ms.locfileid: "48187357"
   
 ## <a name="next-steps"></a>後續步驟  
   
--   [鎖定版本， &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)  
+-   [鎖定版本 &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [驗證狀態&#40;Master Data Services&#41;](../../2014/master-data-services/validation-statuses-master-data-services.md)   
- [驗證預存程序&#40;Master Data Services&#41;](validation-stored-procedure-master-data-services.md)   
- [版本&#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
- [商務規則&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
- [根據商務規則驗證特定成員&#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+ [驗證狀態 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-statuses-master-data-services.md)   
+ [驗證預存程序 &#40;Master Data Services&#41;](validation-stored-procedure-master-data-services.md)   
+ [版本 &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
+ [商務規則 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
+ [根據商務規則驗證特定成員 &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
   

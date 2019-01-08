@@ -12,12 +12,12 @@ ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b827814c5cc6b8659f52c0ff07cde9c3600235a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38405f6bfe2744445abe9884350a703cbb0374cd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071618"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377520"
 ---
 # <a name="mssqlserver833"></a>MSSQLSERVER_833
     
@@ -54,6 +54,6 @@ ms.locfileid: "48071618"
 > [!NOTE]  
 >  防毒程式可能會降低磁碟存取的速度。 若要加快存取速度，請從使用中的病毒掃描排除錯誤訊息中所指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料檔案。  
   
- 如需 I/O 錯誤的詳細資訊，請參閱 [Microsoft SQL Server I/O Basics, Chapter 2](http://go.microsoft.com/fwlink/?LinkId=69370) (第 2 章 Microsoft SQL Server I/O 基本概念) 以及 [http://support.microsoft.com/kb/897284/en-us](http://support.microsoft.com/kb/897284/en-us) 的知識庫文章。  
+ 如需 I/O 錯誤的詳細資訊，請參閱 [Microsoft SQL Server I/O Basics, Chapter 2](https://go.microsoft.com/fwlink/?LinkId=69370) (第 2 章 Microsoft SQL Server I/O 基本概念) 以及 [https://support.microsoft.com/kb/897284/en-us](https://support.microsoft.com/kb/897284/en-us) 的知識庫文章。  
   
   

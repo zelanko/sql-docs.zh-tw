@@ -11,12 +11,12 @@ ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 25054c92124930d2d33b9f35eb43a1945d4a22bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9470cc5f4a0567d211e0678b32aec05d12b5b239
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197118"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374840"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>在 SharePoint 2010 伺服器陣列中使用 SQL Server BI 功能的指引
   本主題摘要說明根據您使用之軟體版本的功能可用性， 也說明使用特定 SQL Server 功能的 SharePoint 2010 安裝需求。 如需有關 SharePoint 2013 的資訊，請參閱[在 SharePoint 中的 SQL Server BI 功能的部署拓撲](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "48197118"
   
 -   Reporting Services 包含 SharePoint 產品的增益集。 支援的增益集和報表伺服器組態可以比此處所示的層級更細微。 如需詳細資訊，請參閱 <<c0> [ 組合支援的 SharePoint 和 Reporting Services 伺服器與增益集&#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)。</c0>  
   
--   SharePoint 開發人員工具僅支援 SharePoint 獨立組態。  如需詳細資訊，請參閱 SharePoint 文件：[開發 SharePoint 方案的需求](http://msdn.microsoft.com/library/ee231582.aspx)。  
+-   SharePoint 開發人員工具僅支援 SharePoint 獨立組態。  如需詳細資訊，請參閱 SharePoint 文件：[開發 SharePoint 方案的需求](https://msdn.microsoft.com/library/ee231582.aspx)。  
   
 ##  <a name="bkmk_vers"></a> SharePoint 版本和 BI 功能的支援  
  某些 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 商業智慧功能只有特定的 SharePoint 產品版本才有支援。  
@@ -49,7 +49,7 @@ ms.locfileid: "48197118"
 |[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]一項功能[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]增益集[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料警示。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。|  
 |一般 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表檢視以及 SharePoint 的功能整合。|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard 和 Enterprise Edition。<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)].|  
   
- 如需詳細資訊，請參閱 <<c0> [ 支援的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)。  
+ 如需詳細資訊，請參閱 <<c0> [ 支援的 SQL Server 2012 的版本功能](https://go.microsoft.com/fwlink/?linkid=232473)。  
   
 ##  <a name="bkmk_sp1"></a> SharePoint 2010 Service Pack 1 (SP1)  
  建議您將 SharePoint 2010 安裝更新為 SharePoint 2010 Service Pack 1 (SP1)。 下列情況都需要 SharePoint SP1：  
@@ -61,16 +61,16 @@ ms.locfileid: "48197118"
  SP1 的主要原因之一是為了使用在執行 SharePoint 安裝[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]是資料庫引擎功能**sp_dboption**，在舊版中已被取代，請在已停止[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]版本。 如需詳細資訊，請參閱[SQL Server 2014 中已停止的 Database Engine 功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
 ### <a name="sharepoint-2010-sp1-installation-guidance"></a>SharePoint 2010 SP1 安裝指引  
- [下載 SharePoint Server 2010 SP1](http://go.microsoft.com/fwlink/?LinkID=219697)並將它套用在伺服器陣列中的所有伺服器上。  
+ [下載 SharePoint Server 2010 SP1](https://go.microsoft.com/fwlink/?LinkID=219697)並將它套用在伺服器陣列中的所有伺服器上。  
   
 > [!NOTE]  
->  在現有的伺服器陣列，您必須使用下列其中一種**其他**步驟來完成 SharePoint SP1 升級。 如需詳細資訊，請參閱 <<c0> [ 當您安裝 Office 2010 SP1 和 SharePoint 2010 SP1 的已知問題](http://support.microsoft.com/kb/2532126)並[描述的 SharePoint Server 2010 SP1](http://support.microsoft.com/kb/2460045):  
+>  在現有的伺服器陣列，您必須使用下列其中一種**其他**步驟來完成 SharePoint SP1 升級。 如需詳細資訊，請參閱 <<c0> [ 當您安裝 Office 2010 SP1 和 SharePoint 2010 SP1 的已知問題](https://support.microsoft.com/kb/2532126)並[描述的 SharePoint Server 2010 SP1](https://support.microsoft.com/kb/2460045):  
   
 -   **SharePoint 產品組態精靈:** 執行精靈以完成 SP1 升級和設定。  
   
--   **使用 psconfig 完成升級：** 執行命令`psconfig –upgrade`以完成 SP1 升級  
+-   **完成升級使用 psconfig:** 執行命令 `psconfig -upgrade` 以完成 SP1 升級  
   
- 如需詳細資訊，請參閱的 < 升級 > 一節[(SharePoint Server 2010)](http://technet.microsoft.com/library/cc263093.aspx)和[資源中心： 適用於 SharePoint 2010 產品的更新](http://technet.microsoft.com/sharepoint/ff800847.aspx)  
+ 如需詳細資訊，請參閱的 < 升級 > 一節[(SharePoint Server 2010)](https://technet.microsoft.com/library/cc263093.aspx)和[資源中心：適用於 SharePoint 2010 產品的更新](https://technet.microsoft.com/sharepoint/ff800847.aspx)  
   
 ## <a name="sharepoint-installation-with-sql-server-bi-features"></a>具有 SQL Server BI 功能的 SharePoint 安裝  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48197118"
  ![GMNI_SetupUI_DoNotConfigureMOSS](../../../2014/sql-server/install/media/gmni-setupui-donotconfiguremoss.gif "GMNI_SetupUI_DoNotConfigureMOSS")  
   
 ## <a name="see-also"></a>另請參閱  
- [安裝和部署 SharePoint Server 2010](http://technet.microsoft.com/sharepoint/ee518643.aspx)   
- [多部伺服器的三層式伺服器陣列 (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?linkID=219834)  
+ [安裝和部署 SharePoint Server 2010](https://technet.microsoft.com/sharepoint/ee518643.aspx)   
+ [多部伺服器的三層式伺服器陣列 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834)  
   
   

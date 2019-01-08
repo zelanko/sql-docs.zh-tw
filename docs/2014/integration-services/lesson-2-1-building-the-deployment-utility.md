@@ -1,24 +1,23 @@
 ---
-title: 步驟 1：建置部署公用程式 | Microsoft Docs
+title: 步驟 1：建置部署公用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b2bbae058a0e3ecacaa4be9204a822451e1a0602
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8be4778dc8ca28372132e3ca9447d5804454195
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216004"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356341"
 ---
-# <a name="step-1-building-the-deployment-utility"></a>步驟 1：建立部署公用程式
+# <a name="step-1-building-the-deployment-utility"></a>步驟 1：建置部署公用程式
   在這項工作中，您將設定並建立「部署教學課程」專案的部署公用程式。  
   
  您必須先修改「部署教學課程」專案的屬性，才能建立部署公用程式。 您將使用 [Deployment Tutorial Property Pages (部署教學課程屬性頁)] 對話方塊來設定這些屬性。 在這個對話方塊中，您必須啟用能夠在部署期間更新組態的能力，而且指定建立期間產生部署公用程式。 在設定完屬性後，您將建立專案。  
@@ -49,7 +48,7 @@ ms.locfileid: "48216004"
   
 4.  在 [輸出] 視窗中，確認以下資訊：  
   
-     已經開始建立: SQL Integration Services 專案: 累加 ...  
+     組建已啟動：SQL Integration Services 專案：累加式...  
   
      正在建立部署公用程式...  
   
@@ -57,14 +56,14 @@ ms.locfileid: "48216004"
   
      建立已完成 -- 0 個錯誤，0 個警告  
   
-     ========== 建置: 0 成功、0 失敗、1 最新、0 略過 ==========  
+     === 組建中：0 成功、 0 失敗、 1 最新狀態，0 個略過 ===  
   
 5.  在 **[檔案]** 功能表上按一下 **[結束]**。 如果出現對 [Deployment Tutorial (部署教學課程)] 項目儲存變更的提示，請按一下 [是]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 2：確認部署配套](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+ [步驟 2:確認部署配套](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立部署公用程式](../../2014/integration-services/create-a-deployment-utility.md)  

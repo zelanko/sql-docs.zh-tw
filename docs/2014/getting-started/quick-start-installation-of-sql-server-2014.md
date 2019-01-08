@@ -22,12 +22,12 @@ ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c682b29a4265b9c6955b440dc45e4920ca87d081
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f70b3367d2ca0b6c896c970f29b179dc969640c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223378"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366640"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>SQL Server 2014 快速入門安裝
     
@@ -82,7 +82,7 @@ ms.locfileid: "48223378"
   
      請參閱[SQL Server 容錯移轉叢集安裝](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)如需安裝程序性資訊[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]容錯移轉叢集。  
   
- 根據預設， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程序中不會安裝範例資料庫和範例程式碼。 若要針對非 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express Edition 安裝範例資料庫和範例程式碼，請參閱 [CodePlex 網站](http://go.microsoft.com/fwlink/?LinkId=87843)。 如需查閱 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]範例資料庫及範例程式碼的支援資訊，請參閱＜ [資料庫及範例概觀](http://go.microsoft.com/fwlink/?LinkId=110391)＞。  
+ 根據預設， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程序中不會安裝範例資料庫和範例程式碼。 若要針對非 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express Edition 安裝範例資料庫和範例程式碼，請參閱 [CodePlex 網站](https://go.microsoft.com/fwlink/?LinkId=87843)。 如需查閱 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]範例資料庫及範例程式碼的支援資訊，請參閱＜ [資料庫及範例概觀](https://go.microsoft.com/fwlink/?LinkId=110391)＞。  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-installation"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝  
  不論您是使用 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝精靈] 或命令提示字元安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，安裝程式都包含下列一個或多個步驟：  
@@ -129,10 +129,10 @@ ms.locfileid: "48223378"
 |描述|主題|  
 |-----------------|-----------|  
 |提供主題的連結以安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的多個元件，以及提供程序主題以安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。|[安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server.md)|  
-|檢閱本主題了解如何在 Windows Server Core 上安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。|[在 Server Core 上安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-on-server-core.md)|  
+|檢閱本主題了解如何在 Windows Server Core 上安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 。|[在 Server Core 上安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-on-server-core.md)|  
 |請檢閱本主題以將個別功能加入現有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的執行個體。|[將功能加入至 SQL Server 2014 執行個體的&#40;安裝程式&#41;](../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)|  
 |請檢閱本主題以建立新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體。|[建立新的 SQL Server 容錯移轉叢集 &#40;安裝程式&#41;](../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|您可以使用本主題管理現有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體中的節點。|[在 SQL Server 容錯移轉叢集中加入或移除節點 &#40;安裝程式&#41;](../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
+|您可以使用本主題管理現有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體中的節點。|[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
 |您可以使用本主題在容錯移轉叢集上安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用戶端工具。|[在 SQL Server 容錯移轉叢集上安裝用戶端工具](../sql-server/failover-clusters/install/install-client-tools-on-a-sql-server-failover-cluster.md)|  
 |檢閱 SQL 探索報告的使用狀況，以驗證電腦上所安裝之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的版本與 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 功能。|[驗證 SQL Server 安裝](../database-engine/install-windows/validate-a-sql-server-installation.md)|  
 |提供如何從安裝精靈、從命令提示字元、使用組態檔及使用 SysPrep 安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的程序性主題連結。|[安裝的使用說明主題](../../2014/sql-server/install/installation-how-to-topics.md)|  

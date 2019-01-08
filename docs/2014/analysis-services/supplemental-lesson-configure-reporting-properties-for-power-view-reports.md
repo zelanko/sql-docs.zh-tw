@@ -11,21 +11,21 @@ ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01f03e9e8149fe0d3b1b9599ff0ec94613efcba4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 011ca5ed5066113a467082e0fe05c6d0f831f25b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169228"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363460"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>設定 Power View 報表的報表屬性
   在此補充課程中，我們將會針對 Adventure Works Internet Sales Model 專案設定報表屬性。 報表屬性讓使用者能夠更輕鬆地在 Power View 中選取及顯示模型資料。 您也會設定屬性來隱藏某些資料行和資料表，並建立新的資料供圖表使用。  
   
  在完成本課並將模型重新部署至與 SharePoint 和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 整合的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 執行個體之後，您可以建立資料來源、指定資料連接資訊、啟動 Power View 並針對模型設計報表。  
   
- 本課將不會描述如何建立及使用 Power View 報表。 本課的目的是要針對表格式模型作者提供將影響模型資料顯示於 Power View 中之方式的屬性和設定簡介。 若要了解如何建立 Power View 報表，請參閱 [教學課程：在 Power View 中建立範例報表](http://go.microsoft.com/fwlink/?LinkId=221204)。  
+ 本課將不會描述如何建立及使用 Power View 報表。 本課的目的是要針對表格式模型作者提供將影響模型資料顯示於 Power View 中之方式的屬性和設定簡介。 若要深入了解建立 Power View 報表，請參閱[教學課程：在 Power View 中建立範例報表](https://go.microsoft.com/fwlink/?LinkId=221204)。  
   
- 完成本課程的估計時間： **30 分鐘**  
+ 完成本課程的估計時間：**30 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
  這個補充課程是表格式模型教學課程的一部分，必須依序完成。 在執行本補充課程中的工作之前，您應已完成之前所有課程。  
@@ -41,17 +41,17 @@ ms.locfileid: "48169228"
 ## <a name="model-properties-that-affect-reporting"></a>影響報表的模型屬性  
  在撰寫表格式模型時，您可以在個別資料行和資料表上設定某些屬性，以增強 Power View 中的使用者報表體驗。 此外，您也可以建立其他模型資料來支援資料視覺效果以及報表用戶端的其他特有功能。 在範例 Adventure Works Internet Sales Model 中，以下是您將進行的部分變更：  
   
--   **新增資料** – 在導出資料行中使用 DAX 公式新增資料時，將會以更方便在圖表中顯示的格式建立日期資訊。  
+-   **加入新資料**-加入導出資料行中的新資料，透過使用 DAX 公式在圖表中顯示的工作變得更容易的格式建立日期資訊。  
   
 -   **隱藏對使用者無用的資料表和資料行** - [隱藏] 屬性會控制資料表和資料表資料行是否會顯示在報表用戶端。 隱藏的項目依然是模型的一部分，而且可供查詢和計算。  
   
--   **啟用按一次資料表** – 根據預設，如果使用者按一下欄位清單中的資料表，將不會發生任何動作。 若要變更這個行為，使得按一下資料表時會將資料表加入至報表中，請在每一個要併入資料表的資料行上設定 [預設欄位集]。 這個屬性會在使用者最可能想要使用的資料表資料行上設定。  
+-   **啟用單鍵資料表**-根據預設，會發生任何動作如果使用者按一下欄位清單中的資料表。 若要變更這個行為，使得按一下資料表時會將資料表加入至報表中，請在每一個要併入資料表的資料行上設定 [預設欄位集]。 這個屬性會在使用者最可能想要使用的資料表資料行上設定。  
   
 -   **視需要設定群組** - [保留唯一資料列] 屬性會決定資料行中的值是否應該依據另一個欄位 (如識別碼欄位) 中的值來分組。 如果是包含類似客戶名稱之重複值的資料行 (例如，有多位客戶命名為 John Smith)，一定要在 [資料列識別碼] 欄位上分組 (保留唯一資料列)，才能為使用者提供正確的結果。  
   
 -   **設定資料類型和資料格式** - 根據預設，Power View 會根據資料行資料類型套用規則，以判斷此欄位是否可以當做量值使用。 因為 Power View 中的每一個資料視覺效果皆具有量值與非量值放置位置的相關規則，所以請務必在模型中設定資料類型或是覆寫預設值，以便達成您希望使用者具備的行為。  
   
--   **設定依資料行排序屬性** - [依資料行排序] 屬性會指定資料行中的值是否應該依據另一個欄位中的值來排序。 例如，在包含月份名稱的 [Month Calendar] 資料行上，依據 [Month Number] 資料行排序。  
+-   **設定依資料行排序**屬性-**依資料行排序**屬性會指定不同的欄位中的值是否應該依據排序資料行的值。 例如，在包含月份名稱的 [Month Calendar] 資料行上，依據 [Month Number] 資料行排序。  
   
 ## <a name="hide-tables-from-client-tools"></a>在用戶端工具中隱藏資料表  
  因為 [Product] 資料表中已經有 [Product Category] 導出資料行和 [Product Subcategory] 導出資料行，所以不必讓用戶端應用程式看到 [Product Category] 和 [Product Subcategory] 資料表。  
@@ -137,7 +137,7 @@ ms.locfileid: "48169228"
 7.  請針對 [Product] 資料表重複以上步驟，選取 [Product Id] 資料行當做資料列識別碼，並在 [保留唯一資料列] 清單方塊中選取 [Product Name] 資料行。 為 [預設標籤] 選取 [Product Alternate Id]。  
   
 ## <a name="reporting-properties-for-columns"></a>資料行的報表屬性  
- 在資料行上可設定許多基本資料行屬性和特定報表屬性來改善模型報表體驗。 例如，使用者可能不需要看到每一個資料表中的每一個資料行。 就如同您之前使用資料行的 [隱藏] 屬性來隱藏 [Product Category] 和 [Product Subcategory] 資料表一樣，您也可以隱藏資料表中的特定資料行。 其他屬性 (例如 [資料格式] 和 [依資料行排序]) 也會影響資料行資料出現在報表中的方式。 您現在即將在特定資料行上設定部分屬性。 有一些資料行不需要任何動作，所以不會顯示在底下。  
+ 在資料行上可設定許多基本資料行屬性和特定報表屬性來改善模型報表體驗。 例如，使用者可能不需要看到每一個資料表中的每一個資料行。 就像您隱藏 Product Category 和 Product Subcategory 資料表更早版本，使用資料行的 Hidden 屬性，您可以隱藏特定的資料行，否則會顯示資料表中。 其他屬性 (例如 [資料格式] 和 [依資料行排序]) 也會影響資料行資料出現在報表中的方式。 您現在即將在特定資料行上設定部分屬性。 有一些資料行不需要任何動作，所以不會顯示在底下。  
   
  您只會在這裡設定幾個不同的資料行屬性，但是還有許多其他屬性。 如需資料行報表屬性的詳細資訊，請參閱《SQL Server 線上叢書》中的[資料行屬性 &#40;SSAS 表格式&#41;](tabular-models/properties-ssas-tabular.md)。  
   
@@ -158,10 +158,10 @@ ms.locfileid: "48169228"
     |Geography Id|Hidden|True|  
     |Birth Date|資料格式|簡短日期|  
   
-     **Date**  
+     **日期**  
   
     > [!NOTE]  
-    >  因為在第 7 課：＜標記為日期資料表＞中 [Date] 資料表已使用 [標記為日期資料表] 設定選取為模型日期資料表，而且 [Date] 資料表中的 [Date] 資料行會當做唯一識別碼的資料行使用，所以 [Date] 資料行的 [資料列識別碼] 屬性將會自動設定為 True 而且無法變更。 當您在 DAX 公式中使用時間智慧函數時，您必須指定日期資料表。 在此模型中，您已使用時間智慧函數建立許多量值，以計算各個不同期間的銷售資料 (例如上一季和當季) 並用於 KPI 中。 如需指定日期資料表的詳細資訊，請參閱《SQL Server 線上叢書》中的[指定標記為日期資料表以搭配時間智慧使用 &#40;SSAS 表格式&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)。  
+    >  因為在第 7 課：＜標記為日期資料表＞中 [Date] 資料表已使用 [標記為日期資料表] 設定選取為模型日期資料表，而且 [Date] 資料表中的 [Date] 資料行會被當做唯一識別碼的資料行使用，所以 [Date] 資料行的 [資料列識別碼] 屬性將會自動設定為 True 而且無法變更。 當您在 DAX 公式中使用時間智慧函數時，您必須指定日期資料表。 在此模型中，您已使用時間智慧函數建立許多量值，以計算各個不同期間的銷售資料 (例如上一季和當季) 並用於 KPI 中。 如需指定日期資料表的詳細資訊，請參閱《SQL Server 線上叢書》中的[指定標記為日期資料表以搭配時間智慧使用 &#40;SSAS 表格式&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)。  
   
     |「資料行」|屬性|值|  
     |------------|--------------|-----------|  
@@ -196,7 +196,7 @@ ms.locfileid: "48169228"
     |Product End Date|資料格式|簡短日期|  
     |Large Photo|Hidden|True|  
   
-     **Internet Sales**  
+     **網際網路銷售**  
   
     |「資料行」|屬性|值|  
     |------------|--------------|-----------|  
@@ -211,7 +211,7 @@ ms.locfileid: "48169228"
     |Ship Date|資料類型|簡短日期|  
   
 ## <a name="redeploy-the-adventure-works-internet-sales-tabular-model"></a>重新部署 Adventure Works Internet Sales 表格式模型  
- 因為您已變更此模型，所以必須重新部署。 基本上來說，您將會重複[第 14 課：部署](lesson-13-deploy.md)中所執行的工作。  
+ 因為您已變更此模型，所以必須重新部署。 基本上，您將會重複執行的工作[第 14 課：部署](lesson-13-deploy.md)。  
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>若要重新部署 Adventure Works Internet Sales 表格式模型  
   
@@ -222,6 +222,6 @@ ms.locfileid: "48169228"
 ## <a name="next-steps"></a>後續步驟  
  您現在可以使用 Power View 將模型中的資料視覺化。 請確定 SharePoint 網站上的 Analysis Services 和 Reporting Services 帳戶具有模型部署所在之 Analysis Services 執行個體的讀取權限。  
   
- 若要建立 Reporting Services 報表資料來源以指向您的模型，請參閱 [資料表模型連接類型 (SSRS)](http://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx)。  
+ 若要建立 Reporting Services 報表資料來源以指向您的模型，請參閱[資料表模型連接類型 (SSRS)](https://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx)。  
   
   

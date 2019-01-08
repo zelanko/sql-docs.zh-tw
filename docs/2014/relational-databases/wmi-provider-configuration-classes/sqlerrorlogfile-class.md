@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1cd24b1717bca086bf1419a2df3b44b57104d1f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c5c6f1998cffc268a57318e0124f74d3411a3b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226608"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370440"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile 類別
   提供屬性，用來檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄檔的相關資訊。  
@@ -43,10 +41,10 @@ class SQLErrorLogFile
 |||  
 |-|-|  
 |ArchiveNumber|資料類型：`uint32`<br /><br /> 存取類型：唯讀<br /><br /> <br /><br /> 記錄檔的封存數目。|  
-|InstanceName|資料類型：`string`<br /><br /> 存取類型：唯讀<br /><br /> 限定詞：索引鍵<br /><br /> <br /><br /> 記錄檔所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。|  
+|InstanceName|資料類型：`string`<br /><br /> 存取類型：唯讀<br /><br /> 限定詞：Key<br /><br /> <br /><br /> 記錄檔所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。|  
 |LastModified|資料類型：`datetime`<br /><br /> 存取類型：唯讀<br /><br /> <br /><br /> 上次修改記錄檔的日期。|  
 |LogFileSize|資料類型：`uint32`<br /><br /> 存取類型：唯讀<br /><br /> <br /><br /> 記錄檔的大小 (以位元組為單位)。|  
-|名稱|資料類型：`string`<br /><br /> 存取類型：唯讀<br /><br /> 限定詞：索引鍵<br /><br /> <br /><br /> 記錄檔的名稱。|  
+|名稱|資料類型：`string`<br /><br /> 存取類型：唯讀<br /><br /> 限定詞：Key<br /><br /> <br /><br /> 記錄檔的名稱。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -95,7 +93,7 @@ Next
   
      **\<磁碟機 >: \Program Files\Microsoft SQL Server\MSSQL11** **。\<執行個體名稱 > \MSSQL\Log**  
   
- 如果透過防火牆連接，請確定您已在遠端目標電腦上的 WMI 防火牆中設定例外狀況。 如需詳細資訊，請參閱 <<c0> [ 連接到 WMI 遠端從 Windows Vista 開始](http://go.microsoft.com/fwlink/?LinkId=178848)。  
+ 如果透過防火牆連接，請確定您已在遠端目標電腦上的 WMI 防火牆中設定例外狀況。 如需詳細資訊，請參閱 <<c0> [ 連接到 WMI 遠端從 Windows Vista 開始](https://go.microsoft.com/fwlink/?LinkId=178848)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SqlErrorLogEvent 類別](sqlerrorlogevent-class.md)   

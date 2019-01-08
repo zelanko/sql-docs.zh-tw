@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -16,12 +15,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81d2bf84e758ccfd8664408a760e77700a323e0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1db606c086624610a158b6a87576188fa14aefaa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141058"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357828"
 ---
 # <a name="tempdb-database"></a>tempdb 資料庫
   **tempdb** 系統資料庫是全域資源，適用於所有連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的使用者，且可用來保留下列項目：  
@@ -144,6 +143,6 @@ ms.locfileid: "48141058"
  [移動資料庫檔案](move-database-files.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 SQL Server 2005 中的 tempdb](http://go.microsoft.com/fwlink/?LinkId=81216)  
+ [使用 SQL Server 2005 中的 tempdb](https://go.microsoft.com/fwlink/?LinkId=81216)  
   
   

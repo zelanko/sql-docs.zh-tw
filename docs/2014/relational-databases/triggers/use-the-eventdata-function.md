@@ -13,12 +13,12 @@ ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 184e6a3354069ae5a1ed0d6b7557f4b0ac3fa716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65103e99a6cba7d21daca85f3295135a43f435a5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222648"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776380"
 ---
 # <a name="use-the-eventdata-function"></a>使用 EVENTDATA 函數
   使用 EVENTDATA 函數擷取引發 DDL 觸發程序之事件的相關資訊。 此函數會傳回 `xml` 值。 XML 結構描述包括有關下列項目的資訊：  
@@ -95,7 +95,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
 -   組成事件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
- 同樣地，最後兩個項目會擷取使用 XQuery，以針對`xml`EVENTDATA 產生的資料。  
+ 再次對 EVENTDATA 產生的 `xml` 資料使用 XQuery，即可擷取後兩個項目。  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,7 +125,7 @@ GO
 ```  
   
 > [!NOTE]  
->  若要傳回事件資料，我們建議您使用 XQuery `value()` 方法，而不要使用 `query()` 方法。 `query()`方法會傳回 XML 和 ampersand 逸出歸位字元和換行字元 (CRLF) 執行個體在輸出中，雖然`value()`方法呈現 CRLF 執行個體在輸出中不可見。  
+>  若要傳回事件資料，我們建議您使用 XQuery `value()` 方法，而不要使用 `query()` 方法。 `query()` 方法會在輸出中傳回 XML 和逸出連字號的歸位字元和換行字元 (CRLF) 執行個體，而 `value()` 方法則會轉譯在輸出中看不到的 CRLF 執行個體。  
   
  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中則提供了相似的 DDL 觸發程序範例。 若要取得此範例，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來尋找 [Database Triggers] 資料夾。 這個資料夾位在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的 [可程式性] 資料夾下。 以滑鼠右鍵按一下 [ddlDatabseTriggerLog]，然後選取 [編寫資料庫觸發程序的指令碼為]。 依預設，會停用 DDL 觸發程序 **ddlDatabseTriggerLog**。  
   

@@ -1,5 +1,5 @@
 ---
-title: 取得 SQL Server Machine Learning 上的 R 和 Python 套件資訊 |Microsoft Docs
+title: 取得 R 和 Python 套件的資訊-SQL Server Machine Learning 服務
 description: 判斷 R 和 Python 套件版本、 確認安裝，並取得一份 SQL Server R Services 或 Machine Learning 服務上已安裝的套件。
 ms.custom: ''
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 96cda599e260982b26e6c565bd38c5097fc01763
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 47badb15b5f5a2d0eabc63b8fd1be3e83a0caffb
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291534"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645367"
 ---
 #  <a name="get-r-and-python-package-information"></a>取得 R 和 Python 套件資訊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -91,9 +91,9 @@ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\si
 
 ### <a name="r"></a>R
 
-下列範例使用 R 函式`installed.packages()`中[!INCLUDE[tsql](..\..\includes\tsql-md.md)]預存程序，若要取得的已安裝在目前的執行個體的 R_SERVICES 程式庫中的封裝矩陣。 此指令碼會傳回封裝名稱 和 版本 欄位，DESCRIPTION 檔案中，只傳回名稱。
+下列範例使用 R 函式`installed.packages()`在[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序，若要取得的已安裝在目前的執行個體的 R_SERVICES 程式庫中的封裝矩陣。 此指令碼會傳回封裝名稱 和 版本 欄位，DESCRIPTION 檔案中，只傳回名稱。
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script
   @language=N'R',
   @script = N'str(OutputDataSet);
@@ -142,7 +142,7 @@ EXECUTE sp_execute_external_script
 GO
 ```
 
-+ 如果找到封裝，則會傳回一則訊息: 「 命令成功完成。 」
++ 如果找到封裝，則會傳回一則訊息：「 命令已順利完成 」。
 
 + 如果無法找到或載入封裝，您會取得包含文字的錯誤: 「 沒有任何套件，稱為 'MissingPackageName' 」
 

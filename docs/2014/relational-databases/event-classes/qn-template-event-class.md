@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eaee265571f647c4908a42634a45fc91b355d7bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ca0ef50d40b1c4d4f481bef4de89b43ff4a275c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209278"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349517"
 ---
 # <a name="qntemplate-event-class"></a>QN:Template 事件類別
   QN:Template 事件會報告查詢範本的內部使用資訊。 查詢範本是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 用以共用通知查詢定義的機制。 這些範本是與參數資料表一起建立的。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在建立、使用或終結查詢範本時，會建立此類型的事件。  
@@ -35,7 +34,7 @@ ms.locfileid: "48209278"
 |DatabaseName|`nvarchar`|正在其中執行使用者陳述式的資料庫名稱。|35|是|  
 |EventClass|`int`|事件類型 = 201。|27|否|  
 |EventSequence|`int`|此事件的序號。|51|否|  
-|EventSubClass|`nvarchar`|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> Template created (建立的範本)：表示已經在資料庫中建立查詢通知範本。<br /><br /> Template matched (符合的範本)：表示已重複使用查詢通知範本。<br /><br /> Template dropped (卸除的範本)：表示已從資料庫中移除查詢通知範本。|21|是|  
+|EventSubClass|`nvarchar`|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> 建立的範本：表示已經在資料庫中建立查詢通知範本。<br /><br /> 比對的範本：表示已重複使用查詢通知範本。<br /><br /> 卸除的範本：表示已從資料庫中移除查詢通知範本。|21|是|  
 |GroupID|`int`|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
 |HostName|`nvarchar`|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |IsSystem|`int`|指出事件是發生在系統處理序或使用者處理序。<br /><br /> 0 = 使用者<br /><br /> 1 = 系統|60|否|  
@@ -48,6 +47,6 @@ ms.locfileid: "48209278"
 |SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果應用程式使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 會顯示 "Login1"，而 LoginName 則會顯示 "Login2"。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|傳回包含這個事件相關資訊的 XML 文件。 這份文件符合 [SQL Server 查詢通知 Profiler 事件結構描述](http://go.microsoft.com/fwlink/?LinkId=63331) 網頁上所提供的 XML 結構描述。|1|是|  
+|TextData|`ntext`|傳回包含這個事件相關資訊的 XML 文件。 這份文件符合 [SQL Server Query Notification Profiler Event Schema](https://go.microsoft.com/fwlink/?LinkId=63331) (SQL Server 查詢通知 Profiler 事件結構描述) 頁面上所提供的 XML 結構描述。|1|是|  
   
   

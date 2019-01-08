@@ -11,21 +11,21 @@ ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 53349b7a4536c6f757b65a60bbd5a82691f9969e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 370ab6ef7a8376098c7af763c6db8895fb004bad
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082298"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371580"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>將權限授與使用者及警示管理員
   使用者和警示系統管理員必須經過 SharePoint 權限的授與，才能建立、編輯、刪除及檢視資料警示。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料警示功能沒有特殊權限可供使用，您需使用內建的 SharePoint 權限。  
   
- **資訊工作者**：權限必須包含「建立警示」和「檢視項目」的 SharePoint 權限。 名稱為「設計」、「參與」、「讀取」及「僅檢視」的內建 SharePoint 權限等級包含「建立警示」和「檢視項目」的 SharePoint 權限。 您也可以使用支援使用者建立、編輯、執行及檢視資料警示所需的權限，建立自訂權限等級。  
+ **資訊工作者** - 權限必須包含「建立警示」和「檢視項目」的 SharePoint 權限。 名稱為「設計」、「參與」、「讀取」及「僅檢視」的內建 SharePoint 權限等級包含「建立警示」和「檢視項目」的 SharePoint 權限。 您也可以使用支援使用者建立、編輯、執行及檢視資料警示所需的權限，建立自訂權限等級。  
   
- **警示系統管理員**：權限必須包含「管理警示」的 SharePoint 權限。 根據預設，只有「完整控制權」權限層級包含使用「小組網站」網站範本建立的這項網站權限。 如果您使用其他網站範本，則會看見不同的預設 SharePoint 群組清單。 您可以使用支援警示系統管理員檢視及刪除資料警示所需的權限，將「管理警示」權限加入其中一個內建權限等級或建立自訂權限等級。  
+ **警示系統管理員** - 權限必須包含「管理警示」的 SharePoint 權限。 根據預設，只有「完整控制權」權限層級包含使用「小組網站」網站範本建立的這項網站權限。 如果您使用其他網站範本，則會看見不同的預設 SharePoint 群組清單。 您可以使用支援警示系統管理員檢視及刪除資料警示所需的權限，將「管理警示」權限加入其中一個內建權限等級或建立自訂權限等級。  
   
- 若要深入了解 SharePoint 權限，請參閱 [使用者權限與權限等級 (SharePoint Server 2010)](http://technet.microsoft.com/library/cc721640.aspx)。  
+ 若要深入了解 SharePoint 權限，請參閱 [使用者權限與權限等級 (SharePoint Server 2010)](https://technet.microsoft.com/library/cc721640.aspx)。  
   
 ### <a name="to-grant-permissions"></a>授與權限  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48082298"
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [設定 SharePoint 網站上的報表伺服器項目的權限&#40;Reporting Services SharePoint 整合模式&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
   

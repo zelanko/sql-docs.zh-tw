@@ -15,12 +15,12 @@ ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f29dc88bf6298aebea60591034f0c7abc6765185
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3d2581f2f086f8db5f9408502185c132a5866af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167008"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513218"
 ---
 # <a name="modify-views"></a>修改檢視
   定義檢視之後，可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改其定義，不需要卸除和重新建立檢視。  
@@ -66,7 +66,7 @@ ms.locfileid: "48167008"
   
     1.  對於您要加入或移除的任何元素，選取或清除核取方塊。  
   
-    2.  以滑鼠右鍵按一下圖表窗格，並選取 [加入資料表]，然後從 [加入資料表] 對話方塊選取要加入檢視中的其他資料行。  
+    2.  以滑鼠右鍵按一下圖表窗格，並選取 [新增資料表...]，然後從 [新增資料表] 對話方塊選取要新增檢視中的其他資料行。  
   
     3.  以滑鼠右鍵按一下您要移除之資料表的標題列，然後選取 [移除]。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48167008"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例先建立檢視，然後透過使用 ALTER VIEW 修改此檢視。 檢視定義中會加入 WHERE 子句。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例先建立檢視，然後透過使用 ALTER VIEW 修改此檢視。 檢視定義中會加入 WHERE 子句。  
   
     ```  
     USE AdventureWorks2012 ;  

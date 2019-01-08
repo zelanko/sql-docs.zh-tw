@@ -18,12 +18,12 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 76f51489a449c44dd7d43bab75d504f68e946374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ee5620aecfc4e263c16fb9c710b7a41e1564f6e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796509"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590592"
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@queue_type** =] **'***queue_type***'**  
+ [ **@queue_type** =] **'**_queue_type_**'**  
  選擇性引數會刪除指定類型的電子郵件*queue_type*。 *queue_type*已**nvarchar(6)** 沒有預設值。 有效的項目都**mail**並**狀態**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -51,7 +51,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar(6)**|佇列的類型。 可能的值為**mail**並**狀態**。|  
-|**長度**|**int**|指定佇列中的郵件項目數。|  
+|**length**|**int**|指定佇列中的郵件項目數。|  
 |**state**|**nvarchar(64)**|監視器的狀態。 可能的值為**INACTIVE** （佇列為非作用中），**收到通知**(佇列已受通知要進行接收)，並**RECEIVES_OCCURRING** （接收佇列）。|  
 |**last_empty_rowset_time**|**日期時間**|佇列上次空的日期和時間。 以軍用時間格式和 GMT 時區表示。|  
 |**last_activated_time**|**日期時間**|佇列上次啟動的日期和時間。 以軍用時間格式和 GMT 時區表示。|  

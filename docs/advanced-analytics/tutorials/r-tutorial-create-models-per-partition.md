@@ -1,5 +1,5 @@
 ---
-title: 建立、 定型和計分 R （SQL Server Machine Learning 服務） 中的資料分割為基礎的模型教學課程 |Microsoft Docs
+title: 教學課程中建立、 定型和計分 R-SQL Server Machine Learning 服務中的資料分割為基礎的模型
 description: 了解如何建立模型、 定型和使用資料分割使用資料分割為基礎的模型化功能，SQL Server 機器學習時以動態方式建立的資料。
 ms.custom: sqlseattle
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ddd6fd14d34b53eb14fd8b303b97dfd1b098154c
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 4c60a50f5a0f1c1831a4831d1f93ddf7d81a11d9
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462004"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596459"
 ---
-# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教學課程： 在 SQL Server 上的 R 中建立分割區為基礎的模型
+# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教學課程：在 SQL Server 上的 R 中建立分割區為基礎的模型
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 在 SQL Server 2019，分割區為基礎的模型會是能夠建立並定型模型對資料分割的資料。 分層資料自然地分割成指定的分類配置-例如地區、 日期和時間、 年齡或性別-您可以執行指令碼透過整個資料集，模型、 訓練及評分仍維持不變的資料分割上的能力透過上述所有作業。 

@@ -12,12 +12,12 @@ ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20adc991d3d9c497b4bab1f7c665f941bd98e7fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d323b1b92ba02e55064d2f86c62ee36a4a38d904
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088578"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365800"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
   本主題將討論特定的 SQLSetDescRec 功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端。  
@@ -27,7 +27,7 @@ ms.locfileid: "48088578"
   
  下表描述參數與描述項欄位之間的對應。  
   
-|參數|非資料表值參數類型的相關屬性，包括資料表值參數資料行。|資料表值參數的相關屬性|  
+|參數|對於非資料表值參數類型，包括資料表值參數資料行相關聯的屬性|資料表值參數的相關屬性|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*型別*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*子類型*|忽略|如果是 SQL_DATETIME 或 SQL_INTERVAL 類型的記錄，請將這個設定為 SQL_DESC_DATETIME_INTERVAL_CODE。|  
@@ -58,7 +58,7 @@ ms.locfileid: "48088578"
  `SQLSetDescRec` 支援大型 CLR 使用者定義型別 (UDT)。 如需詳細資訊，請參閱 < [Large CLR User-Defined 類型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLSetDescRec](http://go.microsoft.com/fwlink/?LinkId=80704)   
+ [SQLSetDescRec](https://go.microsoft.com/fwlink/?LinkId=80704)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

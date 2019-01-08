@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/24/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - cardinality estimator
@@ -15,21 +14,21 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 393c4f88f9ab60f3a25ddaab5bb091fb298e1e02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200608"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363790"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基數估計 (SQL Server)
-  基數估計邏輯，稱為基數估計工具經過重新設計中[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]來改善查詢計畫品質，因此若要改善查詢效能。 新的基數估計工具併入了可搭配新型 OLTP 和資料倉儲工作負載完善運作的假設和演算法。 這項發展乃是憑藉著我們針對新型工作負載進行深入的基數估計研究，以及過去 15 年來改進 SQL Server 基數估計工具的經驗。 由客戶的意見反應得知，儘管無論變更與否都能讓大多數的查詢獲益，但與舊版基數估計工具相比，少數的查詢可能會顯現效能退化。  
+  基數估計邏輯 (稱為基數估計工具) 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中經過重新設計，可改善查詢計劃的品質，從而提升查詢效能。 新的基數估計工具併入了可搭配新型 OLTP 和資料倉儲工作負載完善運作的假設和演算法。 這項發展乃是憑藉著我們針對新型工作負載進行深入的基數估計研究，以及過去 15 年來改進 SQL Server 基數估計工具的經驗。 由客戶的意見反應得知，儘管無論變更與否都能讓大多數的查詢獲益，但與舊版基數估計工具相比，少數的查詢可能會顯現效能退化。  
   
 > [!NOTE]  
 >  基數估計值是對查詢結果中的資料列數所做的預測。 查詢最佳化工具會使用這些估計值選擇執行查詢的計劃。 查詢計劃的品質對於提升查詢效能有著直接的影響。  
   
 ## <a name="performance-testing-and-tuning-recommendations"></a>效能測試與微調建議  
- 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中建立的所有新資料庫都將啟用新的基數估計工具。 不過，升級到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 並不會為現有的資料庫啟用新的基數估計工具。  
+ 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]中建立的所有新資料庫都將啟用新的基數估計工具。 不過，升級到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 並不會為現有的資料庫啟用新的基數估計工具。  
   
  為確保獲得最佳查詢效能，請使用以下建議搭配新的基數估計工具測試您的工作負載，然後再由實際執行系統予以啟用。  
   
@@ -37,11 +36,11 @@ ms.locfileid: "48200608"
   
 2.  搭配新的基數估計工具執行您的測試工作負載，然後依照您目前疑難排解效能問題的相同方式，疑難排解任何新的效能問題。  
   
-3.  一旦您的工作負載正在使用新的基數估計工具 （資料庫相容性層級 120 (SQL Server 2014)），並有特定的查詢已迴歸，您可以執行查詢追蹤旗標 9481中所使用的基數估計工具版本，將[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]及更早版本。 若要使用追蹤旗標執行查詢，請參閱知識庫文件＜ [啟用會影響計劃而可在特定的查詢層級透過不同的追蹤旗標加以控制的 SQL Server 查詢最佳化工具行為](http://support.microsoft.com/kb/2801413)＞(機器翻譯)。  
+3.  在您搭配新的基數估計工具 (資料庫相容性層級 120 (SQL Server 2014)) 執行工作負載之後，若有特定的查詢顯現效能退化，請用追蹤旗標 9481 執行查詢，即可使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更早版本所用的基數估計工具版本。 若要使用追蹤旗標執行查詢，請參閱知識庫文件＜ [啟用會影響計劃而可在特定的查詢層級透過不同的追蹤旗標加以控制的 SQL Server 查詢最佳化工具行為](https://support.microsoft.com/kb/2801413)＞(機器翻譯)。  
   
 4.  如果您不能變更所有資料庫，一次，以使用新的基數估計工具，您可以使用的所有資料庫使用先前的基數估計工具[ALTER DATABASE 相容性層級&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)至設定資料庫相容性層級為 110。  
   
-5.  如果您是以資料庫相容性層級 110 執行工作負載，而想要搭配新的基數估計工具來測試或執行特定的查詢，請用追蹤旗標 2312 執行查詢，即可使用 SQL Server 2014 版本的基數估計工具。  若要使用追蹤旗標執行查詢，請參閱知識庫文件＜ [啟用會影響計劃而可在特定的查詢層級透過不同的追蹤旗標加以控制的 SQL Server 查詢最佳化工具行為](http://support.microsoft.com/kb/2801413)＞(機器翻譯)。  
+5.  如果您是以資料庫相容性層級 110 執行工作負載，而想要搭配新的基數估計工具來測試或執行特定的查詢，請用追蹤旗標 2312 執行查詢，即可使用 SQL Server 2014 版本的基數估計工具。  若要使用追蹤旗標執行查詢，請參閱知識庫文件＜ [啟用會影響計劃而可在特定的查詢層級透過不同的追蹤旗標加以控制的 SQL Server 查詢最佳化工具行為](https://support.microsoft.com/kb/2801413)＞(機器翻譯)。  
   
 ## <a name="new-xevents"></a>新的 XEvents  
  現已有兩個新的 query_optimizer_estimate_cardinality XEvents 支援新的查詢計劃。  

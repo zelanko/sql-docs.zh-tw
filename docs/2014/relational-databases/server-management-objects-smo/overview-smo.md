@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f5a5b305bcf41cdf3f306c3fb15f0f123fd471e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164498"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788160"
 ---
 # <a name="overview-smo"></a>概觀 (SMO)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) 是專為以程式設計方式管理的物件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以使用 SMO 來建立自訂的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理應用程式。 雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是一種用來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能強大且廣泛的應用程式，但是可能有時候 SMO 應用程式還是會提供比較好的服務。  
@@ -44,7 +42,7 @@ ms.locfileid: "48164498"
   
  SMO 也將 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 所導入的許多功能和元件表示為新的物件或屬性。 這些新元件和功能包括下列各項：  
   
--   資料表和索引資料分割，可用於資料分割配置上的資料儲存。 如需相關資訊，請參閱 [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)。  
+-   資料表和索引資料分割，可用於資料分割配置上的資料儲存。 如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)＞。  
   
 -   HTTP 端點，可用於管理 SOAP 要求。 如需詳細資訊，請參閱 <<c0> [ 實作端點](tasks/implementing-endpoints.md)。  
   
@@ -68,7 +66,7 @@ ms.locfileid: "48164498"
   
 -   DDL 觸發程序，可在 DDL 事件發生時加入功能。 如需詳細資訊，請參閱 [DDL 觸發程序](../triggers/ddl-triggers.md)。  
   
- SMO 命名空間為 <xref:Microsoft.SqlServer.Management.Smo>。 SMO 會實作為[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]組件。 這表示 common language runtime 來自[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]之前使用 SMO 物件，就必須安裝 2.0 版。 預設會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK 選項將 SMO 組件安裝到全域組件快取 (GAC) 中。 這些組件位於 [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]。 如需詳細資訊，請參閱 < [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]文件。  
+ SMO 命名空間為 <xref:Microsoft.SqlServer.Management.Smo>。 SMO 會實作為 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 組件。 這表示在使用 SMO 物件以前，必須從 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 版安裝 Common Language Runtime。 預設會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK 選項將 SMO 組件安裝到全域組件快取 (GAC) 中。 這些組件位於 [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]。 如需詳細資訊，請參閱 < [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]文件。  
   
 ## <a name="smo-classes"></a>SMO 類別  
  SMO 類別包含兩種類別目錄：執行個體類別和公用程式類別。  

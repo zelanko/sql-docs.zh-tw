@@ -15,12 +15,12 @@ ms.assetid: 1145ac63-eafd-452a-82af-16f85b1676dd
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 693c0c18b4ffb2f3ab5209c0133588997c11d539
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23aaec0ff8130ec246bb99ea63ef16dc7a5b106b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159568"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361750"
 ---
 # <a name="using-the-report-class-for-a-delivery-extension"></a>使用傳遞延伸模組的報表類別
   <xref:Microsoft.ReportingServices.Interfaces.Report> 類別代表報表伺服器資料庫中的報表。 任何訂閱都與特定報表相關聯。 報表包含在通知中。 您的傳遞延伸模組可以使用屬於通知一部分的 <xref:Microsoft.ReportingServices.Interfaces.Report> 物件來轉譯報表。 <xref:Microsoft.ReportingServices.Interfaces.Report> 物件也包含報表特定屬性，例如在報表伺服器上的報表 URL 以及報表名稱。 這些屬性全部都可以做為傳遞提供者的一部分。  
@@ -29,7 +29,7 @@ ms.locfileid: "48159568"
   
  包含報表資料流的 <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> 物件，可以包括在傳遞中。  
   
- 如需如何使用 <xref:Microsoft.ReportingServices.Interfaces.Report> 類別的範例，請參閱 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)  
+ 如需如何使用 <xref:Microsoft.ReportingServices.Interfaces.Report> 類別的範例，請參閱 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)  
   
 ## <a name="see-also"></a>另請參閱  
  [實作傳遞延伸模組](implementing-a-delivery-extension.md)   

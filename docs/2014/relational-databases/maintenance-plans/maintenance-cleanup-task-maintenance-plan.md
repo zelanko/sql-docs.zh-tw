@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.cleanup.f1
@@ -15,12 +14,12 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 03e4059b6a35b1d447953c8816d40c1b753f59fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 175998d210bec502199922831adc3508cc9171a6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142298"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801490"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>維護清除工作 (維護計畫)
   使用 **[維護清除工作]** ，即可移除與維護計畫相關的舊檔案 (包括維護計畫和資料庫備份檔案所建立的文字報表)。  
@@ -78,7 +77,7 @@ ms.locfileid: "48142298"
  **選取或輸入伺服器名稱**  
  選取執行此工作時要連接的伺服器。  
   
- **…**  
+ **...**  
  選取此項以檢視可用伺服器的清單。  
   
  **輸入要登入到伺服器的資訊**  

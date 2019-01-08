@@ -1,5 +1,5 @@
 ---
-title: 使用修改後的版本的 Analysis Services 教學課程專案 |Microsoft 文件
+title: 使用已修改的版本的 Analysis Services 教學課程專案 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 93847b7e6cade7d77774603ba1852c16a5a783b7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4d3fb90b8823ff8a8585647bf60b87ed4098bc6e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017695"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401111"
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>課程 4-1-使用 Analysis Services 教學課程專案的修改的版本
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -25,15 +25,15 @@ ms.locfileid: "34017695"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>下載並解壓縮專案檔案  
   
-1.  [按一下這裡](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services)前往下載頁面，此頁面會提供此教學課程隨附的範例專案。 本教學課程專案隨附的**adventure-works-多維度的教學課程-projects.zip**下載。  
+1.  [按一下這裡](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) 前往下載頁面，此頁面會提供此教學課程隨附的範例專案。 教學課程專案已包含於**adventure-運作方式-多維度-教學課程-projects.zip**下載。  
   
-2.  按一下**adventure-works-多維度的教學課程-projects.zip** ，下載包含本教學課程專案的封裝。  
+2.  按一下  **adventure-運作方式-多維度-教學課程-projects.zip** ，下載包含本教學課程專案的封裝。  
   
     根據預設，.zip 檔案會儲存至 [下載] 資料夾。 您必須將 .zip 檔案移至路徑較短的位置 (例如，建立 C:\Tutorials 資料夾來儲存檔案)。  接著，您可以解壓縮包含在 .zip 檔案中的檔案。 如果您嘗試從路徑較長的 [下載] 資料夾解壓縮檔案，將會獲得課程 1。  
   
 3.  在根磁碟機上或附近建立一個子資料夾，例如 C:\Tutorial。  
   
-4.  移動**adventure-works-多維度的教學課程-projects.zip**到子資料夾。  
+4.  移動**adventure-運作方式-多維度-教學課程-projects.zip**到子資料夾。  
   
 5.  以滑鼠右鍵按一下該檔案，然後選取 [Extract All(全部解壓縮)]。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "34017695"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>載入和處理增強型專案  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的 [檔案] 功能表上，按一下 [關閉方案] 以關閉您將不會使用的檔案。  
+1.  在[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]上**檔案**功能表上，按一下 **關閉方案**關閉您不會使用的檔案。  
   
-2.  在 [檔案] 功能表上，指向 [開啟舊檔]，然後按一下 [專案/方案]。  
+2.  在 [檔案] 功能表上，指向 [開啟舊檔]，再按一下 [專案/方案]。  
   
 3.  瀏覽到您解壓縮教學課程專案檔案的位置。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34017695"
 ## <a name="understanding-the-enhancements-to-the-project"></a>了解專案的增強功能  
 這個專案的增強型版本與您在前面 3 課所完成的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案的版本不同。 下列章節將描述其差異。 在繼續本教學課程的其餘課程之前，請檢閱這項資訊。  
   
-### <a name="data-source-view"></a>資料來源檢視  
+### <a name="data-source-view"></a>[資料來源檢視]  
 增強型專案中的資料來源檢視多包含一個事實資料表及四個維度資料表，它們來自 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫。  
   
 請注意，資料來源檢視中的十個資料表使得 <All Tables> 圖表變得很擁擠， 以致於不容易了解資料表之間的關聯性及尋找特定資料表。 為了解決這個問題，資料表分成兩個邏輯圖表：[網際網路銷售] 圖表和 [轉售商銷售] 圖表。 這些圖表各以單一事實資料表為中心。 建立邏輯圖表可讓您檢視及使用資料來源檢視中的資料表的特定子集，而不是檢視單一圖表中的所有資料表及其關聯性。  
@@ -62,7 +62,7 @@ ms.locfileid: "34017695"
 #### <a name="internet-sales-diagram"></a>Internet Sales 圖表  
 [網際網路銷售] 圖表包含透過網際網路直接向客戶銷售 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 產品之相關資料表。 圖表中的資料表為 4 個維度資料表和 1 個事實資料表，這些是您在第 1 課新增至 **Adventure Works DW 2012** 資料來源檢視中的資料表。 這些資料表如下：  
   
--   **Geography**  
+-   **地理位置**  
   
 -   **客戶**  
   

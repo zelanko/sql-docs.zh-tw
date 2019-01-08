@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60bc8c4cbd2166a302a0f61176fa198787575f88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bcc0a95028b1f107f15752692d3dcad090fbe8b1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107053"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356756"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation 元素 (DTA)
   包含屬於使用者指定組態之一部份的假設性索引的相關資訊。  
@@ -44,22 +43,22 @@ ms.locfileid: "48107053"
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  
-|**出現次數**|選擇性。 可以為每一次使用`Table`項目。|  
+|**出現次數**|選擇性。 每個 `Table` 元素可以使用這個元素一次。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[資料表結構描述的項目&#40;DTA&#41;](table-element-for-schema-dta.md)|  
-|**子元素**|[建立項目&#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` 項目。 如需詳細資訊，請參閱＜ [Database Engine Tuning Advisor XML 結構描述](http://go.microsoft.com/fwlink/?linkid=43100)＞。|  
+|**父元素**|[結構描述的 Table 元素 &#40;DTA&#41;](table-element-for-schema-dta.md)|  
+|**子元素**|[Create 元素 &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` 元素。 如需詳細資訊，請參閱＜ [Database Engine Tuning Advisor XML 結構描述](https://go.microsoft.com/fwlink/?linkid=43100)＞。|  
   
 ## <a name="remarks"></a>備註  
- 在 Database Engine Tuning Advisor XML 結構描述中，這個元素的名稱為 **RecommendationTypecomplexType** 。 它用來指定假設性組態的索引。 請勿混淆這個`Recommendation`可用來指定資料分割的其他類型的項目 (`RecommendationPType`) 或檢視表 (`RecommendationViewType`)。 如需其他資訊`Recommendation`項目類型，請參閱[Database Engine Tuning Advisor XML 結構描述](http://go.microsoft.com/fwlink/?linkid=43100)。  
+ 在 Database Engine Tuning Advisor XML 結構描述中，這個元素的名稱為 **RecommendationTypecomplexType** 。 它用來指定假設性組態的索引。 請勿混淆這個 `Recommendation` 元素與可用來指定資料分割 (`RecommendationPType`) 或檢視 (`RecommendationViewType`) 的其他類型。 如需其他資訊`Recommendation`項目類型，請參閱[Database Engine Tuning Advisor XML 結構描述](https://go.microsoft.com/fwlink/?linkid=43100)。  
   
 ## <a name="example"></a>範例  
  如需此元素的使用範例，請參閱[含使用者指定組態的 XML 輸入檔範例 &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

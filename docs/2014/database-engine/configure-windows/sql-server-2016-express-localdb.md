@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - user instances
@@ -17,15 +16,15 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 676bc7adc3debb0beaee10d09d6fbe8018d42c2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158948"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368300"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` 執行模式[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]專供程式開發人員。 `LocalDB` 安裝會複製檔案啟動所需的最小集合[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 一次`LocalDB`是安裝，開發人員起始的連線使用特殊連接字串。 在連線時，所需之[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]基礎結構會自動建立並啟動，讓應用程式使用的資料庫不需複雜或耗時的組態工作。 Developer Tools 為開發人員提供 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，讓他們撰寫和測試 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，而不需要管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的完整伺服器執行個體。 執行個體[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB`由`SqlLocalDB.exe`公用程式。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` 應該用於取代[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]使用者執行個體功能已被取代。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` 執行模式[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]專供程式開發人員。 `LocalDB` 安裝會複製檔案啟動所需的最小集合[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 一次`LocalDB`是安裝，開發人員起始的連線使用特殊連接字串。 連接時，就會自動建立及啟動必要的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基礎結構，應用程式不需複雜或耗時的組態工作即可開始使用資料庫。 Developer Tools 為開發人員提供 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，讓他們撰寫和測試 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，而不需要管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的完整伺服器執行個體。 執行個體[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB`由`SqlLocalDB.exe`公用程式。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` 應該用於取代[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]使用者執行個體功能已被取代。  
   
 ## <a name="installing-localdb"></a>安裝 LocalDB  
  安裝的主要方法`LocalDB`是使用 SqlLocalDB.msi 程式。 `LocalDB` 安裝的任何 SKU 時[!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]。 選取 `LocalDB`上**特徵選取**頁面上，安裝期間[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 可以有一份`LocalDB`每個主要的二進位檔[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]版本。 多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 處理序可以啟動，而且全部都會使用相同的二進位檔案。 執行個體[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]啟動為`LocalDB`具有相同的限制 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
@@ -33,9 +32,9 @@ ms.locfileid: "48158948"
 ## <a name="description"></a>描述  
  `LocalDB`安裝程式使用 SqlLocalDB.msi 程式來安裝必要的檔案，在電腦上。 安裝之後，`LocalDB`的執行個體[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]可建立及開啟[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。 資料庫的系統資料庫檔案儲存在使用者本機上通常處於隱藏狀態的 AppData 路徑。 例如 **C:\Users\\<使用者\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**。 使用者資料庫檔案儲存在使用者指定的位置，通常是在 **C:\Users\\<使用者\>\Documents\\** 資料夾中的某個位置。  
   
- 如需詳細資訊，包括`LocalDB`應用程式，請參閱[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]文件[本機資料概觀](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx)，[逐步解說： 建立 SQL Server LocalDB 資料庫](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx)，及[逐步解說： 連接到 SQL Server LocalDB 資料庫 (Windows Form) 中的資料](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx)。  
+ 如需詳細資訊，包括`LocalDB`應用程式，請參閱[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]文件[本機資料概觀](https://msdn.microsoft.com/library/ms233817\(VS.110\).aspx)，[逐步解說：建立 SQL Server LocalDB 資料庫](https://msdn.microsoft.com/library/ms233763\(VS.110\).aspx)，和[逐步解說：連接到 SQL Server LocalDB 資料庫 (Windows Form) 中的資料](https://msdn.microsoft.com/library/ms171890\(VS.110\).aspx)。  
   
- 如需詳細資訊`LocalDB`API，請參閱 < [SQL Server Express LocalDB 執行個體 API 參考](http://msdn.microsoft.com/library/hh234692\(SQL.110\).aspx)並[LocalDBStartInstance 函數](http://msdn.microsoft.com/library/hh217143\(SQL.110\).aspx)。  
+ 如需詳細資訊`LocalDB`API，請參閱 < [SQL Server Express LocalDB 執行個體 API 參考](https://msdn.microsoft.com/library/hh234692\(SQL.110\).aspx)並[LocalDBStartInstance 函數](https://msdn.microsoft.com/library/hh217143\(SQL.110\).aspx)。  
   
  SqlLocalDb 公用程式可以建立的新執行個體`LocalDB`、 啟動及停止的執行個體`LocalDB`，並包含選項，可協助您管理`LocalDB`。  如需 SqlLocalDb 公用程式的詳細資訊，請參閱 [SqlLocalDB 公用程式](../../tools/sqllocaldb-utility.md)。  
   
@@ -51,16 +50,16 @@ ms.locfileid: "48158948"
  執行個體`LocalDB`擁有的內建帳戶，例如 NT AUTHORITY\SYSTEM 可以有管理能力問題，因為 windows 檔案系統重新導向;改為使用一般 windows 帳戶的擁有者。  
   
 ### <a name="automatic-and-named-instances"></a>自動和具名執行個體  
- `LocalDB` 支援兩種類型的執行個體： 自動執行個體和具名執行個體。  
+ `LocalDB` 支援兩種類型的執行個體：自動執行個體和具名執行個體。  
   
--   自動執行個體`LocalDB`都是公用的。 這些執行個體會自動為使用者建立及管理，並且可供任何應用程式使用。 自動執行個體`LocalDB`存在於每個版本的`LocalDB`使用者的電腦上安裝。 自動執行個體`LocalDB`提供無縫式的執行個體管理。 無需建立執行個體，它就會運作。 這允許應用程式輕鬆安裝和移轉到另一部電腦。 如果目標電腦已指定的版本`LocalDB`安裝，自動執行個體`LocalDB`該版本為目標電腦也可以使用。 自動執行個體`LocalDB`執行個體名稱採用屬於保留命名空間的特殊模式。 這可防止名稱衝突的具名執行個體`LocalDB`。 自動執行個體的名稱是 **MSSQLLocalDB**。  
+-   自動執行個體`LocalDB`都是公用的。 這些執行個體會自動為使用者建立及管理，並且可供任何應用程式使用。 自動執行個體`LocalDB`存在於每個版本的`LocalDB`使用者的電腦上安裝。 自動執行個體`LocalDB`提供無縫式的執行個體管理。 無需建立執行個體，它就會運作。 這允許應用程式輕鬆安裝和移轉到另一部電腦。 如果目標電腦已安裝指定的 `LocalDB` 版本，該目標電腦可以使用此版本的 `LocalDB` 自動執行個體。 自動執行個體`LocalDB`執行個體名稱採用屬於保留命名空間的特殊模式。 這可防止名稱衝突的具名執行個體`LocalDB`。 自動執行個體的名稱是 **MSSQLLocalDB**。  
   
 -   具名執行個體`LocalDB`私用。 這些執行個體是由負責建立及管理該執行個體的單一應用程式所擁有。 具名執行個體與其他執行個體隔離，並透過減少與其他資料庫使用者的資源競爭來提高效能。 必須明確地建立具名的執行個體，由使用者透過`LocalDB`管理 API 或隱含地透過 app.config 檔案的受管理的應用程式 （雖然受管理的應用程式也可以使用 API，如有需要）。 每個具名執行個體`LocalDB`都有相關聯`LocalDB`版本，指向各自組`LocalDB`二進位檔。 執行個體名稱`LocalDB`是`sysname`資料類型，可以包含最多可有 128 個字元。 (這不同於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一般具名執行個體，其名稱限制為 16 個 ASCII 字元的一般 NetBIOS 名稱)。執行個體的名稱`LocalDB`可以包含任何合法的檔案名稱內的 Unicode 字元。  使用自動執行個體名稱的具名執行個體會成為自動執行個體。  
   
  電腦的不同使用者可有同名的執行個體。 每個執行個體都是以不同使用者身分執行的不同處理序。  
   
 ## <a name="shared-instances-of-localdb"></a>LocalDB 的共用執行個體  
- 若要支援多個使用者的電腦需要連線到的單一執行個體的案例`LocalDB`，`LocalDB`支援執行個體共用。 執行個體擁有者可以選擇允許電腦上的其他使用者連接到他的執行個體。 自動和具名執行個體`LocalDB`可以共用。 若要共用的執行個體`LocalDB`使用者選取共用的名稱 （別名）。 因為電腦上的所有使用者都可以看到共用名稱，此共用名稱在電腦上必須是唯一的。 執行個體的共用的名稱`LocalDB`具有相同格式的具名執行個體`LocalDB`。  
+ 若要支援多個使用者的電腦需要連線到的單一執行個體的案例`LocalDB`，`LocalDB`支援執行個體共用。 執行個體擁有者可以選擇允許電腦上的其他使用者連接到他的執行個體。 自動和具名執行個體`LocalDB`可以共用。 若要共用 `LocalDB` 執行個體，使用者必須為它選取共用名稱 (別名)。 因為電腦上的所有使用者都可以看到共用名稱，此共用名稱在電腦上必須是唯一的。 執行個體的共用的名稱`LocalDB`具有相同格式的具名執行個體`LocalDB`。  
   
  只有在電腦上的系統管理員可以建立的共用執行個體`LocalDB`。 共用執行個體`LocalDB`可以是由系統管理員，或共用執行個體的擁有者取消共用`LocalDB`。 共用及取消共用的執行個體`LocalDB`，使用`LocalDBShareInstance`並`LocalDBUnShareInstance`方法`LocalDB`API，或共用及取消共用的選項 SqlLocalDb 公用程式。  
   
@@ -104,7 +103,7 @@ REM Gather information about the instance of LocalDB
  若要連接到的共用執行個體`LocalDB`新增 **。\\** （點 + 反斜線） 來參考保留給共用執行個體的命名空間的連接字串。 例如，若要連接到的共用執行個體`LocalDB`名為`AppData`使用的連接字串，例如`(localdb)\.\AppData`為連接字串的一部分。 連接到的共用執行個體的使用者`LocalDB`，不是他們擁有必須有 Windows 驗證或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證登入。  
   
 ## <a name="troubleshooting"></a>疑難排解  
- 如需疑難排解資訊`LocalDB`，請參閱 <<c2> [ 疑難排解 SQL Server 2012 Express LocalDB](http://social.technet.microsoft.com/wiki/contents/articles/4609.aspx)。  
+ 如需疑難排解資訊`LocalDB`，請參閱 <<c2> [ 疑難排解 SQL Server 2012 Express LocalDB](https://social.technet.microsoft.com/wiki/contents/articles/4609.aspx)。  
   
 ## <a name="permissions"></a>Permissions  
  執行個體[!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]`LocalDB`是供其使用使用者所建立的執行個體。 在電腦上的任何使用者可以建立資料庫，使用的執行個體`LocalDB`、 在其使用者設定檔之下儲存檔案，並在其認證之下處理序執行。 根據預設，存取執行個體`LocalDB`只限其擁有者。 中包含的資料`LocalDB`受到資料庫檔案的檔案系統存取權。 如果使用者資料庫檔案儲存在共用位置，可以開啟資料庫至該位置的檔案系統存取權的任何人使用的執行個體`LocalDB`他們所擁有。 如果資料庫檔案位於受保護的位置，例如使用者資料夾，則只有該使用者和擁有該資料夾存取權的任何系統管理員才可以開啟資料庫。 `LocalDB`檔案只能開啟一個執行個體的`LocalDB`一次。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - committing versions [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 484986c617742967c41160aaf369b3562e72d938
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db793009e2dd1c2be243b65c6bc50778578b0dc4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085780"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797750"
 ---
 # <a name="commit-a-version-master-data-services"></a>認可版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可認可模型版本，以防止模型成員及其屬性的變更。 已認可的版本無法解除鎖定。  
@@ -29,9 +28,9 @@ ms.locfileid: "48085780"
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
--   版本的狀態必須是 [已鎖定]。 如需詳細資訊，請參閱[鎖定版本 &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)。  
+-   版本的狀態必須是 [已鎖定]。 如需詳細資訊，請參閱 [鎖定版本 &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)(管理員 (Master Data Services))。  
   
 -   所有成員必須都已驗證成功。  
   
@@ -49,13 +48,13 @@ ms.locfileid: "48085780"
   
 ## <a name="next-steps"></a>後續步驟  
   
--   [建立版本旗標&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)  
+-   [建立版本旗標 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)  
   
--   [指派給版本的旗標&#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+-   [將旗標指派給版本 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
--   [複製版本&#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)  
+-   [複製版本 &#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [版本&#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+ [版本 &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
   

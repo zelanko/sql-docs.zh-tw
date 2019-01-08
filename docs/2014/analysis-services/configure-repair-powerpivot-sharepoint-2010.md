@@ -11,12 +11,12 @@ ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f59c5a1e4666c2cd1d0603298af62d75c43398f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a80e362c97df74773d303a4b022d376fff40fb70
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112898"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360340"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>設定或修復 PowerPivot for SharePoint 2010 (PowerPivot 組態工具)
   若要設定或修復 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 的安裝，請使用 PowerPivot 組態工具。 此組態工具一開始先掃描系統，然後傳回完成或修復安裝所需的動作清單。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 安裝精靈會安裝適用於 SharePoint 2010 的 PowerPivot 組態工具，以及適用於 SharePoint 2013 的 PowerPivot 組態工具。 本主題描述適用於 SharePoint 2010 的 PowerPivot 組態工具。 如需有關 SharePoint 2010 的詳細資訊，請參閱 <<c0> [ 設定或修復 PowerPivot for SharePoint 2013 &#40;PowerPivot 組態工具&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)。</c0>  
@@ -28,7 +28,7 @@ ms.locfileid: "48112898"
 ##  <a name="bkmk_before"></a> 開始之前  
  PowerPivot for SharePoint 組態工具會掃描程式檔案、登錄設定和可用的通訊埠。 若要充分利用這些工具，請檢閱下列各項。  
   
--   若要執行組態工具的一般需求[PowerPivot 組態工具](power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
+-   執行＜ [PowerPivot Configuration Tools](power-pivot-sharepoint/power-pivot-configuration-tools.md)＞組態工具的一般需求。  
   
 -   PowerPivot for SharePoint 2010 需要針對傳統模式驗證設定的 Web 應用程式。 如果 PowerPivot for SharePoint 2010 組態工具自動建立應用程式，則應用程式會針對傳統模式進行設定。  
   
@@ -53,17 +53,17 @@ ms.locfileid: "48112898"
 ##  <a name="bkmk_steps"></a> 組態步驟  
  只有在本機伺服器上安裝了 PowerPivot for SharePoint 2010 時，才看得見組態工具的連結。  
   
-1.  在上**開始**功能表上，指向**所有程式**，按一下  [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，按一下**組態工具**，然後按一下  **PowerPivot 組態工具**.  
+1.  指向 **[開始]** 功能表上的 **[所有程式]**，按一下 [ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]，然後按一下 **[組態工具]**，再按一下 **[PowerPivot 組態工具]**。  
   
 2.  按一下 **[設定或修復 PowerPivot for SharePoint]**。  
   
 3.  將視窗展開為全螢幕。 您應該會在視窗底部看到一個按鈕列，其中包含 **[驗證]**、 **[執行]** 和 **[結束]** 命令。  
   
-4.  **預設帳戶：** 在 [參數] 索引標籤上，輸入 **[預設帳戶使用者名稱]** 的網域使用者帳戶。 此帳戶會用來佈建主要服務，包括 PowerPivot 服務應用程式集區。 請勿指定內建帳戶，例如 Network Service 或 Local System。 此工具會封鎖指定內建帳戶的組態。  
+4.  **預設帳戶：** 在 參數 索引標籤中，輸入 網域使用者帳戶**預設帳戶使用者名稱**。 此帳戶會用來佈建主要服務，包括 PowerPivot 服務應用程式集區。 請勿指定內建帳戶，例如 Network Service 或 Local System。 此工具會封鎖指定內建帳戶的組態。  
   
      **複雜密碼** ：輸入複雜密碼。 對於新的 SharePoint 伺服器陣列，複雜密碼是在新的伺服器或應用程式加入至 SharePoint 伺服器陣列時使用。 如果是現有的伺服器陣列，則輸入可讓您將伺服器應用程式加入至該伺服器陣列的複雜密碼。  
   
-5.  **通訊埠：** 選擇性地輸入連接至管理中心 Web 應用程式的通訊埠編號，或是使用提供的隨機產生編號。 組態工具會先檢查這個編號是否可以使用，然後再提供它當做選項。  
+5.  **連接埠：** 選擇性地輸入連接至管理中心 Web 應用程式的通訊埠編號，或是使用提供的隨機產生編號。 組態工具會先檢查這個編號是否可以使用，然後再提供它當做選項。  
   
 6.  按一下 **[在本機伺服器上註冊 SQL Server Analysis Services (PowerPivot)]**。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48112898"
   
 10. 按一下 **[執行]** ，處理工作清單中的所有動作。 在您驗證動作之後， **[執行]** 按鈕便會啟用。 如果 **[執行]** 未啟用，請先按一下 **[驗證]** 。  
   
-11. [Verify a PowerPivot for SharePoint 安裝](instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md)。  
+11. [Verify a PowerPivot for SharePoint Installation](instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md)：  
   
 ##  <a name="bkmk_input"></a> 用於設定伺服器的輸入值  
  PowerPivot 組態工具會使用輸入值 (您所輸入) 以及預設值 (它偵測到或自動使用) 的組合。  
@@ -89,7 +89,7 @@ ms.locfileid: "48112898"
   
  下表說明用於設定伺服器的值。  
   
-|頁面|輸入值|來源|描述|  
+|頁面|輸入值|原始程式檔|描述|  
 |----------|-----------------|------------|-----------------|  
 |**設定或修復 PowerPivot for SharePoint**|預設帳戶|目前使用者|預設帳戶是用於在伺服器陣列中佈建共用服務的網域 Windows 使用者帳戶。 此帳戶用於佈建 PowerPivot 服務應用程式、Secure Store Service、Excel Services、Web 應用程式集區識別、網站集合管理員和 PowerPivot 無人看管的資料重新整理帳戶。<br /><br /> 根據預設，工具會輸入目前使用者的網域帳戶。 除非伺服器是設定做為評估之用，否則應該以其他網域使用者帳戶取代此預設帳戶。<br /><br /> 您之後也可以使用管理中心變更服務識別。<br /><br /> 您可以選擇在 PowerPivot 組態工具中為下列項目指定專用帳戶：<br /><br /> Web 應用程式，使用 **[建立預設 Web 應用程式]** 頁面 (假設此工具正在為伺服器陣列建立 Web 應用程式)。<br /><br /> PowerPivot 無人看管的資料重新整理帳戶，使用此工具中的 **[建立無人看管的資料重新整理帳戶]** 頁面。|  
 ||資料庫伺服器|本機 PowerPivot 具名執行個體 (如果有的話)|如果資料庫引擎執行個體安裝為 PowerPivot 具名執行個體，此工具會使用此執行個體擴展資料庫伺服器欄位。 如果您沒有安裝資料庫引擎，此欄位是空的。 您必須提供執行個體。 此執行個體可以是 SharePoint 伺服器陣列所支援的任何 SQL Server 版本或版別。|  
@@ -114,7 +114,7 @@ ms.locfileid: "48112898"
 ||網站 URL|預設值 (如果需要)|此工具會使用與 SharePoint 相同的 URL 命名慣例來建立網站 URL。|  
 ||網站標題|預設值 (如果需要)|此工具會加入 **[PowerPivot 網站]** 做為預設標題。|  
 |**啟用網站集合中的 PowerPivot 功能**|網站 URL||您要啟用 PowerPivot 功能之網站集合的 URL。|  
-||啟用這個網站的高階功能||啟用 SharePoint 網站功能 "PremiumSite"。|  
+||啟用這個網站的高階功能||啟用 SharePoint 網站功能"PremiumSite"。|  
 |**建立 Secure Store Service 應用程式**|服務應用程式名稱||輸入 Secure Store Service 應用程式的名稱。|  
 ||資料庫伺服器||輸入用於 Secure Store Service 應用程式的資料庫伺服器名稱。|  
 |**建立 Secure Store Service 應用程式 Proxy**|服務應用程式名稱||輸入 Secure Store Service 應用程式的名稱。|  
@@ -125,7 +125,7 @@ ms.locfileid: "48112898"
 ||目標應用程式的易記名稱|||  
 ||無人看管帳戶的使用者名稱和密碼||輸入由目標應用程式所使用且用來執行無人看管之資料重新整理的 Windows 使用者帳戶認證。|  
 ||網站 URL||輸入與目標應用程式相關聯之網站集合的網站 URL。 若要與其他網站集合產生關聯，請使用 SharePoint 管理中心。|  
-|**建立 Excel Services 服務應用程式**|服務應用程式名稱||輸入服務應用程式名稱。 系統會在 SharePoint 伺服器陣列的資料庫伺服器上建立相同名稱的服務應用程式資料庫。|  
+|**建立 Excel Services 服務應用程式**|服務應用程式名稱||輸入服務應用程式名稱。 在 SharePoint 伺服器陣列的資料庫伺服器上，會建立具有相同名稱的服務應用程式資料庫。|  
 |**加入 MSOLAP.5 做為受信任的提供者**|服務應用程式名稱||SharePoint 2010 中的 Excel Services 會使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] OLE DB 提供者連接 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料。 這個步驟會將隨 PowerPivot for SharePoint 一起安裝的 OLE DB 提供者版本做為受信任的提供者加入 Excel Services 中。|  
 ||PowerPivot 伺服器名稱|||  
 |||||  
@@ -163,7 +163,7 @@ ms.locfileid: "48112898"
 ### <a name="install-adonet-data-services-35-sp1"></a>安裝 ADO.NET Data Services 3.5 SP1  
  從 SharePoint 清單匯出資料摘要需要 ADO.NET Data Services。 SharePoint 2010 不會在 PrerequisiteInstaller 程式中包含這個元件，所以您必須手動安裝它。  
   
-1.  移至 SharePoint 2010 的硬體和軟體需求文件集： [判斷硬體和軟體需求 (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734)  
+1.  移至 SharePoint 2010 的硬體和軟體需求文件集： [判斷硬體和軟體需求 (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734)  
   
 2.  在 [Installing software prerequisites] 中，尋找對應到您所使用之作業系統的 ADO.NET Data Services 3.5 連結。  
   
@@ -176,10 +176,10 @@ ms.locfileid: "48112898"
  PowerPivot 組態工具會提供在單一帳戶之下執行的伺服器陣列功能、應用程式和服務。 這樣會簡化安裝，但是不會產生一個符合 SharePoint 伺服陣列安全性需求的部署。 若要建立更強固的部署，請變更應用程式集區和服務識別，使其在安裝完成之後於不同的帳戶之下執行。 如需詳細資訊，請參閱 <<c0> [ 設定 PowerPivot 服務帳戶](power-pivot-sharepoint/configure-power-pivot-service-accounts.md)。  
   
 ### <a name="create-additional-trusted-sites-in-excel-services"></a>在 Excel Services 中建立其他信任的網站  
- 您可以在 Excel Services 中加入信任的網站，以便在提供 Excel 活頁簿和 PowerPivot 資料的網站上變更權限和組態設定。 如需相關資訊，請參閱 [Create a trusted location for PowerPivot sites in Central Administration](power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+ 您可以在 Excel Services 中加入信任的網站，以便在提供 Excel 活頁簿和 PowerPivot 資料的網站上變更權限和組態設定。 如需相關資訊，請參閱 [在管理中心建立 PowerPivot 網站的信任位置](power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 ### <a name="add-servers-or-applications"></a>加入伺服器或應用程式  
- 一段時間之後，如果您判斷需要額外的資料儲存和處理功能，您可以將另一個 PowerPivot for SharePoint 伺服器執行個體加入到伺服器陣列中。 如需相關指示，請參閱 <<c0> [ 部署檢查清單： PowerPivot 伺服器加入 SharePoint 2010 伺服陣列的向外](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)。  
+ 一段時間之後，如果您判斷需要額外的資料儲存和處理功能，您可以將另一個 PowerPivot for SharePoint 伺服器執行個體加入到伺服器陣列中。 如需指示，請參閱[部署檢查清單：藉由將 PowerPivot 伺服器加入至 SharePoint 2010 伺服器陣列的向外](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)。  
   
 ## <a name="additional-resources"></a>其他資源  
  ![SharePoint 設定](media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[透過 Microsoft SQL Server Connect 提交意見與連絡資訊](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)。  

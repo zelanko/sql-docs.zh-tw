@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_mergearticlecolumn
@@ -17,12 +16,12 @@ ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 479ac5e7d9a1d451ea489a3a43c0ff481a6a121f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d28c8da014a3922a9dbd1cba533b4cbf1d7a9215
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837018"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590072"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,19 +44,19 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication =**] **'***發行集***'**  
+ [  **@publication =**] **'**_發行集_**'**  
  這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@article =**] **'***文章***'**  
+ [  **@article =**] **'**_文章_**'**  
  這是發行集的發行項名稱。 *發行項*已**sysname**，沒有預設值。  
   
- [  **@column =**] **'***資料行***'**  
+ [  **@column =**] **'**_資料行_**'**  
  識別用來建立垂直資料分割的資料行。 *資料行*已**sysname**，預設值是 NULL。 如果是 NULL 和 `@operation = N'add'`，依預設，會將來源資料表中所有的資料行加入至發行項。 *資料行*不能是 NULL 時*操作*設定為**卸除**。 若要從發行項排除資料行，請執行**sp_mergearticlecolumn**並指定*資料行*並`@operation = N'drop'`要移除的每一個資料行從指定*文章*.  
   
- [  **@operation =**] **'***作業***'**  
+ [  **@operation =**] **'**_作業_**'**  
  這是訂閱狀態。 *作業*已**nvarchar(4)**，預設值是 ADD。 **新增**標示複寫的資料行。 **卸除**清除資料行。  
   
- [  **@schema_replication=**] **'***schema_replication***'**  
+ [  **@schema_replication=**] **'**_schema_replication_**'**  
  指定當執行合併代理程式時，將傳播結構描述變更。 *schema_replication*已**nvarchar(5)**，預設值是 FALSE。  
   
 > [!NOTE]  
@@ -70,7 +69,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
  **1**指定合併發行項的變更可能使快照集失效，如果這種情況下，值為**1**提供將出現新的快照集的權限。  
   
- [* *@force_reinit_subscription =] * * * force_reinit_subscription*  
+ [  **@force_reinit_subscription =]**_force_reinit_subscription_  
  啟用或停用重新初始化訂閱的能力。 *force_reinit_subscription*是 bit，預設值是**0**。  
   
  **0**指定合併發行項的變更不會使訂閱重新初始化。  

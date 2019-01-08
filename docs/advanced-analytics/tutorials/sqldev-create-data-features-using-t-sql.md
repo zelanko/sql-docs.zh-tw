@@ -1,5 +1,5 @@
 ---
-title: 課程 2 的建立資料功能，使用 T-SQL 函式 (SQL Server Machine Learning 中的 R) |Microsoft Docs
+title: 使用 R 和 T-SQL 函式-SQL Server 機器學習的第 2 課建立的資料功能
 description: 本教學課程示範如何將計算加入至用於 R 機器學習服務模型中的預存程序。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4986d7ae5e51eaf0e89b3ee986ac7597e4a5edb7
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 43086b8d3898e4d9096e82289ce6e6f196542997
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031495"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645397"
 ---
-# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>第 2 課： 建立使用 R 和 T-SQL 的資料特徵
+# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>第 2 課：使用 R 和 T-SQL 建立資料特徵
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 這篇文章是有關如何在 SQL Server 中使用 R 的 SQL 開發人員的教學課程的一部分。
@@ -46,7 +46,7 @@ ms.locfileid: "51031495"
 
 2. 以滑鼠右鍵按一下 [fnCalculateDistance]，然後選取 [修改]，在新的查詢視窗中開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。
   
-    ```SQL
+    ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  
     -- User-defined function that calculates the direct distance between two geographical coordinates.  
     RETURNS float  
@@ -80,7 +80,7 @@ ms.locfileid: "51031495"
 
 1. 請花幾分鐘檢閱自訂 T-SQL 函數 _fnEngineerFeatures_的程式碼，在進行本逐步解說的準備工作時，應該已為您建立此函數。
   
-    ```SQL
+    ```sql
     CREATE FUNCTION [dbo].[fnEngineerFeatures] (  
     @passenger_count int = 0,  
     @trip_distance float = 0,  
@@ -110,7 +110,7 @@ ms.locfileid: "51031495"
 
 2.  若要確認此函式運作方式，使用它來計算這些車程，其中的計量付費的距離為 0，但上車和下車位置不同的地理距離。
   
-    ```SQL
+    ```sql
         SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
         trip_distance, pickup_datetime, dropoff_datetime,
         dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) AS direct_distance
@@ -123,8 +123,8 @@ ms.locfileid: "51031495"
 
 ## <a name="next-lesson"></a>下一課
 
-[第 3 課： 訓練及儲存模型，使用 T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
+[第 3 課：訓練及儲存模型，使用 T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>上一課
 
-[第 1 課： 探索和使用 R 和預存程序將資料視覺化](sqldev-explore-and-visualize-the-data.md)
+[第 1 課：瀏覽及視覺化資料使用 R 和預存程序](sqldev-explore-and-visualize-the-data.md)

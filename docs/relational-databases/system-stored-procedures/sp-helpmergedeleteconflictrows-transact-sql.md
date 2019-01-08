@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergedeleteconflictrows
@@ -17,12 +16,12 @@ ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 270ca534b5527efa9dea52b107166bb445965b2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e31a8827f940e0dd5a3debe2d03bf675f33df3cd
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595676"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591172"
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,16 +41,16 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_發行集_**'**  
  這是發行集的名稱。 *發行集*已**sysname**，預設值是**%**。 如果指定發行集的話，就會傳回發行集所限定的所有衝突。  
   
- [  **@source_object=**] **'***source_object***'**  
+ [  **@source_object=**] **'**_source_object_**'**  
  這是來源物件的名稱。 *source_object*已**nvarchar(386)**，預設值是 NULL。  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_發行者_**'**  
  是 「 發行者 」 的名稱。*發行者*是**sysname**，預設值是 NULL。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  是發行者資料庫的名稱。*publisher_db*是**sysname**，預設值是 NULL。  
   
 ## <a name="result-sets"></a>結果集  
@@ -60,7 +59,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 |-----------------|---------------|-----------------|  
 |**source_object**|**nvarchar(386)**|刪除衝突的來源物件。|  
 |**rowguid**|**uniqueidentifier**|刪除衝突的資料列識別碼。|  
-|**conflict_type**|**int**|表示衝突類型的代碼：<br /><br /> **1** = UpdateConflict： 在資料列層級偵測到衝突。<br /><br /> **2** = ColumnUpdateConflict： 在資料行層級偵測到衝突。<br /><br /> **3** = UpdateDeleteWinsConflict： 刪除在衝突中獲勝。<br /><br /> **4** = UpdateWinsDeleteConflict： 衝突失敗已刪除的 rowguid 會記錄在此資料表。<br /><br /> **5** = UploadInsertFailed： 訂閱者的插入無法套用在發行者端。<br /><br /> **6** = DownloadInsertFailed： 發行者的插入無法套用在訂閱者。<br /><br /> **7** = UploadDeleteFailed： 訂閱者端的刪除無法上傳到 「 發行者 」。<br /><br /> **8** = DownloadDeleteFailed： 發行者的刪除無法下載到訂閱者。<br /><br /> **9** = UploadUpdateFailed： 訂閱者端的更新無法套用在發行者端。<br /><br /> **10** = DownloadUpdateFailed： 發行者的更新無法套用到訂閱者。|  
+|**conflict_type**|**int**|表示衝突類型的代碼：<br /><br /> **1** = UpdateConflict:資料列層級偵測到衝突。<br /><br /> **2** = ColumnUpdateConflict:資料行層級偵測到的衝突。<br /><br /> **3** = UpdateDeleteWinsConflict:刪除在衝突中獲勝。<br /><br /> **4** = UpdateWinsDeleteConflict:已刪除在衝突中失敗的 rowguid 會記錄在此資料表。<br /><br /> **5** = UploadInsertFailed:從訂閱者 」 的插入無法套用在發行者端。<br /><br /> **6** = DownloadInsertFailed:發行者的插入無法套用在訂閱者。<br /><br /> **7** = UploadDeleteFailed:在訂閱者端的刪除無法上傳到 「 發行者 」。<br /><br /> **8** = DownloadDeleteFailed:在發行者端的刪除無法下載到訂閱者。<br /><br /> **9** = UploadUpdateFailed:無法在發行者端套用訂閱者端的更新。<br /><br /> **10** = DownloadUpdateFailed:在發行者端的更新無法套用到訂閱者。|  
 |**reason_code**|**整數**|可為內容相關的錯誤碼。|  
 |**reason_text**|**varchar(720)**|可為內容相關的錯誤描述。|  
 |**origin_datasource**|**varchar(255)**|衝突的來源。|  

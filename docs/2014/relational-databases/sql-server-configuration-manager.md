@@ -21,23 +21,23 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d1c4d2d5c90f651d1d24dd6fabbaa74213a6fff9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 123f0fcececee98826bf70b929a9857bbaff32dc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061898"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212007"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 組態管理員
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是一個工具，用來管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的相關服務、設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]所用的網路通訊協定，以及管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用戶端電腦的網路連接組態。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是一個 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 嵌入式管理單元，您可以從 [開始] 功能表存取它，也可以將它加入任何其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 顯示畫面中。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (mmc.exe) 會在 Windows System32 資料夾中的 SQLServerManager10.msc 檔來開啟[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Configuration Manager。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員和 SQL Server Management Studio 利用 Window Management Instrumentation (WMI) 來檢視和變更部份伺服器設定。 WMI 提供統一的方式來協助您連結管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具所要求之登錄作業的 API 呼叫，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員嵌入式管理單元元件的所選 SQL 服務上，它提供了增強的控制和操作功能。 如需設定 WMI 相關權限的相關資訊，請參閱[設定 WMI 在 SQL Server 工具中顯示伺服器狀態](../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)。  
   
-> [!NOTE]  
+> [!NOTE]
 >  因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理主控台程式的嵌入式管理單元，而不是獨立的程式，所以 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員在較新版本的 Windows 中不會作為應用程式出現。  
->   
+> 
 >  -   **Windows 10**：  
->          若要開啟  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager，請在**起始頁**，輸入 SQLServerManager12.msc (如[!INCLUDE[ssSQL14](../includes/sssql14-md.md)])。 針對先前版本的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]以較小的數字取代 12。 按一下 SQLServerManager12.msc 開啟 Configuration Manager。 組態管理員釘選到起始頁或工作列，SQLServerManager12.msc，以滑鼠右鍵按一下，然後按一下**開啟檔案位置**。 在 Windows 檔案總管 中，SQLServerManager12.msc，以滑鼠右鍵按一下，然後按一下**釘選到開始**或是**釘選到工作列**。  
+>          若要開啟  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager，請在**起始頁**，輸入 SQLServerManager12.msc (如[!INCLUDE[ssSQL14](../includes/sssql14-md.md)])。 針對先前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，以較小的數字取代 12。 按一下 SQLServerManager12.msc 開啟 Configuration Manager。 組態管理員釘選到起始頁或工作列，SQLServerManager12.msc，以滑鼠右鍵按一下，然後按一下**開啟檔案位置**。 在 Windows 檔案總管 中，SQLServerManager12.msc，以滑鼠右鍵按一下，然後按一下**釘選到開始**或是**釘選到工作列**。  
 > -   **Windows 8**：  
 >          若要開啟  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager，請在**搜尋**快速鍵**應用程式**，型別**SQLServerManager\<版本 >.msc**例如`SQLServerManager12.msc`，然後按下**Enter**。  
   
@@ -63,11 +63,11 @@ ms.locfileid: "48061898"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員可讓您建立或移除別名、變更通訊協定的使用順序，或檢視伺服器別名的屬性，其中包括：  
   
--   伺服器別名 — 用戶端連接之電腦所用的伺服器別名。  
+-   伺服器別名 - 用戶端連接之電腦所用的伺服器別名。  
   
--   通訊協定 — 組態項目所用的網路通訊協定。  
+-   通訊協定 - 設定項目所用的網路通訊協定。  
   
--   連接參數 — 網路通訊協定組態之連接位址的相關參數。  
+-   連接參數 - 網路通訊協定設定之連接位址的相關參數。  
   
  另外， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員也可讓您檢視容錯移轉叢集執行個體的相關資訊，不過，部份啟動和停止服務之類的動作，應該使用叢集管理員。  
   

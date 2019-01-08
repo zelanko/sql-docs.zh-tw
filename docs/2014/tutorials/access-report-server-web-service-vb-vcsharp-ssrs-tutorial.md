@@ -17,12 +17,12 @@ ms.assetid: cf688163-4ac0-475b-b6dd-6f2f05b553c6
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb182247c06b4600a7c029e96dfb4066ee7c2a04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44a9bd204b352ee0ab891dceb65922cc877704c7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167628"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366680"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>利用 Visual Basic 或 Visual C# 存取報表伺服器 Web 服務 (SSRS 教學課程)
   下列教學課程會示範如何從建立應用程式存取報表伺服器 Web 服務[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]或是[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)]。  
@@ -47,20 +47,20 @@ ms.locfileid: "48167628"
   
 -   足以存取報表伺服器所在電腦之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 報表伺服器 Web 服務的權限。  
   
--   安裝在您報表伺服器中的報表。 本教學課程使用範例報表 Company Sales。 如需有關範例報表的詳細資訊，請參閱 < [SQL Server Reporting Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
+-   安裝在您報表伺服器中的報表。 本教學課程使用範例報表 Company Sales。 如需有關範例報表的詳細資訊，請參閱 < [SQL Server Reporting Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
   
 > [!NOTE]  
->  安裝期間不會自動安裝範例，但是您可在任何時間加以安裝。 有關範例的詳細資訊，請參閱[SQL Server Product Samples](http://go.microsoft.com/fwlink/?LinkId=182887)。  
+>  安裝期間不會自動安裝範例，但是您可在任何時間加以安裝。 有關範例的詳細資訊，請參閱[SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887)。  
   
- **估計的時間才能完成本教學課程：** 60 分鐘  
+ **若要完成本教學課程的估計的時間：** 60 分鐘  
   
 ## <a name="tasks"></a>工作  
  [第 1 課：建立 Web 服務用戶端專案](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
   
- [第 2 課：新增 Web 參考](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
+ [第 2 課：加入 Web 參考](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
   
  [第 3 課：存取 Web 服務](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
   
- [第 4 課： 執行應用程式&#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
+ [第 4 課：執行應用程式&#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8eb5d5f003076a9a883363f5da4bb7d2bf501577
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af69191452137761cfaa49d6add0ad39ad3ccdde
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084758"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363660"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI 連接類型 (SSRS)
   若要在報表中加入來自 SAP NetWeaver® Business Intelligence 外部資料來源的資料，您必須具有以 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]類型之報表資料來源為基礎的資料集。 這個內建的資料來源類型的建構基礎為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Data Provider 1.0 for [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]的資料延伸模組。  
@@ -72,17 +72,17 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
 ##  <a name="Extended"></a> 擴充欄位屬性  
- [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 資料來源支援擴充欄位屬性。 擴充的欄位屬性是除了`Value`和`IsMissing`資料處理延伸模組所定義資料集欄位。 擴充屬性包括預先定義的屬性和自訂屬性。 預先定義的屬性是多個資料來源常用的屬性。 自訂屬性對於每個資料來源都是唯一的屬性。  
+ [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 資料來源支援擴充欄位屬性。 擴充欄位屬性是資料集欄位 `Value` 和 `IsMissing` 以外的屬性，由資料處理延伸模組所定義。 擴充屬性包括預先定義的屬性和自訂屬性。 預先定義的屬性是多個資料來源常用的屬性。 自訂屬性對於每個資料來源都是唯一的屬性。  
   
 ### <a name="working-with-field-properties"></a>使用欄位屬性  
- 在 [報表資料] 窗格中，並不會顯示擴充欄位屬性，因為您無法將項目拖曳至報表配置上。 相反地，您屬性的父欄位拖曳至報表，然後再變更 預設屬性從`Value`至您想要使用的屬性。 例如，如果 MDX 查詢設計工具中的 [Calendar Year/Month Level 01] 欄位名稱，是藉著從 [中繼資料] 窗格中將層級拖曳至 [查詢] 窗格所建立，則可以使用下列語法參照運算式中的 **Long Name** 自訂擴充屬性：  
+ 在 [報表資料] 窗格中，並不會顯示擴充欄位屬性，因為您無法將項目拖曳至報表配置上。 相反地，將該屬性的父欄位拖曳至報表，然後將預設屬性從 `Value` 變更為想要使用的屬性。 例如，如果 MDX 查詢設計工具中的 [Calendar Year/Month Level 01] 欄位名稱，是藉著從 [中繼資料] 窗格中將層級拖曳至 [查詢] 窗格所建立，則可以使用下列語法參照運算式中的 **Long Name** 自訂擴充屬性：  
   
  `=Fields!Calendar_Year_Month_Level_01("Long Name")`  
   
- 當您將滑鼠指標停留在 [中繼資料] 窗格時，擴充欄位屬性的名稱會在「工具提示」中出現。 如需有關查詢設計工具可用來瀏覽基礎資料，請參閱[SAP NetWeaver BI Query Designer User Interface&lt](sap-netweaver-bi-query-designer-user-interface.md)。  
+ 當您將滑鼠指標停留在 [中繼資料] 窗格時，擴充欄位屬性的名稱會在「工具提示」中出現。 如需有關可用來瀏覽基礎資料之查詢設計工具的詳細資訊，請參閱＜ [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md)＞。  
   
 > [!NOTE]  
->  只有當報表執行以及從其資料集擷取資料時，由資料來源提供擴充欄位屬性的值，這些值才會存在。 您可以接著參考那些`Field`利用以下描述的語法從任何運算式的屬性值。 然而，由於這些欄位是此資料提供者的特定欄位，而且不屬於報表定義語言的一部分，因此您對這些值所進行的變更並不會和報表定義儲存在一起。  
+>  只有當報表執行以及從其資料集擷取資料時，由資料來源提供擴充欄位屬性的值，這些值才會存在。 這樣，您就可以利用以下描述的語法，從任何運算式參考那些 `Field` 屬性值。 然而，由於這些欄位是此資料提供者的特定欄位，而且不屬於報表定義語言的一部分，因此您對這些值所進行的變更並不會和報表定義儲存在一起。  
   
  請使用下列其中一個語法來參考運算式中預先定義的擴充屬性：  
   
@@ -118,7 +118,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ##  <a name="Remarks"></a> 備註  
  這個資料提供者並沒有支援所有的報表傳遞模式。 這個資料處理延伸模組不支援透過資料驅動訂閱所傳遞的報表。 如需詳細資訊，請參閱[使用外部資料來源以取得訂閱者資料 &#40;資料驅動訂閱&#41;](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。  
   
- 如需詳細資訊，請參閱 [搭配 SAP NetWeaver Business Intelligence 使用 SQL Server 2008 Reporting Services](http://go.microsoft.com/fwlink/?LinkId=167352)。  
+ 如需詳細資訊，請參閱 [搭配 SAP NetWeaver Business Intelligence 使用 SQL Server 2008 Reporting Services](https://go.microsoft.com/fwlink/?LinkId=167352)。  
   
   
   
@@ -148,7 +148,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  提供查詢所產生之資料集欄位集合的相關資訊。  
   
- [Reporting Services 所支援的資料來源&#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
  提供支援每一個資料延伸模組之平台與版本的深入資訊。  
   
  

@@ -17,12 +17,12 @@ ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f18e84ac46d4647c3bcd884b98196faf58bef636
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: fb30ce3e7115bad41d26dd126b6f8b9ae9e0b934
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018093"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373946"
 ---
 # <a name="spatial-data-sql-server"></a>空間資料 (SQL Server)
   空間資料代表有關幾何物件之實體位置與形狀的資訊。 這些物件可以是點位置或更為複雜的物件，例如鄉村、道路或湖泊。  
@@ -36,7 +36,7 @@ ms.locfileid: "51018093"
  這兩種資料類型都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中實作為 .NET Common Language Runtime (CLR) 資料類型。  
   
 > [!IMPORTANT]  
->  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引進之空間功能的詳細描述和範例，請下載技術白皮書： [New Spatial Features in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407)(SQL Server 2012 的新空間功能)。  
+>  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引進之空間功能的詳細描述和範例，請下載技術白皮書： [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)(SQL Server 2012 的新空間功能)。  
   
 ##  <a name="reltasks"></a> 相關工作  
  [建立、建構及查詢幾何執行個體](create-construct-and-query-geometry-instances.md)  

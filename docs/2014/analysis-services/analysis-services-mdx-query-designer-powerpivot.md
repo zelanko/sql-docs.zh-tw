@@ -11,12 +11,12 @@ ms.assetid: b1524b18-b9f1-46d2-a34e-dd7c91ca4684
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4e96ad77f71674042b16b402f51d555b22867669
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 419db8a664d235090a68d495373eee1e0addbfff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204618"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354149"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Analysis Services MDX 查詢設計工具 (PowerPivot)
   Analysis Services 多維度運算式 (MDX) 查詢設計工具提供圖形化使用者介面，可協助您針對 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料來源建立 MDX 查詢。 MDX 圖形化查詢設計工具有兩種模式：設計模式和查詢模式。 每一種模式都會提供 [中繼資料] 窗格，您可以在這個窗格中，從選取的 Cube 中拖曳成員，以建立 MDX 查詢，擷取您要使用的資料。  
@@ -56,7 +56,7 @@ ms.locfileid: "48204618"
  不支援從檔案匯入 .mdx 查詢。  
   
 > [!NOTE]  
->  如需 MDX 的詳細資訊以及 MDX 查詢設計工具的一般資訊，請參閱《 [SQL Server 線上叢書》](http://go.microsoft.com/fwlink/?linkid=98335)中的＜MDX 查詢編輯器 (Analysis Services - 多維度資料)＞。  
+>  如需 MDX 的詳細資訊以及 MDX 查詢設計工具的一般資訊，請參閱《 [SQL Server 線上叢書》](https://go.microsoft.com/fwlink/?linkid=98335)中的＜MDX 查詢編輯器 (Analysis Services - 多維度資料)＞。  
   
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>設計模式中的圖形化 MDX 查詢設計工具工具列  
  查詢設計工具工具列會提供按鈕，協助您使用圖形化介面設計 MDX 查詢。 下表列出這些按鈕及其功能。  
@@ -67,7 +67,7 @@ ms.locfileid: "48204618"
 |**匯入**|從檔案系統上的報表定義 (.rdl) 檔案匯入現有的查詢。|  
 |![變更為 MDX 查詢檢視](media/rsqdicon-commandtypemdx.gif "變更為 MDX 查詢檢視")|切換到命令類型 MDX。|  
 |![重新整理結果資料](media/rsqdicon-refresh.gif "重新整理結果資料")|重新整理資料來源中的中繼資料。|  
-|![新增導出的成員](media/rsqdicon-addcalculatedmember.gif "新增導出的成員")|顯示 **[導出成員產生器]** 對話方塊。|  
+|![Add calculated member](media/rsqdicon-addcalculatedmember.gif "Add calculated member")|顯示 **[導出成員產生器]** 對話方塊。|  
 |![切換以顯示空的資料格](media/rsqdicon-showemptycells.gif "切換以顯示空的資料格")|在顯示或隱藏 [資料] 窗格中的空白資料格之間切換 (這相當於使用 MDX 中的 NON EMPTY 子句)。|  
 |![自動執行查詢](media/rsqdicon-autoexecute.gif "自動執行查詢")|每次進行變更時，自動執行查詢並顯示結果。 結果會顯示在 [資料] 窗格中。|  
 |![顯示彙總按鈕](media/rsqdicon-showaggregations.gif "顯示彙總按鈕")|將彙總顯示在 [資料] 窗格中。|  
@@ -105,7 +105,7 @@ ms.locfileid: "48204618"
   
 -   **當成文字編輯**  
   
--   **加入導出成員**(![加入導出的成員](media/rsqdicon-addcalculatedmember.gif "加入導出的成員"))  
+-   **加入導出成員** (![Add calculated member](media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **顯示空的資料格** (![切換以顯示空的資料格](media/rsqdicon-showemptycells.gif "切換以顯示空的資料格"))  
   

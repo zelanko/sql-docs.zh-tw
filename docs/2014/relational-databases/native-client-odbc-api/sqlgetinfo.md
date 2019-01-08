@@ -14,12 +14,12 @@ ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70877cb9fd10a02f0d8f7f3bd954a8334a3d028b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4a17b9b6599a57275524308608ac6ef18a8e18e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112192"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354877"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   下表顯示所傳回的值**SQLGetInfo**。 這些值可能會根據連接之伺服器的版本號碼而有所不同。  
@@ -208,7 +208,7 @@ ms.locfileid: "48112192"
 |SQL_USER_NAME|目前的使用者名稱。|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLGetInfo 函數](http://go.microsoft.com/fwlink/?LinkId=59354)   
+ [SQLGetInfo 函數](https://go.microsoft.com/fwlink/?LinkId=59354)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

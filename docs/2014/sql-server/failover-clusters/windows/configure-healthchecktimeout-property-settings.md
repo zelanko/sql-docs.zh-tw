@@ -10,19 +10,19 @@ ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fea49e73ad3a29606f8642ca144ffd71033e490c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: acb2a812f2e3c29a56916c671d76d91c676272d6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186440"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359611"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>設定 HealthCheckTimeout 屬性設定
   HealthCheckTimeout 設定用來指定的時間長度，以毫秒為單位，SQL Server 資源 DLL 應該等候傳回的資訊[sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)報告之前，預存程序AlwaysOn 容錯移轉叢集執行個體 (FCI) 為沒有回應。 針對逾時設定值所做的變更會立即生效，且不需要重新啟動 SQL Server 資源。  
   
--   **開始之前：**[限制事項](#Limits)、[安全性](#Security)  
+-   **開始之前：**[限制事項](#Limits)，[安全性](#Security)  
   
--   **使用下列項目設定 HeathCheckTimeout 設定：**[PowerShell](#PowerShellProcedure)、[容錯移轉叢集管理員](#WSFC)、[Transact-SQL](#TsqlProcedure)  
+-   **若要設定 HeathCheckTimeout 設定：**[PowerShell](#PowerShellProcedure)，[容錯移轉叢集管理員](#WSFC)， [Transact SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48186440"
 3.  使用  `Get-ClusterResource` cmdlet 尋找[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資源，然後使用`Set-ClusterParameter`cmdlet 來設定**HealthCheckTimeout**容錯移轉叢集執行個體的屬性。  
   
 > [!TIP]  
->  每次開啟新的 PowerShell 視窗時，您需要匯入`FailoverClusters`模組。  
+>  每次開啟新的 PowerShell 視窗時，都需要匯入 `FailoverClusters` 模組。  
   
 ### <a name="example-powershell"></a>範例 (PowerShell)  
  下列範例會將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源 "`SQL Server (INST1)`" 上的 HealthCheckTimeout 設定變更為 60000 毫秒。  
@@ -60,11 +60,11 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 ### <a name="related-content-powershell"></a>相關內容 (PowerShell)  
   
--   [Clustering and High-Availability](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (叢集和高可用性 - 容錯移轉叢集和網路負載平衡團隊部落格)  
+-   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (叢集和高可用性 - 容錯移轉叢集和網路負載平衡團隊部落格)  
   
--   [在容錯移轉叢集上開始使用 Windows PowerShell](http://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [在容錯移轉叢集上開始使用 Windows PowerShell](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [叢集資源命令和對等的 Windows PowerShell 指令程式](http://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [叢集資源命令和對等的 Windows PowerShell 指令程式](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
 ##  <a name="WSFC"></a> 使用容錯移轉叢集管理員嵌入式管理單元  
  **設定 HealthCheckTimeout 設定**  

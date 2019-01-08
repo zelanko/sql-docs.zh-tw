@@ -18,12 +18,12 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c0c65216c2a74653cb2752d0183b3d0635a6c3cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 320737c3a84eb1f01899c14dfb2f4c1eefb60856
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187958"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354465"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>地圖 (報表產生器及 SSRS)
   若要針對地理背景將商務資料視覺化，您可以將地圖加入至報表。 您選取的地圖類型取決於您想要在報表中傳達的資訊而定。 您可以加入只顯示位置的地圖，或是根據某區域住家數而變動泡泡大小的泡泡地圖，或者是根據每一家商店最有利潤的產品而變動標記樣式的標記地圖，或者是顯示商店之間之路線的線路地圖。  
@@ -32,7 +32,7 @@ ms.locfileid: "48187958"
   
  ![rs_MapElements](../media/rs-mapelements.gif "rs_MapElements")  
   
- 若要立即開始使用地圖，請參閱[教學課程：地圖報表 &#40;報表產生器&#41;](../tutorial-map-report-report-builder.md) 或[報表範例 (報表產生器和 SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)。  
+ 若要立即開始使用地圖，請參閱[教學課程：地圖報表&#40;報表產生器&#41;](../tutorial-map-report-report-builder.md)或是[報表 （報表產生器及 SSRS） 的範例](https://go.microsoft.com/fwlink/?LinkId=198283)。  
   
 > [!NOTE]  
 >  您可以將地圖當做報表組件，與報表分開儲存。  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -49,11 +49,11 @@ ms.locfileid: "48187958"
   
 -   收集您必須擁有的資訊來指定空間資料來源、空間資料、分析資料來源與分析資料。 這包含空間資料來源的連接字串，來指定您需要之空間資料的類型，並確認您的報表資料包含讓空間資料和分析資料產生關聯的符合欄位。  
   
--   執行「地圖精靈」，以便將地圖加入至報表中。 這會將第一個地圖圖層加入至地圖中。 執行「地圖圖層精靈」來建立其他圖層或修改現有的圖層。 這些精靈提供一個簡單的入門方式。 如需詳細資訊，請參閱[地圖精靈和地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
+-   執行「地圖精靈」，以便將地圖加入至報表中。 這會將第一個地圖圖層加入至地圖中。 執行「地圖圖層精靈」來建立其他圖層或修改現有的圖層。 這些精靈提供一個簡單的入門方式。 如需詳細資訊，請參閱 [地圖精靈與地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
   
 -   預覽報表中的地圖之後，您可能會想要調整地圖檢視、變更您的資料更改每個圖層顯示的方式、提供圖例來協助使用者解譯資料，以及調整解析度來提供使用者良好的檢視經驗。  
   
- 如需詳細資訊，請參閱[規劃地圖報表 &#40;報表產生器及 SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [規劃地圖報表 &#40;報表產生器及 SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)。  
   
 
   
@@ -83,13 +83,13 @@ ms.locfileid: "48187958"
     > [!NOTE]  
     >  這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地圖功能會使用美國人口普查局 ([http://www.census.gov/](http://www.census.gov/)) 提供的 TIGER/Line Shapefiles 資料。 TIGER/Line 形狀檔是 Census MAF/TIGER 資料庫中選定地理和製圖資訊的擷取內容。 TIGER/Line 形狀檔是由美國人口普查局所免費提供。 如需有關 TIGER/Line Shapefile 的詳細資訊，請參閱 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger) \(英文\)。 TIGER/Line 形狀檔中的界限資訊只能當做統計資料收集和表格製作的用途，其統計用途的描述和指定並不構成司法權或擁有權利的判定，也不屬於法律上的土地描述。 Census TIGER 和 TIGER/Line 是美國人口普查局的註冊商標。  
   
--   **ESRI 形狀檔：** ESRI 形狀檔包含與環境系統研究協會 (Environmental Systems Research Institute, Inc.，ESRI)形狀檔空間資料格式相容的資料。 ESRI 形狀檔指的是一組檔案。 .shp 檔案中的資料會指定地理或幾何圖案。 .dbf 檔案中的資料會提供這些圖案的屬性。 若要在設計檢視中檢視地圖或是從報表伺服器執行地圖，這兩種檔案必須位於相同的資料夾。 當您從本機檔案系統的 .shp 檔案加入空間資料時，空間資料會內嵌在您的報表中。 若要在執行階段動態擷取空間資料，請將形狀檔上傳至報表伺服器，然後將其指定為空間資料的來源。 如需詳細資訊，請參閱 [尋找地圖的 ESRI 形狀檔](http://go.microsoft.com/fwlink/?linkid=178814)。  
+-   **ESRI 形狀檔：** ESRI 形狀檔包含與環境系統研究協會 (Environmental Systems Research Institute, Inc.，ESRI)形狀檔空間資料格式相容的資料。 ESRI 形狀檔指的是一組檔案。 .shp 檔案中的資料會指定地理或幾何圖案。 .dbf 檔案中的資料會提供這些圖案的屬性。 若要在設計檢視中檢視地圖或是從報表伺服器執行地圖，這兩種檔案必須位於相同的資料夾。 當您從本機檔案系統的 .shp 檔案加入空間資料時，空間資料會內嵌在您的報表中。 若要在執行階段動態擷取空間資料，請將形狀檔上傳至報表伺服器，然後將其指定為空間資料的來源。 如需詳細資訊，請參閱 [尋找地圖的 ESRI 形狀檔](https://go.microsoft.com/fwlink/?linkid=178814)。  
   
--   **儲存在資料庫中的 SQL Server 空間資料：** 您可以使用查詢來指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫中的 `SQLGeometry` 或 `SQLGeography` 資料類型。 如需詳細資訊，請參閱《 [SQL Server 線上叢書](../../relational-databases/spatial/spatial-data-types-overview.md) 》中的 [空間資料類型概觀](http://go.microsoft.com/fwlink/?linkid=98335)。  
+-   **儲存在資料庫中的 SQL Server 空間資料：** 您可以使用查詢來指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫中的 `SQLGeometry` 或 `SQLGeography` 資料類型。 如需詳細資訊，請參閱《 [SQL Server 線上叢書](../../relational-databases/spatial/spatial-data-types-overview.md) 》中的 [空間資料類型概觀](https://go.microsoft.com/fwlink/?linkid=98335)。  
   
      當您在查詢設計工具中查看結果集時，每一列空間資料都視為一個單位，並儲存在單一地圖元素中。 例如，如果有多個點定義在結果集的一個資料列中，顯示屬性會套用到該地圖元素中的所有點。  
   
--   **您所建立的自訂位置：** 您可以將位置當做內嵌點手動加入至內嵌點圖層。 如需詳細資訊，請參閱 <<c0> [ 將自訂位置加入至對應&#40;報表產生器及 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)。</c0>  
+-   **您所建立的自訂位置：** 您可以將位置當做內嵌點手動加入至內嵌點圖層。 如需詳細資訊，請參閱 [將自訂位置加入至地圖 &#40;報表產生器及 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)。  
   
 #### <a name="spatial-data-in-design-view"></a>設計檢視中的空間資料  
  在 [設計] 檢視中，報表處理器會顯示範例空間資料來協助您設計地圖圖層。 您所看到的資料取決於空間資料的可用性。  
@@ -172,9 +172,9 @@ ms.locfileid: "48187958"
   
 -   是否要使用安全連線從 Bing Map Web 服務中擷取圖格。  
   
- 如需逐步指示，請參閱 <<c0> [ 加入、 變更或刪除地圖或地圖圖層&#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。</c0>  
+ 如需逐步指示，請參閱 [加入、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
- 如需有關圖格的詳細資訊，請參閱 [Bing Maps 圖格系統](http://go.microsoft.com/fwlink/?linkid=147315)。 如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](http://go.microsoft.com/fwlink/?LinkId=151371) 和 [隱私權聲明](http://go.microsoft.com/fwlink/?LinkId=151372)。  
+ 如需有關圖格的詳細資訊，請參閱 [Bing Maps 圖格系統](https://go.microsoft.com/fwlink/?linkid=147315)。 如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](https://go.microsoft.com/fwlink/?LinkId=151371) 和 [隱私權聲明](https://go.microsoft.com/fwlink/?LinkId=151372)。  
   
  
   
@@ -197,7 +197,7 @@ ms.locfileid: "48187958"
   
  ![rsMapLayerZone](../media/rsmaplayerzone.gif "rsMapLayerZone")  
   
- 如需有關地圖圖層的詳細資訊，請參閱 <<c0> [ 加入、 變更或刪除地圖或地圖圖層&#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。</c0>  
+ 如需地圖圖層的詳細資訊，請參閱 [加入、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
 ### <a name="varying-display-properties-for-points-lines-and-polygons"></a>更改點、線條與多邊形的顯示屬性  
  您可以使用圖層的規則，或者針對個別元素，設定地圖元素的顯示選項。 例如，您可以設定圖層上所有點的顯示屬性，或者您可以設定圖層上不論是否內嵌之所有點的顯示選項，或者您可以覆寫特定內嵌點的顯示屬性設定。  
@@ -244,36 +244,36 @@ ms.locfileid: "48187958"
   
  檢視地圖報表時，如果看不到您所要的結果，根本原因可能來自各種問題。 為了協助您區隔以及了解每一個問題，一次使用一個圖層會有協助。 使用 [地圖] 窗格選取圖層並輕鬆切換其可見性。  
   
- 如需地圖報表問題的詳細資訊，請參閱[報表疑難排解：地圖報表 &#40;報表產生器及 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ 如需地圖報表問題的詳細資訊，請參閱[報表疑難排解：將報表對應&#40;報表產生器及 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
 
   
 ##  <a name="HowTo"></a> 如何主題  
  本節列出的程序可以為您逐步示範，如何在報表中使用地圖和地圖圖層。  
   
--   [加入、 變更或刪除地圖或地圖圖層&#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+-   [加入、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
--   [變更地圖圖例、 色階與相關的規則&#40;報表產生器及 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+-   [變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
--   [將自訂位置加入至對應&#40;報表產生器及 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+-   [將自訂位置加入至地圖 &#40;報表產生器及 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  
   
 ##  <a name="Section"></a> 本節內容  
- [規劃地圖報表&#40;報表產生器及 SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
+ [規劃地圖報表 &#40;報表產生器及 SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
   
  [地圖精靈與地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
- [自訂的資料和地圖或地圖圖層顯示&#40;報表產生器及 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [自訂地圖或地圖圖層的資料和顯示 &#40;報表產生器及 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
- [加入、 變更或刪除地圖或地圖圖層&#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [加入、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
- [變更地圖圖例、 色階與相關的規則&#40;報表產生器及 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
- [將自訂位置加入至對應&#40;報表產生器及 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+ [將自訂位置加入至地圖 &#40;報表產生器及 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [報表疑難排解： 地圖報表&#40;報表產生器及 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [報表疑難排解：將報表對應&#40;報表產生器及 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

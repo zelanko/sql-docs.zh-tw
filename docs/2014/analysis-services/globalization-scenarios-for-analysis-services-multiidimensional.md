@@ -19,12 +19,12 @@ ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e88100d935898e69ac924ecb5a44ee562079e0dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45b0b733ccc6e42e1f4a63ba9c7a2f615d2b55eb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063098"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357868"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services 多維度的全球化案例
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 儲存及操作多國語言資料和表格式和多維度資料模型中的中繼資料。 資料是以 Unicode (UTF-16) 儲存，也就是儲存在使用 Unicode 編碼的字元集中。 如果您將 ANSI 資料載入資料模型，則會使用對等的 Unicode 字碼指標來儲存字元。  
@@ -39,13 +39,13 @@ ms.locfileid: "48063098"
   
      標題和屬性成員可以翻譯表示 (僅限多維度模型)。 您可以定義一個或多個翻譯，然後再使用地區設定識別碼來決定要傳回用戶端的翻譯。 如需詳細資訊，請參閱下面的 [功能](#bkmk_features) 。  
   
--   錯誤、 警告和參考用訊息，從傳回[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]引擎 (msmdsrv) 已當地語系化為 Office 和 Office 365 所支援的 43 種語言。 取得特定語言的訊息不需要進行設定。 用戶端應用程式的地區設定會決定要傳回的字串。  
+-   從 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 引擎 (msmdsrv) 傳回的錯誤、警告和參考訊息已當地語系化為 Office 和 Office 365 支援的 43 種語言。 取得特定語言的訊息不需要進行設定。 用戶端應用程式的地區設定會決定要傳回的字串。  
   
 -   組態檔 (msmdsrv.ini) 和 AMO PowerShell 只有英文版。  
   
 -   記錄檔會包含英文和當地語系化訊息的混合 (假設您在 Analysis Services 執行所在的 Windows Server 上已安裝語言套件)。  
   
--   [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 與 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]等文件與工具已翻譯成下列語言：簡體中文、繁體中文、法文、德文、義大利文、日文、韓文、葡萄牙文 (巴西)、俄文與西班牙文。 若要使用的特定語言版本的工具，安裝 SQL Server 的特定語言版本 （例如，安裝德文版的 SQL Server 以取得德文的 Management Studio） 或執行的獨立安裝程式，以目標語言[!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]。  
+-   文件和工具 (例如 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 和 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]) 已翻譯成下列語言：簡體中文、繁體中文、法文、德文、義大利文、日文、韓文、葡萄牙文 (巴西)、俄文和西班牙文。 若要使用特定語言版本的工具，請安裝特定語言版本的 SQL Server (例如，安裝德文版 SQL Server 以取得德文版 Management Studio)，或執行目標語言之 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]的獨立安裝程式。  
   
  Analysis Services 可讓您在整個物件階層中獨立設定語言、定序和翻譯。  
   
@@ -53,16 +53,16 @@ ms.locfileid: "48063098"
   
 -   一個提供多個翻譯標題的資料模型，讓欄位名稱和值可以使用者選擇的語言顯示。 針對加拿大、比利時或瑞士等雙語系國家/地區的營運公司，在不同的用戶端和伺服器應用程式之間支援多種語言是標準編碼需求。 在這種情況下，需要透過翻譯和貨幣轉換。 如需詳細資訊和連結，請參閱下面的 [功能](#bkmk_features) 。  
   
--   開發和生產環境位於不同的國家/地區。 在一個國家/地區開發方案，再部署至另一個國家/地區，變得愈來愈普遍。 如果您負責準備將使用某種語言開發的方案，部署至使用不同語言套件的伺服器，就必須了解如何設定語言和定序屬性。 設定這些屬性可讓您覆寫繼承並取自原始主機系統的預設值。 如需詳細資訊，請參閱下面的 [Languages and Collations &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) 。  
+-   開發和生產環境位於不同的國家/地區。 在一個國家/地區開發方案，再部署至另一個國家/地區，變得愈來愈普遍。 如果您負責準備將使用某種語言開發的方案，部署至使用不同語言套件的伺服器，就必須了解如何設定語言和定序屬性。 設定這些屬性可讓您覆寫繼承並取自原始主機系統的預設值。 如需詳細資訊，請參閱下面的 [語言和定序 &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) 。  
   
 ##  <a name="bkmk_features"></a> 建立全球化多維度方案的功能  
  [!INCLUDE[applies](../includes/applies-md.md)] 僅限多維度資料模型  
   
- 在用戶端層級，全球化應用程式使用或操作[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]多維度資料可以使用中的多語系和多重文化功能[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
+ 在用戶端層級，使用或操作 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多維度資料的全球化應用程式可使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的多語系和多重文化功能：  
   
--   [翻譯&#40;Analysis Services&#41; ](translations-analysis-services.md)用來內嵌多個標題的單一物件，其中每個翻譯的字串可以其他翻譯並存。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，為 Cube、量值、維度和屬性，定義標題、描述和帳戶類型的翻譯。 連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體時，您可以提供地區設定識別碼，從已定義翻譯的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件中擷取資料和中繼資料。  
+-   [翻譯&#40;Analysis Services&#41; ](translations-analysis-services.md)用來內嵌多個標題的單一物件，其中每個翻譯的字串可以其他翻譯並存。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ，為 Cube、量值、維度和屬性，定義標題、描述和帳戶類型的翻譯。 連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體時，您可以提供地區設定識別碼，從已定義翻譯的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件中擷取資料和中繼資料。  
   
-     您可以在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程的[第 9 課：定義檢視方塊和翻譯](lesson-9-defining-perspectives-and-translations.md)中，找到如何使用這項功能的課程。  
+     課程中的，有關如何使用這項功能可在[第 9 課：定義檢視方塊和翻譯](lesson-9-defining-perspectives-and-translations.md)的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]教學課程。  
   
 -   [貨幣轉換&#40;Analysis Services&#41; ](currency-conversions-analysis-services.md)是透過特製化轉換含有貨幣資料的量值的 MDX 指令碼。 您可以使用 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 中的 [商業智慧精靈] 來產生 MDX 指令碼，該指令碼使用維度、屬性和量值群組中的資料和中繼資料組合，來轉換含有貨幣資料的量值。  
   
@@ -70,15 +70,15 @@ ms.locfileid: "48063098"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[語言和定序&#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|指定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的預設語言和 Windows 定序。 您的選擇會影響 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 所管理的資料和中繼資料。|  
-|[翻譯&#40;Analysis Services&#41;](translations-analysis-services.md)|定義翻譯[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫和資料庫所包含的物件。 本主題說明 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 如何解析來自用戶端應用程式的翻譯資料和中繼資料要求。|  
+|[語言和定序 &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|指定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的預設語言和 Windows 定序。 您的選擇會影響 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]所管理的資料和中繼資料。|  
+|[翻譯&#40;Analysis Services&#41;](translations-analysis-services.md)|定義 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫和資料庫所包含之物件的翻譯。 本主題說明 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 如何解析來自用戶端應用程式的翻譯資料和中繼資料要求。|  
 |[貨幣轉換&#40;Analysis Services&#41;](currency-conversions-analysis-services.md)|使用 [商業智慧精靈] 定義貨幣轉換。|  
-|[全球化秘訣和最佳作法&#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|檢閱有助於避免發生與多語系資料相關之問題的幾個設計和編碼作法。|  
+|[全球化秘訣和最佳做法 &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|檢閱有助於避免發生與多語系資料相關之問題的幾個設計和編碼作法。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Windows 應用程式的國際化](/windows/desktop/Intl/international-support)   
- [Go Global 開發人員中心](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [使用地區設定為基礎的自動調整設計撰寫 Windows 市集應用程式](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [開發通用 Windows 應用程式使用 C# 和 XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [Go Global 開發人員中心](https://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [使用以地區設定為基礎的自動調整設計撰寫 Windows 市集應用程式](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [使用 C# 和 XAML 開發通用 Windows 應用程式](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

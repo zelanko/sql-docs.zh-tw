@@ -14,12 +14,12 @@ ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f2d6612b50fc3bd9b07231c42363a8e1e6889e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 35d8f9cdda7c3b85c77d290f9c793640705438e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148718"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359710"
 ---
 # <a name="availability-group-is-offline"></a>可用性群組為離線
     
@@ -29,7 +29,7 @@ ms.locfileid: "48148718"
 |-|-|  
 |**原則名稱**|可用性群組線上狀態|  
 |**問題**|可用性群組為離線。|  
-|**類別目錄**|**嚴重**|  
+|**分類**|**嚴重**|  
 |**Facet**|可用性群組|  
   
 ## <a name="description"></a>描述  
@@ -38,7 +38,7 @@ ms.locfileid: "48148718"
  當可用性群組的叢集資源為線上或可用性群組有主要複本時，原則為狀況良好。  
   
 > [!NOTE]  
->  在此 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]版本中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [Availability group is offline](http://go.microsoft.com/fwlink/p/?LinkId=220850) (可用性群組為離線)。  
+>  在此 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]版本中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [Availability group is offline](https://go.microsoft.com/fwlink/p/?LinkId=220850) (可用性群組為離線)。  
   
 ## <a name="possible-causes"></a>可能的原因  
  這個問題可能是由於裝載主要複本的伺服器執行個體失敗或由於 Windows Server 容錯移轉叢集 (WSFC) 可用性群組資源離線所造成。 造成可用性群組離線的可能原因如下：  

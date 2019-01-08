@@ -18,18 +18,18 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 117391f9cbefeb7ed7fbc76d2c1d93376e5a1fa6
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 29868763c34944b0a33953e7a56c3d365afcd4d5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085334"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363920"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>設定可用性複本的備份 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell，針對 AlwaysOn 可用性群組設定次要複本的備份。  
   
 > [!NOTE]  
->  在次要複本上備份的簡介，請參閱 <<c0> [ 作用中次要複本： 備份在次要複本 （AlwaysOn 可用性群組） 上](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+>  在次要複本上備份的簡介，請參閱[作用中次要複本：在次要複本 （AlwaysOn 可用性群組） 上備份](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
  
   
@@ -78,7 +78,7 @@ ms.locfileid: "49085334"
      指定當您選擇要執行備份的複本時，您希望備份作業忽略可用性複本的角色。 請注意，備份作業可能會評估其他因素，例如每個可用性複本的備份優先權，搭配其操作狀態和連接狀態。  
   
     > [!IMPORTANT]  
-    >  不會強制執行自動備份喜好設定。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 自動備份喜好設定對於特定備份沒有任何影響。 如需詳細資訊，請參閱本主題稍後的＜ [後續操作：設定次要複本的備份之後](#FollowUp) ＞。  
+    >  不會強制執行自動備份喜好設定。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 自動備份喜好設定對於特定備份沒有任何影響。 如需詳細資訊，請參閱[待處理：設定次要複本的備份之後](#FollowUp)本主題稍後的。  
   
 6.  您可以使用 **[複本備份優先權]** 方格來變更可用性複本的備份優先權。 此方格顯示裝載可用性群組複本的每個伺服器執行個體的目前備份優先權。 方格資料行如下所示：  
   
@@ -146,7 +146,7 @@ ms.locfileid: "49085334"
      指定當您選擇要執行備份的複本時，您希望備份作業忽略可用性複本的角色。 請注意，備份作業可能會評估其他因素，例如每個可用性複本的備份優先權，搭配其操作狀態和連接狀態。  
   
     > [!IMPORTANT]  
-    >  不會強制執行 `AutomatedBackupPreference`。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 自動備份喜好設定對於特定備份沒有任何影響。 如需詳細資訊，請參閱本主題稍後的＜ [後續操作：設定次要複本的備份之後](#FollowUp) ＞。  
+    >  不會強制執行 `AutomatedBackupPreference`。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 自動備份喜好設定對於特定備份沒有任何影響。 如需詳細資訊，請參閱[待處理：設定次要複本的備份之後](#FollowUp)本主題稍後的。  
   
      例如，下列命令會將可用性群組 `MyAg` 的 `AutomatedBackupPreference` 屬性設定為 `SecondaryOnly`。 這個可用性群組中資料庫的自動備份永遠不會在主要複本上進行，但是會重新導向至備份優先權設定最高的次要複本。  
   
@@ -165,14 +165,14 @@ ms.locfileid: "49085334"
   
 -   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="FollowUp"></a> 後續操作：設定次要複本的備份之後  
+##  <a name="FollowUp"></a> 後續操作：設定次要複本上的備份之後  
  若要針對給定可用性群組將自動備份喜好設定納入考量，您必須在備份優先權大於零 (>0) 之裝載可用性複本的每個伺服器執行個體上，針對可用性群組中的資料庫編寫備份作業的指令碼。 若要判斷目前的複本是否為慣用的備份複本，請在您的備份指令碼中使用 [sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) 函數。 如果目前伺服器執行個體所裝載的可用性複本是慣用的備份複本，此函數會傳回 1。 如果不是，函數會傳回 0。 透過在每個可用性複本上執行簡單的指令碼來查詢這個函數，您就可以判斷哪個複本應該執行給定的備份作業。 例如，備份作業指令碼的一般程式碼片段看起來可能像是：  
   
 ```  
 IF (NOT sys.fn_hadr_backup_is_preferred_replica(@DBNAME))  
 BEGIN  
-      Select ‘This is not the preferred replica, exiting with success’;  
-      RETURN 0 – This is a normal, expected condition, so the script returns success  
+      Select 'This is not the preferred replica, exiting with success';  
+      RETURN 0 - This is a normal, expected condition, so the script returns success  
 END  
 BACKUP DATABASE @DBNAME TO DISK=<disk>  
    WITH COPY_ONLY;  
@@ -181,7 +181,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
  使用這類邏輯編寫備份作業的指令碼，可讓您指定備份作業以相同排程在每個可用性複本上執行。 每一個作業都會查看相同的資料，以判斷應該執行哪一個作業，如此一來，只有其中一個排程作業會實際進行到備份階段。  萬一發生容錯移轉，指令碼或作業都不需要修改。 此外，如果您重新設定可用性群組以加入可用性複本，備份作業管理只需要複製或排程備份作業。 如果您移除可用性複本，只需從原先裝載該複本的伺服器執行個體刪除備份作業。  
   
 > [!TIP]  
->  如果您使用[維護計畫精靈](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)來建立指定的備份作業，此作業就會自動包含呼叫並檢查 **sys.fn_hadr_backup_is_preferred_replica** 函數的指令碼邏輯。 不過，此備份作業不會傳回「這不是慣用的複本…」 訊息。請務必在裝載可用性群組之可用性複本的每一個伺服器執行個體上，為每個可用性資料庫建立作業。  
+>  如果您使用[維護計畫精靈](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)來建立指定的備份作業，此作業就會自動包含呼叫並檢查 **sys.fn_hadr_backup_is_preferred_replica** 函數的指令碼邏輯。 不過，此備份作業不會傳回「這不是慣用的複本...」訊息。請務必在裝載可用性群組之可用性複本的每一個伺服器執行個體上，為每個可用性資料庫建立作業。  
   
 ##  <a name="ForInfoAboutBuPref"></a> 若要取得有關備份喜好設定的資訊  
  下列檢視表可用於取得次要備份的相關資訊。  
@@ -195,12 +195,12 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 團隊部落格： 官方 SQL Server AlwaysOn 團隊部落格](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [ 使用中次要： 在次要複本 （AlwaysOn 可用性群組） 上的備份](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [ 使用中次要：在次要複本 （AlwaysOn 可用性群組） 上的備份](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

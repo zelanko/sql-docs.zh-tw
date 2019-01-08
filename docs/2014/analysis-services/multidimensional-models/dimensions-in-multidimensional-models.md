@@ -15,12 +15,12 @@ ms.assetid: 2b62b05c-00fd-4e60-b77f-f707ba83a19b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6fb601bdbf190c84401c64f5f469bc6b5b6956ef
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ffa8ddeeb208be956fc072d45f10edacf97b52be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148263"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365680"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>多維度模型中的維度
   資料庫維度是相關物件的集合 (稱為屬性)，可用來提供與一或多個 Cube 中的事實資料有關的資訊。 例如，產品維度中的典型屬性可能是產品名稱、產品類別目錄、產品線、產品尺寸和產品價格； 這些物件會繫結到資料來源檢視中一或多個資料表內的一或多個資料行， 依預設，這些屬性可以顯示為屬性階層，而且可用來了解 Cube 中的事實資料。 屬性可以組成使用者自訂階層，在使用者瀏覽 Cube 中的資料時，提供導覽路徑來協助使用者。  
@@ -28,7 +28,7 @@ ms.locfileid: "50148263"
  Cube 包含使用者的事實資料分析所根據的所有維度； Cube 中資料庫維度的執行個體稱為 Cube 維度，與 Cube 中的一個或多個量值群組相關。 資料庫維度可在 Cube 中使用多次。 例如，事實資料表可以有多個時間相關的事實，而且可以定義個別 Cube 維度來協助分析每一個時間相關的事實； 但是，只需要存在一個時間相關的資料庫維度，這也表示只需要存在一個時間相關的關聯式資料庫資料表，就可以支援以時間為根據的多個 Cube 維度。  
   
 > [!NOTE]  
->  如需了解與維度設計相關的效能問題，請參閱 [SQL Server 2008 R2 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=306717)(SQL Server 2008 R2 Analysis Services 效能指南)。  
+>  如需了解與維度設計相關的效能問題，請參閱 [SQL Server 2008 R2 Analysis Services Performance Guide](https://go.microsoft.com/fwlink/?LinkId=306717)(SQL Server 2008 R2 Analysis Services 效能指南)。  
   
 ## <a name="defining-dimensions-attributes-and-hierarchies"></a>定義維度、屬性和階層  
  定義資料庫和 Cube 維度、屬性和階層最簡單的方法，就是使用 [Cube 精靈]，在定義 Cube 的同時建立維度。 Cube 精靈會根據精靈在資料來源檢視中找到的維度資料表，或您指定要用於 Cube 的維度資料表，來建立維度。 然後，精靈會建立資料庫維度，並將其加入新的 Cube，以建立 Cube 維度。  

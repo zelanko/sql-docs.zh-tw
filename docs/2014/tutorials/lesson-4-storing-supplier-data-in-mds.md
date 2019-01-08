@@ -1,5 +1,5 @@
 ---
-title: 第 4 課： 在 MDS 中儲存供應商資料 |Microsoft Docs
+title: 第 4 課：在 MDS 中儲存供應商資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ ms.assetid: bacd9eaf-4d12-4f25-aec7-d785dec1b623
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 363b92c975bd80f4d3298a2082b6cedfee9b1263
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84f36949f8df0d2c54826795bbec9507986fc23a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048819"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358440"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>第 4 課：在 MDS 中儲存供應商資料
   Master Data Services (MDS) 是用於主要資料管理的 SQL Server 解決方案。 主要資料管理 (MDM) 會描述組織為了探索及定義非交易之資料清單所付出的心力。  
   
- 模型是 Master Data Services 中的最高組織層級，而且會組織主要資料的結構。 您的 MDS 實作可以有一個或多個模型，其中每個模型都會將類似資料分組在一起。 主要資料通常以四種方式分類：人員、位置、東西或概念。 例如，您可以建立一個 Product 模型來容納產品相關的資料，或是建立一個 Customer 模型來容納客戶相關的資料。 請參閱[模型 (Master Data Services)](http://msdn.microsoft.com/library/ee633746.aspx)如需詳細資訊。  
+ 模型是 Master Data Services 中的最高組織層級，而且會組織主要資料的結構。 您的 MDS 實作可以有一個或多個模型，其中每個模型都會將類似資料分組在一起。 主要資料通常以四種方式分類：人員、位置、東西或概念。 例如，您可以建立一個 Product 模型來容納產品相關的資料，或是建立一個 Customer 模型來容納客戶相關的資料。 請參閱[模型 (Master Data Services)](https://msdn.microsoft.com/library/ee633746.aspx)如需詳細資訊。  
   
- 模型可以包含一個或多個實體。 每個實體都有屬性 (資料行) 和成員 (資料列)。 每個資料列都包含主要資料。 在這一課，您會建立一個 Suppliers 模型，此模型包含名為 Supplier 和 State 的兩個實體。 Supplier 實體將具有下列屬性：Code、Name、Contact First Name、Contact Last Name、Contact Email Address、Address Line、City、State、Zip 和 Country。 請參閱[屬性 (Master Data Services)](http://msdn.microsoft.com/library/ee633745.aspx)如需詳細資料屬性的相關一般。 Code 和 Name 屬性會對應至 Cleansed and Matched Suppliers Excel 檔案中的 [SupplierID] 和 [Supplier Name] 資料行。  
+ 模型可以包含一個或多個實體。 每個實體都有屬性 (資料行) 和成員 (資料列)。 每個資料列都包含主要資料。 在這一課，您會建立一個 Suppliers 模型，此模型包含名為 Supplier 和 State 的兩個實體。 Supplier 實體將具有下列屬性：Code、Name、Contact First Name、Contact Last Name、Contact Email Address、Address Line、City、State、Zip 和 Country。 請參閱[屬性 (Master Data Services)](https://msdn.microsoft.com/library/ee633745.aspx)如需詳細資料屬性的相關一般。 Code 和 Name 屬性會對應至 Cleansed and Matched Suppliers Excel 檔案中的 [SupplierID] 和 [Supplier Name] 資料行。  
   
  定義域屬性是由其他實體成員填入其值的屬性。 網域屬性可防止使用者輸入無效的屬性值。 屬性值只能從另一個實體所擴展的下拉式清單來選取。 在本教學課程中，Supplier 實體的 State 屬性是包含 State 實體中之值的定義域屬性。 您只能將 Supplier 實體的 State 屬性值變更為 State 實體中的其中一個值。 請參閱[網域型屬性](../master-data-services/domain-based-attributes-master-data-services.md)如需詳細資訊。  
   
@@ -52,6 +52,6 @@ ms.locfileid: "48048819"
 8.  建立及使用衍生的階層之間的網域屬性關聯性**供應商**實體並**狀態**實體 （Supplier 實體的 State 屬性為 State 實體的類型) 使用**主資料管理員**。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 1：使用主資料管理員建立供應商模型](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
+ [工作 1:建立使用主資料管理員的供應商模型](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
   
   

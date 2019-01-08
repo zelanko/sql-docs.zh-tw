@@ -15,15 +15,15 @@ ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 20bf707508b8ae5cc8ad7a491d45d151eb806f1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e65ae16a2297c0f54f16e31e770623c8edd80639
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229828"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376800"
 ---
 # <a name="custom-report-item-class-libraries"></a>自訂報表項目類別庫
-  自訂報表項目使用 `Microsoft.ReportDesigner` 命名空間中的類別。 用於實作自訂報表項目的類別可以分成兩個主要類別：設計為支援自訂報表項目基礎結構的唯一類別，以及封裝相關報表定義語言 (RDL) 元素之功能的 Managed 包裝函數類別。 如需如何使用這些類別的程式碼範例，請參閱 [SQL Server Reporting Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
+  自訂報表項目使用 `Microsoft.ReportDesigner` 命名空間中的類別。 用於實作自訂報表項目的類別可以分成兩個主要類別：設計為支援自訂報表項目基礎結構的唯一類別，以及封裝相關報表定義語言 (RDL) 元素之功能的 Managed 包裝函數類別。 如需如何使用這些類別的程式碼範例，請參閱 [SQL Server Reporting Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
   
 ## <a name="custom-report-item-infrastructure-classes"></a>自訂報表項目基礎結構類別  
  下列類別可用於實作自訂報表項目。  
@@ -48,7 +48,7 @@ ms.locfileid: "48229828"
 |`AltReportItem`|替代報表項目物件，用於不支援自訂報表項目執行階段控制項之處。|  
 |`Style`|自訂報表項目的樣式屬性。|  
 |`Adornment`|用於控制項互動式編輯的裝飾視窗。|  
-|`Site`|`ISite`的元件。|  
+|`Site`|元件的 `ISite`。|  
 |`DesignerVerbCollection`|控制項捷徑功能表的自訂動詞命令陣列。|  
   
 #### <a name="public-methods"></a>公用方法  

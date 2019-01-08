@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -17,12 +16,12 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 34270698b6035f7646d9482a82746c4ccff09d78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca170bbae969db8610e1e0ec6e61e3e68fa905f4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132408"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377630"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>封裝執行的疑難排解工具
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的功能與工具，可讓您在完成及部署封裝之後，用以疑難排解封裝的執行問題。  
@@ -49,13 +48,13 @@ ms.locfileid: "48132408"
 ## <a name="troubleshoot-bad-data-by-using-error-outputs"></a>使用錯誤輸出針對不正確的資料進行疑難排解  
  您可以使用可用於許多資料流程元件的錯誤輸出，將包含錯誤的資料列導向不同目的地，以便稍後進行分析。  
   
--   **使用錯誤輸出擷取不正確的資料**。 將包含錯誤的資料列傳送到不同目的地，例如錯誤資料表或文字檔。 錯誤輸出會自動加入兩個數值資料行，一個包含造成資料列遭到拒絕的錯誤編號，另一個包含發生錯誤之資料行的識別碼。 如需詳細資訊，請參閱[處理資料中的錯誤](../data-flow/error-handling-in-data.md)。  
+-   **使用錯誤輸出擷取不正確的資料**。 將包含錯誤的資料列傳送到不同目的地，例如錯誤資料表或文字檔。 錯誤輸出會自動加入兩個數值資料行，一個包含造成資料列遭到拒絕的錯誤編號，另一個包含發生錯誤之資料行的識別碼。 如需詳細資訊，請參閱 [處理資料中的錯誤](../data-flow/error-handling-in-data.md)。  
   
 -   **將易懂資訊加入錯誤輸出**。 除了錯誤輸出所提供的兩個數值識別碼外，您還可以加入描述性的資訊，讓錯誤輸出更容易分析。  
   
      **新增錯誤的描述**。 使用指令碼元件可以很容易地查閱錯誤描述。 如需詳細資訊，請參閱 <<c0> [ 指令碼元件增強錯誤輸出](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
   
-     **將錯誤資料行名稱加入**。 在「指令碼」元件中，不容易以錯誤輸出所儲存之資料行識別碼，查閱相對應的資料行名稱，所以需要執行額外的步驟。 資料流程中的每一個資料行識別碼，在該資料流程工作內都是獨一無二的識別碼，並且在設計階段會保存於封裝中。 以下是將資料行名稱加入錯誤輸出的建議方法。 如需如何使用這種方法的範例，請參閱 <<c0> [ 將錯誤資料行名稱加入至錯誤輸出](http://go.microsoft.com/fwlink/?LinkId=261546)dougbert.com 上。  
+     **將錯誤資料行名稱加入**。 在「指令碼」元件中，不容易以錯誤輸出所儲存之資料行識別碼，查閱相對應的資料行名稱，所以需要執行額外的步驟。 資料流程中的每一個資料行識別碼，在該資料流程工作內都是獨一無二的識別碼，並且在設計階段會保存於封裝中。 以下是將資料行名稱加入錯誤輸出的建議方法。 如需如何使用這種方法的範例，請參閱 <<c0> [ 將錯誤資料行名稱加入至錯誤輸出](https://go.microsoft.com/fwlink/?LinkId=261546)dougbert.com 上。  
   
     1.  **建立查閱資料表的資料行名稱**。 建立會使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API 的個別應用程式，以便反覆查看每個儲存的封裝、封裝中的每個資料流程、資料流程中的每個物件，以及資料流程物件中的每個輸入與輸出。 此應用程式應該保存查閱資料表中的資料行識別碼以及每個資料行的名稱，以及保存父資料流程工作的識別碼與封裝識別碼。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48132408"
   
     3.  **考慮擷取資料列計數資料**。 請考慮另外建立資料表以存放資料列計數資訊，在此資料表中，是以封裝的 ExecutionID 識別封裝執行的每個執行個體。 使用「資料列計數」轉換，在資料流程的關鍵點將資料列計數儲存到一系列變數中。 資料流程結束後，請使用執行 SQL 工作將這一系列的值插入資料表中的資料列，以供稍後進行分析及製作報表。  
   
-     如需此方法的詳細資訊，請參閱《 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 白皮書》 [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602)(專案 REAL：Business Intelligence ETL 設計練習) 中的 "ETL Auditing and Logging" (＜ETL 稽核和記錄＞) 一節。  
+     更多這種方法的詳細資訊，請參閱 「 ETL 稽核和記錄 > 一節，在[!INCLUDE[msCoName](../../includes/msconame-md.md)]技術白皮書： [Project REAL:Business Intelligence ETL 設計練習](https://go.microsoft.com/fwlink/?LinkId=96602)。  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>使用偵錯傾印檔案針對封裝執行進行疑難排解  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，您可以建立偵錯傾印檔案，以便提供封裝執行的資訊。 如需相關資訊，請參閱 [產生封裝執行的傾印檔案](generating-dump-files-for-package-execution.md)。  
@@ -94,12 +93,12 @@ ms.locfileid: "48132408"
 ## <a name="troubleshoot-run-time-validation-issues"></a>疑難排解執行階段驗證的問題  
  有時候在尚未執行封裝中的優先工作之前，您可能無法連接到資料來源，或者無法驗證封裝的某些部分。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含下列功能，可協助您避免因這些狀況而造成的驗證錯誤：  
   
--   **設定載入封裝時無效之封裝元素的 DelayValidation 屬性**。 您可以設定`DelayValidation`至`True`封裝元素，其設定不是有效的以避免載入封裝時發生驗證錯誤。 例如，您可能有一項會使用目的地資料表的資料流程工作，而這個目的地資料表卻要等到執行 SQL 工作在執行階段建立資料表後才會存在。 `DelayValidation`屬性，可以在封裝層級，或在個別工作和容器封裝所包含的層級啟用。  
+-   **設定載入封裝時無效之封裝元素的 DelayValidation 屬性**。 您可以將組態無效之封裝元素的 `DelayValidation` 設為 `True`，以避免載入封裝時發生驗證錯誤。 例如，您可能有一項會使用目的地資料表的資料流程工作，而這個目的地資料表卻要等到執行 SQL 工作在執行階段建立資料表後才會存在。 `DelayValidation` 屬性可以在封裝層級啟用，也可以在封裝所包含的個別工作和容器層級啟用。  
   
-     `DelayValidation`屬性可以設定在一個資料流程工作，但無法針對個別資料流程元件。 將個別資料流程元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 屬性設為 `false`，也可以達到類似的效果。 不過，當這個屬性的值是`false`，元件並不知道的外部資料來源的中繼資料的變更。 當設定為`true`，則<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>屬性可以協助避免因在封裝使用交易時，特別是，在資料庫中，鎖定的封鎖問題。  
+     您可以針對資料流程工作設定 `DelayValidation` 屬性，但無法針對個別資料流程元件設定這個屬性。 將個別資料流程元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 屬性設為 `false`，也可以達到類似的效果。 不過，當這個屬性的值是 `false` 時，元件不會察覺對外部資料來源之中繼資料所做的變更。 設為 `true` 時，<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 屬性可以協助避免因資料庫中的鎖定而造成的封鎖問題，尤其是在封裝使用交易時。  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>疑難排解執行階段權限的問題  
- 如果您嘗試使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行已部署封裝時發生錯誤，可能此代理程式所使用的帳戶沒有必要權限。 如需如何為您從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業執行的封裝進行疑難排解的資訊，請參閱 [從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行](http://support.microsoft.com/kb/918760)。 如需如何從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業執行封裝的詳細資訊，請參閱[封裝的 SQL Server Agent 作業](../packages/sql-server-agent-jobs-for-packages.md)。  
+ 如果您嘗試使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行已部署封裝時發生錯誤，可能此代理程式所使用的帳戶沒有必要權限。 如需如何為您從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業執行的封裝進行疑難排解的資訊，請參閱[從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行](https://support.microsoft.com/kb/918760)。 如需如何從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業執行封裝的詳細資訊，請參閱[封裝的 SQL Server Agent 作業](../packages/sql-server-agent-jobs-for-packages.md)。  
   
  若要連接至 Excel 或 Access 資料來源， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 需要使用在 TEMP 和 TMP 環境變數所指定之資料夾中有權讀取、寫入、建立和刪除暫存檔的帳戶。  
   
@@ -114,6 +113,6 @@ ms.locfileid: "48132408"
  [在資料流程元件中設定錯誤輸出](../configure-an-error-output-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>相關內容  
- 位於 dougbert.com 的部落格項目： [Adding the error column name to an error output](http://go.microsoft.com/fwlink/?LinkId=261546)(將錯誤資料行名稱加入至錯誤輸出)。  
+ 位於 dougbert.com 的部落格項目： [Adding the error column name to an error output](https://go.microsoft.com/fwlink/?LinkId=261546)(將錯誤資料行名稱加入至錯誤輸出)。  
   
   

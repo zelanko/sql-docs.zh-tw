@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5e6cf3c0be2ec3ab8587bd086c99b32e718cd78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33dbfad3c3774abe3de74d4dbf1d67575630b21e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069446"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801850"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 元素 (DTA)
   指定 Database Engine Tuning Advisor 微調建議 (索引和資料分割集) 所能取用的最大空間 (MB)。  
@@ -39,7 +38,7 @@ ms.locfileid: "48069446"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|**資料類型和長度**|`unsignedInt`沒有長度限制。|  
+|**資料類型和長度**|`unsignedInt`，沒有長度限制。|  
 |**預設值**|無。|  
 |**出現次數**|選擇性。 `TuningOptions` 元素只能使用這個元素一次。|  
   
@@ -47,7 +46,7 @@ ms.locfileid: "48069446"
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[TuningOptions 元素&#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**父元素**|[TuningOptions 元素 &#40;DTA&#41;](tuningoptions-element-dta.md)|  
 |**子元素**|None|  
   
 ## <a name="remarks"></a>備註  
@@ -59,7 +58,7 @@ ms.locfileid: "48069446"
   
  預設儲存體大小不包括非叢集索引和索引檢視。  
   
- 如果指定的值`StorageBoundInMB`項目超出實際磁碟空間，Database Engine Tuning Advisor 會傳回錯誤，但會繼續微調。 微調完成之後，如果您決定實作建議，您可以增加磁碟空間。  
+ 如果指定給 `StorageBoundInMB` 元素的值超出實際的磁碟大小，Database Engine Tuning Advisor 會傳回錯誤，但會繼續微調。 微調完成之後，如果您決定實作建議，您可以增加磁碟空間。  
   
 ## <a name="example"></a>範例  
   
@@ -79,6 +78,6 @@ ms.locfileid: "48069446"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

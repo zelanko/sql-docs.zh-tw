@@ -17,12 +17,12 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 41736a7de5469650d1d2e13b6b78d8a9c2e92573
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20b64e86aa63b88175b505659e78dce35b2250bb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152818"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361260"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>關聯式查詢設計工具使用者介面 (報表產生器)
   報表產生器同時提供圖形化查詢設計工具和以文字為基礎的查詢設計工具可協助您建立查詢，以便指定要擷取的資料[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]並[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssSDS](../../includes/sssds-md.md)]關聯式資料庫和[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)]報表資料集。 使用圖形化查詢設計工具來瀏覽中繼資料、以互動方式建立查詢以及檢視查詢的結果。 使用以文字為基礎的查詢設計工具來檢視圖形化查詢設計工具所建立的查詢，或是修改查詢。 您也可以從檔案或報表匯入現有的查詢。  
@@ -39,7 +39,7 @@ ms.locfileid: "48152818"
  圖形化查詢設計工具分成三個區域。 根據查詢使用資料表/檢視表還是預存程序/資料表值函式而定，查詢設計工具的配置會有所不同。  
   
 > [!NOTE]  
->  [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)]不支援預存程序或資料表值函式。  
+>  [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 不支援預存程序或資料表值函數。  
   
  下圖顯示搭配資料表或檢視表使用時的圖形化查詢設計工具。  
   
@@ -90,9 +90,9 @@ ms.locfileid: "48152818"
   
  彙總會提供資料摘要，而資料會進行分組，以支援傳遞摘要資料的彙總。 當您在查詢中使用彙總時，查詢傳回的其他欄位會自動分組，且查詢會包含 SQL GROUP BY 子句。 您可以僅使用 [群組和彙總] 清單中的 [群組依據] 選項摘要資料，而不新增彙總。 許多彙總會包含使用 DISTINCT 關鍵字的版本。 包含 DISTINCT 可消除重複的值。  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用[!INCLUDE[tsql](../../../includes/tsql-md.md)]並[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)]使用[!INCLUDE[DWsql](../../includes/dwsql-md.md)]。 SQL 語言的這兩種方言都支援查詢設計工具提供的子句、關鍵字和彙總。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 使用 [!INCLUDE[DWsql](../../includes/dwsql-md.md)]。 SQL 語言的這兩種方言都支援查詢設計工具提供的子句、關鍵字和彙總。  
   
- 如需 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 的詳細資訊，請參閱 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?LinkId=141687)中的 [Transact-SQL 參考 &#40;資料庫引擎&#41;](/sql/t-sql/language-reference)。  
+ 如需 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 的詳細資訊，請參閱 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?LinkId=141687)中的 [Transact-SQL 參考 &#40;資料庫引擎&#41;](/sql/t-sql/language-reference)。  
   
  下表列出彙總並提供彙總的簡要說明。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48152818"
 |Max|傳回群組中的最大值。 實作 SQL MAX 彙總。|  
 |StDev|傳回群組中所有值的統計標準差。 實作 SQL STDEV 彙總。|  
 |StDevP|傳回群組指定之運算式中所有值的母體統計標準差。 實作 SQL STDEVP 彙總。|  
-|SUM|傳回群組中所有值的總和。 實作 SQL SUM 彙總。|  
+|Sum|傳回群組中所有值的總和。 實作 SQL SUM 彙總。|  
 |Var|傳回群組中所有值的統計變異數。 實作 SQL VAR 彙總。|  
 |VarP|傳回群組中所有值的母體統計變異數。 實作 SQL VARP 彙總。|  
 |Avg Distinct|傳回唯一平均值。 實作 AVG 彙總和 DISTINCT 關鍵字的組合。|  
@@ -132,7 +132,7 @@ ms.locfileid: "48152818"
 -   **自動偵測** ：在資料表之間自動建立關聯性的自動偵測功能。 如果開啟自動偵測，查詢設計工具就會從資料表中的外部索引鍵建立關聯性；否則，您必須手動建立關聯性。 當您在 [資料庫檢視] 窗格中選取資料表時，自動偵測會自動嘗試建立關聯性。 如果您在手動建立聯結之後開啟自動偵測，則會捨棄這些聯結。  
   
     > [!IMPORTANT]  
-    >  搭配使用時[!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)]未提供建立聯結所需的中繼資料，而且無法自動偵測關聯性。 如果您的查詢從 [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 擷取資料，則所有資料表聯結都必須手動建立。  
+    >  搭配 [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 使用時，並不會提供建立聯結所需的中繼資料，而且無法自動偵測關聯性。 如果您的查詢從 [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)]擷取資料，則所有資料表聯結都必須手動建立。  
   
 -   **新增關聯性**：將關聯性新增至 [關聯性] 清單。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "48152818"
   
 -   **左側資料表** ：顯示屬於聯結關聯性一部分之第一份資料表的名稱。  
   
--   **聯結類型** ：顯示在自動產生之查詢中使用的 SQL JOIN 陳述式類型。 根據預設，如果系統偵測到外部索引鍵條件約束，就會使用 INNER JOIN。 其他聯結類型可以是 LEFT JOIN 或 RIGHT JOIN。 如果這些聯結類型都不適用，則 [聯結類型] 資料行會顯示 [不相關]。 針對不相關的資料表不會建立任何 CROSS JOIN 聯結；您必須透過聯結左側和右側資料表中的資料行，手動建立關聯性。 更多的聯結類型的詳細資訊，請參閱 < JOIN 基礎觀念"，在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][線上叢書 》](http://go.microsoft.com/fwlink/?LinkId=141687) msdn.microsoft.com 上...  
+-   **聯結類型** ：顯示在自動產生之查詢中使用的 SQL JOIN 陳述式類型。 根據預設，如果系統偵測到外部索引鍵條件約束，就會使用 INNER JOIN。 其他聯結類型可以是 LEFT JOIN 或 RIGHT JOIN。 如果這些聯結類型都不適用，則 [聯結類型] 資料行會顯示 [不相關]。 針對不相關的資料表不會建立任何 CROSS JOIN 聯結；您必須透過聯結左側和右側資料表中的資料行，手動建立關聯性。 如需 JOIN 類型的詳細資訊，請參閱 msdn.microsoft.com 上《 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?LinkId=141687) 中的＜JOIN 基礎觀念＞。  
   
 -   **右側資料表** ：顯示聯結關聯性中第二份資料表的名稱。  
   

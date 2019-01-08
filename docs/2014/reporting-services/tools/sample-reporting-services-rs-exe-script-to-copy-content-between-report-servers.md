@@ -11,15 +11,15 @@ ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5fb51019ffa016e76f4801d35578ffca0b2b6a11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b78c77a924c0c301eecddb6592b4339236dffde
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116816"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360840"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>在報表伺服器之間移轉內容的範例 Reporting Services rs.exe 指令碼
-  本主題包括並描述範例[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]複製內容項目設定不同的 RSS 指令碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]另一部報表伺服器，報表伺服器使用**RS.exe**公用程式。 不論是原生或 SharePoint 模式，RS.exe 都會和 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 一起安裝。 這個指令碼會在伺服器之間複製 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 項目，例如報表和訂閱。 這個指令碼同時支援 SharePoint 模式和原生模式報表伺服器。  
+  本主題包括並描述範例 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] RSS 指令碼，該指令碼會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server to another report server, using the **RS.exe** utility. 不論是原生或 SharePoint 模式，RS.exe 都會和 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]一起安裝。 這個指令碼會在伺服器之間複製 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 項目，例如報表和訂閱。 這個指令碼同時支援 SharePoint 模式和原生模式報表伺服器。  
   
 ||  
 |-|  
@@ -43,15 +43,15 @@ ms.locfileid: "48116816"
   
     -   [原生模式報表伺服器到原生模式報表伺服器](#bkmk_native_2_native)  
   
-    -   [原生模式到 SharePoint 模式 – 根網站](#bkmk_native_2_sharepoint_root)  
+    -   [原生模式到 SharePoint 模式-根網站](#bkmk_native_2_sharepoint_root)  
   
-    -   [原生模式到 SharePoint 模式 – 'bi' 網站集合](#bkmk_native_2_sharepoint_with_site)  
+    -   [原生模式到 SharePoint 模式-'bi' 網站集合](#bkmk_native_2_sharepoint_with_site)  
   
-    -   [SharePoint 模式到 SharePoint 模式 – 'bi' 網站集合](#bkmk_sharepoint_2_sharepoint)  
+    -   [SharePoint 模式到 SharePoint 模式-'bi' 網站集合](#bkmk_sharepoint_2_sharepoint)  
   
-    -   [原生模式到原生模式 – Windows Azure 虛擬機器](#bkmk_native_to_native_Azure_vm)  
+    -   [原生模式到原生模式-Windows Azure 虛擬機器](#bkmk_native_to_native_Azure_vm)  
   
-    -   [SharePoint 模式 – 'bi' 網站集合到 Windows Azure 虛擬機器上的原生模式伺服器](#bkmk_sharepoint_site_to_native_Azure_vm)  
+    -   [SharePoint 模式-'bi' 網站集合到原生模式伺服器上的 Windows Azure 虛擬機器](#bkmk_sharepoint_site_to_native_Azure_vm)  
   
 -   [驗證](#bkmk_verification)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48116816"
   
 -   [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]  
   
- 這個指令碼可用來在相同模式或不同模式的報表伺服器之間複製內容。 例如，您可以在其中執行指令碼複製的內容[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]原生模式報表伺服器到[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]SharePoint 模式報表伺服器。 您可以安裝 RS.exe 的任何伺服器執行這個指令碼。 例如，在下列部署中，您可以：  
+ 這個指令碼可用來在相同模式或不同模式的報表伺服器之間複製內容。 例如，您可以執行指令碼將內容從 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 原生模式報表伺服器複製到 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint 模式報表伺服器。 您可以安裝 RS.exe 的任何伺服器執行這個指令碼。 例如，在下列部署中，您可以：  
   
 -   在伺服器 A **上** 執行 RS.exe 和指令碼。  
   
@@ -91,11 +91,11 @@ ms.locfileid: "48116816"
 |項目|已移轉|SharePoint|描述|  
 |----------|--------------|----------------|-----------------|  
 |密碼|**否**|**否**|密碼 **不會** 移轉。 內容項目移轉之後，請更新目的地伺服器上的認證資訊。 例如，具有預存認證的資料來源。|  
-|我的報表|**否**|**否**|原生模式 [我的報表] 功能是以個別使用者登入為基礎，因此，除非使用 **–u** 參數執行 rss 指令碼，否則指令碼服務無法存取 [我的報表] 資料夾中使用者的內容。 此外，[我的報表] 不屬於 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式的功能，所以資料夾中的項目無法複製到 SharePoint 環境中。 因此，指令碼不會複製來源原生模式報表伺服器上的 [我的報表] 資料夾中的報表項目。 若要使用這個指令碼移轉 [我的報表] 資料夾中的內容，請完成下列操作：<br /><br /> 1） 建立新的資料夾在報表管理員中。 或者，您可以為每位使用者建立資料夾或子資料夾。<br /><br /> 2） 做為其中一個使用我的報表 內容使用者的登入。<br /><br /> 3） 請在 [報表管理員] 中，按一下**我的報表**資料夾。<br /><br /> 4） 按一下**詳細資料**資料夾的檢視。<br /><br /> 5） 選取您想要複製的每個報表。<br /><br /> 6） 按一下**移動**在報表管理員工具列上。<br /><br /> 7） 選取所需的目的地資料夾。<br /><br /> 8） 的每個使用者重複步驟 2-7。<br /><br /> 9） 執行指令碼。|  
+|我的報表|**否**|**否**|原生模式 [我的報表] 功能是以個別使用者登入為基礎，因此，除非使用 **-u** 參數執行 rss 指令碼，否則指令碼服務無法存取 [我的報表] 資料夾中使用者的內容。 此外，我的報表 不是一項功能[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]SharePoint 模式下的資料夾中的項目無法複製到 SharePoint 環境。 因此，指令碼不會複製來源原生模式報表伺服器上的 [我的報表] 資料夾中的報表項目。 若要移轉使用這個指令碼的 「 我的報表 資料夾中的內容，完成下列工作︰<br /><br /> 1） 建立新的資料夾在報表管理員中。 或者，您可以為每位使用者建立資料夾或子資料夾。<br /><br /> 2） 做為其中一個使用我的報表 內容使用者的登入。<br /><br /> 3） 請在 [報表管理員] 中，按一下**我的報表**資料夾。<br /><br /> 4） 按一下**詳細資料**資料夾的檢視。<br /><br /> 5） 選取您想要複製的每個報表。<br /><br /> 6） 按一下**移動**在報表管理員工具列上。<br /><br /> 7） 選取所需的目的地資料夾。<br /><br /> 8） 的每個使用者重複步驟 2-7。<br /><br /> 9） 執行指令碼。|  
 |記錄|**否**|**否**||  
 |記錄設定|是|是|雖然記錄設定會移轉，但是記錄詳細資料「不會」移轉。|  
 |[排程]|是|是|若要移轉排程，則必須在目標伺服器上執行 SQL Server Agent。 如果 SQL Server Agent 未在目標上執行，您將會看見類似下面的錯誤訊息：<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  
-|角色和系統原則|是|是|根據預設，指令碼不會在伺服器之間複製自訂的權限結構描述。 預設行為是，項目會複製到目的地伺服器，且「繼承父權限」旗標會設為 TRUE。 如果您希望指令碼複製個別項目的權限，請使用 SECURITY 參數。<br /><br /> 如果來源和目標伺服器**不屬於相同的報表伺服器模式** (例如從原生模式到 SharePoint 模式)，而且您使用 SECURITY 參數，則指令碼將會根據下列主題中的比較嘗試對應預設角色和群組：[將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)。 自訂角色和群組不會複製到目的地伺服器。<br /><br /> 當指令碼在 **屬於相同模式**的伺服器之間進行複製，而且您使用 SECURITY 參數時，指令碼將會在目的地伺服器上建立新的角色 (原生模式) 或群組 (SharePoint 模式)。<br /><br /> 如果角色已出現在目的地伺服器上，指令碼將會建立類似下面的「失敗」訊息，並繼續移轉其他項目。 指令碼完成後，請確認目的地伺服器上的角色是否根據您的需求設定。 移轉角色: 找到 8 個項目。<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 如需詳細資訊，請參閱[將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](../security/grant-user-access-to-a-report-server.md)<br /><br /> **注意：** 如果來源伺服器上的使用者不存在於目的地伺服器上，指令碼就無法在目的地伺服器上套用角色指派，而且即使已使用 SECURITY 參數，也無法套用角色指派。|  
+|角色和系統原則|是|是|根據預設，指令碼不會在伺服器之間複製自訂的權限結構描述。 預設行為是，項目會 coied 到目的地伺服器 '繼承父權限 」 旗標設為 TRUE。 如果您希望指令碼複製個別項目的權限，請使用 SECURITY 參數。<br /><br /> 如果來源和目標伺服器 **不屬於相同的報表伺服器模式**，例如從原生模式到 SharePoint 模式，而且您使用 SECURITY 參數，則指令碼將會根據下列主題中的比較嘗試對應預設角色和群組：＜ [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)＞。 自訂角色和群組不會複製到目的地伺服器。<br /><br /> 當指令碼在 **屬於相同模式**的伺服器之間進行複製，而且您使用 SECURITY 參數時，指令碼將會在目的地伺服器上建立新的角色 (原生模式) 或群組 (SharePoint 模式)。<br /><br /> 如果角色已出現在目的地伺服器上，指令碼將會建立類似下面的「失敗」訊息，並繼續移轉其他項目。 指令碼完成後，請確認目的地伺服器上的角色是否根據您的需求設定。 移轉角色:找到 8 個項目。<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> 如需詳細資訊，請參閱[將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](../security/grant-user-access-to-a-report-server.md)<br /><br /> **注意：** 如果來源伺服器上的使用者不存在於目的地伺服器上，指令碼就無法在目的地伺服器上套用角色指派，而且即使已使用 SECURITY 參數，也無法套用角色指派。|  
 |共用資料來源|是|是|指令碼將不會覆寫目標伺服器上的現有項目。 如果目標伺服器上已存在相同名稱的項目，您將會看見類似下面的錯誤訊息：<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> 認證 **不** 會複製作為資料來源的一部分。 內容項目移轉之後，請更新目的地伺服器上的認證資訊。|  
 |共用資料集|是|是||  
 |資料夾|是|是|指令碼將不會覆寫目標伺服器上的現有項目。 如果目標伺服器上已存在相同名稱的項目，您將會看見類似下面的錯誤訊息：<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
@@ -104,7 +104,7 @@ ms.locfileid: "48116816"
 |訂閱|是|是||  
 |記錄設定|是|是|雖然記錄設定會移轉，但是記錄詳細資料「不會」移轉。|  
 |處理選項|是|是||  
-|快取重新整理選項|是|是|相依設定會隨目錄項目一起移轉。 以下範例將示範指令碼移轉報表 (.rdl) 以及相關的設定 (例如快取重新整理選項)：<br /><br /> 移轉報表 TitleOnly.rdl 的參數: 找到 0 個項目。<br /><br /> 移轉報表 TitleOnly.rdl 的訂閱:找到 1 個項目。<br /><br /> 移轉訂用帳戶儲存在\\\server\public\savedreports 為 titleonly 的訂閱...SUCCESS<br /><br /> 移轉報表 TitleOnly.rdl 的記錄設定 …SUCCESS<br /><br /> 移轉報表 TitleOnly.rdl 的處理選項 …找到 0 個項目。<br /><br /> 移轉報表 TitleOnly.rdl 的快取重新整理選項 …SUCCESS<br /><br /> 移轉報表 TitleOnly.rdl 的快取重新整理計劃: 找到 1 個項目。<br /><br /> 移轉快取重新整理計劃 titleonly_refresh735amM2F ...SUCCESS|  
+|快取重新整理選項|是|是|相依設定會隨目錄項目一起移轉。 以下範例將示範指令碼移轉報表 (.rdl) 以及相關的設定 (例如快取重新整理選項)：<br /><br /> 移轉報表 TitleOnly.rdl 的參數: 找到 0 個項目。<br /><br /> 移轉報表 TitleOnly.rdl 的訂閱:找到 1 個項目。<br /><br /> 移轉訂用帳戶儲存在\\\server\public\savedreports 為 titleonly 的訂閱...SUCCESS<br /><br /> 移轉報表 TitleOnly.rdl 的記錄設定 …SUCCESS<br /><br /> 移轉報表 TitleOnly.rdl 的處理選項 …找到 0 個項目。<br /><br /> 移轉報表 TitleOnly.rdl 的快取重新整理選項 …SUCCESS<br /><br /> 移轉報表 TitleOnly.rdl 的快取重新整理計劃:找到 1 個項目。<br /><br /> 移轉快取重新整理計劃 titleonly_refresh735amM2F ...SUCCESS|  
 |快取重新整理計劃|是|是||  
 |影像|是|是||  
 |報表組件|是|是||  
@@ -116,7 +116,7 @@ ms.locfileid: "48116816"
   
 -   **SharePoint 模式的必要權限：** ViewListItems  
   
-|項目或資源|來源|目標|  
+|項目或資源|原始程式檔|目標|  
 |----------------------|------------|------------|  
 |目錄項目|<xref:ReportService2010.ReportingService2010.ListChildren%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetProperties%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemDataSources%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemReferences%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetDataSourceContents%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemLink%2A>|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A><br /><br /> <xref:ReportService2010.ReportingService2010.SetItemDataSources%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemReferences%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateDataSource%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateLinkedItem%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateFolder%2A>|  
 |角色|<xref:ReportService2010.ReportingService2010.ListRoles%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetRoleProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateRole%2A>|  
@@ -159,7 +159,7 @@ ms.locfileid: "48116816"
     > [!TIP]  
     >  若您只想稽核單一伺服器，請為來源和目的地使用相同的伺服器，然後在完成步驟 1 後取消使用。  
   
-     步驟 1 稽核資訊相當適合用於檢閱來源和目標原生模式伺服器上的現有角色。 以下是步驟一稽核清單的範例。 請注意清單中包含一個 [角色] 區段，因為使用了 「switch-v security="True"」 參數：  
+     步驟 1 稽核資訊相當適合用於檢閱來源和目標原生模式伺服器上的現有角色。 以下是步驟一稽核清單的範例。 請注意清單中包含一個 [角色] 區段，因為使用了 switch-v security="True" 參數：  
   
     -   `Retrieve and report the list of items that will be migrated. You can cancel the script after step 1 if you do not want to start the actual migration.`  
   
@@ -227,7 +227,7 @@ ms.locfileid: "48116816"
   
          `Report: /Reports/TitleOnly`  
   
--   SOURCE_URL 和 TARGET_URL 必須是有效的報表伺服器 Url 指向來源和目標[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]報表伺服器。 在原生模式中，報表伺服器 URL 如下所示：  
+-   SOURCE_URL 和 TARGET_URL 必須是指向來源和目標 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表伺服器的有效報表伺服器 URL。 在原生模式中，報表伺服器 URL 如下所示：  
   
     -   `http://servername/reportserver`  
   
@@ -244,7 +244,7 @@ ms.locfileid: "48116816"
 |參數|描述|必要項|  
 |---------------|-----------------|--------------|  
 |**-s** Source_URL|來源報表伺服器的 URL|是|  
-|**-u** Domain\password **–p** password|來源伺服器的認證。|(選擇性) 如果遺失則使用預設認證|  
+|**-u** Domain\password **-p** password|來源伺服器的認證。|(選擇性) 如果遺失則使用預設認證|  
 |**-v st**="SITE"||選擇性。 這個參數僅用於 SharePoint 模式報表伺服器。|  
 |**- v f**="SOURCEFOLDER"|設定為 "/" 表示移轉所有內容，設定為類似 "/folder/subfolder" 則表示部分移轉。 將會複製這個資料夾中的所有內容|(選擇性) 預設值為 "/"。|  
 |**-v ts**="TARGET_URL"|目標 RS 伺服器的 URL||  
@@ -268,8 +268,8 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p password -v ts="http://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password" -v security="True"  
 ```  
   
-###  <a name="bkmk_native_2_sharepoint_root"></a> 原生模式到 SharePoint 模式 – 根網站  
- 下列範例將從原生模式 **SourceServer** 將內容移轉至 SharePoint 模式伺服器 **TargetServer**上的「根網站」。 原生模式伺服器上的 [報表] 和 [資料來源] 資料夾移轉後成為 SharePoint 部署上的新文件庫。  
+###  <a name="bkmk_native_2_sharepoint_root"></a> 原生模式到 SharePoint 模式 - 根網站  
+ 下列範例將從原生模式 **SourceServer** 將內容移轉至 SharePoint 模式伺服器 **TargetServer** 上的「根網站」。 原生模式伺服器上的 [報表] 和 [資料來源] 資料夾移轉後成為 SharePoint 部署上的新文件庫。  
   
  ![ssrs_rss_migrate_root_site](../media/ssrs-rss-migrate-root-site.gif "ssrs_rss_migrate_root_site")  
   
@@ -277,14 +277,14 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p Password -v ts="http://TargetServer/_vti_bin/ReportServer" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_2_sharepoint_with_site"></a> 原生模式到 SharePoint 模式 – 'bi' 網站集合  
+###  <a name="bkmk_native_2_sharepoint_with_site"></a> 原生模式到 SharePoint 模式 - 'bi' 網站集合  
  下列範例將從原生模式伺服器將內容移轉至包含網站集合 "sites/bi" 和共用文件庫的 SharePoint 伺服器。 指令碼會在目的地文件庫中建立資料夾。 例如，指令碼將在目標文件庫中建立 [報表] 和 [資料來源] 資料夾。  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u Domain\User -p Password -v ts="http://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_sharepoint_2_sharepoint"></a> SharePoint 模式到 SharePoint 模式 – 'bi' 網站集合  
+###  <a name="bkmk_sharepoint_2_sharepoint"></a> SharePoint 模式到 SharePoint 模式 - 'bi' 網站集合  
  下列範例會移轉內容：  
   
 -   從包含 "sites/bi" 網站集合和共用文件庫的 SharePoint 伺服器 **SourceServer** 。  
@@ -295,7 +295,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="http://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_to_native_Azure_vm"></a> 原生模式到原生模式 – Windows Azure 虛擬機器  
+###  <a name="bkmk_native_to_native_Azure_vm"></a> 原生模式到原生模式 - Windows Azure 虛擬機器  
  下列範例會移轉內容：  
   
 -   從原生模式報表伺服器 **SourceServer**。  
@@ -307,9 +307,9 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 ```  
   
 > [!TIP]  
->  如需如何使用 Windows PowerShell 在 Windows Azure 虛擬機器上建立 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表伺服器的詳細資訊，請參閱 [Use PowerShell to Create a Windows Azure VM With a Native Mode Report Server](http://msdn.microsoft.com/library/dn449661.aspx) (使用 PowerShell 建立具有原生模式報表伺服器的 Windows Azure VM)。  
+>  如需如何使用 Windows PowerShell 在 Windows Azure 虛擬機器上建立 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表伺服器的詳細資訊，請參閱 [Use PowerShell to Create a Windows Azure VM With a Native Mode Report Server](https://msdn.microsoft.com/library/dn449661.aspx)(使用 PowerShell 建立具有原生模式報表伺服器的 Windows Azure VM)。  
   
-##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint 模式 – 'bi' 網站集合到 Windows Azure 虛擬機器上的原生模式伺服器  
+##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint 模式 - 'bi' 網站集合到 Windows Azure 虛擬機器上的原生模式伺服器  
  下列範例會移轉內容：  
   
 -   從包含 "sites/bi" 網站集合和共用文件庫的 SharePoint 模式報表伺服器 **SourceServer** 。  
@@ -350,16 +350,16 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
 3.  按一下 **[角色]**。  
   
 ##  <a name="bkmk_troubleshoot"></a> 疑難排解  
- 使用追蹤旗標 **–t** 取得詳細資訊。 例如，如果您執行指令碼並且看到類似下面的訊息  
+ 使用追蹤旗標 **-t** 取得詳細資訊。 例如，如果您執行指令碼並且看到類似下面的訊息  
   
 -   無法連線到伺服器: http://\<servername>/ReportServer/ReportService2010.asmx  
   
- 再次使用 **–t** 旗標執行指令碼，就會看見類似下面的訊息：  
+ 執行指令碼，以再次 **-t**旗標，就會看見類似下面的訊息：  
   
--   System.Exception: 無法連線到伺服器: http://\<伺服器名稱>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **要求失敗，HTTP 狀態 401: 未經授權**。   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- 內部例外狀況堆疊追蹤結束 ---  
+-   System.Exception:無法連接到伺服器： http://\<servername > /ReportServer/ReportService2010.asmx---> System.Net.WebException:**要求失敗，HTTP 狀態 401:未經授權**。   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- 內部例外狀況堆疊追蹤結束 ---  
   
 ## <a name="see-also"></a>另請參閱  
- [RS.exe 公用程式&#40;SSRS&#41;](rs-exe-utility-ssrs.md)   
+ [RS.exe 公用程式 &#40;SSRS&#41;](rs-exe-utility-ssrs.md)   
  [將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
   

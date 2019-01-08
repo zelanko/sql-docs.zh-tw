@@ -15,12 +15,12 @@ ms.assetid: f88c54df-b1aa-4701-807f-dc92c32363fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd05102a9a146a4aa9439e86a76212872556a08d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ae427f9f8d3391d8a8fcd0bff06a6ea3b97044c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070998"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375710"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>檢視或變更已註冊的篩選與斷詞工具
   在系統上安裝或解除安裝任何斷詞工具或篩選器之後，這些變更不會自動在伺服器執行個體上生效。 此主題描述如何檢視目前已註冊的斷詞工具或篩選，以及如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上註冊新安裝的斷詞工具和篩選。  
@@ -78,7 +78,7 @@ ms.locfileid: "48070998"
   
      **安裝並載入 Microsoft Filter Pack IFilters**  
   
-    -   [How to register Microsoft Filter Pack IFilters with SQL Server (如何對 SQL Server 註冊 Microsoft Filter Pack IFilter)](http://go.microsoft.com/fwlink/?LinkId=130439)  
+    -   [How to register Microsoft Filter Pack IFilters with SQL Server (如何對 SQL Server 註冊 Microsoft Filter Pack IFilter)](https://go.microsoft.com/fwlink/?LinkId=130439)  
   
 4.  使用 **sp_fulltext_service** 將新安裝的斷詞工具與篩選，載入伺服器執行個體中，如下所示：  
   

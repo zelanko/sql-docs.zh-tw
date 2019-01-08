@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataconversiontrans.f1
@@ -17,12 +16,12 @@ ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29a88369b1764a9cd4d11cc476affbebca79dabb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 344b9a24e78960b9eb9f4fece56924b2eb941c0f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073488"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358590"
 ---
 # <a name="data-conversion-transformation"></a>資料轉換
   「資料轉換」會將輸入資料行中的資料轉換成不同的資料類型，然後將它複製到新的輸出資料行。 例如，封裝可從多個來源擷取資料，然後使用此轉換將資料行轉換成目的地資料存放區所需的資料類型。 您可以對單一輸入資料行套用多項轉換。  
@@ -41,7 +40,7 @@ ms.locfileid: "48073488"
     > [!NOTE]  
     >  在字串資料類型的資料行之間進行複製時，兩個資料行必須使用相同字碼頁。  
   
- 如果字串資料的輸出資料行長度比其對應輸入資料行的長度短，則輸出資料會遭到截斷。 如需詳細資訊，請參閱[處理資料中的錯誤](../error-handling-in-data.md)。  
+ 如果字串資料的輸出資料行長度比其對應輸入資料行的長度短，則輸出資料會遭到截斷。 如需詳細資訊，請參閱 [處理資料中的錯誤](../error-handling-in-data.md)。  
   
  這個轉換有一個輸入、一個輸出與一個錯誤輸出。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48073488"
  您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。 如需在 SSIS 設計師中使用「資料轉換」的相關資訊，請參閱 [使用資料轉換將資料轉換至不同的資料類型](data-conversion-transformation.md) 和 [資料轉換編輯器](../../data-conversion-transformation-editor.md)。 如需以程式設計方式設定此轉換屬性的詳細資訊，請參閱 [通用屬性](../../common-properties.md) 和 [轉換自訂屬性](transformation-custom-properties.md)。  
   
 ## <a name="related-content"></a>相關內容  
- blogs.msdn.com 上的部落格文章： [SSIS 2008 中各種資料類型轉換技術的效能比較](http://go.microsoft.com/fwlink/?LinkId=220823)。  
+ blogs.msdn.com 上的部落格文章： [SSIS 2008 中各種資料類型轉換技術的效能比較](https://go.microsoft.com/fwlink/?LinkId=220823)。  
   
 ## <a name="see-also"></a>另請參閱  
  [快速剖析](../../fast-parse.md)   

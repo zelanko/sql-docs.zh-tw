@@ -12,12 +12,12 @@ ms.assetid: de4bed15-15be-4825-994c-1046255e725a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64eb7b3dc6f058d5f061f4c015105ba4fc44f183
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f65c26e1c6b9588b770acf1a66409dfde8ea1072
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206758"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362122"
 ---
 # <a name="sqlsetdescfield"></a>SQLSetDescField
   SQLSetDescField 可用來設定資料表值參數和資料表值參數資料行的描述項欄位。 如需可用的欄位資訊，請參閱[資料表值參數描述項欄位](../native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md)並[資料表值參數組成資料行的描述項欄位](../native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md)。  
@@ -45,7 +45,7 @@ ms.locfileid: "48206758"
  如需詳細資訊，請參閱 <<c0> [ 疏鬆資料行支援&#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLSetDescField](http://go.microsoft.com/fwlink/?LinkId=80705)   
+ [SQLSetDescField](https://go.microsoft.com/fwlink/?LinkId=80705)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

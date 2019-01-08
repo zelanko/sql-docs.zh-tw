@@ -14,12 +14,12 @@ ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 84194cf92cfd4c6270697aa1c3fd4f475df956ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 210f25b55c2cc2536d4c6f00f215b27eac5f7be0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714086"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409225"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>執行 SSMA 主控台 (OracleToSQL)
 Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 SSMA 活動。 主控台應用程式會使用某些標準的指令碼檔命令為列舉這一節。  
@@ -30,7 +30,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 **Command**  
   
 建立新專案間的  
-                  ： 建立新的 SSMA 專案。  
+                  所解碼的字元：建立新的 SSMA 專案。  
   
 **指令碼**  
   
@@ -63,7 +63,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
   
 **Command**  
   
-開啟專案： 開啟現有的專案。  
+開啟專案：開啟現有的專案。  
   
 **指令碼**  
   
@@ -294,7 +294,7 @@ generate-assessment-report
 ## <a name="migration-script-file-commands"></a>移轉指令碼檔案命令  
 [移轉] 命令將目標資料庫結構描述轉換成來源結構描述，並將資料移轉到目標伺服器。  
   
-[移轉] 命令設定預設的主控台輸出是 'Full' 輸出報表不詳細的錯誤報告： 只有摘要的來源物件樹狀結構根節點。  
+[移轉] 命令設定預設的主控台輸出會是 'Full' 輸出報表不詳細的錯誤報告：只有在來源物件樹狀結構根節點的摘要。  
   
 **Command**  
   
@@ -459,7 +459,7 @@ convert-schema
 ```  
   
 ## <a name="manageability-script-file-commands"></a>管理性指令碼檔案命令  
-管理能力命令可以幫助與來源資料庫同步處理目標資料庫物件。 [移轉] 命令設定預設的主控台輸出是 'Full' 輸出報表不詳細的錯誤報告： 只有摘要的來源物件樹狀結構根節點。  
+管理能力命令可以幫助與來源資料庫同步處理目標資料庫物件。 [移轉] 命令設定預設的主控台輸出會是 'Full' 輸出報表不詳細的錯誤報告：只有在來源物件樹狀結構根節點的摘要。  
   
 **Command**  
   
@@ -589,7 +589,7 @@ convert-schema
 ```  
   
 ## <a name="script-generation-script-file-commands"></a>指令碼產生指令碼檔案命令  
-產生指令碼命令執行雙重工作： 它們有助於節省主控台輸出在指令碼檔案中;和 T-SQL 的輸出記錄到主控台] 或 [根據您指定的參數檔案。  
+產生指令碼命令會執行雙重工作：它們有助於節省主控台輸出在指令碼檔案中;和 T-SQL 的輸出記錄到主控台] 或 [根據您指定的參數檔案。  
   
 **Command**  
   

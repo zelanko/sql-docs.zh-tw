@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.f1
@@ -17,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af7dc60469f088f2023365f638666056bdf6e412
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5927cbe753cf0035c37f9a826c6bf89e9c963ae8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129131"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365770"
 ---
 # <a name="execute-package-task"></a>執行封裝工作
   「執行封裝」工作可讓封裝將其他封裝當做工作流程的一部分執行，以延伸 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企業功能。  
@@ -39,7 +38,7 @@ ms.locfileid: "48129131"
   
  執行其他封裝的封裝一般稱為父封裝，而父工作流程執行的封裝則稱為子封裝。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含執行工作流程作業的工作，例如執行可執行檔和批次檔。 如需詳細資訊，請參閱＜ [Execute Process Task](execute-process-task.md)＞。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含執行工作流程作業的工作，例如執行可執行檔和批次檔。 如需詳細資訊，請參閱＜ [執行處理工作](execute-process-task.md)＞。  
   
 ## <a name="running-packages"></a>執行封裝  
  「執行封裝」工作可以執行包含父封裝之相同專案中所含的子封裝。 您可以透過將 **[ReferenceType]** 屬性設定為 **[專案參考]**，然後設定 **[PackageNameFromProjectReference]** 屬性，以便從專案中選取子封裝。  
@@ -47,7 +46,7 @@ ms.locfileid: "48129131"
 > [!NOTE]  
 >  [ReferenceType] 選項是唯讀的，如果尚未將包含封裝的專案轉換為專案部署模型，則該選項設為 [外部參考]。 如需轉換的詳細資訊，請參閱 [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md) (將專案部署至 Integration Services 伺服器)。  
   
- 「執行封裝」工作也可執行儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 資料庫中的封裝，以及儲存在檔案系統中的封裝。 此工作使用 OLE DB 連接管理員連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，或使用檔案連接管理員存取檔案系統。 如需詳細資訊，請參閱＜ [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md) ＞和＜ [Flat File Connection Manager](../connection-manager/flat-file-connection-manager.md)＞。  
+ 「執行封裝」工作也可執行儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 資料庫中的封裝，以及儲存在檔案系統中的封裝。 此工作使用 OLE DB 連接管理員連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，或使用檔案連接管理員存取檔案系統。 如需詳細資訊，請參閱＜ [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md) ＞和＜ [般檔案連線管理員](../connection-manager/flat-file-connection-manager.md)＞。  
   
  「執行封裝」工作也可執行資料庫維護計畫，讓您管理相同 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 方案中的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝和資料庫維護計畫。 資料庫維護計畫與 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝類似，不過計畫只能包含資料庫維護工作，而且一律儲存在 msdb 資料庫中。  
   
@@ -57,13 +56,13 @@ ms.locfileid: "48129131"
   
  或者，有時您可能希望父封裝和子封裝當作一個單位一起失敗，或是不要產生其他處理序的額外負擔。 例如，如果子處理序失敗，而父封裝處理序中的後續處理取決於子處理序的成功，則子封裝應該在父封裝的處理序中執行。  
   
- 根據預設，「 執行封裝 」 工作的 ExecuteOutOfProcess 屬性設為`False`，並執行相同的處理序與父封裝中的子封裝。 如果您將此屬性設定為 `True`，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 此外，如果您將屬性設定為`True`，您無法偵錯僅限工具安裝中的封裝。 您必須安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 如需詳細資訊，請參閱 [安裝 Integration Services](../install-windows/install-integration-services.md)。  
+ 根據預設，「 執行封裝 」 工作的 ExecuteOutOfProcess 屬性設為`False`，並執行相同的處理序與父封裝中的子封裝。 如果您將此屬性設定為 `True`，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 此外，如果您將此屬性設定為 `True`，則無法在僅限工具安裝中偵錯封裝。 您必須安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 如需詳細資訊，請參閱 [安裝 Integration Services](../install-windows/install-integration-services.md)。  
   
 ## <a name="extending-transactions"></a>延伸交易  
- 父封裝使用的交易可延伸至子封裝；因此，這兩種封裝執行的工作都能認可或回復。 例如，根據子封裝執行的資料庫插入，可以認可或回復父封裝所執行的資料庫插入，反之亦然。 如需詳細資訊，請參閱＜ [Inherited Transactions](../inherited-transactions.md)＞。  
+ 父封裝使用的交易可延伸至子封裝；因此，這兩種封裝執行的工作都能認可或回復。 例如，根據子封裝執行的資料庫插入，可以認可或回復父封裝所執行的資料庫插入，反之亦然。 如需詳細資訊，請參閱＜ [繼承的事務](../inherited-transactions.md)＞。  
   
 ## <a name="propagating-logging-details"></a>傳播記錄詳細資料  
- 「執行封裝」工作執行的子封裝不一定會設定為使用記錄，但是子封裝永遠會將記錄的詳細資料轉送給父封裝。 如果「執行封裝」工作設定為使用記錄，則此工作會記錄來自子封裝的記錄詳細資料。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)。  
+ 「執行封裝」工作執行的子封裝不一定會設定為使用記錄，但是子封裝永遠會將記錄的詳細資料轉送給父封裝。 如果「執行封裝」工作設定為使用記錄，則此工作會記錄來自子封裝的記錄詳細資料。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)。  
   
 ## <a name="passing-values-to-child-packages"></a>將值傳遞給子封裝  
  子封裝通常使用由另一個呼叫它的封裝傳遞給它的值，該封裝一般是其父封裝。 使用來自父封裝的值在下列類似狀況中很有用：  
@@ -82,7 +81,7 @@ ms.locfileid: "48129131"
   
 -   **參數**  
   
-     您可以設定「執行封裝」工作將父封裝變數或參數 (或專案參數) 對應到子封裝參數。 專案必須使用專案部署模型，而且子封裝必須包含在包含父封裝的相同專案中。 如需詳細資訊，請參閱＜ [Execute Package Task Editor](../execute-package-task-editor.md)＞。  
+     您可以設定「執行封裝」工作將父封裝變數或參數 (或專案參數) 對應到子封裝參數。 專案必須使用專案部署模型，而且子封裝必須包含在包含父封裝的相同專案中。 如需詳細資訊，請參閱＜ [執行封裝工作編輯器](../execute-package-task-editor.md)＞。  
   
     > [!NOTE]  
     >  如果子封裝參數不區分大小寫，但對應到區分大小寫的父參數，則子封裝將無法執行。  
@@ -95,17 +94,17 @@ ms.locfileid: "48129131"
   
  父封裝變數可在「執行封裝」工作的範圍內定義，或是在諸如封裝的父容器中定義。 如果有多個名稱相同的變數可用，則會使用在「執行封裝」工作範圍內所定義的變數，或是最接近工作範圍的變數。  
   
- 如需詳細資訊，請參閱 [Use the Values of Variables and Parameters in a Child Package](../use-the-values-of-variables-and-parameters-in-a-child-package.md)(在子封裝中使用變數和參數的值)。  
+ 如需詳細資訊，請參閱 [在子封裝中使用變數和參數的值](../use-the-values-of-variables-and-parameters-in-a-child-package.md)。  
   
 ### <a name="accessing-parent-package-variables"></a>存取父封裝變數  
- 子封裝可藉由使用指令碼工作存取父封裝變數。 當你在 **[指令碼工作編輯器]** 的 **[指令碼]** 頁面上輸入父封裝變數的名稱時，變數名稱中請勿加上 **User:** 。 否則，在您執行父封裝時子封裝會找不到該變數。 如需使用指令碼工作存取父封裝變數的詳細資訊，請參閱此部落格文章[SSIS： 存取父封裝中的變數](http://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
+ 子封裝可藉由使用指令碼工作存取父封裝變數。 當你在 [指令碼工作編輯器] 的 [指令碼]頁面上輸入父封裝變數的名稱時，變數名稱中請勿加上 **User:**。 否則，在您執行父封裝時子封裝會找不到該變數。 如需使用指令碼工作存取父封裝變數的詳細資訊，請參閱此部落格文章中， [SSIS:存取父封裝中的變數](https://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
   
 ## <a name="configuring-the-execute-package-task"></a>設定執行封裝工作  
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [執行套件工作編輯器](../execute-package-task-editor.md)  
+-   [Execute Package Task Editor](../execute-package-task-editor.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   
@@ -117,8 +116,8 @@ ms.locfileid: "48129131"
   
 ## <a name="related-content"></a>相關內容  
   
--   部落格文章[SSIS： 應執行同處理序或跨處理序的子封裝？](http://go.microsoft.com/fwlink/?LinkId=220819)，consultingblogs.emc.com 上。  
+-   部落格文章[SSIS:您應該執行子封裝的處理序或跨處理序嗎？](https://go.microsoft.com/fwlink/?LinkId=220819)，consultingblogs.emc.com 上。  
   
--   部落格文章[SSIS： 存取父封裝中的變數](http://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
+-   部落格文章[SSIS:存取父封裝中的變數](https://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
   
   

@@ -15,23 +15,23 @@ ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e37e5a540d452b745bc4a533d3a523b5484eca1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49c05c47492913c02df6591f78e1deea531de809
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134328"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377910"
 ---
 # <a name="xml-task-editor-general-page"></a>XML Task Editor (General Page)
   使用 **[XML 工作編輯器]** 對話方塊的 **[一般節點]** ，即可指定作業類型和設定作業。  
   
- 若要了解這個工作，請參閱＜ [XML Task](control-flow/xml-task.md)＞。 如需有關使用 XML 文件和資料的詳細資訊，請參閱 MSDN Library 中的 "[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)"。  
+ 若要了解這個工作，請參閱＜ [XML Task](control-flow/xml-task.md)＞。 如需有關使用 XML 文件和資料的詳細資訊，請參閱 MSDN Library 中的 "[Employing XML in the .NET Framework](https://go.microsoft.com/fwlink/?LinkId=56214)"。  
   
 ## <a name="static-options"></a>靜態選項  
  **OperationType**  
  從清單中選取作業類型。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**Validate**|針對「文件類型定義」(DTD) 或「XML 結構描述定義」(XSD) 結構描述來驗證 XML 文件。 選取此選項會在 **[驗證]** 區段中顯示動態選項。|  
 |**XSLT**|在 XML 文件上執行 XSL 轉換。 選取此選項會在 **[XSLT]** 區段中顯示動態選項。|  
@@ -43,22 +43,22 @@ ms.locfileid: "48134328"
  **SourceType**  
  選取 XML 文件的來源類型。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
   
  **Source**  
- 如果 [Source] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
+ 如果 [Source] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 ([...])，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
   
  如果 [來源] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關的主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  如果 [來源] 設定為 [變數]，請選取現有的變數，或按一下 [\<新增變數...>] 建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[加入變數](../../2014/integration-services/add-variable.md)。  
+ **相關主題**:[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[將變數加入](../../2014/integration-services/add-variable.md)。  
   
 ## <a name="operationtype-dynamic-options"></a>OperationType 動態選項  
   
@@ -74,12 +74,12 @@ ms.locfileid: "48134328"
  **目的地**  
  選取現有的檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關的主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **DestinationType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
@@ -87,7 +87,7 @@ ms.locfileid: "48134328"
  **ValidationType**  
  選取驗證類型。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**DTD**|使用文件類型定義 (DTD)。|  
 |**XSD**|使用 XML 結構描述定義 (XSD) 結構描述。 選取此選項會在 **[ValidationType]** 區段中顯示動態選項。|  
@@ -104,22 +104,22 @@ ms.locfileid: "48134328"
  **SecondOperandType**  
  選取第二個 XML 文件的來源類型。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
   
  **SecondOperand**  
- 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [來源編輯器] 對話方塊來提供 XML。  
+ 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 ([...])，然後使用 [來源編輯器] 對話方塊來提供 XML。  
   
  如果 [SecondOperandType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關的主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  如果 [XPathStringSourceType] 設定為 [變數]，請選取現有的變數，或按一下 [\<新增變數...>]  建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[加入變數](../../2014/integration-services/add-variable.md)。  
+ **相關主題**:[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[將變數加入](../../2014/integration-services/add-variable.md)。  
   
 ### <a name="operationtype--xslt"></a>OperationType = XSLT  
  指定 XSLT 作業的選項。  
@@ -133,16 +133,16 @@ ms.locfileid: "48134328"
  **目的地**  
  如果 [DestinationType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關的主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  如果 [DestinationType] 設定為 [變數]，請選取現有的變數，或按一下 [\<新增變數...>] 建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[加入變數](../../2014/integration-services/add-variable.md)。  
+ **相關主題**:[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[將變數加入](../../2014/integration-services/add-variable.md)。  
   
  **DestinationType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
@@ -150,22 +150,22 @@ ms.locfileid: "48134328"
  **SecondOperandType**  
  選取第二個 XML 文件的來源類型。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
   
  **SecondOperand**  
- 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [來源編輯器] 對話方塊來提供 XML。  
+ 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 ([...])，然後使用 [來源編輯器] 對話方塊來提供 XML。  
   
  如果 [SecondOperandType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關的主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  如果 [XPathStringSourceType] 設定為 [變數]，請選取現有的變數，或按一下 [\<新增變數...>]  建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[加入變數](../../2014/integration-services/add-variable.md)。  
+ **相關主題**:[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[將變數加入](../../2014/integration-services/add-variable.md)。  
   
 ### <a name="operationtype--xpath"></a>OperationType = XPATH  
  指定 XPath 作業的選項。  
@@ -179,16 +179,16 @@ ms.locfileid: "48134328"
  **目的地**  
  如果 [DestinationType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關的主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  如果 [DestinationType] 設定為 [變數]，請選取現有的變數，或按一下 [\<新增變數...>] 建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[加入變數](../../2014/integration-services/add-variable.md)。  
+ **相關主題**:[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[將變數加入](../../2014/integration-services/add-variable.md)。  
   
  **DestinationType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
@@ -196,22 +196,22 @@ ms.locfileid: "48134328"
  **SecondOperandType**  
  選取第二個 XML 文件的來源類型。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
   
  **SecondOperand**  
- 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [來源編輯器] 對話方塊來提供 XML。  
+ 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 ([...])，然後使用 [來源編輯器] 對話方塊來提供 XML。  
   
  如果 [SecondOperandType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關的主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  如果 [XPathStringSourceType] 設定為 [變數]，請選取現有的變數，或按一下 [\<新增變數...>]  建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[加入變數](../../2014/integration-services/add-variable.md)。  
+ **相關主題**:[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[將變數加入](../../2014/integration-services/add-variable.md)。  
   
  **PutResultInOneNode**  
  指定是否將結果寫入單一節點。  
@@ -219,7 +219,7 @@ ms.locfileid: "48134328"
  **XPathOperation**  
  選取 XPath 結果類型。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**Evaluation**|傳回 XPath 函數的結果。|  
 |**節點清單**|將選取的節點當做 XML 片段傳回。|  
@@ -231,22 +231,22 @@ ms.locfileid: "48134328"
  **XPathStringSourceType**  
  選取 XML 文件的來源類型。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
   
  **XPathStringSource**  
- 如果 [XPathStringSourceType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
+ 如果 [XPathStringSourceType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 ([...])，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
   
  如果 [XPathStringSourceType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>]，以建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關的主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  如果 [XPathStringSourceType] 設定為 [變數]，請選取現有的變數，或按一下 [\<新增變數...>]  建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[加入變數](../../2014/integration-services/add-variable.md)  
+ **相關主題**:[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[加入變數](../../2014/integration-services/add-variable.md)  
   
  當您使用 XPath 陳述式識別來源文件中的合併位置時，此陳述式預期會傳回單一節點。 如果陳述式傳回多個節點，只會使用第一個節點。 第二個文件的內容會合併到 XPath 查詢傳回的第一個節點之下。  
   
@@ -259,16 +259,16 @@ ms.locfileid: "48134328"
  **目的地**  
  如果 [DestinationType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關的主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  如果 [DestinationType] 設定為 [變數]，請選取現有的變數，或按一下 [\<新增變數...>] 建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[加入變數](../../2014/integration-services/add-variable.md)。  
+ **相關主題**:[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[將變數加入](../../2014/integration-services/add-variable.md)。  
   
  **DestinationType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
@@ -276,22 +276,22 @@ ms.locfileid: "48134328"
  **SecondOperandType**  
  選取第二份 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
   
  **SecondOperand**  
- 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
+ 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 ([...])，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
   
  如果 [SecondOperandType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關的主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  如果 [SecondOperandType] 設定為 [變數]，請選取現有的變數，或按一下 [\<新增變數...>] 建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[加入變數](../../2014/integration-services/add-variable.md)  
+ **相關主題**:[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[加入變數](../../2014/integration-services/add-variable.md)  
   
 ### <a name="operationtype--diff"></a>OperationType = Diff  
  指定 Diff 作業的選項。  
@@ -299,7 +299,7 @@ ms.locfileid: "48134328"
  **DiffAlgorithm**  
  選取比較文件時要使用的 Diff 演算法。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**Auto**|讓 XML 工作決定使用快速或精確演算法。|  
 |**快速**|使用快速但比較不精確的 Diff 演算法。|  
@@ -313,11 +313,11 @@ ms.locfileid: "48134328"
 |**IgnoreXMLDeclaration**|指定是否比較 XML 宣告。|  
 |**IgnoreDTD**|指定是否忽略文件類型定義 (DTD)。|  
 |**IgnoreWhite Spaces**|指定在比較文件時是否忽略空白數量的差異。|  
-|**IgnoreNamespaces**|指定是否比較元素的命名空間統一資源識別碼 (URI) 及其屬性名稱。<br /><br /> 注意： 如果此選項設定為`True`，兩個項目擁有相同本機名稱但不同的命名空間會視為相同。|  
+|**IgnoreNamespaces**|指定是否比較元素的命名空間統一資源識別碼 (URI) 及其屬性名稱。<br /><br /> 注意：如果此選項設定為 `True`，則擁有相同本機名稱但命名空間不同的兩個元素會視為相同。|  
 |**IgnoreProcessingInstructions**|指定是否比較處理指示。|  
-|**IgnoreOrderOf ChildElements**|指定是否比較子元素的順序。<br /><br /> 注意： 如果此選項設定為`True`，差別只在於同層級清單中位置的子元素視為相同。|  
+|**IgnoreOrderOf ChildElements**|指定是否比較子元素的順序。<br /><br /> 注意：如果此選項設定為 `True`，則只是在同層級清單中的位置有所不同的子元素會視為相同。|  
 |**IgnoreComments**|指定是否比較註解節點。|  
-|**IgnorePrefixes**|指定是否比較元素與屬性名稱的前置詞。<br /><br /> 注意： 如果您將此選項設定為`True`，擁有相同本機名稱但不同的命名空間 Uri 與前置詞，兩個元素視為相同。|  
+|**IgnorePrefixes**|指定是否比較元素與屬性名稱的前置詞。<br /><br /> 注意：如果此選項設定為 `True`，則擁有相同本機名稱但命名空間 URI 與前置詞不同的兩個元素會視為相同。|  
   
  **FailOnDifference**  
  指定 Diff 作業失敗時工作是否失敗。  
@@ -334,16 +334,16 @@ ms.locfileid: "48134328"
  **目的地**  
  如果 [DestinationType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關的主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  如果 [DestinationType] 設定為 [變數]，請選取現有的變數，或按一下 [\<新增變數...>] 建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[加入變數](../../2014/integration-services/add-variable.md)。  
+ **相關主題**:[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[將變數加入](../../2014/integration-services/add-variable.md)。  
   
  **DestinationType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
@@ -351,22 +351,22 @@ ms.locfileid: "48134328"
  **SecondOperandType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
   
  **SecondOperand**  
- 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
+ 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 ([...])，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
   
  如果 [SecondOperandType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關的主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  如果 [SecondOperandType] 設定為 [變數]，請選取現有的變數，或按一下 [\<新增變數...>] 建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[加入變數](../../2014/integration-services/add-variable.md)  
+ **相關主題**:[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[加入變數](../../2014/integration-services/add-variable.md)  
   
 ### <a name="operationtype--patch"></a>OperationType = 修補  
  指定修補作業的選項。  
@@ -380,16 +380,16 @@ ms.locfileid: "48134328"
  **目的地**  
  如果 [DestinationType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關的主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  如果 [DestinationType] 設定為 [變數]，請選取現有的變數，或按一下 [\<新增變數...>] 建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[加入變數](../../2014/integration-services/add-variable.md)。  
+ **相關主題**:[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[將變數加入](../../2014/integration-services/add-variable.md)。  
   
  **DestinationType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
@@ -397,22 +397,22 @@ ms.locfileid: "48134328"
  **SecondOperandType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
   
  **SecondOperand**  
- 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 **(…)**，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
+ 如果 [SecondOperandType] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 ([...])，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
   
  如果 [SecondOperandType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關的主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  如果 [SecondOperandType] 設定為 [變數]，請選取現有的變數，或按一下 [\<新增變數...>] 建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[加入變數](../../2014/integration-services/add-variable.md)  
+ **相關主題**:[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[加入變數](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

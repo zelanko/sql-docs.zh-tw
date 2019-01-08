@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSagentparameterlist_TSQL
@@ -19,12 +18,12 @@ ms.assetid: 4ea571a0-078d-4e13-95ee-f3d4bbd4dfb2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a765732f4d44ef31ed947a10d3b9449e261d1a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fd8e84a443c87846b4c40c45152b1225e2bc7b1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760926"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770580"
 ---
 # <a name="msagentparameterlist-transact-sql"></a>MSagentparameterlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

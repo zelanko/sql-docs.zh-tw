@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae94de96cc36c4b53204d76049df6079a5690a3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3488a7137e03d3ffdec71f068697c96a151a1301
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656470"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517523"
 ---
 # <a name="sysdmexecexternaloperations-transact-sql"></a>sys.dm_exec_external_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "51656470"
 |execution_id|**nvarchar(32)**|PolyBase 查詢相關聯的唯一查詢識別碼|請參閱中的識別碼[sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
 |step_index|**int**|查詢步驟的索引|請參閱中的 step_index [sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
 |operation_ 類型|**nvarchar(128)**|描述在 Hadoop 作業或其他外部作業|' 外部 Hadoop Operation'|  
-|operation_ 名稱|**nvarchar(4000)**|指出如何以百分比表示 （多少為取用的輸入） 作業的狀態|0-1 – 乘以因數 100 （完成）|  
-|map_ 進度|**float**|表示減少的狀態如何作業以百分比表示，如果有的話|0-1 – 乘以因數 100 （完成）|  
+|operation_ 名稱|**nvarchar(4000)**|指出如何以百分比表示 （多少為取用的輸入） 作業的狀態|0-1-乘以因數 100 （完成）|  
+|map_ 進度|**float**|表示減少的狀態如何作業以百分比表示，如果有的話|0-1-乘以因數 100 （完成）|  
   
 ## <a name="see-also"></a>另請參閱  
  [PolyBase 疑難排解動態管理檢視](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
@@ -21,12 +21,12 @@ ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c93de6cb7c4b084a178633691f0874f704811e2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 204d312e1350e7284b335806a0286baf9603c9a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075558"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788458"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>選取 SQL Server Agent 服務的帳戶
   服務啟動帳戶會定義 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Agent 用來執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 帳戶及其網路權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會以指定的使用者帳戶執行。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員選擇下列選項，藉此選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務的帳戶：  
@@ -91,12 +91,12 @@ ms.locfileid: "48075558"
   
  <sup>4</sup>請參閱下列限制 4。  
   
-### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>限制 1：對於多伺服器管理使用非管理帳戶  
- 在主要伺服器上編列目標伺服器可能失敗，並出現下列錯誤訊息：「編列作業失敗」。  
+### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>限制 1:對於多伺服器管理使用非系統管理帳戶  
+ 編列目標伺服器，為主要伺服器，可能會失敗並出現下列錯誤訊息：「 編列作業失敗。 」  
   
  若要解決此錯誤，請重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務。 如需詳細資訊，請參閱 [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
-### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>限制 2：對於多伺服器管理使用本機系統帳戶  
+### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>限制 2:對於多伺服器管理使用本機系統帳戶  
  當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務在本機系統帳戶下執行時支援多伺服器管理，但前提是主要伺服器和目標伺服器都必須位於相同電腦上。 如果您使用此組態，則當您在主要伺服器上編列目標伺服器時會傳回下列訊息：  
   
  「請確定 <目標伺服器電腦名稱> 的代理程式啟動帳戶有權限以 targetServer 的身分登入」。  
@@ -108,7 +108,7 @@ ms.locfileid: "48075558"
   
  若要解決此問題，請將執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦重新開機。 這個動作只需要做一次。  
   
-### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>限制 4：當 SQL Server Reporting Services 在相同電腦上執行時，則使用網路服務帳戶  
+### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>4 的限制：在同一部電腦上執行 SQL Server Reporting Services 時，使用網路服務帳戶  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果您是在網路服務帳戶之下執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務，且 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 也在相同電腦上執行，則 Agent 可能無法啟動。  
   
  若要解決此問題，請將執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦重新開機，然後重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務。 這個動作只需要做一次。  

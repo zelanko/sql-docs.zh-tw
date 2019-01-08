@@ -11,21 +11,21 @@ ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2e520e394ba98cc4dddb0057abde1598da352045
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b61dfe7512f17b6c67c93d02d6b4a9e11164d6b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223348"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361690"
 ---
 # <a name="matrices-report-builder-and-ssrs"></a>矩陣 (報表產生器及 SSRS)
   使用矩陣顯示群組資料與摘要資訊。 您可以依資料列和資料行群組中的多個欄位或運算式群組資料。 矩陣提供與交叉資料表和樞紐資料表類似的功能。 在執行階段，當報表資料和資料區域結合時，矩陣在頁面上會以水平和垂直方式成長。 矩陣資料格中的值會顯示資料格所屬資料列與資料行群組交集範圍內的彙總值。 您可以格式化資料列和資料行以反白顯示您要強調的資料。 您也可以加入一開始隱藏詳細資料的向下鑽研切換，使用者就可以在需要時，按一下切換來顯示更多或更少的詳細資料。  
   
- 在初始設計之後，您可以繼續開發矩陣以改善使用者的檢視體驗。 如需詳細資訊，請參閱[控制報表頁面上的 Tablix 資料區顯示 &#40;報表產生器及 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)。  
+ 在初始設計之後，您可以繼續開發矩陣以改善使用者的檢視體驗。 如需詳細資訊，請參閱 [控制報表頁面上的 Tablix 資料區顯示 &#40;報表產生器及 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)。  
   
- 若要快速地開始使用矩陣，請參閱[教學課程：建立矩陣報表 &#40;報表產生器&#41;](../tutorial-creating-a-matrix-report-report-builder.md)。  
+ 若要快速地開始使用矩陣，請參閱[教學課程：建立矩陣報表&#40;報表產生器&#41;](../tutorial-creating-a-matrix-report-report-builder.md)。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 範例報表包括許多使用矩陣的報表。 您可以在報表產生器或報表設計師中瀏覽範例報表的報表定義，或在報表產生器或報表設計師中預覽轉譯的報表，藉以了解矩陣。 如需有關下載範例報表的詳細資訊，請參閱＜ [(SSRS) Reporting Services 範例](http://go.microsoft.com/fwlink/?LinkID=198283)＞。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 範例報表包括許多使用矩陣的報表。 您可以在報表產生器或報表設計師中瀏覽範例報表的報表定義，或在報表產生器或報表設計師中預覽轉譯的報表，藉以了解矩陣。 如需有關下載範例報表的詳細資訊，請參閱＜ [(SSRS) Reporting Services 範例](https://go.microsoft.com/fwlink/?LinkID=198283)＞。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -93,7 +93,7 @@ ms.locfileid: "48223348"
  若要加入相鄰資料行群組的總計資料行，按一下資料行群組定義資料格，然後使用 **[加入總計]** 命令。 新的靜態資料行就會加入到資料行群組的旁邊，其中包含現有資料列中每個數值欄位的預設彙總總和。 若要變更運算式，請手動編輯預設彙總，例如， `Avg([Sales])`。 如需詳細資訊，請參閱[將總計加入到群組或 Tablix 資料區 &#40;報表產生器及 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [彙總函式參考&#40;報表產生器及 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [彙總函式參考 &#40;報表產生器及 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

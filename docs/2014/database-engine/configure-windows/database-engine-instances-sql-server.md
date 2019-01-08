@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0035994dbcc1e0f4aebf01b6dbc4b69dcb7bfb6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e38b572535011737f33ba1e4c438540ecdd6849
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157948"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640739"
 ---
 # <a name="database-engine-instances-sql-server"></a>Database Engine 執行個體 (SQL Server)
-  執行個體[!INCLUDE[ssDE](../../includes/ssde-md.md)]是一份`sqlservr.exe`當做作業系統服務執行的可執行檔。 每個執行個體都會管理數個系統資料庫以及一個或多個使用者資料庫。 每部電腦都可以執行多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體。 應用程式會連接至執行個體，以在執行個體所管理的資料庫中執行工作。  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體是做為作業系統服務執行之 `sqlservr.exe` 可執行檔的複本。 每個執行個體都會管理數個系統資料庫以及一個或多個使用者資料庫。 每部電腦都可以執行多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體。 應用程式會連接至執行個體，以在執行個體所管理的資料庫中執行工作。  
   
 ## <a name="instances"></a>執行個體  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體是做為服務來操作，而該服務可處理所有應用程式要求，以使用執行個體所管理之任何資料庫中的資料。 這是來自應用程式之連接要求 (登入) 的目標。 如果應用程式和執行個體位在不同的電腦上，則此連接會透過網路連接來執行。 如果應用程式和執行個體位在相同的電腦上，則 SQL Server 連接可以網路連接或記憶體中的連接形式來執行。 連接完成時，應用程式會透過與執行個體的連接來傳送 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 此執行個體會根據資料庫中的資料和物件將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式解析為作業，而且如果已將必要的權限授與登入認證，則會執行工作。 任何擷取的資料以及任何訊息 (例如錯誤) 都會傳回給應用程式。  

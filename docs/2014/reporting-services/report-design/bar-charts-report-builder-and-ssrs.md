@@ -11,17 +11,17 @@ ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5407fdc291cd1d0d0a533466b0e45dd0cbce320b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc40f29ec61c1818a4cdb1186a4ceccf3553a107
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106098"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365910"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>橫條圖 (報表產生器及 SSRS)
   橫條圖是以數條水平橫條來顯示數列。 一般橫條圖與直條圖相當有關聯，後者會將數列顯示為數條垂直線，而範圍橫條圖則會將數列顯示為數條水平橫條，其中包含各種起點與終點。  
   
- 橫條圖是水平顯示資料的唯一圖表類型。 因此，橫條圖通常用於表示發生超過一段時間的資料，而且其中包含有限的開始和結束日期。 同時，橫條圖也常用於顯示類別資訊，因為類別目錄可以水平顯示。 如需如何將資料加入至橫條圖的詳細資訊，請參閱[圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
+ 橫條圖是水平顯示資料的唯一圖表類型。 因此，橫條圖通常用於表示發生超過一段時間的資料，而且其中包含有限的開始和結束日期。 同時，橫條圖也常用於顯示類別資訊，因為類別目錄可以水平顯示。 如需如何將資料加入橫條圖的詳細資訊，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
   
  下圖顯示橫條圖。 橫條圖非常適合這個資料，因為全部三個數列都共用一個共同的時間週期，以便進行有效的比較。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48106098"
   
 -   如果您想要將橫條加入到報表內的資料表或矩陣，請考慮使用線性量測計來代替橫條圖。 線性量測計的設計為顯示一個值而非多個群組，因此在清單或資料表的資料區域內，更有使用上的彈性。 如需詳細資訊，請參閱 [量測計 &#40;報表產生器及 SSRS&#41;](gauges-report-builder-and-ssrs.md)。  
   
--   您可以在橫條圖的個別直條上加入特殊的繪製樣式來增加其視覺效果。 繪製樣式包括楔形、浮凸、圓柱及深淺。 這些效果的設計可以改善平面圖表的外觀。 如果要使用立體圖表，您仍然可以套用繪製樣式，但是可能不會有相同的效果。 如需如何將繪製樣式加入至橫條圖的詳細資訊，請參閱[將斜面、 浮凸與紋理樣式加入圖表&#40;報表產生器及 SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
+-   您可以在橫條圖的個別直條上加入特殊的繪製樣式來增加其視覺效果。 繪製樣式包括楔形、浮凸、圓柱及深淺。 這些效果的設計可以改善平面圖表的外觀。 如果要使用立體圖表，您仍然可以套用繪製樣式，但是可能不會有相同的效果。 如需如何將繪製樣式加入橫條圖的詳細資訊，請參閱 [將斜面、浮凸與紋理樣式加入至圖表 &#40;報表產生器及 SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
   
 -   堆疊橫條圖會將數列放在彼此的上方來建立一個橫條堆疊。 您可以選擇針對每個類別目錄，將堆疊橫條圖分成多組堆疊。 群組堆疊圖會並排顯示。 您的圖表中可以有任意數目的群組堆疊數列。  
   
@@ -63,12 +63,12 @@ ms.locfileid: "48106098"
  [圖表類型 &#40;報表產生器及 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [圖表中的空白和 Null 資料點 &#40;報表產生器及 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [直條圖 &#40;報表產生器及 SSRS&#41;](column-charts-report-builder-and-ssrs.md)   
- [範圍圖表&#40;報表產生器及 SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
+ [範圍圖表 &#40;報表產生器及 SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
  [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [在圖表上格式化圖例&#40;報表產生器及 SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [在圖表上格式化圖例 &#40;報表產生器及 SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [將斜面、浮凸與紋理樣式加入至圖表 &#40;報表產生器及 SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [教學課程：將橫條圖新增至報表 (報表產生器)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [教學課程：將橫條圖新增至報表](http://go.microsoft.com/fwlink/?LinkId=198042)  
+ [教學課程：將橫條圖加入至報表 （報表產生器）](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [教學課程：將橫條圖加入至報表](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

@@ -18,12 +18,12 @@ ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e52684ee8c73c976e42c29ca54079ac716527a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4411cb68c86bbea92429a983449e77985d3d236d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834486"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591582"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@job_id=** ] *job_id*  
  要加入排程的作業識別碼。 *job_id*已**uniqueidentifier**，沒有預設值。  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'**_job_name_**'**  
  要加入排程的作業名稱。 *job_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，沒有預設值。  
   
 > [!NOTE]  
 >  任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
   
- [ **@name=** ] **'***name***'**  
+ [  **@name=** ] **'**_名稱_**'**  
  排程的名稱。 *名稱*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，沒有預設值。  
   
  [ **@enabled=** ] *enabled_flag*  
@@ -134,13 +134,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@active_start_time=** ] *active_start_time*  
  時間之間任何一天*active_start_date*並*active_end_date*開始執行作業。 *active_start_time*已**int**，沒有預設值。 時間格式為使用 24 小時制的 HHMMSS。  
   
- [ **@active_end_time=***active_end_time*  
+ [  **@active_end_time=**_active_end_time_  
  時間之間任何一天*active_start_date*並*active_end_date*結束執行作業。 *active_end_time*已**int**，沒有預設值。 時間格式為使用 24 小時制的 HHMMSS。  
   
- [  **@schedule_id=***schedule_id***輸出**  
+ [  **@schedule_id=**_schedule_id_**輸出**  
  成功建立排程時，指派給這個排程的排程識別碼。 *schedule_id*是 output 變數型別的**int**，沒有預設值。  
   
- [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
+ [ **@schedule_uid**=] _schedule_uid_**輸出**  
  排程的唯一識別碼。 *schedule_uid*類型的變數**uniqueidentifier**。  
   
 ## <a name="return-code-values"></a>傳回碼值  

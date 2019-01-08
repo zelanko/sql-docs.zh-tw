@@ -1,5 +1,5 @@
 ---
-title: SQL Server Launchpad 服務帳戶組態 |Microsoft Docs
+title: SQL Server Launchpad 服務帳戶設定 SQL Server Machine Learning 服務
 description: 如何修改用來在 SQL Server 上的外部指令碼執行的 SQL Server Launchpad 服務帳戶。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 8af27f3bc9fb3e5b602ef6ad5555d9bd8c6720ca
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: aa4d6c38423a805ef672761e3f202061ed842304
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419113"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596372"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>SQL Server Launchpad 服務組態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,10 +64,12 @@ ms.locfileid: "49419113"
 
 |**設定名稱**|**型別**|**說明**|
 |----|----|----|
-|作業\_清理\_ON\_結束|Integer |這是內部設定只，請勿變更此值。 </br></br>指定是否針對每個外部執行階段工作階段建立的暫存工作資料夾清除工作階段完成之後。 這項設定在偵錯時很有用。 </br></br>支援的值為**0** （停用） 或**1** （啟用）。 </br></br>預設值為 1，表示記錄檔會在結束時移除。|
-|追蹤\_層級|Integer |設定追蹤的詳細資訊層級 MSSQLLAUNCHPAD 用來偵錯之用。 這會影響 LOG_DIRECTORY 設定指定的路徑中的追蹤檔案。 </br></br>支援的值為： **1** （錯誤）， **2** （效能）， **3** （警告） **4** （資訊）。 </br></br>預設值為 1，這表示僅限輸出錯誤。|
+|作業\_清理\_ON\_結束|Integer |這是內部設定只-請勿變更此值。 </br></br>指定是否針對每個外部執行階段工作階段建立的暫存工作資料夾清除工作階段完成之後。 這項設定在偵錯時很有用。 </br></br>支援的值為**0** （停用） 或**1** （啟用）。 </br></br>預設值為 1，表示記錄檔會在結束時移除。|
+|追蹤\_層級|Integer |設定追蹤的詳細資訊層級 MSSQLLAUNCHPAD 用來偵錯之用。 這會影響 LOG_DIRECTORY 設定指定的路徑中的追蹤檔案。 </br></br>支援的值為：**1** （錯誤）， **2** （效能）， **3** （警告） **4** （資訊）。 </br></br>預設值為 1，這表示僅限輸出錯誤。|
 
 所有設定都會採用機碼值組的格式，分別位於獨立的行。 例如，若要變更的追蹤層級，您將加入行`Default: TRACE_LEVEL=4`。
+
+<a name="bkmk_EnforcePolicy"></a>
 
 ## <a name="enforcing-password-policy"></a>強制執行密碼原則
 

@@ -20,16 +20,16 @@ ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec1690e8c9f4f0e8c491bedac1a27faf65cde747
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f83b8ce83c1433ce7e20f00580100b65be84961
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809917"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209247"
 ---
 # <a name="sqlgettypeinfo-function"></a>SQLGetTypeInfo 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ISO 92  
+ 導入的版本：ODBC 1.0 標準的合規性：ISO 92  
   
  **摘要**  
  **SQLGetTypeInfo**傳回資料來源所支援的資料類型的相關資訊。 驅動程式的 SQL 結果集形式傳回的資訊。 資料類型僅供資料定義語言 (DDL) 陳述式中的使用。  
@@ -50,8 +50,8 @@ SQLRETURN SQLGetTypeInfo(
  *StatementHandle*  
  [輸入]結果集的陳述式控制代碼。  
   
- *資料類型*  
- [輸入]SQL 資料型別。 這必須是在值的其中一個[SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)一節的附錄 d： 資料類型或驅動程式專屬的 SQL 資料型別。 SQL_ALL_TYPES 指定應傳回的所有資料類型的相關資訊。  
+ *DataType*  
+ [輸入]SQL 資料型別。 這必須是在值的其中一個[SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)一節的附錄 d:資料類型或驅動程式專屬的 SQL 資料型別。 SQL_ALL_TYPES 指定應傳回的所有資料類型的相關資訊。  
   
 ## <a name="returns"></a>傳回值  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_STILL_EXECUTING、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
@@ -62,7 +62,7 @@ SQLRETURN SQLGetTypeInfo(
 |SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|驅動程式特有的告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|01S02|選項值已變更|指定的陳述式屬性是實作運作的情況，因為不正確的因此已暫時替代成類似的值。 (呼叫**SQLGetStmtAttr**判斷暫時替代的值。)取代值是適用於*StatementHandle*直到關閉資料指標。 您可以變更的陳述式屬性是： SQL_ATTR_CONCURRENCY、 SQL_ATTR_CURSOR_TYPE、 SQL_ATTR_KEYSET_SIZE、 SQL_ATTR_MAX_LENGTH、 SQL_ATTR_MAX_ROWS、 sql_attr_query_timeout 時和 SQL_ATTR_SIMULATE_CURSOR。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|01S02|選項值已變更|指定的陳述式屬性是實作運作的情況，因為不正確的因此已暫時替代成類似的值。 (呼叫**SQLGetStmtAttr**判斷暫時替代的值。)取代值是適用於*StatementHandle*直到關閉資料指標。 您可以變更的陳述式屬性是：SQL_ATTR_CONCURRENCY、 SQL_ATTR_CURSOR_TYPE、 SQL_ATTR_KEYSET_SIZE、 SQL_ATTR_MAX_LENGTH、 SQL_ATTR_MAX_ROWS、 sql_attr_query_timeout 時和 SQL_ATTR_SIMULATE_CURSOR。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08S01|通訊連結失敗|函式已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
 |24000|指標狀態無效|資料指標是開啟*StatementHandle，* 並**SQLFetch**或**SQLFetchScroll**呼叫。 如果此錯誤會傳回由驅動程式管理員**SQLFetch**或**SQLFetchScroll**尚未傳回 sql_no_data 之後，以及如果驅動程式會傳回**SQLFetch**或**SQLFetchScroll**傳回 sql_no_data 為止。<br /><br /> 結果集是在上開啟*StatementHandle*，但**SQLFetch**或是**SQLFetchScroll**尚未呼叫。|  
 |40001|序列化失敗|交易已回復因為與另一個交易資源鎖死。|  
@@ -114,9 +114,9 @@ SQLRETURN SQLGetTypeInfo(
   
 |資料行名稱|「資料行」<br /><br /> number|資料類型|註解|  
 |-----------------|-----------------------|---------------|--------------|  
-|TYPE_NAME (ODBC 2.0)|1|非 NULL Varchar|資料來源而定的資料類型名稱;比方說，「 char （）"、"Varchar （）"、"MONEY"、"長 VARBINARY"或者"CHAR （） FOR BIT DATA 中的"。 應用程式必須使用此名稱在**CREATE TABLE**並**ALTER TABLE**陳述式。|  
-|DATA_TYPE (ODBC 2.0)|2|Smallint 非 NULL|SQL 資料類型。 這可以是 ODBC SQL 資料類型或驅動程式專屬的 SQL 資料型別。 日期時間或間隔資料類型，這個資料行會傳回精確的資料類型 （例如 SQL_TYPE_TIME 或 SQL_INTERVAL_YEAR_TO_MONTH）。 如需有效的 ODBC SQL 資料類型的清單，請參閱 < [SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)附錄 d： 資料型別中。 如需驅動程式專用的 SQL 資料類型資訊，請參閱驅動程式的文件。|  
-|COLUMN_SIZE (ODBC 2.0)|3|Integer|伺服器支援此資料類型的最大資料行大小。 針對數值資料，這是最大有效位數。 針對字串資料，這是以字元為單位的長度。 對於 datetime 資料類型，這會是 （假設最大值可以容納分數秒元件的有效位數） 的字串表示法的字元長度。 會傳回 NULL 的資料類型資料行大小不適用。 間隔資料類型，這是常值的時間間隔之字元表示法中的字元數 (所定義的間隔開頭有效位數; 請參閱[間隔資料類型長度](../../../odbc/reference/appendixes/interval-data-type-length.md)附錄 d： 資料類型)。<br /><br /> 如需有關資料行大小的詳細資訊，請參閱 <<c0> [ 資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d： 資料型別中。|  
+|TYPE_NAME (ODBC 2.0)|1|非 NULL Varchar|資料來源相關的資料類型名稱;比方說，「 char （）"、"Varchar （）"、"MONEY"、"長 VARBINARY"或者"CHAR （） FOR BIT DATA 中的"。 應用程式必須使用此名稱在**CREATE TABLE**並**ALTER TABLE**陳述式。|  
+|DATA_TYPE (ODBC 2.0)|2|Smallint 非 NULL|SQL 資料類型。 這可以是 ODBC SQL 資料類型或驅動程式專屬的 SQL 資料型別。 日期時間或間隔資料類型，這個資料行會傳回精確的資料類型 （例如 SQL_TYPE_TIME 或 SQL_INTERVAL_YEAR_TO_MONTH）。 如需有效的 ODBC SQL 資料類型的清單，請參閱 < [SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)附錄 d:資料類型。 如需驅動程式專用的 SQL 資料類型資訊，請參閱驅動程式的文件。|  
+|COLUMN_SIZE (ODBC 2.0)|3|Integer|伺服器支援此資料類型的最大資料行大小。 針對數值資料，這是最大有效位數。 針對字串資料，這是以字元為單位的長度。 對於 datetime 資料類型，這會是 （假設最大值可以容納分數秒元件的有效位數） 的字串表示法的字元長度。 會傳回 NULL 的資料類型資料行大小不適用。 間隔資料類型，這是常值的時間間隔之字元表示法中的字元數 (所定義的間隔開頭有效位數; 請參閱[間隔資料類型長度](../../../odbc/reference/appendixes/interval-data-type-length.md)附錄 d:資料型別）。<br /><br /> 如需有關資料行大小的詳細資訊，請參閱 <<c0> [ 資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d:資料類型。|  
 |LITERAL_PREFIX (ODBC 2.0)|4|Varchar|用來做為常值; 前置詞的字元例如，單引號 （'） 的字元資料類型或 0x 用於二進位資料類型;會傳回 NULL 的資料類型的常值的前置詞不適用。|  
 |LITERAL_SUFFIX (ODBC 2.0)|5|Varchar|字元或字元用來終止常值;例如，單引號 （'） 字元資料類型;會傳回 NULL 的資料類型的常值後置詞不適用。|  
 |CREATE_PARAMS (ODBC 2.0)|6|Varchar|關鍵字，以對應至應用程式時使用的名稱，傳回 TYPE_NAME 欄位中可能指定括號括住每個參數的逗號分隔清單。 在清單中的關鍵字可以是下列任一項： 長度、 有效位數或小數位數。 它們會出現在這個語法需要使用的順序。 比方說，是代表小數點的 CREATE_PARAMS 「 有效位數、 小數位數 」;Varchar CREATE_PARAMS 就會等於 「 長度 」。 如果資料型別定義; 沒有參數，則傳回 NULL例如，整數。<br /><br /> 驅動程式提供 CREATE_PARAMS 文字語言的國家/地區使用的位置。|  
@@ -124,15 +124,15 @@ SQLRETURN SQLGetTypeInfo(
 |CASE_SENSITIVE (ODBC 2.0)|8|Smallint 非 NULL|是否區分大小寫定序和比較字元資料類型：<br /><br /> SQL_TRUE 當資料類型是字元資料類型，而且會區分大小寫。<br /><br /> 如果資料類型不是字元資料類型，或不區分大小寫，SQL_FALSE。|  
 |可搜尋 (ODBC 2.0)|9|Smallint 非 NULL|如何在中，使用的資料型別**其中**子句：<br /><br /> 如果資料行不能在 SQL_PRED_NONE**其中**子句。 （這是 ODBC 2 SQL_UNSEARCHABLE 值相同。*x*。)<br /><br /> SQL_PRED_CHAR 如果資料行可以用於**何處**子句，但僅限**像**述詞。 （這是 ODBC 2 SQL_LIKE_ONLY 值相同。*x*。)<br /><br /> SQL_PRED_BASIC 如果資料行可以用於**何處**子句以外的所有比較運算子搭配**像**(比較、 定量相較之下， **BETWEEN**， **相異**， **IN**，**相符項目**，和**UNIQUE**)。 （這是 ODBC 2 SQL_ALL_EXCEPT_LIKE 值相同。*x*。)<br /><br /> 如果資料行可以用於 SQL_SEARCHABLE**其中**搭配任何比較運算子的子句。|  
 |UNSIGNED_ATTRIBUTE 設 (ODBC 2.0)|10|Smallint|資料類型是否使用不帶正負號：<br /><br /> 如果資料類型是不帶正負號的 SQL_TRUE。<br /><br /> 如果資料型別為 signed，SQL_FALSE。<br /><br /> 如果屬性不是適用於資料類型或資料類型不是數字，則傳回 NULL。|  
-|FIXED_PREC_SCALE (ODBC 2.0)|11|Smallint 非 NULL|是否有預先定義的資料型別固定有效位數和小數位數 （也就是資料來源專用），例如 money 資料類型：<br /><br /> SQL_TRUE 如果它具有預先定義的固定有效位數和小數位數。<br /><br /> 如果沒有預先定義的固定有效位數和小數位數，SQL_FALSE。|  
-|AUTO_UNIQUE_VALUE 會 (ODBC 2.0)|12|Smallint|資料型別是否自動遞增：<br /><br /> SQL_TRUE 的資料型別是否自動遞增。<br /><br /> 如果資料類型不會自動遞增，SQL_FALSE。<br /><br /> 如果屬性不是適用於資料類型或資料類型不是數字，則傳回 NULL。<br /><br /> 應用程式可以將值插入資料行需要此屬性，但通常無法更新資料行的值。<br /><br /> 自動遞增資料行進行插入時，唯一的值會插入資料行在插入時。 增量未定義，但資料來源專用。 應用程式不應該假設任何特定值的自動遞增資料行開始在任何特定點或遞增。|  
-|LOCAL_TYPE_NAME (ODBC 2.0)|13|Varchar|資料來源而定名稱的資料類型的當地語系化的版本。 如果資料來源不支援當地語系化名稱，便傳回 NULL。 這個名稱被供顯示，例如對話方塊。|  
-|MINIMUM_SCALE (ODBC 2.0)|14|Smallint|小數位數的資料來源的資料類型。 如果資料類型有固定的小數位數，MINIMUM_SCALE 和 MAXIMUM_SCALE 資料行都包含這個值。 比方說，SQL_TYPE_TIMESTAMP 資料行可能有固定的小數位數的小數秒數。 當小數位數不適用時，會傳回 NULL。 如需詳細資訊，請參閱 <<c0> [ 資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d： 資料型別中。|  
-|MAXIMUM_SCALE (ODBC 2.0)|15|Smallint|資料來源上的資料類型最大小數位數。 當小數位數不適用時，會傳回 NULL。 如果未在資料來源上個別定義最大小數位數，但定義成與最大有效位數相同，這個資料行包含 COLUMN_SIZE 資料行相同的值。 如需詳細資訊，請參閱 <<c0> [ 資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d： 資料型別中。|  
-|SQL_DATA_TYPE (ODBC 3.0)|16|smallint 非 NULL|SQL 資料類型，因為它的值會出現在描述子 SQL_DESC_TYPE 欄位。 這個資料行是與 DATA_TYPE 資料行，除了間隔和 datetime 資料類型相同。<br /><br /> 間隔和 datetime 資料類型，結果集中的 SQL_DATA_TYPE 欄位會傳回 SQL_INTERVAL 或如果是 SQL_DATETIME，而且 SQL_DATETIME_SUB 欄位將會傳回特定的間隔或 datetime 資料類型的子代碼。 (請參閱[附錄 d： 資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)|  
-|SQL_DATETIME_SUB (ODBC 3.0)|17|Smallint|當 SQL_DATA_TYPE 的值是 SQL_DATETIME 或 SQL_INTERVAL 時，此資料行包含日期時間/間隔子代碼。 日期時間和間隔以外的資料類型，此欄位會是 NULL。<br /><br /> 間隔或 datetime 資料類型，結果集中的 SQL_DATA_TYPE 欄位會傳回 SQL_INTERVAL 或如果是 SQL_DATETIME，而且 SQL_DATETIME_SUB 欄位將會傳回特定的間隔或 datetime 資料類型的子代碼。 (請參閱[附錄 d： 資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)|  
+|FIXED_PREC_SCALE (ODBC 2.0)|11|Smallint 非 NULL|是否有預先定義的資料型別固定有效位數和小數位數 （也就是資料來源特有），例如 money 資料類型：<br /><br /> SQL_TRUE 如果它具有預先定義的固定有效位數和小數位數。<br /><br /> 如果沒有預先定義的固定有效位數和小數位數，SQL_FALSE。|  
+|AUTO_UNIQUE_VALUE 會 (ODBC 2.0)|12|Smallint|資料型別是否自動遞增：<br /><br /> SQL_TRUE 的資料型別是否自動遞增。<br /><br /> 如果資料類型不會自動遞增，SQL_FALSE。<br /><br /> 如果屬性不是適用於資料類型或資料類型不是數字，則傳回 NULL。<br /><br /> 應用程式可以將值插入資料行需要此屬性，但通常無法更新資料行的值。<br /><br /> 自動遞增資料行進行插入時，唯一的值會插入資料行在插入時。 增量未定義，但資料來源特有。 應用程式不應該假設任何特定值的自動遞增資料行開始在任何特定點或遞增。|  
+|LOCAL_TYPE_NAME (ODBC 2.0)|13|Varchar|資料類型之資料來源相依名稱的當地語系化版本。 如果資料來源不支援當地語系化名稱，便傳回 NULL。 這個名稱被供顯示，例如對話方塊。|  
+|MINIMUM_SCALE (ODBC 2.0)|14|Smallint|小數位數的資料來源的資料類型。 如果資料類型有固定的小數位數，MINIMUM_SCALE 和 MAXIMUM_SCALE 資料行都包含這個值。 比方說，SQL_TYPE_TIMESTAMP 資料行可能有固定的小數位數的小數秒數。 當小數位數不適用時，會傳回 NULL。 如需詳細資訊，請參閱 <<c0> [ 資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d:資料類型。|  
+|MAXIMUM_SCALE (ODBC 2.0)|15|Smallint|資料來源上的資料類型最大小數位數。 當小數位數不適用時，會傳回 NULL。 如果未在資料來源上個別定義最大小數位數，但定義成與最大有效位數相同，這個資料行包含 COLUMN_SIZE 資料行相同的值。 如需詳細資訊，請參閱 <<c0> [ 資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d:資料類型。|  
+|SQL_DATA_TYPE (ODBC 3.0)|16|smallint 非 NULL|SQL 資料類型，因為它的值會出現在描述子 SQL_DESC_TYPE 欄位。 這個資料行是與 DATA_TYPE 資料行，除了間隔和 datetime 資料類型相同。<br /><br /> 間隔和 datetime 資料類型，結果集中的 SQL_DATA_TYPE 欄位會傳回 SQL_INTERVAL 或如果是 SQL_DATETIME，而且 SQL_DATETIME_SUB 欄位將會傳回特定的間隔或 datetime 資料類型的子代碼。 (請參閱[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)|  
+|SQL_DATETIME_SUB (ODBC 3.0)|17|Smallint|當 SQL_DATA_TYPE 的值是 SQL_DATETIME 或 SQL_INTERVAL 時，此資料行包含日期時間/間隔子代碼。 日期時間和間隔以外的資料類型，此欄位會是 NULL。<br /><br /> 間隔或 datetime 資料類型，結果集中的 SQL_DATA_TYPE 欄位會傳回 SQL_INTERVAL 或如果是 SQL_DATETIME，而且 SQL_DATETIME_SUB 欄位將會傳回特定的間隔或 datetime 資料類型的子代碼。 (請參閱[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)|  
 |NUM_PREC_RADIX (ODBC 3.0)|18|Integer|如果資料類型是近似的數值類型，此資料行包含值 2 表示 COLUMN_SIZE 指定的位元數。 精確數值類型，此資料行包含 10 這個值來表示 COLUMN_SIZE 指定的小數位數。 否則，這個資料行就是 NULL。|  
-|INTERVAL_PRECISION (ODBC 3.0)|19|Smallint|如果間隔資料類型的資料型別，這個資料行就會包含間隔開頭有效位數的值。 (請參閱[間隔資料類型有效位數](../../../odbc/reference/appendixes/interval-data-type-precision.md)附錄 d： 資料型別中。)否則，這個資料行就是 NULL。|  
+|INTERVAL_PRECISION (ODBC 3.0)|19|Smallint|如果間隔資料類型的資料型別，這個資料行就會包含間隔開頭有效位數的值。 (請參閱[間隔資料類型有效位數](../../../odbc/reference/appendixes/interval-data-type-precision.md)附錄 d:資料型別。）否則，這個資料行就是 NULL。|  
   
  屬性資訊可以套用至資料型別或結果集內的特定資料行。 **SQLGetTypeInfo**傳回資料類型，與相關聯屬性的相關資訊**SQLColAttribute**傳回結果集中的資料行相關聯的屬性的相關資訊。  
   

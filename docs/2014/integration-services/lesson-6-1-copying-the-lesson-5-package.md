@@ -1,24 +1,23 @@
 ---
-title: 步驟 1：複製第 5 課套件 | Microsoft Docs
+title: 步驟 1：複製第 5 課套件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 71d12e661036d2ccd227429903c19c273c3c9268
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3175da6c4f53bd8a829a54180fd6739d2a3e051
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111469"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357848"
 ---
-# <a name="step-1-copying-the-lesson-5-package"></a>步驟 1：複製第 5 課的封裝
+# <a name="step-1-copying-the-lesson-5-package"></a>步驟 1：複製第 5 課的套件
   在這項工作中，您將為第 5 課所建立的 Lesson 5.dtsx 封裝建立複本。 另外，您也可以將此教學課程中隨附之已完成的第 5 課封裝加入至專案中，然後改為複製該封裝。 在第 6 課其餘的課程中，您將使用這個新的副本。  
   
 ### <a name="to-copy-the-lesson-5-package"></a>若要複製第 5 課的封裝  
@@ -49,11 +48,11 @@ ms.locfileid: "48111469"
   
 3.  在 [加入現有封裝的副本] 對話方塊的 [封裝位置] 中，選取 [檔案系統]。  
   
-4.  按一下瀏覽 (…) 按鈕，巡覽至電腦上的 Lesson 5.dtsx，然後按一下 [開啟]。  
+4.  按一下瀏覽 (...) 按鈕，巡覽至電腦上的 Lesson 5.dtsx，然後按一下 [開啟]。  
   
      若要下載此教學課程的所有課程封裝，請執行下列動作。  
   
-    1.  導覽至 [Integration Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  導覽至 [Integration Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  按一下 **[下載]** 索引標籤。  
   
@@ -64,6 +63,6 @@ ms.locfileid: "48111469"
      在複製第 5 課封裝之後，如果您目前在方案中已經有之前課程的封裝，請以滑鼠右鍵按一下 1-5 課的每一個封裝，並按一下 [從專案移除]。 當您完成時，您的方案中應該只有 Lesson 6.dtsx。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 2：將專案轉換成專案部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+ [步驟 2:將專案轉換為專案部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c33524c5b526a0523fe866b6307e00cd52cf8003
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 2ceecfb802437cc699dd84a6f935741a24b30e45
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905812"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357670"
 ---
 # <a name="security-report-builder"></a>安全性 (報表產生器)
   報表產生器是一種報表撰寫用戶端應用程式，專為搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器使用而設計。 該報表伺服器可以設定為以獨立伺服器的原生模式運作，或者以 SharePoint 整合模式運作以支援 SharePoint 網站上的報表。  
@@ -46,7 +46,7 @@ ms.locfileid: "48905812"
   
      若要在報表伺服器上檢視或發行項目，套用到報表相關項目與作業的多組使用權限會根據角色分組。 報表伺服器管理員會將您指派為一個或多個角色。 例外，預先定義的角色 [瀏覽者] 可以讓您檢視報表、資料夾、模型與資源。  
   
-     如果您無法連接或瀏覽至報表伺服器，請連絡報表伺服器管理員。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?linkid=121312) 中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件集的 [Reporting Services 安全性與保護](../security/reporting-services-security-and-protection.md)。  
+     如果您無法連接或瀏覽至報表伺服器，請連絡報表伺服器管理員。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?linkid=121312) 中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件集的 [Reporting Services 安全性與保護](../security/reporting-services-security-and-protection.md)。  
   
 -   以 SharePoint 整合模式設定的報表伺服器  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48905812"
   
  若要讓其他使用者瀏覽到並且找到您已發行要共用的項目，您必須請報表伺服器管理員設定資料夾組織，以便為您的使用者提供存取權限。 撰寫報表並且執行已發行的報表時，必須能夠使用 Access。  
   
- 如需詳細資訊，請參閱《 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312):  
+ 如需詳細資訊，請參閱《 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [角色與權限 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "48905812"
   
  在報表設計階段，認證會用於執行資料集查詢和預覽報表。 在執行階段，認證會用於執行報表與快取查詢結果。 您也可以獨立地快取共用資料集查詢結果。 設計階段與執行階段使用的認證可能會不同。 如需詳細資訊，請參閱 [在報表產生器中指定認證](../specify-credentials-in-report-builder.md)。  
   
- 如需維護資料安全的詳細資訊，請參閱《 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312):  
+ 如需維護資料安全的詳細資訊，請參閱《 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
@@ -115,9 +115,9 @@ ms.locfileid: "48905812"
   
 -   除非您會提供有效的值，否則請不要使用依據查詢參數以及屬於 **[文字]** 類型的參數。 可用的值清單有助於使用者只選擇有效的值。 如果沒有有效的值清單，則您將無法限制使用者可以輸入的值。  
   
--   請勿使用全域 [& UserID] 來保護私人資料。 這個值做為報表參數時，可以利用 URL 存取語法在報表 URL 中指定它。 在共用資料集的運算式中使用這個值，會讓資料集無法被快取。 如需詳細資訊，請參閱《 [URL Access Parameter Reference](../url-access-parameter-reference.md) 線上叢書》 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+-   請不要使用全域 [&UserID] 來維護私人資料的安全性。 這個值做為報表參數時，可以利用 URL 存取語法在報表 URL 中指定它。 在共用資料集的運算式中使用這個值，會讓資料集無法被快取。 如需詳細資訊，請參閱《 [URL Access Parameter Reference](../url-access-parameter-reference.md) 線上叢書》 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
- 項目發行到報表伺服器後，報表伺服器管理員可以指定以角色為基礎的安全性或資料夾與項目層級安全性，藉此維護這些項目的安全。 《 [如需詳細資訊，請參閱](../security/secure-reports-and-resources.md) 線上叢書》 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ 項目發行到報表伺服器後，報表伺服器管理員可以指定以角色為基礎的安全性或資料夾與項目層級安全性，藉此維護這些項目的安全。 如需詳細資訊，請參閱《 [Secure Reports and Resources](../security/secure-reports-and-resources.md) 線上叢書》 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
   
  
   

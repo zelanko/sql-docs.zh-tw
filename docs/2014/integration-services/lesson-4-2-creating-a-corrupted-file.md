@@ -1,24 +1,23 @@
 ---
-title: 步驟 2：建立損毀的檔案 | Microsoft Docs
+title: 步驟 2：建立損毀的檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f4134a1bc773a27c71eda472cb502e26cd22b152
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96690ca99a03c8e6d5cd8c6fefb9760ed3f6e71e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226598"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366810"
 ---
-# <a name="step-2-creating-a-corrupted-file"></a>步驟 2：建立損毀檔案
+# <a name="step-2-creating-a-corrupted-file"></a>步驟 2：建立損毀的檔案
   若要示範組態和轉換錯誤的處理，您必須建立處理時會造成元件失敗的範例一般檔案。  
   
  在這項工作中，您會建立現有的範例一般檔案的副本。 然後您會在記事本開啟檔案及編輯 [CurrencyID] 資料行，以確定在轉換查閱期間，它無法產生相符者。 在處理新檔案時，查閱失敗會造成 [貨幣索引鍵查閱] 轉換失敗，因而使得其餘的封裝也失敗。 在您建立損毀範例檔案之後，將執行封裝來檢視封裝失敗。  
@@ -29,7 +28,7 @@ ms.locfileid: "48226598"
   
      範例資料隨附在 SSIS 課程封裝中。 若要下載範例資料和課程封裝，請執行下列動作。  
   
-    1.  巡覽至 [Integration Services 產品範例](http://go.microsoft.com/fwlink/?LinkID=267527)。  
+    1.  巡覽至 [Integration Services 產品範例](https://go.microsoft.com/fwlink/?LinkID=267527)。  
   
     2.  按一下 **[下載]** 索引標籤。  
   
@@ -62,6 +61,6 @@ ms.locfileid: "48226598"
     >  數字 27 是元件的識別碼。 當您建立資料流程時會指派此值，您封裝中的值可能不同。  
   
 ## <a name="next-steps"></a>後續步驟  
- [步驟 3：新增錯誤流程重新導向](lesson-4-3-adding-error-flow-redirection.md)  
+ [步驟 3:加入錯誤流程重新導向](lesson-4-3-adding-error-flow-redirection.md)  
   
   

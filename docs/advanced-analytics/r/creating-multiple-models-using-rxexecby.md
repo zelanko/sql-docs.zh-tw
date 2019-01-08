@@ -1,5 +1,6 @@
 ---
-title: 建立使用 rxExecBy (SQL Server Machine Learning) 的多個模型 |Microsoft Docs
+title: 建立使用 rxExecBy-SQL Server Machine Learning 服務的多個模型
+description: 使用 RevoScaleR 程式庫從 rxExecBy 函式，來建置多個小型的模型儲存在 SQL Server 的機器資料。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,21 +8,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b83abad65689e3e12310251d09199f5aa0e7c3cb
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 5d61d7fee7afbf28f4ef72b7ecbae02853f52d25
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085124"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645297"
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>使用 rxExecBy 建立多個模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2017 CTP 2.0 包含新的函數**rxExecBy**，支援平行處理多個相關模型。 而不是定型一個非常大的模型根據多個類似的實體的資料、 資料科學家可以非常快速地建立許多相關的模型，每個都使用單一實體的特定資料。
+**RxExecBy** RevoScaleR 中的函式支援平行處理多個相關模型。 而不是定型一個大型模型根據多個類似的實體的資料、 資料科學家可以快速建立許多相關的模型，每個都使用單一實體的特定資料。 
 
-例如，假設您監視裝置失敗，並擷取資料的許多不同類型的設備。 藉由使用 rxExecBy，您可以提供單一的大型資料集做為輸入，指定的分層資料集，例如裝置類型的資料行，然後建立 個別裝置的多個模型。
+例如，假設您正在監視裝置故障，擷取資料的許多不同類型的設備。 藉由使用 rxExecBy，您可以提供單一的大型資料集做為輸入，指定的分層資料集，例如裝置類型的資料行，然後建立 個別裝置的多個模型。
 
-此程序已被稱為 「 pleasingly 平行 」 的處理，因為這會稍微繁重的資料科學家或最佳冗長，而且可以讓您快速、 簡單作業的工作。
+這個使用案例已被稱為[「 pleasingly 平行 」](https://en.wikipedia.org/wiki/Embarrassingly_parallel)因為大型的複雜的問題分成並行處理的元件組件。
 
 這種方法的一般應用程式包含個別的家庭智慧型電表預測、 建立個別的產品線的營收預測或建立個別的銀行分支量身訂做的貸款核准的模型。
 
@@ -37,7 +38,7 @@ RevoScaleR 中的 rxExecBy 函式被設計用於大量平行處理大量的小�
 
 ## <a name="rxexecby-syntax-and-examples"></a>rxExecBy 語法和範例
 
-**rxExecBy**會採用四個輸入，其中一個輸入正在進行資料分割的資料集或資料來源物件上指定**金鑰**資料行。 函數會傳回每個資料分割的輸出。 輸出的格式取決於傳遞做為引數的函式，例如，如果您傳遞的模型化函式，例如 rxLinMod，您可以傳回不同的定型的模型，每個資料分割的資料集。
+**rxExecBy**會採用四個輸入，其中一個輸入正在進行資料分割的資料集或資料來源物件上指定**金鑰**資料行。 函數會傳回每個資料分割的輸出。 輸出的格式取決於傳遞做為引數的函式。 比方說，如果您傳遞例如 rxLinMod 的模型化函式時，您可能會傳回不同的定型的模型，每個資料分割的資料集。
 
 ### <a name="supported-functions"></a>支援的函數
 
@@ -51,7 +52,7 @@ RevoScaleR 中的 rxExecBy 函式被設計用於大量平行處理大量的小�
 
 下列範例示範如何建立使用航班資料集，在 [DayOfWeek] 資料行上進行分割的多個模型。 使用者定義函式， `delayFunc`，根據呼叫 rxExecBy 會套用至每個分割區。 函式建立不同的模型為星期一、 星期二，依此類推。
 
-```SQL
+```sql
 EXEC sp_execute_external_script
 @language = N'R'
 , @script = N'
@@ -68,7 +69,7 @@ OutputDataSet <- rxExecBy(airlineData, c("DayOfWeek"), delayFunc)
 
 如果您收到錯誤， `varsToPartition is invalid`，檢查是否已正確輸入索引鍵資料行或資料行的名稱。 R 語言會區分大小寫。
 
-請注意，此範例不適合 SQL Server，而且您可以在許多情況下會使用 SQL 來分組資料，以達到更佳的效能。 不過，使用 rxExecBy，您可以建立平行作業從。
+此特定範例不適合 SQL Server，您可以在許多情況下達到更佳的效能使用 SQL 來分組資料。 不過，使用 rxExecBy，您可以建立平行作業從。
 
 下列範例說明在 R 中，使用 SQL Server 作為計算內容的程序：
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d92673f3b551076eea675e9a5d909acd5f293337
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9d894eb3f38248e1f7af2b1f693f87bdfebefa9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060898"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795664"
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile 事件類別
   SP:Recompile 事件類別表示有某個預存程序、觸發程序或使用者自訂函數已重新編譯。 這個事件類別報告的重新編譯會在陳述式層級發生。  

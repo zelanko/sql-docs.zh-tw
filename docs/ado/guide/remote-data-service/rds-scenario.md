@@ -14,18 +14,18 @@ ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e936b6b68a67c1616a00d38f6d84776d44ef327
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 45e0f3be43ce8e2780268b7dfde83253b71da946
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559431"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539699"
 ---
 # <a name="rds-scenario"></a>RDS 案例
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 通訊錄應用程式會示範如何使用遠端資料服務 (RDS) 來建置簡單的資料感知的 Web 應用程式的案例 — 企業線上通訊錄。 此案例適用於 Microsoft Visual Basic Scripting Edition (VBScript) COM 程式設計人員想要了解如何使用資料感知的 ActiveX 控制項有了 RDS，且較有經驗的軟體開發人員想要建置以資料為中心的 Web 應用程式。  
+ 通訊錄應用程式是示範如何使用遠端資料服務 (RDS) 來建置簡單的資料感知 Web 應用程式-企業線上通訊錄的案例。 此案例適用於 Microsoft Visual Basic Scripting Edition (VBScript) COM 程式設計人員想要了解如何使用資料感知的 ActiveX 控制項有了 RDS，且較有經驗的軟體開發人員想要建置以資料為中心的 Web 應用程式。  
   
  此案例假設您知道如何使用 ActiveX 控制項的基本 HTML 配置標記、 使用 DHTML 資料繫結技術和程式。  
   

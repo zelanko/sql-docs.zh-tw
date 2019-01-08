@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSpeer_request
@@ -19,12 +18,12 @@ ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a87e0ea5a0bbd94f1f6a9a1b28cab0a066a789b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 904919bfac6dc9fc0c5bf638605d363eba5a68f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776636"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796257"
 ---
 # <a name="mspeerrequest-transact-sql"></a>MSpeer_request (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

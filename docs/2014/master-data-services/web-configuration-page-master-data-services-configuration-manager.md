@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.webconfigpg.f1
@@ -13,12 +12,12 @@ ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ebab5de453d383b20e55e52ec3d57b10cfaebcf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f45eef12a81ada02a26a0f4c2318523de31cbf0d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200861"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357768"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>Web 組態頁面 (Master Data Services 組態管理員)
   使用 **[Web 組態]** 頁面建立新的網站或 Web 應用程式。 當您選取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式後，可以指定應用程式的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫，並啟用 Data Quality Services。  
@@ -48,7 +47,7 @@ ms.locfileid: "48200861"
 ## <a name="see-also"></a>另請參閱  
  [設定 Master Data Services 資料庫和網站](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [Web 應用程式需求&#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
- [建立主資料管理員 Web 應用程式&#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
- [MDS 2014 與 「 服務無法使用 」 錯誤](http://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  
+ [建立主資料管理員 Web 應用程式 &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
+ [MDS 2014 與 「 服務無法使用 」 錯誤](https://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  
   
   

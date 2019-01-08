@@ -14,12 +14,12 @@ ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff622236100399f43b8420bb71a7ae4d5a915013
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: da0514f10e4669d5e1e0bd20469b5922d38f2d70
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030106"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367250"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>設定 DQS 使用參考資料
   此主題描述如何設定 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 來使用參考資料清理您的資料。 您可以使用 Windows Azure Marketplace 所提供的參考資料，以及直接線上協力廠商參考資料提供者所提供的參考資料。  
@@ -27,7 +27,7 @@ ms.locfileid: "51030106"
 ## <a name="before-you-begin"></a>開始之前  
   
 ###  <a name="Prerequisites"></a> 必要條件  
- 若要使用服務商場的參考資料，您必須擁有有效的服務商場帳號金鑰。 如需有關建立市集帳戶金鑰的詳細資訊，請參閱[建立您的帳戶](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936)。 您也可以從 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 建立服務商場帳號金鑰，方法是按一下 **首頁畫面中** [管理] **底下的** [組態] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ，然後按一下 **[參考資料]** 索引標籤底下的 **[建立 DataMarket 帳戶識別碼]** 。  
+ 若要使用服務商場的參考資料，您必須擁有有效的服務商場帳號金鑰。 如需有關建立市集帳戶金鑰的詳細資訊，請參閱[建立您的帳戶](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936)。 您也可以從 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 建立服務商場帳號金鑰，方法是按一下 **首頁畫面中** [管理] **底下的** [組態] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ，然後按一下 **[參考資料]** 索引標籤底下的 **[建立 DataMarket 帳戶識別碼]** 。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -66,7 +66,7 @@ ms.locfileid: "51030106"
   
     4.  在 [結構描述] 方塊中，指定可定義要從直接參考資料服務提供者使用之欄位字串 (資料行名稱) 的結構描述。 欄位名稱不能包含空格，而且應該以逗號分隔欄位。 例如： `FirstName, LastName, City, State`。  
   
-    5.  在 **[URI]** 方塊中，輸入直接參考資料服務提供者的 URI。 DQS 中只允許安全的 URI (以 “https://” 開頭的位址)。  
+    5.  在 **[URI]** 方塊中，輸入直接參考資料服務提供者的 URI。 DQS 中只允許安全的 URI (以 "https://" 開頭的位址)。  
   
     6.  在 **[最大批次大小]** 方塊中，輸入將傳送給參考資料服務提供者進行清理之每個批次的最大記錄數目。 每個批次最多可以針對清理活動指定 100 筆記錄。  
   

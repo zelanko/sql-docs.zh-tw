@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -20,12 +18,12 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: acc639a9e6df068d4f3ed446a66dc05b7d5e0b59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e18e1d1e2219dd33fe6eea241d50ff6b077fe62
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108548"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361400"
 ---
 # <a name="developer39s-guide-integration-services"></a>開發人員&#39;指南 (Integration Services)
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括完全改寫的物件模型，已透過許多功能增強，這使得擴充封包和設計其程式更輕鬆、更彈性且更強大。 開發人員幾乎可以擴充和程式設計 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的每個層面。  
@@ -74,7 +72,7 @@ ms.locfileid: "48108548"
  [以程式設計方式執行及管理套件](run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
  描述如何以程式設計方式列舉、執行和管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  
   
-## <a name="reference"></a>參考  
+## <a name="reference"></a>參考資料  
  [Integration Services 錯誤和訊息參考](integration-services-error-and-message-reference.md)  
  列出預先定義的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤碼，以及其符號名稱與描述。  
   
@@ -84,7 +82,7 @@ ms.locfileid: "48108548"
   
 ## <a name="external-resources"></a>外部資源  
   
--   位於 www.codeplex.com/MSFTISProdSamples 的 CodePlex 範例：[Integration Services 產品範例](http://go.microsoft.com/fwlink/?LinkID=131204)  
+-   位於 www.codeplex.com/MSFTISProdSamples 的 CodePlex 範例：[Integration Services 產品範例](https://go.microsoft.com/fwlink/?LinkID=131204)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Integration Services](sql-server-integration-services.md)  

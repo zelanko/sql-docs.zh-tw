@@ -20,12 +20,12 @@ ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8e84a24256dfdfe493a96786ca08cb640a8975b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f21bfe746f409b40b2535da231da4dd2725f4f7a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065598"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367011"
 ---
 # <a name="report-definition-language-ssrs"></a>報表定義語言 (SSRS)
   報表定義語言 (RDL) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表定義的 XML 表示法。 報表定義包含報表的資料擷取和配置資訊。 RDL 是由符合針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]所建立之 XML 文法的 XML 元素所組成。 您可以加入自訂函數，藉由存取報表定義檔案中的程式碼組件來控制報表項目值、樣式和格式。  
@@ -39,12 +39,12 @@ ms.locfileid: "48065598"
 -   可支援其他命名空間和自訂元素的可延伸與開放結構描述。  
   
 ##  <a name="bkmk_RDL_Specifications"></a> RDL 規格  
- 若要下載特定結構描述版本的規格，請參閱 [Report Definition Language Specification](http://go.microsoft.com/fwlink/?linkid=116865)(報表定義語言規格)。  
+ 若要下載特定結構描述版本的規格，請參閱 [Report Definition Language Specification](https://go.microsoft.com/fwlink/?linkid=116865)(報表定義語言規格)。  
   
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> RDL XML 結構描述定義  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表定義語言 (RDL) 檔案是藉由使用 XML 結構描述定義 (XSD) 檔案來驗證。 結構描述定義 RDL 元素可在 .rdl 檔案中何處發生的規則。 元素包括其資料類型和基數，也就是所允許的發生數目。 元素可能很簡單或很複雜。 簡單的元素沒有子元素或屬性 (Attribute)， 複雜的元素則具有子元素或屬性。  
   
- 例如，結構描述包含 RDL 元素`ReportParameters`，這是複雜類型`ReportParametersType`。 依照慣例，元素的複雜類型會是名稱的項目後面`Type`。 A`ReportParameters`元素可以包含`Report`元素 （複雜類型），而且可以包含`ReportParameter`項目。 `ReportParameterType` 是簡單類型，只能是下列其中一個值：`Boolean`、`DateTime`、`Integer`、`Float` 或 `String`。 如需 XML 結構描述資料類型的詳細資訊，請參閱 [XML Schema Part 2: Datatypes Second Edition](http://go.microsoft.com/fwlink/?linkid=4871)(XML 結構描述第 2 部分：資料類型第二版)。  
+ 例如，此結構描述包含 RDL 元素 `ReportParameters`，這是複雜類型 `ReportParametersType`。 依照慣例，元素的複雜類型是在元素名稱後面加上 `Type` 這個字。 `ReportParameters` 元素可以包含在 `Report` 元素內 (複雜類型)，而且可以包含 `ReportParameter` 元素。 `ReportParameterType` 是簡單類型，只能是下列其中一個值：`Boolean`、`DateTime`、`Integer`、`Float` 或 `String`。 如需有關 XML 結構描述資料類型的詳細資訊，請參閱[XML 結構描述第 2 部分：Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)。  
   
  RDL XSD 是在 ReportDefinition.xsd 檔案中提供的，這個檔案位於產品 CD-ROM 的 Extras 資料夾中， 也會透過下列 URL 提供在報表伺服器： http://servername/reportserver/reportdefinition.xsd。  
   
@@ -63,15 +63,15 @@ ms.locfileid: "48065598"
 |Type|描述|  
 |----------|-----------------|  
 |`Binary`|具有 Base-64 編碼二進位值的屬性。|  
-|`Boolean`|具有 `true` 或 `false` 物件值的屬性。 除非另有指定，省略的選擇性布林物件的值是`False`。|  
-|`Date`|具有 ISO8601 日期格式所指定之完整指定日期或日期時間值的屬性：YYYY-MM-DD[THH:MM[:SS[.S]]]。|  
+|`Boolean`|具有 `true` 或 `false` 物件值的屬性。 除非另有指定，否則省略的選擇性布林物件值為 `False`。|  
+|`Date`|具有 ISO8601 日期格式來指定完整指定日期時間值的屬性：YYYY 為 YYYY-MM-DD [THH [: SS [。S]]]。|  
 |`Enum`|具有字串文字值的屬性，此文字值必須是指定值清單中的一個值。|  
 |`Float`|具有浮點值的屬性。 使用句點 (.) 當做選擇性小數分隔符號。|  
 |`Integer`|具有整數 (int32) 值的屬性。|  
 |`Language`|具有文字值的屬性，此文字值包含語言與文化特性代碼，例如「en-us」代表英文 (美國)。 該值必須是特定語言，或在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]中為其定義了預設語言的中性語言。|  
 |`Name`|具有字串文字值的屬性。 名稱在項目的命名空間中必須是唯一的。 如果未指定，項目的命名空間會是具有名稱的最內層包含物件。|  
 |`NormalizedString`|具有已經正規化之字串文字值的屬性。|  
-|`Size`|大小元素必須包含一個數字 (含有一個句號字元，當做選擇性小數分隔符號使用)。 這個數字必須緊接著 CSS 長度單位的指示項，例如 cm、mm、in、pt 或 pc。 數字與指示項之間的空格是選擇性的。 如需大小指示項的詳細資訊，請參閱 [CSS 長度單位參考](http://go.microsoft.com/fwlink/?LinkId=9257)。<br /><br /> 在 RDL 中，最大值`Size`是 160 英吋。 大小下限是 0 英吋。|  
+|`Size`|大小元素必須包含一個數字 (含有一個句號字元，當做選擇性小數分隔符號使用)。 這個數字必須緊接著 CSS 長度單位的指示項，例如 cm、mm、in、pt 或 pc。 數字與指示項之間的空格是選擇性的。 如需大小指示項的詳細資訊，請參閱 [CSS 長度單位參考](https://go.microsoft.com/fwlink/?LinkId=9257)。<br /><br /> 在 RDL 中，`Size` 的最大值是 160 英吋。 大小下限是 0 英吋。|  
 |`String`|具有字串文字值的屬性。|  
 |`UnsignedInt`|具有不帶正負號之整數 (uint32) 值的屬性。|  
 |`Variant`|具有任何簡單 XML 類型的屬性。|  
@@ -88,8 +88,8 @@ ms.locfileid: "48065598"
 |String、Char、GUID、Timespan|String|  
   
 ## <a name="see-also"></a>另請參閱  
- [尋找報表定義結構描述版本&#40;SSRS&#41;](find-the-report-definition-schema-version-ssrs.md)   
- [與報表搭配使用自訂組件](../custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [尋找報表定義結構描述版本 &#40;SSRS&#41;](find-the-report-definition-schema-version-ssrs.md)   
+ [將自訂組件與報表搭配使用](../custom-assemblies/using-custom-assemblies-with-reports.md)   
  [自訂報表項目](../custom-report-items/custom-report-items.md)  
   
   

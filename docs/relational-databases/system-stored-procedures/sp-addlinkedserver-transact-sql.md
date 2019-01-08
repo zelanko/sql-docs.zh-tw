@@ -18,12 +18,12 @@ ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 26a4fa63ea41e2e8933a0d7d11cc6b2100e85f54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be80ed76713788f81704609c4828e0a871ffdc7d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795046"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590102"
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,30 +45,30 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@server=** ] **'***server***'**  
+ [  **@server=** ] **'**_server_**'**  
  這是您要建立的連結伺服器名稱。 *server* 是 **sysname**，沒有預設值。  
   
- [  **@srvproduct=** ] **'***product_name***'**  
+ [  **@srvproduct=** ] **'**_product_name_**'**  
  這是要當做連結伺服器加入的 OLE DB 資料來源產品名稱。 *product_name*已**nvarchar (** 128 **)**，預設值是 NULL。 如果**SQL Server**， *provider_name*， *data_source*，*位置*， *provider_string*，及*目錄*就不必指定。  
   
- [  **@provider=** ] **'***provider_name***'**  
+ [  **@provider=** ] **'**_provider_name_**'**  
  這是對應於這個資料來源之 OLE DB 提供者的唯一程式化識別碼 (PROGID)。 *provider_name*必須是唯一指定的 OLE DB 提供者安裝在目前的電腦上。 *provider_name*是**nvarchar (** 128 **)**，預設值是 NULL; 但是，如果*provider_name*已省略，就使用 SQLNCLI。 (使用 SQLNCLI 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會重新導向至最新版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者)。OLE DB 提供者預期要登錄在登錄中的指定 PROGID。  
   
- [  **@datasrc=** ] **'***data_source***'**  
+ [  **@datasrc=** ] **'**_data_source_**'**  
  這是資料來源的名稱，如 OLE DB 提供者所解譯。 *data_source*已**nvarchar (** 4000 **)**。 *data_source*被當做 DBPROP_INIT_DATASOURCE 屬性傳入來初始化 OLE DB 提供者。  
   
- [  **@location=** ] **'***位置***'**  
+ [  **@location=** ] **'**_位置_**'**  
  這是 OLE DB 提供者解譯的資料庫位置。 *位置*已**nvarchar (** 4000 **)**，預設值是 NULL。 *位置*被當做 DDBPROP_INIT_LOCATION 屬性來初始化 OLE DB 提供者。  
   
- [  **@provstr=** ] **'***provider_string***'**  
+ [  **@provstr=** ] **'**_provider_string_**'**  
  這是 OLE DB 提供者特定的連接字串，用來識別唯一資料來源。 *provider_string*已**nvarchar (** 4000 **)**，預設值是 NULL。 *provstr*傳遞至 IDataInitialize，或設定為 DBPROP_INIT_PROVIDERSTRING 屬性以初始化 OLE DB 提供者。  
   
  針對建立連結的伺服器時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，可以藉由使用 「 SERVER 關鍵字做為伺服器指定的執行個體 =*servername*\\*instancename*指定的特定執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *servername*所在電腦的名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在執行，並*instancename*是特定執行個體名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者連接。  
   
-> [!NOTE]  
+> [!NOTE]
 >  若要存取鏡像資料庫，連接字串必須包含資料庫名稱。 這個名稱是讓資料存取提供者進行容錯移轉嘗試所需的名稱。 可以在指定的資料庫**@provstr**或是**@catalog**參數。 此外，連接字串也可以提供容錯移轉夥伴名稱。  
   
- [  **@catalog=** ] **'***目錄***'**  
+ [  **@catalog=** ] **'**_目錄_**'**  
  這是連接 OLE DB 提供者時所用的目錄。 *型錄*已**sysname**，預設值是 NULL。 *目錄*被當做 DBPROP_INIT_CATALOG 屬性傳入來初始化 OLE DB 提供者。 當您對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體定義連結伺服器時，目錄會參考連結伺服器所對應的預設資料庫。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -105,8 +105,8 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
   
  **sp_addlinkedserver**無法在使用者自訂交易內執行。  
   
-> [!IMPORTANT]  
->  建立時使用連結的伺服器**sp_addlinkedserver**，預設的自我對應已新增所有本機登入。 如果是非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供者，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入也許可以利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶，取得該提供者的存取權。 管理員應該考慮使用 `sp_droplinkedsrvlogin <linkedserver_name>, NULL` 來移除全域對應。  
+> [!IMPORTANT]
+>  建立時使用連結的伺服器**sp_addlinkedserver**，預設的自我對應已新增所有本機登入。 針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供者[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證的登入可以存取該提供者[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務帳戶。 管理員應該考慮使用 `sp_droplinkedsrvlogin <linkedserver_name>, NULL` 來移除全域對應。  
   
 ## <a name="permissions"></a>Permissions  
  `sp_addlinkedserver`陳述式需要`ALTER ANY LINKED SERVER`權限。 (SSMS**新增連結的伺服器** 對話方塊中需要的成員資格的方式實作`sysadmin`固定的伺服器角色。)  
@@ -270,11 +270,11 @@ EXEC sp_addlinkedserver
 ### <a name="g-add-a-includesssdsfullincludessssdsfull-mdmd-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premise-databases"></a>G. 加入 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]成為連結伺服器以搭配跨雲端和內部部署資料庫的分散式查詢使用  
  您可以加入 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]成為連結伺服器，再將其搭配跨內部部署和雲端資料庫的分散式查詢使用。 這是跨內部部署企業網路和 Windows Azure 雲端的資料庫混合式方案的一項元件。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 盒裝產品包含分散式查詢功能，可讓您撰寫查詢將本機資料來源的資料與遠端資料來源的資料 (包括非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源的資料) 結合，定義成連結伺服器。 您將能加入每個 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (虛擬 master 除外) 成為個別的連結伺服器，然後直接供您的資料庫應用程式使用，與任何其他資料庫無異。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]盒裝產品包含分散式的查詢功能，可讓您撰寫查詢來結合本機資料來源的資料和從遠端來源的資料 (包括資料是從非-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料來源) 定義成連結伺服器。 您將能加入每個 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (虛擬 master 除外) 成為個別的連結伺服器，然後直接供您的資料庫應用程式使用，與任何其他資料庫無異。  
   
  使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]的好處包括管理能力、高可用性、延展性、有您熟悉的開發模型和關聯式資料模型。 您的資料庫應用程式的需求決定了該如何在雲端使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 您可以一次將所有資料移到 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，或是逐漸搬移部分資料並將其餘資料留在內部部署環境。 藉著這類混合式資料庫應用程式，如今您可以加入 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]成為連結伺服器，而且資料庫應用程式可以發出分散式查詢，將 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]與內部部署資料來源的資料結合。  
   
- 以下是說明如何使用分散式查詢連接到 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]的簡單範例：  
+ 以下是簡單的範例，說明如何連接到[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]使用分散式的查詢：  
   
 ```  
 ------ Configure the linked server  

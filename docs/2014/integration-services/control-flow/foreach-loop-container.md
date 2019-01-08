@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.f1
@@ -18,12 +17,12 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3d67e256b6dca357db45cd831b2f9eab3ff93dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 664a338dd1d34126717b3953c54b175ffccd63e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103451"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355716"
 ---
 # <a name="foreach-loop-container"></a>Foreach 迴圈容器
   「Foreach 迴圈」容器定義封裝中重複的控制流程。 迴圈實作與程式設計語言中 **Foreach** 迴圈的結構類似。 在封裝中，迴圈是使用 Foreach 列舉值啟用。  「Foreach 迴圈」容器會為指定列舉值的每個成員重複控制流程。  
@@ -32,13 +31,13 @@ ms.locfileid: "48103451"
   
 -   Foreach ADO 列舉值，用來列舉資料表中的資料列。 例如，您可以在 ADO 資料錄集中取得資料列。  
   
-     資料錄集目的地會將資料儲存在記憶體中儲存的封裝變數中的資料錄集`Object`資料型別。 您通常會使用具有 Foreach ADO 列舉值的 Foreach 迴圈容器來一次處理資料錄集的一個資料列。 針對 Foreach ADO 列舉值指定的變數必須屬於 Object 資料類型。 如需有關資料錄集目的地的詳細資訊，請參閱＜ [Use a Recordset Destination](../data-flow/recordset-destination.md)＞。  
+     資料錄集目的地會將記憶體中的資料儲存到 `Object` 資料類型之封裝變數中儲存的資料錄集。 您通常會使用具有 Foreach ADO 列舉值的 Foreach 迴圈容器來一次處理資料錄集的一個資料列。 針對 Foreach ADO 列舉值指定的變數必須屬於 Object 資料類型。 如需有關資料錄集目的地的詳細資訊，請參閱＜ [Use a Recordset Destination](../data-flow/recordset-destination.md)＞。  
   
 -   「Foreach ADO.NET 結構描述資料列集」列舉值，用來列舉有關資料來源的結構描述資訊。 例如，您可以列舉並取得一份 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中資料表的清單。  
   
 -   「Foreach 檔案」列舉值，用來列舉資料夾中的檔案。 列舉值可往返子資料夾。 例如，您可以讀取 Windows 資料夾及其子資料夾中所有副檔名為 *.log 的檔案。  
   
--   Foreach From Variable 列舉值，用來列舉指定的變數所包含的可列舉物件。 可列舉物件可以是陣列、 ADO.NET `DataTable`、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]列舉值等等。 例如，您可以列舉包含伺服器名稱之陣列的值。  
+-   Foreach From Variable 列舉值，用來列舉指定的變數所包含的可列舉物件。 可列舉物件可以是陣列、ADO.NET `DataTable`、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 列舉值等等。 例如，您可以列舉包含伺服器名稱之陣列的值。  
   
 -   「Foreach 項目」列舉值，用來列舉集合項目。 例如，您可以列舉「執行處理」工作使用之可執行檔與工作目錄的名稱。  
   
@@ -100,10 +99,10 @@ ms.locfileid: "48103451"
 -   <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>  
   
 ## <a name="related-content"></a>相關內容  
- bidn.com 上的部落格文章： [SSIS ForEach NodeList 列舉值](http://go.microsoft.com/fwlink/?LinkId=220671)。  
+ bidn.com 上的部落格文章： [SSIS ForEach NodeList 列舉值](https://go.microsoft.com/fwlink/?LinkId=220671)。  
   
 ## <a name="see-also"></a>另請參閱  
  [控制流程](control-flow.md)   
- [Integration Services 容器](integration-services-containers.md)  
+ [整合服務容器](integration-services-containers.md)  
   
   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergearticle
@@ -17,12 +16,12 @@ ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98c2d4b7c60ff3229e683d45a6b88ccebaa40c85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a103f309067b5e78024a1687c24bb37bf5c3a8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700776"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779750"
 ---
 # <a name="sphelpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**sync_object_owner**|**sysname**|定義已發行的發行項之檢視的擁有者名稱。|  
 |**sync_object**|**sysname**|用來建立資料分割初始資料之自訂物件的名稱。|  
 |**description**|**nvarchar(255)**|發行項的描述。|  
-|**status**|**tinyint**|發行項的狀態，它可以是下列項目之一：<br /><br /> **1** = 非使用中<br /><br /> **2** = 使用中<br /><br /> **5** = 資料定義語言 (DDL) 作業暫止<br /><br /> **6** = 含新產生的快照集的 DDL 作業<br /><br /> 注意： 當重新初始化發行項時，值的**5**並**6**變更為**2**。|  
+|**status**|**tinyint**|發行項的狀態，它可以是下列項目之一：<br /><br /> **1** = 非使用中<br /><br /> **2** = 使用中<br /><br /> **5** = 資料定義語言 (DDL) 作業暫止<br /><br /> **6** = 含新產生的快照集的 DDL 作業<br /><br /> 注意：當重新初始化發行項時，值的**5**並**6**變更為**2**。|  
 |**creation_script**|**nvarchar(255)**|在訂閱資料庫中，用來建立發行項的選擇性發行項結構描述指令碼的路徑和名稱。|  
 |**conflict_table**|**nvarchar(270)**|儲存插入或更新衝突的資料表名稱。|  
 |**article_resolver**|**nvarchar(255)**|自訂的發行項解析程式。|  

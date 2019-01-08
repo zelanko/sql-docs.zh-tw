@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 216b04e58d741d3c44cd187ba94eaac7ee791762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fdb255570febc6d37bef824958c15422b6fae733
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837796"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503186"
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
   
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 本質上不同於較新版本，在主題中較低討論[SQL Server 2014](#bkmk_2014)。**
   
-## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本  
+## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本  
  下表描述的資料行`sys.dm_db_xtp_checkpoint_stats`，與開頭**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**。  
   
 |資料行名稱|類型|描述|  
@@ -67,7 +67,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |last_closed_checkpoint_ts|**bigint**|最近已關閉的檢查點的時間戳記。|  
 |hardened_recovery_lsn|**numeric(38)**|復原會從這個 LSN 開始。|  
 |hardened_root_file_guid|**uniqueidentifier**|因為最後一個已完成的檢查點強行寫入的根檔案的 GUID。|  
-|hardened_root_file_watermark|**bigint**|**內部只**。 正值是有效最多可讀取的根檔案 （這是在內部相關型別只 – 呼叫 BSN）。|  
+|hardened_root_file_watermark|**bigint**|**內部只**。 正值是有效最多可讀取的根檔案 （這是在內部相關型別只-呼叫 BSN）。|  
 |hardened_truncation_lsn|**numeric(38)**|截斷點的 LSN。|  
 |log_bytes_since_last_close|**bigint**|從最後一個位元組會關閉目前的記錄結尾。|  
 |time_since_last_close_in_ms|**bigint**|自上次關閉的檢查點的時間。|  

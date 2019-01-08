@@ -1,5 +1,5 @@
 ---
-title: 範例：指定 HIDE 指示詞 | Microsoft Docs
+title: 範例指定 HIDE 指示詞 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,14 +12,14 @@ ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c5011cac861d941e46495a2b3d6669c5bf1fdc4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26c71a7012cb69a50bf7d3d7223b35aedcfcc570
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179638"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357098"
 ---
-# <a name="example-specifying-the-hide-directive"></a>範例：指定 HIDE 指示詞
+# <a name="example-specifying-the-hide-directive"></a>範例指定 HIDE 指示詞
   此範例說明 **HIDE** 指示詞的用法。 當您希望查詢可以傳回由查詢傳回的通用資料表中，用以排序資料列的屬性，但又不希望在最後的結果 XML 文件中看見該屬性時，此指示詞就相當有用。  
   
  此查詢會建構以下 XML：  
@@ -55,10 +55,10 @@ SELECT  2 as Tag,
         ProductModelID,  
         Name,  
         CatalogDescription.value('  
-         declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+         declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
        (/PD:ProductDescription/@ProductModelID)[1]', 'int'),  
         CatalogDescription.query('  
-         declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+         declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
          /pd:ProductDescription/pd:Summary')  
 FROM    Production.ProductModel  
 WHERE   CatalogDescription is not null  
@@ -73,7 +73,7 @@ go
 <ProductModel ProdModelID="19" Name="Mountain-100">  
   <Summary>  
     <SummaryDescription>  
-      <pd:Summary xmlns:pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription" xmlns="">  
+      <pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription" xmlns="">  
         <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">Our top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain. </p1:p>  
       </pd:Summary>  
     </SummaryDescription>  

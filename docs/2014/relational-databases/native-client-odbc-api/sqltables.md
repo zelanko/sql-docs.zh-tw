@@ -14,12 +14,12 @@ ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90ae76e10c4f9ceab4f7185de6448f6add944b5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8209bf586e5a0b288b4975869ee8903a73a27f06
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111488"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357404"
 ---
 # <a name="sqltables"></a>SQLTables
   SQLTables 可以在靜態伺服器資料指標上執行。 嘗試在可更新的 （動態或索引鍵集） 資料指標上執行 SQLTables 會傳回 SQL_SUCCESS_WITH_INFO，指出資料指標類型已變更。  
@@ -28,7 +28,7 @@ ms.locfileid: "48111488"
   
  若要報告可用的目錄、 結構描述和資料表類型，SQLTables 會會特別使用空字串 （長度為零的位元組指標）。 空字串不是預設值 (NULL 指標)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援的報告資訊的連結伺服器上的資料表所接受的兩部分名稱*CatalogName*參數： *Linked_Server_Name.Catalog_Name*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援的報告資訊的連結伺服器上的資料表所接受的兩部分名稱*CatalogName*參數：*Linked_Server_Name.Catalog_Name*。  
   
  SQLTables 傳回資料表的名稱相符的任何相關資訊*TableName*和目前的使用者所擁有。  
   
@@ -54,7 +54,7 @@ SQLTables(hstmt, (SQLCHAR*) "%", SQL_NTS, (SQLCHAR*)"", 0, (SQLCHAR*)"",
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLTables 函數](http://go.microsoft.com/fwlink/?LinkId=59374)   
+ [SQLTables 函數](https://go.microsoft.com/fwlink/?LinkId=59374)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

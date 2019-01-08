@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afpstorageconn.f1
@@ -14,15 +13,15 @@ ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f50d324049e4ee52b3945b201d6714323714b0c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1e19ee8c9b565f1b0333e68aad4353741511bcb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061348"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799730"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 儲存體連線管理員
-  Azure 儲存體連線管理員可讓 SSIS 套件連線到 Azure 儲存體帳戶所使用的屬性所指定的值： 儲存體帳戶名稱和帳戶金鑰。  
+  Azure 儲存體連線管理員可讓 SSIS 封裝連線到 Azure 儲存體帳戶所使用的屬性所指定的值：儲存體帳戶名稱和帳戶金鑰。  
   
 1.  在 [加入 SSIS 連線管理員] 對話方塊中，選取 [AzureStorage]，然後按一下 [加入]。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferloginstask.f1
@@ -15,12 +14,12 @@ ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d22dc265eda8e090d00674e198be2616514b857b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0506d617a3fe8070ceb0903eb2d4cfc6e62557f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143898"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762060"
 ---
 # <a name="transfer-logins-task"></a>傳送登入工作
   「傳送登入」工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體之間傳送一個或多個登入。  
@@ -69,9 +68,9 @@ ms.locfileid: "48143898"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [傳送登入工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [傳送登入工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [傳送登入工作編輯器&#40;登入頁面&#41;](../transfer-logins-task-editor-logins-page.md)  
+-   [傳送登入工作編輯器 &#40;登入頁面&#41;](../transfer-logins-task-editor-logins-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

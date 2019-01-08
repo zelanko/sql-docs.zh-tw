@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ea891738a0a22353e67ff72b87d642bd04749270
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0700d2893028efea5486221906636d6c749b66bd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093898"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804843"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>在執行階段修改 OData 來源查詢
   您可以在執行階段修改 OData 來源查詢，修改的方式是將運算式加入資料流程工作的 **[OData Source].[Query]** 屬性。  
@@ -28,7 +27,7 @@ ms.locfileid: "48093898"
 ## <a name="exposing-the-query-as-a-parameter"></a>將查詢公開為參數  
  下列程序的步驟會將 OData 來源元件所使用的查詢公開為封裝的參數。  
   
-1.  以滑鼠右鍵按一下 [資料流程工作]，然後選取 [參數化…] 選項。  
+1.  以滑鼠右鍵按一下 [資料流程工作]，然後選取 [參數化...] 選項。  
   
 2.  在 [參數化] 對話方塊中，針對 [屬性] 選取 **[\<OData 來源元件的名稱>].[Query]**。  
   
@@ -53,11 +52,11 @@ ms.locfileid: "48093898"
   
 2.  在 [屬性] 視窗中，反白顯示 [運算式] 屬性。  
   
-3.  按一下 … (省略符號) 按鈕，即可開啟 [屬性運算式編輯器]。  
+3.  按一下 ...（省略符號） 按鈕，即可開啟**屬性運算式編輯器**。  
   
 4.  選取 **[OData Source].[Query]** 屬性。  
   
-5.  按一下 … (省略符號) 按鈕 (針對 [運算式])。  
+5.  按一下 ...（省略符號） 按鈕**運算式**。  
   
 6.  輸入 [運算式]。  
   

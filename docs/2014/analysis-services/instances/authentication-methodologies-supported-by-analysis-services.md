@@ -11,12 +11,12 @@ ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 729780b737502557830e6f1ccdea39203b0154ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da6d96efaa23d50042ea4f4501b89b4a5cc1dd31
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077828"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365042"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services 支援的驗證方法
   從用戶端應用程式到 Analysis Services 執行個體的連接需要 Windows 驗證 (整合式)。 您可以使用下列任何一種方法來提供 Windows 使用者識別：  
@@ -33,7 +33,7 @@ ms.locfileid: "48077828"
   
  請注意，由於不支援宣告驗證， 因此您不能使用 Windows 的宣告 Token 存取 Analysis Services。 Analysis Services 用戶端程式庫只能與 Windows 安全性主體搭配使用。 如果您的 BI 方案包括宣告識別，則需要每位使用者的 Windows 識別陰影帳戶，或使用預存認證來存取 Analysis Services 資料。  
   
- 如需 BI 和 Analysis Services 驗證流程的詳細資訊，請參閱 [Microsoft BI Authentication and Identity Delegation](http://go.microsoft.com/fwlink/?LinkID=286576)(Microsoft BI 驗證及識別委派)。  
+ 如需 BI 和 Analysis Services 驗證流程的詳細資訊，請參閱 [Microsoft BI Authentication and Identity Delegation](https://go.microsoft.com/fwlink/?LinkID=286576)(Microsoft BI 驗證及識別委派)。  
   
 ##  <a name="bkmk_auth"></a> 了解您的驗證替代方案  
  連接到 Analysis Services 資料庫需要 Windows 使用者或群組識別以及相關聯的權限。 此識別可能是一般用途的登入，由需要檢視報表的任何人使用，但是比較可能的案例包含個別使用者的識別。  
@@ -63,7 +63,7 @@ ms.locfileid: "48077828"
   
  EffectiveUserName 是將識別資訊傳遞至 Analysis Services 所用的連接字串屬性。 PowerPivot for SharePoint 會用它將使用者活動記錄在使用記錄檔中。 Excel Services 和 PerformancePoint Services 可以用它來擷取 SharePoint 活頁簿或儀表板所使用的資料。 它也可以用於針對 Analysis Services 執行個體執行作業的自訂應用程式或指令碼中。  
   
- 如需在 SharePoint 中使用 EffectiveUserName 的詳細資訊，請參閱 [Use Analysis Services EffectiveUserName in SharePoint Server 2010](http://go.microsoft.com/fwlink/?LinkId=311905)(在 SharePoint Server 2010 中使用 Analysis Services EffectiveUserName)。  
+ 如需在 SharePoint 中使用 EffectiveUserName 的詳細資訊，請參閱 [Use Analysis Services EffectiveUserName in SharePoint Server 2010](https://go.microsoft.com/fwlink/?LinkId=311905)(在 SharePoint Server 2010 中使用 Analysis Services EffectiveUserName)。  
   
  **基本驗證和匿名使用者**  
   
@@ -71,19 +71,19 @@ ms.locfileid: "48077828"
   
  如果是匿名驗證，您可以將匿名使用者識別設定為特定 Windows 使用者帳戶 (預設為 IUSR_GUEST) 或應用程式集區識別。 匿名使用者帳戶將用於 Analysis Services 連接，而且必須擁有 Analysis Services 執行個體的資料存取權限。 當您使用這種方法時，只有與匿名帳戶相關聯的使用者識別會用於連接。 如果您的應用程式需要其他識別管理，您就必須選擇其他方法，或是使用您所提供的識別管理解決方案來補充。  
   
- 只有當您設定 Analysis Services 進行 HTTP 存取，並且使用 IIS 和 msmdpump.dll 來建立連接時，才能使用基本和匿名驗證。 如需詳細資訊，請參閱[設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](configure-http-access-to-analysis-services-on-iis-8-0.md)。  
+ 只有當您設定 Analysis Services 進行 HTTP 存取，並且使用 IIS 和 msmdpump.dll 來建立連接時，才能使用基本和匿名驗證。 如需詳細資訊，請參閱 [設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](configure-http-access-to-analysis-services-on-iis-8-0.md)(Microsoft BI 驗證及識別委派)。  
   
  **Stored Credentials**  
   
  大部分中介層應用程式服務都能夠儲存使用者名稱和密碼，然後再用來從下層資料存放區 (例如 Analysis Services 或 SQL Server 關聯式引擎) 擷取資料。 因此，預存認證提供了第五種替代方案，可用於擷取資料。 這種方法的限制包括將使用者名稱和密碼保持在最新狀態的相關維護負擔，以及將單一識別用於連接的作法。 如果您的方案需要原始呼叫端的識別，則預存認證就不會是可行的替代方案。  
   
- 如需預存認證的詳細資訊，請參閱[建立、修改及刪除共用資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 和 [Use Excel Services with Secure Store Service in SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkID=309869) (在 SharePoint Server 2013 中使用 Excel Services 搭配 Secure Store Service)。  
+ 如需預存認證的詳細資訊，請參閱[建立、修改及刪除共用資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 和 [Use Excel Services with Secure Store Service in SharePoint Server 2013](https://go.microsoft.com/fwlink/?LinkID=309869) (在 SharePoint Server 2013 中使用 Excel Services 搭配 Secure Store Service)。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用模擬搭配傳輸安全性](http://go.microsoft.com/fwlink/?LinkId=311727)   
+ [使用模擬搭配傳輸安全性](https://go.microsoft.com/fwlink/?LinkId=311727)   
  [設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [設定 Analysis Services 進行 Kerberos 限制委派](configure-analysis-services-for-kerberos-constrained-delegation.md)   
- [Analysis Services 執行個體註冊 SPN](spn-registration-for-an-analysis-services-instance.md)   
+ [為 Analysis Services 執行個體註冊 SPN](spn-registration-for-an-analysis-services-instance.md)   
  [連接到 Analysis Services](connect-to-analysis-services.md)  
   
   

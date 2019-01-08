@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2016 中的 R Services |Microsoft Docs
+title: SQL Server 2016-SQL Server Machine Learning 服務中的 R Services
 description: 在關聯式資料，包括資料科學和統計模型、 預測性分析、 資料視覺效果和更多功能的整合式 R 工作的 SQL Server 中的 R。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 17d0aa51d43ad9592a075ae91be88c857035b15f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f3575d91122badac6fcba2e1ca7463114a08c26b
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659927"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596509"
 ---
 # <a name="r-services-in-sql-server-2016"></a>SQL Server 2016 中的 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,19 +22,19 @@ R Services 是 SQL Server 2016 資料庫引擎執行個體，用於執行 SQL Se
 
 R Services 包含基底散發套件的 R，重疊與來自 Microsoft 的企業 R 套件，讓您可以載入和處理多個核心上大量的資料和彙總成單一的彙總輸出的結果。 Microsoft 的 R 函式和演算法設計成可調整和公用程式： 提供預測性分析、 統計模型、 資料視覺效果，與頂尖的機器學習演算法中設計商業 server 產品和Microsoft 支援。 
 
-R 程式庫包含 RevoScaleR、 MicrosoftML 及其他。 因為 R Services 會與 database engine 整合，您可以讓分析貼近資料，並排除與移動資料相關聯的安全性風險與成本。
+R 程式庫包含[ **RevoScaleR**](ref-r-revoscaler.md)， [ **MicrosoftML (R)**](ref-r-microsoftml.md)，和其他人。 因為 R Services 會與 database engine 整合，您可以讓分析貼近資料，並排除與移動資料相關聯的安全性風險與成本。
 
 > [!Note]
 > 以 SQL Server 2017 中已重新命名為 R Services [SQL Server Machine Learning 服務](../what-is-sql-server-machine-learning.md)，反映的 Python。
 
-## <a name="components"></a>Components
+## <a name="components"></a>元件
 
 SQL Server 2016 只是 R。 下表說明 SQL Server 2016 中的功能。
 
 | 元件 | 描述 |
 |-----------|-------------|
 | SQL Server Launchpad 服務 | 管理外部 R 執行階段和 SQL Server 執行個體之間的通訊服務。 |
-| R 套件 | [**RevoScaleR** ](revoscaler-overview.md)是主要的程式庫，此程式庫中的可調整 r 函數是使用最廣泛。 這些程式庫中找到資料轉換和操作、 統計摘要、 視覺化和模型化和分析的許多形式。 此外，這些程式庫中的函式會自動將工作負載分散到可用的核心進行平行處理，能夠協調及計算引擎所管理的資料區塊上運作。  <br/>[**MicrosoftML (R)** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)新增機器學習演算法來建立自訂文字分析、 影像分析和情緒分析模型。 <br/>[**sqlRUtils** ](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)提供 helper 函式將 R 指令碼放入 T-SQL 預存程序、 註冊預存程序使用資料庫時，以及從 R 開發環境執行預存程序。<br/>[**olapR** ](how-to-create-mdx-queries-using-olapr.md)用於指定 MDX 查詢|
+| R 套件 | [**RevoScaleR** ](ref-r-revoscaler.md)是主要的程式庫，此程式庫中的可調整 r 函數是使用最廣泛。 這些程式庫中找到資料轉換和操作、 統計摘要、 視覺化和模型化和分析的許多形式。 此外，這些程式庫中的函式會自動將工作負載分散到可用的核心進行平行處理，能夠協調及計算引擎所管理的資料區塊上運作。  <br/>[**MicrosoftML (R)** ](ref-r-microsoftml.md)新增機器學習演算法來建立自訂文字分析、 影像分析和情緒分析模型。 <br/>[**sqlRUtils** ](ref-r-sqlrutils.md)提供 helper 函式將 R 指令碼放入 T-SQL 預存程序、 註冊預存程序使用資料庫時，以及從 R 開發環境執行預存程序。<br/>[**olapR** ](ref-r-olapr.md)用於指定 MDX 查詢|
 | Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open)是 Microsoft 的開放原始碼散發套件的。會包含封裝和解譯器。 一律使用 MRO 安裝程式安裝的版本。 |
 | R 工具 | R 主控台視窗和命令提示字元是標準的工具，在 R 散發。  |
 | R 範例和指令碼 |  開放原始碼 R 和 RevoScaleR 套件包含內建的資料集，可讓您可以建立並使用預先安裝的資料執行指令碼 |
@@ -54,14 +54,14 @@ SQL Server 2016 只是 R。 下表說明 SQL Server 2016 中的功能。
 
 啟動安裝程式、 將二進位檔附加至您最愛的開發工具和撰寫第一個指令碼。
 
-**步驟 1:** 安裝及設定軟體。 
+**步驟 1:** 安裝和設定軟體。 
 
 + [安裝 SQL Server 2016 R Services （資料庫）](../install/sql-r-services-windows-install.md)
 
 **步驟 2:** 獲得實際操作經驗，使用這些教學課程中的其中之一：
 
-+ [教學課程： 了解使用 R 的資料庫內分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
-+ [教學課程： 使用 R 的端對端逐步解說](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
++ [教學課程：了解使用 R 的資料庫內分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [教學課程：使用 R 的端對端逐步解說](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 
 **步驟 3:** 新增您最愛的 R 封裝，並使用它們搭配 Microsoft 所提供的套件
 

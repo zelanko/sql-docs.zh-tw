@@ -11,12 +11,12 @@ ms.assetid: 38ea7c03-4754-4e71-896a-f68cc2c98ce2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 722077829513f96b02680b530a0c366252f1ba33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a07f977a01c6107b345892f4ad623b3ca2cb941
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134208"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367500"
 ---
 # <a name="time-series-prediction-dmx-tutorial"></a>時間序列預測 DMX 教學課程
   在本教學課程中，您將學會如何建立時間序列採礦結構、建立三種自訂時間序列採礦模型，以及使用這些模型建立預測。  
@@ -24,7 +24,7 @@ ms.locfileid: "48134208"
  採礦模型將依據 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 範例資料庫中的資料，該資料庫儲存了虛構公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的資料。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨國製造公司。  
   
 ## <a name="tutorial-scenario"></a>教學課程案例  
- [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 決定使用資料採礦來產生銷售預測。 它們已建置一些區域預測模型;如需詳細資訊，請參閱 <<c0> [ 第 2 課： 建立預測狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。</c0> 不過，業務部門需要能夠定期以新的銷售資料來更新資料採礦模型。 而且，還要自訂模型以提供不同預測。  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 決定使用資料採礦來產生銷售預測。 它們已建置一些區域預測模型;如需詳細資訊，請參閱[第 2 課：建立預測狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。 不過，業務部門需要能夠定期以新的銷售資料來更新資料採礦模型。 而且，還要自訂模型以提供不同預測。  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供數個工具，可用來完成這項工作：  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48134208"
  [第 1 課：建立時間序列採礦模型和採礦結構](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)  
  在這一課，您將學會如何使用 `CREATE MINING MODEL` 陳述式來新增預測模型及相關聯的採礦模型。  
   
- [第 2 課：將採礦模型新增至時間序列採礦結構中](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
+ [第 2 課：將採礦模型加入至時間序列採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
  在這一課，您將學會如何使用 ALTER MINING STRUCTURE 陳述式將新的採礦模型加入至時間序列結構。 此外，您還將學習如何自訂用於分析時間序列的演算法。  
   
  [第 3 課：處理時間序列結構和模型](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
@@ -65,13 +65,13 @@ ms.locfileid: "48134208"
   
 -   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫  
   
- 為了加強安全性，系統預設不會安裝範例資料庫。 若要安裝的正式範例資料庫[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請前往[ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417)或在 Microsoft SQL Server Samples and Community Projects 首頁上，在 [Microsoft SQL Server Product Samples] 區段。 按一下 **資料庫**，然後按一下**版本**索引標籤，然後選取您想要的資料庫。  
+ 為了加強安全性，系統預設不會安裝範例資料庫。 若要安裝的正式範例資料庫[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請前往[ http://www.CodePlex.com/MSFTDBProdSamples ](https://go.microsoft.com/fwlink/?LinkId=88417)或在 Microsoft SQL Server Samples and Community Projects 首頁上，在 [Microsoft SQL Server Product Samples] 區段。 按一下 **資料庫**，然後按一下**版本**索引標籤，然後選取您想要的資料庫。  
   
 > [!NOTE]  
 >  當檢閱教學課程時，我們建議您將新增**下一個主題**並**上一個主題**文件檢視器工具列的按鈕。  
   
 ## <a name="see-also"></a>另請參閱  
- [基本資料採礦教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [資料採礦基本教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [中繼資料採礦教學課程&#40;Analysis Services-資料採礦&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
   

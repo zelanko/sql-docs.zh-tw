@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying replication security settings
@@ -17,12 +16,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4ffe50320214f9d2d21c28612d5ac3ffb348dda6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c4fd9221e363cb869f01c525a7f4b63b91132ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163758"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375630"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>檢視及修改複寫安全性設定
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中檢視及修改複寫安全性設定。 例如，您可能要將「記錄讀取器代理程式」到「發行者」的連接從 SQL Server 驗證變更為 Windows 整合式驗證，或者在 Windows 帳戶密碼變更後，可能需要變更用來執行代理程式作業的認證。 如需各代理程式需要的權限資訊，請參閱[複寫代理程式安全性模型](replication-agent-security-model.md)。  
@@ -143,9 +142,9 @@ ms.locfileid: "48163758"
   
 1.  在發行者端的 [訂閱屬性 - \<訂閱>] 對話方塊中，可做下列變更：  
   
-    -   若要變更「散發代理程式」執行和連接到「散發者」時所使用的帳戶，請按一下 **[代理程式處理帳戶]** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[散發代理程式安全性]** 對話方塊中指定帳戶和密碼。  
+    -   若要變更散發代理程式執行和連接到散發者時所使用的帳戶，請按一下 [代理程式處理帳戶] 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[散發代理程式安全性]** 對話方塊中指定帳戶和密碼。  
   
-    -   若要變更「散發代理程式」連接到「訂閱者」所使用的內容，請按一下 **[訂閱者連接]** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[輸入連接資訊]** 對話方塊中指定內容。  
+    -   若要變更散發代理程式連接到訂閱者所使用的內容，請按一下 [訂閱者連接] 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[輸入連接資訊]** 對話方塊中指定內容。  
   
          若您使用佇列更新訂閱，佇列讀取器代理程式亦使用此處指定的內容，連接到訂閱者。  
   
@@ -155,11 +154,11 @@ ms.locfileid: "48163758"
   
 1.  在訂閱者端的 [訂閱屬性 - \<訂閱>] 對話方塊中，可做下列變更：  
   
-    -   若要變更散發代理程式執行和連接到訂閱者時所使用的帳戶，請按一下 **[代理程式處理帳戶]** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[散發代理程式安全性]** 對話方塊中指定帳戶和密碼。  
+    -   若要變更散發代理程式執行和連接到訂閱者時所使用的帳戶，請按一下 [代理程式處理帳戶] 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[散發代理程式安全性]** 對話方塊中指定帳戶和密碼。  
   
          若您使用佇列更新訂閱，佇列讀取器代理程式亦使用此處指定的內容，連接到訂閱者。  
   
-    -   若要變更散發代理程式連接到散發者所使用的內容，請按一下 **[散發者連接]** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[輸入連接資訊]** 對話方塊中指定內容。  
+    -   若要變更散發代理程式連接到散發者所使用的內容，請按一下 [散發者連接] 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[輸入連接資訊]** 對話方塊中指定內容。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -167,9 +166,9 @@ ms.locfileid: "48163758"
   
 1.  在發行者端的 [訂閱屬性 - \<訂閱>] 對話方塊中，可做下列變更：  
   
-    -   若要變更合併代理程式執行和連接到發行者與散發者時所使用的帳戶，請按一下 **[代理程式處理帳戶]** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[合併代理程式安全性]** 對話方塊中指定帳戶和密碼。  
+    -   若要變更合併代理程式執行和連接到發行者與散發者時所使用的帳戶，請按一下 [代理程式處理帳戶] 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[合併代理程式安全性]** 對話方塊中指定帳戶和密碼。  
   
-    -   若要變更合併代理程式連接到訂閱者所使用的內容，請按一下 **[訂閱者連接]** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[輸入連接資訊]** 對話方塊中指定內容。  
+    -   若要變更合併代理程式連接到訂閱者所使用的內容，請按一下 [訂閱者連接] 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[輸入連接資訊]** 對話方塊中指定內容。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -177,15 +176,15 @@ ms.locfileid: "48163758"
   
 1.  在訂閱者端的 [訂閱屬性 - \<訂閱>] 對話方塊中，可做下列變更：  
   
-    -   若要變更合併代理程式執行和連接到訂閱者時所使用的帳戶，請按一下 **[代理程式處理帳戶]** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[合併代理程式安全性]** 對話方塊中指定帳戶和密碼。  
+    -   若要變更合併代理程式執行和連接到訂閱者時所使用的帳戶，請按一下 [代理程式處理帳戶] 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[合併代理程式安全性]** 對話方塊中指定帳戶和密碼。  
   
-    -   若要變更合併代理程式連接到發行者與散發者所使用的內容，請按一下 **[發行者連接]** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[輸入連接資訊]** 對話方塊中指定內容。  
+    -   若要變更合併代理程式連接到發行者與散發者所使用的內容，請按一下 [發行者連接] 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[輸入連接資訊]** 對話方塊中指定內容。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>若要變更佇列讀取器代理程式執行時所使用的帳戶  
   
-1.  在 [散發者屬性 - \<散發者>] 對話方塊的 [一般] 頁面上，按一下散發資料庫旁的屬性按鈕 (**…**)。  
+1.  在 [散發者屬性 - \<散發者>] 對話方塊的 [一般] 頁面上，按一下散發資料庫旁的屬性 (**...**) 按鈕。  
   
 2.  在 [散發資料庫屬性 - \<資料庫>] 對話方塊中，按一下 [代理程式處理帳戶] 文字方塊旁的 [安全性設定] 按鈕。  
   
@@ -217,7 +216,7 @@ ms.locfileid: "48163758"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>若要變更立即更新提取訂閱的安全性設定  
   
-1.  在訂閱者端的 [訂閱屬性 - \<訂閱>] 對話方塊中，按一下 [發行者連接] 資料列，然後按一下資料列中的屬性按鈕 (**…**)。  
+1.  在訂閱者端的 [訂閱屬性 - \<訂閱>] 對話方塊中，按一下 [發行者連接] 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。  
   
 2.  在 **[輸入連接資訊]** 對話方塊中，選取下列其中一個選項：  
   
@@ -416,7 +415,7 @@ ms.locfileid: "48163758"
 ##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
   
 > [!IMPORTANT]  
->  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](http://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
+>  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
   
 #### <a name="to-change-all-instances-of-a-password-stored-on-a-replication-server"></a>變更複寫伺服器上儲存的所有密碼執行個體  
   
@@ -433,7 +432,7 @@ ms.locfileid: "48163758"
     -   *password* - 新的密碼值。  
   
         > [!IMPORTANT]  
-        >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 Windows .NET Framework 提供的 [密碼編譯服務](http://go.microsoft.com/fwlink/?LinkId=34733) 。  
+        >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 Windows .NET Framework 提供的 [密碼編譯服務](https://go.microsoft.com/fwlink/?LinkId=34733) 。  
   
         > [!NOTE]  
         >  只有 `sysadmin` 固定伺服器角色的成員，才能呼叫這個方法。  
@@ -448,7 +447,7 @@ ms.locfileid: "48163758"
   
 3.  針對訂閱設定 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>和 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 屬性，並針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定步驟 1 中的連接。  
   
-4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回`false`，步驟 3 中的訂閱屬性定義不正確，或訂用帳戶不存在。  
+4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 `false`，則表示步驟 3 中的訂閱屬性定義不正確，或者此訂閱不存在。  
   
 5.  在 <xref:Microsoft.SqlServer.Replication.TransSubscription>的執行個體上設定以下其中一個或多個安全性屬性：  
   
@@ -461,7 +460,7 @@ ms.locfileid: "48163758"
         > [!NOTE]  
         >  與散發者的代理程式連接一律使用 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>指定的 Windows 認證來建立。 透過 Windows 驗證進行遠端連接時，也會使用這個帳戶。  
   
-6.  （選擇性）如果您指定的值`true`for <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，呼叫<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>; 方法來認可伺服器上的變更。 如果您指定的值`false`針對<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（預設值），變更會立即傳送到伺服器。  
+6.  (選擇性) 如果您已針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 指定 `true` 的值，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器上的變更。 如果您已針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 指定 `false` 的值 (預設值)，則會立即將變更傳送到伺服器。  
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription-to-a-transactional-publication"></a>針對交易式發行集的提取訂閱變更散發代理程式的安全性設定  
   
@@ -471,7 +470,7 @@ ms.locfileid: "48163758"
   
 3.  針對訂閱設定 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>和 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 屬性，並針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定步驟 1 中的連接。  
   
-4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回`false`，步驟 3 中的訂閱屬性定義不正確，或訂用帳戶不存在。  
+4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 `false`，則表示步驟 3 中的訂閱屬性定義不正確，或者此訂閱不存在。  
   
 5.  在 <xref:Microsoft.SqlServer.Replication.TransPullSubscription>的執行個體上設定以下其中一個或多個安全性屬性：  
   
@@ -484,7 +483,7 @@ ms.locfileid: "48163758"
         > [!NOTE]  
         >  與訂閱者的代理程式連接一律使用 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>指定的 Windows 認證來建立。 透過 Windows 驗證進行遠端連接時，也會使用這個帳戶。  
   
-6.  （選擇性）如果您指定的值`true`for <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，呼叫<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>; 方法來認可伺服器上的變更。 如果您指定的值`false`針對<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（預設值），變更會立即傳送到伺服器。  
+6.  (選擇性) 如果您已針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 指定 `true` 的值，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器上的變更。 如果您已針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 指定 `false` 的值 (預設值)，則會立即將變更傳送到伺服器。  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription-to-a-merge-publication"></a>針對合併式發行集的提取訂閱變更合併代理程式的安全性設定  
   
@@ -494,7 +493,7 @@ ms.locfileid: "48163758"
   
 3.  針對訂閱設定 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>和 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> 屬性，並針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定步驟 1 中的連接。  
   
-4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回`false`，步驟 3 中的訂閱屬性定義不正確，或訂用帳戶不存在。  
+4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 `false`，則表示步驟 3 中的訂閱屬性定義不正確，或者此訂閱不存在。  
   
 5.  在 <xref:Microsoft.SqlServer.Replication.MergePullSubscription>的執行個體上設定以下其中一個或多個安全性屬性：  
   
@@ -504,14 +503,14 @@ ms.locfileid: "48163758"
   
     -   若要指定 SQL 伺服器驗證 」 當做代理程式連接到散發者時所使用的驗證類型，將<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>欄位<xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A>屬性設`false`，並指定的散發者登入認證<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>欄位。  
   
-    -   若要指定 Windows 整合式驗證做為代理程式連接到 「 發行者 」 時所使用的驗證類型，設定<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>欄位<xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A>屬性設`true`。  
+    -   若要指定「Windows 整合式驗證」當做代理程式連接到發行者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> 欄位設定為 `true`。  
   
     -   若要指定 SQL 伺服器驗證 」 當做代理程式連接到 「 發行者 」 時所使用的驗證類型，將<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>欄位<xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A>屬性設`false`，並指定發行者登入認證，如<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>欄位。  
   
         > [!NOTE]  
         >  與訂閱者的代理程式連接一律使用 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>指定的 Windows 認證來建立。 透過 Windows 驗證進行遠端連接時，也會使用這個帳戶。  
   
-6.  （選擇性）如果您指定的值`true`for <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，呼叫<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>; 方法來認可伺服器上的變更。 如果您指定的值`false`針對<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（預設值），變更會立即傳送到伺服器。  
+6.  (選擇性) 如果您已針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 指定 `true` 的值，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器上的變更。 如果您已針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 指定 `false` 的值 (預設值)，則會立即將變更傳送到伺服器。  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription-to-a-merge-publication"></a>針對合併式發行集的發送訂閱變更合併代理程式的安全性設定  
   
@@ -521,7 +520,7 @@ ms.locfileid: "48163758"
   
 3.  針對訂閱設定 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>、 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>和 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 屬性，並針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定步驟 1 中的連接。  
   
-4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回`false`，步驟 3 中的訂閱屬性定義不正確，或訂用帳戶不存在。  
+4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 `false`，則表示步驟 3 中的訂閱屬性定義不正確，或者此訂閱不存在。  
   
 5.  在 <xref:Microsoft.SqlServer.Replication.MergeSubscription>的執行個體上設定以下其中一個或多個安全性屬性：  
   
@@ -531,14 +530,14 @@ ms.locfileid: "48163758"
   
     -   若要指定 SQL 伺服器驗證 」 當做代理程式連接到訂閱者時所使用的驗證類型，將<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>欄位<xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A>屬性設`false`，並指定的訂閱者登入認證<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>欄位。  
   
-    -   若要指定 Windows 整合式驗證做為代理程式連接到 「 發行者 」 時所使用的驗證類型，設定<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>欄位<xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A>屬性設`true`。  
+    -   若要指定「Windows 整合式驗證」當做代理程式連接到發行者時所使用的驗證類型，請將 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 屬性的 <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> 欄位設定為 `true`。  
   
     -   若要指定 SQL 伺服器驗證 」 當做代理程式連接到 「 發行者 」 時所使用的驗證類型，將<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A>欄位<xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A>屬性設`false`，並指定發行者登入認證，如<xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A>和<xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A>欄位。  
   
         > [!NOTE]  
         >  與散發者的代理程式連接一律使用 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>指定的 Windows 認證來建立。 透過 Windows 驗證進行遠端連接時，也會使用這個帳戶。  
   
-6.  （選擇性）如果您指定的值`true`for <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，呼叫<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>; 方法來認可伺服器上的變更。 如果您指定的值`false`針對<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（預設值），變更會立即傳送到伺服器。  
+6.  (選擇性) 如果您已針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 指定 `true` 的值，請呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法來認可伺服器上的變更。 如果您已針對 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 指定 `false` 的值 (預設值)，則會立即將變更傳送到伺服器。  
   
 #### <a name="to-change-the-login-information-used-by-an-immediate-updating-subscriber-when-it-connects-to-the-transactional-publisher"></a>變更立即更新訂閱者連接到交易式發行者時所用的登入資訊  
   
@@ -546,7 +545,7 @@ ms.locfileid: "48163758"
   
 2.  為訂閱資料庫建立 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 類別的執行個體。 指定 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.Name%2A> 並針對 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 指定步驟 1 中的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
   
-3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回`false`，步驟 2 中的資料庫屬性定義不正確，或訂閱資料庫不存在。  
+3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回 `false`，則表示步驟 2 中的資料庫屬性定義不正確，或者此訂閱資料庫不存在。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LinkPublicationForUpdateableSubscription%2A> 方法，傳遞以下參數：  
   

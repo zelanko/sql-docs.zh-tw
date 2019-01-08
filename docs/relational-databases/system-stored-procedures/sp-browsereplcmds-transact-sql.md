@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_browsereplcmds_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e3884ba1d35a488319ee9ba32e584450b300eda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5356ebc173e435595315badf9a3c2abe224d186b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670476"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802380"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +45,19 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@xact_seqno_start =**] **'***xact_seqno_start&lt***'**  
+ [  **@xact_seqno_start =**] **'**_xact_seqno_start&lt_**'**  
  指定要傳回的最低值確實序號。 *xact_seqno_start&lt*已**nchar(22)**，預設值是 0x00000000000000000000。  
   
- [  **@xact_seqno_end =**] **'***xact_seqno_end&lt***'**  
+ [  **@xact_seqno_end =**] **'**_xact_seqno_end&lt_**'**  
  指定要傳回的最高確實序號。 *xact_seqno_end&lt*已**nchar(22)**，預設值是 0xFFFFFFFFFFFFFFFFFFFF。  
   
- [  **@originator_id =**] **'***originator_id***'**  
+ [  **@originator_id =**] **'**_originator_id_**'**  
  指定如果具有指定的命令*originator_id*會傳回。 *originator_id*已**int**，預設值是 NULL。  
   
- [  **@publisher_database_id =**] **'***publisher_database_id***'**  
+ [  **@publisher_database_id =**] **'**_publisher_database_id_**'**  
  指定如果具有指定的命令*publisher_database_id*會傳回。 *publisher_database_id*已**int**，預設值是 NULL。  
   
- [  **@article_id =**] **'***article_id***'**  
+ [  **@article_id =**] **'**_article_id_**'**  
  指定如果具有指定的命令*article_id*會傳回。 *article_id*已**int**，預設值是 NULL。  
   
  [  **@command_id =**] *command_id*  
@@ -87,7 +86,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_publication_id**|**int**|引發交易的發行集識別碼。|  
 |**originator_db_version**|**int**|引發交易的資料庫版本。|  
 |**originator_lsn**|**varbinary(16)**|識別命令在原始發行集中的記錄序號 (LSN)。 用於點對點異動複寫中。|  
-|命令|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 命令。|  
+|**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 命令。|  
 |**command_id**|**int**|中的命令識別碼[MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)。|  
   
  在結果集中，較長的命令可能會分成許多資料列。  

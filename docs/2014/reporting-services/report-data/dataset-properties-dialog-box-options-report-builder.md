@@ -13,15 +13,15 @@ ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 604a290e0f8ac64c9edbcba72c488c0ad67f7b9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25fd4b521ba46e2a4e47dea9e7c2fd962d3c8895
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167048"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364130"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>資料集屬性對話方塊、選項 (報表產生器)
-  選取 [資料集屬性] 對話方塊上的 [選項] 來變更查詢的資料選項，例如定序選項以及將小計視為詳細資料。 如需定序的詳細資訊，請參閱《 [SQL Server 線上叢書](../../relational-databases/collations/collation-and-unicode-support.md) 》中的 [定序與 Unicode 支援](http://go.microsoft.com/fwlink/?linkid=98335)。  
+  選取 [資料集屬性] 對話方塊上的 [選項] 來變更查詢的資料選項，例如定序選項以及將小計視為詳細資料。 如需定序的詳細資訊，請參閱《 [SQL Server 線上叢書](../../relational-databases/collations/collation-and-unicode-support.md) 》中的 [定序與 Unicode 支援](https://go.microsoft.com/fwlink/?linkid=98335)。  
   
  屬於報表伺服器上共用資料集定義之一部分的資料選項會影響所有使用共用資料集的報表。 當共用資料集加入至報表之後，您可以覆寫它的選項。 這些變更只會影響其定義所在的報表。  
   

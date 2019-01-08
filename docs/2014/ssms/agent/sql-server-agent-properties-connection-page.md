@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.agent.connection.f1
@@ -12,12 +12,12 @@ ms.assetid: d6a677ff-60ad-47ba-a0cb-df4193b165e0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: db643175e7965f82f9c6741b22e09387dc893dff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c387513b8896018ead7d35e15a32e9e314ac0d3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176048"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773350"
 ---
 # <a name="sql-server-agent-properties-connection-page"></a>SQL Server Agent 屬性 (連接頁面)
   使用此頁面檢視及修改 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之間的連線設定。  

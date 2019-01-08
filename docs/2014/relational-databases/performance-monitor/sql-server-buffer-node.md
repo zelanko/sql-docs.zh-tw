@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Buffer Node
@@ -13,12 +13,12 @@ ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1191715e4fbd6c055ef408b4e32e75d985c0a510
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e99c6e4f28ecef032ff3b793393e5465740156d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053018"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776160"
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server:Buffer Node
   **Buffer Node** 物件提供用來補充 **Buffer Manager** 物件所提供之計數器的計數器。 它可讓您監視每個非統一記憶體存取 (NUMA) 節點的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 緩衝集區頁面散發。 每個 NUMA 節點都會使用 **Buffer Node** 物件執行個體。 在非 NUMA 架構上，會有單一 **Buffer Node** 物件的執行個體。  
@@ -43,7 +43,7 @@ ms.locfileid: "48053018"
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 的 Buffer Manager 物件](sql-server-buffer-manager-object.md)   
  [伺服器記憶體伺服器組態選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
- [監視資源使用狀況 &#40;系統監視器&#41;](monitor-resource-usage-system-monitor.md)   
+ [監視資源使用量 &#40;系統監視器&#41;](monitor-resource-usage-system-monitor.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  
   
   

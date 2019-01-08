@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server replication]
@@ -13,12 +12,12 @@ ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e76f53f2a3163c69310d31dd03796ee694d9bc8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42538053b80565005e86e82a32b6c04bae1aa360
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228950"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758630"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>SQL Server 複寫中已被取代的功能
   本主題描述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中仍然可用之已被取代的複寫功能。 這些功能將在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中移除。 已被取代的功能不應在新應用程式中使用。  

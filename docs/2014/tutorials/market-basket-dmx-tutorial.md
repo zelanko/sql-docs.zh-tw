@@ -19,12 +19,12 @@ ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c4c35b3cc6a1e7b925be09704fccd2d7ed5bc38
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 0f29aff4341126665e184e12219aca014222cd82
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461904"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360790"
 ---
 # <a name="market-basket-dmx-tutorial"></a>購物籃 DMX 教學課程
   您將在此教學課程中學會如何使用資料採礦延伸模組 (DMX) 查詢語言，來建立、定型和探索採礦模型。 您將使用這些採礦模型來建立預測，說明哪些產品有可能同時被購買。  
@@ -46,7 +46,7 @@ ms.locfileid: "49461904"
   
  此教學課程的目標是要提供將用於自訂應用程式的 DMX 查詢。  
   
- **如需詳細資訊：** [資料採礦方案](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **如需詳細資訊：＜＞**[資料採礦方案](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>採礦結構和採礦模型  
  開始建立 DMX 陳述式之前，一定要先了解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用來建立採礦模型的主要物件。 *採礦結構*是定義從中建立採礦模型的資料網域的資料結構。 單一採礦結構可以包含多個*採礦模型*，共用相同的網域。 採礦模型會將採礦模型演算法套用至以採礦結構表示的資料。  
@@ -90,7 +90,7 @@ ms.locfileid: "49461904"
  [第 1 課：建立購物籃採礦結構](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
  在這一課，您將學會如何使用 `CREATE` 陳述式來建立採礦結構。  
   
- [第 2 課：將採礦模型新增至購物籃採礦結構中](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [第 2 課：將採礦模型加入購物籃採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
  在這一課，您將學會如何使用 `ALTER` 陳述式將採礦模型加入至採礦結構。  
   
  [第 3 課：處理購物籃採礦結構](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
@@ -108,7 +108,7 @@ ms.locfileid: "49461904"
   
 -   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫  
   
- 為了加強安全性，系統預設不會安裝範例資料庫。 若要安裝的正式範例資料庫[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請前往[ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417)或在 Microsoft SQL Server Samples and Community Projects 首頁上，在 [Microsoft SQL Server Product Samples] 區段。 按一下 **資料庫**，然後按一下**版本**索引標籤，然後選取您想要的資料庫。  
+ 為了加強安全性，系統預設不會安裝範例資料庫。 若要安裝的正式範例資料庫[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請前往[ http://www.CodePlex.com/MSFTDBProdSamples ](https://go.microsoft.com/fwlink/?LinkId=88417)或在 Microsoft SQL Server Samples and Community Projects 首頁上，在 [Microsoft SQL Server Product Samples] 區段。 按一下 **資料庫**，然後按一下**版本**索引標籤，然後選取您想要的資料庫。  
   
 > [!NOTE]  
 >  當檢閱教學課程時，我們建議您將新增**下一個主題**並**上一個主題**文件檢視器工具列的按鈕。  
@@ -116,6 +116,6 @@ ms.locfileid: "49461904"
 ## <a name="see-also"></a>另請參閱  
  [Bike Buyer DMX 教學課程](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [資料採礦基本教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [第 3 課：建立購物籃狀況 &#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [第 3 課：建立購物籃狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

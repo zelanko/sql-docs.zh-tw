@@ -11,17 +11,17 @@ ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 64d690c11a76d40e851a23374c568727e3f47a40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c2873a6864e3ac5d55f180bfc2555d8cb471620
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172778"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354486"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>備份、 還原和移動的 SSIS 目錄
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包括 SSISDB 資料庫。 您可以查詢 SSISDB 資料庫中的檢視，以檢查物件、設定以及儲存在 [SSISDB] 目錄中的作業資料。 本主題提供備份與還原資料庫的指示。  
   
- [SSISDB] 目錄會儲存您已經部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器的封裝。 如需目錄的詳細資訊，請參閱 [SSIS 目錄](catalog/ssis-catalog.md)。  
+ **SSISDB** 目錄會儲存您已經部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器的封裝。 如需目錄的詳細資訊，請參閱 [SSIS 目錄](catalog/ssis-catalog.md)。  
   
 ##  <a name="backup"></a> 若要備份 SSIS 資料庫  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48172778"
   
     ```  
   
-3.  使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [備份資料庫] 對話方塊備份 SSISDB 資料庫。 如需詳細資訊，請參閱[如何：備份資料庫 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=231812)。  
+3.  使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [備份資料庫] 對話方塊備份 SSISDB 資料庫。 如需詳細資訊，請參閱[How to:備份資料庫 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)。  
   
 4.  執行下列操作，產生 ##MS_SSISServerCleanupJobLogin## 的 CREATE LOGIN 指令碼。 如需詳細資訊，請參閱 [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48172778"
   
 ### <a name="to-restore-the-ssis-database"></a>若要還原 SSIS 資料庫  
   
-1.  如果您要將 SSISDB 資料庫還原至從未建立過 SSISDB 目錄的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，請執行 sp_configure 預存程序，藉以啟用 Common Language Runtime (CLR)。 如需詳細資訊，請參閱 [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 和 [CLR 已啟用選項](http://go.microsoft.com/fwlink/?LinkId=231855)。  
+1.  如果您要將 SSISDB 資料庫還原至從未建立過 SSISDB 目錄的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，請執行 sp_configure 預存程序，藉以啟用 Common Language Runtime (CLR)。 如需詳細資訊，請參閱 [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 和 [CLR 已啟用選項](https://go.microsoft.com/fwlink/?LinkId=231855)。  
   
     ```  
     use master   
@@ -80,7 +80,7 @@ ms.locfileid: "48172778"
   
     ```  
   
-     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] CLR 預存程序需要授與 UNSAFE 權限給登入，因為登入需要對於限制資源的額外存取，例如 Microsoft Win32 API。 如需 UNSAFE 程式碼權限的詳細資訊，請參閱[建立組件](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)。  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] CLR 預存程序需要授與 UNSAFE 權限給登入，因為登入需要對於限制資源的額外存取，例如 Microsoft Win32 API。 如需 UNSAFE 程式碼權限的詳細資訊，請參閱 [建立組件](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)。  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  

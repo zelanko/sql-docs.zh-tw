@@ -1,5 +1,5 @@
 ---
-title: 資料採礦屬性 |Microsoft 文件
+title: Analysis Services 資料採礦屬性 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9a5825df52bf839e604545acf56fa9650053e4a6
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: bd1440e5ce0649d31f0ae6c0577c61e9e081a800
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238798"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072025"
 ---
 # <a name="data-mining-properties"></a>資料採礦屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的資料採礦伺服器屬性。 如需其他伺服器屬性以及如何設定伺服器屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
- **適用於** ：僅限於多維度伺服器模式  
+ **適用於：** 僅限於多維度伺服器模式  
   
 ## <a name="non-specific-category"></a>非特定類別目錄  
  **AllowSessionMiningModels**  

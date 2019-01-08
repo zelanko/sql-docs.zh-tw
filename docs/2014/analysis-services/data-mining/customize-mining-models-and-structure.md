@@ -18,12 +18,12 @@ ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77be91eddebedcdad79f18dfd499cc26778560db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df563ae17a04d37d7d3ea667e79cf9de2c7d9a51
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198830"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407864"
 ---
 # <a name="customize-mining-models-and-structure"></a>自訂採礦模型和結構
   當您選取符合商務需求的演算法之後，可以使用下列方式來自訂採礦模型，以便能夠得到更好的結果。  
@@ -57,12 +57,12 @@ ms.locfileid: "48198830"
   
 -   移除擁有許多唯一值的資料行或者實際上是參考資料而且對分析無用處的資料行，例如地址或中間名。  
   
- 您不需要實際從採礦結構中移除資料行，只需要將資料行標示為 **[忽略]**。 該資料行就會從採礦模型中移除，但是依然可由結構中的其他採礦模型所使用或是在鑽研查詢中參考。  
+ 您不需要實際從採礦結構中，移除資料行您只可以加上旗標做為資料行**忽略**。 該資料行就會從採礦模型中移除，但是依然可由結構中的其他採礦模型所使用或是在鑽研查詢中參考。  
   
 ### <a name="creating-aliases-for-model-columns"></a>建立模型資料行的別名  
  當 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 建立採礦模型時，它會使用採礦結構中存在的相同資料行名稱。 您可以將別名加入至採礦模型中的任何資料行。 這樣做可能會讓人較容易了解資料行的內容或使用方式，或者縮短名稱以便建立查詢。 當您想要建立資料行複本，並將它命名為具描述性的名稱時，別名也會很有幫助。  
   
- 您會建立別名，藉由編輯`Name`採礦模型資料行的屬性。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會繼續使用原始名稱當做輸入的資料行，並將新值的識別碼`Name`會成為資料行別名，而且會出現在資料行使用方式旁的括號中的方格。  
+ 您會藉由編輯採礦模型資料行的 `Name` 屬性來建立別名。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會繼續使用原始名稱當做輸入的資料行，並將新值的識別碼`Name`會成為資料行別名，而且會出現在資料行使用方式旁的括號中的方格。  
   
  ![別名在採礦模型資料行](../media/modelcolumnalias-income.gif "別名採礦模型資料行")  
   
@@ -95,14 +95,14 @@ ms.locfileid: "48198830"
   
  每一個演算法類型的主題也會列出可以搭配以該演算法為根據之模型一起使用的預測函數。  
   
-|屬性名稱|適用對象|  
+|屬性名稱|適用於|  
 |-------------------|----------------|  
 |AUTO_DETECT_PERIODICITY|[Microsoft 時間序列演算法技術參考](microsoft-time-series-algorithm-technical-reference.md)|  
 |CLUSTER_COUNT|[Microsoft 群集演算法技術參考](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 時序群集演算法技術參考](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
 |CLUSTER_SEED|[Microsoft 群集演算法技術參考](microsoft-clustering-algorithm-technical-reference.md)|  
 |CLUSTERING_METHOD|[Microsoft 群集演算法技術參考](microsoft-clustering-algorithm-technical-reference.md)|  
 |COMPLEXITY_PENALTY|[Microsoft 決策樹演算法技術參考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 時間序列演算法技術參考](microsoft-time-series-algorithm-technical-reference.md)|  
-|FORCE_REGRESSOR|[Microsoft 決策樹演算法技術參考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 線性迴歸演算法技術參考](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [模型旗標&#40;資料採礦&#41;](modeling-flags-data-mining.md)|  
+|FORCE_REGRESSOR|[Microsoft 決策樹演算法技術參考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 線性迴歸演算法技術參考](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)|  
 |FORECAST_METHOD|[Microsoft 時間序列演算法技術參考](microsoft-time-series-algorithm-technical-reference.md)|  
 |HIDDEN_NODE_RATIO|[Microsoft 類神經網路演算法技術參考](microsoft-neural-network-algorithm-technical-reference.md)|  
 |HISTORIC_MODEL_COUNT|[Microsoft 時間序列演算法技術參考](microsoft-time-series-algorithm-technical-reference.md)|  
@@ -113,7 +113,7 @@ ms.locfileid: "48198830"
 |MAXIMUM_INPUT_ATTRIBUTES|[Microsoft 群集演算法技術參考](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 決策樹演算法技術參考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 線性迴歸演算法技術參考](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 貝氏機率分類演算法技術參考](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Microsoft 類神經網路演算法技術參考](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Microsoft 羅吉斯迴歸演算法技術參考](microsoft-logistic-regression-algorithm-technical-reference.md)|  
 |MAXIMUM_ITEMSET_COUNT|[Microsoft 關聯分析演算法技術參考](microsoft-association-algorithm-technical-reference.md)|  
 |MAXIMUM_ITEMSET_SIZE|[Microsoft 關聯分析演算法技術參考](microsoft-association-algorithm-technical-reference.md)|  
-|MAXIMUM_OUTPUT_ATTRIBUTES|[Microsoft 決策樹演算法技術參考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 線性迴歸演算法技術參考](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 羅吉斯迴歸演算法技術參考](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 貝氏機率分類演算法技術參考](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Microsoft 類神經網路演算法技術參考](microsoft-neural-network-algorithm-technical-reference.md)|  
+|MAXIMUM_OUTPUT_ATTRIBUTES|[Microsoft 決策樹演算法技術參考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 線性迴歸演算法技術參考](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 羅吉斯迴歸演算法技術參考](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 貝氏機率分類演算法技術參考](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)|  
 |MAXIMUM_SEQUENCE_STATES|[Microsoft 時序群集演算法技術參考](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
 |MAXIMUM_SERIES_VALUE|[Microsoft 時間序列演算法技術參考](microsoft-time-series-algorithm-technical-reference.md)|  
 |MAXIMUM_STATES|[Microsoft 群集演算法技術參考](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 類神經網路演算法技術參考](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Microsoft 時序群集演算法技術參考](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
@@ -134,7 +134,7 @@ ms.locfileid: "48198830"
 |STOPPING_TOLERANCE|[Microsoft 群集演算法技術參考](microsoft-clustering-algorithm-technical-reference.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [實體架構&#40;Analysis Services-資料採礦&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [實體架構 &#40;Analysis Services – 資料採礦&#41;](physical-architecture-analysis-services-data-mining.md)  
   
   

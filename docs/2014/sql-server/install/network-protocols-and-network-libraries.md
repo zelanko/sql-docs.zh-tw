@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server]
@@ -22,12 +21,12 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ed7ab99c94a2b6618a97d4e167344b0ca2cb0f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4649f6a5abd9726a1b01e3ed30d6cabf88aef9e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056326"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371820"
 ---
 # <a name="network-protocols-and-network-libraries"></a>網路通訊協定和網路程式庫
   伺服器可以一次接聽或監視多個網路通訊協定。 然而，必須設定每個通訊協定。 如果未設定特定的通訊協定，則伺服器將無法接聽該通訊協定。 安裝之後，您可以利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來變更通訊協定組態。  
@@ -35,16 +34,16 @@ ms.locfileid: "48056326"
 ## <a name="default-sql-server-network-configuration"></a>預設 SQL Server 網路組態  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設執行個體會設定成使用 TCP/IP 通訊埠 1433 及具名管道 \\\\.\pipe\sql\query。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具名執行個體會設定成使用 TCP 動態通訊埠，而該通訊埠的通訊埠編號則由作業系統指派。  
   
- 如果您無法使用動態通訊埠位址 (例如，當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接必須通過已設定成通過特定通訊埠位址的防火牆伺服器時)。 選取未指派的通訊埠編號。 通訊埠編號指派是由 Internet Assigned Numbers Authority 所管理，而且列於 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)。  
+ 如果您無法使用動態通訊埠位址 (例如，當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接必須通過已設定成通過特定通訊埠位址的防火牆伺服器時)。 選取未指派的通訊埠編號。 通訊埠編號指派是由 Internet Assigned Numbers Authority 所管理，而且列於 [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844)。  
   
  為了加強安全性，安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時不會完全啟用網路連接。 若要在安裝程式完成之後啟用、停用和設定網路通訊協定，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 網路組態區域。  
   
 ## <a name="server-message-block-protocol"></a>伺服器訊息區塊通訊協定  
  周邊網路中的伺服器應該停用所有非必要的通訊協定，包括伺服器訊息區塊 (SMB) 在內。 Web 伺服器和網域名稱系統 (DNS) 伺服器不需要 SMB。 若要還擊使用者列舉方面的威脅，應該停用這個通訊協定。  
   
-> [!WARNING]  
+> [!WARNING]
 >  停用伺服器訊息區塊將會封鎖 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Windows 叢集服務存取遠端檔案共用。 如果您要或打算要執行下列其中一項，則不要停用 SMB：  
->   
+> 
 >  -   使用 Windows 叢集節點和檔案共用多數仲裁模式  
 > -   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間指定 SMB 檔案共用做為資料目錄  
 > -   在 SMB 檔案共用上建立資料庫檔案  

@@ -13,19 +13,19 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29a243c24a36b2e370686c4c51a7ddefe993bd4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17252769c0f9347f5f67dbf073a207d827963630
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159661"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377540"
 ---
 # <a name="install-and-configure-semantic-search"></a>安裝及設定語意搜尋
   描述統計語意搜尋的必要元件以及如何安裝或檢查這些必要元件。  
   
 ## <a name="installing-semantic-search"></a>安裝語意搜尋  
   
-###  <a name="HowToCheckInstalled"></a> 如何： 檢查是否已安裝語意搜尋  
+###  <a name="HowToCheckInstalled"></a> 操作說明：檢查是否已安裝語意搜尋  
  查詢 [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql) 中繼資料函數的 **IsFullTextInstalled** 屬性。  
   
  傳回值 1 表示已安裝全文檢索搜尋和語意搜尋；傳回值 0 表示未安裝這兩個搜尋。  
@@ -35,7 +35,7 @@ SELECT SERVERPROPERTY('IsFullTextInstalled');
 GO  
 ```  
   
-###  <a name="BasicsSemanticSearch"></a> 如何： 安裝語意搜尋  
+###  <a name="BasicsSemanticSearch"></a> 操作說明：安裝語意搜尋  
  若要安裝語意搜尋，請在安裝期間選取 [要安裝的功能] 頁面上的 [搜尋的全文檢索和語意擷取]。  
   
  統計語意搜尋相依於全文檢索搜尋。 這兩個選擇性功能會同時安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
@@ -43,7 +43,7 @@ GO
 ## <a name="installing-or-removing-the-semantic-language-statistics-database"></a>安裝或移除語意語言統計資料庫  
  語意搜尋的其他外部相依性稱為語意語言統計資料庫。 此資料庫包含語意搜尋所需的語意語言模型。 單一語意語言統計資料庫會包含支援語意索引之所有語言的語言模型。  
   
-###  <a name="HowToCheckDatabase"></a> 如何： 檢查是否已安裝語意語言統計資料庫  
+###  <a name="HowToCheckDatabase"></a> 操作說明：檢查是否已安裝語意語言統計資料庫  
  查詢目錄檢視 [sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql)。  
   
  如果已安裝並註冊該執行個體的語意語言統計資料庫，則查詢結果會包含有關資料庫的一列資訊。  
@@ -53,7 +53,7 @@ SELECT * FROM sys.fulltext_semantic_language_statistics_database;
 GO  
 ```  
   
-###  <a name="HowToInstallModel"></a> 如何： 安裝、 附加及註冊語意語言統計資料庫  
+###  <a name="HowToInstallModel"></a> 操作說明：安裝、 附加及註冊語意語言統計資料庫  
  語意語言統計資料庫不是由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式所安裝。 若要將語意語言統計資料庫設定為語意索引的必要元件，請執行下列工作：  
   
  **1.安裝語意語言統計資料庫。**  
@@ -61,7 +61,7 @@ GO
   
     -   在 **安裝媒體上，找到名稱為** SemanticLanguageDatabase.msi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 Windows Installer 套件。 找到 32 位元或 64 位元版本的 Installer 套件 (視目標系統而定)。 包含資料夾名稱可識別檔案的 32 位元或 64 位元版本；這兩種版本的檔案名稱本身相同。  
   
-    -   從 [下載中心的](http://go.microsoft.com/fwlink/?LinkID=296743) Microsoft® SQL Server® 2014 Semantic Language Statistics [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 頁面下載 Installer 套件。  
+    -   下載安裝程式套件從[Microsoft??SQL Server??2014 semantic Language Statistics](https://go.microsoft.com/fwlink/?LinkID=296743)頁面上[!INCLUDE[msCoName](../../../includes/msconame-md.md)]下載中心取得。  
   
 2.  執行 **SemanticLanguageDatabase.msi** Windows Installer 套件，以擷取資料庫和記錄檔。  
   
@@ -97,7 +97,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsd
 GO  
 ```  
   
-###  <a name="HowToUnregister"></a> 如何： 取消註冊、 卸離及移除語意語言統計資料庫  
+###  <a name="HowToUnregister"></a> 操作說明：取消註冊、 卸離及移除語意語言統計資料庫  
  **取消註冊語意語言統計資料庫。**  
  呼叫 [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql) 預存程序。 執行個體只能有一個語意語言統計資料庫，因此您不需要提供資料庫的名稱。  
   
@@ -134,7 +134,7 @@ GO
   
 ## <a name="installing-optional-support-for-newer-document-types"></a>安裝選擇性的新版文件類型支援  
   
-###  <a name="office"></a> 如何： 安裝適用於 Microsoft Office 和其他 Microsoft 文件類型的最新的篩選  
- 此版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會安裝最新的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 斷詞工具和字幹，但是不會安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 文件和其他 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 文件類型的最新篩選。 這些篩選是針對以最新版 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 和其他 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 應用程式建立的文件編製索引時所必要。 若要下載最新的篩選，請參閱 [Microsoft Office 2010 篩選套件](http://go.microsoft.com/fwlink/?LinkId=218293)。  
+###  <a name="office"></a> 操作說明：安裝適用於 Microsoft Office 和其他 Microsoft 文件類型的最新的篩選  
+ 此版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會安裝最新的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 斷詞工具和字幹，但是不會安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 文件和其他 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 文件類型的最新篩選。 這些篩選是針對以最新版 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 和其他 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 應用程式建立的文件編製索引時所必要。 若要下載最新的篩選，請參閱 [Microsoft Office 2010 篩選套件](https://go.microsoft.com/fwlink/?LinkId=218293)。  
   
   

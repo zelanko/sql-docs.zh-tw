@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - custom objects [Integration Services]
@@ -14,12 +12,12 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7257973db070b0f06cc48d217f232be2f81efeb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22b7d07752c6a9df5f0b100c0d16b78a86125f04
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159708"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362850"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>建立、部署和偵錯自訂物件
   撰寫 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 之自訂物件的程式碼之後，必須建立並部署組件，以及將其整合到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具，其才可供封裝使用，並進行測試及偵錯。  
@@ -61,7 +59,7 @@ ms.locfileid: "48159708"
 ##  <a name="building"></a> 建置組件  
  在簽署專案之後，您必須使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 [建置] 功能表上可用的命令，以建置或重建專案或是解決方案。 您的方案可能包含自訂使用者介面的個別專案，它也必須以強式名稱簽署，而且可以同時建立。  
   
- 執行後續兩個步驟 (部署組件以及在全域組件快取中安裝它) 的最方便的方法，就是在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中將這些步驟撰寫成建置後事件。 建置事件可從 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 專案上 [專案屬性] 的 [編譯] 頁面取得，以及從 C# 專案的 [建置事件] 頁面取得。 **gacutil.exe** 這類的命令提示字元公用程式需要完整路徑。 凡包含空格的路徑，以及會使用到包含空格之路徑的巨集 (例如 $(TargetPath))，皆必須括以引號。  
+ 執行接下來兩個步驟 (部署組件以及在全域組件快取中加以安裝) 的最方便方法，就是在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中將這些步驟撰寫成建置後事件。 建置事件可從 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 專案上 [專案屬性] 的 [編譯] 頁面取得，以及從 C# 專案的 [建置事件] 頁面取得。 **gacutil.exe** 這類的命令提示字元公用程式需要完整路徑。 凡包含空格的路徑，以及會使用到包含空格之路徑的巨集 (例如 $(TargetPath))，皆必須括以引號。  
   
  以下是自訂記錄提供者的建置後事件命令列範例：  
   
@@ -153,7 +151,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 3.  返回暫停的套件並繼續略過中斷點，或是按一下 [確定] 以解除指令碼工作所引發的訊息方塊，然後繼續套件執行和偵錯。  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [開發 Integration Services 的自訂物件](developing-custom-objects-for-integration-services.md)   

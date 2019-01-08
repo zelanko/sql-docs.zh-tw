@@ -11,12 +11,12 @@ ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: cb940edad51f7d05effc7ba35534a25edddaf441
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df19fffaec69eac9c3a80fe7fee1899994682a0b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180668"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354544"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>資料表 (報表產生器及 SSRS)
   使用資料表顯示詳細資料、群組資料，或兩者的組合。 您可以依單一欄位、多個欄位或透過撰寫自己的運算式來分組資料。 您可以建立巢狀群組或獨立、相鄰的群組。 若要顯示群組資料的彙總值，將總計加入到群組中。 格式化資料列和資料行以反白顯示您要強調的資料。 您可以一開始隱藏詳細資料或群組資料並加入向下鑽研切換，以便讓使用者以互動方式選擇要顯示多少資料。  
@@ -24,9 +24,9 @@ ms.locfileid: "48180668"
 > [!NOTE]  
 >  您可以將資料表當做報表組件，與報表分開發行。  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- 若要快速地開始使用資料表，請參閱[教學課程︰建立基本資料表報表 &#40;報表產生器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) 或[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../create-a-basic-table-report-ssrs-tutorial.md)。  
+ 若要快速地開始使用資料表，請參閱[教學課程：建立基本資料表報表&#40;報表產生器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)或是[建立基本資料表報表&#40;SSRS 教學課程&#41;](../create-a-basic-table-report-ssrs-tutorial.md)。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 範例報表包括許多使用資料表的報表。 您可以在報表產生器或報表設計師中瀏覽範例報表的報表定義，或在報表產生器或報表設計師中預覽轉譯的報表，藉以了解資料表。 如需有關下載範例報表的詳細資訊，請參閱＜ [(SSRS) Reporting Services 範例](http://go.microsoft.com/fwlink/?LinkID=198283)＞。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 範例報表包括許多使用資料表的報表。 您可以在報表產生器或報表設計師中瀏覽範例報表的報表定義，或在報表產生器或報表設計師中預覽轉譯的報表，藉以了解資料表。 如需有關下載範例報表的詳細資訊，請參閱＜ [(SSRS) Reporting Services 範例](https://go.microsoft.com/fwlink/?LinkID=198283)＞。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -47,7 +47,7 @@ ms.locfileid: "48180668"
   
  ![在設計介面上選取的資料表範本](../media/rs-tabletemplatenewselected.gif "在設計介面上選取的資料表範本")  
   
- 資料列的資料列控制代碼會顯示詳細資料符號 (![具有詳細資料列之三條平行線的資料列代碼](../media/rs-icontablix-detailsrow.gif "具有詳細資料列之三條平行線的資料列代碼"))。 若要在這些資料列上顯示資料，將欄位從 [報表資料] 窗格拖曳到標頭資料列或詳細資料列的資料表資料格中。 兩個資料列會同時填入。 若要加入其他資料行，將欄位拖曳到資料表中，直到您看到插入點為止。 將資料集欄位加入到資料表之後，您可以變更日期和貨幣的預設格式來控制它們顯示在報表中的方式。 下圖顯示包含這些欄位的資料表資料區域：Date、Order、Product、Qty 和 Line Total。  
+ 資料列的資料列控制代碼會顯示詳細資料符號 (![具有詳細資料列之三條平行線的資料列代碼](../media/rs-icontablix-detailsrow.gif "具有詳細資料列之三條平行線的資料列代碼"))。 若要在這些資料列上顯示資料，將欄位從 [報表資料] 窗格拖曳到標頭資料列或詳細資料列的資料表資料格中。 兩個資料列會同時填入。 若要加入其他資料行，將欄位拖曳到資料表中，直到您看到插入點為止。 將資料集欄位加入到資料表之後，您可以變更日期和貨幣的預設格式來控制它們顯示在報表中的方式。 下圖顯示這些欄位的資料表資料區域：日期、 訂單、 產品、 Qty 和行總計。  
   
  ![設計、具有粗體資料行標頭的資料表](../media/rs-basictabledetailsformatteddesign.gif "設計、具有粗體資料行標頭的資料表")  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48180668"
   
  ![具有粗體資料行標頭的資料表預覽](../../tutorials/media/rs-basictabledetailsformattedpreview.gif "具有粗體資料行標頭的資料表預覽")  
   
- 您開始使用的資料表是以 Tablix 資料區為基礎的範本。 您可以加入基礎 Tablix 資料區所支援的功能來加強資料表的設計。 如需詳細資訊，請參閱[控制報表頁面上的 Tablix 資料區顯示 &#40;報表產生器及 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)。 您也可以加入資料列群組、資料行群組，以及加入或移除詳細資料群組，以便繼續開發您的資料表。 如需詳細資訊，請參閱[探索 Tablix 資料區的彈性 &#40;報表產生器及 SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)。  
+ 您開始使用的資料表是以 Tablix 資料區為基礎的範本。 您可以加入基礎 Tablix 資料區所支援的功能來加強資料表的設計。 如需詳細資訊，請參閱 [控制報表頁面上的 Tablix 資料區顯示 &#40;報表產生器及 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)。 您也可以加入資料列群組、資料行群組，以及加入或移除詳細資料群組，以便繼續開發您的資料表。 如需詳細資訊，請參閱[探索 Tablix 資料區的彈性 &#40;報表產生器及 SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)。  
   
 ### <a name="adding-totals-for-detail-data"></a>加入詳細資料的資料表  
  若要加入總計，選取包含數值資料的資料格，然後使用快速鍵功能表自動加入數值欄位之詳細資料的標籤和總計。 您也可以手動指定其他標籤和總計。 下圖顯示同時包含自動和手動指定之總計的一般總計：  
@@ -114,7 +114,7 @@ ms.locfileid: "48180668"
   
  ![預覽，具有已展開向下鑽研節點的資料表](../media/rs-basictablegroupsdrilldownpreview.gif "預覽，具有已展開向下鑽研節點的資料表")  
   
- 如需詳細資訊，請參閱[將展開或摺疊動作加入項目中 &#40;報表產生器及 SSRS&#41;](add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [將展開或摺疊動作加入項目中 &#40;報表產生器及 SSRS&#41;](add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   

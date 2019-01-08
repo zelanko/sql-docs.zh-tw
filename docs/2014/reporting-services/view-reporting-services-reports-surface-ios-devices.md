@@ -17,18 +17,18 @@ ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8f458589e995162a8753270fbdebe9554a44122
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2cc1725bc1cad98033fbc4c47c1611e7c8b35f32
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188818"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360230"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>在 Microsoft Surface 裝置及 Apple iOS 裝置上檢視 Reporting Services 報表
   本文將描述支援 Microsoft Surface 裝置以及具有 Apple iOS 6 與 Apple Safari 之裝置 (例如 iPad) 的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能和工作流程。  
   
 ## <a name="view-and-interact-with-reports"></a>檢視報表並進行互動  
- 開頭[!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)]，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]支援在 Microsoft Surface 裝置以及具有 Apple iOS 6 與 Apple Safari 瀏覽器，例如 iPad 裝置上的報表的檢視和基本互動。 使用 Microsoft Surface 裝置，也可以發行報表。  
+ 從 [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)]開始， [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 就支援在 Microsoft Surface 裝置以及具有 Apple iOS 6 與 Apple Safari 瀏覽器的裝置 (例如 iPad) 上檢視報表並進行基本互動。 使用 Microsoft Surface 裝置，也可以發行報表。  
   
  ![IPad 桌面](media/videothumbnail.jpg "IPad 桌面")  
 在 iPad 上觀看檢視報表的示範。  
@@ -39,9 +39,9 @@ ms.locfileid: "48188818"
   
 -   如果是原生模式報表伺服器，請安裝 [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] 或更新版本。  
   
-     [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] 適用於從下載[Microsoft 下載中心](http://www.microsoft.com/download/details.aspx?id=35575)。  
+     [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] 適用於從下載[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=35575)。  
   
--   針對 SharePoint 模式報表伺服器上，安裝[!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)]或更新版本的[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]增益集適用於 SharePoint 產品。  
+-   如果是 SharePoint 模式報表伺服器，請安裝適用於 SharePoint 產品之 [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] 增益集的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 或更新版本。  
   
  **若要檢視並與其互動的 iPad 裝置或 Microsoft Surface 裝置上的報表**  
   
@@ -49,18 +49,18 @@ ms.locfileid: "48188818"
   
 2.  執行下列其中一項動作來開啟報表。  
   
-    -   **從電子郵件啟動：** 所建立的電子郵件[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]訂用帳戶，請點選報表的 URL。 報表將在瀏覽器中開啟。  
+    -   **從電子郵件啟動：** 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂閱所建立的電子郵件中，點選報表的 URL。 報表將在瀏覽器中開啟。  
   
-    -   **從報表伺服器開始：** 上瀏覽目錄[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]報表伺服器，，，然後點選報表名稱開啟報表。  
+    -   **從報表伺服器開始：** 瀏覽 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器上的目錄，然後點選報表名稱來開啟報表。  
   
-    -   **從 SharePoint 文件庫開始：** 瀏覽至 SharePoint 文件庫，其中包含[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]報表，然後點選 報表名稱。 您就可以檢視報表並進行互動。  
+    -   **從 SharePoint 文件庫開始：** 瀏覽至包含 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表的 SharePoint 文件庫，然後點選報表名稱。 您就可以檢視報表並進行互動。  
   
         > [!IMPORTANT]  
         >  如果是 iPad，請確定 Safari 的 **[私密瀏覽]** 屬性已關閉。  
   
-    -   **SharePoint web 組件：** 如果已將 web 組件加入至 SharePoint 頁面中，您可以檢視[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]報表。  
+    -   **SharePoint web 組件：** 如果 Web 組件已加入 SharePoint 頁面，即可檢視 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表。  
   
-3.  您也可以在您的 Microsoft Surface 裝置上，使用報表管理員來開啟報表。 瀏覽的目錄中[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]報表管理員，，，然後點選報表名稱開啟報表。  
+3.  您也可以在您的 Microsoft Surface 裝置上，使用報表管理員來開啟報表。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表管理員中瀏覽目錄，然後點選報表名稱開啟報表。  
   
     > [!IMPORTANT]  
     >  iPad 不支援在報表管理員中檢視報表。  
@@ -89,7 +89,7 @@ ms.locfileid: "48188818"
   
     -   藉由點選 **[匯出下拉式功能表]** 圖示，然後點選檔案格式，匯出報表。  
   
-        -   如果您正在 Microsoft Surface 裝置上檢視報表，就可以將報表匯出成下列其中一種格式。  
+        -   如果您正在 Microsoft Surface 裝置上檢視報表，您可以在下列格式之一匯出報表。  
   
             -   包含報表資料的 XML 檔  
   
@@ -105,14 +105,14 @@ ms.locfileid: "48188818"
   
             -   Word  
   
-        -   如果您正在 iPad 上檢視報表，就可以將報表匯出成 TIFF 或 PDF 檔案。  
+        -   如果您正在 iPad 上檢視報表，您可以匯出成 TIFF 或 PDF 檔案的報表。  
   
 ## <a name="authentication"></a>驗證  
- RSWindowsNTLM 驗證和 RSWindowsBasic 驗證可與[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]原生模式和 iPad。  
+ RSWindowsNTLM 驗證和 RSWindowsBasic 驗證可搭配原生模式下的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 和 iPad 一起運作。  
   
  一般來說，建議不要在非 https 環境中使用 RSWindowsBasic，因為這種驗證類型不會對傳輸的認證提供機密性。  
   
- 如需有關 RSWindowsNTLM 和 RSWindowsBasic 驗證的詳細資訊，請參閱 < [Authentication with Report Server](security/authentication-with-the-report-server.md)。  
+ 如需有關 RSWindowsNTLM 和 RSWindowsBasic 驗證的詳細資訊，請參閱＜ [Authentication with the Report Server](security/authentication-with-the-report-server.md)＞。  
   
 ## <a name="uploading-reports"></a>上傳報表  
  如果您有適當的權限，可透過下列其中一個方法，從 Microsoft Surface 裝置發行報表。  
@@ -125,20 +125,20 @@ ms.locfileid: "48188818"
 -   開啟報表管理員並點選 **[上傳檔案]**，將報表定義檔案上傳至報表伺服器資料庫。  
   
 ## <a name="additional-information"></a>其他資訊  
- 如需有關[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]和支援的瀏覽器，請參閱：  
+ 如需有關 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 和支援之瀏覽器的詳細資訊，請參閱：  
   
 -   [規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
  如需有關 Microsoft Business Intelligence 和行動裝置的詳細資訊，請參閱下列主題：  
   
--   [行動裝置和 SharePoint 2013 的概觀](http://technet.microsoft.com/library/fp161351\(v=office.15\).aspx)(http://technet.microsoft.com/library/fp161351(v=office.15).aspx)。  
+-   [行動裝置和 SharePoint 2013 的概觀](https://technet.microsoft.com/library/fp161351\(v=office.15\).aspx)(https://technet.microsoft.com/library/fp161351(v=office.15).aspx)。  
   
--   [支援在 SharePoint 2013 中的行動裝置瀏覽器](http://technet.microsoft.com/library/fp161353\(v=office.15\).aspx)(http://technet.microsoft.com/library/fp161353(v=office.15).aspx)。  
+-   [支援在 SharePoint 2013 中的行動裝置瀏覽器](https://technet.microsoft.com/library/fp161353\(v=office.15\).aspx)(https://technet.microsoft.com/library/fp161353(v=office.15).aspx)。  
   
--   [Apple iPad 裝置 (SharePoint Server 2010) 上檢視報表和計分卡](http://technet.microsoft.com/library/hh697482.aspx)(http://technet.microsoft.com/library/hh697482.aspx)。  
+-   [Apple iPad 裝置 (SharePoint Server 2010) 上檢視報表和計分卡](https://technet.microsoft.com/library/hh697482.aspx)(https://technet.microsoft.com/library/hh697482.aspx)。  
   
--   [（影片） iPad 上檢視 Reporting Services 報表](http://technet.microsoft.com/sqlserver/jj873792.aspx)(http://technet.microsoft.com/sqlserver/jj873792.aspx)。  
+-   [（影片） iPad 上檢視 Reporting Services 報表](https://technet.microsoft.com/sqlserver/jj873792.aspx)(https://technet.microsoft.com/sqlserver/jj873792.aspx)。  
   
--   [Microsoft Surface RT 裝置 （影片） 上檢視 Reporting Services 報表](http://technet.microsoft.com/sqlserver/dn146017)  
+-   [Microsoft Surface RT 裝置 （影片） 上檢視 Reporting Services 報表](https://technet.microsoft.com/sqlserver/dn146017)  
   
   

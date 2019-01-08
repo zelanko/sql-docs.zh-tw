@@ -11,19 +11,19 @@ ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 1f113778433e13e68b8847e5f54f1d9ae2bdc6e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b22f958a0b4bb78e297e23665db36b8c16fe74e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074464"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363140"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>將多值參數加入至報表
   您可以在報表中新增參數，好讓使用者可以為參數選取多個值。  
   
- 您可以將多個參數值傳遞給報表 URL 中的報表。 如需 URL 範例包含多值參數，請參閱[報表參數在 URL 內傳遞](../pass-a-report-parameter-within-a-url.md)。  
+ 您可以將多個參數值傳遞給報表 URL 中的報表。 如需包含多值參數的 URL 範例，請參閱 [在 URL 內傳遞報表參數](../pass-a-report-parameter-within-a-url.md)。  
   
- 如需如何將多個參數值傳遞給預存程序的詳細資訊，請參閱 mssqltips.com 上的 [為 SSRS 報表處理複選參數](http://go.microsoft.com/fwlink/?LinkId=321529) 。  
+ 如需如何將多個參數值傳遞給預存程序的詳細資訊，請參閱 mssqltips.com 上的 [為 SSRS 報表處理複選參數](https://go.microsoft.com/fwlink/?LinkId=321529) 。  
   
 ### <a name="to-add-a-multi-value-parameter"></a>若要加入多值參數  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48074464"
     ```  
   
     > [!IMPORTANT]  
-    >  如果您未如同上面一樣在變數周圍加上括號，報表將無法轉譯，而且會顯示「必須宣告純量變數」錯誤。  
+    >  如果您未包含在變數周圍的括號，如上所示，報表會無法轉譯，並會顯示 「 必須宣告純量變數 」 錯誤訊息。  
   
      系統會針對查詢變數自動建立內嵌資料集或共用資料集的資料集參數。 系統會自動針對資料集參數建立報表參數。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48074464"
     ```  
   
     > [!IMPORTANT]  
-    >  如果您未如同上面一樣在變數周圍加上括號，報表將無法轉譯，而且會顯示「必須宣告純量變數」錯誤。  
+    >  如果您未包含在變數周圍的括號，如上所示，報表會無法轉譯，並會顯示 「 必須宣告純量變數 」 錯誤訊息。  
   
      系統會針對查詢變數自動建立內嵌資料集或共用資料集的資料集參數。 系統會自動針對資料集參數建立報表參數。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48074464"
      如需詳細資訊，請參閱[為報表參數新增、變更或刪除可用的值 &#40;報表產生器和 SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [將串聯參數加入至報表&#40;報表產生器及 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [加入、 變更或刪除報表參數&#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
+ [將串聯參數加入至報表 &#40;報表產生器和 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [加入、變更或刪除報表參數 &#40;報表產生器和 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
   

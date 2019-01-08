@@ -11,12 +11,12 @@ ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8171edaa6e2265191ae4611fea79dd018b43022c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b325a96c096f0e49f3bbfb2961d0de6cac387a3e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117878"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355068"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>安裝 Analysis Services 多維度模型化教學課程的範例資料和專案
   使用本主題中提供的指示與連結，安裝 Analysis Services 教學課程中所使用的所有資料和專案檔案。  
@@ -28,9 +28,9 @@ ms.locfileid: "48117878"
   
 -   Analysis Services  
   
-     Analysis Services 僅適用於下列版本：Evaluation、Enterprise、Business Intelligence、Standard。  
+     Analysis Services 會在下列版本：Evaluation、 Enterprise、 Business Intelligence、 Standard。  
   
-     請注意，SQL Server Express 版本不包含 Analysis Services。 如果您想要免費試用軟體，請[下載 Evaluation Edition](http://go.microsoft.com/fwlink/?LinkId=392824) 。  
+     請注意，SQL Server Express 版本不包含 Analysis Services。 如果您想要免費試用軟體，請[下載 Evaluation Edition](https://go.microsoft.com/fwlink/?LinkId=392824)。  
   
      根據預設，Analysis Services 會安裝成多維度執行個體，您可以在 [安裝精靈] 的伺服器組態頁面中選擇 [表格式伺服器模式] 來覆寫。 如果您想要同時執行兩種伺服器模式，請在相同電腦上重新執行 SQL Server 安裝程式，以另一個模式來安裝第二個 Analysis Services 執行個體。  
   
@@ -40,23 +40,23 @@ ms.locfileid: "48117878"
   
  或者，您可以使用內建到 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的內建 MDX 查詢設計工具來瀏覽資料。 查詢設計工具會傳回相同的資料，但以一般資料列集呈現的資料除外。  
   
-## <a name="step-2-download-sql-server-data-tools--business-intelligence-for-visual-studio-2012"></a>步驟：下載 SQL Server Data Tools - Business Intelligence for Visual Studio 2012  
+## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>步驟 2：下載 SQL Server Data Tools-Business Intelligence for Visual Studio 2012  
  在此版本中，SQL Server Data Tools 要與其他 SQL Server 功能分開下載及安裝。 現在可以在網路上免費下載用來建立 BI 模型和報表的設計工具和專案範本。  
   
--   [下載商業智慧版 SQL Server Data Tools ](http://go.microsoft.com/fwlink/p/?LinkID=322038)。 檔案會儲存至 Downloads 資料夾。 執行安裝程式來安裝該工具。  
+-   [下載商業智慧版 SQL Server Data Tools ](https://go.microsoft.com/fwlink/p/?LinkID=322038)。 檔案會儲存至 Downloads 資料夾。 執行安裝程式來安裝該工具。  
   
      重新開機以完成安裝。  
   
 ## <a name="step-3-install-databases"></a>步驟 3：安裝資料庫  
  Analysis Services 多維度模型使用您從關聯式資料庫管理系統匯入的交易資料。 基於這個教學課程的目的，您將使用下列關聯式資料庫做為您的資料來源。  
   
--   **AdventureWorksDW2012** – 這是在 Database Engine 執行個體上執行的關聯式資料倉儲。 它提供 Analysis Services 資料庫將使用的原始資料，以及您在整個教學課程中建立與部署的專案。  
+-   **AdventureWorksDW2012** -這是 Database Engine 執行個體執行的關聯式資料倉儲。 它提供 Analysis Services 資料庫將使用的原始資料，以及您在整個教學課程中建立與部署的專案。  
   
      您可以將這個範例資料庫用於 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]。  
   
  若要安裝此資料庫，請執行下列動作：  
   
-1.  從 codeplex 的產品範例頁面下載 [AdventureWorkDW2012](http://go.microsoft.com/fwlink/p/?LinkID=221770) 資料庫。  
+1.  從 codeplex 的產品範例頁面下載 [AdventureWorkDW2012](https://go.microsoft.com/fwlink/p/?LinkID=221770) 資料庫。  
   
      此資料庫檔案名稱為 AdvntureWorksDW2012_Data.mdf。 此檔案應該在您電腦的 [下載] 資料夾中。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48117878"
   
 7.  在資料庫詳細資料中，移除記錄檔項目。 安裝程式會假設您有記錄檔，但是範例中並沒有記錄檔。 附加資料庫時，將自動建立新的記錄檔。 選取記錄檔，並按一下 [移除]，然後按一下 [確定]，即可只附加主要資料庫檔案。  
   
-## <a name="step-4-grant-database-permissions"></a>步驟 4：授與資料庫權限  
+## <a name="step-4-grant-database-permissions"></a>步驟 4：Grant 資料庫權限  
  範例專案會使用指定匯入或處理資料所使用之安全性內容的資料來源模擬設定。 根據預設，模擬設定會指定 Analysis Services 服務帳戶來存取資料。 若要使用此預設設定，您必須確認執行 Analysis Services 所使用的服務帳戶擁有 **AdventureWorksDW2012** 資料庫的資料讀取器權限。  
   
 > [!NOTE]  
@@ -95,13 +95,13 @@ ms.locfileid: "48117878"
   
  第 4 課的專案檔案特別重要，因為它不僅為第 4 課而且還為所有後續課程提供了基礎。 與先前的專案檔案相較之下，教學課程中的步驟會導致完全相同的已完成專案檔案的副本，而第 4 課的範例專案包含新的模型資訊，您在第 1 課到第 3 課內建的模型中找不到該項資訊。 第 4 課會假設您要啟動下列下載中提供的範例專案檔案。  
   
-1.  在 codeplex 的產品範例頁面上，下載 [Analysis Services 教學課程 SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) 。  
+1.  在 codeplex 的產品範例頁面上，下載 [Analysis Services 教學課程 SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkID=221866)。  
   
      2012 教學課程對 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本有效。  
   
-     “Analysis Services Tutorial SQL Server 2012.zip” 檔案將會儲存到您電腦的 Downloads 資料夾中。  
+     "Analysis Services Tutorial SQL Server 2012.zip"檔案會儲存至 Downloads 資料夾，在您的電腦上。  
   
-2.  將 .zip 檔案移至根磁碟機的正下方資料夾 (例如 C:\Tutorial)。 如果您嘗試解壓縮 [下載] 資料夾中的檔案，此步驟會防止「路徑太長」的錯誤。  
+2.  將 .zip 檔案移至根磁碟機的正下方資料夾 (例如 C:\Tutorial)。 此步驟中可以降低 「 路徑太長 」 錯誤，有時候就會發生，如果您嘗試解壓縮 [下載] 資料夾中的檔案。  
   
 3.  解壓縮範例專案、以滑鼠右鍵按一下該檔案，然後選取 [全部解壓縮]。 解壓縮檔案之後，您應該已經在電腦上安裝下列專案：  
   
@@ -150,7 +150,7 @@ ms.locfileid: "48117878"
   
 ## <a name="see-also"></a>另請參閱  
  [從安裝精靈安裝 SQL Server 2014&#40;安裝程式&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
- [設定 Windows 防火牆以允許 Analysis Services 存取](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
+ [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [設定 Windows 防火牆以允許 SQL Server 存取](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

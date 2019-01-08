@@ -1,5 +1,5 @@
 ---
-title: 課程 1 的瀏覽和使用 Python 和 T-SQL (SQL Server Machine Learning) 將資料視覺化 |Microsoft Docs
+title: 課程 1 的瀏覽和使用 Python 和 T-SQL-SQL Server Machine Learning 將資料視覺化
 description: 教學課程示範如何內嵌 Python 中 SQL Server 預存程序和 T-SQL 函數
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cf14409cdb321d2f52196e0793ea092ab9ba2430
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: e92b2e1a5d4d5e1ad6990ffafa1a1cfcfbb9d806
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030975"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645337"
 ---
 # <a name="explore-and-visualize-the-data"></a>瀏覽及視覺化資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -77,7 +77,7 @@ _Hack_license_資料行包含計程車司機駕照號碼 （匿名）。
     - 是相當簡單的 Python 指令碼： **matplotlib** `figure`物件用來讓色階分佈圖和散佈圖，以及這些物件接著會序列化使用`pickle`程式庫。
     - Python 圖形物件會序列化成**pandas**輸出資料框架。
   
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
     GO
 
@@ -135,13 +135,13 @@ _Hack_license_資料行包含計程車司機駕照號碼 （匿名）。
 
 2. 現在執行預存程序來產生繪圖硬式編碼為輸入的查詢將資料從沒有引數。
 
-    ```
+    ```sql
     EXEC [dbo].[PyPlotMatplotlib]
     ```
 
 3. 結果應該類似這樣：
   
-    ```
+    ```sql
     plot
     0xFFD8FFE000104A4649...
     0xFFD8FFE000104A4649...

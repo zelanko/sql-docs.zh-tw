@@ -13,18 +13,18 @@ ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 60e530c4d15b3c17412a7125d73cb5cc9e01d4cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2518404830577839bce3e84c4eac9b76c850cd3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228130"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367900"
 ---
 # <a name="supported-net-framework-libraries"></a>支援的 .NET Framework 程式庫
   利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中裝載的 Common Language Runtime (CLR)，您能夠以 Managed 程式碼撰寫預存程序、觸發程序、使用者定義函數、使用者定義型別及使用者定義彙總。 藉由 .NET Framework 類別庫所提供的功能，您可以存取預先建立的類別，這些類別可提供字串操作、進階數學運算、檔案存取、加密等多項功能。 您可以透過任何 Managed 預存程序、使用者定義型別、觸發程序、使用者定義函數或使用者定義彙總來存取這些類別。  
   
 > [!NOTE]  
->  如果您在服務或升級不支援的組件在全域組件快取 (GAC) 中，您[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如果組件同時存在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]CLR 整合。 如果您在 GAC 中服務或升級的組件也已在資料庫中註冊 (包括不受支援的 .NET Framework 組件)，請務必也在您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中藉由 `ALTER ASSEMBLY` 陳述式來服務或升級該組件的副本。 如需詳細資訊，請參閱 <<c0> [ 知識庫文件 949080](http://support.microsoft.com/kb/949080)。  
+>  如果您在服務或升級不支援的組件在全域組件快取 (GAC) 中，您[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如果組件同時存在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]CLR 整合。 如果您在 GAC 中服務或升級的組件也已在資料庫中註冊 (包括不受支援的 .NET Framework 組件)，請務必也在您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中藉由 `ALTER ASSEMBLY` 陳述式來服務或升級該組件的副本。 如需詳細資訊，請參閱 <<c0> [ 知識庫文件 949080](https://support.microsoft.com/kb/949080)。  
   
 ## <a name="supported-libraries"></a>支援的程式庫  
  開頭[!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)]有一份支援的.NET Framework 程式庫，其經過測試，以確保它們符合與互動的可靠性和安全性標準[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會直接從全域組件快取 (GAC) 載入它們。  

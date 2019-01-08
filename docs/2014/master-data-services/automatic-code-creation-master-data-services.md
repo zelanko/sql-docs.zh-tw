@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b981d40631de5185f2e62c11be8f4c8b8eec880b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c8f2eb4aa4cc3d31868ed74788d1e9f4e1ff9ab4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214628"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792000"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>自動建立代碼 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以針對 Code 屬性，或針對其他任何數值屬性，自動產生數值。 自動產生代碼時，系統不會防止您針對代碼輸入其他值，但是會自動設定初始值。  
@@ -29,12 +28,12 @@ ms.locfileid: "48214628"
 ## <a name="generating-other-attribute-values"></a>產生其他屬性值  
  管理員可以透過建立商務規則，為 Code 以外的其他屬性自動產生值。 他們可以指定一個初始值，而且可以指定每個後續值的遞增數目。  
   
- 當您使用其中一種工具或暫存處理序，將屬性值輸入至 MDS 時，可以將屬性值留空。 套用商務規則時，將會根據最高的現有值遞增這些值。 例如，如果您的規則是「將屬性預設為從 1 開始產生，並以 4 遞增的值」，而且該屬性最高的目前值為 700，則加入之下一個成員的值將是 704。  
+ 當您使用其中一種工具或暫存處理序，將屬性值輸入至 MDS 時，可以將屬性值留空。 套用商務規則時，將會根據最高的現有值遞增這些值。 例如，如果您的規則是「將屬性預設為從 1 開始產生，並以 4 遞增的值」，而且該屬性最高的目前值為 700，則新增之下一個成員的值將是 704。  
   
 ## <a name="deleting-automatically-generated-values"></a>刪除自動產生的值  
- 在管理員為 Code 屬性啟用自動產生的值時，使用者可能會不小心刪除擁有他們要重複使用之 Code 值的成員。 此時，系統會顯示錯誤訊息：「有已刪除的成員使用這個成員代碼」。 有兩種可能的解決方法：  
+ 在管理員為 Code 屬性啟用自動產生的值時，使用者可能會不小心刪除擁有他們要重複使用之 Code 值的成員。 「 成員代碼已經由已刪除的成員 」 的錯誤訊息隨即出現。 有兩種可能的解決方法：  
   
--   在 **版本管理**功能區域中，系統管理員可以反轉刪除成員時所發生的交易。 不過，這表示會還原階層和集合中所有先前成員的屬性以及成員資格。 如需詳細資訊，請參閱 <<c0> [ 反轉交易&#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md)。</c0>  
+-   在 **版本管理**功能區域中，系統管理員可以反轉刪除成員時所發生的交易。 不過，這表示還原所有先前成員的屬性和階層和集合的成員資格。 如需詳細資訊，請參閱 <<c0> [ 反轉交易&#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md)。</c0>  
   
 -   管理員可以使用暫存處理序永久刪除成員。 如需詳細資訊，請參閱 <<c0> [ 停用或刪除的成員，使用暫存處理序&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)。</c0>  
   
@@ -42,14 +41,14 @@ ms.locfileid: "48214628"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|自動為 Code 屬性產生值。|[自動產生 Code 屬性值&#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
-|自動為其他屬性產生值。|[自動產生 Code 以外的屬性值&#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
+|自動為 Code 屬性產生值。|[自動產生 Code 屬性值 &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
+|自動為其他屬性產生值。|[自動產生 Code 以外的屬性值 &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
 -   [Master Data Services 概觀](master-data-services-overview-mds.md)  
   
--   [商務規則&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [商務規則 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
 -   [實體 &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   

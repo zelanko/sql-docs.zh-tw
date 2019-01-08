@@ -12,12 +12,12 @@ ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5fe75f73a8e332682ee9511f338813946f5e2a31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055918"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355031"
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
     
@@ -33,7 +33,7 @@ ms.locfileid: "48055918"
 |訊息文字|使用者 '%.*ls'.%.\*ls 登入失敗|  
   
 ## <a name="explanation"></a>說明  
- 當連接嘗試因為密碼或使用者名稱不正確而驗證失敗並遭到拒絕時，將會傳回類似於下列的訊息到用戶端：「使用者 '<user_name>' 的登入失敗  (Microsoft SQL Server，錯誤：18456)」。  
+ 當連接嘗試因為密碼或使用者名稱不正確而驗證失敗並遭到拒絕時，將會傳回類似於下列的訊息到用戶端：「使用者 '<user_name>' 登入失敗。 (Microsoft SQL Server，錯誤：18456)".  
   
  其他傳回給用戶端的資訊還包含下列項目：  
   
@@ -43,13 +43,13 @@ ms.locfileid: "48055918"
   
  「伺服器名稱：<computer_name>」  
   
- 「錯誤號碼: 18456」  
+ 「錯誤號碼：18456"  
   
- 「嚴重性: 14」  
+ 「嚴重性：14"  
   
- 「狀態: 1」  
+ 「狀態：1」  
   
- 「行號: 65536」  
+ 「行號：65536"  
   
  也可能傳回下列訊息：  
   
@@ -88,13 +88,13 @@ ms.locfileid: "48055918"
 ## <a name="examples"></a>範例  
  在此範例中，驗證錯誤狀態為 8。 這表示密碼不正確。  
   
-|date|來源|訊息|  
+|date|原始程式檔|訊息|  
 |----------|------------|-------------|  
-|2007-12-05 20:12:56.34|登入|錯誤: 18456，嚴重性: 14，狀態: 8。|  
+|2007-12-05 20:12:56.34|登入|Error:18456，嚴重性：14，狀態：8.|  
 |2007-12-05 20:12:56.34|登入|使用者 '<user_name>' 登入失敗。 [用戶端： \<ip 位址 >]|  
   
 > [!NOTE]  
->  若您使用 Windows 驗證模式來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並於之後將其變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 Windows 驗證模式，就會先停用 **sa** 登入。 這將造成狀態 7 的錯誤：「使用者 'sa' 的登入失敗。」若要啟用 **sa** 登入，請參閱[變更伺服器驗證模式](../../database-engine/configure-windows/change-server-authentication-mode.md)。  
+>  若您使用 Windows 驗證模式來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並於之後將其變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 Windows 驗證模式，就會先停用 **sa** 登入。 這將造成狀態 7 錯誤：「使用者 'sa' 登入失敗。」若要啟用 **sa** 登入，請參閱[變更伺服器驗證模式](../../database-engine/configure-windows/change-server-authentication-mode.md)。  
   
 ## <a name="user-action"></a>使用者動作  
  如果您正嘗試使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行連接，請確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是在混合驗證模式下設定。  
@@ -109,6 +109,6 @@ ms.locfileid: "48055918"
   
  如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 支援自主資料庫，請確認在移轉至自主資料庫使用者之後，登入不會遭到刪除。  
   
- 本機連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，如果要從以 **NT AUTHORITY\NETWORK SERVICE** 執行的服務來連線，則必須使用電腦的完整網域名稱進行驗證。 如需詳細資訊，請參閱[如何：使用網路服務帳戶存取 ASP.NET 中的資源](http://msdn.microsoft.com/library/ff647402.aspx)。  
+ 本機連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，如果要從以 **NT AUTHORITY\NETWORK SERVICE** 執行的服務來連線，則必須使用電腦的完整網域名稱進行驗證。 如需詳細資訊，請參閱[How To:在 ASP.NET 中使用網路服務帳戶來存取資源](https://msdn.microsoft.com/library/ff647402.aspx)  
   
   

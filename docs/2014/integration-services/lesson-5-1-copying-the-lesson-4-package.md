@@ -1,24 +1,23 @@
 ---
-title: 步驟 1：複製第 4 課套件 | Microsoft Docs
+title: 步驟 1：複製第 4 課套件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76017bf54455d702dbea060e4f966765ddb1e47b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9aaa786680ff15a8b2efcb00d104f73f64089a55
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070010"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360850"
 ---
-# <a name="step-1-copying-the-lesson-4-package"></a>步驟 1：複製第 4 課的套件
+# <a name="step-1-copying-the-lesson-4-package"></a>步驟 1：複製第 4 課套件
   在這項工作中，您將為第 4 課所建立的 Lesson 4.dtsx 套件建立複本。 另外，您也可以將此教學課程中隨附之已完成的第 4 課套件加入至專案中，然後改為複製該套件。 在第 5 課其餘的課程中，您將使用這個新的副本。  
   
 ### <a name="to-copy-the-lesson-4-package"></a>複製第 4 課的套件  
@@ -47,13 +46,13 @@ ms.locfileid: "48070010"
   
 2.  在方案總管中，以滑鼠右鍵按一下 [SSIS 套件]，然後按一下 [新增現有的套件]。  
   
-3.  在 [新增現有套件的副本] 對話方塊的 [套件位置] 中，選取 [檔案系統]。  
+3.  在 [加入現有封裝的複本] 對話方塊的 [封裝位置] 中，選取 [檔案系統]。  
   
-4.  按一下瀏覽 (**…**) 按鈕、導覽至電腦上的 **Lesson 4.dtsx**，然後按一下 [開啟]。  
+4.  按一下瀏覽 **(...)** 按鈕，巡覽至電腦上的 **Lesson 4.dtsx**，然後按一下 [開啟]。  
   
      若要下載此教學課程的所有課程封裝，請執行下列動作。  
   
-    1.  導覽至 [Integration Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  導覽至 [Integration Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  按一下 **[下載]** 索引標籤。  
   
@@ -62,6 +61,6 @@ ms.locfileid: "48070010"
 5.  複製並貼上第 4 課套件，如上一個程序的步驟 3-8 所述。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 2：啟用和設定套件設定](lesson-5-2-enabling-and-configuring-package-configurations.md)  
+ [步驟 2:啟用和設定封裝組態](lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
   
