@@ -39,17 +39,17 @@ ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ad086a7d6ee677fc54241f45d1dbe81e5c4c2d5
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b854692aa00d953ebd8de783104869b784115277
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905758"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369140"
 ---
 # <a name="general-properties"></a>一般屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的伺服器屬性。 本主題記載 msmdsrv.ini 檔案中，不包含在特定章節中的伺服器屬性，例如 Security、Network 或 ThreadPool。 如需有關其他伺服器屬性及如何設定伺服器屬性的詳細資訊，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  
   
- **適用於** ：多維度與表格式伺服器模式 (除非另有指示)  
+ **適用於：** 多維度與表格式伺服器模式，除非另有指示  
   
 ## <a name="non-specific-category"></a>非特定類別目錄  
  `AdminTimeout`  
@@ -69,10 +69,10 @@ ms.locfileid: "48905758"
  `CommitTimeout`  
  整數屬性，指定伺服器為了認可交易而將等候取得寫入鎖定的時間 (以毫秒為單位)。 通常需要等候期間，因為伺服器必須等候其他鎖定釋放，然後才能取得認可交易的寫入鎖定。  
   
- 此屬性的預設值為零 (0)，表示伺服器會無限期等候。 如需有關鎖定相關屬性的詳細資訊，請參閱 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
+ 此屬性的預設值為零 (0)，表示伺服器會無限期等候。 如需有關鎖定相關屬性的詳細資訊，請參閱 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
  `CoordinatorBuildMaxThreads`  
- 此為帶正負號的 32 位元整數屬性，定義配置給建立資料分割索引的最大執行緒數目。 增加此值就能加速資料分割索引，但要耗用較多記憶體。 如需有關此屬性的詳細資訊，請參閱 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
+ 此為帶正負號的 32 位元整數屬性，定義配置給建立資料分割索引的最大執行緒數目。 增加此值就能加速資料分割索引，但要耗用較多記憶體。 如需有關此屬性的詳細資訊，請參閱 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
  `CoordinatorCancelCount`  
  此為帶正負號的 32 位元整數屬性，定義伺服器應檢查取消事件是否發生的頻率 (依據內部反覆運算計數)。 降低此數字就能以更高的頻率檢查取消事件，但要耗用一般效能。  
@@ -84,7 +84,7 @@ ms.locfileid: "48905758"
   
  `CoordinatorExecutionMode` 在表格式伺服器模式下將會遭到忽略。  
   
- 此屬性的預設值為 -4，表示伺服器限制為每個處理器 4 個平行作業。 如需有關此屬性的詳細資訊，請參閱 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
+ 此屬性的預設值為 -4，表示伺服器限制為每個處理器 4 個平行作業。 如需有關此屬性的詳細資訊，請參閱 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
  `CoordinatorQueryMaxThreads`  
  此為帶正負號的 32 位元整數屬性，定義查詢解析期間每個資料分割區段的最大執行緒數目。 並行使用者的數目愈少此值就愈高，但要耗用較多記憶體。 相對地，如果有大量的並行使用者，就可能需要降低此值。  
@@ -96,7 +96,7 @@ ms.locfileid: "48905758"
  此為字串屬性，可識別儲存資料的目錄名稱。  
   
  `DeploymentMode`  
- 判斷 Analysis Services 伺服器執行個體的運作內容。 此屬性在對話方塊、訊息和文件集中稱為「伺服器模式」。 根據您在安裝 Analysis Services 時所選取的伺服器模式，此屬性是由 SQL Server 安裝程式所設定。 此屬性應該僅被視為內部屬性，永遠使用安裝程式所指定的值。  
+ 判斷 Analysis Services 伺服器執行個體的運作內容。 這個屬性被指在對話方塊、 訊息和文件中的 「 伺服器模式 」。 根據您在安裝 Analysis Services 時所選取的伺服器模式，此屬性是由 SQL Server 安裝程式所設定。 此屬性應該僅被視為內部屬性，永遠使用安裝程式所指定的值。  
   
  這個屬性的有效值包括：  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48905758"
 > [!NOTE]  
 >  這個事件所取消的查詢和處理序將報告下列錯誤訊息："`Server: The operation has been cancelled`"  
   
- 如需有關此屬性的詳細資訊，請參閱 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
+ 如需有關此屬性的詳細資訊，請參閱 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
   
 > [!IMPORTANT]  
 >  `ForceCommitTimeout` 適用於 Cube 處理命令和回寫作業。  

@@ -14,12 +14,12 @@ ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7983b5ef294fadbad7fe5fdbfafc1170f1ac485
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 322120624c612371b56029c2cf29c9ab457c81b5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083198"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376352"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>配置控制代碼並連接到 SQL Server (ODBC)
     
@@ -29,13 +29,13 @@ ms.locfileid: "48083198"
   
 2.  加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驅動程式專屬的標頭檔 Odbcss.h。  
   
-3.  呼叫[SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396)使用`HandleType`SQL_HANDLE_ENV 來初始化 ODBC 並配置環境控制代碼。  
+3.  呼叫[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)使用`HandleType`SQL_HANDLE_ENV 來初始化 ODBC 並配置環境控制代碼。  
   
 4.  呼叫[SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)具有`Attribute`設定為 SQL_ATTR_ODBC_VERSION 並`ValuePtr`設定為 sql_ov_odbc3 時，表示應用程式會使用 ODBC 3.x 格式函式呼叫。  
   
-5.  （選擇性） 呼叫[SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)來設定其他環境選項或呼叫[SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403)來取得環境選項。  
+5.  （選擇性） 呼叫[SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)來設定其他環境選項或呼叫[SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403)來取得環境選項。  
   
-6.  呼叫[SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396)使用`HandleType`配置連接控制代碼的利用 SQL_HANDLE_DBC。  
+6.  呼叫[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)使用`HandleType`配置連接控制代碼的利用 SQL_HANDLE_DBC。  
   
 7.  （選擇性） 呼叫[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)來設定連接選項或呼叫[SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md)來取得連接選項。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48083198"
 13. 利用 SQL_HANDLE_ENV 的 `SQLFreeHandle` 呼叫 `HandleType` 來釋放環境控制代碼。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
   
 ## <a name="example"></a>範例  
  此範例顯示呼叫 `SQLDriverConnect` 來連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，而不需要現有的 ODBC 資料來源。 將不完整的連接字串傳遞到 `SQLDriverConnect` 時，會使 ODBC 驅動程式提示使用者輸入遺漏的資訊。  

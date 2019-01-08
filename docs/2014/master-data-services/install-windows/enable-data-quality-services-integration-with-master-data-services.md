@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: ab32938d-a80e-4106-80d4-94b2de3d67dc
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 28dc70c0bb2edaa54109c0ea1fc6485c1b00ab52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ae1f1a8e593b8e4e7233609c6c9ed64e846b589
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212738"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803490"
 ---
 # <a name="enable-data-quality-services-integration-with-master-data-services"></a>啟用 Data Quality Services 與 Master Data Services 的整合
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，比對功能是由 Data Quality Services (DQS) 提供。 此功能必須啟用才能使用。  
@@ -40,7 +39,7 @@ ms.locfileid: "48212738"
 5.  在確認對話方塊中按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [比對的 MDS 增益集適用於 Excel 的資料品質](../microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
+ [適用於 Excel 的 MDS 增益集中的資料品質比對](../microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [適用於 Microsoft Excel 的 Master Data Services 增益集](../microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)   
  [安裝 Master Data Services](install-master-data-services.md)  
   

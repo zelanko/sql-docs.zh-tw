@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, classifier function create
@@ -16,12 +15,12 @@ ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 16eb3ef5b20a2aa3d8ffc869d386e541b081752f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112818"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799662"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>建立和測試分類使用者定義函數
   本主題說明如何建立和測試分類使用者定義函數 (UDF)。 這些步驟將包含在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢編輯器中執行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 陳述式。  
@@ -116,7 +115,7 @@ ms.locfileid: "48112818"
     go  
     ```  
   
-4.  建立使用時間函數和值 (可針對查閱資料表中的時間評估) 的分類函數。 如需在分類函數使用中使用查閱資料表的詳細資訊，請參閱本主題中的＜在分類函數中使用查閱資料表的最佳做法＞。  
+4.  建立使用時間函數和值 (可針對查閱資料表中的時間評估) 的分類函數。 如需在分類函式使用中使用查閱資料表的詳細資訊，請參閱本主題中的＜在分類函式中使用查閱資料表的最佳做法＞。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了一組擴充的日期與時間資料類型和函數。 如需詳細資訊，請參閱[日期和時間資料類型與函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)。  

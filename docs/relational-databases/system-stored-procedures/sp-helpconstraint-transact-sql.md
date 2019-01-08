@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4158fd290b2a64ddf7e8f3a8fc9b566dd5602d4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb4742d65ca25ecf656e442d03e1925cbe1bb518
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704366"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591779"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@objname=** ] **'***表格***'**  
+ [  **@objname=** ] **'**_表_**'**  
  這是傳回的條件約束資訊所屬的資料表。 指定的資料表必須是目前資料庫的本機資料表。 *表格*已**nvarchar(776)**，沒有預設值。  
   
- [  **@nomsg=**] **'***no_message***'**  
+ [  **@nomsg=**] **'**_no_message_**'**  
  這是會列印資料表名稱的選擇性參數。 *no_message*已**varchar(5)**，預設值是**msg**。**nomsg**會抑制列印。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -55,7 +55,7 @@ sp_helpconstraint [ @objname = ] 'table'
  **sp_helpconstraint**顯示遞減索引資料行，如果它已參與主索引鍵。 遞減索引資料行會列在結果集中，名稱後面會有一個減號 (-)。 預設值是遞增索引資料行，會單獨列出名稱。  
   
 ## <a name="remarks"></a>備註  
- 執行 **sp_help * * * 資料表*報告指定之資料表的所有資訊。 若要查看只將條件約束的資訊，請使用**sp_helpconstraint**。  
+ 執行**sp_help**_資料表_報告指定之資料表的所有資訊。 若要查看只將條件約束的資訊，請使用**sp_helpconstraint**。  
   
 ## <a name="permissions"></a>Permissions  
  需要 **public** 角色的成員資格。  

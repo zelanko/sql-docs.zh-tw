@@ -13,25 +13,25 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0893a32d31c4f64d99503fce7e64ccdd325cea7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3be59fd99f072b7cb3a9156b92d5ee794208f1f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138508"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359530"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (記憶體中最佳化)
   [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]是 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 中的新功能，可大幅提升 OLTP 資料庫應用程式效能。 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 是已整合至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎的記憶體最佳化資料庫引擎，已針對 OLTP 最佳化。  
   
 |||  
 |-|-|  
-|![Azure 虛擬機器](../../master-data-services/media/azure-virtual-machine.png "Azure 虛擬機器")|您要試用 SQL Server 2016 嗎？ 註冊 Microsoft Azure，然後前往 **[這裡](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 啟動安裝有 SQL Server 2016 的虛擬機器。 您可以在完成時刪除虛擬機器。|  
+|![Azure 虛擬機器](../../master-data-services/media/azure-virtual-machine.png "Azure 虛擬機器")|您要試用 SQL Server 2016 嗎？ 註冊 Microsoft Azure，然後前往 **[這裡](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 啟動安裝有 SQL Server 2016 的虛擬機器。 當您完成時，您可以刪除虛擬機器。|  
   
  若要使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]，您可將經常存取的資料表定義為記憶體最佳化。 記憶體最佳化資料表是可完全交易且持久的，並能利用與以磁碟為基礎的資料表一樣的方式使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 來存取。 查詢可以參考記憶體最佳化資料表和以磁碟為基礎的資料表。 交易可以更新記憶體最佳化資料表和以磁碟為基礎的資料表中的資料。 僅參考記憶體最佳化資料表的預存程序可原生編譯為機器碼，以進一步提升效能。 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎的設計目的是，在衍生自高度向外擴充中間層的 OLTP 類型交易發生極高的工作階段並行處理時使用。 為達成此目的，它使用了不需閂鎖的資料結構，以及開放式、多版本的並行控制。 結果是可針對資料庫交易進行線性比例調整來產生可預期、亞毫秒低延遲及高輸送量。 實際效能獲益取決於許多因素，但通常可以獲得 5 到 20 倍的效能提升。  
   
  下表摘要說明使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]時可能獲益最多的工作負載模式：  
   
-|實作案例|實作案例|優點 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]|  
+|實作案例|實作案例|[!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 的優點|  
 |-----------------------------|-----------------------------|-------------------------------------|  
 |來自多個並行連接的高度資料插入比率。|主要的附加專用存放區。<br /><br /> 跟不上插入工作負載。|排除競爭。<br /><br /> 減少記錄。|  
 |定期批次插入和更新的讀取效能與比例調整。|高效能讀取作業，特別是在每個伺服器要求都有數個讀取作業要執行時。<br /><br /> 無法符合相應增加的要求。|在新資料到達時排除競爭。<br /><br /> 較低延遲的資料擷取。<br /><br /> 將程式碼執行時間縮到最短。|  
@@ -39,7 +39,7 @@ ms.locfileid: "48138508"
 |低度延遲。|要求一般資料庫解決方案無法達成的低度延遲商務交易。|排除競爭。<br /><br /> 將程式碼執行時間縮到最短。<br /><br /> 低度延遲的程式碼執行。<br /><br /> 有效率的資料擷取。|  
 |工作階段狀態管理。|經常性插入、更新及點查閱。<br /><br /> 從許多無狀態的 Web 伺服器大範圍載入。|排除競爭。<br /><br /> 有效率的資料擷取。<br /><br /> 使用非持久性的資料表時，選擇性地減少或移除 IO|  
   
- 如需 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 將產生最佳效能提升案例的相關詳細資訊，請參閱 [In-Memory OLTP - 一般工作負載模式和移轉考量](http://msdn.microsoft.com/library/dn673538.aspx)。  
+ 如需有關案例所在[!INCLUDE[hek_2](../../../includes/hek-2-md.md)]會產生最大的效能提升，請參閱 <<c2> [ 記憶體內部 OLTP-一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 對於執行短期交易的 OLTP 效能改善效果最好。  
   
@@ -49,13 +49,13 @@ ms.locfileid: "48138508"
   
  在 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 中， [!INCLUDE[tsql](../../../includes/tsql-md.md)] 對於 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]介面區的支援有一些限制。  
   
- [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 藉由使用，達到顯著的效能和延展性提升：  
+ [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 透過使用下列項目達到顯著的效能和延展性提升：  
   
 -   為存取記憶體駐留的資料最佳化的演算法。  
   
 -   消除邏輯鎖定的開放式並行存取控制。  
   
--   不需鎖定的物件，可消除所有實體的鎖定與閂鎖。 執行交易工作的執行緒不會使用鎖定或閂鎖進行並行存取控制。  
+-   不需鎖定的物件，可消除所有實體的鎖定與閂鎖。 執行交易工作的執行緒不使用鎖定或閂鎖進行並行存取控制。  
   
 -   原生編譯的預存程序，在存取記憶體最佳化資料表時，其效能明顯優於解譯的預存程序。  
   
@@ -79,18 +79,18 @@ ms.locfileid: "48138508"
 |[備份、還原及復原記憶體最佳化資料表](restore-and-recovery-of-memory-optimized-tables.md)|討論記憶體最佳化資料表的備份、還原及復原。|  
 |[記憶體內部 OLTP 的 Transact-SQL 支援](transact-sql-support-for-in-memory-oltp.md)|討論適用於 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 的 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]支援。|  
 |[記憶體內部 OLTP 資料庫的高可用性支援](high-availability-support-for-in-memory-oltp-databases.md)|討論可用性群組與 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]中的容錯移轉叢集。|  
-|[記憶體中 OLTP 的 SQL Server 支援](sql-server-support-for-in-memory-oltp.md)|列出為支援記憶體最佳化資料表新增和更新的語法和功能。|  
+|[記憶體內部 OLTP 的 SQL Server 支援](sql-server-support-for-in-memory-oltp.md)|列出為支援記憶體最佳化資料表新增和更新的語法和功能。|  
 |[移轉至記憶體內部 OLTP](migrating-to-in-memory-oltp.md)|討論如何將以磁碟為基礎的資料表移轉到記憶體最佳化的資料表。|  
   
  有關 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 的詳細資訊可於下列位置取得：  
   
--   [Microsoft® SQL Server® 2014 產品指南](http://www.microsoft.com/download/confirmation.aspx?id=39269)  
+-   [Microsoft??SQL Server??2014 產品指南](https://www.microsoft.com/download/confirmation.aspx?id=39269)  
   
--   [記憶體內部 OLTP 部落格](http://go.microsoft.com/fwlink/?LinkId=311696)  
+-   [記憶體內部 OLTP 部落格](https://go.microsoft.com/fwlink/?LinkId=311696)  
   
--   [記憶體內部 OLTP - 一般工作負載模式和移轉考量](http://msdn.microsoft.com/library/dn673538.aspx)  
+-   [記憶體內部 OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [SQL Server 記憶體內部 OLTP 內部概觀](http://msdn.microsoft.com/library/dn720242.aspx)  
+-   [SQL Server 記憶體內部 OLTP 內部概觀](https://msdn.microsoft.com/library/dn720242.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫功能](../database-features.md)  

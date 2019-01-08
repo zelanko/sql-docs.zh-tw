@@ -13,12 +13,12 @@ ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8c23c3216bc7bdff86a9e508de87c2086f6f6b90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ab343a4c6f70d97aa5e770b8ca21dd4d835f05c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162768"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375930"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>設定 URL (SSRS 組態管理員)
   使用報表管理員或報表伺服器 Web 服務之前，您至少必須為每一個應用程式設定一個 URL。 如果您在「僅限檔案」模式下安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (意即在安裝精靈的 [報表伺服器安裝選項] 頁面中選取 [安裝但不設定伺服器] 選項)，就一定要設定 URL。 如果您在預設組態中安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，就表示已經為每一個應用程式設定了 URL。 如果您擁有一個設定成使用 SharePoint 整合模式的報表伺服器，而且您使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具來更新報表伺服器 Web 服務 URL，也必須在 SharePoint 管理中心內更新此 URL。  
@@ -44,11 +44,11 @@ ms.locfileid: "48162768"
   
 -   如果相同電腦上安裝了 IIS 6.0 或 7.0，請檢查使用通訊埠 80 之任何網站上的虛擬目錄名稱。 如果您看到任何虛擬目錄使用預設 Reporting Services 虛擬目錄名稱 (意即 "Reports" 和 "ReportServer")，請為您設定的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 選擇不同的虛擬目錄名稱。  
   
--   您必須使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具來設定 URL， 請勿使用系統公用程式。 永遠不會修改 URL 保留項目中的`URLReservations`直接在 RSReportServer.config 檔案的區段。 若要更新儲存於內部的基礎 URL 保留項目以及同步處理 RSReportServer.config 檔案中儲存的 URL 設定，必須要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具。  
+-   您必須使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具來設定 URL， 請勿使用系統公用程式。 絕對不要直接在 RSReportServer.config 檔案的 `URLReservations` 區段中修改 URL 保留項目。 若要更新儲存於內部的基礎 URL 保留項目以及同步處理 RSReportServer.config 檔案中儲存的 URL 設定，必須要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具。  
   
 -   請選擇具有低報表活動的時間。 每當 URL 保留項目變更時，您就可以預期報表伺服器 Web 服務和報表管理員的應用程式定義域可能會回收使用。  
   
--   如需 URL 建構和使用方式的概觀[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，請參閱 <<c2> [ 設定報表伺服器 Url &#40;SSRS 組態管理員&#41;](configure-report-server-urls-ssrs-configuration-manager.md)。</c2>  
+-   如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]URL 建構和使用方式的概觀，請參閱 [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](configure-report-server-urls-ssrs-configuration-manager.md)建立 URL。  
   
 ### <a name="to-configure-a-url-for-the-report-server-web-service"></a>為報表伺服器 Web 服務設定 URL  
   
@@ -76,15 +76,15 @@ ms.locfileid: "48162768"
   
          如果您有多張網路介面卡或是您的網路同時支援 IPv4 和 IPv6 位址，您將會看到多個 IP 位址。 如果您只選取一個 IP 位址，它會將應用程式存取限制為只有該 IP 位址 (以及網域名稱伺服器對應至該位址的任何主機名稱)。 您無法使用 localhost 來存取報表伺服器，而且也不能使用安裝於報表伺服器電腦上之其他網路卡的 IP 位址。 一般來說，如果您選取這個值，這是因為您正在設定多個同時也指定明確 IP 位址或主機名稱的 URL 保留項目 (例如，一個項目用於內部網路連接的網路介面卡，另一個項目用於外部網路連接)。  
   
-5.  指定通訊埠。 連接埠 80 是預設值[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]上[!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]和 Windows Server 2008 因為它可以與其他應用程式共用。 如果您想要使用自訂通訊埠編號，請記得一定要在用來存取報表伺服器的 URL 中指定它。 您可以使用下列方法來尋找可用的通訊埠：  
+5.  指定通訊埠。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 Windows Server 2008 上，通訊埠 80 是 [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 的預設值，因為它可以與其他應用程式共用。 如果您想要使用自訂通訊埠編號，請記得一定要在用來存取報表伺服器的 URL 中指定它。 您可以使用下列方法來尋找可用的通訊埠：  
   
     -   從命令提示字元輸入下列命令，以傳回所使用的 TCP 通訊埠清單：  
   
-         `netstat –a –n -p tcp`  
+         `netstat -a -n -p tcp`  
   
-    -   請檢閱 Microsoft 技術支援文件 [TCP/IP 連接埠指派資訊](http://support.microsoft.com/kb/174904)，以閱讀有關 TCP 通訊埠指派以及已知通訊埠 (0 到 1023)、已註冊的通訊埠 (1024 到 49151) 和動態或私人通訊埠 (49152 到 65535) 之間差異的資訊。  
+    -   請檢閱 Microsoft 技術支援文件 [TCP/IP 連接埠指派資訊](https://support.microsoft.com/kb/174904)，以閱讀有關 TCP 通訊埠指派以及已知通訊埠 (0 到 1023)、已註冊的通訊埠 (1024 到 49151) 和動態或私人通訊埠 (49152 到 65535) 之間差異的資訊。  
   
-    -   如果您正在使用 Windows 防火牆，您必須開啟此通訊埠。 如需相關指示，請參閱 <<c0> [ 設定供報表伺服器存取的防火牆](../report-server/configure-a-firewall-for-report-server-access.md)。  
+    -   如果您正在使用 Windows 防火牆，您必須開啟此通訊埠。 如需指示，請參閱 [Configure a Firewall for Report Server Access](../report-server/configure-a-firewall-for-report-server-access.md)。  
   
 6.  如果您尚未這樣做，請確認 IIS (如果已安裝) 並沒有與您打算使用之名稱相同的虛擬目錄。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "48162768"
 -   https://www.adventure-works.com:8080/reports  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 組態管理員&#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

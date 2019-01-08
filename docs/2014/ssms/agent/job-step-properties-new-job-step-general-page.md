@@ -1,10 +1,10 @@
 ---
-title: 作業步驟屬性： 新增作業步驟 （一般頁面） |Microsoft Docs
+title: 作業步驟屬性：新增作業步驟 （一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.stepgeneral.f1
@@ -12,14 +12,14 @@ ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d20df5bbaaa7c9ba273b5796dc6a6b9e32bc287f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196070"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807120"
 ---
-# <a name="job-step-properties-new-job-step-general-page"></a>作業步驟屬性：新增作業步驟 (一般頁面)
+# <a name="job-step-properties-new-job-step-general-page"></a>作業步驟屬性：新增作業步驟 （一般頁面）
   使用此頁面來檢視和變更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式作業步驟的屬性，或定義新的作業步驟。  
   
  若要導覽至此頁面，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管中，展開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，以滑鼠右鍵按一下 [作業]，按一下 [新增作業]，選取 [步驟] 頁面，然後按一下 [新增]。 您也可用滑鼠右鍵按一下物件總管中的作業，按一下 [屬性]、選取 [步驟] 頁面，然後按一下 [新增]、[插入] 或 [編輯]，以導覽至此頁面。  
@@ -105,7 +105,7 @@ ms.locfileid: "48196070"
  **全選**  
  選取指令碼的文字。  
   
- **複製**  
+ **[複製]**  
  複製選取的文字。  
   
  **貼上**  

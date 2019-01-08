@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a60b3f18d6249f0fcce10b25521aa9652699c3a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181328"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792830"
 ---
 # <a name="review-the-replay-results"></a>檢閱重新執行結果
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 功能完成分散式重新執行之後，即可擷取每個用戶端的重新執行活動，並將其儲存在每個用戶端的結果追蹤檔案中。 若要擷取此活動，您必須在以 **replay** 選項執行管理工具時使用 **-o** 參數。 如需詳細資訊，請參閱[重新執行選項 &#40;Distributed Replay 管理工具&#41;](replay-option-distributed-replay-administration-tool.md)。  
@@ -51,7 +51,7 @@ ms.locfileid: "48181328"
 ## <a name="event-class-column-mapping"></a>事件類別資料行對應  
  下圖列出結果追蹤的哪些資料行可用於重新執行期間所擷取的每種事件類別。  
   
- ![事件類別資料行對應](../../database-engine/media/eventclassmappings.gif "事件類別資料行對應")  
+ ![Event class column mapping](../../database-engine/media/eventclassmappings.gif "Event class column mapping")  
   
 ## <a name="column-descriptions-for-result-trace"></a>結果追蹤的資料行說明  
  下表描述結果追蹤資料的資料行。  
@@ -77,9 +77,9 @@ ms.locfileid: "48181328"
 |ApplicationName|`nvarchar`|擷取期間建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連線的用戶端應用程式名稱。|17|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Distributed 的 Replay](sql-server-distributed-replay.md)   
- [Distributed 的 Replay 需求](distributed-replay-requirements.md)   
- [系統管理工具命令列選項&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [Distributed Replay 需求](distributed-replay-requirements.md)   
+ [管理工具命令列選項 &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [設定 Distributed Replay](configure-distributed-replay.md)  
   
   

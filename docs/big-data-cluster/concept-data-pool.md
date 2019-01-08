@@ -1,22 +1,24 @@
 ---
-title: 什麼是 SQL 巨量資料叢集資料集區？ | Microsoft Docs
+title: 資料集區有哪些？
+titleSuffix: SQL Server 2019 big data clusters
 description: 本文說明在 SQL Server 2019 巨量資料叢集中的資料集區。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: bf47aa1734e2b1a849fb8333da9c914ea4244f41
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.custom: seodec18
+ms.openlocfilehash: 088d6681910aad6a02205c812ff0e5a9d7d090ee
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050760"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030802"
 ---
-# <a name="what-is-a-sql-big-data-clusters-data-pool"></a>什麼是 SQL 巨量資料叢集資料集區？
+# <a name="what-are-data-pools-in-a-sql-server-2019-big-data-cluster"></a>在 SQL Server 2019 巨量資料叢集中的資料集區有哪些？
 
-本文說明所扮演的角色*SQL Server 資料集區*中 SQL Server 2019 預覽巨量資料叢集。 下列各節描述的架構和 SQL 資料集區的功能。
+本文說明所扮演的角色*SQL Server 資料集區*在 SQL Server 2019 巨量資料叢集 （預覽） 中。 下列各節描述的架構和 SQL 資料集區的功能。
 
 ## <a name="data-pool-architecture"></a>資料集區架構
 

@@ -11,12 +11,12 @@ ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70b4a8bedc86023c9eaf1304e61573c4840a62bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 763b1170ad0201c737e06e19c3dac8d58c6712ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194708"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368880"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>使用 Analysis Services 教學課程專案的已修改版本
   本教學課程的其餘課程是依據您在前面三課所完成之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案的增強型版本。 更多的資料表和具名計算已新增至 **Adventure Works DW 2012** 資料來源檢視、更多的維度已新增至專案，而且這些新維度已新增至 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube。 此外，已加入第二個量值群組，它包含第二個事實資料表的量值。 這個增強型專案可讓您繼續學習如何在商業智慧應用程式中加入功能，而不必重複已學過的技巧。  
@@ -25,7 +25,7 @@ ms.locfileid: "48194708"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>下載並解壓縮專案檔案  
   
-1.  [按一下這裡](http://go.microsoft.com/fwlink/?LinkID=221866) 前往下載頁面，此頁面會提供此教學課程隨附的範例專案。 本教學課程專案已包含於 **Analysis Services Tutorial SQL Server 2012** 下載中。  
+1.  [按一下這裡](https://go.microsoft.com/fwlink/?LinkID=221866)前往下載頁面，此頁面會提供此教學課程隨附的範例專案。 本教學課程專案已包含於 **Analysis Services Tutorial SQL Server 2012** 下載中。  
   
 2.  按一下 [Analysis Services Tutorial SQL Server 2012]，下載包含適用於此教學課程之專案的套件。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "48194708"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>載入和處理增強型專案  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的 [檔案] 功能表上，按一下 [關閉方案] 以關閉您將不會使用的檔案。  
+1.  在[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]上**檔案**功能表上，按一下 **關閉方案**關閉您不會使用的檔案。  
   
-2.  在 [檔案] 功能表上，指向 [開啟舊檔]，然後按一下 [專案/方案]。  
+2.  在 [檔案] 功能表上，指向 [開啟舊檔]，再按一下 [專案/方案]。  
   
 3.  瀏覽到您解壓縮教學課程專案檔案的位置。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48194708"
   
 -   **客戶**  
   
--   **Date**  
+-   **日期**  
   
 -   **產品**  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48194708"
   
 -   **Geography**  
   
--   **Date**  
+-   **日期**  
   
 -   **產品**  
   

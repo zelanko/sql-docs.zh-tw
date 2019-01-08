@@ -14,12 +14,12 @@ ms.assetid: dffe02ed-8f79-4c9a-af34-98130bbe5462
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b205e2637e9588404926d8d0e73016765cd54c56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ea811151e9c81ed515b774f279297d236c608f5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107528"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376090"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
   當要求資料列識別碼 (*IdentifierType* SQL_BEST_ROWID)， **SQLSpecialColumns**針對 SQL_SCOPE_CURROW 以外的任何要求範圍傳回空的結果集 （無資料列）。 產生的結果集表示資料行只有在這個範圍中才是有效的。  
@@ -37,7 +37,7 @@ ms.locfileid: "48107528"
  **SQLSpecialColumns**支援大型 CLR 使用者定義型別 (Udt)。 如需詳細資訊，請參閱 < [Large CLR User-Defined 類型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLSpecialColumns 函數](http://go.microsoft.com/fwlink/?LinkId=59371)   
+ [SQLSpecialColumns 函數](https://go.microsoft.com/fwlink/?LinkId=59371)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

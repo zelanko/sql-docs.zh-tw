@@ -1,22 +1,21 @@
 ---
-title: 步驟 6：加入及設定查閱轉換 | Microsoft Docs
+title: 步驟 6：加入及設定查閱轉換 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2bcdfc80c056b9d9a29df4195e136d5b00d31f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 756c6ce9c57b314ddd9f9e821df7c391af5fa84a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206778"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805792"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>步驟 6：加入及設定查閱轉換
   在設定一般檔案來源從來源檔擷取資料之後，下一項工作是要定義所需要的查閱轉換來取得 **CurrencyKey** 和 **DateKey**的值。 查閱轉換是藉由聯結指定輸入資料行中的資料與參考資料集內的資料行來執行查閱。 參考資料集可以是現有的資料表或檢視、新資料表，或 SQL 陳述式的結果。 在此教學課程中，查閱轉換使用 OLE DB 連接管理員來連接到資料庫，該資料庫包含的資料就是參考資料集的來源。  
@@ -132,9 +131,9 @@ ms.locfileid: "48206778"
 12. 在 [屬性] 視窗中，確認`LocaleID`屬性設定為**英文 （美國）** 並**DefaultCodePage**屬性設為**1252年**。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 7：新增及設定 OLE DB 目的地](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+ [步驟 7:加入和設定 OLE DB 目的地](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [查閱轉換](data-flow/transformations/lookup-transformation.md)  
+ [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
   
   

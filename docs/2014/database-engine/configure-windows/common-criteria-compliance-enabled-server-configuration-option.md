@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - common criteria compliance
@@ -18,12 +17,12 @@ ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1f1ad58e4b3e923d23d9770f12b094211adfc5a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fef699da6e63c534d19e0d66bfa076f85348d29
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178728"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368980"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration-option"></a>通用條件符合已啟用伺服器組態選項
   common criteria compliance enabled 選項會啟用通用條件所需的下列元素。  
@@ -34,10 +33,10 @@ ms.locfileid: "48178728"
 |檢視登入統計資料的功能|啟用 common criteria compliance enabled 選項之後，就會啟用登入稽核。 每次使用者成功登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，就會提供一些資訊，包括上次登入成功的時間、上次登入不成功的時間，以及上次登入成功與目前登入時間之間的登入嘗試次數。 您可以透過查詢 [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) 動態管理檢視，檢視這些登入統計資料。|  
 |資料行 GRANT 不應覆寫資料表 DENY|啟用 common criteria compliance enabled 選項之後，資料表層級 DENY 的優先順序便高於資料行層級 GRANT。 如果沒有啟用此選項，資料行層級 GRANT 的優先順序會高於資料表層級 DENY。|  
   
- [通用條件符合已啟用] 選項是一個進階選項。 Common Criteria 只會針對 Enterprise Edition 和 Datacenter Edition 進行評估和認證。 如需有關 Common Criteria 認證的最新狀態，請參閱 [Microsoft SQL Server Common Criteria](http://go.microsoft.com/fwlink/?LinkId=616319) 網站。  
+ [通用條件符合已啟用] 選項是一個進階選項。 Common Criteria 只會針對 Enterprise Edition 和 Datacenter Edition 進行評估和認證。 如需有關 Common Criteria 認證的最新狀態，請參閱 [Microsoft SQL Server Common Criteria](https://go.microsoft.com/fwlink/?LinkId=616319) 網站。  
   
 > [!IMPORTANT]  
->  除了啟用 common criteria compliance enabled 選項之外，您也必須下載並執行可將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為符合通用條件評估保證層級 4 (EAL4+) 的指令碼。 您可以從 [Microsoft SQL Server Common Criteria](http://go.microsoft.com/fwlink/?LinkId=616319) 網站下載此指令碼。  
+>  除了啟用 common criteria compliance enabled 選項之外，您也必須下載並執行可將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為符合通用條件評估保證層級 4 (EAL4+) 的指令碼。 您可以從 [Microsoft SQL Server Common Criteria](https://go.microsoft.com/fwlink/?LinkId=616319) 網站下載此指令碼。  
   
  如果您要使用 sp_configure 系統預存程序來變更此設定，只有當 show advanced options 設為 1 時，才能變更 common criteria compliance enabled。 伺服器重新啟動之後，設定才會生效。 可能的值為 0 和 1：  
   

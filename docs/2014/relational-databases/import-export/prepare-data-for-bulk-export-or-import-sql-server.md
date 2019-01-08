@@ -16,12 +16,12 @@ ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47c8b792158095693ea4223578ef811a2509b2a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0836d835b77241a27dfccc65528e8cda440559c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073478"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358130"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>準備大量匯出或匯入的資料 (SQL Server)
   本節討論關於大量匯出作業之規劃與大量匯入作業之需求的考量。  
@@ -52,7 +52,7 @@ ms.locfileid: "48073478"
   
 -   若要使用 **bcp** 命令、BULK INSERT 陳述式或 INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式來匯入資料，目的地資料表必須已經存在。  
   
--   資料檔中的每個欄位都必須與目標資料表中的對應資料行相容。 例如，`int`欄位無法載入`datetime`資料行。 如需詳細資訊，請參閱[大量匯入或大量匯出的資料格式 &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md) 和[使用 bcp 指定相容性的資料格式 &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)。  
+-   資料檔中的每個欄位都必須與目標資料表中的對應資料行相容。 例如，無法將 `int` 欄位載入 `datetime` 資料行。 如需詳細資訊，請參閱[大量匯入或大量匯出的資料格式 &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md) 和[使用 bcp 指定相容性的資料格式 &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)。  
   
     > [!NOTE]  
     >  若要指定從資料檔而非整個檔案中匯入資料列子集，您可以搭配使用 **bcp** 命令與 **-F** *first_row* 參數及/或 **-L** *last_row* 參數。 如需相關資訊，請參閱 [bcp Utility](../../tools/bcp-utility.md)。  
@@ -67,7 +67,7 @@ ms.locfileid: "48073478"
   
      若要從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro 或 Visual FoxPro 資料表 (.dbf) 檔案或 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 工作表 (.xls) 檔案大量匯入資料，您必須將該資料轉換成符合前述限制的 CSV 檔案。 副檔名通常為 .csv。 然後，您就可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入作業中，將此 .csv 檔案當做資料檔使用。  
   
-     在 32 位元系統上，您可以搭配 OLE DB Provider for Jet 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [，將 CSV 資料匯入](/sql/t-sql/functions/openrowset-transact-sql) 資料表，而不需要將大量匯入最佳化。 Jet 會將文字檔視為資料表，其中包含與資料來源位於相同目錄中之 schema.ini 檔所定義的結構描述。  若是 CSV 資料，schema.ini 檔中的其中一個參數將會是 "FORMAT=CSVDelimited"。 若要使用此解決方案，您需要了解 Jet Test IISAMm 如何運作 (其連接字串語法、schema.ini 用法、登錄設定選項等等)。  此資訊的最佳來源為 Microsoft Access 說明以及知識庫 (KB) 文件。 如需詳細資訊，請參閱 [初始化文字資料來源驅動程式](http://go.microsoft.com/fwlink/?LinkId=128503)、 [如何搭配安全保護 Access 資料庫的連結伺服器使用 SQL Server 7.0 分散式查詢](http://go.microsoft.com/fwlink/?LinkId=128504)、 [如何：使用 Jet OLE DB Provider 4.0 連接到 ISAM 資料庫](http://go.microsoft.com/fwlink/?LinkId=128505)以及 [如何使用 Jet 提供者的文字 IIsam 開啟分隔的文字檔案](http://go.microsoft.com/fwlink/?LinkId=128501)。  
+     在 32 位元系統上，您可以搭配 OLE DB Provider for Jet 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [，將 CSV 資料匯入](/sql/t-sql/functions/openrowset-transact-sql) 資料表，而不需要將大量匯入最佳化。 Jet 會將文字檔視為資料表，其中包含與資料來源位於相同目錄中之 schema.ini 檔所定義的結構描述。  若是 CSV 資料，schema.ini 檔中的其中一個參數將會是 "FORMAT=CSVDelimited"。 若要使用此解決方案，您需要了解 Jet Test IISAMm 如何運作 (其連接字串語法、schema.ini 用法、登錄設定選項等等)。  此資訊的最佳來源為 Microsoft Access 說明以及知識庫 (KB) 文件。 如需詳細資訊，請參閱 <<c0> [ 初始化文字資料來源驅動程式](https://go.microsoft.com/fwlink/?LinkId=128503)，[如何搭配安全保護 Access 資料庫的連結伺服器使用 SQL Server 7.0 分散式查詢](https://go.microsoft.com/fwlink/?LinkId=128504)， [HOW TO:使用 Jet OLE DB Provider 4.0 連接到 ISAM 資料庫](https://go.microsoft.com/fwlink/?LinkId=128505)，並[如何使用 Jet 提供者的文字 iisam 開啟分隔的文字檔開啟](https://go.microsoft.com/fwlink/?LinkId=128501)。  
   
  此外，將資料從資料檔大量匯入到資料表中需要下列：  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48073478"
 >  系統並不支援大量匯入到資料分割檢視，而嘗試將資料大量匯入到資料分割檢視會失敗。  
   
 ## <a name="external-resources"></a>外部資源  
- [如何將 Excel 中的資料匯入到 SQL Server](http://support.microsoft.com/kb/321686)  
+ [如何將 Excel 中的資料匯入到 SQL Server](https://support.microsoft.com/kb/321686)  
   
 ## <a name="change-history"></a>變更記錄  
   

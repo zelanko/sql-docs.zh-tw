@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 4cce3c1f06978ba0ff5b9630bdaa5f5aebc0ddf1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 42af33d78a13961b7a85ae408a3c693edf759e75
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667987"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408865"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>設定 SQL Server 的 SLES 共用的磁碟叢集
 
@@ -123,7 +123,7 @@ ms.locfileid: "51667987"
     - [設定用戶端](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-clients)
 
     > [!NOTE]
-    > 建議您遵循 SUSE 的最佳作法和高度可用的 NFS 儲存體相關的建議：[高度可用的 NFS 儲存體搭配 DRBD 與 Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html)。
+    > 建議您遵循 SUSE 的最佳作法和高度可用的 NFS 儲存體相關的建議：[高可用性的 NFS 儲存體搭配 DRBD 與 Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html)。
 
 2. 驗證 SQL Server 已成功開始新的檔案路徑。 每個節點上執行這項操作。 此時只有一個節點應該一次執行 SQL Server。 它們無法同時執行相同的時間因為它們將會同時嘗試存取資料檔案，同時 （若要避免不小心在這兩個節點上啟動 SQL Server，請使用檔案系統叢集資源，請確定兩次是由不同的節點未裝載共用）。 下列命令啟動 SQL Server、 檢查狀態，然後再停止 SQL Server。
 
@@ -196,8 +196,8 @@ ms.locfileid: "51667987"
 
 下列步驟說明如何設定 SQL Server 叢集資源。 有兩個您需要自訂的設定。
 
-- **SQL Server Resource Name&gt**： 叢集的 SQL Server 資源的名稱。 
-- **逾時值**： 逾時值是資源帶上線時，叢集會等待的時間量。 針對 SQL Server，這是您預期的 SQL Server，才會將時間`master`資料庫上線。 
+- **SQL Server Resource Name&gt**:叢集的 SQL Server 資源的名稱。 
+- **逾時值**:逾時值是時間的資源帶上線時，叢集會等待量。 針對 SQL Server，這是您預期的 SQL Server，才會將時間`master`資料庫上線。 
 
 更新下列指令碼，為您的環境中的值。 若要設定及啟動叢集的服務的一個節點上執行。
 

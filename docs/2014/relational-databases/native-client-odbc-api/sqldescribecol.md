@@ -14,12 +14,12 @@ ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4def24dac95db8cf86d0a23bd1e0f7a951d4e9e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95d367efc0bf3fb3e3a74bd0ba9d48b9d8f25be2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054988"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369840"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
   對於執行的陳述式， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不需要查詢伺服器來描述結果集資料行。 在此情況下，`SQLDescribeCol`不會造成伺服器往返。 像是[SQLColAttribute](sqlnumresultcols.md)，則呼叫`SQLDescribeCol`上備妥但未執行的陳述式會產生伺服器往返。  
@@ -50,7 +50,7 @@ ms.locfileid: "48054988"
  `SQLDescribeCol` 支援大型 CLR 使用者定義型別 (UDT)。 如需詳細資訊，請參閱 < [Large CLR User-Defined 類型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLDescribeCol 函數](http://go.microsoft.com/fwlink/?LinkID=59338)   
+ [SQLDescribeCol 函數](https://go.microsoft.com/fwlink/?LinkID=59338)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

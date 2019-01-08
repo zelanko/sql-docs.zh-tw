@@ -18,12 +18,12 @@ ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7224a4e301565dc1bc6f6968da3477792b8cfc22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaf644b6a8795e9c68e0053eaed0023c4b9299b6
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781487"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588402"
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +45,22 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@table_server =** ] **'***table_server&lt***'**  
+ [  **@table_server =** ] **'**_table_server&lt_**'**  
  這是傳回資料行資訊所屬的連結伺服器名稱。 *table_server&lt*已**sysname**，沒有預設值。  
   
- [  **@table_name =** ] **'***table_name***'**  
+ [  **@table_name =** ] **'**_table_name_**'**  
  這是傳回資料行資訊所屬的資料表名稱。 *table_name*已**sysname**，預設值是 NULL。  
   
- [  **@table_schema =** ] **'***table_schema***'**  
+ [  **@table_schema =** ] **'**_table_schema_**'**  
  這是傳回資料行資訊所屬之資料表的結構描述名稱。 *table_schema*已**sysname**，預設值是 NULL。  
   
- [  **@table_catalog =** ] **'***table_catalog 排列***'**  
+ [  **@table_catalog =** ] **'**_table_catalog 排列_**'**  
  這是傳回的資料行資訊所屬之資料表的目錄名稱。 *table_catalog 排列*已**sysname**，預設值是 NULL。  
   
- [  **@column_name =** ] **'***資料行***'**  
+ [  **@column_name =** ] **'**_資料行_**'**  
  這是提供的權限資訊所屬的資料庫資料行名稱。 *資料行*已**sysname**，預設值是 NULL。  
   
- [  **@ODBCVer =** ] **'***ODBCVer***'**  
+ [  **@ODBCVer =** ] **'**_ODBCVer_**'**  
  這是要使用之 ODBC 的版本。 *ODBCVer*已**int**，預設值是 2。 這表示 ODBC 2。 有效值是 2 或 3。 如需有關 2 和 3 版之間行為差異的詳細資訊，請參閱 ODBC SQLColumns 規格。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -70,7 +70,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|資料表或檢視表限定詞名稱。 各種 DBMS 產品都支援三部分的資料表命名 (*限定詞 ***。*** 擁有者 ***。*** 名稱*)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。 這個欄位可以是 NULL。|  
+|**TABLE_CAT**|**sysname**|資料表或檢視表限定詞名稱。 各種 DBMS 產品都支援三部分的資料表命名 (_限定詞_**。**_擁有者_**。**_名稱_)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。 這個欄位可以是 NULL。|  
 |**再依據 TABLE_SCHEM 排列**|**sysname**|資料表或檢視表擁有者名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個資料行代表建立資料表的資料庫使用者名稱。 這個欄位一律會傳回值。|  
 |**TABLE_NAME**|**sysname**|資料表或檢視表名稱。 這個欄位一律會傳回值。|  
 |**COLUMN_NAME**|**sysname**|資料行名稱，每個資料行**TABLE_NAME**傳回。 這個欄位一律會傳回值。|  

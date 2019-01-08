@@ -17,12 +17,12 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d993ef299f08400a54487a4e7e99b017e8e9bc55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a05f52eceb554d8f4b023a3136fd4cf8e55d4fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129038"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376310"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>可用性模式 (AlwaysOn 可用性群組)
   在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中，「可用性模式」為複本屬性，可判斷給定可用性複本是否可以在同步認可模式下執行。 您必須將每個可用性複本的可用性模式設定為同步認可模式或非同步認可模式。  若將主要複本設定為「非同步認可模式」，其便不會等候任何次要複本將內送交易記錄檔記錄寫入磁碟 (「強行寫入記錄」)。 若將給定次要複本設定為非同步認可模式，主要複本便不會等候次要複本強行寫入記錄。 若將主要複本與給定次要複本皆設定為「同步認可模式」，主要複本會等候次要複本確認其已強行寫入記錄 (除非次要複本在主要的「工作階段逾時期限」內無法 Ping 主要複本)。  
@@ -32,7 +32,7 @@ ms.locfileid: "48129038"
   
   
 ##  <a name="SupportedAvModes"></a> 支援的可用性模式  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支援兩種可用性模式：非同步認可模式和同步認可模式，如下所示：  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 請支援兩種可用性模式非同步認可模式和同步認可模式，如下所示：  
   
 -   「非同步認可模式」是一種當可用性複本分散距離相當遠時仍可正常運作的災害復原解決方案。 如果每個次要複本都在非同步認可模式下執行，主要複本就不會等候任何次要複本強行寫入記錄。 而是，將記錄檔記錄寫入本機記錄檔之後，主要複本會立即將交易確認傳送至用戶端。 主要複本會以相對於設定為非同步認可模式之次要複本的最低交易延遲執行。  如果目前主要複本設定為非同步認可的可用性模式，它將會以非同步方式認可所有次要複本的交易，不論其個別可用性模式設定為何。  
   
@@ -149,9 +149,9 @@ ms.locfileid: "48129038"
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 團隊部落格： 官方 SQL Server AlwaysOn 團隊部落格](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

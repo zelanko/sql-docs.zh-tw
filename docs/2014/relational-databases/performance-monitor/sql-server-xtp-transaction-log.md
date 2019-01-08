@@ -4,21 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: d16491ef-4a25-4e02-88a7-ab7c0812904a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1cdfaf96e353c8942d48b26cc47383121c2fa6cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f49c43eeaf6f5b799d60f500c303227f94452503
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159288"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759371"
 ---
 # <a name="xtp-transaction-log"></a>XTP 交易記錄
-  XTP Transaction Log 效能物件包含與 XTP 交易記錄相關的計數器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  XTP 交易記錄效能物件包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中與 XTP 交易記錄相關的計數器。  
   
  下表描述**XTP 交易記錄**計數器。  
   

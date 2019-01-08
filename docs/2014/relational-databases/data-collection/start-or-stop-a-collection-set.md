@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - collection sets [SQL Server], stopping
@@ -13,12 +13,12 @@ ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b1ca312173be8075b0d53c5e1f8594574b7911f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db4477f347e0eff1a7a8d75aaf21c1a34d8130dd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212938"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782490"
 ---
 # <a name="start-or-stop-a-collection-set"></a>啟動或停止收集組
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中啟動或停止收集組。  
@@ -88,7 +88,7 @@ ms.locfileid: "48212938"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例使用 [sp_syscollector_start_collection_set](/sql/relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql) 啟動識別碼為 `1`的收集組。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例使用 [sp_syscollector_start_collection_set](/sql/relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql) 啟動識別碼為 `1`的收集組。  
   
 ```tsql  
 USE msdb;  
@@ -102,7 +102,7 @@ EXEC sp_syscollector_start_collection_set @collection_set_id = 1;
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例使用 [sp_syscollector_stop_collection_set](/sql/relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql) 停止識別碼為 `1`的收集組。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例使用 [sp_syscollector_stop_collection_set](/sql/relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql) 停止識別碼為 `1`的收集組。  
   
 ```tsql  
 USE msdb;  

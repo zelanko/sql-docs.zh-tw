@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2631e08b49e646ae6b96670b11834bcb5b3abf5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ec9ad9569326e4a9b3e890af4b5f909e36e5c5b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167208"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362190"
 ---
 # <a name="create-element-dta"></a>Create 元素 (DTA)
   包含使用者指定組態中之索引、統計資料或堆積結構的相關資訊。  
@@ -48,16 +47,16 @@ ms.locfileid: "48167208"
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[Recommendation 元素&#40;DTA&#41;](recommendation-element-dta.md)|  
-|**子元素**|[編製索引的項目&#40;DTA&#41;](index-element-dta.md)<br /><br /> `Statistics` 項目 (請參閱[Database Engine Tuning Advisor XML 結構描述](http://schemas.microsoft.com/sqlserver/)資訊)<br /><br /> `Heap` 項目 (請參閱[Database Engine Tuning Advisor XML 結構描述](http://schemas.microsoft.com/sqlserver/)資訊)|  
+|**父元素**|[Recommendation 元素 &#40;DTA&#41;](recommendation-element-dta.md)|  
+|**子元素**|[Index 元素 &#40;DTA&#41;](index-element-dta.md)<br /><br /> `Statistics` 項目 (請參閱[Database Engine Tuning Advisor XML 結構描述](https://schemas.microsoft.com/sqlserver/)資訊)<br /><br /> `Heap` 項目 (請參閱[Database Engine Tuning Advisor XML 結構描述](https://schemas.microsoft.com/sqlserver/)資訊)|  
   
 ## <a name="remarks"></a>備註  
- 在 Database Engine Tuning Advisor XML 結構描述中，這個元素的名稱為 **CreateTypecomplexType** 。 它用來建立使用者指定組態的索引、統計資料和堆積結構。 請勿混淆這個 `Create` 元素與可用來建立檢視 (`CreateViewType`) 或資料分割 (`CreatePType`) 的其他類型。 請參閱[Database Engine Tuning Advisor XML 結構描述](http://schemas.microsoft.com/sqlserver/)如需其他資訊`Create`項目型別。  
+ 在 Database Engine Tuning Advisor XML 結構描述中，這個元素的名稱為 **CreateTypecomplexType** 。 它用來建立使用者指定組態的索引、統計資料和堆積結構。 請勿混淆這個 `Create` 元素與可用來建立檢視 (`CreateViewType`) 或資料分割 (`CreatePType`) 的其他類型。 請參閱[Database Engine Tuning Advisor XML 結構描述](https://schemas.microsoft.com/sqlserver/)如需其他資訊`Create`項目型別。  
   
 ## <a name="example"></a>範例  
  如需此元素的使用範例，請參閱[含使用者指定組態的 XML 輸入檔範例 &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

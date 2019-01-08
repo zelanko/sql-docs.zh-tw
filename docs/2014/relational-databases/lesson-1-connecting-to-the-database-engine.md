@@ -1,24 +1,23 @@
 ---
-title: 第 1 課：連接到資料庫引擎 | Microsoft Docs
+title: 第 1 課：連接到 Database Engine |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 145adf31e3b59e846eb17369a897e4012f0177ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132390"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375300"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連接到 Database Engine
+# <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連接至 Database Engine
   當您安裝 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]時，所安裝的工具視版本和安裝選項而定。 這一課檢閱主要工具，顯示您如何連接及執行基本功能 (授權更多使用者)。  
   
   
@@ -28,7 +27,7 @@ ms.locfileid: "48132390"
   
 ### <a name="basic-tools"></a>基本工具  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是管理 [!INCLUDE[ssDE](../includes/ssde-md.md)] 及撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 程式碼的主要工具。 它裝載於 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Shell 中， 它不會納入[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，但可從個別下載，其中包括[Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=144346)。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是管理 [!INCLUDE[ssDE](../includes/ssde-md.md)] 及撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 程式碼的主要工具。 它裝載於 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Shell 中， 它不會納入[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，但可從個別下載，其中包括[Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=144346)。  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員會隨著 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和用戶端工具一起安裝。 它可讓您啟用伺服器通訊協定、設定通訊協定選項 (例如 TCP 通訊埠)、設定伺服器服務自動啟動，以及設定用戶端電腦以您偏好的方式連接。 這個工具會設定更進階的連接元素，但是不會啟用功能。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "48132390"
   
 4.  在 [伺服器角色] 頁面上，如果新登入將成為管理員，請按一下 [系統管理員 (sysadmin)]，否則保留空白。  
   
-5.  在 [使用者對應] 頁面上，對 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫選取 [對應] (如果有的話)。 否則，請選取 [master]。 請注意，[使用者] 方塊會填入此登入。 當此對話方塊關閉時，會在資料庫中建立此使用者。  
+5.  在 [使用者對應] 頁面上，對 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫選取 [對應] \(如果有的話)。 否則，請選取 [master]。 請注意，[使用者] 方塊會填入此登入。 當此對話方塊關閉時，會在資料庫中建立此使用者。  
   
 6.  在 [預設結構描述] 方塊中輸入 **dbo**，將登入對應到資料庫擁有者結構描述。  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29998bdd95a24b66ff2aebf304cd6b36b7701d02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1eff0a59ad719f2f609bd96a7a11147204c7b8a3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102308"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367510"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 目的地
   SAP BW 目的地是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的目的地元件。 因此，SAP BW 目的地會將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中資料流程的資料載入 SAP Netweaver BW 版本 7 系統中。  
@@ -84,22 +83,22 @@ ms.locfileid: "48102308"
   
  如果您不知道設定目的地的所有必要值，可能必須詢問 SAP 系統管理員。  
   
- 如需示範如何設定及使用 SAP BW 連接管理員、來源和目的地的逐步解說，請參閱＜ [搭配 SAP BI 7.0 使用 SQL Server 2008 Integration Services](http://go.microsoft.com/fwlink/?LinkID=137090)＞技術白皮書。 這份技術白皮書也會示範如何設定 SAP BW 中的必要物件。  
+ 如需示範如何設定及使用 SAP BW 連接管理員、來源和目的地的逐步解說，請參閱＜ [搭配 SAP BI 7.0 使用 SQL Server 2008 Integration Services](https://go.microsoft.com/fwlink/?LinkID=137090)＞技術白皮書。 這份技術白皮書也會示範如何設定 SAP BW 中的必要物件。  
   
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>使用 SSIS 設計師設定目的地  
  如需有關可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之 SAP BW 目的地屬性的詳細資訊，請按下列其中一個主題：  
   
--   [SAP BW 目的地編輯器&#40;連線管理員頁面&#41;](sap-bw-destination-editor-connection-manager-page.md)  
+-   [SAP BW 目的地編輯器 &#40;連線管理員頁面&#41;](sap-bw-destination-editor-connection-manager-page.md)  
   
--   [SAP BW 目的地編輯器&#40;對應頁面&#41;](sap-bw-destination-editor-mappings-page.md)  
+-   [SAP BW 目的地編輯器 &#40;對應頁面&#41;](sap-bw-destination-editor-mappings-page.md)  
   
--   [SAP BW 目的地編輯器&#40;錯誤輸出頁面&#41;](sap-bw-destination-editor-error-output-page.md)  
+-   [SAP BW 目的地編輯器 &#40;錯誤輸出頁面&#41;](sap-bw-destination-editor-error-output-page.md)  
   
--   [SAP BW 目的地編輯器&#40;進階頁面&#41;](sap-bw-destination-editor-advanced-page.md)  
+-   [SAP BW 目的地編輯器 &#40;進階頁面&#41;](sap-bw-destination-editor-advanced-page.md)  
   
  設定 SAP BW 目的地時，您也可以使用各種對話方塊來查閱或建立 SAP Netweaver BW 物件。 如需有關這些對話方塊的詳細資訊，請按下列其中一個主題：  
   
--   [ InfoPackage](look-up-infopackage.md)  
+-   [查閱 InfoPackage](look-up-infopackage.md)  
   
 -   [建立新的 InfoObject](create-new-infoobject.md)  
   

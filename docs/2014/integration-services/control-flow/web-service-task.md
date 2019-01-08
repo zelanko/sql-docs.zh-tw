@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicetask.f1
@@ -15,12 +14,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a83900ff92611778bb5b71574a7e98ce5e6df18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee28bbfa3cea482f934b3491f51e0caf601f5465
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189182"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363160"
 ---
 # <a name="web-service-task"></a>Web 服務工作
   「Web 服務」工作執行一個 Web 服務方法。 您可將「Web 服務」工作用於下列用途：  
@@ -83,8 +82,8 @@ ms.locfileid: "48189182"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>相關內容  
- technet.microsoft.com 上的影片：[How to: Call a Web Service by Using the Web Service Task](http://go.microsoft.com/fwlink/?LinkId=259642) (如何：使用 Web 服務工作呼叫 Web 服務) (SQL Server 影片)。  
+ 視訊[How to:使用 Web 服務工作 （SQL Server 影片） 來呼叫 Web 服務](https://go.microsoft.com/fwlink/?LinkId=259642)，technet.microsoft.com 上的。  
   
- curatedviews.cloudapp.net 上的 Curated Answer 文章： [Consume Web Services in SSIS using Scripts](http://go.microsoft.com/fwlink/?LinkId=321996)(在 SSIS 中透過指令碼取用 Web 服務)。  
+ curatedviews.cloudapp.net 上的 Curated Answer 文章： [Consume Web Services in SSIS using Scripts](https://go.microsoft.com/fwlink/?LinkId=321996)(在 SSIS 中透過指令碼取用 Web 服務)。  
   
   

@@ -54,12 +54,12 @@ ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b72ef3d7579cdcd8e1d3be83d7caf8d202d1bca7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da1f12da9dc3ff3145e2fc1ea9f592e70cfe0c3c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204838"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374590"
 ---
 # <a name="log-properties"></a>記錄屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的記錄伺服器屬性。 如需有關其他伺服器屬性及如何設定伺服器屬性的詳細資訊，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  
@@ -86,9 +86,9 @@ ms.locfileid: "48204838"
  此屬性在伺服器執行處理作業期間，用來作為預設值。  
   
  **ErrorLog\KeyErrorAction**  
- 指定伺服器所採取的動作時`KeyNotFound`就會發生錯誤。 此錯誤的有效回應包括：  
+ 指定伺服器在 錯誤發生時所採取的動作`KeyNotFound`。 此錯誤的有效回應包括：  
   
--   `ConvertToUnknown` 告知伺服器應將錯誤索引鍵值配置給未知的成員。  
+-   `ConvertToUnknown` 會要求伺服器將錯誤索引鍵值配置給未知的成員。  
   
 -   `DiscardRecord` 會要求伺服器排除這個記錄。  
   
@@ -106,22 +106,22 @@ ms.locfileid: "48204838"
 -   `StopLogging` 告知伺服器應於達到錯誤限制時停止記錄錯誤，但仍讓處理作業繼續進行。  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
- 指定伺服器所採取的動作時`KeyNotFound`就會發生錯誤。 此錯誤的有效回應包括：  
+ 指定伺服器在 錯誤發生時所採取的動作`KeyNotFound`。 此錯誤的有效回應包括：  
   
--   `IgnoreError` 會要求伺服器繼續處理，但不記錄錯誤或將其計入索引鍵錯誤限制。 如果忽略錯誤，您僅允許繼續處理，而不將錯誤加入錯誤計數，或將其記錄至畫面或記錄檔。 有問題的記錄發生資料完整性問題，無法加入資料庫。 記錄會被捨棄或彙總至未知的成員，取決於`KeyErrorAction`屬性。  
+-   `IgnoreError` 會要求伺服器繼續處理，但不記錄錯誤或將其計入索引鍵錯誤限制。 如果忽略錯誤，您僅允許繼續處理，而不將錯誤加入錯誤計數，或將其記錄至畫面或記錄檔。 有問題的記錄發生資料完整性問題，無法加入資料庫。 依據 `KeyErrorAction` 屬性的判斷，該記錄將會被捨棄或彙總至未知的成員。  
   
 -   `ReportAndContinue` 告知伺服器應記錄錯誤並將其計數算入索引鍵錯誤限制，接著繼續處理。 觸發錯誤的記錄會被捨棄，或是轉換成未知的成員。  
   
 -   `ReportAndStop` 告知伺服器應記錄錯誤並立即停止處理，而無視於索引鍵錯誤限制。 觸發錯誤的記錄會被捨棄，或是轉換成未知的成員。  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
- 指定伺服器在發現索引鍵重複狀況時所採取的動作。 有效值包括`IgnoreError`如同未發生錯誤，繼續處理`ReportAndContinue`記錄錯誤並繼續處理，以及`ReportAndStop`來記錄錯誤並立即停止處理，即使錯誤計數未達錯誤限制。  
+ 指定伺服器在發現索引鍵重複狀況時所採取的動作。 `IgnoreError`有效值包括 `ReportAndContinue` (繼續處理，就像沒有發生錯誤一樣)、`ReportAndStop` (記錄錯誤並繼續處理)，以及  (記錄錯誤並立即停止處理，即使錯誤計數未達錯誤限制也一樣)。  
   
  **ErrorLog\ LogErrorTypes\NullKeyConvertedToUnknown**  
- 指定伺服器在 Null 索引鍵轉換為未知的成員時所採取的動作。 有效值包括`IgnoreError`如同未發生錯誤，繼續處理`ReportAndContinue`記錄錯誤並繼續處理，以及`ReportAndStop`來記錄錯誤並立即停止處理，即使錯誤計數未達錯誤限制。  
+ 指定伺服器在 Null 索引鍵轉換為未知的成員時所採取的動作。 `IgnoreError`有效值包括 `ReportAndContinue` (繼續處理，就像沒有發生錯誤一樣)、`ReportAndStop` (記錄錯誤並繼續處理)，以及  (記錄錯誤並立即停止處理，即使錯誤計數未達錯誤限制也一樣)。  
   
  **ErrorLog\ LogErrorTypes\NullKeyNotAllowed**  
- 指定伺服器所採取的動作時`NullProcessing`設為`Error`維度屬性。 當給定的屬性中不允許 Null 值時，會產生錯誤。 此錯誤組態屬性會通知下一個步驟，也就是報告錯誤並繼續處理，直到達到錯誤限制為止。 有效值包括`IgnoreError`如同未發生錯誤，繼續處理`ReportAndContinue`記錄錯誤並繼續處理，以及`ReportAndStop`來記錄錯誤並立即停止處理，即使錯誤計數未達錯誤限制。  
+ `NullProcessing`指定伺服器在維度屬性的 `Error` 設為 時所採取的動作。 當給定的屬性中不允許 Null 值時，會產生錯誤。 此錯誤組態屬性會通知下一個步驟，也就是報告錯誤並繼續處理，直到達到錯誤限制為止。 `IgnoreError`有效值包括 `ReportAndContinue` (繼續處理，就像沒有發生錯誤一樣)、`ReportAndStop` (記錄錯誤並繼續處理)，以及  (記錄錯誤並立即停止處理，即使錯誤計數未達錯誤限制也一樣)。  
   
  **ErrorLog\ LogErrorTypes\CalculationError**  
  此屬性在伺服器執行處理作業期間，用來作為預設值。  
@@ -172,7 +172,7 @@ ms.locfileid: "48204838"
  此屬性的預設值是空白，因而會預設為 FlightRecorderTraceDef.xml。  
   
 ## <a name="query-log"></a>查詢記錄  
- **適用於** ：僅限於多維度伺服器模式  
+ **適用於：** 僅限於多維度伺服器模式  
   
  **QueryLog\QueryLogFileName**  
  此為字串屬性，指定查詢記錄檔的名稱。 這個屬性只適用於當記錄會儲存到磁碟檔案，而非資料庫資料表時 (預設行為)。  
@@ -199,7 +199,7 @@ ms.locfileid: "48204838"
  此屬性的預設值為 False，表示伺服器不會自動建立記錄資料表，也不會記錄查詢事件。  
   
 > [!NOTE]  
->  如需設定查詢記錄的詳細資訊，請參閱 [設定 Analysis Services 查詢記錄](http://go.microsoft.com/fwlink/?LinkId=81890)。  
+>  如需設定查詢記錄的詳細資訊，請參閱 [設定 Analysis Services 查詢記錄](https://go.microsoft.com/fwlink/?LinkId=81890)。  
   
 ## <a name="trace"></a>追蹤  
  **Trace\TraceBackgroundDistributionPeriod**  

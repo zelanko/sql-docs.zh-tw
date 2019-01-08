@@ -17,19 +17,19 @@ ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35fad6632f6c03cbbcc913868da15a60d4b87453
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bcf2d5924e160f38c9b00b564a8ae94b6f8705c3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095890"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358000"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 各版本所支援的功能
   本主題提供不同 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]版本所支援功能的詳細資料。  
   
-> **注意︰** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中都會提供評估版於 180 天試用期內。 如需詳細資訊，請參閱 < [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [試用軟體網站](http://go.microsoft.com/fwlink/?LinkId=190955)。  
-  
-> **注意︰** 如 Evaluation 和 Developer edition 所支援的功能，請參閱[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Enterprise 功能集。  
+> **注意︰** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中都會提供評估版於 180 天試用期內。 如需詳細資訊，請參閱 < [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [試用軟體網站](https://go.microsoft.com/fwlink/?LinkId=190955)。  
+> 
+> **注意：** 如需 Evaluation 和 Developer Edition 所支援的功能，請參閱 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 功能集。  
   
  若要導覽至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 技術的資料表，請按一下其連結：  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48095890"
   
  [BI 語意模型 （多維度）](#BISemModel_multi)  
   
- [BI 語意模型 （表格式）](#BISemModel_tabular)  
+ [BI 語意模型 (表格式)](#BISemModel_tabular)  
   
  [PowerPivot for SharePoint](#PowerPivot)  
   
@@ -87,9 +87,9 @@ ms.locfileid: "48095890"
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |單一執行個體所使用的最大的計算容量 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine)<sup>1</sup>|作業系統最大值|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
 |單一執行個體 (Analysis Services、 Reporting Services) 所使用的最大的計算容量<sup>1</sup>|作業系統最大值|作業系統最大值|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
-|使用的記憶體上限 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine 的每個執行個體)|作業系統最大值|128 GB|128 GB|64 GB|1 GB|1 GB|1 GB|  
-|使用的記憶體上限 ([!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的每個執行個體)|作業系統最大值|作業系統最大值|64 GB|不適用|不適用|不適用|不適用|  
-|使用的記憶體上限 ([!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的每個執行個體)|作業系統最大值|作業系統最大值|64 GB|64 GB|4 GB|不適用|不適用|  
+|使用的記憶體上限 ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine 的每個執行個體)|作業系統最大值|128 GB|128 GB|64 GB|1 GB|1 GB|1 GB|  
+|使用的記憶體上限 ( [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的每個執行個體)|作業系統最大值|作業系統最大值|64 GB|N/A|N/A|N/A|N/A|  
+|使用的記憶體上限 ( [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的每個執行個體)|作業系統最大值|作業系統最大值|64 GB|64 GB|4 GB|N/A|N/A|  
 |關聯式資料庫大小上限|524 PB|524 PB|524 PB|524 PB|10 GB|10 GB|10 GB|  
   
  <sup>1</sup> Enterprise Edition，含伺服器 + 用戶端存取授權 (CAL) 授權 （不適用於新的協議） 僅限於最多 20 個核心每[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。 核心伺服器授權模式之下沒有任何限制。 如需詳細資訊，請參閱 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
@@ -103,7 +103,7 @@ ms.locfileid: "48095890"
 |資料庫鏡像|是|是 (僅限 Safety Full)|是 (僅限 Safety Full)|僅限見證|僅限見證|僅限見證|僅限見證|  
 |備份壓縮|是|是|是|||||  
 |資料庫快照集|是|||||||  
-|AlwaysOn 容錯移轉叢集執行個體|是 (節點支援：作業系統最大值)|是 (節點支援：2)|是 (節點支援：2)|||||  
+|AlwaysOn 容錯移轉叢集執行個體|是 (節點支援：作業系統最大值|是 (節點支援：2)|是 (節點支援：2)|||||  
 |AlwaysOn Availability Groups|是 (最多 8 個次要複本，包括 2 個同步次要複本)|||||||  
 |連接導向器|是|||||||  
 |線上頁面和檔案還原|是|||||||  
@@ -127,7 +127,7 @@ ms.locfileid: "48095890"
 |多個執行個體支援|50|50|50|50|50|50|50|  
 |資料表和索引分割區|是|||||||  
 |資料壓縮|是|||||||  
-|資源管理員|是|||||||  
+|[資源管理員]|是|||||||  
 |分割區資料表平行處理原則|是|||||||  
 |多個檔案資料流容器|是|||||||  
 |NUMA 感知大型分頁記憶體和緩衝區陣列配置|是|||||||  
@@ -193,7 +193,7 @@ ms.locfileid: "48095890"
 |專用管理員連接|是|是|是|是|是 (在追蹤旗標下方)|是 (在追蹤旗標下方)|是 (在追蹤旗標下方)|  
 |PowerShell 指令碼支援|是|是|是|是|是|是|是|  
 |SysPrep 支援<sup>1</sup>|是|是|是|是|是|是|是|  
-|資料層應用程式元件作業的支援 - 擷取、部署、升級、刪除|是|是|是|是|是|是|是|  
+|支援的資料層應用程式元件作業-擷取、 部署、 升級、 刪除|是|是|是|是|是|是|是|  
 |原則自動化 (依排程和變更檢查)|是|是|是|是||||  
 |效能資料收集器|是|是|是|是||||  
 |能夠在多重執行個體管理中註冊為受管理的執行個體|是|是|是|是||||  
@@ -218,7 +218,7 @@ ms.locfileid: "48095890"
 |功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio 整合|是|是|是|是|是|是|是|  
-|Intellisense ([!INCLUDE[tsql](../includes/tsql-md.md)]和 MDX)|是|是|是|是|是|是|是|  
+|Intellisense ([!INCLUDE[tsql](../includes/tsql-md.md)] 和 MDX)|是|是|是|是|是|是|是|  
 |[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|是|是|是|是|是|||  
 |SQL 查詢編輯和設計工具<sup>1</sup>|是|是|是|||||  
 |版本控制支援<sup>1</sup>|是|是|是|||||  
@@ -280,7 +280,7 @@ ms.locfileid: "48095890"
 ##  <a name="MDS"></a> Master Data Services  
   
 > [!NOTE]  
->  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 在 Business Intelligence 和 Enterprise 的 64 位元版本只使用。  
+>  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 只能在 64 位元版本的 Business Intelligence 和 Enterprise 上使用。  
   
 |功能|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -371,7 +371,7 @@ ms.locfileid: "48095890"
 |PowerPivot 資料重新整理|是|是||||||  
 |PowerPivot 資料摘要|是|是||||||  
   
-###  <a name="DataMining"></a> Data Mining  
+###  <a name="DataMining"></a> 資料採礦  
   
 |功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -380,7 +380,7 @@ ms.locfileid: "48095890"
 |交叉驗證|是|是||||||  
 |已篩選之採礦結構資料子集的模型|是|是||||||  
 |時間序列：ARTXP 和 ARIMA 方法之間的自訂混合|是|是||||||  
-|時間序列：以新的資料預測|是|是||||||  
+|時間序列：使用新資料預測|是|是||||||  
 |無限制的並行 DM 查詢|是|是||||||  
 |資料採礦演算法的進階組態與微調選項|是|是||||||  
 |支援外掛程式演算法|是|是||||||  
@@ -439,7 +439,7 @@ ms.locfileid: "48095890"
 |Evaluation|Evaluation|  
   
 ##  <a name="BIClients"></a> 商業智慧用戶端  
- 下列軟體用戶端應用程式提供位於 Microsoft 下載中心，並可協助您建立商業智慧文件上執行[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。 當您裝載這些文件的伺服器環境中時，使用的版本[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]支援該文件類型。 下表將識別哪些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本包含裝載在這些用戶端應用程式中建立之文件所需的伺服器功能。  
+ 您可以透過 Microsoft 下載中心取得下列軟體用戶端應用程式，這些應用程式是提供來協助您建立可在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體上執行的商業智慧文件。 當您在伺服器環境中裝載這些文件時，請使用支援該文件類型的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 下表將識別哪些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本包含裝載在這些用戶端應用程式中建立之文件所需的伺服器功能。  
   
 |功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -448,9 +448,9 @@ ms.locfileid: "48095890"
 |[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010|是|是||||||  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|是|是||||||  
   
-> [!NOTE]  
->  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 是 Excel 增益集，並不依賴[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 不過，若要在 SharePoint 中共用 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 活頁簿並進行共同作業，則需要使用 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]，而且這項功能是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 和 Business Intelligence Edition 的一部分。  
-> 2.  上表識別[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]啟用這些用戶端工具所需的版本，不過這些功能可以存取任何的資料版本上裝載[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+> [!NOTE]
+>  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 是 Excel 增益集，並不依賴[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 不過，若要在 SharePoint 中共用 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 活頁簿並進行共同作業，則需要使用 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] ，而且這項功能是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 和 Business Intelligence Edition 的一部分。  
+> 2.  上表識別啟用這些用戶端工具所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。不過，這些功能可以存取任何 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本上裝載的資料。  
   
 ##  <a name="Spatial"></a> Spatial and Location Services  
   

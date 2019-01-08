@@ -14,12 +14,12 @@ ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 208687bdc243b596b4b47d1696fdcea472552af3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 048ee2d27445bf64839c5331627a12e012cd4123
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115098"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376510"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
   **SQLGetData**用來擷取結果集資料，而不繫結資料行的值。 **SQLGetData**可以在呼叫相同的資料行，即可擷取大量資料的資料行從**文字**， **ntext**，或**映像**資料型別。  
@@ -95,7 +95,7 @@ while (SQLFetch(hStmt) == SQL_SUCCESS)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLGetData 函數](http://go.microsoft.com/fwlink/?LinkId=59350)   
+ [SQLGetData 函數](https://go.microsoft.com/fwlink/?LinkId=59350)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

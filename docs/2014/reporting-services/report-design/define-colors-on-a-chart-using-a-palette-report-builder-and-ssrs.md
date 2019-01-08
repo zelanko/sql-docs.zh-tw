@@ -11,12 +11,12 @@ ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0db138c140b0f5e51a148a3114ad6f0a7054f8c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49feffa82a1ae20735a2b9b70982782c3562c9cf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166948"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370090"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>使用調色盤定義圖表的色彩 (報表產生器及 SSRS)
   您可以選取預先定義的調色盤，或定義自訂調色盤來變更圖表的色彩調色盤。 自訂調色盤是報表專屬的。  
@@ -45,11 +45,11 @@ ms.locfileid: "48166948"
   
 3.  在 **圖表**區段中，如`Palette`屬性中，選取**自訂**。  
   
-4.  在 CustomPaletteColors 屬性中，按一下「編輯集合」\([…]) 按鈕。 **[ReportColorExpression 集合編輯器]** 便會開啟。  
+4.  在 CustomPaletteColors 屬性中，按一下 [編輯集合] \(**...**) 按鈕。 **[ReportColorExpression 集合編輯器]** 便會開啟。  
   
 5.  按一下 **[加入]** 來加入色彩。 從下拉式清單中選取一個色彩，或選取 [運算式]，然後為特定色彩指定一個十六進位值，例如，ff6600 代表「橙色」。  
   
-     如需有關十六進位值的詳細資訊，請參閱 MSDN 上的 [色彩表](http://go.microsoft.com/fwlink/?linkid=9258) 。  
+     如需有關十六進位值的詳細資訊，請參閱 MSDN 上的 [色彩表](https://go.microsoft.com/fwlink/?linkid=9258) 。  
   
 6.  按一下 **[加入]** ，將其他色彩加入到調色盤中。  
   

@@ -1,5 +1,5 @@
 ---
-title: 資料探索和預測性模型，在 SQL Server Machine Learning 中使用 R |Microsoft Docs
+title: 資料探索和使用 R-SQL Server Machine Learning 服務的預測性模型
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 60a899de027f2e9de591a70971dbee3f4300d87d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c6c0e07f48dee271fee61bc59b47f49683ff8832
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984710"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432341"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>資料探索和使用 SQL Server 中 R 的預測模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文說明資料科學程序透過 SQL Server 與整合的增強功能。
 
-適用於： SQL Server 2016 R Services、 SQL Server 2017 Machine Learnign 服務
+適用於：SQL Server 2016 R Services、 SQL Server 2017 Machine Learnign 服務
 
 ## <a name="the-data-science-process"></a>資料科學程序
 
@@ -30,7 +30,7 @@ ms.locfileid: "38984710"
 + 資料移動可能會緩慢、 效率不佳，或不安全
 + R 本身也有效能與延展限制
 
-當您必須移動及分析大量資料，或電腦的可用記憶體容納不下您使用的資料集時，這些缺點變得更加明顯。
+當您需要移動及分析大量資料，或使用不符合您的電腦上可用的記憶體的資料集時，這些缺點變得更加明顯。
 
 新的、 可調整的封裝和隨附的 R 函數[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]幫助您克服當中眾多挑戰。 
 
@@ -62,15 +62,15 @@ RevoScaleR 封裝也支援變更 *「執行內容」*(execution context)。 這�
   
      如需有關這些封裝和使用方式的詳細資訊，請參閱 <<c0> [ 什麼是 RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction)並[RevoPemaR 入門](https://msdn.microsoft.com/microsoft-r/pemar-getting-started)。 
 
-+ **MicrosoftML**包含高度最佳化的機器學習演算法及 Microsoft 資料科學小組的資料轉換的集合。 許多的演算法也會在 Azure Machine Learning 中使用。 如需詳細資訊，請參閱 <<c0> [ 使用 MicrosoftML 封裝](../../advanced-analytics/using-the-microsoftml-package.md)。
++ **MicrosoftML**包含高度最佳化的機器學習演算法及 Microsoft 資料科學小組的資料轉換的集合。 許多的演算法也會在 Azure Machine Learning 中使用。 如需詳細資訊，請參閱 < [SQL Server 中的 MicrosoftML](ref-r-microsoftml.md)。
 
 ### <a name="r-development-tools"></a>R 開發工具
 
 在開發您的 R 解決方案時，請務必下載 Microsoft R Client。 此免費下載包括支援遠端運算內容以及可調整的 alorithms 所需的程式庫：
 
-+ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]：** 一個 R 執行階段發行版本及一組可提升標準 R 作業效能的套件，例如 Intel Math Kernel Library。  
++ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]：** R 執行階段和一組套件，例如 Intel math kernel library，大幅提升標準 R 作業效能的散發套件。  
   
-+ **RevoScaleR：** 一個可讓您將計算推送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 R 套件。 [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]隨附的可調式新封裝和 R 函數來克服這些挑戰。 它也包含一組常見的 R 函數，這些函數已經過重新設計，可提供更佳的效能和延展性。 您可以依據 **rx** 前置詞識別這些改良的函數。 它也包含適用於各種來源的增強型資料提供者；這些函數的前面會加上 **Rx**。
++ **RevoScaleR:** R 封裝，可讓您將計算推送到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]. 它也包含一組常見的 R 函數，這些函數已經過重新設計，可提供更佳的效能和延展性。 您可以依據 **rx** 前置詞識別這些改良的函數。 它也包含適用於各種來源的增強型資料提供者；這些函數的前面會加上 **Rx**。
 
 您可以使用這類支援語言，任何以 Windows 為基礎的程式碼編輯器[!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]或 RStudio。 [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] 的下載也包含適用於 R 的常見命令列工具，例如 RGui.exe。
 
@@ -103,4 +103,4 @@ RevoScaleR 封裝也支援變更 *「執行內容」*(execution context)。 這�
 
 [比較基底 R 與 ScaleR 函數](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 
-[與 SQL Server 搭配運作的 ScaleR 函數](../../advanced-analytics/r/scaler-functions-for-working-with-sql-server-data.md)
+[SQL Server 中的 RevoScaleR 程式庫](ref-r-revoscaler.md)

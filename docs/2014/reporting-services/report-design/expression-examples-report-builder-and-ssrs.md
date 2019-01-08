@@ -26,12 +26,12 @@ ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e32c6ed01887fb47cb8051ba78fb92b6558a5abe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6453f983a2137039a1a16d115daeb9fad855f771
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099441"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358560"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>運算式範例 (報表產生器及 SSRS)
   運算式常用於在報表中控制內容以及報表的外觀。 運算式是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]所撰寫，而且可以使用內建函數、自訂程式碼、報表與群組變數，以及使用者定義的變數。 運算式以等號 (=) 當做開頭。 如需運算式編輯器以及可包含之參考類型的詳細資訊，請參閱[報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md) 和[新增運算式 &#40;報表產生器及 SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)。  
@@ -55,17 +55,17 @@ ms.locfileid: "48099441"
   
  如需特定用法的運算式範例，請參閱下列主題：  
   
--   [群組運算式範例&#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+-   [群組運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
--   [篩選方程式範例&#40;報表產生器及 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [篩選方程式範例 &#40;報表產生器及 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
--   [常用的篩選&#40;報表產生器及 SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
+-   [常用的篩選 &#40;報表產生器及 SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
   
--   [報表和群組變數集合參考&#40;報表產生器及 SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+-   [報表和群組變數集合參考 &#40;報表產生器及 SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- 如需有關簡單和複雜運算式、使用運算式的地方，以及您可以包含在運算式中之參考類型的詳細資訊，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md) 下的主題。 如需評估運算式以計算彙總所使用之內容的詳細資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
+ 如需有關簡單和複雜運算式、使用運算式的地方，以及您可以包含在運算式中之參考類型的詳細資訊，請參閱 [運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)。 如需評估運算式以計算彙總所使用之內容的詳細資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
- 如需了解如何在撰寫報表的內容中，撰寫使用本主題中運算式範例所使用的許多函數和運算子的運算式，請參閱[教學課程：運算式簡介](../tutorial-introducing-expressions.md)。  
+ 若要了解如何撰寫運算式來使用許多函數和運算子也會由本主題中，但在撰寫報表的內容中的運算式範例，請參閱[教學課程：運算式簡介](../tutorial-introducing-expressions.md)。  
   
  運算式編輯器包含內建函數的階層式檢視。 當您選取函數時，程式碼範例會出現在 [值] 窗格中。 如需詳細資訊，請參閱[Expression Dialog Box](../expression-dialog-box.md)或是[運算式 對話方塊中&#40;報表產生器&#41;](../expression-dialog-box-report-builder.md)。  
   
@@ -78,19 +78,19 @@ ms.locfileid: "48099441"
  報表中的許多運算式都有包含函數， 您可以使用這些函數來格式化資料、套用邏輯以及存取報表中繼資料。 您可撰寫運算式來使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 執行階段程式庫及 <xref:System.Convert> 和 <xref:System.Math> 命名空間中的函數。 您可以加入其他組件或自訂程式碼中函數的參考， 您也可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]的類別，包括 <xref:System.Text.RegularExpressions>。  
   
 ###  <a name="VisualBasicFunctions"></a> Visual Basic 函數  
- 您可以利用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函數來操作文字方塊所顯示的資料，或參數、屬性或報表的其他區域所用的資料。 此章節提供示範其中一些函數的範例。 如需詳細資訊，請參閱 MSDN 上的 [Visual Basic 執行階段程式庫成員](http://go.microsoft.com/fwlink/?LinkId=198941) 。  
+ 您可以利用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函數來操作文字方塊所顯示的資料，或參數、屬性或報表的其他區域所用的資料。 此章節提供示範其中一些函數的範例。 如需詳細資訊，請參閱 MSDN 上的 [Visual Basic 執行階段程式庫成員](https://go.microsoft.com/fwlink/?LinkId=198941) 。  
   
- [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供許多自訂格式選項，例如特定的日期格式。 如需詳細資訊，請參閱 MSDN 上的 [格式化型別](http://go.microsoft.com/fwlink/?LinkId=112024) 。  
+ [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供許多自訂格式選項，例如特定的日期格式。 如需詳細資訊，請參閱 MSDN 上的 [格式化型別](https://go.microsoft.com/fwlink/?LinkId=112024) 。  
   
 #### <a name="math-functions"></a>數學函數  
   
--   `Round`函式是可用來將四捨五入為最接近整數的數字。 下列運算式會將 1.3 四捨五入成 1。  
+-   `Round` 函數可用來將數字四捨五入至最接近的整數。 下列運算式會將 1.3 四捨五入成 1。  
   
     ```  
     = Round(1.3)  
     ```  
   
-     您也可以撰寫運算式來將值四捨五入至多個您所指定，類似於`MRound`在 Excel 中的函式。 您可將值乘以一個可產生整數的因數，將數字四捨五入，然後再除以同一個因數。 例如，若要將 1.3 四捨五入到最接近的 .2 的倍數 (1.4)，請使用下列運算式：  
+     您也可以撰寫運算式來將值四捨五入至您所指定的倍數，類似於 Excel 中的 `MRound` 函數。 您可將值乘以一個可產生整數的因數，將數字四捨五入，然後再除以同一個因數。 例如，若要將 1.3 四捨五入到最接近的 .2 的倍數 (1.4)，請使用下列運算式：  
   
     ```  
     = Round(1.3*5)/5  
@@ -98,7 +98,7 @@ ms.locfileid: "48099441"
   
 ####  <a name="DateFunctions"></a> 日期函數  
   
--   `Today`函式會提供目前的日期。 此運算式可用於文字方塊，以顯示報表中的日期，或根據目前的日期在參數中篩選資料。  
+-   `Today` 函數會提供目前的日期。 此運算式可用於文字方塊，以顯示報表中的日期，或根據目前的日期在參數中篩選資料。  
   
     ```  
     =Today()  
@@ -110,7 +110,7 @@ ms.locfileid: "48099441"
     =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
     ```  
   
--   `Year`函式會顯示特定日期的年份。 您可以使用這個來將日期群組在一起，或是將年顯示為一組日期的標籤。 這個運算式會提供給定訂購日期群組的年份。 `Month`函式和其他函式也可用來操作日期。 如需詳細資訊，請參閱 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 文件。  
+-   `Year` 函數會顯示特定日期的年份。 您可以使用這個來將日期群組在一起，或是將年顯示為一組日期的標籤。 這個運算式會提供給定訂購日期群組的年份。 `Month` 函數和其他函數也可用來操作日期。 如需詳細資訊，請參閱[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]文件。  
   
     ```  
     =Year(Fields!OrderDate.Value)  
@@ -138,7 +138,7 @@ ms.locfileid: "48099441"
     =FORMAT(Fields!SellStartDate.Value, "dd/MM/yyyy")  
     ```  
   
--   `CDate` 函數會將值轉換成日期。 `Now`函式會傳回 date 值，包含目前的日期和時間，根據您的系統。 `DateDiff` 會傳回長數值，指定兩個日期值之間的時間間隔數。  
+-   `CDate` 函數會將值轉換成日期。 `Now` 函數會根據您的系統傳回包含目前日期和時間的日期值。 `DateDiff` 會傳回長數值，指定兩個日期值之間的時間間隔數。  
   
      下列範例顯示目前年度的開始日期  
   
@@ -155,17 +155,17 @@ ms.locfileid: "48099441"
 -   下列運算式會產生 SellStartDate 與 LastReceiptDate 之間的間隔年數。 這些欄位位於兩個不同的資料集：DataSet1 和 DataSet2 中。 [First 函式 &#40;報表產生器及 SSRS&#41;](report-builder-functions-first-function.md) 為彙總函式，它會傳回 DataSet1 中 SellStartDate 的第一個值，以及 DataSet2 中 LastReceiptDate 的第一個值。  
   
     ```  
-    =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
+    =DATEDIFF("yyyy", First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
     ```  
   
--   `DatePart`函式會傳回包含給定 Date 值的指定的元件的整數值。下列運算式會傳回 DataSet1 中 SellStartDate 的第一個值的年份。 已指定資料集範圍，因為報表中有多個資料集。  
+-   `DatePart` 函數會傳回包含給定 Date 值之指定元件的整數值。下列運算式則會傳回 DataSet1 中 SellStartDate 第一個值的年份。 已指定資料集範圍，因為報表中有多個資料集。  
   
     ```  
     =Datepart("yyyy", First(Fields!SellStartDate.Value, "DataSet1"))  
   
     ```  
   
--   `DateSerial`函式會傳回代表指定的年、 月、 日和時間資訊設定為午夜的 Date 值。 下列範例會根據目前月份顯示上個月的結束日期。  
+-   `DateSerial` 函數會傳回代表指定年、月、日，並將時間資訊設為午夜的 Date 值。 下列範例會根據目前月份顯示上個月的結束日期。  
   
     ```  
     =DateSerial(Year(Now()), Month(Now()), "1").AddDays(-1)  
@@ -219,7 +219,7 @@ ms.locfileid: "48099441"
      下列範例的作用與上述範例相同，也會在選取值清單前面顯示文字字串。  
   
     ```  
-    =”Report for “ & JOIN(Parameters!MySelection.Value, “ & “)  
+    ="Report for " & JOIN(Parameters!MySelection.Value, " & ")  
   
     ```  
   
@@ -234,7 +234,7 @@ ms.locfileid: "48099441"
   
 #### <a name="lookup"></a>查閱  
   
--   您可以藉由指定索引鍵欄位，使用 `Lookup` 函數來從一對一關係的資料集 (如索引鍵-值組) 中擷取值。 下列運算式會顯示資料集 (“Product”) 中的產品名稱 (有提供要比對的產品識別碼)：  
+-   您可以藉由指定索引鍵欄位，使用 `Lookup` 函數來從一對一關係的資料集 (如索引鍵-值組) 中擷取值。 下列運算式會顯示提供要比對的產品識別碼時，資料集 ("Product") 中的產品名稱：  
   
     ```  
     =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
@@ -242,7 +242,7 @@ ms.locfileid: "48099441"
   
 #### <a name="lookupset"></a>LookupSet  
   
--   藉由指定索引鍵的欄位，您可以使用`LookupSet`函式來擷取從一對多關聯性的資料集的一組值。 例如，人員可以擁有多個電話號碼。 在下列範例中，假設 PhoneList 資料集在每一個資料列中包含人員識別碼和電話號碼。 `LookupSet` 傳回值的陣列。 下列運算式會將傳回值結合成單一字串，並顯示 ContactID 指定之人員的電話號碼清單：  
+-   您可以藉由指定索引鍵欄位，使用 `LookupSet` 函數來從一對多關係的資料集中擷取一組值。 例如，人員可以擁有多個電話號碼。 在下列範例中，假設 PhoneList 資料集在每一個資料列中包含人員識別碼和電話號碼。 `LookupSet` 會傳回值的陣列。 下列運算式會將傳回值結合成單一字串，並顯示 ContactID 指定之人員的電話號碼清單：  
   
     ```  
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
@@ -271,7 +271,7 @@ ms.locfileid: "48099441"
     =IIF(Fields!LineTotal.Value > 100, True, False)  
     ```  
   
--   使用多個`IIF`函式 (也稱為 「 巢狀 Iif 」)，傳回的值而定的三個值的其中一個`PctComplete`。 您可以將下列運算式置入文字方塊的填滿色彩，依照文字方塊中的值而變更背景色彩。  
+-   使用多個 `IIF` 函數 (也稱為「巢狀 IIF」) 可以根據 `PctComplete` 值傳回三個值之一。 您可以將下列運算式置入文字方塊的填滿色彩，依照文字方塊中的值而變更背景色彩。  
   
     ```  
     =IIF(Fields!PctComplete.Value >= 10, "Green", IIF(Fields!PctComplete.Value >= 1, "Blue", "Red"))  
@@ -279,7 +279,7 @@ ms.locfileid: "48099441"
   
      大於或等於 10 的值會以綠色背景顯示、介於 1 和 9 之間的值以藍色背景顯示，小於 1 的值則以紅色背景顯示。  
   
--   使用不同的方法來取得相同功能`Switch`函式。 當測試的條件有三個或三個以上時，`Switch` 函數就很有用。 `Switch` 函數會傳回與數列中評估為 true 的第一個運算式相關聯的值。  
+-   另一種取得相同功能的方法，是使用 `Switch` 函數。 當測試的條件有三個或三個以上時，`Switch` 函數就很有用。 `Switch` 函數會傳回與數列中評估為 true 的第一個運算式相關聯的值。  
   
     ```  
     =Switch(Fields!PctComplete.Value >= 10, "Green", Fields!PctComplete.Value >= 1, "Blue", Fields!PctComplete.Value = 1, "Yellow", Fields!PctComplete.Value <= 0, "Red",)  
@@ -293,13 +293,13 @@ ms.locfileid: "48099441"
     =IIF(DateDiff("d",Fields!ImportantDate.Value, Now())>7,"Red","Blue")  
     ```  
   
--   測試的值`PhoneNumber`欄位，然後才會傳回"No Value" `null` (`Nothing`在[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]); 否則傳回電話號碼值。 這個運算式可用來控制報表項目中文字方塊的值。  
+-   測試 `PhoneNumber` 欄位的值，如果為 `null` (在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中為 `Nothing`) 傳回 "No Value"，否則傳回電話號碼值。 這個運算式可用來控制報表項目中文字方塊的值。  
   
     ```  
     =IIF(Fields!PhoneNumber.Value Is Nothing,"No Value",Fields!PhoneNumber.Value)  
     ```  
   
--   測試的值`Department`欄位，並傳回子報表名稱或`null`(`Nothing`在[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])。 此運算式可用於條件式鑽研子報表。  
+-   測試 `Department` 欄位的值，並傳回子報表名稱或`null` (在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中為 `Nothing`)。 此運算式可用於條件式鑽研子報表。  
   
     ```  
     =IIF(Fields!Department.Value = "Development", "EmployeeReport", Nothing)  
@@ -323,13 +323,13 @@ ms.locfileid: "48099441"
   
 #####  <a name="Sum"></a> Sum  
   
--   `Sum`函式可以總計群組或資料區域中的值。 群組的頁首或頁尾可以使用這個函數。 下列運算式會顯示 Order 群組或資料區域中資料的總和：  
+-   `Sum` 函數可以將群組或資料區域中的值加總。 群組的頁首或頁尾可以使用這個函數。 下列運算式會顯示 Order 群組或資料區域中資料的總和：  
   
     ```  
     =Sum(Fields!LineTotal.Value, "Order")  
     ```  
   
--   您也可以使用`Sum`進行條件式彙總計算的函式。 例如，如果資料集有稱為 State 的欄位，而該欄位具有 Not Started、Started、Finished 等可能值，則下列運算式在置入群組頁首時，只會計算 Finished 值的彙總總和：  
+-   您也可以使用 `Sum` 函數進行條件式彙總計算。 例如，如果資料集有稱為 State 的欄位，而該欄位具有 Not Started、Started、Finished 等可能值，則下列運算式在置入群組頁首時，只會計算 Finished 值的彙總總和：  
   
     ```  
     =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
@@ -339,7 +339,7 @@ ms.locfileid: "48099441"
   
 -   `RowNumber` 函數在用於資料區域內的文字方塊時，會為其中顯示此運算式的每個文字方塊執行個體顯示資料列號碼。 此函數對於計算資料表中的資料列數目非常有用。 它對於更複雜的工作也非常實用，例如，根據資料列數目提供分頁符號。 如需詳細資訊，請參閱這個主題中的 [分頁符號](#PageBreaks) 。  
   
-     您所指定的 `RowNumber` 範圍會控制何時開始重新編號。 `Nothing`關鍵字指出函數將從開始中最外層資料區域的第一個資料列計數。 若要在巢狀資料區域內開始計數，請使用資料區域的名稱。 若要在群組內開始計數，請使用群組的名稱。  
+     您所指定的 `RowNumber` 範圍會控制何時開始重新編號。 `Nothing` 關鍵字指出函數將從最外層資料區域中的第一個資料列開始計數； 若要在巢狀資料區域內開始計數，請使用資料區域的名稱。 若要在群組內開始計數，請使用群組的名稱。  
   
     ```  
     =RowNumber(Nothing)  
@@ -504,9 +504,9 @@ ms.locfileid: "48099441"
  您可以在報表中使用自訂程式碼， 自訂程式碼會內嵌在報表中，或是儲存在用於報表的自訂組件中。 如需自訂程式碼的詳細資訊，請參閱[報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>使用群組變數進行自訂彙總  
- 您可以初始化特定群組範圍本機之群組變數的值，然後在運算式中加入該變數的參考。 搭配自訂程式碼使用群組變數的其中一種方式是實作自訂彙總。 如需詳細資訊，請參閱 [在 Reporting Services 2008 中使用群組變數進行自訂彙總](http://go.microsoft.com/fwlink/?LinkId=128714)。  
+ 您可以初始化特定群組範圍本機之群組變數的值，然後在運算式中加入該變數的參考。 搭配自訂程式碼使用群組變數的其中一種方式是實作自訂彙總。 如需詳細資訊，請參閱 [在 Reporting Services 2008 中使用群組變數進行自訂彙總](https://go.microsoft.com/fwlink/?LinkId=128714)。  
   
- 如需有關變數的詳細資訊，請參閱 <<c0> [ 報表和群組變數集合參考&#40;報表產生器及 SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)。</c0>  
+ 如需變數的詳細資訊，請參閱 [報表和群組變數集合參考 &#40;報表產生器及 SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)。  
   
 ## <a name="suppressing-null-or-zero-values-at-run-time"></a>在執行階段隱藏 Null 或零值  
  運算式中有些值可能會在報表處理時評估為 Null 或未定義。 這樣可能會造成執行階段錯誤，導致文字方塊中顯示 **#Error** ，而不是評估的運算式。 `IIF` 函數對於這種行為特別敏感，因為不像 If-Then-Else 陳述式，`IIF` 陳述式的每部分都會先進行評估 (包括函數呼叫)，才會傳遞至測試 `true` 或 `false` 的常式。 如果 `=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` 為 NOTHING， **陳述式會在轉譯的報表中產生** #Error `Fields!Sales.Value` 。  
@@ -533,7 +533,7 @@ ms.locfileid: "48099441"
     End Function  
     ```  
   
-     下列運算式顯示如何針對 “ColumnGroupByYear” 容器 (群組或資料區域)，從文字方塊呼叫此自訂程式碼。  
+     下列運算式顯示如何針對 "ColumnGroupByYear" 容器 (群組或資料區域)，從文字方塊呼叫此自訂程式碼。  
   
     ```  
     =Code.GetDeltaPercentage(Previous(Sum(Fields!Sales.Value),"ColumnGroupByYear"), Sum(Fields!Sales.Value))  
@@ -542,10 +542,10 @@ ms.locfileid: "48099441"
      這有助於避免執行階段例外狀況。 您現在可以在文字方塊的 `Color` 屬性中使用類似 `=IIF(Me.Value < 0, "red", "black")` 的運算式，以便根據值大於或小於 0，有條件地顯示文字。  
   
 ## <a name="see-also"></a>另請參閱  
- [篩選方程式範例&#40;報表產生器及 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
+ [篩選方程式範例 &#40;報表產生器及 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
  [群組運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [常用的篩選&#40;報表產生器及 SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
+ [常用的篩選 &#40;報表產生器及 SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
   
   

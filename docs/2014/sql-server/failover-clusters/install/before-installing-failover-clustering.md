@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
@@ -15,12 +14,12 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87066f0d1460490312bbd2a7ca22035629b9f069
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116448"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355788"
 ---
 # <a name="before-installing-failover-clustering"></a>安裝容錯移轉叢集之前
   安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集之前，您必須先選取硬體以及要執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的作業系統。 您也必須設定 Windows Server 容錯移轉叢集 (WSFC)，並檢閱要在容錯移轉叢集上執行之其他軟體的網路、安全性及考量。  
@@ -32,29 +31,29 @@ ms.locfileid: "48116448"
 |主題說明|主題|  
 |-----------------------|-----------|  
 |說明 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Windows 容錯移轉叢集概念，並提供連結至相關的內容及工作。|[AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](../windows/always-on-failover-cluster-instances-sql-server.md)|  
-|說明 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉原則概念，並提供連結設定容錯移轉原則，以符合您組織的需求。|[容錯移轉叢集執行個體的容錯移轉原則](../windows/failover-policy-for-failover-cluster-instances.md)|  
+|說明 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉原則概念，並提供連結設定容錯移轉原則，以符合您組織的需求。|[Failover Policy for Failover Cluster Instances](../windows/failover-policy-for-failover-cluster-instances.md)|  
 |說明如何維護以及您現有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集。|[容錯移轉叢集執行個體管理及維護](../windows/failover-cluster-instance-administration-and-maintenance.md)|  
-|說明如何在 Windows Server 容錯移轉叢集 (WSFC) 上安裝 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。|[如何將 SQL Server Analysis Services 叢集化](http://go.microsoft.com/fwlink/p/?LinkId=396548)|  
+|說明如何在 Windows Server 容錯移轉叢集 (WSFC) 上安裝 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。|[如何將 SQL Server Analysis Services 叢集化](https://go.microsoft.com/fwlink/p/?LinkId=396548)|  
   
   
   
 ##  <a name="BestPractices"></a> 最佳作法  
   
--   檢閱 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][版本資訊](http://go.microsoft.com/fwlink/?LinkId=296445)  
+-   檢閱 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][版本資訊](https://go.microsoft.com/fwlink/?LinkId=296445)  
   
 -   安裝必要元件軟體。 執行安裝程式來安裝或升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]之前，請先安裝下列必要元件以縮短安裝時間。 您可以在執行安裝程式之前，於每個容錯移轉叢集節點上安裝必要元件軟體，然後重新啟動節點一次。  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式將不再安裝 Windows PowerShell。 Windows PowerShell 2.0 是安裝的必要條件[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)]元件和[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。 如果您的電腦沒有 Windows PowerShell 2.0，可以遵循 [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214) 頁面上的指示啟用此元件。  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式將不再安裝 Windows PowerShell。 Windows PowerShell 2.0 是安裝 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] 元件和 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的必要條件。 如果您的電腦沒有 Windows PowerShell 2.0，可以遵循 [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) 頁面上的指示啟用此元件。  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式不再安裝 .NET Framework 3.5 SP1，但是在較舊的 Windows 作業系統上安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，可能需要 .NET Framework 3.5 SP1。 如需詳細資訊，請參閱 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][版本資訊](http://go.microsoft.com/fwlink/?LinkId=296445)。  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式不再安裝 .NET Framework 3.5 SP1，但是在較舊的 Windows 作業系統上安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，可能需要 .NET Framework 3.5 SP1。 如需詳細資訊，請參閱 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][版本資訊](https://go.microsoft.com/fwlink/?LinkId=296445)。  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新套件：** 為避免在安裝程期間電腦因安裝 .NET Framework 4 而重新啟動， [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安裝程式會要求在電腦上安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新。  如果您是在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安裝 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，則會包含這項更新。 如果您是在較舊的 Windows 作業系統上安裝，請從 [Windows Vista 和 Windows Server 2008 上之 .NET Framework 4.0 適用的 Microsoft Update](http://go.microsoft.com/fwlink/?LinkId=198093)下載此更新。  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新套件如下：** 為避免在安裝程期間電腦因安裝 .NET Framework 4 而重新啟動，[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安裝程式會要求在電腦上安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新。  如果您是在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安裝 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，則會包含這項更新。 如果您是在較舊的 Windows 作業系統上安裝，請從 [Windows Vista 和 Windows Server 2008 上之 .NET Framework 4.0 適用的 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)下載此更新。  
   
     -   .NET Framework 4：安裝程式會在叢集作業系統上安裝 .NET Framework 4。 若要縮短安裝時間，您可以考慮在執行安裝程式前先安裝 .NET Framework 4。  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式支援檔案。 您可以執行位於 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安裝媒體上的 SqlSupport.msi 以安裝這些檔案。  
   
--   確認在 WSFC 叢集上未安裝防毒軟體。 如需詳細資訊，請參閱 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 知識庫文件： [防毒軟體可能會導致叢集服務發生問題](http://go.microsoft.com/fwlink/?LinkId=116986)。  
+-   確認在 WSFC 叢集上未安裝防毒軟體。 如需詳細資訊，請參閱 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 知識庫文件： [防毒軟體可能會導致叢集服務發生問題](https://go.microsoft.com/fwlink/?LinkId=116986)。  
   
 -   安裝容錯移轉叢集期間為叢集群組命名時，不可以在叢集群組名稱中使用下列任何字元：  
   
@@ -78,7 +77,7 @@ ms.locfileid: "48116448"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會自動設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 叢集群組與位於容錯移轉叢集中之磁碟之間的相依性。 請勿在安裝之前設定磁碟的相依性。  
   
-    -   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝期間，將會建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 網路資源名稱的電腦物件 (Active Directory 電腦帳戶)。 在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 叢集中，叢集名稱帳戶 (叢集本身的電腦帳戶) 需要擁有建立電腦物件的權限。 如需詳細資訊，請參閱＜ [容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx)＞。  
+    -   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝期間，將會建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 網路資源名稱的電腦物件 (Active Directory 電腦帳戶)。 在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 叢集中，叢集名稱帳戶 (叢集本身的電腦帳戶) 需要擁有建立電腦物件的權限。 如需詳細資訊，請參閱＜ [容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx)＞。  
   
     -   如果您使用 SMB 檔案共用做為儲存選項， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝帳戶必須具有檔案伺服器的 SeSecurityPrivilege。 若要執行這項操作，請使用檔案伺服器上的 [本機安全性原則] 主控台，將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝帳戶加入 **[管理稽核及安全性記錄]** 權限。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48116448"
   
 -   如果叢集方案包括位於不同地點的叢集節點，則必須驗證如網路延遲及共用磁碟支援等其他項目。  
   
-    -   如需有關 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]的詳細資訊，請參閱＜ [為容錯移轉叢集驗證硬體](http://go.microsoft.com/fwlink/?LinkId=196817) ＞和＜ [Windows 容錯移轉叢集的支援原則](http://go.microsoft.com/fwlink/?LinkId=196818)＞。  
+    -   如需有關 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]的詳細資訊，請參閱＜ [為容錯移轉叢集驗證硬體](https://go.microsoft.com/fwlink/?LinkId=196817) ＞和＜ [Windows 容錯移轉叢集的支援原則](https://go.microsoft.com/fwlink/?LinkId=196818)＞。  
   
 -   確認要安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的磁碟未壓縮或加密。 如果您嘗試將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝到壓縮的磁碟機或加密的磁碟機，則 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會失敗。  
   
@@ -120,11 +119,11 @@ ms.locfileid: "48116448"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝只有在安裝 tempdb 檔時支援本機磁碟。 務必確定在所有叢集節點上為 tempdb 資料和記錄檔指定的路徑都是有效的。 在容錯移轉期間，如果容錯移轉目標節點上的 tempdb 目錄無法使用，則 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源將無法上線。 如需詳細資訊，請參閱 [資料檔案的儲存類型](../../install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) 和 [Database Engine 組態 - 資料目錄](../../install/database-engine-configuration-data-directories.md)。  
   
--   如果您在 iSCSI 技術元件上部署 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，我們建議您小心進行。 如需詳細資訊，請參閱＜ [iSCSI 技術元件對於 SQL Server 的支援](http://go.microsoft.com/fwlink/?LinkId=116960)＞(機器翻譯)。  
+-   如果您在 iSCSI 技術元件上部署 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，我們建議您小心進行。 如需詳細資訊，請參閱＜ [iSCSI 技術元件對於 SQL Server 的支援](https://go.microsoft.com/fwlink/?LinkId=116960)＞(機器翻譯)。  
   
--   如需詳細資訊，請參閱＜ [Microsoft 叢集的 SQL Server 支援原則](http://go.microsoft.com/fwlink/?LinkId=116958)＞(機器翻譯)。  
+-   如需詳細資訊，請參閱＜ [Microsoft 叢集的 SQL Server 支援原則](https://go.microsoft.com/fwlink/?LinkId=116958)＞(機器翻譯)。  
   
--   如需有關適當仲裁磁碟機組態的詳細資訊，請參閱＜ [仲裁磁碟機組態資訊](http://go.microsoft.com/fwlink/?LinkId=196816)＞(機器翻譯)。  
+-   如需有關適當仲裁磁碟機組態的詳細資訊，請參閱＜ [仲裁磁碟機組態資訊](https://go.microsoft.com/fwlink/?LinkId=196816)＞(機器翻譯)。  
   
 -   若要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 來源安裝檔案與叢集位於不同網域時安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，請將安裝檔案複製到可供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集使用的目前網域。  
   
@@ -149,7 +148,7 @@ ms.locfileid: "48116448"
   
 -   檢閱 [Security Considerations for a SQL Server Installation](../../install/security-considerations-for-a-sql-server-installation.md)中的內容。  
   
--   若要以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]啟用 Kerberos 驗證，請參閱 [知識庫中的](http://support.microsoft.com/kb/319723) 如何使用 SQL Server Kerberos 驗證 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (機器翻譯)。  
+-   若要以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]啟用 Kerberos 驗證，請參閱 [知識庫中的](https://support.microsoft.com/kb/319723) 如何使用 SQL Server Kerberos 驗證 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (機器翻譯)。  
   
   
   
@@ -228,7 +227,7 @@ ms.locfileid: "48116448"
      如果您決定為相同的子網路設定超過一個 IP 位址，您可能會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 啟動時，遇到用戶端連接失敗。  
   
 #### <a name="related-content"></a>相關內容  
- 如需 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 多站台容錯移轉的詳細資訊，請參閱 [Failover Clusters in Windows Server 2008 R2](http://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) (Windows Server 2008 R2 的容錯移轉叢集) 和 [Design for a Clustered Service or Application in a Multi-Site Failover Cluster](http://go.microsoft.com/fwlink/?LinkId=177873)(針對多站台容錯移轉叢集中的叢集服務或應用程式進行設計)。  
+ 如需 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 多站台容錯移轉的詳細資訊，請參閱 [Failover Clusters in Windows Server 2008 R2](https://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) (Windows Server 2008 R2 的容錯移轉叢集) 和 [Design for a Clustered Service or Application in a Multi-Site Failover Cluster](https://go.microsoft.com/fwlink/?LinkId=177873)(針對多站台容錯移轉叢集中的叢集服務或應用程式進行設計)。  
   
 ##  <a name="WSFC"></a> 設定 Windows Server 容錯移轉叢集  
   
@@ -238,7 +237,7 @@ ms.locfileid: "48116448"
   
 -   WSFC 必須能夠使用 IsAlive 檢查，驗證容錯移轉叢集執行個體是否正在執行中。 這需要使用信任連接來連接到伺服器。 根據預設，系統不會將執行叢集服務的帳戶設定為叢集中節點上的管理員，而且 BUILTIN\Administrators 群組沒有登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的權限。 只有當您變更叢集節點上的權限時，這些設定才會變更。  
   
--   設定網域名稱服務 (DNS) 或 Windows 網際網路名稱服務 (WINS)。 DNS 伺服器或 WINS 伺服器必須要在安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集的環境中執行。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] IP 介面虛擬參考的動態網域名稱服務註冊。 DNS 伺服器組態應該要允許叢集節點動態登錄對應至網路名稱的線上 IP 位址。 如果無法完成動態註冊，安裝程式會失敗，而且會回復安裝。 如需詳細資訊，請參閱＜ [此知識庫文件](http://support.microsoft.com/kb/947048)＞(機器翻譯)。  
+-   設定網域名稱服務 (DNS) 或 Windows 網際網路名稱服務 (WINS)。 DNS 伺服器或 WINS 伺服器必須要在安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集的環境中執行。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] IP 介面虛擬參考的動態網域名稱服務註冊。 DNS 伺服器組態應該要允許叢集節點動態登錄對應至網路名稱的線上 IP 位址。 如果無法完成動態註冊，安裝程式會失敗，而且會回復安裝。 如需詳細資訊，請參閱＜ [此知識庫文件](https://support.microsoft.com/kb/947048)＞(機器翻譯)。  
   
   
   

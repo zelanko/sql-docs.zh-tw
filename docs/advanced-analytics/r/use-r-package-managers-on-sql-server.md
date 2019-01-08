@@ -1,6 +1,6 @@
 ---
-title: SQL Server 機器學習服務上安裝新的 R 套件 |Microsoft Docs
-description: 將新的 R 套件新增至 SQL Server 2016 R Services 或 SQL Server 2017 Machine Learning 服務 （資料庫）
+title: 使用 R 套件管理員 SQL Server Machine Learning 服務
+description: 使用標準的 R 命令，例如 install.packages 將新的 R 套件新增至 SQL Server 2016 R Services 或 SQL Server 2017 Machine Learning 服務 （資料庫）。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/29/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5eb14dde38f9ef7804c62adeaa3cdc1df0f5552b
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: a7ef1d63394da8bf084fabb93382ee565208e137
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864346"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432881"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>使用 SQL Server 上安裝 R 套件的 R 套件管理員
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47864346"
 
 1. 以滑鼠右鍵按一下 RGui.exe，然後選取**系統管理員身分執行**。 如果您沒有必要的權限，請連絡資料庫管理員，並提供所需的套件清單。
 
-1. 從命令列中，如果您知道封裝名稱，您可以輸入：`install.packages("the_package-name")`雙引號所需的封裝名稱。
+1. 從命令列中，如果您知道封裝名稱，您可以輸入：`install.packages("the_package-name")` 雙引號是必要的封裝名稱。
 
 1. 當系統要求您的鏡像網站，選取 是方便您位置的任何網站。
 

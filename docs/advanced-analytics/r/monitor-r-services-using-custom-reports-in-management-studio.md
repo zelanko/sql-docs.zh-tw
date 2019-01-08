@@ -1,5 +1,5 @@
 ---
-title: 監視使用 Management Studio 中自訂報告的 R 服務 |Microsoft 文件
+title: 在 Management Studio-SQL Server Machine Learning 服務中使用自訂報表監視 R Services
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,27 +7,27 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0e444612a5acd0726bdd6fb743e43813d6b0caf7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 48c0912794f1aac0712a529f4cf8dde10735c9d8
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31201960"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432601"
 ---
-# <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>監視使用 Management Studio 中自訂報告的機器學習服務
+# <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>使用 Management Studio 中的自訂報表監視機器學習服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-若要讓您輕鬆地管理用於機器學習服務執行個體，產品團隊提供數個範例自訂報告，您可以加入 SQL Server Management Studio。 在這些報表中，您可以檢視這類詳細資料：
+若要讓您更輕鬆地管理用於機器學習服務的執行個體，產品小組提供了數個您可以加入 SQL Server Management Studio 的範例自訂報告。 在這些報表中，您可以檢視這類詳細資料：
 
 - 使用中的 R 或 Python 的工作階段
 - 執行個體的組態設定
-- 機器學習工作的執行統計資料
-- R 服務的擴充的事件
-- 目前的執行個體上安裝 R 或 Python 封裝
+- Machine learning 作業的執行統計資料
+- R Services 的擴充的事件
+- 目前的執行個體上安裝的 R 或 Python 套件
 
-本文說明如何安裝及使用特別為機器 leaerning 所提供的自訂報表。 
+這篇文章說明如何安裝和使用特別針對機器 leaerning 所提供的自訂報表。 
 
-Management Studio 中報表的一般簡介，請參閱[在 Management Studio 中的自訂報告](../../ssms/object/custom-reports-in-management-studio.md)。
+Management Studio 中報表的一般簡介，請參閱 < [Management Studio 中的自訂報表](../../ssms/object/custom-reports-in-management-studio.md)。
 
 ## <a name="how-to-install-the-reports"></a>如何安裝報表
 
@@ -47,7 +47,7 @@ Management Studio 中報表的一般簡介，請參閱[在 Management Studio 中
     + [SSMS 自訂報表](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)
 
     > [!NOTE]
-    > 報表可以搭配 SQL Server 2017 Machiine 學習 Services 或 SQL Server 2016 R Services。
+    > 報表可以搭配 SQL Server 2017 Machiine 學習服務或 SQL Server 2016 R Services。
 
 2. 若要下載這些範例，您也可以登入 GitHub，建立範例的本機分支。 
 
@@ -72,37 +72,37 @@ Management Studio 中報表的一般簡介，請參閱[在 Management Studio 中
 > [!IMPORTANT]
 > 某些電腦無法使用這些報表，例如顯示裝置解析度高於 1080p 或為高 DPI 的電腦，或處於某些遠端桌面工作階段中的電腦。 SSMS 的報表檢視器控制項中有一個 Bug，會損毀報表。
 
-## <a name="report-list"></a>報告清單
+## <a name="report-list"></a>報表清單
 
-產品範例儲存機制，在 GitHub 中的目前包含下列報表：
+在 GitHub 中的產品範例存放庫目前包含下列報表：
 
 + **R Services - 使用中的工作階段**
 
-  使用此報表來檢視目前連接到 SQL Server 執行個體並執行機器學習工作的使用者。 
+  若要檢視目前連接到 SQL Server 執行個體並執行機器學習工作的使用者使用此報表。 
   
 + **R Services - 組態**
 
-  若要檢視的外部指令碼執行階段和相關的服務組態使用此報表。 報表會指出是否需要重新啟動，並檢查所需的網路通訊協定。 
+  若要檢視的外部指令碼執行階段和相關的服務組態中使用此報表。 報表會指出是否需要重新啟動，並檢查所需的網路通訊協定。 
   
-  隱含的驗證，才能在 SQL Server 做為運算環境中執行的機器學習工作。 若要確認設定，隱含的驗證，此報表會確認群組 SQLRUserGroup 是否存在的資料庫登入。
+  隱含的驗證，才能在 SQL Server 作為計算內容中執行的機器學習工作。 若要確認該隱含的驗證設定，報表會驗證群組 SQLRUserGroup 是否存在的資料庫登入。
 
  + **R Services - 設定執行個體** 
 
-   此報表被要幫助您設定機器學習。 您也可以執行此報表來修正之前的報表中找到的組態錯誤。
+   此報表可協助您設定機器學習服務。 您也可以執行這份報告來修正前一份報表中找到的組態錯誤。
  
 + **R Services - 執行統計資料**
 
-  您可以使用這份報表來檢視機器學習工作的執行統計資料。 例如，您可以取得已執行的 R 指令碼總數、平行執行次數和最常使用的 RevoScaleR 函式。 按一下**檢視 SQL 指令碼**取得這份報告背後的完整 T-SQL 程式碼。
+  您可以使用這份報告來檢視 machine learning 作業的執行統計資料。 例如，您可以取得已執行的 R 指令碼總數、平行執行次數和最常使用的 RevoScaleR 函式。 按一下 **檢視 SQL 指令碼**以取得完整 T-SQL 程式碼後置這份報表。
 
   報表目前只監視 RevoScaleR 套件函式的統計資料。
 
 + **R Services - 擴充的事件**
 
-  使用此報表來檢視擴充事件，可供監視與外部指令碼執行階段相關的工作清單。 按一下**檢視 SQL 指令碼**取得這份報告背後的完整 T-SQL 程式碼。
+  使用此報表以檢視可用來監視外部指令碼執行階段的相關工作的擴充事件清單。 按一下 **檢視 SQL 指令碼**以取得完整 T-SQL 程式碼後置這份報表。
 
 + **R Services - 套件**
 
-  使用此報表來檢視 SQL Server 執行個體上安裝的 R 或 Python 封裝清單。
+  使用此報表來檢視 SQL Server 執行個體上安裝的 R 或 Python 套件的清單。
 
 + **R Services - 資源使用狀況**
 
@@ -110,6 +110,6 @@ Management Studio 中報表的一般簡介，請參閱[在 Management Studio 中
 
 ## <a name="see-also"></a>另請參閱
 
-[監視 windows 服務](managing-and-monitoring-r-solutions.md)
+[監視服務](managing-and-monitoring-r-solutions.md)
 
 [R Services 的擴充事件](extended-events-for-sql-server-r-services.md)

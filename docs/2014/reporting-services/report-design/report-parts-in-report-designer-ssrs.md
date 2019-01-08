@@ -13,19 +13,19 @@ ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8a04fb5ec226f346e9fe5fa2259361c1a29230ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f63a76234d4d3e394b838cb99b99e4607ea765de
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182788"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363280"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>報表設計師中的報表組件 (SSRS)
   在報表設計師中，建立專案的資料表、圖表及其他報表項目之後，您可以將它們當做 *「報表組件」* (Report part) 發行至報表伺服器或與報表伺服器整合的 SharePoint 網站，以供您和其他人員在其他報表中重複使用這些組件。  
   
- 一般來說，報表組件在報表設計師和報表產生器中的運作方式都相同。 若要深入了解基本功能，請參閱[報表組件&#40;報表產生器及 SSRS&#41; ](../report-parts-report-builder-and-ssrs.md)中[報表產生器文件](http://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com 上。  
+ 一般來說，報表組件在報表設計師和報表產生器中的運作方式都相同。 若要深入了解基本功能，請參閱[報表組件&#40;報表產生器及 SSRS&#41; ](../report-parts-report-builder-and-ssrs.md)中[報表產生器文件](https://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com 上。  
   
- 報表組件在報表設計師中運作的方式有基本的差異。 主要差異在於工作流程。 報表產生器可進行共同作業式撰寫：我建立報表組件並加以發行。 您可以重複使用、修改，並重新發行。 在報表設計師中，發行作業是單向的：我可以從報表設計師發行報表組件，而且您可以重複使用它。 但是，我無法在報表設計師的報表中重複使用現有的報表組件。 本主題會先快速介紹報表組件的概觀，然後再詳細說明這些差異。  
+ 報表組件在報表設計師中運作的方式有基本的差異。 主要差異在於工作流程。 報表產生器可讓共同作業式撰寫：我建立報表組件，並將它發佈。 您可以重複使用、修改，並重新發行。 在報表設計師中，發行作業是單向：我可以發行報表組件從報表設計師，您可以重複使用它。 但是，我無法在報表設計師的報表中重複使用現有的報表組件。 本主題會先快速介紹報表組件的概觀，然後再詳細說明這些差異。  
   
 ##  <a name="ComponentWorkflow"></a> 報表組件發行的生命週期  
  ![rs_ComponentCreation](../media/rs-componentcreation.gif "rs_ComponentCreation")  
@@ -67,7 +67,7 @@ ms.locfileid: "48182788"
   
 -   清單  
   
- 如果您發行的報表組件會顯示資料，如資料表、矩陣或圖表，您可以共用資料集為其根據，否則，當您發行該報表組件時，所根據的資料集會儲存為內嵌資料集。 內嵌資料集可以使用內嵌資料集來源為根據，但認證並未儲存於內嵌資料集來源中。 因此，如果您的報表組件是以使用內嵌資料來源的內嵌資料集為依據，任何人只要重複使用此報表組件都必須提供內嵌資料來源的認證。 若要避免這種情形，請以含預存認證的共用資料來源做為內嵌和共用資料集的根據。 如需詳細資訊，請參閱 <<c0> [ 報表組件和報表產生器中的資料集](../report-data/report-parts-and-datasets-in-report-builder.md)中[報表產生器文件](http://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com 上。  
+ 如果您發行的報表組件會顯示資料，如資料表、矩陣或圖表，您可以共用資料集為其根據，否則，當您發行該報表組件時，所根據的資料集會儲存為內嵌資料集。 內嵌資料集可以使用內嵌資料集來源為根據，但認證並未儲存於內嵌資料集來源中。 因此，如果您的報表組件是以使用內嵌資料來源的內嵌資料集為依據，任何人只要重複使用此報表組件都必須提供內嵌資料來源的認證。 若要避免這種情形，請以含預存認證的共用資料來源做為內嵌和共用資料集的根據。 如需詳細資訊，請參閱 <<c0> [ 報表組件和報表產生器中的資料集](../report-data/report-parts-and-datasets-in-report-builder.md)中[報表產生器文件](https://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com 上。  
   
  在報表設計師中發行報表組件的程序有兩個步驟：  
   

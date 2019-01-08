@@ -11,12 +11,12 @@ ms.assetid: 5be0cec7-f639-4eeb-835e-e3204ae619e9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ebaafa4b25c4bd4847af24a36462e15d04d7774a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 792e3e8eb7e27f41aa03523d93dba02379213a17
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147998"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372970"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>建立用於撥接中心模型的預測 (中繼資料採礦教學課程)
   現在您已經了解排班、操作員數目、電話，以及服務等級之間的互動關係，接著就可以準備建立一些用來進行商務分析和規劃的預測查詢。 您將先針對探勘模型建立一些預測，以測試一些假設。 接著您將使用羅吉斯迴歸模型建立大量預測。  
@@ -184,9 +184,9 @@ ms.locfileid: "48147998"
 ## <a name="remarks"></a>備註  
  適用於 Excel 2007 的資料採礦增益集提供羅吉斯迴歸精靈，讓您輕鬆回應複雜的問題，例如，需要多少位二級操作員，才能將某個排班的服務等級提升至目標等級。 您可以免費下載資料採礦增益集，其中包含類神經網路或羅吉斯迴歸演算法的精靈。 如需詳細資訊，請參閱下列連結：  
   
--   [SQL Server 2005 資料採礦增益集適用於 Office 2007](http://www.microsoft.com/sql/technologies/dm/addins.mspx)： 搜尋目標與假設狀況分析  
+-   [SQL Server 2005 資料採礦增益集適用於 Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx):搜尋目標與假設狀況分析  
   
--   [SQL Server 2008 資料採礦增益集適用於 Office 2007](http://go.microsoft.com/fwlink/?LinkID=117790)： 目標搜尋狀況分析、 假設狀況分析，以及預測計算器  
+-   [SQL Server 2008 資料採礦增益集適用於 Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790):搜尋目標狀況分析、假設狀況分析及預測計算器  
   
 ## <a name="conclusion"></a>結論  
  您已經學到如何建立、自訂與解譯以 Microsoft 類神經網路演算法和 Microsoft 羅吉斯迴歸演算法為基礎的採礦模型。 這些模型類型相當複雜，在分析方式上也可以有無限的變化，因此可能相當複雜且難以上手。  
@@ -196,7 +196,7 @@ ms.locfileid: "48147998"
 ## <a name="see-also"></a>另請參閱  
  [羅吉斯迴歸模型查詢範例](../../2014/analysis-services/data-mining/logistic-regression-model-query-examples.md)   
  [Microsoft 羅吉斯迴歸演算法](../../2014/analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Microsoft 類神經網路演算法](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [類神經網路模型查詢範例](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

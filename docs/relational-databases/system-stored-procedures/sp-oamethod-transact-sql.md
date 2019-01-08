@@ -18,12 +18,12 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b0e2e11dd905f48eaed16e0c083f11bde103a80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 525a66fa00981c4360295ee9c704102cd1224220
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704436"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591462"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_OAMethod objecttoken , methodname
  *方法名稱*  
  這是要呼叫之 OLE 物件的方法名稱。  
   
- *returnvalue***輸出**  
+ _returnvalue_**輸出**  
  這是 OLE 物件的方法傳回值。 如果指定的話，它必須是適當資料類型的本機變數。  
   
  如果此方法會傳回單一值，指定區域變數*returnvalue*，它會傳回此方法傳回值，在本機變數，或不指定*returnvalue*，就會傳回方法會傳回給用戶端的值，做為單一資料行、 單一資料列結果集。  
@@ -65,17 +65,17 @@ sp_OAMethod objecttoken , methodname
   
 -   方法在輸出參數中傳回陣列。  
   
- [  *@parametername* * * =**]*參數*[**輸出**]  
+ [ _@parametername_ **=** ]*參數*[**輸出**]  
  這是一個方法參數。 如果指定，*參數*必須是適當的資料類型的值。  
   
  若要取得輸出參數，傳回值*參數*必須是適當資料類型的本機變數並**輸出**必須指定。 如果指定常數參數，或如果**輸出**未指定，所有傳回的輸出參數的值會被忽略。  
   
- 如果指定， *parametername*必須是名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]具名參數。 請注意，  **@** *parametername*不是[!INCLUDE[tsql](../../includes/tsql-md.md)]本機變數。At 符號 (**@ * *) 已移除，並*parametername*傳遞給 OLE 物件做為參數名稱。 您必須在指定好所有位置性參數之後，指定所有具名參數。  
+ 如果指定， *parametername*必須是名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]具名參數。 請注意， **@**_parametername_is 不[!INCLUDE[tsql](../../includes/tsql-md.md)]本機變數。 At 符號 (**@**) 已移除，並*parametername*傳遞給 OLE 物件做為參數名稱。 您必須在指定好所有位置性參數之後，指定所有具名參數。  
   
  *n*  
  這是一個預留位置，表示可以指定多個參數。  
   
-> [!NOTE]  
+> [!NOTE]
 >  *@parametername* 可以是具名的參數，因為它是指定方法的一部分，並且會傳遞至物件。 這個預存程序的其他參數是依照位置來指定，而不是名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  

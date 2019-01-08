@@ -21,33 +21,33 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82b31b8a2a1a50b1ee3c9cad37f8f5db5374c6cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ec1db8e0f88bea5a02eb54b94a88194882ad9ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229918"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370490"
 ---
 # <a name="changing-passwords-programmatically"></a>以程式設計方式變更密碼
   在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，當使用者密碼到期時，只有系統管理員可以重設密碼。 開頭[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支援處理密碼逾期，以程式設計方式透過兩[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式，以及透過變更**SQL Server 登入**對話方塊。  
   
 > [!NOTE]  
->  如果可能的話，請在執行階段提示使用者輸入其認證，並避免以保存的格式儲存其認證。 如果您必須保存其認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。 如需使用密碼的詳細資訊，請參閱[強式密碼](../../security/strong-passwords.md)。  
+>  如果可能的話，請在執行階段提示使用者輸入其認證，並避免以保存的格式儲存其認證。 如果您必須保存其認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。 如需使用密碼的詳細資訊，請參閱[強式密碼](../../security/strong-passwords.md)。  
   
 ## <a name="sql-server-login-error-codes"></a>SQL Server 登入錯誤碼  
  當連接因為驗證問題而無法建立時，將會提供下列其中一個 SQL Server 錯誤碼給應用程式來協助診斷和復原。  
   
 |SQL Server 錯誤碼|錯誤訊息|  
 |---------------------------|-------------------|  
-|15113|使用者 '%.*ls' 登入失敗。原因: 密碼驗證失敗。 帳戶已經鎖定。|  
-|18463|使用者 '%.*ls' 的登入失敗。 原因: 密碼變更失敗。 密碼此時不適用。|  
-|18464|使用者 '%.*ls' 的登入失敗。 原因: 密碼變更失敗。 因為密碼太短而不符合原則需求。|  
-|18465|使用者 '%.*ls' 的登入失敗。 原因: 密碼變更失敗。 因為密碼太長而不符合原則需求。|  
-|18466|使用者 '%.*ls' 的登入失敗。 原因: 密碼變更失敗。 因為密碼不夠複雜而不符合原則需求。|  
-|18467|使用者 '%.*ls' 的登入失敗。 原因: 密碼變更失敗。 密碼不符合密碼篩選 DLL 的需求。|  
-|18468|使用者 '%.*ls' 的登入失敗。 原因: 密碼變更失敗。 密碼驗證期間發生意外的錯誤。|  
-|18487|使用者 '%.*ls' 的登入失敗。 原因: 帳戶的密碼已過期。|  
-|18488|使用者 '%.*ls' 的登入失敗。 原因: 必須變更帳戶的密碼。|  
+|15113|使用者登入失敗 ' %.* ls' 原因：密碼驗證失敗。 帳戶已經鎖定。|  
+|18463|使用者 '%.*ls' 的登入失敗。 理由：密碼變更失敗。 密碼此時不適用。|  
+|18464|使用者 '%.*ls' 的登入失敗。 理由：密碼變更失敗。 因為密碼太短而不符合原則需求。|  
+|18465|使用者 '%.*ls' 的登入失敗。 理由：密碼變更失敗。 因為密碼太長而不符合原則需求。|  
+|18466|使用者 '%.*ls' 的登入失敗。 理由：密碼變更失敗。 因為密碼不夠複雜而不符合原則需求。|  
+|18467|使用者 '%.*ls' 的登入失敗。 理由：密碼變更失敗。 密碼不符合密碼篩選 DLL 的需求。|  
+|18468|使用者 '%.*ls' 的登入失敗。 理由：密碼變更失敗。 密碼驗證期間發生意外的錯誤。|  
+|18487|使用者 '%.*ls' 的登入失敗。 理由：帳戶的密碼已過期。|  
+|18488|使用者 '%.*ls' 的登入失敗。 理由：必須變更帳戶的密碼。|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 提供者  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援密碼逾期，透過使用者介面和以程式設計的方式。  

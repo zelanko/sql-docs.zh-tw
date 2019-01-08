@@ -1,6 +1,6 @@
 ---
-title: 監視 SQL Server Machine Learning 服務使用動態管理檢視 (Dmv) |Microsoft Docs
-description: 您可以使用動態管理檢視 (Dmv) 來監視 SQL Server Machine Learning 服務。
+title: 監視使用動態管理檢視 (Dmv)-SQL Server Machine Learning 的 R 和 Python 指令碼執行
+description: 您可以使用動態管理檢視 (Dmv) 來監視 R 和 Python 中 SQL Server Machine Learning 服務的外部指令碼執行。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: aa05c78f8bac4af5187b815126e0ec9e4b6fff4e
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 0d07288bccc641f67644a37cd027e093fc3967c8
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743451"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645547"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>監視 SQL Server Machine Learning 服務使用動態管理檢視 (Dmv)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "50743451"
 
 執行查詢，來取得此輸出。 如需有關檢視和使用函式的詳細資訊，請參閱[sys.dm_server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)， [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)，並[SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)。
 
-```SQL
+```sql
 SELECT CAST(SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS INT) AS IsMLServicesInstalled
     , CAST(value_in_use AS INT) AS ExternalScriptsEnabled
     , COALESCE(SIGN(SUSER_ID(CONCAT (
@@ -93,7 +93,7 @@ WHERE name = 'external scripts enabled';
 
 執行查詢，來取得此輸出。 如需有關使用動態管理檢視的詳細資訊，請參閱[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)， [sys.dm_external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)，並[sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)。
 
-```SQL
+```sql
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
     , s.login_name, r.wait_time, r.wait_type, r.last_wait_type, r.total_elapsed_time, r.cpu_time
     , r.reads, r.logical_reads, r.writes, er.language, er.degree_of_parallelism, er.external_user_name
@@ -133,7 +133,7 @@ ON s.session_id = r.session_id;
 
 執行查詢，來取得此輸出。 如需有關使用動態管理檢視的詳細資訊，請參閱[sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)。 查詢只會傳回執行一次以上的函式。
 
-```SQL
+```sql
 SELECT language, counter_name, counter_value
 FROM sys.dm_external_script_execution_stats
 WHERE counter_value > 0
@@ -156,7 +156,7 @@ ORDER BY language, counter_name;
 
 執行查詢，來取得此輸出。 如需有關使用動態管理檢視的詳細資訊，請參閱[sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)。
 
-```SQL
+```sql
 SELECT counter_name, cntr_value
 FROM sys.dm_os_performance_counters 
 WHERE object_name LIKE '%External Scripts%'
@@ -182,7 +182,7 @@ WHERE object_name LIKE '%External Scripts%'
 
 執行查詢，來取得此輸出。 如需有關使用動態管理檢視的詳細資訊，請參閱[sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)並[sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)。
 
-```SQL
+```sql
 SELECT physical_memory_kb, committed_kb
     , (SELECT SUM(peak_memory_kb)
         FROM sys.dm_resource_governor_external_resource_pools AS ep
@@ -200,13 +200,13 @@ FROM sys.dm_os_sys_info;
 
 ## <a name="memory-configuration"></a>記憶體組態
 
-檢視 SQL Server 和外部資源集區的百分比表示的最大記憶體組態資訊。 如果執行 SQL Server 的預設值是`max server memory (MB)`，它會被視為作業系統記憶體的 100%。
+檢視 SQL Server 和外部資源集區的百分比表示的最大記憶體組態資訊。 如果 SQL Server 正在執行的預設值是`max server memory (MB)`，它會被視為作業系統記憶體的 100%。
 
 ![記憶體設定查詢的輸出](media/dmv-memory-configuration.png "記憶體設定查詢的輸出")
 
 執行查詢，來取得此輸出。 如需有關使用檢視的詳細資訊，請參閱[sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)並[sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)。
 
-```SQL
+```sql
 SELECT 'SQL Server' AS name
     , CASE CAST(c.value AS BIGINT)
         WHEN 2147483647 THEN 100
@@ -234,7 +234,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 執行查詢，來取得此輸出。 如需有關使用動態管理檢視的詳細資訊，請參閱[sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)並[sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)。
 
-```SQL
+```sql
 SELECT CONCAT ('SQL Server - ', p.name) AS pool_name
     , p.total_cpu_usage_ms, p.read_io_completed_total, p.write_io_completed_total
 FROM sys.dm_resource_governor_resource_pools AS p
@@ -265,7 +265,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 執行查詢，來取得此輸出。 查詢使用 R 指令碼來判斷哪些 R 套件安裝 SQL Server。
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'R'
 , @script = N'
 OutputDataSet <- data.frame(installed.packages()[,c("Package", "Version", "Depends", "License", "LibPath")]);'
@@ -291,7 +291,7 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 執行查詢，來取得此輸出。 查詢會使用 Python 指令碼，來判斷與 SQL Server 一起安裝的 Python 套件。
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'Python'
 , @script = N'
 import pip

@@ -14,12 +14,12 @@ ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ab17646913b217b877c09070affe65be49bf880
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ead368dece8a0c1effd8f8ddc7ff5e5793e8350
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088948"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355519"
 ---
 # <a name="availability-replica-is-disconnected"></a>可用性複本已中斷連接
     
@@ -29,14 +29,14 @@ ms.locfileid: "48088948"
 |-|-|  
 |**原則名稱**|可用性複本連接狀態|  
 |**問題**|可用性複本已中斷連接。|  
-|**類別目錄**|**嚴重**|  
+|**分類**|**嚴重**|  
 |**Facet**|可用性複本|  
   
 ## <a name="description"></a>描述  
  這項原則檢查可用性複本之間的連接狀態。 當可用性複本的連接狀態為 DISCONNECTED 時，原則為狀況不良。 否則原則為狀況良好。  
   
 > [!NOTE]  
->  在此 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]版本中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [Availability replica is disconnected](http://go.microsoft.com/fwlink/p/?LinkId=220857) (可用性複本已中斷連接)。  
+>  在此 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]版本中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [Availability replica is disconnected](https://go.microsoft.com/fwlink/p/?LinkId=220857) (可用性複本已中斷連接)。  
   
 ## <a name="possible-causes"></a>可能的原因  
  次要複本未連接到主要複本。 連接狀態為 DISCONNECTED。 這個問題可能是由於下列原因所造成：  

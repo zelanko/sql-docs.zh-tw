@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c0372c07edc32be23034a4c221e2480bd2047be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2393792341fdbc28bbc0f74657aa2f3cf54ee4d1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213078"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374820"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>記憶體最佳化資料表的查詢處理指南
   記憶體中 OLTP 推出記憶體最佳化資料表以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的原生編譯預存程序。 本文針對記憶體最佳化資料表和原生編譯的預存程序提供查詢處理的概觀。  
@@ -60,7 +60,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- 為了建構本文中所顯示的查詢計劃，這兩個資料表中已填入 Northwind 範例資料庫中的範例資料，您可以從 [Northwind and pubs Sample Databases for SQL Server 2000](http://www.microsoft.com/download/details.aspx?id=23654)(SQL Server 2000 的 Northwind 和 pubs 範例資料庫) 下載該資料庫。  
+ 為了建構本文中所顯示的查詢計劃，這兩個資料表中已填入 Northwind 範例資料庫中的範例資料，您可以從 [Northwind and pubs Sample Databases for SQL Server 2000](https://www.microsoft.com/download/details.aspx?id=23654)(SQL Server 2000 的 Northwind 和 pubs 範例資料庫) 下載該資料庫。  
   
  請看下列查詢，其中聯結了 Customer 和 Order 這兩個資料表，並且會傳回訂單識別碼和相關聯的客戶資訊：  
   
@@ -79,7 +79,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   來自 Order 資料表的資料是使用 CustomerID 資料行上的非叢集索引擷取。 這個索引同時包含用於聯結的 CustomerID 資料行，以及傳回給使用者的主索引鍵資料行 OrderID。 從 Orders 資料表傳回其他資料行會需要查閱 Order 資料表的叢集索引。  
   
--   邏輯運算子 `Inner Join` 是由實體運算子 `Merge Join` 所實作。 其他實體聯結類型包括 `Nested Loops` 和 `Hash Join`。 `Merge Join`運算子會利用這兩個索引會在聯結資料行 CustomerID 上排序的事實。  
+-   邏輯運算子 `Inner Join` 是由實體運算子 `Merge Join` 所實作。 其他實體聯結類型包括 `Nested Loops` 和 `Hash Join`。 `Merge Join` 運算子會利用兩個索引都會在聯結資料行 CustomerID 上排序的情況。  
   
  請考慮與這個查詢稍微不同的做法，傳回 Order 資料表的所有資料列，而不只是 OrderID：  
   
@@ -92,7 +92,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  ![雜湊聯結以磁碟為基礎的資料表的查詢計劃。](../../database-engine/media/hekaton-query-plan-2.gif "雜湊聯結以磁碟為基礎的資料表的查詢計劃。")  
 磁碟為基礎資料表的雜湊聯結查詢計劃。  
   
- 在這個查詢中，Orders 資料表的資料列是使用叢集索引擷取。 `Hash Match`實體運算子現在用於`Inner Join`。 Order 上的叢集的索引不 CustomerID 上排序，因此`Merge Join`會需要排序運算子，就會影響效能。 請記下與上一個範例中 `Hash Match` 運算子成本 (46%) 相較的 `Merge Join` 運算子相對成本 (75%)。 最佳化工具會考慮`Hash Match`運算子也在前一個範例中，但結果為`Merge Join`運算子提供更佳的效能。  
+ 在這個查詢中，Orders 資料表的資料列是使用叢集索引擷取。 `Hash Match` 實體運算子現在用於 `Inner Join`。 Order 上的叢集索引不會在 CustomerID 上排序，因此 `Merge Join` 會需要排序運算子，而這樣就會影響效能。 請記下與上一個範例中 `Hash Match` 運算子成本 (46%) 相較的 `Merge Join` 運算子相對成本 (75%)。 最佳化工具原本也會在上一個範例中考慮 `Hash Match` 運算子，但結果卻是 `Merge Join` 運算子提供更佳效能的結果。  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 磁碟資料表的查詢處理  
  下圖概述 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中隨選查詢的查詢處理流程：  
@@ -170,7 +170,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
     -   記憶體最佳化資料表不支援叢集索引。 不過，每個記憶體最佳化的資料表都必須至少有一個非叢集索引，而且記憶體最佳化資料表上的所有索引均可有效率地存取資料表中的所有資料行，不必將資料行儲存於索引中，或參考叢集的索引。  
   
--   這個計畫包含 `Hash Match`，而不是 `Merge Join`。 Order 和 Customer 資料表上的索引是雜湊索引，因此未進行排序。 A`Merge Join`會需要排序運算子，這樣會降低效能。  
+-   這個計畫包含 `Hash Match`，而不是 `Merge Join`。 Order 和 Customer 資料表上的索引是雜湊索引，因此未進行排序。 `Merge Join` 會需要排序運算子，而這樣會降低效能。  
   
 ## <a name="natively-compiled-stored-procedures"></a>原生編譯的預存程序  
  原生編譯的預存程序是編譯成機器碼的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 預存程序，而不是由查詢執行引擎所解譯。 下列指令碼會建立執行範例查詢的原生編譯預存程序 (從「範例查詢」區段)。  
@@ -189,7 +189,7 @@ FROM dbo.[Order] o INNER JOIN dbo.[Customer] c
 END  
 ```  
   
- 原生編譯的預存程序會在建立時編譯，而解譯的預存程序則是在第一次執行時編譯  (編譯的一部分，尤其是指剖析和 Algebrization，會在建立時發生。 不過，對於解譯的預存程序，查詢計劃的最佳化是在第一次執行時進行)。重新編譯邏輯也很類似。 如果伺服器重新啟動，原生編譯的預存程序就會在第一次執行程序時重新編譯。 如果計畫已不在計畫快取中，解譯的預存程序就會重新編譯。 下表摘要說明原生編譯的預存程序及解譯的預存程序之編譯和重新編譯案例：  
+ 原生編譯的預存程序會在建立時編譯，而解譯的預存程序則是在第一次執行時編譯 (編譯的一部分，尤其是指剖析和 Algebrization，會在建立時發生。 不過，對於解譯的預存程序，查詢計劃的最佳化是在第一次執行時進行)。重新編譯邏輯也很類似。 如果伺服器重新啟動，原生編譯的預存程序就會在第一次執行程序時重新編譯。 如果計畫已不在計畫快取中，解譯的預存程序就會重新編譯。 下表摘要說明原生編譯的預存程序及解譯的預存程序之編譯和重新編譯案例：  
   
 ||原生編譯|對記憶體最佳化資料表進行解譯的|  
 |-|-----------------------|-----------------|  
@@ -205,7 +205,7 @@ END
   
  這個程序描述為：  
   
-1.  使用者發出`CREATE PROCEDURE`陳述式來[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+1.  使用者對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發出 `CREATE PROCEDURE` 陳述式。  
   
 2.  剖析器和 Algebrizer 會為程序建立處理流程，以及為預存程序中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查詢建立樹狀結構。  
   
@@ -226,7 +226,7 @@ END
   
 2.  剖析器會擷取名稱和預存程序參數。  
   
-     如果陳述式已備妥，例如使用`sp_prep_exec`，剖析器不需要擷取程序名稱，並在執行階段參數。  
+     如果陳述式已備妥，例如使用 `sp_prep_exec`，則剖析器不需要在執行時擷取程序名稱和參數。  
   
 3.  記憶體中 OLTP 執行階段會尋找預存程序的 DLL 進入點。  
   
@@ -236,7 +236,7 @@ END
   
  與在建立時編譯的原生編譯預存程序相反，解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 預存程序會在第一次執行時編譯。 在引動過程中編譯解譯的預存程序時，最佳化工具會在產生執行計畫時使用提供給這個引動過程的參數值。 在編譯期間使用參數的動作，就稱為參數探測。  
   
- 參數探測不會用於編譯原生編譯的預存程序。 預存程序的所有參數都會視為具有 UNKNOWN 值。 與解譯的預存程序，原生編譯預存程序也支援`OPTIMIZE FOR`提示。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)。  
+ 參數探測不會用於編譯原生編譯的預存程序。 預存程序的所有參數都會視為具有 UNKNOWN 值。 與解譯的預存程序相同，原生編譯的預存程序也支援 `OPTIMIZE FOR` 提示。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)。  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>擷取原生編譯預存程序的查詢執行計畫  
  原生編譯預存程序的查詢執行計畫，可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 [Estimated Execution Plan (估計的執行計畫)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中的 SHOWPLAN_XML 選項加以擷取。 例如：  
@@ -260,7 +260,7 @@ GO
 |SELECT|`SELECT OrderID FROM dbo.[Order]`|  
 |Insert|`INSERT dbo.Customer VALUES ('abc', 'def')`|  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`|  
-|Delete|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
+|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
 |Compute Scalar|這個運算子同時用於內建函數和類型轉換。 並非所有函數和類型轉換都可在原生編譯預存程序內部受到支援。<br /><br /> `SELECT OrderID+1 FROM dbo.[Order]`|  
 |Nested Loops Join|巢狀迴圈是原生編譯預存程序中唯一支援的聯結運算子。 即使做為解譯 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 執行的相同查詢計劃包含雜湊或合併聯結，所有包含聯結的計畫還是都會使用 Nested Loops 運算子。<br /><br /> `SELECT o.OrderID, c.CustomerID`  <br /> `FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|  
 |排序|`SELECT ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
@@ -269,7 +269,7 @@ GO
 |Stream Aggregate|請注意，Hash Match 運算子不支援彙總。 因此，即使解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中相同查詢的計畫使用 Hash Match 運算子，原生編譯預存程序中的所有彙總仍會使用 Stream Aggregate 運算子。<br /><br /> `SELECT count(CustomerID) FROM dbo.Customer`|  
   
 ## <a name="column-statistics-and-joins"></a>資料行統計資料和聯結  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會在索引鍵資料行中維護值的統計資料，以協助估計特定作業的成本，例如索引掃描或索引搜尋。 (如果您明確建立非索引之索引鍵資料行的統計資料，或者查詢最佳化工具為了回應包含述詞的查詢而建立它們，則 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 也會建立這些統計資料)。成本估計的主要標準是單一運算子所處理的資料列數  請注意，對於磁碟基礎的資料表，特定運算子所存取的頁面數目在成本估計中佔有相當大的比例。 但是，由於頁面數對於記憶體最佳化資料表而言並不重要 (一律為零)，因此這裡的討論將著重在資料列計數。 估計時間是從計劃中的索引搜尋和掃描運算子開始算起，然後延伸以納入其他運算子，像是聯結運算子。 聯結運算子所要處理的估計資料列數是以基礎索引、搜尋和掃描運算子的估計為依據。 若要對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存取，您可以觀察實際執行計畫，了解計畫中運算子的估計資料列計數和實際資料列計數之間的差異。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會在索引鍵資料行中維護值的統計資料，以協助估計特定作業的成本，例如索引掃描或索引搜尋。 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]也建立非索引鍵資料行統計資料，如果您明確建立，或者查詢最佳化工具會建立這些述詞的查詢回應中。)成本估計的主要標準是單一運算子所處理的資料列數  請注意，對於磁碟基礎的資料表，特定運算子所存取的頁面數目在成本估計中佔有相當大的比例。 但是，由於頁面數對於記憶體最佳化資料表而言並不重要 (一律為零)，因此這裡的討論將著重在資料列計數。 估計時間是從計劃中的索引搜尋和掃描運算子開始算起，然後延伸以納入其他運算子，像是聯結運算子。 聯結運算子所要處理的估計資料列數是以基礎索引、搜尋和掃描運算子的估計為依據。 若要對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存取，您可以觀察實際執行計畫，了解計畫中運算子的估計資料列計數和實際資料列計數之間的差異。  
   
  在圖 1 的範例中，  
   

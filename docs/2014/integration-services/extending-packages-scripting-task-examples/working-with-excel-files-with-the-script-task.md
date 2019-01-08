@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,25 +16,25 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78dec0807ebcfc025d997b995c7b2c083a1baf02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dbd4f546a6e09d771577cd5d297e6f1a58175469
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049544"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369910"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>以指令碼工作處理 Excel 檔案
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 Excel 連接管理員、Excel 來源和 Excel 目的地，以處理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 檔案格式試算表中儲存的資料。 本主題所述的技術會使用指令碼工作取得有關可用 Excel 資料庫 (活頁簿檔案) 與資料表 (工作表與具名範圍) 的相關資訊。 您可以輕鬆地修改這些範例，使其可與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB Provider 所支援的其他以檔案為基礎之資料來源搭配使用。  
   
  [設定套件以測試範例](#configuring)  
   
- [範例 1：檢查 Excel 檔案是否存在](#example1)  
+ [範例 1:檢查 Excel 檔案是否存在](#example1)  
   
- [範例 2：檢查 Excel 資料表是否存在](#example2)  
+ [範例 2:檢查 Excel 資料表是否存在](#example2)  
   
- [範例 3：取得資料夾中的 Excel 檔案清單](#example3)  
+ [範例 3︰取得資料夾中的 Excel 檔案的清單](#example3)  
   
- [範例 4：取得 Excel 檔案中的資料表清單](#example4)  
+ [範例 4︰取得 Excel 檔案中的資料表清單](#example4)  
   
  [顯示範例的結果](#testing)  
   
@@ -253,7 +251,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> 範例 3 描述：取得資料夾中的 Excel 檔案清單  
+##  <a name="example3"></a> 範例 3 描述：取得資料夾中的 Excel 檔案的清單  
  此範例會使用在 `ExcelFolder` 變數值中指定的資料夾內所找到的 Excel 檔案清單，來填滿陣列，然後將陣列複製到 `ExcelFiles` 變數中。 您可以使用 Foreach From Variable 列舉值來反覆運算陣列中的檔案。  
   
 #### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
@@ -266,7 +264,7 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 (**...**) 按鈕，然後在 [選取變數] 對話方塊中選取 ExcelFolder 變數。  
+    -   按一下屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取 [ExcelFolder] 變數。  
   
 3.  按一下 **ReadWriteVariables**，並使用下列其中一項方法輸入屬性值：  
   
@@ -274,7 +272,7 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 (**...**) 按鈕，然後在 [選取變數] 對話方塊中選取 ExcelFiles 變數。  
+    -   按一下屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取 [ExcelFiles] 變數。  
   
 4.  按一下 [編輯指令碼]，以開啟指令碼編輯器。  
   
@@ -341,7 +339,7 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 (**...**) 按鈕，然後在 [選取變數] 對話方塊中選取 ExcelFile 變數。  
+    -   按一下屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取 [ExcelFile] 變數。  
   
 3.  按一下 **ReadWriteVariables**，並使用下列其中一項方法輸入屬性值：  
   
@@ -349,7 +347,7 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 (**...**) 按鈕，然後在 [選取變數] 對話方塊中選取 ExcelTables 變數。  
+    -   按一下屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取 [ExcelTables] 變數。  
   
 4.  按一下 [編輯指令碼]，以開啟指令碼編輯器。  
   
@@ -454,7 +452,7 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下屬性欄位旁邊的省略符號 (**...**) 按鈕，然後在 [選取變數] 對話方塊中選取變數。  
+    -   按一下屬性欄位旁邊的省略符號 ([...]) 按鈕，然後在 [選取變數] 對話方塊中選取變數。  
   
 5.  按一下 [編輯指令碼]，以開啟指令碼編輯器。  
   
@@ -543,7 +541,7 @@ public class ScriptMain
 }  
 ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [Excel 連線管理員](../connection-manager/excel-connection-manager.md)   

@@ -11,18 +11,18 @@ ms.assetid: d7107c32-69ed-49a8-9b6e-32753eebf42c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01f576ceb6b465dd8238972d29456300a01837df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e216aa5da4ef837da632ba83d4cf6e14edb40b1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128168"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376450"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>建立資料來源 (基本資料採礦教學課程)
   A*資料來源*的資料連接所儲存和管理您的專案並部署到您[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫。 資料來源包含來源資料所在的伺服器和資料庫名稱，以及任何其他必要的連接屬性。  
   
 > [!IMPORTANT]  
->  資料庫的名稱為 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]。 如果您尚未安裝這個資料庫，請參閱[Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417)頁面。  
+>  資料庫的名稱為 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]。 如果您尚未安裝這個資料庫，請參閱[Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417)頁面。  
   
 ### <a name="to-create-a-data-source"></a>建立資料來源  
   
@@ -64,6 +64,6 @@ ms.locfileid: "48128168"
 ## <a name="see-also"></a>另請參閱  
  [建立資料來源 &#40;SSAS 多維度&#41;](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [定義資料來源](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [設定模擬選項&#40;SSAS-多維度&#41;](../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)  
+ [設定模擬選項 &#40;SSAS - 多維度&#41;](../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)  
   
   

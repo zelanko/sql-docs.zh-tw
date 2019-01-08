@@ -15,12 +15,12 @@ ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37ca0222975528efcd722ec3c39f84ca570fc08b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bda6c6038a4bdfce089d8523c2b4655d1b4d2d39
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186958"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362090"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
     
@@ -43,7 +43,7 @@ ms.locfileid: "48186958"
   
  如果此 Token 的建立方式不正確或者在傳輸期間已損毀，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就無法提供有關問題的其他資訊。  
   
- 當使用者是屬於許多群組的成員或者具有許多原則時，此 Token 的大小可能會超過一般大小才能列出所有項目。 如果此 Token 的大小超過伺服器電腦的 **MaxTokenSize** 值，用戶端就會因為一般網路錯誤 (GNE) 而無法連線，而且可能會發生錯誤 17832。 這個問題可能只會影響某些使用者：具有許多群組或原則的使用者。 當此問題是伺服器電腦的 **MaxTokenSize** 值時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中的錯誤 17832 將會伴隨狀態 9 的錯誤一起出現。 如需 Kerberos 和 **MaxTokenSize** 的其他詳細資料，請參閱 [KB327825](http://support.microsoft.com/kb/327825)。  
+ 當使用者是屬於許多群組的成員或者具有許多原則時，此 Token 的大小可能會超過一般大小才能列出所有項目。 如果此 Token 的大小超過伺服器電腦的 **MaxTokenSize** 值，用戶端就會因為一般網路錯誤 (GNE) 而無法連線，而且可能會發生錯誤 17832。 這個問題可能只會影響某些使用者：具有許多群組或原則的使用者。 當此問題是伺服器電腦的 **MaxTokenSize** 值時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中的錯誤 17832 將會伴隨狀態 9 的錯誤一起出現。 如需 Kerberos 和 **MaxTokenSize** 的其他詳細資料，請參閱 [KB327825](https://support.microsoft.com/kb/327825)。  
   
 ## <a name="user-action"></a>使用者動作  
  若要解決這個問題，請將伺服器電腦的 **MaxTokenSize** 值增加到足以包含組織內任何使用者之最大 Token 的大小。 若要針對組織研究正確的 Token 大小，請考慮使用 **Tokensz** 應用程式。   
@@ -51,7 +51,7 @@ ms.locfileid: "48186958"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
- **若要變更 MaxTokenSize****伺服器電腦上**   
+ **若要變更 MaxTokenSize****伺服器電腦上**  
   
 1.  在 **[開始]** 功能表上，按一下 **[執行]**。  
   

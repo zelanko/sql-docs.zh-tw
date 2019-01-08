@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsource.f1
@@ -16,12 +15,12 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b1d37bba3216a22d732c5562108db51925d37bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b428117cd445cf4cc8f06e588d344924394dcf02
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120575"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357598"
 ---
 # <a name="ole-db-source"></a>OLE DB 來源
   OLE DB 來源會使用資料庫資料表、檢視或 SQL 命令，從各種 OLE DB 相容的關聯式資料庫中擷取資料。 例如，OLE DB 來源可從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表中擷取資料。  
@@ -84,18 +83,18 @@ ms.locfileid: "48120575"
  參數會對應到在執行階段中提供參數值的變數。 這些變數通常是使用者自訂變數，不過您也可以使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的系統變數。 如果您使用的是使用者自訂變數，請務必將資料類型設定為與對應參數所參考之資料行資料類型相容的類型。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)。  
   
 ## <a name="troubleshooting-the-ole-db-source"></a>疑難排解 OLE DB 來源  
- 您可以記錄 OLE DB 來源對外部資料提供者所執行的呼叫。 您可以使用這項記錄功能，疑難排解 OLE DB 來源執行的從外部資料來源載入資料的作業。 若要記錄 OLE DB 來源對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱[封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+ 您可以記錄 OLE DB 來源對外部資料提供者所執行的呼叫。 您可以使用這項記錄功能，疑難排解 OLE DB 來源執行的從外部資料來源載入資料的作業。 若要記錄 OLE DB 來源對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
 ## <a name="configuring-the-ole-db-source"></a>設定 OLE DB 來源  
  您可以程式設計方式或透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」設定屬性。  
   
  如需可在 [OLE DB 來源編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [OLE DB 來源編輯器&#40;連線管理員頁面&#41;](../ole-db-source-editor-connection-manager-page.md)  
+-   [OLE DB 來源編輯器 &#40;連線管理員頁面&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [OLE DB 來源編輯器&#40;資料行頁面&#41;](../ole-db-source-editor-columns-page.md)  
+-   [OLE DB 來源編輯器 &#40;資料行頁面&#41;](../ole-db-source-editor-columns-page.md)  
   
--   [OLE DB 來源編輯器&#40;錯誤輸出頁面&#41;](../ole-db-source-editor-error-output-page.md)  
+-   [OLE DB 來源編輯器 &#40;錯誤輸出頁面&#41;](../ole-db-source-editor-error-output-page.md)  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
@@ -114,11 +113,11 @@ ms.locfileid: "48120575"
 -   [排序合併和合併聯結轉換的資料](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>相關內容  
- social.technet.microsoft.com 上的 Wiki 文章： [SSIS with Oracle Connectors](http://go.microsoft.com/fwlink/?LinkId=220670)(SSIS 與 Oracle 連接器)。  
+ social.technet.microsoft.com 上的 Wiki 文章： [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670)(SSIS 與 Oracle 連接器)。  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 目的地](ole-db-destination.md)   
- [Integration Services &#40;SSIS&#41;變數](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)   
  [資料流程](data-flow.md)  
   
   

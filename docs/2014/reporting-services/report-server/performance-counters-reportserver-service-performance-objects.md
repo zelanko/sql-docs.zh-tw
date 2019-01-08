@@ -13,12 +13,12 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d7acb87440377516e287e8ba077242953f13adc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d13cec7bac124a8fb1289de6086ec0326789501e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141707"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366700"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>ReportServer:Service 和 ReportServerSharePoint:Service 效能物件的效能計數器
   本主題描述下列 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 效能物件的效能計數器：  
@@ -30,7 +30,7 @@ ms.locfileid: "48141707"
 > [!NOTE]  
 >  效能物件是用來監視本機報表伺服器的事件。 如果您是在向外延展部署中執行報表伺服器，則計數會套用到目前的伺服器，而非整個向外延展部署。  
   
- Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件集。 [執行階段分析](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx)。  
+ Windows 效能監視器 (**Perfmon.exe**) 中提供了效能物件。 如需詳細資訊，請參閱 Windows 文件集。 [執行階段分析](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx)。  
   
  本主題內容：  
   
@@ -43,11 +43,11 @@ ms.locfileid: "48141707"
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式 |原生模式。  
   
 ##  <a name="bkmk_ReportServer"></a> ReportServer:Service 效能計數器 (原生模式報表伺服器)  
- `ReportServer:Service` 效能物件包含一組計數器集合，用來追蹤報表伺服器執行個體的 HTTP 相關事件和記憶體相關事件。 此效能物件會出現一次，每個[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]執行個體的電腦，然後您可以新增或移除每個執行個體的效能物件計數器。 預設執行個體的計數器會以 `ReportServer:Service` 格式顯示。 計數器會以具名執行個體出現在格式`ReportServer$<` *instance_name*`>:Service`。  
+ `ReportServer:Service` 效能物件包含一組計數器集合，用來追蹤報表伺服器執行個體的 HTTP 相關事件和記憶體相關事件。 這個效能物件會針對電腦上的每個 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 執行個體顯示一次，而且您可以在每個執行個體的效能物件中加入或移除計數器。 預設執行個體的計數器會以 `ReportServer:Service` 格式顯示。 計數器會以具名執行個體出現在格式`ReportServer$<` *instance_name*`>:Service`。  
   
- `ReportServer:Service`效能物件的新功能[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]，並提供已使用網際網路資訊服務 (IIS) 中包含的計數器子集並[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]在舊版的[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。 這些新的計數器是 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 特有的，而且它們會追蹤報表伺服器的 HTTP 相關事件，例如要求、連接和登入嘗試。 此外，這個效能物件包含可追蹤記憶體管理事件的計數器。  
+ `ReportServer:Service`效能物件的新功能[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]，並提供已使用網際網路資訊服務 (IIS) 中包含的計數器子集並[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]在舊版的[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。 這些新的計數器是 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]特有的，而且它們會追蹤報表伺服器的 HTTP 相關事件，例如要求、連接和登入嘗試。 此外，這個效能物件包含可追蹤記憶體管理事件的計數器。  
   
- 下表列出中包含的計數器`ReportServer:Service`效能物件。  
+ 下表將列出 `ReportServer:Service` 效能物件所包含的計數器。  
   
  ![PowerShell 相關內容](../media/rs-powershellicon.jpg "PowerShell 相關內容") 以下 Windows PowerShell 指令碼將會傳回 CounterSetName 的效能計數器清單。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "48141707"
 |`Memory Shrink Notifications/Sec`|  
   
 ##  <a name="bkmk_powershell"></a> 使用 PowerShell 指令程式傳回清單  
- ![PowerShell 相關內容](../media/rs-powershellicon.jpg "PowerShell 相關內容") 以下 Windows PowerShell 指令碼將會傳回 CounterSetName “ReportServerSharePoint:Service” 的效能計數器清單：  
+ ![PowerShell 相關內容](../media/rs-powershellicon.jpg "PowerShell 相關內容") 下列 Windows PowerShell 指令碼將會傳回 CounterSetName "ReportServerSharePoint:Service" 的效能計數器清單：  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  

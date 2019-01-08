@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ef77f630142cf5b7202a30b928ac6e049584071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63f87a7d2897f069f4447437dd3a837d92af18f3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159973"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374744"
 ---
 # <a name="sap-bw-source"></a>SAP BW 來源
   SAP BW 來源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的來源元件。 因此，SAP BW 來源會從 SAP Netweaver BW 版本 7 系統中擷取資料，並將這項資料提供給 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中的資料流程。  
@@ -107,7 +106,7 @@ ms.locfileid: "48159973"
   
     -   針對 [E - 僅限擷取] 選項，提供要求識別碼。  
   
--   指定字串轉換的規則 (例如，將根據 SAP Netweaver BW 系統是否為 Unicode，或不是，所有字串都轉換或都轉換所有字串`varchar`或`nvarchar`)。  
+-   指定字串轉換的規則 (例如，根據 SAP Netweaver BW 系統是否為 Unicode 而轉換所有字串，或將所有字串轉換為 `varchar` 或 `nvarchar`)。  
   
 -   使用您已選取的選項來預覽要擷取的資料。  
   
@@ -115,18 +114,18 @@ ms.locfileid: "48159973"
   
  如果您不知道設定來源的所有必要值，可能必須詢問 SAP 系統管理員。  
   
- 如需示範如何設定及使用 SAP BW 連接管理員、來源和目的地的逐步解說，請參閱＜ [搭配 SAP BI 7.0 使用 SQL Server 2008 Integration Services](http://go.microsoft.com/fwlink/?LinkID=137090)＞技術白皮書。 這份技術白皮書也會示範如何設定 SAP BW 中的必要物件。  
+ 如需示範如何設定及使用 SAP BW 連接管理員、來源和目的地的逐步解說，請參閱＜ [搭配 SAP BI 7.0 使用 SQL Server 2008 Integration Services](https://go.microsoft.com/fwlink/?LinkID=137090)＞技術白皮書。 這份技術白皮書也會示範如何設定 SAP BW 中的必要物件。  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>使用 SSIS 設計師設定來源  
  如需有關可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之 SAP BW 來源屬性的詳細資訊，請按下列其中一個主題：  
   
--   [SAP BW 來源編輯器&#40;連線管理員頁面&#41;](sap-bw-source-editor-connection-manager-page.md)  
+-   [SAP BW 來源編輯器 &#40;連線管理員頁面&#41;](sap-bw-source-editor-connection-manager-page.md)  
   
--   [SAP BW 來源編輯器&#40;資料行頁面&#41;](sap-bw-source-editor-columns-page.md)  
+-   [SAP BW 來源編輯器 &#40;資料行頁面&#41;](sap-bw-source-editor-columns-page.md)  
   
--   [SAP BW 來源編輯器&#40;錯誤輸出頁面&#41;](sap-bw-source-editor-error-output-page.md)  
+-   [SAP BW 來源編輯器 &#40;錯誤輸出頁面&#41;](sap-bw-source-editor-error-output-page.md)  
   
--   [SAP BW 來源編輯器&#40;進階頁面&#41;](sap-bw-source-editor-advanced-page.md)  
+-   [SAP BW 來源編輯器 &#40;進階頁面&#41;](sap-bw-source-editor-advanced-page.md)  
   
  設定 SAP BW 來源時，您也可以使用各種對話方塊來查閱 SAP Netweaver BW 物件或預覽來源資料。 如需有關這些對話方塊的詳細資訊，請按下列其中一個主題：  
   

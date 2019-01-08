@@ -16,12 +16,12 @@ ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 696c9d5a560e4b7fd4614a0a6575ebbeb308fdd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f39911901b6ab729382c2e08b34c3452d4ec65cd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070808"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367050"
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>SQL Server 的 Windows Server 容錯移轉叢集 (WSFC)
   *「Windows Server 容錯移轉叢集」* (Windows Server Failover Clustering，WSFC) 叢集是一組獨立的伺服器，會一起運作以提高應用程式和服務的可用性。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 利用 WSFC 服務和功能，以支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體。  
@@ -62,7 +62,7 @@ ms.locfileid: "48070808"
  強制仲裁  
  即使僅少數仲裁必要元素正在通訊中，也會啟動叢集的程序。  
   
- 如需詳細資訊，請參閱＜ [容錯移轉叢集詞彙](/previous-versions/windows/desktop/MsCS/server-cluster-glossary)＞。  
+ 如需詳細資訊，請參閱：[容錯移轉叢集詞彙](/previous-versions/windows/desktop/MsCS/server-cluster-glossary)  
   
 ##  <a name="Overview"></a> Windows Server 容錯移轉叢集概觀  
  Windows Server 容錯移轉叢集提供基礎結構功能，支援 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 Microsoft Exchange 等託管伺服器應用程式的高可用性和災害復原案例。 如果叢集節點或服務失敗，該節點上裝載的服務可在稱為 *「容錯移轉」*(Failover) 的程序中自動或手動轉移至另一個可用的節點。  
@@ -77,7 +77,7 @@ ms.locfileid: "48070808"
   
 -   **容錯移轉協調。** 每個資源都是設定為在主要節點上裝載，而且每個資源都可以自動或手動轉移至一個或多個次要節點。 以健全狀況為主的容錯移轉原則會控制節點之間資源擁有權的自動轉移。 在發生容錯移轉時，節點和託管應用程式會收到通知，以便它們可以適當反應。  
   
- 如需詳細資訊，請參閱＜ [Windows Server 2008 R2 中的容錯移轉叢集](http://technet.microsoft.com/library/ff182338\(WS.10\).aspx)＞。  
+ 如需詳細資訊，請參閱：[Windows Server 2008 R2 中的容錯移轉叢集](https://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
 ##  <a name="AlwaysOnWsfcTech"></a> SQL Server AlwaysOn 技術和 WSFC  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn*是的新高可用性和災害復原方案，利用 WSFC。 此整合、具有彈性的 AlwaysOn 方案可提高應用程式可用性、提供更佳的硬體投資報酬率，以及簡化高可用性部署和管理。  
@@ -87,7 +87,7 @@ ms.locfileid: "48070808"
 > [!IMPORTANT]  
 >  若要充分利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 技術，應該符合數個 WSFC 相關的必要條件。  
 >   
->  如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
+>  如需詳細資訊，請參閱：[必要條件、 限制和建議，AlwaysOn 可用性群組的&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
 ### <a name="instance-level-high-availability-with-alwayson-failover-cluster-instances"></a>執行個體層級高可用性與 AlwaysOn 容錯移轉叢集執行個體搭配使用  
  AlwaysOn *「容錯移轉叢集執行個體」*(Failover Cluster Instance，FCI) 是在 WSFC 叢集中跨多個節點安裝的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 這類執行個體有共用磁碟儲存體 (透過光纖通道或 iSCSI SAN) 和虛擬網路名稱的資源相依性。 虛擬網路名稱有一個或多個虛擬 IP 位址 (各在不同子網路) 的資源相依性。 SQL Server 服務和 SQL Server Agent 服務會註冊為資源，且兩者都會相依於虛擬網路名稱資源。  
@@ -97,7 +97,7 @@ ms.locfileid: "48070808"
 > [!NOTE]  
 >  AlwaysOn 容錯移轉叢集執行個體需要對稱共用磁碟儲存體，例如存放區域網路 (SAN) 或 SMB 檔案共用。  共用磁碟存放磁碟區必須可供 WSFC 叢集中所有可能的容錯移轉節點使用。  
   
- 如需詳細資訊，請參閱： [AlwaysOn 容錯移轉叢集執行個體](always-on-failover-cluster-instances-sql-server.md)  
+ 如需詳細資訊，請參閱：[AlwaysOn 容錯移轉叢集執行個體](always-on-failover-cluster-instances-sql-server.md)  
   
 ### <a name="database-level-high-availability-with-includesshadrincludessshadr-mdmd"></a>資料庫層級高可用性 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  
  *「可用性群組」* (Availability Group) 是一組可一起進行容錯移轉的使用者資料庫。 可用性群組是由主要 *「可用性複本」* (Availability Replica) 和一到四個次要複本所組成，這些次要複本是透過 SQL Server 記錄式資料移動提供資料保護的方式維護，不需要共用儲存體。 每個複本都是由一個位於 WSFC 叢集的不同節點上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所裝載。 可用性群組和對應的虛擬網路名稱會註冊為 WSFC 叢集中的資源。  
@@ -113,7 +113,7 @@ ms.locfileid: "48070808"
 >   
 >  容錯移轉叢集執行個體 (FCI) 可與可用性群組一起使用，以加強可用性複本的可用性。 不過，為了避免 WSFC 叢集中可能的競爭情形，不支援可用性群組自動容錯移轉至裝載於 FCI 的可用性複本，或從該複本容錯移轉。  
   
- 如需詳細資訊，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
+ 如需詳細資訊，請參閱：[AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
 ##  <a name="AlwaysOnWsfcHealth"></a> WSFC 健全狀況監視和容錯移轉  
  AlwaysOn 方案的高可用性是透過下列方式完成：對實體和邏輯 WSFC 叢集資源的主動式健全狀況監視，以及自動容錯移轉至備援硬體和重新設定備援硬體。  系統管理員也可以起始可用性群組或 *執行個體從某個節點* 「手動容錯移轉」 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (Manual Failover) 至另一個節點。  
@@ -123,7 +123,7 @@ ms.locfileid: "48070808"
   
  可用性群組複本的容錯移轉不會影響基礎 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  FCI 容錯移轉會將裝載的可用性群組複本隨著執行個體移動。  
   
- 如需詳細資訊，請參閱： [容錯移轉叢集執行個體的容錯移轉原則](failover-policy-for-failover-cluster-instances.md)。  
+ 如需詳細資訊，請參閱：[Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)  
   
 ### <a name="wsfc-resource-health-detection"></a>WSFC 資源健全狀況偵測  
  WSFC 叢集節點中的每個資源可以定期或視需要報告其狀態和健全狀況。 有許多情況皆意味著資源失效，例如停電、磁碟或記憶體錯誤、網路通訊錯誤或無反應的服務。  
@@ -140,7 +140,7 @@ ms.locfileid: "48070808"
 > [!TIP]  
 >  最佳作法是 WSFC 叢集中一定要有奇數的仲裁投票。  為了仲裁投票目的， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不需要在叢集中的所有節點上安裝。 另一個伺服器可以做為仲裁成員，或者 WSFC 仲裁模式可設定為使用遠端檔案共用做為平局決勝者 (Tiebreaker)。  
 >   
->  如需詳細資訊，請參閱： [WSFC 仲裁模式和投票組態&#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
+>  如需詳細資訊，請參閱：[WSFC 仲裁模式和投票組態 &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
   
 ### <a name="disaster-recovery-through-forced-quorum"></a>透過強制仲裁執行災害復原  
  根據操作作法和 WSFC 叢集組態，在發生自動和手動容錯移轉時，您仍然可以維持強固、容錯的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 方案。 不過，如果 WSFC 叢集中適合投票之節點的仲裁無法彼此通訊，或者如果 WSFC 叢集的健全狀況驗證失敗，WSFC 叢集可能會離線。  
@@ -149,7 +149,7 @@ ms.locfileid: "48070808"
   
  隨後，也必須採取一連串步驟，重新設定 WSFC 叢集、復原受影響的資料庫複本，以及重新建立新仲裁。  
   
- 如需詳細資訊，請參閱：[透過強制仲裁執行 WSFC 災害復原 &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)。  
+ 如需詳細資訊，請參閱：[透過強制仲裁執行 WSFC 災害復原 &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
 ##  <a name="AlwaysOnWsfcRelationship"></a> SQL Server AlwaysOn 元件與 WSFC 之間的關聯性  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 和 WSFC 功能與元件之間有數層關聯性。  
@@ -181,13 +181,13 @@ ms.locfileid: "48070808"
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [Windows Server 技術：容錯移轉叢集](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Windows Server 技術：容錯移轉叢集](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [Windows Server 2008 R2 中的容錯移轉叢集](http://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
+-   [Windows Server 2008 R2 中的容錯移轉叢集](https://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
--   [檢視容錯移轉叢集的事件和記錄檔](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [檢視容錯移轉叢集的事件和記錄檔](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog 容錯移轉叢集指令程式](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog 容錯移轉叢集指令程式](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](always-on-failover-cluster-instances-sql-server.md)   

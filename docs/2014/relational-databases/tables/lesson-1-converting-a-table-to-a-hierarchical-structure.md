@@ -1,11 +1,10 @@
 ---
-title: 第 1 課：將資料表轉換為階層式結構 | Microsoft Docs
+title: 第 1 課：將資料表轉換為階層式結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
@@ -13,12 +12,12 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0dc3ade6d7473dc354131772c9d17d504afcabd2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66e77d0badf14a804cb82249d03ed552e1f8dcfb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175418"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788700"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>第 1 課：將資料表轉換為階層式結構
   具有使用自我聯結表達階層式關聯性之資料表的客戶可以使用本課程當做指導方針，將其資料表轉換為階層式結構。 從這種表示法移轉到另一種使用 `hierarchyid` 之表示法的步驟非常簡單。 移轉之後，使用者將會有一個精簡而且容易了解的階層式表示法，可以使用數種方式建立索引以便進行有效率的查詢。  
@@ -40,6 +39,6 @@ ms.locfileid: "48175418"
  [檢查 Employee 資料表的目前結構](lesson-1-1-examining-the-current-structure-of-the-employee-table.md)  
   
 ## <a name="next-lesson"></a>下一課  
- [第 2 課：在階層式資料表中建立與管理資料](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
+ [第 2 課：建立及管理階層式資料表中的資料](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
   
   

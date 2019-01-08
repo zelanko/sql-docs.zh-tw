@@ -14,12 +14,12 @@ ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8afb8b22ae2c6563641491b3bfe4289aa86e73e2
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169218"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590862"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini 檔案 (文字檔驅動程式)
 使用文字驅動程式時，文字檔案的格式取決於使用結構描述資訊檔案。 結構描述資訊檔案是一律名為 Schema.ini，並且永遠保持在相同的目錄，做為文字資料來源中。 此結構描述資訊檔案會提供相關資訊的一般格式的檔案、 資料行名稱和資料型別資訊，以及數個其他資料特性 iisam 開啟。 Schema.ini 檔案總是需要存取固定長度的資料。 當您文字的資料表包含日期時間、 貨幣或十進位資料或任何您想要更充分掌控的資料表中的資料處理的時間，您應該使用 Schema.ini 檔案。  
@@ -95,7 +95,7 @@ n=ColumnNametype [#]
 ```  
   
 ## <a name="remarks"></a>備註  
- 下表描述的每個部分 **資料行 * * * n*項目。  
+ 下表描述的每個部分**Col**_n_項目。  
   
 |參數|描述|  
 |---------------|-----------------|  
@@ -105,7 +105,7 @@ n=ColumnNametype [#]
 |*#*|指定資料行寬度的整數值 (需要**寬度**指定)。|  
   
 ## <a name="selecting-a-character-set"></a>選取的字元集  
- 您可以選取從兩個字元集： ANSI 和 OEM。 **CharacterSet** Schema.ini 中的設定會覆寫在 Windows 登錄中，檔案的方式設定。 下列範例顯示設定為 ANSI 字元集的 Schema.ini 項目：  
+ 您可以選取從兩個字元集：ANSI 和 OEM。 **CharacterSet** Schema.ini 中的設定會覆寫在 Windows 登錄中，檔案的方式設定。 下列範例顯示設定為 ANSI 字元集的 Schema.ini 項目：  
   
 ```  
 CharacterSet=ANSI  
@@ -119,11 +119,11 @@ CharacterSet=ANSI
 |**DateTimeFormat**|可以設定為格式字串，表示日期和時間。 如果在匯入/匯出的所有日期/時間欄位會都處理相同的格式，您應該指定這個項目。 所有的 Microsoft Jet 格式，除了 A.M. 和下午 支援。 如果沒有任何格式字串，則會使用 Windows 控制台中的簡短日期圖片和時間選項。|  
 |**DecimalSymbol**|可以設定為用來分隔的整數，從數字的小數部分的任何單一字元。|  
 |**NumberDigits**|表示數字的小數部分的十進位數字的數目。|  
-|**NumberLeadingZeros**|指定十進位的值小於 1，多個 – 1 表示是否應該包含前置的零;這個值可以是任一個為 False （沒有前置的零） 或 True。|  
+|**NumberLeadingZeros**|指定小於 1 及以上-1 的十進位值是否應該包含前置的零;這個值可以是任一個為 False （沒有前置的零） 或 True。|  
 |**CurrencySymbol**|表示可以用於文字檔案中的貨幣值的貨幣符號。 範例包括貨幣符號 （$） 和 Dm。|  
 |**CurrencyPosFormat**|可以設定為下列值之一：<br /><br /> -貨幣符號前置詞，而且沒有區隔 ($1)<br />-貨幣符號後的置詞與沒有區隔 (1$)<br />-貨幣符號前置詞，和一個字元分隔 ($ 1)<br />-貨幣符號後的置詞與一個字元分隔 (1 $)|  
 |**CurrencyDigits**|指定用於貨幣金額的小數部分的位數。|  
-|**CurrencyNegFormat**|可為下列其中一個值：<br /><br /> -   ($1)<br />-   –$1<br />-   $–1<br />-   $1–<br />-   (1$)<br />-   –1$<br />-   1–$<br />-   1$–<br />-   –1 $<br />-   –$ 1<br />-   1 $–<br />-   $ 1–<br />-   $ –1<br />-   1– $<br />-   ($ 1)<br />-   (1 $)<br /><br /> 此範例顯示貨幣符號，但您應該更換適當**CurrencySymbol**實際的程式中的值。|  
+|**CurrencyNegFormat**|可為下列其中一個值：<br /><br /> -   ($1)<br />--美元 1<br />-$1<br />-$1-<br />-   (1$)<br />--1$<br />-1$<br />-1$-<br />--1 $<br />--美元 1<br />-1 $-<br />-$ 1-<br />-$ 為-1<br />-1 $<br />-   ($ 1)<br />-   (1 $)<br /><br /> 此範例顯示貨幣符號，但您應該更換適當**CurrencySymbol**實際的程式中的值。|  
 |**CurrencyThousandSymbol**|表示可以用來分隔文字檔案中的貨幣值，以千為單位的單一字元符號。|  
 |**CurrencyDecimalSymbol**|可以設定為用來分隔貨幣金額的小數部分與整體的任何單一字元。|  
   

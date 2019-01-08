@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.dta.advancedtuningoptions.f1
@@ -20,18 +19,18 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d587b8cd2fb4342ddba42ac85a1d595d6b7b23c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097818"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356378"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>啟動及使用 Database Engine Tuning Advisor
   此主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中啟動及使用 Database Engine Tuning Advisor。 如需如何在微調資料庫後檢視及處理結果的資訊，請參閱 [檢視及處理 Database Engine Tuning Advisor 的輸出](database-engine-tuning-advisor.md)。  
   
 ##  <a name="Initialize"></a> 初始化 Database Engine Tuning Advisor  
- 在第一次使用時， **系統管理員 (sysadmin)** 固定伺服器角色的成員使用者必須初始化 Database Engine Tuning Advisor。 這是因為必須在中建立數個系統資料表`msdb`資料庫以支援微調作業。 初始化也可讓屬於 **db_owner** 固定資料庫角色成員的使用者，微調他們所擁有資料庫中資料表的工作負載。  
+ 在第一次使用時， **系統管理員 (sysadmin)** 固定伺服器角色的成員使用者必須初始化 Database Engine Tuning Advisor。 原因是必須在 `msdb` 資料庫中建立數個系統資料表，以支援微調作業。 初始化也可讓屬於 **db_owner** 固定資料庫角色成員的使用者，微調他們所擁有資料庫中資料表的工作負載。  
   
  具有系統管理員權限的使用者必須執行下列其中一種動作：  
   
@@ -213,7 +212,7 @@ ms.locfileid: "48097818"
 >  不支援暫停 Database Engine Tuning Advisor。 若在按下 [停止分析] 或 [停止分析 (附帶建議)] 工具列按鈕之後按下 [開始分析] 工具列按鈕，Database Engine Tuning Advisor 會啟動新的微調工作階段。  
   
 ###  <a name="dta"></a> 使用 dta 公用程式  
- [dta 公用程式](../../tools/dta/dta-utility.md) 提供一個命令提示字元可執行檔，您可用來微調資料庫。 這個公用程式可讓您在批次檔和指令碼中使用 Database Engine Tuning Advisor 的功能。 您的 **dta** 公用程式會將計畫快取項目、追蹤檔案、追蹤資料表和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼視為工作負載； 它也會使用符合 Database Engine Tuning Advisor XML 結構描述的 XML 輸入，此結構描述可從此 [Microsoft 網站](http://go.microsoft.com/fwlink/?linkid=43100)取得。  
+ [dta 公用程式](../../tools/dta/dta-utility.md) 提供一個命令提示字元可執行檔，您可用來微調資料庫。 這個公用程式可讓您在批次檔和指令碼中使用 Database Engine Tuning Advisor 的功能。 您的 **dta** 公用程式會將計畫快取項目、追蹤檔案、追蹤資料表和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼視為工作負載； 它也會使用符合 Database Engine Tuning Advisor XML 結構描述的 XML 輸入，此結構描述可從此 [Microsoft 網站](https://go.microsoft.com/fwlink/?linkid=43100)取得。  
   
  開始使用 **dta** 公用程式微調工作負載之前，請先考慮下列事項：  
   
@@ -238,13 +237,13 @@ ms.locfileid: "48097818"
 2.  若要修改用於分析的事件數，請指定 **-n** 選項。 下列範例將快取項目數增加為 2,000。  
   
     ```  
-    dta -E -D DatabaseName -ip –n 2000-s SessionName1  
+    dta -E -D DatabaseName -ip -n 2000-s SessionName1  
     ```  
   
 3.  若要分析執行個體中所有資料庫的事件，請指定 **-ipf** 選項。  
   
     ```  
-    dta -E -D DatabaseName -ip –ipf –n 2000 -s SessionName2  
+    dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
 ##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>使用工作負載和 dta 公用程式預設值來微調資料庫  
@@ -303,7 +302,7 @@ ms.locfileid: "48097818"
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
- 您也可以從這個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Microsoft 網站 [，線上取得](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)Tuning Advisor XML 結構描述。  
+ 您也可以從這個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Microsoft 網站 [，線上取得](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)Tuning Advisor XML 結構描述。  
   
  此 URL 可將您帶往具有許多 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 結構描述的網頁。 將網頁向下捲動，直到您找到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 的資料列。  
   
@@ -444,7 +443,7 @@ database_name.owner_name.table_name
  只包含加入索引檢視的建議。 不建議叢集與非叢集索引。  
   
  **包含篩選的索引**  
- 包含加入篩選之索引的建議。 如果您選取下列其中一個實體設計結構，將可以使用這個選項： **[索引與索引檢視]**、 **[索引]** 或 **[非叢集索引]**。  
+ 包含加入篩選之索引的建議。 此選項是當您選取其中一個實體設計結構使用：**索引和索引檢視表**，**索引**，或**非叢集索引**。  
   
  **[索引]**  
  只包含加入叢集與非叢集索引的建議。 不建議索引檢視。  

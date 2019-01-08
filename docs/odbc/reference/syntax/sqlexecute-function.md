@@ -20,16 +20,16 @@ ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df0021bf5b3ac905ddf63ede8d4dfd65710662aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad8aec58fea182c080d55217db94ea2cda08184b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789906"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590432"
 ---
 # <a name="sqlexecute-function"></a>SQLExecute 函式
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ISO 92  
+ 導入的版本：ODBC 1.0 標準的合規性：ISO 92  
   
  **摘要**  
  **SQLExecute**執行備妥的陳述式，使用參數標記變數的目前值，如果陳述式中存在的任何參數標記。  
@@ -39,7 +39,7 @@ ms.locfileid: "47789906"
 ```  
   
 SQLRETURN SQLExecute(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -60,7 +60,7 @@ SQLRETURN SQLExecute(
 |01004|字串資料，右邊已截斷|字串或二進位資料傳回輸出參數會導致非空白的字元或二進位資料的非 NULL 的截斷。 如果是字串值，則向右截斷。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01006|未撤銷權限|備妥的陳述式相關聯*StatementHandle*已**撤銷**陳述式，而且使用者沒有指定的權限。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01007|未授與的權限|備妥的陳述式相關聯*StatementHandle*已**授與**陳述式，而且使用者無法獲得指定權限。|  
-|01S02|選項值已變更|指定的陳述式屬性是實作運作的情況，因為不正確的因此已暫時替代成類似的值。 (**SQLGetStmtAttr**可以呼叫以判斷其暫時已取代的值為何。)取代值是適用於*StatementHandle*直到資料指標已關閉，此時陳述式屬性會還原為先前的值。 您可以變更的陳述式屬性是： SQL_ATTR_CONCURRENCY、 SQL_ATTR_CURSOR_TYPE、 SQL_ATTR_KEYSET_SIZE、 SQL_ATTR_MAX_LENGTH、 SQL_ATTR_MAX_ROWS、 sql_attr_query_timeout 時和 SQL_ATTR_SIMULATE_CURSOR。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|01S02|選項值已變更|指定的陳述式屬性是實作運作的情況，因為不正確的因此已暫時替代成類似的值。 (**SQLGetStmtAttr**可以呼叫以判斷其暫時已取代的值為何。)取代值是適用於*StatementHandle*直到資料指標已關閉，此時陳述式屬性會還原為先前的值。 您可以變更的陳述式屬性是：SQL_ATTR_CONCURRENCY、 SQL_ATTR_CURSOR_TYPE、 SQL_ATTR_KEYSET_SIZE、 SQL_ATTR_MAX_LENGTH、 SQL_ATTR_MAX_ROWS、 sql_attr_query_timeout 時和 SQL_ATTR_SIMULATE_CURSOR。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01S07|小數位數截斷|傳回輸入/輸出的資料，或輸出參數已被截斷，使得已截斷數值資料類型的小數部分，或已遭截斷的小數部分的時間、 時間戳記或時間間隔的資料型別之時間元件。<br /><br /> （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |07002|COUNT 欄位不正確|參數中指定的數目**SQLBindParameter**中所包含的 SQL 陳述式中的參數數目低於\* *StatementText*。<br /><br /> **SQLBindParameter**以叫用*ParameterValuePtr*設定為 null 指標， *StrLen_or_IndPtr*未設定為 SQL_NULL_DATA 或 SQL_DATA_AT_EXEC，和*了*未設定為 SQL_PARAM_OUTPUT，以便在指定的參數數目**SQLBindParameter**大於包含在 SQL 陳述式中的參數數目 **StatementText*.|  
 |07006|受限制的資料類型屬性違規|所識別的資料值*ValueType*中的引數**SQLBindParameter**繫結的參數無法轉換成資料類型所識別的*ParameterType*中的引數**SQLBindParameter**。<br /><br /> 資料傳回的值繫結為 SQL_PARAM_INPUT_OUTPUT 或 SQL_PARAM_OUTPUT 無法轉換成所識別的資料型別參數*ValueType*中的引數**SQLBindParameter**。<br /><br /> （如果無法轉換一或多個資料列的資料值，但一或多個資料列成功地傳回，此函式會傳回 SQL_SUCCESS_WITH_INFO。）|  
@@ -77,7 +77,7 @@ SQLRETURN SQLExecute(
 |22015|間隔欄位溢位|*\*StatementText*包含確切的數值或時間間隔參數，轉換成 SQL 資料類型的間隔時，造成有效位數遺失。<br /><br /> *\*StatementText*包含多個欄位間隔參數，轉換成資料行中數值資料類型時，有沒有表示法中的數值資料類型。<br /><br /> *\*StatementText*包含已指派給間隔 SQL 類型的參數資料，而且沒有間隔 SQL 型別中的 C 類型的值不表示法。<br /><br /> 指派為精確數值或間隔造成有效位數遺失 C 間隔類型的 SQL 類型的輸入/輸出或輸出參數。<br /><br /> 當輸入/輸出或輸出參數已指派給 C 間隔結構時，時發生間隔的資料結構中的資料沒有表示法。|  
 |22018|轉換規格的字元值無效|*\*StatementText*包含 C 類型是精確或近似數值、 日期時間或間隔資料類型; 資料行的 SQL 類型是字元資料類型; 和資料行中的值不是有效的常值的繫結的 C 類型。<br /><br /> SQL 型別時傳回的輸入/輸出或輸出參數，是精確或近似數值、 日期時間或間隔資料類型;C 類型是 SQL_C_CHAR;和資料行中的值不是有效的常值的繫結的 SQL 類型。|  
 |22019|無效的逸出字元|備妥的陳述式相關聯*StatementHandle*包含**像是**述詞，以及**逸出**中**其中**子句，並之後的逸出字元的長度**逸出**不是等於 1。|  
-|22025|無效的逸出序列|備妥的陳述式相關聯*StatementHandle*包含 「**像是***模式值***逸出***逸出字元*"中**其中**子句，並遵循模式值的逸出字元的字元不是其中一個"%"或"_"。|  
+|22025|無效的逸出序列|備妥的陳述式相關聯*StatementHandle*包含 「**像是**_模式值_**逸出**_逸出字元_"中**其中**子句，並遵循模式值的逸出字元的字元不是其中一個"%"或"_"。|  
 |23000|完整性條件約束違規|備妥的陳述式相關聯*StatementHandle*包含參數。 參數值是 NULL，定義為 NOT NULL 相關聯的資料表資料行中的資料行、 資料行限制為只包含唯一值，卻提供了重複的值或違反某些其他的完整性條件約束。|  
 |24000|指標狀態無效|資料指標已定位*StatementHandle*依**SQLFetch**或是**SQLFetchScroll**。 如果此錯誤會傳回由驅動程式管理員**SQLFetch**或**SQLFetchScroll**尚未傳回 sql_no_data 之後，以及如果驅動程式會傳回**SQLFetch**或**SQLFetchScroll**傳回 sql_no_data 為止。<br /><br /> 資料指標是開啟*StatementHandle*。<br /><br /> 備妥的陳述式相關聯*StatementHandle*包含定位的 update 或 delete statemen、 t 和資料指標置於結果集或結果集的結尾之後開始之前。|  
 |40001|序列化失敗|交易已回復因為與另一個交易資源鎖死。|  
@@ -89,7 +89,7 @@ SQLRETURN SQLExecute(
 |HY008|已取消作業|非同步處理已啟用*StatementHandle*。 呼叫函式，和之前執行，完成**SQLCancel**或是**SQLCancelHandle**上呼叫*StatementHandle*。 然後在上一次呼叫函式*StatementHandle*。<br /><br /> 呼叫函式，和之前已完成執行時， **SQLCancel**或是**SQLCancelHandle**上呼叫*StatementHandle*從不同的執行緒中多執行緒應用程式。|  
 |HY010|函數順序錯誤|(DM) 以非同步方式執行的函式呼叫的連接控制代碼相關聯*StatementHandle*。 此非同步函式仍在執行時**SQLExecute**呼叫函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**針對呼叫*StatementHandle*並傳回 SQL_PARAM_DATA_可使用。 資料已擷取所有的資料流參數前呼叫此函式。<br /><br /> 以非同步方式執行的函式 （不是此一） 已呼叫 」 (DM) *StatementHandle*和仍在呼叫此函式時所執行。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。<br /><br /> (DM) *StatementHandle*尚未準備。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足情況。|  
-|HY090|字串或緩衝區長度無效|參數值時，設定**SQLBindParameter**、 為 null 指標，以及參數長度值不是 0，SQL_NULL_DATA，SQL_DATA_AT_EXEC，SQL_DEFAULT_PARAM，或小於或等於 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 參數值時，設定**SQLBindParameter**、 不是 null 指標; C 資料類型 SQL_C_BINARY 或 SQL_C_CHAR;，參數長度值小於 0，但不是 SQL_NTS、 SQL_NULL_DATA、 SQL_DEFAULT_PARAM 或 SQL_DATA_AT_EXEC，或小於或等於 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 參數長度值受限於**SQLBindParameter**是設定為 SQL_DATA_AT_EXEC; 的 SQL 型別是 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 資料來源特定的資料類型; 以及 SQL_NEED_LONG_DATA_LEN 資訊在中輸入**SQLGetInfo**是"Y"。|  
+|HY090|字串或緩衝區長度無效|參數值時，設定**SQLBindParameter**、 為 null 指標，以及參數長度值不是 0，SQL_NULL_DATA，SQL_DATA_AT_EXEC，SQL_DEFAULT_PARAM，或小於或等於 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 參數值時，設定**SQLBindParameter**、 不是 null 指標; C 資料類型 SQL_C_BINARY 或 SQL_C_CHAR;，參數長度值小於 0，但不是 SQL_NTS、 SQL_NULL_DATA、 SQL_DEFAULT_PARAM 或 SQL_DATA_AT_EXEC，或小於或等於 SQL_LEN_DATA_AT_EXEC_OFFSET。<br /><br /> 參數長度值受限於**SQLBindParameter**是設定為 SQL_DATA_AT_EXEC; 的 SQL 型別是 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 資料來源特有的資料類型; 以及 SQL_NEED_LONG_DATA_LEN 資訊在中輸入**SQLGetInfo**是"Y"。|  
 |包含 SQLSTATE=HY105|無效的參數類型|指定的引數的值*了*中**SQLBindParameter**是 SQL_PARAM_OUTPUT，而參數是輸入的參數。|  
 |HY109|無效的資料指標位置|備妥的陳述式所定位的 update 或 delete 陳述式，以及指標置於 (由**SQLSetPos**或**SQLFetchScroll**) 上的已刪除或無法擷取資料列。|  
 |HY117|連接已因為未知的交易狀態暫止。 只中斷連線，並允許唯讀的函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函式](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
@@ -120,7 +120,7 @@ SQLRETURN SQLExecute(
  如果您啟用書籤，並執行的查詢可能不支援書籤、 驅動程式應該嘗試強制轉型環境，以變更屬性值，並傳回 SQLSTATE 01S02 支援書籤 （選項值已變更）。 如果無法變更屬性，驅動程式應該會傳回 SQLSTATE HY024 （無效的屬性值）。  
   
 > [!NOTE]  
->  使用連接共用時，應用程式必須執行 SQL 陳述式，例如變更資料庫或資料庫的內容**使用***資料庫*變更的 SQL Server 中的陳述式資料來源所使用的目錄。  
+>  使用連接共用時，應用程式必須執行 SQL 陳述式，例如變更資料庫或資料庫的內容**使用**_資料庫_變更的 SQL Server 中的陳述式資料來源所使用的目錄。  
   
 ## <a name="code-example"></a>程式碼範例  
  請參閱[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)， [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)， [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)，以及[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)。  

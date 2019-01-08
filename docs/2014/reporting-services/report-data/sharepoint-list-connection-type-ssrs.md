@@ -11,12 +11,12 @@ ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 09adbf8ca6fb16becd98b94c15f93052c003abb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d218103d5a8de6b10ad5b1981f13ac4526f59aee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116342"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358240"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 清單連接類型 (SSRS)
   若要在報表中包含來自 Microsoft SharePoint 清單的資料，您必須加入或建立以 Microsoft SharePoint 清單類型之報表資料來源為基礎的資料集。 這是以 Microsoft SQL Server Reporting Services SharePoint 清單資料延伸模組為基礎的內建資料來源類型。 使用此資料來源類型可連接至 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]、 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]、 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 和 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 網站，並從中擷取清單資料。  
@@ -42,18 +42,18 @@ ms.locfileid: "48116342"
 ||支援的認證|傳統模式 Windows 驗證|<sup>3</sup>宣告驗證|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |本機伺服器陣列的 SharePoint 清單|Windows 驗證 (整合式) 或 SharePoint 使用者 Token|是|是|  
-||預存、 提示、 無 (使用 Windows 認證<sup>1</sup>)|是|否|  
+||預存、提示、無 (包含 Windows 認證<sup>1</sup>)|是|否|  
 |遠端 SharePoint 清單|Windows 驗證 (整合式) 或 SharePoint 使用者 Token|是|否<sup>2</sup>|  
-||預存、 提示、 無 (使用 Windows 認證<sup>1</sup>)|是|否<sup>2</sup>|  
+||預存、提示、無 (包含 Windows 認證<sup>1</sup>)|是|否<sup>2</sup>|  
   
  **表格 2**  
   
 ||支援的認證|傳統模式 Windows 驗證|<sup>3</sup>宣告驗證|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |本機伺服器陣列的 SharePoint 清單|Windows 驗證 (整合式) 或 SharePoint 使用者 Token|是|是|  
-||預存、 提示、 無 (使用 Windows 認證<sup>1</sup>)|否|否|  
+||預存、提示、無 (包含 Windows 認證<sup>1</sup>)|否|否|  
 |遠端 SharePoint 清單|Windows 驗證 (整合式) 或 SharePoint 使用者 Token|是|否<sup>2</sup>|  
-||預存、 提示、 無 (使用 Windows 認證<sup>1</sup>)|否|否<sup>2</sup>|  
+||預存、提示、無 (包含 Windows 認證<sup>1</sup>)|否|否<sup>2</sup>|  
   
  <sup>1</sup>不支援預存和提示認證以非 Windows 認證。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48116342"
  **不需要認證 (請勿使用認證)：**  
  若要使用這個選項，您必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
- 如需有關跨 Microsoft BI 堆疊之宣告驗證支援的詳細資訊，請參閱 [跨 Microsoft BI 堆疊使用宣告驗證](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)。  
+ 如需有關跨 Microsoft BI 堆疊之宣告驗證支援的詳細資訊，請參閱 [跨 Microsoft BI 堆疊使用宣告驗證](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)。  
   
  如需詳細資訊，請參閱 <<c0> [ 資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)，[在 報表產生器中指定認證](../specify-credentials-in-report-builder.md)，和[所支援的資料來源Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)。</c0>  
   
@@ -182,7 +182,7 @@ ms.locfileid: "48116342"
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  提供查詢所產生之資料集欄位集合的相關資訊。  
   
- 《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
+ 《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
  提供支援每一個資料延伸模組之平台與版本的深入資訊。  
   
   

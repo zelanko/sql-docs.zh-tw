@@ -14,12 +14,12 @@ ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfd74525cda5946fb7c86f21638437ee91c3ac7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5604aafbbc8a6d77081e829269955c8b7600f4ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211187"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359921"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會擴充 SQLGetStmtAttr 來公開驅動程式特有的陳述式屬性。  
@@ -50,7 +50,7 @@ ms.locfileid: "48211187"
  如需有關資料表值參數的詳細資訊，請參閱 < [Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLSetStmtAttr 函數](http://go.microsoft.com/fwlink/?LinkId=59370)   
+ [SQLSetStmtAttr 函數](https://go.microsoft.com/fwlink/?LinkId=59370)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

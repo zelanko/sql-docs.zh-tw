@@ -1,20 +1,22 @@
 ---
-title: 如何將資料內嵌到 SQL Server 資料集區使用 TRANSACT-SQL |Microsoft Docs
+title: 將資料內嵌到 SQL Server 資料集區
+titleSuffix: SQL Server 2019 big data clusters
 description: 本教學課程會示範如何將資料內嵌到具有 sp_data_pool_table_insert_data 預存程序的 SQL Server 2019 巨量資料叢集 （預覽） 的資料集區。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 1f585a354175ff893869cef7f2f47b12fe244634
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 142a2db6bc841947a83ada4dc24c59de4e58df8f
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221694"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432441"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教學課程： 將資料內嵌至 SQL Server 資料集區使用 TRANSACT-SQL
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教學課程：將資料內嵌到 SQL Server 資料集區使用 TRANSACT-SQL
 
 本教學課程示範如何使用 TRANSACT-SQL，將資料載入[資料集區](concept-data-pool.md)的 SQL Server 2019 巨量資料叢集 （預覽）。 使用 SQL Server 的巨量資料叢集，從各種來源的資料可以擷取並分散到資料集區執行個體。
 
@@ -30,17 +32,17 @@ ms.locfileid: "51221694"
 
 ## <a id="prereqs"></a> 必要條件
 
-* [將巨量資料叢集的 Kubernetes 上部署](deployment-guidance.md)。
-* [安裝 Azure Data Studio 和 SQL Server 2019 副檔名](deploy-big-data-tools.md)。
-* [將範例資料載入叢集](#sampledata)。
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [巨量資料工具](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 延伸模組**
+- [將範例資料載入您的巨量資料叢集](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>建立資料集區中的外部資料表
 
 下列步驟會建立外部資料表名為資料集區內**web_clickstream_clicks_data_pool**。 本表然後可用做為位置擷取資料到巨量資料叢集。
 
-1. 在 Azure Data Studio，連接到您的巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱 <<c0> [ 連接到 SQL Server 的主要執行個體](deploy-big-data-tools.md#master)。
+1. 在 Azure Data Studio，連接到您的巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱 <<c0> [ 連接到 SQL Server 的主要執行個體](connect-to-big-data-cluster.md#master)。
 
 1. 在連線 中按兩下**伺服器**視窗以顯示 SQL Server 的主要執行個體的伺服器儀表板。 選取 **新的查詢**。
 
@@ -66,7 +68,7 @@ ms.locfileid: "51221694"
       );
    ```
   
-1. 在 CTP 2.1 中，建立資料集區是非同步的但沒有任何方式可判斷當尚未完成。 等候兩分鐘，以確定資料集區建立後再繼續。
+1. 在 CTP 2.2 建立資料集區是非同步的但沒有任何方法來判斷當尚未完成。 等候兩分鐘，以確定資料集區建立後再繼續。
 
 ## <a name="load-data"></a>載入資料
 

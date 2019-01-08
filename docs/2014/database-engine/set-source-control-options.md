@@ -16,12 +16,12 @@ ms.assetid: b2c6ca00-46f0-4f86-b067-07bae779c147
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f31c521c7e6bd8229af2a46d0e7a6e1443d3911
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101988"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589892"
 ---
 # <a name="set-source-control-options"></a>設定原始檔控制選項
   在利用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中所建立的原始檔控制功能之前，您應該先設定您的各種工作環境的原始檔控制選項。  
@@ -83,7 +83,7 @@ ms.locfileid: "48101988"
      選取這些角色的其中之一，會自動選取適當的原始檔控制選項。  
   
      **保留項目時簽入簽出**  
-     指定當您簽入項目以更新原始檔控制存放區時，項目應保持簽出。 如果您想要變更此特定簽入的選項，按一下**選項**中的箭號**簽入** 對話方塊中，然後再清除**保留 * * * 簽出**核取方塊。  
+     指定當您簽入項目以更新原始檔控制存放區時，項目應保持簽出。 如果您想要變更此特定簽入的選項，按一下**選項**中的箭號**簽入** 對話方塊中，然後再清除**保留簽出**核取方塊。  
   
      **簽入的項目**  
      顯示選項清單，其中指定當您嘗試編輯某個未簽出項目時，[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 應有的行為。下表描述可用的選項。  

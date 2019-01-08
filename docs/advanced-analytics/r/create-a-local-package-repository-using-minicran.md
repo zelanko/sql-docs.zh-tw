@@ -1,5 +1,6 @@
 ---
-title: 建立本機 R 套件儲存機制使用 miniCRAN （SQL Server 機器學習服務） |Microsoft Docs
+title: 建立使用 miniCRAN-SQL Server Machine Learning 服務的本機 R 套件存放庫
+description: 使用 miniCran 來偵測、 組合，並將 R 封裝相依性安裝到單一的彙總套件。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/29/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ef84cc3c08f461745e30fa2ce65e468263ded18d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7dc2e286e6eb80fe1eef3e8b86ed1002a6344cfb
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699396"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431751"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>建立使用 miniCRAN 本機 R 套件儲存機制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,16 +33,16 @@ ms.locfileid: "51699396"
 
 套件存放庫是在這些情況下很有用：
 
-- **安全性**： 許多 R 使用者習慣以下載並安裝新的 R 套件位置，從 CRAN 或其中一個鏡像站台。 不過，基於安全性理由，實際執行伺服器執行[!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)]通常不需要網際網路連線。
+- **安全性**:許多 R 使用者已經習慣下載並安裝新的 R 套件位置，從 CRAN 或其中一個鏡像站台。 不過，基於安全性理由，執行的實際執行伺服器[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]通常不需要網際網路連線。
 
-- **更輕鬆地離線安裝**： 套件安裝到離線的伺服器需要，您也可以下載所有的套件相依性，使用 miniCRAN 可讓您更輕鬆地取得正確格式的所有相依性。
+- **更輕鬆地離線安裝**:若要封裝安裝到離線的伺服器需要，您也可以下載所有的套件相依性，使用 miniCRAN 可讓您更輕鬆地取得正確格式的所有相依性。
 
     使用 miniCRAN，您可以避免套件相依性錯誤準備要使用安裝套件時才[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)陳述式。
 
-- **改進的版本管理**： 在多使用者環境中，有很好的理由，若要避免不受限制的安裝在伺服器上的多個封裝版本。 使用本機儲存機制來提供一組一致的套件以供您的分析師。 
+- **改進的版本管理**:在多使用者環境中，有很好的理由，若要避免不受限制的安裝在伺服器上的多個封裝版本。 使用本機儲存機制來提供一組一致的套件以供您的分析師。 
 
 > [!TIP]
-> 您也可以使用 miniCRAN 來準備使用 Azure Machine Learning 中的封裝。 如需詳細資訊，請參閱這篇部落格：[在 Azure ML 中，由 Michele Usuelli 使用 miniCRAN](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
+> 您也可以使用 miniCRAN 來準備使用 Azure Machine Learning 中的封裝。 如需詳細資訊，請參閱這篇部落格：[使用 miniCRAN 在 Azure ML 中，由 Michele Usuelli](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
 
 ## <a name="install-minicran"></a>安裝 miniCRAN
 
@@ -99,9 +100,9 @@ local_repo <- "C:/mylocalrepo"
     makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.3");
     ```
 
-   這項資訊，miniCRAN 套件會建立您要將套件複製到資料夾結構[!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)]更新版本。
+   這項資訊，miniCRAN 套件會建立您要將套件複製到資料夾結構[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]更新版本。
 
-此時，您應該有包含您所需，封裝的資料夾和任何其他套件，且需要。 路徑應該類似此範例： C:\mylocalrepo\bin\windows\contrib\3.3 和它應該包含壓縮封裝的集合。 請勿將套件解壓縮或重新命名任何檔案。
+此時，您應該有包含您所需，封裝的資料夾和任何其他套件，且需要。 路徑應該類似此範例：C:\mylocalrepo\bin\windows\contrib\3.3 和它應該包含壓縮封裝的集合。 請勿將套件解壓縮或重新命名任何檔案。
 
 （選擇性） 執行下列程式碼，列出本機 miniCRAN 儲存機制中包含的封裝。
 

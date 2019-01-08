@@ -9,12 +9,12 @@ ms.date: 12/07/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.custom: seodec18
-ms.openlocfilehash: c760bd4c149a63de0335c6d6651036bba56533a0
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: f5ddd80eaf29db657c42eec5c84c8485e8b0d8b6
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246757"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531153"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入門：部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集
 
@@ -56,7 +56,6 @@ kubectl config view
 - 在 [命令視窗](https://docs.microsoft.com/visualstudio/ide/reference/command-window)，引號括住包含環境變數中。 如果您可以使用引號括住来包裝的密碼，密碼中包含引號。
 - 在 bash 中，引號不包含在變數中。 我們的範例中使用雙引號括住`"`。
 - 可以為任何您喜歡，設定密碼環境變數，但請確定它們已夠複雜，而且不使用`!`， `&`，或`'`字元。
-- CTP 2.2 版本中，不會變更預設連接埠。
 - `sa`帳戶是在安裝期間建立的 SQL Server Master 執行個體上的系統管理員。 建立您的 SQL Server 容器之後，在容器中執行 `echo $MSSQL_SA_PASSWORD`，即可探索您指定的 `MSSQL_SA_PASSWORD` 環境變數。 基於安全考量，變更您`sa`根據所述的最佳作法的密碼[這裡](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)。
 
 初始化下列環境變數。  所需要的部署巨量資料叢集：

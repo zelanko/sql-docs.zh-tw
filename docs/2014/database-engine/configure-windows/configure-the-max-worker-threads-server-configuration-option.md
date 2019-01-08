@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - worker threads [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9df3cfbf232ae8d1401b38f88fa517f7b5be4536
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc0552791f64e39ec3dc83b419d6db6884106780
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188065"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368760"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>設定 max worker threads 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max worker threads [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **max worker threads** 選項會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序可使用的工作者執行緒數目。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用作業系統的原生執行緒服務，因此會有一個或多個執行緒同時支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所支援的每個網路、由另一個執行緒負責處理資料庫檢查點，而所有使用者則由一個執行緒集區負責處理。 **max worker threads** 的預設值是 0。 這會讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在啟動時自動設定工作者執行緒的數目。 此預設值對大多數系統都是最佳的。 但依系統組態而定，將 **max worker threads** 設為特定的值有時候可提高效能。  
@@ -40,7 +39,7 @@ ms.locfileid: "48188065"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **待處理**  [設定 max worker threads 選項之後](#FollowUp)  
+-   **後續操作：**[設定 max worker threads 選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48188065"
     |256 個處理器|8320|8576|  
   
     > [!NOTE]  
-    >  如需有關使用超過 64 個 CPU 的建議事項，請參閱[在超過 64 個 CPU 之電腦上執行 SQL Server 的最佳作法](http://technet.microsoft.com/library/ee210547\(SQL.105\).aspx)。  
+    >  如需有關使用超過 64 個 CPU 的建議事項，請參閱[在超過 64 個 CPU 之電腦上執行 SQL Server 的最佳作法](https://technet.microsoft.com/library/ee210547\(SQL.105\).aspx)。  
   
     > [!WARNING]  
     >  建議在 32 位元電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的最大工作者執行緒設為 1024。  
@@ -126,7 +125,7 @@ WHERE s.is_user_process = 0;
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `max worker threads` 選項設定為 `900`。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `max worker threads` 選項設定為 `900`。  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -144,7 +143,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 待處理：設定 max worker threads 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定 max worker threads 選項之後  
  變更立即生效，不需要重新啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
 ## <a name="see-also"></a>另請參閱  

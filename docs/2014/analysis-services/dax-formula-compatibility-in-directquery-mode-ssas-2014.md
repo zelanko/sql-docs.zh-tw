@@ -12,17 +12,17 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 61018db803a8459f10fc6cb0bf49c89dd9c685ed
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 8061cf30107a5bdfff6d8af53e70affb93ff9469
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100319"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372660"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 模式中的 DAX 公式相容性 (SSAS 2014)
 Data Analysis Expression 語言 (DAX) 可用來建立 Analysis Services 表格式模型中的量值和其他自訂公式[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]Excel 活頁簿中的資料模型和 Power BI Desktop 資料模型。 在大部分的方面，您在這些環境中建立的模型相同，且您可以使用相同的量值、 關聯性和 Kpi 等等。不過，如果您撰寫的 Analysis Services 表格式模型，並將它部署在 DirectQuery 模式中，有一些限制，您可以使用的公式。 本主題概述這些差異，列出在相容性層級 1100年或 1103年的 SQL Server 2014 Analysis Services tabulars 模型和 DirectQuery 模式中，不支援的函式並列出支援的函式但可能傳回不同的結果。  
   
-在本主題中，我們會使用這個詞彙*記憶體中模型*以指向表格式模型，這完全是裝載在以表格式模式執行 Analysis Services 伺服器上的記憶體中快取的資料。 我們會使用*DirectQuery 模型*參考具有已撰寫和/或以 DirectQuery 模式部署的表格式模型。 DirectQuery 模式的相關資訊，請參閱[DirectQuery 模式 （SSAS 表格式）](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)。  
+在本主題中，我們會使用這個詞彙*記憶體中模型*以指向表格式模型，這完全是裝載在以表格式模式執行 Analysis Services 伺服器上的記憶體中快取的資料。 我們會使用*DirectQuery 模型*參考具有已撰寫和/或以 DirectQuery 模式部署的表格式模型。 DirectQuery 模式的相關資訊，請參閱[DirectQuery 模式 （SSAS 表格式）](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)。  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>記憶體中和 DirectQuery 模式之間的差異  
@@ -51,16 +51,16 @@ Data Analysis Expression 語言 (DAX) 可用來建立 Analysis Services 表格�
 一般而言，DAX 比較能夠容許記憶體內部模型的資料類型不符，而且將嘗試針對值進行隱含轉換 (最多兩次)，如本節所述。 不過，在 DirectQuery 模式中，傳送至關聯式資料存放區的公式會依照關聯式引擎的規則，以較嚴格的方式進行評估，而且比較可能會失敗。  
   
 **字串和數字的比較**  
-範例： `“2” < 3`  
+範例： `"2" < 3`  
   
 此公式會比較文字字串與數字。 在 DirectQuery 模式和記憶體內部模型中，此運算式都是 **true** 。  
   
 在記憶體內部模型中，結果為 **true** ，因為作為字串的數字會隱含轉換成數值資料類型，以便與其他數字進行比較。 SQL 也會將文字數字隱含轉換成數字，以便與數值資料類型相比較。  
   
-請注意，這代表 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]第一版行為的變更 (原本傳回 **false**)，因為文字 “2” 一定會被視為大於任何數字。  
+請注意，這代表從第一個版本的行為變更[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]，這會傳回**false**，因為文字"2"一定會被視為大於任何數字。  
   
 **文字與布林值的比較**  
-範例： `“VERDADERO” = TRUE`  
+範例： `"VERDADERO" = TRUE`  
   
 此運算式會比較文字字串與布林值。 通常，對於 DirectQuery 或記憶體中模型而言，將字串值與布林值相比較會產生錯誤。 此規則的唯一例外狀況是，當字串包含 **true** 或 **false**一字時。如果字串包含任何 true 或 false 值，就會轉換成布林值並且進行比較，並提供邏輯結果。  
   
@@ -80,7 +80,7 @@ Data Analysis Expression 語言 (DAX) 可用來建立 Analysis Services 表格�
 -   進行比較而且搭配 EXACT、AND、OR、 &amp;&amp;或 || 使用時，布林值一定會被視為邏輯值。  
   
 **從字串轉換成布林值**  
-在記憶體內部模型和 DirectQuery 模型中，系統僅允許從這些字串轉換成布林值： **“”** (空字串)、 **“true”**、 **“false”**，其中空字串會轉換成 false 值。  
+在記憶體中和 DirectQuery 模型中，僅允許轉換成布林值從這些字串： **""** （空字串）、 **"true"**， **"false"**; 其中空字串轉換 （cast) 成 false 值。  
   
 轉換成任何其他字串的布林資料類型會產生錯誤。  
   
@@ -92,10 +92,10 @@ Data Analysis Expression 語言 (DAX) 可用來建立 Analysis Services 表格�
 使用記憶體中資料存放區之模型所支援的日期文字格式範圍比 SQL Server 所支援的日期字串格式更有限。 不過，DAX 支援自訂日期和時間格式。  
   
 **從字串轉換成其他非布林值**  
-從字串轉換成非布林值時，DirectQuery 模式的行為與 SQL Server 相同。 如需詳細資訊，請參閱 [CAST 和 CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8)。  
+從字串轉換成非布林值時，DirectQuery 模式的行為與 SQL Server 相同。 如需詳細資訊，請參閱 [CAST 和 CONVERT (Transact-SQL)](https://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8)。  
   
 **不允許從數字轉換成字串**  
-範例： `CONCATENATE(102,”,345”)`  
+範例： `CONCATENATE(102,",345")`  
   
 SQL Server 不允許從數字轉換成字串。  
   
@@ -104,7 +104,7 @@ SQL Server 不允許從數字轉換成字串。
 **在 DirectQuery 中不支援兩次嘗試轉換**  
 當第一次轉換失敗時，記憶體中模型通常會嘗試第二次轉換。 這在 DirectQuery 模式中絕對不會發生。  
   
-範例： `TODAY() + “13:14:15”`  
+範例： `TODAY() + "13:14:15"`  
   
 在此運算式中，第一個參數的類型為 **datetime** ，而第二個參數的類型為 **string**。 不過，結合運算元時，系統將以不同的方式處理轉換。 DAX 將執行從 **string** 到 **double**的隱含轉換。 在記憶體內部模型中，公式引擎會嘗試直接轉換成 **double**，而且如果轉換失敗，它會嘗試將字串轉換成 **datetime**。  
   
@@ -129,7 +129,7 @@ SQL Server 不允許從數字轉換成字串。
 不過，在記憶體中模型中使用相同的公式時，則會傳回八位元組整數。 這是因為公式引擎不會執行數值溢位的檢查。  
   
 **含有空白的 LOG 函數會傳回不同的結果**  
-SQL Server 處理 Null 和空白的方式與 xVelocity 引擎不同。 因此，下列公式會在 DirectQuery 模式中傳回錯誤，而在記憶體內部模式中傳回無限大 (–inf)。  
+SQL Server 處理 Null 和空白的方式與 xVelocity 引擎不同。 如此一來，下列公式會傳回錯誤在 DirectQuery 模式中，但傳回無限大 (-inf) 在記憶體中模式。  
   
 `EXAMPLE: LOG(blank())`  
   
@@ -226,7 +226,7 @@ DAX CEILING 函數的 Transact-SQL 對等項目僅支援大小為 10^19 以下�
   
 -   最小值：-922337203685477.5808  
   
--   最大值：922337203685477.5807  
+-   最高：922337203685477.5807  
   
 **結合 Currency 與 REAL 資料類型**  
 範例： `Currency sample 1`  
@@ -259,18 +259,18 @@ DAX CEILING 函數的 Transact-SQL 對等項目僅支援大小為 10^19 以下�
 此外，在 SQL Server 中，某些文字函數支援 Excel 並未提供的其他引數。 如果公式需要遺漏的引數，您可能會在記憶體中模型中取得不同的結果或錯誤。  
   
 **使用 LEFT、RIGHT 等函數傳回字元的運算可能會傳回正確但大小寫不同的字元，或者不傳回任何結果**  
-範例： `LEFT([“text”], 2)`  
+範例： `LEFT(["text"], 2)`  
   
 在 DirectQuery 模式中，傳回之字元的大小寫一定與儲存在資料庫中的字母完全相同。 不過，xVelocity 引擎會使用不同的演算法來壓縮值並建立索引，以便改善效能。  
   
 根據預設，系統會使用 Latin1_General 定序，這種定序不區分大小寫，但是區分腔調字。 因此，如果某個文字字串具有多個採用小寫、大寫或混合大小寫的執行個體，所有執行個體都會被視為相同的字串，而且只有字串的第一個執行個體會儲存在索引中。 針對預存字串運作的所有文字函數都會擷取索引格式的指定部分。 因此，範例公式會使用第一個執行個體做為輸入，針對整個資料行傳回相同的值。  
   
-[表格式模型中的字串儲存和定序](http://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
+[表格式模型中的字串儲存和定序](https://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
   
 這種行為也適用於其他文字函數，包括 RIGHT、MID 等等。  
   
 **字串長度會影響結果**  
-範例： `SEARCH(“within string”, “sample target  text”, 1, 1)`  
+範例： `SEARCH("within string", "sample target  text", 1, 1)`  
   
 如果您使用 SEARCH 函數來搜尋字串，而且目標字串的長度超過 within string，DirectQuery 模式就會引發錯誤。  
   
@@ -283,21 +283,21 @@ DAX CEILING 函數的 Transact-SQL 對等項目僅支援大小為 10^19 以下�
 在記憶體中模型中，此公式會依照 Excel 的行為 (串連來源字串與取代字串)，並且傳回 CACalifornia。  
   
 **字串中間的隱含 TRIM**  
-範例： `TRIM(“ A sample sentence with leading white space”)`  
+範例： `TRIM(" A sample sentence with leading white space")`  
   
 DirectQuery 模式會將 DAX TRIM 函數轉譯成 SQL 陳述式 `LTRIM(RTRIM(<column>))`。 因此，只會移除開頭和尾端空白字元。  
   
 相較之下，記憶體中模型中的相同公式會依照 Excel 的行為，移除字串內的空格。  
   
 **搭配 LEN 函數使用的隱含 RTRIM**  
-範例： `LEN(‘string_column’)`  
+範例： `LEN('string_column')`  
   
 與 SQL Server 相同的是，DirectQuery 模式會自動從字串資料行的結尾移除空白字元：也就是說，它會執行隱含 RTRIM。 因此，如果字串具有尾端空格，使用 LEN 函數的公式可能會傳回不同的結果。  
   
 **記憶體支援 SUBSTITUTE 的其他參數**  
-範例： `SUBSTITUTE([Title],”Doctor”,”Dr.”)`  
+範例： `SUBSTITUTE([Title],"Doctor","Dr.")`  
   
-範例： `SUBSTITUTE([Title],”Doctor”,”Dr.”, 2)`  
+範例： `SUBSTITUTE([Title],"Doctor","Dr.", 2)`  
   
 在 DirectQuery 模式中，您只能使用這個具有三個 (3) 參數的函數版本：資料行的參考、舊文字和新文字。 如果您使用第二個公式，就會引發錯誤。  
   
@@ -429,7 +429,7 @@ RAND
   
 RANDBETWEEN  
   
-**時間智慧函數： 開始和結束日期**  
+**時間智慧函數：開始和結束日期**  
   
 DATESQTD  
   
@@ -453,7 +453,7 @@ SAMEPERIODLASTYEAR
   
 PARALLELPERIOD  
   
-**時間智慧函數： 餘額**  
+**時間智慧函數：餘額**  
   
 OPENINGBALANCEMONTH  
   
@@ -467,7 +467,7 @@ CLOSINGBALANCEQUARTER
   
 CLOSINGBALANCEYEAR  
   
-**時間智慧函數： 上一個和下一個週期**  
+**時間智慧函數：上一個和下一個週期**  
   
 PREVIOUSDAY  
   
@@ -485,7 +485,7 @@ NEXTQUARTER
   
 NEXTYEAR  
   
-**時間智慧函數： 週期和週期的計算**  
+**時間智慧函數：週期和週期的計算**  
   
 STARTOFMONTH  
   
@@ -506,6 +506,6 @@ LASTDATE
 DATEADD  
   
 ## <a name="see-also"></a>另請參閱  
-[DirectQuery 模式 (SSAS 表格式)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[DirectQuery 模式 (SSAS 表格式)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

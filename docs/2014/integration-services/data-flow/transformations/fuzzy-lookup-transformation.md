@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptrans.f1
@@ -31,18 +30,18 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 53385dd40fa0b180fcc6994832faf5feffcdd8f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a09abfe2d5370e9564dd3d081346c022cb2ca0d7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106392"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361960"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查閱轉換
   「模糊查閱」轉換會執行資料清除工作，例如標準化資料、更正資料及提供遺漏值。  
   
 > [!NOTE]  
->  如需模糊查閱轉換 (包括效能和記憶體限制) 的詳細資訊，請參閱 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(SQL Server Integration Services 2005 中的模糊查閱和模糊群組) 白皮書。  
+>  如需模糊查閱轉換 (包括效能和記憶體限制) 的詳細資訊，請參閱 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(SQL Server Integration Services 2005 中的模糊查閱和模糊群組) 白皮書。  
   
  「模糊查詢」轉換與「查閱」轉換的不同之處在於其使用模糊比對。 「查閱」轉換使用等聯結 (Equi-Join)，在參考資料表中尋找相符的資料錄。 它會傳回至少有一項相符資料錄的資料錄，以及傳回沒有任何相符資料錄的資料錄。 相反地，「模糊查閱」轉換會使用模糊比對，傳回參考資料表中的一個或多個相近相符項目。  
   
@@ -127,11 +126,11 @@ ms.locfileid: "48106392"
   
  如需有關可在 **[模糊查閱轉換編輯器]** 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [模糊查閱轉換編輯器&#40;參考資料表索引標籤&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [模糊查閱轉換編輯器 &#40;參考資料表索引標籤&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
--   [模糊查閱轉換編輯器&#40;資料行索引標籤&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
+-   [模糊查閱轉換編輯器 &#40;資料行索引標籤&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
--   [模糊查閱轉換編輯器&#40;進階索引標籤&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
+-   [模糊查閱轉換編輯器 &#40;進階索引標籤&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   

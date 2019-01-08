@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8db79bafe46975071f776e34e240e20344acc5fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fa3ba6fec2e29b48e86b3771bd081037381df6d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183798"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811420"
 ---
 # <a name="cdc-instance-deployment-script"></a>CDC 執行個體部署指令碼
   顯示 CDC 執行個體部署指令碼的 [CDC 執行個體部署指令碼] 對話方塊。 此指令碼可用來重新建立 CDC 資料庫，並將其所有成品放在另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上。  
@@ -34,10 +33,10 @@ ms.locfileid: "48183798"
  **另存新檔**  
  將指令碼以文字檔格式儲存在您想要儲存的任何位置。 您可以將包含指令碼的檔案複製到其他任何伺服器上，並在該處執行。  
   
- **複製**  
+ **[複製]**  
  將指令碼複製到剪貼簿。 然後您可以將指令碼貼到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或任何文字編輯器中，於日後執行指令碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [準備 SQL Server 以使用 CDC](prepare-sql-server-for-cdc.md)  
+ [為 CDC 準備 SQL Server](prepare-sql-server-for-cdc.md)  
   
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 18277b6db2a59c502c4aafbec98974385a4a053d
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 852fb3c6cee7c65f8799102bbd65ab368cd0d9e2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168784"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538576"
 ---
 # <a name="create-an-aps-domain-administrator"></a>建立 APS 網域系統管理員
 某些作業需要 Analytics Platform System 網域系統管理員權限。 這會說明如何建立其他設備網域系統管理員。  

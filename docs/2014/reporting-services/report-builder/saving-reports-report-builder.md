@@ -11,12 +11,12 @@ ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 37620b099bf07d8c38472dc211040d9efb252992
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e549fa2b443d0ec634c6d226b79bbcc33d674a3c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182038"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376130"
 ---
 # <a name="saving-reports-report-builder"></a>儲存報表 (報表產生器)
   在報表產生器中，您可以將報表儲存到報表伺服器、SharePoint 文件庫、您具有寫入權限的檔案共用位置或是您的電腦上。 您可以將報表儲存到開啟它的相同位置，也可以儲存到另一個位置，或是以新的名稱儲存到相同或不同的位置。 根據預設，報表會重新儲存到開啟它的相同位置。 當您儲存報表時，您實際上儲存的是報表定義，報表定義會描述報表配置。 您不會儲存資料。 每當您執行報表時，便會重新整理報表資料，而且報表資料可能會與您上次執行報表時的資料不同。  
@@ -29,7 +29,7 @@ ms.locfileid: "48182038"
   
 -   使用報表記錄，將轉譯的報表版本儲存為歷程記錄複本。  
   
- 若要深入了解如何直接在報表伺服器上檢視及管理報表，請參閱[尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) 和 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](http://go.microsoft.com/fwlink/?LinkId=154888)》中的 [Reporting Services 報表伺服器 &#40;原生模式&#41;](../report-server/reporting-services-report-server-native-mode.md)。  
+ 若要深入了解如何直接在報表伺服器上檢視及管理報表，請參閱[尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) 和 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](https://go.microsoft.com/fwlink/?LinkId=154888)》中的 [Reporting Services 報表伺服器 &#40;原生模式&#41;](../report-server/reporting-services-report-server-native-mode.md)。  
   
 ##  <a name="SavingReportDefinitions"></a> 儲存報表定義  
  雖然您可以將報表儲存到電腦，但是將報表儲存到報表伺服器會提供許多優點。  
@@ -58,27 +58,27 @@ ms.locfileid: "48182038"
 
   
 ##  <a name="UsingFileShareDelivery"></a> 使用檔案共用傳遞  
- 如果您要封存的報表數量很多，請建立訂閱，將報表直接傳遞到檔案系統。 若要使用此方式，您必須對每一個報表建立訂閱、選擇共用資料夾來儲存報表，並且定義排程以決定何時建立檔案。 一旦完成訂閱的定義，報表伺服器就可以使用您所提供的排程，自動執行報表並將報表檔案加入封存。 如果只是偶爾要封存報表，就可以建立僅使用一次的排程。 如需有關訂閱和檔案共用傳遞的詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](http://go.microsoft.com/fwlink/?linkid=121312) 的＜Reporting Services 中的檔案傳遞＞。  
+ 如果您要封存的報表數量很多，請建立訂閱，將報表直接傳遞到檔案系統。 若要使用此方式，您必須對每一個報表建立訂閱、選擇共用資料夾來儲存報表，並且定義排程以決定何時建立檔案。 一旦完成訂閱的定義，報表伺服器就可以使用您所提供的排程，自動執行報表並將報表檔案加入封存。 如果只是偶爾要封存報表，就可以建立僅使用一次的排程。 如需有關訂閱和檔案共用傳遞的詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](https://go.microsoft.com/fwlink/?linkid=121312) 的＜Reporting Services 中的檔案傳遞＞。  
   
 
   
 ##  <a name="UsingReportHistory"></a> 使用報表記錄  
- 您也可以使用報表記錄功能來建立歷程記錄複本。 然後就可以備份報表伺服器資料庫，並將備份儲存於安全的位置以供未來使用。 所有的報表記錄 (連同報表、共用資料來源項目、資料夾、訂閱和共用排程) 都會儲存在報表伺服器資料庫中。 您可以建立備份，以永久保留一份報表記錄和中繼資料的副本 (例如指出報表收件者的訂閱資訊)。 如需詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](http://go.microsoft.com/fwlink/?linkid=121312) 的＜管理報表記錄＞。  
+ 您也可以使用報表記錄功能來建立歷程記錄複本。 然後就可以備份報表伺服器資料庫，並將備份儲存於安全的位置以供未來使用。 所有的報表記錄 (連同報表、共用資料來源項目、資料夾、訂閱和共用排程) 都會儲存在報表伺服器資料庫中。 您可以建立備份，以永久保留一份報表記錄和中繼資料的副本 (例如指出報表收件者的訂閱資訊)。 如需詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](https://go.microsoft.com/fwlink/?linkid=121312) 的＜管理報表記錄＞。  
   
 
   
 ##  <a name="HowTo"></a> 如何主題  
   
--   [將報表儲存到報表伺服器&#40;報表產生器&#41;](save-reports-to-a-report-server-report-builder.md)  
+-   [將報表儲存到報表伺服器 &#40;報表產生器&#41;](save-reports-to-a-report-server-report-builder.md)  
   
--   [將報表儲存至 SharePoint 文件庫&#40;報表產生器&#41;](save-a-report-to-a-sharepoint-library-report-builder.md)  
+-   [將報表儲存至 SharePoint 文件庫 &#40;報表產生器&#41;](save-a-report-to-a-sharepoint-library-report-builder.md)  
   
 -   [將報表儲存到您的電腦&#40;報表產生器&#41;](../save-reports-to-your-computer-report-builder.md)  
   
 
   
 ## <a name="see-also"></a>另請參閱  
- [報表、 報表組件，以及報表定義&#40;報表產生器及 SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [報表、報表組件和報表定義 &#40;報表產生器及 SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [安裝、 解除安裝與報表產生器支援](../install-uninstall-and-report-builder-support.md)   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [匯出報表&#40;報表產生器及 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   

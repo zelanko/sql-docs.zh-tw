@@ -15,12 +15,12 @@ ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa56e9366fdc60a5b411e19b200706f0404e7312
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2991d6b79c9cbfbd37466484e1c4394b6e0fb804
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209728"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369360"
 ---
 # <a name="lookup-transformation-editor-advanced-page"></a>查閱轉換編輯器 (進階頁面)
   使用 [查閱轉換編輯器] 對話方塊的 [進階] 頁面，即可設定部分快取並修改查閱轉換的 SQL 陳述式。  
@@ -50,13 +50,13 @@ ms.locfileid: "48209728"
  使用 [設定查詢參數] 對話方塊，即可將輸入資料行對應至參數。  
   
 ## <a name="external-resources"></a>外部資源  
- blogs.msdn.com 上的部落格文章： [查閱快取模式](http://go.microsoft.com/fwlink/?LinkId=219518)   
+ blogs.msdn.com 上的部落格文章： [查閱快取模式](https://go.microsoft.com/fwlink/?LinkId=219518)   
   
 ## <a name="see-also"></a>另請參閱  
- [查閱轉換編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
- [查閱轉換編輯器&#40;連接頁面&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
+ [查閱轉換編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [查閱轉換編輯器 &#40;連接頁面&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [查閱轉換編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
- [查閱轉換編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
+ [查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [模糊查閱轉換](data-flow/transformations/fuzzy-lookup-transformation.md)  
   

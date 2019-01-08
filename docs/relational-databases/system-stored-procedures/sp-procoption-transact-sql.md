@@ -18,12 +18,12 @@ ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0213e831f6613acc0ce5cc0a802240c2e3979fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcde4fd9439862dd88bdb1ff8c9eb40ff85ce0d4
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772336"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590422"
 ---
 # <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@ProcName =** ] **'***程序***'**  
+ [  **@ProcName =** ] **'**_程序_**'**  
  是用來設定選項的程序的名稱。 *程序*已**nvarchar(776)**，沒有預設值。  
   
- [  **@OptionName =** ] **'***選項***'**  
+ [  **@OptionName =** ] **'**_選項_**'**  
  這是您要設定的選項名稱。 唯一的值* 選項*是**啟動**。  
   
- [  **@OptionValue =** ] **'***值***'**  
+ [  **@OptionValue =** ] **'**_值_**'**  
  這是指是否選項設為 on (**，則為 true**或**上**) 或 [關閉]  (**false**或**關閉**)。 *值*已**varchar(12)**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  

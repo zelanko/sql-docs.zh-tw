@@ -1,5 +1,5 @@
 ---
-title: 部署檢查清單： Powerpivot for SharePoint 2010 的多伺服器安裝 |Microsoft Docs
+title: 部署檢查清單：PowerPivot for SharePoint 2010 的多伺服器安裝 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: db0a090cd82e1bbcd9caa9ac5542662f67c5aecd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83d02accf46a1939a1bd90e6de4d61154ea8100f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181250"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350538"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>部署檢查清單：PowerPivot for SharePoint 2010 的多伺服器安裝
   這份檢查清單會引導您逐步完成新增[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]針對至您建置全新的三層式 SharePoint 2010 伺服陣列的 SharePoint。 三層伺服陣列包含資料庫、應用程式和 Web 層。 新增[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]此拓撲會要求您執行 SQL Server 安裝程式安裝[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]應用程式層上。 當您部署 web 應用程式方案時，PowerPivot 程式檔案會加入至 web 層，而只會做為後續安裝工作。 即使有部署步驟，但是在您需要執行的 Web 層或資料層並沒有個別的安裝步驟。 正在安裝您需要執行的唯一安裝步驟[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]應用程式伺服器上。  
@@ -65,7 +65,7 @@ ms.locfileid: "48181250"
     9. 按一下 [確定] 關閉 [網際網路選項] 對話方塊。  
   
 ##  <a name="installdb"></a> 安裝資料庫伺服器  
- 本主題假設您的伺服器陣列拓撲為基礎 」 文件中所述[的三層式伺服器陣列的多部伺服器](http://go.microsoft.com/fwlink/?LinkId=182771)。 如果您已經有可運作的伺服器陣列，請直接跳到[安裝 PowerPivot for SharePoint](#installppapp)。  
+ 本主題假設您的伺服器陣列拓撲為基礎 」 文件中所述[的三層式伺服器陣列的多部伺服器](https://go.microsoft.com/fwlink/?LinkId=182771)。 如果您已經有可運作的伺服器陣列，請直接跳到[安裝 PowerPivot for SharePoint](#installppapp)。  
   
  如果您剛要開始使用拓撲，請從安裝 SQL Server Database Engine 開始。 這些指示會導致 SharePoint 伺服器可以在伺服陣列中存取的資料庫伺服器。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48181250"
   
  使用 SharePoint 2010 文件集中的下列指示，安裝及設定包含兩個 Web 伺服器與一個應用程式伺服器的 SharePoint 2010 伺服器陣列：  
   
- [多部伺服器的三層式伺服器陣列 (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=182771)  
+ [多部伺服器的三層式伺服器陣列 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=182771)  
   
  當系統要求您指定資料庫伺服器時，請指定您稍早安裝的資料庫伺服器。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "48181250"
   
  一律在應用程式伺服器上安裝 PowerPivot for SharePoint。 雖然 Web 前端伺服器也會執行 PowerPivot for SharePoint 伺服器元件，但是在 Web 前端執行的元件會在 PowerPivot for SharePoint 組態步驟中安裝 (在伺服器陣列中部署方案時)。 如需有關安裝程式的詳細資訊，請參閱 <<c0> [ 安裝 PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)。  
   
- 如果您的部署拓撲需要兩個 PowerPivot for SharePoint 執行個體，請在每部應用程式伺服器上執行 SQL Server 安裝程式。 單一電腦上只能有一個 PowerPivot for SharePoint 執行個體。 如果需要多個執行個體，則必須使用其他伺服器。 如需有關如何將多個 PowerPivot for SharePoint 伺服器加入至相同的伺服陣列的詳細資訊，請參閱[部署檢查清單： PowerPivot 伺服器加入 SharePoint 2010 伺服陣列的向外](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)。  
+ 如果您的部署拓撲需要兩個 PowerPivot for SharePoint 執行個體，請在每部應用程式伺服器上執行 SQL Server 安裝程式。 單一電腦上只能有一個 PowerPivot for SharePoint 執行個體。 如果需要多個執行個體，則必須使用其他伺服器。 如需有關如何將多個 PowerPivot for SharePoint 伺服器加入至相同的伺服陣列的詳細資訊，請參閱[部署檢查清單：藉由將 PowerPivot 伺服器加入至 SharePoint 2010 伺服器陣列的向外](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)。  
   
 ##  <a name="installclientlib"></a> 在沒有安裝 PowerPivot for SharePoint 的 SharePoint 應用程式伺服器上安裝 Analysis Services 用戶端程式庫  
  如果某個伺服器陣列拓撲包含執行下列應用程式的 Web 前端或應用程式伺服器，但是並未在同一部電腦上安裝 PowerPivot for SharePoint，則需要使用其他軟體才能支援 PowerPivot 資料存取和功能：  
@@ -163,7 +163,7 @@ ms.locfileid: "48181250"
  同樣地，如果某部電腦只有管理中心，但是並未在同一部電腦上安裝 PowerPivot for SharePoint，則需要 ADOMD.NET 用戶端程式庫。 PowerPivot 管理儀表板會使用此程式庫來存取擴展儀表板所用的內部資料。 如需詳細資訊，請參閱 [在執行管理中心的 Web 前端伺服器上安裝 ADOMD.NET](../../../2014/sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md)。  
   
 ##  <a name="configsrvr"></a> 設定伺服器  
- 您可以使用 PowerPivot 組態工具來設定 PowerPivot for SharePoint。 此工具會掃描伺服器陣列的現有組態，並提供安裝或啟用 PowerPivot for SharePoint 所需之 SharePoint 功能的選項。 在此步驟中，會啟動「對 Windows Token 服務的宣告」。 此外，如果尚未啟用其他必要的 SharePoint 功能，組態工具會將這些功能加入清單，並加入啟用功能的動作。  
+ 您可以使用 PowerPivot 組態工具來設定 PowerPivot for SharePoint。 此工具會掃描現有的伺服陣列的組態，並提供安裝或啟用所需 PowerPivot for SharePoint 的 SharePoint 功能的選項。 在此步驟中，會啟動「對 Windows Token 服務的宣告」。 此外，如果尚未啟用其他必要的 SharePoint 功能，組態工具會將這些功能加入清單，並加入啟用功能的動作。  
   
  如需詳細資訊，請參閱 <<c0> [ 設定或修復 PowerPivot for SharePoint 2010 &#40;PowerPivot 組態工具&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)。</c0>  
   
@@ -200,7 +200,7 @@ ms.locfileid: "48181250"
   
  若要在伺服器上確認 PowerPivot 資料存取，請執行以下作業：  
   
-1.  [下載](http://go.microsoft.com/fwlink/?LinkID=219108) Reporting Services 教學課程隨附的野餐資料範例。 您將使用此下載中的範例活頁簿確認 PowerPivot 資料存取。 解壓縮檔案。  
+1.  [下載](https://go.microsoft.com/fwlink/?LinkID=219108) Reporting Services 教學課程隨附的野餐資料範例。 您將使用此下載中的範例活頁簿確認 PowerPivot 資料存取。 解壓縮檔案。  
   
 2.  將 PowerPivot 活頁簿上傳至 PowerPivot 圖庫或任何 SharePoint 文件庫。  
   
@@ -227,7 +227,7 @@ ms.locfileid: "48181250"
  您可以設定快取到磁碟之 PowerPivot 資料檔案所能使用的磁碟空間上限。 預設值是使用所有可用的磁碟空間。 如需有關如何限制磁碟空間使用量的相關指示，請參閱[設定磁碟空間使用量&#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)。  
   
 ####  <a name="Upload"></a> 增加 SharePoint Web 應用程式的檔案上傳大小上限  
- 因為 PowerPivot 活頁簿可能很龐大，所以您可能會想要增加檔案上傳大小上限。 要設定的檔案大小設定有兩個：Web 應用程式的 [最大上傳大小] 以及 Excel Services 中的 [最大活頁簿大小]。 檔案大小上限應該在兩個應用程式中設定為相同的值。 如需相關指示，請參閱 <<c0> [ 設定最大檔案上傳大小 &#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。</c0>  
+ 因為 PowerPivot 活頁簿可能很龐大，所以您可能會想要增加檔案上傳大小上限。 有兩個檔案大小設定需要設定：Web 應用程式的 [最大上傳大小] 及 Excel Services 的 [最大活頁簿大小]。 檔案大小上限應該在兩個應用程式中設定為相同的值。 如需相關指示，請參閱 <<c0> [ 設定最大檔案上傳大小 &#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。</c0>  
   
 #### <a name="grant-sharepoint-permissions-to-workbook-users"></a>將 SharePoint 權限授與活頁簿使用者  
  使用者需要有 SharePoint 權限，才能發行或檢視活頁簿。 請務必授與**檢視**給需要檢視已發行的活頁簿的使用者權限及**參與**發行或管理活頁簿的使用者權限。 您必須是網站集合管理員，才能授與權限。  
@@ -265,8 +265,8 @@ ms.locfileid: "48181250"
  PowerPivot 服務應用程式是使用預設屬性和值所建立。 您可以修改個別服務應用程式的組態設定，以變更配置要求所依據的方法、設定伺服器逾時、變更查詢回應報告事件的臨界值，或是指定保留使用量資料的時間長度。 如需有關在 [管理中心] 的組態或 SharePoint Web 應用程式中使用 PowerPivot 功能的詳細資訊，請參閱[管理中心的 PowerPivot 伺服器管理和組態](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL server 2012 版本支援的功能](http://go.microsoft.com/fwlink/?linkid=232473)   
+ [SQL server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473)   
  [安裝 PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)   
- [部署檢查清單： 向外延展至 SharePoint 2010 伺服器陣列加入 PowerPivot 伺服器](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)  
+ [部署檢查清單：向外延展至 SharePoint 2010 伺服器陣列加入 PowerPivot 伺服器](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)  
   
   

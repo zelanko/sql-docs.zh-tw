@@ -1,5 +1,5 @@
 ---
-title: 啟用或停用的 SQL Server 機器學習服務的遠端 R 封裝管理 |Microsoft Docs
+title: 啟用或停用遠端的 R 封裝管理-SQL Server Machine Learning 服務
 description: 啟用 SQL Server 2016 R Services 或 SQL Server 2017 Machine Learning 服務 （資料庫） 上的遠端 R 封裝管理
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a38bd844e56dca4c5096156bde3b544a44038d49
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 5528fc63dd7b7d7382eb9aa7931dcf5f8942da19
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753507"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645419"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>啟用或停用 SQL Server 的遠端封裝管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "50753507"
 
     您也可以執行查詢上 sys.database_principals 如下所示：
 
-    ```SQL
+    ```sql
     SELECT pr.principal_id, pr.name, pr.type_desc,   
         pr.authentication_type_desc, pe.state_desc,   
         pe.permission_name, s.name + '.' + o.name AS ObjectName  

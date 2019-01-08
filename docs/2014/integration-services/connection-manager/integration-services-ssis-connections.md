@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, connections
@@ -21,12 +20,12 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7497a48d8bfd4c7af0174a51869211a266800150
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33757a58353f962bf82a57a16039f92d64a8686d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186228"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356190"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 連接
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝會使用連接來執行不同的工作以及實作 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能：  
@@ -52,7 +51,7 @@ ms.locfileid: "48186228"
  若要建立這些連接， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會使用連接管理員，如下節中所述。  
   
 ## <a name="connection-managers"></a>連接管理員  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會使用連接管理員做為連接的邏輯表示法。 在設計階段，您可以設定連接管理員的屬性，以描述 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在封裝執行時建立的實體連接。 例如，連接管理員包含`ConnectionString`您設定在設計階段; 在執行階段的屬性，建立實體連接是使用中連接字串屬性的值。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會使用連接管理員做為連接的邏輯表示法。 在設計階段，您可以設定連接管理員的屬性，以描述 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在封裝執行時建立的實體連接。 例如，連接管理員會包含您可在設計階段設定的 `ConnectionString` 屬性；在執行階段，會使用連接字串屬性中的值建立實體連接。  
   
  封裝可使用連接管理員類型的多個執行個體，並且您可以在每個執行個體上設定屬性。 在執行階段，連接管理員類型的每個執行個體都會建立具有不同屬性的連接。  
   
@@ -71,21 +70,21 @@ ms.locfileid: "48186228"
 |----------|-----------------|-----------|  
 |ADO|連接到 ActiveX Data Objects (ADO) 物件。|[ADO 連線管理員](ado-connection-manager.md)|  
 |ADO.NET|使用 .NET 提供者連接到資料來源。|[ADO.NET 連線管理員](ado-net-connection-manager.md)|  
-|CACHE|從資料流程或快取檔案 (.caw) 中讀取資料，而且可以將資料儲存至快取檔案。|[快取連線管理員](cache-connection-manager.md)|  
-|DQS|連接至 Data Quality Services 伺服器及伺服器上的 Data Quality Services 資料庫。|[DQS 清理連線管理員](dqs-cleansing-connection-manager.md)|  
-|EXCEL|連接到 Excel 活頁簿檔案。|[Excel 連線管理員](excel-connection-manager.md)|  
+|CACHE|從資料流程或快取檔案 (.caw) 中讀取資料，而且可以將資料儲存至快取檔案。|[快取連接管理員](cache-connection-manager.md)|  
+|DQS|連接至 Data Quality Services 伺服器及伺服器上的 Data Quality Services 資料庫。|[DQS 清理連接管理員](dqs-cleansing-connection-manager.md)|  
+|EXCEL|連接到 Excel 活頁簿檔案。|[Excel 連接管理員](excel-connection-manager.md)|  
 |FILE|連接到檔案或資料夾。|[檔案連線管理員](file-connection-manager.md)|  
 |FLATFILE|連接到單一一般檔案中的資料。|[一般檔案連線管理員](flat-file-connection-manager.md)|  
 |FTP|連接到 FTP 伺服器。|[FTP 連線管理員](ftp-connection-manager.md)|  
-|HTTP|連接到 Web 伺服器。|[HTTP 連線管理員](http-connection-manager.md)|  
+|HTTP|連接到 Web 伺服器。|[HTTP 連接管理員](http-connection-manager.md)|  
 |MSMQ|連接到訊息佇列。|[MSMQ 連線管理員](msmq-connection-manager.md)|  
 |MSOLAP100|連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的執行個體。|[Analysis Services 連線管理員](analysis-services-connection-manager.md)|  
 |MULTIFILE|連接到多個檔案和資料夾。|[多重檔案連線管理員](multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|連接到多個資料檔案和資料夾。|[多重一般檔案連線管理員](multiple-flat-files-connection-manager.md)|  
 |OLEDB|使用 OLE DB 提供者連接到資料來源。|[OLE DB 連線管理員](ole-db-connection-manager.md)|  
 |ODBC|使用 ODBC 連接到資料來源。|[ODBC 連線管理員](odbc-connection-manager.md)|  
-|SMOServer|連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) 伺服器。|[SMO 連線管理員](smo-connection-manager.md)|  
-|SMTP|連接到 SMTP 郵件伺服器。|[SMTP 連線管理員](smtp-connection-manager.md)|  
+|SMOServer|連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) 伺服器。|[SMO 連接管理員](smo-connection-manager.md)|  
+|SMTP|連接到 SMTP 郵件伺服器。|[SMTP 連接管理員](smtp-connection-manager.md)|  
 |SQLMOBILE|連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 壓縮資料庫。|[SQL Server Compact Edition 連線管理員](sql-server-compact-edition-connection-manager.md)|  
 |WMI|連接到伺服器，並指定該伺服器上 Windows Management Instrumentation (WMI) 管理的範圍。|[WMI 連線管理員](wmi-connection-manager.md)|  
   
@@ -97,9 +96,9 @@ ms.locfileid: "48186228"
   
 |類型|描述|主題|  
 |----------|-----------------|-----------|  
-|ORACLE|連接到 Oracle\<版本資訊 > 伺服器。|Oracle 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)。|  
-|SAPBI|連接到 SAP NetWeaver BI 7 系統。|SAP BI 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=262016)＞。|  
-|TERADATA|連接到 Teradata\<版本資訊 > 伺服器。|Teradata 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)。|  
+|ORACLE|連接到 Oracle\<版本資訊 > 伺服器。|Oracle 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
+|SAPBI|連接到 SAP NetWeaver BI 7 系統。|SAP BI 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=262016)＞。|  
+|TERADATA|連接到 Teradata\<版本資訊 > 伺服器。|Teradata 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的連接管理員元件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含來源和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
   
 ### <a name="custom-connection-managers"></a>自訂連接管理員  
  您也可以撰寫自訂連接管理員。 如需詳細資訊，請參閱＜ [Developing a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)＞。  
@@ -111,14 +110,14 @@ ms.locfileid: "48186228"
   
 ## <a name="related-content"></a>相關內容  
   
--   technet.microsoft.com 上的影片： [沿用 Microsoft Attunity Connector for Oracle 來增強封裝效能](http://technet.microsoft.com/sqlserver/gg598963.aspx)  
+-   technet.microsoft.com 上的影片： [沿用 Microsoft Attunity Connector for Oracle 來增強封裝效能](https://technet.microsoft.com/sqlserver/gg598963.aspx)  
   
--   social.technet.microsoft.com 上的 Wiki 文章： [SSIS 連接性](http://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)   
+-   social.technet.microsoft.com 上的 Wiki 文章： [SSIS 連接性](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)   
   
--   blogs.msdn.com 上的部落格文章： [從 SSIS 連接至 MySQL](http://go.microsoft.com/fwlink/?LinkId=217669)。  
+-   blogs.msdn.com 上的部落格文章： [從 SSIS 連接至 MySQL](https://go.microsoft.com/fwlink/?LinkId=217669)。  
   
--   blogs.msdn.com 上的技術文章： [擷取及載入 SQL Server Integration Services 中的 SharePoint 資料](http://go.microsoft.com/fwlink/?LinkId=247826)。  
+-   blogs.msdn.com 上的技術文章： [擷取及載入 SQL Server Integration Services 中的 SharePoint 資料](https://go.microsoft.com/fwlink/?LinkId=247826)。  
   
--   support.microsoft.com 上的技術文章： [在 SSIS 中使用 Oracle 連線管理員時收到 "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" 錯誤訊息](http://go.microsoft.com/fwlink/?LinkId=233696)。  
+-   support.microsoft.com 上的技術文章：[在 SSIS 中使用 Oracle 連線管理員時收到 "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" 錯誤訊息](https://go.microsoft.com/fwlink/?LinkId=233696)。  
   
   

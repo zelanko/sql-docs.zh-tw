@@ -10,17 +10,17 @@ ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 3d939e8d1576e31de3ba42eaa7deba59a2801bb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9af1d66612485f3a790de1ebc8149b7a9e374103
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178254"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360410"
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server 索引設計指南
   設計不良的索引與不足的索引是資料庫應用程式瓶頸的主要原因。 設計有效的索引是達到良好資料庫和應用程式效能最重要的一點。 本 SQL Server 索引設計指南包含的資訊和最佳作法，可以協助您設計符合應用程式需求的有效索引。  
   
-**適用於**:[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]透過[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]除非另有指示。  
+**適用於**： [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] (除非另有明確指定)。  
   
  本指南假設讀者對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供的索引類型有概略的認識。 如需索引類型的一般描述，請參閱 [Index Types](../relational-databases/indexes/indexes.md)(索引類型)。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "48178254"
   
 -   使查詢執行更快和更具效率。 當查詢存取索引的一些資料分割時，查詢最佳化工具可以同時處理個別的資料分割並排除未受查詢影響的資料分割。  
   
- 如需相關資訊，請參閱 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
+ 如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。  
   
 ###  <a name="Sort_Order"></a> 索引排序順序設計指導方針  
  定義索引時，您應該考慮要以遞增還是遞減的順序，來儲存索引鍵資料行的資料。 遞增是預設值，且可繼續與舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]相容。 CREATE INDEX、CREATE TABLE 與 ALTER TABLE 陳述式的語法，可在索引及條件約束的個別資料行上支援關鍵字 ASC (遞增) 與 DESC (遞減)。  
@@ -389,7 +389,7 @@ INCLUDE (FileName);
   
     -   將資料行的 Null 屬性從 NOT NULL 變更為 NULL。  
   
-    -   長度增加`varchar`， `nvarchar`，或`varbinary`資料行。  
+    -   增加 `varchar`、`nvarchar` 或 `varbinary` 資料行的長度。  
   
         > [!NOTE]  
         >  這些資料行修改限制也適用索引鍵資料行。  
@@ -595,7 +595,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
  ![搭配 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[在此快速入門](#Top)  
   
 ##  <a name="Additional_Reading"></a> 其他閱讀資料  
- [＜使用 SQL Server 2008 索引檢視提升效能＞](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+ [＜使用 SQL Server 2008 索引檢視提升效能＞](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
  [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   

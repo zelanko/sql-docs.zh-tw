@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
@@ -12,12 +12,12 @@ ms.assetid: 23863340-d8e0-48d6-928b-462745885d37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59c6c98a9b401b220e912617e9c5693b5d782a2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ff6a91f14242d79c3fec543632f74eeb9f452bd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110444"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354808"
 ---
 # <a name="check-disk-input-and-output-subsystem-for-io-delay-problems"></a>檢查磁碟輸入輸出子系統的 IO 延遲問題
   這個規則會檢查事件記錄檔中是否有錯誤訊息 833。 此訊息表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已經從磁碟發出讀取或寫入要求，且該要求花費超過 15 秒才傳回。 此錯誤是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 回報，並且表示磁碟 I/O 子系統發生問題。 延遲這麼長的時間會嚴重損害 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境的效能。  
@@ -38,8 +38,8 @@ ms.locfileid: "48110444"
 ## <a name="for-more-information"></a>詳細資訊  
  [MSSQLSERVER_833](../errors-events/mssqlserver-833-database-engine-error.md)  
   
- [Microsoft 知識庫文章 897284](http://go.microsoft.com/fwlink/?linkid=117743)  
+ [Microsoft 知識庫文章 897284](https://go.microsoft.com/fwlink/?linkid=117743)  
   
- [SQL Server I/O 基本概念，第 2 章](http://go.microsoft.com/fwlink/?LinkId=69370)  
+ [SQL Server I/O 基本概念，第 2 章](https://go.microsoft.com/fwlink/?LinkId=69370)  
   
   

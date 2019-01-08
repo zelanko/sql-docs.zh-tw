@@ -1,11 +1,10 @@
 ---
 title: 重大變更到資料庫引擎功能的 SQL Server 2014 |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 11/27/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], what's new
@@ -14,15 +13,15 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c20cb1efa3cc6048e9c3b2284e76852ace41c66b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe4dc2f55b8d9b1bc9475e936341d24d16ce77a6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227088"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375270"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中對於 Database Engine 的重大變更
-  本主題描述 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 以及舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的重大變更。 這些變更可能會中斷以舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]為根據的應用程式、指令碼或功能。 當您升級時可能會遇到這些問題。 如需詳細資訊，請參閱＜ [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)＞。  
+  本主題說明中的重大變更[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)]和舊版的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 這些變更可能會中斷以舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]為根據的應用程式、指令碼或功能。 當您升級時可能會遇到這些問題。 如需詳細資訊，請參閱＜ [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)＞。  
   
 ##  <a name="SQL14"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 的重大變更  
  沒有任何新的問題。  
@@ -35,8 +34,8 @@ ms.locfileid: "48227088"
 |-------------|-----------------|  
 |從名為 NEXT 的資料行或資料表選取|序列會使用 ANSI 標準 NEXT VALUE FOR 函數。 如果資料表或資料行名為 NEXT，以及資料表或資料行的別名為 VALUE，且您省略 ANSI 標準 AS 時，產生的陳述式可能會導致錯誤。 若要解決這個問題，請加入 ANSI 標準 AS 關鍵字。 例如，`SELECT NEXT VALUE FROM Table` 應該改寫成 `SELECT NEXT AS VALUE FROM Table`，而 `SELECT Col1 FROM NEXT VALUE` 應該改寫成 `SELECT Col1 FROM NEXT AS VALUE`。|  
 |PIVOT 運算子|當資料庫相容性層級設定為 110 時，不允許在遞迴通用資料表運算式 (CTE) 查詢中使用 PIVOT 運算子。 請重寫查詢，或將相容性層級變更為 100 或更低。 當每個群組具有多個資料列時，在遞迴 CTE 查詢中使用 PIVOT 會產生錯誤的結果。|  
-|sp_setapprole 和 sp_unsetapprole|`OUTPUT` 的 Cookie `sp_setapprole` 參數目前記載成 `varbinary(8000)`，是正確的長度上限。 但目前的實作會傳回`varbinary(50)`。 應用程式應繼續保留 `varbinary(8000)`，如此後續版本的 Cookie 傳回大小如有增加，應用程式才可繼續正常地運作。 如需詳細資訊，請參閱 [sp_setapprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)。|  
-|EXECUTE AS|EXECUTE AS 的 Cookie OUTPUT 參數目前記載成 `varbinary(8000)`，這是正確的長度上限。 但目前的實作會傳回`varbinary(100)`。 應用程式應繼續保留 `varbinary(8000)`，如此後續版本的 Cookie 傳回大小如有增加，應用程式才可繼續正常地運作。 如需詳細資訊，請參閱 [EXECUTE AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-transact-sql)。|  
+|sp_setapprole 和 sp_unsetapprole|`OUTPUT` 的 Cookie `sp_setapprole` 參數目前記載成 `varbinary(8000)`，是正確的長度上限。 但目前的實作會傳回 `varbinary(50)`。 應用程式應繼續保留 `varbinary(8000)`，如此後續版本的 Cookie 傳回大小如有增加，應用程式才可繼續正常地運作。 如需詳細資訊，請參閱 [sp_setapprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)。|  
+|EXECUTE AS|EXECUTE AS 的 Cookie OUTPUT 參數目前記載成 `varbinary(8000)`，這是正確的長度上限。 但目前的實作會傳回 `varbinary(100)`。 應用程式應繼續保留 `varbinary(8000)`，如此後續版本的 Cookie 傳回大小如有增加，應用程式才可繼續正常地運作。 如需詳細資訊，請參閱 [EXECUTE AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-transact-sql)。|  
 |sys.fn_get_audit_file 函數|兩個額外的資料行 (**user_defined_event_id**並**user_defined_information**) 已新增以支援使用者定義稽核事件。 沒有依照名稱選取資料行的應用程式可能會傳回超過預期數目的資料行。 請依照名稱選取資料行，或調整應用程式以接受這些額外的資料行。|  
 |WITHIN 保留關鍵字|WITHIN 現在是保留關鍵字。 名為 'within' 之物件或資料行的參考將會失敗。 請重新命名物件或資料行名稱，或者使用括號或引號來分隔名稱。  例如， `SELECT * FROM [within]` 。|  
 |`time` 或 `datetime2` 類型之計算資料行的 CAST 和 CONVERT 作業|在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，除非用於計算資料行運算式，否則 `time` 和 `datetime2` 資料類型之 CAST 和 CONVERT 作業的預設樣式為 121。 若為計算資料行，預設樣式為 0。 當您建立計算資料行、將它們用於包含自動參數化的查詢或用於條件約束定義時，這種行為就會影響計算資料行。<br /><br /> 在相容性層級 110 底下，`time` 和 `datetime2` 資料類型之 CAST 和 CONVERT 作業的預設樣式一律為 121。 如果您的查詢仰賴舊的行為，請使用低於 110 的相容性層級，或在受影響的查詢中明確指定 0 樣式。<br /><br /> 將資料庫升級為相容性層級 110 不會變更已經儲存至磁碟的使用者資料。 您必須依適當情況手動更正這項資料。 例如，如果您使用了 SELECT INTO，根據包含上述計算資料行運算式的來源建立資料表，系統就會儲存資料 (使用樣式 0) 而非計算資料行定義本身。 您必須手動將這項資料更新為符合樣式 121。|  
@@ -44,8 +43,8 @@ ms.locfileid: "48227088"
 |瀏覽中繼資料|使用 FOR BROWSE 或 SET NO_BROWSETABLE ON 來查詢檢視現在會傳回檢視的中繼資料，而非基礎物件的中繼資料。 這種行為現在與其他瀏覽中繼資料的方法相符。|  
 |SOUNDEX|在資料庫相容性層級 110 下，SOUNDEX 函式會實作新的規則，這些規則可能會使此函式將值計算成不同於在舊版相容性層級下計算的值。 升級到相容性層級 110 之後，您可能需要重建使用 SOUNDEX 函數的索引、堆積或 CHECK 條件約束。 如需詳細資訊，請參閱 [SOUNDEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/soundex-transact-sql)
  .|  
-|失敗之 DML 陳述式的資料列計數訊息|在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，當 DML 陳述式失敗時，[!INCLUDE[ssDE](../includes/ssde-md.md)] 會以一致的方式將含有 RowCount: 0 的 TDS DONE Token 傳送至用戶端。 在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，當失敗的 DML 陳述式包含在 TRY-CATCH 區塊中，而且由 [!INCLUDE[ssDE](../includes/ssde-md.md)] 自動參數化，或者 TRY-CATCH 區塊與失敗的陳述式不在相同的層級上時，系統會將錯誤的值 -1 傳送至用戶端。 例如，如果 TRY-CATCH 區塊呼叫了預存程序，而且此程序中的 DML 陳述式失敗，則用戶端將收到錯誤的 -1 值。<br /><br /> 仰賴此錯誤行為的應用程式將會失敗。|  
-|SERVERPROPERTY (‘Edition’)|已安裝的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 執行個體產品版本。 請利用這個屬性值來判斷已安裝的產品所支援的功能和限制 (如最大 CPU 數目)。<br /><br /> 根據已安裝的 Enterprise 版，這會傳回 ‘Enterprise Edition’ 或「Enterprise 版: 核心授權」。 Enterprise 版本會根據單一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的計算容量上限而區分。 如需有關中的計算容量限制[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，請參閱 < [SQL server 版本計算容量限制](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。|  
+|失敗之 DML 陳述式的資料列計數訊息|在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，當 DML 陳述式失敗時，[!INCLUDE[ssDE](../includes/ssde-md.md)] 會固定傳送 rowcount 為 0 的 TDS DONE Token 給用戶端。 在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，當失敗的 DML 陳述式包含在 TRY-CATCH 區塊中，而且由 [!INCLUDE[ssDE](../includes/ssde-md.md)] 自動參數化，或者 TRY-CATCH 區塊與失敗的陳述式不在相同的層級上時，系統會將錯誤的值 -1 傳送至用戶端。 例如，如果 TRY-CATCH 區塊呼叫了預存程序，而且此程序中的 DML 陳述式失敗，則用戶端將收到錯誤的 -1 值。<br /><br /> 仰賴此錯誤行為的應用程式將會失敗。|  
+|SERVERPROPERTY （' 版本'）|已安裝的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 執行個體產品版本。 請利用這個屬性值來判斷已安裝的產品所支援的功能和限制 (如最大 CPU 數目)。<br /><br /> 根據已安裝的 Enterprise edition，則會傳回 'Enterprise Edition' 或' Enterprise Edition:核心授權 '。 Enterprise 版本會根據單一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的計算容量上限而區分。 如需有關中的計算容量限制[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，請參閱 < [SQL server 版本計算容量限制](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。|  
 |CREATE LOGIN|`CREATE LOGIN WITH PASSWORD = '`*密碼*`' HASHED`選項不能藉由建立雜湊[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]7 或更早版本。|  
 |`datetimeoffset` 的 CAST 和 CONVERT 作業|從日期和時間類型轉換成 `datetimeoffset` 時，唯一支援的樣式是 0 或 1。 所有其他轉換樣式都會傳回錯誤 9809。 例如，下列程式碼會傳回錯誤 9809。<br /><br /> `SELECT CONVERT(date, CAST('7070-11-25 16:25:01.00986 -02:07' as datetimeoffset(5)), 107);`|  
   
@@ -71,9 +70,9 @@ ms.locfileid: "48227088"
 ### <a name="sql-clr-data-types-geometry-geography-and-hierarchyid"></a>SQL CLR 資料類型 (geometry、geography 和 hierarchyid)  
  組件**Microsoft.SqlServer.Types.dll**，其中包含空間資料類型和 hierarchyid 類型，具有已從 10.0 版升級為 11.0 版。 當下列條件成立時，參考這個組件的自訂應用程式可能會失敗。  
   
--   當您移動自訂的應用程式從電腦所在[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]所在的電腦只安裝[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]是安裝，應用程式會失敗，因為參考的 10.0 版**SqlTypes**組件不存在。 您可能會看見這則錯誤訊息：`“Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.”`  
+-   當您移動自訂的應用程式從電腦所在[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]所在的電腦只安裝[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]是安裝，應用程式會失敗，因為參考的 10.0 版**SqlTypes**組件不存在。 您可能會收到下列錯誤訊息：`"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
--   當您參考**SqlTypes**組件 11.0 版，也安裝了 10.0 版，您可能會看到此錯誤訊息： `“System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'.”`  
+-   當您參考**SqlTypes**組件 11.0 版，也安裝了 10.0 版，您可能會看到此錯誤訊息： `"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   
 -   當您參考**SqlTypes**組件 11.0 版從以.NET 3.5、 4 或 4.5 為目標的自訂應用程式，應用程式會失敗，因為 SqlClient 依照設計載入的組件 10.0 版。 當應用程式呼叫下列其中一個方法時，就會發生這項失敗：  
   
@@ -134,7 +133,7 @@ ms.locfileid: "48227088"
  32 位元 Address Windowing Extensions (AWE) 支援已停用。 這可能會導致 32 位元作業系統的效能降低。 若為使用大量記憶體的安裝，請移轉至 64 位元作業系統。  
   
 ### <a name="xquery-functions-are-surrogate-aware"></a>XQuery 函數能夠感知 Surrogate  
- XQuery 函數和運算子的 W3C 建議要求它們將代表高範圍 Unicode 字元的 Surrogate 字組視為 UTF-16 編碼中的單一影像。 不過，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 版本中，字串函數無法將 Surrogate 字組辨識成單一字元。 某些字串作業 (例如字串長度計算與子字串擷取) 會傳回錯誤的結果。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 現在完全支援 UTF-16，而且能夠正確處理 Surrogate 字組。  
+ XQuery 函數和運算子的 W3C 建議要求它們將代表高範圍 Unicode 字元的 Surrogate 字組視為 UTF-16 編碼中的單一影像。 不過，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 版本中，字串函數無法將 Surrogate 字組辨識成單一字元。 某些字串作業-例如字串長度計算與子字串擷取-傳回不正確的結果。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 現在完全支援 UTF-16，而且能夠正確處理 Surrogate 字組。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 XML 資料類型僅允許格式正確的 Surrogate 字組。 不過，在某些情況下，部分函數仍然可能傳回未定義或非預期的結果，因為您可以將無效或部分 Surrogate 字組當做字串值傳遞給 XQuery 函數。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中使用 XQuery 時，請考慮採用下列方法來產生字串值：  
   
@@ -208,7 +207,7 @@ ms.locfileid: "48227088"
 |功能|描述|  
 |-------------|-----------------|  
 |CLR 組件|當資料庫升級為 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 時，就會自動安裝支援新資料類型的 `Microsoft.SqlServer.Types` 組件。 Upgrade Advisor 規則會偵測任何具有衝突名稱的使用者類型或組件。 Upgrade Advisor 將建議您重新命名任何衝突的組件，以及重新命名任何衝突的類型，或在程式碼中使用兩部分名稱來參考預先存在的使用者類型。<br /><br /> 如果資料庫升級偵測到具有衝突名稱的使用者組件，它將自動重新命名該組件並讓資料庫進入質疑模式。<br /><br /> 如果具有衝突名稱的使用者類型在升級期間存在，將不會採取任何特殊步驟。 在升級之後，舊的使用者類型和新的系統類型都會一起存在。 但是，該使用者類型只能透過兩部分名稱使用。|  
-|CLR 組件|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 會安裝 .NET Framework 3.5 SP1，以便更新全域組件快取 (GAC) 中的程式庫。 如果您在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中註冊了不支援的程式庫，則升級至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之後，[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 應用程式可能會停止運作。 這是因為服務或升級 GAC 中的程式庫並不會更新 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 內部的組件。 如果某個組件同時存在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫和 GAC 中，這個組件的兩個副本就必須完全相符。 如果它們不相符，當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] CLR 整合使用該組件時，將會發生錯誤。 如需詳細資訊，請參閱 <<c0> [ 支援的.NET Framework 程式庫](../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)。<br /><br /> 升級您的資料庫之後，請使用 ALTER ASSEMBLY 陳述式來服務或升級 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫內部的組件副本。 如需詳細資訊，請參閱 <<c0> [ 知識庫文件 949080](http://go.microsoft.com/fwlink/?LinkId=154563)。<br /><br /> 若要偵測您是否正在應用程式中使用任何不支援的 .NET Framework 程式庫，請在資料庫中執行下列查詢。<br /><br /> `SELECT name FROM sys.assemblies WHERE clr_name LIKE '%publickeytoken=b03f5f7f11d50a3a,%';`|  
+|CLR 組件|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 會安裝 .NET Framework 3.5 SP1，以便更新全域組件快取 (GAC) 中的程式庫。 如果您在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中註冊了不支援的程式庫，則升級至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之後，[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 應用程式可能會停止運作。 這是因為服務或升級 GAC 中的程式庫並不會更新 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 內部的組件。 如果某個組件同時存在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫和 GAC 中，這個組件的兩個副本就必須完全相符。 如果它們不相符，當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] CLR 整合使用該組件時，將會發生錯誤。 如需詳細資訊，請參閱 <<c0> [ 支援的.NET Framework 程式庫](../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)。<br /><br /> 升級您的資料庫之後，請使用 ALTER ASSEMBLY 陳述式來服務或升級 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫內部的組件副本。 如需詳細資訊，請參閱 <<c0> [ 知識庫文件 949080](https://go.microsoft.com/fwlink/?LinkId=154563)。<br /><br /> 若要偵測您是否正在應用程式中使用任何不支援的 .NET Framework 程式庫，請在資料庫中執行下列查詢。<br /><br /> `SELECT name FROM sys.assemblies WHERE clr_name LIKE '%publickeytoken=b03f5f7f11d50a3a,%';`|  
 |CLR 常式|在 CLR 使用者定義函數、使用者定義彙總或使用者定義型別 (UDT) 內部使用模擬可能會導致您的應用程式在升級至 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 之後失敗並顯示錯誤 6522。 下列狀況在 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 中會成功，但在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中則會失敗。 我們已針對每個狀況提供解決方案。<br /><br /> CLR 使用者定義函數、 使用者定義彙總或使用模擬的 UDT 方法具有參數的型別`nvarchar(max)`， `varchar(max)`， `varbinary(max)`， `ntext`， `text`， `image`，或大型 UDT，而且沒有**DataAccessKind.Read**方法上的屬性。 若要解決此問題，請新增**DataAccessKind.Read**屬性的方法、 重新編譯組件，然後重新部署常式和組件。<br /><br /> CLR 資料表值函數具有**Init**執行模擬的方法。 若要解決此問題，請加入**DataAccessKind.Read**屬性的方法、 重新編譯組件，然後重新部署常式和組件。<br /><br /> CLR 資料表值函數具有**FillRow**執行模擬的方法。 若要解決此問題，移除模擬**FillRow**方法。 不使用會存取外部資源**FillRow**方法。 相反地，存取外部資源**Init**方法。|  
   
 ### <a name="dynamic-management-views"></a>動態管理檢視  
@@ -224,7 +223,7 @@ ms.locfileid: "48227088"
 |-------------|-----------------|  
 |登入錯誤|在 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 中，當 SQL 登入用來連接至設定成只使用 Windows 驗證的伺服器時，就會傳回錯誤 18452。 在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中，系統會改為傳回錯誤 18456。|  
   
-### <a name="showplan"></a>執行程序表  
+### <a name="showplan"></a>Showplan  
   
 |功能|描述|  
 |-------------|-----------------|  
@@ -251,7 +250,7 @@ ms.locfileid: "48227088"
   
 |功能|描述|  
 |-------------|-----------------|  
-|日期時間支援|在  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]，資料類型`xs:time`， `xs:date`，和`xs:dateTime`沒有時區支援。 時區資料會對應至 UTC 時區。 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 提供了符合標準的行為，因而產生下列變更：<br /><br /> 驗證不含時區的值。<br /><br /> 保留提供的時區或缺少的時區。<br /><br /> 修改內部儲存體表示法。<br /><br /> 增加預存值的解析。<br /><br /> 不允許使用負值年份。<br /><br /> <br /><br /> 注意： 修改應用程式和 XQuery 運算式，以說明新的型別值。|  
+|日期時間支援|在  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]，資料類型`xs:time`， `xs:date`，和`xs:dateTime`沒有時區支援。 時區資料會對應至 UTC 時區。 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 提供了符合標準的行為，因而產生下列變更：<br /><br /> 驗證不含時區的值。<br /><br /> 保留提供的時區或缺少的時區。<br /><br /> 修改內部儲存體表示法。<br /><br /> 增加預存值的解析。<br /><br /> 不允許使用負值年份。<br /><br /> <br /><br /> 注意：修改應用程式和 XQuery 運算式來說明新的類型值。|  
 |XQuery 和 Xpath 運算式|在  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]，開頭為冒號 XQuery 或 XPath 運算式中的步驟 (': ') 允許。 例如，下列陳述式在冒號開頭的路徑運算式中，包含一個名稱測試 (`CTR02)`)。<br /><br /> `SELECT FileContext.query('for n$ in //CTR return <C>{data )(n$/:CTR02)} </C>) AS Files FROM dbo.MyTable;`<br /><br /> 在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中不允許此種用法，因為它不符合 XML 標準。 傳回錯誤 9341。 移除開頭的冒號，或為名稱測試指定一個前置詞，例如，(n$/CTR02) 或 (n$/p1:CTR02)。|  
   
 ### <a name="connecting"></a>Connecting  
@@ -261,15 +260,16 @@ ms.locfileid: "48227088"
 |使用 SSL 從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 連接|當使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 連接時，使用 "SERVER=shortname; FORCE ENCRYPTION=true" 而且憑證的主旨可指定完整網域名稱 (FQDN) 的應用程式在過去因為寬鬆的驗證所以已經連接。 SQL Server 2008 R2 藉由強制施行憑證的 FQDN 主旨來增強安全性。 依賴寬鬆驗證的應用程式必須採取下列其中一項動作：<br /><br /> 使用連接字串中的 FQDN。<br /><br /> -這個選項不需要重新編譯應用程式，如果應用程式外面設定連接字串的 SERVER 關鍵字。<br /><br /> -此選項不適用於需要其連接字串硬式編碼的應用程式。<br /><br /> -此選項不適用於鏡像的伺服器則會以簡單名稱回覆之後使用 資料庫鏡像的應用程式。|  
 ||加入簡短名稱的別名來對應至 FQDN。<br /><br /> -此選項更適用於需要其連接字串硬式編碼的應用程式。<br /><br /> -此選項不適用於使用資料庫鏡像的提供者不會尋找接收之容錯移轉夥伴名稱的別名，因為應用程式。|  
 ||擁有針對簡短名稱發出的憑證。<br /><br /> -此選項適用於所有的應用程式。|  
-  
-##  <a name="Yukon"></a> SQL Server 2005 中的重大變更  
- 如需清單的重大變更中導入[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]，請參閱[SQL Server 2005 中的 Database Engine 功能的突破性變更](breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
-  
+
+## <a name="Yukon"></a> SQL Server 2005 中的重大變更  
+
+[!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2014 中已被取代的 Database Engine 功能](deprecated-database-engine-features-in-sql-server-2016.md)   
  [SQL Server 2014 中的 Database Engine 功能的行為變更](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md)   
  [SQL Server 2014 中已停止的 Database Engine 功能](discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [SQL Server Database Engine 回溯相容性](sql-server-database-engine-backward-compatibility.md)   
  [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
-  
+ [SQL Server 2014 中管理工具功能的重大變更](breaking-changes-to-management-tools-features-in-sql-server-2014.md?view=sql-server-2014)  
   

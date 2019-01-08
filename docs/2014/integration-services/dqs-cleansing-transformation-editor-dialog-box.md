@@ -14,12 +14,12 @@ ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b262cea6362c1f6cb3c69c8b9e96e2bb09aa3e14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0de01fcb7f694331eb9ab4df33429f9a32ee1308
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062465"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978414"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>DQS 清理轉換編輯器對話方塊
   使用 [DQS 清理轉換編輯器] 對話方塊，即可更正使用 Data Quality Services (DQS) 的資料。 如需詳細資訊，請參閱 [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md)。  
@@ -55,7 +55,7 @@ ms.locfileid: "48062465"
  針對連接的資料來源選取現有的 DQS 知識庫。 如需有關 DQS 知識庫的詳細資訊，請參閱＜ [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)＞。  
   
  **加密連接**  
- 指定是否要加密連接，以便加密 DQS 伺服器與 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]之間的資料傳輸。  
+ 指定是否要加密連接，以便加密 DQS 伺服器之間的資料傳輸和[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。  
   
  **可用的定義域**  
  針對選取的知識庫列出可用的定義域。 定義域有二種類型：單一定義域以及包含兩個或多個單一定義域的複合定義域。  

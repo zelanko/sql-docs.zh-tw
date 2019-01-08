@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 07fdcf0e38f6b48e70140f1ce5c7d9e29d329267
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 1094d6fd52841a65afa58768dfaee9a05aa20810
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643966"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208287"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>分析 Data Migration Assistant 有了 Power BI 所建立的彙總的評估報告
 
@@ -40,7 +40,7 @@ ms.locfileid: "49643966"
 
 - [在內部部署環境更新整備小幫手](#on-premises-upgrade-readiness--details)
 
-  資料來源是 UpgradeSuccessRanking 檢視 DMAReporting 資料庫中。  此報告會顯示您經過評定的資料庫百分比升級成功。
+  資料來源是 UpgradeSuccessRanking 檢視 DMAReporting 資料庫中。  此報告會顯示您經過評定的資料庫百分比升級成功。
 
 - [在內部部署功能同位檢查](#on-premise-feature-parity--details)
 
@@ -48,7 +48,7 @@ ms.locfileid: "49643966"
 
 - [Azure SQL DB 更新整備小幫手](#azure-sql-db-upgrade-readiness--details)
 
-  資料來源是 UpgradeSuccessRanking 檢視 DMAReporting 資料庫中。  此報告會顯示適用於 Azure SQL DB 移轉評估的資料庫百分比升級成功。
+  資料來源是 UpgradeSuccessRanking 檢視 DMAReporting 資料庫中。  此報告會顯示適用於 Azure SQL DB 移轉評估的資料庫百分比升級成功。
 
 - [Azure SQL DB 不支援的功能](#azure-sql-db-unsupported-features--details)
 
@@ -74,17 +74,17 @@ ms.locfileid: "49643966"
 
 ![儀表板報表](../dma/media/DashboardReport.png)
 
-儀表板會顯示所有您評量的詳細資料。 您可以使用左側的交叉分析篩選器，以篩選出的執行個體或資料庫。 您可以向下切入到特定的類別，以查看其中的問題也都必須位於使用橫條圖。
+儀表板會顯示所有您評量的詳細資料。 您可以使用左側的交叉分析篩選器，以篩選出的執行個體或資料庫。 您可以向下切入到特定的類別，以查看其中的問題也都必須位於使用橫條圖。
 
 若要向下切入，選取與橫條圖的右上角的向下箭頭的圓圈。
 
 ![類別目錄向下鑽研](../dma/media/CategoryDrillDown.png)
 
-向下鑽研順序設定在下圖所示 (底下**軸**)。 若要變更順序，將資料行拖曳至所需的順序。
+向下鑽研順序設定在下圖所示 (底下**軸**)。 若要變更順序，將資料行拖曳至所需的順序。
 
 ![視覺效果時，橫條圖的軸](../dma/media/VisualizationsAxis.png)
 
-當您第一次來篩選特定的資料庫，然後向下鑽研至特定分類問題時，此檢視會變得更強大。 在下列範例中，HR 資料庫執行個體已選取**SQL01**若要檢視的所有物件，使移轉 （重大變更）。
+當您第一次來篩選特定的資料庫，然後向下鑽研至特定分類問題時，此檢視會變得更強大。 在下列範例中，HR 資料庫執行個體已選取**SQL01**若要檢視的所有物件，使移轉 （重大變更）。
 
 ![HR 資料庫的重大變更](../dma/media/BreakingChanges.png)
 
@@ -92,9 +92,9 @@ ms.locfileid: "49643966"
 
 ![在內部部署升級整備報表](../dma/media/OnPremisesUpgradeReadinessReport.png)
 
-此報告會顯示移轉到新版的 SQL Server 的 「 如何準備您的資料庫是快照集。 此報表中的資料來自於 dbo。UpgradeSuccessFactor\_DMAReporting 資料庫中的內部部署檢視。
+此報告會顯示移轉到新版的 SQL Server 的 「 如何準備您的資料庫是快照集。 此報表中的資料來自於 dbo。UpgradeSuccessFactor\_DMAReporting 資料庫中的內部部署檢視。
 
-使用頂端的計分卡和篩選的執行個體和資料庫名稱，您可以看到它可能太移轉資料庫的版本。 比方說，如果您篩選由 AdventureWorks 2012 資料庫時，您可以看到資料庫已準備好移至報表中列出的所有 SQL Server 版本。 這取決於確保沒有任何重大變更，該資料庫和相容性層級。
+使用頂端的計分卡和篩選的執行個體和資料庫名稱，您可以看到它可能太移轉資料庫的版本。 比方說，如果您篩選由 AdventureWorks 2012 資料庫時，您可以看到資料庫已準備好移至報表中列出的所有 SQL Server 版本。 這取決於確保沒有任何重大變更，該資料庫和相容性層級。
 
 ![升級成功的因素，針對 AdventureWorks 資料庫](../dma/media/UpgradeSuccessFactor.png)
 
@@ -104,7 +104,7 @@ ms.locfileid: "49643966"
 
 您可以使用此報告來反白顯示可用的目標 SQL Server 版本中的資料庫的新功能。
 
-當您在漏斗圖中選取一項功能時，在下方的資料會反白顯示哪些物件會受此功能。 在下列範例中， **Stretch database，以節省儲存空間**選取功能，且資料表會列出可能會受益於這項功能。
+當您在漏斗圖中選取一項功能時，在下方的資料會反白顯示哪些物件會受此功能。 在下列範例中， **Stretch database，以節省儲存空間**選取功能，且資料表會列出可能會受益於這項功能。
 
 ![Stretch Database 的功能建議](../dma/media/FeatureRecommend_StretchDatabase.png)
 
@@ -112,7 +112,7 @@ ms.locfileid: "49643966"
 
 ![Azure SQL DB 更新整備小幫手報告](../dma/media/AzureSQLDBUpgradeReadinessReport.png)
 
-此報告會顯示移轉至 Azure SQL Database V12 資料庫完備性。 這份報表的資料來自於 dbo。UpgradeSuccessRanking DMAReporting 資料庫中的檢視。
+此報告會顯示移轉至 Azure SQL Database V12 資料庫完備性。 這份報表的資料來自於 dbo。UpgradeSuccessRanking DMAReporting 資料庫中的檢視。
 
 ### <a name="azure-features-parity-report"></a>Azure 的功能同位檢查報告
 
@@ -120,7 +120,7 @@ ms.locfileid: "49643966"
 
 使用此報告來反白顯示*執行個體層級的功能*，不支援的 Azure SQL Database V12。
 
-當您在漏斗圖中選取一項功能時，在下方的資料會列出的執行個體和資料庫不支援的功能。 在下列範例中，選取這項功能： **Always on 可用性群組組態不支援 Azure SQL Database 中**。  
+當您在漏斗圖中選取一項功能時，在下方的資料會列出的執行個體和資料庫不支援的功能。 在下列範例中，已選取這項功能：**Alwayson 可用性群組組態不支援 Azure SQL Database 中**。  
 
 ![Alwayson 可用性群組功能](../dma/media/Feature_AlwaysOnAvailability.png)
 

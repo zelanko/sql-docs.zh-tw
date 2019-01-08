@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
@@ -25,12 +24,12 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f3254d3356caefcd7f9e15709702970a9b064e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 244efd95d67f36ae77efb15a6fa62684606db746
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050178"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369763"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 記錄
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括可用於在封裝、容器和工作中實作記錄的記錄提供者。 使用記錄，可以擷取有關封裝的執行階段資訊，藉此幫助您在每次執行封裝時對其進行稽核和疑難排解。 例如，記錄可以擷取執行封裝之操作員的名稱，以及封裝開始和結束的時間。  
@@ -97,7 +96,7 @@ ms.locfileid: "48050178"
 |運算子|啟動封裝之使用者的識別。|  
 |SourceName|發生記錄事件之容器或工作的名稱。|  
 |SourceID|封裝的唯一識別碼；「For 迴圈」、「Foreach 迴圈」或「時序」容器；或者發生記錄事件的工作。|  
-|ExecutionID|封裝執行執行個體的 GUID。<br /><br /> 請注意：執行單一封裝可能會建立記錄項目，其中包含不同的 ExecutionID 元素值。 例如，當您在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中執行封裝時，驗證階段可能會建立記錄項目，其中包含了對應到 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 ExecutionID 元素。 但是，執行階段可能會建立記錄項目，其中包含了對應到 dtshost.exe 的 ExecutionID 元素。 在另一個範例中，當您執行包含「執行封裝」工作的封裝時，每一個工作都會執行子封裝。 這些子封裝可能會建立記錄項目，其中包含了與父封裝建立之記錄項目不同的 ExecutionID 元素。|  
+|ExecutionID|封裝執行執行個體的 GUID。<br /><br /> 注意：執行單一封裝可能會建立記錄項目，其中包含不同的 ExecutionID 元素值。 例如，當您在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中執行封裝時，驗證階段可能會建立記錄項目，其中包含了對應到 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 ExecutionID 元素。 但是，執行階段可能會建立記錄項目，其中包含了對應到 dtshost.exe 的 ExecutionID 元素。 在另一個範例中，當您執行包含「執行封裝」工作的封裝時，每一個工作都會執行子封裝。 這些子封裝可能會建立記錄項目，其中包含了與父封裝建立之記錄項目不同的 ExecutionID 元素。|  
 |MessageText|與記錄項目相關聯的訊息。|  
 |DataBytes|記錄項目特定的位元組陣列。 此欄位的意義會因記錄項目的不同而不同。|  
   
@@ -129,7 +128,7 @@ ms.locfileid: "48050178"
 |**OnVariableValueChanged**|在變數的值變更時寫入記錄項目。|  
 |**OnWarning**|發生警告時寫入記錄項目。|  
 |**PipelineComponentTime**|針對每個資料流程元件，寫入每個驗證和執行階段的記錄項目。 記錄項目會指定每個階段的處理時間。|  
-|**Diagnostic**|寫入提供診斷資訊的記錄項目。<br /><br /> 例如，您可以在每次呼叫外部資料提供者前後記錄訊息。 如需詳細資訊，請參閱[封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。|  
+|**Diagnostic**|寫入提供診斷資訊的記錄項目。<br /><br /> 例如，您可以在每次呼叫外部資料提供者前後記錄訊息。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。|  
   
  封裝及許多工作都有可以啟用記錄功能的自訂記錄項目。 例如，[傳送郵件] 工作會提供 **SendMailTaskBegin** 自訂記錄項目，其會在 [傳送郵件] 工作開始執行時，但在工作傳送電子郵件訊息之前，記錄資訊。 如需詳細資訊，請參閱 [自訂訊息以進行記錄](../custom-messages-for-logging.md)。  
   
@@ -148,7 +147,7 @@ ms.locfileid: "48050178"
   
 1.  啟用封裝及其工作的記錄功能。 記錄可以發生在封裝、容器和工作層級上。 您可以為封裝、容器和工作指定不同的記錄檔。  
   
-2.  選取記錄提供者，並為封裝加入記錄。 記錄檔僅可以在封裝層級建立，且工作或容器必須使用為封裝建立的記錄檔之一。 每個記錄檔都與下列記錄提供者之一相關聯：文字檔、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Windows 記錄檔或 XML 檔案。 如需詳細資訊，請參閱[在 SQL Server Data Tools 中啟用封裝記錄功能](../enable-package-logging-in-sql-server-data-tools.md)。  
+2.  選取記錄提供者，並為封裝加入記錄。 記錄檔僅可以在封裝層級建立，且工作或容器必須使用為封裝建立的記錄檔之一。 每個記錄檔會與下列記錄提供者之一相關聯：文字檔[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，Windows 事件記錄檔或 XML 檔案。 如需詳細資訊，請參閱 [在 SQL Server Data Tools 中啟用封裝記錄功能](../enable-package-logging-in-sql-server-data-tools.md)。  
   
 3.  選取事件，以及要在記錄檔中擷取之每個事件的記錄結構描述資訊。 如需詳細資訊，請參閱 [使用已儲存的組態檔來設定記錄](../configure-logging-by-using-a-saved-configuration-file.md)。  
   
@@ -206,14 +205,14 @@ ms.locfileid: "48050178"
   
 -   [設定 SSIS 記錄對話方塊](../configure-ssis-logs-dialog-box.md)  
   
--   [在 SQL Server Data Tools 中啟用套件記錄功能](../enable-package-logging-in-sql-server-data-tools.md)  
+-   [在 SQL Server Data Tools 中啟用封裝記錄功能](../enable-package-logging-in-sql-server-data-tools.md)  
   
--   [在 SSIS 伺服器上啟用套件執行的記錄功能](../enable-logging-for-package-execution-on-the-ssis-server.md)  
+-   [在 SSIS 伺服器上啟用封裝執行的記錄功能](../enable-logging-for-package-execution-on-the-ssis-server.md)  
   
 -   [檢視記錄事件視窗中的記錄項目](../view-log-entries-in-the-log-events-window.md)  
   
 ## <a name="related-content"></a>相關內容  
- [用於完整及詳細記錄的 DTLoggedExec 工具 (CodePlex 專案)](http://go.microsoft.com/fwlink/?LinkId=150579)  
+ [用於完整及詳細記錄的 DTLoggedExec 工具 (CodePlex 專案)](https://go.microsoft.com/fwlink/?LinkId=150579)  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視記錄事件視窗中的記錄項目](../view-log-entries-in-the-log-events-window.md)  

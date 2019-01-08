@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addqueued_artinfo
@@ -17,12 +16,12 @@ ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a2e596ecc5e6470bbcc1a62684c1fd1a6533711d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c326a8e3a5fa2bd95f536d434ff9782952ba70d3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770156"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590893"
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,28 +50,28 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@artid=** ] **'***artid&lt***'**  
+ [  **@artid=** ] **'**_artid&lt_**'**  
  這是發行項識別碼的名稱。 *artid&lt*已**int**，沒有預設值  
   
- [  **@article=**] **'***文章***'**  
+ [  **@article=**] **'**_文章_**'**  
  這是要編寫指令碼的發行項名稱。 *發行項*已**sysname**，沒有預設值  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_發行者_**'**  
  這是發行者伺服器的名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  這是發行者資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
   
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_發行集_**'**  
  這是要編寫指令碼的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@dest_table=** ] *' dest_table * * * '**  
+ [  **@dest_table=** ] _' dest_table_**'**  
  這是目的地資料表的名稱。 *dest_table*已**sysname**，沒有預設值。  
   
- [ **@owner =** ] **'***擁有者***'**  
+ [ **@owner =** ] **'**_擁有者_**'**  
  這是訂閱的擁有者。 *擁有者*已**sysname**，沒有預設值。  
   
- [  **@cft_table=** ] **'***cft_table***'**  
+ [  **@cft_table=** ] **'**_cft_table_**'**  
  這個發行項的佇列更新衝突資料表名稱。 *cft_table*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  

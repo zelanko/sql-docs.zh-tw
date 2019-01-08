@@ -1,5 +1,5 @@
 ---
-title: 適用於 SQL Server Machine Learning 的升級及安裝常見問題集 |Microsoft Docs
+title: 升級及安裝常見問題集 (FAQ)-SQL Server Machine Learning 服務
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
-ms.openlocfilehash: 37cd28b895c66d6ddcf1517e79ef6bf4537e2a96
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: dd92ba0e080da0dd8ed387ae0a9f3d431232c896
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712300"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432851"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server Machine Learning 或 R Server 的升級及安裝常見問題集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "46712300"
 + 從發行前版本，只能搭配升級會發生一些問題。 因此，我們建議您識別版本第一次之後，再閱讀這些版本資訊。 若要取得版本資訊，請執行`@@VERSION`在查詢中，從 SQL Server Management Studio。
 + 升級至最新的版本或服務版本會儘速解決任何最新版本中已修正的問題。
 
-**適用於：** SQL Server 2016 R Services、 SQL Server 2017 Machine Learning 服務 （資料庫）
+**適用於：** SQL Server 2016 R Services，SQL Server 2017 Machine Learning 服務 （資料庫）
 
 ## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>需求和較舊版本的 SQL Server 2016 上的限制 
 

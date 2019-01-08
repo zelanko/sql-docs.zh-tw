@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e4bd5e87f611d88c0ad2c6ce3e3e95aeb2f0fffa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b3c24b5c3f86e26d8a98e0c1ec59e10e441c5cc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056488"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359230"
 ---
 # <a name="sql-server-database-engine"></a>SQL Server Database Engine
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 是用來儲存、處理和保護資料安全的核心服務。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 提供控制的存取和快速交易處理，可滿足您企業內部最嚴苛的資料取用應用程式需求。  
@@ -42,6 +41,6 @@ ms.locfileid: "48056488"
  ![小型檔案資料夾圖示](../../2014/integration-services/media/filefolder-small.gif "小型檔案資料夾圖示") [XQuery 參考](/sql/xquery/xquery-language-reference-sql-server)  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 資源中心](http://go.microsoft.com/fwlink/?LinkId=219676)  
+ [SQL Server 資源中心](https://go.microsoft.com/fwlink/?LinkId=219676)  
   
   

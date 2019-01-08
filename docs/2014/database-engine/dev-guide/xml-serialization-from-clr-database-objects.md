@@ -17,12 +17,12 @@ ms.assetid: ac84339b-9384-4710-bebc-01607864a344
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8125f5b8693eccfc619dd2ee3aed6f203e17dad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b61f863aa3d32ae60ff1cbcac562e74250899088
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183168"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356571"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>從 CLR 資料庫物件進行 XML 序列化
   XML 序列化是下列兩種狀況所需的作業：  
@@ -37,7 +37,7 @@ ms.locfileid: "48183168"
   
 2.  使用 `CREATE ASSEMBLY` 陳述式，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中註冊已產生的組件。  
   
- 如需詳細資訊錯誤，您可能會收到時執行 XML 序列化，下列的 Microsoft 支援服務文章： [「 無法載入以動態方式產生的序列化組件 」](http://support.microsoft.com/kb/913668)。  
+ 有關執行 XML 序列化時，您可能會收到的錯誤相關的資訊，請參閱下列 Microsoft 支援服務文章：[「 無法載入以動態方式產生的序列化組件 」](https://support.microsoft.com/kb/913668)。  
   
  如需有關 XMLSerializer 不支援之資料類型的詳細資訊，請參閱 .NET Framework 文件集中的＜.NET Framework 中的 XML 結構描述繫結支援＞。  
   

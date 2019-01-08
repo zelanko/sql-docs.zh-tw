@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sorttrans.f1
@@ -20,12 +19,12 @@ ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 177255d30cb0a667475108fb8e28a8100d3aceae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50a8d1a0242b1317bcefd387d68cf3e0a958d0d7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130588"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371300"
 ---
 # <a name="sort-transformation"></a>排序轉換
   「排序」轉換會以遞增或遞減的順序排序輸入資料，並將排序的資料複製到轉換輸出。 您可以對輸入套用多項排序，而各項排序是由決定排序順序的數字識別。 數字最小的資料行會最先排序，接著是排序數字第二小的排序資料行，以此類推。 例如，如果名為 **CountryRegion** 的資料行排序順序為 1，且名為 **City** 的資料行排序順序為 2，則輸出會先按照 Country/Region 排序，然後才按照 City。 正數代表以遞增順序排序，負數則代表以遞減順序排序。 未排序的資料行具有 0 的排序次序。 未選取進行排序的資料行會與經過排序的資料行一起自動複製到轉換輸出。  
@@ -37,7 +36,7 @@ ms.locfileid: "48130588"
   
  「排序」轉換亦可在執行排序時移除重複的資料列。 重複的資料列為擁有相同排序索引鍵值的資料列。 排序索引鍵值是根據使用的字串比較選項所產生，也就是說，不同的常值字串可能擁有相同的排序索引鍵值。 轉換會將輸入資料行中，擁有不同值但排序索引鍵相同的資料列視為重複。  
   
- 「 排序 」 轉換包含`MaximumThreads`載入封裝時可以更新屬性運算式的自訂屬性。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../expressions/integration-services-ssis-expressions.md)、[在封裝中使用屬性運算式](../../expressions/use-property-expressions-in-packages.md)和[轉換自訂屬性](transformation-custom-properties.md)。  
+ 排序轉換包括 `MaximumThreads` 自訂屬性；屬性運算式可以在載入封裝時更新這個屬性。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../expressions/integration-services-ssis-expressions.md)、[在封裝中使用屬性運算式](../../expressions/use-property-expressions-in-packages.md)和[轉換自訂屬性](transformation-custom-properties.md)。  
   
  此轉換有一個輸入和一個輸出。 但它不支援錯誤輸出。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48130588"
  如需如何設定元件屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="related-content"></a>相關內容  
- codeplex.com 上的範例： [SortDeDuplicateDelimitedString 自訂 SSIS 元件](http://go.microsoft.com/fwlink/?LinkId=220821)。  
+ codeplex.com 上的範例： [SortDeDuplicateDelimitedString 自訂 SSIS 元件](https://go.microsoft.com/fwlink/?LinkId=220821)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流程](../data-flow.md)   

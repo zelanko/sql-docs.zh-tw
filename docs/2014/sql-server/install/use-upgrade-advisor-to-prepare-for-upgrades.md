@@ -17,12 +17,12 @@ ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8ade9c0d0d877ca1c12c1361e0e0ba45c2e7ecb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b12b22af124250fe05baab5d08a6585de061b56
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209288"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368070"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>使用 Upgrade Advisor 來準備升級
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor 可以協助您完成升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的相關準備工作。 Upgrade Advisor 會分析已安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 舊版元件，然後產生報告，以指出在您升級之前或之後要修正的問題。  
@@ -65,9 +65,9 @@ ms.locfileid: "48209288"
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2、Windows 7 SP1 及 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1。  
   
--   Windows Installer 從版本 4.5 開始。 您可以安裝 Windows Installer 從[Windows Installer 網站](http://go.microsoft.com/fwlink/?LinkId=49112)。  
+-   Windows Installer 從版本 4.5 開始。 您可以安裝 Windows Installer 從[Windows Installer 網站](https://go.microsoft.com/fwlink/?LinkId=49112)。  
   
--   Microsoft .NET Framework 4。 .NET framework 4 是位於[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]產品媒體，以及從[.NET Framework 4 下載頁面](http://go.microsoft.com/fwlink/?LinkId=209895)。  
+-   Microsoft .NET Framework 4。 .NET framework 4 是位於[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]產品媒體，以及從[.NET Framework 4 下載頁面](https://go.microsoft.com/fwlink/?LinkId=209895)。  
   
     -   若要從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 媒體安裝 .NET Framework 4，請找出光碟機的根目錄。 然後，在 \redist 資料夾上按兩下滑鼠按鈕後於 DotNetFrameworks 資料夾上再按兩下滑鼠按鈕，然後執行 dotNetFx40_Full_x86_x64.exe (32 位元作業系統或 64 位元作業系統)。  
   

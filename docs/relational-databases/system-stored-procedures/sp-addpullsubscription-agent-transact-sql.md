@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpullsubscription_agent
@@ -17,12 +16,12 @@ ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c1ba5e237a9e652e0ef33e359cad0858420abbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cd847b9c3f5bcbc24260632ed632f42ad6840c5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649628"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808760"
 ---
 # <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,22 +80,22 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_發行者_**'**  
  這是發行者的名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [  **@publisher_db=**] **' * * * publisher_db'*  
+ [  **@publisher_db=**] **'**_publisher_db'_  
  這是發行者資料庫的名稱。 *publisher_db*已**sysname**，預設值是 NULL。 *publisher_db* Oracle 發行者會忽略。  
   
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_發行集_**'**  
  這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@subscriber=**] **'***訂閱者***'**  
+ [  **@subscriber=**] **'**_訂閱者_**'**  
  這是訂閱者的名稱。 *訂閱者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。  
   
- [  **@subscriber_db=**] **'***subscriber_db***'**  
+ [  **@subscriber_db=**] **'**_subscriber_db_**'**  
  這是訂閱資料庫的名稱。 *subscriber_db*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
@@ -108,22 +107,22 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 散發代理程式一律是利用 Windows 驗證來連接到本機訂閱者。 如果 NULL 以外的值或**1**指定這個參數，會傳回一則警告訊息。  
   
- [  **@subscriber_login =**] **'***subscriber_login***'**  
+ [  **@subscriber_login =**] **'**_subscriber_login_**'**  
  這是訂閱者登入同步處理時，連接到訂閱者時使用。*subscriber_login*是**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 如果指定了這個參數值，便會傳回警告訊息，但會忽略這個值。  
   
- [  **@subscriber_password=**] **'***subscriber_password***'**  
+ [  **@subscriber_password=**] **'**_subscriber_password_**'**  
  這是訂閱者密碼。 *subscriber_password* ，便須*subscriber_security_mode*設定為**0**。 *subscriber_password*已**sysname**，預設值是 NULL。 如果使用訂閱者密碼，它會自動加密。  
   
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 如果指定了這個參數值，便會傳回警告訊息，但會忽略這個值。  
   
- [  **@distributor=**] **'***散發者***'**  
+ [  **@distributor=**] **'**_散發者_**'**  
  這是散發者的名稱。 *散發者*已**sysname**，預設值是所指定的值*發行者*。  
   
- [  **@distribution_db=**] **'***distribution_db***'**  
+ [  **@distribution_db=**] **'**_distribution_db_**'**  
  這是散發資料庫的名稱。 *distribution_db*已**sysname**，預設值是 NULL。  
   
  [  **@distributor_security_mode=**] *distributor_security_mode*  
@@ -132,16 +131,16 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@distributor_login=**] **'***distributor_login***'**  
+ [  **@distributor_login=**] **'**_distributor_login_**'**  
  這是進行同步處理時，連接到散發者時使用的散發者登入。 *distributor_login* ，便須*distributor_security_mode*設定為**0**。 *distributor_login*已**sysname**，預設值是 NULL。  
   
- [  **@distributor_password =**] **'***distributor_password***'**  
+ [  **@distributor_password =**] **'**_distributor_password_**'**  
  這是散發者密碼。 *distributor_password* ，便須*distributor_security_mode*設定為**0**。 *distributor_password*已**sysname**，預設值是 NULL。  
   
 > [!IMPORTANT]  
 >  請勿使用空白密碼。 請使用增強式密碼。 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
- [  **@optional_command_line=**] **'***optional_command_line***'**  
+ [  **@optional_command_line=**] **'**_optional_command_line_**'**  
  這是提供給散發代理程式的選擇性命令提示字元。 例如， **-DefinitionFile** C:\Distdef.txt 或 **-CommitBatchSize** 10。 *optional_command_line*已**nvarchar(4000)**，預設值是空字串。  
   
  [  **@frequency_type=**] *frequency_type*  
@@ -203,52 +202,52 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [  **@active_end_date=**] *active_end_date*  
  這是排程停止散發代理程式的日期，格式為 YYYYMMDD。 *active_end_date*已**int**，預設值是**0**。  
   
- [  **@distribution_jobid =**] *distribution_jobid * * * 輸出**  
+ [  **@distribution_jobid =**] _distribution_jobid_**輸出**  
  這是這項作業之散發代理程式的識別碼。 *distribution_jobid*已**二進位 （16)**，預設值是 NULL，它是一個 OUTPUT 參數。  
   
  [  **@encrypted_distributor_password=**] *encrypted_distributor_password*  
  設定*encrypted_distributor_password*不受支援。 嘗試將這個**位元**參數來**1**會導致錯誤。  
   
- [  **@enabled_for_syncmgr=**] **'***enabled_for_syncmgr***'**  
+ [  **@enabled_for_syncmgr=**] **'**_enabled_for_syncmgr_**'**  
  為訂用帳戶是否可以透過同步[!INCLUDE[msCoName](../../includes/msconame-md.md)]Synchronization Manager。 *enabled_for_syncmgr*已**nvarchar(5)**，預設值是 FALSE。 如果**false**，訂用帳戶未註冊使用 Synchronization Manager。 如果**真**，訂用帳戶使用 Synchronization Manager 註冊，並可以同步處理，而不啟動[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
- [  **@ftp_address=**] **'***ftp_address***'**  
+ [  **@ftp_address=**] **'**_ftp_address_**'**  
  只是為了與舊版相容。  
   
  [  **@ftp_port=**] *ftp_port*  
  只是為了與舊版相容。  
   
- [  **@ftp_login=**] **'***ftp_login***'**  
+ [  **@ftp_login=**] **'**_ftp_login_**'**  
  只是為了與舊版相容。  
   
- [  **@ftp_password=**] **'***ftp_password***'**  
+ [  **@ftp_password=**] **'**_ftp_password_**'**  
  只是為了與舊版相容。  
   
- [  **@alt_snapshot_folder=** ] **' * * * alternate_snapshot_folder'*  
+ [  **@alt_snapshot_folder=** ] **'**_alternate_snapshot_folder'_  
  指定快照集替代資料夾的位置。 *alternate_snapshot_folder*已**nvarchar(255)**，預設值是 NULL。  
   
- [ **@working_directory**=] **'***working_director***'**  
+ [ **@working_directory**=] **'**_working_director_**'**  
  這是用來儲存發行集資料和結構描述檔案的工作目錄名稱。 *working_directory*已**nvarchar(255)**，預設值是 NULL。 這個名稱應該用 UNC 格式來指定。  
   
- [ **@use_ftp**=] **'***use_ftp***'**  
+ [ **@use_ftp**=] **'**_use_ftp_**'**  
  指定利用 FTP 而不是一般通訊協定來擷取快照集。 *use_ftp*已**nvarchar(5)**，預設值是 FALSE。  
   
  [ **@publication_type**=] *publication_type*  
  指定發行集的複寫類型。 *publication_type*已**tinyint**預設值是**0**。 如果**0**，發行集是交易類型。 如果**1**，發行集是快照集類型。 如果**2**，發行集是合併類型。  
   
- [ **@dts_package_name**=] **'***dts_package_name***'**  
+ [ **@dts_package_name**=] **'**_dts_package_name_**'**  
  指定 DTS 封裝的名稱。 *dts_package_name*已**sysname**預設值是 NULL。 例如，若要指定 `DTSPub_Package` 封裝，這個參數便是 `@dts_package_name = N'DTSPub_Package'`。  
   
- [ **@dts_package_password**=] **'***dts_package_password***'**  
+ [ **@dts_package_password**=] **'**_dts_package_password_**'**  
  指定封裝的密碼 (如果有的話)。 *dts_package_password*已**sysname**預設值是 NULL，這表示密碼不是封裝。  
   
 > [!NOTE]  
 >  您必須指定密碼，如果*dts_package_name*指定。  
   
- [ **@dts_package_location**=] **'***dts_package_location***'**  
+ [ **@dts_package_location**=] **'**_dts_package_location_**'**  
  指定封裝的位置。 *dts_package_location*已**nvarchar(12)**，預設值是**訂閱者**。 封裝位置可以是**散發者端**或是**訂閱者**。  
   
- [ **@reserved**=] **'***保留***'**  
+ [ **@reserved**=] **'**_保留_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@offloadagent**=] '*remote_agent_activation&lt*'  
@@ -262,10 +261,10 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [ **@job_name**=] '*job_name*'  
  這是現有散發代理程式作業的名稱。 *job_name*已**sysname**，預設值是 NULL。 只有在訂閱將利用現有的作業來同步處理，而不用新建立的作業 (預設值) 時，才指定這個參數。 如果您不屬於**sysadmin**固定伺服器角色，您必須指定*job_login*並*job_password*當您指定*job_name*.  
   
- [ **@job_login**=] **'***job_login***'**  
+ [ **@job_login**=] **'**_job_login_**'**  
  這是用來執行代理程式之 Windows 帳戶的登入。 *job_login*已**nvarchar(257)**，沒有預設值。 通往訂閱者的代理程式連接一律使用這個 Windows 帳戶。  
   
- [ **@job_password**=] **'***job_password***'**  
+ [ **@job_password**=] **'**_job_password_**'**  
  這是用來執行代理程式之 Windows 帳戶的密碼。 *job_password*已**sysname**，沒有預設值。  
   
 > [!IMPORTANT]  

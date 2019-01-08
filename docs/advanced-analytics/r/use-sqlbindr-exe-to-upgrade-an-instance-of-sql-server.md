@@ -1,5 +1,5 @@
 ---
-title: 升級 SQL Server 執行個體 （機器學習服務） 中的 R 和 Python 元件 |Microsoft Docs
+title: 升級 R 和 Python 元件-SQL Server Machine Learning 服務
 description: R 和 Python 中 SQL Server 2016 Services 或 SQL Server 2017 Machine Learning 服務繫結至 Machine Learning Server 使用 sqlbindr.exe 升級。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c2677885719c0b9a54a39b1609a0c2652728820f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 897f83e7272a47428d696802adf79ff816805486
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078888"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645447"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升級 SQL Server 執行個體中的 機器學習 （R 和 Python） 元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +28,7 @@ SQL Server 中的 R 和 Python 整合包括開放原始碼和 Microsoft 的專�
 
 與更新元件是在服務模型的參數。 而不是[SQL Server 產品生命週期](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202017)，以[SQL Server 累計更新](https://support.microsoft.com/help/4047329/sql-server-2017-build-versions)，現在符合您的服務更新[Microsoft R Server 和機器的支援時間表Learning Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)上[新式生命週期](https://support.microsoft.com/help/30881/modern-lifecycle-policy)。
 
-元件版本和服務更新，除了繫結不會變更您的安裝的基本概念： R 和 Python 整合仍然是一部分的資料庫引擎執行個體中，授權會維持不變的 （不需要額外費用與繫結相關聯），和 SQLServer 支援原則仍保留在資料庫引擎。 本文的其餘部分說明繫結機制，以及每個版本的 SQL Server 的運作方式。
+元件版本和服務更新，除了繫結不會變更您的安裝的基本概念：R 和 Python 整合仍然是一部分的資料庫引擎執行個體中，授權會維持不變的 （不需要額外費用與繫結相關聯），和 SQL Server 支援原則仍會保留資料庫引擎。 本文的其餘部分說明繫結機制，以及每個版本的 SQL Server 的運作方式。
 
 > [!NOTE]
 > 繫結套用至 （資料庫內） 執行個體只會繫結至 SQL Server 執行個體。 繫結 （獨立式） 安裝無關。
@@ -109,7 +109,7 @@ Microsoft Machine Learning 安裝程式偵測到 SQL Server 版本的現有功�
 
 1. 檢查 R 基底和 RevoScaleR 套件，以確認現有的版本低於您打算將其取代為版本。 SQL Server 2016 R services，R 基底套件是 3.2.2，RevoScaleR 8.0.3。
 
-    ```SQL
+    ```sql
     EXECUTE sp_execute_external_script
     @language=N'R'
     ,@script = N'str(OutputDataSet);
@@ -139,7 +139,7 @@ Microsoft Machine Learning 安裝程式偵測到 SQL Server 版本的現有功�
 
    在右側，選取 執行個體名稱旁的核取方塊。 如果沒有列出任何執行個體，您會有不相容的組合。 如果您未選取執行個體，建立新的 Machine Learning Server 獨立安裝時，與 SQL Server 程式庫不會變更。 如果您無法選取執行個體，它可能無法在[SP1 CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1)。 
 
-    ![Microsoft Machine Learning Server 安裝精靈](media/mls-931-installer-mssql13.png)
+    ![設定安裝步驟](media/mls-931-installer-mssql13.png)
 
 1. 在 **授權合約**頁面上，選取**我接受這些條款**Machine Learning 伺服器接受授權條款。 
 
@@ -151,7 +151,7 @@ Microsoft Machine Learning 安裝程式偵測到 SQL Server 版本的現有功�
 
 在安裝過程中，會取代任何 SQL Server 所使用的 R 或 Python 程式庫，並啟動控制板會更新以使用較新的元件。 如此一來，如果預設的 R_SERVICES 資料夾使用的執行個體先前的程式庫，在升級後會移除這些程式庫，Launchpad 服務的屬性都會變更為使用新的位置中的程式庫。
 
-繫結會影響這些資料夾的內容： C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\library 會取代 C:\Program Files\Microsoft\ML Server\R_SERVER 的內容。 Microsoft Machine Learning Server 安裝程式建立第二個資料夾和其內容。 
+繫結會影響這些資料夾的內容：C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\library 會取代 C:\Program Files\Microsoft\ML Server\R_SERVER 的內容。 Microsoft Machine Learning Server 安裝程式建立第二個資料夾和其內容。 
 
 如果升級失敗，請檢查[SqlBindR 錯誤碼](#sqlbindr-error-codes)如需詳細資訊。
 
@@ -159,7 +159,7 @@ Microsoft Machine Learning 安裝程式偵測到 SQL Server 版本的現有功�
 
 重新檢查以確認您有較新版本的 R 和 RevoScaleR 的版本。 您可以使用隨附在您的資料庫引擎執行個體中的 R 套件的 R 主控台取得封裝資訊：
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script
 @language=N'R'
 ,@script = N'str(OutputDataSet);
@@ -226,13 +226,13 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 您可以在初始安裝的 R 和 Python 的元件，建立 SQL Server 安裝程式來還原繫結的執行個體。 有三個部分，若要再還原至 SQL Server 服務。
 
-+ [步驟 1： 解除繫結，從 Microsoft Machine Learning Server](#step-1-unbind)
-+ [步驟 2： 將執行個體還原為原始的狀態](#step-2-restore)
-+ [步驟 3： 重新安裝任何新增至安裝的套件](#step-3-reinstall-packages)
++ [步驟 1:從 Microsoft Machine Learning Server 解除繫結](#step-1-unbind)
++ [步驟 2:將執行個體還原為原始狀態](#step-2-restore)
++ [步驟 3:重新安裝任何新增至安裝的套件](#step-3-reinstall-packages)
 
 <a name="step-1-unbind"></a> 
 
-### <a name="step-1-unbind"></a>步驟 1： 解除繫結
+### <a name="step-1-unbind"></a>步驟 1：解除繫結
 
 您有兩個步驟回復繫結的選項： 重新重新執行安裝程式，或使用 SqlBindR 命令列公用程式。
 
@@ -257,7 +257,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 <a name="step-2-restore"></a> 
 
-###  <a name="step-2-repair-the-sql-server-instance"></a>步驟 2： 修復 SQL Server 執行個體
+###  <a name="step-2-repair-the-sql-server-instance"></a>步驟 2：修復 SQL Server 執行個體
 
 執行 SQL Server 安裝程式修復具有 R 和 Python 功能的資料庫引擎執行個體。 系統會保留現有的更新，但如果您錯過任何的 SQL Server 服務更新 R 和 Python 套件，此步驟適用於這些修補程式。
 
@@ -265,13 +265,13 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 <a name="step-3-reinstall-packages"></a> 
 
-### <a name="step-3-add-any-third-party-packages"></a>步驟 3： 新增任何第三方套件
+### <a name="step-3-add-any-third-party-packages"></a>步驟 3：新增任何第三方套件
 
 您可能已經將其他開放原始碼或協力廠商封裝加入您的套件程式庫。 反轉繫結參數的預設套件程式庫的位置，因為您必須重新安裝至程式庫，現在使用 R 和 Python 套件。 如需詳細資訊，請參閱 <<c0> [ 預設封裝](installing-and-managing-r-packages.md)，[安裝新的 R 套件](install-additional-r-packages-on-sql-server.md)，並[安裝新的 Python 套件](../python/install-additional-python-packages-on-sql-server.md)。
 
 ## <a name="sqlbindrexe-command-syntax"></a>SqlBindR.exe 命令語法
 
-### <a name="usage"></a>使用方式
+### <a name="usage"></a>使用量
 
 `sqlbindr [/list] [/bind <SQL_instance_ID>] [/unbind <SQL_instance_ID>]`
 
@@ -283,7 +283,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 |*bind*| 將指定的 SQL 資料庫執行個體升級到最新版 R Server，並確保執行個體自動取得 R Server 的未來升級|
 |*unbind*|從指定的 SQL 資料庫執行個體解除安裝最新版的 R Server，並防止未來的 R Server 升級影響執行個體|
 
-<a name="sqlbinder-error-codes"><a/>
+<a name="sqlbindr-error-codes"><a/>
 
 ## <a name="binding-errors"></a>繫結錯誤
 
@@ -328,7 +328,7 @@ Microsoft Machine Learning Server 9.2.1 和 9.3 並沒有此問題。
 ### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>繫結或解除繫結會保留多個暫存資料夾
 
 有時候繫結和解除繫結的作業無法清除暫存資料夾。
-如果您發現這類名稱的資料夾，您可以移除它在安裝完成之後： R_SERVICES_<guid>
+如果您發現這類名稱的資料夾，您可以移除它，在安裝完成之後：R_SERVICES_<guid>
 
 > [!NOTE]
 > 請務必等候安裝完成。 可能需要很長的時間，移除與版本相關聯的 R 程式庫，然後加入新的 R 程式庫。 當作業完成時，會移除暫存資料夾。

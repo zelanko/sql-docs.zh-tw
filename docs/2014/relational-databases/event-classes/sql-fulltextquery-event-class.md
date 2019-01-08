@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 102e99638cb9cec84a77b37adf0f3b368c408032
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5452b53bf6171b7e516f246972aa0d9d56e321a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109968"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770610"
 ---
 # <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery 事件類別
   SQL:FullTextQuery 事件類別是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行全文檢索查詢時發生。 請將此事件類別加入到監視全文檢索目錄問題的追蹤。  

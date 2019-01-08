@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], SQLdiag
@@ -30,12 +29,12 @@ ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 475c77650179648642aead8275040b894ccc4b40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125318"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590252"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag 公用程式
   **SQLdiag** 公用程式是一種可當做主控台應用程式或服務加以執行的一般用途診斷集合公用程式。 您可以使用 **SQLdiag** ，從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和其他類型的伺服器收集記錄檔案和資料檔案，並使用其監視一段時間的伺服器，或對伺服器的特定問題進行疑難排解。 **SQLdiag** 的用途是為了加速及簡化 [!INCLUDE[msCoName](../includes/msconame-md.md)] 客戶支援服務的診斷資訊收集工作。  
@@ -85,16 +84,16 @@ ms.locfileid: "48125318"
  **/?**  
  顯示使用方式資訊。  
   
- **/I** *configuration_file*  
+ **/I** _configuration_file_  
  設定 **SQLdiag** 要使用的組態檔。 依預設， **/I** 會設為 SQLDiag.Xml。  
   
- **/O** *output_folder_path*  
+ **/O** _output_folder_path_  
  將 **SQLdiag** 輸出重新導向至指定的資料夾。 如果未指定 **/O** 選項， **SQLdiag** 輸出會寫入 **SQLdiag** 啟動資料夾之下名稱為 SQLDIAG 的子資料夾中。 如果 [SQLDIAG] 資料夾不存在， **SQLdiag** 會嘗試建立它。  
   
 > [!NOTE]  
 >  輸出資料夾位置相對於可以使用 **/P**指定的支援資料夾位置。 若要為輸出資料夾設定完全不同的位置，請對 **/O**指定完整的目錄路徑。  
   
- **/P** *support_folder_path*  
+ **/P** _support_folder_path_  
  設定支援資料夾路徑。 依預設， **/P** 會設為 **SQLdiag** 可執行檔所在的資料夾。 此支援資料夾包含 **SQLdiag** 支援檔案，例如 XML 組態檔、Transact-SQL 指令碼與公用程式在診斷收集期間所使用的其他檔案。 如果您使用此選項指定替代支援檔案路徑， **SQLdiag** 會將它需要的支援檔案自動複製到指定的資料夾 (如果它們尚不存在)。  
   
 > [!NOTE]  
@@ -102,7 +101,7 @@ ms.locfileid: "48125318"
 >   
 >  **SQLDIAG /P %cd%**  
   
- **/N** *output_folder_management_option*  
+ **/N** _output_folder_management_option_  
  設定 **SQLdiag** 在啟動時，是要覆寫或重新命名輸出資料夾。 可用的選項如下：  
   
  1 = 覆寫輸出資料夾 (預設值)  
@@ -112,12 +111,12 @@ ms.locfileid: "48125318"
 > [!NOTE]  
 >  **SQLdiag** 在啟動時不會將輸出附加至目前的輸出資料夾。 它只能覆寫預設輸出資料夾 (選項 1)，或重新命名資料夾 (選項 2)，然後將輸出寫入新的預設輸出資料夾 SQLDIAG 中。  
   
- **/M** *machine1* [ *machine2**machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2**machineN*] | *@machinelistfile*  
  覆寫組態檔中指定的電腦。 依預設，組態檔是 SQLDiag.Xml，或是以 **/I** 參數來設定。 當指定一部以上的電腦時，請用空格隔開每一個電腦名稱。  
   
  使用 *@machinelistfile* 指定要儲存在組態檔中的電腦清單檔案名稱。  
   
- **/C** *file_compression_type*  
+ **/C** _file_compression_type_  
  設定 **SQLdiag** 輸出資料夾檔案所用的檔案壓縮類型。 可用的選項如下：  
   
  0 = 無 (預設值)  
@@ -152,7 +151,7 @@ ms.locfileid: "48125318"
   
  請注意， **SQLdiag** 會使用執行公用程式之電腦的本機時間。  
   
- **/A**  *SQLdiag_application_name*  
+ **/ A** _SQLdiag_application_name_  
  使 **SQLdiag** 公用程式的多個執行個體可以針對相同的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體執行。  
   
  每一個 *SQLdiag_application_name* 會識別一個不同的 **SQLdiag**執行個體。 *SQLdiag_application_name* 執行個體和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體名稱之間沒有關聯性。  
@@ -161,11 +160,11 @@ ms.locfileid: "48125318"
   
  例如：  
   
- **SQLDIAG START /A**  *SQLdiag_application_name*  
+ **SQLDIAG START /A** _SQLdiag_application_name_  
   
  它也可以與 **/R** 選項一起使用，將 **SQLdiag** 的特定執行個體註冊為服務。 例如：  
   
- **SQLDIAG /R /A** *SQLdiag_application_name*  
+ **SQLDIAG /R /A** _SQLdiag_application_name_  
   
 > [!NOTE]  
 >  **SQLdiag** 會自動將 DIAG$ 前置於為 *SQLdiag_application_name*所指定的執行個體名稱。 其可為在您將 **SQLdiag** 註冊成服務時，提供實用的服務名稱。  
@@ -201,7 +200,7 @@ ms.locfileid: "48125318"
   
  您也可以使用 **net start** 命令來啟動服務：  
   
- **net**  **start SQLDIAG**  
+ **net start SQLDIAG**  
   
  **/U**  
  將 **SQLdiag** 取消註冊為服務。  
@@ -228,7 +227,7 @@ ms.locfileid: "48125318"
   
  只有指定 **SQLdiag** 具名執行個體的 **/A**引數，才可以與 **START**、 **STOP**或 **STOP_ABORT** 一起使用，來控制 **SQLdiag** 服務的特定執行個體。 例如：  
   
- **SQLDIAG START /A** *SQLdiag_application_name*  
+ **SQLDIAG START /A** _SQLdiag_application_name_  
   
 ## <a name="security-requirements"></a>安全性需求  
  除非 **SQLdiag** 於一般模式下執行 (藉由指定 **/G** 命令列引數)，否則執行 **SQLdiag** 的使用者必須是 Windows **Administrator** 群組的成員，及 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **系統管理員** 固定伺服器角色的成員。 依預設， **SQLdiag** 會使用 Windows 驗證來連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，但它也支援 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證。  
@@ -295,7 +294,7 @@ SQLDIAG STOP /A Instance1
 >  請使用 **SQLDiag STOP** 或 **SQLDIAG STOP_ABORT** 停止 **SQLdiag** 服務。 請勿使用 Windows 服務主控台停止 **SQLdiag** 或其他 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務。  
   
 ## <a name="automatically-starting-and-stopping-sqldiag"></a>自動啟動和停止 SQLdiag  
- 若要在指定時間自動啟動及停止診斷資料收集，請使用 **/B***start_time* 和 **/E***stop_time* 引數，並採用 24 小時制標記法。 例如，如果您要針對大約在 02:00:00 一致出現的問題進行疑難排解，您可以將 **SQLdiag** 設定成在 01:00 自動開始收集診斷資料且在 03:00:00 自動停止。 請利用 **/B** 和 **/E** 引數來指定開始和停止時間。 請利用 24 小時標記法來指定開始和停止的確切日期和時間，格式為 YYYYMMDD_HH:MM:SS。 若要指定相對的開始或停止時間，請依照下列範例所示，在開始和停止時間之前附加 **+** ，並省略日期部分 (YYYYMMDD_)，如此會讓 **SQLdiag** 等候 1 小時再開始收集資訊，之後會收集 3 小時的資訊，再停止並結束：  
+ 若要在指定時間自動啟動及停止診斷資料收集，請使用 **/B**_start_time_ 和 **/E**_stop_time_ 引數，並採用 24 小時制標記法。 例如，如果您要針對大約在 02:00:00 一致出現的問題進行疑難排解，您可以將 **SQLdiag** 設定成在 01:00 自動開始收集診斷資料且在 03:00:00 自動停止。 請利用 **/B** 和 **/E** 引數來指定開始和停止時間。 請利用 24 小時標記法來指定開始和停止的確切日期和時間，格式為 YYYYMMDD_HH:MM:SS。 若要指定相對的開始或停止時間，請依照下列範例所示，在開始和停止時間之前附加 **+** ，並省略日期部分 (YYYYMMDD_)，如此會讓 **SQLdiag** 等候 1 小時再開始收集資訊，之後會收集 3 小時的資訊，再停止並結束：  
   
 ```  
 sqldiag /B +01:00:00 /E +03:00:00  
@@ -356,7 +355,7 @@ SQLDIAG START /A Instance1
  不支援暫停 **SQLdiag** 服務。  
   
 ## <a name="running-multiple-instances-of-sqldiag"></a>執行 SQLdiag 的多個執行個體  
- 在相同電腦的命令列上指定 **/A***SQLdiag_application_name*，執行多個 **SQLdiag** 的執行個體。 這對於同時從相同 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體收集不同的診斷集很有幫助。 例如，您可以設定 **SQLdiag** 的具名執行個體，持續執行輕量型資料收集。 之後，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上發生特定的問題，您可以執行預設的 **SQLdiag** 執行個體來收集該問題的診斷資訊，或蒐集 [!INCLUDE[msCoName](../includes/msconame-md.md)] 客戶支援服務要求您搜尋的一組診斷來診斷問題。  
+ 在相同電腦的命令列上指定 **/A** SQLdiag_application_name **，執行多個**_SQLdiag_ 的執行個體。 這對於同時從相同 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體收集不同的診斷集很有幫助。 例如，您可以設定 **SQLdiag** 的具名執行個體，持續執行輕量型資料收集。 之後，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上發生特定的問題，您可以執行預設的 **SQLdiag** 執行個體來收集該問題的診斷資訊，或蒐集 [!INCLUDE[msCoName](../includes/msconame-md.md)] 客戶支援服務要求您搜尋的一組診斷來診斷問題。  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>從叢集 SQL Server 執行個體收集診斷資料  
  **SQLdiag** 支援從叢集的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體中收集診斷資料。 若要從叢集的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體中收集診斷資料，請確定已在設定檔 SQLDiag.Xml 中，對 **\<Machine>** 項目的 **name** 屬性指定 **"."**，而且不要在命令列上指定 **/G** 引數。 預設會在組態檔中對 **name** 屬性指定 **"."** ，且會關閉 **/G** 引數。 通常，從叢集的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體中收集時，您不需要編輯組態檔或變更命令列引數。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: faf49ce16cdf76af644944a2a3cc21700863ade9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f58a349ebf67f710b4ff4722b85328992b3555eb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198368"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371120"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>適用於 Microsoft Excel 的 Master Data Services 增益集
   具有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，可以將參考資料的主要清單散發給您組織內使用 Excel 的每個人。 安全性會決定使用者可檢視和更新的資料。  
@@ -28,7 +27,7 @@ ms.locfileid: "48198368"
  在 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，您可以使用 Data Quality Services (DQS)，在將資料載入 MDS 之前比對資料。 這樣有助於防止 MDS 中的資料重複。  
   
 > [!IMPORTANT]  
->  您可以繼續使用[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Master Data Services 和 Data Quality Services，若要在升級後的 SP1 版的 Master Data Services 增益集適用於 Excel [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2。 不過，在升級為 SQL Server 2014 CTP2 之後，任何舊版適用於 Excel 的 Master Data Services 增益集將無法運作。 您可以下載[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 版的 Master Data Services 增益集適用於 Excel[這裡](http://go.microsoft.com/fwlink/?LinkId=328664)。  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 將 Master Data Services 和 Data Quality Services 升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 之後，您可以繼續使用  SP1 版適用於 Excel 的 Master Data Services 增益集。 不過，在升級為 SQL Server 2014 CTP2 之後，任何舊版適用於 Excel 的 Master Data Services 增益集將無法運作。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 您可以在 [這裡](https://go.microsoft.com/fwlink/?LinkId=328664)下載  SP1 版適用於 Excel 的 Master Data Services 增益集。  
   
 ## <a name="terms"></a>詞彙  
  使用此增益集時，您可能會遇到下列詞彙。  

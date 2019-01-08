@@ -1,5 +1,5 @@
 ---
-title: 第 6 課：新增群組和總計 (Reporting Services) | Microsoft Docs
+title: 第 6 課：加入群組和總計 (Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5a372f230cfc2fc63e59787b8f9b674928f72368
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7565cf64d64197a261c36fb755e3f20a65f1fa27
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095291"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356467"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>第 6 課：加入群組和總計 (Reporting Services)
   將群組和總計加入至報表以組織和摘要資料。  
   
- 如需中加入報表，請參閱 curah.microsoft.com 的： [Reporting Services (SSRS) 報表中加入總計](http://go.microsoft.com/fwlink/p/?LinkId=403698)。  
+ 如需有關在報表中加入計算加總的資訊，請參閱 curah.microsoft.com 的這篇歸納整理：[將總計加入到 Reporting Services (SSRS) 報表](https://go.microsoft.com/fwlink/p/?LinkId=403698)。  
   
  **本主題內容：**  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48095291"
   
      如果您在輸出視窗中看見類似下面的訊息，就表示部署成功。  
   
-    > ------ 已經開始建立: 專案: 教學課程，組態: 偵錯 ------ 正在略過 'Sales Orders.rdl'。 項目是最新狀態。建置完成--0 個錯誤，0 個警告---開始部署： 專案： tutorial，組態： 偵錯---部署至 http://\<伺服器名稱 > / 正在回報 ' / 教學課程/Sales Orders'。部署完成--0 個錯誤，0 個警告 === 建置： 1 個成功或最新狀態、 0 失敗，0 個略過 === 部署： 1 成功、 0 失敗、 0 略過 ===  
+    > ------ 已經開始建立:專案： tutorial，組態：偵錯 ------ 正在略過 'Sales Orders.rdl'。 項目為最新狀態。建立完成 -- 0 個錯誤，0 個警告 ------ 已經開始部署:專案： tutorial，組態：偵錯---部署至 http://\<伺服器名稱 > / 正在回報 ' / 教學課程/Sales Orders'。部署完成--0 個錯誤，0 個警告 === 建置：1 個成功或為最新狀態，0 個失敗，0 個略過 ==================== 部署:1 個成功，0 個失敗，0 個略過 ==========  
   
      如果您看見類似下面的錯誤訊息，請確認自己擁有報表伺服器的權限，而且已經以系統管理員權限啟動 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 。  
   
@@ -139,12 +139,12 @@ ms.locfileid: "48095291"
   
      瀏覽至報表管理員 URL，例如： `http://<server name>/reports`。  
   
-7.  瀏覽至包含報表的資料夾，然後按一下報表名稱`Sales Orders`瀏覽器中檢視轉譯的報表。  
+7.  瀏覽至包含報表的資料夾，然後按一下 `Sales Orders` 報表的名稱，即可在瀏覽器中檢視轉譯的報表。  
   
 ## <a name="next-steps"></a>後續步驟  
  您已成功完成「建立基本資料表報表」教學課程。  
   
 ## <a name="see-also"></a>另請參閱  
- [篩選、 分組和排序資料&#40;報表產生器及 SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

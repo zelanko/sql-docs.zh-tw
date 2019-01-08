@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
@@ -22,15 +22,15 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b200fc8b534fad9e33f0b01d97d46d0bece4c988
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204938"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364180"
 ---
 # <a name="data-compression"></a>資料壓縮
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援資料列和頁面壓縮的資料列存放區資料表和索引，並支援資料行存放區和資料行存放區封存壓縮的資料行存放區資料表和索引。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援資料列存放區之資料表和索引的資料列和頁面壓縮，並且支援資料行存放區之資料表和索引的資料行存放區和資料行存放區封存壓縮。  
   
  如果是資料列存放區資料表和索引，使用資料壓縮功能有助於減少資料庫的大小。 除了節省空間之外，資料壓縮也有助於改善 I/O 密集型工作負載的效能，因為資料會儲存在更少的頁面中，而且查詢需要從磁碟讀取的頁面也變少了。 但是在與應用程式交換資料時，資料庫伺服器上需要額外的 CPU 資源來壓縮和解壓縮資料。 您可以針對下列資料庫物件來設定資料列和頁面壓縮：  
   
@@ -108,12 +108,12 @@ ms.locfileid: "48204938"
   
 ||  
 |-|  
-|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
+|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
 ### <a name="basics"></a>基本概念  
  資料行存放區資料表和索引永遠都會以資料行存放區壓縮形式來儲存。 您可以進一步減少資料行存放區資料的大小，只要設定稱為封存壓縮的額外壓縮即可。  為了執行封存壓縮， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對資料執行 Microsoft XPRESS 壓縮演算法。 您可以使用下列資料壓縮類型來新增或移除封存壓縮：  
   
--   使用`COLUMNSTORE_ARCHIVE`資料壓縮來壓縮以封存壓縮的資料行存放區資料。  
+-   使用 `COLUMNSTORE_ARCHIVE` 資料壓縮，以封存壓縮壓縮資料行存放區資料。  
   
 -   使用 **COLUMNSTORE** 資料壓縮，將封存壓縮解壓縮。 這樣產生的資料將會持續以資料行存放區壓縮形式壓縮。  
   
@@ -169,7 +169,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   [sys.indexes &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) -`type`並`type_desc`資料行包含 CLUSTERED COLUMNSTORE 和 NONCLUSTERED COLUMNSTORE。  
   
--   [sys.partitions &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) –`data_compression`並`data_compression_desc`資料行包含 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。  
+-   [sys.partitions &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) -`data_compression`並`data_compression_desc`資料行包含 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。  
   
  [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) 程序不適用於資料行存放區索引。  
   

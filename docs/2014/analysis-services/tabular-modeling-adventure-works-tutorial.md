@@ -11,15 +11,15 @@ ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88f72c98977fae3e99f917de8a1b82198779b1ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2693bd51da682e9af0133c8400f2cfeacd2737ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083278"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373680"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>表格式模型化 (Adventure Works 教學課程)
-  本教學課程提供如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 建立 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services 表格式模型的課程。  
+  本教學課程提供如何使用 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 建立 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Analysis Services 表格式模型的課程。  
   
 ## <a name="what-you-will-learn"></a>學習內容  
  在這個教學課程進行期間，您將學習下列內容：  
@@ -59,7 +59,7 @@ ms.locfileid: "48083278"
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   AdventureWorksDW 範例資料庫。 這個範例資料庫包括完成本教學課程所需的資料。 若要下載範例資料庫，請參閱[ http://go.microsoft.com/fwlink/?LinkID=335807 ](http://go.microsoft.com/fwlink/?LinkID=335807)。  
+-   AdventureWorksDW 範例資料庫。 這個範例資料庫包括完成本教學課程所需的資料。 若要下載範例資料庫，請參閱[ https://go.microsoft.com/fwlink/?LinkID=335807 ](https://go.microsoft.com/fwlink/?LinkID=335807)。  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 或更新版本 (與第 11 課中的 [在 Excel 中進行分析] 功能搭配使用)  
   
@@ -68,12 +68,12 @@ ms.locfileid: "48083278"
   
 |課程|估計完成時間|  
 |------------|--------------------------------|  
-|[課程 1：建立新的表格式模型專案](lesson-1-create-a-new-tabular-model-project.md)|10 分鐘|  
-|[課程 2：新增資料](lesson-2-add-data.md)|20 分鐘|  
+|[第 1 課：建立新的表格式模型專案](lesson-1-create-a-new-tabular-model-project.md)|10 分鐘|  
+|[第 2 課：加入資料](lesson-2-add-data.md)|20 分鐘|  
 |[第 3 課：重新命名資料行](rename-columns.md)|20 分鐘|  
 |[第 4 課：標記為日期資料表](lesson-3-mark-as-date-table.md)|3 分鐘|  
 |[第 5 課：建立關聯性](lesson-4-create-relationships.md)|10 分鐘|  
-|[第 6 課：建立計算結果欄](lesson-5-create-calculated-columns.md)|15 分鐘|  
+|[第 6 課：建立導出資料行](lesson-5-create-calculated-columns.md)|15 分鐘|  
 |[第 7 課：建立量值](lesson-6-create-measures.md)|30 分鐘|  
 |[第 8 課：建立關鍵效能指標](lesson-7-create-key-performance-indicators.md)|15 分鐘|  
 |[第 9 課：建立檢視方塊](lesson-8-create-perspectives.md)|5 分鐘|  
@@ -84,7 +84,7 @@ ms.locfileid: "48083278"
 |[第 14 課：部署](lesson-13-deploy.md)|5 分鐘|  
   
 ## <a name="supplemental-lessons"></a>補充課程  
- 本教學課程也包含[補充課程](../tutorials/supplemental-lessons.md)。 本節中的主題並非完成教學課程所必須，但是能幫助您更了解進階表格式模型撰寫功能。  
+ 本教學課程也包含 [補充課程](../tutorials/supplemental-lessons.md)。 本節中的主題並非完成教學課程所必須，但是能幫助您更了解進階表格式模型撰寫功能。  
   
  這個教學課程包括下列補充課程：  
   
@@ -94,6 +94,6 @@ ms.locfileid: "48083278"
 |[設定 Power View 報表的報表屬性](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)設定 Power View 報表的報表屬性|30 分鐘|  
   
 ## <a name="next-step"></a>下一個步驟  
- 若要開始本教學課程，請繼續進行第一課：[第 1 課：建立新的表格式模型專案](lesson-1-create-a-new-tabular-model-project.md)。  
+ 若要開始教學課程，請繼續進行第一課：[第 1 課：建立新的表格式模型專案](lesson-1-create-a-new-tabular-model-project.md)。  
   
   

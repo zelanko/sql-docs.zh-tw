@@ -1,43 +1,34 @@
 ---
-title: 檢視及摘要資料使用 R （逐步解說） |Microsoft Docs
+title: 檢視及摘要使用 R 函式-SQL Server Machine Learning 的 SQL Server 資料
+description: 本教學課程示範如何以視覺化方式檢視和產生的 SQL Server 上的資料庫內分析中使用 R 函式的統計摘要。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/02/2018
+ms.date: 11/26/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1d6c225b3ec6b2a7a80dea155b564b94ecab60fb
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 368caa21545e534c393aca29ce8fd3a59f9d9837
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032885"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644557"
 ---
-# <a name="view-and-summarize-data-using-r"></a>檢視及使用 R 的資料摘述
+# <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>檢視及摘要使用 R （逐步解說） 的 SQL Server 資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-現在讓我們使用相同的資料，使用 R 程式碼。 在這一課，您了解如何使用中的函式**RevoScaleR**封裝。
+這一課會為您介紹中的函式**RevoScaleR**封裝，並引導您完成下列工作：
 
-本逐步解說提供 R 指令碼，其中包含建立資料物件、產生摘要及建立模型需要的所有程式碼。 您可以在安裝 R 指令碼檔的位置找到 R 指令碼檔 **RSQL_RWalkthrough.R**。
-
-+ 如果您熟悉 R，就能立即執行指令碼。
-+ 學習使用 RevoScaleR 的人員，本教學課程會經歷的指令碼行。
-+ 若要執行指令碼中的個別行，您可以反白顯示檔案中的一或多行，然後按下 Ctrl + ENTER。
-
-> [!TIP]
-> 如果您想要稍後再完成本逐步解說的其餘部分，請儲存您的 R 工作區。  如此一來的資料物件和其他變數是供重複使用。
+> [!div class="checklist"]
+> * 連接至 SQL Server
+> * 定義具有您所需資料的查詢，或是指定資料表或檢視
+> * 定義一或多個在執行 R 程式碼時要使用的計算內容
+> * （選擇性） 定義從來源讀取時套用至資料來源的轉換
 
 ## <a name="define-a-sql-server-compute-context"></a>定義 SQL Server 計算內容
 
-Microsoft R 可讓您輕鬆地從取得資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]R 程式碼中使用。 此程序如下：
-  
-- 建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的連線
-- 定義具有您所需資料的查詢，或是指定資料表或檢視
-- 定義一或多個在執行 R 程式碼時要使用的計算內容
-- （選擇性） 定義從來源讀取時套用至資料來源的轉換
-
-下列步驟是所有 R 程式碼的一部分，而且應該在 R 環境中執行。 我們會使用 Microsoft R Client，因為它包含所有 RevoScaleR 套件，以及一組基本且輕量級的 R 工具。
+用戶端工作站上，在 R 環境中執行下列 R 陳述式。 本節假設[使用 Microsoft R 用戶端的資料科學工作站](../r/set-up-a-data-science-client.md)，因為它包含所有 RevoScaleR 套件，以及一組基本且輕量級的 R 工具。 例如，您可以使用 Rgui.exe 這一節中執行 R 指令碼。
 
 1. 如果**RevoScaleR**套件尚未載入，執行 R 程式碼的這一行：
 
@@ -49,13 +40,15 @@ Microsoft R 可讓您輕鬆地從取得資料[!INCLUDE[ssNoVersion](../../includ
      
      如果您收到錯誤，請確定您的 R 開發環境使用包含 RevoScaleR 套件的程式庫。 使用命令，例如`.libPaths()`來檢視目前的程式庫路徑。
 
-2. 建立 SQL Server 的連接字串，並將它儲存在 R 變數_connStr_。
+2. 建立 SQL Server 的連接字串，並將它儲存在 R 變數*connStr*。
+
+   您必須變更預留位置"your_server_name 」 為有效的 SQL Server 執行個體名稱。 伺服器名稱，您可以使用 僅執行個體名稱，或您可能需要完整限定名稱，根據您的網路。
     
+   SQL Server 驗證的連接語法如下所示：
+
     ```R
     connStr <- "Driver=SQL Server;Server=your_server_name;Database=nyctaxi_sample;Uid=your-sql-login;Pwd=your-login-password"
     ```
-
-    伺服器名稱，您可以使用 僅執行個體名稱，或您可能需要完整限定名稱，根據您的網路。
 
     對於 Windows 驗證，語法會有點不同：
     
@@ -63,7 +56,7 @@ Microsoft R 可讓您輕鬆地從取得資料[!INCLUDE[ssNoVersion](../../includ
     connStr <- "Driver=SQL Server;Server=your_server_name;Database=nyctaxi_sample;Trusted_Connection=True"
     ```
 
-    提供下載的 R 指令碼只會使用 SQL 登入。 一般而言，我們建議您盡可能避免將密碼儲存在 R 程式碼時，才使用 Windows 驗證。 不過，若要確保在本教學課程的程式碼符合從 Github 下載的程式碼，我們將使用 SQL 登入逐步解說的其餘部分。
+    一般而言，我們建議您盡可能避免將密碼儲存在 R 程式碼時，才使用 Windows 驗證。
 
 3. 定義要用來建立新的變數*計算內容*。 建立計算內容物件之後，您可以在 SQL Server 執行個體上執行 R 程式碼中使用它。
 
@@ -75,10 +68,9 @@ Microsoft R 可讓您輕鬆地從取得資料[!INCLUDE[ssNoVersion](../../includ
 
     - 在工作站與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦之間來回序列化 R 物件時，R 會使用暫存目錄。 您可以指定本機目錄以用來做為 *sqlShareDir*，或接受預設值。
   
-    - 使用*sqlWait*指出是否要 R 等待來自伺服器的結果。  如需等待與非等待工作的討論，請參閱 <<c0> [ 分散式和使用 Microsoft R 中的 ScaleR 的平行運算](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing)。
+    - 使用*sqlWait*指出是否要 R 等待來自伺服器的結果。  如需等待與非等待工作的討論，請參閱 <<c0> [ 分散式和使用 Microsoft R 中的 RevoScaleR 的平行運算](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing)。
   
     - 使用引數*sqlConsoleOutput*來表示您不想要看到從 R 主控台的輸出。
-
 
 4. 您呼叫[RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver)建構函式使用變數和連接字串已定義，來建立計算內容物件，並將新的物件儲存在 R 變數*sqlcc*。
   
@@ -92,14 +84,14 @@ Microsoft R 可讓您輕鬆地從取得資料[!INCLUDE[ssNoVersion](../../includ
     rxSetComputeContext(sqlcc)
     ```
 
-    + `rxSetComputeContext` 會以隱藏方式傳回先前使用中的計算內容，讓您可以使用它
-    + `rxGetComputeContext` 會傳回使用中的計算內容
+    + [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext)無形的方式傳回先前使用的計算內容，以便您可以使用它
+    + [rxGetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext)傳回使用中的計算內容
     
-    請注意，設定計算內容僅適用於使用 **RevoScaleR** 封裝中的函數所執行的作業，不會影響開放原始碼 R 作業的執行方式。
+    請注意，設定計算內容只會影響使用中的函式的作業**RevoScaleR**套件內容不會影響開放原始碼 R 作業的執行方式。
 
 ## <a name="create-a-data-source-using-rxsqlserver"></a>建立 RxSqlServer 資料來源
 
-在 Microsoft R*資料來源*是您使用 RevoScaleR 函式所建立的物件。 資料來源物件會指定一些您想要用來執行工作，例如模型訓練或功能擷取的資料集。 您可以從各種來源取得資料如需目前支援的來源清單，請參閱[RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource)。
+使用 Microsoft R 程式庫，例如 RevoScaleR 和 MicrosoftML 時*資料來源*是您使用 RevoScaleR 函式所建立的物件。 資料來源物件會指定一些您想要用來執行工作，例如模型訓練或功能擷取的資料集。 您可以從各種來源包括 SQL Server，以取得資料。 如需目前支援的來源清單，請參閱[RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource)。
 
 更早版本，您定義的連接字串，且該資訊儲存在 R 變數中。 您可以重複使用您想要取得該連接資訊來指定的資料。
 
@@ -125,7 +117,7 @@ Microsoft R 可讓您輕鬆地從取得資料[!INCLUDE[ssNoVersion](../../includ
     
     + 引數  *colClasses* 會指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 R 之間移動資料時要使用的資料行類型。這很重要，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用與 R 不同的資料類型，而且具有更多資料類型。 如需詳細資訊，請參閱 < [R 程式庫和資料型別](../r/r-libraries-and-data-types.md)。
   
-    + 引數*rowsPerRead*是很重要的管理記憶體使用量和有效率的計算。  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 中的大多數增強型分析函數會分區塊處理資料並累積中繼結果，然後在讀取所有資料之後，傳回最終計算結果。  藉由新增*rowsPerRead*參數，您可以控制多少個資料列被讀入每個區塊以進行處理。  如果此參數的值太大，資料存取可能會變慢，因為您沒有足夠的記憶體，可有效率地處理這類大型資料區塊。  在某些系統上，設定*rowsPerRead*為極小的值也可能使效能變慢。
+    + 引數*rowsPerRead*是很重要的管理記憶體使用量和有效率的計算。  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 中的大多數增強型分析函數會分區塊處理資料並累積中繼結果，然後在讀取所有資料之後，傳回最終計算結果。  藉由新增*rowsPerRead*參數，您可以控制多少個資料列被讀入每個區塊以進行處理。  如果此參數的值太大，資料存取可能會變慢，因為您沒有足夠的記憶體來有效率地處理這類大型資料區塊。  在某些系統上，設定*rowsPerRead*為極小的值也可能使效能變慢。
 
 3. 此時，您已建立*inDataSource*物件，但它不包含任何資料。 資料不會提取來自 SQL 查詢至本機環境直到您執行的函式，例如[rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep)或是[rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary)。
 
@@ -147,7 +139,7 @@ Microsoft R 可讓您輕鬆地從取得資料[!INCLUDE[ssNoVersion](../../includ
 
     **結果**
     
-    ```
+    ```R
     Var 1: tipped, Type: integer
     Var 2: fare_amount, Type: numeric
     Var 3: passenger_count, Type: integer
@@ -182,7 +174,7 @@ Microsoft R 可讓您輕鬆地從取得資料[!INCLUDE[ssNoVersion](../../includ
 
     如果 rxSummary 函式執行成功，您應該會看到結果，這些項目，後面依類別目錄的統計資料的清單。 
 
-    ```
+    ```R
     rxSummary(formula = ~fare_amount:F(passenger_count, 1,6), data = inDataSource)
     Data: inDataSource (RxSqlServerData Data Source)
     Number of valid observations: 1000
@@ -216,10 +208,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds,
 > 
 > 另一個選項是監視 SQL Server 上使用這些執行的 R 作業[自訂報表](../r/monitor-r-services-using-custom-reports-in-management-studio.md)。
 
-## <a name="next-lesson"></a>下一課
+## <a name="next-steps"></a>後續步驟
 
-[使用 R 建立圖表及繪圖](walkthrough-create-graphs-and-plots-using-r.md)
-
-## <a name="previous-lesson"></a>上一課
-
-[使用 SQL 瀏覽資料](walkthrough-view-and-explore-the-data.md)
+> [!div class="nextstepaction"]
+> [使用 R 建立圖表及繪圖](walkthrough-create-graphs-and-plots-using-r.md)

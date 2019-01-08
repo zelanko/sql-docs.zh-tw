@@ -10,17 +10,17 @@ ms.assetid: 06075248-705e-4563-9371-b64cd609793c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4aaefdcd2739b2036703cdb7235fe56865ff1fed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ceedcedae64bf2ec8f8ede0ccbb99350b979fd7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064628"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369950"
 ---
 # <a name="understanding-transactions-on-memory-optimized-tables"></a>了解記憶體最佳化資料表上的交易
   交易會使用一種開放式多重版本並行控制的形式，存取記憶體最佳化的資料表。 這表示有不同版本的資料。 每一筆交易都會在它自己的交易一致性資料庫版本上運作，與其他並行執行的交易無關。 此外，交易會在開放式假設下運作，並不會與其他並行交易發生衝突。 如此就不需要使用鎖定，不過需要系統偵測衝突，並終止其中一個衝突的交易。 只有寫入-寫入交易和讀取-寫入交易會發生衝突。 如果發生寫入-寫入衝突，其中一個寫入交易會終止。  
   
- 就 READ_COMMITTED_SNAPSHOT 和 SNAPSHOT 交易隔離等級而言，記憶體最佳化資料表的並行存取控制與以磁碟為基礎的資料表的並行存取控制之間有相似之處。 (如需有關磁碟基礎之資料表的詳細資訊，請參閱[Database Engine 中資料列版本設定式隔離等級](http://msdn.microsoft.com/library/ms177404\(v=sql.100\).aspx)。)  
+ 就 READ_COMMITTED_SNAPSHOT 和 SNAPSHOT 交易隔離等級而言，記憶體最佳化資料表的並行存取控制與以磁碟為基礎的資料表的並行存取控制之間有相似之處。 (如需有關磁碟基礎之資料表的詳細資訊，請參閱[Database Engine 中資料列版本設定式隔離等級](https://msdn.microsoft.com/library/ms177404\(v=sql.100\).aspx)。)  
   
 ## <a name="topics-in-this-section"></a>本節主題  
  本節中有關記憶體最佳化資料表交易的說明，涵蓋下列主題：  

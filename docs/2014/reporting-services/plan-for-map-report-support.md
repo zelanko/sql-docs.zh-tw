@@ -11,12 +11,12 @@ ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 243c2ba1d998acd15f92e6e995d9390c7a32c84f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc5bf036d3d00033077ad0054572c0375b6b6f55
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105878"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366597"
 ---
 # <a name="plan-for-map-report-support"></a>對應報表支援規劃
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 支援使用空間資料來源的地圖報表。 空間資料可以來自 SQL Server 資料庫、ESRI 形狀檔，或是隨著 Reporting Services 或報表產生器一起安裝的地圖庫。 地圖也可以顯示 Bing 地圖底圖的背景。 報表作者可以建立報表，做為動態，在執行階段擷取或為 static 並內嵌在報表定義中指定空間資料或 Bing 地圖底圖。  
@@ -27,7 +27,7 @@ ms.locfileid: "48105878"
  在每個報表中，報表作者也可以指定是否要使用安全通訊端層 (SSL) 連線，自圖格伺服器擷取圖格。 若要這樣做，在圖格圖層的 [屬性] 窗格中，它們必須將 usesecureconnection 設定布林屬性設定到`true`。  
   
 > [!NOTE]  
->  如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](http://go.microsoft.com/fwlink/?LinkId=151371) 和 [隱私權聲明](http://go.microsoft.com/fwlink/?LinkId=151372)。  
+>  如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](https://go.microsoft.com/fwlink/?LinkId=151371) 和 [隱私權聲明](https://go.microsoft.com/fwlink/?LinkId=151372)。  
   
 ## <a name="report-design-recommendations"></a>報表設計建議  
  好的地圖報表設計需要報表作者評估靜態與動態空間資料之間的權衡得失，並找出平衡點來服務報表使用者。 內嵌的地圖元素可能會大幅增加報表定義的大小，但是會減少檢視地圖報表所需的時間。 動態地圖元素會減少報表定義的大小，但是會增加處理及檢視地圖所需的時間。 報表作者必須找到這些對立問題之間的平衡點。  
@@ -51,6 +51,6 @@ ms.locfileid: "48105878"
  如需詳細資訊， [Maps&#40;報表產生器及 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表疑難排解： 地圖報表&#40;報表產生器及 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [報表疑難排解：將報表對應&#40;報表產生器及 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

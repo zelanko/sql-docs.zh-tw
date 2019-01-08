@@ -12,12 +12,12 @@ ms.assetid: 991111d9-1eb3-43e9-9333-a75a775c3200
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc2813b3d43b86ec495912feeaf1052f1c5b97ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ea24081f4b3a41211f3bd8d6bba52aaec8b74fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117438"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370180"
 ---
 # <a name="mssqlserver3168"></a>MSSQLSERVER_3168
     
@@ -48,7 +48,7 @@ ms.locfileid: "48117438"
 -   使用者嘗試還原取自相同伺服器的系統資料庫備份， 但在進行備份時，伺服器執行的是不同的組建。 也就是說，自從執行備份之後，伺服器已升級。  
   
 ## <a name="user-action"></a>使用者動作  
- 這種情況下的還原程序相當複雜，如非必要，請勿使用。 如需詳細資訊，請參閱[您無法將系統資料庫備份還原至不同的 SQL Server 組建](http://support.microsoft.com/kb/264474)。  
+ 這種情況下的還原程序相當複雜，如非必要，請勿使用。 如需詳細資訊，請參閱[您無法將系統資料庫備份還原至不同的 SQL Server 組建](https://support.microsoft.com/kb/264474)。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統資料庫的備份與還原 &#40;SQL Server&#41;](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  

@@ -12,12 +12,12 @@ ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7834ce4de7b4fa788dcdfb72c9f38510a11a9fac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9363dfe3bee63bb6b32ecb5d7c29468f6a3def1a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187008"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215797"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>還原 master 資料庫 (Transact-SQL)
   本主題說明如何從完整資料庫備份中還原 **master** 資料庫。  
@@ -42,7 +42,7 @@ ms.locfileid: "48187008"
 ## <a name="example"></a>範例  
  下列範例會在預設伺服器執行個體上還原 `master` 資料庫。 此範例假設伺服器執行個體已經在單一使用者模式中執行。 此範例會啟動 `sqlcmd` ，並執行 `RESTORE DATABASE` 陳述式，從磁碟裝置還原 `master` 的完整資料庫備份： `Z:\SQLServerBackups\master.bak`。  
   
-> [!NOTE]  
+> [!NOTE]
 >  對於具名執行個體，**sqlcmd** 命令必須指定 **-S**\<電腦名稱>**\\\<執行個體名稱> 選項。  
   
 ```  

@@ -21,19 +21,19 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acf3974a9406e974f6d294584cb732c12b0718e7
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 7fc0aab989eb46b64ef6b9919f999ba13c4ef74f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815634"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527188"
 ---
 # <a name="extract-a-dac-from-a-database"></a>從資料庫中擷取 DAC
   您可以使用 [擷取資料層應用程式精靈] 或 Windows PowerShell 指令碼，從現有的 SQL Server 資料庫中擷取資料層應用程式 (DAC) 封裝。 此擷取程序會建立 DAC 封裝檔案，其中包含資料庫物件及其相關執行個體層級元素的定義。 例如，DAC 封裝檔案會包含資料庫資料表、預存程序、檢視表、使用者以及對應至資料庫使用者的登入。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **開始之前：**[限制事項](#LimitationsRestrictions)，[權限](#Permissions)  
   
--   **若要擷取 DAC，使用：**[擷取資料層應用程式精靈](#UsingDACExtractWizard)， [PowerShell  ](#ExtractDACPowerShell)  
+-   **若要擷取 DAC，使用：**[擷取資料層應用程式精靈](#UsingDACExtractWizard)， [PowerShell](#ExtractDACPowerShell)  
   
 ## <a name="before-you-begin"></a>開始之前  
  您可以從位於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 或更新版本之執行個體的資料庫中擷取 DAC。 如果您針對從 DAC 部署的資料庫來執行擷取程序，則只會擷取資料庫中物件的定義。 此程序不會參考中註冊的 DAC `msdb` (**主要**在[!INCLUDE[ssSDS](../../includes/sssds-md.md)])。 擷取程序不會在目前的 Database Engine 執行個體中註冊 DAC 定義。 如需有關註冊 DAC 的詳細資訊，請參閱＜ [Register a Database As a DAC](register-a-database-as-a-dac.md)＞。  
@@ -51,7 +51,7 @@ ms.locfileid: "43815634"
   
 2.  展開 **[資料庫]** 節點。  
   
-3.  以滑鼠右鍵按一下待擷取 DAC 之資料庫的節點，並指向 [工作]，然後選取 [擷取資料層應用程式]。  
+3.  以滑鼠右鍵按一下待擷取 DAC 之資料庫的節點，並指向 [工作]，然後選取 [擷取資料層應用程式...]  
   
 4.  完成精靈對話方塊：  
   

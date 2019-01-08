@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], modifying
@@ -14,12 +13,12 @@ ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d5308b708e32a1e886aadc2c78d3f504c3a6640
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56d4f7d922c0c229b1e2126f93611670adf7c702
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163568"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591842"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>修改現有的追蹤 (Transact-SQL)
   此主題描述如何使用預存程序來修改現有的追蹤。  
@@ -47,9 +46,9 @@ ms.locfileid: "48163568"
     |OFF (**0**)|NULL|會關閉事件。 會清除所有資料行。|  
     ||NOT NULL|會針對特定的事件關閉資料行。|  
   
-> [!IMPORTANT]  
->  不同於一般預存程序，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 預存程序的參數 (**sp_trace_* xx***) 都有強制類型，而且不支援資料類型的自動轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
-  
+> [!IMPORTANT]
+>  不同於一般預存程序，所有的參數[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]預存程序 (<strong>sp_trace_*xx*</strong>) 都有強制類型，而且不支援自動資料類型轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
+
 ## <a name="see-also"></a>另請參閱  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql)   

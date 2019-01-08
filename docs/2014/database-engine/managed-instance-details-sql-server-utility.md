@@ -10,12 +10,12 @@ ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5677e7f5dc7a5191b2d39e6100cafee1f38e86ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185448"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374570"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>受管理的執行個體詳細資料 (SQL Server 公用程式)
   公用程式總管之 Managed 執行個體檢視中的資訊提供了個別 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的使用量資料、CPU 使用量歷程記錄、檔案層級的儲存使用量詳細資料，以及檢視和更新原則臨界值的功能。 原則臨界值可以針對電腦及資料庫檔案和記錄檔在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體層級控制，也可以在存放磁碟區的層級控制。 您也可以針對個別的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Managed 執行個體檢視屬性詳細資料。  
@@ -68,17 +68,17 @@ ms.locfileid: "48185448"
   
 -   SQL Server 版本：  
   
--   叢集化：(True 或 False)  
+-   叢集：（true 或 False）  
   
 -   備份目錄：  
   
 -   定序：  
   
--   區分大小寫：(True 或 False)  
+-   區分大小寫：（true 或 False）  
   
 -   語言：  
   
--   上次報告時間：此資料行會使用 datetime 資料類型來顯示 UCP 本機日期和時間。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 主題。  
+-   上次報告的時間：此欄顯示 UCP 本機日期和時間使用 datetime 資料類型。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主題。  
   
  CPU 使用量索引標籤  
  [CPU 使用量] 索引標籤會針對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體和電腦的 CPU 使用量顯示歷程記錄資料的並排圖形。  
@@ -96,7 +96,7 @@ ms.locfileid: "48185448"
 -   1 年，每隔 1 個月顯示。  
   
  儲存使用量索引標籤  
- [儲存使用量] 索引標籤具有樹狀檢視，可顯示儲存使用量詳細資料。 請注意，時間資料會使用 datetime 資料類型來顯示 UCP 本機日期和時間。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 主題。  
+ [儲存使用量] 索引標籤具有樹狀檢視，可顯示儲存使用量詳細資料。 請注意，時間資料會使用 datetime 資料類型來顯示 UCP 本機日期和時間。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 主題。 當您使用公用程式物件模型時，請注意 SSMS 會使用 datetimeoffset 資料類型。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 主題。  
   
  顯示畫面可以依資料庫或磁碟區來分組。 若要使用資料庫樹狀檢視，請選取 [檔案群組依據:] 選項中的 [資料庫] 選項按鈕。 若要檢視個別資料庫檔案的儲存使用量狀態，請按一下樹狀檢視中資料庫名稱旁邊的加號。 列出的資料庫檔案包含了所有屬於您在清單檢視中選取之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 受管理的執行個體的系統資料庫和使用者資料庫。  
   
@@ -165,13 +165,13 @@ ms.locfileid: "48185448"
   
 -   SQL Server 版本：  
   
--   叢集化：(True 或 False)  
+-   叢集：（true 或 False）  
   
 -   備份目錄：  
   
 -   定序：  
   
--   區分大小寫：(True 或 False)  
+-   區分大小寫：（true 或 False）  
   
 -   語言：  
   

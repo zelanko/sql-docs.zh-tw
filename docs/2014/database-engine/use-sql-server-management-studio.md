@@ -14,19 +14,19 @@ ms.assetid: f289e978-14ca-46ef-9e61-e1fe5fd593be
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dd92e346a3a1f3dbb04e2a8d726ad4460ca5fc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128128"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369150"
 ---
 # <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是用於存取、 設定、 管理、 管理和開發的所有元件的整合式的環境[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 SSMS 利用許多豐富的指令碼編輯器來組合一群非常廣泛的圖形工具，使所有開發人員和管理員 (不管他們的技術水準如何) 都能夠存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  SSMS 將上一版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中所含的 Enterprise Manager、Query Analyzer 與 Analysis Manager 功能，結合在單一環境中。 此外，SSMS 也能夠使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的所有元件，例如 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 及 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 開發人員會感到非常熟悉，資料庫管理員則會得到其中組合了簡單易用的圖形工具及非常豐富的指令碼功能的單一綜合性公用程式。  
   
- 下載並安裝 SSMS [Microsoft Developer Network](http://msdn.microsoft.com/library/dn434042.aspx)。  
+ 下載並安裝 SSMS [Microsoft Developer Network](https://msdn.microsoft.com/library/dn434042.aspx)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [SQL Server Management Studio 中的功能](features-in-sql-server-management-studio.md)  

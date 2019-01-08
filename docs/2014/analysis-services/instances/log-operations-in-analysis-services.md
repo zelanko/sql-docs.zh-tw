@@ -11,17 +11,17 @@ ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 89a99ed7f3f38abba8eeaaf8b2f420106dbbe790
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58169ffcc696c87addee0417700ba131a71e12f0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198428"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363750"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services 中的記錄作業
-  Analysis Services 執行個體會將伺服器通知、錯誤和警告記錄至 msmdsrv.log 檔案 – 所安裝的各執行個體都有一個。 管理員可以參考此記錄檔，獲得例行和異常等事件的深入見解。 最新版本的記錄功能已經過增強，可以加入更多資訊。 記錄檔記錄現在包含產品版本和版本資訊，以及處理器、記憶體、連接及封鎖事件。 您可以在 [記錄改進](http://support.microsoft.com/kb/2965035)檢閱整個變更清單。  
+  Analysis Services 執行個體將會記錄伺服器通知、 錯誤和警告至 msmdsrv.log 檔案-一個用於您所安裝的每個執行個體。 管理員可以參考此記錄檔，獲得例行和異常等事件的深入見解。 最新版本的記錄功能已經過增強，可以加入更多資訊。 記錄檔記錄現在包含產品版本和版本資訊，以及處理器、記憶體、連接及封鎖事件。 您可以在 [記錄改進](https://support.microsoft.com/kb/2965035)檢閱整個變更清單。  
   
- 除了內建的記錄功能，許多管理員和開發人員也使用 Analysis Services 社群所提供的工具來收集有關伺服器作業 (例如 **ASTrace**) 的資料。 請參閱 [Microsoft SQL Server 社群範例：Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) 以取得下載連結。  
+ 除了內建的記錄功能，許多管理員和開發人員也使用 Analysis Services 社群所提供的工具來收集有關伺服器作業 (例如 **ASTrace**) 的資料。 請參閱[Microsoft SQL Server 社群範例：Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)取得下載連結。  
   
  本主題包含下列幾節：  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48198428"
 -   [秘訣和最佳作法](#bkmk_tips)  
   
 > [!NOTE]  
->  如果您正在尋找記錄的相關資訊，您也可能想要追蹤顯示處理和查詢執行路徑的作業。 臨機操作和持續性追蹤 (例如稽核 Cube 存取) 的追蹤物件，以及如何充分運用可以在此頁面上找到連結的 Flight Recorder、SQL Server Profiler 和 xEvent 的建議： [監視 Analysis Services 執行個體](monitor-an-analysis-services-instance.md)。  
+>  如果您正在尋找記錄的相關資訊，您也可能想要追蹤顯示處理和查詢執行路徑的作業。 臨機操作和持續性追蹤 (例如稽核 Cube 存取) 的追蹤物件，以及如何充分運用可以在此頁面上找到連結的 Flight Recorder、SQL Server Profiler 和 xEvents 的建議：[監視 Analysis Services 執行個體](monitor-an-analysis-services-instance.md)。  
   
 ##  <a name="bkmk_location"></a> 記錄檔的位置和類型  
  Analysis Services 提供如下所述的記錄檔。  
@@ -49,7 +49,7 @@ ms.locfileid: "48198428"
 |關聯式資料庫中的 OlapQueryLog 資料表|查詢記錄|收集使用方式的最佳化精靈的輸入|否|  
 |Sqldmp<guid\<guid >.mdmp 檔|當機和例外狀況|深入疑難排解|否|  
   
- 我們強烈建議使用下列連結，以取得本主題中未涵蓋的其他資訊資源： [來自 Microsoft 支援的初始資料收集提示](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)。  
+ 我們強烈建議使用下列連結，以取得本主題中未涵蓋的其他資訊資源：[初始資料收集提示，Microsoft 支援服務](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)。  
   
 ##  <a name="bkmk_general"></a> 記錄檔組態設定的一般資訊  
  您可以在 msmdsrv.ini 伺服器組態檔案中找到每個記錄檔的區段，其位於 \Program Files\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config 資料夾。 如需編輯此檔案的指示，請參閱 [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md) 。  
@@ -63,9 +63,9 @@ ms.locfileid: "48198428"
   
  這個記錄檔會在每次服務重新啟動時清空。 在舊版中，管理員之所以重新啟動服務，有時只是為了在記錄檔成長到太大而變得無法使用之前加以清除。 現已不再需要這麼做。 SQL Server 2012 SP2 中及更新版本中推出的組態設定，可讓您控制記錄檔和其歷程記錄的大小：  
   
--   `MaxFileSizeMB` 指定最大記錄檔大小 (以 MB 為單位)。 預設值是 256。 有效的取代值必須是正整數。 當`MaxFileSizeMB`會達到，Analysis Services 會將重新命名為 msmdsrv {目前的 timestamp}.log 檔案，目前的檔案並啟動新的 msmdsrv.log 檔案。  
+-   `MaxFileSizeMB` 指定最大記錄檔大小 (以 MB 為單位)。 預設值是 256。 有效的取代值必須是正整數。 達到 `MaxFileSizeMB` 時，Analysis Services 會將目前的檔案重新命名為 msmdsrv{current timestamp}.log 檔案，並啟動新的 msmdsrv.log 檔案。  
   
--   `MaxNumberFiles` 指定保留的較舊的記錄檔。 預設值是 0 (停用)。 您可以將它變更為正整數，以保留記錄檔的版本。 當`MaxNumberFiles`會達到，Analysis Services 會刪除最舊的時間戳記，其名稱中包含的檔案。  
+-   `MaxNumberFiles` 指定保留的較舊的記錄檔。 預設值是 0 (停用)。 您可以將它變更為正整數，以保留記錄檔的版本。 達到 `MaxNumberFiles` 時，Analysis Services 會刪除其名稱中具有最舊的時間戳記的檔案。  
   
  若要使用這些設定，請執行下列動作：  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48198428"
   
  允許查詢記錄對使用方式的最佳化精靈累積足夠的資料。 如果查詢量會循環，請擷取足夠的流量來取得具有代表性的資料集。 請參閱 [使用方式的最佳化精靈](https://msdn.microsoft.com/library/ms189706.aspx) ，以取得如何執行此精靈的指示。  
   
- 請參閱 [設定 Analysis Services 查詢記錄](http://technet.microsoft.com/library/Cc917676) ，以深入了解查詢記錄組態。 雖然本文件相當老舊，但最新版本中並未變更查詢記錄組態，因此其內含的資訊仍適用。  
+ 請參閱 [設定 Analysis Services 查詢記錄](https://technet.microsoft.com/library/Cc917676) ，以深入了解查詢記錄組態。 雖然本文件相當老舊，但最新版本中並未變更查詢記錄組態，因此其內含的資訊仍適用。  
   
 ##  <a name="bkmk_mdmp"></a> 迷你傾印 (.mdmp) 檔案  
  傾印檔案會擷取用於分析異常事件的資料。 Analysis Services 會自動產生迷你傾印 (.mdmp)，以回應伺服器當機、例外狀況，以及一些組態錯誤。 此功能已啟用，但不會自動傳送當機報告。  
@@ -149,9 +149,9 @@ ms.locfileid: "48198428"
   
  **設定當機報告**  
   
- 除非 Microsoft 支援另有指示，否則大部分的管理員均會使用預設設定。 這個較舊的知識庫文件仍然用來提供有關如何設定傾印檔案的指示： [如何設定 Analysis Services 以產生記憶體傾印檔案](http://support.microsoft.com/kb/919711)。  
+ 除非 Microsoft 支援另有指示，否則大部分的管理員均會使用預設設定。 這個較舊的知識庫文件仍然用來提供有關如何設定傾印檔案的指示：[如何設定 Analysis Services 以產生記憶體傾印檔案](https://support.microsoft.com/kb/919711)。  
   
- 組態設定修改最有可能是`CreateAndSendCrashReports`設定用來判斷是否會產生記憶體傾印檔案。  
+ 最有可能遭到修改的組態設定是用來判斷是否會產生記憶體傾印檔案的 `CreateAndSendCrashReports` 設定。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -161,28 +161,28 @@ ms.locfileid: "48198428"
   
  `CrashReportsFolder` 是將傾印檔案的位置。 根據預設，可以在 \Olap\Log 資料夾中找到一個 .mdmp 檔以及相關聯的記錄檔記錄。  
   
- `SQLDumperFlagsOn` 用來產生完整傾印。 根據預設，不會啟用完整傾印。 您可以將此屬性設定為`0x34`。  
+ `SQLDumperFlagsOn` 用來產生完整傾印。 根據預設，不會啟用完整傾印。 您可以將此屬性設定為 `0x34`。  
   
  下列連結提供更多背景：  
   
--   [想要使用小型傾印更深入了解 SQL Server](http://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
+-   [想要使用小型傾印更深入了解 SQL Server](https://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
   
--   [如何建立使用者模式傾印檔案](http://support.microsoft.com/kb/931673)  
+-   [如何建立使用者模式傾印檔案](https://support.microsoft.com/kb/931673)  
   
--   [如何使用 Sqldumper.exe 公用程式，在 SQL Server 產生傾印檔案](http://support.microsoft.com/kb/917825)  
+-   [如何使用 Sqldumper.exe 公用程式，在 SQL Server 產生傾印檔案](https://support.microsoft.com/kb/917825)  
   
 ##  <a name="bkmk_tips"></a> 秘訣和最佳作法  
  本節是整篇文章所述秘訣的回顧。  
   
 -   設定 msmdsrv.log 檔案來控制 msmdsrv 記錄檔的大小和數目。 預設不會啟用此設定，因此務必將它們加入做為後續安裝步驟。 請參閱本主題的 [MSMDSRV 服務記錄檔](#bkmk_msmdsrv) 。  
   
--   檢閱來自 Microsoft 客戶支援的這些部落格文章，以了解他們用何資源來取得有關伺服器作業的資訊： [初始資料收集](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
+-   檢閱來自 Microsoft 客戶支援的這些部落格文章，以了解他們用何資源來取得有關伺服器作業的資訊：[初始資料收集](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
   
--   若要找出查詢 Cube 的對象，請使用 ASTrace2012，而不是查詢記錄。 查詢記錄通常用來對使用方式的最佳化精靈提供輸入，其擷取的資料並不易閱讀或解譯。 ASTrace2012 是廣泛使用的社群工具，可擷取查詢作業。 請參閱 [Microsoft SQL Server 社群範例：Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)。  
+-   若要找出查詢 Cube 的對象，請使用 ASTrace2012，而不是查詢記錄。 查詢記錄通常用來對使用方式的最佳化精靈提供輸入，其擷取的資料並不易閱讀或解譯。 ASTrace2012 是廣泛使用的社群工具，可擷取查詢作業。 請參閱[Microsoft SQL Server 社群範例：Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 執行個體管理](analysis-services-instance-management.md)   
- [若要使用 SQL Server Profiler 監視 Analysis Services 簡介](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
+ [使用 SQL Server Profiler 監視 Analysis Services 簡介](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
  [Analysis Services 中設定伺服器屬性](../server-properties/server-properties-in-analysis-services.md)  
   
   

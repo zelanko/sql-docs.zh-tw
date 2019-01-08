@@ -16,19 +16,19 @@ ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28e4b5a405279b1aaede6fc9db96cf9024a59b96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f55c99ad60dd449a3f5b591adf09f325127258b6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148048"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366570"
 ---
 # <a name="custom-messages-for-logging"></a>自訂訊息以進行記錄
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 寫入記錄項目，為封裝和許多工作提供一組豐富的自訂事件。 您可以使用這些項目，透過記錄預先定義事件或使用者自訂訊息，來儲存關於執行進度、結果和問題的詳細資訊，以供稍後分析。 比方說，您可以記錄大量插入開始和結束的時間，以便識別封裝執行時的效能問題。  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一組豐富的自訂事件，可以為封裝和許多工作寫入記錄項目。 您可以使用這些項目，透過記錄預先定義事件或使用者自訂訊息，來儲存關於執行進度、結果和問題的詳細資訊，以供稍後分析。 比方說，您可以記錄大量插入開始和結束的時間，以便識別封裝執行時的效能問題。  
   
  自訂記錄項目是一組與可用於封裝以及所有容器和工作的標準記錄事件不同的項目。 自訂記錄項目可以用來擷取與封裝中特定工作相關的有用資訊。 例如，「執行 SQL」工作記錄的其中一個自訂記錄項目會在記錄檔中記錄該工作所執行的 SQL 陳述式。  
   
- 所有的記錄項目都包含日期和時間資訊，包括封裝開始和完成時自動寫入的記錄項目。 許多記錄事件都會將多個項目寫入記錄檔。 當事件具有不同的階段時，通常就會發生這種情況。 比方說，`ExecuteSQLExecutingQuery`記錄事件會寫入三個項目： 一個項目在工作取得資料庫，另一個工作之後的連接之後開始準備 SQL 陳述式和多一的 SQL 陳述式執行完成之後。  
+ 所有的記錄項目都包含日期和時間資訊，包括封裝開始和完成時自動寫入的記錄項目。 許多記錄事件都會將多個項目寫入記錄檔。 當事件具有不同的階段時，通常就會發生這種情況。 例如，`ExecuteSQLExecutingQuery` 記錄事件會寫入三個項目：在工作取得資料庫連接之後寫入一個項目、在工作開始準備 SQL 陳述式之後寫入另一個項目，然後在 SQL 陳述式執行完成之後再寫入一個項目。  
   
  下列 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件具有自訂記錄項目：  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48148048"
 |---------------|-----------------|  
 |`PackageStart`|指出封裝已經開始執行。<br /><br /> 注意：此記錄項目會自動寫入記錄檔中。 您無法排除它。|  
 |`PackageEnd`|指出封裝已經完成。<br /><br /> 注意：此記錄項目會自動寫入記錄檔中。 您無法排除它。|  
-|`Diagnostic`|提供影響封裝執行之系統組態的相關資訊，例如可以同時執行的可執行檔數目。<br /><br /> `Diagnostic`記錄項目也包含之前和之後呼叫外部資料提供者的項目。 如需詳細資訊，請參閱 [疑難排解工具封裝連接](troubleshooting/troubleshooting-tools-for-package-connectivity.md)。|  
+|`Diagnostic`|提供影響封裝執行之系統組態的相關資訊，例如可以同時執行的可執行檔數目。<br /><br /> `Diagnostic` 記錄項目也包括呼叫外部資料提供者之前和之後的項目。 如需詳細資訊，請參閱 [疑難排解工具封裝連接](troubleshooting/troubleshooting-tools-for-package-connectivity.md)。|  
   
 ###  <a name="BulkInsert"></a> 大量插入工作  
  下表列出「大量插入」工作的自訂記錄項目。  
@@ -100,9 +100,9 @@ ms.locfileid: "48148048"
 |記錄項目|描述|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|指出資料流程工作已經變更緩衝區的大小。 記錄項目會描述大小變更的原因，並列出暫存的新緩衝區大小。|  
-|`OnPipelinePostEndOfRowset`|表示元件具有已指定其結束的資料列集信號，設定的最後一個呼叫所`ProcessInput`方法。 處理輸入之資料流程中的每個元件都會寫入一個項目。 項目中包含元件的名稱。|  
-|`OnPipelinePostPrimeOutput`|指出元件已經完成其最後一次呼叫`PrimeOutput`方法。 根據資料流程而定，可能會寫入多個記錄項目。 如果元件是來源，這表示該元件已經完成處理資料列。|  
-|`OnPipelinePreEndOfRowset`|指出元件即將接收其結束的資料列集訊號，它會設定的最後一個呼叫所`ProcessInput`方法。 處理輸入之資料流程中的每個元件都會寫入一個項目。 項目中包含元件的名稱。|  
+|`OnPipelinePostEndOfRowset`|表示已經為元件指定了資料列集結尾信號，此信號是由 `ProcessInput` 方法的最後一次呼叫所設定。 處理輸入之資料流程中的每個元件都會寫入一個項目。 項目中包含元件的名稱。|  
+|`OnPipelinePostPrimeOutput`|指出元件已經完成 `PrimeOutput` 方法的最後一次呼叫。 根據資料流程而定，可能會寫入多個記錄項目。 如果元件是來源，這表示該元件已經完成處理資料列。|  
+|`OnPipelinePreEndOfRowset`|指出元件即將接收其資料列集結尾信號，此信號是由 `ProcessInput` 方法的最後一次呼叫所設定。 處理輸入之資料流程中的每個元件都會寫入一個項目。 項目中包含元件的名稱。|  
 |`OnPipelinePrePrimeOutput`|指出元件即將從 `PrimeOutput` 方法接收其呼叫。 根據資料流程而定，可能會寫入多個記錄項目。|  
 |`OnPipelineRowsSent`|報告由 `ProcessInput` 方法之呼叫提供給元件輸入的資料列數目。 記錄項目會包含元件名稱。|  
 |`PipelineBufferLeak`|提供在緩衝區管理員停止之後使緩衝區保持運作之任何元件的相關資訊。 這表示緩衝區資源並未釋放，而可能導致記憶體遺漏。 記錄項目會提供元件的名稱和緩衝區的識別碼。|  
@@ -169,7 +169,7 @@ ms.locfileid: "48148048"
   
 |記錄項目|描述|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|報告在指令碼內實作記錄的結果。 每次呼叫都會寫入記錄項目`Log`方法的`Dts`物件。 項目會在程式碼執行時寫入。 如需詳細資訊，請參閱 [Logging in the Script Task](extending-packages-scripting/task/logging-in-the-script-task.md)。|  
+|`ScriptTaskLogEntry`|報告在指令碼內實作記錄的結果。 每次呼叫 `Log` 物件的 `Dts` 方法時，都會寫入記錄項目。 項目會在程式碼執行時寫入。 如需詳細資訊，請參閱 [Logging in the Script Task](extending-packages-scripting/task/logging-in-the-script-task.md)。|  
   
 ###  <a name="SendMail"></a> 傳送郵件工作  
  下表列出「傳送郵件」工作的自訂記錄項目。  
@@ -262,7 +262,7 @@ ms.locfileid: "48148048"
 |`XMLOperation`|提供有關工作執行之作業的資訊。|  
   
 ## <a name="related-content"></a>相關內容  
- dougbert.com 上的部落格文章： [記錄 Integration Services 工作的自訂事件](http://go.microsoft.com/fwlink/?LinkId=150580)。  
+ dougbert.com 上的部落格文章： [記錄 Integration Services 工作的自訂事件](https://go.microsoft.com/fwlink/?LinkId=150580)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 記錄](performance/integration-services-ssis-logging.md)  

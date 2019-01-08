@@ -15,12 +15,12 @@ ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6df6a544e02eeef685234fad0ca11d0bc898e617
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44c99dd44a39aa2008f5e276cde79bb51b6d4d51
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220898"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590612"
 ---
 # <a name="expression-dialog-box-report-builder"></a>運算式對話方塊 (報表產生器)
   使用**運算式**對話方塊，即可撰寫[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]運算式的報表項目屬性。 您可以使用運算式來設定許多屬性，包含色彩、字型和框線等。 在執行階段，報表處理器會評估運算式並取代屬性值的結果。  
@@ -30,11 +30,11 @@ ms.locfileid: "48220898"
 ## <a name="expression-constructs"></a>運算式建構  
  運算式是以等號 (=) 開始，可以包含常數、常值、運算子，以及內建欄位、內建集合、內建函數、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 執行階段程式庫函數、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Common Language Runtime 類別和自訂函數的參考。 下列清單描述可加入運算式的類別目錄和值。  
   
- **設定運算式對象：***\<屬性名稱 >*   
+ **設定運算式對象：**_\<屬性名稱 >_  
  為其定義運算式的屬性名稱。 您也可以在 [屬性] 窗格中依名稱設定這個屬性。  
   
  **常數**  
- 針對以常數為基礎的屬性，提供對此屬性有效之預先定義值的清單。 例如，以色彩為基礎的屬性會顯示有效的色彩名稱。 對於是布林資料類型屬性，值為`True`和`False`。  
+ 針對以常數為基礎的屬性，提供對此屬性有效之預先定義值的清單。 例如，以色彩為基礎的屬性會顯示有效的色彩名稱。 對於是布林資料類型的屬性而言，值為 `True` 和 `False`。  
   
  並非所有支援運算式的項目都可設為常數。 如果屬性無法設為常數值，描述窗格會提供這項資訊。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48220898"
  **參數**  
  提供報表參數清單。  
   
- **欄位 (** *\<選取的資料集 >* **)**  
+ **欄位 (** _\<選取的資料集 >_ **)**  
  顯示在 [資料集] 類別目錄中所選取之資料集的欄位清單。 按兩下欄位，即可將欄位複製至 [運算式] 方塊。  
   
  **資料集**  
@@ -71,7 +71,7 @@ ms.locfileid: "48220898"
   
  輸入函數名稱且在後面加上左括號時，您會看到工具提示提供有關參數和函數傳回值的資訊。  
   
- **類別目錄**  
+ **分類**  
  顯示運算式的類別目錄。 選擇類別目錄會為運算式的建立奠立內容，並會變更 [項目] 窗格中的有效值清單。 比方說，針對文字方塊值的運算式，依序展開 一般函數，然後選取要顯示的彙總函式`Avg`， `Count`，和在其他函式**項目**窗格。  
   
  **項目**  
@@ -83,12 +83,12 @@ ms.locfileid: "48220898"
 ## <a name="see-also"></a>另請參閱  
  [運算式 &#40;報表產生器及 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [格式化數字和日期&#40;報表產生器及 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [格式化數字和日期 &#40;報表產生器及 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [參數集合參考 &#40;報表產生器及 SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [群組運算式範例 &#40;報表產生器及 SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [篩選方程式範例&#40;報表產生器及 SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [篩選方程式範例 &#40;報表產生器及 SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [資料集欄位集合參考&#40;報表產生器及 SSRS&#41;](report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)   
- [彙總函式參考&#40;報表產生器及 SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [彙總函式參考 &#40;報表產生器及 SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md)   
  [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [選取 [色彩] 對話方塊&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/select-color-dialog-box-report-builder-and-ssrs.md)  
   

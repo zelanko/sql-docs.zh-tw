@@ -1,5 +1,5 @@
 ---
-title: 範例：使用 PATH 模式 | Microsoft Docs
+title: 範例:使用 PATH 模式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,14 +12,14 @@ ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec8edb82afec3c8437970c6d3b238b3f68172c46
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1384c2cd84505df59bc458274d0b33071e926f18
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054148"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365730"
 ---
-# <a name="examples-using-path-mode"></a>範例：使用 PATH 模式
+# <a name="examples-using-path-mode"></a>範例:使用 PATH 模式
   以下範例說明使用 PATH 模式從 SELECT 查詢產生 XML。 這些查詢中有許多是針對自行車製造指示的 XML 文件所指定，這些文件是儲存在 ProductModel 資料表的 Instructions 資料行中。  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>指定簡單 PATH 模式查詢  
@@ -186,12 +186,12 @@ GO
   
  `</Root>`  
   
- 除了產品型號識別碼與名稱之外，下列查詢還會擷取該產品型號的製造指示位置。 由於 Instructions 資料行屬於`xml`型別`query()`方法`xml`資料型別會指定要擷取的位置。  
+ 除了產品型號識別碼與名稱之外，下列查詢還會擷取該產品型號的製造指示位置。 由於 Instructions 資料行是 `xml` 類型，所以可以指定 `query()` 資料類型的 `xml` 方法來擷取位置。  
   
 ```  
 SELECT ProductModelID AS "@id",  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
                 /MI:root/MI:Location   
               ') AS ManuInstr  
 FROM Production.ProductModel  
@@ -210,7 +210,7 @@ GO
   
  `<ManuInstr>`  
   
- `<MI:Location xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
+ `<MI:Location xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
   
  `<MI:step>...</MI:step>...`  
   
@@ -232,7 +232,7 @@ GO
 WITH XMLNAMESPACES (  
    'uri1' AS ns1,    
    'uri2' AS ns2,  
-   'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' as MI)  
+   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' as MI)  
 SELECT ProductModelID AS "ns1:ProductModelID",  
        Name           AS "ns1:Name",  
        Instructions.query('  
@@ -244,9 +244,9 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- 請注意， `MI` 前置詞在 `WITH XMLNAMESPACES`中也有定義。 如此一來，`query()`方法的`xml`指定型別不會定義查詢初構中的前置詞。 以下是結果：  
+ 請注意， `MI` 前置詞在 `WITH XMLNAMESPACES`中也有定義。 因此，指定之 `query()` 類型的 `xml` 方法不會定義查詢初構中的前置詞。 以下是結果：  
   
- `<ns1:root xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
+ `<ns1:root xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   
  `<ns2:ProductInfo>`  
   
@@ -254,7 +254,7 @@ GO
   
  `<ns1:Name>HL Touring Frame</ns1:Name>`  
   
- `<MI:Location xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
+ `<MI:Location xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`  
   
  `LaborHours="2.5" LotSize="100" MachineHours="3" SetupHours="0.5" LocationID="10" xmlns="">`  
   

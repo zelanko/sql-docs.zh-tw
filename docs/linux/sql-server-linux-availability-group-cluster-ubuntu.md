@@ -1,21 +1,22 @@
 ---
-title: 設定 SQL Server 可用性群組的 Ubuntu 叢集 |Microsoft 文件
-description: ''
+title: 設定 SQL Server 可用性群組的 Ubuntu 叢集
+titleSuffix: SQL Server
+description: 了解如何建立可用性群組的叢集，適用於 Ubuntu
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 33b5631fdf834ea9a998f1dd4ae149dfe4cc6109
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b8be84952a1f7652fc9e40cf82ce5ca25dfa25f4
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658374"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160616"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>設定 Ubuntu 叢集和可用性群組資源
 
@@ -97,7 +98,7 @@ sudo systemctl enable pacemaker
 
 1. 從所有節點中移除任何現有的叢集組態。 
 
-   執行 'sudo apt-get install 電腦' 一次安裝 pacemaker、 corosync 和電腦，並開始執行所有 3 個服務。  啟動 corosync 產生的範本 ' / etc/cluster/corosync.conf' 檔案。  若要能夠成功這個檔案的下一個步驟應該不存在-所以解決方法是停止 pacemaker / corosync 和刪除 ' / etc/cluster/corosync.conf'，然後接下來的步驟已順利完成時。 'pcs cluster destroy' 同一件事，以及您可以使用它作為一個時間初始叢集安裝步驟。
+   執行 'sudo apt-get install 電腦' 一次安裝 pacemaker、 corosync 和電腦，並開始執行所有 3 個服務。  啟動 corosync 產生的範本 ' / etc/cluster/corosync.conf' 檔案。  若要能夠成功這個檔案的下一個步驟應該不存在-因此因應措施是停止 pacemaker / corosync 和刪除 ' / etc/cluster/corosync.conf'，然後接下來的步驟已順利完成時。 'pcs cluster destroy' 同一件事，以及您可以使用它作為一個時間初始叢集安裝步驟。
    
    下列命令會移除任何現有的叢集設定檔，並停止所有的叢集服務。 這會永久終結叢集。 第一個步驟是在進入生產階段前環境中執行。 請注意，' pcs cluster destroy' 已停用 pacemaker 服務和需求來重新啟用。 在所有節點上執行下列命令。
    
@@ -123,7 +124,7 @@ sudo systemctl enable pacemaker
 
    ```bash
    sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
-   sudo pcs cluster setup --name <clusterName> <node1> <node2…> <node3>
+   sudo pcs cluster setup --name <clusterName> <node1> <node2...> <node3>
    sudo pcs cluster start --all
    sudo pcs cluster enable --all
    ```

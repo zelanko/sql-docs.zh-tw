@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergearticle
@@ -17,12 +16,12 @@ ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f64a1719ea74448c6c4cc7402f2e6b1afd2be185
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7894d5f7f3d3c686c8984c0386f1025f00c2890
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653316"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770140"
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,16 +74,16 @@ sp_addmergearticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=** ] **'***發行集***'**  
+ [  **@publication=** ] **'**_發行集_**'**  
  這是發行項所在的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@article=** ] **'***文章***'**  
+ [  **@article=** ] **'**_文章_**'**  
  這是發行項的名稱。 這個名稱在發行集內必須是唯一的。 *發行項*已**sysname**，沒有預設值。 *發行項*必須是執行的本機電腦上[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而且必須符合識別碼的規則。  
   
- [  **@source_object=** ] **'***source_object***'**  
+ [  **@source_object=** ] **'**_source_object_**'**  
  這是要發佈的資料庫物件。 *source_object*已**sysname**，沒有預設值。 如需可以使用合併式複寫發行之物件的類型的詳細資訊，請參閱[發行資料和資料庫物件](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  
   
- [ **@type=** ] **'***type***'**  
+ [  **@type=** ] **'**_型別_**'**  
  這是發行項的類型。 *型別*已**sysname**，預設值是**表格**，而且可以是下列值之一。  
   
 |值|描述|  
@@ -96,19 +95,19 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**僅限同義字結構描述**|僅限結構描述的同義字。|  
 |**僅限檢視結構描述**|只含結構描述的檢視。|  
   
- [  **@description=** ] **'***描述***'**  
+ [  **@description=** ] **'**_描述_**'**  
  這是發行項的描述。 *描述*已**nvarchar(255)**，預設值是 NULL。  
   
- [  **@column_tracking=** ] **'***column_tracking***'**  
+ [  **@column_tracking=** ] **'**_column_tracking_**'**  
  這是資料行層級追蹤的設定。 *column_tracking*已**nvarchar(10**，預設值是 FALSE。 **true**開啟的資料行追蹤。 **false**會關閉資料行追蹤，並將衝突偵測保留在資料列層級。 如果資料表已發行在其他合併式發行集中，您必須使用依據這份資料表之現有發行項所使用的相同資料行追蹤值。 這個參數只適用於資料表發行項。  
   
 > [!NOTE]  
 >  如果使用資料列追蹤執行衝突偵測 (預設值)，基底資料表最多可以包含 1,024 個資料行，但必須從發行項篩選資料行，以便發行最多 246 個資料行。 如果使用資料行追蹤，則基底資料表可包括的資料行數上限為 246。  
   
- [  **@status=** ] **'***狀態***'**  
+ [  **@status=** ] **'**_狀態_**'**  
  這是發行項的狀態。 *狀態*已**nvarchar(10**，預設值是**unsynced**。 如果**active**，執行發行資料表的初始處理指令碼。 如果**unsynced**，發行資料表的初始處理指令碼會在下次執行快照集代理程式執行。  
   
- [  **@pre_creation_cmd=** ] **'***pre_creation_cmd***'**  
+ [  **@pre_creation_cmd=** ] **'**_pre_creation_cmd_**'**  
  指定在套用快照集時，如果資料表存在於訂閱者，系統要採取什麼動作。 *pre_creation_cmd*已**nvarchar(10**，而且可以是下列值之一。  
   
 |值|描述|  
@@ -118,7 +117,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**卸除**（預設值）|在重新建立資料表之前，先卸除資料表。 支援所需[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssEW](../../includes/ssew-md.md)]訂閱者。|  
 |**truncate**|截斷目的地資料表。|  
   
- [  **@creation_script=** ] **'***creation_script***'**  
+ [  **@creation_script=** ] **'**_creation_script_**'**  
  在訂閱資料庫中，這是用來建立發行項的選擇性發行項結構描述指令碼的路徑和名稱。 *creation_script*已**nvarchar(255)**，預設值是 NULL。  
   
 > [!NOTE]  
@@ -174,32 +173,32 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  *Schema_option*參數只會影響初始快照集的複寫選項。 根據結構描述變更複寫規則發行集結構描述變更複寫到訂閱者端發生之後已經產生快照集代理程式且訂閱者端套用初始的結構描述，而*replicate_ddl*中指定的參數設定[sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
- [  **@subset_filterclause=** ] **'***subset_filterclause***'**  
+ [  **@subset_filterclause=** ] **'**_subset_filterclause_**'**  
  這是一個 WHERE 子句，指定資料表發行項的水平篩選，但不含 WHERE 一字。 *subset_filterclause*屬於**nvarchar(1000)**，預設值是空字串。  
   
 > [!IMPORTANT]  
 >  基於效能的考量，建議您不要在參數化資料列篩選器子句中的資料行名稱套用函數，例如 `LEFT([MyColumn]) = SUSER_SNAME()`。 如果您使用[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)在篩選子句和覆寫了 HOST_NAME 值中，您可能必須使用轉換資料類型[轉換](../../t-sql/functions/cast-and-convert-transact-sql.md)。 如需有關此案例的最佳作法的詳細資訊，請參閱 「 覆寫 host_name （） 值 」 中[Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
- [  **@article_resolver=** ] **'***article_resolver***'**  
+ [  **@article_resolver=** ] **'**_article_resolver_**'**  
  這是以 COM 為基礎的解析程式，用於解決資料表發行項的衝突，或為了在資料表發行項上執行自訂商務邏輯而呼叫之 .NET Framework 組件的衝突。 *article_resolver*已**varchar(255)**，預設值是 NULL。 這個參數可用的值列在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 自訂解析程式中。 如果提供的值不是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 解析程式之一，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會利用指定的解析程式來取代系統提供的解析程式。 使用**sp_enumcustomresolvers**來列舉可用自訂解析程式的清單。 如需詳細資訊，請參閱 <<c0> [ 執行期間合併同步處理商務邏輯](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)並[Advanced Merge Replication Conflict Detection 和解析度](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
- [  **@resolver_info=** ] **'***resolver_info***'**  
+ [  **@resolver_info=** ] **'**_resolver_info_**'**  
  這用來指定自訂解析程式所需要的其他資訊。 部分 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 解析程式需要用於當做解析程式輸入的資料行。 *resolver_info*已**nvarchar(255)**，預設值是 NULL。 如需詳細資訊，請參閱 [以 COM 為基礎的 Microsoft 解析程式](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
- [  **@source_owner=** ] **'***source_owner***'**  
+ [  **@source_owner=** ] **'**_source_owner_**'**  
  是擁有者的名稱*source_object*。 *source_owner*已**sysname**，預設值是 NULL。 如果是 NULL，就假設目前使用者是擁有者。  
   
- [  **@destination_owner=** ] **'***destination_owner***'**  
+ [  **@destination_owner=** ] **'**_destination_owner_**'**  
  如果訂閱資料庫中之物件的擁有者不是 dbo 的話，這便是訂閱資料庫中之物件的擁有者。 *destination_owner*已**sysname**，預設值是 NULL。 如果是 NULL，就假設 'dbo' 是擁有者。  
   
- [  **@vertical_partition=** ] **'***column_filter***'**  
+ [  **@vertical_partition=** ] **'**_column_filter_**'**  
  在資料表發行項上，啟用和停用資料行的篩選。 *vertical_partition*已**nvarchar(5)** 預設值是 FALSE。  
   
  **false**表示沒有垂直篩選，並將發佈的所有資料行。  
   
  **true**清除所有其他宣告的主索引鍵資料行和 ROWGUID 資料行。 藉由加入資料行**sp_mergearticlecolumn**。  
   
- [  **@auto_identity_range=** ] **'***automatic_identity_range***'**  
+ [  **@auto_identity_range=** ] **'**_automatic_identity_range_**'**  
  在發行集建立之時，啟用和停用此資料表發行項的自動識別範圍處理。 *auto_identity_range*已**nvarchar(5)**，預設值是 FALSE。 **真**啟用自動識別範圍處理，而**false**會停用它。  
   
 > [!NOTE]  
@@ -224,16 +223,16 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1**指定將會驗證簽章，來查看它是否來自信任的來源。  
   
- [  **@destination_object=** ] **'***destination_object***'**  
+ [  **@destination_object=** ] **'**_destination_object_**'**  
  這是訂閱資料庫中之物件的名稱。 *destination_object*已**sysname**，預設值是功能**@source_object**。 只有在這個發行項是僅限結構描述的發行項 (如預存程序、檢視和 UDF) 時，才能指定這個參數。 指定發行項是否在資料表發行項中的值*@source_object*中的值會覆寫*destination_object*。  
   
- [  **@allow_interactive_resolver=** ] **'***allow_interactive_resolver***'**  
+ [  **@allow_interactive_resolver=** ] **'**_allow_interactive_resolver_**'**  
  啟用或停用發行項的互動解析程式。 *allow_interactive_resolver*已**nvarchar(5)**，預設值是 FALSE。 **true**可讓您使用的發行項; 「 互動解析程式**false**會停用它。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssEW](../../includes/ssew-md.md)] 訂閱者不支援互動解析程式。  
   
- [  **@fast_multicol_updateproc=** ] **'***fast_multicol_updateproc***'**  
+ [  **@fast_multicol_updateproc=** ] **'**_fast_multicol_updateproc_**'**  
  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。  
   
  [  **@check_permissions=** ] *check_permissions*  
@@ -253,7 +252,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1**指定加入發行項可能使快照集失效，如果有現有的訂閱需要新的快照集，提供權限來標示為已棄用之現有快照集並產生新的快照集。 *force_invalidate_snapshot*設定為**1**發行項加入含有現有快照集的發行集時。  
   
- [  **@published_in_tran_pub=** ] **'***published_in_tran_pub***'**  
+ [  **@published_in_tran_pub=** ] **'**_published_in_tran_pub_**'**  
  指出合併式發行集中的發行項也在交易式發行集中發行。 *published_in_tran_pub*已**nvarchar(5)**，預設值是 FALSE。 **true**指定也交易式發行集中發行項。  
   
  [  **@force_reinit_subscription=** ] *force_reinit_subscription*  
@@ -263,7 +262,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1**表示合併發行項的變更會導致現有的訂閱重新初始化，並提供發生之訂閱重新初始化的權限。 *force_reinit_subscription*設定為**1**當*subset_filterclause*指定參數化資料列篩選器。  
   
- [  **@logical_record_level_conflict_detection=** ] **'***logical_record_level_conflict_detection***'**  
+ [  **@logical_record_level_conflict_detection=** ] **'**_logical_record_level_conflict_detection_**'**  
  指定本身是邏輯記錄成員的發行項之衝突偵測層級。 *logical_record_level_conflict_detection*已**nvarchar(5)**，預設值是 FALSE。  
   
  **true**指定是否邏輯記錄中任何位置進行變更，將會偵測衝突。  
@@ -273,7 +272,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  因為邏輯記錄不會受到[!INCLUDE[ssEW](../../includes/ssew-md.md)]訂閱者，您必須指定的值**false**如*logical_record_level_conflict_detection*以支援這些訂閱者。  
   
- [  **@logical_record_level_conflict_resolution=** ] **'***logical_record_level_conflict_resolution***'**  
+ [  **@logical_record_level_conflict_resolution=** ] **'**_logical_record_level_conflict_resolution_**'**  
  指定本身是邏輯記錄成員的發行項之衝突解決層級。 *logical_record_level_conflict_resolution*已**nvarchar(5)**，預設值是 FALSE。  
   
  **true**指定整個優先邏輯記錄會覆寫遺失的邏輯記錄。  
@@ -325,7 +324,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  回溯相容性，當的值*identityrangemanagementoption*是 NULL，值*auto_identity_range*已核取。 不過，當 windows 7 *identityrangemanagementoption*不是 NULL，則值*auto_identity_range*會被忽略。 如需詳細資訊，請參閱[複寫識別資料欄](../../relational-databases/replication/publish/replicate-identity-columns.md)。  
   
- [  **@delete_tracking=** ] **'***delete_tracking***'**  
+ [  **@delete_tracking=** ] **'**_delete_tracking_**'**  
  指出是否複寫刪除。 *delete_tracking*已**nvarchar(5)**，預設值是 TRUE。 **false**表示不複寫刪除，並 **，則為 true**表示複寫刪除，這是很平常的行為，合併式複寫。 當*delete_tracking*設為**false**、 訂閱者端刪除的資料列必須手動移除在發行者上，並在 「 訂閱者 」 必須手動移除在發行者端刪除的資料列。  
   
 > [!IMPORTANT]  
@@ -334,13 +333,13 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  *delete_tracking*選項無法使用設定**新的發行集精靈 」** 或**發行集屬性** 對話方塊。  
   
- [  **@compensate_for_errors=** ] **'***compensate_for_errors***'**  
+ [  **@compensate_for_errors=** ] **'**_compensate_for_errors_**'**  
  指出在同步處理期間發現錯誤時，是否採取補償動作。 *compensate_for_errors 我*s **nvarchar(5)**，預設值是 FALSE。 當設定為 **，則為 true**，變更無法套用在訂閱者 」 或一律同步處理期間發行者會導致補償動作恢復變更; 不過，其中一個未正確設定的訂閱者，會產生錯誤可以會造成在恢復其他訂閱者和發行者的變更。 **false**停用這些補償動作，不過，錯誤仍會記錄成含有補償，而且後續的合併會繼續試圖套用變更，直到成功為止。  
   
 > [!IMPORTANT]  
 >  雖然受影響的資料列之資料可能會有未聚合的表現，但任何錯誤只要獲得處理，就能夠套用變更，聚合資料。 如果發行項的來源資料表已在另一個發行集，則會將值的*compensate_for_errors*必須是兩個發行項相同。  
   
- [  **@stream_blob_columns=** ] **'***stream_blob_columns***'**  
+ [  **@stream_blob_columns=** ] **'**_stream_blob_columns_**'**  
  指定在複寫二進位大型物件資料行時，使用資料流最佳化。 *stream_blob_columns*已**nvarchar(5)**，預設值是 FALSE。 **true**表示將嘗試最佳化。 *stream_blob_columns*設為 true 時啟用 FILESTREAM。 這可讓 FILESTREAM 資料的複寫能以最理想的方式執行，並減少記憶體使用量。 若要強制 FILESTREAM 資料表發行項不使用 blob 資料流，請使用**sp_changemergearticle**來設定*stream_blob_columns*設為 false。  
   
 > [!IMPORTANT]  

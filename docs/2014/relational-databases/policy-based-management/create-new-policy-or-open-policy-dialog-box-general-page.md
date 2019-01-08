@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.newgroup.f1
@@ -14,15 +14,15 @@ ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3c59c37adfb1d01c183411a2a331b2cdbc231301
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 90e7ee3b8c0ac9c77c4ef863367ff46467a35277
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130108"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376430"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>建立新原則或開啟原則對話方塊，一般頁面
-  使用此對話方塊可建立新的以原則為基礎的管理原則，或是修改現有的原則。 使用 **[針對目標]** 和 **[伺服器限制]** 區域當做篩選，將原則限制為所有可能目標的子集。 如果是要當做目標篩選使用的條件，必須在實體 Facet 上定義這些條件，而且這些條件不能包含函數和 LIKE 運算子。 當系統計算原則的物件集時，根據預設會排除系統物件。  例如，如果原則的物件集是指所有資料表，則原則不會套用至系統資料表。 如果使用者想要對系統物件評估原則，可以明確地將系統物件加入至物件集。 不過，雖然 **check on schedule** 評估模式支援所有原則，但基於效能的考量， **check on change** 評估模式並未支援所有原則與任意物件集搭配使用。 如需詳細資訊，請參閱 [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+  使用此對話方塊可建立新的以原則為基礎的管理原則，或是修改現有的原則。 使用 **[針對目標]** 和 **[伺服器限制]** 區域當做篩選，將原則限制為所有可能目標的子集。 如果是要當做目標篩選使用的條件，必須在實體 Facet 上定義這些條件，而且這些條件不能包含函數和 LIKE 運算子。 當系統計算原則的物件集時，根據預設會排除系統物件。  例如，如果原則的物件集是指所有資料表，則原則不會套用至系統資料表。 如果使用者想要對系統物件評估原則，可以明確地將系統物件加入至物件集。 不過，雖然 **check on schedule** 評估模式支援所有原則，但基於效能的考量， **check on change** 評估模式並未支援所有原則與任意物件集搭配使用。 如需詳細資訊，請參閱 [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="options"></a>選項。  
  **名稱**  
@@ -43,7 +43,7 @@ ms.locfileid: "48130108"
  使用 **[視需要]** 評估模式執行的原則不會使用這個核取方塊。  
   
  **檢查條件**  
- 選取這個原則使用之以原則為基礎的管理條件。 伺服器上關聯之以原則為基礎之管理 Facet 的條件都會列出來。 按一下 **[新增條件]** 即可建立新條件。 按一下省略符號 (**…**) 按鈕即可修改條件。  
+ 選取這個原則使用之以原則為基礎的管理條件。 伺服器上關聯之以原則為基礎之管理 Facet 的條件都會列出來。 按一下 **[新增條件]** 即可建立新條件。 按一下省略符號 (**...**) 按鈕即可修改條件。  
   
  **[針對目標]**  
  選取可供這個 Facet 使用的目標類型，以完成篩選運算式。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - comparing string data
@@ -17,12 +16,12 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 950456557177ed0e794aae92df14536ee524e36b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14a9cd4f9d37798aaabaf65ea2f2afe79c207e6e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100948"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359540"
 ---
 # <a name="comparing-string-data"></a>比較字串資料
   字串比較是由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]執行之許多轉換中的重要部分，此外在評估變數的運算式和屬性運算式時也會使用字串比較。 例如，「排序」轉換會比較資料集中的值，並以遞增或遞減的順序對資料進行排序。  
@@ -34,7 +33,7 @@ ms.locfileid: "48100948"
   
 -   「條件式分割」轉換可使用運算式中的字串比較，以決定將資料列傳送到哪個輸出。 如需詳細資訊，請參閱 [Conditional Split Transformation](transformations/conditional-split-transformation.md)。  
   
--   「衍生的資料行」轉換可使用運算式中的字串比較，以產生新的資料行值。 如需詳細資訊，請參閱[衍生的資料行轉換](transformations/derived-column-transformation.md)。  
+-   「衍生的資料行」轉換可使用運算式中的字串比較，以產生新的資料行值。 如需詳細資訊，請參閱 [衍生的資料行轉換](transformations/derived-column-transformation.md)。  
   
  變數、變數對應和優先順序條件約束也使用運算式，它們可以包含字串比較。 如需運算式的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../expressions/integration-services-ssis-expressions.md)。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "48100948"
  您也可以指定「一般檔案」連接管理員和「多個一般檔案」連接管理員的地區設定。  
   
 ## <a name="setting-comparison-options"></a>設定比較選項  
- 地區設定會提供比較字串資料的基本規則。 例如，地區設定指定字母表中每個字母的排序位置。 但是，這些規則對某些轉換執行的比較來說可能並不夠，而且 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 還支援一組超越地區設定之比較規則的進階比較選項。 這些比較選項可在資料行層級進行設定。 例如，其中一個比較選項可讓您忽略非空格字元。 此選項的作用是可以忽略變音 (例如腔調字)，這樣會使 "a" 和 "á" 在比較時被視為完全一樣。  
+ 地區設定會提供比較字串資料的基本規則。 例如，地區設定指定字母表中每個字母的排序位置。 但是，這些規則對某些轉換執行的比較來說可能並不夠，而且 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 還支援一組超越地區設定之比較規則的進階比較選項。 這些比較選項可在資料行層級進行設定。 例如，其中一個比較選項可讓您忽略非空格字元。 此選項的效果會忽略變音符號，例如腔調，使得"a"和"å"相同供比較。  
   
  下表描述比較選項和排序樣式。  
   

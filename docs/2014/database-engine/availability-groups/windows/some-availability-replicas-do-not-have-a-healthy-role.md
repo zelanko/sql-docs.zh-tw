@@ -14,12 +14,12 @@ ms.assetid: 7ec5b337-7201-4a66-a541-7560f8b18784
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7ef6b9cbbd97937c2f2d3dc47f04b4ece57b1e84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50518e78585b7e56f62411edc539d0f9ac3db9e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184228"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360301"
 ---
 # <a name="some-availability-replicas-do-not-have-a-healthy-role"></a>某些可用性複本沒有狀況良好的角色
     
@@ -29,14 +29,14 @@ ms.locfileid: "48184228"
 |-|-|  
 |**原則名稱**|可用性複本角色狀態|  
 |**問題**|某些可用性複本沒有狀況良好的角色。|  
-|**類別目錄**|**警告**|  
+|**分類**|**警告**|  
 |**Facet**|可用性群組|  
   
 ## <a name="description"></a>描述  
  這項原則會積存所有可用性複本的連接狀態，並檢查是否有任何可用性複本沒有狀況良好的角色。 當可用性複本既不是主要也不是次要時，原則為狀況不良。 否則原則為狀況良好。  
   
 > [!NOTE]  
->  在此版本 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [某些可用性複本沒有狀況良好的角色](http://go.microsoft.com/fwlink/p/?LinkId=220854) 。  
+>  在此版本 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [某些可用性複本沒有狀況良好的角色](https://go.microsoft.com/fwlink/p/?LinkId=220854) 。  
   
 ## <a name="possible-causes"></a>可能的原因  
  在此可用性群組中，至少一個可用性複本目前沒有主要或次要角色。  

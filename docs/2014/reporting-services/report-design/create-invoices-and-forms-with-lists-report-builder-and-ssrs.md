@@ -11,12 +11,12 @@ ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c09c3d61cb371e314d511754498f65919d85b507
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7026a1fcdfa3a030761d11c2f8d763220fd436d8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161518"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375220"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>清單 (報表產生器及 SSRS)
   清單資料區域會隨報表資料集中的每一個群組或資料列重複。 清單可以用於建立自由形式的報表或表單 (如發票)，也可以與其他資料區域一起使用。 您可以定義包含任何數目之報表項目的清單。 清單可以巢狀放在另一份清單內，以提供多個資料群組。  
@@ -24,9 +24,9 @@ ms.locfileid: "48161518"
 > [!NOTE]  
 >  您可以將清單當做報表組件，與報表分開發行。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- 若要快速地開始使用清單，請參閱[教學課程：建立自由格式報表 &#40;報表產生器&#41;](../tutorial-creating-a-free-form-report-report-builder.md)。  
+ 若要快速開始使用清單，請參閱[教學課程：建立自由格式報表&#40;報表產生器&#41;](../tutorial-creating-a-free-form-report-report-builder.md)。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 範例報表包含一份使用清單的報表。 您可以在報表產生器或報表設計師中瀏覽範例報表的報表定義，或在報表產生器或報表設計師中預覽轉譯的報表，藉以了解清單。 如需有關下載範例報表的詳細資訊，請參閱＜ [(SSRS) Reporting Services 範例](http://go.microsoft.com/fwlink/?LinkID=198283)＞。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 範例報表包含一份使用清單的報表。 您可以在報表產生器或報表設計師中瀏覽範例報表的報表定義，或在報表產生器或報表設計師中預覽轉譯的報表，藉以了解清單。 如需有關下載範例報表的詳細資訊，請參閱＜ [(SSRS) Reporting Services 範例](https://go.microsoft.com/fwlink/?LinkID=198283)＞。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -40,14 +40,14 @@ ms.locfileid: "48161518"
   
  ![從工具箱新增選取的新清單](../media/rs-listtemplatenewselected.gif "從工具箱新增選取的新清單")  
   
- 您開始使用的清單是以 Tablix 資料區域為基礎的範本。 加入清單後，您可以透過指定篩選、排序或群組運算式來變更清單的內容或外觀，或變更清單跨報表頁面顯示的方式，藉以繼續增強設計。 如需詳細資訊，請參閱[控制報表頁面上的 Tablix 資料區顯示 &#40;報表產生器及 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)。 雖然清單以單一資料行和資料列開始，但是您可以加入巢狀或相鄰的資料列群組或資料行群組，或加入其他詳細資料列，以便進一步繼續開發您的清單設計。 如需詳細資訊，請參閱[探索 Tablix 資料區的彈性 &#40;報表產生器及 SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)。  
+ 您開始使用的清單是以 Tablix 資料區域為基礎的範本。 加入清單後，您可以透過指定篩選、排序或群組運算式來變更清單的內容或外觀，或變更清單跨報表頁面顯示的方式，藉以繼續增強設計。 如需詳細資訊，請參閱 [控制報表頁面上的 Tablix 資料區顯示 &#40;報表產生器及 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)。 雖然清單以單一資料行和資料列開始，但是您可以加入巢狀或相鄰的資料列群組或資料行群組，或加入其他詳細資料列，以便進一步繼續開發您的清單設計。 如需詳細資訊，請參閱[探索 Tablix 資料區的彈性 &#40;報表產生器及 SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)。  
   
 
   
 ##  <a name="DisplayingLayout"></a> 以自由形式的配置顯示資料  
  若要以自由形式配置而非方格組織報表資料，您可以將清單加入到設計介面中。 將欄位從 [報表資料] 窗格拖曳至資料格。 根據預設，資料格包含當做容器使用的矩形。 在容器中移動每個欄位，直到擁有所需的設計為止。 當您在矩形容器中拖曳文字方塊時使用對齊線可協助您以垂直和水平方式對齊邊緣。 調整資料格的大小來移除不想要的空白字元。 如需詳細資訊，請參閱[變更資料列高度或資料行寬度 &#40;報表產生器及 SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)。  
   
- 下圖顯示的清單可顯示有關順序的資訊，包括以下欄位：Date、Order、Qty、Product、LineTotal 和影像。  
+ 下圖顯示的順序，包括這些欄位的相關資訊的清單：日期、 訂單、 Qty、 產品、 LineTotal 和影像。  
   
  ![設計檢視中的清單、4 個欄位及映像](../media/rs-basiclistformdesign.gif "設計檢視中的清單、4 個欄位及映像")  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48161518"
 
   
 ## <a name="see-also"></a>另請參閱  
- [彙總函式參考&#40;報表產生器及 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [彙總函式參考 &#40;報表產生器及 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

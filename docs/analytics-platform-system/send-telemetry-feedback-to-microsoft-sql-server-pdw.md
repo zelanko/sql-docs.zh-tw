@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 589d49a68a4234d52ed3a8ddcced08b2dfec37ad
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 442505d470d1c7b7a82a02610d650d9f0b8c8d07
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701726"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591136"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>將遙測意見反應傳送給 Microsoft 分析平台系統
 Analytics Platform System 有一項選擇性的遙測功能，管理主控台資料傳送給 Microsoft。 
@@ -33,7 +33,7 @@ Analytics Platform System 有一項選擇性的遙測功能，管理主控台資
   
 #### <a name="to-enable-feedback"></a>若要啟用的意見反應  
   
-1.  使用設備的網域系統管理員帳戶，連接到控制節點 (***appliance_domain *-CTL01**)，然後開啟 命令提示字元中使用 Windows 系統管理員認證。  
+1.  使用設備的網域系統管理員帳戶，連接到控制節點 (<strong>*appliance_domain*-CTL01</strong>)，然後開啟 命令提示字元中使用 Windows 系統管理員認證。  
   
 2.  瀏覽至下列目錄： `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`。  
   
@@ -83,7 +83,7 @@ Analytics Platform System 有一項選擇性的遙測功能，管理主控台資
   
 #### <a name="to-disable-telemetry"></a>若要停用遙測  
   
-1.  使用設備的網域系統管理員帳戶，連接到控制節點 (***appliance_domain *-CTL01**) 和系統管理員權限開啟 PowerShell 視窗。  
+1.  使用設備的網域系統管理員帳戶，連接到控制節點 (<strong>*appliance_domain*-CTL01</strong>) 和系統管理員權限開啟 PowerShell 視窗。  
   
 2.  瀏覽至下列目錄： `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`。  
   

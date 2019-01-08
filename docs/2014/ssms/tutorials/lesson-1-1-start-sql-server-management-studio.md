@@ -10,12 +10,12 @@ ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91b962fd3691aff2986db40f187557f54247b897
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94466dc6c069ced5b2743cbd8a14d98271303477
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159698"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373630"
 ---
 # <a name="start-sql-server-management-studio"></a>啟動 SQL Server Management Studio
   在開始這個教學課程之前，我們先看一下 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
@@ -27,7 +27,7 @@ ms.locfileid: "48159698"
 1.  在上**開始**功能表上，指向**所有程式**，指向[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，然後按一下**SQL Server Management Studio**。  
   
     > [!NOTE]  
-    >  預設不會安裝 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如果沒有 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，請執行安裝程式來安裝它。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 未提供 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express 可從免費下載[Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409)，但有不同的使用者介面與本教學課程中所述。  
+    >  預設不會安裝 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如果沒有 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，請執行安裝程式來安裝它。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 未提供 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express 可從免費下載[Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409)，但有不同的使用者介面與本教學課程中所述。  
   
 2.  在 [連接到伺服器] 對話方塊中，驗證預設值，然後按一下 [連接]。 若要連接，**伺服器名稱**方塊必須包含電腦的名稱，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]具名執行個體，**伺服器名稱**方塊也應該包含執行個體名稱格式\< *computer_name* > \\ <*instance_name*>。  
   

@@ -11,12 +11,12 @@ ms.assetid: aa1ee96f-9fc4-4775-b9d4-c6187dc37e27
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ae1565a2690566f290d76b27ad0e8052072691ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9fbba90a3b4fef1e65560350d22e2f4af597ac97
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053184"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368580"
 ---
 # <a name="min-function-report-builder-and-ssrs"></a>Min 函數 (報表產生器及 SSRS)
   傳回運算式指定的所有非 Null 數值的最小值 (在給定範圍的內容中)。  
@@ -33,19 +33,19 @@ Min(expression, scope, recursive)
   
 #### <a name="parameters"></a>參數  
  *expression*  
- (`Variant`) 要執行彙總運算式。  
+ (`Variant`) 要在其上執行彙總的運算式。  
   
  *範圍 (scope)*  
  (`String`) 選擇性。 包含要套用彙總函式之報表項目的資料集、群組或資料區的名稱。 如果未指定 *scope* ，則使用目前的範圍。  
   
  *遞迴*  
- (**列舉型別**) 選擇性。 `Simple` （預設值） 或`RdlRecursive`。 指定是否要以遞迴方式執行彙總。  
+ (**列舉型別**) 選擇性。 `Simple` (預設值) 或 `RdlRecursive`。 指定是否要以遞迴方式執行彙總。  
   
 ## <a name="return-type"></a>傳回類型  
  取決於運算式的類型。  
   
 ## <a name="remarks"></a>備註  
- 運算式中指定的資料集必須具有相同的資料類型。 若要將轉換成相同的資料類型的多個數值資料類型的資料，請使用 等轉換函數`CInt`，`CDbl`或`CDec`。 如需詳細資訊，請參閱 [類型轉換函數](http://go.microsoft.com/fwlink/?LinkId=96142)。  
+ 運算式中指定的資料集必須具有相同的資料類型。 若要將具有多個數值資料類型的資料轉換成相同的資料類型，請使用 `CInt`、`CDbl` 或 `CDec` 等轉換函數。 如需詳細資訊，請參閱 [類型轉換函數](https://go.microsoft.com/fwlink/?LinkId=96142)。  
   
  *scope* 的值必須是字串常數，而且不得為運算式。 如果是未指定其他彙總的外部彙總， *scope* 必須參考目前的範圍或是包含的範圍。 如果是彙總的彙總，巢狀彙總可以指定子範圍。  
   
@@ -71,9 +71,9 @@ Min(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

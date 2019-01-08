@@ -20,12 +20,12 @@ ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f2aa4413bd9f226bd0bbdf5b676da0da866fde32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfbf93fc858f52cd35401bd80fe5ede7dee86a3d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705856"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591742"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,20 +48,20 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@job_type=** ] **'***job_type&lt***'**  
+ [  **@job_type=** ] **'**_job_type&lt_**'**  
  要修改的作業類型。 *job_type&lt*已**nvarchar(20)** 預設值是 'capture'。 有效的輸入是 'capture' 和 'cleanup'。  
   
- [ **@maxtrans** ] **= * * * max_trans&lt*  
+ [ **@maxtrans** ] **=** _max_trans&lt_  
  每個掃描循環中要處理的交易數目上限。 *max_trans&lt*已**int** ，預設值是 NULL，代表此參數沒有異動。 如果已指定，該值必須是正整數。  
   
  *max_trans&lt*只適用於擷取作業。  
   
- [ **@maxscans** ] **= * * * max_scans*  
+ [ **@maxscans** ] **=** _max_scans_  
  要執行以便從記錄中擷取所有資料列的掃描循環數目上限。 *max_scans*已**int** ，預設值是 NULL，代表此參數沒有異動。  
   
  *max_scan*只適用於擷取作業。  
   
- [ **@continuous** ] **= * * * 連續*  
+ [ **@continuous** ] **=**_連續_  
  指出擷取作業是連續執行 (1)，還是僅執行一次 (0)。 *持續*已**元**，預設值是 NULL，代表此參數沒有異動。  
   
  當*連續*= 1， [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)作業會掃描記錄並且最多處理 (*max_trans&lt* \* *max_scans*)交易。 然後等待中指定的秒數*polling_interval*再開始下一步 的記錄檔掃描。  
@@ -74,17 +74,17 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *連續*只適用於擷取作業。  
   
- [ **@pollinginterval** ] **= * * * polling_interval*  
+ [ **@pollinginterval** ] **=** _polling_interval_  
  記錄掃描循環之間的秒數。 *polling_interval*已**bigint** ，預設值是 NULL，代表此參數沒有異動。  
   
  *polling_interval*只適用於擷取作業的時機*連續*設為 1。  
   
- [ **@retention** ] **= * * * 保留*  
+ [ **@retention** ] **=**_保留_  
  變更資料列要保留在變更資料表中的分鐘數。 *保留期*已**bigint** ，預設值是 NULL，代表此參數沒有異動。 最大值為 52494800 (100 年)。 如果已指定，該值必須是正整數。  
   
  *保留*只適用於清除作業。  
   
- [  **@threshold=** ] **'***刪除閾值***'**  
+ [  **@threshold=** ] **'**_刪除閾值_**'**  
  可以使用單一清除陳述式來刪除的最大刪除項目數。 *刪除閾值*已**bigint** ，預設值是 NULL，代表此參數沒有異動。 *刪除閾值*只適用於清除作業。  
   
 ## <a name="return-code-values"></a>傳回碼值  

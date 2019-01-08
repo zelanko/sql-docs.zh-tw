@@ -17,12 +17,12 @@ ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e79e83263ab498a86a82fcdc65d56f6f8910d497
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f16cadbb06d1d25000aefada172a783a5a19c79c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222959"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368100"
 ---
 # <a name="allowing-partially-trusted-callers"></a>允許部分信任的呼叫端
   共用程式碼程式庫是 Common Language Runtime (CLR) 整合的一個常見狀況，其中包含使用者定義型別、預存程序、使用者定義函數、使用者定義彙總、觸發程序或公用程式類別的組件通常會由另一個組件或應用程式所存取。 要由多個應用程式所共用的程式碼程式庫必須使用強式名稱來簽署。  
@@ -62,7 +62,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  此範例還會示範使用 "Allow partially trusted callers" 屬性，指示結果集組件為程式庫，並且可以從其他組件安全地呼叫。 這個方法稍微複雜，但是比使用 unsafe 權限註冊呼叫組件更安全。 之所以較為安全，是因為將呼叫組件註冊為 safe，呼叫組件會限制存取出影響伺服器的資源，並且避免損壞伺服器的完整性。  
   
- 這個範例的建置指示會假設原始程式碼檔位於名為 c:\samples 的目錄中。  如果您使用其他目錄，就必須修改 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 [!INCLUDE[tsql](../../includes/tsql-md.md)]指令碼也需要 AdventureWorks 資料庫。 您可以下載的 AdventureWorks 範例資料庫[Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)首頁。  
+ 這個範例的建置指示會假設原始程式碼檔位於名為 c:\samples 的目錄中。  如果您使用其他目錄，就必須修改 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 [!INCLUDE[tsql](../../includes/tsql-md.md)]指令碼也需要 AdventureWorks 資料庫。 您可以下載的 AdventureWorks 範例資料庫[Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384)首頁。  
   
  若要建立並執行此範例，請將第一個程式碼清單貼入名為 ResultSet.cs 的檔案中，然後使用 csc /target:library ResultSet.cs 編譯。  
   

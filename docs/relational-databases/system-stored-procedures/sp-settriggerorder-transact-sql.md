@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e418dc2ba40965b3eb25382c0f9438edc2e6b0bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acbdb4b406d3ec0c2820e2be7988c32af249379c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846436"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590312"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@triggername=** ] **'**[ *triggerschema ***。**]*triggername * * * '**  
- 這是要設定或變更順序的觸發程序及所屬結構描述 (如果適用) 的名稱。 [*triggerschema ***。**]* triggername * 會**sysname**。 如果名稱未對應於觸發程序，或名稱對應於 INSTEAD OF 觸發程序，程序會傳回錯誤。 *triggerschema*不能指定 DDL 或登入觸發程序。  
+ [  **@triggername=** ] **'**[ _triggerschema_**。**]_triggername_**'**  
+ 這是要設定或變更順序的觸發程序及所屬結構描述 (如果適用) 的名稱。 [_triggerschema_**。**]*triggername*是**sysname**。 如果名稱未對應於觸發程序，或名稱對應於 INSTEAD OF 觸發程序，程序會傳回錯誤。 *triggerschema*不能指定 DDL 或登入觸發程序。  
   
- [ **@order=** ] **'***value***'**  
+ [ **@order=** ] **'**_value_**'**  
  這是觸發程序的新順序設定。 *值*已**varchar(10)** 和它可以是下列值之一。  
   
 > [!IMPORTANT]  
@@ -59,7 +59,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |**最後一個**|最後引發觸發程序。|  
 |**無**|觸發程序的引發，沒有任何既定順序。|  
   
- [  **@stmttype=** ] **'***statement_type***'**  
+ [  **@stmttype=** ] **'**_statement_type_**'**  
  指定可以引發觸發程序的 SQL 陳述式。 *statement_type*已**varchar(50**而且可以是 INSERT、 UPDATE、 DELETE、 登入，或任何[!INCLUDE[tsql](../../includes/tsql-md.md)]中所列的陳述式事件[DDL 事件](../../relational-databases/triggers/ddl-events.md)。 您不能指定事件群組。  
   
  觸發程序可以指定為**第一**或是**最後一個**陳述式類型，該觸發程序已定義為該陳述式類型的觸發程序之後，才觸發程序。 比方說，觸發程序**TR1**您可以指定**第一次**資料表的插入**T1**如果**TR1**定義為 INSERT 觸發程序。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]會傳回錯誤，如果**TR1**，其中已定義為 INSERT 觸發程序，只會設定為**第一個**，或**上次**，UPDATE 陳述式的觸發程序。 如需詳細資訊，請參閱＜備註＞一節。  

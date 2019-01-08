@@ -1,6 +1,6 @@
 ---
-title: SQL Server 機器學習服務上安裝 R 封裝中使用 T-SQL （建立外部程式庫） |Microsoft Docs
-description: 將新的 R 套件新增至 SQL Server 2017 Machine Learning 服務 （資料庫）
+title: 若要安裝 R 封裝-SQL Server Machine Learning 服務中使用 T-SQL （建立外部程式庫）
+description: 將新的 R 套件新增至 SQL Server 2016 R Services 或 SQL Server 2017 Machine Learning 服務 （資料庫）。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/30/2018
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 897bafaaf5ec32c417bb5d9625ce6cef22d6e783
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6e910f1c3b29522b11f1faa83db890d399bf3680
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699386"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645047"
 ---
-# <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server-2017-machine-learning-services"></a>SQL Server 2017 Machine Learning 服務上安裝 R 封裝中使用 T-SQL （建立外部程式庫）
+# <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>SQL Server 上安裝 R 封裝中使用 T-SQL （建立外部程式庫）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 這篇文章說明如何啟用機器學習服務的位置的 SQL Server 執行個體上安裝新的 R 套件。 有多個可從中選擇的方法。 使用 T-SQL 最能配合伺服器管理員，他們不熟悉。
@@ -48,7 +48,7 @@ ms.locfileid: "51699386"
 
 例如，下列陳述式名稱作為套件來源包含 miniCRAN 儲存機制**randomForest**封裝，以及其相依性。 
 
-```SQL
+```sql
 CREATE EXTERNAL LIBRARY randomForest
 FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
 WITH (LANGUAGE = 'R');
@@ -60,7 +60,7 @@ WITH (LANGUAGE = 'R');
 
 如果成功建立文件庫，您可以在 SQL Server 中，執行封裝，藉由呼叫預存程序項目。
     
-```SQL
+```sql
 EXEC sp_execute_external_script
 @language =N'R',
 @script=N'library(randomForest)'

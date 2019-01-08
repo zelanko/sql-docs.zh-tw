@@ -15,12 +15,12 @@ ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69a3d667bbe057387d05ffd814ca3ea1a3854238
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 0939540af0c302832925a7a1bef6367718b8c1be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145323"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369277"
 ---
 # <a name="move-an-analysis-services-database"></a>移動 Analysis Services 資料庫
   通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要將多維度或表格式模型資料庫移至不同的位置。 這些情況通常是由商務需求所驅使，例如將資料庫移至不同的磁碟以提升效能、取得讓資料庫成長的空間，或升級產品。  
@@ -44,7 +44,7 @@ ms.locfileid: "50145323"
   
 1.  在 SSMS 的左窗格或右窗格中，找出要移動的資料庫。  
   
-2.  以滑鼠右鍵按一下該資料庫，然後選取 [卸離]  
+2.  以滑鼠右鍵按一下資料庫，然後選取**卸離...**  
   
 3.  將密碼指派給要卸離的資料庫，然後按一下 [確定] 執行卸離命令。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "50145323"
   
 5.  在 SSMS 的左窗格或右窗格中，找出 [資料庫] 資料夾。  
   
-6.  以滑鼠右鍵按一下 [資料庫] 資料夾，並選取 [附加]  
+6.  以滑鼠右鍵按一下**資料庫**資料夾，然後選取**附加...**  
   
-7.  在 [資料夾] 文字方塊中，輸入資料庫資料夾的新位置。 或者，您也可以使用瀏覽按鈕 (**…**) 來找出資料庫資料夾。  
+7.  在 [資料夾] 文字方塊中，輸入資料庫資料夾的新位置。 或者，您可以使用瀏覽按鈕 (**...**) 來找出資料庫資料夾。  
   
 8.  選取`ReadWrite`資料庫模式。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "50145323"
   
 2.  複製下列 XMLA 指令碼範本：  
   
- `<Detach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Detach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Object>`  
   
@@ -128,11 +128,11 @@ ms.locfileid: "50145323"
   
 4.  將下列 XMLA 指令碼範本複製到新的 XMLA 索引標籤中：  
   
- `<Attach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Attach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Folder>%dbFolder%</Folder>`  
   
- `<ReadWriteMode xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
+ `<ReadWriteMode xmlns="https://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
   
  `</Attach>`  
   

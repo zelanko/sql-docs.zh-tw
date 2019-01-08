@@ -1,6 +1,6 @@
 ---
-title: 課程 1 的瀏覽和使用 R 和 T-SQL (SQL Server Machine Learning) 將資料視覺化 |Microsoft Docs
-description: 教學課程示範如何在 SQL Server 中內嵌 R 預存程序和 T-SQL 函數
+title: 課程 1 的瀏覽和使用 R 和 T-SQL-SQL Server Machine Learning 將資料視覺化
+description: 本教學課程示範如何探索及使用 R 函數的 SQL Server 資料視覺化。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f1ed29dec28ade852a58980eb236a251fd072afa
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 36a904eeb4c7cde7d3a5356aff2029698e91f059
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032215"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645497"
 ---
-# <a name="lesson-1-explore-and-visualize-the-data"></a>第 1 課： 瀏覽及視覺化資料
+# <a name="lesson-1-explore-and-visualize-the-data"></a>第 1 課：瀏覽及視覺化資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 這篇文章是有關如何在 SQL Server 中使用 R 的 SQL 開發人員的教學課程的一部分。
@@ -38,7 +38,7 @@ ms.locfileid: "51032215"
 
 **計程車識別碼**
   
--   _medallion_ 資料行代表計程車的唯一識別碼。
+-   _Medallion_資料行代表計程車的唯一識別碼。
   
 -   _Hack\_授權_資料行包含計程車司機駕照號碼 （匿名）。
   
@@ -67,7 +67,7 @@ ms.locfileid: "51032215"
 
 2. 貼上下列程式碼以建立預存程序繪製的長條圖。 此範例中名為 **RPlotRxHistogram*。
 
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]
     AS
     BEGIN
@@ -108,7 +108,7 @@ ms.locfileid: "51032215"
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，執行下列陳述式：
   
-    ```SQL
+    ```sql
     EXEC [dbo].[RxPlotHistogram]
     ```
   
@@ -119,7 +119,7 @@ ms.locfileid: "51032215"
   
 2.  開啟 PowerShell 命令提示字元並執行下列命令，並提供適當的執行個體名稱、 資料庫名稱、 使用者名稱和認證做為引數。 對於使用 Windows 身分識別，您可以取代 **-U**並 **-P**具有 **-T**。
   
-     ```text
+     ```powershell
      bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
      ```
 
@@ -134,7 +134,7 @@ ms.locfileid: "51032215"
   
     -   如果您想要儲存輸出參數以供日後重複使用，請輸入 **Y** 。
   
-    ```
+    ```powershell
     Enter the file storage type of field plot [varbinary(max)]: 
     Enter prefix-length of field plot [8]: 0
     Enter length of field plot [0]:
@@ -146,7 +146,7 @@ ms.locfileid: "51032215"
   
     **結果**
     
-    ```
+    ```powershell
     Starting copy...
     1 rows copied.
     Network packet size (bytes): 4096
@@ -170,7 +170,7 @@ ms.locfileid: "51032215"
 
 2. 貼上下列程式碼以建立預存程序繪製的長條圖。 此範例中名為**RPlotHist** 。
   
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RPlotHist]  
     AS  
     BEGIN  
@@ -244,13 +244,13 @@ ms.locfileid: "51032215"
 
 執行下列陳述式，將二進位繪圖資料匯出至 JPEG 和 PDF 檔案格式。
 
-```SQL
+```sql
 EXEC RPlotHist
 ```
 
 **結果**
     
-```
+```sql
 STDOUT message(s) from external script:
 [1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
 
@@ -279,7 +279,7 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 ## <a name="next-lesson"></a>下一課
 
-[第 2 課： 建立使用 T-SQL 的資料特徵](sqldev-create-data-features-using-t-sql.md)
+[第 2 課：使用 T-SQL 建立資料特徵](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>上一課
 

@@ -18,12 +18,12 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03233cc3a35818352c3a8875f62610b5a0814522
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050473"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362810"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 來部署資料庫
   使用 [將資料庫部署到 SQL Azure]  精靈，在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體與 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 伺服器之間部署資料庫，或在兩個 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]伺服器之間部署資料庫。  
@@ -66,7 +66,7 @@ ms.locfileid: "48050473"
   
 3.  展開 **[資料庫]** 節點。  
   
-4.  以滑鼠右鍵按一下您要部署的資料庫，選取 **[工作]**，然後選取 **[將資料庫部署到 SQL Azure]**。  
+4.  以滑鼠右鍵按一下您要部署的資料庫，選取 [工作]，然後選取 [將資料庫部署到 SQL Azure...]  
   
 5.  完成精靈對話方塊：  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48050473"
   
  **本機主機：**  
   
--   **伺服器連接** - 指定伺服器連接的詳細資料，然後按一下 **[連接]** 來驗證連接。  
+-   **伺服器連接** - 指定伺服器連接的詳細資料，然後按一下 [連接] 來驗證連接。  
   
 -   **新資料庫名稱** - 指定新資料庫的名稱。  
   
@@ -122,19 +122,19 @@ ms.locfileid: "48050473"
 ## <a name="using-a-net-framework-application"></a>使用 .Net Framework 應用程式  
  **在 .Net Framework 應用程式中使用 DacStoreExport() 與 Import() 方法，以部署資料庫。**  
   
- 若要檢視程式碼範例，請下載 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)上的 DAC 範例應用程式。  
+ 若要檢視程式碼範例，請下載 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)上的 DAC 範例應用程式。  
   
 1.  建立 SMO Server 物件，並將它設定為包含要部署之資料庫的執行個體或伺服器。  
   
-2.  開啟`ServerConnection`物件，並連接到相同的執行個體。  
+2.  開啟 `ServerConnection` 物件，並連接到相同的執行個體。  
   
-3.  使用`Export`方法的`Microsoft.SqlServer.Management.Dac.DacStore`將資料庫匯出到 BACPAC 檔案的類型。 指定要匯出之資料庫的名稱，以及要放置 BACPAC 檔案之資料夾的路徑。  
+3.  使用 `Export` 類型的 `Microsoft.SqlServer.Management.Dac.DacStore` 方法，將資料庫匯出至 BACPAC 檔案。 指定要匯出之資料庫的名稱，以及要放置 BACPAC 檔案之資料夾的路徑。  
   
 4.  建立 SMO Server 物件，並將它設定為目的地執行個體或伺服器。  
   
-5.  開啟`ServerConnection`物件，並連接到相同的執行個體。  
+5.  開啟 `ServerConnection` 物件，並連接到相同的執行個體。  
   
-6.  使用`Import`方法的`Microsoft.SqlServer.Management.Dac.DacStore`將 BACPAC 匯入的型別。 指定匯出所建立的 BACPAC 檔案。  
+6.  使用 `Import` 類型的 `Microsoft.SqlServer.Management.Dac.DacStore` 方法，匯入 BACPAC。 指定匯出所建立的 BACPAC 檔案。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料層應用程式](data-tier-applications.md)   

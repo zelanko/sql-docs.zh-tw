@@ -1,56 +1,65 @@
 ---
-title: 建立資料的功能使用 R 和 SQL （逐步解說） |Microsoft 文件
+title: 使用 R 和 SQL Server 函式-SQL Server Machine Learning 建立資料特徵
+description: 本教學課程示範如何使用 SQL Server 函式的資料庫內分析建立資料特徵。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/26/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 226b8f2977f527d22a09fcbb4ab460e05285f858
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 40bd2140ba28307cca30befb7cdad8b180cc856a
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203300"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645137"
 ---
-# <a name="create-data-features-using-r-and-sql-walkthrough"></a>建立資料的功能使用 R 和 SQL （逐步解說）
+# <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>使用 R 和 SQL Server （逐步解說） 建立資料特徵
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-資料工程是機器學習服務的重要部分。 資料往往需要轉換，才能使用的預測模型。 如果資料沒有您所需的特徵，您就能從現有的值加以建立。
+資料工程是機器學習服務的重要部分。 資料通常需要轉換，才能用於預測模型。 如果資料沒有您所需的特徵，您就能從現有的值加以建立。
 
-針對此模型工作，您希望在上車和下車位置之間有段距離 (以英哩為單位)，而不是使用這兩個位置的原始緯度和經度值。 若要建立這項功能，您可以計算所使用的兩個點之間的直接線性距離[haversine 公式](https://en.wikipedia.org/wiki/Haversine_formula)。
+針對此模型工作，您希望在上車和下車位置之間有段距離 (以英哩為單位)，而不是使用這兩個位置的原始緯度和經度值。 若要建立這項功能，您可以計算之間的直線距離兩個點，利用[haversine 公式](https://en.wikipedia.org/wiki/Haversine_formula)。
 
-在此步驟中，我們來比較兩個不同的方法，從資料建立一項功能：
+在此步驟中，了解兩個不同的方法，從資料建立一項功能：
 
-- 使用自訂 R 函式
-- 使用中的自訂 T-SQL 函式 [!INCLUDE[tsql](../../includes/tsql-md.md)]
+> [!div class="checklist"]
+> * 使用自訂 R 函數
+> * 使用中的自訂 T-SQL 函數 [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
-目標是要建立新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]整組資料，包括原始資料行加上新的數字特徵， *direct_distance*。
+目標是要建立新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]包含的原始資料行，再加上新的數值特徵的資料集*direct_distance*。
 
-## <a name="featurization-using-r"></a>如何使用 R
+## <a name="prerequisites"></a>先決條件
+
+這個步驟會假設根據先前在本逐步解說的步驟進行中的 R 工作階段。 它會使用連接字串和資料來源中建立的物件執行這些步驟。 下列工具和套件來執行指令碼。
+
++ 若要執行 R 命令的 Rgui.exe
++ Management Studio 來執行 T-SQL
+
+## <a name="featurization-using-r"></a>使用 R 特徵化
 
 R 語言已知有各種豐富的統計程式庫，但您可能仍然需要自訂資料轉換。
 
-第一個，就來看看它方式 R 使用者習慣： 取得到您的膝上型電腦上的資料，然後再執行自訂的 R 函數， *ComputeDist*，其中計算緯度和經度值所指定的兩個點之間的線性距離。
+首先，讓我們來試試方式 R 使用者已經習慣： 取得您的膝上型電腦上的資料，然後再執行自訂的 R 函數*ComputeDist*，計算由緯度和經度值所指定的兩個點之間的線性距離。
 
-1. 請記住您稍早建立的資料來源物件中取得前 1000 個資料列。 現在讓我們來定義查詢以取得所有資料。
+1. 請記住您稍早建立的資料來源物件中取得前 1000 個資料列。 讓我們定義的查詢會取得所有資料。
 
     ```R
     bigQuery <- "SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,  pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude FROM nyctaxi_sample";
     ```
 
-2. 建立新的 SQL Server 資料來源使用查詢。
+2. 建立新的資料來源物件，使用查詢。
 
     ```R
     featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
     ```
 
-    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata)可組成有效的 SELECT 查詢，做為引數提供的任何一項查詢_sqlQuery_參數或資料表物件的名稱，作為_資料表_參數。
+    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata)可能需要有效的 SELECT 查詢，提供做為引數所組成的任何一項查詢_sqlQuery_參數或資料表物件的名稱，依現狀_表格_參數。
     
-    - 如果您想要的範例資料的資料表中，您必須使用_sqlQuery_參數，定義取樣參數使用 T-SQL TABLESAMPLE 子句，並設定_rowBuffering_引數為 FALSE。
+    - 如果您想要的範例資料從一個資料表，您必須使用_sqlQuery_參數，定義使用 T-SQL TABLESAMPLE 子句中，取樣參數，並將設定_rowBuffering_引數為 FALSE。
 
-3. 執行下列程式碼來建立自訂的 R 函數。 ComputeDist 採用的緯度與經度值的兩個配對中，並計算線性之間的距離，傳回英里的距離。
+3. 執行下列的程式碼，以建立自訂 R 函數。 ComputeDist 中兩組經度和緯度的值，並計算之間的線性距離，傳回英哩遠的距離。
 
     ```R
     env <- new.env();
@@ -72,21 +81,21 @@ R 語言已知有各種豐富的統計程式庫，但您可能仍然需要自訂
     }
     ```
   
-    + 第一行會定義新的環境。 在 R 中，環境可用來封裝套件中的命名空間等等。  您可以使用 `search()` 函數來檢視工作區中的環境。 若要檢視特定環境中的物件，請輸入 `ls(<envname>)`。
-    + 以 `$env.ComputeDistance` 開頭的行包含定義 Haversine 公式的程式碼，該公式可計算球面上兩個點之間的「大圓距離」  。
+    + 第一行會定義新的環境。 在 R 中，環境可用來封裝套件中的命名空間等等。 您可以使用 `search()` 函數來檢視工作區中的環境。 若要檢視特定環境中的物件，請輸入 `ls(<envname>)`。
+    + 以 `$env.ComputeDist` 開頭的行包含定義 Haversine 公式的程式碼，該公式可計算球面上兩個點之間的「大圓距離」  。
 
-4. 定義函式，您將它套用到資料以建立新的特徵資料行， *direct_distance*。 但在執行轉換之前，將計算內容變更為本機。
+4. 定義函數之後，您將它套用至資料，以建立新的特徵資料行*direct_distance*。 但在執行轉換之前，將計算內容變更為本機。
 
     ```R
     rxSetComputeContext("local");
     ```
 
-5. 呼叫[rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep)函式收到工程資料，此功能，並套用`env$ComputeDist`函式在記憶體中的資料。
+5. 呼叫[rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep)函式收到特性工程設計資料，並套用`env$ComputeDist`函式，在記憶體中的資料。
 
     ```R
     start.time <- proc.time();
   
-    changed_ds <- rxDataStep(inData = featureEngineeringQuery,
+    changed_ds <- rxDataStep(inData = featureDataSource,
     transforms = list(direct_distance=ComputeDist(pickup_longitude,pickup_latitude, dropoff_longitude, dropoff_latitude),
     tipped = "tipped", fare_amount = "fare_amount", passenger_count = "passenger_count",
     trip_time_in_secs = "trip_time_in_secs",  trip_distance="trip_distance",
@@ -99,15 +108,15 @@ R 語言已知有各種豐富的統計程式庫，但您可能仍然需要自訂
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""));
     ```
 
-    + RxDataStep 函式支援各種方法的位置中修改資料。 如需詳細資訊，請參閱這篇文章：[如何 Microsft R 中的轉換和子集資料](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
+    + RxDataStep 函式支援各種方法來修改位置中的資料。 如需詳細資訊，請參閱這篇文章：[如何在 Microsoft R 中的轉換和子集資料](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
     
-    不過，幾個要點值得注意的 rxDataStep 有關： 
+    不過，有幾個要點值得注意的是關於 rxDataStep: 
     
-    在其他資料來源，您可以使用引數*varsToKeep*和*varsToDrop*，但這些不支援 SQL Server 資料來源。 因此，在此範例中，我們使用_轉換_引數來指定傳遞的資料行和轉換資料行。 此外，執行 SQL Server 中的計算內容中，當_inData_引數只能接受 SQL Server 資料來源。
+    在其他資料來源，您可以使用引數*varsToKeep*並*varsToDrop*，但是這些不支援 SQL Server 資料來源。 因此，在此範例中，我們便_轉換_引數來指定傳遞的資料行和轉換的資料行。 此外，SQL Server 中的執行計算內容中，當_inData_引數只能採用 SQL Server 資料來源。
 
-    上述程式碼也可產生較大的資料集上執行時的警告訊息。 時數的資料列數目的資料行建立超過設定的值 （預設為 3,000,000）、 rxDataStep 傳回警告，並傳回的資料框架中的資料列數目將會被截斷。 若要移除警告，您可以修改_maxRowsByCols_ rxDataStep 函式中的引數。 不過，如果_maxRowsByCols_太大，您可能會遇到問題時載入記憶體中的資料框架。
+    上述程式碼可能也會產生較大的資料集上執行時的警告訊息。 當資料列數目乘以數目的資料行建立超過設定值 （預設為 3000000）、 rxDataStep 傳回警告，和在傳回的資料框架中的資料列數目將會被截斷。 若要移除警告，您可以修改_maxRowsByCols_ rxDataStep 函式中的引數。 不過，如果_maxRowsByCols_太大，載入記憶體中的資料框架時，您可能會遇到的問題。
 
-7. （選擇性） 您可以呼叫[rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo)檢查已轉換的資料來源的結構描述。
+7. （選擇性） 您可以呼叫[rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo)來檢查已轉換的資料來源的結構描述。
 
     ```R
     rxGetVarInfo(data = changed_ds);
@@ -115,11 +124,13 @@ R 語言已知有各種豐富的統計程式庫，但您可能仍然需要自訂
 
 ## <a name="featurization-using-transact-sql"></a>使用 Transact-SQL 特徵化
 
-現在，建立自訂的 SQL 函式， *ComputeDist*，若要完成自訂 R 函式與相同的工作。
+在此練習中，了解如何完成相同的工作，而不自訂 R 函數中使用 SQL 函式。 
 
-1. 定義新的自訂 SQL 函數，名稱為 *fnCalculateDistance*。 此使用者定義之 SQL 函數的程式碼，是您建立及設定資料庫所執行之 PowerShell 指令碼的一部分。  您的資料庫中應該已有此函數。
+若要切換[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 」 或 「 執行 T-SQL 指令碼的另一個查詢編輯器。
 
-    如果不存在，請使用 SQL Server Management Studio，在計程車資料儲存所在的相同資料庫中產生該函數。
+1. 使用 SQL 函式，名為*fnCalculateDistance*。 NYCTaxi_Sample 資料庫中，應該已有此函式。 在 [物件總管] 中，確認函式存在於瀏覽此路徑：資料庫 > NYCTaxi_Sample > 可程式性 > 函式 > 純量值函式 > dbo.fnCalculateDistance。
+
+  如果函式不存在，使用 SQL Server Management Studio 來產生 NYCTaxi_Sample 資料庫中的函式。
 
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
@@ -144,25 +155,29 @@ R 語言已知有各種豐富的統計程式庫，但您可能仍然需要自訂
     END
     ```
 
-2. 從任何支援 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的應用程式執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，即可查看函數如何運作。
+2. 在 Management Studio 中的 在新的查詢視窗中，執行下列[!INCLUDE[tsql](../../includes/tsql-md.md)]從任何支援的應用程式的陳述式[!INCLUDE[tsql](../../includes/tsql-md.md)]以查看函式的運作方式。
 
     ```sql
+    USE nyctaxi_sample
+    GO
+
     SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,
-    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance,
-    pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude
+    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude) as direct_distance, pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude 
     FROM nyctaxi_sample
     ```
-3. 定義此函式，它很容易建立您要使用 SQL 的功能，然後將值直接插入新的資料表：
+3. 若要將值直接插入新的資料表 （您必須先建立它），您可以新增**INTO**子句指定的資料表名稱。
 
-    ```
-    SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,
-    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance,
-    pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude
+    ```sql
+    USE nyctaxi_sample
+    GO
+
+    SELECT tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance, pickup_datetime, dropoff_datetime,
+    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude) as direct_distance, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude
     INTO NewFeatureTable
     FROM nyctaxi_sample
     ```
 
-4. 不過，我們來看看如何從 R 程式碼呼叫自訂的 SQL 函數。 首先，在 R 變數中儲存 SQL 如何查詢。
+4. 您也可以從 R 程式碼呼叫 SQL 函數。 切換回 Rgui，並在 R 變數中儲存 SQL 特徵化查詢。
 
     ```R
     featureEngineeringQuery = "SELECT tipped, fare_amount, passenger_count,
@@ -174,28 +189,28 @@ R 語言已知有各種豐富的統計程式庫，但您可能仍然需要自訂
     ```
   
     > [!TIP]
-    > 此查詢已經過修改，以取得較小的資料，以加快速度本逐步解說的範例。 您可以移除 TABLESAMPLE 子句，如果您想要讓所有資料。不過，根據您的環境，它可能無法將載入 R、 導致錯誤的完整資料集。
+    > 此查詢已經過修改，以取得較小的資料，以更快做出此逐步解說範例。 如果您想要取得所有資料，您可以移除 TABLESAMPLE 子句不過，根據您的環境，它可能會無法將完整資料集載入至 R，因而導致發生錯誤。
   
 5. 使用下列程式碼行從 R 環境呼叫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數，並將它套用至 *featureEngineeringQuery* 中所定義的資料。
   
     ```R
     featureDataSource = RxSqlServerData(sqlQuery = featureEngineeringQuery,
       colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric",
-             dropoff_longitude = "numeric", dropoff_latitude = "numeric",
-             passenger_count  = "numeric", trip_distance  = "numeric",
-              trip_time_in_secs  = "numeric", direct_distance  = "numeric"),
+        dropoff_longitude = "numeric", dropoff_latitude = "numeric",
+        passenger_count  = "numeric", trip_distance  = "numeric",
+        trip_time_in_secs  = "numeric", direct_distance  = "numeric"),
       connectionString = connStr)
     ```
   
-6.  現在，建立新的功能時，呼叫**rxGetVarsInfo**功能資料表中建立之資料的摘要。
+6.  現在，建立新的功能時，呼叫**rxGetVarsInfo**功能資料表中建立資料的摘要。
   
     ```R
     rxGetVarInfo(data = featureDataSource)
     ```
 
-    *結果*
+    **結果**
 
-    ```
+    ```R
     Var 1: tipped, Type: integer
     Var 2: fare_amount, Type: numeric
     Var 3: passenger_count, Type: numeric
@@ -211,12 +226,12 @@ R 語言已知有各種豐富的統計程式庫，但您可能仍然需要自訂
     ```
 
     > [!NOTE]
-    > 在某些情況下，您可能會收到這類錯誤： *EXECUTE 權限遭拒的物件 'fnCalculateDistance'* 若是如此，請確定您使用的登入有執行指令碼，以及在資料庫上建立物件的權限不只是根據執行個體。
-    > 請檢查該物件，fnCalculateDistance 結構描述。 如果物件已建立資料庫擁有者，而且您登入都屬於角色 db_datareader，您需要執行此指令碼的明確權限授與登入。
+    > 在某些情況下，您可能會收到如下錯誤：*EXECUTE 權限遭拒的物件 'fnCalculateDistance'* 若是如此，請確定您使用的登入有執行指令碼，並在資料庫上，而不只是在執行個體建立物件的權限。
+    > 檢查物件，fnCalculateDistance 的結構描述。 如果資料庫擁有者，建立物件，而且您的登入都屬於角色 db_datareader，您需要授與登入執行指令碼的明確權限。
 
-## <a name="comparing-r-functions-and-sql-functions"></a>比較 R 函式和 SQL 函式
+## <a name="comparing-r-functions-and-sql-functions"></a>比較 R 函數和 SQL 函式
 
-請記住這段程式碼的 R 程式碼的時間？
+還記得此段程式碼使用以 R 程式碼的時間嗎？
 
 ```R
 start.time <- proc.time()
@@ -225,18 +240,15 @@ used.time <- proc.time() - start.time
 print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""))
 ```
 
-您可以嘗試使用此 SQL 的自訂函式範例，若要查看時間資料轉換時，會呼叫 SQL 函式。 此外，請嘗試切換 rxSetComputeContext 與計算內容，並比較時間。
+您可以嘗試使用此 SQL 的自訂函式範例，看看多久資料轉換時，會呼叫 SQL 函數。 此外，請嘗試切換計算內容使用 rxSetComputeContext 並比較執行時間。
 
-您的時間可能會大大地改變，視您的網路速度和硬體組態而定。 我們所測試的組態中[!INCLUDE[tsql](../../includes/tsql-md.md)]函式方法，就是較快，使用自訂的 R 函數。 因此，我們使用[!INCLUDE[tsql](../../includes/tsql-md.md)]函式的後續步驟中，這些計算。
+您的時間可能很大，視您的網路速度和硬體組態而定。 在我們的測試，設定[!INCLUDE[tsql](../../includes/tsql-md.md)]函式的方法是比使用自訂 R 函數更快。 因此，我們使用[!INCLUDE[tsql](../../includes/tsql-md.md)]函式進行後續步驟中的這些計算。
 
 > [!TIP]
-> 通常，功能 工程使用[!INCLUDE[tsql](../../includes/tsql-md.md)]會較快，。例如，T-SQL 包括快速的視窗化和可套用至一般資料科學計算，例如循環移動平均的排名函數和*n*-磚。 請根據您的資料和工作，選擇最有效率的方法。
+> 通常，功能工程使用[!INCLUDE[tsql](../../includes/tsql-md.md)]會比 r 更快比方說，T-SQL 包含快速的視窗化 」 與 「 可套用至常用的資料科學計算，例如移動平均的排名函式和*n*-圖格。 請根據您的資料和工作，選擇最有效率的方法。
 
-## <a name="next-lesson"></a>下一課
+## <a name="next-steps"></a>後續步驟
 
-[建立 R 模型，並將儲存至 SQL](walkthrough-build-and-save-the-model.md)
-
-## <a name="previous-lesson"></a>上一課
-
-[檢視及使用 R 的資料摘要](walkthrough-view-and-summarize-data-using-r.md)
+> [!div class="nextstepaction"]
+> [建立 R 模型，並將儲存至 SQL](walkthrough-build-and-save-the-model.md)
 

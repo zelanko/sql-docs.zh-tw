@@ -15,19 +15,19 @@ ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d38957be6a022a3f3837a9f7b2539423dd48b3ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29bd6c25ec826f1c2ce7af1aae6e29462de0b6c1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184808"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374480"
 ---
 # <a name="sql-server-native-client-ole-db-reference"></a>SQL Server Native Client (OLE DB) 參考
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開給取用者想要執行的一或多個電腦上的資料存取介面[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是與 OLE DB 2.0 版相容的提供者。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開給取用者想要執行的一或多個電腦上的資料存取介面[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是與 OLE DB 版本 2.0 相容提供者。  
   
  這[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者程式設計參考不會記載所有 OLE DB 介面與方法，只有這些介面和方法時，表現為提供者特有的行為使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB提供者。  
   
- 如需核心 OLE DB 介面與方法的完整描述，請參閱 [OLE DB 程式設計人員參考](http://go.microsoft.com/fwlink/?LinkId=45232)。  
+ 如需核心 OLE DB 介面與方法的完整描述，請參閱 [OLE DB 程式設計人員參考](https://go.microsoft.com/fwlink/?LinkId=45232)。  
   
 ## <a name="in-this-section"></a>本節內容  
   

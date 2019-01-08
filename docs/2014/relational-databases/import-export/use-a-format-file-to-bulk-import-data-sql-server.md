@@ -13,12 +13,12 @@ ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f144e5e4f70fdef954dd91452df6bc9275409b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fddec2033997a1b76f34fa9a2fe006d385bc0132
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073508"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364080"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>使用格式檔案大量匯入資料 (SQL Server)
   此主題說明格式檔案在大量匯入作業中的用法。 格式檔案會將資料檔案的欄位對應到資料表的資料行。  您可以使用非 XML 或 XML 格式檔案來大量匯入資料，當您使用 **bcp** 命令或 BULK INSERT 或 INSERT ......SELECT * FROM OPENROWSET(BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令時，可以使用非 XML 或 XML 格式的檔案來大量匯入資料。  
@@ -36,12 +36,12 @@ ms.locfileid: "48073508"
 |------------------------|-----------------------------------|  
 |BULK INSERT|FORMATFILE = '*format_file_path*'|  
 |INSERT ...SELECT * FROM OPENROWSET(BULK...)|FORMATFILE = '*format_file_path*'|  
-|**bcp** … **in**|**-f** *format_file*|  
+|**bcp** ...**中**|**-f** *format_file*|  
   
  如需詳細資訊，請參閱 [bcp 公用程式](../../tools/bcp-utility.md)、[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 或 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)。  
   
 > [!NOTE]  
->  若要大量匯出或匯入 SQLXML 資料，請在格式檔案中使用下列資料類型：SQLCHAR 或 SQLVARYCHAR (資料會以用戶端字碼頁或定序所隱含的字碼頁傳送)、SQLNCHAR、SQLNVARCHAR (資料會以 Unicode 傳送)、SQLBINARY 或 SQLVARYBIN (資料不經轉換即傳送)。  
+>  若要大量匯出或匯入 SQLXML 資料，請在格式檔案中使用下列其中一種資料類型：SQLCHAR 或 SQLVARYCHAR （資料會在用戶端字碼頁或定序所隱含的字碼頁傳送）、 SQLNCHAR 或 SQLNVARCHAR （資料會以 Unicode 傳送）、 SQLBINARY 或 SQLVARYBIN （資料會傳送未經任何轉換）。  
   
 ## <a name="examples"></a>範例  
  本節中的範例說明如何藉由使用下列命令來以格式檔案大量匯入資料：**bcp** 命令與 BULK INSERT 和 INSERT ......SELECT * FROM OPENROWSET(BULK...) 陳述式。 執行其中一個大量匯入範例之前，必須先建立範例資料表、資料檔案與格式檔案。  
@@ -100,7 +100,7 @@ bcp AdventureWorks2012..MyTestFormatFiles format nul -c -t, -f myTestFormatFiles
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  

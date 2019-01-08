@@ -1,5 +1,5 @@
 ---
-title: 資料採礦程式設計 |Microsoft 文件
+title: Analysis Services 資料採礦程式設計 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1be416528bc923e757afb9a8f3e556790941bf11
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 27a964581782d5868e4089a1063dbbce0c689525
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019955"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072755"
 ---
 # <a name="data-mining-programming"></a>資料採礦程式設計
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34019955"
   
 -   **XMLA**  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援 XML for Analysis (XMLA) 當做與用戶端應用程式通訊的通訊協定。 擴充 XML for Analysis 規格的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可支援其他命令。  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援使用 XML for Analysis (XMLA) 當做與用戶端應用程式進行通訊的通訊協定。 擴充 XML for Analysis 規格的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可支援其他命令。  
   
      因為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會將 XMLA 用於資料定義、資料操作和資料控制支援，所以您可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 提供的視覺化工具來建立採礦結構和採礦模型，然後擴充您之前使用資料採礦延伸模組 (DMX) 和 Analysis Services 指令碼語言 (ASSL) 指令碼所建立的資料採礦物件。  
   
@@ -50,21 +50,21 @@ ms.locfileid: "34019955"
      您可以使用 DMX 來封裝命令陳述式、預測查詢和中繼資料查詢，並以表格格式傳回結果，前提是您已經建立與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器的連接。  
   
 ## <a name="in-this-section"></a>本節內容  
- [資料採礦的 OLE DB](../analysis-services/data-mining-programming-ole-db.md)  
+ [OLE DB for Data Mining](../analysis-services/data-mining-programming-ole-db.md)  
  描述此規格的添加來支援資料採礦和多維度資料：新的結構描述資料列集和資料行、用來建立和管理採礦結構的資料採礦延伸模組 (DMX) 語言。  
   
 ## <a name="related-reference"></a>相關的參考資料  
  [使用 ADOMD.NET 來開發](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
  介紹 ADOMD.NET 用戶端和伺服器程式設計物件。  
   
- [使用分析管理物件 & #40; 開發AMO & #41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [使用分析管理物件 &#40;AMO&#41; 來開發](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
  介紹 AMO 程式設計程式庫。  
   
- [開發使用 Analysis Services 指令碼語言 & #40;ASSL & #41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [使用 Analysis Services 指令碼語言 &#40;ASSL&#41; 開發](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  介紹 XML for Analysis (XMLA) 和它的延伸模組。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 開發人員文件](../analysis-services/analysis-services-developer-documentation.md)   
- [資料採礦延伸模組 & #40; DMX & #41;參考](../dmx/data-mining-extensions-dmx-reference.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 參考](../dmx/data-mining-extensions-dmx-reference.md)  
   
   

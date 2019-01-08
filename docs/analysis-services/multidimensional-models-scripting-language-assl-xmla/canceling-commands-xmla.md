@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: babdafaaa1c507a609760b02895f9438baf21581
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 313708ad1575c7b9922ac796791d0d623c51b54b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145014"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207517"
 ---
 # <a name="canceling-commands-xmla"></a>取消命令 (XMLA)
   視發出命令之使用者的系統管理權限而定[取消](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)命令在 XML for Analysis (XMLA) 可以取消工作階段、 工作階段、 連接、 伺服器處理序或相關聯的工作階段上的命令或連接。  
@@ -36,7 +36,7 @@ ms.locfileid: "50145014"
 ## <a name="canceling-connections"></a>取消連接  
  藉由指定的連接識別項[ConnectionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla)屬性**取消**命令時，伺服器系統管理員可以取消所有與指定的連接，包括所有相關聯的工作階段執行命令，並取消連接。  
   
-> [!NOTE]  
+> [!NOTE]
 >  如果執行個體[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]無法找出並取消與連接相關聯的工作階段，例如當資料幫浦開啟多個工作階段，同時提供 HTTP 連線時，執行個體無法取消連接。 如果在執行期間發生此情況下**取消**命令時，發生錯誤。  
   
  伺服器系統管理員可以擷取的使用中連線[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體擷取 DISCOVER_CONNECTIONS 結構描述資料列集使用 XMLA **Discover**方法。  

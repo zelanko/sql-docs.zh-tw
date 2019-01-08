@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.messagequeuetask.f1
@@ -18,12 +17,12 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 31175748ef4f7998eae15dcd2a2c03e878abe071
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b144e8e3ca5bcf96b588e8579dcdb52faa9e4f9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165148"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360920"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   「訊息佇列」工作可讓您使用 Message Queuing (又稱為 MSMQ) 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝之間傳送和接收訊息，或將訊息傳送至由自訂應用程式處理的應用程式佇列。 這些訊息可採用簡單文字、檔案或變數及其值的形式。  
@@ -38,7 +37,7 @@ ms.locfileid: "48165148"
   
  傳送或接收訊息時，「訊息佇列」工作會使用下列四種訊息類型之一：資料檔、字串、字串訊息至變數或變數。 只有接收訊息時才能使用「字串訊息至變數」訊息類型。  
   
- 工作使用 MSMQ 連接管理員以連接到訊息佇列。 如需詳細資訊，請參閱 [MSMQ 連線管理員](../connection-manager/msmq-connection-manager.md)。 如需有關 Message Queuing 的詳細資訊，請參閱 [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=7022)。  
+ 工作使用 MSMQ 連接管理員以連接到訊息佇列。 如需詳細資訊，請參閱 [MSMQ 連線管理員](../connection-manager/msmq-connection-manager.md)。 如需有關 Message Queuing 的詳細資訊，請參閱 [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022)。  
   
  「訊息佇列」工作要求安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 **[要安裝的元件]** 頁面或 **[特徵選取]** 頁面上選取要安裝的一些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，會安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件的部分子集。 這些元件對特定的工作有用，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能會受到限制。 例如， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 選項會安裝設計某個封裝所需的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 元件，但不會安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務，因此「訊息佇列」工作將無法運作。 為了確保 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的完整安裝，您必須在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [要安裝的元件] **頁面上選取** 。 如需安裝及執行「訊息佇列」工作的詳細資訊，請參閱 [安裝 Integration Services](../install-windows/install-integration-services.md)。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48165148"
   
 -   `String` 訊息指定訊息為字串。 接收訊息時，您可以設定工作，以比較接收到的字串與使用者自訂字串，並根據比較結果採取行動。 字串比較可以為完全相符、區分大小寫或不區分大小寫，或者使用子字串。  
   
--   `String message to variable` 指定來源訊息傳送至的目的地變數的字串。 您可以設定工作使用完全相符、不區分大小寫或子字串比較，來比較接收到的字串與使用者自訂的字串。 只有當工作接收訊息時此訊息類型才可用。  
+-   `String message to variable` 將來源訊息指定為傳送到目的變數的字串。 您可以設定工作使用完全相符、不區分大小寫或子字串比較，來比較接收到的字串與使用者自訂的字串。 只有當工作接收訊息時此訊息類型才可用。  
   
 -   `Variable` 指定訊息將包含一或多個變數。 您可以設定工作，以指定訊息中包含的變數名稱。 接收訊息時您可以設定工作，以指定可從中接收訊息的封裝，以及做為訊息目的地的變數。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48165148"
   
 -   如果訊息儲存在 `Data file` 中則覆寫現有的檔案。  
   
--   不同的檔案名稱，來儲存訊息檔案，如果訊息使用`Data file message`型別。  
+-   如果訊息使用 `Data file message` 類型，則以不同的檔案名稱儲存訊息檔案。  
   
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>訊息佇列工作上可用的自訂記錄訊息  
  下表列出「訊息佇列」工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../custom-messages-for-logging.md)。  
@@ -89,11 +88,11 @@ ms.locfileid: "48165148"
 ## <a name="configuration-of-the-message-queue-task"></a>訊息佇列工作的組態  
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。 如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [訊息佇列工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [訊息佇列工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [訊息佇列工作編輯器&#40;接收頁面&#41;](../message-queue-task-editor-receive-page.md)  
+-   [訊息佇列工作編輯器 &#40;接收頁面&#41;](../message-queue-task-editor-receive-page.md)  
   
--   [訊息佇列工作編輯器&#40;傳送頁面&#41;](../message-queue-task-editor-send-page.md)  
+-   [訊息佇列工作編輯器 &#40;傳送頁面&#41;](../message-queue-task-editor-send-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

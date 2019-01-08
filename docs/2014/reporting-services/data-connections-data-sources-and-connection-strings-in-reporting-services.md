@@ -20,12 +20,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 656fb3e4a0eca7ec791050d7be7fcef5e774fbae
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 78d118a8d0e5edabe48715c2b5c8b0b547bee7c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072312"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354610"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   若要在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表中包括資料，您必須先建立「資料來源」  與「資料集」 。 本主題說明資料來源的類型、如何建立資料來源，以及與資料來源認證相關的重要資訊。 資料來源包括資料來源類型、連接資訊，以及要使用的認證類型。 資料來源有兩種類型：內嵌和共用。 內嵌資料來源是定義在報表中，而且只能供該報表使用。 共用資料來源則與報表分開定義，而且可以供多個報表使用。 如需詳細資訊，請參閱[內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) 和[內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)。  
@@ -77,7 +77,7 @@ ms.locfileid: "49072312"
   
 -   ODBC  
   
--   Power View 的 Microsoft BI 語意模型：在已為 PowerPivot 圖庫與 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]設定 SharePoint 的網站上，可以使用此資料來源。 此資料來源類型僅用於 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 簡報。 如需詳細資訊，請參閱 [建立 Power View 的完整 BI 語意表格式模型](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)。  
+-   Power View 的 Microsoft 商業智慧語意模型：在已設定 PowerPivot 圖庫與 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 的 SharePoint 網站上，有提供此資料來源類型。 此資料來源類型僅用於 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 簡報。 如需詳細資訊，請參閱 [建立 Power View 的完整 BI 語意表格式模型](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)。  
   
  如需 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支援之資料來源與版本的完整清單，請參閱 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   
@@ -131,10 +131,10 @@ ms.locfileid: "49072312"
 |本機伺服器上的 SQL Server 資料庫|`data source="(local)";initial catalog=AdventureWorks`|將資料來源類型設定為 `Microsoft SQL Server`。|  
 |SQL Server 執行個體<br /><br /> [資料庫]|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|將資料來源類型設定為 `Microsoft SQL Server`。|  
 |SQL Server Express 資料庫|`Data Source=localhost\MSSQL10_50.SQLEXPRESS; Initial Catalog=AdventureWorks`|將資料來源類型設定為 `Microsoft SQL Server`。|  
-|雲端中的 [!INCLUDE[ssSDS](../includes/sssds-md.md)]|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|將資料來源類型設定為 `Windows Azure SQL Database`。 如需詳細資訊，請參閱 [SQL Azure 連接類型 &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md)。|  
+|[!INCLUDE[ssSDS](../includes/sssds-md.md)] 在雲端中|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|將資料來源類型設定為 `Windows Azure SQL Database`。 如需詳細資訊，請參閱 [SQL Azure 連接類型 &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md)。|  
 |SQL Server 平行資料倉儲|`HOST=<IP address>;database= AdventureWorks; port=<port>`|將資料來源類型設定為 `Microsoft SQL Server Parallel Data Warehouse`。 如需詳細資訊，請參閱 [SQL Server 平行資料倉儲連接類型 &#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)。|  
 |本機伺服器上的 Analysis Services 資料庫|`data source=localhost;initial catalog=Adventure Works DW`|將資料來源類型設定為 `Microsoft SQL Server Analysis Services`。 如需詳細資訊，請參閱 [MDX 的 Analysis Services 連線類型 &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md) 或 [DMX 的 Analysis Services 連線類型 &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md)。|  
-|具有 Sales 檢視方塊的 Analysis Services 表格式模型資料庫|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|將資料來源類型設定為 `Microsoft SQL Server Analysis Services`。 在 cube= 設定中指定檢視方塊名稱。 如需詳細資訊，請參閱 [檢視方塊 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/perspectives-ssas-tabular.md)。|  
+|具有 Sales 檢視方塊的 Analysis Services 表格式模型資料庫|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|將資料來源類型設定為 `Microsoft SQL Server Analysis Services`。 在 cube= 設定中指定檢視方塊名稱。 如需詳細資訊，請參閱 [檢視方塊 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/perspectives-ssas-tabular.md)。|  
 |在原生模式設定之報表伺服器上的報表模型資料來源|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|指定報表伺服器或文件庫 URL 以及報表伺服器資料或文件庫資料夾命名空間中已發行模型的路徑。 如需詳細資訊，請參閱[報表模型連線 &#40;SSRS&#41;](report-data/report-model-connection-ssrs.md)。|  
 |在 SharePoint 整合模式設定之報表伺服器上的報表模型資料來源|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|指定報表伺服器或文件庫 URL 以及報表伺服器資料或文件庫資料夾命名空間中已發行模型的路徑。|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|將資料來源類型設定為 `OLE DB Provider for OLAP Services 8.0`。<br /><br /> 如果將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 屬性設定為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，則可以加快 `ConnectTo` 2000 `8.0` 資料來源的連接。 若要設定這個屬性，請使用 **[連接屬性]** 對話方塊的 **[進階屬性]** 索引標籤。|  

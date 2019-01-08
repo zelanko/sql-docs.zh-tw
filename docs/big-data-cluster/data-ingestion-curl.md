@@ -1,22 +1,23 @@
 ---
-title: 使用 curl 將資料載入 SQL Server 2019 CTP 2.1 上的 HDFS |Microsoft Docs
+title: 將資料載入 HDFS，在 SQL Server 2019 巨量資料叢集上使用 curl |Microsoft Docs
 description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: a5f580ab39ef7338f424975d9667745131ee748f
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 890c323434c17bb66cd9a67aac872a5580cb2ddf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221624"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201617"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-2019-ctp-21"></a>使用 curl 將資料載入 SQL Server 2019 CTP 2.1 上的 HDFS
+# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-2019-big-data-clusters"></a>將資料載入 HDFS，在 SQL Server 2019 巨量資料叢集上使用 curl
 
-這篇文章說明如何使用**curl**將資料載入 SQL Server 2019 CTP 2.1 上的 HDFS。
+這篇文章說明如何使用**curl**將資料載入 SQL Server 2019 巨量資料叢集 （預覽） 上的 HDFS。
 
 ## <a name="obtain-the-service-external-ip"></a>取得服務的外部 IP
 

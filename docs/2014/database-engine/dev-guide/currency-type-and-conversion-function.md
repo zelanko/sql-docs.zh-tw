@@ -12,12 +12,12 @@ ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12e5afd378f09a0fa7d624c6842e907211bc4212
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0119d51332dde13ae77a67fb82f293495a4fefdf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194728"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375140"
 ---
 # <a name="currency-type-and-conversion-function"></a>Currency 類型及轉換函數
   此範例會使用 C# 來定義 Currency 使用者定義資料類型。 這個使用者定義資料類型會封裝金額和文化特性，這樣做有助決定將金額轉譯成該文化特性中之貨幣值的正確方式。 此範例也會提供貨幣轉換函數，該函數會傳回 Currency 使用者定義資料類型的執行個體。 如果 AdventureWorks 資料庫具有從美元 (USD) 到與指定文化特性相關聯之貨幣的轉換比率，則轉換函數會傳回具有轉換比率和符合文化特性要求之文化特性的 Currency 使用者定義資料類型。 否則，會傳回具有使用 `en-us` 文化特性以 USD 計算之原始金額的 Currency 使用者定義資料類型。 此範例還會示範如何使用 Transact-SQL 取消註冊和註冊 Common Language Runtime (CLR) 方法與組件。  
@@ -28,9 +28,9 @@ ms.locfileid: "48194728"
 ## <a name="prerequisites"></a>先決條件  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](http://go.microsoft.com/fwlink/?LinkId=31046)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](https://go.microsoft.com/fwlink/?LinkId=31046)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
   
--   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員[網站](http://go.microsoft.com/fwlink/?linkid=62796)取得 AdventureWorks 資料庫  
+-   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員[網站](https://go.microsoft.com/fwlink/?linkid=62796)取得 AdventureWorks 資料庫  
   
 -   .NET Framework SDK 2.0 或更新版本或是 Microsoft Visual Studio 2005 或更新版本。 您可以免費取得 .NET Framework SDK。  
   

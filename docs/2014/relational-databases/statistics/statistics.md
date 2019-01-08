@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f69e594b1359e3d569c624243c15de2354468be1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ce37ee013e8424079e9d2e526ccdbeacfb5544b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063748"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367140"
 ---
 # <a name="statistics"></a>Statistics
   查詢最佳化工具會使用統計資料來建立可改善查詢效能的查詢計劃。 對於大部分查詢而言，查詢最佳化工具已經產生高品質查詢計劃的必要統計資料。不過，在少數情況下，您必須建立其他統計資料或修改查詢設計，以便獲得最佳結果。 本主題將討論有效使用查詢最佳化統計資料的概念和指導方針。  
@@ -40,7 +40,7 @@ ms.locfileid: "48063748"
  每個統計資料物件都是針對一或多個資料表資料行的清單所建立，而且包含顯示第一個資料行中值分佈的長條圖。 多個資料行的統計資料物件也會儲存這些資料行之間值相互關聯的相關統計資料。 這些相互關聯統計資料 (或稱「密度」) 衍生自資料行值之相異資料列的數目。 如需統計資料物件的詳細資訊，請參閱 [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)。  
   
  篩選的統計資料  
- 對於從定義完善的資料子集中選取的查詢而言，篩選的統計資料可以改善查詢效能。 篩選的統計資料會使用篩選述詞來選取統計資料中所含的資料子集。 設計完善的篩選統計資料可以改善查詢執行計畫 (相較於完整資料表統計資料而言)。 如需篩選述詞的詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)。 如需有關何時建立篩選統計資料的詳細資訊，請參閱本主題的 [何時建立統計資料](#UpdateStatistics) 一節。 如需個案研究，請參閱 SQLCAT 網站的部落格文章 [配合分割資料表使用已篩選的統計資料](http://go.microsoft.com/fwlink/?LinkId=178505)。  
+ 對於從定義完善的資料子集中選取的查詢而言，篩選的統計資料可以改善查詢效能。 篩選的統計資料會使用篩選述詞來選取統計資料中所含的資料子集。 設計完善的篩選統計資料可以改善查詢執行計畫 (相較於完整資料表統計資料而言)。 如需篩選述詞的詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)。 如需有關何時建立篩選統計資料的詳細資訊，請參閱本主題的 [何時建立統計資料](#UpdateStatistics) 一節。 如需個案研究，請參閱 SQLCAT 網站的部落格文章 [配合分割資料表使用已篩選的統計資料](https://go.microsoft.com/fwlink/?LinkId=178505)。  
   
  統計資料選項  
  您可以設定三個選項來影響何時及如何建立和更新統計資料。 這些選項只會在資料庫層級設定。  
@@ -154,7 +154,7 @@ GO
 ### <a name="query-selects-from-a-subset-of-data"></a>查詢會從資料子集中選取  
  當查詢最佳化工具針對單一資料行和索引建立統計資料時，它就會針對所有資料列中的值建立統計資料。 當查詢從資料列的子集中選取，而且該資料列子集具有唯一的資料分佈時，篩選的統計資料就可以改善查詢計劃。 您可以使用 CREATE STATISTICS 陳述式搭配 WHERE 子句來定義篩選述詞運算式，藉此建立篩選統計資料。  
   
- 例如，在使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]時，Production.Product 資料表中的每個產品都屬於 Production.ProductCategory 資料表中的四個類別之一：Bikes、Components、Clothing 及 Accessories。 其中每個類別目錄都具有不同的重量資料分佈：腳踏車 (Bikes) 的重量範圍是從 13.77 到 30.0、元件 (Components) 的重量範圍是從 2.12 到 1050.00 且有些是 NULL 值、衣服 (Clothing) 的重量全部為 NULL，配件 (Accessories) 的重量也是 NULL。  
+ 例如，使用[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]，Production.Product 資料表中的每個產品都屬於 Production.ProductCategory 資料表中的四個類別之一：自行車、 元件、 Clothing 及 附屬應用程式。 其中每個類別目錄都具有不同的重量資料分佈：腳踏車 (Bikes) 的重量範圍是從 13.77 到 30.0、元件 (Components) 的重量範圍是從 2.12 到 1050.00 且有些是 NULL 值、衣服 (Clothing) 的重量全部為 NULL，配件 (Accessories) 的重量也是 NULL。  
   
  以 Bikes 為例，相較於 Weight 資料行的完整資料表統計資料或不存在的統計資料而言，所有腳踏車重量的篩選統計資料將提供更精確的統計資料給查詢最佳化工具，而且可以改善查詢計畫品質。 雖然腳踏車重量資料行適合做為篩選的統計資料，但是不一定適合做為篩選的索引 (如果重量查閱的數目相當小的話)。 篩選索引為查閱所提供的效能提升程度可能不會超過將篩選索引加入至資料庫的額外維護和儲存成本。  
   
@@ -187,7 +187,7 @@ GO
   
 -   使用 CREATE STATISTICS 陳述式來建立遺失的統計資料。  
   
- 唯讀資料庫或唯讀快照集上的統計資料遺漏或過時，當[!INCLUDE[ssDE](../../../includes/ssde-md.md)]建立及維護暫時性統計資料中的`tempdb`。 當 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 建立暫時統計資料時，統計資料名稱會附加後置詞 _readonly_database_statistic，以便區分暫時統計資料與永久統計資料。 後置詞 _readonly_database_statistic 會保留給 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]產生的統計資料使用。 暫時統計資料的指令碼可以在讀寫資料庫上建立和複製。 當編寫指令碼時， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會將統計資料名稱的後置詞從 _readonly_database_statistic 變更為 _readonly_database_statistic_scripted。  
+ 如果唯讀資料庫或唯讀快照集上的統計資料遺漏或過時，[!INCLUDE[ssDE](../../../includes/ssde-md.md)] 會在 `tempdb` 中建立及維護暫時性統計資料。 當 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 建立暫時統計資料時，統計資料名稱會附加後置詞 _readonly_database_statistic，以便區分暫時統計資料與永久統計資料。 後置詞 _readonly_database_statistic 會保留給 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]產生的統計資料使用。 暫時統計資料的指令碼可以在讀寫資料庫上建立和複製。 當編寫指令碼時， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會將統計資料名稱的後置詞從 _readonly_database_statistic 變更為 _readonly_database_statistic_scripted。  
   
  只有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以建立和更新暫時統計資料。 但是，您可以使用永久統計資料所使用的相同工具來刪除暫時統計資料及監控統計資料屬性：  
   

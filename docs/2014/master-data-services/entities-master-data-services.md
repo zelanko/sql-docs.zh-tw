@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], about entities
@@ -14,12 +13,12 @@ ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 97a3fe9e9552170332e6be0d5cf5a3cb8541fe9b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb54250b1be15916055dd59a3f2e6d37330d5d93
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072908"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800910"
 ---
 # <a name="entities-master-data-services"></a>實體 (Master Data Services)
   實體是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 模型中包含的物件。 每個實體都含有會員，也就是您所管理之主要資料的資料列。  
@@ -36,7 +35,7 @@ ms.locfileid: "48072908"
   
  以您要管理的主要資料清單來擴展實體。  
   
- 實體可用來建立衍生階層，也就是以多個實體為基礎的層級型階層。 如需詳細資訊，請參閱[衍生階層 &#40;Master Data Services&#41;](derived-hierarchies-master-data-services.md)。  
+ 實體可用來建立衍生階層，也就是以多個實體為基礎的層級型階層。 如需詳細資訊，請參閱 [衍生階層 &#40;Master Data Services&#41;](derived-hierarchies-master-data-services.md)。  
   
  您也可以讓實體包含明確階層 (以單一實體為基礎的不完全結構) 和集合 (成員子集的 One-off 合併)。 如需詳細資訊，請參閱[明確階層 &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md) 和[集合 &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)。  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48072908"
  您可以授予使用者實體的權限，包括相關的模型物件。 如需詳細資訊，請參閱[實體權限 &#40;Master Data Services&#41;](../../2014/master-data-services/entity-permissions-master-data-services.md)。  
   
 ## <a name="entity-examples"></a>實體範例  
- 下列範例顯示具有下列屬性的實體：Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto。 這些屬性描述成員。 每個成員都是由單一資料列的屬性值來表示。  
+ 下列範例會顯示實體具有下列屬性：名稱、 程式碼、 Subcategory、 StandardCost、 ListPrice 和 FilePhoto。 這些屬性描述成員。 每個成員都是由單一資料列的屬性值來表示。  
   
  ![自行車產品實體資料表](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "自行車產品實體資料表")  
   
@@ -65,18 +64,18 @@ ms.locfileid: "48072908"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|建立新實體。|[建立實體&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
+|建立新實體。|[建立實體 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
 |指定實體可以包含明確階層和集合。|[啟用明確階層和集合的實體&#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |變更現有實體的名稱。|[變更實體名稱&#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)|  
-|刪除現有實體。|[刪除實體&#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
-|將權限指派給實體。|[指派模型物件權限&#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|刪除現有實體。|[刪除實體 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
+|將權限指派給實體。|[指派模型物件權限 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
 -   [模型 &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)  
   
--   [成員&#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
+-   [成員 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
--   [屬性&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

@@ -20,12 +20,12 @@ ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0375d2254a742149215d5e3328510d598f0fea3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d7efc9df277f609bf53ffb49f2253a937f45a4b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134788"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394461"
 ---
 # <a name="creating-a-data-mining-model"></a>建立資料採礦模型
   資料模型化是資料採礦的步驟，藉由套用建立模式和趨勢*演算法*資料。 之後就可以使用這些模式進行分析，或進行預測。  
@@ -72,7 +72,7 @@ ms.locfileid: "48134788"
  [叢集精靈&#40;資料採礦適用於 Excel 的增益集&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)。  
   
 ## <a name="detect-categories-analyze"></a>偵測類別目錄 (分析)  
- **偵測類別目錄**工具可讓您新增任何資料集和套用叢集以尋找資料的群組。 它很適合用來尋找相似度及建立群組以供進一步分析。  
+ **偵測類別目錄**工具可讓您新增任何資料集和套用叢集以尋找資料的群組。 它適合用來尋找相似度及建立群組，以進一步分析。  
   
  **偵測類別目錄**」 工具採用 Microsoft 群集演算法。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48134788"
   
  [預測計算器&#40;適用於 Excel 的資料表分析工具&#41;](prediction-calculator-table-analysis-tools-for-excel.md)  
   
-## <a name="scenario-goal-seek-analyze"></a>狀況：搜尋目標 (分析)  
+## <a name="scenario-goal-seek-analyze"></a>案例：搜尋目標 （分析）  
  在 **搜尋目標**您工具，指定目標值，而此工具會識別必須變更為符合該目標的基礎因數。 例如，如果您知道必須增加通話滿意度 20%，就可以要求模型預測應該要變更才能達到目標的因數。  
   
  **搜尋目標**」 工具採用 Microsoft 羅吉斯迴歸演算法。  
@@ -125,7 +125,7 @@ ms.locfileid: "48134788"
   
  [搜尋目標狀況&#40;適用於 Excel 的資料表分析工具&#41;](goal-seek-scenario-table-analysis-tools-for-excel.md)  
   
-## <a name="scenario-what-if-scenario-analyze"></a>狀況：假設狀況 (分析)  
+## <a name="scenario-what-if-scenario-analyze"></a>案例：假設狀況 （分析）  
  **模擬 Analysis**工具互補**搜尋目標**工具。 使用此工具時，您要輸入您想要變更的值，模型就會預測該變更是否足以達到所要的結果。 例如，您可以要求模型推測若額外增加一個話務員是否能將客戶滿意度提高一個積分點。  
   
  **What-if** 」 工具採用 Microsoft 羅吉斯迴歸演算法。  

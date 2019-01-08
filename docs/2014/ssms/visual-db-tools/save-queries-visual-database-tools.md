@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], saving
@@ -13,12 +13,12 @@ ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81abe0e1eb8ee12cb47ffe60269bdc02ff38362c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8245c048d4c1a1314835ad70fc7305c7afabd3f1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177458"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771740"
 ---
 # <a name="save-queries-visual-database-tools"></a>儲存查詢 (Visual Database Tools)
   儲存您的查詢以便在稍後使用。 請注意，執行查詢並不會儲存您的變更。  

@@ -1,20 +1,22 @@
 ---
-title: 如何將資料內嵌到 Spark 作業的 SQL Server 資料集區 |Microsoft Docs
+title: 擷取與 Spark 作業的資料
+titleSuffix: SQL Server 2019 big data clusters
 description: 本教學課程會示範如何將資料內嵌到 Spark 作業在 Studio 中使用 Azure 資料的 SQL Server 2019 巨量資料叢集 （預覽） 的資料集區。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 186de5e63663b9c5485cd0385ded816cafbc7c3d
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: d1780ae630231cd96e9424f4f541d921b1496e7d
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221474"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432361"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教學課程： 將資料內嵌到 Spark 作業的 SQL Server 資料集區
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教學課程：將資料內嵌到 Spark 作業的 SQL Server 資料集區
 
 本教學課程示範如何使用 Spark 作業，將資料載入[資料集區](concept-data-pool.md)的 SQL Server 2019 巨量資料叢集 （預覽）。 
 
@@ -30,17 +32,17 @@ ms.locfileid: "51221474"
 
 ## <a id="prereqs"></a> 必要條件
 
-* [將巨量資料叢集的 Kubernetes 上部署](deployment-guidance.md)。
-* [安裝 Azure Data Studio 和 SQL Server 2019 副檔名](deploy-big-data-tools.md)。
-* [將範例資料載入叢集](#sampledata)。
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [巨量資料工具](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 延伸模組**
+- [將範例資料載入您的巨量資料叢集](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>建立資料集區中的外部資料表
 
 下列步驟會建立外部資料表名為資料集區內**web_clickstreams_spark_results**。 本表然後可用做為位置擷取資料到巨量資料叢集。
 
-1. 在 Azure Data Studio，連接到您的巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱 <<c0> [ 連接到 SQL Server 的主要執行個體](deploy-big-data-tools.md#master)。
+1. 在 Azure Data Studio，連接到您的巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱 <<c0> [ 連接到 SQL Server 的主要執行個體](connect-to-big-data-cluster.md#master)。
 
 1. 在連線 中按兩下**伺服器**視窗以顯示 SQL Server 的主要執行個體的伺服器儀表板。 選取 **新的查詢**。
 
@@ -61,13 +63,13 @@ ms.locfileid: "51221474"
       );
    ```
   
-1. 在 CTP 2.1 中，建立資料集區是非同步的但沒有任何方式可判斷當尚未完成。 等候兩分鐘，以確定資料集區建立後再繼續。
+1. 在 CTP 2.2 建立資料集區是非同步的但沒有任何方法來判斷當尚未完成。 等候兩分鐘，以確定資料集區建立後再繼續。
 
 ## <a name="start-a-spark-streaming-job"></a>啟動 Spark 串流作業
 
 下一個步驟是建立 Spark 串流作業，從存放集區 (HDFS) 載入 web 點選流資料到您建立資料集區中的外部資料表。
 
-1. 在 Azure Data Studio，連接到您的巨量資料叢集的 HDFS/Spark 閘道。 如需詳細資訊，請參閱 <<c0> [ 連接到 HDFS/Spark 閘道](deploy-big-data-tools.md#hdfs)。
+1. 在 Azure Data Studio，連接到**HDFS/Spark 閘道**的巨量資料叢集。 如需詳細資訊，請參閱 <<c0> [ 連接到 HDFS/Spark 閘道](connect-to-big-data-cluster.md#hdfs)。
 
 1. 在 HDFS/Spark 閘道連按兩下**伺服器**視窗。 然後選取**新的 Spark 作業**。
 
@@ -81,10 +83,12 @@ ms.locfileid: "51221474"
    /jar/mssql-spark-lib-assembly-1.0.jar
    ```
 
+1. 在 **主要類別**欄位中，輸入`FileStreaming`。
+
 1. 在 **引數**欄位中，輸入下列文字： 指定 SQL Server 主要執行個體中的密碼`<your_password>`預留位置。 
 
    ```text
-   mssql-master-pool-0.service-master-pool 1433 sa <your_password> sales web_clickstreams_spark_results hdfs:///clickstream_data csv false
+   --server mssql-master-pool-0.service-master-pool --port 1433 --user sa --password <your_password> --database sales --table web_clickstreams_spark_results --source_dir hdfs:///clickstream_data --input_format csv --enable_checkpoint false --timeout 380000
    ```
 
    下表描述每個引數：
@@ -100,6 +104,7 @@ ms.locfileid: "51221474"
    | 資料流的來源目錄 | 這必須是完整的 URI，例如"hdfs: / / clickstream_data" |
    | 輸入的格式 | 這可以是"csv"、"parquet"或"json" |
    | 啟用檢查點 | true 或 false |
+   | timeout | 若要執行的工作以毫秒為單位，在結束之前的時間 |
 
 1. 按下**送出**提交工作。
 
@@ -113,7 +118,7 @@ ms.locfileid: "51221474"
 
    ![Spark 作業歷程記錄](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
 
-1. 返回您在本教學課程開頭所開啟的 SQL Server 主要執行個體查詢視窗...
+1. 返回您在本教學課程開頭所開啟的 SQL Server 主要執行個體查詢視窗。
 
 1. 執行下列查詢來檢查將內嵌的資料。
 

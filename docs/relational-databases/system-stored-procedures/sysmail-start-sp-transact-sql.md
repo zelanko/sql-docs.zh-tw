@@ -18,12 +18,12 @@ ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 08a073099616898ebd4f2a5161b0fe26f4bdb688
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 877fa31954cb0bf7255d831475c875fb43d002b8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826609"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210007"
 ---
 # <a name="sysmailstartsp-transact-sql"></a>sysmail_start_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sysmail_start_sp
  None  
   
 ## <a name="remarks"></a>備註  
- Database Mail 未啟用或安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝。 請使用 Database Mail 組態精靈來啟用和安裝 Database Mail 物件。  
+ 在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，並未啟用或安裝 Database Mail。 請使用 Database Mail 組態精靈來啟用和安裝 Database Mail 物件。  
   
  這個預存程序處於**msdb**資料庫。 這個預存程序會啟動存放外送訊息要求的 Database Mail 佇列，而且會啟用外部程式的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 啟動作業。  
   

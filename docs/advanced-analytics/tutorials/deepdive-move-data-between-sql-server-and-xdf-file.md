@@ -1,33 +1,34 @@
 ---
-title: SQL Server 和 XDF 檔案 （SQL 與 R 深入探討） 之間移動資料 |Microsoft 文件
+title: SQL Server 與 XDF 檔案使用 RevoScaleR-SQL Server Machine Learning 之間移動資料
+description: 教學課程逐步解說如何使用 XDF 和 R 語言，在 SQL Server 移動資料。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6eb2ed7bdda7fab662048d7e8da692253cf9c164
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d0f097c64d48a3a2e87f01965914b3100c8a28dc
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31204590"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645207"
 ---
-# <a name="move-data-between-sql-server-and-xdf-file-sql-and-r-deep-dive"></a>SQL Server 和 XDF 檔案 （SQL 與 R 深入探討） 之間移動資料
+# <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>SQL Server 與 XDF 檔案 （SQL Server 和 RevoScaleR 教學課程） 之間移動資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文是資料科學深入探討教學課程中，有關如何使用一部分[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server。
+這一課是屬於[RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)如何使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server。
 
-在此步驟中，您了解如何使用 XDF 檔案之間的遠端和本機計算內容傳輸資料。 XDF 檔案中儲存資料，可讓您的資料上執行轉換。
+在此步驟中，了解如何使用 XDF 檔案遠端和本機計算內容之間傳輸資料。 將資料儲存在 XDF 檔案，可讓您對資料執行轉換。
 
-當您完成時，您使用資料檔案中建立新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表。 此函式[rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep)可以將轉換套用至資料，並執行資料框架和.xdf 檔案之間的轉換。
+當您完成時，您使用中的資料檔案來建立新的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表。 此函式[rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep)可以將轉換套用至資料，並執行資料框架和.xdf 檔案之間的轉換。
   
-## <a name="create-a-sql-server-table-from-an-xdf-file"></a>建立 XDF 檔案從 SQL Server 資料表
+## <a name="create-a-sql-server-table-from-an-xdf-file"></a>從 XDF 檔案建立 SQL Server 資料表
 
-針對此練習，您的信用卡詐欺資料再次使用。 在此案例中，您需要對加州、奧勒崗州和華盛頓州的使用者執行一些額外的分析。 為多個有效，您已決定將只有這兩種狀態的資料儲存在本機電腦，並使用只變數性別、 持卡人、 狀態和平衡。
+針對此練習中，您的信用卡詐騙資料再次使用。 在此案例中，您需要對加州、奧勒崗州和華盛頓州的使用者執行一些額外的分析。 若要更有效率，您已經決定要儲存在您的本機電腦上的只有這些州的資料和使用的只有變數性別、 持卡人、 狀態和平衡。
 
-1. 重複使用`stateAbb`您先前識別包含此項目，並將它們寫入至新的變數，層級建立的變數`statesToKeep`。
+1. 重複使用`stateAbb`稍早識別包含此項目，並將它們寫入至新的變數，層級建立的變數`statesToKeep`。
   
     ```R
     statesToKeep <- sapply(c("CA", "OR", "WA"), grep, stateAbb)
@@ -35,11 +36,11 @@ ms.locfileid: "31204590"
     ```
     **結果**
     
-    CA|OR|WA
+    CA|或|WA
     ----|----|----
     5|38|48
     
-2. 定義您想要透過從 SQL Server 整合的資料使用[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢。  稍後您可以使用這個變數做為*inData*引數**rxImport**。
+2. 定義您想要從 SQL Server，透過整合的資料使用[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢。  稍後您可以使用此變數作為*inData*引數**rxImport**。
   
     ```R
     importQuery <- paste("SELECT gender,cardholder,balance,state FROM",  sqlFraudTable,  "WHERE (state = 5 OR state = 38 OR state = 48)")
@@ -47,7 +48,7 @@ ms.locfileid: "31204590"
   
     請確定查詢中沒有隱藏的字元，例如換行字元或定位字元。
   
-3. 接下來，定義要使用 r 中的資料時使用的資料行例如，在較小的資料集，您需要只有三個因素層級，因為查詢會傳回只有三個狀態的資料。  套用`statesToKeep`來識別要包含正確的層級的變數。
+3. 接下來，定義要使用 r 中的資料時使用的資料行比方說，在較小的資料集，您需要只有三個因素層級，因為查詢會傳回三個州的資料。  套用`statesToKeep`變數來識別要包含正確的層級。
   
     ```R
     importColInfo <- list(
@@ -57,15 +58,15 @@ ms.locfileid: "31204590"
             )
     ```
   
-4. 計算內容設為**本機**，因為您要在本機電腦上的所有可用的資料。
+4. 若要設定計算內容**本機**，因為您想在您的本機電腦上的所有可用的資料。
   
     ```R
     rxSetComputeContext("local")
     ```
     
-    [RxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)函式可以從匯入資料的任何支援的資料來源到本機 XDF 檔案。 使用資料的本機複本時，方便您想要怎麼做許多不同的分析資料，但是想要避免一再執行相同的查詢。
+    [RxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)函式可以匯入資料從任何支援的資料來源到本機 XDF 檔案。 當您想要執行許多不同的分析資料，但想要避免反覆執行相同的查詢時，使用資料的本機複本是方便。
 
-5. 藉由傳遞做為引數之前定義變數建立資料來源物件**RxSqlServerData**。
+5. 建立資料來源物件，先前定義為引數的變數傳遞**RxSqlServerData**。
   
     ```R
     sqlServerImportDS <- RxSqlServerData(
@@ -74,7 +75,7 @@ ms.locfileid: "31204590"
         colInfo = importColInfo)
     ```
   
-6. 呼叫**rxImport**將資料寫入至名為`ccFraudSub.xdf`，目前工作目錄中。
+6. 呼叫**rxImport**將資料寫入檔案，名為`ccFraudSub.xdf`，目前的工作目錄中。
   
     ```R
     localDS <- rxImport(inData = sqlServerImportDS,
@@ -82,7 +83,7 @@ ms.locfileid: "31204590"
         overwrite = TRUE)
     ```
   
-    `localDs`所傳回物件**rxImport**函式是輕量級**RxXdfData**資料來源物件，代表`ccFraud.xdf`資料檔案儲存在本機磁碟上。
+    `localDs`所傳回的物件**rxImport**函式是輕量級**RxXdfData**資料來源物件，代表`ccFraud.xdf`資料檔案儲存在本機磁碟上。
   
 7. 對 XDF 檔案呼叫 [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) ，確認資料結構描述相同。
   
@@ -92,31 +93,25 @@ ms.locfileid: "31204590"
 
     **結果**
     
-    *rxGetVarInfo(data = localDS)*
+    ```R
+    rxGetVarInfo(data = localDS)
+    Var 1: gender, Type: factor, no factor levels available
+    Var 2: cardholder, Type: factor, no factor levels available
+    Var 3: balance, Type: integer, Low/High: (0, 22463)
+    Var 4: state, Type: factor, no factor levels available
+    ```
 
-    *Var 1: gender, Type: factor, no factor levels available*
-
-    *Var 2: cardholder, Type: factor, no factor levels available*
-
-    *Var 3: balance, Type: integer, Low/High: (0, 22463)*
-
-    *Var 4: state, Type: factor, no factor levels available*
-  
-8. 您現在可以呼叫各種 R 函數來分析 `localDs` 物件，就像是對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上的資料來源一樣。 例如，您可能會依性別的總結：
+8. 您現在可以呼叫各種 R 函數來分析**localDs**物件，就如同在 SQL Server 上的資料來源。 例如，您可能會依性別的總結：
   
     ```R
     rxSummary(~gender + cardholder + balance + state, data = localDS)
     ```
 
-現在您已經熟悉如何使用計算內容和各種資料來源，接下來可嘗試一些有趣的作業。 在下一個和最後一課，您可以建立在遠端伺服器執行自訂的 R 函數的簡單模擬。
+## <a name="next-steps"></a>後續步驟
 
-## <a name="next-step"></a>下一步
+在這一課到結束的多部分的教學課程系列**RevoScaleR**和 SQL Server。 它引進許多相關的資料和計算概念，讓您為基礎來繼續使用您自己的資料和專案的需求。
 
-[建立簡單的模擬](../../advanced-analytics/tutorials/deepdive-create-a-simple-simulation.md)
+若要加強您對**RevoScaleR**，您可以傳回至 R 教學課程清單，以逐步執行您可能會遺失任何練習。 或者，檢視操作說明文章資料表中的一般工作的相關資訊的目錄。
 
-## <a name="previous-step"></a>上一個步驟
-
-[分析本機計算內容中的資料](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
-
-
-
+> [!div class="nextstepaction"]
+> [適用於 SQL Server 的 R 教學課程](sql-server-r-tutorials.md)

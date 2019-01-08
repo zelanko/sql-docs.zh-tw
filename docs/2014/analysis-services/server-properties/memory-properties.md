@@ -24,19 +24,19 @@ ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94fa7654af0494d7d6bfec8396212634afade30f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea5ccba5686c9f3716fd6931909ec28a79e00b8a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091648"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362820"
 ---
 # <a name="memory-properties"></a>記憶體屬性
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的伺服器記憶體屬性。 如需設定這些屬性的指引，請參閱《 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)》。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的伺服器記憶體屬性。 如需設定這些屬性的指引，請參閱《 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)》。  
   
  1 - 100 之間的值代表 **實體記憶體總計** 或 **虛擬位址空間**的百分比，以較少者為準。 超過 100 的值代表記憶體限制 (位元組)。  
   
- **適用於** ：多維度與表格式伺服器模式 (除非另有指示)。  
+ **適用於：** 多維度與表格式伺服器模式 (除非另有指示)。  
   
 ## <a name="properties"></a>屬性  
  `LowMemoryLimit`  
@@ -48,7 +48,7 @@ ms.locfileid: "48091648"
  請注意，`TotalMemoryLimit` 永遠必須小於 `HardMemoryLimit`  
   
  `HardMemoryLimit`  
- 指定記憶體閾值，超過此閥值後，執行個體會積極地終止使用中的使用者工作階段以減少記憶體的使用量。 所有終止的工作階段都會收到一個因為記憶體不足的壓力而取消的錯誤。 預設值零 (0)，代表`HardMemoryLimit`會設定之間的中間值`TotalMemoryLimit`和系統; 如果系統的實體記憶體大於處理序中，則虛擬位址的虛擬位址空間的實體記憶體總計將會改為使用空間，來計算`HardMemoryLimit`。  
+ 指定記憶體閾值，超過此閥值後，執行個體會積極地終止使用中的使用者工作階段以減少記憶體的使用量。 所有終止的工作階段都會收到一個因為記憶體不足的壓力而取消的錯誤。 預設值零 (0)，代表 `HardMemoryLimit` 會設定為 `TotalMemoryLimit` 和系統總實體記憶體之間的中間值；若系統的實體記憶體大於處理序的虛擬位址空間，則會改用虛擬位址空間來計算 `HardMemoryLimit`。  
   
  `VirtualMemoryLimit`  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
@@ -60,9 +60,9 @@ ms.locfileid: "48091648"
   
  **1** 是預設值。 此屬性允許使用作業系統分頁檔 (pagefile.sys)，在磁碟中分頁。  
   
- 當`VertiPaqPagingPolicy`設為 1 時，處理是比較不可能因為記憶體限制而失敗，因為伺服器將會嘗試使用您指定的方法，在磁碟中分頁。 設定 `VertiPaqPagingPolicy` 屬性並不能保證記憶體錯誤永遠不會發生。 在下列狀況下，記憶體不足錯誤仍然可能發生：  
+ 當 `VertiPaqPagingPolicy` 設為 1 時，處理比較不可能因為記憶體限制而失敗，因為伺服器將會嘗試使用您指定的方法，在磁碟中分頁。 設定 `VertiPaqPagingPolicy` 屬性並不能保證記憶體錯誤永遠不會發生。 在下列狀況下，記憶體不足錯誤仍然可能發生：  
   
--   記憶體不足以供所有字典使用。 在處理期間，Analysis Services，請鎖定記憶體中的每個資料行字典，所有這些字典不可大於指定的值`VertiPaqMemoryLimit`。  
+-   記憶體不足以供所有字典使用。 處理期間，Analysis Services 會針對記憶體中的每個資料行鎖定字典，所有這些字典不可大於 `VertiPaqMemoryLimit` 的指定值。  
   
 -   虛擬位址空間不足以容納處理序。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48091648"
  `VertiPaqMemoryLimit`  
  如果允許在磁碟中分頁，此使用會指定分頁開始的記憶體耗用量 (以總記憶體的百分比表示) 層級。 預設值是 60。 如果記憶體耗用量低於 60%，伺服器將不會磁碟中分頁。  
   
- 此屬性相依於`VertiPaqPagingPolicyProperty`，且必須設為 1，才會進行分頁。  
+ 此屬性相依於 `VertiPaqPagingPolicyProperty`，且必須設為 1，才會進行分頁。  
   
  僅適用於表格式伺服器模式。  
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server 中的封裝如何使用 RevoScaleR 函數來尋找或安裝 R |Microsoft Docs
+title: 如何使用 RevoScaleR 函數來尋找或安裝 R 封裝-SQL Server Machine Learning 服務
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e9009e26a891c031194697de78cac97db6844d58
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 64f930a72dbb7f8c6aff8338f22dd3e9b7cc7bbe
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563974"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645357"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>如何使用 RevoScaleR 函數來尋找或 SQL Server 上的安裝 R 封裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -181,7 +181,7 @@ rxSyncPackages(computeContext=computeContext, verbose=TRUE)
 
 從 Management Studio 或其他的工具，可支援 T-SQL，來取得已安裝的封裝清單，在目前的執行個體，執行此命令使用`rxInstalledPackages`預存程序。
 
-```SQL
+```sql
 EXEC sp_execute_external_script 
   @language=N'R', 
   @script=N'
@@ -192,7 +192,7 @@ EXEC sp_execute_external_script
 
 `rxSqlLibPaths`函式可以用來判斷 SQL Server Machine Learning 服務所使用的作用中程式庫。 此指令碼可以傳回只有目前的伺服器程式庫路徑。 
 
-```SQL
+```sql
 declare @instance_name nvarchar(100) = @@SERVERNAME, @database_name nvarchar(128) = db_name();
 exec sp_execute_external_script 
   @language = N'R',

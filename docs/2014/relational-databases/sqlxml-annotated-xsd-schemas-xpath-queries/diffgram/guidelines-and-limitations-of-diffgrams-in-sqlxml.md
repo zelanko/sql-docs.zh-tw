@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - DiffGrams [SQLXML], about DiffGrams
@@ -14,12 +12,12 @@ ms.assetid: cf8689c4-2a63-4d05-b202-21b5ff187d7f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2adbd116b818086e13adacd5e88d3923b53f81ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ca731cab8a88364b3b87dfc282c10fa14ebf283
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074970"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804340"
 ---
 # <a name="guidelines-and-limitations-of-diffgrams-in-sqlxml"></a>在 SQLXML 中的 DiffGrams 指導方針和限制
   搭配 SQLXML 4.0 使用 DiffGrams 時，請記住以下事項：  

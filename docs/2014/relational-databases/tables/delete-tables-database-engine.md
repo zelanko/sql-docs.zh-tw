@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - table deletions [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: ca6aa3e9-9885-44c3-bafc-aec441fd97ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60b92e01601a2c0103594405e9adca41969142fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f040c9907574bba718827999bb9c0fbb432a0bd0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165498"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814510"
 ---
 # <a name="delete-tables-database-engine"></a>刪除資料表 (Database Engine)
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中刪除 (卸除) 資料庫中的資料表。  
@@ -51,7 +50,7 @@ ms.locfileid: "48165498"
   
 -   當卸除資料表時，資料表的規則或預設值會失去它們的繫結，資料表的任何相關條件約束或觸發程序也都會自動卸除。 如果重新建立資料表，您必須重新繫結適當的規則和預設值、重新建立任何觸發程序，以及加入所有必要的條件約束。  
   
--   如果您卸除資料表，其中包含`varbinary (max)`將不會移除資料行具有 FILESTREAM 屬性，儲存在檔案系統中的任何資料。  
+-   如果卸除的資料表包含具有 FILESTREAM 屬性的 `varbinary (max)` 資料行，則儲存在檔案系統中的任何資料都不會遭到移除。  
   
 -   DROP TABLE 和 CREATE TABLE 不得在相同批次的相同資料表上執行。 否則，系統可能會發生非預期的錯誤。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48165498"
   
 2.  在資料表上按一下滑鼠右鍵，再從快速鍵功能表中選擇 [刪除]。  
   
-3.  訊息方塊會提示您確認是否刪除。 按一下 **[是]**。  
+3.  訊息方塊會提示您確認是否刪除。 按一下 [ **是**]。  
   
     > [!NOTE]  
     >  刪除資料表會自動移除它的所有關聯性。  
@@ -83,7 +82,7 @@ ms.locfileid: "48165498"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     DROP TABLE dbo.PurchaseOrderDetail;  

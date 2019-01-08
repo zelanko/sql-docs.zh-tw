@@ -24,19 +24,19 @@ ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 33f2e8751befd42ee0b92690a17d668ba37a4c9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3bf6919230c1621d2b81eb41cd715fc1878a90c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089718"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371520"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 群集演算法技術參考
   本節說明 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 叢集演算法的實作，包括可用來控制群集模型行為的參數。 本章節也提供在建立及處理叢集模型時如何改善效能的指南。  
   
  如需有關如何使用叢集模型的詳細資訊，請參閱下列主題：  
   
--   [叢集模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [群集模型查詢範例](clustering-model-query-examples.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48089718"
   
  Microsoft 實作提供兩種選擇：可擴充的 EM 和不可擴充的 EM。 在可擴充的 EM 中，根據預設會使用前 50,000 筆記錄來植入初始掃描。 如果這項作業成功，則模型僅會使用這些資料。 如果無法使用 50,000 筆記錄來找到相符的模型，就會再讀取額外的 50,000 筆記錄。 在不可擴充的 EM 中，則不論資料集的大小，都會讀取整個資料集。 這種方法可能會建立更正確的群集，但記憶體需求可能很高。 因為可擴充的 EM 是以本機緩衝區作業，所以反覆執行資料的速度會快得多，且其演算法運用 CPU 記憶體快取的方法也比不可擴充的 EM 高明許多。 此外，即使所有資料都可放入主記憶體，可擴充的 EM 速度也比不可擴充的 EM 快了三倍。 在大多數的案例中，效能改善並不會導致整個模型的品質降低。  
   
- 如需描述以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法實作之 EM 的技術報告，請參閱 [Scaling EM (Expectation Maximization) Clustering to Large Databases](http://go.microsoft.com/fwlink/?LinkId=45964)(將 EM (Expectation Maximization) 群集擴充為大型資料庫)。  
+ 如需描述以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法實作之 EM 的技術報告，請參閱 [Scaling EM (Expectation Maximization) Clustering to Large Databases](https://go.microsoft.com/fwlink/?LinkId=45964)(將 EM (Expectation Maximization) 群集擴充為大型資料庫)。  
   
 ### <a name="k-means-clustering"></a>K-means 群集  
  K-means 群集是知名的群集成員資格指派方法，作業方式是將群集中項目之間的差異最小化，並將群集之間的距離最大化。 K-means 中的 "means" 是指群集的「距心」，這是任意選擇的資料點，在選擇後會反覆調整，直到能代表群集中所有資料點的真正平均值為止。 "k" 則是指用來植入群集程序的任意數目的資料點。 K-means 演算法會計算群集中資料記錄之間的歐氏距離平方 (Squared Euclidean Distance) 以及代表群集平均值的向量，然後在總和達到最小值時聚合於最終的一組 K 群集。  
@@ -162,11 +162,11 @@ ms.locfileid: "48089718"
   
 |模型旗標|描述|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|資料行將被視為擁有兩個可能狀態：「遺漏」和「現有」。 Null 為遺漏值。<br /><br /> 適用於採礦模型資料行。|  
+|MODEL_EXISTENCE_ONLY|資料行就會被視為擁有兩個可能狀態：「遺漏」和「現有」。 Null 為遺漏值。<br /><br /> 適用於採礦模型資料行。|  
 |NOT NULL|資料行不得包含 Null 值。 如果 Analysis Services 在模型定型期間遇到 Null 值，將會產生錯誤。<br /><br /> 適用於採礦結構資料行。|  
   
 ## <a name="requirements"></a>需求  
- 叢集模型必須包含索引鍵資料行和輸入資料行。 您也可以將輸入資料行定義為可預測的。 資料行設定為`Predict Only`不會用來建立群集。 這些值在群集內的散發是在建立群集之後才計算的。  
+ 叢集模型必須包含索引鍵資料行和輸入資料行。 您也可以將輸入資料行定義為可預測的。 設定為 `Predict Only` 的資料行不會用來建立群集。 這些值在群集內的散發是在建立群集之後才計算的。  
   
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](content-types-data-mining.md)。  
@@ -182,6 +182,6 @@ ms.locfileid: "48089718"
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 群集演算法](microsoft-clustering-algorithm.md)   
  [叢集模型查詢範例](clustering-model-query-examples.md)   
- [叢集模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

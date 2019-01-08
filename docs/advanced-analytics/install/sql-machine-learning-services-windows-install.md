@@ -1,6 +1,6 @@
 ---
-title: 安裝 SQL Server Machine Learning 在 Windows 上的服務 （資料庫） |Microsoft Docs
-description: 當您在 Windows 上安裝 SQL Server 2017 Machine Learning 服務，可使用 R 在 SQL Server 或 SQL Server 上的 Python。
+title: 安裝 SQL Server Machine Learning 服務 （資料庫） 上 Windows-SQL Server 機器學習服務
+description: SQL Server 或 SQL Server 2017 Machine Learning 服務在 Windows 上的 SQL Server 安裝步驟上的 Python 中的 R。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2018
@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7f96c2acbca436ff18ccb6a12421d84bda965e4d
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 9118edd1ab25cf13cbb6d10212b50f7e7428fe9f
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878091"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645347"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>安裝 SQL Server Machine Learning 在 Windows 上的服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-從 SQL Server 2017 中，R 和 Python 支援對 SQL Server 機器學習服務，後續版本中提供的資料庫內分析[SQL Server R Services](../r/sql-server-r-services.md) SQL Server 2016 中引進。 函式程式庫適用於 R 和 Python，database engine 執行個體上執行外部指令碼。 
+啟動 SQL Server 2017 中，R 和 Python 支援提供的資料庫內分析**SQL Server Machine Learning 服務**，後續[SQL Server R Services](../r/sql-server-r-services.md) SQL Server 2016 中引進。 函式程式庫適用於 R 和 Python，database engine 執行個體上執行外部指令碼。 
 
 這篇文章說明如何執行安裝的機器學習服務元件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝精靈 中，並遵循螢幕上的提示。
 
@@ -54,7 +54,7 @@ ms.locfileid: "48878091"
   
 2. 在 **安裝**索引標籤上，選取**新的 SQL Server 獨立安裝或將功能加入到現有安裝**。
 
-   ![安裝 Machine Learning 服務資料庫](media/2017setup-installation-page-mlsvcs.PNG)
+   ![新的 SQL Server 獨立安裝](media/2017setup-installation-page-mlsvcs.PNG)
    
 3. 在 [特徵選取]  頁面上，選取下列選項：
   
@@ -101,6 +101,19 @@ ms.locfileid: "48878091"
 
 7. 安裝程式完成，如果系統指示您重新啟動電腦之後, 請現在登出。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需詳細資訊，請參閱＜ [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)＞。
 
+## <a name="set-environment-variables"></a>設定環境變數
+
+您應該設定 R 功能整合只**MKL_CBWR**環境變數，以[確保一致的輸出](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)從 Intel 數學核心程式庫 (MKL) 計算。
+
+1. 在控制台中，按一下**系統及安全性** > **System** > **進階系統設定** >  **環境變數**。
+
+2. 建立新的使用者或系統變數。 
+
+  + 將變數名稱設定為 `MKL_CBWR`
+  + 若要設定變數值 `AUTO`
+
+此步驟需要重新啟動伺服器。 如果您要啟用指令碼執行，您可以延後重新啟動後的所有組態工作完成前。
+
 <a name="bkmk_enableFeature"></a>
 
 ## <a name="enable-script-execution"></a>啟用指令碼執行
@@ -108,13 +121,13 @@ ms.locfileid: "48878091"
 1. 開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 
 
     > [!TIP]
-    > 您可以下載並安裝適當版本，從這個頁面：[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+    > 您可以下載並安裝適當版本，從這個頁面：[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
     > 您也可以試試預覽版[Azure Data Studio](../../azure-data-studio/what-is.md)，其支援的系統管理工作和 SQL Server 查詢。
   
 2. 連接到您安裝 Machine Learning 服務的執行個體，請按一下**新的查詢**開啟查詢視窗中，並執行下列命令：
 
-   ```SQL
+   ```sql
    sp_configure
    ```
 
@@ -122,7 +135,7 @@ ms.locfileid: "48878091"
     
 3.  若要啟用外部指令碼的功能，請執行下列陳述式：
     
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled', 1
     RECONFIGURE WITH OVERRIDE
     ```
@@ -145,7 +158,7 @@ ms.locfileid: "48878091"
 
 1. 在 SQL Server Management Studio 中，開啟新的查詢視窗中，並執行下列命令：
     
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled'
     ```
 
@@ -159,7 +172,7 @@ ms.locfileid: "48878091"
     
     + 適用於 R
     
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script  @language =N'R',
     @script=N'
     OutputDataSet <- InputDataSet;
@@ -171,7 +184,7 @@ ms.locfileid: "48878091"
 
     + 適用於 Python
     
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script  @language =N'Python',
     @script=N'
     OutputDataSet = InputDataSet;
@@ -205,15 +218,15 @@ ms.locfileid: "48878091"
 
 在中斷連線的伺服器，則需要額外的步驟。 如需詳細資訊，請參閱 <<c0> [ 在沒有網際網路存取的電腦上安裝 > 套用累計更新](sql-ml-component-install-without-internet-access.md#apply-cu)。
 
-1. 開始使用已安裝的基準執行個體： SQL Server 2017 的初始版本
+1. 開始使用已安裝的基準執行個體：SQL Server 2017 的初始版本
 
-2. 移至累計更新清單： [SQL Server 2017 更新](https://sqlserverupdates.com/sql-server-2017-updates/)
+2. 請移至累計更新清單：[SQL Server 2017 更新](https://sqlserverupdates.com/sql-server-2017-updates/)
 
 3. 選取最新的累積更新。 可執行檔會下載並自動擷取。
 
 4. 執行安裝程式。 接受授權條款，並在 特徵選取 頁面中，檢閱 ，套用累計更新的功能。 您應該會看到安裝目前的執行個體，包括機器學習服務功能的每項功能。 安裝程式下載封包檔需要更新所有功能。
 
-  ![](media/cumulative-update-feature-selection.png)
+  ![已安裝的功能摘要](media/cumulative-update-feature-selection.png)
 
 5. 繼續執行精靈，並接受 R 和 Python 散發套件的授權條款。 
 
@@ -275,12 +288,12 @@ ms.locfileid: "48878091"
 
 R 開發人員可以開始使用一些簡單的範例，並了解 R 與 SQL Server 的運作方式的基本概念。 下一個步驟中，請參閱下列連結：
 
-+ [教學課程： 在 T-SQL 中執行 R](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [適用於 R 開發人員教學課程： 在資料庫內分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [教學課程：在 T-SQL 中執行 R](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [教學課程：適用於 R 開發人員的資料庫內分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python 開發人員可以了解如何使用 SQL Server 中的 Python，遵循這些教學課程：
 
-+ [教學課程： 在 T-SQL 中執行 Python](../tutorials/run-python-using-t-sql.md)
-+ [適用於 Python 開發人員教學課程： 在資料庫內分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [教學課程：在 T-SQL 中執行 Python](../tutorials/run-python-using-t-sql.md)
++ [教學課程：適用於 Python 開發人員的資料庫內分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 若要檢視機器學習服務依據真實世界案例的範例，請參閱[機器學習服務教學課程](../tutorials/machine-learning-services-tutorials.md)。

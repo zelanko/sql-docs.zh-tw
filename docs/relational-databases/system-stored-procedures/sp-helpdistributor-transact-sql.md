@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdistributor_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a73e458f6ecdab249ea0aae1301dd2d5ee0e6c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63441a20a5ac4f6faed366c06fc55638073b09f4
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790266"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591392"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,43 +50,43 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@distributor=**] **'***散發者***'** 輸出  
+ [  **@distributor=**] **'**_散發者_**'** 輸出  
  這是散發者的名稱。 散發者已**sysname**，預設值是**%**，這是唯一會傳回結果集的值。  
   
- [  **@distribdb=**] **'***distribdb***'** 輸出  
+ [  **@distribdb=**] **'**_distribdb_**'** 輸出  
  這是散發資料庫的名稱。 *distribdb*已**sysname**，預設值是**%**，這是唯一會傳回結果集的值。  
   
- [  **@directory=**] **'***目錄***'** 輸出  
+ [  **@directory=**] **'**_目錄_**'** 輸出  
  這是工作目錄。 *目錄*已**nvarchar(255)**，預設值是**%**，這是唯一會傳回結果集的值。  
   
- [  **@account=**] **'***帳戶***' 輸出**  
+ [  **@account=**] **'**_帳戶_**' 輸出**  
  這是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者帳戶。 *帳戶*已**nvarchar(255)**，預設值是**%**，這是唯一會傳回結果集的值。  
   
- [  **@min_distretention=**] *min_distretention * * * 輸出**  
+ [  **@min_distretention=**] _min_distretention_**輸出**  
  這是最小散發保留期限 (以小時為單位)。 *min_distretention*已**int**，預設值是 **-1**。  
   
- [  **@max_distretention=**] *max_distretention * * * 輸出**  
+ [  **@max_distretention=**] _max_distretention_**輸出**  
  這是最大散發保留期限 (以小時為單位)。 *max_distretention*已**int**，預設值是 **-1**。  
   
- [  **@history_retention=**] *history_retention * * * 輸出**  
+ [  **@history_retention=**] _history_retention_**輸出**  
  這是記錄保留期限 (以小時為單位)。 *history_retention*已**int**，預設值是 **-1**。  
   
- [  **@history_cleanupagent=**] **'***history_cleanupagent***' 輸出**  
+ [  **@history_cleanupagent=**] **'**_history_cleanupagent_**' 輸出**  
  這是記錄清除代理程式的名稱。 *history_cleanupagent*已**nvarchar(100)**，預設值是**%**，這是唯一會傳回結果集的值。  
   
- [  **@distrib_cleanupagent =**] **'***distrib_cleanupagent***' 輸出**  
+ [  **@distrib_cleanupagent =**] **'**_distrib_cleanupagent_**' 輸出**  
  這是散發清除代理程式的名稱。 *distrib_cleanupagent*已**nvarchar(100)**，預設值是**%**，這是唯一會傳回結果集的值。  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_發行者_**'**  
  這是發行者的名稱。 *發行者*已**sysname**，預設值是 NULL。  
   
- [  **@local=**] **'***本機***'**  
+ [  **@local=**] **'**_本機_**'**  
  這是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否應該取得本機伺服器值。 *本機*已**nvarchar(5)**，預設值是 NULL。  
   
- [  **@rpcsrvname=**] **'***rpcsrvname***' 輸出**  
+ [  **@rpcsrvname=**] **'**_rpcsrvname_**' 輸出**  
  這是發出遠端程序呼叫的伺服器名稱。 *rpcsrvname*已**sysname**，預設值是**%**，這是唯一會傳回結果集的值。  
   
- [ **@publisher_type**=] **'***publisher_type***' 輸出**  
+ [ **@publisher_type**=] **'**_publisher_type_**' 輸出**  
  這是發行者的發行者類型。 *publisher_type*已**sysname**，預設值是**%**，這是唯一會傳回結果集的值。  
   
 ## <a name="result-sets"></a>結果集  

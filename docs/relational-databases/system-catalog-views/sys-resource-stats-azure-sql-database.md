@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 83ba28d09e32f043c58bdc1c63837f5b465312f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72945aca048d322ee03c8a1d88b76650ddd1db16
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723486"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392691"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47723486"
 |max_worker_percent|**decimal(5,2)**|最大並行背景工作角色 （要求） 的資料庫服務層限制的百分比。<br /><br /> 最大值是目前計算五分鐘的間隔 15 秒樣本的並行背景工作計數為基礎。|  
 |max_session_percent|**decimal(5,2)**|以百分比表示，根據資料庫的服務層限制的最大並行工作階段。<br /><br /> 最大值是目前計算五分鐘的間隔 15 秒樣本的並行工作階段計數為基礎。|  
 |dtu_limit|**int**|目前最大資料庫 DTU 此資料庫設定在此間隔期間。 |  
-|allocated_storage_in_megabytes|**float**|數量的格式化檔案空間 (MB) 可用於儲存資料庫的資料。 格式的檔案空間也稱為 「 配置的資料空間。  如需詳細資訊，請參閱： [SQL DB 中的檔案空間管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
+|allocated_storage_in_megabytes|**float**|數量的格式化檔案空間 (MB) 可用於儲存資料庫的資料。 格式的檔案空間也稱為 「 配置的資料空間。  如需詳細資訊，請參閱：[SQL DB 中的檔案空間管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  如需這些限制和服務層的詳細內容，請參閱主題[服務層](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)。  

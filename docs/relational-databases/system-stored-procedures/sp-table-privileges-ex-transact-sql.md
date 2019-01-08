@@ -18,12 +18,12 @@ ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d800eed984c6371ed689e9d8ec2748cb6b9886c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0993299edffce3139b468bf3ca27d49f88e8638b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752748"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591332"
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,19 +44,19 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@table_server =** ] **'***table_server&lt***'**  
+ [  **@table_server =** ] **'**_table_server&lt_**'**  
  這是傳回的資訊所屬的連結伺服器名稱。 *table_server&lt*已**sysname**，沒有預設值。  
   
- [  **@table_name =** ] **'***table_name***'**]  
+ [  **@table_name =** ] **'**_table_name_**'**]  
  這是提供的資料表權限資訊所屬的資料表名稱。 *table_name*已**sysname**，預設值是 NULL。  
   
- [  **@table_schema =** ] **'***table_schema***'**  
+ [  **@table_schema =** ] **'**_table_schema_**'**  
  這是資料表結構描述。 在某些 DBMS 環境中，這是資料表擁有者。 *table_schema*已**sysname**，預設值是 NULL。  
   
- [  **@table_catalog =** ] **'***table_catalog 排列***'**  
+ [  **@table_catalog =** ] **'**_table_catalog 排列_**'**  
  在其中的資料庫名稱指定*table_name*所在。 *table_catalog 排列*已**sysname**，預設值是 NULL。  
   
- [  **@fUsePattern =**] **'***fUsePattern***'**  
+ [  **@fUsePattern =**] **'**_fUsePattern_**'**  
  判斷是否將 '_'、'%'、'[' 和 ']' 等字元解譯為萬用字元。 有效值是 0 (關閉模式比對) 和 1 (開啟模式比對)。 *fUsePattern*已**元**，預設值是 1。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -66,7 +66,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|資料表限定詞名稱。 各種 DBMS 產品都支援三部分的資料表命名 (*限定詞 ***。*** 擁有者 ***。*** 名稱*)。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。 這個欄位可以是 NULL。|  
+|**TABLE_CAT**|**sysname**|資料表限定詞名稱。 各種 DBMS 產品都支援三部分的資料表命名 (_限定詞_**。**_擁有者_**。**_名稱_)。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。 這個欄位可以是 NULL。|  
 |**再依據 TABLE_SCHEM 排列**|**sysname**|資料表擁有者名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個資料行代表建立資料表的資料庫使用者名稱。 這個欄位一律會傳回值。|  
 |**TABLE_NAME**|**sysname**|資料表名稱。 這個欄位一律會傳回值。|  
 |**同意授權者**|**sysname**|已授與此權限的資料庫使用者名稱**TABLE_NAME**與列出**被授與者**。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此資料行一律是相同**TABLE_OWNER**。 這個欄位一律會傳回值。 另外，GRANTOR 資料行可能是資料庫擁有者 (**TABLE_OWNER**) 或使用者對象的資料庫擁有者授與權限的 GRANT 陳述式中使用 WITH GRANT OPTION 子句。|  
@@ -81,7 +81,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
  需要結構描述的 SELECT 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會從指定連結伺服器 `Product` 中，傳回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中名稱開頭為 `Seattle1` 的資料表之權限資訊  (假設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是連結伺服器)。  
+ 下列範例會從指定連結伺服器 `Product` 中，傳回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中名稱開頭為 `Seattle1` 的資料表之權限資訊  ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會假定為連結的伺服器)。  
   
 ```  
 EXEC sp_table_privileges_ex @table_server = 'Seattle1',   

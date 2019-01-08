@@ -16,12 +16,12 @@ ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a8e20d46bb3efbf64d5c8c176c451652e1c870a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 214d58fd64649b23f632b393d6b9b0a2b71a2359
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077338"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362830"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>設定服務帳戶 (Analysis Services)
   [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中記載如何佈建適用於整個產品範圍的帳戶，該主題提供適用於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務 (包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]) 的全方位服務帳戶資訊。 如需了解有效的帳戶類型、由安裝程式指派的 Windows 權限、檔案系統權限、登錄權限等，請參閱該主題。  
@@ -37,7 +37,7 @@ ms.locfileid: "48077338"
  另一個設定步驟 (此處未記載) 是註冊 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體和服務帳戶的服務主要名稱 (SPN)。 這個步驟可在雙躍點狀況下啟用從用戶端應用程式到後端資料來源的傳遞驗證。 這個步驟僅適用於針對 Kerberos 限制委派設定的服務。 如需進一步指示，請參閱＜ [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md) ＞。  
   
 ## <a name="logon-account-recommendations"></a>登入帳戶建議  
- 在容錯移轉叢集中，Analysis Services 的所有執行個體都應該都設定為使用 Windows 網域使用者帳戶。 將相同的帳戶指派給所有執行個體。 請參閱 [如何將 Analysis Services 叢集化](http://msdn.microsoft.com/library/dn736073.aspx) 如需詳細資訊。  
+ 在容錯移轉叢集中，Analysis Services 的所有執行個體都應該都設定為使用 Windows 網域使用者帳戶。 將相同的帳戶指派給所有執行個體。 請參閱 [如何將 Analysis Services 叢集化](https://msdn.microsoft.com/library/dn736073.aspx) 如需詳細資訊。  
   
  獨立執行個體應該使用預設虛擬帳戶**NT Service\MSSQLServerOLAPService**的預設執行個體，或 **NT Service\MSOLAP$ * * * 執行個體名稱*的具名執行個體。 這項建議適用於所有伺服器模式中的 Analysis Services 執行個體，作業系統為 Windows Server 2008 R2 和更新版本，而 Analysis Services 為 SQL Server 2012 和更新版本。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48077338"
   
  針對內部作業，Analysis Services 中的權限持有者不是登入帳戶，而是包含個別服務 SID 的安裝程式建立的本機 Windows 安全性群組。 指派權限給安全性群組的動作與舊版的 Analysis Services 一致。 同時，登入帳戶可能隨著時間變更，但個別服務 SID 與本機安全性群組在伺服器安裝的存留期都維持不變。 針對 Analysis Services，這會使得安全性群組，而不是登入帳戶，成為持有權限的較佳選擇。 每當您手動授與權限給服務執行個體，不論是檔案系統權限或 Windows 權限，請務必將為伺服器執行個體建立的權限授與本機安全性群組。  
   
- 遵循模式之安全性群組的名稱。 前置詞一律是`SQLServerMSASUser$`，後面接著電腦名稱，結尾是執行個體名稱。 預設執行個體是`MSSQLSERVER`。 具名執行個體是在設定期間指定的名稱。  
+ 遵循模式之安全性群組的名稱。 前置詞一律是 `SQLServerMSASUser$`，後面接著電腦名稱，結尾是執行個體名稱。 預設執行個體是 `MSSQLSERVER`。 具名執行個體是在設定期間指定的名稱。  
   
  您可以在本機安全性設定中看到這個安全性群組：  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48077338"
  群組的唯一成員是個別服務 SID。 旁邊就是登入帳戶。 登入帳戶名稱是表面，在此提供內容給個別服務 SID。 如果您後續變更登入帳戶，然後返回此頁面，會發現安全性群組和個別服務 SID 不會變更，但是登入帳戶標籤則不同。  
   
 ##  <a name="bkmk_winpriv"></a> 指派給 Analysis Services 服務帳戶的 Windows 權限  
- Analysis Services 需要來自作業系統的權限，才能進行服務啟動，以及要求系統資源。 需求會依照伺服器模式以及執行個體是否已叢集而改變。 如果您不熟悉 Windows 權限，請參閱 [權限](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) 和 [權限常數 (Windows)](/windows/desktop/SecAuthZ/privilege-constants) 以了解詳細資訊。  
+ Analysis Services 需要來自作業系統的權限，才能進行服務啟動，以及要求系統資源。 需求會依照伺服器模式以及執行個體是否已叢集而改變。 如果您不熟悉 Windows 權限，請參閱 [權限](https://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) 和 [權限常數 (Windows)](/windows/desktop/SecAuthZ/privilege-constants) 以了解詳細資訊。  
   
  Analysis Services 的所有執行個體都需有 **[以服務方式登入]** (SeServiceLogonRight) 權限。 SQL Server 安裝程式會為您指派安裝期間所指定之服務帳戶的權限。 對於以多維度和資料採礦模式執行的伺服器而言，這對獨立伺服器安裝而言是 Analysis Services 服務帳戶所需的唯一 Windows 權限，而且它是安裝程式為 Analysis Services 所設定的唯一權限。 至於叢集和表格式執行個體，則是必須手動新增其他 Windows 權限。  
   
@@ -67,9 +67,9 @@ ms.locfileid: "48077338"
   
 |||  
 |-|-|  
-|**增加處理程序工作組** (SeIncreaseWorkingSetPrivilege)|透過 **[使用者]** 安全性群組，此權限預設可供所有使用者使用。 如果您藉由移除這個群組的權限來鎖定伺服器，Analysis Services 可能會無法啟動，並會記錄以下錯誤：「用戶端沒有這項特殊權限。」 發生這個錯誤時，請將權限授與適當的 Analysis Services 安全性群組，藉以將權限還原到 Analysis Services。|  
+|**增加處理程序工作組** (SeIncreaseWorkingSetPrivilege)|透過 **[使用者]** 安全性群組，此權限預設可供所有使用者使用。 如果您藉由移除這個群組的權限來鎖定伺服器，Analysis Services 可能會無法啟動，並會記錄以下錯誤：「用戶端沒有必要的權限。」 發生這個錯誤時，請將權限授與適當的 Analysis Services 安全性群組，藉以將權限還原到 Analysis Services。|  
 |**調整處理序的記憶體配額** (SeIncreaseQuotaSizePrivilege)|如果處理程序擁有的資源不足以完成它的執行 (受限於針對執行個體所建立的記憶體臨界值)，則可使用這個權限來要求更多記憶體。|  
-|**鎖定記憶體中的分頁** (SeLockMemoryPrivilege)|只有在完全關閉分頁時才需要這個權限。 根據預設，表格式伺服器執行個體使用 Windows 分頁檔，但您可以防止它藉由設定使用 Windows 分頁`VertiPaqPagingPolicy`設為 0。<br /><br /> `VertiPaqPagingPolicy` 設為 1 （預設值），指示表格式伺服器執行個體使用 Windows 分頁檔。 配置並未鎖定，可視需要允許 Windows 移出分頁。 由於已使用分頁，所以不需鎖定記憶體中的分頁。 因此，針對預設設定 (其中`VertiPaqPagingPolicy`= 1)，您不需要授與**在記憶體中鎖定分頁**表格式執行個體的權限。<br /><br /> `VertiPaqPagingPolicy` 設為 0。 如果您針對 Analysis Services 關閉分頁，即會假設已將 **[鎖定記憶體中的分頁]** 權限授與表格式執行個體，而鎖定配置。 指定這個設定和 **[鎖定記憶體中的分頁]** 權限，Windows 便無法在系統處於記憶體不足壓力的情況下，移出針對 Analysis Services 所做之記憶體配置的分頁。 Analysis Services 會仰賴**在記憶體中鎖定分頁**權限，才能在`VertiPaqPagingPolicy`= 0。 請注意，不建議關閉 Windows 分頁。 這將會提高作業產生記憶體不足之錯誤的機率，而這些作業在允許分頁的情況下可能就會成功。 請參閱[Memory Properties](../server-properties/memory-properties.md)如需詳細資訊`VertiPaqPagingPolicy`。|  
+|**鎖定記憶體中的分頁** (SeLockMemoryPrivilege)|只有在完全關閉分頁時才需要這個權限。 根據預設，表格式伺服器執行個體會使用 Windows 分頁檔，但是您可以藉由將 `VertiPaqPagingPolicy` 設為 0，來防止它使用 Windows 分頁。<br /><br /> `VertiPaqPagingPolicy` 為 1 (預設值)，指示表格式伺服器執行個體使用 Windows 分頁檔。 配置並未鎖定，可視需要允許 Windows 移出分頁。 由於已使用分頁，所以不需鎖定記憶體中的分頁。 因此，針對預設設定 (其中`VertiPaqPagingPolicy`= 1)，您不需要授與**在記憶體中鎖定分頁**表格式執行個體的權限。<br /><br /> `VertiPaqPagingPolicy` 為 0。 如果您針對 Analysis Services 關閉分頁，即會假設已將 **[鎖定記憶體中的分頁]** 權限授與表格式執行個體，而鎖定配置。 指定這個設定和 **[鎖定記憶體中的分頁]** 權限，Windows 便無法在系統處於記憶體不足壓力的情況下，移出針對 Analysis Services 所做之記憶體配置的分頁。 Analysis Services 會仰賴**在記憶體中鎖定分頁**權限，才能在`VertiPaqPagingPolicy`= 0。 請注意，不建議關閉 Windows 分頁。 這將會提高作業產生記憶體不足之錯誤的機率，而這些作業在允許分頁的情況下可能就會成功。 請參閱[Memory Properties](../server-properties/memory-properties.md)如需詳細資訊`VertiPaqPagingPolicy`。|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>檢視或新增服務帳戶的 Windows 權限  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48077338"
 3.  使用 [電腦管理員]  |  |  | [MSASxx.MSSQLServer] | []  |  ，確認已將資料夾安全性屬性授與步驟 2 中的安全性群組。  
   
 > [!NOTE]  
->  請勿移除或修改 SID。 若要還原不小心刪除的個別服務 SID，請參閱[ http://support.microsoft.com/kb/2620201 ](http://support.microsoft.com/kb/2620201)。  
+>  請勿移除或修改 SID。 若要還原不小心刪除的個別服務 SID，請參閱[ https://support.microsoft.com/kb/2620201 ](https://support.microsoft.com/kb/2620201)。  
   
  **更多關於個別服務 SID 的資訊**  
   
@@ -151,8 +151,8 @@ ms.locfileid: "48077338"
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [SQL Server 服務帳戶和個別服務 SID （部落格）](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
- [SQL Server 使用服務 SID 提供服務隔離 （知識庫文章）](http://support.microsoft.com/kb/2620201)   
+ [SQL Server 服務帳戶和個別服務 SID (部落格)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
+ [SQL Server 使用服務 SID 提供服務隔離 (知識庫文件)](https://support.microsoft.com/kb/2620201)   
  [存取 Token (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
  [安全性識別碼 (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
  [存取 Token (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   

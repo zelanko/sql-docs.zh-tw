@@ -1,5 +1,5 @@
 ---
-title: 將篩選套用至採礦模型 |Microsoft 文件
+title: 將篩選套用至採礦模型 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a3e192718ed0e1c3597f4e0f76c951a96530c6c7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5430aa0125e621a574d8fb9cc6b28f6b73794b46
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014595"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519264"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>將篩選套用至採礦模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +65,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 9. 在方格中，按下一個資料列。  
   
-     您所建立的篩選條件會自動加入 [運算式] 文字方塊。 例如， `[Income] > '30000'`  
+     您所建立的篩選條件會自動加入 [運算式] 文字方塊。 例如： `[Income] > '30000'`   
   
 10. 在方格的下一個資料列中，按一下 [AND/OR] 文字方塊以加入條件。  
   
@@ -81,7 +81,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 ### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>若要在採礦模型中的巢狀資料表加入篩選  
   
-1.  在**\<名稱 > 模組篩選器**對話方塊方塊中，按一下空白資料列在底下的方格**採礦結構資料行**。  
+1.  在  **\<名稱 > 模組篩選器**對話方塊方塊中，按一下空白資料列在底下的方格**採礦結構資料行**。  
   
 2.  從下拉式清單選取巢狀資料表的名稱。  
   
@@ -91,7 +91,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      這是 [模組篩選器] 對話方塊中，唯一可用於巢狀資料表的條件，因為您將案例資料表限制為僅在巢狀資料表中包含特定值的案例。 下一個步驟將設定巢狀資料表的條件值。  
   
-4.  按一下 [值] 方塊，然後按一下 **(…)** 按鈕建置運算式。  
+4.  按一下 **值**方塊，然後再按一下 **（...）** 按鈕建置運算式。  
   
      **\<名稱 > 篩選**對話方塊隨即開啟。 這個對話方塊只能在目前的資料表上設定條件，在此例中為巢狀資料表。  
   
@@ -120,8 +120,8 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     >  如果您以手動方式變更篩選運算式的任何部分，則該方格會停用，之後就只能在文字編輯模式中使用篩選運算式。 若要還原方格編輯模式，必須清除篩選運算式並重新開始。  
   
 ## <a name="see-also"></a>另請參閱  
- [篩選採礦模型 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [採礦模型的工作與操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [採礦模型工作和使用說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [從採礦模型刪除篩選](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   

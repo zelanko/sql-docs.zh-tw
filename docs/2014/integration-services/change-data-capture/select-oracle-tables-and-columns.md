@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - selTabCol
@@ -13,12 +12,12 @@ ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c02f4a98ad0ee4d7b73fe20041a03b53b34b2b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af7f97d7d1671aada299b685981e81d62010df24
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051371"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788341"
 ---
 # <a name="select-oracle-tables-and-columns"></a>選取 Oracle 資料表和資料行
   使用 [選取 Oracle 資料表和資料行] 頁面，從擷取變更的 Oracle 來源資料庫選取資料表。 此頁面具有以下元素：  
@@ -27,15 +26,15 @@ ms.locfileid: "48051371"
  **資料表清單**  
  此資料表清單具有三個資料行：  
   
--   **Oracle 資料表名稱**：資料表的名稱，包括資料表結構描述。  
+-   **Oracle 資料表名稱**:資料表，其中包括資料表結構描述的名稱。  
   
--   **擷取執行個體**：用來命名執行個體特有之異動資料擷取物件的擷取執行個體名稱。 擷取執行個體不得為 NULL。  
+-   **擷取執行個體**:用來命名執行個體特有異動資料擷取物件之擷取執行個體名稱。 擷取執行個體不得為 NULL。  
   
      如果沒有指定，就會採用 `<schema-name>_<table-name>`格式，從來源結構描述名稱加上來源資料表名稱衍生此名稱。 擷取執行個體名稱不得超過 100 個字元，而且在資料庫中必須是唯一的。  
   
      您可以在此資料行中按一下任何資料格，手動編輯 **capture_instance**。  
   
--   **安全性角色**：用來控制變更資料之存取權的資料庫控制角色名稱。  
+-   **安全性角色**:控制用來控制變更資料的存取權的角色的資料庫名稱。  
   
      您可以在此資料行中按一下任何資料格，手動編輯 **security_role**。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "48051371"
 ## <a name="see-also"></a>另請參閱  
  [如何建立 SQL Server 變更資料庫執行個體](how-to-create-the-sql-server-change-database-instance.md)   
  [編輯資料表](edit-tables.md)   
- [將資料表新增至 CDC 執行個體](add-tables-to-a-cdc-instance.md)   
+ [將資料表加入至 CDC 執行個體](add-tables-to-a-cdc-instance.md)   
  [編輯資料表屬性](edit-the-table-properties.md)  
   
   

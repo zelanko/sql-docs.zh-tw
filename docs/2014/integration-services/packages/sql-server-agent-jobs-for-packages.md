@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [Integration Services]
@@ -16,12 +15,12 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da8e353f9ebd79f0b2934f697cb720f9cc62e3de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe378671c1cb9b93ae8262869742c0b01a6d9cac
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225938"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369930"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>封裝的 SQL Server Agent 作業
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，自動化並排程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的執行。 您可以排程部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器，並且儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統的封裝。  
@@ -55,14 +54,14 @@ ms.locfileid: "48225938"
   
  如需詳細資訊，請參閱 [使用 SQL Server Agent 排程封裝](../schedule-a-package-by-using-sql-server-agent.md)。  
   
- 如需示範如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來執行封裝的影片，請參閱 MSDN Library 中的影片首頁， [如何：使用 SQL Server Agent 讓 SSIS 封裝執行自動化 (SQL Server 影片)](http://go.microsoft.com/fwlink/?LinkId=141771)。  
+ 如需示範如何使用的影片[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式執行封裝時，請參閱視訊的首頁上， [How to:使用 SQL Server Agent （SQL Server 視訊），讓封裝執行自動化](https://go.microsoft.com/fwlink/?LinkId=141771)，MSDN Library 中。  
   
 ##  <a name="trouble"></a> 疑難排解  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟可能無法啟動封裝，即使封裝在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中以及從命令列都順利執行。 此問題有一些常見的原因，以及數個建議的解決方案。 如需詳細資訊，請參閱下列資源。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫文件： [從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行](http://support.microsoft.com/kb/918760)  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫文件： [從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行](https://support.microsoft.com/kb/918760)  
   
--   位於 MSDN Library 的影片： [疑難排解：使用 SQL Server Agent 的封裝執行 (SQL Server 影片)](http://go.microsoft.com/fwlink/?LinkId=141772)。  
+-   視訊[疑難排解：使用 SQL Server Agent （SQL Server 視訊） 的封裝執行](https://go.microsoft.com/fwlink/?LinkId=141772)，MSDN Library 中。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟啟動封裝後，封裝執行可能失敗，也可能會成功，但產生非預期的結果。 您可以使用下列工具對這些問題進行疑難排解。  
   
@@ -94,16 +93,16 @@ ms.locfileid: "48225938"
   
 ## <a name="external-resources"></a>外部資源  
   
--   [網站上的知識庫文件：](http://support.microsoft.com/kb/918760)從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
+-   [網站上的知識庫文件：](https://support.microsoft.com/kb/918760)從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
--   位於 MSDN Library 的影片： [疑難排解：使用 SQL Server Agent 的封裝執行 (SQL Server 影片)](http://go.microsoft.com/fwlink/?LinkId=141772)  
+-   視訊[疑難排解：使用 SQL Server Agent （SQL Server 視訊） 的封裝執行](https://go.microsoft.com/fwlink/?LinkId=141772)，MSDN Library 中  
   
--   位於 MSDN Library 的影片： [如何：使用 SQL Server Agent 讓 SSIS 封裝執行自動化 (SQL Server 影片)](http://go.microsoft.com/fwlink/?LinkId=141771)  
+-   視訊[How to:使用 SQL Server Agent （SQL Server 視訊），讓封裝執行自動化](https://go.microsoft.com/fwlink/?LinkId=141771)，MSDN Library 中  
   
--   位於 mssqltips.com 的技術文件： [Checking SQL Server Agent jobs using Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=165675)(使用 Windows PowerShell 檢查 SQL Server Agent 作業)  
+-   位於 mssqltips.com 的技術文件： [Checking SQL Server Agent jobs using Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=165675)(使用 Windows PowerShell 檢查 SQL Server Agent 作業)  
   
--   mssqltips.com 上的技術文件： [Auto alert for SQL Agent jobs when they are enabled or disabled](http://go.microsoft.com/fwlink/?LinkId=165676)(於 SQL Agent 作業已啟用或停用時自動警示)  
+-   mssqltips.com 上的技術文件： [Auto alert for SQL Agent jobs when they are enabled or disabled](https://go.microsoft.com/fwlink/?LinkId=165676)(於 SQL Agent 作業已啟用或停用時自動警示)  
   
--   mssqltips.com 上的部落格文章： [Configuring SQL Agent Jobs to Write to Windows Event Log](http://go.microsoft.com/fwlink/?LinkId=220745)(將 SQL 代理程式工作設定成寫入 Windows 事件記錄檔)。  
+-   mssqltips.com 上的部落格文章： [Configuring SQL Agent Jobs to Write to Windows Event Log](https://go.microsoft.com/fwlink/?LinkId=220745)(將 SQL 代理程式工作設定成寫入 Windows 事件記錄檔)。  
   
   

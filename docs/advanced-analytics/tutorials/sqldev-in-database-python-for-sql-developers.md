@@ -1,5 +1,5 @@
 ---
-title: 資料庫內 Python 分析適用於 SQL 開發人員 |Microsoft Docs
+title: 適用於 SQL 開發人員-SQL Server 機器學習服務的資料庫內 Python 分析的教學課程
 description: 了解如何在 SQL Server 預存程序和 T-SQL 函式中內嵌 Python 程式碼。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 728ab56a844a6c7a14f5de7e39abc5d38146c85a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: be4ac6b7f7c156ebeda843e8aa987ab45ef4057d
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560375"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596679"
 ---
-# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>適用於 SQL 開發人員的教學課程： 在資料庫內 Python 分析
+# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>教學課程：適用於 SQL 開發人員的資料庫內 Python 分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在本教學課程中的 SQL 程式設計人員，透過建置和部署以 Python 為基礎的機器學習解決方案使用了解 Python 整合[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)上 SQL Server 資料庫。 
@@ -38,13 +38,13 @@ ms.locfileid: "51560375"
 
 不論您是剛接觸 Python 或 Python 開發人員熟悉 SQL 的 SQL 程式設計人員，此多部分的教學課程會介紹進行 Python 和 SQL Server 資料庫內分析的一般工作流程。 
 
-+ [第 1 課： 瀏覽及視覺化資料使用 Python](sqldev-py3-explore-and-visualize-the-data.md)
++ [第 1 課：瀏覽及視覺化資料使用 Python](sqldev-py3-explore-and-visualize-the-data.md)
 
-+ [第 2 課： 建立使用自訂 SQL 函式的資料特徵](sqldev-py4-create-data-features-using-t-sql.md)
++ [第 2 課：使用自訂 SQL 函式建立資料特徵](sqldev-py4-create-data-features-using-t-sql.md)
 
-+ [第 3 課： 訓練及儲存使用 T-SQL Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
++ [第 3 課：訓練及儲存使用 T-SQL Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-+ [第 4 課： 預測潛在的預存程序中使用 Python 模型的結果](sqldev-py6-operationalize-the-model.md)
++ [第 4 課：預測潛在的預存程序中使用 Python 模型的結果](sqldev-py6-operationalize-the-model.md)
 
 模型儲存到資料庫之後，您可以呼叫模型的預測[!INCLUDE[tsql](../../includes/tsql-md.md)]使用預存程序。
 

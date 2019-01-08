@@ -1,5 +1,5 @@
 ---
-title: 第 6 課：將 ReportViewer 控制項新增至應用程式 | Microsoft Docs
+title: 第 6 課：將 ReportViewer 控制項新增至應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: afb73e5dc93efdadb0754072d652b7328aaa2151
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf11d44179dadbc3362c2fcf6f946c30d6856a56
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103998"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361120"
 ---
-# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>第 6 課：將 ReportViewer 控制項加入到應用程式
+# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>第 6 課：將 ReportViewer 控制項加入至應用程式
   使用 [報表精靈] 設計子報表之後，下一步是要將 ReportViewer 控制項加入至網站應用程式。  
   
 ### <a name="to-add-a-reportviewer-control-to-the-application"></a>若要將 ReportViewer 控制項加入至應用程式  
@@ -33,7 +33,7 @@ ms.locfileid: "48103998"
   
 5.  在 **選擇報表**方塊中，選取您建立的父報表。  
   
-     當您選取報表時，報表中所使用的資料來源執行個體會自動建立。 已產生程式碼來具現化每個 DataTable (及其[資料集](http://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx)容器)。 [ObjectDataSource](http://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx)控制項加入至設計介面，對應報表中使用每個資料來源。 此資料來源控制項會自動設定。  
+     當您選取報表時，報表中所使用的資料來源執行個體會自動建立。 產生的程式碼會具現化每個 DataTable (及其 [DataSet](https://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) 容器)。 [ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx) 控制項會新增至設計介面，對應報表中使用的每個資料來源。 此資料來源控制項會自動設定。  
   
      如果您使用 Microsoft Visual Studio 2012，請確定如果完整的名稱會列在其中將 ObjectDataSource 控制項結合完整專案命名空間的 dataset1**選擇您的商務物件**下拉式清單方塊 (例如 Projectnamespace.DataSet1TableAdapters.ProductTableAdapter)。 您以滑鼠右鍵按一下 [ObjectDataSource]，然後按一下 [存取] 清單方塊**設定資料來源**。  
   

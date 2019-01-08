@@ -1,6 +1,6 @@
 ---
-title: 安裝 SQL Server machine learning 沒有網際網路存取的 R 和 Python 元件 |Microsoft Docs
-description: 離線或已中斷連線 Machine Learning R 和 Python 安裝獨立的 SQL Server 執行個體。
+title: 安裝 R 語言和沒有網際網路存取-SQL Server Machine Learning 的 Python 元件
+description: 離線或已中斷連線 Machine Learning R 和 Python 安裝程式在隔離網路防火牆後方的 SQL Server 執行個體上。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 24369c69df30e2723ce0c2098f2050ed0e5d7b20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01f871b6f6a96c053daca13060cac1223415eb20
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150543"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596989"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>安裝 SQL Server machine learning 無法存取網際網路的電腦上的 R 和 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ Microsoft Python 伺服器    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/
 
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016 的離線安裝
 
-SQL Server 2016 資料庫內分析是 R 僅，搭配正是其中兩個封包檔產品套件和 Microsoft 發佈的開放原始碼 R，分別。 先安裝這些版本的任何一個： SP 2，SP 1 RTM。 就地的基底安裝之後，可以在下一個步驟套用累計更新。
+SQL Server 2016 資料庫內分析是 R 僅，搭配正是其中兩個封包檔產品套件和 Microsoft 發佈的開放原始碼 R，分別。 先安裝這些版本的任何一個：RTM，SP 1，SP 2。 就地的基底安裝之後，可以在下一個步驟套用累計更新。
 
 在具有網際網路連線的電腦，下載安裝程式用來安裝 SQL Server 2016 上的資料庫內分析封包檔。 
 
@@ -121,11 +121,24 @@ SQL Server 安裝媒體 （.iso 或.cab） 和資料庫內分析封包檔案複�
 
 6. 執行安裝程式。 接受授權條款，並在 特徵選取 頁面中，檢閱 ，套用累計更新的功能。 您應該會看到安裝目前的執行個體，包括機器學習服務功能的每項功能。
 
-  ![](media/cumulative-update-feature-selection.png)
+  ![從功能樹狀目錄中選取的功能](media/cumulative-update-feature-selection.png "功能清單")
 
 5. 繼續執行精靈，並接受 R 和 Python 散發套件的授權條款。 在安裝期間，系統會提示您選擇 包含更新的封包檔的資料夾位置。
 
-## <a name="post-install-configuration"></a>後續安裝組態
+## <a name="set-environment-variables"></a>設定環境變數
+
+您應該設定 R 功能整合只**MKL_CBWR**環境變數，以[確保一致的輸出](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)從 Intel 數學核心程式庫 (MKL) 計算。
+
+1. 在控制台中，按一下**系統及安全性** > **System** > **進階系統設定** >  **環境變數**。
+
+2. 建立新的使用者或系統變數。 
+
+  + 將變數名稱設定為 `MKL_CBWR`
+  + 若要設定變數值 `AUTO`
+
+此步驟需要重新啟動伺服器。 如果您要啟用指令碼執行，您可以延後重新啟動後的所有組態工作完成前。
+
+## <a name="post-install-configuration"></a>安裝後續設定
 
 安裝完成之後，重新啟動服務，然後設定 啟用指令碼執行的伺服器：
 

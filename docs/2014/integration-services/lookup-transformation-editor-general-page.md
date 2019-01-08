@@ -13,12 +13,12 @@ ms.assetid: 4bd15e48-0feb-4f95-be91-5df58105dbfb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6814b581058db6da3848f62ede8ef765d4db66b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4a21eccc41f70ab505ed65bb6dd26ffc275a7b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189278"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368340"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>查閱轉換編輯器 (一般頁面)
   使用 [查閱轉換編輯器] 對話方塊的 **[一般]** 頁面來選取快取模式、選取連接類型，及指定如何處理無相符項目的資料列。  
@@ -49,13 +49,13 @@ ms.locfileid: "48189278"
  從 **[指定如何處理無相符項目的資料列]** 清單方塊中選取任何其他選項時，會將資料列當做錯誤處理。 可以使用 **[錯誤輸出]** 頁面上的 **[錯誤]** 選項。  
   
 ## <a name="external-resources"></a>外部資源  
- blogs.msdn.com 上的部落格文章： [查閱快取模式](http://go.microsoft.com/fwlink/?LinkId=219518)   
+ blogs.msdn.com 上的部落格文章： [查閱快取模式](https://go.microsoft.com/fwlink/?LinkId=219518)   
   
 ## <a name="see-also"></a>另請參閱  
- [快取連接管理員](connection-manager/cache-connection-manager.md)   
- [查閱轉換編輯器&#40;連接頁面&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
+ [Cache Connection Manager](connection-manager/cache-connection-manager.md)   
+ [查閱轉換編輯器 &#40;連接頁面&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [查閱轉換編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
- [查閱轉換編輯器&#40;進階頁面&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [查閱轉換編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
+ [查閱轉換編輯器 &#40;進階頁面&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [查閱轉換編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)  
   
   

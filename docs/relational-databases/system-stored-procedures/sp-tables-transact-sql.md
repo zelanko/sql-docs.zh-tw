@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da1a73aebef6637b97d400de19379f37a60315a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27c6e8b8a1eca70a9f6d7753c2c0c943444f65d7
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688506"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589775"
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,24 +49,24 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@table_name=** ] **'***name***'**  
+ [  **@table_name=** ] **'**_名稱_**'**  
  這是用來傳回目錄資訊的資料表。 *名稱*已**nvarchar(384)**，預設值是 NULL。 支援萬用字元的模式比對。  
   
- [  **@table_owner=** ] **'***擁有者***'**  
+ [  **@table_owner=** ] **'**_擁有者_**'**  
  這是用來傳回目錄資訊之資料表的資料表擁有者。 *擁有者*已**nvarchar(384)**，預設值是 NULL。 支援萬用字元的模式比對。 如果未指定擁有者，就會套用基礎 DBMS 的預設資料表可見性規則。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定之名稱的資料表，就會傳回該資料表的資料行。 如果未指定擁有者，且目前使用者並未擁有指定之名稱的資料表，這個程序就會尋找資料庫擁有者所擁有之指定名稱的資料表。 如果資料表存在，就會傳回這份資料表的資料行。  
   
- [  **@table_qualifier=** ] **'***限定詞***'**  
- 這是資料表限定詞的名稱。 *限定詞*已**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (*限定詞 ***。*** 擁有者 ***。*** 名稱*)。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+ [  **@table_qualifier=** ] **'**_限定詞_**'**  
+ 這是資料表限定詞的名稱。 *限定詞*已**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (_限定詞_**。**_擁有者_**。**_名稱_)。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
- [ **，** [  **@table_type=** ] **"'***類型***'**， **'** 類型 **'"** ]  
+ [ **，** [  **@table_type=** ] **"'**_型別_**'**， **'** 類型 **'"** ]  
  這是一份值清單 (以逗號分隔)，用來提供指定之資料表類型所有資料表的相關資訊。 其中包括**表格**， **SYSTEMTABLE**，並**檢視**。 *型別*已**varchar(100)**，預設值是 NULL。  
   
 > [!NOTE]  
 >  每個資料表類型都必須用單引號括住，整個參數必須用雙引號括住。 資料表類型必須是大寫。 如果 SET QUOTED_IDENTIFIER 是 ON，每個單引號都必須變成兩個，整個參數必須用單引號括住。  
   
- [  **@fUsePattern =** ] **'***fUsePattern***'**  
+ [  **@fUsePattern =** ] **'**_fUsePattern_**'**  
  判斷是否將底線 (_)、百分比 (%) 和方括號 ([ 或 ]) 字元解譯成萬用字元。 有效值是 0 (關閉模式比對) 和 1 (開啟模式比對)。 *fUsePattern*已**元**，預設值是 1。  
   
 ## <a name="return-code-values"></a>傳回碼值  

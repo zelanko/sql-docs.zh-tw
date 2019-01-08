@@ -11,12 +11,12 @@ ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1028dc0f73c6acb9832ce83bc5fad82e11322a13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 733842d4119c83835feff7c71b63f28d419593ab
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209858"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365820"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot for SharePoint (SSAS)
   PowerPivot for SharePoint 是以 SharePoint 模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 PowerPivot for SharePoint 提供將 PowerPivot 資料裝載於 SharePoint 伺服器陣列的功能。 PowerPivot 資料是您使用下列其中一個項目建立的分析資料模型：  
@@ -89,7 +89,7 @@ ms.locfileid: "48209858"
  [授權拓撲和成本範例 SQL Server 2014 自助商業智慧](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [PowerPivot 規劃與部署](http://go.microsoft.com/fwlink/?linkID=220972)   
- [Powerpivot for SharePoint 災害復原](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [PowerPivot 規劃與部署](https://go.microsoft.com/fwlink/?linkID=220972)   
+ [Powerpivot for SharePoint 災害復原](https://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

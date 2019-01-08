@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - Sql12.swb.sqlimail.newaccount.f1
@@ -40,12 +39,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a1e6aa62858c85da20f13295cfb2dce0ee302ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72f7ee857946267ca1c8732976cb31d30767bfed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217618"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371180"
 ---
 # <a name="configure-database-mail"></a>設定 Database Mail
   本主題說明如何使用 Database Mail 組態精靈來啟用及設定 Database Mail，並使用範本建立 Database Mail 組態指令碼。  
@@ -79,11 +78,11 @@ ms.locfileid: "48217618"
 ###  <a name="Welcome"></a> 歡迎頁面  
  此頁說明設定 Database Mail 的步驟。  
   
- **不要再顯示此頁面** - 如果將來要略過此歡迎頁面，請核取此選項。  
+ **不要再顯示此頁面** - 若將來要略過此歡迎頁面，請核取此選項。  
   
  **下一步** - 繼續 [選取組態工作] 頁面。  
   
- **取消** - 結束精靈，而不設定 Database Mail。  
+ **取消** - 終止精靈，而不設定 Database Mail  
   
  
   
@@ -91,7 +90,7 @@ ms.locfileid: "48217618"
  使用 [選取組態工作] 頁面可指出您每次使用精靈時，會完成哪個工作。 如果您在完成精靈之前變更了主意，請使用 [上一步] 按鈕回到此頁面，然後選取不同的工作。  
   
 > [!NOTE]  
->  如果尚未啟用 Database Mail，您就會接收到訊息：**[無法使用 Database Mail 功能。您要啟用此功能嗎?]** 回應 [是] 就相當於使用 **sp_configure** 系統預存程序的 [Database Mail XP 選項](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)來啟用 Database Mail。  
+>  如果尚未啟用 Database Mail，您會收到訊息：**無法使用 Database Mail 功能。您要啟用此功能嗎?** 回應 [是] 就相當於使用 **sp_configure** 系統預存程序的 [Database Mail XP 選項](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)來啟用 Database Mail。  
   
  **執行下列工作來設定 Database Mail**  
  執行第一次設定 Database Mail 所需的所有工作。 此選項包含所有其他三個選項。  
@@ -415,7 +414,7 @@ ms.locfileid: "48217618"
  測試電子郵件訊息的 **mailitem_id** 。  
   
  **疑難排解**  
- 按一下以開啟《線上叢書》的 [Database Mail 疑難排解](http://msdn.microsoft.com/library/ms188663.aspx)主題。  
+ 按一下以開啟《線上叢書》的 [Database Mail 疑難排解](https://msdn.microsoft.com/library/ms188663.aspx)主題。  
   
 
   

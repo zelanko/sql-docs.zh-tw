@@ -42,12 +42,12 @@ ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 416540095fe08c5777b453db5875212fbea80989
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f79b36232ef099ee211a9f718668d02cb7992ab
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064878"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355108"
 ---
 # <a name="getting-sql-server-assistance"></a>取得 SQL Server 協助
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 提供三個有關 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要資訊來源：  
@@ -80,19 +80,19 @@ ms.locfileid: "48064878"
   
 |資源|適用對象|  
 |--------------|--------------|  
-|[SQL Server 開發人員中心](http://msdn.microsoft.com/sqlserver/)|正在建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫、報表系統和商業智慧方案的開發人員，以及啟用其應用程式和網站以使用這些系統的開發人員。|  
-|[XML 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=42458)|使用 XML 執行資料儲存和操作之站台和應用程式的網站建立者和應用程式開發人員。|  
-|[SQL Server TechNet 網站](http://technet.microsoft.com/sqlserver/dn135309)|針對使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的系統進行規劃、部署、管理和支援的管理員和操作員。|  
+|[SQL Server 開發人員中心](https://msdn.microsoft.com/sqlserver/)|正在建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫、報表系統和商業智慧方案的開發人員，以及啟用其應用程式和網站以使用這些系統的開發人員。|  
+|[XML 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=42458)|使用 XML 執行資料儲存和操作之站台和應用程式的網站建立者和應用程式開發人員。|  
+|[SQL Server TechNet 網站](https://technet.microsoft.com/sqlserver/dn135309)|針對使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的系統進行規劃、部署、管理和支援的管理員和操作員。|  
   
 ## <a name="additional-online-information"></a>其他線上資訊  
  可以從這些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 網站取得其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 資訊。  
   
 |資源|描述|  
 |--------------|-----------------|  
-|[Microsoft SQL Server](http://go.microsoft.com/fwlink/?linkid=8504)|提供有關將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 評估為資料儲存和商業智慧工具的售前資訊。|  
-|[Microsoft 知識庫](http://go.microsoft.com/fwlink/?LinkId=42461)|提供由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 技術支援所撰寫之 [!INCLUDE[msCoName](../includes/msconame-md.md)] 文件的可搜尋儲存機制。|    
+|[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|提供有關將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 評估為資料儲存和商業智慧工具的售前資訊。|  
+|[Microsoft 知識庫](https://go.microsoft.com/fwlink/?LinkId=42461)|提供由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 技術支援所撰寫之 [!INCLUDE[msCoName](../includes/msconame-md.md)] 文件的可搜尋儲存機制。|    
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品有支援週期，可定義每一個版本可用的支援時間長度。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支援會維護一個定義 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支援週期的頁面。 此頁面包含其他頁面的連結，這些頁面會指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品支援的可用性。 如需詳細資訊，請參閱 < [Microsoft 支援週期](http://go.microsoft.com/fwlink/?LinkId=98306)。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品有支援週期，可定義每一個版本可用的支援時間長度。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支援會維護一個定義 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支援週期的頁面。 此頁面包含其他頁面的連結，這些頁面會指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品支援的可用性。 如需詳細資訊，請參閱 < [Microsoft 支援週期](https://go.microsoft.com/fwlink/?LinkId=98306)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 SQL Server 的產品文件集](../2014-toc/books-online-for-sql-server-2014.md)  

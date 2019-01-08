@@ -10,25 +10,25 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: da0f4e6af97badffec0bb2018e0933cec282dd0f
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 29523dba8417a89261fed72da801898513796c17
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018753"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364030"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>在 Server Core 上安裝 SQL Server 2014
   您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安裝上安裝 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]。 本主題提供在 Server Core 上安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的安裝程式特定詳細資料。  
   
- [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 作業系統的 Server Core 安裝選項提供執行特定伺服器角色的基本環境， 可協助降低這些伺服器角色的維護和管理需求，以及減少其攻擊面。 如需有關上實作之 Server Core [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]，請參閱 < [Server Core for Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=202439) (http://go.microsoft.com/fwlink/?LinkId=202439)。 如需在 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 上實作之 Server Core 的詳細資訊，請參閱 [Server Core for Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx)。  
+ [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 作業系統的 Server Core 安裝選項提供執行特定伺服器角色的基本環境， 可協助降低這些伺服器角色的維護和管理需求，以及減少其攻擊面。 如需有關上實作之 Server Core [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]，請參閱 < [Server Core for Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=202439) (https://go.microsoft.com/fwlink/?LinkId=202439)。 如需在 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 上實作之 Server Core 的詳細資訊，請參閱 [Server Core for Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx)。  
   
 ## <a name="prerequisites"></a>先決條件  
   
 |需求|安裝方式|  
 |-----------------|--------------------|  
 |[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 SP2|包含在 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 和 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]的 Server Core 安裝中。 如果未啟用，安裝程式預設會予以啟用。<br /><br /> 2.0、3.0 和 3.5 無法在同一部電腦上並行執行。 當您安裝 .NET Framework 3.5 SP1 時，會自動取得 2.0 和 3.0 層。|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 3.5 SP1 Full Profile|包含在 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 的 Server Core 安裝中。 如果未啟用，安裝程式預設會予以啟用。<br /><br /> 在 Windows 伺服器作業系統的電腦上，您必須先下載及安裝 .NET Framework 3.5 SP1，才能執行安裝程式以安裝相依於 .NET 3.5 SP1 的元件。<br /><br /> 如需有關建議和指導如何取得和啟用中的.NET Framework 3.5 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]，請參閱 < [MICROSOFT.NET Framework 3.5 部署考量](http://msdn.microsoft.com/library/windows/hardware/hh975396)(http://msdn.microsoft.com/library/windows/hardware/hh975396)。|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile|若是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以外的所有 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]版本，安裝程式會將 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile 安裝為必要元件。<br /><br /> 針對[!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]，下載[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]4 Server Core Profile，從[適用於 Server Core 的 Microsoft.NET Framework 4 (Standalone Installer)](http://go.microsoft.com/fwlink/?LinkId=220467) (http://go.microsoft.com/fwlink/?LinkId=220467)，並將它安裝在您繼續進行安裝程式之前。|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 3.5 SP1 Full Profile|包含在 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 的 Server Core 安裝中。 如果未啟用，安裝程式預設會予以啟用。<br /><br /> 在 Windows 伺服器作業系統的電腦上，您必須先下載及安裝 .NET Framework 3.5 SP1，才能執行安裝程式以安裝相依於 .NET 3.5 SP1 的元件。<br /><br /> 如需有關建議和指導如何取得和啟用中的.NET Framework 3.5 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]，請參閱 < [MICROSOFT.NET Framework 3.5 部署考量](https://msdn.microsoft.com/library/windows/hardware/hh975396)(https://msdn.microsoft.com/library/windows/hardware/hh975396)。|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile|若是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以外的所有 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]版本，安裝程式會將 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile 安裝為必要元件。<br /><br /> 針對[!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]，下載[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]4 Server Core Profile，從[適用於 Server Core 的 Microsoft.NET Framework 4 (Standalone Installer)](https://go.microsoft.com/fwlink/?LinkId=220467) (https://go.microsoft.com/fwlink/?LinkId=220467)，並將它安裝在您繼續進行安裝程式之前。|  
 |Windows Installer 4.5|隨附於 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 和 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]的 Server Core 安裝。|  
 |Windows PowerShell 2.0|隨附於 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 和 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]的 Server Core 安裝。|  
   
@@ -61,7 +61,7 @@ ms.locfileid: "51018753"
   
  <sup>[2]</sup>不支援安裝在 Server Core 上的這些功能。 這些元件可以安裝在與 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core 不同的伺服器上，並連接至安裝在 Server Core 上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Services。  
   
- <sup>[3]</sup>Microsoft Sync Framework 未包含在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安裝套件。 您可以從這個下載適當的 Sync Framework 版本[Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkId=221788)(http://go.microsoft.com/fwlink/?LinkId=221788)頁面上，並將它安裝在執行 Server Core 安裝的電腦上[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]SP1 或[!INCLUDE[win8srv](../../includes/win8srv-md.md)]。  
+ <sup>[3]</sup>Microsoft Sync Framework 未包含在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安裝套件。 您可以從這個下載適當的 Sync Framework 版本[Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=221788)(https://go.microsoft.com/fwlink/?LinkId=221788)頁面上，並將它安裝在執行 Server Core 安裝的電腦上[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]SP1 或[!INCLUDE[win8srv](../../includes/win8srv-md.md)]。  
   
 ## <a name="supported-scenario-matrix"></a>支援的案例矩陣  
  下表顯示在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 和 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安裝上安裝 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]的支援案例矩陣。  
@@ -86,7 +86,7 @@ ms.locfileid: "51018753"
   
  除非軟體的使用方式受到個別的合約 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 大量授權合約或與 ISV 或 OEM 簽訂的協力廠商合約) 所管制，否則不論安裝方法為何，您都必須確認以個人身分或代表實體接受軟體授權條款。  
   
- 這些授權條款會顯示在安裝程式使用者介面中，供您檢閱和接受。 自動安裝 (使用 /Q 或 /QS 參數) 必須包括 /IACCEPTSQLSERVERLICENSETERMS 參數。 您可以另外在 [Microsoft 軟體授權合約](http://go.microsoft.com/fwlink/?LinkId=148209)檢閱授權條款。  
+ 這些授權條款會顯示在安裝程式使用者介面中，供您檢閱和接受。 自動安裝 (使用 /Q 或 /QS 參數) 必須包括 /IACCEPTSQLSERVERLICENSETERMS 參數。 您可以另外在 [Microsoft 軟體授權合約](https://go.microsoft.com/fwlink/?LinkId=148209)檢閱授權條款。  
   
 > [!NOTE]  
 >  根據您收到本軟體的方式 (例如，透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 大量授權)，軟體的使用方式可能會受到其他條款與條件的限制。  
@@ -323,9 +323,9 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
   
  若要移除具名執行個體，請在上述範例中指定執行個體的名稱，而非 "MSSQLSERVER"。  
   
-> [!WARNING]  
+> [!WARNING]
 >  如果您不小心關閉命令提示字元，您可以遵循下列步驟啟動新的命令提示字元：  
->   
+> 
 >  1.  按 Ctrl+Shift+Esc 鍵顯示 [工作管理員]。  
 > 2.  在 [應用程式] 索引標籤上，按一下 [新工作]。  
 > 3.  在 [建立新工作] 對話方塊的 [開啟] 欄位中，輸入 **cmd**，然後[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
@@ -334,9 +334,9 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  [安裝 SQL Server 2014 使用組態檔](install-sql-server-using-a-configuration-file.md)   
  [從命令提示字元安裝 SQL Server 2014](install-sql-server-from-the-command-prompt.md)   
  [SQL Server 2014 各版本所支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
- [Server Core 安裝選項快速入門指南](http://go.microsoft.com/fwlink/?LinkId=221422)   
- [設定 Server Core 安裝︰概觀](http://go.microsoft.com/fwlink/?LinkId=221423)   
- [Windows PowerShell 中由工作焦點列出的容錯移轉叢集 Cmdlet](http://go.microsoft.com/fwlink/?LinkId=221419)   
- [針對容錯移轉叢集將 Cluster.exe 命令對應到 Windows PowerShell Cmdlet](http://go.microsoft.com/fwlink/?LinkId=221421)  
+ [Server Core 安裝選項快速入門指南](https://go.microsoft.com/fwlink/?LinkId=221422)   
+ [設定 Server Core 安裝：概觀](https://go.microsoft.com/fwlink/?LinkId=221423)   
+ [Windows PowerShell 中由工作焦點列出的容錯移轉叢集 Cmdlet](https://go.microsoft.com/fwlink/?LinkId=221419)   
+ [針對容錯移轉叢集將 Cluster.exe 命令對應到 Windows PowerShell Cmdlet](https://go.microsoft.com/fwlink/?LinkId=221421)  
   
   

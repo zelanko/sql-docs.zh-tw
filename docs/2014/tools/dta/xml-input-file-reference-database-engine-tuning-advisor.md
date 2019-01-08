@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -17,19 +16,19 @@ ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4dfcae2c6d18b295919a3b843efe2edd95062d01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b560b36eb98ec73723a4ce25cb3c647f4962b634
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126188"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368570"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>XML 輸入檔參考 (Database Engine Tuning Advisor)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 可以利用 XML 輸入檔來微調資料庫。 這個 XML 檔會指定微調工作階段要使用哪些資料庫、資料表、工作負載檔或資料表，以及微調選項。 您也可以利用這個檔案來指定使用者指定的組態，以執行「假設」分析。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML 輸入檔包含 XML 元素的階層，每個元素都包含指定微調工作階段設定的文字或其他元素。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML 輸入檔必須符合格式正確之 XML 的標準，因此，所有元素名稱都會區分大小寫。 元素利用 Pascal 案例來指定，這表示第一個字元是大寫，任何後續串連單字的第一個字母也是大寫。  
   
- 所有元素值都必須符合 XML 命名慣例。 如需有關這些慣例的詳細資訊，請參閱 MSDN Library 中的＜ [XML Textual Content](http://go.microsoft.com/fwlink/?LinkId=7614) ＞。  
+ 所有元素值都必須符合 XML 命名慣例。 如需有關這些慣例的詳細資訊，請參閱 MSDN Library 中的＜ [XML Textual Content](https://go.microsoft.com/fwlink/?LinkId=7614) ＞。  
   
  請注意，這份參考並不完整。 如需有關可用來定義 XML 輸入之所有元素的資訊，請參閱＜ [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML 結構描述 (DTASchema.xsd)＞。  
   
@@ -39,85 +38,85 @@ ms.locfileid: "48126188"
   
 ## <a name="dtaxml-root-element"></a>DTAXML 根元素  
   
--   [DTAXML 元素&#40;DTA&#41;](dtaxml-element-dta.md)  
+-   [DTAXML 元素 &#40;DTA&#41;](dtaxml-element-dta.md)  
   
 ## <a name="dtainput-elements"></a>DTAInput 元素  
   
--   [DTAInput 元素&#40;DTA&#41;](dtainput-element-dta.md)  
+-   [DTAInput 元素 &#40;DTA&#41;](dtainput-element-dta.md)  
   
--   [伺服器項目&#40;DTA&#41;](server-element-dta.md)  
+-   [Server 元素 &#40;DTA&#41;](server-element-dta.md)  
   
--   [Workload 元素&#40;DTA&#41;](workload-element-dta.md)  
+-   [Workload 元素 &#40;DTA&#41;](workload-element-dta.md)  
   
--   [TuningOptions 元素&#40;DTA&#41;](tuningoptions-element-dta.md)  
+-   [TuningOptions 元素 &#40;DTA&#41;](tuningoptions-element-dta.md)  
   
--   [組態項目&#40;DTA&#41;](configuration-element-dta.md)  
+-   [Configuration 元素 &#40;DTA&#41;](configuration-element-dta.md)  
   
 ## <a name="server-elements"></a>伺服器元素  
   
--   [伺服器名稱項目&#40;DTA&#41;](name-element-for-server-dta.md)  
+-   [伺服器的 Name 元素 &#40;DTA&#41;](name-element-for-server-dta.md)  
   
--   [伺服器的 database 元素&#40;DTA&#41;](database-element-for-server-dta.md)  
+-   [伺服器的 Database 元素 &#40;DTA&#41;](database-element-for-server-dta.md)  
   
 ## <a name="workload-elements"></a>工作負載元素  
   
--   [檔案項目&#40;DTA&#41;](file-element-dta.md)  
+-   [File 元素 &#40;DTA&#41;](file-element-dta.md)  
   
--   [工作負載的 database 元素&#40;DTA&#41;](database-element-for-workload-dta.md)  
+-   [工作負載的 Database 元素 &#40;DTA&#41;](database-element-for-workload-dta.md)  
   
--   [EventString 元素&#40;DTA&#41;](eventstring-element-dta.md)  
+-   [EventString 元素 &#40;DTA&#41;](eventstring-element-dta.md)  
   
 ## <a name="tuning-options-elements"></a>微調選項元素  
   
--   [TuningTimeInMin 元素&#40;DTA&#41;](tuningtimeinmin-element-dta.md)  
+-   [TuningTimeInMin 元素 &#40;DTA&#41;](tuningtimeinmin-element-dta.md)  
   
--   [StorageBoundInMB 元素&#40;DTA&#41;](storageboundinmb-element-dta.md)  
+-   [StorageBoundInMB 元素 &#40;DTA&#41;](storageboundinmb-element-dta.md)  
   
--   [TestServer 元素&#40;DTA&#41;](testserver-element-dta.md)  
+-   [TestServer 元素 &#40;DTA&#41;](testserver-element-dta.md)  
   
--   [FeatureSet 元素&#40;DTA&#41;](featureset-element-dta.md)  
+-   [FeatureSet 元素 &#40;DTA&#41;](featureset-element-dta.md)  
   
--   [Partitioning 元素&#40;DTA&#41;](partitioning-element-dta.md)  
+-   [Partitioning 元素 &#40;DTA&#41;](partitioning-element-dta.md)  
   
--   [DropOnlyMode 元素&#40;DTA&#41;](droponlymode-element-dta.md)  
+-   [DropOnlyMode 元素 &#40;DTA&#41;](droponlymode-element-dta.md)  
   
--   [KeepExisting 元素&#40;DTA&#41;](keepexisting-element-dta.md)  
+-   [KeepExisting 元素 &#40;DTA&#41;](keepexisting-element-dta.md)  
   
--   [OnlineIndexOperation 元素&#40;DTA&#41;](onlineindexoperation-element-dta.md)  
+-   [OnlineIndexOperation 元素 &#40;DTA&#41;](onlineindexoperation-element-dta.md)  
   
--   [DatabaseToConnect 元素&#40;DTA&#41;](databasetoconnect-element-dta.md)  
+-   [DatabaseToConnect 元素 &#40;DTA&#41;](databasetoconnect-element-dta.md)  
   
 ## <a name="configuration-elements"></a>組態元素  
   
--   [組態的 server 元素&#40;DTA&#41;](server-element-for-configuration-dta.md)  
+-   [組態的 Server 元素 &#40;DTA&#41;](server-element-for-configuration-dta.md)  
   
--   [組態的 database 元素&#40;DTA&#41;](database-element-for-configuration-dta.md)  
+-   [組態的 Database 元素 &#40;DTA&#41;](database-element-for-configuration-dta.md)  
   
--   [Recommendation 元素&#40;DTA&#41;](recommendation-element-dta.md)  
+-   [Recommendation 元素 &#40;DTA&#41;](recommendation-element-dta.md)  
   
--   [建立項目&#40;DTA&#41;](create-element-dta.md)  
+-   [Create 元素 &#40;DTA&#41;](create-element-dta.md)  
   
--   [編製索引的項目&#40;DTA&#41;](index-element-dta.md)  
+-   [Index 元素 &#40;DTA&#41;](index-element-dta.md)  
   
--   [名稱索引的項目&#40;DTA&#41;](name-element-for-index-dta.md)  
+-   [索引的 Name 元素 &#40;DTA&#41;](name-element-for-index-dta.md)  
   
--   [索引的 column 元素&#40;DTA&#41;](column-element-for-index-dta.md)  
+-   [索引的 Column 元素 &#40;DTA&#41;](column-element-for-index-dta.md)  
   
--   [資料行的名稱項目&#40;DTA&#41;](name-element-for-column-dta.md)  
+-   [資料行的 Name 元素 &#40;DTA&#41;](name-element-for-column-dta.md)  
   
--   [索引的 Filegroup 元素&#40;DTA&#41;](filegroup-element-for-index-dta.md)  
+-   [索引的 Filegroup 元素 &#40;DTA&#41;](filegroup-element-for-index-dta.md)  
   
 ## <a name="database-elements"></a>資料庫元素  
   
--   [資料庫的名稱項目&#40;DTA&#41;](name-element-for-database-dta.md)  
+-   [資料庫的 Name 元素 &#40;DTA&#41;](name-element-for-database-dta.md)  
   
--   [資料庫的 schema 元素&#40;DTA&#41;](schema-element-for-database-dta.md)  
+-   [資料庫的 Schema 元素 &#40;DTA&#41;](schema-element-for-database-dta.md)  
   
--   [結構描述的名稱項目&#40;DTA&#41;](name-element-for-schema-dta.md)  
+-   [結構描述的 Name 元素 &#40;DTA&#41;](name-element-for-schema-dta.md)  
   
--   [資料表結構描述的項目&#40;DTA&#41;](table-element-for-schema-dta.md)  
+-   [結構描述的 Table 元素 &#40;DTA&#41;](table-element-for-schema-dta.md)  
   
--   [資料表名稱項目&#40;DTA&#41;](name-element-for-table-dta.md)  
+-   [資料表的 Name 元素 &#40;DTA&#41;](name-element-for-table-dta.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  

@@ -11,12 +11,12 @@ ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c4a6c4af1938057652aa21ce8feef8671b2535f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f800d28a8c7e1440308761abc3d05c4d41995f00
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154098"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372120"
 ---
 # <a name="specify-credentials-in-report-builder"></a>在報表產生器中指定認證
   認證會驗證嘗試從資料來源擷取資料的使用者。 資料來源的擁有者可決定必須使用的認證類型。 例如，資料庫管理員可能會指定使用者必須提供 Windows 使用者名稱和密碼。  
@@ -49,7 +49,7 @@ ms.locfileid: "48154098"
  如需詳細資訊，請參閱[資料來源屬性對話方塊、一般 &#40;報表產生器&#41;](../../2014/reporting-services/data-source-properties-dialog-box-general-report-builder.md) 和[在報表產生器中預覽報表](report-builder/previewing-reports-in-report-builder.md)。  
   
 ## <a name="types-of-credentials"></a>認證的類型  
- 資料來源支援的認證類型是由資料來源的擁有者所指定。 例如，若要存取[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫，您可能必須提供[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登入使用者名稱和密碼。 若要存取不同的資料來源，您可能必須提供 Windows 使用者名稱和密碼。 某些資料來源可能不需要認證。  
+ 資料來源支援的認證類型是由資料來源的擁有者所指定。 例如，若要存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫，您可能必須提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入使用者名稱和密碼。 若要存取不同的資料來源，您可能必須提供 Windows 使用者名稱和密碼。 某些資料來源可能不需要認證。  
   
 ### <a name="options-for-specifying-credentials"></a>指定認證的選項  
  下列選項可用來指定資料來源的認證：  
@@ -72,13 +72,13 @@ ms.locfileid: "48154098"
  當您指定提示認證時，存取此報表的每位使用者都必須輸入使用者名稱和密碼，才能擷取資料。 這個選項建議用於包含機密資料的報表。 提示認證可以是 Windows 帳戶或資料庫登入。 如果資料庫伺服器無法辨識您所提供的認證，或者指定的使用者尚未取得擷取資料的權限，連接就會失敗。  
   
 ### <a name="no-credentials"></a>無認證  
- 此資料來源不需要認證。 若要在報表伺服器上執行此報表，則必須設定自動執行帳戶。 如需詳細資訊，請參閱 <<c0> [ 設定自動執行帳戶&#40;SSRS 組態管理員&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)中[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的文件[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][線上叢書 》](http://go.microsoft.com/fwlink/?linkid=121312)。</c0>  
+ 此資料來源不需要認證。 若要在報表伺服器上執行此報表，則必須設定自動執行帳戶。 如需詳細資訊，請參閱 <<c0> [ 設定自動執行帳戶&#40;SSRS 組態管理員&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)中[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中的文件[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][線上叢書 》](https://go.microsoft.com/fwlink/?linkid=121312)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [安裝、 解除安裝與報表產生器支援](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
- [內嵌和共用資料連接或資料來源&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [報表產生器選項 對話方塊中，設定&#40;報表產生器&#41;](report-builder/set-default-options-for-report-builder.md)   
- [資料連接、 資料來源和報表產生器中的連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [報表產生器中的資料連接、資料來源及連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [加入及驗證資料連接或資料來源&#40;報表產生器及 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   

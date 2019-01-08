@@ -14,12 +14,12 @@ ms.assetid: 13b982c3-ae03-4155-bc0d-e225050703ce
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc2287678e7fd3e481c3eaf1d33af64e9ea7dad8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 60c4c4d364f9c07e9ca241dd357535f7f7acb42d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186078"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373670"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式報告一組結果中的其他資料行 USERTYPE `SQLGetTypeInfo`。 USERTYPE 會報告 DB-Library 資料類型定義，而且對於將現有 DB-Library 應用程式移植至 ODBC 的開發人員很有用。  
@@ -31,7 +31,7 @@ ms.locfileid: "48186078"
  針對**xml**資料類型， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式針對 COLUMN_SIZE 報告 SQL_SS_LENGTH_UNLIMITED 指出大小沒有限制。  
   
 ## <a name="sqlgettypeinfo-and-table-valued-parameters"></a>SQLGetTypeInfo 和資料表值參數  
- 資料表值參數的資料表類型實際上就是中繼類型，亦即，用來定義其他類型的類型。 因此，它沒有透過 SQLGetTypeInfo 公開。 應用程式必須使用 SQLTables，而不是 SQLGetTypeInfo，來擷取資料表值參數搭配使用的資料表類型的中繼資料。  
+ 資料表值參數的資料表類型實際上是中繼類型-，是，用來定義其他類型的類型。 因此，它沒有透過 SQLGetTypeInfo 公開。 應用程式必須使用 SQLTables，而不是 SQLGetTypeInfo，來擷取資料表值參數搭配使用的資料表類型的中繼資料。  
   
  如需詳細資訊，關於擷取之中繼資料的資料表值參數，請參閱[陳述式屬性該 Affect Table-Valued 參數](../native-client-odbc-table-valued-parameters/statement-attributes-that-affect-table-valued-parameters.md)。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48186078"
  `SQLGetTypeInfo` 支援大型 CLR 使用者定義型別 (UDT)。 如需詳細資訊，請參閱 < [Large CLR User-Defined 類型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLGetTypeInfo 函數](http://go.microsoft.com/fwlink/?LinkId=59356)   
+ [SQLGetTypeInfo 函數](https://go.microsoft.com/fwlink/?LinkId=59356)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

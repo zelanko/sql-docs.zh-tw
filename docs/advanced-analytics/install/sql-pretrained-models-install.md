@@ -1,5 +1,5 @@
 ---
-title: SQL Server 上安裝預先定型的機器學習服務模型 |Microsoft Docs
+title: 安裝預先定型的機器學習服務模型-SQL Server Machine Learning
 description: 加入 SQL Server 2017 Machine Learning 服務 （R 或 Python） 或 SQL Server 2016 R Services 的預先定型的情感分析和影像特徵化的模型。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b2dfee04a7c0c9c39b7969551a85a49d441f30e5
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: 901ab45ea727ec03a439f07ac2b4a971c98060f2
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216829"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645437"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>安裝預先定型的機器學習服務模型在 SQL Server 上
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "39216829"
 
 若要使用預先定型的模型，請呼叫下表所列出的函數。
 
-| R 函式 (MicrosoftML) | Python 函式 (microsoftml) | 使用方式 |
+| R 函式 (MicrosoftML) | Python 函式 (microsoftml) | 使用量 |
 |--------------------------|-------------------------------|-------|
 | [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | 您可以產生正負面情感分數對文字輸入。 [了解更多](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)。|
 | [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 從映像檔案輸入擷取文字資訊。 [了解更多](https://blogs.msdn.microsoft.com/mlserver/2017/04/12/image-featurization-with-a-pre-trained-deep-neural-network-model/)。 |
@@ -104,7 +104,7 @@ R 和 Python 模型的安裝路徑，如下所示：
 
 2. 在下列的 R 指令碼，在命令提示字元中，貼上。
 
-    ```r
+    ```R
     # Create the data
     CustomerReviews <- data.frame(Review = c(
     "I really did not like the taste of it",
@@ -126,7 +126,7 @@ R 和 Python 模型的安裝路徑，如下所示：
 
 3. 按下 Enter，以檢視情感分數。 輸出應如下所示：
 
-    ```
+    ```R
     > sentimentScores
                                             Review SentimentScore
     1           I really did not like the taste of it      0.4617899
@@ -168,7 +168,7 @@ R 和 Python 模型的安裝路徑，如下所示：
 
 3. 按 Enter 鍵，列印分數。 輸出應如下所示：
 
-    ```
+    ```python
     >>> print(sentiment_scores)
                                                 review    scores         eval
     0            I really did not like the taste of it  0.461790         BLAH
@@ -190,7 +190,7 @@ R 和 Python 模型的安裝路徑，如下所示：
 
   預先定型的模型，針對映像支援您所提供的映像的功能。 若要使用模型，請呼叫**featurizeImage**轉換。 載入影像時，調整大小，並使用定型模型。 DNN featurizer 的輸出則用於定型影像分類的線性模型。 若要使用此模型中，所有映像必須調整大小以符合需求的定型模型。 例如，如果您使用的 AlexNet 模型時，映像應該能調整 227 x 227 像素。
 
-+ [程式碼範例： 使用文字 Featurizer 情感分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
++ [程式碼範例：使用文字 Featurizer 情感分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 
 <a name="bkmk_resources"></a> 
 

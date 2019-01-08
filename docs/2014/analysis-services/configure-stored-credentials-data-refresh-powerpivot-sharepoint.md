@@ -11,12 +11,12 @@ ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c12e62d3a74ca1112ac7983fa6480b49171c308
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73ee3f7f86203f4fa0ac2e4da86fecee0e2b4cf5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149418"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365080"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>設定 PowerPivot 資料重新整理的預存認證 (PowerPivot for SharePoint)
   只要您在 Secure Store Service 中建立目標應用程式來儲存想要使用的認證，PowerPivot 資料重新整理作業就可以在任何 Windows 使用者帳戶之下執行。 同樣地，若想要提供的資料庫登入不同於最初用於匯入 PowerPivot for Excel 資料的登入，可以將這些認證對應至 Secure Store Service 目標應用程式，然後在資料重新整理排程中指定該目標應用程式。  
@@ -35,7 +35,7 @@ ms.locfileid: "48149418"
   
  [設定預先定義的帳戶來存取外部或協力廠商資料來源](#config3rd)  
   
- 如果您有設定，或使用資料重新整理的問題，請參閱[疑難排解 PowerPivot 資料重新整理](http://go.microsoft.com/fwlink/?LinkID=223279)尋找可能的解決方案的 TechNet wiki 上的頁面。  
+ 如果您有設定，或使用資料重新整理的問題，請參閱[疑難排解 PowerPivot 資料重新整理](https://go.microsoft.com/fwlink/?LinkID=223279)尋找可能的解決方案的 TechNet wiki 上的頁面。  
   
 ##  <a name="configAny"></a> 設定資料重新整理任何 Windows 帳戶  
  當 SharePoint 使用者定義資料重新整理排程時，該使用者必須指定用來執行資料重新整理的使用者識別。 您可以選擇選取 PowerPivot 無人看管的資料重新整理帳戶，也可輸入使用者的 Windows 網域使用者帳戶，或是輸入其他可以適用於資料重新整理的 Windows 使用者帳戶。 本節中的步驟適用於最後一個選項：指定某些其他 Windows 帳戶。  
@@ -102,7 +102,7 @@ ms.locfileid: "48149418"
   
 17. 按一下 [確定] 。  
   
-###  <a name="bkmk_grant"></a> 步驟 2： 授與帳戶的 「 參與 」 權限  
+###  <a name="bkmk_grant"></a> 步驟 2:授與帳戶的 「 參與 」 權限  
  帳戶必須先獲指派其所應用之任何 PowerPivot 活頁簿的「參與」權限，您才可使用預存認證。 您需要這個權限等級才能從文件庫開啟活頁簿，然後在重新整理資料之後，將其存回文件庫。  
   
  指派權限是由網站集合管理員所執行的步驟。 您可以在根網站集合或根網站集合底下的任何層級 (包括個別文件和項目) 指派 SharePoint 權限。 設定權限的方式將隨著細緻程度而有所不同。 下列步驟示範授與權限的其中一個方法。  
@@ -117,16 +117,16 @@ ms.locfileid: "48149418"
   
 5.  選取 **參與**，然後按一下**確定**。  
   
-###  <a name="bkmk_dbread"></a> 步驟 3： 授與讀取權限來存取外部資料來源用於資料重新整理  
+###  <a name="bkmk_dbread"></a> 步驟 3:授與讀取權限來存取外部資料來源用於資料重新整理  
  當資料匯入至 PowerPivot 活頁簿時，外部資料連接通常是以信任連接或是以使用目前使用者身分連接至資料來源的模擬連接為基礎。 這些類型的連接只能在目前使用者有讀取所匯入之資料的權限時使用。  
   
  在資料重新整理案例中，用來匯入資料的相同連接字串現在會重複使用來重新整理資料。 假使連接字串採行目前使用者 (例如字串中包含 Integrated_Security=SSPI) 的作法，PowerPivot 系統服務在傳遞目前使用者時，即會將目標應用程式中所指定的使用者識別視為目前使用者。 帳戶必須具備外部資料來源的讀取權限，此連接才會成功。  
   
  因此，您必須將資料重新整理期間所要使用之所有外部資料來源的唯讀權限授與帳戶。  
   
- 如果您是組織中使用的資料來源的系統管理員，可以建立登入並指定所需的權限。 否則，您必須連絡資料擁有者並提供帳戶資訊。 請務必指定對應至目標應用程式的 Windows 網域使用者帳戶。 此帳戶即是您在本主題之＜步驟 1：建立目標應用程式＞中所指定的帳戶。  
+ 如果您是組織中使用的資料來源的系統管理員，可以建立登入並指定所需的權限。 否則，您必須連絡資料擁有者並提供帳戶資訊。 請務必指定對應至目標應用程式的 Windows 網域使用者帳戶。 這是您在中指定的帳戶 「 步驟 1:建立目標應用程式 」 在本主題中。  
   
-###  <a name="bkmk_verify"></a> 步驟 4： 確認帳戶可用性，在資料重新整理組態頁面  
+###  <a name="bkmk_verify"></a> 步驟 4:確認資料重新整理組態頁面中的帳戶可用性  
   
 1.  為包含 PowerPivot 資料之已發行的活頁簿，開啟資料重新整理組態頁面。 如需有關如何開啟頁面的指示，請參閱 <<c0> [ 排程資料重新整理&#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)。</c0>  
   
@@ -138,7 +138,7 @@ ms.locfileid: "48149418"
   
  如果發生錯誤，您可以按一下**設定排程**資料重新整理記錄頁面以嘗試不同的認證。 您也可能需要檢查原始活頁簿中的資料來源連接資訊，以查看資料重新整理期間所使用的連接字串。 連接字串所提供的伺服器位置與資料庫資訊，可讓您用於疑難排解問題。  
   
- 如需有關疑難排解的詳細資訊，請參閱 <<c0> [ 疑難排解 PowerPivot 資料重新整理](http://go.microsoft.com/fwlink/p/?LinkID=223279)TechNet Wiki 上。  
+ 如需有關疑難排解的詳細資訊，請參閱 <<c0> [ 疑難排解 PowerPivot 資料重新整理](https://go.microsoft.com/fwlink/p/?LinkID=223279)TechNet Wiki 上。  
   
 ##  <a name="config3rd"></a> 設定預先定義的帳戶來存取外部或協力廠商資料來源  
  資料庫伺服器通常會有自己的驗證方法。 如果您的 PowerPivot 活頁簿需要資料庫認證，以便在資料重新整理期間存取外部資料來源，則可以建立認證的目標應用程式識別碼，然後在排程資料重新整理頁面的 [資料來源] 區段指定目標應用程式。  

@@ -19,12 +19,12 @@ ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e4d13fb24ad337ed6395e8529f4067d8acd2a1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5bf5ca4c2e27f366a6f5ded97f9a9aa5213db122
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140638"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361070"
 ---
 # <a name="create-package-configurations"></a>Create Package Configurations
   使用 [封裝組態組合管理] 對話方塊和「封裝組態精靈」，可以建立封裝組態。 若要存取這些工具，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [SSIS] 功能表中，按一下 [封裝組態]。  
@@ -96,7 +96,7 @@ ms.locfileid: "48140638"
   
 6.  在 [封裝組態精靈] 頁面的歡迎頁面上，按 [下一步]。  
   
-7.  在 [選取組態類型] 頁面上，指定組態類型，然後設定與組態類型相關聯的屬性。 如需詳細資訊，請參閱[封裝組態精靈 UI 參考](../../2014/integration-services/package-configuration-wizard-ui-reference.md)。  
+7.  在 [選取組態類型] 頁面上，指定組態類型，然後設定與組態類型相關聯的屬性。 如需詳細資訊，請參閱 [封裝組態精靈 UI 參考](../../2014/integration-services/package-configuration-wizard-ui-reference.md)。  
   
 8.  在 [選取要匯出的屬性] 頁面上，選取要併入組態之封裝物件的屬性。 如果組態類型僅支援一個屬性，此精靈頁面的標題將為 [選取目標屬性]。 如需詳細資訊，請參閱[封裝組態精靈 UI 參考](../../2014/integration-services/package-configuration-wizard-ui-reference.md)。  
   
@@ -111,11 +111,11 @@ ms.locfileid: "48140638"
   
 ## <a name="external-resources"></a>外部資源  
   
--   msdn.microsoft.com 上的技術文件： [了解 Integration Services 封裝組態](http://go.microsoft.com/fwlink/?LinkId=165643)  
+-   msdn.microsoft.com 上的技術文件： [了解 Integration Services 封裝組態](https://go.microsoft.com/fwlink/?LinkId=165643)  
   
--   www.sqlis.com 上的部落格文章： [Creating packages in code – Package Configurations](http://go.microsoft.com/fwlink/?LinkId=217663)(透過程式碼建立封裝 – 封裝組態)。  
+-   部落格文章[程式碼-封裝組態建立套件](https://go.microsoft.com/fwlink/?LinkId=217663)，www.sqlis.com 上。  
   
--   blogs.msdn.com 上的部落格文章： [API Sample – Programmatically add a configuration file to a package](http://go.microsoft.com/fwlink/?LinkId=217664)(API 範例 - 以程式設計方式將組態檔加入封裝中)。  
+-   部落格文章[API 範例-以程式設計方式將組態檔加入封裝](https://go.microsoft.com/fwlink/?LinkId=217664)，blogs.msdn.com 上。  
   
 ## <a name="see-also"></a>另請參閱  
  [封裝組態](../../2014/integration-services/package-configurations.md)   

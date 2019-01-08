@@ -15,12 +15,12 @@ ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0f20619f4f1bbd1632539f3675c8e955e1073130
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13e52520b78796f41f94e5bf783e99a9bca3b3e3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187548"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366770"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>尋找報表定義結構描述版本 (SSRS)
   報表定義檔案會針對用來驗證 rdl 檔的報表定義結構描述版本指定 RDL 命名空間。 當您在報表撰寫環境 (例如 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的報表設計師或報表產生器) 中開啟 .rdl 檔案時，如果此報表是針對先前的命名空間所建立，系統就會自動建立備份檔案，而且此報表會升級為目前的命名空間。 如果您儲存了升級的報表定義，就會儲存轉換的 .rdl 檔。 這是升級報表定義的唯一方式。 報表定義本身不會在報表伺服器上升級。 不過，已編譯的報表會在報表伺服器上升級。 如需詳細資訊，請參閱 [Upgrade Reports](../install-windows/upgrade-reports.md)。  
@@ -32,11 +32,11 @@ ms.locfileid: "48187548"
      XML 報表元素會指定結構描述命名空間。 例如，下列報表元素會指定報表設計師的命名空間以及報表定義的命名空間。  
   
     ```  
-    <Report xmlns:rd=http://schemas.microsoft.com/SQLServer/reporting/reportdesigner   
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
+    <Report xmlns:rd=https://schemas.microsoft.com/SQLServer/reporting/reportdesigner   
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
     ```  
   
-     報表定義命名空間是由下列 URL 指定： `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`。  
+     報表定義命名空間是由下列 URL 指定： `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`。  
   
 ### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>如何：識別報表設計師的 RDL 結構描述版本  
   
@@ -55,13 +55,13 @@ ms.locfileid: "48187548"
      XML 報表元素會指定結構描述命名空間。 例如，下列報表元素會指定報表設計師的命名空間以及報表定義的命名空間。  
   
     ```  
-    <Report xmlns:rd=http://schemas.microsoft.com/SQLServer/reporting/reportdesigner  
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
+    <Report xmlns:rd=https://schemas.microsoft.com/SQLServer/reporting/reportdesigner  
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
     ```  
   
-     報表定義命名空間是由下列 URL 指定： `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
+     報表定義命名空間是由下列 URL 指定： `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
-### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>如何：識別報表伺服器的 RDL 結構描述版本  
+### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>如何：識別報表伺服器上的 RDL 結構描述版本  
   
 -   在報表管理員中，輸入報表伺服器的 URL。 例如，下列 URL 會指定本機電腦上的報表伺服器。  
   
@@ -73,16 +73,16 @@ ms.locfileid: "48187548"
   
     ```  
     <xsd:schema   
-    targetNamespace="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
+    targetNamespace="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
     elementFormDefault="qualified">  
     ```  
   
-     報表定義命名空間是由下列 URL 指定： `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
+     報表定義命名空間是由下列 URL 指定： `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
 ## <a name="see-also"></a>另請參閱  
- [升級報表](../install-windows/upgrade-reports.md)   
+ [Upgrade Reports](../install-windows/upgrade-reports.md)   
  [報表定義語言 &#40;SSRS&#41;](report-definition-language-ssrs.md)  
   
   
