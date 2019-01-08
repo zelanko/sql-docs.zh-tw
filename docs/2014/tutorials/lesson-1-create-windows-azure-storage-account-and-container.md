@@ -1,5 +1,5 @@
 ---
-title: 第 1 課： 建立 Windows Azure 儲存體帳戶和容器 |Microsoft Docs
+title: 第 1 課：建立 Windows Azure 儲存體帳戶和容器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 43489355aabc9c03407dd6b5779996ceef8967b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edeefac46805ba74b011d7c86202c7d5dbcdec14
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143641"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367150"
 ---
 # <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>第 1 課：建立 Windows Azure 儲存體帳戶和容器
   在您開始將 SQL Server 資料檔案儲存在 Windows Azure 儲存體之前，必須先建立 Windows Azure 儲存體帳戶和 Blob 容器以及共用存取簽章。 第 1 課會逐步引導您完成登入 Windows Azure 管理入口網站，以及建立儲存體帳戶、Blob 容器和共用存取簽章的步驟。  
@@ -29,7 +29,7 @@ ms.locfileid: "48143641"
   
 -   使用預存的存取原則管理容器或其 Blob 的共用存取簽章。 預存的存取原則為您提供另一種控制共用存取簽章的方法，同時也提供了直接將簽章撤銷的方式。  
   
- 如需詳細資訊，請參閱 <<c0> [ 管理 Windows Azure 儲存體資源的存取](http://msdn.microsoft.com/library/windowsazure/ee393343.aspx)。  
+ 如需詳細資訊，請參閱 <<c0> [ 管理 Windows Azure 儲存體資源的存取](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx)。  
   
 ## <a name="create-storage-account"></a>建立儲存體帳戶  
  若要在 Windows Azure 管理入口網站上建立儲存體帳戶，請遵循下列步驟：  
@@ -58,7 +58,7 @@ ms.locfileid: "48143641"
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-4.gif "SQL 14 CTP2")  
   
 > [!NOTE]  
->  若要以程式設計方式建立容器，您也可以使用 REST 應用程式開發介面。 如需詳細資訊，請參閱 <<c0> [ 建立容器](http://msdn.microsoft.com/library/windowsazure/dd179468.aspx)也[Windows Azure 儲存體服務 REST API 參考](http://msdn.microsoft.com/library/windowsazure/dd179355.aspx)。  
+>  若要以程式設計方式建立容器，您也可以使用 REST 應用程式開發介面。 如需詳細資訊，請參閱 <<c0> [ 建立容器](https://msdn.microsoft.com/library/windowsazure/dd179468.aspx)也[Windows Azure 儲存體服務 REST API 參考](https://msdn.microsoft.com/library/windowsazure/dd179355.aspx)。  
   
  **下一課：**  
   

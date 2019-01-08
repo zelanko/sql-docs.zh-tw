@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database
@@ -16,12 +15,12 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed3c5436a8c3a922ea1a118714c1b429dcc9f286
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: ee9d1c22a216024f388d30978dbb62be933425cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461073"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822512"
 ---
 # <a name="contained-databases"></a>自主資料庫
   *「自主資料庫」* (Contained Database) 是與其他資料庫和裝載資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體隔離的資料庫。  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以四種方式協助使用者將其資料庫與執行個體隔離。  

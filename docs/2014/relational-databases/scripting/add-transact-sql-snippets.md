@@ -11,18 +11,18 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b93171cad6896b32086604b54bce30c3fe396fb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72e3d99672b17fcf6d7cafa3825d04f8989ecdea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144318"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373060"
 ---
 # <a name="add-transact-sql-snippets"></a>新增 Transact-SQL 程式碼片段
   將您自己的 Transact-SQL 程式碼片段加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中包含的預先定義程式碼片段集合。  
   
 ## <a name="creating-a-transact-sql-snippet-file"></a>建立 Transact-SQL 程式碼片段檔案  
- 建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼片段的第一部分是使用您自己的程式碼片段文字建立 XML 檔案。 此檔案必須有 .snippet 副檔名，且必須符合 [程式碼片段結構描述參考](http://go.microsoft.com/fwlink/?LinkId=207504)的需求。 將程式碼片段語言設定為 SQL。  
+ 建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼片段的第一部分是使用您自己的程式碼片段文字建立 XML 檔案。 此檔案必須有 .snippet 副檔名，且必須符合 [程式碼片段結構描述參考](https://go.microsoft.com/fwlink/?LinkId=207504)的需求。 將程式碼片段語言設定為 SQL。  
   
  您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所隨附的預先定義程式碼片段當做範例。 若要尋找預先定義的程式碼片段，請開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，選取 [工具] 功能表，然後按一下 [程式碼片段管理員]。 在 **[語言]** 清單方塊中選取 **[SQL]** ， [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼片段的路徑就會顯示在 **[位置]** 方塊中。  
   
@@ -52,13 +52,13 @@ ms.locfileid: "48144318"
 4.  導覽至包含程式碼片段的資料夾，然後按一下 .snippet 檔案，再按一下 **[開啟]** 按鈕。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立`TRY-CATCH`範圍陳述式程式碼片段並將它匯入[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+ 下列範例會建立 `TRY-CATCH` 範圍陳述式程式碼片段，並將其匯入至 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 1.  將下列程式碼貼到 [記事本]，然後將檔案儲存為 TryCatch.snippet 名稱。  
   
     ```  
     <?xml version="1.0" encoding="utf-8" ?>  
-    <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
+    <CodeSnippets  xmlns="https://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
     <_locDefinition xmlns="urn:locstudio">  
         <_locDefault _loc="locNone" />  
         <_locTag _loc="locData">Title</_locTag>  

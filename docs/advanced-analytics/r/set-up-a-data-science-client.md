@@ -1,32 +1,32 @@
 ---
-title: 設定 SQL Server 上的 R 開發工具的資料科學用戶端 |Microsoft Docs
+title: 設定適用於 R 開發-SQL Server Machine Learning 服務的資料科學用戶端
 description: 在 遠端連線到 SQL Server 的開發工作站上安裝本機的 R 程式庫和工具。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/12/2018
+ms.date: 12/17/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 087d7249fbcbb206566e822c634f10e8bc4ba838
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 86b2ba305263b4699a3fe85328e854ba3105e4ab
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703150"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645509"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>設定 SQL Server 上的 R 開發工具的資料科學用戶端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 可在 SQL Server 2016 或更新版本，包括中的 R 語言選項時，是 R 整合[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)或是[SQL Server 2017 Machine Learning 服務 （資料庫）](../install/sql-machine-learning-services-windows-install.md)安裝。 
 
-若要建立及部署 SQL Server 上的 R 解決方案，安裝[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)若要取得[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)和其他的 R 程式庫，在您的開發工作站上。 RevoScaleR 程式庫，這也是遠端的 SQL Server 執行個體上，可協調計算這兩個系統之間的要求。 
+若要開發並部署 R 解決方案，適用於 SQL Server，安裝[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)以取得開發工作站上[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)和其他的 R 程式庫。 RevoScaleR 程式庫，也需要在遠端 SQL Server 執行個體，可協調計算這兩個系統之間的要求。 
 
-在這篇文章，了解如何設定 R 用戶端的開發工作站，以便您可以連接到遠端 SQL Server 進行機器學習服務和 R 整合。 完成這篇文章中的步驟之後，您必須使用相同的 SQL Server 上的 R 程式庫。 您也會知道如何在 SQL Server 上推入本機的 R 工作階段的遠端 R 工作階段的計算。
+在這篇文章，了解如何設定 R 用戶端的開發工作站，以便您可以與遠端的 SQL Server machine learning 及 R 整合啟用互動。 完成這篇文章中的步驟之後，您必須使用相同的 SQL Server 上的 R 程式庫。 您也會知道如何在 SQL Server 上推入本機的 R 工作階段的遠端 R 工作階段的計算。
 
 ![用戶端-伺服器元件](media/sqlmls-r-client-revo.png "本機和遠端 R 工作階段和程式庫")
 
-您可以使用內建**RGUI**工具在本文中所述或是[連結程式庫](#install-ide)RStudio 或您通常會使用任何其他 IDE。
+若要驗證安裝，您可以使用內建**RGUI**工具在本文中所述或是[連結程式庫](#install-ide)RStudio 或您通常會使用任何其他 IDE。
 
 > [!Tip]
 > 如需這些練習的影片示範，請參閱 <<c0> [ 執行的 R 和 Python，在從 Jupyter Notebook 的 SQL Server 中遠端](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)。
@@ -50,9 +50,12 @@ Microsoft 的 R 封裝有多個產品和服務。 在本機工作站上，我們
 
 2. 在安裝精靈中，接受或變更預設安裝路徑，接受或變更 [元件] 清單中，並接受 Microsoft R Client 授權條款。
 
-安裝完成時，歡迎使用畫面向您介紹的產品和文件。
+  安裝完成時，歡迎使用畫面向您介紹的產品和文件。
 
-在 R 用戶端中，R 處理僅限使用兩個執行緒和記憶體中的資料。 使用多個核心和大型資料集的可調整處理，您可以使用 shift 同時執行 (稱為*計算內容*) 的資料集和遠端的 SQL Server 執行個體的運算能力。 這是建議的方法與實際執行 SQL Server 執行個體的用戶端整合。 
+3. 建立以確保一致的輸出，在 Intel 數學核心程式庫 (MKL) 計算 MKL_CBWR 系統環境變數。
+
+  + 在控制台中，按一下**系統及安全性** > **System** > **進階系統設定** >  **環境變數**。
+  + 建立新的系統變數，名為**MKL_CBWR**，值設為**自動**。
 
 ## <a name="2---locate-executables"></a>2-找出可執行檔
 
@@ -60,12 +63,12 @@ Microsoft 的 R 封裝有多個產品和服務。 在本機工作站上，我們
 
 1. 在 [檔案總管] 中，開啟 C:\Program Files\Microsoft\R Client\R_SERVER\bin 資料夾以確認 R.exe 的位置。
 
-2. 開啟 x64 子資料夾，以確認**RGUI**。
+2. 開啟 x64 子資料夾，以確認**RGUI**。 下一個步驟中，您將使用此工具。
 
 3. 開啟 C:\Program Files\Microsoft\R Client\R_SERVER\library 以檢閱使用 R 用戶端，包括 RevoScaleR、 MicrosoftML 及其他安裝的套件清單。
 
 
-<a name="r-tool"></a>
+<a name="R-tools"></a>
  
 ## <a name="3---start-rgui"></a>3-啟動 RGUI
 
@@ -84,6 +87,8 @@ Microsoft 的 R 封裝有多個產品和服務。 在本機工作站上，我們
 
 ## <a name="4---get-sql-permissions"></a>4-取得 SQL 權限
 
+在 R 用戶端中，R 處理僅限使用兩個執行緒和記憶體中的資料。 使用多個核心和大型資料集的可調整處理，您可以使用 shift 同時執行 (稱為*計算內容*) 的資料集和遠端的 SQL Server 執行個體的運算能力。 這是建議的實際執行 SQL Server 執行個體中，與用戶端整合，您需要的權限和連接資訊，讓它運作。
+
 若要連接到執行指令碼，並上傳資料的 SQL Server 的執行個體，您必須具有有效的登入資料庫伺服器上。 您可以使用 SQL 登入或整合式 Windows 驗證。 我們通常建議使用 Windows 整合式的驗證，但使用 SQL 登入是某些情況下，更容易，尤其是您的指令碼包含到外部資料的連接字串。
 
 最小值，用來執行程式碼的帳戶必須具有您正在使用，再加上特殊權限執行的任何外部指令碼，從資料庫讀取的權限。 大部分的開發人員也需要若要建立預存程序，並將資料寫入資料表，其中包含定型資料的權限，或評分的資料。 
@@ -100,7 +105,7 @@ Microsoft 的 R 封裝有多個產品和服務。 在本機工作站上，我們
 
 ## <a name="5---test-connections"></a>5-測試連接
 
- 驗證步驟中，使用**RGUI**和 RevoScaleR 確認連線到遠端伺服器。 SQL Server 必須能夠進行[的遠端連線](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md)而且您必須具備權限，包括使用者登入並連接到資料庫。 
+ 驗證步驟中，使用**RGUI**和 RevoScaleR 確認連線到遠端伺服器。 SQL Server 必須能夠進行[的遠端連線](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server)而且您必須具備權限，包括使用者登入並連接到資料庫。 
 
 下列步驟假設示範資料庫[NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md)，和 Windows 驗證。
 
@@ -110,7 +115,7 @@ Microsoft 的 R 封裝有多個產品和服務。 在本機工作站上，我們
 
 3. 輸入遠端伺服器執行的示範指令碼。 您必須修改下列的範例指令碼，以包含遠端的 SQL Server 執行個體的有效名稱。 此工作階段開始的本機工作階段，但**rxSummary**函式會執行遠端 SQL Server 執行個體上。
 
-  ```r
+  ```R
   # Define a connection. Replace server with a valid server name.
   connStr <- "Driver=SQL Server;Server=<your-server-name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
   
@@ -128,7 +133,7 @@ Microsoft 的 R 封裝有多個產品和服務。 在本機工作站上，我們
 
   此指令碼會連線到遠端伺服器上的資料庫，可提供查詢、 建立計算內容`cc`指示遠端執行程式碼，然後提供的 RevoScaleR 函式**rxSummary**傳回統計查詢結果的摘要。
 
-  ```r
+  ```R
     Call:
   rxSummary(formula = ~., data = RxSqlServerData(sqlQuery = sampleQuery, 
       connectionString = connStr), computeContext = cc)
@@ -143,7 +148,7 @@ Microsoft 的 R 封裝有多個產品和服務。 在本機工作站上，我們
 
 4. 取得及設定計算內容。 一旦您設定計算內容時，就會生效的工作階段的持續時間。 如果您不確定計算是本機或遠端，請執行下列命令，以了解。指定連接字串的結果會指出遠端計算內容。
 
-  ```r
+  ```R
   # Return the current compute context.
   rxGetComputeContext()
 
@@ -160,7 +165,7 @@ Microsoft 的 R 封裝有多個產品和服務。 在本機工作站上，我們
 
 5. 傳回資料來源，包括名稱和型別中的變數的詳細資訊。
 
-  ```r
+  ```R
   rxGetVarInfo(data = inDataSource)
   ```
   結果包含 23 的變數。
@@ -168,7 +173,7 @@ Microsoft 的 R 封裝有多個產品和服務。 在本機工作站上，我們
 
 6. 產生散佈圖來探索是否有兩個變數之間的相依性。 
 
-  ```r
+  ```R
   # Set the connection string. Substitute a valid server name for the placeholder.
   connStr <- "Driver=SQL Server;Server=<your database name>;Database=NYCTaxi_Sample;Trusted_Connection=true"
 
@@ -242,5 +247,5 @@ Microsoft 的 R 封裝有多個產品和服務。 在本機工作站上，我們
 
 兩個不同的教學課程包含練習，讓您將能練習切換計算內容從本機到遠端的 SQL Server 執行個體。
 
-+ [SQL Server 資料的教學課程： 使用 RevoScaleR R 函式](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
++ [教學課程：使用 RevoScaleR R 函式與 SQL Server 資料](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 + [資料科學端對端逐步解說](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)

@@ -15,25 +15,25 @@ ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: abb2e425df70a3425a6dfc7eef278f6bd6aa6cc2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5371060acadc0def9a8105616b36d8687eb5a87e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099028"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203354"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Web 服務 URL (SSRS 原生模式)
   使用 [Web 服務 URL] 頁面可設定或修改用來存取報表伺服器的 URL。 將會根據您指定的 URL 來建立 *「URL 保留項目」* 。 此 URL 保留項目會針對後續可用來存取報表伺服器 Web 服務的所有 URL 來定義語法和規則。 它會針對此報表伺服器 Web 服務指定前置詞、主機、通訊埠和虛擬目錄。 根據您指定主機的方式而定，單一保留項目可能會有多個 URL。 主機的預設值會指定強式萬用字元， 強式萬用字元可讓您在 URL 中指定任何可解析為主控報表伺服器之電腦的主機名稱。 如需有關 URL 組態和保留的詳細資訊，請參閱[設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)並[設定報表伺服器 Url &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式。  
   
- 若要開啟此頁面，請啟動[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態管理員，並按一下**Web 服務 URL**瀏覽窗格中。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+ 若要開啟此頁面，請啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並按一下導覽窗格中的 **[Web 服務 URL]** 。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
  此頁面會提供報表伺服器 URL 中常用的值。 如果您想要建立其他 URL、使用主機標頭，或是指定特定格式的 IP 位址，請按一下 **[進階]**。  
   
  當您按一下 **[套用]** 之後，此頁面上將會出現此 Web 服務的連結。 如果您在建立報表伺服器資料庫之前按一下此連結，您可以預期會看到「找不到網頁」錯誤。 一旦設定此資料庫之後，這個錯誤將不再出現。 如需詳細資訊，請參閱[建立原生模式報表伺服器資料庫 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
   
- 如果您重新安裝[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]並尋找，您會收到錯誤，嘗試使用所有的指派和連接埠 80 的預設 IP 位址值時，您通常可以解決此錯誤由重新啟動服務之後，重新建立 URL。  
+ 如果您已重新安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，然後發現您在嘗試使用 [全部指派] 的預設 IP 位址值和通訊埠 80 時得到錯誤，通常可以在重新啟動此服務之後，重新建立 URL 來解決錯誤。  
   
 ## <a name="options"></a>選項。  
  **虛擬目錄**  
@@ -58,7 +58,7 @@ ms.locfileid: "48099028"
  **SSL 憑證**  
  將憑證繫結至您所指定的 IP 位址。 您必須在電腦上安裝及設定此憑證。 Reporting Services 不提供用來管理憑證的功能。 此憑證必須發行到解析為 IP 位址的主機名稱或電腦名稱。 例如，若要使用的憑證是發給 http://salesreports ，您所指定的 IP 位址必須解析為名為"salesreports"的伺服器。  
   
- 如果您使用的憑證，您必須修改`UrlRoot`組態設定，在 rsreportserver.config 檔案，使它指定註冊憑證之電腦的完整的名稱。 如需詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) 在原生模式報表伺服器上設定 SSL 連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 如果您要使用憑證，也必須修改 RSReportServer.config 檔案中的 `UrlRoot` 組態設定，使它指定註冊憑證之電腦的完整名稱。 如需詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) 在原生模式報表伺服器上設定 SSL 連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  **SSL 通訊埠**  
  為 SSL 連接指定通訊埠。  
@@ -69,17 +69,17 @@ ms.locfileid: "48099028"
  **進階**  
  按一下此項目，即可為目前的應用程式執行個體建立其他 URL。  
   
-> [!NOTE]  
+> [!NOTE]
 >  如果您有現有的 SSL 繫結和 URL 保留項目，而您想要變更 SSL 繫結，例如使用不同的憑證或主機標頭，則建議您依序完成以下步驟：  
->   
+> 
 >  1.  先移除所有 URL 保留項目。  
 > 2.  然後移除所有 SSL 繫結。  
 > 3.  然後重新建立 URL 和 SSL 繫結。  
->   
+> 
 >  前述步驟可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員完成。  
->   
+> 
 >  Microsoft Windows 針對每個 IP 位址與通訊埠組合支援一個繫結。 如果您將報表伺服器設定為使用特定主機標頭值，同時將通訊埠至 IP 位址組合上的憑證發給不同的主機標頭值，則會在瀏覽器中看見一個警告，指出憑證與所使用的 URL 不相符。  
->   
+> 
 >  若要更正這個問題，請刪除所有繫結，然後使用唯一的設定建立新繫結，或設定包含萬用字元的 Reporting Services URL 註冊。  
   
 ## <a name="see-also"></a>另請參閱  

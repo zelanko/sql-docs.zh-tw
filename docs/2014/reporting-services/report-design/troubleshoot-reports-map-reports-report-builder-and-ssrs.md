@@ -1,5 +1,5 @@
 ---
-title: 報表疑難排解：地圖報表 (報表產生器及 SSRS) | Microsoft Docs
+title: 報表疑難排解：地圖報表 （報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c4ac3f5504aef33661afd7c94cec2b63b0b64f0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c9a3adeb3e63c24aa7a78f5a44f1cd2692ce2b7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197408"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375340"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>報表疑難排解：地圖報表 (報表產生器及 SSRS)
   當您將地圖或地圖圖層加入至報表時、自訂報表中現有的地圖或地圖圖層時、預覽報表中的地圖時，或發行包含地圖的報表時，在報表中可能會發生與地圖相關的問題。 您可以使用本主題來協助疑難排解這些問題。  
@@ -173,7 +173,7 @@ ms.locfileid: "48197408"
 -   如需詳細資訊，請參閱 [使用規則與分析資料更改多邊形、線條與點顯示 &#40;報表產生器及 SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
 ### <a name="what-is-the-value-nan-on-the-color-scale"></a>色階上的 NaN 值代表什麼意思？  
- `NaN` 代表不是數字。 色階值應為數值。 針對與色階相關的規則，檢查分佈設定與圖例文字值。 如果您已經建立自訂分佈範圍，請確認您在第一個範圍指定下限，並在最後一個範圍指定上限。  
+ `NaN` 代表「非數字」(Not a Number)。 色階值應為數值。 針對與色階相關的規則，檢查分佈設定與圖例文字值。 如果您已經建立自訂分佈範圍，請確認您在第一個範圍指定下限，並在最後一個範圍指定上限。  
   
 ### <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>當我執行報表時，我的色階沒有出現。  
  當地圖圖層針對整個圖層或針對內嵌的地圖元素指定多邊形、線條或點的色彩規則時，色階會對使用者顯示相關資訊。 如果地圖元素沒有指定任何色彩規則，或者色彩規則透過圖例 (而非色彩地圖) 指定，則色彩地圖不會出現在轉譯的報表中。  
@@ -194,7 +194,7 @@ ms.locfileid: "48197408"
   
 -   地圖投射必須為 **[Mercator]**。  
   
--   對於本機預覽，您必須擁有網際網路存取權。 對於從報表伺服器執行的報表，必須將報表伺服器設定為支援影像分割背景。 如需詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](http://go.microsoft.com/fwlink/?linkid=121312) 的＜規劃地圖支援＞。  
+-   對於本機預覽，您必須擁有網際網路存取權。 對於從報表伺服器執行的報表，必須將報表伺服器設定為支援影像分割背景。 如需詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件集](https://go.microsoft.com/fwlink/?linkid=121312) 的＜規劃地圖支援＞。  
   
  如需新增圖格圖層的詳細資訊，請參閱[新增、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
@@ -217,6 +217,6 @@ ms.locfileid: "48197408"
   
 ## <a name="see-also"></a>另請參閱  
  [地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [針對報表產生器進行疑難排解](../troubleshoot-report-builder.md)  
+ [疑難排解報表產生器](../troubleshoot-report-builder.md)  
   
   

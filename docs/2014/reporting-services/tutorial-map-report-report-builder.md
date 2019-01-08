@@ -1,5 +1,5 @@
 ---
-title: 教學課程：地圖報表 (報表產生器) | Microsoft Docs
+title: 教學課程：地圖報表 （報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2218fdb184fb4fe67d110b95c42f10f761ef3975
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43135554b1340b92f4801a0f08e002142b443981
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098848"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359860"
 ---
 # <a name="tutorial-map-report-report-builder"></a>教學課程：地圖報表 (報表產生器)
   本教學課程的設計在於協助您了解，可對照地理背景顯示報告資料的地圖功能。  
@@ -63,7 +63,7 @@ ms.locfileid: "48098848"
 10. [儲存報表](#Save)  
   
 > [!NOTE]  
->  在本教學課程中，精靈的步驟會合併成兩個程序：一個程序用來建立資料集，另一個程序用來建立資料表。 如需如何瀏覽至報表伺服器、選擇資料來源、建立資料集以及執行精靈的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教學課程中，精靈的步驟會合併成兩個程序：一個程序用來建立資料集，另一個程序用來建立資料表。 如需如何瀏覽至報表伺服器的逐步指示，選擇資料來源、 建立資料集，以及執行精靈，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表&#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
  完成本教學課程的估計時間：30 分鐘。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48098848"
   
 #### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>使用新報表中的地圖精靈加入地圖  
   
-1.  按一下 **開始**，指向**程式**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**報表產生器**，然後按一下**報表產生器**。  
+1.  按一下 [ **開始**]、依序指向 [ **程式集**] 和 [ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**報表產生器**]，然後按一下 [ **報表產生器**]。  
   
      [使用者入門] 對話方塊隨即出現。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48098848"
   
 3.  在右窗格中，按一下 **[地圖精靈]**。  
   
-4.  按一下 **[建立]**。  
+4.  按一下 [建立] 。  
   
 5.  在 **[選擇空間資料的來源]** 頁面中，確認已選取 **[地圖庫]** 。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "48098848"
   
 9. 在查詢設計工具工具列上，按一下 **[執行]** \(**!**)。  
   
-     結果集會顯示七個資料行：StoreKey、StoreName、SellingArea、City、County、Sales 和 SpatialLocation。 此資料表示在紐約州中販賣消費品的商店集。 結果集中的每個資料列都包含一個商店識別碼、商店名稱、可用於產品展示的區域、商店所在的城市和郡、銷售總額，以及經緯度的空間位置。 展示區域的範圍是從 455 平方英尺到 1125 平方英尺。  
+     結果集會顯示七個資料行：StoreKey、 StoreName、 SellingArea、 City、 郡、 銷售和 SpatialLocation。 此資料表示在紐約州中販賣消費品的商店集。 結果集中的每個資料列都包含一個商店識別碼、商店名稱、可用於產品展示的區域、商店所在的城市和郡、銷售總額，以及經緯度的空間位置。 展示區域的範圍是從 455 平方英尺到 1125 平方英尺。  
   
 10. 按 [下一步] 。  
   
@@ -576,12 +576,12 @@ ms.locfileid: "48098848"
   
 3.  在 **[名稱]** 中輸入 **紐約的商店銷售額**。  
   
- 按一下 **[儲存]**。  
+ 按一下 [儲存] 。  
   
 ## <a name="next-steps"></a>後續步驟  
  以上總結如何將地圖加入至報表的逐步解說。  
   
- 如需詳細資訊，請參閱 < [Maps&#40;報表產生器及 SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md)和 部落格文章[製圖調整空間資料的 SQL Server Reporting services](http://go.microsoft.com/fwlink/?LinkId=152771) blogs.msdn.com 上。  
+ 如需詳細資訊，請參閱 < [Maps&#40;報表產生器及 SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md)和 部落格文章[製圖調整空間資料的 SQL Server Reporting services](https://go.microsoft.com/fwlink/?LinkId=152771) blogs.msdn.com 上。  
   
  如需教學課程，請參閱[教學課程&#40;報表產生器&#41;](report-builder-tutorials.md)。  
   

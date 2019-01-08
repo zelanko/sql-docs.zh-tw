@@ -20,16 +20,16 @@ ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef1336514d876d171cd9d31d8c20171e154f9a2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ef74d98102c424a71ac1728d664fddbeac2296c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646896"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215597"
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource 函數 (英文)
 **合規性**  
- 版本導入： ODBC 1.0  
+ 導入的版本：ODBC 1.0  
   
  **摘要**  
  **SQLConfigDataSource**新增、 修改或刪除資料來源。  
@@ -54,19 +54,19 @@ BOOL SQLConfigDataSource(
  *常見*  
  [輸入]要求的類型。 *常見*引數必須包含下列值之一：  
   
- ODBC_ADD_DSN： 加入新的使用者資料來源。  
+ ODBC_ADD_DSN:加入新的使用者資料來源。  
   
- ODBC_CONFIG_DSN： 設定 （修改） 現有的使用者資料來源。  
+ ODBC_CONFIG_DSN:設定 （修改） 現有的使用者資料來源。  
   
- ODBC_REMOVE_DSN： 移除現有的使用者資料來源。  
+ ODBC_REMOVE_DSN:移除現有的使用者資料來源。  
   
- ODBC_ADD_SYS_DSN： 加入新的系統資料來源。  
+ ODBC_ADD_SYS_DSN:加入新的系統資料來源。  
   
- ODBC_CONFIG_SYS_DSN： 修改現有的系統資料來源。  
+ ODBC_CONFIG_SYS_DSN:修改現有的系統資料來源。  
   
- ODBC_REMOVE_SYS_DSN： 移除現有的系統資料來源。  
+ ODBC_REMOVE_SYS_DSN:移除現有的系統資料來源。  
   
- ODBC_REMOVE_DEFAULT_DSN： 移除的系統資訊的預設資料來源規格 」 一節。 （它也會移除預設的驅動程式規格區段 Odbcinst.ini 中的項目系統資訊。 這*常見*執行相同的功能已被取代**SQLRemoveDefaultDataSource**函式。)指定此選項時，所有的呼叫中的其他參數**SQLConfigDataSource**應該是 Null; 如果不是 NULL，則會忽略它們。  
+ ODBC_REMOVE_DEFAULT_DSN:移除系統資訊中的預設資料來源規格 」 一節。 （它也會移除預設的驅動程式規格區段 Odbcinst.ini 中的項目系統資訊。 這*常見*執行相同的功能已被取代**SQLRemoveDefaultDataSource**函式。)指定此選項時，所有的呼叫中的其他參數**SQLConfigDataSource**應該是 Null; 如果不是 NULL，則會忽略它們。  
   
  *lpszDriver*  
  [輸入]驅動程式描述 （通常是相關聯的 DBMS 的名稱） 呈現給使用者，而不是實體的驅動程式名稱。  

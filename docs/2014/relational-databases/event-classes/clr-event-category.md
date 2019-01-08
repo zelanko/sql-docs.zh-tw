@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,12 +16,12 @@ ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83e8c1bdbfca318ab0f0caec00faa3830a141700
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 101badf320f72887d6eb9669224d24fff5b9a299
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229496"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807400"
 ---
 # <a name="clr-event-category"></a>CLR 事件類別目錄
   **CLR** 事件類別目錄包含了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內執行 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 物件時，所產生的事件類別。  

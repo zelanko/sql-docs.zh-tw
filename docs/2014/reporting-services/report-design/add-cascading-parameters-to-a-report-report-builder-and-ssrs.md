@@ -11,12 +11,12 @@ ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a4d5a4f3fb3fcc60e7d576b98ccacf88d027d287
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7eaddc16b25bc7ed1129cc89b67ae92ddb7aa129
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078344"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376440"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>將串聯參數加入至報表 (報表產生器及 SSRS)
   串聯參數會提供管理大量報表資料的方法。 您可以定義一組相關的參數，讓某一個參數的值清單會視另一個參數所選擇的值而定。 例如，第一個參數是獨立的，而且可能代表一個產品類別目錄的清單。 使用者選取類別目錄時，第二個參數會相依於第一個參數的值。 其值會隨著所選類別目錄內的子類別目錄清單更新。 當使用者檢視報表時，類別目錄與子類別目錄參數的值都用於篩選報表資料。  
@@ -28,7 +28,7 @@ ms.locfileid: "48078344"
   
  順序對於串聯參數相當重要，因為列在清單中後面之參數的資料集查詢會包含清單中前面每個參數的參考。 在執行階段，參數在 [報表資料] 窗格中的順序會決定參數查詢出現在報表中的順序，因此，也會決定使用者選擇每個後續參數值的順序。  
   
- 如需有關使用多個值 (包含全選功能) 建立串聯式參數的詳細資訊，請參閱 [如何擁有全選多值的串聯式參數](http://go.microsoft.com/fwlink/?LinkId=184757)。  
+ 如需有關使用多個值 (包含全選功能) 建立串聯式參數的詳細資訊，請參閱 [如何擁有全選多值的串聯式參數](https://go.microsoft.com/fwlink/?LinkId=184757)。  
   
 ### <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>若要利用包含多個相關參數的查詢建立主資料集  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48078344"
   
     1.  資料來源欄位的清單。 例如，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中，SELECT 陳述式會指定給定資料表或資料列中的資料庫資料行名稱清單。  
   
-    2.  適用於每個串聯參數的一個查詢參數。 查詢參數會指定要在查詢中包含或排除的特定值，藉以限制從資料來源擷取的資料。 查詢參數通常出現在查詢的限制子句中。 例如，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式中，查詢參數會出現在 WHERE 子句中。 如需詳細資訊，請參閱《 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 線上叢書 [》中](http://go.microsoft.com/fwlink/?linkid=120955)文件集的＜使用 WHERE 和 HAVING 篩選資料列＞。  
+    2.  適用於每個串聯參數的一個查詢參數。 查詢參數會指定要在查詢中包含或排除的特定值，藉以限制從資料來源擷取的資料。 查詢參數通常出現在查詢的限制子句中。 例如，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式中，查詢參數會出現在 WHERE 子句中。 如需詳細資訊，請參閱《 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 線上叢書 [》中](https://go.microsoft.com/fwlink/?linkid=120955)文件集的＜使用 WHERE 和 HAVING 篩選資料列＞。  
   
 6.  按一下 **[執行]** (**!**)。 加入查詢參數然後執行查詢之後，會自動建立對應到查詢參數的報表參數。  
   
@@ -155,9 +155,9 @@ ms.locfileid: "48078344"
 4.  按一下 **[檢視報表]**。 報表會根據您所選擇的參數，更新顯示。  
   
 ## <a name="see-also"></a>另請參閱  
- [加入、 變更或刪除報表參數&#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [加入、變更或刪除報表參數 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [報表參數 &#40;報表產生器和報表設計師&#41;](report-parameters-report-builder-and-report-designer.md)   
- [教學課程：將參數新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [教學課程：將參數加入至報表&#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [教學課程&#40;報表產生器&#41;](../report-builder-tutorials.md)   
  [新增資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

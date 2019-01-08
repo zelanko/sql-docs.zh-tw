@@ -1,91 +1,94 @@
 ---
-title: 使用 SQL Server 資料使用 R （SQL 和 R 深入探討） |Microsoft Docs
+title: RevoScaleR 教學課程-SQL Server Machine Learning 中建立資料庫和權限
+description: 有關如何建立 R 教學課程適用於 SQL Server 資料庫的教學課程逐步解說...
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a59d467417c3471fa643acf9fc65ab45d5dc7a45
-ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
+ms.openlocfilehash: 15032b604d7ea28ad03acb837f997dac3afa84b8
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44375671"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645267"
 ---
-# <a name="lesson-1-create-a-database-and-permissions"></a>第 1 課： 建立資料庫和權限
+# <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>建立資料庫和權限 （SQL Server 和 RevoScaleR 教學課程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-這篇文章是屬於[RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)如何使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server。
+這一課是屬於[RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)如何使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server。
 
-在這一課，您可以設定環境並新增所需的定型模型的資料並執行之資料的一些快速摘要。 此程序的一部分，您必須完成下列工作：
-  
-- 建立新的資料庫來儲存資料，以定型和評分兩個 R 模型。
-  
-- 建立帳戶 (Windows 使用者或 SQL 登入) 以供您的工作站與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦之間通訊時使用。
-  
-- 使用 R 建立資料來源，以搭配使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料和資料庫物件。
-  
-- 使用 R 資料來源，將資料載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
-  
-- 使用 R 來取得變數的清單，並修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的中繼資料。
-  
-- 建立計算內容，以遠端執行 R 程式碼。
-  
-- （選擇性）啟用遠端計算內容的追蹤。
-  
-## <a name="create-the-database-and-user"></a>建立資料庫和使用者
+其中一個的課程是有關設定 SQL Server 資料庫和權限才能完成本教學課程。 使用[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)或另一個查詢編輯器，來完成下列工作：
 
-這個逐步解說中，建立新的資料庫中[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，並新增具有 SQL 登入的權限來寫入和讀取資料，以及執行 R 指令碼。
+> [!div class="checklist"]
+> * 建立新的資料庫來儲存資料以供訓練和評分兩個 R 模型
+> * 建立資料庫使用者登入以建立和使用資料庫物件的權限
+  
+## <a name="create-the-database"></a>建立資料庫
 
-> [!NOTE]
-> 執行 R 指令碼的帳戶，如果您僅讀取資料，需要 SELECT 權限 (**db_datareader**角色) 上指定的資料庫。 不過，在本教學課程中，您必須具有 DDL 系統管理員權限以準備資料庫，並建立資料表來儲存評分結果。
-> 
-> 此外，如果您不是資料庫擁有者，您會需要權限 EXECUTE ANY EXTERNAL SCRIPT，若要執行 R 指令碼。
+本教學課程需要資料庫來儲存資料和程式碼。 如果您不是系統管理員，要求您為您建立的資料庫和登入的 DBA。 您需要的權限來寫入和讀取資料，以及執行 R 指令碼。
 
-1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，選取已啟用 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 的執行個體，再以滑鼠右鍵按一下 [資料庫]，然後選取 [新增資料庫]。
+1. 在 SQL Server Management Studio 中，連接到 R 啟用資料庫執行個體。
+
+2. 以滑鼠右鍵按一下**資料庫**，然後選取**新的資料庫**。
   
-2. 輸入新資料庫的名稱。 您可以使用任意名稱；只要記得按照此逐步解說，編輯所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼和 R 指令碼即可。
+2. 輸入新資料庫的名稱：RevoDeepDive。
   
-    > [!TIP]
-    > 若要檢視更新的資料庫名稱，請以滑鼠右鍵按一下 [資料庫]，然後選取 [重新整理]。
+
+## <a name="create-a-login"></a>建立登入
   
-3. 將資料庫內容變更為 master 資料庫並按一下 [新增查詢]。
+1. 將資料庫內容變更為 master 資料庫並按一下 [新增查詢]。
   
-4. 在新的 [查詢] 視窗中，執行下列命令以建立使用者帳戶，並將帳戶指派給此教學課程中所用的資料庫。 請務必視需要變更資料庫名稱。
+2. 在新的 [查詢] 視窗中，執行下列命令以建立使用者帳戶，並將帳戶指派給此教學課程中所用的資料庫。 請務必視需要變更資料庫名稱。
+
+3. 若要確認登入，請選取新的資料庫，展開**安全性**，展開**使用者**。
   
 **Windows 使用者**
   
-```SQL
+```sql
  -- Create server user based on Windows account
 USE master
 GO
-CREATE LOGIN [<DOMAIN>\<user_name>] FROM WINDOWS WITH DEFAULT_DATABASE=[DeepDive]
+CREATE LOGIN [<DOMAIN>\<user_name>] FROM WINDOWS WITH DEFAULT_DATABASE=[RevoDeepDive]
 
  --Add the new user to tutorial database
-USE [DeepDive]
+USE [RevoDeepDive]
 GO
 CREATE USER [<user_name>] FOR LOGIN [<DOMAIN>\<user_name>] WITH DEFAULT_SCHEMA=[db_datareader]
 ```
 
 **SQL 登入**
 
-```SQL
+```sql
 -- Create new SQL login
 USE master
 GO
-CREATE LOGIN DDUser01 WITH PASSWORD='<type password here>', CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF;
+CREATE LOGIN [DDUser01] WITH PASSWORD='<type password here>', CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF;
 
 -- Add the new SQL login to tutorial database
-USE [DeepDive]
+USE RevoDeepDive
 GO
 CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
 ```
 
-5. 若要確認已建立使用者，請選取新的資料庫，依序展開 [安全性] 和 [使用者]。
+## <a name="assign-permissions"></a>指派權限
 
-## <a name="troubleshooting"></a>疑難排解
+本教學課程會示範 R 指令碼和 DDL 作業，包括建立和刪除資料表和預存程序，以及在外部處理序中執行 R 指令碼，在 SQL Server 上。 在此步驟中，指派權限以允許這些工作。
+
+這個範例假設 SQL 登入 (DDUser01)，但如果您建立的 Windows 登入，可改為使用。
+
+```sql
+USE RevoDeepDive
+GO
+
+EXEC sp_addrolemember 'db_owner', 'DDUser01'
+GRANT EXECUTE ANY EXTERNAL SCRIPT TO DDUser01
+GO
+```
+
+## <a name="troubleshoot-connections"></a>針對連線進行疑難排解
 
 本節列出在資料庫設定過程中可能發生的一些常見問題。
 
@@ -95,7 +98,7 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
     如果您不想安裝其他資料庫管理工具，可以使用控制台的 [ODBC 資料來源管理員](https://msdn.microsoft.com/library/ms714024.aspx) ，建立與 SQL Server 執行個體的測試連線。 如果資料庫已正確設定且輸入的使用者名稱和密碼皆無誤時，您應可看到剛建立的資料庫，並可將其選取為預設資料庫。
   
-    如果您無法連接到資料庫，請確認伺服器已啟用遠端連線，亦已啟用具名管道通訊協定。 這篇文章中所提供的其他疑難排解提示：[疑難排解連線到 SQL Server Database Engine](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine)。
+    連接失敗的常見原因包括遠端伺服器時，不會啟用連接，而且未啟用具名管道通訊協定。 您可以在這篇文章中找到更多的疑難排解秘訣：[疑難排解 SQL Server Database Engine 的連接](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine)。
   
 - **為什麼我的資料表名稱前會加上資料讀取元？**
   
@@ -111,17 +114,11 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
 - **我沒有 DDL 權限，是否仍可以執行本教學課程？**
   
-    是；不過您應該先請使用者預先載入資料至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表，並跳過呼叫建立新資料表的區段。 需要 DDL 權限的函式會反映在本教學課程可能的情況下。
+    是的但您應該先請使用者預先載入資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表，以及略過 繼續進行下一課。 需要 DDL 權限的函式會反映在本教學課程可能的情況下。
 
     此外，要求您的系統管理員授與您的權限 EXECUTE ANY EXTERNAL SCRIPT。 遠端，還是使用，執行 R 指令碼，為所需`sp_execute_external_script`。
 
-## <a name="next-step"></a>下一步
+## <a name="next-steps"></a>後續步驟
 
-[使用 RxSqlServerData 建立 SQL Server 資料物件](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
-
-## <a name="overview"></a>概觀
-
-[資料科學深入探討︰使用 RevoScaleR 套件](../../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-
-
-
+> [!div class="nextstepaction"]
+> [使用 RxSqlServerData 建立 SQL Server 資料物件](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)

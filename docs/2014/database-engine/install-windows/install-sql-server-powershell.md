@@ -10,12 +10,12 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8cd37ca4058fb79eddfa296896c3da230b98789
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: a90a30a0ae7fe09d49b1d42b577b13370c48c0de
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018794"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360930"
 ---
 # <a name="install-sql-server-powershell"></a>安裝 SQL Server PowerShell
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式若偵測到您選取了內含 PowerShell 元件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，但卻未安裝 Windows PowerShell 2.0，其將會停止。 您必須使用 Windows Management Framework 安裝 Windows PowerShell 2.0，然後重新執行安裝程式。  
@@ -35,7 +35,7 @@ ms.locfileid: "51018794"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支援從物件總管樹狀結構啟動 Windows PowerShell 工作階段。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式支援 Windows PowerShell 作業步驟。  
   
- 如果尚未安裝，Windows PowerShell 2.0，或已解除安裝，您必須安裝它遵循上的指示[Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214)頁面。  
+ 如果尚未安裝，Windows PowerShell 2.0，或已解除安裝，您必須安裝它遵循上的指示[Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214)頁面。  
   
  如果在安裝程式完成之後解除安裝了 Windows PowerShell，將會造成 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能無法運作。 Windows PowerShell 可以由 Windows 使用者解除安裝，而且某些 Windows 作業系統升級可能也會要求解除安裝 Windows PowerShell。 如果要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 功能，您必須使用 Windows Management Framework 安裝 PowerShell 2.0。  
   

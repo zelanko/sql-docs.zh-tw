@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: install
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
@@ -20,12 +20,12 @@ ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88dfe4836cc84b7792639817a01c026f6d3f3283
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8bbec3cd552434070d76913f72812b302440bcdb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018103"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363480"
 ---
 # <a name="upgrade-analysis-services"></a>升級 Analysis Services
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式來升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需升級的詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 SharePoint 模式中，請參閱[升級 PowerPivot for SharePoint](upgrade-power-pivot-for-sharepoint.md)。 如需有關升級現有的 SQL Server 執行個體，請參閱 <<c0> [ 升級到使用的 SQL Server 2014 安裝精靈&#40;安裝&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)。</c0>  
@@ -33,7 +33,7 @@ ms.locfileid: "51018103"
 ## <a name="known-upgrade-issues"></a>已知的升級問題  
  在升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之前，請檢閱下列文章：  
   
--   [SQL Server 2014 版本資訊](http://go.microsoft.com/fwlink/?LinkID=296445)。  
+-   [SQL Server 2014 版本資訊](https://go.microsoft.com/fwlink/?LinkID=296445)。  
   
 -   若要了解哪些[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]特性與功能已停用、 已被取代，或變更查看[Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md)。  
   

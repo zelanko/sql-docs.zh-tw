@@ -33,15 +33,15 @@ ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3bb1fc2c37d56750a9ed66442e56dd7f9a22b8cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09aaf68c28e9f647f2f682de09e3f681bc3d739f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106958"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368120"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
-  可以在建立 XML 索引`xml`資料類型資料行。 它們會在資料行中為整個 XML 執行個體的所有標記、值和路徑編制索引，進而提高查詢效能。 在下列情況下，您的應用程式可從 XML 索引獲益：  
+  XML 索引可建立在 `xml` 資料類型資料行上。 它們會在資料行中為整個 XML 執行個體的所有標記、值和路徑編制索引，進而提高查詢效能。 在下列情況下，您的應用程式可從 XML 索引獲益：  
   
 -   在您的工作負載中，經常會查詢 XML 資料行。 必須將資料修改期間的 XML 索引維護成本納入考量。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48106958"
   
 -   次要 XML 索引  
   
- 在 `xml` 類型資料行上的第一個索引必須是主要的 XML 索引。 使用主要 XML 索引時，可支援下列次要索引類型：PATH、VALUE 及 PROPERTY。 視查詢類型而定，這些次要索引可協助改善查詢效能。  
+ 在 `xml` 類型資料行上的第一個索引必須是主要的 XML 索引。 使用主要 XML 索引，支援下列類型的次要索引：路徑、 值和屬性。 視查詢類型而定，這些次要索引可協助改善查詢效能。  
   
 > [!NOTE]  
 >  除非您已正確設定資料庫選項來處理 `xml` 資料類型一起運作，否則無法建立或修改 XML 索引。 如需詳細資訊，請參閱 [使用 XML 資料行進行全文檢索搜尋](use-full-text-search-with-xml-columns.md)。  
@@ -61,7 +61,7 @@ ms.locfileid: "48106958"
  XML 執行個體是以大型二進位物件 (BLOB) 儲存在 `xml` 類型資料行中。 這些 XML 執行個體可以是大型的，而且所儲存之 `xml` 資料類型執行個體的二進位表示法最多可達 2 GB。 如果沒有索引，這些二進位大型物件就會在執行階段切割，以便評估查詢。 這項切割作業可能會很費時。 例如，請考慮下列查詢：  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
   /PD:ProductDescription/PD:Summary  
@@ -72,12 +72,12 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  為了選取符合 `WHERE` 子句中條件的 XML 執行個體，在執行階段會切割 `Production.ProductModel` 資料表之每個資料列中的 XML 二進位大型物件 (BLOB)。 然後，便評估 `(/PD:ProductDescription/@ProductModelID[.="19"]`方法中的運算式 `exist()` )。 此執行階段的切割可能會非常費時，端視資料行中所儲存的執行個體之大小與數目而定。  
   
- 如果查詢 XML 二進位大型物件 (Blob) 常在您的應用程式環境中，它可協助索引`xml`類型資料行。 但是，在修改資料期間會有維護索引的相關成本。  
+ 如果查詢 XML 二進位大型物件 (BLOB) 常在應用程式環境中發生，它將可協助索引 `xml` 類型的資料行。 但是，在修改資料期間會有維護索引的相關成本。  
   
 ## <a name="primary-xml-index"></a>主要 XML 索引  
  主要 XML 索引會在 XML 資料行中檢索 XML 執行個體內的所有標記、值與路徑。 若要建立主要 XML 索引，出現 XML 資料行之資料表必須在資料表的主索引鍵上，具有叢集索引。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用此主索引鍵，以將主要 XML 索引中的資料列與內含 XML 資料行之資料表中的資料列相互關聯。  
   
- 主要 XML 索引是中的 XML Blob 的切割和保存表示`xml`資料類型資料行。 對於資料行中的每個 XML 二進位大型物件 (BLOB) 而言，索引可建立幾個資料列。 索引中的資料列數目大約等於 XML 二進位大型物件中的節點數目。 當查詢擷取完整 XML 執行個體時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會從 XML 資料行提供此執行個體。 XML 執行個體中的查詢會使用主要 XML 索引，並使用索引本身來傳回純量值或 XML 子樹。  
+ 主要 XML 索引是 `xml` 資料類型資料行中 XML BLOB 的切割和保存的表示法。 對於資料行中的每個 XML 二進位大型物件 (BLOB) 而言，索引可建立幾個資料列。 索引中的資料列數目大約等於 XML 二進位大型物件中的節點數目。 當查詢擷取完整 XML 執行個體時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會從 XML 資料行提供此執行個體。 XML 執行個體中的查詢會使用主要 XML 索引，並使用索引本身來傳回純量值或 XML 子樹。  
   
  每個資料列都會儲存下列節點資訊：  
   
@@ -106,7 +106,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
  例如，下列查詢會傳回摘要資訊儲存在`CatalogDescription``xml`類型資料行中的`ProductModel`資料表。 此查詢只會針對目錄描述也儲存 <`Features`> 描述的產品型號傳回其 <`Summary`> 資訊。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
 ```  
   
  至於主要 XML 索引，而不是切割基底資料表中每個 XML 二進位大型物件的執行個體，會針對 `exist()` 方法中所指定的運算式，循序搜尋索引中與每個 XML 二進位大型物件相對應的資料列。 如果在索引中的 Path 資料行找到了路徑，就會從主要 XML 索引擷取 <`Summary`> 元素及其子樹，並將其轉換為 XML 二進位大型物件，當做 `query()` 方法的結果。  
@@ -148,7 +148,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
  下列查詢顯示 PATH 索引非常有用：  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.query('  
   /PD:ProductDescription/PD:Summary  
@@ -172,8 +172,8 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS CI,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
   
 SELECT ContactID   
 FROM   Person.Contact  
@@ -190,7 +190,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  例如，若為產品型號 `19`，下列查詢就會使用 `ProductModelID` 方法來擷取 `ProductModelName` 和 `value()` 屬性值。 PROPERTY 索引可提供比使用主要 XML 索引或其他次要 XML 索引更快的執行。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")  
   
 SELECT CatalogDescription.value('(/PD:ProductDescription/@ProductModelID)[1]', 'int') as ModelID,  
        CatalogDescription.value('(/PD:ProductDescription/@ProductModelName)[1]', 'varchar(30)') as ModelName          

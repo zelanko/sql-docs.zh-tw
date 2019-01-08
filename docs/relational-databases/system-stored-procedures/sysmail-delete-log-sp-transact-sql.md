@@ -18,12 +18,12 @@ ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1a61fa55fc9f2b1209d0f7da7f483c0fedce07f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb2db3e60d416324a413bf9d6eb69f6125bc00b5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649202"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588454"
 ---
 # <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@logged_before** =] **'***logged_before***'**  
+ [ **@logged_before** =] **'**_logged_before_**'**  
  刪除 以前的日期和時間所指定的項目*logged_before*引數。 *logged_before*已**datetime**但為預設值是 NULL。 NULL 表示所有日期。  
   
- [ **@event_type** = ] **'***event_type***'**  
+ [ **@event_type** =] **'**_event_type_**'**  
  刪除的記錄項目做為指定的型別*event_type*。 *event_type*已**varchar(15)** 沒有預設值。 有效的項目都**成功**，**警告**，**錯誤**，以及**參考**。 NULL 表示所有事件類型。  
   
 ## <a name="return-code-values"></a>傳回碼值  

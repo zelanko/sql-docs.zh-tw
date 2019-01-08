@@ -16,12 +16,12 @@ ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 951fc38d89718a2c202d436c857e7b06f19de2ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0dea5d937c09d551faf0cc923ee3f36f258d708
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167168"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367560"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source
   您可以設定預存認證，讓 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表伺服器用來存取報表的外部資料。 如果報表會自動執行，便是使用預存認證 (例如以電子郵件形式發行報表的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 訂閱)。 排定或觸發報表處理時，報表伺服器會擷取和使用認證。 本主題會逐步引導您完成為原生模式和 SharePoint 模式報表伺服器設定預存認證的程序。  
@@ -43,11 +43,11 @@ ms.locfileid: "48167168"
 ##  <a name="bkmk_top"></a> 預存認證的安全性原則需求  
  ![as_powerpivot_refresh_sss_set_key](../../analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") 您必須在報表伺服器上，為預存認證所使用的帳戶設定下列其中一項安全性原則。 建議您為您的環境選取具備需要的最低層級權限的原則。  
   
-1.  **允許本機登入**。 如需詳細資訊，請參閱 [允許本機登入](http://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx)。  
+1.  **允許本機登入**。 如需詳細資訊，請參閱 [允許本機登入](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx)。  
   
-2.  **以批次工作登入**。 如需詳細資訊，請參閱 [以批次工作登入](http://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx)。  
+2.  **以批次工作登入**。 如需詳細資訊，請參閱 [以批次工作登入](https://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx)。  
   
-3.  如需原則的一般資訊，請參閱 [編輯群組原則物件的安全性設定](http://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx)。  
+3.  如需原則的一般資訊，請參閱 [編輯群組原則物件的安全性設定](https://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx)。  
   
 ##  <a name="bkmk_stored_credentials_data_source_native"></a> 為報表特定的資料來源設定預存認證 (原生模式)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48167168"
   
 4.  在 [資料來源類型]  清單中，選取用來處理資料來源中之資料的資料處理延伸模組。  
   
-5.  針對 **[連接字串]**，請指定報表伺服器用於連接到資料來源的連接字串。 下列範例說明用來連接的連接字串[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]資料庫：  
+5.  針對 **[連接字串]**，請指定報表伺服器用於連接到資料來源的連接字串。 下列範例說明用來連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 資料庫的連接字串：  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
@@ -87,7 +87,7 @@ ms.locfileid: "48167168"
   
 4.  在 [資料來源類型]  清單中，選取用來處理資料來源中之資料的資料處理延伸模組。  
   
-5.  針對 **[連接字串]**，請指定報表伺服器用於連接到資料來源的連接字串。 下列範例說明用來連接的連接字串[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]資料庫：  
+5.  針對 **[連接字串]**，請指定報表伺服器用於連接到資料來源的連接字串。 下列範例說明用來連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 資料庫的連接字串：  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
@@ -162,7 +162,7 @@ ms.locfileid: "48167168"
 ## <a name="see-also"></a>另請參閱  
  [指定報表資料來源的認證及連接資訊](../../integration-services/connection-manager/data-sources.md)   
  [設定報表的資料來源屬性 &#40;報表管理員&#41;](configure-data-source-properties-for-a-report-report-manager.md)   
- [建立、 刪除或修改共用的資料來源&#40;報表管理員&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [建立、刪除或修改共用資料來源 &#40;報表管理員&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [資料來源屬性頁面 &#40;報表管理員&#41;](../data-sources-properties-page-report-manager.md)   
  [新增資料來源頁面 &#40;報表管理員&#41;](../new-data-source-page-report-manager.md)  
   

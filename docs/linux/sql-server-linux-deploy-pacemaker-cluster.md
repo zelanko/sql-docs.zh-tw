@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 25fb50dbd858007a29d2a10a94053884620ed68b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49f5e3fd6250d3a9bb20ff68927bc66fa1e5d426
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750586"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211537"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>部署在 Linux 上的 SQL server 的 Pacemaker 叢集
 
@@ -126,7 +126,7 @@ Pacemaker 本身會使用名為通訊群組上建立的使用者*hacluster*。 R
 1. 授權的節點
    
    ```bash
-   sudo pcs cluster auth <Node1 Node2 … NodeN> -u hacluster
+   sudo pcs cluster auth <Node1 Node2 ... NodeN> -u hacluster
    ```
    
    何處*NodeX*是節點的名稱。

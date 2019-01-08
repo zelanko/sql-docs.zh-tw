@@ -13,20 +13,20 @@ ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d02a8e22c07c6dedcaae3cb50ad1c453c1273b16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bcc1f6d1542928d534d31c6d64ef6130c0c7e04b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112868"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359910"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>準備和執行陳述式 (ODBC)
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>準備一次陳述式，然後執行多次  
   
-1.  呼叫[SQLPrepare 函數](http://go.microsoft.com/fwlink/?LinkId=59360)準備陳述式。  
+1.  呼叫[SQLPrepare 函數](https://go.microsoft.com/fwlink/?LinkId=59360)準備陳述式。  
   
-2.  （選擇性） 呼叫[SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404)來決定已備妥的陳述式中的參數數目。  
+2.  （選擇性） 呼叫[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)來決定已備妥的陳述式中的參數數目。  
   
 3.  (選擇性) 針對準備陳述式中的每個參數：  
   
@@ -38,9 +38,9 @@ ms.locfileid: "48112868"
   
     -   如果陳述式具有參數標記，請將資料值放在繫結參數緩衝區中。  
   
-    -   呼叫[SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)執行備妥的陳述式。  
+    -   呼叫[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)執行備妥的陳述式。  
   
-    -   如果資料在執行中輸入的參數， [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)會傳回 SQL_NEED_DATA。 使用區塊傳送資料[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)並[SQLPutData](../../native-client-odbc-api/sqlputdata.md)。  
+    -   如果資料在執行中輸入的參數， [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)會傳回 SQL_NEED_DATA。 使用區塊傳送資料[SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405)並[SQLPutData](../../native-client-odbc-api/sqlputdata.md)。  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>準備含有資料行取向參數繫結的陳述式  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48112868"
   
 2.  呼叫 SQLPrepare 準備陳述式。  
   
-3.  （選擇性） 呼叫[SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404)來決定已備妥的陳述式中的參數數目。  
+3.  （選擇性） 呼叫[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404)來決定已備妥的陳述式中的參數數目。  
   
 4.  （選擇性） 針對已備妥的陳述式中每個參數，呼叫 SQLDescribeParam 以便取得參數資訊。  
   

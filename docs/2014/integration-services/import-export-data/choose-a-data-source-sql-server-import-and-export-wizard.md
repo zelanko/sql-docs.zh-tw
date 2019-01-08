@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
@@ -13,19 +12,19 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff54dc41b8a39107c191f8976d22005c80d5f65c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cff58f58543ae5876840bb7640f9cc11abf793d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216338"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370270"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>選擇資料來源 (SQL Server 匯入和匯出精靈)
   使用**選擇資料來源**頁面，即可指定您想要複製的資料來源。  
   
  若要深入了解此精靈，請參閱[SQL Server 匯入和匯出精靈](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要深入了解啟動精靈，選項和相關的權限，才能成功執行精靈，請參閱[執行 SQL Server 匯入和匯出精靈](start-the-sql-server-import-and-export-wizard.md)。  
   
- 目的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈是將資料從來源複製到目的地。 這個精靈也可以為您建立目的地資料庫和目的地資料表。 不過，如果您必須複製多個資料庫或資料表，或複製其他種類的資料庫物件，則應該改用「複製資料庫精靈」。 如需詳細資訊，請參閱 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
+ 「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈」的用途是將資料從來源複製到目的地。 這個精靈也可以為您建立目的地資料庫和目的地資料表。 不過，如果您必須複製多個資料庫或資料表，或複製其他種類的資料庫物件，則應該改用「複製資料庫精靈」。 如需詳細資訊，請參閱 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
 ## <a name="options"></a>選項。  
  **資料來源**  
@@ -44,10 +43,10 @@ ms.locfileid: "48216338"
  指定封裝是否應使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證來登入資料庫。 建議使用 Windows 驗證，以獲得較佳的安全性。  
   
  **[使用 SQL Server 驗證]**  
- 指定封裝是否應該使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證來登入到資料庫。 如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，就必須提供使用者名稱和密碼。  
+ 指定封裝是否應使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來登入資料庫。 如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，就必須提供使用者名稱和密碼。  
   
  **使用者名稱**  
- 指定資料庫連接的使用者名稱，當您使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證時，請指定資料庫連接的使用者名稱。  
   
  **密碼**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證時，請提供資料庫連接的密碼。  
@@ -68,15 +67,15 @@ ms.locfileid: "48216338"
  輸入來源資料庫的名稱。  
   
  **整合式安全性**  
- 指定`True`來連接使用 Windows 整合式的驗證，建議使用，或`False`利用連接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 如果您指定 `False`，則必須輸入使用者識別碼和密碼。 預設值是 `False`。  
+ 指定 `True` 以使用 Windows 整合式驗證進行連接 (建議使用)，或指定 `False` 以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行連接。 如果您指定 `False`，則必須輸入使用者識別碼和密碼。 預設值是 `False`。  
   
  **使用者識別碼**  
- 指定資料庫連接的使用者名稱，當您使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證時，請指定資料庫連接的使用者名稱。  
   
  **密碼**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證時，請提供資料庫連接的密碼。  
   
- 選取此提供者時所列出的其他選項並非必要的，即可成功連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來源資料庫。 如需其他選項的說明，請參閱文件[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]Data Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]軟體開發套件。  
+ 選取此提供者時所列出的其他選項並非必要的，即可成功連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來源資料庫。 如需其他選項的描述，請參閱 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Software Development Kit 中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Provider for [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的文件集。  
   
 ### <a name="data-source--microsoft-excel"></a>資料來源 = Microsoft Excel  
   
@@ -113,7 +112,7 @@ ms.locfileid: "48216338"
  當工作群組資訊檔案與資料庫相關聯時，請提供該資料庫連接的使用者密碼。 不過，如果所有使用者的單一密碼保護資料庫，您必須提供此值**資料連結屬性**對話方塊，即可存取**進階**。  
   
  **進階**  
- 您可能想要指定進階的選項，例如資料庫密碼或非預設的工作群組資訊檔案中，使用**資料連結屬性** 對話方塊。 如需有關 OLE DB 提供者屬性的詳細資訊，請搜尋中的 [資料存取] 區段[MSDN library](http://go.microsoft.com/fwlink/?linkid=62553)。  
+ 您可能想要指定進階的選項，例如資料庫密碼或非預設的工作群組資訊檔案中，使用**資料連結屬性** 對話方塊。 如需有關 OLE DB 提供者屬性的詳細資訊，請搜尋中的 [資料存取] 區段[MSDN library](https://go.microsoft.com/fwlink/?linkid=62553)。  
   
 ### <a name="data-source--flat-file-source"></a>資料來源 = 一般檔案來源  
  如需有關一般檔案資料來源之選項的資訊，請參閱下列主題。  

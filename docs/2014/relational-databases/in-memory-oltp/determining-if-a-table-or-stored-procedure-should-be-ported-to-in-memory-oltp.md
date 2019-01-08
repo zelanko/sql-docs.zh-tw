@@ -13,15 +13,15 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e29e919d48c484788715512a9daaafef5bbde9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194138"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377490"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>判斷是否應將資料表或預存程序匯出至記憶體中 OLTP
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的交易效能收集器可協助您評估記憶體中 OLTP 是否能改善資料庫應用程式的效能。 交易效能分析報表還會指出應用程式啟用記憶體中 OLTP 所需執行的工作。 識別您要匯出至記憶體內部 OLTP 的磁碟資料表之後，即可使用 [記憶體最佳化建議程式](memory-optimization-advisor.md)協助您遷移資料表。 同樣地， [Native Compilation Advisor](native-compilation-advisor.md) 可協助您將預存程序匯出為原生編譯的預存程序。  
+  在 交易效能收集器[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]可協助您評估記憶體中 OLTP 是否能改善資料庫應用程式的效能。 交易效能分析報表還會指出應用程式啟用記憶體中 OLTP 所需執行的工作。 識別您要匯出至記憶體內部 OLTP 的磁碟資料表之後，即可使用 [記憶體最佳化建議程式](memory-optimization-advisor.md)協助您遷移資料表。 同樣地， [Native Compilation Advisor](native-compilation-advisor.md) 可協助您將預存程序匯出為原生編譯的預存程序。  
   
  本主題將討論如何執行以下工作：  
   
@@ -31,7 +31,7 @@ ms.locfileid: "48194138"
   
 -   產生交易效能分析報表來識別效能關鍵的資料表和預存程序。  
   
- 如需移轉方法的資訊，請參閱 [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx)(記憶體內部 OLTP - 一般工作負載模式和移轉考量)。  
+ 如需移轉方法的資訊，請參閱 [In-Memory OLTP - 一般工作負載模式和移轉考量](https://msdn.microsoft.com/library/dn673538.aspx)。  
   
  交易效能收集器和交易效能分析報表將協助您完成下列工作：  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48194138"
     > [!IMPORTANT]  
     >  資料庫系統的效能取決於各種不同的因素，並不是所有因素都可由交易效能收集器來觀察和測量。 因此，交易效能分析報表不保證實際的效能增益將會符合預測 (如果進行了任何預測)。  
   
- 當您選取，則會安裝交易效能收集器和產生交易效能分析報表的能力**管理工具-基本**或是**管理工具 — 進階**當您安裝[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
+ 當您選取，則會安裝交易效能收集器和產生交易效能分析報表的能力**管理工具-基本**或是**管理工具 – 進階**當您安裝[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
 ## <a name="best-practices"></a>最佳作法  
  建議的工作流程如以下流程圖所示。 黃色節點代表選用程序：  
@@ -123,7 +123,7 @@ ms.locfileid: "48194138"
   
  可以在 SQL Server 2012 或更新版本的設定資料收集器[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- 您需要使用正確認證建立的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Proxy，資料收集器才能將資料上傳到執行個體上的管理資料倉儲資料庫 (此執行個體與即將分析交易的地方不同)。 若要啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Proxy，您必須先使用具有網域功能的登入建立認證。 具有網域功能的登入必須是管理資料倉儲資料庫的 `mdw_admin` 群組成員。 請參閱[如何： 建立認證 (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md)如需如何建立認證的詳細資訊。  
+ 您需要使用正確認證建立的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Proxy，資料收集器才能將資料上傳到執行個體上的管理資料倉儲資料庫 (此執行個體與即將分析交易的地方不同)。 若要啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Proxy，您必須先使用具有網域功能的登入建立認證。 具有網域功能的登入必須是管理資料倉儲資料庫的 `mdw_admin` 群組成員。 請參閱[How to:建立認證 (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md)如需如何建立認證的詳細資訊。  
   
  若要設定資料收集，以便上傳至不同執行個體上的管理資料倉儲資料庫：  
   
@@ -186,13 +186,13 @@ ms.locfileid: "48194138"
   
 -   競爭統計資料部分  
   
-     此部分包含在資料庫資料表上顯示競爭的資料表。 如需有關資料庫閂鎖和鎖定的詳細資訊，請參閱[鎖定架構](http://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx)。 資料行如下：  
+     此部分包含在資料庫資料表上顯示競爭的資料表。 如需有關資料庫閂鎖和鎖定的詳細資訊，請參閱[鎖定架構](https://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx)。 資料行如下：  
   
     -   總等候次數百分比。 與資料庫活動相比，此資料庫資料表上閂鎖和鎖定等候數的百分比。 此百分比愈高，表示與資料庫中的其他資料表相較下，較大量使用此資料表。  
   
-    -   閂鎖統計資料。 這些資料行記錄關於此資料表查詢的閂鎖等候數。 閂鎖的資訊，請參閱[閂鎖](http://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx)。 此數字越高，表示資料表有越多閂鎖競爭。  
+    -   閂鎖統計資料。 這些資料行記錄關於此資料表查詢的閂鎖等候數。 閂鎖的資訊，請參閱[閂鎖](https://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx)。 此數字越高，表示資料表有越多閂鎖競爭。  
   
-    -   鎖定統計資料。 此資料行群組記錄頁面鎖定取得數以及查詢此資料表的等候數。 如需有關鎖定的詳細資訊，請參閱 <<c0> [ 了解鎖定 SQL Server 中](http://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx)。 等候數越多，表示資料表上越多鎖定競爭。  
+    -   鎖定統計資料。 此資料行群組記錄頁面鎖定取得數以及查詢此資料表的等候數。 如需有關鎖定的詳細資訊，請參閱 <<c0> [ 了解鎖定 SQL Server 中](https://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx)。 等候數越多，表示資料表上越多鎖定競爭。  
   
 -   移轉難度部分  
   

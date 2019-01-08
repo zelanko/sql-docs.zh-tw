@@ -11,12 +11,12 @@ ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3bd40d6b97215329bb2cab060853fc06ef862dbd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d8e61f4f82df496a475717b34f0ce54db07d4a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065291"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413686"
 ---
 # <a name="site-settings-page-report-manager"></a>站台設定頁面 (報表管理員)
   您可以使用 [站台設定] 頁面來變更應用程式標題、針對報表記錄限制和報表處理逾時值設定整個網站的預設值、管理系統層級角色指派，以及管理共用排程。 您必須擁有「內容管理員」和「系統管理員」權限才能檢視此頁面。  
@@ -24,7 +24,7 @@ ms.locfileid: "48065291"
 > [!NOTE]  
 >  並非所有 SQL Server 版本都提供下列功能：報表記錄、報表執行和共用排程。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ### <a name="to-open-the-site-settings-page"></a>若要開啟站台設定頁面  
@@ -33,11 +33,11 @@ ms.locfileid: "48065291"
   
 2.  在頁面的頂端，按一下 **[站台設定]**。 這樣就會開啟該站台的 [一般] 屬性頁面。  
   
-     **附註：** 如果您看不見**站台設定**選項的功能表中，您沒有必要的權限，如需詳細資訊，請參閱 [站台設定] 區段的[設定原生模式報表伺服器進行本機管理&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
+     **注意：** 如果您看不見**站台設定**選項的功能表中，您沒有必要的權限，如需詳細資訊，請參閱 [站台設定] 區段的[設定原生模式報表伺服器進行本機管理&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
 ## <a name="options"></a>選項。  
  **名稱**  
- 指定要使用此執行個體的標題[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]報表管理員。 根據預設，這個標題是"[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]"。  
+ 指定此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 報表管理員執行個體使用的標題。 根據預設，這個標題是"[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]"。  
   
  **選取報表記錄的預設設定**  
  選取要保留之報表記錄副本數目的預設值。 此預設值提供建立報表記錄限制的初始設定。 您可以在報表層級變更這些設定。 如需詳細資訊，請參閱[快照集選項屬性頁 &#40;報表管理員&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)。  
@@ -56,7 +56,7 @@ ms.locfileid: "48065291"
   
  **原生模式報表伺服器：** 在原生模式安裝中，預設 URL 需要格式為 http://\<*computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application。  
   
- SharePoint 整合的模式： 預設 URL 將採用 http://\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application。 」  
+ SharePoint 整合的模式：預設 URL 將採用 http://\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application。 」  
   
  **套用**  
  按一下即可儲存您對報表伺服器所做的變更。  
@@ -68,9 +68,9 @@ ms.locfileid: "48065291"
  按一下此連結即可開啟 [排程] 頁面，在此頁面上您可以預先定義可供使用者為其報表和訂閱選取的共用排程。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [在原生模式報表伺服器上授與權限](security/granting-permissions-on-a-native-mode-report-server.md)   
- [預先定義的角色](security/role-definitions-predefined-roles.md)   
+ [Predefined Roles](security/role-definitions-predefined-roles.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

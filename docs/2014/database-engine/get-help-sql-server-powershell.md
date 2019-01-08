@@ -15,12 +15,12 @@ ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f3851ebeb72cc76ce6466d4456772ec13de48a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67633bcfad7c18679dae93de6e5541f3000a1ccc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065318"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363550"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   有關使用適用於 Windows PowerShell 和指令程式之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者的資訊來源有幾個。 其中包括 Windows PowerShell 環境中可用的說明。  
@@ -33,7 +33,7 @@ ms.locfileid: "48065318"
 ### <a name="help-in-the-windows-powershell-environment"></a>Windows PowerShell 環境中的説明  
  您可以使用 **Get-Help** Cmdlet，在 Windows PowerShell 環境中取得說明。 **Get-Help** 提供 Windows PowerShell 語言的基本說明，以及 Windows PowerShell 中可用的各種 Cmdlet 和提供者。  
   
- 如需使用 **Get-Help**之方式的詳細資訊，請參閱 [Get-Help：取得說明](http://go.microsoft.com/fwlink/?LinkId=102136)。  
+ 如需詳細資訊的方式，您可以使用**Get-help**，請參閱[Get-help:取得說明](https://go.microsoft.com/fwlink/?LinkId=102136)。  
   
 ### <a name="sql-server-powershell-provider-help"></a>SQL Server PowerShell 提供者說明  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供者實作 SQLSERVER 虛擬磁碟機上的數個資料夾，例如 SQLSERVER:\SQL 和 SQLSERVER:\DAC 資料夾。 每一個資料夾都會與一個 SQL Server 管理能力物件模型有關聯。 雖然您可以列出與 SQL Server 路徑中每個節點相關聯的方法和屬性，但是無法在 PowerShell 環境中取得它們的說明。 如需含有相關聯程式設計參考連結之資料夾的表格，請參閱 [SQL Server PowerShell 提供者](../powershell/sql-server-powershell-provider.md)。  
@@ -62,16 +62,16 @@ ms.locfileid: "48065318"
 Get-Help Invoke-Sqlcmd  
   
 ## Get the full help.  
-Get-Help Invoke-Sqlcmd –Full  
+Get-Help Invoke-Sqlcmd -Full  
   
 ## Get the parameter descriptions.  
 Get-Help Invoke-Sqlcmd -Parameter *  
   
 ## Get the code examples.  
-Get-Help Invoke-Sqlcmd –Examples  
+Get-Help Invoke-Sqlcmd -Examples  
   
 ## Get the syntax diagram.  
-Get-Help Invoke-Sqlcmd –Syntax  
+Get-Help Invoke-Sqlcmd -Syntax  
 ```  
   
 ## <a name="get-a-list-of-providers"></a>取得提供者清單  
@@ -79,9 +79,9 @@ Get-Help Invoke-Sqlcmd –Syntax
   
 1.  指定提供者類別目錄，以執行 Get-Help。  
   
- 如需在 Windows PowerShell 中取得提供者說明的詳細資訊，請參閱 [磁碟機和提供者](http://go.microsoft.com/fwlink/?LinkId=102137)。  
+ 如需在 Windows PowerShell 中取得提供者說明的詳細資訊，請參閱 [磁碟機和提供者](https://go.microsoft.com/fwlink/?LinkId=102137)。  
   
-### <a name="example-get-a-list-of-providers"></a>範例：取得提供者清單  
+### <a name="example-get-a-list-of-providers"></a>範例取得提供者清單  
  此程式碼會傳回目前在 Windows PowerShell 工作階段中啟用的提供者清單：  
   
 ```  
@@ -93,7 +93,7 @@ Get-Help -Category provider
   
 1.  指定名稱 SQLServer，以執行 Get-Help  
   
-### <a name="example-get-sql-server-provider-help"></a>範例：取得 SQL Server 提供者說明  
+### <a name="example-get-sql-server-provider-help"></a>範例取得 SQL Server 提供者說明  
  此範例會傳回 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者的基本資訊：  
   
 ```  
@@ -105,9 +105,9 @@ Get-Help SQLServer
   
 1.  CD (切換) 至 SQL Server 路徑中的節點，或建立該位置的變數集。  
   
-2.  搭配執行 **Get-Member** Cmdlet 與設為方法或屬性的 -Type 參數  
+2.  執行**Get-member** cmdlet 與設為方法或屬性的-Type 參數  
   
-### <a name="examples-listing-methods-and-properties"></a>範例：列出方法與屬性  
+### <a name="examples-listing-methods-and-properties"></a>範例:列出方法與屬性  
  此範例列出 Databases 節點所支援的方法：  
   
 ```  

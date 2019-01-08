@@ -13,12 +13,12 @@ ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3a3300f448d9bc3df34369963cd4b697ada44211
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ba41b602ec91516e87b7fe5ec0276c586b17613
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150540"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352974"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>執行帳戶 (SSRS 原生模式)
   使用此頁面，即可設定自動處理所使用的帳戶。 當其他認證來源無法使用的特殊情況下，請使用此帳戶：  
@@ -36,9 +36,9 @@ ms.locfileid: "48150540"
  您可以使用任何 Windows 使用者帳戶。 為求最佳效果，請選擇擁有讀取權限及網路登入權限的帳戶，以連接到其他電腦。 此帳戶必須擁有您想在報表中使用之任何外部影像或資料檔案的讀取權限。 除非所有的報表資料來源和外部影像全都儲存在報表伺服器電腦上，否則請勿指定本機帳戶。 這種帳戶只適用於自動報表處理。  
   
 > [!NOTE]  
->  如果您正在使用 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] with Advanced Services，當您在報表中參考外部影像，而需要有存取該影像檔的權限時，您就只需要設定此帳戶。 SQL Server Express 不支援遠端伺服器的資料來源連接。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](http://go.microsoft.com/fwlink/?linkid=232473)。  
+>  如果您正在使用 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] with Advanced Services，當您在報表中參考外部影像，而需要有存取該影像檔的權限時，您就只需要設定此帳戶。 SQL Server Express 不支援遠端伺服器的資料來源連接。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](https://go.microsoft.com/fwlink/?linkid=232473)。  
   
- 若要開啟此頁面，請啟動[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態管理員，並選取**執行帳戶**瀏覽窗格中。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+ 若要開啟此頁面，請啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並選取導覽窗格中的 **[執行帳戶]** 。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
 ## <a name="options"></a>選項。  
  **指定執行帳戶**  

@@ -13,12 +13,12 @@ ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f415816f935e03b6b533fded2fb00760a101526d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec58691ab78fdf7c57871805bb095ca48f221da7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100174"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373400"
 ---
 # <a name="implementation-of-child-packages"></a>子封裝的實作
   使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]實作負載平衡時，其他伺服器上會安裝子封裝，以充分利用可用的 CPU 或伺服器時間。 建立及執行子封裝需要下列步驟：  
@@ -56,7 +56,7 @@ ms.locfileid: "48100174"
   
 -   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]執行遠端電腦上的個別 SQL Server Agent 作業，以確定封裝執行無誤。  
   
- 如需有關如何為您從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業執行的封裝進行疑難排解，請參閱 [支援知識庫中的](http://support.microsoft.com/kb/918760) 從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] 。  
+ 如需有關如何為您從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業執行的封裝進行疑難排解，請參閱 [支援知識庫中的](https://support.microsoft.com/kb/918760) 從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] 。  
   
  SQL Server Agent 會檢查 Proxy 的子系統存取權，而且每當作業步驟執行時，就會提供 Proxy 的存取權。  
   
@@ -68,8 +68,8 @@ ms.locfileid: "48100174"
   
 ## <a name="related-content"></a>相關內容  
   
--   部落格文章[SSIS： 存取父封裝中的變數](http://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
+-   部落格文章[SSIS:存取父封裝中的變數](https://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
   
--   部落格文章[SSIS： 應執行同處理序或跨處理序的子封裝？](http://go.microsoft.com/fwlink/?LinkId=220819)，consultingblogs.emc.com 上。  
+-   部落格文章[SSIS:您應該執行子封裝的處理序或跨處理序嗎？](https://go.microsoft.com/fwlink/?LinkId=220819)，consultingblogs.emc.com 上。  
   
   

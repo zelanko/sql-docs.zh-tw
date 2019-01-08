@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rowcounttrans.f1
@@ -19,12 +18,12 @@ ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a5dffaac9a849ca5a73adf2228a0c8ab5e932c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 53f14b78dcf3c8f0ee986b8ef0fde14b58254f07
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217338"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784970"
 ---
 # <a name="row-count-transformation"></a>資料列計數轉換
   「資料列計數」轉換會在資料列通過資料流程時計算其數目，並將最後計數儲存到變數中。  
@@ -36,7 +35,7 @@ ms.locfileid: "48217338"
  此轉換有一個輸入和一個輸出。 它不支援錯誤輸出。  
   
 ## <a name="configuration-of-the-row-count-transformation"></a>資料列計數轉換的組態  
- 您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
+ 您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」或以程式設計方式設定屬性。  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48217338"
  如需如何設定此元件屬性的資訊，請參閱 [設定資料流程元件的屬性](../set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Integration Services &#40;SSIS&#41;變數](../../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 變數](../../integration-services-ssis-variables.md)   
  [資料流程](../data-flow.md)   
  [Integration Services 轉換](integration-services-transformations.md)  
   

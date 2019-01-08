@@ -16,12 +16,12 @@ ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1cd826013df93bff905134f18d58eb50ac962917
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b9c91e26c7c797bcde837d59c9447bc50d7d435
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143988"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376050"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>參考內建 XML 結構描述集合 (sys)
   您建立的每一個資料庫，在 **sys** 關聯式結構描述中，都有一個預先定義的 **sys** XML 結構描述集合。 此集合會保留這些預先定義的結構描述，所以從其他使用者建立的任何 XML 結構描述集合都能存取這些結構描述。 這些預先定義的結構描述中使用的前置詞在 XQuery 中是有意義的。 只有 **xml** 是保留的前置詞。  
@@ -31,13 +31,13 @@ xml = http://www.w3.org/XML/1998/namespace
 xs = http://www.w3.org/2001/XMLSchema  
 xsi = http://www.w3.org/2001/XMLSchema-instance  
 fn = http://www.w3.org/2004/07/xpath-functions  
-sqltypes = http://schemas.microsoft.com/sqlserver/2004/sqltypes  
+sqltypes = https://schemas.microsoft.com/sqlserver/2004/sqltypes  
 xdt = http://www.w3.org/2004/07/xpath-datatypes  
 (no prefix) = urn:schemas-microsoft-com:xml-sql  
-(no prefix) = http://schemas.microsoft.com/sqlserver/2004/SOAP  
+(no prefix) = https://schemas.microsoft.com/sqlserver/2004/SOAP  
 ```  
   
- 請注意， **sqltypes** 命名空間包含的元件可以從任何使用者建立的 XML 結構描述集合參考。 您可以從 **Microsoft 網站** 下載 [sqltypes](http://go.microsoft.com/fwlink/?linkid=31850)結構描述。 內建的元件包括下列項目：  
+ 請注意， **sqltypes** 命名空間包含的元件可以從任何使用者建立的 XML 結構描述集合參考。 您可以從 **Microsoft 網站** 下載 [sqltypes](https://go.microsoft.com/fwlink/?linkid=31850)結構描述。 內建的元件包括下列項目：  
   
 -   XSD 類型  
   
@@ -65,9 +65,9 @@ CREATE XML SCHEMA COLLECTION SC AS '
    xmlns="http://www.w3.org/2001/XMLSchema"   
    targetNamespace="myNS"  
    xmlns:ns="myNS"  
-   xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
+   xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
    <import namespace="http://www.w3.org/XML/1998/namespace"/>  
-   <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+   <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
    <element name="root">  
       <complexType>  
           <sequence>  
@@ -98,7 +98,7 @@ GO
     CREATE XML SCHEMA COLLECTION SC AS '  
     <schema xmlns="http://www.w3.org/2001/XMLSchema"   
     targetNamespace    
-        ="http://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
+        ="https://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
           <element name="root" type="string"/>  
     </schema>'  
     GO  
@@ -123,9 +123,9 @@ GO
 CREATE XML SCHEMA COLLECTION SC AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"   
         targetNamespace="myNS" xmlns:ns="myNS"  
-        xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+        xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
    <import     
-     namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+     namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
       <simpleType name="myType">  
             <restriction base="s:varchar">  
                   <maxLength value="20"/>  
@@ -141,7 +141,7 @@ go
 ```  
 DECLARE @var XML(SC)  
 SET @var = '<root xmlns="myNS">My data</root>'  
-SELECT @var.query('declare namespace sqltypes = "http://schemas.microsoft.com/sqlserver/2004/sqltypes";  
+SELECT @var.query('declare namespace sqltypes = "https://schemas.microsoft.com/sqlserver/2004/sqltypes";  
 declare namespace ns="myNS";   
 data(/ns:root[1]) instance of sqltypes:varchar?')  
 GO  

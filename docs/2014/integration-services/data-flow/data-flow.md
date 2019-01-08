@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - output data [Integration Services]
@@ -18,12 +17,12 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3df6a97e37f301c4ac55b8e662e81098023a5064
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 038fdb6f07604d3fac1fcbd8e9ee632e3af2fbdc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159508"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360240"
 ---
 # <a name="data-flow"></a>資料流程
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供三種不同類型的資料流程元件：來源、轉換與目的地。 來源從關聯式資料庫、檔案和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的資料表和檢視等資料存放區擷取資料。 轉換會修改、摘要並清除資料。 目的地則將資料載入資料存放區或建立記憶體中資料集。  
@@ -98,18 +97,18 @@ ms.locfileid: "48159508"
 ### <a name="sources-available-for-download"></a>可下載的來源  
  下表列出您可以從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 網站下載的其他來源。  
   
-|來源|描述|  
+|原始程式檔|描述|  
 |------------|-----------------|  
-|Oracle 來源|Oracle 來源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 的來源元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=254963)。|  
-|SAP BI 來源|SAP BI 來源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的來源元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=110393)＞。|  
-|Teradata 來源|Teradata 來源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity 的來源元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=254963)。|  
+|Oracle 來源|Oracle 來源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 的來源元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
+|SAP BI 來源|SAP BI 來源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的來源元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=110393)＞。|  
+|Teradata 來源|Teradata 來源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity 的來源元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
   
- 如需如何利用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 獲致效能提升的示範，請參閱 [Microsoft Connector for Oracle by Attunity 的效能 (SQL Server 視影片)](http://go.microsoft.com/fwlink/?LinkID=210369)。  
+ 如需如何利用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 獲致效能提升的示範，請參閱 [Microsoft Connector for Oracle by Attunity 的效能 (SQL Server 視影片)](https://go.microsoft.com/fwlink/?LinkID=210369)。  
   
 ## <a name="transformations"></a>轉換  
  轉換具有廣泛的功能。 它可以執行例如更新、摘要、清除、合併和散發資料等工作。 您可以修改資料行中的值、查閱資料表中的值、清除資料，以及彙總資料行值。  
   
- 轉換的輸入和輸出定義傳入和傳出資料的資料行。 視對資料執行的作業而定，某些轉換具有單一輸入和多個輸出，而其他轉換則具有多個輸入和單一輸出。 轉換也可以包含錯誤輸出，提供錯誤發生的相關資訊以及失敗的資料：例如，無法轉換為整數資料類型的字串資料。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 物件模型對轉換可以包含的輸入、一般輸出和錯誤輸出沒有數目限制。 您可以建立實作多個輸入、一般輸出和錯誤輸出之任意組合的自訂轉換。  
+ 轉換的輸入和輸出定義傳入和傳出資料的資料行。 視對資料執行的作業而定，某些轉換具有單一輸入和多個輸出，而其他轉換則具有多個輸入和單一輸出。 轉換也可以包含錯誤輸出，提供錯誤發生，以及失敗的資料的相關資訊：例如，字串無法轉換為整數資料類型的資料。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 物件模型對轉換可以包含的輸入、一般輸出和錯誤輸出沒有數目限制。 您可以建立實作多個輸入、一般輸出和錯誤輸出之任意組合的自訂轉換。  
   
  轉換的輸入定義為一或多個輸入資料行。 某些 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 轉換也可以參考外部資料行作為輸入。 例如，OLE DB 命令轉換的輸入包含外部資料行。 輸出資料行是轉換加入到資料流程的資料行。 一般輸出和錯誤輸出均包含輸出資料行。 這些輸出資料行進而做為資料流程中下一個元件 (可以是另一個轉換，也可以是目的地) 的輸入資料行。  
   
@@ -159,13 +158,13 @@ ms.locfileid: "48159508"
 ### <a name="destinations-available-for-download"></a>可下載的目的地  
  下表列出您可以從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 網站下載的其他目的地。  
   
-|來源|描述|  
+|原始程式檔|描述|  
 |------------|-----------------|  
-|Oracle 目的地|Oracle 目的地是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 的目的地元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=254963)。|  
-|SAP BI 目的地|SAP BI 目的地是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的目的地元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=110393)＞。|  
-|Teradata 目的地|Teradata 目的地是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity 的目的地元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=254963)。|  
+|Oracle 目的地|Oracle 目的地是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 的目的地元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
+|SAP BI 目的地|SAP BI 目的地是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的目的地元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=110393)＞。|  
+|Teradata 目的地|Teradata 目的地是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity 的目的地元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
   
- 如需如何利用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 獲致效能提升的示範，請參閱 [Microsoft Connector for Oracle by Attunity 的效能 (SQL Server 視影片)](http://go.microsoft.com/fwlink/?LinkID=210369)。  
+ 如需如何利用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 獲致效能提升的示範，請參閱 [Microsoft Connector for Oracle by Attunity 的效能 (SQL Server 視影片)](https://go.microsoft.com/fwlink/?LinkID=210369)。  
   
 ## <a name="connection-managers"></a>連接管理員  
  許多資料流程元件會連接到資料來源，您必須在封裝中加入元件所需的連接管理員，才能正確設定元件。 您可以在建構資料流程時，或是在開始建構資料流程之前，加入連接管理員。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../connection-manager/integration-services-ssis-connections.md)和[建立連接管理員](../create-connection-managers.md)。  
@@ -179,18 +178,18 @@ ms.locfileid: "48159508"
  來源具有輸出，目的地具有輸入，而轉換既有輸入又有輸出。 此外，許多資料流程元件都可以設定為使用錯誤輸出。  
   
 ### <a name="inputs"></a>輸入  
- 目的地和轉換具有輸入。 輸入包含一或多個輸入資料行，如果資料流程元件已設定為使用外部資料行，這些輸入資料行便可以參考外部資料行。 輸入可以設定為監視和控制資料的流向：例如，您可以指定元件是否應在回應錯誤時失敗、忽略錯誤，或者將錯誤資料列重新導向至錯誤輸出。 您也可以指派輸入的描述或更新輸入名稱。 在 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中，可以使用 [進階編輯器] 對話方塊設定輸入。 如需**進階編輯器**詳細資訊，請參閱 [Integration Services 使用者介面](../integration-services-user-interface.md)。  
+ 目的地和轉換具有輸入。 輸入包含一或多個輸入資料行，如果資料流程元件已設定為使用外部資料行，這些輸入資料行便可以參考外部資料行。 輸入可以設定為監視和控制資料流：例如，您可以指定元件是否應該在回應錯誤失敗、 忽略錯誤，或將錯誤資料列導向至錯誤輸出。 您也可以指派輸入的描述或更新輸入名稱。 在 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中，可以使用 [進階編輯器] 對話方塊設定輸入。 如需**進階編輯器**詳細資訊，請參閱 [Integration Services 使用者介面](../integration-services-user-interface.md)。  
   
 ### <a name="outputs"></a>輸出  
  來源和轉換始終具有輸出。 輸出包含一或多個輸出資料行，如果資料流程元件設定為使用外部資料行，這些輸出資料行便可以參考外部資料行。 輸出可以設定為對資料之下游處理提供有用的資訊。 例如，您可以指示是否對輸出進行排序。 您也可以提供輸出的描述，或更新輸出名稱。 在 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中，可以使用 [進階編輯器] 對話方塊設定輸出。  
   
 ### <a name="error-outputs"></a>錯誤輸出  
- 來源、目的地和轉換都可以包含錯誤輸出。 您可以使用 [設定錯誤輸出] 對話方塊，指定資料流程元件如何回應每個輸入或資料行中的錯誤。 如果在執行階段發生錯誤或資料截斷，且資料流程元件設定為重新導向至資料列，則包含錯誤的資料列會被傳送至錯誤輸出。 錯誤輸出可以連接到轉換，該轉換會套用其他轉換或將資料導向不同目的地。 依預設，錯誤輸出包含輸出資料行和兩個錯誤資料行： **ErrorCode** 和 **ErrorColumn**。 輸出資料行包含來自失敗資料列的資料， **ErrorCode** 提供錯誤碼， **ErrorColumn** 識別失敗的資料行。  
+ 來源、目的地和轉換都可以包含錯誤輸出。 您可以使用 [設定錯誤輸出] 對話方塊，指定資料流程元件如何回應每個輸入或資料行中的錯誤。 如果在執行階段發生錯誤或資料截斷，且資料流程元件設定為重新導向至資料列，則包含錯誤的資料列會被傳送至錯誤輸出。 錯誤輸出可以連接到轉換，該轉換會套用其他轉換或將資料導向不同目的地。 根據預設，錯誤輸出包含輸出資料行和兩個錯誤資料行：**ErrorCode**並**ErrorColumn**。 輸出資料行包含來自失敗資料列的資料， **ErrorCode** 提供錯誤碼， **ErrorColumn** 識別失敗的資料行。  
   
- 如需詳細資訊，請參閱[處理資料中的錯誤](error-handling-in-data.md)。  
+ 如需詳細資訊，請參閱 [處理資料中的錯誤](error-handling-in-data.md)。  
   
 ### <a name="columns"></a>[資料行]  
- 輸入、輸出和錯誤輸出都是資料行的集合。 每個資料行皆可供設定，[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 會依據資料行類型 (輸入、輸出或外部) 提供不同的資料行屬性。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供三種不同的方式用於設定資料行屬性，包括以程式設計的方式、使用元件特定對話方塊，或是使用 [進階編輯器] 對話方塊。  
+ 輸入、輸出和錯誤輸出都是資料行的集合。 每個資料行是可設定且取決於資料行的類型輸入、 輸出或外部-[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]提供不同的屬性資料行。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供三種不同的方式用於設定資料行屬性，包括以程式設計的方式、使用元件特定對話方塊，或是使用 [進階編輯器] 對話方塊。  
   
 ## <a name="paths"></a>路徑  
  路徑連接資料流程元件。 在 [ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中，您可以檢視和修改路徑屬性、檢視路徑起始點的輸出中繼資料，還可以將資料檢視器附加到某個路徑。  
@@ -217,8 +216,8 @@ ms.locfileid: "48159508"
 -   [連接資料流程中的元件](connect-components-in-a-data-flow.md)  
   
 ## <a name="related-content"></a>相關內容  
- technet.microsoft.com 上的影片： [Microsoft Connector for Oracle by Attunity 的效能 (SQL Server 影片)](http://go.microsoft.com/fwlink/?LinkID=210369)。  
+ technet.microsoft.com 上的影片： [Microsoft Connector for Oracle by Attunity 的效能 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkID=210369)。  
   
- curatedviews.cloudapp.net 上的 Curated Answer 文章： [How to Create a Dynamic Connection String in SSIS](http://go.microsoft.com/fwlink/?LinkId=321994)(如何在 SSIS 中建立動態連接字串)。  
+ curatedviews.cloudapp.net 上的 Curated Answer 文章： [How to Create a Dynamic Connection String in SSIS](https://go.microsoft.com/fwlink/?LinkId=321994)(如何在 SSIS 中建立動態連接字串)。  
   
   

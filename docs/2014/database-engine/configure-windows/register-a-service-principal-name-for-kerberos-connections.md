@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], SPNs
@@ -17,12 +16,12 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 671c496b98688433cf09b78bdeab4839142fe13c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcbe4835a333e6b1b1c0881ccd1833c4e5606639
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219248"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370410"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>註冊 Kerberos 連接的服務主體名稱
   若要搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 Kerberos 驗證，需要符合下列兩個條件：  
@@ -41,7 +40,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 ```  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 是一種診斷工具，可幫助排除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發生的 Kerberos 相關連接問題。 如需詳細資訊，請參閱 [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046)。  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 是一種診斷工具，可幫助排除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發生的 Kerberos 相關連接問題。 如需詳細資訊，請參閱 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。  
   
 ##  <a name="Role"></a> SPN 在驗證中的角色  
  當應用程式開啟連接並使用 Windows 驗證時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 會傳遞 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦名稱、執行個體名稱，並選擇性地傳遞 SPN。 如果連接傳遞 SPN，則會在不進行任何變更的情況下使用該 SPN。  
@@ -63,9 +62,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > [!NOTE]  
 >  當 Windows 網域設定為在小於 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server 2008 R2 的功能層級上執行時，受管理的服務帳戶將沒有針對 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服務註冊 SPN 的必要權限。 如果需要 Kerberos 驗證，則網域管理員應該在受管理的服務帳戶上手動註冊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SPN。  
   
- KB 文件 [How to use Kerberos authentication in SQL Server](http://support.microsoft.com/kb/319723)(如何在 SQL Server 中使用 Kerberos 驗證) 包含如何將讀取或寫入權限授與非網域管理員帳戶之 SPN 的資訊。  
+ KB 文件 [How to use Kerberos authentication in SQL Server](https://support.microsoft.com/kb/319723)(如何在 SQL Server 中使用 Kerberos 驗證) 包含如何將讀取或寫入權限授與非網域管理員帳戶之 SPN 的資訊。  
   
- [How to Implement Kerberos Constrained Delegation with SQL Server 2008](http://technet.microsoft.com/library/ee191523.aspx)(如何使用 SQL Server 2008 實作 Kerberos 受限委派) 提供額外資訊  
+ [How to Implement Kerberos Constrained Delegation with SQL Server 2008](https://technet.microsoft.com/library/ee191523.aspx)(如何使用 SQL Server 2008 實作 Kerberos 受限委派) 提供額外資訊  
   
 ##  <a name="Formats"></a> SPN 格式  
  從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]開始，SPN 格式就有了變動，以便能夠在 TCP/IP、具名管道和共用記憶體上支援 Kerberos 驗證。 具名和預設執行個體支援的 SPN 格式如下所示。  
@@ -111,7 +110,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  如果服務帳戶缺少這些動作所需的權限，可能需要手動介入才能註冊或取消註冊 SPN。  
   
 ##  <a name="Manual"></a> 手動 SPN 註冊  
- 若要手動註冊 SPN，管理員必須使用 Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 支援工具所隨附的 Setspn.exe 工具。 如需詳細資訊，請參閱 [Windows Server 2003 Service Pack 1 支援工具](http://support.microsoft.com/kb/892777) KB 文件。  
+ 若要手動註冊 SPN，管理員必須使用 Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 支援工具所隨附的 Setspn.exe 工具。 如需詳細資訊，請參閱 [Windows Server 2003 Service Pack 1 支援工具](https://support.microsoft.com/kb/892777) KB 文件。  
   
  Setspn.exe 是一個命令列工具，可讓您讀取、修改及刪除服務主要名稱 (SPN) 目錄屬性。 此工具也可讓您檢視目前的 SPN、重設此帳戶的預設 SPN，或是加入或刪除補充 SPN。  
   
@@ -159,8 +158,8 @@ WHERE session_id = @@SPID;
   
 |狀況|驗證方法|  
 |--------------|---------------------------|  
-|SPN 會對應到正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。 例如，Local System 或 NETWORK SERVICE。<br /><br /> 注意： 正確表示已註冊之 SPN 對應的帳戶是執行 SQL Server 服務帳戶。|本機連接會使用 NTLM，遠端連接則使用 Kerberos。|  
-|SPN 是正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。<br /><br /> 注意： 正確表示已註冊之 SPN 對應的帳戶是執行 SQL Server 服務帳戶。|本機連接會使用 NTLM，遠端連接則使用 Kerberos。|  
+|SPN 會對應到正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。 例如，Local System 或 NETWORK SERVICE。<br /><br /> 注意：正確表示已註冊之 SPN 對應的帳戶就是執行 SQL Server 服務所使用的帳戶。|本機連接會使用 NTLM，遠端連接則使用 Kerberos。|  
+|SPN 是正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。<br /><br /> 注意：正確表示已註冊之 SPN 對應的帳戶就是執行 SQL Server 服務所使用的帳戶。|本機連接會使用 NTLM，遠端連接則使用 Kerberos。|  
 |SPN 對應到不正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。|驗證失敗。|  
 |SPN 查閱失敗或是未對應到正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶，或者不是正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。|本機和遠端連接都會使用 NTLM。|  
   
@@ -176,6 +175,6 @@ WHERE session_id = @@SPID;
  [用戶端連接 &#40;OLE DB&#41; 中的服務主體名稱 &#40;SPN&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [用戶端連接 &#40;ODBC&#41; 中的服務主體名稱 &#40;SPN&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   
  [SQL Server Native Client 功能](../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [管理 Reporting Services 環境中的 Kerberos 驗證問題](http://technet.microsoft.com/library/ff679930.aspx)  
+ [管理 Reporting Services 環境中的 Kerberos 驗證問題](https://technet.microsoft.com/library/ff679930.aspx)  
   
   

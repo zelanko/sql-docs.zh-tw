@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - service [Integration Services], events
@@ -15,12 +14,12 @@ ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52cb18c5828a2d72ef8a36082554425e7e3afb82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29e121f600d9dc34aac21bb87ce3b77b4f21d3cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187088"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799068"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services 服務所記錄的事件
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務會將各種訊息記錄至 Windows 應用程式事件記錄檔。 當服務啟動、停止以及發生特定問題時，此服務就會記錄這些訊息。  
@@ -41,7 +40,7 @@ ms.locfileid: "48187088"
 |259|DTS_MSG_SERVER_STOPPED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 服務已停止。%n伺服器版本 %1|服務已停止。|  
   
 ## <a name="messages-about-the-configuration-file"></a>組態檔的相關訊息  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的設定會儲存在您可以修改的 XML 檔案中。 如需詳細資訊，請參閱[設定 Integration Services 服務 &#40;SSIS 服務&#41;](../configuring-the-integration-services-service-ssis-service.md)。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的設定會儲存在您可以修改的 XML 檔案中。 如需詳細資訊，請參閱 [設定 Integration Services 服務 &#40;SSIS 服務&#41;](../configuring-the-integration-services-service-ssis-service.md)回溯相容。  
   
 |事件識別碼|符號名稱|文字|注意|  
 |--------------|-------------------|----------|-----------|  
@@ -59,6 +58,6 @@ ms.locfileid: "48187088"
  如需如何檢視記錄項目的資訊，請參閱 [檢視記錄事件視窗中的記錄項目](../view-log-entries-in-the-log-events-window.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Integration Services 套件所記錄的事件](../performance/events-logged-by-an-integration-services-package.md)  
+ [Integration Services 封裝所記錄的事件](../performance/events-logged-by-an-integration-services-package.md)  
   
   

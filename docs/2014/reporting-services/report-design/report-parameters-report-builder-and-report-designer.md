@@ -18,19 +18,19 @@ ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e429badf8d6ad656f0ba5f0944a7d6bdf21553c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3baf73ba7f2c9e5d4d206234b1c9b874fbb15c59
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107330"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366260"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>報表參數 (報表產生器和報表設計師)
   本主題說明 SSRS 報表參數的一般用法、您可以設定的屬性，以及有關參數的詳細資訊。 報表參數可讓您控制報表資料、將相關的報表連接在一起，以及變更報表呈現方式。  
   
 [!INCLUDE[applies](../../includes/applies-md.md)] SharePoint 模式和原生模式
   
- 如需如何將參數加入報表中的相關示範，請參閱 [教學課程：將參數加入至報表中 (SSRS)](http://technet.microsoft.com/library/aa337432\(v=SQL.105\).aspx)  
+ 如需如何將參數加入至報表的示範，請參閱[教學課程：將參數加入至報表 (SSRS)](https://technet.microsoft.com/library/aa337432\(v=SQL.105\).aspx)  
 
   
 ##  <a name="bkmk_Common_Uses_for_Parameters"></a> 參數的一般使用方式  
@@ -75,7 +75,7 @@ ms.locfileid: "48107330"
   
 3.  **@Subcategory 參數**參數@Subcategory是資料型別`Text`。 因為@Subcategory具有可用的值清單，有效的值會出現在下拉式清單。 您必須從此清單選擇值。 因為@Subcategory是多重值， **全選** 選項隨即出現，可讓您清除或選取清單中的所有值。  
   
-4.  **@ShowAllRows 參數**參數@ShowAllRows是資料型別`Boolean`。 使用指定的選項按鈕`True`或`False`。  
+4.  **@ShowAllRows 參數**參數@ShowAllRows是資料型別`Boolean`。 使用選項按鈕可指定 `True` 或 `False`。  
   
 5.  **顯示或隱藏參數區域控點** ：在報表檢視器工具列上，按一下此箭頭可顯示或隱藏參數窗格。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "48107330"
   
 -   從下拉式清單選取一個參數的值，它會決定其他參數下拉式清單中可用的值。 這些是串聯參數。 串聯參數可讓您後續從數千個值篩選出能夠管理的參數值數目。  
   
-     如需詳細資訊，請參閱 <<c0> [ 將串聯參數加入至報表&#40;報表產生器及 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)。</c0>  
+     如需詳細資訊，請參閱 [將串聯參數加入至報表 &#40;報表產生器及 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)中建立的行動報表。  
   
 -   不需要先選取參數值就能執行報表，因為已經為參數建立預設值。  
   
@@ -131,16 +131,16 @@ ms.locfileid: "48107330"
 |--------------|-----------------|  
 |名稱|輸入區分大小寫的參數名稱。 此名稱必須以字母開頭，可以包含字母、數字和底線 (_)。 名稱不能有空格。 若為自動產生的參數，此名稱會符合資料集查詢中的參數。 根據預設，手動建立的參數與 ReportParameter1 類似。|  
 |提示|在報表檢視器工具列上顯示於參數旁邊的文字。|  
-|資料類型|針對參數定義了可用的值，使用者就可以選擇的值從下拉式清單中，即使資料類型是`DateTime`。 報表參數的資料類型必須是下列其中一種：<br /><br /> `Boolean`. 使用者會從選項按鈕中選取 True 或 False。<br /><br /> `DateTime`. 使用者會從日曆控制項中選取日期。<br /><br /> **整數**： 使用者會在文字方塊中輸入值。<br /><br /> **浮點數**： 使用者會在文字方塊中輸入值。<br /><br /> `Text`. 使用者會在文字方塊中輸入值。<br /><br /> 如需報表的資料類型的詳細資訊，請參閱 < [RDL 資料類型](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)。|  
+|資料類型|針對參數定義了可用的值，使用者就可以選擇的值從下拉式清單中，即使資料類型是`DateTime`。 報表參數的資料類型必須是下列其中一種：<br /><br /> `Boolean`. 使用者會從選項按鈕中選取 True 或 False。<br /><br /> `DateTime`. 使用者會從日曆控制項中選取日期。<br /><br /> **整數**： 使用者會在文字方塊中輸入值。<br /><br /> **浮點數**： 使用者會在文字方塊中輸入值。<br /><br /> `Text`. 使用者會在文字方塊中輸入值。<br /><br /> 如需有關報表資料類型的詳細資訊，請參閱＜ [RDL Data Types](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)＞。|  
 |允許空白值|如果參數值可為空字串或空白，則選取此選項。<br /><br /> 如果您為參數指定有效值，而且希望空白值是其中一個有效值，則必須將它納入做為您指定的其中一個有效值。 選取此選項並不會自動將空白納入做為可用的值。|  
 |允許 null 值|如果參數值可為 null，則選取此選項。<br /><br /> 如果您為參數指定有效值，而且希望 null 是其中一個有效值，則必須將 null 納入做為您指定的其中一個有效值。 選取此選項並不會自動將 null 納入做為可用的值。|  
 |允許多個值|提供可用的值，建立可供使用者選擇的下拉式清單。 這是確保資料集查詢中只會提交有效值的好方法。<br /><br /> 如果參數值可以是顯示在下拉式清單中的多個值，則選取此選項。 不允許 Null 值。 選取此選項時，系統會將核取方塊加入到參數下拉式清單內可用值的清單中。 清單的頂端包含 **[全選]** 核取方塊。 使用者可以檢查想要的值。<br /><br /> 如果提供值的資料迅速改變，則使用者看見的清單可能不是最新的。|  
 |Visible|選取此選項可顯示報表執行時，位於報表頂端的報表參數。 此選項可讓使用者在執行階段選取參數值。|  
 |Hidden|選取此選項來隱藏已發行報表中的報表參數。 您仍然可以在報表 URL、訂閱定義或報表伺服器上設定報表參數值。|  
 |內部|選取此選項來隱藏報表參數。 已發行報表中的報表參數只能在報表定義中檢視。|  
-|可用的值|如果您已為參數指定可用的值，則有效值會固定顯示為下拉式清單。 例如，如果您提供可用的值`DateTime`參數日期的下拉式清單會出現在 [參數] 窗格，而不是行事曆控制項。 為確保報表和子報表之間的值清單一致，您可以在資料來源上設定一個選項，針對與資料來源相關聯的資料集中的所有查詢使用單一交易。<br /><br /> **\*\* 安全性注意事項\*\*** 中所包含的資料型別參數的任何報表`Text`，務必使用可用的值清單 （也稱為有效值清單），並且確認任何執行報表的使用者只有若要檢視報表中的資料所需的權限。 如需詳細資訊，請參閱[安全性 &#40;報表產生器&#41;](../report-builder/security-report-builder.md)。|  
+|可用的值|如果您已為參數指定可用的值，則有效值會固定顯示為下拉式清單。 例如，如果您為 `DateTime` 參數提供可用的值，則參數窗格中會出現日期的下拉式清單，而不是行事曆控制項。 為確保報表和子報表之間的值清單一致，您可以在資料來源上設定一個選項，針對與資料來源相關聯的資料集中的所有查詢使用單一交易。<br /><br /> **\*\* 安全性注意事項\*\*** 中所包含的資料型別參數的任何報表`Text`，務必使用可用的值清單 （也稱為有效值清單），並且確認任何執行報表的使用者只有若要檢視報表中的資料所需的權限。 如需詳細資訊，請參閱 [安全性 &#40;報表產生器&#41;](../report-builder/security-report-builder.md)中建立的行動報表。|  
 |預設值|設定來自查詢或靜態清單的預設值。<br /><br /> 如果每個參數都有預設值，則報表會在第一次檢視時自動執行。|  
-|進階|設定報表定義屬性 `UsedInQuery`，其值指出此參數直接或間接影響報表中的資料。<br /><br /> **自動判斷何時重新整理**<br /> 當您想要讓報表處理器判斷此值的設定時，請選擇此選項。 如果報表處理器偵測到一個資料集查詢，且其中包含一個這個參數的直接或間接參照，或者如果報表中有子報表，則此值為 `True`。<br /><br /> **永遠重新整理**<br /> 在資料集查詢或參數運算式中直接或間接使用報表參數時，請選擇此選項。 此選項會將 `UsedInQuery` 設定為 True。<br /><br /> **永不重新整理**<br /> 不在資料集查詢或參數運算式中直接或間接使用報表參數時，請選擇此選項。 這個選項會設定`UsedInQuery`為 False。<br /><br /> **\*\* 請小心\*\*** 使用 **永不重新整理** 謹慎使用。 在報表伺服器上，`UsedInQuery`用來協助控制報表資料與轉譯的報表，快取選項和快照集報表的參數選項。 如果未正確設定 **[永不重新整理]** ，您可能會快取不正確的報表資料或報表，或者使快照集報表的資料不一致。 如需詳細資訊，請參閱[報表定義語言 &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)。|  
+|進階|設定報表定義屬性 `UsedInQuery`，其值指出此參數直接或間接影響報表中的資料。<br /><br /> **自動判斷何時重新整理**<br /> 當您想要讓報表處理器判斷此值的設定時，請選擇此選項。 如果報表處理器偵測到一個資料集查詢，且其中包含一個這個參數的直接或間接參照，或者如果報表中有子報表，則此值為 `True`。<br /><br /> **永遠重新整理**<br /> 在資料集查詢或參數運算式中直接或間接使用報表參數時，請選擇此選項。 此選項會將 `UsedInQuery` 設定為 True。<br /><br /> **永不重新整理**<br /> 不在資料集查詢或參數運算式中直接或間接使用報表參數時，請選擇此選項。 此選項會將 `UsedInQuery` 設定為 False。<br /><br /> **\*\* 請小心\*\*** 使用 **永不重新整理** 謹慎使用。 在報表伺服器上，`UsedInQuery` 用於協助控制報表資料與已轉譯之報表的快取選項，以及快照集報表的參數選項。 如果未正確設定 **[永不重新整理]** ，您可能會快取不正確的報表資料或報表，或者使快照集報表的資料不一致。 如需詳細資訊，請參閱[報表定義語言 &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)。|  
   
 ##  <a name="bkmk_Dataset_Parameters"></a> 資料集查詢  
  若要篩選資料集查詢中的資料，您可以加入限制子句，透過指定結果集中要包含或排除的值限制擷取的資料。  
@@ -196,7 +196,7 @@ ms.locfileid: "48107330"
  使用員工或個人資料之參數的一個安全替代方式，就是根據包含 Users 集合之 **UserID** 欄位的運算式來選取資料。 Users 集合提供一種方法，來取得執行報表之使用者的識別，並使用該識別來擷取使用者特定資料。  
   
 > [!IMPORTANT]  
->  在任何報表中包含的型別參數`String`，務必使用可用的值清單 （也稱為有效值清單），並且確認任何執行報表的使用者具有只有必要的使用權限來檢視報表中的資料。 當您定義的型別參數`String`，使用者會看到一個可接受任何值的文字方塊。 可用的值清單會限制可輸入的值。 如果報表參數繫結至資料集參數，而且您不要使用可用的值清單，則報表使用者可以在文字方塊中輸入 SQL 語法，如此可能會使您的報表及伺服器暴露在 SQL 資料隱碼攻擊的危險之下。 如果使用者的權限足以執行新的 SQL 陳述式，伺服器可能會出現不良的結果。  
+>  在任何含有 `String` 類型之參數的報表中，請務必使用可用的值清單 (也稱為有效值清單)，並確認執行報表的任何使用者只具有檢視報表資料所需的權限。 當您將參數定義為 `String` 類型時，使用者會看到一個可接受任何值的文字方塊。 可用的值清單會限制可輸入的值。 如果報表參數繫結至資料集參數，而且您不要使用可用的值清單，則報表使用者可以在文字方塊中輸入 SQL 語法，如此可能會使您的報表及伺服器暴露在 SQL 資料隱碼攻擊的危險之下。 如果使用者的權限足以執行新的 SQL 陳述式，伺服器可能會出現不良的結果。  
 >   
 >  如果報表參數未繫結至資料集參數，且參數值有包含在報表中，則報表使用者就可以在參數值中輸入運算式語法或 URL，並將報表轉譯為 Excel 或 HTML。 如果另一個使用者接著檢視報表並按一下轉譯的參數內容，該使用者可能會不小心執行惡意指令碼或連結。  
 >   
@@ -205,44 +205,44 @@ ms.locfileid: "48107330"
 ##  <a name="bkmk_How_To_Topics"></a> 如何主題  
  本節列出的程序，為您逐步示範如何使用參數和篩選。  
   
--   [加入、 變更或刪除報表參數&#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
+-   [加入、變更或刪除報表參數 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
--   [加入、 變更或刪除可用的值為報表參數&#40;報表產生器及 SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)  
+-   [為報表參數加入、變更或刪除可用的值 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)  
   
--   [加入、 變更或刪除報表參數的預設值&#40;報表產生器及 SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)  
+-   [為報表參數加入、變更或刪除預設值 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)  
   
--   [變更報表參數的順序&#40;報表產生器及 SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+-   [變更報表參數的順序 &#40;報表產生器及 SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
--   [將串聯參數加入至報表&#40;報表產生器及 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
+-   [將串聯參數加入至報表 &#40;報表產生器及 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
   
 -   [將篩選加入資料集中 &#40;報表產生器及 SSRS&#41;](../report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
--   [加入子報表和參數&#40;報表產生器及 SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
+-   [加入子報表和參數 &#40;報表產生器及 SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
   
--   [如何搭配預存程序使用 SSRS 參數](http://go.microsoft.com/fwlink/p/?LinkId=396970)  
+-   [如何搭配預存程序使用 SSRS 參數](https://go.microsoft.com/fwlink/p/?LinkId=396970)  
   
-## <a name="did-this-article-help-you-were-listening"></a>這篇文章對您有幫助嗎？ 我們會持續聽取您的意見  
- 您要尋找哪些資訊？找到了嗎？ 我們會持續聽取您的意見來改進內容。 請將您的意見傳送到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page)  
+## <a name="did-this-article-help-you-were-listening"></a>這篇文章對您有幫助嗎？ 我們洗耳恭聽  
+ 您要尋找哪些資訊？找到了嗎？ 我們會聆聽您的意見反應來改進內容。 請將您的意見傳送到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page)  
   
 ##  <a name="bkmk_Related_Topics"></a> 相關內容  
- [設定 SSRS 報表參數 (測驗)](http://go.microsoft.com/fwlink/p/?LinkID=306443)  
+ [設定 SSRS 報表參數 (測驗)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
- [教學課程： 將參數加入至報表&#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [教學課程：將參數加入至報表&#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
- [負載平衡 Reporting service 中 InvalidReportParameterException 的神秘面紗謎](http://go.microsoft.com/fwlink/p/?LinkId=393118)  
+ [負載平衡 Reporting service 中 InvalidReportParameterException 的神秘面紗謎](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   
- [報表範例 (報表產生器和 SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [報表範例 (報表產生器和 SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
- [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
  [運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   
- [篩選、 分組和排序資料&#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
- [安全性&#40;報表產生器&#41;](../report-builder/security-report-builder.md)  
+ [安全性 &#40;報表產生器&#41;](../report-builder/security-report-builder.md)  
   
- [互動式排序、 文件引導模式及連結&#40;報表產生器及 SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
+ [互動式排序、文件引導模式及連結 &#40;報表產生器及 SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
- [鑽研、 向下鑽研、 子報表和巢狀的資料區域&#40;報表產生器及 SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [鑽研、向下鑽研、子報表和巢狀資料區 &#40;報表產生器及 SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

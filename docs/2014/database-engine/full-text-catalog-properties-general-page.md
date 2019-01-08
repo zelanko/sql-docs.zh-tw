@@ -12,18 +12,18 @@ ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 374ba32b5cc79a503333b691b4708921f507004a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7fa2edb4437b2d97a5a78da609838c6fcaaadda3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182768"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353586"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>全文檢索目錄屬性 (一般頁面)
   本章節會顯示在 **[全文檢索目錄屬性]** 對話方塊的 **[一般]** 頁面上，可以使用的選項和功能。  
   
 > [!NOTE]  
->  針對[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]資料庫的全文檢索目錄是參考一組全文檢索索引的邏輯概念。 全文檢索目錄是不屬於任何檔案群組的虛擬物件。  
+>  對於 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 資料庫而言，全文檢索目錄是參考一組全文檢索索引的邏輯概念。 全文檢索目錄是不屬於任何檔案群組的虛擬物件。  
   
 ## <a name="options"></a>選項。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48182768"
   
 -   **正在建立索引**  
   
--   **磁碟已滿 — 已暫停**  
+-   **磁碟已完整暫停**  
   
 -   **Change tracking**  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48182768"
   
 -   **是**  
   
--   變音符號標記的相關資訊，請參閱[變音符號記號](http://go.microsoft.com/fwlink/?LinkId=154091)在 MSN Encarta Encyclopedia 上。  
+-   變音符號標記的相關資訊，請參閱[變音符號記號](https://go.microsoft.com/fwlink/?LinkId=154091)在 MSN Encarta Encyclopedia 上。  
   
  **上次母體擴展日期**  
  顯示目錄上次擴展的日期。  

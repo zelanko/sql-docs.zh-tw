@@ -18,12 +18,12 @@ ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 047b936bf608be86407c93860078758d43ebbb2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 295f29b86e53a8d58622e4c79c1b36734acdbe3e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792063"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591012"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@class =** ] **'***類別***'**  
+ [  **@class =** ] **'**_類別_**'**  
  要加入之類別目錄的類別。 *類別*已**varchar(8)** 預設值是 JOB，而且可以是下列值之一。  
   
 |值|描述|  
@@ -52,7 +52,7 @@ sp_add_category
 |ALERT|加入警示類別目錄。|  
 |OPERATOR|加入操作員類別目錄。|  
   
- [ **@type =** ] **'***type***'**  
+ [  **@type =** ] **'**_型別_**'**  
  要加入之類別目錄的類型。 *型別*已**varchar(12)**，預設值是**本機**，而且可以是下列值之一。  
   
 |值|描述|  
@@ -61,7 +61,7 @@ sp_add_category
 |多伺服器|多伺服器作業類別目錄。|  
 |無|工作以外的類別分類 **。**|  
   
- [ **@name =** ] **'***name***'**  
+ [  **@name =** ] **'**_名稱_**'**  
  要加入的類別目錄名稱。 在指定的類別內，這個名稱必須是唯一的。 *名稱*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  

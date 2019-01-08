@@ -16,12 +16,12 @@ ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d1372b868499bc6b903dd7fb6c4022e724870b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f948b50fae0995e16024ac41d8dd891630d1dbe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782196"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208458"
 ---
 # <a name="c-data-types"></a>C 資料類型
 ODBC C 資料類型表示用來將資料儲存在應用程式的 C 緩衝區的資料類型。  
@@ -109,7 +109,7 @@ struct tagSQL_NUMERIC_STRUCT {
    SQLCHAR precision;  
    SQLSCHAR scale;  
    SQLCHAR sign[g];  
-   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
+   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
 } SQL_NUMERIC_STRUCT;  
 ```  
   
@@ -138,7 +138,7 @@ struct tagSQLGUID {
   
  [e] 的號碼儲存在*val* SQL_NUMERIC_STRUCT 結構做為縮放的整數，在小的位元組由小到大模式 （最小顯著性位元組的最左邊位元組） 的欄位。 比方說，是 4，小數位數的數字 10.001 基底為 10，縮放至 100010 的整數。 因為這是以十六進位格式的 186AA，SQL_NUMERIC_STRUCT 中的值會是 AA 86 01 00 00...00 」，與 SQL_MAX_NUMERIC_LEN 所定義的位元組數目 **#define**。  
   
- 如需詳細資訊**SQL_NUMERIC_STRUCT**，請參閱[作法： 使用 SQL_NUMERIC_STRUCT 擷取數值資料](retrieve-numeric-data-sql-numeric-struct-kb222831.md)。  
+ 如需詳細資訊**SQL_NUMERIC_STRUCT**，請參閱[做法：擷取數值資料使用 SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md)。  
   
  [SQL_C_NUMERIC 資料 f] 的有效位數和小數位數欄位輸入 areused 從應用程式的輸入和輸出的驅動程式需要應用程式。 當驅動程式會將數字的值寫入至 SQL_NUMERIC_STRUCT 時，它會使用它自己的驅動程式專屬的預設做為值*精確度*欄位，而且它會在應用程式描述項 （SQL_DESC_SCALE 欄位中使用值預設為 0） 的*擴展*欄位。 應用程式可以提供自己的值的有效位數和小數位數設定 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 的應用程式描述項欄位。  
   
@@ -148,7 +148,7 @@ struct tagSQLGUID {
   
  [i] _SQL_C_BOOKMARK 已被取代，在 ODBC 3 *.x*。  
   
- [j] _SQL_C_SHORT、 SQL_C_LONG、 和 SQL_C_TINYINT 已取代 ODBC 中的帶正負號和不帶正負號的型別： SQL_C_SSHORT 和 SQL_C_USHORT、 SQL_C_SLONG 和 SQL_C_ULONG、 SQL_C_STINYINT 和 SQL_C_UTINYINT。 ODBC 3 *.x*驅動程式就應該使用 ODBC 2。*x*應用程式應支援 SQL_C_SHORT、 SQL_C_LONG、 和 SQL_C_TINYINT，，因為它們呼叫時，驅動程式管理員就會將透過傳遞給驅動程式。  
+ [j] _SQL_C_SHORT、 SQL_C_LONG、 和 SQL_C_TINYINT 已取代 ODBC 中的帶正負號和不帶正負號的類型：SQL_C_SSHORT 和 SQL_C_USHORT、 SQL_C_SLONG 和 SQL_C_ULONG、 SQL_C_STINYINT 和 SQL_C_UTINYINT。 ODBC 3 *.x*驅動程式就應該使用 ODBC 2。*x*應用程式應支援 SQL_C_SHORT、 SQL_C_LONG、 和 SQL_C_TINYINT，，因為它們呼叫時，驅動程式管理員就會將透過傳遞給驅動程式。  
   
  [k] SQL_C_GUID 可以僅對 SQL_CHAR 或 SQL_WCHAR 轉換。  
   

@@ -1,7 +1,8 @@
 ---
-title: 在 Azure 資料 Studio 中建立程式碼片段 |Microsoft Docs
+title: 建立可重複使用的程式碼片段
+titleSuffix: Azure Data Studio
 description: 了解如何建立和使用 Azure Data Studio 中的 SQL 程式碼片段
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bcf50d192b679b250ce6f4baac8f9e0179080ea
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 0e10b121ffc1afae83b767bcfdfe8e6765f990f4
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384133"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030262"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>透過建立與使用程式碼片段，在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 內快速地建立 TRANSACT-SQL (T-SQL) 指令碼
 
@@ -51,8 +52,7 @@ ms.locfileid: "49384133"
 
 您可以定義您自己的程式碼片段。 開啟 SQL 程式碼片段檔案進行編輯：
 
-1. 開啟*命令選擇區* (**Shift + Ctrl + P**)，然後輸入 *snip* 並選取**喜好設定: 開啟使用者程式碼片段**：
-
+1. 開啟*命令選擇區*(**Shift + Ctrl + P**)，然後輸入*剪取*，然後選取**喜好設定：開啟使用者程式碼片段**:
 
    ![取代範本欄位](media/code-snippets/user-snippets.png)
 

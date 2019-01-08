@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.f1
@@ -18,12 +17,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe677e6b2fb13c3a158c78e0416142b7b15ce975
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64e3a60d767c100ad66a293f1e588369a140d1e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204818"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367310"
 ---
 # <a name="execute-sql-task"></a>執行 SQL 工作
   「執行 SQL」工作會執行封裝中的 SQL 陳述式或預存程序。 工作可以包含逐次執行的單一 SQL 陳述式或多重 SQL 陳述式。 您可將執行 SQL 工作用於下列用途：  
@@ -46,7 +45,7 @@ ms.locfileid: "48204818"
 |連接類型|[ODBC 來源編輯器]|  
 |---------------------|------------------------|  
 |EXCEL|[Excel 連線管理員](../connection-manager/excel-connection-manager.md)|  
-|OLE DB|[OLE DB 連線管理員](../connection-manager/ole-db-connection-manager.md)|  
+|OLE DB|[OLE DB 連接管理員](../connection-manager/ole-db-connection-manager.md)|  
 |ODBC|[ODBC 連線管理員](../connection-manager/odbc-connection-manager.md)|  
 |ADO|[ADO 連線管理員](../connection-manager/ado-connection-manager.md)|  
 |ADO.NET|[ADO.NET 連線管理員](../connection-manager/ado-net-connection-manager.md)|  
@@ -63,7 +62,7 @@ ms.locfileid: "48204818"
 >  「執行 SQL」工作可能無法成功剖析在「執行 SQL」工作外部撰寫的有效 SQL 陳述式。  
   
 > [!NOTE]  
->  「執行 SQL」工作會使用 `RecognizeAll` ParseMode 列舉值。 如需詳細資訊，請參閱 [ManagedBatchParser Namespace](http://go.microsoft.com/fwlink/?LinkId=223617)(ManagedBatchParser 命名空間)。  
+>  「執行 SQL」工作會使用 `RecognizeAll` ParseMode 列舉值。 如需詳細資訊，請參閱 [ManagedBatchParser Namespace](https://go.microsoft.com/fwlink/?LinkId=223617)(ManagedBatchParser 命名空間)。  
   
 ## <a name="sending-multiple-statements-in-a-batch"></a>在批次中傳送多重陳述式  
  如果您在執行 SQL 工作中加入多個陳述式，可將它們組成群組，並在批次中執行。 若要表示批次結束，請使用 GO 命令。 兩個 GO 命令之間的所有 SQL 陳述式，都會在一個批次中傳送至要執行的 OLE DB 提供者。 SQL 命令可包含以 GO 命令分隔的多個批次。  
@@ -81,7 +80,7 @@ ms.locfileid: "48204818"
 -   如果工作使用參數繫結，則批次中所有查詢的參數數目和類型都必須相同。  
   
 ## <a name="running-parameterized-sql-commands"></a>執行參數化的 SQL 命令  
- SQL 陳述式和預存程序經常使用輸入參數、輸出參數以及傳回碼。 「 執行 SQL 」 工作支援`Input`， `Output`，和`ReturnValue`參數型別。 您使用`Input`類型當做輸入參數，`Output`當做輸出參數，和`ReturnValue`當做傳回碼。  
+ SQL 陳述式和預存程序經常使用輸入參數、輸出參數以及傳回碼。 執行 SQL 工作支援 `Input`、`Output` 和 `ReturnValue` 等參數類型。 您可以使用 `Input` 類型當做輸入參數，使用 `Output` 當做輸出參數，並使用 `ReturnValue` 當做傳回碼。  
   
 > [!NOTE]  
 >  只有在資料提供者支援參數時，您才能在執行 SQL 工作中使用參數。  
@@ -94,9 +93,9 @@ ms.locfileid: "48204818"
  如需在「執行 SQL」工作中從 SQL 命令擷取結果集的資訊，請參閱[執行 SQL 工作中的結果集](../result-sets-in-the-execute-sql-task.md)。  
   
 ## <a name="troubleshooting-the-execute-sql-task"></a>疑難排解執行 SQL 工作  
- 您可以記錄執行 SQL 工作對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，疑難排解執行 SQL 工作所執行的 SQL 命令。 若要記錄「執行 SQL」工作對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱[封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
+ 您可以記錄執行 SQL 工作對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，疑難排解執行 SQL 工作所執行的 SQL 命令。 若要記錄「執行 SQL」工作對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
- 有時 SQL 命令或預存程序會傳回多個結果集。 這些結果集包含不只是結果的資料列集`SELECT`查詢，但單一值之錯誤的結果`RAISERROR`或`PRINT`陳述式。 工作是否忽略發生在第一個結果集之後之結果集中的錯誤，將取決於所使用的連接管理員類型：  
+ 有時 SQL 命令或預存程序會傳回多個結果集。 這些結果集不只包括屬於 `SELECT` 查詢結果的資料列集，也包括屬於 `RAISERROR` 或 `PRINT` 陳述式之錯誤結果的單一值。 工作是否忽略發生在第一個結果集之後之結果集中的錯誤，將取決於所使用的連接管理員類型：  
   
 -   使用 OLE DB 和 ADO 連接管理員時，工作會忽略發生在第一個結果集之後的結果集。 因此，使用這些連接管理員時，如果錯誤不屬於第一個結果集的一部分，便會忽略 SQL 命令或預存程序所傳回的錯誤。  
   
@@ -122,7 +121,7 @@ ms.locfileid: "48204818"
   
 -   指示工作是否要略過 SQL 陳述式的準備階段。  
   
--   如果使用 ADO 連接類型，您必須指出 SQL 陳述式是否為預存程序。 對於其他連線類型，這個屬性是唯讀，且其值一律為`false`。  
+-   如果使用 ADO 連接類型，您必須指出 SQL 陳述式是否為預存程序。 如果是其他連接類型，此屬性為唯讀，且其值固定為 `false`。  
   
  您可以程式設計方式或透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」設定屬性。  
   
@@ -159,6 +158,6 @@ ms.locfileid: "48204818"
   
 -   [Transact-SQL 參考 &#40;Database Engine&#41;](/sql/t-sql/language-reference)  
   
--   mssqltips.com 上的部落格文章： [New Date and Time Functions in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=239783)(SQL Server 2012 中的新日期和時間函數)  
+-   mssqltips.com 上的部落格文章： [New Date and Time Functions in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=239783)(SQL Server 2012 中的新日期和時間函數)  
   
   

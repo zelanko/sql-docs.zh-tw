@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d60680f4c6f286db1c1d0e47961e75b057b14a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fda0f61806c1fa2be33b1a231e877758c4c67ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192098"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358180"
 ---
 # <a name="qnsubscription-event-class"></a>QN:Subscription 事件類別
   QN:Subscription 事件會報告通知訂閱的資訊。  
@@ -35,7 +34,7 @@ ms.locfileid: "48192098"
 |DatabaseName|`nvarchar`|正在其中執行使用者陳述式的資料庫名稱。|35|是|  
 |EventClass|`int`|事件類別 = 199。|27|否|  
 |EventSequence|`int`|此事件的序號。|51|否|  
-|EventSubClass|`nvarchar`|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> 註冊訂用帳戶： 表示資料庫中已成功註冊查詢通知訂閱。<br /><br /> 倒轉的訂用帳戶： 指示何時[!INCLUDE[ssDE](../../includes/ssde-md.md)]收到完全符合現有的訂用帳戶的訂用帳戶要求。 在此情況下， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將現有訂閱的逾時值設成新訂閱要求中所指定的逾時。<br /><br /> 引發的訂用帳戶： 表示通知訂閱產生通知訊息。<br /><br /> 引發失敗，訊息代理程式錯誤： 這個值表示通知訊息時失敗原因為[!INCLUDE[ssSB](../../includes/sssb-md.md)]時發生錯誤。<br /><br /> 引發失敗不會發生 broker 錯誤： 表示通知訊息失敗，但不是因為[!INCLUDE[ssSB](../../includes/sssb-md.md)]時發生錯誤。<br /><br /> Broker 攔截的錯誤： 指出[!INCLUDE[ssSB](../../includes/sssb-md.md)]查詢通知使用的交談中傳遞錯誤。<br /><br /> 訂用帳戶刪除嘗試： 指出[!INCLUDE[ssDE](../../includes/ssde-md.md)]嘗試刪除過期的訂閱，以便釋出資源。<br /><br /> 訂用帳戶刪除失敗： 表示嘗試刪除過期的訂用帳戶已失敗。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將自動重新排程訂閱的刪除作業，以便釋出資源。<br /><br /> 終結的訂用帳戶： 指出[!INCLUDE[ssDE](../../includes/ssde-md.md)]已成功刪除過期的訂用帳戶|21|是|  
+|EventSubClass|`nvarchar`|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> 註冊的訂用帳戶：表示已經成功在資料庫中註冊查詢通知訂閱。<br /><br /> 倒轉的訂用帳戶：表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 收到的訂閱要求與現有的訂閱完全相符。 在此情況下， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將現有訂閱的逾時值設成新訂閱要求中所指定的逾時。<br /><br /> 引發的訂用帳戶：表示通知訂閱產生通知訊息。<br /><br /> 引發失敗，發生 broker 錯誤：表示通知訊息由於 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 錯誤而失敗。<br /><br /> 引發失敗不會發生 broker 錯誤：表示通知訊息失敗，但不是因為 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 錯誤。<br /><br /> 攔截的 broker 時發生錯誤：表示 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 在查詢通知使用的交談中傳遞錯誤。<br /><br /> 訂用帳戶刪除嘗試：表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 嘗試刪除過期的訂閱，以便釋出資源。<br /><br /> 訂用帳戶刪除失敗：表示嘗試刪除過期訂閱的動作已失敗。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將自動重新排程訂閱的刪除作業，以便釋出資源。<br /><br /> 終結的訂用帳戶：表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 已成功刪除過期的訂閱。|21|是|  
 |GroupID|`int`|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
 |HostName|`nvarchar`|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |IsSystem|`int`|指出事件是發生在系統處理序或使用者處理序。<br /><br /> 0 = 使用者<br /><br /> 1 = 系統|60|否|  
@@ -48,6 +47,6 @@ ms.locfileid: "48192098"
 |SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果應用程式使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 會顯示 "Login1"，而 LoginName 則會顯示 "Login2"。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|傳回包含這個事件相關資訊的 XML 文件。 這份文件符合 [SQL Server 查詢通知 Profiler 事件結構描述](http://go.microsoft.com/fwlink/?LinkId=63331) 網頁上所提供的 XML 結構描述。|1|是|  
+|TextData|`ntext`|傳回包含這個事件相關資訊的 XML 文件。 這份文件符合 [SQL Server Query Notification Profiler Event Schema](https://go.microsoft.com/fwlink/?LinkId=63331) (SQL Server 查詢通知 Profiler 事件結構描述) 頁面上所提供的 XML 結構描述。|1|是|  
   
   

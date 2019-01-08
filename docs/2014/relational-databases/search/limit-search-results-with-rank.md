@@ -18,12 +18,12 @@ ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66714f9f401c8a5061b1cff2d316555d5e9a71bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 914a1f0eb36ad0da4076f487d1771a8dfd23bfb1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093338"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807250"
 ---
 # <a name="limit-search-results-with-rank"></a>限制 RANK 的搜索結果
   [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 函數會傳回名為 RANK 的資料行，其中包含 0 到 1000 (順位值) 的序數值。 這些值的用途，在根據傳回資料列符合選取準則的程度予以分級。 等級值僅表示結果集中資料列相關性的相對順序，其值越低表示相關性越低。 實際的值並不重要，而且每次執行查詢後該值通常會不一樣。  
@@ -37,7 +37,7 @@ ms.locfileid: "48093338"
   
 ##  <a name="examples"></a> 使用 RANK 限制搜尋結果的範例  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>範例 A：只搜尋前三個相符項目  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>範例 A：只有前三個相符項目搜尋  
  下列範例會使用 CONTAINSTABLE，以便只傳回前三個相符項目。  
   
 ```  
@@ -141,7 +141,7 @@ GO
 ### <a name="rank-computation-issues"></a>等級計算問題  
  計算等級的程序取決於幾項因素。  不同語言的文字在分隔 Token 化文字的方式上會有所差異。 例如，使用某種文字分隔時會將 "dog-house" 字串分解成 "dog" "house"，而使用另一種文字分隔時會分解成 "dog-house"。 這表示比對和等級會依據指定的語言而異，因為不僅單字不同，而且文件長度也不同。 文件長度的差異會影響所有查詢的等級。  
   
- 統計資料，例如`IndexRowCount`可能大不相同。 例如，如果某個目錄在主索引中有 20 億個資料列，則會將一個新文件的索引編製到記憶體的中繼索引。而該文件會根據記憶體索引中的文件數目所得的等級，與主索引的文件等級進行非對稱比較。 因此，建議您在執行任何會造成大量資料列編製索引或重新編製索引的母體擴展動作後，使用 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式來將這些索引與主要的索引合併。 全文檢索引擎也會根據參數 (例如中繼索引的數目與大小) 來自動合併索引。  
+ 統計資料 (例如 `IndexRowCount`) 可能會有很大的差異。 例如，如果某個目錄在主索引中有 20 億個資料列，則會將一個新文件的索引編製到記憶體的中繼索引。而該文件會根據記憶體索引中的文件數目所得的等級，與主索引的文件等級進行非對稱比較。 因此，建議您在執行任何會造成大量資料列編製索引或重新編製索引的母體擴展動作後，使用 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式來將這些索引與主要的索引合併。 全文檢索引擎也會根據參數 (例如中繼索引的數目與大小) 來自動合併索引。  
   
  `MaxOccurrence` 值會正規化為 32 種範圍中的其中一種。 這表示，會將長度 50 個字的文件視為與長度 100 個字的文件一樣。 下表用於正規化作業。 因為這兩個文件的長度介於鄰近資料表值的 32 與 128，因此它們會被視為具有相同長度的文件，也就是 128 (32 < `docLength` <= 128)。  
   
@@ -176,9 +176,9 @@ Rank = min( MaxQueryRank, HitCount * 16 * StatisticalWeight / MaxOccurrence )
 ```  
 ContainsRank = same formula used for CONTAINSTABLE ranking of a single term (above).  
 Weight = the weight specified in the query for each term. Default weight is 1.  
-WeightedSum = Σ[key=1 to n] ContainsRankKey * WeightKey  
-Rank =  ( MaxQueryRank * WeightedSum ) / ( ( Σ[key=1 to n] ContainsRankKey^2 )   
-      + ( Σ[key=1 to n] WeightKey^2 ) - ( WeightedSum ) )  
+WeightedSum = ??[key=1 to n] ContainsRankKey * WeightKey  
+Rank =  ( MaxQueryRank * WeightedSum ) / ( ( ??[key=1 to n] ContainsRankKey^2 )   
+      + ( ??[key=1 to n] WeightKey^2 ) - ( WeightedSum ) )  
   
 ```  
   
@@ -187,14 +187,14 @@ Rank =  ( MaxQueryRank * WeightedSum ) / ( ( Σ[key=1 to n] ContainsRankKey^2 )
  [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 等級是以 OKAPI BM25 等級公式為基礎。 FREETEXTTABLE 查詢會透過變化衍生項 (原始查詢字的變化型式) 將單字加入到查詢中。這些單字會視為個別單字，而且與來源產生字沒有特殊的關聯性。 由「同義字」功能所產生的同義字會視為個別詞彙，且加權值相同的詞彙。 查詢中的每個單字都是計算等級的基礎。  
   
 ```  
-Rank = Σ[Terms in Query] w ( ( ( k1 + 1 ) tf ) / ( K + tf ) ) * ( ( k3 + 1 ) qtf / ( k3 + qtf ) ) )  
+Rank = ??[Terms in Query] w ( ( ( k1 + 1 ) tf ) / ( K + tf ) ) * ( ( k3 + 1 ) qtf / ( k3 + qtf ) ) )  
 Where:   
 w is the Robertson-Sparck Jones weight.   
 In simplified form, w is defined as:   
-w = log10 ( ( ( r + 0.5 ) * ( N – R + r + 0.5 ) ) / ( ( R – r + 0.5 ) * ( n – r + 0.5 ) )  
+w = log10 ( ( ( r + 0.5 ) * ( N - R + r + 0.5 ) ) / ( ( R - r + 0.5 ) * ( n - r + 0.5 ) )  
 N is the number of indexed rows for the property being queried.   
 n is the number of rows containing the word.   
-K is ( k1 * ( ( 1 – b ) + ( b * dl / avdl ) ) ).   
+K is ( k1 * ( ( 1 - b ) + ( b * dl / avdl ) ) ).   
 dl is the property length, in word occurrences.   
 avdl is the average length of the property being queried, in word occurrences.   
 k1, b, and k3 are the constants 1.2, 0.75, and 8.0, respectively.   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading failover clusters
@@ -15,12 +14,12 @@ ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3397ac65b4c3ca5f5d7ac9e8068ca3e078d466c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 421aac2c58755b192eff51a85d668b03a2fc8a8e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211184"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823872"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster"></a>升級 SQL Server 容錯移轉叢集
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援在所有容錯移轉叢集節點上，個別從 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 與 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 容錯移轉叢集，升級 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 及 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
@@ -29,7 +28,7 @@ ms.locfileid: "48211184"
   
 -   目前支援從使用者介面和命令提示字元進行升級。 如需詳細資訊，請參閱[升級 SQL Server 容錯移轉叢集執行個體 &#40;安裝程式&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md) 和[從命令提示字元安裝 SQL Server 2014](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
--   從 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 升級 - 您可以在每個容錯移轉叢集節點上，從命令提示字元執行升級，也可以使用安裝程式 UI 來升級每個叢集節點。 如果全文檢索搜尋和複寫功能不存在升級的執行個體上，系統就會自動安裝它們，而不會提供省略它們的選項。  
+-   從升級[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]-每個容錯移轉叢集節點，或使用安裝程式 UI 來升級每個叢集節點，您可以從命令提示字元執行升級。 如果全文檢索搜尋和複寫功能不存在升級的執行個體上，系統就會自動安裝它們，而不會提供省略它們的選項。  
   
 -   Service Pack 安裝 - 您必須將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 和修補程式個別套用至所有節點上的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 容錯移轉叢集。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48211184"
 -   如需詳細資訊，請參閱 < [ AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](always-on-failover-cluster-instances-sql-server.md)。  
   
 ## <a name="upgrading-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>升級 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集  
- 您無法從非多重子網路 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，直接升級至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集。 如需詳細資訊，請參閱[升級 SQL Server 容錯移轉叢集執行個體 &#40;安裝程式&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)。  
+ 您無法直接升級非-多重子網路[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]容錯移轉叢集[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]多重子網路容錯移轉叢集。 如需詳細資訊，請參閱[升級 SQL Server 容錯移轉叢集執行個體 &#40;安裝程式&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [支援的版本與版本升級](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   

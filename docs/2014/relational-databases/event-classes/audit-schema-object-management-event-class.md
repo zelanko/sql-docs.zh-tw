@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: f38c2380-24e0-4484-806c-d076f4f194cf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7f2d41ac372f774d51336647c3ff89a775771a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 53b96a33e4fc369c486dcdf19ed34279898eee57
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147528"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784640"
 ---
 # <a name="audit-schema-object-management-event-class"></a>Audit Schema Object Management 事件類別
   建立、改變或卸除伺服器物件時，會發生 **Audit Schema Object Management** 事件類別。  
@@ -42,7 +41,7 @@ ms.locfileid: "48147528"
 |**NTDomainName**|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |**NTUserName**|**nvarchar**|Windows 使用者名稱。|6|是|  
 |**ObjectName**|**nvarchar**|正在參考之物件的名稱。|34|是|  
-|**ObjectType**|**int**|代表參與事件之物件類型的值。 這個值會對應到 **sys.objects** 目錄檢視中的類型資料行。 如需各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
+|**ObjectType**|**int**|代表參與事件之物件類型的值。 這個值會對應到 **sys.objects** 目錄檢視中的類型資料行。 針對各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
 |**OwnerName**|**nvarchar**|物件擁有者的資料庫使用者名稱。|37|是|  
 |**ParentName**|**nvarchar**|物件所在結構描述的名稱。|59|是|  
 |**RequestID**|**int**|包含陳述式之要求的識別碼。|49|是|  

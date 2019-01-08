@@ -12,15 +12,15 @@ ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ff6bcd9379e6e20351dacee75cb92e56b79d374
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 899ea4a4f60fb3e8981de4119697864a24f57093
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056148"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362793"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>以萬用字元 (*) 指定名稱的資料行
-  如果以萬用字元 (\*) 指定資料行名稱，則插入該資料行內容的方式，就像是沒有指定資料行名稱一樣。 如果此資料行是以非`xml`類型資料行的資料行內容會插入為文字節點，如下列範例所示：  
+  如果以萬用字元 (\*) 指定資料行名稱，則插入該資料行內容的方式，就像是沒有指定資料行名稱一樣。 如果此資料行是非 `xml` 類型的資料行，則會以文字節點插入資料行內容，如下列範例所示：  
   
 ```  
 USE AdventureWorks2012;  
@@ -38,7 +38,7 @@ FOR XML PATH;
   
  以下是結果：  
   
- `<row EmpID="1">KenJSánchez</row>`  
+ `<row EmpID="1">KenJS??nchez</row>`  
   
  如果此資料行是 `xml` 類型，就會插入對應的 XML 樹狀結構。 例如，下列查詢為資料行名稱指定 "*"，該資料行名稱包含 XQuery 針對 Instructions 資料行所傳回的 XML。  
   
@@ -46,7 +46,7 @@ FOR XML PATH;
 SELECT   
        ProductModelID,  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
                 /MI:root/MI:Location   
               ') as "*"  
 FROM Production.ProductModel  

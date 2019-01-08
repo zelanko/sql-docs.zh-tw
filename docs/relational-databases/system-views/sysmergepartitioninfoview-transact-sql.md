@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysmergepartitioninfoview
@@ -19,12 +18,12 @@ ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75b68bd0699443c46be512520822b2faea0daed1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f39591079377dcfc1f357e582474f034a004af6d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762046"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816310"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,8 +84,8 @@ ms.locfileid: "47762046"
 |**procname_postfix**|**nchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**well_partitioned_lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**before_upd_view_objid**|**int**|在更新之前，資料表的檢視之識別碼。|  
-|**delete_tracking**|**bit**|指出是否複寫刪除。<br /><br /> **0** = 不複寫刪除。<br /><br /> **1** = 複寫刪除，這是合併式複寫的預設行為。<br /><br /> 當 windows 7 *delete_tracking*是**0**、 訂閱者端刪除的資料列必須手動移除在發行者上，並在 「 訂閱者 」 必須手動移除在發行者端刪除的資料列。<br /><br /> 注意： 的值**0**導致無法聚合。|  
-|**compensate_for_errors**|**bit**|指出在同步處理期間發現錯誤時，是否採取補償動作。<br /><br /> **0** = 補償動作會停用。<br /><br /> **1** = 無法在 「 訂閱者 」 或 「 發行者 」 一定會導致套用至補償動作恢復這些變更，這是合併式複寫的預設行為的變更。<br /><br /> 注意： 的值**0**導致無法聚合。|  
+|**delete_tracking**|**bit**|指出是否複寫刪除。<br /><br /> **0** = 不複寫刪除。<br /><br /> **1** = 複寫刪除，這是合併式複寫的預設行為。<br /><br /> 當 windows 7 *delete_tracking*是**0**、 訂閱者端刪除的資料列必須手動移除在發行者上，並在 「 訂閱者 」 必須手動移除在發行者端刪除的資料列。<br /><br /> 注意：值為**0**導致無法聚合。|  
+|**compensate_for_errors**|**bit**|指出在同步處理期間發現錯誤時，是否採取補償動作。<br /><br /> **0** = 補償動作會停用。<br /><br /> **1** = 無法在 「 訂閱者 」 或 「 發行者 」 一定會導致套用至補償動作恢復這些變更，這是合併式複寫的預設行為的變更。<br /><br /> 注意：值為**0**導致無法聚合。|  
 |**pub_range**|**bigint**|發行者識別範圍大小。|  
 |**範圍**|**bigint**|將在調整中指派給訂閱者的連續識別值大小。|  
 |**threshold**|**int**|識別範圍臨界值百分比。|  

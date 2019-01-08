@@ -14,12 +14,12 @@ ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d46a1874c530020f815d2854b4524dfb201d598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c5b17b45b50634806c60e5064efc6ebd9d03f8b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124428"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353767"
 ---
 # <a name="implement-event-notifications"></a>實作事件通知
   若要實作事件通知，您必須先建立目標服務來接收事件通知，然後建立事件通知。  
@@ -31,7 +31,7 @@ ms.locfileid: "48124428"
  您不必建立 [!INCLUDE[ssSB](../../includes/sssb-md.md)]起始服務，因為 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 包括下列特定訊息類型和事件通知的合約：  
   
 ```  
-http://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
+https://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
 ```  
   
  接收事件通知的目標服務必須遵照這項預先存在的合約。  
@@ -41,7 +41,7 @@ http://schemas.microsoft.com/SQL/Notifications/PostEventNotification
 1.  建立要接收訊息的佇列。  
   
     > [!NOTE]  
-    >  佇列會接收下列訊息類型： `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`。  
+    >  佇列會接收下列訊息類型： `https://schemas.microsoft.com/SQL/Notifications/QueryNotification`。  
   
 2.  在參考事件通知合約的佇列上建立服務。  
   
@@ -58,7 +58,7 @@ GO
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
 (  
-[http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
+[https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
 );  
 GO  
 CREATE ROUTE NotifyRoute  
@@ -86,7 +86,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  在此案例中，事件通知引發了兩次：一次是在 CREATE_SCHEMA 事件發生時，一次只在 CREATE_TABLE 事件發生時。 我們建議您避免在 CREATE_SCHEMA 事件和任何對應 CREATE SCHEMA  定義的 <schema_element> 文字上建立事件通知，或在應用程式中建立邏輯，以避免擷取不想要的事件資料。  
+>  在此情況下，事件通知會引發兩次：CREATE_SCHEMA 事件發生時，一次，一次在 CREATE_TABLE 事件發生時。 我們建議您避免在 CREATE_SCHEMA 事件和任何對應 CREATE SCHEMA  定義的 <schema_element> 文字上建立事件通知，或在應用程式中建立邏輯，以避免擷取不想要的事件資料。  
   
  **若要建立事件通知**  
   

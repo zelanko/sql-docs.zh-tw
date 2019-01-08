@@ -15,12 +15,12 @@ ms.assetid: 7e288eee-2d37-485e-a6a0-dbba5e041e26
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26c645a134d962daff989e7f7a88b7ae9dcd67bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7cb1fad6ffa7fcb8dcf1330079b12aa77f06705d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071458"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362760"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface-report-builder"></a>Analysis Services MDX 查詢設計工具使用者介面 (報表產生器)
   Report Builder 提供了圖形化查詢設計工具，可用來建立適用於 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料來源的多維度運算式 (MDX) 查詢。 MDX 圖形化查詢設計工具有兩種模式：設計模式和查詢模式。 每一種模式都會提供 [中繼資料] 窗格，您可以在這個窗格中，從選取的 Cube 中拖曳成員，以建立 MDX 查詢，在處理報表時擷取資料。  
@@ -58,7 +58,7 @@ ms.locfileid: "48071458"
  若要指定您自己的其他屬性，您必須在 [查詢] 模式下手動編輯 MDX 查詢。  
   
 > [!NOTE]  
->  如需有關 MDX 的詳細資訊以及 MDX 查詢設計工具的一般資訊，請參閱《 [SQL Server 線上叢書](http://go.microsoft.com/fwlink/?linkid=98335)》中的＜MDX 查詢編輯器 (Analysis Services - 多維度資料)＞。 不過，如果是從 MDX 查詢顯示資料的報表，則您必須使用報表產生器隨附的 MDX 查詢設計工具來建立查詢。 不支援從檔案匯入 .mdx 查詢。  
+>  如需有關 MDX 的詳細資訊以及 MDX 查詢設計工具的一般資訊，請參閱《 [SQL Server 線上叢書](https://go.microsoft.com/fwlink/?linkid=98335)》中的＜MDX 查詢編輯器 (Analysis Services - 多維度資料)＞。 不過，如果是從 MDX 查詢顯示資料的報表，則您必須使用報表產生器隨附的 MDX 查詢設計工具來建立查詢。 不支援從檔案匯入 .mdx 查詢。  
   
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>設計模式中的圖形化 MDX 查詢設計工具工具列  
  查詢設計工具工具列會提供按鈕，協助您使用圖形化介面設計 MDX 查詢。 下表列出這些按鈕及其功能。  
@@ -69,7 +69,7 @@ ms.locfileid: "48071458"
 |**匯入**|從檔案系統上的報表定義 (.rdl) 檔案匯入現有的查詢。|  
 |![變更為 MDX 查詢檢視](../analysis-services/media/rsqdicon-commandtypemdx.gif "變更為 MDX 查詢檢視")|切換到命令類型 MDX。|  
 |![重新整理結果資料](../analysis-services/media/rsqdicon-refresh.gif "重新整理結果資料")|重新整理資料來源中的中繼資料。|  
-|![新增導出的成員](../analysis-services/media/rsqdicon-addcalculatedmember.gif "新增導出的成員")|顯示 **[導出成員產生器]** 對話方塊。|  
+|![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|顯示 **[導出成員產生器]** 對話方塊。|  
 |![切換以顯示空的資料格](../analysis-services/media/rsqdicon-showemptycells.gif "切換以顯示空的資料格")|在顯示或隱藏 [資料] 窗格中的空白資料格之間切換 (這相當於使用 MDX 中的 NON EMPTY 子句)。|  
 |![自動執行查詢](../analysis-services/media/rsqdicon-autoexecute.gif "自動執行查詢")|每次進行變更時，自動執行查詢並顯示結果。 結果會顯示在 [資料] 窗格中。|  
 |![顯示彙總按鈕](../analysis-services/media/rsqdicon-showaggregations.gif "顯示彙總按鈕")|將彙總顯示在 [資料] 窗格中。|  
@@ -107,7 +107,7 @@ ms.locfileid: "48071458"
   
 -   **當成文字編輯**  
   
--   **加入導出成員**(![加入導出的成員](../analysis-services/media/rsqdicon-addcalculatedmember.gif "加入導出的成員"))  
+-   **加入導出成員** (![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **顯示空的資料格** (![切換以顯示空的資料格](../analysis-services/media/rsqdicon-showemptycells.gif "切換以顯示空的資料格"))  
   

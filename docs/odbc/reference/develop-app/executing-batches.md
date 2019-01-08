@@ -14,15 +14,15 @@ ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46b224e8167587c4e4860f171b132d23539143e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53e1afcc780ff06d1d453f94deac984163099444
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695029"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541227"
 ---
 # <a name="executing-batches"></a>執行批次
-在應用程式執行的陳述式批次之前，它應該先檢查是否支援這些。 若要這樣做，應用程式會呼叫**SQLGetInfo** SQL_BATCH_SUPPORT、 SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 選項。 第一個選項就會傳回是否資料列計數 – 產生和結果集-產生的陳述式中明確的批次和程序，並在後面的兩個選項中設定的可用性相關的資料列計數和結果的傳回資訊時支援參數化執行。  
+在應用程式執行的陳述式批次之前，它應該先檢查是否支援這些。 若要這樣做，應用程式會呼叫**SQLGetInfo** SQL_BATCH_SUPPORT、 SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 選項。 第一個選項就會傳回是否資料列計數產生和結果集產生的陳述式中明確的批次和程序，並在後面的兩個選項中設定的可用性相關的資料列計數和結果的傳回資訊時支援參數化執行。  
   
  透過執行的陳述式的批次**SQLExecute**或是**SQLExecDirect**。 例如，下列呼叫來執行明確的批次的陳述式來開啟新的銷售訂單。  
   

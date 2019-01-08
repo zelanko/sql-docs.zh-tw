@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], permissions
@@ -17,12 +16,12 @@ ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: acb8ea24effbb07d5ecad1f7efec491acb6fb55d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2f0bac42ce0fb2ae814b48cd21e0cffb84128b1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103250"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812100"
 ---
 # <a name="leaf-permissions-master-data-services"></a>分葉權限 (Master Data Services)
   分葉權限適用於某個實體所有分葉成員的屬性值。  
@@ -64,10 +63,10 @@ ms.locfileid: "48103250"
 >  在這個範例中，Subcategory 是根據 SubcategoryList 實體的網域屬性。 您可以為 Mountain-100 選取不同的子類別目錄，但是您無法從 SubcategoryList 實體中加入成員或刪除成員。  
   
 ## <a name="see-also"></a>另請參閱  
- [指派模型物件權限&#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
+ [指派模型物件權限 &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
  [合併的權限&#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)   
- [模型物件權限&#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [模型物件權限 &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [成員 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
- [屬性&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+ [屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

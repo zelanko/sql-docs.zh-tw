@@ -22,12 +22,12 @@ ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d2cf693a4f4c909ef66b647f3ddd644a9bda6a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067918"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360140"
 ---
 # <a name="feature-selection-data-mining"></a>特徵選取 (資料採礦)
   *特徵選取*指的是常用於資料採礦，以描述的工具和技術可供輸入降低至可管理的大小，用於處理和分析。 特徵選取隱含不僅*基數減少*，這表示強加任意或預先定義的截止，可以在建立模型，但也屬性，這表示的選擇時考量的屬性數目分析師或模型化工具主動選取或捨棄屬性根據對分析的實用性。  
@@ -43,9 +43,9 @@ ms.locfileid: "48067918"
  如果資料來源的 500 個資料行中只有 50 個資料行的資訊對建立模型有用，您可以不將其納入模型，或使用特徵選取技術自動探索最佳的特徵，並排除統計上不重要的值。 特徵選取有助於解決兩個問題：低價值資料過多，或高價值資料過少。  
   
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Analysis Services 資料採礦中的特徵選取  
- 通常，特徵選取中自動執行[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，和每個演算法都有一組預設的技術，用於智慧地套用特徵減少。 特徵選取一定會在定型模型之前執行，可自動從資料集裡選擇最有可能在模型中使用的屬性。 但是，您也可以手動設定參數以影響特徵選取行為。  
+ 特徵選取通常會在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中自動執行，且每個演算法具有一組預設的技術，可以有智慧地套用特徵減少。 特徵選取一定會在定型模型之前執行，可自動從資料集裡選擇最有可能在模型中使用的屬性。 但是，您也可以手動設定參數以影響特徵選取行為。  
   
- 一般而言，特徵選取的運作方式是計算每個屬性的分數，然後僅選取擁有最佳分數的屬性。 您也可以調整高分的臨界值。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供多種方法來計算這些分數，並實際套用至任何模型的方法取決於下列因素：  
+ 一般而言，特徵選取的運作方式是計算每個屬性的分數，然後僅選取擁有最佳分數的屬性。 您也可以調整高分的臨界值。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供多種可用於計算這些分數的方法，而實際套用至任何模型的方法則取決於下列因素：  
   
 -   模型中所使用的演算法  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48067918"
 #### <a name="bayesian-with-k2-prior"></a>使用 K2 優先的貝氏  
  Analysis Services 提供兩種以貝氏網路為基礎的特徵選取分數。 貝氏網路是狀態及狀態間轉換的「導向」或「非循環」圖表，代表某些狀態一定會在目前的狀態之前、某些狀態會在之後，而圖表並不會重複或迴圈。 依照定義，貝氏網路可以使用先前的知識。 不過，在計算稍後狀態的機率時要使用什麼先前狀態的問題，對於演算法的設計、效能和精確度都很重要。  
   
- 貝氏網路學習的 K2 演算法是由 Cooper 和 Herskovits 所開發，常用於資料採礦中。 這個演算法可以擴充，而且可以分析多個變數，但需要對當做輸入的變數進行排序。 如需詳細資訊，請參閱 Chickering、Geiger 和 Heckerman 所著的 [Learning Bayesian Networks](http://go.microsoft.com/fwlink/?LinkId=105885) (學習貝氏網路)。  
+ 貝氏網路學習的 K2 演算法是由 Cooper 和 Herskovits 所開發，常用於資料採礦中。 這個演算法可以擴充，而且可以分析多個變數，但需要對當做輸入的變數進行排序。 如需詳細資訊，請參閱 Chickering、Geiger 和 Heckerman 所著的 [Learning Bayesian Networks](https://go.microsoft.com/fwlink/?LinkId=105885) (學習貝氏網路)。  
   
  這個計分方法可用於分隔和離散化的屬性。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48067918"
   
  使用統一優先的貝氏狄氏等價 (Bayesian Dirichlet Equivalent with Uniform Prior，BDEU) 方法假設狄氏散發的特殊案例，其中會使用數學常數來建立先前狀態的固定或統一散發。 BDE 分數也假設可能性相等，這代表不能預期資料會區別相等的結構。 換句話說，如果「If A Then B」的分數與「If B Then A」的分數相同，則不能根據資料區分結構，也不能推斷因果關係。  
   
- 如需貝氏網路以及實作這些計分方法的詳細資訊，請參閱 [Learning Bayesian Networks](http://go.microsoft.com/fwlink/?LinkId=105885) (學習貝氏網路)。  
+ 如需貝氏網路以及實作這些計分方法的詳細資訊，請參閱 [Learning Bayesian Networks](https://go.microsoft.com/fwlink/?LinkId=105885)(學習貝氏網路)。  
   
 ### <a name="feature-selection-methods-used-by-analysis-services-algorithms"></a>Analysis Services 演算法所使用的特徵選取方法  
  下表列出支援特徵選取的演算法、演算法所使用的特徵選取方法，以及設定來控制特徵選取行為的參數：  

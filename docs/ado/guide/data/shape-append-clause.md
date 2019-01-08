@@ -15,12 +15,12 @@ ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7b51e2cbfb298493e7001937f7b0f274044478a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13a91d6b8512b2c1287c3cc8e36e43a1317022d7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801577"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208492"
 ---
 # <a name="shape-append-clause"></a>Shape APPEND 子句
 Shape 命令 APPEND 子句附加的資料行或資料行**資料錄集**。 通常，這些資料行是章節資料行，參考的子系**資料錄集**。  

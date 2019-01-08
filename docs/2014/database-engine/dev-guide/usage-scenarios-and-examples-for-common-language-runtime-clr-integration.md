@@ -19,17 +19,17 @@ ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8144c1b4008f7c0a7d8280392ee421d5cb0f0a77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 550483f71344a790225a2d22b1caf09cee16b9f3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126870"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360470"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>Common Language Runtime (CLR) 整合的使用案例和範例
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括範例應用程式、封裝範例和許多編碼範例，可用於了解 Common Language Runtime (CLR) 整合的可程式性功能。  
   
- 實作這些範例和其他資源的完整 Visual Studio 專案，請瀏覽[Microsoft SQL Server 社群專案和 CodePlex 上的範例](http://go.microsoft.com/fwlink/?LinkID=193935)。  
+ 實作這些範例和其他資源的完整 Visual Studio 專案，請瀏覽[Microsoft SQL Server 社群專案和 CodePlex 上的範例](https://go.microsoft.com/fwlink/?LinkID=193935)。  
   
 |名稱|描述|  
 |----------|-----------------|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e6bf10248bb3d8f280a24191634392df3b4ff5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7bef22daeb42b0c08e7668dec533e663057f1a8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084822"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805030"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>資料分析工作編輯器 (一般頁面)
   您可以使用 [資料分析工作編輯器] 的 [一般] 頁面來設定下列選項：  
@@ -53,8 +52,8 @@ ms.locfileid: "48084822"
   
 |值|描述|  
 |-----------|-----------------|  
-|**FileConnection**|將設定檔輸出儲存至檔案連線管理員中指定之位置的檔案。<br /><br /> 注意：您可以在 [目的地] 選項中指定要使用的檔案連線管理員。|  
-|**變數**|將設定檔輸出儲存至封裝變數。<br /><br /> 注意：您可以在 [目的地] 選項中指定要使用的封裝變數。|  
+|**FileConnection**|將設定檔輸出儲存至檔案連線管理員中指定之位置的檔案。<br /><br /> 注意：指定檔案連接管理員中使用**目的地**選項。|  
+|**變數**|將設定檔輸出儲存至封裝變數。<br /><br /> 注意：指定將用於在封裝變數**目的地**選項。|  
   
  **目的地**  
  指定哪一個檔案連線管理員或封裝變數包含資料設定檔輸出：  
@@ -71,7 +70,7 @@ ms.locfileid: "48084822"
   
 ## <a name="other-options"></a>其他選項  
  **快速分析**  
- 顯示 [單一資料表快速分析表單]。 這個表單會簡化使用預設設定來分析單一資料表或檢視表的工作。 如需詳細資訊，請參閱[單一資料表快速分析表單 &#40;資料分析工作&#41;](single-table-quick-profile-form-data-profiling-task.md)。  
+ 顯示 [單一資料表快速分析表單]。 這個表單會簡化使用預設設定來分析單一資料表或檢視表的工作。 如需詳細資訊，請參閱 [單一資料表快速分析表單 &#40;資料分析工作&#41;](single-table-quick-profile-form-data-profiling-task.md)。  
   
  **開啟設定檔檢視器**  
  開啟資料設定檔檢視器。 獨立資料設定檔檢視器會顯示資料分析工作的資料設定檔輸出。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部執行資料分析工作並計算資料設定檔後，您可以檢視資料設定檔輸出。  
@@ -80,7 +79,7 @@ ms.locfileid: "48084822"
 >  您也可以藉由執行 \<磁碟機>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 資料夾中的 DataProfileViewer.exe，開啟資料設定檔檢視器。  
   
 ## <a name="see-also"></a>另請參閱  
- [單一資料表快速分析表單&#40;資料分析工作&#41;](single-table-quick-profile-form-data-profiling-task.md)   
+ [單一資料表快速分析表單 &#40;資料分析工作&#41;](single-table-quick-profile-form-data-profiling-task.md)   
  [資料分析工作編輯器 &#40;設定檔要求頁面&#41;](data-profiling-task-editor-profile-requests-page.md)  
   
   

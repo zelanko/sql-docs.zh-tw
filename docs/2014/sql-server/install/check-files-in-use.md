@@ -11,12 +11,12 @@ ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c18860cf43c31096b984d45b18fba7828de6ea90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8dda4ea693774fabcc88e261ccd61f71350a6a79
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065658"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367770"
 ---
 # <a name="check-files-in-use"></a>檢查使用中的檔案
   若要避免在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新之後重新啟動 Windows，請使用 [檢查使用中檔案] 頁面來識別正在鎖定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新安裝程式所需之檔案的處理序。  
@@ -27,7 +27,7 @@ ms.locfileid: "48065658"
   
  為了排除安裝之後重新啟動電腦的需求，安裝程式會顯示正在鎖定檔案之處理序的清單。 請停止或結束此清單中的處理序和應用程式， 然後按一下 **[重新整理檢查]** 重新執行檢查。 按一下 **[停止檢查]** 可結束正在執行的檢查作業。 如果找不到鎖定的檔案，表格會是空的。 當所有鎖定的處理序都已關閉或停止時，請按 **[下一步]** 繼續。  
   
- 安裝程式會將資訊記錄到記錄檔中。 如需有關如何檢視記錄檔的詳細資訊，請參閱[檢視與讀取 SQL Server 安裝程式記錄檔](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)和[如何：讀取 SQL Server 安裝程式記錄檔](http://go.microsoft.com/fwlink/?LinkID=134490)。  
+ 安裝程式會將資訊記錄到記錄檔中。 如需如何檢視記錄檔的詳細資訊，請參閱[檢視與讀取 SQL Server Setup Log Files&lt](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)和[How to:讀取 SQL Server Setup Log File&lt](https://go.microsoft.com/fwlink/?LinkID=134490)。  
   
  記錄檔中將包含下列資訊：  
   

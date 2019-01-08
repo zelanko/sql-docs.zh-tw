@@ -10,17 +10,17 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 640a1af48b83474cbeb331268fd4cf1ab808995b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155958"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357068"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>在停機時間和資料遺失最少的情況下升級及更新可用性群組伺服器
   當您將伺服器執行個體從 SQL Server 2012 更新或升級至某個 Service Pack 或較新的版本時，您可以透過執行輪流更新或升級，將可用性群組的停機時間減少至只有單一手動容錯移轉的時間。 如果要升級 SQL Server 版本，這稱為輪流升級；如果要以 Hotfix 或 Service Pack 更新目前的 SQL Server 版本，則稱為輪流更新。  
   
- 這個主題僅限討論 SQL Server 升級/更新。 如作業系統相關升級/更新高可用性的 SQL Server 執行個體上執行，請參閱[跨叢集移轉的 AlwaysOn 可用性群組作業系統升級](http://msdn.microsoft.com/library/jj873730.aspx)  
+ 這個主題僅限討論 SQL Server 升級/更新。 如作業系統相關升級/更新高可用性的 SQL Server 執行個體上執行，請參閱[跨叢集移轉的 AlwaysOn 可用性群組作業系統升級](https://msdn.microsoft.com/library/jj873730.aspx)  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>AlwaysOn 可用性群組的輪流升級/更新最佳作法  
  當您執行伺服器升級/更新時，應該要觀察以下最佳作法，好讓停機時間及可用性群組的資料遺失情況降至最低：  
@@ -35,7 +35,7 @@ ms.locfileid: "48155958"
   
 -   一定要先升級/更新遠端次要複本節點，然後是本機次要複本節點，最後是主要複本節點。  
   
--   正在升級的資料庫無法進行備份。  在升級次要複本之前，請將自動備份喜好設定設定為只執行主要複本的備份。  在升級主要複本之前，請修改這項設定，使其只執行次要複本的備份。  
+-   在進行升級的資料庫上，不會發生備份。  在升級次要複本之前，請設定自動備份喜好設定，只在主要複本上執行備份。  在升級主要複本之前，請修改這項設定，使其只執行次要複本的備份。  
   
 -   為了避免可用性群組在升級/更新程序期間發生意外的容錯移轉，請從所有同步認可複本中移除可用性容錯移轉，然後再開始。  
   
@@ -115,9 +115,9 @@ ms.locfileid: "48155958"
   
 |可用性群組|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1|Primary|||  
-|AG2||Primary||  
-|AG3|||Primary|  
+|AG1|主要|||  
+|AG2||主要||  
+|AG3|||主要|  
   
  在您的案例中，可能適合依照以下順序執行負載平衡的輪流升級/更新：  
   
@@ -139,9 +139,9 @@ ms.locfileid: "48155958"
   
 |可用性群組|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1||Primary||  
-|AG2|Primary|||  
-|AG3|||Primary|  
+|AG1||主要||  
+|AG2|主要|||  
+|AG3|||主要|  
   
  根據您的特定實作方式，您的升級/更新路徑可能會有不同，用戶端應用程式遇到的停機時間也可能會有差異。  
   

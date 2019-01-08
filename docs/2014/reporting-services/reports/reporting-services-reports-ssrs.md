@@ -13,12 +13,12 @@ ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 464f5428f9c55ffa7d634e05fc54122882067674
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7372f5457e047772febf4cf040da3f897ae033a2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077818"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362900"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 報表 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表是一種以 XML 為基礎的報表定義，其中包括報表資料及報表配置元素。 在用戶端檔案系統上，報表定義的副檔名為 .rdl。 在發行報表之後，其為儲存在報表伺服器或 SharePoint 網站上的報表項目。 報表是由 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供之伺服器架構報表平台的一部分。  
@@ -64,11 +64,11 @@ ms.locfileid: "48077818"
 ## <a name="create-reports"></a>建立報表  
  若要建立報表：  
   
--   **判斷報表的用途。** 依據使用報表的對象來識別報表的用途。 設計良好的報表會將具備洞察能力與行動力的資訊提供給報告讀取器。 在此步驟決定的設計決策會影響您所選的報表參數、報表配置設計及報表檢視經驗。 如需詳細資訊，請參閱 msdn.microsoft.com 之[報表產生器文件](http://go.microsoft.com/fwlink/?LinkId=154494)中的[規劃報表 &#40;報表產生器&#41;](../report-design/planning-a-report-report-builder.md) 和[報表設計提示 &#40;報表產生器及 SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md)。  
+-   **判斷報表的用途。** 依據使用報表的對象來識別報表的用途。 設計良好的報表會將具備洞察能力與行動力的資訊提供給報告讀取器。 在此步驟決定的設計決策會影響您所選的報表參數、報表配置設計及報表檢視經驗。 如需詳細資訊，請參閱 msdn.microsoft.com 之[報表產生器文件](https://go.microsoft.com/fwlink/?LinkId=154494)中的[規劃報表 &#40;報表產生器&#41;](../report-design/planning-a-report-report-builder.md) 和[報表設計提示 &#40;報表產生器及 SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md)。  
   
 -   **選擇查詢的類型。** 判斷是否要使用一般化的共用資料集查詢，或專屬於您的一組報表的資料集查詢。 含有一般化查詢的共用資料集在多份報表使用中較易於維護，但每個報表設計師必須依據其特定的一組報表來篩選所需的資料。 如需詳細資訊，請參閱[報表資料 &#40;SSRS&#41;](../report-data/report-data-ssrs.md)。  
   
--   **規劃相關資料的檢視。** 規劃報表讀取器的檢視經驗。 若要處理大量資料時，利用具備向下鑽研詳細資料能力的摘要報表是很實用的方法。 如需詳細資訊，請參閱[鑽研、向下鑽研、子報表和巢狀資料區 &#40;報表產生器及 SSRS&#41;](../report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
+-   **規劃相關資料的檢視。** 規劃報表讀取器的檢視經驗。 若要處理大量資料時，利用具備向下鑽研詳細資料能力的摘要報表是很實用的方法。 如需詳細資訊，請參閱 [鑽研、向下鑽研、子報表和巢狀資料區 &#40;報表產生器及 SSRS&#41;](../report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
   
 -   **設定權限：** 規劃授與適當權限等級的策略。 常用的策略是在報表伺服器上建立一個資料夾結構，並依據角色和資料夾安全性來授與報表及報表相關項目的存取權。 如需詳細資訊，請參閱＜ [確保報表安全性](#bkmk_SecureReportsSummary)。  
   
@@ -84,9 +84,9 @@ ms.locfileid: "48077818"
   
         -   [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
-        -   [圖表&#40;報表產生器及 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+        -   [圖表 &#40;報表產生器及 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
-        -   [走勢圖和資料橫條 &#40;Report Builder and SSRS&#41;](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
+        -   [走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
         -   [指標 &#40;報表產生器及 SSRS&#41;](../report-design/indicators-report-builder-and-ssrs.md)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48077818"
   
     -   **自訂資料及配置。** 設計報表配置。 報表定義包含報表主體、資料來源、資料集、資料區、文字方塊、線條和影像。 矩形可以當做配置與視覺化元素的容器使用。 藉由撰寫運算式，並控制篩選、群組、排序、格式及顯示資料，以自訂每個資料區。 加入報表名稱、位置及其他識別資訊，以利管理數十份或數百份報表。 加入視覺化元素及容器以組織頁面上的配置元素。 如需詳細資訊，請參閱下列主題：  
   
-        -   [篩選、 分組和排序資料&#40;報表產生器及 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+        -   [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
         -   [報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48077818"
   
         -   [影像、文字方塊、矩形和線條 &#40;報表產生器及 SSRS&#41;](../report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
-        -   [頁面配置和轉譯&#40;報表產生器及 SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+        -   [頁面配置和轉譯 &#40;報表產生器及 SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
     -   **設定互動功能。** 為您的報告讀取器加入互動功能。 例如，加入檢視查詢的排序按鈕或切換項目。 如需詳細資訊，請參閱[互動式排序、文件引導模式及連結 &#40;報表產生器及 SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)。  
   
@@ -117,10 +117,10 @@ ms.locfileid: "48077818"
 -   **考量哪些元件可重複使用。**  判斷是否有任何資料來源或資料集查詢可共用及重複使用。 如果有，可以在報表伺服器或 SharePoint 網站上建立共用資料來源和共用資料集。 判斷資料區是否適合重複使用為報表組件。 如需詳細資訊，請參閱[報表設計師中的報表組件 &#40;SSRS&#41;](../report-design/report-parts-in-report-designer-ssrs.md)。  
   
 ## <a name="preview-reports"></a>預覽報表  
- 每個報表撰寫工具都支援預覽報表。 如需詳細資訊，請參閱 msdn.microsoft.com 之[報表產生器文件](http://go.microsoft.com/fwlink/?LinkId=154494)中的[預覽](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview)、[報表產生器 &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) 和[在報表產生器中預覽報表](../report-builder/previewing-reports-in-report-builder.md)。  
+ 每個報表撰寫工具都支援預覽報表。 如需詳細資訊，請參閱 msdn.microsoft.com 之[報表產生器文件](https://go.microsoft.com/fwlink/?LinkId=154494)中的[預覽](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview)、[報表產生器 &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) 和[在報表產生器中預覽報表](../report-builder/previewing-reports-in-report-builder.md)。  
   
 ## <a name="save-or-publish-reports"></a>儲存或發行報表  
- 每個報表撰寫工具都支援本機儲存報表，或是將報表發行至報表伺服器或 SharePoint 網站。 如需詳細資訊，請參閱 msdn.microsoft.com 之[報表產生器文件](http://go.microsoft.com/fwlink/?LinkId=154494)中的[儲存和部署](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy)、[報表產生器 &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) 和[儲存報表 &#40;報表產生器&#41;](../report-builder/saving-reports-report-builder.md)。  
+ 每個報表撰寫工具都支援本機儲存報表，或是將報表發行至報表伺服器或 SharePoint 網站。 如需詳細資訊，請參閱 msdn.microsoft.com 之[報表產生器文件](https://go.microsoft.com/fwlink/?LinkId=154494)中的[儲存和部署](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy)、[報表產生器 &#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) 和[儲存報表 &#40;報表產生器&#41;](../report-builder/saving-reports-report-builder.md)。  
   
 ## <a name="view-reports"></a>檢視報表  
  您除了可以預覽儲存在本機或發行至報表伺服器的報表外，還可提供各種檢視經驗給報告讀取器。 若要檢視報表：  
@@ -133,7 +133,7 @@ ms.locfileid: "48077818"
   
 -   **列印。**  報告讀取器可依據報表檢視的方式來列印報表或報表的頁面。 如需詳細資訊，請參閱[列印報表 &#40;報表產生器及 SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md)。  
   
--   **Web 或 Windows Form 應用程式。**  使用 Visual Studio 來開發 ASP.NET AJAX 應用程式或主控報表檢視器控制項的 Windows Form 應用程式。 此控制項可指向報表伺服器上的已發行報表。 如需詳細資訊，請參閱＜ [Microsoft 報表](http://go.microsoft.com/fwlink/?LinkID=205399)。  
+-   **Web 或 Windows Form 應用程式。**  使用 Visual Studio 來開發 ASP.NET AJAX 應用程式或主控報表檢視器控制項的 Windows Form 應用程式。 此控制項可指向報表伺服器上的已發行報表。 如需詳細資訊，請參閱＜ [Microsoft 報表](https://go.microsoft.com/fwlink/?LinkID=205399)。  
   
 ## <a name="manage-reports"></a>管理報表  
  若要管理發行的報表：  
@@ -157,7 +157,7 @@ ms.locfileid: "48077818"
 ##  <a name="bkmk_SecureReportsSummary"></a> 確保報表安全性  
  若要保護報表的安全：  
   
--   請讓報表伺服器管理員，識別您的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安裝所用的授權與驗證系統。 根據預設，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]使用 Windows 驗證、 整合式的安全性和角色指派來協助控制存取已發行的報表。 如需詳細資訊，請參閱[角色與權限 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) 和 [Reporting Services 安全性與保護](../security/reporting-services-security-and-protection.md)。  
+-   請讓報表伺服器管理員，識別您的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安裝所用的授權與驗證系統。 依預設， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會使用 Windows 驗證、整合式安全性及角色指派，以協助控制發行報表的存取權。 如需詳細資訊，請參閱[角色與權限 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) 和 [Reporting Services 安全性與保護](../security/reporting-services-security-and-protection.md)。  
   
 ## <a name="create-notifications-based-on-report-data"></a>依據報表資料建立通知  
  您可以為 SharePoint 網站上的發行報表建立資料警示。 資料警示是以報表中報表資料區的資料摘要為依據。 依預設，會自動命名資料區。 報表作者可依據其商業用途來命名資料區，即可輕鬆地在其報表中建立資料警示。 建立資料警示時，若資料符合您所指定的條件，即會以電子郵件通知您。 如需詳細資訊，請參閱[從多個報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](../report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)、[在資料警示設計工具中建立資料警示](../create-a-data-alert-in-data-alert-designer.md)和 [Reporting Services 資料警示](../reporting-services-data-alerts.md)。  
@@ -182,6 +182,6 @@ ms.locfileid: "48077818"
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 工具](../tools/reporting-services-tools.md)   
  [延伸模組 &#40;SSRS&#41;](../extensions-ssrs.md)   
- [Reporting Services 報表伺服器](../reporting-services-report-server.md)  
+ [Reporting Services Report Server](../reporting-services-report-server.md)  
   
   

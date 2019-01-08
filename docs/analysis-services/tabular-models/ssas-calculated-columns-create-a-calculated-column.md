@@ -1,5 +1,5 @@
 ---
-title: 建立導出資料行 |Microsoft 文件
+title: 在 Analysis Services 中建立計算結果的欄 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 25121b53ce050da38a6d19d0c458585acf7a9abd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 705428d2c2a6671452a1d95e06e500f4860574e0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039652"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071935"
 ---
 # <a name="create-a-calculated-column"></a>建立導出資料行
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  導出資料行可讓您將新資料加入至模型。 您可以建立定義資料行之資料列層級值的 DAX 公式，而不是將值貼上或匯入至資料行中。 當您建立有效的公式，然後按一下 ENTER 時，即會計算並填入導出資料行之每個資料列中的值。 然後導出資料行就可以像是其他任何資料行，加入至報表應用程式或分析應用程式。 本文說明如何在模型設計師中使用 DAX 公式列建立新的導出資料行。  
+  導出資料行可讓您將新資料加入至模型。 不必貼上或匯入到資料行的值，您可以建立定義資料行的資料列層級值的 DAX 公式。 當您建立有效的公式，然後按一下 ENTER 時，即會計算並填入導出資料行之每個資料列中的值。 然後導出資料行就可以像是其他任何資料行，加入至報表應用程式或分析應用程式。 本文說明如何在模型設計師中使用 DAX 公式列建立新的導出資料行。  
   
 #### <a name="to-create-a-new-calculated-column"></a>建立新的導出資料行  
   

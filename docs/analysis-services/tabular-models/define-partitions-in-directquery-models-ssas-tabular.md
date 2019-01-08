@@ -1,5 +1,5 @@
 ---
-title: DirectQuery 模型中定義的資料分割 |Microsoft 文件
+title: Analysis Services 的 DirectQuery 模型中定義資料分割 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 599e2f97991bc6256132861f335ac7bd0b0aa592
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f6de0417055adc506fc6d9940aa3fa349f59c658
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044612"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072275"
 ---
 # <a name="define-partitions-in-directquery-models"></a>在 DirectQuery 模式中定義分割區
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  本節說明如何在 DirectQuery 模型中使用資料分割。 更一般的表格式模型中的資料分割的詳細資訊，請參閱[分割](../../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
+  本節說明如何在 DirectQuery 模型中使用資料分割。 更多一般表格式模型中的資料分割的詳細資訊，請參閱[分割區](../../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
   
 > [!NOTE]  
 >  雖然資料表可以有多個分割區，但在 DirectQuery 模式中，只有其中之一可指定用於執行查詢。 單一分割區需求適用於所有相容性等級的 DirectQuery 模型。  
@@ -72,7 +72,7 @@ ms.locfileid: "34044612"
 |[連接字串] 屬性|[處理選項] 屬性|注意|  
 |------------------------------------|------------------------------------|-----------|  
 |DirectQuery|永不處理這個資料分割|當模型使用僅限 DirectQuery 時，不需要進行處理。<br /><br /> 在混合模型中，您可以將 DirectQuery 資料分割設定為永遠不會處理。 例如，如果您正在對一個非常大的資料集進行操作，並且不想要將完整結果新增至快取，則可以指定 DirectQuery 資料分割包含資料表中所有其他資料分割結果的聯集，然後永遠不處理聯集。 傳送至關聯式資料來源的查詢不會受到影響，並且對快取資料執行的查詢會合併來自其他資料分割的資料。|  
-|DataView=Sample<br /><br /> 適用於表格式模型使用範例資料檢視|允許處理資料分割|如果模型使用範例資料，您可以處理資料表，在模型設計期間傳回提供視覺提示的篩選資料集。|  
+|DataView=Sample<br /><br /> 適用於使用範例資料檢視的表格式模型|允許處理資料分割|如果模型使用範例資料，您可以處理資料表，在模型設計期間傳回提供視覺提示的篩選資料集。|  
 |DirectQueryUsage=InMemory With DirectQuery<br /><br /> 適用於在記憶體中和 DirectQuery 模式組合中執行的表格式 1100 或1103 模型|允許處理資料分割|如果模型使用混合模式，記憶體中和 DirectQuery 資料來源的查詢應該使用相同的分割區。|  
   
 ## <a name="see-also"></a>另請參閱  

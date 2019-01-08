@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
@@ -13,12 +12,12 @@ ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8309a4d66fbcf36aca4e5e4d817c2bb34722bc08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c6bc7964ee9ffaca02a81d52a50104089736e2ae
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072968"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376550"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>資料分析工作的設定
   在您可以檢閱來源資料的設定檔前，第一個步驟是設定並執行「資料分析」工作。 您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部建立這個工作。 若要設定「資料分析」工作，您可以使用「資料分析工作編輯器」。 此編輯器可讓您選取要輸出設定檔的位置以及要計算的設定檔。 設定工作後，您可以執行封裝以計算資料設定檔。  
@@ -54,14 +53,14 @@ ms.locfileid: "48072968"
   
 |計算|這有助於識別|使用這個設定檔|  
 |----------------|-------------------------|----------------------|  
-|選取之資料行中所有不同的字串值長度，以及該資料表中每個長度所代表之資料列的百分比。|**無效的字串值**- 例如，您分析了應該使用兩個字元之美國州名代碼的資料行，但發現長度大於兩個字元的值。|**資料行長度散發 —** 適用於使用其中一種資料類型資料行：<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`|  
-|一組規則運算式，其中涵蓋了字串資料行中值的指定百分比。<br /><br /> 同時可尋找未來可用於驗證新值的規則運算式|**無效或格式錯誤的字串值** - 例如，[郵遞區號] 資料行的模式設定檔可能會產生規則運算式：\d{5}-\d{4}、\d{5} 和 \d{9}。 如果輸出包含其他規則運算式，表示資料包含無效或格式錯誤的值。|**資料行模式設定檔 —** 適用於使用其中一種資料類型資料行：<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`|  
-|選取之資料行中 Null 值的百分比。|**某個資料行中 Null 值的比例過高**- 例如，您分析了應該包含美國郵遞區號的資料行，但發現遺漏郵遞區號的比例過高。|**資料行 Null 比例 —** 適用於具有下列資料類型資料行：<br /><br /> 任何資料類型。 這包括 `image`、`text`、`xml`、使用者定義型別和 Variant 類型。|  
-|數值資料行的最小值、最大值、平均和標準差，以及 `datetime` 資料行的最小值和最大值等統計資料。|**無效的數值和日期**- 例如，您分析了過去日期的資料行，但發現屬於未來的最大日期。|**資料行統計資料設定檔 —** 適用於使用其中一種資料類型資料行：<br /><br /> 數值資料類型：整數類型 (`bit` 除外)、`money`、`smallmoney`、`decimal`、`float`、`real` 和 `numeric`<br /><br /> 日期和時間資料類型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`<br />注意：若為具有日期和時間資料類型的資料行，此設定檔就只會計算最小值和最大值。|  
-|選取之資料行中的所有相異值，以及該資料表中每個值所代表之資料列的百分比。 或者，代表超過資料表中指定之資料列百分比的值。|**某個資料行中相異值的數目不正確**- 例如，您分析了包含美國州名的資料行，但發現超過 50 個相異值。|**資料行值散發 —** 適用於使用其中一種資料類型資料行：<br /><br /> 數值資料類型：整數類型 (`bit` 除外)、`money`、`smallmoney`、`decimal`、`float`、`real` 和 `numeric`<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`<br /><br /> 日期和時間資料類型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`|  
-|資料行或資料行集合為選取之資料表的索引鍵或近似索引鍵。|**潛在索引鍵資料行中重複的值**- 例如，您在 Customers 資料表中分析了 Name 和 Address 資料行，但發現名稱和地址組合應該是唯一的重複值。|**候選索引鍵**- 多個資料行設定檔，其中會報告資料行或資料行集合是否適合當做選取之資料表的索引鍵。 適用於具有下列其中一種資料類型的資料行：<br /><br /> 整數資料類型：`bit`、`tinyint`、`smallint`、`int` 和 `bigint`<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`<br /><br /> 日期和時間資料類型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`|  
-|某個資料行 (相依資料行) 中的值相依於另一個資料行或資料行集合 (行列式資料行) 中之值的程度。|**不適用於相依資料行中的值**- 例如，您分析了包含「美國郵遞區號」之資料行與「美國州名」之資料行之間的相依性。 相同的郵遞區號應該永遠具有相同的州名。 不過，此設定檔發現了這個相依性的違規。|**功能相依性 —** 適用於使用其中一種資料類型的資料行：<br /><br /> 整數資料類型：`bit`、`tinyint`、`smallint`、`int` 和 `bigint`<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`<br /><br /> 日期和時間資料類型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`|  
-|資料行或資料行集合是否適合當做選取之資料表之間的外部索引鍵。<br /><br /> 也就是說，這個設定檔會報告兩個資料行或資料行集合之間值的重疊。|**無效的值**- 例如，您分析了 Sales 資料表的 ProductID 資料行。 此設定檔發現該資料行包含在 Products 資料表之 ProductID 資料行中找不到的值。|**值包含**- 適用於具有下列其中一種資料類型的資料行：<br /><br /> 整數資料類型：`bit`、`tinyint`、`smallint`、`int` 和 `bigint`<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`<br /><br /> 日期和時間資料類型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`|  
+|選取之資料行中所有不同的字串值長度，以及該資料表中每個長度所代表之資料列的百分比。|**無效的字串值** - 例如，您分析了應該使用兩個字元之美國州名代碼的資料行，但發現長度大於兩個字元的值。|**資料行長度散發-** 適用於使用其中一種資料類型資料行：<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`|  
+|一組規則運算式，其中涵蓋了字串資料行中值的指定百分比。<br /><br /> 同時可尋找未來可用於驗證新值的規則運算式|**無效或格式錯誤的字串值** - 例如，[郵遞區號] 資料行的模式設定檔可能會產生規則運算式：\d{5}-\d{4}、\d{5} 和 \d{9}。 如果輸出包含其他規則運算式，表示資料包含無效或格式錯誤的值。|**資料行模式設定檔-** 適用於使用其中一種資料類型資料行：<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`|  
+|選取之資料行中 Null 值的百分比。|**某個資料行中 Null 值的比例過高** - 例如，您分析了應該包含美國郵遞區號的資料行，但發現遺漏郵遞區號的比例過高。|**資料行 Null 比例-** 適用於具有下列資料類型資料行：<br /><br /> 任何資料類型。 這包括 `image`、`text`、`xml`、使用者定義型別和 Variant 類型。|  
+|數值資料行的最小值、最大值、平均和標準差，以及 `datetime` 資料行的最小值和最大值等統計資料。|**無效的數值和日期** - 例如，您分析了過去日期的資料行，但發現屬於未來的最大日期。|**資料行統計資料設定檔-** 適用於使用其中一種資料類型資料行：<br /><br /> 數值資料類型：整數類型 (`bit` 除外)、`money`、`smallmoney`、`decimal`、`float`、`real` 和 `numeric`<br /><br /> 日期和時間資料類型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`<br />注意：若為具有日期和時間資料類型的資料行，此設定檔就只會計算最小值和最大值。|  
+|選取之資料行中的所有相異值，以及該資料表中每個值所代表之資料列的百分比。 或者，代表超過資料表中指定之資料列百分比的值。|**某個資料行中相異值的數目不正確** - 例如，您分析了包含美國州名的資料行，但發現超過 50 個相異值。|**資料行值散發-** 適用於使用其中一種資料類型資料行：<br /><br /> 數值資料類型：整數類型 (`bit` 除外)、`money`、`smallmoney`、`decimal`、`float`、`real` 和 `numeric`<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`<br /><br /> 日期和時間資料類型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`|  
+|資料行或資料行集合為選取之資料表的索引鍵或近似索引鍵。|**潛在索引鍵資料行中重複的值** - 例如，您在 Customers 資料表中分析了 Name 和 Address 資料行，但發現名稱和地址組合應該是唯一的重複值。|**候選索引鍵** - 多個資料行設定檔，其中會報告資料行或資料行集合是否適合當做選取之資料表的索引鍵。 適用於具有下列其中一種資料類型的資料行：<br /><br /> 整數資料類型：`bit`、`tinyint`、`smallint`、`int` 和 `bigint`<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`<br /><br /> 日期和時間資料類型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`|  
+|某個資料行 (相依資料行) 中的值相依於另一個資料行或資料行集合 (行列式資料行) 中之值的程度。|**不適用於相依資料行中的值** - 例如，您分析了包含「美國郵遞區號」之資料行與「美國州名」之資料行之間的相依性。 相同的郵遞區號應該永遠具有相同的州名。 不過，此設定檔發現了這個相依性的違規。|**功能相依性-** 適用於使用其中一種資料類型的資料行：<br /><br /> 整數資料類型：`bit`、`tinyint`、`smallint`、`int` 和 `bigint`<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`<br /><br /> 日期和時間資料類型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`|  
+|資料行或資料行集合是否適合當做選取之資料表之間的外部索引鍵。<br /><br /> 也就是說，這個設定檔會報告兩個資料行或資料行集合之間值的重疊。|**無效的值** - 例如，您分析了 Sales 資料表的 ProductID 資料行。 此設定檔發現該資料行包含在 Products 資料表之 ProductID 資料行中找不到的值。|**值包含** - 適用於具有下列其中一種資料類型的資料行：<br /><br /> 整數資料類型：`bit`、`tinyint`、`smallint`、`int` 和 `bigint`<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`<br /><br /> 日期和時間資料類型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`|  
   
  若要選取要計算的設定檔，您可以使用 [資料分析工作編輯器] 的 [設定檔要求] 頁面。 如需詳細資訊，請參閱[資料分析工作編輯器 &#40;設定檔要求頁面&#41;](data-profiling-task-editor-profile-requests-page.md)。  
   
@@ -75,21 +74,21 @@ ms.locfileid: "48072968"
   
  每個可用的資料設定檔都有自己的組態選項。 如需有關這些選項的詳細資訊，請參閱下列主題：  
   
--   [候選索引鍵設定檔要求選項&#40;資料分析工作&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [候選索引鍵設定檔要求選項 &#40;資料分析工作&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [資料行長度散發設定檔要求選項&#40;資料分析工作&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [資料行長度散發設定檔要求選項 &#40;資料分析工作&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [資料行 Null 比例設定檔要求選項&#40;資料分析工作&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [資料行 Null 比例設定檔要求選項 &#40;資料分析工作&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [資料行模式設定檔要求選項&#40;資料分析工作&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [資料行模式設定檔要求選項 &#40;資料分析工作&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [資料行統計資料設定檔要求選項&#40;資料分析工作&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [資料行統計資料設定檔要求選項 &#40;資料分析工作&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [資料行值散發設定檔要求選項&#40;資料分析工作&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [資料行值散發設定檔要求選項 &#40;資料分析工作&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [功能相依性設定檔要求選項&#40;資料分析工作&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [功能相依性設定檔要求選項 &#40;資料分析工作&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [值包含設定檔要求選項&#40;資料分析工作&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [值包含設定檔要求選項 &#40;資料分析工作&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="execution-of-the-package-that-contains-the-data-profiling-task"></a>執行包含資料分析工作的封裝  
  設定「資料分析」工作後，您可以執行該工作。 然後，此工作會計算資料設定檔，並將此資訊以 XML 格式輸出到檔案或封裝變數。 這個 XML 的結構會遵循 DataProfile.xsd 結構描述。 您可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 或其他結構描述編輯器、XML 編輯器，或是在 [記事本] 之類的文字編輯器中開啟結構描述。 此資料品質資訊的結構描述對於下列用途可能很實用：  
@@ -98,7 +97,7 @@ ms.locfileid: "48072968"
   
 -   建立搭配資料品質資訊使用的自訂工具。  
   
- 在結構描述中，將目標命名空間識別為 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
+ 在結構描述中，將目標命名空間識別為 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
   
 ## <a name="next-step"></a>下一個步驟  
  [資料設定檔檢視器](data-profile-viewer.md)。  

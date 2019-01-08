@@ -15,17 +15,17 @@ ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5892aa294983a453c018afc5511cee0f88eff0a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a8370db6cfcf3d410e563a0134221d0d48da09a8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133406"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369120"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 實作詳細資料
   本章節會記載搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式使用時的 ODBC 函數，這些函數可呈現 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特有的行為。 並非所有的 ODBC 函數都有記載在這裡。 個別主題只會討論 ODBC 函數的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特有問題， 並不是 ODBC 函數的完整參考。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會使用 ODBC 3.51 規格編譯，而且如果您正在使用 Windows 7 SDK，就會使用 ODBC 3.8 規格編譯。 如需完整的 ODBC 參考，請檢視[ODBC 程式設計人員參考](http://go.microsoft.com/fwlink/?LinkId=45250)線上。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會使用 ODBC 3.51 規格編譯，而且如果您正在使用 Windows 7 SDK，就會使用 ODBC 3.8 規格編譯。 如需完整的 ODBC 參考，請檢視[ODBC 程式設計人員參考](https://go.microsoft.com/fwlink/?LinkId=45250)線上。  
   
 ## <a name="in-this-section"></a>本節內容  
   

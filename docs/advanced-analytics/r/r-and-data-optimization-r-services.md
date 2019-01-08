@@ -1,5 +1,5 @@
 ---
-title: SQL Server R Services-資料最佳化的效能 |Microsoft Docs
+title: 資料最佳化-SQL Server Machine Learning 服務的效能微調
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3fda560aedb7a0e1119a0524ffefe42a476c4aed
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b6e25ec0c7bc1ce332514910cdaf5cdf9fdb9e07
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699506"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432401"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services-資料最佳化的效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51699506"
 
 ## <a name="factors"></a>因素
 
-R 語言有的概念*因素*，這是特殊的分類資料的變數。 資料科學家通常會在公式中使用因數變數，因為處理類別變數作為因素可確保資料正確地處理透過 machine learning 函式。 如需詳細資訊，請參閱 <<c0> [ 的 R for Dummies： 因素變數](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)。
+R 語言有的概念*因素*，這是特殊的分類資料的變數。 資料科學家通常會在公式中使用因數變數，因為處理類別變數作為因素可確保資料正確地處理透過 machine learning 函式。 如需詳細資訊，請參閱[的 R for Dummies:因素變數](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)。
 
 根據設計，因素變數可以從轉換字串與整數，再進行儲存或處理。 R`data.frame`函式會處理所有字串作為因數變數，除非引數*stringsAsFactors*設定為**False**。 這表示為字串會自動轉換成整數進行處理，而且接著對應回原始的字串。
 
@@ -149,11 +149,11 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 如需其他指引 RevoScaleR 的最佳化的詳細資訊，請參閱下列文章：
 
-+ 技術支援文件： [rxDForest 和 rxDTree 的效能調整選項](https://support.microsoft.com/kb/3104235)
++ 技術支援文件：[RxDForest 和 rxDTree 的效能調整選項](https://support.microsoft.com/kb/3104235)
 
-+ 推進式決策的樹模型中的控制模型的方法符合：[估計模型使用隨機梯度促進](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
++ 用來控制放入推進式決策的樹模型的模型的方法：[評估使用隨機的漸層停駐提升模型](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
 
-+ RevoScaleR 如何移動及處理資料的概觀： [ScaleR 中撰寫自訂的區塊處理演算法](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
++ RevoScaleR 如何移動和處理資料的概觀：[ScaleR 中撰寫自訂的區塊處理演算法](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
 
 + RevoScaleR 的程式設計模型：[管理 RevoScaleR 中的執行緒](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
 
@@ -179,7 +179,7 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 ## <a name="articles-in-this-series"></a>在這一系列的文章
 
-[效能微調 – 簡介](sql-server-r-services-performance-tuning.md)
+[效能微調的 R-簡介](sql-server-r-services-performance-tuning.md)
 
 [R-SQL Server 組態的效能微調](sql-server-configuration-r-services.md)
 

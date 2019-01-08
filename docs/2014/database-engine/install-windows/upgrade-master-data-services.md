@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d10d1abbd0ad54879b2a524d526b06319793c8f5
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019013"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365490"
 ---
 # <a name="upgrade-master-data-services"></a>升級 Master Data Services
   升級至 Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 的情況有四種。 請選擇最適合您情況的情況。  
@@ -28,12 +28,12 @@ ms.locfileid: "51019013"
   
 -   [包含從備份中還原資料庫的升級](#restore)  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   不支援從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP1 版本升級到 CTP2 版本。  
 > -   在執行任何升級之前備份您的資料庫。  
 > -   升級程序會重新建立預存程序，並升級 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]使用的資料表。 您對這些元件所做的任何自訂可能會遺失。  
 > -   模型部署封裝只能在之前建立這些封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中使用。 您無法部署中建立的模型部署封裝[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
-> -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 將 Master Data Services 和 Data Quality Services 升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 之後，您可以繼續使用  SP1 版適用於 Excel 的 Master Data Services 增益集。 不過，在升級為 SQL Server 2014 CTP2 之後，任何舊版適用於 Excel 的 Master Data Services 增益集將無法運作。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 您可以在 [這裡](http://go.microsoft.com/fwlink/?LinkId=328664)下載  SP1 版適用於 Excel 的 Master Data Services 增益集。  
+> -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 將 Master Data Services 和 Data Quality Services 升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 之後，您可以繼續使用  SP1 版適用於 Excel 的 Master Data Services 增益集。 不過，在升級為 SQL Server 2014 CTP2 之後，任何舊版適用於 Excel 的 Master Data Services 增益集將無法運作。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 您可以在 [這裡](https://go.microsoft.com/fwlink/?LinkId=328664)下載  SP1 版適用於 Excel 的 Master Data Services 增益集。  
   
 ##  <a name="noengine"></a> 升級但不包含 Database Engine 升級  
  這個情況可視為是並排顯示安裝，因為兩者[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]以平行方式，在同一部電腦或不同的電腦上安裝。  
@@ -90,7 +90,7 @@ ms.locfileid: "51019013"
         > [!IMPORTANT]  
         >  在 SQL Server 2014 版的 Master Data Services 組態管理員中，可讓您選取您在舊版 SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 中的現有 MDS Web 應用程式。 您絕不能選取現有的 Web 應用程式，而是必須建立 MDS 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web 應用程式。 否則，當您嘗試將 Web 應用程式與升級的 MDS 資料庫建立關聯時，將會收到錯誤，說明因為該頁面的相關組態資料無效，所以無法存取所要求的頁面。  
         >   
-        >  如果您要為 MDS Web 應用程式使用相同的名稱 (別名) 做為現有 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) Web 應用程式，您必須先將 Web 應用程式和相關聯的應用程式集區從 IIS 刪除，然後使用 SQL Server 2014 版的 Master Data Services 組態管理員，以相同的名稱建立 Web 應用程式。 如需從 IIS 移除 Web 應用程式和應用程式集區的資訊，請參閱 [移除應用程式 (IIS)](http://go.microsoft.com/fwlink/?LinkId=323537) 和 [移除應用程式集區 (IIS)](http://go.microsoft.com/fwlink/?LinkId=323538)。  
+        >  如果您要為 MDS Web 應用程式使用相同的名稱 (別名) 做為現有 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) Web 應用程式，您必須先將 Web 應用程式和相關聯的應用程式集區從 IIS 刪除，然後使用 SQL Server 2014 版的 Master Data Services 組態管理員，以相同的名稱建立 Web 應用程式。 如需從 IIS 移除 Web 應用程式和應用程式集區的資訊，請參閱 [移除應用程式 (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) 和 [移除應用程式集區 (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538)。  
   
 4.  現在將新的 Web 應用程式與升級的 MDS 資料庫建立關聯。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "51019013"
   
  若要執行此工作，請完成下列步驟。  
   
-1.  **僅適用於 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]**：開啟 [控制台] > [程式和功能]，並解除安裝 Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。  
+1.  **針對[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]只**:開啟**控制台中** > **程式和功能**並解除安裝 Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。  
   
 2.  將資料庫引擎升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "51019013"
   
     4.  完成精靈。  
   
-3.  **針對[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]僅**： 在升級完成時，新增**[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 功能。  
+3.  **針對[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]只**:在升級完成時，新增**[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 功能。  
   
     1.  開啟 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式精靈。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "51019013"
         > [!IMPORTANT]  
         >  在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版的 Master Data Services 組態管理員中，可讓您選取您在舊版 SQL Server ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 中的現有 MDS Web 應用程式。 您絕不能選取現有的 Web 應用程式，而是必須建立 MDS 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web 應用程式。 否則，當您嘗試將 Web 應用程式與升級的 MDS 資料庫建立關聯時，將會收到錯誤，說明因為該頁面的相關組態資料無效，所以無法存取所要求的頁面。  
         >   
-        >  如果您要為 MDS Web 應用程式使用相同的名稱 (別名) 做為現有 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) Web 應用程式，您必須先將 Web 應用程式和相關聯的應用程式集區從 IIS 刪除，然後使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版的 Master Data Services 組態管理員，以相同的名稱建立 Web 應用程式。 如需從 IIS 移除 Web 應用程式和應用程式集區的資訊，請參閱 [移除應用程式 (IIS)](http://go.microsoft.com/fwlink/?LinkId=323537) 和 [移除應用程式集區 (IIS)](http://go.microsoft.com/fwlink/?LinkId=323538)。  
+        >  如果您要為 MDS Web 應用程式使用相同的名稱 (別名) 做為現有 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) Web 應用程式，您必須先將 Web 應用程式和相關聯的應用程式集區從 IIS 刪除，然後使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版的 Master Data Services 組態管理員，以相同的名稱建立 Web 應用程式。 如需從 IIS 移除 Web 應用程式和應用程式集區的資訊，請參閱 [移除應用程式 (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) 和 [移除應用程式集區 (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538)。  
   
 6.  現在將新的 Web 應用程式與升級的 MDS 資料庫建立關聯。  
   
@@ -224,7 +224,7 @@ ms.locfileid: "51019013"
         > [!IMPORTANT]  
         >  在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版的 Master Data Services 組態管理員中，可讓您選取您在舊版 SQL Server ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 中的現有 MDS Web 應用程式。 您絕不能選取現有的 Web 應用程式，而是必須建立 MDS 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web 應用程式。 否則，當您嘗試將 Web 應用程式與升級的 MDS 資料庫建立關聯時，將會收到錯誤，說明因為該頁面的相關組態資料無效，所以無法存取所要求的頁面。  
         >   
-        >  如果您要為 MDS Web 應用程式使用相同的名稱 (別名) 做為現有 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) Web 應用程式，您必須先將 Web 應用程式和相關聯的應用程式集區從 IIS 刪除，然後使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版的 Master Data Services 組態管理員，以相同的名稱建立 Web 應用程式。 如需從 IIS 移除 Web 應用程式和應用程式集區的資訊，請參閱 [移除應用程式 (IIS)](http://go.microsoft.com/fwlink/?LinkId=323537) 和 [移除應用程式集區 (IIS)](http://go.microsoft.com/fwlink/?LinkId=323538)。  
+        >  如果您要為 MDS Web 應用程式使用相同的名稱 (別名) 做為現有 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) Web 應用程式，您必須先將 Web 應用程式和相關聯的應用程式集區從 IIS 刪除，然後使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版的 Master Data Services 組態管理員，以相同的名稱建立 Web 應用程式。 如需從 IIS 移除 Web 應用程式和應用程式集區的資訊，請參閱 [移除應用程式 (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) 和 [移除應用程式集區 (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538)。  
   
 4.  現在將此 Web 應用程式與升級的 MDS 資料庫產生關聯。  
   
@@ -287,7 +287,7 @@ ms.locfileid: "51019013"
         > [!IMPORTANT]  
         >  在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版的 Master Data Services 組態管理員中，可讓您選取您在舊版 SQL Server ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 中的現有 MDS Web 應用程式。 您絕不能選取現有的 Web 應用程式，而是必須建立 MDS 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web 應用程式。 否則，當您嘗試將 Web 應用程式與升級的 MDS 資料庫建立關聯時，將會收到錯誤，說明因為該頁面的相關組態資料無效，所以無法存取所要求的頁面。  
         >   
-        >  如果您要為 MDS Web 應用程式使用相同的名稱 (別名) 做為現有 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) Web 應用程式，您必須先將 Web 應用程式和相關聯的應用程式集區從 IIS 刪除，然後使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版的 Master Data Services 組態管理員，以相同的名稱建立 Web 應用程式。 如需從 IIS 移除 Web 應用程式和應用程式集區的資訊，請參閱 [移除應用程式 (IIS)](http://go.microsoft.com/fwlink/?LinkId=323537) 和 [移除應用程式集區 (IIS)](http://go.microsoft.com/fwlink/?LinkId=323538)。  
+        >  如果您要為 MDS Web 應用程式使用相同的名稱 (別名) 做為現有 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) Web 應用程式，您必須先將 Web 應用程式和相關聯的應用程式集區從 IIS 刪除，然後使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版的 Master Data Services 組態管理員，以相同的名稱建立 Web 應用程式。 如需從 IIS 移除 Web 應用程式和應用程式集區的資訊，請參閱 [移除應用程式 (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) 和 [移除應用程式集區 (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538)。  
   
 5.  現在將新的 Web 應用程式與升級的 MDS 資料庫建立關聯。  
   
@@ -298,9 +298,9 @@ ms.locfileid: "51019013"
     3.  按一下 **[套用]**。  
   
 ## <a name="troubleshooting"></a>疑難排解  
- **問題︰** 當您開啟[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或是[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web 應用程式時，「 用戶端版本不相容的資料庫版本 」 的錯誤訊息。  
+ **問題：** 當您開啟[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或是[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web 應用程式時，「 用戶端版本不相容的資料庫版本 」 的錯誤訊息。  
   
- **解決方法：** 就會發生此問題時[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或是[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]主資料管理員 web 應用程式嘗試存取已升級為資料庫[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Master Data Services。 您必須改用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web 應用程式。  
+ **解決方案：** 就會發生此問題時[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或是[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]主資料管理員 web 應用程式嘗試存取已升級為資料庫[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Master Data Services。 您必須改用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web 應用程式。  
   
  如果您升級 MDS 資料庫結構描述時，未在 IIS 中停止 [MDS 應用程式集區] 然後再重新啟動，也可能會發生此問題。 重新啟動 [MDS 應用程式集區] 即可更正此問題。  
   

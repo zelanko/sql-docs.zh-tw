@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], public profiles
@@ -15,12 +14,12 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 667dbd4e0b323f50721af716a30709ba9ea6d5c8
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071812"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979134"
 ---
 # <a name="create-a-database-mail-profile"></a>建立 Database Mail 設定檔
   您可以使用 [Database Mail 組態精靈] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，建立 Database Mail 公用和私人設定檔。  
@@ -53,7 +52,7 @@ ms.locfileid: "49071812"
   
 -   在 [管理設定檔和帳戶] 頁面上，選取 [建立新設定檔] 選項，然後按一下 [下一步]。  
   
--   在 [新增設定檔] 頁面上，指定設定檔名稱、描述並加入要併入設定檔中的帳戶，然後按一下 [下一步]。  
+-   在 [**新的設定檔**頁面上，指定的設定檔的名稱、 描述，然後將帳戶新增至包含在設定檔，然後按一下**下一步]**。  
   
 -   在 [完成精靈] 頁面上，檢閱要執行的動作，然後按一下 [完成] 完成新設定檔的建立。  
   
@@ -191,7 +190,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*預設設定檔狀態* '  
   
-     其中*@profile_name*是設定檔的名稱並*@principal_name* ，表示這是公用設定檔， *@is_default*決定是否此設定檔是資料庫使用者或角色的預設值。  
+     其中，*@profile_name* 是設定檔的名稱，*@principal_name* 指出這是公用設定檔，而 *@is_default* 可決定此設定檔是否為資料庫使用者或角色的預設值。  
   
  下列範例會建立 Database Mail 帳戶、建立 Database Mail 私人設定檔，然後將帳戶加入設定檔，並授與設定檔的公用存取權。  
   

@@ -12,12 +12,12 @@ ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bb3b255e145c489968b0d62b73aaa526bec8446c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec0a5700df76134eab8a4fe2278820691dad509e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134879"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359310"
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
     
@@ -59,7 +59,7 @@ ms.locfileid: "48134879"
   
 -   當您選擇唯一索引或條件約束的資料行時，請選取已定義為 NOT NULL 的資料行。 這樣做可以排除多個資料列的索引鍵值包含 NULL 而導致違反唯一性的可能。  
   
--   若重複值是因資料輸入錯誤所造成，請手動更正資料，然後再建立索引或約束條件。 如需在資料表中移除重複資料列的詳細資訊，請參閱知識庫文件 139444：[How to remove duplicate rows from a table in SQL Server](http://support.microsoft.com/kb/139444)(如何在 SQL Server 中移除資料表中的重複資料列)。  
+-   若重複值是因資料輸入錯誤所造成，請手動更正資料，然後再建立索引或約束條件。 如需在資料表中移除重複的資料列的資訊，請參閱知識庫文件 139444:[如何從 SQL Server 中的資料表中移除重複的資料列](https://support.microsoft.com/kb/139444)。  
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   

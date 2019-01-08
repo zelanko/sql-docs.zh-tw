@@ -18,12 +18,12 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 762c644690cb556ba316705f1e22e3673e811bf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ffa3e3508fef50491f20b47e13c12865cb5432d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077708"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363400"
 ---
 # <a name="overview-of-clr-integration"></a>CLR 整合的概觀
   做為 Microsoft .NET Framework 核心的 Common Language Runtime (CLR)，提供了所有 .NET Framework 程式碼的執行環境。 在 CLR 內執行的程式碼稱為 Managed 程式碼。 CLR 提供程式執行所需的各種功能及服務，包括 Just-In-Time (JIT) 編譯、配置及管理記憶體、強制使用型別安全、例外狀況處理、執行緒管理及安全性。  如需詳細資訊，請參閱 .NET Framework SDK。  
@@ -56,7 +56,7 @@ ms.locfileid: "48077708"
  您可以建立擴充預存程序來執行無法以 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 預存程序執行的功能。 但是擴充預存程序可能會危害 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序整合性，而驗證為具有型別安全的 Managed 程式碼則不會。 此外，記憶體管理、執行緒與 Fiber 排程及同步處理服務都會在 CLR 的 Managed 程式碼與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之間得到進一步整合。 CLR 整合為您提供比擴充預存程序更安全的方式來撰寫執行工作所需的預存程序，而這是無法在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中執行的動作。 如需有關 CLR 整合與擴充預存程序的詳細資訊，請參閱 < [CLR 整合的效能](clr-integration-architecture-performance.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [安裝.NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [安裝.NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [CLR 整合的架構](../../database-engine/dev-guide/architecture-of-clr-integration.md)   
  [從 CLR 資料庫物件的資料存取](data-access/data-access-from-clr-database-objects.md)   
  [CLR 整合使用者入門](database-objects/getting-started-with-clr-integration.md)  

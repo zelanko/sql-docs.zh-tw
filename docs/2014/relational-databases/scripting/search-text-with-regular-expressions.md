@@ -8,8 +8,6 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 f1_keywords:
-- vsregularexpressionhelp
-- vs.regularexpressionhelp
 - vs.regularexpressionbuilder
 helpviewer_keywords:
 - regular expressions [SQL Server Management Studio]
@@ -19,19 +17,19 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2014aa68bee9e78477fb4ee9993053e13a33abe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9a265979af780b1df3eedf18c14fd822a2983b1
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077628"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328310"
 ---
 # <a name="search-text-with-regular-expressions"></a>使用規則運算式搜尋文字
   規則運算式是在尋找及取代文字模式時所使用，為既簡明、又有彈性的標記法。 特定的規則運算式集可用在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [尋找和取代] 對話方塊的 [尋找目標] 欄位。  
   
 #### <a name="to-find-using-regular-expressions"></a>若要使用規則運算式來尋找  
   
-1.  若要啟用於 [快速尋找]、[檔案中尋找]、[快速取代] 或 [檔案中取代] 等作業期間，在 [尋找目標] 欄位使用規則運算式，請選取 [尋找選項] 之下的 [使用] 選項，然後選擇 [規則運算式]。  
+1.  若要啟用的規則運算式中使用**Find what**在進行**快速尋找**， **FindinFiles**， **快速取代**，或**檔案中取代**作業，選取**使用**選項底下**尋找選項**，然後選擇**規則運算式**。  
   
 2.  之後，就可以使用 **[尋找目標]** 欄位旁三角形的 **[參考清單]** 按鈕。 請按一下這個按鈕來顯示最常用的規則運算式清單。 當您從「運算式產生器」中選擇任何項目時，項目會插入 [尋找目標] 字串中。  
   
@@ -64,9 +62,9 @@ ms.locfileid: "48077628"
   
 |運算式|語法|描述|  
 |----------------|------------|-----------------|  
-|最少 — 零或多個|@|符合零或多個前導運算式出現項目，相符的字元數盡可能少。|  
-|最少 — 一或多個|#|符合一或多個前導運算式出現項目，相符的字元數儘可能少。|  
-|重複 n 次|^n|符合 N 個前導運算式的出現項目。 例如 [0-9]^4 符合任何 4 位數序列。|  
+|最少 - 零或多個|@|符合零或多個前導運算式出現項目，相符的字元數盡可能少。|  
+|最少 - 一或多個|#|符合一或多個前導運算式出現項目，相符的字元數儘可能少。|  
+|重複 n 次|^n|符合 N 個前導運算式的出現項目。 例如，[0-9] ^4 符合任何四位數序列。|  
 |群組|()|將子運算式分組。|  
 |第 n 個標記文字|\n|在 [尋找或取代] 運算式中，指出第 n 個標記運算式相符的文字，其中 n 是 1 到 9 的數字。<br /><br /> 在 [取代] 運算式中，\0 會插入完整的相符文字。|  
 |欄位靠右對齊|\\(w,n)|在 [取代] 運算式中，將欄位中的第 n 個標記運算式靠右對齊至少 *w* 個字元寬。|  
@@ -136,5 +134,3 @@ ms.locfileid: "48077628"
 ## <a name="see-also"></a>另請參閱  
  [搜尋和取代](search-and-replace.md)   
  [使用萬用字元搜尋文字](search-text-with-wildcards.md)  
-  
-  

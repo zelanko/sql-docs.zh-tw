@@ -17,12 +17,12 @@ ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f14a643842bb3cb8029cbd4ac1c0e53c9b0ab334
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34b6f109ab102f39908639f6182c25ca4cbb60e0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081686"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363890"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>在 URL 存取和 SOAP 之間選擇
   將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 整合到自訂應用程式頗具挑戰性。 不過，這個挑戰不是程式設計模型或是 API 的複雜性，而是有許多整合它的可能方法。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是從無到有設計為開發人員平台，因此它是以程式設計彈性的考量所建立。 當要做出有關將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表導覽與管理功能整合至現有商務應用程式的重大決定時，彈性便會派上用場。  
@@ -30,7 +30,7 @@ ms.locfileid: "48081686"
  ![Reporting Services 程式設計案例](../../../2014/reporting-services/media/bk-ext-04.gif "Reporting Services 程式設計案例")  
 Reporting Services 程式設計支援廣泛的案例。  
   
- 將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 整合到自訂應用程式 URL 存取與 Reporting Services SOAP API，有兩種方法。 要使用哪個方法取決於多個因素。 在某些情況下，將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 整合到自訂商務應用程式，需要同時使用 URL 存取與 SOAP。 您應該問下列問題：  
+ 有兩種方式來整合[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]到自訂應用程式：URL 存取與 Reporting Services SOAP API。 要使用哪個方法取決於多個因素。 在某些情況下，將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 整合到自訂商務應用程式，需要同時使用 URL 存取與 SOAP。 您應該問下列問題：  
   
 -   您或您的使用者需要哪些類型的企業報表功能？ 您需要簡單的方法以啟動和導覽報表，或者您需要自訂商務解決方案有更進階的報表伺服器管理功能？  
   
@@ -51,7 +51,7 @@ Reporting Services 程式設計支援廣泛的案例。
   
  在大部分的情況下，將同時需要 URL 存取與 SOAP 呼叫，才能符合報表需求。 當初次連接到報表伺服器資料庫，並在使用者介面中提供可用的報表清單，而且使用 URL 存取來實際存取和導覽個別報表時，會使用 SOAP。  
   
- 如需結合 URL 存取與 Web 服務以提供整合報表的範例，請參閱 [SQL Server Reporting Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
+ 如需結合 URL 存取與 Web 服務以提供整合報表的範例，請參閱 [SQL Server Reporting Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=177889)。  
   
 ## <a name="see-also"></a>另請參閱  
  [將 Reporting Services 整合到應用程式](../../../2014/reporting-services/application-integration/integrating-reporting-services-into-applications.md)   

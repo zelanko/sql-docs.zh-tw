@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], schema changes
@@ -18,12 +17,12 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd2ea10d145e52150d3a34a8f1b668152922ddb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203028"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815430"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>對發行集資料庫進行結構描述變更
   複寫支援對已發行物件進行大範圍的結構描述變更。 當您在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行者端針對適當已發行物件，進行下列任何一種結構描述變更時，該變更也預設傳播到所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者：  
@@ -58,7 +57,7 @@ ms.locfileid: "48203028"
   
 -   結構描述變更必須遵從由 [!INCLUDE[tsql](../../../includes/tsql-md.md)]規定的任何條件約束。 例如，ALTER TABLE 不允許對主索引鍵資料行執行 ALTER。  
   
--   資料類型對應只會針對初始快照集執行。 結構描述變更並不會對應到舊版的資料類型。 比方說，如果陳述式`ALTER TABLE ADD datetime2 column`用於[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]，資料類型不會轉譯成`nvarchar`如[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]訂閱者。 在某些案例中，發行者上會封鎖結構描述變更。  
+-   資料類型對應只會針對初始快照集執行。 結構描述變更並不會對應到舊版的資料類型。 例如，如果在 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 內使用陳述式 `ALTER TABLE ADD datetime2 column`，則資料類型不會針對 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 訂閱者轉譯成 `nvarchar`。 在某些案例中，發行者上會封鎖結構描述變更。  
   
 -   如果發行集設定為允許傳播結構描述變更，則不論發行集中發行項的相關結構描述選項如何設定，結構描述都會傳播。 例如，如果選取不對資料表發行項的外部索引鍵條件約束進行複寫，但是接著發出 ALTER TABLE 命令，將外部索引鍵新增至「發行者」端的資料表，則外部索引鍵會新增至「訂閱者」端的資料表。 若要防止發生這種情況，則在發出 ALTER TABLE 命令前停用結構描述變更的傳播。  
   

@@ -1,5 +1,5 @@
 ---
-title: 工作 3： 針對清理資料供應商知識庫 |Microsoft Docs
+title: 工作 3：針對供應商知識庫清理資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 647c924a-9b91-4294-8d96-e81416e4e90e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8dfcf89c2130426e0c1cfb3c86f88f5f9d74cead
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5aca49b5260fc68f899a012aadaac7609fdb7062
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106108"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360330"
 ---
 # <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>工作 3：針對供應商知識庫清理資料
-  在這項工作中，您會執行電腦輔助的清理程序。 DQS 會根據為了針對選取的知識庫分析及清理資料所指定的臨界值，使用進階演算法與信賴等級。 請參閱[清理資料使用 DQS （內部） 知識](http://msdn.microsoft.com/library/hh213061.aspx)如需詳細資訊。  
+  在這項工作中，您會執行電腦輔助的清理程序。 DQS 會根據為了針對選取的知識庫分析及清理資料所指定的臨界值，使用進階演算法與信賴等級。 請參閱[清理資料使用 DQS （內部） 知識](https://msdn.microsoft.com/library/hh213061.aspx)如需詳細資訊。  
   
 1.  按一下 **啟動**開始在電腦輔助的清理程序。  
   
@@ -34,6 +34,6 @@ ms.locfileid: "48106108"
 3.  按一下 **下一步**轉為**管理和檢視結果**頁面。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 4： 管理和檢視結果](../../2014/tutorials/task-4-manaing-and-viewing-results.md)  
+ [工作 4:管理和檢視結果](../../2014/tutorials/task-4-manaing-and-viewing-results.md)  
   
   

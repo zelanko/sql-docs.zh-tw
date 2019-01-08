@@ -11,12 +11,12 @@ ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2854a9742a7d864a73624a4676b6c0778ee182a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66d64b8a96831adb0125d7f739095199e4ad3c6a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222738"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355088"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Analysis Services Connection Type for MDX (SSRS)
   若要在報表中包含來自 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 的資料，您必須擁有以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]類型的報表資料來源為基礎的資料集。 此內建資料來源類型是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料延伸模組為基礎。 您可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 擷取有關維度、階層、層級、關鍵效能指標 (KPI)、量值和屬性的中繼資料，用來做為報表資料。  
@@ -49,7 +49,7 @@ data source=<server name>;initial catalog=<database name>
   
 -   提示使用者提供認證。 此選項只支援 Windows 整合式安全性。  
   
--   不需要認證。 若要使用這個選項，您先前必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱 msdn.microsoft.com 上 [Reporting Services 文件](http://go.microsoft.com/fwlink/?linkid=121312)中的[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+-   不需要認證。 若要使用這個選項，您先前必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱 msdn.microsoft.com 上 [Reporting Services 文件](https://go.microsoft.com/fwlink/?linkid=121312)中的[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
  如需詳細資訊，請參閱 <<c0> [ 資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)或是[在 報表產生器中指定認證](../specify-credentials-in-report-builder.md)。  
   
@@ -72,14 +72,14 @@ data source=<server name>;initial catalog=<database name>
   
  在執行階段中，執行查詢以檢視結果集。 查詢結果會自動擷取成扁平化的資料列集。 查詢結果集中的資料行會填入資料集的欄位集合。 在您建立查詢之後，請在 [報表資料] 窗格中檢視從中繼資料產生的資料集欄位集合。 當報表執行時，實際資枓會從外部資料來源傳回。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料處理延伸模組支援擴充資料集欄位屬性。 這些值可從外部資料來源取得，但是不會出現在 [報表資料] 窗格中。 您可以使用所支援的擴充的欄位屬性[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]透過內建在報表中的資料處理延伸模組`Fields`集合。 至於資料來源上具有值的屬性，您可以存取預先定義的屬性值，例如 `FormattedValue`、`Color` 或 `UniqueName`。 如需詳細資訊，請參閱 [Analysis Services 資料庫的擴充欄位屬性 &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料處理延伸模組支援擴充資料集欄位屬性。 這些值可從外部資料來源取得，但是不會出現在 [報表資料] 窗格中。 您可以透過內建的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 集合，在報表中使用 `Fields` 資料處理延伸模組支援的擴充欄位屬性。 至於資料來源上具有值的屬性，您可以存取預先定義的屬性值，例如 `FormattedValue`、`Color` 或 `UniqueName`。 如需詳細資訊，請參閱 msdn.microsoft.com 上 [Analysis Services 資料庫的擴充欄位屬性 &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
   
   
 ##  <a name="Parameters"></a> 參數  
  若要包含查詢參數，請在查詢設計工具的篩選區域中建立篩選，然後再將該篩選標示成參數。 系統會針對每一個篩選自動建立一個資料集，以提供可用的值。 根據預設，這些資料集不會出現在 [報表資料] 窗格內。 如需詳細資訊，請參閱[在 Analysis Services 的 MDX 查詢設計工具中定義參數 &#40;報表產生器及 SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) 和[針對多維度資料的參數值顯示隱藏的資料集 &#40;報表產生器及 SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)。  
   
- 根據預設，每個報表參數都具有 **[文字]** 資料類型。 建立報表參數後，您可能必須變更預設值。 如需詳細資訊，請參閱[報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 根據預設，每個報表參數都具有 **[文字]** 資料類型。 建立報表參數後，您可能必須變更預設值。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
   
   
   
@@ -88,7 +88,7 @@ data source=<server name>;initial catalog=<database name>
   
  您也可以從 OLE DB 資料來源類型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 擷取資料。 如需詳細資訊，請參閱 [OLE DB 連接類型 &#40;SSRS&#41;](ole-db-connection-type-ssrs.md)。  
   
- 如需版本支援的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [ 線上叢書](http://go.microsoft.com/fwlink/?linkid=121312)》中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
+ 如需版本支援的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [ 線上叢書](https://go.microsoft.com/fwlink/?linkid=121312)》中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   
   
   
@@ -107,10 +107,10 @@ data source=<server name>;initial catalog=<database name>
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  提供查詢所產生之資料集欄位集合的相關資訊。  
   
- [Analysis Services 資料庫的擴充欄位屬性&#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)  
+ [Analysis Services 資料庫的擴充欄位屬性 &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)  
  提供有關可透過 XMLA 資料提供者提供之額外欄位的資訊。  
   
- 《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
+ 《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
  提供支援每一個資料延伸模組之平台與版本的深入資訊。  
   
   

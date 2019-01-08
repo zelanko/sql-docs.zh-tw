@@ -20,16 +20,16 @@ ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3506e1421ef47c4bb74537f81b7007348895555b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 276b8627588bcd3472c12564db1e8c6e6af1ef2b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742376"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212527"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx 函式
 **合規性**  
- 版本導入： ODBC 3.0  
+ 導入的版本：ODBC 3.0  
   
  **摘要**  
  **SQLInstallTranslatorEx**將轉譯器的相關資訊加入至 Odbcinst.ini 區段的 系統資訊 (HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST。INI\ODBC 轉譯程式登錄機碼）。  
@@ -73,9 +73,9 @@ BOOL SQLInstallTranslatorEx(
  *常見*  
  [輸入]要求的類型。 *常見*必須包含下列值之一：  
   
- ODBC_INSTALL_INQUIRY： 詢問有關轉譯器安裝。  
+ ODBC_INSTALL_INQUIRY:詢問有關轉譯器安裝。  
   
- ODBC_INSTALL_COMPLETE： 完成安裝要求。  
+ ODBC_INSTALL_COMPLETE:完成安裝要求。  
   
  *lpdwUsageCount*  
  [輸出]轉譯程式呼叫此函式之後的使用計數。  

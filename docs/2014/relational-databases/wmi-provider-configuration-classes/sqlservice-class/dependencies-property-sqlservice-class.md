@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - Dependencies Property (SqlService Class)
@@ -20,12 +18,12 @@ ms.assetid: 92d54b7e-de2f-4978-b601-0196e37cbb41
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ec643ad360da9d953edf9d88640fc53ed212566c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eae8ad534ba452acd7f65e4faf66dfcf4bc73791
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170538"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357923"
 ---
 # <a name="dependencies-property-sqlservice-class"></a>Dependencies 屬性 (SqlService 類別)
   取得相依於參考之服務的服務清單。  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [啟動及停止服務](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [啟動及停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -18,12 +18,12 @@ ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d19c14bcda351be4f061964132f00227d3fdd40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43b7fb86b7529de3629d07d294f0fd663b93561d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206068"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368670"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>在應用程式的程式碼中使用 FOR XML 結果
   藉由在 SQL 查詢中使用 FOR XML 子句，您就可以將查詢結果擷取為 XML 資料，以及將其轉換為 XML 資料。 如果可以在 XML 應用程式的程式碼中使用 FOR XML 查詢結果，此功能便能讓您執行下列功能：  
@@ -35,9 +35,9 @@ ms.locfileid: "48206068"
  此主題提供範例來示範這些方式。  
   
 ## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>以 ADO 和 XML 資料島擷取 FOR XML 資料  
- ADO`Stream`物件或其他物件，支援 COM`IStream`介面，例如動態伺服器網頁 (ASP)`Request`和`Response`物件，可用來包含當您使用 FOR XML 查詢的結果。  
+ 當您使用 FOR XML 查詢時，支援 COM `Stream` 介面的 ADO `IStream` 物件或其他物件，例如 Active Server Pages (ASP) `Request` 和 `Response` 物件，可用來包含結果。  
   
- 例如，下列 ASP 程式碼顯示的查詢結果`xml`資料類型資料行 Demographics 的 AdventureWorks 範例資料庫的 Sales.Store 資料表中。 該查詢尤其會在此資料行的執行個體值中尋找 CustomerID 等於 3 的資料列。  
+ 例如，下列 ASP 程式碼顯示在 AdventureWorks 範例資料庫的 Sales.Store 資料表中查詢 `xml` 資料類型資料行 Demographics 的結果。 該查詢尤其會在此資料行的執行個體值中尋找 CustomerID 等於 3 的資料列。  
   
 ```  
 <!-- BeginRecordAndStreamVBS -->  
@@ -157,19 +157,19 @@ ms.locfileid: "48206068"
   
 -   **AnnualRevenue:** 150000  
   
--   **BankName:** Primary International  
+-   **BankName:** 主要的國際電話  
   
--   **BusinessType:** OS  
+-   **BusinessType:** 作業系統  
   
 -   **YearOpened:** 1974  
   
--   **Specialty:** Road  
+-   **特殊：** Road  
   
 -   **SquareFeet:** 38000  
   
--   **Brands:** 3  
+-   **品牌：** 3  
   
--   **Internet:** DSL  
+-   **網際網路：** DSL  
   
 -   **NumberEmployees:** 40  
   
@@ -179,7 +179,7 @@ ms.locfileid: "48206068"
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
   <Sales.Store>  
     <Demographics>  
-      <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+      <StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
         <AnnualSales>1500000</AnnualSales>  
         <AnnualRevenue>150000</AnnualRevenue>  
         <BankName>Primary International</BankName>  
@@ -201,13 +201,13 @@ ms.locfileid: "48206068"
   
  在此範例中，使用了下列 Microsoft .NET Framework 管理的 API 來完成 FOR XML 查詢結果的傳回和轉譯作業：  
   
-1.  `SqlConnection` 用來開啟連線到 SQL Server，根據指定的連接字串變數 strConn 的內容。  
+1.  `SqlConnection` 用來開啟 SQL Server 的連接，並以指定之連接字串變數 strConn 的內容為基礎。  
   
 2.  `SqlDataAdapter` 則做為資料配接器使用，它使用 SQL 連接和指定的 SQL 查詢字串來執行 FOR XML 查詢。  
   
-3.  執行查詢之後，`SqlDataAdapter.Fill`然後呼叫並傳遞的執行個體方法`DataSet,`（mydataset） 內，以填入 FOR XML 查詢的輸出資料集。  
+3.  執行查詢之後，會呼叫 `SqlDataAdapter.Fill` 方法，並傳遞 `DataSet,` 的執行個體 (MyDataSet)，以便在資料集內填入 FOR XML 查詢的輸出。  
   
-4.  `DataSet.GetXml`方法接著會呼叫將查詢結果傳回做為伺服器產生 HTML 頁面中可顯示的字串。  
+4.  接著會呼叫 `DataSet.GetXml` 方法，將查詢結果當作可在伺服器所產生 HTML 頁面中顯示的字串，予以傳回。  
   
     ```  
     <%@ Page Language="VB" %>  
@@ -284,7 +284,7 @@ Page Generated @ 3/11/2006 3:36:02 PM
   
 SqlConnection opened.  
   
-<Sales.Store><Demographics><StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
+<Sales.Store><Demographics><StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
   
 SqlConnection closed.  
 ```  

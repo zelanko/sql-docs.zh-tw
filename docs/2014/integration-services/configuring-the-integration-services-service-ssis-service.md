@@ -16,17 +16,17 @@ ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 532a9ae9b44b300cb8d75ea0ea45d24ad5827887
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fd38d33bf0ed5d074fe2784dfba38348342df98
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114768"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359680"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>設定 Integration Services 服務 (SSIS 服務)
     
 > [!IMPORTANT]  
->  本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 支援此服務能與舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 回溯相容。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
+>  本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 支援此服務能與舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]回溯相容。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會仰賴組態檔進行設定。 根據預設，此組態檔的名稱為 MsDtsSrvr.ini.xml，而且檔案位於 %ProgramFiles%\Microsoft SQL Server\120\DTS\Binn 資料夾中。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48114768"
   
   
 > [!CAUTION]  
->  不當地編輯登錄可能會造成嚴重問題，並導致您必須重新安裝作業系統。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 不保證能夠解決不當編輯登錄所產生的問題。 在編輯登錄之前，請先備份重要資料。 如需有關如何備份、還原及編輯登錄的詳細資訊，請參閱 [!INCLUDE[msCoName](../includes/msconame-md.md)] 知識庫文件： [Microsoft Windows 登錄說明](http://support.microsoft.com/kb/256986)。  
+>  不當地編輯登錄可能會造成嚴重問題，並導致您必須重新安裝作業系統。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 不保證能夠解決不當編輯登錄所產生的問題。 在編輯登錄之前，請先備份重要資料。 如需有關如何備份、還原及編輯登錄的詳細資訊，請參閱 [!INCLUDE[msCoName](../includes/msconame-md.md)] 知識庫文件： [Microsoft Windows 登錄說明](https://support.microsoft.com/kb/256986)。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務啟動時會載入組態檔。 登錄項目如有任何變更，就必須重新啟動服務。  
   

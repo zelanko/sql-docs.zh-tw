@@ -1,20 +1,21 @@
 ---
-title: 如何從 SQL Server 的巨量資料叢集查詢 Oracle |Microsoft Docs
+title: 在 Oracle 中的查詢外部資料
+titleSuffix: SQL Server 2019 big data clusters
 description: 本教學課程會示範如何查詢 SQL Server 2019 巨量資料叢集 （預覽） 中的 Oracle 資料。 您會在 Oracle 中的資料建立外部資料表，然後再執行查詢。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/12/2018
+ms.date: 12/12/2018
 ms.topic: tutorial
-ms.prod: sql
-ms.openlocfilehash: 7f5383a6faf13f0454439a42efb7524eaeda7c76
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: f7a367a41814a7cb590276b10fcfb7c4c8697011
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644118"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432151"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>教學課程： 將 Oracle 查詢從 SQL Server 的巨量資料叢集
+# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>教學課程：從 SQL Server 的巨量資料叢集查詢 Oracle
 
 本教學課程會示範如何查詢 SQL Server 2019 巨量資料叢集從 Oracle 資料。 若要執行本教學課程中，您必須擁有 Oracle 伺服器的存取權。 如果您無法存取，本教學課程可讓您了解在 SQL Server 的巨量資料叢集的外部資料來源的資料虛擬化的運作方式。
 
@@ -29,11 +30,11 @@ ms.locfileid: "49644118"
 
 ## <a id="prereqs"></a> 必要條件
 
-* [將巨量資料叢集的 Kubernetes 上部署](deployment-guidance.md)。
-* [安裝 Azure Data Studio 和 SQL Server 2019 副檔名](deploy-big-data-tools.md)。
-* [將範例資料載入叢集](#sampledata)。
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [巨量資料工具](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 延伸模組**
+- [將範例資料載入您的巨量資料叢集](tutorial-load-sample-data.md)
 
 ## <a name="create-an-oracle-table"></a>建立 Oracle 資料表
 
@@ -61,7 +62,7 @@ ms.locfileid: "49644118"
 
 第一個步驟是建立可存取您的 Oracle 伺服器的外部資料來源。
 
-1. 在 Azure Data Studio，連接到您的巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱 <<c0> [ 連接到 SQL Server 的主要執行個體](deploy-big-data-tools.md#master)。
+1. 在 Azure Data Studio，連接到您的巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱 <<c0> [ 連接到 SQL Server 的主要執行個體](connect-to-big-data-cluster.md#master)。
 
 1. 在連線 中按兩下**伺服器**視窗以顯示 SQL Server 的主要執行個體的伺服器儀表板。 選取 **新的查詢**。
 

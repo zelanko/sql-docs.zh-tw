@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5911783558ff259eef7488df082560cfe56a4dfb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 028da8892406be7c29d604cc0357f0006bacc4cb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665917"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215434"
 ---
 # <a name="process-odbc-errors-odbc"></a>處理 ODBC 錯誤 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  兩個 ODBC 函數呼叫可以用來擷取 ODBC 訊息： [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402)並[SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)。 若要在 **SQLState**、**pfNative** 和 **ErrorMessage** 診斷欄位中取得與主要 ODBC 相關的資訊，請呼叫 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402)，直到它傳回 SQL_NO_DATA 為止。 對於每個診斷記錄，可以呼叫 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 來擷取個別的欄位。 所有驅動程式專用的欄位都必須使用 **SQLGetDiagField** 擷取。  
+  可以用兩個 ODBC 函數呼叫，來擷取 ODBC 訊息：[SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402)並[SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)。 若要在 **SQLState**、**pfNative** 和 **ErrorMessage** 診斷欄位中取得與主要 ODBC 相關的資訊，請呼叫 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402)，直到它傳回 SQL_NO_DATA 為止。 對於每個診斷記錄，可以呼叫 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 來擷取個別的欄位。 所有驅動程式專用的欄位都必須使用 **SQLGetDiagField** 擷取。  
   
  [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 和 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 是透過 ODBC 驅動程式管理員，而非個別的驅動程式處理。 在成功建立連接之前，ODBC 驅動程式管理員不會快取驅動程式專用的診斷欄位。 在成功連接之前，無法針對驅動程式專用的診斷欄位呼叫 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)。 這包含 ODBC 連接命令，即使它們傳回 SQL_SUCCESS_WITH_INFO 也一樣。 在下次呼叫 ODBC 函數之前，將無法使用驅動程式專用的診斷欄位。  
   
@@ -43,11 +43,11 @@ ms.locfileid: "51665917"
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
- 執行第一個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單，以便建立此範例所使用的預存程序。  
+ 執行第一個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單，以便建立此範例所使用的預存程序。  
   
  使用 odbc32.lib 編譯第二個 (C++) 程式碼清單。 然後，執行此程式。  
   
- 執行第三個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單，以便刪除此範例所使用的預存程序。  
+ 執行第三個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單，以便刪除此範例所使用的預存程序。  
   
 ### <a name="code"></a>程式碼  
   

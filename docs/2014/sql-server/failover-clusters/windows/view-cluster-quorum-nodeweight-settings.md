@@ -13,19 +13,19 @@ ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c83c2d1aa07a93ff4b6109d43f074f5c0da1d0db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07db329a7ba6cb65e5beb94d34f90d1e55582915
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222418"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367780"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>檢視叢集仲裁 NodeWeight 設定
   本主題說明如何檢視 Windows Server 容錯移轉叢集 (WSFC) 叢集中每個成員節點的 NodeWeight 設定。 在仲裁投票期間，使用 NodeWeight 設定來支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的災害復原和多重子網路案例。  
   
--   **開始之前：**  [必要條件](#Prerequisites)、 [安全性](#Security)  
+-   **在開始之前：**[必要條件](#Prerequisites)，[安全性](#Security)  
   
--   **To view quorum NodeWeight settings using:** [Using Transact-SQL](#TsqlProcedure), [Using Powershell](#PowerShellProcedure), [Using Cluster.exe](#CommandPromptProcedure)  
+-   **若要檢視仲裁 NodeWeight 設定，使用：**[使用 TRANSACT-SQL](#TsqlProcedure)，[使用 Powershell](#PowerShellProcedure)，[使用 Cluster.exe](#CommandPromptProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48222418"
 > [!IMPORTANT]  
 >  為了能夠使用 NodeWeight 設定，必須將以下 Hotfix 套用至 WSFC 叢集中的所有伺服器：  
 >   
->  [KB2494036](http://support.microsoft.com/kb/2494036)：提供 Hotfix 讓您設定叢集節點，該節點在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036):提供 Hotfix 讓您設定叢集節點，該節點在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 中沒有仲裁投票  
   
 > [!TIP]  
 >  如果未安裝此 Hotfix，本主題的範例會針對 NodeWeight 傳回空的值或 NULL 值。  
@@ -72,7 +72,7 @@ SELECT  member_name, member_state_desc, number_of_quorum_votes
 4.  以可讀格式輸出叢集節點屬性。  
   
 ### <a name="example-powershell"></a>範例 (Powershell)  
- 下列範例會針對名為 “Cluster001” 的叢集輸出某些節點屬性。  
+ 下列範例會針對稱為 "Cluster001" 的叢集輸出某些節點屬性。  
   
 ```powershell  
 Import-Module FailoverClusters  
@@ -86,7 +86,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 ##  <a name="CommandPromptProcedure"></a> 使用 Cluster.exe  
   
 > [!NOTE]  
->  cluster.exe 公用程式在 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 版本中已過時。  在未來的開發中，請搭配容錯移轉叢集使用 PowerShell。  下一版的 Windows Server 將會移除 cluster.exe 公用程式。 如需詳細資訊，請參閱 [針對容錯移轉叢集將 Cluster.exe 命令對應到 Windows PowerShell 指令程式](http://technet.microsoft.com/library/ee619744\(WS.10\).aspx)。  
+>  cluster.exe 公用程式在 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 版本中已過時。  在未來的開發中，請搭配容錯移轉叢集使用 PowerShell。  下一版的 Windows Server 將會移除 cluster.exe 公用程式。 如需詳細資訊，請參閱 [針對容錯移轉叢集將 Cluster.exe 命令對應到 Windows PowerShell 指令程式](https://technet.microsoft.com/library/ee619744\(WS.10\).aspx)。  
   
 ##### <a name="to-view-nodeweight-settings"></a>若要檢視 NodeWeight 設定  
   
@@ -95,7 +95,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 2.  使用 **cluster.exe** 傳回節點狀態和 NodeWeight 值  
   
 ### <a name="example-clusterexe"></a>範例 (Cluster.exe)  
- 下列範例會針對名為 “Cluster001” 的叢集輸出某些節點屬性。  
+ 下列範例會針對稱為 "Cluster001" 的叢集輸出某些節點屬性。  
   
 ```ms-dos  
 cluster.exe Cluster001 node /status /properties  
@@ -105,6 +105,6 @@ cluster.exe Cluster001 node /status /properties
  [WSFC 仲裁模式和投票組態 &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [設定叢集仲裁 NodeWeight 設定](configure-cluster-quorum-nodeweight-settings.md)   
  [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)   
- [Windows PowerShell 中由工作焦點列出的容錯移轉叢集指令程式](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
+ [Windows PowerShell 中由工作焦點列出的容錯移轉叢集指令程式](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
   
   

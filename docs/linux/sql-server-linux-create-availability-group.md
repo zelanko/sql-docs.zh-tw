@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: d1e1254f8a3b3cd994c31f252ca61a0384dc9bdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e951e87abf7e88502597b6a3caf6f7ca4e34e60b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692136"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205747"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>建立和設定 Linux 上的 SQL Server 可用性群組
 
@@ -315,7 +315,7 @@ sudo systemctl restart mssql-server
 
 本節說明如何使用[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)](SSMS) 或 TRANSACT-SQL 來建立可用性群組[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。
 
-### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>使用 [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
+### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>使用[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
 
 本節說明如何建立外部叢集類型 AG 使用 SSMS 搭配新的可用性群組精靈。
 
@@ -353,11 +353,11 @@ sudo systemctl restart mssql-server
 
 11. 如果可讀取的情況下建立接聽程式時，SSMS 17.3 或更新版本可讓唯讀路由在精靈中建立。 它也可以新增稍後透過 SSMS 或 TRANSACT-SQL。 若要新增唯讀路由現在：
 
-    A.  選取 [唯讀路由] 索引標籤。
+    a.  選取 [唯讀路由] 索引標籤。
 
-    B.  輸入 Url，唯讀複本。 這些 Url 可端點，類似，但它們要使用的執行個體，而不需將端點的連接埠。
+    b.  輸入 Url，唯讀複本。 這些 Url 可端點，類似，但它們要使用的執行個體，而不需將端點的連接埠。
 
-    c.  選取每個 URL，然後從底部，選取 可讀取的複本。 多重選取時，請按住 shift 鍵或按一下拖曳。
+    c.   選取每個 URL，然後從底部，選取 可讀取的複本。 多重選取時，請按住 shift 鍵或按一下拖曳。
 
 12. 按 [下一步] 。
 
@@ -378,7 +378,7 @@ sudo systemctl restart mssql-server
 -   [設定唯讀路由，可用性群組 (SQL Server)](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
 -   [建立或設定可用性群組接聽程式 (SQL Server)](../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
 
-#### <a name="example-one--two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>範例 1 – 2 個複本，與僅設定的複本 （外部叢集類型）
+#### <a name="example-one---two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>範例 1-2 個複本，與僅設定的複本 （外部叢集類型）
 
 此範例示範如何建立會使用僅限設定複本的兩個複本 AG。
 
@@ -424,7 +424,7 @@ sudo systemctl restart mssql-server
     GO
    ```
 
-#### <a name="example-two--three-replicas-with-read-only-routing-external-cluster-type"></a>範例二 – 三個複本的唯讀路由 （外部叢集類型）
+#### <a name="example-two---three-replicas-with-read-only-routing-external-cluster-type"></a>使用唯讀路由 （外部叢集類型） 的範例中兩個三個複本
 
 此範例示範三個完整初始的 AG 建立過程，則可以設定複本和如何唯讀路由。
 
@@ -482,7 +482,7 @@ sudo systemctl restart mssql-server
     
 3.  重複步驟 2 的第三個複本。
 
-#### <a name="example-three--two-replicas-with-read-only-routing-none-cluster-type"></a>範例 3 – 兩個複本的唯讀路由 （None 叢集類型）
+#### <a name="example-three---two-replicas-with-read-only-routing-none-cluster-type"></a>範例三兩個複本的唯讀路由 （None 叢集類型）
 
 此範例顯示使用 None 叢集類型的兩個複本組態的建立。 它用於讀取的級別案例沒有容錯移轉所預期的位置。 這會建立的接聽程式實際的主要複本，以及唯讀路由，使用循環配置資源功能。
 

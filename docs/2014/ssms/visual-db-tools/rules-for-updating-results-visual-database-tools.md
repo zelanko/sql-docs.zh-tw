@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
@@ -15,12 +15,12 @@ ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d62e461a603cd025bf12b64699a2a67fbda319c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f1814c96a5f58052be6271d2a35c1bbf78f87b1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117994"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792421"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>更新結果的規格 (Visual Database Tools)
   大多數的情形下，您可以更新 [結果窗格](visual-database-tools.md)所顯示的結果集。 不過也有些情形無法更新。  

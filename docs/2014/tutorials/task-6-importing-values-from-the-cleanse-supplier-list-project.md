@@ -1,5 +1,5 @@
 ---
-title: 工作 6： 匯入的值從 Cleanse Supplier List 專案 |Microsoft Docs
+title: 工作 6：匯入值從 Cleanse Supplier List 專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d0eff880132e33cd8d73e7a1faa6dc6649b2caa2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ac003c18ae36f4cd2d58a1355df16d6d2f9b066
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137638"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359850"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>工作 6：從 Cleanse Supplier List 專案匯入值
-  在這項工作中，您會匯入清理程序期間所收集的資料品質知識。 請參閱[清理專案值匯入定義域](http://msdn.microsoft.com/library/hh479581.aspx)如需詳細資訊。 您也將知識庫匯出到 DQS 檔案之前發行更新**供應商**知識庫。  
+  在這項工作中，您會匯入清理程序期間所收集的資料品質知識。 請參閱[清理專案值匯入定義域](https://msdn.microsoft.com/library/hh479581.aspx)如需詳細資訊。 您也將知識庫匯出到 DQS 檔案之前發行更新**供應商**知識庫。  
   
 1.  中的主頁面**DQS 用戶端**，按一下**向右箭號**旁**供應商**下**最近使用的知識庫**按一下**定義域管理**。  
   
@@ -63,11 +63,11 @@ ms.locfileid: "48137638"
   
 12. 按一下 **完成**完成的活動。  
   
-13. 按一下 [發行]。  
+13. 按一下 [發行] 。  
   
 14. 按一下 **確定**訊息方塊上。  
   
 ## <a name="next-step"></a>下一個步驟  
- [第 3 課：比對資料，以便從供應商清單中移除重複項](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
+ [第 3 課：比對資料來移除重複項目從供應商清單](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
   
   

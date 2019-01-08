@@ -13,12 +13,12 @@ ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a8e454e12f3e3c9f4c341406596771276f120a83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d94209a4716e8e559028125899ba4e46b2d1b61
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197688"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358920"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>資料採礦教學課程 (Analysis Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可讓您輕鬆建立複雜的資料採礦方案。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的工具可協助您設計、建立及管理使用關聯式資料或 Cube 資料的資料採礦模型。 您可以管理資料採礦模型的用戶端存取，以及從多個用戶端建立預測查詢。  
@@ -47,15 +47,15 @@ ms.locfileid: "48197688"
   
      這些課程涵蓋的進階概念包括使用巢狀資料表、交叉預測、自訂資料來源檢視和具名查詢，以及資料採礦查詢中的篩選。 當您在使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 所包含的預測查詢工具時，也會變得更熟練。  
   
-## <a name="reference"></a>參考  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+## <a name="reference"></a>參考資料  
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [資料採礦延伸模組&#40;DMX&#41;參考](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [資料採礦延伸模組 &#40;DMX&#41; 參考](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>相關章節  
  [資料採礦工具](data-mining/data-mining-tools.md)  
   
- [邏輯架構&#40;Analysis Services-資料採礦&#41;](data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [邏輯架構 &#40;Analysis Services - 資料採礦&#41;](data-mining/logical-architecture-analysis-services-data-mining.md)  
   
  [邏輯架構&#40;Analysis Services-多維度資料&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48197688"
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦方案](data-mining/data-mining-solutions.md)   
- [Microsoft SQL Server 資料採礦資源](http://go.microsoft.com/fwlink/?LinkId=97965)   
- [建立及查詢使用 DMX 資料採礦模型： 教學課程&#40;Analysis Services-資料採礦&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Microsoft SQL Server 資料採礦資源](https://go.microsoft.com/fwlink/?LinkId=97965)   
+ [建立及查詢使用 DMX 資料採礦模型：教學課程&#40;Analysis Services-資料採礦&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

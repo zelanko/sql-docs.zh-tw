@@ -13,12 +13,12 @@ ms.assetid: 8745dc80-193d-4de0-9f17-ba648ab1e81c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbbf4bc264e9dbff37c6dd06ceb1c6f4063e6c2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e40202ef0230fbbdddd1c596e5dc41b4d44a0fe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176378"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373990"
 ---
 # <a name="enterprise-information-management-tutorials"></a>企業資訊管理教學課程
   本章節包含的教學課程是有關使用 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中所包含的企業資訊管理 (EIM) 技術來管理企業中的資訊。 企業資訊管理 (EIM) 提供一套解決方案組合，可讓組織信任其資料的可信度和一致性，以便他們做出重要的商業決策。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 具有以下技術，可協助您在企業中實作 EIM 解決方案。  
@@ -33,6 +33,6 @@ ms.locfileid: "48176378"
  在本教學課程中，您會學習如何一起使用 SSIS、MDS 和 DQS 來實作範例企業資訊管理 (EIM) 解決方案。 首先，您會使用 DQS 來建立包含供應商資料 (中繼資料) 相關知識的知識庫、針對知識庫清理 Excel 檔案中的資料，並且比對資料來識別及移除資料的重複項。 接下來，您會使用適用於 Excel 的 MDS 增益集，將已清理和比對的資料上傳至 MDS。 然後，您會使用 SSIS 解決方案自動化整個程序。  
   
 ## <a name="see-also"></a>另請參閱  
- [企業資訊管理-Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=270871)  
+ [企業資訊管理-Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=270871)  
   
   

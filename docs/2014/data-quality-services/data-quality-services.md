@@ -10,17 +10,17 @@ ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b7b1364d13bd653b81464e26c3f434525623451
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9517595f183e85c3becc8a6b92b364c0b25e666c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033328"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366920"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) 是一個知識驅動的資料品質專案。 DQS 可讓您建立知識庫，然後使用該知識庫執行各種重要的資料品質工作，包括更正、充實、標準化及刪除重複資料。 DQS 可讓您使用參考資料提供者所提供的雲端式 Reference Data Services，執行資料清理。 DQS 也提供您整合到其資料品質工作的分析功能，讓您分析資料的完整性。  
   
- DQS 包含 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]，兩者都會安裝成 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的一部分。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 是一個 SQL Server 執行個體功能，其中包含具有資料品質功能與儲存的三個 SQL Server 目錄。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 是一個 SQL Server 共用功能，商務使用者、資訊工作者以及 IT 專業人員可以使用該功能來執行電腦輔助的資料品質分析，並以互動方式管理其資料品質。 您也可以使用 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] 和 Master Data Services (MDS) 資料品質功能 (兩者皆以 DQS 為基礎) 執行資料品質程序。  
+ DQS 包含 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]，兩者都會安裝成 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的一部分。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 是一個 SQL Server 執行個體功能，其中包含具有資料品質功能與儲存的三個 SQL Server 目錄。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 是一個 SQL Server 共用功能，商務使用者、資訊工作者以及 IT 專業人員可以使用該功能來執行電腦輔助的資料品質分析，並以互動方式管理其資料品質。 您也可以使用 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] 和 Master Data Services (MDS) 資料品質功能 (兩者皆以 DQS 為基礎) 執行資料品質程序。  
   
  如需有關安裝 DQS 的詳細資訊，請參閱＜ [Install Data Quality Services](install-windows/install-data-quality-services.md)＞。 如想將 DQS 現有版本升級至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，請參閱[升級 Data Quality Services](../database-engine/install-windows/upgrade-data-quality-services.md)。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "51033328"
 ## <a name="see-also"></a>另請參閱  
  [Data Quality Services 簡介](../../2014/data-quality-services/introduction-to-data-quality-services.md)   
  [Data Quality Services 概念](../../2014/data-quality-services/data-quality-services-concepts.md)   
- [DQS 資源](http://technet.microsoft.com/sqlserver/hh780961)   
- [SQL Server 資源中心](http://go.microsoft.com/fwlink/?linkID=219676)  
+ [DQS 資源](https://technet.microsoft.com/sqlserver/hh780961)   
+ [SQL Server 資源中心](https://go.microsoft.com/fwlink/?linkID=219676)  
   
   

@@ -21,12 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac31a6f55e365a208bd2a4d3d8f6690693775a0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 603eb8682b69a5f2abc3cd0f46adbd735de05170
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780238"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591372"
 ---
 # <a name="diagnostic-records-and-fields"></a>診斷記錄和欄位
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47780238"
   
  狀態記錄中的欄位包含有關 ODBC 驅動程式管理員、驅動程式或資料來源所傳回的特定錯誤或警告的詳細資訊，包括 SQLSTATE、原生錯誤號碼、診斷訊息、資料行號碼和資料列號碼。 只有在函數傳回 SQL_ERROR、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_NEED_DATA 或 SQL_STILL_EXECUTING 時，才會建立狀態記錄。 如需狀態記錄中欄位的完整清單，請參閱 < **SQLGetDiagField**。  
   
- **SQLGetDiagRec**擷取單一的診斷記錄，以及其 ODBC SQLSTATE、 自發性錯誤號碼和診斷訊息欄位。 這項功能是類似於 ODBC 2。*x * * * SQLError** 函式。 ODBC 3 中的簡單錯誤處理函式。*x*是重複地呼叫**SQLGetDiagRec**開頭*RecNumber*參數設定為 1，並遞增*RecNumber*直到 1**SQLGetDiagRec**傳回 sql_no_data 為止。 這是相當於 ODBC 2。*x*應用程式呼叫**SQLError**直到它傳回 SQL_NO_DATA_FOUND 為止。  
+ **SQLGetDiagRec**擷取單一的診斷記錄，以及其 ODBC SQLSTATE、 自發性錯誤號碼和診斷訊息欄位。 這項功能是類似於 ODBC 2。_x_**SQLError**函式。 ODBC 3 中的簡單錯誤處理函式。*x*是重複地呼叫**SQLGetDiagRec**開頭*RecNumber*參數設定為 1，並遞增*RecNumber*直到 1**SQLGetDiagRec**傳回 sql_no_data 為止。 這是相當於 ODBC 2。*x*應用程式呼叫**SQLError**直到它傳回 SQL_NO_DATA_FOUND 為止。  
   
  ODBC 3。*x*支援更多診斷資訊比 ODBC 2。*x*。 這項資訊會儲存在其他欄位中使用擷取的診斷記錄**SQLGetDiagField**。  
   

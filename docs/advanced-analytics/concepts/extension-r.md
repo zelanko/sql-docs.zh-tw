@@ -1,6 +1,6 @@
 ---
-title: SQL Server 中的 R 延伸模組 |Microsoft Docs
-description: 了解執行 R 程式碼和 SQL Server 中的內建 R 程式庫。
+title: R 程式設計語言擴充功能-SQL Server Machine Learning
+description: 了解執行 R 程式碼和 SQL Server 2016 R Services 或 SQL Server 2017 Machine Learning 服務中的內建 R 程式庫。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/05/2018
@@ -8,23 +8,23 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: af71b03238a744702288f1f7411a5ebec3911f60
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: cb9b710ca5ec06e05a93dbee5f22ee0860f7f4ca
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892864"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432761"
 ---
-# <a name="r-extension-in-sql-server"></a>SQL Server 中的 R 延伸模組
+# <a name="r-language-extension-in-sql-server"></a>SQL Server 中的 R 語言擴充功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-R 延伸模組是以關聯式資料庫引擎的 SQL Server Machine Learning 服務附加元件的一部分。 它會新增 R 執行環境、 使用標準程式庫和工具的基底 R 散發和 Microsoft R 程式庫： [RevoScaleR](../r/revoscaler-overview.md)大規模的分析[MicrosoftML](../using-the-microsoftml-package.md)適用於 machine learning演算法和其他程式庫，以存取資料或 SQL Server 中的 R 程式碼。
+R 延伸模組是以關聯式資料庫引擎的 SQL Server Machine Learning 服務附加元件的一部分。 它會新增 R 執行環境、 使用標準程式庫和工具的基底 R 散發和 Microsoft R 程式庫：[RevoScaleR](../r/ref-r-revoscaler.md)大規模分析[MicrosoftML](../r/ref-r-microsoftml.md)機器學習演算法，和其他程式庫，以存取資料或 SQL Server 中的 R 程式碼。
 
 從 SQL Server 2016 中的 SQL Server 中的 R 整合可[R Services](../r/sql-server-r-services.md)，並繼續向前一部分[SQL Server Machine Learning 服務](../what-is-sql-server-machine-learning.md)。
 
 ## <a name="r-components"></a>R 元件
 
-SQL Server 包含開放原始碼和專屬套件。 透過 Microsoft 發佈的開放原始碼: Microsoft R 開啟 (MRO)，基底 R 程式庫進行安裝。 目前的 R 使用者應該能夠連接埠其 R 程式碼，並以幾乎不需要修改 SQL Server 上的外部處理序方式執行它。 MRO 安裝獨立於 SQL 工具和外部核心引擎的程序，在擴充性架構中執行。 在安裝期間，您必須同意的開放原始碼授權條款。 之後，您可以執行標準的 R 封裝，不需要進一步修改就如同在 r 的任何其他開放原始碼散發 
+SQL Server 包含開放原始碼和專屬套件。 透過 Microsoft 的開放原始碼 r 的散發安裝基底的 R 程式庫Microsoft R Open (MRO)。 目前的 R 使用者應該能夠連接埠其 R 程式碼，並以幾乎不需要修改 SQL Server 上的外部處理序方式執行它。 MRO 安裝獨立於 SQL 工具和外部核心引擎的程序，在擴充性架構中執行。 在安裝期間，您必須同意的開放原始碼授權條款。 之後，您可以執行標準的 R 封裝，不需要進一步修改就如同在 r 的任何其他開放原始碼散發 
 
 SQL Server 不會修改基底的 R 可執行檔，但您必須使用安裝程式安裝，因為該版本是專屬的套件，建置及測試上的 R 版本。 如需有關如何 MRO 不同，您可能會收到從 CRAN R 基底散發的詳細資訊，請參閱[R 語言和 Microsoft R 產品與功能的互通性](https://docs.microsoft.com/r-server/what-is-r-server-interoperability)。
 
@@ -35,7 +35,7 @@ R 套件的平行和分散式工作負載，Microsoft 將加入包含下列的�
 | 程式庫 | 描述 |
 |---------|-------------|
 | [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 支援資料來源物件和資料探索、 操作、 轉換和視覺效果。 它支援建立遠端計算內容，以及各種不同的可調整機器學習服務模型，例如**rxLinMod**。 API 已經最佳化，可分析因過大而無法納入記憶體的資料集，以及執行分散在數個核心或處理器上的計算。 RevoScaleR 封裝也支援 XDF 檔案格式更快速移動和儲存用於分析的資料。 XDF 格式會使用單欄式儲存體、具可攜性，且可用來從各種來源載入然後操作資料，包括文字、SPSS 或 ODBC 連線。 |
-| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | 包含已針對速度及準確性，最佳化，以及內嵌轉換處理文字與映像的機器學習演算法。 如需詳細資訊，請參閱 <<c0> [ 使用 MicrosoftML 封裝與 SQL Server](https://docs.microsoft.com/sql/advanced-analytics/using-the-microsoftml-package)。 | 
+| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | 包含已針對速度及準確性，最佳化，以及內嵌轉換處理文字與映像的機器學習演算法。 如需詳細資訊，請參閱 < [SQL Server 中的 MicrosoftML](../r/ref-r-microsoftml.md)。 | 
 
 ## <a name="using-r-in-sql-server"></a>在 SQL Server 中使用 R
 

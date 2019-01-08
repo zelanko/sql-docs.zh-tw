@@ -19,12 +19,12 @@ ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2bb84f3ba798ba8d1af4132f6553e6428365ca9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7949729f3ebee87d06e5e591c46513c111b70016
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171298"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358890"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>分類矩陣 (Analysis Services - 資料採礦)
   「分類矩陣」會透過判斷預測值是否符合實際值，將模型中的所有案例分類到不同的類別目錄。 每個類別目錄中的所有案例都會計算在內，而且總數會顯示在矩陣中。 分類矩陣是統計模型評估的標準工具，有時稱為「混淆矩陣」。  
@@ -67,7 +67,7 @@ ms.locfileid: "48171298"
 |1|2|123|17|  
 |2|19|0|20|  
   
- 雖然加入多個資料行會讓報表看起來更為複雜，但是當您想要評估做出錯誤預測的累計成本時，其他詳細資料可能會非常實用。 若要建立對角線上的總和或是比較不同資料列組合的結果，您可以按一下 [分類矩陣] 索引標籤上提供的 [複製] 按鈕，並將報表貼到 Excel。 或者，您可以使用類似適用於 Excel 的資料採礦用戶端的用戶端 (它支援 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本)，直接在 Excel 中建立包含計數和百分比的分類報表。 如需詳細資訊，請參閱 [SQL Server Data Mining](http://go.microsoft.com/fwlink/?LinkID=77733)(SQL Server 資料採礦)。  
+ 雖然加入多個資料行會讓報表看起來更為複雜，但是當您想要評估做出錯誤預測的累計成本時，其他詳細資料可能會非常實用。 若要建立對角線上的總和或是比較不同資料列組合的結果，您可以按一下 [分類矩陣] 索引標籤上提供的 [複製] 按鈕，並將報表貼到 Excel。 或者，您可以使用類似適用於 Excel 的資料採礦用戶端的用戶端 (它支援 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本)，直接在 Excel 中建立包含計數和百分比的分類報表。 如需詳細資訊，請參閱 [SQL Server Data Mining](https://go.microsoft.com/fwlink/?LinkID=77733)(SQL Server 資料採礦)。  
   
 ## <a name="restrictions-on-the-classification-matrix"></a>分類矩陣的限制  
  分類矩陣只能搭配離散的可預測屬性一起使用。  
@@ -79,12 +79,12 @@ ms.locfileid: "48171298"
   
 |主題|連結|  
 |------------|-----------|  
-|提供如何為此目標郵寄模型建立增益圖的逐步解說。|[基本資料採礦教學課程](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [使用增益圖測試精確度&#40;基本資料採礦教學課程&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|說明相關的圖表類型。|[增益圖&#40;Analysis Services-資料採礦&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [收益圖&#40;Analysis Services-資料採礦&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [散佈圖&#40;Analysis Services-資料採礦&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|描述採礦模型和採礦結構的交叉驗證用法。|[交叉驗證&#40;Analysis Services-資料採礦&#41;](cross-validation-analysis-services-data-mining.md)|  
-|描述建立增益圖及其他精確度圖表的步驟。|[測試及驗證工作與操作方法&#40;資料採礦&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|提供如何為此目標郵寄模型建立增益圖的逐步解說。|[資料採礦基本教學課程](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [使用增益圖測試精確度 &#40;基本資料採礦教學課程&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|說明相關的圖表類型。|[增益圖 &#40;Analysis Services - 資料採礦&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [收益圖 &#40;Analysis Services - 資料採礦&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [散佈圖 &#40;Analysis Services - 資料採礦&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|描述採礦模型和採礦結構的交叉驗證用法。|[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](cross-validation-analysis-services-data-mining.md)|  
+|描述建立增益圖及其他精確度圖表的步驟。|[測試及驗證工作與操作方法 &#40;資料採礦&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [測試和驗證&#40;資料採礦&#41;](testing-and-validation-data-mining.md)  
+ [測試及驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)  
   
   

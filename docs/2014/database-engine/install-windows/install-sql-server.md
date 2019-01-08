@@ -13,12 +13,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cabca146b31035b6c1023cfc6c8bdda3e6a71958
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 7f631209a655b11062ffd17fa9f83f3e355011cf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018863"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356688"
 ---
 # <a name="install-sql-server-2014"></a>安裝 SQL Server 2014
 ## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ 下載 SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
@@ -27,7 +27,7 @@ ms.locfileid: "51018863"
  本主題提供可以用於安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之不同安裝選項的概觀。 如需有關各種[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可供安裝的元件以及安裝過程中，請參閱[SQL Server 2014 安裝](installation-for-sql-server.md)。  
 > **注意︰** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供 32 位元和 64 位元版本。 64 位元和 32 位元版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是透過安裝精靈或命令提示字元來安裝。 如需詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件，請參閱[Edition 和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)並[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
- 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程序中不會安裝範例資料庫和範例程式碼。 若要針對非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition 安裝範例資料庫和範例程式碼，請參閱 [CodePlex 網站](http://go.microsoft.com/fwlink/?LinkId=87843)。 如需查閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]範例資料庫及範例程式碼的支援資訊，請參閱＜ [資料庫及範例概觀](http://go.microsoft.com/fwlink/?LinkId=110391)＞。  
+ 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程序中不會安裝範例資料庫和範例程式碼。 若要針對非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition 安裝範例資料庫和範例程式碼，請參閱 [CodePlex 網站](https://go.microsoft.com/fwlink/?LinkId=87843)。 如需查閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]範例資料庫及範例程式碼的支援資訊，請參閱＜ [資料庫及範例概觀](https://go.microsoft.com/fwlink/?LinkId=110391)＞。  
   
  安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，請先檢閱安裝需求、系統組態檢查與安全性考量。 如需詳細資訊，請參閱 [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)。 如需有關不同 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝案例的詳細資訊，請參閱下節中的主題。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "51018863"
   
 ## <a name="how-to-install-includesscurrentincludessscurrent-mdmd"></a>如何安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-|Title|描述|  
+|標題|描述|  
 |-----------|-----------------|  
 |[安裝的使用說明主題](../../sql-server/install/installation-how-to-topics.md)|提供如何從安裝精靈、從命令提示字元、使用組態檔及使用 SysPrep 安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的程序性主題連結。|  
 |[在 Server Core 上安裝 SQL Server 2014](install-sql-server-on-server-core.md)|檢閱本主題了解如何在 Windows Server Core 上安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。|  

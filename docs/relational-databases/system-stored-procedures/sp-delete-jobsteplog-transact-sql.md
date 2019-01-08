@@ -18,12 +18,12 @@ ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a27efabaa838ed4b93fc7c17eeb67f721c8aa634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 719038f8ce72bdb05ad9dbf3c3585c377abb3a75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630156"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526229"
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@job_id =**] **'***job_id***'**  
+ [  **@job_id =**] **'**_job_id_**'**  
  包含將移除的作業步驟記錄之作業的作業識別碼。 *job_id*已**int**，預設值是 NULL。  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **'**_job_name_**'**  
  作業的名稱。 *job_name*已**sysname**，預設值是 NULL。  
   
 > **注意：** 任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
@@ -55,15 +55,15 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  [ **@step_id =**] *step_id*  
  這是作業中將刪除作業步驟記錄之步驟的識別碼。 如果未包含，會刪除作業中的所有作業步驟記錄，除非**@older_than**或是**@larger_than**所指定。 *step_id*已**int**，預設值是 NULL。  
   
- [ **@step_name =**] **'***step_name***'**  
+ [  **@step_name =**] **'**_step_name_**'**  
  這是作業中將刪除作業步驟記錄之步驟名稱。 *step_name*已**sysname**，預設值是 NULL。  
   
 > **注意：** 任一*step_id*或是*step_name*可以指定，但不可同時指定兩者。  
   
- [ **@older_than =**] **'***date***'**  
+ [  **@older_than =**] **'**_日期_**'**  
  您要保留的最舊作業步驟記錄的日期和時間。 在這個日期和時間之前的所有作業步驟記錄都會被移除。 *日期*已**datetime**，預設值是 NULL。 兩者**@older_than**並**@larger_than**可以指定。  
   
- [  **@larger_than =**] **'***size_in_bytes***'**  
+ [  **@larger_than =**] **'**_size_in_bytes_**'**  
  您要保留的最大作業步驟記錄的大小 (以位元組為單位)。 所有超出這個大小的作業步驟記錄都會被移除。 兩者**@larger_than**並**@older_than**可以指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  

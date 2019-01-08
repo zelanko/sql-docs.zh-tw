@@ -14,12 +14,12 @@ ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50dd31c343150362f1124d9476c526216c675fda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9ca50a030fef65c9de02bc93dcd970df2686b0a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196988"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420389"
 ---
 # <a name="connect-to-a-data-mining-server"></a>連接到資料採礦伺服器
   ![連接按鈕](media/misc-connection.gif "連接按鈕")  
@@ -68,7 +68,7 @@ ms.locfileid: "48196988"
   
  **我遺失了我的連線;未遺失我所有的工作嗎？**  
   
- 如果您終止與伺服器的連接，您的結果與資料並不會遺失，因為它們是儲存在 Excel 中。 不過，如果您建立了一些暫時性模型，則過不久後就會從伺服器中刪除這些模型。 因此，如果連接只是暫時中斷，有時候模型還沒有被刪除。  
+ 如果您終止與伺服器的連接，您的結果與資料並不會遺失，因為它們是儲存在 Excel 中。 不過，如果您建立了一些暫時性模型，則過不久後就會從伺服器中刪除這些模型。 因此如果您暫時失去連線，有時候模型還沒有被刪除。  
   
  任何產生的資料或結果都不會遺失，因為所有報表和資料表都是儲存在 Excel 中。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48196988"
   
 2.  檢視連接活動記錄檔，並透過檢閱資料行和可預測的輸出找出模型 (舉例來說)。  
   
-     進階使用者：如果您很熟悉 DMX 或 XMLA，可以將陳述式複製到檔案以供稍後使用。  
+     進階的使用者：如果您是熟悉 DMX 或 XMLA，您可以複製到檔案，以供稍後使用的陳述式。  
   
 3.  當您找到暫存模型和結構的名稱時，開啟**管理模型**和選取的模型。  
   
