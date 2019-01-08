@@ -18,12 +18,12 @@ ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d4f057351f6d3c4713c616c90748c2c6e43524f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fc52fd7af36d2238c53d8cbd877b7a6d43cd1dd
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837756"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591482"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@schedule_name =** ] **'***schedule_name***'**  
+ [  **@schedule_name =** ] **'**_schedule_name&lt_**'**  
  排程的名稱。 *schedule_name&lt*已**sysname**，沒有預設值。  
   
  [  **@enabled =** ]*啟用*  
@@ -98,7 +98,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x8**|小時|  
   
  [ **@freq_subday_interval =** ] *freq_subday_interval*  
- 數目*freq_subday_type*期間每次執行作業之間發生。 *freq_subday_interval*已**int**，預設值是**0**。 附註：間隔長度不應大於 10 秒。 *freq_subday_interval*在這些情況下會忽略其中*freq_subday_type*等於**1**。  
+ 數目*freq_subday_type*期間每次執行作業之間發生。 *freq_subday_interval*已**int**，預設值是**0**。 注意：間隔應超過 10 秒。 *freq_subday_interval*在這些情況下會忽略其中*freq_subday_type*等於**1**。  
   
  [ **@freq_relative_interval =** ] *freq_relative_interval*  
  作業的次數*freq_interval*每個月中，如果*freq_interval*是 32 （每月相對）。 *freq_relative_interval*已**int**，預設值是**0**，而且可以是下列值之一。 *freq_relative_interval*在這些情況下會忽略其中*freq_type*不等於 32。  
@@ -130,13 +130,13 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [ **@active_end_time =** ] *active_end_time*  
  之間任何一天的時間*active_start_date*並*active_end_date*結束執行作業。 *active_end_time*已**int**，預設值是**235959**，這表示下午 11:59:59 必須用 HHMMSS 格式來輸入。  
   
- [ **@owner_login_name**= ] **'***owner_login_name***'**  
+ [ **@owner_login_name**=] **'**_owner_login_name_**'**  
  擁有排程之伺服器主體的名稱。 *owner_login_name*已**sysname**，預設值是 NULL，表示排程建立者所擁有。  
   
- [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
+ [ **@schedule_uid**=] _schedule_uid_**輸出**  
  排程的唯一識別碼。 *schedule_uid*類型的變數**uniqueidentifier**。  
   
- [ **@schedule_id**= ] *schedule_id***OUTPUT**  
+ [ **@schedule_id**=] _schedule_id_**輸出**  
  排程的識別碼。 *schedule_id*類型的變數**int**。  
   
  [ **@originating_server**= ] *server_name*  

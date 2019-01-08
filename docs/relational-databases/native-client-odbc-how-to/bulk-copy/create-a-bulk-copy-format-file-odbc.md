@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a93aa651324d54aa1cc476d2e2408224dd537a95
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ad884bb6e08c6d3878ca059cd93aa76ba838f3cc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656707"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206977"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>建立大量複製格式檔案 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "51656707"
   
     -   要接收任何大量複製錯誤訊息的資料檔案名稱 (如果您不需要訊息檔案，請指定 NULL)。  
   
-    -   複製的方向：DB_OUT 到資料表或檢視表的檔案。  
+    -   複製的方向：從資料表或檢視表檔案 DB_OUT。  
   
 5.  呼叫[bcp_columns](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)來設定資料行數目。  
   
@@ -64,11 +64,11 @@ ms.locfileid: "51656707"
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
- 執行第一個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單，以便建立此範例將使用的資料表。  
+ 執行第一個 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單，以便建立此範例會使用的資料表。  
   
  使用 odbc32.lib 和 odbcbcp.lib 編譯第二個 (C++) 程式碼清單。  
   
- 執行第三個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單，以便刪除此範例所使用的資料表。  
+ 執行第三個 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單，以便刪除此範例所使用的資料表。  
   
 ```  
 use AdventureWorks  

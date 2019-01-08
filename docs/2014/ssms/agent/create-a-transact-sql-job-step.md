@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL job step
@@ -14,12 +14,12 @@ ms.assetid: 69c571a7-debe-4063-9d38-e4b6a1e8e84c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 698e2d52746cd641a962e51bdc613b093ac6f9fb
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 383a85bbbad6675c629f7789a09dca4cb0666559
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119505"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821622"
 ---
 # <a name="create-a-transact-sql-job-step"></a>Create a Transact-SQL Job Step
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟。  
@@ -43,7 +43,7 @@ ms.locfileid: "49119505"
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Security"></a> 安全性  
- 如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)＞。  
+ 如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
   
 ##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
   
@@ -77,7 +77,7 @@ ms.locfileid: "49119505"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- creates a job step that uses Transact-SQL  

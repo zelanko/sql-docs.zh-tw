@@ -20,19 +20,19 @@ ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35c8786c571936a27570166c8d331cbd2a641b76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 329cad1c2d60b40d3f8e448a1ea92b8ee5bebfb9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204648"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591432"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>填滿對話方塊 (報表產生器及 SSRS)
   在 [填滿] 索引標籤上，您可以指定資料區或文字方塊內，單一資料格或多個資料格的背景選項。  
   
 ## <a name="options"></a>選項。  
  **填滿色彩**  
- 按一下色彩按鈕，為矩形選取一個填滿色彩。 按一下 **Expression***(fx)* 按鈕來編輯運算式，它可以是 RGB 色彩，或其中一個預先定義的色彩名稱中所提供的十六進位值**運算式** 對話方塊。 若要查看預先定義之色彩的清單，選取 [項目] 窗格中的 [Web]。 您可以將列在 [標題] 窗格中的色彩名稱輸入到運算式文字窗格中。 輸入色彩名稱時，請勿使用等號 (=) 或引號 ("")。  
+ 按一下色彩按鈕，為矩形選取一個填滿色彩。 按一下 [運算式] _(fx)_ 按鈕來編輯運算式，這個運算式可以是 RGB 色彩的十六進位值，或在 [運算式] 對話方塊中提供之預先定義的其中一個色彩名稱。 若要查看預先定義之色彩的清單，選取 [項目] 窗格中的 [Web]。 您可以將列在 [標題] 窗格中的色彩名稱輸入到運算式文字窗格中。 輸入色彩名稱時，請勿使用等號 (=) 或引號 ("")。  
   
  **選取影像來源**  
  指出影像儲存的位置，以便在轉譯報表時，讓報表處理器可以顯示該影像。  
@@ -61,7 +61,7 @@ ms.locfileid: "48204648"
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [格式化文字和預留位置&#40;報表產生器及 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [映像&#40;報表產生器及 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
+ [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [影像 &#40;報表產生器和 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
   
   

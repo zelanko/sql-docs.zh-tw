@@ -1,25 +1,24 @@
 ---
-title: 步驟 2：建立部署專案 | Microsoft Docs
+title: 步驟 2：建立部署專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f335961ab925676adea8f98feb9c19270019d3e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73b69319237436cd50cebb8975adae552f58eb8f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172528"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368020"
 ---
 # <a name="step-2-creating-the-deployment-project"></a>步驟 2：建立部署專案
-  在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，可部署的單位是 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。 部署封裝之前，必須先建立新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，並且將所有封裝以及要隨同封裝一起部署的所有輔助檔案全部加入至該專案中。  
+  在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中，可部署的單位是 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。 部署封裝之前，必須先建立新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，並且將所有封裝以及要隨同封裝一起部署的所有輔助檔案全部加入至該專案中。  
   
 ### <a name="to-create-the-integration-services-project"></a>若要建立 Integration Services 專案  
   
@@ -40,11 +39,11 @@ ms.locfileid: "48172528"
 8.  依預設，會建立名稱為 Package.dtsx 的空白封裝，並將其加入至專案中。 但是，您並不會使用此封裝，而是將現有的封裝加入至專案中。 由於專案中的所有封裝都會包含在部署中，因此應該刪除 Package.dtsx。 若要刪除，請以滑鼠右鍵按一下這個檔案，然後按一下 [刪除]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 3：新增套件和其他檔案](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
+ [步驟 3:加入封裝和其他檔案](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
   
-![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
- [Integration Services &#40;SSIS&#41;專案](integration-services-ssis-projects-and-solutions.md)  
+ [Integration Services &#40;SSIS&#41; 專案](integration-services-ssis-projects-and-solutions.md)  
   
   

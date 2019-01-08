@@ -1,20 +1,22 @@
 ---
-title: SQL Server 2019 巨量資料叢集上執行的範例 notebook |Microsoft Docs
+title: 執行範例 notebook |Microsoft Docs
+titleSuffix: SQL Server 2019 big data clusters
 description: 本教學課程會示範您可以載入的方式執行的 SQL Server 2019 巨量資料叢集 （預覽） 上的 Spark notebook 範例。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/17/2018
+ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 811c94615f0d69886f0f538357529ad3125e2925
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 55d37969ec3e03a635e948cdafb73eb1922a1795
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644110"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432551"
 ---
-# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-2019-big-data-cluster"></a>教學課程： SQL Server 2019 巨量資料叢集上執行 notebook 範例
+# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-2019-big-data-cluster"></a>教學課程：SQL Server 2019 巨量資料叢集上執行 notebook 範例
 
 本教學課程會示範如何載入及執行 Azure Data Studio 中的 notebook，在 SQL Server 2019 巨量資料叢集 （預覽） 上。 這可讓資料科學家和資料工程師對叢集執行 Python、 R 或 Scala 程式碼。
 
@@ -23,11 +25,11 @@ ms.locfileid: "49644110"
 
 ## <a id="prereqs"></a> 必要條件
 
-* [將巨量資料叢集的 Kubernetes 上部署](deployment-guidance.md)。
-* [安裝 Azure Data Studio 和 SQL Server 2019 副檔名](deploy-big-data-tools.md)。
-* [將範例資料載入叢集](#sampledata)。
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [巨量資料工具](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 延伸模組**
+- [將範例資料載入您的巨量資料叢集](tutorial-load-sample-data.md)
 
 ## <a name="download-the-sample-notebook-file"></a>下載範例 notebook 檔案
 
@@ -47,7 +49,7 @@ ms.locfileid: "49644110"
 
 下列步驟示範如何在 Azure 資料 Studio 中開啟筆記本檔案：
 
-1. 在 Azure Data Studio，連接到您的巨量資料叢集的 HDFS/Spark 閘道。 如需詳細資訊，請參閱 <<c0> [ 連接到 HDFS/Spark 閘道](deploy-big-data-tools.md#hdfs)。
+1. 在 Azure Data Studio，連接到您的巨量資料叢集的 HDFS/Spark 閘道。 如需詳細資訊，請參閱 <<c0> [ 連接到 HDFS/Spark 閘道](connect-to-big-data-cluster.md#hdfs)。
 
 1. 在 HDFS/Spark 閘道連按兩下**伺服器**視窗。 然後選取**開啟 Notebook**。
 

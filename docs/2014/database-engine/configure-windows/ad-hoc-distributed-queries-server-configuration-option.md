@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - OPENROWSET function, ad hoc distributed queries option
@@ -18,12 +17,12 @@ ms.assetid: 5b982015-e196-44c3-83b8-275fb9d769b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: edd15d3d18b7b4d4d7a03689548186829389889f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04c2ea76808c2fa98e933021af93481c829baa21
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093290"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641155"
 ---
 # <a name="ad-hoc-distributed-queries-server-configuration-option"></a>特定分散式查詢伺服器組態選項
   根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許使用 OPENROWSET 和 OPENDATASOURCE 進行特定分散式查詢。 當此選項設定為 1 時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會允許特定存取。 當此選項未設定或設定為 0 時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就不允許特定存取。  
@@ -34,7 +33,7 @@ ms.locfileid: "48093290"
 >  啟用特定名稱，表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的任何驗證登入都可以存取該提供者。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對於任何可安全由本機登入存取的提供者，系統管理員應該為他啟用此功能。  
   
 ## <a name="remarks"></a>備註  
- 嘗試進行特定連接但是未啟用 **特定分散式查詢** 會產生錯誤：訊息 7415、層級 16、狀態 1、行 1  
+ 若要進行臨機操作連接嘗試**臨機操作分散式查詢**未啟用 發生錯誤的結果：訊息 7415、 層級 16，狀態 1，行 1  
   
  特定存取至 OLE DB 提供者 'Microsoft.ACE.OLEDB.12.0' 已經遭到拒絕。 您必須透過連結伺服器來存取此提供者。  
   

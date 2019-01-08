@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8d334a319807692f099056f0f350c395ecbeeb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 59650edbef55b7bb433c6003c9ddc0f203ca7c5e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120108"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780690"
 ---
 # <a name="index-element-dta"></a>Index 元素 (DTA)
   包含您要建立或卸除的使用者指定組態索引的相關資訊。  
@@ -66,13 +65,13 @@ ms.locfileid: "48120108"
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[建立項目&#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。|  
-|**子元素**|[名稱索引的項目&#40;DTA&#41;](name-element-for-index-dta.md)<br /><br /> [索引的 column 元素&#40;DTA&#41;](column-element-for-index-dta.md)<br /><br /> `PartitionScheme` 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。<br /><br /> `PartitionColumn` 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。<br /><br /> [索引的 Filegroup 元素&#40;DTA&#41;](filegroup-element-for-index-dta.md)<br /><br /> `NumberOfReferences` 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。<br /><br /> `PercentUsage` 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。|  
+|**父元素**|[Create 元素 &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。|  
+|**子元素**|[索引的 Name 元素 &#40;DTA&#41;](name-element-for-index-dta.md)<br /><br /> [索引的 Column 元素 &#40;DTA&#41;](column-element-for-index-dta.md)<br /><br /> `PartitionScheme` 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。<br /><br /> `PartitionColumn` 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。<br /><br /> [索引的 Filegroup 元素 &#40;DTA&#41;](filegroup-element-for-index-dta.md)<br /><br /> `NumberOfReferences` 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。<br /><br /> `PercentUsage` 元素。 如需詳細資訊，請參閱＜Database Engine Tuning Advisor XML 結構描述＞。|  
   
 ## <a name="example"></a>範例  
  如需此元素的使用範例，請參閱[含使用者指定組態的 XML 輸入檔範例 &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: aea808be-6f0f-40c2-9aa2-a2a435ec6443
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8ebc6b8e8d06418c289726fd3ff2a1e56830f464
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7393fe6d415f8b68758d75fafba91c9ab0a420c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155938"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370340"
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>部分可用性複本已中斷連接
     
@@ -29,14 +29,14 @@ ms.locfileid: "48155938"
 |-|-|  
 |**原則名稱**|可用性複本連接狀態|  
 |**問題**|某些可用性複本已中斷連接。|  
-|**類別目錄**|**警告**|  
+|**分類**|**警告**|  
 |**Facet**|可用性群組|  
   
 ## <a name="description"></a>描述  
  這項原則會積存所有可用性複本的連接狀態，並檢查是否有任何 DISCONENCTED 的可用性複本。 當任何可用性複本為 DISCONNECTED 時，原則為狀況不良。 否則原則為狀況良好。  
   
 > [!NOTE]  
->  在此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [某些可用性複本已中斷連接](http://go.microsoft.com/fwlink/p/?LinkId=220855) 。  
+>  在此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [某些可用性複本已中斷連接](https://go.microsoft.com/fwlink/p/?LinkId=220855) 。  
   
 ## <a name="possible-causes"></a>可能的原因  
  在此可用性群組中，至少一個次要複本未連接至主要複本。 連接狀態為 DISCONNECTED。  

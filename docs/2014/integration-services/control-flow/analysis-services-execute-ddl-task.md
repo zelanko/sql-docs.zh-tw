@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asexecuteddltask.f1
@@ -16,12 +15,12 @@ ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19da5b920b31791eacaf362819ce731d2822c0c4
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: cfe114b56f4fd41b80a7759388b8551103658337
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148103"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349357"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services 執行 DDL 工作
   「 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL」工作會執行可建立、卸除或修改採礦模型和多維度物件 (如 Cube 和維度) 的資料定義語言 (DDL) 陳述式。 例如，DDL 陳述式可在 **Adventure Works** Cube 中建立資料分割，或在 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中所含的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]範例資料庫) 中刪除維度。  
@@ -53,7 +52,7 @@ ms.locfileid: "50148103"
  下列 DDL 陳述式會刪除 **Promotion** 維度。  
   
 ```  
-<Delete xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Delete xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
     <Object>  
         <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
         <DimensionID>Dim Promotion</DimensionID>  
@@ -65,7 +64,7 @@ ms.locfileid: "50148103"
  下列 DDL 陳述式會處理 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] Cube。  
   
 ```  
-<Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Parallel>  
     <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
       <Object>  
@@ -82,7 +81,7 @@ ms.locfileid: "50148103"
  下列 DDL 陳述式會建立 **預測** 採礦模型。  
   
 ```  
-<Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Create xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
     <ParentObject>  
         <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
         <MiningStructureID>Forecasting</MiningStructureID>  
@@ -136,7 +135,7 @@ ms.locfileid: "50148103"
  下列 DDL 陳述式會刪除 **Promotion** 維度。  
   
 ```  
-<Delete xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Delete xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
     <Object>  
         <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
         <DimensionID>Dim Promotion</DimensionID>  
@@ -148,7 +147,7 @@ ms.locfileid: "50148103"
  下列 DDL 陳述式會處理 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] Cube。  
   
 ```  
-<Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Parallel>  
     <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
       <Object>  
@@ -165,7 +164,7 @@ ms.locfileid: "50148103"
  下列 DDL 陳述式會建立 **預測** 採礦模型。  
   
 ```  
-<Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Create xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
     <ParentObject>  
         <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
         <MiningStructureID>Forecasting</MiningStructureID>  

@@ -20,16 +20,16 @@ ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cca18bef15d57aa9d2cf97999939994a6c8c7934
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2606f7ec05df6422135220605087b81ac7ec4f50
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662126"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588972"
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName 函式
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ISO 92  
+ 導入的版本：ODBC 1.0 標準的合規性：ISO 92  
   
  **摘要**  
  **SQLSetCursorName**關聯現用陳述式中的資料指標名稱。 如果應用程式不會呼叫**SQLSetCursorName**，驅動程式會視需要來處理 SQL 陳述式，會產生資料指標名稱。  
@@ -78,7 +78,7 @@ SQLRETURN SQLSetCursorName(
 |IM001|驅動程式不支援此函式|(DM) 驅動程式相關聯*StatementHandle*不支援此函式。|  
   
 ## <a name="comments"></a>註解  
- 資料指標名稱僅用於定位的 update 和 delete 陳述式 (例如**更新***資料表名稱*...**WHERE CURRENT OF** *資料指標名稱*)。 如需詳細資訊，請參閱 <<c0> [ 定位更新和刪除陳述式](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)。 如果應用程式不會呼叫**SQLSetCursorName**來定義資料指標名稱，在驅動程式會產生的名稱開頭為字母 SQL_CUR，而且未超過 18 個字元的長度是查詢陳述式的執行。  
+ 資料指標名稱僅用於定位的 update 和 delete 陳述式 (例如**更新**_資料表名稱_...**WHERE CURRENT OF** _資料指標名稱_)。 如需詳細資訊，請參閱 <<c0> [ 定位更新和刪除陳述式](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)。 如果應用程式不會呼叫**SQLSetCursorName**來定義資料指標名稱，在驅動程式會產生的名稱開頭為字母 SQL_CUR，而且未超過 18 個字元的長度是查詢陳述式的執行。  
   
  在連接中的所有資料指標名稱必須是唯一的。 資料指標名稱的最大長度是由驅動程式定義。 最大的互通性，建議應用程式限制為不超過 18 個字元的資料指標名稱。 在 ODBC 3 *.x*，如果資料指標名稱是加上引號的識別項視為區分大小寫的方式，它可以包含字元的 SQL 語法不會允許或態度，例如空白或保留的關鍵字。 如果資料指標名稱都必須被視為區分大小寫的方式，則必須傳遞做為加上引號的識別碼。  
   

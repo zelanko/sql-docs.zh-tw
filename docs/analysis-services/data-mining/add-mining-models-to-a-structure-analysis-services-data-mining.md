@@ -1,5 +1,5 @@
 ---
-title: 將採礦模型加入結構 (Analysis Services-資料採礦) |Microsoft 文件
+title: 將採礦模型加入結構 (Analysis Services-資料採礦) |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c32140e639a0e79b8736036392104f593a305b30
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a3647ff06d00aebc4b5feb735d5a69b0b8db79e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014435"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524576"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>將採礦模型加入至結構 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34014435"
  當您使用資料採礦精靈建立新的採礦模型時，預設一定要先建立採礦結構。 然後此精靈會提供您將初始採礦模型加入至結構中的選項。 不過，您不需要立刻建立模型。 如果您只建立結構，則不需要決定要使用哪個資料行做為可預測屬性，或者如何在特定模型中使用資料， 只需要設定將來要用的一般資料結構，稍後您可以使用 [資料採礦設計師](../../analysis-services/data-mining/data-mining-designer.md) 來加入以該結構為基礎的新採礦模型。  
   
 > [!NOTE]  
->  在 DMX 中，CREATE MINING MODEL 陳述式會從採礦模型開始。 也就是說，您定義所要的採礦模型，然後 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會自動產生基礎結構。 稍後您可以使用 ALTER STRUCTURE... 陳述式繼續在該結構中加入新的採礦模型。 ADD MODEL 陳述式。  
+>  在 DMX 中，CREATE MINING MODEL 陳述式會從採礦模型開始。 也就是說，您定義所要的採礦模型，然後 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會自動產生基礎結構。 稍後您可以繼續在加入該結構的新採礦模型，使用 ALTER STRUCTURE...ADD MODEL 陳述式。  
   
 ## <a name="choosing-an-algorithm"></a>選擇演算法  
  當您將新的模型加入至現有結構時，您應該做的第一件事就是選取該模型中所要使用的資料採礦演算法。 選擇演算法非常重要，因為每一個演算法都會執行不同類型的分析，而且有不同的需求。  
@@ -54,7 +54,7 @@ ms.locfileid: "34014435"
  對某些資料行而言，您可能也需要指定「資料行內容」。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦中，每個資料行的內容類型屬性都會告訴演算法它該如何處理該資料行中的資料。 例如，如果資料有「收入」資料行，則您必須將內容類型設定為「連續」，指定該資料行包含連續的數字。 不過，您也可以將內容類型設定為「離散」並選擇性地指定確切的值區數，以指定將「收入」資料行中的數字分組為值區。 您可以建立以不同方式處理資料行的不同模型：例如，您可以嘗試將客戶區分為三個年齡群組值區的模型，也可以使用另一個將客戶區分為 10 個年齡群組值區的模型。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦結構 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [建立關聯式採礦結構](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
  [採礦模型屬性](../../analysis-services/data-mining/mining-model-properties.md)   
  [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)  

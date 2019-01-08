@@ -1,19 +1,19 @@
 ---
-title: CAB 下載 SQL Server 累計更新 |Microsoft Docs
-description: SQL Server 2017 Machine Learning 服務和 SQL Server 2016 R Services 的 CAB 下載。
+title: SQL Server 累計更新 SQL Server Machine Learning 的 CAB 下載
+description: SQL Server 2017 Machine Learning 服務和 SQL Server 2016 R Services 的 R 和 Python CAB 及套件下載。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 12/18/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 25568dc5a76283b18affd10ef0419f83515f6403
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: bb89093909b2ec39bdcfc892bd2d8b14651f2f7d
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232602"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626362"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>下載 SQL Server 資料庫內分析的累計更新的執行個體的封包
 
@@ -34,48 +34,53 @@ ms.locfileid: "48232602"
 
 封包檔會依反向時間順序列出。 當您下載的封包檔，並將它們傳送到目標電腦上時，將它們放置在方便存取的資料夾中這類**下載**或安裝程式使用者的 %temp%資料夾。
 
-版本  |下載連結  | 已解決的問題 | 
----------|---------------|-------|
-**[SQL Server 2017 CU10](https://support.microsoft.com/help/4342123)-[CU11](https://support.microsoft.com/help/4462262)** |  |  |
-Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 從舊版本未變更。 |
-R 伺服器      |[SRS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006287&clcid=1033)| 微幅修正。|
-Microsoft Python 開放     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 從舊版本未變更。 |
-Python 伺服器    |[SPS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006805&clcid=1033)| 移除重複項目時，Python rx_data_step 會遺失資料列順序。 <br/>SPEE 無法在叢集資料行存放區索引上的資料類型偵測。 <br/>資料行包含所有 null 值時，會傳回空白資料表。 |
-**[SQL Server 2017 CU8](https://support.microsoft.com/help/4338363)-[CU9](https://support.microsoft.com/help/4341265)** |  |  |
-Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 從舊版本未變更。 |
-R 伺服器      |[SRS_9.2.0.800_1033.cab](https://go.microsoft.com/fwlink/?LinkId=874708&clcid=1033)|
-Microsoft Python 開放     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 從舊版本未變更。 |
-Python 伺服器    |[SPS_9.2.0.800_1033.cab](https://go.microsoft.com/fwlink/?LinkId=874707&clcid=1033)|
-**[SQL Server 2017 CU6](https://support.microsoft.com/help/4101464)-[CU7](https://support.microsoft.com/help/4229789)** |  |  |
-Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 從舊版本未變更。 |
-R 伺服器      |[SRS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871074&clcid=1033)|
-Microsoft Python 開放     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 從舊版本未變更。 |
-Python 伺服器    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)| SPEES 查詢中的日期時間資料類型。<br/>預先定型的模型遺漏時，改善 microsoftml 中的錯誤訊息。<br/> 修正 revoscalepy 轉換函式和變數。|
-**[SQL Server 2017 CU5](https://support.microsoft.com/help/4092643)** |  |  |
-Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 從舊版本未變更。 |
-R 伺服器      |[SRS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869052&clcid=1033)| RxInstallPackages 中的長時間的路徑相關錯誤。<br/>RxExec 中回送連接。
-Microsoft Python 開放    | 從舊版本未變更。 |
-Python 伺服器    |[SPS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869053&clcid=1033)| <br/>在針對 rx_exec 回送連接。
-**[SQL Server 2017 CU4](https://support.microsoft.com/help/4056498)** |  |   |
-Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 從舊版本未變更。 |
-R 伺服器      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
-Microsoft Python 開放     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 從舊版本未變更。 |
- Python 伺服器    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
-**[SQL Server 2017 cu3 起](https://support.microsoft.com/help/4052987)** |  |  |
-Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
-R 伺服器      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
-Microsoft Python 開放     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 從舊版本未變更。 |
-Python 伺服器    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| Python 模型序列化 revoscalepy，使用[rx_serialize_model 函式](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)。<br/>[原生評分](../sql-native-scoring.md)支援，以及增強[即時評分](../real-time-scoring.md)。 
-**SQL Server 2017 [CU1](https://support.microsoft.com/help/4038634)-[CU2](https://support.microsoft.com/help/4052574)** |  |  |
-Microsoft R Open     | [SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)| 從舊版本未變更。 |
-R 伺服器      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
-Microsoft Python 開放     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 從舊版本未變更。 | 
-Python 伺服器    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) | 新增 rx_create_col_info 傳回結構描述資訊。 <br/>增強[rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec)以支援平行處理的案例使用`RxLocalParallel`計算內容。|
+版本  |元件 | 下載連結  | 已解決的問題 | 
+---------|----------|----------------|------------------|
+**[SQL Server 2017 CU13](https://support.microsoft.com/help/4466404)** |  |  |  |
+| | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 從舊版本未變更。 |
+| | R 伺服器      |[SRS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| 包含的修正程式升級[實際運作獨立的 R Server](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)，如透過 SQL Server 安裝程式安裝。 使用 CU13 計程車，並遵循[這些指示](sql-machine-learning-standalone-windows-install.md#apply-cu)來套用更新。 |
+| | Microsoft Python 開放     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 從舊版本未變更。 |
+| | Python 伺服器    |[SPS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038197&clcid=1033)| 包含的修正程式升級[實際運作獨立 Python Server](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)，如透過 SQL Server 安裝程式安裝。 使用 CU13 計程車，並遵循[這些指示](sql-machine-learning-standalone-windows-install.md#apply-cu)來套用更新。 |
+**[SQL Server 2017 CU10](https://support.microsoft.com/help/4342123)-[CU11](https://support.microsoft.com/help/4462262)-[CU12](https://support.microsoft.com/help/4464082)** |  |  |  |
+| | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 從舊版本未變更。 |
+| | R 伺服器      |[SRS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006287&clcid=1033)| 微幅修正。|
+| | Microsoft Python 開放     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 從舊版本未變更。 |
+| | Python 伺服器    |[SPS_9.2.0.1000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2006805&clcid=1033)| 移除重複項目時，Python rx_data_step 會遺失資料列順序。 <br/>SPEE 無法在叢集資料行存放區索引上的資料類型偵測。 <br/>資料行包含所有 null 值時，會傳回空白資料表。 |
+**[SQL Server 2017 CU8](https://support.microsoft.com/help/4338363)-[CU9](https://support.microsoft.com/help/4341265)** |  |  |  |
+| | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 從舊版本未變更。 |
+| | R 伺服器      |[SRS_9.2.0.800_1033.cab](https://go.microsoft.com/fwlink/?LinkId=874708&clcid=1033)|
+| | Microsoft Python 開放     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 從舊版本未變更。 |
+| | Python 伺服器    |[SPS_9.2.0.800_1033.cab](https://go.microsoft.com/fwlink/?LinkId=874707&clcid=1033)|
+**[SQL Server 2017 CU6](https://support.microsoft.com/help/4101464)-[CU7](https://support.microsoft.com/help/4229789)** |  |  |  |
+| | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 從舊版本未變更。 |
+| | R 伺服器      |[SRS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871074&clcid=1033)|
+| | Microsoft Python 開放     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 從舊版本未變更。 |
+| | Python 伺服器    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)| SPEES 查詢中的日期時間資料類型。<br/>預先定型的模型遺漏時，改善 microsoftml 中的錯誤訊息。<br/> 修正 revoscalepy 轉換函式和變數。|
+**[SQL Server 2017 CU5](https://support.microsoft.com/help/4092643)** |  |  |  |
+| | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 從舊版本未變更。 |
+| | R 伺服器      |[SRS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869052&clcid=1033)| RxInstallPackages 中的長時間的路徑相關錯誤。<br/>RxExec 中回送連接。
+| | Microsoft Python 開放    | 從舊版本未變更。 |
+| | Python 伺服器    |[SPS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869053&clcid=1033)| <br/>在針對 rx_exec 回送連接。
+**[SQL Server 2017 CU4](https://support.microsoft.com/help/4056498)** |  |   |  |
+| | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 從舊版本未變更。 |
+| | R 伺服器      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
+| | Microsoft Python 開放     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 從舊版本未變更。 |
+| |  Python 伺服器    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
+**[SQL Server 2017 cu3 起](https://support.microsoft.com/help/4052987)** |  |  |  |
+| | Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
+| | R 伺服器      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
+| | Microsoft Python 開放     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 從舊版本未變更。 |
+| | Python 伺服器    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)| Python 模型序列化 revoscalepy，使用[rx_serialize_model 函式](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)。<br/>[原生評分](../sql-native-scoring.md)支援，以及增強[即時評分](../real-time-scoring.md)。 
+**[SQL Server 2017 CU1](https://support.microsoft.com/help/4038634)-[CU2](https://support.microsoft.com/help/4052574)** |  |  |  |
+| | Microsoft R Open     | [SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)| 從舊版本未變更。 |
+| | R 伺服器      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
+| | Microsoft Python 開放     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 從舊版本未變更。 | 
+| | Python 伺服器    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) | 新增 rx_create_col_info 傳回結構描述資訊。 <br/>增強[rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec)以支援平行處理的案例使用`RxLocalParallel`計算內容。|
 **初始版本** |  |  |
-Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
-R 伺服器      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
-Microsoft Python 開放     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
-Python 伺服器    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
+| | Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
+| | R 伺服器      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
+| | Microsoft Python 開放     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
+| | Python 伺服器    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
 
 <a name="bkmk_2016Installers"></a>

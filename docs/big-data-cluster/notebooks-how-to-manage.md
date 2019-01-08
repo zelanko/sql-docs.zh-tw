@@ -1,18 +1,20 @@
 ---
-title: 如何管理 Azure Data Studio 中的 notebook |Microsoft Docs
-description: ''
+title: 管理 Azure Data Studio 中的 notebook
+titleSuffix: SQL Server 2019 big data clusters
+description: 了解如何管理 Azure Data Studio 中的 notebook。 這包括開啟 notebook 儲存，且變更您的巨量資料叢集連線。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ca756c81dcf54f42cb46be4b0f412ce9630814af
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.custom: seodec18
+ms.openlocfilehash: 998692f56f75e890ef0b4f8e40e256f2ebbd54de
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48796252"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246587"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>如何管理 Azure Data Studio 中的 notebook
 
@@ -22,8 +24,11 @@ ms.locfileid: "48796252"
 
 本文假設您已經有您想要使用 Azure Data Studio 中的 notebook。 如果您想要建立的 notebook，請參閱[如何在 SQL Server 2019 預覽中使用 notebook](notebooks-guidance.md)。 若要使用 Azure Data Studio notebook，您必須符合下列必要條件：
 
-- [安裝最新的巨量資料工具，以使用 SQL Server 2019 預覽](deploy-big-data-tools.md)。
 - [部署巨量資料叢集](quickstart-big-data-cluster-deploy.md)。
+- [SQL Server 2019 巨量資料工具](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **SQL Server 2019 延伸模組**
+   - **kubectl**
 
 ## <a name="open-a-notebook"></a>開啟 notebook
 
@@ -43,7 +48,7 @@ ms.locfileid: "48796252"
 
 ### <a name="command-palette"></a>命令選擇區
 
-使用命令**檔案： 開啟**從命令選擇區輸入 Ctrl + Shift + P （在 Windows) 和 Cmd + Shift + P （在 Mac)。
+使用命令**檔案：開啟**從命令選擇區輸入 Ctrl + Shift + P （在 Windows) 和 Cmd + Shift + P （在 Mac)。
 
 ![在命令選擇區輸入 File:Open 開啟 [開啟檔案] 對話方塊](./media/notebooks-how-to-manage/open-file-3.png)
 
@@ -57,7 +62,7 @@ ms.locfileid: "48796252"
 > 下列方法目前不要儲存變更至 notebook:
 >
 > - **檔案儲存**，**存新檔...** 並**儲存所有檔案**從 [檔案] 功能表的命令。
-> - **檔案： 儲存**在命令選擇區輸入命令。
+> - **檔案：儲存**在命令選擇區輸入命令。
 
 ## <a name="change-the-big-data-cluster"></a>變更巨量資料叢集
 

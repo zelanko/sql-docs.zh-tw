@@ -11,12 +11,12 @@ ms.assetid: b02779c2-a6b9-453c-815f-adad53353952
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 236f883056ccfd7c66701f5126b313ccbe2361b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b11e02c807abe8fa4231d15129f5ae3b96d5c05a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074558"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366560"
 ---
 # <a name="teradata-connection-type-ssrs"></a>Teradata 連接類型 (SSRS)
   若要在報表中包含來自 Teradata 關聯式資料庫的資料，您必須具有以 Teradata 類型的報表資料來源為基礎的資料集。 此內建的資料來源類型是以 .NET Managed Provider for Teradata 資料處理延伸模組為基礎。  
@@ -44,7 +44,7 @@ data source=<IP Address>
 ##  <a name="Remarks"></a> 備註  
  系統管理員必須先安裝支援從 Teradata 資料庫擷取資料的 .NET Data Provider for Teradata 版本，您才能夠連接 Teradata 資料來源。 此資料提供者必須與報表產生器安裝在同一部電腦上，並且同樣位於報表伺服器上。  
   
- 這個資料提供者並沒有支援所有的報表傳遞模式。 這個資料處理延伸模組不支援透過資料驅動訂閱所傳遞的報表。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [線上叢書](http://go.microsoft.com/fwlink/?linkid=121312)》中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文件的[使用外部資料來源以取得訂閱者資料 &#40;資料驅動訂閱&#41;](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。  
+ 這個資料提供者並沒有支援所有的報表傳遞模式。 這個資料處理延伸模組不支援透過資料驅動訂閱所傳遞的報表。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [線上叢書](https://go.microsoft.com/fwlink/?linkid=121312)》中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文件的[使用外部資料來源以取得訂閱者資料 &#40;資料驅動訂閱&#41;](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。  
   
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
   
@@ -68,10 +68,10 @@ data source=<IP Address>
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  提供資料集查詢所產生之欄位集合的相關資訊。  
   
- 《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [線上叢書》](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
+ 《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
  提供支援每一個資料延伸模組之平台與版本的深入資訊。  
   
- [使用 SQL Server 2008 Reporting Services 搭配 .NET Framework Data Provider for Teradata](http://go.microsoft.com/fwlink/?LinkID=130848)  
+ [使用 SQL Server 2008 Reporting Services 搭配 .NET Framework Data Provider for Teradata](https://go.microsoft.com/fwlink/?LinkID=130848)  
  提供有關使用這個資料延伸模組的詳細資訊。  
   
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  

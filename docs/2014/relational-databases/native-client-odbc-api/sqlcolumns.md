@@ -14,12 +14,12 @@ ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f4398efa6d8132800926c18d74bbcd7b9a524e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181318"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360950"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns` 或是否有值存在都會傳回 SQL_SUCCESS *CatalogName*， *TableName*，或*ColumnName*參數。 **SQLFetch**無效的值用於這些參數時，會傳回 sql_no_data 為止。  
@@ -29,7 +29,7 @@ ms.locfileid: "48181318"
   
  `SQLColumns` 可以在靜態伺服器資料指標上執行。 嘗試在可更新的 (動態或索引鍵集) 資料指標上執行 `SQLColumns` 時，將會傳回 SQL_SUCCESS_WITH_INFO，表示資料指標類型已變更。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援的報告資訊的連結伺服器上的資料表所接受的兩部分名稱*CatalogName*參數： *Linked_Server_Name.Catalog_Name*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援的報告資訊的連結伺服器上的資料表所接受的兩部分名稱*CatalogName*參數：*Linked_Server_Name.Catalog_Name*。  
   
  ODBC 2。*x*應用程式中不使用萬用字元*TableName*，`SQLColumns`傳回的相關資訊的資料表其名稱符合*TableName*和目前所擁有使用者。 如果目前使用者擁有其名稱符合任何資料表*TableName*參數`SQLColumns`傳回其他使用者所擁有的任何資料表的相關資訊，其中資料表名稱必須符合*TableName*參數。 ODBC 2。*x*應用程式使用萬用字元`SQLColumns`會傳回所有資料表其名稱符合*TableName*。 ODBC 3。*x*應用程式`SQLColumns`會傳回所有資料表其名稱符合*TableName*無論擁有者或是否使用萬用字元。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48181318"
  如需有關 ODBC 中的疏鬆資料行的詳細資訊，請參閱[疏鬆資料行支援&#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLColumns 函數](http://go.microsoft.com/fwlink/?LinkId=59336)   
+ [SQLColumns 函數](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: a1e9122c-aa0b-45de-b536-4f1202875ab1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7885f486ef19b0fa5424857bc03146f5d0b1c8bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f87046df4e41f40bc5de5f2a720247738841ff24
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220768"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376340"
 ---
 # <a name="implementing-the-isubscriptionbaseuiusercontrol-interface-for-a-delivery-extension"></a>實作傳遞延伸模組的 ISubscriptionBaseUIUserControl 介面
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 傳遞延伸模組可以包含訂閱使用者介面 (UI) 的實作，以收集報表管理員中延伸模組的特定資訊。 當使用者建立新訂閱或是修改現有的訂閱時，會叫用 UI。 當建立新訂閱時，UI 會顯示適當的預設值，並允許使用者與傳遞提供者互動。 當修改訂閱時，會使用目前訂閱中的資訊來預先擴展 UI。  
@@ -35,7 +35,7 @@ ms.locfileid: "48220768"
   
  <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 介面會擴充 <xref:Microsoft.ReportingServices.Interfaces.IExtension>。 實作 <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 的使用者控制項，也必須繼承自 **System.Web.UI.WebControls.WebControl**。 如需 **WebControl** 類別的詳細資訊，請參閱《[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 開發人員指南》。  
   
- 如需如何使用 <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 介面的範例，請參閱 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
+ 如需如何使用 <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 介面的範例，請參閱 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (SQL Server Reporting Services 產品範例)。  
   
 ## <a name="see-also"></a>另請參閱  
  [實作傳遞延伸模組](implementing-a-delivery-extension.md)   

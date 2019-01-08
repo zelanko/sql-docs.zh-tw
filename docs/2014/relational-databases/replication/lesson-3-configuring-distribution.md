@@ -1,5 +1,5 @@
 ---
-title: 第 3 課：設定散發 | Microsoft Docs
+title: 第 3 課：設定散發 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 7fbfb6d659aa8bc96ebc13ad0a3b89df750c5f95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e1ebde4d8b1303e3a845bf4ce9fdc03d3ba6c6a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167468"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589552"
 ---
 # <a name="lesson-3-configuring-distribution"></a>第 3 課：設定散發
   在這一課，您將在「發行集」端設定散發，並在發行集和散發資料庫上設定所需權限。 如果您已經設定「散發者」，則必須先停用發行和散發，再開始進行本課。 如果您必須保留現有的複寫拓撲，請勿執行上述動作。  
@@ -36,11 +36,11 @@ ms.locfileid: "48167468"
   
      [散發組態精靈] 隨即啟動。  
   
-3.  在上**散發者端**頁面上，選取 **'***\<ServerName >***' 將扮演本身的散發者;SQL Server 將建立散發資料庫和記錄**，然後按一下**下一步**。  
+3.  在上**散發者**頁面上，選取 **'**_\<伺服器名稱 >_**' 將扮演本身的散發者;SQL Server 將建立散發資料庫和記錄**，然後按一下**下一步**。  
   
 4.  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未執行，請在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 啟動] 頁面上選取 [是]，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務設定為自動啟動。 按 [下一步] 。  
   
-5.  在 [快照集資料夾] 文字方塊中，輸入 **\\\\**\<電腦名稱>**\repldata**，其中 \<電腦名稱> 是「發行者」的名稱，然後按一下 [下一步]。  
+5.  在 [快照集資料夾] 文字方塊中，輸入 **\\\\**\<_電腦名稱>_**\repldata**，其中 \<*電腦名稱>* 是「發行者」的名稱，然後按一下 [下一步]。  
   
 6.  接受精靈其餘頁面上的預設值。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48167468"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中展開 [安全性]，並以滑鼠右鍵按一下 [登入]，然後選取 [新增登入]。  
   
-2.  在 [一般] 頁面上，按一下 [搜尋]，並在 [輸入要選取的物件名稱] 方塊中輸入 \<電腦名稱>**\repl_snapshot** (其中 \<電腦名稱> 是本機「發行者」伺服器的名稱)，按一下 [檢查名稱]，然後按一下 [確定]。  
+2.  在 [一般] 頁面上，按一下 [搜尋]，並在 [輸入要選取的物件名稱] 方塊中輸入 \<_電腦名稱>_**\repl_snapshot** (其中 \<*電腦名稱>* 是本機「發行者」伺服器的名稱)，按一下 [檢查名稱]，然後按一下 [確定]。  
   
 3.  在 [使用者對應] 頁面上，從 [已對應到此登入的使用者] 清單中選取 **distribution** 和 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 這兩個資料庫。  
   

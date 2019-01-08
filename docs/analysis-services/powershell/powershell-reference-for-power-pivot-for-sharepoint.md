@@ -1,5 +1,5 @@
 ---
-title: Power Pivot for SharePoint 的 PowerShell 參考 |Microsoft 文件
+title: Services Power Pivot for SharePoint 進行分析的 PowerShell 參考 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 231a7fdeac135743ab38af9fbe4a7c4373c34990
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9228eb879ed1417b31c95d53783d32acf53bcdb4
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027968"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072405"
 ---
 # <a name="powershell-reference-for-power-pivot-for-sharepoint"></a>Power Pivot for SharePoint 的 PowerShell 參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   本節列出用來設定或管理 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝的 PowerShell 指令程式。 如需啟用 Cmdlet 與檢視內建說明的詳細資訊，請參閱 [使用 Windows PowerShell 的 Power Pivot 組態](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)。  
 
 >[!NOTE] 
->這份文件可能包含過時的資訊和範例。 使用 Get-help cmdlet 取得最新。
+>這篇文章可能會包含過期的資訊和範例。 使用 Get-help cmdlet 以取得最新版本。
   
 ## <a name="cmdlet-list"></a>指令程式清單  
  從 PowerShell 提示字元查看 Cmdlet 清單︰  
@@ -43,7 +43,7 @@ ms.locfileid: "34027968"
 |[Set-PowerPivotSystemService cmdlet](../../analysis-services/powershell/set-powerpivotsystemservice-cmdlet.md)|SharePoint 2013 &#124; SharePoint 2016|  
 |[Update-PowerPivotSystemService 指令程式](../../analysis-services/powershell/update-powerpivotsystemservice-cmdlet.md)|SharePoint 2013 &#124; SharePoint 2016|  
   
- 注意：下列 Cmdlet 只適用於 SharePoint 2010，不支援 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。  
+ 注意：下列 Cmdlet 只適用於 SharePoint 2010，其[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]不支援。  
   
 -   Get-PowerPivotEngineService  
   

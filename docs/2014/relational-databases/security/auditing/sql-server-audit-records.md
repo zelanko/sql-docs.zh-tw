@@ -12,12 +12,12 @@ ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fbca94db76fb0b3df636f3681dc01b0ef51571cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3cc249ebfce796d7932e68d993ac98ede867845f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183668"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364300"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit 記錄
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 功能可讓您稽核伺服器層級和資料庫層級的事件群組和事件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](sql-server-audit-database-engine.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -28,10 +28,10 @@ ms.locfileid: "48183668"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|可稽核的動作引發時的日期/時間。|`datetime2`|是|  
 |**sequence_no**|追蹤單一稽核記錄中太長而無法納入稽核寫入緩衝區內的記錄順序。|`int`|是|  
-|**action_id**|動作的識別碼<br /><br /> 提示：若要使用 **action_id** 作為述詞，您必須將它從字元字串轉換為數值。 如需詳細資訊，請參閱 [針對 action_id/class_type 述詞篩選 SQL Server Audit](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)。|`varchar(4)`|是|  
-|**succeeded**|指示觸發此事件的動作是否成功|`bit` – 1 = 成功，0 = 失敗|是|  
+|**action_id**|動作的識別碼<br /><br /> 提示：若要使用**action_id**做為述詞必須從字元字串中轉換為數值。 如需詳細資訊，請參閱 [針對 action_id/class_type 述詞篩選 SQL Server Audit](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)。|`varchar(4)`|是|  
+|**succeeded**|指示觸發此事件的動作是否成功|`bit` -1 = 成功，0 = 失敗|是|  
 |**permission_bitmask**|當適用時，顯示已授與、拒絕或撤銷的權限|`bigint`|否|  
-|**is_column_permission**|指出資料行層級權限的旗標|`bit` – 1 = true,0 = False|否|  
+|**is_column_permission**|指出資料行層級權限的旗標|`bit` -1 = true,0 = False|否|  
 |**session_id**|事件發生所在之工作階段的識別碼。|`int`|是|  
 |**server_principal_id**|動作執行所在之登入環境的識別碼。|`int`|是|  
 |**database_principal_id**|動作執行所在之資料庫使用者環境的識別碼。|`int`|否|  

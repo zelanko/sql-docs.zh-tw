@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferjobstask.f1
@@ -15,12 +14,12 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9926ce7d8ef85533ec7e67f0cd2800d74ee253e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2d4c308245312fa4fa80c1f320e874f89a3dec7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194648"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790970"
 ---
 # <a name="transfer-jobs-task"></a>傳送作業工作
   「傳送作業」工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間，傳送一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 作業。  
@@ -44,7 +43,7 @@ ms.locfileid: "48194648"
  「傳送作業」工作會引發報告已傳送作業數目的資訊事件，並在覆寫作業時引發警告事件。 該工作並不報告作業傳送的累加進度，它只報告 0% 和 100% 完成。  
   
 ## <a name="execution-value"></a>執行值  
- 工作之 `ExecutionValue` 屬性中定義的執行值會傳回已傳送的作業數目。 藉由指派的使用者定義變數`ExecValueVariable`屬性的傳送作業 」 工作，作業傳送相關的資訊以供其他物件在封裝中。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)和[在封裝中使用變數](../use-variables-in-packages.md)。  
+ 工作之 `ExecutionValue` 屬性中定義的執行值會傳回已傳送的作業數目。 透過將使用者自訂變數指派給「傳送作業」工作的 `ExecValueVariable` 屬性，可將與作業傳送相關的資訊用於封裝中的其他物件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)和[在封裝中使用變數](../use-variables-in-packages.md)。  
   
 ## <a name="log-entries"></a>記錄項目  
  「傳送作業」工作包含下列自訂記錄項目：  
@@ -63,9 +62,9 @@ ms.locfileid: "48194648"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [傳送作業工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [傳送作業工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [傳送作業工作編輯器&#40;作業頁面&#41;](../transfer-jobs-task-editor-jobs-page.md)  
+-   [傳送作業工作編輯器 &#40;作業頁面&#41;](../transfer-jobs-task-editor-jobs-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 資料表和資料行 |Microsoft 文件
+title: Analysis Services 表格式模型資料表和資料行 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 10133b2843c01f16134c028140394247c2669236
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f7a9844032ad24de1c81144ca742bfb185aecc36
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043422"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072155"
 ---
 # <a name="tables-and-columns"></a>資料表與資料行 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "34043422"
   
 -   關聯式資料和表格式 (HTML) 資料的組合會複製並貼到資料表中。  
   
- 當您匯入資料時，每一個資料表或檢視表、工作表或資料檔都會當做資料表加入至模型設計師。 您通常會從各種來源將資料加入到個別的索引標籤上，但是您可以使用 **[貼上]** 和 **[貼上新增]** 來合併單一資料表中的資料。 如需詳細資訊，請參閱[複製及貼上資料](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)。  
+ 當您匯入資料時，每一個資料表或檢視表、工作表或資料檔都會當做資料表加入至模型設計師。 您通常會從各種來源將資料加入到個別的索引標籤上，但是您可以使用 **[貼上]** 和 **[貼上新增]** 來合併單一資料表中的資料。 如需詳細資訊，請參閱 <<c0> [ 複製並貼上資料](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)。  
   
  在您加入所需的資料之後，您可以建立資料表之間的其他關聯性、在其他資料表中查閱或參考相關的值，或者加入新的導出資料行來建立衍生的值。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "34043422"
   
 ##  <a name="bkmk_related_tasks"></a> 相關工作  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[在資料表新增資料行](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)|描述如何將來源資料行加入至資料表定義。|  
 |[刪除資料行](../../analysis-services/tabular-models/delete-a-column-ssas-tabular.md)|描述如何使用模型設計師或 [資料表屬性] 對話方塊，刪除模型資料表資料行。|  
@@ -67,7 +67,7 @@ ms.locfileid: "34043422"
 |[刪除資料表](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)|描述如何刪除模型工作空間資料庫中不再需要的資料表。|  
 |[重新命名資料表或資料行](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|描述如何重新命名資料表或資料行，以在模型中更容易識別。|  
 |[設定資料行的資料類型](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|描述如何變更資料行的資料類型。 資料類型定義資料行中資料的儲存及呈現方式。|  
-|[隱藏或凍結資料行](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|描述如何隱藏您不想顯示的資料行，以及如何透過凍結 (鎖定) 某個區域中的特定資料行，以在捲動到模型其他區域時，讓某個模型區域保持可見。|  
+|[隱藏或凍結資料行](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|描述如何隱藏您不想要顯示的資料行，以及如何透過凍結 （鎖定） 某個區域中的特定資料行捲動到模型其他區域時保留某個模型區域是可見。|  
 |[導出資料行](../../analysis-services/tabular-models/ssas-calculated-columns.md)|本節中的主題描述如何使用導出資料行將彙總資料加入至模型。|  
 |[篩選與排序資料](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|本節中的主題描述如何使用模型設計師中的控制項篩選或排序資料。|  
   

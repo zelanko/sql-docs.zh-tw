@@ -14,12 +14,12 @@ ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20b84484500e338136ff0ab99af7890d06a466e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109514"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368110"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式指定的下列額外的診斷欄位`SQLGetDiagField`。 這些欄位支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應用程式的豐富錯誤報告功能，並且可用於在連接的 ODBC 連接控制代碼和 ODBC 陳述式控制代碼上產生的所有診斷記錄。 欄位會定義在 sqlncli.h 中。  
@@ -36,7 +36,7 @@ ms.locfileid: "48109514"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會支援下列其他的動態函數程式碼，以識別最後所嘗試的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式。 動態函數程式碼會以診斷記錄集的標頭 (記錄 0) 傳回，因此會在每次執行時使用 (不論成功與否)。  
   
-|動態函數程式碼|來源|  
+|動態函數程式碼|原始程式檔|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE 陳述式|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT 陳述式|  
@@ -95,12 +95,12 @@ ms.locfileid: "48109514"
 |SQL_DIAG_DFC_SS_WRITETEXT|WRITETEXT 陳述式|  
   
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField 和資料表值參數  
- SQLGetDiagField 可以用來擷取兩個診斷欄位： SQL_DIAG_SS_TABLE_COLUMN_NUMBER 和 SQL_DIAG_SS_TABLE_ROW_NUMBER。 這些欄位可協助您判斷哪些值導致與診斷記錄相關聯的錯誤或警告。  
+ SQLGetDiagField 可用來擷取兩個診斷欄位：SQL_DIAG_SS_TABLE_COLUMN_NUMBER 和 SQL_DIAG_SS_TABLE_ROW_NUMBER。 這些欄位可協助您判斷哪些值導致與診斷記錄相關聯的錯誤或警告。  
   
  如需有關資料表值參數的詳細資訊，請參閱 < [Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLGetDiagField 函數](http://go.microsoft.com/fwlink/?LinkId=59352)   
+ [SQLGetDiagField 函數](https://go.microsoft.com/fwlink/?LinkId=59352)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

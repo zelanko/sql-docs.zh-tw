@@ -12,26 +12,26 @@ ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 843bf7c05fad886e42ce4d1241715e21fd95918a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d89447c98f8f74e68cd8ef563cbf049b4dcea7d4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086290"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358990"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>列舉 OLE DB 資料來源 (OLE DB)
   此範例會示範如何使用列舉值物件來列出可用的資料來源。  
   
- 若要列出可見 SQLOLEDB 列舉值的資料來源，取用者會呼叫[isourcesrowset:: Getsourcesrowset](http://go.microsoft.com/fwlink/?LinkId=120312)方法。 這個方法會傳回有關目前可見之資料來源的資訊資料列集。  
+ 若要列出可見 SQLOLEDB 列舉值的資料來源，取用者會呼叫[isourcesrowset:: Getsourcesrowset](https://go.microsoft.com/fwlink/?LinkId=120312)方法。 這個方法會傳回有關目前可見之資料來源的資訊資料列集。  
   
  根據所使用的網路程式庫而定，將會搜尋適當的網域來找出資料來源。 如果是具名管道，這就是用戶端登入的網域。 如果是 AppleTalk，這就是預設區域。 如果是 SPX/IPX，這就是連結中找到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝清單。 如果是 Banyan VINES，這就是本機網路上找到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝。 不支援多重通訊協定和 TCP/IP 通訊端。  
   
  當伺服器關閉或開啟時，可能會花上好幾分鐘的時間來更新這些網域中的資訊。  
   
- 此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
+ 此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>若要列舉 OLE DB 資料來源  
   

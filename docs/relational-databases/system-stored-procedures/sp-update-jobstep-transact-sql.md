@@ -18,12 +18,12 @@ ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aca8858c65a900c085eba9d91461c4b3dc57b7fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 102e9122b93938b8e16d2e8714eed8d1372d21ad
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772976"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591522"
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,22 +65,22 @@ sp_update_jobstep
  [ **@job_id =**] *job_id*  
  這是步驟所屬之作業的識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。 任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **'**_job_name_**'**  
  這是步驟所屬的作業名稱。 *job_name*已**sysname**，預設值是 NULL。 任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
   
  [ **@step_id =**] *step_id*  
  要修改的作業步驟的識別碼。 無法變更這個識別碼。 *step_id*已**int**，沒有預設值。  
   
- [ **@step_name =**] **'***step_name***'**  
+ [  **@step_name =**] **'**_step_name_**'**  
  這是步驟的新名稱。 *step_name*已**sysname**，預設值是 NULL。  
   
- [ **@subsystem =**] **'***subsystem***'**  
+ [  **@subsystem =**] **'**_子系統_**'**  
  Microsoft SQL Server Agent 執行子系統*命令*。 *子系統*已**nvarchar(40)**，預設值是 NULL。  
   
- [  **@command =**] **'***命令***'**  
+ [  **@command =**] **'**_命令_**'**  
  若要透過執行命令*子系統*。 *命令*已**nvarchar （max)**，預設值是 NULL。  
   
- [ **@additional_parameters =**] **'***parameters***'**  
+ [  **@additional_parameters =**] **'**_參數_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@cmdexec_success_code =**] *success_code*  
@@ -112,13 +112,13 @@ sp_update_jobstep
  [ **@on_fail_step_id =**] *fail_step_id*  
  步驟失敗時執行此作業中步驟的識別碼和*fail_action*是**4**。 *fail_step_id*已**int**，預設值是 NULL。  
   
- [ **@server =**] **'***server***'**  
+ [  **@server =**] **'**_server_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *伺服器*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。  
   
- [ **@database_name =**] **'***database***'**  
+ [  **@database_name =**] **'**_資料庫_**'**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 步驟執行所在的資料庫名稱。 *資料庫*已**sysname**。 不允許以括號 ([ ]) 括住的名稱。 預設值是 NULL。  
   
- [ **@database_user_name =**] **'***user***'**  
+ [  **@database_user_name =**] **'**_使用者_**'**  
  執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步驟時所用的使用者帳戶名稱。 *使用者*已**sysname**，預設值是 NULL。  
   
  [ **@retry_attempts =**] *retry_attempts*  
@@ -130,7 +130,7 @@ sp_update_jobstep
  [ **@os_run_priority =**] *run_priority*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@output_file_name =**] **'***file_name***'**  
+ [  **@output_file_name =**] **'**_file_name_**'**  
  儲存此步驟之輸出的檔案名稱。 *file_name*已**nvarchar(200**，預設值是 NULL。 這個參數只對在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 CmdExec 子系統中執行的命令有效。  
   
  若要將 output_file_name 設為 NULL，您必須設定*output_file_name*為空字串 (' ') 或字串空白的字元，但您無法使用**CHAR(32)** 函式。 例如，依照下列方式，將這個引數設為空字串：  
@@ -151,7 +151,7 @@ sp_update_jobstep
  [ **@proxy_id**= ] *proxy_id*  
  用於執行作業步驟之 Proxy 的識別碼。 *proxy_id*是型別**int**，預設值是 NULL。 如果沒有*proxy_id*指定，則沒有*proxy_name*未指定，且不*user_name*指定，做為服務帳戶執行的作業步驟[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式。  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
+ [ **@proxy_name**=] **'**_proxy_name_**'**  
  用於執行作業步驟的 Proxy 名稱。 *proxy_name*是型別**sysname**，預設值是 NULL。 如果沒有*proxy_id*指定，則沒有*proxy_name*未指定，且不*user_name*指定，做為服務帳戶執行的作業步驟[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式。  
   
 ## <a name="return-code-values"></a>傳回碼值  

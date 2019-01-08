@@ -1,70 +1,66 @@
 ---
-title: 查詢及修改 SQL Server 資料 （SQL 和 R 深入探討） |Microsoft Docs
+title: 查詢及修改使用 RevoScaleR-SQL Server Machine Learning 的 SQL Server 資料
+description: 教學課程逐步解說如何查詢及修改 SQL Server 上使用 R 語言的資料。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 57fff9b8ddfd6507876bd6eb174a127d70d0b916
-ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
+ms.openlocfilehash: 191dd7237307d33d3cdaca5872fee9a09d27f321
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45975647"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645407"
 ---
-# <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>查詢及修改 SQL Server 資料 （SQL 和 R 深入探討）
+# <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>查詢及修改 SQL Server 資料 （SQL Server 和 RevoScaleR 教學課程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-這篇文章是資料科學深入探討教學課程中，有關如何使用一部分[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server。
+這一課是屬於[RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)如何使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server。
 
-既然您已將資料載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，便可以在 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]使用您建立的資料來源作為 R 函數的引數，以取得變數的基本資訊，並產生摘要和長條圖。
+您可以在上一個課程中，載入將資料載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在此步驟中，您就可以探索並將資料使用下列方法修改**RevoScaleR**:
 
-在此步驟中，您可以重複使用來進行一些快速分析，然後提升資料的資料來源。
+> [!div class="checklist"]
+> * 傳回變數的基本資訊
+> * 從原始資料建立類別目錄資料
 
-## <a name="query-the-data"></a>查詢資料
+類別的資料，或是*因素變數*，適合用於探勘資料視覺效果。 您可以使用它們做為輸入長條圖若要了解哪些變數的資料看起來的樣子。
 
-首先，取得一份資料行和其資料類型的清單。
+## <a name="query-for-columns-and-types"></a>資料行和類型的查詢
 
-1.  使用函式[rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf)並指定您想要分析的資料來源。
+若要執行 R 指令碼中使用的 R IDE 或 RGui.exe。 
 
-    根據您的 RevoScaleR 的版本，您也可以使用[rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)。 
+首先，取得一份資料行和其資料類型的清單。 您可以使用此函式[rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf)並指定您想要分析的資料來源。 版本而定**RevoScaleR**，您也可以使用[rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)。 
   
-    ```R
-    rxGetVarInfo(data = sqlFraudDS)
-    ```
+```R
+rxGetVarInfo(data = sqlFraudDS)
+```
 
-    **結果**
-    
-    *Var 1: custID, Type: integer*
-    
-    *Var 2: gender, Type: integer*
-    
-    *Var 3: state, Type: integer*
-    
-    *Var 4: cardholder, Type: integer*
-    
-    *Var 5: balance, Type: integer*
-    
-    *Var 6: numTrans, Type: integer*
-    
-    *Var 7: numIntlTrans, Type: integer*
-    
-    *Var 8: creditLine, Type: integer*
-    
-    *Var 9: fraudRisk, Type: integer*
+**結果**
 
+```R
+Var 1: custID, Type: integer
+Var 2: gender, Type: integer
+Var 3: state, Type: integer
+Var 4: cardholder, Type: integer
+Var 5: balance, Type: integer
+Var 6: numTrans, Type: integer
+Var 7: numIntlTrans, Type: integer
+Var 8: creditLine, Type: integer
+Var 9: fraudRisk, Type: integer
+```
 
-## <a name="modify-metadata"></a>修改中繼資料
+## <a name="create-categorical-data"></a>建立類別的資料
 
-所有變數會都儲存為整數，但某些變數代表類別的資料，稱為*因素變數*例如，資料行*狀態*包含當做識別項之 50 州再加上哥倫比亞特區的數字。  為了讓您更輕鬆地了解資料，您將數字取代為各州縮寫的清單。
+所有變數會都儲存為整數，但某些變數代表類別的資料，稱為*因素變數*例如，資料行*狀態*包含當做識別項之 50 州再加上哥倫比亞特區的數字。 為了讓您更輕鬆地了解資料，您將數字取代為各州縮寫的清單。
 
 在此步驟中，您會建立包含縮寫的字串向量，並再將這些類別的值對應至原始的整數識別碼。 然後使用中的新變數*colInfo*引數，來指定此資料行視為因素。 每當您分析資料，或將它移，使用縮寫，以及資料行視為因素。
 
-將資料行對應至縮寫，然後才使用它作為因數，實際上也能改善效能。 如需詳細資訊，請參閱 < [R 和資料最佳化](..\r\r-and-data-optimization-r-services.md)。
+將資料行對應至縮寫，然後才使用它作為因數，實際上也能改善效能。 如需詳細資訊，請參閱 < [R 和資料最佳化](../r/r-and-data-optimization-r-services.md)。
 
-1. 一開始先建立 R 變數 *stateAbb*，以及定義要新增給它的字串向量，如下所示︰
+1. 一開始先建立 R 變數*stateAbb*，以及定義要加入，，如下所示的字串向量。
   
     ```R
     stateAbb <- c("AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",
@@ -99,7 +95,7 @@ ms.locfileid: "45975647"
     )
     ```
   
-3. 若要建立使用更新資料的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源，請如之前一樣呼叫 **RxSqlServerData** 函數，但新增 *colInfo* 引數。
+3. 若要建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會使用更新的資料，呼叫的資料來源**RxSqlServerData**函式和以前一樣，但新增*colInfo*引數。
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,
@@ -118,30 +114,21 @@ ms.locfileid: "45975647"
 
     **結果**
     
-    *Var 1: custID, Type: integer*
-    
-    *Var 2： 性別 2 個因素層級： 男性女性*
-    
-    *Var 3： 狀態 51 因素 levels: AK AL AR AZ CA...VT WA WI WV WY*
-    
-    *Var 4： 持卡人 2 因素層級： 主體的次要資料庫*
-    
-    *Var 5: balance, Type: integer*
-    
-    *Var 6: numTrans, Type: integer*
-    
-    *Var 7: numIntlTrans, Type: integer*
-    
-    *Var 8: creditLine, Type: integer*
-    
-    *Var 9: fraudRisk, Type: integer*
+    ```R
+    Var 1: custID, Type: integer
+    Var 2: gender  2 factor levels: Male Female
+    Var 3: state   51 factor levels: AK AL AR AZ CA ... VT WA WI WV WY
+    Var 4: cardholder  2 factor levels: Principal Secondary
+    Var 5: balance, Type: integer
+    Var 6: numTrans, Type: integer
+    Var 7: numIntlTrans, Type: integer
+    Var 8: creditLine, Type: integer
+    Var 9: fraudRisk, Type: integer
+    ```
 
-現在您指定的三個變數 (_gender_、 _state_和 _cardholder_) 被視為因素。
+現在您指定的三個變數 (*gender*、 *state*和 *cardholder*) 被視為因素。
 
-## <a name="next-step"></a>下一步
+## <a name="next-steps"></a>後續步驟
 
-[定義及使用計算內容](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
-
-## <a name="previous-step"></a>上一個步驟
-
-[使用 RxSqlServerData 建立 SQL Server 資料物件](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
+> [!div class="nextstepaction"]
+> [定義及使用計算內容](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)

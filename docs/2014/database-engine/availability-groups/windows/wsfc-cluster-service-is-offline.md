@@ -14,12 +14,12 @@ ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2fd89cf306116a0554366984f864c6f0f6020a20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cfab5de4cd3d171d4d8b7515e65b0a9cd117ac16
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126008"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377460"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>WSFC 叢集服務離線
     
@@ -29,7 +29,7 @@ ms.locfileid: "48126008"
 |-|-|  
 |**原則名稱**|WSFC 叢集狀態|  
 |**問題**|WSFC 叢集服務已離線。|  
-|**類別目錄**|**嚴重**|  
+|**分類**|**嚴重**|  
 |**Facet**|SQL Server 的執行個體|  
   
 ## <a name="description"></a>描述  
@@ -38,7 +38,7 @@ ms.locfileid: "48126008"
  當叢集狀態為標準仲裁時，原則為狀況良好。  
   
 > [!NOTE]  
->  在此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [WSFC 叢集服務已離線](http://go.microsoft.com/fwlink/p/?LinkId=220849) 。  
+>  在此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中，可能原因和解決方案的資訊位於 TechNet Wiki 上的 [WSFC 叢集服務已離線](https://go.microsoft.com/fwlink/p/?LinkId=220849) 。  
   
 ## <a name="possible-causes"></a>可能的原因  
  這個問題可能是叢集服務問題或叢集遺失仲裁所造成。  

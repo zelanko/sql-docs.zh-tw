@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], data types
@@ -14,12 +13,12 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9195d5fad08c8e6539419ba33eb64a840a4688d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80110c29ec1c576684c4ccd67bc0c3408e6250b3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194873"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363341"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>運算式中的 Integration Services 資料類型
   運算式評估工具使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型。 當資料初次進入 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 封裝中的資料流程時，資料流程引擎會將所有資料行的資料轉換成 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型，而運算式所使用的資料行資料已為 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型。 「條件式分割」和「衍生的資料行」轉換中使用的運算式可參考資料行，因為它們是包含資料行資料的資料流程中的一部分。  
@@ -33,7 +32,7 @@ ms.locfileid: "48194873"
  此外，運算式還可包含字串、布林，以及數值常值。 如需將數值常值轉換為數值 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型的詳細資訊，請參閱[常值 &#40;SSIS&#41;](numeric-string-and-boolean-literals.md)。  
   
 ## <a name="implicit-data-conversion"></a>隱含資料轉換  
- 當運算式評估工具自動將資料從一種資料類型轉換為另一種資料類型時，會發生資料類型的隱含轉換。 例如，如果`smallint`相較於`int`，則`smallint`隱含地轉換成`int`執行比較之前。  
+ 當運算式評估工具自動將資料從一種資料類型轉換為另一種資料類型時，會發生資料類型的隱含轉換。 例如，如果將 `smallint` 與 `int` 做比較，就會先將 `smallint` 隱含轉換成 `int`，然後再執行比較。  
   
  當引數和運算元的資料類型不相容時，運算式評估工具無法執行隱含資料轉換。 此外，運算式評估工具無法將任何值隱含轉換為布林。 而必須使用轉換運算子隱含轉換引數和運算元。 如需詳細資訊，請參閱 [Cast &#40;SSIS 運算式&#41;](cast-ssis-expression.md)。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48194873"
 > [!NOTE]  
 >  布林值是邏輯值，而非數字。 雖然布林值可以在某些環境下顯示為數字，但不會儲存為數字，而且不同的程式設計語言將布林值表示成數值的方式各有不同，.NET Framework 方法也是如此。  
 >   
->  例如，Visual Basic 提供的轉換函數會將 `True` 轉換為 -1；然而 .NET Framework 中的 `System.Convert.ToInt32` 方法會將 `True` 轉換為 +1。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]運算式語言轉換`True`為-1。  
+>  例如，Visual Basic 提供的轉換函數會將 `True` 轉換為 -1；然而 .NET Framework 中的 `System.Convert.ToInt32` 方法會將 `True` 轉換為 +1。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 運算式語言則會將 `True` 轉換為 -1。  
 >   
 >  若要避免錯誤或非預期結果，您所撰寫的程式碼不應該以特定數值表示 `True` 和 `False`。 您應該盡可能將布林變數的使用限制在當初所設計的邏輯值上。  
   
@@ -58,13 +57,13 @@ ms.locfileid: "48194873"
   
 -   [\!= &#40;不等於&#41; &#40;SSIS 運算式&#41;](unequal-ssis-expression.md)  
   
--   [&#62;&#40;大於&#41; &#40;SSIS 運算式&#41;](greater-than-ssis-expression.md)  
+-   [&#62; &#40;大於&#41; &#40;SSIS 運算式&#41;](greater-than-ssis-expression.md)  
   
--   [&#60;&#40;小於&#41; &#40;SSIS 運算式&#41;](less-than-ssis-expression.md)  
+-   [&#60; &#40;小於&#41; &#40;SSIS 運算式&#41;](less-than-ssis-expression.md)  
   
--   [&#62;=&#40;大於或等於&#41; &#40;SSIS 運算式&#41;](greater-than-or-equal-to-ssis-expression.md)  
+-   [&#62;= &#40;大於或等於&#41; &#40;SSIS 運算式&#41;](greater-than-or-equal-to-ssis-expression.md)  
   
--   [&#60;=&#40;小於或等於&#41; &#40;SSIS 運算式&#41;](less-than-or-equal-to-ssis-expression.md)  
+-   [&#60;= &#40;小於或等於&#41; &#40;SSIS 運算式&#41;](less-than-or-equal-to-ssis-expression.md)  
   
  使用單一引數之函數所傳回的結果與引數具有相同資料類型，但有下列例外狀況：  
   
@@ -93,7 +92,7 @@ ms.locfileid: "48194873"
   
 -   傳遞至數學函數的引數評估結果必須為數值資料類型。 根據函數或運算而定，可能會需要特定的數值資料類型。 例如，HEX 函數需要帶正負號或不帶正負號的整數。  
   
--   傳遞至字串函數的引數評估結果必須為字元資料類型︰DT_STR 或 DT_WSTR。 例如，UPPER("flower")。 某些字串函數 (例如 SUBSTRING) 的起始位置和字串長度需要額外的整數引數。  
+-   傳遞至字串函式的引數必須評估為字元資料類型：DT_STR 或 DT_WSTR。 例如，UPPER("flower")。 某些字串函數 (例如 SUBSTRING) 的起始位置和字串長度需要額外的整數引數。  
   
 -   傳遞至日期和時間函數的引數評估結果必須為有效的日期。 例如，DAY(GETDATE())。 某些函數 (例如 DATEADD) 針對其加入至日期的日數，需要額外的整數引數。  
   
@@ -106,8 +105,8 @@ ms.locfileid: "48194873"
   
 ## <a name="related-content"></a>相關內容  
   
--   pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](http://go.microsoft.com/fwlink/?LinkId=217683)  
+-   pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](https://go.microsoft.com/fwlink/?LinkId=217683)  
   
--   social.technet.microsoft.com 上的技術文件： [SSIS 運算式範例](http://go.microsoft.com/fwlink/?LinkId=220761)  
+-   social.technet.microsoft.com 上的技術文件： [SSIS 運算式範例](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
   

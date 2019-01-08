@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -17,12 +16,12 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87a5abc4377007558787595a2d2368ca5e5c5bb6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7e8d3f735a096eeaf60ecdb376d02d046112a25
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149468"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375360"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>針對合併發行項實作自訂衝突解析程式
   本主題描述如何 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]使用[!INCLUDE[tsql](../../includes/tsql-md.md)] [或是以 COM 為基礎的自訂解析程式](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)，在中針對合併發行項實作自訂衝突解析程式。  
@@ -119,7 +118,7 @@ ms.locfileid: "48149468"
   
 #### <a name="viewing-a-sample-custom-resolver"></a>檢視自訂解析程式範例  
   
-1.  SQL Server 2000 範例檔案中有提供範例。 從 **SQL Server 2000 Service Pack 3 更新範例**[下載 sql2000samples.cab](http://www.microsoft.com/download/details.aspx?id=8560)。 這會下載總計 6.9 MB 的 8 個檔案。  
+1.  SQL Server 2000 範例檔案中有提供範例。 從 **SQL Server 2000 Service Pack 3 更新範例**[下載 sql2000samples.cab](https://www.microsoft.com/download/details.aspx?id=8560)。 這會下載總計 6.9 MB 的 8 個檔案。  
   
 2.  從下載的 .cab 壓縮檔解壓縮檔案。  
   

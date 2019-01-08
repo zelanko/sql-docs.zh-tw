@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading clusters
@@ -17,12 +16,12 @@ ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63515340bb09598841904e5ef70a54eed8e077bc
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906488"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363710"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>升級 SQL Server 容錯移轉叢集執行個體 (安裝程式)
   您可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝精靈或命令提示字元，將 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 容錯移轉叢集升級為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集。  
@@ -46,11 +45,11 @@ ms.locfileid: "48906488"
   
 -   若要確定 Visual Studio 元件可以正確安裝， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 需要安裝更新。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會檢查此更新的狀態，然後需要您下載並安裝更新才能繼續安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 若要避免 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式期間的中斷，您可以先下載並安裝更新，然後執行如下所述的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式 (或安裝 Windows Update 上可用 .NET 3.5 SP1 的所有更新)：  
   
-     如果您安裝[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]上與 Windows Server 2008 SP2 作業系統的電腦，您可以取得必要的更新[這裡](http://go.microsoft.com/fwlink/?LinkId=198093)  
+     如果您安裝[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]上與 Windows Server 2008 SP2 作業系統的電腦，您可以取得必要的更新[這裡](https://go.microsoft.com/fwlink/?LinkId=198093)  
   
      如果您將 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 安裝在 [!INCLUDE[win7](../../../includes/win7-md.md)] SP1 或 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] SP1 作業系統的電腦上，則已包含此更新。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式不再安裝 .NET Framework 3.5 SP1，但是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 上安裝 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 時，可能會需要 .NET Framework 3.5 SP1。 如需詳細資訊，請參閱 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)][版本資訊](http://go.microsoft.com/fwlink/?LinkId=296445)。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式不再安裝 .NET Framework 3.5 SP1，但是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 上安裝 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 時，可能會需要 .NET Framework 3.5 SP1。 如需詳細資訊，請參閱 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)][版本資訊](https://go.microsoft.com/fwlink/?LinkId=296445)。  
   
 -   若是本機安裝，您必須以管理員身分執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，則必須使用對遠端共用位置具有讀取權限的網域帳戶。  
   
@@ -79,7 +78,7 @@ ms.locfileid: "48906488"
 ## <a name="upgrading-to-a-includesssql14includessssql14-mdmd-multi-subnet-failover-cluster"></a>升級至 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 多重子網路容錯移轉叢集  
  可能的升級案例有兩種：  
   
-1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集目前設定在單一子網路上：您必須先啟動安裝程式，並遵循升級程序進行，以將現有叢集升級至 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]。 在完成升級現有的容錯移轉叢集之後，使用 AddNode 功能，以加入位在不同子網路上的節點。 請確認叢集網路組態頁面中的 IP 位址資源相依性已變更為 OR。 您現在已擁有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集。  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集目前設定在單一子網路：您必須先啟動安裝程式，並遵循升級程序進行，以將現有叢集升級至 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]。 在完成升級現有的容錯移轉叢集之後，使用 AddNode 功能，以加入位在不同子網路上的節點。 請確認叢集網路組態頁面中的 IP 位址資源相依性已變更為 OR。 您現在已擁有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集。  
   
 2.  目前已使用延展 V-LAN 技術，將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集設定在多重子網路中：您必須先將現有的叢集升級到 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]。 由於延伸 V-LAN 技術會設定單一子網路網路，網路組態必須變更為多重子網路，而且要使用 Windows 容錯移轉叢集管理工具變更 IP 位址資源相依性，並將 IP 相依性變更為 OR。  
   

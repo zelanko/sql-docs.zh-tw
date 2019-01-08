@@ -1,5 +1,5 @@
 ---
-title: 使用 T-SQL 函式 (SQL Server Machine Learning 中的 Python) 建立資料特徵 |Microsoft Docs
+title: 使用 T-SQL 函式與 Python-SQL Server Machine Learning 建立資料特徵
 description: 示範如何使用 Python 機器學習服務模型中的預存程序中加入計算的教學課程。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1006f4baabeca97aafead784ce4d9bfc213aaad1
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 0e9a502a2fbc7af0793bdd1a8e8a2135828df898
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032695"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644957"
 ---
 # <a name="create-data-features-using-t-sql"></a>使用 T-SQL 建立資料特徵
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "51032695"
     在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，依序展開 [可程式性]、[函數] 和 [純量值函式]。
     以滑鼠右鍵按一下 [fnCalculateDistance]，然後選取 [修改]，在新的查詢視窗中開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。
   
-    ```SQL
+    ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
     -- User-defined function that calculates the direct distance between two geographical coordinates
     RETURNS float
@@ -73,7 +73,7 @@ ms.locfileid: "51032695"
   
     此函數是資料表值函式，接受多個資料行作為輸入，然後輸出具有多個特徵資料行的資料表。  此函數的目的是建立特徵集，以用於建立模型。 _fnEngineerFeatures_ 函數會呼叫先前建立的 T-SQL 函數 _fnCalculateDistance_，以取得上車與下車位置之間的直線距離。
   
-    ```
+    ```sql
     CREATE FUNCTION [dbo].[fnEngineerFeatures] (
     @passenger_count int = 0,
     @trip_distance float = 0,
@@ -98,7 +98,7 @@ ms.locfileid: "51032695"
   
 2. 若要確認此函數運作正常，您可以使用它來計算這些車程的地理距離，其中的計量付費距離為 0，但上車和下車位置不同。
   
-    ```
+    ```sql
         SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
         trip_distance, pickup_datetime, dropoff_datetime,
         dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) AS direct_distance

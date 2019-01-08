@@ -1,5 +1,5 @@
 ---
-title: SQL Server R Services 效能微調 | Microsoft Docs
+title: SQL Server R Services 效能微調-SQL Server Machine Learning 服務
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f8f70f4f2436d30ad4a4c5083f7a6ad5a06777af
-ms.sourcegitcommit: 2420c57d2952add3697dbe0467ee1d755c5c2ee5
+ms.openlocfilehash: 9e43e65fc175844c5b08dbd8c435c0854397ce3e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47217553"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432291"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>SQL Server 中的 R 效能微調
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -83,11 +83,11 @@ SQL server，以支援執行 R 指令碼的 SQL Server 2016 中引進的 R Servi
 
 ## <a name="articles-in-this-series"></a>在這一系列的文章
 
-+ [SQL Server-硬體中的 R 效能微調](..\r\sql-server-configuration-r-services.md)
++ [SQL Server-硬體中的 R 效能微調](../r/sql-server-configuration-r-services.md)
 
-    提供設定硬體的指引， [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)]上所安裝，以及設定 SQL Server 執行個體，可更妥善支援外部指令碼。 這特別適合用於**資料庫管理員**。
+    提供設定硬體的指引，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上所安裝，以及設定 SQL Server 執行個體，可更妥善支援外部指令碼。 這特別適合用於**資料庫管理員**。
 
-+ [在 SQL Server-程式碼和資料的 R 效能微調最佳化](..\r\r-and-data-optimization-r-services.md)
++ [在 SQL Server-程式碼和資料的 R 效能微調最佳化](../r/r-and-data-optimization-r-services.md)
 
     提供特定的秘訣，如何最佳化外部指令碼，以避免發生已知的問題。 若要最有用**資料科學家**。
 
@@ -95,6 +95,6 @@ SQL server，以支援執行 R 指令碼的 SQL Server 2016 中引進的 R Servi
     > 雖然大部分的這一節適用於 R 一般情況下，某些資訊是資訊的以特定 RevoScaleR 分析函數。 詳細的效能指引不適用於**revoscalepy**和其他支援的 Python 程式庫。
     >
 
-+ [SQL Server-方法和結果中的 R 效能微調](..\r\performance-case-study-r-services.md)
++ [SQL Server-方法和結果中的 R 效能微調](../r/performance-case-study-r-services.md)
 
     摘要說明哪些資料是使用兩個案例研究、 如何已測試的效能，以及如何最佳化會影響結果。

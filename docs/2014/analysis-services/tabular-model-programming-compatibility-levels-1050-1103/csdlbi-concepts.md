@@ -12,19 +12,19 @@ ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52d44a8c5f00f8f5c17f62ba0149738dc13712ae
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 57ab374fb8ba0e5a75fc9a97300dace76452174b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146514"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377000"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 概念
   具有 BI 註解的概念結構定義語言 (CSDLBI) 是以實體資料架構為基礎，這是一種用於表示資料摘要，以便用程式設計方式存取、查詢或匯出不同的資料集。 CSDLBI 可用來表示使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 建立的資料模型，因為它支援豐富的資料驅動報表和應用程式。  
   
  本節將說明 CSDLBI 表示法如何對應 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料模型 (包含表格式與多維度)，以及每個模型類型的範例。  
   
- 用來說明這些概念的範例都取自 AdventureWorks 範例資料庫 (可在 Codeplex 上取得)。 如需有關範例的詳細資訊，請參閱 < [SQL Server 的 Adventure Works 範例](http://go.microsoft.com/fwlink/?linkID=220093)。  
+ 用來說明這些概念的範例都取自 AdventureWorks 範例資料庫 (可在 Codeplex 上取得)。 如需有關範例的詳細資訊，請參閱 < [SQL Server 的 Adventure Works 範例](https://go.microsoft.com/fwlink/?linkID=220093)。  
   
 ## <a name="structure-of-a-tabular-model-in-csdlbi"></a>CSDLBI 中表格式模型的結構  
  描述報表模型及其資料的 CSDLBI 文件會以 xsd 陳述式為開頭，後面接著模型的定義。  
@@ -133,13 +133,13 @@ ms.locfileid: "50146514"
   
  **檢視方塊：** 用戶端可以要求個別檢視方塊的 CSDL。 如需詳細資訊，請參閱 < [DISCOVER_CSDL_METADATA 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)。  
   
- **階層：** 支援且以 CSDLBI 表示為一組層級的階層。  
+ **階層：** 階層所支援，並以 CSDLBI 表示為一組層級。  
   
- **成員：** 的支援已新增的預設成員，預設值會自動加入 CSDLBI 輸出。  
+ **成員：** 已新增支援的預設成員，預設值會自動加入 CSDLBI 輸出。  
   
- **導出成員：** 多維度模型支援導出的成員之子系**所有**含單一真實成員。  
+ **導出的成員：** 多維度模型支援導出的成員之子系**所有**含單一真實成員。  
   
- **維度屬性：** CSDLBI 輸出中，維度屬性都支援，而且會自動標示為非彙總。  
+ **維度屬性：** 在 CSDLBI 輸出中，維度屬性都支援，而且會自動標示為非彙總。  
   
  **Kpi:** CSDLBI 1.1 版中支援 Kpi，但表示法已變更。 KPI 之前是量值的屬性。 在 1.1 版中，KPI 元素可以加入至量值  
   

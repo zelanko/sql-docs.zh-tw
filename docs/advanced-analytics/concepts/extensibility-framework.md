@@ -1,5 +1,5 @@
 ---
-title: 在 SQL Server Machine Learning 服務的擴充性架構 |Microsoft Docs
+title: R 語言和 Python 指令碼-SQL Server 機器學習服務的擴充性架構
 description: 外部程式碼支援的 SQL Server database engine，使用的雙重架構關聯式資料上執行 R 和 Python 指令碼。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c2ada06ce41cd9a5faf3237ce2b9bac6fc40291d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 4e48d51e45cdc9f1cd56f22228d95370b8f75711
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419216"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432741"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>在 SQL Server Machine Learning 服務的擴充性架構 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

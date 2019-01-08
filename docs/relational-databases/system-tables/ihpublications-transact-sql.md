@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - IHpublications_TSQL
@@ -19,12 +18,12 @@ ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 175d43ed9cd6165ee8670d558a5488f239a39b0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 227762e4fbc71d58641aa5f67ec975df9df08360
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605166"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802780"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "47605166"
 |**centralized_conflicts**|**bit**|指定是否將衝突記錄儲存在發行者端：<br /><br /> **0** = 將衝突記錄儲存在發行者端和造成衝突的訂閱者端。<br /><br /> **1** = 將衝突記錄儲存在 「 發行者 」。<br /><br /> *不支援非 SQL 發行者。*|  
 |**conflict_retention**|**int**|指定衝突保留週期 (以天為單位)。 *不支援非 SQL 發行者。*|  
 |**conflict_policy**|**int**|指定使用佇列更新訂閱者選項時，所遵照的衝突解決原則。 它可以是下列值之一：<br /><br /> **1** = 造訪發行者為優先的衝突。<br /><br /> **2** = 訂閱者優先衝突。<br /><br /> **3** = 重新初始化訂閱。<br /><br /> *不支援非 SQL 發行者。*|  
-|**queue_type**|**int**|指定所用的佇列類型。 它可以是下列值之一：<br /><br /> **1** = msmq，利用[!INCLUDE[msCoName](../../includes/msconame-md.md)]Message Queuing 來儲存交易。<br /><br /> **2** = sql，利用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來儲存交易。<br /><br /> 此資料行不是由非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。<br /><br /> 注意： 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]Message Queuing 已被取代，不再支援。<br /><br /> *此資料行不支援非 SQL 發行者。*|  
+|**queue_type**|**int**|指定所用的佇列類型。 它可以是下列值之一：<br /><br /> **1** = msmq，利用[!INCLUDE[msCoName](../../includes/msconame-md.md)]Message Queuing 來儲存交易。<br /><br /> **2** = sql，利用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來儲存交易。<br /><br /> 此資料行不是由非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。<br /><br /> 注意：[!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing 已被取代，不再受到支援。<br /><br /> *此資料行不支援非 SQL 發行者。*|  
 |**ad_guidname**|**sysname**|指定發行集是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中發行。 有效的全域唯一識別碼 (GUID) 指定發行集在發行[!INCLUDE[msCoName](../../includes/msconame-md.md)]Active Directory 中，GUID 是對應的 Active Directory 發行集物件**objectGUID**。 如果是 NULL，發行集就不會發行在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中。 *不支援非 SQL 發行者。*|  
 |**backward_comp_level**|**int**|資料庫相容性層級，它可以是下列值之一：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *不支援非 SQL 發行者。*|  
 |**description**|**nvarchar(255)**|發行集的描述項目。|  
@@ -77,7 +76,7 @@ ms.locfileid: "47605166"
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addpublication &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_addpublication &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [syspublications&#40;系統檢視&#41; &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)   

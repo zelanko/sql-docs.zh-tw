@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: be0252386717bb2e9cffcef45918a0dd85d06b41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b35e2baef80dbacf039b9c767f7798ddba0d90a9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652946"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591552"
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,10 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@loginame =** ]  **'* * * 登入* **'** 是 Windows 群組，而 Windows 登入的名稱或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入對應到新的資料庫使用者。Windows 群組和 Windows 登入的名稱必須限定在表單中的 Windows 網域名稱*網域*\\*登入 *，例如**LONDON\Joeb**。 登入不能已對應至資料庫中的使用者。 *登入*已**sysname**，沒有預設值。  
+ [  **@loginame =** ] **'**_登入_ **'**  
+ 這是要對應至新資料庫使用者的 Windows 群組、Windows 登入或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的名稱。 Windows 群組和 Windows 登入的名稱必須限定在表單中的 Windows 網域名稱*網域*\\*登入*，例如**LONDON\Joeb**。 登入不能已對應至資料庫中的使用者。 *登入*已**sysname**，沒有預設值。  
   
- [  **@name_in_db=**] **'***name_in_db***'** [**輸出**]  
+ [  **@name_in_db=**] **'**_name_in_db_**'** [**輸出**]  
  這是新資料庫使用者的名稱。 *name_in_db*是資料類型的輸出變數**sysname**，預設值為 NULL。 如果未指定，*登入*用。 如果指定為輸出變數的值是 NULL， **@name_in_db**設定為*登入*。 *name_in_db*必須不存在目前資料庫中。  
   
 ## <a name="return-code-values"></a>傳回碼值  

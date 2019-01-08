@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:SQL Statistics
@@ -13,12 +13,12 @@ ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f6991ed3113f577a767229010e1b9a3af09e86e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 783c20de7f1ea23f41dcbc4fb645644bdaf5ad7d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187248"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803180"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server 的 SQL Statistics 物件
   **的** SQLServer:SQL Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件會提供計數器，可用來監視編譯以及傳送給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的要求類型。 監視查詢編譯和重新編譯的次數，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所收到的批次數目，可讓您了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理使用者查詢的速度，以及查詢最佳化工具處理查詢的效率。  

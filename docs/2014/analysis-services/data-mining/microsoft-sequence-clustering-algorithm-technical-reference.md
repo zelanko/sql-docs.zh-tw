@@ -17,12 +17,12 @@ ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d0e9e49a61bef168af2703e83d027feec1d9daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 176bbc3f3078619541e14e21d03271d90f4c4c19
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060428"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367760"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 時序群集演算法技術參考
   Microsoft 時序叢集演算法是一種混合式演算法，它使用 Markov 鏈結分析來識別已排序的時序，並結合此分析的結果與叢集技術，根據模型中的時序和其他屬性產生叢集。 本主題描述演算法的實作、如何自訂演算法，以及時序叢集模型的特殊需求。  
@@ -113,7 +113,7 @@ ms.locfileid: "48060428"
  適用於採礦結構資料行。  
   
  MODEL_EXISTENCE_ONLY  
- 表示資料行將被視為擁有兩個可能狀態：`Missing`和`Existing`。 Null 值會被視為`Missing`值。  
+ 表示資料行將被視為擁有兩個可能狀態：`Missing` 和 `Existing`。 Null 值會被視為 `Missing` 值。  
   
  適用於採礦模型資料行。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48060428"
 ## <a name="requirements"></a>需求  
  案例資料表必須有一個案例識別碼資料行。 案例資料表可以選擇性地包含儲存案例之相關屬性的其他資料行。  
   
- Microsoft 時序群集演算法需要儲存為巢狀資料表的時序資訊。 巢狀資料表必須有一個單一的 Key Sequence 資料行。 A`Key Sequence`資料行可以包含任何類型的資料，可以進行排序，包括字串資料類型，但資料行必須包含每個案例的唯一值。 此外，處理模型前，您必須確認案例資料表與巢狀資料表都根據與資料表相關的索引鍵，以遞增方式排序。  
+ Microsoft 時序群集演算法需要儲存為巢狀資料表的時序資訊。 巢狀資料表必須有一個單一的 Key Sequence 資料行。 `Key Sequence` 資料行可以包含能夠儲存的任何資料類型，包括字串資料類型，但資料行對於每個案例，必須包含唯一的值。 此外，處理模型前，您必須確認案例資料表與巢狀資料表都根據與資料表相關的索引鍵，以遞增方式排序。  
   
 > [!NOTE]  
 >  如果您建立使用 Microsoft 時序演算法但不使用時序資料行的模型，所產生的模型將不包含任何時序，但是將只根據模型中包含的其他屬性群集案例。  
@@ -137,15 +137,15 @@ ms.locfileid: "48060428"
   
 ## <a name="remarks"></a>備註  
   
--   請使用 [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 函數以預測時序。 如需版本的詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，支援時序預測，請參閱 <<c2> [ 支援的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
+-   請使用 [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 函數以預測時序。 如需版本的詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，支援時序預測，請參閱 <<c2> [ 支援的 SQL Server 2012 的版本功能](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473)。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序叢集演算法不支援使用預測模型標記語言 (PMML) 來建立採礦模型。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法支援鑽研、OLAP 採礦模型的使用，以及資料採礦維度的使用。  
   
 ## <a name="see-also"></a>另請參閱  
- [Microsoft 時序群集演算法](microsoft-sequence-clustering-algorithm.md)   
- [時序叢集模型查詢範例](clustering-model-query-examples.md)   
- [時序群集模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
+ [Sequence Clustering Model Query Examples](clustering-model-query-examples.md)   
+ [時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

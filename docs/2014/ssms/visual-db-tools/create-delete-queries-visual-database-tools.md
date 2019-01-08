@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - row removal [SQL Server], Delete query
@@ -19,12 +19,12 @@ ms.assetid: 0db3af43-1ec4-48c8-b769-2bb9c76d3434
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a497ea82cb62a1f9d0397977500af70919ca33c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1103e1715c01cfc868c59af17ee0f95fa7cedff
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081758"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806640"
 ---
 # <a name="create-delete-queries-visual-database-tools"></a>建立刪除查詢 (Visual Database Tools)
   您可以使用刪除查詢 (Delete Query) 刪除資料表中的所有資料列。  

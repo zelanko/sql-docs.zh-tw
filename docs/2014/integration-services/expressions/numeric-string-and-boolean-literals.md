@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - string literals
@@ -18,12 +17,12 @@ ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbbb6a94a8cf3182328c5aab73897feb345109a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8555d2789c7466f65fd17d90282b164a068674c7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198834"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363900"
 ---
 # <a name="literals-ssis"></a>常值 (SSIS)
   運算式可以包含數值、字串及布林常值。 運算式評估工具支援各種不同的數值常值，例如整數、小數以及浮點常數。 運算式評估工具亦支援長尾碼和浮點尾碼，其指定運算式評估工具處理值的方式，以及數值常值中的科學記號。  
@@ -55,14 +54,14 @@ ms.locfileid: "48198834"
   
 |規則運算式|描述|  
 |------------------------|-----------------|  
-|{D}+{IS}|至少有一位數 (D) 的整數數值常值，以及選擇性的長尾碼和 (或)不帶正負號的尾碼 (IS)。  例如：457、785u、986L 和 7945ul。|  
-|{D}+{E}{FS}|至少有一位數 (D) 的非整數數值常值、科學記號，以及長尾碼或浮點尾碼。  例如：4E8l、13e-2f 和 5E+L。|  
-|{D}*"."{D}+{E}?{FS}|有小數位數的非整數數值常值、至少有一位數 (D) 的小數、選擇性的指數 (E)，以及一個浮點或一個長識別碼 (FS)。 這個數值常值的資料類型為 DT_R4 或 DT_R8。  例如：6.45E3f、.89E-2l 和 1.05E+7F。|  
-|{D}+"."{D}*{E}?{FS}|至少有一個有效位數的非整數數值常值、小數位數、指數 (E)，以及一個浮點或一個長識別碼 (FS)。 這個數值常值的資料類型為 DT_R4 或 DT_R8。  例如：1.E-4f、4.6E6L 和 8.365E+2f。|  
+|{D}+{IS}|至少有一位數 (D) 的整數數值常值，以及選擇性的長尾碼和 (或)不帶正負號的尾碼 (IS)。  範例:457、 785u、 986l 和 7945ul。|  
+|{D}+{E}{FS}|至少有一位數 (D) 的非整數數值常值、科學記號，以及長尾碼或浮點尾碼。  範例:4E8l、 13e 2f 和 5e+l。|  
+|{D}*"."{D}+{E}?{FS}|有小數位數的非整數數值常值、至少有一位數 (D) 的小數、選擇性的指數 (E)，以及一個浮點或一個長識別碼 (FS)。 這個數值常值的資料類型為 DT_R4 或 DT_R8。  範例:6.45 e 3 f、.89e-2l 和 1.05E + 7F。|  
+|{D}+"."{D}*{E}?{FS}|至少有一個有效位數的非整數數值常值、小數位數、指數 (E)，以及一個浮點或一個長識別碼 (FS)。 這個數值常值的資料類型為 DT_R4 或 DT_R8。  範例:1.E 4f、 4.6E6L 和 8.365E + 2f。|  
 |{D}*.{D}+|具有有效位數與小數位數的非整數數值常值。 它包含小數位數和至少一位數 (D) 的小數。 這個數值常值的資料類型為 DT_NUMERIC。  例如：.9、5.8 和 0.346。|  
-|{D}+.{D}*|具有有效位數與小數位數的非整數數值常值。 它至少有一個有效位數 (D) 和一個小數位數。 這個數值常值的資料類型為 DT_NUMERIC。  例如：6.、0.2 和 8.0。|  
+|{D}+.{D}*|具有有效位數與小數位數的非整數數值常值。 它至少有一個有效位數 (D) 和一個小數位數。 這個數值常值的資料類型為 DT_NUMERIC。  範例:6。、 0.2 和 8.0。|  
 |#{D}+|歷程識別碼。 它是由井字號 (#) 字元和至少一位數 (D) 所組成。 例如：#123。|  
-|0[xX]{H}+{uU}|十六進位格式的數值常值。 它包括零、大寫或小寫 x、至少一個大寫 H，以及選擇性的不帶正負號尾碼。 例如：0xFF0A 和 0X000010000U。|  
+|0[xX]{H}+{uU}|十六進位格式的數值常值。 它包括零、大寫或小寫 x、至少一個大寫 H，以及選擇性的不帶正負號尾碼。 範例:0xFF0A 和 0X000010000U。|  
   
  如需運算式評估工具所使用之資料類型的詳細資訊，請參閱 [Integration Services 資料類型](../data-flow/integration-services-data-types.md)。  
   
@@ -118,6 +117,6 @@ ms.locfileid: "48198834"
 >  在運算式中，布林常值必須以空格分隔。  
   
 ## <a name="related-content"></a>相關內容  
- pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](http://go.microsoft.com/fwlink/?LinkId=217683)  
+ pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](https://go.microsoft.com/fwlink/?LinkId=217683)  
   
   

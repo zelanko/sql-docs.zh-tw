@@ -1,5 +1,5 @@
 ---
-title: SQL Server 機器學習服務上安裝新的 R 套件 |Microsoft Docs
+title: 安裝新的 R 語言套件-SQL Server Machine Learning 服務
 description: 將新的 R 套件新增至 SQL Server 2016 R Services 或 SQL Server 2017 Machine Learning 服務 （資料庫）
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f345dc0649c5b7b9665e095207ad7a5a12d16871
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 590dbcc08d433147b61678c2b865ba205a0e547d
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697046"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432792"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server 上安裝新的 R 套件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51697046"
 
 R 套件程式庫實際上位於 SQL Server 執行個體，在具有限制存取的安全資料夾中的 [Program Files] 資料夾。 寫入此位置需要系統管理員權限。
 
-非系統管理員可以安裝套件，但這樣做需要 addititional 組態和功能在初始安裝中無法使用。 有兩種方法來進行非系統管理員套件安裝： RevoScaleR 使用版本 9.0.1 （英文） 和更新版本，或使用 CREATE EXTERNAL LIBRARY (只有 SQL Server 2017)。 在 SQL Server 2017 **dbo_owner**或另一個具有 CREATE EXTERNAL LIBRARY 權限的使用者可以將 R 套件安裝到目前的資料庫。
+非系統管理員可以安裝套件，但這樣做需要 addititional 組態和功能在初始安裝中無法使用。 有兩種方法來進行非系統管理員套件安裝：RevoScaleR 使用版本 9.0.1 （英文） 和更新版本，或使用 CREATE EXTERNAL LIBRARY (只有 SQL Server 2017)。 在 SQL Server 2017 **dbo_owner**或另一個具有 CREATE EXTERNAL LIBRARY 權限的使用者可以將 R 套件安裝到目前的資料庫。
 
 R 開發人員習慣建立辦到中央程式庫時，所需的封裝的使用者程式庫。 這種做法是在 SQL Server 資料庫引擎執行個體中執行的 R 程式碼有問題。 SQL Server 無法從外部的程式庫載入封裝，即使該程式庫位於相同的電腦上。 只有從執行個體文件庫的封裝可以用於 SQL Server 中執行的 R 程式碼。
 

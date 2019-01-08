@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: table-view-index
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 15118d2bec00582a22577230183b486c13bb031d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56148cca72ca9561219a9ea14025b0bd0f2204b5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063228"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753160"
 ---
 # <a name="modify-a-partition-scheme"></a>修改資料分割配置
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來指定檔案群組以保存下一個要加入資料分割資料表的資料分割，藉此在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改資料分割配置。 作法是，將 NEXT USED 屬性指派給檔案群組。 NEXT USED 屬性可以指派給空的檔案群組或已保存資料分割的檔案群組。 換句話說，檔案群組可以保存一個以上的資料分割。  
@@ -75,7 +75,7 @@ ms.locfileid: "48063228"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;  

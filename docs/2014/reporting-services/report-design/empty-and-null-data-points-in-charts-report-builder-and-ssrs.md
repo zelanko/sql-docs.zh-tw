@@ -11,12 +11,12 @@ ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6f6611271a6f8bc637e1fa0032d868a1347b5ef5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 27b5e569ff69261be616f28b38bcdb9bde429363
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082078"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377911"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>圖表中的空白和 Null 資料點 (報表產生器及 SSRS)
   如果您要在圖表中顯示包含空白或 Null 值的欄位，圖表外觀可能不如您預期。 圖表會根據指定的圖表類型，以不同的方式處理空白值：  
@@ -29,13 +29,13 @@ ms.locfileid: "48082078"
   
 -   形狀圖圖表類型中會省略 Null 值。  
   
- 具有空資料點的圖表範例可從範例報表取得。 如需下載這個範例報表及其他項目的詳細資訊，請參閱 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][報表產生器與報表設計師範例報表](http://go.microsoft.com/fwlink/?LinkId=198283)：  
+ 具有空資料點的圖表範例可從範例報表取得。 如需下載這個範例報表及其他項目的詳細資訊，請參閱 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][報表產生器與報表設計師範例報表](https://go.microsoft.com/fwlink/?LinkId=198283)：  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="removing-empty-or-null-values"></a>移除空白或 Null 值  
- 若要避免重要資料不易辨認，請考慮從資料集移除空白值。 若要篩選 Null 值，可以在查詢中使用 NOT IS NULL 子句。 或者也可以加入篩選運算式，指定您只要顯示不等於零的值。 如需詳細資訊，請參閱 <<c0> [ 新增資料集篩選、 資料區域篩選和群組篩選&#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)。</c0>  
+ 若要避免重要資料不易辨認，請考慮從資料集移除空白值。 若要篩選 Null 值，可以在查詢中使用 NOT IS NULL 子句。 或者也可以加入篩選運算式，指定您只要顯示不等於零的值。 如需詳細資訊，請參閱 [加入資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)。  
   
 ## <a name="fields-with-no-values-in-a-chart"></a>圖表中沒有值的欄位  
  如果在傳回的資料集中欄位未包含任何值，則圖表會顯示沒有資料點的空白圖表，但會加入數列名稱 (通常為欄位名稱) 做為圖例項目。  
@@ -45,7 +45,7 @@ ms.locfileid: "48082078"
 ## <a name="see-also"></a>另請參閱  
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [將圖表加入至報表&#40;報表產生器及 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)   
- [疑難排解圖表&#40;報表產生器及 SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
+ [將圖表加入報表中 &#40;報表產生器及 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)   
+ [圖表疑難排解 &#40;報表產生器及 SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
   
   

@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 1a4b517374e19ab959a8c00b732d62643c32cff3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.openlocfilehash: 4078d2d660a2690983e34c6db024df3a93df97eb
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657982"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266059"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>在 Docker 上設定 SQL Server 容器映像
 
@@ -46,11 +46,11 @@ ms.locfileid: "51657982"
 例如，下列命令會提取最新的 SQL Server 2019 預覽容器，使用 RHEL:
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 ```
 
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 ```
 
 ::: moniker-end
@@ -253,7 +253,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 這項技術也可讓您共用，並檢視外部 Docker 主機上的檔案。
 
 > [!IMPORTANT]
-> 在此階段不支援在 Mac 上與 SQL Server Linux 映像上的 docker 主機磁碟區對應。 請改用資料磁碟區容器。 這項限制是特有`/var/opt/mssql`目錄。 讀取從掛接的目錄運作正常。 例如，您可以掛接在 Mac 上使用 – v 主機目錄，並位於主機的.bak 檔案中的備份還原。
+> 在此階段不支援在 Mac 上與 SQL Server Linux 映像上的 docker 主機磁碟區對應。 請改用資料磁碟區容器。 這項限制是特有`/var/opt/mssql`目錄。 讀取從掛接的目錄運作正常。 例如，您可以掛接主機目錄，在 Mac 上使用 hyper-v，並位於主機的.bak 檔案中的備份還原。
 
 ### <a name="use-data-volume-containers"></a>使用資料磁碟區容器
 

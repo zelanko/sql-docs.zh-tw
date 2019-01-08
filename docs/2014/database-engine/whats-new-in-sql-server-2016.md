@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
@@ -14,12 +13,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ac9a6a1b2d4107d420bab68659b6d05f25805a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0650d15ece36593139ae804f6535315eacbf9294
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067024"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371550"
 ---
 # <a name="what39s-new-database-engine"></a>什麼&#39;s 新 (Database Engine)
   這個最新版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 導入了一些新功能和增強功能，可提升設計、開發和維護資料儲存系統之架構設計師、開發人員和管理員的能力和生產力。 以下是 [!INCLUDE[ssDE](../includes/ssde-md.md)] 已增強的範圍。  
@@ -35,7 +34,7 @@ ms.locfileid: "48067024"
   
   
 ###  <a name="AzureVM"></a> 裝載 SQL Server 資料庫中的 Windows Azure 虛擬機器  
- 使用[SQL Server Database 部署到 Windows Azure 虛擬機器](http://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx)精靈來裝載資料庫的執行個體從[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]在 Windows Azure 虛擬機器。  
+ 使用[SQL Server Database 部署到 Windows Azure 虛擬機器](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx)精靈來裝載資料庫的執行個體從[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]在 Windows Azure 虛擬機器。  
   
   
 ###  <a name="Backup"></a> 備份與還原增強功能  
@@ -51,11 +50,11 @@ ms.locfileid: "48067024"
   
 -   **備份的加密**  
   
-     您現在可以選擇在備份作業期間加密備份檔案。  它支援數種加密演算法，包括 AES 128、AES 192、AES 256 和 Triple DES。 在備份期間，您必須使用憑證或非對稱金鑰進行加密。 如需詳細資訊，請參閱 <<c0> [ 備份加密](../relational-databases/backup-restore/backup-encryption.md)。  
+     您現在可以選擇在備份作業期間加密備份檔案。  它支援數種加密演算法，包括 AES 128、AES 192、AES 256 和 Triple DES。 在備份期間，您必須使用憑證或非對稱金鑰進行加密。 如需詳細資訊，請參閱＜ [備份加密](../relational-databases/backup-restore/backup-encryption.md)＞。  
   
   
 ###  <a name="CE"></a> 基數估計的新設計  
- 基數估計邏輯，稱為基數估計工具經過重新設計中[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]來改善查詢計畫品質，因此若要改善查詢效能。 新的基數估計工具併入了可搭配新型 OLTP 和資料倉儲工作負載完善運作的假設和演算法。 這項發展乃是憑藉著我們針對新型工作負載進行深入的基數估計研究，以及過去 15 年來改進 SQL Server 基數估計工具的經驗。 由客戶的意見反應得知，儘管無論變更與否都能讓大多數的查詢獲益，但與舊版基數估計工具相比，少數的查詢可能會顯現效能退化。 如需效能微調與測試的建議，請參閱[基數估計&#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md)。  
+ 基數估計邏輯 (稱為基數估計工具) 在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中經過重新設計，可改善查詢計劃的品質，從而提升查詢效能。 新的基數估計工具併入了可搭配新型 OLTP 和資料倉儲工作負載完善運作的假設和演算法。 這項發展乃是憑藉著我們針對新型工作負載進行深入的基數估計研究，以及過去 15 年來改進 SQL Server 基數估計工具的經驗。 由客戶的意見反應得知，儘管無論變更與否都能讓大多數的查詢獲益，但與舊版基數估計工具相比，少數的查詢可能會顯現效能退化。 如需效能微調與測試的建議，請參閱[基數估計&#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md)。  
    
   
 ###  <a name="Durability"></a> 延遲的持久性  
@@ -97,11 +96,11 @@ ms.locfileid: "48067024"
   
 -   **執行程序表**  
   
-     SHOWPLAN 會顯示有關資料行存放區索引的資訊。 **EstimatedExecutionMode**並**ActualExecutionMode**屬性有兩個可能的值：**批次**或是**列**。  **儲存體**屬性有兩個可能的值：**資料列存放區**並**資料行存放區**。  
+     SHOWPLAN 會顯示有關資料行存放區索引的資訊。 **EstimatedExecutionMode**並**ActualExecutionMode**屬性有兩個可能的值：**批次**或是**資料列**。  **儲存體**屬性有兩個可能的值：**資料列存放區**並**資料行存放區**。  
   
 -   **封存資料壓縮**  
   
-     ALTER INDEX … REBUILD 擁有新的 COLUMNSTORE_ARCHIVE 資料壓縮選項，可進一步壓縮資料行存放區索引的指定分割區。 使用此選項進行封存，或是在其他需要較小資料儲存大小且允許較長儲存和擷取時間的情況下使用。 如需詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)。  
+     ALTER INDEX ...REBUILD 擁有新的 COLUMNSTORE_ARCHIVE 資料壓縮選項，可進一步壓縮資料行存放區索引的指定分割區。 使用此選項進行封存，或是在其他需要較小資料儲存大小且允許較長儲存和擷取時間的情況下使用。 如需詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)。  
    
   
 ###  <a name="Buffer"></a> 緩衝集區延伸模組  
@@ -119,7 +118,7 @@ ms.locfileid: "48067024"
   
   
 ###  <a name="OnlineEvent"></a> 線上索引作業事件類別  
- 線上索引作業事件類別的進度報表現在有兩個新的資料行： **PartitionId**並**PartitionNumber**。 如需詳細資訊，請參閱 < [Progress Report: Online Index Operation 事件類別](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)。  
+ 線上索引作業事件類別的進度報表現在有兩個新的資料行：**PartitionId**並**PartitionNumber**。 如需詳細資訊，請參閱[進度報表：線上索引作業事件類別](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)。  
   
   
 ###  <a name="Compat"></a> 資料庫相容性層級  
@@ -130,8 +129,8 @@ ms.locfileid: "48067024"
 ### <a name="inline-specification-of-clustered-and-nonclustered"></a>CLUSTERED 和 NONCLUSTERED 的內嵌指定  
  以磁碟為基礎的資料表現在允許 `CLUSTERED` 和 `NONCLUSTERED` 索引的內嵌指定。 建立包含內嵌索引的資料表相當於發出 create table 且後面緊接著對應的 `CREATE INDEX` 陳述式。 內嵌索引不支援包含的資料行和篩選條件。  
   
-### <a name="select--into"></a>SELECT … INTO  
- `SELECT … INTO` 陳述式已經改良，現在可以平行操作。 資料庫相容性層級必須至少為 110。  
+### <a name="select--into"></a>選取此項目...INTO  
+ `SELECT ... INTO` 陳述式已經改良，現在可以平行操作。 資料庫相容性層級必須至少為 110。  
   
 ### <a name="includetsqlincludestsql-mdmd-enhancements-for-in-memory-oltp"></a>記憶體中 OLTP 的 [!INCLUDE[tsql](../includes/tsql-md.md)] 增強功能  
  如需[!INCLUDE[tsql](../includes/tsql-md.md)]變更為支援記憶體內部 OLTP，請參閱[記憶體內部 OLTP 的 TRANSACT-SQL 支援](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)。  

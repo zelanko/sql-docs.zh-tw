@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.diagnostic.InstallSqlDiagramSupport
@@ -16,12 +16,12 @@ ms.assetid: 927321ee-b459-4f5b-9719-4a7a95639143
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62add06b58d33af4f2e09ee02322a2cec5a9949b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d71ea2d6a10755ef52e0cac37ddcd2385d82d9cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108918"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812710"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>設定資料庫圖表設計工具 (Visual Database Tools)
   若要使用資料庫圖表設計工具，必須先由 **db_owner** 角色的成員進行設定，才能控制圖表的存取權。  

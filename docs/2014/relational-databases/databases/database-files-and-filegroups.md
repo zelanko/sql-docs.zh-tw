@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], files
@@ -33,12 +32,12 @@ ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 780bfc2f1a9c1654f913995a84460f85e19d386a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d75dee637a5579ca3f189e14333fbf9356623d0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205463"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790110"
 ---
 # <a name="database-files-and-filegroups"></a>資料庫檔案與檔案群組
   基本上，每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫都有兩個作業系統檔案：資料檔與記錄檔。 資料檔包含諸如資料表、索引、預存程序以及檢視等資料和物件。 記錄檔包含復原資料庫中所有交易必要的資訊。 資料檔可以組成檔案群組，以方便配置及管理。  
@@ -48,7 +47,7 @@ ms.locfileid: "48205463"
   
 |檔案|描述|  
 |----------|-----------------|  
-|Primary|主要資料檔包含資料庫啟動資訊，並指到資料庫中的其他檔案。 使用者資料和物件可儲存於此檔案或次要的資料檔中。 每個資料庫都有一個主要資料檔案。 建議您將主要資料檔的副檔名設為 .mdf。|  
+|主要|主要資料檔包含資料庫啟動資訊，並指到資料庫中的其他檔案。 使用者資料和物件可儲存於此檔案或次要的資料檔中。 每個資料庫都有一個主要資料檔案。 建議您將主要資料檔的副檔名設為 .mdf。|  
 |次要|次要資料檔是選擇性且使用者自訂的，並可儲存使用者資料。 次要檔可用以將資料分散在多個磁碟上，即透過將每個檔案放在不同的磁碟機上來達成此目的。 此外，若資料庫超過了單一 Windows 檔案的大小上限，您可使用次要資料檔，以容許資料庫繼續成長。<br /><br /> 建議您將次要資料檔的副檔名設為 .ndf。|  
 |交易記錄|交易記錄檔包含了用來復原資料庫的記錄資訊。 每個資料庫至少要有一個記錄檔。 建議的交易記錄檔的副檔名為 .ldf。|  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48205463"
   
 |檔案群組|描述|  
 |---------------|-----------------|  
-|Primary|包含主要檔案的檔案群組。 所有的系統資料表都配置於主要檔案群組內。|  
+|主要|包含主要檔案的檔案群組。 所有的系統資料表都配置於主要檔案群組內。|  
 |使用者自訂|使用者在初次建立資料庫或之後修改資料庫時，特別建立的檔案群組。|  
   
 ### <a name="default-filegroup"></a>預設的檔案群組  

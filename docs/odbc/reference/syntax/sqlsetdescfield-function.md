@@ -20,16 +20,16 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44a3cfe212fcd452307a6aef0aedd1c22ca4e545
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8704d28fb8ae39cf7d8f6bb595c884b70a6721a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717128"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204157"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 函式
 **合規性**  
- 版本導入： ODBC 3.0 版的標準符合性： ISO 92  
+ 導入的版本：ODBC 3.0 版的標準合規性：ISO 92  
   
  **摘要**  
  **SQLSetDescField**設定描述項記錄的單一欄位的值。  
@@ -142,13 +142,13 @@ SQLRETURN SQLSetDescField(
   
 |標頭欄位名稱|類型|R/W|預設|  
 |-----------------------|----------|----------|-------------|  
-|SQL_DESC_ALLOC_TYPE|SQLSMALLINT|ARD: R APD: R IRD: R IPD: R|ARD: 針對 SQL_DESC_ALLOC_AUTO 隱含或 SQL_DESC_ALLOC_USER 的明確<br /><br /> APD: SQL_DESC_ALLOC_AUTO 的隱含或 SQL_DESC_ALLOC_USER 的明確<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
-|SQL_DESC_ARRAY_SIZE|SQLULEN|ARD: R/W APD: R/W IRD： 未使用的 IPD： 未使用|ARD: [1] APD: [1] 的 IRD： 未使用的 IPD： 未使用|  
-|SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT *|ARD: R/W APD: R/W IRD: IPD R/W: R/W|ARD: Null ptr APD: Null ptr IRD: Null ptr IPD: Null ptr|  
-|SQL_DESC_BIND_OFFSET_PTR|SQLLEN *|ARD: R/W APD: R/W IRD： 未使用的 IPD： 未使用|ARD: Null ptr APD: Null ptr IRD： 未使用 IPD： 未使用|  
-|SQL_DESC_BIND_TYPE|SQLINTEGER|ARD: R/W APD: R/W IRD： 未使用的 IPD： 未使用|ARD: SQL_BIND_BY_COLUMN<br /><br /> APD: SQL_BIND_BY_COLUMN<br /><br /> IRD： 未使用<br /><br /> IPD： 未使用|  
-SQL_DESC_COUNT|SQLSMALLINT|ARD: R/W APD: IRD R/W: R IPD: R/W|ARD: 0 APD: IRD 0: D IPD: 0|  
-|SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN *|ARD： 未使用的 APD： 未使用的 IRD: R/W IPD: R/W|ARD： 未使用的 APD： 未使用的 IRD: Null ptr IPD: Null ptr|  
+|SQL_DESC_ALLOC_TYPE|SQLSMALLINT|ARD:R APD 中：R IRD:R IPD:R|ARD:針對 SQL_DESC_ALLOC_AUTO 隱含或 SQL_DESC_ALLOC_USER 的明確<br /><br /> APD 中：針對 SQL_DESC_ALLOC_AUTO 隱含或 SQL_DESC_ALLOC_USER 的明確<br /><br /> IRD:SQL_DESC_ALLOC_AUTO<br /><br /> IPD:SQL_DESC_ALLOC_AUTO|  
+|SQL_DESC_ARRAY_SIZE|SQLULEN|ARD:R/W APD 中：R/W IRD:未使用的 IPD:未使用|ARD: [1] APD: [1] 的 IRD:未使用的 IPD:未使用|  
+|SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT *|ARD:R/W APD 中：R/W IRD:R/W IPD:R/W|ARD:Null ptr APD:Null ptr IRD:Null ptr IPD:Null ptr|  
+|SQL_DESC_BIND_OFFSET_PTR|SQLLEN *|ARD:R/W APD 中：R/W IRD:未使用的 IPD:未使用|ARD:Null ptr APD:Null ptr IRD:未使用的 IPD:未使用|  
+|SQL_DESC_BIND_TYPE|SQLINTEGER|ARD:R/W APD 中：R/W IRD:未使用的 IPD:未使用|ARD:SQL_BIND_BY_COLUMN<br /><br /> APD 中：SQL_BIND_BY_COLUMN<br /><br /> IRD:未使用<br /><br /> IPD:未使用|  
+SQL_DESC_COUNT|SQLSMALLINT|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:0 APD:0 IRD:D IPD:0|  
+|SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN *|ARD:未使用的 APD:未使用的 IRD:R/W IPD:R/W|ARD:未使用的 APD:未使用的 IRD:Null ptr IPD:Null ptr|  
   
  [只有當驅動程式會自動填入 IPD 時，會定義 1] 這些欄位。 如果沒有，也就是未定義。 如果應用程式嘗試設定這些欄位，SQLSTATE HY091 （無效的描述項欄位識別碼） 將會傳回。  
   
@@ -156,40 +156,40 @@ SQL_DESC_COUNT|SQLSMALLINT|ARD: R/W APD: IRD R/W: R IPD: R/W|ARD: 0 APD: IRD 0: 
   
 |記錄欄位名稱|類型|R/W|預設|  
 |-----------------------|----------|----------|-------------|  
-|SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|ARD： 未使用的 APD： 未使用的 IRD: R IPD： 未使用|ARD： 未使用的 APD： 未使用的 IRD: D IPD： 未使用|  
-|SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|ARD： 未使用的 APD： 未使用的 IRD: R IPD： 未使用|ARD： 未使用的 APD： 未使用的 IRD: D IPD： 未使用|  
-|SQL_DESC_BASE_TABLE_NAME|SQLCHAR *|ARD： 未使用的 APD： 未使用的 IRD: R IPD： 未使用|ARD： 未使用的 APD： 未使用的 IRD: D IPD： 未使用|  
-|SQL_DESC_CASE_SENSITIVE|SQLINTEGER|ARD： 未使用的 APD： 未使用的 IRD: R IPD: R|ARD： 未使用的 APD： 未使用的 IRD: D IPD: D [1]|  
-|SQL_DESC_CATALOG_NAME|SQLCHAR *|ARD： 未使用的 APD： 未使用的 IRD: R IPD： 未使用|ARD： 未使用的 APD： 未使用的 IRD: D IPD： 未使用|  
-|SQL_DESC_CONCISE_TYPE|SQLSMALLINT|ARD: R/W APD: IRD R/W: R IPD: R/W|ARD: SQL_C_ 預設 APD: SQL_C_ 預設 IRD: D IPD: ND|  
-|SQL_DESC_DATA_PTR|SQLPOINTER|ARD: R/W APD: R/W IRD： 未使用的 IPD： 未使用|ARD: Null ptr APD: Null ptr IRD： 未使用 IPD： 未使用的 [2]|  
-|SQL_DESC_DATETIME_INTERVAL_CODE|SQLSMALLINT|ARD: R/W APD: IRD R/W: R IPD: R/W|ARD: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_DATETIME_INTERVAL_PRECISION|SQLINTEGER|ARD: R/W APD: IRD R/W: R IPD: R/W|ARD: ND APD: ND IRD: D IPD: ND|  
-SQL_DESC_DISPLAY_SIZE|SQLLEN|ARD： 未使用的 APD： 未使用的 IRD: R IPD： 未使用|ARD： 未使用的 APD： 未使用的 IRD: D IPD： 未使用|  
-|SQL_DESC_FIXED_PREC_SCALE|SQLSMALLINT|ARD： 未使用的 APD： 未使用的 IRD: R IPD: R|ARD： 未使用的 APD： 未使用的 IRD: D IPD: D [1]|  
-|SQL_DESC_INDICATOR_PTR|SQLLEN *|ARD: R/W APD: R/W IRD： 未使用的 IPD： 未使用|ARD: Null ptr APD: Null ptr IRD： 未使用 IPD： 未使用|  
-|SQL_DESC_LABEL|SQLCHAR *|ARD： 未使用的 APD： 未使用的 IRD: R IPD： 未使用|ARD： 未使用的 APD： 未使用的 IRD: D IPD： 未使用|  
-|SQL_DESC_LENGTH|SQLULEN|ARD: R/W APD: IRD R/W: R IPD: R/W|ARD: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_LITERAL_PREFIX|SQLCHAR *|ARD： 未使用的 APD： 未使用的 IRD: R IPD： 未使用|ARD： 未使用的 APD： 未使用的 IRD: D IPD： 未使用|  
-|SQL_DESC_LITERAL_SUFFIX|SQLCHAR *|ARD： 未使用的 APD： 未使用的 IRD: R IPD： 未使用|ARD： 未使用的 APD： 未使用的 IRD: D IPD： 未使用|  
-|SQL_DESC_LOCAL_TYPE_NAME|SQLCHAR *|ARD： 未使用的 APD： 未使用的 IRD: R IPD: R|ARD： 未使用的 APD： 未使用的 IRD: D IPD: D [1]|  
-|SQL_DESC_NAME|SQLCHAR *|ARD： 未使用的 APD： 未使用的 IRD: R IPD: R/W|ARD: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_NULLABLE|SQLSMALLINT|ARD： 未使用的 APD： 未使用的 IRD: R IPD: R|ARD: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_NUM_PREC_RADIX|SQLINTEGER|ARD: R/W APD: IRD R/W: R IPD: R/W|ARD: ND APD: ND IRD: D IPD: ND|  
-SQL_DESC_OCTET_LENGTH|SQLLEN|ARD: R/W APD: IRD R/W: R IPD: R/W|ARD: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_OCTET_LENGTH_PTR|SQLLEN *|ARD: R/W APD: R/W IRD： 未使用的 IPD： 未使用|ARD: Null ptr APD: Null ptr IRD： 未使用 IPD： 未使用|  
-|SQL_DESC_PARAMETER_TYPE|SQLSMALLINT|ARD： 未使用的 APD： 未使用的 IRD： 未使用的 IPD: R/W|ARD： 未使用的 APD： 未使用的 IRD： 未使用的 IPD: D = SQL_PARAM_INPUT|  
-|SQL_DESC_PRECISION|SQLSMALLINT|ARD: R/W APD: IRD R/W: R IPD: R/W|ARD: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_ROWVER|SQLSMALLINT|ARD： 未使用<br /><br /> APD： 未使用<br /><br /> IRD: R<br /><br /> IPD: R|ARD： 未使用<br /><br /> APD： 未使用<br /><br /> IRD: ND<br /><br /> IPD: ND|  
-|SQL_DESC_SCALE|SQLSMALLINT|ARD: R/W APD: IRD R/W: R IPD: R/W|ARD: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_SCHEMA_NAME|SQLCHAR *|ARD： 未使用的 APD： 未使用的 IRD: R IPD： 未使用|ARD： 未使用的 APD： 未使用的 IRD: D IPD： 未使用|  
-|SQL_DESC_SEARCHABLE|SQLSMALLINT|ARD： 未使用的 APD： 未使用的 IRD: R IPD： 未使用|ARD： 未使用的 APD： 未使用的 IRD: D IPD： 未使用|  
-|SQL_DESC_TABLE_NAME|SQLCHAR *|ARD： 未使用的 APD： 未使用的 IRD: R IPD： 未使用|ARD： 未使用的 APD： 未使用的 IRD: D IPD： 未使用|  
-|SQL_DESC_TYPE|SQLSMALLINT|ARD: R/W APD: IRD R/W: R IPD: R/W|ARD: SQL_C_DEFAULT APD: SQL_C_DEFAULT IRD: D IPD: ND|  
-SQL_DESC_TYPE_NAME|SQLCHAR *|ARD： 未使用的 APD： 未使用的 IRD: R IPD: R|ARD： 未使用的 APD： 未使用的 IRD: D IPD: D [1]|  
-|SQL_DESC_UNNAMED|SQLSMALLINT|ARD： 未使用的 APD： 未使用的 IRD: R IPD: R/W|ARD: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_UNSIGNED|SQLSMALLINT|ARD： 未使用的 APD： 未使用的 IRD: R IPD: R|ARD： 未使用的 APD： 未使用的 IRD: D IPD: D [1]|  
-|SQL_DESC_UPDATABLE|SQLSMALLINT|ARD： 未使用的 APD： 未使用的 IRD: R IPD： 未使用|ARD： 未使用的 APD： 未使用的 IRD: D IPD： 未使用|  
+|SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
+|SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
+|SQL_DESC_BASE_TABLE_NAME|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
+|SQL_DESC_CASE_SENSITIVE|SQLINTEGER|ARD:未使用的 APD:未使用的 IRD:R IPD:R|ARD:未使用的 APD:未使用的 IRD:D IPD:D [1]|  
+|SQL_DESC_CATALOG_NAME|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
+|SQL_DESC_CONCISE_TYPE|SQLSMALLINT|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:SQL_C_ 預設 APD:SQL_C_ 預設 IRD:D IPD:ND|  
+|SQL_DESC_DATA_PTR|SQLPOINTER|ARD:R/W APD 中：R/W IRD:未使用的 IPD:未使用|ARD:Null ptr APD:Null ptr IRD:未使用的 IPD:未使用 [2]|  
+|SQL_DESC_DATETIME_INTERVAL_CODE|SQLSMALLINT|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:ND APD 中：ND IRD:D IPD:ND|  
+|SQL_DESC_DATETIME_INTERVAL_PRECISION|SQLINTEGER|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:ND APD 中：ND IRD:D IPD:ND|  
+SQL_DESC_DISPLAY_SIZE|SQLLEN|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
+|SQL_DESC_FIXED_PREC_SCALE|SQLSMALLINT|ARD:未使用的 APD:未使用的 IRD:R IPD:R|ARD:未使用的 APD:未使用的 IRD:D IPD:D [1]|  
+|SQL_DESC_INDICATOR_PTR|SQLLEN *|ARD:R/W APD 中：R/W IRD:未使用的 IPD:未使用|ARD:Null ptr APD:Null ptr IRD:未使用的 IPD:未使用|  
+|SQL_DESC_LABEL|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
+|SQL_DESC_LENGTH|SQLULEN|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:ND APD 中：ND IRD:D IPD:ND|  
+|SQL_DESC_LITERAL_PREFIX|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
+|SQL_DESC_LITERAL_SUFFIX|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
+|SQL_DESC_LOCAL_TYPE_NAME|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:R|ARD:未使用的 APD:未使用的 IRD:D IPD:D [1]|  
+|SQL_DESC_NAME|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:R/W|ARD:ND APD 中：ND IRD:D IPD:ND|  
+|SQL_DESC_NULLABLE|SQLSMALLINT|ARD:未使用的 APD:未使用的 IRD:R IPD:R|ARD:ND APD 中：ND IRD:D IPD:ND|  
+|SQL_DESC_NUM_PREC_RADIX|SQLINTEGER|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:ND APD 中：ND IRD:D IPD:ND|  
+SQL_DESC_OCTET_LENGTH|SQLLEN|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:ND APD 中：ND IRD:D IPD:ND|  
+|SQL_DESC_OCTET_LENGTH_PTR|SQLLEN *|ARD:R/W APD 中：R/W IRD:未使用的 IPD:未使用|ARD:Null ptr APD:Null ptr IRD:未使用的 IPD:未使用|  
+|SQL_DESC_PARAMETER_TYPE|SQLSMALLINT|ARD:未使用的 APD:未使用的 IRD:未使用的 IPD:R/W|ARD:未使用的 APD:未使用的 IRD:未使用的 IPD:D = SQL_PARAM_INPUT|  
+|SQL_DESC_PRECISION|SQLSMALLINT|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:ND APD 中：ND IRD:D IPD:ND|  
+|SQL_DESC_ROWVER|SQLSMALLINT|ARD:未使用<br /><br /> APD 中：未使用<br /><br /> IRD:R<br /><br /> IPD:R|ARD:未使用<br /><br /> APD 中：未使用<br /><br /> IRD:ND<br /><br /> IPD:ND|  
+|SQL_DESC_SCALE|SQLSMALLINT|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:ND APD 中：ND IRD:D IPD:ND|  
+|SQL_DESC_SCHEMA_NAME|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
+|SQL_DESC_SEARCHABLE|SQLSMALLINT|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
+|SQL_DESC_TABLE_NAME|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
+|SQL_DESC_TYPE|SQLSMALLINT|ARD:R/W APD 中：R/W IRD:R IPD:R/W|ARD:SQL_C_DEFAULT APD 中：SQL_C_DEFAULT IRD:D IPD:ND|  
+SQL_DESC_TYPE_NAME|SQLCHAR *|ARD:未使用的 APD:未使用的 IRD:R IPD:R|ARD:未使用的 APD:未使用的 IRD:D IPD:D [1]|  
+|SQL_DESC_UNNAMED|SQLSMALLINT|ARD:未使用的 APD:未使用的 IRD:R IPD:R/W|ARD:ND APD 中：ND IRD:D IPD:ND|  
+|SQL_DESC_UNSIGNED|SQLSMALLINT|ARD:未使用的 APD:未使用的 IRD:R IPD:R|ARD:未使用的 APD:未使用的 IRD:D IPD:D [1]|  
+|SQL_DESC_UPDATABLE|SQLSMALLINT|ARD:未使用的 APD:未使用的 IRD:R IPD:未使用|ARD:未使用的 APD:未使用的 IRD:D IPD:未使用|  
   
  [只有當驅動程式會自動填入 IPD 時，會定義 1] 這些欄位。 如果沒有，也就是未定義。 如果應用程式嘗試設定這些欄位，SQLSTATE HY091 （無效的描述項欄位識別碼） 將會傳回。  
   
@@ -216,50 +216,50 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|ARD： 未使用的 APD： 未使用的 IRD: R IPD:
  **[All] SQL_DESC_ARRAY_STATUS_PTR**  
  針對每個描述項類型，而此 SQLUSMALLINT * 標頭欄位會指向陣列的 SQLUSMALLINT 值。 這些陣列的命名方式如下： 資料列狀態陣列 (IRD) 中，參數狀態陣列 (IPD) 中，資料列作業陣列 (ARD) 和參數作業陣列 (APD)。  
   
- 在 IRD 此標頭欄位會指向資料列狀態陣列，包含在呼叫之後的狀態值**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**。 陣列的資料列集內有資料列的項目數。 應用程式必須配置 SQLUSMALLINTs 的陣列，並設定為指向陣列的這個欄位。 根據預設，欄位是設為 null 指標。 驅動程式將會填入陣列 — 除非 SQL_DESC_ARRAY_STATUS_PTR 欄位設定為 null 指標，在此情況下產生沒有狀態值，而且不會填入陣列。  
+ 在 IRD 此標頭欄位會指向資料列狀態陣列，包含在呼叫之後的狀態值**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**。 陣列的資料列集內有資料列的項目數。 應用程式必須配置 SQLUSMALLINTs 的陣列，並設定為指向陣列的這個欄位。 根據預設，欄位是設為 null 指標。 驅動程式將會填入陣列-除非 SQL_DESC_ARRAY_STATUS_PTR 欄位設定為 null 指標，在此情況下產生沒有狀態值，而且不會填入陣列。  
   
 > [!CAUTION]  
 >  如果應用程式設定的資料列狀態陣列 IRD SQL_DESC_ARRAY_STATUS_PTR 欄位所指的項目，則驅動程式行為是未定義。  
   
  在一開始填入陣列的呼叫所**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**。 如果呼叫未傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，此欄位所指陣列的內容為未定義。 陣列中的項目可以包含下列值：  
   
--   SQL_ROW_SUCCESS: 資料列已成功擷取，而且尚未變更，因為它一次擷取。  
+-   SQL_ROW_SUCCESS:資料列已成功擷取，而且尚未變更，因為它一次擷取。  
   
--   SQL_ROW_SUCCESS_WITH_INFO: 資料列已成功擷取，而且尚未變更，因為它一次擷取。 不過，資料列相關的已傳回警告。  
+-   SQL_ROW_SUCCESS_WITH_INFO:資料列已成功擷取，而且尚未變更，因為它一次擷取。 不過，資料列相關的已傳回警告。  
   
--   SQL_ROW_ERROR： 提取資料列時發生錯誤。  
+-   SQL_ROW_ERROR:提取資料列時發生錯誤。  
   
--   SQL_ROW_UPDATED： 已成功擷取的資料列，以及自上次擷取後已經更新。 如果再次擷取資料列，其狀態會是 SQL_ROW_SUCCESS。  
+-   SQL_ROW_UPDATED:已成功擷取的資料列，以及已經更新過一次擷取。 如果再次擷取資料列，其狀態會是 SQL_ROW_SUCCESS。  
   
--   SQL_ROW_DELETED： 已經刪除的資料列，因為它一次擷取。  
+-   SQL_ROW_DELETED:因為一次擷取已刪除資料列。  
   
--   SQL_ROW_ADDED： 已插入資料列**SQLBulkOperations**。 如果再次擷取資料列，其狀態會是 SQL_ROW_SUCCESS。  
+-   SQL_ROW_ADDED:已插入資料列**SQLBulkOperations**。 如果再次擷取資料列，其狀態會是 SQL_ROW_SUCCESS。  
   
--   SQL_ROW_NOROW： 重疊的資料列集結果集的結尾，並傳回任何資料列，對應至資料列狀態陣列的這個項目。  
+-   SQL_ROW_NOROW:重疊的資料列集結果集的結尾，並傳回任何資料列，對應至資料列狀態陣列的這個項目。  
   
  也可以藉由呼叫設定此欄位在 IRD **SQLSetStmtAttr** sql_attr_row_status_ptr 設定屬性。  
   
  只有在傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO 之後，才有效 IRD 的 SQL_DESC_ARRAY_STATUS_PTR 欄位。 如果傳回的程式碼不是其中一種，SQL_DESC_ROWS_PROCESSED_PTR 所指向的位置會是未定義。  
   
- 在 IPD，此標頭欄位會指向包含每一組參數值之後呼叫的狀態資訊的參數狀態陣列**SQLExecute**或是**SQLExecDirect**。 如果在呼叫**SQLExecute**或是**SQLExecDirect**未傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，此欄位所指陣列的內容為未定義。 應用程式必須配置 SQLUSMALLINTs 的陣列，並設定為指向陣列的這個欄位。 驅動程式將會填入陣列 — 除非 SQL_DESC_ARRAY_STATUS_PTR 欄位設定為 null 指標，在此情況下產生沒有狀態值，而且不會填入陣列。 陣列中的項目可以包含下列值：  
+ 在 IPD，此標頭欄位會指向包含每一組參數值之後呼叫的狀態資訊的參數狀態陣列**SQLExecute**或是**SQLExecDirect**。 如果在呼叫**SQLExecute**或是**SQLExecDirect**未傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，此欄位所指陣列的內容為未定義。 應用程式必須配置 SQLUSMALLINTs 的陣列，並設定為指向陣列的這個欄位。 驅動程式將會填入陣列-除非 SQL_DESC_ARRAY_STATUS_PTR 欄位設定為 null 指標，在此情況下產生沒有狀態值，而且不會填入陣列。 陣列中的項目可以包含下列值：  
   
--   SQL_PARAM_SUCCESS： 這一集的參數成功執行的 SQL 陳述式。  
+-   SQL_PARAM_SUCCESS:SQL 陳述式成功執行這一集的參數。  
   
--   SQL_PARAM_SUCCESS_WITH_INFO： 這一集的參數，成功地執行 SQL 陳述式不過，警告資訊可在診斷資料結構。  
+-   SQL_PARAM_SUCCESS_WITH_INFO:這一集的參數，成功執行的 SQL 陳述式不過，警告資訊可在診斷資料結構。  
   
--   SQL_PARAM_ERROR： 處理這組參數時發生錯誤。 使用診斷資料結構中的其他錯誤資訊。  
+-   SQL_PARAM_ERROR:處理這組參數時發生錯誤。 使用診斷資料結構中的其他錯誤資訊。  
   
--   SQL_PARAM_UNUSED： 這個參數集為未使用，可能是因為，一些先前的參數集而造成錯誤中止進一步處理，或因為 SQL_PARAM_IGNORE 設定該 SQL_DESC_ARRAY_ 所指定之陣列中的參數集APD STATUS_PTR 欄位。  
+-   SQL_PARAM_UNUSED:此參數集為未使用，可能是因為，一些先前的參數集而造成錯誤中止進一步處理，或因為 SQL_PARAM_IGNORE 設定為該集合中的 SQL_DESC_ARRAY_STATUS_PTR 欄位所指定之陣列的參數APD 中。  
   
--   SQL_PARAM_DIAG_UNAVAILABLE： 未提供診斷資訊。 這個範例是資訊的當驅動程式會將參數陣列視為單一單位，因此不會產生此層級時發生錯誤。  
+-   SQL_PARAM_DIAG_UNAVAILABLE:無法使用的診斷資訊。 這個範例是資訊的當驅動程式會將參數陣列視為單一單位，因此不會產生此層級時發生錯誤。  
   
  也可以藉由呼叫設定此欄位在 IPD **SQLSetStmtAttr** SQL_ATTR_PARAM_STATUS_PTR 屬性。  
   
  在 ARD，此標頭欄位會指向一個值，可以設定應用程式，以指出此資料列是否要忽略的資料列作業陣列**SQLSetPos**作業。 陣列中的項目可以包含下列值：  
   
--   SQL_ROW_PROCEED： 該資料列包含在大量作業中使用**SQLSetPos**。 （此設定並不保證此作業會在資料列上進行。 如果資料列狀態 SQL_ROW_ERROR IRD 資料列狀態陣列中的，驅動程式可能無法執行作業的資料列中。）  
+-   SQL_ROW_PROCEED:該資料列會包含在大量作業中使用**SQLSetPos**。 （此設定並不保證此作業會在資料列上進行。 如果資料列狀態 SQL_ROW_ERROR IRD 資料列狀態陣列中的，驅動程式可能無法執行作業的資料列中。）  
   
--   SQL_ROW_IGNORE： 從大量作業使用排除的資料列**SQLSetPos**。  
+-   SQL_ROW_IGNORE:從大量作業使用排除的資料列**SQLSetPos**。  
   
  如果不設定陣列的任何項目，在大量作業中包含的所有資料列。 如果 ARD SQL_DESC_ARRAY_STATUS_PTR 欄位中的值是 null 指標，所有資料列會包含在大量作業。指標指向有效的陣列且陣列的所有項目已 SQL_ROW_PROCEED 解譯都是相同的。 如果陣列中的項目設定為 SQL_ROW_IGNORE，已忽略的資料列的資料列狀態陣列中的值不會變更。  
   
@@ -267,9 +267,9 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|ARD： 未使用的 APD： 未使用的 IRD: R IPD:
   
  APD 中，在此標頭欄位會指向參數作業陣列的值可以設定應用程式，以表示這組參數是否要忽略的時機**SQLExecute**或**SQLExecDirect**呼叫。 陣列中的項目可以包含下列值：  
   
--   SQL_PARAM_PROCEED： 一組參數納入**SQLExecute**或是**SQLExecDirect**呼叫。  
+-   SQL_PARAM_PROCEED:一組參數納入**SQLExecute**或是**SQLExecDirect**呼叫。  
   
--   SQL_PARAM_IGNORE： 一組參數會從排除**SQLExecute**或是**SQLExecDirect**呼叫。  
+-   SQL_PARAM_IGNORE:參數集排除**SQLExecute**或是**SQLExecDirect**呼叫。  
   
  如果不設定陣列的任何項目，在中使用的參數陣列中的所有組**SQLExecute**或是**SQLExecDirect**呼叫。 如果 APD 中的 [SQL_DESC_ARRAY_STATUS_PTR] 欄位中的值是 null 指標，則會使用所有的參數集;指標指向有效的陣列且陣列的所有項目已 SQL_PARAM_PROCEED 解譯都是相同的。  
   
@@ -280,7 +280,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|ARD： 未使用的 APD： 未使用的 IRD: R IPD:
   
  繫結位移是一律直接新增至 SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 欄位中的值。 如果位移變更為不同的值，新的值是仍然直接新增至每個描述項欄位中的值。 新的位移不會加入至欄位值，加上任何先前的位移。  
   
- 這個欄位是*延後的欄位*： 它不會在其設定，但可在稍後由驅動程式需要判斷資料緩衝區的位址時的時間。  
+ 這個欄位是*延後的欄位*:它不會在其設定，但可在稍後由驅動程式需要判斷資料緩衝區的位址時的時間。  
   
  也可以藉由呼叫設定此欄位中 ARD **SQLSetStmtAttr** SQL_ATTR_ROW_BIND_OFFSET_PTR 屬性。 也可以藉由呼叫設定此欄位中 ARD **SQLSetStmtAttr** SQL_ATTR_PARAM_BIND_OFFSET_PTR 屬性。  
   
@@ -408,7 +408,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
   
  APD 中的 [SQL_DESC_INDICATOR_PTR] 欄位為 null 指標，如果應用程式無法使用此描述項記錄，來指定 NULL 引數。  
   
- 這個欄位是*延後的欄位*： 它不會在其設定，但會在稍後驅動程式用來表示 null 屬性 （適用於 ARDs)，或決定 null 屬性 （Apd) 的時間。  
+ 這個欄位是*延後的欄位*:它不會在其設定，但會在稍後驅動程式用來表示 null 屬性 （適用於 ARDs)，或決定 null 屬性 （Apd) 的時間。  
   
  **與 SQL_DESC_LABEL [IRDs]**  
  這個唯讀 SQLCHAR * 記錄欄位包含資料行標籤或標題。 如果資料行沒有標籤，此變數會包含資料行名稱。 如果是未命名的資料行，而且沒有標籤，此變數包含空字串。  
@@ -416,7 +416,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_LENGTH [全部]**  
  此 SQLULEN 記錄欄位會是最大頁數或實際長度字元字串中字元或二進位資料類型，以位元組為單位。 這是固定長度資料類型的最大長度或可變長度資料類型的實際長度。 其值一律不包括結束的字元字串的 null 終止字元。 類型為 SQL_TYPE_DATE、 SQL_TYPE_TIME、 SQL_TYPE_TIMESTAMP，或其中一個 SQL 間隔資料類型的值，此欄位會有以字元為單位的日期時間或間隔值代表的字元字串的長度。  
   
- 此欄位中的值可能不同於 「 長度 」 做為 ODBC 2 中所定義的值 *.x*。 如需詳細資訊，請參閱 <<c0> [ 附錄 d： 資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
+ 此欄位中的值可能不同於 「 長度 」 做為 ODBC 2 中所定義的值 *.x*。 如需詳細資訊，請參閱[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
  **SQL_DESC_LITERAL_PREFIX [IRDs]**  
  這個唯讀 SQLCHAR * 記錄欄位包含驅動程式會辨識為此資料類型的常值的前置詞的字元。 此變數包含空字串資料類型不適用的常值的前置詞。  
@@ -462,7 +462,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_PRECISION [全部]**  
  此 SQLSMALLINT 記錄欄位包含是精確數值類型，在 （二進位精確度） 的近似數值類型，則表示尾數的位元數或 SQL_TYPE_TIME SQL_TYPE 的小數秒數元件中的數字的數字的數字的數目_TIMESTAMP 或 SQL_INTERVAL_SECOND 資料型別。 這個欄位是未定義的所有其他資料類型。  
   
- 此欄位中的值可能不同於 「 精確度 」 做為 ODBC 2 中所定義的值 *.x*。 如需詳細資訊，請參閱 <<c0> [ 附錄 d： 資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
+ 此欄位中的值可能不同於 「 精確度 」 做為 ODBC 2 中所定義的值 *.x*。 如需詳細資訊，請參閱[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
  **SQL_DESC_ROWVER [實作描述元]**  
  這個 SQLSMALLINTrecord 欄位會指示是否修改資料行是自動和 dbms 的資料列更新 （例如，類型為"timestamp"SQL Server 中的資料行） 時。 此記錄欄位的值是設定為 SQL_TRUE，如果資料行是資料列版本設定資料行，以及 SQL_FALSE 否則。 此資料行屬性是類似於呼叫**SQLSpecialColumns** IdentifierType 的 SQL_ROWVER 來判斷是否會自動更新的資料行使用。  
@@ -470,7 +470,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **[All] SQL_DESC_SCALE**  
  此 SQLSMALLINT 記錄欄位包含 decimal 與 numeric 資料類型的定義小數位數。 對於所有其他資料類型未定義的欄位。  
   
- 此欄位中的值可能不同於 「 調整 」 ODBC 2 中所定義的值 *.x*。 如需詳細資訊，請參閱 <<c0> [ 附錄 d： 資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
+ 此欄位中的值可能不同於 「 調整 」 ODBC 2 中所定義的值 *.x*。 如需詳細資訊，請參閱[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
  **SQL_DESC_SCHEMA_NAME [IRDs]**  
  這個唯讀 SQLCHAR * 記錄欄位包含基底資料表包含資料行的結構描述名稱。 如果資料行是運算式或資料行是否屬於檢視，傳回的值會是驅動程式相關。 如果資料來源不支援結構描述，或無法判斷結構描述名稱，此變數包含空字串。  
@@ -506,14 +506,14 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
 |------------------------------|---------------------------------|  
 |SQL_CHAR、 SQL_VARCHAR、 SQL_C_CHAR SQL_C_VARCHAR|SQL_DESC_LENGTH 設為 1。 SQL_DESC_PRECISION 設為 0。|  
 |SQL_DATETIME|SQL_DESC_DATETIME_INTERVAL_CODE 設 SQL_CODE_DATE 或 SQL_CODE_TIME，SQL_DESC_PRECISION 設為 0。 當它設定為 SQL_DESC_TIMESTAMP 時，SQL_DESC_PRECISION 設為 6。|  
-|SQL_DECIMAL，SQL_NUMERIC，SQL_C_NUMERIC|SQL_DESC_SCALE 設為 0。 SQL_DESC_PRECISION 會設定為個別的資料類型的實作定義的有效位數。<br /><br /> 請參閱[SQL 到 c： 數值](../../../odbc/reference/appendixes/sql-to-c-numeric.md)如需有關如何以手動方式將繫結 SQL_C_NUMERIC 值資訊。|  
+|SQL_DECIMAL，SQL_NUMERIC，SQL_C_NUMERIC|SQL_DESC_SCALE 設為 0。 SQL_DESC_PRECISION 會設定為個別的資料類型的實作定義的有效位數。<br /><br /> 請參閱[SQL 到 c:數值](../../../odbc/reference/appendixes/sql-to-c-numeric.md)如需有關如何以手動方式將繫結 SQL_C_NUMERIC 值資訊。|  
 |SQL_FLOAT、 SQL_C_FLOAT|SQL_DESC_PRECISION SQL_FLOAT 是設定為實作定義的預設有效位數。|  
 |SQL_INTERVAL|當 SQL_DESC_DATETIME_INTERVAL_CODE 設定間隔資料類型時，會將 SQL_DESC_DATETIME_INTERVAL_PRECISION 設定為 2 （預設間隔開頭有效位數）。 時的間隔秒數元件，則會將 SQL_DESC_PRECISION 設定為 6 （預設間隔秒數有效位數）。|  
   
  當應用程式呼叫**SQLSetDescField**來設定欄位的描述元，而不是呼叫**SQLSetDescRec**，應用程式必須先宣告的資料類型。 載入時，會隱含地設定，如上表所示的其他欄位。 值的隱含集是否有任何無法接受，應用程式接著可以呼叫**SQLSetDescField**或是**SQLSetDescRec**明確地設定無法接受的值。  
   
  **SQL_DESC_TYPE_NAME [實作描述元]**  
- 這個唯讀 SQLCHAR * 記錄欄位包含資料來源而定的型別名稱 （例如，"CHAR"、"VARCHAR"，等等）。 如果資料類型名稱未知時，此變數包含空字串。  
+ 這個唯讀 SQLCHAR * 記錄欄位包含的資料來源相依類型名稱 （例如，"CHAR"、"VARCHAR"，等等）。 如果資料類型名稱未知時，此變數包含空字串。  
   
  **將 SQL_DESC_UNNAMED [實作描述元]**  
  此 SQLSMALLINT 記錄中欄位的資料列描述項是由 SQL_NAMED 或 sql_unnamed 時驅動程式時設定其設定與 SQL_DESC_NAME 欄位。 如果與 SQL_DESC_NAME 欄位包含資料行別名或不適用資料行別名，驅動程式將 SQL_DESC_UNNAMED 將欄位設定為 SQL_NAMED。 如果應用程式會將 IPD 與 SQL_DESC_NAME 欄位設定的參數名稱或別名，驅動程式會設定為 SQL_NAMED IPD SQL_DESC_UNNAMED 欄位。 如果沒有任何資料行名稱或資料行別名，則驅動程式會將 SQL_DESC_UNNAMED 欄位設 sql_unnamed 時。  

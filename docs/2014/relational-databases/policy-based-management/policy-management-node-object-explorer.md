@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2a8eecf04bdc1b985863ffd2bafe3acfea4e6240
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: febf8ce34e93f4efffaea1d9a9925ab5c8206652
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056958"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815000"
 ---
 # <a name="policy-management-node-object-explorer"></a>原則管理節點 (物件總管)
   本節包含 **中物件總管之** PolicyManagement [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]節點的 F1 說明主題。  

@@ -1,5 +1,5 @@
 ---
-title: 第 1 課：使用合併式複寫發行資料 | Microsoft Docs
+title: 第 1 課：使用合併式複寫發行資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 65debc2ad15045984f43e05d0afcf3011c50f2b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2160f4e2a204f1e1e6b90da9949bd356bc9b7cf5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112908"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589262"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>第 1 課：使用合併式複寫發行資料
   在這一課，您將使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，建立合併式發行集，以發行 **範例資料庫中**Employee **、** SalesOrderHeader **和** SalesOrderDetail [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表的子集。 這些資料表是以參數化資料列篩選器加以篩選，讓每一個訂閱包含唯一的資料分割。 此外，您也會將合併代理程式所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入加入至發行集存取清單 (PAL)。 本教學課程要求您，先完成上一個教學課程 [準備伺服器進行複寫](tutorial-preparing-the-server-for-replication.md)。  
@@ -84,7 +84,7 @@ ms.locfileid: "48112908"
   
 21. 選取 [立即建立快照集]，清除 [排程快照集代理程式在下列時間執行]，然後按一下 [下一步]。  
   
-22. 在 [代理程式安全性] 頁面上，按一下 [安全性設定]，在 [處理帳戶] 方塊中鍵入 \<電腦名稱>**\repl_snapshot**，提供此帳戶的密碼，然後按一下 [確定]。 按一下 **[完成]**。  
+22. 在 [代理程式安全性] 頁面上，按一下 [安全性設定]，在 [處理帳戶] 方塊中輸入 \<_電腦名稱>_**\repl_snapshot**，提供此帳戶的密碼，然後按一下 [確定]。 按一下 **[完成]**。  
   
 23. 在 [完成精靈] 頁面的 [發行集名稱] 方塊中輸入 **AdvWorksSalesOrdersMerge**，然後按一下 [完成]。  
   
@@ -106,12 +106,12 @@ ms.locfileid: "48112908"
   
      [發行集屬性] 對話方塊隨即顯示。  
   
-3.  選取 [發行集存取清單] 頁面，然後按一下 [新增]。  
+3.  選取 [發行集存取清單] 頁面，然後按一下 [加入]。  
   
-4.  在 [新增發行集存取] 對話方塊中，選取 <電腦名稱>**\repl_merge** ，然後按一下 [確定]。 按一下 [確定] 。  
+4.  在 [加入發行集存取] 對話方塊中，選取 <電腦名稱>**\repl_merge**，然後按一下 [確定]。 按一下 [確定] 。  
   
 ## <a name="next-steps"></a>後續步驟  
- 您已順利建立合併式發行集。 下一步，您將訂閱此發行集。 請參閱 [第 2 課：建立合併式發行集的訂閱](lesson-2-creating-a-subscription-to-the-merge-publication.md)。  
+ 您已順利建立合併式發行集。 下一步，您將訂閱此發行集。 請參閱[第 2 課：建立合併式發行集的訂閱](lesson-2-creating-a-subscription-to-the-merge-publication.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [篩選發行的資料](publish/filter-published-data.md)   

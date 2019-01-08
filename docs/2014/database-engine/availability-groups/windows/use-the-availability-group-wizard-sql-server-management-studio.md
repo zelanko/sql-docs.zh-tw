@@ -17,15 +17,15 @@ ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc448704ef0362c70a957a4e5a1574cd92df3578
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0772ab148c413d685f046a5a238761edf647641b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116458"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363880"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>使用可用性群組精靈 (SQL Server Management Studio)
-  本主題描述如何使用新的可用性群組精靈 (在[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) 來建立及設定 AlwaysOn 可用性群組中的[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」*(Availability Replica))。  
+  本主題描述如何使用 [新增可用性群組精靈] (在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中)，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中建立和設定 AlwaysOn 可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」*(Availability Replica))。  
   
 > [!NOTE]  
 >  如需可用性群組的簡介，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)。  
@@ -36,7 +36,7 @@ ms.locfileid: "48116458"
   
      [Security](#Security)  
   
--   **使用下列項目建立和設定可用性群組：**  [新增可用性群組精靈 (SQL Server Management Studio)](#RunAGwiz)  
+-   **若要建立和設定可用性群組，請使用：**[新增可用性群組精靈 (SQL Server Management Studio)](#RunAGwiz)  
   
 > [!NOTE]  
 >  除了使用 [新增可用性群組精靈] 以外，您也可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 指令程式。 如需詳細資訊，請參閱 [建立可用性群組 &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md) 或 [建立可用性群組 &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)中建立和設定 AlwaysOn 可用性群組。  
@@ -111,12 +111,12 @@ ms.locfileid: "48116458"
   
      如果您變更資料庫讓它符合資格，請按一下 **[重新整理]** 更新資料庫方格。  
   
-7.  在 **[指定複本]** 頁面上，針對新的可用性群組指定並設定一個或多個複本。 此頁面包含四個索引標籤。 下表將介紹這些索引標籤。 如需詳細資訊，請參閱[指定複本頁面 &#40;新增可用性群組精靈：加入複本精靈&#41;](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md) 主題。  
+7.  在 **[指定複本]** 頁面上，針對新的可用性群組指定並設定一個或多個複本。 此頁面包含四個索引標籤。 下表將介紹這些索引標籤。 如需詳細資訊，請參閱 <<c0> [ 指定複本頁面&#40;新增可用性群組精靈：</c0>加入複本精靈&#41; ](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)主題。  
   
     |索引標籤|簡短描述|  
     |---------|-----------------------|  
     |**複本**|使用此索引標籤可指定將裝載次要複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 請注意，您目前所連接的伺服器執行個體必須裝載主要複本。|  
-    |**端點**|使用此索引標籤可驗證任何現有的資料庫鏡像端點，此外，如果在其服務帳戶使用 Windows 驗證的伺服器執行個體上缺少此端點，則可自動建立該端點。 **注意：** 任何伺服器執行個體在非網域使用者帳戶下執行，如果您需要執行到您的伺服器執行個體進行手動變更，才可以繼續在精靈中。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#PrerequisitesRestrictions)＞。|  
+    |**端點**|使用此索引標籤可驗證任何現有的資料庫鏡像端點，此外，如果在其服務帳戶使用 Windows 驗證的伺服器執行個體上缺少此端點，則可自動建立該端點。 **注意：** 如果有任何伺服器執行個體在非網域使用者帳戶之下執行，您需要對伺服器執行個體進行手動變更，然後才可以在精靈中繼續執行。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#PrerequisitesRestrictions)＞。|  
     |**備份喜好設定**|使用此索引標籤可指定整個可用性群組的備份喜好設定，以及個別可用性複本的備份優先權。|  
     |**接聽程式**|使用此索引標籤可建立可用性群組接聽程式。 根據預設，精靈不會建立接聽程式。|  
   
@@ -196,23 +196,23 @@ ms.locfileid: "48116458"
   
 -   **部落格：**  
   
-     [AlwaysON-HADRON 學習系列： Worker Pool Usage for HADRON 功能之資料庫](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON-HADRON 學習系列：Worker Pool Usage for HADRON 功能之資料庫](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [SQL Server AlwaysOn 團隊部落格： 官方 SQL Server AlwaysOn 團隊部落格](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server 工程師部落格](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
 -   **影片：**  
   
-     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分： 產生高可用性解決方案簡介](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分：下一代高可用性解決方案簡介](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分： 建立使用 AlwaysOn 的任務關鍵性的高可用性解決方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分：建立使用 AlwaysOn 任務關鍵性的高可用性解決方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **白皮書：**  
   
-     [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Microsoft 的 SQL Server 2012 白皮書](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [Microsoft 的 SQL Server 2012 白皮書](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 客戶諮詢團隊白皮書](http://sqlcat.com/)  
   

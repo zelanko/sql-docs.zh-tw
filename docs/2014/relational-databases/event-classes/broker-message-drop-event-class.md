@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -16,12 +15,12 @@ ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03885ddd91a5c0c99516ee692f50626c1f0b5b3b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1aadd84d42f797026323023b0cf5be27d01d693
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132668"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810430"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Broker:Message Undeliverable 事件類別
   當 Service Broker 無法保留應於此執行個體中傳遞至服務的已接收訊息時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會產生 **Broker:Message Undeliverable** 事件。 對於應該已被轉送的訊息，請參閱 [Broker︰Forwarded Message Dropped 事件類別](broker-forwarded-message-dropped-event-class.md)。  
@@ -54,7 +53,7 @@ ms.locfileid: "48132668"
 |**Severity**|`int`|事件中文字的嚴重性編號。|29|否|  
 |**SPID**|`int`|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|**State**|`int`|指出產生事件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原始程式碼內的位置。 每個可能產生此事件的位置都有不同的狀態碼。 Microsoft 支援工程師可以使用此狀態碼來尋找產生事件的位置。|30|否|  
+|**狀態**|`int`|指出產生事件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原始程式碼內的位置。 每個可能產生此事件的位置都有不同的狀態碼。 Microsoft 支援工程師可以使用此狀態碼來尋找產生事件的位置。|30|否|  
 |**TextData**|`ntext`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法傳遞訊息的原因。|1|是|  
 |**TransactionID**|`bigint`|系統指派的交易識別碼。|4|否|  
   

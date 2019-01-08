@@ -14,12 +14,12 @@ ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2570a21987ed46ce7bda01302cf890ffab87bb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22d560c8a65d5b9a7cebc4062ddd2d1ce936d5a2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086768"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372053"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會定義可取代或增強連接字串關鍵字的連接屬性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式已經指定數個連接字串關鍵字的預設值。  
@@ -78,7 +78,7 @@ SQLDriverConnect(hdbc, hwnd,
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLDriverConnect 函數](http://go.microsoft.com/fwlink/?LinkId=59340)   
+ [SQLDriverConnect 函數](https://go.microsoft.com/fwlink/?LinkId=59340)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   

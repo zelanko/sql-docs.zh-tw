@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 02/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - surface area configuration [SQL Server], sp_configure
@@ -28,12 +27,12 @@ ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a903a3246b8a91a8ff0b42862b7bbf4046497c3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088708"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640549"
 ---
 # <a name="server-configuration-options-sql-server"></a>伺服器組態選項 (SQL Server)
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sp_configure 系統預存程序，透過組態選項來管理及最佳化 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 資源。 最常使用的伺服器組態選項可以透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來使用，而所有組態選項都可以透過 sp_configure 來存取。 在設定這些選項前，請仔細考慮這些選項對系統所造成的效果。 如需詳細資訊，請參閱[檢視或變更伺服器屬性 &#40;SQL Server&#41;](view-or-change-server-properties-sql-server.md)。  

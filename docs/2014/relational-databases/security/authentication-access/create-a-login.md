@@ -22,12 +22,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c5ee501846746dfc5bb0700039c7bef8a0e15511
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9ff712cb5915493f1ff285421bfe3edc8d7981f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190488"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374760"
 ---
 # <a name="create-a-login"></a>建立登入
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立登入。 登入是連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的人員或程序的識別。  
@@ -46,7 +46,7 @@ ms.locfileid: "48190488"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**  [建立登入之後所採取的步驟](#FollowUp)  
+-   **後續操作：**[若要建立登入之後所採取的步驟](#FollowUp)  
   
 ##  <a name="Background"></a> 背景  
  登入是安全性主體或可由安全系統驗證的實體。 使用者需要登入才能連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 您可以建立以 Windows 主體為基礎的登入 (例如網域使用者或 Windows 網域群組)，也可以建立不是以 Windows 主體為基礎的登入 (例如 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入)。  
@@ -54,7 +54,7 @@ ms.locfileid: "48190488"
 > [!NOTE]  
 >  若要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證，[!INCLUDE[ssDE](../../../includes/ssde-md.md)] 必須使用混合模式驗證。 如需詳細資訊，請參閱[選擇驗證模式](../choose-an-authentication-mode.md)。  
   
- 登入做為安全性主體時，可以將權限授與登入。 登入的範圍是整個 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 若要連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體上的特定資料庫，則登入必須對應到資料庫使用者。 資料庫內的權限是對資料庫使用者授與或拒絕，而不是登入。 整個執行個體範圍的權限[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](例如`CREATE ENDPOINT`權限) 可以授與登入。  
+ 登入做為安全性主體時，可以將權限授與登入。 登入的範圍是整個 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 若要連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體上的特定資料庫，則登入必須對應到資料庫使用者。 資料庫內的權限是對資料庫使用者授與或拒絕，而不是登入。 範圍包含整個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的權限 (例如 `CREATE ENDPOINT` 權限) 可以授與登入。  
   
 ##  <a name="Security"></a> 安全性  
   
@@ -67,19 +67,19 @@ ms.locfileid: "48190488"
   
 1.  在 [物件總管] 中，展開要建立新登入之伺服器執行個體的資料夾。  
   
-2.  以滑鼠右鍵按一下 [安全性] 資料夾，指向 [新增]，然後選取 [登入…]。  
+2.  以滑鼠右鍵按一下 [安全性] 資料夾，指向 [新增]，然後選取 [登入...]。  
   
-3.  在 **[登入 - 新增]** 對話方塊，於 **[一般]** 頁面上的 **[登入名稱]** 方塊中輸入使用者的名稱。 或者，按一下 **[搜尋]** 開啟 **[選取使用者或群組]** 對話方塊。  
+3.  在 [登入 - 新增] 對話方塊的 [一般] 頁面上，於 [登入名稱] 方塊中輸入使用者的名稱。 或者，按一下 [搜尋...] 開啟 [選取使用者或群組] 對話方塊。  
   
-     如果您按一下 **[搜尋]**：  
+     如果您按一下 [搜尋...]：  
   
-    1.  按一下 **[選取此物件類型]** 底下的 **[物件類型]** 開啟 [物件類型] 對話方塊並選取下列任何一個或所有選項：[內建安全性主體]、[群組] 和 [使用者]。 預設會選取 [內建安全性主體] 和 [使用者]。 完成後，請按一下 **[確定]**。  
+    1.  底下**選取此物件類型**，按一下 **物件類型...** 以開啟**物件類型**對話方塊方塊，然後選取任何或所有下列：**內建安全性主體**，**群組**，以及**使用者**。 預設會選取 [內建安全性主體] 和 [使用者]。 完成後，請按一下 **[確定]**。  
   
-    2.  按一下 **[從這個位置]** 底下的 **[位置]** 開啟 **[位置]** 對話方塊並選取其中一個可用的伺服器位置。 完成後，請按一下 **[確定]**。  
+    2.  按一下 [從這個位置] 下的 [位置..] 開啟 [位置] 對話方塊，然後選取其中一個可用的伺服器位置。 完成後，請按一下 **[確定]**。  
   
-    3.  在 [輸入要選取的物件名稱 (範例)] 底下，輸入要尋找的使用者或群組名稱。 如需詳細資訊，請參閱＜ [選擇使用者、電腦或群組對話方塊](http://technet.microsoft.com/library/cc771712.aspx)＞。  
+    3.  在 [輸入要選取的物件名稱 (範例)] 底下，輸入要尋找的使用者或群組名稱。 如需詳細資訊，請參閱＜ [選擇使用者、電腦或群組對話方塊](https://technet.microsoft.com/library/cc771712.aspx)＞。  
   
-    4.  如需其他進階搜尋選項，請按一下 **[進階]** 。 如需詳細資訊，請參閱 [選擇使用者、電腦或群組對話方塊 - 進階頁面](http://technet.microsoft.com/library/cc733110.aspx)。  
+    4.  如需其他進階搜尋選項，請按一下 [進階...]。 如需詳細資訊，請參閱 [選擇使用者、電腦或群組對話方塊 - 進階頁面](https://technet.microsoft.com/library/cc733110.aspx)。  
   
     5.  按一下 [確定] 。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48190488"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他選項  
- **[登入 - 新增]** 對話方塊也在其他四個頁面上提供選項： **[伺服器角色]**、 **[使用者對應]**、 **[安全性實體]** 和 **[狀態]**。  
+ **登入-新增**對話方塊也會提供其他四個頁面上的選項：**伺服器角色**，**使用者對應**，**安全性實體**，和**狀態**。  
   
 ### <a name="server-roles"></a>[伺服器角色]  
  **[伺服器角色]** 頁面列出所有可指派給新登入的可能角色。 下列是可以使用的選項：  
@@ -176,24 +176,24 @@ ms.locfileid: "48190488"
   
 1.  按一下 **[搜尋]**。  
   
-2.  在 [新增物件] 對話方塊中，選取下列其中一個選項：[特定物件…]、[下列類型的所有物件…] 或 [伺服器] *server_name*。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  在 [**加入物件**] 對話方塊中，選取下列其中一個選項：**特定物件...**，**類型的所有物件...**，或 **伺服器 * server_name*。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  選取 **伺服器 * server_name*使用的所有該伺服器的安全物件自動填滿上層方格。  
   
-3.  如果您選取 **[特定物件]**：  
+3.  如果您選取 [特定物件...]：  
   
-    1.  在 **[選取物件]** 對話方塊中，按一下 **[選取下列物件類型]** 底下的 **[物件類型]**。  
+    1.  在 [選取物件] 對話方塊中，按一下 [選取下列物件類型] 下的 [物件類型...]。  
   
-    2.  在 **[選取物件類型]** 對話方塊中，選取下列任何一個或所有物件類型： **[端點]**、 **[登入]**、 **[伺服器]**、 **[可用性群組]** 和 **[伺服器角色]**。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  在 **選取物件類型**對話方塊方塊中，選取任何或所有下列物件類型：**端點**，**登入**，**伺服器**，**可用性群組**，並**伺服器角色**。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  按一下 [輸入要選取的物件名稱 (範例)] 底下的 [瀏覽…]。  
+    3.  按一下 [輸入要選取的物件名稱 (範例)] 下的 [瀏覽...]。  
   
     4.  在 **[瀏覽物件]** 對話方塊中，選取您在 **[選取物件類型]** 對話方塊中所選物件類型的任何一項，然後按一下 **[確定]**。  
   
     5.  在 **[選取物件]** 對話方塊中，按一下 **[確定]**。  
   
-4.  如果您選取 **[下列類型的所有物件]**，請在 **[選取物件類型]** 對話方塊中，選取下列任何一個或所有物件類型： **[端點]**、 **[登入]**、 **[伺服器]**、 **[可用性群組]** 和 **[伺服器角色]**。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  如果您選取**類型的所有物件...**，請在**選取物件類型**對話方塊方塊中，選取任何或所有下列物件類型：**端點**，**登入**，**伺服器**，**可用性群組**，並**伺服器角色**。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **名稱**  
  加入此方格的每一個主體或安全性實體名稱。  
@@ -247,7 +247,7 @@ ms.locfileid: "48190488"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- Create a login for SQL Server by specifying a server name and a Windows domain account name.  
@@ -263,7 +263,7 @@ ms.locfileid: "48190488"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- Creates the user "shcooper" for SQL Server using the security credential "RestrictedFaculty"   

@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04eb910fde48039e3f2114d7cfdcc02fe1461507
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 213c86a7f7b81a997082aa5653e00a830197f9d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675084"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415575"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>中繼資料 - 日期和時間以及結構描述資料列集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,8 +74,8 @@ ms.locfileid: "51675084"
 |TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|LITERAL_PREFIX|'|'|'|'|'|'|  
+|LITERAL_SUFFIX|'|'|'|'|'|'|  
 |CREATE_PARAMS|NULL|scale|NULL|NULL|scale|scale|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  

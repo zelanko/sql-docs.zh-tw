@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - joins [SQL Server], properties
@@ -14,12 +14,12 @@ ms.assetid: e7985d14-8e6c-4fca-a1c9-9af1eeacb1e2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be9a99fcba116cf5e4d29e64211de1290024f4f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2bc6e2b1becdcecdd6ef7eef5635b6460440b40
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119688"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769100"
 ---
 # <a name="view-join-properties-visual-database-tools"></a>檢視聯結屬性 (Visual Database Tools)
   您可以在 [屬性] 視窗中檢視屬性的集合。  

@@ -20,16 +20,16 @@ ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4606c9f525517d51312fc9a105076691dcda682
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab81694fb0234a896a7e9fd09d338e8db43360eb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683022"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207507"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec 函式
 **合規性**  
- 版本導入： ODBC 3.0 版的標準符合性： ISO 92  
+ 導入的版本：ODBC 3.0 版的標準合規性：ISO 92  
   
  **摘要**  
  **SQLGetDiagRec**傳回多個欄位包含錯誤、 警告和狀態資訊的診斷記錄的目前值。 不同於**SQLGetDiagField**，它會傳回呼叫，每一個診斷欄位**SQLGetDiagRec**傳回幾個常用的診斷記錄，包括 SQLSTATE、 原生錯誤碼的欄位和診斷訊息的文字。  
@@ -94,13 +94,13 @@ SQLRETURN SQLGetDiagRec(
 ## <a name="diagnostics"></a>診斷  
  **SQLGetDiagRec**不會將本身的診斷記錄。 它會使用下列傳回值報告自己執行的結果：  
   
--   SQL_SUCCESS： 函式成功地傳回診斷資訊。  
+-   SQL_SUCCESS:此函式會成功地傳回診斷資訊。  
   
--   SQL_SUCCESS_WITH_INFO: \* *MessageText*緩衝區太小無法容納要求的診斷訊息。 所不產生的任何診斷記錄。 若要判斷發生截斷，應用程式必須比較*Columnsize*實際的位元組數目，會寫入至 **StringLengthPtr*。  
+-   SQL_SUCCESS_WITH_INFO:\* *MessageText*緩衝區太小無法容納要求的診斷訊息。 所不產生的任何診斷記錄。 若要判斷發生截斷，應用程式必須比較*Columnsize*實際的位元組數目，會寫入至 **StringLengthPtr*。  
   
--   SQL_INVALID_HANDLE： 所指定的控制代碼*HandleType*並*處理*不是有效的控制代碼。  
+-   SQL_INVALID_HANDLE:所表示的控制代碼*HandleType*並*處理*不是有效的控制代碼。  
   
--   SQL_ERROR： 下列其中一項發生：  
+-   SQL_ERROR:發生下列其中一項：  
   
     -   *RecNumber*是負數或 0。  
   
@@ -108,7 +108,7 @@ SQLRETURN SQLGetDiagRec(
   
     -   當使用非同步通知時，控制代碼的非同步作業未完成。  
   
--   SQL_NO_DATA: *RecNumber*中所指定的控制代碼已存在的診斷記錄的數目大於*處理。* 函式也會傳回 SQL_NO_DATA 任何正*RecNumber*沒有診斷記錄是否*處理*。  
+-   SQL_NO_DATA 為止：*RecNumber*中指定的控制代碼已存在的診斷記錄的數目大於*處理。* 函式也會傳回 SQL_NO_DATA 任何正*RecNumber*沒有診斷記錄是否*處理*。  
   
 ## <a name="comments"></a>註解  
  應用程式通常會呼叫**SQLGetDiagRec**先前的 ODBC 函式呼叫時傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO。 不過，因為任何 ODBC 函數可以張貼零或多個診斷記錄每次呼叫時，應用程式可以呼叫**SQLGetDiagRec**之後的任何 ODBC 函數呼叫。 應用程式可以呼叫**SQLGetDiagRec**多次，以便傳回診斷資料結構中的部分或全部的記錄。 ODBC 沒有施加限制可以儲存一次的診斷記錄的數目。  

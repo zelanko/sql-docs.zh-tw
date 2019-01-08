@@ -18,12 +18,12 @@ ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0463360db65621a90f270c2eedb87972c6bd986b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0fa6b877b0c4f9dd2754301c9b2e47964b1ad9e
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088544"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979454"
 ---
 # <a name="clr-table-valued-functions"></a>CLR 資料表值函式
   資料表值函式是會傳回資料表的使用者定義函數。  
@@ -49,7 +49,7 @@ ms.locfileid: "48088544"
   
 ```vb  
 Imports System.Runtime.InteropServices  
-…  
+...  
 Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)  
 ```  
   
@@ -175,7 +175,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>範例：傳回 SQL Server 查詢的結果  
- 下列範例示範查詢 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表值函式。 這個範例使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的 AdventureWorks Light 資料庫。 請參閱[ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843)如需有關下載 AdventureWorks。  
+ 下列範例示範查詢 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表值函式。 這個範例使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的 AdventureWorks Light 資料庫。 請參閱[ http://www.codeplex.com/sqlserversamples ](https://go.microsoft.com/fwlink/?LinkId=87843)如需有關下載 AdventureWorks。  
   
  將原始程式碼檔命名為 FindInvalidEmails.cs 或 FindInvalidEmails.vb。  
   

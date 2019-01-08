@@ -13,12 +13,12 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bc1101225eae5fd02eec2ee7c29e8ca21a778370
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bf80986582802ad70c39d62ae0fbb835fcb360e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188218"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373130"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>使用格式檔案以略過資料表資料行 (SQL Server)
   本主題將說明格式檔案。 當欄位不存在於資料檔案中時，您就可以使用格式檔案來略過資料表資料行的匯入。 只有在略過的資料行可為 Null 和/或有預設值時，資料檔案所包含的欄位才可以少於資料表中的資料行數目。  
@@ -134,7 +134,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -156,7 +156,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  

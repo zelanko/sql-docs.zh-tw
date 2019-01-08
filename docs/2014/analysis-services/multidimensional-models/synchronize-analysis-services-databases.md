@@ -16,12 +16,12 @@ ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bede06ab45511cbb1ec96aefb7e933f077bbe92c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3b80a13d61e1ddb1187f8114f756484dd608ad7b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147853"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352164"
 ---
 # <a name="synchronize-analysis-services-databases"></a>同步處理 Analysis Services 資料庫
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包含資料庫同步處理功能，此功能藉由將來源伺服器上資料庫的資料和中繼資料複製到目的地伺服器上的資料庫，讓兩個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫相等。 使用同步處理資料庫功能可完成下列任何一項工作：  
@@ -41,7 +41,7 @@ ms.locfileid: "50147853"
  若要同步處理資料庫，請執行同步處理資料庫精靈來立即同步處理資料庫，或是用它來產生可於稍後執行的同步處理指令碼。 這兩種方法都可用來提高 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫與 Cube 的可用性和延展性。  
   
 > [!NOTE]  
->  以下針對舊版 Analysis Services 所撰寫的技術白皮書依然適用於使用 SQL Server 2012 所建立的可擴充式多維度方案。 如需詳細資訊，請參閱 [使用 Analysis Services 向外延展查詢](http://go.microsoft.com/fwlink/?LinkId=253136) 和 [使用唯讀資料庫向外延展查詢 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=253137.)  
+>  以下針對舊版 Analysis Services 所撰寫的技術白皮書依然適用於使用 SQL Server 2012 所建立的可擴充式多維度方案。 如需詳細資訊，請參閱[使用 Analysis Services 向外延展查詢](https://go.microsoft.com/fwlink/?LinkId=253136)和[使用唯讀資料庫向外延展查詢 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=253137.)  
   
 ## <a name="prerequisites"></a>先決條件  
  在您起始資料庫同步處理的目的地 (或目標) 伺服器上，您必須是 Analysis Services 伺服器管理員角色的成員。 在來源伺服器上，您的 Windows 使用者帳戶必須擁有來源資料庫的完整控制權限。 如果您以互動方式同步處理資料庫，請記得同步處理是在 Windows 使用者識別的安全性內容之下執行。 如果系統拒絕您的帳戶存取特定物件，這些物件將會從作業中排除。 如需有關伺服器管理員角色和資料庫權限的詳細資訊，請參閱 <<c0> [ 授與伺服器系統管理員權限&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)並[授與資料庫權限&#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)。</c0>  
@@ -55,7 +55,7 @@ ms.locfileid: "50147853"
  如果您在來源伺服器上使用，請關閉延遲彙總處理。 在背景處理的彙總可能會干擾資料庫同步處理。 如需設定這個伺服器屬性的詳細資訊，請參閱 [OLAP 屬性](../server-properties/olap-properties.md)。  
   
 > [!NOTE]  
->  資料庫大小是判斷同步處理是否為適當方法的一個因素。 我們沒有硬性的規定，但如果同步處理速度太慢，請考慮以平行方式同步處理多部伺服器，如這篇技術文章所述： [Analysis Services 同步處理最佳作法](http://go.microsoft.com/fwlink/?LinkID=253136)。  
+>  資料庫大小是判斷同步處理是否為適當方法的一個因素。 我們沒有硬性的規定，但如果同步處理速度太慢，請考慮進行同步處理多部伺服器，以平行方式，這篇技術文章所述：[Analysis Services 同步處理最佳作法](https://go.microsoft.com/fwlink/?LinkID=253136)。  
   
 ## <a name="synchronize-database-wizard"></a>同步處理資料庫精靈  
  使用同步處理資料庫精靈可執行從來源到目的地資料庫的單向同步處理，或是產生指令碼來指定資料庫同步處理作業。 您可以在同步處理過程中同步處理本機和遠端分割區，並選擇是否要包含角色。  

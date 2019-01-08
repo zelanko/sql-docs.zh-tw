@@ -14,12 +14,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62512268f5c4ee98fc20a142d97bf870d74d9ce6
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8f792d128d8d75bdf39a2b04b104b827d74c7b63
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018203"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376420"
 ---
 # <a name="spatial-data-types-overview"></a>空間資料類型概觀
   空間資料有兩種類型： `geometry` 資料類型支援平面或 Euclidean (扁平表面) 資料。 `geometry` 資料類型同時符合開放式地理空間協會 (Open Geospatial Consortium，OGC) 的 SQL 簡單特徵規格 1.1.0 版，而且符合 SQL MM (ISO 標準)。  
@@ -27,7 +27,7 @@ ms.locfileid: "51018203"
  此外，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 也支援 `geography` 資料類型，它會儲存橢圓體 (圓形表面) 資料，例如 GPS 經緯度座標。  
   
 > [!IMPORTANT]  
->  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中空間功能 (包括空間資料類型的增強功能) 的詳細描述和範例，請下載技術白皮書： [New Spatial Features in SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407)(SQL Server 代號 "Denali" 中的新空間功能)。  
+>  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中空間功能 (包括空間資料類型的增強功能) 的詳細描述和範例，請下載技術白皮書： [New Spatial Features in SQL Server Code-Named "Denali"](https://go.microsoft.com/fwlink/?LinkId=226407)(SQL Server 代號 "Denali" 中的新空間功能)。  
   
 ##  <a name="objects"></a> 空間資料物件  
  `geometry` 和 `geography` 資料類型支援十六種空間資料物件或執行個體類型。 但是，其中只有十一種執行個體類型「可具現化」；因此，您可以在資料庫中建立及處理這些執行個體 (或加以具現化)。 這些執行個體會從其區分為其父資料類型衍生某些屬性`Points`， **LineStrings，CircularStrings**， `CompoundCurves`， `Polygons`，`CurvePolygons`或多個`geometry`或是`geography`執行個體在`GeometryCollection`。 `Geography` 類型具有一種額外的執行個體類型：`FullGlobe`。  
@@ -99,9 +99,9 @@ ms.locfileid: "51018203"
   
  如需有關 OGC 規格的詳細資訊，請參閱下列主題：  
   
--   [OGC 規格，簡單特徵存取第一部 - 常見架構](http://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [OGC 規格，簡單特徵存取第一部 - 常見架構](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
--   [OGC 規格，簡單特徵存取第二部 - SQL 選項](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC 規格，簡單特徵存取第二部 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93628) \(英文\)  
   
   
 ##  <a name="circular"></a> 圓弧線段  
@@ -149,7 +149,7 @@ SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
   
 ```  
 LS LengthCS Length  
-5.65685…6.28318…  
+5.65685...6.28318...  
 ```  
   
  下圖顯示每個類型的儲存方式 (紅線顯示`LineString``@g1`，藍線顯示`CircularString``@g2`):  

@@ -1,5 +1,5 @@
 ---
-title: sys.fn_get_audit_file (transact-SQL) |Microsoft Docs
+title: sys.fn_get_audit_file & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 05/16/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b80ec93ef671f2f9a564c81ae2ebb10c19c43dfd
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 5b4eb865c8c0498e72943c128ff0106638005166
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018333"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980044"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -117,22 +117,22 @@ fn_get_audit_file ( file_pattern,
 |user_defined_event_id|**smallint**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 使用者定義的事件識別碼傳遞做為引數**sp_audit_write**。 **NULL**系統事件 （預設值） 和非零值則代表使用者定義的事件。 如需詳細資訊，請參閱 < [sp_audit_write &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)。|  
 |user_defined_information|**nvarchar(4000)**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 用來記錄使用者想要記錄中的任何額外資訊 |使用稽核記錄檔**sp_audit_write**預存程序。|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**varbinary** | **適用於**： 僅限 SQL Server （從 2016年開始） |  
-|transaction_id |**bigint** | **適用於**： 僅限 SQL Server （從 2016年開始） |  
-|client_ip |**nvarchar(128)** | **適用於**: Azure SQL DB + SQL Server （從 2017年開始） |  
-|application_name |**nvarchar(128)** | **適用於**: Azure SQL DB + SQL Server （從 2017年開始） |  
-|duration_milliseconds |**bigint** | **適用於**： 只有 Azure SQL DB |  
-|response_rows |**bigint** | **適用於**： 只有 Azure SQL DB |  
-|affected_rows |**bigint** | **適用於**： 只有 Azure SQL DB |  
-|connection_id |GUID | **適用於**： 只有 Azure SQL DB |
-|data_sensitivity_information |nvarchar(4000) | **適用於**： 只有 Azure SQL DB |
+|sequence_group_id |**varbinary** | **適用於**：僅限 SQL Server （從 2016年開始） |  
+|transaction_id |**bigint** | **適用於**：僅限 SQL Server （從 2016年開始） |  
+|client_ip |**nvarchar(128)** | **適用於**：Azure SQL DB + SQL Server （從 2017年開始） |  
+|application_name |**nvarchar(128)** | **適用於**：Azure SQL DB + SQL Server （從 2017年開始） |  
+|duration_milliseconds |**bigint** | **適用於**：只有 azure SQL DB |  
+|response_rows |**bigint** | **適用於**：只有 azure SQL DB |  
+|affected_rows |**bigint** | **適用於**：只有 azure SQL DB |  
+|connection_id |GUID | **適用於**：只有 azure SQL DB |
+|data_sensitivity_information |nvarchar(4000) | **適用於**：只有 azure SQL DB |
   
 ## <a name="remarks"></a>備註  
  如果*file_pattern&lt*引數傳遞給**fn_get_audit_file**參考路徑或檔案不存在，或如果檔案不是稽核檔案， **MSG_INVALID_AUDIT_FILE**會傳回錯誤訊息。  
   
 ## <a name="permissions"></a>Permissions  
- - **SQL Server**： 需要**CONTROL SERVER**權限。  
- - **Azure SQL DB**： 需要**CONTROL DATABASE**權限。     
+ - **SQL Server**：需要 **CONTROL SERVER** 權限。  
+ - **Azure SQL DB**:需要**控制資料庫**權限。     
     - 伺服器系統管理員可以存取伺服器上的所有資料庫的稽核記錄的檔。
     - 非伺服器系統管理員只能存取從目前資料庫的稽核記錄檔。
     - 不符合上述準則的 blob 將會略過 （略過的 blob 清單將會顯示查詢輸出訊息中），且函式會傳回記錄檔只會從允許存取的 blob。  
@@ -141,10 +141,10 @@ fn_get_audit_file ( file_pattern,
 
 - **SQL Server**
 
-  此範例會從名為 `\\serverName\Audit\HIPPA_AUDIT.sqlaudit` 的檔案進行讀取。  
+  此範例會從名為 `\\serverName\Audit\HIPAA_AUDIT.sqlaudit` 的檔案進行讀取。  
   
   ```  
-  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPPA_AUDIT.sqlaudit',default,default);  
+  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPAA_AUDIT.sqlaudit',default,default);  
   GO  
   ```  
 

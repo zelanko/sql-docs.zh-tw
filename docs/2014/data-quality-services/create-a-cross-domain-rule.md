@@ -13,19 +13,19 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c450b91f787cc82fc64f35a396ece8133791522f
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: e413c2a6057476fb44d5a7a106c8374621b9937c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033395"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415675"
 ---
 # <a name="create-a-cross-domain-rule"></a>建立跨定義域規則
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知識庫內建立複合定義域的跨定義域規則。 跨定義域規則會在複合定義域所包含的單一定義域中測試值之間的關聯性。 跨定義域規則必須在複合定義域中成立，才能讓定義域值被視為正確且符合商務需求。 跨定義域規則是用來驗證、更正並標準化定義域值。  
   
  跨定義域規則的 If 子句和 Then 子句是分別針對複合定義域的其中一個單一定義域所定義。 您必須針對不同的單一定義域定義每個子句。 跨定義域規則必須與多個單一定義域相關。您無法針對複合定義域定義簡單定義域規則 (僅適用於單一定義域)。 您可以針對單一定義域定義定義域規則，藉以進行此作業。 If 子句和 Then 子句可以分別包含一個或多個條件。  
   
- 具有最終條件的跨定義域規則會將規則邏輯套用至條件中值的同義字，以及值本身。 If 和 Then 子句的最終條件包括 [值等於]、[值不等於]、[值在] 或 [值不在]。 例如，假設您擁有複合定義域的下列跨定義域規則：「對於 ‘City’ 而言，如果值等於 ‘Los Angeles’，則對於 ‘State’ 而言，值等於 ‘CA’」。 如果 ‘Los Angeles’ 和 ‘LA’ 是同義字，此規則會針對 ‘Los Angeles CA’ 和 ‘LA CA’ 傳回正確，而針對 ‘Los Angeles WA’ 和 ‘LA WA’ 傳回錯誤。  
+ 具有最終條件的跨定義域規則會將規則邏輯套用至條件中值的同義字，以及值本身。 If 和 Then 子句的最終條件包括 [值等於]、[值不等於]、[值在] 或 [值不在]。 例如，假設您有下列跨定義域規則的複合定義域：「 對於 'City' 而言如果值等於 ' Los Angeles'，然後對於 'State'，值等於 'CA'。 如果 'Los Angeles' 和 'LA' 是同義字，此規則會針對 'Los Angeles CA' 和 'LA CA' 傳回正確，而針對 'Los Angeles WA' 和 'LA WA' 傳回錯誤。  
   
  除了只讓您知道跨定義域規則是否有效之外，跨定義域規則中的最終 *Then* 子句 **[值等於]** 也會在資料清理活動期間更正資料。 如需詳細資訊，請參閱＜ [Data Correction using Definitive Cross-Domain Rules](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) ＞中的 [Cleanse Data in a Composite Domain](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md)。  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - ProcessId Class (SqlService Class)
@@ -20,12 +18,12 @@ ms.assetid: 99b5a2e9-b44a-48a0-993e-04bd15c7fef4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2bcc9e31fd70f0201f26751bddbcb3f3f8aeec98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9e6c04a0ae0000284f3550d39e47c973adbe8ab
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080918"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357694"
 ---
 # <a name="processid-class-sqlservice-class"></a>ProcessId 類別 (SqlService 類別)
   取得可唯一識別服務的系統處理序識別碼。  
@@ -54,6 +52,6 @@ mysqlservice.ProcessId = 324
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [啟動及停止服務](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [啟動及停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

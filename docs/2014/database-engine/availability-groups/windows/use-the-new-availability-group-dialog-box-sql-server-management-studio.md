@@ -12,12 +12,12 @@ ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66f36164c6199d51d8a01916d84f1085d479235a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fda7911dc9e62741ba846e8a166bb0e3312f3425
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051678"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373170"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>使用新增可用性群組對話方塊 (SQL Server Management Studio)
   此主題描述如何使用 **的** [新增可用性群組] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 對話方塊，在已啟用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 功能的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]執行個體建立 AlwaysOn 可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」*(Availability Replica))。  
@@ -50,7 +50,7 @@ ms.locfileid: "48051678"
   
 -   執行初始資料同步處理。  
   
- 如需有關這些組態工作的詳細資訊，請參閱本主題稍後的＜ [待處理：建立可用性群組之後](#FollowUp)＞。  
+ 這些組態工作的相關資訊，請參閱[待處理：建立可用性群組之後](#FollowUp)稍後在本主題中。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -77,13 +77,13 @@ ms.locfileid: "48051678"
     > [!TIP]  
     >  如果您已經加入複本，但無法連接到主機伺服器執行個體，則可以移除該複本並加入新複本。 如需詳細資訊，請參閱[將次要複本從可用性群組移除 &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md) 和[將次要複本加入至可用性群組 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
-8.  在對話方塊的 **[選取頁面]** 窗格上，按一下 **[備份喜好設定]**。 然後在 **[備份喜好設定]** 頁面上，根據複本角色指定應該進行備份的位置，並為將要裝載此可用性群組之可用性複本的每個伺服器執行個體指派備份優先權。 如需詳細資訊，請參閱[可用性群組屬性：新增可用性群組 &#40;備份喜好設定頁面&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md)。  
+8.  在對話方塊的 **[選取頁面]** 窗格上，按一下 **[備份喜好設定]**。 然後在 **[備份喜好設定]** 頁面上，根據複本角色指定應該進行備份的位置，並為將要裝載此可用性群組之可用性複本的每個伺服器執行個體指派備份優先權。 如需詳細資訊，請參閱[可用性群組屬性：新增可用性群組&#40;備份喜好設定頁面&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md)。  
   
 9. 若要建立可用性群組，請按一下 **[確定]**。 這會導致對話方塊驗證該指定的資料庫是否符合必要條件。  
   
      若要結束對話方塊而不建立可用性群組，請按一下 **[取消]**。  
   
-##  <a name="FollowUp"></a> 待處理：使用新增可用性群組對話方塊建立可用性群組之後  
+##  <a name="FollowUp"></a> 後續操作：使用新增可用性群組對話方塊建立可用性群組之後  
   
 -   接著您需要連接到裝載此可用性群組之次要複本的每個伺服器執行個體，並完成下列步驟：  
   
@@ -156,7 +156,7 @@ ms.locfileid: "48051678"
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

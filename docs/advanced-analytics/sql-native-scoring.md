@@ -1,5 +1,5 @@
 ---
-title: 在 SQL Server machine learning 中的原生評分 |Microsoft Docs
+title: 使用預測 T-SQL 陳述式-SQL Server Machine Learning 服務的原生評分
 description: 產生使用預測 T-SQL 函式，評分 dta 的輸入，針對 SQL Server 上以 R 或 Python 撰寫的預先定型模型的預測。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 372c81310fea86094543319f21e409142810de97
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: a14a4b188aa27acdef0bc836e939a7df0021e522
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713150"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645127"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>使用預測 T-SQL 函式的原生評分
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "46713150"
 + PMML 模型
 + 使用其他開放原始碼或協力廠商程式庫所建立的模型
 
-## <a name="example-predict-t-sql"></a>範例： 預測 (T-SQL)
+## <a name="example-predict-t-sql"></a>範例預測 (T-SQL)
 
 在此範例中，您可以建立模型時，並接著從 T-SQL 呼叫即時的預測函數。
 
@@ -78,7 +78,7 @@ ms.locfileid: "46713150"
 
 執行下列的程式碼，以建立範例資料庫和必要的資料表。
 
-```SQL
+```sql
 CREATE DATABASE NativeScoringTest;
 GO
 USE NativeScoringTest;
@@ -95,7 +95,7 @@ GO
 
 使用下列陳述式來填入資料的資料表**鳶尾花**資料集。
 
-```SQL
+```sql
 INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
 EXECUTE sp_execute_external_script
   @language = N'R'
@@ -107,7 +107,7 @@ GO
 
 現在，建立儲存模型的資料表。
 
-```SQL
+```sql
 DROP TABLE IF EXISTS ml_models;
 GO
 CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
@@ -118,7 +118,7 @@ GO
 
 下列程式碼會建立模型，根據**鳶尾花**資料集並將它儲存到名為資料表**模型**。
 
-```SQL
+```sql
 DECLARE @model varbinary(max);
 EXECUTE sp_execute_external_script
   @language = N'R'
@@ -138,7 +138,7 @@ EXECUTE sp_execute_external_script
 
 您可以執行下列命令來檢視預存的模型，以二進位格式等陳述式：
 
-```SQL
+```sql
 SELECT *, datalength(native_model_object)/1024. as model_size_kb
 FROM ml_models;
 ```
@@ -147,7 +147,7 @@ FROM ml_models;
 
 下列簡單的預測陳述式從決策樹模型使用取得分類**原生評分**函式。 它可預測的鳶尾花品種根據您提供的屬性、 花瓣長度和寬度。
 
-```SQL
+```sql
 DECLARE @model varbinary(max) = (
   SELECT native_model_object
   FROM ml_models

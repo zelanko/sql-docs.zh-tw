@@ -1,6 +1,6 @@
 ---
-title: 在 SQL Server 2019 的 Java 語言擴充功能 |Microsoft Docs
-description: 使用 Java 語言擴充功能的 SQL Server 2019 上執行 Java 程式碼。
+title: Java 範例和教學課程中的 SQL Server 2019-SQL Server Machine Learning 服務
+description: 若要了解 SQL Server 資料搭配使用的 Java 語言擴充功能的步驟執行的 SQL Server 2019 上執行 Java 範例程式碼。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/24/2018
@@ -9,12 +9,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf6fec32e28342e355b3393bb531ad1833d8af6b
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 32c0792882020612c40a0c41b1c54aaeb51da91c
+ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715067"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069053"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>SQL Server 的 Java 範例逐步解說
 
@@ -226,7 +226,7 @@ Classpath 是編譯的程式碼的位置。 比方說，在 Linux 上，如果 c
    + 按一下 **物件類型**，並確定*內建的安全性原則*並*群組*已選取。
    + 按一下 **位置**選取本機電腦的名稱，在清單頂端。
 5. 請輸入**SQLRUserGroup**，檢查此名稱，然後按一下 [確定] 以加入群組。
-6. 請輸入**所有的應用程式封裝**，請檢查名稱，然後按一下 [確定] 以新增。 如果名稱未解決，請重新瀏覽位置步驟。 SID 是您的電腦本機。
+6. 請輸入**ALL APPLICATION PACKAGES**，請檢查名稱，然後按一下 [確定] 以新增。 如果名稱未解決，請重新瀏覽位置步驟。 SID 是您的電腦本機。
 
 請確定這兩個安全性身分識別具有 '讀取和執行' 的權限的資料夾和 「 套件 」 的子資料夾。
 

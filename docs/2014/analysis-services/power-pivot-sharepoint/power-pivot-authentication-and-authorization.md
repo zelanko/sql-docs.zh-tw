@@ -11,12 +11,12 @@ ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc2118315b40ab89d19d562b364a0a0250f7f3c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f28da387576eee3d9619e4fc817485beb5c8662
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165748"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377858"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot 驗證及授權
   在 SharePoint 2010 伺服陣列中執行的 PowerPivot for SharePoint 部署會使用 SharePoint 伺服器所提供的驗證子系統和授權模型。 由於所有 PowerPivot 相關的內容都儲存在 SharePoint 內容資料庫中，而且 PowerPivot 相關的所有作業都在伺服器陣列中的 PowerPivot 共用服務上執行，SharePoint 安全性基礎結構會延伸到 PowerPivot 內容和作業。 使用者若要求包含 PowerPivot 資料的活頁簿，就會使用以其 Windows 使用者識別為基礎的 SharePoint 使用者識別進行驗證。 活頁簿上的檢視權限會決定授與或拒絕要求。  
@@ -25,7 +25,7 @@ ms.locfileid: "48165748"
   
  按下列連結可閱讀本主題中的特定小節：  
   
- [使用傳統模式登入需求的 Windows 驗證](power-pivot-authentication-and-authorization.md#bkmk_auth)  
+ [使用傳統模式登入的 Windows 驗證需求](power-pivot-authentication-and-authorization.md#bkmk_auth)  
   
  [PowerPivot 作業需要使用者授權](#UserConnections)  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48165748"
 |伺服陣列或服務管理員|安裝、啟用與設定服務和應用程式。<br /><br /> 使用 PowerPivot 管理儀表板與檢視管理報表。|  
 |完整控制|啟用網站集合層級的 PowerPivot 功能整合。<br /><br /> 建立 PowerPivot 圖庫文件庫。<br /><br /> 建立資料摘要庫。|  
 |參與|加入、編輯、刪除與下載 PowerPivot 活頁簿。<br /><br /> 設定資料重新整理。<br /><br /> 根據 SharePoint 網站上的 PowerPivot 活頁簿，建立新的活頁簿和報表。<br /><br /> 在資料摘要庫中建立資料服務文件|  
-|讀取|將 PowerPivot 活頁簿做為外部資料來源來存取，其中活頁簿 URL 是在連接對話方塊 (例如，在 Excel 的資料連接精靈) 中明確輸入的。|  
+|讀取|做為外部資料來源，其中活頁簿 URL 明確輸入 （例如，在 Excel 的資料連接精靈） 的 [連線] 對話方塊中存取 PowerPivot 活頁簿。|  
 |僅檢視|檢視 PowerPivot 活頁簿。<br /><br /> 檢視資料重新整理記錄。<br /><br /> 將本機活頁簿連接至 SharePoint 網站上的 PowerPivot 活頁簿，以其他方式重新訂定其資料用途。<br /><br /> 下載活頁簿的快照集。 此快照集是資料的靜態複本，不包含交叉分析篩選器、篩選、公式或資料連接。 此快照集的內容類似於從瀏覽器視窗中複製資料格值。|  
   
 ##  <a name="excel"></a> PowerPivot 活頁簿的的 Excel Services 安全性考量  
@@ -99,7 +99,7 @@ ms.locfileid: "48165748"
  在 Excel Services 中，您可以針對信任的位置、信任的資料提供者以及信任的資料連線庫指定安全性相關的組態設定。 下表將描述啟用或強化 PowerPivot 資料存取的設定。 如果有設定未列在此處，對 PowerPivot 伺服器連接並沒有影響。 如需有關如何指定這些設定的逐步指示，請參閱 < 啟用 Excel Services > 一節中[初始設定&#40;PowerPivot for SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)。  
   
 > [!NOTE]  
->  與安全性最相關的設定會套用至信任的位置。 如果您要保留預設值或在不同的網站使用不同的值，您可以針對包含 PowerPivot 資料的網站建立其他信任的位置，然後只針對該網站進行下列設定。 如需相關資訊，請參閱 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+>  與安全性最相關的設定會套用至信任的位置。 如果您要保留預設值或在不同的網站使用不同的值，您可以針對包含 PowerPivot 資料的網站建立其他信任的位置，然後只針對該網站進行下列設定。 如需相關資訊，請參閱 [在管理中心建立 PowerPivot 網站的信任位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 |區域|設定|描述|  
 |----------|-------------|-----------------|  
@@ -107,7 +107,7 @@ ms.locfileid: "48165748"
 |信任的位置|位置類型|此值必須設為 **[Microsoft SharePoint Foundation]**。 PowerPivot 伺服器會擷取 .xlsx 檔案的複本，並將其載入伺服陣列中的 Analysis Services 伺服器。 伺服器只能從內容庫擷取 .xlsx 檔。|  
 ||允許外部資料|此值必須設為 **[信任的資料連線庫與內嵌連線]**。 PowerPivot 資料連接內嵌在活頁簿中。 如果您不允許內嵌連接，使用者可以檢視 PivotTable 快取，但是他們將無法與 PowerPivot 資料進行互動。|  
 ||重新整理時警告|如果您要使用 PowerPivot 圖庫儲存活頁簿與報表，應該停用此值。 PowerPivot 圖庫包含文件預覽功能，開啟時重新整理與重新整理時警告同時關閉時效果最好。|  
-|信任的資料提供者|MSOLAP.4<br /><br /> MSOLAP.5|預設隨附 MSOLAP.4，但是 PowerPivot 資料存取需要 MSOLAP.4 提供者為 SQL Server 2008 R2 版。<br /><br /> MSOLAP.5 會隨 PowerPivot for SharePoint 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版安裝。<br /><br /> 請不要從信任的資料提供者清單中移除這些提供者。 在某些情況下，您可能需要在伺服器陣列中的其他 SharePoint 伺服器上，安裝此提供者的額外複本。 如需詳細資訊，請參閱 [Install the Analysis Services OLE DB Provider on SharePoint Servers](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)。|  
+|信任的資料提供者|MSOLAP.4<br /><br /> MSOLAP.5|預設隨附 MSOLAP.4，但是 PowerPivot 資料存取需要 MSOLAP.4 提供者為 SQL Server 2008 R2 版。<br /><br /> MSOLAP.5 會隨 PowerPivot for SharePoint 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版安裝。<br /><br /> 請不要從信任的資料提供者清單中移除這些提供者。 在某些情況下，您可能需要在伺服器陣列中的其他 SharePoint 伺服器上，安裝此提供者的額外複本。 如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)。|  
 |信任的資料連線庫|選擇性。|您可以使用 PowerPivot 活頁簿中的 Office 資料連線 (.odc) 檔案。 如果您使用 .odc 檔案來提供本機 PowerPivot 活頁簿的連接資訊，就可以將相同的 .odc 檔案加入至這個連線庫。|  
 |使用者定義函數組件|不適用。|PowerPivot for SharePoint 會忽略您為 Excel Services 建立部署的使用者定義函數組件。 如果您依賴使用者定義的組件執行特定行為，請注意 PowerPivot 查詢處理不會使用您建立的使用者定義函數。|  
   
@@ -115,6 +115,6 @@ ms.locfileid: "48165748"
  [設定 PowerPivot 服務帳戶](configure-power-pivot-service-accounts.md)   
  [設定 PowerPivot 無人看管的資料重新整理帳戶&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
  [在管理中心建立 PowerPivot 網站的信任的位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [PowerPivot 安全性架構](http://go.microsoft.com/fwlink/?linkID=220970)  
+ [PowerPivot 安全性架構](https://go.microsoft.com/fwlink/?linkID=220970)  
   
   

@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergesubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b319f6065c31a33f30469a73286491c1d641dc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1fc809277151ee85608c9ca286185011cf52552
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601116"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822572"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -196,7 +195,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  所傳回的值會覆寫[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)參數化篩選的 WHERE 子句中使用此函式時。 *主機名稱*已**sysname**，預設值是 NULL。  
   
 > [!IMPORTANT]  
->  基於效能的考量，我們建議您不要在參數化資料列篩選器子句中，將函數套用至資料行名稱上，如 `LEFT([MyColumn]) = SUSER_SNAME()`。 如果您使用[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)在篩選子句和覆寫了 HOST_NAME 值中，它可能需要將使用的資料類型轉換[轉換](../../t-sql/functions/cast-and-convert-transact-sql.md)。 如需有關此案例之最佳做法的詳細資訊，請參閱主題＜ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+>  基於效能的考量，我們建議您不要在參數化資料列篩選器子句中，將函數套用至資料行名稱上，如 `LEFT([MyColumn]) = SUSER_SNAME()`。 如果您使用[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)在篩選子句和覆寫了 HOST_NAME 值中，它可能需要將使用的資料類型轉換[轉換](../../t-sql/functions/cast-and-convert-transact-sql.md)。 如需有關此案例之最佳做法的詳細資訊，請參閱主題＜ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞中的「覆寫 HOST_NAME() 值」一節。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

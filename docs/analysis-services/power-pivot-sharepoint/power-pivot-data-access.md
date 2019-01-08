@@ -1,5 +1,5 @@
 ---
-title: Power Pivot 資料存取 |Microsoft 文件
+title: Power Pivot 資料存取 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7d6c1b5e8ca611abf821f81761d862a6b0ddde20
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 79366c8f07728f0063fa5841f8fc5e0c8e3cc236
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027025"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983899"
 ---
 # <a name="power-pivot-data-access"></a>Power Pivot 資料存取
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,6 +41,6 @@ ms.locfileid: "34027025"
   
 ## <a name="see-also"></a>另請參閱  
  [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
- [表格式模型資料存取](../../analysis-services/tabular-models/tabular-model-data-access.md)  
+
   
   

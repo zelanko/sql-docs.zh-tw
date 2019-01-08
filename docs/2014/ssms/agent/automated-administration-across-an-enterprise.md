@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - enterprise automatic administration [SQL Server]
@@ -20,12 +20,12 @@ ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f4e14eabe3d94f4497d6c4e622ff62e0ef8258b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181899"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210177"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>將整個企業的管理自動化
   將多個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之間的管理自動化，稱為「多伺服器管理」(Multiserver Administration)。 使用多伺服器管理，可進行以下工作：  
@@ -64,7 +64,7 @@ ms.locfileid: "48181899"
  包含針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 服務使用非管理的 Windows 帳戶或「本機系統」帳戶，會如何影響多伺服器環境的資訊。  
   
  [在目標伺服器上設定加密選項](set-encryption-options-on-target-servers.md)  
- 包含在目標伺服器上設定 MsxEncryptChannelOptions[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 登錄子機碼的相關資訊。  
+ 包含在目標伺服器上設定 MsxEncryptChannelOptions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 登錄子機碼的相關資訊。  
   
  [管理整個企業的作業](manage-jobs-across-an-enterprise.md)  
  包含檢查作業狀態、變更作業的目標伺服器、同步處理目標伺服器時鐘，以及向主要伺服器輪詢其目前作業狀態等的相關資訊。  

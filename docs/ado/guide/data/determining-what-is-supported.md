@@ -14,12 +14,12 @@ ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 835584da4c51f5e65306d0609b4e69f78a7d58b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a9b8bcf01f348679fc16230c021166d4d9dc786
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707566"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514326"
 ---
 # <a name="determining-what-is-supported"></a>判斷支援的項目
 **支援**方法來判斷是否指定**資料錄集**物件支援特定類型的功能。 它有下列語法：  
@@ -34,4 +34,4 @@ boolean = recordset.Supports(CursorOptions )
   
  使用**支援**方法，您可以檢查的能力**資料錄集**物件，以新增新的記錄、 使用書籤，請使用**尋找**方法，請使用向下捲動，使用**索引**屬性，以及執行批次更新。 常數及其意義的完整清單，請參閱 < [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)。  
   
- 雖然**支援**方法可能會傳回 **，則為 True**針對指定的功能，它並不保證，提供者可以提供此功能在所有情況下。 **支援**方法只會傳回是否提供者可支援指定的功能，假設某些條件成立。 例如，**支援**方法可能表示**資料錄集**物件支援更新，即使資料指標以多個資料表的聯結為基礎，其中某些資料行不是可更新。
+ 雖然**支援**方法可能會傳回 **，則為 True**針對指定的功能，它並不保證，提供者可以提供此功能在所有情況下。 **支援**方法只會傳回是否提供者可支援指定的功能，假設某些條件成立。 例如，**支援**方法可能表示**資料錄集**物件支援更新，即使資料指標以多個資料表加入-其中的某些資料行不是可更新為基礎。

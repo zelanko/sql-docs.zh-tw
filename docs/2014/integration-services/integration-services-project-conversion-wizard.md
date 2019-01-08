@@ -13,18 +13,18 @@ ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c00c15a0f5e1c6bc45dbf1d19c216feb468e41fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 252d8c44921db82cc634e17e1628f72f18a066e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194908"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396362"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Integration Services 專案轉換精靈
   [Integration Services 專案轉換精靈] 會將專案轉換為專案部署模型。  
   
 > [!NOTE]  
->  如果專案包含一個或多個資料來源，則在完成專案轉換時，會移除資料來源。 若要在專案中建立可以透過封裝共用的資料來源連接，請在專案層級加入連接管理員。 如需詳細資訊，請參閱[加入、刪除或共用封裝中的連線管理員](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)。  
+>  如果專案包含一個或多個資料來源，則在完成專案轉換時，會移除資料來源。 若要在專案中建立可以透過封裝共用的資料來源連接，請在專案層級加入連接管理員。 如需詳細資訊，請參閱 [加入、刪除或共用封裝中的連線管理員](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)。  
   
  **您想要做什麼事？**  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48194908"
  **資料夾**  
  輸入封裝路徑，或按一下 [瀏覽] 巡覽到封裝。  
   
- 當您選取 [來源] 下拉式清單中的 [Microsoft SQL Server] 時，下列選項會顯示在頁面上。 當封裝位於 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時，請選取此選項。  
+ 當您選取 [來源] 下拉式清單中的 [Microsoft SQL Server] 時，下列選項會顯示在頁面上。 當封裝位於 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]時，請選取此選項。  
   
  **Server**  
  輸入伺服器名稱，選取伺服器。  
@@ -198,14 +198,14 @@ ms.locfileid: "48194908"
  **參數名稱**  
  列出參數名稱。  
   
- **範圍。**  
+ **範圍**  
  選取參數的範圍 (封裝或專案)。  
   
 ##  <a name="configureParameters"></a> 設定 [設定參數] 頁面上的選項  
  **名稱**  
  列出參數名稱。  
   
- **範圍。**  
+ **範圍**  
  列出參數的範圍。  
   
  **值**  
@@ -222,7 +222,7 @@ ms.locfileid: "48194908"
 ##  <a name="review"></a> 設定 [檢閱] 頁面上的選項  
  使用 [檢閱] 頁面確認您已經針對專案的轉換選取的選項。  
   
- **[上一步]**  
+ **上一步**  
  按一下可變更選項。  
   
  **轉換**  

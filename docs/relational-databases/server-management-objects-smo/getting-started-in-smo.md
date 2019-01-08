@@ -15,19 +15,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da9dc2db66bd61bc89796d85cd7c83bb4fd035d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89f43904c528c37963a397de450271d1e581e507
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715992"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209917"
 ---
 # <a name="getting-started-in-smo"></a>SMO 使用者入門
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 此頁面提供連結的主題可協助您開始使用 SQL Server 管理物件 (SMO)。 這些主題會列出封面 SMO 物件階層中，SMO、 SMO 及不同的程式設計語言和特定的程式設計工作中撰寫程式。  
  
-##<a name="installing-smo"></a>安裝 SMO
+## <a name="installing-smo"></a>安裝 SMO
 [安裝 SMO](installing-smo.md)提供安裝和參考 SMO 組件的指示。
 
 ## <a name="object-model"></a>物件模型  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], push subscriptions
@@ -15,12 +14,12 @@ ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac4db6c772d7b40daadbded626bcd778356de2b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 60fdfbecf617f0a4aa92b40b72b1b5e969f69388
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225458"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752580"
 ---
 # <a name="synchronize-a-push-subscription"></a>同步處理發送訂閱
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]複寫代理程式 [或 Replication Management Objects (RMO) 來同步處理](agents/replication-agents-overview.md)中的發送訂閱。  
@@ -214,11 +213,11 @@ REM -- The following command must be supplied without line breaks.
   
     -   將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>設為步驟 1 中建立的連接。  
   
-3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得剩餘的訂閱屬性。 如果此方法傳回`false`，確認該訂閱存在。  
+3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得剩餘的訂閱屬性。 如果此方法傳回 `false`，請確認該訂閱存在。  
   
 4.  以下列其中一種方式啟動「散發者」上的「散發代理程式」：  
   
-    -   從步驟 2 的 <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizeWithJob%2A> 執行個體上呼叫 <xref:Microsoft.SqlServer.Replication.TransSubscription> 方法。 此方法會以非同步方式啟動散發代理程式，並且控制項會在代理程式作業執行時立即傳回至應用程式。 如果您的值建立訂用帳戶時，無法呼叫此方法`false`針對<xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>。  
+    -   從步驟 2 的 <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizeWithJob%2A> 執行個體上呼叫 <xref:Microsoft.SqlServer.Replication.TransSubscription> 方法。 此方法會以非同步方式啟動散發代理程式，並且控制項會在代理程式作業執行時立即傳回至應用程式。 如果訂閱是以 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 的 `false` 值建立的，則您將無法呼叫此方法。  
   
     -   從 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> 屬性取得 <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizationAgent%2A> 類別的執行個體，並呼叫 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> 方法。 此方法會同步啟動代理程式，而控制項仍會停留於正在執行的代理程式作業。 在同步執行期間，您可以在代理程式執行時處理 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> 事件。  
   
@@ -238,11 +237,11 @@ REM -- The following command must be supplied without line breaks.
   
     -   將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>設為步驟 1 中建立的連接。  
   
-3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得剩餘的訂閱屬性。 如果此方法傳回`false`，確認該訂閱存在。  
+3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得剩餘的訂閱屬性。 如果此方法傳回 `false`，請確認該訂閱存在。  
   
 4.  以下列其中一種方式啟動「散發者」上的「合併代理程式」：  
   
-    -   從步驟 2 的 <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizeWithJob%2A> 執行個體上呼叫 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 方法。 此方法會以非同步方式啟動合併代理程式，並且控制項會在代理程式作業執行時立即傳回至應用程式。 如果您的值建立訂用帳戶時，無法呼叫此方法`false`針對<xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>。  
+    -   從步驟 2 的 <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizeWithJob%2A> 執行個體上呼叫 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 方法。 此方法會以非同步方式啟動合併代理程式，並且控制項會在代理程式作業執行時立即傳回至應用程式。 如果訂閱是以 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 的 `false` 值建立的，則您將無法呼叫此方法。  
   
     -   從 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> 屬性取得 <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizationAgent%2A> 類別的執行個體，並呼叫 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> 方法。 此方法會同步啟動「合併代理程式」，而控制項仍會停留於正在執行的代理程式作業。 在同步執行期間，您可以在代理程式執行時處理 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> 事件。  
   

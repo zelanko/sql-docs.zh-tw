@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e7881400c3e4696426b1999229e917630cf905d0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 474cc691a8adc0e022e10e52c766368e9f655d8a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657508"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979404"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks 安裝和設定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -102,5 +102,5 @@ AdventureWorks OLTP 新版的直接連結可在下方：
 
 
 ## <a name="see-also"></a>另請參閱
-[教學課程適用於 SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+[教學課程適用於 SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)   
 [SQL Server database engine 教學課程](../relational-databases/database-engine-tutorials.md)

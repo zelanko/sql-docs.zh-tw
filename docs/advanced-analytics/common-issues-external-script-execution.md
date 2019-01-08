@@ -1,27 +1,25 @@
 ---
-title: Launchpad 服務和 SQL Server 中的外部指令碼執行常見 |Microsoft Docs
+title: Launchpad 服務與外部指令碼執行-SQL Server Machine Learning 服務的一般問題
 ms.prod: sql
-ms.technology: mlserver
+ms.technology: ''
 ms.date: 05/31/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5f770ce536dcbc29245d1b6e853a2548ab1ec744
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a3437e5f7081aa47cb33e33546a79aca0b100309
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701446"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644918"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Launchpad 服務與 SQL Server 中的外部指令碼執行的一般問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
- SQL Server 受信任的 Launchpad 服務支援 R 和 Python 的外部指令碼執行。 在 SQL Server 2016 R Services，SP1 會提供服務。 SQL Server 2017 包含一直安裝一部分啟動控制板 ervice。
+ SQL Server 受信任的 Launchpad 服務支援 R 和 Python 的外部指令碼執行。 在 SQL Server 2016 R Services，SP1 會提供服務。 SQL Server 2017 包含 Launchpad 服務在初始安裝的一部分。
 
 多個問題可能會妨礙 Launchpad 啟動、 包括設定問題或進行變更，或遺漏的網路通訊協定。 這篇文章提供許多問題的疑難排解的指引。 任何我們錯過了，您可以張貼問題[Machine Learning Server 論壇](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)。
-
-**適用於：** SQL Server 2016 R Services、 SQL Server 2017 Machine Learning 服務
 
 ## <a name="determine-whether-launchpad-is-running"></a>判斷是否正在執行啟動控制板
 
@@ -69,7 +67,7 @@ Launchpad 服務 (Launchpad.exe) 會使用低權限的服務帳戶執行。 不�
 
 若要更正此問題，在 SQL Server Management Studio，安全性系統管理員可以修改 SQL 登入或 Windows 使用者帳戶執行下列指令碼：
 
-```SQL
+```sql
 GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 ```
 
@@ -129,11 +127,11 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 4. 重新啟動服務時，通常可以修正問題，以便在機器學習服務指令碼執行。 如果重新啟動操作無法解決此問題，請注意路徑中的引數**二進位路徑**屬性，然後執行下列動作：
 
-    A. 檢閱啟動程式的.config 檔案，並確定工作目錄無效。
+    a. 檢閱啟動程式的.config 檔案，並確定工作目錄無效。
 
-    B. 請確定 launchpad 所使用的 Windows 群組可以連接到 SQL Server 執行個體中所述[上一節](#bkmk_LaunchpadTS)。
+    b. 請確定 launchpad 所使用的 Windows 群組可以連接到 SQL Server 執行個體。
 
-    c. 如果您變更任何的服務屬性，請重新啟動 Launchpad 服務。
+    c.  如果您變更任何的服務屬性，請重新啟動 Launchpad 服務。
 
 ## <a name="fatal-error-creation-of-tmpfile-failed"></a>「 嚴重錯誤 tmpFile 建立失敗 」
 
@@ -171,7 +169,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 若要判斷執行個體使用的 R 套件程式庫的位置，開啟 SQL Server Management Studio （或任何其他的資料庫查詢工具），連接到執行個體，然後再執行下列預存程序：
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'R',  
 @script = N' print(normalizePath(R.home())); print(.libPaths());'; 
 ```

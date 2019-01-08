@@ -11,12 +11,12 @@ ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 606d597bd539da9e50b1c0452d9126e2f4671731
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52aae6defa5817236c4298d7c8e4cb44361a8284
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054368"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371310"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
   此主題描述可以搭配表格式模型使用之資料來源的類型。  
@@ -34,7 +34,7 @@ ms.locfileid: "48054368"
   
 |||||  
 |-|-|-|-|  
-|來源|版本|檔案類型|提供者<sup>1</sup>|  
+|原始程式檔|版本|檔案類型|提供者<sup>1</sup>|  
 |Access 資料庫|Microsoft Access 2003、 2007、 2010 年。|.accdb 或 .mdb|ACE 14 OLE DB 提供者|  
 |SQL Server 關聯式資料庫|Microsoft SQL server 2005、 2008、 2008 R2SQL Server 2012，Microsoft SQL Azure 資料庫<sup>2</sup>|(不適用)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 提供者<br /><br /> SQL Server Native 10.0 Client OLE DB 提供者<br /><br /> .NET Framework Data Provider for SQL Client|  
 |SQL Server Parallel Data Warehouse (PDW) <sup>3</sup>|2008 R2|(不適用)|OLE DB Provider for SQL Server PDW|  
@@ -53,9 +53,9 @@ ms.locfileid: "48054368"
   
  <sup>1</sup>您也可以使用 OLE DB Provider for ODBC。  
   
- <sup>2</sup>如需有關 SQL Azure 的詳細資訊，請參閱網站[SQL Azure](http://go.microsoft.com/fwlink/?LinkID=157856)。  
+ <sup>2</sup>如需有關 SQL Azure 的詳細資訊，請參閱網站[SQL Azure](https://go.microsoft.com/fwlink/?LinkID=157856)。  
   
- <sup>3</sup>如需有關 SQL Server PDW 的詳細資訊，請參閱網站[SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895)。  
+ <sup>3</sup>如需有關 SQL Server PDW 的詳細資訊，請參閱網站[SQL Server 2008 R2 Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895)。  
   
  <sup>4</sup>在某些情況下，使用 MSDAORA OLE DB 提供者可能會造成連接錯誤，特別是使用較新版本的 Oracle。 若一旦遭遇任何錯誤，建議您改用列於 Oracle 底下的任一其他提供者。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48054368"
 4.  OLE DB 提供者有時候可能會針對大規模的資料提供更快的效能。 為相同的資料來源在不同的提供者之間選擇時，您應該先嘗試 OLE DB 提供者。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料來源&#40;SSAS 表格式&#41;](../data-sources-ssas-tabular.md)   
- [匯入資料&#40;SSAS 表格式&#41;](../import-data-ssas-tabular.md)  
+ [資料來源 (SSAS 表格式)](../data-sources-ssas-tabular.md)   
+ [匯入資料 (SSAS 表格式)](../import-data-ssas-tabular.md)  
   
   

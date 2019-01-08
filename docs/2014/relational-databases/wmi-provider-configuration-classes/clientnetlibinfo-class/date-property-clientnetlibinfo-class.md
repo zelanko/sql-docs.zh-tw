@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - Date Property (ClientNetLibInfo Class)
@@ -20,12 +18,12 @@ ms.assetid: 4ca7e569-f097-49f7-b83c-795b0f1319ec
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f52dd47852c8c1608517132be06bd79ea55cd08a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31bb3835202d752a067fc47c8afac32b9107bd7b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199238"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350218"
 ---
 # <a name="date-property-clientnetlibinfo-class"></a>Date 屬性 (ClientNetLibInfo 類別)
   取得用戶端網路程式庫檔案的日期。  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定用戶端通訊協定](http://technet.microsoft.com/library/ms181035.aspx)  
+ [設定用戶端通訊協定](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

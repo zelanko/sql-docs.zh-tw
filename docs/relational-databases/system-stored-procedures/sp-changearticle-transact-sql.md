@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changearticle
@@ -17,12 +16,12 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 064465e133e5b122ef532fa09a7601a81f5606ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.openlocfilehash: 582eb67d72941e24c135d3cd1690ab23aaca5acc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705986"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208155"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_table**||新的目的地資料表。|  
 |**destination_owner**||目的地物件的擁有者名稱。|  
 |**filter**||用於篩選資料表 (水平篩選) 的新預存程序。 預設值是 NULL。 點對點複寫發行集的這個項目不能變更。|  
-|**fire_triggers_on_snapshot**|**true**|在套用初始快照集時，執行複寫的使用者觸發程序。<br /><br /> 注意： 針對，受到要複寫的觸發程序的位元遮罩值*schema_option*必須包含值**0x100**。|  
+|**fire_triggers_on_snapshot**|**true**|在套用初始快照集時，執行複寫的使用者觸發程序。<br /><br /> 注意：觸發程序，受到要複寫的位元遮罩值*schema_option*必須包含值**0x100**。|  
 ||**false**|在套用初始快照集時，不執行複寫的使用者觸發程序。|  
 |**identity_range**||控制在訂閱者端指派的指派識別範圍大小。 不支援點對點複寫使用這個項目。|  
 |**ins_cmd**||要執行的 INSERT 陳述式；否則，便從記錄檔中建構它。|  
@@ -95,7 +94,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x1000**|複寫資料行層級定序。|  
 ||**0x2000**|複寫與已發行之發行項來源物件相關聯的擴充屬性。|  
 ||**0x4000**|如果資料表發行項上定義了唯一索引鍵，便複寫唯一索引鍵。|  
-||**0x8000**|複寫資料表發行項的主索引鍵和唯一索引鍵，來做為使用 ALTER TABLE 陳述式的條件約束。<br /><br /> 注意： 此選項已被取代。 使用**0x80**並**0x4000**改。|  
+||**0x8000**|複寫資料表發行項的主索引鍵和唯一索引鍵，來做為使用 ALTER TABLE 陳述式的條件約束。<br /><br /> 注意：這個選項已被取代。 使用**0x80**並**0x4000**改。|  
 ||**0x10000**|將 CHECK 條件約束複寫成 NOT FOR REPLICATION，以免在同步處理期間強制執行條件約束。|  
 ||**0x20000**|將 FOREIGN KEY 條件約束複寫成 NOT FOR REPLICATION，以免在同步處理期間強制執行條件約束。|  
 ||**0x40000**|複寫資料分割資料表或索引的相關聯檔案群組。|  
@@ -166,7 +165,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  請參閱＜備註＞一節，以了解在變更時需要重新初始化所有現有的訂閱之屬性。  
   
  [ **@publisher**=] **'***發行者***'**  
- 指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *發行者*已**sysname**，預設值是 NULL。  
+ 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  *發行者*應該不在上變更發行項屬性時才使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
@@ -236,8 +235,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**僅限 func 結構描述**|**0x01**， **0x20**， **0x2000**， **0x400000**， **0x800000**， **0x2000000**， **0x8000000**， **0x10000000**， **0x20000000**， **0x40000000**，和**0x80000000**|**0x01**， **0x20**， **0x2000**， **0x400000**， **0x800000**， **0x2000000**， **0x8000000**， **0x10000000**， **0x20000000**， **0x40000000**，和**0x80000000**|  
 |**僅限索引檢視表結構描述**|**0x01**， **0x010**， **0x020**， **0x040**， **0x0100**， **0x2000**， **0x40000**， **0x100000**， **0x200000**， **0x400000**， **0x800000**， **0x2000000**， **0x8000000**， **0x40000000**，和**0x80000000**|**0x01**， **0x010**， **0x020**， **0x040**， **0x0100**， **0x2000**， **0x40000**， **0x100000**， **0x200000**， **0x400000**， **0x800000**， **0x2000000**， **0x8000000**， **0x40000000**，和**0x80000000**|  
   
-> [!NOTE]  
->  佇列更新的發行集*schema_option*的值**0x80**必須啟用。 支援*schema_option*的值非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行集： **0x01**， **0x02**， **0x10**， **0x40**， **0x80**， **0x1000**並**0x4000**。  
+> [!NOTE]
+>  佇列更新的發行集*schema_option*的值**0x80**必須啟用。 支援*schema_option*的值非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行集：**0x01**， **0x02**， **0x10**， **0x40**， **0x80**， **0x1000**和**0x4000**。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  

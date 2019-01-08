@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: bbeeff135edbc333b6ce8b3e20cf5235710f2dc1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b5ffda90f0d4b2b85ed29af65da5ea12592e4423
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677677"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979914"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>設定 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集
 
@@ -274,10 +274,10 @@ NFS 伺服器上執行下列作業：
    sudo firewall-cmd --reload
    ```
 
-   > 如果您使用其他防火牆，其中沒有內建的高可用性設定，您需要開啟下列連接埠，Pacemaker 才能與叢集中的其他節點通訊
+   > 如果您使用其他防火牆沒有內建的高可用性組態，下列連接埠必須開啟 pacemaker 才能與叢集中其他節點通訊
    >
-   > * TCP：連接埠 2224、3121、21064
-   > * UDP：連接埠 5405
+   > * TCP：連接埠 2224，3121 21064
+   > * UDP:連接埠 5405
 
 1. 在每個節點上安裝 Pacemaker 套件。
 
@@ -285,7 +285,7 @@ NFS 伺服器上執行下列作業：
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
 
-   
+    
 
 2. 設定安裝 Pacemaker 和 Corosync 封裝時建立的預設使用者密碼。 在這兩個節點上使用相同的密碼。 
 
@@ -293,7 +293,7 @@ NFS 伺服器上執行下列作業：
    sudo passwd hacluster
    ```
 
-   
+    
 
 3. 啟用並啟動 `pcsd` 服務和 Pacemaker。 這將會允許節點在重新開機後重新加入叢集。 在這兩個節點上執行下列命令。
 
@@ -314,8 +314,8 @@ NFS 伺服器上執行下列作業：
 1. 其中一個節點上建立叢集。
 
    ```bash
-   sudo pcs cluster auth <nodeName1 nodeName2 …> -u hacluster
-   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 …>
+   sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
+   sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 ...>
    sudo pcs cluster start --all
    ```
 
@@ -330,13 +330,13 @@ NFS 伺服器上執行下列作業：
 
 2. 設定 SQL Server、 檔案系統和虛擬 IP 資源的叢集資源，並將設定推送到叢集。 您需要下列資訊：
 
-   - **SQL Server Resource Name&gt**： 叢集的 SQL Server 資源的名稱。 
-   - **浮動 IP 資源名稱**： 虛擬 IP 位址資源的名稱。
-   - **IP 位址**： 用戶端將用來連接到 SQL Server 的叢集執行個體的 IP 位址。 
-   - **檔案系統資源名稱**： 檔案系統資源的名稱。
-   - **裝置**: NFS 共用路徑
-   - **裝置**： 掛接在共用的本機路徑
-   - **fstype**： 檔案共用型別 (例如 nfs)
+   - **SQL Server Resource Name&gt**:叢集的 SQL Server 資源的名稱。 
+   - **浮動 IP 資源名稱**:虛擬 IP 位址資源名稱。
+   - **IP 位址**:用戶端將用來連接到 SQL Server 的叢集執行個體 IP 位址。 
+   - **檔案系統資源名稱**:檔案系統資源的名稱。
+   - **裝置**:NFS 共用路徑
+   - **裝置**:本機掛接的共用的路徑
+   - **fstype**:檔案共用型別 (例如 nfs)
 
    更新下列指令碼，為您的環境中的值。 若要設定及啟動叢集的服務的一個節點上執行。  
 
@@ -370,7 +370,7 @@ NFS 伺服器上執行下列作業：
    sudo pcs status 
    ```
 
-   下列範例顯示當 Pacemaker 有成功的結果會啟動 SQL Server 的叢集執行個體。 
+   下列範例顯示的結果，當 Pacemaker 已順利啟動 SQL Server 的叢集執行個體。 
 
    ```
    fs     (ocf::heartbeat:Filesystem):    Started sqlfcivm1

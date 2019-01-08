@@ -1,5 +1,5 @@
 ---
-title: OLAP 屬性 |Microsoft 文件
+title: Analysis Services OLAP 屬性 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0e98fb016ff43ff34456fd02e43fa710c9156334
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: 936b05f8d54d3a5e67e7e03a02cc7907c56eab02
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239288"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072515"
 ---
 # <a name="olap-properties"></a>OLAP 屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的 OLAP 伺服器屬性。 如需其他伺服器屬性以及如何設定伺服器屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
- **適用於** ：僅限於多維度伺服器模式  
+ **適用於：** 僅限於多維度伺服器模式  
   
 ## <a name="memory"></a>記憶體  
  **DefaultPageSizeForData**  

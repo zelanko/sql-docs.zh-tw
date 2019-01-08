@@ -24,12 +24,12 @@ ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 36065984f03980f54cbc6a75162bb007f8b5f772
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a80eb337bfc03d826ab0933ac235f76dd16bfde9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124438"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525652"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>資料的大量匯入及匯出 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表匯出大量資料 (「大量資料」)，以及將大量資料匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表或未分割的檢視。 大量匯入和大量匯出對於在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與異質資料來源間有效傳送資料，是必要條件。 *「大量匯出」* 代表將資料從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表複製到資料檔。 *「大量匯入」* 代表從資料檔載入資料至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 例如，您可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 應用程式中將資料匯出至資料檔，然後將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中。  
@@ -66,7 +66,7 @@ ms.locfileid: "48124438"
   
  格式檔案提供彈性方式，在匯入期間用於解譯資料檔中的資料，以及在匯出期間用於格式化資料檔中的資料。 這樣的彈性讓您不需撰寫特殊用途的程式碼來解譯資料，也不需因應 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或外部應用程式的特定需求將資料重新格式化。 例如，如果您大量匯出的資料即將要載入到需要逗號分隔值的應用程式中，則可以使用格式檔案，在匯出的資料中插入逗號當做欄位結束字元。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列兩種類型的格式檔案：XML 格式檔案和非 XML 格式檔案。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援兩種類型的格式檔案：XML 格式檔案和非 XML 格式檔案。  
   
  **bcp** 公用程式是唯一可以產生格式檔案的工具。 如需詳細資訊，請參閱[建立格式檔案 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)。 如需格式檔案的詳細資訊，請參閱[匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)。  
   

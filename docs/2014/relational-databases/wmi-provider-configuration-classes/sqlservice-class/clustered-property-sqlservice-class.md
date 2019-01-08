@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - Clustered Property (SqlService Class)
@@ -20,12 +18,12 @@ ms.assetid: f714e7f5-c2db-45c6-9536-6ca2cb5b42aa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 58ca448090841c06d208c64f6ff483cc5cdb8473
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 065440d834033d1c1c999ea9d38d321be9a6278c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079902"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353357"
 ---
 # <a name="clustered-property-sqlservice-class"></a>Clustered 屬性 (SqlService 類別)
   取得可指定服務是否為叢集執行個體之一部分的布林屬性值。  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [啟動及停止服務](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [啟動及停止服務](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

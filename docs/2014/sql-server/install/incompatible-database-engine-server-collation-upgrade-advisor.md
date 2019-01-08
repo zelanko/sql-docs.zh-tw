@@ -11,12 +11,12 @@ ms.assetid: 80f499d6-2c90-49eb-a5b3-0bb5b7faaa3b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d66e01079a0ab86a1456e53dd310614d3c291267
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2639f783f862e27041985ac27ff16740b47cbb5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173410"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356758"
 ---
 # <a name="incompatible-database-engine-server-collation-upgrade-advisor"></a>不相容的 Database Engine 伺服器定序 (Upgrade Advisor)
   Upgrade Advisor 偵測到[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]正在使用的執行個體[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，設定為使用不相容的伺服器定序。  
@@ -44,8 +44,8 @@ ms.locfileid: "48173410"
 ## <a name="corrective-action"></a>更正動作  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 伺服器定序屬性無法變更。 您將無法完成 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的升級。 您需要將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝移轉至使用相容伺服器定序的新伺服器。 如需詳細資訊，請參閱下列內容：  
   
--   [升級和移轉 Reporting Services](http://go.microsoft.com/fwlink/?LinkId=233227)  
+-   [升級和移轉 Reporting Services](https://go.microsoft.com/fwlink/?LinkId=233227)  
   
--   [選取 SQL Server 定序](http://go.microsoft.com/fwlink/?LinkId=233226)  
+-   [選取 SQL Server 定序](https://go.microsoft.com/fwlink/?LinkId=233226)  
   
   

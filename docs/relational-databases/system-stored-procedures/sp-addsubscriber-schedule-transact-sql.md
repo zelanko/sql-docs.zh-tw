@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addsubscriber_schedule_TSQL
@@ -17,12 +16,12 @@ ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18bd39f4c364f6bfa7383040722564e7cab65dbe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86965fca878f07a93833fe04be9df702dea3050c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779376"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204213"
 ---
 # <a name="spaddsubscriberschedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

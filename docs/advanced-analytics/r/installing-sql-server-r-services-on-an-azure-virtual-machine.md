@@ -1,5 +1,5 @@
 ---
-title: 在 Azure 虛擬機器上安裝 SQL Server 機器學習服務 R 和 Python |Microsoft Docs
+title: 安裝 R 語言和 Azure 的虛擬機器-SQL Server 機器學習服務上的 Python 功能
 description: R 和 Python 資料科學和機器學習服務解決方案，在 Azure 雲端中的 SQL Server 虛擬機器上執行。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e416b99c3d4597cb2fe9346819184be43cd98402
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 6216142708a201a1ad720ab4e1e659c507744195
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512693"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432301"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>在 Azure 虛擬機器上安裝 SQL Server 機器學習服務 R 和 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -34,12 +34,12 @@ ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ee4a1e9c6430cedb3d8bf34b2978e29c860685d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f68471e05ea1fd8e3b2680e81bd3e8512a2c79bf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093628"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370650"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>動作屬性對話方塊 (報表產生器及 SSRS)
   **[動作]** 對話方塊可用於啟用支援連結之圖表、量測計與地圖元素的超連結選項。 定義動作，讓使用者可以按一下報表與 URL 的連結，便連結至相同報表伺服器或與報表伺服器整合之 SharePoint 網站上的不同報表，或連結至相同報表中的不同位置。  
@@ -61,7 +61,7 @@ ms.locfileid: "48093628"
   
  對於發行到設定為 SharePoint 整合模式之報表伺服器的報表，請使用包含副檔名 (.rdl) 的完整 URL。 例如 http://*\<//<sharepoint 伺服器名稱 > /\<站台 >*  /documents/report1.rdl。 不支援相對路徑。  
   
- 如需詳細資訊，請參閱 msdn.microsoft.com 之[報表產生器文件](http://go.microsoft.com/fwlink/?LinkId=154494)中的[指定外部項目的路徑 &#40;報表產生器及 SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 msdn.microsoft.com 之[報表產生器文件](https://go.microsoft.com/fwlink/?LinkId=154494)中的[指定外部項目的路徑 &#40;報表產生器及 SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
   
  **使用這些參數執行報表**  
  加入參數清單，以傳遞至鑽研報表。 參數名稱必須符合針對目標報表定義的參數。 使用 **[加入]** 和 **[刪除]** 按鈕來加入和移除參數，並使用向上與向下箭頭來排列參數清單的順序。  
@@ -106,6 +106,6 @@ ms.locfileid: "48093628"
  [對話方塊、窗格和精靈的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [報表參數 &#40;報表產生器和報表設計師&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [新增子報表和參數 &#40;報表產生器及 SSRS&#41;](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
- [互動式排序、 文件引導模式及連結&#40;報表產生器及 SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
+ [互動式排序、文件引導模式及連結 &#40;報表產生器及 SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
   

@@ -20,16 +20,16 @@ ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1bd012fc4f3d1e55c27a585600bff7f85459d469
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47069f1003b9b3f9bddb1e8601b3b4284372ae7e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844356"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205187"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>SQLInstallDriverManager 函式
 **合規性**  
- 版本引入： ODBC 1.0： 已被取代，在 Windows XP Service Pack 2、 Windows Server 2003 Service Pack 1 和更新版本的作業系統  
+ 導入的版本：ODBC 1.0:在 Windows XP Service Pack 2、 Windows Server 2003 Service Pack 1 和更新版本的作業系統中已被取代  
   
  **摘要**  
  **SQLInstallDriverManager**傳回 ODBC 核心元件的安裝目標目錄的路徑。 呼叫端程式實際上必須將驅動程式管理員的檔案複製到目標目錄中。  
@@ -74,7 +74,7 @@ BOOL SQLInstallDriverManager(
   
  如果較舊版本的驅動程式管理員先前已安裝應用程式安裝程式，應該解除安裝的核心元件，並再重新安裝，如此的核心元件的使用計數無效。 **SQLRemoveDriverManager**應該先呼叫要遞減的元件使用計數。 **SQLInstallDriverManager**應接著呼叫要遞增的元件使用計數。 應用程式安裝程式必須以新的檔案取代舊的核心元件檔案。 檔案使用方式計數會維持不變，並使用較舊版本的核心元件檔案的其他應用程式現在會使用較新版本的檔案。  
   
- ODBC 核心元件、 驅動程式及轉譯程式的全新安裝，在應用程式安裝程式應該依序呼叫下列函式： **SQLInstallDriverManager**， **SQLInstallDriverEx**， **SQLConfigDriver** (使用*常見*ODBC_INSTALL_DRIVER 的)，然後**SQLInstallTranslatorEx**。 核心元件、 驅動程式，以及轉譯器解除安裝，在應用程式安裝程式應該依序呼叫下列函式： **SQLRemoveTranslator**， **SQLRemoveDriver**，然後**SQLRemoveDriverManager**。 這個順序中，就必須呼叫這些函式。 在所有元件升級時，解除安裝的所有函數應該都呼叫序列中，然後安裝函式應該都呼叫序列中。  
+ 在 ODBC 核心元件、 驅動程式及轉譯程式的全新安裝，應用程式安裝程式應該呼叫序列中的下列功能：**SQLInstallDriverManager**， **SQLInstallDriverEx**， **SQLConfigDriver** (使用*常見*ODBC_INSTALL_DRIVER 的)，然後**SQLInstallTranslatorEx**。 中的核心元件、 驅動程式，以及轉譯器解除安裝，應用程式安裝程式應該呼叫序列中的下列函式：**SQLRemoveTranslator**， **SQLRemoveDriver**，然後**SQLRemoveDriverManager**。 這個順序中，就必須呼叫這些函式。 在所有元件升級時，解除安裝的所有函數應該都呼叫序列中，然後安裝函式應該都呼叫序列中。  
   
 ## <a name="related-functions"></a>相關函數  
   

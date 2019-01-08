@@ -18,12 +18,12 @@ ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 035e206b68242316ed8a9299842920feb18dacd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86de9f970713d84fec0722a4cc3c29b0b307098f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670466"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589942"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,37 +56,37 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  [ **@account_id** = ] *account_id*  
  這是要更新的帳戶識別碼。 *account_id*已**int**，預設值是 NULL。 至少其中一個*account_id*或是*account_name*必須指定。 如果同時指定這兩者，程序會變更帳戶的名稱。  
   
- [ **@account_name** = ] **'***account_name***'**  
+ [ **@account_name** =] **'**_account_name_**'**  
  這是要更新的帳戶名稱。 *account_name*已**sysname**，預設值是 NULL。 至少其中一個*account_id*或是*account_name*必須指定。 如果同時指定這兩者，程序會變更帳戶的名稱。  
   
- [ **@email_address** = ] **'***email_address***'**  
+ [ **@email_address** =] **'**_email_address_**'**  
  這是傳送訊息的新來源電子郵件地址。 這個地址必須是網際網路電子郵件地址。 地址中的伺服器名稱是 Database Mail 用來從這個帳戶傳送郵件的伺服器。 *email_address*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。  
   
- [ **@display_name** =] **'***display_name***'**  
+ [ **@display_name** =] **'**_display_name_**'**  
  這個帳戶發出的電子郵件訊息所用的新顯示名稱。 *display_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，沒有預設值。  
   
- [ **@replyto_address** =] **'***replyto_address***'**  
+ [ **@replyto_address** =] **'**_replyto_address_**'**  
  這個帳戶發出的電子郵件訊息之 [回覆至] 標頭中所用的新地址。 *replyto_address*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，沒有預設值。  
   
- [ **@description** = ] **'***description***'**  
+ [ **@description** =] **'**_描述_**'**  
  帳戶的新描述。 *描述*已**nvarchar(256)**，預設值是 NULL。  
   
- [ **@mailserver_name** = ] **'***server_name***'**  
+ [ **@mailserver_name** =] **'**__ n a m_**'**  
  這個帳戶要用的 SMTP 郵件伺服器的新名稱。 執行的電腦[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必須能夠解析*server_name*為 IP 位址。 *server_name*已**sysname**，沒有預設值。  
   
- [ **@mailserver_type** = ] **'***server_type***'**  
+ [ **@mailserver_type** =] **'**_server_type_**'**  
  郵件伺服器的新類型。 *server_type*已**sysname**，沒有預設值。 值 **'SMTP'** 支援。  
   
  [ **@port** = ] *port_number*  
  郵件伺服器的新通訊埠編號。 *port_number*已**int**，沒有預設值。  
   
- [ **@timeout** =] **'***逾時***'**  
+ [ **@timeout** =] **'**_逾時_**'**  
  單一電子郵件訊息之 SmtpClient.Send 的 Timeout 參數。 *逾時*已**int** （秒)，沒有預設值。  
   
- [ **@username** =] **'***username***'**  
+ [ **@username** =] **'**_username_**'**  
  用來登入郵件伺服器的新使用者名稱。 *使用者名稱*已**sysname**，沒有預設值。  
   
- [ **@password** =] **'***密碼***'**  
+ [ **@password** =] **'**_密碼_**'**  
  用來登入郵件伺服器的新密碼。 *密碼*已**sysname**，沒有預設值。  
   
  [ **@use_default_credentials** =] use_default_credentials  

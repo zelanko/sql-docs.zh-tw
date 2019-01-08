@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_get_redirected_publisher_TSQL
@@ -15,12 +14,12 @@ ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c98f0eb28efd7a3f4a125d5f4cb281d9d726be5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22cc39e815fa5a98254f5bae3099da2745357b07
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595126"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819310"
 ---
 # <a name="spgetredirectedpublisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

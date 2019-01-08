@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - interval for polling [SQL Server]
@@ -14,19 +14,19 @@ ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12f35342d6303559ab41546dc9154a06f9a30eda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091328"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818680"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>設定目標伺服器的輪詢間隔
   本主題描述如何設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 從主要伺服器到目標伺服器重新整理資訊的頻率。 作業是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行的一系列指定動作。 多重伺服器作業是一個主要伺服器執行於一或多個目標伺服器上的作業。  
   
--   **開始之前**  [安全性](#Security)  
+-   **開始之前：**[Security](#Security)  
   
--   **若要設定目標伺服器，使用的輪詢間隔：**[SQL Server Management Studio](#SSMS)， [TRANSACT-SQL  ](#TSQL)  
+-   **若要設定目標伺服器，使用的輪詢間隔：**[SQL Server Management Studio](#SSMS)， [Transact SQL](#TSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  每一個目標伺服器可以同時執行相同作業的一個執行個體。 每個目標伺服器會定期輪詢主要伺服器、下載任何指派到目標伺服器的新作業之副本，然後中斷連接。 目標伺服器會先在本機執行作業，然後再重新連接到主要伺服器，以便上傳作業結果的狀態。  
@@ -35,7 +35,7 @@ ms.locfileid: "48091328"
 >  如果當目標伺服器嘗試上傳作業狀態時無法存取主要伺服器，作業狀態會被多工緩衝處理，直到可以存取主要伺服器為止。  
   
 ###  <a name="Security"></a> 安全性  
- 如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) ＞和＜ [為多伺服器環境選擇適當的 SQL Server Agent 服務帳戶](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)＞。  
+ 如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) ＞和＜ [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)＞。  
   
 ##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
  **若要設定目標伺服器的輪詢間隔**  

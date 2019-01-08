@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7f13ba1492c3edaeaf179e9bcda0e4df3923f80
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d6ee8de284043d3acf3c0d58eed51e6710ffe51f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669287"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536836"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51669287"
   
  下表描述參數與描述項欄位之間的對應。  
   
-|參數|非資料表值參數類型的相關屬性，包括資料表值參數資料行。|資料表值參數的相關屬性|  
+|參數|對於非資料表值參數類型，包括資料表值參數資料行相關聯的屬性|資料表值參數的相關屬性|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*型別*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*子類型*|忽略|如果是 SQL_DATETIME 或 SQL_INTERVAL 類型的記錄，請將這個設定為 SQL_DESC_DATETIME_INTERVAL_CODE。|  

@@ -11,12 +11,12 @@ ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6e3eff042078ad7dde6352c3826103bc680da432
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf954178516cef633dbe34c1b8b01579c8f3e4ea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068923"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374860"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>排程資料重新整理與不支援 Windows 驗證的資料來源 (PowerPivot for SharePoint)
   本主題描述 PowerPivot for SharePoint 排程資料重新整理的工作流程，而且這項作業可以使用**不**支援 Windows 驗證的資料來源。 例如，Oracle 或 IDM DB2 資料來源。 雖然本主題的圖例和步驟參考的是 Oracle 資料來源，但是相同的工作流程也適用於其他資料來源。  
@@ -25,15 +25,15 @@ ms.locfileid: "48068923"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 &#124; SharePoint 2013。|  
   
- **概觀** 建立兩個安全存放目標應用程式。 將第一個目標應用程式 (PowerPivotDataRefresh) 設定為使用 Windows 認證。 使用不支援 Windows 驗證之資料來源 (例如 Oracle 資料庫) 的認證來設定第二個目標應用程式。 第二個目標應用程式也會將第一個目標應用程式用於無人看管的資料重新整理帳戶。  
+ **概觀：** 建立兩個安全存放目標應用程式。 將第一個目標應用程式 (PowerPivotDataRefresh) 設定為使用 Windows 認證。 使用不支援 Windows 驗證之資料來源 (例如 Oracle 資料庫) 的認證來設定第二個目標應用程式。 第二個目標應用程式也會將第一個目標應用程式用於無人看管的資料重新整理帳戶。  
   
  ![as_powerpivot_refresh_no_windows_auth](../media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) PowerPivotDatarefresh** 使用 Windows 驗證所設定的安全存放目標應用程式識別碼。  
+-   **（1) PowerPivotDatarefresh:** 使用 Windows 驗證所設定的安全存放目標應用程式識別碼。  
   
--   **(2) OracleAuthentication**使用 Oracle 認證所設定的安全存放目標應用程式識別碼。  
+-   **（2) OracleAuthentication:** 使用 Oracle 認證所設定的安全存放目標應用程式識別碼。  
   
--   **(3)** PowerPivot 服務應用程式設定為將目標應用程式 “PowerPivotDataRefresh” 用於**無人看管的資料重新整理帳戶**。  
+-   **(3)** PowerPivot 服務應用程式是設定為目標應用程式"PowerPivotDataRefresh"**無人看管資料重新整理帳戶**。  
   
 -   **(4)** PowerePivot 活頁簿會使用 Oracle 資料。 活頁簿重新整理設定會指定要將目標應用程式 **(2)** 用於認證的資料來源連接。  
   
@@ -55,15 +55,15 @@ ms.locfileid: "48068923"
   
 4.  在 [建立新的 Secure Store 目標應用程式]  頁面上，設定下列值：  
   
-    -   **目標應用程式識別碼** ：PowerPivotDataRefresh。  
+    -   **目標應用程式識別碼：** PowerPivotDataRefresh。  
   
-    -   **顯示名稱** ：PowerPivotDataRefresh。  
+    -   **顯示名稱：** PowerPivotDataRefresh。  
   
     -   **連絡人電子郵件：** ？  
   
-    -   **目標應用程式類型** ：群組。  
+    -   **目標應用程式類型：** 群組。  
   
-    -   **目標應用程式頁面 URL** ：無。  
+    -   **目標應用程式頁面 URL:** 無。  
   
 5.  按 [下一步] 。  
   
@@ -95,9 +95,9 @@ ms.locfileid: "48068923"
   
     -   **連絡人電子郵件：** ？  
   
-    -   **目標應用程式類型** ：群組。  
+    -   **目標應用程式類型：** 群組。  
   
-    -   **目標應用程式頁面 URL** ：無。  
+    -   **目標應用程式頁面 URL:** 無。  
   
 5.  按 [下一步] 。  
   
@@ -115,13 +115,13 @@ ms.locfileid: "48068923"
   
 11. 輸入 Oracle 使用者識別碼和 Oracle 密碼，然後按一下 [確定] 。  
   
- 如需詳細資訊，請參閱 「 為 SQL Server 驗證建立目標應用程式 」 一節中[使用 Secure Store 搭配 SQL Server 驗證 (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx)。  
+ 如需詳細資訊，請參閱 「 為 SQL Server 驗證建立目標應用程式 」 一節中[使用 Secure Store 搭配 SQL Server 驗證 (SharePoint Server 2013)](https://technet.microsoft.com/library/gg298949.aspx) (https://technet.microsoft.com/library/gg298949.aspx)。  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>若要設定 PowerPivot 服務應用程式  
   
 1.  在 SharePoint 管理中心內，按一下 [管理服務應用程式]。  
   
-2.  按一下 PowerPivot 服務應用程式的名稱，例如「預設的 PowerPivot 服務應用程式」。  
+2.  按一下 PowerPivot 服務應用程式，例如 「 預設 PowerPivot 服務應用程式 」 的名稱。  
   
 3.  在 [動作] 區段中，按一下 [設定服務應用程式設定]  。  
   
@@ -166,8 +166,8 @@ ms.locfileid: "48068923"
   
 ## <a name="more-information"></a>[詳細資訊]  
   
--   [在 SharePoint 2013 中設定 Secure Store Service](http://technet.microsoft.com/library/ee806866.aspx)。  
+-   [在 SharePoint 2013 中設定 Secure Store Service](https://technet.microsoft.com/library/ee806866.aspx)。  
   
--   請參閱 [SharePoint 2013 和 SQL Server 2012 SP1 中的 PowerPivot 資料重新整理 (Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh) 中的＜排定的資料重新整理＞一節。  
+-   請參閱的 < 排程資料重新整理 > 一節[PowerPivot 資料重新整理與 SharePoint 2013 和 SQL Server 2012 SP1 (Analysis Services)](https://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh)。  
   
   

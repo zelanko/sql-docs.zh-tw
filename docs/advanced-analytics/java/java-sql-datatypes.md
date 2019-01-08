@@ -1,5 +1,5 @@
 ---
-title: 支援的 SQL Server 2019 的 Java 資料類型 |Microsoft Docs
+title: 支援的 SQL Server 2019-SQL Server Machine Learning 服務的 Java 資料類型
 description: 對應的資料類型從 Java 到 SQL Server 針對輸入和輸出資料結構，以及在 sp_execute_external_script 的輸入參數。
 ms.prod: sql
 ms.technology: machine-learning
@@ -9,12 +9,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3510b53510514daa125382fc10ea33285fe44a80
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 6921a40efc9af3ef94c0a53f8409891fee16127e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715044"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432531"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Java 和 SQL Server 支援的資料類型
 

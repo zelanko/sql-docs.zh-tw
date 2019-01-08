@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -25,12 +23,12 @@ ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9fa879258a588c944c9d4c35954845cde767e626
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6af1a257079b2fe1d4fb441b30e6a4bb2c22fca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103658"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374910"
 ---
 # <a name="enabling-logging-programmatically"></a>以程式設計的方式啟用記錄
   執行階段引擎提供 <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> 物件的集合，允許在封裝驗證和執行期間擷取事件特定資訊。 <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> 物件可供 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer> 物件使用，包括 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>、<xref:Microsoft.SqlServer.Dts.Runtime.Package>、<xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> 和 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 物件。 在個別容器或是整個封裝上啟用記錄。  
@@ -116,7 +114,7 @@ Module Module1
 End Module  
 ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)  

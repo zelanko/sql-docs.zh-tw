@@ -13,15 +13,15 @@ ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 036ce2fe942866092ba774f98d6b306c8f0ea254
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8daff4753eb5921ee80eef8f44de96487ea86a15
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018185"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374850"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>建立、建構及查詢幾何執行個體
-  平面空間資料類型 (`geometry`) 代表 Euclidean (平面) 座標系統中的資料。 這種類型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中是實作為 Common Language Runtime (CLR) 資料類型。  
+  平面空間資料類型 (`geometry`) 代表 Euclidean (平面) 座標系統中的資料。 這種類型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中是實作為 Common Language Runtime (CLR) 資料類型。  
   
  `geometry` 類型已預先定義，而且可在每一個資料庫中使用。 您可以建立 `geometry` 類型的資料表資料行，並使用與其他 CLR 類型相同的方式來操作 `geometry` 資料。  
   
@@ -29,11 +29,11 @@ ms.locfileid: "51018185"
   
  如需有關 OGC 規格的詳細資訊，請參閱下列主題：  
   
--   [OGC 規格，簡單特徵存取第一部 - 常見架構](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC 規格，簡單特徵存取第一部 - 常見架構](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
--   [OGC 規格，簡單特徵存取第二部 - SQL 選項](http://go.microsoft.com/fwlink/?LinkId=93629)  
+-   [OGC 規格，簡單特徵存取第二部 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93629) \(英文\)  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援以下列結構描述定義之現有 GML 3.1 標準的子集：[http://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](http://go.microsoft.com/fwlink/?LinkId=230959)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援以下列結構描述定義之現有 GML 3.1 標準的子集：[https://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](https://go.microsoft.com/fwlink/?LinkId=230959)。  
   
 ##  <a name="creating"></a> 建立或建構新的 geometry 執行個體  
   

@@ -4,27 +4,26 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dda0e9596563c5cacacc3850f993c1cc05ba19a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9000dd2b7456036f4828640694aaf697036b71d7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162928"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377828"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>MSSQLSERVER 的通訊協定內容 (進階索引標籤)
   您可以使用 [MSSQLSERVER 的通訊協定內容] 對話方塊的 [進階] 索引標籤來設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [驗證擴充保護]。 [擴充保護] 是作業系統實作的網路元件功能。 [擴充保護] 可在 Windows 7 和 Windows Server 2008 R2 中使用，而且會包含在舊版作業系統的 Service Pack 中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在使用 **擴充保護**進行連接時較安全。 [擴充保護] 的某些優點需要在 [旗標] 索引標籤上選取 [強制加密]。  
   
 > [!IMPORTANT]  
->  Windows 預設不會啟用 **[擴充保護]** 。 如需如何在 Windows 中啟用 [擴充保護] 的資訊，請參閱知識庫文章：[驗證擴充保護](http://go.microsoft.com/fwlink/?LinkId=178431)。  
+>  Windows 預設不會啟用 **[擴充保護]** 。 如需如何在 Windows 中啟用 [擴充保護] 的資訊，請參閱知識庫文章：[驗證擴充保護](https://go.microsoft.com/fwlink/?LinkId=178431)。  
   
- 如需如何設定其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的詳細資訊及 [擴充保護] 的完整說明，請參閱 [Microsoft.com](http://go.microsoft.com/fwlink/?LinkId=177752) 上最新的資訊。  
+ 如需如何設定其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的詳細資訊及 [擴充保護] 的完整說明，請參閱 [Microsoft.com](https://go.microsoft.com/fwlink/?LinkId=177752) 上最新的資訊。  
   
  從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 開始，[擴充保護] 就受到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的完整支援。 目前不支援其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端提供者的 [擴充保護] 支援。  
   

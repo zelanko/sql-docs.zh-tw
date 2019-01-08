@@ -12,12 +12,12 @@ ms.assetid: a0590ba6-3856-4731-bb29-87b0a1c1b795
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1feeffea47ae383168f06edc357c7dbe69aaefe4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5258e08abd322025b3f7349a6d22fdbdd046d4f0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212388"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373840"
 ---
 # <a name="result-set-sample"></a>結果集範例
   有時，在閱讀查詢結果時，它對能夠在不開啟新連接也不將所有結果讀取到記憶體中的情況下執行命令會很有用。 ADO.NET 2.0 中的 Multiple Active Result Set (MARS) 功能是一種可以協助您實現此目的之技術。 目前，不會對用於伺服器端程式設計的同處理序提供者實作 MARS。 若要解決此限制，您可以使用伺服器端指標。 此範例示範如何使用伺服器端指標解決伺服器端程式設計不支援 MARS 的問題。  
@@ -30,9 +30,9 @@ ms.locfileid: "48212388"
 ## <a name="prerequisites"></a>先決條件  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](http://go.microsoft.com/fwlink/?LinkId=31046)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](https://go.microsoft.com/fwlink/?LinkId=31046)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
   
--   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員[網站](http://go.microsoft.com/fwlink/?linkid=62796)取得 AdventureWorks 資料庫  
+-   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員[網站](https://go.microsoft.com/fwlink/?linkid=62796)取得 AdventureWorks 資料庫  
   
 -   .NET Framework SDK 2.0 或更新版本或是 Microsoft Visual Studio 2005 或更新版本。 您可以免費取得 .NET Framework SDK。  
   

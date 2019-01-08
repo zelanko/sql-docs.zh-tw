@@ -1,5 +1,5 @@
 ---
-title: 作用中次要： 可讀取的次要複本 (Always On 可用性群組） |Microsoft Docs
+title: 使用中次要：可讀取的次要複本 (Always On 可用性群組） |Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b35f34499100e8331f968d6f9297280451885290
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ac104808f5d4e0b2b612c8f3ebbd17f34fc6493
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169608"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358580"
 ---
-# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)
+# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>使用中次要：可讀取的次要複本 (Always On 可用性群組）
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 使用中次要功能包含對一個或多個次要複本進行唯讀存取的支援 (*「可讀取的次要複本」*(Readable Secondary Replicas))。 可讀取的次要複本允許對其所有次要資料庫進行唯讀存取。 但可讀取的次要資料庫並不會設定為唯讀。 這些資料庫是動態的。 隨著對應主要資料庫變更而衍生的給定次要資料庫變更，會套用至次要資料庫。 對於一般次要複本而言，次要資料庫中的資料 (包含持久記憶體最佳化資料表) 幾近即時。 此外，全文檢索索引會與次要資料庫進行同步處理。 在許多情況下，主要資料庫和對應次要資料庫之間的資料延遲只在幾秒鐘內。  
   
  主要資料庫中進行的安全性設定會保存到次要資料庫。 其中包括使用者、資料庫角色和應用程式角色，連同其各自的權限，以及透明資料加密 (TDE) (如果主要資料庫上已啟用)。  
@@ -238,7 +238,7 @@ GO
     SELECT * FROM t_hk WITH (UPDLOCK)  
     ```  
   
--   若為跨容器交易，不支援工作階段隔離等級為「快照集」且存取記憶體最佳化資料表的交易。 例如，  
+-   跨容器交易的工作階段隔離等級的交易 「 快照集 」 不支援記憶體最佳化資料表的存取。 例如，  
   
     ```tsql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  
@@ -292,7 +292,7 @@ GO
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [SQL Server AlwaysOn 團隊部落格： 官方 SQL Server AlwaysOn 團隊部落格](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

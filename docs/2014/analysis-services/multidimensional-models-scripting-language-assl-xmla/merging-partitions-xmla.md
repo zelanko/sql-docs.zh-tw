@@ -17,12 +17,12 @@ ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c459fcb3efc86566eef046df30d2d8ad9ea601b4
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6a7a72e385dd6cfb4d0d83d3afab346dab8c85ef
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145838"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367340"
 ---
 # <a name="merging-partitions-xmla"></a>合併資料分割 (XMLA)
   如果資料分割有相同的彙總設計與結構，您可以使用來合併資料分割[MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) XML for Analysis (XMLA) 命令。 合併資料分割是管理資料分割時要執行的一項重要的動作，特別是那些包含依日期分割的歷程記錄資料之資料分割。  
@@ -53,7 +53,7 @@ ms.locfileid: "50145838"
 ### <a name="code"></a>程式碼  
   
 ```  
-<MergePartitions xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<MergePartitions xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Sources>  
     <Source>  
       <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  

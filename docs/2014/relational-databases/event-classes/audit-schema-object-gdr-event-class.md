@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: a0187811-dc71-4792-a282-3bfe1ca90c21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a66d6800917699171d237c6002037dbb7f228cb7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e29280e6771c06ad11a0ec833445ba94c93c279f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175148"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814840"
 ---
 # <a name="audit-schema-object-gdr-event-class"></a>Audit Schema Object GDR 事件類別
   每當  中的使用者對結構描述物件權限發出 GRANT、REVOKE 或 DENY 時，就會發生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -45,7 +44,7 @@ ms.locfileid: "48175148"
 |**NTDomainName**|**nvarchar**|使用者所隸屬的 Windows 網域。|7|是|  
 |**NTUserName**|**nvarchar**|Windows 使用者名稱。|6|是|  
 |**ObjectName**|**nvarchar**|作為授與/撤銷/拒絕目標的物件名稱。|34|是|  
-|**ObjectType**|**int**|代表參與事件之物件類型的值。 這個值會對應到 **sys.objects** 目錄檢視中的類型資料行。 如需各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
+|**ObjectType**|**int**|代表參與事件之物件類型的值。 這個值會對應到 **sys.objects** 目錄檢視中的類型資料行。 針對各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
 |**OwnerName**|**nvarchar**|物件 (作為授與/撤銷/拒絕目標) 的物件擁有者的資料庫使用者名稱。|37|是|  
 |**ParentName**|**nvarchar**|物件所在結構描述的名稱。|59|是|  
 |**Permissions**|**bigint**|代表被檢查之權限類型的整數值。<br /><br /> 1=SELECT ALL<br /><br /> 2=UPDATE ALL<br /><br /> 4=REFERENCES ALL<br /><br /> 8=INSERT<br /><br /> 16=DELETE<br /><br /> 32=EXECUTE (僅程序)<br /><br /> 4096=SELECT ANY (至少一個資料行)<br /><br /> 8192=UPDATE ANY<br /><br /> 16384=REFERENCES ANY|19|是|  

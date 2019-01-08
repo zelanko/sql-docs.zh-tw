@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c187ed1ede04f8ed140ddbb73d251af304745cf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b2a01f7c8ffa3616deb0c7f1ebcec1ea94e65dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705706"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535195"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "47705706"
   
  Sys.dm_exec_connections、 sys.dm_exec_sessions 和 sys.dm_exec_requests 動態管理檢視會對應到[sys.sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)系統資料表。  
   
-> **注意：** 呼叫這個屬性從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或是[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_exec_sessions**。  
+> **注意：** 若要呼叫這個屬性從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或是[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_exec_sessions**。  
   
 |資料行名稱|資料類型|描述與特定版本資訊|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|識別每個使用中的主要連接所關聯的工作階段。 不可為 Null。|  
 |login_time|**datetime**|建立工作階段的時間。 不可為 Null。|  
-|host_name|**nvarchar(128)**|工作階段的特定用戶端工作站名稱。 內部工作階段的值為 NULL。 可為 Null。<br /><br /> **安全性注意事項：** 用戶端應用程式提供工作站名稱，而且可以提供不正確的資料。 請勿依賴 HOST_NAME 當做安全性功能。|  
+|host_name|**nvarchar(128)**|工作階段的特定用戶端工作站名稱。 內部工作階段的值為 NULL。 可為 Null。<br /><br /> **安全性注意事項：** 用戶端應用程式會提供工作站名稱，而且可提供不正確的資料。 請勿依賴 HOST_NAME 當做安全性功能。|  
 |program_name|**nvarchar(128)**|起始工作階段的用戶端程式名稱。 內部工作階段的值為 NULL。 可為 Null。|  
 |host_process_id|**int**|起始工作階段之用戶端程式的處理序識別碼。 內部工作階段的值為 NULL。 可為 Null。|  
 |client_version|**int**|用戶端連接伺服器所用介面的 TDS 通訊協定版本。 內部工作階段的值為 NULL。 可為 Null。|  
@@ -50,7 +50,7 @@ ms.locfileid: "47705706"
 |login_name|**nvarchar(128)**|目前用來執行工作階段的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 如需建立工作階段的原始登入名稱，請參閱 original_login_name。 可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證登入名稱或 Windows 驗證的網域使用者名稱。 不可為 Null。|  
 |nt_domain|**nvarchar(128)**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 用戶端的 Windows 網域 (如果工作階段使用 Windows 驗證或信任連接)。 內部工作階段和非網域使用者的這個值為 NULL。 可為 Null。|  
 |nt_user_name|**nvarchar(128)**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 用戶端的 Windows 使用者名稱 (如果工作階段使用 Windows 驗證或信任連接)。 內部工作階段和非網域使用者的這個值為 NULL。 可為 Null。|  
-|status|**nvarchar(30)**|工作階段的狀態。 可能的值如下：<br /><br /> **執行**-目前執行中的一或多個要求<br /><br /> **睡眠**-目前執行中的任何要求<br /><br /> **休眠**– 工作階段因連接共用已重設，但現在處於登入前的狀態。<br /><br /> **Preconnect** -工作階段處於資源管理員分類。<br /><br /> 不可為 Null。|  
+|status|**nvarchar(30)**|工作階段的狀態。 可能的值如下：<br /><br /> **執行**-目前執行中的一或多個要求<br /><br /> **睡眠**-目前執行中的任何要求<br /><br /> **休眠**-工作階段因連接共用已重設，但現在處於登入前的狀態。<br /><br /> **Preconnect** -工作階段處於資源管理員分類。<br /><br /> 不可為 Null。|  
 |context_info|**varbinary(128)**|工作階段的 CONTEXT_INFO 值。 內容資訊由使用者設定使用[SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md)陳述式。 可為 Null。|  
 |cpu_time|**int**|工作階段所使用的 CPU 時間，以毫秒為單位。 不可為 Null。|  
 |memory_usage|**int**|此工作階段所用記憶體的 8 KB 頁數。 不可為 Null。|  
@@ -93,8 +93,8 @@ ms.locfileid: "47705706"
   
 ## <a name="permissions"></a>Permissions  
 每個人都可以看到自己的工作階段資訊。  
-**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** 需要`VIEW SERVER STATE`權限[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]以查看在伺服器上的所有工作階段。  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** 需要`VIEW DATABASE STATE`若要查看目前資料庫的所有連線。 `VIEW DATABASE STATE` 無法授與在`master`資料庫。 
+**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]：** 需要`VIEW SERVER STATE`權限[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]以查看在伺服器上的所有工作階段。  
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]：** 需要`VIEW DATABASE STATE`若要查看目前資料庫的所有連線。 `VIEW DATABASE STATE` 無法授與在`master`資料庫。 
   
   
 ## <a name="remarks"></a>備註  

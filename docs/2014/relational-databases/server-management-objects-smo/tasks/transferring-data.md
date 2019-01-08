@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,19 +15,19 @@ ms.assetid: eea255c3-8251-40f0-973b-fe4ef6cb5261
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3fa6ee3b25169e2dafe6ed7ad8380169dfe91d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49754be9b412f9cf6e7d660402527aed954a09fa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164738"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377670"
 ---
 # <a name="transferring-data"></a>傳送資料
   <xref:Microsoft.SqlServer.Management.Smo.Transfer> 類別是一種公用程式類別，可提供工具來傳送物件和資料。  
   
  資料庫結構描述中物件的傳送方式是藉由執行目標伺服器上產生的指令碼。 <xref:Microsoft.SqlServer.Management.Smo.Table> 資料會隨著動態建立的 DTS 封裝一起傳送。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Transfer> 物件包含了 DMO 中 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 物件的所有功能和其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。 不過，在中的 SMO [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]，則<xref:Microsoft.SqlServer.Management.Smo.Transfer>物件會使用[SQLBulkCopy](http://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) API 來傳送資料。 此外，用來執行資料傳送的方法和屬性是位於 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 物件上，而不是 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件上。 將功能從執行個體類別移到公用程式類別與較輕的物件模型一致，因為只有在需要時才會載入特定工作的程式碼。  
+ <xref:Microsoft.SqlServer.Management.Smo.Transfer> 物件包含了 DMO 中 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 物件的所有功能和其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。 不過，在中的 SMO [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]，則<xref:Microsoft.SqlServer.Management.Smo.Transfer>物件會使用[SQLBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) API 來傳送資料。 此外，用來執行資料傳送的方法和屬性是位於 <xref:Microsoft.SqlServer.Management.Smo.Transfer> 物件上，而不是 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件上。 將功能從執行個體類別移到公用程式類別與較輕的物件模型一致，因為只有在需要時才會載入特定工作的程式碼。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Transfer> 物件不支援將資料傳送到 <xref:Microsoft.SqlServer.Management.Smo.Database.CompatibilityLevel%2A> 小於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體版本的目標資料庫。  
   

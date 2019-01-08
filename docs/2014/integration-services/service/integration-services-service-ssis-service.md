@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, about Integration Services service
@@ -17,17 +16,17 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f2c1f5f17f55244787bf4f79949008be79088fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cfbbf84cf084ae96e123c14e659ebeb30c12ac42
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119418"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800770"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服務 (SSIS 服務)
   本節中的主題討論 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務 (用於管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的 Windows 服務)。 若要建立、儲存及執行 Integration Services 封裝，則不需要這項服務。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 支援 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務能與舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]回溯相容。  
   
- 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會針對使用專案部署模型部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的專案，將物件、設定和操作資料儲存在 `SSISDB` 資料庫中。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器是主控資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 的執行個體。 如需資料庫的詳細資訊，請參閱 [SSIS 目錄](../catalog/ssis-catalog.md)。 如需將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的詳細資訊，請參閱 [將專案部署至 Integration Services 伺服器](../deploy-projects-to-integration-services-server.md)。  
+ 從開始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]儲存物件、 設定和操作資料中的`SSISDB`專案，您已部署至資料庫[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用專案部署模型的伺服器。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器是主控資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 的執行個體。 如需資料庫的詳細資訊，請參閱 [SSIS 目錄](../catalog/ssis-catalog.md)。 如需將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的詳細資訊，請參閱 [將專案部署至 Integration Services 伺服器](../deploy-projects-to-integration-services-server.md)。  
   
 ## <a name="management-capabilities"></a>管理功能  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務是可用於管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務只可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用。  

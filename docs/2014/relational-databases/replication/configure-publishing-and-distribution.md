@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], distribution
@@ -15,12 +14,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c93dda12a8a100f78db3568620afdffacc1258bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 013e2234b33d9277cabb60d95bf2c8db783e93cf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087033"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350068"
 ---
 # <a name="configure-publishing-and-distribution"></a>設定發行和散發
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中設定發行和散發。  
@@ -131,7 +130,7 @@ ms.locfileid: "48087033"
 5.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 方法來安裝散發者。 指定安全密碼 (連接到遠端散發者時由發行者使用) 及步驟 3 中的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 物件。 如需詳細資訊，請參閱[保護散發者](security/secure-the-distributor.md)。  
   
     > [!IMPORTANT]  
-    >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](http://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
+    >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
 6.  建立 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 類別的執行個體。  
   
@@ -156,7 +155,7 @@ ms.locfileid: "48087033"
 11. 呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 方法。 傳遞遠端散發者的名稱以及步驟 5 中指定之遠端散發者的密碼。  
   
     > [!IMPORTANT]  
-    >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 Windows .NET Framework 提供的 [密碼編譯服務](http://go.microsoft.com/fwlink/?LinkId=34733) 。  
+    >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 Windows .NET Framework 提供的 [密碼編譯服務](https://go.microsoft.com/fwlink/?LinkId=34733) 。  
   
 ###  <a name="PShellExample"></a> 範例 (RMO)  
  您可以使用 Replication Management Objects (RMO) 以程式設計的方式設定複寫發行和散發。  

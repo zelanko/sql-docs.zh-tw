@@ -13,12 +13,12 @@ ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff7f94a0daf7ebd62286aa033c63780e25221e85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2784b7915d96665cae814e0dff46b2f2135bc52
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136128"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395866"
 ---
 # <a name="catalog-metadata"></a>目錄中繼資料
   本主題描述 `SQLColumns` 和 `SQLProcedureColumns` 所傳回的資料行中繼資料，以及 `SQLGetTypeInfo` 所傳回的資料類型中繼資料。  
@@ -45,8 +45,8 @@ ms.locfileid: "48136128"
 |TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|LITERAL_PREFIX|'|'|'|'|'|'|  
+|LITERAL_SUFFIX|'|'|'|'|'|'|  
 |CREATE_PARAMS|NULL|scale|NULL|NULL|scale|scale|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  

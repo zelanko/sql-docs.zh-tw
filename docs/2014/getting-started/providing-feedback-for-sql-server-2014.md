@@ -22,12 +22,12 @@ ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32068cf03a971cd6b8010618d7b74d1a613ec856
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109889"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376740"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>提供關於 SQL Server 2014 的回函
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 感謝您撥冗協助我們改良 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 產品和文件集。 您可以提供有關產品功能和使用者介面的建議與錯誤報告、提交文件集回函，以及選擇將錯誤報告和使用方式資料自動傳送給 [!INCLUDE[msCoName](../includes/msconame-md.md)] 進行分析。 這三個回函選項分述如下。  
@@ -37,7 +37,7 @@ ms.locfileid: "48109889"
   
  您可以利用許多方式尋找 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 回函頁面。  
   
--   移至 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 回函[網頁](http://go.microsoft.com/fwlink/?linkid=34178)。  
+-   移至 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 回函[網頁](https://go.microsoft.com/fwlink/?linkid=34178)。  
   
 -   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的說明工具列上按一下 [傳送回函] 按鈕，或選取 [社群/傳送回函] 命令。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48109889"
   
 -   從公用程式存取說明。  
   
--   在 [工具/自訂] 命令的 [工具列] 索引標籤上，選取 [說明] 核取方塊 。  
+-   選取 [**幫助**] 核取方塊**工具列**索引標籤**工具/自訂...** 命令。  
   
 ## <a name="automatic-error-and-usage-reporting"></a>自動錯誤和使用方式報告  
  您可以啟用自動報告錯誤及傳送有關如何使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 軟體和服務之資料的功能。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 會利用這些資訊來改善 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 並將所有資料視為機密。  

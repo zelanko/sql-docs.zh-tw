@@ -1,18 +1,20 @@
 ---
-title: 什麼是 SQL Server 2019 巨量資料叢集？ | Microsoft Docs
+title: 什麼是巨量資料叢集？
+titleSuffix: SQL Server 2019 big data clusters
 description: 深入了解 SQL Server 2019 巨量資料叢集 （預覽），以在 Kubernetes 上執行，並提供關聯式的向外延展選項和 HDFS 的資料。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: overview
 ms.prod: sql
-ms.openlocfilehash: e8cdfff0efe8164df7487b3ba2a5bee6cbf0b940
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 5a44fe9001b7a3bffb67cb3f213bed2ac1065970
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221704"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030042"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>什麼是 SQL Server 2019 巨量資料叢集？
 
@@ -75,13 +77,13 @@ Kubernetes 是開放原始碼容器協調者，可以調整容器部署根據的
 |--|--|
 | **Cluster** | Kubernetes 叢集是一組機器，又稱為節點。 控制叢集一個節點，並指定在主要節點剩餘的節點是背景工作節點。 Kubernetes 主機負責散發工作的背景工作角色，以及監視叢集的健康情況。 |
 | **節點** | 節點會執行容器化應用程式。 它可以是實體機器或虛擬機器。 Kubernetes 叢集可以包含實體機器和虛擬機器節點的混合。 |
-| **Pod** | 在 pod 已 Kubernetes 的不可部分完成的部署單位。 在 pod 已一或多個容器的邏輯群組，以及相關聯的資源 — 執行應用程式所需。 每個 pod 節點上執行;節點可以執行一或多個 pod。 Kubernetes 主機會將 pod 自動指派給叢集中的節點。 |
+| **Pod** | 在 pod 已 Kubernetes 的不可部分完成的部署單位。 在 pod 已一或多個容器的邏輯群組-和相關聯的資源所需執行的應用程式。 每個 pod 節點上執行;節點可以執行一或多個 pod。 Kubernetes 主機會將 pod 自動指派給叢集中的節點。 |
 
 在 SQL Server 的巨量資料叢集，Kubernetes 會負責使用 SQL Server 的巨量資料叢集; 的狀態Kubernetes 會建置和設定叢集節點、 將 pod 指派給節點，和監視叢集的健全狀況。
 
 ### <a name="big-data-clusters-architecture"></a>巨量資料叢集架構
 
-叢集中的節點可分為三個邏輯平面： 控制平面，[計算] 窗格中，資料平面。 每個平面叢集中有不同的責任。 在 SQL Server 的巨量資料叢集中的每個 Kubernetes 節點的主機元件至少一個平面的 pod。
+叢集中的節點可分為三個邏輯平面： 控制層、 計算平面和資料平面。 每個平面叢集中有不同的責任。 在 SQL Server 的巨量資料叢集中的每個 Kubernetes 節點的主機元件至少一個平面的 pod。
 
 ![架構概觀](media/big-data-cluster-overview/architecture-diagram-planes.png)
 
@@ -91,7 +93,7 @@ Kubernetes 是開放原始碼容器協調者，可以調整容器部署根據的
 
 ### <a id="computeplane"></a> 計算平面
 
-計算平面會提供在叢集中的運算資源。 它包含在 Linux pod 上執行 SQL Server 的節點。 計算平面中的 pod 分為*計算集區*特定處理工作。 計算集區可做為[PolyBase](../relational-databases/polybase/polybase-guide.md)分散式查詢，透過不同的資料來源的向外延展群組，例如 HDFS、 Oracle、 MongoDB 或 Teradata。
+計算平面會提供在叢集中的運算資源。 它包含在 Linux pod 上執行 SQL Server 的節點。 計算平面中的 pod 分為*計算集區*特定處理工作。 計算集區可做為[PolyBase](../relational-databases/polybase/polybase-guide.md)分散式查詢，透過不同的資料來源這類作為 HDFS、 Oracle、 MongoDB 或 Teradata 的向外延展群組。
 
 ### <a id="dataplane"></a> 資料平面
 

@@ -17,12 +17,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 03636c3eaf9d416d32f0143503625a7c71b8a254
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab52d307d914e1f3f4b1e808b59999dcae96cccb
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219605"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979794"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>建立伺服器稽核與伺服器稽核規格
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立伺服器稽核和伺服器稽核規格。 *「稽核」* (Audit) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫的執行個體牽涉到追蹤和記錄系統上所發生的事件。 *SQL Server Audit* 物件會收集要監視之伺服器或資料庫層級動作和動作群組的單一執行個體。 此稽核位於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體層級。 您可以針對每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體設有多個稽核。 *「伺服器稽核規格」* (Server Audit Specification) 物件屬於稽核。 您可以針對每個稽核建立一個伺服器稽核規格，因為這兩者都是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體範圍所建立。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](sql-server-audit-database-engine.md)。  
@@ -80,7 +80,7 @@ ms.locfileid: "48219605"
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 作業繼續進行。 系統不會保留稽核記錄。 稽核會繼續嘗試記錄事件，而且如果失敗狀況已解決，就會恢復稽核。 選取 **[繼續]** 選項會允許可能違反安全性原則的未稽核活動。 當繼續進行 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 作業比維持完整稽核更重要時，請選取此選項。 這是預設選項。  
   
      **關閉伺服器**  
-     當寫入目標的伺服器執行個體無法將資料寫入稽核目標時，強制伺服器關閉。 發出此登入必須擁有`SHUTDOWN`權限。 如果登入沒有此權限，這個功能將會失敗，而且將會引發錯誤訊息。 不會發生稽核的事件。 當稽核失敗可能危害系統的安全性或完整性時，請選取此選項。  
+     當寫入目標的伺服器執行個體無法將資料寫入稽核目標時，強制伺服器關閉。 發出此內容的登入必須具有 `SHUTDOWN` 權限。 如果登入沒有此權限，這個功能將會失敗，而且將會引發錯誤訊息。 不會發生稽核的事件。 當稽核失敗可能危害系統的安全性或完整性時，請選取此選項。  
   
      **讓作業失敗**  
      當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 無法寫入稽核記錄時，如果資料庫動作會以其他方式導致稽核事件，這個選項就會讓這些動作失敗。 不會發生稽核的事件。 不會導致稽核事件的動作可繼續進行。 稽核會繼續嘗試記錄事件，而且如果失敗狀況已解決，就會恢復稽核。 當維持完整稽核比 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的完整存取權更重要時，請選取此選項。  
@@ -95,7 +95,7 @@ ms.locfileid: "48219605"
      指定當 [稽核目的地] 為檔案時，要寫入稽核資料的資料夾位置。  
   
      **省略符號 (...)**  
-     開啟 [尋找資料夾] – *server_name* 對話方塊，指定檔案路徑或建立要寫入稽核檔案的資料夾。  
+     開啟 **尋找資料夾-* * * server_name*對話方塊來指定檔案路徑，或建立稽核檔案寫入其中的資料夾。  
   
      **稽核檔案最大限制:**  
      **輪用檔案數量上限**  
@@ -162,10 +162,10 @@ ms.locfileid: "48219605"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
-    -- Creates a server audit called "HIPPA_Audit" with a binary file as the target and no options.  
+    -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
     CREATE SERVER AUDIT HIPAA_Audit  
         TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
     ```  
@@ -176,14 +176,14 @@ ms.locfileid: "48219605"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
-    /*Creates a server audit specification called "HIPPA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPPA_Audit" created above.  
+    /*Creates a server audit specification called "HIPAA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPAA_Audit" created above.  
     */  
   
-    CREATE SERVER AUDIT SPECIFICATION HIPPA_Audit_Specification  
-    FOR SERVER AUDIT HIPPA_Audit  
+    CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
+    FOR SERVER AUDIT HIPAA_Audit  
         ADD (FAILED_LOGIN_GROUP);  
     GO  
     -- Enables the audit.   

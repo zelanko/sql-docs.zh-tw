@@ -11,12 +11,12 @@ ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56e2626f2d8e452c34f57ad883720eb96d140b27
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 9047458e09e5dd24fa255122d06d211d2c315877
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148115"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376610"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>使用動態管理檢視 (DMV) 監視 Analysis Services
   Analysis Services 動態管理檢視 (DMV) 是公開本機伺服器作業和伺服器健全狀況相關資訊的查詢結構。 查詢結構是傳回 Analysis Services 執行個體中繼資料和監視資訊之結構描述資料列集的介面。  
@@ -47,9 +47,9 @@ SELECT * FROM $System.<schemaRowset>
  DMV 查詢是執行 XML/A Discover 命令的替代方法。 對於大多數系統管理員，撰寫 DMV 查詢比較簡單，因為查詢語法以 SQL 為基礎。 此外，結果集是以表格格式傳回，更易於讀取和複製。  
   
 ##  <a name="bkmk_ex"></a> 範例和案例  
- DMV 查詢有助於回答有關使用中工作階段和連接的問題，以及哪些物件在特定時間點耗用最多 CPU 或記憶體的問題。 本節提供最常使用 DMV 查詢的案例範例。 您也可以檢閱＜ [SQL Server 2008 R2 Analysis Services 作業指南](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) ＞，以取得使用 DMV 查詢監視伺服器執行個體的其他見解。  
+ DMV 查詢有助於回答有關使用中工作階段和連接的問題，以及哪些物件在特定時間點耗用最多 CPU 或記憶體的問題。 本節提供最常使用 DMV 查詢的案例範例。 您也可以檢閱＜ [SQL Server 2008 R2 Analysis Services 作業指南](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) ＞，以取得使用 DMV 查詢監視伺服器執行個體的其他見解。  
   
- `Select * from $System.discover_object_activity` /** 此查詢報告自上次啟動服務後的物件活動。 如需以此 DMV 為基礎的範例查詢，請參閱 [新的 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)。  
+ `Select * from $System.discover_object_activity` /** 此查詢報告自上次啟動服務後的物件活動。 如需以此 DMV 為基礎的範例查詢，請參閱 [新的 System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)。  
   
  `Select * from $System.discover_object_memory_usage` /** 此查詢依物件來報告記憶體耗用量。  
   
@@ -99,7 +99,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  如果 DMV 不適用於給定的資料列集，伺服器會傳回下列錯誤: 「 \<w > 伺服器無法辨識要求類型 」。 所有其他錯誤都指向語法問題。  
+>  如果 DMV 不適用於給定的資料列集，伺服器就會傳回下列錯誤：「 \<w > 伺服器無法辨識要求類型 」。 所有其他錯誤都指向語法問題。  
   
 |資料列集|描述|  
 |------------|-----------------|  
@@ -164,8 +164,8 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_SETS 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|傳回目前連接所定義之集合的清單。|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2008 R2 Analysis Services 作業指南](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [新的 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
- [限制資料列集和 DMV 的新 SYSTEMRESTRICTEDSCHEMA 函數](http://go.microsoft.com/fwlink/?LinkId=231885)  
+ [SQL Server 2008 R2 Analysis Services 作業指南](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
+ [新的 System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
+ [限制資料列集和 DMV 的新 SYSTEMRESTRICTEDSCHEMA 函數](https://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

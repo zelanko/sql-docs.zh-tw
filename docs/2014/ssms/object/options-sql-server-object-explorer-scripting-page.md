@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.ObjectExplorerScripting
@@ -13,12 +13,12 @@ ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5dcd423d58bbc344d11a7a3c35e27e7406f90664
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080673"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764400"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>選項 （SQL Server 物件總管編寫指令碼頁面）
   使用此頁面設定指定碼選項，以在**物件總管**之物件操作功能表的下列命令中使用：  

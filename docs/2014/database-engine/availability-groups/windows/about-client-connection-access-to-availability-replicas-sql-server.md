@@ -17,12 +17,12 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e4e680bc7b22e31bf9da0c3502adf49d3bc8159
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153659"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352620"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>關於可用性複本的用戶端連接存取 (SQL Server)
   在 AlwaysOn 可用性群組中，您可以設定一個或多個可用性複本，讓它在次要角色之下執行時 (也就是以次要複本的方式執行時)，允許唯讀連接。 以主要角色執行時 (也就是當做主要複本執行時)，您也可以設定每個可用性複本，以允許或排除唯讀連接。  
@@ -84,9 +84,9 @@ ms.locfileid: "48153659"
 |次要|無 (這是預設的次要行為)。|讀取意圖、讀寫，或未指定任何連接意圖|失敗|  
 |次要|僅限讀取意圖|讀取意圖|成功|  
 |次要|僅限讀取意圖|讀寫，或未指定任何連接意圖|失敗|  
-|Primary|全部 (這是預設的主要行為)。|唯讀、讀寫，或未指定任何連接意圖|成功|  
-|Primary|讀寫|僅限讀取意圖|失敗|  
-|Primary|讀寫|讀寫，或未指定任何連接意圖|成功|  
+|主要|全部 (這是預設的主要行為)。|唯讀、讀寫，或未指定任何連接意圖|成功|  
+|主要|讀寫|僅限讀取意圖|失敗|  
+|主要|讀寫|讀寫，或未指定任何連接意圖|成功|  
   
  如需設定可用性群組接受用戶端連接至其複本的相關資訊，請參閱 [可用性群組接聽程式、用戶端連接及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48153659"
   
 |複本|認可模式|初始角色|次要角色的連接存取|主要角色的連接存取|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|同步的|Primary|None|讀寫|  
+|Replica1|同步的|主要|None|讀寫|  
 |Replica2|同步的|次要|None|讀寫|  
 |Replica3|非同步的|次要|僅限讀取意圖|讀寫|  
 |Replica4|非同步的|次要|僅限讀取意圖|讀寫|  
@@ -118,9 +118,9 @@ ms.locfileid: "48153659"
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 團隊部落格： 官方 SQL Server AlwaysOn 團隊部落格](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

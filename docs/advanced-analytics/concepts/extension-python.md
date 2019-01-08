@@ -1,6 +1,6 @@
 ---
-title: 在 SQL Server Machine Learning 服務中的 Python 擴充功能 |Microsoft Docs
-description: 了解執行 Python 程式碼和 SQL Server 中的內建 Python 程式庫。
+title: Python 程式設計語言擴充功能-SQL Server Machine Learning
+description: 了解執行 Python 程式碼和 SQL Server 2017 Machine Learning 服務中的內建 Python 程式庫。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/05/2018
@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 24d34ee2ca9220ca1569ea83bcb092030d1ef692
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 6bbce3d58f016b26618413ef0647995d0914a237
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892862"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432321"
 ---
-# <a name="python-extension-in-sql-server"></a>SQL Server 中的 Python 擴充功能
+# <a name="python-language-extension-in-sql-server"></a>SQL Server 中的 Python 語言擴充功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-使用 Python 擴充功能是以關聯式資料庫引擎的 SQL Server Machine Learning 服務附加元件的一部分。 它會新增 Python 執行環境中，使用 Python 3.5 執行階段和解譯器，標準程式庫與工具，以及 Microsoft 的產品程式庫適用於 Python 的 Anaconda 散發套件： [revoscalepy](../python/what-is-revoscalepy.md)分析在規模及[microsoftml](../using-the-microsoftml-package.md)機器學習服務演算法。 
+使用 Python 擴充功能是以關聯式資料庫引擎的 SQL Server Machine Learning 服務附加元件的一部分。 它會新增 Python 執行環境中，使用 Python 3.5 執行階段和解譯器，標準程式庫與工具，以及 Microsoft 的產品程式庫適用於 Python 的 Anaconda 散發套件： [revoscalepy](../python/ref-py-revoscalepy.md)分析在規模及[microsoftml](../python/ref-py-microsoftml.md)機器學習服務演算法。 
 
 Python 整合安裝成[SQL Server Machine Learning 服務](../what-is-sql-server-machine-learning.md)。
 
@@ -28,7 +28,7 @@ Python 整合安裝成[SQL Server Machine Learning 服務](../what-is-sql-server
 
 SQL Server 包含開放原始碼和專屬套件。 安裝程式所安裝的 Python 執行階段是使用 Python 3.5 的 Anaconda 4.2。 Python 執行階段安裝獨立於 SQL 工具和外部核心引擎的程序，在擴充性架構中執行。 使用 Python 的 Machine Learning 服務的安裝的一部分，您必須同意 GNU 公用授權條款。 
 
-SQL Server 不會修改 Python 可執行檔，但您必須使用的安裝程式安裝，因為該版本是專屬的套件，建置及測試上的 Python 版本。 如需支援的 Anaconda 散發套件的清單，請參閱 Continuum analytics 網站： [Anaconda 套件清單](https://docs.continuum.io/anaconda/pkg-docs)。
+SQL Server 不會修改 Python 可執行檔，但您必須使用的安裝程式安裝，因為該版本是專屬的套件，建置及測試上的 Python 版本。 Anaconda 散發套件所支援的套件清單，請參閱 Continuum analytics 網站：[Anaconda 套件清單](https://docs.continuum.io/anaconda/packages/pkg-docs)。
 
 執行個體相關聯的資料夾中，可以找到與特定資料庫引擎執行個體相關聯的 Anaconda 散發套件。 例如，如果您使用 Machine Learning 服務與 Python 安裝 SQL Server 2017 資料庫引擎的預設執行個體時，查看底下`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`。
 
@@ -36,8 +36,8 @@ Python 套件的平行和分散式工作負載，Microsoft 將加入包含下列
 
 | 程式庫 | 描述 |
 |---------|-------------|
-| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 支援資料來源物件和資料探索、 操作、 轉換和視覺效果。 它支援建立遠端計算內容，以及各種不同的可調整機器學習服務模型，例如**rxLinMod**。 它相當於[ **RevoScaleR** ](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) Microsoft R 套件 |
-| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 包含已針對速度及準確性，最佳化，以及內嵌轉換處理文字與映像的機器學習演算法。 如需詳細資訊，請參閱 <<c0> [ 使用 MicrosoftML 封裝與 SQL Server](https://docs.microsoft.com/sql/advanced-analytics/using-the-microsoftml-package)。 |
+| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 支援資料來源物件和資料探索、 操作、 轉換和視覺效果。 它支援建立遠端計算內容，以及各種不同的可調整機器學習服務模型，例如**rxLinMod**。 如需詳細資訊，請參閱 < [revoscalepy 模組與 SQL Server](../python/ref-py-revoscalepy.md)。  |
+| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 包含已針對速度及準確性，最佳化，以及內嵌轉換處理文字與映像的機器學習演算法。 如需詳細資訊，請參閱 < [microsoftml 模組與 SQL Server](../python/ref-py-microsoftml.md)。 |
 
 緊密結合 Microsoftml 和 revoscalepy;使用 microsoftml 中的資料來源定義為 revoscalepy 物件。 計算 microsoftml revoscalepy 傳輸中的內容限制。 也就是所有功能都都可供本機作業，但切換至遠端計算內容需要 RxInSqlServer。
 
@@ -76,7 +76,7 @@ Python 套件的平行和分散式工作負載，Microsoft 將加入包含下列
 您可以從遠端電腦，例如膝上型電腦，執行 Python 指令碼，並讓它們在 SQl Server 電腦的內容中執行，如果符合這些條件：
 
 + 您適當地設計指令碼
-+ 在遠端電腦已安裝 Machine Learning 服務所使用的擴充性程式庫。 [Revoscalepy](../python/what-is-revoscalepy.md)封裝，才能使用遠端計算內容。
++ 在遠端電腦已安裝 Machine Learning 服務所使用的擴充性程式庫。 [Revoscalepy](../python/ref-py-revoscalepy.md)封裝，才能使用遠端計算內容。
 
 下圖摘要說明整體的工作流程時指令碼會從遠端電腦。
 
@@ -94,6 +94,7 @@ Python 套件的平行和分散式工作負載，Microsoft 將加入包含下列
 
 ## <a name="see-also"></a>另請參閱
 
-+ [Revoscalepy 是什麼](../python/what-is-revoscalepy.md) 
++ [SQL Server 中的 revoscalepy 模組](../python/ref-py-revoscalepy.md)
++ [revoscalepy 函式參考](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [SQL Server 中的擴充性架構](extensibility-framework.md)
 + [R 和機器學習服務在 SQL Server 中的延伸模組](extension-r.md)

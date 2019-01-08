@@ -13,12 +13,12 @@ ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2c521e524e6e205989e2bff96928af4da9c24bb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93f00a9544512c3c5efb63667d715c57bcf62de9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091870"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354017"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定義多對多關聯性及多對多關聯性屬性
   本主題說明 Analysis Services 中的多對多維度，包括何時使用這些維度以及如何建立這些維度。  
@@ -175,21 +175,21 @@ ms.locfileid: "48091870"
   
 3.  請務必記得，變更模型之後一定要部署及重新連接。 在 Excel 中，請使用樞紐分析表 [分析] 功能區上的 [重新整理] 按鈕。  
   
-4.  請避免在多個多對多關聯性中使用連結量值群組，特別是當這些關聯性位於不同 Cube 時。 這樣做可能會導致模糊不清的彙總。 如需詳細資訊，請參閱 [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships (SSAS Troubleshooting)](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)(包含多對多關聯性之 Cube 中連結量值的數量不正確 (SSAS 疑難排解))。  
+4.  請避免在多個多對多關聯性中使用連結量值群組，特別是當這些關聯性位於不同 Cube 時。 這樣做可能會導致模糊不清的彙總。 如需詳細資訊，請參閱 [Incorrect Amounts for Linked Measures in Cubes containing Many-to-Many Relationships (SSAS Troubleshooting)](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)(包含多對多關聯性之 Cube 中連結量值的數量不正確 (SSAS 疑難排解))。  
   
 ##  <a name="bkmk_Learn"></a> Learn more  
  使用以下連結來取得可幫助您掌握各個概念的其他資訊。  
   
- [如何在 Analysis Services 中定義多對多維度](http://go.microsoft.com/fwlink/?LinkId=324759)  
+ [如何在 Analysis Services 中定義多對多維度](https://go.microsoft.com/fwlink/?LinkId=324759)  
   
- [多對多革命 2.0](http://go.microsoft.com/fwlink/?LinkId=324760)  
+ [多對多革命 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [教學課程：SQL Server Analysis Services 的多對多維度範例](http://go.microsoft.com/fwlink/?LinkId=324761)  
+ [教學課程：SQL Server Analysis services 多對多維度範例](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>另請參閱  
  [維度關聯性](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [安裝 Analysis services 多維度模型化教學課程的範例資料和專案](../install-sample-data-and-projects.md)   
- [部署 Analysis Services 專案&#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
+ [安裝 Analysis Services 多維度模型化教學課程的範例資料和專案](../install-sample-data-and-projects.md)   
+ [部署 Analysis Services 專案 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
  [多維度模型中的檢視方塊](perspectives-in-multidimensional-models.md)  
   
   

@@ -20,12 +20,12 @@ ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a00c2aea93b77f65455024d15af13b153d7ebef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21b97ab3eaae8399fbc0bf37905b2b61b608948c
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732170"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785779"
 ---
 # <a name="sysdmxeobjectcolumns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,17 +37,17 @@ ms.locfileid: "47732170"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(60)**|資料行的名稱。 在物件內的唯一名稱。 不可為 Null。|  
+|NAME|**nvarchar(256)**|資料行的名稱。 在物件內的唯一名稱。 不可為 Null。|  
 |column_id|**int**|資料行的識別碼。 column_id 內是唯一的物件，當使用 column_type 時。 不可為 Null。|  
-|object_name|**nvarchar(60)**|這個資料行所屬之物件的名稱。 這與 sys.dm_xe_objects.id 之間是多對一的關聯性。不可為 Null。|  
+|object_name|**nvarchar(256)**|這個資料行所屬之物件的名稱。 這與 sys.dm_xe_objects.id 之間是多對一的關聯性。不可為 Null。|  
 |object_package_guid|**uniqueidentifier**|包含物件之封裝的 GUID。 不可為 Null。|  
-|type_name|**nvarchar(60)**|此資料行之類型的名稱。 不可為 Null。|  
+|type_name|**nvarchar(256)**|此資料行之類型的名稱。 不可為 Null。|  
 |type_package_guid|**uniqueidentifier**|包含資料行資料類型之封裝的 GUID。 不可為 Null。|  
-|column_type|**nvarchar(60)**|指示如何使用這個資料行。 不可為 Null。 column_type 可以是下列其中一項：<br /><br /> readonly。 此資料行包含無法變更的靜態值。<br /><br /> data。 此資料行包含物件所公開的執行階段資料。<br /><br /> customizable。 此資料行包含可以變更的值。<br /><br /> 注意： 變更此值可以修改物件的行為。|  
+|column_type|**nvarchar(60)**|指示如何使用這個資料行。 不可為 Null。 column_type 可以是下列其中一項：<br /><br /> readonly。 此資料行包含無法變更的靜態值。<br /><br /> data。 此資料行包含物件所公開的執行階段資料。<br /><br /> customizable。 此資料行包含可以變更的值。<br /><br /> 注意：變更這個值可以修改物件的行為。|  
 |column_value|**nvarchar(256)**|會顯示與物件資料行相關聯的靜態值。 可為 Null。|  
 |capabilities|**int**|描述資料行之功能的點陣圖。 可為 Null。|  
-|capabilities_desc|**nvarchar(256)**|這個物件資料行之功能的描述。 這個值可以是下列其中一個值：<br /><br /> Mandatory。 將父物件繫結至事件工作階段時，必須設定此值。<br /><br /> NULL|  
-|description|**nvarchar(256)**|此物件資料行的描述。 可為 Null。|  
+|capabilities_desc|**nvarchar(256)**|這個物件資料行之功能的描述。 這個值可以是下列其中一個值：<br /><br /> Mandatory。 將父物件繫結至事件工作階段時，必須設定此值。<br /><br /> 可為 Null。|  
+|description|**nvarchar(3072)**|此物件資料行的描述。 可為 Null。|  
   
 ## <a name="permissions"></a>Permissions  
  需要伺服器的 VIEW SERVER STATE 權限。  

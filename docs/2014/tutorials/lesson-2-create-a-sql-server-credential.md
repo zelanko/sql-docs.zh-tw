@@ -1,5 +1,5 @@
 ---
-title: 第 2 課： 建立 SQL Server 認證 |Microsoft Docs
+title: 第 2 課：建立 SQL Server 認證 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ ms.assetid: 64f8805c-1ddc-4c96-a47c-22917d12e1ab
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9bac1f166472fa6f4285779f2054d7121133693f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1a59c1e32773ddc022319a9357ea61802864a77
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194568"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372580"
 ---
-# <a name="lesson-2-create-a-sql-server-credential"></a>Lesson 2: Create a SQL Server Credential
-  **認證** ： [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認證是用來儲存連接到 SQL Server 外部資源所需之驗證資訊的物件。  在這裡，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]備份和還原程序會使用認證來驗證 Windows Azure Blob 儲存體服務。 認證會儲存儲存體帳戶的名稱以及儲存體帳戶的 **存取金鑰** 值。 一旦建立認證之後，您必須在發出 BACKUP/RESTORE 陳述式時，在 WITH CREDENTIAL 選項中指定認證。 如需有關如何檢視、 複製或重新產生儲存體帳戶**存取金鑰**，請參閱[儲存體帳戶存取金鑰](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
+# <a name="lesson-2-create-a-sql-server-credential"></a>第 2 課：建立 SQL Server 認證
+  **認證：**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認證是用來儲存連線到 SQL Server 外部資源所需之驗證資訊的物件。  此處， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 備份和還原程序會使用認證，向 Windows Azure BLOB 儲存體服務驗證。 認證會儲存儲存體帳戶的名稱以及儲存體帳戶的 **存取金鑰** 值。 一旦建立認證之後，您必須在發出 BACKUP/RESTORE 陳述式時，在 WITH CREDENTIAL 選項中指定認證。 如需有關如何檢視、 複製或重新產生儲存體帳戶**存取金鑰**，請參閱[儲存體帳戶存取金鑰](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
   
- 如需認證的一般資訊，請參閱[認證](../relational-databases/security/authentication-access/credentials-database-engine.md)。  
+ 如需有關認證的一般資訊，請參閱 [認證](../relational-databases/security/authentication-access/credentials-database-engine.md)。  
   
- 如需其他範例，其中會使用認證，請參閱[建立 SQL Server Agent Proxy](../ssms/agent/create-a-sql-server-agent-proxy.md)。  
+ 如需有關使用認證之其他範例的詳細資訊，請參閱 [建立 SQL Server Agent Proxy](../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   
 > [!IMPORTANT]  
->  建立 SQL Server 認證，如下所述的需求專屬於 SQL Server 備份程序 ([SQL Server 備份至 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)，並[SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md))。 SQL Server 在存取 Azure 儲存體以寫入或讀取備份時，會使用儲存體帳戶名稱與存取金鑰資訊。  如需有關如何建立認證以在 Azure 儲存體中儲存資料庫檔案的詳細資訊，請參閱[第 3 課： 建立 SQL Server 認證](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
+>  建立 SQL Server 認證，如下所述的需求專屬於 SQL Server 備份程序 ([SQL Server 備份至 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)，並[SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md))。 SQL Server 在存取 Azure 儲存體以寫入或讀取備份時，會使用儲存體帳戶名稱與存取金鑰資訊。  如需有關如何建立認證以在 Azure 儲存體中儲存資料庫檔案的詳細資訊，請參閱[第 3 課：建立 SQL Server 認證](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## <a name="create-a-sql-server-credential"></a>建立 SQL Server 認證  
  若要建立 SQL Server 認證，請使用下列步驟：  
@@ -41,8 +41,8 @@ ms.locfileid: "48194568"
   
     ```  
     CREATE CREDENTIAL mycredential   
-    WITH IDENTITY= 'mystorageaccount' – this is the name of the storage account you specified when creating a storage account (See Lesson 1)   
-    , SECRET = '<storage account access key>' – this should be either the Primary or Secondary Access Key for the storage account (See Lesson 1)  
+    WITH IDENTITY= 'mystorageaccount' - this is the name of the storage account you specified when creating a storage account (See Lesson 1)   
+    , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account (See Lesson 1)  
   
     ```  
   
@@ -53,6 +53,6 @@ ms.locfileid: "48194568"
  如需有關 Windows Azure Blob 儲存體服務之備份概念與需求的詳細資訊，請參閱 < [SQL Server 備份及還原與 Windows Azure Blob 儲存體服務](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
 ### <a name="next-lesson"></a>下一課  
- [第 3 課： 將完整資料庫備份寫入 Windows Azure Blob 儲存體服務](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)。  
+ [第 3 課：完整資料庫備份寫入 Windows Azure Blob 儲存體服務](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)。  
   
   

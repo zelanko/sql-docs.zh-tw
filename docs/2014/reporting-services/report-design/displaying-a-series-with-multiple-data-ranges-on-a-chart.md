@@ -11,12 +11,12 @@ ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 153a7dfafea308c57dd933de633a016871e32e6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5397095cc8577b174925bea234cbe54c2c49456b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221128"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373910"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart-report-builder-and-ssrs"></a>將包含多個資料範圍的數列顯示在圖表上 (報表產生器及 SSRS)
   圖表將會使用數列的最小值和最大值來計算軸刻度。 當圖表上的數列包含一個以上的資料範圍時，資料點可能會變得模糊，而圖表上只能清楚看到幾個資料點。 例如，假設您的報表顯示 30 天的期間內每天的銷售總額。  
@@ -59,14 +59,14 @@ ms.locfileid: "48221128"
   
 -   圖表類型為極座標圖、雷達圖、圓形圖、環圈圖、漏斗圖、金字塔圖或任何堆疊圖表。  
   
- 具有刻度斷層的圖表範例可從範例報表取得。 如需下載這個範例報表及其他項目的詳細資訊，請參閱 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][報表產生器與報表設計師範例報表](http://go.microsoft.com/fwlink/?LinkId=198283)：  
+ 具有刻度斷層的圖表範例可從範例報表取得。 如需下載這個範例報表及其他項目的詳細資訊，請參閱 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][報表產生器與報表設計師範例報表](https://go.microsoft.com/fwlink/?LinkId=198283)：  
   
 ## <a name="see-also"></a>另請參閱  
- [在圖表上的多個數列&#40;報表產生器及 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+ [圖表上的多個數列 &#40;報表產生器及 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [3D、 浮凸和其他效果的圖表&#40;報表產生器及 SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
+ [圖表中的 3D、浮凸和其他效果 &#40;報表產生器及 SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [軸屬性對話方塊、軸選項 &#40;報表產生器及 SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
- [收集圓形圖上的小配量&#40;報表產生器及 SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
+ [軸屬性對話方塊，軸選項 &#40;報表產生器及 SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
+ [收集圓形圖上的小配量 &#40;報表產生器及 SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   

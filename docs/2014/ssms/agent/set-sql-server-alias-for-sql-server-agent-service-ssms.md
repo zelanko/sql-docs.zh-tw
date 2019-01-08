@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], traces
@@ -14,12 +13,12 @@ ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fed48fdb4b6e86bc2c1920e80ea9e62ba4b73a7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 803acc60555c996a0556e456b8d31753506b43ab
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177421"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205787"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>設定追蹤篩選 (Transact-SQL)
   本主題描述如何使用預存程序來建立篩選，針對所追蹤的事件，只擷取您需要的資訊。  
@@ -30,7 +29,7 @@ ms.locfileid: "48177421"
   
 2.  執行 **sp_trace_setfilter** 以設定要從追蹤的事件中擷取的相關資訊類型。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  不同於一般預存程序，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 預存程序的參數 (**sp_trace_* xx***) 都有強制類型，而且不支援資料類型的自動轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
   
 ## <a name="see-also"></a>另請參閱  

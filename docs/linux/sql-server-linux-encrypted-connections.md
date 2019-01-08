@@ -12,25 +12,25 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 46795611f8bb3554491dbdd400d383a59a540b5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9506c8c27e17f59c95a1cfeff5cd3885d1657b79
+ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766588"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52826083"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>將 Linux 上的 SQL Server 連線加密
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 Linux 上可以加密用戶端應用程式和執行個體之間透過網路傳輸的資料使用傳輸層安全性 (TLS) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 Windows 和 Linux 上支援相同的 TLS 通訊協定： TLS 1.2、 1.1 和 1.0。 不過，設定 TLS 的步驟會在其上的作業系統特定的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]正在執行。  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 Linux 上可以加密用戶端應用程式和執行個體之間透過網路傳輸的資料使用傳輸層安全性 (TLS) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 Windows 和 Linux 上支援相同的 TLS 通訊協定：TLS 1.2、 1.1 和 1.0。 不過，設定 TLS 的步驟會在其上的作業系統特定的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]正在執行。  
 
 ## <a name="requirements-for-certificates"></a>憑證需求 
 開始之前，您必須先確定您的憑證符合這些需求：
 - 目前的系統時間必須晚 [有效期自] 屬性的憑證和之前的有效憑證的屬性。
 - 憑證必須是為了伺服器驗證而準備的。 這需要指定伺服器驗證 (1.3.6.1.5.5.7.3.1) 憑證的增強金鑰使用方法屬性。
 - 必須可以使用 AT_KEYEXCHANGE KeySpec 選項來建立憑證。 通常，憑證的金鑰使用方法屬性 (KEY_USAGE) 也包括金鑰編密 (CERT_KEY_ENCIPHERMENT_KEY_USAGE)。
-- 憑證的 Subject 屬性必須指出，一般名稱 (CN) 為相同的主機名稱或伺服器電腦的完整的網域名稱 (FQDN)。 注意： 支援萬用字元憑證。
+- 憑證的 Subject 屬性必須指出，一般名稱 (CN) 為相同的主機名稱或伺服器電腦的完整的網域名稱 (FQDN)。 注意：支援萬用字元憑證。
 
 ## <a name="configuring-the-openssl-libraries-for-use-optional"></a>設定 （選擇性） 使用 OpenSSL 程式庫
 您可以建立中的符號連結`/opt/mssql/lib/`參考其中的目錄`libcrypto.so`和`libssl.so`程式庫應該用於加密。 這非常有用，如果您想要強制使用 OpenSSL 系統所提供的預設值以外的特定版本的 SQL Server。 如果這些符號連結不存在，SQL Server 就會載入系統上的預設設定 OpenSSL 程式庫。
@@ -56,8 +56,8 @@ TLS 用來加密從用戶端應用程式的連線[!INCLUDE[ssNoVersion](../inclu
 
         systemctl stop mssql-server 
         cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssqlfqdn.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssqlfqdn.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
 
@@ -65,10 +65,10 @@ TLS 用來加密從用戶端應用程式的連線[!INCLUDE[ssNoVersion](../inclu
 
     -   如果您使用 CA 簽署的憑證，您必須複製到用戶端電腦的憑證授權單位 (CA) 憑證，而不是使用者憑證。 
     -   如果您使用自我簽署的憑證，只要將.pem 檔案複製到下列資料夾分別為發佈，並執行命令來啟用它們 
-        - **Ubuntu**： 將憑證複製到```/usr/share/ca-certificates/```重新命名為.crt 的延伸模組使用 dpkg 重新設定的 ca 憑證，以便讓它成為系統 CA 憑證。 
-        - **RHEL**： 將憑證複製到```/etc/pki/ca-trust/source/anchors/```使用```update-ca-trust```以便讓它成為系統 CA 憑證。
-        - **SUSE**： 將憑證複製到```/usr/share/pki/trust/anchors/```使用```update-ca-certificates```以便讓它成為系統 CA 憑證。
-        - **Windows**： 為目前使用者憑證的.pem 檔案]-> [匯入信任的根憑證授權單位]-> [憑證
+        - **Ubuntu**:將憑證複製到```/usr/share/ca-certificates/```重新命名為.crt 的延伸模組使用 dpkg 重新設定的 ca 憑證，以便讓它成為系統 CA 憑證。 
+        - **RHEL**:將憑證複製到```/etc/pki/ca-trust/source/anchors/```使用```update-ca-trust```以便讓它成為系統 CA 憑證。
+        - **SUSE**:將憑證複製到```/usr/share/pki/trust/anchors/```使用```update-ca-certificates```以便讓它成為系統 CA 憑證。
+        - **Windows**：為目前使用者憑證的.pem 檔案]-> [匯入信任的根憑證授權單位]-> [憑證
         - **macOS**: 
            - 複製到憑證 ```/usr/local/etc/openssl/certs```
            - 執行下列命令，以取得雜湊值： ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
@@ -106,8 +106,8 @@ TLS 用來加密從用戶端應用程式的連線[!INCLUDE[ssNoVersion](../inclu
 
         systemctl stop mssql-server 
         cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssqlfqdn.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssqlfqdn.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
         

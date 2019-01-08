@@ -10,12 +10,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3769df724031fb72511c92dca8494a3eb893b6a6
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 5113730b1920fb1cd6ecf305e03614e3de894a8e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018973"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366850"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>將 SQL Server 與 SMB Fileshare 當做儲存選項一起安裝
   從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，系統資料庫 (Master、Model、MSDB 和 TempDB) 與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用者資料庫可以當做儲存選項與伺服器訊息區塊 (SMB) 檔案伺服器一起安裝。 這同時適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立安裝和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝 (FCI)。  
@@ -32,7 +32,7 @@ ms.locfileid: "51018973"
   
 -   \\\ServerName\ShareName  
   
- 如需有關通用命名慣例的詳細資訊，請參閱 < [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534)。  
+ 如需有關通用命名慣例的詳細資訊，請參閱 < [UNC](https://go.microsoft.com/fwlink/?LinkId=245534) (https://go.microsoft.com/fwlink/?LinkId=245534)。  
   
  不建議使用回送 UNC 路徑 (伺服器名稱為 localhost (127.0.0.1) 的 UNC 路徑，或是本機電腦名稱)。 使用檔案伺服器叢集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (裝載於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行的相同節點上) 也不受支援，這是特殊案例。 為了避免這個狀況發生，建議將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和檔案伺服器叢集建立在不同的 Windows 叢集上。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "51018973"
   
 ### <a name="installation-options"></a>安裝選項  
   
--   在安裝程式 UI [資料庫引擎組態] 頁面的 [資料目錄] 索引標籤中，將「資料根目錄」參數設定為 “\\\fileserver1\share1\”。  
+-   在安裝程式 UI [資料庫引擎設定] 頁面的 [資料目錄] 索引標籤中，將 [資料根目錄] 參數設定為 "\\\fileserver1\share1\"。  
   
--   在命令提示字元安裝中，將 “/INSTALLSQLDATADIR” 指定為 “\\\fileserver1\share1\”。  
+-   在命令提示字元安裝中，將 "/INSTALLSQLDATADIR" 指定為 "\\\fileserver1\share1\"。  
   
      以下是使用 SMB 檔案共用選項在獨立伺服器上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的範例語法：  
   
@@ -87,13 +87,13 @@ ms.locfileid: "51018973"
 |作業系統|SMB2 通訊協定版本|對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|相較於舊版 SMB，新版中已改良效能。<br /><br /> 持久性，有助於從暫時性網路問題復原。|  
-|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1，包括 Server Core|2.1|支援大型 MTU，有助於大型資料傳送，例如 SQL 備份和還原。 此功能必須由使用者啟用。 如需如何啟用此功能的詳細資料，請參閱 [SMB 的新功能](http://go.microsoft.com/fwlink/?LinkID=237319) (http://go.microsoft.com/fwlink/?LinkID=237319)。<br /><br /> 大幅改良效能，特別是針對 SQL OLTP 樣式工作負載方面。 這些效能改良需要套用 Hotfix。 如需 Hotfix 的詳細資訊，請參閱[本文](http://go.microsoft.com/fwlink/?LinkId=237320) (http://go.microsoft.com/fwlink/?LinkId=237320)。|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)]，包括 Server Core|3.0|支援以透明方式容錯移轉檔案共用，不需任何停機時間，而且系統管理員也不需要介入檔案伺服器叢集組態的 SQL DBA 或檔案伺服器管理員。<br /><br /> 支援同時使用多網路介面的 IO，並容忍網路介面失敗。<br /><br /> 支援具有 RDMA 功能的網路介面。<br /><br /> 如需這些功能和伺服器訊息區塊的詳細資訊，請參閱[伺服器訊息區塊概觀](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174)。<br /><br /> 支援向外延展檔案伺服器 (SoFS) 的持續可用性。|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2，包括 Server Core|3.2|支援以透明方式容錯移轉檔案共用，不需任何停機時間，而且系統管理員也不需要介入檔案伺服器叢集組態的 SQL DBA 或檔案伺服器管理員。<br /><br /> 利用 SMB Multichannel，支援同時使用多網路介面的 IO，並容忍網路介面失敗。<br /><br /> 利用 SMB Direct 支援具有 RDMA 功能的網路介面。<br /><br /> 如需這些功能和伺服器訊息區塊的詳細資訊，請參閱[伺服器訊息區塊概觀](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174)。<br /><br /> 支援向外延展檔案伺服器 (SoFS) 的持續可用性。<br /><br /> 最佳化對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP 的常用小型隨機讀取/寫入 I/O。<br /><br /> 預設會啟動最大傳輸單位 (MTU)，可大幅提高大型循序傳送的效能，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料倉儲及資料庫備份或還原。|  
+|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1，包括 Server Core|2.1|支援大型 MTU，有助於大型資料傳送，例如 SQL 備份和還原。 此功能必須由使用者啟用。 如需如何啟用此功能的詳細資料，請參閱 [SMB 的新功能](https://go.microsoft.com/fwlink/?LinkID=237319) (https://go.microsoft.com/fwlink/?LinkID=237319)。<br /><br /> 大幅改良效能，特別是針對 SQL OLTP 樣式工作負載方面。 這些效能改良需要套用 Hotfix。 如需 Hotfix 的詳細資訊，請參閱[本文](https://go.microsoft.com/fwlink/?LinkId=237320) (https://go.microsoft.com/fwlink/?LinkId=237320)。|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)]，包括 Server Core|3.0|支援以透明方式容錯移轉檔案共用，不需任何停機時間，而且系統管理員也不需要介入檔案伺服器叢集組態的 SQL DBA 或檔案伺服器管理員。<br /><br /> 支援同時使用多網路介面的 IO，並容忍網路介面失敗。<br /><br /> 支援具有 RDMA 功能的網路介面。<br /><br /> 如需這些功能和伺服器訊息區塊的詳細資訊，請參閱[伺服器訊息區塊概觀](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174)。<br /><br /> 支援向外延展檔案伺服器 (SoFS) 的持續可用性。|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2，包括 Server Core|3.2|支援以透明方式容錯移轉檔案共用，不需任何停機時間，而且系統管理員也不需要介入檔案伺服器叢集組態的 SQL DBA 或檔案伺服器管理員。<br /><br /> 利用 SMB Multichannel，支援同時使用多網路介面的 IO，並容忍網路介面失敗。<br /><br /> 利用 SMB Direct 支援具有 RDMA 功能的網路介面。<br /><br /> 如需這些功能和伺服器訊息區塊的詳細資訊，請參閱[伺服器訊息區塊概觀](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174)。<br /><br /> 支援向外延展檔案伺服器 (SoFS) 的持續可用性。<br /><br /> 最佳化對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP 的常用小型隨機讀取/寫入 I/O。<br /><br /> 預設會啟動最大傳輸單位 (MTU)，可大幅提高大型循序傳送的效能，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料倉儲及資料庫備份或還原。|  
   
 ## <a name="security-considerations"></a>安全性考量  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶應該擁有 SMB 共用資料夾的 FULL CONTROL 共用權限及 NTFS 權限。 如果使用 SMB 檔案伺服器， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶可以是網域帳戶或系統帳戶。 如需共用和 NTFS 權限的詳細資訊，請參閱[檔案伺服器的共用及 NTSF 權限](http://go.microsoft.com/fwlink/?LinkId=245535) (http://go.microsoft.com/fwlink/?LinkId=245535)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶應該擁有 SMB 共用資料夾的 FULL CONTROL 共用權限及 NTFS 權限。 如果使用 SMB 檔案伺服器， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶可以是網域帳戶或系統帳戶。 如需共用和 NTFS 權限的詳細資訊，請參閱[檔案伺服器的共用及 NTSF 權限](https://go.microsoft.com/fwlink/?LinkId=245535) (https://go.microsoft.com/fwlink/?LinkId=245535)。  
   
     > [!NOTE]  
     >  SMB 共用資料夾的 FULL CONTROL 共用權限及 NTFS 權限僅限於： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶以及具有管理伺服器角色的 Windows 使用者。  
@@ -110,15 +110,15 @@ ms.locfileid: "51018973"
   
 ## <a name="known-issues"></a>已知問題  
   
--   在您卸離位於連接網路之儲存裝置上的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫之後，當您嘗試重新附加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫時，可能會遇到資料庫權限問題。 [這篇知識庫文章](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321) 有此問題的定義。 若要暫時解決此問題，請參閱此知識庫文件中的＜ **其他相關資訊** ＞。  
+-   在您卸離位於連接網路之儲存裝置上的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫之後，當您嘗試重新附加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫時，可能會遇到資料庫權限問題。 [這篇知識庫文章](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321) 有此問題的定義。 若要暫時解決此問題，請參閱此知識庫文件中的＜ **其他相關資訊** ＞。  
   
 -   有些協力廠商 (像是 NetApp 裝置) 未支援所有 SQL Server API 呼叫。 進行這些動作，您可能會看到：   
-    2015-06-04 13:14:19.97 spid9s 錯誤： 17053，Severity: 16，狀態： 1。  
-    2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult()： 發生作業系統錯誤 1 （不正確函式。）。  
+    2015-06-04 13:14:19.97 spid9s 錯誤：17053，嚴重性：16，狀態：1.  
+    2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult():發生作業系統錯誤 1 （不正確函式。）。  
   
      若是 NTFS，此錯誤不會有影響；  但若是 ReFS，則可能導致效能大幅降低。  
   
--   如果 SMB 檔案共用當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 叢集執行個體的儲存選項使用，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集診斷記錄預設將無法寫入檔案共用，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源 DLL 缺少此檔案共用的讀取/寫入權限。 若要解決這個問題，請嘗試下列其中一個方法：  
+-   如果 SMB 檔案共用當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]叢集執行個體的儲存選項使用，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集診斷記錄預設將無法寫入檔案共用，因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源 DLL 缺少此檔案共用的讀取/寫入權限。 若要解決這個問題，請嘗試下列其中一個方法：  
   
     1.  授與檔案共用的讀取/寫入權限給叢集中的所有電腦物件。  
   

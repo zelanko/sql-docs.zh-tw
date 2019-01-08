@@ -1,5 +1,5 @@
 ---
-title: 使用 Python 使用 revoscalepy 建立模型，在 SQL Server |Microsoft Docs
+title: 使用 Python 使用 revoscalepy 建立模型-SQL Server Machine Learning
 description: 撰寫使用 revoscalepy 函數來建立資料科學模型，從遠端執行 SQL Server 中的 Python 指令碼。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f554badcba282bad7fb386daf8c4c0f4106804b4
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 18c5b801198946313e4f489902eb5f7c9ff0d7af
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100159"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596829"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>使用 Python 使用 revoscalepy 建立模型，是從遠端執行 SQL Server 上
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "50100159"
 使用 SQL Server 的執行個體作為計算內容執行所有作業。
 
 > [!NOTE]
-> 如需從命令列執行此範例的示範，請參閱這段影片： [SQL Server 2017 Advanced Analytics 使用 Python](https://www.youtube.com/watch?v=FcoY795jTcc)
+> 從命令列執行此範例的示範，請參閱這段影片：[SQL Server 2017 進階的 Analytics 使用 Python](https://www.youtube.com/watch?v=FcoY795jTcc)
 
 ### <a name="sample-code"></a>範例程式碼
 
@@ -130,7 +130,7 @@ def test_linmod_sql():
 
     將這些變數來傳遞[RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata)建構函式來實作**資料來源物件**名為`data_source`。
 
-+ 您建立**計算內容物件**利用[RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserverdata)建構函式。 產生**計算內容物件**名為`sql_cc`。
++ 您建立**計算內容物件**利用[RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver)建構函式。 產生**計算內容物件**名為`sql_cc`。
 
     此範例中重複使用您所使用的相同連接字串，在資料來源中，假設您將使用做為計算內容的相同 SQL Server 執行個體上的資料。 
     

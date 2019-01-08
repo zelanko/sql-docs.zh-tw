@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Virtual Memory Manager
@@ -22,12 +21,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e7b7fb74610afb89c0c493b6f2b3480377df7f8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199404"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376680"
 ---
 # <a name="server-memory-server-configuration-options"></a>伺服器記憶體伺服器組態選項
   您可以使用 [最小伺服器記憶體] 和 [最大伺服器記憶體] 這兩個伺服器記憶體選項，針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所使用的 SQL Server 處理序重新設定 SQL Server Memory Manager 所管理的記憶體數量 (以 MB 為單位)。  
@@ -35,7 +34,7 @@ ms.locfileid: "48199404"
  [最小伺服器記憶體] 的預設值是 0，而 [最大伺服器記憶體] 的預設值是 2147483647 MB。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以根據可用的系統資源，動態變更其記憶體需求。  
   
 > [!NOTE]  
->  將 [最大伺服器記憶體] 設定為最小值可能會大幅降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能，甚至讓伺服器無法啟動。 如果您變更此選項後無法啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請使用 **–f** 啟動選項啟動它，並將 [最大伺服器記憶體] 重設為先前的值。 如需詳細資訊，請參閱 [Database Engine Service Startup Options](database-engine-service-startup-options.md)。  
+>  將 [最大伺服器記憶體] 設定為最小值可能會大幅降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能，甚至讓伺服器無法啟動。 如果您變更此選項後無法啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請使用 **-f** 啟動選項啟動它，並將 [最大伺服器記憶體] 重設為先前的值。 如需詳細資訊，請參閱 [Database Engine Service Startup Options](database-engine-service-startup-options.md)。  
   
  當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 動態使用記憶體時，它會定期查詢系統以判定可用的記憶體量。 維持這個可用記憶體數量可避免作業系統 (OS) 進行分頁。 如果可用記憶體少於這個數量， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將記憶體釋出給 OS。 如果可用記憶體多於這個數量， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會配置更多記憶體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只有當工作負載需要更多的記憶體時，它才會增加記憶體。休息中的伺服器不會增加其虛擬位址空間的大小。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48199404"
 ## <a name="lock-pages-in-memory"></a>鎖定記憶體分頁  
  此 Windows 原則決定哪些帳戶可以使用處理序將資料保留在實體記憶體中，以防止系統將資料傳送到磁碟上的虛擬記憶體。 將記憶體分頁到磁碟時，鎖定記憶體分頁可能會讓伺服器保持回應狀態。 SQL Server**鎖定記憶體分頁**選項，會在 32 位元和 64 位元執行個體設定為 ON[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]標準版和更高版本的帳戶具有執行 sqlservr.exe 權限授與 Windows 中的 「 已鎖定頁面記憶體 (LPIM) 使用者權限。 在舊版 SQL Server 中，設定 32 位元 SQL Server 執行個體的 [鎖定分頁] 選項時，需要具有 sqlservr.exe 執行權限的帳戶具有 LPIM 使用者權限，而且 'awe_enabled' 組態選項設定為 ON。  
   
- 若要停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [鎖定記憶體中的分頁] 選項，請移除 SQL Server 啟動帳戶的 [Locked Pages in Memory (已鎖定記憶體中的分頁)] 使用者權限。  
+ 若要停用**鎖定記憶體中的分頁**選項[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，移除 「 鎖定記憶體中的分頁 」 使用者權限的 SQL Server 啟動帳戶。  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>停用鎖定記憶體中的分頁  
  **若要停用鎖定記憶體分頁選項：**  
@@ -135,9 +134,9 @@ ms.locfileid: "48199404"
 |-|-------------|-------------|  
 |傳統記憶體|在所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，處理虛擬位址空間的最大限制：<br /><br /> 2 GB<br /><br /> 3GB 含**3gb**開機參數 *<br /><br /> 在 WOW64 上的 4 GB\*\*|在所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，處理虛擬位址空間的最大限制：<br /><br /> 在 x64 架構上為 8 TB|  
   
- ***/3gb** 是作業系統開機參數。 如需詳細資訊，請瀏覽 [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
+ ***/3gb** 是作業系統開機參數。 如需詳細資訊，請瀏覽 [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
   
- * * WOW64 (Windows on Windows 64) 是 32 位元模式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]64 位元作業系統上執行。 如需詳細資訊，請瀏覽 [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
+ * * WOW64 (Windows on Windows 64) 是 32 位元模式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]64 位元作業系統上執行。 如需詳細資訊，請瀏覽 [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
   
 ## <a name="examples"></a>範例  
   

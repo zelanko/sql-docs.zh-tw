@@ -15,12 +15,12 @@ ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b2840a8c4f756ce26c5e915af6860929354bae3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58764334a6ee1902a09941e9fc9bb9723e517cdf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178458"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363840"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>排程資料重新整理 (PowerPivot for SharePoint)
   您可以排程資料重新整理，以取得已發行到 SharePoint 網站之 Excel 活頁簿內對 PowerPivot 資料的自動更新。  
@@ -148,16 +148,16 @@ ms.locfileid: "48178458"
   
  隨即顯示記錄頁面，以顯示在目前 Excel 活頁簿中為 PowerPivot 資料顯示所有重新整理活動的完整記錄，包含最近的資料重新整理作業狀態。  
   
- 在某些情況下，您可能會看到實際的處理時間，與您指定的時間並不同。 如果在伺服器上處理負載繁重，就會發生這樣的情況。 在繁重的負載下，[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 服務執行個體將會等到有足夠的系統資源釋放後，才開始進行資料重新整理。  
+ 在某些情況下，您可能會看到實際的處理時間，與您指定的時間並不同。 如果在伺服器上處理負載繁重，就會發生這樣的情況。 在繁重的負載下， [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 服務執行個體將會等到有足夠的系統資源釋放後，才開始進行資料重新整理。  
   
  在完成重新整理作業時必須簽入活頁簿。 活頁簿會在該時間隨重新整理的資料一起儲存。 如果檔案已簽出，則會略過資料重新整理，直到下一個排程時間為止。  
   
  如果您看到非預期的狀態訊息 (例如，重新整理作業失敗或已取消)，則可以檢查權限和伺服器可用性，來調查該問題。  
   
- 請檢閱 TechNet WIKI 上的 PowerPivot 資料重新整理疑難排解頁面，以取得解決資料重新整理問題的協助。 如需詳細資訊，請參閱 [PowerPivot 資料重新整理疑難排解](http://go.microsoft.com/fwlink/?LinkId=251594)。  
+ 請檢閱 TechNet WIKI 上的 PowerPivot 資料重新整理疑難排解頁面，以取得解決資料重新整理問題的協助。 如需詳細資訊，請參閱 [PowerPivot 資料重新整理疑難排解](https://go.microsoft.com/fwlink/?LinkId=251594)。  
   
 > [!NOTE]  
->  SharePoint 管理員可以透過在管理中心的 PowerPivot 管理儀表板中檢視合併的資料重新整理報表來協助您疑難排解資料重新整理問題。 如需詳細資訊，請參閱 < [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。  
+>  SharePoint 管理員可以透過在管理中心的 PowerPivot 管理儀表板中檢視合併的資料重新整理報表來協助您疑難排解資料重新整理問題。 如需詳細資訊，請參閱＜ [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [與 SharePoint 2010 的 PowerPivot 資料重新整理](powerpivot-data-refresh-with-sharepoint-2010.md)   

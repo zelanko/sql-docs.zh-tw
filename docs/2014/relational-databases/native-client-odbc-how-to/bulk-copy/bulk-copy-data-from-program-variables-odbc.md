@@ -13,19 +13,19 @@ ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5be9f005c7bbfbbd931b2947ce61cc91e1d9969b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3489e7a925ec09f84397ea27e5a749180999a9fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192869"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364420"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>從程式變數中大量複製資料 (ODBC)
   此範例會示範如何使用大量複製函數，透過 `bcp_bind` 和 `bcp_sendrow` 從程式變數大量複製資料到 SQL Server  (為了簡化這個範例會移除錯誤檢查程式碼)。  
   
  此範例是針對 ODBC 3.0 版或更新版本所開發。  
   
- **安全性注意事項**可能的話，請使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504) 加密這些認證。  
+ **安全性注意事項**可能的話，請使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 cryptoAPI](https://go.microsoft.com/fwlink/?LinkId=9504) 加密這些認證。  
   
 ### <a name="to-use-bulk-copy-functions-directly-on-program-variables"></a>若要直接針對程式變數使用大量複製函數  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48192869"
   
     -   要接收任何大量複製錯誤訊息的資料檔案名稱 (如果您不需要訊息檔案，請指定 NULL)。  
   
-    -   複製的方向：DB_IN (從應用程式到檢視表或資料表) 或 DB_OUT (從資料表或檢視表到應用程式)。  
+    -   複製的方向：從資料表或檢視應用程式從應用程式檢視或資料表或 DB_OUT DB_IN。  
   
 5.  呼叫[bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)行繫結至程式變數大量複製中的每一個資料行。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48192869"
 ## <a name="example"></a>範例  
  IA64 不支援此範例。  
   
- 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫  (您可以從 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案) 首頁下載 AdventureWorks 範例資料庫)。此資料來源必須以作業系統提供的 ODBC 驅動程式為基礎 (驅動程式名稱為 "SQL Server")。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
+ 您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫  (您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案) 首頁下載 AdventureWorks 範例資料庫)。此資料來源必須以作業系統提供的 ODBC 驅動程式為基礎 (驅動程式名稱為 "SQL Server")。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   

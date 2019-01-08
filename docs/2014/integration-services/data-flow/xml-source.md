@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsource.f1
@@ -17,12 +16,12 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3a2e2ff2fd28004d924f2b06a19b6bab3c52914
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e8d49827c9f533c75933a316ff3b655d3f13025
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155368"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353906"
 ---
 # <a name="xml-source"></a>XML 來源
   XML 來源會讀取 XML 資料檔案，並將資料填入來源輸出中的資料行。  
@@ -66,7 +65,7 @@ ms.locfileid: "48155368"
 ## <a name="configuration-of-the-xml-source"></a>設定 XML 來源  
  XML 來源支援三種不同的資料存取模式。 您可以指定 XML 資料檔案的檔案位置、包含檔案位置的變數，或包含 XML 資料的變數。  
   
- XML 來源包括`XMLData`和`XMLSchemaDefinition`載入封裝時可以更新由屬性運算式的自訂屬性。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../expressions/integration-services-ssis-expressions.md)、[在封裝中使用屬性運算式](../expressions/use-property-expressions-in-packages.md)和 [XML 來源自訂屬性](xml-source-custom-properties.md)。  
+ XML 來源包括 `XMLData` 和 `XMLSchemaDefinition` 自訂屬性；屬性運算式可以在載入封裝時更新這些屬性。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../expressions/integration-services-ssis-expressions.md)、[在封裝中使用屬性運算式](../expressions/use-property-expressions-in-packages.md)和 [XML 來源自訂屬性](xml-source-custom-properties.md)。  
   
  XML 來源支援多項規則輸出和多項錯誤輸出。  
   
@@ -96,6 +95,6 @@ ms.locfileid: "48155368"
  [使用 XML 來源擷取資料](xml-source.md)  
   
 ## <a name="related-content"></a>相關內容  
- curatedviews.cloudapp.net 上的 Curated Answer 文章： [為 SSIS 封裝建立 XML 目的地](http://go.microsoft.com/fwlink/?LinkId=321993)。  
+ curatedviews.cloudapp.net 上的 Curated Answer 文章：[為 SSIS 封裝建立 XML 目的地](https://go.microsoft.com/fwlink/?LinkId=321993)。  
   
   

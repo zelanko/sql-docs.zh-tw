@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87a5be3dc726b86b1710dd45416404cf3899f4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 243207c6175f5604e7cc887bd7c67085e2d86291
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595696"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507636"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -79,8 +79,8 @@ sp_describe_parameter_encryption
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|在結果集中的資料列的識別碼。|  
 |**parameter_name**|**sysname**|其中一個指定的參數名稱 *\@params*引數。|  
-|**column_encryption_algorithm**|**tinyint**|指出資料行，此參數設定的加密演算法的程式碼會對應至。 目前支援的值為： 2 **AEAD_AES_256_CBC_HMAC_SHA_256**。|  
-|**column_encryption_type**|**tinyint**|指出資料行，此參數設定的加密類型的程式碼會對應至。 支援的值為：<br /><br /> 0 – 純文字 （未加密的資料行）<br /><br /> 1 – 隨機化加密進行加密<br /><br /> 2 – 決定性加密。|  
+|**column_encryption_algorithm**|**tinyint**|指出資料行，此參數設定的加密演算法的程式碼會對應至。 目前支援的值為：2 **AEAD_AES_256_CBC_HMAC_SHA_256**。|  
+|**column_encryption_type**|**tinyint**|指出資料行，此參數設定的加密類型的程式碼會對應至。 支援的值為：<br /><br /> 0-純文字 （未加密的資料行）<br /><br /> 1-隨機化加密進行加密<br /><br /> 2-決定性加密。|  
 |**column_encryption_key_ordinal**|**int**|程式碼中的第一個結果的資料列的設定。 參考的資料列描述資料行設定資料行加密金鑰，將參數對應至。|  
 |**column_encryption_normalization_rule_version**|**tinyint**|型別正規化演算法的版本號碼。|  
   

@@ -1,5 +1,5 @@
 ---
-title: 預測可能的結果，使用 Python 模型 （SQL Server 機器學習服務） |Microsoft Docs
+title: 預測可能的結果，使用 Python 模型-SQL Server Machine Learning
 description: 教學課程示範如何實作內嵌的 PYthon 指令碼，在 SQL Server 預存程序的 T-SQL 函數
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3d1466fba7c659887578bf349a07968bfb580158
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9a75c25528003d0133cfd33c3eaddc20a8241692
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033675"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644767"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>執行預測使用內嵌在預存程序中的 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,8 +26,8 @@ ms.locfileid: "51033675"
 
 這一課會示範兩個方法，來建立 Python 模型為基礎的預測： 批次評分和評分的資料列。
 
-- **批次評分：** 提供多個輸入資料列，將選取的查詢做為引數傳遞至預存程序。 結果是對應至輸入案例的觀察值的資料表。
-- **個別評分：** 傳遞一組個別參數值作為輸入。  此預存程序會傳回單一資料列或值。
+- **批次評分：** 若要提供多個輸入資料列，傳遞做為引數的 SELECT 查詢，預存程序。 結果是對應至輸入案例的觀察值的資料表。
+- **個別評分：** 將一組個別參數值傳遞做為輸入。  此預存程序會傳回單一資料列或值。
 
 用於評分所需的所有 Python 程式碼都可做為預存程序的一部分。
 
@@ -48,7 +48,7 @@ Rrun 下列 T-SQL 陳述式來建立預存程序。 這個預存程序需要根�
 
 + 包含輸入資料框架會傳遞至`predict_proba`函式的羅吉斯迴歸模型， `mod`。 `predict_proba`函式 (`probArray = mod.predict_proba(X)`) 會傳回**float** ，表示要提供給小費 （任何金額） 的機率。
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSciKitPy;
 GO
 
@@ -92,7 +92,7 @@ GO
 
 這個預存程序會使用相同的輸入，並建立先前的預存程序中，相同類型的分數，但使用從函式**revoscalepy**與 SQL Server machine learning 提供的封裝。
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipRxPy;
 GO
 
@@ -142,7 +142,7 @@ GO
 
 1. 若要使用**scikit-learn-了解**模型進行評分，請呼叫預存程序**PredictTipSciKitPy**、 傳遞模型名稱和查詢字串做為輸入。
 
-    ```SQL
+    ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
       SET @query_string='
       select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
@@ -157,7 +157,7 @@ GO
 
 2. 若要使用**revoscalepy**模型進行評分，請呼叫預存程序**PredictTipRxPy**、 傳遞模型名稱和查詢字串做為輸入。
 
-    ```SQL
+    ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
       SET @query_string='
       select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
@@ -188,7 +188,7 @@ GO
 
 花點時間檢閱程式碼會執行評分使用預存程序**scikit-learn-了解**模型。
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeSciKitPy;
 GO
 
@@ -255,7 +255,7 @@ GO
 
 下列的預存程序可讓您執行使用的評分**revoscalepy**模型。
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeRxPy;
 GO
 
@@ -297,7 +297,7 @@ X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "dire
 probArray = rx_predict(mod, X)
 
 probList = []
-prob_list = prob_array["tipped_Pred"].values
+probList = probArray["tipped_Pred"].values
 
 # Create output data frame
 OutputDataSet = pandas.DataFrame(data = probList, columns = ["predictions"])
@@ -335,14 +335,14 @@ GO
 
 1. 若要使用來產生預測**revoscalepy**模型中，執行此陳述式：
   
-    ```SQL
+    ```sql
     EXEC [dbo].[PredictTipSingleModeRxPy] 'revoscalepy_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 2. 若要使用產生的分數**scikit-learn-了解**模型中，執行此陳述式：
 
-    ```SQL
-    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'ScitKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    ```sql
+    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'SciKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 這兩個程序的輸出是小費的使用指定的參數或功能在計程車車程所支付的機率。

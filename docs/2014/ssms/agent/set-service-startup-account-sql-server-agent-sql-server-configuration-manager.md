@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, service accounts
@@ -14,12 +14,12 @@ ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1652944f4bd352aba025e9eb204bb7db54d71815
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 26412fd6727049019b289fd0245e4ebf7f826dc1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141668"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375530"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務啟動帳戶會定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行的 Windows 帳戶以及它的網路權限。 此主題描述如何透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 組態管理員來設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Agent 服務帳戶。  
@@ -65,7 +65,7 @@ ms.locfileid: "48141668"
   
 2.  按一下加號展開 **[本機伺服器群組]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您要設定服務啟動帳戶的伺服器執行個體，並選取 [SQL Server 組態管理員]。  
+3.  以滑鼠右鍵按一下您要設定服務啟動帳戶的伺服器執行個體，並選取 [SQL Server 組態管理員...]。  
   
 4.  在 **[使用者帳戶控制]** 對話方塊中，按一下 **[是]**。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48141668"
   
 7.  在 [SQL Server Agent (<伺服器名稱>) 屬性] 對話方塊的 [登入] 索引標籤中，選取 [登入身分] 底下的下列其中一個選項：  
   
-    -   **內建帳戶**：如果您的作業僅需來自本機伺服器的資源，請選取此選項。 如需有關如何選擇 Windows 內建帳戶類型的詳細資訊，請參閱[選取 SQL Server Agent 服務的帳戶](http://msdn.microsoft.com/library/ms191543.aspx)。  
+    -   **內建帳戶**：如果您的作業僅需來自本機伺服器的資源，請選取此選項。 如需有關如何選擇 Windows 內建帳戶類型的詳細資訊，請參閱[選取 SQL Server Agent 服務的帳戶](https://msdn.microsoft.com/library/ms191543.aspx)。  
   
         > [!IMPORTANT]  
         >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務不支援 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [本機服務] 帳戶。  

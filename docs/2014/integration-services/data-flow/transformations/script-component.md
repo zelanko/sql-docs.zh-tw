@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponentdetails.f1
@@ -18,12 +17,12 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8907bc0df08010b49bdfcb2a7f4b77ea646fbcf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5db2b6e6467dec58f6a8aa6e6bfc9f105073fbfe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084618"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818019"
 ---
 # <a name="script-component"></a>指令碼元件
   指令碼元件可裝載指令碼，並讓封裝包含及執行自訂指令碼。 您可在封裝中使用指令碼元件以達到下列目的：  
@@ -91,13 +90,13 @@ ms.locfileid: "48084618"
 ### <a name="configuring-the-script-component-in-the-designer"></a>在設計工具中設定指令碼元件  
  如需有關可以在 **[指令碼轉換編輯器]** 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [指令碼轉換編輯器&#40;輸入資料行頁面&#41;](../../script-transformation-editor-input-columns-page.md)  
+-   [指令碼轉換編輯器 &#40;輸入資料行頁面&#41;](../../script-transformation-editor-input-columns-page.md)  
   
--   [指令碼轉換編輯器&#40;輸入及輸出頁面&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
+-   [指令碼轉換編輯器 &#40;輸入及輸出頁面&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
   
--   [指令碼轉換編輯器&#40;指令碼 頁面&#41;](../../script-transformation-editor-script-page.md)  
+-   [指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../script-transformation-editor-script-page.md)  
   
--   [指令碼轉換編輯器&#40;連線管理員頁面&#41;](../../script-transformation-editor-connection-managers-page.md)  
+-   [指令碼轉換編輯器 &#40;連線管理員頁面&#41;](../../script-transformation-editor-connection-managers-page.md)  
   
  如需有關如何在「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   

@@ -11,12 +11,12 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0d570104b705c55c926d3cf8e4c15af4111be29b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a68fb27df3c1a00ca5b4cf615963d7d9ce4bf2d3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094448"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357167"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
   本主題提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 概念的簡短摘要。  
@@ -58,7 +58,7 @@ ms.locfileid: "48094448"
  在 SharePoint 網站上，請使用 SharePoint 網站管理員頁面以管理報表及報表相關網站內容的存取權。  
   
  **排程**  
- 在原生報表伺服器上，您可以排程報表、共用資料集及訂閱，以便在特定時間或離峰時段擷取資料及傳遞報表與資料集查詢。 排程可以執行一次，或以小時、天、週或月為週期連續執行。 如需詳細資訊，請參閱 <<c0> [ 排程](subscriptions/schedules.md)。  
+ 在原生報表伺服器上，您可以排程報表、共用資料集及訂閱，以便在特定時間或離峰時段擷取資料及傳遞報表與資料集查詢。 排程可以執行一次，或以小時、天、週或月為週期連續執行。 如需詳細資訊，請參閱 [Schedules](subscriptions/schedules.md)。  
   
  **訂閱與傳遞**  
  訂閱是要在特定時間或回應事件時傳遞報表的永久性要求，並採用您在訂閱中指定的應用程式檔案格式。 訂閱會提供視需要執行報表的替代方案。 視需要報表會要求您在每次檢視報表時，主動選取報表。 反之，訂閱可用於排程然後自動傳遞報表。 您可以將報表傳遞至電子郵件收件匣或檔案共用。 如需詳細資訊，請參閱[訂閱與傳遞 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)。  
@@ -67,7 +67,7 @@ ms.locfileid: "48094448"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供可用以自訂報表方案的可延伸架構。 報表伺服器支援自訂驗證延伸模組、資料處理延伸模組、報表處理延伸模組、轉譯延伸模組和傳遞延伸模組，以及在 RSReportServer.config 組態檔中適用於使用者的可設定延伸模組。 例如，您可以限制報表檢視器允許使用的匯出格式。 傳遞與報表處理延伸模組是選擇性的，但是您若要支援報表散發或自訂控制項，則是必要的。 如需詳細資訊，請參閱[延伸模組 &#40;SSRS&#41;](extensions-ssrs.md)。  
   
  **報表存取**  
- 視需要存取可讓使用者從報表檢視工具選取報表。 根據報表伺服器組態，您可以使用報表管理員中， [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web 組件、 SharePoint 文件庫時[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]會安裝在 SharePoint 整合的模式、 內嵌的 ReportViewer 控制項或使用 URL 的瀏覽器存取權。 如需視需要存取報表的詳細資訊，請參閱[尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
+ 視需要存取可讓使用者從報表檢視工具選取報表。 根據報表伺服器組態，您可以使用報表管理員 ( [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web 組件)、SharePoint 文件庫 (以 SharePoint 整合模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時)、內嵌的 ReportViewer 控制項，或是使用 URL 存取的瀏覽器。 如需視需要存取報表的詳細資訊，請參閱[尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
   
  訂閱會提供視需要執行報表的替代方案。 如需詳細資訊，請參閱[訂閱與傳遞 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48094448"
  **報表與報表定義**  
  **RDL。** 報表定義符合 XML 文法 (稱為報表定義語言 (RDL)) 的 XML 檔案。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，您可以使用報表產生器或報表設計師這類工具以建立報表定義。 它所含的元素可定義資料來源連接、用以擷取資料的查詢、運算式、參數、影像、文字方塊、資料表以及任何其他設計階段配置。 如需詳細資訊，請參閱[報表定義語言 &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)。  
   
- **RDLX。** RDLX 中的報表定義是一種 RDL 檔案，具有內部延伸模組可啟用 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 視覺效果經驗。 如需詳細資訊，請參閱 [Power View 概觀](http://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx)(英文)。  
+ **RDLX。** RDLX 中的報表定義是一種 RDL 檔案，具有內部延伸模組可啟用 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 視覺效果經驗。 如需詳細資訊，請參閱 [Power View 概觀](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx)(英文)。  
   
  **RDLC。** Visual Studio 報表設計師會產生 XML 格式的用戶端報表定義 (.rdlc) 檔案，以與 ReportViewer 控制項搭配使用。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "48094448"
   
 -   **清單。** 「清單」(List) 是呈現依自由形式來安排之資料的資料區域。 您可以安排報表項目來建立一份表單，將文字方塊、影像和其他資料區域放在清單內的任何位置。 如需詳細資訊，請參閱 <<c0> [ 列出&#40;報表產生器及 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。</c0>  
   
--   **圖表。** 圖表會以圖形方式來呈現資料。 橫條圖、圓形圖和折線圖都是圖表的範例，但另外還有許多其他支援的樣式。 如需詳細資訊，請參閱[圖表 &#40;報表產生器及 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)。  
+-   **圖表。** 圖表會以圖形方式來呈現資料。 橫條圖、圓形圖和折線圖都是圖表的範例，但另外還有許多其他支援的樣式。 如需詳細資訊，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)。  
   
 -   **量測計。** 量測計會將資料呈現成範圍，其中包含指向範圍內特定值的指標。 量測計是用來顯示關鍵效能指標 (KPI) 和其他標準。 量測計的範例包括線性和循環。 如需詳細資訊，請參閱 [量測計 &#40;報表產生器及 SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md)。  
   
@@ -219,7 +219,7 @@ ms.locfileid: "48094448"
  匯出的報表是以特定檔案格式儲存的完整分頁報表。 匯出格式取決於已安裝的轉譯延伸模組，而且可以進行自訂。 匯出格式預設會包含 Excel、Word、XML、PDF、TIFF 及 CSV。 如需詳細資訊，請參閱 <<c0> [ 匯出的報表&#40;報表產生器及 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 功能及工作&#40;SSRS&#41;](reporting-services-features-and-tasks-ssrs.md)   
+ [Reporting Services 功能及工作 &#40;SSRS&#41;](reporting-services-features-and-tasks-ssrs.md)   
  [技術參考 &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

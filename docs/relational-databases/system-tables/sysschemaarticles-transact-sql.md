@@ -5,8 +5,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysschemaarticles_TSQL
@@ -19,12 +18,12 @@ ms.assetid: 67a1c039-c283-4a9c-bacc-b9b3973590c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 37d064411927a112a50e9ff64a9e8a6dedefb3e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 39444e0eaf9a44f48fc86b5d7f4595d63d1e9823
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765406"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822702"
 ---
 # <a name="sysschemaarticles-transact-sql"></a>sysschemaarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

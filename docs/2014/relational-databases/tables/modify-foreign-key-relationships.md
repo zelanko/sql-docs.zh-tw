@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65538
@@ -17,15 +16,15 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a07b83aa6c7556cc8404dab6ff5e26e75800e340
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50e6886e9ef69842432a0759095f11335cfbb494
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130628"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797660"
 ---
 # <a name="modify-foreign-key-relationships"></a>修改外部索引鍵關聯性
-  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改關聯性的外部索引鍵端。 修改資料表的外部索引鍵，會變更與主索引鍵資料表中之資料行相關的資料行。  
+  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改關聯性的外部索引鍵端。 修改資料表的外部索引鍵，會變更與主索引鍵資料表中資料行相關的資料行。  
   
  **本主題內容**  
   
@@ -83,7 +82,7 @@ ms.locfileid: "48130628"
      在建立或重新啟用條件約束之前，依照條件約束驗證資料表中所有現有的資料。  
   
      **資料表及資料行規格分類**  
-     展開以顯示哪些資料表的哪些資料行，在關聯性中做為外部索引鍵和主要 (或唯一) 索引鍵。 若要編輯或定義這些值，請按一下屬性欄位右邊的省略符號按鈕 (**…**)。  
+     展開以顯示哪些資料表的哪些資料行，在關聯性中做為外部索引鍵和主要 (或唯一) 索引鍵。 若要編輯或定義這些值，請按一下屬性欄位右邊的省略符號按鈕 (**...**)。  
   
      **外部索引鍵基底資料表**  
      顯示所選取的關聯性中，哪些資料表包含有做為外部索引鍵的資料行。  

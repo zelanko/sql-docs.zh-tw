@@ -13,15 +13,15 @@ ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a3a4cea6424f8bfb89207050719ec0db554fdd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 118a828a35aaee1ded4e91f3e5ded53ef6135a6a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130278"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355347"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml 資料類型的 FOR XML 支援
-  如果 FOR XML 查詢指定的資料行`xml`類型在 SELECT 子句中，資料行值都會對應為傳回的 XML，無論您是否指定 ELEMENTS 指示詞中的項目。 `xml` 類型資料行中的任何 XML 宣告都沒有序列化。  
+  如果 FOR XML 查詢在 SELECT 子句中指定 `xml` 類型的資料行，無論您是否指定 ELEMENTS 指示詞，資料行值都會對應為傳回的 XML 中之元素。 `xml` 類型資料行中的任何 XML 宣告都沒有序列化。  
   
  例如，下列查詢會擷取客戶連絡資訊這類`BusinessEntityID`， `FirstName`，並`LastName`資料行，以及電話號碼從`AdditionalContactInfo`資料行`xml`型別。  
   
@@ -29,18 +29,18 @@ ms.locfileid: "48130278"
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
  //act:telephoneNumber/act:number  
 ') AS PhoneNumber  
 FROM Person.Person  
 WHERE AdditionalContactInfo.query('  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
  //act:telephoneNumber/act:number  
 ')IS NOT NULL  
 FOR XML AUTO, TYPE;  
 ```  
   
- 因為查詢並未指定 ELEMENTS 指示詞，資料行的值會傳回做為屬性，從擷取的其他連絡資訊值以外`xml`類型資料行。 這些是以元素傳回。  
+ 因為查詢並未指定 ELEMENTS 指示詞，除了從 `xml` 類型資料行擷取的其他連絡資訊值以外，資料行值都是以屬性傳回。 這些是以元素傳回。  
   
  以下是部份結果：  
   
@@ -48,9 +48,9 @@ FOR XML AUTO, TYPE;
   
  `<PhoneNumber>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1112</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1112</act:number>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1111</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1111</act:number>`  
   
  `</PhoneNumber>`  
   
@@ -60,9 +60,9 @@ FOR XML AUTO, TYPE;
   
  `<PhoneNumber>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-2222</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-2222</act:number>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-1234</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-1234</act:number>`  
   
  `</PhoneNumber>`  
   
@@ -75,12 +75,12 @@ FOR XML AUTO, TYPE;
   
 ```  
 SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
  //act:telephoneNumber/act:number  
 ') AS PhoneNumber  
 FROM Person.Person  
 WHERE AdditionalContactInfo.query('  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
  //act:telephoneNumber/act:number  
 ')IS NOT NULL  
 FOR XML AUTO, TYPE;  
@@ -92,9 +92,9 @@ FOR XML AUTO, TYPE;
   
  `<MorePhoneNumbers>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1112</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1112</act:number>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1111</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">425-555-1111</act:number>`  
   
  `</MorePhoneNumbers>`  
   
@@ -104,9 +104,9 @@ FOR XML AUTO, TYPE;
   
  `<MorePhoneNumbers>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-2222</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-2222</act:number>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-1234</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">206-555-1234</act:number>`  
   
  `</MorePhoneNumbers>`  
   
@@ -117,7 +117,7 @@ FOR XML AUTO, TYPE;
   
  如果您在查詢中指定 ELEMENTS 指示詞，則產生的 XML 中會將 BusinessEntityID、LastName 和 FirstName 以元素傳回。  
   
- 下列範例說明 FOR XML 處理邏輯不會從 XML 資料中的任何 XML 宣告序列化`xml`類型資料行：  
+ 下列範例說明 FOR XML 處理邏輯並不會從 `xml` 類型資料行，序列化 XML 資料中的任何 XML 宣告：  
   
 ```  
 create table t(i int, x xml)  
@@ -146,9 +146,9 @@ for xml auto;
   
 -   具有單一 `xml` 類型資料行的資料表  
   
--   執行個體`xml`類型  
+-   `xml` 類型的執行個體  
   
- 例如，下列使用者定義函式會傳回具有單一資料行的資料表`xm`l 型別：  
+ 例如，下列使用者定義函數會傳回具有單一 `xm`l 類型資料行的資料表：  
   
 ```  
 USE AdventureWorks2012;  
@@ -170,7 +170,7 @@ declare namespace PD="http://www.adventure-works.com/schemas/products/descriptio
 END;  
 ```  
   
- 您可以執行使用者定義函數，並查詢它所傳回的資料表。 在此範例中，透過查詢資料表而傳回的 XML 指派給`xml`類型變數。  
+ 您可以執行使用者定義函數，並查詢它所傳回的資料表。 在此範例中，會將透過查詢資料表而傳回的 XML 指派給 `xml` 類型的變數。  
   
 ```  
 declare @x xml;  

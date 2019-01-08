@@ -20,17 +20,17 @@ author: ''
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adf5cc81979d8efe9426c082464cb7d7bba52c14
-ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
+ms.openlocfilehash: 37c334f5c5107b2716601916517e888d90164226
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50150199"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732075"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-在資料庫中傳回頁面的相關資訊。  此函數會傳回一個資料列包含標頭資訊 頁面上，從包括`object_id`， `index_id`，和`partition_id`。  此函數會取代需要使用`DBCC PAGE`在大部分情況下。
+在資料庫中傳回頁面的相關資訊。  此函數會傳回一個資料列包含標頭資訊 頁面上，從包括`object_id`， `index_id`，和`partition_id`。  在大部分情況下，有此函式就不需要使用 `DBCC PAGE`。
 
 ## <a name="syntax"></a>語法  
   
@@ -118,7 +118,7 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 `sys.dm_db_page_info` 可用的位置`DBCC PAGE`陳述式，在許多情況下，但它只傳回頁面標頭資訊，頁面的主體。 `DBCC PAGE` 將仍需要其中頁面的整個內容所需的使用案例。
 
 ## <a name="using-in-conjunction-with-other-dmvs"></a>搭配使用與其他 Dmv
-其中一個重要使用案例`sys.dm_db_page_info`是將它與其他公開頁面資訊的 Dmv 聯結。  若要加速此使用案例中，新的資料行稱為`page_resource`已公開為 8 個位元組的十六進位格式中的頁面資訊。 此資料行已新增至`sys.dm_exec_processes`和`sys.sysprocesses`，並將會加入未來所需的其他 Dmv。
+其中一個重要使用案例`sys.dm_db_page_info`是將它與其他公開頁面資訊的 Dmv 聯結。  若要加速此使用案例中，新的資料行稱為`page_resource`已公開為 8 個位元組的十六進位格式中的頁面資訊。 此資料行已新增至`sys.dm_exec_requests`和`sys.sysprocesses`，並將會加入未來所需的其他 Dmv。
 
 新的函數`sys.fn_PageResCracker`，接受`page_resource`做為輸入和輸出，其中包含單一資料列`database_id`，`file_id`和`page_id`。  此函式可以再用來協助之間的聯結`sys.dm_exec_requests`或是`sys.sysprocesses`和`sys.dm_db_page_info`。
 

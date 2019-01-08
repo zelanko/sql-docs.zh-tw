@@ -23,12 +23,12 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a37b10e3df4bad15aa2d9fdcb23157cd8a1456a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db71e2ca03cbefdccf0bdf879fdb43d775125064
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192850"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362170"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>建立 SQL Server Native Client ODBC 驅動程式應用程式
   ODBC 架構包含四個執行下列函數的元件。  
@@ -107,7 +107,7 @@ LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files
 INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Include;  
 ```  
   
- 先前在建立應用程式的過程中所做的其中一個設計決策為：應用程式是否需要同時讓多個 ODBC 呼叫未完成。 有兩種方法可以支援同時呼叫多個 ODBC，本節其他主題將會有完整說明。 如需詳細資訊，請參閱 < [ODBC 程式設計人員參考](http://go.microsoft.com/fwlink/?LinkId=45250)。  
+ 先前在建立應用程式的過程中所做的其中一個設計決策為：應用程式是否需要同時讓多個 ODBC 呼叫未完成。 有兩種方法可以支援同時呼叫多個 ODBC，本節其他主題將會有完整說明。 如需詳細資訊，請參閱 < [ODBC 程式設計人員參考](https://go.microsoft.com/fwlink/?LinkId=45250)。  
   
 ## <a name="in-this-section"></a>本節內容  
   

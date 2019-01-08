@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - PropertyStrVal Property (ServerNetworkProtocolProperty Class)
@@ -20,12 +18,12 @@ ms.assetid: 7df3cf21-15b7-4813-93e7-c2bae1209f5a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5e7b9025ac08152c1bde23a54c863930d2258258
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51174d44a8a2f8a536ff35525a27810185c13a4d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081715"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372510"
 ---
 # <a name="propertystrval-property-servernetworkprotocolproperty-class"></a>PropertyStrVal 屬性 (ServerNetworkProtocolProperty 類別)
   取得參考之屬性的字串值。  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [設定伺服器網路通訊協定和網路程式庫](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [設定伺服器網路通訊協定和網路程式庫](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

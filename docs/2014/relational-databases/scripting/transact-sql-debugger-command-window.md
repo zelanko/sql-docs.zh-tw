@@ -7,23 +7,21 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.CommandWindow
 helpviewer_keywords:
 - Command Window [Transact-SQL]
 ms.assetid: e567ebf9-0793-451b-92c7-26193a02d9da
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5744d7e5ec687a2942843ccf6c249149c9fe451
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 481ed4b4c1667017a5677ee734cff153128eff32
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109118"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369680"
 ---
 # <a name="command-window"></a>命令視窗
-  使用 [命令] 視窗可針對目前所偵錯之 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [查詢編輯器] 視窗內的程式碼執行命令，例如偵錯和編輯命令。 您必須在偵錯模式中，才能使用 [命令] 視窗。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具會支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [命令] 視窗內也支援的許多命令。 如需詳細資訊，請參閱 [Visual Studio 命令視窗](http://go.microsoft.com/fwlink/?LinkId=112007)。  
+  使用 [命令] 視窗可針對目前所偵錯之 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [查詢編輯器] 視窗內的程式碼執行命令，例如偵錯和編輯命令。 您必須在偵錯模式中，才能使用 [命令] 視窗。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具會支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [命令] 視窗內也支援的許多命令。 如需詳細資訊，請參閱 [Visual Studio 命令視窗](https://go.microsoft.com/fwlink/?LinkId=112007)。  
   
 ## <a name="task-list"></a>工作清單  
  **存取命令視窗**  
@@ -44,5 +42,3 @@ ms.locfileid: "48109118"
   
 ## <a name="see-also"></a>另請參閱  
  [Transact-SQL 偵錯工具](transact-sql-debugger.md)  
-  
-  

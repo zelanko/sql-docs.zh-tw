@@ -10,12 +10,12 @@ ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 396f26f617ec64aa1d2c46f4c4b600a824a2f278
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018933"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354947"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>使用 SysPrep 安裝 SQL Server 的考量
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 可讓您在電腦上準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的獨立執行個體，並於稍後完成設定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 需要使用包含兩個步驟的程序來取得已設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]獨立執行個體。 這些步驟包含以下內容：  
@@ -39,7 +39,7 @@ ms.locfileid: "51018933"
   
 -   當結合 Windows 系統準備工具 (也稱為 Windows SysPrep) 時，您可以建立作業系統的映像，包括來源電腦上未設定的已備妥 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 然後，您可以將作業系統映像部署到多部電腦上。 當您完成作業系統的組態之後，可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的「完成映像」步驟來設定備妥的執行個體。  
   
-     Windows SysPrep 工具可用來準備 Windows 作業系統映像， 其目的是為了擷取作業系統的自訂映像，以供整個組織部署。 如需有關 SysPrep 及其用途的詳細資訊，請參閱＜ [什麼是 Sysprep？](http://go.microsoft.com/fwlink/?LinkId=143546)＞。  
+     Windows SysPrep 工具可用來準備 Windows 作業系統映像， 其目的是為了擷取作業系統的自訂映像，以供整個組織部署。 如需有關 SysPrep 及其用途的詳細資訊，請參閱＜ [什麼是 Sysprep？](https://go.microsoft.com/fwlink/?LinkId=143546)＞。  
   
 ## <a name="installation-media-considerations"></a>安裝媒體考量  
  如果您使用完整版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請考量以下事項：  

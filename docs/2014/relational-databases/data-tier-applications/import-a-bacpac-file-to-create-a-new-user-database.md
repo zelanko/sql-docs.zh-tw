@@ -26,15 +26,15 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b5e644e2e255e23cc00d71f4434a4d0f9b861985
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a5b13d9d2095df5d464b7102e1527c21c36c4f5c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810274"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376180"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>匯入 BACPAC 檔案以建立新的使用者資料庫
-  匯入資料層應用程式 (DAC) 檔案 (.bacpac 檔案)，可在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上，建立原始資料庫連同其資的複本，或將該檔案匯入 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 匯出-匯入作業可以進行合併以在執行個體之間移轉 DAC 或資料庫，或建立邏輯備份 (例如建立 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中所部署資料庫的內部部署複本)。  
+  匯入資料層應用程式 (DAC) 檔案 (.bacpac 檔案)，可在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上，建立原始資料庫連同其資料的複本，或將該檔案匯入 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 匯出-匯入作業可以進行合併以在執行個體之間移轉 DAC 或資料庫，或建立邏輯備份 (例如建立 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中所部署資料庫的內部部署複本)。  
   
 ## <a name="before-you-begin"></a>開始之前  
  匯入程序會使用兩個階段來建立新的 DAC。  
@@ -43,7 +43,7 @@ ms.locfileid: "43810274"
   
 2.  匯入會從匯出檔案大量複製資料。  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Labs 中有範例應用程式可用來測試 DAC 和資料庫的匯出與匯入。 如需有關如何下載和使用範例的指示，請參閱 [Windows Azure SQL 資料庫的資料庫匯入和匯出](http://go.microsoft.com/fwlink/?LinkId=219404)。  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Labs 中有範例應用程式可用來測試 DAC 和資料庫的匯出與匯入。 如需有關如何下載和使用範例的指示，請參閱 [Windows Azure SQL 資料庫的資料庫匯入和匯出](https://go.microsoft.com/fwlink/?LinkId=219404)。  
   
 ## <a name="sql-server-utility"></a>SQL Server 公用程式  
  如果您將 DAC 匯入至 Database Engine 的受管理執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，匯入的 DAC 就會合併至 SQL Server 公用程式。 然後 DAC 會出現在  [公用程式總管] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[部署的資料層應用程式]** 節點中，並在  詳細資料頁面中報告。  
@@ -91,18 +91,18 @@ ms.locfileid: "43810274"
   
  **選項**  
   
--   **不要再顯示此頁面。** - 按一下此核取方塊可不再顯示 [簡介] 頁面。  
+-   **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示 [簡介] 頁面。  
   
--   **下一步** - 繼續進行 **[匯入設定]** 頁面。  
+-   **下一步** - 繼續進行 [匯入設定] 頁面。  
   
 -   **取消** - 取消作業並關閉精靈。  
   
 ###  <a name="Import_settings"></a> 匯入設定頁面  
  您可以使用此頁面來指定要匯入之 .bacpac 檔案的位置。  
   
--   **從本機磁碟匯入** - 按一下 [瀏覽] **[瀏覽]** 瀏覽本機電腦，或在提供的空間中指定路徑。 路徑名稱必須包含檔案名稱和 .bacpac 副檔名。  
+-   **從本機磁碟匯入** - 按一下 [瀏覽...] 巡覽本機電腦，或在提供的空間中指定路徑。 路徑名稱必須包含檔案名稱和 .bacpac 副檔名。  
   
--   **從 Windows Azure 匯入** - 從 Windows Azure 容器匯入 BACPAC 檔案。 您必須連接到 Windows Azure 容器，才能驗證此選項。 請注意，此選項也會要求您指定暫存檔的本機目錄。 暫存檔將建立在指定的位置，而且作業完成之後，將保留在該位置。  
+-   **從 Windows Azure 匯入**-從 Windows Azure 容器匯入 BACPAC 檔案。 您必須連接到 Windows Azure 容器，才能驗證此選項。 請注意，此選項也會要求您指定暫存檔的本機目錄。 暫存檔將建立在指定的位置，而且作業完成之後，將保留在該位置。  
   
      瀏覽 Windows Azure 時，您可以在單一帳戶中的容器之間切換。 您必須指定單一 .bacpac 檔案，才能繼續進行匯入作業。 請注意，您可以依照 **[名稱]**、 **[大小]** 或 **[修改日期]** 排序資料行。  
   
@@ -115,9 +115,9 @@ ms.locfileid: "43810274"
   
 -   **新資料庫名稱** - 針對匯入的資料庫提供名稱。  
   
--   **資料檔路徑** - 提供資料檔的本機目錄。 按一下 **[瀏覽]** 瀏覽本機電腦，或在提供的空間中指定路徑。  
+-   **資料檔案路徑** - 提供資料檔案的本機目錄。 按一下 [瀏覽...] 巡覽本機電腦，或在提供的空間中指定路徑。  
   
--   **記錄檔路徑** - 提供記錄檔的本機目錄。 按一下 **[瀏覽]** 瀏覽本機電腦，或在提供的空間中指定路徑。  
+-   **記錄檔路徑** - 提供記錄檔的本機目錄。 按一下 [瀏覽...] 巡覽本機電腦，或在提供的空間中指定路徑。  
   
  若要繼續進行，請按 **[下一步]**。  
   
@@ -125,9 +125,9 @@ ms.locfileid: "43810274"
   
 -   **新資料庫名稱** - 針對匯入的資料庫提供名稱。  
   
--   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 版本** – 指定 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web。 如需有關 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]版本的詳細資訊，請參閱這個 [SQL 資料庫](http://www.windowsazure.com/home/tour/database/) 網站。  
+-   **版本[!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  -指定[!INCLUDE[ssSDS](../../includes/sssds-md.md)]商務或[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Web。 如需有關 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]版本的詳細資訊，請參閱這個 [SQL 資料庫](http://www.windowsazure.com/home/tour/database/) 網站。  
   
--   **最大資料庫大小 (GB)** - 使用下拉式功能表來指定資料庫的大小上限。  
+-   **最大資料庫大小 (GB)** -使用下拉式功能表來指定資料庫的大小上限。  
   
  若要繼續進行，請按 **[下一步]**。  
   

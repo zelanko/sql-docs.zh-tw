@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_publication_validation
@@ -17,12 +16,12 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f90e172030193cf3ae1209829aa58512cf56fd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8612b3713113435461ca59845710b9f7284f1a78
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608676"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591402"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [**@publication=**] **' * * * 發行集 '*  
+ [**@publication=**] **'**_發行集 '_  
  這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
  [**@rowcount_only=**] *rowcount_only*  
@@ -51,9 +50,9 @@ sp_publication_validation [ @publication = ] 'publication'
   
 |值|描述|  
 |-----------|-----------------|  
-|**0**|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 相容總和檢查碼。<br /><br /> 注意： 當水平篩選發行項時，資料列計數作業，而非總和檢查碼作業。|  
+|**0**|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 相容總和檢查碼。<br /><br /> 注意：當水平篩選發行項時，會執行資料列計數作業，而不是總和檢查碼作業。|  
 |**1** (預設值)|只執行資料列計數檢查。|  
-|**2**|執行資料列計數及二進位總和檢查碼。<br /><br /> 注意： 針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行 7.0 版訂閱者，只有資料列計數驗證。|  
+|**2**|執行資料列計數及二進位總和檢查碼。<br /><br /> 注意：如果是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版訂閱者，就只會執行資料列計數驗證。|  
   
  [**@full_or_fast=**] *full_or_fast*  
  這是用於計算資料列計數的方法。 *full_or_fast*已**tinyint**而且可以是下列值之一。  
@@ -67,8 +66,8 @@ sp_publication_validation [ @publication = ] 'publication'
  [  **@shutdown_agent=**] *shutdown_agent*  
  這是指在驗證完成時，是否應該立即關閉散發代理程式。 *shutdown_agent*已**位元**，預設值是**0**。 如果**0**，複寫代理程式不會關機。 如果**1**，複寫代理程式會在驗證最後一個發行項之後關閉。  
   
- [ **@publisher** = ] **'***publisher***'**  
- 指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *發行者*已**sysname**，預設值是 NULL。  
+ [ **@publisher** =] **'**_發行者_**'**  
+ 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  *發行者*應該不在要求上進行驗證時才使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  

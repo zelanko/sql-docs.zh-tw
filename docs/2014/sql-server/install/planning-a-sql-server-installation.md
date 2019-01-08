@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, planning
@@ -13,12 +12,12 @@ ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2bf9656564422d76e8d18795fc72e48856eca7e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161628"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367903"
 ---
 # <a name="planning-a-sql-server-installation"></a>規劃 SQL Server 安裝
   若要安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請遵循以下步驟：  
@@ -31,7 +30,7 @@ ms.locfileid: "48161628"
   
  除非軟體的使用方式受到個別的合約 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 大量授權合約或與 ISV 或 OEM 簽訂的協力廠商合約) 所管制，否則不論安裝方法為何，您都必須確認以個人身分或代表實體接受軟體授權條款。  
   
- 這些授權條款會顯示在安裝程式使用者介面中，供您檢閱和接受。 自動安裝 (使用 /Q 或 /QS 參數) 必須包括 /IAcceptSQLServerLicenseTerms 參數。 您可以另外在 [Microsoft 軟體授權合約](http://go.microsoft.com/fwlink/?LinkID=148209)檢閱授權條款。  
+ 這些授權條款會顯示在安裝程式使用者介面中，供您檢閱和接受。 自動安裝 (使用 /Q 或 /QS 參數) 必須包括 /IAcceptSQLServerLicenseTerms 參數。 您可以另外在 [Microsoft 軟體授權合約](https://go.microsoft.com/fwlink/?LinkID=148209)檢閱授權條款。  
   
 > [!NOTE]  
 >  根據您收到本軟體的方式 (例如，透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 大量授權)，軟體的使用方式可能會受到其他條款與條件的限制。  

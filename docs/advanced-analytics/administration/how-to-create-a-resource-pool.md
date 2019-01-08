@@ -1,5 +1,6 @@
 ---
-title: 如何為 SQL Server Machine Learning 中建立資源集區 |Microsoft Docs
+title: 如何建立資源集區對 R 和 Python-SQL Server Machine Learning 服務
+description: 定義 R 或 Python 處理程序的 SQL Server 資源集區上的 SQL Server 2016 或 SQL Server 2017 資料庫引擎執行個體。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 12b21a37e66351cb84b6de246f3b398a1d20bfd3
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: c0fcc673e61f2ee188b169a2d46f1da6a4ffd2df
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100556"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596859"
 ---
 # <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>如何在 SQL Server 中建立機器學習服務的資源集區
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,8 +27,6 @@ ms.locfileid: "49100556"
 3.  建立新的資源集區外部處理序。
 4.  建立分類函數來識別要求的外部指令碼。
 5.  確認新的外部資源集區正在擷取 R 或 Python 的工作，從指定的用戶端或帳戶。
-
-**適用對象**：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 和 [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ##  <a name="bkmk_ReviewStatus"></a> 檢閱現有資源集區的狀態
   
