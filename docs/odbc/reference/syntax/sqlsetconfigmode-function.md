@@ -20,16 +20,16 @@ ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d520a84d45e3552f5e260778b5cacf2ac91f05a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a10ec8f8fa6ef2b0e310680f58252f98628ff045
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654376"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215607"
 ---
 # <a name="sqlsetconfigmode-function"></a>SQLSetConfigMode 函式
 **合規性**  
- 版本導入： ODBC 3.0  
+ 導入的版本：ODBC 3.0  
   
  **摘要**  
  **SQLSetConfigMode**設定指出列出資料來源名稱值的 Odbc.ini 項目中的系統資訊的組態模式。  
@@ -39,7 +39,7 @@ ms.locfileid: "47654376"
 ```  
   
 BOOL SQLSetConfigMode(  
-     UWORD     wConfigMode);  
+     UWORD     wConfigMode);  
 ```  
   
 ## <a name="arguments"></a>引數  

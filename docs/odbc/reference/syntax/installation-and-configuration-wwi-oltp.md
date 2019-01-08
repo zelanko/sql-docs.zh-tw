@@ -13,16 +13,16 @@ ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b886bdf5ce769201addacfdfe9e2f22c6e8a15d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c344315764eac32e2e63663f07b7f797571a0e6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706006"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204687"
 ---
 # <a name="sqlsetdriverconnectinfo-function"></a>SQLSetDriverConnectInfo 函式
 **合規性**  
- 版本導入： ODBC 3.81 標準相容性： ODBC  
+ 導入的版本：ODBC 3.81 標準合規性：ODBC  
   
  **摘要**  
  **SQLSetDriverConnectInfo**用來設定連接字串至應用程式的連線資訊語彙基元**SQLDriverConnect**呼叫。  

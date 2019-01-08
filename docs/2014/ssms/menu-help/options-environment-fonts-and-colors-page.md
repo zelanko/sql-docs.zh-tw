@@ -1,23 +1,23 @@
 ---
-title: 選項 (環境： 字型和色彩頁面) |Microsoft Docs
+title: 選項 (環境：字型和色彩頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2a73bd30ab72cc293f8cbd0dcebc2b123d6538e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 40bd2c5735b68a165bcdff4a26069505994dbd85
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031806"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818750"
 ---
-# <a name="options-environment-fonts-and-colors-page"></a>選項 (環境：字型和色彩頁面)
+# <a name="options-environment-fonts-and-colors-page"></a>選項 (環境：字型和色彩頁面）
   [選項] 對話方塊讓您能夠針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的各種使用者介面元素，來建立自訂的字型和色彩配置。 在 [工具] 功能表上按一下 [選項]、展開 [環境] 資料夾，然後選取 [字型和色彩]。  
   
  在對色彩配置進行變更的工作階段中，色彩配置的變更並不會生效。 您可以開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的其他執行個體，並產生您希望套用變更的條件，來評估色彩變更。  
@@ -29,8 +29,8 @@ ms.locfileid: "51031806"
 |詞彙|定義|  
 |----------|----------------|  
 |文字編輯器|變更文字編輯器的字型樣式、大小，以及色彩顯示設定，會影響預設文字編輯器裡文字的外觀。 這些設定並不會影響文字編輯器在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的外部所開啟的文件。|  
-|印表機|變更印表機的字型樣式、大小，以及色彩顯示設定，會影響列印文件裡文字的外觀。<br /><br /> 提示： 如有需要您可以選取比所顯示在 [文字編輯器] 中的列印不同的預設字型。 當列印同時包含單一位元組和雙位元組字元的程式碼時，這就非常有用。|  
-|[所有文字工具視窗]|變更此項目的字型樣式、大小，以及色彩顯示設定，會影響 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中有輸出窗格之工具視窗裡文字的外觀。 例如，[輸出] 視窗、[文字結果] 視窗等等。<br /><br /> 注意：對 [所有文字工具視窗] 項目的文字所做的變更，在您進行變更的工作階段中並不會生效。 您可以開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的其他執行個體，來評估這些變更。|  
+|印表機|變更印表機的字型樣式、大小，以及色彩顯示設定，會影響列印文件裡文字的外觀。<br /><br /> 提示：如有需要，您可以針對列印目的選取不同於文字編輯器所顯示字型的預設字型。 當列印同時包含單一位元組和雙位元組字元的程式碼時，這就非常有用。|  
+|[所有文字工具視窗]|變更此項目的字型樣式、大小，以及色彩顯示設定，會影響 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中有輸出窗格之工具視窗裡文字的外觀。 例如，[輸出] 視窗、[文字結果] 視窗等等。<br /><br /> 注意：[所有文字工具 Windows] 項目文字的變更使其在工作階段期間，不會生效。 您可以開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的其他執行個體，來評估這些變更。|  
 |尋找結果視窗|變更此項目的字型樣式、大小，以及色彩顯示設定，會影響 [尋找結果] 視窗裡文字的外觀。|  
 |輸出視窗|變更此項目的字型樣式、大小，以及色彩顯示設定，會影響 [輸出] 視窗裡文字的外觀。|  
 |方格結果|變更此項目的字型樣式、大小，以及色彩顯示設定，會影響 [查詢] 視窗的 [方格結果] 區域裡文字的外觀。|  
@@ -42,7 +42,7 @@ ms.locfileid: "51031806"
  [使用預設值] 按鈕會重設預設字型的值，以及從 [顯示設定] 清單中選取之清單項目的色彩值。  
   
  **字型 (粗體字表示固定寬度的字型)**  
- 列出系統上安裝的所有字型。 在第一次開啟此下拉式清單時，會選取您從 [顯示設定] 清單中選擇之元素的目前字型。 固定字型 — 在編輯器中較易於對齊 — 以粗體顯示  
+ 列出系統上安裝的所有字型。 在第一次開啟此下拉式清單時，會選取您從 [顯示設定] 清單中選擇之元素的目前字型。 固定字型 (在編輯器中較易於對齊) 以粗體顯示。  
   
  **大小**  
  列出選取之字型的可用大小。 變更字型的大小會影響 [顯示設定] 選取項目的所有 [顯示項目] 項目。  
@@ -55,9 +55,9 @@ ms.locfileid: "51031806"
   
  某些顯示項目包含：  
   
--   指標邊界：位於程式碼編輯器的左邊，且會顯示中斷點和書籤圖示的邊界。  
+-   指示區邊界：顯示中斷點和書籤圖示的程式碼編輯器左邊界。  
   
--   可摺疊的文字：在程式碼編輯器內，可以切換顯示與否的文字或程式碼區塊 (僅限 XML)。  
+-   可摺疊的文字：文字或可以切換移入和移出內與否 (僅限 XML) 檢視的程式碼區塊。  
   
  **項目前景**  
  列出您可以選擇作為 [顯示項目] 中所選取項目之前景的可用色彩。 因為有些項目相關，所以應維護一致的顯示配置；例如，變更文字的前景色彩也會變更如 String 等元素的前景色彩。  
@@ -82,6 +82,6 @@ ms.locfileid: "51031806"
   
 ## <a name="see-also"></a>另請參閱  
  [查詢編輯器中的色彩編碼](../../relational-databases/scripting/color-coding-in-query-editors.md)   
- [選項&#40;文字編輯器： 編輯器索引標籤和狀態列頁面&#41;](../../database-engine/options-text-editor-editor-tab-and-status-bar-page.md)  
+ [選項&#40;文字編輯器：編輯器索引標籤和狀態列頁面&#41;](../../database-engine/options-text-editor-editor-tab-and-status-bar-page.md)  
   
   

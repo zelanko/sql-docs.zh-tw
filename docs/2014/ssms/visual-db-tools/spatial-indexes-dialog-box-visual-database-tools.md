@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.spatialindexes
@@ -12,12 +12,12 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ef93973a6be743a6c79b2ba46c2f05d2af6bae5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b347715a601be779b864500a6bc28655141ceeeb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113357"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773470"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>空間索引對話方塊 (Visual Database Tools)
   使用 [空間索引] 對話方塊來建立 **geometry** 或 **geography** 資料類型之資料行 (「空間資料行」(Spatial Column)) 的索引，該資料行無法使用 [索引/索引鍵] 對話方塊來建立索引。 每一個空間資料行都可以有一個以上的空間索引，但是一次只能建立一個。  
@@ -88,7 +88,7 @@ ms.locfileid: "48113357"
  顯示空間索引的名稱。 在建立新的索引時，會根據 [資料表設計工具] 作用中視窗的資料表，給予預設的名稱。 您可以隨時變更名稱。  
   
  **說明**  
- 描述此索引。 若要寫入更詳細的描述，請按一下 [描述]，再按屬性欄位右邊的省略符號按鈕 (**…**)。 如此便可提供較大的區域以寫入文字。  
+ 描述此索引。 若要寫入更詳細的描述，請按一下 [描述]，然後按一下屬性欄位右邊出現的省略符號按鈕 (**...**)。 如此便可提供較大的區域以寫入文字。  
   
  **資料表設計工具類別目錄**  
  展開時會顯示此空間索引的屬性相關資訊。  
@@ -109,7 +109,7 @@ ms.locfileid: "48113357"
  **允許頁面鎖定**  
  指定是否在此索引中允許頁面層級的鎖定。 允許或不允許頁面層級的鎖定會影響資料庫效能。  
   
- **重新計算****統計資料**   
+ **重新計算****統計資料**  
  指定是否會在建立索引時計算新的統計資料。 重新計算統計資料會減緩索引的建置，但是通常會提升查詢效能。  
   
  **允許資料列鎖定**  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [Transact-SQL], opening
@@ -13,12 +13,12 @@ ms.assetid: 605b0f4c-5ba1-4249-ad1c-6341df77cd7a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 940a5a220001ed682bf3972db60bac47b870140d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b00a531c3b8abde6e9728039ece1de6a1866d3d2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078458"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814200"
 ---
 # <a name="open-a-template"></a>開啟範本
   您可以從範本總管開啟範本。  

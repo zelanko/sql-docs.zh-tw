@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - self-joins
@@ -14,12 +14,12 @@ ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78b17fbcdbc882041cf378a629452c57bc6c3158
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd8e26099ec7152aac08a11b6f7e38550834d248
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116028"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769070"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>手動建立自我聯結 (Visual Database Tools)
   即使資料表沒有資料庫中的自反關聯性，也可以將資料表聯結至它本身。 例如，可以使用自我聯結 (Self-Join) 來找出住在同一城市的作者。  
@@ -116,7 +116,7 @@ Cheryl Carson       Abraham Bennet
   
 3.  在聯結線上按一下滑鼠右鍵，然後在捷徑功能表中選擇 [屬性]。  
   
-4.  在 [屬性] 視窗中，按一下 [聯結條件及類型]，再按一下屬性右邊的省略符號 (**…**)。  
+4.  在 [屬性] 視窗中，按一下 [聯結條件及類型]，再按一下屬性右邊的省略符號 ([...])。  
   
 5.  在[聯結對話方塊](join-dialog-box-visual-database-tools.md)中，在必要時變更主索引鍵之間的比較運算子。 例如，您可以會將運算子變更為小於 (<)。  
   

@@ -13,12 +13,12 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1451ddc8ec43b1960ed6073fb836b05e8384bb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683006"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213497"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE - SQL 命令
 建立資料表，具有指定的欄位。  
@@ -111,12 +111,12 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
 ```  
   
  主索引鍵*eExpression2*標記*TagName2*  
- 指定要建立主要索引。 *eExpression2*指定資料表中的任何欄位的組合。 標記*TagName2 的*指定建立主要索引標籤的名稱。 索引標籤名稱可以包含最多 10 個字元。  
+ 指定要建立主要索引。 *eExpression2*指定資料表中的任何欄位的組合。 標記*TagName2*指定建立主要索引標籤的名稱。 索引標籤名稱可以包含最多 10 個字元。  
   
  資料表只能有一個主要的索引，因為您不能包含這個子句，如果您已經建立主要索引的欄位。 Visual FoxPro 會產生錯誤，如果您在 CREATE TABLE 中包含多個 PRIMARY KEY 子句。  
   
  唯一*eExpression3*標記*TagName3*  
- 建立候選項目索引。 *eExpression3*指定資料表中的任何欄位的組合。 不過，如果您已經建立主要索引與其中一個主索引鍵的選項，您不能包含主索引鍵所指定的欄位。 標記*TagName3 的*指定建立的候選項目索引標籤的標記名稱。 索引標籤名稱可以包含最多 10 個字元。  
+ 建立候選項目索引。 *eExpression3*指定資料表中的任何欄位的組合。 不過，如果您已經建立主要索引與其中一個主索引鍵的選項，您不能包含主索引鍵所指定的欄位。 標記*TagName3*指定建立的候選項目索引標籤的標記名稱。 索引標籤名稱可以包含最多 10 個字元。  
   
  資料表可以有多個候選項目索引。  
   

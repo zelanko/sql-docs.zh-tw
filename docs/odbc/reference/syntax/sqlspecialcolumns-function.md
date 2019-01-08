@@ -20,16 +20,16 @@ ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52ad6bc3fc84b0d50675b4e0a4e7bb44a6ded1c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f44ae90a82e778bf8e8564b719aa6b9f0157a05a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849356"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204367"
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： Open Group  
+ 導入的版本：ODBC 1.0 標準的合規性：開啟群組  
   
  **摘要**  
  **SQLSpecialColumns**擷取在指定的資料表中的資料行的下列資訊：  
@@ -62,9 +62,9 @@ SQLRETURN SQLSpecialColumns(
  *IdentifierType*  
  [輸入]要傳回的資料行類型。 必須是下列值之一：  
   
- SQL_BEST_ROWID： 傳回最佳的資料行或一組資料行，從資料行或資料行，擷取值可讓任何資料列指定唯一識別資料表中。 資料行可以是任何一個虛擬資料行專為此用途 （如 Oracle ROWID 或 Ingres TID） 或資料行或資料表任何唯一索引的資料行。  
+ SQL_BEST_ROWID:傳回最佳的資料行或一組資料行，從資料行或資料行，擷取值可讓任何資料列指定唯一識別資料表中。 資料行可以是任何一個虛擬資料行專為此用途 （如 Oracle ROWID 或 Ingres TID） 或資料行或資料表任何唯一索引的資料行。  
   
- SQL_ROWVER： 傳回的資料行或資料行中指定的資料表，如果有的話，會自動更新資料來源時 （如同 SQLBase ROWID 或 Sybase 時間戳記） 的任何交易更新資料列中的任何值。  
+ SQL_ROWVER:在指定的資料表中，傳回的資料行或資料行，如果有的話，會自動更新資料來源時 （如同 SQLBase ROWID 或 Sybase 時間戳記） 的任何交易更新資料列中的任何值。  
   
  *CatalogName*  
  [輸入]資料表的目錄名稱。 如果驅動程式支援的目錄，對於某些資料表，但不適用於其他人使用，例如當驅動程式會擷取資料從不同的 Dbms，空字串 ("") 表示沒有目錄的資料表。 *CatalogName*不能包含字串的搜尋模式。  
@@ -93,18 +93,18 @@ SQLRETURN SQLSpecialColumns(
  *範圍*  
  [輸入]Rowid 的最小必要的範圍。 傳回的 rowid 可能更大範圍。 必須是下列其中之一：  
   
- 針對 SQL_SCOPE_CURROW： 保證 rowid 只有在位於這個資料列時，才有效。 如果資料列已更新或刪除另一項交易，後來再利用 rowid 可能不會傳回一個資料列。  
+ 針對 SQL_SCOPE_CURROW:保證 rowid 只有在位於這個資料列時，才有效。 如果資料列已更新或刪除另一項交易，後來再利用 rowid 可能不會傳回一個資料列。  
   
- SQL_SCOPE_TRANSACTION: Rowid 保證為有效的目前交易的持續時間。  
+ SQL_SCOPE_TRANSACTION:Rowid 保證為有效的目前交易的持續時間。  
   
- SQL_SCOPE_SESSION: Rowid 被保證有效的工作階段持續期間 （跨越交易界限）。  
+ SQL_SCOPE_SESSION:Rowid 被保證有效的工作階段持續期間 （跨越交易界限）。  
   
  *可為 Null*  
  [輸入]決定是否傳回可以有 NULL 值的特殊資料行。 必須是下列其中之一：  
   
- SQL_NO_NULLS： 排除可以有 NULL 值的特殊資料行。 有些驅動程式無法支援 SQL_NO_NULLS，而且這些驅動程式會傳回空的結果集，如果有指定 SQL_NO_NULLS。 應用程式應該準備此案例和要求 SQL_NO_NULLS，只有當絕對必要。  
+ SQL_NO_NULLS:排除可以有 NULL 值的特殊資料行。 有些驅動程式無法支援 SQL_NO_NULLS，而且這些驅動程式會傳回空的結果集，如果有指定 SQL_NO_NULLS。 應用程式應該準備此案例和要求 SQL_NO_NULLS，只有當絕對必要。  
   
- SQL_NULLABLE： 傳回特殊資料行，即使它們可以有 NULL 值。  
+ SQL_NULLABLE:傳回特殊資料行，即使它們可以有 NULL 值。  
   
 ## <a name="returns"></a>傳回值  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_STILL_EXECUTING、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
@@ -125,7 +125,7 @@ SQLRETURN SQLSpecialColumns(
 |HY009|使用無效的 null 指標|*TableName*引數是 null 指標。<br /><br /> SQL_ATTR_METADATA_ID 陳述式屬性設定為 SQL_TRUE， *CatalogName*引數為 null 指標，以及 SQL_CATALOG_NAME*資訊類型*支援的目錄名稱，傳回。<br /><br /> (DM) SQL_ATTR_METADATA_ID 陳述式屬性設定為 SQL_TRUE，而*SchemaName*引數是 null 指標。|  
 |HY010|函數順序錯誤|(DM) 以非同步方式執行的函式呼叫的連接控制代碼相關聯*StatementHandle*。 此函式仍在執行時**SQLSpecialColumns**呼叫。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**針對呼叫*StatementHandle*並傳回 SQL_PARAM_DATA_可使用。 資料已擷取所有的資料流參數前呼叫此函式。<br /><br /> 以非同步方式執行的函式 （不是此一） 已呼叫 」 (DM) *StatementHandle*和仍在呼叫此函式時所執行。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足情況。|  
-|HY090|字串或緩衝區長度無效|(DM) 的長度引數的其中一個值小於 0，但不是等於 SQL_NTS。<br /><br /> 其中一個長度引數的值超過最大長度值，對應的名稱。 每個名稱的最大長度，可由呼叫**SQLGetInfo**具有*資訊類型*值： SQL_MAX_CATALOG_NAME_LEN、 SQL_MAX_SCHEMA_NAME_LEN 或 SQL_MAX_TABLE_NAME_LEN。|  
+|HY090|字串或緩衝區長度無效|(DM) 的長度引數的其中一個值小於 0，但不是等於 SQL_NTS。<br /><br /> 其中一個長度引數的值超過最大長度值，對應的名稱。 每個名稱的最大長度，可由呼叫**SQLGetInfo**具有*資訊類型*值：SQL_MAX_CATALOG_NAME_LEN、 SQL_MAX_SCHEMA_NAME_LEN 或 SQL_MAX_TABLE_NAME_LEN。|  
 |HY097|資料行類型超出範圍|(DM) 無效*IdentifierType*指定的值。|  
 |HY098|範圍類型超出範圍|(DM) 無效*範圍*指定的值。|  
 |HY099|可為 null 類型超出範圍|(DM) 無效*Nullable*指定的值。|  
@@ -168,11 +168,11 @@ SQLRETURN SQLSpecialColumns(
 |範圍 (ODBC 1.0)|1|Smallint|Rowid 的實際範圍。 包含下列值之一：<br /><br /> 針對 SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> NULL 時，會傳回*IdentifierType*是 SQL_ROWVER。 如需每個值的說明，請參閱說明*範圍*中 「 語法 」，稍早在本章節中。|  
 |COLUMN_NAME (ODBC 1.0)|2|非 NULL Varchar|資料行名稱。 驅動程式會傳回沒有名稱的資料行的空字串。|  
 |DATA_TYPE (ODBC 1.0)|3|Smallint 非 NULL|SQL 資料類型。 這可以是 ODBC SQL 資料類型或驅動程式專屬的 SQL 資料型別。 如需有效的 ODBC SQL 資料類型的清單，請參閱 < [SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)。 如需驅動程式專用的 SQL 資料類型資訊，請參閱驅動程式的文件。|  
-|TYPE_NAME (ODBC 1.0)|4|非 NULL Varchar|資料來源而定的資料型別名稱;比方說，"CHAR"、"VARCHAR"、"MONEY"、"長 VARBINARY"或者"CHAR （） FOR BIT DATA"。|  
+|TYPE_NAME (ODBC 1.0)|4|非 NULL Varchar|資料來源相關的資料型別名稱;比方說，"CHAR"、"VARCHAR"、"MONEY"、"長 VARBINARY"或者"CHAR （） FOR BIT DATA"。|  
 |COLUMN_SIZE (ODBC 1.0)|5|Integer|資料來源上的資料行的大小。 關於資料行大小的詳細資訊，請參閱[資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。|  
 |BUFFER_LENGTH (ODBC 1.0)|6|Integer|資料傳輸的位元組長度**SQLGetData**或**SQLFetch**如果 SQL_C_DEFAULT 指定的作業。 針對數值資料，這個大小可能會不同的資料來源上儲存的資料大小。 這個值可以是字元或二進位資料的 COLUMN_SIZE 資料行相同。 如需詳細資訊，請參閱 <<c0> [ 資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。|  
 |DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|資料來源上的資料行的小數位數。 會傳回 NULL 的資料類型小數位數不適用。 關於十進位數字的詳細資訊，請參閱[資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。|  
-|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|指出資料行是否為虛擬資料行，例如 Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO**附註：** 的最大的互通性，虛擬資料行應該不會加上引號與引號字元所傳回的識別項**SQLGetInfo**。|  
+|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|指出資料行是否為虛擬資料行，例如 Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO**附註：** 最大的互通性，虛擬資料行應該不會加上引號與引號字元所傳回的識別項**SQLGetInfo**。|  
   
  應用程式會擷取 SQL_BEST_ROWID 值之後，應用程式可以使用這些值，以重新選取該定義的範圍中的資料列。 **選取**保證陳述式會傳回任何資料列或一個資料列。  
   

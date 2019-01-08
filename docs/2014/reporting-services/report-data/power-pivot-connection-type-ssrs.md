@@ -11,12 +11,12 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1938012555328b389c2b1b3e6c10fc20514496db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bce7d17a2edb004f662d5229ea929d89c6d66d4f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166098"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350484"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot 連接類型 (SSRS)
   您可以使用 SQL Server Analysis Services 資料處理延伸模組，從已在 SharePoint PowerPivot 圖庫中發行的 PowerPivot 活頁簿中擷取資料。  
@@ -26,7 +26,7 @@ ms.locfileid: "48166098"
 ## <a name="prerequisites"></a>先決條件  
  您必須在 SharePoint 網站的 PowerPivot 圖庫中發行 PowerPivot 資料來源。  
   
- 若要支援報表產生器與 PowerPivot 活頁簿的連接，您的工作站電腦上必須擁有 SQL Server 2008 R2 ADOMD.NET。 此用戶端程式庫隨 PowerPivot for Excel 一併安裝，但如果您使用沒有此應用程式的電腦，您必須下載並安裝 ADOMD.NET 從[SQL Server 2008 R2 功能套件](http://go.microsoft.com/fwlink/?LinkId=192565)。  
+ 若要支援報表產生器與 PowerPivot 活頁簿的連接，您的工作站電腦上必須擁有 SQL Server 2008 R2 ADOMD.NET。 此用戶端程式庫隨 PowerPivot for Excel 一併安裝，但如果您使用沒有此應用程式的電腦，您必須下載並安裝 ADOMD.NET 從[SQL Server 2008 R2 功能套件](https://go.microsoft.com/fwlink/?LinkId=192565)。  
   
 ## <a name="data-source-type"></a>資料來源類型  
  請使用報表資料來源類型： **Microsoft SQL Server Analysis Services**。  
@@ -53,7 +53,7 @@ ms.locfileid: "48166098"
   
  PowerPivot 活頁簿中的資料會進行高度壓縮，而針對報表從 PowerPivot 活頁簿中擷取的資料則不會進行壓縮。 您可以使用查詢設計工具來指定篩選和參數，以便將資料限制為報表所需的項目。  
   
- 與連接至 Analysis Services Cube 不同的是，PowerPivot 模型沒有任何階層。 若要提供類似的功能給活頁簿中的相關交叉分析篩選器，您必須在報表中建立串聯參數。 如需詳細資訊，請參閱 <<c0> [ 將串聯參數加入至報表&#40;報表產生器及 SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)。</c0>  
+ 與連接至 Analysis Services Cube 不同的是，PowerPivot 模型沒有任何階層。 若要提供類似的功能給活頁簿中的相關交叉分析篩選器，您必須在報表中建立串聯參數。 如需詳細資訊，請參閱 [將串聯參數加入至報表 &#40;報表產生器及 SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)中建立的行動報表。  
   
  在某些情況下，您可能需要調整運算式，才能容納來自 PowerPivot 模型的基礎資料值。 若要將資料轉換成正確的資料類型，或是加入或移除彙總函式，您可能需要修改運算式。 例如，若要將資料類型從字串轉換成整數，請使用 `=CInt`。 發行報表之前，請務必確認報表顯示 PowerPivot 模型中資料的預期值。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48166098"
 -   報表只包含 PowerPivot 資料來源中的 PowerPivot 資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services MDX 查詢設計工具使用者介面&#40;報表產生器&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
+ [Analysis Services MDX 查詢設計工具使用者介面 &#40;報表產生器&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fbab3ea6efe0c1e5b896febeef4d1f38877b8965
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f4bd21ab1463d40b0eb9b83e5686951e43dee885
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145653"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542197"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
@@ -58,7 +58,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
 ## <a name="examples"></a>範例  
  您可以在 SSMS 的 MDX 查詢視窗中使用 Adventure Works Cube，嘗試下列範例。  
   
- **範例 1 – 示範最基本的語法**  
+ **範例 1-示範基本語法**  
   
  第一個範例顯示的最少語法**DrilldownLevel**。 唯一需要的引數是集合運算式。 請注意，當您執行此查詢時，您會獲得父 [All Categories] 和下一個層級的成員向下: [Accessories]、 [Bikes] 等等。 雖然此範例很簡單，它會示範的基本目的**DrilldownLevel**函式，切入到下一個層級以下。  
   
@@ -67,7 +67,7 @@ SELECT DRILLDOWNLEVEL({[Product].[Product Categories]} * {[Sales Territory].[Sal
 FROM [Adventure Works]  
 ```  
   
- 範例 2 – 使用明確索引層級的替代語法  
+ 範例 2-使用明確索引層級的替代語法  
   
  此範例示範替代語法，其中透過數值運算式指定了索引層級。 在此情況中，索引層級為 0。 就以零為基底的索引而言，則此為最低的層級。  
   
@@ -79,7 +79,7 @@ FROM [Adventure Works]
   
  請注意，結果集與上一個查詢相同。 一般而言，除非您想要使向下鑽研在特定的層級開始，否則就不必設定索引層級。 重新執行上一個查詢，並將索引值設為 1，然後再設為 2。 當索引值設為 1 時，您會看見向下鑽研從該階層的第二個層級開始。 當索引值設為 2 時，向下鑽研會在第三個層級開始，也就是此範例的最高層級。 數值運算式越高，索引層級也會越高。  
   
- **範例 3 – 示範層級運算式**  
+ **範例 3-示範層級運算式**  
   
  下一個範例示範如何使用層級運算式。 假設某個集合代表某個階層結構，則使用層級運算式可讓您選擇階層中要開始向下鑽研的層級。  
   
@@ -98,7 +98,7 @@ SELECT [Measures].[Internet Sales Amount] ON COLUMNS,
 FROM [Adventure Works]  
 ```  
   
- **範例 4 – 包含導出的成員**  
+ **範例 4-包含導出的成員**  
   
  導出的成員，它會顯示在底部的 結果設定，當您新增的最後一個範例示範**include_calculated_members**旗標。 請注意，此旗標會指定為第四個參數。  
   

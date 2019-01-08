@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e1ada8f652b88e0cb3570f1fada7f4f50d28e35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7494577b9af11f8000fd2676dd56ee3b8c960756
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756236"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213457"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47756236"
   
 -   資料分割函數  
   
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
 ## <a name="syntax"></a>語法  
   
@@ -97,7 +97,7 @@ sys.dm_sql_referenced_entities (
 |is_select_all|**bit**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 在 SELECT * 子句中使用此物件 (只限物件層級)。|  
 |is_all_columns_found|**bit**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 可以找到物件的所有資料行相依性。<br /><br /> 0 = 無法找到物件的資料行相依性。|
 |is_insert_all|**bit**|**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 物件用於 INSERT 陳述式沒有資料行清單 （只限物件層級）。|  
-|is_incomplete|**bit**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 物件或資料行有繫結錯誤，且不完整。|
+|is_incomplete|**bit**|**適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 1 = 物件或資料行有繫結錯誤，且不完整。|
   
 ## <a name="exceptions"></a>例外狀況  
  在下列任何情況下，都會傳回空的結果集：  
@@ -266,7 +266,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>F. 傳回物件或資料行使用方式  
- 下列範例會傳回 `HumanResources.uspUpdateEmployeePersonalInfo` 預存程序的物件和資料行相依性。 這個程序更新資料行`NationalIDNumber`， `BirthDate,``MaritalStatus`，並`Gender`的`Employee`資料表根據指定`BusinessEntityID`值。 在 TRY…CATCH 區塊中定義另一個預存程序 `upsLogError`，以擷取任何執行錯誤。 `is_selected`、`is_updated` 和 `is_select_all` 資料行會傳回如何在參考物件中使用這些物件和資料行的相關資訊。 修改的資料表和資料行會在 is_updated 資料行中由 1 表示。 只選取 `BusinessEntityID` 資料行，而且不會選取或修改 `uspLogError` 預存程序。  
+ 下列範例會傳回 `HumanResources.uspUpdateEmployeePersonalInfo` 預存程序的物件和資料行相依性。 這個程序更新資料行`NationalIDNumber`， `BirthDate,``MaritalStatus`，並`Gender`的`Employee`資料表根據指定`BusinessEntityID`值。 另一個預存程序，`upsLogError`定義於 TRY...CATCH 區塊來擷取任何執行錯誤。 `is_selected`、`is_updated` 和 `is_select_all` 資料行會傳回如何在參考物件中使用這些物件和資料行的相關資訊。 修改的資料表和資料行會在 is_updated 資料行中由 1 表示。 只選取 `BusinessEntityID` 資料行，而且不會選取或修改 `uspLogError` 預存程序。  
   
 **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   

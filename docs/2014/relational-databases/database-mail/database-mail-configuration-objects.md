@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqlimail.manageexistingaccount.f1
@@ -33,15 +32,15 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a42886a0477c6844b2e59d439cd9748adcaa4b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71a2805eb935088f39c6b4a86714f263dc5ba643
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089668"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772632"
 ---
 # <a name="database-mail-configuration-objects"></a>Database Mail 組態物件
-  Database Mail 包含兩個組態物件：這些資料庫組態物件提供您方法，來設定 Database Mail 從資料庫應用程式或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 傳送電子郵件時應使用的設定。  
+  Database Mail 包含兩個組態物件：資料庫組態物件提供讓您設定的 Database mail 應該使用從您的資料庫應用程式傳送電子郵件時或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式。  
   
 -   Database Mail 帳戶  
   
@@ -59,9 +58,9 @@ ms.locfileid: "48089668"
   
  Database Mail 支援三種與 SMTP 伺服器溝通的驗證方法：  
   
--   Windows 驗證：Database Mail 使用 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] Windows 服務帳戶的憑證進行 SMTP 伺服器驗證。  
+-   Windows 驗證：Database Mail 會使用的認證[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]Windows 服務帳戶進行驗證的 SMTP 伺服器上。  
   
--   基本驗證：Database Mail 使用指定的使用者名稱與密碼來進行 SMTP 伺服器驗證。  
+-   基本驗證：Database Mail 會使用使用者名稱和密碼來進行 SMTP 伺服器驗證所指定。  
   
 -   匿名驗證：SMTP 伺服器不需要任何驗證。  Database Mail 將不會使用任何認證來進行 SMTP 伺服器驗證。  
   

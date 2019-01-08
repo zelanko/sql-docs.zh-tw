@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, migrating
@@ -14,12 +13,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d22744898dcc45ac213436afcdf25359ba24adec
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: a1ff35cfc7d5e8611c06981b2e3a9fe9dd6e82fd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072202"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351458"
 ---
 # <a name="upgrade-integration-services-packages"></a>升級 Integration Services 封裝
   當您升級的執行個體[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]目前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，現有[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]封裝並不會自動升級成目前版本的封裝格式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]會使用。 您必須選取升級方法並手動升級您的封裝。  
@@ -47,7 +46,7 @@ ms.locfileid: "49072202"
   
 -   將封裝移轉到 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]，然後再將封裝升級到 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]。  
   
-     如需將 DTS 套件移轉到 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 和 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 的相關資訊，請參閱[移轉 Data Transformation Services 封裝](http://go.microsoft.com/fwlink/?LinkId=251870) (2005) 和[移轉 Data Transformation Services 封裝](http://go.microsoft.com/fwlink/?LinkId=251871) (2008)。  
+     如需將 DTS 套件移轉到 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 和 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 的相關資訊，請參閱[移轉 Data Transformation Services 封裝](https://go.microsoft.com/fwlink/?LinkId=251870) (2005) 和[移轉 Data Transformation Services 封裝](https://go.microsoft.com/fwlink/?LinkId=251871) (2008)。  
   
 -   使用 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] 重新建立 DTS 封裝。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "49072202"
   
  若要使用[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]為了設計封裝，包括[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]並[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]自訂元件，您需要修改 devenv.exe.config 檔案則位於*\<磁碟機 >*: files\Microsoft Visual Studio 10.0\Common7\IDE。  
   
- 如果要使用這些封裝搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本執行階段所建置的應用程式，必須在可執行檔的 *.exe.config 檔案的組態區段中包含重新導向規則。 規則會將執行階段組件重新導向至 11.0.0.0 版 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 如需組件版本重新導向的詳細資訊，請參閱 [\<runtime> 的 \<assemblyBinding> 元素](http://msdn.microsoft.com/library/twy1dw1e.aspx)。  
+ 如果要使用這些封裝搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本執行階段所建置的應用程式，必須在可執行檔的 *.exe.config 檔案的組態區段中包含重新導向規則。 規則會將執行階段組件重新導向至 11.0.0.0 版 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 如需組件版本重新導向的詳細資訊，請參閱 [\<runtime> 的 \<assemblyBinding> 元素](https://msdn.microsoft.com/library/twy1dw1e.aspx)。  
   
 ### <a name="locating-the-assemblies"></a>尋找組件  
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 組件已經升級至 .NET 4.0。 .NET 4 有個別的全域組件快取，位於 \<磁碟機>:\Windows\Microsoft.NET\assembly。 您可以在此路徑底下 (通常在 GAC_MSIL 資料夾中) 找到所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 組件。  
@@ -99,7 +98,7 @@ ms.locfileid: "49072202"
   
 |元件或功能|升級結果|  
 |--------------------------|---------------------|  
-|連接字串|對於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 封裝，某些提供者的名稱已有所變更，需要在連接字串中使用不同的值。 若要更新連接字串，請使用下列其中一個程序：<br /><br /> -使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 套件升級精靈] 來升級套件，然後選取 [更新連接字串以使用新的提供者名稱] 選項。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [選項] 對話方塊的 [一般] 頁面上，選取 [更新連接字串以使用新的提供者名稱] 選項。 如需這個選項的詳細資訊，請參閱[一般頁面](../general-page-of-integration-services-designers-options.md)。<br /><br /> -在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟套件並手動變更 ConnectionString 屬性的文字。<br /><br /> 請注意：當連接字串儲存在組態檔或資料來源檔案中，或者運算式設定 `ConnectionString` 屬性時，您無法使用先前的程序更新連接字串。 在這些情況下，若要更新連接字串，您必須手動更新檔案或運算式。<br /><br /> 如需資料來源的詳細資訊，請參閱[資料來源](../connection-manager/data-sources.md)。|  
+|連接字串|對於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 封裝，某些提供者的名稱已有所變更，需要在連接字串中使用不同的值。 若要更新連接字串，請使用下列其中一個程序：<br /><br /> -使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 套件升級精靈] 來升級套件，然後選取 [更新連接字串以使用新的提供者名稱] 選項。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [選項] 對話方塊的 [一般] 頁面上，選取 [更新連接字串以使用新的提供者名稱] 選項。 如需這個選項的詳細資訊，請參閱[一般頁面](../general-page-of-integration-services-designers-options.md)。<br /><br /> -在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟套件並手動變更 ConnectionString 屬性的文字。<br /><br /> 注意：當連接字串儲存在組態檔或資料來源檔案中，或者運算式設定 `ConnectionString` 屬性時，您無法使用先前的程序更新連接字串。 在這些情況下，若要更新連接字串，您必須手動更新檔案或運算式。<br /><br /> 如需資料來源的詳細資訊，請參閱[資料來源](../connection-manager/data-sources.md)。|  
 |查閱轉換|對於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 封裝，升級程序會自動將查閱轉換升級為目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 版本。 但目前版本中的此元件另有一些功能可以供您使用。<br /><br /> 如需相關資訊，請參閱 [Lookup Transformation](../data-flow/transformations/lookup-transformation.md)。|  
 |指令碼工作和指令碼元件|針對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 封裝，升級程序會自動將指令碼工作和指令碼元件中的指令碼，從 VSA 移轉到 VSTA。<br /><br /> 如需您可能必須在移轉之前對指令碼進行的變更以及指令碼轉換失敗的詳細資訊，請參閱[將指令碼移轉到 VSTA](../../sql-server/install/migrate-scripts-to-vsta.md)。|  
   
@@ -108,10 +107,10 @@ ms.locfileid: "49072202"
   
 ## <a name="external-resources"></a>外部資源  
   
--   msdn.microsoft.com 上的技術文章：[5 Tips for a Smooth SSIS Upgrade to SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=235321) (將 SSIS 順利升級至 SQL Server 2012 的 5 個秘訣)。  
+-   msdn.microsoft.com 上的技術文章：[5 Tips for a Smooth SSIS Upgrade to SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=235321) (將 SSIS 順利升級至 SQL Server 2012 的 5 個秘訣)。  
   
--   blogs.msdn.com 上的部落格文章： [在 Denali 中製作現有的自訂 SSIS 延伸模組和應用程式工作](http://go.microsoft.com/fwlink/?LinkId=238157)。  
+-   blogs.msdn.com 上的部落格文章： [在 Denali 中製作現有的自訂 SSIS 延伸模組和應用程式工作](https://go.microsoft.com/fwlink/?LinkId=238157)。  
   
--   channel9.msdn.com 上的網路廣播：[Upgrading SSIS Packages to SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=258674) (將 SSIS 套件升級至 SQL Server 2012)。  
+-   channel9.msdn.com 上的網路廣播：[Upgrading SSIS Packages to SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=258674) (將 SSIS 套件升級至 SQL Server 2012)。  
   
   

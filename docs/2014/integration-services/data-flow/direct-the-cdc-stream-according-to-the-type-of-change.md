@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bff3b71c0f091bc60d500dfaced02cb62b483753
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe0f98b373b736b9e7b97e9c5a599812210e4136
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069258"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799650"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>依據變更類型來導向 CDC 資料流
   若要加入及設定 CDC 分隔器轉換，封裝至少必須包含一個資料流程工作及一個 CDC 來源。  
@@ -41,7 +40,7 @@ ms.locfileid: "48069258"
   
     -   插入輸出：導向 INSERT 變更資料列的輸出。  
   
-    -   更新輸出：導向 UPDATE 前/後變更資料列和合併變更資料列的輸出。  
+    -   更新輸出：變更的輸出前/後更新變更資料列和合併資料列會被導向。  
   
 7.  (選擇性) 您可以使用 **[進階編輯器]** 對話方塊來設定進階屬性。  
   

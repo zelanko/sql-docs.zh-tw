@@ -16,12 +16,12 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16ece0ae1eee2ed1cc944504af87a74609cba0fe
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 25a076118df9f85ff2449c35dc0273db8a499fac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350442"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538162"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 服務的 Microsoft OLE DB 提供者
 Active Directory 服務介面 (ADSI) 提供者可讓 ADO 連接到異質的 directory services 透過 ADSI。 這可讓 ADO 應用程式唯讀存取 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 directory 服務，除了任何 LDAP 相容目錄服務和 Novell Directory Services。 ADSI 本身為基礎提供者模型，因此如果有新的提供者提供存取至另一個目錄，ADO 應用程式將能夠順暢地存取它。 ADSI 提供者是無限制執行緒，並啟用 Unicode。  
@@ -65,7 +65,7 @@ ADSDSOObject
 |*Root*|指出**ADsPath**要從中開始搜尋 （也就是搜尋的根） 物件。|  
 |*篩選*|表示搜尋篩選器以 RFC 1960 格式。|  
 |*屬性*|表示要傳回之屬性的逗號分隔清單。|  
-|*範圍。*|選擇性。 A**字串**，指定搜尋範圍。 可以是下列其中一項：<br /><br /> 基底，搜尋只有基底物件 （搜尋根目錄）。<br />-OneLevel — 搜尋只有一個層級。<br />-樹狀子目錄，搜尋整個樹狀子目錄。|  
+|*範圍*|選擇性。 A**字串**，指定搜尋範圍。 可以是下列其中一項：<br /><br /> 基底-搜尋只有基底物件 （搜尋根目錄）。<br />-OneLevel-搜尋只有一個層級。<br />-樹狀子目錄-搜尋整個樹狀子目錄。|  
   
  例如：  
   
@@ -110,7 +110,7 @@ objectClass='user' AND objectCategory='Person'"
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|讀取/寫入|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|唯讀|  
 |[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|讀取/寫入|  
-|[State](../../../ado/reference/ado-api/state-property-ado.md)|唯讀|  
+|[狀態](../../../ado/reference/ado-api/state-property-ado.md)|唯讀|  
 |[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)|唯讀|  
   
  **標準的 ADO 資料錄集方法的可用性：**  

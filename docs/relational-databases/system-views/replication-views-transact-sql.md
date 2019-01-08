@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -24,12 +23,12 @@ ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d9e7b300d9bb794faa458b2eb1713378165beb2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f90b60b13d9641771ce549bfccdba3f6fc5308a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721646"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816070"
 ---
 # <a name="replication-views-transact-sql"></a>複寫檢視表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -63,14 +62,14 @@ ms.locfileid: "47721646"
 |||  
 |-|-|  
 |[sysmergeextendedarticlesview &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md)|[sysmergepartitioninfoview &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md)|  
-|[systranschemas &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)||  
+|[systranschemas &#40;Transact-SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)||  
   
 ### <a name="replication-views-in-the-subscription-database"></a>訂閱資料庫中的複寫檢視  
   
 |||  
 |-|-|  
 |[sysmergeextendedarticlesview &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md)|[sysmergepartitioninfoview &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md)|  
-|[systranschemas &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)||  
+|[systranschemas &#40;Transact-SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)||  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

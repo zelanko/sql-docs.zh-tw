@@ -14,12 +14,12 @@ ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 80450865b72360068555cb1a25224a3ea503e5a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfbf2362b06abc254879d25c4f8e7b8e876a6737
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097578"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215857"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>在 URL 內傳遞報表參數
   您可以在報表 URL 中包括報表參數，以便將它們傳遞給報表。 這些 URL 參數不會加上前置詞，因為它們會直接傳遞給報表處理引擎。  
@@ -27,16 +27,16 @@ ms.locfileid: "48097578"
 > [!IMPORTANT]  
 >  請務必讓 URL 包含 `_vti_bin` Proxy 語法，以便透過 SharePoint 和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP Proxy 路由傳送要求。 此 Proxy 會將某些內容加入至 HTTP 要求，也就是確保針對 SharePoint 模式報表伺服器正確執行報表所需的內容。  
 >   
->  如果您未包含 Proxy 語法，則需要為參數加入前置詞 *rp:*。  
+>  如果您未包含 Proxy 語法，則需要為參數加上前置詞 *rp:*。  
   
  所有查詢參數都可以有相對應的報表參數。 您可以傳遞相對應的報表參數，即可傳遞查詢參數。 如需詳細資訊，請參閱[在關聯式查詢設計工具中建立查詢 &#40;報表產生器和 SSRS&#41;](report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  報表參數會區分大小寫。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  報表參數會區分大小寫，而且使用下列特殊字元：  
->   
+> 
 >  -   根據 URL 編碼標準，在 URL 字串中的任何空格字元都會使用字元 "%20" 來取代。  
 > -   URL 參數部分中的空格字元會取代成加號字元 (+)。  
 > -   任何字串部分中的分號都會取代成 "%3A" 字元。  
@@ -49,7 +49,7 @@ ms.locfileid: "48097578"
 parameter=value  
 ```  
   
- 例如，若要指定兩個定義在報表中的參數，"ReportMonth" 和 'ReportYear"，請使用下列原生模式報表伺服器的 URL：  
+ 例如，若要指定兩個定義在報表中的參數 ("ReportMonth" 和 'ReportYear")，請使用下列原生模式報表伺服器的 URL：  
   
 ```  
 http://myrshost/ReportServer?/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2&ReportMonth=3&ReportYear=2008  
@@ -84,11 +84,11 @@ SalesOrderNumber:isnull=true
 ##  <a name="bkmk_examples"></a> 其他範例  
  下列 URL 範例包含空格和多個參數。  
   
--   資料夾名稱 “SQL Server User Education Team” 包含空格，因此 “+” 會取代每個空格。  
+-   資料夾名稱 "SQL Server User Education Team" 包含空格，因此 "+" 會取代每個空格。  
   
--   報表名稱 “team project report” 包含空格，因此 “+” 會取代每個空格。  
+-   "team project report" 的報表名稱包含空格，因此 "+" 會取代每個空格。  
   
--   傳遞兩個參數：值為 “xgroup” 的 “teamgrouping2” 以及值為 “ygroup” 的 “teamgrouping1”。  
+-   傳遞兩個參數："teamgrouping2" 的值為 "xgroup"，"teamgrouping1" 的值為 "ygroup"。  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup  
@@ -100,14 +100,14 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- 下列 URL 範例會針對原生模式報表伺服器傳遞具有值 “7/1/2005” 的單一參數 *SellStartDate* 。  
+ 下列 URL 範例會針對原生模式報表伺服器傳遞具有值 "7/1/2005" 的單一參數 *SellStartDate*。  
   
 ```  
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [URL 存取&#40;SSRS&#41;](url-access-ssrs.md)   
+ [URL 存取 &#40;SSRS&#41;](url-access-ssrs.md)   
  [URL 存取參數參考](url-access-parameter-reference.md)  
   
   

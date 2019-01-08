@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 8cfacc82-cee8-4199-a69e-acedecfc0b3b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d799124b9cd8a61c43ed218b6659b909ed3a81dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2989f9a017f2a864b85087d6a7fc638edf11b066
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145368"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779670"
 ---
 # <a name="audit-change-audit-event-class"></a>Audit Change Audit 事件類別
   每次修改稽核追蹤時，就會發生 **Audit Change Audit** 事件類別。  

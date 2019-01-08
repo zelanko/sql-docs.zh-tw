@@ -19,12 +19,12 @@ ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 31276958172d94e72c7b6970728bfac968f678aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 97ace7573ff30891e2b54196204cdfdd4b56b3c9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114328"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402133"
 ---
 # <a name="initializereportserver-method-wmi-msreportserverconfigurationsetting"></a>InitializeReportServer 方法 (WMI MSReportServer_ConfigurationSetting)
   初始化指定的報表服務執行個體。  
@@ -57,7 +57,7 @@ public void InitializeReportServer(string InstallationID,
 ## <a name="remarks"></a>備註  
  呼叫這個方法時，系統會使用 *InstallationID*所識別之報表伺服器的公開金鑰來加密存取報表伺服器資料庫安全資訊的加密金鑰。  
   
- 指定之報表伺服器的公開金鑰必須已經事先寫入報表伺服器資料庫中。  
+ 所指定報表伺服器的公開金鑰必須已經事先寫入報表伺服器資料庫中。  
   
  您必須針對已經擁有安全資訊之存取權的報表伺服器呼叫 *InitializeReportServer* 方法，才能讓它解密加密金鑰。 然後，所產生且已加密的加密金鑰密就會儲存在報表伺服器資料庫中。  
   

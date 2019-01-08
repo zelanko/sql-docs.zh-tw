@@ -15,12 +15,12 @@ ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f983b412b6ef4a91293e07b66a8a0cab6d15a71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcf15af9fb5e351dd4c965d0eb6ef520b62b65b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079438"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531375"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>執行 SQL 工作編輯器 (一般頁面)
   使用 [執行 SQL 工作編輯器] 對話方塊的 [一般] 頁面，即可設定「執行 SQL」工作和提供該工作執行的 SQL 陳述式。  
@@ -47,7 +47,7 @@ ms.locfileid: "48079438"
 >  當「執行 SQL」工作使用 ADO 或 ODBC 連線管理員時， **CodePage** 屬性就無法使用。 如果您的方案需要使用字碼頁，請使用 OLE DB 或 ADO.NET 連接管理員搭配執行 SQL 工作。  
   
  **TypeConversionMode**  
- 當您將此屬性設定為`Allowed`、 「 執行 SQL 」 工作會嘗試將輸出參數和查詢結果的資料類型變數的結果會指派給。 這適用於 [單一資料列] 結果集類型。  
+ 將此屬性設為 `Allowed` 時，「執行 SQL」工作會嘗試將輸出參數和查詢結果轉換為指派結果之變數的資料類型。 這適用於 [單一資料列] 結果集類型。  
   
  **ResultSet**  
  指定 SQL 陳述式開始執行的預期結果類型。 在 [單一資料列]、[完整結果集]、[XML] 或 [無] 之間選擇。  
@@ -55,7 +55,7 @@ ms.locfileid: "48079438"
  **ConnectionType**  
  選擇用來連接到資料來源的連接管理員類型。 可用的連接類型包括 **OLE DB**、 **ODBC**、 **ADO**、 **ADO.NET** 和 **SQLMOBILE**。  
   
- **相關主題** [OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)、 [ODBC 連線管理員](connection-manager/odbc-connection-manager.md)、 [ADO 連線管理員](connection-manager/ado-connection-manager.md)、 [ADO.NET 連線管理員](connection-manager/ado-net-connection-manager.md)、 [SQL Server Compact Edition 連線管理員](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **相關的主題：**[OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)， [ODBC 連接管理員](connection-manager/odbc-connection-manager.md)， [ADO 連接管理員](connection-manager/ado-connection-manager.md)， [ADO.NET 連接管理員](connection-manager/ado-net-connection-manager.md)， [SQL ServerCompact Edition 連接管理員](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **[連接]**  
  從已定義的連接管理員清單中選擇連接。 若要建立新的連線，請選取 [\<新增連線...>]。  
@@ -65,11 +65,11 @@ ms.locfileid: "48079438"
   
  而根據執行 SQL 工作所使用的連接管理員類型，您必須在參數化 SQL 陳述式中使用特定的參數標記。  
   
- **相關主題**： [執行 SQL 工作](control-flow/execute-sql-task.md)中的＜執行參數化的 SQL 命令＞一節  
+ **相關的主題：** 執行參數化 SQL 命令 區段[執行 SQL 工作](control-flow/execute-sql-task.md)  
   
  這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**直接輸入**|將來源設定為 Transact-SQL 陳述式。 選取此值會顯示動態選項 [SQLStatement]。|  
 |**檔案連接**|選取包含 Transact-SQL 陳述式的檔案。 選取此選項會顯示動態選項 [FileConnection]。|  
@@ -81,7 +81,7 @@ ms.locfileid: "48079438"
  **BypassPrepare**  
  指出 SQL 陳述式是否已備妥。  `true` 會略過準備；`false` 會在執行它之前備妥 SQL 陳述式。 只有搭配支援準備的 OLE DB 連接，才能使用此選項。  
   
- **相關主題**  [備妥的執行](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
+ **相關的主題：**[備妥的執行](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
  **瀏覽**  
  使用 [開啟] 對話方塊，以尋找包含 SQL 陳述式的檔案。 選取要將檔案內容以 SQL 陳述式複製到 **SQLStatement** 屬性的檔案。  
@@ -96,21 +96,21 @@ ms.locfileid: "48079438"
   
 ### <a name="sqlsourcetype--direct-input"></a>SQLSourceType = 直接輸入  
  **SQLStatement**  
- 在選項方塊中輸入要執行的 SQL 陳述式，或按一下瀏覽按鈕 (…) 在 [輸入 SQL 查詢] 對話方塊中輸入 SQL 陳述式，或按一下 [建立查詢] 使用 [查詢產生器] 對話方塊來撰寫陳述式。  
+ 在選項方塊中鍵入要執行的 SQL 陳述式，或者按一下瀏覽按鈕 (...) 在 [輸入 SQL 查詢] 對話方塊中鍵入 SQL 陳述式，或按一下 [建置查詢] 使用 [查詢產生器] 對話方塊來撰寫陳述式。  
   
- **相關主題**︰[查詢產生器](../../2014/integration-services/query-builder.md)  
+ **相關的主題：**[查詢產生器](../../2014/integration-services/query-builder.md)  
   
 ### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = 檔案連接  
  **FileConnection**  
  選取現有的檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關的主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = 變數  
  **SourceVariable**  
  選取現有的變數，或按一下 [\<新增變數...>] 以建立新的變數。  
   
- **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[加入變數](../../2014/integration-services/add-variable.md)  
+ **相關的主題：**[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[加入變數](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

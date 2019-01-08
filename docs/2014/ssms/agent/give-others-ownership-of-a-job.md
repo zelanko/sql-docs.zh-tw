@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], owners
@@ -14,17 +14,17 @@ ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5245bd58ab52af1383cf056ac583729968d79162
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f22d153d55674d5dd615ab50848e4a7fd85a6dcb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203098"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800230"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
   此主題描述如何將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的擁有權重新指派給其他使用者。  
   
--   **開始之前：**[限制事項](#Restrictions)、[安全性](#Security)  
+-   **開始之前：**[限制事項](#Restrictions)，[安全性](#Security)  
   
 -   **若要使用下列項目賦予作業擁有權給其他人：**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48203098"
 >  如果將作業擁有權變更給非 **系統管理員 (sysadmin)** 固定伺服器角色成員的使用者，而且作業正在執行要求 Proxy 帳戶的作業步驟 (例如， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 套件執行)，請確定使用者擁有該 Proxy 帳戶的存取權，否則作業將會失敗。  
   
 ####  <a name="Permissions"></a> 權限  
- 如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)＞。  
+ 如需詳細資訊，請參閱＜ [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)＞。  
   
 ##  <a name="SSMSProc2"></a> 使用 SQL Server Management Studio  
  **若要賦予作業擁有權給其他人**  
@@ -70,7 +70,7 @@ ms.locfileid: "48203098"
   
 2.  在工具列上，按一下 **[新增查詢]**。  
   
-3.  在 [查詢] 視窗中，輸入使用下列陳述式[sp_manage_jobs_by_login &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql)系統預存程序。 下列範例會將 `danw` 的所有作業重新指派給 `françoisa`。  
+3.  在 [查詢] 視窗中，輸入使用下列陳述式[sp_manage_jobs_by_login &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql)系統預存程序。 下列範例會將 `danw` 的所有作業重新指派給 `fran??oisa`。  
   
     ```  
     USE msdb ;  
@@ -79,14 +79,14 @@ ms.locfileid: "48203098"
     EXEC dbo.sp_manage_jobs_by_login  
         @action = N'REASSIGN',  
         @current_owner_login_name = N'danw',  
-        @new_owner_login_name = N'françoisa' ;  
+        @new_owner_login_name = N'fran??oisa' ;  
     GO  
     ```  
   
 ##  <a name="SMOProc2"></a> 使用 SQL Server 管理物件  
  **若要賦予作業擁有權給其他人**  
   
-1.  呼叫`Job`藉由使用您選擇，例如 Visual Basic、 Visual C# 或 PowerShell 的程式語言的類別。 如需範例程式碼，請參閱 [使用 SQL Server Agent 排程自動管理工作](sql-server-agent.md)。  
+1.  使用所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell 呼叫 `Job` 類別。 如需範例程式碼，請參閱 [使用 SQL Server Agent 排程自動管理工作](sql-server-agent.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [實作作業](implement-jobs.md)   

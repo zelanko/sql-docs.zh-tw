@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f72b451ab5897593042189f77ba7c351f7ff8119
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4193f98f4431ae5d73cfeadb1ef9898bd330a078
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664088"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522178"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>使用 sql:overflow-field 擷取未耗用的資料 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- 此外，您必須建立 tempdb 資料庫的虛擬目錄，而範本的虛擬名稱的**範本**名為 「 範本 」 類型。  
+ 此外，您必須建立 tempdb 資料庫的虛擬目錄-和範本虛擬名稱的**範本**名為 「 範本 」 類型。  
   
  在下列範例中，對應結構描述會擷取儲存在 Customers2 資料表之 AddressOverflow 資料行中的未耗用資料：  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4a301cb0-2f5b-41ba-81bf-46b41d07f137
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 54aaed55b01302db08782e5d13fc2c912ead0ff2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca3f76c49b950f6830c4d60f011bbdb158055179
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096928"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796090"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Oracle Credentials for Running Script
   若要從 Oracle CDC 設計工具主控台執行 Oracle 補充記錄指令碼，此程式會提示您輸入執行此指令碼之 Oracle 使用者的認證。 若要執行此指令碼，Oracle 使用者必須擁有要擷取之所有資料表的 ALTER TABLE 權限以及 DBA_LOG_GROUPS 檢視表的 SELECT 權限。  
@@ -28,9 +27,9 @@ ms.locfileid: "48096928"
   
  選取下列其中一項：  
   
--   **Windows 驗證**：選取此選項可使用目前的 Windows 網域認證。 只有當設定 Oracle 資料庫使用 Windows 驗證時，才可使用這個選項。  
+-   **Windows 驗證**:選取此選項可使用目前的 Windows 網域認證。 只有當設定 Oracle 資料庫使用 Windows 驗證時，才可使用這個選項。  
   
--   **Oracle 驗證**：如果您選取這個選項，您必須在您所連接的來源 Oracle 資料庫中輸入使用者的 **[使用者名稱]** 和 **[密碼]** 。  
+-   **Oracle 驗證**:如果您選取此選項時，您必須輸入**使用者名**並**密碼**如您所連接的來源 Oracle 資料庫中的使用者。  
   
 ## <a name="see-also"></a>另請參閱  
  [如何管理 CDC 執行個體](manage-a-cdc-instance.md)   

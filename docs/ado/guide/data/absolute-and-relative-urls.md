@@ -15,12 +15,12 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c00420d6bed0b49c6e136c82f03460dcaaea8a85
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604878"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541921"
 ---
 # <a name="absolute-and-relative-urls"></a>絕對和相對 URL
 URL 會指定儲存在本機或網路的電腦上的目標位置。 目標可以是檔案、 目錄、 HTML 網頁、 影像、 程式及等等 *。*  
@@ -58,7 +58,7 @@ URL 會指定儲存在本機或網路的電腦上的目標位置。 目標可以
  內容也可以定義開啟**記錄**或是**資料錄集**物件，代表目錄，因為這些物件已經有隱含或明確宣告**連線**物件，指定內容。  
   
 ## <a name="scoped-operations"></a>已設定領域的作業  
- 內容也會定義範圍 — 也就是目錄和其子目錄可以參與的後續作業。 **記錄**物件有數種已設定領域的方法，作用於目錄和所有子目錄。 這些方法包括[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)， [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)，並[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)。  
+ 內容也會定義範圍-也就是目錄和其子目錄可以參與的後續作業。 **記錄**物件有數種已設定領域的方法，作用於目錄和所有子目錄。 這些方法包括[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)， [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)，並[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)。  
   
 ## <a name="relative-urls-as-command-text"></a>命令文字的相對 Url  
  您可以指定要在資料來源上執行輸入字串中的命令*CommandText*的參數**連線**物件的[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法，並在*來源*的參數**Recordset**物件的[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法。  

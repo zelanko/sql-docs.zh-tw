@@ -1,5 +1,5 @@
 ---
-title: 變更採礦模型中的資料行的離散化 |Microsoft 文件
+title: 變更採礦模型中的資料行的離散化 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e9d6b2c75becad147e196534bb4d366dff01a13d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8a85b645562ce39f19c15191b6b1d3ba4a7fb332
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015615"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538817"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>變更採礦模型中的資料行離散化
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在某些情況下會自動離散化值，也就是說，它會在數值資料行中分類收納資料。 例如，如果您的資料包含連續數值資料，而且您要建立決策樹模型，則連續資料的每一個資料行都將會自動分類收納 (視資料的分佈而定)。 如果您想要控制資料離散化的方式，您必須在採礦結構資料行上，變更可控制資料在模型內之使用方式的屬性。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會自動離散化值-也就是說，它分類收納數值資料行中的資料特定案例。 例如，如果您的資料包含連續數值資料，而且您要建立決策樹模型，則連續資料的每一個資料行都將會自動分類收納 (視資料的分佈而定)。 如果您想要控制資料離散化的方式，您必須在採礦結構資料行上，變更可控制資料在模型內之使用方式的屬性。  
   
  如需如何在採礦模型中設定屬性的一般資訊，請參閱 [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)。  
   
@@ -38,19 +38,19 @@ ms.locfileid: "34015615"
   
      <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 和 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 屬性現在就會啟用。  
   
-2.  在**屬性**視窗中，按一下文字方塊旁邊<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>並選取下列值之一：**自動**， **EqualAreas**，或**叢集**。  
+2.  在 **屬性**視窗中，按一下 下的一步 文字方塊<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>，然後選取下列值之一：**自動**， **EqualAreas**，或**叢集**。  
   
     > [!NOTE]  
     >  如果資料行使用方式是設定為 [忽略]，則資料行的 [屬性] 視窗為空白。  
   
      您在設計師中選取其他元素時，新值就會生效。  
   
-3.  在**屬性**視窗中，按一下文字方塊旁邊<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>輸入數字的值。  
+3.  在 **屬性**視窗中，按一下 下的一步 文字方塊<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>輸入數字的值。  
   
     > [!NOTE]  
     >  如果您變更這些屬性，就必須重新處理此結構，連同您想要使用新設定的任何模型。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型的工作與操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [採礦模型工作和操作說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

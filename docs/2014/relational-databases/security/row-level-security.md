@@ -16,15 +16,15 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e051e692361ab70d68103186dd24df8b5f7a6082
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e5167948e456b721ba831bd8a3d637bb7ea3d3b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188548"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810800"
 ---
 # <a name="row-level-security"></a>資料列層級安全性
-  資料列層級安全性可讓客戶能夠控制存取的使用者執行查詢 (例如，群組成員資格或執行內容) 的特性為基礎的資料庫資料表中的資料列。 資料列層級安全性現已推出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016年。 如需這項功能的目前描述，請參閱目前文件中的 [資料列層級安全性](https://msdn.microsoft.com/library/dn765131.aspx) 。  
+  資料列層級安全性可讓客戶能夠控制存取的使用者執行查詢 (例如，群組成員資格或執行內容) 的特性為基礎的資料庫資料表中的資料列。 目前資料列層級安全性在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 中已可供使用。 如需這項功能的目前描述，請參閱目前文件中的 [資料列層級安全性](https://msdn.microsoft.com/library/dn765131.aspx) 。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立安全性原則&#40;Azure SQL Database&#41;](/sql/t-sql/statements/create-security-policy-transact-sql)   

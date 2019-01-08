@@ -15,12 +15,12 @@ ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e786f699209c384f9baecbbe23a24e2ed5e3611
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb5490f023a2529d102d9ca505092b7f2bc28fec
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118298"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513034"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>設定 Analysis Services 專案屬性 (SSDT)
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中定義 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案時，將會包含一些影響 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案建立及部署的預設屬性。  
@@ -48,10 +48,10 @@ ms.locfileid: "48118298"
   
  專案一開始是以單一組態 (稱為「開發」) 來建立； 您可以使用組態管理員建立其他組態，並在不同的組態之間切換。  
   
- 在建立其他組態之前，所有開發人員都會使用這個共同的組態； 但是，在專案開發的各個不同階段期間 (例如，在最初開發專案及測試專案期間)，不同的開發人員可能會使用不同的資料來源，並針對不同用途將此專案部署到不同的伺服器； 組態可讓您保留不同組態檔內的這些不同設定。  
+ 在建立其他組態之前，所有開發人員都會使用這個共同的組態； 不過，在各個不同階段期間初始開發期間，例如專案開發和測試的專案-不同的開發人員將可能使用不同的資料來源並將專案部署到不同的伺服器中，針對不同用途。 組態可讓您保留不同組態檔內的這些不同設定。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立 Analysis Services 專案&#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
- [部署 Analysis Services 專案&#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
+ [建立 Analysis Services 專案 &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
+ [部署 Analysis Services 專案 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

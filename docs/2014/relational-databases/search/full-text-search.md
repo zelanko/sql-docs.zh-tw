@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: search
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
@@ -12,15 +12,15 @@ ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ef3beb381aa9cb5f6638920826d92bf01624e96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 560761383a06bf9e3b319546011d58c7c1bdecb4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144188"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788640"
 ---
 # <a name="full-text-search"></a>全文檢索搜尋
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的全文檢索搜尋可讓使用者和應用程式針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中以字元為主的資料，執行全文檢索查詢。 資料庫管理員必須先在資料表上建立全文檢索索引，才能在此資料表上執行全文檢索查詢。 全文檢索索引包括資料表中一或多個以字元為基礎的資料行。 這些資料行可以具有任何下列資料類型： `char`， `varchar`， `nchar`， `nvarchar`， `text`， `ntext`， `image`， `xml`，或`varbinary(max)`和 FILESTREAM。 每個全文檢索索引都會為資料表中的一個或多個資料行建立索引，而且每個資料行都可以使用特定的語言。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的全文檢索搜尋可讓使用者和應用程式針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中以字元為主的資料，執行全文檢索查詢。 資料庫管理員必須先在資料表上建立全文檢索索引，才能在此資料表上執行全文檢索查詢。 全文檢索索引包括資料表中一或多個以字元為基礎的資料行。 這些資料行可以具有下列任何資料類型：`char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml` 或 `varbinary(max)` 和 FILESTREAM。 每個全文檢索索引都會為資料表中的一個或多個資料行建立索引，而且每個資料行都可以使用特定的語言。  
   
  全文檢索查詢會根據特定語言的規則 (例如英文或日文) 在單字與片語上運作，藉以針對全文檢索索引中的文字資料執行語言搜尋。 全文檢索查詢可以包含簡單的單字和片語，或者單字或片語的多種形式。 全文檢索查詢會傳回至少包含一個符合項目 (也稱為 *「叫用」*(Hit)) 的任何文件。 如果目標文件包含全文檢索查詢中指定的所有詞彙，而且符合其他搜尋條件 (例如相符詞彙之間的距離)，就會出現符合項目。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "48144188"
 >  全文檢索搜尋是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 的選擇性元件。 如需詳細資訊，請參閱 <<c0> [ 安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)。  
   
 ##  <a name="benefits"></a> 我可以使用全文檢索搜尋來做什麼？  
- 全文檢索搜尋適用於各種商務案例，例如電子商務 (搜尋網站上的項目)、律師事務所 (在法律資料儲存機制中搜尋個案記錄)，或人力資源部門 (比對工作描述與預存的履歷表)。 不論商務案例為何，全文檢索搜尋的基本管理和開發工作都是相同的。 不過，在給定的商務案例中，可能會調整全文檢索索引和查詢來符合商務目標。 例如，對於電子商務而言，發揮最佳效能可能會比排序結果等級、重新叫用精確度 (全文檢索查詢實際傳回的現有相符項目數) 或支援多國語言更重要。 對於律師事務所而言，傳回每個可能的叫用 (資訊的 *「重新叫用總數」* (Total Recall)) 可能是最重要的考量。  
+ 全文檢索搜尋是適用於各種商務案例，例如 e-企業-搜尋網站上的項目在法律資料儲存機制; 案例律師事務所搜尋公司的法律或人力資源部門符合工作描述與預存的履歷表。 不論商務案例為何，全文檢索搜尋的基本管理和開發工作都是相同的。 不過，在給定的商務案例中，可能會調整全文檢索索引和查詢來符合商務目標。 例如，對於電子商務而言，發揮最佳效能可能會比排序結果等級、重新叫用精確度 (全文檢索查詢實際傳回的現有相符項目數) 或支援多國語言更重要。 對於律師事務所而言，傳回每個可能的叫用 (資訊的 *「重新叫用總數」* (Total Recall)) 可能是最重要的考量。  
   
  [本主題內容](#top)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48144188"
     AND product_cost < 200 ;  
     ```  
   
--   人員招募案例 - 搜尋具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用經驗的工作應徵者：  
+-   人員招募案例 - 搜尋具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用經驗的工作應徵者：  
   
     ```  
     SELECT candidate_name,SSN   
@@ -75,7 +75,7 @@ ms.locfileid: "48144188"
  [本主題內容](#top)  
   
 ###  <a name="like"></a> 比較 LIKE 與全文檢索搜尋  
- 相較於全文檢索搜尋，[LIKE](/sql/t-sql/language-elements/like-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 述詞只能針對字元模式運作。 您也無法使用 LIKE 述詞來查詢格式化的二進位資料。 此外，針對大量非結構化文字資料執行 LIKE 查詢的速度會比針對相同資料執行對等全文檢索查詢的速度要慢很多。 對於數百萬列的資料，使用 LIKE 查詢時可能要好幾分鐘才能傳回搜尋結果，但是使用全文檢索查詢時可能只要幾秒鐘的時間 (視傳回的資料列數目而定)。  
+ 相較於全文檢索搜尋， [LIKE](/sql/t-sql/language-elements/like-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 述詞只能針對字元模式運作。 您也無法使用 LIKE 述詞來查詢格式化的二進位資料。 此外，針對大量非結構化文字資料執行 LIKE 查詢的速度會比針對相同資料執行對等全文檢索查詢的速度要慢很多。 對於數百萬列的資料，使用 LIKE 查詢時可能要好幾分鐘才能傳回搜尋結果，但是使用全文檢索查詢時可能只要幾秒鐘的時間 (視傳回的資料列數目而定)。  
   
  [本主題內容](#top)  
   

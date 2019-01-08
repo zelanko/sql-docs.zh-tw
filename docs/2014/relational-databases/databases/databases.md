@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - data warehouse [SQL Server]
@@ -15,12 +14,12 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81efd94cf4b625a5f0584b3769d236c14b4ca3e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 366a09bce079023f59f38682b51a7a5858671fcc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214838"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816290"
 ---
 # <a name="databases"></a>資料庫
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的資料庫是由資料表集合所組成，該集合內儲存了一組特定的結構資料。 而資料表中則包含資料列集合 (也稱為記錄或 Tuple) 和資料行 (也稱為屬性) 集合。 資料表中的每個資料行都是為了儲存某類型資訊而設計，例如，日期、名稱、金額和數字。  
@@ -49,7 +48,7 @@ ms.locfileid: "48214838"
 |[檔案狀態](file-states.md)|[壓縮資料庫](shrink-a-database.md)|  
 |[估計資料庫的大小](estimate-the-size-of-a-database.md)|[壓縮檔案](shrink-a-file.md)|  
 |[複製資料庫至其他伺服器](copy-databases-to-other-servers.md)|[檢視或變更資料庫的屬性](view-or-change-the-properties-of-a-database.md)|  
-|[資料庫卸離和附加 &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)|[檢視 SQL Server 執行個體上的資料庫清單](view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
+|[資料庫卸離與附加 &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)|[檢視 SQL Server 執行個體上的資料庫清單](view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
 |[將資料或記錄檔加入資料庫](add-data-or-log-files-to-a-database.md)|[檢視或變更資料庫的相容性層級](view-or-change-the-compatibility-level-of-a-database.md)|  
 |[變更資料庫的組態設定](change-the-configuration-settings-for-a-database.md)|[使用維護計畫精靈](../maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |[建立資料庫](create-a-database.md)|[建立使用者定義資料類型別名](create-a-user-defined-data-type-alias.md)|  

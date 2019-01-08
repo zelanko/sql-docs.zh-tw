@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 990e50fb-b3ee-4366-8613-2c40d4a456f7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c40d64bceec4c05929b808a85908b882705dbbe6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee6325c134070f60fa578709d2247c85dc3d5173
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145388"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773310"
 ---
 # <a name="cursorprepare-event-class"></a>CursorPrepare 事件類別
   **CursorPrepare** 事件類別描述在應用程式開發介面 (API) 資料指標中發生的資料指標準備事件。 當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將與資料指標相關聯的 SELECT 陳述式編譯到執行計畫中，但並未建立資料指標時，就會發生資料指標準備事件。  

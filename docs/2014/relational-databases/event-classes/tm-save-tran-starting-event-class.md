@@ -1,11 +1,10 @@
 ---
-title: 'TM: Save Tran Starting 事件類別 | Microsoft 文件'
+title: TM:Save Tran Starting 事件類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,17 +14,17 @@ ms.assetid: 6f19fe7c-a452-4323-b957-7e17d13bf8fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12835350620a059e9bc214ed1abf3c629a953cae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b33f4a2d85f2613b238c9bd9b2e59415784b2a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204592"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801440"
 ---
-# <a name="tm-save-tran-starting-event-class"></a>TM: Save Tran Starting 事件類別
-  TM: Save Tran Starting 事件類別指出正在啟動 SAVE TRANSACTION 要求。 此要求是從用戶端透過 Transaction Management 介面傳送的。  
+# <a name="tm-save-tran-starting-event-class"></a>TM:Save Tran Starting 事件類別
+  TM:Save Tran Starting 事件類別指出正在啟動 SAVE TRANSACTION 要求。 此要求是從用戶端透過 Transaction Management 介面傳送的。  
   
-## <a name="tm-save-tran-starting-event-class-data-columns"></a>TM: Save Tran Starting 事件類別資料行  
+## <a name="tm-save-tran-starting-event-class-data-columns"></a>TM:Save Tran Starting 事件類別資料行  
   
 |資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  

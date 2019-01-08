@@ -1,5 +1,5 @@
 ---
-title: 設定 Analysis Services 及 Kerberos 限制委派 (KCD) |Microsoft 文件
+title: 設定 Analysis Services 及 Kerberos 限制委派 (KCD) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,31 +9,31 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: be9fde53d440ff82a34fafce3230cdfbf85f2897
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: cc8c2ee84c8210adc3a52d81deff5edf6d3f542f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019245"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811150"
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>設定 Analysis Services 及 Kerberos 限制委派 (KCD)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Kerberos 限制委派 (KCD) 是驗證通訊協定，您可使用 Windows 驗證對其進行設定，在整個環境的服務間委派用戶端認證。 KCD 需要其他基礎結構 (例如網域控制站)，以及您環境的其他組態。 某些在 SharePoint 2016 使用 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 資料的案例會需要 KCD。 在 SharePoint 2016 中，Excel Services 已從 SharePoint 伺服器陣列外移到不同的新伺服器： **Office Online Server**。 因為 Office Online Server 是獨立的，所以對於在典型雙躍點案例中委派用戶端認證的方法，其需求漸增。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  KCD 可讓帳戶模擬另一個帳戶，以提供資源的存取權。 進行模擬的帳戶可以是指派給 Web 應用程式的服務帳戶或網頁伺服器的電腦帳戶，而受模擬的帳戶必須是要求資源存取權的使用者帳戶。 KCD 會在服務層級運作，讓模擬的帳戶可將存取權授與伺服器上選取的服務，同時拒絕讓相同伺服器上的其他服務或其他伺服器上的服務進行存取。  
   
  本主題中的章節將檢閱需要 KCD 的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 及 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 常見案例，還有範例伺服器部署可讓您大致了解需要安裝及設定的項目。 如需其中涉及的技術 (例如網域控制站及 KCD) 詳細資訊，請參閱 [其他資訊及社群內容](#bkmk_moreinfo) 一節中的連結。  
   
-## <a name="scenario-1-workbook-as-data-source-wds"></a>案例 1︰以活頁簿作為資料來源 (WDS)。  
- ![請參閱 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "看到 1") Office Online Server 會開啟 Excel 活頁簿和![請參閱 2](../../../analysis-services/instances/install-windows/media/ssas-callout2.png "請參閱 2")偵測到另一個活頁簿的資料連接。 Office Online Server 傳送要求以[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]重新導向程式服務![看到 3](../../../analysis-services/instances/install-windows/media/ssas-callout3.png "看到 3")開啟第二個活頁簿和資料![請參閱 4](../../../analysis-services/instances/install-windows/media/ssas-callout4.png "請參閱 4").  
+## <a name="scenario-1-workbook-as-data-source-wds"></a>案例 1：活頁簿作為資料來源 (WDS)。  
+ ![請參閱 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "請參閱 1") Office Online Server 會開啟 Excel 活頁簿並![看到 2](../../../analysis-services/instances/install-windows/media/ssas-callout2.png "看到 2")偵測到另一個活頁簿的資料連接。 Office Online Server 傳送要求給[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]重新導向程式服務![看到 3](../../../analysis-services/instances/install-windows/media/ssas-callout3.png "看到 3")以開啟另一個活頁簿和資料![請參閱 4](../../../analysis-services/instances/install-windows/media/ssas-callout4.png "看到 4").  
   
  在此案例中，必須將使用者認證從 Office Online Server 委派給 SharePoint 中的 SharePoint [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 重新導向程式服務。  
   
  ![做為資料來源的活頁簿](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-wds.png "做為資料來源的活頁簿")  
   
-## <a name="scenario-2-an-analysis-services-tabular-model-links-to-an-excel-workbook"></a>案例 2：連結至 Excel 活頁簿的 Analysis Services 表格式模型  
- Analysis Services 表格式模型![看到 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "看到 1")連結到包含 Power Pivot 模型的 Excel 活頁簿。 在此案例中，當 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 載入表格式模型時， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會偵測到活頁簿的連結。 處理模型時， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會將查詢要求傳送至 SharePoint，以載入活頁簿。 在此案例中，「不」  需要將用戶端認證從 Analysis Services 委派給 SharePoint，不過用戶端應用程式可能會覆寫非正規繫結中的資料來源資訊。 如果非正規繫結要求指定要模擬目前的使用者，就必須委派使用者認證，而這會需要在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 與 SharePoint 之間設定 KCD。  
+## <a name="scenario-2-an-analysis-services-tabular-model-links-to-an-excel-workbook"></a>案例 2:Excel 活頁簿的 Analysis Services 表格式模型連結  
+ Analysis Services 表格式模型![請參閱 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "請參閱 1")包含 Powerpivot 模型的 Excel 活頁簿的連結。 在此案例中，當 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 載入表格式模型時， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會偵測到活頁簿的連結。 處理模型時， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會將查詢要求傳送至 SharePoint，以載入活頁簿。 在此案例中，「不」  需要將用戶端認證從 Analysis Services 委派給 SharePoint，不過用戶端應用程式可能會覆寫非正規繫結中的資料來源資訊。 如果非正規繫結要求指定要模擬目前的使用者，就必須委派使用者認證，而這會需要在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 與 SharePoint 之間設定 KCD。  
   
  ![office online server](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-oos.png "office online server")  
   
@@ -53,13 +53,13 @@ ms.locfileid: "34019245"
 ### <a name="domain-controller"></a>網域控制站  
  以下摘要說明要為網域控制站 (DC) 安裝的項目。  
   
--   **角色** ︰Active Directory 網域服務。 如需概觀，請參閱 [Configuring Active Directory (AD DS) in Windows Server 2012](http://sharepointgeorge.com/2012/configuring-active-directory-ad-ds-in-windows-server-2012/)(在 Windows Server 2012 中設定 Active Directory (AD DS))。  
+-   **角色：** Active Directory 網域服務。 如需概觀，請參閱 [Configuring Active Directory (AD DS) in Windows Server 2012](http://sharepointgeorge.com/2012/configuring-active-directory-ad-ds-in-windows-server-2012/)(在 Windows Server 2012 中設定 Active Directory (AD DS))。  
   
--   **角色** ︰DNS 伺服器  
+-   **角色：** DNS 伺服器  
   
 -   **功能** ︰.NET Framework 3.5 功能/.NET Framework 3.5  
   
--   **功能** ：遠端伺服器管理工具/角色管理工具  
+-   **功能：** 遠端伺服器管理工具 / 角色管理工具  
   
 -   設定 Active Directory 以建立新的樹系，並將電腦聯結至網域。 您必須先將用戶端電腦 DNS 設為 DC 的 IP 位址，然後再嘗試將其他電腦加入私人網域中。 在 DC 電腦上，執行 `ipconfig /all` 為下個步驟取得 IPv4 及 IPv6 位址。  
   
@@ -92,17 +92,17 @@ ms.locfileid: "34019245"
 ### <a name="2016-sql-server-database-engine-and-analysis-services-in-power-pivot-mode"></a>2016 SQL Server 資料庫引擎和 Power Pivot 模式的 Analysis services  
  以下摘要說明要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 電腦上安裝的項目。  
   
- ![請注意](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")中[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]安裝精靈[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中 Power Pivot 模式安裝做為特徵選取工作流程的一部分。  
+ ![附註](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")中[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]安裝精靈中，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中 Power Pivot 模式安裝做為特徵選取工作流程的一部分。  
   
 1.  執行 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安裝精靈，然後從特徵選取頁面依序按一下資料庫引擎、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]及管理工具。 您可在安裝精靈稍後的安裝中，對 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 指定 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]模式。  
   
-2.  為執行個體組態設定具名執行個體 "POWERPIVOT"。  
+2.  對於執行個體組態設定具名執行個體"Powerpivot"。  
   
-3.  在 [Analysis Services 組態] 頁面上，設定 **PowerPivot** 模式的 Analysis Services 伺服器，並將 Office Online Server 的 **電腦名稱** 加入 Analysis Services 伺服器管理員清單中。 如需詳細資訊，請參閱[以 PowerPivot 模式安裝 Analysis Services](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)。  
+3.  在 [Analysis Services 組態] 頁面上，設定 **PowerPivot** 模式的 Analysis Services 伺服器，並將 Office Online Server 的 **電腦名稱** 加入 Analysis Services 伺服器管理員清單中。 如需詳細資訊，請參閱 [以 PowerPivot 模式安裝 Analysis Services](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)。  
   
-4.  請注意，根據預設，搜尋中不包括 “Computer” 物件類型。 按一下![按一下要新增電腦帳戶物件](../../../analysis-services/instances/install-windows/media/ss-objects-button.png "按一下要新增電腦帳戶物件")新增 Computers 物件。  
+4.  請注意，預設的 「 電腦 」 物件型別並未包含在搜尋中。 按一下 ![按一下 新增電腦帳戶物件](../../../analysis-services/instances/install-windows/media/ss-objects-button.png "按一下 新增電腦帳戶物件")新增電腦物件。  
   
-     ![將電腦帳戶新增為 ssas 管理員](../../../analysis-services/instances/media/ssas-in-ssms-computerobjects.png "ssas 系統管理員的身分新增電腦帳戶")  
+     ![將電腦帳戶新增為 ssas administrators](../../../analysis-services/instances/media/ssas-in-ssms-computerobjects.png "ssas 系統管理員的身分新增電腦帳戶")  
   
 5.  建立 Analysis Services 執行個體的服務主體名稱 (SPN)。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "34019245"
   
 7.  請對您會在其中進行重新整理的任何外部來源 (例如 SQL Server 或 Excel 檔案)，在 Analysis Services 服務帳戶上**設定限制委派** 。 我們想確定下列項目在 Analysis Services 帳戶已完成設定  
   
-     **注意** ︰若您在 [Active Directory 使用者和電腦] 中看不到帳戶的 [委派] 索引標籤，是因為該帳戶上沒有 SPN。  您可以新增假的 SPN (例如 `my/spn`) 使其出現。  
+     **注意：** 如果您看不見委派 索引標籤，帳戶的 Active Directory 使用者和電腦 中，它是因為該帳戶上沒有 SPN。  您可以新增假的 SPN (例如 `my/spn`) 使其出現。  
   
      **信任這個使用者，但只委派指定的服務** ，並 **使用任何驗證通訊協定**。  
   
@@ -149,11 +149,11 @@ ms.locfileid: "34019245"
   
     1.  在 Office Online Server 上，以系統管理權限開啟 PowerShell 視窗，並執行下列命令  
   
-    2.  `New-OfficeWebAppsExcelBIServer –ServerId <AS instance name>`  
+    2.  `New-OfficeWebAppsExcelBIServer -ServerId <AS instance name>`  
   
-    3.  範例： `New-OfficeWebAppsExcelBIServer –ServerId "MTGQLSERVER-13\POWERPIVOT"`  
+    3.  範例： `New-OfficeWebAppsExcelBIServer -ServerId "MTGQLSERVER-13\POWERPIVOT"`  
   
-3.  **設定 Active Directory** 以允許 Office Online Server 電腦帳戶模擬 SharePoint 服務帳戶的使用者。 因此，請在 Office Online Server 上為 SharePoint Web 服務執行應用程式集區的主體上設定委派內容：本章節中的 PowerShell 命令需要 Active Directory PowerShell 物件。  
+3.  **設定 Active Directory** 以允許 Office Online Server 電腦帳戶模擬 SharePoint 服務帳戶的使用者。 因此，在主體執行應用程式集區的 Office Online Server 上的 SharePoint Web 服務設定委派內容：在本節中的 PowerShell 命令需要 Active Directory (AD) PowerShell 物件。  
   
     1.  取得 Office Online Server 的 Active Directory 身分識別  
   
@@ -161,7 +161,7 @@ ms.locfileid: "34019245"
         $computer1 = Get-ADComputer -Identity [ComputerName]  
         ```  
   
-         您可以在工作管理員 / 詳細資料 / w3wp.exe 的使用者名稱，找到此主體名稱。 例如 "svcSharePoint"  
+         您可以在工作管理員 / 詳細資料 / w3wp.exe 的使用者名稱，找到此主體名稱。 例如"svcSharePoint"  
   
         ```  
         Set-ADUser svcSharePoint -PrincipalsAllowedToDelegateToAccount $computer1  
@@ -171,12 +171,12 @@ ms.locfileid: "34019245"
     2.  確認屬性已正確設定  
   
     3.  ```  
-        Get-ADUser svcSharePoint –Properties PrincipalsAllowedToDelegateToAccount  
+        Get-ADUser svcSharePoint -Properties PrincipalsAllowedToDelegateToAccount  
         ```  
   
 4.  請對 Analysis Services PowerPivot 執行個體的 Office Online Server 帳戶**設定限制委派** 。 這必須是執行 Office Online Server 的電腦帳戶。 我們想確定下列項目在 Office Online Service 帳戶已完成設定。  
   
-     **注意︰** 若您在 [Active Directory 使用者和電腦] 中看不到帳戶的 [委派] 索引標籤，是因為該帳戶上沒有 SPN。  您可以新增假的 SPN (例如 `my/spn`) 使其出現。  
+     **注意：** 如果您看不見委派 索引標籤，帳戶的 Active Directory 使用者和電腦 中，它是因為該帳戶上沒有 SPN。  您可以新增假的 SPN (例如 `my/spn`) 使其出現。  
   
      **信任這個使用者，但只委派指定的服務** ，並 **使用任何驗證通訊協定**。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "34019245"
   
 4.  執行 [PowerPivot 組態精靈]。 請參閱 [PowerPivot 組態工具](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   
-5.  將 SharePoint 連接至 Office Online Server。    ??Configure_xlwac_on_SPO.ps1 ??  
+5. 連接至 Office Online Server 的 SharePoint。 (Configure_xlwac_on_SPO.ps1)
   
 6.  設定 Kerberos 的 SharePoint 驗證提供者。 **此為案例 1 所需**。 如需詳細資訊，請參閱 [Plan for Kerberos authentication in SharePoint 2013](https://technet.microsoft.com/library/ee806870.aspx)(規劃 SharePoint 2013 的 Kerberos 驗證)。  
   

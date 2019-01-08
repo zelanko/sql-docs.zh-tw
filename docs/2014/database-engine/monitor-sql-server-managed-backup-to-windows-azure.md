@@ -10,12 +10,12 @@ ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e3406468961dcd5817fb88b5a30098177ec6ac67
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7b7b6cc8127b339a45a5f651af6db4d0b595b80
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073238"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529964"
 ---
 # <a name="monitor-sql-server-managed-backup-to-windows-azure"></a>監視 SQL Server Managed Backup 到 Windows Azure
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]有內建的測量工具，可用於找出備份程序中的問題和錯誤，並在可能時施以更正動作加以矯正。  不過有某些狀況需要使用者介入。 本主題描述可用於判斷備份之整體健康情況的工具，並找出需要處理的所有錯誤。  
@@ -125,15 +125,15 @@ GO
   
  **通知架構：**  
   
--   **原則式管理：** 兩個原則設定為監視備份健全狀態：**智慧型管理系統健全狀況原則**，而**智慧管理使用者動作健全狀況原則**。 智慧型管理系統健全狀況原則會評估嚴重的錯誤，例如缺少或無效的 SQL 認證以及連接錯誤，並且回報系統的健全狀況。 這些通常需要手動的動作才能修正基礎的問題。 智慧管理使用者動作健全狀況原則會評估警告訊息，例如損毀的備份等等。  這些可能不需要任何動作，只是事件的警告訊息。 依照預期，這類問題會由[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]代理程式自動處理。  
+-   **原則式管理：** 設定兩個原則監視備份健全狀態：**Smart Admin 系統健全狀況原則**，而**智慧管理使用者動作健全狀況原則**。 智慧型管理系統健全狀況原則會評估嚴重的錯誤，例如缺少或無效的 SQL 認證以及連接錯誤，並且回報系統的健全狀況。 這些通常需要手動的動作才能修正基礎的問題。 智慧管理使用者動作健全狀況原則會評估警告訊息，例如損毀的備份等等。  這些可能不需要任何動作，只是事件的警告訊息。 依照預期，這類問題會由[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]代理程式自動處理。  
   
--   **SQL Server Agent**作業： 使用具有三個作業步驟的 SQL Server Agent 作業以執行通知。 在第一個作業步驟中，它會偵測[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]是否為資料庫或執行個體進行設定。 當其偵測到已有啟用及設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]時，會執行第二個步驟：透過評估 SQL Server 原則式管理原則，執行 PowerShell 指令程式評估健康狀態。 若是偵測到錯誤或警告便，其會失敗，然後觸發第三個步驟︰傳送隨附此錯誤/警告報表的電子郵件通知。  但是此 SQL Server Agent 預設為不啟用。 若要啟用電子郵件通知工作，請使用**smart_admin.sp_set_backup_parameter**系統預存程序。  下列程序將更詳細說明這些步驟：  
+-   **SQL Server Agent**作業：通知是使用具有三個作業步驟的 SQL Server Agent 工作來執行。 在第一個作業步驟中，它會偵測[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]是否為資料庫或執行個體進行設定。 當其偵測到已有啟用及設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]時，會執行第二個步驟：透過評估 SQL Server 原則式管理原則，執行 PowerShell 指令程式評估健康狀態。 如果發現錯誤或警告，它會因為失敗而，然後觸發第三個步驟：第三個步驟送出電子郵件通知錯誤/警告報表。  但是此 SQL Server Agent 預設為不啟用。 若要啟用電子郵件通知工作，請使用**smart_admin.sp_set_backup_parameter**系統預存程序。  下列程序將更詳細說明這些步驟：  
   
 ##### <a name="enabling-email-notification"></a>啟用電子郵件通知  
   
 1.  如果尚未設定 Database Mail，使用中所述的步驟[設定 Database Mail](../relational-databases/database-mail/configure-database-mail.md)。  
   
-2.  將資料庫設定 SQL Server 警示系統的郵件系統： 以滑鼠右鍵按一下**SQL Server Agent**，選取**警示系統**，檢查**啟用郵件設定檔**方塊中，選取**Database Mail**作為**郵件系統**，然後選取先前建立的郵件設定檔。  
+2.  將資料庫設定為郵件系統中，SQL Server 警示系統：以滑鼠右鍵按一下**SQL Server Agent**，選取**警示系統**，檢查**啟用郵件設定檔**方塊中，選取**Database Mail** 為**郵件系統**，然後選取先前建立的郵件設定檔。  
   
 3.  在查詢視窗中執行下列查詢，並提供您希望通知送達的電子郵件地址：  
   
@@ -199,7 +199,7 @@ EXEC msdb.smart_admin.sp_set_parameter
 ### <a name="using-powershell-to-setup-custom-health-monitoring"></a>使用 PowerShell 設定自訂健全狀況監視  
  **Test-sqlsmartadmin** cmdlet 可用來建立自訂健全狀況監視。 例如，前一節所述的通知選項可在執行個體層級設定。  如果您將多個 SQL Server 執行個體設定為使用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]，即可使用 PowerShell 指令程式建立指令碼，以收集所有執行個體之備份的狀態及健全狀態。  
   
- **Test-sqlsmartadmin** cmdlet 會評估 SQL Server 原則式管理原則所傳回的警告與錯誤，然後回報積存狀態。  根據預設，此指令程式使用系統原則。 若要包含所有自訂原則，請使用 `–AllowUserPolicies` 參數。  
+ **Test-sqlsmartadmin** cmdlet 會評估 SQL Server 原則式管理原則所傳回的警告與錯誤，然後回報積存狀態。  根據預設，此指令程式使用系統原則。 若要包含所有自訂原則，請使用 `-AllowUserPolicies` 參數。  
   
  下面是 PowerShell 指令碼的範例，它會根據系統原則和所有建立的使用者原則，傳回錯誤和警告報告：  
   
@@ -250,16 +250,16 @@ smart_backup_files;
   
  下面是傳回之不同狀態的詳細說明：  
   
--   **可用-A**這是正常的備份檔案。 備份已經完成，也已經確認它可在 Windows Azure 儲存體中使用。  
+-   **使用-a:** 這是正常的備份檔案。 備份已經完成，也已經確認它可在 Windows Azure 儲存體中使用。  
   
--   **複製進行中的-b:** 這個狀態是專門針對可用性群組資料庫。 如果[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]在備份記錄鏈結中偵測到中斷，它會先嘗試識別可能在備份鏈結中造成中斷的備份。 在尋找備份檔案時，它會嘗試將檔案複製到 Windows Azure 儲存體。 當複製作業正在進行時，它將會顯示這個狀態。  
+-   **複製進行中的-b:** 此狀態是專門針對可用性群組資料庫。 如果[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]在備份記錄鏈結中偵測到中斷，它會先嘗試識別可能在備份鏈結中造成中斷的備份。 在尋找備份檔案時，它會嘗試將檔案複製到 Windows Azure 儲存體。 當複製作業正在進行時，它將會顯示這個狀態。  
   
--   **複製失敗-F**類似複製進行中 」，這是專用的可用性群組資料庫。 如果複製程序失敗，狀態會標示成 F。  
+-   **複製失敗-f:** 類似於複製進行中 」，這是專用的可用性群組資料庫。 如果複製程序失敗，狀態會標示成 F。  
   
--   **已損毀-c:** 如果[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]是無法多次嘗試之後，即使執行 RESTORE HEADER_ONLY 命令來確認儲存體中的備份檔案，它將此檔案標示為損毀。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會排程備份，以確保損毀的檔案不會導致備份鏈結中斷。  
+-   **損毀-c:** 如果[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]是無法多次嘗試之後，即使執行 RESTORE HEADER_ONLY 命令來確認儲存體中的備份檔案，它將此檔案標示為損毀。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會排程備份，以確保損毀的檔案不會導致備份鏈結中斷。  
   
--   **已刪除-d:** Windows Azure 儲存體中找不到對應的檔案。 如果已刪除的檔案造成備份鏈結中斷，[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]將會排程備份。  
+-   **已刪除-d:** 在 Windows Azure 儲存體中找不到對應的檔案。 如果已刪除的檔案造成備份鏈結中斷，[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]將會排程備份。  
   
--   **未知-U**此狀態指出[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]尚未能夠確認檔案是否存在，而且它在 Windows Azure 儲存體中的屬性。 下次執行此程序時 (大約每隔 15 分鐘執行一次)，將會更新此狀態。  
+-   **未知-u:** 此狀態指出[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]尚未能夠確認檔案是否存在，而且它在 Windows Azure 儲存體中的屬性。 下次執行此程序時 (大約每隔 15 分鐘執行一次)，將會更新此狀態。  
   
   

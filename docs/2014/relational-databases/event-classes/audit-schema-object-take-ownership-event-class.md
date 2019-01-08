@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 66f39d9b-9ec2-48a7-8a9e-1b42931299c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0106c8c08361b3017aceef03ed8f5f6bcd0e70d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1f87c3c612be25660b5949f57d3ba0745f23587
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210048"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804030"
 ---
 # <a name="audit-schema-object-take-ownership-event-class"></a>Audit Schema Object Take Ownership 事件類別
   檢查是否有變更結構描述物件 (例如資料表、程序或函數) 擁有者的權限時，就會發生 **Audit Schema Object Take Ownership** 事件類別。 這是在使用 ALTER AUTHORIZATION 陳述式指派物件的擁有者時發生。  

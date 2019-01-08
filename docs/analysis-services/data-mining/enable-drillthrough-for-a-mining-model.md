@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0de38435c74f68e2558f0b6893324bc431dc32ed
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ec6d880c6b32a092f6d4da8b85dfd6693280da7d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145393"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535228"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>針對採礦模型啟用鑽研
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "50145393"
   
 -   即使您沒有結構的權限，模型的鑽研權限還是可以讓您從模型進行鑽研。  
   
--   結構的鑽研權限可以使用 [StructureColumn &#40;DMX&#41;](../../dmx/structurecolumn-dmx.md) 函數，提供將結構資料行從模型加入到鑽研查詢的額外功能。 您也可以查詢結構中的定型和測試案例，方法是使用 SELECT… 從\<結構 >。案例的語法。  
+-   結構的鑽研權限可以使用 [StructureColumn &#40;DMX&#41;](../../dmx/structurecolumn-dmx.md) 函數，提供將結構資料行從模型加入到鑽研查詢的額外功能。 您也可以查詢的定型和測試案例，在結構中，方法是使用 SELECT...從\<結構 >。案例的語法。  
   
  **快取定型案例** ：鑽研藉由擷取採礦結構中定型案例的相關資訊來運作。 這項資訊會在處理結構時快取。 因此，如果您選擇將 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 屬性變更為 **ClearAfterProcessing**來清除所有快取的資料，鑽研將不會運作。  
   

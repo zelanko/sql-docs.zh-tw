@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e961628f9cae062861b61bf46569331cd42da61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f53c456832e89aa96c0f7c9a1decd9fabbe96360
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087010"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815960"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>管理工具命令列選項 (Distributed Replay Utility)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具， `DReplay.exe`，是命令列工具，可用來與 distributed 的 replay controller 通訊。 您可以使用管理工具來起始、監視及取消控制器上的作業。  
@@ -59,13 +59,13 @@ Usage:
   
  如需包含命令引數和範例的詳細語法資訊，請參閱下列主題：  
   
--   [前置處理選項&#40;Distributed Replay 管理工具&#41;](preprocess-option-distributed-replay-administration-tool.md)  
+-   [前置處理選項 &#40;Distributed Replay 管理工具&#41;](preprocess-option-distributed-replay-administration-tool.md)  
   
--   [重新執行選項&#40;Distributed Replay 管理工具&#41;](replay-option-distributed-replay-administration-tool.md)  
+-   [重新執行選項 &#40;Distributed Replay 管理工具&#41;](replay-option-distributed-replay-administration-tool.md)  
   
--   [狀態選項&#40;Distributed Replay 管理工具&#41;](status-option-distributed-replay-administration-tool.md)  
+-   [狀態選項 &#40;Distributed Replay 管理工具&#41;](status-option-distributed-replay-administration-tool.md)  
   
--   [取消選項&#40;Distributed Replay 管理工具&#41;](cancel-option-distributed-replay-administration-tool.md)  
+-   [取消選項 &#40;Distributed Replay 管理工具&#41;](cancel-option-distributed-replay-administration-tool.md)  
   
  RPC 以 RPC 形式重新執行，而不是以語言事件的形式重新執行。  
   

@@ -33,12 +33,12 @@ ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7f60ff110646eebb9424c992efba2ca7e3ab1ac4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f82da51a519525451078a7f65548a91a532a0c86
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625066"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537312"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>在 SQL Server 中註冊使用者定義型別
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ WITH PERMISSION_SET = SAFE;
 ```  
 USE AdventureWorks;  
 CREATE ASSEMBLY Point  
-FROM 0xfeac4 … 21ac78  
+FROM 0xfeac4 ... 21ac78  
 ```  
   
 ### <a name="using-create-type"></a>使用 CREATE TYPE  

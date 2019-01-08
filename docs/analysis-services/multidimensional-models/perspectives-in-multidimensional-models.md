@@ -1,5 +1,5 @@
 ---
-title: 多維度模型中的檢視方塊 |Microsoft 文件
+title: 檢視方塊，在 Analysis Services 多維度模型 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5427142f682d4fb76011c0514539267d05c3097b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ae14c0e76564ebcaffecb7591d14c283fffd2906
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023675"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072585"
 ---
 # <a name="perspectives-in-multidimensional-models"></a>多維度模型中的檢視方塊
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,6 +52,6 @@ ms.locfileid: "34023675"
  若要檢視任何物件，請展開 [Cube 物件] 之下，任何物件類型的類別目錄 ([量值群組]、[維度]、[KPI]、[計算] 或 [動作])。 若要檢視維度中的階層或屬性，請先展開維度，然後展開 [階層] 或 [屬性] 資料列。 若要檢視量值群組中的量值，請展開量值群組。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的 cube](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
+ [多維度模型中的 Cube](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

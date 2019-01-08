@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f34454f292e7efc92c960930b6a9218edae6a70f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6c451d13016915c9218efb2963429f8f5a7709e2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148313"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544226"
 ---
 # <a name="performing-batch-operations-xmla"></a>執行批次作業 (XMLA)
   您可以使用[批次](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla)XML for Analysis (XMLA) 使用來執行多個 XMLA 命令的單一 XMLA 命令[Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)方法。 您可以執行多個命令中包含**批次**命令當做單一交易或在個別的交易，每個命令，以序列或平行。 您也可以指定程式碼外部繫結和其他屬性**批次**命令，以處理多個[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件。  
@@ -23,12 +23,12 @@ ms.locfileid: "50148313"
  **批次**兩種方式之一執行命令：  
   
  **異動**  
- 如果**交易**屬性**批次**命令會設定為 true 時，**批次**命令執行命令的命令所包含的所有**批次**命令在單一交易中 —*異動*批次。  
+ 如果**交易**屬性**批次**命令會設定為 true 時，**批次**命令執行命令的命令所包含的所有**批次**命令在交易內的單一*異動*批次。  
   
  如果交易式批次中有任何命令失敗[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]回復任何命令**批次**失敗命令前執行的命令並**批次**命令會立即結束。 中的任何命令**批次**尚未執行的命令不會執行。 在後**批次**命令結束，**批次**命令會報告失敗的命令發生任何錯誤。  
   
  **非交易式**  
- 如果**交易**屬性設為 false，**批次**命令會執行所包含的每個命令**批次**命令，在個別的交易， *非交易式*批次。 如果非交易式批次中有任何命令失敗**批次**命令會繼續執行命令之後失敗的命令。 在後**批次**命令會嘗試執行的所有命令，**批次**命令包含，**批次**命令會報告發生任何錯誤。  
+ 如果**交易**屬性設為 false，**批次**命令會執行所包含的每個命令**批次**命令在交易內的個別*非交易式*批次。 如果非交易式批次中有任何命令失敗**批次**命令會繼續執行命令之後失敗的命令。 在後**批次**命令會嘗試執行的所有命令，**批次**命令包含，**批次**命令會報告發生任何錯誤。  
   
  中的命令所傳回的所有結果**批次**命令會傳回中所含的命令的順序相同**批次**命令。 所傳回的結果**批次**命令異**批次**命令是交易式或非交易式。  
   

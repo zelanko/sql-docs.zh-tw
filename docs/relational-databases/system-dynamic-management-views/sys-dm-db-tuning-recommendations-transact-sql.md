@@ -23,19 +23,19 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0faae3cec2d71c28056a384b196a9b46929d5d6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb5b2558a6dca79d4794b5d12c8e63fd6f002312
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792106"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527499"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_微調\_建議 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   傳回有關微調建議的詳細的資訊。  
   
- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，動態管理檢視不可以公開可能會影響資料庫內含項目的資訊或公開有關使用者可存取之其他資料庫的資訊。 為了避免公開此資訊，包含不屬於連接租用戶之資料的每個資料列都會被篩選出來。
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，動態管理檢視不可以公開可能會影響資料庫內含項目的資訊或公開有關使用者可存取之其他資料庫的資訊。 若要避免公開此資訊，每個資料列，其中包含不屬於連接租用戶的資料會被篩選掉。
 
 | **資料行名稱** | **Data type** | **說明** |
 | --- | --- | --- |
@@ -44,7 +44,7 @@ ms.locfileid: "47792106"
 | **reason** | **nvarchar(4000)** | 為什麼提供這項建議的原因。 |
 | **valid\_since** | **datetime2** | 第一次產生這項建議。 |
 | **最後一個\_重新整理** | **datetime2** | 最後一次產生這項建議。 |
-| **state** | **nvarchar(4000)** | 說明建議狀態的 JSON 文件。 可用的欄位如下：<br />-   `currentValue` -建議的目前狀態。<br />-   `reason` – 說明為何建議處於目前狀態的常數。|
+| **state** | **nvarchar(4000)** | 說明建議狀態的 JSON 文件。 可用的欄位如下：<br />-   `currentValue` -建議的目前狀態。<br />-   `reason` -說明為何建議處於目前狀態的常數。|
 | **is\_executable\_action** | **bit** | 1 = 可以針對透過資料庫執行建議[!INCLUDE[tsql_md](../../includes/tsql-md.md)]指令碼。<br />0 = 無法針對資料庫執行建議 (例如： 資訊只有或已還原建議) |
 | **已\_revertable\_動作** | **bit** | 1 = 建議可以自動監控和還原資料庫引擎。<br />0 = 建議無法自動監控和還原。 大部分&quot;可執行檔&quot;動作將會是&quot;revertable&quot;。 |
 | **execute\_action\_start\_time** | **datetime2** | 套用建議的日期。 |
@@ -80,7 +80,7 @@ ms.locfileid: "47792106"
 | `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN` 選項會停用使用者在驗證程序期間。 啟用`FORCE_LAST_GOOD_PLAN`選項使用[ALTER DATABASE 設定 AUTOMATIC_TUNING &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md)陳述式或強制手動使用中的指令碼的計劃`[details]`資料行。 |
 | `UnsupportedStatementType` | 無法在查詢上強制計劃。 不支援查詢的範例包括資料指標和`INSERT BULK`陳述式。 |
 | `LastGoodPlanForced` | 已成功套用建議。 |
-| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 識別潛在的效能變差，但是`FORCE_LAST_GOOD_PLAN`選項未啟用，請參閱 < [ALTER DATABASE 設定 AUTOMATIC_TUNING &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。 手動套用建議，或啟用`FORCE_LAST_GOOD_PLAN`選項。 |
+| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 識別潛在的效能變差，但是`FORCE_LAST_GOOD_PLAN`選項未啟用-請參閱[ALTER DATABASE 設定 AUTOMATIC_TUNING &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。 手動套用建議，或啟用`FORCE_LAST_GOOD_PLAN`選項。 |
 | `VerificationAborted`| 驗證程序 zrušena v důsledku 重新啟動或清除查詢存放區。 |
 | `VerificationForcedQueryRecompile`| 因為沒有顯著的效能改進，會重新編譯查詢。 |
 | `PlanForcedByUser`| 使用者以手動方式強制計劃使用[sp_query_store_force_plan &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)程序。 |
@@ -113,6 +113,6 @@ WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
 ## <a name="see-also"></a>另請參閱  
  [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [sys.database_automatic_tuning_options &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
- [sys.database_query_store_options &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.database_query_store_options &#40;-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [JSON 支援](../../relational-databases/json/index.md)
  

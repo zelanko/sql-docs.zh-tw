@@ -13,12 +13,12 @@ ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9fa559d0aaf1f805f7885b931bcce7f78b012701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0dfa9a95697c4bb1fcb2e4e5d3798f18e305e42
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063828"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393702"
 ---
 # <a name="rename-views"></a>重新命名檢視
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新命名檢視。  
@@ -40,7 +40,7 @@ ms.locfileid: "48063828"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [After renaming a view](#FollowUp)  
+-   **後續操作：**[在重新命名檢視之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48063828"
   
  如需詳細資訊，請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql) 和 [DROP VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-view-transact-sql)。  
   
-##  <a name="FollowUp"></a> 待處理：重新命名檢視之後  
+##  <a name="FollowUp"></a> 後續操作：在重新命名檢視之後  
  確定參考檢視舊名稱的任何物件、指令碼和應用程式現在都使用新名稱。  
   
   

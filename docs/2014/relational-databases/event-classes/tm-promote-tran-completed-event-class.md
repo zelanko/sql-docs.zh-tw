@@ -1,11 +1,10 @@
 ---
-title: 'TM: Promote Tran Completed 事件類別 | Microsoft 文件'
+title: TM:Promote Tran Completed 事件類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,17 +14,17 @@ ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 729988d6e1c7b1d87cf596537c26ee81b4add5c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 029b077b034d7b022ea1e27832624df86decb547
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103408"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823202"
 ---
-# <a name="tm-promote-tran-completed-event-class"></a>TM: Promote Tran Completed 事件類別
-  TM: Promote Tran Completed 事件類別指出 PROMOTE TRANSACTION 要求已完成。 要求是從用戶端透過交易管理介面傳送。  
+# <a name="tm-promote-tran-completed-event-class"></a>TM:Promote Tran Completed 事件類別
+  TM:Promote Tran Completed 事件類別指出 PROMOTE TRANSACTION 要求已完成。 要求是從用戶端透過交易管理介面傳送。  
   
-## <a name="tm-promote-tran-completed-event-class-data-columns"></a>TM: Promote Tran Completed 事件類別資料行  
+## <a name="tm-promote-tran-completed-event-class-data-columns"></a>TM:Promote Tran Completed 事件類別資料行  
   
 |資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  

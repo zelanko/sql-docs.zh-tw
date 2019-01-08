@@ -1,5 +1,5 @@
 ---
-title: SQL Server Data Tools 中的表格式模型設計師 |Microsoft 文件
+title: SQL Server Data Tools 中的 analysis Services 表格式模型設計工具 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 98c836650ef00b283718ddf22834f7e4d4a56e0f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8be4f1f78b444933cc1ad7f4ec4fb71b28bfae1b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044842"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072565"
 ---
 # <a name="tabular-model-designer"></a>表格式模型設計師
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-此表格式模型設計師是與 Microsoft [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]整合之 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]的一部分，具有特別用來開發專業表格式模型方案的額外專案類型範本。  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 可從 Web 免費下載安裝。 如需詳細資訊，請參閱[下載 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。    
+此表格式模型設計師是與 Microsoft [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]整合之 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]的一部分，具有特別用來開發專業表格式模型方案的額外專案類型範本。  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 可從 Web 免費下載安裝。 如需詳細資訊，請參閱 [下載 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md) 。    
   
 ##  <a name="bkmk_benefits"></a> 優點  
  當您安裝 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]時，用來建立表格式模型的專案範本會加入至可用的專案類型中。 在使用其中一個範本建立新的表格式模型專案之後，您可以使用表格式模型設計師工具和精靈開始撰寫模型。  
@@ -34,7 +34,7 @@ ms.locfileid: "34044842"
  **從伺服器匯入 (表格式)**  
  這個範本可用來從 Analysis Services 中的現有表格式模型擷取中繼資料，以建立新的表格式模型專案。  
   
- 舊版模型具有舊版相容性層級。 您可以藉由匯入模型定義之後變更相容性層級屬性升級。  
+ 舊版模型具有舊版相容性層級。 您可以變更匯入模型定義之後的相容性層級屬性升級。  
   
  **匯入自 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**  
  這個範本可用來從 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 檔案擷取中繼資料和其他資料，以建立新的表格式模型專案。  
@@ -54,7 +54,7 @@ ms.locfileid: "34044842"
  您可以在上述任一檢視中，執行大部分的模型撰寫工作。  
   
 ### <a name="view-code-window"></a>檢視程式碼視窗  
- 當您在方案總管中以滑鼠右鍵按一下檔案並選取 [檢視程式碼] 時，即可檢視 Model.bim 檔案背後的程式碼。 在 1200年或更新版本的相容性層級的表格式模型，模型定義是以 JSON 表示。  
+ 當您在方案總管中以滑鼠右鍵按一下檔案並選取 [檢視程式碼] 時，即可檢視 Model.bim 檔案背後的程式碼。 針對 1200年及更新版本的相容性層級的表格式模型，模型定義是以 JSON 表示。  
   
  請注意，您需要提供 JSON 編輯器的完整版 Visual Studio。 如果您不需要商業版本中的額外功能，您可以下載並安裝 [免費的 Visual Studio Community Edition](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) 。  
   
@@ -66,13 +66,13 @@ ms.locfileid: "34044842"
  若要檢視方案總管，請按一下 [檢視] 功能表，然後按一下方案總管。  
 
 ### <a name="tabular-model-explorer"></a>表格式模型總管
-  第一個可用在 2016 年 8 月版本 (14.0.60812.0) 的[SQL Server Data Tools](https://msdn.microsoft.com/mt186501)，表格式模型總管可以幫助您瀏覽表格式模型中的中繼資料物件。
+  第一個在 2016 年 8 月版本 (14.0.60812.0) 中的可用[SQL Server Data Tools](https://msdn.microsoft.com/mt186501)，表格式模型總管 可協助您瀏覽表格式模型中的中繼資料物件。
 
  若要顯示表格式模型總管，請按一下 [檢視] > [其他視窗]，然後按一下 [Tabular Model Explorer (表格式模型總管)]。
    
   ![表格式模型總管](../../analysis-services/tabular-models/media/tabular-model-explorer.png) 
   
- 表格式模型總管 會組織一個非常類似表格式模型的結構描述樹狀結構中的中繼資料物件。 「資料來源」、「檢視方塊」、「關聯性」、「角色」、「資料表」和「翻譯」對應至最上層結構描述物件。 有一些例外狀況 (尤其是 KPI 和量值)，就技術上而言，它們不是最上層物件，而是模型中各種資料表的子物件。 不過，合併所有 KPI 和量值的最上層容器即可輕鬆地使用這些物件，特別是您的模型包含非常大量的資料表時。 量值也會列在其對應的父資料表下方，因此，您必須清楚了解實際的父子式關聯性。 如果您在最上層 [量值] 容器中選取量值，則也會選取其資料表下之子集合中的相同量值，反之亦然。  
+ 表格式模型總管 會將中繼資料物件組織成類似的表格式模型的結構描述樹狀結構。 「資料來源」、「檢視方塊」、「關聯性」、「角色」、「資料表」和「翻譯」對應至最上層結構描述物件。 有一些例外狀況，尤其是 Kpi 和量值，就技術上而言不是最上層的物件，但是在模型中各種資料表的子物件。 不過，合併所有 KPI 和量值的最上層容器即可輕鬆地使用這些物件，特別是您的模型包含非常大量的資料表時。 量值也會列在其對應的父資料表下方，因此，您必須清楚了解實際的父子式關聯性。 如果您在最上層 [量值] 容器中選取量值，則也會選取其資料表下之子集合中的相同量值，反之亦然。  
  
  表格式模型總管中的物件節點會連結至適當的功能表選項，這些功能表選項到目前為止是隱藏在 Visual Studio 中的 [模型]、[資料表] 和 [資料行] 功能表下方。 您可以使用滑鼠右鍵按一下物件，以探索物件類型的選項。 並非所有物件節點類型都有內容功能表，但後續版本會推出其他選項和增強功能。 
 
@@ -83,9 +83,9 @@ ms.locfileid: "34044842"
   
 -   Model.bim  
   
--   Table  
+-   資料表  
   
--   資料行  
+-   「資料行」  
   
 -   [量值]  
   

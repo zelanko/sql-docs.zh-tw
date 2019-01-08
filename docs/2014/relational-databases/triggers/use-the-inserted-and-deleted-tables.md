@@ -18,12 +18,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bc9bb9b663841641c88d61ffce0073de658b334d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220939"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811160"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>使用插入或刪除的資料表
   DML 觸發程序陳述式使用兩個特殊的資料表：已刪除的資料表和已插入的資料表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動建立及管理這些資料表。 您可以使用這些暫存、常駐記憶體的資料表來測試某些資料修改的效果，以及設定 DML 觸發程序動作的條件。 您無法直接修改這些資料表的資料，或是在這些資料表上執行資料定義語言 (DDL) 作業，例如 CREATE INDEX。  
@@ -70,7 +70,7 @@ ms.locfileid: "48220939"
   
 -   INSERT 陳述式必須為不含 DEFAULT 條件約束的所有 NOT NULL 資料行提供值。  
   
--   除了計算、 識別或`timestamp`資料行值都是選擇性的任何資料行允許 null，或任何 NOT NULL 資料行有預設定義。  
+-   除了計算、識別或 `timestamp` 資料行之外，只要是允許 Null 值的任意資料行，或含 DEFAULT 的任何 NOT NULL 資料行，其值都是選擇性的。  
   
  當 INSERT、UPDATE 或 DELETE 陳述式參考含有 INSTEAD OF 觸發程序的檢視時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會呼叫觸發程序，而不會直接對任何資料表採取任何動作。 觸發程序必須使用 inserted 及 deleted 資料表中的資訊，來建立實作基底資料表中要求的動作所需的陳述式，即使為檢視所建立的 inserted 及 deleted 資料表中的資訊格式與基底資料表中的資料格式並不相同也一樣。  
   

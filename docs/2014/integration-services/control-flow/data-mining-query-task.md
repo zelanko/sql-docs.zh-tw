@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquerytask.f1
@@ -16,12 +15,12 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4eddd53df9d9a373a9a4101686dd016a09d20e38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa3e66397a61dc6cf5679e089bc03ce0e2d252cc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225158"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785030"
 ---
 # <a name="data-mining-query-task"></a>資料採礦查詢工作
   「資料採礦查詢」工作會根據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]內建的資料採礦模型執行預測查詢。 預測查詢會使用採礦模型建立新資料的預測。 例如，預測查詢可預測夏季各月間可能出售的帆船數目，或產生可能購買帆船的預期客戶清單。  
@@ -52,11 +51,11 @@ ms.locfileid: "48225158"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [資料採礦查詢工作編輯器&#40;採礦模型 索引標籤&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
+-   [資料採礦查詢工作編輯器 &#40;採礦模型索引標籤&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
   
--   [資料採礦查詢工作編輯器&#40;查詢索引標籤&#41;](../data-mining-query-task-editor-query-tab.md)  
+-   [資料採礦查詢工作編輯器 &#40;查詢索引標籤&#41;](../data-mining-query-task-editor-query-tab.md)  
   
--   [資料採礦查詢工作編輯器&#40;輸出 索引標籤&#41;](../data-mining-query-task-editor-output-tab.md)  
+-   [資料採礦查詢工作編輯器 &#40;輸出索引標籤&#41;](../data-mining-query-task-editor-output-tab.md)  
   
 > [!NOTE]  
 >  「資料採礦查詢編輯器」沒有「運算式」頁面， 而是另外使用 **[屬性]** 視窗存取用來建立和管理「資料採礦查詢」工作屬性之屬性運算式的工具。  

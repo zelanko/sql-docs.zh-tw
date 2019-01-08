@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 80d4ff4e6eae3d3e2d997bb4f851326a9caace73
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 6e990d8b3320eafccc3da574476fa66cdf52d8d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643996"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544112"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>識別您的內部部署資料庫正確的 Azure SQL 資料庫 SKU
 
@@ -54,11 +54,11 @@ ms.locfileid: "49643996"
     ![DMA 資料夾中所示的 PowerShell 檔案](../dma/media/dma-sku-recommend-data-collection-file.png)
 
 2. 執行 PowerShell 指令碼的下列引數：
-    - **ComputerName**： 裝載資料庫之電腦的名稱。
-    - **OutputFilePath**： 輸出檔案路徑來儲存所收集的計數器。
-    - **CollectionTimeInSeconds**： 在這期間您想要收集效能計數器資料的時間量。
+    - **ComputerName**:裝載您資料庫的電腦名稱。
+    - **OutputFilePath**:要儲存所收集的計數器的輸出檔案路徑。
+    - **CollectionTimeInSeconds**:在這期間您想要收集效能計數器資料的時間量。
       擷取效能計數器，以取得有意義的建議至少 40 分鐘。 擷取的持續時間越長越精準建議會。
-    - **DbConnectionString**： 指向要從中收集效能計數器資料的電腦上主控的主要資料庫的連接字串。
+    - **DbConnectionString**:指向要從中收集效能計數器資料的電腦上主控的主要資料庫的連接字串。
      
     以下是範例引動過程：
 
@@ -78,30 +78,30 @@ ms.locfileid: "49643996"
 
 使用下列引數執行 dmacmd.exe:
 
-- **/ 動作 = SkuRecommendation**： 輸入此引數執行 SKU 評量。
-- **/ SkuRecommendationInputDataFilePath**： 上一節中所收集的計數器檔案的路徑。
-- **/ SkuRecommendationTsvOutputResultsFilePath**： 要寫入輸出結果以 TSV 格式的路徑。
-- **/ SkuRecommendationJsonOutputResultsFilePath**： 要寫入輸出結果以 JSON 格式的路徑。
-- **/ SkuRecommendationHtmlResultsFilePath**： 以 HTML 格式寫入輸出結果的路徑。
+- **/ 動作 = SkuRecommendation**:輸入這個引數執行 SKU 評量。
+- **/ SkuRecommendationInputDataFilePath**:上一節中所收集計數器檔案的路徑。
+- **/ SkuRecommendationTsvOutputResultsFilePath**:要寫入以 TSV 格式的輸出結果的路徑。
+- **/ SkuRecommendationJsonOutputResultsFilePath**:若要以 JSON 格式寫入輸出結果路徑。
+- **/ SkuRecommendationHtmlResultsFilePath**:若要以 HTML 格式寫入輸出結果的路徑。
 
 此外，您需要挑選其中一個下列的引數：
 - 防止價格重新整理
-    - **/ SkuRecommendationPreventPriceRefresh**： 發生時，防止價格重新整理。 如果在離線模式中執行，請使用。
+    - **/ SkuRecommendationPreventPriceRefresh**:價格重新整理可防止發生。 如果在離線模式中執行，請使用。
 - 取得最新的價格 
-    - **/ SkuRecommendationCurrencyCode**： 要顯示的價格 （例如貨幣「 USD")。
-    - **/ SkuRecommendationOfferName**： 供應項目名稱 （例如："MS-AZR-0003 P")。 如需詳細資訊，請參閱 < [Microsoft Azure 優惠詳細資料](https://azure.microsoft.com/support/legal/offer-details/)頁面。
-    - **/ SkuRecommendationRegionName**: 區域名稱 （例如：「 美國西部 」）。
-    - **/ SkuRecommendationSubscriptionId**： 訂用帳戶識別碼。
-    - **/ AzureAuthenticationTenantId**： 驗證租用戶。
-    - **/ AzureAuthenticationClientId**： 用於驗證的 AAD 應用程式的用戶端識別碼。
+    - **/ SkuRecommendationCurrencyCode**:要顯示的價格 （例如貨幣「 USD")。
+    - **/ SkuRecommendationOfferName**:供應項目名稱 （例如："MS-AZR-0003 P")。 如需詳細資訊，請參閱 < [Microsoft Azure 優惠詳細資料](https://azure.microsoft.com/support/legal/offer-details/)頁面。
+    - **/ SkuRecommendationRegionName**:區域名稱 （例如：「 美國西部 」）。
+    - **/ SkuRecommendationSubscriptionId**:訂閱識別碼。
+    - **/ AzureAuthenticationTenantId**:驗證租用戶中。
+    - **/ AzureAuthenticationClientId**:用於驗證的 AAD 應用程式的用戶端識別碼。
     - 其中一個下列的驗證選項：
         - 互動式
-            - **AzureAuthenticationInteractiveAuthentication**： 設為 true，驗證快顯視窗。
+            - **AzureAuthenticationInteractiveAuthentication**:設為 true，驗證快顯視窗。
         - 憑證為基礎
-            - **AzureAuthenticationCertificateStoreLocation**： 設定憑證存放區位置 （例如：「 CurrentUser")。
-            - **AzureAuthenticationCertificateThumbprint**： 設為 憑證指紋。
+            - **AzureAuthenticationCertificateStoreLocation**:設定憑證存放區位置 （例如：「 CurrentUser")。
+            - **AzureAuthenticationCertificateThumbprint**:設定憑證指紋。
         - 基礎語彙基元
-            - **AzureAuthenticationToken**： 設為憑證的權杖。
+            - **AzureAuthenticationToken**:設定憑證的語彙基元。
 
 以下是一些範例引動過程：
 
@@ -135,8 +135,8 @@ TSV 輸出檔案包含資料行，如下圖所示：
 
 遵循每個資料行的描述。
 
-- **DatabaseName** – 您的資料庫名稱。
-- **MetricName** – 是否已執行計量。
+- **DatabaseName** -您的資料庫名稱。
+- **MetricName** -不論是否已執行計量。
 - **MetricType** -建議使用 Azure SQL Database 層。
 - **MetricValue** -建議使用 Azure SQL Database 的 SKU。
 - **SQLMiEquivalentCores** -如果您選擇 Azure SQL Database 受控執行個體，您可以使用此值的核心計數。
@@ -152,10 +152,10 @@ HTML 檔案包含以圖形格式的這項資訊。 您可以使用 HTML 檔案�
 只須點幾下，您可以使用從上一個步驟的建議，以佈建目標資料庫中，您可以將資料庫移轉的 Azure。 您也可以更新 HTML 檔案，如下所示，來進行的建議的變更。
 
 1. 開啟 HTML 檔案，並輸入下列資訊：
-    - **訂用帳戶識別碼**– 您要佈建資料庫的 Azure 訂用帳戶的訂用帳戶識別碼。
-    - **區域**– 在其中佈建資料庫的區域。 請確定您的訂用帳戶支援選取的區域。
-    - **資源群組**– 您要將資料庫部署的資源群組。 輸入資源群組存在。
-    - **伺服器名稱**– 您要部署之資料庫的 Azure SQL Database 伺服器。 如果您輸入伺服器名稱不存在，就會建立它。
+    - **訂用帳戶識別碼**-您要佈建資料庫的 Azure 訂用帳戶的訂用帳戶識別碼。
+    - **區域**-在其中佈建資料庫的區域。 請確定您的訂用帳戶支援選取的區域。
+    - **資源群組**-您要將資料庫部署的資源群組。 輸入資源群組存在。
+    - **伺服器名稱**-您要部署之資料庫的 Azure SQL Database 伺服器。 如果您輸入伺服器名稱不存在，就會建立它。
     - **系統管理員使用者名稱 \ 密碼**-伺服器管理員使用者名稱和密碼。
 
 2. 檢閱每個資料庫的建議和修改的定價層、 計算層級，以及所需的最大的資料大小。 請務必取消選取您目前不想要佈建的任何資料庫。

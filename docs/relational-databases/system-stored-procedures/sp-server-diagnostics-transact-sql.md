@@ -18,19 +18,19 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8266418969de6249f0e2313ad7368a8054576c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a15e965cef7109d42383d1a4dc4750c5dfef7374
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644691"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213767"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 擷取有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的診斷資料和健全狀況資訊，以偵測潛在的失敗。 此程序會以重複模式執行，並定期傳送結果。 它可以從一般或 DAC 連接來叫用。  
   
-**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
+**適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,29 +64,29 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |**component_type**|**sysname**|指出資料列是否包含資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體層級元件或 Alwayson 可用性群組：<br /><br /> 執行個體<br /><br /> Alwayson: AvailabilityGroup|  
 |**元件 _ 名稱**|**sysname**|指出元件的名稱或可用性群組的名稱：<br /><br /> 系統<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 事件<br /><br /> *\<可用性群組的名稱 >*|  
 |**state**|**int**|指出元件的健全狀態：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|描述狀態資料行。 對應至狀態資料行值的描述如下：<br /><br /> 0： 不明<br /><br /> 1： 初始狀態<br /><br /> 2： 警告<br /><br /> 3： 錯誤|  
+|**state_desc**|**sysname**|描述狀態資料行。 對應至狀態資料行值的描述如下：<br /><br /> 0:Unknown<br /><br /> 1： 初始狀態<br /><br /> 2： 警告<br /><br /> 3： 錯誤|  
 |**data**|**varchar (max)**|指定元件的相關資料。|  
   
  以下是五種元件的說明：  
   
--   **系統**： 從系統觀點來收集有關單一執行緒存取鎖、 嚴重處理條件、 沒有產量的工作、 分頁錯誤和 CPU 使用量資料。 這項資訊產生整體的健全狀態建議。  
+-   **系統**:從系統觀點來收集有關單一執行緒存取鎖、 嚴重處理條件、 沒有產量的工作、 分頁錯誤和 CPU 使用量資料。 這項資訊產生整體的健全狀態建議。  
   
--   **資源**： 從資源觀點來收集有關實體和虛擬記憶體，緩衝集區、 頁面、 快取和其他記憶體物件資料。 這項資訊產生整體的健全狀態建議。  
+-   **資源**:從資源觀點來收集有關實體和虛擬記憶體，緩衝集區、 頁面、 快取和其他記憶體物件資料。 這項資訊產生整體的健全狀態建議。  
   
--   **query_processing**： 收集資料，而背景工作執行緒，而工作，以查詢處理觀點等候類型、 CPU 密集工作階段和封鎖的工作。 這項資訊產生整體的健全狀態建議。  
+-   **query_processing**:背景工作執行緒、 工作、 等候類型、 CPU 密集工作階段及封鎖的工作，從查詢處理觀點來收集資料。 這項資訊產生整體的健全狀態建議。  
   
--   **io_subsystem**： 在 IO 上收集資料。 除了診斷資料之外，這個元件只產生 IO 子系統的乾淨良好或警告的健全狀態。  
+-   **io_subsystem**:在 IO 上收集資料。 除了診斷資料之外，這個元件只產生 IO 子系統的乾淨良好或警告的健全狀態。  
   
--   **事件**： 收集資料並透過預存程序的介面上的錯誤和伺服器，包括有關信號緩衝區例外狀況，詳細資料所記錄的感興趣的事件的信號緩衝區事件，以及有關記憶體 broker，因為記憶體不足、 排程器監視器緩衝集區、 單一執行緒存取鎖、 安全性和連線能力。 事件永遠會顯示狀態 0。  
+-   **事件**:收集資料和預存程序的介面上的錯誤和伺服器，包括有關信號緩衝區例外狀況，有關記憶體 broker、 記憶體、 排程器監視器、 緩衝集區、 單一執行緒存取鎖，超出的信號緩衝區事件詳細資料所記錄的感興趣的事件安全性和連線能力。 事件永遠會顯示狀態 0。  
   
--   **\<可用性群組的名稱 >**： 收集指定的可用性群組的資料 (如果 component_type ="Alwayson 上： AvailabilityGroup")。  
+-   **\<可用性群組的名稱 >**:會收集指定的可用性群組的資料 (如果 component_type ="Alwayson 上： AvailabilityGroup")。  
   
 ## <a name="remarks"></a>備註  
 從失敗觀點來看，系統、資源和 query_processing 元件將會用於失敗偵測，而 io_subsystem 和事件元件只供診斷之用。  
   
 下表將元件對應到其相關聯的健全狀態。  
   
-|Components|乾淨 (1)|警告 (2)|錯誤 (3)|未知 (0) |  
+|元件|乾淨 (1)|警告 (2)|錯誤 (3)|未知 (0) |  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |系統|x|x|x||  
 |resource|x|x|x||  

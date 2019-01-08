@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f702490cd4137e2a791c796e6b126da247648813
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 850d5b6472fda4b12ad9be2018575ea7d0d97770
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069321"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784860"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>使用 ODBC 來源來擷取資料
   此程序描述如何使用 ODBC 來源擷取資料。 若要加入和設定 ODBC 來源，封裝必須至少含有一個「資料流程」工作。  
@@ -33,11 +32,11 @@ ms.locfileid: "48069321"
   
 5.  選取資料存取方法。  
   
-    -   **資料表名稱**：選取 ODBC 連接管理員連接之資料庫中的資料表或檢視，或輸入規則運算式以識別資料表。  
+    -   **資料表名稱**:在資料庫中選取資料表或檢視表，或是輸入可識別資料表的 ODBC 連接管理員所連接的規則運算式。  
   
          此清單只包含前 1000 個資料表。 如果您的資料庫包含超過 1000 個資料表，您可以輸入資料表名稱的開頭或使用 (*) 萬用字元來輸入名稱的任何部分，以便顯示您想要使用的資料表。  
   
-    -   **SQL 命令**：輸入 SQL 命令，或按一下 **[瀏覽]** 從文字檔載入 SQL 查詢。  
+    -   **SQL 命令**:輸入 SQL 命令，或按一下**瀏覽**從文字檔載入 SQL 查詢。  
   
 6.  您可以按一下 **[預覽]** ，以檢視 ODBC 來源擷取的最多 200 個資料列。  
   
@@ -52,8 +51,8 @@ ms.locfileid: "48069321"
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [ODBC 來源編輯器&#40;連線管理員頁面&#41;](../odbc-source-editor-connection-manager-page.md)   
+ [ODBC 來源編輯器 &#40;連線管理員頁面&#41;](../odbc-source-editor-connection-manager-page.md)   
  [ODBC 來源編輯器 &#40;資料行頁面&#41;](../odbc-source-editor-columns-page.md)   
- [ODBC 來源編輯器&#40;錯誤輸出頁面&#41;](../odbc-source-editor-error-output-page.md)  
+ [ODBC 來源編輯器 &#40;錯誤輸出頁面&#41;](../odbc-source-editor-error-output-page.md)  
   
   

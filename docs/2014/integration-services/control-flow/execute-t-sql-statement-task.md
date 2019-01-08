@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executetsqlstatementtask.f1
@@ -17,12 +16,12 @@ ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a2ad857b2174528db8f6c2d7c8453b956129686d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c578c07c1e20331d2b2b302619cfc95b9463a639
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058492"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767310"
 ---
 # <a name="execute-t-sql-statement-task"></a>執行 T-SQL 陳述式工作
   「執行 T-SQL 陳述式」工作會執行 Transact-SQL 陳述式。 如需詳細資訊，請參閱 [Transact-SQL 參考 &#40;資料庫引擎&#41;](/sql/t-sql/language-reference) 和 [Integration Services &#40;SSIS&#41; 查詢](../integration-services-ssis-queries.md)。  
@@ -30,7 +29,7 @@ ms.locfileid: "48058492"
  此工作與執行 SQL 工作類似。 不過，「執行 T-SQL 陳述式」工作僅支援 Transact-SQL 版的 SQL 語言，而且您無法在使用其他 SQL 語言方言的伺服器上使用此工作執行陳述式。 如果您需要執行參數化查詢、將查詢結果儲存至變數，或使用屬性運算式，則應使用執行 SQL 工作而非「執行 T-SQL 陳述式」工作。 如需相關資訊，請參閱 [Execute SQL Task](execute-sql-task.md)。  
   
 ## <a name="configuration-of-the-execute-t-sql-task"></a>設定執行 T-SQL 工作  
- 您可以透過「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」設定屬性 這項工作位於「 **設計師」中** [工具箱] **的** [維護計畫工作] [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 區段。  
+ 您可以透過 [ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 設定屬性。 這項工作位於「 **設計師」中** [工具箱] **的** [維護計畫工作] [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 區段。  
   
  如需有關可在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請按下列主題：  
   
@@ -43,6 +42,6 @@ ms.locfileid: "48058492"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](integration-services-tasks.md)   
  [控制流程](control-flow.md)   
- [Integration Services 套件中的 MERGE](merge-in-integration-services-packages.md)  
+ [MERGE in Integration Services Packages](merge-in-integration-services-packages.md)  
   
   

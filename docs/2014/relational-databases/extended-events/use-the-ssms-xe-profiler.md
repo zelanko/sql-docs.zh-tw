@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], system health session
@@ -16,12 +15,12 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: e42fca332cf488d9a88494bb3e0eb11eca413965
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6ea2e46b38919ae72ea70440523d75517e6efa92
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151248"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804140"
 ---
 # <a name="use-the-systemhealth-session"></a>使用 system_health 工作階段
   system_health 工作階段是預設隨附於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的擴充事件工作階段。 當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 啟動時，這個工作階段就會自動啟動，並且在不造成任何明顯效能影響的情況下執行。 此工作階段會收集系統資料，讓您能夠用來協助疑難排解 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的效能問題。 因此，我們建議您不要停止或刪除此工作階段。  
@@ -66,7 +65,7 @@ ON (xe.address = xet.event_session_address)
 WHERE xe.name = 'system_health'  
 ```  
   
- 若要檢視事件檔案中的工作階段資料，請使用 Management Studio 中提供的「擴充事件」使用者介面。 請參閱[檢視事件工作階段資料](../../database-engine/view-event-session-data.md)如需詳細資訊。  
+ 若要檢視事件檔案中的工作階段資料，請使用 Management Studio 中提供的「擴充事件」使用者介面。 如需相關資訊，請參閱 [View Event Session Data](../../database-engine/view-event-session-data.md) 。  
   
 ## <a name="restoring-the-systemhealth-session"></a>還原 system_health 工作階段  
  如果您刪除了 system_health 工作階段，可以在 [查詢編輯器] 中執行 **u_tables.sql** 檔案，藉以還原此工作階段。 這個檔案位於下列資料夾，其中 C: 代表您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式檔案的磁碟機：  

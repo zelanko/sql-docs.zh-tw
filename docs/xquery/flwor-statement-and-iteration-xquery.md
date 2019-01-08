@@ -24,12 +24,12 @@ ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3ac773ea8c68be65a0b60aaff3d542df0b6dc6e7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c95d86b64c28bbf78b111f21de7afd58b44616f
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662878"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858663"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR 陳述式與反覆運算 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "51662878"
   
  例如，下列查詢會在第一個製造位置反覆運算 <`Step`> 元素，並傳回 <`Step`> 節點的字串值：  
   
-```  
+```sql
 declare @x xml  
 set @x='<ManuInstructions ProductModelID="1" ProductModelName="SomeBike" >  
 <Location LocationID="L1" >  
@@ -82,7 +82,7 @@ Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1
   
  下列查詢與上一個查詢相似，除了它是針對 ProductModel 資料表的 Instructions 資料行 (具類型的 xml 資料行) 所指定之外。 查詢會在特定產品的第一個工作中心位置反覆運算所有的製造步驟 <`step`> 元素。  
   
-```  
+```sql
 SELECT Instructions.query('  
    declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $Step in //AWMI:root/AWMI:Location[1]/AWMI:step  
@@ -115,7 +115,7 @@ the aluminum sheet. ....
   
  這些是允許的其他輸入時序之範例：  
   
-```  
+```sql
 declare @x xml  
 set @x=''  
 SELECT @x.query('  
@@ -146,7 +146,7 @@ SELECT @x.query('
   
  在 AdventureWorks 範例資料庫中，製造指示儲存在**指示**資料行**Production.ProductModel**資料表具有下列格式：  
   
-```  
+```xml
 <Location LocationID="10" LaborHours="1.2"   
             SetupHours=".2" MachineHours=".1">  
   <step>describes 1st manu step</step>  
@@ -158,11 +158,11 @@ SELECT @x.query('
   
  下列查詢建構新 XML，它包含 <`Location`> 元素以及以子元素傳回的工作中心位置屬性：  
   
-```  
+```xml
 <Location>  
    <LocationID>10</LocationID>  
    <LaborHours>1.2</LaborHours>  
-   <SetupHours>.2</SteupHours>  
+   <SetupHours>.2</SetupHours>  
    <MachineHours>.1</MachineHours>  
 </Location>  
 ...  
@@ -170,7 +170,7 @@ SELECT @x.query('
   
  此查詢如下：  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $WC in /AWMI:root/AWMI:Location  
@@ -196,7 +196,7 @@ where ProductModelID=7
   
  以下是部份結果：  
   
-```  
+```xml
 <Location>  
   <LocationID>10</LocationID>  
   <LaborHours>2.5</LaborHours>  
@@ -214,7 +214,7 @@ where ProductModelID=7
   
  在 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫中，製造指示包含所需工具及工具使用位置的詳細資訊。 下列查詢會使用 `let` 子句列出建立生產模型所需的工具，以及需要每一個工具的位置。  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $T in //AWMI:tool  
@@ -227,11 +227,11 @@ where ProductModelID=7
 ```  
   
 ## <a name="using-the-where-clause"></a>使用 where 子句  
- 您可以使用 `where` 子句篩選反覆運算的結果。 下一個範例會加以說明。  
+ 您可以使用`where`子句篩選反覆運算的結果。 下一個範例會加以說明。  
   
  在製造腳踏車時，製造程序將經過一系列的工作中心位置。 每個工作中心位置都會定義一系列的製造步驟。 下列查詢只會擷取那些製造腳踏車型號以及少於三個製造步驟的工作中心位置。 也就是，它們少於三個 <`step`> 元素。  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /AWMI:root/AWMI:Location  
@@ -270,7 +270,7 @@ where ProductModelID=7
 ## <a name="multiple-variable-binding-in-flwor"></a>在 FLWOR 中繫結多個變數  
  您可以在單一 FLWOR 運算式中，將多個變數繫結至輸入時序。 在下列範例中，查詢是針對不具類型的 xml 變數所指定。 FLOWR 運算式會傳回每個 <`Location`> 元素的第一個 <`Step`> 元素子系。  
   
-```  
+```sql
 declare @x xml  
 set @x='<ManuInstructions ProductModelID="1" ProductModelName="SomeBike" >  
 <Location LocationID="L1" >  
@@ -311,7 +311,7 @@ Manu step 1 at Loc 2
   
  下列查詢很類似，不同之處在於它針對具類型的 Instructions 資料行所指定**xml**資料行的**ProductModel**資料表。 [XML 建構 (XQuery)](../xquery/xml-construction-xquery.md)用來產生您想要的 XML。  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare default element namespace "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /root/Location,  
@@ -335,7 +335,7 @@ WHERE ProductModelID=7
   
  以下是部份結果：  
   
-```  
+```xml
 <Step xmlns=  
     "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"     
   LocationID="10">  
@@ -360,7 +360,7 @@ WHERE ProductModelID=7
   
  下列查詢會從 AdditionalContactInfo 資料行擷取特定客戶的所有電話號碼。 結果將依電話號碼進行排序。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT AdditionalContactInfo.query('  
@@ -382,7 +382,7 @@ order by data($a/act:number[1]) descending
   
  以下是結果：  
   
-```  
+```xml
 <act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   <act:number>333-333-3334</act:number>  
 </act:telephoneNumber>  
@@ -393,7 +393,7 @@ order by data($a/act:number[1]) descending
   
  您可以使用 WITH XMLNAMESPACES 來宣告前置詞，而不是在查詢初構中宣告命名空間。  
   
-```  
+```sql
 WITH XMLNAMESPACES (  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo'  AS aci)  
@@ -409,7 +409,7 @@ WHERE BusinessEntityID=291;
   
  您也可以依屬性值進行排序。 例如，下列查詢會擷取新建立的 <`Location`> 元素，它包含依 LaborHours 屬性的遞減順序排序的 LocationID 與 LaborHours 屬性。 因此，會先傳回包含工時最大值的工作中心位置。  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in /AWMI:root/AWMI:Location   
@@ -437,7 +437,7 @@ WHERE ProductModelID=7;
   
  在下列查詢中，會依元素名稱排序結果。 該查詢會從產品目錄擷取特定產品的規格。 這些規格是 <`Specifications`> 元素的子系。  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
      declare namespace  
  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -457,7 +457,7 @@ where ProductModelID=19;
   
  以下是結果：  
   
-```  
+```xml
 <Color>Available in most colors</Color>  
 <Material>Almuminum Alloy</Material>  
 <ProductLine>Mountain bike</ProductLine>  
@@ -467,7 +467,7 @@ where ProductModelID=19;
   
  在排序運算式中的節點會傳回排序在序列開頭的空白，如下列範例所示：  
   
-```  
+```sql
 declare @x xml  
 set @x='<root>  
   <Person Name="A" />  
@@ -484,7 +484,7 @@ select @x.query('
   
  以下是結果：  
   
-```  
+```xml
 <Person />  
 <Person Name="A" />  
 <Person Name="B" />  
@@ -492,7 +492,7 @@ select @x.query('
   
  您可以指定多個排序條件，如下列範例所示。 在此範例中的查詢會先依 Title 然後再依 Administrator 屬性值排序 <`Employee`> 元素。  
   
-```  
+```sql
 declare @x xml  
 set @x='<root>  
   <Employee ID="10" Title="Teacher"        Gender="M" />  
@@ -513,7 +513,7 @@ order by $e/@Title ascending, $e/@Gender descending
   
  以下是結果：  
   
-```  
+```xml
 <Employee ID="8" Title="Administrator" Gender="M" />  
 <Employee ID="4" Title="Administrator" Gender="F" />  
 <Employee ID="125" Title="Administrator" Gender="F" />  

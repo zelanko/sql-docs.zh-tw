@@ -17,15 +17,15 @@ ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5f577d48d14790ca946348ccff030f4ff31d9c2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 785a03a5d9fffe3adf072a32f578b0ba936ae6f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169718"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521024"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>基本 MDX 查詢 (MDX)
-  基本的多維度運算式 (MDX) 查詢是 SELECT 陳述式，為 MDX 中最常使用的查詢。 了解 MDX SELECT 陳述式必須指定結果集的方式、SELECT 陳述式的語法為何，以及如何使用 SELECT 陳述式建立簡單查詢之後，您將完全了解如何使用 MDX 來查詢多維度資料。  
+  基本的多維度運算式 (MDX) 查詢是在 MDX SELECT 陳述式最常使用的查詢。 了解 MDX SELECT 陳述式必須指定結果集的方式、SELECT 陳述式的語法為何，以及如何使用 SELECT 陳述式建立簡單查詢之後，您將完全了解如何使用 MDX 來查詢多維度資料。  
   
 ## <a name="specifying-a-result-set"></a>指定結果集  
  在 MDX 中，SELECT 陳述式會指定一個結果集，內含從 Cube 傳回的多維度資料子集。 若要指定結果集，MDX 查詢必須包含下列資訊：  
@@ -42,7 +42,7 @@ ms.locfileid: "48169718"
   
 -   SELECT 子句，決定 MDX SELECT 陳述式的查詢座標軸。 如需在 SELECT 子句內建構查詢軸的詳細資訊，請參閱[指定查詢軸的內容 &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)。  
   
--   決定要查詢之 Cube 的 FROM 子句。 如需 FROM 子句的詳細資訊，請參閱[SELECT 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)。  
+-   決定要查詢之 Cube 的 FROM 子句。 如需 FROM 子句的詳細資訊，請參閱 [SELECT 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)。  
   
 -   選擇性的 WHERE 子句，這個子句會決定要在 slicer 軸上用來限制所傳回資料的成員或 Tuple。 如需在 WHERE 子句內建構 slicer 軸的詳細資訊，請參閱[指定 Slicer 軸的內容 &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)。  
   
@@ -61,7 +61,7 @@ FROM <SELECT subcube clause>
 [ <SELECT cell property list clause> ]  
 ```  
   
- MDX SELECT 陳述式支援選擇性語法，例如 WITH 關鍵字、使用 MDX 函數建立計算的成員以納入軸或 slicer 軸，以及做為查詢的一部分傳回特定資料格屬性值的能力。 如需有關 MDX SELECT 陳述式的詳細資訊，請參閱 < [SELECT 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)。  
+ MDX SELECT 陳述式支援選擇性語法，例如 WITH 關鍵字、使用 MDX 函數建立計算的成員以納入軸或 slicer 軸，以及做為查詢的一部分傳回特定資料格屬性值的能力。 如需 MDX SELECT 陳述式的詳細資訊，請參閱 [SELECT 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)。  
   
 ### <a name="comparing-the-syntax-of-the-mdx-select-statement-to-sql"></a>比較 MDX SELECT 陳述式與 SQL 的語法  
  MDX SELECT 陳述式的語法格式跟 SQL 的語法格式相似。 但是，有幾個基本的相異之處：  
@@ -110,7 +110,7 @@ WHERE ( [Sales Territory].[Southwest] )
  如需詳細範例，請參閱[指定查詢軸的內容 &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md) 和[指定 Slicer 軸的內容 &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [重要的概念在 MDX 中的&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [SELECT 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
+ [MDX 的關鍵概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [SELECT 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
   
   

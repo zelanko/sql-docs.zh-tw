@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -16,12 +16,12 @@ ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e12595ddb5074ac780e997f2d0255e57c4470aa8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afcc330c2b87573f766a7b0728662af9de841962
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165228"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807110"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>查詢類型 (Visual Database Tools)
   [查詢和檢視設計師] 針對某些查詢類型 (選取、插入結果、插入值、更新、刪除和製成資料表) 提供內建功能，同時亦支援 UNION、全文檢索搜尋和 CASE 運算式查詢。  
@@ -51,7 +51,7 @@ ms.locfileid: "48165228"
  [建立更新查詢 &#40;Visual Database Tools&#41;](create-update-queries-visual-database-tools.md)  
  描述如何建立可更新資料表的查詢。  
   
-## <a name="reference"></a>參考  
+## <a name="reference"></a>參考資料  
  [查詢屬性 &#40;Visual Database Tools&#41;](query-properties-visual-database-tools.md)  
  描述設計查詢時可使用的屬性。  
   

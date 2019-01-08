@@ -20,21 +20,21 @@ ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14d883228c17b24f42765c6fbf8484592b5fa117
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f63af414d59afed2bbe2e8eed3fba7a1362bb4bb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820196"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203907"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 函數
 **合規性**  
- 版本導入： ODBC 3.0 版的標準符合性： ISO 92  
+ 導入的版本：ODBC 3.0 版的標準合規性：ISO 92  
   
  **摘要**  
  **SQLFreeHandle**釋出與特定的環境、 連接、 陳述式或描述元控制代碼相關聯的資源。  
   
-> [!NOTE]  
+> [!NOTE]
 >  此函式會釋放控制代碼的泛型函式。 它會取代 ODBC 2.0 函式**SQLFreeConnect** （適用於釋放連接控制代碼） 及**SQLFreeEnv** （適用於釋放環境控制代碼）。 **SQLFreeConnect**並**SQLFreeEnv**都不再支援的 ODBC 3 *.x*。 **SQLFreeHandle**也會取代 ODBC 2.0 函式**SQLFreeStmt** (使用 SQL_DROP*選項*) 釋放陳述式控制代碼。 如需詳細資訊，請參閱 「 註解。 」 如需有關什麼驅動程式管理員會對應到此函式時 ODBC 3 *.x*應用程式正在使用的 ODBC 2 *.x*驅動程式，請參閱[對應為向後取代函式應用程式的相容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)。  
   
 ## <a name="syntax"></a>語法  
@@ -109,7 +109,7 @@ SQLRETURN SQLFreeHandle(
 ## <a name="freeing-a-descriptor-handle"></a>釋放描述項控制代碼  
  呼叫**SQLFreeHandle**具有*HandleType* SQL_HANDLE_DESC 的釋放描述項控制代碼，在*處理*。 若要在呼叫**SQLFreeHandle**不會釋放任何可能由指標欄位 （包括 SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR） 參考的應用程式所配置任何記憶體描述項記錄*處理*。 不是指標欄位的欄位的驅動程式所配置的記憶體釋放控制代碼已釋放時。 當使用者配置描述項控制代碼已釋放時，釋放控制代碼必須與相關聯的所有陳述式還原成其各自的自動配置描述項控制代碼。  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2 *.x*驅動程式不會支援釋放描述項控制代碼，就像它們不支援配置描述項控制代碼。  
   
  請注意， **SQLDisconnect**會自動在連接上卸除任何陳述式和開啟的描述元。 當應用程式會釋放陳述式控制代碼時，驅動程式會釋放該控制代碼相關聯的所有自動產生描述元。  

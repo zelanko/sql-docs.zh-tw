@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2174684879a71372e19d9e7ac3390ee7c0831e38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9cc17fb916bad5879c4f55737b72f9a1013de51
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157548"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810280"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute 事件類別
   **CursorExecute** 事件類別描述出現在應用程式開發介面 (API) 資料指標中的資料指標執行事件。 在資料指標準備事件所建立的執行計畫中，當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 建立及擴展資料指標時，就會發生資料指標執行事件。  

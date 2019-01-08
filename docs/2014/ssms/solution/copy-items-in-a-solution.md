@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - copying items
@@ -14,12 +14,12 @@ ms.assetid: f95f084e-9f3d-4d15-90b4-1094ab2eda51
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6d375de3317f26a026caba5677c6c486e769109
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaa81c35dc13c60a06196d1c61ab4dce9106f9b9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127388"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794120"
 ---
 # <a name="copy-items-in-a-solution"></a>複製方案中的項目
   您可以利用 [方案總管] 或 Windows 的 [檔案總管] 來複製項目。  

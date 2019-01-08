@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64f6d23e30a589c4924925b834b310921d17ba57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b59b0bdfb2852c20c2f13641682a1adff3547662
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818936"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540776"
 ---
 # <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47818936"
 |cycle_id|**bigint**|記憶體回收循環的唯一識別碼。|  
 |ticks_at_cycle_start|**bigint**|循環開始時的時間刻度。|  
 |ticks_at_cycle_end|**bigint**|循環結束時的時間刻度。|  
-|base_generation|**bigint**|資料庫中目前的基底層代值。 這代表用來識別記憶體回收交易之最舊作用中交易的時間戳記。 最舊的作用中交易識別碼會以 16 的增量更新。 例如，如果您的交易識別碼為 124、125、126... 139，此值將會是 124。 當您加入另一筆交易時 (例如 140)，此值將會是 140。|  
+|base_generation|**bigint**|資料庫中目前的基底層代值。 這代表用來識別記憶體回收交易之最舊作用中交易的時間戳記。 最舊的作用中交易識別碼會以 16 的增量更新。 例如，如果您的交易識別碼為 124、 125、 126...139，此值將會是 124。 當您加入另一筆交易時 (例如 140)，此值將會是 140。|  
 |xacts_copied_to_local|**bigint**|從交易管線複製到資料庫之層代陣列的交易數目。|  
 |xacts_in_gen_0- xacts_in_gen_15|**bigint**|每一層代 (Generation) 的交易數目。|  
   

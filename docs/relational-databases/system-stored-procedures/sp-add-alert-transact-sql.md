@@ -18,12 +18,12 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 924c6ccdcd5d6e2c5529c3967c2943ec6349fe19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12c44c565e6e867c2fde6a99d770c2b083e3d6f9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610749"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203278"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_add_alert [ @name = ] 'name'
  [ **@include_event_description_in =** ] *include_event_description_in*  
  這是指通知訊息是否應該包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤的描述。 *include_event_description_in*已**tinyint**，預設值是**5** (電子郵件和**網路傳送**)，並可以有一個或多個這些值結合**或**邏輯運算子。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  呼叫器和 **net send** 選項會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未來版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
   
 |值|描述|  

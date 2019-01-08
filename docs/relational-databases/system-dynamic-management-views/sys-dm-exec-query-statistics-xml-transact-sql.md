@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e5cb0bdbbbb535293835a0114061d8ca322ec8a8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 99e51be32264dd90b126860b33abe35c7a27781a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675097"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819100"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |query_plan|**xml**|執行程序表 XML 部分的統計資料。 可為 Null。|
 
 ## <a name="remarks"></a>備註
-這個系統函數可從[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1。
+這個系統函數可從[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1。 請參閱知識庫[3190871](https://support.microsoft.com/en-us/help/3190871)
 
 這個系統函數的運作方式之下同時**標準**並**輕量級**查詢分析基礎結構的執行統計資料。  
   
@@ -64,7 +64,7 @@ sys.dm_exec_query_statistics_xml(session_id)
   -  [設定上的統計資料設定檔](../../t-sql/statements/set-statistics-profile-transact-sql.md)
   -  `query_post_execution_showplan`擴充的事件。  
   
-**輕量型**分析基礎結構的統計資料可用於[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]SP2 和[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，可啟用：
+**輕量型**分析基礎結構的統計資料可用於[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1，可以啟用：
   -  全域使用追蹤旗標 7412。
   -  使用[ *query_thread_profile* ](https://support.microsoft.com/kb/3170113)擴充的事件。
   

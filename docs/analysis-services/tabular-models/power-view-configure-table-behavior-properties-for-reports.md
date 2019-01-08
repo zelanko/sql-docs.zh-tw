@@ -1,5 +1,5 @@
 ---
-title: 設定 Power View 報表的資料表行為屬性 |Microsoft 文件
+title: 設定 Analysis Services 資料表屬性，Power View 報表的 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 13d2213746c79a396d681796cb863174248f54ff
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ba6b9184dba10ecdd9f466304dd114247ee4ac27
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044862"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072538"
 ---
-# <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View-設定報表的資料表行為屬性
+# <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View-設定資料表行為屬性的報表
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  如果您要將表格式模型當作 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 的資料模型使用，可以設定資料表行為屬性，在更細微的層級公開詳細資料列。 設定資料表行為屬性會變更詳細資料列的群組行為，並讓識別資訊 (例如姓名、相片識別碼或標誌影像) 在圖格、卡片和圖表版面配置中有更好的預設位置。  
+  如果您要將表格式模型當作 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]的資料模型使用，可以設定資料表行為屬性，在更細微的層級公開詳細資料列。 設定資料表行為屬性會變更詳細資料列的群組行為，並讓識別資訊 (例如姓名、相片識別碼或標誌影像) 在圖格、卡片和圖表版面配置中有更好的預設位置。  
   
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]不同於其他報表應用程式，它會自動群組項目在報表設計期間藉由評估您正在使用哪些資料行放在報表欄位清單的呈現格式中。 在大多數情況下，預設群組行為會產生最佳的結果。 但對於某些資料表 (主要是包含詳細資料的資料表)，預設群組行為有時會將不應群組的資料列群組在一起。 如果是這類資料表，您可以設定屬性來變更評估群組的方式。  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 不同於其他報表應用程式，因為它會在報表設計期間自動群組項目，方法是根據您所使用的呈現格式來評估您將哪些資料行放在報表欄位清單中。 在大多數情況下，預設群組行為會產生最佳的結果。 但對於某些資料表 (主要是包含詳細資料的資料表)，預設群組行為有時會將不應群組的資料列群組在一起。 如果是這類資料表，您可以設定屬性來變更評估群組的方式。  
   
  建議針對個別資料列為主要目的的資料表 (例如員工或客戶記錄)，設定資料表行為屬性。 反之，某些資料表不會受惠於這些屬性，包括做為查閱資料表的資料表 (例如，日期資料表、產品目錄資料表或部門資料表，這類資料表包含相當少量的資料列和資料行)，或包含只在進行摘要時產生重點之資料列的摘要資料表 (例如，依性別、年齡或地理位置積存的人口普查資料)。 對於查閱和摘要資料表，預設群組行為會產生最佳的結果。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34044862"
 -   **預設影像** ：指定哪個資料行提供代表資料列資料的影像 (例如員工記錄的相片識別碼)。  
   
 > [!NOTE]  
->  請參閱下列章節，以了解從特定呈現格式觀點來最佳化配置的方式：  [為特定配置最佳化](#bkmk_optimizeforlayout)。  
+>  請參閱下列章節，以配置最佳化的方式觀點來看從特定呈現格式：[為特定配置最佳化](#bkmk_optimizeforlayout)。  
   
 ## <a name="opening-the-table-behavior-dialog-box"></a>開啟資料表行為對話方塊  
   
@@ -49,11 +49,11 @@ ms.locfileid: "34044862"
 3.  在 [資料表行為] 對話方塊中，設定 [資料列識別碼]，然後在此對話方塊中指定其他屬性。  
   
 ## <a name="setting-the-row-identifier-property"></a>設定資料列識別碼屬性  
- 在資料表內，資料列識別碼會指定只包含唯一值且沒有空白值的單一資料行。 [資料列識別碼] 屬性是用來變更群組，使其不根據資料列的欄位組成，而是根據永遠用來唯一識別資料列的固定資料行 (無論特定報表配置中使用的欄位為何)。  
+ 在資料表內，資料列識別碼會指定只包含唯一值且沒有空白值的單一資料行。 資料列識別碼屬性用來變更群組，使其不根據上一個資料列欄位組成，但一律會用來唯一識別資料列，無論特定報表配置中使用的欄位的固定資料行上，而不是。  
   
  設定此屬性會將預設群組行為從動態群組變更為固定群組行為，前者根據畫布中出現的資料行，後者則會根據資料列識別碼進行摘要。 變更預設群組行為與報表配置相關，例如針對資料列中的每個資料行進行群組 (或顯示小計) 的矩陣。  
   
- 在 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 中設定資料列識別碼會啟用下列其他屬性：[保留唯一資料列] 屬性、[預設標籤] 屬性和 [預設影像] 屬性。  
+ 在  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，設定資料列識別碼會啟用下列額外屬性：**保留唯一資料列**屬性，**預設標籤**屬性，以及**Default Image**屬性。  
   
  您也可以單獨使用 [資料列識別碼] 屬性，以啟用下列功能：  
   
@@ -61,7 +61,7 @@ ms.locfileid: "34044862"
   
 -   從矩陣報表中移除不必要的小計。 欄位層級的預設群組會針對每個欄位建立小計。 如果您只要在資料列層級計算的單一小計，設定 [資料列識別碼] 會產生此結果。  
   
- 已標記為日期資料表的資料表不能設定資料列識別碼。 日期資料表的資料列識別碼是在標記為日期資料表時指定。 如需詳細資訊，請參閱[標記為日期資料表對話方塊](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9)。  
+ 已標記為日期資料表的資料表不能設定資料列識別碼。 日期資料表的資料列識別碼是在標記為日期資料表時指定。 如需詳細資訊，請參閱 <<c0> [ 標記為日期資料表對話方塊](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9)。  
   
 ## <a name="setting-the-keep-unique-rows-property"></a>設定保留唯一資料列屬性  
  這個屬性可讓您指定哪些資料行以區分資料列的方式來傳達識別資訊 (例如員工姓名或產品代碼)。 在多個資料列看起來相同的案例中 (例如兩個同名的客戶)，您為這個屬性指定的資料行會在報表資料表中重複。  
@@ -90,20 +90,20 @@ ms.locfileid: "34044862"
 ### <a name="images-are-missing"></a>遺漏影像  
  在模型中所設定的屬性會決定影像在報表中視覺化，還是在報表中表示為文字值。  
   
- ![影像 Url 會出現在報表中以文字](../../analysis-services/tabular-models/media/ssas-rptprop-noimageurl.gif "影像 Url 會顯示為報表中的文字")  
+ ![影像 Url 會顯示為報表中的文字](../../analysis-services/tabular-models/media/ssas-rptprop-noimageurl.gif "以在報表中的文字顯示影像 Url")  
   
  根據預設，模型中的文字會在報表中解譯為文字。 如果文字資料行是報表影像的 URL 位址，請記得設定 [影像 URL] 屬性，好讓 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 擷取影像檔。 如果是二進位影像，請記得設定 [資料列識別碼] 屬性。  
   
 ### <a name="tables-are-missing-one-or-more-rows"></a>資料表遺漏一個或多個資料列  
  有時預設群組行為會產生與預期相反的結果；具體地說，出現在模型中的詳細資料列未出現在報表中。 依預設， [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 會將您加入畫布中的資料行進行群組。 如果您將 **國家/地區名稱** 加入報表，每個國家/地區在畫布中都只會出現一次，即使基礎資料表中可能有數千個資料列包含每個國家/地區名稱的多個例項也一樣。 在這個案例中，預設的群組行為會產生正確的結果。  
   
- 但假設不同的範例中，您可能要顯示某個資料列的多個例項，因為基礎資料列事實上包含不同實體的資料。 在此範例中，假設有兩個客戶的姓名都是 **Jon Yang**。 使用預設群組行為時，報表中只會顯示一個 **Jon Yang** 執行個體。 而且因為清單中只顯示一個執行個體，所以**年收入量**值是兩個客戶的該值總和。  
+ 但假設不同的範例中，您可能要顯示某個資料列的多個例項，因為基礎資料列事實上包含不同實體的資料。 在此範例中，假設有兩個客戶的姓名都是 **Jon Yang**。 使用預設群組行為時，報表中只會顯示一個 **Jon Yang** 執行個體。 而且因為清單中只顯示一個執行個體，所以 **年收入量** 值是兩個客戶的該值總和。  
   
- ![預設群組會將 2 合併成 1](../../analysis-services/tabular-models/media/ssas-jonyang-norowid.gif "預設群組會將 2 合併為 1")  
+ ![預設群組會將 2 合併成 1](../../analysis-services/tabular-models/media/ssas-jonyang-norowid.gif "預設群組會將 2 合併成 1")  
   
- 若要變更預設群組行為，請設定 [資料列識別碼] 和 [保留唯一資料列] 屬性。 在 [保留唯一資料列] 中，選擇 [姓氏] 資料行，讓資料列可重複此值，即使在其他資料列中已經出現此值也一樣。 在變更屬性及重新發行活頁簿之後，您可以建立相同的報表，不過此時會顯示兩個同名客戶 **Jon Yang**，並為每個客戶正確配置**年收入**。  
+ 若要變更預設群組行為，請設定 [資料列識別碼] 和 [保留唯一資料列] 屬性。 在 [保留唯一資料列] 中，選擇 [姓氏] 資料行，讓資料列可重複此值，即使在其他資料列中已經出現此值也一樣。 在變更屬性及重新發行活頁簿之後，您可以建立相同的報表，不過此時會顯示兩個同名客戶 **Jon Yang**，並為每個客戶正確配置 **年收入** 。  
   
- ![資料列包含資料列識別碼為基礎的重複項目資料](../../analysis-services/tabular-models/media/ssas-jonyang.gif "資料列包含資料列識別碼為基礎的重複項目資料。")  
+ ![資料列包含資料列識別碼為基礎的重複資料](../../analysis-services/tabular-models/media/ssas-jonyang.gif "資料列包含資料列識別碼為基礎的重複項目資料。")  
   
 ### <a name="matrix-layout-is-too-crowded"></a>矩陣配置太擁擠  
  在矩陣中呈現詳細資料表時，預設群組會針對每個資料行提供摘要值。 根據您的目標而定，這些摘要可能多於所需之量。 若要變更此行為，您可以設定 [資料列識別碼]。 不需要設定其他屬性；僅設定資料列識別碼就足以變更群組行為，以便根據唯一資料列識別碼來計算每個資料列的摘要。  
@@ -112,11 +112,11 @@ ms.locfileid: "34044862"
   
  **之前：預設群組行為根據矩陣中的欄位**  
   
- ![根據資料列識別碼分組的矩陣配置](../../analysis-services/tabular-models/media/ssas-rptprop-matrixrowid.gif "根據資料列識別碼分組的矩陣配置")  
+ ![根據資料列識別碼分組的矩陣配置](../../analysis-services/tabular-models/media/ssas-rptprop-matrixrowid.gif "矩陣配置會依據資料列識別碼")  
   
  **之後：群組行為根據資料列識別碼**  
   
- ![根據資料列識別碼分組的矩陣配置](../../analysis-services/tabular-models/media/ssas-rptprop-matrixrowid.gif "根據資料列識別碼分組的矩陣配置")  
+ ![根據資料列識別碼分組的矩陣配置](../../analysis-services/tabular-models/media/ssas-rptprop-matrixrowid.gif "矩陣配置會依據資料列識別碼")  
   
 ### <a name="chart-showing-too-many-items-and-levels-on-the-axis"></a>圖表在軸上顯示太多項目和層級  
  顯示詳細資料的圖表報表應該使用資料列識別碼做為軸。 如果不使用資料列識別碼，軸是未定的，因而產生可能沒有意義的最佳猜測配置。 若要變更此行為，您可以設定 [資料列識別碼]。 不需要設定其他屬性；僅設定資料列識別碼就足以變更群組行為，以便根據唯一資料列識別碼來計算每個資料列的摘要。  
@@ -125,11 +125,11 @@ ms.locfileid: "34044862"
   
  **之前：預設群組行為根據圖表中的欄位**  
   
- ![根據預設欄位層級群組的圖表](../../analysis-services/tabular-models/media/ssas-rptprop-chartfieldgroup.gif "圖表會根據預設群組位於欄位層級")  
+ ![根據預設在欄位層級群組的圖表](../../analysis-services/tabular-models/media/ssas-rptprop-chartfieldgroup.gif "圖表會根據預設在欄位層級群組")  
   
- **之後：群組行為根據資料列識別碼 (資料列識別碼變成軸)**  
+ **之後：群組行為根據資料列識別碼 （資料列識別碼變成軸）**  
   
- ![圖表會根據資料列識別碼群組](../../analysis-services/tabular-models/media/ssas-rptprop-chartrowid.gif "圖表會根據資料列識別碼群組")  
+ ![根據資料列識別碼群組的圖表](../../analysis-services/tabular-models/media/ssas-rptprop-chartrowid.gif "圖表會根據資料列識別碼群組")  
   
 ## <a name="next-steps"></a>後續步驟  
  在評估模型中的資料表，並對包含永遠應該顯示為個別項目之詳細資料列的資料表設定資料表行為屬性之後，您可以進一步透過其他屬性或設定來最佳化模型。  

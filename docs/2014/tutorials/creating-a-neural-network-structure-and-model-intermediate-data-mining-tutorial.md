@@ -17,12 +17,12 @@ ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa474cfd298b5d482f8b1804159f085fca5f8c6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 144f2f754dc93be29f6be8fc786afa354a96c911
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195558"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395800"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>建立類神經網路結構和模型 (中繼資料採礦教學課程)
   若要建立資料採礦模型，您必須先使用「資料採礦精靈」，根據新的資料來源檢視建立新的採礦結構。 在這項工作中，您將利用這個精靈來建立採礦結構，並同時根據 [!INCLUDE[msCoName](../includes/msconame-md.md)] 類神經網路演算法來建立關聯的採礦模型。  
@@ -78,7 +78,7 @@ ms.locfileid: "48195558"
     |Calls|輸入|  
     |DateKey|請勿使用|  
     |DayOfWeek|輸入|  
-    |FactCallCenterID|索引鍵|  
+    |FactCallCenterID|Key|  
     |IssuesRaised|輸入|  
     |LevelOneOperators|輸入/預測|  
     |LevelTwoOperators|輸入|  
@@ -88,7 +88,7 @@ ms.locfileid: "48195558"
     |TotalOperators|請勿使用|  
     |WageType|輸入|  
   
-     請注意，多個可預測資料行已選取。 類神經網路演算法的強項之一是，它可以分析所有可能的輸入和輸出屬性組合。 最好不要對大型資料集這樣做，因為處理時間可能會以指數方式增加。  
+     請注意，多個可預測資料行已選取。 類神經網路演算法的強項之一是，它可以分析所有可能的輸入和輸出屬性組合。 因為它無法以指數方式增加處理時間，您不想要對大型資料集，執行此動作...  
   
 12. 在 [**指定資料行的內容和資料類型**頁面上，確認此方格有包含資料行、 內容類型和下表所示的資料類型，然後按一下**下一步]**。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48195558"
     |AverageTimePerIssue|Continuous|長整數|  
     |Calls|Continuous|長整數|  
     |DayOfWeek|Discrete|文字|  
-    |FactCallCenterID|索引鍵|長整數|  
+    |FactCallCenterID|Key|長整數|  
     |IssuesRaised|Continuous|長整數|  
     |LevelOneOperators|Continuous|長整數|  
     |LevelTwoOperators|Continuous|長整數|  
@@ -122,9 +122,9 @@ ms.locfileid: "48195558"
   
  ![服務等級值的分佈](../../2014/tutorials/media/skt-service-grade-valuesc.gif "發佈的服務等級值")  
   
- 因此，當您處理模型時，輸出結果的群組方式可能會和您預期的不同。 比方說，如果您使用叢集來識別值的最佳群組，演算法會將 ServiceGrade 值分成多個此類的範圍： 類似 0.0748051948-0.09716216215 的範圍。 雖然這個群組在數學上是正確的，但是這些範圍對商務使用者而言，可能沒有很大的意義。  
+ 因此，當您處理模型時，輸出結果的群組方式可能會和您預期的不同。 比方說，如果您使用叢集來識別值的最佳群組，演算法會將 ServiceGrade 值分成多個這類的範圍：類似 0.0748051948-0.09716216215 的範圍。 雖然這個群組在數學上是正確的，但是這些範圍對商務使用者而言，可能沒有很大的意義。  
   
- 在這個步驟中，若要讓結果更有直覺性，您要以不同方式將數值分組，建立數值資料行的複本。  
+ 在此步驟中，若要讓結果更直覺化，您會將數值分組以不同的方式，建立數值資料行的複本。  
   
 ### <a name="how-discretization-works"></a>離散化的運作方式  
  Analysis Services 會提供各種方法來分類收納或處理數值資料。 下表說明當輸出屬性 ServiceGrade 已處理三種不同的方式之後，所產生的結果之間的差異：  
@@ -283,7 +283,7 @@ ms.locfileid: "48195558"
     |AverageTimePerIssue|Predict|Predict|  
     |Calls|輸入|輸入|  
     |DayOfWeek|輸入|輸入|  
-    |FactCallCenterID|索引鍵|索引鍵|  
+    |FactCallCenterID|Key|Key|  
     |IssuesRaised|輸入|輸入|  
     |LevelOneOperators|輸入|輸入|  
     |LevelTwoOperators|輸入|輸入|  

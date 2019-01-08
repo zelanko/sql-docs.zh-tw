@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], about SQL Server Profiler
@@ -26,12 +25,12 @@ ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cfaad106f7d2671dad24de87c64e02859b021769
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138284"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780720"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一個非常豐富的介面，您可以利用它來建立和管理追蹤，以及分析和重新執行追蹤結果。 事件會儲存於追蹤檔案中，稍後在嘗試診斷問題時，可以用來進行分析或是重新執行特定的一連串步驟。  
@@ -170,7 +169,7 @@ ms.locfileid: "48138284"
 |描述如何匯出追蹤範本。|[匯出追蹤範本 &#40;SQL Server Profiler&#41;](export-a-trace-template-sql-server-profiler.md)|  
 |描述如何匯入追蹤範本。|[匯入追蹤範本 &#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)|  
 |描述如何從追蹤擷取指令碼。|[從追蹤中擷取指令碼 &#40;SQL Server Profiler&#41;](extract-a-script-from-a-trace-sql-server-profiler.md)|  
-|描述如何使追蹤與 Windows 效能記錄資料相互關聯。|[使追蹤與 Windows 效能記錄資料相互關聯 &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
+|描述如何使追蹤與 Windows 效能記錄資料相互關聯。|[使追蹤與 Windows 效能記錄資料產生相互關聯 &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
 |描述如何組織追蹤中所顯示的資料行。|[組織追蹤內顯示的資料行 &#40;SQL Server Profiler&#41;](organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
 |描述如何啟動 SQL Server Profiler。|[啟動 SQL Server Profiler](start-sql-server-profiler.md)|  
 |描述如何儲存追蹤及追蹤範本。|[儲存追蹤及追蹤範本](save-traces-and-trace-templates.md)|  

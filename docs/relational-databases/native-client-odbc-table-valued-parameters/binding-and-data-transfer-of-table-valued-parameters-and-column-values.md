@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64c82908c0ae39146686f12e9a929d423611df85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f8b291344939bcbafa7f91080837d2302efb1d0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630066"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521924"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>資料表值參數和資料行值的繫結與資料傳送
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "47630066"
   
  您可以使用屬性 SQL_CA_SS_COL_HAS_DEFAULT_VALUE，將預設值指派給整個資料表值參數資料行。 個別的資料表值參數資料行，不過，無法將值指派預設值中使用 SQL_DEFAULT_PARAM *StrLen_or_IndPtr* SQLBindParameter 使用。 整體的資料表值參數不能設定為預設值中使用 SQL_DEFAULT_PARAM *StrLen_or_IndPtr* SQLBindParameter 使用。 如果未遵循這些規則，SQLExecute 或 SQLExecDirect 就會傳回 SQL_ERROR。 診斷記錄會產生含有 SQLSTATE = 07S01 和訊息 」 的預設參數位置參數用法無效\<p >"，其中\<p > 是查詢陳述式中 TVP 的序數。  
   
- 繫結資料表值參數之後，應用程式必須接著繫結每個資料表值參數資料行。 若要這樣做，應用程式會先呼叫 SQLSetStmtAttr 以便將 SQL_SOPT_SS_PARAM_FOCUS 設定為資料表值參數的序數。 然後藉由呼叫下列常式的應用程式繫結的資料表值參數的資料行： SQLBindParameter、 SQLSetDescRec 和 SQLSetDescField。 將 SQL_SOPT_SS_PARAM_FOCUS 設定為 0 會還原 SQLBindParameter、 SQLSetDescRec 和 SQLSetDescField 的一般作用中規則的最上層參數運作。
+ 繫結資料表值參數之後，應用程式必須接著繫結每個資料表值參數資料行。 若要這樣做，應用程式會先呼叫 SQLSetStmtAttr 以便將 SQL_SOPT_SS_PARAM_FOCUS 設定為資料表值參數的序數。 然後應用程式繫結資料表值參數的資料行，藉由呼叫下列常式：SQLBindParameter、 SQLSetDescRec 和 SQLSetDescField。 將 SQL_SOPT_SS_PARAM_FOCUS 設定為 0 會還原 SQLBindParameter、 SQLSetDescRec 和 SQLSetDescField 的一般作用中規則的最上層參數運作。
  
  注意： unixODBC 2.3.1 至 2.3.4，設定與 SQL_CA_SS_TYPE_NAME 描述項欄位透過 SQLSetDescField TVP 名稱時使用的 Linux 和 Mac 的 ODBC 驅動程式，如 unixODBC 不會自動轉換 ANSI 和 Unicode 間取決於確切的字串呼叫函式 (SQLSetDescFieldA / SQLSetDescFieldW)。 必須一律使用 SQLBindParameter 或 SQLSetDescFieldW 以 Unicode (utf-16) 字串 TVP 名稱設定。
   
  雖然不會針對資料表值參數本身傳送或接收任何實際資料，但是會針對每個構成的資料行傳送或接收資料。 因為資料表值參數是虛擬資料行，用以 SQLBindParameter 的參數，如下所示不同的屬性，而其他資料類型，請參閱：  
   
-|參數|非資料表值參數類型的相關屬性，包括資料行|資料表值參數的相關屬性|  
+|參數|對於非資料表值參數類型，包括資料行相關聯的屬性|資料表值參數的相關屬性|  
 |---------------|--------------------------------------------------------------------------------|----------------------------------------------------|  
 |*InputOutputType*|IPD 中的 SQL_DESC_PARAMETER_TYPE。<br /><br /> 若為資料表值參數資料行，這必須與資料表值參數本身的設定相同。|IPD 中的 SQL_DESC_PARAMETER_TYPE。<br /><br /> 這必須是 SQL_PARAM_INPUT。|  
 |*ValueType*|APD 中的 SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE。|APD 中的 SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE。<br /><br /> 這必須是 SQL_C_DEFAULT 或 SQL_C_BINARY。|  

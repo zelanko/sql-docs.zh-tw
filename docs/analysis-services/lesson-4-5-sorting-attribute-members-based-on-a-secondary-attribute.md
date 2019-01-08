@@ -1,5 +1,5 @@
 ---
-title: 根據次要屬性排序屬性成員 |Microsoft 文件
+title: 依次要屬性來排序屬性成員根據 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 720920da4dbd935bca493e3a2e76ab9a683fff21
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 010e416115e793c46f8744c7724dc164ca01ec87
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019345"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951690"
 ---
-# <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>課程 4-5-根據次要屬性排序屬性成員
+# <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>課程 4-5-依次要屬性基礎排序屬性成員
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 在第 3 課，您學會如何根據名稱或索引鍵值排序屬性成員。 您也學會如何使用複合成員索引鍵來影響屬性成員和排序次序。 如需詳細資訊，請參閱 [修改 Date 維度](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)。 不過，如果屬性的名稱或索引鍵都無法提供想要的排序次序，您可以使用次要屬性來達成所需的排序次序。 藉由定義屬性之間的關聯性，您可以使用次要屬性排序第一個屬性的成員。  
   
 屬性關聯性定義屬性之間的關聯性或相依性。 在以單一關聯式資料表為基礎的維度中，所有屬性通常都是透過索引鍵屬性而彼此相關。 這是因為維度的所有屬性會提供有關成員的資訊，這些成員會由維度的索引鍵屬性連結到各個相關量值群組之事實資料表中的事實。 在以多份資料表為基礎的維度中，屬性通常是依據資料表之間的聯結索引鍵來連結。 如果基礎資料支援屬性關聯性，相關屬性可用來指定排序次序。 例如，您可以建立提供相關屬性排序邏輯的新屬性。  
   
-維度設計師可讓您定義屬性之間的其他關聯性，或變更預設關聯性來增加效能。 當您建立屬性關聯性時，主要條件約束是要確定所參考的屬性對於它相關的屬性中的任何成員只有一個值。 當您在兩個屬性之間定義關聯性時，可以依據成員之間的關聯性是否因為時間而改變來定義固定或彈性關聯性。 例如，員工可能會移至不同的銷售地區，但縣 (市) 卻不會移至不同省份。 如果定義固定關聯性，則每次累加處理維度時不會重新計算屬性彙總。 不過，如果成員之間的關聯性改變，維度必須完全處理。 如需詳細資訊，請參閱[屬性關聯性](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)、[定義屬性關聯性](../analysis-services/multidimensional-models/attribute-relationships-define.md)、[設定屬性關聯性屬性](../analysis-services/multidimensional-models/attribute-relationships-configure-attribute-properties.md)和[在使用者定義階層的屬性之間指定屬性關聯性](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)。  
+維度設計師可讓您定義屬性之間的其他關聯性，或變更預設關聯性來增加效能。 當您建立屬性關聯性時，主要條件約束是要確定所參考的屬性對於它相關的屬性中的任何成員只有一個值。 當您在兩個屬性之間定義關聯性時，可以依據成員之間的關聯性是否因為時間而改變來定義固定或彈性關聯性。 例如，員工可能會移至不同的銷售地區，但縣 (市) 卻不會移至不同省份。 如果定義固定關聯性，則每次累加處理維度時不會重新計算屬性彙總。 不過，如果成員之間的關聯性改變，維度必須完全處理。 如需詳細資訊，請參閱[屬性關聯性](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)、[定義屬性關聯性](../analysis-services/multidimensional-models/attribute-relationships-define.md)、[設定屬性關聯性屬性](../analysis-services/multidimensional-models/attribute-relationships-configure-attribute-properties.md)和[在使用者定義階層的屬性之間指定屬性關聯性](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)。  
   
 在這個主題的工作中，您會根據基礎維度資料表的現有資料行來定義 [日期] 維度中的新屬性。 您會使用這個新屬性，按照時間順序而非字母順序來排序日曆月成員。 您也會根據用來排序 [通勤距離] 屬性成員的具名計算來定義 [客戶] 維度中的新屬性。 在下一個主題的工作中，您會學到如何使用屬性關聯性來增加查詢效能。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "34019345"
     ![重新排序 通勤距離屬性階層](../analysis-services/media/l4-memberproperties-5.gif "Re-sorted 通勤距離屬性階層")  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
-[在使用者定義階層的屬性之間指定屬性關聯性](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+[在使用者定義階層的屬性之間指定屬性關聯性](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
   
   
   

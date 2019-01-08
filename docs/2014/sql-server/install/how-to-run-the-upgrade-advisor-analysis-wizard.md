@@ -1,5 +1,5 @@
 ---
-title: 如何： 執行 Upgrade Advisor 分析精靈 |Microsoft Docs
+title: 如何：執行 Upgrade Advisor 分析精靈 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ ms.assetid: d7d2a1e2-1179-4c05-9b0f-555b04dd1199
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c0896639f1c088b3ead255758075075f3e397b47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49c8cd84ada68d4ac00b13567528abff72d13847
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065278"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207647"
 ---
 # <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>如何：執行 Upgrade Advisor 分析精靈
   您可以從 Upgrade Advisor 開始頁面啟動 Upgrade Advisor 分析精靈。 此主題描述如何執行 Upgrade Advisor 分析精靈。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  執行 Upgrade Advisor 分析精靈時，Upgrade Advisor 會將報表儲存在預設報表資料夾中。 但是，報表檢視器只顯示最近儲存的五個報表。 報表的預設位置是我的文件\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor\110\Reports。  
   
 ### <a name="to-run-the-upgrade-advisor-analysis-wizard"></a>若要執行 Upgrade Advisor 分析精靈  
@@ -58,7 +58,7 @@ ms.locfileid: "48065278"
 8.  當分析完成時，按一下**啟動報表**若要檢視偵測到的升級問題。  
   
 ## <a name="see-also"></a>另請參閱  
- [如何： 啟動 Upgrade Advisor](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
+ [操作說明：啟動 Upgrade Advisor](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
  [執行 Upgrade Advisor&#40;使用者介面&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
  [使用升級建議程式](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   

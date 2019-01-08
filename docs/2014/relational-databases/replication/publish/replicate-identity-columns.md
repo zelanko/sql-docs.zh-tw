@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/04/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - identities [SQL Server replication]
@@ -18,12 +17,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e47126e626c76f25d6c376a3c4247e2caf6de9f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e89bfac90a0658c8f5ba839632451187ffa9760d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089848"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810950"
 ---
 # <a name="replicate-identity-columns"></a>複寫識別欄位
   將 IDENTITY 屬性指派給資料行時， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會自動為含有識別欄位之資料表的新資料列產生序號。 如需詳細資訊，請參閱 [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)。 由於識別欄位可能會做為主索引鍵的一部分，因此請務必避免在識別欄位中重複值。 若要在具有多個節點更新的複寫拓撲裡使用識別欄位，複寫拓撲中的每個節點必須使用不同的識別值範圍，以免出現重複。  
@@ -57,7 +56,7 @@ ms.locfileid: "48089848"
  如果「發行者」在插入之後用盡了其識別範圍，則在 **db_owner** 固定資料庫角色的成員執行插入時，可自動指派新範圍。 如果執行插入的使用者並非該角色，則「記錄讀取器代理程式」、「合併代理程式」或屬於 **db_owner** 角色成員的使用者必須執行 [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)。 對於異動複寫，「記錄讀取器代理程式」必須執行才能自動配置新範圍 (預設要求該代理程式連續執行)。  
   
 > [!WARNING]  
->  在大型批次插入期間，複寫觸發程序只會引發一次，而不會針對插入的每個資料列引發。 這可能會導致 insert 陳述式失敗的識別範圍期間用盡大型插入，例如如果`INSERT INTO`陳述式。  
+>  在大型批次插入期間，複寫觸發程序只會引發一次，而不會針對插入的每個資料列引發。 如果在大型插入 (例如 `INSERT INTO` 陳述式) 期間用盡了識別範圍，這可能會導致 Insert 陳述式失敗。  
   
 |資料類型|範圍|  
 |---------------|-----------|  
@@ -99,7 +98,7 @@ ms.locfileid: "48089848"
  例如，您可以為 **@pub_identity_range**指定 10000，為 **@identity_range** 指定 1000 (假設在「訂閱者」端沒有什麼更新)，為 **@threshold**。 在「訂閱者」端執行 800 次插入 (1000 的 80%) 之後，將為「訂閱者」指派新範圍。 在「發行者」端執行 8000 次插入之後，將為「發行者」指派新範圍。 指派新範圍時，資料表裡的識別範圍值中會有一個間隔。 指定的臨界值越高間距就越小，但系統的容錯功能也就越弱：如果「散發代理程式」因某種原因無法執行，「訂閱者」可能更容易用盡識別。  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>為手動識別範圍管理指派範圍  
- 如果指定手動識別範圍管理，則必須確定「發行者」與每個「訂閱者」都使用不同的識別範圍。 例如，考慮識別欄位定義為 `IDENTITY(1,1)`之「發行者」端的資料表：識別欄位從 1 開始，每插一個資料列即遞增 1。 如果「發行者」端的資料表有 5,000 個資料列，而您希望在應用程式使用期間資料表有所成長，「發行者」可以使用範圍 1-10,000。 假設有兩個「訂閱者」，「訂閱者 A」可以使用 10,001–20,000，「訂閱者 B」可以使用 20,001-30,000。  
+ 如果指定手動識別範圍管理，則必須確定「發行者」與每個「訂閱者」都使用不同的識別範圍。 例如，考慮識別欄位定義為 `IDENTITY(1,1)`之「發行者」端的資料表：識別欄位從 1 開始，每插一個資料列即遞增 1。 如果「發行者」端的資料表有 5,000 個資料列，而您希望在應用程式使用期間資料表有所成長，「發行者」可以使用範圍 1-10,000。 假設有兩個「訂閱者」，「訂閱者 A」可以使用 10,001-20,000，「訂閱者 B」可以使用 20,001-30,000。  
   
  在「訂閱者」透過快照集或其他方式初始化之後，執行 DBCC CHECKIDENT 以為「訂閱者」指派識別範圍的起點。 例如，在「訂閱者 A」端，應執行 `DBCC CHECKIDENT('<TableName>','reseed',10001)`。 在「訂閱者 B」端，應執行 `CHECKIDENT('<TableName>','reseed',20001)`。  
   

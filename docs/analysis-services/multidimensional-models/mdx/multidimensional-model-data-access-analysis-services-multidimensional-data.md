@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 66f178ecbfd65d9788790d64229785e3f86cc351
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 4c96a85ceb4347d663735dfb310764be1052860e
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148116"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984049"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多維度模型資料存取 (Analysis Services - 多維度資料)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "50148116"
 |Analysis Services 管理物件 (AMO)|AMO 是在程式碼中管理 Analysis Services 執行個體與多維度資料庫的主要物件模型。 例如，SQL Server Management Studio 使用 AMO 支援伺服器與資料庫管理。 如需詳細資訊，請參閱[使用分析管理物件 &#40;AMO&#41; 來開發](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)。|  
 |ADOMD.NET|ADOMD.NET 是在自訂應用程式中建立與存取多維度資料的主要物件模型。 您可以使用通用的 Microsoft .NET Framework 資料存取介面，在 Managed 用戶端應用程式中使用 ADOMD.NET 來擷取 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資訊。 如需詳細資訊，請參閱 [使用 ADOMD.NET 來開發](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net) 和 [ADOMD.NET 用戶端程式設計](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming)。|  
 |Analysis Services OLE DB 提供者 (MSOLAP.dll)|您可以使用原生 OLE DB 提供者，使用程式設計方式從 Unmanaged API 存取 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 如需詳細資訊，請參閱 [Analysis Services OLE DB 提供者 &#40;Analysis Services - 多維度資料&#41;](http://msdn.microsoft.com/library/cdeecd50-1d91-4162-a4a2-01c7799b02a8)。|  
-|結構描述資料列集|結構描述資料列集資料表是一種資料結構，其中包含有關在伺服器上部署之多維度模型的描述性資訊，以及有關伺服器上目前活動的資訊。 身為程式設計人員，您可以在用戶端應用程式中查詢結構描述資料列集資料表，以檢查儲存在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體上的中繼資料，並從其擷取支援和監視資訊。 您可以搭配這些程式設計介面使用結構描述資料列集：OLE DB、OLE DB for Analysis Services、OLE DB for Data Mining 或 XMLA。 如需詳細資訊，請參閱 [Analysis Services 結構描述資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)。<br /><br /> 以下清單說明使用結構描述資料列集的數個方法：<br /><br /> -在 SQL Server Management Studio 或自訂報表中執行 DMV 查詢，以便使用 SQL 語法存取結構描述資料列集。 如需詳細資訊，請參閱[使用動態管理檢視 &#40;DMV&#41; 監視 Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)。<br /><br /> -撰寫呼叫結構描述資料列集的 ADOMD.NET 程式碼。<br /><br /> -直接針對 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體執行 XMLA **Discover** 方法，以擷取結構描述資料列集資訊。 如需詳細資訊，請參閱 [Discover 方法 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)。|  
+|結構描述資料列集|結構描述資料列集資料表是一種資料結構，其中包含有關在伺服器上部署之多維度模型的描述性資訊，以及有關伺服器上目前活動的資訊。 身為程式設計人員，您可以在用戶端應用程式中查詢結構描述資料列集資料表，以檢查儲存在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體上的中繼資料，並從其擷取支援和監視資訊。 您可以搭配這些程式設計介面使用結構描述資料列集：OLE DB、 Analysis services OLE DB、 OLE DB 資料採礦或 XMLA。 如需詳細資訊，請參閱 [Analysis Services 結構描述資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)。<br /><br /> 以下清單說明使用結構描述資料列集的數個方法：<br /><br /> -在 SQL Server Management Studio 或自訂報表中執行 DMV 查詢，以便使用 SQL 語法存取結構描述資料列集。 如需詳細資訊，請參閱[使用動態管理檢視 &#40;DMV&#41; 監視 Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)。<br /><br /> -撰寫呼叫結構描述資料列集的 ADOMD.NET 程式碼。<br /><br /> -直接針對 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體執行 XMLA **Discover** 方法，以擷取結構描述資料列集資訊。 如需詳細資訊，請參閱 [Discover 方法 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)。|  
 |XMLA|XMLA 是提供給 Analysis Services 程式設計人員的最低層級 API，也是做為所有 Analysis Services 資料存取方法的共同分母。 XMLA 是一種業界標準，SOAP 以 XML 通訊協定為基礎，支援通用資料透過 HTTP 連接，對於任何可用之標準多維度資料來源的存取。 它會使用 SOAP 編寫用於多維度資料的要求和回應。 如果您的應用程式在非 Windows 平台上執行，可以使用 XMLA 存取在網路上的 Windows 伺服器上執行的多維度資料庫。 如需詳細資訊，請參閱 [在 Analysis Services 中使用 XMLA 進行開發](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)。|  
 |Analysis Services 指令碼語言 (ASSL)|ASSL 是一個適用於 XMLA 通訊協定之 Analysis Services 延伸模組的描述性詞彙。 由於 Execute 和 Discover 方法是由 XMLA 通訊協定所描述，因此 ASSL 會加入下列功能：<br /><br /> -XMLA 指令碼<br /><br /> -XMLA 物件定義<br /><br /> -XMLA 命令<br /><br /> ASSL 延伸模組可讓 Analysis Services 使用超出通訊協定基本提供範圍的 XMLA 建構函式，以增加資料定義、資料操作以及資料控制支援。 如需詳細資訊，請參閱＜ [使用 Analysis Services 指令碼語言 &#40;ASSL&#41; 開發](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)＞。|  
   
@@ -89,6 +89,6 @@ ms.locfileid: "50148116"
  [連接到 Analysis Services](../../../analysis-services/instances/connect-to-analysis-services.md)   
  [使用 Analysis Services 指令碼語言 &#40;ASSL&#41; 開發](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [在 Analysis Services 中使用 XMLA 進行開發](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [表格式模型資料存取](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
+
   
   

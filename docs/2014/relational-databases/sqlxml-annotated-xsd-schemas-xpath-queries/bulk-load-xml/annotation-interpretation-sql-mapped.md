@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - mapped annotation
@@ -19,15 +17,15 @@ ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16d6d22d2bd37d6f826878a5abd0bc235c3de83a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14934b2b4c98b09a6596887dc2b4ced7ec04dd65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109098"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807270"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
-  XML 大量載入處理序`sql:mapped`註解 XSD 結構描述如預期般 — 也就是說，如果對應結構描述指定`sql:mapped="false"`任何項目或屬性，XML 大量載入不會嘗試將相關聯的資料儲存在對應的資料行。  
+  XML 大量載入處理序`sql:mapped`是 XSD 結構描述，預期的註釋，如果對應結構描述指定`sql:mapped="false"`任何項目或屬性，XML 大量載入不會嘗試將相關聯的資料儲存在對應的資料行。  
   
  XML 大量載入會忽略未對應的元素和屬性 (因為沒有在結構描述中描述它們，或者因為它們在 XSD 結構描述中使用 `sql:mapped="false"` 進行註解)。 如果使用 `sql:overflow-field` 指定此種資料行，所有未對應的資料都會移入溢位資料行。  
   

@@ -1,5 +1,5 @@
 ---
-title: 工作 4： 建立使用 SQL Server Data Tools 的 SSIS 專案 |Microsoft Docs
+title: 工作 4:建立使用 SQL Server Data Tools 的 SSIS 專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: 8603ea91-2ec4-40b6-8070-4f824332f5d3
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 584ba08e49efaf0dc3a8de2a1fa8fd34ac20bfe3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0a4532b99c63a778c8c6751471b2a30e0ff7186
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113271"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390501"
 ---
-# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>工作 4：使用 SQL Server Data Tools 建立 SSIS 專案
+# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>工作 4:使用 SQL Server Data Tools 建立 SSIS 專案
   在這個工作中，您必須建立 SSIS 專案使用**SQL Server Data Tools**自動化清理和比對供應商資料。  
   
 1.  啟動 **SQL Server Data Tools**。 按一下 [開始]，指向**所有程式**，展開**Microsoft SQL Server 2012**，然後按一下**SQL Server Data Tools**。  
@@ -42,6 +42,6 @@ ms.locfileid: "48113271"
 7.  型別**CleanseAndCurate.dtsx**然後按**ENTER**。 請確定**延伸模組**維持 **.dtsx**。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 5：新增資料流程工作](task-5-adding-data-flow-task.md)  
+ [工作 5:加入資料流程工作](task-5-adding-data-flow-task.md)  
   
   

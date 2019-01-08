@@ -1,5 +1,5 @@
 ---
-title: SSMS 中啟用 DirectQuery 模式 |Microsoft Docs
+title: 在 SSMS 中的 Analysis Services 的 DirectQuery 模式中啟用 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c0a6ddb7b06cf325235f3d3998b0f57d640667a9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 27e704e6274910e2c9e3f77fe235e02918d95425
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700586"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072205"
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>在 SSMS 中啟用 DirectQuery 模式
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "51700586"
   
  當您將表格式模型變更為 DirectQuery 模式時，新的資料儲存區模式會立即生效。  
   
-## <a name="step-2a-switch-a-tabular-1200-database-to-directquery-mode"></a>步驟 2a：將表格式 1200 資料庫切換成 DirectQuery 模式  
+## <a name="step-2a-switch-a-tabular-1200-database-to-directquery-mode"></a>步驟 2a:將表格式 1200年資料庫切換至 DirectQuery 模式  
   
 1.  在物件總管中，以滑鼠右鍵按一下資料庫 > [屬性] > [模型] > [預設模式]。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "51700586"
     |**DirectQuery**|查詢會使用為模型定義的資料來源連線，針對後端關聯式資料庫執行。<br /><br /> 模型的查詢會轉換成原生資料庫查詢，並重新導向到資料來源。<br /><br /> 當您處理設為 DirectQuery 模式的模型時，只會編譯及部署中繼資料。 資料本身在模型外部，位於運作中資料來源的資料庫檔案中。|  
     |**匯入**|查詢會以 MDX 或 DAX 針對表格式資料庫執行。<br /><br /> 當您處理設為匯入模式的模型時，會從後端資料來源擷取資料，並將其儲存在磁碟上。 資料庫載入時，資料會完整複製到記憶體中，讓資料表掃描或查詢的速度能夠很快。<br /><br /> 這是表格式模型的預設模式，也是特定 (非關聯式) 資料來源的唯一模式。|  
   
-## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>步驟 2b：將表格式 1100-1103 資料庫切換成 DirectQuery 模式  
+## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>步驟 2b:將表格式 1100-1103年資料庫切換為 DirectQuery 模式  
   
 1.  在物件總管中，以滑鼠右鍵按一下資料庫 > [屬性] > [資料庫] > [DirectQuery 模式]。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "51700586"
   
  當模型只用於記憶體中時，不能使用模擬。 **ImpersonateCurrentUser**設定無效，除非模型正在使用 DirectQuery 模式。  
   
-## <a name="step-4-validate-directquery-access"></a>步驟 4︰驗證 DirectQuery 存取  
+## <a name="step-4-validate-directquery-access"></a>步驟 4：驗證 DirectQuery 存取  
   
 1.  在連接到 SQL Server 關聯式資料庫的情況下，在 Management Studio 中使用 SQL Server Profiler 或 xEvents 開始追蹤。  
   

@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.condition
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint conditions
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c20dc45263b28225943e867ddafa8428593d92d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b70305d832c06388bc5977cdbcc560c3c8be8860
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050569"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53327628"
 ---
 # <a name="specify-a-breakpoint-condition"></a>指定中斷點條件
   中斷點條件是指偵錯工具在到達中斷點時所評估的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。 如果已滿足條件，而且到達任何指定的叫用次數，偵錯工具就會中斷或執行為中斷點指定的動作。  
@@ -48,5 +46,3 @@ ms.locfileid: "48050569"
 ## <a name="see-also"></a>另請參閱  
  [指定叫用計數](specify-a-hit-count.md)   
  [指定中斷點動作](specify-a-breakpoint-action.md)  
-  
-  

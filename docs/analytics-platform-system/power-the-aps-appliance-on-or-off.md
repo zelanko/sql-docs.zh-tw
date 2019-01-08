@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a8be7ec364a257752576fa150434a67a92c28d9c
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909508"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527857"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Analytics Platform System 的電源設備開啟或關閉
 本主題描述如何開啟或關閉您的分析平台 Systemappliance 電源的電源在執行平行處理資料倉儲。 使用本主題當 Analytics Platform System appliance 移動時，或電源設備上嚴重的電源中斷後。  
@@ -39,15 +39,15 @@ SQL Server PDW 節點的連線，您可以使用指派給節點，或從 IP 位�
 > [!WARNING]  
 > 必須執行所有步驟中所列的正確順序，每個步驟之前必須完成下一個步驟會都執行，除非另有說明。 執行順序，或等待每個步驟，才能完成的步驟可能會導致錯誤時於稍後開啟該設備。  
   
-1.  連接至 PDW 控制節點 (***PDW_region *-CTL01** ) 並使用 Analytics Platform System appliance 網域系統管理員帳戶登入。  
+1.  連接至 PDW 控制節點 (**_PDW_region_-CTL01** ) 並使用 Analytics Platform System appliance 網域系統管理員帳戶登入。  
   
 2.  執行`C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe`以開啟**Configuration Manager**。  
   
 3.  在 組態管理員中下,**平行資料倉儲拓樸**功能表上，按一下**服務狀態**索引標籤，然後按一下**停止區域**停止 PDW 服務。   
   
-4.  連接到 ***appliance_domain *-HST01**並使用設備網域系統管理員帳戶登入。  
+4.  連接到 **_appliance_domain_-HST01**並使用設備網域系統管理員帳戶登入。  
   
-5.  使用**容錯移轉叢集管理員**連線到 ***appliance_domain *-WFOHST01**叢集，如果不會自動連接，，然後在 [導覽] 窗格中，按一下**角色**. 在 **角色**窗格：  
+5.  使用**容錯移轉叢集管理員**連接到 **_appliance_domain_-WFOHST01**叢集，如果不會自動連接，，然後在 [導覽] 窗格中，按一下**角色**。 在 **角色**窗格：  
   
     1.  多重選取所有虛擬機器。 按一下滑鼠右鍵，然後選取**關機**。  
   
@@ -55,9 +55,9 @@ SQL Server PDW 節點的連線，您可以使用指派給節點，或從 IP 位�
   
 6.  關閉**容錯移轉叢集管理員**應用程式。  
   
-7. 關機以外的所有伺服器 ***appliance_domain *-HST01**。  
+7. 關機以外的所有伺服器 **_appliance_domain_-HST01**。  
   
-8. 關閉 ***appliance_domain *-HST01**伺服器。  
+8. 關閉 **_appliance_domain_-HST01**伺服器。  
   
 9. 關閉電源分配單元 (Pdu)。  
   
@@ -70,25 +70,25 @@ SQL Server PDW 節點的連線，您可以使用指派給節點，或從 IP 位�
   
 1.  開啟電源分配單元 (PDU)，並等候參數自動啟動。  
   
-2.  開啟電源 ***appliance_domain *-HST01**伺服器。  
+2.  開啟電源 **_appliance_domain_-HST01**伺服器。  
   
-3.  登入 ***appliance_domain *-HST01**設備網域管理員的身分。  
+3.  登入 **_appliance_domain_-HST01**設備網域管理員的身分。  
   
-4.  開始**HYPER-V 管理員**計劃 (**virtmgmt.msc**)，並連接到 ***appliance_domain *-HST01**如果未連接的預設值。  
+4.  開始**HYPER-V 管理員**計劃 (**virtmgmt.msc**)，並連接到 **_appliance_domain_-HST01**如果未連接的預設值。  
   
-    1.  如果您無法依名稱連接因為 ***PDW_region *-AD01**是未執行，請嘗試使用的 IP 位址來連線。  
+    1.  如果您不能因為依照名稱連接 **_PDW_region_-AD01**是未執行，請嘗試使用的 IP 位址來連線。  
   
-    2.  在 **虛擬機器**窗格中，找出 ***PDW_region *-AD01**並確認它正在執行。 如果沒有，啟動此 VM，並等候它完全啟動。  
+    2.  在 **虛擬機器**窗格中，找出 **_PDW_region_-AD01**並確認它正在執行。 如果沒有，啟動此 VM，並等候它完全啟動。  
   
 5.  在其餘的設備中的伺服器上的電源。  
   
 6.  當您於**HST01**設備網域系統管理員身分登入從**HYPER-V 管理員**:  
   
-    1.  連接到 ***appliance_domain *-HST02**。  
+    1.  連接到 **_appliance_domain_-HST02**。  
   
-    2.  在 **虛擬機器**窗格中，找出 ***PDW_region *-ad02 移**並確認它正在執行。  如果沒有，啟動此 VM，並等候它完全啟動。  
+    2.  在 **虛擬機器**窗格中，找出 **_PDW_region_-ad02 移**並確認它正在執行。  如果沒有，啟動此 VM，並等候它完全啟動。  
   
-7.  使用**容錯移轉叢集管理員**連線到 ***appliance_domain *-WFOHST01**叢集，如果不會自動連接，然後再於**瀏覽** 窗格中，按一下**角色**。 在 **角色**窗格：  
+7.  使用**容錯移轉叢集管理員**連接到 **_appliance_domain_-WFOHST01**叢集，如果不會自動連接，然後再於**瀏覽** 窗格中，按一下**角色**。 在 **角色**窗格：  
   
     1.  多重選取的所有虛擬機器中，按一下滑鼠右鍵，然後**啟動**。  
   
@@ -98,7 +98,7 @@ SQL Server PDW 節點的連線，您可以使用指派給節點，或從 IP 位�
   
 8. 中斷**HST01**如果您想要。  
   
-9. 連接到 ***PDW_region *-CTL01**使用設備網域系統管理員帳戶。  
+9. 連接到 **_PDW_region_-CTL01**使用設備網域系統管理員帳戶。  
   
 10. 執行`C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe`以啟動**Configuration Manager**。  
   

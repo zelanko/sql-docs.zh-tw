@@ -11,12 +11,12 @@ ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a7851a9da990c36b813d5281cfbf6c174f3086f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 430ac56191fcfc2c601c50f9f31de128d5d58368
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081538"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523335"
 ---
 # <a name="modifying-the-product-dimension"></a>修改 [產品] 維度
   在這個主題的工作中，您會使用具名計算來針對產品線提供更具描述性的名稱、定義 [產品] 維度中的階層，以及指定該階層的 (全部) 成員名稱。 此外，您也會將屬性分組放入顯示資料夾中。  
@@ -58,7 +58,7 @@ ms.locfileid: "48081538"
   
 2.  在 [維度結構] 索引標籤的 [屬性] 窗格中，選取 [產品線]。  
   
-3.  在畫面右側的 [屬性] 視窗中，按一下視窗底部的 **NameColumn** 屬性欄位，然後按一下瀏覽 (**...**) 按鈕，即可開啟 [名稱資料行] 對話方塊。 (您可能需要按一下畫面右側的 [屬性] 索引標籤開啟 [屬性] 視窗)。  
+3.  在畫面右側的 屬性 視窗中按一下**NameColumn**屬性 視窗中，底部的欄位，然後按一下 瀏覽 (**...**) 按鈕，即可開啟**名稱資料行** 對話方塊。 (您可能需要按一下畫面右側的 [屬性] 索引標籤開啟 [屬性] 視窗)。  
   
 4.  選取 `ProductLineName`底部**來源資料行**清單，然後再按**確定**。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48081538"
   
 5.  在 [維度結構] 索引標籤的 [屬性] 窗格中，選取 [產品金鑰]。  
   
-6.  在 [屬性] 視窗中按一下 [NameColumn] 屬性欄位，然後按一下省略符號瀏覽 (**...**) 按鈕，即可開啟 [名稱資料行] 對話方塊。  
+6.  在 [屬性] 視窗中，按一下**NameColumn**屬性欄位，，然後按一下 [省略符號瀏覽 (**...**) 按鈕，即可開啟**名稱資料行**] 對話方塊。  
   
 7.  選取 [來源資料行] 清單中的 [EnglishProductName]，然後按一下 [確定]。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "48081538"
 9. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
 ## <a name="defining-attribute-relationships"></a>定義屬性關聯性  
- 如果基礎資料支援屬性關聯性，您就應該定義屬性之間的屬性關聯性。 定義屬性關聯性可加快維度、資料分割和查詢處理的速度。 如需詳細資訊，請參閱[定義屬性關聯性](multidimensional-models/attribute-relationships-define.md)和[屬性關聯性](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
+ 如果基礎資料支援屬性關聯性，您就應該定義屬性之間的屬性關聯性。 定義屬性關聯性可加快維度、資料分割和查詢處理的速度。 如需詳細資訊，請參閱 [定義屬性關聯性](multidimensional-models/attribute-relationships-define.md) 和 [屬性關聯性](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
   
 #### <a name="to-define-attribute-relationships"></a>定義屬性關聯性  
   
@@ -180,11 +180,11 @@ ms.locfileid: "48081538"
      請注意，名稱**所有**成員會顯示為`All Products`。 這是因為您變更**AllMemberName**屬性階層`All Products`稍早在本課程。 此外，[產品線] 層級的成員現在有了使用者易記名稱，而非單一字母的縮寫。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [修改日期維度](lesson-3-4-modifying-the-date-dimension.md)  
+ [修改 Date 維度](lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [在資料來源檢視中定義具名的計算&#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [建立使用者定義階層](multidimensional-models/user-defined-hierarchies-create.md)   
- [設定&#40;所有&#41;屬性階層的層級](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [設定屬性階層的 &#40;全部&#41; 層級](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

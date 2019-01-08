@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 881a32bbb21eeeef0e09eaedb98897f90a1c0d27
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215668"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811110"
 ---
 # <a name="work-with-change-data-sql-server"></a>使用變更資料 (SQL Server)
   異動資料擷取取用者會透過資料表值函式 (TVF) 取得變更資料。 這些函數的所有查詢都需要使用兩個參數來定義開發傳回的結果集時適合用於考量的記錄序號 (LSN) 範圍。 限制間隔的上下 LSN 值會被視為包含在間隔內部。  
@@ -37,7 +36,7 @@ ms.locfileid: "48215668"
   
  `An insufficient number of arguments were supplied for the procedure or function cdc.fn_cdc_get_all_changes_ ...`  
   
- 傳回的對應錯誤`net changes`查詢如下：  
+ 針對 `net changes` 查詢傳回的對應錯誤如下所示：  
   
  `Msg 313, Level 16, State 3, Line 1`  
   
@@ -73,7 +72,7 @@ ms.locfileid: "48215668"
     > [!NOTE]  
     >  只有當來源資料表具有已定義的主索引鍵，或者 @index_name 參數已經用來識別唯一的索引時，才支援這個選項。  
   
-     **netchanges** 函數會針對每個已修改的來源資料表資料列傳回一項變更。 如果在指定的間隔期間記錄了資料列的多個變更，資料行值將會反映資料列的最終內容。 為了正確識別更新目標環境所需的作業，TVF 必須同時考慮資料列在間隔期間的初始作業，以及資料列的最終作業。 指定資料列篩選選項 'all' 時，`net changes` 查詢所傳回的作業就是插入、刪除或更新 (新值)。 此選項永遠會將更新遮罩傳回為 Null，因為存在與計算彙總遮罩相關聯的成本。 如果您需要反映資料列之所有變更的彙總遮罩，請使用 'all with mask' 選項。 如果下游處理不需要區分插入和更新，請使用 'all with merge' 選項。 在此情況下，作業值只會使用兩個值：1 用於刪除，而 5 用於可以是插入或更新的作業。 這個選項可以排除判斷衍生之作業是插入還是更新的額外處理需求，因此可以在不需要加以區分時，增進查詢的效能。  
+     **netchanges** 函數會針對每個已修改的來源資料表資料列傳回一項變更。 如果在指定的間隔期間記錄了資料列的多個變更，資料行值將會反映資料列的最終內容。 為了正確識別更新目標環境所需的作業，TVF 必須同時考慮資料列在間隔期間的初始作業，以及資料列的最終作業。 指定資料列篩選選項 'all' 時，`net changes` 查詢所傳回的作業就是插入、刪除或更新 (新值)。 此選項永遠會將更新遮罩傳回為 Null，因為存在與計算彙總遮罩相關聯的成本。 如果您需要反映資料列之所有變更的彙總遮罩，請使用 'all with mask' 選項。 如果下游處理不需要區分插入和更新，請使用 'all with merge' 選項。 在此情況下，作業值只會使用兩個值：1 代表刪除，而 5 用於可以是插入或更新作業。 這個選項可以排除判斷衍生之作業是插入還是更新的額外處理需求，因此可以在不需要加以區分時，增進查詢的效能。  
   
  從查詢函數傳回的更新遮罩是一種精簡型的表示法，它會識別在變更資料之資料列中變更的所有資料行。 一般而言，只有擷取資料行的小型子集需要這個資訊。 但是，如果使用這些函數，將有助於以應用程式更可直接應用的形式，從遮罩擷取資訊。 [sys.fn_cdc_get_column_ordinal](/sql/relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql) 函數會針對給定的擷取執行個體，傳回具名資料行的序數位置，而 [sys.fn_cdc_is_bit_set](/sql/relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql) 函數則會根據傳入函數呼叫中的序數，傳回提供之遮罩中的同位位元。 同時，這兩個函數可以針對變更資料的要求，有效率地擷取並傳回更新遮罩的資訊。 如需如何使用這些函數的示範，請參閱「使用 All With Mask 來列舉淨變更」範本。  
   
@@ -81,7 +80,7 @@ ms.locfileid: "48215668"
  下列各節將描述使用 cdc.fn_cdc_get_all_changes_<capture_instance> 和 cdc.fn_cdc_get_net_changes_<capture_instance> 查詢函數來查詢異動資料擷取資料的一般狀況。  
   
 ### <a name="querying-for-all-changes-within-the-capture-instance-validity-interval"></a>在擷取執行個體有效性間隔內查詢所有變更  
- 變更資料最直接的要求就是在擷取執行個體的有效性間隔中傳回所有目前的變更資料。 若要提出這項要求，請先判斷有效性間隔的 LSN 下限與上限。 然後，請使用這些值來識別傳遞給 cdc.fn_cdc_get_all_changes_<擷取執行個體> 或 cdc.fn_cdc_get_net_changes_<擷取執行個體> 查詢函式的 @from_lsn 和 @to_lsn 參數。 您可以使用 [sys.fn_cdc_get_min_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql) 函數來取得下限，而使用 [sys.fn_cdc_get_max_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql) 函數來取得上限。 如需使用 cdc.fn_cdc_get_all_changes_<capture_instance> 查詢函數來查詢所有目前有效變更的範例程式碼，請參閱「列舉有效範圍的所有變更」範本。 如需使用 cdc.fn_cdc_get_net_changes_<capture_instance> 函數的類似範例，請參閱「列舉有效範圍的淨變更」範本。  
+ 變更資料最直接的要求就是在擷取執行個體有效性間隔中傳回所有目前變更資料。 若要提出這項要求，請先判斷有效性間隔的 LSN 下限與上限。 然後，請使用這些值來識別傳遞給 cdc.fn_cdc_get_all_changes_<擷取執行個體> 或 cdc.fn_cdc_get_net_changes_<擷取執行個體> 查詢函式的 @from_lsn 和 @to_lsn 參數。 您可以使用 [sys.fn_cdc_get_min_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql) 函數來取得下限，而使用 [sys.fn_cdc_get_max_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql) 函數來取得上限。 如需使用 cdc.fn_cdc_get_all_changes_<capture_instance> 查詢函數來查詢所有目前有效變更的範例程式碼，請參閱「列舉有效範圍的所有變更」範本。 如需使用 cdc.fn_cdc_get_net_changes_<capture_instance> 函數的類似範例，請參閱「列舉有效範圍的淨變更」範本。  
   
 ### <a name="querying-for-all-new-changes-since-the-last-set-of-changes"></a>查詢自從上一組變更以來的所有新變更  
  對於一般應用程式而言，查詢變更資料是持續進行的程序，並且針對自從上一個要求以來發生的所有變更提出定期要求。 您可以針對這類查詢使用 [sys.fn_cdc_increment_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql) 函數，以便從上一個查詢的上限衍生出目前查詢的下限。 這個方法可確保不會重複任何資料列，因為查詢間隔永遠會被視為封閉的間隔，其中兩個端點都包含在間隔中。 然後，您可以使用 [sys.fn_cdc_get_max_lsn](/sql/relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql) 函數來取得新要求間隔的高端點。 如需有系統地移動查詢視窗來取得自從上一個要求以來之所有變更的範例程式碼，請參閱「列舉自從上一個要求以來的所有變更」範本。  
@@ -113,7 +112,7 @@ ms.locfileid: "48215668"
   
  包裝所有變更查詢之函數的名稱是 fn_all_changes_ 後面接著擷取執行個體名稱。 用於淨變更包裝函數的前置詞為 fn_net_changes_。 這兩個函數都會接受三個引數，就如同其相關聯的異動資料擷取 TVF 一樣。 不過，這些包裝函數的查詢間隔是以兩個日期時間值 (而非兩個 LSN 值) 所限定。 這兩組函式的 @row_filter_option 參數都相同。  
   
- 產生的包裝函式支援下列有系統地查核異動資料擷取時間表的慣例：先前間隔的 @end_time 參數應該要當作後續間隔的 @start_time 參數使用。 此包裝函數會負責將日期時間值對應至 LSN 值，並且確保遵循此慣例時，不會遺漏或重複任何資料。  
+ 產生的包裝函數支援有系統地查核異動資料擷取時間表的慣例：預期的是，@end_time先前間隔的參數來當做@start_time後續間隔的參數。 此包裝函數會負責將日期時間值對應至 LSN 值，並且確保遵循此慣例時，不會遺漏或重複任何資料。  
   
  您可以產生包裝函數來支援指定之查詢視窗上的封閉上限或開放上限。 也就是說，呼叫者可以指定具有認可時間的項目是否等於要包含在間隔內之擷取間隔的上限。 預設會包含上限。  
   

@@ -13,12 +13,12 @@ ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 674c2d9d259d09456bc97edc4a6b9e842f9a4519
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dac94d8bfb0e2bc0ab91f6a18e6f18606481b112
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676196"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202027"
 ---
 # <a name="delete---sql-command"></a>DELETE - SQL 命令
 將標示為要刪除的記錄。  

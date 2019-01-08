@@ -11,17 +11,17 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f08906f5de609cfd1a520d397a41fe5bc0f36bc4
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 768d35d4cc2763ee055fc2bebfee3e954a64dc65
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099659"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350189"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>從 SQL Server 2005 升級嗎？
   由於對 SQL Server 2005 的延伸支援即將結束，因此建議您立即升級到新版 SQL Server 及 Azure SQL Database。 透過升級，您能夠維護安全性與相容性、達到突破性的效能，並將資料平台基礎結構最佳化。  
   
- 如需詳細資訊、指引及取得工具以規劃及自動化您的升級或移轉，請參閱 [不再支援 SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)。  
+ 如需詳細資訊、指引及取得工具以規劃及自動化您的升級或移轉，請參閱 [不再支援 SQL Server 2005](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)。  
   
 ## <a name="why-upgrade"></a>為何要升級？  
   
@@ -33,15 +33,15 @@ ms.locfileid: "50099659"
  ![從 SQL Server 2005 升級的詳細資料工作表](../../../2014/sql-server/install/media/sqlserver2005eos.png "有關從 SQL Server 2005 升級的資料工作表")  
   
 ## <a name="choose-your-upgrade-option"></a>選擇升級選項  
- 若要升級 SQL Server 2005 的關聯式資料庫，以下是 Microsoft 平台所提供的關聯式儲存體選項。  
+ 如果您要從 SQL Server 2005 升級的關聯式資料庫，以下是 Microsoft 平台上的關聯式儲存體選項。  
   
  若要查看這些選項更全面的分析，請 [按一下這裡](http://sql05upgrade.azurewebsites.net/)。  
   
 |關聯式儲存體選項|優點|其他考量因素|  
 |-------------------------------|--------------|-------------------------------|  
-|**內部部署 SQL Server**<br /><br /> 此選項適用於任何種類 (從交易系統到資料倉儲) 的應用程式。<br /><br /> 如需詳細資訊，請參閱 < [SQL Server 2014](https://www.microsoft.com/EN-US/server-cloud/products/sql-server/)。|因為軟硬體皆由您所管理，所以您幾乎能自由操控各項功能與規模調整功能。<br /><br /> 若要從 SQL Server 2005 升級，這是最相似的環境。|因為您必須購買、維護及管理您所擁有的硬體與軟體，所以此選項的初期投資最高，管理時間也最長。|  
+|**內部部署 SQL Server**<br /><br /> 此選項適用於任何種類 (從交易系統到資料倉儲) 的應用程式。<br /><br /> 如需詳細資訊，請參閱 < [SQL Server 2014](https://www.microsoft.com/EN-US/server-cloud/products/sql-server/)。|因為軟硬體皆由您所管理，所以您幾乎能自由操控各項功能與規模調整功能。<br /><br /> 如果您要從 SQL Server 2005 升級，這會是最相似的環境。|因為您必須購買、維護及管理您所擁有的硬體與軟體，所以此選項的初期投資最高，管理時間也最長。|  
 |**裝載於 Azure 虛擬機器上的 SQL Server**<br /><br /> 您若希望享有下列便利，可考慮此選項。<br />-移轉到託管環境的優點。<br />-控制作業環境。<br />-SQL server 熟悉的功能集。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 在 Azure 虛擬機器概觀的 SQL Server](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)。<br /><br /> 如需移轉的相關資訊，請參閱 [將資料庫移轉至 Azure VM 上的 SQL Server](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/)。|您可以快速從虛擬機器的映像庫快速進行部署。<br /><br /> 您可以使用完整的 SQL Server 功能集。<br /><br /> 您可以節省在伺服器軟硬體上的投資。 您只需按每小時的使用量付費。|您必須設定及管理 SQL Server 與作業系統軟體。|  
-|**裝載 Azure SQL Database 的資料庫服務**<br /><br /> 若您需要價格較低、維護工作較少的解決方案，可以考慮此選項。<br /><br /> 此選項特別適合不需要時時保有相同容量的應用程式，或需要提供外部存取的應用程式。<br /><br /> 如需詳細資訊，請參閱 < [SQL Database](https://azure.microsoft.com/services/sql-database/)。<br /><br /> 如需移轉的相關資訊，請參閱[將 SQL Server 資料庫移轉到 Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)。|您可以快速部署及相應增加。<br /><br /> 您只需按每小時的使用量付費。<br /><br /> 服務的費用不只有儲存體而已，還包括高可用性及自動化備份。|Azure SQL Database 所缺少的一些 SQL Server 功能並不適用於託管的雲端環境。 如需詳細資訊，請參閱 [Azure SQL Database Transact-SQL 資訊](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/)。<br /><br /> 相較於 SQL Server 的 524 PB，Azure SQL Database 的資料庫大小上限為 500 GB。|  
+|**裝載 Azure SQL Database 的資料庫服務**<br /><br /> 若您需要價格較低、維護工作較少的解決方案，可以考慮此選項。<br /><br /> 此選項特別適合不需要隨時保有相同容量的應用程式，或需要提供外部存取的應用程式。<br /><br /> 如需詳細資訊，請參閱 < [SQL Database](https://azure.microsoft.com/services/sql-database/)。<br /><br /> 如需移轉的相關資訊，請參閱[將 SQL Server 資料庫移轉到 Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)。|您可以快速部署及相應增加。<br /><br /> 您只需按每小時的使用量付費。<br /><br /> 服務的費用不只有儲存體而已，還包括高可用性及自動化備份。|Azure SQL Database 所缺少的一些 SQL Server 功能並不適用於託管的雲端環境。 如需詳細資訊，請參閱 [Azure SQL Database Transact-SQL 資訊](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/)。<br /><br /> 相較於 SQL Server 的 524 PB，Azure SQL Database 的資料庫大小上限為 500 GB。|  
   
  對於某些資料及應用程式，您也可考慮使用非關聯式或 NoSQL 解決方案。  
   
@@ -58,11 +58,11 @@ ms.locfileid: "50099659"
   
 -   透過以下來自 SQL Server 小組的一系列部落格文章，了解如何計劃您的升級。  
   
-    -   [Planning an efficient upgrade from SQL Server 2005: Step 1 of 3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
+    -   [規劃從 SQL Server 2005 有效率升級：步驟 3 之 1](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
   
-    -   [Planning an efficient upgrade from SQL Server 2005: Step 2 of 3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
+    -   [規劃從 SQL Server 2005 有效率升級：步驟 3 之 2](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
   
-    -   [Planning an efficient upgrade from SQL Server 2005: Step 3 of 3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
+    -   [規劃從 SQL Server 2005 有效率升級：步驟 3 之 3](http://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
   
 -   檢閱需求和考量之下[規劃 SQL Server 安裝](../../../2014/sql-server/install/planning-a-sql-server-installation.md)，包括[硬體和軟體需求，安裝 SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)。  
   
@@ -73,16 +73,16 @@ ms.locfileid: "50099659"
         > [!IMPORTANT]  
         >  您無法將 SQL Server 2005 伺服器就地升級至 SQL Server 2014 伺服器。 您必須安裝 SQL Server 2014，然後將 SQL Server 2005 資料庫移轉到新的安裝。  
   
-    -   若要取得詳細的 PDF 格式《技術升級指南》，請 [按一下這裡](http://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf)。  
+    -   若要取得詳細的 PDF 格式《技術升級指南》，請 [按一下這裡](https://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf)。  
   
--   如需詳細資訊、指引及取得工具以規劃及自動化您的升級或移轉，請參閱 [不再支援 SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)。  
+-   如需詳細資訊、指引及取得工具以規劃及自動化您的升級或移轉，請參閱 [不再支援 SQL Server 2005](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)。  
   
 ## <a name="get-sql-server-2014"></a>取得 SQL Server 2014  
  若要下載評估版的 SQL Server 2014[按一下這裡](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2014)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2014](http://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx)   
- [不再支援 SQL Server 2005](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
+ [SQL Server 2014](https://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx)   
+ [不再支援 SQL Server 2005](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
  [從 SQL Server 2005 升級到 SQL Server 2016](https://msdn.microsoft.com/library/mt168847.aspx)  
   
   

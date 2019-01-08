@@ -13,12 +13,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1e4c878004f3cdcc492637d338e8ff6c8d92937
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104169"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350014"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組操作問題適用的 AlwaysOn 原則 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 健全狀況模型會評估一組預先定義的原則式管理 (PBM) 原則。 您可以使用這些原則，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中檢視可用性群組及其可用性複本和資料庫的健全狀況。  
@@ -84,9 +84,9 @@ ms.locfileid: "48104169"
 ##  <a name="ExtendHealthModel"></a> 擴充 AlwaysOn 健全狀況模型  
  擴充 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 健全狀況模型就是建立您自己的使用者定義原則，並根據您所監控的物件類型將其置於某些類別目錄中。  在您改變幾個設定之後，AlwaysOn 儀表板將會自動評估您的使用者定義原則以及 AlwaysOn 預先定義的原則。  
   
- 使用者定義的原則可以使用任何可用的 PBM Facet，包括 AlwaysOn 預先定義的原則所使用的 Facet (請參閱本主題稍早的[預先定義的原則和問題](#AlwaysOnPBM))。 伺服器 facet 會提供下列屬性，來監視[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]健康情況: (`IsHadrEnabled`和`HadrManagerStatus`)。 伺服器 Facet 也會提供用來監控 WSFC 叢集組態的以下原則：`ClusterQuorumType` 和 `ClusterQuorumState`。  
+ 使用者定義的原則可以使用任何可用的 PBM Facet，包括 AlwaysOn 預先定義的原則所使用的 Facet (請參閱本主題稍早的[預先定義的原則和問題](#AlwaysOnPBM))。 伺服器 Facet 會提供用來監控 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 健全狀況的以下屬性：(`IsHadrEnabled` 和 `HadrManagerStatus`)。 伺服器 Facet 也會提供用來監控 WSFC 叢集組態的以下原則：`ClusterQuorumType` 和 `ClusterQuorumState`。  
   
- 如需詳細資訊，請參閱 [The AlwaysOn Health Model Part 2 -- Extending the Health Model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (AlwaysOn 健全狀況模型第 2 部 -- 擴充健全狀況模型) (SQL Server AlwaysOn 團隊部落格)。  
+ 如需詳細資訊，請參閱 [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (AlwaysOn 健全狀況模型第 2 部 -- 擴充健全狀況模型) (SQL Server AlwaysOn 團隊部落格)。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
@@ -104,11 +104,11 @@ ms.locfileid: "48104169"
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [AlwaysOn 健全狀況模型第 1 部分-健全狀況模型架構](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [AlwaysOn 健全狀況模型第 1 部分-健全狀況模型架構](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [AlwaysOn 健全狀況模型第 2 部分-擴充健全狀況模型](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [AlwaysOn 健全狀況模型第 2 部分-擴充健全狀況模型](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 (SQL Server)](always-on-availability-groups-sql-server.md)   

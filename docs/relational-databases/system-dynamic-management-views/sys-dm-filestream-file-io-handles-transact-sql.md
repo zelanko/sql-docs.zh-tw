@@ -19,12 +19,12 @@ ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cde19779c178b8064e6b20a3ae39bbfb7f5b96f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25af20743a98ad674e24cf4ae028185b024697e5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847156"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395882"
 ---
 # <a name="sysdmfilestreamfileiohandles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47847156"
   
 |「資料行」|類型|描述|  
 |------------|----------|-----------------|  
-|**handle_context_address**|**varbinary(8)**|顯示與用戶端控制代碼相關聯之內部 NSO 結構的位址。 可為 Null。|  
+|**handle_context_address**|**varbinary(8)**|顯示與用戶端的控制代碼相關聯之內部 NSO 結構的位址。 可為 Null。|  
 |**creation_request_id**|**int**|從用來建立此控制代碼的 REQ_PRE_CREATE I/O 要求顯示欄位。 不可為 Null。|  
 |**creation_irp_id**|**int**|從用來建立此控制代碼的 REQ_PRE_CREATE I/O 要求顯示欄位。 不可為 Null|  
 |**handle_id**|**int**|顯示驅動程式指派給此控制代碼的唯一識別碼。 不可為 Null。|  

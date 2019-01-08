@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: e9b023db-6944-4035-9a83-300f34a58454
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f32379d9bea6d3993b049a780b994e8d57abfcde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49590cafe124410e74c150d228fbc621db93f779
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175248"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801220"
 ---
 # <a name="log-file-auto-grow-event-class"></a>Log File Auto Grow 事件類別
   **Log File Auto Grow** 事件類別指出記錄檔已自動成長。 如果以外顯方式透過 ALTER DATABASE 讓記錄檔增長，則不會觸發這個事件。  

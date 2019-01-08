@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
@@ -34,17 +33,17 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d3198f2d361726a3e17c152b259471062f6a297
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9610dc1cc729dc555d42c0dfe5eeb117f9cfba18
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142188"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798280"
 ---
 # <a name="editions-and-components-of-sql-server-2014"></a>SQL Server 2014 的版本和元件
   安裝需求根據應用程式的需要而異。 不同的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本可配合組織和個人的獨特效能、執行階段和價格需求。 安裝的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件也將取決於您的特定需求。 下列章節幫助您了解如何在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的可用版本和元件之間做出最好的選擇。  
   
-## <a name="principal-editions-of-includesscurrentincludessscurrent-mdmd"></a>主要版本 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="principal-editions-of-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的主要版本  
  下表描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要版本。 如需詳細資訊，請參閱[支援的 SQL Server 2014 的版本功能](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|定義|  
@@ -53,14 +52,14 @@ ms.locfileid: "48142188"
 |Business Intelligence (64 位元和 32 位元)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Business Intelligence Edition 提供了一套完整的平台，讓組織能夠建置並部署安全、可擴充且可管理的 BI 方案。 此外，它提供了創新的功能，例如瀏覽器架構的資料探索和視覺效果、功能強大的資料結合功能，以及強化的整合管理。|  
 |Standard (64 位元和 32 位元)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Standard Edition 針對部門和小型組織提供基本的資料管理與商業智慧資料庫來執行應用程式，並且支援內部部署和雲端的一般開發工具 - 以最少的 IT 資源提供最有效率的資料庫管理。|  
   
-## <a name="specialized-editions-of-includesscurrentincludessscurrent-mdmd"></a>特殊的版本 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="specialized-editions-of-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的特殊版本  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的特殊版本是以商業工作負載為目標。 下表描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的特殊版本。  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|描述|  
 |---------------------------------------|-----------------|  
 |Web (64 位元和 32 位元)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Web Edition 對於 Web 主控者和 Web VAP 而言是一個整體擁有成本很低的選擇，可針對小型到大型規模的 Web 屬性提供可擴充、負擔輕鬆而且管理方便的功能。|  
   
-## <a name="breadth-editions-of-includesscurrentincludessscurrent-mdmd"></a>廣泛版本 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="breadth-editions-of-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的廣泛版本  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的廣泛版本是針對特定客戶案例所設計，將免費提供或以非常低廉的成本提供。 下表描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的廣泛版本。  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|描述|  
@@ -86,7 +85,7 @@ ms.locfileid: "48142188"
   
 |伺服器元件|描述|  
 |-----------------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 包含[!INCLUDE[ssDE](../includes/ssde-md.md)]，來儲存、 處理和保護資料、 複寫、 全文檢索搜尋、 工具，來管理關聯式和 XML 資料的核心服務和[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)](DQS) 伺服器。|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 包含 [!INCLUDE[ssDE](../includes/ssde-md.md)]、用來儲存、處理及保護資料安全的核心服務、複寫、全文檢索搜尋功能、用來管理關聯式和 XML 資料的工具，以及 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 伺服器。|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 包括用來建立及管理線上分析處理 (OLAP) 和資料採礦應用程式的工具。|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括伺服器和用戶端元件，可用來建立、管理和部署表格式、矩陣、圖形化和自由形式報表。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 也是一個可延伸的平台，可讓您用來開發報表應用程式。|  
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 是一組圖形化工具和可程式化物件，用來移動、複製和轉換資料。 其中還包括 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)](DQS) 元件。|  

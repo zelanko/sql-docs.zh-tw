@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - languages [SMO]
@@ -19,12 +17,12 @@ ms.assetid: f5e5a832-03e9-477b-b55d-491c678ebb43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51345bea67d1a1ca8a3f74eecfec8041a75a506e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: feca89ac2ac888c2fa9f082595e761e898dea971
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215538"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815050"
 ---
 # <a name="programming-languages"></a>程式語言：
   本章節描述如何進行程式設計[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO) 中[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Basic.NET [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.NET 和[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual c + +。  

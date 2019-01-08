@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.conditionalsplittrans.f1
@@ -16,12 +15,12 @@ ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b6cfae604393fa2fec1c8d3a22edf2c0379581b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6d5c075898bc503a58c6b90641788d01e9b97d0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073574"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814910"
 ---
 # <a name="conditional-split-transformation"></a>條件式分割轉換
   「條件式分割」轉換可根據資料的內容，將資料列傳送至不同的輸出。 「條件式分割」轉換的實作與程式設計語言中的 CASE 決策結構類似。 轉換會評估運算式，並根據結果將資料列導向指定的輸出。 此轉換亦提供預設輸出，如此一來，即使資料列未符合任何運算式，仍會導向預設輸出。  
@@ -45,9 +44,9 @@ ms.locfileid: "48073574"
   
  `SUBSTRING(FirstName,1,1) == "B"`  
   
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含各種函數和運算子，可用來建立評估輸入資料和導向輸出資料的運算式。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../expressions/integration-services-ssis-expressions.md)。  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含各種函數和運算子，可用來建立評估輸入資料和導向輸出資料的運算式。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../../expressions/integration-services-ssis-expressions.md)為止。  
   
- 「 條件式分割 」 轉換包含`FriendlyExpression`自訂屬性。 屬性運算式可以在載入封裝時更新這個屬性。 如需詳細資訊，請參閱 [在封裝中使用屬性運算式](../../expressions/use-property-expressions-in-packages.md) 和 [轉換自訂屬性](transformation-custom-properties.md)。  
+ 條件式分割轉換包括 `FriendlyExpression` 自訂屬性。 屬性運算式可以在載入封裝時更新這個屬性。 如需詳細資訊，請參閱 [在封裝中使用屬性運算式](../../expressions/use-property-expressions-in-packages.md) 和 [轉換自訂屬性](transformation-custom-properties.md)。  
   
  此轉換擁有一項輸入、一項或多項輸出，以及一項錯誤輸出。  
   

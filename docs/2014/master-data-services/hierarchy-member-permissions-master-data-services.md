@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - members [Master Data Services], permissions
@@ -14,12 +13,12 @@ ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4310f16b19fa85012844cc6e0fb71b2dce3ce6f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7e762a450a28f1d07e58a0baa6f7f3ff3948681
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111993"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797038"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層成員權限 (Master Data Services)
   階層成員權限為選擇性，而且只有當您希望使用者擁有特定成員的受限存取權時，才應該使用。 如果您未在 [階層成員] 索引標籤上指派權限，則使用者的權限完全是根據 [模型] 索引標籤上指派的權限。  
@@ -37,7 +36,7 @@ ms.locfileid: "48111993"
   
 |權限|描述|  
 |----------------|-----------------|  
-|**唯讀**|顯示成員，但是使用者無法變更成員。 使用者也無法在任何明確階層或成員所屬的集合中移動成員。<br /><br /> 注意： 如果您指派**唯讀**權限**根**，之下的成員**根**是唯讀的; 不過，在明確階層和集合，則使用者可以移動成員**根**，可以將新成員加入**根**。|  
+|**唯讀**|顯示成員，但是使用者無法變更成員。 使用者也無法在任何明確階層或成員所屬的集合中移動成員。<br /><br /> 注意：如果您指派**唯讀**權限**根**，底下的成員**根**是唯讀的; 不過，在明確階層和集合中，使用者可以將成員移到**根**，可以將新成員加入**根**。|  
 |**Update**|顯示成員，而且使用者可加以變更。 使用者也可以在任何明確階層或成員所屬的集合中移動成員。|  
 |**拒絕**|不顯示成員。|  
   
@@ -57,10 +56,10 @@ ms.locfileid: "48111993"
 -   如果一個階層節點被指派**更新**或是**唯讀**權限，另一個節點被指派**拒絕**，則不會顯示該節點中的成員。  
   
 ## <a name="see-also"></a>另請參閱  
- [指派階層成員權限&#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [如何決定權限&#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
+ [指派階層成員權限 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [如何決定權限 &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
  [成員 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [階層 &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)   
- [立即套用成員權限&#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md)  
+ [立即套用成員權限 &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md)  
   
   

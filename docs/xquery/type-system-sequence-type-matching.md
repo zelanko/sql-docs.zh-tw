@@ -16,12 +16,12 @@ ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e4532e52bb2efe190d962bfcfc50e65c441b5575
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3df2ef3f14cb8ca4fd7e7bcf5799b6966c16dc10
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668647"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511450"
 ---
 # <a name="type-system---sequence-type-matching"></a>類型系統 - 序列類型比對
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51668647"
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>比較運算式傳回的不可部份完成值類型  
  如果運算式傳回含有不可部份完成值的序列，則您必須尋找序列中值的類型。 下列範例說明如何使用序列類型語法，來評估運算式傳回的不可部份完成值類型。  
   
-### <a name="example-determining-whether-a-sequence-is-empty"></a>範例：判斷序列是否為空  
+### <a name="example-determining-whether-a-sequence-is-empty"></a>範例判斷序列是否為空  
  **Empty （)** 順序類型可以使用序列類型運算式中，以判斷所指定的運算式傳回的序列是空的序列。  
   
  在下列範例中，XML 結構描述允許 <`root`> 元素為 Nilled：  
@@ -71,7 +71,7 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
-### <a name="example-determining-the-type-of-an-attribute-value"></a>範例：判斷屬性值的類型  
+### <a name="example-determining-the-type-of-an-attribute-value"></a>範例判斷屬性值的類型  
  有時候，您或許想在處理之前評估運算式傳回的序列類型。 例如，有一個 XML 結構描述，其中有個節點定義為聯集類型。 在下列範例中，集合中的 XML 結構描述將 `a` 屬性定義為聯集類型，其值可以是十進位或字串類型。  
   
 ```  
@@ -112,7 +112,7 @@ SELECT @var.query('data((/root/@a)[1]) instance of xs:string')
 GO  
 ```  
   
-### <a name="example-cardinality-in-sequence-expressions"></a>範例：序列運算式中的基數  
+### <a name="example-cardinality-in-sequence-expressions"></a>範例序列運算式中的基數  
  此範例說明基數在序列運算式中的作用。 下列 XML 結構描述定義的 <`root`> 元素是位元組類型且為 Nillable。  
   
 ```  
@@ -160,7 +160,7 @@ GO
   
  如果都符合，`instance of` 運算式會傳回 True。  
   
-### <a name="example-querying-against-an-xml-type-column"></a>範例：針對 xml 類型資料行查詢  
+### <a name="example-querying-against-an-xml-type-column"></a>範例針對 xml 類型資料行查詢  
  在下列範例中，查詢針對 Instructions 資料行指定**xml**中輸入[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫。 它是具類型的 XML 資料行，因為它有相關聯的結構描述。 XML 結構描述定義了整數類型的 `LocationID` 屬性。 因此，在序列運算式中， `instance of xs:integer?` ，則傳回 True。  
   
 ```  
@@ -174,19 +174,19 @@ WHERE ProductModelID = 7
 ## <a name="comparing-the-node-type-returned-by-an-expression"></a>比較運算式傳回的節點類型  
  如果運算式傳回含有節點的序列，則您必須尋找序列中節點的類型。 下列範例說明如何使用序列類型語法，來評估運算式傳回的節點類型。 您可以使用下列序列類型：  
   
--   **item** – 比對序列中的任何項目。  
+-   **item** -比對序列中的任何項目。  
   
--   **node （)** – 判斷序列是否為節點。  
+-   **node （)** -判斷序列是否為節點。  
   
--   **processing-instruction** – 判斷運算式是否會傳回處理指示。  
+-   **processing-instruction** -判斷運算式是否會傳回處理指示。  
   
--   **comment （)** – 判斷運算式是否會傳回註解。  
+-   **comment （)** -判斷運算式是否會傳回註解。  
   
--   **document-node** – 判斷運算式是否會傳回文件節點。  
+-   **document-node** -判斷運算式是否會傳回文件節點。  
   
  下列範例說明這些序列類型。  
   
-### <a name="example-using-sequence-types"></a>範例：使用序列類型  
+### <a name="example-using-sequence-types"></a>範例使用序列類型  
  在此範例中，會對不具類型的 XML 變數執行數個查詢。 這些查詢會說明序列類型的使用方式。  
   
 ```  

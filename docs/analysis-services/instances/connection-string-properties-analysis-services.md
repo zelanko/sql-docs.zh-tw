@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b224b70c8985b23568d24f6230b138d6c43f5928
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6e4b457cc59602c9c4c1fc2306446cbb7f47c173
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148163"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984119"
 ---
 # <a name="connection-string-properties-analysis-services"></a>連接字串屬性 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -47,18 +47,18 @@ ms.locfileid: "50148163"
   
 |屬性|描述|  
 |--------------|-----------------|  
-|**EffectiveUserName**|當伺服器上必須模擬使用者識別時使用。 以「網域\使用者」的格式指定帳戶。 若要使用此屬性，呼叫端必須具有 Analysis Services 的系統管理權限。 如需有關從 SharePoint 的 Excel 活頁簿中使用此屬性的資訊，請參閱＜ [在 SharePoint Server 2013 中使用 Analysis Services EffectiveUserName](http://go.microsoft.com/fwlink/?LinkId=311905)＞。 如需有關如何搭配 Reporting Services 使用此屬性的說明，請參閱 [使用 EffectiveUserName 在 SSAS 中模擬](http://go.microsoft.com/fwlink/?LinkId=301385)。<br /><br /> **EffectiveUserName** 是在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝中用於擷取使用方式資訊。 使用者識別會提供給伺服器，從而可將包含使用者識別的事件或錯誤記錄於記錄檔。 就 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]而言，它並非用於授權用途。|  
+|**EffectiveUserName**|當伺服器上必須模擬使用者識別時使用。 以「網域\使用者」的格式指定帳戶。 若要使用此屬性，呼叫端必須具有 Analysis Services 的系統管理權限。 如需有關從 SharePoint 的 Excel 活頁簿中使用此屬性的資訊，請參閱＜ [在 SharePoint Server 2013 中使用 Analysis Services EffectiveUserName](http://go.microsoft.com/fwlink/?LinkId=311905)＞。<br /><br /> **EffectiveUserName** 是在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝中用於擷取使用方式資訊。 使用者識別會提供給伺服器，從而可將包含使用者識別的事件或錯誤記錄於記錄檔。 就 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]而言，它並非用於授權用途。|  
 |**加密密碼**|指定是否使用本機密碼加密本機 Cube。 有效值為 True 或 False。 預設值是 False。|  
 |**加密密碼**|用於將已加密的本機 Cube 解密的密碼。 預設值為空白。 使用者必須明確設定此值。|  
 |**模擬等級**|指出伺服器模擬用戶端時，允許伺服器使用的模擬層級。 有效值包括：<br /><br /> -   Anonymous (匿名)。 用戶端對伺服器而言是匿名。 伺服器處理序無法取得有關用戶端的資訊，也無法模擬用戶端。<br />-   Identify (識別)。 伺服器處理序可以取得用戶端識別。 伺服器能夠基於授權目的模擬用戶端識別，但無法以用戶端的身分存取系統物件。<br />-   Impersonate (模擬)。 這是預設值。 只有在建立連接時才可以模擬用戶端識別，而非每一次呼叫都能模擬。<br />-   Delegate (委派)。 伺服器處理序可在代表用戶端時模擬用戶端安全性內容。 伺服器處理序也可以在代表用戶端期間對其他伺服器發出連出呼叫。|  
-|**整合式安全性**|使用呼叫端的 Windows 識別連接到 Analysis Services。 有效值為空白、SSPI 和 BASIC。<br /><br /> **Integrated Security**=**SSPI** 是 TCP 連接的預設值，允許 NTLM、Kerberos 或匿名驗證。 空白是 HTTP 連接的預設值。<br /><br /> 使用 **SSPI**時， **ProtectionLevel** 必須設定為下列其中一項： **Connect**、 **PktIntegrity**、 **PktPrivacy**。|  
+|**整合式安全性**|使用呼叫端的 Windows 識別連接到 Analysis Services。 有效值為空白、SSPI 和 BASIC。<br /><br /> **Integrated Security**=**SSPI** 是 TCP 連接的預設值，允許 NTLM、Kerberos 或匿名驗證。 空白是 HTTP 連接的預設值。<br /><br /> 使用時**SSPI**， **ProtectionLevel**必須設為下列其中之一：**連接**， **PktIntegrity**， **PktPrivacy**。|  
 |**保存加密**|當用戶端應用程式需要由資料來源物件以加密形式保存機密的驗證資訊如密碼時，請設定此屬性。 預設情況下並不會保存驗證資訊。|  
 |**保存安全性資訊**|有效值為 True 和 False。 設定為 True 時，一旦建立連接之後，即可從連接取得先前在連接字串中指定的使用者識別或密碼等安全性資訊。 預設值是 False。|  
 |**保護層級**|決定連接所使用的安全性層級。 有效值為：<br /><br /> -   **無**。 未驗證或匿名連接。 對傳送到伺服器的資料不執行驗證。<br />-   **連接**。 驗證的連接。 只有在用戶端與伺服器建立關聯性時才會驗證。<br />-   **Pkt Integrity**。 加密的連接。 確認所有資料都是接收自用戶端，而且資料在傳輸過程中未遭到變更。<br />-   **Pkt Privacy**。 經簽署的加密，僅限 XMLA 支援此選項。 確認所有資料都是接收自用戶端，而且資料在傳輸過程中未遭到變更，並透過資料加密保護資料的隱私。<br /><br /> 如需詳細資訊，請參閱＜ [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)＞|  
-|**角色**|指定預先定義的角色以逗號分隔的清單，以便使用該角色所傳達的權限連接到伺服器或資料庫。 如果省略此屬性，則會使用所有角色，而且有效權限將是所有角色權限的組合。 將此屬性設定為空值 (例如 Roles=' ') 時，用戶端連接即不具備任何角色成員資格。<br /><br /> 系統管理員使用此屬性連接時將使用其角色所傳達的權限。 如果角色未提供足夠的權限，某些命令可能會失敗。|  
+|**角色**|指定預先定義的角色以逗號分隔的清單，以便使用該角色所傳達的權限連接到伺服器或資料庫。 如果省略此屬性，則會使用所有角色，而且有效權限將是所有角色權限的組合。 將屬性設定為空值 (例如，角色 =' ') 用戶端連線的任何角色成員資格。<br /><br /> 系統管理員使用此屬性連接時將使用其角色所傳達的權限。 如果角色未提供足夠的權限，某些命令可能會失敗。|  
 |**SSPI**|當 **Integrated Security** 設定為 **SSPI**時，明確指定哪一種安全性封裝用於用戶端驗證。 SSPI 支援多種封裝，但是您可以使用這個屬性來指定特定封裝。 有效的值為：交涉、Kerberos、NTLM 和匿名使用者。 如果未設定此屬性，所有封裝都將可供連接使用。|  
 |**使用加密資料**|將資料傳輸加密。 有效值為 True 和 False。|  
-|**User ID**=…; **Password**=|**User ID** 是與 **Password** 搭配使用。 Analysis Services 會模擬透過這些認證所指定的使用者識別。 只有當伺服器設定為 HTTP 存取，而且您針對 IIS 虛擬目錄指定了基本驗證而非整合式安全性時，才會使用透過命令列為 Analysis Services 連接提供認證的方式。 當直接連接到伺服器時，會忽略 **UserID** 和 **Password** 連接字串參數，並且會使用已登入之使用者的內容建立連接。 <br /><br />使用者名稱與密碼必須是 Windows 識別 (本機或網域使用者帳戶) 的認證。 請注意 **User ID** 有內嵌的空格。 此屬性的其他別名包括 **UserName** (不含空格) 和 **UID**。 **Password** 的別名則是 **PWD**。|  
+|**使用者識別碼**=...;**密碼**=|**User ID** 是與 **Password** 搭配使用。 Analysis Services 會模擬透過這些認證所指定的使用者識別。 只有當伺服器設定為 HTTP 存取，而且您針對 IIS 虛擬目錄指定了基本驗證而非整合式安全性時，才會使用透過命令列為 Analysis Services 連接提供認證的方式。 當直接連接到伺服器時，會忽略 **UserID** 和 **Password** 連接字串參數，並且會使用已登入之使用者的內容建立連接。 <br /><br />使用者名稱與密碼必須是 Windows 識別 (本機或網域使用者帳戶) 的認證。 請注意 **User ID** 有內嵌的空格。 此屬性的其他別名包括 **UserName** (不含空格) 和 **UID**。 **Password** 的別名則是 **PWD**。|  
   
 ##  <a name="bkmk_special"></a> 特殊用途的參數  
  本節描述其餘的連接字串參數。 這些參數是用於確保應用程式所需的特定連接行為。  
@@ -67,12 +67,12 @@ ms.locfileid: "50148163"
   
 |屬性|描述|  
 |--------------|-----------------|  
-|**應用程式名稱**|設定與連接相關聯的應用程式名稱。 此值有助於監視追蹤事件，尤其是多個應用程式存取相同資料庫的情況。 例如，在連接字串中加入 Application Name='test' 會使 SQL Server Profiler 追蹤內出現 'test'，如以下螢幕擷取畫面所示：<br /><br /> ![SSAS_AppNameExcample](../../analysis-services/instances/media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> 此屬性的別名包括 **sspropinitAppName**和 **AppName**。 如需詳細資訊，請參閱 [連接到 SQL Server 時使用 Application Name 參數](http://go.microsoft.com/fwlink/?LinkId=301699)。|  
+|**應用程式名稱**|設定與連接相關聯的應用程式名稱。 此值有助於監視追蹤事件，尤其是多個應用程式存取相同資料庫的情況。 例如，加入 Application Name = 'test' 的 「 連接字串會使 'test' 」，才會出現在 SQL Server Profiler 追蹤中，如下列螢幕擷取畫面所示：<br /><br /> ![SSAS_AppNameExcample](../../analysis-services/instances/media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> 此屬性的別名包括 **sspropinitAppName**和 **AppName**。 如需詳細資訊，請參閱 [連接到 SQL Server 時使用 Application Name 參數](http://go.microsoft.com/fwlink/?LinkId=301699)。|  
 |**AutoSyncPeriod**|設定用戶端與伺服器快取同步處理的頻率 (以毫秒為單位)。 ADOMD.NET 會為記憶體負擔最低的常用物件提供用戶端快取功能。 這有助於減少與伺服器之間的往返次數。 預設值為 10000 毫秒 (或 10 秒)。 如果設定為 null 或 0，則會關閉自動同步處理。|  
 |**字元編碼**|定義隨要求送出的字元編碼方式。 有效值為 Default 或 UTF-8 (此兩者同義) 和 UTF-16。| 
 |**CommitTimeout**|XMLA 屬性。 決定在復原之前，目前執行中命令的認可階段等候時間長度 (以毫秒為單位)。 大於 0 時，會覆寫伺服器組態中對應 CommitTimeout 屬性的值。 |   
 |**CompareCaseSensitiveStringFlags**|針對指定的地區設定，調整區分大小寫的字串比較。 如需有關設定此屬性的詳細資訊，請參閱 [CompareCaseSensitiveStringFlags 屬性](http://msdn.microsoft.com/library/aa237459\(v=sql.80\).aspx)。|  
-|**壓縮等級**|如果 **TransportCompression** 是 XPRESS，您就可以設定壓縮層級控制所使用的壓縮程度。 有效值為 0 到 9，其中 0 的壓縮程度最低，而 9 的壓縮程度最高。 壓縮程度提高會降低效能。 預設值是 0。|  
+|**壓縮等級**|如果 **TransportCompression** 是 XPRESS，您就可以設定壓縮層級控制所使用的壓縮程度。 有效值為 0 到 9，其中 0 的壓縮程度最低，而 9 的壓縮程度最高。 壓縮程度提高會降低效能。 預設值為 0。|  
 |**連接逾時**|決定用戶端嘗試連接直到逾時的最大時間量 (以秒為單位)。若未在此期限內連接成功，用戶端便會停止嘗試連接並且產生錯誤。|  
 |**DbpropMsmdRequestMemoryLimit**|此屬性會覆寫[Memory\QueryMemoryLimit](../server-properties/memory-properties.md)連接的伺服器屬性值。 指定此選項，以 kb 為單位。 |
 |**MDX 相容性**|此屬性的目的是確保發出 MDX 查詢的應用程式有整套一致的 MDX 行為。 Excel 即是使用 MDX 查詢以填入和計算連接至 Analysis Services 的樞紐分析表，藉由將此屬性設定為 1 可確保在樞紐分析表內看得到不完全階層中的預留位置成員。 有效值包括 0、1 和 2。<br /><br /> 0 和 1 會公開預留位置成員，而 2 則否。 如果留空，則假設為 0。|  
@@ -107,14 +107,14 @@ ms.locfileid: "50148163"
   
 -   偵錯模式  
   
--   [模式]  
+-   模式  
   
 -   SQLCompatibility  
   
 -   使用公式快取  
   
 ##  <a name="bkmk_examples"></a> 範例連接字串  
- 本節示範常用的應用程式在設定 Analysis Services 連接時使用機率最高的連接字串。  
+ 本節說明設定 Analysis Services 中設定的連線通常使用應用程式時，將最有可能會使用您的連接字串。  
   
  **泛用連接字串**  
   
@@ -135,17 +135,17 @@ ms.locfileid: "50148163"
   
  **伺服器的原生 (或直接) 連接**  
   
- `Data Source=server[:port][\instance]` ，其中 “port” 和 “\instance” 是選擇性的。 例如，指定 “Data Source=server1” 會在名稱為 “server1” 的伺服器上開啟預設執行個體 (以及預設通訊埠 2383) 的連接。  
+ `Data Source=server[:port][\instance]` 其中"port"和"\instance"是選擇性的。 例如，指定 「 資料來源 source=server1"會開啟預設執行個體 （與預設通訊埠 2383年），在名為"server1"的伺服器上的連接。  
   
- “Data Source=server1:port1” 將開啟在 “server1” 的通訊埠 “port1” 上執行之 Analysis Services 執行個體的連接。  
+ 「 資料來源 source=server1:port1"將會開啟連接埠"port1"上"server1"上執行的 Analysis Services 執行個體的連接。  
   
- “Data Source=server1\instance1” 將會開啟 SQL Browser (在其預設通訊埠 2382 上) 的連接、解析具名執行個體 “instance1” 的通訊埠，然後開啟該 Analysis Services 通訊埠的連接。  
+ 「 資料來源 source=server1\instance1"將開啟 SQL Browser （在其預設通訊埠 2382年） 的連線，解決的連接埠的具名執行個體"instance1"，然後開啟該 Analysis Services 連接埠的連線。  
   
- “Data Source=server1:port1\instance1” 將會開啟 “port1” 上 SQL Browser 的連接、解析具名執行個體 “instance1” 的通訊埠，然後開啟該 Analysis Services 通訊埠的連接。  
+ 「 資料來源 source=server1:port1\instance1"將開啟"port1"上 SQL Browser 的連接、 解析具名執行個體，"instance1"的連接埠並開啟該 Analysis Services 連接埠的連線。  
   
  **本機 Cube 連接 (.cub 檔)**  
   
- `Data Source=<path>`，例如 “Data Source=c:\temp\a.cub”  
+ `Data Source=<path>`例如 「 資料 Source=c:\temp\a.cub"  
   
  **msmdpump.dll 的 Http(s) 連接**  
   

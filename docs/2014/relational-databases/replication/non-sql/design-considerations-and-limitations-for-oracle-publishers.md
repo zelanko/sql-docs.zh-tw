@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], design considerations and limitations
@@ -13,12 +12,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db5225c9432f0ea86a90b299e9ff1ede70147e8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f9d7183d6e94f5808434090dd8fc998b946ed0f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191468"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810890"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 發行者的設計考量與限制
   從 Oracle 資料庫發行和從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫發行的設計幾乎相同。 但應該注意下列限制和問題：  
@@ -104,7 +103,7 @@ ms.locfileid: "48191468"
   
  還需考慮下列問題：  
   
--   Oracle 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 對待 NULL 的方式不同：對於允許 NULL 值並且包含在唯一條件約束或索引中的資料行，Oracle 允許多個具有 NULL 值的資料列。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 則透過在同一資料行中只允許一個具有 NULL 值的資料列來強制其唯一性。 如果發行資料表在索引或條件約束中包含的任何資料行含有多個具有 NULL 值的資料列，則由於「訂閱者」端會發生條件約束違規，您將無法發行允許 NULL 的唯一條件約束或索引。  
+-   Oracle 和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]對待 NULL 的方式不同：Oracle 允許多個資料列具有 NULL 值的資料行允許 NULL，而且包含在唯一條件約束或索引。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 則透過在同一資料行中只允許一個具有 NULL 值的資料列來強制其唯一性。 如果發行資料表在索引或條件約束中包含的任何資料行含有多個具有 NULL 值的資料列，則由於「訂閱者」端會發生條件約束違規，您將無法發行允許 NULL 的唯一條件約束或索引。  
   
 -   測試唯一性時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會忽略欄位的尾端空白，而 Oracle 則不會。  
   

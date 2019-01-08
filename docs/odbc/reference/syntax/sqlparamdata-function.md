@@ -20,16 +20,16 @@ ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ffba9afd0609bab57cdaa182b650f7bd5a0fb34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec0038e0ec6c87dba403bbe62441815dfa6d0251
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606813"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205177"
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData 函式
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ISO 92  
+ 導入的版本：ODBC 1.0 標準的合規性：ISO 92  
   
  **摘要**  
  **SQLParamData**可搭配使用**SQLPutData**來提供參數資料在陳述式執行時，與**SQLGetData**來擷取資料流的輸出參數資料。  
@@ -61,7 +61,7 @@ SQLRETURN SQLParamData(
 |01000|一般警告|驅動程式特有的告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |07006|受限制的資料類型屬性違規|所識別的資料值*ValueType*中的引數**SQLBindParameter**繫結的參數無法轉換成資料類型所識別的*ParameterType*中的引數**SQLBindParameter**。<br /><br /> 資料傳回的值繫結為 SQL_PARAM_INPUT_OUTPUT 或 SQL_PARAM_OUTPUT 無法轉換成所識別的資料型別參數*ValueType*中的引數**SQLBindParameter**。<br /><br /> （如果無法轉換一或多個資料列的資料值，但一或多個資料列已成功地傳回，此函式會傳回 SQL_SUCCESS_WITH_INFO。）|  
 |08S01|通訊連結失敗|函式已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
-|22026|字串資料，長度不符|SQL_NEED_LONG_DATA_LEN 類型資訊，請在**SQLGetInfo** "Y"，並於指定長度的參數 （資料類型為 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 資料來源特定的資料類型） 傳送較少的資料具有*StrLen_or_IndPtr*中的引數**SQLBindParameter**。<br /><br /> SQL_NEED_LONG_DATA_LEN 類型資訊，請在**SQLGetInfo**是"Y"，以及比中已指定，將已傳送長資料行 （資料類型為 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 資料來源特定的資料類型） 的較少的資料對應到已加入或更新的資料列中的資料行長度的緩衝區**SQLBulkOperations**或更新的**SQLSetPos**。|  
+|22026|字串資料，長度不符|SQL_NEED_LONG_DATA_LEN 類型資訊，請在**SQLGetInfo** "Y"，並於指定長度的參數 （資料類型為 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 資料來源特有的資料類型） 傳送較少的資料具有*StrLen_or_IndPtr*中的引數**SQLBindParameter**。<br /><br /> SQL_NEED_LONG_DATA_LEN 類型資訊，請在**SQLGetInfo**是"Y"，以及比中已指定，將已傳送長資料行 （資料類型為 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 資料來源特有的資料類型） 的較少的資料對應到已加入或更新的資料列中的資料行長度的緩衝區**SQLBulkOperations**或更新的**SQLSetPos**。|  
 |40001|序列化失敗|交易已回復，因為與另一個交易資源鎖死。|  
 |40003|未知的陳述式完成|此函式執行期間失敗的相關聯的連接，並無法判斷交易的狀態。|  
 |HY000|一般錯誤|其中沒有任何特定的 SQLSTATE 和沒有實作特定的 SQLSTATE 所定義，就會發生錯誤。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
@@ -82,7 +82,7 @@ SQLRETURN SQLParamData(
   
  當應用程式呼叫**SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**，驅動程式會傳回 SQL_NEED_如果在需要資料在執行資料的資料。 應用程式，然後呼叫**SQLParamData**來決定要傳送的資料。 如果驅動程式需要參數的資料，驅動程式會傳回在 *\*ValuePtrPtr*輸出緩衝處理的應用程式放在資料列集的緩衝區中的值。 應用程式可以使用此值來判斷哪一個驅動程式要求的參數資料。 如果驅動程式需要的資料行資料，驅動程式會傳回在 *\*ValuePtrPtr*緩衝區資料行原本繫結，如下所示的位址：  
   
- *繫結位址* + *繫結位移*+ ((*資料列編號*– 1) x*項目大小*)  
+ *繫結位址* + *繫結位移*+ ((*資料列編號*-1) x*項目大小*)  
   
  下表所示，其中會定義變數。  
   

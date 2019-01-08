@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication], deployment
@@ -14,12 +13,12 @@ ms.assetid: 9c8c284a-e497-48b7-b2e2-c96a0e940e67
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 77e6edb3f929b0d8d469f9321f15cd64f36059e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9741edf8596506aaa04dac95ddafeebe7c1217f8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228778"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794050"
 ---
 # <a name="secure-deployment-replication"></a>安全的部署 (複寫)
   本章節提供的資訊可協助您提供更安全性的複寫。  

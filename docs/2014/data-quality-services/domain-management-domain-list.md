@@ -1,5 +1,5 @@
 ---
-title: 定義域管理：定義域清單 | Microsoft Docs
+title: 定義域管理：定義域清單 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,14 +12,14 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c0dfc543659bdb8476d880bbe6021d0f3fd27bfd
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3b0956c98b8e086fe8e44c69001e391d203d376b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032485"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520353"
 ---
-# <a name="domain-management-domain-list"></a>定義域管理：定義域清單
+# <a name="domain-management-domain-list"></a>定義域管理：網域清單
   此主題描述 **(DQS) 中** [定義域管理] [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 頁面上定義域清單中的控制項。 使用此窗格可選取執行管理作業所在的定義域。 相同的窗格會用於 **[定義域管理]** 頁面上的所有索引標籤式頁面。  
   
 ## <a name="options"></a>選項。  
@@ -35,7 +35,7 @@ ms.locfileid: "51032485"
  在知識庫中建立新的定義域。 此命令將會顯示 **[建立定義域]** 對話方塊。 若要使用此命令，請以滑鼠右鍵按一下定義域，或是按一下定義域清單上方的圖示。 如需相關資訊，請參閱 [建立定義域](../../2014/data-quality-services/create-a-domain.md)。  
   
  **建立選取之定義域的複本**  
- 建立選取之定義域的完全相同複本，並將其加入至知識庫。 其名稱將會是建立它所使用的定義域名稱，且名稱會附加「– 複本」。 若要使用此命令，請以滑鼠右鍵按一下定義域，然後按一下 **[建立複本]**，或是按一下定義域清單上方的圖示。 它無法提供給複合定義域使用。  
+ 建立選取之定義域的完全相同複本，並將其加入至知識庫。 其名稱將會是建立它所使用的定義域名稱，且名稱會附加「- 複本」。 若要使用此命令，請以滑鼠右鍵按一下定義域，然後按一下 **[建立複本]**，或是按一下定義域清單上方的圖示。 它無法提供給複合定義域使用。  
   
  **從資料檔匯入定義域**  
  從 .dqs 檔案匯入定義域。 這個命令會顯示 **[從資料檔匯入]** 對話方塊，好讓您瀏覽檔案系統，並針對單一定義域或複合定義域選取 .dqs 檔案。 若要使用此命令，請按一下定義域清單上方的圖示。 如需相關資訊，請參閱 [從 .dqs 檔案匯入定義域](../../2014/data-quality-services/import-a-domain-from-a-dqs-file.md)。  

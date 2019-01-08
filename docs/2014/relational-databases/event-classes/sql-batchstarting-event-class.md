@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: b99c2b73-5f77-45c1-a0f4-cfef7921dc84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fab9d4dc60dc1e3bcee835e993fb01f26d162a81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae174bad657020f226f9a7cda2224770be312f97
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213640"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803930"
 ---
 # <a name="sqlbatchstarting-event-class"></a>SQL:BatchStarting 事件類別
   SQL:BatchStarting 事件類別指出 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次正在啟動中。  

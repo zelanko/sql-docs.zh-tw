@@ -19,12 +19,12 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b727bceb20b275128ea030f87c85872a88e931d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf38282332f1cf8c3a5d3dd7716f9adc21e7bd8f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825666"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201907"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  [ **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
  指定在資料庫卸離作業期間，將不卸除與要卸離之資料庫相關聯的全文檢索索引檔案。 *KeepFulltextIndexFile*已**nvarchar(10**值，預設值是**true**。 如果*KeepFulltextIndexFile*是**false**、 與資料庫相關聯的所有全文檢索索引檔案和全文檢索索引的中繼資料已卸除，除非資料庫為唯讀。 如果是 NULL 或 **，則為 true**，全文檢索相關中繼資料會保留。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  **@keepfulltextindexfile**的未來版本將移除參數[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請勿在新的開發工作中使用此參數，並且盡快修改使用此參數的應用程式。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -114,7 +114,7 @@ GO
 ```  
   
 > [!NOTE]  
->  若要強制現行使用者移出資料庫立即或在指定的秒數內同時使用 ROLLBACK 選項： ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
+>  若要強制現行使用者移出資料庫立即或在指定的秒數內同時使用 ROLLBACK 選項：ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
   
 ## <a name="reattaching-a-database"></a>重新附加資料庫  
  卸離的檔案會保留下來，您可以利用 CREATE DATABASE 來重新附加它 (使用 FOR ATTACH 或 FOR ATTACH_REBUILD_LOG 選項)。 您可以將這些檔案移到另一部伺服器，將它附加在那裡。  
@@ -138,7 +138,7 @@ exec sp_detach_db @dbname='AdventureWorks2012'
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [卸離資料庫](../../relational-databases/databases/detach-a-database.md)  
   

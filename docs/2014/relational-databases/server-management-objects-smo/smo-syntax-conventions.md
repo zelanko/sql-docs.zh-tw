@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - conventions [SMO]
@@ -17,12 +15,12 @@ ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55054e9b70c549c0bb68342ce58ed57c1099ebbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a19c67f19c6b1b73947ef752a09516449eeec1a8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143080"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815070"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 語法慣例
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) 印刷慣例根據所使用的[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Studio.NET 參考資料。  

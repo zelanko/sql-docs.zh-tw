@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - CAST function
@@ -17,12 +16,12 @@ ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a5316ed842e49e0c0077887dd6d980bf05d4b4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6068ef0fea56681048b8a31a9e87b6b01d4f8c96
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229668"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819320"
 ---
 # <a name="cast-ssis-expression"></a>Cast (SSIS 運算式)
   將運算式從一種資料類型明確轉換成另一種資料類型。 轉換運算子也可以當作截斷運算子使用。  
@@ -144,8 +143,8 @@ ms.locfileid: "48229668"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [運算子優先順序和關聯性](operator-precedence-and-associativity.md)   
- [運算子&#40;SSIS 運算式&#41;](operators-ssis-expression.md)   
+ [運算子優先順序與關聯性](operator-precedence-and-associativity.md)   
+ [運算子 &#40;SSIS 運算式&#41;](operators-ssis-expression.md)   
  [Integration Services &#40;SSIS&#41; 運算式](integration-services-ssis-expressions.md)   
  [運算式中的 Integration Services 資料類型](integration-services-data-types-in-expressions.md)  
   

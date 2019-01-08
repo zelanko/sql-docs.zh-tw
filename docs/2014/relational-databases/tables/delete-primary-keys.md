@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - removing primary keys
@@ -15,12 +14,12 @@ ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74aff2b9f4085e3267bcf7c76462e04af4793d44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 690b52fceb74269501880565bab65b020206fa61
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221218"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814530"
 ---
 # <a name="delete-primary-keys"></a>刪除主索引鍵
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中刪除 (卸除) 主索引鍵。 刪除主索引鍵時，系統會刪除對應的索引。  
@@ -63,7 +62,7 @@ ms.locfileid: "48221218"
     > [!NOTE]  
     >  若要恢復此一動作，可將資料表關閉而不儲存變更。 如果恢復刪除主索引鍵的動作，將會遺失所有對資料表進行的其他變更。  
   
-3.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]。  
+3.  在 [檔案]  功能表上，按一下 [儲存] _table name_。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -73,7 +72,7 @@ ms.locfileid: "48221218"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會先識別主索引鍵條件約束的名稱，然後再刪除條件約束。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例會先識別主索引鍵條件約束的名稱，然後再刪除條件約束。  
   
     ```  
     USE AdventureWorks2012;  

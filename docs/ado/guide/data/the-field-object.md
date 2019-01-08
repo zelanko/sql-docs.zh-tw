@@ -13,12 +13,12 @@ ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc75b9a7ab93e3157d6594be15c0b2cc36456415
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e152c3147ab7c316494c6891424c0a7c8173f002
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726156"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516538"
 ---
 # <a name="the-field-object"></a>Field 物件
 每個**欄位**物件通常會對應至資料庫資料表中的資料行。 不過，**欄位**也可以代表指標到另一個**資料錄集**，呼叫一章。 例外狀況，例如章節資料行，將本指南稍後會說明。  
@@ -44,7 +44,7 @@ ms.locfileid: "47726156"
  解決在批次更新使用的欄位值不一致的地方**OriginalValue**並**UnderlyingValue**屬性，如果提供者支援批次更新。  
   
 ## <a name="describing-a-field"></a>描述欄位  
- 請遵循將的主題將討論的屬性[欄位](../../../ado/reference/ado-api/field-object.md)代表描述資訊的物件**欄位**物件本身，也就是相關欄位的中繼資料。 這項資訊可用來判斷太多的結構描述**資料錄集**。 這些屬性包括**型別**， **DefinedSize**並**ActualSize**，**名稱**，和**NumericScale**並**有效位數**。  
+ 請遵循將的主題將討論的屬性[欄位](../../../ado/reference/ado-api/field-object.md)代表描述資訊的物件**欄位**物件本身-也就是相關欄位的中繼資料。 這項資訊可用來判斷太多的結構描述**資料錄集**。 這些屬性包括**型別**， **DefinedSize**並**ActualSize**，**名稱**，和**NumericScale**並**有效位數**。  
   
 ### <a name="discovering-the-data-type"></a>探索的資料類型  
  **型別**屬性指出欄位的資料類型。 ADO 支援的列舉的常數所述的資料型別[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)中*ADO 程式設計人員參考*。  

@@ -1,22 +1,21 @@
 ---
-title: 步驟 3：修改一般檔案連線管理員 | Microsoft Docs
+title: 步驟 3：修改一般檔案連線管理員 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e5f2aecb84754ee470a9cbafabdf06e38d38ae1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16a72ca205e3c1ba972169e2114321d44a8caed8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102030"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822102"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>步驟 3：修改一般檔案連接管理員
   在這項工作中，您將會修改您在第 1 課建立及設定的一般檔案連接管理員。 一開始建立時，已設定一般檔案連接管理員來以靜態方式載入單一檔案。 若要讓一般檔案連線管理員反覆載入檔案，您必須修改連線管理員的 ConnectionString 屬性來接受使用者定義變數 `User:varFileName`，這個變數包含在執行階段要載入的檔案路徑。  
@@ -27,11 +26,11 @@ ms.locfileid: "48102030"
   
 1.  在 **[連接管理員]** 窗格中，以滑鼠右鍵按一下 **[範例一般檔案來源資料]**，並選取 **[屬性]**。  
   
-2.  在 [屬性] 視窗的 **[運算式]** 中，按一下空白資料格，然後按一下省略符號按鈕 **(...)**。  
+2.  在 [屬性] 視窗的 [運算式]中，按一下空白資料格，然後按一下省略符號按鈕 **(...)**。  
   
 3.  在 **屬性運算式編輯器**對話方塊中，於**屬性**資料行，輸入或選取`ConnectionString`。  
   
-4.  在 **[運算式]** 資料行中，按一下省略符號按鈕 **(…)** 來開啟 **[運算式產生器]** 對話方塊。  
+4.  在 [運算式] 資料行中，按一下省略符號按鈕 **(…)** 來開啟 [運算式產生器] 對話方塊。  
   
 5.  在 **[運算式產生器]** 對話方塊中，展開 **[變數]** 節點。  
   
@@ -42,6 +41,6 @@ ms.locfileid: "48102030"
 8.  再按一下 **[確定]** 來關閉 **[屬性運算式編輯器]** 對話方塊。  
   
 ## <a name="next-lesson-task"></a>下一課的工作  
- [步驟 4：測試第 2 課的教學課程封裝](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+ [步驟 4:測試第 2 課的教學課程封裝](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
   

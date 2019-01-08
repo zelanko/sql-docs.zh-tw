@@ -10,12 +10,12 @@ ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e324435b6b67574a111f9cd95671f5b2aa6824d
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 79f3ac8efa0e629ddfd82d5945973c86a661fe75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032425"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52576787"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>使用 DQSInstaller.exe 匯出及匯入 DQS 知識庫
   若為 DQS 的現有安裝，您可以在 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中將所有知識庫一次匯出到 DQS 備份檔案 (.dqsb)，然後從命令提示字元執行 DQSInstaller.exe 檔案，即可使用此 .dqsb 檔案一次將所有知識庫匯入不同的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 。 如需有關從命令提示字元執行 DQSInstaller.exe 的詳細資訊，請參閱＜ [從命令提示字元執行 DQSInstaller.exe](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) ＞中的＜ [執行 DQSInstaller.exe 完成 Data Quality Server 安裝](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)＞。  
@@ -28,7 +28,7 @@ ms.locfileid: "51032425"
 -   若要在 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中將所有知識庫匯出到 DQS 備份檔案 (.dqsb)，請從命令提示字元使用 `exportkbs` 參數執行 DQSInstaller.exe，連同您想要匯出知識庫之目標的完整路徑和檔案名稱。 例如，若要將所有知識庫匯出到 C: 磁碟機中的 DQSBackup.dqsb 檔案：  
   
     ```  
-    dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb  
+    dqsinstaller.exe -exportkbs c:\DQSBackup.dqsb  
     ```  
   
     > [!NOTE]  
@@ -37,7 +37,7 @@ ms.locfileid: "51032425"
 -   若要在解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]時將所有知識庫匯出到 DQS 備份檔案，請從命令提示字元使用 `uninstall` 參數執行 DQSInstaller.exe，連同您想要匯出知識庫之目標的完整路徑和檔案名稱。 例如，若要將所有知識庫匯出到 C: 磁碟機中的 DQSBackup.dqsb 檔案，然後解除安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]：  
   
     ```  
-    dqsinstaller.exe –uninstall c:\DQSBackup.dqsb  
+    dqsinstaller.exe -uninstall c:\DQSBackup.dqsb  
     ```  
   
     > [!NOTE]  
@@ -49,10 +49,10 @@ ms.locfileid: "51032425"
  從命令提示字元使用 `importkbs` 參數執行 DQSInstaller.exe 檔案，連同您想要匯入知識庫之來源的完整路徑和檔案名稱。 例如，若要從 C: 磁碟機中的 DQSBackup.dqsb 檔案匯入所有知識庫：  
   
 ```  
-dqsinstaller.exe –importkbs c:\DQSBackup.dqsb  
+dqsinstaller.exe -importkbs c:\DQSBackup.dqsb  
 ```  
   
- 如果 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中目前已經存在與您要匯入的知識庫同名的知識庫，則匯入的知識庫名稱將會附加底線 (_)，後面緊接著以 1 開頭的整數值。 例如，如果 “CompanyName” 定義域是重複的，則匯入的定義域名稱將會是 “CompanyName_1”。  
+ 如果 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中目前已經存在與您要匯入的知識庫同名的知識庫，則匯入的知識庫名稱將會附加底線 (_)，後面緊接著以 1 開頭的整數值。 例如，如果 "CompanyName" 網域是重複的，則匯入的網域名稱將會是 "CompanyName_1"。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行 DQSInstaller.exe 完成 Data Quality Server 安裝](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   

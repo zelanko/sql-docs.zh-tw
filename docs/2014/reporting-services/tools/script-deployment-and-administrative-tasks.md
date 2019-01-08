@@ -23,12 +23,12 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6bf10f8ef0b748582aeef2e790207dcb287d3bdc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01d506f8db09b8bc30b5587d6d98ecec793adab9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167280"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398871"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>編寫部署和管理工作的指令碼
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援使用指令碼，以自動執行例行安裝、部署和管理工作。 部署報表伺服器是一個多步驟的程序， 您必須使用數個工具和程序來設定部署；並沒有單一程式或方法可用來自動化處理所有工作。  
@@ -70,7 +70,7 @@ ms.locfileid: "48167280"
   
 -   報表伺服器 Script Host 工具 (rs.exe) 可以執行您可能會撰寫的自訂 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 程式碼，以便重新建立現有內容，或是在報表伺服器之間移動現有內容。 當您使用這個方式時，會使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]撰寫指令碼，並將其另存為 .rss 檔案，然後在目標報表伺服器上使用 rs.exe 來執行此指令碼。 您所撰寫的指令碼可以呼叫報表伺服器 Web 服務的 SOAP 介面。 部署指令碼是使用這種方法所撰寫，因為它可讓您重新建立報表伺服器資料夾命名空間與內容，以及重新建立以角色為基礎的安全性。  
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版引進了適用於 SharePoint 整合模式的 PowerShell 指令程式。 您可以使用 PowerShell 設定和管理 SharePoint 整合。  如需詳細資訊，請參閱 < [Reporting Services SharePoint 模式的 PowerShell cmdlet](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版引進了適用於 SharePoint 整合模式的 PowerShell 指令程式。 您可以使用 PowerShell 設定和管理 SharePoint 整合。  如需詳細資訊，請參閱 [Reporting Services SharePoint 模式適用的 PowerShell Cmdlet](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
   
 ## <a name="use-scripts-to-migrate-report-server-content-and-folders"></a>使用指令碼來移轉報表伺服器內容和資料夾  
  您可以撰寫指令碼來複製另一個報表伺服器執行個體上的報表伺服器環境。 部署指令碼通常是以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 撰寫，然後使用報表伺服器 Script Host 公用程式處理。  
@@ -94,10 +94,10 @@ ms.locfileid: "48167280"
 > [!NOTE]  
 >  除非明確設定認證，否則指令碼便會利用執行指令碼之使用者的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認證來執行。  
   
- 如需如何格式化和執行指令碼檔案的詳細資訊，請參閱[公用程式與 Web 服務，利用 rs.exe 指令碼](script-with-the-rs-exe-utility-and-the-web-service.md)。  
+ 如需如何格式化和執行指令碼檔案的詳細資訊，請參閱 [利用 rs.exe 公用程式與 Web 服務編寫指令碼](script-with-the-rs-exe-utility-and-the-web-service.md)。  
   
 ## <a name="using-scripts-to-set-server-properties"></a>使用指令碼來設定伺服器屬性  
- 您可以撰寫在報表伺服器上設定系統屬性的指令碼。 下列 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 指令碼會示範設定屬性的一個方式。 此範例會停用 RSClientPrint ActiveX 控制項，但您可以取代`EnableClientPrinting`和`False`任何有效的屬性名稱和值。 若要檢視伺服器屬性的完整清單，請參閱[報表伺服器系統屬性](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)。  
+ 您可以撰寫在報表伺服器上設定系統屬性的指令碼。 下列 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 指令碼會示範設定屬性的一個方式。 這個範例會停用 RSClientPrint ActiveX 控制項，但是您可以用任何有效的屬性名稱和值來取代 `EnableClientPrinting` 和 `False`。 若要檢視完整的伺服器屬性清單，請參閱 [報表伺服器系統屬性](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)。  
   
  若要使用此指令碼，請將它儲存為 .rss 副檔名的檔案，然後使用 rs.exe 命令提示字元公用程式，在報表伺服器上執行這個檔案。 系統不會編譯此指令碼，所以不需要安裝 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]。 這個範例假設您具有主控報表伺服器之本機電腦的權限。 如果您不是在具有權限的帳戶之下登入，您必須透過其他命令列引數來指定帳戶資訊。 如需詳細資訊，請參閱 [RS.exe 公用程式 &#40;SSRS&#41;](rs-exe-utility-ssrs.md)。  
   
@@ -109,7 +109,7 @@ Public Sub Main()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  
@@ -122,13 +122,13 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [GenerateDatabaseCreationScript 方法&#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
- [GenerateDatabaseRightsScript 方法&#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
- [GenerateDatabaseUpgradeScript 方法&#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
+ [GenerateDatabaseCreationScript 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
+ [GenerateDatabaseRightsScript 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
+ [GenerateDatabaseUpgradeScript 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
  [從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [安裝 Reporting Services 原生模式報表伺服器](../install-windows/install-reporting-services-native-mode-report-server.md)   
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [報表伺服器命令提示字元公用程式&#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [報表伺服器命令提示字元公用程式 &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Reporting Services 工具](reporting-services-tools.md)  
   

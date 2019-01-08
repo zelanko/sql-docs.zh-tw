@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - tuning databases [SQL Server], memory
@@ -23,27 +23,27 @@ ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 53ffa8d92cd9a2742c67317131e6631e0b8a94db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c8d7dc9fdf5a6cd6e52261c0d2327676db79508c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145493"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801560"
 ---
 # <a name="monitor-memory-usage"></a>監視記憶體使用量
   定期監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，以確認記憶體使用量是在正常範圍內。  
   
  若要監視低記憶體的狀況，請使用以下物件計數器：  
   
--   **Memory: Available Bytes**  
+-   **Memory:可用位元組數**  
   
--   **Memory: Pages/sec**  
+-   **Memory:Pages/sec**  
   
  **Available Bytes** 計數器代表目前有多少記憶體位元組可供處理序使用。 **Pages/sec** 計數器會顯示由於硬體分頁錯誤而自磁碟取出，或由於分頁錯誤而寫入磁碟，以釋出工作集內空間的分頁數。  
   
- 若 **Available Bytes** 計數器的數值偏低，代表電腦整體地缺乏記憶體，或有某個應用程式沒有釋出記憶體。 **Pages/sec** 計數器數值過高可能代表過度分頁。 監視 **Memory: Page Faults/sec** 計數器可確認磁碟活動並非分頁所造成。  
+ 若 **Available Bytes** 計數器的數值偏低，代表電腦整體地缺乏記憶體，或有某個應用程式沒有釋出記憶體。 **Pages/sec** 計數器數值過高可能代表過度分頁。 監視 **Memory:Page Faults/sec**計數器可確認磁碟活動並非分頁所造成。  
   
- 分頁率 (連同分頁錯誤) 低是正常的，即使有許多可用記憶體的電腦也是如此。 當「Microsoft Windows 虛擬記憶體管理員 (VMM)」修剪 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他處理序的工作集大小時，它會從這些處理序取得分頁。 此 VMM 活動會造成分頁錯誤。 若要判定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或其他處理序是否造成過度分頁，請監視 **處理序執行個體的** Process: Page Faults/sec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 計數器。  
+ 分頁率 (連同分頁錯誤) 低是正常的，即使有許多可用記憶體的電腦也是如此。 當「Microsoft Windows 虛擬記憶體管理員 (VMM)」修剪 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他處理序的工作集大小時，它會從這些處理序取得分頁。 此 VMM 活動會造成分頁錯誤。 若要判斷 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或其他處理序是否為過度分頁的原因，可監視 **Process:Page Faults/sec**計數器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]處理序執行個體。  
   
  如需有關解決過度分頁的詳細資訊，請參閱 Windows 作業系統文件。  
   
@@ -52,13 +52,13 @@ ms.locfileid: "48145493"
   
  若要監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所使用的記憶體數量，請檢查下列效能計數器：  
   
--   **Process: Working Set**  
+-   **Process:工作集**  
   
--   **SQL Server: Buffer Manager: Buffer Cache Hit Ratio**  
+-   **SQL Server:Buffer Manager:Buffer Cache Hit Ratio**  
   
--   **SQL Server: Buffer Manager: Database Pages**  
+-   **SQL Server:Buffer Manager:資料庫頁面**  
   
--   **SQL Server: Memory Manager: Total Server Memory (KB)**  
+-   **SQL Server:Memory Manager:總伺服器記憶體 (KB)**  
   
  **WorkingSet** 計數器顯示處理序使用的記憶體數量。 如果這個數字一直低於 **「最小伺服器記憶體」** 與 **「最大伺服器記憶體」** 伺服器選項設定的記憶體數量，則代表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定的記憶體過多。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG014160 error
@@ -13,12 +12,12 @@ ms.assetid: d0f3855e-d095-4a81-a5bd-9d7ad51f2c77
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8254b43d9fdfa94bfff2b187973ac1393f15415a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c8a92d4af4088e0e74cf910451f9be446084b7ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126825"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776670"
 ---
 # <a name="mssqleng014160"></a>MSSQL_ENG014160
     
@@ -34,7 +33,7 @@ ms.locfileid: "48126825"
 |訊息文字|已設定臨界值 [%s:%s] (針對發行集 [%s])。 此發行集的一個或多個訂閱已經到期。|  
   
 ## <a name="explanation"></a>說明  
- 複寫可讓您啟用多個條件的警告。 這包括訂閱即將過期。 如果訂閱在指定 *「保留期限」* 內未執行同步處理，則會使訂閱過期。 如需詳細資訊，請參閱＜ [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)＞。  
+ 複寫可讓您啟用多個條件的警告。 這包括訂閱即將過期。 如果訂閱在指定 *「保留期限」* 內未執行同步處理，則會使訂閱過期。 如需詳細資訊，請參閱 [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)。  
   
  使用複寫監視器或 [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql)啟用警告時，您會指定決定何時觸發警告的臨界值。 當達到或超過臨界值時，複寫監視器中會顯示警告，而且會有事件寫入 Windows 事件記錄檔。 達到臨界值也會觸發 SQL Server Agent 警示。 如需詳細資訊，請參閱[在複寫監視器中設定臨界值和警告](monitor/set-thresholds-and-warnings-in-replication-monitor.md)和[以程式設計方式監視複寫](monitor/monitoring-replication-overview.md)。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "48126825"
   
 -   如果代理程式已經在執行，但未正確複寫變更，可能會導致訂閱過期。 進行異動複寫時，請確認散發代理程式和記錄讀取器代理程式正在執行。 進行合併式複寫時，請確認合併代理程式正在執行。 如需如何啟動這些代理程式的詳細資訊，請參閱[啟動及停止複寫代理程式 &#40;SQL Server Management Studio&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 與[複寫代理程式可執行檔概念](concepts/replication-agent-executables-concepts.md)。  
   
--   如果訂閱已過期，則必須重新初始化，或是卸除後再重新建立，需視訂閱類型及已過期時間的長短而定。 如需詳細資訊，請參閱＜ [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)＞。  
+-   如果訂閱已過期，則必須重新初始化，或是卸除後再重新建立，需視訂閱類型及已過期時間的長短而定。 如需詳細資訊，請參閱 [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [錯誤和事件參考 &#40;複寫&#41;](errors-and-events-reference-replication.md)  

@@ -22,17 +22,17 @@ ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc96c78af702a2239b517b4fbde78f6926b8490a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5182ab1a72caac4181e50df2199f3e0457d3aaac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076698"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806590"
 ---
 # <a name="autotranslation-of-character-data"></a>字元資料的自動轉譯
   字元資料，例如 ANSI 字元，利用 SQL_C_CHAR 宣告的變數或資料儲存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用**char**， **varchar**，或**文字**資料型別，可以代表只在有限的字元。 每個字元使用一個位元組儲存的字元資料僅能代表 256 個字元。 儲存在 SQL_C_CHAR 變數中的值會使用用戶端電腦的 ANSI 字碼頁 (ACP) 解譯。 使用儲存的值**char**， **varchar**，或**文字**伺服器上的資料類型會使用伺服器的 ACP 進行評估。  
   
- 如果伺服器和用戶端有相同的 ACP，則會不有任何問題，在解譯儲存在 SQL_C_CHAR、 值**char**， **varchar**，或**文字**物件。 如果伺服器和用戶端的 acp 不同，則從用戶端的 SQL_C_CHAR 資料可能會解譯為不同的字元，在伺服器上，如果它用於**char**， **varchar**，或**文字**資料行、 變數或參數。 例如，包含值 0xA5 字元位元組會解譯為字元及參與在電腦上使用字碼頁 437，並會解譯為日圓登入 （使用者） 執行字碼頁 1252年的電腦上。  
+ 如果伺服器和用戶端有相同的 ACP，則會不有任何問題，在解譯儲存在 SQL_C_CHAR、 值**char**， **varchar**，或**文字**物件。 如果伺服器和用戶端的 acp 不同，則從用戶端的 SQL_C_CHAR 資料可能會解譯為不同的字元，在伺服器上，如果它用於**char**， **varchar**，或**文字**資料行、 變數或參數。 例如，包含值 0xA5 字元位元組會解譯為字元 」 在電腦上使用程式碼頁面 437，會解譯為日圓執行字碼頁 1252年的電腦上簽署 （？）。  
   
  Unicode 資料的每個字元會使用兩個位元組儲存。 Unicode 規格包含所有擴充字元，因此所有電腦都會以相同方式解譯所有 Unicode 字元。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48076698"
   
  由於這些所有轉換由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式執行，在用戶端，伺服器 ACP 必須是其中一個用戶端電腦上安裝的字碼頁。  
   
- 透過 Unicode 進行字元轉換可確保正確轉換同時存在兩個字碼頁上的所有字元。 但是，如果字元存在於其中一個字碼頁，但不存在於另一個字碼頁，則無法在目標字碼頁中表示字元。 例如，字碼頁 1252 擁有註冊商標符號 (®)，而字碼頁 437 則沒有。  
+ 透過 Unicode 進行字元轉換可確保正確轉換同時存在兩個字碼頁上的所有字元。 但是，如果字元存在於其中一個字碼頁，但不存在於另一個字碼頁，則無法在目標字碼頁中表示字元。 例如，字碼頁 1252年擁有註冊的商標符號 （？），，而字碼頁 437 則沒有。  
   
  AutoTranslate 設定在進行下列轉換時沒有作用：  
   

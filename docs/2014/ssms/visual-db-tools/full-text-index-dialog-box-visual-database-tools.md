@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.fulltextindex
@@ -12,12 +12,12 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aac010a0dc1d9d6cd23b6ccdfbff5358455cddd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080428"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822742"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>全文檢索索引對話方塊 (Visual Database Tools)
   這個對話方塊可讓您建立全文檢索索引，以便在資料庫資料表的文字資料行上進行全文檢索搜尋。 全文檢索索引必須藉助一般索引，因此您必須先建立一般索引。 您必須在單一、非 Null 的資料行上建立一般索引，而且最好選擇值較小的資料行，而不要選擇包含大數值的資料行。  
@@ -42,7 +42,7 @@ ms.locfileid: "48080428"
  展開時會顯示 [資料行] 和 [全文檢索資料庫目錄名稱]。  
   
  **資料行**  
- 顯示可使用全文檢索搜尋資料行的逗號分隔清單。 若要查看完整清單，請按屬性欄位左側的省略符號按鈕 (**…**)。  
+ 顯示可使用全文檢索搜尋資料行的逗號分隔清單。 若要查看完整清單，請按一下屬性欄位左邊的省略符號按鈕 (**...**)。  
   
  **全文檢索資料庫目錄名稱**  
  顯示全文檢索索引儲存位置的全文檢索資料庫目錄名稱。 若要將索引儲存到不同的目錄，請按目錄名稱，然後從下拉式清單選擇另外一個目錄名稱。  
@@ -63,7 +63,7 @@ ms.locfileid: "48080428"
  指示是否能夠使用這個全文檢索索引執行全文檢索搜尋。  
   
  **變更追蹤設定**  
- 描述這個索引的變更追蹤狀態：[手動]、[自動] 或 [關閉]。  
+ 描述這個索引的變更追蹤的狀態：手動、 自動或關閉。  
   
  **搜耙已完成**  
  顯示最近的搜耙是否已經完成。 如果這個屬性的值為 [否]，表示搜耙目前正在進行。  
@@ -87,7 +87,7 @@ ms.locfileid: "48080428"
  顯示下一個搜耙將會開始的日期和時間。  
   
  **目前或上一個搜耙的類型**  
- 顯示目前或最近搜耙的類型：[完整]、[累加]、[更新] 或 [自動傳用]。  
+ 顯示目前或最近搜耙的類型：完整、 累加、 Update 或自動傳播。  
   
  **唯一索引名稱**  
  顯示這個資料庫中擁有唯一單一資料行索引的所有資料行名稱的清單。 這些資料行可用來建立全文檢索索引。  

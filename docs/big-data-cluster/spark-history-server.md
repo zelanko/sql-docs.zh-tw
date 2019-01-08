@@ -1,20 +1,21 @@
 ---
-title: 偵錯和診斷在 SQL Server 在 Spark 歷程記錄伺服器中的巨量資料叢集上的 Spark 應用程式
-description: 偵錯和診斷在 SQL Server 在 Spark 歷程記錄伺服器中的巨量資料叢集上的 Spark 應用程式
-services: SQL Server 2019 big data cluster spark
-ms.service: SQL Server 2019 big data cluster spark
+title: 偵錯/診斷的 Spark 應用程式
+titleSuffix: SQL Server 2019 big data clusters
+description: 若要偵錯和診斷在 SQL Server 2019 巨量資料叢集上執行的 Spark 應用程式中使用 Spark 歷程記錄伺服器。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.custom: ''
+manager: craigg
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/01/2018
-ms.openlocfilehash: 09d22e5d3b55f48ab1873507e6f474f07d842801
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.prod: sql
+ms.custom: seodec18
+ms.openlocfilehash: a9416f774e84d6b458e14aeb28db2ab39ad8543e
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460863"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53029742"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>偵錯和診斷在 SQL Server 在 Spark 歷程記錄伺服器中的巨量資料叢集上的 Spark 應用程式
 
@@ -41,31 +42,31 @@ Spark 記錄伺服器 」 web UI 看起來像：
 
 + 請檢查**輸入**，**輸出**，並**資料表作業**個別選取索引標籤。
 
-    ![資料索引標籤](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
+    ![Spark 歷程記錄伺服器資料索引標籤](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
 
 + 按一下按鈕來複製所有資料列**複製**。
 
-    ![複製資料](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
+    ![複製所有資料列](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
 
 + 將所有資料都儲存為 CSV 檔案中，按一下按鈕**csv**。
 
-    ![儲存的資料](./media/apache-azure-spark-history-server/sparkui-data-save.png)
+    ![將資料儲存為 CSV 檔案](./media/apache-azure-spark-history-server/sparkui-data-save.png)
 
 + 搜尋欄位中輸入關鍵字**搜尋**，將會立即顯示搜尋結果。
 
-    ![資料搜尋](./media/apache-azure-spark-history-server/sparkui-data-search.png)
+    ![使用關鍵字搜尋](./media/apache-azure-spark-history-server/sparkui-data-search.png)
 
 + 按一下資料行標頭來排序資料表，按一下加號，展開 資料列來顯示更多詳細資料，或按一下減號摺疊資料列。
 
-    ![資料表](./media/apache-azure-spark-history-server/sparkui-data-table.png)
+    ![資料的資料表功能](./media/apache-azure-spark-history-server/sparkui-data-table.png)
 
 + 下載單一檔案按鈕，即可**部分下載**，放在右側，然後選取的檔案下載至本機位置。 如果檔案不存在任何其他，即會開啟新索引標籤，以顯示錯誤訊息。
 
-    ![下載的資料列](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
+    ![下載資料列](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
 
 + 選取 複製完整路徑或相對路徑**複製完整路徑**，**複製相對路徑**將它展開並從 下載 功能表。 Azure data lake 儲存體檔案，如**在 Azure 儲存體總管中開啟**會啟動 Azure 儲存體總管。 並在登入時，找出要完全相同的資料夾。
 
-    ![資料複製路徑](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
+    ![複製的完整或相對路徑](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
 
 + 按一下資料表下方的編號，瀏覽頁面時太多資料列在一個網頁中顯示。 
 
@@ -99,11 +100,11 @@ Spark 記錄伺服器 」 web UI 看起來像：
 
 + 按一下播放作業**播放**按鈕，並隨時停止，依序按一下 [停止] 按鈕。 工作中的顯示色彩來顯示不同的狀態時播放：
 
-    + 綠色的成功： 作業已順利完成。
-    + 橘色重試： 失敗，但不是會影響作業的最終結果的工作執行個體。 這些工作會有重複或重試稍後可能會成功的執行個體。
-    + 藍色執行： 工作正在執行。
-    + 等候的白色或略過： 工作在等候執行，或已略過階段。
-    + 紅色失敗： 無法工作。
+    + 綠色的成功：作業已順利完成。
+    + 橘色的重試：工作失敗，但不會影響作業的最終結果的執行個體。 這些工作會有重複或重試稍後可能會成功的執行個體。
+    + 藍色執行：工作正在執行。
+    + 等候的白色或略過：工作在等候執行，或已略過階段。
+    + 紅色表示失敗：工作已失敗。
 
     ![圖形的色彩範例中執行](./media/apache-azure-spark-history-server/sparkui-graph-color-running.png)
  
@@ -161,13 +162,13 @@ Spark 記錄伺服器 」 web UI 看起來像：
 ### <a name="data-skew"></a>資料扭曲
 按一下 **資料扭曲**索引標籤上，對應扭曲的工作才會顯示根據指定的參數。 
 
-+ **指定參數**-第一部分顯示的參數，用來偵測資料扭曲。 內建的規則是： 讀取的工作資料大於三次的平均工作資料讀取，且讀取的工作資料會超過 10 MB。 如果您想要定義您自己的規則，扭曲的工作，您可以選擇您的參數**扭曲階段**，並**扭曲 Char**區段將會據以重新整理。 
++ **指定參數**-第一部分顯示的參數，用來偵測資料扭曲。 內建的規則是：讀取的工作資料大於三次的平均工作資料讀取，且讀取的工作資料會超過 10 MB。 如果您想要定義您自己的規則，扭曲的工作，您可以選擇您的參數**扭曲階段**，並**扭曲 Char**區段將會據以重新整理。 
 
 + **扭曲階段**-第二個區段會顯示包含了扭曲符合上述準則的工作階段。 是否有多個扭曲的工作階段中，扭曲的暫存資料表只會顯示最扭曲的工作 （例如，資料扭曲的最大資料）。 
 
     ![資料扭曲 section2](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section2.png)
 
-+ **扭曲圖表**– 選取扭曲的暫存資料表中的資料列時，詳細的工作分佈根據讀取的資料和執行時間誤差的圖表顯示。 扭曲的工作會標示為紅色，和一般工作會以藍色標示。 基於效能考量，圖表只會顯示最多 100 個範例工作。 工作詳細資料會顯示在右邊的下方面板。
++ **扭曲圖表**-選取扭曲的暫存資料表中的資料列時，詳細的工作分佈根據讀取的資料和執行時間誤差的圖表顯示。 扭曲的工作會標示為紅色，和一般工作會以藍色標示。 基於效能考量，圖表只會顯示最多 100 個範例工作。 工作詳細資料會顯示在右邊的下方面板。
 
     ![資料扭曲 section3](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section3.png)
 

@@ -15,12 +15,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87180b692a613289fa8bbd22f6d605b0aa25cf6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a173b15546db7e2ceda571e617191fe4f0e84a4e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096388"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211836"
 ---
 # <a name="specify-parameters"></a>指定參數
   藉由指定程序參數，呼叫端程式就能夠將值傳入程序的主體。 這些值在程序執行期間可用於各種用途。 如果程序參數標示為 OUTPUT 參數，程序參數也可以將值傳回給呼叫端程式。  
@@ -62,10 +62,10 @@ GO
   
  明確為參數命名以及在程序呼叫中指定適當值給每個參數，就能以任何順序提供參數。 例如，如果 **my_proc** 程序預期有三個參數，名稱分別為 **\@first**、**\@second** 和 **\@third**，您可以將傳遞給程序的值指派給參數名稱，例如：`EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
-> [!NOTE]  
+> [!NOTE]
 >  如果以 **/@parameter =** <值>** 的形式提供參數值，後續所有參數也必須比照此方式。 如果不是以 **\@parameter =***value* 形式傳遞參數值，提供值的順序就必須與 CREATE PROCEDURE 陳述式中列出參數的順序一樣 (由左到右)。  
-  
-> [!WARNING]  
+> 
+> [!WARNING]
 >  任何以 **\@parameter =***value* 形式傳遞的參數如果有拼字錯誤，將會使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生錯誤，並導致程序無法執行。  
   
 ## <a name="specifying-parameter-data-types"></a>指定參數資料類型  

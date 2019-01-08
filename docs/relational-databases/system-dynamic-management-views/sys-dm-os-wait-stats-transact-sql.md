@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2018
+ms.date: 12/04/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 513b85aafb4cd25d55dfb40e37dabd6fc47b814f
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878191"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886883"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -168,7 +168,7 @@ GO
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **適用於**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |COUNTRECOVERYMGR |TBD <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |CREATE_DATINISERVICE |TBD <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|CXCONSUMER |當取用者執行緒等候要傳送的資料列產生者執行緒會發生平行查詢計畫。 這是正常的平行查詢執行。 <br /> **適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] cu3 開始)， [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXCONSUMER |當取用者執行緒等候要傳送的資料列產生者執行緒會發生平行查詢計畫。 這是正常的平行查詢執行。 <br /> **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] cu3 開始)， [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
 |CXPACKET  |當同步處理查詢處理器交換重複，並產生和取用資料列時，會發生與平行查詢計畫。 如果等候時間過長，而且無法透過微調查詢 (例如加入索引) 來縮短，請考慮調整平行處理原則的成本臨界值，或降低平行處理原則的程度。<br /> **注意：** 開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3，和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，同步處理查詢處理器交換重複，並產生取用者執行緒的資料列，只是指 CXPACKET。 取用者執行緒會分開追蹤在 CXCONSUMER 等候類型。| 
 |CXROWSET_SYNC |在平行範圍掃描期間發生。| 
 |DAC_INIT |當專用管理員連接正在初始化時發生。| 
@@ -331,7 +331,7 @@ GO
 |HADR_NOTIFICATION_WORKER_STARTUP_SYNC |背景工作正在等候處理 Windows Server 容錯移轉叢集通知的背景工作啟動完成。 僅供內部使用。， <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |背景工作正在等候處理 Windows Server 容錯移轉叢集通知的背景工作終止。 僅供內部使用。， <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_PARTNER_SYNC |協力廠商清單上的並行控制等候。， <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|HADR_READ_ALL_NETWORKS |等候取得 WSFC 網路清單的讀取或寫入存取權。 僅供內部使用。 請注意： 引擎會保留一份 WSFC 網路使用動態管理檢視 （例如 sys.dm_hadr_cluster_networks) 中，或驗證一律在 TRANSACT-SQL 陳述式參考 WSFC 網路資訊。 這份清單會更新在引擎啟動時，WSFC 相關通知，以及內部 Alwayson 重新啟動 （例如遺失及以重新取得 WSFC 仲裁）。 當該清單的更新正在進行時，通常會封鎖工作。 、 <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|HADR_READ_ALL_NETWORKS |等候取得 WSFC 網路清單的讀取或寫入存取權。 僅供內部使用。 注意：引擎會保留一份 WSFC 網路使用動態管理檢視 （例如 sys.dm_hadr_cluster_networks) 中，或驗證一律在 TRANSACT-SQL 陳述式參考 WSFC 網路資訊。 這份清單會更新在引擎啟動時，WSFC 相關通知，以及內部 Alwayson 重新啟動 （例如遺失及以重新取得 WSFC 仲裁）。 當該清單的更新正在進行時，通常會封鎖工作。 、 <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |等候次要資料庫在執行復原之前連接到主要資料庫。 這是預期的等候，可能會延長慢而無法建立連線到主要複本是否。， <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_RECOVERY_WAIT_FOR_UNDO |資料庫復原正在等候次要資料庫完成還原和初始化階段，以便讓它返回與主要資料庫相同的記錄點。 在容錯移轉之後，這可以是預期的等候。復原可以透過 Windows 系統監視器 (perfmon.exe) 和動態管理檢視中追蹤進度。， <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_REPLICAINFO_SYNC |若要更新目前複本狀態的並行控制等候。， <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -931,6 +931,7 @@ GO
 |VIA_ACCEPT |當虛擬介面卡 (VIA) 提供者連接在啟動期間完成時發生。| 
 |VIEW_DEFINITION_MUTEX |在同步處理快取檢視定義的存取作業時發生。| 
 |WAIT_FOR_RESULTS |在等候查詢通知被觸發時發生。| 
+|WAIT_ON_SYNC_STATISTICS_REFRESH |發生於等候同步統計資料更新完成，再查詢編譯，而且可以繼續執行。<br /> **適用於**：從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |TBD <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |TBD <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |WAIT_XLOGREAD_SIGNAL |TBD <br /> **適用於**： [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 

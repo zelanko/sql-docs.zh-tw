@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.runnow.f1
@@ -12,12 +12,12 @@ ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e3c45cc239c1c8fa3539b168ab3f322cd757e25f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151578"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780950"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>評估原則對話方塊，原則選取頁面
   使用此對話方塊可評估以原則為基礎的管理原則。 您可以藉由選取 **[評估結果]** 頁面，將原則套用到目標集內不符合原則的項目。  
@@ -32,13 +32,13 @@ ms.locfileid: "48151578"
  **Server**  
  選取此選項可連接包含您想要之原則的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體。  
   
- **原則: 原則**  
+ **原則：原則**  
  按一下此選項可開啟指定之原則的原則對話方塊。  
   
- **原則: 類別目錄**  
+ **原則：類別目錄**  
  此原則的類別目錄。 這個方塊是唯讀的。  
   
- **原則: Facet**  
+ **原則：Facet**  
  此原則所實作的 Facet。 這個方塊是唯讀的。  
   
  **評估**  

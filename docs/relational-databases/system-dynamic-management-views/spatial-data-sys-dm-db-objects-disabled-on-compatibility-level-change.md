@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 028c3a2fe26d448373fcb9c4a00d2916a1bb34e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fece91698147ef11496855985f27ea81f84f62a5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726756"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537937"
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>空間資料-sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -67,58 +67,58 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 -   **Soundex**  
   
--   **Geography:: GeomFromGML**  
+-   **Geography::GeomFromGML**  
   
--   **Geography:: STGeomFromText**  
+-   **Geography::STGeomFromText**  
   
--   **Geography:: STLineFromText**  
+-   **Geography::STLineFromText**  
   
--   **Geography:: STPolyFromText**  
+-   **Geography::STPolyFromText**  
   
--   **Geography:: STMPointFromText**  
+-   **Geography::STMPointFromText**  
   
--   **Geography:: STMLineFromText**  
+-   **Geography::STMLineFromText**  
   
--   **Geography:: STMPolyFromText**  
+-   **Geography::STMPolyFromText**  
   
--   **Geography:: STGeomCollFromText**  
+-   **Geography::STGeomCollFromText**  
   
--   **Geography:: STGeomFromWKB**  
+-   **Geography::STGeomFromWKB**  
   
--   **Geography:: STLineFromWKB**  
+-   **Geography::STLineFromWKB**  
   
--   **Geography:: STPolyFromWKB**  
+-   **Geography::STPolyFromWKB**  
   
--   **Geography:: STMPointFromWKB**  
+-   **Geography::STMPointFromWKB**  
   
--   **Geography:: STMLineFromWKB**  
+-   **Geography::STMLineFromWKB**  
   
--   **Geography:: STMPolyFromWKB**  
+-   **Geography::STMPolyFromWKB**  
   
--   **Geography:: STUnion**  
+-   **Geography::STUnion**  
   
--   **Geography:: STIntersection**  
+-   **Geography::STIntersection**  
   
--   **Geography:: STDifference**  
+-   **Geography::STDifference**  
   
--   **Geography:: STSymDifference**  
+-   **Geography::STSymDifference**  
   
--   **Geography:: STBuffer**  
+-   **Geography::STBuffer**  
   
--   **Geography:: BufferWithTolerance**  
+-   **Geography::BufferWithTolerance**  
   
--   **Geography:: 剖析**  
+-   **Geography::剖析**  
   
--   **Geography:: 減少**  
+-   **Geography::減少**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>停用物件的行為  
  **[索引]**  
   
- 如果叢集的索引已停用，或如果進行強制的非叢集索引，就會引發下列錯誤: 「 查詢處理器會無法產生計畫，因為索引 ' %。\*ls' 在資料表或檢視表 ' %。\*ls' 已停用。 」 若要重新啟用這些物件，重建索引在升級之後藉由呼叫**ALTER INDEX ON...重建**。  
+ 如果停用叢集索引或強制執行非叢集索引，將會引發下列錯誤：「 查詢處理器會無法產生計畫，因為索引 ' %。\*ls' 在資料表或檢視表 ' %。\*ls' 已停用。 」 若要重新啟用這些物件，重建索引在升級之後藉由呼叫**ALTER INDEX ON...REBUILD**。  
   
  **堆積**  
   
- 如果使用了內含停用之堆積的資料表，將會引發下列錯誤。 若要重新啟用這些物件，在升級後呼叫重建**ALTER INDEX 所有 ON...重建**。  
+ 如果使用了內含停用之堆積的資料表，將會引發下列錯誤。 若要重新啟用這些物件，在升級後呼叫重建**ALTER INDEX 所有 ON...REBUILD**。  
   
 ```  
 // ErrorNumber: 8674  

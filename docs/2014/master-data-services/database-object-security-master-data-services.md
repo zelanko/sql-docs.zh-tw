@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
@@ -14,12 +13,12 @@ ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b2e4feb3f09b8012c17156e085e16dcf39df3088
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f5d485aec6d3056022ea55f1cb2bc8ee29a4e314
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183518"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822232"
 ---
 # <a name="database-object-security-master-data-services"></a>資料庫物件安全性 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中，資料儲存在多個資料庫資料表並且顯示在檢視表中。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中受到保護的資訊，對具有 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫存取權的使用者是可見的。  
@@ -43,15 +42,15 @@ ms.locfileid: "48183518"
 -   [設定系統設定](#SysSettings)  
   
 ##  <a name="Staging"></a> 暫存資料  
- 在下表中，每個安全物件都會有 "name" 做為名稱的一部分。 這表示建立實體時所指定的暫存資料表名稱。 如需詳細資訊，請參閱 <<c0> [ 匯入資料&#40;Master Data Services&#41;</c0>](overview-importing-data-from-tables-master-data-services.md)  
+ 在下表中，每個安全物件都會有 "name" 作為名稱的一部分。 這表示建立實體時所指定的暫存資料表名稱。 如需詳細資訊，請參閱 <<c0> [ 匯入資料&#40;Master Data Services&#41;</c0>](overview-importing-data-from-tables-master-data-services.md)  
   
 |動作|[安全性實體]|Permissions|  
 |------------|----------------|-----------------|  
-|將分葉成員及其屬性載入至暫存資料表。|stg.name_Leaf|必要：INSERT<br /><br /> 選擇性：SELECT 和 UPDATE|  
+|將分葉成員及其屬性載入至暫存資料表。|stg.name_Leaf|必要：Insert<br /><br /> 選擇性:選取並更新|  
 |將資料從 [分葉] 暫存資料表載入至適當的 MDS 資料庫資料表。|stg.udp_name_Leaf|執行 CREATE 陳述式之前，請先執行|  
-|將合併成員及其屬性載入至暫存資料表。|stg.name_Consolidated|必要：INSERT<br /><br /> 選擇性：SELECT 和 UPDATE|  
+|將合併成員及其屬性載入至暫存資料表。|stg.name_Consolidated|必要：Insert<br /><br /> 選擇性:選取並更新|  
 |將資料從 [合併] 暫存資料表載入至適當的 MDS 資料庫資料表。|stg.udp_name_Consolidated|執行 CREATE 陳述式之前，請先執行|  
-|將明確階層中分葉及合併成員彼此的關聯性載入至暫存資料表。|stg.name_Relationship|必要：INSERT<br /><br /> 選擇性：SELECT 和 UPDATE|  
+|載入暫存資料表的分葉成員和彼此在明確階層中的合併的成員的關聯性。|stg.name_Relationship|必要：Insert<br /><br /> 選擇性:選取並更新|  
 |將資料從 [關聯性] 暫存資料表載入至適當的 MDS 資料表。|stg.udp_name_Relationship|執行 CREATE 陳述式之前，請先執行|  
 |檢視將資料從暫存資料表插入至 MDS 資料庫資料表時發生的錯誤。|stg.udp_name_Relationship|SELECT|  
   
@@ -63,7 +62,7 @@ ms.locfileid: "48183518"
 |------------|---------------|-----------------|  
 |依商務規則驗證資料版本|mdm.udpValidateModel|執行 CREATE 陳述式之前，請先執行|  
   
- 如需詳細資訊，請參閱[驗證預存程序 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)。  
+ 如需詳細資訊，請參閱 [驗證預存程序 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)。  
   
 ##  <a name="Versions"></a> 刪除版本  
   

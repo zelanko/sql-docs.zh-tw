@@ -20,19 +20,19 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c5bf53045abe0f93e2ff1e07ec17d31f7d58248b
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c0411281173339c46eb629dc6aad757337b3c41c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814071"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761448"
 ---
 # <a name="register-a-database-as-a-dac"></a>將資料庫註冊為 DAC
   使用任何一種**註冊資料層應用程式精靈**或 Windows PowerShell 指令碼來建立資料層應用程式 (DAC) 定義，以便描述現有的資料庫中的物件，並註冊 DAC 定義中的`msdb`系統資料庫 (**主要**在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **開始之前：**[限制事項](#LimitationsRestrictions)，[權限](#Permissions)  
   
--   **使用下列項目，升級 DAC**  [註冊資料層應用程式精靈](#UsingRegisterDACWizard)、 [PowerShell](#RegisterDACPowerShell)  
+-   **若要升級 DAC，使用：**[註冊資料層應用程式精靈](#UsingRegisterDACWizard)， [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>開始之前  
  註冊程序會建立 DAC 定義，以定義資料庫中的物件。 DAC 定義和資料庫的組合會形成 DAC 執行個體。 如果將資料庫註冊為 Database Engine 之受管理的執行個體上的 DAC，下次從執行個體將公用程式收集組傳送到公用程式控制點時，註冊的 DAC 將會合併到 SQL Server 公用程式中。 然後 DAC 會出現在  [公用程式總管] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[部署的資料層應用程式]** 節點中，並在  詳細資料頁面中報告。  
@@ -52,7 +52,7 @@ ms.locfileid: "51814071"
   
 2.  展開 **[資料庫]** 節點。  
   
-3.  以滑鼠右鍵按一下要註冊的資料庫，然後指向 [工作]，再選取 [註冊為資料層應用程式…]  
+3.  以滑鼠右鍵按一下要註冊的資料庫，指向 [工作]，然後選取 [註冊為資料層應用程式…]  
   
 4.  完成精靈對話方塊：  
   
@@ -76,7 +76,7 @@ ms.locfileid: "51814071"
 ##  <a name="Set_properties"></a> 設定屬性頁面  
  使用此頁面來指定 DAC 層級屬性，例如應用程式名稱和版本。  
   
- **應用程式名稱** -指定用來識別 DAC 定義，欄位名稱的字串是已填入資料庫名稱。  
+ **應用程式名稱** - 字串，用來識別 DAC 定義的名稱，此欄位已經填入資料庫名稱。  
   
  **版本** - 可識別 DAC 版本的數值。 DAC 版本會用於 Visual Studio 中，以便識別開發人員正在處理的 DAC 版本。 在部署 DAC 時，版本會儲存在`msdb`資料庫和更新版本底下檢視**資料層應用程式**中的節點[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   

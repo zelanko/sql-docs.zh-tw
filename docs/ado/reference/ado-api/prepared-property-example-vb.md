@@ -15,15 +15,15 @@ ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2339cb94af5140bab96fe78add90b163e84ced60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41dadd067fc62de6316c5258d660c757febc0fbc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813026"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535381"
 ---
 # <a name="prepared-property-example-vb"></a>Prepared 屬性範例 (VB)
-此範例示範[已準備](../../../ado/reference/ado-api/prepared-property-ado.md)藉由開啟兩個屬性[命令](../../../ado/reference/ado-api/command-object-ado.md)物件 — 一個已備妥，尚未備妥的另一個。  
+此範例示範[已準備](../../../ado/reference/ado-api/prepared-property-ado.md)藉由開啟兩個屬性[命令](../../../ado/reference/ado-api/command-object-ado.md)物件-一個已備妥，另一個尚未備妥。  
   
 ```  
 'BeginPreparedVB  

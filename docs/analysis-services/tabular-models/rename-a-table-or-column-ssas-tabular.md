@@ -1,5 +1,5 @@
 ---
-title: 重新命名資料表或資料行 |Microsoft 文件
+title: 重新命名 Analysis Services 表格式模型資料表或資料行 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0c8564b7a61a73937bc5f9a207c98fd77c7b1bb7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e5c0173de2ea22e91c0a1f13517a9bcb7c58ed9
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040102"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072635"
 ---
 # <a name="rename-a-table-or-column"></a>重新命名資料表或資料行 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,9 +49,9 @@ ms.locfileid: "34040102"
 -   Analysis Services 保留關鍵字，包括多維度運算式 (MDX) 和資料採礦延伸模組 (DMX) 的函數名稱與運算子。  
   
 ## <a name="effect-of-renaming-on-existing-tables-columns-and-calculations"></a>重新命名對於現有的資料表、資料行和計算的影響  
- 每當您變更資料表的名稱時，您都會變更基礎資料表物件的名稱，其中可能包含多個資料行或量值。 資料表中的任何資料行和使用之資料表的任何關聯性，都必須更新為使用新名稱，其定義中。 此更新會自動在大部分情況下進行。
+ 每當您變更資料表的名稱時，您都會變更基礎資料表物件的名稱，其中可能包含多個資料行或量值。 在資料表中，任何資料行，以及使用資料表的任何關聯性，都必須更新為使用新的名稱，其定義中。 此更新會自動在大部分情況下進行。
   
- 也必須更新任何計算使用重新命名的資料表，或是使用重新命名之資料表的資料行，而且必須從這些計算衍生的資料重新整理及重新計算。 根據受到影響之資料表和計算的數目而定，完成這個程序可能需要一點時間。 因此，重新命名資料表的最佳時機是匯入期間，或是在您開始建立複雜關聯性和計算之前。  
+ 任何計算使用重新命名的資料表，或使用資料行重新命名的資料表，也必須更新，並從這些計算衍生的資料必須重新整理並重新計算。 根據受到影響之資料表和計算的數目而定，完成這個程序可能需要一點時間。 因此，重新命名資料表的最佳時機是匯入期間，或是在您開始建立複雜關聯性和計算之前。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料表和資料行](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   

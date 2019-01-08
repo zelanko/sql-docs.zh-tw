@@ -1,10 +1,10 @@
 ---
-title: 教學課程：撰寫國際性通用的 Transact-SQL 陳述式 | Microsoft Docs
+title: 教學課程：撰寫 TRANSACT-SQL 陳述式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: t-sql
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL statements, tutorials
@@ -14,14 +14,14 @@ ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9add0b2c75b00a5cf10a1da28c8dd9e30560f716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061464"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807580"
 ---
-# <a name="tutorial-writing-transact-sql-statements"></a>教學課程：撰寫國際性通用的 Transact-SQL 陳述式
+# <a name="tutorial-writing-transact-sql-statements"></a>教學課程：撰寫 Transact-SQL 陳述式
   歡迎使用「撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式」教學課程。 本教學課程的主要對象是撰寫 SQL 陳述式的新手， 會透過檢閱一些建立資料表及插入資料的基本陳述式，協助新手上路。 本教學課程採用 [!INCLUDE[tsql](../includes/tsql-md.md)]，是 SQL 標準的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 實作。 本教學課程的目的是用來概述 [!INCLUDE[tsql](../includes/tsql-md.md)] 語言，而非用來取代 [!INCLUDE[tsql](../includes/tsql-md.md)] 類別。 在本教學課程中的陳述式是有意經過簡化的，並無意呈現一般實際資料庫中所遇到的複雜問題。  
   
 > [!NOTE]  
@@ -35,13 +35,13 @@ ms.locfileid: "48061464"
   
  本教學課程分成三個課程：  
   
- [課程 1：建立資料庫物件](lesson-1-creating-database-objects.md)  
+ [第 1 課：建立資料庫物件](lesson-1-creating-database-objects.md)  
  在這一課，您會建立資料庫、在資料庫中建立資料表、插入資料至資料表、更新資料以及讀取資料。  
   
- [課程 2：設定資料庫物件的權限](lesson-2-configuring-permissions-on-database-objects.md)  
+ [第 2 課：資料庫物件上設定權限](lesson-2-configuring-permissions-on-database-objects.md)  
  在這一課，您會建立登入及使用者， 也會建立檢視和預存程序，然後將使用者權授與預存程序。  
   
- [課程 3：刪除資料庫物件](lesson-3-1-deleting-database-objects.md)  
+ [第 3 課：刪除資料庫物件](lesson-3-1-deleting-database-objects.md)  
  在這一課，您會移除資料的存取、從資料表中刪除資料、刪除資料表，最後刪除資料庫。  
   
 ## <a name="requirements"></a>需求  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd05395098a6ce9a4dd23dc2f8dc886fe7273ece
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 0b9460ee16c73d5bf61fdfab1f67a796d5b033c1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085066"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793550"
 ---
 # <a name="create-infosource-for-master-data"></a>[建立主要資料的 InfoSource]
   使用 [建立主要資料的 InfoSource] 對話方塊可以在 SAP Netweaver BW 系統中建立主要資料的新 InfoSource。  
@@ -48,7 +47,7 @@ ms.locfileid: "49085066"
  在您選取 InfoObject 之後，此元件就會將選取之 InfoObject 的名稱填入 [InfoObject 名稱] 文字方塊。  
   
  **新增**  
- 建立新的 InfoObject。 此選項會開啟**建立新的 InfoObject**對話方塊中，您可以在其中建立新的 InfoObject。 如需有關此對話方塊的詳細資訊，請參閱＜ [Create New InfoObject](create-new-infoobject.md)＞。  
+ 建立新的 InfoObject。 這個選項會開啟 [建立新的 InfoObject] 對話方塊，讓您能夠建立新的 InfoObject。 如需有關此對話方塊的詳細資訊，請參閱＜ [Create New InfoObject](create-new-infoobject.md)＞。  
   
  在您建立 InfoObject 之後，此元件就會將新 InfoObject 的名稱填入 [InfoObject 名稱] 文字方塊。  
   

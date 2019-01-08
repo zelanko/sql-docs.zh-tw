@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], location paths
@@ -17,12 +15,12 @@ ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d70223df27f8f75c6e3a4d354d8f57f9ee8f150a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7450810f45d81dd1530699677a80a052840ed867
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124979"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806000"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>在位置路徑中指定節點測試 (SQLXML 4.0)
   節點測試會指定位置步驟所選取的節點類型。 每個軸 (`child`、`parent`、`attribute` 或 `self`) 都有一個主要節點類型。 針對`attribute`軸的主要節點類型是**\<屬性 >**。 針對`parent`， `child`，並`self`軸的主要節點類型會**\<項目 >**。  
@@ -30,7 +28,7 @@ ms.locfileid: "48124979"
 > [!NOTE]  
 >  不支援萬用字元節點測試 * (例如 `child::*`)。  
   
-## <a name="node-test-example-1"></a>節點測試： 範例 1  
+## <a name="node-test-example-1"></a>節點測試：範例 1  
  位置路徑`child::Customer`選取**\<客戶 >** 內容節點的項目子系。  
   
  在此範例中，`child` 為軸，而 `Customer` 為節點測試。 主要節點型別`child`軸是**\<項目 >**。 因此，會在節點測試為 TRUE，如果**\<客戶 >** 節點**\<項目 >** 節點。 若內容節點沒有**\<客戶 >** 子系，會傳回空的節點集。  

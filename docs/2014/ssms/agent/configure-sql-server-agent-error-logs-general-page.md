@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.errorlog.configure.f1
@@ -12,12 +12,12 @@ ms.assetid: e08de622-6f87-470c-aee0-b2d6cb6cca88
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d93b5f0229d4a91548588c4c562f419961f3cbc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96d0105faad9fb4c2c3213eaa90da464ccd90bd6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182918"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823452"
 ---
 # <a name="configure-sql-server-agent-error-logs-general-page"></a>設定 SQL Server Agent 錯誤記錄檔 (一般頁面)
   使用此畫面來檢視和更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 錯誤記錄的設定。  

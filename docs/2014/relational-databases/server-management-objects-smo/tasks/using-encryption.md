@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - database master key [SMO]
@@ -21,36 +19,36 @@ ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95a0323cc5362ec2fd780c5ee28926b3b78aa755
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09de7053de66d2d280c2bc6da61b8bf6b2ebf55b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198518"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794460"
 ---
 # <a name="using-encryption"></a>使用加密
-  在 SMO 中，服務主要金鑰由<xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey>物件。 這由參考<xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A>屬性<xref:Microsoft.SqlServer.Management.Smo.Server>物件。 可以使用重新產生<xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A>方法。  
+  在 SMO 中，服務主要金鑰是由 <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> 物件表示， 這可藉由 <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Server> 屬性加以參考， 並使用 <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> 方法來重新產生。  
   
- 資料庫主要金鑰由<xref:Microsoft.SqlServer.Management.Smo.MasterKey>物件。 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A>屬性會指出是否要將資料庫主要金鑰加密服務主要金鑰。 每當資料庫主要金鑰變更時，master 資料庫中的加密副本就會自動更新。  
+ 資料庫主要金鑰是由 <xref:Microsoft.SqlServer.Management.Smo.MasterKey> 物件表示。 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> 屬性會指出是否利用服務主要金鑰來加密資料庫主要金鑰。 每當資料庫主要金鑰變更時，master 資料庫中的加密副本就會自動更新。  
   
- 您可卸除服務金鑰加密使用<xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A>方法及加密資料庫主要金鑰與密碼。 在該種情況下，您必須明確地開啟資料庫主要金鑰，才能存取該金鑰所保護的私密金鑰。  
+ 您可以使用 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> 方法來卸除服務金鑰加密，然後使用密碼對資料庫主要金鑰進行加密。 在該種情況下，您必須明確地開啟資料庫主要金鑰，才能存取該金鑰所保護的私密金鑰。  
   
- 當資料庫附加到的執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您必須提供資料庫主要金鑰的密碼，或執行<xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A>方法，讓資料庫主要金鑰的未加密的副本可以使用該服務進行加密主要金鑰。 建議使用此步驟，如此即不必明確地開啟資料庫主要金鑰。  
+ 將資料庫附加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體時，您必須為資料庫主要金鑰提供密碼，或執行 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> 方法，讓資料庫主要金鑰的未加密副本可以使用服務主要金鑰進行加密。 建議使用此步驟，如此即不必明確地開啟資料庫主要金鑰。  
   
- <xref:Microsoft.SqlServer.Management.Smo.MasterKey.Regenerate%2A>方法會重新產生資料庫主要金鑰。 當重新產生資料庫主要金鑰時，所有利用資料庫主要金鑰加密的金鑰都會解密，然後再利用新的資料庫主要金鑰來加密。 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A>方法移除的資料庫主要金鑰，由服務主要金鑰加密。 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> 會導致主要金鑰的副本使用服務主要金鑰加密，然後同時儲存在目前的資料庫和 master 資料庫中。  
+ <xref:Microsoft.SqlServer.Management.Smo.MasterKey.Regenerate%2A> 方法會重新產生資料庫主要金鑰。 當重新產生資料庫主要金鑰時，所有利用資料庫主要金鑰加密的金鑰都會解密，然後再利用新的資料庫主要金鑰來加密。 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> 方法會利用服務主要金鑰移除資料庫主要金鑰的加密。 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> 會導致主要金鑰的副本使用服務主要金鑰加密，然後同時儲存在目前的資料庫和 master 資料庫中。  
   
- 在 SMO 中，憑證由<xref:Microsoft.SqlServer.Management.Smo.Certificate>物件。 <xref:Microsoft.SqlServer.Management.Smo.Certificate>物件的屬性可指定公開金鑰、 主旨的名稱、 期間有效，以及簽發者的相關資訊。 若要存取此憑證的權限會受到使用`Grant`，`Revoke`和`Deny`方法。  
+ 在 SMO 中，憑證是由 <xref:Microsoft.SqlServer.Management.Smo.Certificate> 物件所表示。 <xref:Microsoft.SqlServer.Management.Smo.Certificate> 物件的屬性可指定公開金鑰、主旨的名稱、有效期間和簽發者的相關資訊。 存取此憑證的權限是藉由使用 `Grant`、`Revoke` 和 `Deny` 方法來控制。  
   
 ## <a name="example"></a>範例  
  在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱 < [Visual Studio.NET 中建立 Visual Basic SMO Project](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)並[建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="adding-a-certificate-in-visual-basic"></a>在 Visual Basic 中加入憑證  
- 此程式碼範例會使用加密密碼來建立簡單的憑證。 不同於其他物件，<xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A>方法有數個多載。 範例中使用的多載會利用加密密碼來建立新的憑證。  
+ 此程式碼範例會使用加密密碼來建立簡單的憑證。 不同於其他物件，<xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> 方法有數個多載。 範例中使用的多載會利用加密密碼來建立新的憑證。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBCertificate1](SMO How to#SMO_VBCertificate1)]  -->  
   
 ## <a name="adding-a-certificate-in-visual-c"></a>在 Visual C# 中加入憑證  
- 此程式碼範例會使用加密密碼來建立簡單的憑證。 不同於其他物件，<xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A>方法有數個多載。 範例中使用的多載會利用加密密碼來建立新的憑證。  
+ 此程式碼範例會使用加密密碼來建立簡單的憑證。 不同於其他物件，<xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> 方法有數個多載。 範例中使用的多載會利用加密密碼來建立新的憑證。  
   
 ```  
 {  
@@ -78,7 +76,7 @@ ms.locfileid: "48198518"
 ```  
   
 ## <a name="adding-a-certificate-in-powershell"></a>在 PowerShell 中加入憑證  
- 此程式碼範例會使用加密密碼來建立簡單的憑證。 不同於其他物件，<xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A>方法有數個多載。 範例中使用的多載會利用加密密碼來建立新的憑證。  
+ 此程式碼範例會使用加密密碼來建立簡單的憑證。 不同於其他物件，<xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> 方法有數個多載。 範例中使用的多載會利用加密密碼來建立新的憑證。  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

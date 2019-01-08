@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
@@ -14,12 +13,12 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32b0b350d7b23b41573a147f095705546b0d8b04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214738"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818243"
 ---
 # <a name="view-offline-log-files"></a>檢視離線記錄檔
   從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始，當目標執行個體已離線或無法啟動時，您就可以從本機或遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄檔。  
@@ -46,7 +45,7 @@ ms.locfileid: "48214738"
   
 -   [SqlErrorLogFile Class](../wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (此主題會示範如何擷取有關指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄檔的資訊)。  
   
-##  <a name="BeforeYouBegin"></a> Permissions  
+##  <a name="BeforeYouBegin"></a> 權限  
  若要連接至離線記錄檔，您必須在本機和遠端電腦上具有下列權限：  
   
 -   **Root\Microsoft\SqlServer\ComputerManagement12** WMI 命名空間的讀取權限。 根據預設，每個人都可從啟用帳戶權限取得讀取權限。 如需詳細資訊，請參閱本節後面的＜若要確認 WMI 權限＞程序。  

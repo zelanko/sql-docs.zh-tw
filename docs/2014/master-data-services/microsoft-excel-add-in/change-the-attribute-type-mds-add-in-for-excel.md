@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ce5905026d2a64df3180828e5ee2983f88a5aa06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f86645a542e4c215a3675d7a0cbf9cfbd45cc2e9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056078"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783940"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>變更屬性類型 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當資料類型或是允許的字元數目不正確時，管理員可以變更屬性類型。  
@@ -31,7 +30,7 @@ ms.locfileid: "48056078"
   
 -   您必須擁有存取 [系統管理] 和總管功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](../administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](../administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 -   必須有現有的模型、實體和屬性存在。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48056078"
   
 -   變更屬性的資料類型。  
   
--   產生具有後置詞 “_old” 且不包含任何值的屬性複本。 這就叫做**已被取代**屬性。  
+-   產生一份具有後置詞"_old"且不包含任何值的屬性。 這就叫做**已被取代**屬性。  
   
  不過，原始屬性的所有現有相依性會指向已被取代的屬性，而不會指向變更的屬性。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "48056078"
 >  變更有現有資料和相關實體之 MDS 屬性的資料類型，方法相當繁雜，特別是如果有相依於實體、已宣告的商務規則或訂閱檢視時。 最佳作法是一開始就讓資料類型具備足夠的彈性來保存必要值。 例如，字串一開始可能很小，不過在一段時間後可能變長，因此請考慮最嚴重的案例狀況。 額外的文字字串長度可能相當惱人 (例如，太寬的 GUI 文字方塊難以完整顯示在螢幕上)，因此請避免太長的字串長度。  
   
 ## <a name="see-also"></a>另請參閱  
- [屬性&#40;Master Data Services&#41;](../attributes-master-data-services.md)   
+ [屬性 &#40;Master Data Services&#41;](../attributes-master-data-services.md)   
  [建立模型 &#40;適用於 Excel 的 MDS 增益集&#41;](building-a-model-mds-add-in-for-excel.md)  
   
   

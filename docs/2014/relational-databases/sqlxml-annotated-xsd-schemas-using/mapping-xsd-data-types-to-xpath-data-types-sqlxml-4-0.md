@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - mapping data types [SQLXML]
@@ -21,12 +19,12 @@ ms.assetid: ced1a95e-18d4-4a5a-8da8-dbb6d58bbd45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c87a27706a2d8c45631feadd6a662fc947a56288
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1e74f5d2cfdd80e3d8a348808d9ecd6d8f38219
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155534"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793510"
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>將 XSD 資料類型對應到 XPath 資料類型 (SQLXML 4.0)
   當 XPath 查詢針對 XSD 結構描述執行，而且 XSD 類型是在 `xsd:type` 屬性中指定時，XPath 會在處理查詢時使用指定的資料類型。  

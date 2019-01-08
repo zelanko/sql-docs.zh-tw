@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: supportability
+ms.technology: performance
 ms.topic: reference
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 538990f9bd54125af29e3432674601e6ab6b1907
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98c76925063c332ef2f537d427ae62bb83bc7024
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137988"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822132"
 ---
 # <a name="sql-server-express-localdb-error-message-reference"></a>SQL Server Express LocalDB 錯誤訊息參考
   本節提供有關下列 SQL Server Express LocalDB 錯誤訊息的參考資訊：  
