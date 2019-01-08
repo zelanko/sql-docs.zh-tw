@@ -12,19 +12,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32d5372f66881b130de832b8457e0618fc4d7364
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3964fc0563ae31fa5966b0652389a4b0deb41b88
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666177"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979124"
 ---
 # <a name="circularstring"></a>CircularString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **CircularString** 是零個或多個連續圓弧線段的集合。 圓弧線段是指由二維平面中三個點所定義的弧形線段。第一個點不得與第三個點相同。 如果圓弧線段的三個點都是共線，此圓弧線段就會被視為直線線段。  
   
 > [!IMPORTANT]  
->  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中導入的新空間功能 (包括 **CircularString** 子類型) 的詳細描述和範例，請下載技術白皮書： [SQL Server 2012 中的新空間功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
+> 如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中導入的新空間功能 (包括 **CircularString** 子類型) 的詳細描述和範例，請下載技術白皮書： [SQL Server 2012 中的新空間功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
   
 ## <a name="circularstring-instances"></a>CircularString 執行個體  
  下圖顯示有效的 **CircularString** 執行個體：  
@@ -34,7 +34,7 @@ ms.locfileid: "51666177"
 ### <a name="accepted-instances"></a>已接受的執行個體  
  如果 **CircularString** 執行個體是空的或包含奇數點 n (其中 n > 1)，則會接受此執行個體。 下面是已接受的 **CircularString** 執行個體。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';  
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';  
@@ -42,7 +42,7 @@ DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';
   
  `@g3` 顯示 **CircularString** 執行個體可被系統接受但卻無效。 系統無法接受下列 CircularString 執行個體宣告。 這個宣告會擲回 `System.FormatException`。  
   
-```  
+```sql  
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';  
 ```  
   
@@ -50,18 +50,14 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
  有效的 **CircularString** 執行個體必須是空的或具有下列屬性：  
   
 -   它至少必須包含一個圓弧弧線 (亦即，至少有三個點)。  
-  
 -   序列中每個圓弧線段的最後一個端點 (最後一個線段除外) 必須是序列中下一個線段的第一個端點。  
-  
 -   它必須有奇數點。  
-  
 -   它本身不得在間隔上重疊。  
-  
 -   雖然 **CircularString** 執行個體可包含直線線段，不過這些線段必須由三個共線點定義。  
   
- 下列範例會顯示有效的 **CircularString** 執行個體。  
+下列範例會顯示有效的 **CircularString** 執行個體。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';  
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1, 0 1)';  
@@ -69,23 +65,21 @@ DECLARE @g4 geometry = 'CIRCULARSTRING(1 1, 2 2, 2 2)';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(),@g4.STIsValid();  
 ```  
   
- **CircularString** 執行個體至少必須包含兩個圓弧線段，才能定義完整的圓形。 **CircularString** 執行個體無法使用單一圓弧線段 (例如 (1 1, 3 1, 1 1)) 來定義完整的圓形。 您可以使用 (1 1, 2 2, 3 1, 2 0, 1 1) 來定義圓形。  
+**CircularString** 執行個體至少必須包含兩個圓弧線段，才能定義完整的圓形。 **CircularString** 執行個體無法使用單一圓弧線段 (例如 (1 1, 3 1, 1 1)) 來定義完整的圓形。 您可以使用 (1 1, 2 2, 3 1, 2 0, 1 1) 來定義圓形。  
   
- 下列範例會顯示無效的 CircularString 執行個體。  
+下列範例會顯示無效的 CircularString 執行個體。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CIRCULARSTRING(1 1, 2 0, 1 1)';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(0 0, 0 0, 0 0)';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
 ### <a name="instances-with-collinear-points"></a>具有共線點的執行個體  
- 在下列情況中，圓弧線段會被視為直線線段：  
+在下列情況中，圓弧線段會被視為直線線段：  
   
 -   當三個點都是共線 (例如 (1 3, 4 4, 7 5)) 時。  
-  
 -   當第一個和中間點相同，但是第三個點不同 (例如 (1 3, 1 3, 7 5)) 時。  
-  
 -   當中間和最後一個點相同，但是第一個點不同 (例如 (1 3, 4 4, 4 4)) 時。  
   
 ## <a name="examples"></a>範例  
@@ -116,13 +110,13 @@ SET @g = geometry::Parse('CIRCULARSTRING(2 1, 1 2, 0 1, 1 0, 2 1)');
 SELECT 'Circumference = ' + CAST(@g.STLength() AS NVARCHAR(10));    
 ```  
   
- 這會產生下列輸出：  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
 Circumference = 6.28319  
 ```  
   
- 當您使用 **LineString** 而非 **CircularString**時，請比較輸出：  
+當您使用 **LineString** 而非 **CircularString**時，請比較輸出：  
   
 ```sql  
 DECLARE @g geometry;  
@@ -130,13 +124,13 @@ SET @g = geometry::STGeomFromText('LINESTRING(2 1, 1 2, 0 1, 1 0, 2 1)', 0);
 SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));  
 ```  
   
- 這會產生下列輸出：  
-  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
 ```  
 Perimeter = 5.65685  
 ```  
   
- 請注意， **CircularString** 範例的值會接近 2∏，這是圓形的實際圓周。  
+請注意， **CircularString** 範例的值會接近 2∏，這是圓形的實際圓周。  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. 在相同的陳述式中使用 CircularString 來宣告和具現化 Geometry 執行個體  
  這個程式碼片段會示範如何在相同的陳述式中使用 **CircularString** 來宣告和具現化 **geometry** 執行個體：  

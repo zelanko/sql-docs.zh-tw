@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4a7865fd7a7cd887ea8ea9dd763a2fca5d2fcc4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee8a63632d54c727051e405dff2f237b58849c2d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612236"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759173"
 ---
 # <a name="approval-required-master-data-services"></a>需要核准 (Master Data Services)
 

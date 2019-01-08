@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services]
@@ -17,12 +16,12 @@ ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a7e632883bdbfc235e2e9e242f9efd91de46fb19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00c51ad3a3b3d428a9a89ef5aafed54c26db76cf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693467"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781780"
 ---
 # <a name="users-and-groups-master-data-services"></a>使用者和群組 (Master Data Services)
 
