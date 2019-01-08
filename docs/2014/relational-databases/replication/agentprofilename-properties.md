@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.profiles.perfprofileprops.f1
@@ -15,12 +14,12 @@ ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a1ffaf34b0fca7dc03a5c8eb0d5ee1d95c2e7d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2ecd6ec8584eb4031e7d2c8a0af95204a930498
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221398"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763570"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;代理程式設定檔名稱&gt; 屬性
   請使用 **[代理程式設定檔屬性]** 對話方塊，即可檢視設定檔中、每一個代理程式參數所指定的值，以及修改使用者自訂設定檔的值。  

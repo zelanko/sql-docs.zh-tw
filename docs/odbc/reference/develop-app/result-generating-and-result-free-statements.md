@@ -17,12 +17,12 @@ ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e38e17ac469ec0685f11d7dfde587f36073fb970
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f357576e9e7510ae581b41a50976a34981f35109
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706906"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517347"
 ---
 # <a name="result-generating-and-result-free-statements"></a>會產生結果和不會產生結果的陳述式
 SQL 陳述式可以鬆散分為下列五個類別：  
@@ -37,4 +37,4 @@ SQL 陳述式可以鬆散分為下列五個類別：
   
 -   **管理陳述式**這些是用於系統管理資料庫中的 SQL 陳述式。 例如， **GRANT**並**撤銷**。  
   
- 前兩個類別中的 SQL 陳述式通稱為*結果產生的陳述式*。 在後者的三個類別中的 SQL 陳述式通稱為*無陳述式的結果的*。 ODBC 定義的批次包含只產生結果的陳述式的語意。 這些語意大不相同，因此資料來源專用。 例如，SQL Server 驅動程式不支援卸除物件然後參考或重新建立相同的批次中相同的物件。 因此，詞彙*批次*中使用這份手冊只會參考結果產生的批次陳述式。
+ 前兩個類別中的 SQL 陳述式通稱為*結果產生的陳述式*。 在後者的三個類別中的 SQL 陳述式通稱為*無陳述式的結果的*。 ODBC 定義的批次包含只產生結果的陳述式的語意。 這些語意大不相同，因此資料來源特有。 例如，SQL Server 驅動程式不支援卸除物件然後參考或重新建立相同的批次中相同的物件。 因此，詞彙*批次*中使用這份手冊只會參考結果產生的批次陳述式。

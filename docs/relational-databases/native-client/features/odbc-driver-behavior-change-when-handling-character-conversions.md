@@ -11,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b48a22e440889012dd16c8e60142f5b984cb4e7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38a7eb08d65717b20891225e6f4ff61e4fbcb99b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828576"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540706"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>ODBC 驅動程式在處理字元轉換上的行為變更
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ SQLGetData(hstmt, SQL_W_CHAR, ...., (SQLPOINTER*)pBuffer, iSize, &iSize);   // R
  查詢：  `select convert(varchar(36), '123')`  
   
 ```  
-SQLGetData(hstmt, SQL_WCHAR, ….., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempting to determine storage size needed  
+SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempting to determine storage size needed  
 ```  
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式版本|長度或指標結果|描述|  
@@ -68,11 +68,11 @@ while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {
    SQLNumCols(...iTotalCols...)  
    for(int iCol = 1; iCol < iTotalCols; iCol++) {  
       WCHAR* pBufOrig, pBuffer = new WCHAR[100];  
-      SQLGetData(.... iCol … pBuffer, 100, &iSize);   // Get original chunk  
+      SQLGetData(.... iCol ... pBuffer, 100, &iSize);   // Get original chunk  
       while(NOT ALL DATA RETREIVED (SQL_NO_TOTAL, ...) ) {  
          pBuffer += 50;   // Advance buffer for data retrieved  
          // May need to realloc the buffer when you reach current size  
-         SQLGetData(.... iCol … pBuffer, 100, &iSize);   // Get next chunk  
+         SQLGetData(.... iCol ... pBuffer, 100, &iSize);   // Get next chunk  
       }  
    }  
 }  
@@ -82,7 +82,7 @@ while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {
  查詢：  `select convert(varchar(36), '1234567890')`  
   
 ```  
-SQLBindCol(… SQL_W_CHAR, …)   // Only bound a buffer of WCHAR[4] – Expecting String Data Right Truncation behavior  
+SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting String Data Right Truncation behavior  
 ```  
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式版本|長度或指標結果|描述|  
@@ -96,7 +96,7 @@ SQLBindCol(… SQL_W_CHAR, …)   // Only bound a buffer of WCHAR[4] – Expecti
  `select @p1 = replicate('B', 1234)`  
   
 ```  
-SQLBindParameter(… SQL_W_CHAR, …)   // Only bind up to first 64 characters  
+SQLBindParameter(... SQL_W_CHAR, ...)   // Only bind up to first 64 characters  
 ```  
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式版本|長度或指標結果|描述|  
@@ -105,7 +105,7 @@ SQLBindParameter(… SQL_W_CHAR, …)   // Only bind up to first 64 characters
 |[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (11.0.2100.60 版) 或更新版本|-4 (SQL_NO_TOTAL)|**SQLFetch**傳回沒有可用的詳細資料。<br /><br /> **SQLMoreResults**傳回沒有可用的詳細資料。<br /><br /> 由於資料的其餘部分並未轉換，指出的長度為 (-4) SQL_NO_TOTAL。<br /><br /> 原始緩衝區內包含 63 個位元組和 NULL 結束字元。 緩衝區一定是以 NULL 結尾。|  
   
 ## <a name="performing-char-and-wchar-conversions"></a>執行 CHAR 和 WCHAR 轉換  
- [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 驅動程式提供了幾種方法來執行 CHAR 和 WCHAR 轉換。 其邏輯類似於操作 BLOB (varchar(max)、nvarchar(max) 等)：  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 驅動程式提供了幾種方法來執行 CHAR 和 WCHAR 轉換。 邏輯是類似於操作 blob （varchar （max)、 nvarchar （max），...）：  
   
 -   資料會儲存或使用繫結時，截斷至指定的緩衝區**SQLBindCol**或是**SQLBindParameter**。  
   

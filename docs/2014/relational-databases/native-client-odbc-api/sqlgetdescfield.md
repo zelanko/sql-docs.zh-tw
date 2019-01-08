@@ -14,12 +14,12 @@ ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f3c06bbb9a8390b6ec41aa3e2233feeb10b8ce5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187758"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353001"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會公開實作資料列描述項 (IRD) 只的驅動程式專屬描述項欄位。 在 IRD 內[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]描述項欄位會透過驅動程式特有的資料行屬性來參考。 可用的驅動程式專屬描述項欄位的完整清單的相關資訊，請參閱[SQLColAttribute](sqlcolattribute.md)。  
@@ -152,7 +152,7 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLGetDescField 函數](http://go.microsoft.com/fwlink/?LinkId=59351)   
+ [SQLGetDescField 函數](https://go.microsoft.com/fwlink/?LinkId=59351)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

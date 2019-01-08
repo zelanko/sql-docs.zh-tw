@@ -13,12 +13,12 @@ ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d7fe5ffc867063d745a01ed12024acc536f8f634
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb12dbcee56debfd88b4706ad69ac3ac2d04113a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188078"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398811"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>指定索引的填滿因素
   此主題描述何謂填滿因數，以及如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中指定索引的填滿因數值。  
@@ -107,7 +107,7 @@ ms.locfileid: "48188078"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會重建現有的索引，並且在重建作業期間套用指定的填滿因數。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例會重建現有的索引，並且在重建作業期間套用指定的填滿因數。  
   
     ```  
     USE AdventureWorks2012;  
@@ -126,7 +126,7 @@ ms.locfileid: "48188078"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;  

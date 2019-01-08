@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - xe
@@ -15,12 +14,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 17062493d2c07e7dfbf1625aad584823953f043d
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 6e589ccad75cea729913b10b6232f61693446595
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120255"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767520"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server 擴充的事件工作階段
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 擴充的事件工作階段會建立在主控擴充之事件引擎的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序中。 下列是擴充的事件工作階段的各個層面，可讓您了解擴充的事件基礎結構的來龍去脈以及進行的一般處理：  
@@ -55,7 +54,7 @@ ms.locfileid: "49120255"
   
  在上圖中，請注意：  
   
--   封裝物件和工作階段之間的對應是多對多，這表示物件可以出現在數個工作階段，並在工作階段可以包含數個物件。  
+-   套件物件與工作階段之間的對應是多對多對應，這表示物件可以出現在數個工作階段中，且工作階段可以包含數個物件。  
   
 -   相同的事件 (事件 1) 或目標 (目標 1) 可以在一個以上的工作階段內啟用。  
   

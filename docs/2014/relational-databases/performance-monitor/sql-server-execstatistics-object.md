@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:ExecStatistics
@@ -13,12 +13,12 @@ ms.assetid: 4f8557a8-345f-4622-a8a5-763a0388ad94
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 762e0b77545e21cc07a6aec026e19f4b59557e43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a09c2a57b76974758626a1847d5f0df3f8b7f55c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067134"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777780"
 ---
 # <a name="sql-server-execstatistics-object"></a>SQL Server 的 ExecStatistics 物件
   Microsoft SQL Server 中的 **SQLServer:ExecStatistics** 物件提供計數器來監視各種執行情形。  
@@ -42,6 +42,6 @@ ms.locfileid: "48067134"
 |**每秒開始執行數目**|選取的執行類型之每秒開始的執行數目。|  
   
 ## <a name="see-also"></a>另請參閱  
- [監視資源使用狀況 &#40;系統監視器&#41;](monitor-resource-usage-system-monitor.md)  
+ [監視資源使用狀況 &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)  
   
   

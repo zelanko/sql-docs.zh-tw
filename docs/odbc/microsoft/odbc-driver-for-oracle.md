@@ -15,12 +15,12 @@ ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57f0713c6da777a7c338a3be888a43e72e287342
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4685d209d768bd3ff41c1c7367ef6cb6dcd45bcf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806726"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515109"
 ---
 # <a name="odbc-driver-for-oracle"></a>ODBC Driver for Oracle
 > [!IMPORTANT]  
@@ -34,7 +34,7 @@ ms.locfileid: "47806726"
   
  ![Oracle 應用程式的 ODBC 驅動程式&#47;驅動程式架構](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
- ODBC Driver for Oracle 符合 API 的一致性層級 1 」 及 「 SQL 一致性層級的核心。 它也會支援 API 的一致性層級 2 和大部分的核心和擴充 SQL 一致性層級中的文法中的某些函式。 驅動程式 ODBC 2.5 相容且支援 32 位元系統。 Oracle 7.3 x 完全; 支援Oracle8 具有有限的支援。 ODBC Driver for Oracle 不支援任何新的 Oracle8 資料類型，Unicode 資料類型，Blob、 Clob、 等等，也不支援 Oracle 的新的關聯式物件模型。 如需支援的資料類型的詳細資訊，請參閱 < [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)本指南中。  
+ ODBC Driver for Oracle 符合 API 的一致性層級 1 」 及 「 SQL 一致性層級的核心。 它也會支援 API 的一致性層級 2 和大部分的核心和擴充 SQL 一致性層級中的文法中的某些函式。 驅動程式 ODBC 2.5 相容且支援 32 位元系統。 Oracle 7.3 x 完全; 支援Oracle8 具有有限的支援。 ODBC Driver for Oracle 不支援任何新的 Oracle8 資料類型-Unicode 資料類型、 Blob、 Clob，而且也不支援 Oracle 的新的關聯式物件模型。 如需支援的資料類型的詳細資訊，請參閱 < [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)本指南中。  
   
  若要存取 Oracle 資料，下列元件是必要的：  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - services [SQL Server], security
@@ -16,12 +15,12 @@ ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f20880fada5c6e6c12c3df42e051baf5afb3eab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e06fe371602956b6b43714038f41d8486cf2ae0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204808"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763770"
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser 服務
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 程式會以 Windows 服務的方式執行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 會接聽 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源的內送要求，並提供有關電腦上所安裝之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資訊。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 完成下列動作：  
@@ -126,7 +125,7 @@ ms.locfileid: "48204808"
  隱藏的執行個體是只支援共用記憶體連接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請設定 `HideInstance` 旗標以指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 不應使用關於此伺服器執行個體的資訊來回應。  
   
 ### <a name="using-a-firewall"></a>使用防火牆  
- 若要與位於防火牆後面之伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務進行通訊，除了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的 TCP 通訊埠 (例如 1433) 之外，請開啟 UDP 通訊埠 1434。 如需有關使用防火牆的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜如何：設定防火牆供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取＞。  
+ 若要與位於防火牆後面之伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務進行通訊，除了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的 TCP 通訊埠 (例如 1433) 之外，請開啟 UDP 通訊埠 1434。 如需使用防火牆的相關資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜如何：設定防火牆供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [網路通訊協定和網路程式庫](../../../2014/sql-server/install/network-protocols-and-network-libraries.md)  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - Managed Classes [SQLXML], executing template files
@@ -17,12 +15,12 @@ ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 442d6a8d355a11d53f5eb6728b7a0f207e37de6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a4347b3cd3f9163eb13f76e1ae22e123b1026c1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199033"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777010"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>利用 CommandStream 屬性執行範本檔案
   此範例說明如何指定 SQL 或 XPath 查詢所組成的範本檔案，利用 CommandStream 屬性的 SqlXmlCommand 物件。 在此應用程式，FileStreamobject 會針對命令檔案開啟，而檔案資料流指派為執行 CommandStream。  

@@ -20,16 +20,16 @@ ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 146967ebc31d5e7d8176d37ee5b8b0b97b6c0674
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7b7e5141a465249c818b50466b34a8155adc1d6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769487"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540808"
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll 函數
 **合規性**  
- 版本導入： ODBC 3.0 版的標準符合性： ISO 92  
+ 導入的版本：ODBC 3.0 版的標準合規性：ISO 92  
   
  **摘要**  
  **SQLFetchScroll**提取從結果集的指定資料列集的資料，並傳回所有繫結的資料行的資料。 在絕對或相對位置或依書籤，則可以指定資料列集。  
@@ -96,7 +96,7 @@ SQLRETURN SQLFetchScroll(
 |08S01|通訊連結失敗|函式已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
 |22001|字串資料，右邊已截斷|傳回資料行的可變長度書籤已遭截斷。|  
 |22002|指標變數但未提供|NULL 的資料擷取成資料行其*StrLen_or_IndPtr*來設定**SQLBindCol** (或所設定的 SQL_DESC_INDICATOR_PTR **SQLSetDescField**或**SQLSetDescRec**) 為 null 指標。|  
-|22003|數值超出範圍|傳回數字的值 （做為數值或字串），一或多個繫結的資料行可能已造成要截斷的數字 （相對於小數） 的整數部分。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 轉換將資料從 SQL 到 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)中[附錄 d： 資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。|  
+|22003|數值超出範圍|傳回數字的值 （做為數值或字串），一或多個繫結的資料行可能已造成要截斷的數字 （相對於小數） 的整數部分。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 轉換將資料從 SQL 到 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)在[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。|  
 |22007|無效的日期時間格式|在結果集中的字元資料行已繫結至日期、 時間或時間戳記 C 結構，但資料行的值，分別無效的日期、 時間戳記。|  
 |22012|除數為零|算術運算式的值傳回，因而導致除數為零。|  
 |22015|間隔欄位溢位|將指派從精確數值或時間間隔 SQL 型別，給 C 間隔類型造成有效位數的遺失開頭的欄位中。<br /><br /> 當 C 間隔類型以提取資料時，發生 C 間隔類型中的 SQL 類型的值不表示。|  
@@ -122,7 +122,7 @@ SQLRETURN SQLFetchScroll(
 |IM018|**SQLCompleteAsync**尚未完成先前的非同步作業，此控制代碼上呼叫。|如果控制代碼上先前的函式呼叫傳回 SQL_STILL_EXECUTING 和通知模式已啟用，如果**SQLCompleteAsync**必須在執行後置處理，並完成作業的控制代碼上呼叫。|  
   
 ## <a name="comments"></a>註解  
- **SQLFetchScroll**從結果集中傳回指定的資料列集。 以絕對或相對位置，或依書籤，則可以指定資料列集。 **SQLFetchScroll**只在結果集存在時，才可以呼叫 — 也就是說，在呼叫之後，建立結果集，而且游標之前關閉結果集的移轉。 如果任何資料行已繫結，它會傳回這些資料行中的資料。 如果應用程式具有指定資料列狀態陣列或在其中傳回擷取的資料列數目的緩衝區的指標**SQLFetchScroll**這項資訊也會傳回。 呼叫**SQLFetchScroll**可以透過呼叫混合**SQLFetch**但不能呼叫的方式來混合**SQLExtendedFetch**。  
+ **SQLFetchScroll**從結果集中傳回指定的資料列集。 以絕對或相對位置，或依書籤，則可以指定資料列集。 **SQLFetchScroll**可以呼叫只有當結果集存在-也就是資料指標建立結果集在呼叫之後再結果集的移轉已關閉。 如果任何資料行已繫結，它會傳回這些資料行中的資料。 如果應用程式具有指定資料列狀態陣列或在其中傳回擷取的資料列數目的緩衝區的指標**SQLFetchScroll**這項資訊也會傳回。 呼叫**SQLFetchScroll**可以透過呼叫混合**SQLFetch**但不能呼叫的方式來混合**SQLExtendedFetch**。  
   
  如需詳細資訊，請參閱 <<c0> [ 使用區塊資料指標](../../../odbc/reference/develop-app/using-block-cursors.md)並[使用可捲動資料指標](../../../odbc/reference/develop-app/using-scrollable-cursors.md)。  
   
@@ -141,7 +141,7 @@ SQLRETURN SQLFetchScroll(
   
  驅動程式不需要支援所有 fetch 方向;應用程式呼叫**SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1、 SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1 （取決於資料指標類型） 的資訊類型來判斷哪一個 fetch驅動程式支援的方向。 應用程式應該看看這些資訊類型在 SQL_CA1_NEXT、 SQL_CA1_RELATIVE、 SQL_CA1_ABSOLUTE 和 WQL_CA1_BOOKMARK 位元遮罩。 此外，如果資料指標是順向的而不 SQL_FETCH_NEXT，Sqlfetchscroll。 **SQLFetchScroll**傳回 SQLSTATE HY106 （擷取類型超出範圍）。  
   
- SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性會指定資料列集中的資料列數目。 如果所要提取的資料列集**SQLFetchScroll**重疊的結果集結尾**SQLFetchScroll**傳回部分的資料列集。 也就是說，如果 S + R，-1 大於 L，其中 S 資料列集擷取，R 的起始資料列是資料列集大小，而 L 最後一個資料列結果集中則只有第一個左 – S + 1 個資料列集的資料列都有效。 剩餘的資料列是空的且狀態為 SQL_ROW_NOROW。  
+ SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性會指定資料列集中的資料列數目。 如果所要提取的資料列集**SQLFetchScroll**重疊的結果集結尾**SQLFetchScroll**傳回部分的資料列集。 也就是說，如果 S + R，-1 大於 L，其中 S 資料列集擷取，R 的起始資料列是資料列集大小，而 L 最後一個資料列結果集中，則只有第一個 L-S + 1 個資料列集的資料列都有效。 剩餘的資料列是空的且狀態為 SQL_ROW_NOROW。  
   
  在後**SQLFetchScroll**傳回時，目前的資料列是資料列集的第一個資料列。  
   
@@ -178,9 +178,9 @@ SQLRETURN SQLFetchScroll(
 |*開始之前*|*開始之前*|  
 |*CurrRowsetStart = 1*|*開始之前*|  
 |*1 < CurrRowsetStart < = RowsetSize* <sup>[2]。</sup>|*1* <sup>[1]</sup>|  
-|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart – RowsetSize* <sup>[2]</sup>|  
+|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart-RowsetSize* <sup>[2]</sup>|  
 |*後端和 LastResultRow < RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
-|*後端和 LastResultRow > = RowsetSize* <sup>[2]</sup>|*LastResultRow – RowsetSize + 1* <sup>[2]。</sup>|  
+|*後端和 LastResultRow > = RowsetSize* <sup>[2]</sup>|*LastResultRow-RowsetSize + 1* <sup>[2]。</sup>|  
   
  [1] **SQLFetchScroll**傳回 SQLSTATE 01S06 （之前嘗試擷取結果集傳回第一個資料列集） 和 SQL_SUCCESS_WITH_INFO。  
   
@@ -236,7 +236,7 @@ SQLRETURN SQLFetchScroll(
   
 |條件|新的資料列集的第一個資料列|  
 |---------------|-----------------------------|  
-|*RowsetSize* <sup>[1]</sup> < = LastResultRow|*LastResultRow – RowsetSize + 1* <sup>[1]</sup>|  
+|*RowsetSize* <sup>[1]</sup> < = LastResultRow|*LastResultRow-RowsetSize + 1* <sup>[1]</sup>|  
 |*RowsetSize* <sup>[1]</sup> > LastResultRow|*1*|  
   
  [1] 如果自前一個呼叫來擷取資料列之後已變更的資料列集大小，這會是新的資料列集大小。  
@@ -271,7 +271,7 @@ SQLSetPos(hstmt, 3, SQL_REFRESH, SQL_LOCK_NO_CHANGE);
 SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);  
 ```  
   
- 時**SQLFetchScroll**傳回新的資料列集具有相對於目前資料列集的位置，也就是 Sqlfetchscroll 是 SQL_FETCH_NEXT、 SQL_FETCH_PRIOR 或 sql_fetch_relative，但 — 它不包含目前資料列集的變更當計算新的資料列集的開始位置。 不過，它包含目前資料列集外的變更是否能夠偵測它們。 此外，當**SQLFetchScroll**傳回新的資料列集有獨立的目前資料列集的位置，也就是 Sqlfetchscroll 是 SQL_FETCH_FIRST、 SQL_FETCH_LAST、 SQL_FETCH_ABSOLUTE，還是要使用 SQL_FETCH_BOOKMARK — 它包含所有的變更，它可以偵測，即使它們位於目前的資料列集。  
+ 當**SQLFetchScroll**傳回新的資料列集具有相對於目前的資料列集的位置，也就是 Sqlfetchscroll SQL_FETCH_NEXT、 SQL_FETCH_PRIOR 或 sql_fetch_relative 但-它不包含目前資料列集的變更當計算新的資料列集的開始位置。 不過，它包含目前資料列集外的變更是否能夠偵測它們。 此外，當**SQLFetchScroll**傳回新的資料列集的位置無關的目前資料列集-也就是 Sqlfetchscroll 是 SQL_FETCH_FIRST、 SQL_FETCH_LAST、 SQL_FETCH_ABSOLUTE，還是要使用 SQL_FETCH_BOOKMARK-它包含所有的變更，它可以偵測，即使它們位於目前的資料列集。  
   
  在決定新加入的資料列是否為內部或外部的目前資料列集時，部分的資料列集視為在最後一個有效的資料列; 結束也就是其中的資料列狀態不是 SQL_ROW_NOROW 的最後一個資料列。 例如，假設資料指標可以偵測新加入的資料列、 目前的資料列集是部分的資料列集、 應用程式加入了新的資料列和資料指標會將這些資料列加入至結果集的結尾。 如果應用程式會呼叫**SQLFetchScroll**與設為 SQL_FETCH_NEXT，Sqlfetchscroll **SQLFetchScroll**傳回資料列集的第一個新加入的資料列開始。  
   
@@ -327,7 +327,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
  在每個群組套用到個別的資料列狀態記錄，第一個 SQLExtendedFetch 所傳回的狀態記錄必須包含 SQLSTATE 01S01 （錯誤資料列中的）;**SQLFetchScroll**不會傳回此 SQLSTATE。 如果無法傳回其他 Sqlstate SQLExtendedFetch，仍然必須傳回此 SQLSTATE。  
   
 ## <a name="sqlfetchscroll-and-optimistic-concurrency"></a>SQLFetchScroll 和開放式並行存取  
- 如果資料指標使用開放式並行存取，也就是 SQL_ATTR_CONCURRENCY 陳述式屬性具有值為 SQL_CONCUR_VALUES 或 SQL_CONCUR_ROWVER — **SQLFetchScroll**更新資料所使用的開放式並行存取值若要偵測是否已變更的資料列的來源。 發生這種情況每當**SQLFetchScroll**擷取新資料列集，包括當它 refetches 目前資料列集。 （呼叫 Sqlfetchscroll 設 sql_fetch_relative 但 FetchOffset 設為 0。）  
+ 如果資料指標使用開放式並行存取-也就是 SQL_ATTR_CONCURRENCY 陳述式屬性具有值為 SQL_CONCUR_VALUES 或 SQL_CONCUR_ROWVER- **SQLFetchScroll**更新資料所使用的開放式並行存取值若要偵測是否已變更的資料列的來源。 發生這種情況每當**SQLFetchScroll**擷取新資料列集，包括當它 refetches 目前資料列集。 （呼叫 Sqlfetchscroll 設 sql_fetch_relative 但 FetchOffset 設為 0。）  
   
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>SQLFetchScroll 和 ODBC 2.x 驅動程式  
  當應用程式呼叫**SQLFetchScroll** ODBC 2.x 驅動程式，驅動程式管理員會對應至這個呼叫**SQLExtendedFetch**。 它會傳遞下列值的引數**SQLExtendedFetch**。  
@@ -340,7 +340,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |RowCountPtr|SQL_ATTR_ROWS_FETCHED_PTR 陳述式屬性所指定的位址。|  
 |RowStatusArray|Sql_attr_row_status_ptr 設定陳述式屬性所指定的位址。|  
   
- 如需詳細資訊，請參閱 <<c0> [ 區塊資料指標、 可捲動的資料指標和回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)附錄 g： 驅動程式指導方針，為了與舊版相容。  
+ 如需詳細資訊，請參閱 <<c0> [ 區塊資料指標、 可捲動的資料指標和回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)在 < 附錄 g:為了與舊版相容的驅動程式指導方針。  
   
 ## <a name="descriptors-and-sqlfetchscroll"></a>描述項和 SQLFetchScroll  
  **SQLFetchScroll**互動以相同方式的描述元**SQLFetch**。 如需詳細資訊，請參閱中的 「 描述項和 SQLFetchScroll 」 一節[SQLFetch 函式](../../../odbc/reference/syntax/sqlfetch-function.md)。  

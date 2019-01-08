@@ -13,16 +13,16 @@ ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1014e545e237c80f71660a1e6bd24dce56ca78b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88af314c1cca5ef2d7cdbdb2b5e555b81d02be01
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650466"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404833"
 ---
 # <a name="sqlsetconnectinfo-function"></a>SQLSetConnectInfo 函式
 **合規性**  
- 版本導入： ODBC 3.81 標準相容性： ODBC  
+ 導入的版本：ODBC 3.81 標準合規性：ODBC  
   
  **摘要**  
  **SQLSetConnectInfo**用來設定資料來源、 使用者識別碼和密碼到應用程式的連線資訊語彙基元[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)呼叫。  

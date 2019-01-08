@@ -11,12 +11,12 @@ ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 083eff2195b0c8099ec4fdfb80e7224e1d42d135
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed99b26641b6d87fa6fe3bf07f47c21eacb96d89
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086898"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405473"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>支援的資料類型 (SSAS 表格式)
   本文描述可用於表格式模型中的資料類型，並討論在 Data Analysis Expressions (DAX) 公式中計算或使用資料時，隱含的資料類型轉換。  
@@ -45,13 +45,13 @@ ms.locfileid: "48086898"
 |文字|String|Unicode 字元資料字串。 可以是字串或數字，或以文字格式表示的日期。|  
 |date|日期/時間|採用可接受之日期時間表示方式的日期和時間。<br /><br /> 有效日期為 1900 年 3 月 1 日之後的所有日期。|  
 |CURRENCY|CURRENCY|貨幣資料類型允許的值是從 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 且固定有效位數為四個小數位數。|  
-|不適用|空白|空白是 DAX 中表示和取代 SQL Null 的資料類型。 您可以使用 BLANK 函數建立空白，然後使用邏輯函數 ISBLANK 來測試空白。|  
+|N/A|空白|空白是 DAX 中表示和取代 SQL Null 的資料類型。 您可以使用 BLANK 函數建立空白，然後使用邏輯函數 ISBLANK 來測試空白。|  
   
  <sup>1</sup> DAX 公式不支援小於資料表中所列的資料類型。  
   
  <sup>2</sup>如果您嘗試匯入有極大數值資料，匯入可能會失敗，發生下列錯誤：  
   
- 記憶體中資料庫錯誤： '\<資料行名稱 >' 的資料行'\<資料表名稱 >' 資料表包含的值 ' 1.7976931348623157 e + 308'，但並不支援。 作業已取消。  
+ 記憶體中資料庫錯誤：'\<資料行名稱 >' 的資料行'\<資料表名稱 >' 資料表包含的值 ' 1.7976931348623157 e + 308'，不受支援。 作業已取消。  
   
  這項錯誤發生的原因是，模型設計師使用該值來代表 Null。 下列清單中的值是前述 Null 值的同義字：  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48086898"
   
  如果在您指定為引數之資料行中的資料與函數所需要的資料類型不相容，在多數情況下，DAX 會傳回錯誤。 不過，可能的話，DAX 將會嘗試將資料隱含地轉換為所需的資料類型。 例如：  
   
--   您可以輸入數字 (如 “123”) 做為字串。 DAX 將會剖析字串，並嘗試將其指定為數字資料類型。  
+-   您可以輸入一個數字，例如"123"，做為字串。 DAX 將會剖析字串，並嘗試將其指定為數字資料類型。  
   
 -   您可以加入 TRUE + 1 然後得到結果 2，因為 TRUE 會隱含地轉換為數字 1 並執行 1+1 的運算。  
   
@@ -149,11 +149,11 @@ ms.locfileid: "48086898"
   
  下列 DAX 運算式說明這項行為：  
   
- `=IF(FALSE()>"true","Expression is true", "Expression is false")`會傳回 `"Expression is true"`  
+ `=IF(FALSE()>"true","Expression is true", "Expression is false")` 傳回 `"Expression is true"`  
   
- `=IF("12">12,"Expression is true", "Expression is false")`會傳回 `"Expression is true"`  
+ `=IF("12">12,"Expression is true", "Expression is false")` 傳回 `"Expression is true"`  
   
- `=IF("12"=12,"Expression is true", "Expression is false")`會傳回 `"Expression is false"`  
+ `=IF("12"=12,"Expression is true", "Expression is false")` 傳回 `"Expression is false"`  
   
  針對數值或日期/時間類型所執行的隱含轉換如下表所述：  
   
@@ -192,7 +192,7 @@ ms.locfileid: "48086898"
  如需特定函數或運算子如何處理空白的詳細資訊，請參閱 [DAX 函數參考](https://msdn.microsoft.com/library/ee634396.aspx)一節中，每個 DAX 函數的個別主題。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料來源&#40;SSAS 表格式&#41;](../data-sources-ssas-tabular.md)   
- [匯入資料&#40;SSAS 表格式&#41;](../import-data-ssas-tabular.md)  
+ [資料來源 (SSAS 表格式)](../data-sources-ssas-tabular.md)   
+ [匯入資料 (SSAS 表格式)](../import-data-ssas-tabular.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], xevent
@@ -15,17 +14,17 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f500b1805d4af2e7b13ad74b439fff72d667060f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0a7393a3b0547d37c5f69f4e75915f8706acf12
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185078"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752840"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>針對擴充事件使用 PowerShell 提供者
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件。 XEvent 子資料夾位於 SQLSERVER 磁碟機底下。 您可以使用下列其中一種方法來存取這個資料夾：  
   
--   在命令提示字元中，輸入`sqlps`，然後按 ENTER 鍵。 輸入 `cd xevent`，然後按下 ENTER。 從該處，您可以使用**cd**並`dir`命令 (或**Set-location**並**Get-childitem** cmdlet) 瀏覽至伺服器名稱和執行個體名稱。  
+-   在命令提示字元中輸入 `sqlps`，然後按下 ENTER。 輸入 `cd xevent`，然後按下 ENTER。 從該處，您可以使用**cd**並`dir`命令 (或**Set-location**並**Get-childitem** cmdlet) 瀏覽至伺服器名稱和執行個體名稱。  
   
 -   在物件總管中，展開執行個體名稱、展開 [管理]、以滑鼠右鍵按一下 [擴充事件]，然後按一下 [啟動 PowerShell]。 這樣就會在下列路徑中啟動 PowerShell：  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48185078"
   
 -   您必須使用 .ps1 副檔名來儲存這些指令碼。  
   
--   PowerShell 執行原則必須允許指令碼執行。 若要設定執行原則，請使用 **Set-Executionpolicy** Cmdlet。 (如需詳細資訊，請輸入`get-help set-executionpolicy -detailed`，然後按 ENTER 鍵。)  
+-   PowerShell 執行原則必須允許指令碼執行。 若要設定執行原則，請使用 **Set-Executionpolicy** Cmdlet。 (如需詳細資訊，請輸入 `get-help set-executionpolicy -detailed`，然後按 ENTER 鍵。)  
   
  下列指令碼會建立名為 'TestSession' 的新工作階段。  
   
@@ -67,7 +66,7 @@ $event.AddAction("package0.callstack")
 $session.Create()  
 ```  
   
- 下列指令碼會將信號緩衝區目標加入至您在上一則範例中建立的工作階段  (此範例會示範如何使用 `Alter` 方法。 請注意，當您第一次建立工作階段時，可以加入目標)。  
+ 下列指令碼會將信號緩衝區目標加入至您在上一則範例中建立的工作階段 (此範例會示範如何使用 `Alter` 方法。 請注意，當您第一次建立工作階段時，可以加入目標)。  
   
 ```  
 #Script to alter a session.  

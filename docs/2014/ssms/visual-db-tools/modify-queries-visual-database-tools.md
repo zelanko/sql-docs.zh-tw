@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying queries
@@ -13,12 +13,12 @@ ms.assetid: e2618a89-90fb-43d8-ac4e-cabd2aa3f1dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca7bfa394826a92271ee69734fa0119f52d41de7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f88c78aa67d65eb84bfaa282fe46a122dd2a382a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078228"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812697"
 ---
 # <a name="modify-queries-visual-database-tools"></a>修改查詢 (Visual Database Tools)
   在 [查詢和檢視設計師] 中開啟要修改的查詢。  

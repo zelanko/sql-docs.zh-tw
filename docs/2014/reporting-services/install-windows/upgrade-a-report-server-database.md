@@ -15,19 +15,19 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: dde7b2d66e7b2aebb67de799facf9016f3cd48e9
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: b0881bc82edd5a3d7fd8ca726c34cbf99de1b172
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851809"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413005"
 ---
 # <a name="upgrade-a-report-server-database"></a>升級報表伺服器資料庫
   報表伺服器資料庫為一個或多個報表伺服器執行個體提供了儲存裝置。 由於報表伺服器資料庫結構描述可隨著每個新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]版本一起變更，所以此資料庫版本必須符合您所使用的報表伺服器執行個體版本。 在大多數情況下，報表伺服器資料庫可以自動升級，而不需要您採取特定的動作。  
   
- **原生模式：** 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式中，報表伺服器資料庫實際上是由預設名稱為 ReportServer 和 ReportServerTempDB 的兩個資料庫所組成。  
+ **原生模式：** 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]原生模式，報表伺服器資料庫實際上由組成的兩個具有預設名稱為"ReportServer 和 ReportServerTempDB"的資料庫。  
   
- **SharePoint 模式：** 中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式報表伺服器資料庫是實際的資料庫集合是針對每個執行個體建立[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服務應用程式。  
+ **SharePoint 模式：** 在  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式報表伺服器資料庫是實際的資料庫集合是針對每個執行個體建立[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服務應用程式。  
   
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>升級原生模式報表伺服器資料庫的方法  
  下列清單會識別升級報表伺服器資料庫的狀況：  

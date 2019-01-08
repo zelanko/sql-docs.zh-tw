@@ -14,12 +14,12 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f979e8de8f36027339a1af0bbe9183e67f20c597
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a03a530c83cdf492eb7c4c0fcc000a6343c9a97
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090008"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502807"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>使用 Windows 驗證加入資料庫鏡像見證 (Transact-SQL)
   為設定資料庫的見證，資料庫擁有者會指派 Database Engine 執行個體給見證伺服器的角色。 見證伺服器執行個體可以與主體或鏡像伺服器執行個體在相同電腦上執行，但是這會大幅地減少自動容錯移轉的強固性。  
@@ -44,7 +44,7 @@ ms.locfileid: "48090008"
     ```  
   
     > [!IMPORTANT]  
-    >  若資料庫鏡像端點存在且已在使用中，我們建議您在該伺服器執行個體上為每個工作階段使用該端點。 卸除使用中端點會中斷現有工作階段的連接。 如果已針對工作階段設定見證，則卸除資料庫鏡像端點可能會導致該工作階段的主體伺服器失去仲裁；若發生此情況，則資料庫會離線，並中斷連接到資料庫的所有使用者。 如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+    >  若資料庫鏡像端點存在且已在使用中，我們建議您在該伺服器執行個體上為每個工作階段使用該端點。 卸除使用中端點會中斷現有工作階段的連接。 如果已針對工作階段設定見證，則卸除資料庫鏡像端點可能會導致該工作階段的主體伺服器失去仲裁；若發生此情況，則資料庫會離線，並中斷連接到資料庫的所有使用者。 如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性&#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
      如果見證缺少端點，請參閱[建立 Windows 驗證的資料庫鏡像端點 &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
   
@@ -52,17 +52,17 @@ ms.locfileid: "48090008"
   
 3.  連接到主體伺服器並執行以下陳述式：  
   
-     ALTER DATABASE <資料庫名稱> SET WITNESS **=***<伺服器網路位址>*  
+     ALTER DATABASE *<資料庫名稱>* SET WITNESS **=**_<伺服器網路位址>_  
   
      其中 *<資料庫名稱>* 是要鏡像的資料庫名稱 (此名稱在兩個夥伴中都相同)，而 *<伺服器網路位址>* 是見證伺服器執行個體的伺服器網路位址。  
   
      伺服器網路位址的語法如下：  
   
-     TCP **://**\<*system-address>***:**\<* port>*  
+     TCP **://**\<_系統位址>_**:**\<*通訊埠>*  
   
      其中 \<系統位址> 是清楚識別目的地電腦系統的字串，\<通訊埠> 是夥伴伺服器執行個體之鏡像端點使用的通訊埠編號。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](specify-a-server-network-address-database-mirroring.md)。  
   
-     例如，在主體伺服器執行個體上，下列 ALTER DATABASE 陳述式會設定見證。 資料庫名稱是 **AdventureWorks**、系統位址是 DBSERVER3 (見證系統的名稱)，而見證之資料庫鏡像端點所使用的通訊埠是 `7022`：  
+     例如，在主體伺服器執行個體上，下列 ALTER DATABASE 陳述式會設定見證。 資料庫名稱是 **AdventureWorks**、系統位址是 DBSERVER3 (見證系統的名稱)，而見證之資料庫鏡像端點所使用的連接埠是 `7022`：  
   
     ```  
     ALTER DATABASE AdventureWorks   

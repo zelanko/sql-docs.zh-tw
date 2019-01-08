@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.contraints
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09fd45e648833f2d46c258a1806e8c424634b514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e35da51b4af9e653fd6cdbad77704676941c49b3
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219568"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328708"
 ---
 # <a name="specify-a-breakpoint-filter"></a>指定中斷點篩選條件
   中斷點篩選條件會限制中斷點只能在指定的電腦、作業系統處理序和執行緒上運作。 中斷點篩選條件通常是在偵錯平行應用程式時使用。  
@@ -40,9 +38,9 @@ ms.locfileid: "48219568"
   
     -   `MachineName` 是執行 Database Engine 執行個體的電腦。  
   
-    -   `ProcessID`與`ProcessName`是執行 Database Engine 執行個體的作業系統處理序。  
+    -   `ProcessID` 和 `ProcessName` 是執行 Database Engine 執行個體的作業系統處理序。  
   
-    -   `ThreadID` 並`ThreadName`會執行的作業系統執行緒[!INCLUDE[tsql](../../includes/tsql-md.md)]批次、 程序或 Database engine 執行個體中的函式。  
+    -   `ThreadID` 和 `ThreadName` 是在 Database Engine 執行個體中執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次、程序或函數的作業系統執行緒。  
   
 3.  按一下 **[確定]** 實作變更，或按一下 **[取消]** 結束而不套用變更。  
   
@@ -50,5 +48,3 @@ ms.locfileid: "48219568"
  [指定中斷點條件](specify-a-breakpoint-condition.md)   
  [指定叫用計數](specify-a-hit-count.md)   
  [指定中斷點動作](specify-a-breakpoint-action.md)  
-  
-  

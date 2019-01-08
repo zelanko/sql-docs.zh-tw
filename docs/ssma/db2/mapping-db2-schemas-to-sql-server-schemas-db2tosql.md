@@ -10,12 +10,12 @@ ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4fe903d81bc698ff324b504034ed92025570254c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e9ccc7648be4915a68b798f314689d961113639a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656627"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409499"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>將 DB2 結構描述對應至 SQL Server 結構描述 (DB2ToSQL)
 DB2，在每個資料庫會有一或多個結構描述。 根據預設，SSMA 會移轉 DB2 結構描述中的所有物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名為結構描述的資料庫。 不過，您可以自訂 DB2 結構描述之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。  
@@ -50,7 +50,7 @@ SSMA 中，您可以將 DB2 結構描述對應到任何可用[!INCLUDE[ssNoVersi
   
 -   對應至 SQL Server  
   
-您可以將來源資料庫對應到任何目標的資料庫。 根據預設值對應的來源資料庫至目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與您已連線使用 SSMA 的資料庫。 要對應的目標資料庫使用時間是否不存在上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則您將會出現一個訊息 **"的資料庫和/或結構描述不存在於目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料。它會在同步處理期間被建立。您要繼續嗎？"** 按一下 [是]。 同樣地，您可以將結構描述對應至不存在的結構描述目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會在同步處理期間建立的資料庫。  
+您可以將來源資料庫對應到任何目標的資料庫。 根據預設值對應的來源資料庫至目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與您已連線使用 SSMA 的資料庫。 要對應的目標資料庫使用時間是否不存在上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則您將會出現一個訊息 **"的資料庫和/或結構描述不存在於目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料。它會在同步處理期間被建立。您要繼續嗎？ 」** 按一下 [是]。 同樣地，您可以將結構描述對應至不存在的結構描述目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會在同步處理期間建立的資料庫。  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>還原成預設的資料庫和結構描述  
 如果您自訂的 DB2 結構描述之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]結構描述中，您可以還原回預設值的對應。  

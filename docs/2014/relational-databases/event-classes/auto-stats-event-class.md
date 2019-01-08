@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b15ac5c21a8fb9b1efafd1124e2338b58d0324e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 354c2e39716dc0cfa215e4392945bf9aa5899da0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111394"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775760"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats 事件類別
   **Auto Stats** 事件類別表示索引和資料行統計資料已發生自動更新。  
@@ -38,7 +37,7 @@ ms.locfileid: "48111394"
 |**錯誤**|**int**|給定事件的錯誤號碼。 通常這是存放在 **sys.messages** 目錄檢視中的錯誤號碼。|31|是|  
 |**EventClass**|**int**|事件類型 = 58。|27|否|  
 |**EventSequence**|**int**|要求中的給定事件順序。|51|否|  
-|**EventSubClass**|**int**|事件子類別的類型：<br /><br /> 1： 統計資料同步建立/更新;**TextData**資料行會指出哪些統計資料及其是否已建立或更新。<br /><br /> 2：非同步統計資料更新；作業已佇列。<br /><br /> 3：非同步統計資料更新；作業開始。<br /><br /> 4：非同步統計資料更新；作業已完成。|21|是|  
+|**EventSubClass**|**int**|事件子類別的類型：<br /><br /> 1：同步; 建立/更新的統計資料**TextData**資料行會指出哪些統計資料及其是否已建立或更新。<br /><br /> 2：非同步統計資料更新；作業已佇列。<br /><br /> 3：非同步統計資料更新；作業開始。<br /><br /> 4：非同步統計資料更新；作業已完成。|21|是|  
 |**GroupID**|**int**|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
 |**HostName**|**nvarchar**|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |**IndexID**|**int**|受事件影響之物件上的索引/統計資料項目識別碼。 若要判斷物件的索引識別碼，請使用 **sys.indexes** 目錄檢視的 **index_id** 資料行。|24|是|  
@@ -56,7 +55,7 @@ ms.locfileid: "48111394"
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**成功**|**int**|0 = 錯誤。<br /><br /> 1 = 成功。<br /><br /> 2 = 因伺服器調整流速而略過 (MSDE)。|23|是|  
-|**TextData**|**ntext**|此資料行的內容需視統計資料是採同步更新 (**EventSubClass** 1) 或非同步更新 (**EventSubClass** 2、3 或 4) 而定：<br /><br /> 1：列出已更新/建立的統計資料<br /><br /> 2、3 或 4：NULL； **IndexID** 資料行中會填入已更新之統計資料的索引/統計資料識別碼。|1|是|  
+|**TextData**|**ntext**|此資料行的內容需視統計資料是採同步更新 (**EventSubClass** 1) 或非同步更新 (**EventSubClass** 2、3 或 4) 而定：<br /><br /> 1：列出已更新/建立的統計資料<br /><br /> 2、3 或 4：NULL;**IndexID**資料行會填入已更新統計資料的索引/統計資料識別碼。|1|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |**型別**|**int**|作業類型。|57|是|  
   

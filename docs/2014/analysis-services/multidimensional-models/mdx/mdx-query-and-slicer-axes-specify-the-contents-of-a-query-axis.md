@@ -14,12 +14,12 @@ ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f3e44d2891d9080b361d07d0bdcacfd0ad2ec39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05555f9f3b90cbf0eaae410a2b97dc31a0ed17d2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209768"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393092"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>指定查詢座標軸的內容 (MDX)
   查詢座標軸指定多維度運算式 (MDX) SELECT 陳述式傳回的資料格集邊緣。 指定資料格集邊緣，您就可以限制用戶端能看見的傳回資料。  
@@ -72,7 +72,7 @@ FROM [Adventure Works]
   
 ```  
   
- 在設定定義之前使用的 NON EMPTY 關鍵字是從軸中移除所有空白 Tuple 的簡單方式。 例如，在目前為止的範例中，我們已看到 2004 年 8 月以後的 Cube 中沒有任何資料。 若要從任何資料行都沒有資料的資料格集中移除所有資料列，只要在設定 Rows 軸定義之前加入 NON EMPTY 即可，如下所示：  
+ 在設定定義之前使用的 NON EMPTY 關鍵字是從軸中移除所有空白 Tuple 的簡單方式。 比方說，我們到目前為止所看到的範例中沒有資料在 2004 年 8 月從 cube 中及更新版本。 若要從任何資料行都沒有資料的資料格集中移除所有資料列，只要在設定 Rows 軸定義之前加入 NON EMPTY 即可，如下所示：  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  
@@ -116,6 +116,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [指定交叉分析篩選器軸的內容&#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [指定 Slicer 軸的內容 &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

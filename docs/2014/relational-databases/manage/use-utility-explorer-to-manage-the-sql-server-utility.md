@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 031efcdc80028e8366a2e19827f180b78a21af0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 232beed45a62ad9cef9f43b122d23cb4d0728a78
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124028"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759420"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>使用公用程式總管來管理 SQL Server 公用程式
   公用程式總管是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的元件，它會連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，以便在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內提供所有物件的樹狀檢視。 [公用程式總管] 內容窗格會提供幾個方法來檢視摘要與詳細資料，並提供與 SQL Server 受管理的執行個體健全狀態相關的資料。 [公用程式總管] 也會提供用於檢視及管理原則定義的使用者介面。 公用程式總管的功能會因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內的物件而有些微的不同，但是一般來說都會包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式所管理的物件、資料和原則。 如需詳細資訊，請參閱 [SQL Server 公用程式的功能與工作](sql-server-utility-features-and-tasks.md)。  
@@ -37,7 +37,7 @@ ms.locfileid: "48124028"
 ### <a name="sql-server-utility-navigation-pane"></a>SQL Server 公用程式導覽窗格  
  [公用程式總管] 導覽窗格會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內提供物件的樹狀檢視 (以公用程式控制點來分組)。 若要展開資料夾，請在 [公用程式總管] 導覽窗格內按一下加號 (+) 或是按兩下 UCP 名稱。 以滑鼠右鍵按一下資料夾或物件來執行一般工作。 樹狀檢視中的節點如下所示：  
   
--   樹狀檢視中的最上層節點為公用程式控制點 (UCP)， 此節點名稱建構為："Utility_Name" (ComputerName\UCP_instance_name)。 如果您沒有 UCP，則必須建立 UCP。 如果您未連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式，必須建立一個連接。 如需詳細資訊，請參閱 [SQL Server 公用程式的功能與工作](sql-server-utility-features-and-tasks.md)。 在樹狀檢視中按一下 UCP 名稱，使用儀表板檢視中的資料來填入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [公用程式總管] 內容窗格。 如需詳細資訊，請參閱[公用程式儀表板 &#40;SQL Server 公用程式&#41;](../../database-engine/utility-dashboard-sql-server-utility.md)。  
+-   樹狀檢視中的最上層節點為公用程式控制點 (UCP)， 節點名稱會建構為："Utility_Name"(ComputerName\UCP_instance_name)。 如果您沒有 UCP，則必須建立 UCP。 如果您未連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式，必須建立一個連接。 如需詳細資訊，請參閱 [SQL Server 公用程式的功能與工作](sql-server-utility-features-and-tasks.md)。 在樹狀檢視中按一下 UCP 名稱，使用儀表板檢視中的資料來填入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [公用程式總管] 內容窗格。 如需詳細資訊，請參閱[公用程式儀表板 &#40;SQL Server 公用程式&#41;](../../database-engine/utility-dashboard-sql-server-utility.md)。  
   
      以滑鼠右鍵按一下 UCP 節點以重新整理儀表板中的資料。  
   

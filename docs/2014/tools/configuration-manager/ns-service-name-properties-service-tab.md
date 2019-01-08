@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2163528b17805e15d2ec3a368a77335d7854a9b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1042eeefb53b16573fd13eb6f0449eeda4688f3a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187770"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757660"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;屬性名稱&gt; 屬性 ([服務] 索引標籤)
   這個服務是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] 服務。 淺灰色的屬性值不得以此應用程式加以變更。  
@@ -50,9 +49,9 @@ ms.locfileid: "48187770"
   
 -   自動：這部電腦啟動時，這項服務會嘗試啟動。  
   
--   停用：這項服務無法啟動。  
+-   已停用：這項服務無法啟動。  
   
- **State**  
+ **狀態**  
  表示這項服務為執行中、已停止或已停用。  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78fb82daf907173befd246799686433a6eab3b43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64975d3e249db13a956f6300d340ac77dfc29db8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190818"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767150"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>候選索引鍵設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [候選索引鍵設定檔要求] 設定選項。 候選索引鍵設定檔會報告資料行或資料行集合是否為選取之資料表的索引鍵或近似索引鍵。 這個設定檔也可協助您識別資料中的問題，例如潛在索引鍵資料行中重複的值。  
@@ -129,7 +128,7 @@ ms.locfileid: "48190818"
  指定可在輸出中報告的候選索引鍵違規數目上限。 這個屬性的預設值為 100。 當 [精確] 選取成為 [KeyStrengthThresholdSetting] 時，這個選項會停用。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料分析工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)   
+ [資料分析工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)   
  [單一資料表快速分析表單 &#40;資料分析工作&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

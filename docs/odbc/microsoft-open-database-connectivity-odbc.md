@@ -11,17 +11,17 @@ ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5d3fcc03b588cd5d014a23a291e04ff9c32f205
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 53e9fdb135b46cedaad6e79fa4ff12c06a4c3ea8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662974"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503940"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft 開放式資料庫連接 (ODBC)
 Microsoft 開放式資料庫連接 (ODBC) 介面是 C 程式設計語言介面，可讓應用程式從各種不同的資料庫管理系統 (Dbms) 存取資料。 ODBC 是低階高效能的介面，專為關聯式資料存放區。  
   
- ODBC 介面可讓最大的互通性 — 應用程式可以透過單一介面存取各種不同的 Dbms 中的資料。 此外，該應用程式將會獨立於任何來源存取資料的 DBMS。 應用程式的使用者可以新增軟體元件，稱為 「 驅動程式，應用程式及特定 DBMS 之間的介面。  
+ ODBC 介面可讓最大的互通性的應用程式可以透過單一介面存取各種不同的 Dbms 中的資料。 此外，該應用程式將會獨立於任何來源存取資料的 DBMS。 應用程式的使用者可以新增軟體元件，稱為 「 驅動程式，應用程式及特定 DBMS 之間的介面。  
   
 ## <a name="documentation"></a>文件集  
  [ODBC 程式設計人員參考](../odbc/reference/odbc-programmer-s-reference.md)  

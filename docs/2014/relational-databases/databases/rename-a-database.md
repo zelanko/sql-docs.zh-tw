@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], renaming
@@ -14,12 +13,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53a917074efc3ba8b966f795a619c2606e3a160b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8226ca15ed39dd6cc24c7235f54a047d2af86508
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055604"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783620"
 ---
 # <a name="rename-a-database"></a>重新命名資料庫
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新命名使用者定義資料庫。 資料庫的名稱可以包含任何依照識別碼規則的字元。  
@@ -38,7 +37,7 @@ ms.locfileid: "48055604"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [After renaming a database](#FollowUp)  
+-   **後續操作：**[在重新命名資料庫之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -71,7 +70,7 @@ ms.locfileid: "48055604"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會將 `AdventureWorks2012` 資料庫的名稱變更為 `Northwind`。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例會將 `AdventureWorks2012` 資料庫的名稱變更為 `Northwind`。  
   
 ```tsql  
 USE master;  
@@ -82,7 +81,7 @@ GO
 ```  
   
 ###  <a name="TsqlExample"></a>   
-##  <a name="FollowUp"></a> 待處理：重新命名資料庫之後  
+##  <a name="FollowUp"></a> 後續操作：在重新命名資料庫之後  
  重新命名任何資料庫之後，請備份 **master** 資料庫。  
   
 ## <a name="see-also"></a>另請參閱  

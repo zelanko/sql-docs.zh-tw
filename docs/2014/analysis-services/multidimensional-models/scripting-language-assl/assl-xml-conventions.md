@@ -26,19 +26,19 @@ ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ab537a266924c352466d3b6d2b8364c3498b2b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd0a84928e1d5b531119a0a37dbb60d2b9eb3db9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112808"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531415"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 慣例
   Analysis Services 指令碼語言 (ASSL) 將物件階層以一組元素類型來表示，每個元素類型都定義了它們可以包含的子系元素。  
   
  為了表示物件階層，ASSL 使用下列 XML 慣例：  
   
--   所有的物件與屬性都是以元素來表示，但 ‘xml:lang’ 等標準 XML 屬性例外。  
+-   所有物件和屬性都被都以項目，但 'xml: lang' 等標準 XML 屬性除外。  
   
 -   元素名稱與列舉值的 Microsoft.NET Framework 命名慣例的 pascal 命名法大小寫不使用底線。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48112808"
   
  `<Database>`  
   
- `…`  
+ `...`  
   
  `<Dimensions>`  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48112808"
   
  `<Cubes>`  
   
- `<Cube xsi:type=”RegularCube”>`  
+ `<Cube xsi:type="RegularCube">`  
   
  `<Name>Sales</Name>`  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48112808"
   
  `</Cube>`  
   
- `<Cube xsi:type=”VirtualCube”>`  
+ `<Cube xsi:type="VirtualCube">`  
   
  `<Name>SalesAndInventory</Name>`  
   
@@ -123,10 +123,10 @@ ms.locfileid: "48112808"
  Analysis Services 使用下列標準 XML 結構描述定義語言 (XSD) 資料類型：  
   
  `Int`  
- -231 到 231 – 1 範圍的整數值。  
+ -231 到 231-1 的範圍中整數值。  
   
  `Long`  
- -263 到 263 – 1 範圍的整數值。  
+ -263 到 263-1 的範圍中整數值。  
   
  `String`  
  符合下列全域規則的字串值：  

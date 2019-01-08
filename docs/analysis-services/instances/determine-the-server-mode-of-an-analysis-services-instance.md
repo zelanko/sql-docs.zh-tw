@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 85501a0b8899e375965a7e999ce2d4e938f14cc0
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 434996f53cefc3c30cc649411db7699ed2bd3f7e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099714"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401021"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>判斷 Analysis Services 執行個體的伺服器模式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Analysis Services 可安裝為以下三種伺服器模式之一：多維度和資料採礦 (預設模式)、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，以及表格式。 Analysis Services 執行個體的伺服器模式是在安裝期間您選擇安裝伺服器選項時決定。  
+  Analysis Services 可以安裝在三種伺服器模式的其中一個：多維度和資料採礦 （預設）、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 及表格式。 Analysis Services 執行個體的伺服器模式是在安裝期間您選擇安裝伺服器選項時決定。  
   
  伺服器模式決定您所建立和部署的方案類型。 如果您沒有安裝伺服器軟體並且想要知道伺服器的安裝模式，可以使用本主題中的資訊來判斷模式。 如需有關功能可用性的特定模式的詳細資訊，請參閱 <<c0> [ 比較表格式和多維度解決方案](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "50099714"
 >  請不要變更 **DeploymentMode** 屬性的值。 不支援在安裝伺服器後手動變更此屬性。  
   
 ## <a name="about-the-deploymentmode-property"></a>關於 DeploymentMode 屬性  
- **DeploymentMode** 屬性會判斷 Analysis Services 伺服器執行個體的運作內容。 此屬性在對話方塊、訊息和文件集中稱為「伺服器模式」。 此屬性是由安裝程式根據您安裝 Analysis Services 的方式初始化。 此屬性應該僅被視為內部屬性，永遠使用安裝程式所指定的值。  
+ **DeploymentMode** 屬性會判斷 Analysis Services 伺服器執行個體的運作內容。 這個屬性被指在對話方塊、 訊息和文件中的 「 伺服器模式 」。 此屬性是由安裝程式根據您安裝 Analysis Services 的方式初始化。 此屬性應該僅被視為內部屬性，永遠使用安裝程式所指定的值。  
   
  這個屬性的有效值包括：  
   

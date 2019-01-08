@@ -15,12 +15,12 @@ ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01de6a3707ea2ed96399c678625f3e94c13fc5db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7487d073b95190418ee7f6900390a2d60ce42e13
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649566"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516859"
 ---
 # <a name="desktop-database-drivers-architecture"></a>桌面資料庫驅動程式架構
 這些驅動程式專為使用在 Microsoft Windows 95 或更新版本，或 Windows NT 4.0 和 Windows 2000。 支援在 Windows 95 或更新版本; 僅限 32 位元應用程式Windows NT 4.0 和 Windows 2000 支援 16 位元和 32 位元應用程式。  
@@ -32,17 +32,17 @@ ms.locfileid: "47649566"
   
  在 Windows 95 或更新版本的應用程式/驅動程式架構是：  
   
- ![應用程式&#47;驅動程式架構： Windows 95 及更新版本](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
+ ![應用程式&#47;驅動程式架構：Windows 95 及更新版本](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
   
  不支援這些驅動程式，請在 Windows 95 的 16 位元應用程式使用。  
   
  在 Windows NT 4.0 和 Windows 2000 上的應用程式/驅動程式架構是：  
   
- ![應用程式&#47;驅動程式架構： NT 4.0 和 Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
+ ![應用程式&#47;驅動程式架構：NT 4.0 和 Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
   
- 桌面資料庫驅動程式是兩層式驅動程式。 在兩層組態中，驅動程式不會執行剖析、 驗證、 最佳化及執行查詢的程序。 相反地，Microsoft Jet 執行這些工作。 它會處理 ODBC API 呼叫，並可做為 SQL 引擎。 Microsoft Jet 已成為不可或缺，分不開部分驅動程式： 它隨附於驅動程式，且位於與驅動程式，即使在電腦上的沒有其他應用程式會使用它。  
+ 桌面資料庫驅動程式是兩層式驅動程式。 在兩層組態中，驅動程式不會執行剖析、 驗證、 最佳化及執行查詢的程序。 相反地，Microsoft Jet 執行這些工作。 它會處理 ODBC API 呼叫，並可做為 SQL 引擎。 Microsoft Jet 已成為不可或缺，分不開部分驅動程式：它隨附的驅動程式，並位於與驅動程式，即使在電腦上的沒有其他應用程式會使用它。  
   
- 桌面資料庫驅動程式包含六個不同的驅動程式 — 或者，您也可以更精確地說，一個驅動程式檔案 (Odbcjt32.dll) 的 ODBC[驅動程式管理員](../../odbc/reference/the-driver-manager.md)使用六個不同的方式。 DRIVERID 中的旗標的資料來源的登錄項目會決定 Odbcjt32.dll 中的哪一個驅動程式驅動程式管理員使用。 應用程式會將此旗標傳入的呼叫中所含的連接字串**SQLDriverConnect**。 根據預設，此旗標會是 Microsoft Access 驅動程式的識別碼。  
+ 桌面資料庫驅動程式包含六個不同的驅動程式-或者，更精確地說，其中一個驅動程式檔案 (Odbcjt32.dll) 的 ODBC[驅動程式管理員](../../odbc/reference/the-driver-manager.md)使用六個不同的方式。 DRIVERID 中的旗標的資料來源的登錄項目會決定 Odbcjt32.dll 中的哪一個驅動程式驅動程式管理員使用。 應用程式會將此旗標傳入的呼叫中所含的連接字串**SQLDriverConnect**。 根據預設，此旗標會是 Microsoft Access 驅動程式的識別碼。  
   
  驅動程式安裝程式檔案會於安裝時期變更 DRIVERID 旗標。 Microsoft Access 驅動程式以外的所有驅動程式會有相關聯的安裝程式 DLL。 當您按一下 **安裝程式**中[Microsoft ODBC 資料來源管理員](../../odbc/admin/odbc-data-source-administrator.md)針對資料來源，ODBC 安裝程式 DLL (Odbcinst.dll) 載入安裝程式 DLL。 安裝程式 DLL 匯出的 ODBC 安裝程式函式**SQLConfigDataSource**。 如果視窗控制代碼傳遞給**SQLConfigDataSource**，此函式會顯示安裝程式視窗，並變更 DRIVERID 旗標，以根據從使用者介面中選取的驅動程式。  
   

@@ -17,12 +17,12 @@ ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cd33c950d8594d7763bd265c443fabb3604aa8c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd0335165c27487433b0130f5e40ecb1846fe7ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078468"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505408"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 公用程式 (SSRS)
   **rsconfig.exe** 公用程式會加密連接和帳戶值，並會將它們儲存在 RSReportServer.config 檔中。 加密的值包括自動處理報表的程序所用的報表伺服器資料庫連接資訊和帳戶值。  
@@ -32,13 +32,13 @@ ms.locfileid: "48078468"
 ```  
   
       rsconfig {-?}  
-{–cconnection}  
-{–eunattendedaccount}  
-{–mcomputername}  
-{–iinstancename}  
-{–sservername}  
-{–ddatabasename}  
-{–aauthmethod}  
+{-cconnection}  
+{-eunattendedaccount}  
+{-mcomputername}  
+{-iinstancename}  
+{-sservername}  
+{-ddatabasename}  
+{-aauthmethod}  
 {-uusername}  
 {-ppassword}  
 {-ttrace}  
@@ -49,9 +49,9 @@ ms.locfileid: "48078468"
 |詞彙|選擇性/必要|定義|  
 |----------|------------------------|----------------|  
 |**-?**|選擇性。|顯示 Rsconfig.exe 引數的語法。|  
-|`-c`|需要`-e`不使用引數。|指定用來將報表伺服器連接到報表伺服器資料庫的連接字串、認證和資料來源值。<br /><br /> 此引數沒有取得值。 不過，您也必須指定其他引數來搭配它，以便提供所有必要的連接值。<br /><br /> 您可以使用指定的引數`-c`包括`-m`， **-s**， `-i`，`-d`，`-a`，`-u`，`-p`，以及`-t`。|  
-|`-e`|需要`-c`不使用引數。|指定自動報表執行帳戶。<br /><br /> 此引數沒有取得值。 不過，命令列必須包括其他引數，以便指定組態檔中所加密的值。<br /><br /> 您可以搭配 `-e` 來指定的引數，包括 `-u` 和 `-p`。 您也可以設定 `-t`。|  
-|`-m`  *電腦名稱*|如果您在設定遠端報表伺服器執行個體，這就是必要的。|指定主控報表伺服器的電腦名稱。 如果省略這個引數，則預設值是`localhost`。|  
+|`-c`|如果未使用 `-e` 引數，這就是必要的。|指定用來將報表伺服器連接到報表伺服器資料庫的連接字串、認證和資料來源值。<br /><br /> 此引數沒有取得值。 不過，您也必須指定其他引數來搭配它，以便提供所有必要的連接值。<br /><br /> 您可以使用指定的引數`-c`包括`-m`， **-s**， `-i`，`-d`，`-a`，`-u`，`-p`，以及`-t`。|  
+|`-e`|如果未使用 `-c` 引數，這就是必要的。|指定自動報表執行帳戶。<br /><br /> 此引數沒有取得值。 不過，命令列必須包括其他引數，以便指定組態檔中所加密的值。<br /><br /> 您可以搭配 `-e` 來指定的引數，包括 `-u` 和 `-p`。 您也可以設定 `-t`。|  
+|`-m`  *電腦名稱*|如果您在設定遠端報表伺服器執行個體，這就是必要的。|指定主控報表伺服器的電腦名稱。 如果省略這個引數，預設值就是 `localhost`。|  
 |**-s**  <伺服器名稱>|必要。|指定主控報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|  
 |`-i`  *執行個體名稱*|如果您使用具名執行個體，這就是必要的。|如果您利用具名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體來主控報表伺服器資料庫，這個值會指定具名執行個體。|  
 |`-d`  *databasename*|必要。|指定報表伺服器資料庫的名稱。|  
@@ -102,7 +102,7 @@ rsconfig -c -s <SQLSERVERNAME> -d reportserver -a Windows "NT AUTHORITY\SYSTEM"
 ```  
   
 #### <a name="specifying-a-service-account"></a>指定服務帳戶  
- 這個範例會顯示在連接本機報表伺服器資料庫時，如何設定報表伺服器來使用「報表伺服器視窗」服務帳戶和 Web 服務帳戶。 請注意，`-u`不會使用與指定任何帳戶資訊。 當您從命令中刪除帳戶值， **rsconfig** 公用程式會使用執行各項服務時所用的整合式安全性和服務帳戶。  
+ 這個範例會顯示在連接本機報表伺服器資料庫時，如何設定報表伺服器來使用「報表伺服器視窗」服務帳戶和 Web 服務帳戶。 請注意，不要使用 `-u`，也不要指定任何帳戶資訊。 當您從命令中刪除帳戶值， **rsconfig** 公用程式會使用執行各項服務時所用的整合式安全性和服務帳戶。  
   
 ```  
 rsconfig -c -s <SQLSERVERNAME> -d reportserver -a Windows  
@@ -123,12 +123,12 @@ rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <P
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [設定報表伺服器資料庫連接&#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [設定自動的執行帳戶&#40;SSRS 組態管理員&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services 組態檔](../report-server/reporting-services-configuration-files.md)   
- [報表伺服器命令提示字元公用程式&#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [報表伺服器命令提示字元公用程式 &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [RSReportServer 設定檔](../report-server/rsreportserver-config-configuration-file.md)  
   
   

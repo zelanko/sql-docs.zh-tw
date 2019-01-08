@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - ending queries [SQL Server]
@@ -14,12 +14,12 @@ ms.assetid: b97c5099-1039-4e6a-95df-14e1a34af344
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1841e466148b99af2438af8615014e3fed1eed88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f76a48481066ff30bbd5a825d477d0e6309abaca
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066510"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787290"
 ---
 # <a name="stop-a-query-visual-database-tools"></a>停止查詢 (Visual Database Tools)
   如果發覺查詢耗時過久或不傳回預期的結果，可以停止尚未完成的查詢。  

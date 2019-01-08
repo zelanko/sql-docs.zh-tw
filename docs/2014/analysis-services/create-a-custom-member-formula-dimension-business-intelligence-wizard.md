@@ -13,15 +13,15 @@ ms.assetid: 0bea4831-982e-4848-86cd-e6219c860138
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cfedee8dfc4f5ece1d4502716d6a7690fa73d9cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36f09632e55bfae58a30f571c2928564f4f7beee
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193791"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507956"
 ---
 # <a name="create-a-custom-member-formula-dimension-business-intelligence-wizard"></a>建立自訂成員公式 (維度) (商業智慧精靈)
-  使用 [建立自訂成員公式] 頁面即可選取維度，讓 [商業智慧精靈] 在屬性和自訂成員公式資料行之間建立關聯 - 資料行中包含多維度運算式 (MDX) 陳述式 (定義該屬性的成員值)。  
+  使用**建立自訂成員公式**頁面，即可選取維度的商業智慧精靈將之間建立關聯的屬性和自訂成員公式資料行集資料行包含多維度運算式 (MDX)定義該屬性成員值的陳述式。  
   
 ## <a name="options"></a>選項。  
  **Dimension**  

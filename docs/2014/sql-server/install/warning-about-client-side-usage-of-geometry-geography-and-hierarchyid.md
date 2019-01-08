@@ -11,12 +11,12 @@ ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ad1970ad7112910b190ee75974248405e0269646
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9ee14c39f7fee577065de934f839f9d6c88e630
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119408"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413765"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>有關用戶端使用 GEOMETRY、GEOGRAPHY 和 HIERARCHYID 的警告
   組件**Microsoft.SqlServer.Types.dll**，其中包含空間資料類型，具有已從 10.0 版升級為 11.0 版。 當某些條件成立時，參考這個組件的自訂應用程式可能會失敗。  
@@ -27,9 +27,9 @@ ms.locfileid: "48119408"
 ## <a name="description"></a>描述  
  組件**Microsoft.SqlServer.Types.dll**，其中包含空間資料類型，具有已從 10.0 版升級為 11.0 版。 當下列條件成立時，參考這個組件的自訂應用程式可能會失敗。  
   
--   當您移動自訂的應用程式從電腦所在[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]所在的電腦只安裝[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]是安裝，應用程式會失敗，因為參考的 10.0 版**SqlTypes**組件不存在。 您可能會看見這則錯誤訊息：`“Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.”`  
+-   當您移動自訂的應用程式從電腦所在[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]所在的電腦只安裝[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]是安裝，應用程式會失敗，因為參考的 10.0 版**SqlTypes**組件不存在。 您可能會收到下列錯誤訊息：`"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
--   當您參考**SqlTypes**組件 11.0 版，也安裝了 10.0 版，您可能會看到此錯誤訊息： `“System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'.”`  
+-   當您參考**SqlTypes**組件 11.0 版，也安裝了 10.0 版，您可能會看到此錯誤訊息： `"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   
 -   當您參考**SqlTypes**組件 11.0 版從以.NET 3.5、 4 或 4.5 為目標的自訂應用程式，應用程式會失敗，因為 SqlClient 依照設計載入的組件 10.0 版。 當應用程式呼叫下列其中一個方法時，就會發生這項失敗：  
   

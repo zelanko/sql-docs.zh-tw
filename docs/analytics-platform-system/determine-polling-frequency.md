@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6b838766e7a6d6bfb9a68bb832cd7a8feb3c9960
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: eec9e3e211c68b7f56fe6829a70064317b96e646
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696616"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519569"
 ---
 # <a name="determine-polling-frequency"></a>判斷輪詢頻率
 這篇文章說明如何判斷 Analytics Platform System appliance 警示的輪詢頻率。  
@@ -22,7 +22,7 @@ ms.locfileid: "51696616"
 ## <a name="to-determine-the-polling-frequency"></a>若要判斷輪詢頻率  
 由於 PDW 目前不支援主動通知警示發生時，監視解決方案，就必須持續輪詢設備 Dll。  就內部而言，PDW 輪詢元件在不同的時間間隔：  
   
--   叢集 – 60 秒  
+-   叢集-60 秒  
   
 -   活動訊號-60 秒  
   

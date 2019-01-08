@@ -16,12 +16,12 @@ ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 26560884319a1feff70db3900bc310cb1e651c2e
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: d45c83b0a8c7ce0884809c394ea35d21dbc42c75
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570638"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390526"
 ---
 # <a name="localdbgetversioninfo-function"></a>LocalDBGetVersionInfo 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ HRESULT LocalDBGetVersionInfo(
   
 ```  
 LocalDBVersionInfo vi;  
-LocalDBVersionInfo(L”11.0”, &vi, sizeof(LocalDBVersionInfo));  
+LocalDBVersionInfo(L"11.0", &vi, sizeof(LocalDBVersionInfo));  
   
 ```  
   

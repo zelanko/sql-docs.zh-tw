@@ -18,19 +18,19 @@ ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c49bbaa5e143f241997e6ff707d84b641c3118a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 924c8f9dca934c81eab74c102509a8d04f66997b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093268"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517474"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是用於存取資料的低階 COM API。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 建議將 Native Client OLE DB 提供者用於開發工具、公用程式或需要高效能的低階元件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是原生、高效能的提供者，會直接存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表格式資料流 (TDS) 通訊協定。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會對連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的應用程式提供 OLE DB 支援。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是與 OLE DB 2.0 版相容的提供者。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是與 OLE DB 版本 2.0 相容提供者。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48093268"
   
 -   [FILESTREAM 支援&#40;OLE DB&#41;](filestream-support-ole-db.md)  
   
--   [Transactions](../../native-client-ole-db-transactions/transactions.md)  
+-   [交易](../../native-client-ole-db-transactions/transactions.md)  
   
 -   [錯誤](../../native-client-ole-db-errors/errors.md)  
   

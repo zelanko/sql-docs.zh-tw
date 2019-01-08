@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database attaching [SQL Server]
@@ -18,12 +17,12 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44e9b8e44c7a7388fb8e4b2ec0bb36ecc27e125d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 872ab7a5b8b173ad2250542c96be2a22d916409c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152061"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757520"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>使用卸離與附加移動資料庫 (Transact-SQL)
   此主題描述如何將卸離的資料庫移動到另一個位置，再重新附加到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中相同或不同的伺服器執行個體。 不過，建議您使用 ALTER DATABASE 計畫的重新放置程序來移動資料庫，而不要使用卸離和附加。 如需詳細資訊，請參閱 [移動使用者資料庫](move-user-databases.md)。  
@@ -61,7 +60,7 @@ ms.locfileid: "48152061"
     GO  
     ```  
   
-2.  使用您選擇的方法，將資料庫檔案 (AdventureWorks208R2_Data.mdf 和 AdventureWorks208R2_log) 分別複製到：C:\MySQLServer\AdventureWorks208R2_Data.mdf 和 C:\MySQLServer\AdventureWorks208R2_Log.ldf。  
+2.  使用您選擇的方法，將資料庫檔案 （AdventureWorks208R2_Data.mdf 和 AdventureWorks208R2_log） 複製到：C:\MySQLServer\AdventureWorks208R2_Data.mdf 和 C:\MySQLServer\AdventureWorks208R2_Log.ldf 分別。  
   
     > [!IMPORTANT]  
     >  針對實際執行的資料庫，將資料庫與交易記錄放在不同的磁碟上。  
@@ -83,6 +82,6 @@ ms.locfileid: "48152061"
      在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，新附加的資料庫無法立即在 [物件總管] 中可見。 若要檢視資料庫，請在 [物件總管] 中按一下 **[檢視]** ，然後按一下 **[重新整理]**。 在 [物件總管] 中展開 **[資料庫]** 節點時，剛才附加的資料庫就會出現在資料庫清單中。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫卸離和附加 &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)  
+ [資料庫卸離與附加 &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)  
   
   

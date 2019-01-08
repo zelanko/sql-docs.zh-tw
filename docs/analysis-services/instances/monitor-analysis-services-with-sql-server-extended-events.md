@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 616cc1e633d6683283d62d6fb3b3434780d9a919
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: dc51c444483dc9a89cf0b9edbd557c3dce11a054
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147243"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544407"
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>使用 SQL Server 擴充事件監視 Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -75,18 +75,18 @@ ms.locfileid: "50147243"
  您可以使用類似的 XMLA 建立物件指令碼命令來啟用擴充事件追蹤，如下所示：  
   
 ```  
-<Execute …>  
+<Execute ...>  
    <Command>  
-      <Batch …>  
-         <Create …>  
+      <Batch ...>  
+         <Create ...>  
             <ObjectDefinition>  
                <Trace>  
                   <ID>trace_id</ID>  
                   <Name>trace_name</Name>  
                   <ddl300_300:XEvent>  
-                     <event_session …>  
+                     <event_session ...>  
                         <event package="AS" name="AS_event">  
-                           <action package="PACKAGE0" …/>  
+                           <action package="PACKAGE0" .../>  
                         </event>  
                         <target package="PACKAGE0" name="asynchronous_file_target">  
                            <parameter name="filename" value="data_filename.xel"/>  
@@ -128,8 +128,8 @@ ms.locfileid: "50147243"
 ```  
 <Execute xmlns="urn:schemas-microsoft-com:xml-analysis">  
    <Command>  
-      <Batch …>  
-         <Delete …>  
+      <Batch ...>  
+         <Delete ...>  
             <Object>  
                <TraceID>trace_id</TraceID>  
             </Object>  

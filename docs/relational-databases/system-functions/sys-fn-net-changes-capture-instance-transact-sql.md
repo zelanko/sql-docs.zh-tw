@@ -21,12 +21,12 @@ ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4eff2dd82db75bf1dc0114477152cb18b9d715d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 081eaa3995507edf20be0b83f3e0ce766135139c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681746"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416319"
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  位元旗標則會附加至結果集中的每個資料行中的參數識別@update_flag_list。 針對**changes<** 包裝函式，位元旗標一定會是 NULL，如果@row_filter_option也就是包裝函式呼叫中使用是 'all' all with merge'。 如果@row_filter_option設為 'all with mask'，而且 __CDC_OPERATION 為 ' 或 'I' 旗標的值也會是 NULL。 如果\__CDC_OPERATION 為 ' UN '，此旗標會設定為 1 或 0，這取決於是否**net**更新作業導致資料行的變更。  
   
- 「具現化結構描述的 CDC 包裝函數 TVF」異動資料擷取組態範本會示範如何使用 sp_cdc_generate_wrapper_function 預存程序，針對結構描述之已定義查詢函數的所有包裝函數取得 CREATE 指令碼。 然後，此範本會建立這些指令碼。 如需有關範本的詳細資訊，請參閱 <<c0> [ 範本總管](../../ssms/template/template-explorer.md)。  
+ 異動資料擷取組態範本 '具現化的 CDC 包裝函式 tvf 」 結構描述' 示範如何使用 sp_cdc_generate_wrapper_function 預存程序，取得所有包裝函式的結構描述定義的查詢函數的 CREATE 指令碼。 然後，此範本會建立這些指令碼。 如需有關範本的詳細資訊，請參閱 <<c0> [ 範本總管](../../ssms/template/template-explorer.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [sys.sp_cdc_generate_wrapper_function &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   

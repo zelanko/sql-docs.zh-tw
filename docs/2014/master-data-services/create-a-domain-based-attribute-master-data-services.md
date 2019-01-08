@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - domain-based attributes [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 34b101cfdd590c4910f9997b682749df41758a86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1dc346c31b7d26989dd2fac018a7bae0752f77e4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106118"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755410"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>建立網域屬性 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立網域屬性，以使用實體成員來擴展屬性值。  
@@ -30,7 +29,7 @@ ms.locfileid: "48106118"
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 -   屬性值的來源實體必須存在。 例如，若要根據色彩實體建立網域屬性，您必須先建立色彩實體。 如需詳細資訊，請參閱[建立實體 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)。  
   
@@ -71,9 +70,9 @@ ms.locfileid: "48106118"
 13. 按一下 **[實體維護]** 頁面上的 **[儲存實體]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [網域型屬性&#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)   
- [建立衍生的階層&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [網域屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)   
+ [建立衍生階層 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [變更屬性名稱&#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
- [刪除屬性&#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)  
+ [刪除屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)  
   
   

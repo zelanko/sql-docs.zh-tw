@@ -1,5 +1,5 @@
 ---
-title: 第 8 課： 定義動作 |Microsoft Docs
+title: 第 8 課：定義動作 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cfdec0d2b77b88cff7fad643606ee3da001a67a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92abf8eb92301af8dd3bf32d5ac5f6a38b1b5481
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174338"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351261"
 ---
 # <a name="lesson-8-defining-actions"></a>第 8 課：定義動作
   在這一課，您將學會定義 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案中的動作。 動作只是一個儲存在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的多維度運算式 (MDX) 陳述式，可以併入用戶端應用程式中，由使用者啟動。  
   
 > [!NOTE]  
->  此教學課程中，所有課程已完成的專案都可在線上取得。 您可以從先前的課程中使用已完成的專案做為起點，向前跳到任何課程。 [按一下這裡](http://go.microsoft.com/fwlink/?LinkID=221866) ，下載此教學課程隨附的範例專案。  
+>  此教學課程中，所有課程已完成的專案都可在線上取得。 您可以從先前的課程中使用已完成的專案做為起點，向前跳到任何課程。 [按一下這裡](https://go.microsoft.com/fwlink/?LinkID=221866) ，下載此教學課程隨附的範例專案。  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援下表所說明的動作類型。  
   

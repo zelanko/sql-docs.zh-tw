@@ -15,12 +15,12 @@ ms.assetid: adb385d5-ef24-4d18-b9ea-b39e00a7075e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f8c4992477fa5bdbf533f3a1933c4092f1d162c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5608877b30f453502bd9c6f0da74a8c5a68c71a2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089493"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510202"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>傳送郵件工作編輯器 (郵件頁面)
   使用 [傳送郵件工作編輯器] 對話方塊的 [郵件] 頁面，即可指定收件者、訊息類型以及訊息的優先權。 您也可以附加檔案至訊息。 訊息文字可以是您提供的字串、包含文字之檔案的檔案連接，或包含文字之變數的名稱。  
@@ -34,7 +34,7 @@ ms.locfileid: "48089493"
 > [!IMPORTANT]  
 >  SMTP 連接管理員僅支援匿名驗證和 Windows 驗證， 而不支援基本驗證。  
   
- **相關主題** [SMTP 連線管理員](connection-manager/smtp-connection-manager.md)  
+ **相關的主題：**[SMTP 連線管理員](connection-manager/smtp-connection-manager.md)  
   
  **來源**  
  指定寄件者的電子郵件地址。  
@@ -54,7 +54,7 @@ ms.locfileid: "48089493"
  **MessageSourceType**  
  選取訊息的來源類型。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**直接輸入**|將來源設定為訊息文字。 選取此值會顯示動態選項 [MessageSource]。|  
 |**檔案連接**|將來源設定為包含訊息文字的檔案。 選取此值會顯示動態選項 [MessageSource]。|  
@@ -73,23 +73,23 @@ ms.locfileid: "48089493"
   
 ### <a name="messagesourcetype--direct-input"></a>MessageSourceType = 直接輸入  
  **MessageSource**  
- 輸入訊息文字或按一下瀏覽按鈕 (…)，然後在 [訊息來源] 對話方塊中輸入訊息。  
+ 輸入訊息文字或按一下瀏覽按鈕 ([...])，然後在 [訊息來源] 對話方塊中輸入訊息。  
   
 ### <a name="messagesourcetype--file-connection"></a>MessageSourceType = 檔案連接  
  **MessageSource**  
  在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關的主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="messagesourcetype--variable"></a>MessageSourceType = 變數  
  **MessageSource**  
- 在清單中選取變數，或按一下 [\<新增變數...>]，以建立新的變數。  
+ 在清單中選取變數，或按一下 [\<新增變數...>] 建立新的變數。  
   
- **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[加入變數](../../2014/integration-services/add-variable.md)  
+ **相關的主題：**[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[加入變數](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [傳送郵件工作編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [傳送郵件工作編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [運算式頁面](expressions/expressions-page.md)  
   
   

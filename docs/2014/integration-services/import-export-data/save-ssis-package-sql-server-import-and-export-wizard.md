@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.savedtspackage.f1
@@ -13,18 +12,18 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b8ef62839d7379c35b55af7bcb65ab46e4b455d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23a8211f27d3ea5377d0f68375ecb75aca5a83e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048229"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747940"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>儲存 SSIS 封裝 (SQL Server 匯入和匯出精靈)
   使用**儲存 SSIS 封裝**名稱、 描述，並儲存頁面[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 來封裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`msdb`資料庫或檔案具有.dtsx延伸模組。  
   
 > [!NOTE]  
->  在  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]，則無法使用儲存精靈所建立的封裝選項。  
+>  在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中，無法使用儲存此精靈所建立之封裝的選項。  
   
  若要深入了解此精靈，請參閱[SQL Server 匯入和匯出精靈](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要深入了解啟動精靈，選項和相關的權限，才能成功執行精靈，請參閱[執行 SQL Server 匯入和匯出精靈](start-the-sql-server-import-and-export-wizard.md)。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "48048229"
  提供封裝的描述。 最佳作法是以其用途描述封裝，使封裝可以自我記錄並易於維護。  
   
  **Target**  
- 檢視目標 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或檔案)，先前指定目的地檔案。  
+ 檢視先前為目的地檔案指定的目標 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或檔案)。  
   
 ## <a name="target-dynamic-options"></a>目標動態選項  
   
@@ -50,13 +49,13 @@ ms.locfileid: "48048229"
  當您已經選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地時，請指定是否使用 Windows 整合式驗證連接到伺服器。 這是慣用的驗證方法。  
   
  **[使用 SQL Server 驗證]**  
- 當您已經選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目的地，指定是否要使用 SQL Server 驗證連接到伺服器。  
+ 當您已經選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地時，請指定是否使用 SQL Server 驗證連接到伺服器。  
   
  **使用者名稱**  
- 當您選妥[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目的地，並且指定 SQL Server 驗證，輸入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者名稱。  
+ 當您已經選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，並且指定 SQL Server 驗證時，請輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者名稱。  
   
  **密碼**  
- 當您選妥[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目的地，並且指定 SQL Server 驗證，輸入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]密碼。  
+ 當您已經選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，並且指定 SQL Server 驗證時，請輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 密碼。  
   
 ### <a name="target--file-system"></a>目標 = 檔案系統  
  **檔案名稱**  

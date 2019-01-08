@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.addeditjoin.f1
@@ -13,12 +12,12 @@ ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: abe1fb743410bdf7e0e9b586fc175a4308d8e8ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5fb76e62e1816be53c312cc263053f854ad3b796
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130341"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781100"
 ---
 # <a name="add-or-edit-join"></a>加入或編輯聯結
   **[加入聯結]** 和 **[編輯聯結]** 對話方塊可讓您為合併發行集加入和編輯聯結篩選。  

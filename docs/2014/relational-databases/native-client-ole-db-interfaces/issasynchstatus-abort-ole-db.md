@@ -16,12 +16,12 @@ ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d161786019750aae9740ce42ab0a15464b0dfc2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b61f5e3e44f9584fc3f93efb521585e3173b6c1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160868"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532048"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
   取消非同步執行的作業。  
@@ -42,7 +42,7 @@ HRESULT Abort(
  *eOperation*[in]  
  要中止的作業。 這應該為下列值：  
   
- DBASYNCHOP_OPEN：取消的要求適用於非同步開啟或擴展資料列集，或是非同步初始化資料來源物件。  
+ DBASYNCHOP_OPEN 取消的要求適用於非同步開啟或母體擴展的資料列集或資料來源物件的非同步初始化。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  S_OK  

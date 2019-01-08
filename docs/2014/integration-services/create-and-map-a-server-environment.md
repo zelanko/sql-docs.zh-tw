@@ -16,12 +16,12 @@ ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d77393b3289c00ad88925711287b2ef789bc093d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1116cc2e1040326237a31039fa2b52618c3f559e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090321"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408225"
 ---
 # <a name="create-and-map-a-server-environment"></a>建立和對應伺服器環境
   您可以建立伺服器環境，針對已部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器之專案中所包含的封裝，指定執行值。 接著您可以針對特定封裝、進入點封裝，或給定專案中的所有封裝，將環境變數對應至參數。 進入點封裝通常是執行子封裝的父封裝。  

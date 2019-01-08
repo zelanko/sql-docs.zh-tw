@@ -1,5 +1,5 @@
 ---
-title: 範例：使用憑證設定資料庫鏡像 (Transact-SQL) | Microsoft Docs
+title: 範例設定資料庫鏡像使用憑證 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e5afcf2441de59e233abb3f1d211e0f14e517a43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065698"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512184"
 ---
-# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>範例：使用憑證設定資料庫鏡像 (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>範例使用憑證設定資料庫鏡像 (Transact-SQL)
   此範例會顯示使用以憑證為基礎的驗證建立資料庫鏡像工作階段所需的所有階段。 此主題中的範例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 除非您可保證網路的安全無虞，否則建議您對資料庫鏡像連接使用加密。  
   
  將憑證複製到另一個系統時，請使用安全複製方法。 務必將您所有的憑證小心保管。  
@@ -271,7 +271,7 @@ ms.locfileid: "48065698"
   
 -   [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md) (SQL Server)  
   
--   [為資料庫鏡像組態疑難排解 &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
+-   [疑難排解資料庫鏡像組態 &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   

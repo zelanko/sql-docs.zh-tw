@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62ca1f527d3a96e4c12e1803d46b85c434344fbb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c15e8c9ee191dc2829dac12566b0cca9f8c3be13
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675054"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208197"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM 將 BLOB 資料傳送到 SQL SERVER (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "51675054"
   
  在原始程式碼中，當您取消註解 #define USE_ISEQSTREAM 時，此範例會使用 ISequentialStream。 範例中定義了資料流實作，而且只要變更 MAX_BLOB，即可傳送任何大小的 BLOB 資料。 資料流資料並不需要配合記憶體或以單一區塊使用。 您可以使用 IRowsetFastLoad::InsertRow 來呼叫此提供者。 請使用 IRowsetFastLoad::InsertRow，將指標和可從資料流讀取的資料量傳送至資料緩衝區中的資料流實作 (rgBinding.obValue 位移)。 在繫結進行時，某些提供者可能不需要知道資料的長度。 在此例中，繫結中可以省略長度。  
   
- 此範例不會使用提供者的資料流介面來將資料寫入提供者， 而會將指標傳送給資料流物件，提供者會取用該指標來讀取資料。 一般而言，Microsoft 提供者 (SQLOLEDB 和 SQLNCLI) 會以 1024 位元組的區塊從物件讀取資料，直到所有資料都經過處理。 SQLOLEDB 或 SQLNCLI 都沒有完整的實作，無法讓取用者將資料寫入至提供者的資料流物件。 只有零長度的資料可以透過提供者的資料流物件傳送。  
+ 此範例不使用提供者的資料流介面來將資料寫入至提供者。 而會將指標傳送給資料流物件，提供者會取用該指標來讀取資料。 一般而言，Microsoft 提供者 (SQLOLEDB 和 SQLNCLI) 會以 1024 位元組的區塊從物件讀取資料，直到所有資料都經過處理。 SQLOLEDB 或 SQLNCLI 都沒有完整的實作，無法讓取用者將資料寫入至提供者的資料流物件。 只有零長度的資料可以透過提供者的資料流物件傳送。  
   
  取用者實作的 ISequentialStream 物件可和資料列集資料 (IRowsetChange::InsertRow、IRowsetChange::SetData) 搭配使用，也可以透過將參數繫結為 DBTYPE_IUNKNOWN 的方式，與參數搭配使用。  
   
@@ -41,11 +41,11 @@ ms.locfileid: "51675054"
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
   
 ## <a name="example"></a>範例  
- 執行第一個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單，以便建立應用程式所使用的資料表。  
+ 執行第一個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單，以便建立應用程式所使用的資料表。  
   
  使用 ole32.lib oleaut32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連線到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
- 執行第三個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單，以便刪除應用程式所使用的資料表。  
+ 執行第三個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單，以便刪除應用程式所使用的資料表。  
   
 ```  
 use master  

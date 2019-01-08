@@ -22,12 +22,12 @@ ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4a1e17c424e4447e64d48bebbe25960aec165e5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b052ccbd1b91ea66f150dc0995eeeb33994a5e53
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225028"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439520"
 ---
 # <a name="report-design-view-report-builder"></a>報表設計檢視 (報表產生器)
   [報表產生器] 視窗的設計目的是要協助您輕鬆地組織報表資源和快速地建立所需的報表。 其設計介面位於視窗的中央、[功能區] 位於上方，而 [報表資料]、[群組] 和 [屬性] 窗格以及 [報表組件庫] 分別位於左側、下方和右側。 設計介面是您可以加入和組織報表項目的位置。 [功能區] 會將傳統的功能表項目組織成可讓您輕鬆地找到並使用的類別目錄。 這些窗格會協助您加入、選取並組織報表資源，以及變更報表項目屬性。  
@@ -37,7 +37,7 @@ ms.locfileid: "48225028"
 ##  <a name="Ribbon"></a> 功能區  
  [功能區] 的設計目的是要協助您快速找到完成工作所需的命令。 這些命令會以邏輯群組進行組織，然後一起收集在索引標籤底下。 每個索引標籤都與一種活動相關，例如插入報表項目或格式化文字。  
   
- 在報表設計檢視中，[功能區] 會分成下列索引標籤：[首頁]、[插入] 和 [檢視]。 如果您在 [功能區] 上找不到工作，某些 [功能區] 群組具有相關的對話方塊，而且您可以按一下群組右下角的箭號來開啟對話方塊。 不過，您無法最小化或刪除 [功能區]，或將它取代成工具列和功能表。  
+ 在報表設計檢視中，功能區分為下列索引標籤中：首頁，插入，並檢視。 如果您在 [功能區] 上找不到工作，某些 [功能區] 群組具有相關的對話方塊，而且您可以按一下群組右下角的箭號來開啟對話方塊。 不過，您無法最小化或刪除 [功能區]，或將它取代成工具列和功能表。  
   
  在執行模式中，功能區都有一個索引標籤上，**執行**。  
   
@@ -101,17 +101,17 @@ ms.locfileid: "48225028"
   
  如需有關 [報表資料] 窗格中項目的詳細資訊，請參閱下列主題：  
   
--   [Built-in Globals and Users References&#40;報表產生器及 SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+-   [內建的全域和使用者參考 &#40;報表產生器和 SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
 -   [報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [映像&#40;報表產生器及 SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
+-   [影像 &#40;報表產生器和 SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
   
 -   [報表產生器中的資料連接、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
 -   [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
--   [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+-   [資料集欄位集合 &#40;報表產生器和 SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
 ##  <a name="ReptPartGallery"></a> 報表組件庫  
@@ -144,13 +144,13 @@ ms.locfileid: "48225028"
  根據屬性而定，您可以從下拉式清單中選取屬性值、輸入值，或按一下 `<Expression>` 來建立運算式。  
   
 ### <a name="changing-the-properties-pane-view"></a>變更屬性窗格檢視  
- 根據預設，顯示在 [屬性] 窗格中的屬性會組織成一些廣泛的類別目錄，例如 [動作]、[框線]、[填滿]、[字型] 和 [一般]。 每個類別目錄都具有一組相關聯的屬性。 例如，下列屬性列於 [字型] 類別目錄中：[Color]、[FontFamily]、[FontSize]、[FontStyle]、[FontWeight]、[LineHeight] 和 [TextDecoration]。 如果您想要，也可以依字母順序排列此窗格中所列的所有屬性。 這樣做會移除這些類別目錄並按照字母順序列出所有屬性，不論類別目錄為何。  
+ 根據預設，顯示在 [屬性] 窗格中的屬性會組織成一些廣泛的類別目錄，例如 [動作]、[框線]、[填滿]、[字型] 和 [一般]。 每個類別目錄都具有一組相關聯的屬性。 例如，下列屬性列於 [字型] 類別目錄：色彩、 FontFamily、 FontSize、 FontStyle、 FontWeight、 [LineHeight] 和 [textdecoration]。 如果您想要，也可以依字母順序排列此窗格中所列的所有屬性。 這樣做會移除這些類別目錄並按照字母順序列出所有屬性，不論類別目錄為何。  
   
- [屬性] 窗格的窗格頂端具有三個按鈕：[類別目錄]、[按字母排列] 和 [屬性頁]。 按一下 [類別目錄] 和 [按字母排列] 按鈕，即可在 [屬性] 窗格檢視之間切換。 按一下 [屬性頁] 按鈕，即可開啟選取之報表項目的 [屬性] 對話方塊。  
+ [屬性] 窗格具有窗格頂端的三個按鈕：類別中，依字母順序排列，和屬性頁。 按一下 [類別目錄] 和 [按字母排列] 按鈕，即可在 [屬性] 窗格檢視之間切換。 按一下 [屬性頁] 按鈕，即可開啟選取之報表項目的 [屬性] 對話方塊。  
   
   
 ##  <a name="GroupPane"></a> 群組窗格 (報表產生器)  
- 群組的用途在於將報表資料組織為視覺階層以及計算總計。 您可以在設計介面和 [群組] 窗格中檢視資料區域內的資料列和資料行群組。 [群組] 窗格具有兩個窗格：[資料列群組] 和 [資料行群組]。 當您選取某個資料區域時，[群組] 窗格就會將該資料區域內的所有群組顯示成階層式清單：子群組會以縮排方式顯示在其父群組底下。  
+ 群組的用途在於將報表資料組織為視覺階層以及計算總計。 您可以在設計介面和 [群組] 窗格中檢視資料區域內的資料列和資料行群組。 [群組] 窗格有兩個窗格：資料列群組和資料行群組。 當您選取的資料區域時，[群組] 窗格會顯示這個資料區域內的所有群組為階層式清單：子群組會出現在其父群組底下縮排。  
   
  ![巢狀資料列和資料行群組的群組窗格](../media/rs-basictablixdesigngroupingpanedefaultview.gif "巢狀資料列和資料行群組的群組窗格")  
   

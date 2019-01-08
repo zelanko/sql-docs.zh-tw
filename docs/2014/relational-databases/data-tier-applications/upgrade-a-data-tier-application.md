@@ -24,19 +24,19 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b4876d7d41a286cae12a39e11d8442d1fbe360f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 553f35862684c7b7c860b70211f903dec253a799
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152694"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774320"
 ---
 # <a name="upgrade-a-data-tier-application"></a>升級資料層應用程式
   您可以使用升級資料層應用程式精靈或 Windows PowerShell 指令碼，將目前部署之資料層應用程式 (DAC) 的結構描述和屬性變更為符合新版 DAC 中所定義的結構描述和屬性。  
   
--   **開始之前：**  [選擇 DAC 升級選項](#ChoseDACUpgOptions)、 [限制事項](#LimitationsRestrictions)、 [必要條件](#Prerequisites)、 [安全性](#Security)、 [權限](#Permissions)  
+-   **開始之前：**[選擇 DAC 升級選項](#ChoseDACUpgOptions)，[限制事項](#LimitationsRestrictions)，[必要條件](#Prerequisites)，[安全性](#Security)，[權限](#Permissions)  
   
--   **使用下列項目，升級 DAC**  [升級資料層應用程式精靈](#UsingDACUpgradeWizard)、 [PowerShell](#UpgradeDACPowerShell)  
+-   **若要升級 DAC，使用：**[升級資料層應用程式精靈](#UsingDACUpgradeWizard)， [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  DAC 升級是一種就地升級程序，可改變現有資料庫的結構描述，以符合新版 DAC 中所定義的結構描述。 在 DAC 封裝檔案中，會套用新版 DAC。 如需建立 DAC 封裝的詳細資訊，請參閱 [資料層應用程式](data-tier-applications.md)。  
@@ -44,13 +44,13 @@ ms.locfileid: "48152694"
 ###  <a name="ChoseDACUpgOptions"></a> 選擇 DAC 升級選項  
  就地升級有四個升級選項：  
   
--   **忽略資料遺失**– 如果`True`，即使某些作業導致資料遺失，升級還是會繼續。 若為 `False`，這些作業將會結束升級。 比方說，如果目前的資料庫中的資料表不存在新 DAC 的結構描述中，將會卸除資料表`True`指定。 預設值是`True`。  
+-   **忽略資料遺失**-如果`True`，即使某些作業導致資料遺失，升級還是會繼續。 若為 `False`，這些作業將會結束升級。 例如，如果目前資料庫中的資料表不在新 DAC 的結構描述中，則會在指定 `True` 時卸除資料表。 預設值是 `True`。  
   
--   **變更時封鎖**– 如果`True`，如果資料庫結構描述不同於舊版 DAC 中所定義，則會結束升級。 如果`False`，即使偵測到變更時，仍會繼續升級。 預設值是`False`。  
+-   **變更時封鎖**-如果`True`，如果資料庫結構描述不同於舊版 DAC 中所定義，則會結束升級。 若為 `False`，即使偵測到變更，升級仍會繼續。 預設值是 `False`。  
   
--   **失敗時回復**– 如果`True`，升級將會包含在交易中，而如果發生錯誤，則會嘗試回復。 若為 `False`，將會認可所有變更，而如果發生錯誤，您可能必須還原資料庫的先前備份。 預設值是`False`。  
+-   **失敗時回復**-如果`True`，升級將會包含在交易中，而如果發生錯誤，則會嘗試回復。 若為 `False`，將會認可所有變更，而如果發生錯誤，您可能必須還原資料庫的先前備份。 預設值是 `False`。  
   
--   **略過原則驗證**– 如果`True`，不會評估 DAC 伺服器選取原則。 如果`False`，則會評估原則和驗證錯誤時，會結束升級。 預設值是`False`。  
+-   **略過原則驗證**-如果`True`，不會評估 DAC 伺服器選取原則。 若為 `False`，則會評估原則，而如果發生驗證錯誤，則會結束升級。 預設值是 `False`。  
   
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
  DAC 升級只能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本中執行。  
@@ -83,7 +83,7 @@ ms.locfileid: "48152694"
   
 2.  展開 [管理] 節點，然後展開 [資料層應用程式] 節點。  
   
-3.  以滑鼠右鍵按一下要升級之 DAC 的節點，然後選取 [升級資料層應用程式…]  
+3.  以滑鼠右鍵按一下要升級之 DAC 的節點，然後選取 [升級資料層應用程式...]  
   
 4.  完成精靈對話方塊：  
   
@@ -178,7 +178,7 @@ ms.locfileid: "48152694"
 ## <a name="options-page"></a>選項頁面  
  您可以使用此頁面針對升級選取失敗時回復選項。  
   
- **失敗時回復** – 選取此選項，可將升級併入精靈在發生錯誤時嘗試回復的交易。 如需有關此選項的詳細資訊，請參閱＜ [選擇 DAC 升級選項](#ChoseDACUpgOptions)＞。  
+ **失敗時回復** - 選取此選項，可將升級併入精靈在發生錯誤時嘗試回復的交易。 如需有關此選項的詳細資訊，請參閱＜ [選擇 DAC 升級選項](#ChoseDACUpgOptions)＞。  
   
  **還原預設值** - 將此選項還原為其預設值 false。  
   
@@ -195,7 +195,7 @@ ms.locfileid: "48152694"
   
  **重新整理** - 重新整理動作清單。  
   
- **儲存動作報表** - 將動作視窗的內容儲存至 HTML 檔。  
+ **儲存動作報表** - 將動作視窗的內容儲存至 HTML 檔案。  
   
  **儘管變更可能遺失，還是繼續進行** - 指定您了解目前資料庫中的某些物件或資料將不會出現在新的資料庫中，但是您仍然願意繼續升級。 只有當您已經分析變更報表，並了解手動傳送新資料庫中所需之任何物件或資料所必須執行的步驟時，才應該選取這個按鈕。 如果您不確定，請按一下 [儲存動作報告] 按鈕儲存變更報表並按一下 [儲存指令碼] 按鈕儲存 Transact-SQL 指令碼，然後按一下 [取消]。 分析報表和指令碼、規劃如何在升級完成之後傳送任何必要的物件和資料，然後重新啟動精靈。  
   
@@ -234,15 +234,15 @@ ms.locfileid: "48152694"
   
 1.  建立 SMO Server 物件，並將它設為包含要升級之 DAC 的執行個體。  
   
-2.  開啟`ServerConnection`物件，並連接到相同的執行個體。  
+2.  開啟 `ServerConnection` 物件，並連接到相同的執行個體。  
   
-3.  使用`System.IO.File`以載入 DAC 封裝檔案。  
+3.  使用 `System.IO.File` 以載入 DAC 封裝檔案。  
   
-4.  使用`add_DacActionStarted`和`add_DacActionFinished`訂閱 DAC 升級事件。  
+4.  使用 `add_DacActionStarted` 和 `add_DacActionFinished` 訂閱 DAC 升級事件。  
   
-5.  設定`DacUpgradeOptions`。  
+5.  設定 `DacUpgradeOptions`。  
   
-6.  使用`IncrementalUpgrade`方法來升級 DAC。  
+6.  您可以使用 `IncrementalUpgrade` 方法來升級 DAC。  
   
 7.  關閉用來讀取 DAC 封裝檔案的檔案資料流。  
   

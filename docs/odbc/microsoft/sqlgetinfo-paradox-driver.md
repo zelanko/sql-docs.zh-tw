@@ -14,12 +14,12 @@ ms.assetid: 43aab762-68f4-4128-b8f5-8878ea5f1258
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1e8025af41a876926273c3134deebf46766fb9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76517ac2ded567877d542be688aa47abeca21c1c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752888"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528930"
 ---
 # <a name="sqlgetinfo-paradox-driver"></a>SQLGetInfo (Paradox 驅動程式)
 > [!NOTE]  
@@ -27,11 +27,11 @@ ms.locfileid: "47752888"
   
  **SQLGetInfo**支援 SQL_FILE_USAGE 資訊類型。 傳回的值是 16 位元整數，指出如何驅動程式直接處理資料來源中的檔案：  
   
--   SQL_FILE_NOT_SUPPORTED — 驅動程式不是單層式架構的驅動程式。  
+-   SQL_FILE_NOT_SUPPORTED-驅動程式不是單層式架構的驅動程式。  
   
--   SQL_FILE_TABLE — 單層式架構的驅動程式將資料來源中的檔案視為資料表。  
+-   SQL_FILE_TABLE-單層式架構的驅動程式將資料來源中的檔案視為資料表。  
   
--   SQL_FILE_QUALIFIER — 單層式架構的驅動程式將資料來源中的檔案視為限定詞。  
+-   SQL_FILE_QUALIFIER-單層式架構的驅動程式將資料來源中的檔案視為限定詞。  
   
  ODBC 驅動程式會傳回 SQL_FILE_TABLE，因為每個檔案是一個資料表。  
   

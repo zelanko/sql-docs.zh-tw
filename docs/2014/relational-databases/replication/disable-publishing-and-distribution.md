@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - disabling publishing
@@ -19,12 +18,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c21b53f55f0fe32c71e6d2e4f08d068f96431fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 46cdf7ad91de4eacae513399dc7b0c88ad9831fe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111404"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765440"
 ---
 # <a name="disable-publishing-and-distribution"></a>停用發行和散發
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中停用發行和散發。  
@@ -111,7 +110,7 @@ ms.locfileid: "48111404"
   
 4.  建立 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 類別的執行個體。 指定 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> 屬性，並傳遞步驟 3 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件。  
   
-5.  (選擇性) 呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法，以取得物件的屬性及確認發行者確實存在。 如果此方法傳回`false`，步驟 4 中設定 「 發行者 」 名稱不正確，或是此散發者不使用 「 發行者 」。  
+5.  (選擇性) 呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法，以取得物件的屬性及確認發行者確實存在。 如果此方法傳回 `false`，則表示步驟 4 中設定的發行者名稱不正確，或是此散發者並未使用此發行者。  
   
 6.  呼叫 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> 方法。 值傳遞`true`for*強制*如果發行者和散發者位於不同的伺服器，以及 「 發行者 」 端應解除安裝散發者端之前未先確認發行集不再存在於「 發行者 」。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.saveschedule.f1
@@ -13,12 +12,12 @@ ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de6560f7bc91a76652be5ca198a91c4ab9c1f1af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc075a50f3b57cf4856dbcd2ee36c13b83d968d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104501"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773370"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>儲存並執行封裝 (SQL Server 匯入和匯出精靈)
   使用**儲存並執行套件**對話方塊，即可立即執行封裝，儲存供稍後執行，或兩者。  
@@ -38,7 +37,7 @@ ms.locfileid: "48104501"
  儲存封裝供稍後執行，具有立即執行的選項。  
   
 > [!NOTE]  
->  在  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]，則無法使用儲存精靈所建立的封裝選項。  
+>  在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中，無法使用儲存此精靈所建立之封裝的選項。  
   
  **SQL Server**  
  選取此選項可將封裝儲存到[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb`資料庫。  

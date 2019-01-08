@@ -20,16 +20,16 @@ ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d48d9742f9b3fafe77f441226961218f47c6005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3cca214aeb63720e193f57f06a22481ae7d369f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719706"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213437"
 ---
 # <a name="sqlfreestmt-function"></a>SQLFreeStmt 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ISO 92  
+ 導入的版本：ODBC 1.0 標準的合規性：ISO 92  
   
  **摘要**  
  **SQLFreeStmt**停止特定的陳述式相關聯的處理、 關閉任何開啟的資料指標相關聯的陳述式，會捨棄暫止的結果，或選擇性地釋放陳述式控制代碼相關聯的所有資源。  
@@ -50,13 +50,13 @@ SQLRETURN SQLFreeStmt(
  *選項*  
  [輸入]下列選項之一：  
   
- SQL_ 關閉： 關閉資料指標相關聯*StatementHandle* （如果已定義），並捨棄所有暫止的結果。 應用程式可以稍後重新開啟這個資料指標執行**選取**再次以相同或不同的參數值的陳述式。 如果任何資料指標開啟時，此選項會有不會影響應用程式。 **SQLCloseCursor**也可以呼叫來關閉資料指標。 如需詳細資訊，請參閱 <<c0> [ 關閉資料指標](../../../odbc/reference/develop-app/closing-the-cursor.md)。  
+ SQL_ 關閉：關閉資料指標相關聯*StatementHandle* （如果已定義），並捨棄所有暫止的結果。 應用程式可以稍後重新開啟這個資料指標執行**選取**再次以相同或不同的參數值的陳述式。 如果任何資料指標開啟時，此選項會有不會影響應用程式。 **SQLCloseCursor**也可以呼叫來關閉資料指標。 如需詳細資訊，請參閱 <<c0> [ 關閉資料指標](../../../odbc/reference/develop-app/closing-the-cursor.md)。  
   
- SQL_DROP： 此選項已被取代。 呼叫**SQLFreeStmt**具有*選項*SQL_DROP 的會對應至在驅動程式管理員[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
+ SQL_DROP:這個選項已被取代。 呼叫**SQLFreeStmt**具有*選項*SQL_DROP 的會對應至在驅動程式管理員[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
   
- SQL_UNBIND： 設定為 0，釋放所有的資料行緩衝區 ARD SQL_DESC_COUNT 欄位繫結**SQLBindCol**的給定*StatementHandle*。 這不會不解除繫結的書籤資料行中;若要這樣做，請 ARD 書籤資料行的 SQL_DESC_DATA_PTR 欄位是設為 NULL。 請注意，是否共用的多個陳述式的明確配置描述元上執行這項作業，則作業會影響共用描述元的所有陳述式的繫結。 如需詳細資訊，請參閱 <<c0> [ 概觀的擷取結果 （基本）](../../../odbc/reference/develop-app/retrieving-results-basic.md)。  
+ SQL_UNBIND:設定為 0，釋放所有的資料行緩衝區 ARD SQL_DESC_COUNT 欄位繫結**SQLBindCol**的給定*StatementHandle*。 這不會不解除繫結的書籤資料行中;若要這樣做，請 ARD 書籤資料行的 SQL_DESC_DATA_PTR 欄位是設為 NULL。 請注意，是否共用的多個陳述式的明確配置描述元上執行這項作業，則作業會影響共用描述元的所有陳述式的繫結。 如需詳細資訊，請參閱 <<c0> [ 概觀的擷取結果 （基本）](../../../odbc/reference/develop-app/retrieving-results-basic.md)。  
   
- SQL_RESET_PARAMS： 設定 APD SQL_DESC_COUNT 欄位為 0，釋放所有所設定的參數緩衝區**SQLBindParameter**的給定*StatementHandle*。 如果共用的多個陳述式的明確配置描述元上執行這項作業，則這項作業會影響共用描述元的所有陳述式的繫結。 如需詳細資訊，請參閱 <<c0> [ 繫結參數](../../../odbc/reference/develop-app/binding-parameters-odbc.md)。  
+ SQL_RESET_PARAMS:APD 中的 [SQL_DESC_COUNT] 欄位設定為 0，釋放所有所設定的參數緩衝區**SQLBindParameter**的給定*StatementHandle*。 如果共用的多個陳述式的明確配置描述元上執行這項作業，則這項作業會影響共用描述元的所有陳述式的繫結。 如需詳細資訊，請參閱 <<c0> [ 繫結參數](../../../odbc/reference/develop-app/binding-parameters-odbc.md)。  
   
 ## <a name="returns"></a>傳回值  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR 或 SQL_INVALID_HANDLE。  

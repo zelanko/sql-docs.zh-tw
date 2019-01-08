@@ -1,5 +1,5 @@
 ---
-title: 設定 Power Pivot 健全狀況規則 |Microsoft 文件
+title: 設定 Power Pivot 健全狀況規則 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: befe9b69e50ee6b57caef8275dce81139b977d42
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aae3b89c52f5d1d8524681a3a4fd2eda9ab73907
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027155"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398061"
 ---
 # <a name="configure-power-pivot-health-rules"></a>設定 PowerPivot 健全狀況規則
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,10 +28,10 @@ ms.locfileid: "34027155"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **注意**：健全狀況規則設定是針對 SQL Server Analysis Services 執行個體和 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務應用程式分別設定。 請使用本主題的指示來設定每一個服務的健全狀況規則。 如果是 SharePoint 2013 部署， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 只會使用服務應用程式。 因此， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 會針對不同版本的 SharePoint 安裝不同組的健全狀況規則。 請參閱[健全狀況規則參考 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md) 主題中的「版本」資料行，或者也可以執行以下 Windows PowerShell 命令來查看已安裝的規則。  
+ **注意：** 健全狀況規則設定針對 SQL Server Analysis Services 執行個體分別設定和[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]服務應用程式。 請使用本主題的指示來設定每一個服務的健全狀況規則。 如果是 SharePoint 2013 部署， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 只會使用服務應用程式。 因此， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 會針對不同版本的 SharePoint 安裝不同組的健全狀況規則。 請參閱主題中的 「 版本 」 資料行[健全狀況規則參考&#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md)，或者您可以執行下列 Windows PowerShell 命令來查看已安裝的規則。  
   
 ```  
-Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
+Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like "*power*"}  | format-table -property * -autosize | out-default  
 ```  
   
  **本主題內容：**  
@@ -42,7 +42,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
  [設定用於評估應用程式穩定性的健全狀況規則 (PowerPivot 服務應用程式)](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>先決條件  
  您必須是服務應用程式管理員，才能變更 Analysis Services 執行個體與 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務應用程式的組態屬性。  
   
 ##  <a name="bkmk_view"></a> 檢視 PowerPivot 健全狀況規則  
@@ -64,7 +64,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  在頁面頂端，擁有 Analysis Services 執行個體的 SharePoint 伺服器陣列中選取伺服器 (在下圖中，伺服器名稱為 AW-SRV033)。 **[SQL Server Analysis Services]** 將會出現在服務清單中。  
   
-     ![螢幕擷取畫面管理服務的伺服器 頁面上](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-servicesonserver.gif "螢幕擷取畫面管理服務的伺服器 頁面")  
+     ![螢幕擷取畫面管理服務的伺服器 頁面](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-servicesonserver.gif "螢幕擷取畫面管理服務的伺服器 頁面")  
   
 3.  按一下 **[SQL Server Analysis Services]**。  
   
@@ -73,27 +73,27 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      CPU 資源配置不足 (預設為 80%)  
      如果 Analysis Services 伺服器處理序 (msmdsrv.exe) 使用的 CPU 資源在 4 個小時期間超過或等於 80% (如 [資料收集間隔] 設定所指定)，就會觸發這個健全狀況規則。  
   
-     此組態設定會對應到 [檢閱問題與方案] 頁面上的以下規則定義：[[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Analysis Services 的 CPU 資源不足，無法執行要求的作業]。  
+     此組態設定會對應到以下規則定義上**檢閱問題與方案**頁面：  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]:Analysis Services 沒有足夠的 CPU 資源來執行要求的作業。**  
   
      系統的 CPU 資源不足 (預設為 90%)  
      如果伺服器的 CPU 資源在 4 個小時的期間內大於或等於 90% (如 [資料收集間隔] 設定所指定)，就會觸發這個健全狀況規則。 整體 CPU 使用量會以健全狀態為基礎之負載平衡演算法的一部分來衡量，以伺服器健全狀態量值的形式監視 CPU 使用量。  
   
-     此組態設定會對應到 [檢閱問題與方案] 頁面上的以下規則定義：[[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 整體 CPU 使用率太高]。  
+     此組態設定會對應到以下規則定義上**檢閱問題與方案**頁面：  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]:整體 CPU 使用率偏太高。**  
   
      記憶體臨界值不足 (預設為 5%)  
      在 SharePoint 應用程式伺服器上，SQL Server Analysis Services 執行個體應該一律擁有永遠是未使用的少量保留記憶體。 由於伺服器對於大部分的作業都會繫結記憶體，如果此伺服器一直都沒有執行到上限，則運作狀況會最好。 5% 的未使用記憶體會計算為配置給 Analysis Services 之記憶體的百分比。 例如，如果您的總記憶體為 200 GB，並將 80% 的記憶體 (或 160 GB) 配置給 Analysis Services，則 5% 的未使用記憶體為 160 GB 的 5% (或 8 GB)。  
   
-     此組態設定會對應到 [檢閱問題與方案] 頁面上的以下規則定義：[[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: Analysis Services 的記憶體不足，無法執行要求的作業]。  
+     此組態設定會對應到以下規則定義上**檢閱問題與方案**頁面：  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]:Analysis Services 沒有足夠的記憶體來執行要求的作業。**  
   
      最大連接數目 (預設為 100)  
      如果 Analysis Services 執行個體的連接數目在 4 個小時的期間超過或等於 100 個連接 (如 [資料收集間隔] 設定所指定)，就會觸發這個健全狀況規則。 這個預設值為任意值 (而不是根據伺服器的硬體規格或使用者活動)，所以您可能會根據您的環境中的伺服器容量和使用者活動來提高或降低此值。  
   
-     此組態設定會對應到 [檢閱問題與方案] 頁面上的以下規則定義：[[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 連接數目太多表示要部署更多的伺服器才能處理目前的負載]。  
+     此組態設定會對應到以下規則定義上**檢閱問題與方案**頁面：  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]:高連線數表示應該部署更多的伺服器才能處理目前的負載。**  
   
      磁碟空間不足 (預設為 5%)  
      每次要求資料庫時，都會使用磁碟空間來快取 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 資料。 當磁碟空間不足時，這個規則會讓您知道這個狀況。 根據預設，當備份資料夾所在之磁碟機上的磁碟空間低於 5% 時，便會觸發此健全狀況規則。 如需磁碟使用量的詳細資訊，請參閱 [設定磁碟空間使用量 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)。  
   
-     此組態設定會對應到 [檢閱問題與方案] 頁面上的以下規則定義：[[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]資料快取所在之磁碟機上的磁碟空間不足]。  
+     此組態設定會對應到以下規則定義上**檢閱問題與方案**頁面：  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]:磁碟空間不足的磁碟機上其中[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]快取資料。**  
   
      資料收集間隔 (小時)  
      您可以指定資料收集期間，該期間用來計算觸發健全狀況規則所使用的數字。 雖然系統會持續受到監控，但是用來觸發健全狀況規則警告的臨界值會使用一段預先定義之間隔內所產生的資料來計算。 預設間隔是 4 小時。 伺服器會擷取過去 4 小時所收集的系統和使用量資料，以評估使用者連接數目、磁碟空間使用量以及 CPU 和記憶體使用率。  
@@ -108,14 +108,14 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 3.  [ [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理儀表板] 隨即出現。 在 **[動作]** 清單中，按一下 **[設定服務應用程式設定]** ，以開啟服務應用程式設定頁面。  
   
-     ![螢幕擷取畫面的儀表板，專注於動作清單](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-actionslist.gif "螢幕擷取畫面的儀表板，專注於動作清單")  
+     ![專注於動作 清單中的儀表板的螢幕擷取畫面](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-actionslist.gif "專注於動作 清單中的儀表板的螢幕擷取畫面")  
   
 4.  在 [健全狀況規則設定] 中，修改下列設定：  
   
      連接負載比率 (預設為 20%)  
      如果載入事件數目相對於連接事件數目而言較高，則會觸發這個健全狀況規則，發出伺服器可能卸載資料庫太快的訊號，或減少快取設定太極端的訊號。  
   
-     此組態設定會對應到 [檢閱問題與方案] 頁面上的以下規則定義：[[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 連接的載入事件的比率過高]。  
+     此組態設定會對應到以下規則定義上**檢閱問題與方案**頁面：  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]:事件載入連接的比率會太高。**  
   
      資料收集間隔 (預設為 4 小時)  
      您可以指定資料收集期間，該期間用來計算觸發健全狀況規則所使用的數字。 雖然系統會持續受到監控，但是用來觸發健全狀況規則警告的臨界值會使用一段預先定義之間隔內所產生的資料來計算。 預設間隔是 4 小時。 伺服器會擷取過去 4 小時所收集的系統和使用量資料，以評估收集負載比率。  
@@ -125,7 +125,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
      如需使用量資料收集的詳細資訊，請參閱[設定使用量資料收集的對象 &#40;Power Pivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  
   
-     此組態設定會對應到 [檢閱問題與方案] 頁面上的以下規則定義：[[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: 使用量資料並未以預期的頻率更新]。  
+     此組態設定會對應到以下規則定義上**檢閱問題與方案**頁面：  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]:不是預期的頻率更新使用量資料。**  
   
 ## <a name="see-also"></a>另請參閱  
  [設定磁碟空間使用量 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)   

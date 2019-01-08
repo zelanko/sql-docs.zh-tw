@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.alert.history.f1
@@ -12,12 +12,12 @@ ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: edc93484f455b07fce29650386cfeb6a5a7c5aef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bdda14df5463fc9bd2a90d990d7c2be35f910d4a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143574"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757370"
 ---
 # <a name="alert-properties-history-page"></a>警示屬性 (記錄頁面)
   使用此頁面即可檢視及修改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示的記錄。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [SQL Server]
@@ -27,12 +26,12 @@ ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c486dfe6e1d41d18274bb5825c3ed63dc4598a0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093588"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762910"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>SQL Server 安裝的安全性考量
   安全性對於每一個產品和每一項業務都很重要。 只要遵循簡單的最佳做法，就可以避免許多安全性漏洞。 本主題會討論一些您在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前和安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之後應該考慮的安全性最佳做法。 特定功能的參考主題中會包括那些功能的安全性指南。  
@@ -81,7 +80,7 @@ ms.locfileid: "48093588"
 ###  <a name="isolated_services"></a> Isolate Services  
  隔離服務減少一個遭到破壞的服務被用來破壤其他服務的風險。 若要隔離服務，請考慮下列方針：  
   
--   在個別 Windows 帳戶下執行個別的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。 請盡可能針對每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務使用低權限的個別 Windows 或本機使用者帳戶。 如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+-   在個別 Windows 帳戶下執行個別的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。 請盡可能針對每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務使用低權限的個別 Windows 或本機使用者帳戶。 如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)預覽版本升級問題的解答。  
   
 ###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
  使用正確的檔案系統會增加安全性。 如果是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝，您應該執行下列工作：  
@@ -134,7 +133,7 @@ ms.locfileid: "48093588"
   
 -   將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務與低權限的 Windows 本機使用者帳戶或網域使用者帳戶產生關聯。  
   
--   如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+-   如需詳細資訊，請參閱 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)預覽版本升級問題的解答。  
   
  **驗證模式**  
   
@@ -144,7 +143,7 @@ ms.locfileid: "48093588"
   
  **增強式密碼**  
   
--   一律指派增強式密碼至`sa`帳戶。  
+-   一律指派增強式密碼給 `sa` 帳戶。  
   
 -   一律啟用檢查密碼強度和逾期的密碼原則。  
   

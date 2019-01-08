@@ -11,12 +11,12 @@ ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 127e0dbeef729c21c7155d7d3d7edf6f21a444c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85d4c4d79dbddd59c3208c28b3fea50c0aa857b7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182418"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514058"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>使用已註冊的伺服器執行指定評估
   您可以使用已註冊的伺服器，針對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一個或多個執行個體執行最佳作法原則的指定評估。 您可以使用本機伺服器群組或中央管理伺服器。  
@@ -76,7 +76,7 @@ ms.locfileid: "48182418"
 8.  若要檢視之原則的詳細的結果，請按一下 中的原則**結果**資料表。 **目標詳細資料**表顯示每個執行個體的詳細資料。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 2 課：根據排程評估最佳做法原則](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [第 2 課：評估最佳做法原則根據排程](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [監視和強制最佳做法，使用原則式管理](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)   

@@ -20,12 +20,12 @@ ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6c45471990d3eac42c8805fc9c6ba820a9762627
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc9d003fc4c1f3b3cd32e8f23fe635d56e48555e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105168"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510891"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>授與資料格資料的自訂存取權 (Analysis Services)
   資料格安全性可用來允許或拒絕存取 Cube 內的量值資料。 下圖顯示在利用其角色僅允許存取特定量值的使用者身分連接時，樞紐分析表中允許和拒絕的量值組合。 在此範例中， **Reseller Sales Amount** 及 **Reseller Total Product Cost** 是唯二能夠透過此角色取得的量值。 所有其他量值都會明確遭到拒絕 (下一節＜允許存取特定量值＞將提供用來取得這個結果的步驟)。  
@@ -34,7 +34,7 @@ ms.locfileid: "48105168"
   
  資料格權限適用於資料格內部的資料，不適用於它的中繼資料。 請注意資料格如何仍在查詢結果中顯示，但顯示的是 `#N/A` 的值，而非實際的資料格值。 `#N/A`值便會出現在資料格中，除非用戶端應用程式翻譯該值，或連接字串中設定 Secured Cell Value 屬性來指定另一個值。  
   
- 若要完全隱藏資料格，您必須限制可檢視的成員 - 維度、維度屬性和維度屬性成員。 如需詳細資訊，請參閱 <<c0> [ 授與對維度資料的自訂存取&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)。</c0>  
+ 若要完全隱藏資料格，您必須限制的成員-維度、 維度屬性和維度屬性成員為可見。 如需詳細資訊，請參閱 [授與維度資料的自訂存取權 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)。  
   
  身為管理員，您可以指定角色成員對 Cube 內的資料格是否擁有讀取、意外讀取或讀取/寫入權限。 在資料格中設定權限是允許的最低安全性層級，因此，在您開始套用這個層級的權限之前，請務必記住下列幾項事實：  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48105168"
 ## <a name="allow-access-to-specific-measures"></a>允許存取特定量值  
  您可以使用資料格安全性，明確選擇要使用哪些量值。 一旦明確識別允許的成員之後，所有其他成員就會變成無法使用。 這可能是透過 MDX 指令碼實作的最簡單案例，如同下列步驟所述。  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，選取資料庫，開啟 [角色] 資料夾，然後按一下資料庫角色 (或建立新的資料庫角色)。 成員資格應該已經指定，而角色應該擁有`Read`cube 的存取。 如果您需要這個步驟的說明，請參閱[授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，選取資料庫，開啟 [角色] 資料夾，然後按一下資料庫角色 (或建立新的資料庫角色)。 成員資格應該已經指定，而角色應該擁有 Cube 的 `Read` 存取權。 如需詳細資訊，請參閱 [授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) 。  
   
 2.  在 **[資料格資料]** 中，檢查 Cube 選取項目以確定您已選擇正確的選項，然後選取 **[啟用讀取權限]**。  
   
@@ -98,11 +98,11 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  假設成員對 Cube 本身具有讀取/寫入權限，即可使用資料格的讀取/寫入權限來啟用回寫功能。 在資料格層級授與的權限不得大於在 Cube 層級授與的權限。 如需詳細資訊，請參閱＜ [Set Partition Writeback](set-partition-writeback.md) ＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 產生器 &#40;Analysis Services-多維度資料&#41;](../mdx-builder-analysis-services-multidimensional-data.md)   
- [基本 MDX 指令碼&#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
- [授與處理權限&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)   
- [授與維度的權限&#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)   
- [授與對維度資料的自訂存取&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [授與 cube 或模型權限&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
+ [MDX 產生器 &#40;Analysis Services - 多維度資料&#41;](../mdx-builder-analysis-services-multidimensional-data.md)   
+ [基本 MDX 指令碼 &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
+ [授與處理權限 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)   
+ [授與維度的權限 &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)   
+ [授與維度資料的自訂存取權 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
   
   

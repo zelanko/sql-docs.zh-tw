@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - triggers [SMO]
@@ -14,12 +12,12 @@ ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ae7ab9d88a407f298156ebeafdb6ec5d70198b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b4f6cf3b1e988d12a39096d46275058d080a23c4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220638"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762330"
 ---
 # <a name="creating-altering-and-removing-triggers"></a>建立、改變和移除觸發程式
   在 SMO 中，觸發程序是利用 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 物件表示。 [!INCLUDE[tsql](../../../includes/tsql-md.md)]時，會引發觸發程序由設定執行程式碼<xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A>觸發程序物件的屬性。 觸發程序的類型是利用 <xref:Microsoft.SqlServer.Management.Smo.Trigger> 物件的其他屬性所設定，例如 <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A> 屬性。 這是布林值屬性，指定觸發程序是否由記錄的 `UPDATE` 在父資料表上引發。  

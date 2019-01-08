@@ -21,15 +21,15 @@ ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb169a7054a5b93bd923bc989baf95f5d9e22ce0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140338"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528445"
 ---
 # <a name="get-information-about-a-view"></a>取得檢視的資訊
-  您可以透過使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，取得 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視定義或屬性的資訊。 您可能需要查看檢視的定義才能了解如何從來源資料表衍生出資料；或是查看檢視所定義的資料。  
+  您可以透過使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，取得 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢視定義或屬性的相關資訊。 您可能需要查看檢視的定義才能了解如何從來源資料表衍生出資料；或是查看檢視所定義的資料。  
   
 > [!IMPORTANT]  
 >  如果變更檢視所參考的物件名稱，就必須修改檢視，使其文字反映新的名稱。 因此，在重新命名物件前，應先顯示物件的相依性，以判斷是否有任何檢視會受預期的變更所影響。  
@@ -137,7 +137,7 @@ ms.locfileid: "48140338"
      顯示選定的檢視是否傳回所有資料行。 這是在建立檢視時設定的。  
   
      **SQL 註解**  
-     顯示 SQL 陳述式的描述。 若要查看或編輯整個描述，請按一下 [描述]，再按屬性右邊的省略符號 **(…)** 。 您的註解中可能包含使用檢視的人及使用時間等這類資訊。  
+     顯示 SQL 陳述式的描述。 若要查看或編輯整個描述，請按一下 [描述]，然後按一下屬性右側的省略符號 **(...)**。 您的註解中可能包含使用檢視的人及使用時間等這類資訊。  
   
      **Top 規格**  
      展開以顯示 **[Top]**、 **[運算式]**、 **[百分比]** 屬性，以及 **[WITH TIES]** 屬性。  
@@ -213,7 +213,7 @@ ms.locfileid: "48140338"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;  

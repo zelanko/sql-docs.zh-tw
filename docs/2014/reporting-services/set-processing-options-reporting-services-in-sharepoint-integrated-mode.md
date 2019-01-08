@@ -14,12 +14,12 @@ ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 72089aad9a38c488b36fdb65cc94060d70c6482c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f89a84f8e003063883d711f8908ac619d50e93df
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104758"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398666"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>設定處理選項 (SharePoint 整合模式的 Reporting Services)
   您可以對 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表設定處理選項，以指定資料開始處理的時間。 您還可以設定報表處理的逾時值，以及決定是否要啟用目前報表之報表記錄的選項。  
@@ -31,7 +31,7 @@ ms.locfileid: "48104758"
 -   報表記錄是之前所執行之報表副本的集合。 您可以使用報表記錄，以維護報表經過一段時間的記錄。 報表記錄不適用於包含機密或個人資料的報表。 因此，報表記錄只能包括使用一組認證 (預存認證或用於自動執行報表的認證) 來查詢資料來源的報表，此種認證是所有執行報表的使用者皆可使用的。  
   
     > [!NOTE]  
-    >  與 SharePoint 整合的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 使用 SharePoint 的簽出和簽入內容管理功能來儲存 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 內容類型的更新。 這包括建立報表快照集。 因此，如果您已經在文件庫上啟用版本控制，您將看到新報表記錄快照集建立時更新的報表版本。 這是更新快照集的副作用。 當快照集更新時，它會使報表的 LastExecution 屬性變更，因此造成報表版本變更。  
+    >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 使用 SharePoint 的簽出和簽入內容管理功能來儲存 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 內容類型的更新。 這包括建立報表快照集。 因此，如果您已經在文件庫上啟用版本控制，您將看到新報表記錄快照集建立時更新的報表版本。 這是更新快照集的副作用。 當快照集更新時，它會使報表的 LastExecution 屬性變更，因此造成報表版本變更。  
   
 -   您可以指定逾時值，以便設定系統資源的使用限制。  
   
@@ -103,11 +103,11 @@ ms.locfileid: "48104758"
   
 ##  <a name="bkmk_set_database_timeout"></a> 設定資料庫逾時  
   
-1.  使用 Windows PowerShell 設定的 SharePoint 報表伺服器資料庫逾時。 如需詳細資訊，請參閱的 < 取得和設定 Reporting Service 應用程式資料庫的屬性 > 一節[Reporting Services SharePoint 模式的 PowerShell cmdlet](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
+1.  使用 Windows PowerShell 設定的 SharePoint 報表伺服器資料庫逾時。 如需詳細資訊，請參閱 [Reporting Services SharePoint 模式的 PowerShell Cmdlet](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md) 的＜取得及設定 Reporting Services 應用程式資料庫的屬性＞一節。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表處理屬性](report-server/set-report-processing-properties.md)   
- [快取多個報表 &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
- [設定報表和共用資料集處理逾時值&#40;SSRS&#41;](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [快取報表 &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
+ [設定報表和共用資料集處理的逾時值 &#40;SSRS&#41;](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
   
   

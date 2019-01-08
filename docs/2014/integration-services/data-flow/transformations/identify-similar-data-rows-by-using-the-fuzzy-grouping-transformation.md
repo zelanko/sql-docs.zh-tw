@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Fuzzy Grouping transformation
@@ -16,12 +15,12 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c9538a492ae6f2da0c4a5adeceb86bd7985d539
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 37ec2899e5e6abe3ff8703f664d76b56b28c0ae3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460283"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750150"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>使用模糊群組轉換來識別相似的資料列
   若要加入和設定「模糊群組」轉換，封裝必須至少包含一個「資料流程」工作和一個來源。  

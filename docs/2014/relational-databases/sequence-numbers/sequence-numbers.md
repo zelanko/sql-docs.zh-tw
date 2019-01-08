@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sequence number object, overview
@@ -17,12 +16,12 @@ ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d0446aaf5508ad0d2655245f441d4da81a6c79c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106858"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753380"
 ---
 # <a name="sequence-numbers"></a>序號
   序列是使用者定義的結構描述繫結物件，該物件會根據建立順序所使用的規格產生數值序列。 數值序列是在定義的間隔依照遞增或遞減順序來產生，而且可依照要求循環 (重複)。 與識別欄位不同的是，順序不會與資料表產生關聯。 應用程式會參考順序物件，以擷取它的下一個值。 順序與資料表之間的關聯性是由應用程式所控制。 使用者應用程式可以參考順序物件，並協調跨越多個資料列和資料表的值索引鍵。  
@@ -31,7 +30,7 @@ ms.locfileid: "48106858"
   
  不同於插入資料列時產生的識別欄位值，應用程式可以藉由呼叫 [NEXT VALUE FOR](/sql/t-sql/functions/next-value-for-transact-sql) 函數，在插入資料列之前取得下一個序號。 此序號是在呼叫 NEXT VALUE FOR 時配置的，即使該編號從未插入資料表也一樣。 NEXT VALUE FOR 函數可當做資料表定義中資料行的預設值使用。 您可以使用 [sp_sequence_get_range](/sql/relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql) 一次取得多個序號範圍。  
   
- 順序可以定義為任何整數資料類型。 如果未指定的資料類型，順序就會預設以`bigint`。  
+ 順序可以定義為任何整數資料類型。 如果沒有指定資料類型，順序就會預設為 `bigint`。  
   
 ## <a name="using-sequences"></a>使用順序  
  在下列案例中，您可以使用順序來取代識別欄位：  

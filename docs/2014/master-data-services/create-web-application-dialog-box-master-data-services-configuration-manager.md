@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createapp.f1
@@ -13,12 +12,12 @@ ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d05645a9dcf73dff1ffff2f2370260f44ca1e015
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dac7b74969c341b7f68c7dfbf56d2314d9ab4427
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074652"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788360"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>建立 Web 應用程式對話方塊 (Master Data Services 組態管理員)
   使用 [建立 Web 應用程式] 對話方塊可建立 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式。 這個 Web 應用程式會建立在您於 [Web 組態] 頁面上所選取的網站中。  
@@ -41,7 +40,7 @@ ms.locfileid: "48074652"
 |**確認密碼**|重新輸入指定之使用者帳戶的密碼。 **[密碼]** 和 **[確認密碼]** 欄位必須包含相同的密碼。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Web 組態 頁面&#40;Master Data Services 組態管理員&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
+ [Web 組態頁面 &#40;Master Data Services 組態管理員&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
  [設定 Master Data Services 資料庫和網站](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [Web 應用程式需求&#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
  [建立主資料管理員 Web 應用程式 &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)  

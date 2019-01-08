@@ -20,16 +20,16 @@ ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 396c1b8c2e7ef3b407253fd0fbde04de34065ea5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dbd405189d17051c4f1a6f07c943f77d6a6289c4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769746"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207797"
 ---
 # <a name="sqlremovedsnfromini-function"></a>SQLRemoveDSNFromIni 函式
 **合規性**  
- 版本導入： ODBC 1.0  
+ 導入的版本：ODBC 1.0  
   
  **摘要**  
  **SQLRemoveDSNFromIni**移除系統資訊的資料來源。  
@@ -39,7 +39,7 @@ ms.locfileid: "47769746"
 ```  
   
 BOOL SQLRemoveDSNFromIni(  
-     LPCSTR   lpszDSN);  
+     LPCSTR   lpszDSN);  
 ```  
   
 ## <a name="arguments"></a>引數  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.makemanaged.agentaccount.F1
@@ -20,12 +20,12 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 382b2212ef32e47b0045285ad497f2d476099c79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98350d5d68990fdf31d42bacff2fc2ebb77c116b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152728"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762480"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>註冊 SQL Server 的執行個體 (SQL Server 公用程式)
   將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體註冊到現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內，當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Managed 執行個體來監視它的效能和組態。 公用程式控制點 (UCP) 每隔 15 分鐘就會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Managed 執行個體收集組態和效能資訊。 這項資訊會儲存在 UCP 的公用程式管理資料倉儲 (UMDW) 中，而 UMDW 檔案名稱為 sysutility_mdw。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能資料會與原則相比較，有助於識別資源使用瓶頸及合併機會。  
@@ -87,12 +87,12 @@ ms.locfileid: "48152728"
 -   [正在註冊 SQL Server 的執行個體](#Enrolling)  
   
 ##  <a name="Welcome"></a> 註冊執行個體精靈簡介  
- 若要啟動此精靈，請在公用程式控制點上展開 [公用程式總管] 樹狀目錄，然後以滑鼠右鍵按一下 [受管理的執行個體]，並選取 [新增受管理的執行個體...]。  
+ 若要啟動此精靈，請在公用程式控制點上展開 [公用程式總管] 樹狀目錄，以滑鼠右鍵按一下 [受控執行個體]，然後選取 [新增受控執行個體...]。  
   
  若要繼續進行，請按 **[下一步]**。  
   
 ##  <a name="Instance_name"></a> 指定 SQL Server 的執行個體  
- 若要從連接對話方塊選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請按一下 [連接...]。 使用以下格式提供電腦名稱和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱：ComputerName\InstanceName。 如需詳細資訊，請參閱[連接到伺服器 &#40;Database Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md)。  
+ 若要從連接對話方塊選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請按一下 [連接...]。使用以下格式提供電腦名稱和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱：ComputerName\InstanceName。 如需詳細資訊，請參閱[連接到伺服器 &#40;Database Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md)。  
   
  若要繼續進行，請按 **[下一步]**。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48152728"
 > [!NOTE]  
 >  如果連接已加密，將會使用加密的連接。 如果連接未加密， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式會使用加密的連接重新連接。  
   
- 若要繼續，請按一下 **[連接...]**。  
+ 若要繼續，請按一下 [連線...]。  
   
 ##  <a name="Proxy_configuration"></a> 公用程式收集組帳戶  
  指定要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式收集組的 Windows 網域帳戶。 此帳戶會當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式收集組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶來使用。 另外，您也可以使用現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶。 若要通過驗證需求，請使用下列方針來指定帳戶。  
@@ -169,12 +169,12 @@ ms.locfileid: "48152728"
 >   
 >  執行 Transact-SQL 陳述式或批次時發生例外狀況。 (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  其他資訊: 無法獲得關於 Windows NT 群組/使用者 '\<域名稱\帳戶名稱>' 的資訊，錯誤碼 0x5。 (Microsoft SQL Server，錯誤：15404)  
+>  其他資訊：無法獲得關於 Windows NT 群組/使用者的資訊 '\<以 >'，錯誤碼 0x5。 (Microsoft SQL Server，錯誤：15404)  
 >   
 >  如需對這個失敗進行疑難排解的詳細資訊，請參閱 [疑難排解 SQL Server 公用程式](../../database-engine/troubleshoot-the-sql-server-utility.md)。  
   
 > [!IMPORTANT]  
->  請勿在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體上變更「公用程式資訊」收集組的任何屬性，也請勿手動開啟/關閉資料收集，因為資料收集是由公用程式代理程式作業所控制。  
+>  請勿在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的受控執行個體上變更「公用程式資訊」收集組的任何屬性，也請勿手動開啟/關閉資料收集，因為資料收集是由公用程式代理程式作業所控制。  
   
  完成 [註冊執行個體] 精靈之後，請在 SSMS 的**公用程式總管**瀏覽窗格中，按一下 [受管理的執行個體] 節點。 註冊的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會顯示在 [公用程式總管內容] 窗格中的清單檢視內。  
   

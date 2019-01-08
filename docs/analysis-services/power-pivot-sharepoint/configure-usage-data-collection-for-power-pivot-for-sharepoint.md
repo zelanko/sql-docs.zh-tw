@@ -1,5 +1,5 @@
 ---
-title: 設定使用量資料收集 (Powerpivot for SharePoint |Microsoft 文件
+title: 設定使用量資料收集 (Powerpivot for SharePoint |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bafa3d8b45dc2ad59314218f34959120b50e6bfe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 52a2754a4c6410430042f2b31805db42def4ec1f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026875"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420279"
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>設定使用量資料收集的對象 (PowerPivot for SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "34026875"
   
 4.  在 **[要記錄的事件]** 區段中，選取或清除核取方塊以啟用或停用下列 Analysis Services 事件：  
   
-    |事件|Description|  
+    |事件|描述|  
     |-----------|-----------------|  
     |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 連接**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 連接事件是用來監視以使用者身分建立的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器連接。|  
     |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 載入資料使用量**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 載入資料使用量是用來監視將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料載入伺服器記憶體的要求。 從內容資料庫或從快取載入的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料檔案會產生載入事件。|  
@@ -86,9 +86,9 @@ ms.locfileid: "34026875"
 ##  <a name="jobs"></a> 設定用於使用量資料收集的計時器工作  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器健全狀況與使用量資料會透過兩個計時器工作，移到使用量資料收集系統中的不同位置：  
   
--   「Microsoft SharePoint Foundation 使用量資料匯入」計時器工作會將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 使用量資料移到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式資料庫。  
+-   「 Microsoft SharePoint Foundation 使用量資料匯入 」 計時器工作會將移[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]使用量[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服務應用程式資料庫。  
   
--   「[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板處理」計時器工作會將該資料移到作為內建系統管理報表之資料來源的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿。  
+-   「[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]管理儀表板處理計時器工作 」 的資料[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]是內建的系統管理報表的資料來源的活頁簿。  
   
  如果您需要更頻繁地重新整理出現在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中的系統管理報表，請遵循以下的步驟進行。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "34026875"
   
      下一個事件發生時，就會實際刪除資料。 只有在系統處理事件時，才會檢查使用量資料記錄的限制。  
   
-3.  按一下 **[確定]**。  
+3.  按一下 [確定] 。  
   
  如需如何收集和儲存使用量資料的詳細資訊，請參閱 [PowerPivot 使用量資料收集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "34026875"
   
      任何超過此限制的要求都會被分類為 *「已超過」*。 *「已超過」* 沒有可設定的臨界值。 它會從您在 [長時間要求上限] 指定的上限來推斷。 歸類為「已超過」類別的要求，執行的時間超過您已定義的 SLA 所允許的時間。  
   
-6.  按一下 **[確定]**。  
+6.  按一下 [確定] 。  
   
 ##  <a name="ttr"></a> 指定向使用量資料收集系統報告查詢統計資料的頻率  
  報告時間間隔指定向使用量資料收集系統報告查詢統計資料的頻率。 查詢統計資料會累積在處理序中，並定期報告為單一事件。 您可以調整間隔，以增加或減少寫入記錄檔的頻率。  
@@ -161,7 +161,7 @@ ms.locfileid: "34026875"
   
      如果您將此值引發成更大的數字，則可能會在可以報告它之前，即遺失統計資料。 例如，服務重新啟動將會導致查詢統計資料遺失。 相反地，如果內建的活動報表顯示資料不足，請考慮減少間隔，以便更頻繁地取得報告時間事件。  
   
-3.  按一下 **[確定]**。  
+3.  按一下 [確定] 。  
   
 ##  <a name="openconfig"></a> 開啟 [PowerPivot 服務應用程式] 頁面以存取組態設定  
  您必須是伺服陣列或服務系統管理員，才能修改服務應用程式設定。 如果已在伺服器陣列中定義多個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式，則必須個別修改每個服務應用程式。  
@@ -179,10 +179,10 @@ ms.locfileid: "34026875"
   
  下表顯示使用量資料收集組態的預設值。  
   
-|設定|預設值|型別|有效範圍|  
+|設定|預設值|類型|有效範圍|  
 |-------------|-------------------|----------|-----------------|  
 |**Analysis Services 使用量事件** (連接、載入、卸載、要求)|\<啟用 >|布林|啟用或停用這些值。|  
-|**查詢報告間隔**|300 (以秒為單位)|整數|1 到任何正整數。 預設值是 5 分鐘。|  
+|**查詢報告間隔**|300 (以秒為單位)|Integer|1 到任何正整數。 預設值是 5 分鐘。|  
 |**Usage data history**|365 (以天為單位)|Integer|0 表示無限制，但是您也可以設定歷程記錄資料到期的上限，並設成可自動刪除資料。 有限的保留週期有效值為 1 到 5000 (以天為單位)。|  
 |簡單式回應時間上限|500 (以毫秒為單位)|Integer|設定會定義簡單式要求-回應交換的上限。 任何介於 0 到 500 毫秒之間完成的要求都是簡單式要求，報告用途會加以忽略。|  
 |快速回應時間上限|1000 (以毫秒為單位)|Integer|設定會定義快速要求-回應交換的上限。|  
@@ -191,6 +191,6 @@ ms.locfileid: "34026875"
   
 ## <a name="see-also"></a>另請參閱  
  [組態設定參考 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
- [Power Pivot 使用量資料收集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
+ [PowerPivot 使用量資料收集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   
   

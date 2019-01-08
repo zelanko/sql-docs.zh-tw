@@ -15,15 +15,15 @@ ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2071ec7d7c9a31a9da8982b583ef7618700db5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d75c374a7d9d57483dd56e34b51fcb6d89e1b52
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649316"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504086"
 ---
 # <a name="level-1-interface-conformance"></a>層級 1 介面一致性
-層級 1 介面一致性層級包含核心介面一致性層級功能，加上額外的功能，例如，通常可在 OLTP 關聯式 DBMS 中的交易。 層級 1 介面 – 符合標準驅動程式可讓應用程式執行下列作業，除了核心介面一致性層級中的功能：  
+層級 1 介面一致性層級包含核心介面一致性層級功能，加上額外的功能，例如，通常可在 OLTP 關聯式 DBMS 中的交易。 層級 1 介面符合標準驅動程式可讓應用程式執行下列作業，除了核心介面一致性層級中的功能：  
   
 |||  
 |-|-|  
@@ -33,6 +33,6 @@ ms.locfileid: "47649316"
 |104|取得主索引鍵的資料表，藉由呼叫**SQLPrimaryKeys**。|  
 |105|使用預存程序，透過程序呼叫的 ODBC 逸出序列，並查詢藉由呼叫的預存程序，相關的資料字典**SQLProcedureColumns**並**SQLProcedures**。 （程序會建立程式，並在資料來源上預存程序已超出本文的範圍）。|  
 |106|連接到資料來源，以互動方式瀏覽可用的伺服器，藉由呼叫**SQLBrowseConnect**。|  
-|107|若要執行某些資料庫作業，而不是 SQL 陳述式使用 ODBC 函數： **SQLSetPos** SQL_POSITION 與 SQL_REFRESH。|  
+|107|若要執行某些資料庫作業，而不是 SQL 陳述式使用 ODBC 函數：**SQLSetPos** SQL_POSITION 與 SQL_REFRESH。|  
 |108|存取多個批次和預存程序，藉由呼叫產生的結果集的內容**SQLMoreResults**。|  
 |109|分隔交易橫跨數個 ODBC 函數，則為 true 的不可部分完成性與能夠指定在 SQL_ROLLBACK **SQLEndTran**。|

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c4483646883ede33ae3203fbe8335afb3ed91756
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab9de68ba11a413ded1a60c5739aea207e158a9e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135348"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764270"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Oracle CDC 執行個體資料類型
   Oracle CDC 執行個體支援大多數的 Oracle 資料類型。 以下章節描述支援的資料類型和不支援的資料類型。  
@@ -74,7 +73,7 @@ ms.locfileid: "48135348"
 -   VARRAY  
   
 ## <a name="see-also"></a>另請參閱  
- [Attunity oracle 異動資料擷取設計工具](change-data-capture-designer-for-oracle-by-attunity.md)   
+ [Attunity Oracle 異動資料擷取設計工具](change-data-capture-designer-for-oracle-by-attunity.md)   
  [Oracle CDC 執行個體](the-oracle-cdc-instance.md)  
   
   

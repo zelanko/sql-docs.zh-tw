@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.cdw.transfermethod.f1
@@ -26,15 +25,15 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d47f2e7ce32ef77ec7188efbc7c09d053cf8208
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108688"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759110"
 ---
 # <a name="use-the-copy-database-wizard"></a>使用複製資料庫精靈
-  「複製資料庫精靈」可讓您輕鬆地在伺服器之間移動或複製資料庫及其物件，而不需要讓伺服器停機。 您也可以從舊版升級的資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 使用此精靈可以執行下列作業：  
+  「複製資料庫精靈」可讓您輕鬆地在伺服器之間移動或複製資料庫及其物件，而不需要讓伺服器停機。 您也可以將資料庫從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 使用此精靈可以執行下列作業：  
   
 -   挑選來源和目的地伺服器。  
   
@@ -119,10 +118,10 @@ ms.locfileid: "48108688"
      可讓使用者透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者帳戶連接。  
   
      **[使用 SQL Server 驗證]**  
-     允許使用者藉由提供連線[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證使用者名稱和密碼。  
+     可讓使用者經由提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證使用者名稱和密碼來進行連接。  
   
      **使用者名稱**  
-     輸入要用來連接的使用者名稱。 此選項才可使用您選取要使用連線[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。  
+     輸入要用來連接的使用者名稱。 這個選項只有在您選取了使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連接時才可以使用。  
   
      **密碼**  
      輸入登入的密碼。 這個選項只有在您選取了使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連接時才可以使用。  
@@ -142,13 +141,13 @@ ms.locfileid: "48108688"
      可讓使用者透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者帳戶連接。  
   
      **[使用 SQL Server 驗證]**  
-     允許使用者藉由提供連線[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證使用者名稱和密碼。  
+     可讓使用者經由提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證使用者名稱和密碼來進行連接。  
   
      **使用者名稱**  
-     輸入要用來連接的使用者名稱。 此選項才可使用您已選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。  
+     輸入要用來連接的使用者名稱。 唯有在您選取了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證之後，此選項才可以使用。  
   
      **密碼**  
-     輸入登入的密碼。 此選項才可使用您已選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。  
+     輸入登入的密碼。 唯有在您選取了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證之後，此選項才可以使用。  
   
      **下一個**  
      連接到伺服器，並驗證使用者。 此處理序會檢查使用者在選取的電腦上是否擁有以上所列的權限。  
@@ -229,20 +228,20 @@ ms.locfileid: "48108688"
      **資料夾位置**  
      指定檔案系統上之來源資料庫檔案的位置。  
   
-     例如：C:\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA  
+     例如：C:\Program Files\Microsoft SQL Server\MSSQL110。MSSQLSERVER\MSSQL\DATA  
   
      **來源伺服器上的檔案共用**  
      將來源資料庫檔案的位置指定為檔案共用的路徑。  
   
      例如:"\\\\*server_name*\C$\Program Files\Microsoft SQL Server\MSSQL110。MSSQLSERVER\MSSQL\Data  
   
-9. 複製資料庫精靈會建立[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝來傳送資料庫。 請從**設定套件**頁面適當地自訂封裝。  
+9. 複製資料庫精靈會建立 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝來傳送資料庫。請從 **[設定封裝]** 頁面適當地自訂封裝。  
   
      **封裝位置**  
-     顯示 where[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝的寫入。  
+     顯示 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝的寫入位置。  
   
      **封裝名稱**  
-     輸入的名稱[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝。  
+     輸入 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝的名稱。  
   
      **記錄選項**  
      選取是要將記錄資訊儲存在 Windows 事件記錄檔中，還是儲存在文字檔中。  
@@ -250,7 +249,7 @@ ms.locfileid: "48108688"
      **錯誤記錄檔路徑**  
      提供記錄檔位置的路徑。 只有在已選取文字檔案登入選項時，才能使用此選項。  
   
-10. 從 **[排程封裝]** 頁面，指定您要讓移動或複製作業開始的時間。 如果您不是系統管理員，您必須指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent Proxy 帳戶可存取[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)](SSIS) 封裝執行子系統。  
+10. 從 **[排程封裝]** 頁面，指定您要讓移動或複製作業開始的時間。 如果您不是系統管理員，您必須指定可存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSIS) 封裝執行子系統的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Agent Proxy 帳戶。  
   
      **Run immediately**  
      在您按 **[下一步]** 之後，開始移動或複製作業。  
@@ -264,7 +263,7 @@ ms.locfileid: "48108688"
      **Integration Services proxy 帳戶**  
      選取可用的 Proxy 帳戶。 若要排程傳送，至少必須有一個 Proxy 帳戶可供使用者使用，而且帳戶要設定為擁有 **[SQL Server Integration Services 封裝執行]** 子系統的權限。  
   
-     若要建立的 proxy 帳戶[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝執行，在 [物件總管] 中，展開**SQL Server Agent**，展開**Proxy**，以滑鼠右鍵按一下**SSIS 套件執行**，然後按一下**新的 Proxy**。  
+     若要建立 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝執行的 Proxy 帳戶，請在 [物件總管] 中，展開 **[SQL Server Agent]**、展開 **[Proxy]**、以滑鼠右鍵按一下 **[SSIS 封裝執行]**，然後按一下 **[新增 Proxy]**。  
   
      **[系統管理員 (sysadmin)]** 固定伺服器角色成員的使用者，可以選取具有必要權限的 **[SQL Server Agent 服務帳戶]** 來執行這個作業步驟。  
   
@@ -279,7 +278,7 @@ ms.locfileid: "48108688"
      **Message**  
      提供每個步驟所傳回的任何訊息。  
   
-##  <a name="FollowUp"></a> 待處理：升級 SQL Server 資料庫之後  
+##  <a name="FollowUp"></a> 後續操作：升級 SQL Server 資料庫之後  
  在您使用複製資料庫精靈，將資料庫從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，資料庫就會變成立即可用並自動進行升級。 如果資料庫具有全文檢索索引，升級程序就會根據 **[全文檢索目錄升級選項]** 伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 **[匯入]** 或 **[重建]**，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入] 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 如需有關檢視或變更 **全文檢索目錄升級選項** 屬性設定的詳細資訊，請參閱＜ [管理及監視伺服器執行個體的全文檢索搜尋](../search/manage-and-monitor-full-text-search-for-a-server-instance.md)＞。  
   
  如果使用者資料庫的相容性層級在升級前為 100 或更高層級，則在升級後仍會保持相同。 如果已升級資料庫中的相容性層級為 90，則相容性層級會設定為 100 (這是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所支援的最低相容性層級)。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。  

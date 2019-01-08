@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c81d0dd5ad56db2216143ed847f148467fc2e91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c30c6a4f746ae9aa81b8c1a71c0e380bdd26df03
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140328"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815870"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 元素 (DTA)
   指定微調工作階段的最長時間 (分鐘)。  
@@ -39,15 +38,15 @@ ms.locfileid: "48140328"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|**資料類型和長度**|`unsignedInt`沒有長度限制。|  
+|**資料類型和長度**|`unsignedInt`，沒有長度限制。|  
 |**預設值**|480 分鐘 (8 小時)。|  
-|**出現次數**|除非已指定值，如`NumberOfEvents`項目。|  
+|**出現次數**|除非指定了 `NumberOfEvents` 元素值，否則，需要這個元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[TuningOptions 元素&#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**父元素**|[TuningOptions 元素 &#40;DTA&#41;](tuningoptions-element-dta.md)|  
 |**子元素**|None|  
   
 ## <a name="example"></a>範例  
@@ -68,6 +67,6 @@ ms.locfileid: "48140328"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

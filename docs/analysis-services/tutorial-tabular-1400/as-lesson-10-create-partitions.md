@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 教學課程第 10 課： 建立資料分割 |Microsoft Docs
+title: Analysis Services 教學課程第 10 課：建立資料分割 |Microsoft Docs
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: b7a4cfcb32023c20e05728a3faac3715278c1019
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f7b6e5bfd4c533028758f553e5d8c9b2ca21e6f2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43091326"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401141"
 ---
 # <a name="create-partitions"></a>建立資料分割
 
@@ -22,11 +22,11 @@ ms.locfileid: "43091326"
 
 在這一課，您建立資料分割來將 FactInternetSales 資料表分割成較小的邏輯部分，可以處理 （重新整理） 其他資料分割。 根據預設，您在模型中包含每個資料表會有一個分割區，其中包含所有資料表的資料行和資料列。 FactInternetSales 資料表中，我們想要將資料依年度;針對每個資料表的五年的一個資料分割。 接著，每個資料分割就可以單獨處理。 若要進一步了解，請參閱[分割區](../tabular-models/partitions-ssas-tabular.md)。 
   
-完成本課程的估計時間： **15 分鐘**  
+完成本課程的估計時間：**15 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 
-這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 9 課： 建立階層](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)。  
+這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 9 課：建立階層](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)。  
   
 ## <a name="create-partitions"></a>建立資料分割  
   
@@ -44,7 +44,7 @@ ms.locfileid: "43091326"
 
     ![as-lesson10-query-editor](../tutorial-tabular-1400/media/as-lesson10-query-editor.png)
 
-6.  在篩選的資料列 對話方塊中，在**顯示資料列： OrderDate**，保留**之後或等於**，然後在 日期 欄位中，輸入**1/1/2010年**。 離開**並**運算子選取，然後選取**之前**，然後在 [日期] 欄位中，輸入**2011 年 1 月 1 日**，然後按一下 **[確定]**。
+6.  在 [篩選資料列] 對話方塊中，在**顯示資料列，其中：OrderDate**，保留**之後或等於**，然後在 [日期] 欄位中，輸入**1/1/2010年**。 離開**並**運算子選取，然後選取**之前**，然後在 [日期] 欄位中，輸入**2011 年 1 月 1 日**，然後按一下 **[確定]**。
 
     ![為-lesson10-篩選-資料列](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
     
@@ -117,4 +117,4 @@ ms.locfileid: "43091326"
   
  ## <a name="whats-next"></a>下一步
 
-移至下一個課程︰[第 11 課： 建立角色](../tutorial-tabular-1400/as-lesson-11-create-roles.md)。 
+請移至下一課：[第 11 課：建立角色](../tutorial-tabular-1400/as-lesson-11-create-roles.md)。 

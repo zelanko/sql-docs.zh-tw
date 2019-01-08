@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - index create memory option
@@ -13,12 +12,12 @@ ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d5251c55d438d5596a9ce910dbf3ac0811eceef7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1274cf9a9e747412cc4fb212eee18a9d5d4a8f40
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209868"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639306"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>設定 index create memory 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] index create memory [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **index create memory** 選項會控制最初配置來建立索引的記憶體數量上限。 這個選項的預設值是 0 (自我設定)。 若稍後在建立索引時需要更多記憶體，且有足夠的記憶體可用，則伺服器會使用該記憶體，因而超過此選項的設定。 若沒有更多可用的記憶體，則會使用預先配置的記憶體繼續進行索引建立作業。  
@@ -39,7 +38,7 @@ ms.locfileid: "48209868"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **待處理**  [設定 index create memory 選項之後](#FollowUp)  
+-   **後續操作：**[設定之後 index create memory 選項](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -82,7 +81,7 @@ ms.locfileid: "48209868"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `index create memory` 選項的值設定為 `4096`。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `index create memory` 選項的值設定為 `4096`。  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -98,7 +97,7 @@ GO
   
  如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 待處理：設定 index create memory 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定索引建立記憶體選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

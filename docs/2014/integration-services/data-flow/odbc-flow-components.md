@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 559864d5d3931a1ef57c51089ce671bcb53215d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5466587560477d331e475cf8d32488757975b730
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187508"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764300"
 ---
 # <a name="odbc-flow-components"></a>ODBC 流程元件
   此主題描述使用 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
@@ -88,11 +87,11 @@ ms.locfileid: "48187508"
   
 -   在 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 中開啟新的 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
--   建立 ODBC 連接管理員，其使用本機安裝的 Sybase ODBC 驅動程式，以及指向本機或遠端 Sybase 資料庫的 DSN。 此資料庫是擷取資料的來源資料庫。  
+-   建立 ODBC 連線管理員，其使用本機安裝的 Sybase ODBC 驅動程式，以及指向本機或遠端 Sybase 資料庫的 DSN。 此資料庫是擷取資料的來源資料庫。  
   
 -   建立 OLE DB 連線管理員，連接到要載入資料的目的地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
   
--   將 ODBC 來源拖曳到設計介面，然後設定來源從含有要複製之資料的 Sybase 資料表取得資料。 使用先前建立的 ODBC 連接管理員。  
+-   將 ODBC 來源拖曳到設計介面，然後設定來源從含有要複製之資料的 Sybase 資料表取得資料。 使用先前建立的 ODBC 連線管理員。  
   
 -   將 OLE DB 目的地拖曳到設計介面，將來源輸出連接到 OLE DB 目的地，然後設定目的地將資料載入含有從 Sybase 資料庫擷取之資料的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 使用先前建立的 OLE DB 連線管理員。  
   

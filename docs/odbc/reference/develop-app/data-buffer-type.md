@@ -16,15 +16,15 @@ ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a54054387a57d59470bae6d982b5ce700362f483
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e02d42d6d63608ccb70dc984e05ae11578d3160
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635386"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528856"
 ---
 # <a name="data-buffer-type"></a>資料緩衝區類型
-應用程式所指定之緩衝區的 C 資料類型。 使用單一的變數，這會發生於應用程式會將變數配置。 使用一般記憶體 — 也就是記憶體所指向的類型 void 的指標，這發生於應用程式轉換成特定類型的記憶體。 驅動程式會探索此類型有兩種：  
+應用程式所指定之緩衝區的 C 資料類型。 使用單一的變數，這會發生於應用程式會將變數配置。 使用泛用的記憶體-也就是記憶體所指的類型 void 的指標。 發生這種情況時應用程式轉換成特定類型的記憶體。 驅動程式會探索此類型有兩種：  
   
 -   **資料緩衝區型別引數。** 用來傳送參數值和結果集資料，例如與繫結之緩衝區的緩衝區*TargetValuePtr*中**SQLBindCol**，通常會有相關聯的類型引數，例如*TargetType*中的引數**SQLBindCol**。 這個引數，在應用程式會將對應的 C 類型識別項傳遞至緩衝區的型別。 例如，在下列呼叫來**SQLBindCol**，值 SQL_C_TYPE_DATE 表示驅動程式可*日期*緩衝區是 SQL_DATE_STRUCT:  
   

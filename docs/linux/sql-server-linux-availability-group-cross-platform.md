@@ -11,12 +11,12 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8ab0b1bc65009a7439c9de8b8728a483413d09a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6160010d02482f9ffd4ed1a4306ae064607b7d75
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676566"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947572"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>設定 SQL Server Always On 可用性群組上 Windows 和 Linux （跨平台）
 

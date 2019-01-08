@@ -25,12 +25,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61d67e223ffe0a68c9f5bd92d1a4a3ef169edc9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 611e202007fb9a5b9438e3432984c3722e264bd7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855896"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522856"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>使用 sql:identity 和 sql:guid 註解
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47855896"
  **Sql: identity**並**sql: guid**註解可以在複雜內容元素上定義。  
   
 ## <a name="sqlidentity-annotation"></a>sql:identity 註解  
- 您可以指定**sql: identity**對應到 IDENTITY 類型的資料庫資料行的任何節點上的 XSD 結構描述中的註釋。 針對此註解指定的值會定義如何更新 IDENTITY 類型的資料行 (透過使用 updategram 中提供的值來修改資料行，或忽略值，在此種狀況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的值會用於此資料行)。  
+ 您可以指定**sql: identity**對應到 IDENTITY 類型的資料庫資料行的任何節點上的 XSD 結構描述中的註釋。 針對此註解指定的值可讓您定義如何更新 IDENTITY 類型資料行 (使用 updategram 中提供的值來修改資料行，或忽略值，在此情況下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-產生的值用於此資料行)。  
   
  **Sql: identity**註解可以指派兩個值：  
   

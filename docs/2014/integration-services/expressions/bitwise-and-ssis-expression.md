@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - AND, bitwise AND
@@ -15,12 +14,12 @@ ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a89f5c0a9c4044c56d14015fe1fe9282b6a5dfb7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d7e56e0ea1e74ac1dcc3f4686d3925d564426f1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118738"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781380"
 ---
 # <a name="amp-bitwise-and-ssis-expression"></a>&amp; (位元 AND) (SSIS 運算式)
   執行兩個整數值的位元 AND 運算。 它會比較其第一個運算元的每個位元和其第二個運算元的對應位元。 如果這兩個位元都是 1，則對應的結果位元會設為 1。 否則，對應的結果位元會設為 0。  
@@ -95,8 +94,8 @@ ReorderPoint & SafetyStockLevel
  00000001  
   
 ## <a name="see-also"></a>另請參閱  
- [（& s) （& s)&#40;邏輯 AND&#41; &#40;SSIS 運算式&#41;](logical-and-ssis-expression.md)   
- [運算子優先順序和關聯性](operator-precedence-and-associativity.md)   
- [運算子&#40;SSIS 運算式&#41;](operators-ssis-expression.md)  
+ [&& &#40;邏輯 AND&#41; &#40;SSIS 運算式&#41;](logical-and-ssis-expression.md)   
+ [運算子優先順序與關聯性](operator-precedence-and-associativity.md)   
+ [運算子 &#40;SSIS 運算式&#41;](operators-ssis-expression.md)  
   
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - queries [SQLXML], SQLXMLOLEDB Provider
@@ -17,12 +15,12 @@ ms.assetid: 50334cf5-9c87-4c00-9beb-e08577c4fa82
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e0bf453deb98b060e799a52995a0dd45f00e5b9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d6c6ce6b2876ac713ad8b71131685e7791f5747
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095418"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766080"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>執行 SQL 查詢 (SQLXMLOLEDB 提供者)
   此範例示範如何使用下列 SQLXMLOLEDB 提供者專屬的屬性：  

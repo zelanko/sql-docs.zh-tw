@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_REPL027183 error
@@ -13,12 +12,12 @@ ms.assetid: 52c271ac-1a0e-43d5-85d4-35886d1efd32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dd3c0f4af8cf29d2da68009b036b8119f2557dd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87adf79d9420f70e132fd9a6c41a9ddacf298fa7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197590"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776970"
 ---
 # <a name="mssqlrepl027183"></a>MSSQL_REPL027183
     
@@ -57,13 +56,13 @@ ms.locfileid: "48197590"
   
 -   儘可能使用預先計算分割區最佳化。 如果符合一些發行集需求，則依預設使用此最佳化。 如需這些需求的詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](merge/parameterized-filters-optimize-for-precomputed-partitions.md)。 如果發行集不符合這些需求，則請考慮重新設計此發行集。  
   
--   為發行集保留期限指定可能的最低設定，因為只有在達到保留期限時，複寫才可以清除發行集與訂閱資料庫中的中繼資料。 如需詳細資訊，請參閱＜ [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)＞。  
+-   為發行集保留期限指定可能的最低設定，因為只有在達到保留期限時，複寫才可以清除發行集與訂閱資料庫中的中繼資料。 如需詳細資訊，請參閱 [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)。  
   
--   做為合併式複寫維護的一部份，請不時檢查與合併式複寫相關聯的系統資料表成長： **MSmerge_contents**、 **MSmerge_genhistory**、 **MSmerge_tombstone**、 **MSmerge_current_partition_mappings**和 **MSmerge_past_partition_mappings**。 定期重新整理資料表的索引。 如需詳細資訊，請參閱 [重新組織與重建索引](../indexes/indexes.md)。  
+-   做為合併式複寫維護的一部份，不時檢查與合併式複寫相關聯的系統資料表成長：**MSmerge_contents**， **MSmerge_genhistory**，以及**MSmerge_tombstone**， **MSmerge_current_partition_mappings**，以及**MSmerge_past_partition_mappings**。 定期重新整理資料表的索引。 如需詳細資訊，請參閱 [重新組織與重建索引](../indexes/indexes.md)。  
   
 -   確定用於篩選的資料行索引正確，並在需要時重建這些索引。 如需詳細資訊，請參閱 [重新組織與重建索引](../indexes/indexes.md)。  
   
--   為基於唯一資料行的聯結篩選設定 **join_unique_key** 屬性。 如需相關資訊，請參閱 [Join Filters](merge/join-filters.md)。  
+-   為基於唯一資料行的聯結篩選設定 **join_unique_key** 屬性。 如需詳細資訊，請參閱 [Join Filters](merge/join-filters.md)。  
   
 -   限制聯結篩選階層中資料表的數量。 若您正在產生五個以上資料表的聯結篩選，請考慮其他方案：不要篩選小型、無法變更或主要為查詢資料表的資料表。 聯結篩選只能用於必須在訂閱中分割的資料表之間。  
   

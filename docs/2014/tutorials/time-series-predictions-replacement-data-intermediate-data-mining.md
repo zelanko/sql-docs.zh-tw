@@ -11,18 +11,18 @@ ms.assetid: a23a6e1d-1d49-41ea-8314-925dc8e4df5e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 815b50c8d687c1df76b9dc5de4b1fbe34f15f233
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b7c23bec5925dbc33d2db7a547daf02f42a6cd7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120280"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419039"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>使用取代資料執行時間序列預測 (中繼資料採礦教學課程)
   在這項工作中，您將會根據全球銷售資料建立新的模型。 接著，您將會建立預測查詢，此查詢會將全球銷售模型套用到其中一個個別地區。  
   
 ## <a name="building-a-general-model"></a>建立一般模型  
- 請記得原始採礦模型結果的分析揭露地區之間和產品線之間有很大的差異。 例如，北美洲對於 M200 模型的銷售非常強，而 T1000 模型的銷售則沒有這麼強。 不過，分析之所以複雜，是因為有些數列沒有很多資料，或者資料是在不同的時間點開始。 此外還缺少某些資料。  
+ 請記得原始採礦模型結果的分析揭露地區之間和產品線之間有很大的差異。 例如，北美洲對於 M200 模型的銷售非常強，而 T1000 模型的銷售則沒有這麼強。 不過，分析之所以複雜，因為有些數列沒有太多資料或在不同時間點開始時間的資料。 此外還缺少某些資料。  
   
  ![序列預測 M200 與 T1000 數量](../../2014/tutorials/media/6series-defaultforecasting.gif "序列預測 M200 與 T1000 數量")  
   
@@ -53,9 +53,9 @@ ms.locfileid: "48120280"
   
     -   針對數列索引鍵和時間索引鍵，選擇下列資料行：  
   
-         關鍵時間： ReportingDate  
+         索引鍵時間：ReportingDate  
   
-         索引鍵： 區域  
+         索引鍵：Region  
   
     -   針對 `Input` 和 `Predict`，選擇下列資料行：  
   

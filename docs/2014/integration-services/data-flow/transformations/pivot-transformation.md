@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.pivottrans.f1
@@ -19,12 +18,12 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbca3b0ce90e56f3327e1e591a033e8d5fb212c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4dd6e2b6fad2ea40c3a536b8b89eecbba441ecfd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157588"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771880"
 ---
 # <a name="pivot-transformation"></a>樞紐轉換
   「樞紐」轉換可藉由樞紐資料行值上的輸入資料，將正規化的資料集轉換為較不正規但更精簡的版本。 例如，列出客戶名稱、產品及購買數量的正規化 **Orders** 資料集，對於購買多個產品的客戶一般都具有多個資料列，且該客戶的每個資料列都顯示不同產品的訂單詳細資料。 藉由樞紐產品資料行上的資料集，「樞紐」轉換可以為每位客戶輸出含單一資料列的資料集。 該單一資料列會列出客戶購買的所有產品，產品名稱顯示為資料行名稱，而數量則顯示為產品資料行中的值。 因為不是每位客戶都會購買所有產品，所以許多資料行可能包含 Null 值。  
@@ -98,7 +97,7 @@ ms.locfileid: "48157588"
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Road Tire Tube|35920.50|  
-|2004|Water Bottle – 30 oz.|2805.00|  
+|2004|Water Bottle - 30 oz.|2805.00|  
 |2002|Touring Tire|62364.225|  
   
  下表顯示資料在 **Year** 資料行上進行樞紐之後的資料集。  
@@ -107,7 +106,7 @@ ms.locfileid: "48157588"
 |-|----------|----------|----------|  
 |HL Mountain Tire|141164.10|446297.775|1504884.15|  
 |Road Tire Tube|3592.05|35920.50|89801.25|  
-|Water Bottle – 30 oz.|*NULL*|*NULL*|2805.00|  
+|Water Bottle - 30 oz.|*NULL*|*NULL*|2805.00|  
 |Touring Tire|62364.225|375051.60|1041810.00|  
   
  若要在 **Year** 資料行上樞紐資料 (如上所示)，則會在 [樞紐] 對話方塊中設定下列選項。  

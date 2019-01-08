@@ -22,17 +22,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f77ccdfc7c236d1f009ff872712991a4c104fc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3fac82c2fd669bb1a7dd3f45b5a614738fdf189
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779686"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529889"
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  這份目錄檢視會針對其斷詞工具向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊的每種語言，各包含一個資料列。 每個資料列顯示的 LCID 和語言的名稱。 針對某種語言註冊斷詞工具時，其他語言資源 (字幹分析器、非搜尋字 (停用字詞) 和同義字檔案) 就會成為可供全文檢索索引/查詢作業使用。 值**名稱**或是**lcid**全文檢索索引與全文檢索查詢中可以指定[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。  
+  這份目錄檢視會針對其斷詞工具向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊的每種語言，各包含一個資料列。 每個資料列顯示的 LCID 和語言的名稱。 當註冊斷詞工具語言、 其他語言的資源-字幹分析器、 非搜尋字 （停用字詞） 和同義字檔案會變成可用於全文檢索索引/查詢作業。 值**名稱**或是**lcid**全文檢索索引與全文檢索查詢中可以指定[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。  
    
 |「資料行」|資料類型|描述|  
 |------------|---------------|-----------------|  

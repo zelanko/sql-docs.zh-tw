@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - VDI [SQL Server]
@@ -22,19 +21,19 @@ ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 11bbca66aa1157af8ad12ec0284e2798a1072da3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7204d2f20c7c299a2bcefcc66409182c8846affc
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100548"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639386"
 ---
 # <a name="sql-writer-service"></a>SQL 寫入器服務
   SQL 寫入器服務能透過「磁碟區陰影複製服務」架構，提供附加功能給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份和還原。  
   
  系統會自動安裝 SQL 寫入器服務。 當磁碟區陰影複製服務 (VSS) 應用程式要求備份或還原時，此服務必須已在執行中。 若要設定此服務，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Services Applet。 SQL 寫入器服務會安裝在所有作業系統上。  
   
-## <a name="purpose"></a>目的  
+## <a name="purpose"></a>用途  
  執行時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會鎖定並對資料檔案取得獨佔式存取。 未執行 SQL 寫入器服務時，Windows 中執行的備份程式沒有資料檔案的存取權，而且備份必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份來執行。  
   
  使用 SQL 寫入器服務，以允許 Windows 備份程式於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行時複製 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料檔案。  

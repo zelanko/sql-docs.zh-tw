@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e67e1e408186e78f00c4b54399fb2e87ac673541
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0ec801da96735f15b6320c3f0372855c1ff3c2c8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601738"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502835"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -97,9 +97,9 @@ NATURAL PREDICTION JOIN
   
 |[模型]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Sport-100|4334|0.29…|0.25…|  
-|Water Bottle|2866|0.19…|0.17…|  
-|Patch kit|2113|0.14…|0.13…|  
+|Sport-100|4334|0.29...|0.25...|  
+|Water Bottle|2866|0.19...|介於 0.17...|  
+|Patch kit|2113|$0.14 元...|0.13...|  
   
  但是，這種類型的查詢可能會影響實際設定的效能。 這是因為此查詢會從演算法傳回所有預測的集合、排序這些預測，並傳回前三個。  
   

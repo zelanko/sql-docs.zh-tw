@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], multiple conditions
@@ -16,12 +16,12 @@ ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb6fd1c3e162b338d90c75ccb54bae5f94569ce6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3580f6365866ce752191e285b14f7d793be0cad0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175899"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771760"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>指定多重資料行的多重搜尋條件 (Visual Database Tools)
   藉由包含幾個資料行做為搜尋條件的一部分，可以擴展或縮小查詢的範圍。 例如，您可能要：  
@@ -59,7 +59,7 @@ ms.locfileid: "48175899"
   
 #### <a name="to-specify-an-and-condition-for-two-different-columns"></a>若要指定兩個不同資料行的 AND 條件  
   
-1.  在[準則窗格](visual-database-tools.md)中，新增想要搜尋的資料行。  
+1.  在 [準則窗格](visual-database-tools.md)中，新增想要搜尋的資料行。  
   
 2.  在想要搜尋的第一個資料行的 [篩選條件] 資料行中，指定第一個條件。  
   

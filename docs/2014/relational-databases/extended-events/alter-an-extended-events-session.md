@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 909332010210398d00d922ee0b5b69d28acec7db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 99984df84d2eb24ebf3d58f3fa697d11c5ad4a1d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193220"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752140"
 ---
 # <a name="alter-an-extended-events-session"></a>更改擴充事件工作階段
   在您建立「擴充事件」工作階段之後，可以根據您的需求使用 **[SQL Server 擴充事件精靈]** 加以更改。  

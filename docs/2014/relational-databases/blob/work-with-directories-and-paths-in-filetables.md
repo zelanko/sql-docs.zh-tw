@@ -12,17 +12,17 @@ ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 321c452c816f765642d14142a64ab88f5ecb9cdf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa4fd0543c45e26f305506280bccce1f83107e55
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198788"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393291"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>使用 FileTables 中的目錄與路徑
   描述在 FileTable 中儲存檔案的目錄結構。  
   
-##  <a name="HowToDirectories"></a> 如何：使用 FileTables 中的目錄與路徑  
+##  <a name="HowToDirectories"></a> 操作說明：使用 FileTables 中的目錄與路徑  
  您可使用下列三項函數在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用 FileTable 目錄：  
   
 |為得到此結果|使用此函數|  
@@ -31,7 +31,7 @@ ms.locfileid: "48198788"
 |取得 FileTable 中檔案或目錄的絕對路徑或相對 UNC 路徑。|[GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|  
 |經由提供路徑的方法，取得 FileTable 中指定之檔案或目錄的路徑定位器識別碼值。|[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|  
   
-##  <a name="BestPracticeRelativePaths"></a> 如何：使用可攜式程式碼的相對路徑  
+##  <a name="BestPracticeRelativePaths"></a> 操作說明：使用可攜式程式碼的相對路徑  
  若要讓程式碼和應用程式獨立於目前的電腦和資料庫之外，請避免撰寫依賴絕對檔案路徑的程式碼。 相反地，同時使用 [FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) 和 [GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) 函數，以取得檔案在執行階段的完整路徑，如下列範例所示。 根據預設，`GetFileNamespacePath` 函數會傳回資料庫根路徑之下的檔案相對路徑。  
   
 ```tsql  
@@ -73,7 +73,7 @@ GO
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\`  
   
- 此目錄階層會形成 FileTable 命名空間的根。 在此目錄階層之下，FileTable 的 FILESTREAM 資料將會儲存為檔案，以及其下也可以再包含檔案與子目錄的子目錄。  
+ 此目錄階層會形成 FileTable 檔案命名空間的根目錄。 在此目錄階層之下，FileTable 的 FILESTREAM 資料將會儲存為檔案，以及其下也可以再包含檔案與子目錄的子目錄。  
   
  請務必牢記，於此執行個體層級的 FILESTREAM 共用之下所建立的目錄階層，是一個虛擬的目錄階層。 此階層儲存於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，且不會實際於 NTFS 檔案系統中呈現出來。 所有存取 FILESTREAM 共用之下以及其所包含之 FileTables 中檔案與目錄的作業，都會由檔案系統中內嵌的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件所攔截與處理。  
   

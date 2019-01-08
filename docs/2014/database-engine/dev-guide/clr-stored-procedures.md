@@ -23,12 +23,12 @@ ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d0949b6fddf1755da48dd7922a4fbda50d4b2787
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 99fd0d558fccab09f0c73ddd47ef5b4b22d303c3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111998"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511502"
 ---
 # <a name="clr-stored-procedures"></a>CLR 預存程序
   預存程序是無法在純量運算式中使用的常式。 不像純量函數，它們可以將表格式結果及訊息傳回到用戶端、叫用資料定義語言 (DDL) 及資料操作語言 (DML) 陳述式，並傳回輸出參數。 CLR 整合，以及 managed 程式碼之間進行選擇的優勢的相關資訊並[!INCLUDE[tsql](../../includes/tsql-md.md)]，請參閱 < [CLR 整合的概觀](../../relational-databases/clr-integration/clr-integration-overview.md)。  
@@ -55,7 +55,7 @@ ms.locfileid: "48111998"
   
 ```  
 Imports System.Runtime.InteropServices  
-…  
+...  
 Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)  
 ```  
   

@@ -20,19 +20,19 @@ ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5c434f47fdf6dcb17cccee5ca69cefe74971560e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fba195d53911264716c73b54ea8c639ca37951e6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594709"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418309"
 ---
 # <a name="sysspflushlog-transact-sql"></a>sys.sp_flush_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   將目前資料庫的交易記錄排清至磁碟，因而強行寫入所有先前認可的延遲持久交易。  
   
- 如果您是因為效能優勢而選擇要使用延遲的交易持久性，但又想要確保伺服器當機或容錯移轉時遺失的資料量有所限制，請定期執行 `sys.sp_flush_log`。 例如，假設您想要確保遺失的資料量不超過 x 秒，就應該每隔 x 秒執行 `sp_flush_log`。  
+ 如果您是因為效能優勢而選擇要使用延遲的交易持久性，但又想要確保伺服器當機或容錯移轉時遺失的資料量有所限制，請定期執行 `sys.sp_flush_log`。 例如，如果您想要確定您不會遺失超過 x 秒價值的資料，您會執行`sp_flush_log`每隔 x 秒。  
   
  執行 `sys.sp_flush_log` 可保證所有先前認可的延遲持久交易都會變成持久。 請參閱概念性主題[控制交易持久性](../../relational-databases/logs/control-transaction-durability.md)如需詳細資訊。  
   

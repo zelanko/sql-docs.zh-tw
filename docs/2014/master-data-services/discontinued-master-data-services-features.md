@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d54486dfbedc54b8b21e4f515682fab00ebe057c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1466883d27fb87aeae1e4b51f5826696abc3abb6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201426"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761300"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>SQL Server 2014 中已停止的 Master Data Services 功能
   本主題描述 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中不再可用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。  

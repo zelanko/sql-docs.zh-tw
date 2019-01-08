@@ -1,5 +1,5 @@
 ---
-title: 彙總和彙總設計 |Microsoft 文件
+title: 彙總及彙總設計 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: af9eab2fb7d3df0fcb8a7416b43dd387583f4762
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: af8d18e2fe99d7d2e16f785577cfe72ec73909fb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027375"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519355"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>彙總和彙總設計
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,10 +30,10 @@ ms.locfileid: "34027375"
   
  其他問題可能會傳回多個值。 例如，「1998 年分區分季的硬體產品銷售量為何？ 」，這樣的查詢會從滿足所指定條件的座標位置傳回儲存格組。 查詢所傳回的資料格數目會根據產品維度之硬體層級的項目數目、1998 年四季，以及地理位置維度中的地區數目而定。 如果所有摘要資料都已經預先計算為彙總，則查詢的回應時間僅會根據擷取指定資料格所需要的時間而定。 不需要計算或從事實資料表中讀取資料。  
   
- 雖然預先計算 Cube 內所有可能的彙總可能會提供所有查詢的最快可能回應時間，但是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以輕鬆地從其他預先計算的彙總中計算出某些彙總值。 此外，計算所有可能的彙總需要大量處理時間和儲存體。 因此，在儲存需求與預先計算的可能彙總百分比之間會需要有所取捨。 如果未預先計算任何彙總 (0%)，則 Cube 所需的處理時間和儲存空間數量會減至最少，但是因為必須從分葉資料格中擷取回答每一個查詢所需的資料，然後在查詢時加以彙總來回答每一個查詢，所以查詢回應時間可能會變慢。 例如，傳回單一數字來回答前面所問的問題 (「1998 年西北地區 X 產品的銷售如何？」) 可能需要讀取數千個資料列，並擷取資料行的值 (此資料行是用來提供每個資料列的銷售量值)，然後計算總和。 此外，擷取該資料所需的時間長度可能會不同，視選擇的資料儲存模式而定 (MOLAP、HOLAP 或 ROLAP)。  
+ 雖然預先計算 Cube 內所有可能的彙總可能會提供所有查詢的最快可能回應時間，但是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以輕鬆地從其他預先計算的彙總中計算出某些彙總值。 此外，計算所有可能的彙總需要大量處理時間和儲存體。 因此，在儲存需求與預先計算的可能彙總百分比之間會需要有所取捨。 如果未預先計算任何彙總 (0%)，則 Cube 所需的處理時間和儲存空間數量會減至最少，但是因為必須從分葉資料格中擷取回答每一個查詢所需的資料，然後在查詢時加以彙總來回答每一個查詢，所以查詢回應時間可能會變慢。 例如，傳回單一數字來回答前面所問的問題 (「1998 年西北地區 X 產品的銷售如何？」) 可能需要讀取數千個資料列，並擷取資料行的值 (此資料行是用來提供每個資料列的銷售量值)，然後計算總和。 此外，擷取該資料所需的時間長度可能會根據選擇的資料的儲存模式為 MOLAP、 HOLAP 或 ROLAP。  
   
 ## <a name="designing-aggregations"></a>設計彙總  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 併入複雜的演算法，若要選取預先計算的彙總，以便從預先計算的值可以快速地計算其他彙總。 例如，如果針對時間階層的月份層級預先計算出彙總，則季查詢的計算只需要加總三個數字，就可以視需要快速計算出來。 這個技巧可節省處理時間，並減少儲存需求，且對查詢回應時間的影響最小。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 納入了複雜的演算法，來選取預先計算的彙總，以便其他彙總可以快速地計算從預先計算的值。 例如，如果針對時間階層的月份層級預先計算出彙總，則季查詢的計算只需要加總三個數字，就可以視需要快速計算出來。 這個技巧可節省處理時間，並減少儲存需求，且對查詢回應時間的影響最小。  
   
  彙總設計精靈會提供選項讓您指定演算法的儲存體和百分比條件約束，以在查詢回應時間與儲存需求之間達成令人滿意的取捨。 不過，彙總設計精靈的演算法假設所有可能的查詢都同樣適合。 基於使用方式的最佳化精靈可讓您分析用戶端應用程式所提交的查詢，以調整量值群組的彙總設計。 使用這個精靈來微調 Cube 的彙總，即可增加常見查詢的回應能力，以及減少不常見之查詢的回應能力，而不會對 Cube 的儲存需求有太大影響。  
   

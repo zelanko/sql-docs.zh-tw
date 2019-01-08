@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - size [SQL Server], trace tables
@@ -14,12 +13,12 @@ ms.assetid: d0ae83e5-1c88-4a2e-be05-2c341280b978
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25a852c52c0041d69bb73e5b7b8ec3ea48c89eb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 15ef5e8621a5edd216b300a8a96f3a9656b55b12
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087048"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775250"
 ---
 # <a name="set-a-maximum-table-size-for-a-trace-table-sql-server-profiler"></a>設定追蹤資料表的資料表大小上限 (SQL Server Profiler)
   本主題說明如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來設定追蹤資料表的資料表大小上限。  
@@ -53,7 +52,7 @@ ms.locfileid: "48087048"
     >  當資料表的資料列數超過您所指定的最大值時，就不會再記錄追蹤事件。 不過，仍會繼續追蹤。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Profiler](sql-server-profiler.md)   
+ [[SQL Server Profiler]](sql-server-profiler.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

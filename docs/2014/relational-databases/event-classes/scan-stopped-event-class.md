@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: b6b20ae9-aebb-454a-b639-6b7bb2f9339b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e893ed21a951d77ead539b380ddad60230f471b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e287ae5f70ebe325e207d7c1fe593b60a1223f44
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181608"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776470"
 ---
 # <a name="scanstopped-event-class"></a>Scan:Stopped 事件類別
   當資料表或索引掃描停止時，會發生 Scan:Stopped 事件類別。  

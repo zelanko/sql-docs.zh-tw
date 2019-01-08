@@ -13,12 +13,12 @@ ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 86135a4d93ddb8f08318a9ce2be8a6f5c4f57f9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 870acddcd825c9c112274d294fa4c97848a85236
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677566"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507785"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB 標頭和版本資訊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,15 +84,15 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
 // The #define has to take place BEFORE the API header file (sqlncli.h) is included  
 #define LOCALDB_DEFINE_PROXY_FUNCTIONS  
 #include <sqlncli.h>  
-…  
+...  
 HRESULT hr = S_OK;  
   
 // Create LocalDB instance by calling the create API proxy function included by macro  
 if (FAILED(hr = LocalDBCreateInstance( L"12.0", L"name", 0)))  
 {  
-…  
+...  
 }  
-…  
+...  
   
 ```  
   

@@ -15,12 +15,12 @@ ms.assetid: 4f0ee6ec-a0a8-4c38-aa61-8293ab6ac7fd
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66777a5db1812d1a63e100d4a02522bc1ac3b43a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ea74f0361d5152ade31a91424d594d376e513f8
+ms.sourcegitcommit: b5cea9c67c7f896944065f09dace17b4929a34f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092850"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52267893"
 ---
 # <a name="event-file-target"></a>Event File Target
   事件檔案目標是將完整緩衝區寫入磁碟的目標。  
@@ -34,7 +34,7 @@ ms.locfileid: "48092850"
 |max_rollover_files|任何 32 位元整數。 此為選擇性的值。|要保留在檔案系統中的最大檔案數。 預設值為 5。|  
 |increment|任何 32 位元整數。 此為選擇性的值。|檔案的累加成長 (以 MB 為單位)。 如果未指定，increment 的預設值就是工作階段緩衝區大小的兩倍。|  
   
- 第一次建立事件檔案目標時，您所指定的檔案名稱會附加 _0\_ 和一個長整數值。 這個整數值會計算成介於 1600 年 1 月 1 日與建立檔案之日期和時間之間的毫秒數。 後續的換用檔案也會使用這個格式。 透過檢查長整數的值，您就可以判斷出最新的檔案。 下列範例說明您將檔案名稱選項指定為 C:\OutputFiles\MyOutput.xel 的情況下，要如何命名檔案：  
+ 第一次建立事件檔案目標時，您所指定的檔案名稱會附加 _0\_ 和一個長整數值。 整數值的計算方式為西元 1601 年 1 月 1 日之間的毫秒數的日期和時間建立的檔案。 後續的換用檔案也會使用這個格式。 透過檢查長整數的值，您就可以判斷出最新的檔案。 下列範例說明您將檔案名稱選項指定為 C:\OutputFiles\MyOutput.xel 的情況下，要如何命名檔案：  
   
 -   建立的第一個檔案 - C:\OutputFiles\MyOutput_0_128500310259380000.xel  
   

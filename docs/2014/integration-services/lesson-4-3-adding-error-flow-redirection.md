@@ -1,22 +1,21 @@
 ---
-title: 步驟 3：加入錯誤流程重新導向 | Microsoft Docs
+title: 步驟 3：加入錯誤流程重新導向 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 217aa8a702d636b920be157974a5d90e695ad191
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ff729a43f1dbc414ba6a67a0c80e9f17e4d0cc4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051308"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747920"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>步驟 3：加入錯誤流程重新導向
   如上一項工作所示範的，當 [查閱貨幣索引鍵] 轉換試圖處理已損毀範例一般檔案 (其產生錯誤) 時，不會產生相符者。 因為轉換使用錯誤輸出的預設值，所以任何錯誤都會造成轉換失敗。 當轉換失敗時，封裝的其餘部分也會失敗。  
@@ -97,6 +96,6 @@ ms.locfileid: "48051308"
 13. 按一下 **[確定]** 來關閉 **[指令碼轉換編輯器]** 對話方塊。  
   
 ## <a name="next-steps"></a>後續步驟  
- [步驟 4： 加入一般檔案目的地](lesson-4-4-adding-a-flat-file-destination.md  
+ [步驟 4:新增一般檔案目的地] (lesson-4-4-adding-a-flat-file-destination.md  
   
   

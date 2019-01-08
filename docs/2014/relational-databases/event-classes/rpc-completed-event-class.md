@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/04/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac6f4fe956c63edb217467b06f5c03f0d43368b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4b427047aeba970ad65a6bd2ac31a219978ea71
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145468"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775780"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed 事件類別
   RPC:Completed 事件類別表示已經完成遠端程序呼叫。  

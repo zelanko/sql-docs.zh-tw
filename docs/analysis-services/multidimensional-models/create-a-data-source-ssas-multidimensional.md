@@ -1,5 +1,5 @@
 ---
-title: 建立資料來源 (SSAS 多維度) |Microsoft 文件
+title: 建立資料來源 (SSAS 多維度) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c461f38e7e2d0cf43cf206fee0c474f6fd74d35a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2d22e4b3b9c53aa02a7666c929fcba25d2c17ced
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027045"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410315"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>建立資料來源 (SSAS 多維度)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "34027045"
   
 3.  在 [選取如何定義連接] 頁面上，選擇 [依據現有的或新的連接建立資料來源]，然後按一下 [新增] 開啟 [連線管理員]。  
   
-     新的連接是在連接管理員中建立。 在連接管理員中選取提供者，然後指定該提供者用來連接基礎資料的連接字串屬性。 所需的確切資訊需視所選的提供者而定，但是這類資訊通常包括伺服器或服務執行個體、用來登入此伺服器或服務執行個體的資訊、資料庫或檔案名稱，以及其他提供者特有的設定。 此程序的其餘部分將假設存在 SQL Server 資料庫連接。  
+     新的連接是在連接管理員中建立。 在連接管理員中選取提供者，然後指定該提供者用來連接基礎資料的連接字串屬性。 所需的確切資訊需視所選的提供者而定，但是這類資訊通常包括伺服器或服務執行個體、用來登入此伺服器或服務執行個體的資訊、資料庫或檔案名稱，以及其他提供者特有的設定。 此程序的其餘部分，我們假設 SQL Server 資料庫連接。  
   
 4.  選取連接所用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 或原生 OLE DB 提供者。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "34027045"
   
 5.  輸入選定提供者所要求的資訊，以連接到基礎資料來源。 如果已選取**原生 OLE DB\SQL Server Native Client**提供者，請輸入下列資訊：  
   
-    1.  [伺服器名稱] 是 Database Engine 執行個體的網路名稱。 您可以將它指定為 IP 位址、電腦的 NETBIOS 名稱或完整網域名稱。 如果伺服器安裝成具名執行個體，您必須包含執行個體名稱 (例如，\<電腦名稱 >\\< instancename\>)。  
+    1.  [伺服器名稱] 是 Database Engine 執行個體的網路名稱。 您可以將它指定為 IP 位址、電腦的 NETBIOS 名稱或完整網域名稱。 如果伺服器安裝成具名執行個體，您必須包含執行個體名稱 (例如\<電腦名稱 >\\< 執行個體名稱\>)。  
   
     2.  [登入伺服器] 會指定驗證連接的方式。 [使用 Windows 驗證] 會使用 Windows 驗證。 [使用 SQL Server 驗證] 會針對支援混合模式驗證的 Windows Azure SQL Database 或 SQL Server 執行個體指定資料庫使用者登入。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "34027045"
   
          新的連接即會出現在「資料來源精靈」之 [選取如何定義連接] 頁面的 [資料連接] 窗格中。  
   
-6.  按一下 **[下一步]**。  
+6.  按 [下一步] 。  
   
 7.  在 [模擬資訊] 中，指定 Analysis Services 連接外部資料來源時使用的 Windows 認證或使用者識別。 如果您針對連接使用資料庫驗證，則會忽略這些設定。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "34027045"
   
      您指定的帳戶必須擁有資料來源的讀取權限。  
   
-8.  按一下 **[下一步]**。  在 [正在完成精靈] 中，輸入資料來源名稱或使用預設名稱。 預設名稱是連接中所指定資料庫的名稱。 [預覽] 窗格會顯示這個新資料來源的連接字串。  
+8.  按 [下一步] 。  在 [正在完成精靈] 中，輸入資料來源名稱或使用預設名稱。 預設名稱是連接中所指定資料庫的名稱。 [預覽] 窗格會顯示這個新資料來源的連接字串。  
   
 9. 按一下 **[完成]**。  方案總管中的 [資料來源] 資料夾會顯示新的資料來源。  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.agent.advanced.f1
@@ -12,12 +12,12 @@ ms.assetid: a4d798ee-4c18-40d4-b6af-63d17503738c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30897ac21ba01262dfc2dc9ab08ffcf4f2148f32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aeb0c6c47a9203a7124fbe5d9f4739c52ae430d1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157888"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763760"
 ---
 # <a name="sql-server-agent-properties-advanced-page"></a>SQL Server Agent 屬性 (進階頁面)
   使用此頁面來檢視和修改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務的進階屬性。  

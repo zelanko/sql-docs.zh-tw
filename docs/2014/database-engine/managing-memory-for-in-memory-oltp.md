@@ -10,12 +10,12 @@ ms.assetid: d82f21fa-6be1-4723-a72e-f2526fafd1b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f7b32b9e3d87c783efe2a064714454c50a886c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db1f62b6562d794cf35a7bca680e523401c4c8cc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214248"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407216"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>為記憶體中的 OLTP 管理記憶體
   記憶體最佳化資料表需要有足夠的記憶體，以將所有資料列和索引保留在記憶體中。 因為記憶體是有限的資源，所以請務必了解並管理系統上的記憶體使用量。 本節的主題涵蓋了常見的記憶體使用與管理案例。  

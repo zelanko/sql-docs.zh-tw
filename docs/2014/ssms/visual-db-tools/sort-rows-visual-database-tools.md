@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - sorting rows [SQL Server]
@@ -13,12 +13,12 @@ ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2183b8cb96895dc2bbb1308bccd818fb5a04dba5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3235c9a9305e4476214add63f8710ba9de7b4c19
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156098"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768593"
 ---
 # <a name="sort-rows-visual-database-tools"></a>排序資料列 (Visual Database Tools)
   您可以排列查詢結果中的資料列。 也就是說，您可以命名特定的資料行或資料行組合，其值將決定結果集中的資料列排列順序。  
@@ -64,7 +64,7 @@ ms.locfileid: "48156098"
   
     ```  
   
--   **您可以依衍生資料行排序** ：例如，您可以建立結果集，其中每個資料列都含有書名；而需付較高版稅的書將先出現。 產生的 SQL 將如下所示：  
+-   **您可以依衍生資料行排序**：例如，您可以建立結果集，其中每個資料列都含有書名；需付較高版稅的書將優先顯示。 產生的 SQL 將如下所示：  
   
     ```  
     SELECT title, price * royalty / 100 as royalty_per_unit  
@@ -77,7 +77,7 @@ ms.locfileid: "48156098"
   
      若要計算衍生的資料行，您可以如同前述的範例使用 SQL 語法，或者使用會傳回數值類值的使用者定義函數。 如需使用者定義函數的詳細資訊，請參閱 SQL Server 文件。  
   
--   **您可以排序群組資料列** ：例如，您可以建立結果集，其中每個資料列說明某個城市，以及該城市中的作者數目，並且將包含多位作者的城市優先顯示。 產生的 SQL 將如下所示：  
+-   **您可以排序群組資料列**：例如，您可以建立結果集，其中每個資料列描述某個城市，以及該城市中的作者數目；包含多位作者的城市將優先顯示。 產生的 SQL 將如下所示：  
   
     ```  
     SELECT city, state, COUNT(*)  
@@ -89,7 +89,7 @@ ms.locfileid: "48156098"
   
      注意，查詢會使用 `state` 做為次要排序資料行。 因此，如果有兩個州擁有相同數量的作者，該州將以字母順序排列。  
   
--   **您可以使用國際資料排序** ：也就是說，您可以使用定序慣例來排序資料行，這種定序慣例與該資料行的預設慣例不同。 例如，您可以撰寫擷取所有由 Jaime Patiño 所著書籍名稱的查詢。 若要以字母順序顯示名稱，您可以使用西班牙文定序序列來排列名稱資料行。 產生的 SQL 將如下所示：  
+-   **您可以使用國際資料排序** ：也就是說，您可以使用定序慣例來排序資料行，這種定序慣例與該資料行的預設慣例不同。 比方說，您可以撰寫查詢來擷取所有書名的 Jaime Pati??o。 若要以字母順序顯示名稱，您可以使用西班牙文定序序列來排列名稱資料行。 產生的 SQL 將如下所示：  
   
     ```  
     SELECT title  
@@ -105,7 +105,7 @@ ms.locfileid: "48156098"
                 =  titles.title_id   
     WHERE   
          au_fname = 'Jaime' AND   
-         au_lname = 'Patiño'  
+         au_lname = 'Pati??o'  
     ORDER BY   
          title COLLATE SQL_Spanish_Pref_CP1_CI_AS  
     ```  

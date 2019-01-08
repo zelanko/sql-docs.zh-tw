@@ -22,12 +22,12 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 58a7f5c5702123ae6be475b1cb377b2f8a9c52fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3ca45caed31d31b1614947cbcbf3fbf6c4c27273
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657537"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515372"
 ---
 # <a name="xml-construction-xquery"></a>XML 建構 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- 雖然從常數運算式建構元素 (如本範例所示) 非常有用，不過此 XQuery 語言真正強大的功能在於能夠從資料庫動態擷取資料來建構 XML。 您可以使用大括號指定查詢運算式。 在產生的 XML 中，其值將會取代運算式。 例如，下列查詢使用一個子元素 (<`e`>) 來建構 <`NewRoot`> 元素。 元素的值 <`e`> 計算所指定路徑運算式在大括號 （"{... }").  
+ 雖然從常數運算式建構元素 (如本範例所示) 非常有用，不過此 XQuery 語言真正強大的功能在於能夠從資料庫動態擷取資料來建構 XML。 您可以使用大括號指定查詢運算式。 在產生的 XML 中，其值將會取代運算式。 例如，下列查詢使用一個子元素 (<`e`>) 來建構 <`NewRoot`> 元素。 元素的值 <`e`> 計算出指定大括號 （"{...}"） 內的路徑運算式。  
   
 ```sql
 DECLARE @x xml;  
@@ -278,7 +278,7 @@ where ProductModelID=7;
   
 ```xml
 <FirstLocation LocationID="10" SetupHours="0.5" >  
-  <AWMI:step …   
+  <AWMI:step ...   
   </AWMI:step>  
   ...  
 </FirstLocation>  

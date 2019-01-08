@@ -14,12 +14,12 @@ ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a0ac6ea9d3437e22a1493c9888ccb75e7996f1c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219858"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509423"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>在升級伺服器執行個體時將鏡像資料庫的停機時間減至最少
   升級伺服器執行個體時[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，您也可以執行的循序升級，只有單一手動容錯移轉來減少每個鏡像資料庫的停機時間稱為*輪流升級*。 輪流升級是一種多階段程序，其最簡單的形式包括升級目前在鏡像工作階段中當做鏡像伺服器的伺服器執行個體，然後手動容錯移轉鏡像資料庫、升級之前的主體伺服器，以及繼續進行鏡像。 實際上，確切的程序會取決於作業模式以及在您要升級之伺服器執行個體上執行的鏡像工作階段數目和配置而定。  
@@ -69,7 +69,7 @@ ms.locfileid: "48219858"
     > [!IMPORTANT]  
     >  如果鏡像伺服器與主體伺服器之間的地理位置遙遠，輪流升級可能不適合。  
   
-    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：使用 [資料庫屬性] 對話方塊的[鏡像頁面](../../relational-databases/databases/database-properties-mirroring-page.md)，將 [作業模式] 選項變更為 [不具有自動容錯移轉的高安全性 (同步)]。 如需如何存取此頁面的資訊，請參閱[啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)。  
+    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：變更**作業模式**選項設定為**不具有自動容錯移轉 （同步） 的高安全性**利用[鏡像頁面](../../relational-databases/databases/database-properties-mirroring-page.md)的**資料庫屬性** 對話方塊。 如需如何存取此頁面的資訊，請參閱[啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)。  
   
     -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中：將交易安全性設定為 FULL。 如需詳細資訊，請參閱[在資料庫鏡像工作階段中變更交易安全性 &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
@@ -78,13 +78,13 @@ ms.locfileid: "48219858"
 1.  如果鏡像工作階段牽涉到見證，我們建議您在執行輪流升級之前，最好先移除該見證。 否則，當升級鏡像伺服器執行個體時，資料庫可用性會相依於仍然連接至主體伺服器執行個體的見證。 當您移除見證之後，您可以在輪流升級期間的任何時候將它升級，避免發生資料庫停機的風險。  
   
     > [!NOTE]  
-    >  如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+    >  如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性&#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
     -   [從資料庫鏡像工作階段移除見證 &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
 ### <a name="to-perform-the-rolling-upgrade"></a>執行輪流升級  
   
-1.  若要讓停機時間減至最少，我們建議您採取以下作法：在所有鏡像工作階段中更新目前為鏡像伺服器的任何鏡像夥伴伺服器，藉以開始輪流升級。 您在此時可能必須更新多個伺服器執行個體。  
+1.  若要讓停機時間減至最少，我們建議您採取以下作法：在所有鏡像工作階段中更新目前為鏡像伺服器的任何鏡像夥伴伺服器，以開始輪流升級。 您在此時可能必須更新多個伺服器執行個體。  
   
     > [!NOTE]  
     >  您可以在輪流升級程序的任何時間升級見證。 例如，如果伺服器執行個體在工作階段 1 為鏡像伺服器，而在工作階段 2 為見證，您可以立刻升級此伺服器執行個體。  
@@ -113,7 +113,7 @@ ms.locfileid: "48219858"
 4.  如果有任何伺服器執行個體目前在當做夥伴伺服器的所有鏡像工作階段中為鏡像伺服器，請將它升級。 您在此時可能必須更新多部伺服器。  
   
     > [!IMPORTANT]  
-    >  在複雜鏡像組態中，某些伺服器執行個體在一或多個鏡像工作階段中可能仍然是原始的主體伺服器。 請針對這些伺服器執行個體重複步驟 2–4，直到相關的所有執行個體都已升級為止。  
+    >  在複雜鏡像組態中，某些伺服器執行個體在一或多個鏡像工作階段中可能仍然是原始的主體伺服器。 請針對這些伺服器執行個體重複步驟 2-4，直到相關的所有執行個體都已升級為止。  
   
 5.  繼續鏡像工作階段。  
   
@@ -126,9 +126,9 @@ ms.locfileid: "48219858"
   
 1.  您可以選擇使用下列其中一個方法來回到高效能模式：  
   
-    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：使用 [資料庫屬性] 對話方塊的[鏡像頁面](../../relational-databases/databases/database-properties-mirroring-page.md)，將 [作業模式] 選項變更為 [高效能 (非同步)]。  
+    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：變更**作業模式**選項設定為**高效能 （非同步）** 利用[鏡像頁面](../../relational-databases/databases/database-properties-mirroring-page.md)的**資料庫屬性** 對話方塊。  
   
-    -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中：使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)將交易安全性設定為 OFF。  
+    -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中：使用[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)將交易安全性設定為 OFF。  
   
 ### <a name="to-add-a-witness-back-into-a-mirroring-session"></a>若要將見證加回鏡像工作階段  
   
@@ -149,6 +149,6 @@ ms.locfileid: "48219858"
  [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [在資料庫鏡像工作階段中強制服務 &#40;Transact-SQL&#41;](force-service-in-a-database-mirroring-session-transact-sql.md)   
  [啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   
- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  
+ [資料庫鏡像作業模式](database-mirroring-operating-modes.md)  
   
   

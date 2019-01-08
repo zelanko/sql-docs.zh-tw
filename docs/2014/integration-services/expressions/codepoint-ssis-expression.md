@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - CODEPOINT function
@@ -14,12 +13,12 @@ ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5cdd95f9df8aba20b389ab92da48a884629ab82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a625a4168fd5d9e7ecfa414d21298f0df3dcb396
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122638"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811500"
 ---
 # <a name="codepoint-ssis-expression"></a>CODEPOINT (SSIS 運算式)
   傳回字元運算式最左邊字元的 Unicode 字碼指標。  
@@ -57,6 +56,6 @@ CODEPOINT(@Name)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [函式&#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
+ [函數 &#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
   
   

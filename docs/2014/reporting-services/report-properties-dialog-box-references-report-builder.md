@@ -13,12 +13,12 @@ ms.assetid: 3414c857-8ea6-4fc4-a6d5-b4883c039efa
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6222a5bfb1efe52e2b35345e7bd6364676936b2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e6f4a3f590c196731ed186f95cf5dc4078a1fc0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104578"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504145"
 ---
 # <a name="report-properties-dialog-box-references-report-builder"></a>報表屬性對話方塊、參考 (報表產生器)
   選取 **[報表屬性]** 對話方塊上的 **[參考]** ，即可將參考加入報表定義中運算式所使用的自訂或其他外部組件以及自訂類別執行個體，或從中移除。 在報表產生器的本機模式中不支援自訂組件。 若要撰寫使用自訂組件的報表，請使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的報表設計師。  
@@ -28,7 +28,7 @@ ms.locfileid: "48104578"
  列出報表參考的組件。 組件必須可以在安裝設計報表所使用之工具的電腦和報表伺服器上使用。 參考的名稱必須符合的內容 **\<CodeModule >** 完全標記儲存在報表定義語言 (.rdl) 檔案。  
   
  **[加入]**  
- 按一下即可加入組件。 按一下省略符號 (...) 按鈕來開啟 [開啟] 對話方塊，並選取完成報表處理和運算式評估所需的組件。  
+ 按一下即可加入組件。 按一下省略符號 （...） 按鈕，以開啟**開啟**對話方塊並選取完成報表處理和運算式評估所需的組件。  
   
  **移除**  
  若要從清單中移除組件參考，請選取組件名稱，再按一下 **[移除]** 按鈕。  
@@ -37,7 +37,7 @@ ms.locfileid: "48104578"
  列出報表所使用的類別執行個體。 類別清單僅供以執行個體為基礎的成員使用，並非供靜態成員使用。  
   
  **[加入]**  
- 按一下即可加入類別參考。 按一下省略符號 (...) 按鈕來開啟 [開啟] 對話方塊，並選取完成報表處理和運算式評估所需的類別。  
+ 按一下即可加入類別參考。 按一下省略符號 （...） 按鈕，以開啟**開啟**對話方塊並選取完成報表處理和運算式評估所需的類別。  
   
  **移除**  
  若要刪除類別執行個體，請選取該執行個體，並按一下 **[移除]** 按鈕。  

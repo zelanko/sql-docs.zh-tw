@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation
@@ -16,12 +15,12 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce09e0765f553d2a884a271b7740118a293a9510
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fb778827f9193cd9fae136e078e353241d2b55ae
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089768"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769740"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>以沒有快取或部分快取模式實作查閱
   您可以將查閱轉換設定為使用部分快取或沒有快取模式：  
@@ -61,11 +60,11 @@ ms.locfileid: "48089768"
   
     -   按一下 **[使用 SQL 查詢的結果]**，然後在 **[SQL 命令]** 視窗中建立查詢。  
   
-         – 或 –  
+         -或-  
   
          按一下 **[建立查詢]** ，即可使用 **[查詢產生器]** 提供的圖形工具建立查詢。  
   
-         – 或 –  
+         -或-  
   
          按一下 **[瀏覽]** ，從檔案匯入 SQL 陳述式。  
   

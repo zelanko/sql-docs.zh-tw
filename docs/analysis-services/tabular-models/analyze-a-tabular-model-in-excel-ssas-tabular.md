@@ -1,5 +1,5 @@
 ---
-title: 分析表格式模型在 Excel 中的 |Microsoft 文件
+title: 分析在 Excel 中的 Analysis Services 表格式模型 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b1db764052a9c3370554a6456dc005612a2e8b95
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a3cd28375a60dc2cbf7447068fde8c5a1c7dba07
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040655"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072225"
 ---
-# <a name="analyze-a-tabular-model-in-excel"></a>分析在 Excel 中的表格式模型  
+# <a name="analyze-a-tabular-model-in-excel"></a>在 Excel 中分析表格式模型  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [在 Excel 中進行分析] 功能會開啟 Microsoft Excel、建立模型工作空間資料庫的資料來源連接，以及將樞紐分析表加入工作表。 模型物件 (資料表、資料行、量值、階層和 KPI) 會包含在樞紐分析表欄位清單中當做欄位。  
   
@@ -39,11 +39,11 @@ ms.locfileid: "34040655"
   
     -   若要使用安全性角色，請選取 **[角色]**，然後在清單方塊中選取一個或多個角色。  
   
-         您必須使用角色管理員定義安全性角色。 如需詳細資訊，請參閱[建立及管理角色](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)。  
+         您必須使用角色管理員定義安全性角色。 如需詳細資訊，請參閱 <<c0> [ 建立及管理角色](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)。  
   
 3.  若要使用檢視方塊，請在 **[檢視方塊]** 清單方塊中選取檢視方塊。  
   
-     您必須使用 [檢視方塊] 對話方塊定義檢視方塊 (非預設值)。 如需詳細資訊，請參閱[建立和管理檢視方塊](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)。  
+     您必須使用 [檢視方塊] 對話方塊定義檢視方塊 (非預設值)。 如需詳細資訊，請參閱 <<c0> [ 建立和管理檢視方塊](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)。  
   
 > [!NOTE]  
 >  當您在模型設計師中變更模型專案時，Excel 的樞紐分析表欄位清單不會自動重新整理。 若要重新整理樞紐分析表欄位清單，請在 Excel 的 **[選項]** 功能區上，按一下 **[重新整理]**。  

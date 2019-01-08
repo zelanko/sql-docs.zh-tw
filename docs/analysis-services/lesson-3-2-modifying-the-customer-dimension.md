@@ -1,5 +1,5 @@
 ---
-title: 修改 [客戶] 維度 |Microsoft 文件
+title: 修改 [客戶] 維度 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9f922dfcc073ce72834515b42691bef2e3c90d3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2d777d39bed047ac1807ebb2413eec3539d70428
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019045"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514715"
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>課程 3-2-修改 [客戶] 維度
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "34019045"
   
 3.  請以相同方式變更下列屬性的名稱：  
   
-    -   [英文教育] 屬性 - 變更為**教育**  
+    -   **English Education**屬性-變更為**教育版**  
   
-    -   [英文職業] 屬性 - 變更為**職業**  
+    -   **English Occupation**屬性-變更為**職業**  
   
-    -   [省份名稱] 屬性 - 變更為**省份**  
+    -   **State Province Name**屬性-變更為**省/市**  
   
 4.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34019045"
   
 4.  在 [名稱] 屬性欄位中，輸入**全名**。  
   
-5.  在底部的 [NameColumn] 屬性欄位中按一下，然後按一下瀏覽 (**…**) 按鈕，即可開啟 [名稱資料行] 對話方塊。  
+5.  在中按一下**NameColumn**屬性欄位底部，然後按一下 [瀏覽 (**...**) 按鈕，即可開啟**名稱資料行**] 對話方塊。  
   
 6.  選取 [來源資料行] 清單底部的 [FullName]，然後按一下 [確定]。  
   
@@ -184,9 +184,9 @@ ms.locfileid: "34019045"
   
     [City] 和 [StateProvinceName] 資料行現在會顯示在 [索引鍵資料行] 清單中。  
   
-5.  按一下 **[確定]**。  
+5.  按一下 [確定] 。  
   
-6.  若要設定 [縣 (市)] 屬性 (attribute) 的 [NameColumn] 屬性 (property)，請按一下 [屬性] \(property) 視窗中的 [NameColumn] 欄位，然後按一下瀏覽 (**...**) 按鈕。  
+6.  若要設定 [縣 (市)] 屬性 (attribute) 的 [NameColumn] 屬性 (property)，請按一下 [屬性] (property) 視窗中的 [NameColumn] 欄位，然後按一下瀏覽 (**...**) 按鈕。  
   
 7.  在 [名稱資料行] 對話方塊的 [來源資料行] 清單中，選取 [City]，然後按一下 [確定]。  
   
@@ -204,9 +204,9 @@ ms.locfileid: "34019045"
   
     [EnglishCountryRegionName] 和 [StateProvinceName] 資料行現在會顯示在 [索引鍵資料行] 清單中。  
   
-5.  按一下 **[確定]**。  
+5.  按一下 [確定] 。  
   
-6.  若要設定 [省份] 屬性 (attribute) 的 [NameColumn] 屬性 (property)，請按一下 [屬性] \(property) 視窗中的 [NameColumn] 欄位，然後按一下瀏覽 (**...**) 按鈕。  
+6.  若要設定 [省份] 屬性 (attribute) 的 [NameColumn] 屬性 (property)，請按一下 [屬性] (property) 視窗中的 [NameColumn] 欄位，然後按一下瀏覽 (**...**) 按鈕。  
   
 7.  在 [名稱資料行] 對話方塊的 [來源資料行] 清單中，選取 [StateProvinceName]，然後按一下 [確定]。  
   
@@ -235,7 +235,7 @@ ms.locfileid: "34019045"
   
 8.  在 [關聯性類型] 清單中，將關聯性類型設定為 [固定]。  
   
-9. 按一下 **[確定]**。  
+9. 按一下 [確定] 。  
   
 10. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   

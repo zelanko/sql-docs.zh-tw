@@ -13,12 +13,12 @@ ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e6736f0d05de76abbd230892c1b6ab8c23fc625e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9ab7dc3ea75201bd011b85f80169d50e2ba0d37
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053028"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518886"
 ---
 # <a name="removeurl-method-wmi-msreportserverconfigurationsetting"></a>RemoveURL 方法 (WMI MSReportServer_ConfigurationSetting)
   移除針對報表伺服器所保留的 URL。 如果有多個需要移除的 URL，您就必須呼叫這個 API 來逐一進行此作業。  
@@ -58,7 +58,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
 ## <a name="remarks"></a>備註  
  *UrlString* 不包含虛擬目錄名稱 - [SetVirtualDirectory 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) 方法是針對該目的所提供。  
   
- 然後再呼叫[ReserveURL](configurationsetting-method-reserveurl.md)方法，您必須提供的 VirtualDirectory 組態屬性的值*應用程式*參數。 您可以使用 [SetVirtualDirectory 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) 方法來設定 VirtualDirectory 屬性。  
+ 呼叫 [ReserveURL](configurationsetting-method-reserveurl.md) 方法之前，您必須針對 *Application* 參數的 VirtualDirectory 組態屬性提供一個值。 您可以使用 [SetVirtualDirectory 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) 方法來設定 VirtualDirectory 屬性。  
   
  如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了 SSL 憑證，但是沒有其他 URL 需要它，就會移除此憑證。  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.advancedsaveoptions
@@ -14,12 +14,12 @@ ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c90e963bd5e6eb59ef412ec26ed1b56d4c4ef08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 175c1f5b1f507078f461a07e30c62fb68f7cfb02
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181698"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771640"
 ---
 # <a name="advanced-save-options"></a>進階儲存選項
   使用此對話方塊即可選取語言編碼配置，以及指定要在每行行尾插入的字元。 若要存取**進階儲存選項**對話方塊的 **檔案**功能表上，按一下 **儲存**\<查詢名稱 >**做為.sql**至開啟**另存新檔** 對話方塊中，按一下下拉箭頭**儲存**按鈕，然後再按一下**使用編碼方式儲存**。  

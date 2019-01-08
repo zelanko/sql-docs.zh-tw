@@ -24,12 +24,12 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 5338e17678f31a4bcdef1a6f7a73696f903bb76a
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 9b565fb16621760a69e2462680444db5f0ea3916
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120475"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519477"
 ---
 # <a name="glossary"></a>詞彙
   
@@ -39,7 +39,7 @@ ms.locfileid: "49120475"
 |詞彙|定義|  
 |----------|----------------|  
 |action|使用者在所選取的 Cube 或部分 Cube 上所起始的作業。|  
-|ActiveX Data Objects|與符合 OLE DB 標準之資料來源通訊的資料存取介面，可連接、擷取、操作及更新資料。|  
+|ActiveX Data Objects|與符合 OLE DB 規範之資料來源通訊的資料存取介面，可連接、擷取、操作及更新資料。|  
 |ActiveX Data Objects (多維度)|一組專為多維度資料應用而最佳化，且無關於特定語言的高層級物件型資料存取介面。|  
 |配接器主機|根抽象類別 Adapter，這個類別會在 ENQUEUE 互動點中定義配接器與 StreamInsight 伺服器之間的信號交換。 它會提供所有必要的配接器服務，例如記憶體管理和例外狀況處理。|  
 |ADO|與符合 OLE DB 標準之資料來源通訊的資料存取介面，可連接、擷取、操作及更新資料。|  
@@ -175,10 +175,10 @@ ms.locfileid: "49120475"
 |憑證簽發者|將憑證發行給主體的憑證授權單位。|  
 |Certificate Lifecycle Manager Client|一套 Certificate Lifecycle Manager (CLM) Client 工具，可協助使用者管理其智慧卡。 這些工具包括 Smart Card Self Service Control、Smart Card Personalization Control 和 Certificate Profile Update Control。 請參閱 Smart Card Self-Service Control、Smart Card Personalization Control、Certificate Profile Update Control。|  
 |憑證管理員|Certificate Lifecycle Manager (CLM) 使用者，他擁有適當的 CLM 權限來管理其他 CLM 使用者或管理 CLM 應用程式本身。|  
-|憑證管理員 Web 入口網站|在 Certificate Lifecycle Manager (CLM) 伺服器上執行的 Web 應用程式。 此入口網站可允許憑證管理員管理其他使用者的憑證和智慧卡。 憑證訂閱者和憑證管理員 Web 入口網站可透過相同的統一資源定位器 (URL) 來存取，但是會根據使用者的角色和權限來顯示內容。|  
+|憑證管理員 Web 入口網站|在 Certificate Lifecycle Manager (CLM) 伺服器上執行的 Web 應用程式。 此入口網站可讓憑證管理員管理其他使用者的憑證和智慧卡。 憑證訂閱者和憑證管理員 Web 入口網站可透過相同的統一資源定位器 (URL) 來存取，但是會根據使用者的角色和權限來顯示內容。|  
 |Certificate Profile Update Control|ActiveX 控制項，可將用戶端電腦上 Certificate Lifecycle Manager (CLM) 設定檔的更新自動化。|  
 |憑證撤銷|撤銷數位憑證的程序。|  
-|憑證訂閱者|需要憑證的使用者 (不論有沒有智慧卡)。 憑證訂閱者可以存取少量的功能，這些功能只能針對使用者自己的憑證來執行。|  
+|憑證訂閱者|需要憑證的使用者 (不論有沒有智慧卡)。 憑證訂閱者可以存取少量的只有使用者自己的憑證執行的函式。|  
 |憑證訂閱者 Web 入口網站|在 Certificate Lifecycle Manager (CLM) 伺服器上執行的 Web 應用程式。 CLM 伺服器的這個元件會在自助模式下直接與使用者互動。 此特定功能是根據 Active Directory 群組成員資格和權限。 憑證訂閱者和憑證管理員 Web 入口網站可透過相同的統一資源定位器 (URL) 來存取，但是會根據使用者的角色和權限來顯示內容。|  
 |憑證範本|Windows 建構，可根據想要的使用方式指定憑證的格式和內容。 向 Windows 企業憑證授權單位 (CA) 要求憑證時，憑證要求者可以從各種不同的憑證類型選取 (這些類型是以憑證範本為根據)。|  
 |變更套用者|針對變更批次執行衝突偵測、衝突處理及變更套用的物件。|  
@@ -212,16 +212,16 @@ ms.locfileid: "49120475"
 |CLM 稽核|Certificate Lifecycle Manager (CLM) 在 Active Directory 中的擴充權限，可允許產生及顯示 CLM 原則範本、在設定檔範本內定義管理原則及產生 CLM 報表。|  
 |CLM 認證|可用於向 Certificate Lifecycle Manager (CLM) 驗證使用者的使用者帳戶資訊。 這些認證可以是網域認證或單次密碼的形式。|  
 |CLM 註冊|Certificate Lifecycle Manager (CLM) 在 Active Directory 中的擴充權限，可允許使用者在使用範本發行憑證時，指定工作流程和要收集的資料。 此擴充權限只會套用到設定檔範本。|  
-|CLM 註冊代理程式|Certificate Lifecycle Manager (CLM) 在 Active Directory 中的擴充權限，可允許使用者或群組代表另一個使用者執行憑證要求。 發出的憑證主體將會包含目標使用者的名稱，而不是要求者的名稱。|  
+|CLM 註冊代理程式|Certificate Lifecycle Manager (CLM) 在 Active Directory 中的擴充權限，可允許使用者或群組代表另一個使用者執行憑證要求。 發行的憑證的主體會包含目標使用者的名稱，而不是要求者的名稱。|  
 |CLM 復原|Certificate Lifecycle Manager (CLM) 在 Active Directory 中的擴充權限，可允許從憑證授權單位資料庫起始加密金鑰復原。|  
-|CLM 更新|Certificate Lifecycle Manager (CLM) 在 Active Directory 中的擴充權限，可允許起始、執行或完成註冊要求。 更新的要求會使用具有新有效期間的新憑證來取代接近到期日的使用者憑證。|  
+|CLM 更新|Certificate Lifecycle Manager (CLM) 在 Active Directory 中的擴充權限，可允許起始、執行或完成註冊要求。 更新要求會取代使用者的憑證接近到期日的新的有效期間的新憑證。|  
 |CLM 報表|與 Certificate Lifecycle Manager (CLM) 內認證管理活動有關的稽核資訊。|  
 |CLM 要求註冊|Certificate Lifecycle Manager (CLM) 在 Active Directory 中的擴充權限，可允許起始、執行或完成註冊要求。|  
 |CLM 要求復原|Certificate Lifecycle Manager (CLM) 在 Active Directory 中的擴充權限，可允許從憑證授權單位資料庫起始加密金鑰復原。|  
-|CLM 要求更新|Certificate Lifecycle Manager (CLM) 在 Active Directory 中的擴充權限，可允許起始、執行或完成註冊要求。 更新的要求會使用具有新有效期間的新憑證來取代接近到期日的使用者憑證。|  
-|CLM 要求撤銷|Certificate Lifecycle Manager (CLM) 在 Active Directory 中的擴充權限，可允許在憑證的有效期間到期之前撤銷憑證。 必須進行這項處理的一個範例就是當使用者的電腦或智慧卡受到危害 (遭竊) 時。|  
-|CLM 要求解除封鎖智慧卡|Certificate Lifecycle Manager (CLM) 在 Active Directory 中的擴充權限，可讓智慧卡的使用者個人識別碼 (PIN) 重設，允許存取智慧卡上的重要資料及重新建立該資料。|  
-|CLM 撤銷|Certificate Lifecycle Manager (CLM) 在 Active Directory 中的擴充權限，可允許在憑證的有效期間到期之前撤銷憑證。 必須進行這項處理的一個範例就是當使用者的電腦或智慧卡受到危害 (遭竊) 時。|  
+|CLM 要求更新|Certificate Lifecycle Manager (CLM) 在 Active Directory 中的擴充權限，可允許起始、執行或完成註冊要求。 更新要求會取代使用者的憑證接近到期日的新的有效期間的新憑證。|  
+|CLM 要求撤銷|Certificate Lifecycle Manager (CLM) 擴充可讓憑證撤銷的憑證有效期間到期之前的 Active Directory 中的權限。 這是必要的範例是如果使用者的電腦或智慧卡受到危害 （遭竊）。|  
+|CLM 要求解除封鎖智慧卡|Certificate Lifecycle Manager (CLM) 擴充，可讓智慧卡的使用者個人識別碼 (PIN) 重設，Active Directory 中的權限，讓智慧卡上，並重新建立該資料的存取金鑰的內容。|  
+|CLM 撤銷|Certificate Lifecycle Manager (CLM) 擴充可讓憑證撤銷的憑證有效期間到期之前的 Active Directory 中的權限。 這是必要的範例是如果使用者的電腦或智慧卡受到危害 （遭竊）。|  
 |時鐘向量|代表複本更新的時鐘向量元素集合。 介於 0 和滴答計數之間的任何變更都會包含在此向量內。|  
 |時鐘向量元素|代表複本變更的一組值，由複寫機碼和滴答計數組成。|  
 |CLR 函數 (CLR function)|針對 SQL Server 組件所建立的函數，其實作定義在 .NET Framework Common Language Runtime (CLR) 所建立的組件中。|  
@@ -782,7 +782,7 @@ ms.locfileid: "49120475"
 |初始磁帶|在使用磁帶備份裝置的媒體集中，這是媒體家族中的第一個磁帶。|  
 |內部聯結 (inner join)|比較來源資料表所共用之資料行的值，以從多個來源資料表中擷取資料列的作業。 內部聯結會排除與其他來源資料表無相符資料列之來源資料表的資料列。|  
 |親自驗證|完成憑證要求交易的實體驗證。 例如，要求解除封鎖其個人識別碼 (PIN) 的使用者將會親自拜訪憑證管理員，以便提供包含身分識別的親自驗證，例如員工識別證或駕照。|  
-|InProc|COM 物件的程式碼從 DLL 檔案載入且位於與用戶端相同之處理序中的狀況。|  
+|InProc|COM 物件的程式碼從 DLL 檔案會載入且位於相同的程序，與用戶端的其中一種情況。|  
 |輸入配接器|接受來自外部來源 (如資料庫、檔案、即時看板摘要、網路連接埠、製造裝置等) 之內送事件資料流的配接器。|  
 |輸入成員|其值並非從其他資料計算得出，而是從資料來源中直接載入的成員。|  
 |輸入集|一組提供給多維度運算式 (MDX) 值運算式，由這個運算式來加以處理的資料。|  
@@ -841,11 +841,11 @@ ms.locfileid: "49120475"
 |關鍵效能指標 (key performance indicator)|預先定義的量值，用於追蹤策略性目標、目的、計劃、提議或商業流程的效能。 KPI 是針對目標進行評估。 從資料來源直接取得的明確且可測量的值。 關鍵效能指標 (KPI) 是用來測量特定區域的效能，例如每位客戶的收入。|  
 |關鍵範圍鎖定|用於鎖定資料表記錄之間的範圍，以防止對一組記錄新增或刪除虛設項目的鎖定。 這可以確保可序列化的交易。|  
 |金鑰修復|復原使用者私密金鑰的程序。|  
-|金鑰修復代理|與憑證管理員合作，以復原使用者私密金鑰的指定使用者。 特定憑證範本會套用到金鑰修復代理。|  
+|金鑰修復代理|指定的使用者復原使用者私密金鑰的憑證管理員的運作方式。 特定憑證範本會套用到金鑰修復代理。|  
 |索引鍵集驅動資料指標|「在資料指標開啟時，會顯示其他使用者所進行的成員資料列更新效果，但不會顯示插入或刪除效果」的資料指標。|  
 |知識|有關參與者已經看到及維護之所有變更的中繼資料。|  
 |KPI|預先定義的量值，用於追蹤策略性目標、目的、計劃、提議或商業流程的效能。 KPI 是針對目標進行評估。 從資料來源直接取得的明確且可測量的值。 關鍵效能指標 (KPI) 是用來測量特定區域的效能，例如每位客戶的收入。|  
-|KRA|與憑證管理員合作，以復原使用者私密金鑰的指定使用者。 特定憑證範本會套用到金鑰修復代理。|  
+|KRA|指定的使用者復原使用者私密金鑰的憑證管理員的運作方式。 特定憑證範本會套用到金鑰修復代理。|  
 |非 Unicode 程式的語言|一個 [地區及語言選項] 設定，可針對影響特定電腦之所有使用者的該特定電腦來指定預設字碼頁及關聯的點陣圖字型檔案。 預設字碼頁和字型會啟用針對一個作業系統語言版本撰寫的非 Unicode 應用程式，以便在另一個作業系統語言版本上正確執行。|  
 |語言服務剖析器|用來描述原始程式碼內 Token 的功能與範圍的元件。|  
 |語言服務掃描器|用來識別原始程式碼內 Token 類型的元件。 這項資訊可用於反白顯示語法及快速識別可以觸發其他作業 (例如括號對稱) 的 Token 類型。|  
@@ -1186,7 +1186,7 @@ ms.locfileid: "49120475"
 |私密金鑰|搭配公開金鑰演算法使用的密碼編譯金鑰組的密碼部分。 一般來說，私密金鑰用來解密對稱工作階段金鑰、對資料進行數位簽署，或是針對使用對應公開金鑰加密的資料進行解密。|  
 |主動式快取|在 Cube 中管理資料陳舊過時的系統，其中 MOLAP 儲存體中的物件會在快取中自動更新和處理，而查詢會重新導向至 ROLAP 儲存體。|  
 |程序快取|在 SQL Server 記憶體集區中，用於儲存 Transact-SQL 批次、預存程序和觸發程序之執行計畫的部分。|  
-|設定檔範本|所有 Certificate Lifecycle Manager (CLM) 管理活動的核心。 設定檔範本提供了單一管理單元，其中包括管理整個憑證週期中使用者社群可能需要的多個憑證所需的全部資訊。 設定檔範本還包括有關這些憑證之最終位置的資訊，可能是以軟體為基礎 (也就是儲存在本機電腦上)，或是以硬體為基礎 (儲存在智慧卡上)。 設定檔範本無法同時包含軟體和智慧卡為基礎的憑證。|  
+|設定檔範本|所有 Certificate Lifecycle Manager (CLM) 管理活動的核心。 設定檔範本提供了單一管理單元，其中包含所有管理憑證的生命週期中使用者社群可能需要多個憑證所需的資訊。 設定檔範本還包括有關這些憑證之最終位置的資訊，可能是以軟體為基礎 (也就是儲存在本機電腦上)，或是以硬體為基礎 (儲存在智慧卡上)。 設定檔範本無法同時包含軟體和智慧卡為基礎的憑證。|  
 |收益圖|顯示理論上與使用各種資料模型相關聯之收益增加的圖。|  
 |可程式化|可接受指令執行工作或作業的能力。 可程式化是電腦的特性。|  
 |屬性頁面 (properties page)|在介面中顯示物件相關資訊的對話方塊。|  
@@ -1464,10 +1464,10 @@ ms.locfileid: "49120475"
 |sleep|暫停作業，但不終止。|  
 |配量 (slice)|Cube 中的資料子集，指定方式是依維度成員來限制一個或多個維度。|  
 |交叉分析篩選器|提供單鍵篩選控制項的功能，讓使用者能夠輕鬆縮小查看中的資料集部分。|  
-|滑動視窗|固定長度 L 的視窗，它會根據資料流的事件沿著時間表移動。 透過時間表上的每個事件，系統會建立新的視窗，從事件的開始時間開始。|  
+|滑動視窗|會沿著根據資料流的事件時間軸移動的固定長度 L 的視窗。 與時間軸上每個事件，會建立新的視窗，開始事件的開始時間。|  
 |匯集|是指將更新、修補程式或 Service Pack 整合到原始軟體的基底安裝檔中，如此產生的檔案透過單一步驟就可安裝更新後的軟體。|  
 |匯集安裝|安裝類型，它會將作業系統或程式的基底安裝檔案與 Service Pack、更新或修補程式整合起來，使它們透過單一步驟完成安裝。|  
-|智慧卡|塑膠 (信用卡大小或更小) 裝置，其中使用內嵌的微處理器和少量儲存空間 (須使用存取程式碼) 提供憑證式驗證。 智慧卡可安全地儲存憑證、公開和私密金鑰、密碼，以及其他類型的個人資訊。|  
+|智慧卡|使用內嵌的微處理器和少量使用，以及存取程式碼中，若要啟用憑證型驗證的儲存體塑膠 （信用卡大小或更小） 裝置。 智慧卡可安全地儲存憑證、公開和私密金鑰、密碼，以及其他類型的個人資訊。|  
 |Smart Card Personalization Control|ActiveX 控制項，它會在用戶端電腦上執行所有 Certificate Lifecycle Manager (CLM) 智慧卡應用程式管理活動。|  
 |智慧卡設定檔|Certificate Lifecycle Manager (CLM) 設定檔，使用僅包含智慧卡式憑證範本的設定檔範本執行要求時就會建立。|  
 |智慧卡讀卡機|安裝在電腦中以便使用智慧卡提供增強型安全性功能的裝置。|  
@@ -1785,7 +1785,7 @@ ms.locfileid: "49120475"
 |X 軸 (x-axis)|具有水平和垂直維度的方格、圖表或圖形上的水平參考線。|  
 |XML for Analysis|描述一套開放標準的規格，可支援對位於全球資訊網上的資料來源進行資料存取。|  
 |XMLA|描述一套開放標準的規格，可支援對位於全球資訊網上的資料來源進行資料存取。|  
-|XQuery|功能查詢語言，可廣泛運用到衍生自 Quilt、XPath 和 XQL 的各種不同 XML 資料類型。 Ipedo 和 Software AG 都實作自己的版本，並採用 W3C 建議的 XQuery 語言規格。 也稱為：XML 查詢、XQL。|  
+|XQuery|功能查詢語言，可廣泛運用到衍生自 Quilt、XPath 和 XQL 的各種不同 XML 資料類型。 Ipedo 和 Software AG 都實作自己的版本，並採用 W3C 建議的 XQuery 語言規格。 也稱為XML Query、XQL。|  
 |XSL|利用定義呈現規則的樣式表，將 XML 資料轉換成另一種形式 (例如 HTML) 時所使用的 XML 詞彙。|  
 |XSL 轉換|宣告式 XML 架構語言，用於呈現或轉換 XML 資料。|  
 |XSLT|宣告式 XML 架構語言，用於呈現或轉換 XML 資料。|  

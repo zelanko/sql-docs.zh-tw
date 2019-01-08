@@ -11,12 +11,12 @@ ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 825bc3d35a0080933c73853a05bf1a6dd9ed3df8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9a2172bdefebdbfd327d8d253e32cd63c254d8e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069710"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419869"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 管理儀表板和使用量資料
   PowerPivot 管理儀表板是 SharePoint 管理中心內預先定義之報表和網頁組件的集合，可讓您管理 SQL Server PowerPivot for SharePoint 部署。 管理儀表板會提供伺服器健全狀況、活頁簿活動和資料重新整理的相關資訊。 儀表板會使用 SharePoint 使用量資料收集的資料。  
@@ -82,7 +82,7 @@ ms.locfileid: "48069710"
   
 -   [設定使用量資料收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- 若要擷取 PowerPivot 伺服器系統的相關資料，請確認已針對每個 PowerPivot 服務應用程式啟用事件訊息、資料重新整理記錄和其他使用量記錄。 一般伺服器作業期間所蒐集的伺服器與使用量資料就是來源資料，最後會送入內部資料模型中。 **注意** ：如果關閉事件或使用量記錄，綜合報表會不完整或發生錯誤。  
+ 若要擷取 PowerPivot 伺服器系統的相關資料，請確認已針對每個 PowerPivot 服務應用程式啟用事件訊息、資料重新整理記錄和其他使用量記錄。 一般伺服器作業期間所蒐集的伺服器與使用量資料就是來源資料，最後會送入內部資料模型中。 **注意：** 如果關閉事件或使用量記錄，綜合報表會不完整或錯誤。  
   
 ##  <a name="edit"></a> 編輯 PowerPivot 儀表板  
  如果您擁有開發或自訂儀表板的專業技術，可以編輯儀表板以包含新的網頁組件。 您也可以編輯包含於儀表板中的網頁組件屬性。  
@@ -125,7 +125,7 @@ ms.locfileid: "48069710"
   
     7.  輸入連接的名稱，然後按 **[下一步]**。  
   
-    8.  在 [指定 MDX 查詢] 中，按一下 **[設計]** 開啟 MDX 查詢設計工具以組合您要使用的資料。 **如果您看見錯誤訊息** 「編輯模式屬性名稱的格式不正確。」，請務必編輯 .ODC 檔案。  
+    8.  在 [指定 MDX 查詢] 中，按一下**設計**以開啟 MDX 查詢設計工具以組合您要使用的資料**如果您看到錯誤訊息**「 編輯模式屬性名稱格式不正確。 」，請確認您的編輯。ODC 檔案。  
   
     9. 按一下 **[確定]** ，然後按一下 **[完成]**。  
   

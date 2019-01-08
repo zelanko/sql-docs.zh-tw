@@ -12,18 +12,18 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 392e09bee33370116ba0c4ff6e0f9f13ce0fdad5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44ac9cecce81f7873ca5ef42ba414bd4528e05b4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184189"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543712"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>舊版 SQL Server 的增強型日期/時間類型行為 (ODBC)
   本主題描述使用增強型日期和時間增強功能的用戶端應用程式與早於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本進行通訊時，以及使用 Microsoft Data Access Components、Windows Data Access Components，或早於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client 版本的應用程式將命令傳送到支援增強型日期和時間功能的伺服器時的預期行為。  
   
 ## <a name="down-level-client-behavior"></a>下層用戶端行為  
- 使用早於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client 版本編譯的用戶端應用程式會將新的日期/時間類型視為 nvarchar 資料行。 資料行內容會常值的表示法中，「 資料格式： 字串和常值 」 一節中所述[資料類型對 ODBC 日期和時間改善支援](data-type-support-for-odbc-date-and-time-improvements.md)。 資料行大小是針對資料行指定之小數秒有效位數的最大常值長度。  
+ 使用早於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client 版本編譯的用戶端應用程式會將新的日期/時間類型視為 nvarchar 資料行。 中所述，資料行內容會是常值的表示法，「 資料格式：字串和常值 > 一節[資料類型對 ODBC 日期和時間改善支援](data-type-support-for-odbc-date-and-time-improvements.md)。 資料行大小是針對資料行指定之小數秒有效位數的最大常值長度。  
   
  資料庫目錄 API 將會傳回與傳回到用戶端之下層資料類型程式碼一致的中繼資料 (例如，nvarchar)，以及相關聯的下層表示法 (例如，適當的常值格式)。 不過，傳回的資料類型名稱將會是實際的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 類型名稱。  
   
@@ -37,8 +37,8 @@ ms.locfileid: "48184189"
 |||SQL_C_TYPE_TIMESTAMP|時間欄位會設定為零。|OK (2)<br /><br /> 如果時間欄位不為零，就會失敗。 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||Time(0)|SQL_C_TYPE_TIME|[確定]|[確定] \(1)|  
 |||SQL_C_TYPE_TIMESTAMP|日期欄位設定為目前的日期。|OK (2)<br /><br /> 忽略日期。 如果小數秒不是零，就會失敗。 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Time(7)|SQL_C_TIME|失敗 – 無效的時間間隔。|[確定] \(1)|  
-|||SQL_C_TYPE_TIMESTAMP|失敗 – 無效的時間間隔。|[確定] \(1)|  
+||Time(7)|SQL_C_TIME|失敗-無效的時間間隔。|[確定] \(1)|  
+|||SQL_C_TYPE_TIMESTAMP|失敗-無效的時間間隔。|[確定] \(1)|  
 ||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|[確定]|[確定] \(1)|  
 ||datetime2(7)|SQL_C_TYPE_TIMESTAMP|[確定]|用戶端轉換會將值捨入為 1/300 秒。|  
 |Smalldatetime|date|SQL_C_TYPE_DATE|[確定]|[確定]|  
@@ -87,8 +87,8 @@ ms.locfileid: "48184189"
 |TYPE_NAME|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|LITERAL_PREFIX|'|'|'|'|'|'|  
+|LITERAL_SUFFIX|'|'|'|'|'|'|  
 |CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG021331 error
@@ -13,12 +12,12 @@ ms.assetid: 9acd75d9-fda1-44cd-ba17-20295ad53ea0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 94d898e666c0182a9e323000d78e5a06bce3d1ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26e0f33ef996f47fe4be2b3be034111187033f94
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175438"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753760"
 ---
 # <a name="mssqleng021331"></a>MSSQL_ENG021331
     

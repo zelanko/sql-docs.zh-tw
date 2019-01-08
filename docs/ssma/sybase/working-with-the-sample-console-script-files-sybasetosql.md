@@ -12,12 +12,12 @@ ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1c638a220aa423f9e30c1ef0fb746dd56a77d2a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a87b213731ac0b8cb1b76eb87b1997f86157c6c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798126"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411075"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>使用範例主控台指令碼檔 (SybaseToSQL)
 幾個範例檔案，以及產品提供的使用者參考和使用方式。 本章節描述的方式，輕鬆地自訂這些指令碼，以符合使用者需求。  
@@ -84,7 +84,7 @@ ms.locfileid: "47798126"
   
     -   `source-schema:` 指定轉換所需的來源資料庫。  
   
-    -   `sql-server-schema`： 指定所要移轉到目標資料庫  
+    -   `sql-server-schema`:指定要移轉至目標資料庫  
   
     **命令名稱**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47798126"
   
     **Attribute**  
   
-    `object-name`： 指定來源資料庫/物件轉換所需的名稱。 請確認對應`object-type`會依據物件中指定的類型變更 `object-name`  
+    `object-name`:指定來源資料庫/物件轉換所需的名稱。 請確認對應`object-type`會依據物件中指定的類型變更 `object-name`  
   
     **命令名稱**  
   

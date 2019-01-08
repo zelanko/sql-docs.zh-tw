@@ -16,15 +16,15 @@ ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e47248ac5719b2303c71f2e7b93161112ca7f870
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c238b89f6fefbb158c50531d28d2c234c64f64bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758036"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507632"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>選擇資料來源或驅動程式
-資料來源或應用程式所使用的驅動程式有時會硬式編碼應用程式中。 比方說，自訂撰寫的應用程式由 MIS 部門傳輸到另一個資料來源資料會包含這些資料來源的名稱 — 應用程式只會無法搭配任何其他資料來源。 另一個範例是垂直的應用程式，例如一個用於訂單項目。 這類應用程式一律使用相同的資料來源都有已知的應用程式的預先定義結構描述。  
+資料來源或應用程式所使用的驅動程式有時會硬式編碼應用程式中。 比方說，撰寫由 MIS 部門傳送到另一個資料來源資料會包含名稱的自訂應用程式的這些資料來源的應用程式根本不能運作與任何其他資料來源。 另一個範例是垂直的應用程式，例如一個用於訂單項目。 這類應用程式一律使用相同的資料來源都有已知的應用程式的預先定義結構描述。  
   
  其他應用程式會在執行階段選取資料來源或驅動程式。 這些通常是進行臨機操作查詢，例如試算表，以使用 ODBC 將資料匯入的一般應用程式。 這類應用程式通常會列出可用的資料來源或驅動程式，並讓使用者選擇他們想要使用的項目。 是否泛型應用程式會列出資料來源、 驅動程式，或兩者通常取決於應用程式是否使用以 DBMS 為基礎，或檔案為基礎的驅動程式。  
   

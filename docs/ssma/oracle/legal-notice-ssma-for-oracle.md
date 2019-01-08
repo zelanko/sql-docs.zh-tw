@@ -10,12 +10,12 @@ ms.assetid: 12f7b46f-9228-46d8-9877-cc6a7948c64b
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 0857669590f5d81c7ab6aa585de4a4aa052ca492
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff3acde2d4257412c743958311a050a7879ed2a4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657454"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514612"
 ---
 # <a name="legal-notice-ssma-for-oracle"></a>法律聲明 (SSMA for Oracle)
 本文件集 (包括其中所用的範例應用程式) 僅為資訊用途而提供，本文件集亦不提供任何明示或默示之擔保。 本文件集中的資訊，包括 URL 及其他網際網路網站參考資料，如有變更恕不另行通知。 本文件集之使用或因使用本文件集所衍生之一切後果，概由使用者自行承擔所有風險。  
@@ -35,7 +35,7 @@ SAP NetWeaver 是 SAP AG 在德國和其他數個國家/地區的註冊商標。
 所有其他商標為各所有人所有之商標。  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>SQL Server 支援及升級的文件集原則  
-SQL Server 文件集中的內容均經過充分測試才發佈。 《SQL Server 線上叢書》、讀我檔案、已知問題文件和知識庫文件等產品文件的內容均有關 SQL Server 功能，這些功能的強固程度足以供所有客戶安全地用於一般用途。 此原則適用於所有 SQL Server 文件集，包括版本及 Service Pack 的讀我檔案；讀我檔案可視為《線上叢書》的延伸部分。  
+SQL Server 文件集中的內容均經過充分測試才發佈。 產品文件-SQL Server 線上叢書 》、 讀我檔案、 已知的問題文件，以及知識庫文件-包含有關 SQL Server 特性與功能非常強大，足以供一般客戶使用的所有安全的內容。 此原則適用於所有 SQL Server 文件集，包括版本及 Service Pack 的讀我檔案；讀我檔案可視為《線上叢書》的延伸部分。  
   
 在某些情況下，某項特定功能未供客戶直接使用，因此未受記載。 除非 Microsoft 所發佈的 SQL Server 文件集也討論到某項功能，否則 Microsoft 客戶支援並不支援來自協力廠商叢書或網站的內容，並且不得用於產品資料庫或應用程式。  
   

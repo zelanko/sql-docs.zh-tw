@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b5bf5ce20678845111a1f410739674c50c7bb61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596157"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402846"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47596157"
 |**last_media_number**|**smallint**|備份組結束時所在之媒體的媒體號碼。 可以是 NULL。|  
 |**catalog_family_number**|**tinyint**|備份組目錄起點所在之媒體的家族號碼。 可以是 NULL。|  
 |**catalog_media_number**|**smallint**|備份組目錄起點所在之媒體的媒體號碼。 可以是 NULL。|  
-|**位置**|**int**|還原作業用來尋找適當備份組和檔案的備份組位置。 可以是 NULL。 如需詳細資訊，請參閱中的檔案[BACKUP &#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。|  
+|**position**|**int**|還原作業用來尋找適當備份組和檔案的備份組位置。 可以是 NULL。 如需詳細資訊，請參閱中的檔案[BACKUP &#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。|  
 |**expiration_date**|**datetime**|備份組到期的日期和時間。 可以是 NULL。|  
 |**software_vendor_id**|**int**|寫入備份媒體標頭的軟體供應商識別碼。 可以是 NULL。|  
 |**name**|**nvarchar(128)**|備份組的名稱。 可以是 NULL。|  
@@ -67,7 +67,7 @@ ms.locfileid: "47596157"
 |**backup_finish_date**|**datetime**|備份作業完成的日期和時間。 可以是 NULL。|  
 |**type**|**char(1)**|這是備份類型， 可為以下項目：<br /><br /> D = 資料庫<br /><br /> I = 差異資料庫<br /><br /> L = 記錄<br /><br /> F = 檔案或檔案群組<br /><br /> G = 差異檔案<br /><br /> P = 部分<br /><br /> Q = 差異部分<br /><br /> 可以是 NULL。|  
 |**sort_order**|**smallint**|執行備份作業的伺服器排序順序。 可以是 NULL。 如需有關排序次序和定序的詳細資訊，請參閱 < [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。|  
-|**字碼頁**|**smallint**|執行備份作業的伺服器字碼頁。 可以是 NULL。 如需字碼頁的詳細資訊，請參閱[Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。|  
+|**code_page**|**smallint**|執行備份作業的伺服器字碼頁。 可以是 NULL。 如需字碼頁的詳細資訊，請參閱[Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。|  
 |**compatibility_level**|**tinyint**|這是資料庫的相容性層級設定， 可為以下項目：<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> 可以是 NULL。<br /><br /> 如需相容性層級的詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|  
 |**database_version**|**int**|資料庫版本號碼。 可以是 NULL。|  
 |**backup_size**|**numeric(20,0)**|備份組的大小 (以位元組為單位)。 可以是 NULL。 VSS 的備份，backupset 會是估計的值。|  

@@ -5,8 +5,7 @@ ms.date: 04/30/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_adddistributiondb_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c2ba920af692d85cbe8df1df69169fcde01a5c78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c55e0f8d7c2e102b18f7c17fb263c8f76658ede
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610116"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765800"
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +57,19 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@database=**]*資料庫 '*  
  這是要建立的散發資料庫名稱。 *資料庫*已**sysname**，沒有預設值。 如果指定的資料庫已經存在，且尚未標示為散發資料庫，便會安裝啟用散發所需要的物件，且會將資料庫標示為散發資料庫。 如果指定的資料庫已啟用為散發資料庫，就會傳回錯誤。  
   
- [  **@data_folder=**] **' * * * data_folder'*  
+ [  **@data_folder=**] **'**_data_folder'_  
  這是用於儲存散發資料庫資料檔案的目錄名稱。 *data_folder*已**nvarchar(255)**，預設值是 NULL。 如果是 NULL，就會使用該 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料目錄，例如 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`。  
   
- [  **@data_file=**] **'***data_file***'**  
+ [  **@data_file=**] **'**_data_file_**'**  
  這是資料庫檔案的名稱。 *data_file*已**nvarchar(255)**，預設值是**資料庫**。 如果是 NULL，這個預存程序會利用資料庫名稱來建構檔案名稱。  
   
  [  **@data_file_size=**] *data_file_size*  
  這是初始資料檔案大小 (以 MB 為單位)。 *data_file_size 我*s **int**，預設值是 5 MB。  
   
- [  **@log_folder=**] **'***log_folder***'**  
+ [  **@log_folder=**] **'**_log_folder_**'**  
  這是資料庫記錄檔的目錄名稱。 *log_folder*已**nvarchar(255)**，預設值是 NULL。 如果是 NULL，就會使用該 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料目錄 (例如 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`)。  
   
- [  **@log_file=**] **'***log_file***'**  
+ [  **@log_file=**] **'**_log_file_**'**  
  這是記錄檔的名稱。 *log_file*已**nvarchar(255)**，預設值是 NULL。 如果是 NULL，這個預存程序會利用資料庫名稱來建構檔案名稱。  
   
  [  **@log_file_size=**] *log_file_size*  
@@ -88,10 +87,10 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@security_mode=**] *security_mode*  
  這是用於連接散發者的安全性模式。 *security_mode*已**int**，預設值是 1。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證;**1**指定 Windows 整合式驗證。  
   
- [  **@login=**] **'***登入***'**  
+ [  **@login=**] **'**_登入_**'**  
  這是連接到散發者來建立散發資料庫時，所用的登入名稱。 這是必要的如果*security_mode*設為**0**。 *login* 是預設值為 NULL 的 **sysname**。  
   
- [  **@password=**] **'***密碼***'**  
+ [  **@password=**] **'**_密碼_**'**  
  這是連接到散發者時所用的密碼。 這是必要的如果*security_mode*設為**0**。 *密碼*已**sysname**，預設值是 NULL。  
   
  [  **@createmode=**] *createmode*  

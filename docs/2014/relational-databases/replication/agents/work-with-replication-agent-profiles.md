@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], agents and profiles
@@ -16,12 +15,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c68295673fb34c0257a9772540282b8e814df03b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6f66d1bab70619db1631117268e5d62c24c943f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169784"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772200"
 ---
 # <a name="work-with-replication-agent-profiles"></a>處理複寫代理程式設定檔
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中處理複寫代理程式設定檔。 每個複寫代理程式的行為由一組可在代理程式設定檔中設定的參數來控制。 各代理程式都有預設的設定檔，某些代理程式還擁有其他預先定義的設定檔；在某一給定時刻，代理程式只使用一個設定檔。  
@@ -92,7 +91,7 @@ ms.locfileid: "48169784"
   
 1.  如果 **[代理程式設定檔]** 對話方塊顯示一個以上的代理程式設定檔，請選取一個代理程式。  
   
-2.  按一下設定檔旁邊的屬性按鈕 (**...**)。  
+2.  按一下設定檔旁邊的屬性按鈕 ([...])。  
   
 3.  檢視 [\<設定檔名稱> 設定檔屬性] 對話方塊中的參數和值。  
   
@@ -245,7 +244,7 @@ ms.locfileid: "48169784"
   
     -   (選擇性) <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> - 設定檔的描述。  
   
-    -   （選擇性）<xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> -將此屬性設定為`true`如果所有新代理程式作業，這個<xref:Microsoft.SqlServer.Replication.AgentType>預設會使用此設定檔。  
+    -   (選擇性) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - 如果依預設這個 <xref:Microsoft.SqlServer.Replication.AgentType> 的所有新代理程式作業都會使用這個設定檔，請將此屬性設定為 `true`。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.AgentProfile.Create%2A> 方法，以在伺服器上建立設定檔。  
   
@@ -279,7 +278,7 @@ ms.locfileid: "48169784"
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.AgentProfile> 類別的執行個體。 針對 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> ，設定步驟 1 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 和 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>的設定檔名稱。  
   
-3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法傳回`false`，則指定的名稱不正確，或在伺服器上沒有設定檔。  
+3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法傳回 `false`，則指定的名稱不正確，或伺服器上不存在該設定檔。  
   
 4.  確認 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> 屬性是設定為 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>，這代表客戶的設定檔。 您不該移除 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> 的值為 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>的設定檔。  
   

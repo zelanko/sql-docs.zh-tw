@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, security
@@ -15,12 +13,12 @@ ms.assetid: 7281bdbd-cf1d-4d73-9fe7-ee8b2b946696
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 225835257a8efb9e3e9e2422ad6710203516884a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bcaff1509a08cc14ffb0d5ce267607b75a942229
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049703"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753390"
 ---
 # <a name="sqlxml-40-security-considerations"></a>SQLXML 4.0 安全性考量
   本節提供與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 之安全性相關考量的資訊。  

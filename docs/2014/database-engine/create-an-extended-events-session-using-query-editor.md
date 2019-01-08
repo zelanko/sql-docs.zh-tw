@@ -14,15 +14,15 @@ ms.assetid: cba0e02b-b201-4863-bf1b-9164e68e5fa8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e0c243dcacf653167477137e26f0767985f6fa3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef0dfbb1c0e62bbe5301f769ee0f3e4d585b06b6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150868"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521261"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>使用查詢編輯器建立擴充事件工作階段
-  您可以使用查詢編輯器來建立擴充事件工作階段，也可以在物件總管中建立工作階段。 在物件總管中，擴充事件提供了兩個可用來建立、修改和檢視事件工作階段資料的使用者介面：指引您完成事件工作階段建立程序的精靈，以及提供了更多進階組態選項的新增工作階段 UI。 您可以建立擴充事件工作階段來診斷 SQL Server 追蹤，以便解決下列問題：  
+  您可以使用查詢編輯器來建立擴充事件工作階段，也可以在物件總管中建立工作階段。 在 [物件總管] 中，擴充的事件會提供兩個使用者介面，可用來建立、 修改及檢視事件工作階段資料-一個精靈，引導您完成事件工作階段的建立程序，並提供更進階的組態選項的新工作階段 UI。 您可以建立擴充事件工作階段來診斷 SQL Server 追蹤，以便解決下列問題：  
   
 -   尋找最費時的查詢  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48150868"
   
  如需如何使用 [新增工作階段精靈] 建立擴充事件工作階段的相關資訊，請參閱[使用精靈建立擴充事件工作階段 &#40;物件總管&#41;](../ssms/object/object-explorer.md)。 如需如何使用 [新增工作階段] UI 建立擴充事件工作階段的相關資訊，請參閱 [Quick Start: Extended events in SQL Server](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) (快速入門：SQL Server擴充事件)。  
   
-##  <a name="BeforeYouBegin"></a> Permissions  
+##  <a name="BeforeYouBegin"></a> 權限  
  若要建立「擴充事件」工作階段，您必須擁有 ALTER ANY EVENT SESSION 權限。  
   
 ## <a name="creating-an-extended-events-session-using-query-editor"></a>使用查詢編輯器建立擴充事件工作階段  

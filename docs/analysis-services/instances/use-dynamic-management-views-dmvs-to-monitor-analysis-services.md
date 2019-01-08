@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d59601d0706b65186ed5f260128c3c44a134d60e
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906398"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984099"
 ---
 # <a name="dynamic-management-views-dmvs"></a>動態管理檢視 (DMV) 
 
@@ -93,15 +93,15 @@ WHERE TABLE_TYPE = 'SCHEMA'
 ORDER BY TABLE_NAME ASC  
 ```  
   
-如果 DMV 不適用於給定的資料列集，伺服器會傳回錯誤：`The <schemarowset> request type was not recognized by the server.`所有其他錯誤指出語法問題。  
+如果 DMV 不適用於給定的資料列集，伺服器就會傳回錯誤：`The <schemarowset> request type was not recognized by the server.` 所有其他錯誤指出語法問題。  
 
 結構描述資料列是以兩種 SQL Server Analysis Services 通訊協定所述：   
 
-[[MS-SSAS-T]: SQL Server Analysis Services 表格式通訊協定](https://msdn.microsoft.com/library/mt719260)-描述 1200年及以上的相容性層級的表格式模型的結構描述資料列。
+[[MS-SSAS-T]:SQL Server Analysis Services 表格式通訊協定](https://msdn.microsoft.com/library/mt719260)-描述 1200年及以上的相容性層級的表格式模型的結構描述資料列。
 
-[[MS-SSAS]: SQL Server Analysis Services 通訊協定](https://msdn.microsoft.com/library/ee320606)-描述多維度模型和表格式模型 1100年和 1103年相容性層級的結構描述資料列集。
+[[MS-SSAS]:SQL Server Analysis Services 通訊協定](https://msdn.microsoft.com/library/ee320606)-描述多維度模型和表格式模型 1100年和 1103年相容性層級的結構描述資料列集。
 
-### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>[MS-SSAS-T] 中所述的資料列集： SQL Server Analysis Services 表格式通訊協定
+### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>[MS-SSAS-T] 中所述的資料列集：SQL Server Analysis Services 表格式通訊協定
 
 |資料列集  |描述  |
 |---------|---------|
@@ -134,7 +134,7 @@ ORDER BY TABLE_NAME ASC
 |[TMSCHEMA_TABLES](https://msdn.microsoft.com/library/mt719250)     |   提供模型中的資料表物件的相關資訊。      |
 |[TMSCHEMA_VARIATIONS](https://msdn.microsoft.com/library/mt825008)|提供每個資料行中的變化物件的相關資訊。|
 
-### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>[MS-SSAS] 中所述的資料列集： SQL Server Analysis Services 通訊協定
+### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>[MS-SSAS] 中所述的資料列集：SQL Server Analysis Services 通訊協定
 
 |資料列集|描述|  
 |------------|-----------------|  
@@ -172,7 +172,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS](https://msdn.microsoft.com/library/ee320710)|傳回用來儲存資料的記憶體中資料表的資料行區段的相關資訊。|  
 |[DISCOVER_STORAGE_TABLE_COLUMNS](https://msdn.microsoft.com/library/ee302101)|包含用來表示記憶體中資料表的資料行的資料行的相關資訊。|  
 |[DISCOVER_STORAGE_TABLES](https://msdn.microsoft.com/library/ee302014)|傳回伺服器可用的記憶體中資料表的統計資料。|  
-|[DISCOVER_TRACE_COLUMNS]()||  
+|[DISCOVER_TRACE_COLUMNS](https://msdn.microsoft.com/library/ee301342)||  
 |[DISCOVER_TRACE_DEFINITION_PROVIDERINFO](https://msdn.microsoft.com/library/ee301342)|包含 DISCOVER_TRACE_COLUMNS 結構描述資料列集。|  
 |[DISCOVER_TRACE_EVENT_CATEGORIES](https://msdn.microsoft.com/library/ee320442)|包含 DISCOVER_TRACE_EVENT_CATEGORIES 結構描述資料列集。|  
 |[DISCOVER_TRACES](https://msdn.microsoft.com/library/ee301643)|包含 DISCOVER_TRACES 結構描述資料列集。|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [SQL Server], queries
@@ -16,12 +15,12 @@ ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4d215a40cce00c3cb5d1ea8293506961520fa1f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 185ad6db579052c127c73c1770283e877174ab31
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072438"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640070"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>設定 min memory per query 伺服器組態選項
   本主題描述如何設定`min memory per query`中的伺服器組態選項[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]利用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]。 `min memory per query`選項會指定執行查詢配置的記憶體 （以 kb 為單位） 的最小數量。 例如，如果`min memory per query`設定 2,048 kb，就可以保證查詢至少可以取得這些記憶體量。 預設值為 1,024 KB。 最小值是 512 KB，最大值則是 2,147,483,647 KB (2 GB)。  
@@ -42,7 +41,7 @@ ms.locfileid: "48072438"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **待處理**  [設定 min memory per query 選項之後](#FollowUp)  
+-   **後續操作：**[設定 min memory per query 選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -79,7 +78,7 @@ ms.locfileid: "48072438"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `min memory per query` 選項的值設定為 `3500` KB。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `min memory per query` 選項的值設定為 `3500` KB。  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -95,7 +94,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> 待處理：設定 min memory per query 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定 min memory per query 選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

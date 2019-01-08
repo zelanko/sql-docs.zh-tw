@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - finish
@@ -13,12 +12,12 @@ ms.assetid: 94a57ff1-f77f-4c04-8bf5-cdab691d3421
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3437d3c214d272dcc75faf4cdc1b3f8c880e41c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4dbc7abed4c362b88b00dd5b058bd97cb54f8240
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092158"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786710"
 ---
 # <a name="finish"></a>[完成]
   **[完成]** 頁面會彙總此精靈程序。 按一下 **[完成]** 關閉精靈，並產生您在建立 CDC 執行個體精靈中所定義的所有資料表。  

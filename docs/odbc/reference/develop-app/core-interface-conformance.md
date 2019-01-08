@@ -15,15 +15,15 @@ ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc3fc5502ee76cfd6aabb98eb719ca318026b73c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e41d71cd3651e1db5d1a533159012b645b8c7764
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802458"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504594"
 ---
 # <a name="core-interface-conformance"></a>核心介面一致性
-所有的 ODBC 驅動程式必須提供至少核心層級介面一致性。 中大部分的泛型具互通性的應用程式所需的核心層級的功能，因為驅動程式可以使用這類應用程式。 ISO CLI 規格中定義的功能，並開啟群組 CLI 規格中定義的 nonoptional 功能，也對應中的核心層級的功能。 核心層級介面 – 符合標準的 ODBC 驅動程式可讓應用程式執行下列各項：  
+所有的 ODBC 驅動程式必須提供至少核心層級介面一致性。 中大部分的泛型具互通性的應用程式所需的核心層級的功能，因為驅動程式可以使用這類應用程式。 ISO CLI 規格中定義的功能，並開啟群組 CLI 規格中定義的 nonoptional 功能，也對應中的核心層級的功能。 核心層級介面符合標準的 ODBC 驅動程式可讓應用程式執行下列各項：  
   
 -   配置和釋放所有類型的控制代碼，藉由呼叫**SQLAllocHandle**並**SQLFreeHandle**。  
   

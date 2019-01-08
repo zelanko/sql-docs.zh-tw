@@ -12,12 +12,12 @@ ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1e24250bfd313004b81a3d512a163963c070c08d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17282ecfc0c6adbb1e4d1fc97f470371f90bd3f0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126343"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520803"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>為主體授與權限
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中為主體授與權限。  
@@ -65,7 +65,7 @@ ms.locfileid: "48126343"
   
 4.  以滑鼠右鍵按一下預存程序，然後選取 [屬性]。  
   
-5.  在 [預存程序屬性] - *stored_procedure_name>* 對話方塊的 [選取頁面] 底下，選取 [權限]。 使用此頁面將使用者或角色加入至預存程序，並指定這些使用者或角色擁有的權限。  
+5.  在 **預存程序屬性-* stored_procedure_name>* 對話方塊中，在 選取頁面上，選取**權限**。 使用此頁面將使用者或角色加入至預存程序，並指定這些使用者或角色擁有的權限。  
   
 6.  完成後，請按一下 **[確定]**。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48126343"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     -- Grants EXECUTE permission on stored procedure HumanResources.uspUpdateEmployeeHireInfo to an application role called Recruiting11.   

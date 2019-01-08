@@ -12,12 +12,12 @@ ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 310ab71162dedf64e12ae28c8ffedf3465f1fc14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 506f074a8693e54bdc51882ab08b19e9ea3e1994
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130898"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517866"
 ---
 # <a name="connect-to-windows-azure-storage-restore"></a>連接到 Windows Azure 儲存體 (還原)
   此對話方塊可讓您指定 Windows Azure 儲存體帳戶資訊的連接，以擷取儲存在 Windows Azure 儲存體帳戶中的檔案。 指定必要資訊之後，按一下 [連接] 建立 Windows Azure 儲存體的連接。  
@@ -30,7 +30,7 @@ ms.locfileid: "48130898"
  指定 Windows Azure 儲存體帳戶存取金鑰。  
   
  [使用安全端點 (HTTPS)] 核取方塊  
- 選取此選項，以確保 Windows Azure 儲存體的安全連接 (建議使用)。  
+ 選取此選項，以確保 Microsoft Azure 儲存體的安全連線 (建議使用)。  
   
  [儲存帳戶金鑰]核取方塊  
  如果您想要 SQL Server 記住此儲存體帳戶的存取金鑰，請選取此核取方塊。  

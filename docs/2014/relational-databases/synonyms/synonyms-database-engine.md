@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: t-sql
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -14,12 +14,12 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 53f6d2d4c902389c900f4851d0ec1973a23f5a8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188048"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815130"
 ---
 # <a name="synonyms-database-engine"></a>同義字 (Database Engine)
   同義字是具有下列用途的資料庫物件：  
@@ -64,7 +64,7 @@ ms.locfileid: "48188048"
   
 |||  
 |-|-|  
-|CONTROL|Delete|  
+|CONTROL|DELETE|  
 |執行 CREATE 陳述式之前，請先執行|Insert|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
@@ -75,7 +75,7 @@ ms.locfileid: "48188048"
 |||  
 |-|-|  
 |SELECT|Insert|  
-|UPDATE|Delete|  
+|UPDATE|DELETE|  
 |執行 CREATE 陳述式之前，請先執行|子 SELECT|  
   
  當您正在先前陳述的內容中使用同義字時，基底物件會受影響。 例如，如果同義字參考的基底物件是資料表，而且您將資料列插入同義字，則實際上您是將資料列插入參考的資料表。  

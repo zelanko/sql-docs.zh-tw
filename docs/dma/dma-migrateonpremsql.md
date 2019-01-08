@@ -15,18 +15,18 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e0d3ee1784653205feb4aa95a80a82d5ac27ec46
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 3c16c87ea79e3c80de9f93bc3571a46d0610b22d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643836"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395421"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>在內部部署 SQL Server 升級至 SQL Server 或 SQL Server Azure Vm 上使用 Data Migration Assistant
 
 Data Migration Assistant 中提供無縫式的評估，SQL Server 內部部署和更新版本的 SQL Server 的升級或移轉至 SQL Server 的 Azure Vm 或 Azure SQL Database。
 
-本文提供使用 Data Migration Assistant 較新版本的 SQL Server 或 Azure Vm 上的 SQL Server 升級 SQL Server 內部部署的逐步指示。   
+本文提供使用 Data Migration Assistant 較新版本的 SQL Server 或 Azure Vm 上的 SQL Server 升級 SQL Server 內部部署的逐步指示。   
 
 ## <a name="create-a-new-migration-project"></a>建立新的移轉專案
 
@@ -65,9 +65,9 @@ Data Migration Assistant 中提供無縫式的評估，SQL Server 內部部署�
    > [!NOTE]
    > 您可以套用移轉設定至您要移轉，在左窗格中選取伺服器的所有資料庫。 您也可以在左窗格中選取資料庫，來設定具有特定設定的個別資料庫。
 
-    A. 指定**共用的備份作業的來源和目標 SQL server 可存取位置**。 請確定執行來源的服務帳戶 SQL Server 執行個體具有寫入權限的共用位置，而且目標服務帳戶有讀取共用位置上的權限。
+    a. 指定**共用的備份作業的來源和目標 SQL server 可存取位置**。 請確定執行來源的服務帳戶 SQL Server 執行個體具有寫入權限的共用位置，而且目標服務帳戶有讀取共用位置上的權限。
 
-    B. 指定要還原的資料和目標伺服器上的交易記錄檔的位置。
+    b. 指定要還原的資料和目標伺服器上的交易記錄檔的位置。
 
     ![新增資料庫 頁面](../dma/media/AddDatabases.png)
 
@@ -111,5 +111,5 @@ Data Migration Assistant 上備份的資料夾、 資料和記錄檔位置執行
 ## <a name="see-also"></a>另請參閱
 
 - [Data Migration Assistant (DMA)](../dma/dma-overview.md)
-- [資料移轉小幫手： 組態設定](../dma/dma-configurationsettings.md)
-- [資料移轉小幫手： 最佳做法](../dma/dma-bestpractices.md)
+- [資料移轉小幫手：組態設定](../dma/dma-configurationsettings.md)
+- [資料移轉小幫手：最佳作法](../dma/dma-bestpractices.md)

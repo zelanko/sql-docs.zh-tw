@@ -13,12 +13,12 @@ ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 68a2b5b9a48523193f263ae0bba1c8eaddc186c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be7e09d5254efc35761b267655a8949e4b09173d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207318"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403606"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 錯誤
     
@@ -76,18 +76,18 @@ ms.locfileid: "48207318"
 -   如果您正以本機管理員的身分在報表伺服器上執行，請搜尋 `ReportProcessingException`的記錄檔。 記錄項目會包含更多資訊。 報表伺服器記錄檔通常位於 \<磁碟機>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__<日期時間戳記>.log。 如需詳細資訊，請參閱 [Reporting Services 記錄檔和來源](../report-server/reporting-services-log-files-and-sources.md)。  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>無法載入運算式主機組件  
- 自訂組件必須以強式名稱簽署，並設定 AllowPartiallyTrustedCallers 屬性。 如需詳細資訊，請參閱 < [Using Custom Assemblies with Reports](../custom-assemblies/using-custom-assemblies-with-reports.md)並[Understanding Security Policies](../extensions/secure-development/understanding-security-policies.md)。  
+ 自訂組件必須以強式名稱簽署，並設定 AllowPartiallyTrustedCallers 屬性。 如需相關資訊，請參閱 [Using Custom Assemblies with Reports](../custom-assemblies/using-custom-assemblies-with-reports.md) 及 [Understanding Security Policies](../extensions/secure-development/understanding-security-policies.md)。  
   
 ### <a name="a-built-in-global-name-does-not-exist"></a>內建的全域名稱不存在  
  請檢查運算式中的拼字。 內建的全域、參數和欄位名稱都會區分大小寫。 在導致錯誤發生的運算式中，檢查此名稱是否確實存在報表中，而且它的拼字是否正確。 如需詳細資訊，請參閱[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)。  
   
 ### <a name="parameter-properties-and-null"></a>參數屬性和 Null  
- 多重值參數不可以是 Null。 如需詳細資訊，請參閱[報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)。  
+ 多重值參數不可以是 Null。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>無法處理含有子報表的主報表  
  含有子報表的主報表必須由相同的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表處理器版本處理。 將報表升級至目前版本的報表定義結構描述時，主報表和子報表不一定會同時更新。 如果報表與子報表之間的版本不相容，就會顯示下列訊息：「無法處理子報表」。  
   
- 您必須變更主報表或子報表，如此所有報表才能由相同的報表處理器版本處理。 如需為何報表無法升級的資訊，請參閱[升級報表](../install-windows/upgrade-reports.md)。  
+ 您必須變更主報表或子報表，如此所有報表才能由相同的報表處理器版本處理。 如需為何報表無法升級的資訊，請參閱 [升級報表](../install-windows/upgrade-reports.md)。  
   
 ### <a name="verify-function-calls-are-visual-basic-and-not-sql"></a>確認函數呼叫是 Visual Basic 而不是 SQL  
  在關聯式資料庫上，您可以在查詢文字中使用 SQL 函數。 您無法在查詢文字中使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函數。  
@@ -105,14 +105,14 @@ ms.locfileid: "48207318"
   
 -   無法評估 \<屬性名稱>。 它參考有錯誤的資料集欄位：\<錯誤字串>。  
   
- 如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)(將互動式排序加入資料表或矩陣 (報表產生器及 SSRS))。  
   
 ### <a name="invalid-or-conflicting-scope-specification-in-an-aggregate-function-call"></a>彙總函式呼叫中的無效或衝突範圍規格  
  當您在 Tablix 資料格中加入運算式的彙總函式呼叫時，報表處理器就會在該資料格所屬之最內部群組的範圍中評估運算式。  
   
  您也可以將特定範圍的名稱傳遞給彙總函式。 範圍可以參考資料集的名稱、資料區域或在資料階層中較高範圍的名稱。 這點適用於下列訊息：  
   
--   \<報表項目類型> '\<報表項目名稱>' 有無效的範圍 “\<範圍名稱>”。 範圍必須是目前的範圍，或包含在目前的範圍之內。  
+-   \<報表項目類型> '\<報表項目名稱>' 有無效的範圍 "\<範圍名稱>"。 範圍必須是目前的範圍，或包含在目前的範圍之內。  
   
 -   \<報表項目類型> '\<報表項目名稱>' 的 \<屬性名稱> 運算式含有對彙總函式無效的範圍參數。 範圍參數必須設定為字串常數，此字串常數要和所包含的群組名稱、所包含的資料區域名稱或資料集名稱相同。  
   
@@ -127,12 +127,12 @@ ms.locfileid: "48207318"
   
 ## <a name="see-also"></a>另請參閱  
  [運算式 &#40;報表產生器及 SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [彙總函式參考&#40;報表產生器及 SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [彙總函式參考 &#40;報表產生器及 SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)   
  [將資料加入至報表&#40;報表產生器及 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [常用的篩選 &#40;報表產生器及 SSRS&#41;](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [參數集合參考&#40;報表產生器及 SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [參數集合參考 &#40;報表產生器及 SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

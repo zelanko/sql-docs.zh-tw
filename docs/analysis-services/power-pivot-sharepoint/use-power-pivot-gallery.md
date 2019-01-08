@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a2eb7bfae0c4fcbc82995c120ef588fdfd4710af
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 03752c2f1d7259f29f634473efdfe570c55b89ee
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980581"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405393"
 ---
 # <a name="use-power-pivot-gallery"></a>使用 Power Pivot 圖庫
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "38980581"
 >  Power Pivot 圖庫需要 Microsoft Silverlight，  但 Microsoft Edge 瀏覽器不支援 Silverlight。   
 > 若要檢視 Edge 中的程式庫內容，請按一下 Powerpivot 圖庫中的 [程式庫]  索引標籤，然後將文件庫檢視變更為 [所有文件] 。    
 > 若要變更預設檢視，請按一下 [程式庫]  索引標籤，然後按一下 [修改檢視]。 按一下 [設定為預設檢視]，然後按一下 [確定] 以儲存預設檢視。  
->  如需 Edge 支援項目的詳細資訊，請參閱 Windows 部落格 [揮別以往，第 2 部分：和 ActiveX、VBScript... 說再見](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  如需 Edge 支援的詳細資訊，請參閱 Windows 部落格[揮別以往，第 2 部分：ActiveX、 VBScript...說再見](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  如需必要條件的完整清單，請參閱 [建立及自訂 Power Pivot 圖庫](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)。  
   
@@ -68,13 +68,13 @@ ms.locfileid: "38980581"
   
 1.  儲存檔案。  
   
-2.  1.  **Excel 2010：** 在 [檔案] 功能表中，按一下 [儲存和傳送]。  
+2.  1.  **Excel 2010:** 在 [檔案] 功能表中，按一下**儲存和傳送**。  
   
     2.  按一下 **[儲存至 SharePoint]**。  
   
     3.  如果您要使用 [Excel Services 選項] 來選取要發行的個別工作表或參數，請按一下 **[發行選項]** 。 例如，[Excel Services 選項] 中的 [參數] 索引標籤可讓您選擇哪些交叉分析篩選器要出現在發行的活頁簿中。  
   
-    1.  **Excel 2013**  ：在 [檔案] 功能表中，按一下 **[儲存]**。  
+    1.  **Excel 2013:** 在 [檔案] 功能表中，按一下**儲存**。  
   
     2.  如果您要使用 [Excel Services 選項] 來選取要發行的個別工作表或參數，請按一下 **[瀏覽器檢視選項]** 。 例如，[Excel Services 選項] 中的 [參數] 索引標籤可讓您選擇哪些交叉分析篩選器要出現在發行的活頁簿中。  
   
@@ -146,16 +146,16 @@ ms.locfileid: "38980581"
   
 3.  按一下右邊的向下箭號，然後選取 **[編輯屬性]**。  
   
-4.  按一下 **[儲存]**。 儲存文件會強制快照服務重新產生預覽影像。  
+4.  按一下 [儲存] 。 儲存文件會強制快照服務重新產生預覽影像。  
   
 ##  <a name="bkmk_known_issues"></a> 已知問題  
   
 ### <a name="document-type-is-not-supported"></a>不支援的文件類型  
  不支援 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫文件] 內容類型。 如果您啟用 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫文件] 內容類型作為文件庫，並嘗試建立該類型的新文件，則會看見類似下列其中一項的錯誤訊息：  
   
--   「新文件」需要與 Microsoft SharePoint Foundation 相容的應用程式和 Web 瀏覽器。 若要在此文件庫中加入文件，請按一下 [上傳文件] 按鈕。  
+-   [新文件] 需要 Microsoft Sharepoint Foundation 相容應用程式和 web 瀏覽器。 若要加入此文件庫中的文件，請按一下 [上載文件] 按鈕。  
   
--   「網際網路位址 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' 無效」。「Microsoft Excel 無法存取檔案 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'」。 有幾項可能的原因：  
+-   「 網際網路位址 'http://[server 名稱] / Reportgallery/Gallery/ReportGallery/Forms/Template.xlsx' 無效。""Microsoft Excel 無法存取檔案 ' http://[server 名稱] / Reportgallery/Gallery/ReportGallery/Forms/Template.xlsx '。 有幾項可能的原因：  
   
  [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫文件] 內容類型不會自動加入至文件庫。除非您手動啟用不支援的內容類型，否則不會發生這個問題。  
   
@@ -163,6 +163,6 @@ ms.locfileid: "38980581"
  [在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [刪除 Power Pivot 圖庫](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)   
  [建立及自訂 Power Pivot 圖庫](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
- [排程資料重新整理 (Power Pivot for SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
+ [排程資料重新整理 (PowerPivot for SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
   
   

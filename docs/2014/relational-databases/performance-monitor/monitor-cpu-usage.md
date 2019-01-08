@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server], CPU usage
@@ -22,12 +22,12 @@ ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cbbef4106ca9a913820cf30387a504747a5f8960
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e46610823432efde0cc757e3dff317227b7548ac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073138"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747700"
 ---
 # <a name="monitor-cpu-usage"></a>監視 CPU 使用量
   請定期監視 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，以判定 CPU 使用率是否在正常範圍內。 持續偏高的 CPU 使用量比率可能代表必須將 CPU 升級，或增加多個處理器。 此外，偏高的 CPU 使用率可能代表應用程式的微調或設計不良。 將應用程式最佳化後可降低 CPU 的使用率。  
@@ -47,7 +47,7 @@ ms.locfileid: "48073138"
   
      相當於處理器花費在執行使用者處理序 (如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 的時間百分比。  
   
--   **System: Processor Queue Length**  
+-   **System:處理器佇列長度**  
   
      相當於等候處理器時間的執行緒數目。 當處理序的執行緒所需的處理器循環超過可用數量時，就會形成處理器瓶頸。 如果會有許多處理序嘗試利用處理器時間，您可能必須安裝更快的處理器。 或者，如果使用多處理器系統，則可以增加一個處理器。  
   

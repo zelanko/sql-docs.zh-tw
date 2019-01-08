@@ -12,12 +12,12 @@ ms.assetid: cf0eb3b4-8b72-49fc-a845-95edc360cf93
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc6a5254afc715a950f2d3c63d02bfca7a1890ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f04184e968b60a58c4adfa067d516b58b0a43292
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076578"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352628"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>提取和更新資料列集 (ODBC)
     
@@ -25,11 +25,11 @@ ms.locfileid: "48076578"
   
 1.  （選擇性） 呼叫[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) with POSITIONED，若要變更資料列集中的資料列 (R) 數目。  
   
-2.  呼叫[SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401)或是[SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)取得資料列集。  
+2.  呼叫[SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)或是[SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)取得資料列集。  
   
 3.  如果使用繫結資料行，請將繫結資料行緩衝區中目前可用的資料值和資料長度用於資料列集。  
   
-     如果使用未繫結的資料行，每個資料列呼叫[SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407)利用 SQL_POSITION 來設定資料指標位置，然後針對每個未繫結的資料行：  
+     如果使用未繫結的資料行，每個資料列呼叫[SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407)利用 SQL_POSITION 來設定資料指標位置，然後針對每個未繫結的資料行：  
   
     -   呼叫[SQLGetData](../../native-client-odbc-api/sqlgetdata.md)一或多次，以取得資料在最後一個繫結的資料列集的資料行之後，未繫結資料行。 若要呼叫[SQLGetData](../../native-client-odbc-api/sqlgetdata.md)應該遞增資料行編號的順序。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48076578"
   
 4.  設定任何資料執行中的 text 或 image 資料行。  
   
-5.  呼叫[SQLSetPos](http://go.microsoft.com/fwlink/?LinkId=58407)或是[SQLBulkOperations](http://go.microsoft.com/fwlink/?LinkId=58398)若要設定資料指標位置，重新整理、 更新、 刪除或加入資料列集內的資料列。  
+5.  呼叫[SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407)或是[SQLBulkOperations](https://go.microsoft.com/fwlink/?LinkId=58398)若要設定資料指標位置，重新整理、 更新、 刪除或加入資料列集內的資料列。  
   
      如果資料執行中的 text 或 image 資料行用於更新或加入作業，請處理它們。  
   

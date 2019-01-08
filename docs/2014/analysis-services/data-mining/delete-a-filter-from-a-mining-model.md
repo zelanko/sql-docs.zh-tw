@@ -13,12 +13,12 @@ ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02bf9026d14f759b5e5931b132faae3ee0fec1a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9cb98e29f320a64518c968f3bbc35b590c96a891
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082938"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508404"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>從採礦模型刪除篩選
   當您建立採礦模型的篩選時，您可以在資料來源檢視中的資料子集上建立模型。 篩選對於測試原始資料子集上之模型的精確度也非常實用。  
@@ -46,7 +46,7 @@ ms.locfileid: "48082938"
 -   在 [篩選編輯器] 對話方塊中，以滑鼠右鍵在方格中按一下任何資料列，然後選取 [全部刪除]。  
   
 ## <a name="working-with-model-filters-using-the-properties-window"></a>利用屬性視窗使用模型篩選  
- 如果想要刪除整個篩選，就不需要開啟篩選編輯器對話方塊。 您所建立的篩選條件可用於`Filter`採礦模型的屬性。  
+ 如果想要刪除整個篩選，就不需要開啟篩選編輯器對話方塊。 您建立的篩選條件可用於採礦模型的 `Filter` 屬性。  
   
 > [!NOTE]  
 >  您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中檢視採礦模型的屬性，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中則不能。  
@@ -60,8 +60,8 @@ ms.locfileid: "48082938"
 3.  按退格鍵或 Delete 鍵。  
   
 ## <a name="see-also"></a>另請參閱  
- [從採礦模型鑽研到案例資料](drill-through-to-case-data-from-a-mining-model.md)   
+ [鑽研採礦模型的案例資料](drill-through-to-case-data-from-a-mining-model.md)   
  [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)   
- [採礦模型的篩選&#40;Analysis Services-資料採礦&#41;](mining-models-analysis-services-data-mining.md)  
+ [採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](mining-models-analysis-services-data-mining.md)  
   
   

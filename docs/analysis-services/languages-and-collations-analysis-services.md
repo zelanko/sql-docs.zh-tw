@@ -1,5 +1,5 @@
 ---
-title: 語言和定序 (Analysis Services) |Microsoft 文件
+title: 語言和定序 (Analysis Services) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a1b066f23c0c5a4e92b6b1f86886cc54c7451f6c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3af3d6ba14e4a9f3e2948c910e4282e33c032d3e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018595"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214308"
 ---
 # <a name="languages-and-collations-analysis-services"></a>語言和定序 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 作業系統所提供的語言和定序。 **Language** 和 **Collation** 屬性會在安裝期間於執行個體層級進行初始設定，但之後可在物件階層的不同層級進行變更。  
   
- 在多維度模型中 (僅限多維度模型)，您可以在資料庫或 Cube 上設定這些屬性，您也可以在為 Cube 中物件所建立的翻譯上設定這些屬性。 在表格式模型中，語言和定序會繼承自主機作業系統。  
+ 在多維度模型 （僅限），您可以在資料庫或 cube 上設定這些屬性-您也可以設定它們在您建立用於 cube 內物件的翻譯。 在表格式模型中，語言和定序會繼承自主機作業系統。  
   
  在多維度模型中設定 **Language** 和 **Collation** 時，您可以指定資料模型在處理和查詢執行期間所使用的設定，或者提供多種翻譯給模型，讓外語人士可以母語使用模型。 在針對不同地區設定對開發環境和生產伺服器進行設定的情況下，需要在物件 (資料庫、模型或 Cube) 上明確設定 **Language** 和 **Collation** 屬性，您也需要確定語言和定序符合預定目標環境的語言和定序。  
   
 ##  <a name="bkmk_object"></a> 支援語言和定序屬性的物件  
- **Language** 和 **Collation** 屬性通常會一起公開 (設定 **Language**的位置也可以設定 **Collation**)。  
+ **語言**並**定序**屬性通常會一起公開，您可以設定**語言**，您也可以設定**定序**。  
   
  您可以在下列物件上設定 **Language** 和 **Collation** ：  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34018595"
 ###  <a name="bkmk_lcid"></a> 語言屬性的值是地區設定識別碼 (LCID)  
  有效值包括出現在下拉式清單中的任何 LCID。 在 Management Studio 和 SQL Server Data Tools 中，LCID 會以對等字串來表示。 不論工具為何，只要公開 **Language** 屬性的位置都會顯示相同的語言。 具有相同的語言清單可確保您可以在整個模型中一致地實作及測試翻譯。  
   
- 雖然 Analysis Services 會依名稱列出語言，但是針對屬性儲存的實際值會是 LCID。 以程式設計方式或透過 msmdsrv.ini 檔案設定語言屬性時，請使用 [地區設定識別碼 (LCID)](http://en.wikipedia.org/wiki/Locale) 作為值。 LCID 是由語言識別碼、排序識別碼和保留的位元 (用於識別特定語言) 所組成的 32 位元值。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]使用指定所選的語言的 Lcid[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體和物件。  
+ 雖然 Analysis Services 會依名稱列出語言，但是針對屬性儲存的實際值會是 LCID。 以程式設計方式或透過 msmdsrv.ini 檔案設定語言屬性時，請使用 [地區設定識別碼 (LCID)](http://en.wikipedia.org/wiki/Locale) 作為值。 LCID 是由語言識別碼、排序識別碼和保留的位元 (用於識別特定語言) 所組成的 32 位元值。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用 LCID 為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體和物件指定選定語言。  
   
  您可以使用十六進位或十進位格式設定 LCID。 [語言]  屬性的一些有效值範例包括：  
   
@@ -76,7 +76,7 @@ ms.locfileid: "34018595"
 ##  <a name="bkmk_collations"></a> Analysis Services 中的定序支援  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 只會使用 Windows (版本 _90 和 _100) 和二進位定序。 而不會使用舊版 SQL Server 定序。 在 Cube 中，會完全使用單一定序，但不包括屬性層級的翻譯。 如需定義屬性翻譯的詳細資訊，請參閱 [Analysis Services 中的翻譯支援](../analysis-services/translation-support-in-analysis-services.md)。  
   
- 定序可控制複合字集中所有字串的區分大小寫，但不包括物件識別碼。 請注意，如果您在物件識別碼中使用大寫和小寫字元，物件識別碼的區分大小寫不是取決於定序，而是取決於 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 以英文字撰寫物件識別碼時，不論定序為何，物件識別碼一律不會區分大小寫。 斯拉夫文和其他複合語言則相反 (一律區分大小寫)。 如需詳細資訊，請參閱＜ [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) ＞。  
+ 定序可控制複合字集中所有字串的區分大小寫，但不包括物件識別碼。 請注意，如果您在物件識別碼中使用大寫和小寫字元，物件識別碼的區分大小寫不是取決於定序，而是取決於 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 以英文字撰寫物件識別碼時，不論定序為何，物件識別碼一律不會區分大小寫。 斯拉夫文和其他複合語言則相反 (一律區分大小寫)。 如需詳細資訊，請參閱＜ [全球化秘訣和最佳作法 &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) ＞。  
   
  Analysis Services 的定序與 SQL Server 關聯式資料庫引擎的定序相容 (假設您為每項服務選取的排序選項保持同位)。 例如，如果關聯式資料庫區分腔調字，您應該以相同方式來設定 Cube。 當定序設定有所分歧時，可能會發生問題。 如需範例和解決方法，請參閱 [Unicode 字串中的空格根據定序而有不同的處理結果](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx)。 若要深入了解定序和資料庫引擎，請參閱 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "34018595"
   
 -   更新定序之後，請重新處理資料分割和維度。  
   
- 您可以在伺服器層級，使用 SQL Server Management Studio 或 AMO PowerShell 來變更預設語言或定序。 或者，您可以修改**\<語言 >** 和 **\<CollationName >** 在 msmdsrv.ini 檔案中，設定指定之語言的 LCID。  
+ 您可以在伺服器層級，使用 SQL Server Management Studio 或 AMO PowerShell 來變更預設語言或定序。 或者，您可以在其中修改**\<語言 >** 並 **\<CollationName >** 在 msmdsrv.ini 檔案中，設定指定之語言的 LCID。  
   
 1.  在 Management Studio 中，在伺服器名稱上按一下滑鼠右鍵 | [屬性] | [語言/定序]。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "34018595"
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 的全球化案例](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [全球化秘訣和最佳作法和 &#40;。Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
- [定序與 Unicode 支援](../relational-databases/collations/collation-and-unicode-support.md)  
+ [全球化秘訣和最佳作法 &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
+ [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

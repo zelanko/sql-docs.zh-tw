@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41c79a6390c89c01a5ff7e5c7fe949cbebff6c6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d22be3bc8d99edd5d8b799e4121e2a591977b255
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097568"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767221"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>資料行模式設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [資料行模式設定檔要求] 設定選項。 資料行模式設定檔會報告一組規則運算式，其中涵蓋了字串資料行中值的指定百分比。 這個設定檔可協助您識別資料中的問題，例如無效的字串，而且可以建議未來可用於驗證新值的規則運算式。 舉例來說，「美國郵遞區號」資料行的模式設定檔可能會產生規則運算式 \d{5}-\d{4}、\d{5} 和 \d{9}。 如果您看見其他規則運算式，表示您的資料可能包含無效或格式錯誤的值。  
@@ -40,7 +39,7 @@ ms.locfileid: "48097568"
  所有分隔符號都會在 Token 化程序中正規化成為單一空格，而符號則會保留。  
   
 ## <a name="understanding-the-use-of-the-tag-table"></a>了解標記資料表的使用方式  
- 您可以將標記和相關的詞彙儲存在您於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中建立的特殊資料表中，藉以選擇性地以單一標記將相關 Token 組成群組。 標記資料表必須具有兩個字串資料行：一個名為「標記」，而另一個名為「詞彙」。 這些資料行可以是類型`char`， `nchar`， `varchar`，或`nvarchar`，而非`text`或`ntext`。 您可以在單一資料表中結合多個標記和對應的詞彙。 一個資料行模式設定檔要求只能使用一份標記資料表。 您可以使用個別的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員來連接至標記資料表。 因此，標記資料表可以位於不同的資料庫中或與來源資料位於不同的伺服器上。  
+ 您可以將標記和相關的詞彙儲存在您於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中建立的特殊資料表中，藉以選擇性地以單一標記將相關 Token 組成群組。 標記資料表必須具有兩個字串資料行：一個名為「標記」，而另一個名為「詞彙」。 這些資料行的類型可以是 `char`、`nchar`、`varchar` 或 `nvarchar`，但不得為 `text` 或 `ntext`。 您可以在單一資料表中結合多個標記和對應的詞彙。 一個資料行模式設定檔要求只能使用一份標記資料表。 您可以使用個別的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員來連接至標記資料表。 因此，標記資料表可以位於不同的資料庫中或與來源資料位於不同的伺服器上。  
   
  例如，您可以使用單一標記「方向」，將可能顯示在街道地址中的「東」、「西」、「北」和「南」值組成群組。 下表是這類標記資料表的範例。  
   
@@ -144,7 +143,7 @@ ms.locfileid: "48097568"
  如需詳細資訊，請參閱本主題前面的「了解標記資料表的使用方式」。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料分析工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)   
+ [資料分析工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)   
  [單一資料表快速分析表單 &#40;資料分析工作&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

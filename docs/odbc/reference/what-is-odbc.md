@@ -13,17 +13,17 @@ ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27e153fd72c588f81342d74ce1fc851adc6fda91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc9c7a3d9f75e1863d90b16986234e0036229d01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622326"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540442"
 ---
 # <a name="what-is-odbc"></a>什麼是 ODBC？
 ODBC 的許多誤解存在於運算的世界。 給使用者，它是 Microsoft® Windows® 控制台 中的圖示。 應用程式的程式設計人員，它是包含資料存取常式的程式庫。 若要多人就曾經假設所有資料庫的存取問題的答案。  
   
- 首先，ODBC 會是資料庫 API 的規格。 此 API 是獨立於任何一個 DBMS 或作業系統;雖然本手冊會使用 C，ODBC API 是與語言無關。 ODBC API 是以 Open Group 和 ISO/IEC CLI 規格為基礎。 ODBC 3。*x*完全實作這些規格 — 較早版本的 ODBC 已根據這些規格的初步版本，但未完整實作它們，並新增功能，通常需要由螢幕為基礎的開發人員資料庫應用程式，例如可捲動資料指標。  
+ 首先，ODBC 會是資料庫 API 的規格。 此 API 是獨立於任何一個 DBMS 或作業系統;雖然本手冊會使用 C，ODBC API 是與語言無關。 ODBC API 是以 Open Group 和 ISO/IEC CLI 規格為基礎。 ODBC 3。*x*完全實作這兩個-較早版本的 ODBC 已根據這些規格的初步版本，但未完整實作它們-這些規格，並新增的螢幕為基礎的開發人員經常需要的功能資料庫應用程式，例如可捲動資料指標。  
   
  ODBC API 中的函式的實作方式的 DBMS 特定驅動程式的開發人員。 應用程式會呼叫函式，在這些驅動程式以存取資料的 DBMS 無關的方式。 驅動程式管理員會管理應用程式和驅動程式之間的通訊。  
   

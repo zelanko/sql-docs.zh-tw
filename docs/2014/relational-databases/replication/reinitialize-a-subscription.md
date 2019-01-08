@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
@@ -15,12 +14,12 @@ ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 738b9179143b4c6b0c986f7f6a16464980b60f8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f148cc75ba7ae1987d0114186b76273f35e8d03
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130333"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771390"
 ---
 # <a name="reinitialize-a-subscription"></a>重新初始化訂閱
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來重新初始化 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的訂閱。 個別訂閱可標示為要重新初始化，好讓下一次同步處理期間會套用新的快照集。  
@@ -174,7 +173,7 @@ ms.locfileid: "48130333"
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。  
   
     > [!NOTE]  
-    >  如果此方法傳回`false`，步驟 2 中的訂閱屬性定義不正確，或提取訂閱不存在。  
+    >  如果此方法傳回 `false`，則表示步驟 2 中的訂閱屬性定義不正確，或者提取訂閱不存在。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A> 方法。 此方法會標示要重新初始化的訂閱。  
   
@@ -189,7 +188,7 @@ ms.locfileid: "48130333"
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。  
   
     > [!NOTE]  
-    >  如果此方法傳回`false`，步驟 2 中的訂閱屬性定義不正確，或發送訂閱不存在。  
+    >  如果此方法傳回 `false`，則表示步驟 2 中的訂閱屬性定義不正確，或者發送訂閱不存在。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> 方法。 此方法會標示要重新初始化的訂閱。  
   
@@ -204,7 +203,7 @@ ms.locfileid: "48130333"
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。  
   
     > [!NOTE]  
-    >  如果此方法傳回`false`，步驟 2 中的訂閱屬性定義不正確，或提取訂閱不存在。  
+    >  如果此方法傳回 `false`，則表示步驟 2 中的訂閱屬性定義不正確，或者提取訂閱不存在。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A> 方法。 傳遞 `true` 的值可在重新初始化之前上傳訂閱者上的變更，或者傳遞 `false` 的值可重新初始化及遺失訂閱者上的任何暫止變更。 此方法會標示要重新初始化的訂閱。  
   
@@ -222,14 +221,14 @@ ms.locfileid: "48130333"
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。  
   
     > [!NOTE]  
-    >  如果此方法傳回`false`，步驟 2 中的訂閱屬性定義不正確，或發送訂閱不存在。  
+    >  如果此方法傳回 `false`，則表示步驟 2 中的訂閱屬性定義不正確，或者發送訂閱不存在。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A> 方法。 傳遞 `true` 的值可在重新初始化之前上傳訂閱者上的變更，或者傳遞 `false` 的值可重新初始化及遺失訂閱者上的任何暫止變更。 此方法會標示要重新初始化的訂閱。  
   
     > [!NOTE]  
     >  如果此訂閱已過期，將無法上傳變更。 如需詳細資訊，請參閱 [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md)。  
   
-5.  同步處理發送訂閱。 如需詳細資訊，請參閱 [同步處理發送訂閱](synchronize-a-push-subscription.md)。  
+5.  同步處理發送訂閱。 如需詳細資訊，請參閱 [Synchronize a Push Subscription](synchronize-a-push-subscription.md)。  
   
 ###  <a name="PShellExample"></a> 範例 (RMO)  
  此範例會重新初始化交易式發行集的提取訂閱。  

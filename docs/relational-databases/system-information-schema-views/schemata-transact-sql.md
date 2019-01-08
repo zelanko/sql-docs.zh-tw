@@ -20,17 +20,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52bf96d8f53f875aacb0488d519157f6553f558a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 44df86f4862ba6e9892e611dabe143e251d9d3cc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677257"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533008"
 ---
 # <a name="schemata-transact-sql"></a>SCHEMATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  針對目前資料庫中每個結構描述，各傳回一個資料列。 若要從這些檢視擷取資訊，請指定 完整格式的名稱 **INFORMATION_SCHEMA。 * * * view_name*。 若要擷取的執行個體中的所有資料庫的相關資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，查詢[sys.databases &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目錄檢視。  
+  針對目前資料庫中每個結構描述，各傳回一個資料列。 若要從這些檢視擷取資訊，請指定 完整格式的名稱**INFORMATION_SCHEMA。**_view_name_。 若要擷取的執行個體中的所有資料庫的相關資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，查詢[sys.databases &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目錄檢視。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

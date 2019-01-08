@@ -10,12 +10,12 @@ ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 14a1cd200b1a795f4349013b991163d08c741b65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93b708511bb0c17211e42f7c436da521ced12713
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676226"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413715"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access (AccessToSQL) 中最新消息
 這篇文章列出 SSMA 存取每個版本中的變更。  

@@ -16,21 +16,21 @@ ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8fc264df4708b5d6c58c8a87861597d299cdca2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b89f05822ee23f5ad62c627b8bc6d67ebe401a2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722986"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527626"
 ---
 # <a name="persisting-data"></a>保存資料
 可攜式電腦運算 （例如，使用膝上型電腦），已產生可以在連線或中斷連線的狀態下執行的應用程式的需求。 ADO 已新增這個的支援，讓開發人員能夠儲存用戶端資料指標**資料錄集**到磁碟，稍後再重新載入它。  
   
  有幾種的情況中，您可以使用這種類型的功能，包括下列：  
   
--   **旅行：** 道路上應用程式時，務必提供能夠進行變更，並新增新的記錄，則可以稍後重新連線到資料庫和認可。  
+-   **傳輸：** 外出應用程式時，務必提供能夠進行變更，並新增新的記錄，則可以稍後重新連線到資料庫和認可。  
   
--   **不常更新查閱：** 通常應用程式中，資料表做為查閱 — 例如，州稅資料表。 它們不常更新，並處於唯讀狀態。 而非重新讀取來自伺服器的此資料每次啟動應用程式時，應用程式可以直接將資料從載入本機保存**資料錄集**。  
+-   **不常更新的查閱：** 通常應用程式中，資料表做為查閱-例如，州稅資料表。 它們不常更新，並處於唯讀狀態。 而非重新讀取來自伺服器的此資料每次啟動應用程式時，應用程式可以直接將資料從載入本機保存**資料錄集**。  
   
  在 ADO 中，來儲存及載入**資料錄集**，使用**Recordset.Save**並**Recordset.Open(,,,adCmdFile)** ado 方法**資料錄集**物件。  
   

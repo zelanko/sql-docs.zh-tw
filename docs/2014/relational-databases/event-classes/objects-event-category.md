@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,12 +16,12 @@ ms.assetid: acc1c7b0-4abf-42f8-b9a9-c383b715a735
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20242ab56cf6320bd00af44f67278830e3061a9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56a76c3675ceb3cf84c7812b4f9d95d61f9f830a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125148"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778428"
 ---
 # <a name="objects-event-category"></a>Objects 事件類別目錄
   **Objects** 事件類別目錄包含一般物件事件。  

@@ -22,12 +22,12 @@ ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52acf8b0d2ebe628deeac19f994f53d25861452c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48fafd92104745ac438c212847e9b2976e84db6d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170298"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352694"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>備份與還原 Analysis Services 資料庫
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括備份與還原，讓您可以從特定時間點復原資料庫及其物件。 備份與還原也是一種有效的技術，可將資料庫移轉到升級的伺服器、在伺服器之間移動資料庫，或是將資料庫部署到實際伺服器。 如果您還沒有備份計畫，但是您有很重要的資料，就應該盡快設計及實作計畫，以供資料復原之用。  
@@ -36,7 +36,7 @@ ms.locfileid: "48170298"
   
  針對包含來源資料的完整備份，您必須備份包含詳細資料的資料庫。 更明確地說，如果您使用 ROLAP 或 DirectQuery 資料庫儲存，詳細資料會儲存在與 Analysis Services 資料庫分開的外部 SQL Server 關聯式資料庫中。 否則，如果所有物件都是表格式或多維度，Analysis Services 備份就會包含中繼資料和來源資料。  
   
- 自動備份的一個明顯好處，就是資料快照集可以按照自動備份頻率，保持在最新的狀態。 自動排程器可確保不會忘記備份。 還原資料庫也可以自動化，且是複寫資料的好方法，但一定要在您複寫至的執行個體上備份加密金鑰檔案。 同步處理功能是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的複寫專用，但僅針對過期的資料。 此處提到的所有功能可以透過使用者介面、利用 XML/A 命令或透過 AMO 以程式設計方式執行來實作。 如需備份策略的詳細資訊，請參閱 [SQL Server 2005 Analysis Services 的備份策略](http://go.microsoft.com/fwlink/?LinkId=81888)。  
+ 自動備份的一個明顯好處，就是資料快照集可以按照自動備份頻率，保持在最新的狀態。 自動排程器可確保不會忘記備份。 還原資料庫也可以自動化，且是複寫資料的好方法，但一定要在您複寫至的執行個體上備份加密金鑰檔案。 同步處理功能是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的複寫專用，但僅針對過期的資料。 此處提到的所有功能可以透過使用者介面、利用 XML/A 命令或透過 AMO 以程式設計方式執行來實作。 如需備份策略的詳細資訊，請參閱 [SQL Server 2005 Analysis Services 的備份策略](https://go.microsoft.com/fwlink/?LinkId=81888)。  
   
  本主題包含下列各節：  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48170298"
  如需還原 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的詳細資訊，請參閱 [還原選項](restore-options.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [備份、 還原和同步處理資料庫&#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
+ [備份、還原和同步處理資料庫 &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
  [Analysis Services PowerShell](../analysis-services-powershell.md)  
   
   

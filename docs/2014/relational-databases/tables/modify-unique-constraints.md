@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying constraints
@@ -16,12 +15,12 @@ ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3d2e706da1dc3ddc6e1de5a7aa495aee60334a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb997c180d614169600ad32e3206332aaa7deb10
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142538"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782080"
 ---
 # <a name="modify-unique-constraints"></a>修改唯一的條件約束
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改唯一條件約束。  
@@ -59,7 +58,7 @@ ms.locfileid: "48142538"
   
     |若要|請依照下列步驟：|  
     |--------|------------------------|  
-    |變更與條件約束有關的資料行|1) 在 [(一般)] 底下的方格中，按一下 [資料行]，然後按一下屬性右邊的省略符號 **(…)**。<br /><br /> 2) 在 [索引資料行] 對話方塊中，指定索引的新資料行或排序次序，同時指定這兩者。|  
+    |變更與條件約束有關的資料行|1) 在 [(一般)] 底下的方格中，按一下 [資料行]，然後按一下屬性右邊的省略符號 **(...)**。<br /><br /> 2) 在 [索引資料行] 對話方塊中，指定索引的新資料行或排序次序，同時指定這兩者。|  
     |重新命名條件約束|在 **[識別]** 底下的方格中，於 **[名稱]** 方塊中輸入新的名稱。 確定新名稱不會與 [選取的主/唯一索引鍵或索引] 清單中的名稱重複。|  
     |設定叢集選項|在 [資料表設計工具] 底下的方格中，選取 [建立成 CLUSTERED]，然後從下拉式清單中，選擇 [是] 建立叢集索引，或選擇 [否] 建立非叢集索引。 每個資料表只能存在一個叢集索引。 如果叢集索引已經存在這個資料表中，您就必須清除原始索引的這項設定。|  
     |定義填滿因數|在 **[資料表設計工具]** 底下的方格中，展開 **[填滿規格]** 類別目錄，然後在 **[填滿因數]** 方塊中輸入 0 到 100 之間的整數。|  

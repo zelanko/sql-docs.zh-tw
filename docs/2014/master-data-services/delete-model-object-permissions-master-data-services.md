@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting model object permissions [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1a75a38b502002fd925d8e5ae1e660afa896dec9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e9dfc21fe4f408362c4e8d32f39533c9d271136
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107288"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755271"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>刪除模型物件權限 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除模型物件權限，移除所做的任何指派。  
@@ -30,7 +29,7 @@ ms.locfileid: "48107288"
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 ### <a name="to-delete-model-object-permissions"></a>若要刪除模型物件權限  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48107288"
     >  如果權限繼承自群組，則無法從使用者移除權限。 您必須改為從群組移除權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [模型物件權限&#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [指派模型物件權限&#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
+ [模型物件權限 &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [指派模型物件權限 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   
   

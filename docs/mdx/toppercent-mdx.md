@@ -1,5 +1,5 @@
 ---
-title: TopPercent (MDX) |Microsoft 文件
+title: TopPercent (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d7de38f27d23fe11d0953553a8737a9e2f4e2db3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 0093da0a4f69d8a1e4cf178959d28509eef15b75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743647"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532344"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -42,15 +42,15 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  有效的數值運算式，這通常是傳回數字之資料格座標的多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **TopPercent**函式會計算指定的數值運算式，評估指定的集合，以遞減順序排序集合的總和。 然後，此函數會傳回最高值的元素，它們的總和值累計百分比至少是指定的百分比。 這個函數會傳回累計總計至少是指定百分比之集合的最小子集。 傳回從最大到最小排列的元素。  
+ **TopPercent**函式會計算指定之數值運算式指定的集合，以遞減順序排序集合評估後的總和。 然後，此函數會傳回最高值的元素，它們的總和值累計百分比至少是指定的百分比。 這個函數會傳回累計總計至少是指定百分比之集合的最小子集。 傳回從最大到最小排列的元素。  
   
 > [!WARNING]  
->  如果*Numeric_Expression*然後傳回任何負值**TopPercent**傳回只有一個 （1） 資料列。  
+>  如果*Numeric_Expression*則會傳回任何負值**TopPercent**傳回只有一個 （1） 個資料列。  
 >   
 >  如需有關此行為的詳細呈現，請參閱第二個範例。  
   
 > [!IMPORTANT]  
->  像[BottomPercent](../mdx/bottompercent-mdx.md)函式， **TopPercent**函數必會破壞階層架構。  
+>  像是[BottomPercent](../mdx/bottompercent-mdx.md)函式**TopPercent**函數必會破壞階層架構。  
   
 ## <a name="example"></a>範例  
  下列範例為 Bike 類別目錄傳回實現轉售商銷售前 10% 的最佳城市。 結果以遞減順序排序，開頭為具有最高銷售值的城市。  
@@ -106,10 +106,10 @@ FROM [Adventure Works]
 ||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
-|休閒車 2000年藍色 46|$321,027.03|$333,021.50|($11,994.47)|  
+|Touring-2000年藍色 46|$321,027.03|$333,021.50|($11,994.47)|  
 |Touring-3000 Blue, 62|$87,773.61|$100,133.52|($12,359.91)|  
-|…|…|…|…|  
-|Touring-1000 黃色，46|$1,016,312.83|$1,234,454.27|($218,141.44)|  
+|...|...|...|...|  
+|Touring-1000年黃色，46|$1,016,312.83|$1,234,454.27|($218,141.44)|  
 |Touring-1000 Yellow, 60|$1,184,363.30|$1,443,407.51|($259,044.21)|  
   
  現在，如果要求您依收益顯示前 100% 的自行車，您要撰寫如下的查詢：  
@@ -128,6 +128,6 @@ FROM [Adventure Works]
 |Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

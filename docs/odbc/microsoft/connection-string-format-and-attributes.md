@@ -14,12 +14,12 @@ ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a28c3f7128d05307afba95d288f6a20afd75aeea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98c8e18432bfd386555863a917824b18b2d11885
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652466"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542783"
 ---
 # <a name="connection-string-format-and-attributes"></a>連接字串格式和屬性
 > [!IMPORTANT]  
@@ -45,7 +45,7 @@ ms.locfileid: "47652466"
 |DSN|資料來源名稱列在 驅動程式 索引標籤**ODBC 資料來源管理員** 對話方塊。|""|  
 |PWD|您想要存取的 Oracle 伺服器的密碼。 此驅動程式支援 Oracle 置於密碼的限制。|""|  
 |SERVER|您想要存取的 Oracle 伺服器的連接字串。|""|  
-|UID|Oracle 伺服器的使用者名稱。 根據您的系統，此屬性可能不是選擇性，也就是特定的資料庫和資料表可能會需要此屬性基於安全性考量。<br /><br /> 使用"/"以使用 Oracle 的操作系統驗證。|""|  
+|UID|Oracle 伺服器的使用者名稱。 根據您的系統，此屬性可能不是選擇性-也就是特定的資料庫和資料表可能會要求此屬性基於安全性考量。<br /><br /> 使用"/"以使用 Oracle 的操作系統驗證。|""|  
 |BUFFERSIZE|正在擷取資料行時，使用最佳的緩衝區大小。<br /><br /> 驅動程式會將最佳化擷取，讓從 Oracle 伺服器的一個擷取傳回足夠的資料列，以填滿此大小的緩衝區。 較大的值，通常會增加效能，如果擷取大量資料。|65535|  
 |SYNONYMCOLUMNS|當此值為 true (1)、 SQLColumn （） API 呼叫傳回的資料行資訊。 否則，SQLColumn （） 傳回資料表和檢視表的資料的行。 未設定此值時，ODBC Driver for Oracle 將提供更快速的存取。|1|  
 |REMARKS|當此值為 true (1)，驅動程式會傳回如 < 備註 > 一資料行[SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)結果集。 未設定此值時，ODBC Driver for Oracle 將提供更快速的存取。|0|  

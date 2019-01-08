@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_dropmergealternatepublisher
@@ -17,12 +16,12 @@ ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1a74cc2e0a91b33fc5fef6abf1202231927be25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cc29de8227cab3fc9045e7d98d9453146965008
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689242"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773850"
 ---
 # <a name="spdropmergealternatepublisher-transact-sql"></a>sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -11,12 +11,12 @@ ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e701bb22a2350d90fdaf4ab461aa70063eab97b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f3f982eeee9abc016575b8acd068b8ef2e7450f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120958"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408175"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>將專案部署至 Integration Services 伺服器
   在目前版本的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，您可以將專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器可讓您管理封裝、執行封裝，以及利用環境設定封裝的執行值。  
@@ -28,16 +28,16 @@ ms.locfileid: "48120958"
   
  如果要將專案部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器，請完成下列工作：  
   
-1.  建立 SSISDB 目錄 (若無)。 如需詳細資訊，請參閱[建立 SSIS 目錄](catalog/ssis-catalog.md)。  
+1.  建立 SSISDB 目錄 (如果尚未建立)。 如需詳細資訊，請參閱 [建立 SSIS 目錄](catalog/ssis-catalog.md)。  
   
-2.  請執行 [Integration Services 專案轉換精靈] 將專案轉換為專案部署模型。 如需詳細資訊，請參閱底下指示：[將專案轉換為專案部署模型](#convert)  
+2.  請執行 [Integration Services 專案轉換精靈] 將專案轉換為專案部署模型。 如需詳細資訊，請參閱下面的指示：[若要將專案轉換成專案部署模型](#convert)  
   
     -   若您將專案建立在 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]中，則專案會根據預設使用專案部署模型。  
   
     -   若是在舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中建立專案，在您於 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中開啟專案檔案後，請將專案轉換為專案部署模型。  
   
         > [!NOTE]  
-        >  如果專案包含一個或多個資料來源，則在完成專案轉換時，會移除資料來源。 若要建立專案中的封裝可以共用的資料來源連接，請在專案層級加入連接管理員。 如需詳細資訊，請參閱[加入、刪除或共用封裝中的連線管理員](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)。  
+        >  如果專案包含一個或多個資料來源，則在完成專案轉換時，會移除資料來源。 若要建立專案中的封裝可以共用的資料來源連接，請在專案層級加入連接管理員。 如需詳細資訊，請參閱 [加入、刪除或共用封裝中的連線管理員](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)。  
   
          根據您是從 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 還是從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 執行 [Integration Services 專案轉換精靈]，此精靈會執行不同的轉換工作。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48120958"
   
      如需封裝升級的詳細資訊，請參閱 [升級 Integration Services 封裝](install-windows/upgrade-integration-services-packages.md) 和 [使用 SSIS 封裝升級精靈來升級 Integration Services 封裝](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)。  
   
-3.  將專案部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 如需詳細資訊，請參閱底下指示： [將專案部署至 Integration Services 伺服器](#deploy)。  
+3.  將專案部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 如需詳細資訊，請參閱下面的指示：[若要將專案部署至 Integration Services 伺服器](#deploy)。  
   
 4.  (選擇性) 建立部署專案的環境。 如需詳細資訊，請參閱 [建立和對應伺服器環境](../../2014/integration-services/create-and-map-a-server-environment.md)。  
   

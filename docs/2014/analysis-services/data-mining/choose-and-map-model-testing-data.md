@@ -16,12 +16,12 @@ ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 641ec96632e2976ea56f1607b2076d4d01734523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac7a8f813aa884cc4267c73fbcedc88eecfb0a36
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166350"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542305"
 ---
 # <a name="choose-and-map-model-testing-data"></a>選擇和對應模型測試資料
   若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中建立精確度圖表，您必須選擇將用來測試模型的資料，並將資料對應至模型。  
@@ -76,7 +76,7 @@ ms.locfileid: "48166350"
   
 3.  在 [輸入選擇] 索引標籤的 [選取要用於精確度圖表的資料集] 下，選取 [指定不同的資料集]。  
   
-4.  按一下 [瀏覽] 按鈕 **(…)** 開啟對話方塊，並建立外部資料集的定義。  
+4.  按一下 瀏覽按鈕 **（...）** 開啟對話方塊，並建立外部資料集的定義。  
   
 5.  在 [選取採礦結構] 對話方塊中，選取包含您要使用之模型的採礦結構，然後按一下 [確定]。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48166350"
   
 4.  在 [選取要用於精確度圖表的資料集] 中，選取 [指定不同的資料集] 選項。  
   
-5.  按一下瀏覽按鈕 **(…)** 開啟對話方塊，並建立外部資料來源的定義。  
+5.  按一下 瀏覽按鈕 **（...）** 開啟對話方塊，並建立外部資料來源的定義。  
   
 6.  在 [指定資料行對應] 對話方塊中，按一下 [選取案例資料表]。  
   
@@ -121,6 +121,6 @@ ms.locfileid: "48166350"
      新的資料行對應會顯示在 [指定資料行對應] 對話方塊中。 您可以選取資料行之間的線，然後按 DELETE 鍵來移除對應。 您可以在 [採礦結構] 資料表中選取資料行，並將它拖曳到 [選取輸入資料表] 資料表中的對應資料行，以建立新的連接。  
   
 ## <a name="see-also"></a>另請參閱  
- [測試及驗證工作與操作方法&#40;資料採礦&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [測試及驗證工作與操作方法 &#40;資料採礦&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

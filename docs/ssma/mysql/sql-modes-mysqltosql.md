@@ -10,12 +10,12 @@ ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 46d91efa1451749d8d1cce2b1a8cf361cc30986a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6965d67b6dae484b3fa72f215446682f9aa6760c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737306"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394871"
 ---
 # <a name="sql-modes-mysqltosql"></a>SQL 模式 (MySQLToSQL)
 SSMA for MySQL 可在不同的 SQL 模式中操作，而且可以不同的用戶端以不同的方式套用這些模式。  
@@ -24,11 +24,11 @@ SSMA for MySQL 可在不同的 SQL 模式中操作，而且可以不同的用戶
   
 ## <a name="sql-modes-grid"></a>SQL 模式方格：  
   
--   在根層級的 SQL 模式方格包含下列資料行： **SQL 模式名稱**，**載入 SQL 模式**，並**有效 SQL 模式**。  
+-   在根層級的 SQL 模式方格包含下列資料行：**SQL 模式名稱**，**載入 SQL 模式**，以及**有效 SQL 模式**。  
   
--   資料庫類別目錄、 資料庫、 資料表類別目錄、 陳述式的類別、 檢視類別目錄、 資料表、 檢視、 函式、 程序、 UDF，和事件物件層級的 SQL 模式方格包含下列資料行： **SQL 模式名稱**， **繼承 SQL 模式**，並**有效 SQL 模式**。  
+-   資料庫類別目錄、 資料庫、 資料表類別目錄、 陳述式的類別、 檢視類別目錄、 資料表、 檢視、 函式、 程序、 UDF，和事件物件層級的 SQL 模式方格包含下列資料行：**SQL 模式名稱**，**繼承 SQL 模式**，以及**有效 SQL 模式**。  
   
--   SQL 預存程序、 預存函式和觸發程序層級的模式方格包含下列資料行： **SQL 模式名稱**，**原始 SQL 模式**，並**有效 SQL 模式**。  
+-   SQL 預存程序、 預存函式和觸發程序層級的模式方格包含下列資料行：**SQL 模式名稱**，**原始 SQL 模式**，以及**有效 SQL 模式**。  
   
 > [!NOTE]  
 > 群組模式中會顯示的資料行底下，bold 'SQL 模式 Name'。  

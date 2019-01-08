@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.pubproperties.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 9055bd4a-89cc-4059-9474-e213d7bcc36d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0fee9e9c98f06590978ddbe3a0a136ce275f0a4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30045c5a124792c7e7b6b7caa87977c87f22a0b9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157004"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778980"
 ---
 # <a name="publisher-properties---publisher-general"></a>發行者屬性 - 發行者，一般
   **[發行者屬性]** 對話方塊的 **[一般]** 頁面，會顯示散發者與發行者所使用之散發資料庫的唯讀資訊。 若要變更散發者或發行者的散發資料庫：  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Slowly Changing Dimension Wizard
@@ -13,12 +12,12 @@ ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1bf6cb9b62db574ebd5546c2c29823428addf53f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e70590fb67c1fba5c3781fb224211aaab721f5bd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065295"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773010"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>緩時變維度精靈 F1 說明
   使用 **[緩時變維度精靈]** ，以設定將資料載入至各種類型的緩時變維度。 此章節提供 **[緩時變維度精靈]** 之頁面的 F1 說明。 下表描述此章節的主題。  
@@ -28,26 +27,26 @@ ms.locfileid: "48065295"
  [歡迎使用緩時變維度精靈](welcome-to-the-slowly-changing-dimension-wizard.md)  
  導入緩時變維度精靈。  
   
- [選取的維度資料表與索引鍵&#40;緩時變維度精靈&#41;](select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md)  
+ [選取維度資料表與索引鍵 &#40;緩時變維度精靈&#41;](select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md)  
  選取緩時變維度資料表，並指定其索引鍵資料行。  
   
- [緩時變維度資料行&#40;緩時變維度精靈&#41;](slowly-changing-dimension-columns-slowly-changing-dimension-wizard.md)  
+ [緩時變維度資料行 &#40;緩時變維度精靈&#41;](slowly-changing-dimension-columns-slowly-changing-dimension-wizard.md)  
  針對選取的緩時變維度資料行，選取變更的類型。  
   
- [固定與變更屬性選項&#40;緩時變維度精靈](fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md)  
+ [固定與變更屬性選項 &#40;緩時變維度精靈](fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md)  
  指定固定與變更屬性維度資料行的選項。  
   
- [歷程記錄屬性選項&#40;緩時變維度精靈&#41;](historical-attribute-options-slowly-changing-dimension-wizard.md)  
+ [歷程記錄屬性選項 &#40;緩時變維度精靈&#41;](historical-attribute-options-slowly-changing-dimension-wizard.md)  
  指定記錄屬性維度資料行的選項。  
   
- [推斷的維度成員&#40;緩時變維度精靈&#41;](inferred-dimension-members-slowly-changing-dimension-wizard.md)  
+ [推斷的維度成員 &#40;緩時變維度精靈&#41;](inferred-dimension-members-slowly-changing-dimension-wizard.md)  
  指定推斷之維度成員的選項。  
   
  [完成緩時變維度精靈](finish-the-slowly-changing-dimension-wizard.md)  
  顯示使用者所選取的組態選項。  
   
 ## <a name="see-also"></a>另請參閱  
- [緩時變維度 」 轉換](slowly-changing-dimension-transformation.md)   
+ [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)   
  [使用緩時變維度精靈來設定輸出](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

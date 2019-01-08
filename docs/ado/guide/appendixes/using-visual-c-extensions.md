@@ -16,12 +16,12 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aeae626f924776092bc8f6652e716747768b689c
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 30d358dab4ab983109d354238b35b64a3d7976da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350522"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544178"
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 延伸模組
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 介面
@@ -34,7 +34,7 @@ ms.locfileid: "51350522"
 ## <a name="binding-entries"></a>繫結項目
  Visual c + + 延伸模組，用於 ADO 對應的欄位[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)C/c + + 變數的物件。 欄位和變數之間的對應的定義會呼叫*繫結項目*。 巨集提供數值、 固定長度和可變長度的資料繫結項目。 自 Visual c + + 延伸模組類別，衍生類別中宣告的繫結項目和 C/c + + 變數**CADORecordBinding**。 **CADORecordBinding**類別在內部定義的繫結項目巨集。
 
- ADO 在內部對應至 OLE DB 中這些巨集的參數**DBBINDING**結構，並建立 OLE DB**存取子**物件來管理的移動和資料欄位與變數之間的轉換。 OLE DB 定義的資料為包含三個部分： A*緩衝區*其中儲存資料;*狀態*，指出欄位是否已成功儲存在緩衝區，或如何變數應該還原成欄位;而*長度*的資料。 (請參閱[開始和設定資料 (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)在 OLE DB 程式設計人員參考中，如需詳細資訊。)
+ ADO 在內部對應至 OLE DB 中這些巨集的參數**DBBINDING**結構，並建立 OLE DB**存取子**物件來管理的移動和資料欄位與變數之間的轉換。 OLE DB 定義的資料為包含三個部分：A*緩衝區*其中儲存資料;*狀態*，指出欄位是否已成功儲存在緩衝區，或如何變數應該還原成欄位; 而*長度*的資料。 (請參閱[開始和設定資料 (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)在 OLE DB 程式設計人員參考中，如需詳細資訊。)
 
 ## <a name="header-file"></a>標頭檔
  若要使用 Visual c + + 延伸模組用於 ADO 應用程式中包含下列檔案：
@@ -58,7 +58,7 @@ ms.locfileid: "51350522"
  如需詳細資訊，請參閱 < [Visual c + + Extensions 範例](../../../ado/guide/appendixes/visual-c-extensions-example.md)。
 
 ## <a name="interface-methods"></a>介面方法
- **IADORecordBinding**介面有三個方法： **BindToRecordset**， **AddNew**，以及**更新**。 每個方法的唯一引數是衍生自類別的執行個體的指標**CADORecordBinding**。 因此， **AddNew**並**更新**方法不能指定任何其 ADO 方法 namesakes 的參數。
+ **IADORecordBinding**介面有三個方法：**BindToRecordset**， **AddNew**，以及**更新**。 每個方法的唯一引數是衍生自類別的執行個體的指標**CADORecordBinding**。 因此， **AddNew**並**更新**方法不能指定任何其 ADO 方法 namesakes 的參數。
 
 ## <a name="syntax"></a>語法
  **BindToRecordset**方法 associates**資料錄集**C/c + + 變數的欄位。
@@ -84,7 +84,7 @@ Update(CADORecordBinding *binding)
 
  系列的巨集可供固定長度的資料，例如**adDate**或是**adBoolean**; 數值資料，例如**adTinyInt**， **adInteger**，或**adDouble**; 和可變長度資料，例如**adChar**， **adVarChar**或**adVarBinary**。 所有的數字類型，除了**adVarNumeric**，也是固定長度類型。 每個系列的不同組的參數，以便您可以排除不感興趣的繫結資訊。
 
- 如需詳細資訊，請參閱 <<c0> [ 附錄 a： 資料類型](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)，OLE DB 程式設計人員參考。
+ 如需詳細資訊，請參閱[附錄 A：資料型別](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)的 OLE DB 程式設計人員參考。
 
 ### <a name="begin-binding-entries"></a>開始繫結項目
  **BEGIN_ADO_BINDING**(*類別*)
@@ -139,7 +139,7 @@ Update(CADORecordBinding *binding)
 |**adFldSignMismatch**|5|值帶正負號和不帶正負號的變數資料類型。|
 |**adFldDataOverFlow**|6|值大於可以儲存在變數資料類型。|
 |**adFldCantCreate**|7|未知的資料行類型和欄位已經開啟。|
-|**adFldUnavailable**|8|無法判斷欄位值 — 例如，在新的、 未指派的欄位沒有預設值。|
+|**adFldUnavailable**|8|欄位值找不到判斷-例如，在新的、 未指派的欄位沒有預設值。|
 |**adFldPermissionDenied**|9|在更新時，沒有寫入資料的權限。|
 |**adFldIntegrityViolation**|10|更新時，欄位值違反資料行的完整性。|
 |**adFldSchemaViolation**|11|更新時，欄位值違反資料行結構描述。|

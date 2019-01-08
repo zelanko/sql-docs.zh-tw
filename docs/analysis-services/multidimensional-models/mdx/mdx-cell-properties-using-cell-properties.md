@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 42c107f371b2cc1d8159c5eb94f3a51e864cf61d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 49cf92537bf0289765dca7b3a04c76fe0bf50fd8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145303"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418699"
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>MDX 資料格屬性-使用資料格屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +62,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_ENABLED_WITH_UPDATE** (0x00000002)   可以更新陳述式更新資料格。 若要更新不可寫入的分葉資料格，則該次更新可能會失敗。|  
 ||**CELL_UPDATE_NOT_ENABLED_FORMULA** (0x10000001)   因為資料格的座標間有導出成員，所以無法更新資料格；是以 where 子句中的集合擷取該資料格。 即使公式會影響資料格的值 (或是啟用導出資料格)，還是會更新資料格。 在此案例中，因為計算將會影響到結果，所以此資料格最終的值可能不是更新的值。|  
 ||**CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE** (0x10000002)   因為無法更新非總和量值 (計數、最小、最大、相異計數、局部加總)，所以無法更新資料格。|  
-||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0x10000003)   因為資料格不存在於量值及與量值的量值群組不相關之維度成員的交集，所以無法更新資料格。|  
+||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0x10000003) 因為資料格不存在於量值的交集及量值的量值群組不相關的維度成員，就無法更新資料格。|  
 ||**CELL_UPDATE_NOT_ENABLED_SECURE** (0x10000005)    因為資料格受到保護，所以無法更新。|  
 ||**CELL_UPDATE_NOT_ENABLED_CALCLEVEL** (0x10000006)   保留供日後使用。|  
 ||**CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE** (0x10000007)   因為內部原因，所以無法更新資料格。|  

@@ -11,12 +11,12 @@ ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2544b53b1fabc94a8ab0801141349d5da7f891c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bda916232a3d1b0c46a4278def28ec3759e346d3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149628"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404883"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>建立及管理階層 (SSAS 表格式)
   您可以在 [圖表檢視] 中，透過模型設計師建立及管理階層。 若要在 [圖表檢視] 中檢視模型設計師，請按一下 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [模型] 功能表，然後指向 [模型檢視]，再按一下 [圖表檢視]。  
@@ -42,7 +42,7 @@ ms.locfileid: "48149628"
   
 2.  輸入階層的名稱。  
   
- 您可以將額外的資料行拖曳至階層的父層級中，以複製資料行。 將子層級置於階層中要顯示的位置。  
+ 您可以將其他資料行拖曳到您的階層父層級，這會將複製的資料行。 將子層級置於階層中要顯示的位置。  
   
 > [!NOTE]  
 >  如果您複選量值及一個或多個資料行，或者選取多個資料表的資料行，即會停用內容功能表中的 [建立階層] 命令。  
@@ -96,7 +96,7 @@ ms.locfileid: "48149628"
   
 ## <a name="see-also"></a>另請參閱  
  [表格式模型設計工具&#40;SSAS 表格式&#41;](../tabular-model-designer-ssas-tabular.md)   
- [階層&#40;SSAS 表格式&#41;](hierarchies-ssas-tabular.md)   
- [量值&#40;SSAS 表格式&#41;](measures-ssas-tabular.md)  
+ [階層 &#40;SSAS 表格式&#41;](hierarchies-ssas-tabular.md)   
+ [量值 &#40;SSAS 表格式&#41;](measures-ssas-tabular.md)  
   
   

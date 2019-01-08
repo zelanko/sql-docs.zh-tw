@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - constraints [SQL Server], Visual Database Tools
@@ -14,12 +13,12 @@ ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8800491b0c4cb576b7255c1be0648b87daebfcc6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082308"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772280"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>唯一條件約束與檢查條件約束
   UNIQUE 和 CHECK 是兩種類型的條件約束，可用來強制執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中的資料完整性。 這些都是重要的資料庫物件。  
@@ -46,7 +45,7 @@ ms.locfileid: "48082308"
   
  您可以將多個 CHECK 條件約束套用到單一資料行。 您也可以在資料表層級建立單一 CHECK 條件約束，將它套用到多個資料行。 例如，多重資料行的 CHECK 條件約束可用來確認 **country_region** 資料行值為 **USA** 的任何資料列，其 **state** 資料行內也會有兩個字元的值。 這允許可在某一個位置上檢查多個條件。  
   
- CHECK 條件約束類似於 FOREIGN KEY 條件約束，用來控制放入資料行的值。 其間的差異在於它們如何判定哪些值有效：FOREIGN KEY 條件約束從另一個資料表取得有效值清單，而 CHECK 條件約束則會從邏輯運算式來判定有效值。  
+ CHECK 條件約束類似於 FOREIGN KEY 條件約束，用來控制放入資料行的值。 不同之處在於它們如何判定哪些值有效：FOREIGN KEY 條件約束從另一個資料表取得有效值清單，而 CHECK 條件約束判斷有效的值，從邏輯運算式。  
   
 > [!CAUTION]  
 >  包括明確或隱含資料類型轉換的條件約束可能會導致某些作業失敗。 例如，在資料分割切換來源的資料表上所定義的此類條件約束，可能會導致 ALTER TABLE...SWITCH 作業失敗。 應避免在條件約束定義中進行資料類型轉換。  

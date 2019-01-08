@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3cffdd8b6040e1740e61043433cc95ca3319f5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e33dfa78117b68d1cb67baed2aea6bd7f5487e5b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832036"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398121"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "47832036"
 |\<繼承資料行 >||繼承的所有資料行[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**start_value**|**sql_variant NOT NULL**|順序物件的起始值。 如果順序物件是藉由使用 ALTER SEQUENCE 重新啟動，它會從這個值重新啟動。 當順序物件循環其繼續進行**minimum_value**或是**maximum_value**，而非**start_value**。|  
 |**increment**|**sql_variant NOT NULL**|每次產生值之後，用來遞增順序物件的值。|  
-|**minimum_value**|**sql_variant 的 NULL**|可由順序物件產生的最小值。 達到此值之後，順序物件在嘗試產生更多的值時會傳回錯誤，如果已指定 CYCLE 選項則會重新啟動。 如果未指定 MINVALUE，此資料行會傳回順序產生器的資料類型所支援的最小值。|  
+|**minimum_value**|**sql_variant 的 NULL**|可由順序物件產生的最小值。 達到此值之後，順序物件在嘗試產生更多的值時會傳回錯誤，如果已指定 CYCLE 選項則會重新啟動。 如果尚未指定任何 MINVALUE，這個資料行會傳回順序產生器的資料類型所支援的最小值。|  
 |**maximum_value**|**sql_variant 的 NULL**|可由順序物件產生的最大值。 達到此值之後，順序物件在嘗試產生更多的值時會開始傳回錯誤，如果已指定 CYCLE 選項則會重新啟動。 如果未指定 MAXVALUE，此資料行會傳回順序物件的資料類型所支援的最大值。|  
 |**is_cycling**|**位元 NOT NULL**|如果已為順序物件指定 NO CYCLE，則傳回 0，如果已指定 CYCLE 則傳回 1。|  
 |**is_cached**|**位元 NOT NULL**|如果已為順序物件指定 NO CACHE，則傳回 0，如果已指定 CACHE 則傳回 1。|  
 |**cache_size**|**int NULL**|傳回順序物件的指定快取大小。 如果以 NO CACHE 選項建立順序，或如果指定 CACHE 但未指定快取大小，此資料行會包含 NULL。 如果快取大小所指定的值大於順序物件可傳回之值的數目上限，仍然會顯示該無法取得的快取大小。|  
-|**system_type_id**|**tinyint NOT NULL**|順序物件之資料類型的系統類型識別碼。|  
+|**system_type_id**|**tinyint NOT NULL**|順序物件資料類型的系統類型識別碼。|  
 |**user_type_id**|**int NOT NULL**|如使用者所定義，順序物件的資料類型識別碼。|  
 |**有效位數**|**tinyint NOT NULL**|資料類型的最大有效位數。|  
 |**scale**|**tinyint NOT NULL**|資料類型的最大小數位數。 小數位數會與有效位數一起傳回，提供使用者完整的中繼資料。 順序物件的小數位數永遠是 0，因為只允許整數類型。|  

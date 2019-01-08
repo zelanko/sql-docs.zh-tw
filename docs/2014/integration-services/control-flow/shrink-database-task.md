@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.shrinkdatabasetask.f1
@@ -17,12 +16,12 @@ ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ada90d4c85ab3717df4d7163a435ffdae92162fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7cb16ff2eec1908b221c9fff3f68368ac97dc644
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183818"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790800"
 ---
 # <a name="shrink-database-task"></a>壓縮資料庫工作
   「壓縮資料庫」工作會減少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料和記錄檔的大小。  
@@ -52,7 +51,7 @@ ms.locfileid: "48183818"
   
 -   [壓縮資料庫工作 &#40;維護計畫&#41;](../../relational-databases/maintenance-plans/shrink-database-task-maintenance-plan.md)  
   
- 如需有關在「[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
+ 如需有關在「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」中設定這些屬性的詳細資訊，請按下列主題：  
   
 -   [設定工作或容器的屬性](../set-the-properties-of-a-task-or-container.md)  
   

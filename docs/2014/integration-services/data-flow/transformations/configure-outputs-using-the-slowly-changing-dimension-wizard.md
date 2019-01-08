@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Slowly Changing Dimension transformation
@@ -15,12 +14,12 @@ ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79ae2c560bfc5e5e38d46e72bad0b1a734421ee5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6665b08662834226feac1c99df3e8a63e7026c7b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085418"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750075"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>使用緩時變維度精靈來設定輸出
   「緩時變維度精靈」做為「緩時變維度」轉換的編輯器使用。 為緩時變維度資料建立並設定資料流程會是一個複雜的工作。 「緩時變維度精靈」可引導您執行對應資料行、選取商務索引鍵資料行、設定資料行變更屬性，以及設定對推斷之維度成員的支援等步驟，為「緩時變維度」轉換輸出提供建立資料流程的最簡單方法。  
@@ -81,6 +80,6 @@ ms.locfileid: "48085418"
  更新「緩時變維度」轉換輸出之組態的最簡單方法，就是重新執行「緩時變維度精靈」並修改精靈頁面中的屬性。 您還可以使用 [進階編輯器] 對話方塊或以程式設計方式更新「緩時變維度」轉換。  
   
 ## <a name="see-also"></a>另請參閱  
- [緩時變維度轉換](slowly-changing-dimension-transformation.md)  
+ [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)  
   
   

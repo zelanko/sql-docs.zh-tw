@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, modifications to DBs
@@ -13,12 +12,12 @@ ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d08eb0368840a6f2850467d13cbe42c5519c7b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f78f4bdf08b9a5caf9b2654289bf181080efff02
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083648"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751080"
 ---
 # <a name="modified-features-contained-database"></a>修改的功能 (自主資料庫)
   下列功能已經修改成部分自主資料庫所支援的功能。 由於功能通常會進行修改，因此它們不會跨越資料庫界限。  
@@ -46,7 +45,7 @@ ms.locfileid: "48083648"
  暫存資料表無法參考使用者定義型別、XML 結構描述集合或使用者定義函數。  
   
 ## <a name="collation"></a>定序  
- 在非自主資料庫模型中，有三種不同的定序類型：資料庫定序、執行個體定序和 tempdb 定序。 自主資料庫只會使用兩種定序：資料庫定序和新的目錄定序。 如需自主資料庫定序的詳細資訊，請參閱 [自主資料庫定序](contained-database-collations.md) 。  
+ 在非自主資料庫模型中，有三個不同的定序類型：資料庫定序、 執行個體的定序和 tempdb 定序。 自主資料庫只會使用兩種定序：資料庫定序和新的目錄定序。 如需自主資料庫定序的詳細資訊，請參閱 [自主資料庫定序](contained-database-collations.md) 。  
   
 ## <a name="user-options"></a>User Options  
  啟用自主資料庫時， [執行個體的](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) user options 選項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必須設定為 0。  

@@ -11,12 +11,12 @@ ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9970c8c086c14dcc49f741e47c48f76f9b9c6f96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb982848854eef74363250c291b9f5676abec2f6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189128"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507867"
 ---
 # <a name="defining-named-sets"></a>定義命名集
   命名集是指傳回一組維度成員的多維度運算式 (MDX) 運算式。 您可以定義命名集，將它們儲存為 Cube 定義的一部分；也可以在用戶端應用程式建立命名集。 您可以結合 Cube 資料、算術運算子、數字和函數，來建立命名集。 使用者可以在用戶端應用程式中將命名集用於 MDX 查詢，也可以用於定義 Subcube 中的集合。 Subcube 是指交叉聯結集的集合，它會將 Cube 空間限制為針對後續陳述式定義的子空間。 定義限制的 Cube 空間是 MDX 指令碼的基本概念。  
@@ -40,7 +40,7 @@ ms.locfileid: "48189128"
 4.  上**中繼資料**索引標籤中**計算工具**窗格中，展開**產品**，展開**類別**，依序展開`Members`，然後依序展開**所有產品**。  
   
     > [!NOTE]  
-    >  如果您無法在 [計算工具] 窗格檢視任何中繼資料，請在工具列上按一下 [重新連接]。 如果此舉無效，可能得處理 Cube，或者啟動 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的執行個體。  
+    >  如果您無法在 [計算工具] 窗格中檢視任何中繼資料，請在工具列上按一下 [重新連接]。 如果此舉無效，可能得處理 Cube，或者啟動 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的執行個體。  
   
 5.  將 [自行車] 拖曳到 [運算式] 方塊。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48189128"
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-     現在您已經定義了 Exists 集合運算式的第一個集合，可以再加入第二個集合，亦即含有最多員工之 [轉售商] 維度的成員集合。  
+     既然您已定義的第一個集合 Exists 集合運算式，您已準備好加入包含最多員工的轉售商 維度的成員之第二個集合的集合。  
   
 7.  上**中繼資料**索引標籤中**計算工具**窗格中，展開**員工數目**轉售商] 維度中，展開 [ `Members`，然後展開**所有轉售商**。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48189128"
      ![設定篩選 窗格包含兩個具名](../../2014/tutorials/media/l6-named-set-05.gif "設定篩選 窗格包含兩個名為")  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [第 7 課：定義關鍵效能指標 &#40;KPI&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [第 7 課：定義關鍵效能指標&#40;Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [計算](multidimensional-models-olap-logical-cube-objects/calculations.md)   

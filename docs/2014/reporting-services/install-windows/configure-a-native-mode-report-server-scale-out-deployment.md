@@ -15,12 +15,12 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cbd26f431b71013400593858e6038fc4326f4d14
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 68951c637d0c0db1fc86bab6405868e73770aca2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606848"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395231"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>設定原生模式報表伺服器向外延展部署 (SSRS 組態管理員)
 
@@ -111,9 +111,9 @@ ms.locfileid: "51606848"
 3.  在向外延展部署] 頁面上，選取 [報表伺服器執行個體正在等候加入此部署中，然後按一下**新增伺服器**。  
   
     > [!NOTE]  
-    >  **問題** ：嘗試將 Reporting Services 報表伺服器執行個體加入向外延展部署時，您可能會遇到像是「拒絕存取」之類的錯誤訊息。  
+    >  **問題：** 當您嘗試將 Reporting Services 報表伺服器執行個體加入向外延展部署時，您可能會遇到像是 「 拒絕存取 」 錯誤訊息。  
     >   
-    >  **因應措施** ：從第一個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體備份 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 加密金鑰，然後將此金鑰還原到第二部 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器。 接著嘗試將第二部伺服器加入 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 向外延展部署。  
+    >  **因應措施：** 備份[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]加密金鑰，從第一個[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]執行個體，並將金鑰還原到第二個[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]報表伺服器。 接著嘗試將第二部伺服器加入 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 向外延展部署。  
   
 4.  您現在應該能夠確認這兩個報表伺服器執行個體都可運作。 若要確認第二個執行個體，您可以使用 Reporting Services 組態工具連接到報表伺服器，然後按一下 [Web 服務 URL] 或 [報表管理員 URL]。  
   

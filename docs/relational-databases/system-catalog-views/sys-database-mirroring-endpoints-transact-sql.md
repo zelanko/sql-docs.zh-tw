@@ -23,12 +23,12 @@ ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4a791f5d47382e78ce9bbfe34d939cffc273515
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aa757203ba82794a0564e50c715134e502c6ac1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734596"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538069"
 ---
 # <a name="sysdatabasemirroringendpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,14 @@ ms.locfileid: "47734596"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**\<繼承資料行 >**|—|繼承資料行從**sys.endpoints** (如需詳細資訊，請參閱[sys.endpoints &#40;-&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md))。|  
-|**角色**|**tinyint**|鏡像角色，它有下列幾種：<br /><br /> **0** = 無<br /><br /> **1** = partner<br /><br /> **2** = 見證<br /><br /> **3** = all<br /><br /> 注意： 此值是僅適用於資料庫鏡像相關。|  
-|**role_desc**|**nvarchar(60)**|鏡像角色的描述，它有下列幾種：<br /><br /> **NONE**<br /><br /> **合作夥伴**<br /><br /> **WITNESS**<br /><br /> **ALL**<br /><br /> 注意： 此值是僅適用於資料庫鏡像相關。|  
+|**\<繼承資料行 >**|-|繼承資料行從**sys.endpoints** (如需詳細資訊，請參閱[sys.endpoints &#40;-&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md))。|  
+|**角色**|**tinyint**|鏡像角色，它有下列幾種：<br /><br /> **0** = 無<br /><br /> **1** = partner<br /><br /> **2** = 見證<br /><br /> **3** = all<br /><br /> 注意：這個值僅與資料庫鏡像相關。|  
+|**role_desc**|**nvarchar(60)**|鏡像角色的描述，它有下列幾種：<br /><br /> **NONE**<br /><br /> **合作夥伴**<br /><br /> **WITNESS**<br /><br /> **ALL**<br /><br /> 注意：這個值僅與資料庫鏡像相關。|  
 |**is_encryption_enabled**|**bit**|**1**表示啟用加密。<br /><br /> **0**表示停用加密。|  
 |**connection_auth**|**tinyint**|與這個端點連接所需的連接驗證類型，它有下列幾種：<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -交涉<br /><br /> **4** -憑證<br /><br /> **5** -NTLM、 CERTIFICATE<br /><br /> **6** -KERBEROS、 CERTIFICATE<br /><br /> **7** -NEGOTIATE、 CERTIFICATE<br /><br /> **8** -CERTIFICATE、 NTLM<br /><br /> **9** -CERTIFICATE、 KERBEROS<br /><br /> **10** -CERTIFICATE、 NEGOTIATE|  
 |**connection_auth_desc**|**Nvarchar (60)**|與這個端點連接所需之驗證類型的描述，它有下列幾種：<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM、CERTIFICATE<br /><br /> KERBEROS、CERTIFICATE<br /><br /> NEGOTIATE、CERTIFICATE<br /><br /> CERTIFICATE、NTLM<br /><br /> CERTIFICATE、KERBEROS<br /><br /> CERTIFICATE、NEGOTIATE|  
 |**certificate_id**|**int**|驗證所用的憑證識別碼 (如果有的話)。<br /><br /> 0 = 正在使用 Windows 驗證。|  
-|**encryption_algorithm**|**tinyint**|加密演算法，它有下列幾種：<br /><br /> **0** – NONE<br /><br /> **1** – RC4<br /><br /> **2** – AES<br /><br /> **3** – NONE、RC4<br /><br /> **4** – NONE、 AES<br /><br /> **5** – RC4、 AES<br /><br /> **6** – AES、RC4<br /><br /> **7** – NONE、 RC4 AES<br /><br /> **8** – NONE、 AES RC4|  
+|**encryption_algorithm**|**tinyint**|加密演算法，它有下列幾種：<br /><br /> **0** -NONE<br /><br /> **1** -RC4<br /><br /> **2** -AES<br /><br /> **3** -NONE、RC4<br /><br /> **4** -NONE、 AES<br /><br /> **5** -RC4、 AES<br /><br /> **6** -AES、RC4<br /><br /> **7** -NONE、 RC4 AES<br /><br /> **8** -NONE、 AES RC4|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|加密演算法的描述，它有下列幾種：<br /><br /> 無<br /><br /> RC4<br /><br /> AES<br /><br /> NONE、RC4<br /><br /> NONE、AES<br /><br /> RC4、AES<br /><br /> AES、RC4<br /><br /> NONE、RC4、AES<br /><br /> NONE、AES、RC4|  
   
 ## <a name="remarks"></a>備註  

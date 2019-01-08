@@ -13,17 +13,17 @@ ms.assetid: ae7cfff7-ab1c-4cf5-9a91-97b21d15d85f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc00f10403f748db0802f288ca66e6582429155c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68f52f1e64d46b2509ae995a1f0dfa56c4dad22f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075058"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400371"
 ---
 # <a name="cluster-discrimination-tab-mining-model-viewer"></a>叢集辨識索引標籤 (採礦模型檢視器)
   使用 [叢集辨識] 索引標籤，即可比較存在於一個叢集模型中的兩個叢集。 可以查看屬性和值的不同組合在叢集中的表示方式。  
   
- **如需詳細資訊，請參閱** [Microsoft 叢集演算法](data-mining/microsoft-clustering-algorithm.md)、 [使用 Microsoft 叢集檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **如需詳細資訊：**[Microsoft 群集演算法](data-mining/microsoft-clustering-algorithm.md)，[瀏覽模型，使用 Microsoft 叢集檢視器](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -48,12 +48,12 @@ ms.locfileid: "48075058"
 |-|-|  
 |**變數**|採礦模型中的屬性。|  
 |**值**|[變數] 中所選屬性的值。|  
-|**喜好\<群集 1 >**|左側的橫條圖表示所選屬性/值組代表 [叢集 1] 中所選叢集的機率。 將滑鼠暫時放在長條上方，可查看以百分比表示的值。 請注意，即使值為零，但這不表示叢集中必定缺少屬性/值，只不過分佈會強烈喜好其中一個叢集。|  
+|**喜好\<群集 1 >**|左側的橫條圖表示所選屬性/值組代表 [叢集 1] 中所選叢集的機率。 將滑鼠暫時放在長條上方，可查看以百分比表示的值。 請注意，即使值為零，它並不表示屬性值就從叢集中必定缺少的分佈會強烈喜好一個叢集之間進行。|  
 |**喜好\<cluster 2 >**|右側的橫條圖表示所選屬性/值組代表 [叢集 2] 中所選叢集的機率。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [採礦模型檢視器&#40;資料採礦模型設計工具&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [採礦模型檢視器 &#40;資料採礦模型設計師&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [資料採礦模型檢視器](data-mining/data-mining-model-viewers.md)  
   
   

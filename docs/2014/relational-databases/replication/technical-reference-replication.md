@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - technical reference [SQL Server replication]
@@ -13,12 +12,12 @@ ms.assetid: b8f7d6d4-4fcc-45ac-abe5-740c147ac177
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35ae15fc44acfd7b9b203c4af2b9e436edecb9d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2fdfc3f9db9b0d404bb1c7dc60fa568198ec2aa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124231"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753991"
 ---
 # <a name="technical-reference-replication"></a>技術參考 (複寫)
   本節包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫之技術參考文件的連結。  

@@ -1,11 +1,10 @@
 ---
-title: 'TM: Commit Tran Starting 事件類別 | Microsoft 文件'
+title: TM:Commit Tran Starting 事件類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,17 +14,17 @@ ms.assetid: 3e1ac37e-6093-4dc9-9e5d-4270db18b547
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d313efff71316dba71bda9bc50c1ce1e5c47b3e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f53d8731ff9d5ef2484b652fc1c7c673ba9b3984
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145358"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774500"
 ---
-# <a name="tm-commit-tran-starting-event-class"></a>TM: Commit Tran Starting 事件類別
-  TM: Commit Tran Starting 事件類別指出正在啟動 COMMIT TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。 EventSubClass 資料行指出在認可目前交易之後，是否會啟動新交易。  
+# <a name="tm-commit-tran-starting-event-class"></a>TM:Commit Tran Starting 事件類別
+  TM:Commit Tran Starting 事件類別指出正在啟動 COMMIT TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。 EventSubClass 資料行指出在認可目前交易之後，是否會啟動新交易。  
   
-## <a name="tm-commit-tran-starting-event-class-data-columns"></a>TM: Commit Tran Starting 事件類別資料行  
+## <a name="tm-commit-tran-starting-event-class-data-columns"></a>TM:Commit Tran Starting 事件類別資料行  
   
 |資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.subscriptionoptions.f1
@@ -13,12 +12,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c36b2de74fd93c36da61e186a1bb3a6a56382d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c630646aa81ebaeccf49f729299394419b7099a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080518"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753850"
 ---
 # <a name="publication-properties-subscription-options"></a>發行集屬性，訂閱選項
   **[發行集屬性]** 對話方塊的 **[訂閱選項]** 頁面，可以讓您檢視和設定訂閱相關聯的發行集層級屬性。 屬性會依下列類別目錄分組：  
@@ -116,7 +115,7 @@ ms.locfileid: "48080518"
  僅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 決定是否事先計算哪些資料列屬於哪些資料分割，來最佳化同步處理。 如果發行集符合預先計算資料分割的準則，此設定就會預設為 **[True]** 。 如需詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](merge/parameterized-filters-optimize-for-precomputed-partitions.md)。  
   
  **最佳化同步處理**  
- 決定是否在每一個訂閱者端儲存其他中繼資料，來最佳化合併處理。 預先計算的資料分割已取代此最佳化方式；只有在 **[預先計算資料分割]** 設定為 **[False]** 時， **[最佳化同步處理]** 選項才適用。 如需詳細資訊，請參閱 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)。  
+ 決定是否在每一個訂閱者端儲存其他中繼資料，來最佳化合併處理。 預先計算的資料分割已取代此最佳化方式；只有在 **[預先計算資料分割]** 設定為 **[False]** 時， **[最佳化同步處理]** 選項才適用。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
 ### <a name="merge-processes"></a>合併處理  
  **限制並行處理**  

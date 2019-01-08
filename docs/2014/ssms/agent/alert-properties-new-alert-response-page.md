@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.alert.response.f1
@@ -12,12 +12,12 @@ ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 864859365dac094377ab00cb6848f3fb7c3a81f7
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906218"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773790"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>警示屬性-新增警示 （回應頁面）
   使用此頁面可指定您想要執行的作業，以及取得要通知的操作員清單來回應 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示。  
@@ -51,7 +51,7 @@ ms.locfileid: "48906218"
  顯示 [新增操作員] 對話方塊，可讓您建立新的操作員。  
   
  **檢視操作員**  
- 顯示目前選取之操作員的 [屬性] 對話方塊。 您可以檢視及修改操作員屬性上**操作員屬性** 對話方塊。  
+ 顯示目前選取之操作員的 [屬性] 對話方塊。 您可以在 [操作員屬性] 對話方塊上檢視及修改操作員屬性。  
   
 ## <a name="see-also"></a>另請參閱  
  [警示](alerts.md)   

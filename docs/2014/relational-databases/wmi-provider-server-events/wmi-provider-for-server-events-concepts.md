@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 helpviewer_keywords:
 - server events [WMI]
@@ -18,12 +16,12 @@ ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3860d809d6146e4b3e0ed2c491f11ac4ee66c53f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a0ef44b57e092c13b4046b250c99fca5eaea101
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220828"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780820"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>伺服器事件的 WMI 提供者概念
   伺服器事件的 WMI 提供者可讓您使用 Windows Management Instrumentation (WMI)，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體中監視事件。  
@@ -41,7 +39,7 @@ ms.locfileid: "48220828"
  [範例：使用伺服器事件的 WMI 提供者建立 SQL Server Agent 警示](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  提供使用 WMI 提供者傳回在其上建立 SQL Server Agent 警示之追蹤事件資訊的範例。  
   
- [範例： 使用.NET Framework 使用 WMI 事件提供者](sample-using-the-wmi-event-provider-with-the-net-framework.md)  
+ [範例：使用.NET Framework 使用 WMI 事件提供者](sample-using-the-wmi-event-provider-with-the-net-framework.md)  
  提供使用 WMI 提供者傳回 C# 應用程式中之事件資料的範例。  
   
  [伺服器事件類別和屬性的 WMI 提供者](wmi-provider-for-server-events-classes-and-properties.md)  

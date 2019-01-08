@@ -1,5 +1,5 @@
 ---
-title: 定義資料來源檢視 (Analysis Services) |Microsoft 文件
+title: 定義資料來源檢視 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6966a0763146c9fd787be39d5be011704c048f66
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 545204349cf895dd0592f1a2dcba66de4cb054ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025845"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523096"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>定義資料來源檢視 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  資料來源檢視包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多維度資料庫物件 (也就是 Cube、維度和採礦結構) 所使用之結構描述的邏輯模型。 資料來源檢視就是統一維度模型 (UDM) 和採礦結構所使用之結構描述元素的中繼資料定義，並以 XML 格式儲存。 資料來源檢視：  
+  資料來源檢視包含所使用的結構描述的邏輯模型[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多維度資料庫物件-也就是 cube、 維度和採礦結構。 資料來源檢視就是統一維度模型 (UDM) 和採礦結構所使用之結構描述元素的中繼資料定義，並以 XML 格式儲存。 資料來源檢視：  
   
 -   包含代表從一個或多個基礎資料來源選取之物件的中繼資料，或用來產生基礎關聯式資料存放區的中繼資料 (如果您是遵循由上而下產生結構描述的方法)。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34025845"
   
 4.  **篩選可用的物件**  
   
-     若可用的物件清單中含有大量物件，您可套用簡單的篩選並指定字串為選取準則，以縮減清單。 例如，若您輸入 **dbo** 並按一下 **[篩選]** 按鈕，則只有以 "dbo" 開頭的項目會顯示在 **[可用的物件]** 清單中。 篩選也可以是部分字串 (例如 "sal" 會傳回 sales 和 salary)，但不能包括多個字串或運算子。  
+     若可用的物件清單中含有大量物件，您可套用簡單的篩選並指定字串為選取準則，以縮減清單。 例如，若您輸入 **dbo** 並按一下 **[篩選]** 按鈕，則只有以 "dbo" 開頭的項目會顯示在 **[可用的物件]** 清單中。 篩選也可以是部分字串 （例如"sal"會傳回 sales 和 salary），但它不能包含多個字串或運算子。  
   
 5.  如果是未定義資料表關聯性的關聯式資料來源， **[名稱比對]** 頁面會出現，讓您可以選取適當的名稱比對方法。 如需詳細資訊，請參閱本主題中的＜ [指定關聯性的名稱比對準則](#bkmk_NameMatch) ＞一節。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "34025845"
   
  [資料來源檢視精靈] 會使用您的回應來比對資料行名稱，並在 DSV 中建立不同資料表之間的關聯性。 您可以指定下表所列出的任何一個準則。  
   
-|名稱比對準則|Description|  
+|名稱比對準則|描述|  
 |----------------------------|-----------------|  
 |**與主索引鍵的名稱相同**|來源資料表中的外部索引鍵資料行名稱與目的地資料表中的主索引鍵資料行名稱相同。 例如，外部索引鍵資料行 `Order.CustomerID` 與主索引鍵資料行 `Customer.CustomerID`相同。|  
 |**與目的地資料表的名稱相同**|來源資料表中的外部索引鍵資料行名稱與目的地資料表的名稱相同。 例如，外部索引鍵資料行 `Order.Customer` 與主索引鍵資料行 `Customer.CustomerID`相同。|  
@@ -127,13 +127,13 @@ ms.locfileid: "34025845"
   
 ## <a name="see-also"></a>另請參閱  
  [在資料來源檢視中加入或移除資料表或檢視 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
- [資料來源檢視中定義邏輯主索引鍵&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
- [在資料來源檢視中定義具名的計算&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
- [在資料來源檢視中定義具名的查詢&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
- [取代的資料表或資料來源檢視中的具名的查詢&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [在資料來源檢視設計工具 & #40; 中使用圖表Analysis Services & #41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
- [瀏覽資料來源檢視中的資料&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
- [刪除資料來源檢視&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
+ [在資料來源檢視中定義邏輯主索引鍵 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
+ [在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [在資料來源檢視中定義具名查詢 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
+ [取代資料來源檢視中的資料表或具名查詢 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
+ [在資料來源檢視設計工具中使用圖表 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [在資料來源檢視中瀏覽資料 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
+ [刪除資料來源檢視 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
  [在資料來源檢視中重新整理結構描述 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], events
@@ -17,12 +16,12 @@ ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70654d0d256b311d5e15807a3ccf6b895f00ed52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138118"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761210"
 ---
 # <a name="filter-a-trace"></a>篩選追蹤
   篩選可限制追蹤中收集的事件。 如果沒有設定篩選條件，選定事件類別的所有事件都會傳回到追蹤輸出。 例如，限制追蹤裡的 Windows 使用者名稱為特定使用者，可將輸出資料縮小為只有這些使用者。  
@@ -127,7 +126,7 @@ ms.locfileid: "48138118"
 |**SPID**|=, <>, >=, \<=|  
 |**SqlHandle**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 篩選這個資料行中的事件。 如需詳細資訊，請參閱 [使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  
 |**StartTime**|>=, <=|  
-|**State**|=, <>, >=, <=|  
+|**狀態**|=, <>, >=, <=|  
 |**成功**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE、NOT LIKE|  
 |**TargetLoginSid**|使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 篩選這個資料行中的事件。 如需詳細資訊，請參閱 [使用 SQL Server Profiler 篩選追蹤](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)。|  

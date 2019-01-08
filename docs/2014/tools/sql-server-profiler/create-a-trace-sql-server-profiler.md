@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], creating
@@ -13,12 +12,12 @@ ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f017c96bd10feb0ac794041d11c449b199ce196b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1dad0f71b2978c25245a42cc33d4adec05dbeaf3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147408"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757710"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>建立追蹤 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來建立追蹤。  
@@ -51,14 +50,14 @@ ms.locfileid: "48147408"
   
 5.  (選擇性) 選取 **[啟用追蹤停止時間]** 核取方塊，然後指定停止日期和時間。  
   
-6.  若要加入或移除事件、資料行或篩選，請按一下 [事件選取範圍] 索引標籤。 如需詳細資訊，請參閱[指定追蹤檔案的事件及資料行 &#40;SQL Server Profiler&#41;](sql-server-profiler.md)。  
+6.  若要加入或移除事件、資料行或篩選，請按一下 [事件選取範圍] 索引標籤。 如需詳細資訊，請參閱：[指定追蹤檔案的事件及資料行 &#40;SQL Server Profiler&#41;](sql-server-profiler.md)  
   
 7.  按一下 **[執行]** 啟動追蹤。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行 SQL Server Profiler 所需的權限](permissions-required-to-run-sql-server-profiler.md)   
  [SQL Server Profiler 範本和權限](sql-server-profiler-templates-and-permissions.md)   
- [SQL Server Profiler](sql-server-profiler.md)   
- [使追蹤與 Windows 效能記錄資料相互關聯 &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
+ [[SQL Server Profiler]](sql-server-profiler.md)   
+ [使追蹤與 Windows 效能記錄資料產生相互關聯 &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   

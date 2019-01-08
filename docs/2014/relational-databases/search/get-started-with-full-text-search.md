@@ -15,12 +15,12 @@ ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 722921015886e8aed687a8bf689dd7f7d8c592ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6dc03709ea16fb718ff93ed60f75ad4d1515eaf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125038"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541394"
 ---
 # <a name="get-started-with-full-text-search"></a>全文檢索搜尋使用者入門
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的資料庫預設會啟用全文檢索。 不過，若要針對資料表使用全文檢索索引，您必須在要以全文檢索引擎存取的資料表資料行中設定全文檢索索引功能。  
@@ -51,7 +51,7 @@ ms.locfileid: "48125038"
   
 2.  針對資料表或索引檢視表建立全文檢索索引。  
   
-     全文檢索索引是一種特殊類型的 Token 式功能索引，由全文檢索引擎所建立與維護。 若要針對資料表或檢視表建立全文檢索搜尋，它必須具有唯一、單一資料行且不可為 Null 的索引。 全文檢索引擎需要使用此唯一索引，將資料表中的各資料列對應至唯一且可壓縮的索引鍵。 全文檢索索引可以包含`char`， `varchar`， `nchar`， `nvarchar`， `text`， `ntext`， `image`， `xml`， `varbinary`，以及`varbinary(max)`資料行。 如需詳細資訊，請參閱 [建立及管理全文檢索索引](create-and-manage-full-text-indexes.md)。  
+     全文檢索索引是一種特殊類型的 Token 式功能索引，由全文檢索引擎所建立與維護。 若要針對資料表或檢視表建立全文檢索搜尋，它必須具有唯一、單一資料行且不可為 Null 的索引。 全文檢索引擎需要使用此唯一索引，將資料表中的各資料列對應至唯一且可壓縮的索引鍵。 全文檢索索引可以包括 `char`、`varchar`、`nchar``nvarchar`、`text`、`ntext`、`image`、`xml`、`varbinary` 和 `varbinary(max)` 資料行。 如需詳細資訊，請參閱 [建立及管理全文檢索索引](create-and-manage-full-text-indexes.md)。  
   
  學習建立全文檢索索引之前，請務必了解全文檢索索引與一般 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 索引的差異。 下表將列出這些差異。  
   
@@ -108,7 +108,7 @@ CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;
 GO  
 ```  
   
- 下列[ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式會更改名為 myStoplist，加入 'en'，先針對西班牙文，然後再針對法文停用字詞表：  
+ 下列 [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式會更改名為 myStoplist 的停用字詞表，並加入 'en' 一詞 (先針對西班牙文，然後再針對法文)：  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  
@@ -129,7 +129,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
  一般而言，如果完整母體擴展進行中，傳回的結果會是 1。  
   
   
-##  <a name="example"></a> 範例： 設定全文檢索搜尋  
+##  <a name="example"></a> 範例：設定全文檢索搜尋  
  下列兩部分的範例會針對 AdventureWorks 資料庫建立名為 `AdvWksDocFTCat` 的全文檢索目錄，然後針對 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中的 `Document` 資料表建立全文檢索索引。 這個陳述式會在安裝期間所指定的預設目錄中建立全文檢索目錄。 名為 `AdvWksDocFTCat` 的資料夾位於預設的目錄中。  
   
 1.  為了建立名為 `AdvWksDocFTCat` 的全文檢索目錄，此範例會使用 [CREATE FULLTEXT CATALOG](/sql/t-sql/statements/create-fulltext-catalog-transact-sql) 陳述式：  
@@ -161,7 +161,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
     ```  
   
-     在這個範例中定義的 TYPE COLUMN 會在資料表中指定類型資料行，其中在 'Document' 資料行的每個資料列中包含文件類型 (二進位類型)。 此類型資料行會在給定的資料列中儲存使用者提供的文件副檔名，例如 ".doc" 和 ".xls"。 全文檢索引擎會使用給定資料列中的副檔名來叫用正確的篩選，以便用於剖析該資料列中的資料。 在此篩選已經剖析資料列的二進位資料之後，指定的斷詞工具將會剖析內容 (在此範例中，將會使用英式英文的斷詞工具)。 請注意，當全文檢索索引已啟用自動變更追蹤時，篩選程序只會在建立索引時進行，或在使用者於基底資料表中插入或更新資料行時進行。 如需詳細資訊，請參閱 [設定及管理搜尋的篩選](configure-and-manage-filters-for-search.md)。  
+     在這個範例中定義的 TYPE COLUMN 會在資料表中指定類型資料行，其中在 'Document' 資料行的每個資料列中包含文件類型 (二進位類型)。 類型資料行中指定的資料列中儲存使用者提供的檔案副檔名為".doc"、".xls"和等等的文件。 全文檢索引擎會使用給定資料列中的副檔名來叫用正確的篩選，以便用於剖析該資料列中的資料。 在此篩選已經剖析資料列的二進位資料之後，指定的斷詞工具將會剖析內容 (在此範例中，將會使用英式英文的斷詞工具)。 請注意，當全文檢索索引已啟用自動變更追蹤時，篩選程序只會在建立索引時進行，或在使用者於基底資料表中插入或更新資料行時進行。 如需詳細資訊，請參閱 [設定及管理搜尋的篩選](configure-and-manage-filters-for-search.md)。  
   
   
 ##  <a name="tasks"></a> 一般工作  

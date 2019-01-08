@@ -18,12 +18,12 @@ ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 72d1842f81a8a4a3558b96d1dbece16f8ea4352d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c94fc80bd516c0be5b414aac98e0e4435ec8b53
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727156"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396181"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "47727156"
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\...`  
   
- 這個邏輯路徑不會直接對應到實體 NTFS 路徑。 FILESTREAM 的檔案系統篩選驅動程式和 FILESTREAM 代理程式會將它轉譯成實體路徑。 邏輯路徑與實體路徑之間的這個分隔可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新組織內部資料，而不會影響路徑的有效性。  
+ 這個邏輯路徑不會直接對應到實體 NTFS 路徑。 FILESTREAM 的檔案系統篩選器驅動程式和 FILESTREAM 代理程式，它會轉譯成實體路徑。 邏輯路徑與實體路徑之間的這個分隔可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新組織內部資料，而不會影響路徑的有效性。  
   
 ## <a name="best-practices"></a>最佳作法  
  若要讓程式碼和應用程式獨立於目前的電腦和資料庫之外，請避免撰寫依賴絕對檔案路徑的程式碼。 相反地，使用取得的檔案在執行階段的完整路徑**FileTableRootPath**並**GetFileNamespacePath**函式放在一起，如下列範例所示。 根據預設， **GetFileNamespacePath** 函數會傳回資料庫根路徑之下的檔案相對路徑。  
@@ -84,7 +84,7 @@ SELECT @root = FileTableRootPath();
   
 @fullPath = varchar(1000);  
 SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
 ```  
   
 ## <a name="remarks"></a>備註  
@@ -93,13 +93,13 @@ WHERE Name = N’document.docx’;
  下列範例示範如何呼叫**GetFileNamespacePath**函式來取得檔案或目錄在 FileTable 中的 UNC 路徑。  
   
 ```  
--- returns the relative path of the form “\MyFileTable\MyDocDirectory\document.docx”  
+-- returns the relative path of the form "\MyFileTable\MyDocDirectory\document.docx"  
 SELECT file_stream.GetFileNamespacePath() AS FilePath FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
   
--- returns “\\MyServer\MSSQLSERVER\MyDocumentDatabase\MyFileTable\MyDocDirectory\document.docx”  
+-- returns "\\MyServer\MSSQLSERVER\MyDocumentDatabase\MyFileTable\MyDocDirectory\document.docx"  
 SELECT file_stream.GetFileNamespacePath(1, Null) AS FilePath FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

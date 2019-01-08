@@ -15,17 +15,17 @@ ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b1406c93a798df2b19f49d3a83123221826d1bf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 549cae9b4e42866194f5a391bb7d5e111eb202ae
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170818"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395152"
 ---
 # <a name="reporting-services-sharepoint-mode-installation-sharepoint-2010-and-sharepoint-2013"></a>Reporting Services SharePoint 模式安裝 (SharePoint 2010 和 SharePoint 2013)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在 SharePoint 模式是伺服器元件，可提供報表產生及傳遞，根據集合[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[msCoName](../../includes/msconame-md.md)]SharePoint 產品。  
   
- 在 SharePoint 模式中執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，可提供 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 與資料警示功能。 如需有關 SharePoint 模式中功能的詳細資訊，請參閱 [Reporting Services 報表伺服器](../reporting-services-report-server.md)中的＜依伺服器模式排列的功能支援與行為差異＞一節。  
+ 在 SharePoint 模式中執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，可提供 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 與資料警示功能。 如需有關 SharePoint 模式中功能的詳細資訊，請參閱"功能支援與行為差異的伺服器模式 > 一節中[Reporting Services 報表伺服器](../reporting-services-report-server.md)  
   
  SharePoint 模式中的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 需要兩項基本安裝：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48170818"
   
  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝媒體，安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 如需進階的部署案例的指示，請參閱 <<c0> [ 部署檢查清單： Reporting Services、 Power View 和 PowerPivot for SharePoint](../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)和[部署檢查清單： 安裝 Reporting Services 加入到現有SharePoint 伺服器陣列](../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)。  
+ 如需進階的部署案例的指示，請參閱[部署檢查清單：Reporting Services、 Power View 及 PowerPivot for SharePoint](../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)和[部署檢查清單：將 Reporting Services 安裝至現有的 SharePoint 伺服器陣列](../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [支援的 SharePoint 與 Reporting Services 伺服器與增益集組合&#40;SQL Server 2014&#41;](supported-combinations-of-sharepoint-and-reporting-services-server.md)  
@@ -47,13 +47,13 @@ ms.locfileid: "48170818"
   
  [安裝或解除安裝 Reporting Services 增益集，適用於 SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
- [哪裡可以找到的 Reporting Services 增益集適用於 SharePoint 產品](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
+ [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
- [將其他報表伺服器加入至伺服陣列&#40;SSRS 向外延展&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
+ [將其他報表伺服器加入至伺服器陣列 &#40;SSRS 向外延展&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
  [將其他 Reporting Services Web 前端加入至伺服器陣列](add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   
- [設定 Reporting services 服務應用程式的電子郵件&#40;SharePoint 2010 和 SharePoint 2013&#41;](configure-e-mail-for-a-reporting-services-service-application.md)  
+ [設定 Reporting Services 服務應用程式的電子郵件 &#40;SharePoint 2010 和 SharePoint 2013&#41;](configure-e-mail-for-a-reporting-services-service-application.md)  
   
  [SSRS 服務應用程式的佈建訂閱及警示](provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   

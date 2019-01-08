@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abbf752f1e272f92c555bb9695da0c7b0e4c0e26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cb2cd178440a2d0ea0cd9842616a52058a63f7b7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124039"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775840"
 ---
 # <a name="missing-join-predicate-event-class"></a>遺失聯結述詞事件類別
   「遺失聯結述詞」事件類別指示要執行的查詢沒有聯結述詞。 這可能造成長時間執行的查詢。 如需聯結述詞的詳細資訊，請參閱[述詞 &#40;Transact-SQL&#41;](/sql/t-sql/queries/predicates)。  

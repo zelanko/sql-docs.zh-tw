@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - forcing master server polling
@@ -15,12 +15,12 @@ ms.assetid: f1189a47-5ac3-45e2-9c5f-847810672279
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2373b75766acbc34547f062a2ffc76a3125ade5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172258"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764210"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>強制目標伺服器輪詢主要伺服器
   此主題描述如何強制目標伺服器輪詢主要伺服器。 目標伺服器必須是主要伺服器上已註冊的伺服器。  
@@ -30,9 +30,9 @@ ms.locfileid: "48172258"
 > [!NOTE]  
 >  如果當目標伺服器嘗試上傳作業狀態時無法存取主要伺服器，作業狀態會被多工緩衝處理，直到可以存取主要伺服器為止。  
   
--   **開始之前：**[限制事項](#Restrictions)、[安全性](#Security)  
+-   **開始之前：**[限制事項](#Restrictions)，[安全性](#Security)  
   
--   **若要強制目標伺服器輪詢主要伺服器，請使用：**  [SQL Server Management Studio](#SSMS)  
+-   **若要強制目標伺服器輪詢主要伺服器中，請使用：**[SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48172258"
  目標伺服器必須是主要伺服器上已註冊的伺服器。 您必須從主要伺服器執行本主題中提供的指示。  
   
 ###  <a name="Security"></a> 安全性  
- 如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) ＞和＜ [為多伺服器環境選擇適當的 SQL Server Agent 服務帳戶](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)＞。  
+ 如需詳細資訊，請參閱＜ [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) ＞和＜ [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)＞。  
   
 ##  <a name="SSMS"></a> 使用 SQL Server Management Studio  
  **若要強制目標伺服器輪詢主要伺服器**  

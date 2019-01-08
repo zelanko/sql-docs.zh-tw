@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextractiontrans.f1
@@ -26,12 +25,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a0e333b31bef63c0f0f8fcf3a9d54dbdba579a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6d63836dbc6827eb47daaf4110bc678357012d3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155128"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762434"
 ---
 # <a name="term-extraction-transformation"></a>詞彙擷取轉換
   「詞彙擷取」轉換會從轉換輸入資料行的文字中擷取詞彙，然後將這些詞彙寫入轉換輸出資料行。 轉換只適用於英文字，它使用自己的英文字典和有關英文的語言資訊。  
@@ -54,7 +53,7 @@ ms.locfileid: "48155128"
 ## <a name="exclusion-terms"></a>排除詞彙  
  (選擇性)「詞彙擷取」轉換可以參考包含排除詞彙 (是指當轉換從資料集中擷取詞彙時應略過的詞彙) 之資料表中的資料行。 如果一組詞彙在特殊商務和產業中視為不合理 (通常因為該詞彙出現的頻率太高，而成為一個非搜尋字)，則這個功能會非常有用。 例如，當從包含有關特殊品牌汽車的客戶支援資訊之資料集中擷取詞彙時，該品牌名稱自身可能會被排除，因為它被提及的頻率太高，而失去意義。 因此，排除清單中的值必須自訂到您要使用的資料集。  
   
- 當您將詞彙加入至排除清單時，包含該詞彙的所有詞彙 (單字或名詞片語) 也會被排除。 例如，如果排除清單包含單一字 *data*，則包含這個字的所有詞彙 (例如 *data*、 *data mining*、 *data integrity*和 *data validation* ) 也會被排除。 如果您只想排除包含 *data*單字的複合字，則必須明確將這些複合詞彙加入至排除清單。 例如，如果您要擷取含 *data*的個體，但要排除 *data validation*，則將 *data validation* 加入至排除清單，並確定 *data* 已從排除清單中移除。  
+ 當您將詞彙新增至排除清單時，包含該詞彙的所有詞彙 (單字或名詞片語) 也會被排除。 例如，如果排除清單包含單一字 *data*，則包含這個字的所有詞彙 (例如 *data*、 *data mining*、 *data integrity*和 *data validation* ) 也會被排除。 如果您只想排除包含 *data*單字的複合字，則必須明確將這些複合詞彙加入至排除清單。 例如，如果您要擷取含 *data*的個體，但要排除 *data validation*，則將 *data validation* 加入至排除清單，並確定 *data* 已從排除清單中移除。  
   
  參考資料表必須是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 Access 資料庫中的資料表。 「詞彙擷取」轉換會使用個別 OLE DB 連接，以連接到參考資料表。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../connection-manager/ole-db-connection-manager.md)。  
   
@@ -139,7 +138,7 @@ ms.locfileid: "48155128"
   
 -   ASCII 分行符號字元 0x0d (歸位字元) 和 0x0a (換行字元)。 若要使用此字元作為句子界限，則資料列中必須有兩個或兩個以上的分行符號字元。  
   
--   連字號 (–)。 若要使用此字元作為句子界限，則連字號左邊或右邊字元都不能是字母。  
+-   連字號 (-)。 若要使用此字元作為句子界限，則連字號左邊或右邊字元都不能是字母。  
   
 -   底線符號 (_)。 若要使用此字元作為句子界限，則連字號左邊或右邊字元都不能是字母。  
   
@@ -174,11 +173,11 @@ ms.locfileid: "48155128"
   
  如需可在 [詞彙擷取轉換編輯器] 對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
   
--   [詞彙擷取轉換編輯器&#40;詞彙擷取索引標籤&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [詞彙擷取轉換編輯器 &#40;詞彙擷取索引標籤&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [詞彙擷取轉換編輯器&#40;排除索引標籤&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [詞彙擷取轉換編輯器 &#40;排除索引標籤&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [詞彙擷取轉換編輯器&#40;進階索引標籤&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [詞彙擷取轉換編輯器 &#40;進階索引標籤&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
@@ -186,6 +185,6 @@ ms.locfileid: "48155128"
   
 -   [轉換自訂屬性](transformation-custom-properties.md)  
   
- 如需如何設定屬性的詳細資訊，請參閱[設定資料流程元件的屬性](../set-the-properties-of-a-data-flow-component.md)。  
+ 如需如何設定屬性的詳細資訊，請參閱 [設定資料流程元件的屬性](../set-the-properties-of-a-data-flow-component.md)。  
   
   

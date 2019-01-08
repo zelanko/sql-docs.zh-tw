@@ -20,12 +20,12 @@ ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df8b9dae2c8c427444da4a9e19a1754f792dcef4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3132b45713b3493aa2e82a48123e5f3693e6e8dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601366"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543816"
 ---
 # <a name="sysdmxeobjects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47601366"
 |package_guid|**uniqueidentifier**|公開此動作之封裝的 GUID。 這與 sys.dm_xe_packages.package_id 之間是多對一的關聯性。 不可為 Null。|  
 |description|**nvarchar(256)**|動作的描述。 描述是由封裝作者所設定。 不可為 Null。|  
 |capabilities|**int**|描述此物件之功能的點陣圖。 可為 Null。|  
-|capabilities_desc|**nvarchar(256)**|列出此物件的所有功能。 可為 Null。<br /><br /> **適用於所有的物件類型的功能**<br /><br /> —<br />                                **私用**。 唯一供內部使用的物件，而且無法透過 CREATE/ALTER EVENT SESSION DDL 加以存取。 除了在內部使用的少量物件以外，稽核事件和目標也屬於這個類別目錄。<br /><br /> ===============<br /><br /> **事件功能**<br /><br /> —<br />                                **No_block**。 事件位於任何原因都無法封鎖的關鍵程式碼路徑中。 具有此功能的事件可能無法加入指定 NO_EVENT_LOSS 的任何事件工作階段。<br /><br /> ===============<br /><br /> **適用於所有的物件類型的功能**<br /><br /> —<br />                                **Process_whole_buffers**。 目標一次會耗用事件緩衝區，而不是逐一事件。<br /><br /> —<br />                        **單一**。 只有一個目標執行個體可以存在處理序中。 雖然多個事件工作階段可以參考相同的單一目標，但是其實只有一個執行個體，而且該執行個體只會看到每一個唯一事件一次。 如果要將目標加入至全部收集相同事件的多個工作階段，這就會非常重要。<br /><br /> —<br />                                **Synchronous**： 將控制權送回呼叫的程式碼行之前，會在產生事件的執行緒上執行目標。|  
+|capabilities_desc|**nvarchar(256)**|列出此物件的所有功能。 可為 Null。<br /><br /> **適用於所有的物件類型的功能**<br /><br /> -<br />                                **私用**。 唯一供內部使用的物件，而且無法透過 CREATE/ALTER EVENT SESSION DDL 加以存取。 除了在內部使用的少量物件以外，稽核事件和目標也屬於這個類別目錄。<br /><br /> ===============<br /><br /> **事件功能**<br /><br /> -<br />                                **No_block**。 事件位於任何原因都無法封鎖的關鍵程式碼路徑中。 具有此功能的事件可能無法加入指定 NO_EVENT_LOSS 的任何事件工作階段。<br /><br /> ===============<br /><br /> **適用於所有的物件類型的功能**<br /><br /> -<br />                                **Process_whole_buffers**。 目標一次會耗用事件緩衝區，而不是逐一事件。<br /><br /> -<br />                        **單一**。 只有一個目標執行個體可以存在處理序中。 雖然多個事件工作階段可以參考相同的單一目標，但是其實只有一個執行個體，而且該執行個體只會看到每一個唯一事件一次。 如果要將目標加入至全部收集相同事件的多個工作階段，這就會非常重要。<br /><br /> -<br />                                **Synchronous**： 將控制權送回呼叫的程式碼行之前，會在產生事件的執行緒上執行目標。|  
 |type_name|**nvarchar(60)**|pred_source 和 pred_compare 物件的名稱。 可為 Null。|  
 |type_package_guid|**uniqueidentifier**|公開此物件操作所在之類型的封裝 GUID。 可為 Null。|  
 |type_size|**int**|資料類型的大小 (以位元組為單位)。 只適用於有效的物件類型。 可為 Null。|  

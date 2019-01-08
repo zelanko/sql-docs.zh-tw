@@ -10,12 +10,12 @@ ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dc1c6fe8e8d049b7b999984c0dcb5f0ed49e662a
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
-ms.translationtype: HT
+ms.openlocfilehash: e823d6fcac585c858cee3e187f27684eb1d38218
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032398"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410335"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 知識庫與定義域
   本主題描述 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知識庫定義。 若要清理資料，您必須有關於資料的知識。 若要準備資料品質專案的知識，您要建置並維護一個 DQS 可以用來識別不正確或無效資料的知識庫 (KB)。 DQS 可讓您同時使用電腦輔助和互動式程序來建立、建置和更新知識庫。 知識庫中的知識是在定義域中維護，其中每個定義域都專屬於某個資料欄位。 知識庫是有關資料的知識儲存機制，可讓您了解資料及維護資料的完整性。  
@@ -126,7 +126,7 @@ ms.locfileid: "51032398"
   
 -   分析組成複合定義域的不同單一定義域可能是更有效率的評估資料品質方式。  
   
--   當您使用複合定義域時，也可以建立跨定義域的規則，這些規則可讓您驗證多個定義域中的資料之間的關聯性是否適當。 例如，您可以驗證城市定義域中的 “London” 字串是否對應到國家/地區定義域中的 “England” 字串。 請注意，跨定義域規則會在定義域規則之後納入考量。  
+-   當您使用複合定義域時，也可以建立跨定義域的規則，這些規則可讓您驗證多個定義域中的資料之間的關聯性是否適當。 例如，您可以驗證城市定義域中的 "London" 字串是否對應到國家/地區定義域中的 "England" 字串。 請注意，跨定義域規則會在定義域規則之後納入考量。  
   
 -   複合定義域中的資料可以附加到參考資料來源，在該情況下，系統會將複合定義域傳送至參考資料提供者。 這通常會透過地址資料完成。  
   

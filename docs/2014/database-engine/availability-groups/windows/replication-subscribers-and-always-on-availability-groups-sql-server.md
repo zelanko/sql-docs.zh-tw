@@ -14,12 +14,12 @@ ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0617135d1e7a07d30f4581783cefb7add601c88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8968754a797c3f3b1a7e66886f7874c9bc13c5d3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153226"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390662"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>複寫訂閱者及 AlwaysOn 可用性群組 (SQL Server)
   當包含複寫訂閱者資料庫的 AlwaysOn 可用性群組容錯移轉時，複寫訂閱可能會失敗。 如果是交易式訂閱者，當訂閱使用訂閱者的可用性群組接聽程式名稱時，散發代理程式會繼續自動複寫。 如果是合併訂閱者，複寫管理員必須透過重新建立訂閱，手動重新設定訂閱者。  
@@ -57,7 +57,7 @@ ms.locfileid: "48153226"
   
     4.  將 `-Subscriber` 參數變更為訂閱者的可用性群組接聽程式名稱。  
   
- 依照這些步驟建立訂閱時，在容錯移轉後就不需要執行任何動作。  
+ 遵循這些步驟建立訂閱時，在容錯移轉後就不需要執行任何動作。  
   
 ## <a name="creating-a-transactional-replication-push-subscription"></a>建立異動複寫發送訂閱  
   
@@ -81,7 +81,7 @@ GO
 ## <a name="to-resume-the-merge-agents-after-the-availability-group-of-the-subscriber-fails-over"></a>若要在訂閱者的可用性群組容錯移轉之後繼續合併代理程式  
  如果是合併式複寫，複寫管理員必須透過下列步驟手動重新設定訂閱者：  
   
-1.  執行`sp_subscription_cleanup`移除訂閱者端的舊訂用帳戶。 在新的主要複本 (原來為次要複本) 上執行此動作。  
+1.  執行 `sp_subscription_cleanup` 移除訂閱者的舊訂閱。 在新的主要複本 (原來為次要複本) 上執行此動作。  
   
 2.  從新快照集開始建立新訂閱，重新建立訂閱。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, column sets
@@ -14,12 +13,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19e99799eac66823d8b243470eb5540c94e22708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180658"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760590"
 ---
 # <a name="use-column-sets"></a>使用資料行集
   使用疏鬆資料行的資料表可以指定資料行集，以傳回資料表中的所有疏鬆資料行。 資料行集是不具類型的 XML 表示，可將資料表的所有疏鬆資料行結合到結構化輸出中。 資料行集類似於計算資料行，因為資料行集並未實際儲存在資料表中。 資料行集與計算資料行不同的地方在於資料行集可直接更新。  
@@ -94,7 +93,7 @@ ms.locfileid: "48180658"
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>在資料行集內插入或修改資料  
  若要執行疏鬆資料行的資料操作，可以使用個別資料行的名稱，或是參考資料行集的名稱，以及使用資料行集的 XML 格式來指定資料行集的值。 疏鬆資料行可依任何順序出現在 XML 資料行中。  
   
- 當插入或使用 XML 資料行集更新疏鬆資料行值時，插入基礎疏鬆資料行的值會以隱含方式轉換從`xml`資料型別。 如果是數值資料行，數值資料行之 XML 內的空白值會轉換成空白字串。 這樣會將零插入數值資料行中，如下列範例所示。  
+ 當您使用 XML 資料行集來插入或更新疏鬆資料行值時，插入基礎疏鬆資料行內的值會從 `xml` 資料類型隱含地轉換。 如果是數值資料行，數值資料行之 XML 內的空白值會轉換成空白字串。 這樣會將零插入數值資料行中，如下列範例所示。  
   
 ```  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  
@@ -108,18 +107,18 @@ GO
  在此範例中， `i`資料行未指定任何值，但是插入了 `0` 的值。  
   
 ## <a name="using-the-sqlvariant-data-type"></a>使用 sql_variant 資料類型  
- `sql_variant`日期類型可以儲存多種不同的資料類型，例如`int`， `char`，和`date`。 資料行集會將與 `sql_variant` 值相關的資料類型資訊 (如地區設定、有效位數和地區設定資訊) 輸出為產生之 XML 資料行內的屬性。 如果您嘗試在自訂產生的 XML 陳述式內提供這些屬性當做資料行集上插入或更新作業的輸入，某些屬性會是必要的，而且其中一些屬性會指派預設值。 下表列出當未提供值時，伺服器所產生的資料類型和預設值。  
+ `sql_variant` 資料類型可以儲存多種不同的資料類型，例如 `int`、`char` 和 `date`。 資料行集會將與 `sql_variant` 值相關的資料類型資訊 (如地區設定、有效位數和地區設定資訊) 輸出為產生之 XML 資料行內的屬性。 如果您嘗試在自訂產生的 XML 陳述式內提供這些屬性當做資料行集上插入或更新作業的輸入，某些屬性會是必要的，而且其中一些屬性會指派預設值。 下表列出當未提供值時，伺服器所產生的資料類型和預設值。  
   
 |資料類型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大長度|有效位數|小數位數|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
-|`char`、 `varchar`、 `binary`|-1|'Default'|0|0|8000|不適用**|不適用|  
+|`char`, `varchar`, `binary`|-1|'Default'|0|0|8000|不適用**|不適用|  
 |`nvarchar`|-1|'Default'|0|0|4000|不適用|不適用|  
-|`decimal`、 `float`、 `real`|不適用|不適用|不適用|不適用|不適用|18|0|  
+|`decimal`, `float`, `real`|不適用|不適用|不適用|不適用|不適用|18|0|  
 |`integer`, `bigint`, `tinyint`, `smallint`|不適用|不適用|不適用|不適用|不適用|不適用|不適用|  
 |`datetime2`|不適用|不適用|不適用|不適用|不適用|不適用|7|  
 |`datetime offset`|不適用|不適用|不適用|不適用|不適用|不適用|7|  
-|`datetime`、 `date`、 `smalldatetime`|不適用|不適用|不適用|不適用|不適用|不適用|不適用|  
-|`money`, `smallmoney`|不適用|不適用|不適用|不適用|不適用|不適用|不適用|  
+|`datetime`, `date`, `smalldatetime`|不適用|不適用|不適用|不適用|不適用|不適用|不適用|  
+|`money`、 `smallmoney`|不適用|不適用|不適用|不適用|不適用|不適用|不適用|  
 |`time`|不適用|不適用|不適用|不適用|不適用|不適用|7|  
   
  \*  localeID -1 表示預設地區設定。 英文地區設定是 1033。  

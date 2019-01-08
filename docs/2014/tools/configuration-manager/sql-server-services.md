@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 97193ac4-aa97-489c-9e81-6fcbdf88aebf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f584f5fb52d1d7faec0cafb3bcdafde51abbe854
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08b9f31035b2d87ca89154497c90089fb72d0987
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210828"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748411"
 ---
 # <a name="sql-server-services"></a>SQL Server 服務
   本節包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員中 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務] 對話方塊的 F1 說明主題。  

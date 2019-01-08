@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asprocessingtask.f1
@@ -16,12 +15,12 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42b8ba863f4fbe8c5ce444cd253ea06aec0c7480
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c5b5d52b1f4b2c2c260854230b53ccbe99aa641
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050010"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766540"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 處理工作
   「 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 處理」工作會處理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件，例如表格式模型、Cube、維度及採礦模型。  
@@ -67,7 +66,7 @@ ms.locfileid: "48050010"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Analysis Services 處理工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Analysis Services 處理工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Analysis Services 處理工作編輯器 &#40;Analysis Services 頁面&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
   

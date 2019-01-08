@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 13d4cd28d07f174c8ceff417f819f8db1bf63340
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14f9ad5eb733db24f47acad192dbe89543831766
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208308"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750916"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>讓使用者看到屬性群組 (Master Data Services)
   當您希望使用者在總管 功能區域的方格上方有索引標籤時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中對使用者或群組顯示屬性群組。  
@@ -28,9 +27,9 @@ ms.locfileid: "48208308"
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
--   至少有一個屬性群組必須存在。 如需詳細資訊，請參閱 <<c0> [ 建立屬性群組&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)。</c0>  
+-   至少有一個屬性群組必須存在。 如需詳細資訊，請參閱 [建立屬性群組 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)(管理員 (Master Data Services))。  
   
 ### <a name="to-make-an-attribute-group-visible-to-users"></a>若要讓使用者看到屬性群組  
   
@@ -52,10 +51,10 @@ ms.locfileid: "48208308"
   
 9. 按一下 使用者或群組中的**可用**方塊，然後按一下**新增**箭號。 若要全部加入，請按一下 [全部加入] 箭號。  
   
-10. 按一下 **[儲存]**。  
+10. 按一下 [儲存] 。  
   
 ## <a name="see-also"></a>另請參閱  
- [屬性群組&#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
- [建立屬性群組&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
+ [屬性群組 &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
+ [建立屬性群組 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
   
   

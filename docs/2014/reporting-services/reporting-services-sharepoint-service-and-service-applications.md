@@ -11,15 +11,15 @@ ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 259422989645daef9160a011928134f437996cb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 582b6dea85eae5db3232de86f071a8606bfe36cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127928"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538524"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint 服務和服務應用程式
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式以 SharePoint 服務架構為基礎，並且利用 SharePoint 服務和一對多服務應用程式。 建立服務應用程式可讓服務變成可用，並產生服務應用程式資料庫。 您可以建立多個 Reporting Services 服務應用程式，但是一個服務應用程式就足以應付大部分的部署狀況。  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式是以 SharePoint 服務架構為基礎進行架構，並且利用 SharePoint 服務和一對多服務應用程式。 建立服務應用程式可讓服務變成可用，並產生服務應用程式資料庫。 您可以建立多個 Reporting Services 服務應用程式，但是一個服務應用程式就足以應付大部分的部署狀況。  
   
  本主題涵蓋下列資訊：  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48127928"
   
 2.  在 [服務應用程式關聯] 頁面上，將檢視切換至 **[服務應用程式]**。  
   
-3.  尋找並按一下您新的名稱[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服務應用程式。 您也可以按一下應用程式 Proxy 群組名稱 **default** ，將 Proxy 加入至預設群組，而不要完成下列步驟。  
+3.  尋找並按一下新的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式的名稱。 您也可以按一下應用程式 Proxy 群組名稱 **default** ，將 Proxy 加入至預設群組，而不要完成下列步驟。  
   
 4.  在 **[編輯下列連線群組]** 選取方塊中選取 **[自訂]**。  
   
@@ -64,19 +64,19 @@ ms.locfileid: "48127928"
 1.  將應用程式集區名稱的應用程式集區物件加入至要傳遞到 [新增] 動作的變數中。  
   
     ```  
-    $appPoolName = get-spserviceapplicationpool “<application pool name>”  
+    $appPoolName = get-spserviceapplicationpool "<application pool name>"  
     ```  
   
 2.  使用您提供的名稱與應用程式集區名稱建立服務應用程式。  
   
     ```  
-    New-SPRSServiceApplication –Name ‘MyServiceApplication’ –ApplicationPool $appPoolName –DatabaseName ‘MyServiceApplicationDatabase’ –DatabaseServer ‘<Server Name>’  
+    New-SPRSServiceApplication -Name 'MyServiceApplication' -ApplicationPool $appPoolName -DatabaseName 'MyServiceApplicationDatabase' -DatabaseServer '<Server Name>'  
     ```  
   
 3.  取得新的服務應用程式物件，並且將物件以管道傳送至 Pipe 新 Proxy Cmdlet。  
   
     ```  
-    Get-SPRSServiceApplication –name MyServiceApplication | New-SPRSServiceApplicationProxy “MyServiceApplicationProxy”  
+    Get-SPRSServiceApplication -name MyServiceApplication | New-SPRSServiceApplicationProxy "MyServiceApplicationProxy"  
     ```  
   
 ##  <a name="bkmk_related"></a> 相關工作  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], provider
@@ -18,12 +17,12 @@ ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 482353df1cde22d11cb44d53611353ceb347e102
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e8fc0f770d8763ccb330b3c7588a97604d876e8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153548"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752378"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell 提供者
   適用於 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會公開類似於檔案系統路徑之路徑中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件階層。 您可以使用路徑來尋找物件，然後使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件 (SMO) 模型中的方法來針對物件執行動作。  
@@ -71,7 +70,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |描述如何使用 Windows PowerShell 指令程式導覽路徑中的節點，而且至少每個節點都會取得該節點的物件清單。|[導覽 SQL Server PowerShell 路徑](navigate-sql-server-powershell-paths.md)|  
 |描述如何使用 SMO 方法和屬性，針對透過路徑中的節點所代表的物件來報告和執行工作。 同時描述如何取得該節點的 SMO 方法和屬性清單。|[使用 SQL Server PowerShell 路徑](work-with-sql-server-powershell-paths.md)|  
 |描述如何將 SMO 統一資源名稱 (URN) 轉換為 SQL Server 提供者路徑。|[將 URN 轉換成 SQL Server 提供者路徑](../database-engine/convert-urns-to-sql-server-provider-paths.md)|  
-|描述如何使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者來開啟 SQL Server 驗證連接。 提供者預設會使用的 Windows 驗證連接是使用執行 Windows PowerShell 工作階段之 Windows 帳戶的認證來進行。|[管理資料庫引擎 PowerShell 中的驗證](manage-authentication-in-database-engine-powershell.md)|  
+|描述如何使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者來開啟 SQL Server 驗證連接。 提供者預設會使用的 Windows 驗證連接是使用執行 Windows PowerShell 工作階段之 Windows 帳戶的認證來進行。|[管理 Database Engine PowerShell 中的驗證](manage-authentication-in-database-engine-powershell.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server PowerShell](sql-server-powershell.md)  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 5bd5581b2842ec5d11cd27a989aa41ddb2cee1de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e93f85302417674b31de0129650dbb85092f8962
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661936"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531999"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>設定容錯移轉叢集執行個體-SMB-Linux 上的 SQL Server
 
@@ -22,7 +22,7 @@ ms.locfileid: "47661936"
 
 這篇文章說明如何在 Linux 上設定容錯移轉叢集執行個體 (FCI) 的 SMB 存放裝置。 
  
-在非 Windows 世界中，SMB 通常是指為 Common Internet File System (CIFS) 共用，而且透過 Samba 實作。 在 Windows 世界中，在存取 SMB 共用會進行這種方式： \\SERVERNAME\SHARENAME。 對於以 Linux 為基礎的 SQL Server 安裝中，SMB 共用必須可掛接為資料夾。
+在非 Windows 世界中，SMB 通常是指為 Common Internet File System (CIFS) 共用，而且透過 Samba 實作。 在 Windows 世界中，存取 SMB 共用會進行這種方式：\\SERVERNAME\SHARENAME。 對於以 Linux 為基礎的 SQL Server 安裝中，SMB 共用必須可掛接為資料夾。
 
 ## <a name="important-source-and-server-information"></a>來源和伺服器的重要資訊
 
@@ -102,7 +102,7 @@ ms.locfileid: "47661936"
    *    從現有的 SQL Server 資料目錄中刪除檔案。 如果成功，則不會收到任何通知。
  
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    *    請確認已刪除的檔案。 

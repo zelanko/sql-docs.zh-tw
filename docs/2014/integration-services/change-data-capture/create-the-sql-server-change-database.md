@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - oraIns
@@ -13,12 +12,12 @@ ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6381c494f1f5ecc95eb2e06d34959e43a9133726
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e95a47f2a2fc7444822c19b67bf2d95626fa62c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139616"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770970"
 ---
 # <a name="create-the-sql-server-change-database"></a>建立 SQL Server 變更資料庫
   當您啟動新增執行個體精靈時，隨即開啟 [建立 CDC 資料庫] 頁面。 使用 [建立 CDC 資料庫] 頁面可提供有關新的 CDC 執行個體及建立新的變更資料庫的資訊。  
@@ -38,14 +37,14 @@ ms.locfileid: "48139616"
   
 -   **名稱**：輸入新服務的名稱。 這也會是新的變更資料庫的名稱。  
   
--   **描述**：輸入新執行個體的描述，幫助您識別該執行個體。 這是選擇性的。  
+-   **描述**:輸入新的執行個體，以協助您識別它的描述。 這是選擇性的。  
   
  **SQL Server 變更資料庫**  
  此區段是用來建立資料庫。  
   
-1.  **變更資料庫**：新的變更資料庫的名稱。 此資料庫的名稱與您提供給執行個體的名稱相同。 這個唯讀欄位會顯示資料庫的完整路徑。  
+1.  **變更資料庫**:新的變更資料庫的名稱。 此資料庫的名稱與您提供給執行個體的名稱相同。 這個唯讀欄位會顯示資料庫的完整路徑。  
   
-2.  **建立資料庫**：按一下 **[建立資料庫]** ，即可建立資料庫。  
+2.  **建立資料庫**:按一下  **Create Database**來建立資料庫。  
   
      若要建立資料庫，登入必須擁有 `sysasmin` 伺服器角色。 如需詳細資訊，請參閱上述的安全性注意事項。  
   

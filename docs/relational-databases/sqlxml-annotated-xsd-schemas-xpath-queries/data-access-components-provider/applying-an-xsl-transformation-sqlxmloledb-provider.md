@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebaa2f29054b1fee64c44ea5c269f7d741617f97
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5b9a357303950bc7c36a605483a2a94daf1f3748
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673857"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523356"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>套用 XSL 轉換 (SQLXMLOLEDB 提供者)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "51673857"
   
  Xsl 指定的屬性是在應用程式中;因此，XSL 轉換套用至用戶端產生的 XML 文件，而且結果為兩個資料行的資料表。  
   
- 若要執行範本命令，必須指定 XML 範本用語 {5d531cb2-e6ed-11d2-b252-00c04f681b71}。  
+ 若要執行 [範本] 命令，就必須指定 XML 範本用語 {-5d531cb2-e6ed-11d2-b252-00c04f681b71}。  
   
 > [!NOTE]  
 >  在程式碼中，您必須於連接字串內提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此外，這個範例會指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 用於資料提供者 (這需要安裝其他網路用戶端軟體)。 如需詳細資訊，請參閱 < [SQL Server Native Client 的系統需求](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG002627 error
@@ -13,12 +12,12 @@ ms.assetid: 7f4136ac-3784-4a41-a98c-8a02308e4883
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1526c0f0a19cc171eaf63c829199af205f2756db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a102991d08085f093e08a068a3d3127c9d7f7fc6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226188"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772422"
 ---
 # <a name="mssqleng002627"></a>MSSQL_ENG002627
     
@@ -30,7 +29,7 @@ ms.locfileid: "48226188"
 |事件識別碼|2627|  
 |事件來源|MSSQLSERVER|  
 |元件|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|符號名稱|不適用|  
+|符號名稱|N/A|  
 |訊息文字|違反 %ls 條件約束 '%.*ls'。 無法在物件 '%.\*ls' 中插入重複的索引鍵。|  
   
 ## <a name="explanation"></a>說明  

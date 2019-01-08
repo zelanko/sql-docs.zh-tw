@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ebc8777030cd198503bd9f40ba758e3068762255
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36d9be6a759e2684602a20ed0c493818d5fe4cc4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181921"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775600"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User 事件類別
   每當資料庫中新增或移除了資料庫使用者的登入時，就會發生 **Audit Add DB User** 事件類別。 這個事件類別用於 **sp_grantdbaccess**、 **sp_revokedbaccess**、 **sp_adduser**和 **sp_dropuser** 預存程序。  

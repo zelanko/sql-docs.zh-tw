@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -16,12 +16,12 @@ ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5489dec3f665f56ebd267ccd24ec069a3906bdbf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 379877d3a08c60a293b96c5c57d55a2894ba0a79
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187318"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768380"
 ---
 # <a name="handle-multiple-job-steps"></a>處理多個作業步驟
   如果您的作業有多重作業步驟，則必須指定這些作業步驟的執行順序。 這就叫做「流程控制」。 您可以加入新的作業步驟，並可隨時重新排列作業步驟的流程；變更內容將會在下次執行作業時生效。 下圖顯示資料庫備份作業的流程控制。  

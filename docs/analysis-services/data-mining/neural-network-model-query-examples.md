@@ -1,5 +1,5 @@
 ---
-title: 類神經網路模型查詢範例 |Microsoft 文件
+title: 類神經網路模型查詢範例 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 66f7979dbcf2b547e8f24476f057616c2cd7d3cd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3a9829df9c616e49bca6802512f405c676d498e6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018625"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516569"
 ---
 # <a name="neural-network-model-query-examples"></a>Neural Network Model Query Examples
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34018625"
 ## <a name="finding-information-about-a-neural-network-model"></a>尋找有關類神經網路模型的資訊  
  所有的採礦模型都會公開演算法根據標準化結構描述所學習的內容，也就是採礦模型結構描述資料列集。 此資訊提供關於模型的詳細資料，而且包含基本中繼資料、分析期間所發現的結構，以及處理時所使用的參數。 您可以藉由使用資料採礦延伸模組 (DMX) 陳述式來針對模型內容建立查詢。  
   
-###  <a name="bkmk_Query1"></a> 範例查詢 1：使用 DMX 取得模型中繼資料  
+###  <a name="bkmk_Query1"></a> 範例查詢 1:使用 DMX 取得模型中繼資料  
  下列查詢會傳回使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建立之模型的相關基本中繼資料。 在類神經網路模型中，模型的父節點僅包含模型的名稱、模型儲存位置所在資料庫的名稱，以及子節點的數目。 不過，臨界統計資料節點 (NODE_TYPE = 24) 會提供關於模型中使用之輸入資料行的這個基本中繼資料，以及一些衍生的統計資料。  
   
  下列範例查詢是以您在＜ [中繼資料採礦教學課程](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)＞中建立的採礦模型為基礎，名稱為 `Call Center Default NN`。 此模型使用來自撥接中心的資料，探索人員雇用以及電話通數、訂單數與問題數之間可能的關聯。 DMX 陳述式會從類神經網路模型的臨界統計資料節點擷取資料。 此查詢包含 FLATTENED 關鍵字，因為感興趣的輸入屬性統計資料會儲存在 NODE_DISTRIBUTION 巢狀資料表中。 不過，如果您的查詢提供者支援階段式資料列集，您就不需要使用 FLATTENED 關鍵字。  
@@ -59,14 +59,14 @@ WHERE NODE_TYPE = 24
   
  範例結果：  
   
-|MODEL_CATALOG|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|MODEL_CATALOG|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |--------------------|-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|Adventure Works DW Multidimensional 2012|撥接中心 NN|每個問題的平均時間|遺漏|0|0|1|  
+|Adventure Works DW Multidimensional 2012|撥接中心 NN|每個問題的平均時間|Missing|0|0|1|  
 |Adventure Works DW Multidimensional 2012|撥接中心 NN|每個問題的平均時間|< 64.7094100096|11|0.407407407|5|  
   
  如需結構描述資料列集中的資料行在類神經網路模型環境中代表的定義，請參閱 [類神經網路模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)。  
   
-###  <a name="bkmk_Query2"></a> 範例查詢 2：從結構描述資料列集擷取模型中繼資料  
+###  <a name="bkmk_Query2"></a> 範例查詢 2:從結構描述資料列集擷取模型中繼資料  
  您可以藉由查詢資料採礦結構描述資料列集，找到與 DMX 內容查詢所傳回的相同資訊。 不過，結構描述資料列集會提供某些額外的資料行。 下列範例查詢會傳回建立模型的日期、修改日期以及上次處理模型的日期。 此查詢也會傳回不易從模型內容取得的可預測資料行，以及建立模型所使用的參數。 這項資訊對於記錄模型可能相當實用。  
   
 ```  
@@ -85,7 +85,7 @@ WHERE MODEL_NAME = 'Call Center Default NN'
 |PREDICTION_ENTITY|每個問題的平均時間，<br /><br /> 服務等級，<br /><br /> 訂單數目|  
 |MINING_PARAMETERS|HOLDOUT_PERCENTAGE=30, HOLDOUT_SEED=0,<br /><br /> MAXIMUM_INPUT_ATTRIBUTES=255, MAXIMUM_OUTPUT_ATTRIBUTES=255,<br /><br /> MAXIMUM_STATES=100, SAMPLE_SIZE=10000, HIDDEN_NODE_RATIO=4|  
   
-###  <a name="bkmk_Query3"></a> 範例查詢 3：擷取模型的輸入屬性  
+###  <a name="bkmk_Query3"></a> 範例查詢 3:擷取模型的輸入屬性  
  您可以查詢輸入層 (NODE_TYPE = 18) 的子節點 (NODE_TYPE = 20)，擷取建立模型所使用的輸入屬性和值的配對。 下列查詢會從節點描述傳回輸入屬性的清單。  
   
 ```  
@@ -135,7 +135,7 @@ WHERE NODE_TYPE = 21
 </NormContinuous>    
 ```  
   
-###  <a name="bkmk_Query4"></a> 範例查詢 4：從隱藏層擷取加權  
+###  <a name="bkmk_Query4"></a> 範例查詢 4:從隱藏層擷取加權  
  類神經網路模型的模型內容結構化的方式可以讓網路中任何節點之詳細資料的擷取更為容易。 此外，節點識別碼提供的資訊可協助您識別節點類型之間的關聯性。  
   
  下列查詢示範如何擷取儲存在隱藏層特定節點下的係數。 隱藏層由僅包含中繼資料的組合管理節點 (NODE_TYPE = 19)，以及包含各種屬性和值組合之係數的多個子節點 (NODE_TYPE = 22) 所組成。 此查詢僅傳回係數節點。  
@@ -151,7 +151,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
   
  範例結果：  
   
-|NODE_UNIQUE_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.VALUETYPE|  
+|NODE_UNIQUE_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.VALUETYPE|  
 |------------------------|-----------------------|------------------------|-----------------|  
 |70000000200000000|6000000000000000a|-0.178616518|7|  
 |70000000200000000|6000000000000000b|-0.267561918|7|  
@@ -174,10 +174,10 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ## <a name="using-a-neural-network-model-to-make-predictions"></a>使用類神經網路模型進行預測  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法同時支援分類與迴歸。 您可以搭配這些模型使用預測函數來提供新的資料，並建立單一或批次預測。  
   
-###  <a name="bkmk_Query5"></a> 範例查詢 5：建立單一預測  
+###  <a name="bkmk_Query5"></a> 範例查詢 5:建立單一預測  
  在類神經網路模型上建立預測查詢最簡單的方式就是使用預測查詢產生器 (可在 **和** 中，資料採礦設計師的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [採礦預測] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]索引標籤上取得)。 您可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路檢視器中瀏覽模型來篩選感興趣的屬性並檢視趨勢，然後切換到 **[採礦預測]** 索引標籤來建立查詢，並針對這些趨勢預測新的值。  
   
- 例如，您可以瀏覽撥接中心模型來檢視訂單量與其他屬性間的關聯。 若要這樣做，開啟模型，檢視器中，而且**輸入**，選取**\<所有 >**。  接著，為 **[輸出]** 選取 **[訂單數目]**。 為 **[值 1]** 選取代表最多訂單的範圍，並為 **[值 2]** 選取代表最少訂單的範圍。 然後，您可以看一下模型與訂單量關聯的所有屬性。  
+ 例如，您可以瀏覽撥接中心模型來檢視訂單量與其他屬性間的關聯。 若要這樣做，開啟此模型在檢視器中，以及針對**輸入**，選取**\<所有 >**。  接著，為 **[輸出]** 選取 **[訂單數目]**。 為 **[值 1]** 選取代表最多訂單的範圍，並為 **[值 2]** 選取代表最少訂單的範圍。 然後，您可以看一下模型與訂單量關聯的所有屬性。  
   
  透過瀏覽檢視器中的結果，您會發現一週的某幾天訂單量較低，而運算子數目的增加似乎與較高的銷售量互相關聯。 接著，您可以在模型上使用預測查詢來測試 "what if" 假設，並詢問在訂單量低的天數上增加層級 2 運算子的數目是否會增加訂單。 若要這樣做，建立如下的查詢：  
   
@@ -194,7 +194,7 @@ NATURAL PREDICTION JOIN
   
 |預測的訂單|機率|  
 |----------------------|-----------------|  
-|364|0.9532…|  
+|364|0.9532...|  
   
  預測的銷售量高於目前星期二的銷售量範圍，而且預測的機率相當高。 不過，您可能想要使用批次處理測試模型的各種假設，藉以建立多個預測。  
   
@@ -206,21 +206,21 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|預測函數|使用方式|  
-|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|確定某個節點是否為類神經網路圖中另一個節點的子系。|  
-|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|傳回加權機率。|  
-|[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|傳回與目前預測值相關之值的資料表。|  
+|預測函數|使用量|  
+|[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|確定某個節點是否為類神經網路圖中另一個節點的子系。|  
+|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|傳回加權機率。|  
+|[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|傳回與目前預測值相關之值的資料表。|  
 |[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|傳回預測值的變異數。|  
-|[[Predictprobability] & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|傳回預測值的機率。|  
-|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|傳回預測值的標準差。|  
-|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|若是類神經網路與羅吉斯迴歸模型，則會傳回代表整個模型之定型集大小的單一值。|  
+|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|傳回預測值的機率。|  
+|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|傳回預測值的標準差。|  
+|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|若是類神經網路與羅吉斯迴歸模型，則會傳回代表整個模型之定型集大小的單一值。|  
   
  如需所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法共用之函數的清單，請參閱[演算法參考 (Analysis Services - 資料採礦)](https://technet.microsoft.com/library/bb895228\(v=sql.105\).aspx)。 如需特定函數的語法，請參閱[資料採礦延伸模組 &#40;DMX&#41; 函數參考](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Microsoft 類神經網路演算法](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Microsoft 類神經網路演算法技術參考](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [類神經網路模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [第 5 課： 建立類神經網路和羅吉斯迴歸模型 & #40; 中繼資料採礦教學課程 & #41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
+ [第 5 課：建立類神經網路和羅吉斯迴歸模型&#40;中繼資料採礦教學課程&#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   

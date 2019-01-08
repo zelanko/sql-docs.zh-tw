@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfermasterspstask.f1
@@ -15,12 +14,12 @@ ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b7763c8aeffe60c361a9f54ac3c9657653af40a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 734c659186f749b740bbde5ef7caa59b6925fa9f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150228"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761850"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>傳送主要預存程序工作
   「傳送主要預存程序」工作會在 **執行個體上的** master [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫之間，傳送一個或多個使用者自訂預存程序。 若要從 **master** 資料庫傳送預存程序，程序的擁有者必須為 dbo。  
@@ -46,7 +45,7 @@ ms.locfileid: "48150228"
  「傳送主要預存程序」工作並不報告登入傳送的累加進度，它只報告 0% 和 100 % 完成。  
   
 ## <a name="execution-value"></a>執行值  
- 中定義的執行值`ExecutionValue`之工作的屬性會傳回傳送的預存程序的數目。 藉由指派的使用者定義變數`ExecValueVariable`傳送主要預存程序 」 工作，預存程序傳送相關的資訊的屬性以供其他物件在封裝中。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)和[在封裝中使用變數](../use-variables-in-packages.md)。  
+ 工作之 `ExecutionValue` 屬性中定義的執行值會傳回已傳送的預存程序數。 透過將使用者自訂變數指派給「傳送主要預存程序」工作的 `ExecValueVariable` 屬性，可將與預存程序傳送相關的資訊用於封裝中的其他物件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)和[在封裝中使用變數](../use-variables-in-packages.md)。  
   
 ## <a name="log-entries"></a>記錄項目  
  「傳送主要預存程序」工作包含下列自訂記錄項目：  
@@ -55,7 +54,7 @@ ms.locfileid: "48150228"
   
 -   TransferSStoredProceduresTaskFinishedTransferringObjects  此記錄項目報告傳送已完成。 記錄項目會包含結束時間。  
   
- 此外，記錄項目`OnInformation`事件會報告已傳送的預存程序和記錄項目數目`OnWarning`事件會寫入每個預存程序會覆寫目的地上。  
+ 此外，`OnInformation` 事件的記錄項目會報告已傳送的預存程序數目，並會為在目的地上覆寫的每個預存程序，寫入 `OnWarning` 事件的記錄項目。  
   
 ## <a name="security-and-permissions"></a>安全性和權限  
  使用者必須具有來源上 **master** 資料庫中預存程序清單的檢視權限，且必須是系統管理員 (sysadmin) 伺服器角色的成員，或者具有目的地伺服器上 **master** 資料庫中已建立之預存程序的權限。  
@@ -65,9 +64,9 @@ ms.locfileid: "48150228"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [傳送主要預存程序工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [傳送主要預存程序工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [傳送主要預存程序工作編輯器&#40;預存程序 頁面&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
+-   [傳送主要預存程序工作編輯器 &#40;預存程序頁面&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

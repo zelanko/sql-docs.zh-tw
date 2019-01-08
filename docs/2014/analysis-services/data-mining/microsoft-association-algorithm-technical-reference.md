@@ -21,12 +21,12 @@ ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d709a575ddde6fe9d3f31e7d8a50b8f6dec83a5
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 4389ab6f8cd2df0f744eca5b4552a4bb18723627
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146013"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524396"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 關聯分析演算法技術參考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法是有名的 Apriori 演算法的簡單實作。  
@@ -77,7 +77,7 @@ ms.locfileid: "50146013"
  您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的資料採礦設計師，隨時變更採礦模型的參數。 您也可以變更參數以程式設計方式使用<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>集合中 AMO，或使用[MiningModels 元素&#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) XMLA 中。 下表描述每一個參數。  
   
 > [!NOTE]  
->  您不能使用 DMX 陳述式變更現有模型中的參數；而必須在建立模型時，在 DMX CREATE MODEL 或 ALTER STRUCTURE… ADD MODEL 中指定參數。  
+>  您無法使用 DMX 陳述式，來變更現有模型中的參數您必須指定參數在 DMX CREATE MODEL 或 ALTER STRUCTURE...ADD MODEL 中指定參數。  
   
  *MAXIMUM_ITEMSET_COUNT*  
  指定要產生的最大項目集數目。 如果沒有指定任何數目，則會使用預設值。  

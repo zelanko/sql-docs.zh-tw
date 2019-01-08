@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergepublication
@@ -17,12 +16,12 @@ ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26c19d33b9834d2a8cdf1ee0b05530138c3fa006
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3328facfd0f19d6fa5f5f02a614c45cd22a79f76
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717926"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754121"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |enabled_for_internet|**int**|判斷是否啟用發行集的網際網路功能。 如果**1**，發行集的同步處理檔案會放入`C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp`目錄。 使用者必須建立檔案傳輸通訊協定 (FTP) 目錄。 如果**0**，發行集未啟用網際網路存取。|  
 |dynamic_filter|**int**|指示是否要使用參數化資料列篩選器。 **0**表示不會使用參數化資料列篩選器。|  
 |has_subscription|**bit**|指示發行集是否有任何訂閱。 **0**表示目前沒有任何訂閱此發行集。|  
-|snapshot_in_default_folder|**bit**|指定是否將快照集檔案儲存在預設資料夾中。<br /><br /> 如果**1**，可以在預設資料夾中找到快照集檔案。<br /><br /> 如果**0**，快照集檔案會儲存在所指定的替代位置**alt_snapshot_folder**。 替代位置可以在另一部伺服器、網路磁碟機或抽取式媒體 (如 CD-ROM 或抽取式磁碟) 中。 另外，您也可以將快照集檔案儲存在 FTP 站台中，供訂閱者以後擷取它們。<br /><br /> 注意： 這個參數可以是 true 中, 仍有位置**alt_snapshot_folder**參數。 這個組合會指定將快照集檔案同時儲存在預設位置和替代位置中。|  
+|snapshot_in_default_folder|**bit**|指定是否將快照集檔案儲存在預設資料夾中。<br /><br /> 如果**1**，可以在預設資料夾中找到快照集檔案。<br /><br /> 如果**0**，快照集檔案會儲存在所指定的替代位置**alt_snapshot_folder**。 替代位置可以在另一部伺服器、網路磁碟機或抽取式媒體 (如 CD-ROM 或抽取式磁碟) 中。 另外，您也可以將快照集檔案儲存在 FTP 站台中，供訂閱者以後擷取它們。<br /><br /> 注意：這個參數可以是 true 中, 仍有位置**alt_snapshot_folder**參數。 這個組合會指定將快照集檔案同時儲存在預設位置和替代位置中。|  
 |alt_snapshot_folder|**nvarchar(255)**|指定快照集替代資料夾的位置。|  
 |pre_snapshot_script|**nvarchar(255)**|指定的指標 **.sql**套用在訂閱者端的快照集時，指令碼檔案，「 合併代理程式會執行任何複寫的物件之前。|  
 |post_snapshot_script|**nvarchar(255)**|指定的指標 **.sql**檔案，執行合併代理程式在所有其他複寫物件指令碼和資料的初始同步處理期間，套用。|  
@@ -94,7 +93,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |ftp_subdirectory|**nvarchar(255)**|指定當利用 FTP 來傳遞快照集時，合併代理程式能夠從中收取快照集檔案的位置。|  
 |ftp_login|**sysname**|這是用於連接到 FTP 服務的使用者名稱。|  
 |conflict_retention|**int**|指定衝突的保留期限 (以天為單位)。 過了指定天數之後，便從衝突資料表中清除衝突資料列。|  
-|keep_partition_changes|**int**|指定這個發行集是否進行最佳化的同步處理。 **keep_partition_changes**具有預設值是**0**。 值為**0**表示同步處理未最佳化，而且資料分割中的資料變更時，會驗證傳送給所有訂閱者資料分割。<br /><br /> **1**表示同步處理最佳化，而且只有擁有已變更的資料分割中的資料列的訂閱者會受到影響。<br /><br /> 注意： 根據預設，合併式發行集使用預先計算的資料分割，它提供的最佳化程度高於這個選項。 如需詳細資訊，請參閱 < [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)並[最佳化 Parameterized Filter Performance with Precomputed Partitions&lt](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。|  
+|keep_partition_changes|**int**|指定這個發行集是否進行最佳化的同步處理。 **keep_partition_changes**具有預設值是**0**。 值為**0**表示同步處理未最佳化，而且資料分割中的資料變更時，會驗證傳送給所有訂閱者資料分割。<br /><br /> **1**表示同步處理最佳化，而且只有擁有已變更的資料分割中的資料列的訂閱者會受到影響。<br /><br /> 注意：依預設，合併式發行集會使用預先計算的資料分割，以取得高於這個選項的最佳化程度。 如需詳細資訊，請參閱 < [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)並[最佳化 Parameterized Filter Performance with Precomputed Partitions&lt](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。|  
 |allow_subscription_copy|**int**|指定是否已啟用複製訂閱這個發行集之訂閱資料庫的能力。 值為**0**表示不允許複製。|  
 |allow_synctoalternate|**int**|指定是否允許替代的同步處理夥伴與這個發行者同步。 值為**0**表示不允許同步夥伴。|  
 |validate_subscriber_info|**nvarchar(500)**|列出用於擷取訂閱者資訊以及驗證訂閱者參數化資料列篩選器準則的函數。 它可以協助您確認每項合併的資訊分割都一致。|  

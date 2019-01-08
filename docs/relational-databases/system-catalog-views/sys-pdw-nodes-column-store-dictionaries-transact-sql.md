@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: eeed58e54510748969b1111e09c3791a9320d23c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de2cd6746b23ebec2b51e124ba7b5d2e22fb91e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732769"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520865"
 ---
 # <a name="syspdwnodescolumnstoredictionaries-transact-sql"></a>sys.pdw_nodes_column_store_dictionaries & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47732769"
 |**column_id**|**int**|資料行存放區資料行的識別碼。|  
 |**dictionary_id**|**int**|字典的識別碼。|  
 |**version**|**int**|字典格式的版本。|  
-|**type**|**int**|字典類型：<br /><br /> 1 – 雜湊字典包含**int**值<br /><br /> 2 – 未使用<br /><br /> 3 – 包含字串值的雜湊字典<br /><br /> 4-雜湊字典包含**浮點數**值|  
+|**type**|**int**|字典類型：<br /><br /> 1-雜湊字典包含**int**值<br /><br /> 2-不使用<br /><br /> 3-雜湊字典，其中包含字串值<br /><br /> 4-雜湊字典包含**浮點數**值|  
 |**last_id**|**int**|字典中的最後一個資料識別碼。|  
 |**entry_count**|**bigint**|字典中的項目數。|  
 |**on_disc_size**|**bigint**|字典的大小 (以位元組為單位)。|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregatetrans.f1
@@ -18,12 +17,12 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 60375cc418cdc47cc0acc70d943e448e3e91f968
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: debbf39c69a6211e67d68a9206dad2687caad180
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205528"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750220"
 ---
 # <a name="aggregate-transformation"></a>彙總轉換
   「彙總」轉換會將彙總函式 (例如 Average) 套用至資料行值，並將結果複製到轉換輸出。 除了彙總函式外，該轉換還提供 GROUP BY 子句，讓您用來指定要彙總的群組。  
@@ -31,10 +30,10 @@ ms.locfileid: "48205528"
 ## <a name="operations"></a>作業  
  「彙總」轉換支援下列作業。  
   
-|作業|描述|  
+|運算|描述|  
 |---------------|-----------------|  
 |群組依據|將資料集分割成群組。 任何資料類型的資料行都可用於群組。 如需詳細資訊，請參閱 [GROUP BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql)。|  
-|SUM|加總資料行中的值。 只能加總具有數值資料類型的資料行。 如需詳細資訊，請參閱 [SUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/sum-transact-sql)。|  
+|Sum|加總資料行中的值。 只能加總具有數值資料類型的資料行。 如需詳細資訊，請參閱 [SUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/sum-transact-sql)。|  
 |平均值|傳回資料行中資料行值的平均。 只能平均具有數值資料類型的資料行。 如需詳細資訊，請參閱 [AVG &#40;Transact-SQL&#41;](/sql/t-sql/functions/avg-transact-sql)。|  
 |Count|傳回群組中的項目數。 如需詳細資訊，請參閱 [COUNT &#40;Transact-SQL&#41;](/sql/t-sql/functions/count-transact-sql)。|  
 |計算相異|傳回群組中唯一非 Null 值的數目。|  
@@ -101,7 +100,7 @@ ms.locfileid: "48205528"
   
  「彙總」轉換是非同步的，這表示它不會以逐列的方式取用和發行資料， 而是會取用整個資料列集、執行其群組和彙總，然後發行結果。  
   
- 這個轉換不會通過任何資料行，但是會在資料流程中為其所發行的資料建立新的資料行。 只有套用彙總函式的輸入資料行，或是轉換用於群組的輸入資料行，才會複製到轉換輸出。 例如，「彙總」轉換輸入可能有三個資料行： **CountryRegion**、 **City**和 **Population**。 轉換會依 **CountryRegion** 資料行來分組，並將 Sum 函數套用至 **Population** 資料行。 因此，輸出不會包含 **City** 資料行。  
+ 這個轉換不會通過任何資料行，但是會在資料流程中為其所發行的資料建立新的資料行。 只有套用彙總函式的輸入資料行，或是轉換用於群組的輸入資料行，才會複製到轉換輸出。 比方說，「 彙總 」 轉換輸入可能有三個資料行：**CountryRegion**，**城市**，以及**母體擴展**。 轉換會依 **CountryRegion** 資料行來分組，並將 Sum 函數套用至 **Population** 資料行。 因此，輸出不會包含 **City** 資料行。  
   
  您也可以將多個輸出加入「彙總」轉換，並將每個彙總導向不同的輸出。 例如，如果「彙總」轉換套用 Sum 和 Average 函數，則每個彙總可以導向至不同的輸出。  
   
@@ -113,9 +112,9 @@ ms.locfileid: "48205528"
   
  如需有關可以在 **[彙總轉換編輯器]** 對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
   
--   [彙總轉換編輯器&#40;彙總索引標籤&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
+-   [彙總轉換編輯器 &#40;彙總索引標籤&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
   
--   [彙總轉換編輯器&#40;進階索引標籤&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
+-   [彙總轉換編輯器 &#40;進階索引標籤&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   

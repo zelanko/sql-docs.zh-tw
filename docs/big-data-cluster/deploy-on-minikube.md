@@ -1,26 +1,28 @@
 ---
-title: 設定適用於 SQL Server 2019 巨量資料叢集部署的 Minikube |Microsoft Docs
-description: 了解如何設定 Minikube 適用於在單一機器上的 SQL Server 2019 巨量資料叢集 （預覽） 部署。
+title: 設定 minikube
+titleSuffix: SQL Server 2019 big data clusters
+description: 了解如何設定適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署 minikube 在單一電腦上。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9b6902057c3bf5da706de8832b33c959ed285a9b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.custom: seodec18
+ms.openlocfilehash: a4bdccba6d42868225a39792cb94566df1f56680
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702346"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246567"
 ---
-# <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>設定適用於 SQL Server 2019 巨量資料叢集部署的 Minikube
+# <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>設定適用於 SQL Server 2019 巨量資料叢集部署的 minikube
 
 這篇文章說明如何設定**minikube**適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署在單一電腦上。 Minikube 是一種工具，輕鬆地執行類似的桌上型或膝上型電腦在單一機器上的 Kubernetes。 Minikube 會執行使用者想要試用 Kubernetes，或使用它進行開發的膝上型電腦上每日的 VM 內的單一節點 Kubernetes 叢集。 
 
 ## <a name="prerequisites"></a>先決條件
 
-- 若要執行 Minikube 叢集 SQL Server 2019 CTP 2.1 SQL 巨量資料叢集組態，建議您的電腦必須至少 32 GB 的 RAM。
+- 若要執行的 SQL Server 2019 （預覽） 的 Minikube 叢集，巨量資料叢集，建議您的電腦必須至少 32 GB 的 RAM。
 
    > [!TIP] 
    > 如果機器有建議的記憶體最小值，然後設定叢集有 1 個計算集區執行個體、 1 個資料集區執行個體和 1 個儲存體集區執行個體的部署。 這項設定應該只用於評估環境，持久性和可用性的資料不重要。 請參閱[部署文件](deployment-guidance.md#define-environment-variables)如需有關設定來設定資料集區的複本數目的環境變數的詳細資訊，請計算集區和儲存體集區。
@@ -28,8 +30,6 @@ ms.locfileid: "51702346"
 - 必須在您電腦的 BIOS 中啟用 VT x 或 amd-v 的虛擬化。
 
 ## <a name="install-dependencies"></a>安裝相依項目
-
-1. 如果尚未安裝，安裝在本機上的 git [Windows](https://git-for-windows.github.io/)， [Linux 或 Mac](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)。
 
 1. 安裝[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)。
 
@@ -44,7 +44,7 @@ ms.locfileid: "51702346"
 
 ## <a name="install-minikube"></a>安裝 Minikube
 
-根據的指示安裝 Minikube [v0.28.2 版本](https://github.com/kubernetes/minikube/releases/tag/v0.28.2)。 SQL Server 2019 CTP 2.1 版本 v0.24.1 與設定，僅適用於巨量資料叢集。
+根據的指示安裝 Minikube [v0.28.2 版本](https://github.com/kubernetes/minikube/releases/tag/v0.28.2)。 使用版本 v0.24.1 和向上，僅適用於 SQL Server 2019 巨量資料叢集 （預覽）。
 
 ## <a name="create-a-minikube-cluster"></a>建立 Minikube 叢集
 
@@ -74,4 +74,4 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 這篇文章中的步驟設定 Minikube 叢集。 下一個步驟是將 SQL Server 2019 巨量資料叢集部署。 如需指示，請參閱下列文章：
 
-[將 SQL Server 2019 CTP 2.1 在 Kubernetes 上部署](deployment-guidance.md#deploy)
+[部署在 Kubernetes 上的 SQL Server 2019 巨量資料叢集](deployment-guidance.md#deploy)

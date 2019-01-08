@@ -16,12 +16,12 @@ ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80fb27aa51d6e0a44f8f006711708e24cd04bef3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db3b72b7bdaf60febdeb41eb6f6e1e86c5064f63
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632316"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507163"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 指定一或多個屬性[欄位](../../../ado/reference/ado-api/field-object.md)物件。  
@@ -38,7 +38,7 @@ ms.locfileid: "47632316"
 |**adFldIsRowURL**|0x10000|表示欄位包含之 URL 的名稱來自記錄所代表的資料存放區的資源。|  
 |**adFldLong**|0x80|表示欄位是長的二進位欄位。 也會指出，您可以使用[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)並[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)方法。|  
 |**adFldMayBeNull**|0x40|表示您可以從欄位讀取 null 值。|  
-|**adFldMayDefer**|0x2|表示欄位會延後 — 也就是欄位的值不會擷取從資料來源與整個記錄，但只有在您明確地存取時。|  
+|**adFldMayDefer**|0x2|指出欄位是，延遲是，從資料來源與整個記錄，但只有在您明確地存取時，才不會擷取欄位值。|  
 |**adFldNegativeScale**|0x4000|表示欄位代表一個數字值，從支援負的小數位數值的資料行。 指定標尺[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)屬性。|  
 |**adFldRowID**|0x100|表示欄位包含不能寫入，且具有無意義的值，但若要識別 （例如記錄編號、 唯一識別碼和其他等等） 的資料列的永續性資料列識別碼。|  
 |**adFldRowVersion**|0x200|表示欄位包含某種用來追蹤更新的日期或時間戳記。|  

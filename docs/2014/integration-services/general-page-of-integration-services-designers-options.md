@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
@@ -13,12 +12,12 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16a62e70239db5688fc37b34f3b11752f43178d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce643cbaa6cfade08b84894bdd1af9b24533392b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151012"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750111"
 ---
 # <a name="general-page"></a>一般頁面
   在 [選項] 對話方塊上使用 [Integration Services 設計師] 頁面上的 [一般] 頁面，指定用來載入、顯示及升級封裝的選項。  
@@ -37,7 +36,7 @@ ms.locfileid: "48151012"
  選取此選項即可在載入未簽署的封裝時顯示警告。  
   
  **顯示優先順序約束條件標籤**  
- 選取在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中檢視封裝時，要在優先順序條件約束上顯示哪一個標籤 (成功、失敗或完成)。  
+ 選取在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中檢視封裝時，要在優先順序條件約束上顯示哪一個標籤 (成功、失敗或完成)。  
   
  **指令碼語言**  
  選取新指令碼工作和指令碼元件的預設指令碼語言。  
@@ -55,7 +54,7 @@ ms.locfileid: "48151012"
  在升級 [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] 封裝時，針對升級版本的封裝建立新的封裝識別碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [安全性概觀&#40;Integration Services&#41;](security/security-overview-integration-services.md)   
- [使用指令碼擴充套件](extending-packages-scripting/extending-packages-with-scripting.md)  
+ [安全性概觀 (Integration Services)](security/security-overview-integration-services.md)   
+ [使用指令碼擴充封裝](extending-packages-scripting/extending-packages-with-scripting.md)  
   
   

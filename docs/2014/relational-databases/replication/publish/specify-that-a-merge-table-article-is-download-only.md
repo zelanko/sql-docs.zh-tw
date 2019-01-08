@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication [SQL Server replication], download-only articles
@@ -15,12 +14,12 @@ ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 694644e51b134c0063c0162b163b83e94e53354a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5594c811642225336586c8bce040f7f69724cadb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144998"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756190"
 ---
 # <a name="specify-that-a-merge-table-article-is-download-only"></a>將合併資料表發行項指定為僅限下載
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 指定合併資料表發行項在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中僅限下載。 僅限下載發行項的設計是要供包含未在訂閱者上更新之資料的應用程式使用。 如需詳細資訊，請參閱[使用僅限下載的發行項最佳化合併式複寫效能](../merge/optimize-merge-replication-performance-with-download-only-articles.md)。  

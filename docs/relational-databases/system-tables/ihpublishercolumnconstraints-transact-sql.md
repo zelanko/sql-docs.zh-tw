@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - IHpublishercolumnconstraints
@@ -19,12 +18,12 @@ ms.assetid: d7a41da6-e067-430a-8da2-3f6745b8a4f3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00b937c949019bf1952977685cf063bf05c23e73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89c6e254dfc163e75f16ccffaf97d3c2c8b222be
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724856"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779580"
 ---
 # <a name="ihpublishercolumnconstraints-transact-sql"></a>IHpublishercolumnconstraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

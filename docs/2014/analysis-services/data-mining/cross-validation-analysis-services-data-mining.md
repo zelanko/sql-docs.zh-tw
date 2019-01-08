@@ -16,12 +16,12 @@ ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1620b1dc5f25506e1da54c426333817efd29882a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 550914167b005803e7ff39ebbcf3727f7b6b0b8c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118188"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526097"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>交叉驗證 (Analysis Services - 資料採礦)
   「交叉驗證」是一項標準分析工具，而且它是協助您開發並微調資料採礦模型的重要功能。 在您建立了採礦結構和相關的採礦模型之後，就可以使用交叉驗證來確定模型的有效性。  交叉驗證具有下列應用方式：  
@@ -87,7 +87,7 @@ ms.locfileid: "48118188"
   
  在您選取可預測屬性之後， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會自動測試所有使用同一個可預測屬性的模型。 如果目標屬性包含離散的值，且您有想要預測的特定值，則可以在選取可預測資料行之後，選擇性地輸入目標狀態。  
   
- 目標狀態的選擇會影響傳回的量值。 如果您指定目標屬性 (也就是資料行名稱)，而沒有挑選希望模型預測的特定值，則根據預設，模型的評估會根據它對最可能狀態的預測而進行。  
+ 目標狀態的選擇會影響傳回的量值。 如果您指定目標屬性-也就是資料行名稱-並不會挑選您想要根據其預測最有可能的狀態來評估模型的預設值進行預測，模型的特定值。  
   
  當您搭配叢集模型使用交叉驗證時，沒有可預測的資料行；而是要從 [目標屬性] 清單方塊中的清單選取 [#Cluster]。 在選取這個選項之後，其他與叢集模型無關的選項 (例如，[目標狀態]) 就會停用。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接著會測試所有與採礦結構相關聯的叢集模型。  
   
@@ -112,17 +112,17 @@ ms.locfileid: "48118188"
   
  在第一個階段中，您會呼叫系統預存程序，此程序所建立的資料分割數目與您在資料集內部指定的數目一樣，而且它會針對每個資料分割傳回精確度結果。 然後 Analysis Services 會針對每個標準計算資料分割的平均和標準差。  
   
--   [SystemGetCrossValidationResults &#40;Analysis Services-資料採礦&#41;](/sql/analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining)  
+-   [SystemGetCrossValidationResults &#40;Analysis Services - 資料採礦&#41;](/sql/analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining)  
   
--   [SystemGetClusterCrossValidationResults &#40;Analysis Services-資料採礦&#41;](/sql/analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining)  
+-   [SystemGetClusterCrossValidationResults &#40;Analysis Services - 資料採礦&#41;](/sql/analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining)  
   
  **產生整個資料集的標準**  
   
  在第二個階段中，您會呼叫另一組預存程序。 這些預存程序不會分割資料集，但是會針對整個指定的資料集傳回精確度結果。 如果您已經分割和處理採礦結構，您可以呼叫第二組預存程序來得到結果。  
   
--   [SystemGetAccuracyResults &#40;Analysis Services-資料採礦&#41;](/sql/analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining)  
+-   [SystemGetAccuracyResults &#40;Analysis Services - 資料採礦&#41;](/sql/analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining)  
   
--   [SystemGetClusterAccuracyResults &#40;Analysis Services-資料採礦&#41;](/sql/analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining)  
+-   [SystemGetClusterAccuracyResults &#40;Analysis Services - 資料採礦&#41;](/sql/analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining)  
   
 #### <a name="defining-the-testing-data"></a>定義測試資料  
  當您執行計算精確度的交叉驗證預存程序 (SystemGetAccuracyResults 或 SystemGetClusterAccuracyResults) 時，您可以指定在交叉驗證期間進行測試所使用的資料來源。 使用者介面中無法使用這個選項。  
@@ -182,16 +182,16 @@ ms.locfileid: "48118188"
   
 |主題|連結|  
 |------------|-----------|  
-|描述如何在 SQL Server Development Studio 中設定交叉驗證參數。|[交叉驗證索引標籤&#40;採礦精確度圖表檢視&#41;](../cross-validation-tab-mining-accuracy-chart-view.md)|  
+|描述如何在 SQL Server Development Studio 中設定交叉驗證參數。|[交叉驗證索引標籤 &#40;採礦精確度圖表檢視&#41;](../cross-validation-tab-mining-accuracy-chart-view.md)|  
 |描述交叉驗證所提供的標準|[交叉驗證公式](cross-validation-formulas.md)|  
 |說明交叉驗證報表格式，並定義針對每一個模型類型提供的統計量值。|[交叉驗證報表中的量值](measures-in-the-cross-validation-report.md)|  
-|列出用來計算交叉驗證統計資料的預存程序。|[資料採礦預存程序&#40;Analysis Services-資料採礦&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)|  
+|列出用來計算交叉驗證統計資料的預存程序。|[資料採礦預存程序 &#40;Analysis Services - 資料採礦&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)|  
 |||  
 |描述如何針對採礦結構和相關模型建立測試資料集。|[定型和測試資料集](training-and-testing-data-sets.md)|  
-|請參閱其他精確度圖表類型的範例。|[分類矩陣&#40;Analysis Services-資料採礦&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [增益圖&#40;Analysis Services-資料採礦&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [收益圖&#40;Analysis Services-資料採礦&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [散佈圖&#40;Analysis Services-資料採礦&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|描述建立各種精確度圖表的步驟。|[測試及驗證工作與操作方法&#40;資料採礦&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|請參閱其他精確度圖表類型的範例。|[分類矩陣 &#40;Analysis Services - 資料採礦&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [增益圖 &#40;Analysis Services - 資料採礦&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [收益圖 &#40;Analysis Services - 資料採礦&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [散佈圖 &#40;Analysis Services - 資料採礦&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|描述建立各種精確度圖表的步驟。|[測試及驗證工作與操作方法 &#40;資料採礦&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [測試和驗證&#40;資料採礦&#41;](testing-and-validation-data-mining.md)  
+ [測試及驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)  
   
   

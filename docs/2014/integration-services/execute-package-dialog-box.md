@@ -14,12 +14,12 @@ ms.assetid: 4f7a806d-4867-4d1f-bc65-b00c1caee7b6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5e90c0ceb79af8834bb2df17ab84943099276bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 715bcfdda978801bac28e59246aeddc9ab76851e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129878"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418649"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
   使用 **[執行封裝]** 對話方塊，即可執行儲存在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上的封裝。  
@@ -44,7 +44,7 @@ ms.locfileid: "48129878"
   
 1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中，連接至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。  
   
-     您正在連接到主控 SSISDB 資料庫之 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的執行個體。  
+     您正在連線到裝載 SSISDB 資料庫的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 執行個體。  
   
 2.  在 [物件總管] 中，展開樹狀目錄以顯示 **[Integration Services 目錄]** 節點。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48129878"
  選取用於執行封裝的記錄層級。 如需詳細資訊，請參閱 [catalog.set_execution_parameter_value &#40;SSISDB 資料庫&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)。  
   
  **在發生錯誤時傾印**  
- 指定在封裝執行期間發生錯誤時是否建立傾印檔。 如需相關資訊，請參閱 [產生封裝執行的傾印檔案](troubleshooting/generating-dump-files-for-package-execution.md)。  
+ 指定在封裝執行期間發生錯誤時是否建立傾印檔。 如需相關資訊，請參閱 [Generating Dump Files for Package Execution](troubleshooting/generating-dump-files-for-package-execution.md)。  
   
  **32 位元執行階段**  
  指定封裝將會在 32 位元系統上執行。  

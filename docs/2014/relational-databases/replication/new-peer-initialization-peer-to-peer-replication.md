@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.init.f1
@@ -13,12 +12,12 @@ ms.assetid: 050c00e1-78bd-4d9c-affe-40e22feb4d94
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6eb6b37a15621c01d1c3952bf034dd655543df3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51e5ec3832d497f342c4fc3132a75261f6c3c154
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169488"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774981"
 ---
 # <a name="new-peer-initialization-peer-to-peer-replication"></a>新的對等 (Peer) 初始化 (點對點複寫)
   您可以使用 **[新的對等 (Peer) 初始化]** 頁面來指定對等 (Peer) 資料庫的初始化方式 (完成此精靈之前必須先初始化對等)。對等 (Peer) 需要以手動初始化，或使用異動複寫提供的 **initialize with backup** 功能來初始化 (點對點異動複寫不支援以快照集初始化對等)。如果不同的對等 (Peer) 必須使用不同的方法初始化，您就必須執行此精靈許多次來分別加入對等。  

@@ -10,15 +10,15 @@ ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 72c72dc551aa31dc22def397fb38fe09793478ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22530fafb9c41ec7bee87c43589f6eaba0fa3f70
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084508"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712459"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>建立原生編譯的預存程序
-  原生編譯預存程序不會實作完整 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可程式性和查詢介面區。 某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建構無法在原生編譯的預存程序內使用。 如需詳細資訊，請參閱 <<c0> [ 原生編譯預存程序中支援的建構](..\in-memory-oltp\supported-features-for-natively-compiled-t-sql-modules.md)。  
+  原生編譯預存程序不會實作完整 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可程式性和查詢介面區。 某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建構無法在原生編譯的預存程序內使用。 如需詳細資訊，請參閱 <<c0> [ 原生編譯預存程序中支援的建構](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。  
   
  但有幾個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能只可供原生編譯的預存程序使用：  
   
@@ -51,15 +51,15 @@ end
 go  
 ```  
   
- 在程式碼範例中，`NATIVE_COMPILATION`表示這個[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序是原生編譯的預存程序。 以下是必要的選項：  
+ 在程式碼範例中，`NATIVE_COMPILATION` 表示這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序是原生編譯的預存程序。 以下是必要的選項：  
   
 |選項|描述|  
 |------------|-----------------|  
-|`SCHEMABINDING`|原生編譯的預存程序必須繫結至其所參考之物件的結構描述。 這表示，此程序所參考的資料表將無法卸除。 程序中參考的資料表必須包含其結構描述名稱和萬用字元 (\*) 查詢中不允許。 `SCHEMABINDING` 僅適用於原生編譯的預存程序，在這個版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。|  
+|`SCHEMABINDING`|原生編譯的預存程序必須繫結至其所參考之物件的結構描述。 這表示，此程序所參考的資料表將無法卸除。 程序中參考的資料表必須包含其結構描述名稱和萬用字元 (\*) 查詢中不允許。 只有這個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本中的原生編譯預存程序才支援 `SCHEMABINDING`。|  
 |`EXECUTE AS`|原生編譯的預存程序不支援 `EXECUTE AS CALLER` (預設執行內容)。 因此，需要指定執行內容。 選項`EXECUTE AS OWNER`， `EXECUTE AS`*使用者*，和`EXECUTE AS SELF`支援。|  
 |`BEGIN ATOMIC`|原生編譯的預存程序主體必須剛好由一個不可部分完成的區塊所組成。 不可部分完成的區塊保證會以不可部分完成的方式執行預存程序。 如果此程序在使用中交易的內容之外叫用，它將會開始新的交易，該交易會在不可部分完成的區塊結尾認可。 原生編譯預存程序中不可部分完成的區塊有兩個必要選項：<br /><br /> `TRANSACTION ISOLATION LEVEL`. 請參閱[交易隔離等級](../../database-engine/transaction-isolation-levels.md)針對支援的隔離等級。<br /><br /> `LANGUAGE`. 預存程序的語言必須設定為其中一個可用語言或語言別名。|  
   
- `EXECUTE AS` 和 Windows 登入可能會因為透過 `EXECUTE AS`執行模擬而發生錯誤。 如果使用者帳戶使用 Windows 驗證，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所使用的服務帳戶與 Windows 登入的網域之間必須完全信任。 否則，在建立原生編譯之預存程序時，即會傳回下列錯誤訊息︰「訊息 15404，無法獲得關於 Windows NT 群組/使用者「使用者名稱」的資訊，錯誤碼 0x5。  
+ `EXECUTE AS` 和 Windows 登入可能會因為透過 `EXECUTE AS`執行模擬而發生錯誤。 如果使用者帳戶使用 Windows 驗證，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體所使用的服務帳戶與 Windows 登入的網域之間必須完全信任。 如果不是完全信任，建立原生編譯預存程序時，會傳回下列錯誤訊息：訊息 15404，無法取得 Windows NT 群組/使用者 'username'，錯誤碼 0x5 的相關資訊。  
   
  如果要解決此錯誤，請使用下列動作之一：  
   

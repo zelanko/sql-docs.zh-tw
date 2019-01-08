@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - default SQL Server Profiler templates
@@ -18,12 +17,12 @@ ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7fe736aae767d9d3ec434c2f62deac4491e2126
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5cac924e926d03dffb9116e5ce7194bb784d45fe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084648"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779590"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler 範本
   您可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 建立範本，用來定義追蹤中要包含的事件類別和資料行。 定義並儲存範本之後，即可執行追蹤，記錄您選取的每一個事件類別的資料。 您可將範本用在許多追蹤上；範本本身並不會執行。  
@@ -61,9 +60,9 @@ ms.locfileid: "48084648"
 >  預設範本是特定伺服器類型專用的範本。 變更一種伺服器類型的預設範本，並不會影響其他伺服器類型的預設範本。 如需針對特定伺服器來設定預設範本的詳細資訊，請參閱[設定追蹤定義預設值 &#40;SQL Server Profiler&#41;](set-trace-definition-defaults-sql-server-profiler.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立追蹤範本&#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
+ [建立追蹤範本 &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [修改追蹤範本 &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [匯出追蹤範本 &#40;SQL Server Profiler&#41;](export-a-trace-template-sql-server-profiler.md)   
- [匯入追蹤範本 &#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)  
+ [匯出追蹤範本 &#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)  
   
   

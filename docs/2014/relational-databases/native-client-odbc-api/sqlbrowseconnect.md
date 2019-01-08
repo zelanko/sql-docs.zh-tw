@@ -14,12 +14,12 @@ ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5300285872c0c03ce25410ba0bfd636c7ccf6bca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: d9cb9439dd76c636df46b8ac3d737d79415b5ea5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208517"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352687"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
   **SQLBrowseConnect**使用關鍵字可分類成三個層級的連接資訊。 下表針對每個關鍵字指出是否傳回有效值清單以及關鍵字是否為選擇性。  
@@ -28,8 +28,8 @@ ms.locfileid: "48208517"
   
 |關鍵字|傳回清單？|選擇性？|描述|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|不適用|否|所傳回的資料來源名稱**SQLDataSources**。 如果使用 DRIVER 關鍵字，就無法使用 DSN 關鍵字。|  
-|DRIVER|不適用|否|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式名稱是 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}。 如果使用 DSN 關鍵字，就無法使用 DRIVER 關鍵字。|  
+|DSN|N/A|否|所傳回的資料來源名稱**SQLDataSources**。 如果使用 DRIVER 關鍵字，就無法使用 DSN 關鍵字。|  
+|DRIVER|N/A|否|Microsoft?? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式名稱是 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}。 如果使用 DSN 關鍵字，就無法使用 DRIVER 關鍵字。|  
   
 ## <a name="level-2"></a>層級 2  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48208517"
 |已記載 SQL_COPT_SS_BROWSE_CACHE_DATA。|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQLBrowseConnect 函數](http://go.microsoft.com/fwlink/?LinkId=59329)   
+ [SQLBrowseConnect 函數](https://go.microsoft.com/fwlink/?LinkId=59329)   
  [ODBC API 實作詳細資料](odbc-api-implementation-details.md)  
   
   

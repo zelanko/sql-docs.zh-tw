@@ -1,7 +1,8 @@
 ---
-title: 快速存取深入解析和 Azure Data Studio 中的一般工作 |Microsoft Docs
-description: 深入了解在 Azure Data Studio 顯示具洞察力的 widget。
-ms.custom: tools|sos
+title: 快速存取深入解析和一般工作
+titleSuffix: Azure Data Studio
+description: 深入了解 Azure Data Studio 中的資料庫儀表板上顯示小工具。
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: b163d110353d07811f0feb991772c90053651659
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: faaa59e8607f707bb43f31638880f771ae7ae6ab
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356191"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030482"
 ---
 # <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>儀表板 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -42,7 +43,7 @@ ms.locfileid: "49356191"
 了解詳細資料飛出視窗上提供相關的深入解析小工具的更詳細的資訊。 
 - 深入解析小工具會呈現在摘要的摘要檢視計數、 線條、 圖表等等。 
 - 深入解析的詳細資料飛出視窗上提供 「 向內切入 」 的詳細資訊，列出每個項目的高層級的深入解析小工具中所列的更深入資料深入解析。 
-  - 使用不同的 SQL 查詢，以主要小工具的查詢定義的詳細資料飛出視窗內容。 
+  - 使用不同的 SQL 查詢，以主要小工具的查詢定義的詳細資料飛出視窗內容。
 
 沒有集合需求的深入解析 」 詳細資料查詢，但配置是標準。
 - 檢視的上半部一律是 2 資料行"的 summary"檢視。 若要使用哪些資料行是由 JSON 設定的 「 標籤 」 和 「 值 」 屬性定義
@@ -85,14 +86,14 @@ ms.locfileid: "49356191"
 ```
 |屬性|型別|value|預設值|description|comment|
 |:---|:---|:---|:---|:---|:---|
-|詳細資料|json 物件|||若要定義其結構中的深入解析詳細定義強制 proerty||
+|詳細資料|json 物件|||必要的屬性，來定義其結構內了解詳細資料定義||
 |queryFile|string|||了解詳細資料的 sql 查詢檔案路徑和相對於位置的 package.json 檔案名稱||
 |標籤|json 物件|||必要的屬性，以定義摘要清單檢視中的每個明細項目|在未來，變更例如 'summaryList' 這個屬性的名稱|
-|圖示|string|||表示要參考的圖示名稱，每個摘要清單檢視項目。|會記錄支援的圖示清單 (tbd)|
+|圖示|string|||表示針對每個摘要清單檢視項目呈現的圖示名稱。|會記錄支援的圖示清單 (tbd)|
 |column|string|||指出在從查詢結果集的摘要清單 檢視中的第一個資料行名稱|這個屬性的名稱會在未來變更為更具直覺性的名稱|
-|value|string|||指出在從查詢結果集的摘要清單 檢視中的第二個資料行名稱。 此資料行的值用來檢查條件，並設定每一個的摘要清單檢視項目的色彩點色彩|這個屬性的名稱會在未來變更為更具直覺性的項目|
+|value|string|||指出在從查詢結果集的摘要清單 檢視中的第二個資料行名稱。 這個資料行的值用來檢查條件，並設定每個摘要清單檢視項目色彩點的色彩|這個屬性的名稱會在未來變更為更具直覺性的項目|
 |condition (條件)|json 物件|||定義資料行值的條件檢查，並決定每個摘要清單檢視項目色彩||
-|if|string|一律，equals、 notEquals、 greaterThan、 lessThan、 greaterThanOrEqauls、 lessThanOrEquals||條件檢查運算子|在未來的屬性名稱會變更為運算子|
+|if|string|一律，equals、 notEquals、 greaterThan、 lessThan、 greaterThanOrEquals、 lessThanOrEquals||條件檢查運算子|在未來的屬性名稱會變更為運算子|
 |equals|string|||條件檢查值|在未來的這個屬性名稱會變更為 'value'|
 
 ## <a name="insight-actions"></a>了解動作
@@ -104,7 +105,7 @@ ms.locfileid: "49356191"
 
 ## <a name="sample-insight-action-definition"></a>範例深入解析動作定義中
 
-```"actions"{}``` 定義的深入解析動作。 動作可以定義特定的範圍這類```"server"```，```"database"```等和[!INCLUDE[name-sos](../includes/name-sos-short.md)]將目前的連接內容資訊傳遞至動作。 
+```"actions"{}``` 定義的深入解析動作。 動作可以定義特定的範圍這類```"server"```，```"database"```等和[!INCLUDE[name-sos](../includes/name-sos-short.md)]將目前的連接內容資訊傳遞至動作。
 
 比方說，當您啟動 WideWorldImporters 資料庫還原動作時，才```"database": "${Database}"```定義會表示要傳遞```Database```您還原動作的查詢結果中的資料行值。 然後還原動作會啟動資料庫。 ```"types"``` json 陣列且陣列中可以列出多個動作。 它基本上會變成操作功能表該使用者可以在深入解析的詳細資料 對話方塊上按一下，並執行的動作。 
 

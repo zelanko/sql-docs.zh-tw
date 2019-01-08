@@ -16,12 +16,12 @@ ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b60e17ca95bff865d1a0786aa7da5ee398adcb7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 623f3a4724de84dbb1e355ffbd64a6868ea0f12a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170287"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518109"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>預測 (適用於 Excel 的資料表分析工具)
   ![預測的按鈕，在 資料表分析工具功能區](media/tat-forecast.gif "預測資料表分析工具功能區中的按鈕")  
@@ -40,7 +40,7 @@ ms.locfileid: "48170287"
   
 2.  按一下 [**預測**上**分析**] 索引標籤。  
   
-3.  指定要預測的資料行。 此工具會自動選取具有可預測資料類型之資料中的資料行，也就是連續的數值資料。 如果資料行包含許多 null 或零值，此工具便可能不會選取一些具有連續數值資料的資料行，因為資料遺失可能會影響結果。 如果發生這種情況，您可以使用來修正資料[重定標籤&#40;SQL Server 資料採礦增益集&#41;](relabel-sql-server-data-mining-add-ins.md)工具。  
+3.  指定要預測的資料行。 此工具會自動選取資料行中具有可預測的資料類型的資料-也就是連續的數值資料。 如果資料行包含許多 null 或零值，此工具便可能不會選取一些具有連續數值資料的資料行，因為資料遺失可能會影響結果。 如果發生這種情況，您可以使用來修正資料[重定標籤&#40;SQL Server 資料採礦增益集&#41;](relabel-sql-server-data-mining-add-ins.md)工具。  
   
 4.  指定包含日期、時間或其他序列識別碼的資料行。 如果您選取的選項**\<沒有時間戳記 >** 此工具會建立一系列根據來源資料中的資料列順序。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48170287"
 ### <a name="requirements"></a>需求  
  您預測的資料行必須包含連續數值資料，例如貨幣或其他數字。  
   
- 可能的話，您的資料也應包含有時間或日期序列的資料行。 您可以使用數值序列 (1,2,3….) 來取代日期和時間資料。 不過，序列資料行中的值必須是唯一的。 如果發生錯誤**預測**工具系列資料行中找到重複的值。  
+ 可能的話，您的資料也應包含有時間或日期序列的資料行。 您可以使用數值序列 (1 2、 3...)，而不是日期和時間資料。 不過，序列資料行中的值必須是唯一的。 如果發生錯誤**預測**工具系列資料行中找到重複的值。  
   
  您無法使用，以預測日期**預測**工具。 雖然可能不會發生錯誤，但這個演算法不是設計成使用日期做為可預測值。  
   

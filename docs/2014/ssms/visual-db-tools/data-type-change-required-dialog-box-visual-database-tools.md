@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.datatypechangerequired
@@ -13,12 +13,12 @@ ms.assetid: 709c9b8e-2f3f-441e-97e1-7fd8341b64b4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 89308c769e164e07ade8525f04b2f0ab1a48ac3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b04814ed725dde1a579ed969000b280816c1880a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057888"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812590"
 ---
 # <a name="data-type-change-required-dialog-box-visual-database-tools"></a>需要變更資料類型對話方塊 (Visual Database Tools)
   當您變更加入關聯性之資料行的資料類型、長度、小數位數、整數位數或定序時，會出現此對話方塊。  

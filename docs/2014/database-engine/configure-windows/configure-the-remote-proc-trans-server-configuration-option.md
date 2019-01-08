@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - remote proc trans option
@@ -14,12 +13,12 @@ ms.assetid: cfbc6158-ab96-44b4-87eb-ea278c1b0c6b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 467057e9efe4bd72fbdf50f0833bb687a527de33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c99c44ea6d73f9dde4984772d3aca77d77b9fcf7
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064438"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639396"
 ---
 # <a name="configure-the-remote-proc-trans-server-configuration-option"></a>設定 remote proc trans 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote proc trans [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **remote proc trans** 選項有助於保護透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 交易的伺服器對伺服器程序的動作。  
@@ -45,7 +44,7 @@ ms.locfileid: "48064438"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **待處理**  [設定 remote proc trans 選項之後](#FollowUp)  
+-   **後續操作：**[設定 remote proc trans 選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -80,7 +79,7 @@ ms.locfileid: "48064438"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `remote proc trans` 選項的值設定為 `1`。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `remote proc trans` 選項的值設定為 `1`。  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -92,9 +91,9 @@ GO
   
 ```  
   
- 如需詳細資訊，請參閱 [伺服器組態選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)伺服器組態選項。  
+ 如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 待處理：設定 remote proc trans 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定 remote proc trans 選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

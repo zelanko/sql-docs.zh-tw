@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ed672aedc62c9521fe475589de0a7aa9ac935614
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 715d3b06ed3017a00852f58c618e2ea0b0de24d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984382"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403343"
 ---
 # <a name="supplemental-lesson---implement-dynamic-security-by-using-row-filters"></a>補充課程-使用資料列篩選實作動態安全性
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,11 +23,11 @@ ms.locfileid: "38984382"
   
 若要實作動態安全性，您必須將資料表加入至包含 Windows 使用者名稱的模型，這些使用者可以建立與模型的連接做為資料來源並且瀏覽模型物件與資料。 您使用本教學課程建立的模型位於 Adventure Works Corp. 內容中；不過為了完成本課程，您必須加入包含您自己的網域使用者的資料表。 您將不需要所加入使用者名稱的密碼。 若要建立 EmployeeSecurity 資料表，使用您自己的網域使用者的小型範例，您將使用 [貼上] 功能中，貼上的 Excel 試算表中的員工資料。 在真實情況中，包含您加入模型中之使用者名稱的資料表通常會使用來自實際資料庫的資料表做為資料來源；例如，實際的 dimEmployee 資料表。  
   
-為了實作動態安全性，您將使用兩個新的 DAX 函數︰[USERNAME 函數 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) 和 [LOOKUPVALUE 函數 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)。 這兩個函數是在新角色中定義，並且會套用至資料列篩選器公式。 使用 LOOKUPVALUE 函式，公式會指定 EmployeeSecurity 表中的值，並接著會將傳遞至 USERNAME 函式，其指定登入之使用者的使用者名稱的值屬於此角色。 之後使用者就只能瀏覽角色的資料列篩選器所指定的資料。 在這個案例中，您將指定銷售員工只能瀏覽本身所屬銷售地區的網際網路銷售資料。  
+若要實作動態安全性，您會使用兩個新的 DAX 函式：[USERNAME 函數 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)並[LOOKUPVALUE 函數 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)。 這兩個函數是在新角色中定義，並且會套用至資料列篩選器公式。 使用 LOOKUPVALUE 函式，公式會指定 EmployeeSecurity 表中的值，並接著會將傳遞至 USERNAME 函式，其指定登入之使用者的使用者名稱的值屬於此角色。 使用者可以再瀏覽該角色的資料列篩選器所指定的資料。 在這個案例中，您將指定銷售員工只能瀏覽本身所屬銷售地區的網際網路銷售資料。  
   
 您將要完成一系列工作，才能完成這個補充課程。 例如此 Adventure Works 表格式模型案例專屬的工作就是這類工作，但不一定適用於真實案例。 每一項工作都包含描述工作目的的其他資訊。  
   
-完成本課程的估計時間： **30 分鐘**  
+完成本課程的估計時間：**30 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 這個補充課程主題是表格式模型教學課程的一部分，必須依序完成。 在執行本補充課程中的工作之前，您應已完成之前所有課程。  
@@ -41,7 +41,7 @@ ms.locfileid: "38984382"
   
 2.  在 [現有連接] 對話方塊中，確認已選取 [Adventure Works DB from SQL] 資料來源連接，然後按一下 [開啟]。  
   
-    如果出現 [模擬認證] 對話方塊，請輸入您在第 2 課＜加入資料＞中使用的模擬認證。  
+    如果出現 [模擬認證] 對話方塊中，輸入您所使用的模擬認證在第 2 課：加入資料。  
   
 3.  在 [選擇如何匯入資料] 頁面上，讓 [從資料表和檢視表清單來選取要匯入的資料] 保持選取狀態，然後按一下 [下一步]。  
   
@@ -115,7 +115,7 @@ FactInternetSales、 DimGeography 和 DimSalesTerritory 資料表全都包含常
 在這項工作中，您將建立新的使用者角色。 此角色將會包含定義 DimSalesTerritory 資料表的資料列會對使用者顯示的資料列篩選器。 篩選條件則會套用至 DimSalesTerritory 相關的所有其他資料表的一對多關聯性方向中。 您也會套用簡單的篩選條件，以防止任何使用者角色的成員可以查詢整個 EmployeeSecurity 資料表。  
   
 > [!NOTE]  
-> 您在這個課程中建立的 Sales Employees by Territory 角色會限制成員只能瀏覽 (或查詢) 本身所屬銷售地區的銷售資料。 如果您將使用者新增為成員 Sales employees by Territory 角色同時也是在中建立的角色中的成員[第 11 課： 建立角色](../analysis-services/lesson-11-create-roles.md)，您會獲得合併的權限。 當使用者是多個角色的成員時，針對每個角色定義的權限和資料列篩選器會累計。 也就是說，該使用者將具有大於角色組合所決定的權限。  
+> 您在這個課程中建立的 Sales Employees by Territory 角色會限制成員只能瀏覽 (或查詢) 本身所屬銷售地區的銷售資料。 如果您將使用者新增為成員 Sales employees by Territory 角色同時也是在中建立的角色中的成員[第 11 課：建立角色](../analysis-services/lesson-11-create-roles.md)，您會獲得合併的權限。 當使用者是多個角色的成員時，針對每個角色定義的權限和資料列篩選器會累計。 也就是說，該使用者將具有大於角色組合所決定的權限。  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>若要建立 Sales Employees by Territory 使用者角色  
   
@@ -186,6 +186,6 @@ FactInternetSales、 DimGeography 和 DimSalesTerritory 資料表全都包含常
     這個使用者無法瀏覽或查詢本身所屬地區以外之地區的任何網際網路銷售資料，因為 Sales Employees by Territory 使用者角色中針對 Sales Territory 資料表所定義的資料列篩選器有效地保護了與其他銷售地區相關之所有資料的安全。  
   
 ## <a name="see-also"></a>另請參閱  
-[使用者名稱的函式 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)  
-[LOOKUPVALUE 函式 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)  
-[CUSTOMDATA 函式 (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+[USERNAME 函數 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)  
+[LOOKUPVALUE 函數 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)  
+[CUSTOMDATA 函數 (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  

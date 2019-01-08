@@ -1,5 +1,5 @@
 ---
-title: 設定及檢視 SharePoint 與診斷記錄 |Microsoft 文件
+title: 設定及檢視 SharePoint 與診斷記錄 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9d36c65115f1ad786340ec8a4058bd20c52cb6a1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e2df09cb9bf167c0af28c240ff69f8666cce01a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027215"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410415"
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>設定及檢視 SharePoint 與診斷記錄
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "34027215"
   
 8.  選取 **[詳細資訊]** ，將所有事件記錄到追蹤記錄檔。  
   
-9. 按一下 **[確定]**。  
+9. 按一下 [確定] 。  
   
 ##  <a name="bkmk_how2viewlogfiles"></a> 如何檢視 SharePoint 記錄檔  
  記錄檔是文字檔。 您可以使用任何文字編輯器來開啟它們。 您也可以使用協力廠商的記錄檢視器應用程式。  
@@ -76,7 +76,7 @@ ms.locfileid: "34027215"
   
 -   若是提供相互關聯識別碼的錯誤，請複製該識別碼，並將其當做記錄檔中的搜尋詞彙使用。  
   
--   搜尋錯誤狀態「高」或「例外狀況」。 搜尋「[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務」。  
+-   搜尋錯誤狀態「高」或「例外狀況」。 搜尋"[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]服務 」。  
   
 -   如果您知道錯誤發生的時間，請使用日期和時間資訊縮小您必須捲動之項目的範圍。  
   
@@ -116,13 +116,13 @@ ms.locfileid: "34027215"
 #### <a name="entries-for-power-pivot-services"></a>Power Pivot 服務的項目  
  下表描述很可能在 SharePoint 記錄檔中找到之 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 伺服器作業的項目。  
   
-|處理|區域|類別目錄|Level|訊息|詳細資料|  
+|處理|區域|類別目錄|層級|訊息|詳細資料|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務|使用方式|Verbose|目前沒有要求統計資料，沒有要記錄的項目。|服務報表會在預先定義的間隔查詢回應統計資料，做為使用量資料集合系統的使用量事件。 此訊息表示沒有要報告的查詢統計資料。|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務|Web 前端|Verbose|開始尋找資料來源的應用程式伺服器 =\<*路徑*>|當它收到連接要求時， [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務會識別可用的 [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] 來處理要求。 如果伺服陣列中只有一個伺服器，在所有情況下本機伺服器都會接受要求。|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務|使用量|「詳細資訊」|目前沒有要求統計資料，沒有要記錄的項目。|服務報表會在預先定義的間隔查詢回應統計資料，做為使用量資料集合系統的使用量事件。 此訊息表示沒有要報告的查詢統計資料。|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務|Web 前端|「詳細資訊」|開始尋找資料來源的應用程式伺服器 =\<*路徑*>|當它收到連接要求時， [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務會識別可用的 [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] 來處理要求。 如果伺服陣列中只有一個伺服器，在所有情況下本機伺服器都會接受要求。|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務|Web 前端|「詳細資訊」|尋找應用程式伺服器成功。|此要求會配置到 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務應用程式。|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務|Web 前端|Verbose|要求重新導向\< *PowerPivotdata 來源*> 至[!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)]。|此要求會轉送至 [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)]。|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務|[要求處理]|Verbose|使用者名稱的要求重新導向\<*SharePoint 使用者*> 資料庫|系統會代表 SharePoint 使用者建立模擬的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 資料來源連接。|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務|Web 前端|「詳細資訊」|要求重新導向\< *PowerPivotdata 來源*> 至[!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)]。|此要求會轉送至 [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)]。|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務|[要求處理]|「詳細資訊」|使用者名稱的要求重新導向\<*SharePoint 使用者*> 資料庫|系統會代表 SharePoint 使用者建立模擬的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 資料來源連接。|  
   
 ## <a name="see-also"></a>另請參閱  
  [PowerPivot 使用量資料收集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)   

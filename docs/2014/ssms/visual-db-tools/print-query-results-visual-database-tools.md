@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [SQL Server], queries
@@ -15,12 +15,12 @@ ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09b9f0286f368f38c339a6001a576914b0def6ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a768b1e05bc123aecec4175ed6f66f6d920e1806
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065738"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755590"
 ---
 # <a name="print-query-results-visual-database-tools"></a>列印查詢結果 (Visual Database Tools)
   若要列印查詢結果，可將 [結果窗格](visual-database-tools.md) 的內容複製到其他的 Windows 程式，例如 Word Processing 程式，然後格式化並列印。  

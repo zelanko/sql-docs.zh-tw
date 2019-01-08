@@ -1,5 +1,5 @@
 ---
-title: 修改 [產品] 維度 |Microsoft 文件
+title: 修改 [產品] 維度 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b35f1712af9d501ff35a92cecb0eeea068d9aac0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6fd0617d5c3d79ae0cf2eb7021f730a8062bd969
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019565"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525838"
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>課程 3-3-修改 [產品] 維度
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "34019565"
   
 2.  在 [維度結構] 索引標籤的 [屬性] 窗格中，選取 [產品線]。  
   
-3.  在畫面右側的 [屬性] 視窗中，按一下視窗底部的 **NameColumn** 屬性欄位，然後按一下瀏覽 (**...**) 按鈕，即可開啟 [名稱資料行] 對話方塊。 (您可能需要按一下畫面右側的 [屬性] 索引標籤開啟 [屬性] 視窗)。  
+3.  在畫面右側的 屬性 視窗中按一下**NameColumn**屬性 視窗中，底部的欄位，然後按一下 瀏覽 (**...**) 按鈕，即可開啟**名稱資料行** 對話方塊。 (您可能需要按一下畫面右側的 [屬性] 索引標籤開啟 [屬性] 視窗)。  
   
 4.  選取 [來源資料行] 清單底部的 [ProductLineName]，然後按一下 [確定]。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34019565"
   
 5.  在 [維度結構] 索引標籤的 [屬性] 窗格中，選取 [產品金鑰]。  
   
-6.  在 [屬性] 視窗中按一下 [NameColumn] 屬性欄位，然後按一下省略符號瀏覽 (**...**) 按鈕，即可開啟 [名稱資料行] 對話方塊。  
+6.  在 [屬性] 視窗中，按一下**NameColumn**屬性欄位，，然後按一下 [省略符號瀏覽 (**...**) 按鈕，即可開啟**名稱資料行**] 對話方塊。  
   
 7.  選取 [來源資料行] 清單中的 [EnglishProductName]，然後按一下 [確定]。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "34019565"
   
     然後，在 [關聯性類型] 清單中，保持關聯性類型設定為 [彈性] 的狀態，因為成員之間的關聯性可能會隨著時間而變更。 例如，產品型號最後可能會移至不同的產品線。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
 5.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "34019565"
 [修改 Date 維度](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[在資料來源檢視 & #40; 中定義具名的計算Analysis Services & #41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+[在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [建立使用者定義階層](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [設定屬性階層的 &#40;全部&#41; 層級](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

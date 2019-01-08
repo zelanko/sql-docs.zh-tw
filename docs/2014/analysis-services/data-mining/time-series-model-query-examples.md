@@ -21,12 +21,12 @@ ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 729f50c43b277b6456d834e7706c026b36cddfae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4098a1b5eade3705e10ab609c47454564a18101d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067988"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511406"
 ---
 # <a name="time-series-model-query-examples"></a>時間序列模型查詢範例
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 例如，時間序列模型的內容查詢可能會提供有關所偵測到之週期性結構的其他詳細資料，而預測查詢則為您提供下 5-10 個時間配量的預測。 您也可以使用查詢來擷取有關模型的中繼資料。  
@@ -54,7 +54,7 @@ ms.locfileid: "48067988"
 ## <a name="getting-information-about-a-time-series-model"></a>取得有關時間序列模型的資訊  
  模型內容查詢可以提供有關此模型的基本資訊，例如在建立模型時所使用的參數以及上次處理模型的時間。 下列範例說明使用資料採礦結構描述資料列集來查詢模型內容的基本語法。  
   
-###  <a name="bkmk_Query1"></a> 範例查詢 1：擷取模型的週期性提示  
+###  <a name="bkmk_Query1"></a> 範例查詢 1:擷取模型的週期性提示  
  您可以擷取時間序列中所找到的週期性，其方式是查詢 ARIMA 樹狀結構或 ARTXP 樹狀結構。 但是，完成之模型中的週期性可能不會與當您建立模型時指定為提示的週期相同。 若要擷取當您建立模型時提供為參數的提示，您可以使用下列 DMX 陳述式來查詢採礦模型內容結構描述資料列集：  
   
 ```  
@@ -74,7 +74,7 @@ WHERE MODEL_NAME = '<model name>'
 > [!NOTE]  
 >  這裡的結果已被截斷來提高可讀性。  
   
-###  <a name="bkmk_Query2"></a> 範例查詢 2：擷取 ARIMA 模型的方程式  
+###  <a name="bkmk_Query2"></a> 範例查詢 2:擷取 ARIMA 模型的方程式  
  您可以查詢個別樹狀結構中的任何節點來擷取 ARIMA 模型的方程式。 請記住，ARIMA 模型中的每一個樹狀結構都代表不同的週期性，而且如果有多個資料數列，每一個資料數列都將有它自己的一組週期性樹狀結構。 因此，若要擷取特定資料數列的方程式，您必須先識別此樹狀結構。  
   
  例如，TA 前置詞告訴您此節點是 ARIMA 樹狀結構的一部分，而 TS 前置詞則用於 ARTXP 樹狀結構。 您可以尋找所有的 ARIMA 根樹狀結構，其方式是查詢具有 NODE_TYPE 值 27 之節點的模型內容。 您也可以使用 ATTRIBUTE_NAME 的值來尋找特定資料數列的 ARIMA 根節點。 此查詢範例會尋找代表在歐洲地區銷售之 R250 型號數量的 ARIMA 節點。  
@@ -100,13 +100,13 @@ WHERE NODE_NAME = 'TA00000007'
   
 |簡短的方程式|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24….|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24...|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   
- 如需如何解譯這項資訊的詳細資訊，請參閱[時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
+ 如需如何解譯這項資訊的詳細資訊，請參閱 [時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
   
-###  <a name="bkmk_Query3"></a> 範例查詢 3：擷取 ARTXP 模型的方程式  
+###  <a name="bkmk_Query3"></a> 範例查詢 3:擷取 ARTXP 模型的方程式  
  如果是 ARTxp 模型，每一層的樹狀結構上會儲存不同的資訊。 如需 ARTxp 模型的結構及如何解譯方程式內資訊的詳細資訊，請參閱[時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
   
  下列 DMX 陳述式會擷取屬於 ARTxp 樹狀結構之一部分的資訊，該資訊代表在歐洲銷售之 R250 型號的數量。  
@@ -124,7 +124,7 @@ WHERE NODE_ATTRIBUTE_NAME = 'R250 Europe:Quantity'
 AND NODE_TYPE = 15  
 ```  
   
- 如需如何解譯這項資訊的詳細資訊，請參閱[時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
+ 如需如何解譯這項資訊的詳細資訊，請參閱 [時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
   
 ## <a name="creating-predictions-on-a-time-series-model"></a>建立時間序列模型的預測  
  從 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]開始，您就可以將新的資料加入至時間序列模型，並自動將新的資料併入模型中。 您可以使用下列兩種方式的其中一種，將新的資料加入至時間序列採礦模型：  
@@ -136,13 +136,13 @@ AND NODE_TYPE = 15
 ###  <a name="bkmk_ReplaceExtend"></a> 了解取代和擴充作業的行為  
  當您將新的資料加入時間序列模型時，可以指定是要擴充還是取代定型資料：  
   
--   **擴充：** 當您擴充資料數列時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在現有定型資料的結尾加入新的資料。 定型案例的數目也會增加。  
+-   **擴充：** 當您擴充資料數列時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]現有的定型資料的結尾處新增 新的資料。 定型案例的數目也會增加。  
   
      擴充此模型案例對於持續以新的資料更新模型非常實用。 例如，如果您想要讓定型集隨著時間成長，只要擴充模型即可。  
   
-     若要擴充資料，您建立`PREDICTION JOIN`時間序列模型上指定新的資料來源，並使用`EXTEND_MODEL_CASES`引數。  
+     若要擴充資料，您會在時間序列模型上建立 `PREDICTION JOIN`、指定新資料的來源，並使用 `EXTEND_MODEL_CASES` 引數。  
   
--   **取代：** 當您取代資料數列中的資料時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會保留定型的模型，但是會使用新的資料來取代部分或所有現有的定型案例。 因此，定型資料的大小絕對不會改變，但是案例本身則會持續被更新的資料所取代。 如果您提供足夠的新資料，您可以使用完全新的序列來取代定型資料。  
+-   **取代：** 當您取代資料數列中的資料[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]會保留定型的模型，但是會使用新的資料值來取代部分或所有現有的定型案例。 因此，定型資料的大小絕對不會改變，但是案例本身則會持續被更新的資料所取代。 如果您提供足夠的新資料，您可以使用完全新的序列來取代定型資料。  
   
      當您想要定型一組案例上的模型，然後將該模型套用到不同的資料數列時，取代模型案例會非常實用。  
   
@@ -179,7 +179,7 @@ AND NODE_TYPE = 15
 ###  <a name="bkmk_REPLACE"></a> 使用 REPLACE_MODEL_CASES 做出預測  
  當您取代模型中的案例時，此模型的大小會維持相同，但是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會取代此模型中的個別案例。 在交叉預測以及將訓練資料集維持一致大小非常重要的案例下，這種作法會很有用。  
   
- 例如，假設其中一個存放區的銷售資料不足。 您可以建立一般模型，其方式是將特定區域中所有存放區的銷售量加以平均，然後定型模型。 然後，若要做出預測的存放區沒有足夠銷售資料，您建立`PREDICTION JOIN`只針對該存放區的新銷售資料。 當您這樣做時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會保留衍生自區域模型的模式，但是會使用個別存放區中的資料來取代現有的定型案例。 因此，您的預測值將會比較接近於個別存放區的趨勢線。  
+ 例如，假設其中一個存放區的銷售資料不足。 您可以建立一般模型，其方式是將特定區域中所有存放區的銷售量加以平均，然後定型模型。 然後，若要在沒有足夠銷售資料的情況下為存放區做出預測，您可以只針對該存放區的新銷售資料建立 `PREDICTION JOIN`。 當您這樣做時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會保留衍生自區域模型的模式，但是會使用個別存放區中的資料來取代現有的定型案例。 因此，您的預測值將會比較接近於個別存放區的趨勢線。  
   
  當您使用 `REPLACE_MODEL_CASES` 引數時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會持續將新的案例加入案例集的結尾，並從此案例集的開頭刪除對應的數字。 如果您加入的資料多於原始定型集中的資料， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會捨棄最早的資料。 如果您提供足夠的新值，可以根據完全新的資料來做出預測。  
   
@@ -209,8 +209,8 @@ AND NODE_TYPE = 15
   
 |||  
 |-|-|  
-|預測函數|使用方式|  
-|[延隔&#40;DMX&#41;](/sql/dmx/lag-dmx)|傳回目前案例的日期與定型集的最後日期之間的時間配量數目。<br /><br /> 這個函數的典型用法就是用來識別最近的定型案例，好讓您可以擷取有關案例的詳細資料。|  
+|預測函數|使用量|  
+|[Lag &#40;DMX&#41;](/sql/dmx/lag-dmx)|傳回目前案例的日期與定型集的最後日期之間的時間配量數目。<br /><br /> 這個函數的典型用法就是用來識別最近的定型案例，好讓您可以擷取有關案例的詳細資料。|  
 |[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|傳回指定之可預測資料行的節點識別碼。<br /><br /> 這個函數的典型用法就是用來識別產生特定預測值的節點，好讓您可以檢閱與此節點有關的案例，或擷取方程式和其他詳細資料。|  
 |[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|傳回指定之可預測資料行中預測的標準差。<br /><br /> 此函數會取代 INCLUDE_STATISTICS 引數，時間序列模型不支援這個引數。|  
 |[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|傳回指定之可預測資料行中預測的變異數。<br /><br /> 此函數會取代 INCLUDE_STATISTICS 引數，時間序列模型不支援這個引數。|  
@@ -222,6 +222,6 @@ AND NODE_TYPE = 15
  [資料採礦查詢](data-mining-queries.md)   
  [Microsoft 時間序列演算法](microsoft-time-series-algorithm.md)   
  [Microsoft 時間序列演算法技術參考](microsoft-time-series-algorithm-technical-reference.md)   
- [時間序列模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

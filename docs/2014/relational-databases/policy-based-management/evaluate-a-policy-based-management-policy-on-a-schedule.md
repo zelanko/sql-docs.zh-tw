@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, evaluate policy
@@ -12,12 +12,12 @@ ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2a3f5d6d9e79e963063cdd3a2fa18973a445fe41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7652f9ebacf5e673738c4144878870eb156d944
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191518"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780940"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>依照排程評估原則式管理原則
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中依照排程評估原則式管理原則。  
@@ -53,7 +53,7 @@ ms.locfileid: "48191518"
   
 5.  以滑鼠右鍵按一下您想要評估其排程的原則，然後選取 [屬性]。  
   
-6.  在 [開啟原則 - <原則名稱>] 對話方塊的 [評估模式] 清單中，選取 [按排程時間]。  
+6.  在 [開啟原則 -policy_name] 對話方塊的 [評估模式] 清單中，選取 [按排程時間]。  
   
 7.  在 **[排程]** 底下，按一下 **[挑選]** 指定現有的排程，或按一下 **[新增]** 建立新的排程。  
   

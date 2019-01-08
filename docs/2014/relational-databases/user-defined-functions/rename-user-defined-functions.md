@@ -10,12 +10,12 @@ ms.assetid: c2695a5c-9cc5-4b18-8771-53027ca9a9af
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c0993dfccf1ab48d509f47e5d179402240b453cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3419faca26d9d252610c07cb994ab5faa738f937
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219943"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399181"
 ---
 # <a name="rename-user-defined-functions"></a>重新命名使用者定義函數
   您可以透過使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，重新命名 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的使用者定義函數。  
@@ -67,12 +67,12 @@ ms.locfileid: "48219943"
   
 4.  以滑鼠右鍵按一下您要重新命名的函數，然後選取 [重新命名]。  
   
-5.  輸入函數的新名稱。  
+5.  輸入函式的新名稱。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要重新命名使用者定義函數**  
   
- 您無法使用 Transact-SQL 陳述式來執行這項工作。 若要使用 Transact-SQL 來重新命名使用者定義函數，您必須先刪除現有的函數，然後使用新的名稱來重新建立函數。 確定使用函數舊名稱的所有程式碼和應用程式現在都使用新名稱。  
+ 您無法使用 Transact-SQL 陳述式來執行這項工作。 若要使用 Transact-SQL 來重新命名使用者定義函數，您必須先刪除現有的函數，然後使用新的名稱來重新建立函數。 確定使用函式舊名稱的所有程式碼和應用程式現在都使用新名稱。  
   
  如需詳細資訊，請參閱 [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql) 和 [DROP FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-function-transact-sql)。  
   

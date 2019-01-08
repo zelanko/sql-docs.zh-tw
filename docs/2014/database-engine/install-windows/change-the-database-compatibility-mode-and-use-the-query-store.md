@@ -14,12 +14,12 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9422afe49ecd31512b22995767ead61b7e9f4cce
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018463"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352510"
 ---
 # <a name="migrate-query-plans"></a>移轉查詢計劃
   在大多數的情況下，將資料庫升級到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的最新版，可提升查詢效能。 但是，如果您的關鍵任務查詢已針對效能謹慎地加以微調，您可能會想要在升級之前為這些查詢保留查詢計劃，透過的方式是為每一個查詢建立計畫指南。 如果在升級之後，查詢最佳化工具針對一個或多個查詢選擇比較沒有效率的計畫，您可啟用計畫指南，並強制查詢最佳化工具使用升級前計畫。  
@@ -79,10 +79,10 @@ EXECUTE sp_create_plan_guide
 @type = N'SQL',  
 @module_or_batch = NULL,  
 @params = NULL,  
-@hints = N'OPTION(USE PLAN N''<ShowPlanXML xmlns=''''http://schemas.microsoft.com/sqlserver/2004/07/showplan''''   
+@hints = N'OPTION(USE PLAN N''<ShowPlanXML xmlns=''''https://schemas.microsoft.com/sqlserver/2004/07/showplan''''   
     Version=''''0.5'''' Build=''''9.00.1116''''>  
     <BatchSequence><Batch><Statements><StmtSimple>  
-    …  
+    ...  
     </StmtSimple></Statements></Batch>  
     </BatchSequence></ShowPlanXML>'')';  
 GO  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - disk space [SQL Server], indexes
@@ -17,12 +16,12 @@ ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0464304a23e53762b3e2eb887383b111764379fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192058"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778421"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>估計堆積的大小
   您可以使用下列步驟，估計儲存堆積中的資料所需的空間量：  
@@ -58,7 +57,7 @@ ms.locfileid: "48192058"
      加入至 ***Max_Var_Size*** 的位元組是用於追蹤每個可變長度的資料行。 這個公式假設所有可變長度的資料行是 100% 填滿的。 如果您預期可變長度資料行儲存所佔空間的百分比會比較低，您可以經由調整百分比所得的 ***Max_Var_Size*** 值，取得更精確的整體資料表大小。  
   
     > [!NOTE]  
-    >  您可以結合`varchar`， `nvarchar`， `varbinary`，或`sql_variant`使定義的資料表總寬度超過 8,060 個位元組的資料行。 這些資料行的每個長度仍必須符合 8,000 個位元組的限制內`varchar`， `nvarchar,``varbinary`，或`sql_variant`資料行。 然而，結合的寬度可能超過資料表中 8,060 位元組的限制。  
+    >  您可以結合使定義的資料表總寬度超過 8,060 個位元組的 `varchar`、`nvarchar`、`varbinary` 或 `sql_variant` 資料行。 這些資料行的每個長度仍必須符合 8,000 個位元組的限制內`varchar`， `nvarchar,``varbinary`，或`sql_variant`資料行。 然而，結合的寬度可能超過資料表中 8,060 位元組的限制。  
   
      如果沒有可變長度資料行，請將 ***Variable_Data_Size*** 設成 0。  
   

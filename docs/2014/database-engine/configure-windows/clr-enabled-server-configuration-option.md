@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - assemblies [CLR integration], verifying can run
@@ -14,12 +13,12 @@ ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a796426f02c2ad9c0878c212c51eb0e90cfce8bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45c72bc5b811fec8e5532d5d03d4552cc2e0d319
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219372"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641299"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>CLR 已啟用伺服器組態選項
   使用 clr enabled 選項來指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是否能執行使用者組件。 clr enabled 選項提供下列值。  
@@ -35,7 +34,7 @@ ms.locfileid: "48219372"
 >  執行 RECONFIGURE 且 clr enabled 選項的執行值從 1 變更為 0 時，會立即卸載包含使用者組件的所有應用程式網域。  
   
 > [!NOTE]  
->  輕量型共用不支援 Common Language Runtime (CLR) 的執行。 停用下列一或兩個選項："clr enabled" 或 "lightweight pooling"。 依賴 CLR 而且會無法正常運作在 fiber 模式下的功能包括`hierarchy`資料類型、 複寫和以原則為基礎的管理。  
+>  輕量型共用不支援 Common Language Runtime (CLR) 的執行。 停用下列一或兩個選項："clr enabled" 或 "lightweight pooling"。 依賴 CLR 而且在 Fiber 模式下無法正常運作的功能包括 `hierarchy` 資料類型、複寫和以原則為基礎的管理。  
   
 ## <a name="example"></a>範例  
  以下範例會先顯示使用 clr 已啟用選項的目前設定，然後將選項值設定為 1 來啟用選項。 若要停用此選項，請將值設定為 0。  

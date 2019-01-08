@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1a0d8e895189e3fe71d9d99178beff7cd603208
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf59655f907b048d08166e8cb7ef1e0f4bc63503
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103968"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771240"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>使用 ODBC 目的地來載入資料
   此程序說明如何透過使用 ODBC 目的地載入資料。 若要加入及設定 ODBC 目的地，封裝必須已包括至少一個「資料流程」工作與來源。  
@@ -35,9 +34,9 @@ ms.locfileid: "48103968"
   
 6.  選取資料存取方法。  
   
-    -   **資料表名稱 - 批次**：若要將 ODBC 目的地設定成以批次模式運作，請選取此選項。 當您選取此選項時，可以設定 **[批次大小]**。  
+    -   **資料表名稱-批次**:若要將 ODBC 目的地設定成以批次模式運作，請選取此選項。 當您選取此選項時，可以設定 **[批次大小]**。  
   
-    -   **資料表名稱 - 逐列**：若要將 ODBC 目的地設定成插入每個資料列至目的地資料表 (一次一個)，請選取此選項。 當您選取此選項時，資料會以一次一個資料列的方式載入到資料表。  
+    -   **資料表名稱-逐列**:若要將 ODBC 目的地設定成插入每個資料列至目的地資料表 (一次一個)，請選取此選項。 當您選取此選項時，資料會以一次一個資料列的方式載入到資料表。  
   
 7.  在 **[資料表或檢視表的名稱]** 欄位中，從清單中選取資料庫中可用的資料表或檢視表，或是輸入可識別資料表的規則運算式。此清單只包含前 1000 個資料表。 如果您的資料庫包含超過 1000 個資料表，您可以輸入資料表名稱的開頭或使用 (*) 萬用字元來輸入名稱的任何部分，以便顯示您想要使用的資料表。  
   
@@ -52,8 +51,8 @@ ms.locfileid: "48103968"
 12. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [ODBC 目的地編輯器&#40;連線管理員頁面&#41;](../odbc-destination-editor-connection-manager-page.md)   
+ [ODBC 目的地編輯器 &#40;連接管理員頁面&#41;](../odbc-destination-editor-connection-manager-page.md)   
  [ODBC 目的地編輯器 &#40;對應頁面&#41;](../odbc-destination-editor-mappings-page.md)   
- [ODBC 來源編輯器&#40;錯誤輸出頁面&#41;](../odbc-source-editor-error-output-page.md)  
+ [ODBC 來源編輯器 &#40;錯誤輸出頁面&#41;](../odbc-source-editor-error-output-page.md)  
   
   

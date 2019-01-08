@@ -11,12 +11,12 @@ ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3c0e257a3fe1b4aff1f1c9336f4cb11e8a12e613
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5982bd49a5b7847cb8c09a7e46ca077bbe0e2d2b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088728"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521622"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>定義未知的成員和 Null 處理屬性
   當 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 處理維度時，資料來源檢視中之資料表或檢視內基礎資料行的所有相異值會在維度中擴展屬性。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在處理期間發現 Null 值，它預設會將這個 Null 轉換成零 (若為數值資料行) 或空字串 (若為字串資料行)。 您可以在基礎關聯式資料倉儲的擷取、轉換和載入過程中，修改這些預設值或轉換 Null 值 (如果有的話)。 此外，您也可以設定下列三個屬性，藉以讓 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 將 Null 值轉換成指定的值：維度的 [UnknownMember] 和 [UnknownMemberName] 屬性 (property)，以及維度索引鍵屬性 (attribute) 的 [NullProcessing] 屬性 (property)。  
@@ -90,7 +90,7 @@ ms.locfileid: "48088728"
   
 9. 在 **屬性**窗格中，變更這個屬性的名稱新增至`Category`。  
   
-10. 在 [屬性] 視窗的 [NameColumn] 屬性欄位中按一下，然後按一下瀏覽 (**…**) 按鈕，即可開啟 [名稱資料行] 對話方塊。  
+10. 在 [屬性] 視窗中，按一下**NameColumn**屬性欄位，然後按一下 [瀏覽 (**...**) 按鈕，即可開啟**名稱資料行**] 對話方塊。  
   
 11. 選取 [來源資料行] 清單中的 [EnglishProductCategoryName]，然後按一下 [確定]。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48088728"
   
 13. 在 **屬性**窗格中，變更這個屬性的名稱新增至`Subcategory`。  
   
-14. 在 [屬性] 視窗的 [NameColumn] 屬性欄位中按一下，然後按一下瀏覽 (**…**) 按鈕，即可開啟 [名稱資料行] 對話方塊。  
+14. 在 屬性 視窗中，按一下**NameColumn**屬性欄位，然後按一下 瀏覽 **（...）**  按鈕以開啟**名稱資料行** 對話方塊。  
   
 15. 選取 [來源資料行] 清單中的 [EnglishProductSubcategoryName]，然後按一下 [確定]。  
   

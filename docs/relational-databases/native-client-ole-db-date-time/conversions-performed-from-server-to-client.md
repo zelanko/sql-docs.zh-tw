@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad07d16aec3f215c8c9d854e872f8c0555f34747
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f5df8d27f39918cb8ddac4dd46dd8b3ca4449c5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647416"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399121"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>從伺服器到用戶端執行的轉換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47647416"
   本主題描述在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (或更新版本) 和以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 撰寫之用戶端應用程式之間執行的日期/時間轉換。  
   
 ## <a name="conversions"></a>轉換  
- 下表描述傳回用戶端之類行與繫結中之類型之間的轉換。 對於輸出參數，如果已呼叫 icommandwithparameters:: Setparameterinfo，並在指定的型別*pwszDataSourceType*不的符合伺服器將會執行實際的型別，在伺服器上，隱含的轉換並傳回給用戶端的類型會比對 icommandwithparameters:: Setparameterinfo 透過指定的型別。 當伺服器的轉換規則與本主題中描述的規則不同時，這可能會導致非預期的轉換結果。 例如，必須提供預設日期時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 1900-1-1 而非 1899-12-30。  
+ 下表描述傳回用戶端之類行與繫結中之類型之間的轉換。 對於輸出參數，如果已呼叫 icommandwithparameters:: Setparameterinfo，並在指定的型別*pwszDataSourceType*不的符合伺服器將會執行實際的型別，在伺服器上，隱含的轉換並傳回給用戶端的類型會比對 icommandwithparameters:: Setparameterinfo 透過指定的型別。 這可能會導致非預期的轉換結果時伺服器的轉換規則會不同於本主題中所述。 例如，必須提供預設日期時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 1900-1-1 而非 1899-12-30。  
   
 |目標 -><br /><br /> 來源|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
@@ -38,7 +38,7 @@ ms.locfileid: "47647416"
 |DATETIME|5,7|8|9,10|10|[確定]|3|7|-|7 (VT_DATE)|[確定]|[確定]|4|4|  
 |Datetime2|5,7|8|9,10|10|7|3|5,7|-|[確定] \(VT_BSTR)|[確定]|[確定]|4|4|  
 |Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|[確定]|5,7,11|-|[確定] \(VT_BSTR)|[確定]|[確定]|4|4|  
-|Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12,9|12|12|12|7,13|不適用|不適用|不適用|不適用|不適用|不適用|  
+|Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12,9|12|12|12|7,13|N/A|N/A|N/A|N/A|N/A|N/A|  
 |Sql_variant<br /><br /> (datetime)|7|8|9,10|10|[確定]|3|7|-|7 (VT_DATE)|[確定]|[確定]|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|[確定]|3|7|-|7 (VT_DATE)|[確定]|[確定]|4|4|  
 |Sql_variant<br /><br /> (date)|1,7|[確定]|2|2|1|1,3|1,7|-|OK(VT_BSTR)|[確定]|[確定]|4|4|  

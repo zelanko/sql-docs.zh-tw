@@ -20,12 +20,12 @@ ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dbcd828ea886bd1c83b327cae9a49bca4668ef15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd497326f278dcc01b4fa81a0e64da6a93cbe8cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617896"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518807"
 ---
 # <a name="syscolumnstoredictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47617896"
 |**column_id**|**int**|從 1 開始的資料行存放區資料行的識別碼。 第一個資料行具有識別碼 = 1，第二個資料行具有識別碼 = 2，等等。|  
 |**dictionary_id**|**int**|可以有兩種類型的全域和本機的資料行區段相關聯的字典。 Dictionary_id 為 0 表示通用的字典，其會在所有資料行區段 （一個用於每個資料列群組） 針對該資料行之間共用。|  
 |**version**|**int**|字典格式的版本。|  
-|**type**|**int**|字典類型：<br /><br /> 1 – 雜湊字典包含**int**值<br /><br /> 2 – 未使用<br /><br /> 3 – 包含字串值的雜湊字典<br /><br /> 4-雜湊字典包含**浮點數**值<br /><br /> 如需字典的詳細資訊，請參閱[資料行存放區索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md)。|  
+|**type**|**int**|字典類型：<br /><br /> 1-雜湊字典包含**int**值<br /><br /> 2-不使用<br /><br /> 3-雜湊字典，其中包含字串值<br /><br /> 4-雜湊字典包含**浮點數**值<br /><br /> 如需字典的詳細資訊，請參閱[資料行存放區索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md)。|  
 |**last_id**|**int**|字典中的最後一個資料識別碼。|  
 |**entry_count**|**bigint**|字典中的項目數。|  
 |**on_disc_size**|**bigint**|字典的大小 (以位元組為單位)。|  
@@ -54,7 +54,7 @@ ms.locfileid: "47617896"
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢 SQL Server 系統目錄常見問題集](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.all_columns &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.all_columns &#40;-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys.computed_columns &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [資料行存放區索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md)   
  [資料行存放區索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md)   

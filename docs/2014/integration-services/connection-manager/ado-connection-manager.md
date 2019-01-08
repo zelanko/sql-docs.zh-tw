@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], ADO
@@ -15,24 +14,24 @@ ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d5f03c184e8df929b29f1e79970024af59ac096
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a3de88bb97246d896df2d30cfd5879baad38893
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054551"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757980"
 ---
 # <a name="ado-connection-manager"></a>ADO 連接管理員
   ADO 連接管理員可讓封裝連接到 ActiveX Data Objects (ADO) 物件，例如資料錄集。 這個連接管理員一般用在以舊版語言 (例如 Microsoft Visual Basic 6.0) 所撰寫的自訂工作中，或用於做為使用 ADO 連接到資料來源之現有應用程式一部份的自訂工作中。  
   
- 當您將 ADO 連接管理員加入封裝時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]建立連接管理員，會解析為 ADO 連接，在執行階段、 設定連接管理員屬性，以及將連接管理員加入至`Connections`封裝的集合。 `ConnectionManagerType`連接管理員屬性設定為`ADO`。  
+ 當您將 ADO 連接管理員加入封裝時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]建立連接管理員，會解析為 ADO 連接，在執行階段、 設定連接管理員屬性，以及將連接管理員加入至`Connections`封裝的集合。 連接管理員的 `ConnectionManagerType` 屬性會設為 `ADO`。  
   
 ## <a name="troubleshooting-the-ado-connection-manager"></a>疑難排解 ADO 連接管理員  
  由 ADO 連接管理員讀取時，某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期資料類型會產生如下表所示結果。  
   
 |SQL Server 資料類型|結果|  
 |--------------------------|------------|  
-|`time`, `datetimeoffset`|除非封裝使用參數化 SQL 命令，否則封裝會失敗。 若要使用參數化 SQL 命令，請在封裝中使用「執行 SQL 工作」。 如需詳細資訊，請參閱 [執行 SQL 工作](../control-flow/execute-sql-task.md) 和 [執行 SQL 工作中的參數和傳回碼](../parameters-and-return-codes-in-the-execute-sql-task.md)。|  
+|`time`、 `datetimeoffset`|除非封裝使用參數化 SQL 命令，否則封裝會失敗。 若要使用參數化 SQL 命令，請在封裝中使用「執行 SQL 工作」。 如需詳細資訊，請參閱 [執行 SQL 工作](../control-flow/execute-sql-task.md) 和 [執行 SQL 工作中的參數和傳回碼](../parameters-and-return-codes-in-the-execute-sql-task.md)。|  
 |`datetime2`|ADO 連接管理員會截斷毫秒值。|  
   
 > [!NOTE]  
@@ -53,11 +52,11 @@ ms.locfileid: "48054551"
   
  如需有關可在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請按下列主題：  
   
--   [設定 OLE DB 連線管理員](ole-db-connection-manager.md)  
+-   [設定 OLE DB 連接管理員](ole-db-connection-manager.md)  
   
- 以程式設計方式設定連接管理員的相關資訊，請參閱<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>並[連線以程式設計方式加入](../building-packages-programmatically/adding-connections-programmatically.md)。  
+ 如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Integration Services &#40;SSIS&#41;連線](integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41; 連接](integration-services-ssis-connections.md)  
   
   

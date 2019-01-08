@@ -11,12 +11,12 @@ ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a955d01840995c269f94de4d83a038c0b26cc725
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 39db8cb33e2adbf24ff03b6ad84dfefe0e8bfb81
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142984"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504642"
 ---
 # <a name="defining-and-browsing-translations"></a>定義和瀏覽翻譯
   翻譯是指採用特定語言之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件名稱的表示。 這些物件包括量值群組、量值、維度、屬性、階層、KPI、動作和導出成員。 翻譯會針對可支援多種語言的用戶端應用程式，提供伺服器支援。 透過使用這類用戶端，用戶端會將地區設定識別碼 (LCID) 傳遞給 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的執行個體，然後當它提供 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件的中繼資料時，就會使用此 LCID 來決定要使用哪一組翻譯。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件沒有包含該語言的翻譯，或者沒有包含指定之物件的翻譯，則在將物件中繼資料傳回到用戶端時會使用預設語言。 例如，假設有一位法國的商務使用者從地區設定為法文的工作站中存取 Cube，若有法文翻譯的話，則該商務使用者會看到法文的成員標題及成員屬性值。 不過，如果位於德國的商務使用者，從具有德文地區設定的工作站存取同一個 Cube，商務使用者就會看到德文的標題名稱以及成員屬性值。 如需詳細資訊，請參閱 <<c0> [ 維度翻譯](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)， [Cube 翻譯](multidimensional-models-olap-logical-cube-objects/cube-translations.md)，[翻譯&#40;Analysis Services&#41;](translations-analysis-services.md)。</c0>  
@@ -45,9 +45,9 @@ ms.locfileid: "48142984"
   
 6.  中的資料列**Caption**物件**月份**屬性中，輸入`Mes del Año`中**西班牙文 （西班牙）** 翻譯資料行和`Mois d'Année`中**法文 （法國）** 翻譯資料行。  
   
-     請注意，當您輸入這些翻譯時，會出現省略符號 (**…**)。 按一下這個省略符號，可讓您在基礎資料表中指定一個資料行，以便提供屬性階層每個成員的翻譯。  
+     請注意，當您輸入這些翻譯，省略符號 (**...**) 隨即出現。 按一下這個省略符號，可讓您在基礎資料表中指定一個資料行，以便提供屬性階層每個成員的翻譯。  
   
-7.  按一下 [月份名稱] 屬性的 [西班牙文 (西班牙)] 翻譯的省略符號 (**…**)。  
+7.  按一下省略符號 (**...**) 的**西班牙文 （西班牙）** 翻譯**月份**屬性。  
   
      此時會出現 [屬性資料翻譯] 對話方塊。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48142984"
   
      ![屬性資料翻譯對話方塊](../../2014/tutorials/media/l9-translations-4.gif "屬性資料翻譯對話方塊")  
   
-9. 按一下 [確定]，然後按一下 [月份名稱] 屬性的 [法文 (法國)] 翻譯的省略符號 (**…**)。  
+9. 按一下  **確定**，然後按一下省略符號 (**...**) 的**法文 （法國）** 翻譯**月份**屬性。  
   
 10. 在 翻譯資料行 清單中選取 **FrenchMonthName**，然後按一下 確定。  
   

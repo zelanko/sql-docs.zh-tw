@@ -17,17 +17,17 @@ ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6140fe9fc991356a0138c533e8dcbfdb53ca0959
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae03c7dccdc702ccb4deae068013a69d7852d623
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789474"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529634"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>適用於 COM 的 ADO for Visual C++ 語法索引
 此索引是根據 Microsoft Visual c + + ADO 語言參考的交互參照。  
   
- 如果您使用 **#import**指示詞會在您的應用程式中，標頭檔將會產生可讓您使用類似到 Microsoft Visual Basic 語法。 表單的屬性名稱 **get_ * * * PropertyName*和 **put_ * * * PropertyName*可以視為它們宣告為只要*PropertyName*。 屬性可以被視為資料成員，而不是函式。  
+ 如果您使用 **#import**指示詞會在您的應用程式中，標頭檔將會產生可讓您使用類似到 Microsoft Visual Basic 語法。 屬性名稱的表單**get_**_PropertyName_並**put_**_PropertyName_可以視為如同它們宣告只是為*PropertyName*。 屬性可以被視為資料成員，而不是函式。  
   
  所有方法、 屬性和事件都傳回的函式**HRESULT**，您可以測試會判斷如果函式執行成功。  
   

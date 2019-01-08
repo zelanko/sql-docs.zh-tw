@@ -11,22 +11,22 @@ ms.assetid: 9095212c-9068-4dd8-85ce-17a467adeabb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 21a1f76992e902f8b9b3c5ba18efad3f16734300
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e6b1995ad715ea529da548f06e0643be076abe96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110028"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518904"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>探索撥接中心模型 (中繼資料採礦教學課程)
   現在您已經建立了探勘模型，您可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 所提供的下列工具深入了解您的資料。  
   
 -   [Microsoft 類神經網路檢視器](#bkmk_NNviewer) **:** 這個檢視器可用於**採礦模型檢視器**] 索引標籤的 [資料採礦設計師中，旨在協助您試驗資料中的互動性。  
   
--   [Microsoft 一般內容樹狀檢視器](#bkmk_genviewer) **:** 這個標準的檢視器會提供有關之模式的深入詳細資料和統計資料的演算法所產生時，發現模型。  
+-   [Microsoft 一般內容樹狀檢視器](#bkmk_genviewer) **:** 此標準的檢視器會提供有關模式與它產生模型時演算法所發現的統計資料的深入詳細資料。  
   
 ##  <a name="bkmk_NNviewer"></a> Microsoft 類神經網路檢視器  
- 檢視器有三個窗格 —**輸入**，**輸出**，並**變數**。  
+ 檢視器有三個窗格-**輸入**，**輸出**，並**變數**。  
   
  藉由使用**輸出** 窗格中，您可以選取不同的值，針對可預測的屬性或相依變數。 如果您的模型包含多個可預測的屬性，您可以選取的屬性**輸出屬性**清單。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48110028"
   
 2.  針對**值**，選取**AM**。  
   
-     **變數**窗格會更新以顯示排班時之模型的影響**AM**。 其他所有選項則維持相同，也就是說，您仍是比較最低和最高服務等級。  
+     **變數**窗格會更新以顯示排班時之模型的影響**AM**。 其他所有選項保持都不變-您仍比較最低和最高服務等級。  
   
 3.  針對**值**，選取**PM1**。  
   
@@ -94,13 +94,13 @@ ms.locfileid: "48110028"
 ### <a name="interpreting-the-statistics-provided-in-the-viewer"></a>解譯檢視器中所提供的統計資料  
  較長的等待時間是一項代表高放棄率的準確預測指標，同時也意味著較差的服務等級。 這似乎是一個明顯的結論，不過，採礦模型會提供您一些額外的統計資料以協助您解譯這些趨勢。  
   
--   **分數**： 值，指出此變數對於區別不同結果的整體重要性。 分數越高，表示變數對於結果的效果越強。  
+-   **分數**:值，指出此變數對於區別不同結果的整體重要性。 分數越高，表示變數對於結果的效果越強。  
   
--   **值 1 的機率**： 表示此值，此結果的機率百分比。  
+-   **值 1 的機率**:表示此值，此結果的機率的百分比。  
   
--   **值 2 的機率**： 表示此值，此結果的機率百分比。  
+-   **值 2 的機率**:表示此值，此結果的機率的百分比。  
   
--   **值 1 的增益**並**的值 2 增益**： 分數表示使用這個特定變數來預測值 1] 和 [值 2 結果的影響。 分數越高，表示變數越能預測結果。  
+-   **值 1 的增益**並**的值 2 增益**:分數表示使用這個特定變數來預測值 1] 和 [值 2 結果的影響。 分數越高，表示變數越能預測結果。  
   
  下表包含最重要之影響因數的一些範例值。 例如，**值 1 的機率**為 60.6%並**值 2 的機率**為 8.30%，這表示，當每個問題的平均時間是 44-70 分鐘的時間範圍內時，60.6%的案例班中最高服務等級 (值 1) 和 8.30%的案例都是在較差的服務等級 (值 2) 的排班中。  
   
@@ -110,8 +110,8 @@ ms.locfileid: "48110028"
   
 |attribute|值|喜好\<0.07|喜好 >= 0.12|  
 |---------------|-----------|--------------------|----------------------|  
-|每個問題的平均時間|89.087 120.000||分數： 100<br /><br /> 值 1 的機率： 4.45%<br /><br /> 值 2 的機率： 51.94%<br /><br /> 值 1 的增益： 0.19<br /><br /> 值 2 的增益： 1.94|  
-|每個問題的平均時間|44.000 70.597|分數：92.35<br /><br /> 值 1 的機率：60.06 %<br /><br /> 值 2 的機率：8.30 %<br /><br /> 值 1 的增益：2.61<br /><br /> 值 2 的增益：0.31||  
+|每個問題的平均時間|89.087 120.000||分數：100<br /><br /> 值 1 的機率：4.45%<br /><br /> 值 2 的機率：51.94%<br /><br /> 值 1 的增益：0.19<br /><br /> 值 2 的增益：1.94|  
+|每個問題的平均時間|44.000 70.597|分數：92.35<br /><br /> 值 1 的機率：60.06%<br /><br /> 值 2 的機率：8.30%<br /><br /> 值 1 的增益：2.61<br /><br /> 值 2 的增益：0.31||  
   
  [回到頁首](#bkmk_NNviewer)  
   
@@ -152,9 +152,9 @@ WHERE NODE_NAME = '10000000000000000'
  [將羅吉斯迴歸模型加入到撥接中心結構&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [類神經網路模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [類神經網路模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [類神經網路模型查詢範例](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)   
- [Microsoft 類神經網路演算法技術參考](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Microsoft Neural Network Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [變更採礦模型中的資料行分隔](../../2014/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], deleting
@@ -14,12 +13,12 @@ ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4391549a0aff14845aaa840b227065939692007c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3058b01fe34f1edcb20f1d5aa701122417e6ac32
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158068"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787330"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>刪除屬性 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，如果您想要永久刪除某個屬性以及所有關聯的屬性值，請刪除此屬性。  
@@ -29,7 +28,7 @@ ms.locfileid: "48158068"
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 ### <a name="to-delete-an-attribute"></a>若要刪除屬性  
   
@@ -55,9 +54,9 @@ ms.locfileid: "48158068"
 9. 在另一個確認對話方塊中按一下 [確定]。  
   
 ## <a name="see-also"></a>另請參閱  
- [屬性&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
- [網域型屬性&#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)   
- [建立文字屬性&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   
- [建立網域屬性&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+ [屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
+ [網域屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)   
+ [建立文字屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   
+ [建立網域屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

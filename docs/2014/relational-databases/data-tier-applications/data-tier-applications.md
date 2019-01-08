@@ -15,15 +15,15 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b3fd46b767b41e442621d7554daee713bd98abd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214728"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540123"
 ---
 # <a name="data-tier-applications"></a>資料層應用程式
-  資料層應用程式 (DAC) 是邏輯資料庫管理實體，會定義與使用者資料庫相關聯的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件，如資料表、檢視表，以及包括登入的執行個體物件。 DAC 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫部署的自主單位，可讓資料層開發人員和資料庫管理員將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件包裝為可攜式成品，稱為 DAC 封裝，又稱為 DACPAC。  
+  資料層應用程式 (DAC) 是邏輯資料庫管理實體，會定義與使用者資料庫相關聯的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件，例如資料表、檢視表，以及包括登入的執行個體物件。 DAC 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫部署的自主單位，可讓資料層開發人員和資料庫管理員將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件包裝為可攜式成品，稱為 DAC 封裝，又稱為 DACPAC。  
   
  BACPAC 是相關的成品，會封裝資料庫結構描述，以及在資料庫中儲存的資料。  
   
@@ -85,33 +85,33 @@ ms.locfileid: "48214728"
 ## <a name="dac-operations"></a>DAC 作業  
  DAC 支援下列作業：  
   
--   **EXTRACT** – 使用者可將資料庫擷取到 DACPAC。  
+-   **EXTRACT** - 使用者可將資料庫擷取到 DACPAC。  
   
--   **DEPLOY** – 使用者可將 DACPAC 部署到主機伺服器。 從管理功能工具 (如 SQL Server Management Studio 或 SQL Azure 管理入口網站) 完成部署後，主機伺服器上所產生的資料庫會隱含註冊為資料層應用程式。  
+-   **DEPLOY** - 使用者可將 DACPAC 部署到主機伺服器。 從管理功能工具 (如 SQL Server Management Studio 或 SQL Azure 管理入口網站) 完成部署後，主機伺服器上所產生的資料庫會隱含註冊為資料層應用程式。  
   
--   **REGISTER** – 使用者可將資料庫註冊為資料層應用程式。  
+-   **REGISTER** - 使用者可將資料庫註冊為資料層應用程式。  
   
--   **UNREGISTER** – 以前註冊為 DAC 的資料庫可以取消註冊。  
+-   **UNREGISTER** - 以前註冊為 DAC 的資料庫可以取消註冊。  
   
--   **UPGRADE** – 可以使用 DACPAC 來升級資料庫。 即使以前未註冊為資料層應用程式的資料庫也支援升級，但因為升級，資料庫會隱含註冊。  
+-   **UPGRADE** - 可以使用 DACPAC 來升級資料庫。 即使以前未註冊為資料層應用程式的資料庫也支援升級，但因為升級，資料庫會隱含註冊。  
   
 ## <a name="backup-package-bacpac"></a>備份封裝 (.bacpac)  
  BACPAC 是封裝資料庫結構描述和資料庫中所儲存之資料的成品。 BACPAC 是副檔名為 .bacpac 的 Windows 檔案。 類似於 DACPAC，BACPAC 檔案格式是開放式；BACPAC 的結構描述內容與 DACPAC 的結構描述內容相同。 資料是以 JSON 格式儲存。  
   
- DACPAC 和 BACPAC 相似，但它們以不同的案例為目標。 DACPAC 專注於擷取及部署架結構描述，包括升級現有資料庫。 DACPAC 的主要使用案例是將嚴格定義的結構描述部署至開發、測試、最後至實際執行環境，以及反向：擷取實際執行的結構描述並將它反向套用至測試和開發環境。  
+ DACPAC 和 BACPAC 相似，但它們以不同的案例為目標。 DACPAC 專注於擷取及部署架結構描述，包括升級現有資料庫。 主要使用案例 DACPAC 是將嚴格定義的結構描述部署至開發、 測試，生產環境中，然後反向： 擷取實際執行的結構描述，並將它套用到上一步 測試和開發環境。  
   
  另一方面，BACPAC 專注於擷取結構描述和資料。 BACPAC 是資料庫備份的邏輯對等項目，並不能用來升級現有資料庫。 BACPAC 的主要使用案例是將資料庫從某個伺服器移至另個伺服器 (或從本機伺服器移至雲端)，以及以開放式格式封存現有資料庫。  
   
  BACPAC 支援兩個主要作業：  
   
--   **EXPORT**– 使用者可將資料庫的結構描述和資料匯出至 BACPAC。  
+-   **EXPORT** - 使用者可將資料庫的結構描述和資料匯出至 BACPAC。  
   
--   **IMPORT** – 使用者可以將結構描述和資料匯入主機伺服器中的新資料庫。  
+-   **IMPORT** - 使用者可以將結構描述和資料匯入主機伺服器中的新資料庫。  
   
- 這些功能都受到資料庫管理工具支援：Server Management Studio、SQL Azure 管理入口網站和 DACFx API。  
+ 這兩個功能都受到資料庫管理工具：Server Management Studio、 SQL Azure 管理入口網站和 DACFx API。  
   
 ## <a name="permissions"></a>Permissions  
- 您必須是隸屬`dbmanager`角色指派或`CREATE DATABASE`建立資料庫，包括部署 DAC 封裝中建立資料庫的權限。 您必須是隸屬`dbmanager`角色，或被指派`DROP DATABASE`卸除資料庫的權限。  
+ 您必須是 `dbmanager` 角色的成員或被指派 `CREATE DATABASE` 權限，才能建立資料庫，包括部署 DAC 封裝來建立資料庫。 您必須是 `dbmanager` 角色的成員或被指派 `DROP DATABASE` 權限，才能卸除資料庫。  
   
 ## <a name="data-tier-application-tasks"></a>資料層應用程式工作  
   

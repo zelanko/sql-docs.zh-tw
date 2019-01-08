@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb325d4121670940b22292a7c4ee3d73cc3edcc7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 975da6bc447ed3a29f39dd9a8e877a5b556098c6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143278"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774520"
 ---
 # <a name="user-configurable-event-class"></a>使用者可設定的事件類別
   使用「使用者可設定的」事件類別目錄來監視使用者自訂的事件。 建立使用者自訂的事件類別目錄，以監視無法由系統在其他事件類別目錄中提供之事件類別監視的事件。 例如，可以建立使用者自訂的事件以監視您正在測試之應用程式的進度。 當應用程式執行時，它可在預先定義的時間點產生事件，讓您可以判斷您應用程式的目前執行點。  

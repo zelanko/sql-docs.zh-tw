@@ -11,12 +11,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bc5b6d6738523d359c72b2e294fe1225004ca388
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf7824140a6072e58a9f84bc47943d7025aed7a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059828"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505466"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 資料警示
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料警示是資料驅動的警示解決方案，可協助您得知報表中您有興趣或對您很重要的某個相關時間點的資料。 透過使用資料警示，您就不必再搜尋資訊，而會自動收到資訊。  
@@ -57,11 +57,11 @@ ms.locfileid: "48059828"
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支援報表中各種不同的認證類型。 您可以在資料來源設定為使用預存認證或不使用認證的報表上建立資料警示。 不過您無法在設定為使用整合式安全性認證或提示輸入認證的報表上建立警示。 報表會在處理警示定義時一併執行，而沒有認證的情況下處理會失敗。 如需詳細資訊，請參閱下列內容：  
   
--   [指定報表資料來源的認證及連線資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+-   [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
 -   [角色與權限 &#40;Reporting Services&#41;](security/roles-and-permissions-reporting-services.md)  
   
--   [報表伺服器的驗證](security/authentication-with-the-report-server.md)  
+-   [使用報表伺服器驗證](security/authentication-with-the-report-server.md)  
   
 ### <a name="run-reports"></a>執行報表  
  建立資料警示定義的第一個步驟，就是在 SharePoint 文件庫中尋找您要的報表，然後執行報表。 如果報表執行時未包含任何資料，則無法在當時於報表上建立警示。  
@@ -113,9 +113,9 @@ ms.locfileid: "48059828"
 ##  <a name="InstallAlerting"></a> 安裝資料警示  
  資料警示功能只有在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 是以 SharePoint 模式安裝時才可使用。 當您以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時，安裝程式會自動建立儲存警示定義和警示中繼資料的警示資料庫，以及兩個用於管理警示的 SharePoint 頁面，並且將 [資料警示設計工具] 加入 SharePoint 網站。 在安裝期間不需要針對警示執行特殊步驟或是設定特殊選項。  
   
- 如果您想要深入了解以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (包括 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中的新 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共用服務，以及在使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能之前，必須先建立和設定的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式)，請參閱 MSDN Library 中的 [安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) \(機器翻譯\)。  
+ 如果您想要深入了解以 SharePoint 模式安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (包括 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的新 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 共用服務，以及在使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能之前，必須先建立和設定的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式)，請參閱 MSDN Library 中的 [安裝適用於 SharePoint 2010 的 Reporting Services SharePoint 模式](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) 。  
   
- 如本主題前段的圖中所示，資料警示會使用 SQL Server Agent 作業。 若要建立作業，必須執行 SQL Server Agent。 您可能已將 SQL Server Agent 設定為在安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]時自動啟動。 否則，您可以手動啟動 SQL Server Agent。 如需詳細資訊，請參閱[設定 SQL Server Agent](../ssms/agent/configure-sql-server-agent.md)及[及啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+ 如本主題前段的圖中所示，資料警示會使用 SQL Server Agent 作業。 若要建立作業，必須執行 SQL Server Agent。 您可能已將 SQL Server Agent 設定為在安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]時自動啟動。 否則，您可以手動啟動 SQL Server Agent。 如需詳細資訊，請參閱 [設定 SQL Server Agent](../ssms/agent/configure-sql-server-agent.md) 和 [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
  您可以使用 SharePoint 管理中心內的 **[提供訂閱和警示]** 頁面，查看 SQL Server Agent 是否正在執行，並且建立和下載自訂的 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼，之後可執行這些指令碼將權限授與 SQL Server Agent。 另外還可以使用 PowerShell 產生 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼。 如需詳細資訊，請參閱 [SSRS 服務應用程式的佈建訂用帳戶及警示](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "48059828"
   
  `<IsAlertingService>True</IsAlertingService>`  
   
- `…`  
+ `...`  
   
  `</Service>`  
   
@@ -196,9 +196,9 @@ ms.locfileid: "48059828"
 ##  <a name="Permissions"></a> 資料警示的權限  
  您必須具有在 SharePoint 網站上執行報表和建立警示的權限，才能在報表上建立資料警示。 若要了解有關報表權限的詳細資訊，請參閱下列主題。  
   
--   [從報表產生資料摘要&#40;報表產生器及 SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
+-   [從多個報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
--   [設定 SharePoint 網站上的報表伺服器項目的權限&#40;Reporting Services SharePoint 整合模式&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+-   [設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料警示支援兩種權限層級：資訊工作者和警示系統管理員。 下表列出相關的 SharePoint 權限和使用者工作。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "48059828"
 ### <a name="logs"></a>記錄檔  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 會提供一些記錄檔，有助於深入了解處理資料警示定義、所建立的資料警示執行個體等等時執行的報表。 有三個記錄檔特別實用：警示執行記錄、報表伺服器執行記錄及報表伺服器追蹤記錄。  
   
- 如需其他資訊[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]記錄，請參閱 < [Reporting Services 記錄檔和來源](report-server/reporting-services-log-files-and-sources.md)。  
+ 如需其他 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 記錄檔的相關資訊，請參閱 [Reporting Services 記錄檔和來源](report-server/reporting-services-log-files-and-sources.md)。  
   
 #### <a name="alerting-execution-log"></a>警示執行記錄  
  警示執行階段服務會將項目寫入警示資料庫的 ExecutionLogView 資料表中。 您可以查詢資料庫或執行下列預存程序，以取得有關儲存到警示資料庫之資料警示的更完整診斷資訊。  
@@ -277,13 +277,13 @@ ms.locfileid: "48059828"
 ##  <a name="UserInterface"></a> 資料警示使用者介面  
  資料警示提供了管理警示的 SharePoint 頁面，以及建立和編輯資料警示定義的設計工具。  
   
--   您用來建立或編輯資料警示定義的**資料警示設計工具** 。 如需詳細資訊，請參閱 <<c0> [ 資料警示設計工具](../../2014/reporting-services/data-alert-designer.md)，[建立資料警示設計工具中的 資料警示](create-a-data-alert-in-data-alert-designer.md)並[編輯資料警示在警示設計工具中](edit-a-data-alert-in-alert-designer.md)。  
+-   您用來建立或編輯資料警示定義的**資料警示設計工具** 。 如需詳細資訊，請參閱 [資料警示設計工具](../../2014/reporting-services/data-alert-designer.md)、 [在資料警示設計工具中建立資料警示](create-a-data-alert-in-data-alert-designer.md) 和 [在警示設計工具中編輯資料警示](edit-a-data-alert-in-alert-designer.md)。  
   
 -   您用來檢視資料警示清單、刪除警示及開啟警示進行編輯的**資料警示管理員** 。 [資料警示管理員] 有兩種版本：一種可供使用者管理自己建立的警示，另一種可供系統管理員管理屬於網站使用者的警示。  
   
-     如需管理您所建立的資料警示的詳細資訊，請參閱 <<c0> [ 資料警示管理員讓 SharePoint 使用者](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)並[在資料警示管理員中管理我的資料警示](manage-my-data-alerts-in-data-alert-manager.md)。  
+     如需管理所建立資料警示的詳細資訊，請參閱 [SharePoint 使用者的資料警示管理員](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md) 和 [在資料警示管理員中管理我的資料警示](manage-my-data-alerts-in-data-alert-manager.md)。  
   
-     如需管理網站上的所有資料警示的詳細資訊，請參閱 <<c0> [ 資料警示管理員的警示管理員](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)並[在資料警示管理員中的 SharePoint 網站上管理所有的資料警示](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  
+     如需管理網站上所有資料警示的詳細資訊，請參閱 [警示系統管理員的資料警示管理員](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) 和 [在資料警示管理員中管理 SharePoint 網站上的所有資料警示](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  
   
 -   **佈建訂閱及資料警示** ，您可在其中查看 Reporting Services 是否可以針對資料警示使用 SQL Server Agent，以及下載允許存取 SQL Server Agent 的指令碼。 如需詳細資訊，請參閱 [SSRS 服務應用程式的佈建訂用帳戶及警示](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   
@@ -300,7 +300,7 @@ ms.locfileid: "48059828"
   
 ##  <a name="HowTo"></a> 相關工作  
   
--   [將報表儲存至 SharePoint 文件庫&#40;報表產生器&#41;](report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
+-   [將報表儲存至 SharePoint 文件庫 &#40;報表產生器&#41;](report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
   
 -   [在資料警示設計工具中建立資料警示](create-a-data-alert-in-data-alert-designer.md)  
   
@@ -310,7 +310,7 @@ ms.locfileid: "48059828"
   
 -   [在資料警示管理員中管理 SharePoint 網站上的所有資料警示](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   
--   [將權限授與使用者及警示系統管理員](grant-permissions-to-users-and-alerting-administrators.md)  
+-   [將權限授與使用者及警示管理員](grant-permissions-to-users-and-alerting-administrators.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料警示設計工具](../../2014/reporting-services/data-alert-designer.md)   

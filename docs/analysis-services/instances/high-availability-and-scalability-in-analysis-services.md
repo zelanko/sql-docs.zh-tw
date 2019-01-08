@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 的高可用性與延展性 |Microsoft 文件
+title: Analysis Services 的高可用性與延展性 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ece05b0bb8c21c628632e2efca8e54e317f38fab
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1135074768a630e6d46844017b9c9aecbbccbf26
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700899"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439500"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services 的高可用性與延展性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "35700899"
 |使用 MOLAP 儲存的多維度模型。|選擇平衡的組態，以提供可快速載入資料的磁碟 IO，並具有足夠的 RAM 來處理快取的資料。|  
 |使用 ROLAP 儲存的多維度模型。|最大化磁碟 IO，並將網路延遲降至最低。|  
   
-## <a name="high-availability-and-redundancy-through-wsfc"></a>透過 WSFC 高可用性和備援  
+## <a name="high-availability-and-redundancy-through-wsfc"></a>高可用性與備援透過 WSFC  
  Analysis Services 可安裝到現有的 Windows Server 容錯移轉叢集 (WSFC) 以取得高可用性，盡可能在最短的時間內還原服務。  
   
  容錯移轉叢集提供資料庫的完整存取權 (讀取和回寫)，但一次只會針對一個節點。 次要資料庫會在叢集中的額外節點上執行，並在第一個節點關閉時作為取代伺服器。  
@@ -96,13 +96,13 @@ ms.locfileid: "35700899"
 
 - 目前不支援主動/主動。 主動/被動 (容錯移轉) 是唯一支援之適用於 Analysis Services 的 WSFC 組態。
 - 在對 Analysis Services 進行叢集化時，請確定在叢集中參與之任何節點於相同或非常相似的硬體上執行，且每個節點在作業系統版本和 service pack、Analysis Services 版本和服務套件 (或累計更新)，以及伺服器模式等方面都有相同的操作內容。
-- 避免將被動節點重新規劃為另一個工作負載的作用中節點。 如果節點無法處理這兩個工作負載，在實際容錯移轉狀況時會失去任何短期提升電腦使用量的機會。
+- 請避免重新排定為另一個工作負載的作用中節點的被動節點。 如果節點無法處理這兩個工作負載，在實際容錯移轉狀況時會失去任何短期提升電腦使用量的機會。
  
- 下列白皮書提供在容錯移轉叢集中部署 Analysis Services 的深入指示和背景資訊︰ [How to Cluster SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx)(如何將 SQL Server Analysis Services 叢集化)。 雖然本指引是針對 SQL Server 2012 所撰寫，但仍適用於較新版本的 Analysis Services。  
+ 此白皮書提供深入指示和容錯移轉叢集中部署 Analysis Services 的背景資訊：[如何叢集化 SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx)。 雖然本指引是針對 SQL Server 2012 所撰寫，但仍適用於較新版本的 Analysis Services。  
   
 ## <a name="see-also"></a>另請參閱  
  [同步處理 Analysis Services 資料庫](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Analysis Services 表格式資料庫強制執行 NUMA 相似性](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
- [Analysis Services 案例研究： 在大規模商業解決方案中使用表格式模型](https://msdn.microsoft.com/library/dn751533.aspx)  
+ [Forcing NUMA affinity for Analysis Services Tabular Databases (對 Analysis Services 表格式資料庫強制執行 NUMA 相似性)](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
+ [Analysis Services 案例研究：在大規模商業解決方案中使用表格式模型](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   

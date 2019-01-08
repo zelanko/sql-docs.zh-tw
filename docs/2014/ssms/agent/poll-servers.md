@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - target servers [SQL Server], polling interval
@@ -16,12 +16,12 @@ ms.assetid: 96f5fd43-3edd-4418-9dd0-4d34e618890e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dde632ee5769a43daf29553213533afeac12d804
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae75dc8af9364a619113d2c38071a441e15351be
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170768"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774930"
 ---
 # <a name="poll-servers"></a>輪詢伺服器
   在實作多伺服器管理時，目標伺服器會定期連絡主要伺服器，來上傳已執行作業的相關資訊，並下載新的作業。 連絡主要伺服器的程序稱為「伺服器輪詢」，它會以定期的「輪詢間隔」來進行。  

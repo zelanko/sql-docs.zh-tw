@@ -18,12 +18,12 @@ ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 577a587f601dc19d3c3ee652ee09a1fbe23a4001
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b540d233eeb1eb52a86737372d3d3db6f77a7217
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691356"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417729"
 ---
 # <a name="spfulltextsemanticregisterlanguagestatisticsdb-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47691356"
   
 ```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db  
-    [ @dbname = ] ‘database_name’;  
+    [ @dbname = ] 'database_name';  
 GO  
 ```  
   

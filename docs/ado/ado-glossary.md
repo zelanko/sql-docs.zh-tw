@@ -13,12 +13,12 @@ ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66389b5b2d171a5d006fcddcf28523790a411d68
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: c02447379b713a7d3b1c6dd72af8c3860098a68c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291764"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528023"
 ---
 # <a name="ado-glossary-terms"></a>ADO 詞彙
 本主題會定義與 ADO 的詞彙。
@@ -32,7 +32,7 @@ ms.locfileid: "51291764"
 
  在查詢中，例如 COUNT、 AVG 或計算值，使用資料表的資料行中的所有資料列的 STDEV 函式的彙總函式。 在撰寫運算式和程式設計中，您可以使用 SQL 彙總函式 （包含以上所列的三個） 和網域彙總函式來判斷各種統計資料。
 
- 別名的替代名稱您會授與資料行或運算式中的 SQL SELECT 陳述式，通常較短或更有意義。 比方說，BobSales 是下列的 SELECT 陳述式中的別名: 「 從 SalesDB BobSales 為選取了 wr 銷售額 」。 別名可用來以動態方式將 DataControl 物件上的控制項繫結中的資料行。
+ 別名的替代名稱您會授與資料行或運算式中的 SQL SELECT 陳述式，通常較短或更有意義。 比方說，BobSales 會有下列的 SELECT 陳述式中的別名：「 選取了 wr 銷售做為從 SalesDB BobSales"。 別名可用來以動態方式將 DataControl 物件上的控制項繫結中的資料行。
 
  apartment 執行緒的 COM 執行緒模型物件的所有呼叫都發生在一個執行緒。 在 apartment 執行緒，COM 會同步處理，並將呼叫封送處理。 另請參閱*COMmddefcom*。
 
@@ -74,7 +74,7 @@ ms.locfileid: "51291764"
 
  COM （元件物件模型） 的二進位標準，可讓在網路環境，不論他們所開發的語言為何，或其所在的電腦交互操作的物件。 以 COM 為基礎的技術包括 ActiveX 控制項、 自動化和連結與嵌入 (OLE) 物件。 COM 可讓物件公開給其他元件和主控件應用程式，其功能。 它會定義物件如何公開本身和跨處理序和跨網路，此公開資訊的運作方式。 COM 也會定義物件的生命週期。
 
- COM 元件的二進位檔案，例如.dll、.ocx，以及一些.exe 檔案 —，支援 COM 標準提供的物件。 這類檔案包含一或多個 class factory，COM 類別、 登錄項目機制，載入程式碼，以及等等的程式碼。
+ COM 元件二進位檔-例如.dll、.ocx，以及一些.exe 檔案-支援 COM 標準提供的物件。 這類檔案包含一或多個 class factory，COM 類別、 登錄項目機制，載入程式碼，以及等等的程式碼。
 
  比較運算子比較兩個運算式，並傳回布林值的運算子。
 

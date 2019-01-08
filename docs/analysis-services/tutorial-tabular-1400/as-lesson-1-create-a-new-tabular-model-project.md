@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 教學課程第 1 課： 建立新的表格式模型專案 |Microsoft Docs
+title: Analysis Services 教學課程第 1 課：建立新的表格式模型專案 |Microsoft Docs
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df9595071c60680db94a18dc373ce24f1f9b4ea5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9135df30afcec9bdae307d9b12aec6810baa98ec
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43108667"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417229"
 ---
 # <a name="create-a-tabular-model-project"></a>建立表格式模型專案
 
@@ -22,7 +22,7 @@ ms.locfileid: "43108667"
 
 在這一課，您使用 Visual Studio 與 SQL Server Data Tools (SSDT) 或 Visual Studio 2017 與 Microsoft Analysis Services 專案 VSIX 1400 相容性層級建立新的表格式模型專案。 一旦建立新的專案時，就可以開始加入資料，並撰寫您的模型。 這一課也可讓您的表格式模型撰寫環境，在 Visual Studio 中的簡介。  
   
-完成本課程的估計時間： **10 分鐘**  
+完成本課程的估計時間：**10 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件
 
@@ -80,7 +80,7 @@ ms.locfileid: "43108667"
 
 ## <a name="whats-next"></a>下一步
 
-[第 2 課： 取得資料](../tutorial-tabular-1400/as-lesson-2-get-data.md)。
+[第 2 課：取得資料](../tutorial-tabular-1400/as-lesson-2-get-data.md)。
 
   
   

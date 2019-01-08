@@ -1,5 +1,5 @@
 ---
-title: 第 5 課：使用報表精靈設計子報表 | Microsoft Docs
+title: 第 5 課：設計子報表使用報表精靈 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1eb2cb7693110204767a627e54cd4248e7d1a7cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc993c0881eb4aeeddb18c8df0efad69dbba261e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166938"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418349"
 ---
-# <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>第 5 課：使用報表精靈設計子報表
+# <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>第 5 課：設計子報表使用報表精靈
   在您建立子報表的資料連接和資料表之後，下一步是要使用報表設計師中的 [報表精靈] 設計子報表。 如需報表設計師的詳細資訊，請參閱[使用報表設計師設計報表 &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)。  
   
 ### <a name="to-design-the-child-report-using-the-report-wizard"></a>若要使用報表精靈設計子報表  

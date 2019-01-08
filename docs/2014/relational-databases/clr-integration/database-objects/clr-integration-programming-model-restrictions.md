@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a7b7dfcbd9d7cc7407ed33cc0ea00e93df839b93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187938"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509902"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 整合程式設計模型限制
   當您要建置受管理的預存程序或其他 managed 的資料庫物件時，有執行的某些程式碼檢查[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會執行 managed 程式碼組件上的檢查，它在資料庫中，第一次註冊時使用`CREATE ASSEMBLY`陳述式，也會在執行階段。 也會在執行階段檢查 Managed 程式碼，因為在組件中，可能會有執行階段絕對無法到達的程式碼路徑。  特別是這樣提供了註冊協力廠商組件的彈性，如此一來，當組件中的不安全程式碼設計為在用戶端環境中執行，但是絕對不會在主控的 CLR 內執行時，就不會封鎖該組件。 Managed 程式碼必須符合的需求取決於組件會註冊為`SAFE`， `EXTERNAL_ACCESS`，或`UNSAFE`，`SAFE`最嚴格，並如下所示。  
@@ -86,7 +86,7 @@ ms.locfileid: "48187938"
  執行階段會檢查程式碼組件是否有下列條件。 如果找到這些條件的任何一個，將不允許執行 Managed 程式碼，而且將會擲回例外狀況。  
   
 ### <a name="unsafe"></a>UNSAFE  
- 不允許載入組件 (不論是從位元組陣列呼叫 `System.Reflection.Assembly.Load()` 方法來明確載入，或是透過 `Reflection.Emit` 命名空間的使用來隱含載入)。  
+ 載入組件-可能明確地呼叫`System.Reflection.Assembly.Load()`方法從位元組陣列，或透過使用隱含`Reflection.Emit`命名空間-不允許。  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  所有 `UNSAFE` 條件都會檢查。  

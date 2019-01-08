@@ -1,5 +1,5 @@
 ---
-title: 附錄 d： 資料類型 |Microsoft Docs
+title: 附錄 D：資料類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfaecb5b3705e2c5affe8c2cda3e42eeaddf4156
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75ff7e83aa87bca9f33a3a8f44447af2eb60c581
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669376"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504023"
 ---
-# <a name="appendix-d-data-types"></a>附錄 D：資料類型
-ODBC 定義兩組資料類型： SQL 資料類型和 C 資料類型。 SQL 資料類型表示的資料類型儲存在資料來源的資料。 C 資料類型表示資料儲存在應用程式緩衝區中的資料類型。  
+# <a name="appendix-d-data-types"></a>附錄 D：資料型別
+ODBC 定義資料類型的兩個的集合：SQL 資料類型和 C 資料類型。 SQL 資料類型表示的資料類型儲存在資料來源的資料。 C 資料類型表示資料儲存在應用程式緩衝區中的資料類型。  
   
- SQL 資料類型是由每個 DBMS 根據 SQL-92 標準定義。 SQL-92 標準中所指定每個 SQL 資料類型，如 ODBC 定義的型別識別項，也就是 **#define**為 ODBC 函數的引數傳遞或傳回結果集的中繼資料中的值。 唯一的 SQL-92 不支援 ODBC 資料類型為位元 （ODBC SQL_BIT 類型會有不同的特性）、 BIT_VARYING、 TIME_WITH_TIMEZONE、 TIMESTAMP_WITH_TIMEZONE 和 NATIONAL_CHARACTER。 驅動程式會負責將資料來源專用的 SQL 資料類型對應至 ODBC SQL 資料型別識別項和驅動程式專用的 SQL 資料型別識別項。 實作描述項的 SQL_DESC_CONCISE_TYPE 欄位中指定的 SQL 資料類型。  
+ SQL 資料類型是由每個 DBMS 根據 SQL-92 標準定義。 SQL-92 標準中所指定每個 SQL 資料類型，如 ODBC 定義的型別識別項，也就是 **#define**為 ODBC 函數的引數傳遞或傳回結果集的中繼資料中的值。 唯一的 SQL-92 不支援 ODBC 資料類型為位元 （ODBC SQL_BIT 類型會有不同的特性）、 BIT_VARYING、 TIME_WITH_TIMEZONE、 TIMESTAMP_WITH_TIMEZONE 和 NATIONAL_CHARACTER。 驅動程式會負責將資料來源特有的 SQL 資料類型對應至 ODBC SQL 資料型別識別項和驅動程式專用的 SQL 資料型別識別項。 實作描述項的 SQL_DESC_CONCISE_TYPE 欄位中指定的 SQL 資料類型。  
   
  ODBC 定義的 C 資料類型和其對應的 ODBC 型別識別項。 應用程式指定的 C 資料類型將會收到傳遞適當的 C 類型識別項中的結果集資料的緩衝區*TargetType*呼叫中的引數**SQLBindCol**或**SQLGetData**。 它會指定藉由傳遞適當的 C 類型識別項中包含的陳述式的參數緩衝區的 C 類型*ValueType*呼叫中的引數**SQLBindParameter**。 應用程式描述項的 SQL_DESC_CONCISE_TYPE 欄位中指定的 C 資料類型。  
   

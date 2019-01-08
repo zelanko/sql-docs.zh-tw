@@ -18,15 +18,15 @@ ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09c13d17415f44ba52c57c2323e7fd671ddff0b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 177972c5ca9841d0d206e9c20fd1450568fdcb8c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119398"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398012"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>增益圖 (Analysis Services - 資料採礦)
-  A**增益圖**以圖形表示與隨機猜測，採礦模型提供相較之下的改進，並測量的變更*提起*分數。 藉由比較資料集各部分與不同模型的增益分數，您可以決定最佳的模型，以及資料集中可從套用模型預測受益的案例百分比。  
+  A**增益圖**以圖形表示與隨機猜測，採礦模型提供相較之下的改進，並測量的變更*提起*分數。 藉由比較您的資料集的各部分與不同模型的增益分數，您可以判斷哪一個模型是最佳方法，並在資料集中的案例百分比受益於套用模型的預測。  
   
  透過增益圖，您可以比較多個具有相同可預測屬性之模型的預測精確度。 您也可以評估單一結果 (可預測屬性的單一值) 或所有結果 (指定屬性的所有值) 的預測精確度。  
   
@@ -118,6 +118,6 @@ ms.locfileid: "48119398"
  [回到頁首](#bkmk_Top)  
   
 ## <a name="see-also"></a>另請參閱  
- [測試和驗證&#40;資料採礦&#41;](testing-and-validation-data-mining.md)  
+ [測試及驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)  
   
   

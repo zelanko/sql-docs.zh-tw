@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2bf94fb04bd6f96de019c7e8543b8a626cebe439
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699113"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524473"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Analytics Platform System 的防毒軟體
 如果您的資料中心需要防毒軟體，請使用下列方針 Analytics Platform System 上安裝防毒軟體。 建議您不要安裝防毒軟體，除非它是強制的需求，將資料中心。  
@@ -46,13 +46,13 @@ ms.locfileid: "51699113"
 ## <a name="exclusion-list-for-virtual-machines-vms"></a>虛擬機器 (Vm) 的排除清單  
 若要在 Vm 上安裝防毒軟體，排除下列目錄和檔案的清單。 這些不應該掃描的防毒軟體。  
   
-***PDW_region*-CTL01**  
+**_PDW_region_-CTL01**  
   
 -   C:\windows\cluster\  
   
 -   G:\  
   
-***appliance_domain *-AD01**和 ***appliance_domain *-ad02 移**  
+**_appliance_domain_-AD01**並 **_appliance_domain_-ad02 移**  
   
 -   無限制  
   
@@ -62,15 +62,15 @@ ms.locfileid: "51699113"
   
 -   G:\  
   
-***appliance_domain*-VMM**  
+**_appliance_domain_-VMM**  
   
 -   無限制  
   
-***appliance_domain*-WDS**  
+**_appliance_domain_-WDS**  
   
 -   無限制  
   
-***appliance_domain*-ISCSI01**  
+**_appliance_domain_-ISCSI01**  
   
 -   C:\iscsitarget  
   

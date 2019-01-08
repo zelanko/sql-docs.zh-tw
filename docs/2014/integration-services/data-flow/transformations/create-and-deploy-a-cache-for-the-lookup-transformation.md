@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating cache files for Lookup transformation
@@ -15,12 +14,12 @@ ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c26b79cde6f6b3e8bce96f765fec03f1a2d7c5c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33efec852a748552e56db76a4af023809a531f5c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118643"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757340"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>針對查閱轉換來建立及部署快取
   您可以針對查閱轉換建立及部署快取檔案 (.caw)。 參考資料集會儲存在快取檔案中。  
@@ -52,7 +51,7 @@ ms.locfileid: "48118643"
      系統會在執行封裝時建立該檔案。  
   
     > [!NOTE]  
-    >  封裝保護等級不會套用至快取檔案。 如果快取檔案包含機密資訊，請使用存取控制清單 (ACL) 限制對其中儲存檔案的位置或資料夾的存取權。 您應該只啟用特定帳戶的存取權。 如需詳細資訊，請參閱[對封裝使用之檔案的存取權](../../access-to-files-used-by-packages.md)。  
+    >  封裝保護等級不會套用至快取檔案。 如果快取檔案包含機密資訊，請使用存取控制清單 (ACL) 限制對其中儲存檔案的位置或資料夾的存取權。 您應該只啟用特定帳戶的存取權。 如需詳細資訊，請參閱 [對封裝使用之檔案的存取權](../../access-to-files-used-by-packages.md)。  
   
 6.  按一下 [資料行] 索引標籤，然後使用 [索引位置] 選項，指定哪些資料行是索引資料行。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "48118643"
     > [!NOTE]  
     >  當查閱轉換是設定為使用快取連接管理員，則只有參考資料集中的索引資料行可以對應到輸入資料行。 而且，所有的索引資料行都必須進行對應。  
   
-     如需詳細資訊，請參閱[快取連線管理員編輯器](../../cache-connection-manager-editor.md)。  
+     如需詳細資訊，請參閱 [快取連線管理員編輯器](../../cache-connection-manager-editor.md)。  
   
 7.  視需要設定快取轉換。  
   
@@ -73,7 +72,7 @@ ms.locfileid: "48118643"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，開啟包含所要封裝的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 專案，然後再開啟封裝。  
   
-2.  選擇性地建立封裝設定。 如需詳細資訊，請參閱[建立封裝組態](../../create-package-configurations.md)。  
+2.  選擇性地建立封裝設定。 如需詳細資訊，請參閱 [建立封裝組態](../../create-package-configurations.md)。  
   
 3.  藉由執行下列工作，將快取檔案加入至專案：  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 048e8d37c7988577586b996687aae9ea4b930664
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168048"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759400"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
   使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能之前，請先考慮本主題所列的各項產品需求。  
@@ -42,7 +41,7 @@ ms.locfileid: "48168048"
   
 -   具有 `.trc` 副檔名的單一追蹤檔案。  
   
--   一組遵循檔案換用命名規範的換用追蹤檔案，例如： `<TraceFile>.trc`、 `<TraceFile>_1.trc`、 `<TraceFile>_2.trc`、 `<TraceFile>_3.trc`... `<TraceFile>_n.trc`。  
+-   一組遵循檔案換用命名規範的換用追蹤檔案，例如：`<TraceFile>.trc`、`<TraceFile>_1.trc`、`<TraceFile>_2.trc`、`<TraceFile>_3.trc`... `<TraceFile>_n.trc`。  
   
 ### <a name="input-trace-events-and-columns"></a>輸入追蹤事件和資料行  
  輸入追蹤資料必須包含特定的事件及資料行，如此 Distributed Replay 才可重新執行。 **中的** TSQL_Replay [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 範本包含所有必要的事件和資料，以及額外的資訊。 如需該範本的詳細資訊，請參閱 [重新執行需求](../sql-server-profiler/replay-requirements.md)。  
@@ -121,7 +120,7 @@ ms.locfileid: "48168048"
 |---------------------------------|------------------------------------------------------------------------------------|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
@@ -159,7 +158,7 @@ ms.locfileid: "48168048"
  重新執行與找不到或不正確之登入相關的事件，會造成重新執行錯誤，但重新執行作業仍會繼續。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Distributed 的 Replay](sql-server-distributed-replay.md)   
+ [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Distributed Replay 安全性](distributed-replay-security.md)   
  [安裝 Distributed Replay](install-distributed-replay-overview.md)  
   

@@ -12,12 +12,12 @@ ms.assetid: a59ffcd6-4b69-4c5c-9740-699ccb2183fb
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a9efc4b78f1f1b15fbbba54a1b59e3a8995051c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffa52839c20a34574423e3b123da79f734fb69ee
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208678"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508192"
 ---
 # <a name="browse-for-servers-network-servers"></a>瀏覽伺服器 (網路伺服器)
   如果連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件，但不知道 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的確實名稱，請在 [伺服器名稱] 方塊中按一下 [瀏覽其他]，以開啟 [瀏覽伺服器] 對話方塊。  
@@ -34,6 +34,6 @@ ms.locfileid: "48208678"
   
 ## <a name="options"></a>選項。  
  **從網路中選取一個連接的 SQL Server 執行個體**  
- 按一下樹狀結構中所顯示的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，以指定您想要連接到的伺服器。 您可以按一下標示 **+** 或 **-** 符號的節點，以顯示或隱藏部分樹狀檢視。  
+ 按一下樹狀結構中所顯示的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，以指定您想要連接到的伺服器。 您可以顯示或隱藏部分樹狀檢視中標示的節點上按一下**+** 或是**-** 符號。  
   
   

@@ -13,12 +13,12 @@ ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2652dd6ababc37a3883eef0cf385914a880ebdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7776ed3550d5bfa8caec4c017c46946e31845af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157628"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519092"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>什麼&#39;中的資料採礦 Office 增益集所包含
   當您安裝適用於 Office 2013 的資料採礦增益集時，選取所有的安裝選項就會加入以下的工具列和範本：  
@@ -31,7 +31,7 @@ ms.locfileid: "48157628"
   
 -   [適用於 Excel 的資料採礦用戶端&#40;SQL Server 資料採礦增益集&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
-     這個增益集提供的工具幾乎涵蓋了您所需的每項資料採礦工作，從清除和取樣資料到建立模型、測試模型精確度以及執行交叉驗證。 您也可以管理模型和製作模型文件，以及從範本建立 DMX 查詢。  
+     此增益集提供您可能需要-從清除和取樣資料，以建立模型、 測試模型精確度以及執行交叉驗證每個資料採礦工作的工具。 您也可以管理模型和製作模型文件，以及從範本建立 DMX 查詢。  
   
      有經驗的資料採礦人員將能盡情存取 SQL Server 資料採礦提供的所有工具，包括模型匯入與匯出、預測查詢和內容查詢。  
   

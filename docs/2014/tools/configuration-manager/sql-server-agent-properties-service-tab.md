@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e85edf0da738b51aabaef66d9e52954ffcb44591
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6eb2a23761dc24243a7a10b0e4cdbeb5b9ffe58d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211088"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775433"
 ---
 # <a name="sql-server-agent-properties-service-tab"></a>SQL Server Agent 屬性 (服務索引標籤)
   這項服務是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務。 淺灰色的屬性值不得以此應用程式加以變更。  
@@ -50,9 +49,9 @@ ms.locfileid: "48211088"
   
 -   自動：這部電腦啟動時，這項服務會嘗試啟動。  
   
--   停用：這項服務無法啟動。  
+-   已停用：這項服務無法啟動。  
   
- **State**  
- 表示這項服務為執行中、已停止或已停用。 "" 表示狀態變更已暫止。  
+ **狀態**  
+ 表示這項服務為執行中、已停止或已停用。 "**...**" 表示狀態變更已暫止。  
   
   

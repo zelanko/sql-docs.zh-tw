@@ -11,18 +11,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: badc7e979715aa3aa8c3d23425315f6dc3d40d7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c667b76764dc4ea6c6409d0ea5a55d16ae68c656
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721116"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419758"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>高可用性/災害復原的 SQL Server Native Client 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  本主題將討論適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client 支援 (在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中所新增)。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的詳細資訊，請參閱[可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[建立及設定可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[容錯移轉叢集和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 和[使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](~/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+  本主題將討論適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client 支援 (在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中所新增)。 如需詳細資訊[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱 <<c2> [ 可用性群組接聽程式、 用戶端連接性及應用程式容錯移轉&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)，[建立和設定可用性群組&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[容錯移轉叢集和 AlwaysOn 可用性群組&#40;SQL Server&#41;](~/database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)，和[作用中次要複本：</c2>可讀取次要複本&#40;AlwaysOn 可用性群組&#41;](~/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  您可以在連接字串中指定給定可用性群組的可用性群組接聽程式。 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 應用程式連接到可用性群組中發生容錯移轉的資料庫，則原始連接會中斷，而且應用程式必須在容錯移轉後開啟新連接，才能繼續工作。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "47721116"
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 進行連接  
  在連接到 SQL Server 2012 可用性群組接聽程式或 SQL Server 2012 容錯移轉叢集執行個體時，永遠指定 **MultiSubnetFailover=Yes**。 **MultiSubnetFailover**啟用更快速的容錯移轉的所有可用性群組和容錯移轉叢集 SQL Server 2012 中執行個體，並大幅縮短單一和多重子網路 Alwayson 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會平行嘗試連接。 在子網路容錯移轉期間，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會積極重試 TCP 連接。  
   
- **MultiSubnetFailover** 連接屬性指示，應用程式正在可用性群組或容錯移轉叢集執行個體中部署，而且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會透過嘗試連接到所有 IP 位址，嘗試連接到主要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的資料庫。 為連接指定 **MultiSubnetFailover=Yes** 時，用戶端會重試 TCP 連接，其速度比作業系統的預設 TCP 重新傳輸間隔更快。 這可讓 「 Always On 可用性群組或 Alwayson 容錯移轉叢集執行個體，在容錯移轉之後的更快重新連線，而且是適用於單一-和多重子網路可用性群組和容錯移轉叢集執行個體。  
+ **MultiSubnetFailover** 連接屬性指示，應用程式正在可用性群組或容錯移轉叢集執行個體中部署，而且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會透過嘗試連接到所有 IP 位址，嘗試連接到主要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的資料庫。 當**MultiSubnetFailover = Yes**指定連線，用戶端重試 TCP 連接的速度比作業系統的預設 TCP 重新傳輸間隔快。 這可讓 「 Always On 可用性群組或 Alwayson 容錯移轉叢集執行個體，在容錯移轉之後的更快重新連線，而且是適用於單一-和多重子網路可用性群組和容錯移轉叢集執行個體。  
   
  如需連接字串關鍵字的詳細資訊，請參閱[搭配 SQL Server Native Client 使用連接字串關鍵字](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47721116"
   
 -   連接到設定超過 64 個 IP 位址的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體會導致連接失敗。  
   
--   根據驗證的類型，使用 **MultiSubnetFailover** 連接屬性之應用程式的行為不會受到影響：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證、Kerberos 驗證或 Windows 驗證。  
+-   使用的應用程式的行為**MultiSubnetFailover**連接屬性不會影響基礎的驗證類型：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication、Kerberos Authentication 或 Windows Authentication。  
   
 -   您可以增加 **loginTimeout** 的值，以容納容錯移轉時間並減少應用程式連接重試次數。  
   

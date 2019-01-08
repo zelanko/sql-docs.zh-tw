@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1815b3e4e45fb08430af1c22a39a125cd8d81595
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec946a26c898c4ed66bd60e1ad71e69c008766df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155504"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766700"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>管理完成索引標籤 (SQL Server PowerShell)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元引進三個變數 (`$SqlServerMaximumTabCompletion`， `$SqlServerMaximumChildItems`，和`$SqlServerIncludeSystemObjects`) 來控制 Windows PowerShell tab 鍵自動完成。 Tab-Completion 透過傳回其名稱開頭為所輸入字串的項目表，來減少必須輸入的資料量。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元引進三個變數 (`$SqlServerMaximumTabCompletion`、`$SqlServerMaximumChildItems` 及 `$SqlServerIncludeSystemObjects`)，以控制 Windows PowerShell Tab-Completion。 Tab-Completion 透過傳回其名稱開頭為所輸入字串的項目表，來減少必須輸入的資料量。  
   
 ## <a name="before-you-begin"></a>開始之前  
  如果使用 Windows PowerShell Tab-Completion，當您已輸入一部分的路徑或 Cmdlet 名稱時，可以按 Tab 鍵來取得名稱符合您已輸入之項目的項目清單。 然後您可以從清單中選取想要的項目，而不必輸入名稱的其餘部分。  

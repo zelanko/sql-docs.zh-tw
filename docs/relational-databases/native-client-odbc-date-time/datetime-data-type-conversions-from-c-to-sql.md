@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c75f80d190926044fdffd80a9b0b75ad225246a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e547a21eb86a76a76bc1d4560005bcd58595dfb3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706677"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417219"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime 資料類型從 C 轉換成 SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,51 +35,51 @@ ms.locfileid: "47706677"
 |SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
 |SQL_C_TIME|-|1|1|1,7|1,5,7|1,13|1,13|  
 |SQL_C_SS_TIME2|-|1,3|1,10|1,7|1,5,7|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|不適用|不適用|1,10,11|不適用|不適用|不適用|不適用|  
+|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|N/A|N/A|1,10,11|N/A|N/A|N/A|N/A|  
 |SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
 |SQL_C_SS_TIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|不適用|不適用|不適用|不適用|1,10,11|不適用|不適用|  
-|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|不適用|不適用|  
-|SQL_C_CHAR/SQL_WCHAR (time2)|9|9,3|9,10|9,7,10|9,5,7,10|不適用|不適用|  
-|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9,3,4|9,4,10|9,10|9,5,10|不適用|不適用|  
-|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9,3,4,8|9,4,8,10|9,8,10|9,10|不適用|不適用|  
-|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|不適用|不適用|不適用|不適用|不適用|不適用|  
-|SQL_C_BINARY(SQL_TIME_STRUCT)|不適用|不適用|不適用|不適用|不適用|不適用|不適用|  
-|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|不適用|不適用|不適用|不適用|不適用|不適用|不適用|  
+|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|N/A|N/A|N/A|N/A|1,10,11|N/A|N/A|  
+|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|N/A|N/A|  
+|SQL_C_CHAR/SQL_WCHAR (time2)|9|9,3|9,10|9,7,10|9,5,7,10|N/A|N/A|  
+|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9,3,4|9,4,10|9,10|9,5,10|N/A|N/A|  
+|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9,3,4,8|9,4,8,10|9,8,10|9,10|N/A|N/A|  
+|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|N/A|N/A|N/A|N/A|N/A|N/A|  
+|SQL_C_BINARY(SQL_TIME_STRUCT)|N/A|N/A|N/A|N/A|N/A|N/A|N/A|  
+|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|N/A|N/A|N/A|N/A|N/A|N/A|N/A|  
   
 ## <a name="key-to-symbols"></a>符號的索引鍵  
   
--   **-**： 不支援轉換。 產生含有 SQLSTATE 07006 和訊息「限制的資料類型屬性違規」的診斷記錄。  
+-   **-**:不支援轉換。 產生含有 SQLSTATE 07006 和訊息「限制的資料類型屬性違規」的診斷記錄。  
   
--   **1**： 如果提供的資料不是有效的診斷記錄會產生含有 SQLSTATE 22007 和訊息 「 無效的 datetime 格式 」。  
+-   **1**:如果提供的資料無效，就會產生含有 SQLSTATE 22007 和訊息「無效的 datetime 格式」的診斷記錄。  
   
--   **2**： 時間欄位必須是零或一個診斷記錄就會產生含有 SQLSTATE 22008 和訊息 「 小數位數截斷 」。  
+-   **2**:時間欄位必須為零，否則會產生含有 SQLSTATE 22008 和訊息「小數截略」的診斷記錄。  
   
--   **3**： 小數秒必須為零或一個診斷記錄就會產生含有 SQLSTATE 22008 和訊息 「 小數位數截斷 」。  
+-   **3**:小數秒數必須為零，否則會產生含有 SQLSTATE 22008 和訊息「小數截略」的診斷記錄。  
   
--   **4**： 會忽略日期元件。  
+-   **4**:忽略日期元件。  
   
--   **5**: 時區會設定為用戶端的時區設定。  
+-   **5**:時區會設定為用戶端的時區設定。  
   
--   **6**： 時間會設定為零。  
+-   **6**:時間會設定為零。  
   
--   **7**： 日期會設定目前的日期。  
+-   **7**:日期會設定為目前的日期。  
   
--   **8**： 時間會從用戶端的時區轉換為 UTC。 如果進行這項轉換期間發生錯誤，就會產生含有 SQLSTATE 22008 和訊息「日期時間欄位溢位」的診斷記錄。  
+-   **8**:時間是從用戶端的時區轉換為 UTC。 如果進行這項轉換期間發生錯誤，就會產生含有 SQLSTATE 22008 和訊息「日期時間欄位溢位」的診斷記錄。  
   
--   **9**： 剖析字串並將其轉換為 date、 datetime、 datetimeoffset 或時間值，取決於遇到的第一個標點符號字元以及剩餘的元件是否有。 接著，在此程序探索來源類型之先前資料表中的規則之後，此字串會轉換為目標類型。 如果在剖析資料時偵測到錯誤，就會產生含有 SQLSTATE 22018 和訊息「轉換規格的字元值無效」的診斷記錄。 對於 datetime 和 smalldatetime 參數，如果年份超出這些類型支援的範圍，就會產生含有 SQLSTATE 22007 和訊息「無效的 datetime 格式」的診斷記錄。  
+-   **9**:根據出現的第一個標點符號字元以及剩餘的元件是否存在，字串會經過剖析，並轉換為 date、datetime、datetimeoffset 或 time 值。 接著，在此程序探索來源類型之先前資料表中的規則之後，此字串會轉換為目標類型。 如果在剖析資料時偵測到錯誤，就會產生含有 SQLSTATE 22018 和訊息「轉換規格的字元值無效」的診斷記錄。 對於 datetime 和 smalldatetime 參數，如果年份超出這些類型支援的範圍，就會產生含有 SQLSTATE 22007 和訊息「無效的 datetime 格式」的診斷記錄。  
   
      對於 datetimeoffset，即使沒有要求轉換為 UTC，此值在轉換到 UTC 之後仍然必須在範圍內。 這是因為 TDS 和伺服器永遠會以 UTC 的 datetimeoffset 值，將時間正規化，因此用戶端必須在轉換成 UTC 之後，確認時間元件位於支援的範圍內。 如果此值不在支援的 UTC 範圍內，就會產生含有 SQLSTATE 22007 和訊息「無效的 datetime 格式」的診斷記錄。  
   
--   **10**： 診斷記錄發生資料遺失的截斷時，會產生含有 SQLSTATE 22008 和訊息 「 無效的時間格式 」。 如果此值落在伺服器使用之 UTC 範圍所代表的範圍外，也可能發生這個錯誤。  
+-   **10**:如果截斷時發生資料遺失，就會產生含有 SQLSTATE 22008 和訊息「無效的時間格式」的診斷記錄。 如果此值落在伺服器使用之 UTC 範圍所代表的範圍外，也可能發生這個錯誤。  
   
--   **11**： 如果資料的位元組長度不等於 SQL 類型所需的結構大小，將診斷記錄會產生含有 SQLSTATE 22003 和訊息 「 數值超出範圍 」。  
+-   **11**:如果資料的位元組長度不等於 SQL 類型所要求的結構大小，就會產生含有 SQLSTATE 22003 和訊息「數值超出範圍」的診斷記錄。  
   
--   **12**： 如果資料的位元組長度為 4 或 8，資料會傳送至伺服器以原始的 TDS smalldatetime 或 datetime 格式。 如果資料的位元組長度完全符合 SQL_TIMESTAMP_STRUCT 的大小，資料就會轉換成適用於 datetime2 的 TDS 格式。  
+-   **12**:如果資料的位元組長度為 4 或 8，資料會以原始的 TDS smalldatetime 或 datetime 格式，傳送到伺服器。 如果資料的位元組長度完全符合 SQL_TIMESTAMP_STRUCT 的大小，資料就會轉換成適用於 datetime2 的 TDS 格式。  
   
--   **13**： 發生資料遺失的截斷時，產生含有 SQLSTATE 22001 和訊息 「 字串資料，右邊已截斷 」 的診斷的記錄。  
+-   **13**:如果截斷時發生資料遺失，就會產生含有 SQLSTATE 22001 和訊息「字串資料，右邊已截斷」的診斷記錄。  
   
-     根據下表，小數秒的位數 (小數位數) 會從目的地資料行的大小決定。  
+     從根據下表的目的地資料行的大小決定小數秒位數 （小數位數） 的數目：  
   
     ||||  
     |-|-|-|  
@@ -92,7 +92,7 @@ ms.locfileid: "47706677"
   
      資料行大小為零暗示 ODBC 中變數長度字元類型的大小無限制 (除非 SQL_C_TYPE_TIMESTAMP 套用 3 位數規則，否則為 9 位數)。 利用固定的長度字元類型將資料行大小指定為零是錯誤。  
   
--   **N/A**： 現有[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，並且會維持先前的行為。  
+-   **N/A**:系統會維持現有 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和舊有的行為。  
   
 ## <a name="see-also"></a>另請參閱  
  [日期和時間改善&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

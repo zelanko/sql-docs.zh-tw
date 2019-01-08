@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - registry keys [SQLXML]
@@ -16,12 +14,12 @@ ms.assetid: 91994142-32f0-4d8d-a8cf-eb0d8b1f1999
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff1d92a054d85c52e5b69044a2c25da31eb35705
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c23a208a0276a2a3eb71f493aa7e5ce7fad0928
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166728"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749240"
 ---
 # <a name="xsl-caching-sqlxml-40"></a>XSL 快取 (SQLXML 4.0)
   快取 XSL 樣式表可以改善效能。 第一次執行之後，如果 XSL 快取設定為 ON，XSL 樣式表仍保持在記憶體中；這樣可以改善後續處理的效能。 預設值是 ON。  

@@ -10,12 +10,12 @@ ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 402416503f927f74dcb711ac3bffb3c901f10e79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737816"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408315"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>執行 SSMA 主控台 (AccessToSQL)
 Microsoft 為您提供一組強大的指令碼檔案的命令和命令列選項來執行，並控制 SSMA 活動。 後續章節將詳細說明相同。  
@@ -25,7 +25,7 @@ Microsoft 為您提供一組強大的指令碼檔案的命令和命令列選項�
   
 **Command**  
   
-建立新的專案： 建立新的 SSMA 專案。  
+建立新專案間的：建立新的 SSMA 專案。  
   
 **指令碼**  
   
@@ -62,7 +62,7 @@ Microsoft 為您提供一組強大的指令碼檔案的命令和命令列選項�
   
   overwrite-if-exists="<true/false>"  
   
-  project-type=”<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>”  
+  project-type="<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>"  
   
 />  
 ```  
@@ -72,7 +72,7 @@ Microsoft 為您提供一組強大的指令碼檔案的命令和命令列選項�
   
 **Command**  
   
-開啟專案： 開啟現有的專案。  
+開啟專案：開啟現有的專案。  
   
 **指令碼**  
   
@@ -95,7 +95,7 @@ Microsoft 為您提供一組強大的指令碼檔案的命令和命令列選項�
   
 **Command**  
   
-儲存專案： 儲存移轉的專案。  
+儲存專案：儲存移轉的專案。  
   
 **指令碼**  
   
@@ -106,7 +106,7 @@ Microsoft 為您提供一組強大的指令碼檔案的命令和命令列選項�
 ```  
 **Command**  
   
-關閉專案： 關閉移轉專案。  
+關閉專案：關閉移轉專案。  
   
 **指令碼**  
   
@@ -149,7 +149,7 @@ connect-source-database
 ```  
 **Command**  
   
-負載 access 資料庫： 用來載入存取資料庫檔案  
+載入存取資料庫：用來載入存取資料庫檔案  
   
 **指令碼**  
   
@@ -325,7 +325,7 @@ generate-assessment-report
 ## <a name="migration-script-file-commands"></a>移轉指令碼檔案命令  
 [移轉] 命令將目標資料庫結構描述轉換成來源結構描述，並將資料移轉到目標伺服器。  
   
-[移轉] 命令設定預設的主控台輸出是 'Full' 輸出報表不詳細的錯誤報告： 只有摘要的來源物件樹狀結構根節點。  
+[移轉] 命令設定預設的主控台輸出會是 'Full' 輸出報表不詳細的錯誤報告：只有在來源物件樹狀結構根節點的摘要。  
   
 **Command**  
   
@@ -452,7 +452,7 @@ convert-schema
 ```  
 **Command**  
   
-連結資料表： 此命令會連結至目標資料表的來源 （存取） 資料表。  
+連結資料表：此命令會連結至目標資料表的來源 （存取） 資料表。  
   
 **指令碼**  
   
@@ -478,7 +478,7 @@ convert-schema
 ```  
 **Command**  
   
-取消連結資料表： 這個命令取消連結的目標資料表中的來源 （存取） 資料表。  
+取消連結資料表：此命令會取消連結的目標資料表中的來源 （存取） 資料表。  
   
 **指令碼**  
   
@@ -508,7 +508,7 @@ convert-schema
   
 **Command**  
   
-對應結構描述： 結構描述對應到目標結構描述的來源資料庫。  
+對應結構描述：目標結構描述的來源資料庫的結構描述對應。  
   
 **指令碼**  
   
@@ -527,7 +527,7 @@ convert-schema
 ## <a name="manageability-commands"></a>管理命令  
 管理能力命令可以幫助與來源資料庫同步處理目標資料庫物件。  
   
-[移轉] 命令設定預設的主控台輸出是 'Full' 輸出報表不詳細的錯誤報告： 只有摘要的來源物件樹狀結構根節點。  
+[移轉] 命令設定預設的主控台輸出會是 'Full' 輸出報表不詳細的錯誤報告：只有在來源物件樹狀結構根節點的摘要。  
   
 **Command**  
   

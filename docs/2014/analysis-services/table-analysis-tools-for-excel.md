@@ -14,12 +14,12 @@ ms.assetid: 6d9d1481-18e4-4108-9efa-68152b0940c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da1d5ceae73ae17f9e3689a13c21619dac5fbc93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 596bc66152f36c25169e4a089644042d25f8c13b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049068"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391896"
 ---
 # <a name="table-analysis-tools-for-excel"></a>適用於 Excel 的資料表分析工具
   中的資料採礦工具**分析**工具列是最簡單的方式，若要開始使用資料採礦。 每個工具都會自動分析資料的散發和類型，並設定參數以確保結果是有效的。 您不需選取演算法或設定複雜參數。  
@@ -34,7 +34,7 @@ ms.locfileid: "48049068"
  **分析關鍵影響因數**工具使用 Microsoft 貝氏機率分類演算法。  
   
  [偵測類別目錄&#40;適用於 Excel 的資料表分析工具&#41;](detect-categories-table-analysis-tools-for-excel.md)  
- 此工具可讓您新增任何資料集和套用叢集以尋找資料的群組。 它很適合用來尋找相似度及建立群組以供進一步分析。  
+ 此工具可讓您新增任何資料集和套用叢集以尋找資料的群組。 它適合用來尋找相似度及建立群組，以進一步分析。  
   
  **偵測類別目錄**」 工具採用 Microsoft 群集演算法。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48049068"
  **預測**」 工具採用 Microsoft 時間序列演算法。  
   
  [反白顯示例外狀況&#40;適用於 Excel 的資料表分析工具&#41;](highlight-exceptions-table-analysis-tools-for-excel.md)  
- 此工具會分析資料表中的模式，並尋找不符合模式的資料列和值。 接著您就可以檢閱這些值並加以更正，然後重新執行模型或標記這些值以供稍後採取動作。  
+ 此工具會分析資料的資料表中的模式，並尋找資料列和不符合模式的值。 接著您就可以檢閱這些值並加以更正，然後重新執行模型或標記這些值以供稍後採取動作。  
   
  **反白顯示例外狀況**」 工具採用 Microsoft 群集演算法。  
   

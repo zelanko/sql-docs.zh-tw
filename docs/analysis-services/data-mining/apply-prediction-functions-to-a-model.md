@@ -1,5 +1,5 @@
 ---
-title: 套用至模型的預測函數 |Microsoft 文件
+title: 套用至模型的預測函數 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7cd44eb2e5d5449283d1e222b854d065a72e15ca
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 192f55c8194bfb9b85b3e0bfad51d8261e45ab0a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014875"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540664"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>將預測函數套用至模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -74,9 +74,9 @@ ms.locfileid: "34014875"
     > [!WARNING]  
     >  要等到您按一下 [結果] 之後，預測查詢產生器才會驗證 DMX。 通常您會發現，查詢產生器所產生的運算式並不是有效的 DMX。 通常原因是因為參考的資料行與可預測資料行無關，或是嘗試預測巢狀資料表中的資料行 (這需要子 SELECT 陳述式)。 此時，您可以切換到 DMX 檢視，並繼續編輯陳述式。  
   
-### <a name="example-create-a-query-on-a-clustering-model"></a>範例：在群集模型上建立查詢  
+### <a name="example-create-a-query-on-a-clustering-model"></a>範例在群集模型上建立查詢  
   
-1.  如果您沒有叢集模型可用來建立此範例查詢，請使用[資料採礦基本教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)建立 [TM_Clustering] 模型。  
+1.  如果您沒有叢集模型可用來建立此範例查詢，請使用 [資料採礦基本教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)建立 [TM_Clustering] 模型。  
   
 2.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下模型 [TM_Clustering]，然後選取 [Build Prediction Query (建立預測查詢)]。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "34014875"
     |----------------|--------------|-------------|-------------|  
     |0|叢集 8|954|953.948638926372|  
   
- 如果您想要在陳述式中的其他地方加入其他子句，例如，如果您想要加入 WHERE 子句，您不能使用此方格來加入，而必須先切換到 DMX 檢視。  
+ 如果您想要在其他地方加入其他子句，陳述式中-例如，如果您想要加入 WHERE 子句-您無法使用此方格中，來新增您必須先切換到 DMX 檢視。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)  

@@ -13,19 +13,19 @@ ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: abc9f00432128750e4b61e971038bbc32dd85e86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e19b832bc3d7ebf1f883633491b309971cf2938e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125698"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398301"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>加入、刪除、變更封裝中使用者定義變數的範圍
   這些程序描述如何使用 [變數] 視窗，在封裝中加入、刪除及變更使用者定義變數的範圍。  
   
- 如需變數範圍的詳細資訊，請參閱[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)。  
+ 如需變數範圍的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 也提供系統變數，在執行階段，讓系統資訊可用，而且可以使用封裝和事件處理常式等容器中。 您無法刪除系統變數。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 也提供了讓系統資訊在執行階段可用的系統變數，而且可以在封裝和事件處理常式等容器中使用。 您無法刪除系統變數。  
   
 ### <a name="to-add-a-variable"></a>加入變數  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48125698"
 6.  若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)   
  [在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)   
  [設定使用者定義變數的屬性](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
  [在子套件中使用變數和參數的值](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  

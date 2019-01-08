@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -21,12 +20,12 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 174343d5c937c8c58277579192a9deb968355a0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edafb305050b36798990ecea21b08dde42e3f068
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091732"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770710"
 ---
 # <a name="dta-utility"></a>dta 公用程式
   **dta** 公用程式是 Database Engine Tuning Advisor 的命令提示字元版本。 **dta** 公用程式的設計，是為了讓您在應用程式和指令碼中使用 Database Engine Tuning Advisor 功能。  
@@ -41,7 +40,7 @@ ms.locfileid: "48091732"
 [ -? ] |  
 [  
       [ -S server_name[ \instance ] ]  
-      { { -U login_id [-P password ] } | –E  }  
+      { { -U login_id [-P password ] } | -E  }  
       { -D database_name [ ,...n ] }  
       [ -ddatabase_name ]   
       [ -Tltable_list | -Tf table_list_file ]  
@@ -103,13 +102,13 @@ ms.locfileid: "48091732"
  指定要微調的每個資料庫的名稱。 第一個資料庫是預設資料庫。 您可以指定多個資料庫，以逗號分隔各個資料庫名稱，例如：  
   
 ```  
-dta –D database_name1, database_name2...  
+dta -D database_name1, database_name2...  
 ```  
   
- 另外，您也可以在各個資料庫名稱上使用 **–D** 引數來指定多個資料庫，例如：  
+ 另外，您也可以在各個資料庫名稱上使用 **-D** 引數來指定多個資料庫，例如：  
   
 ```  
-dta –D database_name1 -D database_name2... n  
+dta -D database_name1 -D database_name2... n  
 ```  
   
  **-D** 引數是必要項目。 如果未指定 **-d** 引數， **dta** 一開始會連接到工作負載中第一個 `USE database_name` 子句所指定的資料庫。 如果工作負載中沒有明確的 `USE database_name` 子句，您就必須使用 **-d** 引數。  
@@ -149,7 +148,7 @@ dta -d AdventureWorks2012 ...
   
 |參數|預設值|  
 |---------------|-------------------|  
-|*database_name*|使用*database_name* 選項指定的 **database_name** |  
+|*database_name*|使用 **-D** 選項指定的 *database_name*|  
 |*owner_name*|**dbo**<br /><br /> 注意︰ *owner_name*必須**dbo**。 如果指定了任何其他值， **dta** 的執行便會失敗並傳回錯誤。|  
 |*table_name*|None|  
   
@@ -203,10 +202,10 @@ dta -d AdventureWorks2012 ...
  指定微調工作階段的數值識別碼。 若未指定，則 **dta** 會產生一個識別碼。 您可以利用這個識別碼來檢視現有微調工作階段的資訊。 如果您沒有指定 **-ID**值，就必須利用 **-s**來指定工作階段名稱。  
   
  **-ip**  
- 指定計畫快取可用做為工作負載。 針對明確選定的資料庫排名前 1000 個計畫快取事件，進行分析。 您可以利用 **–n** 選項變更此值。  
+ 指定計畫快取可用做為工作負載。 針對明確選定的資料庫排名前 1000 個計畫快取事件，進行分析。 您可以利用 **-n** 選項變更此值。  
   
  **-ipf**  
- 指定計畫快取可用做為工作負載。 針對所有資料庫排名前 1000 個計畫快取事件，進行分析。 您可以利用 **–n** 選項變更此值。  
+ 指定計畫快取可用做為工作負載。 針對所有資料庫排名前 1000 個計畫快取事件，進行分析。 您可以利用 **-n** 選項變更此值。  
   
  **-if** *workload_file*  
  指定微調輸入所用的工作負載檔案之路徑與名稱。 檔案必須是下列格式之一：.trc (SQL Server Profiler 追蹤檔)、.sql (SQL 檔) 或 .log ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 追蹤檔)。 您必須指定一個工作負載檔案或一份工作負載資料表。  
@@ -218,7 +217,7 @@ dta -d AdventureWorks2012 ...
   
 |參數|預設值|  
 |---------------|-------------------|  
-|*database_name*|使用*database_name* 選項指定的 **database_name** 。|  
+|*database_name*|使用 **-D** 選項指定的 *database_name*。|  
 |*owner_name*|**dbo**。|  
 |*table_name*|無。|  
   
@@ -344,7 +343,7 @@ dta -n number_of_events -A 0
  這個範例利用安全連接 (`-E`) 來連接 MyServer 中的 **tpcd1G** 資料庫，以分析工作負載和建立各項建議。 它會將輸出寫入名為 script.sql 的指令碼檔案。 如果 script.sql 已經存在，則因已指定 **引數，所以** dta `-F` 會覆寫該檔案。 微調工作階段的執行時間沒有限制，以便確保能夠完整分析工作負載 (`-A 0`)。 建議至少必須能夠增進 5% (`-m 5`)。 **dta** 的最終建議應該包含索引與索引檢視表 (`-fa IDX_IV`)。  
   
 ```  
-dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5 -fa IDX_IV  
+dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  
 ```  
   
  **B.限制磁碟空間的使用**  
@@ -352,7 +351,7 @@ dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5
  這個範例將資料庫大小總計限制成 3 GB (`-B 3000`)，其中包括原始資料和其他索引，且會將輸出導向 d:\result_dir\script1.sql。 它的執行時間不超出 1 小時 (`-A 60`)。  
   
 ```  
-dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A 60  
+dta -D tpcd1G -if tpcd_22.sql -B 3000 -of "d:\result_dir\script1.sql" -A 60  
 ```  
   
  **C.限制微調查詢的數目**  
@@ -360,7 +359,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
  這個範例會將從 orders_wkld.sql 檔讀取的查詢數目限制為最大值 10 (`-n 10`)，或執行 15 分鐘 (`-A 15`)，兩者中先出現者優先。 若要確定 10 項查詢全都得到微調，請利用 `-A 0` 來指定無限微調時間。 如果時間很重要，請依照這個範例所顯示，利用 `-A` 引數指定微調所能使用的分鐘數來指定適當的時間限制。  
   
 ```  
-dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  
+dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10  
 ```  
   
  **D.微調檔案中所列出的特定資料表**  
@@ -386,11 +385,11 @@ AdventureWorks2012.Production.Product  2000000
  微調時間是 2 小時 (`-A 120`)，輸出寫在 XML 檔 (`-ox XMLTune.xml`) 中。  
   
 ```  
-dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.txt  
+dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [命令提示字元公用程式參考&#40;Database Engine&#41;](../command-prompt-utility-reference-database-engine.md)   
+ [命令提示字元公用程式參考 &#40;Database Engine&#41;](../command-prompt-utility-reference-database-engine.md)   
  [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

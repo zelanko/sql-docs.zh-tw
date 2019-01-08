@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 387a961edba89d3b46236fe30cdd2d4851a68d6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afd556972ea3f5b47850e8cc20a8a5624ed45da5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176978"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774740"
 ---
 # <a name="user-error-message-event-class"></a>User Error Message 事件類別
   User Error Message 事件類別顯示發生錯誤或例外狀況時，使用者看見的錯誤訊息。 錯誤訊息文字會顯示在 TextData 欄位。  

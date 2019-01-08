@@ -1,5 +1,5 @@
 ---
-title: 第 2 課： 將資料加入 |Microsoft Docs
+title: 第 2 課：將資料加入 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,24 @@ ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d2ffda70d3af46434886a7f2878ce238d3190905
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 696b4e9402e58da6308e6746cadbc25d43396d8f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049348"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416349"
 ---
 # <a name="lesson-2-add-data"></a>第 2 課：加入資料
   在這一課，您將會使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中的 [資料表匯入精靈] 連接 AdventureWorksDW SQL Database、選取資料、預覽及篩選資料，然後將資料匯入您的模型工作空間。  
   
- 使用 [資料表匯入精靈] 可讓您從各種關聯式來源匯入資料：Access、SQL、Oracle、Sybase、Informix、DB2、Teradata 以及其他來源。 從每一個關聯式來源匯入資料的步驟非常類似以下所述內容。 此外，您也可以使用預存程序選取資料。  
+ 透過使用資料表匯入精靈，您可以從各種關聯式來源匯入資料：Access、SQL、Oracle、Sybase、Informix、DB2、Teradata 以及其他來源。 從每一個關聯式來源匯入資料的步驟非常類似以下所述內容。 此外，您也可以使用預存程序選取資料。  
   
  若要深入了解匯入資料和可做為匯入來源的各種不同類型資料來源，請參閱[資料來源 &#40;SSAS 表格式&#41;](data-sources-ssas-tabular.md)。  
   
- 完成本課程的估計時間： **20 分鐘**  
+ 完成本課程的估計時間：**20 分鐘的時間**  
   
 ## <a name="prerequisites"></a>先決條件  
- 本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課程的工作之前，您應已完成上一課： [第 1 課：建立新的表格式模型專案](lesson-1-create-a-new-tabular-model-project.md)。  
+ 本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 1 課：建立新的表格式模型專案](lesson-1-create-a-new-tabular-model-project.md)。  
   
 ## <a name="create-a-connection"></a>建立連接  
   
@@ -53,9 +53,9 @@ ms.locfileid: "48049348"
   
 7.  在 [選擇如何匯入資料] 頁面中，確認已選取 [從資料表和檢視表清單來選取要匯入的資料]。 若要從資料表和檢視表的清單中選取，請按一下 [下一步] 顯示來源資料庫內所有來源資料表的清單。  
   
-8.  在 [選取資料表和檢視表] 頁面中，選取下列資料表的核取方塊：**DimCustomer**、**DimDate**、**DimGeography**、**DimProduct**、**DimProductCategory**、**DimProductSubcategory** 和 **FactInternetSales**。  
+8.  在 **選取資料表和檢視**頁面上，選取下列資料表的核取方塊：**DimCustomer**， **DimDate**， **DimGeography**， **DimProduct**， **DimProductCategory**， **DimProductSubcategory**，並**FactInternetSales**。  
   
-9. 模型中的資料表最好使用較容易理解的名稱。 按一下 [易記名稱] 資料行中 **DimCustomer** 的資料格。 重新命名資料表，將 DimCustomer 中的 "Dim" 移除。  
+9. 模型中的資料表最好使用較容易理解的名稱。 按一下 [易記名稱] 資料行中 **DimCustomer** 的資料格。 重新命名資料表，移除"Dim"DimCustomer。  
   
 10. 重新命名其他資料表：  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48049348"
  現在，您已經連接到資料庫、選取了要匯入的資料表，並且已使用易記的資料表名稱，即可前往下一節[在匯入之前篩選資料表資料](#FilterData)。  
   
 ##  <a name="FilterData"></a> 篩選資料表資料  
- 您要從資料庫匯入的 DimCustomer 資料表包含來自原始 SQL Server Adventure Works 資料庫的資料子集。 您將從 DimCustomer 資料表中篩選出部分不需要的資料行。 如果可能的話，您會想要篩選掉不會使用的資料，以便節省模型使用的記憶體中空間。  
+ 您要從資料庫匯入的 DimCustomer 資料表包含來自原始 SQL Server Adventure Works 資料庫的資料子集。 您會篩選出部分不需要從 DimCustomer 資料表資料行。 如果可能的話，您會想要篩選掉不會使用的資料，以便節省模型使用的記憶體中空間。  
   
 #### <a name="to-filter-the-table-data-prior-to-importing"></a>若要在匯入之前篩選資料表資料  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48049348"
   
 3.  確認已檢查過所有其他資料行，然後按一下 [確定]。  
   
-     請注意 [套用的篩選] 字樣現在會顯示在 **Customer** 資料列的 [篩選詳細資料] 資料行中，而且如果您按一下該連結，將會看到剛才套用之篩選的文字描述。  
+     請注意單字**套用的篩選**現在會顯示在**篩選詳細資料**中的資料行**客戶**資料列; 如果您按一下該連結，您會看到的文字描述剛才套用的篩選。  
   
 4.  藉由清除每個資料表中下列資料行的核取方塊，篩選其餘資料表：  
   
@@ -165,6 +165,6 @@ ms.locfileid: "48049348"
 -   在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中的 [檔案] 功能表上，按一下 [全部儲存]。  
   
 ## <a name="next-step"></a>下一個步驟  
- 若要繼續進行本教學課程，請前往下一課： [第 3 課：重新命名資料行](rename-columns.md)。  
+ 若要繼續本教學課程，請移至下一課：[第 3 課：重新命名資料行](rename-columns.md)。  
   
   

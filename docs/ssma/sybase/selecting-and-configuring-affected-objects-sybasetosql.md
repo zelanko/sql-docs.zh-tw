@@ -12,12 +12,12 @@ ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0aed95b084970bf4aa24bd279d8f52af7a33cfc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48d5305854d214e61036e00ca23a94b85313138a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627539"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402255"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>選取並設定受影響的物件 (SybaseToSQL)
 在此頁面中，您可以選取資料表和 SSMA 確認在上一個步驟中選擇之物件的執行結果時，所要比較的外部索引鍵，在其中變更。 此外，您可以自訂的驗證參數。  
@@ -42,14 +42,14 @@ Sybase 物件樹狀結構，位於左邊視窗中檢查的資料表和外部索�
   
 -   預設  
   
--   識別  
+-   身分識別  
   
 -   可為 Null  
   
 ## <a name="sql"></a>Sql  
 SQL 索引標籤包含 「 建立資料表 」 中所選取資料表的 SQL。  
   
-## <a name="data"></a>data  
+## <a name="data"></a>資料  
 資料索引標籤會顯示選取之資料表中的資料。  
   
 ## <a name="properties"></a>屬性  

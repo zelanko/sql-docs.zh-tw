@@ -14,12 +14,12 @@ ms.assetid: 6b7a630e-47f8-4ee1-b2a7-476bc1d0b0d4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37d8d67300ec29a2b346f5f6b958c1955d08db0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 256e964e556421db62dc8f52fdc6bc759c3a200a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792166"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536857"
 ---
 # <a name="sqlgetinfo-text-file-driver"></a>SQLGetInfo (文字檔驅動程式)
 > [!NOTE]  
@@ -27,11 +27,11 @@ ms.locfileid: "47792166"
   
  **SQLGetInfo**支援 SQL_FILE_USAGE 資訊類型。 傳回的值是 16 位元整數，指出如何驅動程式直接處理資料來源中的檔案：  
   
--   SQL_FILE_NOT_SUPPORTED — 驅動程式不是單層式架構的驅動程式。  
+-   SQL_FILE_NOT_SUPPORTED-驅動程式不是單層式架構的驅動程式。  
   
--   SQL_FILE_TABLE — 單層式架構的驅動程式將資料來源中的檔案視為資料表。  
+-   SQL_FILE_TABLE-單層式架構的驅動程式將資料來源中的檔案視為資料表。  
   
--   SQL_FILE_QUALIFIER — 單層式架構的驅動程式將資料來源中的檔案視為限定詞。  
+-   SQL_FILE_QUALIFIER-單層式架構的驅動程式將資料來源中的檔案視為限定詞。  
   
  ODBC 驅動程式傳回 SQL_FILE_TABLE Textdriver，如，因為每個檔案是一個資料表。  
   

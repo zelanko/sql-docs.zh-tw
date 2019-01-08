@@ -19,17 +19,17 @@ ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2a8c46bbcfea4c94d3dc5b4cd0f5783858f3f0fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1d0fc510c7c45dab8fbc79cc8e74001ff1855b6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715616"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528208"
 ---
 # <a name="compatibility-matrix"></a>相容性矩陣
 下表描述的相容性應用程式和驅動程式先前在這一節中定義的類型。  
   
-|應用程式類型<br /><br /> 和版本|32 位元 ODBC<br /><br /> 2.*x*驅動程式|ODBC 3。*x*<br /><br /> 驅動程式|ODBC 3.8 驅動程式|ISO 和相容開啟群組的驅動程式|  
+|應用程式類型<br /><br /> 和版本|32 位元 ODBC<br /><br /> 2.*x*驅動程式|ODBC 3。*x*<br /><br /> 驅動程式|ODBC 3.8 驅動程式|ISO 和規範開啟群組的驅動程式|  
 |--------------------------------------|-----------------------------------|---------------------------|---------------------|-----------------------------------------|  
 |16 位元應用程式，任何版本|相容|相容|相容|相容|  
 |純 2。*x*應用程式|相容|相容|相容|不相容 [3]|  

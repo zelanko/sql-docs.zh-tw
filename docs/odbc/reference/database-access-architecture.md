@@ -17,15 +17,15 @@ ms.assetid: 3811599f-48cb-4205-9fe5-5ab4b240047d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42fc1d3880e01c435e7991fb5781d0f815a83db5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43c6ffd93020b1db1b90ad1768822075299d16b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612287"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527681"
 ---
 # <a name="database-access-architecture"></a>資料庫存取架構
-在 ODBC 開發問題的其中一個是資料庫存取架構，以標準化的哪個部分。 程式設計介面上一節中所述的 SQL，內嵌 SQL，SQL 模組和 Cli，只能有一個屬於此架構。 事實上，因為 ODBC 的主要目的是要連接個人電腦 – 應用程式，以迷你電腦和主機 Dbms，另外有多個網路元件，其中有些無法標準化。  
+在 ODBC 開發問題的其中一個是資料庫存取架構，以標準化的哪個部分。 SQL 程式設計介面，則上一節中為內嵌的 SQL 中所述 SQL 模組和 Cli-是只有一個這種架構的一部分。 事實上，因為 ODBC 的主要目的是要連接個人電腦應用程式，以迷你電腦和主機 Dbms，另外有多個網路元件，其中有些無法標準化。  
   
  此章節包含下列主題。  
   

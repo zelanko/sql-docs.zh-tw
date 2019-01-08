@@ -20,12 +20,12 @@ ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82e3388321e182e866eb229c7613a1950c80eda1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3493657fb537057f7c0ff8e126582ceb6faccc11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149018"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502845"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜尋靠近另一個單字的字詞
   您可以在 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 述詞或 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 函數中使用鄰近字詞 (NEAR)，以便搜尋彼此接近的單字或片語。 您也可以指定分隔第一個和最後一個搜尋詞彙之非搜尋詞彙的數目上限。 此外，您也可以依任何順序或是您所指定的順序來搜尋單字或片語。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援舊版[泛型相近詞彙](#Generic_NEAR)，這目前已被取代，而[自訂相近詞彙](#Custom_NEAR)，這是新功能[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
@@ -51,7 +51,7 @@ ms.locfileid: "48149018"
   
  {  
   
- *search_term* [ ,…*n* ]  
+ *search_term* [，...*n* ]  
   
  |  
   
@@ -107,9 +107,9 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
 ```  
   
- 您無法結合自訂鄰近字詞與泛型鄰近字詞 (*term1* NEAR *term2*)、衍生字詞 (ISABOUT …) 或加權字詞 (FORMSOF …)。  
+ 您無法結合自訂相近詞彙與泛型相近詞彙 (*term1* NEAR *term2*)、 衍生詞彙 (ISABOUT...) 或加權的詞彙 (FORMSOF...)。  
   
-### <a name="example-using-the-custom-proximity-term"></a>範例：使用自訂相近詞彙  
+### <a name="example-using-the-custom-proximity-term"></a>範例使用自訂相近詞彙  
  下列範例會在 `Production.Document` 範例資料庫的 `AdventureWorks2012` 資料表中搜尋包含與 "bracket" 一字位於相同文件中之 "reflector" 一字的所有文件摘要。  
   
 ```  
@@ -160,7 +160,7 @@ GO
   
  泛型鄰近字詞表示指定的搜尋字詞必須全部都出現在同一份文件中，才會傳回符合項目，而不論搜尋字詞之間的非搜尋字詞數目 (「距離」) 為何。 基本語法如下：  
   
- { *search_term* { NEAR | ~ } *search_term* } [ ,…*n* ]  
+ { *search_term* {NEAR | ~} *search_term* } [，...*n* ]  
   
  例如，在下列範例中，'fox' 和 'chicken' 這兩個字必須同時出現 (按照任何順序)，才會產生符合項目：  
   
@@ -184,9 +184,9 @@ CONTAINSTABLE (Production.ProductDescription,
 )  
 ```  
   
- 您無法結合泛型相近詞彙與自訂相近詞彙 (例如 `NEAR((term1,term2),5)`)、加權詞彙 (ISABOUT …) 或衍生詞彙 (FORMSOF …)。  
+ 您無法結合泛型相近詞彙與自訂相近詞彙，例如`NEAR((term1,term2),5)`、 加權的詞彙 (ISABOUT...) 或衍生詞彙 (FORMSOF...)。  
   
-### <a name="example-using-the-generic-proximity-term"></a>範例：使用泛型相近詞彙  
+### <a name="example-using-the-generic-proximity-term"></a>範例使用泛型相近詞彙  
  下列範例會使用泛型相近詞彙來搜尋與 "bracket" 一字位於相同文件中的 "reflector" 一字。  
   
 ```  

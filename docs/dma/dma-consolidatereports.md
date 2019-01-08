@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: f748189446ca3d5cfd49c748fa058cf8dbef7fe7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 3b36e720cc390311c851eef55d09a74cc5e5d6ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601818"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503282"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>評估企業及彙總與 DMA 的評估報告
 
@@ -70,7 +70,7 @@ ms.locfileid: "51601818"
 - SQL Server 資料表
 
 ### <a name="if-using-a-csv-file"></a>如果使用 CSV 檔案
-當使用 csv 檔案匯入資料，請確定只有兩個資料行的資料 –**執行個體名稱**並**資料庫名稱**，資料行不會有標頭資料列。
+當使用 csv 檔案匯入資料，請確定只有兩個資料行的資料-**執行個體名稱**並**資料庫名稱**，且資料行沒有標頭資料列。
  
  ![csv 檔案內容](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
@@ -218,7 +218,7 @@ DmaProcessor 已完成處理評估檔案之後，資料會載入 DMAReporting �
 本節是報告，其中會顯示執行個體資料庫的完備性的主要部分。 此報表包含向下鑽研的階層：
 - InstanceDatabase
 - ChangeCategory
-- Title
+- 標題
 - ObjectType
 - ImpactedObjectName
 

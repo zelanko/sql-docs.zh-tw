@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
@@ -22,12 +21,12 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41762bb046e5b118d7802555c2b676378e81df7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d7ea5c6424283bd7b8aaa44f8a026ea18a9db30
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122838"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751120"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件處理常式
   在執行階段，可執行檔 (封裝和「Foreach 迴圈」、「For 迴圈」、「時序」，以及工作主機容器) 會引發事件。 例如，當發生錯誤時，會引發 OnError 事件。 您可以建立這些事件的自訂事件處理常式，以擴充封裝功能，並使封裝在執行階段易於管理。 事件處理常式可以執行下列工作：  
@@ -46,7 +45,7 @@ ms.locfileid: "48122838"
   
  ![套件、For 迴圈、工作主機和執行 SQL 工作](media/mw-dts-eventhandlerpkg.gif "套件、For 迴圈、工作主機和執行 SQL 工作")  
   
- 針對其 `OnError` 事件，僅封裝具有事件處理常式。 如果 「 執行 SQL 」 工作執行時，發生錯誤`OnError`執行封裝的事件處理常式。 下圖顯示的呼叫順序，顯示會導致`OnError`封裝執行的事件處理常式。  
+ 針對其 `OnError` 事件，僅封裝具有事件處理常式。 如果在「執行 SQL」工作執行時發生錯誤，則會執行封裝的 `OnError` 事件處理常式。 下圖顯示引發封裝執行 `OnError` 事件處理常式的呼叫順序。  
   
  ![事件處理常式流程](media/mw-dts-eventhandlers.gif "事件處理常式流程")  
   
@@ -90,7 +89,7 @@ ms.locfileid: "48122838"
 ## <a name="configuration-of-an-event-handler"></a>設定事件處理常式  
  您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [屬性] 視窗中，或以程式設計方式設定屬性。  
   
- 如需如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中設定這些屬性的相關資訊，請參閱[設定工作或容器的屬性](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)。  
+ 如需如何在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中設定這些屬性的相關資訊，請參閱 [設定工作或容器的屬性](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)。  
   
  如需以程式設計方式設定這些屬性的相關資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>。  
   

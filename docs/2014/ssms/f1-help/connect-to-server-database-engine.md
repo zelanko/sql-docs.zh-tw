@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connectoserverunknownservertype.f1
@@ -17,15 +17,15 @@ ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: beb7afac36d1183fc9142874f4c2de1589ff0df2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 018ca302bf4d5fe8271369008ffbfec7d228cfbf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189958"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768440"
 ---
 # <a name="connect-to-server-database-engine"></a>連接到伺服器 (Database Engine)
-  使用此對話方塊可在連線到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 時檢視或指定選項。 在大多數的情況下，您可以在 [伺服器名稱] 方塊中輸入資料庫伺服器的電腦名稱，然後按一下 [連接] 來進行連接。 如果要連接到 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]，請使用電腦名稱並於後面加上 **\sqlexpress**。  
+  連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]時，使用此對話方塊來檢視或指定選項。 在大多數的情況下，您可以在 [伺服器名稱] 方塊中輸入資料庫伺服器的電腦名稱，然後按一下 [連接] 來進行連接。 如果要連接到 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]，請使用電腦名稱並於後面加上 **\sqlexpress**。  
   
  許多因素都可能影響連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的能力。  
   

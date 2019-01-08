@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 54dc66e30356f3896d7ce509bf83e56a1973c5b2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 55eb472ef14e980f77a47a2c6989031cebec91e9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984840"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509556"
 ---
 # <a name="configure-power-pivot-service-accounts"></a>設定 Power Pivot 服務帳戶
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "38984840"
   
  [帳戶的需求和權限](#requirements)  
   
- [疑難排解：手動授與管理權限](#updatemanually)  
+ [疑難排解：以手動方式授與管理權限](#updatemanually)  
   
- [疑難排解：解決因為管理中心或 SharePoint Foundation Web 應用程式服務密碼過期而造成的 HTTP 503 錯誤](#expired)  
+ [疑難排解：解決 HTTP 503 錯誤，因為密碼過期管理中心或 SharePoint Foundation Web 應用程式服務](#expired)  
   
 ##  <a name="bkmk_passwordssas"></a> 更新 SQL Server Analysis Services (Power Pivot) 執行個體的過期密碼  
   
@@ -110,12 +110,12 @@ ms.locfileid: "38984840"
   
 |需求|描述|  
 |-----------------|-----------------|  
-|提供需求|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務是在伺服器陣列上的共用資源，並會在建立服務應用程式時提供使用。 建立服務應用程式時，必須指定服務應用程式集區。 您可透過兩種方法指定：使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具，或透過 PowerShell 命令。<br /><br /> 您可能已經設定應用程式集區識別在唯一帳戶下執行。 如果未指定，請考慮立即將它變更為在不同帳戶下執行。|  
+|提供需求|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務是在伺服器陣列上的共用資源，並會在建立服務應用程式時提供使用。 建立服務應用程式時，必須指定服務應用程式集區。 您可透過兩種方法指定：使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具，或透過 PowerShell 命令。<br /><br /> 您可能已經設定應用程式集區識別在唯一帳戶下執行。 但是，如果未指定，請考慮將它現在變更為不同的帳戶下執行。|  
 |網域使用者帳戶需求|應用程式集區識別必須是 Windows 網域使用者帳戶。 禁止使用內建電腦帳戶 (如，網路服務或本機服務)。|  
 |權限需求|這個帳戶不需要電腦上的本機系統管理員權限。 但是，此帳戶必須在安裝於相同電腦的本機 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 上具有 Analysis Services 系統管理員權限。 這些權限會由 SQL Server 安裝程式自動授與，或是當您在管理中心設定或變更應用程式集區識別時授與。<br /><br /> 將查詢轉送到 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]必須有系統管理權限。 在監視健全狀況、關閉非使用中的工作階段及接聽追蹤事件時也需要系統管理權限。<br /><br /> 此帳戶必須擁有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式資料庫的連接、讀取和寫入權限。 當建立應用程式時會自動授與這些權限，當您在管理中心變更帳戶或密碼時則會自動更新這些權限。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式將會檢查 SharePoint 使用者是否已獲得檢視資料的授權，然後再擷取檔案，但並不會模擬使用者。 模擬並不需要任何權限。|  
 |向外延展需求|無。|  
   
-##  <a name="updatemanually"></a> 疑難排解：手動授與管理權限  
+##  <a name="updatemanually"></a> 疑難排解：以手動方式授與管理權限  
  如果更新認證的人員不是電腦上的本機系統管理員，管理權限將無法更新。 如果發生這個情況，您可以手動授與管理權限。 最簡單的方式就是，在管理中心執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態計時器工作。 您可以使用這個方法，在伺服器陣列中重設所有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器的權限。 請注意，此方法只有在 SharePoint 計時器工作以伺服陣列管理員或電腦本機系統管理員執行時才有作用。  
   
 1.  在 [監視] 中，按一下 **[檢閱工作定義]**。  
@@ -159,7 +159,7 @@ ms.locfileid: "38984840"
   
     1.  以滑鼠右鍵按一下應用程式集區名稱，然後選取 **[進階設定]**。  
   
-    2.  選取 **[識別]** ，然後按一下... 按鈕，以開啟 [應用程式集區識別] 對話方塊。  
+    2.  選取 **識別**按一下...按鈕，以開啟 應用程式集區識別 對話方塊。  
   
     3.  按一下 **[設定]**。  
   
@@ -181,6 +181,6 @@ ms.locfileid: "38984840"
   
 ## <a name="see-also"></a>另請參閱  
  [啟動或停止 Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)   
- [設定 Power Pivot 無人看管的資料重新整理帳戶 (Power Pivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)  
+ [設定 Power Pivot 自動資料重新整理帳戶 (Power Pivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   
   

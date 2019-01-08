@@ -1,5 +1,5 @@
 ---
-title: 第 10 課： 建立資料分割 |Microsoft Docs
+title: 第 10 課：建立資料分割 |Microsoft Docs
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,22 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3ce1bc8aa83b376aecdf5bd80a180a4777044bce
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: d43432a53eb2321c3707f4034e244752a5c368ba
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42791929"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416393"
 ---
-# <a name="lesson-10-create-partitions"></a>第 10 課： 建立資料分割
+# <a name="lesson-10-create-partitions"></a>第 10 課：建立資料分割
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-在這一課，您將建立資料分割來將 FactInternetSales 資料表分割成較小的邏輯部分，可以處理 （重新整理） 其他資料分割。 根據預設，加入模型中的每個資料表都有一個資料分割，其中包括資料表的所有資料行和資料列。 FactInternetSales 資料表中，我們想要將資料依年度;針對每個資料表的五年的一個資料分割。 接著，每個資料分割就可以單獨處理。 若要進一步了解，請參閱[分割區](../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
+在這一課，您將建立資料分割來將 FactInternetSales 資料表分割成較小的邏輯部分，可以處理 （重新整理） 其他資料分割。 根據預設，您加入模型中每個資料表會有一個分割區會包含所有資料表的資料行和資料列。 FactInternetSales 資料表中，我們想要將資料依年度;針對每個資料表的五年的一個資料分割。 接著，每個資料分割就可以單獨處理。 若要進一步了解，請參閱[分割區](../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
   
-完成本課程的估計時間： **15 分鐘**  
+完成本課程的估計時間：**15 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
-本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 9 課： 建立階層](../analysis-services/lesson-9-create-hierarchies.md)。  
+本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 9 課：建立階層](../analysis-services/lesson-9-create-hierarchies.md)。  
   
 ## <a name="create-partitions"></a>建立資料分割  
   
@@ -144,4 +144,4 @@ ms.locfileid: "42791929"
     ![為表格式-lesson10-程序-完成](../analysis-services/media/as-tabular-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>下一步
-移至下一個課程︰[第 11 課： 建立角色](../analysis-services/lesson-11-create-roles.md)。 
+請移至下一課：[第 11 課：建立角色](../analysis-services/lesson-11-create-roles.md)。 

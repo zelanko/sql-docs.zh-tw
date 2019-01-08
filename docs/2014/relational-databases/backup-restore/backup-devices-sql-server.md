@@ -25,12 +25,12 @@ ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0d6cd424915692bcdfbe258975b8cf771ad80eba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7cd01f1a3c98bcf0d67ab0224772538a7a82514d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084820"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520140"
 ---
 # <a name="backup-devices-sql-server"></a>備份裝置 (SQL Server)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫上進行備份作業期間，備份的資料 (「備份」) 會寫入至實體備份裝置。 當媒體集的第一個備份寫入此實體備份裝置時，此裝置就會初始化。 單一媒體集是由一組一個或多個備份裝置上的備份所組成。  
@@ -86,7 +86,7 @@ ms.locfileid: "48084820"
   
  BACKUP DATABASE *database_name*  
   
- TO DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ TO DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  例如：  
   
@@ -100,7 +100,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ FROM DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  例如，  
   
@@ -110,13 +110,13 @@ RESTORE DATABASE AdventureWorks2012
 ```  
   
 ###  <a name="BackupFileDiskPath"></a> 指定磁碟備份檔案的路徑  
- 指定備份檔案時，您應該輸入完整路徑及檔案名稱。 當您要備份至檔案時，如果僅指定檔案名稱或相對路徑，便會將備份檔案放在預設的備份目錄中。 預設的備份目錄為 C:\Program Files\Microsoft SQL Server\MSSQL.*&lt;n&gt;* \MSSQL\Backup，其中 *&lt;n&gt;* 是伺服器執行個體的編號。 因此，對預設的伺服器執行個體而言，其預設備份目錄為：C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup。  
+ 指定備份檔案時，您應該輸入完整路徑及檔案名稱。 當您要備份至檔案時，如果僅指定檔案名稱或相對路徑，便會將備份檔案放在預設的備份目錄中。 預設的備份目錄為 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup，其中 *n* 是伺服器執行個體的編號。 因此，預設的伺服器執行個體，其預設備份目錄是：C:\Program Files\Microsoft SQL Server\MSSQL12。MSSQLSERVER\MSSQL\Backup。  
   
  若要避免模稜兩可的情形 (特別是在指令碼中)，建議您在每個 DISK 子句中明確指定備份目錄的路徑。 不過，當您使用「查詢編輯器」時，這就不是那麼重要。 在這種情況下，如果您確定備份檔案是在預設的備份目錄中，即可省略 DISK 子句中的路徑。 例如，下列 `BACKUP` 陳述式會將 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫備份到預設備份目錄。  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
-   TO DISK = ’AdventureWorks2012.bak’;  
+   TO DISK = 'AdventureWorks2012.bak';  
 GO  
 ```  
   
@@ -136,7 +136,7 @@ GO
     >  透過網路備份資料可能會受到網路問題的影響。因此，我們建議您在使用遠端磁碟時，於備份作業完成後進行驗證。 如需詳細資訊，請參閱 [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)。  
   
 #### <a name="specifying-a-universal-naming-convention-unc-name"></a>指定通用命名慣例 (UNC) 名稱  
- 若要在備份或還原命令中指定網路共用，您應該要使用備份裝置檔案的完整通用命名慣例 (UNC) 名稱。 UNC 名稱的格式為 **\\\\***Systemname***\\***ShareName***\\***Path***\\***FileName*。  
+ 若要在備份或還原命令中指定網路共用，您應該要使用備份裝置檔案的完整通用命名慣例 (UNC) 名稱。 UNC 名稱的格式為 **\\\\**<系統名稱>**\\**<共用名稱>**\\**<路徑>**\\**<檔案名稱>。  
   
  例如：  
   
@@ -174,7 +174,7 @@ GO
   
  BACKUP { DATABASE | LOG } *database_name*  
   
- TO TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ TO TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  例如：  
   
@@ -188,7 +188,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ FROM TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
 ###  <a name="TapeOptions"></a> 磁帶專用的 BACKUP 和 RESTORE 選項 (TRANSACT-SQL)  
  為了方便磁帶管理作業，BACKUP 陳述式提供了下列磁帶專用的選項：  
@@ -207,7 +207,7 @@ GO
 ###  <a name="OpenTapes"></a> 管理開啟的磁帶  
  若要檢視開啟的磁帶裝置清單以及掛載要求的狀態，請查詢 [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) 動態管理檢視。 這個檢視顯示所有開啟的磁帶。 這包括正在等待下一個 BACKUP 或 RESTORE 作業而暫時閒置的使用中磁帶。  
   
- 如果磁帶不慎保持在開啟狀態，釋放磁帶最快速的方式為使用下列命令：RESTORE REWINDONLY FROM TAPE **=***backup_device_name*。 如需詳細資訊，請參閱 [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql)。  
+ 如果磁帶不慎保持在開啟，釋放磁帶最快速的方式是使用下列命令：RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_。 如需詳細資訊，請參閱 [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql)。  
   
 ## <a name="using-the-windows-azure-blob-storage-service"></a>使用 Windows Azure Blob 儲存體服務  
  SQL Server 備份可以寫入 Windows Azure Blob 儲存體服務。  如需如何針對備份使用 Windows Azure Blob 儲存體服務的詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  

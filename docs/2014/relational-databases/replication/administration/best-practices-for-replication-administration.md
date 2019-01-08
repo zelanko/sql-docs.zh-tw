@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - administering replication, best practices
@@ -14,15 +13,15 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b234ec214aeca9993f885cc3b191c89db857d33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd6f263e816d74f1fe3f09902c7e806709dd6993
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079278"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823303"
 ---
 # <a name="best-practices-for-replication-administration"></a>複寫管理的最佳做法
-  設定複寫之後，請務必了解如何管理複寫拓撲。 這個主題提供各個範疇的基本最佳做法指導，並可透過連結方式分別取得進一步資訊。 除了依照此主題中呈現的最佳做法指導以外，請考慮閱讀常見問答集，以更加熟悉一般問題：[複寫管理員的常見問題集](frequently-asked-questions-for-replication-administrators.md)。  
+  設定複寫之後，請務必了解如何管理複寫拓撲。 這個主題提供各個範疇的基本最佳做法指導，並可透過連結方式分別取得進一步資訊。 除了依照此主題中呈現的最佳做法指導，請考慮閱讀常見問答集，以更加熟悉一般問題和問題：[複寫管理員的常見問題集](frequently-asked-questions-for-replication-administrators.md)。  
   
  將最佳做法指南分成兩個方面非常有用：  
   
@@ -113,7 +112,7 @@ ms.locfileid: "48079278"
 ## <a name="monitor-the-replication-topology"></a>監視複寫拓撲  
  在設定複寫拓撲且已設定臨界值及警示後，建議您定期監視複寫。 監控複寫拓撲是部署複寫時很重要的層面。 由於已散發複寫活動，因此必須跨越所有複寫相關的電腦，追蹤活動和狀態 下列工具可用來監視複寫：  
   
--   「複寫監視器」是監視複寫的最重要的工具，可讓您監視複寫拓撲的全面健全狀況。 如需詳細資訊，請參閱 [Monitoring Replication](../monitoring-replication.md)。  
+-   「複寫監視器」是監視複寫的最重要的工具，可讓您監視複寫拓撲的全面健全狀況。 如需詳細資訊，請參閱＜ [Monitoring Replication](../monitoring-replication.md)＞。  
   
 -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 Replication Management Objects (RMO) 提供監視複寫的介面。 如需詳細資訊，請參閱＜ [Monitoring Replication](../monitoring-replication.md)＞。  
   

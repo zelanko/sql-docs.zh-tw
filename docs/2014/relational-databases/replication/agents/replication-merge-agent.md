@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Merge Agent, executables
@@ -16,12 +15,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3b7a3b52b30bdce214dd7d481403425dd07cd09
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 9d3b323be70911881b99f055503d12bb6b79988d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237104"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762820"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   「複寫合併代理程式」是一個公用程式可執行檔，它會將資料庫資料表中保存的初始快照集套用至「訂閱者」。 此外，它也會合併建立初始快照集之後在「發行者」端發生的累加資料變更，並根據您設定的規則或使用您建立的自訂解析程式來調解衝突。  
@@ -64,7 +63,7 @@ ms.locfileid: "50237104"
 [-InternetLogininternet_login]  
 [-InternetPasswordinternet_password]  
 [-InternetProxyLogininternet_proxy_login]  
-[–InternetProxyPasswordinternet_proxy_password]  
+[-InternetProxyPasswordinternet_proxy_password]  
 [-InternetProxyServerinternet_proxy_server]  
 [-InternetSecurityMode [0|1]]  
 [-InternetTimeoutinternet_timeout]  
@@ -171,7 +170,7 @@ ms.locfileid: "50237104"
 |**2**|指定要使用 SSL，而且憑證會經過驗證。|  
 
  > [!NOTE]  
- >  SQL Server 的完整的網域名稱來定義有效的 SSL 憑證。 為了讓連接成功時將-EncryptionLevel 設定為 2 的代理程式，請在本機的 SQL Server 上建立別名。 ' 別名 Name' 參數應該是伺服器名稱，以及 「 伺服器 」 參數應該設定為 SQL Server 的完整名稱。
+ >  定義的 SSL 憑證必須包含 SQL Server 的完整網域名稱才會有效。 為了讓代理程式能在將 -EncryptionLevel 設定為 2 時成功連線，請在本機 SQL Server 上建立別名。 'Alias Name' 參數應為伺服器名稱，且應將 'Server' 參數設為 SQL Server 的完整名稱。
   
  如需詳細資訊，請參閱[安全性概觀 &#40;複寫&#41;](../security/security-overview-replication.md)。  
   
@@ -243,7 +242,7 @@ ms.locfileid: "50237104"
  **-InternetProxyLogin**  *internet_proxy_login*  
  指定連接至需要驗證之 Proxy 伺服器 (定義於 *internet_proxy_server*) 時使用的登入名稱。  
   
- **–InternetProxyPassword**  *internet_proxy_password*  
+ **-InternetProxyPassword**  *internet_proxy_password*  
  指定連接至需要驗證之 Proxy 伺服器 (定義於 *internet_proxy_server*) 時使用的密碼。  
   
  **-InternetProxyServer**  *internet_proxy_server*  

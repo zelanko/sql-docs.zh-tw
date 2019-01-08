@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], about version flags
@@ -16,12 +15,12 @@ ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5003667b952e927454e5674538d0b40fab577aa9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67f99012be602f80279826de0446df006ff4e69f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190910"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778390"
 ---
 # <a name="versions-master-data-services"></a>版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以在模型內建立多個版本的主要資料。 系統會在您驗證資料時鎖定版本，並在驗證資料之後認可版本。 認可的版本會形成可稽核的變更記錄。 您建立的每個版本都包含該模型的所有成員、屬性值、階層成員、階層關聯性和集合。  
@@ -48,7 +47,7 @@ ms.locfileid: "48190910"
   
 1.  當您建立模型，並使用公司的主要資料填入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫時，便會自動建立初始版本。 根據權限，使用者可以視需要來變更這個版本。  
   
-2.  當您想要認可某個模型的版本時，請鎖定該版本，讓模型管理員才可以更新資料。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md) (管理員 (Master Data Services))。 如果設定通知，每次版本狀態變更時，都會傳送電子郵件通知給模型管理員。 如需詳細資訊，請參閱[設定電子郵件通知 &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)。  
+2.  當您想要認可某個模型的版本時，請鎖定該版本，讓模型管理員才可以更新資料。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。 如果設定通知，每次版本狀態變更時，都會傳送電子郵件通知給模型管理員。 如需詳細資訊，請參閱[設定電子郵件通知 &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)。  
   
 3.  將商務規則套用至鎖定版本的資料，並檢閱任何驗證問題。 必要時，您可以填入遺失的資訊，或還原造成問題的交易。 您也可以解除鎖定版本，以供使用者進行變更。  
   
@@ -70,22 +69,22 @@ ms.locfileid: "48190910"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|變更現有版本的名稱。|[變更版本名稱&#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)|  
-|鎖定版本，僅讓管理員可以編輯其資料。|[鎖定版本， &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)|  
-|解除鎖定版本，讓使用者可以編輯其資料。|[解除鎖定版本， &#40;Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)|  
-|在驗證所有資料之後認可版本。|[認可版本&#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)|  
-|建立新旗標來標示版本。|[建立版本旗標&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
-|變更現有版本旗標的名稱。|[變更版本旗標名稱&#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)|  
-|將現有旗標指派給版本。|[指派給版本的旗標&#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|建立現有版本的新副本|[複製版本&#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)|  
-|刪除現有版本。|[刪除版本&#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-version-master-data-services.md)|  
+|變更現有版本的名稱。|[變更版本名稱 &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)|  
+|鎖定版本，僅讓管理員可以編輯其資料。|[鎖定版本 &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)|  
+|解除鎖定版本，讓使用者可以編輯其資料。|[解除鎖定版本 &#40;Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)|  
+|在驗證所有資料之後認可版本。|[認可版本 &#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)|  
+|建立新旗標來標示版本。|[建立版本旗標 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
+|變更現有版本旗標的名稱。|[變更版本旗標名稱 &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|將現有旗標指派給版本。|[將旗標指派給版本 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
+|建立現有版本的新副本|[複製版本 &#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)|  
+|刪除現有版本。|[刪除版本 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-version-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
--   [反轉交易&#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [反轉交易 &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [通知&#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
+-   [通知 &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
   
--   [商務規則&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [商務規則 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

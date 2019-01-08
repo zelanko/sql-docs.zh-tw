@@ -19,12 +19,12 @@ ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 517c96deaf37934e82c1161c66b8e5825d1b14b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780440"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406405"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>執行 SSMA 主控台 (SybaseToSQL)
 Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 SSMA 活動。 後續章節將詳細說明相同。  
@@ -57,7 +57,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
   
   overwrite-if-exists="<true/false>" (optional)  
   
-   project-type=”<sql-server-2008/sql-server-2005/sql-server-2012/sql-server-2014/sql-azure>”  
+   project-type="<sql-server-2008/sql-server-2005/sql-server-2012/sql-server-2014/sql-azure>"  
 />  
 ```  
 ' 覆寫-if-exists' 屬性是**false**預設。  
@@ -136,7 +136,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 **語法範例：**  
   
 ```xml  
-<force-load metabase=”<source/target>” >  
+<force-load metabase="<source/target>" >  
   
   <metabase-object object-name="<object-name>"/>  
   
@@ -219,7 +219,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
   
   object-type="<object-category>"  
   
-  write-summary-report-to="<file-name/folder-name>”             (optional)  
+  write-summary-report-to="<file-name/folder-name>"             (optional)  
   
   verbose="<true/false>"                       (optional)  
   
@@ -370,7 +370,7 @@ Microsoft 提供您使用一組強大的指令碼檔案命令來執行及控制 
 開始在來源和目標資料庫之間的結構描述對應的移轉準備命令。  
   
 > [!NOTE]  
-> [移轉] 命令設定預設的主控台輸出是 'Full' 輸出報表不詳細的錯誤報告： 只有摘要的來源物件樹狀結構根節點。  
+> [移轉] 命令設定預設的主控台輸出會是 'Full' 輸出報表不詳細的錯誤報告：只有在來源物件樹狀結構根節點的摘要。  
   
 ### <a name="map-schema"></a>對應結構描述  
 這個命令會提供結構描述對應到目標結構描述的來源資料庫。  
@@ -391,7 +391,7 @@ sql-server-schema="<target-schema>"/>
 管理能力命令可以幫助與來源資料庫同步處理目標資料庫物件。  
   
 > [!NOTE]  
-> [移轉] 命令設定預設的主控台輸出是 'Full' 輸出報表不詳細的錯誤報告： 只有摘要的來源物件樹狀結構根節點。  
+> [移轉] 命令設定預設的主控台輸出會是 'Full' 輸出報表不詳細的錯誤報告：只有在來源物件樹狀結構根節點的摘要。  
   
 ### <a name="synchronize-target"></a>同步處理目標  
 此命令會使用目標資料庫，同步處理的目標物件。  

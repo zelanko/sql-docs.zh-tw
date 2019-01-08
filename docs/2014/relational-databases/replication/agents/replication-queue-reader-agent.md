@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], Queue Reader Agent
@@ -16,12 +15,12 @@ ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f63676830d79bc8ec9c3ffd462e9d836364df159
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 9f8db8ba77e913d1ae07b4dc0008650afe311565
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236965"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762590"
 ---
 # <a name="replication-queue-reader-agent"></a>複寫佇列讀取器代理程式
   「複寫佇列讀取器代理程式」是一個可執行檔，它會讀取儲存在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 佇列或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Message Queue 中的訊息，然後將這些訊息套用至發行者。 佇列讀取器代理程式可搭配允許佇列更新的快照式和交易式發行集使用。  
@@ -88,7 +87,7 @@ ms.locfileid: "50236965"
 |**2**|指定要使用 SSL，而且憑證會經過驗證。|  
 
  > [!NOTE]  
- >  SQL Server 的完整的網域名稱來定義有效的 SSL 憑證。 為了讓連接成功時將-EncryptionLevel 設定為 2 的代理程式，請在本機的 SQL Server 上建立別名。 ' 別名 Name' 參數應該是伺服器名稱，以及 「 伺服器 」 參數應該設定為 SQL Server 的完整名稱。
+ >  定義的 SSL 憑證必須包含 SQL Server 的完整網域名稱才會有效。 為了讓代理程式能在將 -EncryptionLevel 設定為 2 時成功連線，請在本機 SQL Server 上建立別名。 'Alias Name' 參數應為伺服器名稱，且應將 'Server' 參數設為 SQL Server 的完整名稱。
   
  如需詳細資訊，請參閱[安全性概觀 &#40;複寫&#41;](../security/security-overview-replication.md)。  
   

@@ -16,12 +16,12 @@ ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0dda9622ec6b5faa753310861557961ca54b4971
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06b97ac4bf58b933f55c4b53bfeacfbc9a736f28
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063158"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516224"
 ---
 # <a name="create-clustered-indexes"></a>建立叢集索引
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的資料表上建立叢集索引。 除了極少數的例外狀況之外，每個資料表都應該要有叢集索引。 除了可以改善查詢效能以外，叢集索引還能夠視需要加以重建或重新組織，以便控制資料表分散程度。 檢視上也可以建立叢集索引。 (叢集索引是在 [叢集與非叢集索引說明](clustered-and-nonclustered-indexes-described.md)主題中進行定義。)  
@@ -84,7 +84,7 @@ ms.locfileid: "48063158"
   
 3.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
-4.  按一下 **[索引鍵資料行]** 底下的 **[加入]**。  
+4.  按一下 [索引鍵資料行] 下的 [新增...]。  
   
 5.  在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要新增至叢集索引之資料表資料行的核取方塊。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48063158"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;  

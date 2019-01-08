@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96f6b91d68159bd1326b30ffc8b7e89e61cb8402
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 620413448f7bd6c10af2d0e7333cd9eb793ef41a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169138"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521246"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats & Amp;#40;transact-SQL&AMP;#41;
 
@@ -40,8 +40,8 @@ ms.locfileid: "49169138"
 |**runtime_stats_interval_id**|**bigint**|外部索引鍵。 加入[sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)。|  
 |**wait_category**|**tinyint**|等候類型會使用下表來分類，然後等候時間會加以彙總這些等候類別。 不同的等候類別需要不同的後續追蹤分析，以解決此問題，但是請等一下從相同的類別潛在客戶的型別，以類似的疑難排解體驗，並另外提供受影響的查詢，以等候是缺少的片段完成這類調查的大多數成功。|
 |**wait_category_desc**|**nvarchar(128)**|等候類別目錄欄位的文字描述，請檢閱下表。|
-|**execution_type**|**tinyint**|判斷執行查詢的類型：<br /><br /> 0 – 定期執行 （成功完成）<br /><br /> 3 – 由用戶端起始已中止執行<br /><br /> 4-例外狀況已中止執行|  
-|**execution_type_desc**|**nvarchar(128)**|文字執行的 [類型] 欄位的描述：<br /><br /> 0 – 一般<br /><br /> 3 – 中止<br /><br /> 4-例外狀況|  
+|**execution_type**|**tinyint**|判斷執行查詢的類型：<br /><br /> 0-定期執行 （成功完成）<br /><br /> 3-用戶端起始已中止執行<br /><br /> 4-例外狀況已中止執行|  
+|**execution_type_desc**|**nvarchar(128)**|文字執行的 [類型] 欄位的描述：<br /><br /> 0-一般<br /><br /> 3-已中止<br /><br /> 4-例外狀況|  
 |**total_query_wait_time_ms**|**bigint**|總`CPU wait`查詢計劃的彙總間隔內的時間，並等候類別 （以毫秒為單位報告）。|
 |**avg_query_wait_time_ms**|**float**|平均等候查詢計劃，每次執行 （以毫秒為單位報告） 的彙總間隔時間] 和 [等候分類內的持續時間。|
 |**last_query_wait_time_ms**|**bigint**|上一次的等候持續時間的彙總間隔內的查詢計劃，並等候類別 （以毫秒為單位報告）。|

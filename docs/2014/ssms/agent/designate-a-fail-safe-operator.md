@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -15,12 +15,12 @@ ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fbfc4b20c774becb45570c6ec00c1427a1a87be2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54ec71df8efab1f60bfb7a5b9af448705e349d28
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210558"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760750"
 ---
 # <a name="designate-a-fail-safe-operator"></a>指定保全操作員
   如果在無法聯繫到指定的操作員時，就會由保全操作員這位使用者接收警示。 此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定保全操作員，以接收 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示通知。  
@@ -59,14 +59,14 @@ ms.locfileid: "48210558"
 1.  在物件總管中，按一下加號，展開包含要指定為保全操作員之 SQL Server Agent 操作員的伺服器。  
   
 2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
-  
-3.  在 [SQL Server Agent 屬性 - <伺服器名稱>] 對話方塊的 [選取頁面] 底下，選取 [警示系統]。  
-  
+
+3.  在  **SQL Server Agent 屬性-**_server_name_對話方塊的 **選取頁面**，選取**警示系統**。  
+ 
 4.  在 [保全操作員] 下方，選取 [啟用保全操作員]。  
   
 5.  在 [操作員] 清單中，選取您想要設為保全操作員的操作員。  
   
-6.  選取下列任何一個或所有核取方塊，指定通知操作員的方法：[電子郵件]、[呼叫器] 或 [Net send]。  
+6.  選取下列任何一個或所有核取方塊，指定通知操作員的方法：**電子郵件**，**呼叫器**，或**Net send**。  
   
 7.  完成後，請按一下 **[確定]**。  
   

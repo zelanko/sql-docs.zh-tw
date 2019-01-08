@@ -10,12 +10,12 @@ ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c6e423af0a859932cc78e097b7a73e1644d3cccf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 460506c8c29a3ee92f362db57719a711626d83a0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836376"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398311"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>什麼是適用於 SAP ASE (SybaseToSQL) 的 SSMA 的新功能
 本文章列出 SSMA 的每個版本中的 SAP ASE (先前稱為 SSMA for Sybase) 變更。 

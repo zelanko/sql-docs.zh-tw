@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, view facet properties
@@ -12,12 +12,12 @@ ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 76cc2c4586adb2eed49fba89e113136063916d6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbd3260e8d32811c405623dbdcc94dd34b0b8711
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064798"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753260"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>檢視原則式管理 Facet 的屬性
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中檢視原則式管理 Facet 的屬性。  
@@ -51,7 +51,7 @@ ms.locfileid: "48064798"
   
 4.  按一下加號展開 **[Facet]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要檢視其屬性的 Facet，然後選取 [屬性]。 如需 [Facet 屬性 - <Facet 名稱>] 對話方塊中可用選項的詳細資訊，請參閱 [Facet 屬性對話方塊，一般頁面](../../integration-services/general-page-of-integration-services-designers-options.md)、[Facet 屬性對話方塊，相依原則頁面](facet-properties-dialog-box-dependent-policies-page.md)和 [Facet 屬性對話方塊，相依條件頁面](facet-properties-dialog-box-dependent-conditions-page.md)。  
+5.  以滑鼠右鍵按一下您想要檢視其屬性的 Facet，然後選取 [屬性]。 如需 [Facet 屬性 -facet_name] 對話方塊中可用選項的詳細資訊，請參閱 [Facet 屬性對話方塊，一般頁面](../../integration-services/general-page-of-integration-services-designers-options.md)、[Facet 屬性對話方塊，相依原則頁面](facet-properties-dialog-box-dependent-policies-page.md)和 [Facet 屬性對話方塊，相依條件頁面](facet-properties-dialog-box-dependent-conditions-page.md)。  
   
 6.  完成後，請按一下 **[關閉]**。  
   

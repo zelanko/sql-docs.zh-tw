@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysmergepublications
@@ -19,12 +18,12 @@ ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d2a7ed15f4c971cdd7489084717f2a11ecd9a2e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d807b4b62eed46e99fdeaf0225fadb59b26042a8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790276"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748421"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ ms.locfileid: "47790276"
 |**snapshot_jobid**|**binary(16)**|識別在訂閱者能夠起始快照集產生程序時，產生快照集的代理程式作業。|  
 |**allow_web_synchronization**|**bit**|指定是否要將發行集啟用 Web 同步處理，其中**1**表示發行集啟用 Web 同步處理。|  
 |**web_synchronization_url**|**nvarchar(500)**|指定 Web 同步處理所用的網際網路 URL 預設值。|  
-|**allow_partition_realignment**|**bit**|指出當修改發行者的資料列造成資料分割的變更時，是否要將刪除動作傳給訂閱者。<br /><br /> **0** = 資料從舊分割區會保留在 「 訂閱者 」，其中這項資料在 「 發行者 」 上所做的變更將不會複寫到這個訂閱者，但在 「 訂閱者 」 上所做的變更會複寫到 「 發行者 」 上。<br /><br /> **1** = 刪除導引到 「 訂閱者 」，以反映資料分割變更的結果來移除已不在訂閱者資料分割的資料。<br /><br /> 如需詳細資訊，請參閱 < [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。<br /><br /> 注意： 資料保留在訂閱者，此值時**0**應該視為如同它是唯讀狀態; 不過，這不會嚴格強制執行複寫系統。|  
+|**allow_partition_realignment**|**bit**|指出當修改發行者的資料列造成資料分割的變更時，是否要將刪除動作傳給訂閱者。<br /><br /> **0** = 資料從舊分割區會保留在 「 訂閱者 」，其中這項資料在 「 發行者 」 上所做的變更將不會複寫到這個訂閱者，但在 「 訂閱者 」 上所做的變更會複寫到 「 發行者 」 上。<br /><br /> **1** = 刪除導引到 「 訂閱者 」，以反映資料分割變更的結果來移除已不在訂閱者資料分割的資料。<br /><br /> 如需詳細資訊，請參閱 < [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。<br /><br /> 注意：此值時，會保持在 「 訂閱者 」 的資料**0**應該視為如同它是唯讀狀態; 不過，這不會嚴格強制執行複寫系統。|  
 |**retention_period_unit**|**tinyint**|定義用來定義時的單位*保留*，它可以是下列值之一：<br /><br /> **0** = 日。<br /><br /> **1** = 週。<br /><br /> **2** = 月。<br /><br /> **3** = 年。|  
 |**decentralized_conflicts**|**int**|指出是否將衝突記錄儲存在造成衝突的訂閱者端：<br /><br /> **0** = 將衝突記錄不會儲存在 「 訂閱者 」。<br /><br /> **1** = 將衝突記錄儲存在 「 訂閱者 」。|  
 |**generation_leveling_threshold**|**int**|指定某個層代中包含的變更數目。 層代是指傳遞給發行者或訂閱者的變更集合。|  

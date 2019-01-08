@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 12c91f52694c9c7b4cc9abc9e7b96df0ddffb51c
-ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
+ms.openlocfilehash: 4add4ecf664f86c6e5f74c38a712601e02f44f8d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50965949"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402633"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>執行 SQL Server 移轉評估，使用 Data Migration Assistant
 
@@ -34,7 +34,7 @@ ms.locfileid: "50965949"
 
     現代化內部部署 SQL Server 執行個體或裝載於 Azure VM 上的 SQL Server，您要升級您的內部部署 SQL Server 執行個體，如果來源和目標伺服器類型設為**SQL Server**。 如果您要移轉到 Azure SQL Database，而是會將目標伺服器類型設為**Azure SQL Database**。
 
-3.  按一下 **[建立]**。
+3.  按一下 [建立] 。
 
     ![建立評定](../dma/media/NewAssessment.png)
 

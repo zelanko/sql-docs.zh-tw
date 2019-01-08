@@ -11,12 +11,12 @@ ms.assetid: 9140c5f2-b340-45a6-9c27-d870d15aafea
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09084760637464c5e985eeb17762959c8576c5ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a66c6284ea53f65351a964e3f24492c569521af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222801"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544257"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>預測關聯 (中繼資料採礦教學課程)
   當模型經過處理之後，您可以使用與模型中儲存的關聯有關的資訊來建立預測。 在本課程的最後一個工作中，您將會學習如何針對您所建立的關聯模型來建立預測查詢。 此課程假設您已熟悉如何使用預測查詢產生器，而且想要學習如何針對關聯模型來建立預測查詢。 如需如何使用預測查詢產生器，請參閱[資料採礦查詢介面](../../2014/analysis-services/data-mining/data-mining-query-tools.md)。  
@@ -162,7 +162,7 @@ ms.locfileid: "48222801"
   
 1.  在 **採礦模型**功能表上，選取**單一查詢**同樣地，以清除核取記號。  
   
-2.  隨即出現一則錯誤訊息，警告您單一查詢將會遺失。 按一下 **[是]**。  
+2.  隨即出現一則錯誤訊息，警告您單一查詢將會遺失。 按一下 [ **是**]。  
   
      [輸入] 對話方塊的名稱會變成**選取輸入資料表**。  
   
@@ -209,7 +209,7 @@ ms.locfileid: "48222801"
  您可嘗試在多個模型上建立類似的預測查詢，以查看篩選是否會變更預測結果。 如需建立預測和其他類型的查詢的詳細資訊，請參閱[關聯模型查詢範例](../../2014/analysis-services/data-mining/association-model-query-examples.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [關聯模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [關聯模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [[Predictassociation] &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)   
  [使用預測查詢產生器來建立預測查詢](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   

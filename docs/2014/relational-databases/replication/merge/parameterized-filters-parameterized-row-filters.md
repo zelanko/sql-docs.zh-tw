@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/02/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], dynamic filters
@@ -21,12 +20,12 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fcc10aefddfe657e038f524f90075ae1fae0ce23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3eba894a08df8a491df428cd5f34b4c9850ffae0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216308"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205917"
 ---
 # <a name="parameterized-row-filters"></a>Parameterized Row Filters
   參數化資料列篩選允許將不同的資料分割傳送到不同的訂閱者，而不需要建立多個發行集 (參數化篩選在舊版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中稱為動態篩選)。 資料分割是資料表中資料列的子集；根據建立參數化資料列篩選時選取的設定，已發行資料表中的每個資料列可僅屬於一個資料分割 (產生不重疊資料分割)，也可屬於兩個或兩個以上的資料分割 (產生重疊資料分割)。  
@@ -38,7 +37,7 @@ ms.locfileid: "48216308"
  若要定義或修改參數化資料列篩選，請參閱＜ [針對合併發行項定義及修改參數化資料列篩選](../publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)＞。  
   
 ## <a name="how-parameterized-filters-work"></a>參數化篩選如何運作  
- 參數化資料列篩選器使用 WHERE 子句選取要發行的適當資料。 您可以指定 SUSER_SNAME() 與 HOST_NAME() 系統函數中的其中之一或兩者，而不要在子句中指定常值 (如同對靜態資料列篩選那樣)。 也可以使用使用者定義函數，但它們必須在函數主體中包含 SUSER_SNAME() 或 HOST_NAME()，或者評估這些系統函數的其中之一 (例如 `MyUDF(SUSER_SNAME()`)。 如果使用者定義函數在函數主體中包含 SUSER_SNAME() 或 HOST_NAME()，則您將無法將參數傳遞到該函數。  
+ 參數化資料列篩選器使用 WHERE 子句選取要發行的適當資料。 您可以指定以下系統函數的其中一個或兩個，而不要在子句中指定常值 (如同對靜態資料列篩選的處理一樣)：Suser_sname （） 與 host_name （）。 也可以使用使用者定義函數，但它們必須在函數主體中包含 SUSER_SNAME() 或 HOST_NAME()，或者評估這些系統函數的其中之一 (例如 `MyUDF(SUSER_SNAME()`)。 如果使用者定義函數在函數主體中包含 SUSER_SNAME() 或 HOST_NAME()，則您將無法將參數傳遞到該函數。  
   
  系統函數 SUSER_SNAME() 和 HOST_NAME() 並不是合併式複寫的特定函數，但是可以由合併式複寫用來進行參數化篩選：  
   
@@ -94,8 +93,8 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  例如，Pamela Ansman-Wolfe 的員工識別碼已被指派為 280。 當您為此員工建立訂閱時，請將 HOST_NAME() 值指定成員工識別碼的值 (此範例中為 280)。 「合併代理程式」連接到發行者端時，它會將 HOST_NAME() 傳回的值與資料表中的值相比較，並僅下載在 **EmployeeID** 資料行中包含值 280 的資料列。  
   
-> [!IMPORTANT]  
->  Host_name （） 函式會傳回`nchar`值，因此您必須使用 CONVERT 如果篩選子句中的資料行是數值資料類型，因為它是在上述範例中。 基於效能的考量，建議您不要在參數化資料列篩選器子句中的資料行名稱套用函數，例如 `CONVERT(nchar,EmployeeID) = HOST_NAME()`。 反之，建議您使用範例中顯示的方法： `EmployeeID = CONVERT(int,HOST_NAME())`。 此子句可用於**@subset_filterclause**參數[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)，但它通常不能在 「 新增發行集精靈 」 （此精靈會執行篩選子句來驗證它，這會失敗，因為電腦名稱不能轉換成`int`)。 如果您使用「新增發行集精靈」，建議在此精靈中指定 `CONVERT(nchar,EmployeeID) = HOST_NAME()` ，然後在建立發行集的快照集之前，使用 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) ，將該子句變更為 `EmployeeID = CONVERT(int,HOST_NAME())` 。  
+> [!IMPORTANT]
+>  HOST_NAME() 函數會傳回一個 `nchar` 值，因此，如果篩選子句中的資料行為數值資料類型 (如上述範例)，您必須使用 CONVERT。 基於效能的考量，建議您不要在參數化資料列篩選器子句中的資料行名稱套用函數，例如 `CONVERT(nchar,EmployeeID) = HOST_NAME()`。 反之，建議您使用範例中顯示的方法： `EmployeeID = CONVERT(int,HOST_NAME())`。 此子句可用於**@subset_filterclause**參數[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)，但它通常不能在 「 新增發行集精靈 」 （此精靈會執行篩選子句來驗證它，這會失敗，因為電腦名稱不能轉換成`int`)。 如果您使用「新增發行集精靈」，建議在此精靈中指定 `CONVERT(nchar,EmployeeID) = HOST_NAME()` ，然後在建立發行集的快照集之前，使用 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) ，將該子句變更為 `EmployeeID = CONVERT(int,HOST_NAME())` 。  
   
  **覆寫 HOST_NAME() 值**  
   
@@ -120,7 +119,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  若要設定篩選選項，請參閱＜ [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md)＞。  
   
 ### <a name="setting-use-partition-groups-and-keep-partition-changes"></a>設定使用資料分割群組和保留資料分割變更  
- **使用資料分割群組** 和 **保留資料分割變更** 兩者均可以透過在發行集資料庫中儲存其他中繼資料，提升具有篩選發行項之發行集的同步處理效能。 [使用資料分割群組]  選項可以透過使用預先計算的資料分割功能，讓效能大為提升。 此選項設定為`true`依預設，如果發行集中的發行項符合一組的需求。 如需這些需求的詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](parameterized-filters-optimize-for-precomputed-partitions.md)。 如果您的發行項不符合使用預先計算的資料分割的需求**保留資料分割變更**選項設定為`true`。  
+ **使用資料分割群組** 和 **保留資料分割變更** 兩者均可以透過在發行集資料庫中儲存其他中繼資料，提升具有篩選發行項之發行集的同步處理效能。 [使用資料分割群組]  選項可以透過使用預先計算的資料分割功能，讓效能大為提升。 依預設，如果發行集中的發行項符合一組需求，此選項會設定為 `true`。 如需這些需求的詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](parameterized-filters-optimize-for-precomputed-partitions.md)。 如果您的發行項不符合使用預先計算的資料分割的需求**保留資料分割變更**選項設定為`true`。  
   
 ### <a name="setting-partition-options"></a>設定資料分割選項  
  依據「訂閱者」共用已篩選資料表中資料之方式，您可以建立發行項時為 **資料分割選項** 屬性指定一個值。 您可以使用 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)和 **[發行項屬性]** 對話方塊，將這個屬性設為四個值的其中一個。 使用 **[加入篩選]** 或 **[編輯篩選]** 對話方塊 (在「新增發行集精靈」和 **[發行集屬性]** 對話方塊中可用) 可以將屬性設定為兩個值中的其中之一。 下表簡單說明了可用值：  

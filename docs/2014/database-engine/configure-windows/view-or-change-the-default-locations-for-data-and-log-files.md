@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - log files [SQL Server], changing default location
@@ -14,12 +13,12 @@ ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6446f6aaaa08ea8cd4b8375791ecb6cd93187fee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06d17a4feaec0db614f61fb7761b37ea415efc24
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092751"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639316"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>檢視或變更資料及記錄檔的預設位置 (SQL Server Management Studio)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中檢視及變更新資料和記錄檔的預設位置。 預設路徑是從登錄取得。 在變更位置之後，如果未指定不同的位置， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中建立的所有新資料庫都會使用該位置。  
@@ -34,7 +33,7 @@ ms.locfileid: "48092751"
   
      [Transact-SQL](#SSMSProcedure)  
   
--   **待處理**  [變更預設位置之後](#FollowUp)  
+-   **後續操作：**[變更預設位置](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -55,7 +54,7 @@ ms.locfileid: "48092751"
   
 3.  在 **[資料庫預設位置]** 中，您可以檢視新資料檔和新記錄檔的目前預設位置。 若要變更預設位置，在 **[資料]** 或 **[記錄]** 欄位中輸入新的預設路徑名稱，或按一下 [瀏覽] 按鈕來尋找並選取路徑名稱。  
   
-##  <a name="FollowUp"></a> 待處理： 變更預設位置之後  
+##  <a name="FollowUp"></a> 後續操作：變更預設位置之後  
  您必須停止然後啟動 SQL Server 服務以完成變更。  
   
 ## <a name="see-also"></a>另請參閱  

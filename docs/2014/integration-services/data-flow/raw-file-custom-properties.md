@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b115edd3e8addbedc60c0c37b4ea014a3123909
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38acf6fd70bebf5033fde5dcf33fe5b2a6ac6722
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098219"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754820"
 ---
 # <a name="raw-file-custom-properties"></a>原始檔案自訂屬性
   **來源自訂屬性**  
@@ -44,7 +43,7 @@ ms.locfileid: "48098219"
 |-------------------|---------------|-----------------|  
 |AccessMode|整數 (列舉)|一個值，指定 FileName 屬性包含檔案名稱，或包含檔案名稱之變數的名稱。 這些選項包括 `File name` (0) 和 `File name from variable` (1)。|  
 |FileName|String|原始檔案目的地寫入的檔案名稱。|  
-|WriteOption|整數 (列舉)|一個值，指定原始檔案目的地是否會刪除具有相同名稱的現有檔案。 選項包括`Create Always`(0)， `Create Once` (1)， `Truncate and Append` (3)，和`Append`(2)。 這個屬性的預設值是`Create Always`(0)。|  
+|WriteOption|整數 (列舉)|一個值，指定原始檔案目的地是否會刪除具有相同名稱的現有檔案。 這些選項包括 `Create Always` (0)、`Create Once` (1)、`Truncate and Append` (3) 和 `Append` (2)。 此屬性的預設值為 `Create Always` (0)。|  
   
 > [!NOTE]  
 >  附加作業要求已附加資料的中繼資料與檔案中已有資料的中繼資料相符。  

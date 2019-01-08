@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
@@ -13,12 +12,12 @@ ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79d862aa5fa2327a6b88ff1936d92e1c3f45f090
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 831e44cb232dea7f0730c73d360cd787f3895878
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173248"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756990"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>準備查詢變更資料
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程中，第三個工作 (也就是最後一個工作) 是準備查詢變更資料，並加入「資料流程」工作。  
@@ -125,7 +124,7 @@ ms.locfileid: "48173248"
   
         ```  
   
-5.  保留預設會傳回程式碼行`DtsExecResult.Success`從執行指令碼。  
+5.  保留從指令碼之執行傳回 `DtsExecResult.Success` 的預設程式碼行。  
   
 6.  關閉指令碼開發環境以及 **[指令碼工作編輯器]**。  
   
@@ -171,7 +170,7 @@ ms.locfileid: "48173248"
         ```  
   
         > [!NOTE]  
-        >  `else`子句，在此範例中開始的日期和時間傳遞 null 值，藉以產生變更資料的初始載入查詢。 此範例不處理啟用異動資料擷取前所進行之變更也必須上傳到資料倉儲的狀況。  
+        >  此範例中的 `else` 子句會傳遞開始日期和時間的 Null 值，藉以產生變更資料之初始載入的查詢。 此範例不處理啟用異動資料擷取前所進行之變更也必須上傳到資料倉儲的狀況。  
   
 3.  在 [執行 SQL 工作編輯器] 的 [參數對應] 頁面上，進行下列對應：  
   
@@ -199,6 +198,6 @@ ms.locfileid: "48173248"
 ## <a name="next-step"></a>下一個步驟  
  準備查詢字串並設定「資料流程」工作後，下一個步驟是建立將從資料庫擷取變更資料的資料表值函式。  
   
- **下一個主題** [建立函數以擷取變更資料](create-the-function-to-retrieve-the-change-data.md)  
+ **下一個主題：**[建立函式以擷取變更資料](create-the-function-to-retrieve-the-change-data.md)  
   
   

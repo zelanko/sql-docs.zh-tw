@@ -11,12 +11,12 @@ ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4f0853eb502d810a693e4cc2872710a62c784268
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e84b6e148774fc9b48b6174fa8be87579290fec4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159398"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393411"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>從命令提示字元安裝 PowerPivot
   您可以從命令列執行安裝程式來安裝 SQL Server PowerPivot for SharePoint。 您可以在命令中包含 `/ROLE` 參數並排除 `/FEATURES` 參數。  
@@ -37,7 +37,7 @@ ms.locfileid: "48159398"
   
  兩個角色都會安裝應用程式、組態和部署檔案，好讓 PowerPivot for SharePoint 在 SharePoint 伺服器陣列中執行。 指定任一個角色將會使得安裝程式檢查 SharePoint 整合所需的硬體和軟體需求。  
   
- 現有的伺服器陣列選項假設已具有 SharePoint 伺服器陣列。 新伺服器陣列選項假設您將建立新伺服器陣列；該選項支援在命令列語法中加入 Database Engine 執行個體，以將 Database Engine 執行個體當做伺服器陣列的資料庫伺服器來使用。  
+ 現有的伺服器陣列選項假設已具有 SharePoint 伺服器陣列。 新的伺服陣列選項假設您將建立新的伺服器陣列中;好讓您可以使用 Database Engine 執行個體做為伺服器陣列的資料庫伺服器，它可以支援的命令列語法中的 Database Engine 執行個體加入。  
   
  相對於舊版，所有伺服器組態工作會以後續安裝工作來執行。 如果您想自動化安裝和組態步驟，您可以使用 PowerShell 設定伺服器。 如需詳細資訊，請參閱 <<c0> [ 使用 Windows PowerShell 的 PowerPivot 組態](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)。  
   

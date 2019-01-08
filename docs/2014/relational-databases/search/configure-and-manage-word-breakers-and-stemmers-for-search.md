@@ -20,12 +20,12 @@ ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0804fedde52ad335197c142b897afab8743f45b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8be3cc7da791b9ea5f950d83bd0f570ca42e686f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199444"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505836"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>設定及管理搜尋的斷詞工具與字幹分析器
   斷詞工具及字幹分析器，會在所有全文檢索索引資料上執行語文分析。 語文分析包括找出文字分界 (斷詞) 以及動詞變化 (字根處理)。 斷詞工具與字幹分析器是語言特有的工具，而且語言分析的規則會因不同的語言而有所差異。 對於給定的語言而言， *「斷詞工具」* (Word Breaker) 會根據語言的語彙規則，判斷文字分界存在的位置，藉以識別個別單字。 每個單字 (也稱為 *Token*) 都會使用壓縮表示來插入全文檢索索引中，以便減少其大小。 *「字幹分析器」* (Stemmer) 會根據該語言的規則來產生特定單字的字形變化 (例如，"running"、"ran" 和 "runner" 是 "run" 單字的不同形態)。  
@@ -33,14 +33,14 @@ ms.locfileid: "48199444"
  使用語言特有的斷詞工具會使得針對該語言產生的詞彙更正確。 如果有語系的斷詞工具，但沒有特定次語言的斷詞工具，則會使用主要語言。 例如，處理加拿大法文時會使用法文文字分隔。 如果某種特定語文沒有文字分隔，則會使用中性文字分隔。 使用中性文字分隔時，會以中性字元來中斷文字，例如空白與標點符號。  
   
 ##  <a name="register"></a> 註冊斷詞工具  
- 若要使用某種語言的斷詞工具，您必須註冊它們。 對於已註冊的斷詞工具而言，相關聯的語言資源 (字幹分析器、非搜尋字 (停用字詞) 和同義字檔案) 也會成為可供全文檢索索引和查詢作業使用。 若要檢視目前已向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]註冊之斷詞工具的語言清單，請使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
+ 若要使用某種語言的斷詞工具，您必須註冊它們。 已註冊的斷詞工具相關聯語言資源字幹分析器、 非搜尋字 （停用字詞） 和同義字檔案-也可以使用全文檢索索引和查詢作業。 若要檢視目前已向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]註冊之斷詞工具的語言清單，請使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
  SELECT * FROM sys.fulltext_languages  
   
  如果您加入、移除或更改了斷詞工具，就必須重新整理支援全文檢索索引和查詢的 Microsoft Windows 地區設定識別碼 (LCID) 清單。 如需詳細資訊，請參閱 [檢視或變更已註冊的篩選與斷詞工具](view-or-change-registered-filters-and-word-breakers.md)。  
   
 ##  <a name="default"></a> 設定 Default Full-text Language 選項  
- 如需當地語系化的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定集`default full-text language`選項設定為伺服器的語言有適當的相符項目。 如需非當地語系化的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則`default full-text language`選項會是英文。  
+ 如需當地語系化的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定集`default full-text language`選項設定為伺服器的語言有適當的相符項目。 若 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為非當地語系化的版本時，則 `default full-text language` 選項會是英文。  
   
  建立或更改全文檢索索引時，您可以為每個全文檢索索引資料行指定不同的語言。 若沒有為資料行指定語言，則預設值會是組態選項 `default full-text language` 的值。  
   

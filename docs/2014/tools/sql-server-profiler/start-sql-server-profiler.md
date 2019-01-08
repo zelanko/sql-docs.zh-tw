@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], starting
@@ -15,12 +14,12 @@ ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8d306be84e1c039122a462fdfa8b298bb451c1f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a3219168a070a9c264d4fb5457f9e5844734844a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084718"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775560"
 ---
 # <a name="start-sql-server-profiler"></a>啟動 SQL Server Profiler
   您可以利用多種不同的方式來啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，以支援在各種狀況中收集追蹤輸出。 啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的方式包括：從 **[開始]** 功能表、從 **Tuning Advisor 中的** [工具] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 功能表，以及從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的數個位置。  
@@ -68,7 +67,7 @@ ms.locfileid: "48084718"
  若要利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來執行追蹤，使用者也必須有 ALTER TRACE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Profiler](sql-server-profiler.md)   
+ [[SQL Server Profiler]](sql-server-profiler.md)   
  [使用 SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)  
   
   

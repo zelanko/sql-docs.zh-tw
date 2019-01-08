@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70ad2bc83f1a77bc9649e3747c309ad6522b2007
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 327e02721efaeb480d2b816de6af8135e1d1a80f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196358"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771100"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 控制工作自訂屬性
   下表描述 CDC 控制工作的自訂屬性。 所有屬性都是可讀寫的。  
@@ -34,7 +33,7 @@ ms.locfileid: "48196358"
 |CommandTimeout|integer|此值表示與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫通訊時所用的逾時 (以秒為單位)。 當資料庫的回應時間非常慢，而且預設值 (30 秒) 不夠時，使用此值。|  
   
 ## <a name="see-also"></a>另請參閱  
- [CDC 控制工作](cdc-control-task.md)   
- [CDC 控制工作編輯器](../cdc-control-task-editor.md)  
+ [CDC Control Task](cdc-control-task.md)   
+ [CDC Control Task Editor](../cdc-control-task-editor.md)  
   
   

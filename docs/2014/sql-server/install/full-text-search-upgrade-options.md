@@ -14,17 +14,17 @@ ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9388ade07b8593ec06289141df0f013351f3f7f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abe169a69cd8c247ba74a24b8e80c3202fa2d5f5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217938"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511307"
 ---
 # <a name="full-text-search-upgrade-options"></a>全文檢索搜尋升級選項
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 [全文檢索搜尋升級選項] 頁面，針對此時升級的資料庫選取要使用的全文檢索搜尋升級選項。  
   
- 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，每個全文檢索索引都位於屬於檔案群組、具有實體路徑而且被視為資料庫檔案的全文檢索目錄中。 現在全文檢索目錄是參考一組全文檢索索引的邏輯概念 (虛擬物件)。 因此，新的全文檢索目錄不會被視為具有實體路徑的資料庫檔案。 不過，在升級含有資料檔案的任何全文檢索目錄期間，系統會在相同的磁碟上建立新的檔案群組。 這會在升級之後保留舊磁碟 I/O 行為。 如果根路徑存在，則任何來自該目錄的全文檢索索引都會放置於新的檔案群組中。 如果舊的全文檢索目錄路徑無效，升級作業就會將全文檢索索引保留在與基底資料表相同的檔案群組中，或是保留在分割區資料表的主要檔案群組中。  
+ 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，每個全文檢索索引都位於屬於檔案群組、具有實體路徑而且被視為資料庫檔案的全文檢索目錄中。 現在，全文檢索目錄是邏輯概念的虛擬物件-，這是指一組全文檢索索引。 因此，新的全文檢索目錄不會被視為具有實體路徑的資料庫檔案。 不過，在升級含有資料檔案的任何全文檢索目錄期間，系統會在相同的磁碟上建立新的檔案群組。 這會在升級之後保留舊磁碟 I/O 行為。 如果根路徑存在，則任何來自該目錄的全文檢索索引都會放置於新的檔案群組中。 如果舊的全文檢索目錄路徑無效，升級作業就會將全文檢索索引保留在與基底資料表相同的檔案群組中，或是保留在分割區資料表的主要檔案群組中。  
   
 ## <a name="options"></a>選項。  
  當您升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]時，請選擇下列其中一個全文檢索升級選項。  

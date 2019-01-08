@@ -20,19 +20,19 @@ ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23a81ceda914bb43d4361e9c6fb8a2409bf2556e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f91799e5d484a763c23fcc132232a8a35fc6152c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809066"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517408"
 ---
 # <a name="sqlputdata-function"></a>SQLPutData 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ISO 92  
+ 導入的版本：ODBC 1.0 標準的合規性：ISO 92  
   
  **摘要**  
- **SQLPutData**允許應用程式將參數或資料行的資料傳送到在陳述式執行階段的驅動程式。 此函式可用來在組件中的字元或二進位資料值傳送至字元、 二進位檔或資料來源特定的資料類型 （例如，SQL_LONGVARBINARY 或 SQL_LONGVARCHAR 類型的參數） 的資料行。 **SQLPutData**支援繫結至 Unicode C 資料類型，即使基礎驅動程式不支援 Unicode 資料。  
+ **SQLPutData**允許應用程式將參數或資料行的資料傳送到在陳述式執行階段的驅動程式。 此函式可用來在組件中的字元或二進位資料值傳送至字元、 二進位檔或資料來源特有的資料類型 （例如，SQL_LONGVARBINARY 或 SQL_LONGVARCHAR 類型的參數） 的資料行。 **SQLPutData**支援繫結至 Unicode C 資料類型，即使基礎驅動程式不支援 Unicode 資料。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,7 +60,7 @@ SQLRETURN SQLPutData(
   
 -   C 資料類型是 SQL_C_DEFAULT，而且指定的 SQL 資料類型的預設 C 資料類型為 SQL_C_CHAR 或 SQL_C_BINARY。  
   
- 對於所有其他類型的 C 資料，如果*Strlen_or_ind&lt*不是 SQL_NULL_DATA 或 SQL_DEFAULT_PARAM，驅動程式會假設的大小\* *DataPtr*緩衝區是指定的 C 資料類型的大小具有*ValueType*或是*TargetType*並傳送整個資料值。 如需詳細資訊，請參閱 <<c0> [ 轉換將資料從 C 到 SQL 資料類型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)附錄 d： 資料型別中。  
+ 對於所有其他類型的 C 資料，如果*Strlen_or_ind&lt*不是 SQL_NULL_DATA 或 SQL_DEFAULT_PARAM，驅動程式會假設的大小\* *DataPtr*緩衝區是指定的 C 資料類型的大小具有*ValueType*或是*TargetType*並傳送整個資料值。 如需詳細資訊，請參閱 <<c0> [ 轉換將資料從 C 到 SQL 資料類型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)附錄 d:資料類型。  
   
 ## <a name="returns"></a>傳回值  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_STILL_EXECUTING、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
@@ -75,7 +75,7 @@ SQLRETURN SQLPutData(
 |07006|受限制的資料類型屬性違規|所識別的資料值*ValueType*中的引數**SQLBindParameter**繫結的參數無法轉換成資料類型所識別的*ParameterType*中的引數**SQLBindParameter**。|  
 |07S01|預設參數用法無效|參數值時，設定**SQLBindParameter**、 已 SQL_DEFAULT_PARAM，和對應的參數沒有預設值。|  
 |08S01|通訊連結失敗|函式已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
-|22001|字串資料，右側截斷|字元或二進位值的資料行指派導致截斷的非空白 （字元） 或非 null （二進位） 字元或位元組。<br /><br /> SQL_NEED_LONG_DATA_LEN 類型資訊，請在**SQLGetInfo** "Y"，並於指定長度的參數 （資料類型為 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 資料來源特定的資料類型） 傳送更多的資料具有*StrLen_or_IndPtr*中的引數**SQLBindParameter**。<br /><br /> SQL_NEED_LONG_DATA_LEN 類型資訊，請在**SQLGetInfo**是"Y"，以及比中已指定，將已傳送長資料行 （資料類型為 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 資料來源特定的資料類型） 的詳細資料對應到已加入或更新的資料列中的資料行長度的緩衝區**SQLBulkOperations**或更新的**SQLSetPos**。|  
+|22001|字串資料，右側截斷|字元或二進位值的資料行指派導致截斷的非空白 （字元） 或非 null （二進位） 字元或位元組。<br /><br /> SQL_NEED_LONG_DATA_LEN 類型資訊，請在**SQLGetInfo** "Y"，並於指定長度的參數 （資料類型為 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 資料來源特有的資料類型） 傳送更多的資料具有*StrLen_or_IndPtr*中的引數**SQLBindParameter**。<br /><br /> SQL_NEED_LONG_DATA_LEN 類型資訊，請在**SQLGetInfo**是"Y"，以及比中已指定，將已傳送長資料行 （資料類型為 SQL_LONGVARCHAR、 SQL_LONGVARBINARY、 或 long 資料來源特有的資料類型） 的詳細資料對應到已加入或更新的資料列中的資料行長度的緩衝區**SQLBulkOperations**或更新的**SQLSetPos**。|  
 |22003|數值超出範圍|將資料傳送繫結的數值參數或資料行導致要指派給相關聯的資料表資料行時會遭到截斷的數字 （相對於小數） 的整數部分。<br /><br /> 傳回一或多個輸入/輸出或輸出參數的數值 （以數字或字串） 會造成要截斷的數字 （相對於小數） 的整數部分。|  
 |22007|無效的日期時間格式|傳送參數或繫結至日期、 時間或時間戳記結構的資料行的資料是，分別無效的日期、 時間戳記。<br /><br /> 輸入/輸出或輸出參數繫結至日期、 時間或時間戳記 C 結構，但傳回的參數中的值，分別無效的日期、 時間戳記。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |22008|日期時間欄位溢位|日期時間運算式計算的輸入/輸出或輸出參數會導致日期、 時間或無效的時間戳記 C 結構。|  
@@ -88,7 +88,7 @@ SQLRETURN SQLPutData(
 |HY009|使用無效的 null 指標|(DM) 引數*DataPtr*是 null 指標，而引數*Strlen_or_ind&lt*不是 0、 SQL_DEFAULT_PARAM 或 SQL_NULL_DATA。|  
 |HY010|函數順序錯誤|(DM) 先前的函式呼叫不是呼叫**SQLPutData**或是**SQLParamData**。<br /><br /> (DM) 以非同步方式執行的函式呼叫的連接控制代碼相關聯*StatementHandle*。 仍在 SQLPutData 函式呼叫時執行此非同步函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**針對呼叫*StatementHandle*並傳回 SQL_PARAM_DATA_可使用。 資料已擷取所有的資料流參數前呼叫此函式。<br /><br /> 以非同步方式執行的函式 （不是此一） 已呼叫 」 (DM) *StatementHandle*和仍在呼叫此函式時所執行。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足情況。|  
-|HY019|整塊傳送非字元及非二進位的資料|**SQLPutData**已被呼叫超過一次以上的參數或資料行，以及它已不在使用 C 字元資料傳送至字元、 二進位檔或資料來源特定的資料類型資料行，或傳送二進位的 C 資料行的字元二進位檔或資料來源特定的資料類型。|  
+|HY019|整塊傳送非字元及非二進位的資料|**SQLPutData**已被呼叫超過一次以上的參數或資料行，以及它已不在使用 C 字元資料傳送至字元、 二進位檔或資料來源特有的資料類型資料行，或傳送二進位的 C 資料行的字元二進位檔或資料來源特有的資料類型。|  
 |HY020|嘗試串連 null 值|**SQLPutData**從呼叫傳回 SQL_NEED_DATA，和其中一個這些呼叫中，多次呼叫*Strlen_or_ind&lt* SQL_NULL_DATA 或 SQL_DEFAULT_PARAM，包含引數。|  
 |HY090|字串或緩衝區長度無效|引數*DataPtr*不是 null 指標，而引數*Strlen_or_ind&lt*小於 0，但不是等於 SQL_NTS 或是 SQL_NULL_DATA。|  
 |HY117|連接已因為未知的交易狀態暫止。 只中斷連線，並允許唯讀的函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函式](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
@@ -109,7 +109,7 @@ SQLRETURN SQLPutData(
  陳述式執行階段會傳遞如何資料在執行參數資料的詳細資訊，請參閱 「 傳遞參數值 」 中[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)並[傳送長資料](../../../odbc/reference/develop-app/sending-long-data.md)。 更新或新增更多有關如何資料在執行資料行的資料，請參閱 「 使用 SQLSetPos 」 一節中[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)、 「 執行大量更新使用中的書籤 」 [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)，及[長資料和 SQLSetPos 與 SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)。  
   
 > [!NOTE]  
->  應用程式可以使用**SQLPutData**來傳送或傳送字元 C 資料行的字元、 二進位檔或資料來源特定的資料型別時，才傳送二進位的 C 資料行的二進位字元時的組件中的資料特定來源的資料型別。 如果**SQLPutData**呼叫超過一次在其他情況下它會傳回 SQL_ERROR，而且 SQLSTATE HY019 （整塊傳送非字元及非二進位資料）。  
+>  應用程式可以使用**SQLPutData**來傳送或傳送字元 C 資料行的字元、 二進位檔或資料來源特有的資料型別時，才傳送二進位的 C 資料行的二進位字元時的組件中的資料特定來源的資料型別。 如果**SQLPutData**呼叫超過一次在其他情況下它會傳回 SQL_ERROR，而且 SQLSTATE HY019 （整塊傳送非字元及非二進位資料）。  
   
 ## <a name="example"></a>範例  
  下列範例假設名為 Test 的資料來源名稱。 相關聯的資料庫都應該有的資料表，您可以建立、，如下所示：  

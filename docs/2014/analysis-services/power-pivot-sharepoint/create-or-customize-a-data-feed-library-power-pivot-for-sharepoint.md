@@ -14,12 +14,12 @@ ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17ea214c6e9dacb8517c42e7cb62141b92ef1ccc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3586379cbd22dee4e288a032a9dd850355b2b674
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126688"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543546"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>建立或自訂資料摘要庫 (PowerPivot for SharePoint)
   *「資料摘要庫」* (Data Feed Library) 是一種特殊用途的 SharePoint 文件庫，可讓您註冊與共用 Atom 資料服務文件 (.atomsvc)。 這些文件會提供 XML 資料摘要給支援 Atom 資料摘要格式的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿或其他用戶端應用程式。 資料摘要庫與其他 SharePoint 文件庫不同，因為它讓您能夠：  
@@ -28,7 +28,7 @@ ms.locfileid: "48126688"
   
 -   在中央位置共用及管理資料服務文件。  
   
--   以視覺化方式識別資料服務文件圖示，以便您可以輕鬆區別服務文件儲存在相同的文件庫中的其他文件： ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
+-   用圖示以視覺方式識別資料服務文件，讓您很容易就能區別服務文件與儲存於相同文件庫中的其他文件：![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  資料摘要庫一直都是包含資料服務文件 (.atomsvc) 檔案，而從來都不包含資料摘要本身。 資料服務文件與包含靜態 XML 資料的資料摘要不同，它會指定 URL 給接到要求時會產生摘要的服務或應用程式，為可重複的匯入作業提供可重複使用的連接資訊。  
   
@@ -52,13 +52,13 @@ ms.locfileid: "48126688"
   
 1.  按一下頁面左上角的 [網站動作]。  
   
-2.  按一下 [更多選項]。  
+2.  按一下 **更多選項**...  
   
 3.  按一下文件庫之下的 [資料摘要庫]。  
   
 4.  輸入名稱、描述、啟動及版本喜好設定。 加入描述性資訊，以協助使用者將這個文件庫識別為資料服務文件的儲存位置。  
   
-5.  按一下 **[建立]**。  
+5.  按一下 [建立] 。  
   
  資料摘要庫的連結會出現在目前網站的導覽 [快速啟動] 窗格中。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48126688"
   
 7.  按一下 [確定] 。  
   
-#### <a name="step-2-add-the-data-service-document-content-type"></a>步驟 2：加入資料服務文件內容類型  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>步驟 2：加入資料服務文件的內容類型  
   
 1.  在 [內容類型] 區段中，按一下 **[從現有的網站內容類型新增]**。 如果您看不到此頁面，請回到網站中，按一下文件庫工具中的 **[文件庫]** ，然後按一下 **[文件庫設定]**。  
   

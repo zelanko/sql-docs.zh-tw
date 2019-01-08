@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a46478b31feb3a15a260ae2cd1598ae18f605c2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8df088a088a68d91668978bef5761cc2b5b543f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107748"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779890"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC 設計工具主控台簡介
   本節描述 Attunity Oracle Change Data Capture (CDC) 設計工具的安裝程序。  
@@ -40,11 +39,11 @@ ms.locfileid: "48107748"
   
  **Oracle 資料庫**  
   
--   Oracle Database 10g Release 2：10.2.0.1-10.2.0.5 (2010 年 4 月的修補集)  
+-   Oracle Database 10g Release 2:10.2.0.1-10.2.0.5 （自 2010 年 4 月起的修補集）  
   
--   Oracle Database 11g Release 1：11.1.0.6-11.1.0.7 (2008 年 9 月的修補集)  
+-   Oracle Database 11g Release 1:11.1.0.6-11.1.0.7 （自 2008 年 9 月起的修補集）  
   
--   Oracle Database 11g Release 2：11.2.0.1-11.2.0.3 (2011 年 9 月的修補集)  
+-   Oracle Database 11g Release 2:11.2.0.1-11.2.0.3 （自 2011 年 9 月起的修補集）  
   
  **SQL Server 資料庫**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48107748"
   
 -   Oracle 11.x 用戶端  
   
- **請注意**： 您必須使用 32 位元或 64 位元版本的此軟體，根據安裝的 Oracle CDC 設計工具主控台版本而定。  
+ **注意**:您必須使用 32 位元或 64 位元版本的此軟體，根據安裝的 Oracle CDC 設計工具主控台版本而定。  
   
  Oracle CDC 設計工具主控台會使用 Oracle ODBC 提供者與來源 Oracle 資料庫通訊。  
   

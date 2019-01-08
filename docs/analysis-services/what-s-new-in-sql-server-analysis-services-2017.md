@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 76e9bedbd7807b78288a901d0b2a7674232c7e91
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 188406e99f32b42079b66536db42810222eb2a24
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145983"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516742"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>什麼是 SQL Server 2017 Analysis Services 的新功能
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -64,7 +64,7 @@ SQL Server 2017 Analysis Services 會看到一些最重要的增強功能自 SQL
 
 * 雜湊編碼十分適用於分組的資料行 （通常是維度資料表值） 和外部索引鍵。 字串資料行一律是編碼的雜湊。
 
-數值資料行可以使用其中一種編碼的方法。 當 Analysis Services 開始處理資料表時，如果其中一個資料表是空的 （不論有無分割區） 或正在執行完整資料表處理操作時，會每個數值資料行來判斷是否要套用的值或雜湊編碼範例值. 根據預設，值的編碼方式是選擇當資料行中相異值的範例是夠大，否則雜湊編碼通常會提供更好的壓縮。 您可根據資料分佈，進一步資訊部分處理之資料行之後，變更編碼方式，並重新啟動編碼的程序; Analysis services不過，這會增加處理時間，而且是效率不佳。 效能微調技術白皮書會討論更詳細地重新編碼，並說明如何偵測到它使用 SQL Server Profiler。
+數值資料行可以使用其中一種編碼的方法。 當 Analysis Services 開始處理資料表時，如果其中一個資料表是空的 （不論有無分割區） 或正在執行完整資料表處理操作時，會每個數值資料行來判斷是否要套用的值或雜湊編碼範例值. 根據預設，值的編碼方式是選擇時的資料行中相異值的範例是夠大，否則雜湊編碼通常會提供更好的壓縮。 您可根據資料分佈，進一步資訊部分處理之資料行之後，變更編碼方式，並重新啟動編碼的程序; Analysis services不過，這會增加處理時間，而且是效率不佳。 效能微調技術白皮書會討論更詳細地重新編碼，並說明如何偵測到它使用 SQL Server Profiler。
 
 編碼提示可讓針對指定喜好設定提供背景知識，從資料分析和 （或） 重新編碼追蹤事件的回應編碼方式模組工具。 因為雜湊編碼的資料行的彙總為速度較慢，比透過值編碼的資料行值的編碼方式可指定做為這類資料行的提示。 不保證會套用喜好設定。 這是提示，而不是一項設定。 若要指定一個編碼提示，請在資料行上設定 EncodingHint 屬性。 可能的值為 「 預設 」、 「 值 」 和 「 雜湊 」。 下列程式碼片段的 JSON 型 Model.bim 檔案中的中繼資料指定編碼 Sales Amount 資料行的值。
 

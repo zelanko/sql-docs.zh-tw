@@ -15,12 +15,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59067479ebd57b8a26cf3de6ef243e0eb7072bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d4a8d29e27fae9b54a6060ec1be8f6c5a4163a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200948"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507270"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>將用戶端連接至資料庫鏡像工作階段 (SQL Server)
   若要連接至資料庫鏡像工作階段，用戶端可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 針對 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫設定之後，這兩個資料存取提供者就會完全支援資料庫鏡像。 如需使用鏡像資料庫之程式設計考量的詳細資訊，請參閱＜ [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)＞。 此外，目前的主體伺服器執行個體必須可以使用，而且必須在此伺服器執行個體上建立用戶端的登入。 如需詳細資訊，請參閱[孤立的使用者疑難排解 &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。 資料庫鏡像工作階段的用戶端連接不會涉及見證伺服器執行個體 (如果此執行個體存在的話)。  
@@ -83,7 +83,7 @@ Network=dbnmpntw;
 >  由於具名管道不會使用 TCP/IP 重試演算法，所以在許多情況下，具名管道連接嘗試可能會在連接至鏡像資料庫之前逾時。  
   
 #### <a name="server-attribute"></a>Server 屬性  
- 連接字串必須包含`Server`屬性，以便提供初始夥伴名稱，應該可識別目前的主體伺服器執行個體。  
+ 連接字串必須包含 `Server` 屬性，以便提供初始夥伴名稱 (應該可識別目前的主體伺服器執行個體)。  
   
  識別伺服器執行個體最簡單的方式就是指定名稱：<伺服器名稱>[**\\**<SQL Server 執行個體名稱>]**。 例如：  
   
@@ -137,7 +137,7 @@ Server=123.34.45.56,4724;
 >  只有提供初始夥伴名稱時，除了重新連接的相關動作或程式碼以外，應用程式開發人員不需要採取任何動作或寫入任何程式碼。  
   
 > [!NOTE]  
->  Managed 程式碼應用程式開發人員提供容錯移轉夥伴名稱`ConnectionString`的`SqlConnection`物件。 如需使用此連接字串的詳細資訊，請參閱 ADO.NET 文件中的＜.NET Framework Data Provider 對於 SQL Server 的資料庫鏡像支援＞，其是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK 的一部份。  
+>  Managed 程式碼應用程式開發人員要在 `ConnectionString` 物件的 `SqlConnection` 中提供容錯移轉夥伴名稱。 如需使用此連接字串的詳細資訊，請參閱 ADO.NET 文件中的＜.NET Framework Data Provider 對於 SQL Server 的資料庫鏡像支援＞，其是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK 的一部份。  
   
 #### <a name="example-connection-string"></a>連接字串範例  
  例如，為了使用 TCP/IP 明確連接到 Partner_A 或 Partner_B 的 **AdventureWorks** 資料庫，使用 ODBC 驅動程式的用戶端應用程式可能會提供下列連接字串：  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - annotations [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 8c6401ef-17f0-41f5-be7a-01f49141f04c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4abd5c3c645d7941d242b16790109bdf719351dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73be214576870a13b37b16c0774e645e77518bea
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213068"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778510"
 ---
 # <a name="annotations-master-data-services"></a>註解 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，註解是指您輸入以提供交易之相關詳細資料的註解。  
@@ -36,7 +35,7 @@ ms.locfileid: "48213068"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|將註解加入至交易。|[交易加上註解&#40;Master Data Services&#41;](annotate-a-transaction-master-data-services.md)|  
+|將註解加入至交易。|[為交易加上註解 &#40;Master Data Services&#41;](annotate-a-transaction-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   

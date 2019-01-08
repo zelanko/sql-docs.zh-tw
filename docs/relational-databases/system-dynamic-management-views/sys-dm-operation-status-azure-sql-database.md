@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ad16bb39d693e78f0d6678cbf5d6b1c4abfb5816
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 44db657d10348a0ed2a775ac290167746b9bd9cd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663268"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407907"
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "51663268"
   
 ```  
 SELECT * FROM sys.dm_ operation_status   
-   WHERE major_resource_id = ‘myddb’   
+   WHERE major_resource_id = 'myddb'   
    ORDER BY start_time DESC;  
 ```  
   

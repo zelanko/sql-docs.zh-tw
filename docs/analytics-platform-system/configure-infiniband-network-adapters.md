@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e0e0ed3aea02ae8a79d89871f6849b1cbf40c9d0
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 0421361cf1718d6ee280269f9da125c148aa3afd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169317"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518266"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Analytics Platform System 設定 InfiniBand 網路介面卡
 描述如何 InfiniBand 網路介面卡的伺服器上設定非應用裝置用戶端連接到控制節點上 Parallel Data Warehouse (PDW)。 基本連線能力和高可用性，以便載入、 備份及其他處理程序會自動連線到作用中的 InfiniBand 網路，使用下列指示。  
@@ -42,9 +42,9 @@ ms.locfileid: "49169317"
   
 比方說，如果您的 PDW 區域名稱是 MyPDW，設備名稱 MyAPS dwloader 伺服器規格，來將資料載入是下列其中一項：  
   
--   `dwloader –S MYPDW-SQLCTL01.MyAPS.pdw.local`  
+-   `dwloader -S MYPDW-SQLCTL01.MyAPS.pdw.local`  
   
--   `dwloader –S MYPDW-SQLCTL01`  
+-   `dwloader -S MYPDW-SQLCTL01`  
   
 ## <a name="BeforeBegin"></a>開始之前  
   
@@ -61,7 +61,7 @@ ms.locfileid: "49169317"
   
 若要符合您商務需求，您也可以在用戶端伺服器加入至您自己的非應用裝置群組或 Windows 網域。  
   
-## <a name="Sec1"></a>步驟 1： 取得設備 InfiniBand 網路設定  
+## <a name="Sec1"></a>步驟 1:取得設備 InfiniBand 網路設定  
 *若要取得設備 InfiniBand 網路設定*  
   
 1.  登入設備 AD01 節點使用 appliance_domain\Administrator 帳戶。  
@@ -96,7 +96,7 @@ ms.locfileid: "49169317"
   
     若要尋找未使用的 IP 位址，請開啟命令視窗並嘗試 ping 您的應用裝置的位址範圍內的 IP 位址。 在此範例中，TeamIB2 網路的 IP 位址會是 172.16.18.30。 尋找開頭為 172.16.18 未使用的 IP 位址。 例如，從命令列輸入 「 ping 172.16.18.254"。 如果 ping 要求失敗時，IP 位址使用。  
   
-## <a name="Sec2"></a>步驟 2： 設定您的用戶端伺服器上的 InfiniBand 網路介面卡設定  
+## <a name="Sec2"></a>步驟 2:在您的用戶端伺服器上設定的 InfiniBand 網路介面卡設定  
 
 ### <a name="notes"></a>注意  
   
@@ -161,9 +161,9 @@ ms.locfileid: "49169317"
   
 1.  在 [網路連線] 視窗中，以滑鼠右鍵按一下其中一個網路位置的 Mellanox 介面卡，然後選取屬性。  
   
-2.  按一下 [進階]... 按鈕，可選取色彩。  
+2.  按一下進階... 按鈕。  
   
-3.  在 進階 TCP/IP 設定 視窗中，如果 附加這些 DNS 尾碼 （依順序） 選項不灰色，核取方塊為 附加這些 DNS 尾碼 （依順序）： 選取設備的網域尾碼，，按一下 新增... 設備網域尾碼 `appliance_domain.local`  
+3.  在 進階 TCP/IP 設定 視窗中，如果 附加這些 DNS 尾碼 （依順序） 選項不灰色，核取方塊為 附加這些 DNS 尾碼 （依順序）： 選取設備的網域尾碼，，按一下 新增...設備網域尾碼 `appliance_domain.local`  
   
 4.  如果附加這些 DNS 尾碼 （依順序）： 選項呈現灰色，您可以將 APS 網域加入此伺服器藉由修改登錄機碼 HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient。  
   

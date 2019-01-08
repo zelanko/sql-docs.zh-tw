@@ -1,5 +1,5 @@
 ---
-title: Microsoft 時序群集演算法技術參考 |Microsoft 文件
+title: Microsoft 時序群集演算法技術參考 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cf5f652cc2cec77fdbcb488710886441788a0631
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 331a7c4df759114e18fd47007058ddc38b2f77d9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016465"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418379"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 時序群集演算法技術參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "34016465"
  預設值為 64。  
   
  MAXIMUM_STATES  
- 針對演算法支援的非順序屬性指定最大狀態數目。 如果非循序屬性的狀態數目大於最大狀態數目，演算法會使用該屬性最常用的狀態，並將其餘的狀態視為 **Missing**。  
+ 針對演算法支援的非順序屬性指定最大狀態數目。 如果非循序屬性的狀態數目大於狀態的最大數目，演算法會使用屬性最常用的狀態，並將其餘狀態視為**Missing**。  
   
  預設值為 100。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34016465"
  適用於採礦結構資料行。  
   
  MODEL_EXISTENCE_ONLY  
- 表示資料行將被視為擁有兩個可能狀態： **Missing** 和 **Existing**。 Null 值會被視為 **Missing** 值。  
+ 表示資料行將被視為擁有兩個可能狀態： **遺漏**並**現有**。 Null 值會被視為 **Missing** 值。  
   
  適用於採礦模型資料行。  
   
@@ -123,22 +123,22 @@ ms.locfileid: "34016465"
 ### <a name="input-and-predictable-columns"></a>輸入和可預測資料行  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法支援下表所列的特定輸入資料行和可預測資料行。 如需內容類型用於採礦模型時所代表意義的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-types-data-mining.md)。  
   
-|資料行|內容類型|  
+|「資料行」|內容類型|  
 |------------|-------------------|  
 |輸入屬性|Continuous、Cyclical、Discrete、Discretized、Key、Key Sequence、Table 和 Ordered|  
 |可預測屬性|Continuous、Cyclical、Discrete、Discretized、Table 和 Ordered|  
   
 ## <a name="remarks"></a>備註  
   
--   請使用 [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) 函數以預測時序。 如需有關版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，支援時序預測，請參閱[支援的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
+-   請使用 [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) 函數以預測時序。 如需版本的詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，支援時序預測，請參閱 <<c2> [ 支援的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序叢集演算法不支援使用預測模型標記語言 (PMML) 來建立採礦模型。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法支援鑽研、OLAP 採礦模型的使用，以及資料採礦維度的使用。  
   
 ## <a name="see-also"></a>另請參閱  
- [Microsoft 時序群集演算法](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [時序群集模型查詢範例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [時序群集模型 & #40; 的採礦模型內容Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
+ [時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

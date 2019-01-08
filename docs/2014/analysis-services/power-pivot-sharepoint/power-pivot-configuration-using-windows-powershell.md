@@ -11,12 +11,12 @@ ms.assetid: 4d83e53e-04f1-417d-9039-d9e81ae0483d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f61c87bdb1790b254ca024132d7ed1f90aa5e985
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3e0cdae7e9f57a7bfd62a3a0e947c43ced0b8c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164268"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530658"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>使用 Windows PowerShell 的 PowerPivot 組態
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包括您可以用來設定 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]安裝的 Windows PowerShell 指令程式。 若要使用 PowerShell 完整設定安裝，需要使用 SharePoint 指令程式和 PowerPivot for SharePoint 指令程式。 大部分組態都可以使用其中一項 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工具來完成。 如需有關這些工具的詳細資訊，請參閱[PowerPivot 組態工具](power-pivot-configuration-tools.md)。  
@@ -46,7 +46,7 @@ ms.locfileid: "48164268"
   
     -   SQL Server 2012 Analysis Services 伺服器附帶的 17 個指令程式是在 SharePoint 模式和 SharePoint 2010 中進行設定。  
   
-     如果清單並未傳回任何命令，或者您看見類似 “`get-help could not find *powerpivot* in a help file in this session.`“ 的錯誤訊息，請參閱本主題下一節有關如何在伺服器上啟用 PowerPivot 指令程式的指示。  
+     如果清單並未傳回任何命令，或者您看見類似的錯誤訊息 「`get-help could not find *powerpivot* in a help file in this session.`」，請參閱本主題的指示下一步 一節有關如何啟用 PowerPivot 指令程式，在伺服器上的。  
   
      所有指令程式都有線上說明。 下列範例顯示如何檢視 `New-PowerPivotServiceApplication` 指令程式的線上說明：  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48164268"
 2.  執行第一個 Cmdlet：  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      此指令程式會傳回方案的名稱、方案識別碼及 Deployed=False。 在下個步驟中，您將部署方案。  
@@ -76,7 +76,7 @@ ms.locfileid: "48164268"
 3.  執行第二個 Cmdlet 部署方案：  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
 4.  關閉視窗。 再次使用 [以系統管理員身分執行] 選項重新開啟該視窗。  

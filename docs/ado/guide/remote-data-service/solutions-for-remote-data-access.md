@@ -13,12 +13,12 @@ ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 302a43238c755890e9fd106d8784eabdd0361d88
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a761267c3d25619b58f23e2e7b6396f0e9b43958
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558615"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535802"
 ---
 # <a name="solutions-for-remote-data-access"></a>遠端資料存取的解決方案
 ## <a name="the-issue"></a>此問題  
@@ -34,14 +34,14 @@ ms.locfileid: "51558615"
  在此範例中，您的應用程式永遠不會直接連接至資料來源;IIS 沒有。 與 IIS 存取透過 ADO 的資料。  
   
 > [!NOTE]
->  不需要網際網路或近端內部網路為基礎的用戶端/伺服器應用程式 (也就是網頁型)，也可以包含僅區域網路上的已編譯程式。 不過，一般的情況下是 Web 應用程式。  
+>  不需要網際網路或近端內部網路為基礎的用戶端/伺服器應用程式 (也就是網頁型)-它可能包含單獨的區域網路上的已編譯程式。 不過，一般的情況下是 Web 應用程式。  
   
  因為某些視覺控制項，例如格線、 核取方塊或清單中，可能會使用傳回的資訊，傳回的資訊必須是容易使用的視覺控制項。  
   
  您想要既簡單又有效率應用程式設計介面，支援三層式系統，並傳回資訊做為輕鬆如同它已擷取兩層式系統上。 遠端資料服務 (RDS) 是此介面。  
   
 ## <a name="the-solution"></a>方案  
- RDS 程式設計模型會定義 — 的存取和更新資料來源所需的活動序列，以存取透過媒介，例如網際網路資訊服務 (IIS) 中的資料。 程式設計模型，摘要說明 RDS 的整個功能  
+ RDS 定義程式設計模型層的存取和更新資料來源-若要存取透過媒介，例如網際網路資訊服務 (IIS) 中的資料所需的活動序列。 程式設計模型，摘要說明 RDS 的整個功能  
   
 ## <a name="see-also"></a>另請參閱  
  [基本 RDS 程式設計模型](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   

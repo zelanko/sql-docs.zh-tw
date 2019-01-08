@@ -4,21 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d31540020df2a4aa4f30f144de4d7e606b471e9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b591aa8e89200ca863b1e8196c383c506401fc3e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096998"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759670"
 ---
 # <a name="xtp-cursors"></a>XTP 資料指標
-  XTP 資料指標效能物件包含與內部 XTP 引擎資料指標相關的計數器。 低層級的建置組塊 XTP 引擎用來處理資料指標是[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢。 因此，您通常不會有這些指標的直接控制權。  
+  XTP 資料指標效能物件包含與內部 XTP 引擎資料指標相關的計數器。 資料指標是 XTP 引擎用來處理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢的低階建置組塊。 因此，您通常不會有這些指標的直接控制權。  
   
  下表描述**XTP 資料指標**計數器。  
   

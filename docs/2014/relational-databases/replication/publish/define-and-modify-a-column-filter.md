@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication], column
@@ -16,12 +15,12 @@ ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3cd764670dfb5df51dee40593fd911aade0171a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e0c26e32425f204f7dab29aa65c66f3a11f09d7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130438"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753710"
 ---
 # <a name="define-and-modify-a-column-filter"></a>定義及修改資料行篩選
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定義及修改資料行篩選。  
@@ -71,7 +70,7 @@ ms.locfileid: "48130438"
   
 #### <a name="to-define-a-column-filter-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>針對快照式或交易式發行集中發行的發行項定義資料行篩選  
   
-1.  定義要篩選的發行項。 如需詳細資訊，請參閱 [定義發行項](define-an-article.md)。  
+1.  定義要篩選的發行項。 如需詳細資訊，請參閱 [Define an Article](define-an-article.md)。  
   
 2.  在發行集資料庫的發行者上，執行 [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)。 這樣會定義要在發行項中包含或移除的資料行。  
   

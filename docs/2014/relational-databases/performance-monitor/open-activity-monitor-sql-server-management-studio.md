@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server], setting the refresh interval
@@ -15,15 +15,15 @@ ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf893c3d46530a8d4457e3d7e434be792d5647ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171658"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755510"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>開啟活動監視器 (SQL Server Management Studio)
-  本主題描述如何開啟活動監視器 來取得其相關資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]處理程序以及這些處理序如何影響目前的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此外，本主題也描述如何設定 [活動監視器] 的重新整理間隔。  
+  本主題描述如何開啟 [活動監視器] 來取得有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序以及這些處理序如何影響目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的資訊。 此外，本主題也描述如何設定 [活動監視器] 的重新整理間隔。  
   
  **本主題內容**  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48171658"
   
      [Transact-SQL](#SSMSProcedure)  
   
--   **使用下列項目，設定重新整理間隔：**  [SQL Server Management Studio](#Refresh)  
+-   **若要設定重新整理間隔使用：**[SQL Server Management Studio](#Refresh)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  [活動監視器] 會在監視的執行個體上執行查詢，以便取得 [活動監視器] 顯示窗格的資訊。 當重新整理間隔的設定小於 10 秒時，用來執行這些查詢的時間就可能會影響伺服器效能。  
@@ -51,7 +51,7 @@ ms.locfileid: "48171658"
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>若要在 SQL Server Management Studio 中開啟活動監視器  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]標準工具列上，按一下**活動監視器**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 標準工具列上，按一下 **[活動監視器]**。  
   
 2.  在 **[連接到伺服器]** 對話方塊中，選取伺服器名稱和驗證模式，然後按一下 **[連接]**。  
   

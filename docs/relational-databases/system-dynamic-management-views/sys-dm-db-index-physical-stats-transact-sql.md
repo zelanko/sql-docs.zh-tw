@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_index_physical_stats (transact-SQL) |Microsoft Docs
+title: sys.dm_db_index_physical_stats & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5869fe4903ea60a42e8710b0acc969e8a8bc6202
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: b9d093983408502d391c4025e03ba0a590e8f77a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673987"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617871"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ sys.dm_db_index_physical_stats (
 |object_id|**int**|索引所在之資料表或檢視表的物件識別碼。|  
 |index_id|**int**|索引的索引識別碼。<br /><br /> 0 = 堆積。|  
 |partition_number|**int**|在主控物件內，以 1 為基底的分割區編號；資料表、檢視表或索引。<br /><br /> 1 = 非分割區的索引或堆積。|  
-|index_type_desc|**nvarchar(60)**|索引類型的描述：<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> SPATIAL INDEX<br /><br /> XML INDEX<br /><br /> 資料行存放區對應的索引 （內部）<br /><br /> 資料行存放區 DELETEBUFFER 索引 （內部）<br /><br /> 資料行存放區 DELETEBITMAP 索引 （內部）|  
+|index_type_desc|**nvarchar(60)**|索引類型的描述：<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br /> 資料行存放區對應的索引 （內部）<br /><br /> 資料行存放區 DELETEBUFFER 索引 （內部）<br /><br /> 資料行存放區 DELETEBITMAP 索引 （內部）|  
 |hobt_id|**bigint**|堆積或 B 型樹狀目錄的索引或分割區的識別碼。<br /><br /> 除了傳回使用者定義索引的 hobt_id，這也會傳回的 hobt_id 的內部資料行存放區索引。|  
 |alloc_unit_type_desc|**nvarchar(60)**|配置單位類型的描述：<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> 如果是 LOB_DATA 配置單位包含儲存在類型的資料行的資料**文字**， **ntext**，**映像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，並**xml**。 如需詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)。<br /><br /> ROW_OVERFLOW_DATA 配置單位包含儲存在類型的資料行的資料**varchar （n)**， **nvarchar （n)**， **varbinary**，和**sql_variant**已被推出同資料列。|  
 |index_depth|**tinyint**|索引層級的數目。<br /><br /> 1 = 堆積，或 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位。|  
@@ -103,7 +103,7 @@ sys.dm_db_index_physical_stats (
 |avg_fragment_size_in_pages|**float**|IN_ROW_DATA 配置單位的分葉層級中，一個片段的平均頁數。<br /><br /> 如果是索引的非分葉層級，以及 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為 NULL。<br /><br /> NULL 堆積*模式*= SAMPLED。|  
 |page_count|**bigint**|索引或資料頁總數。<br /><br /> 如果是索引，則為 IN_ROW_DATA 配置單位中，B 型樹狀目錄目前層級的總索引頁數。<br /><br /> 如果是堆積，則為 IN_ROW_DATA 配置單位中的總資料頁數。<br /><br /> 如果是 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為配置單位中的總頁數。|  
 |avg_page_space_used_in_percent|**float**|所有頁面所用之可用資料儲存空間的平均百分比。<br /><br /> 如果是索引，則為 IN_ROW_DATA 配置單位中 B 型樹狀目錄目前層級的平均數。<br /><br /> 如果是堆積，則為 IN_ROW_DATA 配置單位中所有資料頁的平均數。<br /><br /> 如果是 LOB_DATA 或 ROW_OVERFLOW DATA 配置單位，則為配置單位中所有頁面的平均數。<br /><br /> NULL*模式*= LIMITED。|  
-|record_count|**bigint**|總記錄數。<br /><br /> 如果是索引，則為 IN_ROW_DATA 配置單位中，B 型樹狀目錄目前層級的總記錄數。<br /><br /> 如果是堆積，則為 IN_ROW_DATA 配置單位中的總記錄數。<br /><br /> **注意︰** 是堆積，從此函數傳回的記錄數目可能不符合所執行的 SELECT COUNT 傳回的資料列數目 (\*) 針對該堆積。 這是因為一個資料列可能包含數筆記錄。 例如，在某些更新情況下，單一的堆積資料列可能有一筆轉送記錄以及一筆當做更新作業結果的轉送記錄。 同時，在 LOB_DATA 儲存體中，會將多數大型的 LOB 資料列分割為多筆記錄。<br /><br /> 如果是 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為完整配置單位中的總記錄數。<br /><br /> NULL*模式*= LIMITED。|  
+|record_count|**bigint**|總記錄數。<br /><br /> 如果是索引，則為 IN_ROW_DATA 配置單位中，B 型樹狀目錄目前層級的總記錄數。<br /><br /> 如果是堆積，則為 IN_ROW_DATA 配置單位中的總記錄數。<br /><br /> **注意：** 若是堆積，從此函數傳回的記錄數目可能不符合所執行的 SELECT COUNT 傳回的資料列數目 (\*) 針對該堆積。 這是因為一個資料列可能包含數筆記錄。 例如，在某些更新情況下，單一的堆積資料列可能有一筆轉送記錄以及一筆當做更新作業結果的轉送記錄。 同時，在 LOB_DATA 儲存體中，會將多數大型的 LOB 資料列分割為多筆記錄。<br /><br /> 如果是 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為完整配置單位中的總記錄數。<br /><br /> NULL*模式*= LIMITED。|  
 |ghost_record_count|**bigint**|配置單位中，準刪除清除工作準備要移除的準刪除記錄數。<br /><br /> 如果是 IN_ROW_DATA 配置單位中索引的非分葉層級，則為 0。<br /><br /> NULL*模式*= LIMITED。|  
 |version_ghost_record_count|**bigint**|配置單位中未完成之快照集隔離交易所保留的準刪除記錄數。<br /><br /> 如果是 IN_ROW_DATA 配置單位中索引的非分葉層級，則為 0。<br /><br /> NULL*模式*= LIMITED。|  
 |min_record_size_in_bytes|**int**|記錄大小下限 (以位元組為單位)。<br /><br /> 如果是索引，則為 IN_ROW_DATA 配置單位中 B 型樹狀目錄目前層級的記錄大小下限。<br /><br /> 如果是堆積，則為 IN_ROW_DATA 配置單位中的記錄大小下限。<br /><br /> 如果是 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為完整配置單位中的記錄大小下限。<br /><br /> NULL*模式*= LIMITED。|  
@@ -113,7 +113,7 @@ sys.dm_db_index_physical_stats (
 |compressed_page_count|**bigint**|壓縮的頁面數。<br /><br /> 如果是堆積，新配置的頁面不會使用 PAGE 壓縮方式。 堆積會在兩個特殊情況下使用 PAGE 壓縮方式：大量匯入資料或是重建堆積時。 造成頁面配置的一般 DML 作業將不會使用 PAGE 壓縮方式。 當 compressed_page_count 值成長到大於您要的臨界值時，重建堆積。<br /><br /> 如果是具有叢集索引的資料表，compressed_page_count 值會指示 PAGE 壓縮的效能。|  
 |hobt_id|BIGINT|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 為僅限資料行存放區索引，則會追蹤分割區的內部資料行存放區資料的資料列集的識別碼。 資料列集是儲存為資料堆積或二進位樹狀結構。 它們有相同的索引識別碼，做為父資料行存放區索引。 如需詳細資訊，請參閱 < [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)。<br /><br /> 如果|  
 |column_store_delete_buffer_state|TINYINT|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 清空<br /><br /> 3 = 排清<br /><br /> 4 = 淘汰<br /><br /> 5 = 備妥|  
-|column_store_delete_buff_state_desc||**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 不正確 – 父索引不是資料行存放區索引。<br /><br /> 開啟 – deleters 和掃描器會使用此。<br /><br /> 正在清空 – 清空 deleters 但掃描器仍然使用它。<br /><br /> 排清 – 緩衝區就會關閉，並刪除點陣圖正在寫入緩衝區中的資料列。<br /><br /> 淘汰 – 的封閉式的刪除緩衝區中的資料列寫入為刪除的點陣圖，但緩衝區有未遭截斷，因為掃描器仍在使用它。 新的掃描器，不需要使用淘汰的緩衝區，因為開啟的緩衝區已足夠。<br /><br /> 已準備好 – 此刪除緩衝區可供使用。|  
+|column_store_delete_buff_state_desc||**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 不是有效的父索引不是資料行存放區索引。<br /><br /> 開啟-deleters 和掃描器會使用此。<br /><br /> 正在清空-out 清空 deleters 但掃描器仍然使用它。<br /><br /> 排清-緩衝區就會關閉，並刪除點陣圖正在寫入緩衝區中的資料列。<br /><br /> 停用-的封閉式的刪除緩衝區中的資料列寫入為刪除的點陣圖，但緩衝區未遭截斷因為掃描器仍在使用它。 新的掃描器，不需要使用淘汰的緩衝區，因為開啟的緩衝區已足夠。<br /><br /> 已準備好-此刪除緩衝區可供使用。|  
   
 ## <a name="remarks"></a>備註  
  sys.dm_db_index_physical_stats 動態管理函數會取代 DBCC SHOWCONTIG 陳述式。  

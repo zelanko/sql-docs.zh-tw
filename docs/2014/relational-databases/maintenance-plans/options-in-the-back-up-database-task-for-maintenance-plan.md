@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.backup.f1
@@ -16,12 +15,12 @@ ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 177c5f7406ec3af9ebaa200376611f5327e76260
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a31052bb0633d370098e328741432f6b854d65e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111328"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774650"
 ---
 # <a name="back-up-database-task-maintenance-plan"></a>備份資料庫工作 (維護計畫)
   使用 [備份資料庫工作] 對話方塊，即可將備份工作加入維護計畫中。 萬一因為發生系統或硬體失敗 (或使用者錯誤) 而導致資料庫在某方面發生損毀，因此需要還原已備份副本時，備份資料庫就相當重要。 此工作讓您能夠執行完整、差異、檔案和檔案群組，以及交易記錄的備份。  
@@ -38,9 +37,9 @@ ms.locfileid: "48111328"
  建立新的伺服器連接，以便執行此工作時使用。 下面會描述 **[新增連接]** 對話方塊。  
   
  **資料庫**  
- 指定受此工作影響的資料庫。 選取之後，下拉式清單就會提供下列選項： **All databases**、 **All system databases**、 **All user databases**、 **These specific databases**。  
+ 指定受此工作影響的資料庫。 選取時，下拉式清單會提供下列選項：**所有的資料庫**，**所有系統資料庫**，**所有使用者資料庫**，**這些特定的資料庫**。  
   
- **All databases**  
+ **所有資料庫**  
  產生維護計畫，以便針對所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫執行維護工作。  
   
  **所有系統資料庫 (master、msdb、model)**  

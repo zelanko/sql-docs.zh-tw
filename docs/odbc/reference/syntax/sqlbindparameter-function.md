@@ -20,16 +20,16 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e46b6102f71e4ffcc00c4dd1367ab3beaa68732
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d318b73feaec0cfb48548b05ba6d7c06a697c6ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818566"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503523"
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 函數
 **合規性**  
- 版本導入： ODBC 2.0 標準相容性： ODBC  
+ 導入的版本：ODBC 2.0 標準合規性：ODBC  
   
  **摘要**  
  **SQLBindParameter**繫結至 SQL 陳述式中的參數標記的緩衝區。 **SQLBindParameter**支援繫結至 Unicode C 資料類型，即使基礎驅動程式不支援 Unicode 資料。  
@@ -112,14 +112,14 @@ SQLRETURN SQLBindParameter(
 |HY104|無效的有效位數或小數位數的值|指定的引數的值*ColumnSize*或*DecimalDigits*是所指定的 SQL 資料類型的資料行的資料來源所支援的值的範圍之外*ParameterType*引數。|  
 |包含 SQLSTATE=HY105|無效的參數類型|(DM) 引數指定的值*了*無效。 （請參閱 「 註解。"）|  
 |HY117|連接已因為未知的交易狀態暫止。 只中斷連線，並允許唯讀的函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函式](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
-|HYC00|未實作選擇性功能|驅動程式或資料來源不支援指定的引數所指定的值組合來轉換*ValueType*和 引數所指定的驅動程式專屬值*ParameterType*.<br /><br /> 指定的引數的值*ParameterType*的驅動程式支援 ODBC 的版本，但不是支援的驅動程式或資料來源是有效的 ODBC SQL 資料類型識別項。<br /><br /> 此驅動程式支援只有 ODBC 2。*x*和引數*ValueType*是下列其中之一：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 所有間隔 C 資料類型會列在[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)附錄 d： 資料型別中。<br /><br /> 此驅動程式只支援之前 3.50 元，並將引數的 ODBC 版本*ValueType*已 SQL_C_GUID。|  
+|HYC00|未實作選擇性功能|驅動程式或資料來源不支援指定的引數所指定的值組合來轉換*ValueType*和 引數所指定的驅動程式專屬值*ParameterType*.<br /><br /> 指定的引數的值*ParameterType*的驅動程式支援 ODBC 的版本，但不是支援的驅動程式或資料來源是有效的 ODBC SQL 資料類型識別項。<br /><br /> 此驅動程式支援只有 ODBC 2。*x*和引數*ValueType*是下列其中之一：<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 所有間隔 C 資料類型會列在[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)附錄 d:資料類型。<br /><br /> 此驅動程式只支援之前 3.50 元，並將引數的 ODBC 版本*ValueType*已 SQL_C_GUID。|  
 |HYT01|連接逾時過期|連接逾時期限到期之前的資料來源回應要求。 透過設定連接逾時期限**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
 |IM001|驅動程式不支援此函式|(DM) 驅動程式相關聯*StatementHandle*不支援此函式。|  
   
 ## <a name="comments"></a>註解  
  應用程式呼叫**SQLBindParameter**繫結 SQL 陳述式中的每個參數標記。 繫結的有效日期持續直到應用程式會呼叫**SQLBindParameter**同樣地，呼叫**SQLFreeStmt** SQL_RESET_PARAMS 選項，或呼叫**SQLSetDescField**至APD SQL_DESC_COUNT 標頭欄位設為 0。  
   
- 如需有關參數的詳細資訊，請參閱 <<c0> [ 陳述式參數](../../../odbc/reference/develop-app/statement-parameters.md)。 如需有關參數的資料型別和參數標記的詳細資訊，請參閱 <<c0> [ 參數的資料型別](../../../odbc/reference/appendixes/parameter-data-types.md)並[參數標記](../../../odbc/reference/appendixes/parameter-markers.md)附錄 c: SQL 文法中。  
+ 如需有關參數的詳細資訊，請參閱 <<c0> [ 陳述式參數](../../../odbc/reference/develop-app/statement-parameters.md)。 如需有關參數的資料型別和參數標記的詳細資訊，請參閱 <<c0> [ 參數的資料型別](../../../odbc/reference/appendixes/parameter-data-types.md)並[參數標記](../../../odbc/reference/appendixes/parameter-markers.md)附錄 c:SQL 文法。  
   
 ## <a name="parameternumber-argument"></a>Sqlbindparameter 引數  
  如果*Sqlbindparameter*呼叫中**SQLBindParameter** SQL_DESC_COUNT，值大於**SQLSetDescField**呼叫以增加 SQL_DESC_ 值若要計算*Sqlbindparameter*。  
@@ -166,11 +166,11 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 SQL_DATA_AT_EXEC|�
 >  驅動程式必須決定當串流應用程式繫結其輸出或輸入 / 輸出參數時，允許哪些 SQL 類型。 驅動程式管理員不會產生無效的 SQL 類型的錯誤。  
   
 ## <a name="valuetype-argument"></a>ValueType 引數  
- *ValueType*引數會指定參數的 C 資料類型。 這個引數設定 APD 中的 SQL_DESC_TYPE、 SQL_DESC_CONCISE_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE 欄位。 這必須是在值的其中一個[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)一節的附錄 d： 資料類型。  
+ *ValueType*引數會指定參數的 C 資料類型。 這個引數設定 APD 中的 SQL_DESC_TYPE、 SQL_DESC_CONCISE_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE 欄位。 這必須是在值的其中一個[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)一節的附錄 d:資料類型。  
   
- 如果*ValueType*引數是其中一個間隔資料類型的 SQL_DESC_TYPE 欄位*Sqlbindparameter* APD 中的記錄設定為 SQL_INTERVAL，APD 中的 [SQL_DESC_CONCISE_TYPE] 欄位設定為簡潔的間隔資料類型和 SQL_DESC_DATETIME_INTERVAL_CODE 欄位*Sqlbindparameter*記錄設定為特定間隔資料類型的次要代碼。 (請參閱[附錄 d： 資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)預設間隔分別在 APD，SQL_DESC_DATETIME_INTERVAL_PRECISION 和 SQL_DESC_PRECISION 欄位中所設定開頭有效位數 (2) 和預設的間隔秒數有效位數 (6)，用於資料。 應用程式如果任一個預設有效位數不適用，應該明確設定描述項欄位呼叫**SQLSetDescField**或是**SQLSetDescRec**。  
+ 如果*ValueType*引數是其中一個間隔資料類型的 SQL_DESC_TYPE 欄位*Sqlbindparameter* APD 中的記錄設定為 SQL_INTERVAL，APD 中的 [SQL_DESC_CONCISE_TYPE] 欄位設定為簡潔的間隔資料類型和 SQL_DESC_DATETIME_INTERVAL_CODE 欄位*Sqlbindparameter*記錄設定為特定間隔資料類型的次要代碼。 (請參閱[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)預設間隔分別在 APD，SQL_DESC_DATETIME_INTERVAL_PRECISION 和 SQL_DESC_PRECISION 欄位中所設定開頭有效位數 (2) 和預設的間隔秒數有效位數 (6)，用於資料。 應用程式如果任一個預設有效位數不適用，應該明確設定描述項欄位呼叫**SQLSetDescField**或是**SQLSetDescRec**。  
   
- 如果*ValueType*引數是其中一個日期時間資料類型的 SQL_DESC_TYPE 欄位*Sqlbindparameter* APD 中的記錄設定為 如果是 SQL_DATETIME SQL_DESC_CONCISE_TYPE欄位*Sqlbindparameter* APD 中的記錄設定為 C 的精確日期時間資料型別，而且 SQL_DESC_DATETIME_INTERVAL_CODE 欄位*Sqlbindparameter*記錄設定為特定的日期時間子代碼資料型別。 (請參閱[附錄 d： 資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)  
+ 如果*ValueType*引數是其中一個日期時間資料類型的 SQL_DESC_TYPE 欄位*Sqlbindparameter* APD 中的記錄設定為 如果是 SQL_DATETIME SQL_DESC_CONCISE_TYPE欄位*Sqlbindparameter* APD 中的記錄設定為 C 的精確日期時間資料型別，而且 SQL_DESC_DATETIME_INTERVAL_CODE 欄位*Sqlbindparameter*記錄設定為特定的日期時間子代碼資料型別。 (請參閱[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)  
   
  如果*ValueType*引數是 SQL_C_NUMERIC 資料類型，則預設有效位數 （它是由驅動程式定義），並用預設小數位數 (0)，在 APD 的 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 欄位中所設定的資料。 應用程式的預設有效位數或小數位數不適用，如果應該明確設定描述項欄位呼叫**SQLSetDescField**或是**SQLSetDescRec**。  
   
@@ -178,10 +178,10 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 SQL_DATA_AT_EXEC|�
   
  您也可以指定擴充的 C 資料類型。 如需詳細資訊，請參閱 < [ODBC 中的 C 資料類型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。  
   
- 如需詳細資訊，請參閱 <<c0> [ 預設 C 資料類型](../../../odbc/reference/appendixes/default-c-data-types.md)，[轉換將資料從 C 到 SQL 資料類型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)，並[轉換將資料從 SQL 到 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)附錄 d： 資料型別中。  
+ 如需詳細資訊，請參閱 <<c0> [ 預設 C 資料類型](../../../odbc/reference/appendixes/default-c-data-types.md)，[轉換將資料從 C 到 SQL 資料類型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)，並[轉換將資料從 SQL 到 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)附錄 d:資料類型。  
   
 ## <a name="parametertype-argument"></a>ParameterType 引數  
- 這必須是其中一個值中所列[SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)附錄 d： 資料類型，或它的區段必須是驅動程式專屬值。 這個引數設定的 SQL_DESC_TYPE、 SQL_DESC_CONCISE_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE IPD 欄位。  
+ 這必須是其中一個值中所列[SQL 資料類型](../../../odbc/reference/appendixes/sql-data-types.md)一節的附錄 d:資料類型或它必須是驅動程式專屬值。 這個引數設定的 SQL_DESC_TYPE、 SQL_DESC_CONCISE_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE IPD 欄位。  
   
  如果*ParameterType*引數是其中一個 datetime 識別項、 IPD 的 SQL_DESC_TYPE 欄位設定為 如果是 SQL_DATETIME IPD SQL_DESC_CONCISE_TYPE 欄位設定為簡明的日期時間 SQL 資料類型，以及 SQL_DESC_DATETIME_INTERVAL_CODE 欄位設定為適當的日期時間子代碼值。  
   
@@ -189,12 +189,12 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 SQL_DATA_AT_EXEC|�
   
  如果*ValueType*引數是 SQL_NUMERIC 資料類型，則預設有效位數 （它是由驅動程式定義） 以及預設小數位數 (0)，在 IPD，SQL_DESC_PRECISION 和 SQL_DESC_SCALE 欄位中所設定使用的資料。 應用程式的預設有效位數或小數位數不適用，如果應該明確設定描述項欄位呼叫**SQLSetDescField**或是**SQLSetDescRec**。  
   
- 如需如何轉換資料，請參閱[轉換將資料從 C 到 SQL 資料類型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)並[轉換將資料從 SQL 到 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)附錄 d： 資料型別中。  
+ 如需如何轉換資料，請參閱[轉換將資料從 C 到 SQL 資料類型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)並[轉換將資料從 SQL 到 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)附錄 d:資料類型。  
   
 ## <a name="columnsize-argument"></a>ColumnSize 引數  
  *ColumnSize*引數會指定對應至參數標記，該資料，或兩者的長度的運算式之資料行的大小。 這個引數設定的 IPD，根據 SQL 資料類型的不同欄位 ( *ParameterType*引數)。 下列規則適用於此對應：  
   
--   如果*ParameterType* SQL_CHAR、 SQL_VARCHAR、 SQL_LONGVARCHAR、 SQL_BINARY、 SQL_VARBINARY、 SQL_LONGVARBINARY、 或其中一個精簡 SQL 日期時間或間隔資料類型，IPD 的 SQL_DESC_LENGTH 欄位設定為的值*ColumnSize*。 (如需詳細資訊，請參閱 <<c0> [ 資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d： 資料型別中的一節。)  
+-   如果*ParameterType* SQL_CHAR、 SQL_VARCHAR、 SQL_LONGVARCHAR、 SQL_BINARY、 SQL_VARBINARY、 SQL_LONGVARBINARY、 或其中一個精簡 SQL 日期時間或間隔資料類型，IPD 的 SQL_DESC_LENGTH 欄位設定為的值*ColumnSize*。 (如需詳細資訊，請參閱 <<c0> [ 資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)節附錄 d:資料型別。）  
   
 -   如果*ParameterType* SQL_DECIMAL、 SQL_NUMERIC、 SQL_FLOAT、 SQL_REAL，或 SQL_DOUBLE，IPD 的 SQL_DESC_PRECISION 欄位設定為值*ColumnSize*。  
   
@@ -281,7 +281,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 SQL_DATA_AT_EXEC|�
     > [!NOTE]  
     >  雖然資料在執行中參數類似於資料在執行中資料行，所傳回的值**SQLParamData**每個不同。 資料在執行中參數已將與傳送資料的 SQL 陳述式中的參數**SQLPutData**當陳述式以**SQLExecDirect**或**SQLExecute**. 使用繫結**SQLBindParameter**。 所傳回的值**SQLParamData**指標值傳遞給**SQLBindParameter**中*ParameterValuePtr*引數。 資料在執行中資料行是資料會傳送使用資料列集中的資料行**SQLPutData**更新或加入一個資料列時**SQLBulkOperations**或更新的**SQLSetPos**. 使用繫結**SQLBindCol**。 所傳回的值**SQLParamData**是中的資料列的地址 **TargetValuePtr*緩衝區 (藉由呼叫設定**SQLBindCol**) 所處理的。  
   
-5.  呼叫**SQLPutData**傳送參數資料的一或多次。 如果資料值是大於，多個呼叫則需要\* *ParameterValuePtr*中指定的緩衝區**SQLPutData**; 多次呼叫**SQLPutData**或傳送二進位的 C 資料行的字元、 二進位，傳送字元 C 資料行的字元、 二進位檔或資料來源特定的資料型別時，只允許相同的參數或資料來源特有的資料型別。  
+5.  呼叫**SQLPutData**傳送參數資料的一或多次。 如果資料值是大於，多個呼叫則需要\* *ParameterValuePtr*中指定的緩衝區**SQLPutData**; 多次呼叫**SQLPutData**或傳送二進位的 C 資料行的字元、 二進位，傳送字元 C 資料行的字元、 二進位檔或資料來源特有的資料型別時，只允許相同的參數或資料來源特定的資料類型。  
   
 6.  呼叫**SQLParamData**再次來表示，所有資料都傳送的參數。  
   
@@ -296,7 +296,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 SQL_DATA_AT_EXEC|�
  如果應用程式會呼叫**SQLCancel**驅動程式時驅動程式仍會需要的資料在執行中參數的資料，會取消陳述式執行，就可以呼叫應用程式**SQLExecute**或**SQLExecDirect**一次。  
   
 ## <a name="retrieving-streamed-output-parameters"></a>擷取資料流的輸出參數  
- 當應用程式設定*了*SQL_PARAM_INPUT_OUTPUT_STREAM 或 SQL_PARAM_OUTPUT_STREAM，輸出參數值必須擷取一或多個呼叫**SQLGetData**。 資料流的輸出參數值傳回至應用程式的驅動程式時，它會傳回 SQL_PARAM_DATA_AVAILABLE 下列函式呼叫的回應： **SQLMoreResults**， **SQLExecute**，並**SQLExecDirect**。 應用程式呼叫**SQLParamData**以判斷可用的參數值。  
+ 當應用程式設定*了*SQL_PARAM_INPUT_OUTPUT_STREAM 或 SQL_PARAM_OUTPUT_STREAM，輸出參數值必須擷取一或多個呼叫**SQLGetData**。 資料流的輸出參數值傳回至應用程式的驅動程式時，它會傳回 SQL_PARAM_DATA_AVAILABLE 下列函式呼叫的回應：**SQLMoreResults**， **SQLExecute**，以及**SQLExecDirect**。 應用程式呼叫**SQLParamData**以判斷可用的參數值。  
   
  如需有關 SQL_PARAM_DATA_AVAILABLE 和資料流的輸出參數的詳細資訊，請參閱[使用 SQLGetData 擷取輸出參數](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。  
   
@@ -305,7 +305,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 SQL_DATA_AT_EXEC|�
   
  當處理參數陣列時，個別的結果集/資料列計數 （一個用於每個參數集） 都能使用，或結果集/資料列計數可以彙總成一個。 選項 SQL_PARAM_ARRAY_ROW_COUNTS **SQLGetInfo**指出資料列計數為適用於每一組參數 (SQL_PARC_BATCH) 或只有一個資料列計數為可用 (SQL_PARC_NO_BATCH)。  
   
- 選項 SQL_PARAM_ARRAY_SELECTS **SQLGetInfo**指出結果集是否可供每一組參數 (SQL_PAS_BATCH)，或只有一個結果集是可用 (SQL_PAS_NO_BATCH)。 如果驅動程式不允許使用參數陣列來執行的結果集 – 產生陳述式，SQL_PARAM_ARRAY_SELECTS 傳回 SQL_PAS_NO_SELECT。  
+ 選項 SQL_PARAM_ARRAY_SELECTS **SQLGetInfo**指出結果集是否可供每一組參數 (SQL_PAS_BATCH)，或只有一個結果集是可用 (SQL_PAS_NO_BATCH)。 如果驅動程式不允許使用參數陣列來執行的結果集產生陳述式，SQL_PARAM_ARRAY_SELECTS 傳回 SQL_PAS_NO_SELECT。  
   
  如需詳細資訊，請參閱 < [SQLGetInfo 函式](../../../odbc/reference/syntax/sqlgetinfo-function.md)。  
   
@@ -411,7 +411,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 SQL_DATA_AT_EXEC|�
   
 -   SQL_PARAM_PROCEED 定義為標頭檔中的 0。  
   
- 應用程式可以設定 SQL_DESC_ARRAY_STATUS_PTR 欄位以指向相同的陣列，做為 APD 中指向 SQL_DESC_ARRAY_STATUS_PTR 欄位在 IRD 中。 資料列的資料繫結參數時，這非常有用。 然後會忽略參數，根據資料列資料的狀態。 除了 SQL_PARAM_IGNORE，下列程式碼會導致參數中要忽略的 SQL 陳述式： SQL_ROW_DELETED、 SQL_ROW_UPDATED 和 SQL_ROW_ERROR。 除了 SQL_PARAM_PROCEED，下列程式碼會造成 SQL 陳述式繼續： SQL_ROW_SUCCESS、 SQL_ROW_SUCCESS_WITH_INFO 和 SQL_ROW_ADDED。  
+ 應用程式可以設定 SQL_DESC_ARRAY_STATUS_PTR 欄位以指向相同的陣列，做為 APD 中指向 SQL_DESC_ARRAY_STATUS_PTR 欄位在 IRD 中。 資料列的資料繫結參數時，這非常有用。 然後會忽略參數，根據資料列資料的狀態。 除了 SQL_PARAM_IGNORE，下列程式碼會導致要忽略的 SQL 陳述式的參數：SQL_ROW_DELETED、 SQL_ROW_UPDATED 和 SQL_ROW_ERROR。 除了 SQL_PARAM_PROCEED，下列程式碼會造成 SQL 陳述式，繼續進行：SQL_ROW_SUCCESS、 SQL_ROW_SUCCESS_WITH_INFO 和 SQL_ROW_ADDED。  
   
 ## <a name="rebinding-parameters"></a>重新繫結參數  
  應用程式可以執行下列其中一個來變更繫結的兩個作業：  

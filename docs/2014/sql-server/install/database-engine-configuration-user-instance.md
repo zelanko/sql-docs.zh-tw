@@ -14,12 +14,12 @@ ms.assetid: dfc27c1e-0fe2-4221-bed5-f52667ddd3c8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c9c10d013d6585208a5f30d98169d8eab71b75d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 423573c78c78cb97b83f8709e19a0bfd6d642645
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066668"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399431"
 ---
 # <a name="database-engine-configuration---user-instance"></a>資料庫引擎組態 - 使用者執行個體
   使用 **[使用者執行個體]** 頁面，即可為不具管理員權限的使用者產生個別的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，並將使用者加入至管理員角色。  

@@ -10,12 +10,12 @@ ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 39acf5a2fd5ccd92e0d897a7a701f8525aadcff8
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 2c85c5589ba0e7d2def29f4038b77ac4061d70fa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032805"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541308"
 ---
 # <a name="grant-dqs-roles-to-users"></a>對使用者授與 DQS 角色
   本主題描述如何根據 Windows 主體建立 SQL 登入，並在 DQS_MAIN 資料庫上授與 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 角色。  
@@ -34,13 +34,13 @@ ms.locfileid: "51032805"
   
 3.  以滑鼠右鍵按一下 [安全性] 資料夾，並指向 [新增]，然後按一下 [登入]。  
   
-4.  在 **[登入 - 新增]** 對話方塊的 **[登入名稱]** 方塊中，指定 Windows 使用者的名稱，指定 **[Windows 驗證]** 做為驗證類型，然後按一下 **[搜尋]** 驗證使用者。  
+4.  在 [登入 - 新增] 對話方塊的 [登入名稱] 方塊中，指定 Windows 使用者的名稱，指定 [Windows 驗證] 做為驗證類型，然後按一下 [搜尋] 驗證使用者。  
   
 5.  使用者驗證完成後，按一下左窗格中的 **[使用者對應]** 頁面。  
   
-6.  根據使用者所需的存取層級，在右邊的窗格中，從 **DQS_MAIN** 資料庫的 [地圖] 資料行選取該核取方塊，然後選取 [資料庫角色成員資格對象: DQS_MAIN] 窗格中的 **dqs_administrator**、**dqs_kb_editor** 或 **dqs_kb_operator** 核取方塊。 如需有關三個 DQS 角色的詳細資訊，請參閱＜ [DQS Security](../dqs-security.md)＞。  
+6.  在右窗格中，選取核取方塊底下**地圖**資料行**DQS_MAIN**資料庫，然後再選取**dqs_administrator**， **dqs_kb_editor**，或**dqs_kb_operator**中的核取方塊**資料庫角色成員資格對象：DQS_MAIN**  窗格中，根據使用者所需的存取層級。 如需有關三個 DQS 角色的詳細資訊，請參閱＜ [DQS 安全](../dqs-security.md)＞。  
   
-7.  在 **[登入 - 新增]** 對話方塊中，按一下 **[確定]** 套用變更。  
+7.  在 [登入 - 新增] 對話方塊中，按一下 [確定] 套用變更。  
   
     > [!NOTE]  
     >  如果您對使用者授與 **dqs_administrator** 角色並套用了變更，然後重新檢查使用者的權限，也會同時選取另外兩個 DQS 角色核取方塊 (**dq_kb_editor** 和 **dqs_kb_operator**)。  

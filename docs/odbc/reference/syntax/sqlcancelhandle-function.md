@@ -15,18 +15,18 @@ ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a814b15255a485bf6fbc28ad31d4e789f8482447
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 655c3c76794b170b113442b14ae75cf977ac024c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662116"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391701"
 ---
 # <a name="sqlcancelhandle-function"></a>SQLCancelHandle 函式
 **合規性**  
- 版本導入： ODBC 3.8  
+ 導入的版本：ODBC 3.8  
   
- 標準相容性： 無  
+ 標準的合規性：None  
   
  我們預期大部分 ODBC 3.8 （和更新版本） 驅動程式會實作此函式。 否則驅動程式，呼叫**SQLCancelHandle**連線，以處理*處理*參數會傳回 sql_error，其中包含 SQLSTATE 的 IM001 和訊息 '驅動程式不支援此函式' 呼叫若要**SQLCancelHandle**陳述式，當做處理*處理*參數將會對應到呼叫**SQLCancel**透過驅動程式管理員，並且如果可以處理此驅動程式會實作**SQLCancel**。 應用程式可以使用**SQLGetFunctions**決定了驅動程式是否支援**SQLCancelHandle**。  
   

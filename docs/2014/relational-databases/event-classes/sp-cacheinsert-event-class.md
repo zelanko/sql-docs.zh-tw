@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 37fb9bec-b462-4563-8e50-ec84d5407e20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2b6a2ffafd3c183cff58a19bb51b8c17353f0bf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7667a086c8fb5b5f7b17e8baf237e14ffafa1188
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071778"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782510"
 ---
 # <a name="spcacheinsert-event-class"></a>SP:CacheInsert 事件類別
   SP:CacheInsert 事件類別指出已將預存程序插入至程序快取。  
@@ -43,7 +42,7 @@ ms.locfileid: "48071778"
 |NTDomainName|`nvarchar`|使用者所隸屬的 Windows 網域。|7|是|  
 |NTUserName|`nvarchar`|Windows 使用者名稱。|6|是|  
 |ObjectID|`int`|系統指派的預存程序識別碼。|22|是|  
-|ObjectType|`int`|代表參與事件之物件類型的值。 這個值會對應到 sys.objects 目錄檢視中的類型資料行。 如需各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
+|ObjectType|`int`|代表參與事件之物件類型的值。 這個值會對應到 sys.objects 目錄檢視中的類型資料行。 針對各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
 |RequestID|`int`|包含陳述式之要求的識別碼。|49|是|  
 |ServerName|`nvarchar`|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
 |SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 這個資料行會同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 Windows 登入。|64|是|  

@@ -10,19 +10,19 @@ ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6d040f8d7e784650cfbf0cf8b4540c599ed9599
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059398"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502697"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>使用叢集資料行存放區索引
   在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中使用叢集資料行存放區索引的工作。  
   
- 如需資料行存放區索引的概觀，請參閱 < [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)。  
+ 如需資料行存放區索引的概觀，請參閱＜ [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)＞。  
   
- 叢集資料行存放區索引的相關資訊，請參閱[Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md)。  
+ 如需有關叢集資料行存放區索引的詳細資訊，請參閱＜ [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md)＞。  
   
 ## <a name="contents"></a>目錄  
   
@@ -60,7 +60,7 @@ GO
  使用[DROP INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql)卸除叢集資料行存放區索引的陳述式。 此作業將卸除索引並將資料行存放區資料表轉換成資料列存放區堆積。  
   
 ##  <a name="load"></a> 將資料載入叢集資料行存放區索引  
- 您可以利用任何一種標準的載入方法，將資料加入至現有的叢集資料行存放區索引中。  例如，bcp 大量載入工具、Integration Services 和 INSERT... SELECT 都可以將資料載入叢集資料行存放區索引中。  
+ 您可以利用任何一種標準的載入方法，將資料加入至現有的叢集資料行存放區索引中。  例如，bcp 大量載入工具、 Integration Services 和 INSERT...SELECT 都可以將資料載入叢集資料行存放區索引中。  
   
  叢集資料行存放區索引會運用差異存放區防止資料行存放區中出現資料行區段的片段。  
   
@@ -68,7 +68,7 @@ GO
  對於分割資料， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會先將每個資料列指派至一個分割區，然後在分割區內對資料執行資料行存放區作業。 每個分割區都有自己的資料列群組以及至少一個差異存放區。  
   
 ### <a name="deltastore-loading-scenarios"></a>差異存放區載入案例  
- 資料列會在差異存放區中累積，直到資料列數達到一個資料列群組允許的資料列數上限。 當差異存放區達到每個資料列群組的資料列數上限時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會將該資料列群組標示為 "CLOSED"。 背景處理序稱為「Tuple 移動器」，會尋找 CLOSED 資料列群組並移入資料行存放區中，資料列群組會在其中壓縮至資料行區段內，而資料行區段會儲存在資料行存放區中。  
+ 資料列會在差異存放區中累積，直到資料列數達到一個資料列群組允許的資料列數上限。 當差異存放區包含每個資料列群組，資料列的數目上限[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]標示為"CLOSED"的資料列群組。 背景處理序，稱為"tuple mover"，會尋找 CLOSED 資料列群組，並移到資料行存放區，其中資料列群組壓縮到資料行區段資料行區段會儲存在資料行存放區。  
   
  每一個叢集資料行存放區索引可以有多個差異存放區。  
   
@@ -84,8 +84,8 @@ GO
 |-----------------------|-----------------------------------|----------------------------------|  
 |102,000|0|102,000|  
 |145,000|145,000<br /><br /> 資料列群組大小：145,000|0|  
-|1,048,577|1,048,576<br /><br /> 資料列群組大小：1,048,576。|1|  
-|2,252,152|2,252,152<br /><br /> 資料列群組大小：1,048,576、1,048,576、155,000|0|  
+|1,048,577|1,048,576<br /><br /> 資料列群組大小：1,048,576.|1|  
+|2,252,152|2,252,152<br /><br /> 資料列群組大小：1,048,576, 1,048,576, 155,000.|0|  
   
  下列範例顯示將 1,048,577 個資料列載入分割區的結果。 結果顯示，資料行存放區中有一個 COMPRESSED 資料列群組 (壓縮的資料行區段)，而差異存放區中有 1 個資料列。  
   
@@ -115,7 +115,7 @@ SELECT * FROM sys.column_store_row_groups
 -   如果資料列位於差異存放區中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會更新差異存放區中的該資料列。  
   
 ##  <a name="rebuild"></a> 重建叢集資料行存放區索引  
- 使用[CREATE CLUSTERED COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)或[ALTER INDEX &#40;-&#41; ](/sql/t-sql/statements/alter-index-transact-sql)完整重建現有的叢集資料行存放區索引。 此外，您可以使用 ALTER INDEX... REBUILD 重建特定分割區。  
+ 使用[CREATE CLUSTERED COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)或[ALTER INDEX &#40;-&#41; ](/sql/t-sql/statements/alter-index-transact-sql)完整重建現有的叢集資料行存放區索引。 此外，您可以使用 ALTER INDEX ...REBUILD 重建特定分割區。  
   
 ### <a name="rebuild-process"></a>重建程序  
  為了重建叢集資料行存放區索引，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會進行以下作業：  

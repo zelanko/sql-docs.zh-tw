@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - removing registered servers
@@ -14,12 +14,12 @@ ms.assetid: 1f7f755f-7ed2-4572-aa18-13cdd92e350e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea3b22ee5afee3e46b60112485a98ac2a3ab1924
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 918661b548d22383efd884442416a9206456234d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116727"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782866"
 ---
 # <a name="remove-a-registered-server-sql-server-management-studio"></a>移除已註冊的伺服器 (SQL Server Management Studio)
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 [已註冊的伺服器] 移除伺服器。  

@@ -10,12 +10,12 @@ ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1302a354255c6b98a46cd2c1aef234fe3f1c5f67
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 4d8fd1e95d3058f9375a109a27effee24335e840
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029256"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410065"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>清理複合定義域中的資料
   本主題會提供有關在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中清理複合定義域的資訊。 複合定義域是由兩個或多個單一定義域所組成，而且會對應至由多個相關詞彙所組成的資料欄位。 複合定義域中的個別定義域必須擁有共同知識領域。 如需有關複合定義域的詳細資訊，請參閱＜ [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md)＞。  
@@ -36,9 +36,9 @@ ms.locfileid: "51029256"
 ##  <a name="CDCorrection"></a> 使用最終跨定義域規則的資料更正  
  複合定義域中的跨定義域規則可讓您建立規則，以指示複合定義域內個別定義域之間的關聯性。 當您針對與複合定義域有關的來源資料執行清理活動時，跨定義域規則會列入考量。 除了只讓您知道跨定義域規則是否有效之外，最終 *Then* 跨定義域規則 **[值等於]** 也會在資料清理活動期間更正資料。  
   
- 假設有以下範例：有一個複合定義域 Product 具有三個個別定義域：ProductName、CompanyName 和 ProductVersion。 請建立以下最終跨定義域規則：  
+ 請考慮下列範例： 沒有複合定義域，產品，具有三個個別定義域：ProductName、 CompanyName 和 ProductVersion。 請建立以下最終跨定義域規則：  
   
- 如果定義域 ‘CompanyName’ 值包含 *Microsoft* 而且定義域 ‘ProductName’ 值等於 *Office* 且 ‘ProductVersion’ 值等於 *2010* ，則定義域 ‘ProductName’ 值等於 *Microsoft Office 2010*。  
+ 如果定義域 'CompanyName' 值包含 *Microsoft* 而且定義域 ‘ProductName’ 值等於 *Office* 且 'ProductVersion' 值等於 *2010*，則定義域 'ProductName' 值等於 *Microsoft Office 2010*。  
   
  當執行此跨定義域規則時，來源資料 (ProductName) 會在清理活動之後更正為以下項目：  
   
@@ -54,7 +54,7 @@ ms.locfileid: "51029256"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- 當您測試最終 *Then* 跨定義域規則 **[值等於]** 時， **[測試複合定義域規則]** 對話方塊會包含新的資料行 **[更正為]**，此資料行會顯示正確資料。 在清理資料品質專案時，這個最終跨定義域規則會將資料變更為 100% 信賴，而且 [原因] 資料行會顯示以下訊息：由規則 ‘\<跨定義域規則名稱>’ 更正。 如需有關跨定義域規則的詳細資訊，請參閱＜ [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md)＞。  
+ 當您測試最終 *Then* 跨定義域規則 **[值等於]** 時， **[測試複合定義域規則]** 對話方塊會包含新的資料行 **[更正為]**，此資料行會顯示正確資料。 在清理資料品質專案中，這個最終跨定義域規則將資料變更為 100%信賴，而**原因**欄會顯示下列訊息：更正規則的 '*\<跨定義域規則名稱 >*'。 如需有關跨定義域規則的詳細資訊，請參閱＜ [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md)＞。  
   
 > [!NOTE]  
 >  最終跨定義域規則將不適用於附加至參考資料服務的複合定義域。  

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c57e90b9a7fbe4846698f04e3cde808eed64985
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72244883d45245efcdcbcf8aba9e4db4c6e25a8e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624736"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405182"
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |5|CLR_PROCEDURE|因為 CLR 預存程序可能傳回第一個結果，無法判定結果。|  
 |6|CLR_TRIGGER|因為 CLR 觸發程序可能傳回第一個結果，無法判定結果。|  
 |7|EXTENDED_PROCEDURE|因為擴充預存程序可能傳回第一個結果，無法判定結果。|  
-|8|UNDECLARED_PARAMETER|因為一個或多個結果集資料行的資料類型可能相依於未宣告的參數，無法判定結果。|  
+|8|UNDECLARED_PARAMETER|無法判斷結果，因為一個或多個結果集資料行的資料類型可能相依於未宣告的參數。|  
 |9|RECURSION|因為批次包含遞迴陳述式，無法判定結果。|  
 |10|TEMPORARY_TABLE|無法判斷結果，因為批次包含暫存資料表，並不支援**sp_describe_first_result_set** 。|  
 |11|UNSUPPORTED_STATEMENT|無法判斷結果，因為批次中包含不支援的陳述式**sp_describe_first_result_set** (例如，FETCH、 REVERT 等。)。|  

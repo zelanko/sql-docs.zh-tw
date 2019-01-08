@@ -11,19 +11,19 @@ ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e074a41f6d9f5053562dd7b6be453644cb5fa176
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c062137987a8ee1499449425d8e02df0d203050
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076628"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519892"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>瀏覽 Cube 中的資料和中繼資料
   使用 Cube 設計師的 [瀏覽器] 索引標籤瀏覽 Cube 資料。 您可以使用此檢視檢查 Cube 的結構，並檢查資料庫物件的資料、計算、格式及安全性。 您可以像是使用者在報表工具或其他用戶端應用程式檢視 Cube 一樣，快速檢查 Cube。 當您瀏覽 Cube 資料時，您可以檢視不同的維度、向下鑽研至成員，以及配量維度。  
   
  在瀏覽 Cube 之前，您必須對其進行處理及重新連接。 處理後，請開啟 Cube 設計師的 [瀏覽器] 索引標籤。 按一下工具列上的 [重新連接] 按鈕，重新整理連接。  
   
- [瀏覽器] 索引標籤具有三個窗格：[中繼資料] 窗格、[篩選] 窗格及 [資料] 窗格。 使用 [中繼資料] 窗格，可以樹狀目錄檢查 Cube 的結構。 使用 [瀏覽器] 索引標籤頂端的 [篩選] 窗格，可定義您要瀏覽的任何 Subcube。 使用 [資料] 窗格，可檢視結果集並向下鑽研維度階層。  
+ **瀏覽器**索引標籤具有三個窗格-中繼資料 窗格、 篩選 窗格和 資料 窗格。 使用 [中繼資料] 窗格，可以樹狀目錄檢查 Cube 的結構。 使用 [瀏覽器] 索引標籤頂端的 [篩選] 窗格，可定義您要瀏覽的任何 Subcube。 使用 [資料] 窗格，可檢視結果集並向下鑽研維度階層。  
   
 ## <a name="setting-up-the-browser"></a>設定瀏覽器  
  若要準備瀏覽 Cube，您可以指定所要使用的檢視方塊或翻譯。 您可以將量值和維度加入至 [資料] 窗格，並在 [篩選] 窗格中指定任何篩選。  

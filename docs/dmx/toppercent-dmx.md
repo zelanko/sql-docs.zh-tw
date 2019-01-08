@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 60af695b92b23db33b009c446431a1b8f325d68f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6580599ed5c4c810a8b77369f850e9def2e90756
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600388"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527228"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -93,10 +93,10 @@ NATURAL PREDICTION JOIN
   
 |[模型]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Sport-100|4334|0.29…|0.25…|  
-|Water Bottle|2866|0.19…|0.17…|  
-|Patch kit|2113|0.14…|0.13…|  
-|Mountain Tire Tube|1992|0.133…|0.12…|  
+|Sport-100|4334|0.29...|0.25...|  
+|Water Bottle|2866|0.19...|介於 0.17...|  
+|Patch kit|2113|$0.14 元...|0.13...|  
+|Mountain Tire Tube|1992|0.133...|0.12...|  
   
  **請注意**提供這個範例是只是為了說明 TopPercent 的使用。 根據資料集的大小而定，此查詢可能會花上很長的一段執行時間。  
   

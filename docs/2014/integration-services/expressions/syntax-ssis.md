@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], syntax
@@ -14,12 +13,12 @@ ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c1b1be45aff03e3e4e0c0358c3b3eb9903e718d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 809ce46e388dcc96a407e70cf5eb33c4e5afa44f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189298"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350998"
 ---
 # <a name="syntax-ssis"></a>語法 (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式語法與 C 和 C# 語言使用的語法類似。 運算式的元素包括識別碼 (資料行和變數)、常值、運算子以及函數。 本主題摘要說明運算式評估工具語法套用至不同運算式元素時的獨特需求。  
@@ -27,9 +26,9 @@ ms.locfileid: "48189298"
 > [!NOTE]  
 >  在舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，當運算式的評估結果具有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型 DT_WSTR 或 DT_STR 時，結果就會具有 4000 個字元的限制。 這項限制已移除。  
   
- 如需使用特定運算子及函數的範例運算式，請參閱下列主題中每個運算子及函數的相關主題：[運算子 &#40;SSIS 運算式&#41;](operators-ssis-expression.md) 和[函數 &#40;SSIS 運算式&#41;](functions-ssis-expression.md)。  
+ 如需使用特定運算子及函數的範例運算式，請參閱每個運算子及函式主題中的相關主題：[運算子&#40;SSIS 運算式&#41;](operators-ssis-expression.md)並[函式&#40;SSIS 運算式&#41;](functions-ssis-expression.md)。  
   
- 如需使用多個運算子、函數以及識別碼和常值的範例運算式，請參閱[進階 Integration Services 運算式範例](examples-of-advanced-integration-services-expressions.md)。  
+ 如需使用多個運算子、函數以及識別碼和常值的範例運算式，請參閱 [進階 Integration Services 運算式範例](examples-of-advanced-integration-services-expressions.md)。  
   
  如需屬性運算式中使用的範例運算式，請參閱 [在封裝中使用屬性運算式](use-property-expressions-in-packages.md)。  
   
@@ -81,8 +80,8 @@ ms.locfileid: "48189298"
   
 ## <a name="related-content"></a>相關內容  
   
--   pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](http://go.microsoft.com/fwlink/?LinkId=217683)  
+-   pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](https://go.microsoft.com/fwlink/?LinkId=217683)  
   
--   social.technet.microsoft.com 上的技術文件： [SSIS 運算式範例](http://go.microsoft.com/fwlink/?LinkId=220761)  
+-   social.technet.microsoft.com 上的技術文件： [SSIS 運算式範例](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
   

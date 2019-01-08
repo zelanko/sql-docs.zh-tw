@@ -18,15 +18,15 @@ ms.assetid: a12ff02f-6d0b-4488-9846-3609fc0d0554
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 68f748ce1df9f1ae28600539759433188d534036
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2fe6b8670e8ca6f35b5e3d89dfcac653566417b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118418"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506266"
 ---
 # <a name="creating-stored-procedures"></a>建立預存程序
-  所有預存程序都必須與 Common Language Runtime (CLR) 或元件物件模型 (COM) 類別建立關聯，才能使用。 類別必須安裝在伺服器上 — 通常是在形式[!INCLUDE[msCoName](../../includes/msconame-md.md)]ActiveX® 動態連結程式庫 (DLL) — 並註冊的組件在伺服器上或在為[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫。  
+  所有預存程序都必須與 Common Language Runtime (CLR) 或元件物件模型 (COM) 類別建立關聯，才能使用。 類別必須安裝在伺服器-通常是在形式[!INCLUDE[msCoName](../../includes/msconame-md.md)]ActiveX® 動態連結程式庫 (DLL)-，以及註冊的組件在伺服器上或在為[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫。  
   
  預存程序是在伺服器或資料庫上註冊。 可以從任何查詢內容呼叫伺服器預存程序。 只有資料庫內容是為預存程序定義的資料庫時，才能存取資料庫預存程序。 如果某個組件中的函數呼叫其他組件中的函數，您必須將兩個組件註冊在相同內容 (伺服器或資料庫) 中。 針對伺服器或部署[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫的伺服器上，您可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]註冊組件。 如果是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案，您可使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 設計師在專案中註冊組件。  
   

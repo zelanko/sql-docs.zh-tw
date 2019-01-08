@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: supportability
+ms.technology: performance
 ms.topic: reference
 ms.assetid: 8f8472b6-e6fc-44f3-82c7-25f127461fa8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 186e0b9ad6e061a11b4f5bbb327a5e446fcfb8b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ff7116a6f6dc9407e5782ce3f5d9bce23e527380
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170075"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764820"
 ---
 # <a name="localdberrorunknownerrorcode"></a>LOCALDB_ERROR_UNKNOWN_ERROR_CODE
     

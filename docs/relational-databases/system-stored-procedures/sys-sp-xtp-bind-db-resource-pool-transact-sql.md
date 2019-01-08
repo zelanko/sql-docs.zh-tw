@@ -21,12 +21,12 @@ ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a36ad2d94982a0e536f223ceff187a04632baa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e8182a0fca11105541f8dd435f352ba0d393731
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647046"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391651"
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ Resource pool 'Pool_Hekaton' does not exist or resource governor has not been re
 ```  
   
 **Pool_name 參考保留的系統集區**  
- 集區名稱 “INTERNAL” 和 “DEFAULT” 已保留給系統集區。  將資料庫明確繫結至其中一個集區是無效的作法。  如果輸入系統集區名稱，就會傳回下列錯誤：  
+ 「 內部 」 和 「 預設 」 集區名稱被保留給系統集區。  將資料庫明確繫結至其中一個集區是無效的作法。  如果輸入系統集區名稱，就會傳回下列錯誤：  
 *資源集區 %s 是系統資源集區。系統資源集區可能未明確繫結至資料庫，使用此程序。*  
   
 ```  
@@ -153,7 +153,7 @@ END
 -   需要 CONTROL SERVER 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [將包含記憶體最佳化資料表的資料庫繫結至資源集區](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [資料庫並繫結至資源集區的指引，請參閱](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_bind_db_resource_pool &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 98eb49e7-b190-4a21-8316-08c07cde14ed
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e7a7ad1f7eada2cfa1276b76bee759fd04cfce5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eca4263dae38ad561d62cdf0419523c1400e7dcb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128238"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814600"
 ---
 # <a name="validation-master-data-services"></a>驗證 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，會驗證資料以確保其正確性。 其中一部分驗證會自動發生，而另外一部分驗證則會根據管理員建立的商務規則。  
@@ -34,12 +33,12 @@ ms.locfileid: "48128238"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|建立並發行商務規則，以根據商務規則驗證資料。|[建立及發行商務規則&#40;Master Data Services&#41;](create-and-publish-a-business-rule-master-data-services.md)|  
-|依商務規則驗證資料版本 僅限管理員。|[根據商務規則驗證版本&#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)|  
-|根據商務規則驗證資料的特定子集。 具有 **[總管]** 功能區域權限的所有使用者。|[根據商務規則驗證特定成員&#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
-|根據商務規則驗證資料的特定子集。 具有 **[總管]** 功能區域權限並且使用 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]的所有使用者。|[套用商務規則&#40;MDS 增益集的 Excel&#41;](microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)|  
+|建立並發行商務規則，以根據商務規則驗證資料。|[建立及發行商務規則 &#40;Master Data Services&#41;](create-and-publish-a-business-rule-master-data-services.md)|  
+|依商務規則驗證資料版本 僅限管理員。|[根據商務規則驗證版本 &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)|  
+|根據商務規則驗證資料的特定子集。 具有 **[總管]** 功能區域權限的所有使用者。|[根據商務規則驗證特定成員 &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
+|根據商務規則驗證資料的特定子集。 具有 **[總管]** 功能區域權限並且使用 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]的所有使用者。|[套用商務規則 &#40;適用於 Excel 的 MDS 增益集&#41;](microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [商務規則&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+ [商務規則 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

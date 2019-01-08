@@ -1,5 +1,5 @@
 ---
-title: 如何： 將資料列插入至 Geography 資料行 (ODBC) |Microsoft Docs
+title: 如何：將資料列插入至 Geography 資料行 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24785ff7f4b708b615280231b13a86009aeaebb0
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: cc99a6dc997dd5cad589784446235a2ea1011d7d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753456"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206277"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>如何：將資料列插入至 Geography 資料行 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  此範例會使用 2 個不同的繫結 (SQLCCHAR 和 SQLCBINARY)，從 WellKnownBinary (WKB) 在具有地理資料行的資料表中插入兩個資料列， 然後再從該資料表選取一個資料列，並使用 ::STAsText() 加以顯示。WKB 是 0x01010000000700ECFAD03A4C4001008000B5DF07C0，而且該應用程式會列印至主控台：POINT(56.4595 -2.9842)。  
+  此範例會使用 2 個不同的繫結 (SQLCCHAR 和 SQLCBINARY)，從 WellKnownBinary (WKB) 在具有地理資料行的資料表中插入兩個資料列， 然後再從該資料表選取一個資料列，並使用:: stastext （) 來顯示它。WKB 是 0x01010000000700ECFAD03A4C4001008000B5DF07C0，而且應用程式列印至主控台：點 (56.4595-2.9842)。  
   
  此範例不需要 ODBC 資料來源，但依預設，範例會在 SQL Server 的本機執行個體上執行。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "50753456"
  如需有關空間儲存體的詳細資訊，請參閱 <<c0> [ 空間資料&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)。</c0>  
   
 ## <a name="example"></a>範例  
- 第一個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的資料表。  
+ 第一個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的資料表。  
   
  使用 odbc32.lib 和 user32.lib 編譯第二個 (C++) 程式碼清單。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "50753456"
   
  這個範例會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若要連接到具名執行個體，請變更 ODBC 資料來源的定義，以便使用下列格式指定執行個體：server\namedinstance。 根據預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 會安裝至具名執行個體。  
   
- 第三個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會刪除此範例所使用的資料表。  
+ 第三個 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會刪除此範例所使用的資料表。  
   
 ```sql
 use tempdb  

@@ -13,12 +13,12 @@ ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6441ffd954beb6514badf55ced35239c61da0859
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7abb4560696dba21512066a7ff0ba3153ae2319a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218948"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508006"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>選取維度屬性 (維度精靈)
   使用 **[選取維度屬性]** 頁面，即可選取和修改要建立之維度的屬性。  
@@ -49,13 +49,13 @@ ms.locfileid: "48218948"
  **啟用瀏覽**  
  選取即可讓屬性供使用者用來瀏覽和篩選。 您必須針對索引鍵屬性選取 **[啟用瀏覽]** 。 若為非索引鍵屬性 (Attribute)，預設值是不選取 [啟用瀏覽]，因而導致非索引鍵屬性 (Attribute) 只能顯示為成員屬性 (Property)。  
   
- 在大部分情況下，屬性由可以或無法藉由設定瀏覽`AttributeHierarchyEnabled`屬性，以`True`或`False`分別。 不過，在下列三個情況中，精靈會使用不同的設定。  
+ 在大部分情況下，您可以透過分別將 `AttributeHierarchyEnabled` 屬性 (Property) 設定為 `True` 或 `False`，讓屬性 (Attribute) 可以或無法用於瀏覽。 不過，在下列三個情況中，精靈會使用不同的設定。  
   
 |案例|[設定]|  
 |----------|--------------|  
-|維度包含父子式階層而且沒有選取 [啟用瀏覽]|精靈會維持`AttributeHierarchyEnabled`屬性設定為`True`，並設定`AttributeHierarchyVisible`屬性設定為`False`的索引鍵屬性。|  
+|維度包含父子式階層而且沒有選取 [啟用瀏覽]|精靈會維持 `AttributeHierarchyEnabled` 屬性 (Property) 設定為 `True`，並將索引鍵屬性 (Attribute) 的 `AttributeHierarchyVisible` 屬性 (Attribute) 設定為 `False`。|  
 |維度中的資料表包含指向不在維度中之資料表的外部索引鍵|雖然精靈會選取外部索引鍵當做要包含的屬性，但是不會選取 **[啟用瀏覽]**。 如果您保留這些設定，屬性 (Attribute) 的 `AttributeHiearchyEnabled` 屬性 (Property) 將設定為 `True`，而且 `AttributeHieararchyVisible` 屬性 (Property) 將設定為 `False`。|  
-|維度包含透過可為 Null 之外部索引鍵資料行存取的雪花資料表<br /><br /> - 及 -<br /><br /> 沒有針對以雪花資料表之索引鍵為基礎的屬性選取 [啟用瀏覽]|精靈會建立新的屬性具有`AttributeHiearchyEnabled`屬性設定為`True`，而`AttributeHieararchyVisible`屬性設定為`False`。|  
+|維度包含透過可為 Null 之外部索引鍵資料行存取的雪花資料表<br /><br /> -和-<br /><br /> 沒有針對以雪花資料表之索引鍵為基礎的屬性選取 [啟用瀏覽]|精靈將會建立新的屬性 (Attribute)，其中 `AttributeHiearchyEnabled` 屬性 (Property) 設定為 `True`，而且 `AttributeHieararchyVisible` 屬性 (Property) 設定為 `False`。|  
   
  **屬性類型**  
  (選擇性) 設定屬性的類型。 預設值是 **[一般]**。 屬性類型會將屬性可能包含之資訊的相關指引提供給用戶端應用程式。  

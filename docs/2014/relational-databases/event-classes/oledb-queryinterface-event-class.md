@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54459f4c31854c11a2285c072b8e5d20ca510807
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b420e0b4b9c9531209f3d3227f534116e26dd206
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174988"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763620"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface 事件類別
   **OLEDB QueryInterface** 事件類別會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對分散式查詢和遠端預存程序發出 OLE DB **QueryInterface** 呼叫時發生。 將這個事件類別納入追蹤，追蹤會監視與分散式查詢和遠端預存程序相關聯的問題。  
@@ -52,7 +51,7 @@ ms.locfileid: "48174988"
 |NTUserName|`nvarchar`|Windows 使用者名稱。|6|是|  
 |ProviderName|`nvarchar`|OLE DB 提供者的名稱。|46|是|  
 |RequestID|`int`|包含陳述式之要求的識別碼。|49|是|  
-|SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 Login1 和執行 login2 的情況下，陳述式`SessionLoginName`會顯示 Login1 和`LoginName`顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
+|SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，若您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並且以 Login2 執行陳述式，則 `SessionLoginName` 會顯示 Login1，而 `LoginName` 會顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
 |TextData|`nvarchar`|在 OLE DB 呼叫中傳送與接收的參數。|1|否|  

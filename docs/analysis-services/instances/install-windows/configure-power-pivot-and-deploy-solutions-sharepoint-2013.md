@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 271f2c50c38585e26053f88b2d372dae4b7345c6
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 079988eb037ebeffbbbe6cae053e241518e41c81
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980020"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52420787"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>設定 Power Pivot 及部署方案 (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,16 +29,16 @@ ms.locfileid: "38980020"
  如需安裝 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 組態工具的資訊，請參閱[安裝或解除安裝 Power Pivot for SharePoint 增益集 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
   
 ##  <a name="bkmk_run_configuration_tool"></a> 執行 Power Pivot for SharePoint 2013 組態  
- **注意** ： [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安裝精靈會為 [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]安裝兩個不同的組態工具。 它們各支援不同的 SharePoint 版本。  
+ **注意：**[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]安裝精靈會安裝兩個不同的組態工具[!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]。 它們各支援不同的 SharePoint 版本。  
   
 |名稱|描述|  
 |----------|-----------------|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 組態工具|SharePoint 2013|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 組態工具|SharePoint 2010 含 SharePoint 2010 Service Pack 1 (SP1)|  
   
- **注意：** 若要完成下列步驟，您必須是伺服器陣列管理員。 如果您看到類似下列的錯誤訊息：  
+ **注意：** 若要完成下列步驟，您必須是伺服陣列管理員。 如果您看到類似下列的錯誤訊息：  
   
--   「使用者不是伺服器陣列管理員。 請解決驗證失敗問題，並再試一次。」  
+-   「 使用者不是伺服器陣列系統管理員。 請解決驗證失敗問題，並再試一次。」  
   
  請以安裝 SharePoint 的帳戶登入或將安裝帳戶設定為 SharePoint 管理中心網站的主要管理員。  
   
@@ -50,17 +50,17 @@ ms.locfileid: "38980020"
   
 4.  在 **[參數]** 索引標籤上：  
   
-    1.  **預設帳戶使用者名稱**：輸入預設帳戶的網域使用者帳戶。 此帳戶將用來佈建服務，包括 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式集區。 請勿指定內建帳戶，例如 Network Service 或 Local System。 此工具會封鎖指定內建帳戶的組態。  
+    1.  **預設帳戶使用者名稱**:輸入預設帳戶是網域使用者帳戶。 此帳戶將用來佈建服務，包括 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 服務應用程式集區。 請勿指定內建帳戶，例如 Network Service 或 Local System。 此工具會封鎖指定內建帳戶的組態。  
   
-    2.  **資料庫伺服器**：您可以使用支援 SharePoint 伺服器陣列的 SQL Server Database Engine。  
+    2.  **資料庫伺服器**:您可以使用支援 SharePoint 伺服器陣列的 SQL Server Database engine。  
   
-    3.  **複雜密碼**：輸入複雜密碼。 如果是建立新的 SharePoint 伺服器陣列，則在您將伺服器或應用程式加入至該 SharePoint 伺服器陣列時，都會使用此複雜密碼。 如果伺服器陣列已存在，則輸入可讓您將伺服器應用程式加入至該伺服器陣列的複雜密碼。  
+    3.  **複雜密碼**:輸入複雜密碼。 如果是建立新的 SharePoint 伺服器陣列，則在您將伺服器或應用程式加入至該 SharePoint 伺服器陣列時，都會使用此複雜密碼。 如果伺服器陣列已存在，則輸入可讓您將伺服器應用程式加入至該伺服器陣列的複雜密碼。  
   
-    4.  適用於 Excel Services 的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器：輸入 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint 模式伺服器的名稱。 在單一伺服器部署中，這個名稱與資料庫伺服器相同。 `[ServerName]\powerpivot`  
+    4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 適用於 Excel Services 伺服器**:輸入的名稱[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]SharePoint 模式伺服器。 在單一伺服器部署中，這個名稱與資料庫伺服器相同。 `[ServerName]\powerpivot`  
   
-    5.  按一下左邊視窗中的 **[建立網站集合]** 。 請記下 **[網站 URL]** ，以便在後續步驟中參考。 如果尚未設定 SharePoint 伺服器，組態精靈會將 Web 應用程式和網站集合 URL 預設為 `http://[ServerName]`的根目錄。 若要修改預設值，請在左邊視窗中檢閱下列頁面： **[建立預設 Web 應用程式]** 和 **[部署 Web 應用程式方案]**  
+    5.  按一下左邊視窗中的 **[建立網站集合]** 。 請記下 **[網站 URL]** ，以便在後續步驟中參考。 如果尚未設定 SharePoint 伺服器，組態精靈會將 Web 應用程式和網站集合 URL 預設為 `http://[ServerName]`的根目錄。 若要修改預設值，請檢閱左邊視窗中的下列頁面：**建立預設 Web 應用程式**和**部署 Web 應用程式方案**  
   
-5.  (選擇性) 檢閱用來完成每個動作的其餘輸入值。 按一下左邊視窗中的每個動作，查看並檢閱動作的詳細資料。 如需每個輸入值的詳細資訊，請參閱本主題中 [設定或修復 Power Pivot for SharePoint 2010 (Power Pivot 組態工具)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) 的＜用於設定伺服器的輸入值＞一節。  
+5.  (選擇性) 檢閱用來完成每個動作的其餘輸入值。 按一下左邊視窗中的每個動作，查看並檢閱動作的詳細資料。 如需每一項的詳細資訊，請參閱下節 「 輸入值用來設定中的伺服器[Configure or Repair Power Pivot for SharePoint 2010 （Power Pivot 組態工具）](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)本主題中。  
   
 6.  選擇性地移除您不想在此時處理的任何動作。 例如，如果您想要在稍後設定 Secure Store Service，請按一下 **[設定 Secure Store Service]**，然後清除 **[在工作清單中包含這個動作]** 核取方塊。  
   

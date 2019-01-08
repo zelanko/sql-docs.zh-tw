@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG021286 error
@@ -13,12 +12,12 @@ ms.assetid: b63620b7-1c6d-46f7-90ea-3a8e99af8de4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: af9407c14b970ee1b2c1108121c24f1368fbc29e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54e5d7b496affcd6d9ead2c50f50e807e7e920a7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057578"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793569"
 ---
 # <a name="mssqleng021286"></a>MSSQL_ENG021286
     

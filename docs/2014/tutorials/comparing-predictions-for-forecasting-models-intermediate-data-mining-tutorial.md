@@ -11,12 +11,12 @@ ms.assetid: ead8a1fe-60d8-4017-8fb8-6fe32168e46d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35883a1cb34a7d3ff6bd4e37f15ef0125aea7951
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb208d3b19e7ca2d49198a2f57edaf48214bb78f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206478"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395371"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>比較用來預測模型的預測 (中繼資料採礦教學課程)
   在本教學課程的先前步驟中，您建立了多個時間序列模型：  
@@ -36,7 +36,7 @@ ms.locfileid: "48206478"
  [REPLACE_MODEL_CASES](#bkmk_REPLACE)  
   
 ##  <a name="bkmk_EXTEND"></a> 加入資料之後比較原始結果與結果  
- 讓我們來看看只與太平洋地區 M200 產品線相關的資料，了解以新資料更新模型會如何影響結果。 請記得原始資料數列在 2004 年 6 月結束，而我們取得 7 月、8 月和 9 月的新資料。  
+ 讓我們看看只是要了解如何使用新資料更新模型會影響結果的太平洋地區 M200 產品線的資料。 請記得原始資料數列在 2004 年 6 月結束，而我們取得 7 月、8 月和 9 月的新資料。  
   
 -   第一個資料行顯示加入的新資料。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48206478"
  一般而言，相較於模型資料開頭的資料，演算法對新資料的變更賦予較重的加權。 不過，在此情況下，新銷售數字比起上一個週期增幅僅為 20-30%，因此對預計銷售造成些微的上揚，在此之後銷售預測轉而向下，重複加入新資料之前月份的趨勢。  
   
 ##  <a name="bkmk_REPLACE"></a> 比較原始和交叉預測結果  
- 請記得，原始採礦模型揭露地區之間和產品線之間有很大的差異。 例如，M200 模型的銷售非常強，而 T1000 模型的銷售則在所有地區都很低。 此外，有些數列沒有太多的資料。 數列沒有相同的起點，呈現不齊現象。  
+ 請記得，原始採礦模型揭露地區之間和產品線之間有很大的差異。 例如，M200 模型的銷售非常強，而 T1000 模型的銷售則在所有地區都很低。 此外，有些數列沒有太多資料。 序列是不完全的這表示它們不會有相同的起始點。  
   
  ![序列預測 M200 與 T1000 數量](../../2014/tutorials/media/6series-defaultforecasting.gif "序列預測 M200 與 T1000 數量")  
   

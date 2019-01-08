@@ -16,12 +16,12 @@ ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c3688bcd713eab1fed94efab0a5c88f41b7c529
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d719ebf47757a48b034d2a0cadd0ed68f51f0ee5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758836"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538757"
 ---
 # <a name="record-object-ado"></a>Record 物件 (ADO)
 表示從資料列[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)或資料提供者或為半結構化的資料提供者，例如檔案或目錄所傳回的物件。  
@@ -60,7 +60,7 @@ ms.locfileid: "47758836"
   
 -   指出目前的狀態**記錄**具有[狀態](../../../ado/reference/ado-api/state-property-ado.md)屬性。  
   
--   表示型別**記錄**—*簡單*，*集合*，或*結構化文件*— 使用[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)屬性。  
+-   表示型別**記錄** - *簡單*，*集合*，或*結構化文件*- [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)屬性。  
   
 -   停止執行的非同步作業[取消](../../../ado/reference/ado-api/cancel-method-ado.md)方法。  
   

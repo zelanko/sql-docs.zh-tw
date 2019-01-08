@@ -14,12 +14,12 @@ ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2f3c3da8228924a7d4b697865ee729e9b84aff5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9a063413a665d9e159cb513ea936ab851715ce4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131188"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515397"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>設定彈性容錯移轉原則以控制自動容錯移轉的條件 (AlwaysOn 可用性群組)
   本主題描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 來設定 AlwaysOn 可用性群組的彈性容錯移轉原則。 彈性容錯移轉原則可讓您更精確地控制造成可用性群組之自動容錯移轉的狀況。 透過變更觸發自動容錯移轉的失敗狀況和健全狀況檢查的頻率，您可以提高或降低自動容錯移轉的可能性，以便支援高可用性的 SLA。  
@@ -90,13 +90,13 @@ ms.locfileid: "48131188"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要設定彈性容錯移轉原則**  
   
-1.  設為預設值 (`cd`) 裝載主要複本的伺服器執行個體。  
+1.  將預設值 (`cd`) 設定為裝載主要複本的伺服器執行個體。  
   
 2.  將可用性複本加入至可用性群組時，請使用 `New-SqlAvailabilityGroup` 指令程式。 修改現有的可用性複本時，請使用 `Set-SqlAvailabilityGroup` 指令程式。  
   
     -   若要設定容錯移轉狀況層級，使用`FailureConditionLevel`*層級*參數，其中*層級*是下列值之一：  
   
-        |值|Level|起始自動容錯移轉的狀況|  
+        |值|層級|起始自動容錯移轉的狀況|  
         |-----------|-----------|-------------------------------------------|  
         |`OnServerDown`|一|伺服器關閉時。 SQL Server 服務由於容錯移轉或重新啟動而停止。|  
         |`OnServerUnresponsive`|二|伺服器沒有回應時。 滿足任何狀況的較低值，而且 SQL Server 服務連接到叢集且超過健全狀況檢查逾時臨界值，或者目前主要複本處於失敗狀態。|  
@@ -125,7 +125,7 @@ ms.locfileid: "48131188"
         ```  
   
 > [!NOTE]  
->  若要檢視 cmdlet 的語法，請使用`Get-Help`指令程式在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 環境。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+>  若要檢視指令程式的語法，請在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境中使用 `Get-Help` 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **若要設定和使用 SQL Server PowerShell 提供者**  
   

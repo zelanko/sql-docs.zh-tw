@@ -17,17 +17,17 @@ ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 132ee99180595dca5e203a6821c5f87aa616530d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54da54a63fb1234478a3161cd46e7143258d2d65
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695216"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510597"
 ---
 # <a name="rowset-size"></a>資料列集大小
 若要使用哪一個資料列集大小取決於應用程式。 以螢幕為基礎的應用程式通常會遵循兩種策略的其中一個。 第一個是將資料列集大小設定為畫面; 上所顯示的資料列數目如果使用者重新調整大小的螢幕，應用程式會據以變更資料列集大小。 第二個是將資料列集大小較大的數字，例如 100，可減少需要的資料來源的呼叫。 應用程式內的資料列集時可能在本機上捲動，並提取新的資料列，它將捲動超出資料列集時，才。  
   
- 其他應用程式，例如報表通常會設為 最大數目的應用程式可以合理地處理的資料列的資料列集大小，具有較大的資料列集，有時降低網路負荷每個資料列。 完全大資料列集可以是取決於每個資料列和可用的記憶體數量的大小。  
+ 其他應用程式，例如報表通常會將資料列集大小最大數目的資料列可以合理地處理應用程式-為搭配較大的資料列集，有時降低網路負荷每個資料列。 完全大資料列集可以是取決於每個資料列和可用的記憶體數量的大小。  
   
  資料列集大小設定藉由呼叫**SQLSetStmtAttr**具有*屬性*引數 SQL_ATTR_ROW_ARRAY_SIZE。 應用程式可以變更資料列集大小、 將新的資料列集緩衝區繫結 (藉由呼叫**SQLBindCol**或指定的繫結位移) 甚至已經提取資料列之後，或兩者。 變更資料列集大小的影響取決於函式：  
   

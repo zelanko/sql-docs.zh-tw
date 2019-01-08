@@ -16,12 +16,12 @@ ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9b48d22e463b8596065c1df68d1affc0de5ef92a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 15e75dd27ca447eaab326ff50cc67614d442e096
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091521"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543586"
 ---
 # <a name="high-availability-solutions-sql-server"></a>高可用性解決方案 (SQL Server)
   本主題會介紹幾個可增進伺服器或資料庫可用性的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 高可用性解決方案。 高可用性解決方案可遮蔽硬體或軟體失敗所造成的影響，並維護應用程式的可用性，進而讓使用者的停機時間減至最少。  
@@ -34,7 +34,7 @@ ms.locfileid: "48091521"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供幾個選項用於建立伺服器或資料庫的高可用性。 高可用性選項包括下列各項：  
   
  AlwaysOn 容錯移轉叢集執行個體  
- AlwaysOn 容錯移轉叢集執行個體是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn 供應項目的一部分，會運用 Windows Server 容錯移轉叢集 (WSFC) 功能，透過伺服器執行個體層級 ( *「容錯移轉叢集執行個體」* (Failover Cluster Instance，FCI)) 的備援性提供本機高可用性。 FCI 是跨 Windows Server 容錯移轉叢集 (WSFC) 節點且可能跨多個子網路安裝的單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在網路上，FCI 看似單一電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，但是 FCI 提供容錯移轉，可以在目前的 WSFC 節點無法使用時，從該節點容錯移轉到另一個節點。  
+ 做為一部分[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]供應項目，AlwaysOn 容錯移轉叢集執行個體是利用 Windows Server 容錯移轉叢集 (WSFC) 功能，提供透過備援層級的伺服器執行個體的本機高可用性的 AlwaysOn *容錯移轉叢集執行個體*(FCI)。 FCI 是跨 Windows Server 容錯移轉叢集 (WSFC) 節點且可能跨多個子網路安裝的單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在網路上，FCI 看似單一電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，但是 FCI 提供容錯移轉，可以在目前的 WSFC 節點無法使用時，從該節點容錯移轉到另一個節點。  
   
  如需詳細資訊，請參閱 < [ AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md)。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48091521"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [資料庫鏡像：互通性與共存性 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [資料庫鏡像：互通性與共存性&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [SQL Server 2014 中已淘汰的資料庫引擎功能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

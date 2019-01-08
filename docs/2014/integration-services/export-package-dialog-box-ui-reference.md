@@ -15,12 +15,12 @@ ms.assetid: 3742fe8a-ef57-444d-b2fb-cb25d16bae97
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90a098ce2c4ea006f33eb01034136bd92e7fe0b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91a7d5573a6d0488b48d7e4ddaf328664de7a2c8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116728"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523672"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>匯出封裝對話方塊 UI 參考
   使用 **[匯出封裝]** 對話方塊 (可以從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中存取)，即可匯出 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝到不同的位置，並選擇性地修改封裝的保護等級。  
@@ -54,15 +54,15 @@ ms.locfileid: "48116728"
  如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，請提供密碼。  
   
  **封裝路徑**  
- 輸入封裝路徑，或按一下瀏覽按鈕 **(…)** ，並找出要儲存封裝的資料夾。  
+ 輸入封裝路徑，或按一下瀏覽按鈕 ([...])，並找出要儲存封裝的資料夾。  
   
  **保護等級**  
- 按一下瀏覽按鈕 **(...)** 並更新 [封裝保護等級] 對話方塊中的保護等級。 如需詳細資訊，請參閱 [封裝與專案保護等級對話方塊](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)。  
+ 按一下瀏覽按鈕 ([...]) 並更新 [封裝保護等級] 對話方塊中的保護等級。 如需詳細資訊，請參閱 [封裝與專案保護等級對話方塊](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [儲存封裝的副本](../../2014/integration-services/save-copy-of-package.md)   
  [匯入封裝對話方塊 UI 參考](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [儲存套件](save-packages.md)   
- [匯入和匯出封裝&#40;SSIS 服務&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [匯入和匯出封裝 &#40;SSIS 服務&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

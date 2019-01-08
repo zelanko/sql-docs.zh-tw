@@ -11,12 +11,12 @@ ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5f6d37f88044d9888c82b5770ea1bca366423459
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea7896e5f7c394539793ca65496824691275963d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123249"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393751"
 ---
 # <a name="managing-report-parts"></a>管理報表組件
   開頭[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，報表組件可以發行至報表伺服器，並重複使用在其他報表和其他使用者有適當的權限。  
@@ -92,10 +92,10 @@ ms.locfileid: "48123249"
 -   報表組件會使用與現有「資源」項目類型相同的權限原則。 在資料夾之中，傳統資源項目與來自安全性繼承檢視方塊的報表組件之間沒有差異。 報表組件會繼承與同一個資料夾中影像相同的權限原則。 需要區別這兩者時，可以為想要的報表組件設定項目層級安全性。 或者，您可以將報表組件放在與已設定之正確權限不同的資料夾中。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表組件和報表產生器中的資料集](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [報表產生器中的報表組件和資料集](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [一般屬性頁面、 報表組件&#40;報表管理員&#41;](../general-properties-page-report-parts-report-manager.md)   
  [移動項目頁面&#40;報表管理員&#41;](../move-items-page-report-manager.md)   
- [報表伺服器內容管理&#40;SSRS 原生模式&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [疑難排解報表組件&#40;報表產生器及 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [報表設計師中的報表組件 &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md)  
   

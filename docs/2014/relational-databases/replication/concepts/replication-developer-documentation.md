@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- replication
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - developer's guide [SQL Server replication]
@@ -16,12 +14,12 @@ ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce2054924f26ab5b8d94814c3ad716b00f425064
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 499edc588b4253b3ae37c2be0bcde1cbbd79dea6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212518"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777820"
 ---
 # <a name="developer39s-guide-replication"></a>開發人員&#39;指南 （複寫）
   以程式設計的方式設定、維護和監視複寫拓撲的能力，可讓您同時簡化重複的複寫工作，並改善複寫為主的應用程式之使用者經驗。 透過設計複寫的程式，一般使用者即可使用自訂的複寫功能，而不須熟悉複寫預存程序和複寫代理程式可執行檔，或是不須使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 實作的複寫使用者介面。  
@@ -57,7 +55,7 @@ ms.locfileid: "48212518"
  [複寫代理程式可執行檔概念](replication-agent-executables-concepts.md)  
  描述複寫代理程式可執行檔的使用。  
   
- [開發人員指南：使用說明主題 &#40;複寫&#41;](../developer-s-guide-how-to-topics-replication.md)  
+ [開發人員指南：使用說明主題&#40;複寫&#41;](../developer-s-guide-how-to-topics-replication.md)  
  提供與複寫相關的如何主題清單。  
   
   

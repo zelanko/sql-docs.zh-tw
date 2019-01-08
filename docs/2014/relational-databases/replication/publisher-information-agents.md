@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publisherinfo.commonjobs.f1
@@ -13,12 +12,12 @@ ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cc2dfb12427625c9bdb6fdf8731e32083673ffd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 266c839fbaf899af4f882c9ae858303f8cd7eac3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136278"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771430"
 ---
 # <a name="publisher-information-agents"></a>發行者資訊，代理程式
   **[代理程式]** 索引標籤會顯示與發行者相關聯之代理程式和維護作業的相關資訊：  
@@ -48,13 +47,13 @@ ms.locfileid: "48136278"
 ## <a name="options"></a>選項。  
  若要顯示某個代理程式或作業的相關資訊，請從 **[代理程式和作業類型]** 下拉式功能表中選取。 如需更詳細的資訊以及與代理程式或作業相關的工作，請以滑鼠右鍵按一下該代理程式或作業的資料列，然後按一下快速鍵功能表上的選項。 若要變更方格顯示資料的方式，請以滑鼠右鍵按一下方格，然後按一下下列其中一個選項：  
   
--   **排序**：在 **[排序資料行]** 對話方塊中排序一個或多個資料行。  
+-   **排序**:中的一或多個資料行的排序**排序資料行** 對話方塊。  
   
--   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及在 **[選擇資料行]** 對話方塊中顯示這些資料行所依循的順序。  
+-   **選擇要顯示的欄**:選取要顯示的順序來顯示它們在哪一個資料行 **[選擇資料行**] 對話方塊。  
   
--   **篩選**：根據 **[篩選設定]** 對話方塊中的資料行值，篩選方格中的資料列。  
+-   **篩選**:篩選依據的資料行值的方格中的資料列**篩選設定** 對話方塊。  
   
--   **清除篩選**：清除方格的所有篩選設定。  
+-   **清除篩選**:清除方格的所有篩選設定。  
   
  篩選設定是每個方格特有的設定。 資料行選取和排序會套用至所有相同類型的方格，例如每個發行者的發行集方格。  
   

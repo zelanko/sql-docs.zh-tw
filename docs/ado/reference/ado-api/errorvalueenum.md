@@ -16,23 +16,23 @@ ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6ccf5a83cd53b953a9b43c252e90a6e13f1e3f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db2065bd599b1aca1542318bfab0d0ce57e2a938
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635866"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542605"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 指定 ADO 執行階段錯誤的類型。  
   
  列出的錯誤號碼的三種形式：  
   
--   正數十進位 — 低的兩個位元組，以十進位格式完整的數字。 這個數字會顯示在預設 Visual Basic 錯誤訊息對話方塊。 例如，執行階段錯誤 '3707'。  
+-   正十進位低兩個位元組的十進位格式完整的數字。 這個數字會顯示在預設 Visual Basic 錯誤訊息對話方塊。 例如，執行階段錯誤 '3707'。  
   
--   負數的小數點，完整的錯誤數字的十進位的翻譯。  
+-   負完整的錯誤數字的小數點十進位轉譯。  
   
--   十六進位 — 完整的錯誤號碼的十六進位表示法。 Windows 設備碼是第四個位數。 ADO 錯誤號碼的設施程式碼*A*。例如： 0x800***A***0E7B。  
+-   完整的錯誤號碼的十六進位的十六進位表示法。 Windows 設備碼是第四個位數。 ADO 錯誤號碼的設施程式碼*A*。例如：0x800***A***0E7B。  
   
 > [!NOTE]
 >  OLE DB 錯誤可傳遞至 ADO 應用程式。 一般而言，識別這些 Windows 功能的程式碼的所*4*。 比方說，0x800***4***。  

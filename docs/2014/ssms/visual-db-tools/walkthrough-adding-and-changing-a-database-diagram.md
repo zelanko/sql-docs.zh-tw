@@ -1,10 +1,10 @@
 ---
-title: 逐步解說：加入與變更資料庫圖表 | Microsoft Docs
+title: 逐步解說：加入與變更資料庫圖表 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
@@ -14,12 +14,12 @@ ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46333534aebb2991fe0dc3239264bc94f7ddb821
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195518"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822622"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>逐步解說：加入與變更資料庫圖表
   這個逐步解說將說明如何建立與修改資料庫圖表，以及透過資料庫圖表元件對資料庫進行變更。 您將看到如何將資料表加入至圖表、建立資料表之間的關聯性、建立資料行上的條件約束和索引，以及變更您查看每個資料表的資訊層級。  
@@ -44,7 +44,7 @@ ms.locfileid: "48195518"
   
 3.  以滑鼠右鍵按一下 [資料庫圖表] 節點，再選擇 [新增資料庫圖表]。  
   
-     如果資料庫沒有建立圖表所需的物件，便會顯示下列訊息：**此資料庫沒有使用資料庫圖表所需的一或多個支援物件。要建立資料庫物件嗎?** 選擇 [ **是**]。  
+     如果資料庫沒有建立圖表所需的物件，便會出現下列訊息：**此資料庫沒有下列其中一個或多個支援物件才能使用資料庫圖表。要建立資料庫物件嗎?** 選擇 [ **是**]。  
   
      出現 [新增資料表] 對話方塊。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48195518"
   
 1.  以滑鼠右鍵按一下 `Address` 資料表。 在快速鍵功能表上，指向 [資料表檢視]，然後按一下 [標準]。  
   
-     資料表方格會顯示三個資料行：[資料行名稱]、[資料類型] 和 [允許 Null]。  
+     資料表方格會顯示三個資料行：**資料行名稱**，**資料類型**，以及**允許 Null**。  
   
 2.  以滑鼠右鍵按一下 `Address` 資料表、按一下 [資料表檢視]，再選取 [索引鍵]。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48195518"
   
 2.  在 [**選擇名稱**] 對話方塊中，按一下 **[確定]** 接受預設名稱`Table1`。  
   
-     隨即出現新的資料表方格，其中會有三個資料行：[資料行名稱]、[資料類型] 和 [允許 Null]。  
+     新的資料表方格會顯示三個資料行：**資料行名稱**，**資料類型**，以及**允許 Null**。  
   
 3.  新增下列資訊以`Table1`:  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48195518"
   
 6.  在 [**選擇名稱**] 對話方塊中，按一下 **[確定]** 接受預設名稱`Diagram1`。  
   
-7.  [儲存] 對話方塊會顯示訊息，表示要將 `Table1` 儲存到資料庫。 按一下 **[是]**。  
+7.  [儲存] 對話方塊會顯示訊息，表示要將 `Table1` 儲存到資料庫。 按一下 [ **是**]。  
   
 ## <a name="modifying-table-structure"></a>修改資料表結構  
  您可以在圖表設計工具中加入檢查條件約束，以及建立資料表間的關聯性。  
@@ -130,7 +130,7 @@ ms.locfileid: "48195518"
   
 2.  將 `T2col1` 拖曳到 `T1col1`。  
   
-     會出現兩個對話方塊：背景中的 [外部索引鍵關聯性] 以及前景中的 [資料表與資料行]。  
+     出現兩個對話方塊：**外部索引鍵關聯性**在背景中並**資料表和資料行**在前景中。  
   
 3.  按一下 [確定] 以儲存新的關聯性。  
   

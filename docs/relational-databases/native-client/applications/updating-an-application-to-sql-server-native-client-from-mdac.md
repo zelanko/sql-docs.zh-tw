@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b8ad2b23e25cd5d36cbf890aeb8ec502314f777
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4de00026a0d48a9850d7c13b18525c1a1d84820f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659236"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511802"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>從 MDAC 將應用程式更新至 SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47659236"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支援存取舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 不包含 XML 整合。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支援 SELECT... FOR XML 查詢，但不支援其他類型的 XML 功能。 不過，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援原生用戶端**xml**中的資料類型導入[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 不包含 XML 整合。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支援 SELECT...FOR XML 查詢，但不支援其他類型的 XML 功能。 不過，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援原生用戶端**xml**中的資料類型導入[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支援只利用連接字串屬性來設定用戶端網路程式庫。 如果您需要更完整的網路程式庫組態，您必須使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, propagation methods
@@ -13,12 +12,12 @@ ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 557820cc0e1832a5e80f3a66a4a4f67859f2a8d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107688"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754160"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>指定交易式發行項變更的傳播方式
   異動複寫可讓您指定資料變更從「發行者」傳播到「訂閱者」的方式。 對於每個發行的資料表，您都可以指定四種方法之一來傳播每個要傳播到「訂閱者」的作業 (INSERT、UPDATE 或 DELETE)：  

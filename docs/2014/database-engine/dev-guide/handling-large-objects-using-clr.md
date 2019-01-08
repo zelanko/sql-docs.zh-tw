@@ -12,12 +12,12 @@ ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c54fd3944d41e1522e792d649ea3d9fbcd331b95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e1dedaab57761c88487dbd3a61d359bcf0b3dd1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092854"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350272"
 ---
 # <a name="handling-large-objects-using-clr"></a>使用 CLR 處理大型物件
   SQL Server 的 `HandlingLOBUsingCLR` 範例會示範如何使用 Common Language Runtime (CLR) 預存程序，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與伺服器可用的檔案系統之間傳送大型物件 (LOB)。 此範例示範如何在伺服器端程式碼中存取檔案，並從以 CLR 為基礎的預存程序同時叫用動態查詢和預存程序。 它也示範如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 來註冊和取消註冊 CLR 方法及組件。  
@@ -25,9 +25,9 @@ ms.locfileid: "48092854"
 ## <a name="prerequisites"></a>先決條件  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](http://go.microsoft.com/fwlink/?LinkId=31046)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](https://go.microsoft.com/fwlink/?LinkId=31046)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
   
--   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員[網站](http://go.microsoft.com/fwlink/?linkid=62796)取得 AdventureWorks 資料庫  
+-   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開發人員[網站](https://go.microsoft.com/fwlink/?linkid=62796)取得 AdventureWorks 資料庫  
   
 -   .NET Framework SDK 2.0 或更新版本或是 Microsoft Visual Studio 2005 或更新版本。 您可以免費取得 .NET Framework SDK。  
   

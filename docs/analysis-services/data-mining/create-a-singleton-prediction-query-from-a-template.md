@@ -1,5 +1,5 @@
 ---
-title: 從範本建立單一預測查詢 |Microsoft 文件
+title: 從範本建立單一預測查詢 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: baa6153adde1a5cc5aaeaad5f8b04366dcb2dad8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 72fadf42bae238fbc656a120e39317ce5211919e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019765"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392961"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>根據範本建立單一預測查詢
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  如果您具有一個要用於預測的模型，但不希望將該模型對應至外部輸入資料集或產生大量預測，則單一查詢很有用。 使用單一查詢，您可以向模型提供一個或多個值，並且立即會看到預測值。  
+  當您有一種模型，您想要用於預測，但不想要將它對應至外部輸入資料集，或進行大量預測時，單一查詢便很有用。 使用單一查詢，您可以向模型提供一個或多個值，並且立即會看到預測值。  
   
  例如，下列 DMX 查詢表示針對目標郵寄模型 TM_Decision_Tree 的單一查詢。  
   
@@ -91,6 +91,6 @@ AS [t]
 11. 按一下 **[執行]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立預測 & #40;基本資料採礦教學課程 & #41;](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
+ [建立預測 &#40;資料採礦基本教學課程&#41;](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
   
   

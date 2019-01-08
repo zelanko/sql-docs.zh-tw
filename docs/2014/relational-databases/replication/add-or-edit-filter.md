@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.addeditfilter.f1
@@ -13,12 +12,12 @@ ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f1590275aaabd47524ba969615b28ab91f2b100
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa12421f39119fbbb5e40c8c2b6dc7f103cd9a45
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195108"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758050"
 ---
 # <a name="add-or-edit-filter"></a>加入或編輯篩選
   **[加入篩選]** 和 **[編輯篩選]** 對話方塊可讓您加入和編輯靜態資料列篩選與參數化資料列篩選器。  
@@ -52,11 +51,11 @@ ms.locfileid: "48195108"
      無法變更此文字；請使用標準 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法在 WHERE 關鍵字之後鍵入篩選子句。 如果發行者是 Oracle 發行者，則 WHERE 子句必須與 Oracle 查詢語法相容。 儘可能避免使用複雜的篩選。 靜態與參數化篩選都會增加發行集的處理時間；因此，您應該儘可能保持篩選陳述式愈簡單愈好。  
   
     > [!IMPORTANT]  
-    >  基於效能的考量，建議您不要將函數套用至合併式發行集的參數化資料列篩選器子句 (例如 `LEFT([MyColumn]) = SUSER_SNAME()`) 中的資料行名稱。 如果在篩選子句中使用 HOST_NAME，並且覆寫 HOST_NAME 值，則可能需要使用 CONVERT 來轉換資料類型。 如需有關此案例之最佳做法的詳細資訊，請參閱主題＜ [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)。  
+    >  基於效能的考量，建議您不要將函數套用至合併式發行集的參數化資料列篩選器子句 (例如 `LEFT([MyColumn]) = SUSER_SNAME()`) 中的資料行名稱。 如果在篩選子句中使用 HOST_NAME，並且覆寫 HOST_NAME 值，則可能需要使用 CONVERT 來轉換資料類型。 如需有關此案例之最佳做法的詳細資訊，請參閱主題＜ [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)＞中的「覆寫 HOST_NAME() 值」一節。  
   
 3.  **指定多少訂閱會從這個資料表接收資料**  
   
-     僅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新的版本；僅限合併式複寫。 合併式複寫可以讓您指定最適合您的資料與應用程式的資料分割類型。 如果您選取 **[這個資料表中的一個資料列只會提供給一個訂閱]**，合併式複寫會設定非重疊資料分割選項。 非重疊資料分割配合預先計算的資料分割使用可以提升效能，其中非重疊資料分割會最小化與預先計算之資料分割相關聯的上傳成本。 當使用的參數化篩選和聯結篩選越複雜時，非重疊資料分割在效能上的益處更為醒目。 如果您選取此選項，必須確定分割資料的方式不會讓一個資料列複寫到一個以上的訂閱者。 如需進一步資訊，請參閱主題＜ [參數化資料列篩選器](merge/parameterized-filters-parameterized-row-filters.md)＞中的「設定資料分割選項」。  
+     僅限[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新的版本；僅限合併式複寫。 合併式複寫可以讓您指定最適合您的資料與應用程式的資料分割類型。 如果您選取 **[這個資料表中的一個資料列只會提供給一個訂閱]**，合併式複寫會設定非重疊資料分割選項。 非重疊資料分割配合預先計算的資料分割使用可以提升效能，其中非重疊資料分割會最小化與預先計算之資料分割相關聯的上傳成本。 當使用的參數化篩選和聯結篩選越複雜時，非重疊資料分割在效能上的益處更為醒目。 如果您選取此選項，必須確定分割資料的方式不會讓一個資料列複寫到一個以上的訂閱者。 如需進一步資訊，請參閱主題＜ [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)＞中的「設定資料分割選項」。  
   
  您加入或編輯篩選之後，請按一下 **[確定]** 以儲存變更並關閉對話方塊。 您指定的篩選會被剖析，並會針對 SELECT 子句中的資料表執行。 如果篩選陳述式包含語法錯誤或其他問題，則會通知您，且您可以編輯該篩選陳述式。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
@@ -13,12 +12,12 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9749418654d76f542d865aad78135b1a11a987b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b49001c7b62be67097223421ef85db2b475aa1d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088598"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761890"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>建立函數以擷取變更資料
   完成執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程後，下一個工作是建立可擷取變更資料的資料表值函式。 第一次累加式載入前，您僅需要建立一次這個函數。  
@@ -75,7 +74,7 @@ ms.locfileid: "48088598"
  預存程序的所有參數都是選擇性的。 如果您在不提供任何參數值的情況下呼叫預存程序，預存程序就會為您可存取的所有擷取執行個體建立包裝函數。  
   
 > [!NOTE]  
->  如需此預存程序之語法及其參數的詳細資訊，請參閱 [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql)。  
+>  如需此預存程序之語法及其參數的詳細資訊，請參閱 [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL &#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql)。  
   
  預存程序永遠會產生一個包裝函數來傳回每個擷取執行個體的所有變更。 如果 *@supports_net_changes* 參數在建立擷取執行個體時設定，預存程序也會產生一個包裝函式來傳回每個適用之擷取執行個體的淨變更。  
   
@@ -133,16 +132,16 @@ deallocate #hfunctions
   
 -   異動資料的所有要求資料行。  
   
--   名稱為 __CDC_OPERATION 的資料行使用一或兩個字元欄位來識別與資料列關聯的作業。 此欄位的有效值如下：‘I’ 用於插入、‘D’ 用於刪除、‘UO’ 用於更新舊值，而 ‘UN’ 用於更新新值。  
+-   名稱為 __CDC_OPERATION 的資料行使用一或兩個字元欄位來識別與資料列關聯的作業。 此欄位的有效值如下所示：'I' 用於插入、 組件快取 '用於刪除、 'UO' 用於更新舊值，而' UN ' 用於更新新值。  
   
--   當您要求旗標時，更新顯示為作業碼後之位元資料行的旗標，並以 *@update_flag_list* 參數中指定的順序顯示。 這些資料行的命名方式是將 ‘_uflag’ 附加到關聯的資料行名稱。  
+-   當您要求旗標時，更新顯示為作業碼後之位元資料行的旗標，並以 *@update_flag_list* 參數中指定的順序顯示。 這些資料行的命名方式是將 '_uflag' 附加到相關聯的資料行名稱。  
   
  如果您的封裝呼叫查詢所有變更的包裝函式，該包裝函式也會傳回 __CDC_STARTLSN 和 \__CDC_SEQVAL 資料行。 這兩個資料行會分別成為結果集的第一和第二個資料行。 此包裝函數也會根據這兩個資料行，排序結果集。  
   
 ## <a name="writing-your-own-table-value-function"></a>撰寫您自己的資料表值函式  
- 您也可以改用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 撰寫呼叫異動資料擷取查詢函數的資料表值包裝函式，並將資料表值包裝函式儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 如需如何建立 Transact-SQL 函數的詳細資訊，請參閱 [CREATE FUNCTION &#40;Transact-SQL&#41](/sql/t-sql/statements/create-function-transact-sql)。  
+ 您也可以改用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 撰寫呼叫異動資料擷取查詢函數的資料表值包裝函式，並將資料表值包裝函式儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 如需如何建立 Transact-SQL 函數的詳細資訊，請參閱 [CREATE FUNCTION &#40;Transact-SQL &#41;](/sql/t-sql/statements/create-function-transact-sql)。  
   
- 下列範例定義的資料表值函式可從 Customer 資料表中擷取指定之變更間隔的變更。 此函式會使用異動資料擷取函數對應`datetime`值的二進位記錄序號 (LSN) 值變更資料表在內部使用。 此函數也會處理數個特殊狀況：  
+ 下列範例定義的資料表值函式可從 Customer 資料表中擷取指定之變更間隔的變更。 此函數會使用異動資料擷取函數，將 `datetime` 值對應到變更資料表在內部使用的二進位記錄序號 (LSN) 值。 此函數也會處理數個特殊狀況：  
   
 -   針對開始時間傳遞 null 值時，此函數會使用最早可用的值。  
   

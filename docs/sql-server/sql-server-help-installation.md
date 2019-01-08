@@ -10,12 +10,12 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e05a241d81d4a051bd11dc8ce8b80858627afec0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 00db3d0ca027a0f188831281bb2c844b5bc8462d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514527"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202447"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 離線說明和說明檢視器
 
@@ -176,7 +176,7 @@ SSMS 17.x 以及 VS 2015 和 2017 使用說明檢視器 2.x，其支援 SQL Serv
 
 **在 SSMS 17.x 中檢視 SQL Server 線上說明**
 
-- 在 [說明] 功能表中，按一下 [檢視說明]。 來自 [https://docs.microsoft.com/sql/ https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) 的最新 SQL Server 2016/2017 文件即會在瀏覽器中顯示。 
+- 在 [說明] 功能表中，按一下 [檢視說明]。 來自 [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) 的最新 SQL Server 2016/2017 文件即會在瀏覽器中顯示。 
 
    ![檢視說明](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
@@ -207,7 +207,7 @@ SSMS 17.x 以及 VS 2015 和 2017 使用說明檢視器 2.x，其支援 SQL Serv
 1. 指向 [說明] 功能表上的 [設定說明喜好設定]，然後選擇 [在瀏覽器中啟動] 或 [在說明檢視器中啟動]。 
 2. 按 F1 或按一下 [說明] 或 **?** (位在它們可用的對話方塊中)，以查看所選擇環境中的即時線上主題。
 
->  [!NOTE]
+> [!NOTE]
 >  只有在您於線上時，才能使用 F1 說明。 F1 說明沒有離線來源。 
 
 ## <a name="systems-without-internet-access"></a>沒有網際網路存取的系統

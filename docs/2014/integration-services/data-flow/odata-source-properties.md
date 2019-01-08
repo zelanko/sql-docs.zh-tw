@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66c73133c60bab9bea44c5bdbe8cbbc9bd5e6e0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 46c44d1274271dfc826db44513b64b96f8ff9e57
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092558"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766950"
 ---
 # <a name="odata-source-properties"></a>OData 來源屬性
   當您以滑鼠右鍵按一下資料流程中的 [OData 來源] 並按一下 [屬性] 時，您將會看到 [OData 來源] 元件的屬性出現在 [屬性] 視窗中。  

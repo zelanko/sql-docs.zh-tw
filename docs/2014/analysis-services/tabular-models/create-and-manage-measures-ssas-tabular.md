@@ -11,15 +11,15 @@ ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfc49813893a296ac5342452a286f39284a8901d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3b50c9284610cfa8c35eba21de7723c18729401
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126352"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404996"
 ---
 # <a name="create-and-manage-measures-ssas-tabular"></a>建立及管理量值 (SSAS 表格式)
-  量值是為了在報表或 Excel 樞紐分析表 (或樞紐分析圖) 中使用而建立的公式。 量值可以用標準彙總函式 (例如 COUNT 或 SUM) 做為基礎，或者，您也可以使用 DAX 自行定義公式。 此主題中的工作描述如何使用資料表的量值方格建立及管理量值。  
+  量值是為了在報表或 Excel 樞紐分析表 (或樞紐分析圖) 中使用而建立的公式。 量值可以用標準彙總函式 (例如 COUNT 或 SUM) 做為基礎，或者，您也可以使用 DAX 自行定義公式。 本主題中的工作描述如何建立及管理量值使用資料表的量值方格。  
   
  本主題也包括下列工作：  
   
@@ -34,7 +34,7 @@ ms.locfileid: "48126352"
 -   [刪除量值](#bkmk_delete)  
   
 ## <a name="tasks"></a>工作  
- 若要建立及管理量值，您可以使用資料表的量值方格。 您只能在模型設計師的 [資料檢視] 中，檢視資料表的量值方格。 您無法在 [圖表檢視] 中建立量值或檢視量值方格；但是，您可以在 [圖表檢視] 中檢視現有的量值。 若要顯示資料表的量值方格，請按一下 **[資料表]** 功能表，然後按一下 **[顯示量值方格]**。  
+ 若要建立及管理量值，您將使用資料表的量值方格。 您只能在模型設計師的 [資料檢視] 中，檢視資料表的量值方格。 您無法在 [圖表檢視] 中建立量值或檢視量值方格；但是，您可以在 [圖表檢視] 中檢視現有的量值。 若要顯示資料表的量值方格，請按一下 **[資料表]** 功能表，然後按一下 **[顯示量值方格]**。  
   
 ###  <a name="bkmk_create_stand"></a> 使用標準彙總公式建立量值  
   
@@ -61,8 +61,8 @@ ms.locfileid: "48126352"
 -   在量值方格的量值上按一下滑鼠右鍵，然後按一下 [刪除]。  
   
 ## <a name="see-also"></a>另請參閱  
- [量值&#40;SSAS 表格式&#41;](measures-ssas-tabular.md)   
- [Kpi &#40;SSAS 表格式&#41;](kpis-ssas-tabular.md)   
- [導出資料行&#40;SSAS 表格式&#41;](ssas-calculated-columns.md)  
+ [量值 &#40;SSAS 表格式&#41;](measures-ssas-tabular.md)   
+ [KPI &#40;SSAS 表格式&#41;](kpis-ssas-tabular.md)   
+ [導出資料行 &#40;SSAS 表格式&#41;](ssas-calculated-columns.md)  
   
   

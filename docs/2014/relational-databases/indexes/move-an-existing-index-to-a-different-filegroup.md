@@ -16,12 +16,12 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 65af75296064cd33e1c057126754339499f8b93f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fa11684cc9f35eb662ca41c731f11887e1bce32
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070378"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534037"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>將現有的索引移至不同的檔案群組
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中將目前檔案群組的現有索引移到不同的檔案群組。  
@@ -97,7 +97,7 @@ ms.locfileid: "48070378"
   
      在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的多處理器電腦上，您可以指定平行處理原則的最大程度值，藉以設定用來執行索引陳述式的處理器數目。 並非每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本都可使用平行索引作業功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如需平行索引作業的詳細資訊，請參閱 [設定平行索引作業](configure-parallel-index-operations.md)。  
   
-8.  按一下 **[確定]**。  
+8.  按一下 [確定] 。  
   
  下列資訊可從 [索引屬性 - *index_name*] 對話方塊的 [儲存體] 頁面取得：  
   
@@ -149,7 +149,7 @@ ms.locfileid: "48070378"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;  

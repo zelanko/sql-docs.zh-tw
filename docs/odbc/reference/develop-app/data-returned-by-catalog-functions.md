@@ -14,19 +14,19 @@ ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d68c1a5a1b45ce5a3923ae1b4b346ae786ea9a4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10e3726d26e03da2f9f731babc105244dbf1ff05
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857256"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539776"
 ---
 # <a name="data-returned-by-catalog-functions"></a>目錄函式所傳回的資料
 每個目錄函式會傳回資料當作結果集。 此結果集是與其他類型的結果集。 它通常就會產生依預先定義參數化**選取**是硬式編碼在驅動程式，或是儲存在資料來源中的程序中的陳述式。 如需如何擷取資料，從結果集資訊，請參閱[結果集建立？](../../../odbc/reference/develop-app/was-a-result-set-created.md)。  
   
  結果集中的每個目錄函式是該函式的參考項目中所述。 除了列出的資料行，結果集可以包含在最後一個預先定義的資料行之後的驅動程式特有的資料行。 驅動程式文件將描述這些資料行 （如果有的話）。  
   
- 應用程式應繫結的驅動程式特有的資料行，相對於結果集的結尾。 亦即，它們應該計算的驅動程式專屬的資料行數目的最後一個資料行數，擷取**SQLNumResultCols** — 發生後所需的資料行的資料行數目小於。 ODBC 的版本或驅動程式，這樣不必變更應用程式，新的資料行新增至結果時可節省設定在未來。 此配置中運作，驅動程式必須新增新的驅動程式特有的資料行，舊的驅動程式專用資料行之前，讓資料行號碼並未變更相對於結果集的結尾。  
+ 應用程式應繫結的驅動程式特有的資料行，相對於結果集的結尾。 也就是它們應該計算驅動程式專屬的資料行的數目，做為使用擷取的最後一個資料行數**SQLNumResultCols** -較不必要的資料行之後發生的資料行數目。 ODBC 的版本或驅動程式，這樣不必變更應用程式，新的資料行新增至結果時可節省設定在未來。 此配置中運作，驅動程式必須新增新的驅動程式特有的資料行，舊的驅動程式專用資料行之前，讓資料行號碼並未變更相對於結果集的結尾。  
   
  結果集中傳回的識別項不加上引號，即使它們包含特殊字元。 例如，假設識別項引號字元 (這是由特定驅動程式，以及透過傳回**SQLGetInfo**) 是雙引號 （"），而且 Accounts Payable 資料表包含客戶名稱的資料行。 在所傳回的資料列**SQLColumns**本專欄中，名稱資料行的值是 Accounts Payable，不"Accounts Payable"，和 COLUMN_NAME 資料行的值是客戶名稱，沒有 「 客戶名稱 」。 若要擷取的 Accounts Payable 資料表中的客戶名稱，應用程式會引用這些名稱如下：  
   

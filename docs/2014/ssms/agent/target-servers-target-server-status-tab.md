@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.target.status.f1
@@ -12,12 +12,12 @@ ms.assetid: 010a4cab-d878-4889-8ac8-7d91db6345d6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d74ed50a5ded73dfa990efcfcce55418f64eee58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112698"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768410"
 ---
 # <a name="target-servers-target-server-status-tab"></a>目標伺服器 (目標伺服器狀態索引標籤)
   使用此頁面來檢視此主要伺服器的目標伺服器狀態。  

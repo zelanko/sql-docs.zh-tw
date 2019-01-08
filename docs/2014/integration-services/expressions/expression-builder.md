@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.expressionbuilder.f1
@@ -15,12 +14,12 @@ ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0560d4cc4b5aeaa0b96269e5ee1bbfe9c61e83c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c3daace92f033cb96428226b51294f5a372b7c2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118458"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764070"
 ---
 # <a name="expression-builder"></a>運算式產生器
   使用 [運算式產生器] 對話方塊，即可藉由使用圖形化使用者介面列出變數以及提供函數的內建參考、類型轉換和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式語言所包含的運算子，來建立和編輯屬性運算式或撰寫可設定變數值的運算式。  
@@ -50,7 +49,7 @@ ms.locfileid: "48118458"
 ## <a name="see-also"></a>另請參閱  
  [運算式頁面](expressions-page.md)   
  [屬性運算式編輯器](property-expressions-editor.md)   
- [Integration Services &#40;SSIS&#41;變數](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)   
  [系統變數](../system-variables.md)  
   
   

@@ -20,19 +20,19 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f92e05d76fc3d3c585667045261649f91ce303d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b8b6b1d5975ff94fda98784449330571cc93cec
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183698"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532515"
 ---
 # <a name="delete-a-data-tier-application"></a>刪除資料層應用程式
   您可以使用 [刪除資料層應用程式精靈] 或 Windows PowerShell 指令碼來刪除資料層應用程式。 您可以指定是否要保留、卸離或卸除相關聯的資料庫。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **開始之前：**[限制事項](#LimitationsRestrictions)，[權限](#Permissions)  
   
--   **使用下列項目，升級 DAC**  [註冊資料層應用程式精靈](#UsingDeleteDACWizard)、 [PowerShell](#DeleteDACPowerShell)  
+-   **若要升級 DAC，使用：**[註冊資料層應用程式精靈](#UsingDeleteDACWizard)， [PowerShell](#DeleteDACPowerShell)  
   
 ## <a name="before-you-begin"></a>開始之前  
  當您刪除資料層應用程式 (DAC) 執行個體時，可以選擇三個選項中的一個，指定要使用與資料層應用程式相關聯之資料庫執行的動作。 所有的三個選項都會刪除 DAC 定義中繼資料。 這些選項的差異在於它們使用與資料層應用程式相關聯之資料庫執行的動作。 精靈不會刪除與 DAC 或資料庫相關聯的任何執行個體層級物件，例如登入。  
@@ -65,7 +65,7 @@ ms.locfileid: "48183698"
   
 2.  展開 **[管理]** 節點。  
   
-3.  展開 [資料層應用程式] 節點。  
+3.  展開 **資料層應用程式** 節點。  
   
 4.  以滑鼠右鍵按一下要刪除的 DAC，然後選取 [刪除資料層應用程式…]  
   
@@ -132,22 +132,22 @@ ms.locfileid: "48183698"
   
 1.  建立 SMO Server 物件，並將它設定為包含要刪除之 DAC 的執行個體。  
   
-2.  開啟`ServerConnection`物件，並連接到相同的執行個體。  
+2.  開啟 `ServerConnection` 物件，並連接到相同的執行個體。  
   
-3.  使用`add_DacActionStarted`和`add_DacActionFinished`訂閱 DAC 升級事件。  
+3.  使用 `add_DacActionStarted` 和 `add_DacActionFinished` 訂閱 DAC 升級事件。  
   
 4.  指定要刪除的 DAC。  
   
 5.  請根據適用的刪除選項，使用下列其中一組程式碼：  
   
-    -   若要刪除 DAC 註冊但讓資料庫保持不變，使用`Unmanage()`方法。  
+    -   若要刪除 DAC 註冊但讓資料庫保持不變，請使用 `Unmanage()` 方法。  
   
     -   若要刪除 DAC 註冊並卸離資料庫，請使用 `Uninstall()` 方法並指定 `DetachDatabase`。  
   
-    -   若要刪除 DAC 註冊並卸除資料庫，使用`Uninstall()`方法並指定`DropDatabase`。  
+    -   若要刪除 DAC 註冊並卸除資料庫，請使用 `Uninstall()` 方法並指定 `DropDatabase`。  
   
 ### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>刪除 DAC 但保留資料庫的範例 (PowerShell)  
- 下列範例會刪除名為 MyApplication 使用 DAC`Unmanage()`方法刪除 DAC 但讓資料庫保持不變。  
+ 下列範例使用 `Unmanage()` 方法刪除 DAC 但讓資料庫保持不變，以刪除名為 MyApplication 的 DAC。  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -171,7 +171,7 @@ $dacstore.Unmanage($dacName)
 ```  
   
 ### <a name="example-deleting-the-dac-and-detaching-the-database-powershell"></a>刪除 DAC 並卸離資料庫的範例 (PowerShell)  
- 下列範例會刪除名為 MyApplication 使用 DAC`Uninstall()`方法刪除 DAC 並卸離資料庫。  
+ 下列範例使用 `Uninstall()` 方法刪除 DAC 並卸離資料庫，以刪除名為 MyApplication 的 DAC。  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -224,6 +224,6 @@ $dacName  = "MyApplication"
  [部署資料層應用程式](deploy-a-data-tier-application.md)   
  [將資料庫註冊為 DAC](register-a-database-as-a-dac.md)   
  [SQL Server 資料庫的備份與還原](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [資料庫卸離和附加 &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  
+ [資料庫卸離與附加 &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  
   
   

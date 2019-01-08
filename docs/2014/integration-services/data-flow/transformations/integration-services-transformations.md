@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transformations [Integration Services], listed
@@ -22,12 +21,12 @@ ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 288eb3b2e8e8b86d27c50efdaf6a1f6a2754e91d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76157486751a08d17cf46de312f63e6e41dc3cb1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140716"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785230"
 ---
 # <a name="integration-services-transformations"></a>Integration Services 轉換
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 轉換是封裝之資料流程中的元件，用以彙總、合併、散發和修改資料。 轉換還可以執行查閱作業，並產生範例資料集。 此章節描述 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所包含的轉換，並解釋其運作方式。  
@@ -83,7 +82,7 @@ ms.locfileid: "48140716"
 |[合併聯結轉換](merge-join-transformation.md)|使用 FULL、LEFT 或 INNER 聯結來聯結兩個資料集的轉換。|  
 |[查閱轉換](lookup-transformation.md)|在參考資料表中使用完全比對查閱值的轉換。|  
 |[快取轉換](cache-transform.md)|將資料流程中已連接資料來源的資料寫入快取連接管理員以便將資料寫入快取檔案的轉換。 「查閱」轉換會在快取檔案的資料上執行查閱。|  
-|[平衡型資料分配器轉換](balanced-data-distributor-transformation.md)|轉換會將傳入資料列的緩衝區一致地分佈到個別執行緒上的輸出，以提升在多核心和多處理器伺服器上執行之 SSIS 封裝的效能。|  
+|[平衡資料分佈器轉換](balanced-data-distributor-transformation.md)|轉換會將傳入資料列的緩衝區一致地分佈到個別執行緒上的輸出，以提升在多核心和多處理器伺服器上執行之 SSIS 封裝的效能。|  
   
 ## <a name="auditing-transformations"></a>稽核轉換  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括下列轉換，用以稽核資訊與計數資料列。  

@@ -11,12 +11,12 @@ ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 142cdef210c541fb1394b84c8297823f36358ea0
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 6c0bf5769d20d806944a3b312ce0e65bc71c42aa
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906058"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407095"
 ---
 # <a name="kpis-ssas-tabular"></a>KPI (SSAS 表格式)
   表格式模型中的「關鍵效能指標」(KPI) 可用來針對由量值或絕對值定義的「目標」值，量測由「基底」量值定義之值的績效。 本主題為表格式模型作者提供對於表格式模型中 KPI 的基本了解。  
@@ -48,7 +48,7 @@ ms.locfileid: "48906058"
 ##  <a name="bkmk_example"></a> 範例  
  任職於 Adventure Works 的銷售經理想要建立樞紐分析表，用來快速顯示銷售員工是否達成給定期間 (年份) 的銷售配額。 對於每個銷售員工，她要樞紐分析表顯示實際銷售金額 (美元)、銷售配額量 (美元)，以及顯示每個銷售員工狀態是低於、等於或高於其銷售配額的簡單圖形。 她希望能依年份配量這些資料。  
   
- 為了達成目的，銷售經理請組織的 BI 方案開發人員協助將銷售 KPI 加入至 AdventureWorks 表格式模型。 然後銷售經理使用 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 連接至 Adventure Works 表格式模型做為資料來源，並建立具有欄位 (量值和 KPI) 和交叉分析篩選器的樞紐分析表，以分析銷售主力是否達成其配額。  
+ 若要這樣做，銷售經理請組織的 BI 方案開發人員，將銷售 KPI 加入至 AdventureWorks 表格式模型的協助。 然後銷售經理使用 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 連接至 Adventure Works 表格式模型做為資料來源，並建立具有欄位 (量值和 KPI) 和交叉分析篩選器的樞紐分析表，以分析銷售主力是否達成其配額。  
   
  在模型中，FactResellerSales 資料表的 SalesAmount 資料行上建立了量值，提供每個銷售員工的實際銷售金額 (美元)。 此量值會定義 KPI 的基底值。  
   
@@ -71,7 +71,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  現在已建立量值做為 KPI 的基底值和目標值，Sales 量值就會延伸至新的銷售 KPI。 在銷售 KPI 中，目標 SalesAmountQuota 量值是定義為目標值。 狀態臨界值是定義為範圍百分比，其目標為 100%，表示 Sales 量值所定義的實際銷售符合目標 SalesAmoutnQuota 量值所定義的配額量。 高低百分比定義於狀態列，而且選取圖形類型。  
   
- 銷售經理現在可以將 KPI 的基底值、目標值和狀態加入至 Values 欄位，藉以建立樞紐分析表。 Employees 資料行會加入至 RowLabel 欄位，而 CalendarYear 資料行則會加入為交叉分析篩選器。  
+ 銷售經理現在可以建立樞紐分析表加入 [值] 欄位中的 KPI 的基底值、 目標值和狀態。 Employees 資料行會加入至 RowLabel 欄位，而 CalendarYear 資料行則會加入為交叉分析篩選器。  
   
  銷售經理現在可以依年份來配量每個銷售員工的實際銷售金額、銷售配額量和狀態。 她可以分析數年來銷售趨勢，決定是否需要調整銷售員工的銷售配額。  
   

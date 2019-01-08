@@ -20,12 +20,12 @@ ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b376924dfb1833165a1f40ecfd1487c49eb2dcb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a8646fba41809fe3ed6a062e7a066ed0dce5c007
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604618"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516724"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
 建立空的中斷[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -62,7 +62,7 @@ object.CreateRecordset(ColumnInfos)
   
  下表列出[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)所支援的值**CreateRecordset**方法。 所列的號碼是用來定義欄位的參考編號。  
   
- 每一個資料類型是固定的長度或可變長度。 固定長度類型應該定義大小為 – 1，，因為系統會預先決定大小，但仍需要大小定義。 可變長度資料類型可讓從 1 到 32767 之間的大小。  
+ 每一個資料類型是固定的長度或可變長度。 固定長度類型應該定義大小為-1，，因為系統會預先決定大小，但仍需要大小定義。 可變長度資料類型可讓從 1 到 32767 之間的大小。  
   
  針對某些變數資料類型，類型可以強制轉型到替代資料行中指出的類型。 您將不會看到替代項目直到之後**資料錄集**建立及填入。 然後您可以檢查實際的資料類型，如有必要。  
   

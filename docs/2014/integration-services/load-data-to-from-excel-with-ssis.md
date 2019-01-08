@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8fedf74029c0e1bf50e87b10c30d354c80786650
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: 90accbf1e7d5cc683b862707e0688c5b32d86242
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991251"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778310"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 從 Excel 匯入資料，或將資料匯出至 Excel
 
@@ -41,7 +41,7 @@ ms.locfileid: "49991251"
 
 您可能必須下載適用於 Excel 的連線元件，如果它們尚未安裝的話，然後才能從 Excel 匯入資料，或將資料匯出至 Excel。 預設不會安裝適用於 Excel 的連線元件。
 
-在這裡下載適用於 Excel 的連線元件最新版本：[Microsoft Access Database Engine 2016 可轉散發套件](https://www.microsoft.com/download/details.aspx?id=54920)。
+這裡下載適用於 Excel 的連線元件最新版本：[Microsoft Access Database Engine 2016 可轉散發套件](https://www.microsoft.com/download/details.aspx?id=54920)。
   
 最新版的元件可以開啟舊版 Excel 所建立的檔案。
 
@@ -53,7 +53,7 @@ ms.locfileid: "49991251"
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-如果您無法安裝 2016 可轉散發套件，請改為從這裡安裝 2010 可轉散發套件：[Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255) (Microsoft Access 資料庫引擎 2010 可轉散發套件)。 (沒有任何適用於 Excel 2013 的可轉散發套件。)
+如果您無法安裝 2016 可轉散發套件，2010 可轉散發套件而是從這裡安裝：[Microsoft Access 資料庫引擎 2010 可轉散發套件](https://www.microsoft.com/download/details.aspx?id=13255)。 (沒有任何適用於 Excel 2013 的可轉散發套件。)
 
 ## <a name="specify-excel"></a> 指定 Excel
 
@@ -161,17 +161,17 @@ ms.locfileid: "49991251"
 
 Excel 驅動程式只能辨識有限的一組資料類型。 例如，所有的數值資料行都會被解譯為倍整數 (DT_R8)，而所有的字串資料行 (備忘錄資料行除外) 全都會被解譯成 255 個字元的 Unicode 字串 (DT_WSTR)。 SSIS 對應 Excel 資料類型的情況如下：
 
--   數值 – 雙精確度浮點數 (DT_R8)
+-   數值 - 雙精確度浮點數 (DT_R8)
 
--   貨幣 – 貨幣 (DT_CY)
+-   貨幣 - 貨幣 (DT_CY)
 
--   布林值 – 布林值 (DT_BOOL)
+-   布林值 - 布林值 (DT_BOOL)
 
--   日期/時間 – datetime (DT_DATE)
+-   日期/時間 - datetime (DT_DATE)
 
--   字串 – Unicode 字串，長度 255 (DT_WSTR)
+-   字串 - Unicode 字串，長度 255 (DT_WSTR)
 
--   備忘錄 – Unicode 文字資料流 (DT_NTEXT)
+-   備忘錄 - Unicode 文字資料流 (DT_NTEXT)
 
 ### <a name="data-type-and-length-conversions"></a>資料類型和長度轉換
 

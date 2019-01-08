@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - ProtocolName Property (ClientNetworkProtocolProperty Class)
@@ -20,12 +18,12 @@ ms.assetid: 77c53201-4fab-481e-9b3b-57d0b8b83113
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ec4191cbb20a06325963cf7cdba80efd3b409452
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4550e48c1ee31e088303e58007281050bac8e452
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152157"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783970"
 ---
 # <a name="protocolname-property-clientnetworkprotocolproperty-class"></a>ProtocolName 屬性 (ClientNetworkProtocolProperty 類別)
   取得擁有所參考之目前屬性的通訊協定的名稱[PropertyIdx 屬性 （ClientNetworkProtocolProperty 類別）](clientnetworkprotocolproperty-class.md)值。  

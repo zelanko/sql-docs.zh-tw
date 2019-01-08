@@ -13,12 +13,12 @@ ms.assetid: a1a03ef9-b6e8-4127-bad0-eae261251472
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: cd158f652f198c26ba0a1a489c113a36589fc495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7fb88b22ae3c1a1ebdee9dc0167169e2cdbc4b3c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700186"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520204"
 ---
 # <a name="managing-backups-oracletosql"></a>管理備份 (OracleToSQL)
 Oracle 備份管理可讓您備份和還原之前或之後執行測試的表格資料。 您也可以管理與管理備份的內容對話方塊中的備份內容。  
@@ -26,7 +26,7 @@ Oracle 備份管理可讓您備份和還原之前或之後執行測試的表格�
 ## <a name="oracle-backup-management"></a>Oracle 備份管理  
   
 ### <a name="backup"></a>Backup  
-若要開啟 備份對話方塊中的，測試人員在功能表上指向 Oracle 備份管理，然後按一下 備份... 在 [備份] 對話方塊中，您會發現 Oracle 中繼資料樹狀目錄中顯示所有資料表的載入 Oracle 結構描述。 選取要執行備份的一或多個資料表。  
+若要開啟 備份對話方塊中的，測試人員在功能表上指向 Oracle 備份管理，然後按一下 備份...在 備份 對話方塊中，您會發現 Oracle 中繼資料樹狀目錄中顯示所有資料表的載入 Oracle 結構描述。 選取要執行備份的一或多個資料表。  
   
 下列按鈕位於對話方塊：  
   
@@ -37,7 +37,7 @@ Oracle 備份管理可讓您備份和還原之前或之後執行測試的表格�
 -   按一下 **取消**按鈕以關閉對話方塊。  
   
 ### <a name="restore"></a>Restore  
-若要開啟 還原 對話方塊，在 測試 功能表上指向 Oracle 備份管理，然後按一下 還原... 您在這裡可以找到包含在備份中可用的資料表的樹狀結構。 選取要還原其資料的一或多個資料表。  
+若要開啟 還原 對話方塊，在 測試 功能表上指向 Oracle 備份管理，然後按一下 還原...您在這裡可以找到包含在備份中可用的資料表的樹狀結構。 選取要還原其資料的一或多個資料表。  
   
 下列按鈕位於對話方塊：  
   
@@ -48,7 +48,7 @@ Oracle 備份管理可讓您備份和還原之前或之後執行測試的表格�
 -   按一下 **取消**按鈕以關閉對話方塊。  
   
 ### <a name="managing-backup-contents"></a>管理備份的內容  
-若要開啟 管理備份目錄，在 測試 功能表上指向 Oracle 備份管理，然後按一下 備份內容... 您在這裡可以找到包含在備份中的資料表的樹狀結構。  
+若要開啟 管理備份目錄，在 測試 功能表上指向 Oracle 備份管理，然後按一下 備份內容...您在這裡可以找到包含在備份中的資料表的樹狀結構。  
   
 下列按鈕位於對話方塊：  
   
@@ -73,7 +73,7 @@ SQL Server 備份管理可讓您備份和還原之前或之後執行測試的表
 -   按一下 **取消**按鈕以關閉對話方塊。  
   
 ### <a name="restore"></a>Restore  
-若要開啟 還原 對話方塊，在 測試 功能表上指向 SQL Server 備份 Management 中，按一下 還原... 您在這裡可以找到包含在備份中可用的資料表的樹狀結構。 選取要還原其資料的一或多個資料表。  
+若要開啟 還原 對話方塊，在 測試 功能表上指向 SQL Server 備份 Management 中，按一下 還原...您在這裡可以找到包含在備份中可用的資料表的樹狀結構。 選取要還原其資料的一或多個資料表。  
   
 下列按鈕位於對話方塊：  
   
@@ -84,7 +84,7 @@ SQL Server 備份管理可讓您備份和還原之前或之後執行測試的表
 -   按一下 **取消**按鈕以關閉對話方塊。  
   
 ### <a name="managing-backup-contents"></a>管理備份的內容  
-若要開啟 管理備份目錄，在軟體測試人員 功能表上指向 SQL Server 備份管理，然後按一下 備份內容... 您在這裡可以找到包含在備份中的資料表的樹狀結構。  
+若要開啟 管理備份目錄，在軟體測試人員 功能表上指向 SQL Server 備份管理，然後按一下 備份內容...您在這裡可以找到包含在備份中的資料表的樹狀結構。  
   
 下列按鈕位於對話方塊：  
   

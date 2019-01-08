@@ -11,12 +11,12 @@ ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fbeb44d09f9825a640bc849f4127751ef39aa72c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f96a4b976d338e7f005d0f731bac0b58f5798bb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118530"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401473"
 ---
 # <a name="powerpivot-health-rules---configure"></a>PowerPivot 健全狀況規則 - 設定
   PowerPivot for SharePoint 包含的 SharePoint 健全狀況規則可幫助您監控及修復伺服器可用性與組態問題。 套用至 PowerPivot for SharePoint 的健全狀況規則會出現在 [檢閱規則定義] 頁面中。  
@@ -29,10 +29,10 @@ ms.locfileid: "48118530"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **注意** ：健全狀況規則設定是針對 SQL Server Analysis Services 執行個體和 PowerPivot 服務應用程式分別設定。 請使用本主題的指示來設定每一個服務的健全狀況規則。 如果是 SharePoint 2013 部署， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 只會使用服務應用程式。 因此， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 會針對不同版本的 SharePoint 安裝不同組的健全狀況規則。 請參閱主題中的 「 版本 」 資料行[健全狀況規則參考&#40;PowerPivot for SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md)，或者您可以執行下列 Windows PowerShell 命令來查看已安裝的規則。  
+ **注意：** 健全狀況規則設定是針對 SQL Server Analysis Services 執行個體和 PowerPivot 服務應用程式分別設定。 請使用本主題的指示來設定每一個服務的健全狀況規則。 如果是 SharePoint 2013 部署， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 只會使用服務應用程式。 因此， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 會針對不同版本的 SharePoint 安裝不同組的健全狀況規則。 請參閱主題中的 「 版本 」 資料行[健全狀況規則參考&#40;PowerPivot for SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md)，或者您可以執行下列 Windows PowerShell 命令來查看已安裝的規則。  
   
 ```  
-Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
+Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like "*power*"}  | format-table -property * -autosize | out-default  
 ```  
   
  **本主題內容：**  
@@ -74,27 +74,27 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      CPU 資源配置不足 (預設為 80%)  
      如果 Analysis Services 伺服器處理序 (msmdsrv.exe) 使用的 CPU 資源在 4 個小時期間超過或等於 80% (如 [資料收集間隔] 設定所指定)，就會觸發這個健全狀況規則。  
   
-     此組態設定會對應到 **[檢閱問題與方案]** 頁面上的以下規則定義： **[PowerPivot: Analysis Services 的 CPU 資源不足，無法執行要求的作業]**。  
+     此組態設定會對應到以下規則定義上**檢閱問題與方案**頁面：**PowerPivot:Analysis Services 沒有足夠的 CPU 資源來執行要求的作業。**  
   
      系統的 CPU 資源不足 (預設為 90%)  
      如果伺服器的 CPU 資源在 4 個小時的期間內大於或等於 90% (如 [資料收集間隔] 設定所指定)，就會觸發這個健全狀況規則。 整體 CPU 使用量會以健全狀態為基礎之負載平衡演算法的一部分來衡量，以伺服器健全狀態量值的形式監視 CPU 使用量。  
   
-     此組態設定會對應到 **[檢閱問題與方案]** 頁面上的以下規則定義： **[PowerPivot: 整體 CPU 使用率太高]**。  
+     此組態設定會對應到以下規則定義上**檢閱問題與方案**頁面：**PowerPivot:整體 CPU 使用率偏太高。**  
   
      記憶體臨界值不足 (預設為 5%)  
      在 SharePoint 應用程式伺服器上，SQL Server Analysis Services 執行個體應該一律擁有永遠是未使用的少量保留記憶體。 由於伺服器對於大部分的作業都會繫結記憶體，如果此伺服器一直都沒有執行到上限，則運作狀況會最好。 5% 的未使用記憶體會計算為配置給 Analysis Services 之記憶體的百分比。 例如，如果您的總記憶體為 200 GB，並將 80% 的記憶體 (或 160 GB) 配置給 Analysis Services，則 5% 的未使用記憶體為 160 GB 的 5% (或 8 GB)。  
   
-     此組態設定會對應到 **[檢閱問題與方案]** 頁面上的以下規則定義： **[PowerPivot: Analysis Services 的記憶體不足，無法執行要求的作業]**。  
+     此組態設定會對應到以下規則定義上**檢閱問題與方案**頁面：**PowerPivot:Analysis Services 沒有足夠的記憶體來執行要求的作業。**  
   
      最大連接數目 (預設為 100)  
      如果 Analysis Services 執行個體的連接數目在 4 個小時的期間超過或等於 100 個連接 (如 [資料收集間隔] 設定所指定)，就會觸發這個健全狀況規則。 這個預設值為任意值 (而不是根據伺服器的硬體規格或使用者活動)，所以您可能會根據您的環境中的伺服器容量和使用者活動來提高或降低此值。  
   
-     此組態設定會對應到 **[檢閱問題與方案]** 頁面上的以下規則定義： **[PowerPivot: 連接數目太多表示要部署更多的伺服器才能處理目前的負載]**。  
+     此組態設定會對應到以下規則定義上**檢閱問題與方案**頁面：**PowerPivot:高連線數表示應該部署更多的伺服器才能處理目前的負載。**  
   
      磁碟空間不足 (預設為 5%)  
      每次要求資料庫時，都會使用磁碟空間來快取 PowerPivot 資料。 當磁碟空間不足時，這個規則會讓您知道這個狀況。 根據預設，當備份資料夾所在之磁碟機上的磁碟空間低於 5% 時，便會觸發此健全狀況規則。 如需有關磁碟使用量的詳細資訊，請參閱 <<c0> [ 設定磁碟空間使用量&#40;PowerPivot for SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)。</c0>  
   
-     此組態設定會對應到 **[檢閱問題與方案]** 頁面上的以下規則定義： **[PowerPivot: PowerPivot 資料快取所在之磁碟機上的磁碟空間不足]**。  
+     此組態設定會對應到以下規則定義上**檢閱問題與方案**頁面：**PowerPivot:磁碟空間不足的快取 PowerPivot 資料所在的磁碟機上。**  
   
      資料收集間隔 (小時)  
      您可以指定資料收集期間，該期間用來計算觸發健全狀況規則所使用的數字。 雖然系統會持續受到監控，但是用來觸發健全狀況規則警告的臨界值會使用一段預先定義之間隔內所產生的資料來計算。 預設間隔是 4 小時。 伺服器會擷取過去 4 小時所收集的系統和使用量資料，以評估使用者連接數目、磁碟空間使用量以及 CPU 和記憶體使用率。  
@@ -116,7 +116,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      連接負載比率 (預設為 20%)  
      如果載入事件數目相對於連接事件數目而言較高，則會觸發這個健全狀況規則，發出伺服器可能卸載資料庫太快的訊號，或減少快取設定太極端的訊號。  
   
-     此組態設定會對應到 **[檢閱問題與方案]** 頁面上的以下規則定義： **[PowerPivot: 連接的載入事件的比率過高]**。  
+     此組態設定會對應到以下規則定義上**檢閱問題與方案**頁面：**PowerPivot:事件載入連接的比率會太高。**  
   
      資料收集間隔 (預設為 4 小時)  
      您可以指定資料收集期間，該期間用來計算觸發健全狀況規則所使用的數字。 雖然系統會持續受到監控，但是用來觸發健全狀況規則警告的臨界值會使用一段預先定義之間隔內所產生的資料來計算。 預設間隔是 4 小時。 伺服器會擷取過去 4 小時所收集的系統和使用量資料，以評估收集負載比率。  
@@ -126,7 +126,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
      如需有關使用量資料收集的詳細資訊，請參閱 <<c0> [ 設定使用量資料收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。</c0>  
   
-     此組態設定會對應到 **[檢閱問題與方案]** 頁面上的以下規則定義： **[PowerPivot: 使用量資料並未以預期的頻率更新]**。  
+     此組態設定會對應到以下規則定義上**檢閱問題與方案**頁面：**PowerPivot:不是預期的頻率更新使用量資料。**  
   
 ## <a name="see-also"></a>另請參閱  
  [設定磁碟空間使用量&#40;PowerPivot for SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)   

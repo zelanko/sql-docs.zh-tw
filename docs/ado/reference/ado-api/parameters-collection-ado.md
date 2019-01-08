@@ -18,12 +18,12 @@ ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28832f7e96ddbb149db5561654d55ef0003551cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dbfff2a8db4405e19eb448e7bd7db5c8ac236f8
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657846"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321794"
 ---
 # <a name="parameters-collection-ado"></a>Parameters 集合 (ADO)
 包含所有[參數](../../../ado/reference/ado-api/parameter-object.md)的物件[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  
@@ -45,7 +45,7 @@ ms.locfileid: "47657846"
   
 2.  當呼叫預存程序使用參數和明確附加的參數**參數**集合**附加**，傳回的值/輸出參數應該附加至**參數**集合。 傳回的值必須先附加至**參數**集合。 使用**Append**新增到其他的參數**參數**定義順序的集合。 例如，預存程序 SPWithParam 有兩個參數。 第一個參數， *InParam*，並輸入的參數定義為 adVarChar (20)，第二個參數， *OutParam*，是一個 output 參數，定義為 adVarChar (20)。 您可以擷取傳回值/輸出參數為下列程式碼。  
   
-    ```  
+    ```vb
     ' Open Connection Conn  
     set ccmd = CreateObject("ADODB.Command")  
     ccmd.Activeconnection= Conn  
@@ -55,7 +55,7 @@ ms.locfileid: "47657846"
   
     ccmd.parameters.Append ccmd.CreateParameter(, adInteger, adParamReturnValue, , NULL)   ' return value  
     ccmd.parameters.Append ccmd.CreateParameter("InParam", adVarChar, adParamInput, 20, "hello world")   ' input parameter  
-    ccmd.parameters.Append ccmd.CreateParameter("OutParam", adVarChar, adParamOuput, 20, NULL)   ' output parameter  
+    ccmd.parameters.Append ccmd.CreateParameter("OutParam", adVarChar, adParamOutput, 20, NULL)   ' output parameter  
   
     ccmd.execute()  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47657846"
   
 3.  當呼叫預存程序使用參數和設定的參數，藉由呼叫**項目**方法**參數**集合，預存程序的傳回值/輸出參數可以從擷取**參數**集合。 例如，預存程序 SPWithParam 有兩個參數。 第一個參數， *InParam*，並輸入的參數定義為 adVarChar (20)，第二個參數， *OutParam*，是一個 output 參數，定義為 adVarChar (20)。 您可以擷取傳回值/輸出參數為下列程式碼。  
   
-    ```  
+    ```vb
     ' Open Connection Conn  
     set ccmd = CreateObject("ADODB.Command")  
     ccmd.Activeconnection= Conn  

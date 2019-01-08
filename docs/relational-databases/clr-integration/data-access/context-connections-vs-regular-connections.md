@@ -13,18 +13,18 @@ ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 63fd25aa796be6f0fce27bfbfa5b7da36d35e2d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4810a7a7d117c498ce74dbe978716900b25d19f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619596"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516776"
 ---
 # <a name="context-connections-vs-regular-connections"></a>內容連線與一般連線
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   如果您要連接到遠端伺服器，請務必使用正常連接而非內容連接。 如果您需要連接到執行預存程序或函數的相同伺服器，在大部分的情況下，請使用內容連接。 其優點包含可在相同的交易空間執行，以及不必重新驗證等等。  
   
- 此外，使用內容連接通常會使效能更好，而且資源的使用量更少。 內容連接是一種僅限同處理序的連接，因此，它可以略過網路通訊協定與傳輸層來傳送 Transact-SQL 陳述式並接收結果，藉以「直接」與伺服器聯繫。 系統也會略過驗證處理序。 下圖顯示的主要元件**SqlClient**受控提供者，以及如何的不同元件彼此互動時使用一般連線，並使用內容連線時。  
+ 此外，使用內容連接通常會使效能更好，而且資源的使用量更少。 內容連接是程序僅在連線，因此它可以連絡伺服器 「 直接 」 是藉由略過網路通訊協定和傳輸層來傳送 TRANSACT-SQL 陳述式，並接收結果。 系統也會略過驗證處理序。 下圖顯示的主要元件**SqlClient**受控提供者，以及如何的不同元件彼此互動時使用一般連線，並使用內容連線時。  
   
  ![程式碼的內容和一般連接的路徑。](../../../relational-databases/clr-integration/data-access/media/clrintdataaccess.gif "內容和一般連接的程式碼路徑。")  
   

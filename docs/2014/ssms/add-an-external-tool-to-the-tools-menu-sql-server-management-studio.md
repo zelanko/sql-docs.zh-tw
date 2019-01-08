@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [SQL Server], external
@@ -15,12 +15,12 @@ ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ae5d3d75a5d7b7acdb5d480ded584a119b54ec5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cca14f144e442fbe75e41dec6ce652c4603863b9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099788"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771730"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>將外部工具加入至工具功能表 (SQL Server Management Studio)
   您可以從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 啟動任何 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 或 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 應用程式。 您也可以將外部應用程式新增至 [工具] 功能表，再從功能表上執行。  

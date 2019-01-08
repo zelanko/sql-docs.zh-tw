@@ -17,12 +17,12 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 91ca323cf22c41b44ae9f1664e1ca5801aad1e37
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 20fb2d2ec2094e87b904ffdc616942bfb449840c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681356"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527997"
 ---
 # <a name="handling-namespaces-in-xquery"></a>處理 XQuery 中的命名空間
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ WHERE ProductModelID=7
   
 ```  
 <AWMI:step xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>. </AWMI:step>  
-…  
+...  
 ```  
   
  請注意，**命名空間**關鍵字用來定義新的命名空間前置詞"AWMI:"。 接著，必須針對所有落在該命名空間範圍中的元素，在查詢中使用此前置詞。  
@@ -68,7 +68,7 @@ where ProductModelID=7
   
 ```  
 <step xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <material>aluminum sheet MS-2341</material> into the <tool>T-85A framing tool</tool>. </step>  
-…  
+...  
 ```  
   
  請注意，在此範例中，所定義的命名空間 (`"https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`) 會覆寫預設或空的命名空間。 因此，用來進行查詢的路徑運算式中已沒有命名空間前置詞。 結果中出現的元素名稱也不再有命名空間前置詞。 此外，預設命名空間會套用到所有的元素，但不會套用到元素的屬性。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
@@ -13,12 +12,12 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4d3afbb967238cfef049b491f6ab871f830708b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04c63477a53de07777806aa8efb1fda78ef44264
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102458"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791100"
 ---
 # <a name="use-a-recordset-destination"></a>使用資料錄集目的地
   資料錄集目的地不會將資料儲存到外部資料來源， 而是將資料儲存到資料類型為 `Object` 之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝變數內儲存的資料錄集記憶體中。 當資料錄集目的地儲存資料之後，您通常要使用具有 Foreach ADO 列舉值的 Foreach 迴圈容器來一次處理資料錄集的一個資料列。 Foreach ADO 列舉值會將目前資料列的每一資料行值儲存到個別封裝變數之中。 接著，您在 Foreach 迴圈容器中設定的工作會讀取這些變數中的值，然後對它們執行一些動作。  
@@ -38,7 +37,7 @@ ms.locfileid: "48102458"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，建立或開啟 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  建立變數，會包含儲存到資料錄集目的地中，記憶體中資料錄集，並將變數的類型設定為`Object`。  
+2.  建立一個變數，在其中加入由資料錄集目的地儲存到記憶體中的資料錄集，然後將變數類型設為 `Object`。  
   
 3.  建立其他適當類型的變數，在其中加入您要使用之資料錄集的每一資料行值。  
   
@@ -69,21 +68,21 @@ ms.locfileid: "48102458"
   
 3.  在 [變數] 視窗中建立變數，用以保存資料錄集和目前資料列的資料行值：  
   
-    1.  建立名為的變數`BonusRecordset`，並將其類型設定為`Object`。  
+    1.  建立名稱為 `BonusRecordset` 的變數，然後將其類型設為 `Object`。  
   
-         `BonusRecordset`變數會保存資料錄集。  
+         `BonusRecordset` 變數會保存資料錄集。  
   
-    2.  建立名為的變數`EmailAddress`，並將其類型設定為`String`。  
+    2.  建立名稱為 `EmailAddress` 的變數，然後將其類型設為 `String`。  
   
-         `EmailAddress`變數會保存銷售人員的電子郵件地址。  
+         `EmailAddress` 變數會保存銷售人員的電子郵件地址。  
   
-    3.  建立名為的變數`FirstName`，並將其類型設定為`String`。  
+    3.  建立名稱為 `FirstName` 的變數，然後將其類型設為 `String`。  
   
-         `FirstName`變數會保存銷售人員的名字。  
+         `FirstName` 變數會保存銷售人員的名字。  
   
-    4.  建立名為的變數`Bonus`，並將其類型設定為`Double`。  
+    4.  建立名稱為 `Bonus` 的變數，然後將其類型設為 `Double`。  
   
-         `Bonus`變數會保存銷售人員的獎金金額。  
+         `Bonus` 變數會保存銷售人員的獎金金額。  
   
 #### <a name="to-configure-the-connection-managers"></a>設定連接管理員  
   

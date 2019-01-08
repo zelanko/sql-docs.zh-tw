@@ -19,19 +19,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3c4b57cd20addca8091bfef2bf3ecaf6e157817
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c0064e35be2ab514e93b9119f7994849cf50cc4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844666"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409735"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   傳回彙總快取的函式的效能統計資料。 此檢視會傳回一個資料列，每個快取的函式計畫，而且資料列的存留期，只要函式保持快取。 從快取移除函式時，也會刪除對應的資料列從這個檢視。 此時，效能統計資料 SQL 追蹤事件會引發類似**sys.dm_exec_query_stats**。 傳回純量函式，包括記憶體中的函式和 CLR 純量函式的相關資訊。 不會傳回資料表值函式的相關資訊。  
   
- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，動態管理檢視不可以公開可能會影響資料庫內含項目的資訊或公開有關使用者可存取之其他資料庫的資訊。 為了避免公開此資訊，包含不屬於連接租用戶之資料的每個資料列都會被篩選出來。  
+ 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，動態管理檢視不可以公開可能會影響資料庫內含項目的資訊或公開有關使用者可存取之其他資料庫的資訊。 若要避免公開此資訊，每個資料列，其中包含不屬於連接租用戶的資料會被篩選掉。  
   
 > [!NOTE]
 > 初始查詢**sys.dm_exec_function_stats**可能會產生不正確的結果，如果沒有目前在伺服器上執行的工作負載。 您可以重複執行查詢，以找出較精確的結果。  
@@ -41,8 +41,8 @@ ms.locfileid: "47844666"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|此函式所在的資料庫識別碼。|  
 |**object_id**|**int**|函式的物件識別碼。|  
-|**type**|**char(2)**|物件的型別： FN = 純量值函式|  
-|**type_desc**|**nvarchar(60)**|物件類型的描述： SQL_SCALAR_FUNCTION|  
+|**type**|**char(2)**|物件的類型： FN = 純量值函式|  
+|**type_desc**|**nvarchar(60)**|物件類型的描述：SQL_SCALAR_FUNCTION|  
 |**sql_handle**|**varbinary(64)**|這可用來將查詢中相互關聯**sys.dm_exec_query_stats** ，從內部執行此函式。|  
 |**plan_handle**|**varbinary(64)**|記憶體中計畫的識別碼。 這個識別碼是暫時性的，只有當計畫留在快取時才會保留。 此值可搭配**sys.dm_exec_cached_plans**動態管理檢視。<br /><br /> 一律為 0x000 時的原生編譯的函式的查詢記憶體最佳化資料表。|  
 |**cached_time**|**datetime**|此函式加入快取的時間。|  

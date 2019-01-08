@@ -1,5 +1,5 @@
 ---
-title: 附錄 e： 純量函式 |Microsoft Docs
+title: 附錄 E：純量函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94e33460d3c50363e96e90fb457467b8e5cda315
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71c80efdb2f4a87537d472ee4b6dc6bdc65af70f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631856"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540512"
 ---
-# <a name="appendix-e-scalar-functions"></a>附錄 E：純量函式
+# <a name="appendix-e-scalar-functions"></a>附錄 E：純量函數
 ODBC 會指定下列類型的純量函式的每個對應的章節，此附錄中提供這些函式類型的詳細資訊。 函式描述會包含相關聯的語法。  
   
  本附錄包含下列主題。  

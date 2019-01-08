@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7dff47b3ebd6277a34a782b898f73dbec8a7ed3b
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: d4cb1b821604d125bc81148a06fb613c8547a449
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905698"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755870"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>SQL Server Integration Services 屬性 (服務索引標籤)
   您可以使用 [[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 屬性] 對話方塊上的 [服務] 索引標籤，來檢視或指定下列選項。  
@@ -50,9 +49,9 @@ ms.locfileid: "48905698"
   
 -   自動：這部電腦啟動時，這項服務會嘗試啟動。  
   
--   停用：這項服務無法啟動。  
+-   已停用：這項服務無法啟動。  
   
- **State**  
- 表示這項服務為執行中、已停止或已停用。 "" 表示狀態變更已暫止。  
+ **狀態**  
+ 表示這項服務為執行中、已停止或已停用。 "**...**" 表示狀態變更已暫止。  
   
   

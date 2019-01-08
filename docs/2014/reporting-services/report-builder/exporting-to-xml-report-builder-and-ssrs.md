@@ -11,12 +11,12 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 947cdf64fa93eadb13724220fc6684813be11fb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0f17e055f4f1ddcf7f19ba58d92c5617c891a5e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116398"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204747"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>匯出至 XML (報表產生器及 SSRS)
   XML 轉譯延伸模組會傳回 XML 格式的報表。 報表 XML 的結構描述為報表特有的，且僅包含資料。 XML 轉譯延伸模組不會轉譯配置資訊，也不會維持分頁。 此延伸模組所產生的 XML 可以匯入資料庫中 (當做 XML 資料訊息使用)，或傳送到自訂應用程式。  
@@ -35,7 +35,7 @@ ms.locfileid: "48116398"
 |文字方塊|轉譯成其容器中的屬性或元素。|  
 |矩形|轉譯成其容器中的元素。|  
 |矩陣資料行群組|轉譯成資料列群組中的元素。|  
-|對應|轉譯成元素中的元素做為其容器。 地圖圖層是地圖的子元素，每一個地圖圖層都包含其地圖成員的元素和地圖成員屬性。|  
+|地圖|轉譯成元素中的元素做為其容器。 地圖圖層是地圖的子元素，每一個地圖圖層都包含其地圖成員的元素和地圖成員屬性。|  
 |圖表|轉譯成元素中的元素做為其容器。 數列是圖表的子元素，而類別目錄是數列的子元素。 轉譯每個圖表值的所有圖表標籤。 標籤和值都會當做屬性加入。|  
 |資料橫條|轉譯成元素中的元素做為其容器，類似圖表。 資料橫條通常不包含階層或標籤，只包含值。|  
 |走勢圖|轉譯成元素中的元素做為其容器，類似圖表。 走勢圖通常不包含階層或標籤，只包含值。|  
@@ -61,14 +61,14 @@ ms.locfileid: "48116398"
   
 |如果所有文字方塊值為|指派的資料類型為|  
 |--------------------------------|---------------------------|  
-|`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
-|`Decimal` (或`Decimal`和任何整數或位元組資料類型)|**xsd:decimal**|  
-|`Float` (或`Decimal`和任何整數或位元組資料類型)|**xsd:float**|  
-|`Double` (或`Decimal`和任何整數或位元組資料類型)|**xsd:double**|  
+|`Int16`、`Int32`、`Int64`、`UInt16`、`UInt32`、`UInt64`、`Byte`、`SByte`|**xsd:integer**|  
+|`Decimal` (或 `Decimal` 及任何整數或位元組資料類型)|**xsd:decimal**|  
+|`Float` (或 `Decimal` 及任何整數或位元組資料類型)|**xsd:float**|  
+|`Double` (或 `Decimal` 及任何整數或位元組資料類型)|**xsd:double**|  
 |`DateTime or DateTime Offset`|**xsd:dateTime**|  
 |`Time`|**xsd:string**|  
 |`Boolean`|**xsd:boolean**|  
-|`String`, `Char`|**xsd:string**|  
+|`String`、 `Char`|**xsd:string**|  
 |其他|**xsd:string**|  
   
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
@@ -81,7 +81,7 @@ ms.locfileid: "48116398"
   
  XML 命名空間定義與結構描述參考屬性也包含在報表元素中 變數會以粗體類型顯示：  
   
- \<**Report** xmlns="**SchemaName**" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
+ \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  變數的值如下：  
   
@@ -121,14 +121,14 @@ ms.locfileid: "48116398"
 ### <a name="tables-matrices-and-lists"></a>資料表、矩陣和清單  
  資料表、矩陣和清單會轉譯成元素。 元素的名稱來自於 Tablix DataElementName RDL 屬性。  
   
-#### <a name="rows-and-columns"></a>資料列與資料行  
+#### <a name="rows-and-columns"></a>資料列和資料行  
  資料行會在資料列中轉譯。  
   
 #### <a name="tablix-corner"></a>Tablix 邊角  
  不會轉譯邊角。 只會轉譯邊角的內容。  
   
 #### <a name="tablix-cells"></a>Tablix 資料格  
- Tablix 資料格會轉譯成元素。 元素的名稱擷取自儲存格的 DataElementName RDL 屬性。  
+ Tablix 資料格會轉譯成元素。 項目名稱擷取自儲存格的 DataElementName RDL 屬性。  
   
 #### <a name="automatic-subtotals"></a>自動小計  
  不會轉譯 Tablix 自動小計。  
@@ -200,7 +200,7 @@ ms.locfileid: "48116398"
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能&#40;報表產生器及 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

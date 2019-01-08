@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 1ba0219a-6c40-41fa-aff9-8c8f41ef3220
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e49af33f5e7c02536757cf408e9b774852a9002b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e966260ac9880ffbdc722abca8eef86c5409da6a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215658"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750860"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>捷徑查詢檔案 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，使用捷徑查詢檔案來快速連接及載入常用的資料。 當您想要將 MDS 資料與其他人分享時，也可以使用。 您應該儲存捷徑查詢檔案並以電子郵件送出，而不是儲存工作表並以電子郵件送出。 如此可確保您可連接到 MDS 儲存機制來取得最新的資料。  
@@ -36,7 +35,7 @@ ms.locfileid: "48215658"
 ## <a name="queryopener-application"></a>QueryOpener 應用程式  
  所有安裝 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 的使用者都已安裝稱為 QueryOpener 的應用程式。 此應用程式是用來在 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中開啟捷徑查詢檔案。 如果您按兩下捷徑查詢檔案，便會自動使用此應用程式在增益集中開啟檔案。  
   
- 當您使用這個應用程式開啟捷徑查詢檔案時，系統會提示您讓連接成為「安全」連接，這表示您信任這個位置的內容。 每當您將連接標示為安全時，它就會加入至清單中。 如果您想要清除此清單，請開啟 **[設定]** 對話方塊，並按一下 **[加入至安全清單的伺服器]** 區段中的 **[全部清除]**。  
+ 當您使用這個應用程式開啟捷徑查詢檔案時，系統會提示您讓連線成為「安全」連線，這表示您信任這個位置的內容。 每當您將連接標示為安全時，它就會加入至清單中。 如果您想要清除此清單，請開啟 **[設定]** 對話方塊，並按一下 **[加入至安全清單的伺服器]** 區段中的 **[全部清除]**。  
   
  應用程式的預設位置是*磁碟機*: \Program Files\Microsoft SQL Server\120\Master Data Services\Excel Add-In\Microsoft.MasterDataServices.QueryOpener.exe。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "48215658"
   
 -   [連接 &#40;適用於 Excel 的 MDS 增益集&#41;](connections-mds-add-in-for-excel.md)  
   
--   [Master Data Services 增益集適用於 Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [適用於 Microsoft Excel 的 Master Data Services 增益集](master-data-services-add-in-for-microsoft-excel.md)  
   
 -   [安全性 &#40;Master Data Services&#41;](../security-master-data-services.md)  
   

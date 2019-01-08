@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.browseprincipals.f1
@@ -13,15 +12,15 @@ ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8389729eac371f01d32d610d69d1d1a8a3d9e8dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96a31970edba4507ab17f93dfb0a139b9a2a1547
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128248"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749541"
 ---
 # <a name="browse-all-principals-dialog-box"></a>瀏覽所有主體對話方塊
-  使用 **[瀏覽所有主體]** 對話方塊選取資料庫主體，以變更主體愛所選專案上的權限，或所選資料夾中包含之所有專案上的權限。  
+  使用 [瀏覽所有主體] 對話方塊選取資料庫主體，以變更主體在所選專案或所選資料夾中包含之所有專案上的權限。  
   
  **您想要做什麼事？**  
   
@@ -33,15 +32,15 @@ ms.locfileid: "48128248"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
-     您正在連接到主控 SSISDB 目錄之 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體。  
+     您正在連線到主控 SSISDB 目錄的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體。  
   
 2.  在 [物件總管] 中，展開樹狀目錄以顯示 **[Integration Services 目錄]** 節點。  
   
 3.  展開 **[SSISDB]** 節點。  
   
-4.  若要變更主體在所選資料中包含之所有專案上的權限，以滑鼠右鍵按一下資料夾，然後按一下 [屬性]。  
+4.  若要變更主體在所選資料中包含之所有專案上的權限，請以滑鼠右鍵按一下資料夾，然後按一下 [屬性]。  
   
-     若要變更主體在所選專案上的權限，展開包含專案的資料夾，以滑鼠右鍵按一下該專案，然後按一下 [屬性]。  
+     若要變更主體在所選專案上的權限，請展開包含專案的資料夾，以滑鼠右鍵按一下該專案，然後按一下 [屬性]。  
   
 5.  選取 **[權限]** 頁面，然後按一下 **[瀏覽]**。  
   

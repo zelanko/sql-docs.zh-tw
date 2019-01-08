@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - system objects [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9110f0a6d86bb4c64426d2340a6d3e9454f62e97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4595fbd7be23414f55a51c2333eee7ebe4f39899
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092418"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783580"
 ---
 # <a name="resource-database"></a>Resource 資料庫
   Resource 資料庫是一個唯讀的資料庫，其中包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]擁有的所有系統物件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統物件 (例如 sys.objects) 實際上會保存在 Resource 資料庫中，但邏輯上會出現在每個資料庫的 sys 結構描述中。 Resource 資料庫不包含使用者資料或使用者中繼資料。  

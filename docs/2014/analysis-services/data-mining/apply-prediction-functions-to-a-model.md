@@ -13,17 +13,17 @@ ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: acb86931d7343d375718efbae0186c67d7a38156
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04b1afa7f9902d0e1510aaab5f84f96b4b01eacc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106674"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519918"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>將預測函數套用至模型
   若要建立預測查詢，您必須先選取查詢所根據的採礦模型。 您可以選取存在於目前專案中的任何採礦模型。  
   
- 在您選取模型之後，請將 [預測函數] 加入查詢中。 請務必了解預測函數有許多用途，您可以預測值，但是也可以取得相關統計資料以及用於產生預測的資訊。 預測函數可以傳回以下類型的值：  
+ 在您選取模型之後，請將 [預測函數] 加入查詢中。 務必要了解預測函數用於許多用途是，您可以預測值，但您也可以取得相關的統計資料，以及用於產生預測的資訊。 預測函數可以傳回以下類型的值：  
   
 -   可預測屬性的名稱以及預測的值。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48106674"
     |||  
     |-|-|  
     |**\<模型名稱 >**|選取此選項，將採礦模型中的值包含在輸出中。 您只能加入可預測的資料行。<br /><br /> 當您加入模型中的資料行時，傳回的結果會是該資料行中的非相異值清單。<br /><br /> 您以這個選項加入的資料行會包含在產生之 DMX 陳述式的 SELECT 部分內。|  
-    |**預測函數**|選取這個選項可瀏覽預測函數清單。<br /><br /> 您選取的值或函數會加入至產生之 DMX 陳述式的 SELECT 部分內。<br /><br /> 系統不會篩選預測函數清單，也不會由您選取的模型類型加以限制。 因此，如果您對於目前模型類型是否支援此函數有任何疑問，您只需要將此函數加入至清單中，並查看是否有錯誤發生。<br /><br /> 會加上 （例如 $ $AdjustedProbability) 的清單項目從巢狀資料表，當您使用函式，會輸出代表資料行`PredictHistogram`。 當您傳回單一資料行而非巢狀資料表時，可以使用這些當做捷徑。|  
+    |**預測函數**|選取這個選項可瀏覽預測函數清單。<br /><br /> 您選取的值或函數會加入至產生之 DMX 陳述式的 SELECT 部分內。<br /><br /> 系統不會篩選預測函數清單，也不會由您選取的模型類型加以限制。 因此，如果您對於目前模型類型是否支援此函數有任何疑問，您只需要將此函數加入至清單中，並查看是否有錯誤發生。<br /><br /> 前有 $ 的清單項目 (例如 $AdjustedProbability) 代表巢狀資料表中的資料行，當您使用 `PredictHistogram` 函數時，該資料表為輸出。 當您傳回單一資料行而非巢狀資料表時，可以使用這些當做捷徑。|  
     |**自訂運算式**|選取這個選項來輸入自訂運算式，然後為輸出指派別名。<br /><br /> 此自訂運算式會加入至產生之 DMX 預測查詢的 SELECT 部分中。<br /><br /> 如果您想要針對包含每一個資料列的輸出加入文字、呼叫 VB 函數或是呼叫自訂預存程序，這個選項會非常實用。<br /><br /> 如需從 DMX 使用 VBA 和 Excel 函數的資訊，請參閱 [MDX 和 DAX 中的 VBA 函數](/sql/mdx/vba-functions-in-mdx-and-dax)。|  
   
 3.  在您加入每一個函數或運算式之後，切換到 DMX 檢視可查看此函數如何加入至 DMX 陳述式內。  
@@ -77,9 +77,9 @@ ms.locfileid: "48106674"
     > [!WARNING]  
     >  要等到您按一下 [結果] 之後，預測查詢產生器才會驗證 DMX。 通常您會發現，查詢產生器所產生的運算式並不是有效的 DMX。 通常原因是因為參考的資料行與可預測資料行無關，或是嘗試預測巢狀資料表中的資料行 (這需要子 SELECT 陳述式)。 此時，您可以切換到 DMX 檢視，並繼續編輯陳述式。  
   
-### <a name="example-create-a-query-on-a-clustering-model"></a>範例：在群集模型上建立查詢  
+### <a name="example-create-a-query-on-a-clustering-model"></a>範例在群集模型上建立查詢  
   
-1.  如果您沒有叢集模型可用來建立此範例查詢，請使用[資料採礦基本教學課程](../../tutorials/basic-data-mining-tutorial.md)建立 [TM_Clustering] 模型。  
+1.  如果您沒有叢集模型可用來建立此範例查詢，請使用 [資料採礦基本教學課程](../../tutorials/basic-data-mining-tutorial.md)建立 [TM_Clustering] 模型。  
   
 2.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下模型 [TM_Clustering]，然後選取 [Build Prediction Query (建立預測查詢)]。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48106674"
     |----------------|--------------|-------------|-------------|  
     |0|叢集 8|954|953.948638926372|  
   
- 如果您想要在陳述式中的其他地方加入其他子句，例如，如果您想要加入 WHERE 子句，您不能使用此方格來加入，而必須先切換到 DMX 檢視。  
+ 如果您想要在其他地方加入其他子句，陳述式中-例如，如果您想要加入 WHERE 子句-您無法使用此方格中，來新增您必須先切換到 DMX 檢視。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦查詢](data-mining-queries.md)  

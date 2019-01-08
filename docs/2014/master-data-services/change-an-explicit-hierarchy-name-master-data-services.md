@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, changing name
@@ -13,12 +12,12 @@ ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 352f01f1efe8998cce8d5dc301dd71a3c0260193
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df02cc4a8f3ed35a360ac6d323ce88640c49247e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202098"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768130"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>變更明確階層名稱 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以變更明確階層的名稱。  
@@ -28,7 +27,7 @@ ms.locfileid: "48202098"
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 ### <a name="to-change-the-name-of-an-explicit-hierarchy"></a>若要變更明確階層的名稱  
   
@@ -51,8 +50,8 @@ ms.locfileid: "48202098"
 9. 按一下 **儲存階層**。  
   
 ## <a name="see-also"></a>另請參閱  
- [明確階層&#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
- [建立明確階層&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [刪除明確階層&#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)  
+ [明確階層 &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
+ [建立明確階層 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
+ [刪除明確階層 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)  
   
   

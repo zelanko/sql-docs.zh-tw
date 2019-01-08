@@ -18,12 +18,12 @@ ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e20a7ebdffc8972a1c3d1449fd65d2560a1d71b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 323ea04d32501f04156ffa81452fad5e5cf86664
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145238"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753080"
 ---
 # <a name="bcpcontrol"></a>bcp_control
   針對檔案和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之間的大量複製，變更各種控制項參數的預設設定。  
@@ -68,7 +68,7 @@ iValue
  BCPFILECP  
  *iValue*包含資料檔案的字碼頁的數目。 您可以指定字碼頁的數目，例如 1252 或 850，或以下任一個值：  
   
- BCPFILE_ACP：檔案中的資料位於用戶端的 Microsoft Windows® 字碼頁。  
+ BCPFILE_ACP： 檔案中的資料是在 Microsoft Windows?? 用戶端字碼頁。  
   
  BCPFILE_OEMCP：檔案中的資料位於用戶端的 OEM 字碼頁 (預設值)。  
   
@@ -120,7 +120,7 @@ iValue
  BCPODBC  
  若為 TRUE，表示**datetime**並**smalldatetime** ODBC 時間戳記逸出序列前置詞和後置詞，會使用字元格式儲存的值。 BCPODBC 選項只適用於 BCP_OUT。  
   
- 若為 FALSE， **datetime**代表 1997 年 1 月 1 日的值會轉換成字元字串： 1997年-01-01 00:00:00.000。 當設定為 TRUE，相同**datetime**值會表示為: {ts ' 1997年-01-01 00:00:00.000'}。  
+ 若為 FALSE， **datetime**代表 1997 年 1 月 1 日的值會轉換成字元字串：1997-01-01 00:00:00.000。 當設定為 TRUE，相同**datetime**值會表示為: {ts ' 1997年-01-01 00:00:00.000'}。  
   
  BCPROWCOUNT  
  傳回受到目前 (或最近) BCP 作業影響的資料列數目。  

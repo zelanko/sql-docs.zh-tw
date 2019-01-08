@@ -13,12 +13,12 @@ ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: e3b69ae2b59b3f82025404dd575f0602ea8c02a7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ad944432b2a00acb923732863624a69dcbaf227f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668217"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418289"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>將 Oracle 資料移轉到 SQL Server (OracleToSQL)
 您已成功同步處理與已轉換的物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以將資料從 Oracle 移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -87,10 +87,10 @@ ms.locfileid: "51668217"
   
     -   執行**伺服器端資料移轉**，選取**伺服器端資料移轉引擎**選項**專案設定** 對話方塊。  
   
-4.  以滑鼠右鍵按一下**結構描述**在 Oracle 中繼資料總管，然後按一下**移轉資料**。 您也可以移轉為個別物件或類別目錄的物件的資料： 以滑鼠右鍵按一下物件或其父資料夾;選取 **移轉資料**選項。  
+4.  以滑鼠右鍵按一下**結構描述**在 Oracle 中繼資料總管，然後按一下**移轉資料**。 您也可以將移轉資料的個別物件或類別目錄的物件：以滑鼠右鍵按一下物件或其父資料夾;選取 **移轉資料**選項。  
   
     > [!NOTE]  
-    > 如果未安裝 SSMA for Oracle 延伸模組組件的執行個體上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而且如果**伺服器端資料移轉引擎**已選取，然後同時將資料移轉到目標資料庫，發生下列錯誤: 'SQL Server 上找不到 SSMA 資料移轉的元件，無法進行伺服器端資料移轉。 請檢查是否已正確安裝延伸模組組件 '。 按一下 **取消**終止資料移轉。  
+    > 如果未安裝 SSMA for Oracle 延伸模組組件的執行個體上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而且如果**伺服器端資料移轉引擎**已選取，然後同時將資料移轉到目標資料庫，發生下列錯誤：' SQL Server 上找不到 SSMA 資料移轉的元件，無法進行伺服器端資料移轉。 請檢查是否已正確安裝延伸模組組件 '。 按一下 **取消**終止資料移轉。  
   
 5.  在 [**連接到 Oracle** ] 對話方塊中，輸入連線認證，然後再按一下**Connect**。 如需有關如何連接至 Oracle 的詳細資訊，請參閱[連接到 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
   

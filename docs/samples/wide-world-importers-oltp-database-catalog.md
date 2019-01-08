@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed73e9e97c34ad1bd1d3aa4e0d37a351cbac0703
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d98e87d18d76162e5bf9dcb4779a8bc7fec74385
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798035"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617620"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters 資料庫目錄
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ WideWorldImporters 會使用一小部分的結構描述，讓您可以很容易�
 - 所有結構描述、 資料表、 資料行、 索引和 check 條件約束都有擴充屬性，可用來識別物件或資料行的用途的描述。 記憶體最佳化資料表是這樣的例外狀況，因為它們目前不支援擴充的屬性。
 - 除非有另一個非叢集索引具有相同的左側部分，會自動索引所有外部索引鍵。
 - 自動編號資料表中，根據序列。 這些序列較容易在連結的伺服器與相似的環境，以上的身分識別資料行使用。 因為它們不支援 SQL Server 2016 中，記憶體最佳化資料表會使用身分識別資料行。
-- 這些資料表使用單一順序 (TransactionID): CustomerTransactions、 SupplierTransactions 和 StockItemTransactions。 這示範了一組資料表可以有單一序列的方式。
+- 這些資料表會使用單一序列 (TransactionID):CustomerTransactions、 SupplierTransactions 和 StockItemTransactions。 這示範了一組資料表可以有單一序列的方式。
 - 某些資料行具有適當的預設值。
 
 ### <a name="security-schemas"></a>安全性結構描述
@@ -161,7 +161,7 @@ WideWorldImporters 會使用一小部分的結構描述，讓您可以很容易�
 
 這些是由用戶端應用程式，例如 Web 前端的程序。
 
-|程序|目的|
+|程序|用途|
 |-----------------------------|---------------------|
 |ActivateWebsiteLogon|可讓個人 (從`Application.People`) 擁有網站的存取權。|
 |ChangePassword|變更使用者的密碼 （適用於不使用外部驗證機制的使用者）。|
@@ -183,11 +183,11 @@ WideWorldImporters 會使用一小部分的結構描述，讓您可以很容易�
 
 模擬的工作負載，將銷售及購買項目。 主要的預存程序`PopulateDataToCurrentDate`，這用來插入到目前日期為止的範例資料。
 
-|程序|目的|
+|程序|用途|
 |-----------------------------|---------------------|
 |Configuration_ApplyDataLoadSimulationProcedures|重新建立程序所需的資料負載模擬。 這需要將到目前日期為止的資料。|
 |Configuration_RemoveDataLoadSimulationProcedures|這會移除程序一次資料模擬完成之後。|
-|DeactiveTemporalTablesBeforeDataLoad|移除所有時態表的時態性的本質和情況適用時，會套用觸發程序，以便可以進行變更，就好像它們在套用比 sys 時態資料表允許較早的日期。|
+|DeactivateTemporalTablesBeforeDataLoad|移除所有時態表的時態性的本質和情況適用時，會套用觸發程序，以便可以進行變更，就好像它們在套用比 sys 時態資料表允許較早的日期。|
 |PopulateDataToCurrentDate|用來帶到目前日期為止的資料。 應該在從初始的備份還原資料庫之後的任何其他設定選項之前執行。|
 |ReactivateTemporalTablesAfterDataLoad|重新建立時態表，包括資料的一致性檢查。 （移除相關聯的觸發程序）。|
 
@@ -196,7 +196,7 @@ WideWorldImporters 會使用一小部分的結構描述，讓您可以很容易�
 
 若要設定此範例會使用這些程序。 它們用來套用至標準版版本的範例，並將稽核及全文檢索索引的 enterprise edition 的功能。
 
-|程序|目的|
+|程序|用途|
 |-----------------------------|---------------------|
 |AddRoleMemberIfNonexistant|如果成員還未在角色中，將成員新增至角色|
 |Configuration_ApplyAuditing|Adds 稽核。 伺服器稽核被適用於標準版資料庫;其他的資料庫稽核會新增適用於 enterprise edition。|
@@ -215,7 +215,7 @@ WideWorldImporters 會使用一小部分的結構描述，讓您可以很容易�
 
 若要設定資料庫中的序列的程序。
 
-|程序|目的|
+|程序|用途|
 |-----------------------------|---------------------|
 |ReseedAllSequences|呼叫程序 ReseedSequenceBeyondTableValue 所有序列 (sequence)。|
 |ReseedSequenceBeyondTableValue|用來調整中使用的相同順序的任何資料表的位置超出值的下一個順序值。 （例如 DBCC CHECKIDENT 的身分識別資料行對等項目序列 (sequence)，但可能有多個資料表之間)。|

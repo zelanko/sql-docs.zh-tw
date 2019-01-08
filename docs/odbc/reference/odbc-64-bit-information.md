@@ -11,12 +11,12 @@ ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62497d2249131db94d2169e6138a67ee48e73a34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 744a31b805fb46302f4f9ad34a1bc2576a180694
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677726"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321664"
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 位元資訊
 從 Windows Server 2003 開始，Microsoft 作業系統有支援的 64 位元 ODBC 程式庫。 ODBC 標頭和程式庫最初隨附於 MDAC 2.7 SDK 包含可讓程式設計人員，輕鬆地撰寫程式碼適用於新的 64 位元平台的變更。 確保您的程式碼會使用下面所列的 ODBC 定義類型，您可以編譯 64 位元和 32 位元平台採用相同的原始程式碼 **_WIN64**或是**WIN32**巨集。  
@@ -34,7 +34,7 @@ ms.locfileid: "47677726"
 ## <a name="function-declaration-changes"></a>函式宣告的變更  
  下列函式簽章已變更為 64 位元程式設計。 以粗體文字的項目是不同的特定參數。  
   
-```  
+```c
 SQLBindCol (SQLHSTMT StatementHandle, SQLUSMALLINT ColumnNumber,  
    SQLSMALLINT TargetType, SQLPOINTER TargetValuePtr, SQLLEN BufferLength,   SQLLEN * StrLen_or_Ind);  
   
@@ -115,7 +115,7 @@ SQLSetStmtOption (SQLHSTMT StatementHandle, SQLUSMALLINT Option,
 ## <a name="changes-in-sql-data-types"></a>SQL 資料類型中的變更  
  僅 32 位元上仍然支援下列四種的 SQL 類型未定義適用於 64 位元編譯器。 這些類型不會再用於 MDAC 2.7; 中的任何參數在 64 位元平台上，使用這些類型會導致編譯器失敗。  
   
-```  
+```cpp
 #ifdef WIN32   
 typedef SQLULEN SQLROWCOUNT;   
 typedef SQLULEN SQLROWSETSIZE;   
@@ -126,7 +126,7 @@ typedef SQLLEN SQLROWOFFSET;
   
  32 位元和 64 位元編譯器已變更的 SQLSETPOSIROW 定義：  
   
-```  
+```c
 #ifdef _WIN64   
 typedef UINT64 SQLSETPOSIROW;   
 #else   
@@ -136,7 +136,7 @@ typedef UINT64 SQLSETPOSIROW;
   
  SQLLEN 和 SQLULEN 的定義已變更適用於 64 位元編譯器中：  
   
-```  
+```c
 #ifdef _WIN64   
 typedef INT64 SQLLEN;   
 typedef UINT64 SQLULEN;   
@@ -148,7 +148,7 @@ typedef UINT64 SQLULEN;
   
  雖然 SQL_C_BOOKMARK 已不再 2.0 的用戶端上的 64 位元編譯器支援在 ODBC 3.0 中，此值已變更：  
   
-```  
+```c
 #ifdef _WIN64   
 #define SQL_C_BOOKMARK SQL_C_UBIGINT   
 #else   
@@ -158,7 +158,7 @@ typedef UINT64 SQLULEN;
   
  書籤的型別定義中的較新的標頭的不同：  
   
-```  
+```c
 typedef SQLULEN BOOKMARK;  
 ```  
   

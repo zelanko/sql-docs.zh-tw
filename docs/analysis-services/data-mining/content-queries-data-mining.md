@@ -1,5 +1,5 @@
 ---
-title: 內容查詢 （資料採礦） |Microsoft 文件
+title: 內容查詢 （資料採礦） |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4a308427ec839c316dbf0e3b215ea6d1506b1fa1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 20d730ed2fd975d800b27882ecc218f7ce1868b3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015375"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529056"
 ---
 # <a name="content-queries-data-mining"></a>內容查詢 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "34015375"
   
  本節提供幾個範例，以便說明演算法的選擇如何影響模型內所儲存的資訊類型。 如需採礦模型內容以及每一個模型類型特有之內容的詳細資訊，請參閱 [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
-###  <a name="bkmk_Assoc"></a> 範例 1：關聯模型的內容查詢  
+###  <a name="bkmk_Assoc"></a> 範例 1:關聯模型的內容查詢  
  `SELECT FROM <model>.CONTENT`陳述式會根據您所查詢的模型類型傳回不同種類的資訊。 如果是關聯模型，資訊的主要片段為 *「節點類型」*(Node Type)。 節點類似於模型內容中資訊的容器。 在關聯模型中，代表規則之節點的 NODE_TYPE 值為 8，而代表項目集之節點的 NODE_TYPE 值則為 7。  
   
  因此，下列查詢會傳回前 10 個項目集，並依照支援排序 (預設的排序)。  
@@ -144,7 +144,7 @@ SELECT TOP 10 NODE_DESCRIPTION, NODE_PROBABILITY, SUPPORT
 FROM <model>.CONTENT WHERE NODE_TYPE = 7  
 ```  
   
- 下列查詢會根據這項資訊。 此查詢會傳回三個資料行：節點的識別碼、完整的規則以及項目集右側的產品 (也就是預測為與屬於項目集一部分之某些其他產品相關聯的產品)。  
+ 下列查詢會根據這項資訊。 此查詢會傳回三個資料行： 節點、 完整的規則和項目集右側產品的識別碼-也就是預測為與某些其他產品相關聯的項目集一部分的產品。  
   
 ```  
 SELECT FLATTENED NODE_UNIQUE_NAME, NODE_DESCRIPTION,  
@@ -166,7 +166,7 @@ ORDER BY NODE_SUPPORT DESC
   
  如需詳細範例，請參閱 [關聯模型查詢範例](../../analysis-services/data-mining/association-model-query-examples.md)。  
   
-###  <a name="bkmk_DecTree"></a> 範例 2：決策樹模型的內容查詢  
+###  <a name="bkmk_DecTree"></a> 範例 2:決策樹模型的內容查詢  
  決策樹模型可用於預測及分類。  此範例假設您正在使用模型預測結果，但是您也會想要查明哪些因素或規則可用來分類結果。  
   
  在決策樹模型中，節點是用來表示樹狀節點和分葉節點。 每一個節點的標題都會包含結果路徑的描述。 因此，若要追蹤任何特定結果的路徑，您需要識別包含該結果的節點，然後取得該節點的詳細資料。  

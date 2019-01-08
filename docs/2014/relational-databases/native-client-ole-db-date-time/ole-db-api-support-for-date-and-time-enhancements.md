@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-client
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, date/time improvements
@@ -12,12 +12,12 @@ ms.assetid: e65c9253-bd99-4dc3-9cb8-7613f754c966
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 536860699bcdbed6753724bfad7832bc9fa7705e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef6334f6fe4671f2563add857f6dd58ce67a2840
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144000"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775820"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>OLE DB API 對日期和時間增強功能的支援
   下列 OLE DB API 支援日期/時間增強功能。  

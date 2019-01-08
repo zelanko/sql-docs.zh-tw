@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - free-form attributes [Master Data Services]
@@ -18,12 +17,12 @@ ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b23f989190b4b164385e790b01cfad7d0f759b90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fbd4e3191f1cf115f157f7ff56c55f7b9ed96bc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129618"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748060"
 ---
 # <a name="attributes-master-data-services"></a>屬性 (Master Data Services)
   屬性是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 實體中包含的物件。 屬性值描述實體的成員。 屬性可用來描述分葉成員、合併成員或集合。  
@@ -43,7 +42,7 @@ ms.locfileid: "48129618"
   
 -   自由格式的屬性，允許以自由格式輸入文字、數字、日期或連結。  
   
--   由實體擴展的網域屬性。 如需詳細資訊，請參閱[網域屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)。  
+-   由實體擴展的網域屬性。 如需詳細資訊，請參閱 [網域屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)。  
   
 -   檔案屬性，用來儲存檔案、文件或影像。 檔案屬性透過要求檔案有特定副檔名，有助於資料一致性。 檔案屬性無法保證能防止惡意使用者上傳不同類型的檔案。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "48129618"
 -   如果牽涉到浮點數，值可能無法 *「往返」* (Roundtrip)。 如果運算將原始浮點數轉換成另一個形式，反運算將轉換的形式轉換回浮點數，而最終浮點數等於原始浮點數，值稱為往返。 往返可能因為轉換中遺漏或變更一個或多個最低有效位數而失敗。  
   
 ## <a name="attribute-examples"></a>屬性範例  
- 在下列範例中，實體有屬性：Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto。 這些屬性描述成員。 每個成員都是由單一資料列的屬性值來表示。  
+ 在下列範例中，實體具有屬性：名稱、 程式碼、 Subcategory、 StandardCost、 ListPrice 和 FilePhoto。 這些屬性描述成員。 每個成員都是由單一資料列的屬性值來表示。  
   
  ![自行車產品實體資料表](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "自行車產品實體資料表")  
   
@@ -79,25 +78,25 @@ ms.locfileid: "48129618"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|建立新的自由格式文字屬性。|[建立文字屬性&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
-|建立新的自由格式數值屬性。|[建立數值屬性&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
-|建立新的自由格式連結屬性。|[建立連結屬性&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
-|建立新的檔案屬性。|[建立檔案屬性&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
-|建立新的網域屬性。|[建立網域屬性&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
+|建立新的自由格式文字屬性。|[建立文字屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
+|建立新的自由格式數值屬性。|[建立數值屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
+|建立新的自由格式連結屬性。|[建立連結屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
+|建立新的檔案屬性。|[建立檔案屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
+|建立新的網域屬性。|[建立網域屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
 |變更現有屬性的名稱。|[變更屬性名稱&#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)|  
-|將現有屬性加入至變更追蹤群組。|[將屬性加入至變更追蹤群組&#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
-|刪除現有屬性。|[刪除屬性&#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)|  
+|將現有屬性加入至變更追蹤群組。|[將屬性加入至變更追蹤群組 &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|刪除現有屬性。|[刪除屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)|  
 |變更屬性的順序。|[變更屬性的順序](../../2014/master-data-services/change-the-order-of-attributes.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
--   [網域型屬性&#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [網域屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [屬性群組&#40;Master Data Services&#41;](attribute-groups-master-data-services.md)  
+-   [屬性群組 &#40;Master Data Services&#41;](attribute-groups-master-data-services.md)  
   
--   [成員&#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
+-   [成員 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
--   [分葉權限&#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
+-   [分葉權限 &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   
 -   [合併的權限&#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   

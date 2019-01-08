@@ -20,16 +20,16 @@ ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d254fce8d7765c6248c6e060f2a225f595f804f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d80de6087997b6af0202dafae7576ba442514abf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597173"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212387"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ODBC  
+ 導入的版本：ODBC 1.0 標準的合規性：ODBC  
   
  **摘要**  
  **SQLDriverConnect**替代**SQLConnect**。 它支援資料來源需要更多的連接資訊中的三個引數比**SQLConnect**，對話方塊來提示使用者輸入所有的連接資訊，請與系統中未定義的資料來源資訊。  
@@ -112,8 +112,8 @@ SQLRETURN SQLDriverConnect(
 |08S01|通訊連結失敗|驅動程式和資料來源的驅動程式已嘗試連線之間的通訊連結失敗之前**SQLDriverConnect**函式已完成處理。|  
 |28000|無效的授權規格|使用者識別碼或授權字串，或兩者所指定的連接字串中 (*InConnectionString*)，違反了資料來源所定義的限制。|  
 |HY000|一般錯誤|其中沒有任何特定的 SQLSTATE 和沒有實作特定的 SQLSTATE 所定義，就會發生錯誤。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*szMessageText*緩衝區描述錯誤和其原因。|  
-|HY000|一般錯誤： 無效的檔案 dsn|(DM) 中的字串 **InConnectionString*包含 FILEDSN 關鍵字，但找不到.dsn 檔案的名稱。|  
-|HY000|一般錯誤： 無法建立檔案緩衝區|(DM) 中的字串 **InConnectionString*包含 FILEDSN 關鍵字，但無法讀取.dsn 檔案。|  
+|HY000|一般錯誤：無效的檔案 dsn|(DM) 中的字串 **InConnectionString*包含 FILEDSN 關鍵字，但找不到.dsn 檔案的名稱。|  
+|HY000|一般錯誤：無法建立檔案緩衝區|(DM) 中的字串 **InConnectionString*包含 FILEDSN 關鍵字，但無法讀取.dsn 檔案。|  
 |HY001|記憶體配置錯誤|驅動程式管理員無法配置記憶體，才能支援執行或完成**SQLDriverConnect**函式。<br /><br /> 驅動程式無法配置記憶體，才能支援執行或完成函式。|  
 |HY008|已取消作業|非同步處理已啟用*ConnectionHandle*。 呼叫函式，和之前執行，完成[SQLCancelHandle 函式](../../../odbc/reference/syntax/sqlcancelhandle-function.md)上呼叫*ConnectionHandle*，然後**SQLDriverConnect**在上一次呼叫函式*ConnectionHandle*。<br /><br /> 或者， **SQLDriverConnect**呼叫函式，和之前執行，完成**SQLCancelHandle**上呼叫*ConnectionHandle*從不同的執行緒中多執行緒應用程式。|  
 |HY010|函數順序錯誤|(DM) 另一個以非同步方式執行的函式 (不**SQLDriverConnect**) 已針對呼叫*ConnectionHandle*仍執行時並**SQLDriverConnect**呼叫函式。|  
@@ -194,11 +194,11 @@ SQLRETURN SQLDriverConnect(
   
  在驅動程式管理員 的動作為基礎的值*DriverCompletion*引數：  
   
--   SQL_DRIVER_PROMPT： 如果連接字串不包含其中一個**驅動程式**， **DSN**，或**FILEDSN**關鍵字，驅動程式管理員會顯示 [資料來源] 對話方塊。 它會建構連接字串 對話方塊中所傳回的資料來源名稱與應用程式傳遞給它的任何其他關鍵字。 驅動程式管理員 對話方塊中所傳回的資料來源名稱是空的如果指定的關鍵字-值組，DSN = 預設值。 （此對話方塊不會顯示具有名稱為 「 預設 」 的資料來源）。  
+-   SQL_DRIVER_PROMPT:如果連接字串不包含其中一個**驅動程式**， **DSN**，或**FILEDSN**關鍵字，驅動程式管理員會顯示 [資料來源] 對話方塊。 它會建構連接字串 對話方塊中所傳回的資料來源名稱與應用程式傳遞給它的任何其他關鍵字。 驅動程式管理員 對話方塊中所傳回的資料來源名稱是空的如果指定的關鍵字-值組，DSN = 預設值。 （此對話方塊不會顯示具有名稱為 「 預設 」 的資料來源）。  
   
--   SQL_DRIVER_COMPLETE 或 SQL_DRIVER_COMPLETE_REQUIRED： 如果應用程式所指定的連接字串包含**DSN**關鍵字，驅動程式管理員會複製應用程式所指定的連接字串。 否則，它會採用相同的動作如會*DriverCompletion*是 SQL_DRIVER_PROMPT。  
+-   SQL_DRIVER_COMPLETE 或 SQL_DRIVER_COMPLETE_REQUIRED:如果應用程式所指定的連接字串包含**DSN**關鍵字，驅動程式管理員會複製應用程式所指定的連接字串。 否則，它會採用相同的動作如會*DriverCompletion*是 SQL_DRIVER_PROMPT。  
   
--   SQL_DRIVER_NOPROMPT： 驅動程式管理員會將複製的應用程式所指定的連接字串。  
+-   SQL_DRIVER_NOPROMPT 時：驅動程式管理員會將複製的應用程式所指定的連接字串。  
   
  如果應用程式所指定的連接字串包含**驅動程式**關鍵字，驅動程式管理員會複製應用程式所指定的連接字串。  
   
@@ -257,11 +257,11 @@ SQLRETURN SQLDriverConnect(
   
  值為基礎*DriverCompletion*，驅動程式會提示使用者輸入連接資訊，例如使用者識別碼和密碼，並連接到資料來源：  
   
--   SQL_DRIVER_PROMPT: 驅動程式會顯示對話方塊中，使用做為初始的值中的連接字串和系統資訊的值 （如果有的話）。 當使用者結束 [] 對話方塊中時，驅動程式連接到資料來源。 它也會建構連接字串的值從**DSN**或**驅動程式**中的關鍵字\* *InConnectionString*以及從傳回的資訊 對話方塊。 它會放在此連接字串 **OutConnectionString*緩衝區。  
+-   SQL_DRIVER_PROMPT:驅動程式會顯示對話方塊中，使用做為初始的值中的連接字串和系統資訊的值 （如果有的話）。 當使用者結束 [] 對話方塊中時，驅動程式連接到資料來源。 它也會建構連接字串的值從**DSN**或**驅動程式**中的關鍵字\* *InConnectionString*以及從傳回的資訊 對話方塊。 它會放在此連接字串 **OutConnectionString*緩衝區。  
   
--   SQL_DRIVER_COMPLETE 或 SQL_DRIVER_COMPLETE_REQUIRED： 如果連接字串包含足夠的資訊，而且該資訊正確無誤，驅動程式會連接至資料來源和複製\* *InConnectionString*要\* *OutConnectionString*。 如果任何資訊遺失或不正確，驅動程式會採用相同的動作會如*DriverCompletion*以外，如果是 SQL_DRIVER_PROMPT *DriverCompletion*是 SQL_DRIVER_COMPLETE_所需，驅動程式會停用不需要連接到資料來源的任何資訊的控制項。  
+-   SQL_DRIVER_COMPLETE 或 SQL_DRIVER_COMPLETE_REQUIRED:如果連接字串包含足夠的資訊，而且該資訊正確無誤，驅動程式會連接至資料來源和複製\* *InConnectionString*要\* *OutConnectionString*. 如果任何資訊遺失或不正確，驅動程式會採用相同的動作會如*DriverCompletion*以外，如果是 SQL_DRIVER_PROMPT *DriverCompletion*是 SQL_DRIVER_COMPLETE_所需，驅動程式會停用不需要連接到資料來源的任何資訊的控制項。  
   
--   SQL_DRIVER_NOPROMPT： 如果連接字串包含足夠的資訊，驅動程式連接到資料來源和複製\* *InConnectionString*要\* *OutConnectionString*. 否則，驅動程式會傳回 SQL_ERROR，如**SQLDriverConnect**。  
+-   SQL_DRIVER_NOPROMPT 時：如果連接字串包含足夠的資訊，此驅動程式會連接到資料來源和複製\* *InConnectionString*要\* *OutConnectionString*。 否則，驅動程式會傳回 SQL_ERROR，如**SQLDriverConnect**。  
   
  在成功連接到資料來源之後，驅動程式也會設定\* *StringLength2Ptr*可傳回的輸出連接字串的長度 **OutConnectionString*。  
   

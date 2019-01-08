@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, about annotated XSD schemas
@@ -19,12 +17,12 @@ ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7a0e3356b4c83832ce40adabb00bdfdc671ec8ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 46d1a7ad03b30159b2efe10c0b215665a37f5a70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099698"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756100"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>在 XSD 結構描述中使用註釋 (SQLXML 4.0)
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 中，XSD 結構描述語言以類似 XML-Data Reduced (XDR) 結構描述語言所推出之註解的方式支援註解。 在 XSD 中有 XDR 不支援的其他註解。  
@@ -33,7 +31,7 @@ ms.locfileid: "48099698"
   
  如果您沒有指定註解，就會使用預設對應。 根據預設，包含複雜類型的 XSD 元素會對應到指定之資料庫中的資料表 (檢視) 名稱，而包含簡單類型的元素或屬性會對應到具有相同名稱的資料行，做為元素或屬性。  
   
- 這些註解也可以用於指定 XML 中的階層式關聯性以代表資料庫中的關聯性，因為 XSD 結構描述只是關聯式資料的 XML 檢視。  
+ 這些註解也可用來指定在 XML-因此代表在資料庫中，關聯性的階層式關聯性，因為 XSD 結構描述只是關聯式資料的 XML 檢視。  
   
  本節提供您可搭配 XSD 結構描述一起使用之註解的描述以及其使用方式的範例。  
   

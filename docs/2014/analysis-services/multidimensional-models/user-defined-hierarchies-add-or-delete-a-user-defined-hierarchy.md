@@ -17,12 +17,12 @@ ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 79c6f928f8f3931960dcfa7ee72b8b3f237cf1e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08531e4b0ecfcda02fa1dd1e2c3125b557e41cb7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183978"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514506"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>加入或刪除使用者定義階層
   您會在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，維度設計師的 [維度結構] 索引標籤上，從維度中加入或移除使用者自訂階層。  
@@ -54,11 +54,11 @@ ms.locfileid: "48183978"
   
 -   在 [維度結構] 索引標籤上，按一下要在 [階層] 窗格中移除的使用者自訂階層。 在工具列上，按一下 [刪除]。  
   
-     — 或者—  
+     - 或 -  
   
 -   在 [階層] 窗格中以滑鼠右鍵按一下要移除的使用者定義階層，然後按一下 [刪除]。  
   
-     — 或者—  
+     - 或 -  
   
 -   將使用者自訂階層拖曳出設計介面。  
   

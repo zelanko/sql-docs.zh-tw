@@ -15,12 +15,12 @@ ms.assetid: a2643be4-8123-4cc3-baf9-e5ec54a1669d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b833e41e4fbce47b892bba5d2b3792eeb2771b14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92624d18c0e8aae6a549f0769277e5fd4fdd0c34
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068758"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524364"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>修改屬性 (attribute) 的 KeyColumn 屬性 (property)
   您可以修改屬性 (Attribute) 的 **KeyColumns** 屬性 (Property)。 例如，您可能要為屬性指定複合索引鍵，而不是單一索引鍵。  
@@ -33,7 +33,7 @@ ms.locfileid: "48068758"
   
     -   在**方案總管**中，以滑鼠右鍵按一下 [維度] 資料夾中的維度，然後按一下 [開啟] 或 [檢視表設計工具]。  
   
-         – 或 –  
+         -或-  
   
     -   在 Cube 設計師中，在**Cube 結構**索引標籤上，依序展開中的 cube 維度**維度**窗格，然後按一下 **編輯\<維度 >**。  
   
@@ -55,6 +55,6 @@ ms.locfileid: "48068758"
 8.  若要變更索引鍵資料行的順序，請選取資料行，然後按一下 [向上] 或 [向下] 按鈕。  
   
 ## <a name="see-also"></a>另請參閱  
- [維度屬性內容參考](dimension-attribute-properties-reference.md)  
+ [維度屬性 (Attribute) 屬性 (Property) 參考](dimension-attribute-properties-reference.md)  
   
   

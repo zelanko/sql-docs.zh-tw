@@ -23,12 +23,12 @@ ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 429a0d7d29864cb3aeca313f5e69638014ff2887
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9feaa3be20692b89b0d0568f1ccacc49c992667
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215118"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408268"
 ---
 # <a name="set-index-options"></a>設定索引選項
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改索引的屬性。  
@@ -51,9 +51,9 @@ ms.locfileid: "48215118"
   
 ###  <a name="Restrictions"></a> 限制事項  
   
--   透過使用 ALTER INDEX 陳述式的 SET 子句，會在索引立即套用下列選項：ALLOW_PAGE_LOCKS、ALLOW_ROW_LOCKS、IGNORE_DUP_KEY 和 STATISTICS_NORECOMPUTE。  
+-   下列選項會立即套用到索引的 ALTER INDEX 陳述式中使用的 SET 子句：ALLOW_PAGE_LOCKS、 ALLOW_ROW_LOCKS、 IGNORE_DUP_KEY 和 STATISTICS_NORECOMPUTE。  
   
--   當您使用 ALTER INDEX REBUILD 或 CREATE INDEX WITH DROP_EXISTING 重建索引時，可以設定下列選項：PAD_INDEX、FILLFACTOR、SORT_IN_TEMPDB、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE、ONLINE、ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、MAXDOP 和 DROP_EXISTING (僅限 CREATE INDEX)。  
+-   當您使用 ALTER INDEX REBUILD 或 CREATE INDEX WITH DROP_EXISTING 重建索引時，可以設定下列選項：PAD_INDEX、 FILLFACTOR、 SORT_IN_TEMPDB、 IGNORE_DUP_KEY、 STATISTICS_NORECOMPUTE、 ONLINE、 ALLOW_ROW_LOCKS、 ALLOW_PAGE_LOCKS、 MAXDOP 和 DROP_EXISTING (僅限 CREATE INDEX)。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48215118"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;  
