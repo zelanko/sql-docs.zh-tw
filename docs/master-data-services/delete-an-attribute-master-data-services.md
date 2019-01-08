@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], deleting
@@ -15,12 +14,12 @@ ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0e67ca4e8eb5d4966ec3cbee1567b6b368fa4437
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6967178e237f62695bc4843087e8ff8fe676fba7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737566"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819115"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>刪除屬性 (Master Data Services)
 

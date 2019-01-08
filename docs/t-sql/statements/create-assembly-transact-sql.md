@@ -24,19 +24,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b81e8cb39a9520697af41624dfda2609bdbbef9f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 31eda87e2a1934c5f18d73540a502880590445e8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697147"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207657"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   建立一個 Managed 應用程式模組，其中所包含的類別中繼資料和 Managed 程式碼是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中的一個物件。 您可以參考這個模組，在資料庫中建立 Common Language Runtime (CLR) 函數、預存程序、觸發程序、使用者定義彙總以及使用者定義型別。  
   
->  [!WARNING]
+> [!WARNING]
 >  CLR 使用 .NET Framework 中的程式碼存取安全性 (CAS)，而這不再作為安全性界限受支援。 使用 `PERMISSION_SET = SAFE` 所建立的 CLR 組件可以存取外部系統資源、呼叫 Unmanaged 程式碼，以及取得系統管理員權限。 從 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 開始，引進稱為 `clr strict security` 的 `sp_configure` 選項，來增強 CLR 組件的安全性。 `clr strict security` 會依預設啟用，且將 `SAFE` 與 `EXTERNAL_ACCESS` 組件視作已標記為 `UNSAFE` 一樣。 可以基於回溯相容性停用 `clr strict security` 選項，但不建議這麼做。 Microsoft 建議透過具有已獲授與 master 資料庫中 `UNSAFE ASSEMBLY` 權限之對應登入的憑證或非對稱金鑰簽署所有組件。 如需詳細資訊，請參閱 [CLR 嚴格安全性](../../database-engine/configure-windows/clr-strict-security.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -85,8 +85,8 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  這是類型 **varbinary** 的運算式。  
   
  PERMISSION_SET { **SAFE** | EXTERNAL_ACCESS | UNSAFE }  
- >  [!IMPORTANT]  
- >  `PERMISSION_SET` 選項會受到開啟警告中所述的 `clr strict security` 選項影響。 當 `clr strict security` 已啟用時，所有組件會被視為 `UNSAFE`。
+> [!IMPORTANT]
+>  `PERMISSION_SET` 選項會受到開啟警告中所述的 `clr strict security` 選項影響。 當 `clr strict security` 已啟用時，所有組件會被視為 `UNSAFE`。
  
  當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取組件時，指定一組授與組件的程式碼存取權限。 若未指定，便採用 SAFE 作為預設值。  
   
@@ -129,7 +129,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 -   組件二進位具有有效的中繼資料和程式碼區段，格式良好，而且程式碼區段也具有有效的 Microsoft 中繼語言 (MSIL) 指示。  
   
--   它所參考的系統組件集，是下列其中一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援的組件：Microsoft.Visualbasic.dll、Mscorlib.dll、System.Data.dll、System.dll、System.Xml.dll、Microsoft.Visualc.dll、Custommarshallers.dll、System.Security.dll、System.Web.Services.dll、System.Data.SqlXml.dll、System.Core.dll 和 System.Xml.Linq.dll。 也可以參考其他系統組件，但是它們必須在資料庫中明確註冊。  
+-   它所參考的系統組件集是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中下列支援組件的其中一個：Microsoft.Visualbasic.dll、 Mscorlib.dll、 System.Data.dll、 System.dll、 System.Xml.dll、 Microsoft.Visualc.dll、 Custommarshallers.dll、 System.Security.dll、 System.Web.Services.dll、 System.Data.SqlXml.dll、 System.Core.dll 和 System.Xml.Linq.dll。 也可以參考其他系統組件，但是它們必須在資料庫中明確註冊。  
   
 -   以 SAFE 或 EXTERNAL ACCESS 權限集合加以建立的組件：  
   
