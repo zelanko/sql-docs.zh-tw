@@ -5,8 +5,7 @@ ms.date: 01/10/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], about transactions
@@ -15,12 +14,12 @@ ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7d71093c81f002611c857bf16c2f4cd1a6ca83d2
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 78badeae93c8fbcf7adf03638f22e62f591b56ce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697697"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782730"
 ---
 # <a name="transactions-master-data-services"></a>交易 (Master Data Services)
 

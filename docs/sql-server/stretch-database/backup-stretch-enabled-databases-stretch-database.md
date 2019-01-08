@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Stretch Database, backing up
 - backups (Stretch Database)
 ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 190b318de25edd79d980fb81d69bff0e2634b87a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4f26b5de16185f7c19601cd91a88e9bda23b895
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645156"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596719"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>備份已啟用延展功能的資料庫(Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

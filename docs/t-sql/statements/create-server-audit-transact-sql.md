@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fb561e2001940fef59429236dd85d376a1c3c27f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 624e20f25deda3e226cf060f0793c33022289b1c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834756"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979944"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ SHUTDOWN
 ## <a name="examples"></a>範例  
   
 ### <a name="a-creating-a-server-audit-with-a-file-target"></a>A. 建立具有檔案目標的伺服器稽核  
- 下列範例會建立稱為 `HIPPA_Audit` 的伺服器稽核，並將二進位檔案當做目標而且不指定任何選項。  
+ 下列範例會建立稱為 `HIPAA_Audit` 的伺服器稽核，並將二進位檔案當做目標而且不指定任何選項。  
   
 ```sql  
 CREATE SERVER AUDIT HIPAA_Audit  
@@ -168,7 +168,7 @@ CREATE SERVER AUDIT HIPAA_Audit
 ```  
   
 ### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>B. 建立具有 Windows 應用程式記錄檔目標 (含選項) 的伺服器稽核  
- 下列範例會建立稱為 `HIPPA_Audit` 的伺服器稽核，並包含針對 Windows 應用程式記錄檔所設定的目標。 每秒鐘都會寫入此佇列，並在失敗時關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎。  
+ 下列範例會建立稱為 `HIPAA_Audit` 的伺服器稽核，並包含針對 Windows 應用程式記錄檔所設定的目標。 每秒鐘都會寫入此佇列，並在失敗時關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 引擎。  
   
 ```sql  
 CREATE SERVER AUDIT HIPAA_Audit  

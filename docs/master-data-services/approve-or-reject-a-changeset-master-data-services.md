@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 74a3e457427f200577144cdd2bf93c84f8138186
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b065c878217f52f2cffaff05b4e6a9f28312dd4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795956"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759130"
 ---
 # <a name="approve-or-reject-a-changeset-master-data-services"></a>核准或拒絕變更集 (Master Data Services)
 

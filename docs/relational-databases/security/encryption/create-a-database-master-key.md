@@ -1,7 +1,7 @@
 ---
 title: 建立資料庫主要金鑰 | Microsoft 文件
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: vanto
@@ -14,45 +14,35 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e7e908f096b923deb54dc39c7ef73c3a78740b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3034dc76a64e25b614b1871247369214199c36b
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650509"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997490"
 ---
 # <a name="create-a-database-master-key"></a>建立資料庫主要金鑰
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，建立 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的資料庫主要金鑰。  
+  此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，建立 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的資料庫主要金鑰。
   
- **本主題內容**  
+## <a name="security"></a>Security  
   
--   **開始之前：**  
+### <a name="permissions"></a>[權限]  
+需要資料庫的 CONTROL 權限。  
   
-     [Security](#Security)  
+## <a name="using-transact-sql"></a>使用 Transact-SQL  
   
--   [若要使用 Transact-SQL 建立資料庫主要金鑰](#TsqlProcedure)  
+### <a name="to-create-a-database-master-key"></a>若要建立資料庫主要金鑰  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+1. 選擇密碼以加密即將儲存於資料庫的主要金鑰副本。  
   
-###  <a name="Security"></a> 安全性  
+2. 在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
-####  <a name="Permissions"></a> 權限  
- 需要資料庫的 CONTROL 權限。  
+3. 在標準列上，按一下 **[新增查詢]**。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+4. 將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
-#### <a name="to-create-a-database-master-key"></a>若要建立資料庫主要金鑰  
-  
-1.  選擇密碼以加密即將儲存於資料庫的主要金鑰副本。  
-  
-2.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
-  
-3.  在標準列上，按一下 **[新增查詢]**。  
-  
-4.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
-  
-    ```  
+    ```sql
     -- Creates a database master key for the "AdventureWorks2012" database.   
     -- The key is encrypted using the password "23987hxJ#KL95234nl0zBe."  
     USE AdventureWorks2012;  
@@ -62,5 +52,3 @@ ms.locfileid: "47650509"
     ```  
   
  如需詳細資訊，請參閱 [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)。  
-  
-  

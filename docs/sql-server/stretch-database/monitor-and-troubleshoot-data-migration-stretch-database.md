@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Stretch Database, monitoring
 - monitoring Stretch Database
 ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2fb568ca1e1f5410762da9744598dbfba743f470
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: caea1fb1c296f70f84f6e52a68a46504922ef2f6
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416379"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53597069"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>監視和疑難排解資料移轉 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

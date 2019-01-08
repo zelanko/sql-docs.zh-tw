@@ -20,12 +20,12 @@ ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f8ec3babd503117e70affa28ccd1a123d0f09894
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01490d9fe252d17c6d4b25eebd5e160ebe79a33a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752286"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980234"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,11 +69,11 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
  一旦建立伺服器稽核規格之後，就可以使用具有 CONTROL SERVER 或 ALTER ANY SERVER AUDIT 權限的主體、系統管理員 (sysadmin) 帳戶或具有此稽核之明確存取權的主體來加以檢視。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立一個稱為 `HIPPA_Audit_Specification` 的伺服器稽核規格。 針對失敗的登入，它會捨棄稽核動作群組，並針對稱為 `HIPPA_Audit` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 稽核，新增用於資料庫物件存取的稽核動作群組。  
+ 下列範例會建立一個稱為 `HIPAA_Audit_Specification` 的伺服器稽核規格。 針對失敗的登入，它會捨棄稽核動作群組，並針對稱為 `HIPAA_Audit` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 稽核，新增用於資料庫物件存取的稽核動作群組。  
   
 ```  
-ALTER SERVER AUDIT SPECIFICATION HIPPA_Audit_Specification  
-FOR SERVER AUDIT HIPPA_Audit  
+ALTER SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
+FOR SERVER AUDIT HIPAA_Audit  
     DROP (FAILED_LOGIN_GROUP)  
     ADD (DATABASE_OBJECT_ACCESS_GROUP);  
 GO  

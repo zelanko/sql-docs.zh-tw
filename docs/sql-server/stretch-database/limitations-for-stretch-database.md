@@ -11,15 +11,15 @@ helpviewer_keywords:
 - limitations (Stretch Database)
 - blocking issues (Stretch Database)
 ms.assetid: 2b1fbec1-7859-44fc-8417-724fc57a59c0
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b2b6cbcd7fd94d63e3999a8d7678cf6a55aed5ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eddf9f58b0f0500005e58712742127533e74ee60
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804406"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53597153"
 ---
 # <a name="limitations-for-stretch-database"></a>Stretch Database 的限制
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "47804406"
   
 ## <a name="see-also"></a>另請參閱  
  [執行 Stretch Database Advisor 以識別 Stretch Database 的資料庫和資料表](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
- [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
+ [為資料庫啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

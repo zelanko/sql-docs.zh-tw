@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b947e0d9e586aec37cc6deadd30cc3ae8a370a48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2a9ff930302ccd21ced9c47115ba3ac9dc3ee8b
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817639"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980304"
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation 事件類別
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ EXEC sp_trace_setevent @TraceID, 60, 22, 1; -- 22 = ObjectID
 EXEC sp_trace_setevent @TraceID, 60, 25, 1; -- 25 = IntegerData  
 EXEC sp_trace_setevent @TraceID, 60, 55, 1; -- 25 = IntegerData2  
 EXEC sp_trace_setevent @TraceID, 60, 57, 1; -- 57 = Type  
--- Set any filter  byusing sp_trace_setfilter.  
+-- Set any filter  by using sp_trace_setfilter.  
 -- Start the trace.  
 EXEC sp_trace_setstatus @TraceID, 1;  
 GO  
