@@ -5,20 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Batch Resp Statistics
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 043c9eb1223f9c87cafee690bbd582c9c7031f32
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: b7fee4fdf7e15a39166b0bf72a4433b4125f4328
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158136"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380679"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server 的 Batch Resp Statistics 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

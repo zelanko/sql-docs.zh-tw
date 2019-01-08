@@ -16,15 +16,15 @@ helpviewer_keywords:
 - production servers [SQL Server]
 - offload tuning overhead [SQL Server]
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 7823aaccf45a5752b107cf12a7cb97e568346b35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7556ef2e67eafe541558bd6a6033f4aa3c875d5d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784476"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328718"
 ---
 # <a name="considerations-for-using-test-servers"></a>使用測試伺服器的考量
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: a9b4ed404af053aabee7aff256037fa6b948c932
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94ec8e822bc0b3419f772c0e7fac9a93f89dbde1
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856476"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380584"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47856476"
   
  您可以利用查詢 [sys.dm_resource_governor_configuration](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) 動態管理檢視的方式，查看目前 is_configuration_pending 的狀況，了解是否有暫止的組態。  
   
-##  <a name="Permissions"></a> 權限  
+##  <a name="Permissions"></a> Permissions  
  檢視資源管理員屬性需要 VIEW SERVER STATER 權限。 資源管理員組態工作需要 CONTROL SERVER 權限。  
   
 ##  <a name="ViewRGProp"></a> Resource Governor 屬性頁面  

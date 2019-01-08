@@ -14,12 +14,12 @@ ms.assetid: c278b746-6323-4b32-b460-239915acc067
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 705c71cd3b6872bfa8fe08509ed3d46b2799c445
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41f6e01b027049f5ac418aa9199cf9e576aebd0a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848156"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208507"
 ---
 # <a name="create-user-defined-aggregates"></a>建立使用者定義彙總
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "47848156"
   
 -   使用 CREATE AGGREGATE 陳述式建立參考註冊組件的使用者自訂彙總。  
   
-> [!NOTE]  
+> [!NOTE]
 >  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中部署 SQL Server 專案，便會在已指定給專案的資料庫中註冊組件。 部署專案時，也會在資料庫中為所有以 **SqlUserDefinedAggregate** 屬性註解的類別定義建立使用者定義彙總。 如需詳細資訊，請參閱 [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md)。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 CLR 程式碼的功能預設為關閉。 您可以建立、改變和卸除參考 Managed 程式碼模組的資料庫物件，但是除非使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_configure (Transact-SQL) [來啟用](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) [CLR 已啟用] 選項 [，否則在](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)中將無法執行這些參考。  
   
  **若要建立、修改或卸除組件**  

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], adding
@@ -15,12 +14,12 @@ ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8c0ab12cbb5413743150f313b9da270da6137222
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 286647785defdb2391f2c9e7be4d1fc4c6d5599b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594568"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796510"
 ---
 # <a name="add-a-user-master-data-services"></a>加入使用者 (Master Data Services)
 

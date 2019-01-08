@@ -5,8 +5,7 @@ ms.date: 03/18/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], about business rules
@@ -15,12 +14,12 @@ ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1e265ee9e55f11249ce84d15a2e0851d8d03752a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2ccf168740618085f07d0a5f6ce96a86321e0ca6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404493"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760770"
 ---
 # <a name="business-rules-master-data-services"></a>商務規則 (Master Data Services)
 

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - navigational access [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8dc91a21f83283a78e5d47e49dbe1a36ec166e05
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 670377e2a2a40c14fcdde2cc8f5691c867d705ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419959"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813090"
 ---
 # <a name="navigational-access-master-data-services"></a>導覽存取權 (Master Data Services)
 
