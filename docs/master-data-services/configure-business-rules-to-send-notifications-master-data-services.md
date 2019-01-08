@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], configuring notifications
@@ -16,12 +15,12 @@ ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7c27d7ca29057af2d24ea885a615bfdfb2f0d502
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25de38d04af8b98b600422a843c6b6fb6260d514
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778716"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783460"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>設定商務規則來傳送通知 (Master Data Services)
 

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - groups [Master Data Services], adding
@@ -15,12 +14,12 @@ ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f2b03729cf1ced0547f8cdb71d49aa105477607f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ac283320d94cc77b26c09baf8e75ed7f19e6be4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596926"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777230"
 ---
 # <a name="add-a-group-master-data-services"></a>加入群組 (Master Data Services)
 

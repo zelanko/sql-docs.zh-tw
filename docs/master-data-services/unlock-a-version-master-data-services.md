@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - unlocking versions [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b9eef927f62728c5df77c9fd46ea1de23472f984
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8abefd83f46bc38e790615831e4325903e4a2626
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694766"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791410"
 ---
 # <a name="unlock-a-version-master-data-services"></a>解除鎖定版本 (Master Data Services)
 
