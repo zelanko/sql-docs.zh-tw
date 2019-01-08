@@ -15,12 +15,12 @@ ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f47c18d4bef6930d45ceb8e2c7ebf3bfabb86640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b78abac5ccbade0b686176f432618b4abc35ccab
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797871"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201787"
 ---
 # <a name="shape-compute-clause"></a>Shape COMPUTE 子句
 Shape COMPUTE 子句會產生父代**資料錄集**，其資料行所組成的參考子系**資料錄集**; 選擇性資料行的內容是一章，新的或導出資料行，或對子系執行彙總函式的結果**Recordset**或先前的圖形化**資料錄集**; 以及從子系的任何資料行**資料錄集**中所列選擇性的 BY 子句。  
@@ -65,12 +65,12 @@ SHAPE child-command [AS] child-alias
  例如：  
   
 ```  
-SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
+SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
 ```  
   
  不論哪種方式父**Recordset**形成 （使用計算或使用附加），它會包含用來使它關聯的子系的章節資料行**資料錄集**。 如果您想要父代**資料錄集**也可能包含子資料列包含彙總 （SUM、 MIN、 MAX 和等等） 的資料行。 父和子系**資料錄集**可能包含資料行包含在中的資料列的運算式**資料錄集**，以及資料行的新和一開始空白。  
   
-## <a name="operation"></a>作業  
+## <a name="operation"></a>運算  
  *子命令*發給的提供者傳回的子系**資料錄集**。  
   
  COMPUTE 子句中指定的父資料行**Recordset**，這可能是子系參考**資料錄集**，一或多個彙總、 計算的運算式或新的資料行。 包含 BY 子句時，它所定義的資料行也會附加至父代**資料錄集**。 BY 子句會指定如何在子系的資料列**資料錄集**分組。  

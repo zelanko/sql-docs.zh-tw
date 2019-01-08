@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.maintplanproperties.server.f1
@@ -14,12 +13,12 @@ ms.assetid: ac24d1a8-dd2f-4162-b804-c0df1fc1e61d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: df05d1f7bdbcf2f149caf1b82b592607d588b0ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 989b2992407c4a3825d42106d848598a723a41c5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050409"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747660"
 ---
 # <a name="maintenance-plan-servers"></a>維護計畫 (伺服器)
   使用 **[伺服器]** 對話方塊可選取要執行維護計畫的伺服器。  

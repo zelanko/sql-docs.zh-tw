@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - IHpublishercolumnindexes
@@ -19,12 +18,12 @@ ms.assetid: 95b95a1d-b502-4838-825f-82a456487e25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1daf0c9d7a6bbfa2792409247b95a5bbc98f9cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70fce3c0c919a9d898e0dadf9d56e5ae5adaa0a7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768916"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802480"
 ---
 # <a name="ihpublishercolumnindexes-transact-sql"></a>IHpublishercolumnindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

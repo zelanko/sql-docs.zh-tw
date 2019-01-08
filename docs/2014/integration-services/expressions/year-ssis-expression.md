@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], YEAR
@@ -14,12 +13,12 @@ ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0276dd964bd0ed5a4ea2a703ffc6d32d1ed52bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f228aa02e5537ddd52a7acb0fe4c7d4fbb855d5b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140318"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767877"
 ---
 # <a name="year-ssis-expression"></a>YEAR (SSIS 運算式)
   傳回代表日期之年份部分的整數。  
@@ -44,7 +43,7 @@ YEAR(date)
  日期常值必須明確轉換為日期資料類型之一。 如需詳細資訊，請參閱 [Integration Services 資料類型](../data-flow/integration-services-data-types.md)。  
   
 > [!NOTE]  
->  當日期常值明確轉換成以下其中一個日期資料類型時，此運算式將會驗證失敗：DT_DBTIMESTAMPOFFSET 和 DT_DBTIMESTAMP2。  
+>  運算式將會失敗時的日期常值明確轉換成其中一個日期資料類型驗證：DT_DBTIMESTAMPOFFSET 和 DT_DBTIMESTAMP2。  
   
  使用 YEAR 函數較為簡潔，但相當於使用 DATEPART("Year", date) 函數。  
   
@@ -73,6 +72,6 @@ YEAR(GETDATE())
  [DATEPART &#40;SSIS 運算式&#41;](datepart-ssis-expression.md)   
  [DAY &#40;SSIS 運算式&#41;](day-ssis-expression.md)   
  [MONTH &#40;SSIS 運算式&#41;](month-ssis-expression.md)   
- [函式&#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
+ [函數 &#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
   
   

@@ -11,19 +11,19 @@ ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 898f21162e7ba546bd134b90a18eba5b7653edee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11df5fadc7ca525f62ec0109ec1a7f6b199205af
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123488"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349828"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>將圖表加入至報表 (報表產生器及 SSRS)
-  當您想要以視覺格式摘要資料時，請使用圖表資料區域。 針對您要呈現的資料類型選擇適當的圖表類型相當重要。 因為這會影響以圖表形式放入資料時可以解譯資料的程度。 如需詳細資訊，請參閱[圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
+  當您想要以視覺格式摘要資料時，請使用圖表資料區域。 針對您要呈現的資料類型選擇適當的圖表類型相當重要。 因為這會影響以圖表形式放入資料時可以解譯資料的程度。 如需詳細資訊，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
   
  將圖表資料區加入至報表最簡單的方式就是執行新增圖表精靈。 該精靈提供直條圖、折線圖、圓形圖、橫條圖和區域圖。 您也可以透過手動方式，加入上述圖表以及其他的圖表類型。  
   
- 將圖表資料區加入至設計介面之後，您可以將數值和非數值資料的報表資料集欄位拖曳到圖表的 [圖表資料] 窗格。 按一下圖表即可顯示 [圖表資料] 窗格，其中包含三個區域：[數列群組]、[類別群組] 和 [值]。  
+ 將圖表資料區加入至設計介面之後，您可以將數值和非數值資料的報表資料集欄位拖曳到圖表的 [圖表資料] 窗格。 按一下圖表以顯示 [圖表資料] 窗格，其中包含三個區域：數列群組、 類別目錄群組和值。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -71,9 +71,9 @@ ms.locfileid: "48123488"
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [圖表類型 &#40;報表產生器及 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [圖表中的空白和 Null 資料點 &#40;報表產生器及 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [教學課程：將橫條圖新增至報表 (報表產生器)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [教學課程：將橫條圖新增至報表 (報表設計工具)](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [教學課程：將圓形圖新增至報表 (報表產生器)](http://go.microsoft.com/fwlink/?LinkId=198051)   
- [教學課程：將圓形圖新增至報表 (報表設計工具)](http://go.microsoft.com/fwlink/?LinkId=198041)  
+ [教學課程：將橫條圖加入至報表 （報表產生器）](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [教學課程：將橫條圖加入至報表 （報表設計工具）](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [教學課程：將圓形圖加入至報表 （報表產生器）](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [教學課程：將圓形圖加入至報表 （報表設計工具）](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

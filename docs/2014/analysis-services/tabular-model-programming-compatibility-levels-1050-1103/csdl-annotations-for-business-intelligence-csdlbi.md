@@ -12,12 +12,12 @@ ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b8c31f2c8618a434bfd693ad32108aa8240ebded
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 22ca1fe2ace8ef3b04adaf8323e0edaac2a07af6
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144107"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246777"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>商業智慧的 CSDL 註解 (CSDLBI)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援 XML 格式中稱為「概念結構定義語言商業智慧註解」(CSDLBI) 的表格式模型定義表示法。  
@@ -73,7 +73,7 @@ ms.locfileid: "50144107"
   
 -   支援檢視方塊。  
   
- 如需在 CSDLBI 註解中的個別元素的詳細資訊，請參閱[csdl 之 BI 註解的技術參考](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)。 如需有關核心 CSDL 規格的詳細資訊，請參閱[CSDL v3 規格](https://msdn.microsoft.com/en-us/data/jj652004)MSDN 上。  
+ 如需在 CSDLBI 註解中的個別元素的詳細資訊，請參閱[csdl 之 BI 註解的技術參考](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)。 如需有關核心 CSDL 規格的詳細資訊，請參閱[CSDL v3 規格](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)。  
   
   
 ## <a name="see-also"></a>另請參閱  

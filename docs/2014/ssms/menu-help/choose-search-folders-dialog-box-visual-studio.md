@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0010ab5333237eac6504986f0ac8a042d861e712
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c76fc0d5247d2a9f07fcf97677ac1f24b9635e5
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095148"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328608"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>選擇搜尋資料夾對話方塊 (Visual Studio)
   允許您組合、儲存和修訂您個人之搜尋資料夾的命名集，並指定要搜尋的順序。 若要顯示此對話方塊，請選取位於 [檔案中尋找] 或 [檔案中取代]，[尋找和取代] 視窗上之 [查詢] 下拉式清單旁的 [瀏覽 (...)] 按鈕。  
@@ -56,5 +54,3 @@ ms.locfileid: "48095148"
   
  **套用**  
  將列在 [選取的資料夾] 清單中的搜尋資料夾集，另存為命名資料夾集。 如此一來，就可以在 [尋找和取代] 視窗的所有索引標籤上之 [查詢] 欄位中，選擇此資料夾集。 關閉 [選擇搜尋資料夾] 對話方塊。  
-  
-  

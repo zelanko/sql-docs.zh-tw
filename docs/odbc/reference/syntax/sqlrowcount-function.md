@@ -20,16 +20,16 @@ ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc2ab4b2e97b9e1a83e0b00404010195b08f0dc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ab7046e036a6f50f8009a481f92345d7ce12aea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654923"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502554"
 ---
 # <a name="sqlrowcount-function"></a>SQLRowCount 函數
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ISO 92  
+ 導入的版本：ODBC 1.0 標準的合規性：ISO 92  
   
  **摘要**  
  **SQLRowCount**會傳回受影響的資料列數目**更新**，**插入**，或**刪除**陳述式; SQL_ADD，SQL_UPDATE_BY_BOOKMARK 或 SQL_中的 DELETE_BY_BOOKMARK 作業**SQLBulkOperations**; 或在 SQL_UPDATE 或 SQL_DELETE 作業**SQLSetPos**。  

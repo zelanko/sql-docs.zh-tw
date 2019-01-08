@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpoints
 helpviewer_keywords:
 - Breakpoints Window [Transact-SQL]
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2a8cb745670ebfe1c9a8a08eb4674e0a3755cc50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f0d333cde04e41f7f640a93cd68108af334d71d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170718"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328488"
 ---
 # <a name="breakpoints-window"></a>中斷點視窗
   [中斷點] 視窗會列出目前 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中設定的所有中斷點。 若要管理中斷點，請使用 [中斷點] 視窗內的工具列。 中斷點是偵錯模式下暫停執行的程式碼位置，好讓您可以檢視偵錯資料。  
@@ -88,5 +86,3 @@ ms.locfileid: "48170718"
   
 ## <a name="see-also"></a>另請參閱  
  [Transact-SQL 偵錯工具](transact-sql-debugger.md)  
-  
-  
