@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: supportability
+ms.technology: performance
 ms.topic: reference
 ms.assetid: 0ed9d0f8-3297-4e31-a3e9-4a827f381789
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed1c38491abb1f6a8922c74f841979daf4f06676
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b334a62c56d4fb62337204eae91f83eed290b641
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065268"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775990"
 ---
 # <a name="localdberrorinstancebusy"></a>LOCALDB_ERROR_INSTANCE_BUSY
     

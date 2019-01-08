@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.SWB.UE.ReduceNoise.F1
@@ -12,12 +12,12 @@ ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c9ffda8f90aa8200cb3f49d35b22ff38a144bf06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce41c287105f97ce4a9cc0ce92facf9919f7ad33
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193358"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818237"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>降低 CPU 使用量原則的雜訊 (SQL Server 公用程式)
   使用下列策略，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式資源使用量原則中減少報告雜訊及不必要的違規。  
@@ -41,7 +41,7 @@ ms.locfileid: "48193358"
   
 -   將違規的百分比容錯提高 1 個增量，成為 30%。 1 小時內的單一違規將會是取樣大小 4 中的 1 個資料點。 在此情況下，此原則將會容許每個小時有 1 個違規，但是會在 1 小時的收集期間內，報告 2 或 2 個以上的違規有使用量過高情形 (>30% 的資料點)。  
   
--   提高 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Managed 執行個體和資料層應用程式之處理器使用量的原則臨界值。 如需如何變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體或資料層應用程式之全域 CPU 使用量原則的詳細資訊，請參閱[公用程式管理 &#40;SQL Server 公用程式&#41;](../../database-engine/utility-administration-sql-server-utility.md)。 如需如何變更個別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之 CPU 使用量原則的詳細資訊，請參閱[受管理的執行個體詳細資料 &#40;SQL Server 公用程式&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)。 如需如何變更個別資料層應用程式之 CPU 使用量原則的詳細資訊，請參閱[部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)。  
+-   提高 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Managed 執行個體和資料層應用程式之處理器使用量的原則臨界值。 如需如何變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體或資料層應用程式之全域 CPU 使用量原則的詳細資訊，請參閱 [公用程式管理 &#40;SQL Server 公用程式&#41;](../../database-engine/utility-administration-sql-server-utility.md)。 如需如何變更個別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之 CPU 使用量原則的詳細資訊，請參閱[受管理的執行個體詳細資料 &#40;SQL Server 公用程式&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)。 如需如何變更個別資料層應用程式之 CPU 使用量原則的詳細資訊，請參閱[部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)。  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-underutilized"></a>將處理器使用量報告為過低之前，其違規的頻率應該是多少？  
  您可以在公用程式總管中，使用 **[公用程式管理]** 節點的 **[原則]** 索引標籤設定來設定評估期間和違規百分比的容錯。 若要變更原則，請使用原則描述右邊的滑動軸控制項，然後按一下 **[套用]**。 您也可以使用顯示畫面底部的按鈕來還原預設值或捨棄變更。  

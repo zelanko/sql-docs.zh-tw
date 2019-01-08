@@ -17,12 +17,12 @@ ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e46075e55aa14784e967b3620de5855a47c4bd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d835e7d541f69c6a84129d3d6c1c8128f748a23
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676616"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541912"
 ---
 # <a name="types-of-applications"></a>應用程式的類型
 ODBC 應用程式分類如下：  
@@ -42,7 +42,7 @@ ODBC 應用程式分類如下：
 -   **純的 ODBC 2。**  
      ***x* Unicode 應用程式**純粹的 ODBC 2。*x*重新編譯應用程式與 Unicode 相容，並且使用 SQL_WCHAR 資料類型。  
   
--   **純的 Open Group 和 ISO**–**相容的 ODBC 應用程式**的 32 位元應用程式的：  
+-   **純的 Open Group 和 ISO**-**相容的 ODBC 應用程式**的 32 位元應用程式的：  
   
     -   呼叫 Open Group 或 ISO CLI 標準中定義的函式。 （這些函式可能包含已被取代的 3.0 函式）。  
   

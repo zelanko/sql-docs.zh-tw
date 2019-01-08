@@ -14,12 +14,12 @@ ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 709629c6ef42b8ffeb65959ab9491bbe3c178ab3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea2245c3f57b5ad3b14847f15791575afde1043c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613836"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537146"
 ---
 # <a name="field-ado---wfc-syntax"></a>Field (ADO - WFC 語法)
 ## <a name="package-commswfcdata"></a>封裝 com.ms.wfc.data  
@@ -69,9 +69,9 @@ public AdoProperties getProperties()
   
  ADO/WFC 實作**值**屬性**getValue**方法，以傳回 VARIANT 的物件; 而**setValue**方法，後者會採用當做引數的 VARIANT。 變化是以特定語言，例如 Microsoft Visual Basic 高效率。  
   
- 除了**值**屬性，ADO/WFC 提供*存取子*來取得和設定的內容中使用 Java 資料類型的方法**欄位**物件。 大部分的這些方法都有名稱格式 **取得 * * * 資料型別*或 **設定 * * * 資料型別*。  
+ 除了**值**屬性，ADO/WFC 提供*存取子*來取得和設定的內容中使用 Java 資料類型的方法**欄位**物件。 大部分的這些方法都有名稱格式**取得**_資料類型_或是**設定**_DataType_。  
   
- 有兩個值得注意的例外狀況： 其中一個**getObject**方法會傳回強制轉型為指定的類別的物件。 沒有任何**getNull**屬性; 相反地，沒有**isNull**傳回布林值，指出欄位是否為 null 的屬性。  
+ 有兩個值得注意的例外狀況：其中一個**getObject**方法會傳回強制轉型為指定的類別的物件。 沒有任何**getNull**屬性; 相反地，沒有**isNull**傳回布林值，指出欄位是否為 null 的屬性。  
   
 ```  
 public native boolean getBoolean();  

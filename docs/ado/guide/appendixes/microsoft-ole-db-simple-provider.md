@@ -15,12 +15,12 @@ ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d67bcc157d069d180a7fd8295ece9f2139d5499c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 33858c9cc0778e550bf90f574e4443dff033c5d1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604638"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209048"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 簡單提供者概觀
 Microsoft OLE DB 簡單提供者 (OSP) 允許存取的提供者已經使用任何資料的 ADO [OLE DB 簡單提供者 (OSP) 工具組](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)。 簡單的提供者被用來存取需要唯一基本的 OLE DB 支援，例如記憶體中陣列或 XML 文件的資料來源。
@@ -57,13 +57,13 @@ MSDAOSP
 
 ```console
 Portfolio
-   Stock
-      Shares
-      Symbol
-      Price
-      Info
-         Company Name
-         WebSite
+   Stock
+      Shares
+      Symbol
+      Price
+      Info
+         Company Name
+         WebSite
 ```
 
  XML DSO 會使用內建的啟發學習法來將 XML 樹狀結構中的節點轉換成階層式的章節**資料錄集**。
@@ -73,8 +73,8 @@ Portfolio
 ```console
 Parent Recordset
 Shares, Symbol, Price, $Text
-   Child Recordset
-      Company Name, WebSite, $Text
+   Child Recordset
+      Company Name, WebSite, $Text
 ```
 
  請注意 公事包 和 資訊標記不會出現在階層**資料錄集**。 如需 XML DSO 如何將 XML 樹狀結構轉換為階層式的說明**資料錄集**，請參閱下列規則。 在下一節中討論 $Text 資料行。

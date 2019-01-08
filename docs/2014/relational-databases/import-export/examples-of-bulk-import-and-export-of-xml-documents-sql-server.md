@@ -18,12 +18,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12201091caba40e145e6848fe25eef3b02b6b06a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d573faebbbfcaf8a501a80aa093584af7fa0307
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221038"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515847"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>大量匯入與匯出 XML 文件的範例 (SQL Server)
     
@@ -55,10 +55,10 @@ ms.locfileid: "48221038"
 -   E. [大量匯出 XML 資料](#bulk_export_xml_data)  
   
 ###  <a name="binary_byte_stream"></a> A. 以二進位位元組資料流大量匯入 XML 資料  
- 從包含您要套用的編碼宣告之檔案大量匯入 XML 資料時，請在 OPENROWSET(BULK…) 子句中指定 SINGLE_BLOB 選項。 SINGLE_BLOB 選項可確保中的 XML 剖析器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]根據 XML 宣告中指定的編碼配置的資料匯入。  
+ 從包含您要套用的編碼宣告之檔案大量匯入 XML 資料時，請在 OPENROWSET(BULK…) 子句中指定 SINGLE_BLOB 選項。 SINGLE_BLOB 選項可確保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 XML 剖析器，會根據 XML 宣告中指定的編碼配置來匯入資料。  
   
 #### <a name="sample-table"></a>範例資料表  
- 若要測試範例 A，您必須建立範例資料表`T`。  
+ 若要測試範例 A，您必須建立範例資料表 `T`。  
   
 ```  
 USE tempdb  
@@ -151,7 +151,7 @@ GO
   
  若要解決這個問題，您可以從包含 DTD 的資料檔匯入 XML 資料，方法是使用 `OPENROWSET(BULK...)` 函數，然後在命令的 `CONVERT` 子句中指定 `SELECT` 選項。 此命令的基本語法如下：  
   
- `INSERT ... SELECT CONVERT(…) FROM OPENROWSET(BULK...)`  
+ `INSERT ... SELECT CONVERT(...) FROM OPENROWSET(BULK...)`  
   
 #### <a name="sample-data-file"></a>範例資料檔  
  在測試這個大量匯入範例之前，請建立包含下列範例執行個體的檔案 (`C:\temp\Dtdfile.xml`)：  

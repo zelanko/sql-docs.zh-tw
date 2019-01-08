@@ -14,12 +14,12 @@ ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 75de66ef1759cc9e20b98f1f38c9ffa6361d31a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8e32b949e6c2868f5478215154df70cdd0e53e9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229687"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519194"
 ---
 # <a name="view-a-sql-server-audit-log"></a>檢視 SQL Server Audit 記錄
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 登入 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]，以檢視 SQL Server 稽核記錄。  
@@ -49,7 +49,7 @@ ms.locfileid: "48229687"
   
 2.  展開 **[稽核]** 資料夾。  
   
-3.  以滑鼠右鍵按一下您想要檢視的稽核記錄，然後選取 **[檢視稽核記錄]**。 這會開啟 [記錄檔檢視器] – *server_name* 對話方塊。 如需詳細資訊，請參閱 [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md)。  
+3.  以滑鼠右鍵按一下您想要檢視的稽核記錄，然後選取 **[檢視稽核記錄]**。 這會開啟 **記錄檔檢視器-* * * server_name*  對話方塊。 如需詳細資訊，請參閱 [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md)。  
   
 4.  完成後，請按一下 **[關閉]**。  
   

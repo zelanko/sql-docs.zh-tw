@@ -13,12 +13,12 @@ ms.assetid: 79d5989f-2fb1-424b-be50-d89c8e39c51b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 769ae8cd5abab02fd2ae253e6165ad4d6b89b974
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87f2ed4ff5bac29d65e9fe6132b2593580aa6639
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182088"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511547"
 ---
 # <a name="select-instance"></a>選取執行個體
   請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 [選取執行個體] 頁面，指定您想要升級到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]執行個體。  
@@ -26,7 +26,7 @@ ms.locfileid: "48182088"
 ## <a name="options"></a>選項。  
  使用選項按鈕指定您要升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和它的共用元件，還是只升級共用元件。 此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的共用元件如下：  
   
--   管理工具 – 基本  
+-   管理工具 - 基本  
   
 -   管理工具 - 完整  
   

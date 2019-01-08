@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.options.f1
@@ -13,12 +12,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54c7a5361a411ff68456504962bbf62298f4ba9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062624"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774420"
 ---
 # <a name="database-properties-options-page"></a>資料庫屬性 (選項頁面)
   使用此頁面來檢視或修改選取之資料庫的選項。 在此頁面上的可用選項的相關資訊，請參閱[ALTER DATABASE SET 選項&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
@@ -28,7 +27,7 @@ ms.locfileid: "48062624"
  從清單中選取以指定資料庫的定序。 如需詳細資訊，請參閱 [設定或變更資料庫定序](../collations/set-or-change-the-database-collation.md)。  
   
  **復原模式**  
- 指定下列其中一個復原資料庫模式：[完整]、[大量記錄] 或 [簡單]。 如需復原模式的詳細資訊，請參閱[復原模式 &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)。  
+ 指定下列模型來進行資料庫復原到其中一項：**完整**， **Bulk-logged**，或**簡單**。 如需復原模式的詳細資訊，請參閱[復原模式 &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)。  
   
  **相容性層級**  
  指定資料庫所支援的最新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 可能的值為  **SQL Server 2014 (120)**、  **SQL Server 2012 (110)** 和 **SQL Server 2008 (100)**。 當 SQL Server 2005 資料庫升級到 SQL Server 2014 時，該資料庫的相容性層級會從 90 變更為 100。  SQL Server 2014 不支援 90 相容性層級。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。  
@@ -94,11 +93,11 @@ ms.locfileid: "48062624"
  針對與選定資料庫相關的 FILESTREAM 資料指定目錄名稱。  
   
  **FILESTREAM 非交易存取**  
- 針對從檔案系統到 FileTable 中所儲存之 FILESTREAM 資料的非交易存取，指定下列其中一個選項： **OFF**、 **READ_ONLY**或 **FULL**。 如果伺服器上未啟用 FILESTREAM，這個值會設定為 OFF 而且會停用。 如需詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md)。  
+ 指定下列選項，可從檔案系統到 Filetable 中儲存之 FILESTREAM 資料的非交易式存取的其中一個：**關閉**， **READ_ONLY**，或**完整**。 如果伺服器上未啟用 FILESTREAM，這個值會設定為 OFF 而且會停用。 如需詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md)。  
   
 ## <a name="miscellaneous"></a>其他  
  **ANSI NULL 預設值**  
- 允許 null 值的所有使用者定義資料類型或為未明確定義的資料行`NOT NULL`期間`CREATE TABLE`或`ALTER TABLE`陳述式 （預設狀態）。 如需詳細資訊，請參閱 [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) 和 [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql)。  
+ 針對在 `NOT NULL` 或 `CREATE TABLE` 陳述式期間，未明確定義為 `ALTER TABLE` 的所有使用者自訂的資料類型或資料行，允許 Null 值 (預設狀態)。 如需詳細資訊，請參閱 [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) 和 [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql)。  
   
  **ANSI NULLS 已啟用**  
  使用 Null 值時，指定等於 (`=`) 和不等於 (`<>`) 比較運算子的行為。 可能的值為`True`（開啟） 和`False`（關閉）。 當它是 `True` 時，所有對於 Null 值的比較都會得出 UNKNOWN。 當`False`，非 UNICODE 值與 null 值的比較都會得出`True`如果這兩個值都是 NULL。 如需詳細資訊，請參閱 [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)。  
@@ -146,7 +145,7 @@ ms.locfileid: "48062624"
   
  只要資料庫是附加至伺服器，就會將 TRUSTWORTHY 設定為 `False`。  
   
- 存取資料庫外部的資源模擬內容的建議的方法是使用憑證和簽章，而不`Trustworthy`選項。  
+ 建議在附加 `Trustworthy` 選項時使用憑證和簽章，存取具有模擬內容之資料庫外部的資源。  
   
  若要設定此屬性，請使用 ALTER DATABASE 陳述式。  
   

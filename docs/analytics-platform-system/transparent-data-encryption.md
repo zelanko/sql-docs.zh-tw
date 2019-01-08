@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c29383e02746ac3abb60a15d2d0368483d2ee13e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ea15a8fc5eaf066b5a64cf73192f64dd0078434e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699441"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534084"
 ---
 # <a name="transparent-data-encryption"></a>透明資料加密
 您可以採取幾個預防措施來維護資料庫安全，例如設計安全的系統、加密機密的資產，以及在資料庫伺服器周圍建立防火牆。 不過，所在實體媒體 （例如磁碟機或備份磁帶） 遭竊的案例中，惡意人士可以只還原或附加資料庫並瀏覽資料。 一個解決方案是加密資料庫中的敏感性資料，並使用憑證來保護用來加密資料的金鑰。 如此可防止沒有金鑰的任何人使用資料，但是這種防護類型必須事先規劃。  
@@ -56,7 +56,7 @@ ms.locfileid: "51699441"
   
 下列範例說明加密`AdventureWorksPDW2012`資料庫使用憑證，名為`MyServerCert`建立的 SQL Server PDW。  
   
-**第一個： 上啟用 TDE 的 SQL Server PDW。** 此動作時，才需要一次。  
+**第一個：啟用 TDE 的 SQL Server PDW 上。** 此動作時，才需要一次。  
   
 ```sql  
 USE master;  
@@ -75,7 +75,7 @@ GO
 EXEC sp_pdw_add_network_credentials 'SECURE_SERVER', '<domain>\<Windows_user>', '<password>';  
 ```  
   
-**第二個： 建立和備份 master 資料庫中的憑證。** 此動作，才需要一次。 您可以有個別的憑證，每個資料庫 （建議），或您可以保護多個資料庫使用一個憑證。  
+**第二個：建立和備份 master 資料庫中的憑證。** 此動作，才需要一次。 您可以有個別的憑證，每個資料庫 （建議），或您可以保護多個資料庫使用一個憑證。  
   
 ```sql  
 -- Create certificate in master  
@@ -93,7 +93,7 @@ BACKUP CERTIFICATE MyServerCert
 GO  
 ```  
   
-**最後一個： 建立 DEK，並使用 ALTER DATABASE 來加密使用者資料庫。** 此動作會重複受到 TDE 的每個資料庫。  
+**最後：建立 DEK，並使用 ALTER DATABASE 來加密使用者資料庫。** 此動作會重複受到 TDE 的每個資料庫。  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -118,7 +118,7 @@ TDE 憑證必須由資料庫主要金鑰來加密，才能由下列陳述式所�
   
 下表提供 TDE 命令和函數的連結與說明。  
   
-|命令或函數|目的|  
+|命令或函數|用途|  
 |-----------------------|-----------|  
 |[建立資料庫加密金鑰](../t-sql/statements/create-database-encryption-key-transact-sql.md)|建立用於加密資料庫的金鑰|  
 |[改變資料庫加密金鑰](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|變更用於加密資料庫的金鑰|  
@@ -128,7 +128,7 @@ TDE 憑證必須由資料庫主要金鑰來加密，才能由下列陳述式所�
 ## <a name="catalog-views-and-dynamic-management-views"></a>目錄檢視和動態管理檢視  
 下表顯示 TDE 目錄檢視和動態管理檢視。  
   
-|目錄檢視或動態管理檢視|目的|  
+|目錄檢視或動態管理檢視|用途|  
 |-------------------------------------------|-----------|  
 |[sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|顯示資料庫資訊的目錄檢視。|  
 |[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|顯示資料庫中之憑證的目錄檢視。|  
@@ -238,11 +238,11 @@ Tempdb 系統資料庫會加密啟用加密時使用[sp_pdw_database_encryption]
   
 升級動作的範例。 取代`**********`DMK 密碼。  
   
-`setup.exe /Action=ProvisionUpgrade … DMKPassword='**********'  `  
+`setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'  `  
   
 將虛擬機器動作的範例。  
   
-`setup.exe /Action=ReplaceVM … DMKPassword='**********'  `  
+`setup.exe /Action=ReplaceVM ... DMKPassword='**********'  `  
   
 在升級期間，如果使用者資料庫已加密，而且未提供 DMK 密碼，將會失敗的升級動作。 期間取代，如果未提供正確的密碼則 DMK 存在時，則作業會略過 DMK 復原步驟。 所有其他的步驟會完成取代 VM 動作中，結尾，但此動作會報告失敗結尾，表示不需要額外的步驟。 安裝程式記錄檔中 (位於**\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\< 時間戳記 > \Detail-Setup**)，將會顯示下列警告，即將結束。  
   

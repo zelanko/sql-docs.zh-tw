@@ -11,12 +11,12 @@ ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8bc8f0d48b2f439b421f205187343b5ca0e2f010
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2883427b45cb408323db91935ebbccee0792825f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080188"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526665"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>設定 PowerPivot 服務帳戶
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝包含兩個支援伺服器作業的服務。 **SQL Server Analysis Services (PowerPivot)** 服務是一種 Windows 服務，它會在應用程式伺服器上提供 PowerPivot 資料處理和查詢支援。 當您在 SharePoint 整合模式下安裝 Analysis Services 時，一定會在進行 SQL Server 安裝程式期間指定這個服務的登入帳戶。  
@@ -39,9 +39,9 @@ ms.locfileid: "48080188"
   
  [帳戶的需求和權限](#requirements)  
   
- [疑難排解：手動授與管理權限](#updatemanually)  
+ [疑難排解：以手動方式授與管理權限](#updatemanually)  
   
- [疑難排解：解決因為管理中心或 SharePoint Foundation Web 應用程式服務密碼過期而造成的 HTTP 503 錯誤](#expired)  
+ [疑難排解：解決 HTTP 503 錯誤，因為密碼過期管理中心或 SharePoint Foundation Web 應用程式服務](#expired)  
   
 ##  <a name="bkmk_passwordssas"></a> 更新 SQL Server Analysis Services (PowerPivot) 執行個體的過期的密碼  
   
@@ -111,12 +111,12 @@ ms.locfileid: "48080188"
   
 |需求|描述|  
 |-----------------|-----------------|  
-|提供需求|PowerPivot 系統服務是在伺服陣列上的共用資源，會在建立服務應用程式時變成可用。 建立服務應用程式時，必須指定服務應用程式集區。 可透過兩種方法指定：使用 PowerPivot 組態工具，或透過 PowerShell 命令。<br /><br /> 您可能已經設定應用程式集區識別在唯一帳戶下執行。 如果未指定，請考慮立即將它變更為在不同帳戶下執行。|  
+|提供需求|PowerPivot 系統服務是在伺服陣列上的共用資源，會在建立服務應用程式時變成可用。 建立服務應用程式時，必須指定服務應用程式集區。 可透過兩種方法指定：使用 PowerPivot 組態工具，或透過 PowerShell 命令。<br /><br /> 您可能已經設定應用程式集區識別在唯一帳戶下執行。 但是，如果未指定，請考慮將它現在變更為不同的帳戶下執行。|  
 |網域使用者帳戶需求|應用程式集區識別必須是 Windows 網域使用者帳戶。 禁止使用內建電腦帳戶 (如，網路服務或本機服務)。|  
 |權限需求|這個帳戶不需要電腦上的本機系統管理員權限。 但是，此帳戶必須在安裝於相同電腦的本機 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 上具有 Analysis Services 系統管理員權限。 這些權限會由 SQL Server 安裝程式自動授與，或是當您在管理中心設定或變更應用程式集區識別時授與。<br /><br /> 將查詢轉送到 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]必須有系統管理權限。 在監視健全狀況、關閉非使用中的工作階段及接聽追蹤事件時也需要系統管理權限。<br /><br /> 此帳戶必須擁有 PowerPivot 服務應用程式資料庫的連接、讀取和寫入權限。 當建立應用程式時會自動授與這些權限，當您在管理中心變更帳戶或密碼時則會自動更新這些權限。<br /><br /> PowerPivot 服務應用程式將會檢查 SharePoint 使用者是否已獲得檢視資料的授權，然後再擷取檔案，但是並不會模擬使用者。 模擬並不需要任何權限。|  
 |向外延展需求|無。|  
   
-##  <a name="updatemanually"></a> 疑難排解：手動授與管理權限  
+##  <a name="updatemanually"></a> 疑難排解：以手動方式授與管理權限  
  如果更新認證的人員不是電腦上的本機系統管理員，管理權限將無法更新。 如果發生這個情況，您可以手動授與管理權限。 最簡單的方式就是，在管理中心執行 PowerPivot 組態計時器工作。 您可以使用這個方法，在伺服陣列中重設所有 PowerPivot 伺服器的權限。 請注意，此方法只有在 SharePoint 計時器工作以伺服陣列管理員或電腦本機系統管理員執行時才有作用。  
   
 1.  在 [監視] 中，按一下 **[檢閱工作定義]**。  
@@ -160,7 +160,7 @@ ms.locfileid: "48080188"
   
     1.  以滑鼠右鍵按一下應用程式集區名稱，然後選取 **[進階設定]**。  
   
-    2.  選取 **[識別]** ，然後按一下... 按鈕，以開啟 [應用程式集區識別] 對話方塊。  
+    2.  選取 **識別**按一下...按鈕，以開啟 應用程式集區識別 對話方塊。  
   
     3.  按一下 **[設定]**。  
   

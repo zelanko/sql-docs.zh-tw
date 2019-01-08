@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - initializing files [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53e2059dbbbd110b4be94ff96cb8ca235d24e4ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 491c8a63c7ee3ed06c90356c58820f34ed3c0bf9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229448"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774270"
 ---
 # <a name="database-instant-file-initialization"></a>資料庫立即檔案初始化
   系統會將資料和記錄檔初始化，以覆寫磁碟上先前刪除之檔案中所遺留的任何現有資料。 資料檔和記錄檔初始化的方式是先在您執行下列作業之一時，在檔案中填入 0：  
@@ -48,7 +47,7 @@ ms.locfileid: "48229448"
   
  授與帳戶「 `Perform volume maintenance tasks` 」權限：  
   
-1.  在電腦上建立備份檔案的位置，開啟`Local Security Policy`應用程式 (`secpol.msc`)。  
+1.  在將建立備份檔案的電腦上，開啟「`Local Security Policy`」應用程式 (`secpol.msc`)。  
   
 2.  在左窗格中，展開 [本機原則] ，然後按一下 [使用者權限指派] 。  
   

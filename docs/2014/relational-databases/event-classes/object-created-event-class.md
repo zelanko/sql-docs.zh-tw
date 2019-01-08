@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 57536924-5e66-4b09-a76d-8fcea2131771
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ae6c6d63527a3d5dc817607270d4cb63dcaf315
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0588bdced4d8d11111b02eb7d6a1e1a892d1acb4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091459"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780710"
 ---
 # <a name="objectcreated-event-class"></a>Object:Created 事件類別
   Object:Created 事件類別指出已建立物件，例如，利用 CREATE INDEX、CREATE TABLE 或 CREATE DATABASE 陳述式建立的物件。  
@@ -50,7 +49,7 @@ ms.locfileid: "48091459"
 |ObjectID|`int`|系統指派給物件的識別碼。|22|是|  
 |ObjectID2|`bigint`|相關物件或實體的識別碼。|56|是|  
 |ObjectName|`nvarchar`|正在參考之物件的名稱。|34|是|  
-|ObjectType|`int`|代表參與事件之物件類型的值。 此值對應至 sys.objects 中的類型資料行。 如需各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
+|ObjectType|`int`|代表參與事件之物件類型的值。 此值對應至 sys.objects 中的類型資料行。 針對各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
 |RequestID|`int`|包含陳述式之要求的識別碼。|49|是|  
 |ServerName|`nvarchar`|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
 |SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示為 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  

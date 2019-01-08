@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25c8da6552446f7c34cd6deb050b2074da67443c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5421467aaf516ca3f1f153979916be01f9160d05
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673107"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517638"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>使用 ODBC 資料表值參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,16 +56,16 @@ ms.locfileid: "51673107"
 ## <a name="table-valued-parameter-with-row-streaming-send-data-as-a-tvp-using-data-at-execution"></a>以資料流方式傳送資料列的資料表值參數 (使用資料執行中，將資料當做 TVP 傳送)  
  在此案例中，應用程式會在要求時提供資料列給驅動程式，然後以資料流方式將資料列傳送給伺服器。 如此就不需要在記憶體中緩衝處理所有資料列。 這是大量插入/更新案例的代表。 資料表值參數會提供參數陣列與大量複製之間某一處的效能點。 也就是說，編寫資料表值參數就跟參數陣列一樣輕鬆，但是資料表值參數在伺服器上提供更大的彈性。  
   
- 如同上一節「完整繫結多資料列緩衝區之下的資料表值參數」所討論，資料表值參數和它的資料行會繫結在一起，但是資料表值參數本身的長度指標會設定為 SQL_DATA_AT_EXEC。 驅動程式會回應 SQLExecute 或 SQLExecuteDirect 資料在執行中參數的一般方式 — 也就是藉由傳回 SQL_NEED_DATA。 SQLParamData 驅動程式準備好要接受資料表值參數的資料時，傳回的值*ParameterValuePtr* SQLBindParameter 中。  
+ 如同上一節「完整繫結多資料列緩衝區之下的資料表值參數」所討論，資料表值參數和它的資料行會繫結在一起，但是資料表值參數本身的長度指標會設定為 SQL_DATA_AT_EXEC。 此驅動程式中的資料在執行中參數的一般方式會 SQLExecute 或 SQLExecuteDirect-也就是藉由傳回 SQL_NEED_DATA。 SQLParamData 驅動程式準備好要接受資料表值參數的資料時，傳回的值*ParameterValuePtr* SQLBindParameter 中。  
   
- 應用程式會使用資料表值參數的 SQLPutData，表示資料表值參數組成資料行的資料的可用性。 SQLPutData 呼叫資料表值參數時， *DataPtr*必須一律為 null 並*Strlen_or_ind&lt*必須是 0 或數字小於或等於指定的陣列大小資料表值參數緩衝區 ( *ColumnSize* SQLBindParameter 參數)。 0 表示資料表值參數沒有其他資料列，而且此驅動程式將會繼續處理下一個實際程序參數。 當*Strlen_or_ind&lt*是不是 0，此驅動程式會處理資料表值參數組成資料行相同的方式為非資料表值參數繫結參數： 每個資料表值參數資料行可以指定其實際的資料長度、 SQL_NULL_DATA，或它可以指定在執行，透過其長度/指標緩衝區的資料。 可以傳遞值的資料表值參數資料行如往常般重複呼叫 SQLPutData，要以片段方式傳遞字元或二進位值時。  
+ 應用程式會使用資料表值參數的 SQLPutData，表示資料表值參數組成資料行的資料的可用性。 SQLPutData 呼叫資料表值參數時， *DataPtr*必須一律為 null 並*Strlen_or_ind&lt*必須是 0 或數字小於或等於指定的陣列大小資料表值參數緩衝區 ( *ColumnSize* SQLBindParameter 參數)。 0 表示資料表值參數沒有其他資料列，而且此驅動程式將會繼續處理下一個實際程序參數。 當*Strlen_or_ind&lt*是不是 0，此驅動程式會處理資料表值參數組成資料行相同的方式為非資料表值參數繫結參數：每個資料表值參數資料行可以指定其實際資料長度 SQL_NULL_DATA，或是可以指定在執行，透過其長度/指標緩衝區的資料。 可以傳遞值的資料表值參數資料行如往常般重複呼叫 SQLPutData，要以片段方式傳遞字元或二進位值時。  
   
  當所有資料表值參數資料行都已經處理過之後，此驅動程式會回到資料表值參數來進一步處理資料表值參數資料的資料列。 因此，如果是資料執行中的資料表值參數，此驅動程式不會遵循一般的繫結參數循序掃描。 將會輪詢繫結的資料表值參數，直到呼叫 SQLPutData *StrLen_Or_IndPtr*等於 0，此時驅動程式會略過資料表值參數資料行並移至下一個實際預存程序參數。  當 SQLPutData 會通過的指標值大於或等於 1 時，驅動程式處理資料表值參數資料行和資料列依序直到它有所有的繫結的資料列和資料行的值。 然後此驅動程式會回到資料表值參數。 SQLParamData 從接收資料表值參數的語彙基元和之間的資料表值參數呼叫 SQLPutData (hstmt，NULL、 n)，應用程式必須設定資料表值參數組成資料行資料和指標緩衝區內容下一步 的資料列或資料列傳遞至伺服器。  
   
  在此案例的範例程式碼位於常式`demo_variable_TVP_binding`中[使用資料表值參數&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)。  
   
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>從系統目錄擷取資料表值參數中繼資料  
- 當應用程式會針對具有資料表值參數的程序呼叫 SQLProcedureColumns 時，DATA_TYPE 會傳回為 SQL_SS_TABLE，而且 TYPE_NAME 是資料表值參數資料表類型的名稱。 兩個額外的資料行加入 SQLProcedureColumns 傳回的結果集： SS_TYPE_CATALOG_NAME 會傳回定義資料表類型的資料表值參數，而 SS_TYPE_SCHEMA_NAME 會傳回的結構描述名稱的目錄名稱，定義資料表類型的資料表值參數的位置。 依照 ODBC 規格規定，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 會出現在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所加入的所有驅動程式特有資料行之前，以及 ODBC 本身所託管的所有資料行之後。  
+ 當應用程式會針對具有資料表值參數的程序呼叫 SQLProcedureColumns 時，DATA_TYPE 會傳回為 SQL_SS_TABLE，而且 TYPE_NAME 是資料表值參數資料表類型的名稱。 兩個額外的資料行加入 SQLProcedureColumns 傳回的結果集：SS_TYPE_CATALOG_NAME 會傳回定義資料表類型的資料表值參數，而 SS_TYPE_SCHEMA_NAME 會傳回的結構描述名稱的目錄名稱所在的位置定義資料表類型的資料表值參數。 依照 ODBC 規格規定，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 會出現在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所加入的所有驅動程式特有資料行之前，以及 ODBC 本身所託管的所有資料行之後。  
   
  新的資料行不但會針對資料表值參數擴展，也會針對 CLR 使用者定義型別參數擴展。 仍然會擴展 UDT 參數現有的結構描述和目錄資料行，但是讓需要的資料類型擁有共同的結構描述和目錄資料行將會簡化未來的應用程式開發過程  (請注意，XML 結構描述集合會有些不同，而且未包含在這項變更中)。  
   

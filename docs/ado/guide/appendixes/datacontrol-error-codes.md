@@ -14,12 +14,12 @@ ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa058add661ba5dc4054a431e0324f97e1efb422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cf56b6614587c333f473136f1cafc72128846a2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753094"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514378"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl 物件錯誤代碼
 下表列出[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件錯誤代碼。 低的兩個位元組的十進位正轉譯，會顯示完整的錯誤程式碼和十六進位值的負值的十進位轉譯。
@@ -33,7 +33,7 @@ ms.locfileid: "47753094"
 |**IDS_CantFindDataspace**|4102 -2146824186 0x800A1006|資料空間屬性無效。|
 |**IDS_CantInvokeMethod**|4101 -2146824187 0x800A1005|無法在商務物件上叫用方法。|
 |**IDS_CrossDomainWarning**|4112 -2146824170 0x800A1016|此頁面會存取另一個網域上的資料。 若要允許此嗎？ 若要避免這個訊息在 Internet Explorer 中的，您可以加入安全的網站信任的網站區域上**安全性**索引標籤**網際網路選項** 對話方塊。|
-|**IDS_InvalidADCClientVersion**|4106 -2146824176 0x800A1010|無效的 RDS 用戶端版本，用戶端是比伺服器更新。|
+|**IDS_InvalidADCClientVersion**|4106 -2146824176 0x800A1010|無效的 RDS 用戶端版本的用戶端是比伺服器更新。|
 |**IDS_INVALIDARG**|5376 -2147019520 0x80071500|一或多個引數均為無效。|
 |**IDS_InvalidBindings**|4097 -2146824191 0x800A1001|繫結屬性中的錯誤。|
 |**IDS_InvalidParam**|4110 -2146824172 0x800A1014|一或多個引數均為無效。|

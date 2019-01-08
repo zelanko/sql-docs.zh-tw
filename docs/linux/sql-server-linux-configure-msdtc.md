@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a06dfa03442cfbcff2f8815f9c946afbd9ff771c
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 127f39075a1b84b1250a27003efeb28083d1adbd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269671"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513193"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>如何在 Linux 上設定 Microsoft Distributed Transaction Coordinator (MSDTC)
 
@@ -101,7 +101,7 @@ sudo firewall-cmd --reload
 
 ## <a name="configure-port-routing"></a>設定連接埠路由
 
-設定 Linux 伺服器的路由表，以便在連接埠 135 的 RPC 通訊會重新導向至 SQL Server **network.rpcport**。 Iptable 規則可能不是保存在重新開機，因此下列命令也會提供在重新開機之後還原規則的指示。
+設定 Linux 伺服器的路由表，以便在連接埠 135 的 RPC 通訊會重新導向至 SQL Server **network.rpcport**。 在不同的散發轉送的連接埠的組態機制可能會不同。 上不會使用 firewalld 服務散發套件，iptable 規則是有效率的機制，來達到此目的。 這類 distrubution 的範例是 Ubuntu 16.04 和 SUSE Enterprise Linux v12。 Iptable 規則可能不是保存在重新開機，因此下列命令也會提供在重新開機之後還原規則的指示。
 
 1. 建立通訊埠 135 的路由規則。 在下列範例中，連接埠 135 會導向至 RPC 連接埠，13500 上, 一節中所定義。 取代`<ipaddress>`您伺服器的 IP 位址。
 
@@ -132,10 +132,16 @@ sudo firewall-cmd --reload
    iptables-restore < /etc/iptables.conf
    ```
 
-**Iptables 相關自定義儲存**並**iptables 相關自定義還原**命令提供基本機制來儲存和還原 iptables 相關自定義項目。 根據您的 Linux 散發套件，那里可能更進階或自動化的可用選項。 Ubuntu 上的替代方法是，例如**iptables 相關自定義持續**封裝，使持續性的項目。 或 Red Hat Enterprise linux，您可以使用 firewalld 服務 (透過防火牆 cmd 組態公用程式與-新增-向前-連接埠或類似的選項) 來建立持續性的連接埠轉送規則，而不是使用 iptables 相關自定義。
+**Iptables 相關自定義儲存**並**iptables 相關自定義還原**命令提供基本機制來儲存和還原 iptables 相關自定義項目。 根據您的 Linux 散發套件，那里可能更進階或自動化的可用選項。 Ubuntu 上的替代方法是，例如**iptables 相關自定義持續**封裝，使持續性的項目。 
+
+使用 firewalld 服務散發套件，在相同的服務可以用於這兩個開啟的連接埠上的伺服器和內部連接埠轉送。 例如，在 Red Hat Enterprise Linux，您應該使用 firewalld 服務 (透過防火牆 cmd 組態公用程式搭配-新增-向前-連接埠或類似的選項) 來建立和管理永續性的連接埠轉送規則，而不是使用 iptables 相關自定義。
+
+```bash
+firewall-cmd --permanent --add-forward-port=port=135:proto=tcp:toport=13500
+```
 
 > [!IMPORTANT]
-> 先前的步驟假設固定的 IP 位址。 如果您的 SQL Server 執行個體的 IP 位址有所變更 （因為手動操作或 DHCP），您必須移除並重新建立路由規則。 如果您需要重新建立或刪除現有的路由規則，您可以使用下列命令來移除舊`RpcEndPointMapper`規則：
+> 先前的步驟假設固定的 IP 位址。 如果您的 SQL Server 執行個體的 IP 位址有所變更 （因為手動操作或 DHCP），您必須移除並重新建立路由規則，如果使用 iptables 相關自定義建立。 如果您需要重新建立或刪除現有的路由規則，您可以使用下列命令來移除舊`RpcEndPointMapper`規則：
 > 
 > ```bash
 > iptables -S -t nat | grep "RpcEndPointMapper" | sed 's/^-A //' | while read rule; do iptables -t nat -D $rule; done

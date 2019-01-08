@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - leading blanks
@@ -14,12 +13,12 @@ ms.assetid: d082f42a-d7e7-49f5-a503-ac44ba630832
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9477429dd90f8fd9e21f8dfa1d255c3b472e69a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a01a5bddddff027f3cff180992057736c19a716c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189158"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805100"
 ---
 # <a name="ltrim-ssis-expression"></a>LTRIM (SSIS 運算式)
   傳回移除開頭空白之後的字元運算式。  
@@ -68,6 +67,6 @@ LTRIM(@FirstName)
 ## <a name="see-also"></a>另請參閱  
  [RTRIM &#40;SSIS 運算式&#41;](trim-ssis-expression.md)   
  [TRIM &#40;SSIS 運算式&#41;](trim-ssis-expression.md)   
- [函式&#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
+ [函數 &#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
   
   

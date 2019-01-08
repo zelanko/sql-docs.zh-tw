@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_query (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/29/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,15 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7fc3462eae5ca53d1c1b0b2ef4ad65c9579569e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff4b428c87da7180869cb3b0c51f4a8fb118a351
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726786"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711849"
 ---
 # <a name="sysquerystorequery-transact-sql"></a>sys.query_store_query & Amp;#40;transact-SQL&AMP;#41;
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   包含查詢和其相關聯的整體彙總執行階段執行統計資料的相關資訊。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47726786"
 |**batch_sql_handle**|**varbinary(64)**|陳述式批次查詢的識別碼是的一部分。 查詢參考暫存資料表或資料表變數時，才填入。|  
 |**query_hash**|**binary(8)**|個別的查詢，根據邏輯的查詢樹狀結構的 MD5 雜湊。 包括最佳化工具提示。|  
 |**is_internal_query**|**bit**|查詢是在內部產生的。|  
-|**query_parameterization_type**|**tinyint**|參數化的類型：<br /><br /> 0 – 無<br /><br /> 1-使用者<br /><br /> 2 – 簡單<br /><br /> 3 – 強制|  
+|**query_parameterization_type**|**tinyint**|參數化的類型：<br /><br /> 0-無<br /><br /> 1 位使用者<br /><br /> 2-簡單<br /><br /> 3-強制|  
 |**query_parameterization_type_desc**|**nvarchar(60)**|參數化類型的文字描述。|  
 |**initial_compile_start_time**|**datetimeoffset**|編譯開始時間。|  
 |**last_compile_start_time**|**datetimeoffset**|編譯開始時間。|  
@@ -71,7 +71,7 @@ ms.locfileid: "47726786"
  需要**VIEW DATABASE STATE**權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.database_query_store_options &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.database_query_store_options &#40;-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [sys.query_context_settings &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
  [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   

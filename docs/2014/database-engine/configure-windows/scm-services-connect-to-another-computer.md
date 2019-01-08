@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], other computers
@@ -13,12 +12,12 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fecf123299d81f1d1b39c62c7ab1ecb2368f98dd
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072092"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639295"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>連接至另一部電腦 (SQL Server 組態管理員)
   此主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中連接到另一部電腦。 請遵循第一個程序，開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (mmc) 中的 Windows [電腦管理]，並連接到該電腦，然後展開 [服務與應用程式] 樹狀目錄。 請遵循第二個程序，在遠端電腦上建立連結至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員的檔案。  
@@ -64,7 +63,7 @@ ms.locfileid: "49072092"
   
 10. 以滑鼠右鍵按一下 [SQL Server 組態管理員]，然後按一下 [從這裡新增視窗]。  
   
-11. 在上** 視窗**功能表上，按一下**主控台根目錄**，以切換回第一個視窗中，並刪除該視窗。  
+11. 在 [視窗] 功能表上，按一下 [主控台根目錄]，以切換回第一個視窗，並刪除該視窗。  
   
 12. 在上**檔案**功能表上，按一下**另存新檔**，並將檔案儲存在所要的資料夾的適當名稱`.msc`副檔名。 請關閉 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console。  
   

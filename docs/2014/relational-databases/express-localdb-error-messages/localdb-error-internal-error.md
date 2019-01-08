@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: supportability
+ms.technology: performance
 ms.topic: reference
 ms.assetid: 60c7a47b-114c-441b-869e-9d8ebfe4148e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c74c11c925216b0ac31442c659cf00cd1a4b274
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 809420b875ebf20b45efb6b297cb198cfed8422b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100718"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811997"
 ---
 # <a name="localdberrorinternalerror"></a>LOCALDB_ERROR_INTERNAL_ERROR
     

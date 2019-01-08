@@ -15,12 +15,12 @@ ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 21eb8108c8779ca3558336a6d1d46cbeac0a77cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109869"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545256"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>建立伺服器稽核和資料庫稽核規格
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立伺服器稽核和資料庫稽核規格。  
@@ -64,7 +64,7 @@ ms.locfileid: "48109869"
   
 1.  在 [物件總管] 中，展開 **[安全性]** 資料夾。  
   
-2.  以滑鼠右鍵按一下 [稽核] 資料夾，然後選取 [新增稽核…]。 如需詳細資訊，請參閱 [建立伺服器稽核與伺服器稽核規格](create-a-server-audit-and-server-audit-specification.md)。  
+2.  以滑鼠右鍵按一下 [稽核] 資料夾，然後選取 [新增稽核]。如需詳細資訊，請參閱 [建立伺服器稽核與伺服器稽核規格](create-a-server-audit-and-server-audit-specification.md)。  
   
 3.  當您完成選取選項之後，按一下 **[確定]**。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48109869"
   
 2.  展開 **[安全性]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [資料庫稽核規格] 資料夾，然後選取 [新增資料庫稽核規格…]。  
+3.  以滑鼠右鍵按一下 [資料庫稽核規格] 資料夾，然後選取 [新增資料庫稽核規格]。  
   
      **[建立資料庫稽核規格]** 對話方塊有下列選項。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48109869"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE master ;  
@@ -133,7 +133,7 @@ ms.locfileid: "48109869"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 範例會針對 `Audit_Pay_Tables` 資料表 (以上方定義的伺服器稽核為基礎)，建立可稽核 `dbo` 使用者所執行 SELECT 和 INSERT 陳述式的資料庫稽核規格，其名稱為 `HumanResources.EmployeePayHistory`。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 範例會針對 `Audit_Pay_Tables` 資料表 (以上方定義的伺服器稽核為基礎)，建立可稽核 `dbo` 使用者所執行 SELECT 和 INSERT 陳述式的資料庫稽核規格，其名稱為 `HumanResources.EmployeePayHistory`。  
   
     ```  
     USE AdventureWorks2012 ;   

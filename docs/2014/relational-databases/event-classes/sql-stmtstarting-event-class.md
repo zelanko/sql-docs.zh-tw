@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: ae97386c-9dbf-456d-bcbc-391931775fa3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 189674f09d0f56b481bcf0577b998f8f8f77b64a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95a2e4a2bc7caeaae04ac8aab245ccf7edbb6af7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062598"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774470"
 ---
 # <a name="sqlstmtstarting-event-class"></a>SQL:StmtStarting 事件類別
   SQL:StmtStarting 事件類別指出 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式已啟動。  

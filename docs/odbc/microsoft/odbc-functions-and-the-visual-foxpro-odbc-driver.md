@@ -21,12 +21,12 @@ ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b83edd4ce5bfafcd8413683abad50918cc47d3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d82fde382bf3ed92f400dbbe234790ccd510cc93
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782676"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512463"
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>ODBC 函式和 Visual FoxPro ODBC Driver
 在本節中的主題會提供 ODBC API 函式的簡短摘要，以及任何 Visual FoxPro 特定詳細資料。  
@@ -34,7 +34,7 @@ ms.locfileid: "47782676"
 > [!NOTE]  
 >  一般 ODBC 函數的詳細資訊，請參閱[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)《 ODBC 程式設計人員指南 》 中。  
   
- ODBC API 函式已分成三個主要的類別： 核心層級 API 函式、 層級 1 API 函式和層級 2 API 函式。  
+ ODBC API 函式已分成三個主要的類別：核心層級 API 函式、 層級 1 API 函式和層級 2 API 函式。  
   
 > [!NOTE]  
 >  有幾個函式有不同的行為取決於是否為目錄的連接定義資料來源[免費資料表](../../odbc/microsoft/visual-foxpro-terminology.md)（.dbf 檔案） 或 Visual FoxPro[資料庫](../../odbc/microsoft/visual-foxpro-terminology.md)（.dbc 檔案）。 某些作業僅支援資料庫連接。  

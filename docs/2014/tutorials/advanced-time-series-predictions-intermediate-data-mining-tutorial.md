@@ -11,12 +11,12 @@ ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f575a51d34bfaa6b8a4ca1a6200cf60f9d89a870
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a45d0bf0878b472e4979c00a5a38e8b01974a22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122738"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544333"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>進階時間序列預測 (中繼資料採礦教學課程)
   您已經從預測模型的瀏覽得知，雖然大部分地區的銷售都遵循類似的模式，但是某些地區和某些模型 (如太平洋地區的 M200 模型) 則呈現了非常不同的趨勢。 這不令您吃驚，因為您知道地區之間的差異是很常見的，而且可能是因為許多因素所造成，其中包括促銷活動、不正確的報表或地理政治事件。  
@@ -44,7 +44,7 @@ ms.locfileid: "48122738"
 ##  <a name="bkmk_newExtendData"></a> 建立新的擴充銷售資料  
  您需要取得最新的銷售數字，以更新銷售資料。 特別值得注意的是來自太平洋地區的最新資料，這裡剛發起區域性銷售促銷，讓新店面及其商品吸引眾人目光。  
   
- 在此案例中，假設已經從只包含數個地區三個月的新資料的 Excel 活頁簿匯入資料。 您將使用 Transact-SQL 指令碼，為此資料建立資料表，然後定義一個用於預測的資料來源檢視。  
+ 此案例中，我們假設資料已匯入從 Excel 活頁簿，其中包含只是三個月的新資料的幾個區域。 您將建立使用 Transact SQL 指令碼，將資料的資料表，並接著定義要用於預測的資料來源檢視。  
   
 #### <a name="create-the-table-with-new-sales-data"></a>使用新銷售資料建立資料表  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48122738"
   
      **資料來源**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **選取資料表和檢視**： 選取的資料表，您剛建立的 NewSalesData。  
+     **選取資料表和檢視**:選取您剛才建立資料表，NewSalesData。  
   
 3.  按一下 **[完成]**。  
   
@@ -122,9 +122,9 @@ ms.locfileid: "48122738"
   
 2.  在精靈的歡迎頁面中，按 **[下一步]**。  
   
-3.  在 [**選取資料來源**頁面上，選取[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]，然後按一下**下一步]**。  
+3.  在 **[選取資料來源]** 頁面上，選取 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]，然後按 **[下一步]**。  
   
-4.  在 **[選取資料表和檢視表]** 頁面上，直接按 **[下一步]**，不加入任何資料表。  
+4.  在頁面中，**選取資料表和檢視表**，不加入任何資料表，只要按一下**下一步**。  
   
 5.  在頁面上，**完成精靈**，輸入名稱`AllRegions`，然後按一下**完成**。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "48122738"
   
      **資料來源**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **選取資料表和檢視表**：不選取任何資料表  
+     **選取資料表和檢視**:不選取任何資料表  
   
      **名稱**：`T1000 Pacific Region`  
   

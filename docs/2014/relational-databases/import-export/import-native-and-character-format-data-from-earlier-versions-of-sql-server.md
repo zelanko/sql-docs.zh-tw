@@ -15,12 +15,12 @@ ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 866e84844c563f1289a23a598cbd980d9b3bc432
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a87863d3046de695e489e83ec46eb073a7f4761c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169582"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531588"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>從舊版 SQL Server 匯入原生與字元格式資料
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，您可以透過 **-V** 參數使用 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]bcp [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、 **或** 匯入原生與字元格式資料。 **-V** 參數會讓 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用指定之舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的資料類型，而資料檔案格式將會與舊版中的資料檔案格式相同。  
@@ -51,8 +51,8 @@ ms.locfileid: "48169582"
   
  <sup>1</sup> UDT 表示使用者定義型別。  
   
-## <a name="exporting-using-v-80"></a>使用 –V 80 匯出  
- 當您使用大量匯出資料時 **– V80**切換，請`nvarchar(max)`， `varchar(max)`， `varbinary(max)`，XML，以及像原生模式中的 UDT 資料儲存與 4 位元組前置詞， `text`， `image`，以及`ntext`資料，而不是與 8 位元組前置詞，這是預設值[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更新版本。  
+## <a name="exporting-using--v-80"></a>使用 -V 80 匯出  
+ 當您使用大量匯出資料時 **-V80**切換，請`nvarchar(max)`， `varchar(max)`， `varbinary(max)`，XML，以及像原生模式中的 UDT 資料儲存與 4 位元組前置詞， `text`， `image`，以及`ntext`資料，而不是與 8 位元組前置詞，這是預設值[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更新版本。  
   
 ## <a name="copying-date-values"></a>複製日期值  
  **bcp** 會使用 ODBC 大量複製 API。 因此，若要將日期值匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **bcp** 會使用 ODBC 日期格式 (*yyyy-mm-dd hh:mm:ss*[*.f...*])。  
@@ -60,7 +60,7 @@ ms.locfileid: "48169582"
  **Bcp**命令會將匯出字元格式資料檔中使用的 ODBC 預設格式`datetime`和`smalldatetime`值。 例如，包含日期 `12 Aug 1998` 的 `datetime` 資料行會以字元字串 `1998-08-12 00:00:00.000` 大量複製到資料檔案。  
   
 > [!IMPORTANT]  
->  當資料匯入`smalldatetime`欄位使用**bcp**，確定秒數值是 00.000; 否則作業將會失敗。 `smalldatetime`資料類型只保留最接近的分鐘值。 BULK INSERT 及 INSERT ...SELECT * FROM OPENROWSET(BULK...) 在這個案例中將不會失敗，但會截斷秒數值。  
+>  當資料匯入`smalldatetime`欄位使用**bcp**，確定秒數值是 00.000; 否則作業將會失敗。 `smalldatetime` 資料類型只會保留最接近分鐘數的數值。 BULK INSERT 及 INSERT ...SELECT * FROM OPENROWSET(BULK...) 在這個案例中將不會失敗，但會截斷秒數值。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
  **若要使用大量匯入或大量匯出的資料格式**  

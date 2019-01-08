@@ -18,12 +18,12 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 50600dcb20df520dc462ed64fcd11333a53d3a66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3128828bd26e6d2755f30748c23873538b8a7649
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066838"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527710"
 ---
 # <a name="create-statistics"></a>建立統計資料
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中針對資料表或索引檢視表的一個或多個資料行建立查詢最佳化統計資料。 對於大部分查詢而言，查詢最佳化工具已經產生高品質查詢計畫的必要統計資料。不過，在少數情況下，您必須建立其他統計資料。  
@@ -149,7 +149,7 @@ ms.locfileid: "48066838"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;   

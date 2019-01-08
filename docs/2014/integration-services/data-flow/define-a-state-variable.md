@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d80c4dc4d304dfb6b3043475026e0e5e34c2e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca9e4b8dd9c00904b09645e4d0c45673fbb6020f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072562"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811630"
 ---
 # <a name="define-a-state-variable"></a>定義狀態變數
   此程序描述如何定義 CDC 狀態儲存所在的封裝變數。  
@@ -33,7 +32,7 @@ ms.locfileid: "48072562"
 |`CS`|此標示目前處理範圍的起點 (Current Start)。|  
 |`<cs-lsn>`|此為上一個 CDC 回合最後處理的 LSN (記錄序號)。|  
 |`CE`|此標示目前處理範圍的終點 (Current End)。 CDC 狀態中若存在 CE 元件，代表目前正在處理 CDC 封裝，或是 CDC 封裝在其 CDC 處理範圍未處理完全之前即已失敗。|  
-|`<ce-lsn>`|此為目前 CDC 回合要處理的最後一個 LSN。 處理的最後一個序號一律假設為最大值 (0xFFF…)。|  
+|`<ce-lsn>`|此為目前 CDC 回合要處理的最後一個 LSN。 處理的最後一個序號一律假設為最大值 (0xFFF...)。|  
 |`IR`|此標示初始處理範圍。|  
 |`<ir-start>`|此為初始載入剛要開始前之異動的 LSN。|  
 |`<ir-end>`|此為初始載入才剛結束後之異動的 LSN。|  
@@ -50,10 +49,10 @@ ms.locfileid: "48072562"
 |-----------|-----------------|  
 |(INITIAL)|這是目前的 CDC 群組上有任何封裝執行之前的初始狀態。 這也是 CDC 狀態為空白時呈現的狀態。|  
 |ILSTART (初始載入開始)|這是在 CDC 控制工作的 `MarkInitialLoadStart` 作業呼叫之後，初始載入封裝開始時的狀態。|  
-|ILEND (初始載入結束)|這是初始載入封裝順利結束時的狀態之後`MarkInitialLoadEnd`作業呼叫在 CDC 控制工作。|  
-|ILUPDATE (初始載入更新)|這是緊接於初始載入之後而仍在處理初始處理範圍期間執行 Trickle 摘要更新封裝時的狀態。 這是在之後`GetProcessingRange`作業呼叫在 CDC 控制工作。<br /><br /> 如果使用了 __$reprocessing 資料行，其值就會設定為 1，表示封裝可能要重新處理已經位於目標上的資料列。|  
+|ILEND (初始載入結束)|這是在 CDC 控制工作的 `MarkInitialLoadEnd` 作業呼叫之後，初始載入封裝順利結束時的狀態。|  
+|ILUPDATE (初始載入更新)|這是緊接於初始載入之後而仍在處理初始處理範圍期間執行 Trickle 摘要更新封裝時的狀態。 發生於 CDC 控制工作的 `GetProcessingRange` 作業呼叫之後。<br /><br /> 如果使用了 __$reprocessing 資料行，其值就會設定為 1，表示封裝可能要重新處理已經位於目標上的資料列。|  
 |TFEND (Trickle 摘要更新結束)|這是一般 CDC 回合所預期的狀態。 這種狀態表示上一個回合已順利完成，而且可以啟動具有新處理範圍的新回合。|  
-|TFSTART|這是後的狀態，非初次執行 trickle 摘要的更新封裝，`GetProcessingRange`作業呼叫在 CDC 控制工作。<br /><br /> 這表示一般 CDC 回合已啟動但尚未完成或尚未完成，完全 (`MarkProcessedRange`)。|  
+|TFSTART|這是在 CDC 控制工作的 `GetProcessingRange` 作業呼叫之後，非初次執行 Trickle 摘要更新封裝時的狀態。<br /><br /> 這表示一般 CDC 回合已啟動，但卻沒有完成或者尚未徹底完成 (`MarkProcessedRange`)。|  
 |TFREDO (重新處理 Trickle 摘要更新)|這是在 TFSTART 之後發生 `GetProcessingRange` 時的狀態。 這種狀態表示上一個回合並未順利完成。<br /><br /> 如果使用了 __$reprocessing 資料行，其值就會設定為 1，表示封裝可能要重新處理已經位於目標上的資料列。|  
 |ERROR|CDC 群組處於 ERROR 狀態。|  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48072562"
  如果您不打算將 CDC 控制工作與 [自動狀態持續性] 搭配使用，則必須從上次封裝執行時儲存其值的永續性儲存體中載入變數值，並在目前處理範圍已完成處理時將變數值寫回該永續性儲存體。  
   
 ## <a name="see-also"></a>另請參閱  
- [CDC 控制工作](../control-flow/cdc-control-task.md)   
- [CDC 控制工作編輯器](../cdc-control-task-editor.md)  
+ [CDC Control Task](../control-flow/cdc-control-task.md)   
+ [CDC Control Task Editor](../cdc-control-task-editor.md)  
   
   

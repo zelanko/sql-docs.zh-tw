@@ -27,12 +27,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 089ced09d718b0716f0c19d4553e52ff02c3d505
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07aae4f4e619e38d41cd16a08e1e8f7267f5ed29
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665577"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533565"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>版本及支援的功能的 Linux 上的 SQL Server 2017
 
@@ -58,7 +58,7 @@ ms.locfileid: "51665577"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|定義|  
 |---------------------------------------|----------------|  
 |Enterprise|Premium 供應項目， [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition 提供完整的高階資料中心功能，以極快速的效能，讓任務關鍵性工作負載的高服務等級。|  
-|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition 提供針對部門和小型組織，以執行其應用程式的基本資料管理，並且支援內部部署和雲端的一般開發工具，提供有效的資料庫管理具有最少的 IT 資源。|  
+|Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition 提供針對部門和小型組織，以執行其應用程式的基本資料管理，並且支援內部部署和雲端提供最有效的資料庫管理具有最少的 IT 資源的一般開發工具。|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition 對於 Web 主控者和 Web VAP 而言是一個整體擁有成本很低的選擇，可針對小型到大型規模的 Web 屬性提供可擴充、負擔輕鬆而且管理方便的功能。|  
 |Developer|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition 可讓開發人員在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上建立任何類型的應用程式。 其中包含 Enterprise Edition 的所有功能，但是只授權做為開發和測試系統使用，而不做為實際伺服器使用。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer 是供應用程式建立和測試人員使用的理想選擇。|  
 |Express 版本|Express Edition 是入門級免費伺服器，非常適合用來學習及建置桌上型電腦和小型伺服器資料驅動應用程式。 這個版本是獨立軟體廠商、開發人員及建置用戶端應用程式之愛好者的最佳選擇。 如果您需要更進階的資料庫功能， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 可以順利地升級為其他更高階的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本。|  
@@ -132,7 +132,7 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
 |持續性的主記憶體|是|是|是|是|
 |資料表和索引分割區|是|是|是|是|  
 |資料壓縮|是|是|是|是|
-|資源管理員|是|否|否|否|  
+|[資源管理員]|是|否|否|否|  
 |分割資料表平行處理原則|是|否|否|否|
 |NUMA 感知大型分頁記憶體和緩衝區陣列配置|是|否|否|否|
 |IO 資源管理|是|否|否|否|  

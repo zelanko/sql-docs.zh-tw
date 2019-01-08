@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services, SSIS Designer
@@ -18,12 +17,12 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18f8ee2b794488a098e68ff54803b624c8fa4455
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c056a6a1ebf5958b980c21e3d36d6bc1291f8869
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144718"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792853"
 ---
 # <a name="ssis-designer"></a>SSIS 設計師
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師是可以用於建立及維護 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的圖形工具。 [!INCLUDE[ssIS](../includes/ssis-md.md)][!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 提供的設計師是 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的一部分。  
@@ -44,7 +43,7 @@ ms.locfileid: "48144718"
   
  ![設計師與工具箱的螢幕擷取畫面](media/denali-designerandtoolbox.gif "設計師與工具箱的螢幕擷取畫面")  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含用來在封裝中加入功能的其他對話方塊和視窗， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 則提供用於設定開發環境及使用封裝的視窗和對話方塊。 如需詳細資訊，請參閱 [Integration Services User Interface](integration-services-user-interface.md) (Integration Services 使用者介面)。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含用來在封裝中加入功能的其他對話方塊和視窗， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 則提供用於設定開發環境及使用封裝的視窗和對話方塊。 如需詳細資訊，請參閱 [Integration Services User Interface](integration-services-user-interface.md)(Integration Services 使用者介面)。  
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師不具有對 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務 (管理和監視封裝的服務) 的相依性，且不需要執行該服務即可在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中建立或修改封裝。 不過，如果在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師處於開啟狀態時停止該服務，則將無法再開啟 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師所提供的對話方塊，同時您可能會接收到「RPC 伺服器無法使用」這樣的錯誤訊息。 若要重設 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師並繼續使用封裝，必須關閉設計師，結束 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，然後重新開啟 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ([!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案) 和封裝。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48144718"
 ### <a name="control-flow-tab"></a>控制流程索引標籤  
  您可以在 [控制流程] 索引標籤的設計介面上，建構封裝中的控制流程。請從 [工具箱] 將項目拖曳至設計介面，並透過按一下項目的圖示將其連接到控制流程中，然後從一個項目拖曳箭頭到另一個項目。  
   
- 如需詳細資訊，請參閱[控制流程](control-flow/control-flow.md)。  
+ 如需詳細資訊，請參閱 [控制流程](control-flow/control-flow.md)。  
   
 ### <a name="data-flow-tab"></a>資料流程索引標籤  
  如果封裝包含資料流程工作，您可以將資料流程加入封裝中。 您可以在 [資料流程] 索引標籤的設計介面上，建構封裝中的資料流程。請從 [工具箱] 將項目拖曳至設計介面，並透過按一下項目的圖示將其連接到資料流程中，然後從一個項目拖曳箭頭到另一個項目。  
@@ -106,6 +105,6 @@ ms.locfileid: "48144718"
 -   [在 SQL Server Data Tools 中建立套件](create-packages-in-sql-server-data-tools.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [Integration Services 使用者介面](integration-services-user-interface.md)  
+ [Integration Services User Interface](integration-services-user-interface.md)  
   
   

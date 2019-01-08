@@ -14,12 +14,12 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 41369eae8034fc7723d8b5517c525313c0feca72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da49fc88b7736bbe161bab4dfec39ab7fdb43c82
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167908"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350115"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的資料點 (報表產生器及 SSRS)
   資料點是圖表上最小的個別實體。 在非形狀圖上，資料點的表示取決於其圖表類型。 例如，線條數列由一個或多個已連接的資料點所組成。 在形狀圖上，資料點會以加入到整個圖表的個別配量或區段表示。 例如，在圓形圖上，每一塊都是一個資料點。 如需詳細資訊，請參閱 [圖表類型 &#40;報表產生器及 SSRS&#41;](chart-types-report-builder-and-ssrs.md)。  
@@ -44,7 +44,7 @@ ms.locfileid: "48167908"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>在圖表上放置資料點標籤  
  針對所有圖表類型，當您以滑鼠右鍵按一下圖表，然後選取 **[顯示資料標籤]** 時，可以顯示資料點標籤。 資料點標籤的位置會根據圖表類型而指定：  
   
--   在橫條圖上，您可以使用 **BarLabelStyle** 自訂屬性重新放置資料點標籤的位置。 可能的位置有四個：Outside、Left、Center 與 Right。 當橫條標籤樣式設定為 Outside 時，只要圖表區域能夠容納，標籤就會放置在橫條外部。 如果無法將標籤放置在橫條外部與圖表區域內部，標籤就會放在橫條內部。  
+-   在橫條圖上，您可以使用 **BarLabelStyle** 自訂屬性重新放置資料點標籤的位置。 有四個可能的位置：Outside、 Left、 Center 與 Right。 當橫條標籤樣式設定為 Outside 時，只要圖表區域能夠容納，標籤就會放置在橫條外部。 如果無法將標籤放置在橫條外部與圖表區域內部，標籤就會放在橫條內部。  
   
 -   在圓形圖上，您可以使用 **PieLabelStyle** 自訂屬性重新放置資料點標籤的位置。 在圓形圖周圍放置資料點標籤時有許多考量，包括圓形圖的大小、圓形圖及其對應圖例間的可用空間以及標籤的大小。 如需詳細資訊，請參閱 [在圓形圖外部顯示資料點標籤 &#40;報表產生器和 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48167908"
 |#MAX|數列中所有 Y 值的最大值。|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|數列中所有 Y 值的第一個。|All|`=First(Fields!MyDataField.Value)`|  
   
- 若要格式化關鍵字，請以括號括住 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串。 例如，若要將工具提示中資料點的值指定為包含兩位小數的數字，請以大括弧包含格式字串 "N2"，例如 "#VALY{N2}" 表示數列的 **ToolTip** 屬性。 如需有關 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串的詳細資訊，請參閱 MSDN 上的＜ [格式化型別](http://go.microsoft.com/fwlink/?LinkId=112024) ＞。 如需在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中將數字格式化的詳細資訊，請參閱[將數字和日期格式化 &#40;報表產生器和 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
+ 若要格式化關鍵字，請以括號括住 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串。 例如，若要將工具提示中資料點的值指定為包含兩位小數的數字，請以大括弧包含格式字串 "N2"，例如 "#VALY{N2}" 表示數列的 **ToolTip** 屬性。 如需有關 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字串的詳細資訊，請參閱 MSDN 上的＜ [格式化型別](https://go.microsoft.com/fwlink/?LinkId=112024) ＞。 如需在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中將數字格式化的詳細資訊，請參閱[將數字和日期格式化 &#40;報表產生器和 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
   
  如需將關鍵字新增至圖表的詳細資訊，請參閱[在數列上顯示工具提示 &#40;報表產生器和 SSRS&#41;](show-tooltips-on-a-series-report-builder-and-ssrs.md) 和[變更圖例項目的文字 &#40;報表產生器和 SSRS&#41;](chart-legend-change-item-text-report-builder.md)。  
   
@@ -99,9 +99,9 @@ ms.locfileid: "48167908"
 ## <a name="see-also"></a>另請參閱  
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [圖表 &#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [將軸標籤格式化成日期或貨幣 &#40;報表產生器及 SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [教學課程：將圓形圖新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [教學課程：將圓形圖加入至報表&#40;報表產生器&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   

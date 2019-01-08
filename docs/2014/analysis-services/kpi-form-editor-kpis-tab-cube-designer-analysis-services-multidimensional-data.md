@@ -13,12 +13,12 @@ ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 49df3dcaf89d98d42da0a89ea7de0b8114093913
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 233e8f36f103d1a5adac6937d47e1040dfe6395d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166378"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523469"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 表單編輯器 (KPI 索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
   在 Cube 設計師的 [KPI] 索引標籤上，使用 [KPI 表單編輯器] 窗格來建立或修改選取的關鍵效能指標 (KPI)。  
@@ -61,10 +61,10 @@ ms.locfileid: "48166378"
   
  從 **[計算工具]** 窗格中，將選取的元素拖曳到這個選項，以包括所選元素的 MDX 語法。  
   
- 建議讓此運算式傳回介於 -1 和 1 之間的十進位數字。 較低的數字代表負值狀況，而較高的數字代表正值狀況。  
+ 建議讓此運算式會傳回-1 和 1 之間的十進位數字。 較低的數字代表負值狀況，而較高的數字代表正值狀況。  
   
 > [!NOTE]  
->  值可能低於 –1 和高於 1，但是協力廠商用戶端應用程式可能無法正確地解譯。  
+>  值-1 和高於 1 可能會但可能不正確地解譯協力廠商用戶端應用程式。  
   
  **趨勢**  
  展開即可編輯 [趨勢圖形] 和 [趨勢運算式] 選項。  
@@ -80,10 +80,10 @@ ms.locfileid: "48166378"
   
  從 **[計算工具]** 窗格中，將選取的元素拖曳到這個選項，以包括所選元素的 MDX 語法。  
   
- 趨勢運算式可以根據給定商務內容中任何有意義、以時間為基礎的準則。 建議讓此運算式傳回介於 -1 和 1 之間的十進位數字。 較低的數字代表經過一段時間的負值趨勢，而較高的數字代表經過一段時間的正值趨勢。  
+ 趨勢運算式可以根據給定商務內容中任何有意義、以時間為基礎的準則。 建議讓此運算式會傳回-1 和 1 之間的十進位數字。 較低的數字代表經過一段時間的負值趨勢，而較高的數字代表經過一段時間的正值趨勢。  
   
 > [!NOTE]  
->  值可能低於 –1 和高於 1，但是協力廠商用戶端應用程式可能無法正確地解譯。  
+>  值-1 和高於 1 可能會但可能不正確地解譯協力廠商用戶端應用程式。  
   
  **其他屬性**  
  展開即可檢視 [顯示資料夾]、[父 KPI]、[目前時間成員]、[加權] 和 [描述] 選項。  

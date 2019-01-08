@@ -16,12 +16,12 @@ ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8d04911b52239ff9accc5d69ff1e1ddd21e5d50b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 092d6e9432f22ef43a155d2a7d3ff03299bcd131
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093448"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526446"
 ---
 # <a name="delete-an-index"></a>刪除索引
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中刪除 (卸除) 索引。  
@@ -82,7 +82,7 @@ ms.locfileid: "48093448"
   
 7.  按一下 [ **關閉**]。  
   
-8.  在 [檔案] 功能表上，選取 [儲存 <資料表名稱>]。  
+8.  在 [檔案] 功能表上，選取 [儲存 _table_name_]。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48093448"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;  

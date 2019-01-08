@@ -19,12 +19,12 @@ ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 68907320922f0181521a9ff30de708f660e8dd8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08c490fd6643d8d440444d46d9ac19673d847938
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207098"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518632"
 ---
 # <a name="setdatabaseconnection-method-wmi-msreportserverconfigurationsetting"></a>SetDatabaseConnection 方法 (WMI MSReportServer_ConfigurationSetting)
   設定特定報表伺服器資料庫的報表伺服器資料庫連接。  
@@ -55,7 +55,7 @@ public void BackupEncryptionKey(string Server,
   
 -   0 - Windows  
   
--   1 – [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   1 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   2 - Windows 服務  
   
@@ -82,9 +82,9 @@ public void BackupEncryptionKey(string Server,
   
  SetDatabaseConnection 方法不會檢查報表伺服器是否能夠使用指定的資料來連接至報表伺服器資料庫。  
   
- 第一次設定時，ConnectionPoolSize 屬性是根據下列處理器設定的：ConnectionPoolSize = #Processors * 75。  
+ 第一次設定時，ConnectionPoolSize 屬性設定會根據下列處理器：ConnectionPoolSize = #Processors * 75。  
   
- SetDatabaseConnection 方法不會將權限授與指定的帳戶。 您必須呼叫[GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md)每個帳戶都需要存取報表伺服器資料庫，並執行所產生的指令碼的方法。  
+ SetDatabaseConnection 方法不會將權限授與指定的帳戶。 您必須針對需要存取報表伺服器資料庫的每個帳戶呼叫 [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) 方法，並且執行產生的指令碼。  
   
 ## <a name="requirements"></a>需求  
  **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

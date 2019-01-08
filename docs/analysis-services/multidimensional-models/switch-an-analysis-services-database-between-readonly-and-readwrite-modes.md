@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c6ede109d13c21686400c0f9ce99c22f1118eda9
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: e1ae8fc032a1f728372e9b4e764281ea8df8ddaa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147913"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525882"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>在 ReadOnly 和 ReadWrite 模式之間切換 Analysis Services 資料庫
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "50147913"
   
      記下位置。 空白的資料庫儲存位置是表示該資料庫資料夾位於伺服器資料中。  
   
-2.  以滑鼠右鍵按一下該資料庫，然後選取 [卸離…]  
+2.  以滑鼠右鍵按一下資料庫，然後選取**卸離...**  
   
 3.  將密碼指派給要卸離的資料庫，然後按一下 [確定] 執行卸離命令。  
   
-4.  在物件總管中，以滑鼠右鍵按一下 [資料庫] 資料夾，然後選取 [附加…]  
+4.  在 [物件總管] 中，以滑鼠右鍵按一下**資料庫**資料夾，然後選取**附加...**  
   
-5.  在 [資料夾] 文字方塊中，輸入資料庫資料夾的原始位置。 或者，您也可以使用瀏覽按鈕 (**…**) 來找出資料庫資料夾。  
+5.  在 [資料夾] 文字方塊中，輸入資料庫資料夾的原始位置。 或者，您可以使用瀏覽按鈕 (**...**) 來找出資料庫資料夾。  
   
 6.  選取資料庫的讀取/寫入模式。  
   
@@ -93,9 +93,9 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
   
      記下位置。 空白的資料庫儲存位置是表示該資料庫資料夾位於伺服器資料中。  
   
-2.  以滑鼠右鍵按一下該資料庫，然後選取 [卸離…]  
+2.  以滑鼠右鍵按一下資料庫，然後選取**卸離...**  
   
-3.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中開啟新的 XMLA 索引標籤。  
+3.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中開啟新的 XMLA 索引標籤。  
   
 4.  複製下列 XMLA 指令碼範本：  
   

@@ -7,8 +7,6 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.action
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
 - Transact-SQL debugger, breakpoint when hit action
@@ -16,12 +14,12 @@ ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b2dfffc59284a0eb2d4f121b2f2328bdadae1d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92ac0e98924b54a20ad16c183386dd407fc7604c
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189510"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328988"
 ---
 # <a name="specify-a-breakpoint-action"></a>指定中斷點動作
   中斷點 [叫用時] 動作指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具針對中斷點所執行的自訂工作。 如果已到達指定的叫用計數而且滿足任何指定的中斷點條件時，偵錯工具就會執行為中斷點指定的動作。  
@@ -31,7 +29,7 @@ ms.locfileid: "48189510"
   
  列印訊息是在 [列印訊息] 選項中指定，並指定為文字字串，其中的運算式包含來自偵錯中 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的資訊。 運算式包含：  
   
--   以大括號 ({}) 括住的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。 運算式可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變數、參數和內建函數。 範例包括 {@MyVariable}、{@NameParameter}、{@@SPID} 或 {SERVERPROPERTY(‘ProcessID’)}。  
+-   以大括號 ({}) 括住的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。 運算式可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 變數、參數和內建函數。 範例包括 {@MyVariable}、{@NameParameter}、{@@SPID} 或 {SERVERPROPERTY('ProcessID')}。  
   
 -   下列其中一個關鍵字：  
   
@@ -43,7 +41,7 @@ ms.locfileid: "48189510"
   
     4.  $FUNCTION 傳回設定中斷點之預存程序或使用者定義函數的名稱。 如果中斷點是在編輯器視窗中設定，$FUNCTION 會傳回編輯中指令碼檔案的名稱。  
   
-    5.  $PID 與 $PNAME 會傳回執行 Database Engine 執行個體且執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 之作業系統處理序的識別碼及名稱。 $PID 和 SERVERPROPERTY(‘ProcessID’) 傳回相同的識別碼，不同之處在於 $PID 是十六進位值，而 SERVERPROPERTY(‘ProcessID’) 是十進位值。  
+    5.  $PID 與 $PNAME 會傳回執行 Database Engine 執行個體且執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 之作業系統處理序的識別碼及名稱。 $PID 和 SERVERPROPERTY('ProcessID') 傳回相同的識別碼，不同之處在於 $PID 是十六進位值，而 SERVERPROPERTY('ProcessID') 是十進位值。  
   
     6.  $TID 與 $TNAME 會傳回執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次之作業系統執行緒的識別碼及名稱。 執行緒與執行 Database Engine 執行個體的處理序相關聯。 $TID 與 SELECT kpid FROM sys.sysprocesses WHERE spid = @@SPID 傳回相同的值，不同之處在於 $TID 是十六進位值，而 kpid 是十進位值。  
   
@@ -70,5 +68,3 @@ ms.locfileid: "48189510"
 ## <a name="see-also"></a>另請參閱  
  [指定中斷點條件](specify-a-breakpoint-condition.md)   
  [指定叫用計數](specify-a-hit-count.md)  
-  
-  

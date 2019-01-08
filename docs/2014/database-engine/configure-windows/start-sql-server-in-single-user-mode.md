@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - starting SQL Server, single-user mode
@@ -14,12 +13,12 @@ ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aeb0e1c28885e8611c1ae57a21a05c1265b6349c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 245ae929b9a267f06b675b9380760f3db6067d1c
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090148"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640889"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>以單一使用者模式啟動 SQL Server
   在某些情況下，您可能需要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup option -m **，在單一使用者模式下啟動**的執行個體。 例如，您可能想要變更伺服器組態選項，或復原損毀的 master 資料庫或其他系統資料庫。 這兩個動作都需要在單一使用者模式下啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
@@ -47,7 +46,7 @@ ms.locfileid: "48090148"
   
  若要避開此問題，請使用下列程序：  
   
-1.  從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進階屬性中移除 –m 啟動參數。  
+1.  從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進階屬性中移除 -m 啟動參數。  
   
 2.  讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源離線。  
   
@@ -56,14 +55,14 @@ ms.locfileid: "48090148"
   
 4.  從叢集管理員或是容錯移轉叢集管理主控台確認 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源依然為離線狀態。  
   
-5.  現在使用下列命令連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並執行必要作業：SQLCMD -E -S\<伺服器名稱>。  
+5.  連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]現在使用下列命令，並執行必要的操作：SQLCMD-E-S\<伺服器名稱 >。  
   
 6.  當此操作完成之後，關閉命令提示字元，並透過叢集管理員將 SQL 和其他資源帶回線上。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動、停止或暫停 SQL Server Agent 服務](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
  [資料庫管理員的診斷連接](diagnostic-connection-for-database-administrators.md)   
- [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)   
+ [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
  [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [Database Engine 服務啟動選項](database-engine-service-startup-options.md)  

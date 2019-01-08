@@ -16,12 +16,12 @@ ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 606b5273619e0f88503abeadaf6d463f6f16d3c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ba10d54fb2c18e29a6cc41d74e8d79bc6355e63e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188398"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539754"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定欄位與資料列結束字元 (SQL Server)
   針對字元資料欄位，選擇性結束字元可讓您使用「欄位結束字元」標示資料檔案中每個欄位的結尾，並使用「資料列結束字元」標示每個資料列的結尾。 結束字元是指示程式從欄位或資料列結束與開始的交接處讀取資料檔的一種方法。  
@@ -40,7 +40,7 @@ ms.locfileid: "48188398"
 |反斜線<sup>1</sup>|\\\|  
 |Null 結束字元 （看不見的結束字元）<sup>2</sup>|\0|  
 |任何可列印的字元 (除了 Null 值、定位點、新行字元和 Return 鍵外，控制字元均無法列印)|(*、A、t、l 等等)|  
-|最多包含 10 個可列印字元的字串，包括先前所列的一些或所有結束字元|(\*\*\t\*\*、end、!!!!!!!!!!、\t—\n 等等)|  
+|最多包含 10 個可列印字元的字串，包括先前所列的一些或所有結束字元|(**\t\*\*、end、!!!!!!!!!!、\t-\n 等等)|  
   
  <sup>1</sup>只 t、 n、 r、 0 和 '\0' 字元使用反斜線逸出字元，以產生控制字元。  
   
@@ -76,13 +76,13 @@ ms.locfileid: "48188398"
   
          `Enter field terminator [none]:`  
   
-         預設值通常是適合的選擇。 不過，為了`char`或`nchar`資料欄位，請參閱下列子區段中，「 使用結束字元的指導方針。 」 如需在內容中顯示此提示的範例，請參閱[使用 bcp 時指定相容性的資料格式 &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)。  
+         預設值通常是適合的選擇。 不過，有關 `char` 或 `nchar` 資料欄位，請參閱以下＜使用結束字元的指導方針＞細項。 如需在內容中顯示此提示的範例，請參閱[使用 bcp 時指定相容性的資料格式 &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)。  
   
         > [!NOTE]  
         >  以互動方式在 **bcp** 命令中指定所有欄位之後，此命令會提示您將每個欄位的回應以非 XML 格式的檔案加以儲存。 如需非 XML 格式檔案的詳細資訊，請參閱[非 XML 格式檔案 &#40;SQL Server&#41;](xml-format-files-sql-server.md)。  
   
 ### <a name="guidelines-for-using-terminators"></a>使用結束字元的指導方針  
- 在某些情況下，可用於結束字元`char`或`nchar`資料欄位。 例如：  
+ 在某些情況中，結束字元對 `char` 或 `nchar` 資料欄位而言很有用。 例如：  
   
 -   資料檔中的資料行包含 Null 值，而此資料檔將要匯入至不了解前置長度資訊的程式。  
   
@@ -193,6 +193,6 @@ GO
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [使用 bcp 時指定欄位長度 &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
  [使用 bcp 時指定資料檔案的前置長度 &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
- [使用 bcp 指定檔案儲存類型 &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+ [使用 bcp 時指定檔案儲存類型 &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   
