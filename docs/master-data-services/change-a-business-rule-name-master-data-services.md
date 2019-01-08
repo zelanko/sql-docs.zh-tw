@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], changing name
@@ -14,12 +13,12 @@ ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0c6bff75be197b72f90a1fd9dcc102be90ba8938
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1aede5993fea74932e58e682e6efd89dec84671c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648826"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754630"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>變更商務規則名稱 (Master Data Services)
 
