@@ -15,12 +15,12 @@ ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f0e98d0653bf73c96448291d4c25654cdf5ea753
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7a971b96de66cf766541b741c48f5477cf9db65
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177469"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350432"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>使用數位憑證來簽署封裝
   此主題描述如何使用數位憑證來簽署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。 您可以使用數位簽章搭配其他設定，防止無效的封裝載入並執行。  
@@ -33,11 +33,11 @@ ms.locfileid: "48177469"
   
     -   向發行憑證的公開商業憑證授權單位取得憑證。  
   
-    -   從可以讓組織在內部發行憑證的憑證伺服器取得憑證。 您必須將用來簽署憑證的根憑證加入至 **[信任根憑證授權單位]** 存放區。 若要加入根憑證，您可以使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (MMC) 的「憑證」嵌入式管理單元。 如需詳細資訊，請參閱 MSDN Library 中的＜[憑證服務](http://go.microsoft.com/fwlink/?LinkId=100755)＞(英文) 主題。  
+    -   從可以讓組織在內部發行憑證的憑證伺服器取得憑證。 您必須將用來簽署憑證的根憑證加入至 **[信任根憑證授權單位]** 存放區。 若要加入根憑證，您可以使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (MMC) 的「憑證」嵌入式管理單元。 如需詳細資訊，請參閱 MSDN Library 中的＜[憑證服務](https://go.microsoft.com/fwlink/?LinkId=100755)＞(英文) 主題。  
   
-    -   建立僅供測試用途的自訂憑證。 憑證建立工具 (Makecert.exe) 會產生供測試用途的 X.509 憑證。 如需詳細資訊，請參閱 MSDN Library 中的＜[憑證建立工具 (Makecert.exe)](http://go.microsoft.com/fwlink/?LinkId=100756)＞主題。  
+    -   建立僅供測試用途的自訂憑證。 憑證建立工具 (Makecert.exe) 會產生供測試用途的 X.509 憑證。 如需詳細資訊，請參閱 MSDN Library 中的＜[憑證建立工具 (Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)＞主題。  
   
-     如需有關憑證的詳細資訊，請參閱「憑證」嵌入式管理單元的線上說明。 如需有關如何簽署數位資產的詳細資訊，請參閱 MSDN Library 中的[使用 Authenticode 簽署與檢查程式碼](http://go.microsoft.com/fwlink/?LinkId=78100)主題。  
+     如需有關憑證的詳細資訊，請參閱「憑證」嵌入式管理單元的線上說明。 如需有關如何簽署數位資產的詳細資訊，請參閱 MSDN Library 中的[使用 Authenticode 簽署與檢查程式碼](https://go.microsoft.com/fwlink/?LinkId=78100)主題。  
   
 -   確定憑證已經啟用程式碼簽署。 若要判斷憑證是否已啟用程式碼簽署，請在「憑證」嵌入式管理單元中檢閱憑證的屬性。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "48177469"
   
 9. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
-     雖然封裝已經簽署，但是您現在必須設定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ，以便檢查或確認數位簽章，然後再載入封裝。 如需詳細資訊，請參閱[使用數位簽章來識別封裝的來源](security/identify-the-source-of-packages-with-digital-signatures.md)。  
+     雖然封裝已經簽署，但是您現在必須設定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ，以便檢查或確認數位簽章，然後再載入封裝。 如需詳細資訊，請參閱 [使用數位簽章來識別封裝的來源](security/identify-the-source-of-packages-with-digital-signatures.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [安全性概觀&#40;Integration Services&#41;](security/security-overview-integration-services.md)  
+ [安全性概觀 (Integration Services)](security/security-overview-integration-services.md)  
   
   

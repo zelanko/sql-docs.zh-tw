@@ -15,12 +15,12 @@ ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eeb95d0fb8d1e89fe5c2dc66362641c96f2230af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 967de27eb9bc1f191b138e8b5962b04c145fe191
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114432"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510753"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>將篩選套用至模型測試資料
   當您指定要用於測試模型的外部資料來源時，可以選擇性地套用篩選，以限制輸入資料。 例如，您可能想要特別針對某個收入範圍的客戶進行預測來測試模型。  
@@ -47,7 +47,7 @@ ms.locfileid: "48114432"
   
  若要判斷模型是否包含可能會影響結果的預先定義篩選，您可以在 [屬性] 窗格中尋找 [篩選] 屬性，或透過使用資料採礦結構描述資料列集來查詢模型。 例如，下列查詢會傳回指定之模型的篩選文字：  
   
- `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model’`  
+ `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model'`  
   
 > [!WARNING]  
 >  如果您要從現有的採礦模型中移除篩選，或者變更篩選條件，則必須重新處理採礦模型。  
@@ -62,7 +62,7 @@ ms.locfileid: "48114432"
   
 3.  在 [輸入選擇] 索引標籤的 [選取要用於精確度圖表的資料集] 下，選取 [指定不同的資料集] 選項。  
   
-4.  按一下瀏覽按鈕 **(...)** 開啟對話方塊，並選擇外部資料集。  
+4.  按一下 瀏覽按鈕 **（...）** 開啟一個對話方塊，並選擇外部資料集。  
   
 5.  選擇案例資料表，並視需要新增巢狀資料表。 視需要將模型中的資料行對應至外部資料集中的資料行。 關閉 [指定資料行對應] 對話方塊，以儲存來源資料表定義。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48114432"
   
 9. 按一下 [及/或] 文字方塊並選取邏輯運算子來定義多項條件的組合方式。  
   
-10. (選擇性) 按一下位於 [值] 文字方塊右側的瀏覽按鈕 **(…)** 來開啟 [篩選] 對話方塊，並針對巢狀資料表或個別的案例資料表資料行設定條件。  
+10. （選擇性） 按一下 瀏覽按鈕 **（...）** 右邊的**值**文字方塊中，以開啟**篩選**對話方塊方塊中，並設定條件，巢狀資料表或個別的案例資料表資料行。  
   
 11. 檢視 [運算式] 窗格中的文字，藉以確認完成的篩選條件是否正確。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48114432"
   
 ## <a name="see-also"></a>另請參閱  
  [選擇和對應模型測試資料](choose-and-map-model-testing-data.md)   
- [使用巢狀資料表做為輸入用於精確度圖表](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [使用巢狀資料表當做精確度圖表的輸入](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [選擇精確度圖表類型及設定圖表選項](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], viewing information
@@ -15,12 +14,12 @@ ms.assetid: 54aac83b-6f29-40d7-8901-cf059749867f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 329107e41d4732c21b8c3aa5a056048ac2283cd3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6984e2c104502dbca2e2284e98ddeefe77b1ca86
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049518"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784612"
 ---
 # <a name="view-information-and-perform-tasks-for-a-subscription-replication-monitor"></a>檢視訂閱的資訊並執行工作 (複寫監視器)
   複寫監視器提供下列包含有訂閱資訊的索引標籤：  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - progress reporting [Integration Services]
@@ -18,19 +17,19 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 142a22e07a9abf5a87e63268910de35ff95b79ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 786ede341e899acf2831c5c3e0a6204d3a80b1b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216278"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791942"
 ---
 # <a name="debugging-control-flow"></a>偵錯控制流程
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 並[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]包括功能與工具，可用來疑難排解中的控制流程[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]封裝。  
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含您可用於疑難排解 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 封裝中之控制流程的功能及工具。  
   
 -   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 支援容器及工作上的中斷點。  
   
--   「[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」提供執行階段的進度報表。  
+-   [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」提供執行階段的進度報表。  
   
 -   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 提供偵錯視窗。  
   
@@ -43,16 +42,16 @@ ms.locfileid: "48216278"
   
 |中斷條件|描述|  
 |---------------------|-----------------|  
-|當工作或容器接收`OnPreExecute`事件。|即將執行工作時呼叫。 工作或容器會在即將執行之前引發此事件。|  
-|當工作或容器接收`OnPostExecute`事件。|在工作的執行邏輯完成之後立即呼叫。 工作或容器會在執行之後立即引發此事件。|  
-|當工作或容器接收`OnError`事件。|發生錯誤時由工作或容器呼叫。|  
-|當工作或容器接收`OnWarning`事件。|當工作處於還不是錯誤但需要警告的狀態時呼叫。|  
-|當工作或容器接收`OnInformation`事件。|需要工作提供資訊時呼叫。|  
-|當工作或容器接收`OnTaskFailed`事件。|由工作主機在失敗時呼叫。|  
-|當工作或容器接收`OnProgress`事件。|呼叫以更新工作執行相關的進度。|  
-|當工作或容器接收`OnQueryCancel`事件。|在可取消執行之工作處理期間的任何時間呼叫。|  
-|當工作或容器接收`OnVariableValueChanged`事件。|當變數的值變更時由 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段呼叫。 變數的 RaiseChangeEvent 必須設為`true`才能引發此事件。<br /><br /> **\*\* 警告 \*\*** 與此中斷點相關聯的變數必須在 **容器** 範圍定義。 如果變數在封裝範圍定義，則中斷點不會出現。|  
-|當工作或容器接收`OnCustomEvent`事件。|由工作呼叫，以引發自訂工作定義的事件。|  
+|工作或容器接收到 `OnPreExecute` 事件時。|即將執行工作時呼叫。 工作或容器會在即將執行之前引發此事件。|  
+|工作或容器接收到 `OnPostExecute` 事件時。|在工作的執行邏輯完成之後立即呼叫。 工作或容器會在執行之後立即引發此事件。|  
+|工作或容器接收到 `OnError` 事件時。|發生錯誤時由工作或容器呼叫。|  
+|工作或容器接收到 `OnWarning` 事件時。|當工作處於還不是錯誤但需要警告的狀態時呼叫。|  
+|工作或容器接收到 `OnInformation` 事件時。|需要工作提供資訊時呼叫。|  
+|工作或容器接收到 `OnTaskFailed` 事件時。|由工作主機在失敗時呼叫。|  
+|工作或容器接收到 `OnProgress` 事件時。|呼叫以更新工作執行相關的進度。|  
+|工作或容器接收到 `OnQueryCancel` 事件時。|在可取消執行之工作處理期間的任何時間呼叫。|  
+|工作或容器接收到 `OnVariableValueChanged` 事件時。|當變數的值變更時由 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段呼叫。 變數的 RaiseChangeEvent 必須設為`true`才能引發此事件。<br /><br /> **\*\* 警告 \*\*** 與此中斷點相關聯的變數必須在 **容器** 範圍定義。 如果變數在封裝範圍定義，則中斷點不會出現。|  
+|工作或容器接收到 `OnCustomEvent` 事件時。|由工作呼叫，以引發自訂工作定義的事件。|  
   
  除可用於所有工作及容器的中斷條件之外，部份工作及容器還包含用於設定中斷點的特殊中斷條件。 例如，您可以在「For 迴圈」容器上啟用中斷條件，以設定在迴圈的每個反覆運算開始時暫停執行的中斷點。  
   
@@ -75,16 +74,16 @@ ms.locfileid: "48216278"
   
 #### <a name="to-set-breakpoints"></a>設定中斷點  
   
--   [在工作或容器設定中斷點以對套件偵錯](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
+-   [針對工作或容器設定中斷點以偵錯封裝](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
   
 ## <a name="progress-reporting"></a>進度報表  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計工具包含兩種類型的進度報告：[控制流程] 索引標籤之設計介面上的色彩編碼，以及 [進度] 索引標籤上的進度訊息。  
   
- 當您執行封裝時，「[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」會使用指示執行狀態的色彩來顯示每個工作或容器，以描述執行進度。 您可以根據元素的色彩判斷它是在等候執行、執行中、已順利完成，還是未成功結束。 在您停止封裝執行之後，色彩編碼會消失。  
+ 當您執行封裝時，「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師」會使用指示執行狀態的色彩來顯示每個工作或容器，以描述執行進度。 您可以根據元素的色彩判斷它是在等候執行、執行中、已順利完成，還是未成功結束。 在您停止封裝執行之後，色彩編碼會消失。  
   
  下表描述用於描述執行狀態的色彩。  
   
-|Color|執行狀態|  
+|色彩|執行狀態|  
 |-----------|----------------------|  
 |灰色|等候執行|  
 |黃色|執行中|  
@@ -114,6 +113,6 @@ ms.locfileid: "48216278"
 |立即|用於偵錯及評估運算式並列印變數值。|  
   
 ## <a name="see-also"></a>另請參閱  
- [套件開發的疑難排解工具](troubleshooting-tools-for-package-development.md)  
+ [疑難排解封裝開發的工具](troubleshooting-tools-for-package-development.md)  
   
   

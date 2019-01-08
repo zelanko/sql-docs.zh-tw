@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 828205b1786d2539e81dd54317ab0dc0a15e8a6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3bbbc189df4a004f18e8b23dba22a6a9469e3a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111901"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793009"
 ---
 # <a name="filter-data-before-loading-mds-add-in-for-excel"></a>在載入之前篩選資料 (適用於 Excel 的 MDS 增益集)
   在  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，篩選資料，當您想要限制載入 Excel 的資料範圍的大小。  
@@ -54,6 +53,6 @@ ms.locfileid: "48111901"
 ## <a name="see-also"></a>另請參閱  
  [載入資料&#40;MDS 增益集的 Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
  [篩選對話方塊 &#40;適用於 Excel 的 MDS 增益集&#41;](filter-dialog-box-mds-add-in-for-excel.md)   
- [重新排列資料行&#40;MDS 增益集的 Excel&#41;](reorder-columns-mds-add-in-for-excel.md)  
+ [重新排序資料行 &#40;適用於 Excel 的 MDS 增益集&#41;](reorder-columns-mds-add-in-for-excel.md)  
   
   

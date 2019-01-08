@@ -4,33 +4,32 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e87aa1b7fd49681594220f81e447abbadc6716d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 460d66b7e2d4f314db65213819fca1800af2da4f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204238"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798200"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>在 SQL Server Agent 中執行 Windows PowerShell 步驟
   使用 SQL Server Agent 在排定的時間執行 SQL Server PowerShell 指令碼。  
   
-1.  **開始之前：**  [限制事項](#LimitationsRestrictions)  
+1.  **開始之前：**[限制事項](#LimitationsRestrictions)  
   
-2.  **若要從 SQL Server Agent 執行 PowerShell，請使用：**  [PowerShell 作業步驟](#PShellJob)、 [命令提示字元作業步驟](#CmdExecJob)  
+2.  **若要執行 PowerShell，從 SQL Server 代理程式，使用：**[PowerShell 作業步驟](#PShellJob)，[命令提示字元作業步驟](#CmdExecJob)  
   
 ## <a name="before-you-begin"></a>開始之前  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業步驟有幾種類型。 每一種類型都與實作特定環境的子系統相關，例如複寫代理程式或命令提示字元環境。 您可以編寫 Windows PowerShell 指令碼，然後使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 在排程時間執行的作業內包含這些指令碼，或是用來回應 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事件。 Windows PowerShell 指令碼可透過使用命令提示字元作業步驟或 PowerShell 作業步驟加以執行。  
   
 1.  使用 PowerShell 作業步驟讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 子系統執行 `sqlps` 公用程式，此公用程式會啟動 PowerShell 2.0 並匯入 `sqlps` 模組。  
   
-2.  使用命令提示字元作業步驟執行 PowerShell.exe，並指定匯入的指令碼`sqlps`模組。  
+2.  使用命令提示字元作業步驟執行 PowerShell.exe，並指定匯入 `sqlps` 模組的指令碼。  
   
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
   

@@ -13,12 +13,12 @@ ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 67399a724001cbd1f04a24f0558f2618aafd155a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e183c1e25aa81b05c897674fc5c9f4a2dd8d0c5b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069428"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529359"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>建立增益圖、收益圖或分類矩陣
   您可以使用五個基本步驟，為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料採礦模型建立精確度圖表：  
@@ -70,7 +70,7 @@ ms.locfileid: "48069428"
   
     -   選取 [使用採礦結構測試案例] 選項可以使用採礦結構鑑效組資料集中所定義的測試案例完整集合。  
   
-    -   如果您想要使用外部資料的話，請選取 [指定不同的資料集] 選項。  資料集必須可以作為資料來源檢視。   按一下瀏覽 (**…**) 按鈕可選擇要用於精確度圖表的資料表。 如需詳細資訊，請參閱 [選擇和對應模型測試資料](choose-and-map-model-testing-data.md)。  
+    -   如果您想要使用外部資料的話，請選取 [指定不同的資料集] 選項。  資料集必須可以作為資料來源檢視。   按一下瀏覽 (**...**) 按鈕來選擇要用於精確度圖表的資料表。 如需詳細資訊，請參閱 [選擇和對應模型測試資料](choose-and-map-model-testing-data.md)。  
   
          如果您要使用外部資料集，可以選擇性地篩選輸入資料集。 如需詳細資訊，請參閱[將篩選套用至模型測試資料](apply-filters-to-model-testing-data.md)。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48069428"
      與每一次成功銷售相關聯的營收金額。  
   
 ## <a name="see-also"></a>另請參閱  
- [增益圖&#40;Analysis Services-資料採礦&#41;](lift-chart-analysis-services-data-mining.md)   
- [分類矩陣&#40;Analysis Services-資料採礦&#41;](classification-matrix-analysis-services-data-mining.md)  
+ [增益圖 &#40;Analysis Services - 資料採礦&#41;](lift-chart-analysis-services-data-mining.md)   
+ [分類矩陣 &#40;Analysis Services - 資料採礦&#41;](classification-matrix-analysis-services-data-mining.md)  
   
   

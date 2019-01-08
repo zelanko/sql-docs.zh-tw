@@ -11,12 +11,12 @@ ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94d1ea0bf396b8d839463fa648dffc3aacee9ab5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d212cf20e8701f9fc9af5266308f81873e6fc4c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080468"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541248"
 ---
 # <a name="exploring-and-cleaning-data"></a>瀏覽和清除資料
   資料準備不只是進行資料清理而已。 務必記得，準備資料的方式也會影響最後解譯結果的方式。 資料準備包含下列工作：  

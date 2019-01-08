@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], queries
@@ -12,12 +12,12 @@ ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f9c1845d756662addc3bab1c17c6189c1a1fc2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c078597954ac6754966a1a485ac03fc19f817618
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098428"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806510"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>複製查詢結果 (Visual Database Tools)
   您可以從 [結果] 窗格，將結果集複製成定位字元分隔的文字。 您可以複製整個結果集或任何數目的連續或非連續的資料列或資料格。  

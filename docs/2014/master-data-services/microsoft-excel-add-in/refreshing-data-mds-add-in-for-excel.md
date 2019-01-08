@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 399665103725cec573a790667c9253b25836b076
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bed79906ff69305a135b1c7249cd4d3331ca3d7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095948"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207584"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>重新整理資料 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您想要從 MDS 存放庫取得最新資訊，而不開啟新的工作表時，請重新整理資料。 您可以重新整理所有資料格或資料格的選取範圍。 當您已經插入含有自訂公式或不在 MDS 中管理之資料的資料行，而且想要加以保留時，這樣做可能很有用。  
@@ -36,7 +35,7 @@ ms.locfileid: "48095948"
   
 -   如果 MDS 儲存機制中的某個屬性值已變更，工作表中的值就會使用 MDS 儲存機制中的值來更新。 資料格色彩不會變更。  
   
-> [!WARNING]  
+> [!WARNING]
 >  -   在使用中工作表中，如果非管理的資料存在 MDS 管理之資料下方的資料列中，系統可能會覆寫非管理的資料。 當您重新整理工作表，而且加入 MDS 管理之資料的新資料列 (與非管理的資料重疊) 時，就會發生這種狀況。  
 > -   當您重新整理時，系統會刪除 MDS 管理之資料格的註解。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "48095948"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫的連接。|[連接到 MDS 存放庫 &#40;適用於 Excel 的 MDS 增益集&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫的連接。|[連接到 MDS 儲存機制 &#40;適用於 Excel 的 MDS 增益集&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |將 MDS 資料載入 Excel 中。|[將資料從 MDS 載入 Excel 中](export-data-to-excel-from-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
@@ -56,6 +55,6 @@ ms.locfileid: "48095948"
   
 -   [載入資料&#40;MDS 增益集的 Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
--   [Master Data Services 增益集適用於 Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [適用於 Microsoft Excel 的 Master Data Services 增益集](master-data-services-add-in-for-microsoft-excel.md)  
   
   

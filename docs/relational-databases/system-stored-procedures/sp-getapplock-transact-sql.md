@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32303301fb01e381fee0e28cfedb2cd299658c88
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: c79a3e34ea6ca1bbebfa35a77020b81618514133
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851883"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617578"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  取得應用程式鎖定之後，只會擷取純文字中的前 32 個字元，其餘部分會予以雜湊。  
   
  [ @LockMode=] '*lock_mode*'  
- 這是要取得的特定資源鎖定模式。 *lock_mode* 是沒有預設值的 **nvarchar(32)**。 值可以是下列任一項： **Shared**，**更新**， **IntentShared**， **IntentExclusive**，或**獨佔**.  
+ 這是要取得的特定資源鎖定模式。 *lock_mode* 是沒有預設值的 **nvarchar(32)**。 這個值可以是下列任何值之一：**共用**，**更新**， **IntentShared**， **IntentExclusive**，或**獨佔**。  
   
  [ @LockOwner=] '*lock_owner*'  
  為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 為 **nvarchar(32)**。 這個值可以是 **Transaction**  (預設值) 或 **Session** 。 當*lock_owner*值是**交易**，依預設或明確指定，sp_getapplock 必須從交易內執行。  
@@ -92,7 +92,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
  只有 @DbPrincipal 參數中指定的資料庫主體成員，才能夠取得指定這個主體的應用程式鎖定。 dbo 和 db_owner 角色的成員會隱含地被視為所有角色的成員。  
   
- 您可以利用 sp_releaseapplock 來明確釋放鎖定。 當應用程式針對相同鎖定資源來重複呼叫 sp_getapplock 時，也必須呼叫 sp_releaseapplock 相同次數，以便釋出鎖定。  
+ 您可以利用 sp_releaseapplock 來明確釋放鎖定。 當應用程式針對相同鎖定資源來重複呼叫 sp_getapplock 時，也必須呼叫 sp_releaseapplock 相同次數，以便釋出鎖定。  當鎖定開啟`Transaction`鎖定擁有者、 認可或回復交易時，就會釋放鎖定。
   
  如果針對相同鎖定資源呼叫了 sp_getapplock 許多次，但有任何要求所指定的鎖定模式與現有的模式不同，資源便會受到兩個鎖定模式的聯合影響。 在大部分情況下，這表示鎖定模式會升級成較強的鎖定模式、現有的模式，或新要求的模式。 這個較強的鎖定模式會保留到最後釋出鎖定為止，即使鎖定釋出呼叫先發生，也是如此。 例如，在下列呼叫順序中，資源會保留 `Exclusive` 模式，而不是 `Shared` 模式。  
   

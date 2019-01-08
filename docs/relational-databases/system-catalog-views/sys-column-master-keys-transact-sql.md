@@ -26,12 +26,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af9802fbf1568e7ce9d15882a29b96bbe0ad1762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cb1740bdb0ae26d91e2a9ad9e2becb69d3b2810
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711006"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518706"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "47711006"
 |**column_master_key_id**|**int**|資料行主要金鑰的識別碼。|  
 |**create_date**|**datetime**|資料行主要金鑰的建立日期。|  
 |**modify_date**|**datetime**|上次修改資料行主要金鑰的日期。|  
-|**key_store_provider_name**|**sysname**|包含 CMK 的資料行主要金鑰存放區提供者名稱。 允許的值為：<br /><br /> MSSQL_CERTIFICATE_STORE – 如果資料行主要金鑰存放區是憑證存放區。<br /><br /> 使用者定義的值，如果資料行主要金鑰存放區的自訂型別。|  
+|**key_store_provider_name**|**sysname**|包含 CMK 的資料行主要金鑰存放區提供者名稱。 允許的值為：<br /><br /> MSSQL_CERTIFICATE_STORE-如果資料行主要金鑰存放區是憑證存放區。<br /><br /> 使用者定義的值，如果資料行主要金鑰存放區的自訂型別。|  
 |**key_path**|**nvarchar(4000)**|索引鍵資料行主要金鑰存放區特定路徑。 路徑的格式取決於資料行主要金鑰存放區類型。 範例<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 自訂資料行主要金鑰存放區中，開發人員會負責定義哪些金鑰的路徑是自訂資料行主要金鑰存放區。|  
-|**allow_enclave_computations**|**bit**|指出資料行主要金鑰是否啟用 enclave 的 （如果使用這個主要金鑰加密的資料行加密金鑰可用於在伺服器端的安全 enclaves 計算）。 如需詳細資訊，請參閱 < [Always Encrypted with 安全 enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。|  
+|**allow_enclave_computations**|**bit**|指出資料行主要金鑰是否啟用 enclave 的 （如果使用這個主要金鑰加密的資料行加密金鑰可用於在伺服器端的安全 enclaves 計算）。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。|  
 |**signature**|**varbinary(max)**|數位簽章**key_path**並**allow_enclave_computations**，使用資料行主要金鑰所產生，所參考**key_path**。|
 
 

@@ -1,7 +1,8 @@
 ---
-title: 教學課程： 建立 Azure Data Studio 擴充功能 |Microsoft Docs
-description: 本教學課程會示範如何建立 Azure Data Studio 擴充功能。
-ms.custom: tools|sos
+title: 教學課程：建立延伸模組
+titleSuffix: Azure Data Studio
+description: 本教學課程會示範如何建立自訂功能加入 Azure Data Studio 的擴充功能。
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,16 +11,16 @@ ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
 manager: craigg
-ms.openlocfilehash: ae1605f1c99e4fa2a74c7f728f191baf5a8b9bf8
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 0a4e877a91cad978bb62747bd50e40adaa69ef1c
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356549"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030602"
 ---
-# <a name="tutorial-create-an-azure-data-studio-extension"></a>教學課程： 建立 Azure Data Studio 擴充功能
+# <a name="tutorial-create-an-azure-data-studio-extension"></a>教學課程：建立 Azure Data Studio 擴充功能
 
-本教學課程會示範如何建立新的 Azure Data Studio 擴充功能。 延伸模組會建立在 Azure 資料 Studio 中熟悉 SSMS 按鍵繫結關係。
+本教學課程會示範如何建立新的 Azure Data Studio 擴充功能。 延伸模組會建立在 Azure 資料 Studio 中熟悉 SSMS 的索引鍵繫結。
 
 在本教學課程期間您會了解如何：
 > [!div class="checklist"]
@@ -37,7 +38,7 @@ Azure Data Studio 是內建為 Visual Studio Code 中，在同一架構上，因
 - [Node.js](https://nodejs.org)已安裝，而且可在您`$PATH`。 包含 Node.js [npm](https://www.npmjs.com/)，Node.js 套件管理員，用來安裝延伸模組產生器。
 - [Visual Studio Code](https://code.visualstudio.com)偵錯擴充功能。
 - Azure Data Studio[偵錯延伸模組](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug)。
-- 請確定 sqlops 是在您的路徑。 針對 Windows，請確定您選擇`Add to Path`在 setup.exe 的選項。 適用於 Mac 或 Linux，執行*安裝路徑中的 'sqlops' 命令*選項。
+- 請確定`sqlops`是在您的路徑。 針對 Windows，請確定您選擇`Add to Path`在 setup.exe 的選項。 適用於 Mac 或 Linux，執行*安裝路徑中的 'sqlops' 命令*選項。
 - SQL Operations Studio 偵錯擴充功能 （選擇性）。 這可讓您測試您的延伸模組，而不需要封裝，然後將它安裝到 Azure Data Studio。
 
 
@@ -61,31 +62,31 @@ Azure Data Studio 是內建為 Visual Studio Code 中，在同一架構上，因
 
 3. 遵循步驟來填入 延伸模組名稱 (本教學課程中，使用**ssmskeymap**)，並且加入的描述。
 
-完成上述步驟建立新的資料夾。 開啟 Visual Studio Code 和您的資料夾已準備好建立您自己的按鍵繫結關係擴充功能 ！
+完成上述步驟建立新的資料夾。 開啟 Visual Studio Code 和您的資料夾已準備好建立您自己的索引鍵繫結延伸模組 ！
 
 
 ### <a name="add-a-keyboard-shortcut"></a>將鍵盤快速鍵
 
-**步驟 1： 尋找要取代的快速鍵**
+**步驟 1:尋找要取代的快速鍵**
 
 既然我們已經準備好了我們延伸模組，新增一些 SSMS 鍵盤快速鍵 （或按鍵組合） 至 Azure 資料 Studio。 我使用了[Andy Mallon 速查表](https://am2.co/2018/02/updated-cheat-sheet/)和靈感 RedGate 的鍵盤快速鍵清單。
 
 我看到遺失的最上層項目所示：
 
 - 執行查詢與啟用的實際執行計畫。 這是**Ctrl + M**在 SSMS 中，在 Azure Data Studio 沒有繫結。
-- 擁有**CTRL + SHIFT + E**第 2 個這種方式執行查詢。 使用者意見反應指出這是遺漏。
+- 擁有**CTRL + SHIFT + E**作為執行查詢的第二個方法。 使用者意見反應指出這是遺漏。
 - 擁有**ALT + F1**執行`sp_help`。 我們已將此 Azure Data Studio 中加入，但因為該繫結已在使用中，我們會對應到**ALT + F2**改。
 - 切換全螢幕 (**SHIFT + ALT + ENTER**)。
 - **F8**以顯示**物件總管 中** / **Servers 檢視**。
 
-很容易尋找和取代這些按鍵繫結關係。 執行*開啟的鍵盤快速鍵*以顯示**鍵盤快速鍵**索引標籤中 Azure Data Studio，搜尋*查詢*，然後選擇 **變更按鍵繫結關係**. 一旦您完成變更按鍵繫結關係您所見 keybindings.json 檔案中更新的對應 (執行*開啟的鍵盤快速鍵*看到它)。
+很容易尋找和取代這些按鍵繫結。 執行*開啟的鍵盤快速鍵*以顯示**鍵盤快速鍵**索引標籤中 Azure Data Studio，搜尋*查詢*，然後選擇 **變更索引鍵繫結**. 一旦您完成變更按鍵繫結關係，您可以看到更新的對應 keybindings.json 檔案中 (執行*開啟的鍵盤快速鍵*看到它)。
 
 ![鍵盤快速鍵](./media/tutorial-create-extension/keyboard-shortcuts.png)
 
 ![keybindings.json 延伸模組](./media/tutorial-create-extension/keybindings-json.png)
 
 
-**步驟 2： 將捷徑新增至延伸模組**
+**步驟 2:將捷徑新增至延伸模組**
 
 若要加入延伸模組中的快速鍵，請開啟*package.json*檔案 （副檔名），並取代`contributes`有下列區段：
 
@@ -132,11 +133,11 @@ Azure Data Studio 是內建為 Visual Studio Code 中，在同一架構上，因
 
 ![測試擴充功能](./media/tutorial-create-extension/test-extension.png)
 
-Keymaps 是其中一個最快速的延伸模組，若要建立，因此您新的延伸模組現在應該可以順利運作，並準備好共用。
+索引鍵的對應是其中一個最快速的延伸模組，若要建立，因此您新的延伸模組現在應該可以順利運作，並準備好共用。
 
 ## <a name="package-your-extension"></a>封裝您的延伸模組
 
-若要與其他人共用，您需要封裝到單一檔案的延伸模組。 這可以是發佈至 Azure Data Studio 擴充功能 marketplace，或只是共用您的團隊或社群。 若要這樣做，您需要從命令列安裝另一個的 npm 套件：
+若要與其他人共用，您需要封裝到單一檔案的延伸模組。 這可以是發佈至 Azure Data Studio 擴充功能 marketplace，或在您的團隊或社群之間共用。 若要這樣做，您需要從命令列安裝另一個的 npm 套件：
 
 `npm install -g vsce`
 
@@ -164,7 +165,7 @@ Azure Data Studio 擴充功能 marketplace 完全尚未實作，但目前的處�
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您已了解如何：
+在本教學課程中，您將了解如何：
 > [!div class="checklist"]
 > * 建立擴充功能專案
 > * 安裝延伸模組產生器

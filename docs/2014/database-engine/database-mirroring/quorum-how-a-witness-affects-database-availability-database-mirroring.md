@@ -1,5 +1,5 @@
 ---
-title: 仲裁：見證如何影響資料庫可用性 (資料庫鏡像) | Microsoft Docs
+title: 仲裁：見證如何影響資料庫可用性 （資料庫鏡像） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,14 +21,14 @@ ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3dd9b33de1ca429afbae8a8fe6ccdc7a41583a44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26abcc214c4f4304019bbc855379b56cab7cfc96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067548"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525032"
 ---
-# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>仲裁：見證如何影響資料庫可用性 (資料庫鏡像)
+# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>仲裁：見證如何影響資料庫可用性 （資料庫鏡像）
   每當設定資料庫鏡像工作階段的見證時，就需要「仲裁」。 仲裁是資料庫鏡像工作階段中的多個伺服器執行個體彼此連接時所存在的關係。 一般而言，仲裁涉及三個互連的伺服器執行個體。 設定見證之後，需要有仲裁才能使用資料庫。 仲裁是專為具有自動容錯移轉的高安全性模式而設計，可確保資料庫一次僅能由一個夥伴擁有。  
   
  如果特定的伺服器執行個體與鏡像工作階段的連接中斷，該執行個體便會失去仲裁。 如果沒有任何伺服器執行個體是處於連接狀態，則工作階段會失去仲裁，而資料庫也會變成無法使用。 仲裁有三種可能的類型：  

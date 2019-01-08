@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], effective permissions
@@ -15,12 +14,12 @@ ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 964fdfbb739d03ca20c55b3d1009fcb762aa54b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e70b6dab6399026606382396bded3a467a9b639c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201839"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814560"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>重疊的模型和成員的權限 (Master Data Services)
   指派給成員的權限可能會與指派給模型物件的權限重疊。 當發生重疊情況時，比較嚴格的權限會生效。  
@@ -42,7 +41,7 @@ ms.locfileid: "48201839"
   
  在 **[階層成員]** 索引標籤上，衍生階層中的 Mountain Bikes 子類別目錄節點已被指派 **[更新]** 權限。  
   
- 結果：在 **[總管]** 中，使用者擁有 Mountain Bikes 節點中所有成員之所有屬性值的 **[更新]** 權限。 系統會隱藏所有其他成員和屬性。  
+ 結果：在 **總管**，使用者擁有**更新**Mountain Bikes 節點中的所有成員的所有屬性值的權限。 系統會隱藏所有其他成員和屬性。  
   
  ![mds_conc_overlap_model_example_1](../../2014/master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
@@ -53,7 +52,7 @@ ms.locfileid: "48201839"
   
  在 **階層成員**索引標籤上，衍生階層中的 Mountain Bikes 子類別目錄節點已被明確指派**唯讀**權限。  
   
- 結果： 在**總管**，使用者擁有**唯讀**Mountain Bikes 節點中成員之 Subcategory 屬性值的權限。 系統會隱藏所有其他成員和屬性。  
+ 結果：在 **總管**，使用者擁有**唯讀**Mountain Bikes 節點中成員之 Subcategory 屬性值的權限。 系統會隱藏所有其他成員和屬性。  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
@@ -64,12 +63,12 @@ ms.locfileid: "48201839"
   
  在 **[階層成員]** 索引標籤上，衍生階層中的 Mountain Bikes 子類別目錄已被明確指派 **[更新]** 權限。  
   
- 結果： 在**總管**，使用者擁有**唯讀**屬性值的權限。 系統會隱藏所有其他成員和屬性。  
+ 結果：在 **總管**，使用者擁有**唯讀**屬性值的權限。 系統會隱藏所有其他成員和屬性。  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
 ## <a name="see-also"></a>另請參閱  
- [如何決定權限&#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
+ [如何決定權限 &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
  [重疊的使用者和群組的權限 &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

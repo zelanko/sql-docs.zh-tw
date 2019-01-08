@@ -20,12 +20,12 @@ ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 856da25d126c93a370c7d028106df75124f5ec72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 157baeb7e5bd8fb53b2435f55e3e71c098632002
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094278"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518048"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 羅吉斯迴歸演算法技術參考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 羅吉斯迴歸演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法的演變，其中 *HIDDEN_NODE_RATIO* 參數設為 0。 此設定會建立不包含隱藏層的類神經網路模型，而這相等於羅吉斯迴歸。  
@@ -47,25 +47,25 @@ ms.locfileid: "48094278"
 ### <a name="scoring-inputs"></a>計分輸入  
  在類神經網路模型或羅吉斯迴歸模型的內容中，「計分」表示一種程序，會將資料中出現的值轉換為使用相同小數位數的一組值，因此可以互相比較。 例如，假設 Income 輸入的範圍是 0 到 100,000，而 [Number of Children] 輸入的範圍是 0 到 5。 此轉換程序可讓您*分數*，或比較，不論值的差異的每個輸入的重要性。  
   
- 對於出現在定型集中的每個狀態，模型都會產生一個輸入。 對於離散或離散化的輸入，如果在定型集中至少出現一次遺漏狀態，則會建立其他輸入來代表「遺漏」狀態。 至於連續輸入，最多會建立兩個輸入節點：一個用於「遺漏」值 (如果出現在定型資料中)，而另一個輸入則用於所有現有的值或非 Null 值。 每個輸入會調整為數值的格式使用 z-score 正規化方法，(x – μ） / 標準差。  
+ 對於出現在定型集中的每個狀態，模型都會產生一個輸入。 對於離散或離散化的輸入，如果在定型集中至少出現一次遺漏狀態，則會建立其他輸入來代表「遺漏」狀態。 至於連續輸入，最多會建立兩個輸入節點：一個用於「遺漏」值 (如果出現在定型資料中)，而另一個輸入則用於所有現有的值或非 Null 值。 每個輸入會調整為數值的格式使用 z-score 正規化方法，(x-μ） / 標準差。  
   
  在 z-score 正規化期間，平均值 (μ) 和標準差會透過完整的定型集取得。  
   
  **連續值**  
   
- 值: (X – μ) / σ / / X 是要編碼的實際值)  
+ 值會出現： (X-μ)/σ / / X 是要編碼的實際值)  
   
  值不存在:-μ/σ / / 負平均值除以標準差)  
   
  **離散值**  
   
- Μ = p – （狀態的優先機率）  
+ Μ = p-（狀態的優先機率）  
   
  StdDev = sqrt(p(1-p))  
   
- 值: （1 – μ）/σ / / (1 減平均值) 除以標準差)  
+ 值會出現：   (1-μ)/σ / / (1 減平均值) 除以標準差)  
   
- 值不存在: (– μ) / σ / / 負平均值除以標準差)  
+ 值不存在: (-μ) / σ / / 負平均值除以標準差)  
   
 ### <a name="understanding-logistic-regression-coefficients"></a>了解羅吉斯迴歸係數  
  在統計文獻中，有各種方法可以執行羅吉斯迴歸，但是所有方法的重要部分都是評估模型的符合度。 在勝算比和共變模式之間，提出各種符合程度統計資料。 如何測量模型符合度的討論超出本主題的範圍，不過，您可以在模型中擷取係數的值，然後用於設計符合您自己的量值。  
@@ -83,9 +83,9 @@ FROM <model name>.CONTENT
 WHERE NODE_TYPE = 23  
 ```  
   
- 針對每個輸出值，此查詢會傳回係數以及指回相關輸入節點的識別碼。 它也會傳回包含輸出值與截距的資料列。 每個輸入 X 都有自己的係數 (Ci)，但是巢狀資料表也包含一個根據下列公式計算的「可用」係數 (Co)：  
+ 針對每個輸出值，此查詢會傳回係數以及指回相關輸入節點的識別碼。 它也會傳回包含輸出值與截距的資料列。 每個輸入 X 都有自己的係數 (Ci)，但巢狀的資料表也包含 「 可用 」 係數 (Co)，根據下列公式計算：  
   
- F （X) = X1 * C1 + X2\*C2 +... + Xn\*Cn + X0  
+ F （x) = X1 * C1 + X2\*C2 + Xn\*Cn + X0  
   
  Activation: exp(F(X)) / (1 + exp(F(X)) )  
   
@@ -138,7 +138,7 @@ WHERE NODE_TYPE = 23
  適用於採礦結構資料行。  
   
  MODEL_EXISTENCE_ONLY  
- 表示資料行將被視為擁有兩個可能狀態：`Missing`和`Existing`。 Null 為遺漏值。  
+ 表示資料行將被視為擁有兩個可能狀態：`Missing` 和 `Existing`。 Null 為遺漏值。  
   
  適用於採礦模型資料行。  
   
@@ -156,7 +156,7 @@ WHERE NODE_TYPE = 23
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 羅吉斯迴歸演算法](microsoft-logistic-regression-algorithm.md)   
  [線性迴歸模型查詢範例](linear-regression-model-query-examples.md)   
- [羅吉斯迴歸模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-logistic-regression-models.md)   
  [Microsoft 類神經網路演算法](microsoft-neural-network-algorithm.md)  
   
   

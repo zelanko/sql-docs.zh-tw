@@ -16,12 +16,12 @@ ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d80795317ae9a1d486df2894ab68ee22dfdfc7c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05314fe18f555d4d2d3cca161a3b770ec85b4256
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170728"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532126"
 ---
 # <a name="create-a-server-role"></a>建立伺服器角色
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立新的伺服器角色。  
@@ -67,15 +67,15 @@ ms.locfileid: "48170728"
   
 2.  展開 **[安全性]** 資料夾。  
   
-3.  以滑鼠右鍵按一下 [伺服器角色] 資料夾，然後選取 [新增伺服器角色]。  
+3.  以滑鼠右鍵按一下 [伺服器角色] 資料夾，然後選取 [新增伺服器角色...]。  
   
-4.  在 [新增伺服器角色] – *server_role_name* 對話方塊中，於 [一般] 頁面的 [伺服器角色名稱] 方塊中輸入新伺服器角色的名稱。  
+4.  在 **新的伺服器角色-* * * server_role_name*對話方塊的 [**一般**頁面上，輸入新的伺服器角色中的名稱**伺服器角色名稱**] 方塊中。  
   
 5.  在 **[擁有者]** 方塊中，輸入將擁有新角色之伺服器主體的名稱。 或者，按一下省略符號 **(...)**，開啟 [選取伺服器登入或角色] 對話方塊。  
   
 6.  在 [安全性實體] 底下，選取一或多個伺服器層級安全性實體。 已選取安全性實體時，您可以對這個伺服器角色授與或拒絕該安全性實體的權限。  
   
-7.  在 **[權限: 明確]** 方塊中，選取核取方塊，對此伺服器角色授與、以授與選項授與 (grant with grant)，或拒絕所選取安全性實體的權限。 如果不能授與或拒絕所有選取之安全性實體的權限，此權限表示為部分選取。  
+7.  在 **權限：明確**方塊中，選取授與、 授與授與或拒絕選取之安全性實體此伺服器角色的權限的核取方塊。 如果不能授與或拒絕所有選取之安全性實體的權限，此權限表示為部分選取。  
   
 8.  在 **[成員]** 頁面上，使用 **[加入]** 按鈕，將代表個人或群組的登入加入至新的伺服器角色。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48170728"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     --Creates the server role auditors that is owned the securityadmin fixed server role.  

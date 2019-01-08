@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7982f81d5046c0d3c9f23b4357f5b0364603c222
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3533108054d1c65e73f3167d68a05727e95fa2d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203628"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792020"
 ---
 # <a name="collections-master-data-services"></a>集合 (Master Data Services)
   集合是一組來自單一實體的分葉成員和合併成員。 當您不需要完整的階層，而且想要檢視成員的不同群組進行報告或分析時，或當您不需要建立分類時，請使用集合。  
@@ -46,12 +45,12 @@ ms.locfileid: "48203628"
 |工作描述|主題|  
 |----------------------|-----------|  
 |啟用明確階層和集合的實體。|[啟用明確階層和集合的實體&#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|建立新集合。|[建立集合&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
-|將成員加入至現有的集合。|[將成員加入至集合&#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
+|建立新集合。|[建立集合 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
+|將成員加入至現有的集合。|[將成員加入至集合 &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
--   [明確階層&#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [明確階層 &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
 -   [將資料匯出&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   

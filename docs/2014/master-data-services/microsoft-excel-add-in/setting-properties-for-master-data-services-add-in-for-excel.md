@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 56d3b122b7a458bad7522c766559e1d775b31ef7
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: f5743f528e7b356611258da598edfa7b205971f3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905930"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793040"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>設定適用於 Excel 之 Master Data Services 增益集的屬性
   Master Data Services Add-in for Excel 設定會決定如何從 MDS 將資料載入 Excel 增益集，以及如何從 Excel 增益集將資料發行到 MDS。  
@@ -37,7 +36,7 @@ ms.locfileid: "48905930"
 |資料：篩選|顯示大型資料集的篩選警告|按一下此選項，當從 MDS 載入至 Excel 的資料集超過最大資料列或資料行數目時，便會顯示警告。|  
 |資料：篩選|最大資料列數|選取所載入之資料列數目的臨界值，超出此臨界值將會公佈篩選警告。|  
 |資料：篩選|最大資料行數|選取所載入之資料行數目的臨界值，超出此臨界值將會公佈篩選警告。|  
-|資料：資料格格式|變更色彩的時機：屬性值變更|按一下此選項可指定資料格的色彩將會在以下情況中變更：如果當您使用 MDS 儲存機制中的新資料重新整理 Excel 增益集資料表，該資料格中的屬性值會變更。|  
-|資料：資料格格式|變更色彩的時機：已加入成員|按一下此選項可指定資料列之資料格的色彩將會在以下情況中變更：如果當您使用 MDS 儲存機制中的新資料重新整理 Excel 增益集資料表，新的成員會加入至此資料列。|  
+|資料：儲存格格式|將色彩變更時：在屬性值變更|按一下此選項可指定資料格的色彩將會在以下情況中變更：如果當您使用 MDS 儲存機制中的新資料重新整理 Excel 增益集資料表，該資料格中的屬性值會變更。|  
+|資料：儲存格格式|將色彩變更時：已新增成員|按一下此選項可指定資料列資料格的色彩將會在以下情況中變更：如果當您使用 MDS 存放庫中的新資料來重新整理 Excel 增益集資料表時，新的成員會新增至此資料列。|  
   
   

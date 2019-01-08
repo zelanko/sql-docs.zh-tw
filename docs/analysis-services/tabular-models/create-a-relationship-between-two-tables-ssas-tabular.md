@@ -1,5 +1,5 @@
 ---
-title: 建立關聯性 |Microsoft 文件
+title: Analysis Services 表格式模型中建立的關聯性 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d985f9985691005eaa84365dacd2a4072542c05b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7e9ee96a04aa6b023be51f8e1e8d913e26a7e2a8
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041072"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072095"
 ---
 # <a name="create-a-relationship"></a>建立關聯性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  如果您資料來源中的資料表並沒有關聯性存在，或如果您要新增資料表，則可以使用模型設計師中的工具來建立新的關聯性。 如需如何在表格式模型中使用關聯性資訊，請參閱[關聯性](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。  
+  如果您資料來源中的資料表並沒有關聯性存在，或如果您要新增資料表，則可以使用模型設計師中的工具來建立新的關聯性。 如需如何在表格式模型中使用關聯性的資訊，請參閱[關聯性](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。  
   
 ## <a name="create-a-relationship-between-two-tables"></a>建立兩個資料表之間的關聯性  
   
@@ -46,7 +46,7 @@ ms.locfileid: "34041072"
   
 6.  針對 **[相關查閱資料行]** 選取資料行，其唯一值與針對 **[資料行]** 選取之資料行中的值相符。  
   
-7.  按一下 **[建立]**。  
+7.  按一下 [建立] 。  
   
 #### <a name="to-create-a-relationship-between-two-tables-in-data-view"></a>在資料檢視中建立兩個資料表之間的關聯性  
   
@@ -64,7 +64,7 @@ ms.locfileid: "34041072"
   
 5.  針對 **[相關查閱資料行]** 選取資料行，其唯一值與針對 **[資料行]** 選取之資料行中的值相符。  
   
-6.  按一下 **[建立]**。  
+6.  按一下 [建立] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [刪除關聯性](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   

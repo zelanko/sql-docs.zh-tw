@@ -18,12 +18,12 @@ ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 192747d920f92681617d0dc19cc562e52e9c310e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1583f6de4938451b03eabfb7c9425120fa37f2fc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641710"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537827"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +46,19 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [ **@job_id =**] *job_id*  
  要套用至指定目標伺服器或目標伺服器群組之作業的作業識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **'**_job_name_**'**  
  要套用至指定的相關目標伺服器或目標伺服器群組的作業名稱。 *job_name*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
   
- [ **@target_server_groups =**]  **'***target_server_groups***'**  
+ [  **@target_server_groups =**] **'**_target_server_groups_**'**  
  要套用指定作業的目標伺服器群組清單 (以逗號分隔)。 *target_server_groups*已 **& lt;languagekeyword>nvarchar(2048)</languagekeyword&gt**，預設值是 NULL。  
   
- [ **@target_servers=** ] **'***target_servers***'**  
+ [  **@target_servers=** ] **'**_target_servers_**'**  
  要套用指定作業的目標伺服器清單 (以逗號分隔)。 *target_servers*已 **& lt;languagekeyword>nvarchar(2048)</languagekeyword&gt**，預設值是 NULL。  
   
- [  **@operation=** ] **'***作業***'**  
+ [  **@operation=** ] **'**_作業_**'**  
  這是指應該將指定的作業套用在指定的目標伺服器或目標伺服器群組上，還是應該從其中移除指定的作業。 *作業*已**varchar(7)**，預設值是 APPLY。 有效的作業**套用**並**移除**。  
   
 ## <a name="return-code-values"></a>傳回碼值  

@@ -1,5 +1,5 @@
 ---
-title: 定義多對多關聯性 |Microsoft 文件
+title: 定義多對多關聯性 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 487b61512e1dbd784b9b63eb0c3efdf1f98281ec
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c2541637af690395bb52c86a604ed7b37bd3fb00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019625"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518018"
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>課程 5-3-定義多對多關聯性
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34019625"
 多對多維度的值是相異加總，也就是說，這些值最多只會彙總一次到 [所有成員] 中。  
   
 > [!NOTE]  
-> 為了支援多對多維度關聯性，必須在資料來源檢視的所有相關資料表之間定義主索引鍵–外部索引鍵關聯性。 否則，當您在 [Cube 設計師] 的 [維度使用方式] 索引標籤中建立關聯性時，將無法選取正確的中繼量值群組。  
+> 為了支援多對多維度關聯性，必須定義主索引鍵-外部索引鍵關聯性中涉及的所有資料表之間的資料來源檢視。 否則，當您在 [Cube 設計師] 的 [維度使用方式] 索引標籤中建立關聯性時，將無法選取正確的中繼量值群組。  
   
 如需詳細資訊，請參閱[維度關聯性](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)和[定義多對多關聯性及多對多關聯性屬性](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "34019625"
   
 5.  在 [新增/移除資料表] 對話方塊中，將 [DimSalesReason] 資料表和 [FactInternetSalesReason] 資料表新增至 [包含的物件] 清單，然後按一下 [確定]。  
   
-    請注意，會自動建立相關資料表之間的主索引鍵–外部索引鍵關聯性，因為那些關聯性已定義在基礎關聯式資料庫中 如果這些關聯性未定義在基礎關聯式資料庫中，您必須在資料來源檢視中定義它們。  
+    請注意，因為基礎關聯式資料庫中定義這些關聯性主索引鍵-外部索引鍵之間的關聯性相關的資料表會自動建立。 如果這些關聯性未定義在基礎關聯式資料庫中，您必須在資料來源檢視中定義它們。  
   
 6.  在 [格式] 功能表上，指向 [自動配置]，然後按一下 [圖表]。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "34019625"
   
     請注意，每一份訂單內的每一個行號，都有一個索引鍵值來識別行項目的採構原因，如下圖所示。  
   
-    ![機碼值來識別購買的銷售原因](../analysis-services/media/l5-many-to-many-1.gif "機碼值來識別購買的銷售原因")  
+    ![若要找出用於購買產品的銷售原因索引鍵值](../analysis-services/media/l5-many-to-many-1.gif "機碼值來識別用於購買產品的銷售原因")  
   
 ## <a name="defining-the-intermediate-measure-group"></a>定義中繼量值群組  
   
@@ -80,7 +80,7 @@ ms.locfileid: "34019625"
   
 5.  選取 [網際網路銷售原因計數]，並在 [屬性] 視窗中檢閱這個量值的屬性。  
   
-    請注意，這個量值的 [AggregateFunction] 屬性是定義為 [計數] 而不是 [總和]。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]選擇**計數**因為基礎資料類型是字串資料類型。 基礎事實資料表中的其他兩個資料行並未選取做為量值，因為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 偵測到它們是數值索引鍵而不是實際量值。 如需詳細資訊，請參閱[定義局部加總行為](../analysis-services/multidimensional-models/define-semiadditive-behavior.md)。  
+    請注意，這個量值的 [AggregateFunction] 屬性是定義為 [計數] 而不是 [總和]。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 選擇**計數**因為基礎資料類型是字串資料類型。 基礎事實資料表中的其他兩個資料行並未選取做為量值，因為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 偵測到它們是數值索引鍵而不是實際量值。 如需詳細資訊，請參閱[定義局部加總行為](../analysis-services/multidimensional-models/define-semiadditive-behavior.md)。  
   
 6.  在 [屬性] 視窗中，將 [網際網路銷售原因計數] 量值的 [可見] 屬性變更為 **False**。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34019625"
   
 7.  在 [名稱資料行] 清單中，選取 [SalesReasonName]。  
   
-8.  按一下 **[下一步]**。  
+8.  按 [下一步] 。  
   
 9. 在 [選取維度屬性] 頁面上，系統會自動選取 [銷售原因索引鍵] 屬性，因為它是索引鍵屬性。 選取 [銷售原因類型] 屬性旁的核取方塊，並將其名稱變更為 [銷售原因類型]，然後按一下 [下一步]。  
   
@@ -144,15 +144,15 @@ ms.locfileid: "34019625"
   
     下圖顯示 [定義關聯性] 對話方塊中的變更。  
   
-    ![定義關聯性對話方塊](../analysis-services/media/l5-many-to-many-3.gif "定義關聯性對話方塊")  
+    ![定義關聯性 對話方塊](../analysis-services/media/l5-many-to-many-3.gif "定義關聯性對話方塊")  
   
-5.  按一下 **[確定]**。  
+5.  按一下 [確定] 。  
   
     請注意代表 [銷售原因] 維度和 [網際網路銷售] 量值群組之間關聯性的多對多圖示。  
   
 ## <a name="browsing-the-cube-and-the-many-to-many-dimension"></a>瀏覽 Cube 與多對多維度  
   
-1.  在 [建立] 功能表上，按一下 [Deploy Analysis Services Tutorial (部署 Analysis Services Tutorial)]。  
+1.  在 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
   
 2.  順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師] 的 [瀏覽器] 索引標籤，然後按一下 [重新連接]。  
   
@@ -168,13 +168,13 @@ ms.locfileid: "34019625"
   
     下圖顯示 [Cube 設計師] 的 [篩選] 窗格和 [資料] 窗格。  
   
-    ![Cube 設計師的篩選和資料窗格](../analysis-services/media/l5-many-to-many-5.gif "Cube 設計師的篩選和資料窗格")  
+    ![篩選和資料窗格的 Cube 設計師](../analysis-services/media/l5-many-to-many-5.gif "Cube 設計師 的篩選和資料窗格")  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
-[定義量值群組內的維度資料粒度](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+[在量值群組內定義維度資料粒度](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[在資料來源檢視設計工具 & #40; 中使用圖表Analysis Services & #41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[在資料來源檢視設計工具中使用圖表 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
 [維度關聯性](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [定義多對多關聯性及多對多關聯性屬性](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

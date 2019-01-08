@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [SQL Server replication], non-SQL Server Subscribers
@@ -17,12 +16,12 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8a11cdbd373a173fd2709b07ccb860484c0f59eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145148"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786362"
 ---
 # <a name="oracle-subscribers"></a>Oracle 訂閱者
   從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]開始， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就會透過由 Oracle 提供的 Oracle OLE DB 提供者支援 Oracle 的發送訂閱。  
@@ -86,7 +85,7 @@ ms.locfileid: "48145148"
   
     -   請確定空白字串尚未做為資料行值插入已發行的資料表中。  
   
-    -   如果通知「散發代理程式」記錄中的錯誤並繼續處理是可接受的，則請使用「散發代理程式」的 **–SkipErrors** 參數。 指定 Oracle 錯誤碼 1400 (**-SkipErrors1400**)。  
+    -   如果通知「散發代理程式」記錄中的錯誤並繼續處理是可接受的，則請使用「散發代理程式」的 **-SkipErrors** 參數。 指定 Oracle 錯誤碼 1400 (**-SkipErrors1400**)。  
   
     -   修改已產生的建立資料表指令碼，同時從可能包含了與空白字串相關聯的任何字元資料行中移除 NOT NULL 屬性，並且使用 @creation_script sp_addarticle [的](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)參數為發行項提供做為自訂建立指令碼的已修改指令碼。  
   
@@ -128,7 +127,7 @@ ms.locfileid: "48145148"
 |`smalldatetime`|DATE|  
 |`smallint`|NUMBER(5,0)|  
 |`smallmoney`|NUMBER(10,4)|  
-|`sql_variant`|不適用|  
+|`sql_variant`|N/A|  
 |`sysname`|VARCHAR2(128)|  
 |`text`|CLOB|  
 |`time(0-7)`|VARCHAR(16)|  

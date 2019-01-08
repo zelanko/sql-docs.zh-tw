@@ -10,12 +10,12 @@ ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3bffdc944c10a534cffd58a6b9931165f556432b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ff22023f9f6f8bcbe1d2a1d0f57557676cea1cc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145378"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353014"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>改善全文檢索查詢的效能
   以下是有助於提升全文檢索查詢效能的建議事項清單。  
@@ -26,7 +26,7 @@ ms.locfileid: "48145378"
   
 -   使用 [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)來重新組織全文檢索目錄。 在進行效能測試之前，請確定完成此動作，因為執行此陳述式會造成該目錄中之全文檢索的主要合併。  
   
--   請將您選擇的全文檢索索引鍵資料行限制為小資料行。 雖然支援 900 位元組的資料行，但是我們建議您在全文檢索索引中使用較小的索引鍵資料行。 `int` 和`bigint`提供最佳效能。  
+-   請將您選擇的全文檢索索引鍵資料行限制為小資料行。 雖然支援 900 位元組的資料行，但是我們建議您在全文檢索索引中使用較小的索引鍵資料行。 `int` 和 `bigint` 會提供最佳效能。  
   
 -   使用整數全文檢索索引鍵可避免與 **docid** 對應資料表發生聯結。 因此，整數全文檢索索引鍵會依據重要性順序改善查詢效能並改善搜耙效能。 如果全文檢索索引鍵也是叢集索引索引鍵，可能會產生額外效能優勢。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48145378"
 -   若為包含選擇性關聯述詞的應用程式，當使用選擇性關聯式述詞與非選擇性全文檢索述詞的查詢撰寫成使用查詢最佳化工具時，這些查詢可能會具有最佳效能。 這樣做可讓查詢最佳化工具決定它是否可利用述詞或範圍下推來產生有效的查詢計畫。 這種方法比較簡單，而且通常會比將關聯式資料當做全文檢索資料進行索引更有效率。  
   
 ## <a name="related-resources"></a>相關資源  
- [SQL Server 2008 全文檢索搜尋：內部和增強功能](http://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008 全文檢索搜尋：內部和增強功能](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
 ## <a name="see-also"></a>另請參閱  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   

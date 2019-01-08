@@ -19,26 +19,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 129c7bd5c1932d509b9afc5a28a2548c9fa8c3f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5eb82ba893b39da389640f7b139279f8caf70da6
+ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818787"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586241"
 ---
 # <a name="spupdatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  針對目前資料庫中的所有使用者定義和內部資料表執行 UPDATE STATISTICS。  
+執行`UPDATE STATISTICS`針對目前資料庫中的所有使用者定義和內部資料表。  
   
- 如需有關更新統計資料的詳細資訊，請參閱 < [UPDATE STATISTICS &#40;TRANSACT-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)。 如需統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
+如需詳細資訊`UPDATE STATISTICS`，請參閱 < [UPDATE STATISTICS &#40;TRANSACT-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)。 如需統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
     
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 sp_updatestats [ [ @resample = ] 'resample']  
 ```  
   
@@ -50,28 +49,31 @@ sp_updatestats [ [ @resample = ] 'resample']
  指定**sp_updatestats**將使用的 RESAMPLE 選項[UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)陳述式。 如果 **'resample'** 未指定，則**sp_updatestats**使用預設取樣來更新統計資料。 **resample**已**varchar(8)** 預設值為 [否]。  
   
 ## <a name="remarks"></a>備註  
- **sp_updatestats**藉由指定 ALL 關鍵字，在資料庫中的所有使用者定義和內部資料表執行 UPDATE STATISTICS。 sp_updatestats 會顯示進度訊息。 當更新完成時，它會報告已更新所有資料表的統計資料。  
+ **sp_updatestats**會執行`UPDATE STATISTICS`，藉由指定`ALL`關鍵字，在資料庫中的所有使用者定義和內部資料表上。 sp_updatestats 會顯示進度訊息。 當更新完成時，它會報告已更新所有資料表的統計資料。  
   
- sp_updatestats 會針對停用的非叢集索引更新統計資料，但不會針對停用的叢集索引更新統計資料。  
+sp_updatestats 會針對停用的非叢集索引更新統計資料，但不會針對停用的叢集索引更新統計資料。  
   
- 對於以磁碟為基礎的資料表，請**sp_updatestats**更新統計資料基礎**modification_counter**中的資訊**sys.dm_db_stats_properties**目錄檢視，正在更新至少一個資料列已經過修改的統計資料。 執行時，一律會更新記憶體最佳化資料表上的統計資料**sp_updatestats**。 因此不會執行**sp_updatestats**超過必要。  
+對於以磁碟為基礎的資料表，請**sp_updatestats**更新統計資料基礎**modification_counter**中的資訊**sys.dm_db_stats_properties**目錄檢視，正在更新至少一個資料列已經過修改的統計資料。 執行時，一律會更新記憶體最佳化資料表上的統計資料**sp_updatestats**。 因此不會執行**sp_updatestats**超過必要。  
   
- **sp_updatestats**可以觸發重新編譯的預存程序或其他已編譯的程式碼。 不過， **sp_updatestats**可能不會導致重新編譯，如果只有一個查詢計畫為所參考的資料表和索引。 在這些情況下，重新編譯是不必要的，即使已更新統計資料也一樣。  
+**sp_updatestats**可以觸發重新編譯的預存程序或其他已編譯的程式碼。 不過， **sp_updatestats**可能不會導致重新編譯，如果只有一個查詢計畫為所參考的資料表和索引。 在這些情況下，重新編譯是不必要的，即使已更新統計資料也一樣。  
   
- 資料庫相容性層級低於 90，執行**sp_updatestats**不會保留特定統計資料的最新 NORECOMPUTE 設定。 對於相容性層級為 90 或更高版本的資料庫，sp_updatestats 就會保留特定統計資料的最新 NORECOMPUTE 選項。 如需停用及重新啟用統計資料更新的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
+資料庫相容性層級低於 90，執行**sp_updatestats**不會保留特定統計資料的最新 NORECOMPUTE 設定。 對於相容性層級為 90 或更高版本的資料庫，sp_updatestats 就會保留特定統計資料的最新 NORECOMPUTE 選項。 如需停用及重新啟用統計資料更新的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
   
 ## <a name="permissions"></a>Permissions  
  需要的成員資格**sysadmin**固定伺服器角色或資料庫擁有權 (**dbo**)。  
-  
+
 ## <a name="examples"></a>範例  
- 下列範例會更新 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中之資料表的統計資料。  
+下列範例會更新 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中之資料表的統計資料。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_updatestats;   
 ```  
-  
+
+## <a name="automatic-index-and-statistics-management"></a>自動索引與統計資料管理
+利用[自適性索引重組](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)等解決方案，為一或多個資料庫自動管理索引重組以及統計資料更新。 這項程序會根據索引分散程度與其他參數，自動選擇要進行重建或是重新組織索引，並以線性閾值更新統計資料。
+
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
@@ -81,5 +83,4 @@ EXEC sp_updatestats;
  [sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [系統預存程序](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  
+ 

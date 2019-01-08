@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_dropsubscription
@@ -17,12 +16,12 @@ ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a8af8a4fc4572389bfaca7d1c678de8ec95641e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08e25ee6f2de589c3d7367c140bd0ea63d4cec1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687476"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812963"
 ---
 # <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,22 +43,22 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=** ] **'***發行集***'**  
+ [  **@publication=** ] **'**_發行集_**'**  
  這是關聯的發行集名稱。 *發行集*已**sysname**，預設值是 NULL。 如果**所有**，針對指定的訂閱者的所有發行集的所有訂閱都會都取消。 *發行集*是必要的參數。  
   
- [  **@article=** ] **'***文章***'**  
+ [  **@article=** ] **'**_文章_**'**  
  這是發行項的名稱。 *發行項*已**sysname**，預設值是 NULL。 如果**所有**，發行集和訂閱者端卸除指定的所有發行項每個訂用帳戶。 使用**所有**針對發行集允許立即更新。  
   
- [  **@subscriber=** ] **'* **訂閱*r**' * *  
+ [  **@subscriber=** ] **'**_subscribe_r **'**  
  這是將卸除訂閱的訂閱者名稱。 *訂閱者*已**sysname**，沒有預設值。 如果**所有**，會卸除所有訂閱者的所有訂用帳戶。  
   
- [  **@destination_db=** ] **'***destination_db***'**  
+ [  **@destination_db=** ] **'**_destination_db_**'**  
  這是目的地資料庫的名稱。 *destination_db*已**sysname**，預設值是 NULL。 如果是 NULL，就會卸除這個訂閱者的所有訂閱。  
   
  [  **@ignore_distributor =** ] *ignore_distributor*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@reserved=** ] **'***保留***'**  
+ [  **@reserved=** ] **'**_保留_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  

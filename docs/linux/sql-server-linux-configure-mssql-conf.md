@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 21034e0e7ae4e84d245d12b631c96c41760c46c4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 94d5aa81e6d9da31593f03b867a1f25b5ecc85b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658810"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401893"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具，設定在 Linux 上的 SQL Server
 
@@ -590,8 +590,8 @@ accepteulaml = Y
 |選項 |描述 |
 |--- |--- |
 |**network.forceencryption** |如果是 1，然後[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]強制加密的所有連線。 根據預設，此選項會是 0。 |
-|**network.tlscert** |憑證的絕對路徑檔案[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]用於 TLS。 範例：`/etc/ssl/certs/mssql.pem`憑證檔案必須可由 mssql 帳戶存取。 Microsoft 建議您限制對檔案使用存取`chown mssql:mssql <file>; chmod 400 <file>`。 |
-|**network.tlskey** |檔案的私密金鑰絕對路徑[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]用於 TLS。 範例：`/etc/ssl/private/mssql.key`憑證檔案必須可由 mssql 帳戶存取。 Microsoft 建議您限制對檔案使用存取`chown mssql:mssql <file>; chmod 400 <file>`。 |
+|**network.tlscert** |憑證的絕對路徑檔案[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]用於 TLS。 範例 `/etc/ssl/certs/mssql.pem`  憑證檔案必須可由 mssql 帳戶存取。 Microsoft 建議您限制對檔案使用存取`chown mssql:mssql <file>; chmod 400 <file>`。 |
+|**network.tlskey** |檔案的私密金鑰絕對路徑[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]用於 TLS。 範例`/etc/ssl/private/mssql.key`  憑證檔案必須可由 mssql 帳戶存取。 Microsoft 建議您限制對檔案使用存取`chown mssql:mssql <file>; chmod 400 <file>`。 |
 |**network.tlsprotocols** |以逗號分隔的清單，哪一個 TLS 的 SQL Server 所允許的通訊協定。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 一律會嘗試交涉的最強的允許通訊協定。 如果用戶端不支援任何允許的通訊協定，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]會拒絕連線嘗試。  所有支援的通訊協定相容性，都被允許預設 （1.2、 1.1 和 1.0）。  如果您的用戶端支援 TLS 1.2，Microsoft 建議讓只 TLS 1.2。 |
 |**network.tlsciphers** |指定所允許的加密[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]tls。 此字串必須格式化每[OpenSSL 的加密清單格式](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html)。 一般情況下，您應該不需要變更這個選項。 <br /> 根據預設，可使用下列編碼器： <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Kerberos keytab 檔案路徑 |

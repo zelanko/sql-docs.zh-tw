@@ -16,12 +16,12 @@ ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fbc636a4dcf67b6bdeaa17088405ffe079e50d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 82e7d14acc5117da28b608e742ad34afa5b652a5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096958"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420329"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>合併的權限 (Master Data Services)
   合併的權限適用於某個實體所有合併成員的屬性值。  
@@ -50,10 +50,10 @@ ms.locfileid: "48096958"
 |**拒絕**|不顯示屬性。<br /><br /> 注意：您無法明確拒絕存取 Name 和 Code 屬性。|  
   
 ## <a name="see-also"></a>另請參閱  
- [指派模型物件權限&#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
+ [指派模型物件權限 &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
  [分葉權限&#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
- [模型物件權限&#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [模型物件權限 &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [成員 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
- [屬性&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+ [屬性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

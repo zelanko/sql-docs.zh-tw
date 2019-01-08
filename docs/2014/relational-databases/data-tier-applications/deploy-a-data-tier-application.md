@@ -22,19 +22,19 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad76099b7cc6386e20b8c46f300298a13492f32b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104928"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529540"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署資料層應用程式
   您可以使用精靈或 PowerShell 指令碼，將 DAC 封裝中的資料層應用程式 (DAC) 部署到現有的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 部署程序會將 DAC 定義儲存到 **msdb** 系統資料庫 (**中則是** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]) 來註冊 DAC 執行個體並建立資料庫，然後使用 DAC 內定義的所有資料庫物件來擴展資料庫。  
   
--   **開始之前：**  [SQL Server 公用程式](#SQLUtility)、 [資料庫選項和設定](#DBOptSettings)、 [限制事項](#LimitationsRestrictions)、 [必要條件](#Prerequisites)、 [安全性](#Security)、 [權限](#Permissions)  
+-   **開始之前：**[SQL Server 公用程式](#SQLUtility)，[資料庫選項及設定](#DBOptSettings)，[限制事項](#LimitationsRestrictions)，[必要條件](#Prerequisites)，[安全性](#Security)，[權限](#Permissions)  
   
--   **使用下列項目，部署 DAC**  [部署資料層應用程式精靈](#UsingDeployDACWizard)、 [PowerShell](#DeployDACPowerShell)  
+-   **若要部署的 DAC，使用：**[部署資料層應用程式精靈](#UsingDeployDACWizard)， [PowerShell](#DeployDACPowerShell)  
   
 ##  <a name="BeforeBegin"></a> 開始之前  
  可以將相同的 DAC 封裝部署到單一 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體多次，但是一次只能執行一個部署。 針對每個部署指定的 DAC 執行個體名稱在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體中必須是唯一的。  
@@ -189,13 +189,13 @@ ms.locfileid: "48104928"
   
 1.  建立 SMO Server 物件，並將它設為您要部署 DAC 的執行個體。  
   
-2.  開啟`ServerConnection`物件，並連接到相同的執行個體。  
+2.  開啟 `ServerConnection` 物件，並連接到相同的執行個體。  
   
-3.  使用`System.IO.File`以載入 DAC 封裝檔案。  
+3.  使用 `System.IO.File` 以載入 DAC 封裝檔案。  
   
 4.  您可以使用 `add_DacActionStarted` 和 `add_DacActionFinished` 訂閱 DAC 部署事件。  
   
-5.  設定`DatabaseDeploymentProperties`。  
+5.  設定 `DatabaseDeploymentProperties`。  
   
 6.  您可以使用 `DacStore.Install` 方法來部署 DAC。  
   

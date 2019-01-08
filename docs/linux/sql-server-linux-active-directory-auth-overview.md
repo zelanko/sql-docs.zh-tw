@@ -1,5 +1,6 @@
 ---
-title: Linux 上的 SQL Server 的 active Directory 驗證 |Microsoft Docs
+title: Linux 上的 SQL Server 的 active Directory 驗證
+titleSuffix: SQL Server
 description: 這篇文章會提供在 Linux 上的 SQL Server 中的 Active Directory 驗證的概觀。
 author: rothja
 ms.date: 02/23/2018
@@ -7,16 +8,16 @@ ms.author: jroth
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 94b3aa8b63b76d03ccd08acf312b3efcf8b45bca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcc2148119634c7114d72f67b2c7143fa7d47724
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610366"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160397"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的 active Directory 驗證
 
@@ -39,7 +40,7 @@ AD 驗證透過具有下列優點[!INCLUDE[ssNoVersion](../includes/ssnoversion-
 
 若要使用 Active Directory 驗證，您必須在網路上有 AD 網域控制站 (Windows)。
 
-在教學課程中，提供如何設定 AD 驗證的詳細資料[教學課程： 使用 Active Directory 驗證 Linux 上的 SQL Server](sql-server-linux-active-directory-authentication.md)。 下列清單提供摘要，以包含每個區段的連結，在本教學課程：
+如何設定 AD 驗證的詳細資料中的教學課程中，提供[教學課程：Linux 上的 SQL Server 使用 Active Directory 驗證](sql-server-linux-active-directory-authentication.md)。 下列清單提供摘要，以包含每個區段的連結，在本教學課程：
 
 1. [加入 Active Directory 網域的 SQL Server 主機](sql-server-linux-active-directory-authentication.md#join)。
 1. [適用於 SQL Server 中建立 AD 使用者和設定 ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser)。
@@ -53,4 +54,4 @@ AD 驗證透過具有下列優點[!INCLUDE[ssNoVersion](../includes/ssnoversion-
 
 ## <a name="next-steps"></a>後續步驟
 
-如需有關如何在 Linux 上實作適用於 SQL Server 的 Active Directory 驗證的詳細資訊，請參閱 <<c0> [ 教學課程： 使用 Active Directory 驗證 Linux 上的 SQL Server](sql-server-linux-active-directory-authentication.md)。
+如需有關如何在 Linux 上實作適用於 SQL Server 的 Active Directory 驗證的詳細資訊，請參閱[教學課程：Linux 上的 SQL Server 使用 Active Directory 驗證](sql-server-linux-active-directory-authentication.md)。

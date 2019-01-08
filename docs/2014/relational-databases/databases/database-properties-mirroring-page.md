@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.mirroring.f1
@@ -13,12 +12,12 @@ ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc4c0179205eb027b6723f9f3ddb0d0bbd92f547
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3411b259ddb3dd5ce3e4247335eb51d226aa617f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058718"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788662"
 ---
 # <a name="database-properties-mirroring-page"></a>資料庫屬性 (鏡像頁面)
   請從主體資料庫存取此頁面，並且用它來設定和修改資料庫的資料庫鏡像屬性。 您也可以用來它啟動「設定資料庫鏡像安全性精靈」，以便檢視鏡像工作階段的狀態，以及暫停或移除資料庫鏡像工作階段。  
@@ -42,7 +41,7 @@ ms.locfileid: "48058718"
 |如果鏡像已經開始。|如果在精靈中變更了見證伺服器，設定就會隨之變更。|  
   
  **伺服器網路位址**  
- 下列每個伺服器執行個體都有一個相等的選項：[主體]、[鏡像] 和 [見證]。  
+ 每個伺服器執行個體都有一個對等的選項：**主體**，**鏡像**，以及**見證**。  
   
  伺服器執行個體的伺服器網路位址，是在您完成「設定資料庫鏡像安全性精靈」時自動指定的。 完成精靈之後，如有必要，可以再用手動方式修改網路位址。  
   
@@ -123,7 +122,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 |------------|--------------|-----------------|  
 |**高效能 (非同步)**|Null (若存在，則不使用，但工作階段需要仲裁)|為了將效能發揮到極致，鏡像資料庫的狀態總是會比主體資料庫有些延遲，永遠無法真正的同步。 然而，在資料庫之間的間距通常很小。 夥伴的遺失將具有下列結果：<br /><br /> 如果鏡像伺服器執行個體已無法使用，主體將繼續。<br /><br /> 如果主體伺服器執行個體變成無法使用，鏡像就會停止。 但是如果工作階段沒有見證 (依照建議)，或者見證已連接到鏡像伺服器，則鏡像伺服器會以暖待命方式保持可存取狀態；資料庫擁有者可以對鏡像伺服器執行個體強制服務 (有遺失資料的可能)。|  
 |**不具有自動容錯移轉的高安全性 (同步)**|否|保證會將所有已認可的交易都寫入鏡像伺服器上的磁碟。 夥伴互相連接時才可以執行手動容錯移轉。 夥伴的遺失將具有下列結果：<br /><br /> 如果鏡像伺服器執行個體已無法使用，主體將繼續。<br /><br /> 如果主體伺服器執行個體變成無法使用，鏡像就會停止，但是會以暖待命方式保持可使用狀態；資料庫擁有者可以對鏡像伺服器執行個體強制服務 (有遺失資料的可能)。|  
-|**具有自動容錯移轉的高安全性 (同步)**|是 (必要)|藉由納入見證伺服器執行個體來支援自動容錯移轉，而發揮最大的可用性。 請注意，您必須先指定見證伺服器位址，才能選取 [具有自動容錯移轉的高安全性 (同步)] 選項。 每當夥伴互相連接時才可以執行手動容錯移轉。 **\*\* 重要事項 \*\*** 如果見證中斷連接，則必須將夥伴相互連接，才能使用資料庫。 如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。<br /><br /> 在同步作業模式中，保證會將所有已認可的交易都寫入鏡像伺服器上的磁碟。 在有見證的情況下，夥伴的遺失將具有下列結果：<br /><br /> 如果主體伺服器執行個體已無法使用，將發生自動容錯移轉。 鏡像伺服器執行個體將切換到主體的角色，並且提供它的資料庫做為主體資料庫。<br /><br /> 如果鏡像伺服器執行個體已無法使用，主體將繼續。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。|  
+|**具有自動容錯移轉的高安全性 (同步)**|是 (必要)|藉由納入見證伺服器執行個體來支援自動容錯移轉，而發揮最大的可用性。 請注意，您必須先指定見證伺服器位址，才能選取 [具有自動容錯移轉的高安全性 (同步)] 選項。 每當夥伴互相連接時才可以執行手動容錯移轉。 **\*\* 重要事項 \*\*** 如果見證中斷連接，則必須將夥伴相互連接，才能使用資料庫。 如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性&#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。<br /><br /> 在同步作業模式中，保證會將所有已認可的交易都寫入鏡像伺服器上的磁碟。 在有見證的情況下，夥伴的遺失將具有下列結果：<br /><br /> 如果主體伺服器執行個體已無法使用，將發生自動容錯移轉。 鏡像伺服器執行個體將切換到主體的角色，並且提供它的資料庫做為主體資料庫。<br /><br /> 如果鏡像伺服器執行個體已無法使用，主體將繼續。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。|  
   
  在鏡像開始後，您可以變更作業模式，並且按一下 **[確定]** 以儲存變更。  
   

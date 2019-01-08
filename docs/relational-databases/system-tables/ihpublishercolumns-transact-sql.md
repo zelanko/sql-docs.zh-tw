@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - IHpublishercolumns
@@ -19,12 +18,12 @@ ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a8a2c4d6850b814d79b360ff9748579cf44b7b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f965bb76f13c01531ba5007d82de9e42c8138f05
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757566"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802490"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>IHpublishercolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "47757566"
 |**name**|**sysname**|已發行的資料行名稱。|  
 |**column_ordinal**|**int**|依序識別欄位。|  
 |**type**|**varchar(255)**|發行者之來源資料行的資料行資料類型。|  
-|**長度**|**bigint**|發行者的來源資料行長度。|  
+|**length**|**bigint**|發行者的來源資料行長度。|  
 |**prec**|**int**|發行者來源資料行的有效位數。|  
 |**scale**|**int**|發行者來源資料行的小數位數。|  
 |**isnullable**|**bit**|指出資料行是否接受 NULL 值，其中**1**表示接受 NULL 值。|  

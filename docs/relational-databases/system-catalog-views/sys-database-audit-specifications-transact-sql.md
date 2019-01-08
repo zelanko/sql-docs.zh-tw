@@ -20,12 +20,12 @@ ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b91e302c48917454ba29210a2557caf558940a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf5f584a556db9e32fcaf1f53b907adcb8d08e25
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604907"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522985"
 ---
 # <a name="sysdatabaseauditspecifications-transact-sql"></a>sys.database_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47604907"
 |database_specification_id|**int**|資料庫規格的識別碼。|  
 |create_date|**datetime**|建立稽核規格的日期。|  
 |modified_date|**datetime**|上次修改稽核規格的日期。|  
-|is_state_enabled|**bit**|稽核規格狀態：<br /><br /> 0 – 已停用<br /><br /> 1 – 已啟用|  
+|is_state_enabled|**bit**|稽核規格狀態：<br /><br /> 0-已停用<br /><br /> 1-已啟用|  
 |audit_GUID|**uniqueidentifer**|包含這個規格之稽核的 GUID。 用在資料庫附加/啟動期間列舉成員資料庫稽核規格時。|  
   
 ## <a name="remarks"></a>備註  

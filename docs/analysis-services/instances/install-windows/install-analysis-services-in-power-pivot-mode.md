@@ -1,5 +1,5 @@
 ---
-title: 以 Power Pivot 模式安裝 Analysis Services |Microsoft 文件
+title: 以 Power Pivot 模式安裝 Analysis Services |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 59d3f4dadc2de71f8fa4438ec48a2783164a485a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019305"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527755"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>以 Power Pivot 模式安裝 Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -23,11 +23,11 @@ ms.locfileid: "34019305"
 ##  <a name="bkmk_background"></a> 背景  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 是中間層及後端服務的集合物件，可以在 SharePoint 2016 或 SharePoint 2013 伺服器陣列中提供 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 資料存取功能。  
   
--   **後端服務** ：如果您使用 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 建立包含分析資料的活頁簿，伺服器環境必須具有 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint，才可存取該資料。 您可在已安裝 SharePoint Server 的電腦，或是在沒有 SharePoint 軟體的另一部電腦上，執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 沒有 SharePoint 的相依性。  
+-   **後端服務：** 如果您使用[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for Excel 建立包含分析資料的活頁簿，您必須擁有[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint 來存取該伺服器環境中的資料。 您可在已安裝 SharePoint Server 的電腦，或是在沒有 SharePoint 軟體的另一部電腦上，執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 沒有 SharePoint 的相依性。  
   
-     **注意** ：本主題將描述 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器和後端服務的安裝。  
+     **注意：** 本主題說明如何安裝[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]伺服器和後端服務。  
   
--   **中介層：** SharePoint 中 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 體驗的增強功能，包括 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 圖庫、排程資料重新整理、管理儀表板和資料提供者。 如需有關安裝及設定中介層的詳細資訊，請參閱以下主題：  
+-   **中介層：** 增強功能[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]體驗 SharePoint 包括[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]圖庫、 排程資料重新整理、 管理儀表板和資料提供者。 如需有關安裝及設定中介層的詳細資訊，請參閱以下主題：  
   
     -   [安裝或解除安裝 Power Pivot for SharePoint 增益集 (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
   
@@ -47,16 +47,16 @@ ms.locfileid: "34019305"
   
 4.  必須要有 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 執行個體名稱。 正在以 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]模式安裝 Analysis Services 的電腦上，不得具有現存的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 具名執行個體。  
   
-     **附註：** 執行個體名稱必須為 POWERPIVOT。  
+     **注意：** 執行個體名稱必須為 POWERPIVOT。  
   
 5.  請參閱 [Analysis Services SharePoint 模式伺服器的硬體和軟體需求 (SQL Server 2014)](http://msdn.microsoft.com/library/fb86ca0a-518c-4c61-ae78-7680c57fae1f)。  
   
 6.  檢閱位於 [SQL Server 2016 Release Notes](../../../sql-server/sql-server-2016-release-notes.md)的版本資訊。  
   
 ###  <a name="bkmk_sqleditions"></a> SQL Server Edition 需求  
- 並非在所有版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中都提供商業智慧功能。 如需詳細資訊，請參閱[Analysis Services 的 SQL Server 2016 的版本支援的功能](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)和[and Components of SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
+ 並非在所有版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中都提供商業智慧功能。 如需詳細資訊，請參閱 < [Analysis Services 的 SQL Server 2016 版本所支援的功能](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)並[SQL Server 2016 的元件和版本](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
-##  <a name="InstallSQL"></a> 步驟 1：安裝 Power Pivot for SharePoint  
+##  <a name="InstallSQL"></a> 步驟 1:安裝 Power Pivot for SharePoint  
  在此步驟中，您會執行 SQL Server 安裝程式，以在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式中安裝 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器。 在後續步驟中，您針對活頁簿資料模型設定 Excel Services 使用此伺服器。  
   
 1.  執行 [SQL Server 安裝精靈] \(Setup.exe)。  
@@ -107,7 +107,7 @@ ms.locfileid: "34019305"
   
 15. 在 [Analysis Services 設定]  頁面的 [伺服器模式]  下方，選取 [PowerPivot 模式]   
   
-     ![SQL 安裝程式-Analysis Services 組態登陸頁面](../../../analysis-services/instances/install-windows/media/sql2016-pp-as-config-landing-page.png "SQL 安裝程式-登陸頁面的 Analysis Services 組態")  
+     ![SQL 安裝程式-Analysis Services 組態 登陸頁面](../../../analysis-services/instances/install-windows/media/sql2016-pp-as-config-landing-page.png "SQL 安裝程式-Analysis Services 組態 登陸頁面")  
   
 16. 在 [Analysis Services 設定]  頁面上，選取 [加入目前使用者]  ，為您的使用者帳戶授與管理權限。 在完成安裝程式之後，您將會需要管理權限來設定伺服器。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "34019305"
   
 3.  連接至 Analysis Services 執行個體，例如 **[您的伺服器名稱]\POWERPIVOT**。 如果您可以連接到執行個體，表示已確認服務正在執行。  
   
-##  <a name="bkmk_config"></a> 步驟 2：設定基本 Analysis Services SharePoint 整合  
+##  <a name="bkmk_config"></a> 步驟 2:設定基本 Analysis Services SharePoint 整合  
  下列步驟描述必要的組態變更，讓您可以與 SharePoint 文件庫中的 Excel 進階資料模型互動。 在您安裝 SharePoint 和 SQL Server Analysis Services 之後，完成這些步驟。  
   
 ### <a name="sharepoint-2016"></a>SharePoint 2016  
@@ -215,10 +215,10 @@ ms.locfileid: "34019305"
   
     ```  
   
-##  <a name="bkmk_verify"></a> 步驟 3：確認整合  
+##  <a name="bkmk_verify"></a> 步驟 3:確認整合  
  下列步驟會逐步引導您建立和上傳新的活頁簿，以確認 Analysis Services 整合。 您將需要使用 SQL Server 資料庫才能完成這些步驟。  
   
-1.  **注意** ：如果您已經有含交叉分析篩選器或篩選的進階活頁簿，可以將它上傳至 SharePoint 文件庫，然後確認您可以從文件庫檢視中與交叉分析篩選器和篩選互動。  
+1.  **注意：** 如果您已有含交叉分析篩選器或篩選的進階活頁簿，可以將它上傳至 SharePoint 文件庫，然後確認您可以從文件庫檢視中與交叉分析篩選器和篩選互動。  
   
 2.  在 Excel 中啟動新的活頁簿。  
   
@@ -261,8 +261,8 @@ ms.locfileid: "34019305"
 ##  <a name="bkmk_upgrade_workbook"></a> 升級活頁簿和排程的資料重新整理  
  升級在舊版 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 中建立之活頁簿所需的步驟，主要取決於建立活頁簿的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 版本。 如需詳細資訊，請參閱 [升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   
-##  <a name="bkmk_multiple_servers"></a> 超越單一伺服器安裝 – PowerPivot for Microsoft SharePoint  
- **Web 前端 (WFE)** 或 **中介層**：若要在較大的 SharePoint 伺服器陣列中使用 SharePoint 模式的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器，並且將其他 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 功能安裝至伺服器陣列中，請在每部 SharePoint 伺服器上執行安裝程式封裝 **spPowerPivot16.msi (SharePoint 2016) 或 spPowerPivot.msi (SharePoint 2013)** 。 spPowerPivot16.msi 或 spPowerPivot.msi 會安裝必要的資料提供者以及 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 或 2013 設定工具。  
+##  <a name="bkmk_multiple_servers"></a> 超越單一伺服器安裝-Powerpivot for Microsoft SharePoint  
+ **Web 前端 (WFE)** 或是**中介層：**:若要使用[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]SharePoint 模式中較大的 SharePoint 伺服器陣列，並安裝其他伺服器[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]功能組織成伺服器陣列中，執行安裝程式套件**spPowerPivot16.msi (SharePoint 2016) 或 spPowerPivot.msi (SharePoint2013)** 每部 SharePoint 伺服器上。 spPowerPivot16.msi 或 spPowerPivot.msi 會安裝必要的資料提供者以及 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 或 2013 設定工具。  
   
  如需有關安裝及設定中介層的詳細資訊，請參閱以下主題：  
   
@@ -274,17 +274,17 @@ ms.locfileid: "34019305"
   
 -   [設定 Power Pivot 及部署方案 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)  
   
- **備援性和伺服器負載** ：在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式下安裝第二部或其他 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器，可提供 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器功能的備援性。 其他伺服器也會分散伺服器的負載。 如需詳細資訊，請參閱下列內容：  
+ **備援性和伺服器負載：** 安裝第二個，或其他[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中的伺服器[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]模式會提供備援性[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]伺服器功能。 其他伺服器也會分散伺服器的負載。 如需詳細資訊，請參閱下列內容：  
   
 -   [設定 Analysis Services 以便處理 Excel Services (SharePoint 2013) 中的資料模型](http://technet.microsoft.com/library/jj614437(v=office.15))。  
   
 -   [管理 Excel Services 資料模型設定 (SharePoint 2013)](http://technet.microsoft.com/library/jj219780(v=office.15))。  
   
- ![SharePoint 設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[提交意見和連絡資訊，透過 SQL Server 意見](https://feedback.azure.com/forums/908035-sql-server)。  
+ ![SharePoint 設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[提交意見與連絡資訊，透過 SQL Server 意見反應](https://feedback.azure.com/forums/908035-sql-server)。  
   
 ## <a name="see-also"></a>另請參閱  
  [將 Power Pivot 移轉至 SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [安裝或解除安裝 PowerPivot for SharePoint 增益集 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [升級活頁簿和排程的資料重新整理 & #40;SharePoint 2013 & #41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+ [升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

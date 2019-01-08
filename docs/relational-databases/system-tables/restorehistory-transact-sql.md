@@ -18,12 +18,12 @@ ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b5b6861d1dcd4a9e516fbbf9d1ef22af7ea881d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 158635a13a60d652da3b78408db6cbb9d74ffd86
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698106"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617558"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47698106"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**restore_history_id**|**int**|用來識別每項還原作業的唯一識別碼。 識別，主索引鍵。|  
-|**restore_date**|**datetime**|還原作業的完成日期和時間。 可以是 NULL。|  
+|**restore_date**|**datetime**|日期和時間的還原作業的開始。 可以是 NULL。|  
 |**destination_database_name**|**nvarchar(128)**|還原作業的目的地資料庫名稱。 可以是 NULL。|  
 |**user_name**|**nvarchar(128)**|執行還原作業的使用者名稱。 可以是 NULL。|  
 |**backup_set_id**|**int**|用來識別還原的備份組的唯一識別碼。 參考**backupset （backup_set_id)**。|  

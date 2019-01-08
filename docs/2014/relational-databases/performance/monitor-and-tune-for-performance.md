@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - instances of SQL Server, monitoring performance
@@ -29,12 +28,12 @@ ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1acbc868471ebae0de110d8c346303e45cff50a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179758"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797391"
 ---
 # <a name="monitor-and-tune-for-performance"></a>效能的監視與微調
   監視資料庫的目標在於評估伺服器的執行效能。 有效的監視包括定期建立目前效能的快照集以隔離造成問題的處理序，以及持續蒐集資料來追蹤效能趨勢。  
@@ -42,7 +41,7 @@ ms.locfileid: "48179758"
  持續進行的資料庫效能評估可協助您將回應時間降到最低並產生最大產能，以達最佳效能。 有效率的網路流量、磁碟 I/O 與 CPU 使用量是達到最佳效能的關鍵。 您必須徹底分析應用程式需求、了解資料的邏輯與實體結構、評估資料庫使用，以及商議使用衝突的折衷方案，如線上交易處理 (Online Transaction Processing，OLTP) 之於決策支援。  
   
 ## <a name="benefits-of-monitoring-and-tuning-databases-for-performance"></a>監視和微調資料庫效能的優點  
- Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和 Microsoft Windows 作業系統提供公用程式可讓您檢視資料庫的目前狀況並隨著狀況變更來追蹤效能。 有各種不同的工具和技術，可用來監視[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 了解如何監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可協助您：  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Microsoft Windows 作業系統提供公用程式，可讓您檢視資料庫的目前狀況，並隨著狀況變更來追蹤效能。 有各種不同的工具和技術，可用來監視[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 了解如何監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可協助您：  
   
 -   判斷是否可以改善效能。 例如，監視常用查詢的回應時間，您可以判斷是否需要變更資料表的查詢或索引。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48179758"
 -   對問題進行疑難排解或對應用程式元件進行偵錯，例如預存程序。  
   
 ### <a name="monitoring-in-a-dynamic-environment"></a>動態環境中的監視  
- 因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是在動態環境下提供服務，所以監視很重要。 變更條件會導致效能變更。 評估過程中，當使用者數目增加、使用者存取與連接方式變更、資料庫內容成長、用戶端應用程式變更、應用程式中的資料變更、查詢變得更複雜，以及網路流量提高時，效能也會跟著變更。 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]工具來監視效能，您可以將某些效能變更與條件變更或複雜的查詢。 下列案例提供了範例：  
+ 因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是在動態環境下提供服務，所以監視很重要。 變更條件會導致效能變更。 評估過程中，當使用者數目增加、使用者存取與連接方式變更、資料庫內容成長、用戶端應用程式變更、應用程式中的資料變更、查詢變得更複雜，以及網路流量提高時，效能也會跟著變更。 藉由使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具來監視效能， 您可以找出條件變更或複雜查詢與某些效能變更之間的關聯。 下列案例提供了範例：  
   
 -   藉由監視常用查詢的回應時間，您可以判斷是否需要變更執行查詢之資料表的查詢或索引。  
   
@@ -67,8 +66,8 @@ ms.locfileid: "48179758"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|[監視 SQL Server 元件](monitor-sql-server-components.md)|提供必要的步驟，才能有效地監視的任何元件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
-|[效能監視及微調工具](performance-monitoring-and-tuning-tools.md)|列出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]監視及微調工具。|  
+|[監視 SQL Server 元件](monitor-sql-server-components.md)|提供有效地監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之任何元件所需的必要步驟。|  
+|[效能監視及微調工具](performance-monitoring-and-tuning-tools.md)|列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監視和微調工具。|  
 |[建立效能基準](establish-a-performance-baseline.md)|提供有關如何建立效能比較基準的資訊。|  
 |[隔離效能問題](isolate-performance-problems.md)|描述如何隔離資料庫效能問題。|  
 |[找出瓶頸](identify-bottlenecks.md)|描述如何監視和追蹤伺服器效能，以找出瓶頸。|  
@@ -79,7 +78,7 @@ ms.locfileid: "48179758"
 ## <a name="see-also"></a>另請參閱  
  [將整個企業的管理自動化](../../ssms/agent/automated-administration-across-an-enterprise.md)   
  [Database Engine Tuning Advisor](database-engine-tuning-advisor.md)   
- [監視資源使用狀況 &#40;系統監視器&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)   
+ [監視資源使用量 &#40;系統監視器&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

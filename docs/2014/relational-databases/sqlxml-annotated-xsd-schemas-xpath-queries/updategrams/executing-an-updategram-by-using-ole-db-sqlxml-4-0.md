@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - ICommandStream interface
@@ -17,12 +15,12 @@ ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cfc39301cdaf149256b1d99e8ffcd479f0c158cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7597df95cecaaab72eb4f23255a4607fa02f2e93
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084292"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786190"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>使用 OLE DB 執行 Updategram (SQLXML 4.0)
   本主題提供 usingOLE DB 執行 updategram 的工作範例。  

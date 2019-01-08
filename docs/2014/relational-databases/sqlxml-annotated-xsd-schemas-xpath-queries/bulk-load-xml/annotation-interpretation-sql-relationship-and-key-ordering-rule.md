@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - sql:relationship
@@ -16,12 +14,12 @@ ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55ec5dab60311e06f09e1d1d5b4a9d1258a32565
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71eef27236a42f7e1869cb619b7ba557785ba4e7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121818"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787180"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship 和關鍵識別碼順序規則 (SQLXML 4.0)
   由於 XML 大量載入會產生記錄做為其節點進入範圍，並將這些記錄傳送到 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 做為其節點離開範圍，因此用於記錄的資料必須存在於節點的範圍內。  
@@ -117,7 +115,7 @@ ms.locfileid: "48121818"
     set objBL=Nothing  
     ```  
   
-     結果是，XML 大量載入將 NULL 值插入到 CustOrder 資料表的 CustomerID 外部索引鍵資料行中。 如果您修訂 XML 範例資料，讓 **\<CustomerID >** 子項目會出現在之前**\<順序 >** 子項目，您會得到預期的結果： XML 大量載入將指定的外部索引鍵值插入到資料行。  
+     結果是，XML 大量載入將 NULL 值插入到 CustOrder 資料表的 CustomerID 外部索引鍵資料行中。 如果您修訂 XML 範例資料，讓 **\<CustomerID >** 子項目會出現在之前**\<順序 >** 子項目，您會得到預期的結果：XML 大量載入會將指定的外部索引鍵值插入資料行。  
   
  這是相等的 XDR 結構描述：  
   

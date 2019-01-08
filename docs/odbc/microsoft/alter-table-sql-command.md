@@ -13,12 +13,12 @@ ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 054cc0f649a120805fb3ed2f5f58911959ddceaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f656396455a8d5669debc158c3edc866491fcb5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694748"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207007"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - SQL 命令
 以程式設計方式修改資料表的結構。  

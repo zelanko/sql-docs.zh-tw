@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - client configuration [SQL Server], connections
@@ -19,12 +18,12 @@ ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 15e016802fd57a1c9363ceba0dfa22b33ac30126
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 862c13e61513b46b44ce55df9e66170bbb1ac219
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131158"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641049"
 ---
 # <a name="client-network-configuration"></a>用戶端網路組態
   用戶端軟體可讓用戶端電腦連接到網路上的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 「用戶端」是前端應用程式，它會使用伺服器 (如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]) 所提供的服務。 主控這個應用程式的電腦稱為「用戶端電腦」。  

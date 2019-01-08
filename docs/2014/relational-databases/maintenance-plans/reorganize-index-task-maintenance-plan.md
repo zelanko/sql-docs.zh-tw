@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.defrag.f1
@@ -15,12 +14,12 @@ ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5580534dac0249dd71f2ad2d0b5868a293a91d84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0f354280da857be236049a564a77716e93cd351
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101148"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747420"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>重新組織索引工作 (維護計畫)
   使用 [重新組織索引工作] 對話方塊，即可將索引頁面移至更有效率的搜尋順序。 此工作會使用 `ALTER INDEX REORGANIZE` 陳述式搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫。  

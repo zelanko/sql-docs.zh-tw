@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text queries [SQL Server], performance
@@ -17,12 +16,12 @@ ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6b79ebeaddb028b901b7f59397c29b18c6b3dbeb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068869"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639461"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>轉換非搜尋字伺服器組態選項
   使用`transform noise words`伺服器組態選項來隱藏錯誤訊息，如果非搜尋字，也就是[停用字詞](../../relational-databases/search/full-text-search.md)，造成的布林運算傳回零個資料列的全文檢索查詢。 若全文檢索查詢使用的 CONTAINS 述詞中，布林運算或 NEAR 運算有包括非搜尋字，則這個選項很有幫助。 下表說明可能的值。  
@@ -33,7 +32,7 @@ ms.locfileid: "48068869"
 |1|轉換非搜尋字 (或停用字詞)。 忽略這些字，並評估查詢的其餘部分。<br /><br /> 如果非搜尋字指定在鄰近詞彙中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將其移除。 例如，非搜尋字 `is` 會從 `CONTAINS(<column_name>, 'NEAR (hello,is,goodbye)')`中移除，將搜尋查詢轉換為 `CONTAINS(<column_name>, 'NEAR(hello,goodbye)')`。 請注意， `CONTAINS(<column_name>, 'NEAR(hello,is)')` 只會轉換成 `CONTAINS(<column_name>, hello)` ，因為只有一個有效的搜尋詞彙。|  
   
 ## <a name="effects-of-the-transform-noise-words-setting"></a>轉換非搜尋字設定效果  
- 本章節將說明包含非搜尋字，查詢的行為 」`the`"，替代設定底下`transform noise words`。  假設範例全文檢索查詢字串會針對包含下列資料的資料表資料列執行：`[1, "The black cat"]`。  
+ 這一節將說明包含非搜尋字 "`the`" 的查詢行為 (在 `transform noise words` 的替代設定底下)。  假設範例全文檢索查詢字串會針對包含下列資料的資料表資料列執行：`[1, "The black cat"]`。  
   
 > [!NOTE]  
 >  所有的這類案例都可以產生非搜尋字警告。  

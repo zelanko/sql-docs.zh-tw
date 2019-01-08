@@ -13,12 +13,12 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5553072dcea3ed64ef8454019892ac5790c7a142
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: db90ecbc083a887a9845542b73e50bae6bf61e1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600108"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534739"
 ---
 # <a name="namespaces"></a>命名空間
 在 ADO 中的 XML 保存格式會使用下列四個命名空間。  
@@ -38,7 +38,7 @@ ms.locfileid: "51600108"
 > [!IMPORTANT]
 >  結構描述標記的識別碼必須是"RowsetSchema 」，而且用來參考目前資料列集的結構描述的命名空間必須指向 「 #RowsetSchema。 」  
   
- 請注意，前置詞的命名空間，冒號和等號之間的部分 — 是任意的。  
+ 請注意-冒號和等號之間的部分為命名空間的前置詞是任意的。  
   
 ```  
 xmlns:rs="urn:schemas-microsoft-com:rowset"  

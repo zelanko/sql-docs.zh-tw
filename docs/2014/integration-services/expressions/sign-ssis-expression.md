@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - positive values [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1ff2f3cdf2bd44aa617dc378c32ad99cf1aa2042
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a86511f8ad46100dbf02b5d8eed617c1c893b75
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150788"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787280"
 ---
 # <a name="sign-ssis-expression"></a>SIGN (SSIS 運算式)
   傳回數值運算式的正 (+1)、負 (-1) 或零 (0) 符號。  
@@ -56,6 +55,6 @@ SIGN(DealerPrice - StandardCost)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [函式&#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
+ [函數 &#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
   
   

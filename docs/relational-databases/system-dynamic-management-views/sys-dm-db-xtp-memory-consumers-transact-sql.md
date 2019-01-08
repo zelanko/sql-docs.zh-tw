@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f1a3a5403c4549205c226f25d6c925ef81d4b10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 768fb39cdf26b01d55ffaf175ec07e181d265b52
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856516"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522753"
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "47856516"
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|記憶體取用者的識別碼 (內部)。|  
 |memory_consumer_type|**int**|記憶體取用者的類型：<br /><br /> 0=彙總。 (彙總兩個以上取用者的記憶體使用量。 它不應該顯示)。<br /><br /> 2=VARHEAP (追蹤可變長度堆積的記憶體耗用量)。<br /><br /> 3=HASH (追蹤索引的記憶體耗用量)。<br /><br /> 5=資料庫分頁集區 (追蹤用於執行階段作業之資料庫分頁集區的記憶體耗用量。 例如，資料表變數和一些可序列化的掃描。 每個資料庫只有一個這種類型的記憶體取用者)。|  
-|memory_consumer_type_desc|**nvarchar(64)**|記憶體取用者的類型：VARHEAP、HASH 或 PGPOOL。<br /><br /> 0 – (它不應該顯示)。<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|記憶體取用者執行個體的描述：<br /><br /> VARHEAP: <br />資料庫堆積。 用來配置資料庫的使用者資料 (資料列)。<br />資料庫系統堆積。 用來配置將包含在記憶體傾印中而且不包含使用者資料的資料庫資料。<br />範圍索引堆積。 範圍索引為了配置 BW 頁面所使用的私密堆積。<br /><br /> 雜湊： 沒有描述，因為 object_id 表示資料表和 index_id 雜湊索引本身。<br /><br /> PGPOOL： 資料庫沒有只能有一個分頁集區資料庫 64k 分頁集區。|  
+|memory_consumer_type_desc|**nvarchar(64)**|記憶體取用者的類型：VARHEAP、HASH 或 PGPOOL。<br /><br /> 0-（它應該不會顯示。）<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
+|memory_consumer_desc|**nvarchar(64)**|記憶體取用者執行個體的描述：<br /><br /> VARHEAP: <br />資料庫堆積。 用來配置資料庫的使用者資料 (資料列)。<br />資料庫系統堆積。 用來配置將包含在記憶體傾印中而且不包含使用者資料的資料庫資料。<br />範圍索引堆積。 範圍索引為了配置 BW 頁面所使用的私密堆積。<br /><br /> 雜湊：無任何描述，因為 object_id 表示資料表和 index_id 雜湊索引本身。<br /><br /> PGPOOL:對於資料庫而言，只有一個分頁集區 Database 有 64K 的分頁集區。|  
 |object_id|**bigint**|配置的記憶體所歸屬的物件識別碼。 系統物件的負值。|  
 |xtp_object_id|**bigint**|記憶體最佳化的資料表物件識別碼。|  
 |index_id|**int**|取用者的索引識別碼 (如果有的話)。 基底資料表的 NULL。|  

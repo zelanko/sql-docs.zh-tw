@@ -17,15 +17,15 @@ ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b324857816df774486716978425d1332a695952a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 461b9ea2196fed61587b1a9e20cc21feced258da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708466"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535046"
 ---
 # <a name="types-of-events"></a>事件的類型
-有兩種基本的事件。 「 將事件 」 作業啟動之前呼叫它，通常是名稱中包含 「 將 」 — 比方說， **WillChangeRecordset**或**WillConnect**。 通常已完成事件後，會呼叫的事件其名稱中包含 「 完成 」 — 例如， **RecordChangeComplete**或是**ConnectComplete**。 例外狀況，例如**InfoMessage** — 但相關聯的作業完成後，會發生這些情況。  
+有兩種基本的事件。 「 將事件，「 呼叫作業開始之前，通常，例如名稱-中包含 「 會 」 **WillChangeRecordset**或是**WillConnect**。 事件的事件完成之後通常稱為 「 完成 」 名稱中包含-例如， **RecordChangeComplete**或是**ConnectComplete**。 例外狀況存在-這類**InfoMessage** -但相關聯的作業完成後，會發生這些情況。  
   
 ## <a name="will-events"></a>將事件  
  作業開始提供您機會檢查或修改作業的參數，然後取消作業，或讓其完成之前，就會呼叫事件處理常式。 這些事件處理常式通常會有名稱格式 **將*事件 * * *。  
@@ -36,7 +36,7 @@ ms.locfileid: "47708466"
  將完整的事件通常會使用和成對。  
   
 ## <a name="other-events"></a>其他事件  
- 其他事件處理常式 — 也就是事件名稱不是表單**將 * 事件*** 或 ***事件 * 完成**— 只有在作業完成之後，才會呼叫。 這些事件**中斷連線**， **EndOfRecordset**，並**InfoMessage**。  
+ 其他事件處理常式-也就是事件名稱不是表單**將 * 事件*** 或 ***事件 * 完成**-只有在作業完成之後，才會呼叫。 這些事件**中斷連線**， **EndOfRecordset**，並**InfoMessage**。  
   
 ## <a name="see-also"></a>另請參閱  
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], SQL Server Profiler
@@ -17,12 +16,12 @@ ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d98c99721b5dc1ea970793e48d83bacd3940e9ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ebe8924f46de15a3a34c0f49304c87a904919bdb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115578"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757650"
 ---
 # <a name="modify-trace-templates"></a>修改追蹤範本
   您可以在執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的本機電腦上，修改儲存於檔案中的範本。 您也可以修改從這些檔案中衍生的範本。 當您修改現有的範本時，可在 [追蹤屬性] 對話方塊的 [事件選取範圍] 索引標籤上，以原本設定屬性的相同順序來編輯範本屬性，如事件類別與資料行。 事件類別與資料行可以新增或移除，且篩選也可以變更。 範本遭修改後，即會建立使用者特定範本，而原始系統範本則不受影響。 如需詳細資訊，請參閱 [儲存追蹤及追蹤範本](save-traces-and-trace-templates.md)。  

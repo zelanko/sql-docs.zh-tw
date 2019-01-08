@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.f1
@@ -13,12 +12,12 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2238676493cce8a732055dea853e7368fe817865
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b928b54236929238c404597f4ba1eeeddb427ccc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054358"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790640"
 ---
 # <a name="odbc-source"></a>ODBC 來源
   ODBC 來源會使用資料庫資料表、檢視或 SQL 陳述式，從 ODBC 支援的資料庫中擷取資料。  
@@ -38,9 +37,9 @@ ms.locfileid: "48054358"
 ## <a name="error-handling"></a>錯誤處理  
  ODBC 來源有錯誤輸出。 此元件的錯誤輸出包含下列輸出資料行：  
   
--   **錯誤碼**：對應至目前錯誤的編號。 請參閱 ODBC 支援的資料庫的文件集，以取得錯誤清單。 如需 SSIS 錯誤碼清單，請參閱＜SSIS 錯誤碼和訊息參考＞。  
+-   **錯誤碼**:對應至目前錯誤的編號。 請參閱 ODBC 支援的資料庫的文件集，以取得錯誤清單。 如需 SSIS 錯誤碼清單，請參閱＜SSIS 錯誤碼和訊息參考＞。  
   
--   **錯誤資料行**：造成錯誤 (用於轉換錯誤) 的來源資料行。  
+-   **錯誤資料行**:造成錯誤 （用於轉換錯誤） 的來源資料行。  
   
 -   標準輸出資料行。  
   
@@ -52,9 +51,9 @@ ms.locfileid: "48054358"
 ## <a name="extract-options"></a>擷取選項  
  ODBC 來源以 [批次] 或 [逐列] 模式操作。 所用的模式是由 **FetchMethod** 屬性所決定。 下列清單描述這些模式。  
   
--   **批次**：元件會根據所見的 ODBC 提供者功能，嘗試使用最有效率的提取方法。 對於最新型的 ODBC 提供者，這是 SQLFetchScroll 與陣列繫結搭配使用 (陣列大小是由 **BatchSize** 屬性所決定)。 如果您選取 [批次]，而提供者不支援此方法，ODBC 目的地會自動切換為 [逐列] 模式。  
+-   **批次**:元件會嘗試使用最有效率的提取方法，根據所見的 ODBC 提供者功能。 對於最新型的 ODBC 提供者，這是 SQLFetchScroll 與陣列繫結搭配使用 (陣列大小是由 **BatchSize** 屬性所決定)。 如果您選取 [批次]，而提供者不支援此方法，ODBC 目的地會自動切換為**逐列**模式。  
   
--   **逐列**：元件會使用 SQLFetch，一次擷取一個資料列。  
+-   **逐列**:元件會使用 SQLFetch，一次擷取一個資料列。  
   
  如需有關 **FetchMethod** 屬性的詳細資訊，請參閱＜ [ODBC Source Custom Properties](odbc-source-custom-properties.md)＞。  
   
@@ -71,11 +70,11 @@ ms.locfileid: "48054358"
   
  如需詳細資訊，請參閱下列其中一個主題：  
   
--   [ODBC 來源編輯器&#40;連線管理員頁面&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [ODBC 來源編輯器 &#40;連線管理員頁面&#41;](../odbc-source-editor-connection-manager-page.md)  
   
--   [ODBC 來源編輯器&#40;資料行頁面&#41;](../odbc-source-editor-columns-page.md)  
+-   [ODBC 來源編輯器 &#40;資料行頁面&#41;](../odbc-source-editor-columns-page.md)  
   
--   [ODBC 來源編輯器&#40;錯誤輸出頁面&#41;](../odbc-source-editor-error-output-page.md)  
+-   [ODBC 來源編輯器 &#40;錯誤輸出頁面&#41;](../odbc-source-editor-error-output-page.md)  
   
  **[進階編輯器]** 對話方塊包含可以程式設計方式設定的屬性。  
   
@@ -87,14 +86,14 @@ ms.locfileid: "48054358"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [ODBC 來源編輯器&#40;錯誤輸出頁面&#41;](../odbc-source-editor-error-output-page.md)  
+-   [ODBC 來源編輯器 &#40;錯誤輸出頁面&#41;](../odbc-source-editor-error-output-page.md)  
   
--   [ODBC 來源編輯器&#40;資料行頁面&#41;](../odbc-source-editor-columns-page.md)  
+-   [ODBC 來源編輯器 &#40;資料行頁面&#41;](../odbc-source-editor-columns-page.md)  
   
--   [ODBC 來源編輯器&#40;連線管理員頁面&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [ODBC 來源編輯器 &#40;連線管理員頁面&#41;](../odbc-source-editor-connection-manager-page.md)  
   
 -   [使用 ODBC 來源來擷取資料](odbc-source.md)  
   
--   [ODBC 來源自訂屬性](odbc-source-custom-properties.md)  
+-   [ODBC Source Custom Properties](odbc-source-custom-properties.md)  
   
   

@@ -1,22 +1,21 @@
 ---
-title: 教學課程： 使用 OData 來源 [SSIS] |Microsoft Docs
+title: 教學課程：使用 OData 來源 [SSIS] |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 32d4e2f651fe4a080c1b75c4bd8c00ded7940bae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 693eb9b33c753f1d87b4b5635e47de82ca7e4b59
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154998"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805150"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>教學課程：使用 OData 來源 [SSIS]
   本教學課程將逐步引導您進行從範例 **Northwind** OData 服務 (http://services.odata.org/V3/Northwind/Northwind.svc/) 擷取 **Employees** 集合，然後將該集合載入一般檔案的程序。  
@@ -43,7 +42,7 @@ ms.locfileid: "48154998"
   
 4.  按兩下 **[OData 來源]** 元件，啟動 **[OData 來源編輯器]** 對話方塊。  
   
-5.  按一下 **[新增]** ，加入新的 OData 連接管理員。  
+5.  按一下 [新增...] 以新增 OData 連接管理員。  
   
 6.  輸入 **[服務文件位置]** 的 OData 服務 URL。 這可以是服務文件的 URL，或是特定摘要或實體的 URL。 針對此教學課程中，輸入[ http://services.odata.org/V3/Northwind/Northwind.svc/ ](http://services.odata.org/V3/Northwind/Northwind.svc/)。  
   

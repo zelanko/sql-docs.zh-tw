@@ -21,12 +21,12 @@ ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 74f44195e0c365b46794fdd03ff296a1fa4040dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e857682f5bb03256b129521840f8969e797e1a5f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640476"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535742"
 ---
 # <a name="sysdmhadrinstancenodemap-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47640476"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**ag_resource_id**|**nvarchar(256)**|在 WSFC 叢集中做為資源之可用性群組的唯一識別碼。|  
-|**instance_name**|**nvarchar(256)**|名稱-*伺服器*/*執行個體*— 裝載可用性群組複本的伺服器執行個體。|  
+|**instance_name**|**nvarchar(256)**|名稱-*伺服器*/*執行個體*-裝載可用性群組複本的伺服器執行個體。|  
 |**node_name**|**nvarchar(256)**|WSFC 叢集節點的名稱。|  
   
 ## <a name="permissions"></a>Permissions  

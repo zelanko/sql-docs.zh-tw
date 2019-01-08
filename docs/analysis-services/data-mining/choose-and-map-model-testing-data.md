@@ -1,5 +1,5 @@
 ---
-title: 選擇和對應模型測試資料 |Microsoft 文件
+title: 選擇和對應模型測試資料 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3c731f1a439a817abd133e14815b85a8f6d0077b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2e1b4751d21b9aea4f80561909910d81abbc3756
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015305"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545324"
 ---
 # <a name="choose-and-map-model-testing-data"></a>選擇和對應模型測試資料
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中建立精確度圖表，您必須選擇將用來測試模型的資料，並將資料對應至模型。  
+  若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中建立精確度圖表，您必須選擇將用來測試模型的資料，並將資料對應至模型。  
   
  根據預設，只要您在建立採礦結構時建立了鑑效組資料集， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會使用採礦模型測試資料。 建立鑑效組測試集是測試根據相同採礦結構之模型的最簡單方式，因為資料行名稱和資料類型永遠符合模型，並且您可以合理地確定資料分佈是相似的。 此外，設計工具將自動建立輸入和模型資料行之間的關聯性。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "34015305"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的資料採礦設計師中，按兩下包含您想要建立圖表之模型的採礦結構。  
   
-2.  選取 [採礦精確度圖表] 索引標籤。  
+2.  選取 **[採礦精確度圖表]** 索引標籤。  
   
 3.  在 [採礦精確度圖表] 檢視的 [輸入選擇] 索引標籤中，選取下列其中一個選項：  
   
@@ -70,7 +70,7 @@ ms.locfileid: "34015305"
   
 3.  在 [輸入選擇] 索引標籤的 [選取要用於精確度圖表的資料集] 下，選取 [指定不同的資料集]。  
   
-4.  按一下 [瀏覽] 按鈕 **(…)** 開啟對話方塊，並建立外部資料集的定義。  
+4.  按一下 瀏覽按鈕 **（...）** 開啟對話方塊，並建立外部資料集的定義。  
   
 5.  在 [選取採礦結構] 對話方塊中，選取包含您要使用之模型的採礦結構，然後按一下 [確定]。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "34015305"
   
 4.  在 [選取要用於精確度圖表的資料集] 中，選取 [指定不同的資料集] 選項。  
   
-5.  按一下瀏覽按鈕 **(…)** 開啟對話方塊，並建立外部資料來源的定義。  
+5.  按一下 瀏覽按鈕 **（...）** 開啟對話方塊，並建立外部資料來源的定義。  
   
 6.  在 [指定資料行對應] 對話方塊中，按一下 [選取案例資料表]。  
   
@@ -115,6 +115,6 @@ ms.locfileid: "34015305"
      新的資料行對應會顯示在 [指定資料行對應] 對話方塊中。 您可以選取資料行之間的線，然後按 DELETE 鍵來移除對應。 您可以在 [採礦結構] 資料表中選取資料行，並將它拖曳到 [選取輸入資料表] 資料表中的對應資料行，以建立新的連接。  
   
 ## <a name="see-also"></a>另請參閱  
- [測試和驗證工作及操作方式 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [測試及驗證工作與操作方法 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

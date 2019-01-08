@@ -1,5 +1,5 @@
 ---
-title: 教學課程：運算式簡介 | Microsoft Docs
+title: 教學課程：運算式簡介 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 73bcce5c157ad412fabb677302eeddbd40a8b54e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 096a0678ccb86c232d4eaca792aa143379710fea
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075848"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399331"
 ---
 # <a name="tutorial-introducing-expressions"></a>教學課程：運算式簡介
   運算式可協助您建立強大而靈活的報表。 本教學課程將教您建立和實作使用一般函數和運算子的運算式。 您將使用**運算式**對話方塊，即可撰寫運算式以串連名稱值、 查閱值在不同的資料集中，顯示不同的圖片，根據欄位的值，並依此類推。  
@@ -66,7 +66,7 @@ ms.locfileid: "48075848"
 >  在本教學課程中，查詢會包含資料值，因此不需要外部資料來源。 這樣會使查詢相當冗長。 在商業環境中，查詢不會包含資料。 這僅供教學之用。  
   
 > [!NOTE]  
->  在本教學課程中，精靈的步驟會合併為一個程序。 如需如何瀏覽至報表伺服器、選擇資料來源以及建立資料集的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教學課程中，精靈的步驟會合併為一個程序。 如需如何瀏覽至報表伺服器的逐步指示，選擇資料來源，並建立資料集，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表&#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 #### <a name="to-create-a-new-table-report"></a>若要建立新資料表報表  
   
@@ -124,7 +124,7 @@ ms.locfileid: "48075848"
   
      查詢會指定資料行名稱，其中包括出生日期、名字、姓氏、省份、國家/地區識別碼、性別，以及今年到目前的購買記錄。  
   
-10. 在查詢設計工具工具列上，按一下 **[執行]** \(**!**)。 結果集會顯示 20 個資料列，並且包括下列資料行：FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase 和 LastPurchase。  
+10. 在查詢設計工具工具列上，按一下 **[執行]** \(**!**)。 結果集會顯示 20 個資料列，並包含下列欄位：FirstName、 LastName、 StateProvince、 CountryRegionID、 Gender、 YTDPurchase 和 LastPurchase。  
   
 11. 按 [下一步] 。  
   
@@ -343,7 +343,7 @@ ms.locfileid: "48075848"
   
 #### <a name="to-look-up-values-in-the-countryregion-dataset"></a>若要查閱 CountryRegion 資料集中的值  
   
-1.  按一下 [國家/地區 ID] 資料行標題，並刪除 ID 這兩個字。  
+1.  按一下 **國家 / 地區 ID**資料行標題，並刪除文字：識別碼。  
   
 2.  以滑鼠右鍵按一下 [國家/地區] 資料行的資料格，然後按一下 [運算式]。  
   
@@ -372,7 +372,7 @@ ms.locfileid: "48075848"
 11. 按一下 **[執行]** 預覽報表。  
   
 ##  <a name="Count"></a> 6.計算自上次購買後的日數  
- 新增資料行，然後使用 **Now** 函數或 `ExecutionTime` 內建全域變數，計算某人自上次購買後至今的天數。  
+ 新增資料行，然後使用**現在**函式或`ExecutionTime`內建的全域變數，計算自今天起的天數，某人上次購買後。  
   
 #### <a name="to-add-the-days-ago-column"></a>若要加入 [天前] 資料行  
   
@@ -420,7 +420,7 @@ ms.locfileid: "48075848"
 ##  <a name="Indicator"></a> 7.使用指標顯示銷售比較  
  加入新的資料行，並使用指標顯示某人今年到目前 (YTD) 的購買為高於或低於平均 YTD 購買。 **Round** 函數會移除值的小數。  
   
- 設定指標及其狀態需要進行許多步驟。 您可以先略過「設定指標」程序，再從本教學課程將完成的運算式複製/貼上至 [運算式] 對話方塊中。  
+ 設定指標及其狀態需要進行許多步驟。 如果您想要在 「 設定指標 」 程序中，您可以直接跳並複製/貼上到本教學課程中完成的運算式**運算式** 對話方塊。  
   
 #### <a name="to-add-the--or---avg-sales-column"></a>若要加入平均銷售增減資料行  
   
@@ -522,7 +522,7 @@ ms.locfileid: "48075848"
   
 38. 按一下 **[執行]** 預覽報表。  
   
-##  <a name="GreenBar"></a> 8。製作「綠色橫條」的報表  
+##  <a name="GreenBar"></a> 8。製作 「 綠色橫條 」 報表的報表  
  使用參數指定套用至報表中交替資料列的色彩，使其變成橫條報表。  
   
 #### <a name="to-add-a-parameter"></a>若要加入參數  
@@ -543,7 +543,7 @@ ms.locfileid: "48075848"
   
 7.  按一下 **[加入]**。  
   
-8.  在 [標籤] 方塊中，輸入 **Yellow**。  
+8.  在 **標籤**方塊中，輸入：**黃色**  
   
 9. 在 [值] 方塊中，輸入 **Yellow**。  
   
@@ -601,7 +601,7 @@ ms.locfileid: "48075848"
   
 15. 如果游標不在 `Count(` 的正後方，請將它放至該處。  
   
-16. 刪除左括號，然後輸入 **,“Expressions”)**  
+16. 刪除左括號，然後輸入 **，"Expressions")**  
   
     > [!NOTE]  
     >  “Expressions” 是要在其中計算資料列的資料集名稱。  
@@ -621,7 +621,7 @@ ms.locfileid: "48075848"
   
 22. 如果游標不在 `Parameters!RowColor.Value` 的正後方，請將它放至該處。  
   
-23. 輸入 **, “White”)**  
+23. 輸入 **，"White")**  
   
      完成的運算式為： `=IIf(RunningValue(Fields!FirstName.Value,Count, "Expressions") Mod 2 =0, Parameters!RowColor.Value, "White")`  
   
@@ -690,7 +690,7 @@ ms.locfileid: "48075848"
   
 4.  在 [名稱] 中，將預設名稱取代為**銷售比較摘要**。  
   
-5.  按一下 **[儲存]**。  
+5.  按一下 [儲存] 。  
   
  報表就會儲存至報表伺服器。 您連接之報表伺服器的名稱會顯示在視窗底部的狀態列中。  
   
@@ -702,13 +702,13 @@ ms.locfileid: "48075848"
   
 3.  在 [名稱] 中，將預設名稱取代為**銷售比較摘要**。  
   
-4.  按一下 **[儲存]**。  
+4.  按一下 [儲存] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [運算式 &#40;報表產生器及 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [指標&#40;報表產生器及 SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
- [影像、 文字方塊、 矩形和線條&#40;報表產生器及 SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
+ [影像、文字方塊、矩形和線條 &#40;報表產生器及 SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
  [資料表 &#40;報表產生器及 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-data/report-datasets-ssrs.md)  
   

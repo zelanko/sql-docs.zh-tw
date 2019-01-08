@@ -1,5 +1,5 @@
 ---
-title: 定義命名集 |Microsoft 文件
+title: 定義命名集 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 705c263d425985d23c823eee9cdd550b5a44db1f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 19bdb9c165b5bfa6c8021fe596d9591e68d517ce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018225"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507656"
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>課程 6-2-定義命名集
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "34018225"
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-    現在您已經定義了 Exists 集合運算式的第一個集合，可以再加入第二個集合，亦即含有最多員工之 [轉售商] 維度的成員集合。  
+    既然您已定義的第一個集合 Exists 集合運算式，您已準備好加入包含最多員工的轉售商 維度的成員之第二個集合的集合。  
   
 7.  在 [計算工具] 窗格的 [中繼資料] 索引標籤上，依序展開 [轉售商] 維度的 [員工數目]、[成員] 和 [所有轉售商]。  
   
@@ -124,16 +124,16 @@ ms.locfileid: "34018225"
   
     請注意，只有 [類別目錄] 屬性的 [自行車] 成員和 [自行車] 子類別目錄的成員會繼續留在 Cube 中。 這是因為 [核心產品] 命名集是用來定義 Subcube。 這個 Subcube 會將 Subcube 內 [產品] 維度的 [類別目錄] 屬性的成員限制為 [核心產品] 命名集的那些成員，如下圖所示。  
   
-    ![成員的核心產品命名集](../analysis-services/media/l6-named-set-04.gif "成員在核心產品命名集")  
+    ![成員在核心產品命名集](../analysis-services/media/l6-named-set-04.gif "成員在核心產品命名集")  
   
 7.  在 [中繼資料] 窗格中，展開 [轉售商]，然後將 [大型轉售商] 加入篩選區域。  
   
     請注意，[資料] 窗格中的 [轉售商銷售量] 量值只會顯示自行車大型轉售商的銷售量。 同時也請注意，[篩選] 窗格現在會顯示用於定義這個特定 Subcube 的兩個命名集，如下圖所示。  
   
-    ![設定篩選 窗格包含兩個名為](../analysis-services/media/l6-named-set-05.gif "篩選 窗格包含兩個名為設定")  
+    ![設定篩選 窗格包含兩個具名](../analysis-services/media/l6-named-set-05.gif "設定篩選 窗格包含兩個名為")  
   
 ## <a name="next-lesson"></a>下一課  
-[第 7 課： 定義關鍵效能指標 & #40;Kpi & #41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[第 7 課：定義關鍵效能指標&#40;Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [[新增命名集]](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  

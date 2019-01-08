@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 64a8eeff0447b6a62e7e1f8e21bf48ae3a6b99a3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8bd62cc5fef3ef13dede85c06b28b0501a83de2f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981038"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513912"
 ---
-# <a name="deployment-script-files---partition-and-role-deployment-options"></a>部署指令碼檔-資料分割和角色部署選項
+# <a name="deployment-script-files---partition-and-role-deployment-options"></a>部署指令碼檔 - 資料分割和角色部署選項
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈 」 會讀取的資料分割和角色部署選項，從\<*專案名稱*>.deploymentoptions 檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會在您建立 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案時建立此檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用目前的資料分割和角色部署選項專案的時機\<*專案名稱*> 建立.deploymentoptions 檔案。 如需組態設定的詳細資訊，請參閱 [了解用來建立部署指令碼的輸入檔](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "37981038"
   
 -   保留目的地資料庫中之現有的角色和角色成員，而且不部署新角色。  
   
--   **注意** ：保留現有角色與成員時，與這些角色相關聯的權限會重設為無。 安全性權限包含在它們所保護的物件中，而非與它們相關聯的安全性角色。 如需如何使用 Analysis Service 部署精靈來處理這項行為的詳細資訊，請參閱 Microsoft 知識庫中的＜保留角色與成員＞。  
+-   **注意** ：保留現有角色與成員時，與這些角色相關聯的權限會重設為無。 安全性權限包含在它們所保護的物件中，而非與它們相關聯的安全性角色。 如需如何使用這種行為，使用 Analysis Service 部署精靈的詳細資訊，請參閱 '保留角色與成員 > Microsoft 知識庫中。  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>修改資料分割和角色部署選項  
  您可能要部署[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用不同的資料分割和角色選項所儲存的專案\<*專案名稱*>.deploymentoptions 檔案。 例如，您可能想要保留現有的資料分割、 角色和角色的成員，而不是取代所有現有的資料分割、 角色和成員中所示\<*專案名稱*>.deploymentoptions 檔案。  
@@ -50,11 +50,11 @@ ms.locfileid: "37981038"
   
 -   以互動方式執行 [[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈]，並在 [Partition and Role Deployment Options (資料分割和角色部署選項)] 頁面上，指定資料分割和角色的新部署選項。  
   
-     – 或 –  
+     -或-  
   
 -   在命令提示字元下執行 [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈]，並將精靈設定為以回應檔案模式執行。 (如需回應檔案模式的詳細資訊，請參閱 [執行 Analysis Services 部署精靈](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md))。  
   
-     – 或 –  
+     -或-  
   
 -   開啟\<*專案名稱*>.deploymentoptions 以任何文字編輯器，並手動變更選項。 DeployPartitions，RetainPartitions PartitionDeployment 選項。 DeployRolesAndMembers、 DeployRolesRetainMembers RetainRoles，就會有 RoleDeployment 的選項。
   

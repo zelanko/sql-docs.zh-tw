@@ -1,5 +1,5 @@
 ---
-title: 教學課程：建立鑽研及主報表 (報表產生器) | Microsoft Docs
+title: 教學課程：建立鑽研及主報表 （報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3428c80e86f510b29ffb875bef604293cb1558a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e12227fa9390b733ad28ec02a5b31c13a4204c26
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093818"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512547"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教學課程：建立鑽研及主報表 (報表產生器)
   本教學課程將教導您如何建立兩種報表：鑽研報表與主報表。 這些報表中使用的範例銷售資料是從 Analysis Services Cube 擷取的。 下圖顯示您將建立的報表。  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
   
- 下圖顯示主報表中的欄位值 Games and Toys 如何顯示在鑽研報表的標題中。 鑽研報表中的資料與 Games and Toys 產品類別目錄有關。  
+ 下圖顯示如何的欄位值 Games and Toys 在主報表顯示在鑽研報表的標題。 鑽研報表中的資料與 Games and Toys 產品類別目錄有關。  
   
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48093818"
   
 #### <a name="to-create-a-new-report"></a>建立新的報表  
   
-1.  按一下 **開始**，指向**程式**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**報表產生器**，然後按一下**報表產生器**。  
+1.  按一下 **[開始]**、依序指向 **[程式集]** 和 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **[報表產生器]**，然後按一下 **[報表產生器]**。  
   
      **[使用者入門]** 對話方塊隨即開啟。 如果沒有出現，請在 **[報表產生器]** 按鈕中按一下 **[新增]**。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48093818"
 10. 按一下 **[認證類型]**。  
   
     > [!NOTE]  
-    >  根據如何設定資料來源的權限而定，您可能需要變更預設的驗證選項。 如需詳細資訊，請參閱[安全性 &#40;報表產生器&#41;](report-builder/security-report-builder.md)。  
+    >  根據如何設定資料來源的權限而定，您可能需要變更預設的驗證選項。 如需詳細資訊，請參閱 [安全性 &#40;報表產生器&#41;](report-builder/security-report-builder.md)中建立的行動報表。  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -149,7 +149,7 @@ ms.locfileid: "48093818"
   
 #### <a name="to-create-query-filters"></a>若要建立查詢篩選  
   
-1.  在 **[設計查詢]** 頁面的 [中繼資料] 窗格中，按一下 **(…)** 按鈕。  
+1.  在 [設計查詢] 頁面的 [中繼資料] 窗格中，按一下 **(…)** 按鈕。  
   
 2.  在 [選取 Cube] 對話方塊中，按一下 [Sales]，然後按一下 [確定]。  
   
@@ -377,7 +377,7 @@ ms.locfileid: "48093818"
     Http://<ServerName>/<Sites>/  
     ```  
   
-4.  按一下 **[儲存]**。  
+4.  按一下 [儲存] 。  
   
      **[最近使用的網站和伺服器]** 會列出 SharePoint 網站上的文件庫。  
   
@@ -388,14 +388,14 @@ ms.locfileid: "48093818"
     > [!NOTE]  
     >  您會將主報表儲存至相同的位置。 如果您想要將主報表和鑽研報表儲存到不同的網站或文件庫，必須在主報表中更新 **[移至報表]** 動作的路徑。  
   
-7.  按一下 **[儲存]**。  
+7.  按一下 [儲存] 。  
   
 ##  <a name="MMatrixAndDataset"></a> 1.從資料表或矩陣精靈建立新報表  
  從 **[使用者入門]** 對話方塊中，使用 **[資料表或矩陣精靈]** 建立矩陣報表。  
   
 #### <a name="to-create-a-new-report"></a>建立新的報表  
   
-1.  按一下 **開始**，指向**程式**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**報表產生器**，然後按一下**報表產生器**。  
+1.  按一下 **[開始]**、依序指向 **[程式集]** 和 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **[報表產生器]**，然後按一下 **[報表產生器]**。  
   
 2.  在 **[使用者入門]** 對話方塊中，確認已選取 **[新增報表]** ，然後按一下 **[資料表或矩陣精靈]**。  
   
@@ -443,7 +443,7 @@ ms.locfileid: "48093818"
   
 #### <a name="to-create-query-filters"></a>若要建立查詢篩選  
   
-1.  在 **[設計查詢]** 頁面的 [中繼資料] 窗格中，按一下 Cube 區段中的省略符號 **(...)**。  
+1.  在 [設計查詢] 頁面的 [中繼資料] 窗格中，按一下 Cube 區段中的省略符號 **(...)**。  
   
 2.  在 [選取 Cube] 對話方塊中，按一下 [Sales]，然後按一下 [確定]。  
   
@@ -562,7 +562,7 @@ ms.locfileid: "48093818"
   
 1.  在 **[選擇配置]** 頁面的 **[選項]** 下方，確定已選取 **[顯示小計和總計]** 。  
   
-     精靈的 [預覽] 窗格會顯示含有四個資料列的矩陣。  當您執行報表時，每個資料列都會以下列方式顯示：第一個資料列是資料行群組、第二個資料列包含資料行標題、第三個資料列包含產品類別目錄資料 (`[Sum(Net_ QTY)]` 和 `[Sum(Net_Sales)]`，而第四個資料列包含總計。  
+     精靈的 [預覽] 窗格會顯示含有四個資料列的矩陣。  當您執行報表時，每個資料列都會以下列方式顯示：第一個資料列是資料行群組，第二個資料列都包含資料行標題，第三個資料列都包含產品類別資料 (`[Sum(Net_ QTY)]` 和 `[Sum(Net_Sales)]`)，第四個資料列包含總計。  
   
 2.  按 [下一步] 。  
   
@@ -685,7 +685,7 @@ ms.locfileid: "48093818"
   
 1.  在設計介面上，按一下 **[按一下以加入標題]**。  
   
-2.  類型 **2009 Product Category Sales:Online and Reseller Category:**。  
+2.  型別**2009 Product Category Sales:Online and Reseller Category:**。  
   
 3.  選取您輸入的文字。  
   
@@ -717,7 +717,7 @@ ms.locfileid: "48093818"
     > [!IMPORTANT]  
     >  將主報表儲存到儲存鑽研報表的相同位置。 若要將主報表和鑽研報表儲存到不同的網站或文件庫，請確認主報表中的 **[移至報表]** 動作指向鑽研報表的正確路徑。  
   
-7.  按一下 **[儲存]**。  
+7.  按一下 [儲存] 。  
   
 ##  <a name="MRunReports"></a> 8。執行主報表和鑽研報表  
  執行主報表，然後按一下產品類別目錄資料行中的值以執行鑽研報表。  

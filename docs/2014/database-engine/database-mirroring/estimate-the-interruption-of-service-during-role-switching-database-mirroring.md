@@ -17,12 +17,12 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e474e9f8a933fb00a2d06062668ad3af7f64ccfe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4104fd32688abaf379db30a6ecf604a35c557778
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156468"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528210"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>預估角色切換期間的服務中斷時間 (資料庫鏡像)
   在角色切換期間，資料庫鏡像無法服務的時間量視角色切換類型和角色切換原因而定。  
@@ -45,7 +45,7 @@ ms.locfileid: "48156468"
  容錯移轉時間主要包含：先前的鏡像伺服器向前復原其重做佇列中剩餘之所有記錄檔所需的時間，加上其他很短的時間 (如需鏡像伺服器如何處理記錄檔記錄的詳細資訊，請參閱＜[資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md))。 如需預估容錯移轉時間的詳細資訊，請參閱此主題稍後的「預估容錯移轉重做速率」。  
   
 > [!IMPORTANT]  
->  如果在交易期間建立了索引或資料表之後又變更，而發生容錯移轉，容錯移轉的時間會比平常更久。  例如，在下列一系列作業期間發生容錯移轉，會增加容錯移轉時間：BEGIN TRANSACTION、在資料表上 CREATE INDEX 和 SELECT INTO 資料表。 在這種交易期間，仍有增加容錯移轉時間的可能性，直到以 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 陳述式完成它為止。  
+>  如果在交易期間建立了索引或資料表之後又變更，而發生容錯移轉，容錯移轉的時間會比平常更久。  例如，在下面一系列作業期間的容錯移轉可能會增加容錯移轉時間：BEGIN TRANSACTION，在資料表上的 CREATE INDEX 和 SELECT INTO 資料表。 在這種交易期間，仍有增加容錯移轉時間的可能性，直到以 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 陳述式完成它為止。  
   
 ### <a name="the-redo-queue"></a>重做佇列  
  向前恢復資料庫涉及套用目前在鏡像伺服器上重做佇列中的記錄。 「重做佇列」包含已寫入鏡像伺服器上的磁碟，但尚未在鏡像資料庫上向前復原的記錄檔記錄。  

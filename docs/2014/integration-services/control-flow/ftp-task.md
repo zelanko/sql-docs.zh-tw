@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.f1
@@ -15,12 +14,12 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1ba03c8bcfad515fbe7a651822177ffa349dff25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cce297bd0a894a432cd05ae10c7b4a0689321bbd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079172"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805450"
 ---
 # <a name="ftp-task"></a>FTP 工作
   FTP 工作會下載和上傳資料檔以及管理伺服器上的目錄。 例如，封裝可從遠端伺服器或網際網路位置下載資料檔，此工作可視為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝工作流程的一部分。 您可將 FTP 工作用於下列用途：  
@@ -49,7 +48,7 @@ ms.locfileid: "48079172"
 ## <a name="predefined-ftp-operations"></a>預先定義的 FTP 作業  
  FTP 工作包括一組預先定義的作業。 下表描述這些作業。  
   
-|作業|描述|  
+|運算|描述|  
 |---------------|-----------------|  
 |傳送檔案|從本機電腦將檔案傳送到 FTP 伺服器。|  
 |接收檔案|從 FTP 伺服器將檔案儲存到本機電腦。|  
@@ -76,8 +75,8 @@ ms.locfileid: "48079172"
  如需以程式設計方式設定這些屬性的詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>。  
   
 ## <a name="see-also"></a>另請參閱  
- [FTP 工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)   
- [FTP 工作編輯器&#40;檔案傳輸頁面&#41;](../ftp-task-editor-file-transfer-page.md)   
+ [FTP 工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)   
+ [FTP 工作編輯器 &#40;檔案傳輸頁面&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Integration Services 工作](integration-services-tasks.md)   
  [控制流程](control-flow.md)  
   

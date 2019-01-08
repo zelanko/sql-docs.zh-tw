@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58c86f9eed16b83d9cc63c54f907f50dda1aab4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd6b9c144df14f9480ff825726fc918deb86f6cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702716"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516291"
 ---
 # <a name="sysexternaltables-transact-sql"></a>sys.external_tables & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "47702716"
 |data_source_id|**int**|外部資料來源的物件識別碼。||  
 |file_format_id|**int**|針對 HADOOP 的外部資料來源的外部資料表，這是外部檔案格式的物件識別碼。||  
 |location|**nvarchar(4000)**|透過 HADOOP 的外部資料來源的外部資料表，這是 HDFS 中的外部資料的路徑。||  
-|reject_type|**tinyint**|透過 HADOOP 的外部資料來源的外部資料表，這是查詢外部資料時，會計算已拒絕的資料列的方式。|值-已拒絕的資料列數目。<br /><br /> 百分比 – 已拒絕的資料列百分比。|  
+|reject_type|**tinyint**|透過 HADOOP 的外部資料來源的外部資料表，這是查詢外部資料時，會計算已拒絕的資料列的方式。|值-已拒絕的資料列數目。<br /><br /> 百分比-已拒絕的資料列百分比。|  
 |reject_value|**float**|透過 HADOOP 的外部資料來源的外部資料表：<br /><br /> 針對*reject_type =* 值，這是在查詢失敗之前，先允許的資料列被拒絕的次數。<br /><br /> 針對*reject_type* = percentage，這是在查詢失敗之前，先允許的資料列拒絕的百分比。||  
 |reject_sample_value|**int**|針對*reject_type* = percentage，這是要載入，成功或失敗，然後才計算被拒絕的資料列百分比的資料列數目。|如果 reject_type = VALUE。|  
-|distribution_type|**int**|針對 SHARD_MAP_MANAGER 的外部資料來源的外部資料表，這是基底資料表的資料列的資料分佈。|0 – Sharded<br /><br /> 1 – 複寫<br /><br /> 2 – 循環配置資源|  
+|distribution_type|**int**|針對 SHARD_MAP_MANAGER 的外部資料來源的外部資料表，這是基底資料表的資料列的資料分佈。|0-分區化<br /><br /> 1-複寫<br /><br /> 2-循環配置資源|  
 |distribution_desc|**nvarchar(120)**|針對 SHARD_MAP_MANAGER 的外部資料來源的外部資料表，這是顯示為字串的散發類型。||  
 |sharding_column_id|**int**|針對 SHARD_MAP_MANAGER 的外部資料來源和分區化分佈的外部資料表，這是包含分區化索引鍵值的資料行的資料行識別碼。||  
 |remote_schema_name|**sysname**|針對 SHARD_MAP_MANAGER 的外部資料來源的外部資料表，這是基底資料表 （如果不同於其中定義外部資料表的結構描述） 在遠端資料庫所呈現的所在的結構描述。||  

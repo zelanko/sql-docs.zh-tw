@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 009ac57e854323c1340d600063dd1aee7fda2875
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b05c023e8b0c54f0037af7829421f8f69f2595d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905740"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805000"
 ---
 # <a name="data-profile-viewer"></a>資料設定檔檢視器
   檢視和分析資料設定檔是資料分析程序中的下一個步驟。 您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部執行「資料分析」工作並計算資料設定檔後，檢視這些設定檔。 如需如何設定和執行「資料分析」工作的詳細資訊，請參閱 [資料分析工作的設定](data-profiling-task.md)。  
@@ -61,7 +60,7 @@ ms.locfileid: "48905740"
 > [!IMPORTANT]  
 >  資料設定檔檢視器所提供的向下鑽研功能會傳送即時查詢給原始資料來源。 這些查詢對於伺服器的效能可能會有負面影響。  
 >   
->  如果您向下切入不是最近建立的輸出檔，向下鑽研查詢可能會傳回一組不同的資料列在其計算原始輸出。  
+>  如果您從不是最近建立的輸出檔向下切入，則向下鑽研查詢傳回的資料列集可能與計算原始輸出的資料列集不同。  
   
  如需資料設定檔檢視器之使用者介面的詳細資訊，請參閱 [資料設定檔檢視器 F1 說明](../data-profile-viewer-f1-help.md)。  
   

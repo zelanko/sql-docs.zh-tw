@@ -19,12 +19,12 @@ ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70afd9ea708a82e45ba10e90022224c6ffdc088a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d272b3ea7efa7800c30518aa2ffb7b43bf7fccb7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229504"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514672"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>選擇建立全文檢索索引時的語言
   建立全文檢索索引時，您必須針對索引資料行指定資料行層級語言。 此資料行的全文檢索查詢將會使用指定之語言的 [斷詞工具與詞幹分析器](configure-and-manage-word-breakers-and-stemmers-for-search.md) 。 在建立全文檢索索引並選擇資料行語言時，必須考慮一些事項。 這些考量與文字如何 Token 化，然後如何由全文檢索引擎編製索引有關。  
@@ -59,7 +59,7 @@ ms.locfileid: "48229504"
   
      斷詞工具已經重新設計過，而且經測試顯示，新的斷詞工具會比先前的斷詞工具提供較佳的語意品質。 這會增加重新叫用精確度。  
   
--   如需 vast 的語言清單的涵蓋範圍，斷詞工具包含在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的方塊，而且預設已啟用。  
+-   大部分語言的斷詞工具都已包含在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中而且預設已啟用。  
   
  如需語言的清單[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]包括斷詞工具和字幹分析器，請參閱 < [sys.fulltext_languages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48229504"
  建立全文檢索索引時，您必須針對每個資料行指定有效的語言名稱。 如果某個語言名稱有效，但是 [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) 目錄檢視並未傳回該語言名稱，全文檢索搜尋就會尋求相同語系中最接近的可用語言名稱 (如果有的話)。 否則，全文檢索搜尋會尋求中性斷詞工具。 這種尋求的行為可能會影響重新叫用精確度。 因此，在建立全文檢索索引時，我們強烈建議您針對每個資料行指定有效且可用的語言名稱。  
   
 > [!NOTE]  
->  系統會針對適用於全文檢索索引的所有資料類型 (例如 `char` 或 `nchar`) 使用 LCID。 如果您有的排序次序`char`， `varchar`，或`text`類型資料行設定為與 LCID、 LCID 所識別之語言不同的語言設定仍然會使用在全文檢索索引和查詢這些資料行。  
+>  系統會針對適用於全文檢索索引的所有資料類型 (例如 `char` 或 `nchar`) 使用 LCID。 如果您將 `char`、`varchar` 或 `text` 類型資料行的排序次序設定為與 LCID 所識別之語言不同的語言設定，在全文檢索索引和查詢這些資料行期間，系統仍然會使用 LCID。  
   
 
   
@@ -96,7 +96,7 @@ ms.locfileid: "48229504"
   
 -   純文字內容  
   
-     當您的內容是純文字時，您可以將它轉換成`xml`資料類型，並加入語言標記，以便表示對應至每個特定的文件或文件區段的語言。 不過，若要讓此解決方法有用，您必須在建立全文檢索索引之前，了解所使用的語言。  
+     當您的內容是純文字時，您可以將它轉換成 `xml` 資料類型，並加入語言標記，以便表示對應至每份特定文件或文件區段的語言。 不過，若要讓此解決方法有用，您必須在建立全文檢索索引之前，了解所使用的語言。  
   
 
   
@@ -106,9 +106,9 @@ ms.locfileid: "48229504"
 
   
 ##  <a name="type"></a> 資料行類型對全文檢索搜尋的影響  
- 選擇語言時的另一個考量與呈現資料的方式有關。 資料，不會儲存在`varbinary(max)`資料行中，沒有特殊的篩選會執行。 相反地，文字可以其原始格式傳送，而不會受限於文字分隔元件。  
+ 選擇語言時的另一個考量與呈現資料的方式有關。 對於儲存在 `varbinary(max)` 資料行以外的資料而言，系統不會執行特殊篩選。 相反地，文字可以其原始格式傳送，而不會受限於文字分隔元件。  
   
- 此外，斷詞工具主要設計成處理一般撰寫內容。 所以，如果您的文字上有任何類型的標記 (如 HTML)，則在編製索引和搜尋語言時可能會不夠精確。 對於這種情況您有兩種選擇，一般偏好的方法是將文字資料儲存在 `varbinary(max)` 資料行中，然後指示其文件類型以進行篩選。 如果不使用這個選項，您可以考慮使用中性斷詞工具，而且若可行的話，請將標記資料 (例如 HTML 中的 'br') 加入至非搜尋字清單。  
+ 此外，斷詞工具主要設計成處理一般撰寫內容。 所以，如果您的文字上有任何類型的標記 (如 HTML)，則在編製索引和搜尋語言時可能會不夠精確。 在於的情況下，您有兩個選擇慣用的方法是將文字資料儲存在`varbinary(max)`資料行，然後指示其文件類型，以進行篩選。 如果不使用這個選項，您可以考慮使用中性斷詞工具，而且若可行的話，請將標記資料 (例如 HTML 中的 'br') 加入至非搜尋字清單。  
   
 > [!NOTE]  
 >  當您指定中性語言時，以語言為基礎的字根檢索功能將不會發生作用。  

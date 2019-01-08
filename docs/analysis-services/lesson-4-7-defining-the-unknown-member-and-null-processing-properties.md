@@ -1,5 +1,5 @@
 ---
-title: 定義未知的成員和 Null 處理屬性 |Microsoft 文件
+title: 定義未知的成員和 Null 處理屬性 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e39ac2042304b927d8270da57a88c4452ef79337
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 08e05c68bf69bcb7ca54d2f0920ee041aae3ca99
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019575"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525925"
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>課程 4-7-定義未知的成員和 Null 處理屬性
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "34019575"
   
     此時會將 [DimProductCategory (dbo)] 資料表加入 [包含的物件] 清單。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
 5.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的 [格式] 功能表中，指向 [自動配置]，然後按一下 [圖表]。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "34019575"
   
 9. 在 [屬性] 窗格中，將這個新屬性的名稱變更為**類別目錄**。  
   
-10. 在 [屬性] 視窗的 [NameColumn] 屬性欄位中按一下，然後按一下瀏覽 (**…**) 按鈕，即可開啟 [名稱資料行] 對話方塊。  
+10. 在 [屬性] 視窗中，按一下**NameColumn**屬性欄位，然後按一下 [瀏覽 (**...**) 按鈕，即可開啟**名稱資料行**] 對話方塊。  
   
 11. 選取 [來源資料行] 清單中的 [EnglishProductCategoryName]，然後按一下 [確定]。  
   
@@ -98,11 +98,11 @@ ms.locfileid: "34019575"
   
 13. 在 [屬性] 窗格中，將這個新屬性的名稱變更為**子類別目錄**。  
   
-14. 在 [屬性] 視窗的 [NameColumn] 屬性欄位中按一下，然後按一下瀏覽 (**…**) 按鈕，即可開啟 [名稱資料行] 對話方塊。  
+14. 在 屬性 視窗中，按一下**NameColumn**屬性欄位，然後按一下 瀏覽 **（...）**  按鈕以開啟**名稱資料行** 對話方塊。  
   
 15. 選取 [來源資料行] 清單中的 [EnglishProductSubcategoryName]，然後按一下 [確定]。  
   
-16. 建立稱為 [產品類別目錄] 的新使用者定義階層，其中含有下列層級，由上往下依序為：[類別目錄]、[子類別目錄] 和 [產品名稱]。  
+16. 建立新使用者定義階層稱為**產品類別目錄**含有下列層級，從上往下依序：**類別目錄**， **Subcategory**，以及**產品名稱**。  
   
 17. 指定 [所有產品] 作為 [產品類別目錄] 使用者定義階層之 [AllMemberName] 屬性的值。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "34019575"
     ![顯示組件元件的產品名稱層級](../analysis-services/media/l4-assemblycomponents-1.gif "顯示組件元件的產品名稱層級")  
   
 ## <a name="next-lesson"></a>下一課  
-[第 5 課： 定義維度與量值群組之間的關聯性](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[第 5 課：定義維度和量值群組之間的關聯性](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   
   

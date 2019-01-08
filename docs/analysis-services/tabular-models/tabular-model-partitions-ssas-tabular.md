@@ -1,5 +1,5 @@
 ---
-title: 表格式模型資料分割 |Microsoft Docs
+title: Analysis Services 表格式模型資料分割 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ca9ea54ace50740acf9f0be0ec923b86d1667683
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 5e8fbbfe1aaf7c97a5739768413cdc04644be6a6
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146283"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072645"
 ---
 # <a name="tabular-model-partitions"></a>表格式模型資料分割 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "50146283"
 ##  <a name="bkmk_benefits"></a> 優點  
  有效的模型設計能善加利用分割區，以避免不必要的處理及 Analysis Services 伺服器上之後續處理器的負載，同時，還可確保資料的處理和重新整理頻率能反映資料來源的最新資料。  
   
- 例如，表格式模型可能會有「銷售」資料表，其中包括目前 2011 會計年度的銷售資料與之前會計年度的每份銷售資料。 模型的「銷售」資料表具有下列三個資料分割：  
+ 例如，表格式模型可能會有「銷售」資料表，其中包括目前 2011 會計年度的銷售資料與之前會計年度的每份銷售資料。 模型的 Sales 資料表具有下列三個資料分割：  
   
 |資料分割|來源資料|  
 |---------------|---------------|  
@@ -47,9 +47,9 @@ ms.locfileid: "50146283"
   
  而 Sales2010-2001 資料分割不需要每晚處理；不過，因為之前十個會計年度的銷售資料仍可能會因為產品退貨或其他調整而偶爾變更，所以也必須按時處理，因此 Sales2010-2001 資料分割中的資料會每月處理。 在 SalesOld 資料分割中的資料永遠不會變更，因此只會每年處理一次。  
   
- 等到進入 2012 會計年度時，新的 Sales2012 資料分割即會加入模式的「銷售」資料表。 之後，您即可將 Sales2011 資料分割和 Sales2010-2001 資料分割合併，並重新命名為 Sales2011-2002。 2001 會計年度的資料即會從新的 Sales2011-2002 資料分割中刪除，並移至 SalesOld 資料分割中。 如此一來，所有資料分割都已經過處理以反映變更。  
+ 當進入 2012年會計年度，新的 Sales2012 資料分割會加入模式的 Sales 資料表中。 之後，您即可將 Sales2011 資料分割和 Sales2010-2001 資料分割合併，並重新命名為 Sales2011-2002。 2001 會計年度的資料即會從新的 Sales2011-2002 資料分割中刪除，並移至 SalesOld 資料分割中。 如此一來，所有資料分割都已經過處理以反映變更。  
   
- 您為組織表格式模型所實作的資料分割策略，主要取決於您的特定模型資料處理需求及可用的資源。  
+ 實作您的組織的表格式模型的資料分割策略的方式將主要是取決於您的特定模型的資料處理需求和可用的資源。  
   
 ##  <a name="bkmk_permissions"></a> 權限  
  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中建立、管理及處理資料分割，您必須具備在安全性角色中定義的適當 Analysis Services 權限。 每個安全性角色都具有下列其中一個權限：  
@@ -74,7 +74,7 @@ Analysis Services 包括具有兩個或多個分割區之資料表的平行處�
 ##  <a name="bkmk_process_partitions"></a> 處理資料分割  
  您可使用 **的** [資料分割] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 對話方塊或指令碼，讓資料分割可以不受其他資料分割的影響，單獨處理 (重新整理)。 處理的選項如下：  
   
-|[模式]|描述|  
+|模式|描述|  
 |----------|-----------------|  
 |處理預設|偵測資料分割物件的處理狀態，並且執行必要的處理，以便將尚未處理或部分處理的資料分割物件傳遞為完整處理的狀態。 載入空白資料表和資料分割的資料；建立或重新建立階層、導出資料行及關聯性。|  
 |完整處理|處理資料分割物件及其包含的所有物件。 對已處理過的物件執行完整處理時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會先卸除該物件中的所有資料，然後再處理該物件。 當物件已進行過任何結構性變更時，就需要這種處理。|  

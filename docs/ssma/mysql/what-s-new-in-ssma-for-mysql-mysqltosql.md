@@ -10,12 +10,12 @@ ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d5b17e7b054552c96c6fb3ff861c22b4e87e394f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b927d9116424f1b471dc675189548e3c6a459569
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674826"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531763"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 的新功能 (MySqlToSql)
 本文章列出 SSMA for MySQL 變更每個版本中。 
@@ -189,7 +189,7 @@ SSMA for Access v7.1 版本包含下列變更：
   
 4.  **物件轉換成的改進：**  
   
-    -   轉換 MySQL Metabase 物件 – 程序、 函數、 檢視、 觸發程序和陳述式。  
+    -   轉換 MySQL Metabase 物件-程序、 函數、 檢視、 觸發程序和陳述式。  
     -   在資料表中的空間資料類型的有限的支援。  
     -   若要將 MySQL 函式轉換成 SQL Server 預存程序的選項  
     -   若要套用 SQL 模式和字元集對應物件轉換期間的選項  

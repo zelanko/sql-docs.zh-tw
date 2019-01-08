@@ -1,5 +1,5 @@
 ---
-title: 建立或自訂資料摘要的庫 (Power Pivot for SharePoint) |Microsoft 文件
+title: 建立或自訂資料摘要的庫 (Power Pivot for SharePoint) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71c051d64a40f38a6514301ca3353e7627c67aaf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7586527bcd2f79b6a9a54725fcbd376bd2720096
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021247"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519102"
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>建立或自訂資料摘要庫 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34021247"
   
 -   在中央位置共用及管理資料服務文件。  
   
--   以視覺化方式識別資料服務文件圖示，以便您可以輕鬆地區別服務文件儲存在相同的文件庫中的其他文件： ![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
+-   用圖示以視覺方式識別資料服務文件，讓您很容易就能區別服務文件與儲存於相同文件庫中的其他文件：![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  資料摘要庫一直都是包含資料服務文件 (.atomsvc) 檔案，而從來都不包含資料摘要本身。 資料服務文件與包含靜態 XML 資料的資料摘要不同，它會指定 URL 給接到要求時會產生摘要的服務或應用程式，為可重複的匯入作業提供可重複使用的連接資訊。  
   
@@ -48,13 +48,13 @@ ms.locfileid: "34021247"
   
 1.  按一下頁面左上角的 [網站動作]。  
   
-2.  按一下 [更多選項]。  
+2.  按一下 **更多選項**...  
   
 3.  按一下文件庫之下的 [資料摘要庫]。  
   
 4.  輸入名稱、描述、啟動及版本喜好設定。 加入描述性資訊，以協助使用者將這個文件庫識別為資料服務文件的儲存位置。  
   
-5.  按一下 **[建立]**。  
+5.  按一下 [建立] 。  
   
  資料摘要庫的連結會出現在目前網站的導覽 [快速啟動] 窗格中。  
   
@@ -81,9 +81,9 @@ ms.locfileid: "34021247"
   
 6.  在 [內容類型] 的 [是否允許內容類型的管理?] 區段中按一下 **[是]**。  
   
-7.  按一下 **[確定]**。  
+7.  按一下 [確定] 。  
   
-#### <a name="step-2-add-the-data-service-document-content-type"></a>步驟 2：加入資料服務文件內容類型  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>步驟 2：加入資料服務文件的內容類型  
   
 1.  在 [內容類型] 區段中，按一下 **[從現有的網站內容類型新增]**。 如果您看不到此頁面，請回到網站中，按一下文件庫工具中的 **[文件庫]** ，然後按一下 **[文件庫設定]**。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "34021247"
   
 4.  在 [可用的網站內容類型] 中，按一下 [資料服務文件]，然後按一下 [加入]，將所選取的內容類型移到 [要新增的內容類型] 清單中。  
   
-5.  按一下 **[確定]**。  
+5.  按一下 [確定] 。  
   
 #### <a name="step-3-verify-data-service-document-configuration"></a>步驟 3：確認資料服務文件設定  
   
@@ -107,7 +107,7 @@ ms.locfileid: "34021247"
   
 ## <a name="see-also"></a>另請參閱  
  [使用資料摘要 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)   
- [刪除 Power Pivot 資料摘要的庫](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
+ [刪除 Power Pivot 資料摘要庫](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
  [管理中心的 PowerPivot 伺服器管理和組態](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Power Pivot 資料摘要](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   

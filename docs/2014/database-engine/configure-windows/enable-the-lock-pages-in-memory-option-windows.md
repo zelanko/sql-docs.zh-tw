@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Lock Pages in Memory option
@@ -13,12 +12,12 @@ ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e331169f7477bfcb4a5ae926290664da50897b38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f6e938e3212e519ab51be1faf3f18e28957ef3e
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184958"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640660"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>啟用鎖定記憶體分頁選項 (Windows)
   此 Windows 原則決定哪些帳戶可以使用處理序將資料保留在實體記憶體中，以防止系統將資料傳送到磁碟上的虛擬記憶體。  
@@ -42,7 +41,7 @@ ms.locfileid: "48184958"
   
 5.  在窗格中按兩下 [鎖定記憶體中的分頁]。  
   
-6.  在 [本機安全性設定 – 鎖定記憶體中的分頁] 對話方塊中，按一下 [新增使用者或群組]。  
+6.  在 [本機安全性設定 - 鎖定記憶體中的分頁] 對話方塊中，按一下 [新增使用者或群組]。  
   
 7.  在 [選取使用者、服務帳戶或群組] 對話方塊中，加入具有執行 sqlservr.exe 權限的帳戶。  
   

@@ -20,16 +20,16 @@ ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a0815a5d0597fabb6b4f5e942d2bbb92b7ae57e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bac7f88dcbd9895cfd0d07a5993ab9e38a4608d0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727532"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214729"
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers 函式
 **合規性**  
- 版本導入： ODBC 2.0 標準相容性： ODBC  
+ 導入的版本：ODBC 2.0 標準合規性：ODBC  
   
  **摘要**  
  **SQLDrivers**列出驅動程式的描述以及驅動程式屬性的關鍵字。 此函數會實作僅由驅動程式管理員。  

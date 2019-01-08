@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], DATEADD
@@ -15,12 +14,12 @@ ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8f49e6ebab115dd4d0363fd19ae477902389bd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c202f5d990d707de4aa4a3077d055e7cd72e7bac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140588"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781180"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (SSIS 運算式)
   在日期的指定之日期部分加上代表日期或時間間隔的數字之後，傳回新的 DT_DBTIMESTAMP 值。 number 參數必須評估為整數，date 參數必須評估為有效的日期。  
@@ -97,6 +96,6 @@ DATEADD("yyyy", 2, (DT_DBTIMESTAMP)"8/6/2003")
  [DAY &#40;SSIS 運算式&#41;](day-ssis-expression.md)   
  [MONTH &#40;SSIS 運算式&#41;](month-ssis-expression.md)   
  [YEAR &#40;SSIS 運算式&#41;](year-ssis-expression.md)   
- [函式&#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
+ [函數 &#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
   
   

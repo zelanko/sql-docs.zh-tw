@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 34055a2f-7d0f-4e13-a62e-7ee5b6c23b86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ee328fa48a7119a0728588b8165be32bf1db2c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aac3a20511012e0a058fff6988c793c4f51d594d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174758"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809360"
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare 事件類別
   **CursorUnprepare** 事件類別提供應用程式開發介面 (API) 資料指標中所發生之資料指標取消準備 (Cursor Unprepare) 事件的相關資訊。 當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 捨棄執行計畫時，便會發生資料指標取消準備事件。  

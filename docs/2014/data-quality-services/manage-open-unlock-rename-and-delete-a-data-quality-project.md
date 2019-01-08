@@ -17,12 +17,12 @@ ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d08b2de75796b602c1f275c456d463c44a894fe7
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 53d89072b28527a21c71373b905455426d4c664c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033155"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535439"
 ---
 # <a name="manage-open-unlock-rename-and-delete-a-data-quality-project"></a>管理 (開啟、解除鎖定、重新命名和刪除) 資料品質專案
   此主題描述如何使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 管理資料品質專案，例如開啟、解除鎖定、重新命名和刪除資料品質專案。  
@@ -59,9 +59,9 @@ ms.locfileid: "51033155"
   
 4.  隨即以上次活動關閉時的相同狀態來開啟資料品質專案。 資料品質專案具有以下狀態：  
   
-    -   如果是 **[清理]** 活動，資料品質專案可以擁有以下狀態： **[清理 - 對應]**、 **[清理 - 清理]**、 **[清理 - 管理和檢視結果]** 和 **[清理 - 匯出]**。  
+    -   針對**清理**活動，資料品質專案可以擁有以下狀態：**清理-對應**，**清理-清理**，**清理-管理和檢視結果**，和**清理-匯出**。  
   
-    -   如果是 **[比對]** 活動，資料品質專案可以擁有以下狀態： **[比對 - 對應]**、 **[比對 - 比對]**、 **[比對 - 生存]** 和 **[比對 - 匯出]**。  
+    -   針對**比對**活動，資料品質專案可以擁有以下狀態：**比對-對應**，**比對-比對**，**比對-生存**，和**比對-匯出**。  
   
 ##  <a name="Unlock"></a> 解除鎖定資料品質專案  
  當您建立資料品質專案時，它處於已鎖定狀態，以防止其他使用者使用或修改。 如果您希望其他使用者使用您的資料品質專案，在您完成工作之後必須解除鎖定資料品質專案。 鎖定的專案會顯示鎖定符號。  
@@ -90,6 +90,6 @@ ms.locfileid: "51033155"
   
 3.  在 **[開啟專案]** 畫面中，以滑鼠右鍵按一下您所建立且解除鎖定的資料品質專案，然後按一下快速鍵功能表中的 **[刪除]** 。  
   
-4.  隨即出現確認訊息。 按一下 **[是]**。  
+4.  隨即出現確認訊息。 按一下 [ **是**]。  
   
   

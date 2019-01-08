@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysarticleupdates_TSQL
@@ -19,12 +18,12 @@ ms.assetid: 11a53bcd-a215-4d0b-9db8-233981d3ef5d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f6a6617adf3ef8aca68b0876d62eaeda5d953b3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70827c6dcf420c4e4aa21aa8085e33b20fa72760
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665966"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796380"
 ---
 # <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

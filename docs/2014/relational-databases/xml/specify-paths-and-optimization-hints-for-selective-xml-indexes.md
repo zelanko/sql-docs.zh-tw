@@ -10,12 +10,12 @@ ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73cfcc602ee7a7ef273da39126dbd4da596b6594
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8d5493c63b48c627dbc2cb192d8e10f8bfc4a43
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133518"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533993"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>指定選擇性 XML 索引的路徑和最佳化提示
   本主題描述如何指定建立或修改選擇性 XML 索引時，要索引的節點路徑以及索引的最佳化提示。  
@@ -29,7 +29,7 @@ ms.locfileid: "48133518"
  如需選擇性 XML 索引的詳細資訊，請參閱 [選擇性 XML 索引 &#40;SXI&#41;](../xml/selective-xml-indexes-sxi.md)。  
   
 ##  <a name="untyped"></a> 了解不具類型之 XML 中的 XQuery 和 SQL Server 類型  
- 選擇性 XML 索引支援兩種類型的系統：XQuery 類型和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型。 索引路徑可用來比對 XQuery 運算式，或是比對 XML 資料類型之 value() 方法的傳回類型。  
+ 選擇性 XML 索引支援兩種類型系統：XQuery 類型和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型別。 索引路徑可用來比對 XQuery 運算式，或是比對 XML 資料類型之 value() 方法的傳回類型。  
   
 -   如果要索引的路徑未加上註解，或是使用 XQUERY 關鍵字註解，則路徑會比對 XQuery 運算式。 XQUERY 註解的節點路徑有兩種變化：  
   
@@ -101,8 +101,8 @@ mypath= '/a/b' as XQUERY 'node()',
 pathX = '/a/b/c' as XQUERY 'xs:double' SINGLETON,  
 pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON  
 )  
--- mypath – Only the node value is needed; storage is saved.  
--- pathX – Performance is improved; secondary indexes are possible.  
+-- mypath - Only the node value is needed; storage is saved.  
+-- pathX - Performance is improved; secondary indexes are possible.  
 -- pathY - Performance is improved; secondary indexes are possible; storage is saved.  
 ```  
   
@@ -215,7 +215,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 ### <a name="choosing-the-nodes-to-index"></a>選擇要索引的節點  
  您可以利用下列兩種簡單的原則，識別要加入至選擇性 XML 索引的正確節點子集。  
   
-1.  **原則 1**：若要評估特定 XQuery 運算式，請為您需要檢查的所有節點編製索引。  
+1.  **原則 1**:若要評估特定的 XQuery 運算式，編製索引，您需要檢查所有節點。  
   
     -   索引在 XQuery 運算式中存在或使用其值的所有節點。  
   
@@ -234,7 +234,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
     -   節點 `b`，因為述詞會在 XQuery 運算式的節點`b` 上套用。  
   
-2.  **原則 2**：為了達到最佳效能，請為評估指定 XQuery 運算式所需的所有節點編製索引。 如果您只索引部分節點，則選擇性 XML 索引可改善僅包括索引節點的子運算式評估。  
+2.  **原則 2**:為了達到最佳效能，請為評估特定的 XQuery 運算式所需的所有節點編製都索引。 如果您只索引部分節點，則選擇性 XML 索引可改善僅包括索引節點的子運算式評估。  
   
  若要改善上面所示 SELECT 陳述式的效能，您可以建立下列選擇性 XML 索引：  
   
@@ -378,7 +378,7 @@ WHERE T.xmldata.exist('
   
  您可以使用 node() 最佳化指定評估一般查詢時不需要其值的節點。 這個提示可在一般查詢只需評估節點是否存在時，減少儲存需求 (根據預設，選擇性 XML 索引會儲存所有已升級節點的值，但是不包括複雜的節點類型)。  
   
- 請設想下列範例：  
+ 參考下列範例：  
   
 ```tsql  
 SELECT T.record FROM myXMLTable T  
@@ -392,7 +392,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  如果查詢需要已利用 node() 提示索引之節點的值，則無法使用選擇性 XML 索引。  
   
 ### <a name="singleton-optimization-hint"></a>SINGLETON 最佳化提示  
- 適用於：XQuery 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型  
+ 適用於：XQuery 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型  
   
  SINGLETON 最佳化提示會指定節點的基數。 此提示可改善查詢效能，因為事先就已知道節點最多只會在其父系或上階內出現一次。  
   

@@ -1,5 +1,5 @@
 ---
-title: 處理多維度模型 (Analysis Services) |Microsoft 文件
+title: 處理 Analysis Services 多維度模型 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a09e1c4118576535371e16aa5e1a39a169b406fe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a6116019898e61cc414a14a05273a3f2839267a0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024205"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072485"
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>處理多維度模型 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -69,6 +69,6 @@ ms.locfileid: "34024205"
   
 ## <a name="see-also"></a>另請參閱  
  [邏輯架構 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [資料庫物件 & #40;Analysis Services-多維度資料 & #41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [資料庫物件 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

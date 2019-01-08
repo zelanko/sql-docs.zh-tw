@@ -15,12 +15,12 @@ ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0226a655ff1adc7269e0ee66996e7680f659826e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8227fe1c7cfe63772ff092d9cd30b6ea8b07271a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060841"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545635"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>訊息佇列工作編輯器 (接收頁面)
   使用 [訊息佇列工作編輯器] 對話方塊的 [接收] 頁面，即可設定訊息佇列工作，以接收 [!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ) 訊息。  
@@ -40,7 +40,7 @@ ms.locfileid: "48060841"
  **MessageType**  
  選取訊息類型。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**資料檔訊息**|訊息儲存在檔案中。 選取此值會顯示動態選項 **[DataFileMessage]**。|  
 |**變數訊息**|訊息儲存在變數中。 選取此值會顯示動態選項 **[VariableMessage]**。|  
@@ -51,7 +51,7 @@ ms.locfileid: "48060841"
   
 ### <a name="messagetype--data-file-message"></a>MessageType = 資料檔訊息  
  **SaveFileAs**  
- 輸入要使用的檔案路徑，或按一下省略符號按鈕 **(…)** ，然後尋找檔案。  
+ 鍵入要使用的檔案路徑，或按一下省略符號按鈕 **(...)**，然後尋找檔案。  
   
  **Overwrite**  
  指出儲存資料檔訊息的內容時，是否要覆寫現有檔案中的資料。 預設為 `False`。  
@@ -59,7 +59,7 @@ ms.locfileid: "48060841"
  **篩選**  
  指定是否要將篩選套用至訊息。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**沒有篩選**|工作不會篩選訊息。 選取此值會顯示動態選項 **IdentifierReadOnly**。|  
 |**來自封裝**|訊息只接收來自指定之封裝的訊息。 選取此值會顯示動態選項 **識別碼**＞。|  
@@ -72,15 +72,15 @@ ms.locfileid: "48060841"
   
 #### <a name="filter--from-package"></a>篩選 = 來自封裝  
  **識別碼**  
- 如果您選擇套用篩選，請輸入可以接收訊息之來源封裝的唯一識別碼，或者按一下省略符號按鈕 **(…)** ，然後指定封裝。  
+ 如果您選擇套用篩選，請鍵入訊息接收來源套件的唯一識別碼，或按一下省略符號按鈕 **(...)**，然後指定套件。  
   
- **相關主題：**[選取封裝](control-flow/select-a-package.md)  
+ **相關的主題：**[選取套件](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--variable-message"></a>MessageType = 變數訊息  
  **篩選**  
  指定是否要將篩選套用至訊息。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**沒有篩選**|工作不會篩選訊息。 選取此值會顯示動態選項 **IdentifierReadOnly**。|  
 |**來自封裝**|訊息只接收來自指定之封裝的訊息。 選取此值會顯示動態選項 **識別碼**＞。|  
@@ -88,7 +88,7 @@ ms.locfileid: "48060841"
  **變數**  
  鍵入變數名稱，或按一下 [\<新增變數…>]，然後設定新的變數。  
   
- **相關主題：**[加入變數](../../2014/integration-services/add-variable.md)  
+ **相關的主題：**[新增變數](../../2014/integration-services/add-variable.md)  
   
 ### <a name="filter-dynamic-options"></a>篩選動態選項  
   
@@ -98,15 +98,15 @@ ms.locfileid: "48060841"
   
 #### <a name="filter--from-package"></a>篩選 = 來自封裝  
  **識別碼**  
- 如果您選擇套用篩選，請輸入可以接收訊息之來源封裝的唯一識別碼，或者按一下省略符號按鈕 **(…)** ，然後指定封裝。  
+ 如果您選擇套用篩選，請鍵入訊息接收來源套件的唯一識別碼，或按一下省略符號按鈕 **(...)**，然後指定套件。  
   
- **相關主題：**[選取封裝](control-flow/select-a-package.md)  
+ **相關的主題：**[選取套件](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--string-message"></a>MessageType = 字串訊息  
  **比較**  
  指定是否要將篩選套用至訊息。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**無**|不會比較訊息。|  
 |**完全相符**|訊息必須與 **CompareString** 選項中的字串完全相符。|  
@@ -120,7 +120,7 @@ ms.locfileid: "48060841"
  **比較**  
  指定是否要將篩選套用至訊息。 這個屬性具有下表中所列的選項。  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**無**|不會比較訊息。|  
 |**完全相符**|訊息必須與 **CompareString** 選項中的字串完全相符。|  
@@ -131,15 +131,15 @@ ms.locfileid: "48060841"
  除非 [比較] 選項設定為 [無]，否則請提供訊息要比較的字串。  
   
  **變數**  
- 鍵入要保存已接收之訊息的變數名稱，或按一下 [\<新增變數…>]，然後設定新的變數。  
+ 鍵入要保存已接收訊息的變數名稱，或按一下 [\<新增變數…>]，然後設定新的變數。  
   
- **相關主題：**[加入變數](../../2014/integration-services/add-variable.md)  
+ **相關的主題：**[新增變數](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [訊息佇列工作編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
- [訊息佇列工作編輯器&#40;傳送頁面&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
+ [訊息佇列工作編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [訊息佇列工作編輯器 &#40;傳送頁面&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
  [運算式頁面](expressions/expressions-page.md)   
- [訊息佇列工作](control-flow/message-queue-task.md)  
+ [Message Queue Task](control-flow/message-queue-task.md)  
   
   

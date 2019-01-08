@@ -10,12 +10,12 @@ ms.assetid: ab6505ad-3090-453b-bb01-58435e7fa7c0
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9f53d3878ec6f5eb9c0996d7162fed792bf4930
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9c0913ab07b006b845af081be0722da89f2ecd23
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033365"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515807"
 ---
 # <a name="end-the-domain-management-activity"></a>結束定義域管理活動
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中完成、關閉或取消定義域管理活動。 定義域管理不是由精靈執行，所以可以從定義域管理活動的任何頁面使用底下所述的控制項。  
@@ -24,11 +24,11 @@ ms.locfileid: "51033365"
  **[完成]**  
  按一下以完成定義域管理。 隨即顯示快顯視窗，讓您執行下列動作：  
   
--   **是 - 發行知識庫並結束**：將會發行知識庫，供目前使用者或其他使用者使用。 知識庫不會鎖定，知識庫狀態 (在知識庫資料表中) 將會設為空白，而且定義域管理和知識探索活動可供使用。 您會返回 [開啟知識庫] 畫面。  
+-   **是-發行知識庫並結束**:知識庫將會發行給目前的使用者或其他人使用。 知識庫不會鎖定，知識庫狀態 (在知識庫資料表中) 將會設為空白，而且定義域管理和知識探索活動可供使用。 您會返回 [開啟知識庫] 畫面。  
   
--   **否 - 儲存知識庫工作並結束**：將會儲存您的工作，知識庫會保持鎖定，而且知識庫狀態將會設為 [工作中]。 定義域管理和知識探索活動都可供使用。 您會返回首頁。  
+-   **否-儲存知識庫並結束的工作**:將會儲存您的工作，知識庫會保持鎖定，而且的知識庫狀態將會設定為在工作中。 定義域管理和知識探索活動都可供使用。 您會返回首頁。  
   
--   **取消 - 留在目前畫面**：快顯視窗將會關閉，而且您會返回 [定義域管理] 畫面。  
+-   **取消-留在目前畫面**:將會關閉快顯視窗，您將返回 [定義域管理] 畫面。  
   
  **取消**  
  按一下以結束 [定義域管理] 活動，不儲存工作並返回 DQS 首頁。  

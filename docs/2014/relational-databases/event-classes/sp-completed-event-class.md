@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1335fdd99afb81be5f67cda57fefc3241a032f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7bcc8cdc62616dd26eb714b78ad07296a794b55f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213610"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822602"
 ---
 # <a name="spcompleted-event-class"></a>SP:Completed 事件類別
   SP:Completed 事件類別指出預存程序已完成執行。  
@@ -48,7 +47,7 @@ ms.locfileid: "48213610"
 |NTUserName|`nvarchar`|Windows 使用者名稱。|6|是|  
 |ObjectID|`int`|系統指派的預存程序識別碼。|22|是|  
 |ObjectName|`nvarchar`|正在參考之物件的名稱。|34|是|  
-|ObjectType|`int`|已呼叫的預存程序類型。 這個值會對應到 sys.objects 目錄檢視中的類型資料行。 如需各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
+|ObjectType|`int`|已呼叫的預存程序類型。 這個值會對應到 sys.objects 目錄檢視中的類型資料行。 針對各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
 |RequestID|`int`|包含陳述式之要求的識別碼。|49|是|  
 |RowCounts|`bigint`|在此預存程序中所有陳述式的資料列數目。|48|是|  
 |ServerName|`nvarchar`|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  

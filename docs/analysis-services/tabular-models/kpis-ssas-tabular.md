@@ -1,5 +1,5 @@
 ---
-title: Kpi |Microsoft Docs
+title: Analysis Services 表格式模型中的 Kpi |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8c718c3f8501a56b9ba02062e9457ca0cd67ad56
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 2f6714d61ce53b251a6511aaf78c803213e19860
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906428"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072315"
 ---
 # <a name="kpis"></a>KPI
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "48906428"
 ##  <a name="bkmk_example"></a> 範例  
  任職於 Adventure Works 的銷售經理想要建立樞紐分析表，用來快速顯示銷售員工是否達成給定期間 (年份) 的銷售配額。 對於每個銷售員工，她要樞紐分析表顯示實際銷售金額 (美元)、銷售配額量 (美元)，以及顯示每個銷售員工狀態是低於、等於或高於其銷售配額的簡單圖形。 她希望能依年份配量這些資料。  
   
- 為了達成目的，銷售經理請組織的 BI 方案開發人員協助將銷售 KPI 加入至 AdventureWorks 表格式模型。 銷售經理接著將會使用 Excel 連接到 Adventure Works 表格式模型，做為資料來源，並建立樞紐分析表的欄位 （量值和 KPI） 和交叉分析篩選器來分析銷售人員達成其配額使用。  
+ 若要這樣做，銷售經理請組織的 BI 方案開發人員，將銷售 KPI 加入至 AdventureWorks 表格式模型的協助。 銷售經理接著將會使用 Excel 連接到 Adventure Works 表格式模型，做為資料來源，並建立樞紐分析表的欄位 （量值和 KPI） 和交叉分析篩選器來分析銷售人員達成其配額使用。  
   
  在模型中，FactResellerSales 資料表的 SalesAmount 資料行上建立了量值，提供每個銷售員工的實際銷售金額 (美元)。 此量值會定義 KPI 的基底值。  
   
@@ -60,7 +60,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  現在已建立量值做為 KPI 的基底值和目標值，Sales 量值就會延伸至新的銷售 KPI。 在銷售 KPI 中，目標 SalesAmountQuota 量值是定義為目標值。 狀態臨界值是定義為範圍百分比，其目標為 100%，表示 Sales 量值所定義的實際銷售符合目標 SalesAmoutnQuota 量值所定義的配額量。 高低百分比定義於狀態列，而且選取圖形類型。  
   
- 銷售經理現在可以將 KPI 的基底值、目標值和狀態加入至 Values 欄位，藉以建立樞紐分析表。 Employees 資料行會加入至 RowLabel 欄位，而 CalendarYear 資料行則會加入為交叉分析篩選器。  
+ 銷售經理現在可以建立樞紐分析表加入 [值] 欄位中的 KPI 的基底值、 目標值和狀態。 Employees 資料行會加入至 RowLabel 欄位，而 CalendarYear 資料行則會加入為交叉分析篩選器。  
   
  銷售經理現在可以依年份來配量每個銷售員工的實際銷售金額、銷售配額量和狀態。 她可以分析數年來銷售趨勢，決定是否需要調整銷售員工的銷售配額。  
   

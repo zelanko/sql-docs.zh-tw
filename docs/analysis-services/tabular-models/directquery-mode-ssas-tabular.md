@@ -1,5 +1,5 @@
 ---
-title: DirectQuery 模式 |Microsoft Docs
+title: Analysis Services 中的 DirectQuery 模式 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 14c5f32981b6109c0159018ab9c1ebf09ae2f1fa
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a51b38dacf5a1ebaf67a19bf8b3761800425a347
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982480"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072465"
 ---
 # <a name="directquery-mode"></a>DirectQuery 模式
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,11 +45,11 @@ DirectQuery 模式中的表格式模型具有一些限制。 在切換模式之�
 |||  
 |-|-|  
 |**功能區**|**限制**|  
-|**資料來源**|DirectQuery 模型只能使用下列類型之單一關聯式資料庫的資料：SQL Server、Azure SQL Database、Oracle 和 Teradata。  如需版本和提供者資訊，請參閱本文後面 DirectQuery 所支援的資料來源。| 
+|**資料來源**|DirectQuery 模型只能使用下列類型之單一關聯式資料庫的資料：SQL Server、 Azure SQL Database、 Oracle 和 Teradata。  如需版本和提供者資訊，請參閱本文後面 DirectQuery 所支援的資料來源。| 
 |**SQL 預存程序**|針對 DirectQuery 模型，使用 [資料匯入精靈] 時，不能在 SQL 陳述式中指定預存程序來定義資料表。 |   
 |**計算資料表**|DirectQuery 模型中不支援導出資料表，但支援導出資料行。 如果您嘗試轉換包含導出資料表的表格式模型，會出現錯誤，指出模型不能包含貼上的資料。|  
 |**查詢限制**|預設資料列限制是一百萬個資料列，而在 msmdsrv.ini 檔案中指定 **MaxIntermediateRowSize** 就可以增加此值。 如需詳細資訊，請參閱 [DAX 屬性](../../analysis-services/server-properties/dax-properties.md) 。
-|**DAX 公式**|使用 DirectQuery 模式查詢表格式模型時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將 DAX 公式和量值定義轉換成 SQL 陳述式。 包含無法轉換為 SQL 語法之元素的 DAX 公式會傳回模型的驗證錯誤。<br /><br /> 這項限制通常限制於特定 DAX 函數。 若是量值，DAX 公式會針對關聯式資料存放區轉換為以集合為基礎的作業。 這表示支援以隱含方式建立的所有量值。 <br /><br /> 發生驗證錯誤時，您需要替代不同的函數來重新撰寫公式，或使用資料來源中的衍生資料行來因應。  當您在設計工具中切換至 DirectQuery 模式時，就會回報表格式模型包括含有不相容函數的公式。 <br /><br />**注意：**  在您將模型切換至 DirectQuery 模式時，模型中的公式可能會通過驗證，但在對快取和關聯式資料存放區執行時，則會傳回不同的結果。 這是因為對快取的計算使用記憶體內部分析引擎的語意，其中包含用於模擬 Excel 行為的功能，而針對關聯式資料來源中所儲存資料的查詢會使用 SQL Server 的語意。<br /><br /> SQL 預存  <br /><br /> 若要進一步了解，請參閱[在 DirectQuery 模式中的 DAX 公式相容性](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md)。|  
+|**DAX 公式**|使用 DirectQuery 模式查詢表格式模型時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將 DAX 公式和量值定義轉換成 SQL 陳述式。 包含無法轉換為 SQL 語法之元素的 DAX 公式會傳回模型的驗證錯誤。<br /><br /> 這項限制通常限制於特定 DAX 函數。 若是量值，DAX 公式會針對關聯式資料存放區轉換為以集合為基礎的作業。 這表示支援以隱含方式建立的所有量值。 <br /><br /> 發生驗證錯誤時，您需要替代不同的函數來重新撰寫公式，或使用資料來源中的衍生資料行來因應。  當您在設計工具中切換至 DirectQuery 模式時，就會回報表格式模型包括含有不相容函數的公式。 <br /><br />**注意：** 在您將模型切換至 DirectQuery 模式時，模型中的公式可能會通過驗證，但在對快取和關聯式資料存放區執行時，則會傳回不同的結果。 這是因為對快取的計算使用記憶體內部分析引擎的語意，其中包含用於模擬 Excel 行為的功能，而針對關聯式資料來源中所儲存資料的查詢會使用 SQL Server 的語意。<br /><br />若要進一步了解，請參閱[在 DirectQuery 模式中的 DAX 公式相容性](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md)。|  
 |**公式的一致性**|在某些情況下，相較於只使用關聯式資料存放區的 DirectQuery 模型，相同公式可能在快取模型下傳回不同的結果。 這些差異是由於記憶體中分析引擎和 SQL Server 之間的語意差異所導致。<br /><br /> 如需相容性問題，包括可能傳回不同的結果時將模型部署為即時，函式的完整清單[在 DirectQuery 模式 (SQL Server Analysis Services) 中的 DAX 公式相容性](http://msdn.microsoft.com/981b6a68-434d-4db6-964e-d92f8eb3ee3e)。|  
 |**MDX 限制**|沒有相對的物件名稱。 所有的物件名稱必須是完整名稱。<br /><br /> 沒有工作階段範圍的 MDX 陳述式 (具名的集合、導出成員、導出資料格、視覺化總計、預設成員等等)，但是您可以使用查詢範圍建構，例如 'WITH' 子句。<br /><br /> 無具有與 MDX subselect 子句中的不同層級成員的 Tuple。<br /><br /> 無使用者定義的階層。<br /><br /> 沒有原生 SQL 查詢 (一般來說，Analysis Services 支援 T-SQL 子集，但 DirectQuery 模型則不適用)。|  
 

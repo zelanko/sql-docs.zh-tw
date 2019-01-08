@@ -1,5 +1,5 @@
 ---
-title: 瀏覽資料和中繼資料在 Cube 中的 |Microsoft 文件
+title: 瀏覽資料與 Cube 中的中繼資料 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7bd1940a21407375015e6b732ab129653bff01e6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fda788cecbad21a73186b96a6c360ceeae3948e3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022605"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537282"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>瀏覽 Cube 中的資料和中繼資料
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34022605"
   
  在瀏覽 Cube 之前，您必須對其進行處理及重新連接。 處理後，請開啟 Cube 設計師的 [瀏覽器] 索引標籤。 按一下工具列上的 [重新連接] 按鈕，重新整理連接。  
   
- [瀏覽器] 索引標籤具有三個窗格：[中繼資料] 窗格、[篩選] 窗格及 [資料] 窗格。 使用 [中繼資料] 窗格，可以樹狀目錄檢查 Cube 的結構。 使用 [瀏覽器] 索引標籤頂端的 [篩選] 窗格，可定義您要瀏覽的任何 Subcube。 使用 [資料] 窗格，可檢視結果集並向下鑽研維度階層。  
+ **瀏覽器**索引標籤具有三個窗格-中繼資料 窗格、 篩選 窗格和 資料 窗格。 使用 [中繼資料] 窗格，可以樹狀目錄檢查 Cube 的結構。 使用 [瀏覽器] 索引標籤頂端的 [篩選] 窗格，可定義您要瀏覽的任何 Subcube。 使用 [資料] 窗格，可檢視結果集並向下鑽研維度階層。  
   
 ## <a name="setting-up-the-browser"></a>設定瀏覽器  
  若要準備瀏覽 Cube，您可以指定所要使用的檢視方塊或翻譯。 您可以將量值和維度加入至 [資料] 窗格，並在 [篩選] 窗格中指定任何篩選。  
@@ -55,13 +55,13 @@ ms.locfileid: "34022605"
   
 -   在 [中繼資料] 窗格中展開維度，然後將階層拖曳至 [篩選] 窗格。  
   
-     \- 或 -  
+     \-或-  
   
--   在**維度**資料行**篩選**] 窗格中，按一下 [ **\<選取維度 >** 並從清單中，選取維度，然後按一下**\<選取階層 >** 中**階層**資料行，然後選取清單中的階層。  
+-   在**維度**資料行**篩選**窗格中，按一下  **\<選取維度 >** 並從清單中，選取維度，然後按一下  **\<選取階層 >** 中**階層**資料行，然後選取清單中的階層。  
   
  指定階層之後，請指定運算子和篩選運算式。 下表描述運算子和篩選運算式。  
   
-|運算子|篩選運算式|說明|  
+|運算子|篩選運算式|描述|  
 |--------------|-----------------------|-----------------|  
 |等於|一個或多個成員|值必須等於指定的成員<br /><br /> (為父子式階層以外的屬性階層提供多個成員選取，並為其他階層提供單一成員選取)。|  
 |Not Equal|一個或多個成員|值不得等於指定的成員<br /><br /> (為父子式階層以外的屬性階層提供多個成員選取，並為其他階層提供單一成員選取)。|  

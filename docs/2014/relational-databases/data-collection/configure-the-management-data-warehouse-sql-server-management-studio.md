@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dc.datacollection.wizard_finish.f1
@@ -23,12 +23,12 @@ ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6935fa7a5cb18f1a870e5a099fb000ea55e2eba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192508"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789810"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>設定管理資料倉儲 (SQL Server Management Studio)
   此主題描述如何設定管理資料倉儲，以支援使用資料收集器之一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料儲存體。 這些執行個體可以在相同伺服器或不同伺服器上。 此主題也提供 [設定管理資料倉儲精靈](#Wizard) 對話方塊的使用者介面描述。 如需設定資料收集器的詳細資訊，請參閱＜ [Configure Properties of a Data Collector](configure-properties-of-a-data-collector.md)＞。  
@@ -126,7 +126,7 @@ ms.locfileid: "48192508"
   
 -   將報表儲存到檔案  
   
--   複製報表到剪貼簿  
+-   [複製報表到剪貼簿]  
   
 -   以電子郵件傳送報表  
   

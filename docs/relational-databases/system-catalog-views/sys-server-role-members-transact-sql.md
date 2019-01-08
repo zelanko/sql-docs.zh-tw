@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b5234cf66bc5f829ab9d83c2642da14b5716161
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4107e6c1f675f7fae78ca384c082ef12c2fa309b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735446"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406455"
 ---
 # <a name="sysserverrolemembers-transact-sql"></a>sys.server_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47735446"
  若要新增或移除伺服器角色成員資格，請使用[ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)陳述式。  
   
 ## <a name="permissions"></a>Permissions  
- 登入可以檢視本身所屬的伺服器角色成員資格，也可以檢視固定伺服器角色成員的 principal_id。 若要檢視所有的伺服器角色成員資格，需要**檢視 DEFINITION ON SERVER ROLE**權限或成員資格**securityadmin**固定的伺服器角色。  
+ 登入可以檢視他們自己的伺服器角色成員資格，而且可以檢視的 principal_id 固定的伺服器角色的成員。 若要檢視所有的伺服器角色成員資格，需要**檢視 DEFINITION ON SERVER ROLE**權限或成員資格**securityadmin**固定的伺服器角色。  
   
  如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   

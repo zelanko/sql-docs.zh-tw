@@ -16,15 +16,15 @@ ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d1db5b5dcf8e1bf5c06882971d3bf3cd2e5a0309
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124898"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531576"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>建立使用者定義函數 (Database Engine)
-  本主題描述如何建立中的使用者定義函數[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+  本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中建立使用者定義函數。  
   
  **本主題內容**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48124898"
   
 -   使用者定義函數無法傳回多個結果集。 如果您需要傳回多個結果集，請使用預存程序。  
   
--   使用者定義函數中限制錯誤處理。 UDF 不支援 TRY…CATCH、@ERROR 或 RAISERROR。  
+-   使用者定義函數中限制錯誤處理。 UDF 不支援 TRY...CATCH@ERROR或 RAISERROR。  
   
 -   使用者定義函數無法呼叫預存程序，但是可以呼叫擴充預存程序。  
   
@@ -193,7 +193,7 @@ FROM dbo.ufn_FindReports(1);
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用者定義函式](user-defined-functions.md)   
+ [使用者定義的函式](user-defined-functions.md)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   
   

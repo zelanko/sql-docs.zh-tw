@@ -21,12 +21,12 @@ ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44ffc8084af6917a8df84c5a204df96112441723
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: bca0c74ab978b6f47e68221987777f1818a95b7b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148323"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542577"
 ---
 # <a name="performing-batch-operations-xmla"></a>執行批次作業 (XMLA)
   您可以使用[批次](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla)XML for Analysis (XMLA) 使用來執行多個 XMLA 命令的單一 XMLA 命令[Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)方法。 您可以用單一交易或每個命令的個別交易，以序列或平行方式執行 `Batch` 命令中包含的多個命令。 您也可以指定程式碼外部繫結和其他屬性`Batch`命令，以處理多個[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件。  
@@ -35,12 +35,12 @@ ms.locfileid: "50148323"
  `Batch` 命令使用下列兩種方式之一來執行命令：  
   
  **異動**  
- 如果`Transaction`的屬性`Batch`命令設定為 true，`Batch`命令執行命令的命令所包含的所有`Batch`命令在單一交易中 —*異動*批次。  
+ 如果`Transaction`的屬性`Batch`命令設定為 true，`Batch`命令執行命令的命令所包含的所有`Batch`命令在交易內的單一*異動*批次。  
   
  如果交易式批次中有任何命令失敗[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]回復任何命令`Batch`失敗命令前執行的命令和`Batch`命令會立即結束。 `Batch` 命令中尚未執行的任何命令都不會被執行。 在 `Batch` 命令結束之後，`Batch` 命令會報告因為失敗的命令而發生的任何錯誤。  
   
  **非交易式**  
- 如果`Transaction`屬性設為 false，`Batch`命令執行所包含的每個命令`Batch`在不同的交易命令 —*非交易式*批次。 如果非交易式批次中有任何命令失敗，`Batch` 命令會繼續執行失敗命令之後的命令。 在 `Batch` 命令嘗試執行 `Batch` 命令包含的所有命令之後，`Batch` 命令會報告所發生的任何錯誤。  
+ 如果`Transaction`屬性設為 false，`Batch`命令執行所包含的每個命令`Batch`命令在交易內的個別*非交易式*批次。 如果非交易式批次中有任何命令失敗，`Batch` 命令會繼續執行失敗命令之後的命令。 在 `Batch` 命令嘗試執行 `Batch` 命令包含的所有命令之後，`Batch` 命令會報告所發生的任何錯誤。  
   
  所有由包含在 `Batch` 命令中的命令傳回的結果，都會按照 `Batch` 命令所含命令的相同順序來傳回。 `Batch` 命令傳回的結果，會因 `Batch` 命令是交易式或非交易式而異。  
   

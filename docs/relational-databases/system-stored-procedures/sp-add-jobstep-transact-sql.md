@@ -18,12 +18,12 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24fb1fc483762798219e9d40ba3c096cc15acea8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1832768a98dff17b0b59d9b3cf81f40f03ab34ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645646"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538155"
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [ **@job_id =** ] *job_id*  
  這是加入步驟之作業的識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
- [ **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **'**_job_name_**'**  
  這是加入步驟的作業名稱。 *job_name*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
@@ -72,15 +72,15 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [ **@step_id =** ] *step_id*  
  作業步驟的順序識別碼。 步驟識別碼數字開始**1**和沒有間距的遞增值。 如果在現有序列中插入步驟，序號會自動調整。 如果提供值，則*step_id*未指定。 *step_id*已**int**，預設值是 NULL。  
   
- [ **@step_name =** ] **'***step_name***'**  
+ [  **@step_name =** ] **'**_step_name_**'**  
  步驟的名稱。 *step_name*已**sysname**，沒有預設值。  
   
- [ **@subsystem =** ] **'***subsystem***'**  
+ [  **@subsystem =** ] **'**_子系統_**'**  
  所使用的子系統[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式服務來執行*命令*。 *子系統*已**nvarchar(40)**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
-|'**ACTIVESCRIPTING**'|Active Script<br /><br /> **\*\* 重要 \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|'**ACTIVESCRIPTING**'|Active Script<br /><br /> **\*\* 重要事項 \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|作業系統命令或可執行的程式|  
 |'**發佈**'|複寫散發代理程式作業|  
 |'**快照集**'|複寫快照集代理程式作業|  
@@ -93,7 +93,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**PowerShell**'|PowerShell 指令碼|  
 |'**TSQL**' （預設值）|[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式|  
   
- [  **@command=** ] **'***命令***'**  
+ [  **@command=** ] **'**_命令_**'**  
  要執行的命令**SQLServerAgent**服務透過*子系統*。 *命令*已**nvarchar （max)**，預設值是 NULL。 SQL Server Agent 所提供的 Token 替代可在您撰寫軟體程式時，提供變數所提供的同等彈性。  
   
 > [!IMPORTANT]  
@@ -104,11 +104,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  如需有關這些 token 以及如何更新您的作業步驟，以利用新 token 語法的詳細資訊，請參閱 <<c0> [ 作業步驟中使用的語彙基元](../../ssms/agent/use-tokens-in-job-steps.md)。  
   
 > [!IMPORTANT]  
->  對 Windows 事件記錄檔具有寫入權限的任何 Windows 使用者，都可以存取由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示或 WMI 警示啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些 Token 包括：**A-DBN**、**A-SVR**、**A-ERR**、**A-SEV**、**A-MSG** 及 **WMI(<屬性>)**。 請注意在此版本中，Token 的使用擴充到所有警示。  
+>  對 Windows 事件記錄檔具有寫入權限的任何 Windows 使用者，都可以存取由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示或 WMI 警示啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些 Token 包括：**A-DBN**， **A-SVR**， **A-ERR**， **A-SEV**， **A-MSG**。、 及**WMI (** _屬性_**)**。 請注意在此版本中，Token 的使用擴充到所有警示。  
 >   
 >  如果需要使用這些 Token，請先確定只有受信任的 Windows 安全性群組的成員 (例如 Administrators 群組) 才對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在電腦的事件記錄檔具有寫入權限。 然後以滑鼠右鍵按一下物件總管中的 [SQL Server Agent]、選取 [屬性]，然後在 [警示系統] 頁面上選取 [取代回應警示之所有作業的 Token]，以啟用這些 Token。  
   
- [  **@additional_parameters=** ] **'***參數***'**  
+ [  **@additional_parameters=** ] **'**_參數_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *參數*已**ntext**，預設值是 NULL。  
   
  [ **@cmdexec_success_code =** ] *code*  
@@ -140,13 +140,13 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [ **@on_fail_step_id=** ] *fail_step_id*  
  此作業中步驟的識別碼，來執行作業失敗時， *fail_action*是**4**。 *fail_step_id*已**int**，預設值是**0**。  
   
- [ **@server =**] **'***server***'**  
+ [  **@server =**] **'**_server_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *伺服器*已**nvarchar(30)**，預設值是 NULL。  
   
- [  **@database_name=** ] **'***資料庫***'**  
+ [  **@database_name=** ] **'**_資料庫_**'**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 步驟執行所在的資料庫名稱。 *資料庫*已**sysname**，預設值是 NULL，在此情況下**主要**會使用資料庫。 不允許以括號 ([ ]) 括住的名稱。 ActiveX 作業步驟，如*資料庫*步驟會使用指令碼語言的名稱。  
   
- [ **@database_user_name=** ] **'***user***'**  
+ [  **@database_user_name=** ] **'**_使用者_**'**  
  執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步驟時所用的使用者帳戶名稱。 *使用者*已**sysname**，預設值是 NULL。 當*使用者*是 NULL，在作業擁有者的使用者內容中的步驟執行上*資料庫*。  只有在作業擁有者為 SQL Server 系統管理員 (sysadmin) 時，SQL Server Agent 才會包含此參數。 在此情況下，指定的 Transact-SQL 步驟會在指定的 SQL Server 使用者名稱內容中執行。 如果作業擁有者不是 SQL Server 系統管理員，則一定會擁有此作業的登入的內容中執行的 TRANSACT-SQL 步驟和@database_user_name參數將會被忽略。  
   
  [  **@retry_attempts=** ] *sp_update_jobstep*  
@@ -158,7 +158,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [ **@os_run_priority =** ] *run_priority*  
  已保留。  
   
- [ **@output_file_name=** ] **'***file_name***'**  
+ [  **@output_file_name=** ] **'**_file_name_**'**  
  儲存此步驟之輸出的檔案名稱。 *file_name*已**nvarchar(200**，預設值是 NULL。 *file_name*可包含一個或多個列在 token*命令*。 此參數才有效，只執行的命令[!INCLUDE[tsql](../../includes/tsql-md.md)]， **CmdExec**， **PowerShell**， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]子系統。  
   
  [  **@flags=** ]*旗標*  
@@ -177,7 +177,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [ **@proxy_id** = ] *proxy_id*  
  用於執行作業步驟之 Proxy 的識別碼。 *proxy_id*是型別**int**，預設值是 NULL。 如果沒有*proxy_id*指定，則沒有*proxy_name*未指定，且不*user_name*指定，做為服務帳戶執行的作業步驟[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式。  
   
- [ **@proxy_name** = ] **'***proxy_name***'**  
+ [ **@proxy_name** =] **'**_proxy_name_**'**  
  用於執行作業步驟的 Proxy 名稱。 *proxy_name*是型別**sysname**，預設值是 NULL。 如果沒有*proxy_id*指定，則沒有*proxy_name*未指定，且不*user_name*指定，做為服務帳戶執行的作業步驟[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式。  
   
 ## <a name="return-code-values"></a>傳回碼值  

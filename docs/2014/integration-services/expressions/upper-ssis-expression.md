@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - UPPER function
@@ -16,12 +15,12 @@ ms.assetid: d33985f7-1048-4023-83e4-274090acda78
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e7755a148583bac8af72b469156b3b4afee63bcb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f3ef91893527091763e8523aca6465b6989adc2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184938"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793460"
 ---
 # <a name="upper-ssis-expression"></a>UPPER (SSIS 運算式)
   傳回小寫字元轉換為大寫字元之後的字元運算式。  
@@ -65,7 +64,7 @@ UPPER(@PostalCode)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [較低&#40;SSIS 運算式&#41;](lower-ssis-expression.md)   
- [函式&#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
+ [LOWER &#40;SSIS 運算式&#41;](lower-ssis-expression.md)   
+ [函數 &#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
   
   

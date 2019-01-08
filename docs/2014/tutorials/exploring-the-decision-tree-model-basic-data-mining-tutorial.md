@@ -11,12 +11,12 @@ ms.assetid: 2e1472c2-3f3e-4dae-acb3-62fca374d397
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a8d8a5238caa09d9b4a3d85d014b2891c3f427e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45acf7bef608bb23d697fc18381872f741cc2e21
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145908"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401363"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>瀏覽決策樹模型 (基本資料採礦教學課程)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 決策樹演算法會根據定型集中的其餘資料行，預測哪些資料行影響了自行車的購買決策。  
@@ -28,7 +28,7 @@ ms.locfileid: "48145908"
   
  在此情況下，此模型會預測只有一個資料行，Bike Buyer，因此只有一個樹狀結構檢視。 如果有多個樹狀結構，您可以使用**樹狀結構**方塊來選擇另一個樹狀結構。  
   
- 當您檢視`TM_Decision_Tree`模型在決策樹檢視器中，您可以看到最重要的屬性，在圖表的左側。 「最重要」表示這些屬性對於結果的影響最大。 沿著樹狀結構 (位於圖表右側) 愈往下的屬性其影響愈小。  
+ 當您檢視`TM_Decision_Tree`模型在決策樹檢視器中，您可以看到最重要的屬性，在圖表的左側。 「 最重要 」 表示這些屬性對於結果的最大影響。 沿著樹狀結構 (位於圖表右側) 愈往下的屬性其影響愈小。  
   
  在此範例中，年齡是預測自行車購買行為時最重要的一項因素。 模型會依年齡將客戶分組，然後顯示每個年齡群組的下一個最重要屬性。 例如，就客戶年齡層在 34 歲到 40 歲的群組來說，擁有車輛數是排在年齡後面的最強預測指標。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48145908"
   
  由於您在建立結構和模型時已啟用鑽研，因此您可以從模型案例和採礦結構中擷取詳細資訊，包括未包含在採礦模型中的資料行 (例如 emailAddress 和 FirstName)。  
   
- 如需詳細資訊，請參閱[鑽研查詢 &#40;資料採礦&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
+ 如需詳細資訊，請參閱 [鑽研查詢 &#40;資料採礦&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
 #### <a name="to-drill-through-to-case-data"></a>若要鑽研案例資料  
   

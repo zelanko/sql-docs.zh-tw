@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_runtime_stats & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
-ms.date: 03/29/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,15 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48e9993ecacc1365f961255b99c24eb7f456e0d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b53020f747b84c824ae8cd816c3b7ba1975df80b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710846"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712429"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats & Amp;#40;transact-SQL&AMP;#41;
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   包含查詢的執行階段執行統計資料資訊的相關資訊。  
   
@@ -39,8 +39,8 @@ ms.locfileid: "47710846"
 |**runtime_stats_id**|**bigint**|代表執行階段執行統計資料的資料列的識別項**plan_id**， **execution_type**並**runtime_stats_interval_id**。 它是唯一的僅針對過去的執行階段統計資料間隔。 目前使用的間隔可能會表示所參考的計劃的執行階段統計資料的多個資料列**plan_id**，與所代表的執行類型**execution_type**。 一般而言，一個資料列代表執行階段統計資料會排清至磁碟，而其他 (s) 代表記憶體中狀態。 因此，若要取得每個間隔中的實際狀態您需要彙總的度量分組所依據**plan_id**， **execution_type**並**runtime_stats_interval_id**。 |  
 |**plan_id**|**bigint**|外部索引鍵。 加入[sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。|  
 |**runtime_stats_interval_id**|**bigint**|外部索引鍵。 加入[sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)。|  
-|**execution_type**|**tinyint**|判斷執行查詢的類型：<br /><br /> 0 – 定期執行 （成功完成）<br /><br /> 3 – 由用戶端起始已中止執行<br /><br /> 4-例外狀況已中止執行|  
-|**execution_type_desc**|**nvarchar(128)**|文字執行的 [類型] 欄位的描述：<br /><br /> 0 – 一般<br /><br /> 3 – 中止<br /><br /> 4-例外狀況|  
+|**execution_type**|**tinyint**|判斷執行查詢的類型：<br /><br /> 0-定期執行 （成功完成）<br /><br /> 3-用戶端起始已中止執行<br /><br /> 4-例外狀況已中止執行|  
+|**execution_type_desc**|**nvarchar(128)**|文字執行的 [類型] 欄位的描述：<br /><br /> 0-一般<br /><br /> 3-已中止<br /><br /> 4-例外狀況|  
 |**first_execution_time**|**datetimeoffset**|第一個彙總間隔內的查詢計劃的執行時間。|  
 |**last_execution_time**|**datetimeoffset**|上次執行時間的查詢計劃的彙總間隔內。|  
 |**count_executions**|**bigint**|執行查詢計劃的彙總間隔內的總計數。|  
@@ -99,7 +99,7 @@ ms.locfileid: "47710846"
  需要**VIEW DATABASE STATE**權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.database_query_store_options &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.database_query_store_options &#40;-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [sys.query_context_settings &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
  [sys.query_store_query &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   

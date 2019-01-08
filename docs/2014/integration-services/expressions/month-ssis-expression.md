@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], MONTH
@@ -14,12 +13,12 @@ ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4106fed90fd370ee30a6bb3a5ad2be5324caddf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83175d463c8b6fa54e88d17945def36a76b6fcfe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102478"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800030"
 ---
 # <a name="month-ssis-expression"></a>MONTH (SSIS 運算式)
   傳回代表日期之月份部分的整數。  
@@ -44,7 +43,7 @@ MONTH(date)
  日期常值必須明確轉換為日期資料類型之一。 如需詳細資訊，請參閱 [Integration Services 資料類型](../data-flow/integration-services-data-types.md)。  
   
 > [!NOTE]  
->  當日期常值明確轉換成以下其中一個日期資料類型時，此運算式將會驗證失敗：DT_DBTIMESTAMPOFFSET 和 DT_DBTIMESTAMP2。  
+>  運算式將會失敗時的日期常值明確轉換成其中一個日期資料類型驗證：DT_DBTIMESTAMPOFFSET 和 DT_DBTIMESTAMP2。  
   
  使用 MONTH 函數較為簡潔，但相當於使用 DATEPART("Month", date)。  
   
@@ -73,6 +72,6 @@ MONTH(GETDATE())
  [DATEPART &#40;SSIS 運算式&#41;](datepart-ssis-expression.md)   
  [DAY &#40;SSIS 運算式&#41;](day-ssis-expression.md)   
  [YEAR &#40;SSIS 運算式&#41;](year-ssis-expression.md)   
- [函式&#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
+ [函數 &#40;SSIS 運算式&#41;](functions-ssis-expression.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 相容性層級 1200年的表格式模型程式設計 |Microsoft Docs
+title: Analysis Services 表格式模型程式設計相容性層級 1200年 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4f1ab3b825ad85d490493c1ffa05d7e066ec0cce
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: eba8822f7fe21e089d9c02b8f6df6cf5ec0e5294
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144753"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072105"
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>相容性層級 1200 及以上的表格式模型程式設計
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

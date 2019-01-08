@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.addpublisher.f1
@@ -15,12 +14,12 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df8cd5e81352bbf0389e56de741f383a4f40d477
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fc6041d3d33a7ddaaeb9fb11ff8582c70c7f080
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215378"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817490"
 ---
 # <a name="add-publisher"></a>加入發行者
   **[加入發行者]** 對話方塊，可讓您將一或多個發行者加入至複寫監視器的左窗格。 加入發行者之後，選取左窗格中的發行者會在右窗格中顯示該發行者的資訊。  
@@ -29,15 +28,15 @@ ms.locfileid: "48215378"
  **[加入]**  
  按一下即可選取要加入的發行者類型，可用來啟動 **[連接到伺服器]** 對話方塊。 選項包括：  
   
--   **加入 SQL Server 發行者...**  
+-   **新增 SQL Server 發行者...**  
   
      使用 **[連接到伺服器]** 對話方塊連接到發行者。  
   
--   **加入 Oracle 發行者...**  
+-   **新增 Oracle 發行者...**  
   
      使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor associated with the Oracle Publisher using the **Connect to Server** dialog box.  
   
--   **指定散發者，並加入其發行者...**  
+-   **指定散發者，並新增其發行者...**  
   
      使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [連接到伺服器] **對話方塊，連接到與一或多個發行者相關聯的** 散發者。  
   

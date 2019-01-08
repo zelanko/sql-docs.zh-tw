@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:69650
@@ -13,12 +13,12 @@ ms.assetid: 5eb28dc3-828e-486c-9348-596bb5a04c85
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 247a248339da19f0f2934d3f97a461ae5bbb1c14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9873268608072ed7f2d6cdb4d0026ba62e5d090
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196548"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810690"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>製成資料表對話方塊 (Visual Database Tools)
   讓您命名為複製資料列所建立的資料表。 這個對話方塊會在將查詢的類型變更為 MAKE TABLE 查詢時出現。 若要變更查詢類型，請在 [查詢設計工具] 功能表中指向 [變更類型]，然後按一下 [製成資料表]。  

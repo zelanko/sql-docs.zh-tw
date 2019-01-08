@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server destination
@@ -17,12 +16,12 @@ ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67e78121e3e55cb921da9e48618b67bc997dba28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24f0adb1564882697bf862407cda8dfaee44cd23
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201278"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791020"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>使用 SQL Server 目的地來大量載入資料
   若要加入及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地，封裝至少必須包含一個「資料流程」工作及一個資料來源。  
@@ -55,7 +54,7 @@ ms.locfileid: "48201278"
     > [!NOTE]  
     >  目的地會自動對應名稱相同的資料行。  
   
-9. 按一下 [進階]，然後設定大量載入選項：[保留識別]、[保留 Null]、[資料表鎖定]、[檢查條件約束] 和 [引發觸發程序]。  
+9. 按一下 **進階**設定大量載入選項：**保留識別**，**保留 null**， **Table lock**， **Check 條件約束**，並**引發觸發程序**。  
   
      (選擇性) 指定要插入的第一個和最後一個輸入資料列，插入作業停止之前發生的最大錯誤數目，以及排序插入的資料行。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48201278"
 11. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 目的地](sql-server-destination.md)   
+ [SQL Server Destination](sql-server-destination.md)   
  [Integration Services 轉換](transformations/integration-services-transformations.md)   
  [Integration Services 路徑](integration-services-paths.md)   
  [資料流程工作](../control-flow/data-flow-task.md)  

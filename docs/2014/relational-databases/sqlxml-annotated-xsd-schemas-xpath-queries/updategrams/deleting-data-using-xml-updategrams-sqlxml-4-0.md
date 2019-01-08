@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - <after> block
@@ -18,12 +16,12 @@ ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d16d27583854988a6e937c0859239875e15616f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 808cac0491d7a62ef6a7616745dfb56874299f6a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220298"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788990"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 刪除資料 (SQLXML 4.0)
   當記錄執行個體中出現時，updategram 代表刪除作業**\<之前 >** 區塊中沒有對應記錄**\<之後 >** 區塊。 在此情況下，updategram 會刪除中的資料錄**\<之前 >** 從資料庫的區塊。  

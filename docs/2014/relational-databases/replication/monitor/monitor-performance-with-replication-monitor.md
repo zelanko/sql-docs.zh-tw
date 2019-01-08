@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -20,12 +19,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2dd079ec5abc9ef0ef8600f882236d44dd45b1b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c84d808b84a70ae9d70eff308351ff1e7f3df8e0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086488"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815570"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>使用複寫監視器監視效能
   「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器」可讓您使用下列方法來監視異動複寫與合併式複寫的效能：  
@@ -76,7 +75,7 @@ ms.locfileid: "48086488"
   
     |非常好|好|普通|差|嚴重|  
     |---------------|----------|----------|----------|--------------|  
-    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
+    |0 - 34%|35 - 59%|60 - 84%|85 - 99%|100% +|  
   
 -   對於合併式複寫，效能品質與臨界值無關 (如果在 **[狀態]** 資料行中顯示的值為 **[效能嚴重不足]** ，則資料列處理臨界值將不作判斷)。 透過將個別訂閱效能與具有相同連接類型 (撥號或 LAN) 之發行集訂閱的平均記錄效能進行比較，對效能品質進行判斷。 在相同連接類型上發生過五次同步處理，且每次同步處理都具有 50 或更多個變更之後，複寫監視器才會顯示值。 如果發生 50 個 (含) 以上變更的同步處理不及五個，或者最近一次同步處理少於 50 個變更，則「複寫監視器」不會顯示值。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48086488"
   
     |非常好|好|普通|差|  
     |---------------|----------|----------|----------|  
-    |151+%|76 – 150%|26 – 75%|0 – 25%|  
+    |151+%|76 - 150%|26 - 75%|0 - 25%|  
   
  如需檢視訂閱資訊的詳細資訊，請參閱[檢視訂閱的資訊並執行工作 &#40;複寫監視器&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)。  
   

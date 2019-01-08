@@ -15,12 +15,12 @@ ms.assetid: 193630f4-93de-4950-8f36-68702531f925
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1cc6cd025c2e9c55d731e82c37040df512350620
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed0338f921b3d143c5b7a42bc73ae22db4148c7c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077518"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524146"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>使副檔名與程式碼編輯器相關聯
   使副檔名與特定程式碼編輯器相關聯，可讓您在 Windows 檔案總管中按兩下檔案時，能以適當的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 程式碼編輯器開啟檔案。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]一般使用的副檔名 (例如 .sql 和 .mdx) 會在安裝期間產生關聯。 新的副檔名也必須在檔案系統中與 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 相關聯。 您可以使用此功能，開啟以其他編輯器建立的檔案，或開啟已重新命名的檔案，例如重新命名為 .bak 的 .sql 檔案備份。  
@@ -39,7 +39,7 @@ ms.locfileid: "48077518"
   
 5.  在 **[註冊的檔案類型]** 方塊中，按一下新的副檔名，再按 **[變更]**。  
   
-6.  在 **[開啟方式]** 對話方塊中，按一下 **[SSMS – SQL Server Management Studio]**，再按一下 **[確定]**。  
+6.  在 [開啟方式] 對話方塊中，按一下 [SSMS - SQL Server Management Studio]，再按一下 [確定]。  
   
 7.  按一下 **[關閉]** ，以關閉 **[資料夾選項]** 對話方塊，然後再關閉 Windows 檔案總管。  
   

@@ -1,22 +1,21 @@
 ---
-title: 步驟 4：測試第 5 課的教學課程封裝 | Microsoft Docs
+title: 步驟 4：測試第 5 課的教學課程封裝 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c9054cdbba90a3d0323a46e29aa4a860fbca7c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29154120646f74da7471f44a1630b3d99afefa4f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060888"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747480"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>步驟 4：測試第 5 課的教學課程封裝
   在執行階段，您的封裝將從執行階段更新的變數中取得 `Directory` 屬性的值，而不是使用您建立封裝時指定的原始目錄名稱。 變數的值會由 SSISTutorial.dtsConfig 檔案擴展。  
@@ -41,6 +40,6 @@ ms.locfileid: "48060888"
 2.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]**。  
   
 ## <a name="next-lesson"></a>下一課  
- [課程 6：搭配專案部屬模型使用參數](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [第 6 課：搭配專案部署模型使用參數](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
   
   

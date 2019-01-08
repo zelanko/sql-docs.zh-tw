@@ -20,16 +20,16 @@ ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d1e4c4462aa10a2d99e50e71d7b2e86fa4d8555
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 001238b4e5d47b22ca991efcd8b4ee28971d7af7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825936"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213087"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 函式
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： ISO 92  
+ 導入的版本：ODBC 1.0 標準的合規性：ISO 92  
   
  **摘要**  
  **SQLFetch**提取從結果集中的下一個資料列集的資料，並傳回所有繫結的資料行的資料。  
@@ -39,7 +39,7 @@ ms.locfileid: "47825936"
 ```  
   
 SQLRETURN SQLFetch(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -65,7 +65,7 @@ SQLRETURN SQLFetch(
 |08S01|通訊連結失敗|函式已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
 |22001|字串資料，右邊已截斷|傳回資料行的可變長度書籤已遭截斷。|  
 |22002|指標變數但未提供|NULL 的資料擷取成資料行其*StrLen_or_IndPtr*來設定**SQLBindCol** (或所設定的 SQL_DESC_INDICATOR_PTR **SQLSetDescField**或**SQLSetDescRec**) 為 null 指標。|  
-|22003|數值超出範圍|傳回數字的值視為數值或字串的一或多個繫結的資料行可能已造成要截斷的數字 （相對於小數） 的整數部分。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 轉換將資料從 SQL 到 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)附錄 d： 資料型別中。|  
+|22003|數值超出範圍|傳回數字的值視為數值或字串的一或多個繫結的資料行可能已造成要截斷的數字 （相對於小數） 的整數部分。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 轉換將資料從 SQL 到 C 資料類型](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)附錄 d:資料類型。|  
 |22007|無效的日期時間格式|在結果集中的字元資料行已繫結至日期、 時間或時間戳記 C 結構，但資料行的值，分別無效的日期、 時間戳記。|  
 |22012|除數為零|算術運算式的值傳回，因而導致除數為零。|  
 |22015|間隔欄位溢位|將指派從精確數值或時間間隔 SQL 型別，給 C 間隔類型造成有效位數的遺失開頭的欄位中。<br /><br /> 當 C 間隔類型以提取資料時，發生 C 間隔類型中的 SQL 類型的值不表示。|  
@@ -93,12 +93,12 @@ SQLRETURN SQLFetch(
   
  如果 ODBC 3 *.x*應用程式會使用 ODBC 2 *.x*驅動程式，則驅動程式管理員會對應**SQLFetch**呼叫**SQLExtendedFetch**的ODBC 2 *.x*支援的驅動程式**SQLExtendedFetch**。 如果 ODBC 2 *.x*驅動程式不支援**SQLExtendedFetch**，則驅動程式管理員會將對應**SQLFetch**呼叫**SQLFetch** ODBC 2 *.x*驅動程式，可以擷取單一資料列。  
   
- 如需詳細資訊，請參閱 <<c0> [ 區塊資料指標、 可捲動的資料指標和回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)附錄 g： 驅動程式指導方針，為了與舊版相容。  
+ 如需詳細資訊，請參閱 <<c0> [ 區塊資料指標、 可捲動的資料指標和回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)在 < 附錄 g:為了與舊版相容的驅動程式指導方針。  
   
 ## <a name="positioning-the-cursor"></a>遊標定位在  
  建立結果集時，資料指標位於結果集的開頭之前。 **SQLFetch**提取下一個資料列集。 它相當於呼叫**SQLFetchScroll**具有*Sqlfetchscroll*設 SQL_FETCH_NEXT。 如需有關資料指標的詳細資訊，請參閱 <<c0> [ 資料指標](../../../odbc/reference/develop-app/cursors.md)並[區塊資料指標](../../../odbc/reference/develop-app/block-cursors.md)。  
   
- SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性會指定資料列集中的資料列數目。 如果所要提取的資料列集**SQLFetch**重疊的結果集結尾**SQLFetch**傳回部分的資料列集。 也就是說，如果 S + R，-1 大於 L，其中 S 資料列集擷取，R 的起始資料列是資料列集大小，而 L 最後一個資料列結果集中則只有第一個左 – S + 1 個資料列集的資料列都有效。 剩餘的資料列是空的且狀態為 SQL_ROW_NOROW。  
+ SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性會指定資料列集中的資料列數目。 如果所要提取的資料列集**SQLFetch**重疊的結果集結尾**SQLFetch**傳回部分的資料列集。 也就是說，如果 S + R，-1 大於 L，其中 S 資料列集擷取，R 的起始資料列是資料列集大小，而 L 最後一個資料列結果集中，則只有第一個 L-S + 1 個資料列集的資料列都有效。 剩餘的資料列是空的且狀態為 SQL_ROW_NOROW。  
   
  在後**SQLFetch**傳回時，目前的資料列是資料列集的第一個資料列。  
   
@@ -107,8 +107,8 @@ SQLRETURN SQLFetch(
 |條件|新的資料列集的第一個資料列|  
 |---------------|-----------------------------|  
 |開始之前|1|  
-|*CurrRowsetStart* \< =  *LastResultRow – RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
-|*CurrRowsetStart* > *LastResultRow – RowsetSize*[1]|後端|  
+|*CurrRowsetStart* \< =  *LastResultRow-RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* > *LastResultRow-RowsetSize*[1]|後端|  
 |後端|後端|  
   
  [1] 如果之間擷取變更資料列集大小，這是曾經與前一個擷取的資料列集大小。  

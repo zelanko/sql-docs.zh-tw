@@ -14,17 +14,17 @@ ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fe868eb16b48afd83fdd5af7dcd146157338947
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92da788205213394edc75257d8266752a2a9d8df
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788466"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535778"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>判斷目標 DBMS 和驅動程式
 考慮下一個問題是，什麼是應用程式的目標 Dbms 哪些驅動程式是否可用，以及支援這些 Dbms？ 一般應用程式通常為高度互通，因為目標 Dbms 的問題是最適用於自訂和垂直應用程式。 不過，目標驅動程式問題適用於所有應用程式，因為驅動程式所帶來的速度、 品質、 功能的支援，和可用性。 此外，如果驅動程式與應用程式轉散發，成本和可用性的授權計劃需要考量。  
   
- 對於許多自訂應用程式，目標 Dbms 都可明顯察覺： 他們現有的 Dbms 應用程式是設計用來存取。 也應該考慮的 Dbms 的規劃未來的移轉。 不過，這些應用程式的主要問題是哪一個驅動程式或驅動程式，以使用它們。 其他自訂應用程式 — 那些並非設計來存取現有的 DBMS — 可以根據所支援之功能、 並行使用者支援、 驅動程式的可用性，以及選擇選擇目標 Dbms。  
+ 許多自訂應用程式，目標 Dbms 都很明顯：他們現有的 Dbms 應用程式是設計用來存取。 也應該考慮的 Dbms 的規劃未來的移轉。 不過，這些應用程式的主要問題是哪一個驅動程式或驅動程式，以使用它們。 其他自訂的應用程式-那些並非設計來存取現有的 DBMS-目標 Dbms 可選擇根據所支援之功能、 並行使用者支援、 驅動程式的可用性，以及選擇。  
   
  對於垂直的應用程式，通常會選擇 Dbms 的目標會根據所支援之功能、 驅動程式的可用性和市場。 例如，適用於小型企業設計的垂直應用程式必須為目標是這類企業; 價格合理的 Dbms垂直的應用程式，設計成可附加至現有的 Dbms 元件必須為目標，廣泛用於 Dbms。  
   

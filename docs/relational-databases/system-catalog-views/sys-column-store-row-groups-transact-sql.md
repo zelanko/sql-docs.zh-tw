@@ -20,12 +20,12 @@ ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: bff4582f8bf46d094db2a1689ad8c9fd6de92185
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fff57d41e522ae2e002809982bfeb084c28bbbba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782896"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531664"
 ---
 # <a name="syscolumnstorerowgroups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47782896"
 |**row_group_id**|**int**|與此資料列群組相關聯的資料列群組號碼。 此號碼在分割區中是唯一的。<br /><br /> -1 = 記憶體中資料表的結尾。|  
 |**delta_store_hobt_id**|**bigint**|差異存放區中的開放資料列群組的 hobt_id。<br /><br /> 如果資料列群組不在差異存放區，則為 NULL。<br /><br /> 記憶體中資料表的結尾是 NULL。|  
 |**state**|**tinyint**|與 state_description 相關聯的識別碼。<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = 標記|  
-|**state_description**|**nvarchar(60)**|資料列群組的持續狀態描述：<br /><br /> INVISIBLE - 正在從差異存放區中的資料建立隱藏的壓縮區段。 讀取動作將會使用差異存放區，直到不可見的壓縮區段完成為止。 然後新的區段會變成可見，並移除來源差異存放區。<br /><br /> OPEN – 讀取/寫入資料列群組，可接受新記錄。 開啟的資料列群組仍採用資料列存放區格式，且尚未壓縮為資料行存放區格式。<br /><br /> CLOSED – 已填滿但尚未壓縮 Tuple Mover 程序壓縮的資料列群組。<br /><br /> COMPRESSED – 已填滿且壓縮的資料列群組。|  
+|**state_description**|**nvarchar(60)**|資料列群組的持續狀態描述：<br /><br /> 正在從差異存放區中的資料建置的過程中不可見的隱藏壓縮的區段。 讀取動作將會使用差異存放區，直到不可見的壓縮區段完成為止。 然後新的區段會變成可見，並移除來源差異存放區。<br /><br /> 開啟為可接受新記錄的讀取/寫入資料列群組。 開啟的資料列群組仍採用資料列存放區格式，且尚未壓縮為資料行存放區格式。<br /><br /> 已關閉-已填滿，但尚未壓縮 tuple mover 程序的資料列群組。<br /><br /> 壓縮為已填滿且壓縮的資料列群組。|  
 |**total_rows**|**bigint**|實際儲存在資料列群組中的總列數。 有些可能已刪除，但是仍然保存。 資料列群組中資料列數目的上限為 1,048,576 (十六進位 FFFFF)。|  
 |**deleted_rows**|**bigint**|資料列群組中標示為已刪除的總列數。 DELTA 資料列群組的此值永遠為 0。|  
 |**size_in_bytes**|**bigint**|DELTA 和 COLUMNSTORE 資料列群組的此資料列群組中所有資料的大小 (以位元組為單位，但不包括中繼資料或共用字典)。|  
@@ -82,7 +82,7 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢 SQL Server 系統目錄常見問題集](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.all_columns &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.all_columns &#40;-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys.computed_columns &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [資料行存放區索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md)     
  [sys.column_store_dictionaries &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   

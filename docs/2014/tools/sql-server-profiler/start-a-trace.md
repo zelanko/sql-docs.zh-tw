@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, stopping traces
@@ -24,12 +23,12 @@ ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b32b1d1d6416c6a8c6097a79dcba18eb62a89d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c53c039d6194edbc37438ef30ac4fef0113ae87
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140241"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794060"
 ---
 # <a name="start-a-trace"></a>啟動追蹤
   在您使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來定義新追蹤或建立範本之後，即可使用新的追蹤定義或範本來啟動、暫停或停止擷取資料。  
@@ -45,7 +44,7 @@ ms.locfileid: "48140241"
 >  使用現有的追蹤時，您可以檢視屬性，但是不能修改屬性。 若要修改屬性，請停止或暫停追蹤。  
   
 ## <a name="see-also"></a>另請參閱  
- [連接到伺服器之後，自動啟動追蹤&#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [在連接伺服器之後自動啟動追蹤 &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
  [暫停追蹤 &#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)   
  [停止追蹤 &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)   
  [清除追蹤視窗 &#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)   

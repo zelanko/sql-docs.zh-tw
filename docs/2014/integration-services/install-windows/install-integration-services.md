@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, installing
@@ -19,12 +18,12 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d9549d988da0892324ceafbbd471e7e201557e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6ded31664a8eaf6b11bc630754752677d46d7ac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204798"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750330"
 ---
 # <a name="install-integration-services"></a>安裝 Integration Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了單一安裝程式，以安裝它的任何或所有元件，包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]在內。 您可以使用安裝程式來安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，不論單一電腦上是否有其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件。  
@@ -125,6 +124,6 @@ ms.locfileid: "48204798"
  64 位元的功能安裝於 [Program Files] 目錄下，而 32 位元的功能則另外安裝在 [Program Files (x86)] 目錄下。 (此行為不是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的特有行為)。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] (也就是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的 32 位元開發環境) 在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 64 位元作業系統上不受支援，且不會安裝在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 伺服器上。  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)](也就是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的 32 位元開發環境) 在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 64 位元作業系統上不受支援，且不會安裝在 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 伺服器上。  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - organizing database diagram objects [SQL Server]
@@ -14,12 +14,12 @@ ms.assetid: 25c6f3f5-aaef-42a5-ad00-1786436db2a6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b5a5f89bd1d356da88407faa7b37b14135459709
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0fb65d55d2b6b135c562f9dd4b02170de6b7df3c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080628"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787870"
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>排列圖表中的資料表 (Visual Database Tools)
   您可快速地排列資料庫圖表中的資料表，以清楚地查看每個資料表與關聯性。  

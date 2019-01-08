@@ -1,5 +1,5 @@
 ---
-title: 將資料表加入 |Microsoft 文件
+title: 將資料表加入至 Analysis Services 表格式模型 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a0e54c5dfa244c28eaba765c70bf827ce66c5e02
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 224df75c15acf560c7eadc70fe91fbbc2b0396d9
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040302"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072285"
 ---
-# <a name="add-a-table"></a>加入資料表
+# <a name="add-a-table"></a>新增資料表
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  本文說明如何將資料表加入資料來源的從中先前匯入資料模型。 若要從相同的資料來源加入資料表，您可以使用現有的資料來源連接。 從單一資料來源匯入任何數目的資料表時，建議您一律使用單一連接。  
+  本文說明如何將資料表加入資料來源，從中您先前匯入資料到您的模型。 若要從相同的資料來源加入資料表，您可以使用現有的資料來源連接。 從單一資料來源匯入任何數目的資料表時，建議您一律使用單一連接。  
   
 ### <a name="to-add-a-table-from-an-existing-data-source"></a>若要從現有的資料來源加入資料表  
   

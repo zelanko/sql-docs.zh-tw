@@ -1,7 +1,8 @@
 ---
-title: 快速入門： 連線及查詢 Azure SQL 資料倉儲使用 Azure Data Studio |Microsoft Docs
-description: 本快速入門示範如何使用 Azure Data Studio 來連接到 SQL database，然後執行查詢
-ms.custom: tools|sos
+title: 快速入門：連線及查詢 Azure SQL 資料倉儲
+titleSuffix: Azure Data Studio
+description: 本快速入門示範如何使用 Azure Data Studio 連接到 Azure SQL 資料倉儲，並執行查詢
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: bf26924bc7791cf5321c32b3c127abc52780740b
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 72e7e0e83757b52ba7fba6a24cc91499ca4863b1
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355729"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030752"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>快速入門： 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連線及查詢 Azure SQL 資料倉儲中的資料
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>快速入門：使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連線及查詢 Azure SQL 資料倉儲中的資料
 
 本快速入門示範如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連接到 Azure SQL 資料倉儲，然後使用 TRANSACT-SQL 陳述式來建立、插入和選取資料。 
 

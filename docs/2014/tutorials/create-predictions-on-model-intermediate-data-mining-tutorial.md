@@ -11,12 +11,12 @@ ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26a0aae710b18350c9ef62166e004f702eb88c7e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 0b67ad103cee685ebcbc5455340df9e4d7890e15
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146546"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529227"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>在時序群集模型上建立預測 (中繼資料採礦教學課程)
   了解時序群集檢視器中瀏覽它更好的模型之後，您可以使用預測查詢產生器上建立預測查詢**採礦模型預測**資料採礦設計師中的索引標籤。 若要建立預測，請先選取時序群集模型，然後再選取輸入資料。 對於輸入而言，您可以使用外部資料來源，或是建立單一查詢，並在對話方塊中提供值。  
@@ -196,7 +196,7 @@ NATURAL PREDICTION JOIN
  您已經完成時序群集模型上的教學課程。  
   
 ## <a name="next-steps"></a>後續步驟  
- 如果您已完成所有章節[中繼資料採礦教學課程&#40;Analysis Services-Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)下, 一步可能要學習如何使用資料採礦延伸模組 (DMX) 陳述式來建立模型和產生預測。 如需詳細資訊，請參閱 <<c0> [ 建立及查詢資料採礦模型使用 DMX： 教學課程&#40;Analysis Services-Data Mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)。</c0>  
+ 如果您已完成所有章節[中繼資料採礦教學課程&#40;Analysis Services-Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)下, 一步可能要學習如何使用資料採礦延伸模組 (DMX) 陳述式來建立模型和產生預測。 如需詳細資訊，請參閱[建立及查詢資料採礦模型使用 DMX:教學課程&#40;Analysis Services-資料採礦&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)。  
   
  如果您很熟悉程式設計概念，您也可以使用分析管理物件 (AMO) 來以程式設計方式處理資料採礦物件。 如需詳細資訊，請參閱 [AMO 資料採礦類別](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes)。  
   

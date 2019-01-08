@@ -15,12 +15,12 @@ ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dda5cb294536354ed4bcc5003983d36f61167007
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83e6aae7d4383440f148a8de1480cb8f1658e89c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143328"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542740"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>多個一般檔案連接管理員編輯器 (進階頁面)
   使用 [多個一般檔案連線管理員編輯器] 對話方塊的 [進階] 頁面，來設定各種屬性，例如一般檔案連線管理員所連接的文字檔中，每個資料行的資料類型和分隔符號。  
@@ -44,10 +44,10 @@ ms.locfileid: "48143328"
 |**ColumnType**|代表資料行是否為分隔的、固定寬度或不齊右。 此屬性是唯讀的。 不齊右檔案就是除了最後一個資料行是由資料列分隔符號所終止之外，其他所有資料行都有固定寬度的檔案。|  
 |**OutputColumnWidth**|指定將儲存為位元組計數的值；針對 Unicode 檔案，這將會顯示為字元計數。 在資料流程工作中，這個值將用來替一般檔案來源設定輸出資料行寬度。<br /><br /> 注意：在物件模型中，這個屬性的名稱為 MaximumWidth。|  
 |**DataType**|從可用的資料類型清單中選取。 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。|  
-|**TextQualified**|使用文字限定詞字元指出文字資料是否為限定的。 有效值為：<br /><br /> **True**：一般檔案中的文字資料是限定的。<br /><br /> **False**：一般檔案中的文字資料是非限定的。|  
+|**TextQualified**|使用文字限定詞字元指出文字資料是否為限定的。 有效值為：<br /><br /> **True**:一般檔案中的文字資料是限定的。<br /><br /> **False**:一般檔案中的文字資料是非限定的。|  
 |**名稱**|提供資料行名稱。 預設為已編號的資料行清單；然而，您可以選擇任何唯一的、描述性的名稱。|  
 |**DataScale**|指定數值資料的小數位數。 小數位數是指小數位數的數目。 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。|  
-|**ColumnDelimiter**|從可用的資料行分隔符號清單中選取。 請選擇不太可能會在文字中出現的分隔符號。 固定寬度資料行將忽略這個值。<br /><br /> **{CR}{LF}** ：資料行是以歸位字元和換行字元的組合分隔<br /><br /> **{CR}** ：資料行是以歸位字元分隔<br /><br /> **{LF}** ：資料行是以換行字元分隔<br /><br /> **分號 {;}** ：資料行是以分號分隔<br /><br /> **冒號 {:}** ：資料行是以冒號分隔<br /><br /> **逗號 {,}**：資料行是以逗號分隔<br /><br /> **定位字元 {t}**：資料行是以定位字元分隔<br /><br /> **分隔號 {&#124;}**：資料行是以分隔號分隔|  
+|**ColumnDelimiter**|從可用的資料行分隔符號清單中選取。 請選擇不太可能會在文字中出現的分隔符號。 固定寬度資料行將忽略這個值。<br /><br /> **{CR}{LF}**：資料行是以歸位字元和換行字元的組合分隔<br /><br /> **{CR}**：資料行是以歸位字元分隔<br /><br /> **{LF}**：資料行是以換行字元分隔<br /><br /> **分號 {;}**：資料行是以分號分隔<br /><br /> **冒號 {:}**：資料行是以冒號分隔<br /><br /> **逗號{,}**：資料行是以逗號分隔<br /><br /> **定位字元 {t}**：資料行是以定位字元分隔<br /><br /> **分隔號 {&#124;}**：資料行是以分隔號分隔|  
 |**DataPrecision**|指定數值資料的有效位數。 有效位數是指位數的數目。 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。|  
 |**InputColumnWidth**|指定將儲存為位元組計數的值；針對 Unicode 檔案，這將會顯示為字元計數。 分隔資料行將忽略這個值。<br /><br /> **注意** ︰在物件模型中，這個屬性的名稱為 ColumnWidth。|  
   
@@ -68,8 +68,8 @@ ms.locfileid: "48143328"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [多個一般檔案連接管理員編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
- [多個一般檔案連接管理員編輯器&#40;資料行頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [多個一般檔案連接管理員編輯器&#40;預覽頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [多個一般檔案連線管理員編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [多個一般檔案連線管理員編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [多個一般檔案連線管理員編輯器 &#40;預覽頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

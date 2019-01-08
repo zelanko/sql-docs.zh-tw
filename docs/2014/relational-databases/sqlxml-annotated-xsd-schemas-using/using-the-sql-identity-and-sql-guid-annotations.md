@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - sql:guid
@@ -25,12 +23,12 @@ ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 40cfd0a589682f9c9a07fc4db1bb62f2e934ada7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb953042707054a7dbfdee697b986e7e65f7059b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061478"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786180"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>使用 sql:identity 和 sql:guid 註解
   您可以指定`sql:identity`並`sql:guid`對應至資料庫資料行中的任何節點上的 XSD 結構描述中的註解[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 updategram 格式支援 `updg:at-identity` 和 `updg:guid` 屬性，而 DiffGram 格式則不支援。 `updg:at-identity` 屬性會定義更新 IDENTITY 類型之資料行時的行為。 `updg:guid` 屬性可讓您從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 取得 GUID 值，並將其用在 updategram 中。 如需詳細資訊和實用範例，請參閱 <<c0> [ 插入的資料使用 XML Updategram &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)。</c0>  
@@ -42,7 +40,7 @@ ms.locfileid: "48061478"
  `sql:identity` 和 `sql:guid` 註解可以在複雜內容元素上定義。  
   
 ## <a name="sqlidentity-annotation"></a>sql:identity 註解  
- 您可以在對應到 IDENTITY 類型之資料庫資料行的任何節點上，指定 XSD 結構描述的 `sql:identity` 註解。 針對此註解指定的值會定義如何更新 IDENTITY 類型的資料行 (透過使用 updategram 中提供的值來修改資料行，或忽略值，在此種狀況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的值會用於此資料行)。  
+ 您可以在對應到 IDENTITY 類型之資料庫資料行的任何節點上，指定 XSD 結構描述的 `sql:identity` 註解。 針對此註解指定的值可讓您定義如何更新 IDENTITY 類型資料行 (使用 updategram 中提供的值來修改資料行，或忽略值，在此情況下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-產生的值用於此資料行)。  
   
  系統可以指派兩個值給 `sql:identity` 註解：  
   

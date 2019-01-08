@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
@@ -18,12 +17,12 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d233d2ee94a611c63e8466102c66bd01e77b0513
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4376967ea1d21e1022a21b9df836e1be3d66858
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063458"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349659"
 ---
 # <a name="precedence-constraints"></a>優先順序條件約束
   優先順序條件約束可在控制流程中，連結封裝中的可執行檔、容器和工作，並指定判斷可執行檔是否執行的條件。 可執行檔可以是「For 迴圈」容器、「Foreach 迴圈」容器、「時序」容器、工作或事件處理常式。 事件處理常式也可使用優先順序條件約束，以將其可執行檔連結至控制流程。  
@@ -75,14 +74,14 @@ ms.locfileid: "48063458"
 -   失敗，要求優先順序可執行檔失敗時，才可執行條件約束可執行檔。  
   
 > [!NOTE]  
->  只有成員相同的優先順序條件約束`Precedence Constraint`集合可以分組邏輯的 AND 條件。 例如，您無法結合來自兩個「Foreach 迴圈」容器的優先順序條件約束。  
+>  只有是同一 `Precedence Constraint` 集合之成員的優先順序條件約束，才可以使用邏輯 AND 條件將其分組。 例如，您無法結合來自兩個「Foreach 迴圈」容器的優先順序條件約束。  
   
 ## <a name="configuration-of-the-precedence-constraint"></a>優先順序條件約束的組態  
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需可在 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中設定之屬性的詳細資訊，請參閱[優先順序條件約束編輯器](../precedence-constraint-editor.md)。  
+ 如需可在 [ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中設定之屬性的詳細資訊，請參閱 [優先順序條件約束編輯器](../precedence-constraint-editor.md)。  
   
- 如需有關以程式設計方式設定這些屬性的詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>。  
+ 如需以程式設計方式設定這些屬性的詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>。  
   
 ## <a name="related-tasks"></a>相關工作  
  如需有關如何在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中設定這些屬性的詳細資訊，請按下列主題之一：  
@@ -96,7 +95,7 @@ ms.locfileid: "48063458"
      本主題會提供有關如何設定優先順序條件約束的預設行為，以及如何使用預設的優先順序條件約束來連接可執行檔的詳細資訊。  
   
 ## <a name="related-content"></a>相關內容  
- social.technet.microsoft.com 上的技術文件： [SSIS 運算式範例](http://go.microsoft.com/fwlink/?LinkId=220761)  
+ social.technet.microsoft.com 上的技術文件： [SSIS 運算式範例](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
 ## <a name="see-also"></a>另請參閱  
  [將運算式加入優先順序條件約束](../add-expressions-to-precedence-constraints.md)   
