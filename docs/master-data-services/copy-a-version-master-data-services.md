@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - versions [Master Data Services], copying
@@ -15,12 +14,12 @@ ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dfbb2def7831b3697e6a2cf4a1d6911fd368284b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ea81dff0f7c302395e4577d0b336b06f7c5d3fc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709296"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806332"
 ---
 # <a name="copy-a-version-master-data-services"></a>複製版本 (Master Data Services)
 

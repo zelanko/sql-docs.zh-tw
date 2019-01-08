@@ -35,7 +35,7 @@ AlwaysOn 可用性群組 (可用性群組) 在 SQL Server 2012 中引進，將�
 
 可用性群組還有稱為接聽程式的另一個元件，可讓應用程式和使用者在不需要知道哪個 SQL Server 執行個體裝載主要複本的情況下連線。 每個可用性群組都會有自己的接聽程式。 雖然接聽程式在 Windows 與 Linux 伺服器上的實作略有不同，但功能和使用方式相同。 下圖顯示使用 Windows Server 容錯移轉叢集 (WSFC) 的 Windows Server 可用性群組。 無論是在 Linux 或 Windows Server 上，可用性都需要作業系統層的基礎叢集。 此範例會示範 WSFC 為基礎叢集的雙伺服器或雙節點簡單組態。 
 
-![簡單的可用性群組][SimpleAG]
+![簡單的可用性群組](media/sql-server-ha-story/image1.png)
  
 Standard 和 Enterprise Edition 有不同的複本數上限。 Standard Edition 中的可用性群組又稱為基本可用性群組，只支援可用性群組中單一資料庫的兩個複本 (一個主要、一個次要)。 Enterprise Edition 不只允許在單一可用性群組中設定多個資料庫，最多還可以有總計 9 個複本 (一個主要、八個次要)。 Enterprise Edition 也提供其他選擇性的優點，例如可讀取的次要複本、製作次要複本備份的能力，及其他更多。
 
@@ -81,13 +81,13 @@ None 叢集類型可以搭配 Windows Server 和 Linux 可用性群組。 將叢
 
 下列螢幕擷取畫面會顯示對 SSMS 中不同種類的叢集類型的支援。 您必須執行版本 17.1 或更新版本。 下列螢幕擷取畫面取自 17.2 版本。
 
-![SSMS AG 選項][SSMSAGOptions]
+![SSMS AG 選項](media/sql-server-ha-story/image2.png)
  
 ##### <a name="requiredsynchronizedsecondariestocommit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
 
 SQL Server 2016 對 Enterprise Edition 的同步複本數目支援，從二個增加到三個。 不過，如果一個次要複本已同步處理，但另一個卻發生問題，沒有辦法控制行為以通知主要複本去等候行為異常的複本或允許它繼續。 這表示在某些時候，主要複本會繼續接收寫入流量，即使次要複本不在同步處理的狀態，這表示次要複本上有資料遺失。
 SQL Server 2017 現在有選項能夠控制當名為 REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT 的同步複本出現時的行為。 選項的運作方式如下：
-* 有三個可能的值：0、1 和 2。
+* 有三個可能的值：0、1 與 2
 * 值是必須同步的次要複本數目，對資料遺失、可用性群組的可用性和容錯移轉都有影響。
 * WSFC 和 None 叢集類型的預設值為 0，可以手動設定為 1 或 2。
 * 根據預設，外部叢集類型的叢集機制會設定它，且可手動覆寫。 三個同步複本的預設值都會是 1。
@@ -111,11 +111,11 @@ SQL Server 2016 引進的 DTC 部分支援與可用性群組，涵蓋後面的�
 #### <a name="always-on-failover-cluster-instances"></a>AlwaysOn 容錯移轉叢集執行個體
 叢集安裝自 6.5 版起即為 SQL Server 功能。 FCI 是可為稱之為執行個體的整個 SQL Server 安裝，提供可用性的經證實方法。 這表示，要是基礎伺服器遇到問題，執行個體內的所有項目，包括資料庫、SQL Server Agent 作業、連結的伺服器等等，都會移至另一部伺服器。 所有 FCI 都需要某種類型的共用儲存體，即使是透過網路提供的。 無論任何時候，FCI 的資源都只能由一個節點執行及擁有。 下圖中，第一個叢集節點擁有 FCI 中，這也表示它擁有以實線表示其與儲存體建立關聯的共用儲存體資源。
 
-![容錯移轉叢集執行個體][BasicFCI]
+![容錯移轉叢集執行個體](media/sql-server-ha-story/image3.png)
  
 容錯移轉之後，擁有權變更如下圖所示。
 
-![容錯移轉後][PostFailoverFCI]
+![容錯移轉後](media/sql-server-ha-story/image4.png)
  
 FCI 未遺失任何資料，但基礎的共用儲存體是單一失敗點，因為有資料複本。 FCI 通常會結合其他可用性方法，例如可用性群組或記錄傳送，以擁有多餘的資料庫複本。 額外部署的方法應該使用和 FCI 實體分隔的儲存體。 當 FCI 容錯移轉到另一個節點時，它會停在一個節點，然後在另一個節點開始，不像關閉再開啟伺服器。 FCI 通過一般復原程序，表示會回復需要向前復原的任何交易，以及不完整的任何交易。 因此，資料庫和失敗或手動容錯移轉時間點的資料是一致的，因此不會遺失資料。 資料庫要在復原完成後才可以使用，因此復原時間取決於許多因素，且通常會超過容錯移轉可用性群組的時間。 代價是，當您容錯移轉可用性群組時，可能需要其他工作才能使用資料庫，例如：啟用 SQL Server Agent 作業的工作。
 
@@ -132,7 +132,7 @@ FCI 未遺失任何資料，但基礎的共用儲存體是單一失敗點，因�
 > [!IMPORTANT] 
 > 在 Linux 上，SQL Server Agent 作業不屬於 SQL Server 安裝本身。 可是從封裝 mssql-server-Agent 作業中取得，後者也必須安裝才能使用記錄傳送。
 
-![記錄傳送][LogShipping]
+![記錄傳送](media/sql-server-ha-story/image5.png)
  
 在某些容量中使用記錄傳送的最大優點，可以說是考量人為錯誤。 套用交易記錄檔可予延遲。 因此，如果有人發出類似不含 WHERE 子句的 UPDATE 這樣的內容，待命可能不會變更，而您無法在修復主要系統時切換至該待命。 雖然記錄傳送很容易設定，但從主要切換到暖待命，也稱為角色變更，一律為手動。 角色變更是透過 TRANSACT-SQL 起始，就像可用性群組，交易記錄檔中未擷取的所有物件都必須以手動方式同步處理。 記錄傳送也需要依資料庫一一設定，而單一可用性群組可以包含多個資料庫。 不同於可用性群組或 FCI，記錄傳送沒有任何角色變更的抽象概念。 應用程式必須能夠處理這個事件。 無法使用 DNS 別名 (CNAME) 這類技術，但優劣各半，例如切換之後 DNS 重新整理所耗費的時間。
 
@@ -144,17 +144,17 @@ FCI 未遺失任何資料，但基礎的共用儲存體是單一失敗點，因�
 
 可用性群組的優點之一，是能夠使用單一功能設定高可用性和災害復原。 不要求確保共用儲存體也高度可用，更容易在當地的資料中心擁有許多用於高可用性的複本，在其他資料中心擁有用於災害復原的遠端複本，每個複本有不同的儲存體。 擁有資料庫的其他複本，是確保備援性應付的代價。 以下為跨多個資料中心的可用性群組範例。 一個主要複本負責保存所有同步處理的次要複本。
 
-![可用性群組][AG]
+![可用性群組](media/sql-server-ha-story/image6.png)
  
 在叢集類型為 None 的可用性群組之外，可用性群組要求所有複本都屬於相同的基礎叢集，無論是 WSFC 或 Pacemaker。 這表示在上圖中，WSFC 會延伸到兩個不同的資料中心工作，這會增加複雜度。 無論平台 (Windows Server 或 Linux)。 跨距離延展叢集會增加複雜性。 SQL Server 2016 引進的分散式可用性群組，能讓可用性群組跨越在不同叢集上設定的可用性群組。 如此即可減少所有節點參與相同叢集的需求，使設定災害復原更為容易。 如需分散式可用性群組的詳細資訊，請參閱[分散式可用性群組](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups)。
 
-![分散式可用性群組][DAG]
+![分散式可用性群組](media/sql-server-ha-story/image11.png)
  
 ### <a name="always-on-failover-cluster-instances"></a>AlwaysOn 容錯移轉叢集執行個體
 
 FCI 可用於災害復原。 與一般可用性群組一樣，基礎叢集機制也必須擴展到所有位置，這會增加複雜度。 FCI 有其他考量：共用儲存體。 主要和次要站台需要使用相同的磁碟；因此，需要使用儲存體廠商在硬體層提供的功能，或在 Windows Server 使用儲存體複本等外部方法，才能確保其他地方也有 FCI 使用的磁碟。 
 
-![AlwaysOn FCI][AlwaysOnFCI]
+![AlwaysOn FCI](media/sql-server-ha-story/image8.png)
  
 ### <a name="log-shipping"></a>記錄傳送
 記錄傳送是提供 SQL Server 資料庫災害復原最古老的方法之一。 記錄傳送通常給合可用性群組和 FCI 使用，提供符合成本效益且更簡單的災害復原，其他選項可能因為環境、系統管理技術或預算而發生困難。 類似記錄傳送的高可用性案例，許多環境會延遲載入交易記錄備份以考量人為錯誤。
@@ -174,7 +174,7 @@ FCI 可用於災害復原。 與一般可用性群組一樣，基礎叢集機制
 
 分散式 AG 也是移轉至新組態或升級 SQL Server 的另一種方法。 因為分散式 AG 支援不同架構上的不同基礎 AG；例如，您可以從在 Windows Server 2012 R2 上執行的 SQL Server 2016 變更成在 Windows Server 2016 上執行的 SQL Server 2017。 
 
-![分散式 AG][image10]
+![分散式 AG](media/sql-server-ha-story/image10.png)
 
 最後，叢集類型為 None 的可用性群組也可以用於移轉或升級。 您不能混用及比對一般可用性群組組態中的叢集類型，因此所有複本的類型都必須是 None。 分散式可用性群組可以用來跨越以不同叢集類型設定的可用性群組。 這個方法在各種不同的作業系統平台上也受到支援。
 
@@ -218,7 +218,7 @@ Linux IaaS 虛擬機器的部署可以使用 Azure 安裝 SQL Server。 與內�
 
 分散式可用性群組的設計是用來跨越可用性群組組態，無論可用性群組下的這兩個基礎叢集是兩個不同的 WSFC、Linux 發行版本，或一個在 WSFC、一個在 Linux。 分散式可用性群組會是具有跨平台解決方案的主要方法。 分散式可用性群組也是移轉的主要解決方案，例如從 Windows Server 的 SQL Server 基礎結構轉換成 Linux 的，如果這是貴公司想要做的事。 如前所述，可用性群組，特別是分散式可用性群組，會將無法使用應用程式的時間降至最低。 跨 WSFC 和 Pacemaker 的分散式可用性群組範例如下所示。
 
-![分散式可用性群組][BasicDAG]
+![分散式可用性群組](media/sql-server-ha-story/image9.png)
  
 如果使用 None 叢集類型設定可用性群組，它可以跨 Windows Server 和 Linux，以及多個 Linux 發行版本。 因為這不是真正的高可用性組態，所以不應用於任務關鍵部署，但可用於讀取級別或移轉/升級案例。
 
@@ -230,12 +230,12 @@ Linux IaaS 虛擬機器的部署可以使用 Azure 安裝 SQL Server。 與內�
 
 自 SQL Server 2012 引進次要複本後，其就已經能夠用於唯讀查詢。 以可用性群組可以達到的兩種方式：允許直接存取次要複本以及[設定唯讀路由](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) (必須使用接聽程式)。  SQL Server 2016 引進了透過接聽程式使用循環配置資源演算法的負載平衡唯讀狀態連線能力，允許唯讀要求散佈到所有的可讀取複本。 
 
-> [!NOTE] 
-可讀取的次要複本是 Enterprise Edition 的獨有功能，每個裝載可讀取複本的執行個體都需要 SQL Server 授權。
+> [!NOTE]
+> 可讀取的次要複本是 Enterprise Edition 的獨有功能，每個裝載可讀取複本的執行個體都需要 SQL Server 授權。
 
 透過可用性群組調整可讀取的資料庫複本，首次引進是在 SQL Server 2016 的分散式可用性群組中。 這可讓公司不僅在當地有資料庫的唯讀複本，還可以最少量的組態在地區及全球擁有資料庫的唯讀複本，且因為在本地執行查詢，而減少網路流量和延遲。 每個可用性群組的主要複本皆可植入兩個其他可用性群組，即使它不是完整的讀取/寫入複本，因此每個分散式可用性群組最多可以支援 27 份可讀取的資料。 
 
-![分散式可用性群組][DAG]
+![分散式可用性群組](media/sql-server-ha-story/image11.png)
 
 從 SQL Server 2017 開始，便可建立近乎即時的唯讀解決方案，設定叢集類型為 None 的可用性群組。 如果目標是使用可用性群組取得可讀取的次要複本而不是可用性，這樣做會移除使用 WSFC 或 Pacemaker 的複雜性，並以簡單的部署方法提供可用性群組的可讀取優點。 
 

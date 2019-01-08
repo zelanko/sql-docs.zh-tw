@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - validating versions [Master Data Services]
@@ -17,12 +16,12 @@ ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 08eeb2c32a23ba2e6abe6cdfcfa29565d67eef5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b98ef0c4d85385ab683590d128b427636a23331d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690097"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822162"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>根據商務規則驗證版本 (Master Data Services)
 

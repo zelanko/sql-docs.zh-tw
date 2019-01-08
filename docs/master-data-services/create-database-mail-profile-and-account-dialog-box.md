@@ -5,8 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.mds.configmanager.dbmailprofileacct.f1
@@ -14,12 +13,12 @@ ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 779558e5ad884a1fd7d92986588821d40cc5b1a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26128939285a16478b02de30ab17537c8fcafa14
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672216"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796790"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>建立 Database Mail 設定檔和帳戶對話方塊
 

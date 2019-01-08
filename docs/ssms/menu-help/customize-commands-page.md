@@ -9,17 +9,16 @@ ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.vs.customizecom.f1
-- vs.customize.commands
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 594e97c1d5ac65eb353664471232f45f0c45e2d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ccd1f0f6318aa5a81e9b824ecdd4ddd7a50bdd7a
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716716"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328328"
 ---
 # <a name="customize-commands-page"></a>自訂 (命令頁面)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,4 +42,3 @@ ms.locfileid: "47716716"
   
 ## <a name="see-also"></a>另請參閱  
 [自訂功能表與快速鍵](../../ssms/customize-menus-and-shortcut-keys.md)  
-  

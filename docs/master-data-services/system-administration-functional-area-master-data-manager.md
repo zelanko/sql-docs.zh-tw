@@ -5,19 +5,18 @@ ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3e5c0111b59f0c6ff03fc8daaf3c3f1da13c2f3a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 05818605e5f8abb9a069f9ca3bcd5d09c00487c3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697479"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814820"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>系統管理功能區域 (主資料管理員)
 

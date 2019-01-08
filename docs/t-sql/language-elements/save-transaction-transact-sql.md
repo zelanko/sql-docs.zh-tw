@@ -26,12 +26,12 @@ ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e7d63f4aa35369a1a50c5997797897659bfae9d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b3785f3237c2b30cd7d4d4d267a058324604319
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599996"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951600"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47599996"
   在交易內設定儲存點。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-.|  
+
  ## <a name="syntax"></a>語法  
   
 ```  

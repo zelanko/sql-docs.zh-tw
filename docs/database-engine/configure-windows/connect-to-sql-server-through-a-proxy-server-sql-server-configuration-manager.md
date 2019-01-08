@@ -19,12 +19,12 @@ ms.assetid: 39714de0-2a1f-4179-9091-5c3fa4612545
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 187004d1ff87fdc1b22ab62537cbe06f5d56c706
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a1abe3ff72d0782b3c0393ca9599c8b57879cc2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631026"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204597"
 ---
 # <a name="connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager"></a>經由 Proxy 伺服器連接至 SQL Server (SQL Server 組態管理員)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47631026"
   
 2.  在您的 Proxy 伺服器中，定義 Proxy 伺服器的本機位址資料表 (LAT)，使接聽節點位址不在 LAT 項目的範圍內。 如需詳細資訊，請參閱您的 Proxy 伺服器文件集。  
   
->  [!NOTE]
+> [!NOTE]
 >  本主題適用於內部部署 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]。 如需與 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]相關的連線問題，請參閱 [針對 Azure SQL Database 連線問題進行疑難排解](https://docs.microsoft.com/azure/sql-database/sql-database-troubleshoot-common-connection-issues)。  
 
 
