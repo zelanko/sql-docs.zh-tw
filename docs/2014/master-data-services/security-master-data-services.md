@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7fbafebfe9cd80a40c6bf575be97e1ccd6e694cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee6fd4fbf047ecb29dae4f35fe3bbbf5a3f9da61
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131218"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778380"
 ---
 # <a name="security-master-data-services"></a>安全性 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]在  中，使用安全性可確保使用者具有執行工作所需之特定主要資料的存取權，並避免使用者存取不應使用的資料。  
@@ -39,11 +38,11 @@ ms.locfileid: "48131218"
   
 -   [功能區域存取權](../../2014/master-data-services/functional-area-permissions-master-data-services.md)，決定使用者可以存取使用者介面五個功能區域的哪一個。  
   
--   [模型物件權限](../../2014/master-data-services/model-object-permissions-master-data-services.md)，用來決定使用者可以存取的屬性，以及使用者對這些屬性的存取 （讀取或更新） 的類型。  
+-   [模型物件權限](../../2014/master-data-services/model-object-permissions-master-data-services.md)，決定使用者可以存取的屬性，以及使用者對這些屬性的存取權類型 (讀取或更新)。  
   
--   （選擇性）[階層成員權限](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)，決定使用者可以存取，成員並 （「 讀取 」 或 「 更新 」） 的存取類型的使用者對這些成員。  
+-   [](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)(選擇性) 階層成員權限，決定使用者可以存取的成員，以及使用者對這些成員的存取權類型 (讀取或更新)。  
   
- 將權限指派給屬性和成員時，權限會交集，此時規則會決定優先使用的權限。 如需詳細資訊，請參閱[如何決定權限 &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)。  
+ 將權限指派給屬性和成員時，權限會交集，此時規則會決定優先使用的權限。 如需詳細資訊，請參閱 [如何決定權限 &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)。  
   
  若要實作記錄層級安全性，請建立實體的階層，並指派使用者權限給此階層的成員。 成員屬於資料記錄。  只有當您希望使用者擁有特定成員的受限存取權時，才應該使用階層成員權限。  
   
@@ -64,18 +63,18 @@ ms.locfileid: "48131218"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|建立具有模型完整權限的使用者。|[建立模型管理員&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]將 Active Directory 群組加入至 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ；這是提供群組權限，以存取  Web 應用程式中資料的第一步。|[新增群組&#40;Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 將權限指派給  Web 應用程式的功能區域。|[指派功能區域權限&#40;Master Data Services&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)|  
-|透過將權限指派給模型物件，來將權限指派給屬性值。|[指派模型物件權限&#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
-|透過將權限指派給階層節點，來將權限指派給成員值。|[指派階層成員權限&#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
+|建立具有模型完整權限的使用者。|[建立模型管理員 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]將 Active Directory 群組加入至 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ；這是提供群組權限，以存取  Web 應用程式中資料的第一步。|[新增群組 &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 將權限指派給  Web 應用程式的功能區域。|[指派功能區域權限 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)|  
+|透過將權限指派給模型物件，來將權限指派給屬性值。|[指派模型物件權限 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|透過將權限指派給階層節點，來將權限指派給成員值。|[指派階層成員權限 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [系統管理員&#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)   
+ [管理員 &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)   
  [使用者和群組 &#40;Master Data Services&#41;](../../2014/master-data-services/users-and-groups-master-data-services.md)   
  [功能區域權限 &#40;Master Data Services&#41;](../../2014/master-data-services/functional-area-permissions-master-data-services.md)   
- [模型物件權限&#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [階層成員權限&#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [如何決定權限&#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [模型物件權限 &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [階層成員權限 &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [如何決定權限 &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

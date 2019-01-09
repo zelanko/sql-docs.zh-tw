@@ -1,5 +1,5 @@
 ---
-title: 定義事實關聯性 |Microsoft 文件
+title: 定義事實關聯性 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e960315b16828dfcfc21f4899c2643883ad18327
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3133c92dd5bf9b8aeae01b69393d2874fd9afa24
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018185"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518839"
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>課程 5-2-定義事實關聯性
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 使用者有時候想要按事實資料表中的資料項目建立量值維度，或查詢事實資料表中的其他特定相關資訊，例如與特定銷售事實相關的發票號碼或訂單號碼。 當您依據這樣的事實資料表項目來定義維度時，這種維度稱為「事實維度」。 事實維度也稱為變質維度。 事實維度對於將相關事實資料表資料列 (例如，與特定發票號碼相關的所有資料列) 分組很有幫助。 雖然您可以將這項資訊放在關聯式資料庫的個別維度資料表中，但為這項資訊建立個別的維度資料表並無好處，因為維度資料表與事實資料表的成長速率一樣，只會建立重複資料和產生不必要的複雜性而已。  
   
-在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中，您可以決定是否要在 MOLAP 維度結構中重複事實維度資料來增加查詢效能，或是否要將事實維度定義成 ROLAP 維度，以犧牲查詢效能的代價來節省儲存空間。 當您以 MOLAP 儲存模式來儲存維度時，所有維度成員除了儲存在量值群組的資料分割外，還會以高度壓縮的 MOLAP 結構而儲存在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的執行個體。 當您以 ROLAP 儲存模式來儲存維度時，只有維度定義會儲存在 MOLAP 結構中—維度成員本身是在查詢階段接受基礎關聯式事實資料表的查詢。 您可以依據事實維度查詢的頻率、一般查詢傳回的資料列數、查詢的效能和處理成本，來決定適當的儲存模式。 將維度定義為 ROLAP 並不需要所有使用該維度的 Cube 都以 ROLAP 儲存模式來儲存。 每個維度的儲存模式可獨立設定。  
+在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中，您可以決定是否要在 MOLAP 維度結構中重複事實維度資料來增加查詢效能，或是否要將事實維度定義成 ROLAP 維度，以犧牲查詢效能的代價來節省儲存空間。 當您以 MOLAP 儲存模式來儲存維度時，所有維度成員除了儲存在量值群組的資料分割外，還會以高度壓縮的 MOLAP 結構而儲存在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的執行個體。 當您儲存的維度使用 ROLAP 儲存模式時，只有維度定義會儲存在 MOLAP 結構的維度成員本身都會進行查詢，從基礎關聯式事實資料表查詢時間。 您可以依據事實維度查詢的頻率、一般查詢傳回的資料列數、查詢的效能和處理成本，來決定適當的儲存模式。 將維度定義為 ROLAP 並不需要所有使用該維度的 Cube 都以 ROLAP 儲存模式來儲存。 每個維度的儲存模式可獨立設定。  
   
 當您定義事實維度時，可在事實維度和量值群組之間定義事實關聯性。 下列條件約束適用於事實關聯性：  
   
@@ -52,7 +52,7 @@ ms.locfileid: "34018185"
   
 7.  在 [名稱資料行] 清單中，選取 [SalesOrderLineNumber]。  
   
-8.  按一下 **[下一步]**。  
+8.  按 [下一步] 。  
   
 9. 在 [選取相關資料表] 頁面上，清除所有資料表旁的核取方塊，然後按一下 [下一步]。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34018185"
   
 14. 在 [網際網路銷售訂單的詳細資料] 維度之 [維度設計師] 的 [屬性] 窗格中，選取 [銷售訂單號碼]，然後將 [屬性] 視窗中的 [名稱] 屬性變更為**項目描述**。  
   
-15. 在 [NameColumn] 屬性資料格中，按一下瀏覽按鈕 **(…)**。 從 [名稱資料行] 對話方塊的 [來源資料表] 清單中，選取 [Product]、針對 [來源資料行] 選取 [EnglishProductName]，然後按一下 [確定]。  
+15. 在  **NameColumn**屬性資料格中，按一下瀏覽按鈕 **（...）**.從 名稱資料行 對話方塊的 來源資料表 清單中，選取 Product、針對 來源資料行 選取 EnglishProductName，然後按一下 確定。  
   
 16. 將 [SalesOrderNumber] 資料行從 [資料來源檢視] 窗格中的 [InternetSales] 資料表拖曳到 [屬性] 窗格，以這個方式將 [銷售訂單號碼] 屬性加入維度。  
   
@@ -88,13 +88,13 @@ ms.locfileid: "34018185"
   
     請注意，[網際網路銷售訂單的詳細資料] Cube 維度會自動設定為具有事實關聯性，正如其唯一圖示所示。  
   
-2.  在 [網際網路銷售] 量值群組和 [網際網路銷售訂單的詳細資料] 維度的交集處，按一下 [項目描述] 資料格中的瀏覽按鈕 (**…**)，即可檢閱事實關聯性屬性。  
+2.  按一下 瀏覽按鈕 (**...**) 中**項目描述**交集處的資料格**網際網路銷售**量值群組和**Internet Sales Order Details**維度，為檢閱事實關聯性屬性。  
   
     此時會開啟 [定義關聯性] 對話方塊。 請注意，您不能設定任何這些屬性。  
   
     下圖顯示 [定義關聯性] 對話方塊中的事實關聯性屬性。  
   
-    ![定義關聯性對話方塊](../analysis-services/media/l5-factrelationship-2.gif "定義關聯性對話方塊")  
+    ![定義關聯性 對話方塊](../analysis-services/media/l5-factrelationship-2.gif "定義關聯性對話方塊")  
   
 3.  按一下 [取消]。  
   

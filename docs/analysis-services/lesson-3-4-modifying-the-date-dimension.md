@@ -130,7 +130,7 @@ ms.locfileid: "52514556"
 14. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
 ## <a name="providing-unique-dimension-member-names"></a>提供唯一的維度成員名稱  
-在這項工作中，您將建立 [EnglishMonthName]、[CalendarQuarter] 和 [CalendarSemester] 屬性所使用的使用者易記名稱資料行。  
+在這項工作中，您將建立 [EnglishMonthName] 、[CalendarQuarter] 和 [CalendarSemester] 屬性所使用的使用者易記名稱資料行。  
   
 #### <a name="to-provide-unique-dimension-member-names"></a>提供唯一的維度成員名稱  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], about conflict resolution
@@ -20,12 +19,12 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a6d4cfc3de43528d957025455426d8670c59e417
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: f7e8f2f9de721f2e314961a6d2c10cf14c99be53
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159878"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786100"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Advanced Merge Replication Conflict Detection and Resolution
   發行者與訂閱者連接並進行同步處理時，合併代理程式會偵測是否有任何衝突。 如果偵測到衝突，「合併代理程式」會使用衝突解析程式 (在發行項加入發行集時指定)，決定要接受及傳播至其他站台的資料。  
@@ -84,7 +83,7 @@ ms.locfileid: "48159878"
   
      合併式複寫提供一個 API，用於以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]等語言將解析程式撰寫為 COM 物件。 如需詳細資訊，請參閱 [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md)。  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
+-    [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
      [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含多個以 COM 為基礎的解析程式。 如需詳細資訊，請參閱 [以 COM 為基礎的 Microsoft 解析程式](advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
@@ -95,12 +94,12 @@ ms.locfileid: "48159878"
   
  若要指定合併訂閱類型與衝突解決優先權，請參閱  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[指定合併訂閱類型及衝突解決優先順序 &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[指定合併訂閱類型和衝突解決優先權&#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   複寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式設計與 Replication Management Objects (RMO) 程式設計： [建立提取訂閱](../create-a-pull-subscription.md) 和 [建立發送訂閱](../create-a-push-subscription.md)  
+-   複寫[!INCLUDE[tsql](../../../includes/tsql-md.md)]程式設計與 Replication Management Objects (RMO) 程式設計：[建立提取訂閱](../create-a-pull-subscription.md)和[建立發送訂閱](../create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>互動解析程式  
- 複寫提供「互動解析程式」使用者介面，可與預設的優先權式衝突解析程式或發行項解析程式一起使用。 透過 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Synchronization Manager 執行視需要的同步處理時，「互動解析程式」會在執行階段顯示衝突資料，並讓您選擇如何解決衝突。 如需有關如何啟用互動式解決及啟動「互動解析程式」的詳細資訊，請參閱＜ [Interactive Conflict Resolution](advanced-merge-replication-conflict-interactive-resolution.md)＞。  
+ 複寫提供「互動解析程式」使用者介面，可與預設的優先權式衝突解析程式或發行項解析程式一起使用。 透過 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Synchronization Manager 執行視需要的同步處理時，「互動解析程式」會在執行階段顯示衝突資料，並讓您選擇如何解決衝突。 如需有關如何啟用互動式解決及啟動「互動解析程式」的詳細資訊，請參閱＜ [互動式衝突解決](advanced-merge-replication-conflict-interactive-resolution.md)＞。  
   
 ## <a name="viewing-conflicts"></a>檢視衝突  
  檢視衝突最直接的方法是使用「複寫衝突檢視器」，該檢視器可從 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 取得 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 也提供允許查詢衝突資料表的預存程序)。 「衝突檢視器」和「互動解析程式」是類似的工具，不過「互動解析程式」可讓您在同步處理發生時解決衝突，而「衝突解析程式」是設計用來在已解決衝突後檢視衝突。 如果系統資料表中仍有可用的衝突中繼資料 (衝突中繼資料依預設會保留 14 天)，您可以在「衝突檢視器」中覆寫衝突解決結果，不過如果經常需要直接介入，請考慮使用「互動解析程式」。  
@@ -128,7 +127,7 @@ ms.locfileid: "48159878"
   
  **若要檢視衝突**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md) (檢視並解決合併式發行集的資料衝突 &#40;SQL Server Management Studio&#41;)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[檢視並解決合併式發行集的資料衝突 &#40;SQL Server Management Studio&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
 -   複寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程式設計：[檢視合併式發行集的衝突資訊 &#40;複寫 Transact-SQL 程式設計&#41;](../view-conflict-information-for-merge-publications.md)  
   

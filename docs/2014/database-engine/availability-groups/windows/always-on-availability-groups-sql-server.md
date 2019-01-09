@@ -16,12 +16,12 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e560cae97a647b484bc75936db31434dc08864a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1e86eec76a94a3858ede48fc0fb1b0703de4508
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177008"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356249"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能是提供資料庫鏡像之企業級替代方案的高可用性與災害復原解決方案。 在 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]中導入的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 可讓企業將一組使用者資料庫的可用性提高到最大程度。 *「可用性群組」* (Availability Group) 支援一組可一起容錯移轉之離散化使用者資料庫的容錯移轉環境，也就是所謂的 *「可用性資料庫」*(Availability Database)。 可用性群組支援一組讀寫的主要資料庫，以及一到八組對應的次要資料庫。 此外，您可以將次要資料庫用於唯讀存取及/或某些備份作業。  
@@ -49,9 +49,9 @@ ms.locfileid: "48177008"
   
 -   可讓您將給定的可用性複本設定為支援下列其中一種或兩種使用中次要功能：  
   
-    -   唯讀連接存取，讓複本的唯讀連接能夠在以次要複本的方式執行時存取並讀取其資料庫。 如需詳細資訊，請參閱[使用中次要： 可讀取的次要複本;Always On 可用性群組](https://msdn.microsoft.com/library/ff878253.aspx))。  
+    -   唯讀連接存取，讓複本的唯讀連接能夠在以次要複本的方式執行時存取並讀取其資料庫。 如需詳細資訊，請參閱[作用中次要複本：可讀取的次要複本;Always On 可用性群組](https://msdn.microsoft.com/library/ff878253.aspx))。  
   
-    -   以次要複本的方式執行時，針對其資料庫執行備份作業。 如需詳細資訊，請參閱 <<c0> [ 使用中次要： 在次要複本上備份](https://msdn.microsoft.com/library/ff878253.aspx))。  
+    -   以次要複本的方式執行時，針對其資料庫執行備份作業。 如需詳細資訊，請參閱[作用中次要複本：在次要複本上備份](https://msdn.microsoft.com/library/ff878253.aspx))。  
   
      利用使用中次要功能可透過更善用次要硬體資源，改善 IT 效率並降低成本。 此外，透過將讀取意圖應用程式和備份作業卸載至次要複本，有助於提高主要複本的效能。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48177008"
   
         -   [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]會起始可用性群組的手動容錯移轉。 根據您指定為容錯移轉目標之次要複本的組態和狀態，此精靈可以執行規劃的手動容錯移轉或強制手動容錯移轉。 如需詳細資訊，請參閱[使用容錯移轉可用性群組精靈;SQL Server Management Studio;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
-    -   [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)]監視 AlwaysOn 可用性群組、 可用性複本和可用性資料庫，以及評估 AlwaysOn 原則的結果。 如需詳細資訊，請參閱[使用 AlwaysOn 儀表板中;SQL Server Management Studio;](use-the-always-on-dashboard-sql-server-management-studio.md).  
+    -   [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] 會監視 AlwaysOn 可用性群組、可用性複本和可用性資料庫，以及評估 AlwaysOn 原則的結果。 如需詳細資訊，請參閱[使用 AlwaysOn 儀表板中;SQL Server Management Studio;](use-the-always-on-dashboard-sql-server-management-studio.md).  
   
     -   [物件總管詳細資料] 窗格會顯示現有可用性群組的基本資訊。 如需詳細資訊，請參閱[使用物件總管詳細資料，來監視可用性群組SQL Server Management Studio;](use-object-explorer-details-to-monitor-availability-groups.md).  
   
@@ -141,7 +141,7 @@ ms.locfileid: "48177008"
 -   [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
->  如需限制和限制使用其他功能搭配[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱[Always On 可用性群組： 互通性;SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
+>  如需限制和限制使用其他功能搭配[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱[Always On 可用性群組：互通性;SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
@@ -151,19 +151,19 @@ ms.locfileid: "48177008"
   
 -   **部落格：**  
   
-     [SQL Server Alwayson 團隊部落格： 官方 SQL Server AlwaysOn 團隊部落格](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server Alwayson 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server 工程師部落格](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
 -   **影片：**  
   
-     [Microsoft SQL Server Code-Named "Denali" AlwaysOn Series,Part 1: Introducing the Next Generation High Availability Solution (Microsoft SQL Server 代碼 "Denali" AlwaysOn 系列第一部分：新一代高可用性解決方案簡介)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named"Denali"Alwayson 系列，第 1 部分：下一代高可用性解決方案簡介](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server Code-Named"Denali"Alwayson 系列，第 2 部分： 建立使用 AlwaysOn 的任務關鍵性的高可用性解決方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named"Denali"Alwayson 系列，第 2 部分：建立使用 AlwaysOn 任務關鍵性的高可用性解決方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **白皮書：**  
   
-     [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
   
   

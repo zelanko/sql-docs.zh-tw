@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - sa account
@@ -15,12 +14,12 @@ ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f7dada71a017f37969f94382e23cd07ad75dd356
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119785"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641559"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>當系統管理員遭到鎖定時連接到 SQL Server
   本主題描述如何以系統管理員的身分，重新取得 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的存取權。 系統管理員可能因為下列其中一個原因而失去 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的存取權：  
@@ -66,7 +65,7 @@ ms.locfileid: "49119785"
   
 6.  按一下  `OK`，並在之後重新啟動的訊息，以滑鼠右鍵按一下您的伺服器名稱，然後按**重新啟動**。  
   
-7.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後，您的伺服器即會處於單一使用者模式。 請確定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式未執行。 如果已啟動，它將會佔用您的唯一連接。  
+7.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後，您的伺服器即會處於單一使用者模式。 確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 並未執行。 如果已啟動，它將會佔用您的唯一連接。  
   
 8.  在 Windows 8 的 [開始] 畫面上，以滑鼠右鍵按一下 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的圖示。 在畫面底部，選取 [以系統管理員身分執行] (這樣會將您的系統管理員認證傳遞給 SSMS)。  
   

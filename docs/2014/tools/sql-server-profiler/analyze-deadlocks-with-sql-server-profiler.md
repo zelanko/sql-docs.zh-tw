@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - process nodes [SQL Server Profiler]
@@ -20,12 +19,12 @@ ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb04d2fd2b0587863d59d90a4fff7f949c108ec7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176578"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780680"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>使用 SQL Server Profiler 分析死結
   使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可識別死結的原因。 SQL Server 中有兩個或兩個以上的執行緒 (或處理序)，因為某些資源集而產生循環相依性時，就會發生死結。 利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以建立一個用來記錄、重新執行和顯示死結事件的追蹤，以便進行分析。  
@@ -48,7 +47,7 @@ ms.locfileid: "48176578"
  資料庫物件；例如，資料表、索引或資料列。  
   
  邊緣  
- 處理序與資源之間的關聯性。 A`request`處理序等待資源時，就會發生邊緣。 `owner`當資源等待處理序時，就會發生邊緣。 邊緣描述中也會納入鎖定模式， 例如 [模式: X]。  
+ 處理序與資源之間的關聯性。 當處理序等待資源時，會發生 `request` 邊緣； 當資源等待處理序時，則會發生 `owner` 邊緣。 邊緣描述中也會納入鎖定模式， 例如 **模式:X**。  
   
 ## <a name="deadlock-process-node"></a>死結處理序節點  
  在等待圖形中，處理序節點包含處理序的相關資訊。 下表說明處理序的元件。  
