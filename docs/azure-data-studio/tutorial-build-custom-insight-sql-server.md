@@ -1,7 +1,8 @@
 ---
-title: 教學課程： 建置在 Azure 資料 Studio 中自訂的深入解析小工具 |Microsoft Docs
+title: 教學課程：建置自訂的深入解析小工具
+titleSuffix: Azure Data Studio
 description: 本教學課程會示範如何建置自訂的深入解析小工具，並將它們新增至 Azure Data Studio 中的資料庫和伺服器儀表板。
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: caecf780f5c8cc656f6b0b2a95dd3d68c48355cb
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ab545d4d058780503778fb470bc5802ecae9d077
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356339"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030032"
 ---
-# <a name="tutorial-build-a-custom-insight-widget"></a>教學課程： 建立自訂的 insight widget
+# <a name="tutorial-build-a-custom-insight-widget"></a>教學課程：建置自訂的深入解析小工具
 
 本教學課程會示範如何使用您自己的 insight 查詢來建置自訂的 insight widget。
 
@@ -30,7 +31,7 @@ ms.locfileid: "49356339"
 
 ## <a name="prerequisites"></a>必要條件
 
-本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
+本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。  若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
 
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 SQL Server](quickstart-sql-server.md)
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 Azure SQL Database](quickstart-sql-database.md)
@@ -163,7 +164,7 @@ ms.locfileid: "49356339"
     ![activesession 深入解析](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>後續步驟
-在本教學課程中，您已了解如何：
+在本教學課程中，您將了解如何：
 > [!div class="checklist"]
 > * 執行您自己的查詢和在圖表中檢視
 > * 建置自訂的 insight widget 圖表

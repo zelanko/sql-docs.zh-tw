@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
@@ -21,15 +20,15 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6ee84e7cd1e8d652283eb758af7396257fecf7b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 35376c36361bd7453ed925c8b0be5721aa120037
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228578"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761200"
 ---
 # <a name="security-overview-integration-services"></a>安全性概觀 (Integration Services)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的安全性包含幾層，提供了豐富且具彈性的安全性環境。 這些安全性階層包括使用數位簽章、封裝屬性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色，以及作業系統權限。 這些安全性功能中，絕大部分都屬於識別與存取控制的類別。  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的安全性包含幾層，提供了豐富且具彈性的安全性環境。 這些安全性階層包括使用數位簽章、封裝屬性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色，以及作業系統權限。 這些安全性功能中，絕大部分都屬於識別與存取控制的類別。  
   
 ## <a name="identity-features"></a>識別功能  
  您可以透過在封裝中實作識別功能，藉以達到下列目標：  
@@ -97,7 +96,7 @@ ms.locfileid: "48228578"
   
 -   [建立使用者定義角色](../create-a-user-defined-role.md)  
   
--   [指派讀取器和寫入器角色給套件](../assign-a-reader-and-writer-role-to-a-package.md)  
+-   [指派讀取器和寫入器角色給封裝](../assign-a-reader-and-writer-role-to-a-package.md)  
   
 -   [透過設定登錄值實作簽署原則](../implement-a-signing-policy-by-setting-a-registry-value.md)  
   

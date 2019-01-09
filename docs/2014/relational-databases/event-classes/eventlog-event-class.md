@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: ba4b4e15-b923-4fab-987e-6bede2e73f53
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c2e5fa5cf405a4e1af0c024c48ef797a7a044c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88e254954c126684eca606f318170c82d3699fab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229288"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765500"
 ---
 # <a name="eventlog-event-class"></a>EventLog 事件類別
   EventLog 事件類別指出已將事件記錄在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔中。  

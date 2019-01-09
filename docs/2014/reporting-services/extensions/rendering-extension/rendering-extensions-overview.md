@@ -15,15 +15,15 @@ ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fd9604fb38d20e03f33623bacb606d1a9d114ae9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2272cffe68db5c4ad417bfdbf81ed45a8d309a17
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092480"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376910"
 ---
 # <a name="rendering-extensions-overview"></a>轉譯延伸模組概觀
-  轉譯延伸模組是報表伺服器的元件或模組，可將報表資料與配置資訊轉換成裝置特定的格式。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包含七個轉譯延伸模組：HTML、Excel、Word、CSV 或 Text、XML、Image 和 PDF。 您可以建立其他轉譯延伸模組，以產生其他格式的報表。  
+  轉譯延伸模組是報表伺服器的元件或模組，可將報表資料與配置資訊轉換成裝置特定的格式。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包含七個轉譯延伸模組：HTML、 Excel、 Word、 CSV 或文字、 XML、 影像和 PDF。 您可以建立其他轉譯延伸模組，以產生其他格式的報表。  
   
 > [!NOTE]  
 >  若要決定可以使用哪些轉譯延伸模組，您可以檢視在 RSReportServer.config 檔案中已安裝的延伸模組清單。  
@@ -58,7 +58,7 @@ ms.locfileid: "48092480"
   
  撰寫自訂轉譯延伸模組是很困難的。 轉譯延伸模組通常必須支援所有可能的報表元素結合，並需要您實作數百個類別、介面和屬性。 如果您必須使用不包括在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的格式來轉譯報表，並決定撰寫自己的轉譯延伸模組之 Managed 程式碼實作，則轉譯延伸模組程式碼必須實作報表伺服所需的 `Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension` 介面。  
   
- 如需 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的補充文件與白皮書，請參閱 [Reporting Services 網站](http://go.microsoft.com/fwlink/?LinkId=19951)的最新技術資源。  
+ 如需 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的補充文件與白皮書，請參閱 [Reporting Services 網站](https://go.microsoft.com/fwlink/?LinkId=19951)的最新技術資源。  
   
 ## <a name="see-also"></a>另請參閱  
  [實作轉譯延伸模組](implementing-a-rendering-extension.md)   

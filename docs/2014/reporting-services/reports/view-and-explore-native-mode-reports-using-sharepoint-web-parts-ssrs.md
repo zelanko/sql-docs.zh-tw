@@ -11,19 +11,19 @@ ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: dc6adc856477cbfb9b870c921676f1bd3470450c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2b8979b945e6f7149f14ba11d8703221adab3a5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095368"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350027"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供數種 Web 組件，可與特定版本的報表伺服器，以及在特定的部署模式下搭配使用。  
   
--   **原生模式** ：如果您想要從原生模式報表伺服器存取 SharePoint 網站上的報表伺服器內容，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]隨附的 SharePoint 2.0 Web 組件報表總管和報表檢視器。 在本主題中有提供關於安裝與使用 2.0 Web 組件的指示。  
+-   **原生模式：** 如果您想要從原生模式報表伺服器存取 SharePoint 網站上的報表伺服器內容，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 隨附的 SharePoint 2.0 Web 組件報表總管和報表檢視器。 在本主題中有提供關於安裝與使用 2.0 Web 組件的指示。  
   
--   **SharePoint 模式** ：如果您想要存取以 SharePoint 模式執行的報表伺服器，請使用適用於 SharePoint 產品之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集所安裝的 Web 組件。 如需增益集的詳細資訊，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+-   **SharePoint 模式：** 如果您想要存取以 SharePoint 模式執行的報表伺服器，請使用適用於 SharePoint 產品之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集所安裝的 Web 組件。 如需增益集的詳細資訊，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
 -   > [!NOTE]  
     >  原生模式的報表檢視器 Web 組件 (SPViewer.dwp) 與適用於 SharePoint 產品之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集所安裝的 Web 組件 (ReportViewer.dwp) 有所不同。 這些 Web 組件具有不同的結構描述和實作，但是它們可以安裝在相同的 SharePoint 伺服器陣列上。 視覺上，您可以透過下列特性區分這兩個 Web 組件：透過增益集安裝之報表檢視器 Web 組件的工具列具有 [動作] 功能表。  
@@ -89,7 +89,7 @@ ms.locfileid: "48095368"
     Install-SPWebPartPack -LiteralPath "C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint\RSWebParts.cab" -GlobalInstall  
     ```  
   
-4.  您應該會看見類似以下的訊息，表示已部署 Web 組件。  
+4.  您應該會看見類似下列的訊息，表示已部署 Web 組件。  
   
     > 名稱               方案識別碼                                             已部署  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48095368"
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     如需深入了解 PowerShell 的應用，請參閱 [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx)。  
+     如需深入了解 PowerShell 的應用，請參閱 [Install-SPWebPartPack (https://technet.microsoft.com/library/ff607840.aspx)](https://technet.microsoft.com/library/ff607840.aspx)。  
   
 #### <a name="install-web-parts-using-stsadmexe"></a>使用 STSADM.exe 安裝 Web 組件  
   
@@ -141,7 +141,7 @@ ms.locfileid: "48095368"
   
 7.  在 **[報表管理員 URL]** 中，輸入指向報表管理員執行個體的 URL，該執行個體與您要存取的原生模式報表伺服器相關聯。 根據預設，報表管理員 URL 具有下列語法： **http://\<伺服器名稱 > /**。  
   
-8.  在 **[報表路徑]** 中，指定正斜線，後面緊跟著資料夾路徑與報表名稱。 請 **勿** 加入伺服器名稱或報表管理員虛擬目錄。 例如，若要開啟 Adventure Works 資料夾中的 ‘Company Sales’ 報表，請指定 **/Adventure Works/Company Sales**。 以下是 ‘Products’ 報表位於報表伺服器根資料夾 **/Products**的另一個範例。  
+8.  在 **[報表路徑]** 中，指定正斜線，後面緊跟著資料夾路徑與報表名稱。 請 **勿** 加入伺服器名稱或報表管理員虛擬目錄。 例如，若要開啟 Adventure Works 資料夾中的 'Company Sales' 報表，請指定 **/Adventure Works/Company Sales**。 下列是 'Products' 報表位於報表伺服器根資料夾 **/Products** 的另一個範例。  
   
 9. 按一下 [確定] 。  
   
@@ -166,8 +166,8 @@ ms.locfileid: "48095368"
     3.  按一下 **[報表檢視器]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表管理員&#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)   
- [Reporting Services 報表伺服器&#40;SharePoint 模式&#41;](../reporting-services-report-server-sharepoint-mode.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)   
+ [Reporting Services 報表伺服器 &#40;SharePoint 模式&#41;](../reporting-services-report-server-sharepoint-mode.md)   
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](../report-server/reporting-services-report-server-native-mode.md)  
   
   

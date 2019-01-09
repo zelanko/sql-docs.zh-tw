@@ -36,7 +36,7 @@ ms.locfileid: "53352425"
   
 -   若要安裝記憶體中 OLTP，請在您安裝 **時選取** [Database Engine Services] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
-     若要安裝報表產生 ([判斷是否將資料表或預存程序應該移植至記憶體中 OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 和[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)](管理記憶體中 OLTP 透過[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]物件總管 中)，請選取**管理工具-基本**或是**管理工具 – 進階**當您安裝[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
+     若要安裝報表產生 ([判斷是否將資料表或預存程序應該移植至記憶體中 OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 和[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (管理記憶體中 OLTP 透過[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]物件總管 中)，請選取**管理工具-基本**或是**管理工具 – 進階**當您安裝[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]的重要注意事項  
   

@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server 上的使用者程式庫中安裝的 R 套件的秘訣 |Microsoft Docs
+title: 使用 R 套件安裝在使用者程式庫-SQL Server Machine Learning 服務的秘訣
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/30/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 100ce9c68cddb01ccdda886d76f640703ca17280
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 8060a27040cfb4bd62081f08ca2fed3983f89486
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697707"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431914"
 ---
 # <a name="tips-for-using-r-packages-in-sql-server"></a>SQL Server 中使用 R 套件的秘訣
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

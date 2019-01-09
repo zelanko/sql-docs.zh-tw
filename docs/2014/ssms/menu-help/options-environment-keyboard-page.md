@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ENVIRONMENT.KEYBOARD.GENERAL
@@ -13,12 +13,12 @@ ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8569a2b229e4fa23f99f47fe0694291bfa5d70b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b65f5a5d337877010c4704b6ac067ced655e99f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194898"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764240"
 ---
 # <a name="options-environment-keyboard-page"></a>選項 （環境-鍵盤頁面）
   [選項] 對話方塊可以讓您自訂 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的鍵盤配置。 使用此選項以選擇鍵盤配置。 若要存取此頁面，請按一下 [工具] 功能表上的 [選項]，選取 [環境] 資料夾，然後按一下 [鍵盤]。  
@@ -26,7 +26,7 @@ ms.locfileid: "48194898"
  [鍵盤配置] 下拉式清單提供可用的快速鍵集合。 若要載入特定配置，請從清單中選取。 準備離開 [選項] 對話方塊時，請按一下 [確定]。 您選取的配置將載入 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
  **Standard**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中預設的標準配置，並且與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 的快速鍵十分相似。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中預設的標準配置，並且與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 的快速鍵十分相似。  
   
  使用 [查詢快速鍵] 方格，使預存程序與鍵盤快速鍵產生關聯。  
   

@@ -10,17 +10,17 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a162bc882d65007a85032c234c37b769ee17b9ab
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 7c2c7059c5c6ff6a770c1658d260da04f2a042ab
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100409"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363780"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>示範記憶體中 OLTP 的 AdventureWorks 延伸模組
     
 ## <a name="overview"></a>總覽  
- 此範例示範新的 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 功能 (屬於 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 的一部分)。 此範例顯示新的記憶體最佳化資料表和原生編譯的預存程序，並可用來示範 [!INCLUDE[hek_2](../includes/hek-2-md.md)]的效能優勢。  
+ 此範例示範新的 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 功能 (屬於 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]的一部分)。 此範例顯示新的記憶體最佳化資料表和原生編譯的預存程序，並可用來示範 [!INCLUDE[hek_2](../includes/hek-2-md.md)]的效能優勢。  
   
 > [!NOTE]  
 >  若要檢視 SQL Server 2016 的這項主題，請參閱 [示範記憶體內 OLTP 的 AdventureWorks 擴充功能](https://msdn.microsoft.com/library/mt465764.aspx)  
@@ -33,17 +33,17 @@ ms.locfileid: "50100409"
   
 -   安裝範例及執行工作負載示範的[必要條件](#Prerequisites)  
   
--   [基於AdventureWorks安裝In-Memory OLTP示例](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的指示  
+-    [基於AdventureWorks安裝In-Memory OLTP示例](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的指示  
   
--   [範例資料表和程序描述](#Descriptionofthesampletablesandprocedures) – 這包含 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 範例加入 AdventureWorks 中的資料表和程序的說明，以及將部分原始 AdventureWorks 資料表移轉至記憶體最佳化資料表的考量。  
+-   [範例資料表和程序描述](#Descriptionofthesampletablesandprocedures)-這包括資料表和程序加入 AdventureWorks 的說明[!INCLUDE[hek_2](../includes/hek-2-md.md)]範例中，以及移轉考量部分原始 AdventureWorks 資料表中，以記憶體最佳化  
   
--   執行 [使用工作負載示範的效能度量](#PerformanceMeasurementsusingtheDemoWorkload) 之指示 – 包括安裝及執行 ostress (用於驅動工作負載的工具) 的指示，以及執行工作負載示範本身的指示。  
+-   執行 [使用工作負載示範的效能度量](#PerformanceMeasurementsusingtheDemoWorkload) 之指示 - 包括安裝及執行 ostress (用於驅動工作負載的工具) 的指示，以及執行工作負載示範本身的指示  
   
 -   [範例中的記憶體和磁碟空間使用量](#MemoryandDiskSpaceUtilizationintheSample)  
   
 ##  <a name="Prerequisites"></a> 必要條件  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM - Evaluation、Developer 或 Enterprise Edition  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM-Evaluation、 Developer 或 Enterprise edition  
   
 -   基於效能測試考量，伺服器的規格必須與您的實際執行環境類似。 您應為此特定範例準備至少 16GB 的記憶體供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用。 如需一般的指導方針的硬體上[!INCLUDE[hek_2](../includes/hek-2-md.md)]，請參閱下列部落格文章：[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
@@ -87,15 +87,15 @@ ms.locfileid: "50100409"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  將＜[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SQL Server 2014 RTM 記憶體中的 OLTP 範例 [!INCLUDE[hek_2](../includes/hek-2-md.md)] ＞中的範例指令碼 ‘ [RTM](http://go.microsoft.com/fwlink/?LinkID=396372) Sample.sql’ 下載至本機資料夾。  
+5.  下載範例指令碼 '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' 從[SQL Server 2014 RTM 記憶體中 OLTP 範例](https://go.microsoft.com/fwlink/?LinkID=396372)至本機資料夾。  
   
-6.  更新指令碼 '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' 中的 ‘checkpoint_files_location’ 變數值，以指向 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 檢查點檔案的目標位置。 檢查點檔案應該置於具有適當循序 IO 效能的磁碟機上。  
+6.  指令碼中的 'checkpoint_files_location' 變數的值更新為'[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql'，以指向的目標位置[!INCLUDE[hek_2](../includes/hek-2-md.md)]檢查點檔案。 檢查點檔案應該置於具有適當循序 IO 效能的磁碟機上。  
   
      更新變數 'database_name' 的值，使其指向 AdventureWorks2014 資料庫。  
   
-    1.  請務必包含反斜線 ‘\’ 做為路徑名稱的一部分  
+    1.  請務必包含反斜線 '\'路徑名稱的一部分  
   
-    2.  範例：  
+    2.  範例  
   
         ```  
         :setvar checkpoint_files_location "d:\DBData\"  
@@ -108,23 +108,23 @@ ms.locfileid: "50100409"
     1.  使用 sqlcmd 命令列公用程式。 例如，從包含指令碼之資料夾中的命令列提示字元，執行下列命令：  
   
         ```  
-        sqlcmd –S . –E –i "ssSQL14 RTM hek_2 Sample.sql"  
+        sqlcmd -S . -E -i "ssSQL14 RTM hek_2 Sample.sql"  
         ```  
   
     2.  使用 Management Studio：  
   
-        1.  在查詢視窗中，開啟指令碼 ‘[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql’  
+        1.  開啟指令碼 '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' 中的查詢視窗  
   
         2.  連接至包含 AdventureWorks2014 資料庫的目標伺服器  
   
-        3.  按一下 [查詢] -> [SQLCMD 模式] 啟用 SQLCMD 模式  
+        3.  按一下 [查詢-> SQLCMD 模式] 啟用 SQLCMD 模式  
   
-        4.  按一下 [執行] 按鈕執行指令碼  
+        4.  按一下 執行，執行指令碼 按鈕  
   
 ##  <a name="Descriptionofthesampletablesandprocedures"></a> 範例資料表和程序描述  
  此範例以 AdventureWorks 中的現有資料表為基礎，為產品和銷售訂單建立新資料表。 新資料表的結構描述類似現有的資料表，但有一些差異 (如下所述)。  
   
- 新的記憶體最佳化資料表具有後置詞 ‘_inmem’。 此範例也會包含具有後置詞 ‘_ondisk’ 的對應資料表，這些資料表可用來在系統上的記憶體最佳化資料表與磁碟資料表之間，進行一對一的效能比較。  
+ 新的記憶體最佳化資料表具有後置詞 '_inmem'。 此範例也會包含具有後置詞 '_ondisk' 的對應資料表，這些資料表可用來在系統上的記憶體最佳化資料表與磁碟資料表之間，進行一對一的效能比較。  
   
  請注意，工作負載中用於比較效能的記憶體最佳化資料表是完全持久且完整記錄的。 這些資料表不會為了提升效能而犧牲持久性或可靠性。  
   
@@ -206,9 +206,9 @@ ms.locfileid: "50100409"
   
  Sales.SalesOrderDetail  
   
--   「預設條件約束」 - 類似 SalesOrderHeader，預設條件約束要求不得移轉系統日期/時間，而是由插入銷售訂單的預存程序在第一次插入時，負責插入目前的系統日期/時間。  
+-   *預設條件約束* - 類似 SalesOrderHeader，預設條件約束要求不得移轉系統日期/時間，而是由插入銷售訂單的預存程序在第一次插入時，負責插入目前的系統日期/時間。  
   
--   「計算資料行」 – 由於 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]的記憶體最佳化資料表不支援計算資料行，因此不會移轉計算資料行 LineTotal。 若要存取此資料行，請使用 Sales.vSalesOrderDetail_extended_inmem 檢視。  
+-   *計算資料行* - 由於 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中的記憶體最佳化資料表不支援計算資料行，因此不會移轉計算資料行 LineTotal。 若要存取此資料行，請使用 Sales.vSalesOrderDetail_extended_inmem 檢視。  
   
 -   *Rowguid* - Rowguid 資料行會遭到省略。 如需詳細資訊，請參閱 SalesOrderHeader 資料表的描述。  
   
@@ -221,9 +221,9 @@ ms.locfileid: "50100409"
   
  Production.Product  
   
--   「別名 UDT」 - 原始資料表使用使用者定義資料類型 dbo.Flag，相當於系統資料類型 bit。 移轉的資料表會改用 bit 資料類型。  
+-   *別名 UDT* - 原始資料表使用使用者定義資料類型 dbo.Flag，相當於系統資料類型 bit。 移轉的資料表會改用 bit 資料類型。  
   
--   「BIN2 定序」 – The columns Name and ProductNumber are included in index keys, and must thus have s in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中必須具有 BIN2 定序。 此處的假設是應用程式不依賴定序規格，例如區分大小寫。  
+-   *BIN2 定序*-Name 和 ProductNumber 的資料行包含在索引鍵，以及因此必須具有 BIN2 定序[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 此處的假設是應用程式不依賴定序規格，例如區分大小寫。  
   
 -   *Rowguid* - Rowguid 資料行會遭到省略。 如需詳細資訊，請參閱 SalesOrderHeader 資料表的描述。  
   
@@ -263,7 +263,7 @@ ms.locfileid: "50100409"
   
  HASH 索引可用來進一步最佳化工作負載。 特別是最佳化點查閱和資料列插入。 不過請注意，這些索引不支援範圍掃描、依序掃描，或搜尋前置索引鍵資料行。 因此，您需要謹慎地使用這些索引。 此外，您必須在建立時指定 bucket_count。 此計數通常應該設定為索引鍵數值到兩倍索引鍵數值之間的值，不過高估通常不會造成問題。  
   
- 如需有關 [index guidelines](http://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) (索引指導方針) 及 [choosing the right bucket_count](http://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)(選擇正確的 bucket_count) 之指導方針的詳細資料，請參閱《線上叢書》。  
+ 如需有關 [index guidelines](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) (索引指導方針) 及 [choosing the right bucket_count](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)(選擇正確的 bucket_count) 之指導方針的詳細資料，請參閱《線上叢書》。  
   
  移轉之資料表上的索引已調整為適用於銷售訂單處理工作負載示範。 此工作負載需要在 Sales.SalesOrderHeader_inmem 和 Sales.SalesOrderDetail_inmem 資料表中進行插入和點查閱，也需要對 Production.Product_inmem 和 Sales.SpecialOffer_inmem 資料表中的主索引鍵資料行進行點查閱。  
   
@@ -309,7 +309,7 @@ ms.locfileid: "50100409"
   
     -   輸出參數：  
   
-        -   @SalesOrderID int – 剛插入之銷售訂單的 SalesOrderID  
+        -   @SalesOrderID int - 剛插入之銷售訂單的 SalesOrderID  
   
     -   輸入參數 (必要)：  
   
@@ -323,7 +323,7 @@ ms.locfileid: "50100409"
   
         -   @ShipMethodID [int]  
   
-        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem – 包含訂單明細項目的 TVP  
+        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem - 包含訂單明細項目的 TVP  
   
     -   輸入參數 (選擇性)：  
   
@@ -351,7 +351,7 @@ ms.locfileid: "50100409"
   
     -   更新給定銷售訂單的出貨資訊。 這也會更新銷售訂單之所有明細項目的出貨資訊。  
   
-    -   這是原生編譯預存程序 Sales.usp_UpdateSalesOrderShipInfo_native 的包裝函式程序，其重試邏輯可處理更新相同訂單之並行交易所時產生的 (非預期) 潛在衝突。 如需有關重試邏輯的詳細資訊，請參閱 [這裡](http://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)的《線上叢書》主題。  
+    -   這是原生編譯預存程序 Sales.usp_UpdateSalesOrderShipInfo_native 的包裝函式程序，其重試邏輯可處理更新相同訂單之並行交易所時產生的 (非預期) 潛在衝突。 如需有關重試邏輯的詳細資訊，請參閱 [這裡](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)的《線上叢書》主題。  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
@@ -379,7 +379,7 @@ ms.locfileid: "50100409"
   
 1.  dbo.usp_ValidateIntegrity  
   
-    -   選擇性參數： @object_id – 要驗證完整性的物件識別碼  
+    -   選擇性參數：@object_id - 要驗證完整性的物件識別碼  
   
     -   此程序依賴資料表 dbo.DomainIntegrity、dbo.ReferentialIntegrity 和 dbo.UniqueIntegrity 取得需要驗證的完整性規則 - 此範例會根據 AdventureWorks 資料庫中原始資料表的檢查、外部索引鍵及唯一條件約束，以填入這些資料表。  
   
@@ -393,7 +393,7 @@ ms.locfileid: "50100409"
   
  安裝步驟：  
   
-1.  從以下頁面下載並執行 RML 公用程式的 x64 安裝套件：[http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
+1.  從以下頁面下載並執行 RML 公用程式的 x64 安裝套件：[https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
   
 2.  如果出現對話方塊，指出特定檔案正在使用，請按一下 [繼續]  
   
@@ -402,7 +402,7 @@ ms.locfileid: "50100409"
   
  若要開啟 RML CMD 命令提示字元，請遵循下列指示：  
   
- 在 Windows Server 2012 [R2] 以及 Windows 8 和 8.1 中，按一下 Windows 鍵開啟 [開始] 功能表，然後輸入 ‘rml’。 按一下搜尋結果清單中的 “RML CMD Prompt”。  
+ 在 Windows Server 2012 [R2] 以及 Windows 8 和 8.1 中，按一下 Windows 鍵開啟 [開始] 功能表，然後輸入 'rml'。 按一下搜尋結果清單中的 "RML Cmd Prompt"。  
   
  確定命令提示字元位於 RML 公用程式安裝資料夾中。 例如：  
   
@@ -412,7 +412,7 @@ ms.locfileid: "50100409"
   
 -   -S 要連接之 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的名稱  
   
--   -E：使用 Windows 驗證進行連接 (預設值)，如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，請分別使用 -U 和 -P 選項來指定使用者名稱和密碼  
+-   -E 使用 Windows 驗證進行連接 （預設值）;如果您使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]驗證，使用選項-和-P 以分別指定使用者名稱和密碼，  
   
 -   -d：資料庫的名稱，在此範例中為 AdventureWorks2014  
   
@@ -457,9 +457,9 @@ END
   
  利用此指令碼，每個建構的範例訂單會透過以 WHILE 迴圈執行的 20 個預存程序被插入 20 次。 此迴圈可用來說明使用資料庫建構範例訂單的情況。 在一般實際執行環境中，中間層應用程式會建構要插入的銷售訂單。  
   
- 上述指令碼會將銷售訂單插入記憶體最佳化資料表。 以 ‘_ondisk’ 取代出現兩次的 ‘_inmem’，即可衍生將銷售訂單插入磁碟資料表的指令碼。  
+ 上述指令碼會將銷售訂單插入記憶體最佳化資料表。 以 '_ondisk' 取代出現兩次的 '_inmem'，即可衍生將銷售訂單插入磁碟資料表的指令碼。  
   
- 我們將在數個並行連接下，使用 ostress 工具執行這些指令碼。 我們將使用參數 ‘-n’ 來控制連接數目，並使用參數 ‘r’ 來控制每個連接上執行指令碼的次數。  
+ 我們將在數個並行連接下，使用 ostress 工具執行這些指令碼。 我們將使用參數 '-n' 來控制連接數目，並使用參數 'r' 來控制每個連接上執行指令碼的次數。  
   
 #### <a name="functional-validation-of-the-workload"></a>工作負載的功能驗證  
  若要確認一切運作正常，我們將以範例測試開頭，使用 10 個並行連接和 5 次反覆運算，總共 10 * 5 插入\*20 = 1,000 個銷售訂單。  
@@ -471,7 +471,7 @@ END
  按一下 [複製] 按鈕複製命令，然後將其貼入 RML 公用程式命令提示字元。  
   
 ```  
-ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n10 -r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  如果一切如預期運作，您的命令視窗會類似如下。 不應該出現錯誤訊息。  
@@ -483,15 +483,15 @@ ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
  按一下 [複製] 按鈕複製命令，然後將其貼入 RML 公用程式命令提示字元。  
   
 ```  
-ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n10 -r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
 #### <a name="running-the-workload"></a>執行工作負載  
- 為了進行規模測試，我們使用 100 個連接插入 1,000 萬個銷售訂單。 此測試會在適合的伺服器 (例如 8 個實體、16 個邏輯核心) 上適當地執行，並使用基本 SSD 儲存體儲存記錄檔。 如果此測試無法在您的硬體上正常執行，請檢閱 [為執行緩慢的測試疑難排解](#Troubleshootingslow-runningtests)一節。如果您想要降低此測試的壓力程度，請變更參數 ‘-n’ 以減少連線數目。 例如，若要將連接計數減少到 40，請將參數 ‘-n100’ 變更為 ‘-n40’。  
+ 為了進行規模測試，我們使用 100 個連接插入 1,000 萬個銷售訂單。 此測試會在適合的伺服器 (例如 8 個實體、16 個邏輯核心) 上適當地執行，並使用基本 SSD 儲存體儲存記錄檔。 如果此測試無法在您的硬體上正常執行，請檢閱 [為執行緩慢的測試疑難排解](#Troubleshootingslow-runningtests)一節。如果您想要降低此測試的壓力程度，請變更參數 '-n' 以減少連線數目。 例如，若要將連接計數減少到 40，請將參數 '-n100' 變更為 '-n40'。  
   
  我們使用執行工作負載之後由 ostress.exe 報告的經過時間，做為工作負載的效能度量。  
   
-##### <a name="memory-optimized-tables"></a>記憶體最佳化資料表  
+##### <a name="memory-optimized-tables"></a>記憶體最佳化的資料表  
  首先執行記憶體最佳化資料表上的工作負載。 下列命令會開啟 100 個執行緒，每個執行緒執行 5,000 次反覆運算。  每次反覆運算會將 20 個銷售訂單插入個別交易。 每次反覆運算會插入 20 個訂單，以彌補使用資料庫產生要插入之資料的情況。 這樣會產生總計 20 * 5,000 \* 100 = 10,000,000 個銷售訂單的插入。  
   
  開啟 RML CMD 命令提示字元，然後執行下列命令：  
@@ -499,7 +499,7 @@ ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
  按一下 [複製] 按鈕複製命令，然後將其貼入 RML 公用程式命令提示字元。  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  在具有 8 顆實體 (16 顆邏輯) 核心的測試伺服器上，此作業約需 2 分 5 秒。 在具有 24 個實體 (48 個邏輯) 核心的第二部測試伺服器上，此作業需要 1 分 0 秒。  
@@ -514,16 +514,16 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 
  按一下 [複製] 按鈕複製命令，然後將其貼入 RML 公用程式命令提示字元。  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  在具有總數 8 個實體 (16 個邏輯) 核心的測試伺服器上，此作業需要 41 分 25 秒。 在具有 24 個實體 (48 個邏輯) 核心的第二部測試伺服器上，此作業需要 52 分 16 秒。  
   
- 在此測試中，記憶體最佳化資料表與磁碟資料表之間出現效能差異的主要因素，是使用磁碟資料表時， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法充分運用 CPU。 原因在於閂鎖競爭：並行交易嘗試寫入相同的資料頁面，使用閂鎖可確保一次只有一筆交易可以寫入頁面。 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 引擎不需閂鎖，且資料列不是以頁面方式組織。 因此，並行交易不會封鎖彼此的插入，而能讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 充分運用 CPU。  
+ 在此測試中，記憶體最佳化資料表與磁碟資料表之間出現效能差異的主要因素，是使用磁碟資料表時， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法充分運用 CPU。 原因在於閂鎖競爭：並行交易嘗試寫入相同的資料頁面，使用閂鎖可確保一次只有一筆交易可以寫入頁面。 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 引擎不需閂鎖，且資料列不是以頁面方式組織。 因此，並行交易不會封鎖彼此的插入，因此讓[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]來充分運用 CPU。  
   
  您可以觀察執行工作負載時的 CPU 使用率，例如使用工作管理員。 您會看到磁碟資料表的 CPU 使用率遠低於 100%。 在具有 16 個邏輯處理器的測試組態中，使用率保持在 24% 左右。  
   
- 或者，您可以使用效能監視器搭配效能計數器 ‘\SQL Server:Latches\Latch Waits/sec’，檢視每秒的閂鎖等候次數。  
+ 或者，您可以使用效能監視器搭配效能計數器 '\SQL Server:Latches\Latch Waits/sec'，檢視每秒的閂鎖等候次數。  
   
 #### <a name="resetting-the-demo"></a>重設示範  
  若要重設示範，請開啟 RML CMD 命令提示字元，然後執行下列命令：  
@@ -541,7 +541,7 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
   
 -   並行交易數目：在單一執行緒上執行工作負載時，透過 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 提升的效能可能不到兩倍。 只有在高度並行的情況下，閂鎖競爭才會成為嚴重的問題。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]可用的核心數目很低：這表示系統中的並行程度不高，因為同時執行的交易數目必須與 SQL 可用的核心數目相同。  
+-   可用於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的核心數目很低：這表示系統中的並行程度不高，因為同時執行的交易數目必須與 SQL 可用的核心數目相同。  
   
     -   徵兆：執行磁碟資料表上的工作負載時，如果 CPU 使用率很高，並不是指競爭很多，而是指缺少並行。  
   
@@ -647,7 +647,7 @@ WHERE t.type='U'
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
   
- 我們會看到總計約 6.5GB 的資料。 請注意，資料表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 上索引的大小和索引的大小相同之前插入銷售訂單。 由於這兩個資料表使用雜湊索引，而雜湊索引是靜態的，因此索引大小不會改變。  
+ 我們會看到總計約 6.5GB 的資料。 請注意，資料表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 上的索引大小，與插入銷售訂單之前的索引大小相同。 由於這兩個資料表使用雜湊索引，而雜湊索引是靜態的，因此索引大小不會改變。  
   
 #### <a name="after-demo-reset"></a>重設示範之後  
  您可以使用預存程序 Demo.usp_DemoReset 重設示範。 此預存程序會刪除資料表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 中的資料，然後重新植入原始資料表 SalesOrderHeader 和 SalesOrderDetail 中的資料。  

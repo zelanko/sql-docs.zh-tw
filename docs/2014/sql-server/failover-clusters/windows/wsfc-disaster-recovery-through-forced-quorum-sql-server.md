@@ -14,17 +14,17 @@ ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c93f9327adf0801898c45a541d935a4d3b34758c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c170fa1b302ccd0a1edec156b3b30429fc2daf8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161879"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365371"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>透過強制仲裁執行 WSFC 災害復原 (SQL Server)
   仲裁失敗的原因通常是涉及 WSFC 叢集中許多節點的系統損毀、持續性通訊失敗或設定錯誤。  若要從仲裁失敗中復原，您必須進行手動介入。  
   
--   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
+-   **在開始之前：**[必要條件](#Prerequisites)，[安全性](#Security)  
   
 -   **透過強制仲裁程序執行 WSFC 災害復原** [透過強制仲裁程序執行 WSFC 災害復原](#Main)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48161879"
 > [!WARNING]  
 >  使用者應該充分了解 Windows Server 容錯移轉叢集、WSFC 仲裁模型、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以及環境特定部署組態的概念和互動方式。  
 >   
->  如需詳細資訊，請參閱：  [SQL Server 的 Windows Server 容錯移轉叢集 (WSFC)](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC 仲裁模式和投票組態 (SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)。  
+>  如需詳細資訊，請參閱：[Windows Server 容錯移轉叢集 (WSFC) 與 SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx)， [WSFC 仲裁模式和投票組態 (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
 ###  <a name="Security"></a> 安全性  
  使用者必須是屬於 WSFC 叢集之每一個節點上本機 Administrators 群組成員的網域帳戶。  
@@ -65,7 +65,7 @@ ms.locfileid: "48161879"
   
      在此節點上，您可以使用強制仲裁程序來手動強制叢集上線。  為了盡量降低遺失資料的可能性，請選取最後裝載可用性群組主要複本的節點。  
   
-     如需詳細資訊，請參閱：＜  [在無仲裁情況下強制啟動 WSFC 叢集](http://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)＞  
+     如需詳細資訊，請參閱：[在無仲裁情況下強制啟動 WSFC 叢集](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
   
     > [!NOTE]  
     >  強制仲裁設定會影響整個叢集並封鎖仲裁檢查，直到邏輯 WSFC 叢集達成大多數投票並自動轉換成一般仲裁模式的作業為止。  
@@ -117,9 +117,9 @@ ms.locfileid: "48161879"
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [檢視容錯移轉叢集的事件和記錄檔](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [檢視容錯移轉叢集的事件和記錄檔](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog 容錯移轉叢集指令程式](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog 容錯移轉叢集指令程式](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](windows-server-failover-clustering-wsfc-with-sql-server.md)  

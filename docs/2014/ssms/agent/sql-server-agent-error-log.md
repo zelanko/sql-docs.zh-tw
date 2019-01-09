@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], SQL Server Agent
@@ -15,12 +15,12 @@ ms.assetid: 0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 227674a9a06508a9daaa04350dbc8a50f558cb2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1dfa6926d86fce5006e458b3738a28a8b5f467d0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194240"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821762"
 ---
 # <a name="sql-server-agent-error-log"></a>SQL Server Agent 錯誤記錄檔
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 依預設，Agent 會建立錯誤記錄檔來記錄警告與錯誤。 記錄檔中會顯示下列警告和錯誤：  

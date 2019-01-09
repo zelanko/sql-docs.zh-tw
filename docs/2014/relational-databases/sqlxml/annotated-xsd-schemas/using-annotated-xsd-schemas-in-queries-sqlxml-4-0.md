@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - queries [SQLXML]
@@ -23,17 +21,17 @@ ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 15da4e4aba1162be479972de48c5ba4b0cf63107
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37c7f266fbfa09a4cd8fea463ba224e9ec2b4534
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220278"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800375"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>在查詢中使用註解式 XSD 結構描述 (SQLXML 4.0)
   您可以針對 XSD 結構描述指定範本中的 XPath 查詢，藉以針對註解式結構描述指定查詢來擷取資料庫中的資料。  
   
- **\<Sql:xpath-查詢 >** 元素可讓您指定 XPath 查詢針對註解式結構描述所定義的 XML 檢視。 針對所要執行的 XPath 查詢的註解式結構描述由使用`mapping-schema`的屬性 **\<sql:xpath-查詢 >** 項目。  
+  **\<Sql:xpath-查詢 >** 元素可讓您指定 XPath 查詢針對註解式結構描述所定義的 XML 檢視。 針對所要執行的 XPath 查詢的註解式結構描述由使用`mapping-schema`的屬性 **\<sql:xpath-查詢 >** 項目。  
   
  範本是包含一或多個查詢的有效 XML 文件。 FOR XML 和 XPath 查詢會傳回文件片段。 範本對於文件片段就像是容器一樣；因此，範本會提供一種方式來指定單一的上層元素。  
   

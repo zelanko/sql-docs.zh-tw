@@ -1,7 +1,8 @@
 ---
-title: 在 Azure 資料 Studio 中的伺服器群組 |Microsoft Docs
-description: 深入了解 Azure Data Studio 中的伺服器群組。
-ms.custom: tools|sos
+title: 伺服器群組
+titleSuffix: Azure Data Studio
+description: 深入了解 Azure Data Studio 中的伺服器群組
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 233f4579860bef97a641460752544b8e1042e700
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: e12ab9cba41361ad3692e31d0a39de65770403ac
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356559"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030362"
 ---
 # <a name="server-groups-in-includename-sosincludesname-sos-shortmd"></a>中的伺服器群組 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -23,8 +24,8 @@ ms.locfileid: "49356559"
 
 ## <a name="create-and-edit-server-groups"></a>建立和編輯伺服器群組
 
-1. 在 **伺服器** [資訊看板] 上方，點選 *新伺服器群組*。
-2. 輸入群組名稱並選擇群組的色彩。 您可以加入描述（選擇性）。
+1.  在 **伺服器** [資訊看板] 上方，點選 *新伺服器群組*。
+2.  輸入群組名稱並選擇群組的色彩。 您可以加入描述（選擇性）。
 
    ![新增伺服器群組](./media/server-groups/add-server-group.png)
 

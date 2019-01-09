@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - element does not map [SQLXML]
@@ -24,12 +22,12 @@ ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 96afa13033fee6a2767fc1ad3f6b6761c4a8247f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50ec2b9a4c35fdf16b8d7f696b9d227eb63ff7cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222310"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793800"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>使用 sql:mapped 從產生的 XML 文件排除結構描述元素 (SQLXML 4.0)
   XSD 結構描述中的每個元素和屬性都會因為預設對應，而對應到資料庫資料表/檢視表和資料行。 如果您要在 XSD 結構中建立沒有對應到任何資料庫資料表 (檢視表) 或資料行，而且沒有出現在 XML 中的元素，您可以指定 `sql:mapped` 註解。  
@@ -46,7 +44,7 @@ ms.locfileid: "48222310"
   
  此 XSD 結構描述對應至 AdventureWorks 資料庫中的 Person.Contact 資料表中`sql:mapped`上指定**HomeAddress**屬性，因為 Employees 資料表不會儲存員工的住家地址。 因此，根據對應結構描述指定 XPath 查詢時，此屬性不會對應到資料庫，而且不會在產生的 XML 文件中傳回。  
   
- 預設的對應發生於其餘的結構描述。 **\<Person.Contact >** 元素會對應至 Person.Contact 資料表中，而所有屬性都會都對應到 Person.Contact 資料表中的相同名稱的資料行。  
+ 預設的對應發生於其餘的結構描述。  **\<Person.Contact >** 元素會對應至 Person.Contact 資料表中，而所有屬性都會都對應到 Person.Contact 資料表中的相同名稱的資料行。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

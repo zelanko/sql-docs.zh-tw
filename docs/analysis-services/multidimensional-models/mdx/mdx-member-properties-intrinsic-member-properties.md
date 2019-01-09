@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a2e30dcf1875b09630516be9d9deb3248a95481e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: e54aa6bb53e6ce9f34e6647927f29b7aadb97180
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146161"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206877"
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX 成員屬性-內建成員屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -26,13 +26,13 @@ ms.locfileid: "50146161"
   
  如需有關使用及檢視維度成員屬性的簡介，請參閱 [在 SSMS 的 MDX 查詢視窗中檢視 SSAS 成員屬性](http://go.microsoft.com/fwlink/?LinkId=317362)。  
   
-> [!NOTE]  
+> [!NOTE]
 >  因為提供者符合 OLE DB 規格的 OLAP 小節 (1999 年 3 月 (2.6 節))，所以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支援此主題中列出的內建成員屬性。  
->   
+> 
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 以外的提供者可支援其他內建成員屬性。 如需其他提供者支援之內建成員屬性的詳細資訊，請參閱這些提供者提供的文件。  
   
 ## <a name="types-of-member-properties"></a>成員屬性類型  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支援的內建成員屬性有兩種類型：  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支援的內建成員屬性有兩種類型：  
   
  區分內容的成員屬性  
  這些成員屬性必須用於特定階層或層級的內容，而且要將值提供給指定維度或層級的每個成員。  
@@ -61,7 +61,7 @@ ms.locfileid: "50146161"
 |--------------|-----------------|  
 |**ID**|內部維護用的成員識別碼。|  
 |**Key**|原始資料類型的成員索引鍵值。 MEMBER_KEY 是為回溯相容性而提供。  對於非複合索引鍵，MEMBER_KEY 的值與 KEY0 相同，對於複合索引鍵，MEMBER_KEY 屬性為 Null。|  
-|**KEYx**|成員的索引鍵，其中 x 是索引鍵以零為基底的序數。 KEY0 可用於複合和非複合索引鍵，但主要是用於複合索引鍵。<br /><br /> 關於複合索引鍵，KEY0、KEY1、KEY2 等等，共同形成複合索引鍵。 您可以在查詢中單獨使用每一項，藉以傳回複合索引鍵的該部分。 例如，指定 KEY0 可傳回複合索引鍵的第一個部分，指定 KEY1 傳回複合索引鍵的下一部分，依此類推。<br /><br /> 如果索引鍵為非複合鍵，則 KEY0 相當於 **Key**。<br /><br /> 請注意， **KEYx** 可用於內容中，也可以在沒有內容的情況下使用。 因此，兩個清單上都有它。<br /><br /> 如需如何使用此成員屬性的範例，請參閱 [簡單的 MDX 小知識：Key0、Key1、Key2](http://go.microsoft.com/fwlink/?LinkId=317364)。|  
+|**KEYx**|成員的索引鍵，其中 x 是索引鍵以零為基底的序數。 KEY0 可用於複合和非複合索引鍵，但主要是用於複合索引鍵。<br /><br /> 關於複合索引鍵，KEY0、KEY1、KEY2 等等，共同形成複合索引鍵。 您可以在查詢中單獨使用每一項，藉以傳回複合索引鍵的該部分。 例如，指定 KEY0 可傳回複合索引鍵的第一個部分，指定 KEY1 傳回複合索引鍵的下一部分，依此類推。<br /><br /> 如果索引鍵為非複合鍵，則 KEY0 相當於 **Key**。<br /><br /> 請注意， **KEYx** 可用於內容中，也可以在沒有內容的情況下使用。 因此，兩個清單上都有它。<br /><br /> 如需如何使用此成員屬性的範例，請參閱[簡單的 MDX 小知識：Key0、 Key1、 Key2](http://go.microsoft.com/fwlink/?LinkId=317364)。|  
 |**名稱**|成員的名稱。|  
   
 ### <a name="properties-syntax-for-context-sensitive-properties"></a>區分內容屬性的 PROPERTIES 語法  
@@ -98,7 +98,7 @@ ms.locfileid: "50146161"
 |**HIERARCHY_UNIQUE_NAME**|階層架構的唯一名稱。 如果該成員屬於多個階層，該成員所屬的每個階層都會有一個資料列。 對於會依識別資格產生唯一名稱的提供者，此名稱的每個元件會使用分隔符號。|  
 |**IS_DATAMEMBER**|指出成員是否為資料成員的布林值。|  
 |**IS_PLACEHOLDERMEMBER**|表示成員是否為預留位置的布林值。|  
-|**KEYx**|成員的索引鍵，其中 x 是索引鍵以零為基底的序數。 KEY0 可用於複合和非複合索引鍵。<br /><br /> 如果索引鍵為非複合鍵，則 KEY0 相當於 **Key**。<br /><br /> 關於複合索引鍵，KEY0、KEY1、KEY2 等等，共同形成複合索引鍵。 您可以在查詢中單獨參考每一項，藉以傳回複合索引鍵的該部分。 例如，指定 KEY0 可傳回複合索引鍵的第一個部分，指定 KEY1 傳回複合索引鍵的下一部分，依此類推。<br /><br /> 請注意， **KEYx** 可用於內容中，也可以在沒有內容的情況下使用。 因此，兩個清單上都有它。<br /><br /> 如需如何使用此成員屬性的範例，請參閱 [簡單的 MDX 小知識：Key0、Key1、Key2](http://go.microsoft.com/fwlink/?LinkId=317364)。|  
+|**KEYx**|成員的索引鍵，其中 x 是索引鍵以零為基底的序數。 KEY0 可用於複合和非複合索引鍵。<br /><br /> 如果索引鍵為非複合鍵，則 KEY0 相當於 **Key**。<br /><br /> 關於複合索引鍵，KEY0、KEY1、KEY2 等等，共同形成複合索引鍵。 您可以在查詢中單獨參考每一項，藉以傳回複合索引鍵的該部分。 例如，指定 KEY0 可傳回複合索引鍵的第一個部分，指定 KEY1 傳回複合索引鍵的下一部分，依此類推。<br /><br /> 請注意， **KEYx** 可用於內容中，也可以在沒有內容的情況下使用。 因此，兩個清單上都有它。<br /><br /> 如需如何使用此成員屬性的範例，請參閱[簡單的 MDX 小知識：Key0、 Key1、 Key2](http://go.microsoft.com/fwlink/?LinkId=317364)。|  
 |**LCID** *x*|以地區設定識別碼十六進位值翻譯的成員標題，其中 *x* 是地區設定識別碼十進位值 (例如，代表加拿大英文的 LCID1009)。 只有當翻譯的標題資料行繫結至資料來源時，才適用此功能。|  
 |**LEVEL_NUMBER**|成員距根階層的距離。 根層級為零。|  
 |**LEVEL_UNIQUE_NAME**|成員所屬層級的唯一名稱。 對於會依識別資格產生唯一名稱的提供者，此名稱的每個元件會使用分隔符號。|  
@@ -131,7 +131,7 @@ ms.locfileid: "50146161"
 ### <a name="example"></a>範例  
  下列範例顯示傳回內建屬性的 MDX 查詢。  
   
- **範例 1：在查詢中使用會受內容影響的內建屬性**  
+ **範例 1:在查詢中使用受內容影響的內建屬性**  
   
  下列範例會傳回父系識別碼、索引鍵和每項產品類別的名稱。 請注意屬性如何公開為量值。 在您執行查詢時，這可讓您在資料格集中檢視屬性，而非 SSMS 的 [成員屬性] 對話方塊。 您可以執行類似此項目的查詢，以便從已部署的 Cube 擷取成員中繼資料。  
   
@@ -149,7 +149,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- **範例 2：不受內容影響的內建屬性**  
+ **範例 2:不受內容影響的內建屬性**  
   
  下列範例是不受內容影響的內建屬性完整清單。 在 SSMS 執行查詢後，請按一下個別成員，檢視 [成員屬性] 對話方塊中的屬性。  
   
@@ -187,7 +187,7 @@ FROM [Adventure Works]
 WHERE [Employee].[Employee Department].[Department].&[Sales]  
 ```  
   
- **範例 3：傳回做為結果集資料的成員屬性**  
+ **範例 3︰傳回結果集中的資料成員屬性**  
   
  下列範例會針對指定的地區設定，傳回 Adventure Works Cube 中 Product 維度的產品類別目錄成員的已翻譯標題。  
   

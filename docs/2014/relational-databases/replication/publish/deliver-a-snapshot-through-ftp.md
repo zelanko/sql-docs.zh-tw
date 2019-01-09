@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], FTP snapshots
@@ -15,12 +14,12 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f5ae5a48b7ace7d0c8e9fffe1e5993bfd232da8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 2e3422e1fc41069bcb1f5f88c841212b5415cacd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192578"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777560"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>透過 FTP 傳遞快照集
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中透過 FTP 傳遞快照集。  
@@ -65,7 +64,7 @@ ms.locfileid: "48192578"
   
 1.  從以下頁面之一的 [發行集屬性 - \<發行集>]  對話方塊中，選取 [允許訂閱者使用 FTP 下載快照集檔案]：  
   
-    -   **[FTP 快照集]** 頁面，適用於快照式和交易式發行集，以及執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]之前版本的「發行者」所用的合併式發行集。  
+    -    **[FTP 快照集]** 頁面，適用於快照式和交易式發行集，以及執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]之前版本的「發行者」所用的合併式發行集。  
   
     -   **[FTP 快照集和網際網路]** 頁面，適用於執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本「發行者」的合併式發行集。  
   
@@ -140,11 +139,11 @@ ms.locfileid: "48192578"
   
 1.  在發行集資料庫的發行者上，執行 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)。 針對 **@property** 指定下列其中一個值，並針對 **@value**指定此設定的新值：  
   
-    -   `ftp_address` -用於傳遞快照集之 FTP 伺服器的位址。  
+    -   `ftp_address` - 用於傳遞快照集之 FTP 伺服器的位址。  
   
-    -   `ftp_port` -FTP 伺服器所使用的連接埠。  
+    -   `ftp_port` - FTP 伺服器所使用的通訊埠。  
   
-    -   `ftp_subdirectory` -用於 FTP 快照集之預設 FTP 目錄的子目錄。  
+    -   `ftp_subdirectory` - 用於 FTP 快照集之預設 FTP 目錄的子目錄。  
   
     -   `ftp_login` - 用於連接 FTP 伺服器的登入。  
   
@@ -158,11 +157,11 @@ ms.locfileid: "48192578"
   
 1.  在發行集資料庫的發行者上，執行 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)。 針對 **@property** 指定下列其中一個值，並針對 **@value**指定此設定的新值：  
   
-    -   `ftp_address` -用於傳遞快照集之 FTP 伺服器的位址。  
+    -   `ftp_address` - 用於傳遞快照集之 FTP 伺服器的位址。  
   
-    -   `ftp_port` -FTP 伺服器所使用的連接埠。  
+    -   `ftp_port` - FTP 伺服器所使用的通訊埠。  
   
-    -   `ftp_subdirectory` -用於 FTP 快照集之預設 FTP 目錄的子目錄。  
+    -   `ftp_subdirectory` - 用於 FTP 快照集之預設 FTP 目錄的子目錄。  
   
     -   `ftp_login` - 用於連接 FTP 伺服器的登入。  
   

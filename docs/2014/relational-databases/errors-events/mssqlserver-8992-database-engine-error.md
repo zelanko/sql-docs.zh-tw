@@ -12,12 +12,12 @@ ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37bc819ab06a960887963b48be70c18e2ce8f656
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131938"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362840"
 ---
 # <a name="mssqlserver8992"></a>MSSQLSERVER_8992
     
@@ -30,7 +30,7 @@ ms.locfileid: "48131938"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC3_CHECK_CATALOG|  
-|訊息文字|檢查目錄訊息 ERROR 層級 LEVEL 狀態 STATE: MESSAGE。|  
+|訊息文字|檢查目錄訊息錯誤層級 LEVEL 狀態 STATE:訊息。|  
   
 ## <a name="explanation"></a>說明  
  DBCC CHECKCATALOG 或 DBCC CHECKDB 在指定之物件的系統中繼資料表中發現不一致。 亦即，在記錄的物件識別碼和錯誤訊息中指定的物件之間發生不一致。  
@@ -75,6 +75,6 @@ ms.locfileid: "48131938"
  不要手動更新系統資料表。 SQL Server 不支援對系統資料庫進行任何手動變更。 如果您更新 SQL Server 資料庫中的系統資料表，則會記錄兩個事件 (事件識別碼 17659 和事件識別碼 3859)。 如需詳細資訊，請參閱知識庫文件 2688307＜當您更新 SQL Server 資料庫中的系統資料表時，會記錄事件識別碼 17659 和事件識別碼 3859＞(機器翻譯)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Event ID 17659 and event ID 3859 are logged when you update system tables in a SQL Server database](http://support.microsoft.com/kb/2688307/EN-US) (當您更新 SQL Server 資料庫中的系統資料表時，會記錄事件識別碼 17659 和事件識別碼 3859)  
+ [Event ID 17659 and event ID 3859 are logged when you update system tables in a SQL Server database](https://support.microsoft.com/kb/2688307/EN-US) (當您更新 SQL Server 資料庫中的系統資料表時，會記錄事件識別碼 17659 和事件識別碼 3859)  
   
   

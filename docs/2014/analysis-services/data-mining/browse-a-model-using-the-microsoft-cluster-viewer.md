@@ -23,15 +23,15 @@ ms.assetid: 591fe30b-d88f-4a71-94d4-4a3907fc275d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 185e9a154a7eb51ff15ce1b45bfd82dc2e36adf0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 78172be64641195f787e0e807149b4995c3b5805
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087768"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530586"
 ---
 # <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>使用 Microsoft 叢集檢視器瀏覽模型
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 叢集檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法是用來瀏覽資料以識別資料中的異常及建立預測的一種分割演算法。 如需這個演算法的詳細資訊，請參閱 [Microsoft 群集演算法](microsoft-clustering-algorithm.md)。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 叢集檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法是用來瀏覽資料以識別資料中的異常及建立預測的一種分割演算法。 如需這個演算法的詳細資訊，請參閱 [Microsoft 群集演算法](microsoft-clustering-algorithm.md)。  
   
 > [!NOTE]  
 >  若要檢視有關此模型中所用的方程式及所探索之模式的詳細資訊，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容樹狀檢視器。 如需詳細資訊，請參閱[使用 Microsoft 一般內容樹狀檢視器瀏覽模型](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)。  
@@ -50,7 +50,7 @@ ms.locfileid: "48087768"
 ###  <a name="BKMK_Diagram"></a> 群集圖表  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 叢集檢視器的 [叢集圖表] 索引標籤會顯示採礦模型中的所有叢集。 連接一個群集與另一個群集的線條陰影代表群集的相似程度。 如果陰影很淡或不存在，則表示群集不太相似。 當線條色彩加深時，連結的相似度就更高。 您可以調整群集右邊的滑桿，來調整檢視器要顯示的線條數目。 降低滑桿只顯示最強的連結。  
   
- 依預設，陰影代表群集的母體。 使用 [陰影變數] 和 [狀態] 選項，您可以選取陰影所代表的屬性和狀態組合。 陰影愈深，表示特定狀態的屬性散發就愈大。 當陰影變淡時，散發跟著減少。  
+ 依預設，陰影代表群集的母體。 藉由使用**ShadingVariable**並**狀態**選項，您可以選取的屬性和狀態組合的陰影表示。 陰影愈深，表示特定狀態的屬性散發就愈大。 當陰影變淡時，散發跟著減少。  
   
  若要重新命名叢集，請以滑鼠右鍵按一下其節點，然後選取 [重新命名叢集]。 新名稱會保存在伺服器上。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48087768"
  [Microsoft 群集演算法](microsoft-clustering-algorithm.md)   
  [採礦模型檢視器工作和使用說明](mining-model-viewer-tasks-and-how-tos.md)   
  [採礦模型檢視器工作和使用說明](mining-model-viewer-tasks-and-how-tos.md)   
- [資料採礦工具](data-mining-tools.md)   
+ [資料採礦工具。](data-mining-tools.md)   
  [資料採礦模型檢視器](data-mining-model-viewers.md)  
   
   

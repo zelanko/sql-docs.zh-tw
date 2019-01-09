@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - explicit schema mapping [SQLXML]
@@ -24,12 +22,12 @@ ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74d53bd692371861e12ebbd323af2741da146bc5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 82f6c6d8e7ecfa3a1ca29805c186d601ed65bd00
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113328"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782930"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Updategram 簡介 (SQLXML 4.0) 
   您可以修改 （插入、 更新或刪除） 中的資料庫[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]從現有的 XML 文件使用 updategram 或 OPENXML[!INCLUDE[tsql](../../../includes/tsql-md.md)]函式。  
@@ -110,7 +108,7 @@ ms.locfileid: "48113328"
  利用預設對應 (在 Updategram 中未指定對應結構描述時)，Updategram 元素會對應到資料表，而子元素 (如果是元素中心對應) 和屬性 (如果是屬性中心對應) 則會對應到資料行。  
   
 ### <a name="element-centric-mapping"></a>元素中心的對應  
- 在元素中心的 Updategram 中，一個元素包含表示元素屬性的多個子元素。 例如，請參閱下列 Updategram。 **\<Person.Contact >** 項目包含 **\<FirstName >** 並 **\<LastName >** 子項目。 這些子項目是屬性 **\<Person.Contact >** 項目。  
+ 在元素中心的 Updategram 中，一個元素包含表示元素屬性的多個子元素。 例如，請參閱下列 Updategram。  **\<Person.Contact >** 項目包含 **\<FirstName >** 並 **\<LastName >** 子項目。 這些子項目是屬性 **\<Person.Contact >** 項目。  
   
  這個 updategram 未指定對應結構描述，因此 updategram 會使用隱含的對應，其中 **\<Person.Contact >** 元素會對應到 Person.Contact 資料表，而其子項目對應到 FirstName 和LastName 資料行。  
   

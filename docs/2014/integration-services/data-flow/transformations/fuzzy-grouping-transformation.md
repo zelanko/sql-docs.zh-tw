@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtrans.f1
@@ -26,18 +25,18 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8f0b1fc213fb1916421b1c9b0f02bb82b5553770
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0108e55f6038b234d78f3fd66d9bae243af28a9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123000"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357349"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊群組轉換
   「模糊群組」轉換會透過識別可能重複的資料列並選取用於標準化資料的標準資料列，執行資料清除工作。  
   
 > [!NOTE]  
->  如需模糊群組轉換 (包括效能和記憶體限制) 的詳細資訊，請參閱 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(SQL Server Integration Services 2005 中的模糊查閱和模糊群組) 白皮書。  
+>  如需模糊群組轉換 (包括效能和記憶體限制) 的詳細資訊，請參閱 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(SQL Server Integration Services 2005 中的模糊查閱和模糊群組) 白皮書。  
   
  「模糊群組」轉換需要連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體，以建立轉換演算法執行其工作所需的暫存 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。 連接必須解析為具有在資料庫中建立資料表之權限的使用者。  
   
@@ -84,11 +83,11 @@ ms.locfileid: "48123000"
   
  如需可在 [模糊群組轉換編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [模糊群組轉換編輯器&#40;連接管理員索引標籤&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [模糊群組轉換編輯器 &#40;連線管理員索引標籤&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [模糊群組轉換編輯器&#40;資料行索引標籤&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [模糊群組轉換編輯器 &#40;資料行索引標籤&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [模糊群組轉換編輯器&#40;進階索引標籤&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [模糊群組轉換編輯器 &#40;進階索引標籤&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   

@@ -94,7 +94,7 @@ ms.locfileid: "53204707"
 |SQL Azure||||||是|  
   
 > [!IMPORTANT]
-> 根據專案類型，但不是根據版本的資料庫物件的轉換會執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您已連線到。 中的案例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005年專案中，轉換會論及依照[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]即使您已連線到較高版本的 2005年[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016年)  
+> 根據專案類型，但不是根據版本的資料庫物件的轉換會執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您已連線到。 中的案例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005年專案中，轉換會論及依照[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]即使您已連線到較高版本的 2005年[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016年)  
   
 ## <a name="reconnecting-to-sql-server"></a>重新連接到 SQL Server  
 連接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會保持作用中，直到您關閉專案為止。 當您重新開啟專案時，您必須重新連線到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果您想使用中的連接到伺服器。 您可以離線直到更新中繼資料，將資料庫物件載入到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並移轉資料。  

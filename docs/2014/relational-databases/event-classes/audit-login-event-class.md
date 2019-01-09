@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,15 +14,15 @@ ms.assetid: ad0bdb48-7f9f-4335-805d-7769d6df89b2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 11ddf57e8ed1c1a57b1eb610d5a722677112da08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e76d95b99ed2578cdfc9ff5ab9a752b644d82067
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228398"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775580"
 ---
 # <a name="audit-login-event-class"></a>Audit Login 事件類別
-  **Audit Login** 事件類別表示使用者已順利登入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。  
+   **Audit Login** 事件類別表示使用者已順利登入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此類別中的事件是由新連接引發，或是由連接集區中重複使用的連接所引發。  
   
 ## <a name="audit-login-event-class-data-columns"></a>Audit Login 事件類別資料行  
   

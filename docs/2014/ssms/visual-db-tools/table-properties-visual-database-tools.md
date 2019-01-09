@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.tabledesigner
@@ -13,12 +13,12 @@ ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33e75ea1383a597f3e896ad2d7d24f05a7021ac2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065378"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812850"
 ---
 # <a name="table-properties-visual-database-tools"></a>資料表屬性 (Visual Database Tools)
   當您在 [資料表設計師] 中按一下滑鼠右鍵並選取 [屬性] 時，這些屬性便會出現在 [屬性] 視窗中。 已選取資料表時，您可以在 [屬性] 視窗中編輯這些屬性 (除非另有附註)。  
@@ -44,7 +44,7 @@ ms.locfileid: "48065378"
  顯示選取資料表的資料來源名稱。  
   
  **說明**  
- 顯示選取資料表的描述。 若要查看或編輯整個描述，請按一下 [描述]，再按屬性右邊的省略符號 **(…)** 。  
+ 顯示選取資料表的描述。 若要查看或編輯整個描述，請按一下 [描述]，然後按一下屬性右側的省略符號 **(...)**。  
   
  **結構描述**  
  顯示此資料表所屬結構描述的名稱 (只適用於 Microsoft SQL Server)。  

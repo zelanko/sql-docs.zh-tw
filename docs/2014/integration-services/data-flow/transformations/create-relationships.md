@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.createrelationships.f1
@@ -13,12 +12,12 @@ ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 730e203281c4bc964e2b2694e475095280483d58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23baf42a1ddc30ceccf5ec7c6f8b9db96e72e588
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095781"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804916"
 ---
 # <a name="create-relationships"></a>建立關聯性
   使用 **[建立關聯性]** 對話方塊，即可編輯來源資料行與查閱資料表資料行之間的對應，而這些資料行是在模糊查閱轉換編輯器、查閱轉換編輯器和詞彙查閱轉換編輯器中進行設定。  
@@ -53,6 +52,6 @@ ms.locfileid: "48095781"
  [Integration Services 錯誤和訊息參考](../../integration-services-error-and-message-reference.md)   
  [模糊查閱轉換編輯器 &#40;資料行索引標籤&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)   
  [查閱轉換編輯器 &#40;資料行頁面&#41;](../../lookup-transformation-editor-columns-page.md)   
- [詞彙查閱轉換編輯器&#40;詞彙查閱索引標籤&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
+ [詞彙查閱轉換編輯器 &#40;詞彙查閱索引標籤&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
   

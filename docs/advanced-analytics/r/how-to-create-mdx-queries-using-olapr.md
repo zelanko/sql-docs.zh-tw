@@ -1,5 +1,6 @@
 ---
-title: 如何建立 MDX 查詢以 R 在 SQL Server Machine Learning 中使用 olapR |Microsoft Docs
+title: 如何使用 olapR-SQL Server Machine Learning 服務在 R 中建立 MDX 查詢
+description: 使用 olapR 套件程式庫，在 SQL Server 中的 R 語言指令碼中撰寫 MDX 查詢。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7fe2749e6f70522fbd010d5af78890dfe897426b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 77804e6499519309e7ade41cc7260d2356a56731
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696927"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432381"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何在 R 中使用 olapR 建立 MDX 查詢
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -73,9 +74,9 @@ ms.locfileid: "51696927"
 
 下列的範例以 AdventureWorks 資料超市和 cube 專案，因為該專案已普遍使用，在多個版本中，包括可以輕鬆地還原到 Analysis Services 的備份檔案。 如果您沒有現有的 cube，取得範例 cube 中使用其中一個選項：
 
-+ 建立 cube，可在這些範例中，遵循 Analysis Services 教學課程中的，直到第 4 課：[建立 OLAP cube](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ 建立在這些範例中的 cube 所使用的 Analysis Services 教學課程中的，直到第 4 課：[建立 OLAP cube](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
 
-+ 下載現有的 cube 作為備份，並將它還原到 Analysis Services 的執行個體。 比方說，這個網站提供完整處理的 cube，以壓縮格式： [Adventure Works Multidimensional Model SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)。 檔案，然後再將它還原到 SSAS 執行個體。 如需詳細資訊，請參閱 <<c0> [ 備份和還原](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)，或[Restore-asdatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)。
++ 下載現有的 cube 作為備份，並將它還原到 Analysis Services 的執行個體。 比方說，這個網站會提供完整處理的 cube，以壓縮格式：[Adventure Works 多維度模型 SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)。 檔案，然後再將它還原到 SSAS 執行個體。 如需詳細資訊，請參閱 <<c0> [ 備份和還原](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)，或[Restore-asdatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)。
 
 ### <a name="1-basic-mdx-with-slicer"></a>1.交叉分析篩選器的基本 MDX
 

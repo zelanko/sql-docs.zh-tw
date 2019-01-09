@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, updategrams
@@ -22,12 +20,12 @@ ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f9ea8423567f7ad8f5dcfff4ee0c57d37c87fe98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 135ca9d30b6baa9d5f358409c9a49fb3d0fc61e2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112940"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772160"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>在 Updategram 中指定註解式對應結構描述 (SQLXML 4.0)
   本主題說明 Updategram 中指定的對應結構描述 (XSD 或 XDR) 要如何用來處理更新。 在 updategram 中，您可以提供要用於資料表和資料行中的對應的元素和屬性在 updategram 中的註解式的對應結構描述的名稱[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 在 updategram 中指定對應結構描述時，此 updategram 中指定的元素和屬性名稱必須對應到對應結構描述內的元素和屬性。  
@@ -115,7 +113,7 @@ ms.locfileid: "48112940"
 ```  
   
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. 使用對應結構描述內指定的父子式關聯性插入記錄  
- 結構描述元素可以產生關聯。 **\<Sql: relationship >** 項目會指定結構描述項目之間的父子式關聯性。 這項資訊是用來更新具有主索引鍵與外部索引鍵關聯性的對應資料表。  
+ 結構描述元素可以產生關聯。  **\<Sql: relationship >** 項目會指定結構描述項目之間的父子式關聯性。 這項資訊是用來更新具有主索引鍵與外部索引鍵關聯性的對應資料表。  
   
  下列對應結構描述 (SampleSchema.xml) 包含兩個元素， **\<順序 >** 並 **\<OD >**:  
   

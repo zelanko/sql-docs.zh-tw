@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df3e932427665e7225c83043fb48e933cb503028
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909718"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417559"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>監視與 System Center Operations Manager-Analytics Platform System
 使用 System Center Operations Manager (SCOM)，以監視 Analytics Platform System (APS) 設備。
@@ -39,7 +39,7 @@ ms.locfileid: "37909718"
    
   
 ## <a name="to-monitor-sql-server-pdw-with-scom"></a>監視 SQL Server PDW 與 SCOM  
-設定 SCOM 管理組件之後, 按一下監視窗格中的 SCOM，然後向下切入至**SQL Server 設備**，然後**Microsoft SQL Server Parallel Data Warehouse**。 Microsoft SQL Server Parallel Data Warehouse，下方有四個選項： 警示、 設備，設備圖表和節點。  
+設定 SCOM 管理組件之後, 按一下監視窗格中的 SCOM，然後向下切入至**SQL Server 設備**，然後**Microsoft SQL Server Parallel Data Warehouse**。 Microsoft SQL Server Parallel Data Warehouse，下方有四個選項：警示、 設備，設備圖表和節點。  
   
 ### <a name="alerts"></a>警示  
 警示是您可以在哪裡找到目前的警示管理。  

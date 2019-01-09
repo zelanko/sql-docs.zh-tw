@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - FTP connection manager
@@ -15,19 +14,19 @@ ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 989049c5371d35d53282f5780dcfc9db13312c7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f53d6e82764e11ba56513053d88e23fda0baf92
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188838"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790340"
 ---
 # <a name="ftp-connection-manager"></a>FTP 連接管理員
-  FTP 連接管理員可讓封裝連接到「檔案傳輸通訊協定 (FTP)」伺服器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含的 FTP 工作使用此連線管理員。  
+  FTP 連接管理員可讓封裝連接到「檔案傳輸通訊協定 (FTP)」伺服器。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含的 FTP 工作使用此連線管理員。  
   
  當您將 FTP 連接管理員加入封裝時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立在執行階段可解析為 FTP 連接的連接管理員、設定連接管理員屬性，並將連接管理員加入封裝上的 `Connections` 集合。  
   
- `ConnectionManagerType`連接管理員屬性設定為`FTP`。  
+ 連接管理員的 `ConnectionManagerType` 屬性會設為 `FTP`。  
   
  您可以利用下列方式設定 FTP 連接管理員：  
   
@@ -56,10 +55,10 @@ ms.locfileid: "48188838"
   
  如需可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的資訊，請參閱 [FTP 連線管理員編輯器](../ftp-connection-manager-editor.md)。  
   
- 以程式設計方式設定連接管理員的相關資訊，請參閱<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>並[連線以程式設計方式加入](../building-packages-programmatically/adding-connections-programmatically.md)。  
+ 如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連線](../building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [FTP 工作](../control-flow/ftp-task.md)   
- [Integration Services &#40;SSIS&#41;連線](integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41; 連接](integration-services-ssis-connections.md)  
   
   

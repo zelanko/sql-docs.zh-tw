@@ -10,12 +10,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d9bcc1a87bd4853736cdc43d597e58728b848e1
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8ba3763c9ccf28286c61e87f4105c3d3293351dd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018263"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371050"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>使用 SysPrep 安裝 SQL Server 2014
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 相關的安裝動作可以透過安裝中心來存取。 **[安裝中心]** 的 **[進階]** 頁面包含兩個選項 - 準備 **獨立執行個體的映像[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 及 完成備妥的 **獨立執行個體的映像[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**。 [準備](#prepare) 和 [完成](#complete) 章節會詳細說明安裝程序。 如需詳細資訊，請參閱＜ [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md)＞。  
@@ -32,7 +32,7 @@ ms.locfileid: "51018263"
  如需詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本及硬體和軟體需求，請參閱[硬體和軟體需求，安裝 SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 不支援下列項目：  
+>   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 不支援下列項目：  
 >   
 >  WOW 64 安裝：Windows 64 位元版本的一項功能，可讓 32 位元應用程式在 32 位元模式中以原生方式執行。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "51018263"
 -   [修改或解除安裝已完成的 SQL Server 執行個體。](install-sql-server-using-sysprep.md#bk_modifying_uninstalling)  
   
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 叢集支援  
- 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]開始，SysPrep 支援以命令列安裝叢集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱＜ [何謂 Sysprep](http://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx)＞。  
+ 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]開始，SysPrep 支援以命令列安裝叢集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱＜ [何謂 Sysprep](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx)＞。  
   
 #### <a name="to-prepare-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集 (自動)  
   
@@ -131,13 +131,13 @@ ms.locfileid: "51018263"
   
 11. 在 [執行個體組態] 頁面上，指定執行個體的執行個體識別碼。 按 **[下一步]** ，繼續進行。  
   
-     **執行個體識別碼** ：執行個體識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果已備妥的執行個體在完成步驟期間當做預設執行個體來完成，執行個體名稱會覆寫為 MSSQLSERVER。 執行個體識別碼仍然與指定的識別碼相同。  
+     **執行個體識別碼** - 執行個體識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果已備妥的執行個體在完成步驟期間當做預設執行個體來完成，執行個體名稱會覆寫為 MSSQLSERVER。 執行個體識別碼仍然與指定的識別碼相同。  
   
-     **執行個體根目錄** ：根據預設，執行個體根目錄為 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]。 若要指定非預設的根目錄，請使用提供的欄位，或是按一下 [瀏覽] 找出安裝資料夾。 準備步驟所指定的目錄將會在完成步驟的組態設定期間使用。  
+     **執行個體根目錄** - 根據預設，執行個體根目錄為 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]。 若要指定非預設的根目錄，請使用提供的欄位，或是按一下 [瀏覽] 找出安裝資料夾。 準備步驟所指定的目錄將會在完成步驟的組態設定期間使用。  
   
      所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級項目都會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的每一個元件。  
   
-     **安裝的執行個體** ：此方格會顯示執行安裝程式之電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
+     **安裝的執行個體** - 此方格會顯示執行安裝程式之電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
 12. **[磁碟空間需求]** 頁面會計算您所指定之功能的所需磁碟空間。 然後，它會比較所需的空間與可用的磁碟空間。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "51018263"
   
 7.  在 **[選取備妥的執行個體]** 頁面上，從下拉式方塊選取您想要完成的備妥執行個體。 從 [執行個體識別碼] 清單中選取尚未設定的執行個體。  
   
-     **安裝的執行個體** ：此方格會顯示所有執行個體，包括這部電腦上任何已備妥的執行個體。  
+     **已安裝的執行個體：** 此方格會顯示所有執行個體，包括這部電腦上任何已備妥的執行個體。  
   
 8.  在 **[功能檢閱]** 頁面上，您將會在準備步驟期間看到安裝所包含的選定功能和元件。 如果您想要將更多功能加入至已備妥之執行個體中並未包含的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，您必須先完成這個步驟，才能完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後從 **[安裝中心]** 上的 **[加入功能]** 來加入功能。  
   
@@ -180,17 +180,17 @@ ms.locfileid: "51018263"
   
 9. 在 [執行個體組態] 頁面上，指定已備妥之執行個體的執行個體名稱。 這就是當您完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態之後的執行個體名稱。 按 **[下一步]** ，繼續進行。  
   
-     **執行個體識別碼** ：執行個體識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果已備妥的執行個體在完成步驟期間當做預設執行個體來完成，執行個體名稱會覆寫為 MSSQLSERVER。 執行個體識別碼仍然與準備步驟期間指定的識別碼相同。  
+     **執行個體識別碼** - 執行個體識別碼是用來識別 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的安裝目錄和登錄機碼。 這是預設執行個體和具名執行個體的狀況。 如果已備妥的執行個體在完成步驟期間當做預設執行個體來完成，執行個體名稱會覆寫為 MSSQLSERVER。 執行個體識別碼仍然與準備步驟期間指定的識別碼相同。  
   
-     **執行個體根目錄** ：將會使用準備步驟中所指定的目錄，而且無法在這個步驟中加以修改。  
+     **執行個體根目錄** - 將會使用準備步驟中所指定的目錄，而且無法在這個步驟中加以修改。  
   
      所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升級項目都會套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的每一個元件。  
   
-     **安裝的執行個體** ：此方格會顯示執行安裝程式之電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
+     **安裝的執行個體** - 此方格會顯示執行安裝程式之電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
 10. 本主題其餘部分的工作流程會因為您在準備步驟期間選取的功能而不同。 您可能不會看到所有頁面，這取決於您的選取項目而定。  
   
-11. 在 **[伺服器組態 - 服務帳戶]** 頁面中，指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的登入帳戶。 在這個頁面上所設定的實際服務隨著您選取要安裝的功能而不同。  
+11. 在 [伺服器設定 - 服務帳戶] 頁面中，指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的登入帳戶。 在這個頁面上所設定的實際服務隨著您選取要安裝的功能而不同。  
   
      您可以將相同登入帳戶指派給所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務，或個別設定每一個服務帳戶。 此外，您也可以指定要自動啟動服務、手動啟動服務或停用服務。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您個別設定服務帳戶，以針對各項服務提供最低權限，其中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務會授與必須完成工作的最小權限。 如需詳細資訊，請參閱 [伺服器組態 - 服務帳戶](../../sql-server/install/server-configuration-service-accounts.md) 和 [設定 Windows 服務帳戶與權限](../configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
@@ -323,7 +323,7 @@ ms.locfileid: "51018263"
 -   [解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [什麼是 Sysprep？](http://go.microsoft.com/fwlink/?LinkId=143546)   
- [Windows SysPrep 的運作方式](http://go.microsoft.com/fwlink/?LinkId=143547)  
+ [什麼是 Sysprep？](https://go.microsoft.com/fwlink/?LinkId=143546)   
+ [Windows SysPrep 的運作方式](https://go.microsoft.com/fwlink/?LinkId=143547)  
   
   

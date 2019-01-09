@@ -13,12 +13,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6e3df0527e02bd69bfbb198888e82045d067a61a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 3141146842bd568336033073f07b41c636129ee7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091618"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543585"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>資料庫鏡像和複寫 (SQL Server)
   資料庫鏡像可以和複寫一起使用，以改進發行集資料庫的可用性。 資料庫鏡像是指單一資料庫的兩份副本，而且通常位在不同的電腦上。 在任何時間內，目前的用戶端都只能使用其中一份資料庫副本， 此份資料庫稱為主體資料庫。 用戶端對主體資料庫所做的更新會套用到其他份資料庫，也稱為鏡像資料庫。 鏡像作業涵蓋了針對主體資料庫上所進行的每個插入、更新或刪除動作，將其交易記錄套用至鏡像資料庫。  
@@ -75,7 +75,7 @@ ms.locfileid: "48091618"
   
     -   將 **@working_directory** 參數的值設定為主體所用的快照集資料夾。  
   
-4.  指定 **–PublisherFailoverPartner** 代理程式參數的鏡像名稱。 下列代理程式需要使用這個參數在容錯移轉後識別鏡像：  
+4.  指定 **-PublisherFailoverPartner** 代理程式參數的鏡像名稱。 下列代理程式需要使用這個參數在容錯移轉後識別鏡像：  
   
     -   快照集代理程式 (針對所有發行集)。  
   
@@ -95,9 +95,9 @@ ms.locfileid: "48091618"
   
     -   [檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [複寫代理程式可執行檔概念](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     建議您將 **–PublisherFailoverPartner** 加入代理程式設定檔，然後在設定檔中指定鏡像名稱。 例如，如果您要設定使用預存程序的複寫：  
+     建議您將 **-PublisherFailoverPartner** 加入代理程式設定檔，然後在設定檔中指定鏡像名稱。 例如，如果您要設定使用預存程序的複寫：  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  

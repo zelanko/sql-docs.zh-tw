@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], message queues
@@ -16,17 +15,17 @@ ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1501af4a26c0e039df3113a719a61e1e2c3f40a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 015488fc30b364b9f82086acb995df3967eb5b10
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135038"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766850"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 連接管理員
-  MSMQ 連接管理員可讓封裝連接到使用 Message Queuing (又稱為 MSMQ) 的訊息佇列。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的「訊息佇列」工作使用 MSMQ 連線管理員。  
+  MSMQ 連接管理員可讓封裝連接到使用 Message Queuing (又稱為 MSMQ) 的訊息佇列。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的「訊息佇列」工作使用 MSMQ 連線管理員。  
   
- 當您將 MSMQ 連接管理員加入封裝時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]建立連接管理員會解析為 MSMQ 連接，在執行階段、 設定連接管理員屬性，並將連接管理員加入`Connections`集合封裝。 `ConnectionManagerType`連接管理員屬性設定為`MSMQ`。  
+ 當您將 MSMQ 連接管理員加入封裝時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立在執行階段解析為 MSMQ 連接的連接管理員、設定連接管理員屬性，並將連接管理員加入封裝上的 `Connections` 集合。 連接管理員的 `ConnectionManagerType` 屬性會設為 `MSMQ`。  
   
  您可以利用下列方式設定 MSMQ 連接管理員：  
   
@@ -48,10 +47,10 @@ ms.locfileid: "48135038"
   
  如需可在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請參閱 [MSMQ 連線管理員編輯器](../msmq-connection-manager-editor.md)。  
   
- 以程式設計方式設定連接管理員的相關資訊，請參閱<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>並[連線以程式設計方式加入](../building-packages-programmatically/adding-connections-programmatically.md)。  
+ 如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以程式設計方式加入連接](../building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [訊息佇列工作](../control-flow/message-queue-task.md)   
- [Integration Services &#40;SSIS&#41;連線](integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41; 連接](integration-services-ssis-connections.md)  
   
   

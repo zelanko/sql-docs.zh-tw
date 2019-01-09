@@ -1,7 +1,8 @@
 ---
-title: 教學課程： 啟用 5 名最慢的查詢範例小工具-Azure Data Studio |Microsoft Docs
+title: 教學課程：啟用五個最慢的查詢範例小工具
+titleSuffix: Azure Data Studio
 description: 本教學課程會示範如何啟用資料庫儀表板上的五個最慢的查詢範例 widget。
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75886c26b7ceff9df9e2fc96f76038e8d6e70dd0
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 491e66ecc8b0dfb3024a2beb59cfefd3f8e0d28f
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356239"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030782"
 ---
-# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教學課程： 新增*五個最慢的查詢*資料庫儀表板的範例小工具
+# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>教學課程：新增*五個最慢的查詢*資料庫儀表板的範例小工具
 
 本教學課程會示範將其中一個程序[!INCLUDE[name-sos](../includes/name-sos-short.md)]的內建範例的 widget *database 儀表板*快速檢視資料庫的五個最慢的查詢。 您也了解如何檢視查詢速度緩慢的詳細資料和查詢計劃使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]的功能。 在本教學課程中，您將了解如何：
 
@@ -31,7 +32,7 @@ ms.locfileid: "49356239"
 
 ## <a name="prerequisites"></a>必要條件
 
-本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
+本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。  若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
 
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 SQL Server](quickstart-sql-server.md)
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 Azure SQL Database](quickstart-sql-database.md)
@@ -54,7 +55,7 @@ ms.locfileid: "49356239"
 新增*緩慢查詢 widget*到您的儀表板中，編輯*dashboard.database.widgets*中設定您*使用者設定*檔案。
 
 1. 藉由按下 **Ctrl + Shift + P** 來開啟*命令選擇區*，以開啟*使用者設定*。
-2. 在搜尋方塊中輸入 *settings* 並選取**喜好設定： 開啟使用者設定**。
+2. 型別*設定*中的搜尋方塊，然後選取**喜好設定：開啟 使用者設定**。
 
    ![開啟使用者設定 命令](./media/tutorial-qds-sql-server/open-user-settings.png)
 
@@ -171,7 +172,7 @@ ms.locfileid: "49356239"
 
 
 ## <a name="next-steps"></a>後續的步驟
-在本教學課程中，您已了解如何：
+在本教學課程中，您將了解如何：
 > [!div class="checklist"]
 > * 在資料庫上啟用查詢存放區
 > * 將深入解析小工具新增至資料庫儀表板

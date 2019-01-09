@@ -1,5 +1,5 @@
 ---
-title: 第 2 課： 將資料加入 |Microsoft Docs
+title: 第 2 課：將資料加入 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4a7c3756e6c8c35472b760d9fa3100b4f40ecfdc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 22ee688f6ef1036c63cd3bf878ccf2fce869115f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034677"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401633"
 ---
 # <a name="lesson-2-add-data"></a>第 2 課：加入資料
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在這一課，您將在 SSDT 中使用 [資料表匯入精靈] 來連接到 AdventureWorksDW SQL 範例資料庫，選取資料、 預覽和篩選資料時，，然後將資料匯入您的模型工作區。  
   
-使用 [資料表匯入精靈] 可讓您從各種關聯式來源匯入資料：Access、SQL、Oracle、Sybase、Informix、DB2、Teradata 以及其他來源。 從每一個關聯式來源匯入資料的步驟非常類似以下所述內容。 資料也可以選取使用預存程序。 若要深入了解匯入資料與不同類型的資料來源，您可以從匯入，請參閱[Zdroje dat](../analysis-services/tabular-models/data-sources-ssas-tabular.md)。  
+透過使用資料表匯入精靈，您可以從各種關聯式來源匯入資料：Access、SQL、Oracle、Sybase、Informix、DB2、Teradata 以及其他來源。 從每一個關聯式來源匯入資料的步驟非常類似以下所述內容。 資料也可以選取使用預存程序。 若要深入了解匯入資料與不同類型的資料來源，您可以從匯入，請參閱[Zdroje dat](../analysis-services/tabular-models/data-sources-ssas-tabular.md)。  
   
-完成本課程的估計時間： **20 分鐘**  
+完成本課程的估計時間：**20 分鐘的時間**  
   
 ## <a name="prerequisites"></a>先決條件  
-本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課程的工作之前，您應已完成上一課： [第 1 課：建立新的表格式模型專案](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)。  
+本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 1 課：建立新的表格式模型專案](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)。  
   
 ## <a name="create-a-connection"></a>建立連接  
   
@@ -38,7 +38,7 @@ ms.locfileid: "38034677"
     
     ![做為表格式-lesson2-tme](../analysis-services/media/as-tabular-lesson2-tme.png) 
 
-    注意： 如果您要建立模型的 1400年相容性層級，您會看到新的 [取得資料] 功能而不是 [資料表匯入精靈]。 對話方塊會出現下面的步驟稍有不同，但您仍然可以要跟著做。 
+    注意：如果您要建立模型的 1400年相容性層級，您會看到新的 [取得資料] 功能而不是 [資料表匯入精靈]。 對話方塊會出現下面的步驟稍有不同，但您仍然可以要跟著做。 
   
 2.  在 資料表匯入精靈 中，在**關聯式資料庫**，按一下**Microsoft SQL Server** > **下一步**。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "38034677"
   
 7.  在 [選擇如何匯入資料] 頁面中，確認已選取 [從資料表和檢視表清單來選取要匯入的資料]。 若要從資料表和檢視表的清單中選取，請按一下 [下一步] 顯示來源資料庫內所有來源資料表的清單。  
   
-8.  在 [選取資料表和檢視表] 頁面中，選取下列資料表的核取方塊：**DimCustomer**、**DimDate**、**DimGeography**、**DimProduct**、**DimProductCategory**、**DimProductSubcategory** 和 **FactInternetSales**。  
+8.  在 **選取資料表和檢視**頁面上，選取下列資料表的核取方塊：**DimCustomer**， **DimDate**， **DimGeography**， **DimProduct**， **DimProductCategory**， **DimProductSubcategory**，並**FactInternetSales**。  
   
     **請不要**按一下 [完成]。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "38034677"
   
 1.  選取的資料列**DimCustomer**資料表，然後按一下**預覽和篩選**。 [預覽選取的資料表] 視窗隨即開啟，其中會顯示 DimCustomer 來源資料表內的所有資料行。  
   
-2.  在下列資料行頂端的核取方塊： **SpanishEducation**， **FrenchEducation**， **SpanishOccupation**， **FrenchOccupation**. 
+2.  清除下列資料行上方的核取方塊：**SpanishEducation**， **FrenchEducation**， **SpanishOccupation**， **FrenchOccupation**。 
 
     ![為-表格式-lesson2-tiw-清除](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
   
@@ -164,7 +164,7 @@ ms.locfileid: "38034677"
 -   按一下 **檔案** > **全部儲存**。  
   
 ## <a name="whats-next"></a>下一步
-移至下一個課程︰[第 3 課： 標記為日期資料表](../analysis-services/lesson-3-mark-as-date-table.md)。
+請移至下一課：[第 3 課：標記為日期資料表](../analysis-services/lesson-3-mark-as-date-table.md)。
 
   
   

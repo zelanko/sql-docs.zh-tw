@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Integration Services], tasks
@@ -27,15 +26,15 @@ ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a87a28e1e39959868b1a39c897b8b67716227466
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d840663c675452b137a57fedc56f623b430af6e4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111837"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765640"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 工作
-  工作為控制流程元素，用來定義封裝控制流程中所執行工作的單位。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝是由一或多項工作所組成。 如果封裝包含超過一項工作，則會在控制流程中按照優先順序條件約束連接並排列順序。  
+  工作為控制流程元素，用來定義封裝控制流程中所執行工作的單位。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝是由一或多項工作所組成。 如果封裝包含超過一項工作，則會在控制流程中按照優先順序條件約束連接並排列順序。  
   
  您也可以使用支援 COM 的程式設計語言 (例如 Visual Basic) 或 .NET 程式設計語言 (例如 C#) 撰寫自訂工作。  
   
@@ -78,11 +77,11 @@ ms.locfileid: "48111837"
  每項工作均可使用 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 針對各項工作提供的自訂對話方塊，或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中包括的 [屬性] 視窗另行設定。 封裝可包括多項相同類型的工作，例如六項執行 SQL 工作，而每項工作皆可分別設定。 如需詳細資訊，請參閱 [設定工作或容器的屬性](../set-the-properties-of-a-task-or-container.md)。  
   
 ## <a name="tasks-connections-and-groups"></a>工作連接和群組  
- 如果工作包含超過一項工作，則會在控制流程中按照優先順序條件約束連接並排列順序。 如需詳細資訊，請參閱 [Precedence Constraints](precedence-constraints.md)。  
+ 如果工作包含超過一項工作，則會在控制流程中按照優先順序條件約束連接並排列順序。 如需詳細資訊，請參閱 [優先順序條件約束](precedence-constraints.md)。  
   
  您可將多項工作設為群組，並做為單一工作單位執行，或於迴圈中重複。 如需詳細資訊，請參閱 [Foreach 迴圈容器](foreach-loop-container.md)、 [For 迴圈容器](for-loop-container.md)和 [時序容器](sequence-container.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
- [在控制流程中新增或刪除工作或容器](add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+ [在控制流程中加入或刪除工作或容器](add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
   

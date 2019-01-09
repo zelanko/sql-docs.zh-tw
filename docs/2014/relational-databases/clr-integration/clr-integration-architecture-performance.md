@@ -14,12 +14,12 @@ ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1f0963c1f703d471827f60514181e976051abb8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eced622903a0d68369f28d19ff521d99bcedbdc3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125798"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368180"
 ---
 # <a name="performance-of-clr-integration"></a>CLR 整合的效能
   本主題討論某些設計選擇，可增強的效能[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]與整合[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 通用語言執行平台 (CLR)。  
@@ -35,7 +35,7 @@ ms.locfileid: "48125798"
  編譯程序會產生可以在執行階段，從原生程式碼呼叫的函數指標。 如果是純量值的使用者定義函數，此函數引動過程會以資料列為基礎發生。 若要將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 CLR 之間轉換的成本降至最低，包含任何 Managed 引動過程的陳述式都有一個識別目標應用程式網域的啟動步驟。 這個識別步驟會降低每個資料列轉換的成本。  
   
 ## <a name="performance-considerations"></a>效能考量  
- 以下摘要說明 CLR 整合到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時的特定效能考量。 更詳細的資訊可在 「[SQL Server 2005 中使用 CLR 整合](http://go.microsoft.com/fwlink/?LinkId=50332)"MSDN 網站上。 關於 managed 程式碼效能的一般資訊可在 「[< 改進.NET 應用程式效能和延展性](http://go.microsoft.com/fwlink/?LinkId=50333)"MSDN 網站上。  
+ 以下摘要說明 CLR 整合到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時的特定效能考量。 更詳細的資訊可在 「[SQL Server 2005 中使用 CLR 整合](https://go.microsoft.com/fwlink/?LinkId=50332)"MSDN 網站上。 關於 managed 程式碼效能的一般資訊可在 「[< 改進.NET 應用程式效能和延展性](https://go.microsoft.com/fwlink/?LinkId=50333)"MSDN 網站上。  
   
 ### <a name="user-defined-functions"></a>使用者定義的函式  
  CLR 函數會因為引動過程路徑比 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 使用者定義函數的引動過程更快速而獲益。 此外，Managed 程式碼在程序性程式碼、計算與字串操作的決定性效能優勢上優於 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。 需要大量計算而不執行資料存取的 CLR 函數以更好的 Managed 程式碼方式撰寫。 不過，[!INCLUDE[tsql](../../../includes/tsql-md.md)] 函數在資料存取的執行上比 CLR 整合更有效率。  

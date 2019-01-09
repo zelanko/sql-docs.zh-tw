@@ -10,15 +10,15 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40ea7c27958fe2a245b2279dc35f2029f81e21d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56999c5e74648ecd36adea3ee941627c1e2e607b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147418"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377898"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>判斷雜湊索引的正確值區計數
-  您必須指定的值`BUCKET_COUNT`參數，當您建立記憶體最佳化的資料表。 本主題將針對判斷適合 `BUCKET_COUNT` 參數的值提出建議。 如果您無法判斷正確的值區計數，請改用非叢集索引。  不正確的 `BUCKET_COUNT` 值 (尤其是過低的值) 可能會對工作負載的效能以及資料庫的復原時間造成嚴重影響。 最好是高估值區計數。  
+  您必須在建立記憶體最佳化資料表時，指定 `BUCKET_COUNT` 參數的值。 本主題將針對判斷適合 `BUCKET_COUNT` 參數的值提出建議。 如果您無法判斷正確的值區計數，請改用非叢集索引。  不正確的 `BUCKET_COUNT` 值 (尤其是過低的值) 可能會對工作負載的效能以及資料庫的復原時間造成嚴重影響。 最好是高估值區計數。  
   
  重複的索引鍵可能會因為雜湊索引而降低效能，因為索引鍵會雜湊到相同的貯體，使得貯體的鏈結增加。  
   
@@ -26,12 +26,12 @@ ms.locfileid: "48147418"
   
  針對記憶體最佳化的資料表上的每個雜湊索引配置一個雜湊表。 所指定的索引配置的雜湊表的大小`BUCKET_COUNT`中的參數[CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql)或[CREATE TYPE &#40;-&#41; ](/sql/t-sql/statements/create-type-transact-sql). 值區計數會於內部四捨五入進位至下一個二的乘冪。 例如，指定值區計數 300,000 將產生實際值區計數 524,288。  
   
- 如需有關貯體計數的文章和視訊的連結，請參閱 [如何判斷雜湊索引的正確貯體計數 (記憶體內 OLTP)](http://go.microsoft.com/fwlink/p/?LinkId=525853)。  
+ 如需有關貯體計數的文章和視訊的連結，請參閱 [如何判斷雜湊索引的正確貯體計數 (記憶體內 OLTP)](https://go.microsoft.com/fwlink/p/?LinkId=525853)。  
   
 ## <a name="recommendations"></a>建議  
  在大部分情況下，值區計數應該介於索引鍵中相異值數目的 1 到 2 倍之間。 如果索引鍵包含許多重複的值，平均每個索引鍵值都有超過 10 個資料列，則改用非叢集索引  
   
- 您不一定能夠預測某個特定索引鍵可能擁有或將會擁有多少個值。 效能應該是可以接受如果`BUCKET_COUNT`值是在 5 次的索引鍵值實際數目。  
+ 您不一定能夠預測某個特定索引鍵可能擁有或將會擁有多少個值。 如果 `BUCKET_COUNT` 值在索引鍵值實際數目的 5 倍以內，則效能應該是可以接受的。  
   
  若要判斷現有資料中的唯一索引鍵數目，請使用類似下列範例的查詢：  
   
@@ -82,12 +82,12 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
  雜湊索引健全狀況的兩個重要指標為：  
   
  *empty_bucket_percent*  
- *empty_bucket_percent*指出雜湊索引中空貯體數目。  
+ *empty_bucket_percent* 指出雜湊索引中的空白貯體數目。  
   
  如果 *empty_bucket_percent* 小於 10%，表示這個值區計數可能太低。 理想的 *empty_bucket_percent* 應該是 33% 或更高。 若值區計數與索引鍵值相符，則約 1/3 的貯體數目為空白，原因是雜湊散發。  
   
  *avg_chain_length*  
- *avg_chain_length*指出雜湊貯體中的資料列鏈結的平均長度。  
+ *avg_chain_length* 指出雜湊值區中資料列鏈結的平均長度。  
   
  如果 *avg_chain_length* 大於 10，且 *empty_bucket_percent* 大於 10%，則可能有許多重複的索引鍵值，那麼非叢集索引會較為理想。 理想的平均鏈結長度為 1。  
   
@@ -141,7 +141,7 @@ GO
   
 -   IX_OrderSequence：有 0% 的貯體是空的，這個數字過低。 此外，平均鏈結長度為 8。 由於這個索引中的值是唯一的，因此這表示平均有 8 個值對應到每個貯體。 值區計數應該增加。 由於索引鍵擁有 262,144 個唯一值，因此值區計數至少應該為 262,144。 如果預期未來會有所成長，則這個數字應該更高。  
   
--   主索引鍵索引 (PK__SalesOrder…)：有 36% 的貯體是空的，這是理想的狀況。 另外，平均鏈結長度為 1，這也很理想。 不需要變更。  
+-   主索引鍵索引 (PK__SalesOrder...):有 36% 的貯體是空的，這是理想的狀況。 另外，平均鏈結長度為 1，這也很理想。 不需要變更。  
   
  如需對記憶體最佳化雜湊索引的問題進行疑難排解的詳細資訊，請參閱＜ [針對記憶體最佳化雜湊索引常見效能問題進行疑難排解](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)＞。  
   
@@ -152,7 +152,7 @@ GO
   
 -   值區計數的值越高，索引中就會有越多空的貯體。 這樣會影響記憶體使用量 (每個貯體 8 個位元組) 和資料表掃描的效能，因為資料表掃描的過程中會掃描每個貯體。  
   
--   值區計數越小，指派給單一貯體的值越多。 這會降低點查閱和插入的效能，因為[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]可能需要周遊尋找搜尋述詞所指定之值的單一值區中的數個值。  
+-   值區計數越小，指派給單一貯體的值越多。 這樣會降低點查閱和插入的效能，因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可能需要周遊單一貯體中的數個值，以尋找搜尋述詞所指定的值。  
   
  如果值區計數明顯低於唯一索引鍵數目，則將會有許多值對應至每個貯體。 這樣會降低大部分 DML 作業的效能，特別是點查閱 (個別索引鍵的查閱) 和插入作業。 例如，在 WHERE 子句中比對索引鍵資料行的等號比較述詞，您可能會發現 SELECT 查詢以及 UPDATE 與 DELETE 作業的效能不佳。 值區計數過低也會影響資料庫的復原時間，因為索引會在資料庫啟動時重新建立。  
   

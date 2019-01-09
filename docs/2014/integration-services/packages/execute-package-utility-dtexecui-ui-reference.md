@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtexecui.general.f1
@@ -24,12 +23,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8745874d47d173160848ea385d0479ccbbfb7173
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
-ms.translationtype: MT
+ms.openlocfilehash: 9e01e1c77d67bd19fa01ec1cf07e4e53807651b1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169315"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797951"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>執行封裝公用程式 (DtExecUI) UI 參考
   您可使用 **[執行封裝公用程式]** 來執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 此公用程式會執行儲存在下列三個位置之一的封裝： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統。 此使用者介面，可以從開啟[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，或輸入`dtexecui`的命令提示字元中，會使用執行封裝的替代方案**DTExec**命令提示字元工具。  
@@ -67,7 +66,7 @@ ms.locfileid: "49169315"
   
 |||  
 |-|-|  
-|值|描述|  
+|值|Description|  
 |**SQL Server**|當封裝位於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，請選取此選項。 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，並提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的使用者名稱和密碼。 每個使用者名稱和密碼都會將 **/USER** *username* 和 **/PASSWORD** *password* options to the comm和 prompt.|  
 |**檔案系統**|當封裝位於檔案系統時，請選取此選項。|  
 |**SSIS 封裝存放區**|當封裝位於 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區時，請選取此選項。|  
@@ -99,11 +98,11 @@ ms.locfileid: "49169315"
 >  盡可能使用 Windows 驗證。  
   
  **封裝**  
- 請輸入封裝的名稱，或按一下省略符號按鈕 **(…)**，使用 [選取 SSIS 封裝] 對話方塊來尋找封裝。  
+ 鍵入套件的名稱，或按一下省略符號按鈕 **(...)**，以使用 [選取 SSIS 套件] 對話方塊來尋找套件。  
   
 #### <a name="package-source--file-system"></a>封裝來源 = 檔案系統  
  **封裝**  
- 輸入封裝的名稱，或按一下省略符號按鈕 **(…)** ，使用 [開啟] 對話方塊來尋找封裝。 依預設，對話方塊只會列出副檔名為 .dtsx 的檔案。  
+ 鍵入套件的名稱，或按一下省略符號按鈕 **(...)**，以使用 [開啟] 對話方塊來尋找套件。 依預設，對話方塊只會列出副檔名為 .dtsx 的檔案。  
   
 #### <a name="package-source--ssis-package-store"></a>封裝來源 = SSIS 封裝存放區  
  **Server**  
@@ -119,7 +118,7 @@ ms.locfileid: "49169315"
  當您執行儲存在 [SSIS 封裝存放區] 的封裝時，無法使用此選項。  
   
  **封裝**  
- 請輸入封裝的名稱，或按一下省略符號按鈕 **(…)**，使用 [選取 SSIS 封裝] 對話方塊來尋找封裝。  
+ 鍵入套件的名稱，或按一下省略符號按鈕 **(...)**，以使用 [選取 SSIS 套件] 對話方塊來尋找套件。  
   
 ## <a name="configurations-page"></a>組態頁面  
  使用 **[執行封裝公用程式]** 對話方塊的 **[組態]** 頁面，即可選取要在執行階段載入的組態檔，並指定載入這些檔案的順序。  
@@ -207,7 +206,7 @@ ms.locfileid: "49169315"
  如果您啟用了封裝檢查點，就會列出封裝使用的檢查點檔案。  
   
  **瀏覽**  
- 如果您啟用了封裝檢查點，則按一下瀏覽按鈕 **(…)**，再使用 [開啟] 對話方塊，來找出檢查點檔案。 如果已經指定了檢查點檔案，就會用選取的檔案來取代它。  
+ 如果您啟用了套件檢查點，請按一下瀏覽按鈕 **(...)**，使用 [開啟] 對話方塊來找出檢查點檔案。 如果已經指定了檢查點檔案，就會用選取的檔案來取代它。  
   
  **覆寫重新啟動選項**  
  如果您啟用了封裝檢查點，會指出是否要覆寫重新啟動選項。  

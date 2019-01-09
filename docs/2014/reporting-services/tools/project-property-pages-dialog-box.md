@@ -15,21 +15,21 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 79eb8344ef875aa76cde5b0ffcc34aa0bf23e1b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1061ae540d4773ae53560c464d2af568c8e35782
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122368"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589622"
 ---
 # <a name="project-property-pages-dialog-box"></a>專案屬性頁對話方塊
-  使用專案屬性頁，即可設定報表伺服器專案的部署屬性。 若要開啟此對話方塊，請從 [專案] 功能表按一下 [*\<報表專案名稱>* 屬性]。  
+  使用專案屬性頁，即可設定報表伺服器專案的部署屬性。 若要開啟此對話方塊，請從 專案 功能表按一下 \<報表專案名稱>屬性。  
   
  在您定義組態屬性之後，可以從工具列的 [方案組態] 下拉式清單中選取組態。  
   
 ## <a name="options"></a>選項。  
  **Configuration**  
- 選取要編輯的組態。 一開始會有下列的組態可用： **Debug**、 **DebugLocal**和 **Release**。 使用中組態會先出現，例如 **Active(Debug)**。  
+ 選取要編輯的組態。 一開始，會提供下列的組態：**偵錯**， **DebugLocal**，以及**發行**。 使用中組態會先出現，例如 **Active(Debug)**。  
   
  若要同時查看多個組態的屬性，請選取 **[所有組態]** 或 **[多重組態]**。  
   
@@ -79,8 +79,8 @@ ms.locfileid: "48122368"
   
 ## <a name="see-also"></a>另請參閱  
  [發行報表](../publish-reports.md)   
- [將報表發行至 SharePoint 文件庫](../reports/publish-a-report-to-a-sharepoint-library.md)   
- [設定部署屬性&#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
+ [將報表發行到 SharePoint 文件庫](../reports/publish-a-report-to-a-sharepoint-library.md)   
+ [設定部署屬性 &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
  [報表設計師 F1 說明](report-designer-f1-help.md)  
   
   

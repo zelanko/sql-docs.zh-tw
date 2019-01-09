@@ -1,5 +1,6 @@
 ---
-title: 在 Ubuntu 上的 SQL Server 入門 |Microsoft Docs
+title: 在 Ubuntu 上的 SQL Server 入門
+titleSuffix: SQL Server
 description: 本快速入門示範如何在 Ubuntu 上安裝 SQL Server 2017 或 SQL Server 2019 然後建立並查詢資料庫，以使用 sqlcmd。
 author: rothja
 ms.author: jroth
@@ -7,17 +8,17 @@ manager: craigg
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 917e43dd6a9c78e5199967df58a2d46c4843cf13
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 83f5cdf3f02ffc9a51dfa954347cc57f78e004dd
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677941"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160546"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入門： 安裝 SQL Server，並在 Ubuntu 上建立資料庫
+# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>快速入門：安裝 SQL Server，並在 Ubuntu 上建立資料庫
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -88,7 +89,7 @@ ms.locfileid: "51677941"
    ```
 
    > [!TIP]
-   > 免費授權下列的 SQL Server 2017 版本： Evaluation、 Developer 和 Express。
+   > 下列的 SQL Server 2017 版本免費授權：Evaluation、 Developer 和 Express。
 
    > [!NOTE]
    > 請務必指定 SA 帳戶 （最小長度為 8 個字元，包括大寫和小寫字母、 10 進位數字和/或非英數符號） 的強式密碼。
@@ -183,7 +184,7 @@ ms.locfileid: "51677941"
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **選擇性**： 新增`/opt/mssql-tools/bin/`至您**路徑**bash 殼層中的環境變數。
+1. **選擇性**:新增`/opt/mssql-tools/bin/`至您**路徑**bash 殼層中的環境變數。
 
    若要讓**sqlcmd/bcp**存取從 bash 殼層中的登入工作階段中，修改您**路徑**中 **~/.bash_profile**檔案使用下列命令：
 

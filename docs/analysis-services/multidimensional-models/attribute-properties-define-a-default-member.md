@@ -1,5 +1,5 @@
 ---
-title: 定義預設成員 |Microsoft 文件
+title: 定義預設成員 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e112d0cfdd1e4558dcad1888531774357ce0102a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 10b5776a4d4be5f31522740c28a6142a7e213576
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020915"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516726"
 ---
-# <a name="attribute-properties---define-a-default-member"></a>屬性內容-定義預設成員
+# <a name="attribute-properties---define-a-default-member"></a>屬性內容 - 定義預設成員
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   當查詢中並未包含屬性階層時，會使用屬性階層的預設成員來評估運算式。 只要查詢包含屬性階層，或是使用者階層包含做為屬性階層來源的屬性，就會忽略預設成員。 這是因為使用查詢中指定的成員。  
   
@@ -28,17 +28,17 @@ ms.locfileid: "34020915"
  如果屬性階層沒有指定預設成員，而且該屬性階層為可彙總的 (屬性 (attribute) 上的 **IsAggregatable** 屬性 (property) 設定為 **True**)，則 (全部) 成員都是預設成員。 如果未指定任何預設成員，且屬性階層為不可彙總的 (屬性 (attribute) 上的 **IsAggregatable** 屬性 (property) 設定為 **False**)，則會從屬性階層的最上層中選取預設成員。  
   
 ## <a name="specifying-the-default-member"></a>指定預設成員  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中維度的每一個屬性 (attribute) 都有預設成員，您可以針對屬性 (attribute) 使用 **DefaultMember** 屬性 (property) 來指定此成員。 如果查詢中不包含屬性，則此設定可用來評估運算式。 如果查詢在維度中指定階層，則會忽略階層中之屬性的預設成員。 如果查詢未在維度中指定階層，則維度屬性的 **DefaultMember** 設定會生效。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中維度的每一個屬性 (attribute) 都有預設成員，您可以針對屬性 (attribute) 使用 **DefaultMember** 屬性 (property) 來指定此成員。 如果查詢中不包含屬性，則此設定可用來評估運算式。 如果查詢在維度中指定階層，則會忽略階層中之屬性的預設成員。 如果查詢未在維度中指定階層，則維度屬性的 **DefaultMember** 設定會生效。  
   
  如果屬性的 **DefaultMember** 設定空白，且其 **IsAggregatable** 屬性是設為 **True**，則預設成員是全部成員。 如果 **IsAggregatable** 屬性設為 **False**，預設成員是第一個可見層級的第一個成員。  
   
  屬性的 **DefaultMember** 設定，會套用至屬性所參與的每一個階層。 您不能對維度中的不同階層使用不同設定。 比方說，如果 [1998] 成員是 [Year] 屬性的預設成員，此設定將套用至維度中的每一個階層。 此案例中的 **DefaultMember** 設定不可以在一個階層是 [1998]，在另一個階層又變成 [1997]。  
   
- 如果您為沒有自然彙總之階層的特定層級定義預設成員，則必須定義階層中位於該層級上方之所有層級中的預設成員。 例如，在 All-Countries–Climate 階層中，除非您有定義 Countries 的預設成員，否則您不能定義 Climate 的預設成員。 如果沒有這麼做，會產生查詢階段錯誤。  
+ 如果您為沒有自然彙總之階層的特定層級定義預設成員，則必須定義階層中位於該層級上方之所有層級中的預設成員。 比方說，在階層中 All-國家/地區-氣候，除非您定義國家 （地區） 的預設成員不能定義 climate 的預設成員。 如果沒有這麼做，會產生查詢階段錯誤。  
   
- 若階層中的層級自然彙總，您可以定義階層中任何屬性的預設成員，而不必管階層中的其他屬性。 例如，在 Country–Province–City 階層中，您可以定義 City 的預設成員，例如 [City].[Montreal]，而不必定義 State 或 Country 的預設成員。  
+ 若階層中的層級自然彙總，您可以定義階層中任何屬性的預設成員，而不必管階層中的其他屬性。 比方說，如果您在階層中的國家/地區-省-城市，您可以定義縣 （市），例如 [City] 的預設成員。[Montreal] 不必定義 State 或國家/地區的預設成員。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定 & #40;所有 & #41;屬性階層層級](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [設定屬性階層的 &#40;全部&#41; 層級](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

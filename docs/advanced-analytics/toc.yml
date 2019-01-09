@@ -52,22 +52,32 @@ items:
   items:
   - name: R
     items:
+    - name: 驗證 R 存在於 SQL Server 中
+      href: tutorials/quickstart-r-verify.md
     - name: 以 R 和 SQL 撰寫的 Hello World
-      href: tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md
+      href: tutorials/quickstart-r-run-using-tsql.md
     - name: 處理輸入和輸出
-      href: tutorials/rtsql-working-with-inputs-and-outputs.md
+      href: tutorials/quickstart-r-inputs-and-outputs.md
     - name: 處理資料類型和物件
-      href: tutorials/rtsql-r-and-sql-data-types-and-data-objects.md
+      href: tutorials/quickstart-r-data-types-and-objects.md
     - name: 使用 R 函式
-      href: tutorials/rtsql-using-r-functions-with-sql-server-data.md
+      href: tutorials/quickstart-r-functions.md
     - name: 建立預測模型
-      href: tutorials/rtsql-create-a-predictive-model-r.md
-    - name: 從模型預測及繪製
-      href: tutorials/rtsql-predict-and-plot-from-model.md
+      href: tutorials/quickstart-r-create-predictive-model.md
+    - name: 從模型預測
+      href: tutorials/quickstart-r-predict-from-model.md
   - name: Python
     items:
-    - name: 使用 T-SQL 執行 Python
-      href: tutorials/run-python-using-t-sql.md
+    - name: 驗證 Python 存在於 SQL Server
+      href: tutorials/quickstart-python-verify.md
+    - name: Python 和 SQL 中的 Hello World
+      href: tutorials/quickstart-python-run-using-t-sql.md
+    - name: 處理輸入和輸出
+      href: tutorials/quickstart-python-inputs-and-outputs.md
+    - name: Python 資料結構與 SQL
+      href: tutorials/quickstart-python-data-structures.md
+    - name: 訓練並使用您的第一個模型
+      href: tutorials/quickstart-python-train-score-in-tsql.md
 - name: 教學課程
   href: tutorials/machine-learning-services-tutorials.md
   items:
@@ -79,24 +89,6 @@ items:
       href: tutorials/demo-data-iris-in-sql.md
     - name: NYC 計程車資料集
       href: tutorials/demo-data-nyctaxi-in-sql.md
-  - name: Python
-    href: tutorials/sql-server-python-tutorials.md
-    items:
-    - name: 訓練並使用您的第一個模型
-      href: tutorials/train-score-using-python-in-tsql.md
-    - name: 使用 revoscalepy 建立 Python 模型
-      href: tutorials/use-python-revoscalepy-to-create-model.md
-    - name: 了解資料庫內分析
-      href: tutorials/sqldev-in-database-python-for-sql-developers.md
-      items:
-      - name: 1 - 資料探索
-        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: 2 - 特徵工程
-        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: 3 - 訓練及部署
-        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: 4 - 預測
-        href: tutorials/sqldev-py6-operationalize-the-model.md
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
@@ -157,6 +149,22 @@ items:
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
       - name: 使用 rxExec 傳送自訂 R
         href: tutorials/r-tutorial-custom-r-functions.md
+  - name: Python
+    href: tutorials/sql-server-python-tutorials.md
+    items:
+    - name: 使用 revoscalepy 建立 Python 模型
+      href: tutorials/use-python-revoscalepy-to-create-model.md
+    - name: 了解資料庫內分析
+      href: tutorials/sqldev-in-database-python-for-sql-developers.md
+      items:
+      - name: 1 - 資料探索
+        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+      - name: 2 - 特徵工程
+        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+      - name: 3 - 訓練及部署
+        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+      - name: 4 - 預測
+        href: tutorials/sqldev-py6-operationalize-the-model.md
 - name: 範例
   href: https://github.com/Microsoft/sql-server-samples
 - name: 方案
@@ -180,8 +188,6 @@ items:
       href: r/installing-and-managing-r-packages.md
     - name: 取得套件資訊
       href: r/determine-which-packages-are-installed-on-sql-server.md
-    - name: 安裝新的 Python 套件
-      href: python/install-additional-python-packages-on-sql-server.md
     - name: 安裝新的 R 套件
       href: r/install-additional-r-packages-on-sql-server.md
       items:
@@ -200,22 +206,28 @@ items:
         href: r/create-a-local-package-repository-using-minicran.md
       - name: 使用 R 套件的祕訣
         href: r/packages-installed-in-user-libraries.md
+    - name: 安裝新的 Python 套件
+      href: python/install-additional-python-packages-on-sql-server.md
   - name: 資料探索及模型化
     items:
-    - name: R 程式庫和資料類型
+    - name: R 到 SQL 的資料類型轉換
       href: r/r-libraries-and-data-types.md
-    - name: Python 程式庫和資料類型
+    - name: Python 到 SQL 的資料類型轉換
       href: python/python-libraries-and-data-types.md
-    - name: R 預測模型
-      href: r/data-exploration-and-predictive-modeling-with-r.md
     - name: 使用 ODBC 載入 R 物件
       href: r/save-and-load-r-objects-from-sql-server-using-odbc.md
-    - name: 轉換 R 程式碼以在機器學習服務中使用
-      href: r/converting-r-code-for-use-in-sql-server.md
-    - name: 使用 rxExecBy 建立多個模型
-      href: r/creating-multiple-models-using-rxexecby.md
     - name: 在 R 中使用 OLAP Cube 的資料
       href: r/using-data-from-olap-cubes-in-r.md
+    - name: 如何使用 olapR 建立 MDX 查詢
+      href: r/how-to-create-mdx-queries-using-olapr.md
+    - name: R 預測模型
+      href: r/data-exploration-and-predictive-modeling-with-r.md
+    - name: 使用 rxExecBy 建立多個模型
+      href: r/creating-multiple-models-using-rxexecby.md
+  - name: 部署
+    items:
+    - name: 轉換 R 程式碼以用於 SQL Server
+      href: r/converting-r-code-for-use-in-sql-server.md
     - name: 使用 sqlrutils 建立預存程序
       href: r/how-to-create-a-stored-procedure-using-sqlrutils.md
   - name: 預測
@@ -269,25 +281,23 @@ items:
     - name: R 程式碼分析函式
       href: r/using-r-code-profiling-functions.md
 - name: 參考
-  href: r/machine-learning-services-r-reference.md
   items:
   - name: R 套件
-    href: r/machine-learning-services-r-reference.md
     items:
-    - name: SQL 中的 olapR
-      href: r/how-to-create-mdx-queries-using-olapr.md
-    - name: SQL 中的 MicrosoftML
-      href: using-the-microsoftml-package.md
-    - name: SQL 中的 RevoScaleR
-      href: r/revoscaler-overview.md
-    - name: 適用於 SQL Server 資料的 RevoScaleR 函式清單
-      href: r/scaler-functions-for-working-with-sql-server-data.md
-    - name: SQL 中的 sqlrutils
-      href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
+    - name: RevoScaleR
+      href: r/ref-r-revoscaler.md
+    - name: MicrosoftML
+      href: r/ref-r-microsoftml.md
+    - name: olapR
+      href: r/ref-r-olapr.md
+    - name: sqlrutils
+      href: r/ref-r-sqlrutils.md
   - name: Python 套件
     items:
-    - name: SQL 中的 revoscalepy
-      href: python/what-is-revoscalepy.md
+    - name: revoscalepy
+      href: python/ref-py-revoscalepy.md
+    - name: microsoftml
+      href: python/ref-py-microsoftml.md
 - name: 資源
   items:
   - name: 版本資訊
@@ -319,9 +329,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: 機器學習服務伺服器
       href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
-ms.openlocfilehash: e400aa9026b3a2684ffc5f436e4fe43cba3c52d4
-ms.sourcegitcommit: 0395ffeb6e51b5d653fa23673e564c4c0cfe4f57
+ms.openlocfilehash: 9e76e68b7b970c64050136b3ae9cb9c486c297c2
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52717191"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046598"

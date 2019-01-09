@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], managing
@@ -14,12 +13,12 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67a74b8b9958eb52426a4f2bc8f36cd14c005f87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e4059973f0a81e92c680c81b0bc6a60bd0483dae
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074991"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358840"
 ---
 # <a name="integration-services-ssis-server"></a>Integration Services (SSIS) 伺服器
   在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中設計和測試封裝之後，可以將含有那些封裝的專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
@@ -33,9 +32,9 @@ ms.locfileid: "48074991"
  如需 SSISDB 目錄功能的概觀，請參閱 [SSIS 目錄](ssis-catalog.md)。  
   
 ## <a name="high-availability"></a>高可用性  
- 其他使用者與資料庫一樣，`SSISDB`資料庫也支援資料庫鏡像和複寫。 如需鏡像及複寫的詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
+ 與其他使用者資料庫一樣，`SSISDB` 資料庫也支援資料庫鏡像和複寫。 如需鏡像及複寫的詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
- 您也可以使用 SSIS 和 AlwaysOn 可用性群組提供 SSISDB 及其內容的高可用性。 如需詳細資訊，請參閱 blogs.msdn.com 上這篇 Matt Masson 的部落格文章： [SSIS 與 AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873)。  
+ 您也可以使用 SSIS 和 AlwaysOn 可用性群組提供 SSISDB 及其內容的高可用性。 如需詳細資訊，請參閱 blogs.msdn.com 上這篇 Matt Masson 的部落格文章： [SSIS 與 AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=255873)。  
   
 ##  <a name="ssms"></a> SQL Server Management Studio 中的 Integration Services Server  
  當您連接到主控 `SSISDB` 資料庫的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體時，您會在 [物件總管] 中看到以下物件：  
@@ -59,6 +58,6 @@ ms.locfileid: "48074991"
 -   [使用 SQL Server Management Studio 在 SSIS 伺服器上執行套件](../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   
 ## <a name="related-content"></a>相關內容  
- blogs.msdn.com 上的部落格文章： [SSIS 與 AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873)。  
+ blogs.msdn.com 上的部落格文章： [SSIS 與 AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=255873)。  
   
   

@@ -1,7 +1,8 @@
 ---
-title: 教學課程： 讓表格空間使用方式範例深入解析小工具在 Azure Data Studio |Microsoft Docs
+title: 教學課程：啟用資料表的空間使用方式範例深入解析小工具
+titleSuffix: Azure Data Studio
 description: 本教學課程會示範如何啟用資料表空間使用方式範例深入解析小工具在 Azure Data Studio database 儀表板上。
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55d6c96cc328f21d1b51ce7186c8396ab278ee6f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ebd3b1af1bc9b342ad6b2d33596e69b487888ced
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355989"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030352"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>教學課程：使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 啟用資料表空間使用量範例 insight widget
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>教學課程：使用情況下啟用資料表空間使用方式範例深入解析小工具 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 本教學課程會示範如何在資料庫儀表板上啟用 insight widget，提供有關資料庫中所有資料表空間使用情況的概覽檢視。 在本教學課程中，您將了解如何：
 
@@ -28,7 +29,7 @@ ms.locfileid: "49355989"
 
 ## <a name="prerequisites"></a>必要條件
 
-本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
+本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。  若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
 
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 SQL Server](quickstart-sql-server.md)
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 Azure SQL Database](quickstart-sql-database.md)
@@ -38,7 +39,7 @@ ms.locfileid: "49355989"
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 具有內建範例小工具來監視資料庫中資料表所使用的空間。
 
 1. 藉由按下 **Ctrl + Shift + P** 來開啟*命令選擇區*，以開啟*使用者設定*。
-2. 在搜尋方塊中輸入 *settings* 並選取**喜好設定： 開啟使用者設定**。
+2. 型別*設定*中的搜尋方塊，然後選取**喜好設定：開啟 使用者設定**。
 2. 在設定搜尋輸入方塊中輸入 *dashboard*，並找出 **dashboard.database.widgets**。
 
 3. 若要自訂 **dashboard.database.widgets** 設定，您需要在**使用者設定**區段中 (在右側資料欄) 編輯 **dashboard.database.widgets** 項目。 如果沒有任何 **dashboard.database.widgets** 在**使用者設定**區段內，請將滑鼠停留在預設設定欄中的 **dashboard.database.widgets** 文字上，按一下顯示在文字左邊的鉛筆圖示，然後按一下**複製到設定**。 如果快顯視窗中顯示**在設定中取代**，請不要按！ 移至右邊的**使用者設定**欄並找出 **dashboard.database.widgets** 區段，然後前進至下一個步驟。
@@ -82,7 +83,7 @@ ms.locfileid: "49355989"
 
 
 ## <a name="next-steps"></a>後續的步驟
-在本教學課程中，您已了解如何：
+在本教學課程中，您將了解如何：
 > [!div class="checklist"]
 > * 使用內建 insight widget 範例，快速開啟 insight widget。
 > * 檢視資料表空間使用量的詳細資料

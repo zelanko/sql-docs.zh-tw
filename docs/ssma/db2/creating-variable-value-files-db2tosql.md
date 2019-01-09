@@ -10,20 +10,20 @@ ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: eec5269c6711377e0934e5fe85a5f4d94125ea8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf62d09de1180687598d817ff9199d7098008829
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604917"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525934"
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>建立變數值檔案 (DB2ToSQL)
-變數值檔案是 XML 檔案包含一些來源或目的地伺服器名稱經常變更從一部伺服器移轉到另一個的命令的參數值。 大量的資料庫移轉發生時，會建立並使用主要的指令碼檔案中參考多個變數的檔案，以儲存每個來源伺服器的值 **– v**在命令列切換。 這有助於維護幾個指令碼檔案中的靜態值，與多個變數的檔案中的變數值。  
+變數值檔案是 XML 檔案包含一些來源或目的地伺服器名稱經常變更從一部伺服器移轉到另一個的命令的參數值。 大量的資料庫移轉發生時，會建立並使用主要的指令碼檔案中參考多個變數的檔案，以儲存每個來源伺服器的值 **-v**在命令列切換。 這有助於維護幾個指令碼檔案中的靜態值，與多個變數的檔案中的變數值。  
   
 > [!NOTE]  
 > 1.  變數名稱會做為前置詞和後置字元為 $ （美元） 符號。 如果變數未指派的變數值檔案中的值，您就會導致懸置在主控台執行程序的指令碼檔案剖析期間發生錯誤。  
 > 2.  逸出字元**$** 是**$$**。 如果變數或靜態值的參數值包含**$** （貨幣） 符號，然後**$$** 必須指定將它視為一個字元，而不是變數。  
-> 3.  基於可維護性，變數可以宣告內`‘variable-group’`邏輯區隔使用者的項目定義的變數。  這個元素的使用方式不是必要的。  
+> 3.  基於可維護性，變數可以宣告內`'variable-group'`邏輯區隔使用者的項目定義的變數。  這個元素的使用方式不是必要的。  
   
 **範例：**  
   

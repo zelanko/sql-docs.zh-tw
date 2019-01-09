@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,19 +14,19 @@ ms.assetid: 77e8ca69-d98a-4acd-9d6a-f825bf079d84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21ff35b73d7bbda93c0760e881b8e19f5c860792
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea60aef999f871f28e21839ce0d7808aad0727b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115779"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356118"
 ---
 # <a name="showplan-xml-statistics-profile-event-class"></a>Showplan XML Statistics Profile 事件類別
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 SQL 陳述式時，會發生 Showplan XML Statistics Profile 事件類別。 包括 Showplan XML Statististics Profile 事件類別，以識別 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上的 Showplan 運算子。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 SQL 陳述式時，會發生 Showplan XML Statistics Profile 事件類別。 包括 Showplan XML Statististics Profile 事件類別，以識別 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上的 Showplan 運算子。  
   
  Showplan XML Statistics Profile 事件類別會顯示完整的編譯時間資料，因此包含此事件類別的追蹤會造成顯著的效能負擔。 若要減輕所造成的負擔，此事件類別請限用於追蹤對特定問題的短期監視。  
   
- Showplan XML 文件有與其相關聯的結構描述。 您可以在 [Microsoft 網站](http://go.microsoft.com/fwlink/?LinkId=41740)上找到這個結構描述，或者它會成為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的一部分。  
+ Showplan XML 文件有與其相關聯的結構描述。 您可以在 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkId=41740)上找到這個結構描述，或者它會成為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的一部分。  
   
 ## <a name="showplan-xml-statistics-profile-event-class-data-columns"></a>Showplan XML Statistics Profile 事件類別資料行  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48115779"
 |NTDomainName|`nvarchar`|使用者所隸屬的 Windows 網域。|7|是|  
 |ObjectID|`int`|系統指派給物件的識別碼。|22|是|  
 |ObjectName|`nvarchar`|被參考的物件名稱。|34|是|  
-|ObjectType|`int`|代表參與事件之物件類型的值。 這個值會對應到 sys.objects 目錄檢視中的類型資料行。 如需各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
+|ObjectType|`int`|代表參與事件之物件類型的值。 這個值會對應到 sys.objects 目錄檢視中的類型資料行。 針對各值，請參閱 [ObjectType 追蹤事件資料行](objecttype-trace-event-column.md)。|28|是|  
 |RequestID|`int`|包含陳述式之要求的識別碼。|49|是|  
 |ServerName|`nvarchar`|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
 |SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 這個資料行會同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登入。|64|是|  

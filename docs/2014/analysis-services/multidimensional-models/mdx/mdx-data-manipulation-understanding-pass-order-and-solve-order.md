@@ -19,12 +19,12 @@ ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5d8d1797bc1ffdf937e37fb1ffae075691a892ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9531b22e8154796f4f36a5b5bca04d510877d0ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083008"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511011"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>了解行程順序與解決順序 (MDX)
   當 Cube 做為 MDX 指令碼的計算結果時，Cube 會根據所使用的各種計算相關功能來進行多個計算階段。 每個階段都稱為一個計算行程。  
@@ -38,7 +38,7 @@ ms.locfileid: "48083008"
 ## <a name="solve-order"></a>解決順序  
  解決順序決定在運算式發生競爭事件時，計算的優先權。 在單一行程內，解決順序決定兩件事情：  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 評估維度、成員、導出成員、自訂積存和導出資料格的順序。  
+-    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 評估維度、成員、導出成員、自訂積存和導出資料格的順序。  
   
 -   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 評估自訂成員、導出成員、自訂積存和導出資料格的順序。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48083008"
 > [!NOTE]  
 >  您可以針對 Adventure Works 範例多維度資料庫執行這些 MDX 查詢。 您可以從 codeplex 網站下載 [AdventureWorks Multidimensional Models SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) (AdventureWorks 多維度模型 SQL Server 2012) 範例。  
   
-### <a name="query-1differences-in-income-and-expenses"></a>查詢 1—收益和費用的差異  
+### <a name="query-1-differences-in-income-and-expenses"></a>查詢 1-收益和費用差異  
  在第一個 MDX 查詢中，建構一個簡單的 MDX 查詢來計算每年銷售和成本的差異，如以下範例所示：  
   
 ```  
@@ -95,7 +95,7 @@ FROM [Adventure Works]
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
 |**Year Difference**|($20,160.56)|$2,878.06|  
   
-### <a name="query-2percentage-of-income-after-expenses"></a>查詢 2—扣除費用後的收益百分比  
+### <a name="query-2-percentage-of-income-after-expenses"></a>查詢 2-的扣除費用後的收益百分比  
  在第二個查詢中，使用以下 MDX 查詢來計算每年扣除費用後的收益百分比：  
   
 ```  
@@ -123,10 +123,10 @@ FROM [Adventure Works]
   
  第一個查詢和第二個查詢之間的結果集差異，在於導出成員的位置差異。 在第一個查詢中，導出成員是 ROWS 座標軸的一部份，而不是第二個查詢中的 COLUMNS 座標軸。 此種位置的差異在下一個查詢 (結合單一 MDX 查詢的兩個導出成員) 中就變得很重要。  
   
-### <a name="query-3combined-year-difference-and-net-income-calculations"></a>查詢 3—結合年度差異和淨收益的計算  
- 在結合上述兩個範例到單一 MDX 查詢的最終查詢中，求解順序就變得很重要，因為會同時計算資料行和資料列。 若要確定正確的順序，進行計算，定義所使用之計算發生的順序`SOLVE_ORDER`關鍵字。  
+### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>查詢 3 結合年度差異和淨收益的計算  
+ 在結合上述兩個範例到單一 MDX 查詢的最終查詢中，求解順序就變得很重要，因為會同時計算資料行和資料列。 若要確定以正確的順序進行計算，請使用 `SOLVE_ORDER` 關鍵字定義計算順序。  
   
- `SOLVE_ORDER` 關鍵字指定 MDX 查詢中導出成員或 `CREATE MEMBER` 命令的解決順序。 搭配使用的整數值`SOLVE_ORDER`關鍵字是相對值，不需要從零開始，也不需要連續。 此數值只是告知 MDX 根據有較高值的成員計算所得出的值來導出成員。 如果導出的成員定義沒有`SOLVE_ORDER`關鍵字，預設值的導出成員為零。  
+ `SOLVE_ORDER` 關鍵字指定 MDX 查詢中導出成員或 `CREATE MEMBER` 命令的解決順序。 和 `SOLVE_ORDER` 關鍵字並用的整數值是相對值，不需要從零開始，也不需要連續。 此數值只是告知 MDX 根據有較高值的成員計算所得出的值來導出成員。 如果導出成員沒有以 `SOLVE_ORDER` 關鍵字定義，該導出成員的預設值為零。  
   
  例如，如果您結合前兩個範例查詢中使用的計算，兩個導出成員 `Year Difference` 和 `Profit Margin`會在 MDX 查詢範例之結果資料集中的單一資料格中產生交集。 決定 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 如何評估此資料格的唯一方式，就是解決順序。 用來建立此資料格的公式會根據兩個導出成員的解決順序，來產生不同的結果。  
   
@@ -216,7 +216,7 @@ FROM [Adventure Works]
 ## <a name="see-also"></a>另請參閱  
  [CalculationCurrentPass &#40;MDX&#41;](/sql/mdx/calculationcurrentpass-mdx)   
  [CalculationPassValue &#40;MDX&#41;](/sql/mdx/calculationpassvalue-mdx)   
- [CREATE MEMBER 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [操作資料&#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
+ [CREATE MEMBER 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
+ [操作資料 &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - property pages [SQL Server Management Studio]
@@ -12,15 +12,15 @@ ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b64507fcd5e7b64602e751832d1ac81f1447e61c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0711b5ff618ec563b437a089765a30547377efaa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129648"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817000"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio 中的屬性頁
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的所有 [屬性] 頁面對話方塊，都會隨著類別目錄的展開和摺疊，利用共用格式來顯示資訊。 顯示的欄位會隨著特定內容而不同。 以灰色顯示的屬性是唯讀屬性。 [分類] 和 [字母] 按鈕在每個屬性頁的頂端附近。  
+   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的所有 [屬性] 頁面對話方塊，都會隨著類別目錄的展開和摺疊，利用共用格式來顯示資訊。 顯示的欄位會隨著特定內容而不同。 以灰色顯示的屬性是唯讀屬性。 [分類] 和 [字母] 按鈕在每個屬性頁的頂端附近。  
   
  下表說明 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 屬性頁對話方塊的一般元素。  
   

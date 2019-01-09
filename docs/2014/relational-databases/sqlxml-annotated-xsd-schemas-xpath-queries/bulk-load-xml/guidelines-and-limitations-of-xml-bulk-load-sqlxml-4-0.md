@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XML Bulk Load [SQLXML], about XML Bulk Load
@@ -15,12 +13,12 @@ ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7f8bb180ef8c0b7483ce8bab27d11804ac81a387
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7a569bbc5672b0fc5996507e37ed250721bd2fe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082658"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774920"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 大量載入的指導方針和限制 (SQLXML 4.0)
   當您使用 XML 大量載入時，應該先熟悉下列指導方針和限制：  
@@ -31,7 +29,7 @@ ms.locfileid: "48082658"
   
 -   XML 文件已確認格式正確，但尚未經過驗證。  
   
-     XML 大量載入會檢查 XML 文件來判斷其格式是否正確，也就是確認 XML 符合全球資訊網協會對於 XML 1.0 建議的需求。 如果文件的格式不正確，XML 大量載入會取消處理並傳回錯誤。 唯一的例外是當文件為片段 (例如，文件沒有單一的根元素) 時，在此情況下，XML 大量載入將會載入文件。  
+     XML 大量載入會檢查 XML 文件，以判斷它是否確實為正確，是，為了確保 XML 符合全球資訊網協會對於 XML 1.0 版建議事項的需求。 如果文件的格式不正確，XML 大量載入會取消處理並傳回錯誤。 唯一的例外是當文件為片段 (例如，文件沒有單一的根元素) 時，在此情況下，XML 大量載入將會載入文件。  
   
      XML 大量載入不會針對 XML 資料檔中定義或參考的任何 XML 資料或 DTD 結構描述驗證文件。 此外，XML 大量載入不會根據提供的對應結構描述驗證 XML 資料檔。  
   
@@ -159,7 +157,7 @@ ms.locfileid: "48082658"
   
      系統會建立在對應結構描述中所識別的資料表 (資料庫必須存在)。 如果一或多個資料表的資料庫中已經存在，SGDropTables 屬性會決定是否要卸除並重新建立這些預先存在的資料表。  
   
--   如果您指定 SchemaGen 屬性 (例如 SchemaGen = true)，會建立對應結構描述中所識別的資料表。 但 SchemaGen 不會建立這些資料表上的任何條件約束 （例如 PRIMARY KEY/FOREIGN KEY 條件約束），但有一個例外： 如果構成關聯性中的主索引鍵的 XML 節點定義為具有 XML 類型的識別碼 (也就是`type="xsd:ID"`的XSD) 和 SGUseID 屬性設定為 True 的 SchemaGen，則不只主索引鍵建立從 ID 類型節點，但從對應結構描述關聯性建立主索引鍵/外部索引鍵關聯性。  
+-   如果您指定 SchemaGen 屬性 (例如 SchemaGen = true)，會建立對應結構描述中所識別的資料表。 但 SchemaGen 不會建立這些資料表上的任何條件約束 （例如 PRIMARY KEY/FOREIGN KEY 條件約束） 有一個例外狀況：如果構成關聯性中的主索引鍵的 XML 節點定義為具有 XML 類型的識別碼 (也就是`type="xsd:ID"`xsd) 和 SGUseID 屬性設定為 True 的 SchemaGen，則不只主索引鍵建立的識別碼型別節點但主索引鍵/外部索引鍵關聯性會建立從對應結構描述關聯性。  
   
 -   SchemaGen 不會使用 XSD 結構描述 facet 和延伸模組來產生關聯式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]結構描述。  
   

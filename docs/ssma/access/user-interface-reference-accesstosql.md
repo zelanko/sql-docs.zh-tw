@@ -13,12 +13,12 @@ ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 18eef13d999826bb54f9900feed52f41ce614ea9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d35db315cebcc6292ca11b1e31f81015238fbcb9
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675687"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617478"
 ---
 # <a name="user-interface-reference-accesstosql"></a>使用者介面參考 (AccessToSQL)
 本節包含說明主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) 進行存取。  
@@ -48,7 +48,7 @@ ms.locfileid: "51675687"
 |[專案設定 (移轉)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|使用 [移轉] 頁面**專案設定**對話方塊來指定移轉的批次大小，資料表鎖定、 條件約束檢查、 插入觸發程序引發時，身分識別與 null 值處理，以及如何處理的日期[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]範圍。|  
 |[專案設定 (類型對應)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)|使用型別對應頁面**專案設定**對話方塊來指定 SSMA 專案中的所有資料庫和資料庫物件的預設型別對應。|  
 |[專案設定 (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|使用 SQL Azure 頁面**專案設定**對話方塊來指定資料庫尾碼和活動訊號逾時間隔。|  
-|[儲存中繼資料&#40;AcessToSQL&#41;](../../ssma/access/save-metadata-acesstosql.md)|**儲存中繼資料**儲存遺失中繼資料的專案時，對話方塊隨即出現。|  
+|[儲存中繼資料&#40;AccessToSQL&#41;](../../ssma/access/save-metadata-accesstosql.md)|**儲存中繼資料**儲存遺失中繼資料的專案時，對話方塊隨即出現。|  
   
 ## <a name="see-also"></a>另請參閱  
 [Getting Started with SQL Server 移轉小幫手，存取&#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  

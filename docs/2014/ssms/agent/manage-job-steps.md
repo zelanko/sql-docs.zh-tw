@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server replication]
@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90dcc76466709b1cc3e76406029ea2fffaaea1f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167185"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768450"
 ---
 # <a name="manage-job-steps"></a>管理作業步驟
   作業步驟是指作業對資料庫或伺服器所採取的動作， 每一個作業必須至少有一個作業步驟。 作業步驟可以是：  
@@ -75,7 +75,7 @@ ms.locfileid: "48167185"
   
 -   指令成功時傳回的處理序結束代碼。  
   
--   要執行的命令。 若要執行作業系統命令，此處是指命令本身； 若為外部程式，則是指程式名稱和程式的引數，例如： **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   要執行的命令。 若要執行作業系統命令，此處是指命令本身； 外部程式，則程式和程式的引數的名稱，例如：**C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe-e-q"sp_who"**  
   
     > [!NOTE]  
     >  如果可執行檔不在系統路徑或執行作業步驟的使用者路徑中，您必須提供可執行檔的完整路徑。  
@@ -157,7 +157,7 @@ Set oServer = nothing
   
 -   識別要執行作業步驟的資料庫 OLAP 伺服器。  
   
--   輸入要執行的陳述式。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Execute** 方法的陳述式必須是 XML。 陳述式可能不含完整的 SOAP Envelope 或 XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Discover** 方法。 請注意，雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支援完整的 SOAP Envelope 與 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟則不支援。  
+-   輸入要執行的陳述式。  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Execute** 方法的陳述式必須是 XML。 陳述式可能不含完整的 SOAP Envelope 或 XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Discover** 方法。 請注意，雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支援完整的 SOAP Envelope 與 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟則不支援。  
   
 ### <a name="analysis-services-query-job-steps"></a>SQL Server Analysis Services 查詢作業步驟  
  當您建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 查詢作業步驟時，必須：  

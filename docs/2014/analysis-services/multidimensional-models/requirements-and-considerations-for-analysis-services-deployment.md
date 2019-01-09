@@ -22,12 +22,12 @@ ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 175f3922a5c8d78f94db78cdbaf01534c5c7bc9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6759c38aa519979bdf05ba8848aaccbb89f37a94
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172348"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376920"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services 部署的需求和考量
   方案的效能和可用性取決於許多因素，包括基礎硬體的功能、伺服器部署的拓撲、方案的特性 (例如，具有跨多部伺服器分散的資料分割，或使用需要直接存取關聯式引擎的 ROLAP 儲存)、伺服器等級協定，以及資料模型的複雜性。  
@@ -53,7 +53,7 @@ ms.locfileid: "48172348"
   
  [SQL Server 2014 各版本所支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
- [最大容量規格&#40;Analysis Services&#41;](olap-physical/maximum-capacity-specifications-analysis-services.md)  
+ [最大容量規格 &#40;Analysis Services&#41;](olap-physical/maximum-capacity-specifications-analysis-services.md)  
   
 ## <a name="disk-space-requirements"></a>磁碟空間需求  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 安裝的差異以及物件處理工作的差異，會有不同的磁碟空間需求。 下列清單描述這些需求。  
@@ -62,7 +62,7 @@ ms.locfileid: "48172348"
  有大型事實資料表的 Cube 所需要的磁碟空間，會比小型事實資料表的 Cube 更多。 同樣地，雖然差異幅度較小，有許多大型維度的 Cube 對於所需要的磁碟空間，會比有較少維度成員的 Cube 更多。 一般而言，您可以預測 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫所需的磁碟空間，會是基礎關聯式資料庫中所儲存相同資料之空間的 20% 左右。  
   
  Aggregations  
- 彙總所需的額外磁碟空間，會與加入的彙總成正比—亦即彙總更多，需要的額外空間就更多。 如果您有避免建立不需要的彙總，則彙總需要的額外磁碟空間，通常不會超過基礎關聯式資料庫中所儲存資料大小的 10% 左右。  
+ 彙總需要的額外空間來加入的彙總成正比有更多的彙總，則需要更多的空間。 如果您有避免建立不需要的彙總，則彙總需要的額外磁碟空間，通常不會超過基礎關聯式資料庫中所儲存資料大小的 10% 左右。  
   
  資料採礦  
  依預設，採礦結構會將定型資料集快取至磁碟。 若要從磁碟中移除此快取資料，您可以對採礦結構物件使用 **[處理清除結構]** 處理選項。 如需詳細資訊，請參閱[處理需求和考量 &#40;資料採礦&#41;](../data-mining/processing-requirements-and-considerations-data-mining.md)。  
@@ -76,7 +76,7 @@ ms.locfileid: "48172348"
 ### <a name="providing-availability-in-the-event-of-hardware-or-software-failures"></a>在硬體或軟體失敗時維持可用性  
  硬體或軟體可能因為不同原因而失敗。 不過，維護 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 安裝的可用性不只需要進行失敗原因的疑難排解，也需要提供替代資源，讓使用者可以在發生失敗時繼續使用系統。 叢集和負載平衡伺服器通常會用於因應硬體或軟體失敗時，當做維護可用性的替代資源。  
   
- 若要在發生硬體或軟體失敗時維持可用性，請考慮將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署到容錯移轉叢集。 在容錯移轉叢集中，如果主要節點因任何原因失敗，或必須重開機， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Clustering 就會容錯移轉至次要節點。 發生非常快速的容錯移轉之後，當使用者執行查詢時，他們存取的就會是在次要節點上執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。 如需有關容錯移轉叢集的詳細資訊，請參閱 [Windows Server 技術：容錯移轉叢集](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)。  
+ 若要在發生硬體或軟體失敗時維持可用性，請考慮將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署到容錯移轉叢集。 在容錯移轉叢集中，如果主要節點因任何原因失敗，或必須重開機， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Clustering 就會容錯移轉至次要節點。 發生非常快速的容錯移轉之後，當使用者執行查詢時，他們存取的就會是在次要節點上執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。 如需有關容錯移轉叢集的詳細資訊，請參閱[Windows Server 技術：容錯移轉叢集](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)。  
   
  可用性問題的另一個解決方案，是將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案部署到兩個以上的實際伺服器。 然後，您就可以使用 Windows 伺服器的 Network Load Balancing (NLB) 功能，將這些實際伺服器結合成單一叢集。 在 NLB 叢集中，如果叢集的伺服器因為硬體或軟體問題而無法使用，NLB 服務就會將使用者查詢引導至仍然可使用的伺服器。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48172348"
   
 -   如果有一個或多個提供資料給 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的關聯式資料庫，您可以將這些資料庫移到另一部電腦上。 在移動資料庫之前，請考慮 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫及其基礎資料庫之間的網路速度和頻寬。 如果網路太慢或壅塞，將基礎資料庫移到另一部電腦上會降低處理效能。  
   
--   如果處理作業會影響查詢效能，但您無法等到查詢負載較低時處理，請考慮將處理工作移至臨時伺服器，然後執行實際伺服器與臨時伺服器的線上同步處理。 如需詳細資訊，請參閱 [Synchronize Analysis Services Databases](synchronize-analysis-services-databases.md)。 您也可以使用遠端資料分割，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的多個執行個體上分散處理。 處理遠端資料分割時會使用遠端伺服器上的處理器和記憶體資源，而非本機電腦上的資源。 如需遠端資料分割管理的資訊，請參閱[建立及管理遠端資料分割 &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)。  
+-   如果處理會影響查詢效能，但您無法降低的查詢負載中的時間處理，請考慮將處理工作移到預備伺服器，然後再執行 實際執行伺服器，而預備伺服器的線上同步處理。 如需詳細資訊，請參閱 [Synchronize Analysis Services Databases](synchronize-analysis-services-databases.md)。 您也可以使用遠端資料分割，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的多個執行個體上分散處理。 處理遠端資料分割時會使用遠端伺服器上的處理器和記憶體資源，而非本機電腦上的資源。 如需遠端資料分割管理的資訊，請參閱[建立及管理遠端資料分割 &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)。  
   
 -   如果查詢效能不佳，但您無法在本機伺服器上增加處理器和記憶體資源，請考慮將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案部署到兩個以上的實際伺服器。 然後，您就可以使用 Network Load Balancing (NLB) 將伺服器結合到單一叢集中。 在 NLB 叢集中，查詢會自動分散到 NLB 叢集的所有伺服器上。  
   

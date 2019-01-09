@@ -9,12 +9,12 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.date: 08/10/2017
-ms.openlocfilehash: 2575f73102f1fbaa73a7606ceb8c070dcdd72b58
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6993b1fa53bc6aa3d0b6de95ca9feff4eb34ad51
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604058"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351858"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>移轉 Reporting Services 安裝 (原生模式)
 
@@ -26,7 +26,7 @@ ms.locfileid: "51604058"
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (需要更多的步驟，請參閱[您無法使用 SQL Server 2005 來裝載報表伺服器 2014年資料庫](http://support.microsoft.com/kb/2796721)。  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (需要更多的步驟，請參閱[您無法使用 SQL Server 2005 來裝載報表伺服器 2014年資料庫](https://support.microsoft.com/kb/2796721)。  
   
 ||  
 |-|  
@@ -94,11 +94,11 @@ ms.locfileid: "51604058"
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援 ISAPI 篩選器。 如果您使用 ISAPI 篩選器，則必須在移轉之前重新設計報表方案。  
   
--   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援 IP 位址限制。 如果您使用 IP 位址限制，則必須在移轉之前重新設計報表方案，或使用防火牆、路由器或網路位址轉譯 (NAT) 之類的技術來設定受限不得存取報表伺服器的位址。  
+-    [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援 IP 位址限制。 如果您使用 IP 位址限制，則必須在移轉之前重新設計報表方案，或使用防火牆、路由器或網路位址轉譯 (NAT) 之類的技術來設定受限不得存取報表伺服器的位址。  
   
--   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援用戶端安全通訊端層 (SSL) 憑證。 如果您使用用戶端 SSL 憑證，則必須在移轉之前重新設計報表方案。  
+-    [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援用戶端安全通訊端層 (SSL) 憑證。 如果您使用用戶端 SSL 憑證，則必須在移轉之前重新設計報表方案。  
   
--   如果您使用 Windows 整合式驗證以外的驗證類型，則必須在 `<AuthenticationTypes>` RSReportServer.config **檔案中，以受支援的驗證類型更新** 元素。 受支援的驗證類型為 NTLM、Kerberos、Negotiate 和 Basic。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援匿名、.NET Passport 和摘要式驗證。  
+-   如果您使用 Windows 整合式驗證以外的驗證類型，則必須在 `<AuthenticationTypes>` RSReportServer.config **檔案中，以受支援的驗證類型更新** 元素。 受支援的驗證類型為 NTLM、Kerberos、Negotiate 和 Basic。  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援匿名、.NET Passport 和摘要式驗證。  
   
 -   如果您在報表環境中使用自訂的階層式樣式表，則這些樣式表不會移轉。 您必須以手動方式移動它們以進行遷移。  
   
@@ -170,9 +170,9 @@ ms.locfileid: "51604058"
   
     -   您必須重新編譯針對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 版本所建立的自訂驗證延伸模組。  
   
-    -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的自訂轉譯延伸模組必須使用轉譯物件模型 (ROM) 重新撰寫。  
+    -    [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的自訂轉譯延伸模組必須使用轉譯物件模型 (ROM) 重新撰寫。  
   
-    -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援 HTML 3.2 和 HTML OWC 轉譯器。  
+    -    [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和更新版本都不支援 HTML 3.2 和 HTML OWC 轉譯器。  
   
     -   其他自訂組件應該不需要重新編譯。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "51604058"
   
     1.  [部署自訂組件](../custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2.  [如何：部署自訂報表項目](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2.  [操作說明：部署自訂報表項目](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3.  [部署資料處理延伸模組](../extensions/data-processing/deploying-a-data-processing-extension.md)  
   

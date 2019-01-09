@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - autohide [SQL Server Management Studio]
@@ -15,15 +15,15 @@ ms.assetid: bebf8383-dcaf-466e-84f5-63b81c9cfe52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c63e159490e462a3598b3a19a4f51f900ef3485
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 076db2370f027b0d7dffeccb294899b48a065c40
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097758"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817120"
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>了解 SQL Server Management Studio 視窗管理
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的工具視窗是機能性、靈活性和有效性都非常高的系統，可讓您執行下列動作：  
+   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的工具視窗是機能性、靈活性和有效性都非常高的系統，可讓您執行下列動作：  
   
 -   將使用者用來進行開發或管理的工作空間最大化。  
   

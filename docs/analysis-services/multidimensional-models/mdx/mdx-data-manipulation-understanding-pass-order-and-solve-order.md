@@ -1,5 +1,5 @@
 ---
-title: 了解傳遞順序與解決順序 (MDX) |Microsoft 文件
+title: 了解行程順序和求解順序 (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b4b865293cb9c76fb46e8fe12befb2a000d21907
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6a578537f5221fef314a4a732f00f99d82311bbe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025955"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545399"
 ---
-# <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX 資料操作-了解傳遞順序與解決順序
+# <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX 資料操作-了解行程順序和求解順序
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   當 Cube 做為 MDX 指令碼的計算結果時，Cube 會根據所使用的各種計算相關功能來進行多個計算階段。 每個階段都稱為一個計算行程。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "34025955"
 ## <a name="solve-order"></a>解決順序  
  解決順序決定在運算式發生競爭事件時，計算的優先權。 在單一行程內，解決順序決定兩件事情：  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 評估維度、成員、導出成員、自訂積存和導出資料格的順序。  
+-    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 評估維度、成員、導出成員、自訂積存和導出資料格的順序。  
   
 -   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 評估自訂成員、導出成員、自訂積存和導出資料格的順序。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "34025955"
 > [!NOTE]  
 >  您可以針對 Adventure Works 範例多維度資料庫執行這些 MDX 查詢。 您可以從 codeplex 網站下載 [AdventureWorks Multidimensional Models SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) (AdventureWorks 多維度模型 SQL Server 2012) 範例。  
   
-### <a name="query-1differences-in-income-and-expenses"></a>查詢 1—收益和費用的差異  
+### <a name="query-1-differences-in-income-and-expenses"></a>查詢 1-收益和費用差異  
  在第一個 MDX 查詢中，建構一個簡單的 MDX 查詢來計算每年銷售和成本的差異，如以下範例所示：  
   
 ```  
@@ -86,7 +86,7 @@ FROM [Adventure Works]
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
 |**Year Difference**|($20,160.56)|$2,878.06|  
   
-### <a name="query-2percentage-of-income-after-expenses"></a>查詢 2—扣除費用後的收益百分比  
+### <a name="query-2-percentage-of-income-after-expenses"></a>查詢 2-的扣除費用後的收益百分比  
  在第二個查詢中，使用以下 MDX 查詢來計算每年扣除費用後的收益百分比：  
   
 ```  
@@ -114,7 +114,7 @@ FROM [Adventure Works]
   
  第一個查詢和第二個查詢之間的結果集差異，在於導出成員的位置差異。 在第一個查詢中，導出成員是 ROWS 座標軸的一部份，而不是第二個查詢中的 COLUMNS 座標軸。 此種位置的差異在下一個查詢 (結合單一 MDX 查詢的兩個導出成員) 中就變得很重要。  
   
-### <a name="query-3combined-year-difference-and-net-income-calculations"></a>查詢 3—結合年度差異和淨收益的計算  
+### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>查詢 3 結合年度差異和淨收益的計算  
  在結合上述兩個範例到單一 MDX 查詢的最終查詢中，求解順序就變得很重要，因為會同時計算資料行和資料列。 若要確定以正確的順序進行計算，請使用 **SOLVE_ORDER** 關鍵字定義計算順序。  
   
  **SOLVE_ORDER** 關鍵字指定 MDX 查詢中導出成員或 **CREATE MEMBER** 命令的解決順序。 和 **SOLVE_ORDER** 關鍵字並用的整數值是相對值，不需要從零開始，也不需要連續。 此數值只是告知 MDX 根據有較高值的成員計算所得出的值來導出成員。 如果導出成員沒有以 **SOLVE_ORDER** 關鍵字定義，該導出成員的預設值為零。  
@@ -155,7 +155,7 @@ FROM [Adventure Works]
 ((9,770,899.74 - 9,791,060.30) - (5,721,205.24 - 5,718,327.17)) / (9,770,899.74 - 9,791,060.30) = 1.14275744   
 ```  
   
- 或  
+ 中的多個  
   
 ```  
 (23,038.63) / (20,160.56) = 114.28%  
@@ -205,9 +205,9 @@ FROM [Adventure Works]
  若 Cube 有大量的維度，並牽涉到導出成員、自訂積存公式或導出資料格時，處理解決順序會是非常複雜的問題。 當 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 評估 MDX 查詢時， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會考慮給定行程內牽涉到的所有項目 (包括 MDX 查詢中指定之 Cube 的維度) 的解決順序值。  
   
 ## <a name="see-also"></a>另請參閱  
- [CalculationCurrentPass & #40;MDX & #41;](../../../mdx/calculationcurrentpass-mdx.md)   
- [CalculationPassValue & #40;MDX & #41;](../../../mdx/calculationpassvalue-mdx.md)   
- [建立 MEMBER 陳述式 & #40;MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)   
- [操作資料 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [CalculationCurrentPass &#40;MDX&#41;](../../../mdx/calculationcurrentpass-mdx.md)   
+ [CalculationPassValue &#40;MDX&#41;](../../../mdx/calculationpassvalue-mdx.md)   
+ [CREATE MEMBER 陳述式 &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [操作資料 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

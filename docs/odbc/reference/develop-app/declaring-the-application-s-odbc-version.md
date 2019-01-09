@@ -18,12 +18,12 @@ ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd212f45e02ddce4c64a8b4a7d664ddaedf8090a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c5bb124af74d1fa009a61237edb54a9c8baec74
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666826"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591542"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>宣告應用程式&#39;s 的 ODBC 版本
 應用程式配置連接之前，它必須設定 SQL_ATTR_ODBC_VERSION 環境屬性。 這個屬性會指出應用程式遵循 ODBC 2。*x*或 ODBC 3。*x*規格，使用下列項目時：  
@@ -43,7 +43,7 @@ ms.locfileid: "47666826"
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   *CatalogName***引數中 SQLTables**。   在 ODBC 2。*x*中的萬用字元 （"%"和"_"） *CatalogName*引數將依字面解譯。 在 ODBC 3。*x*，它們會被視為萬用字元。 因此，應用程式會遵循 ODBC 2。*x*規格不能使用這些因為萬用字元的字元，並不會逸出它們時使用它們做為常值。 依照 ODBC 3 應用程式。*x*規格可以使用這些動作當做萬用字元的字元或逸出它們，並將其當做常值。 如需詳細資訊，請參閱 <<c0> [ 目錄函式中的引數](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)。  
+-   _CatalogName_**引數中 SQLTables**。 在 ODBC 2。*x*中的萬用字元 （"%"和"_"） *CatalogName*引數將依字面解譯。 在 ODBC 3。*x*，它們會被視為萬用字元。 因此，應用程式會遵循 ODBC 2。*x*規格不能使用這些因為萬用字元的字元，並不會逸出它們時使用它們做為常值。 依照 ODBC 3 應用程式。*x*規格可以使用這些動作當做萬用字元的字元或逸出它們，並將其當做常值。 如需詳細資訊，請參閱 <<c0> [ 目錄函式中的引數](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)。  
   
  ODBC 3 *.x*驅動程式管理員和 ODBC 3 *.x*驅動程式檢查應用程式會寫入至其中的 ODBC 規格的版本，並據以回應。 比方說，如果應用程式會遵循 ODBC 2。*x*規格並呼叫**SQLExecute**再呼叫**SQLPrepare**，ODBC 3 *.x*驅動程式管理員會傳回 SQLSTATE S1010 （函數順序錯誤）。 如果應用程式會遵循 ODBC 3 *.x*規格，驅動程式管理員會傳回 SQLSTATE HY010 （函數順序錯誤）。 如需詳細資訊，請參閱 <<c0> [ 回溯相容性與標準相容性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。  
   

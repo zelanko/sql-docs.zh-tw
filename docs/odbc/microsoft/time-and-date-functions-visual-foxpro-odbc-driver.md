@@ -18,12 +18,12 @@ ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7752c1c1d5184ddb1beea26d7c35e29ea5769796
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644326"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538747"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>時間和日期函式 (Visual FoxPro ODBC Driver)
 下表列出支援的 Visual FoxPro ODBC Driver; ODBC 日期和時間函數當相同的函式的 Visual FoxPro 文法與 ODBC 語法，會列出 Visual FoxPro 相等。  
@@ -57,8 +57,8 @@ ms.locfileid: "47644326"
  驅動程式也支援 ODBC 逸出序列的日期和時間戳記資料。 逸出子句語法如下所示：  
   
 ```  
---(*vendor(Microsoft),product(ODBC) d 'value' *)—  
---(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
+--(*vendor(Microsoft),product(ODBC) d 'value' *)-  
+--(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
  在這個語法中， **d**指出*值*是中的日期*yyyy-mm-dd 的-* 格式和**ts**表示*值*是在一個時間戳記*yyyy 為 yyyy-mm-dd hh: mm:*[。*f...*] 格式。 日期和時間戳記資料的速記語法如下所示：  

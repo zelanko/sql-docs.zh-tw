@@ -1,6 +1,6 @@
 ---
-title: Analytics Platform System-向外延展資料倉儲中最新消息
-description: 請參閱什麼是 Microsoft® Analytics Platform System 的新功能，擴充內部部署裝載 MPP SQL Server Parallel Data Warehouse 的設備。
+title: Analytics Platform System 的向外延展資料倉儲中最新消息
+description: 請參閱什麼是 Microsoft Analytics Platform System 的新功能，擴充內部部署裝載 MPP SQL Server Parallel Data Warehouse 的設備。
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,25 +9,41 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5ffad259ca0de75ad2eb4b7fc6f51614f1c4dea9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5467362b32733e6ef10036bf9b45d38fe3150a1e
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700356"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626352"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System，向外延展 MPP 資料倉儲中最新消息
-請參閱什麼是最新的應用裝置更新的 Microsoft® Analytics Platform System (APS) 的新功能。 APS 是裝載 MPP SQL Server Parallel Data Warehouse 的向外延展內部部署設備。 
+請參閱什麼是最新的應用裝置更新 Microsoft Analytics Platform System (APS) 的新功能。 APS 是裝載 MPP SQL Server Parallel Data Warehouse 的向外延展內部部署設備。 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.3"></a>
+## <a name="aps-cu73"></a>APS CU7.3
+發行日期為 2018 年 12 月
+
+### <a name="common-subexpression-elimination"></a>通用子運算式刪除
+APS CU7.3 可改善查詢效能，使用 SQL 查詢最佳化工具中的通用子運算式刪除。 改善可改善查詢有兩種。 第一個優點是能夠識別並排除這類運算式可以協助減少 SQL 編譯時間。 第二個和更重要的好處是這些多餘的子運算式的資料移動作業會刪除因此執行時間的查詢變得更快。 您可以找到這項功能的詳細的說明[此處](common-sub-expression-elimination.md)。
+
+### <a name="aps-informatica-connector-for-informatica-1020-published"></a>針對 Informatica 10.2.0 發行的 APS Informatica connector
+我們已發行新版本的 Informatica 連接器搭配 Informatica 版本 10.2.0 ap。 您可以從下載新的連接器[下載網站](https://www.microsoft.com/download/details.aspx?id=57472)。
+
+#### <a name="supported-versions"></a>支援的版本
+| APS 版本 | Informatica powercenter 來 | 驅動程式 |
+|:---|:---|:---|
+| APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
+| APS 2016 和更新版本 | 10.2.0 | SQL Server Native Client 11.x |
+
 <a name="h2-aps-cu7.2"></a>
 ## <a name="aps-cu72"></a>APS CU7.2
 發行日期為 2018 年 10 月
 
 ### <a name="support-for-tls-12"></a>Tls 1.2 支援
-APS CU7.2 支援 TLS 1.2。 用戶端電腦 APS 和 APS 內部節點通訊現在可以設定只透過 tls 1.2 進行通訊。 SSDT、 SSIS 和安裝設定為只透過 TLS 1.2 通訊的用戶端電腦上的 Dwloader 之類的工具現在可以連線至 AP 使用 TLS 1.2。 根據預設，APS 會回溯相容性支援 TLS （1.0、 1.1 及 1.2） 的所有版本。 如果您想要設定 AP 設備 stictly 以使用 TLS 1.2，則可以藉由變更登錄設定。 
+APS CU7.2 支援 TLS 1.2。 用戶端電腦 APS 和 APS 內部節點通訊現在可以設定只透過 tls 1.2 進行通訊。 SSDT、 SSIS 和安裝設定為只透過 TLS 1.2 通訊的用戶端電腦上的 Dwloader 之類的工具現在可以連線至 AP 使用 TLS 1.2。 根據預設，APS 會回溯相容性支援 TLS （1.0、 1.1 及 1.2） 的所有版本。 如果您想要設定為完全使用 TLS 1.2 AP 設備，則可以藉由變更登錄設定。 
 
-請參閱[AP 上設定 tls 1.2](configure-tls12-aps.md)如需詳細資訊。
+如需詳細資訊，請參閱 < [AP 上設定 tls 1.2](configure-tls12-aps.md)。
 
 ### <a name="hadoop-encryption-zone-support-for-polybase"></a>PolyBase 支援 Hadoop 加密區域
 現在 PolyBase 可以通訊 Hadoop 加密區域。 請參閱 APS 組態變更所需[設定 Hadoop 安全性](polybase-configure-hadoop-security.md#encryptionzone)。
@@ -85,7 +101,7 @@ APS 支援 T-SQL 子集[DBCC 命令](https://docs.microsoft.com/sql/t-sql/databa
 ### <a name="bug-fixes"></a>錯誤修正
 我們已經升級至 SQL Server 2016 SP2 CU2 AP CU7.1 使用。 升級會修正一些問題，如下所述。
 
-| Title | 描述 |
+| 標題 | 描述 |
 |:---|:---|
 | **潛在的 tuple mover 死結** |升級分散式交易和 tuple mover 背景執行緒中的修正長久可能的死結。 安裝之後 CU7.1，用以 TF634 停止 tuple mover 為 SQL Server 啟動參數或全域追蹤旗標的客戶可以安全地移除它。 | 
 | **某些 lag/lead 查詢失敗** |使用錯誤的巢狀的 lag/lead 函式的 CCI 資料表上的特定查詢現在已修正此升級。 | 
@@ -101,9 +117,9 @@ APS 2016 是升級至 AU7 的必要條件。 以下是 AP AU7 的新功能：
 APS AU7 建立，並根據預設，自動更新統計資料。 若要更新統計資料設定，系統管理員可以使用中的新功能切換功能表項目[Configuration Manager](appliance-configuration.md#CMTasks)。 [功能切換](appliance-feature-switch.md)控制 auto-create、 自動更新和非同步更新統計資料的行為。 您也可以更新使用統計資料設定[ALTER DATABASE （平行資料倉儲）](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)陳述式。
 
 ### <a name="t-sql"></a>T-SQL
-選取@var現在支援。 如需詳細資訊，請參閱 [選取的本機變數] （/ sql/t-sql/language-elements/select-local-variable-transact-sql） 
+選取@var現在支援。 如需詳細資訊，請參閱[選取本機變數](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-現在支援雜湊和訂單群組的查詢提示。 如需詳細資訊，請參閱 [Hints(Transact-SQL)-查詢] （/sql/t-sql/查詢/提示-transact-sql 的查詢）
+現在支援雜湊和訂單群組的查詢提示。 如需詳細資訊，請參閱[Hints(Transact-SQL)-查詢 ](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### <a name="feature-switch"></a>功能參數
 APS AU7 導入了在功能切換[Configuration Manager](launch-the-configuration-manager.md)。 現在已可設定的選項，系統管理員可以變更的 AutoStatsEnabled 和 DmsProcessStopMessageTimeoutInSeconds。

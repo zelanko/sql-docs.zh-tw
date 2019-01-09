@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - DiffGrams [SQLXML], examples
@@ -17,12 +15,12 @@ ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73b134d4b2bb59373551129d1af62231d3401a5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed354e6b72f66908c12e1254738df75008659f8d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220618"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804530"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>DiffGram 範例 (SQLXML 4.0)
   本主題的範例是由 DiffGram 所組成，DiffGram 會針對資料庫執行插入、更新和刪除作業。 在使用範例之前，請注意下列事項：  
@@ -101,7 +99,7 @@ ms.locfileid: "48220618"
 </ROOT>  
 ```  
   
- 在  **\<之前 >** 區塊中，有**\<順序 >** 項目 (**diffgr: id ="Diffgr:id="order1"**) 和 **\<客戶 >** 項目 (**diffgr: id ="Customer1"**)。 這些項目代表資料庫中的現有記錄。 **\<DataInstance >** 項目沒有對應的記錄 (具有相同**diffgr: id**)。 這表示刪除作業。  
+ 在  **\<之前 >** 區塊中，有**\<順序 >** 項目 (**diffgr: id ="Diffgr:id="order1"**) 和 **\<客戶 >** 項目 (**diffgr: id ="Customer1"**)。 這些項目代表資料庫中的現有記錄。  **\<DataInstance >** 項目沒有對應的記錄 (具有相同**diffgr: id**)。 這表示刪除作業。  
   
 #### <a name="to-test-the-diffgram"></a>若要測試 DiffGram  
   
@@ -128,7 +126,7 @@ ms.locfileid: "48220618"
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
          (N'ANATR', N'Ana Trujillo Emparedados y helados', N'Ana Trujillo')  
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
-         (N'ANTON', N'Antonio Moreno Taquería', N'Antonio Moreno')  
+         (N'ANTON', N'Antonio Moreno Taquer??a', N'Antonio Moreno')  
   
     INSERT INTO Ord(OrderID, CustomerID) VALUES(1, N'ALFKI')  
     INSERT INTO Ord(OrderID, CustomerID) VALUES(2, N'ANATR')  
@@ -195,7 +193,7 @@ ms.locfileid: "48220618"
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
          (N'ANATR', N'Ana Trujillo Emparedados y helados', N'Ana Trujillo')  
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
-         (N'ANTON', N'Antonio Moreno Taquería', N'Antonio Moreno')  
+         (N'ANTON', N'Antonio Moreno Taquer??a', N'Antonio Moreno')  
   
     INSERT INTO Ord(OrderID, CustomerID) VALUES(1, N'ALFKI')  
     INSERT INTO Ord(OrderID, CustomerID) VALUES(2, N'ANATR')  
@@ -240,7 +238,7 @@ ms.locfileid: "48220618"
 </ROOT>  
 ```  
   
- **\<之前 >** 區塊包含**\<客戶 >** 項目 (**diffgr: id ="Customer1"**)。 **\<DataInstance >** 區塊包含對應**\<客戶 >** 具有相同的項目**識別碼**。**\<客戶 >** 中的項目 **\<NewDataSet >** 也會指定**diffgr: haschanges ="modified"**。 這表示更新作業，而且中的客戶記錄**Cust**資料表會隨之更新。 請注意，如果**diffgr: haschanges**未指定屬性，DiffGram 處理邏輯會忽略這個項目會執行任何更新。  
+ **\<之前 >** 區塊包含**\<客戶 >** 項目 (**diffgr: id ="Customer1"**)。  **\<DataInstance >** 區塊包含對應**\<客戶 >** 具有相同的項目**識別碼**。**\<客戶 >** 中的項目 **\<NewDataSet >** 也會指定**diffgr: haschanges ="modified"**。 這表示更新作業，而且中的客戶記錄**Cust**資料表會隨之更新。 請注意，如果**diffgr: haschanges**未指定屬性，DiffGram 處理邏輯會忽略這個項目會執行任何更新。  
   
 #### <a name="to-test-the-diffgram"></a>若要測試 DiffGram  
   
@@ -267,7 +265,7 @@ ms.locfileid: "48220618"
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
          (N'ANATR', N'Ana Trujillo Emparedados y helados', N'Ana Trujillo')  
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
-         (N'ANTON', N'Antonio Moreno Taquería', N'Antonio Moreno')  
+         (N'ANTON', N'Antonio Moreno Taquer??a', N'Antonio Moreno')  
   
     INSERT INTO Ord(OrderID, CustomerID) VALUES(1, N'ALFKI')  
     INSERT INTO Ord(OrderID, CustomerID) VALUES(2, N'ANATR')  
@@ -347,9 +345,9 @@ ms.locfileid: "48220618"
   
 -   **\<之前 >** 區塊**\<客戶 >** 項目 (**diffgr: id ="Customer2"**) 包括不對應**\<客戶 >** 中的項目 **\<DataInstance >** （具有相同的識別碼） 的區塊。 中的項目 **\<DataInstance >** 區塊指定**diffgr: haschanges ="modified"**。 這是更新作業，對客戶 anatr 而言，在使用中所指定的值在 Cust 資料表中更新 CompanyName 和 ContactName 資訊 **\<DataInstance >** 區塊。  
   
--   **\<DataInstance >** 區塊**\<客戶 >** 項目 (**diffgr: id ="Customer3"**) 和 **\<順序 >** 項目 (**diffgr: id ="Order3"**)。 這些項目都不指定**diffgr: haschanges**屬性。 因此，DiffGram 處理邏輯會忽略這些元素。  
+-    **\<DataInstance >** 區塊**\<客戶 >** 項目 (**diffgr: id ="Customer3"**) 和 **\<順序 >** 項目 (**diffgr: id ="Order3"**)。 這些項目都不指定**diffgr: haschanges**屬性。 因此，DiffGram 處理邏輯會忽略這些元素。  
   
--   **\<DataInstance >** 區塊**\<客戶 >** 項目 (**diffgr: id ="Diffgr:id="customer4"**) 和 **\<順序 >** 項目 (**diffgr: id ="Diffgr:id="order4"**) 的其中有中的沒有對應項目\<之前 > 區塊。 在這些項目 **\<DataInstance >** 區塊指定**diffgr: haschanges ="inserted"**。 因此，新的記錄會加入 Cust 資料表和 Ord 資料表中。  
+-    **\<DataInstance >** 區塊**\<客戶 >** 項目 (**diffgr: id ="Diffgr:id="customer4"**) 和 **\<順序 >** 項目 (**diffgr: id ="Diffgr:id="order4"**) 的其中有中的沒有對應項目\<之前 > 區塊。 在這些項目 **\<DataInstance >** 區塊指定**diffgr: haschanges ="inserted"**。 因此，新的記錄會加入 Cust 資料表和 Ord 資料表中。  
   
 #### <a name="to-test-the-diffgram"></a>若要測試 DiffGram  
   
@@ -376,7 +374,7 @@ ms.locfileid: "48220618"
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
          (N'ANATR', N'Ana Trujillo Emparedados y helados', N'Ana Trujillo')  
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
-         (N'ANTON', N'Antonio Moreno Taquería', N'Antonio Moreno')  
+         (N'ANTON', N'Antonio Moreno Taquer??a', N'Antonio Moreno')  
   
     INSERT INTO Ord(OrderID, CustomerID) VALUES(1, N'ALFKI')  
     INSERT INTO Ord(OrderID, CustomerID) VALUES(2, N'ANATR')  
