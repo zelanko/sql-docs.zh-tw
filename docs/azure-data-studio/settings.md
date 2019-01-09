@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio 使用者和工作區設定 |Microsoft Docs
-description: 如何修改 Azure Data Studio 使用者和工作區設定。
-ms.custom: tools|sos
+title: 使用者和工作區設定
+titleSuffix: Azure Data Studio
+description: 如何自訂 Azure Data Studio 藉由修改使用者和工作區設定。
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 34eea8db6295903ccdd99d7d73b143fb6fed02ec
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6bf09159c8b7384a835a06bfafe744ea2f90f0c2
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355949"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030502"
 ---
-# <a name="user-and-workspace-settings"></a>使用者和工作區設定
+# <a name="modify-user-and-workspace-settings"></a>修改使用者和工作區設定
 
 透過設定功能可以輕鬆配置 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 以滿足您的喜好。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的編輯器、使用者介面和功能行為，幾乎都有可修改的選項。
 
@@ -30,7 +31,7 @@ ms.locfileid: "49355949"
 
 功能表命令**檔案** > **喜好設定** > **設定**(**程式碼** >  **偏好** > **設定**Mac 上) 提供使用者和工作區設定的進入點。 您會提供一份預設設定。 複製任何您想要將變更為適當的設定`settings.json`檔案。 在右邊的索引標籤可讓您快速切換使用者和工作區的設定檔。
 
-您也可以開啟使用者和工作區設定**命令調色盤**(**Ctrl + Shift + P**) 與**喜好設定： 開啟 使用者設定**和**開啟工作區設定喜好設定：** 或使用鍵盤快速鍵 (**Ctrl +，**)。
+您也可以開啟使用者和工作區設定**命令調色盤**(**Ctrl + Shift + P**) 與**喜好設定：開啟 使用者設定**和**喜好設定：開啟 設定 工作區**或使用鍵盤快速鍵 (**Ctrl +，**)。
 
 下列範例會停用 在編輯器中的行號，並設定自動縮排的程式碼行。
 

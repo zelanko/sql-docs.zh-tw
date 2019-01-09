@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - accMsDes
@@ -13,12 +12,12 @@ ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 899fb8b6a98832533ec62011bb42ed249c96dbd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a1a46e47dc7c40bf3747c4be55290a02bf6d9d8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066438"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770850"
 ---
 # <a name="access-the-cdc-designer-console"></a>存取 CDC 設計工具主控台
   您可以從安裝 CDC 設計工具主控台的電腦來存取此主控台。 如需有關安裝的詳細資訊，請參閱＜安裝＞。  
@@ -37,7 +36,7 @@ ms.locfileid: "48066438"
   
 -   **Windows 驗證**  
   
--   **SQL Server 驗證**：如果您選取這個選項，您必須針對您所連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的使用者輸入 [登入] 和 [密碼]。  
+-   **SQL Server 驗證**:如果您選取此選項時，您必須輸入**登入**並**密碼**中的使用者[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您要連接到。  
   
  此登入擁有的資料庫角色必須允許存取 MSXCDCDB 資料庫。 建議最好讓此登入也能存取正在使用的其他任何資料庫，否則使用者將無法檢視這些資料庫中的資料。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48066438"
  輸入 Oracle CDC Windows 服務在逾時之前，等候執行命令的時間 (以秒數為單位)。預設值是 **30**。  
   
  **加密連接**  
- 針對 Oracle CDC 服務與使用加密連接之目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間的通訊選取 [加密連接]。**進階**：按一下 [進階]，並在必要時，於 [進階連接屬性] 對話方塊中輸入其他任何連接屬性。  
+ 選取 **加密連接**Oracle CDC 服務與目標之間的通訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體使用加密的連線。**進階**:按一下 [進階]，並在必要時，於 [進階連接屬性] 對話方塊中輸入其他任何連接屬性。  
   
  **進階**  
  按一下 [進階]，並在必要時，於 [進階連接屬性] 對話方塊中輸入其他任何連接屬性。  

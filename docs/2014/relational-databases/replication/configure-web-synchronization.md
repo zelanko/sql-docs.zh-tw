@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - SQL10.REP.CONFIGWEBSYNCWIZARD.SUBTYPE.F1
@@ -24,12 +23,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49f3c4a66c38b339c87b79a30d42bf643f03d730
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112744"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782840"
 ---
 # <a name="configure-web-synchronization"></a>[設定 Web 同步處理]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 合併式複寫的 Web 同步處理選項可讓您透過網際網路使用 HTTPS 通訊協定進行資料複寫。 若要使用 Web 同步處理，您必須先執行下列組態設定動作：  
@@ -76,9 +75,9 @@ IIS 5.0 版開始支援 Web 同步處理。 但是，IIS 7.0 版不支援「設�
   
  **若要設定 Web 同步處理的 IIS**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[設定 Web 同步處理的 IIS](configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[設定 Web 同步處理的 IIS](configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[設定 Web 同步處理的 IIS 7](configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[設定 Web 同步處理的 IIS 7](configure-iis-7-for-web-synchronization.md)  
   
 ## <a name="creating-a-web-garden"></a>建立 Web 處理序區  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener 支援每個執行緒有兩個並行同步處理作業。 超過這個限制可能會導致 Replication Listener 停止回應。 配置給 replisapi.dll 的執行緒數目是由應用程式集區的 [工作者處理序數上限] 屬性所決定。 根據預設，這個屬性設定為 1。  
@@ -125,7 +124,7 @@ IIS 5.0 版開始支援 Web 同步處理。 但是，IIS 7.0 版不支援「設�
   
 -   如果您要複寫大量資料，可能必須調整合併代理程式的批次大小。  
   
- 合併式複寫的批次大小是以 *「層代」*(Generation) 為測量單位，而這是每個發行項的變更集合。 使用指定的批次中的層代編號的 –`DownloadGenerationsPerBatch`和 –`UploadGenerationsPerBatch`的 「 合併代理程式參數。 如需詳細資訊，請參閱 [Replication Merge Agent](agents/replication-merge-agent.md)。  
+ 合併式複寫的批次大小是以 *「層代」*(Generation) 為測量單位，而這是每個發行項的變更集合。 使用指定的批次中的層代編號的-`DownloadGenerationsPerBatch`和-`UploadGenerationsPerBatch`的 「 合併代理程式參數。 如需詳細資訊，請參閱 [Replication Merge Agent](agents/replication-merge-agent.md)。  
   
  若為大量資料，請針對每個批次參數指定一個少量數目。 我們建議您從 10 這個值開始，然後根據需求和效能進行微調。 一般而言，這些參數都指定於代理程式設定檔中。 如需有關設定檔的詳細資訊，請參閱＜ [Replication Agent Profiles](agents/replication-agent-profiles.md)＞。  
   

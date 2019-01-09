@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - backups [SQL Server replication], snapshot replication
@@ -21,12 +20,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43f5005c9b03772e8e8e23c3b3e06ea912683362
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 43be13027d1460ec407239140cd4306be76a445e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229988"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823512"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>備份與還原快照式和異動複寫的策略
   當為快照式及異動複寫設計備份與還原策略時，需要考慮三個方面：  
@@ -183,7 +182,7 @@ ms.locfileid: "48229988"
   
          如需有關如何指定訂閱者已經擁有該資料的詳細資訊，請參閱＜ [Initialize a Subscription Manually](../initialize-a-subscription-manually.md)＞。  
   
-#### <a name="publication-database-peer-to-peer-transactional-replication"></a>發行集資料庫：點對點異動複寫  
+#### <a name="publication-database-peer-to-peer-transactional-replication"></a>發行集資料庫：@loopback_detection  
  在下列步驟中，發行集資料庫 **A**、 **B**和 **C** 在點對點異動複寫拓撲中。 資料庫 **A** 和 **C** 在線上並正常運作；資料庫 **B** 則是要還原的資料庫。 此處所述的程序 (尤其是步驟 7、10 和 11)，與在點對點拓撲中加入節點的程序非常類似。 執行這些步驟最直接的方法是使用「設定點對點拓撲精靈」，但是您也可以使用預存程序。  
   
 1.  執行散發代理程式，以便同步處理資料庫 **A** 和 **C** 中的訂閱。移至步驟 2。  
@@ -322,7 +321,7 @@ ms.locfileid: "48229988"
   
 2.  還原最新一次訂閱資料庫備份。 移至步驟 3。  
   
-3.  如果訂閱資料庫僅包含發送訂閱，請移至步驟 4。 如果訂閱資料庫包含任何提取訂閱，請提出以下問題：訂閱資訊是最新的嗎？ 資料庫包含所有在失敗時所設定的資料表和選項嗎？ 如果是，則移至步驟 4。 如果否，請重新初始化該項訂閱。 復原即可完成。  
+3.  如果訂閱資料庫僅包含發送訂閱，請移至步驟 4。 如果訂閱資料庫包含任何提取訂閱，請詢問下列問題：訂閱資訊是最新的嗎？ 資料庫包含所有在失敗時所設定的資料表和選項嗎？ 如果是，則移至步驟 4。 如果否，請重新初始化該項訂閱。 復原即可完成。  
   
 4.  若要同步處理「訂閱者」，請執行「散發代理程式」。 復原即可完成。  
   

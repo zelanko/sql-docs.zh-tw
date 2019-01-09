@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], about synchronization
@@ -22,12 +21,12 @@ ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c417fb90dd4467fe6fb79ea9bfaf812c414326d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 6e367cc0a02e446bf915c01e5a3d846ba02dcc8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128668"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781940"
 ---
 # <a name="synchronize-data"></a>同步處理資料
   同步資料是指在「訂閱者」端套用初始快照集後，在「發行者」與「訂閱者」之間傳播資料和結構描述變更的處理。 同步處理將會：  
@@ -58,9 +57,9 @@ ms.locfileid: "48128668"
   
  **若要檢視並解決同步處理衝突**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[View and Resolve Data Conflicts for Merge Publications &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md) (檢視並解決合併式發行集的資料衝突 &#40;SQL Server Management Studio&#41;)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[檢視並解決合併式發行集的資料衝突 &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md) (檢視交易式發行集的資料衝突 &#40;SQL Server Management Studio&#41;)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[檢視交易式發行集的資料衝突 &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ## <a name="executing-code-during-synchronization"></a>在同步處理期間執行程式碼  
  複寫支援兩種同步處理時的程式碼執行方法  

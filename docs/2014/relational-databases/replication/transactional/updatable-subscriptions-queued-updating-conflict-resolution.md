@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - conflict resolution [SQL Server replication], queued updating subscriptions
@@ -17,12 +16,12 @@ ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46d54056a60b2059bed038ddb8de3c83941ff38c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 1c07d35024358961b1d438d6a0b53cc764bbc479
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085638"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781230"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
   因為佇列更新訂閱允許在多個位置對相同資料做修改，則在發行者同步資料時，有可能發生衝突。 複寫會在變更與發行者同步處理時偵測是否有任何衝突，並使用您在建立發行集時選取的解決原則解決衝突。 會發生下列衝突：  
@@ -55,13 +54,13 @@ ms.locfileid: "48085638"
   
  **若要設定佇列更新衝突解決原則**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[ &#40;SQL Server Management Studio&#41;](../publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[設定佇列的更新衝突解決選項 &#40;SQL Server Management Studio&#41;](../publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
   
--   複寫 Transact-SQL 程式設計： [啟用交易式發行集的更新訂閱](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   複寫 Transact-SQL 程式設計：[啟用交易式發行集的更新訂閱](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **若要檢視資料衝突**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md) (檢視交易式發行集的資料衝突 &#40;SQL Server Management Studio&#41;)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[檢視交易式發行集的資料衝突 &#40;SQL Server Management Studio&#41;](../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ### <a name="publisher-wins"></a>發行者優先  
  當衝突解決設定成「發行者優先」時，會以發行者的資料為基礎來維護交易一致性。 衝突中的交易會在初始它的訂閱者復原。  
