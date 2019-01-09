@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], about the database
@@ -15,12 +14,12 @@ ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 52a1f24801a33520baa7efcedc350c6ca1219d47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a49361846ffcb309c39e816d5f7a62418db87d6e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786579"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794830"
 ---
 # <a name="master-data-services-database"></a>Master Data Services 資料庫
 

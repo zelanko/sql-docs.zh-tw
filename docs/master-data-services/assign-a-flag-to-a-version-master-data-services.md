@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], assigning flags
@@ -15,12 +14,12 @@ ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 80130575b4cbc85bdba3926b1a049f62bfed1833
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97fac59d0b6bd36053a3b1e907af3430bdf83e58
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739866"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782980"
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>將旗標指派給版本 (Master Data Services)
 

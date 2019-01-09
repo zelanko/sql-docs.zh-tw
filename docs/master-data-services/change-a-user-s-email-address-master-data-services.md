@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], changing e-mail address
@@ -14,12 +13,12 @@ ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3d8576b3af30324a020c53018de69a925a036e53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 724c4d7ce6e9c2c72a918248db379b45912cf30e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666096"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790210"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>變更使用者的電子郵件地址 (Master Data Services)
 

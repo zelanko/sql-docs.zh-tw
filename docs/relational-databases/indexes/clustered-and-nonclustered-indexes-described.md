@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4687887715ffb9df13168bc1ee1dc78418c196c3
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 1ce02d6d6c177eec37a8a2279931f454368f3e54
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383913"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210687"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>叢集與非叢集索引說明
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "49383913"
   
 -   叢集  
   
-    -   叢集索引將資料表或檢視中的資料列依其索引鍵值排序與儲存。 這些就是索引定義中包含的資料行。 因為資料列本身只能以一種順序排序，所以每個資料表只能有一個叢集索引。  
+    -   叢集索引將資料表或檢視中的資料列依其索引鍵值排序與儲存。 這些就是索引定義中包含的資料行。 因為資料列本身只能以一種順序排序，所以每個資料表只能有一個叢集索引。  
   
     -   只有當資料表包含叢集索引時，資料表中的資料列才會以排序順序儲存。 當資料表有叢集索引時，資料表又稱為叢集資料表。 如果資料表沒有任何叢集索引，它的資料列就儲存在未排序的結構中，這個結構稱為堆積。  
   

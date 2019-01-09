@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fbaf6c28b551b65473784e231716c58f974e7962
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 77b98b635ccc8cd8e04e0c84e402be9409b27cbd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395361"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791844"
 ---
 # <a name="change-tracking-master-data-services"></a>變更追蹤 (Master Data Services)
 

@@ -15,12 +15,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0ed641edd4ff8b979f7e753c9e83b38654082e61
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0d99aac35afb4d5e4cc9fc4c56c497a95641300e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660557"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210807"
 ---
 # <a name="configure-publishing-and-distribution"></a>設定發行和散發
 [!INCLUDE[appliesto-ss-asdbmi-asdbmi-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "51660557"
 
 1. 使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與伺服器的連接。
 
-2. 建立 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別的執行個體。 傳遞步驟 1 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。
+2. 建立 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別的執行個體。 傳遞步驟 1 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。
 
 3. 建立 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 類別的執行個體。
 
@@ -110,7 +110,7 @@ ms.locfileid: "51660557"
 
   - <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> - 發行者的名稱。
 
-  - <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。
+  - <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 步驟 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。
 
   - <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> - 步驟 5 中建立的資料庫名稱。
 
@@ -124,7 +124,7 @@ ms.locfileid: "51660557"
 
 1. 使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 類別建立與遠端散發者伺服器的連接。
 
-2. 建立 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別的執行個體。 傳遞步驟 1 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>。
+2. 建立 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別的執行個體。 傳遞步驟 1 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。
 
 3. 建立 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 類別的執行個體。
 
@@ -156,8 +156,8 @@ ms.locfileid: "51660557"
 
 11. 呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 方法。 傳遞遠端散發者的名稱以及步驟 5 中指定之遠端散發者的密碼。
 
->[!IMPORTANT]
-可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 Windows .NET Framework 提供的 [密碼編譯服務](https://go.microsoft.com/fwlink/?LinkId=34733) 。
+> [!IMPORTANT]
+> 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 Windows .NET Framework 提供的 [密碼編譯服務](https://go.microsoft.com/fwlink/?LinkId=34733) 。
 
 ###  <a name="PShellExample"></a> 範例 (RMO) 
 您可以使用 Replication Management Objects (RMO) 以程式設計的方式設定複寫發行和散發。

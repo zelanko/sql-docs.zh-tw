@@ -5,7 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 07fe67c8d52f69f018acb68f64782be4af0c6c00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9fcb107c5ae7a22fa2705fda0580e0284940f694
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523337"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380689"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server、Deprecated Features 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|遇到了已被取代之 sys.numbered_procedure_parameters 的參考。 請勿使用。 每次編譯時發生一次。|  
 |numbered_procedures|遇到了已被取代之 deprecated sys.numbered_procedures 的參考。 請勿使用。 每次編譯時發生一次。|  
-|Oldstyle RAISEERROR|遇到了已被取代的 RAISERROR (格式：RAISERROR 整數字串) 語法。 請使用目前的 RAISERROR 語法重寫陳述式。 每次編譯時發生一次。|  
+|Oldstyle RAISEERROR|已被取代的 RAISERROR (格式：遇到 RAISERROR 整數字串) 語法。 請使用目前的 RAISERROR 語法重寫陳述式。 每次編譯時發生一次。|  
 |隨選連接的 OLEDB。|SQLOLEDB 不是支援的提供者。 請針對隨選連接使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。|  
 |PERMISSIONS|遇到了 PERMISSIONS 內建函數的參考。 請改為查詢 sys.fn_my_permissions。 每次查詢時發生一次。|  
 |ProcNums|遇到了已被取代的 ProcNums 語法。 請重寫陳述式來移除參考。 每次編譯時發生一次。|  

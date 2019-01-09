@@ -5,7 +5,7 @@ ms.date: 04/10/2018
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.reviewer: ''
-ms.technology: database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb330dfed7671762b353176cc7d94df02c5c0e65
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1e79acde0423f9a03c7f34bcc74436ae8c65a2ed
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535558"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765480"
 ---
 # <a name="full-text-search"></a>全文檢索搜尋
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

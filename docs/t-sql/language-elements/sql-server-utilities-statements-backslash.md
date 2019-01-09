@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - backwhack
 - backslash
-- excape character
+- escape character
 - hack character
 - '\ (backslash)'
 - backslant
@@ -29,12 +29,12 @@ ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de0074eda569e614246bc41532dc2b0caa3c8c56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e0c1b85e5dbcf1742fc229445f61a4eb175edab
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777096"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979444"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>反斜線 (行接續符號) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -20,12 +20,12 @@ ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 56fbd27b9e5e4d4e760743d94948540f0f6d87ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 622e6be1e798569de5184333144ff53e3e7d80a6
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667126"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979584"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,11 +93,11 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  建立資料庫稽核規格之後，具有 CONTROL SERVER 或 ALTER ANY DATABASE AUDIT 權限的主體、系統管理員帳戶或具有稽核明確存取權的主體就可以檢視此規格。  
   
 ## <a name="examples"></a>範例  
- 下列範例會改變稱為 `HIPPA_Audit_DB_Specification` 的資料庫稽核規格，它會稽核 `SELECT` 使用者針對稱為 `dbo` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 稽核所建立的 `HIPPA_Audit` 陳述式。  
+ 下列範例會改變稱為 `HIPAA_Audit_DB_Specification` 的資料庫稽核規格，它會稽核 `SELECT` 使用者針對稱為 `dbo` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 稽核所建立的 `HIPAA_Audit` 陳述式。  
   
 ```  
-ALTER DATABASE AUDIT SPECIFICATION HIPPA_Audit_DB_Specification  
-FOR SERVER AUDIT HIPPA_Audit  
+ALTER DATABASE AUDIT SPECIFICATION HIPAA_Audit_DB_Specification  
+FOR SERVER AUDIT HIPAA_Audit  
     ADD (SELECT  
          ON OBJECT::dbo.Table1  
          BY dbo)  

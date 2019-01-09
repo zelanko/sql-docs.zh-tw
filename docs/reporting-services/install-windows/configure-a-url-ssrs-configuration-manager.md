@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2638e15f21d21563d639b2597ad30b6597f9ecd1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 912f0473db120c9874e231334d1d393e18518c71
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509521"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202487"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>設定 URL (SSRS 組態管理員)
   使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或報表伺服器 Web 服務之前，您至少必須為每一個應用程式設定一個 URL。 如果您在「僅限檔案」模式下安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (意即在安裝精靈的 [報表伺服器安裝選項] 頁面中選取 [安裝但不設定伺服器] 選項)，就一定要設定 URL。 如果您在預設組態中安裝了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，就表示已經為每一個應用程式設定了 URL。  
@@ -92,17 +92,17 @@ ms.locfileid: "52509521"
   
 10. 按一下頁面 **[URL]** 區段中的連結來測試此 URL。 請注意，在您可以測試此 URL 之前，必須先建立及設定報表伺服器資料庫。 如需指示，請參閱[建立原生模式報表伺服器資料庫 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
 
-> [!NOTE]  
+> [!NOTE]
 >  如果您有現有的 SSL 繫結和 URL 保留項目，而您想要變更 SSL 繫結，例如使用不同的憑證或主機標頭，則建議您依序完成以下步驟：  
->   
+> 
 >  1.  先移除所有 URL 保留項目。  
 > 2.  然後移除所有 SSL 繫結。  
 > 3.  然後重新建立 URL 和 SSL 繫結。  
->   
+> 
 >  前述步驟可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員完成。  
->   
+> 
 >  Microsoft Windows 針對每個 IP 位址與通訊埠組合支援一個繫結。 如果您將報表伺服器設定為使用特定主機標頭值，同時將通訊埠至 IP 位址組合上的憑證發給不同的主機標頭值，則會在瀏覽器中看見一個警告，指出憑證與所使用的 URL 不相符。  
->   
+> 
 >  若要更正這個問題，請刪除所有繫結，然後使用唯一的設定建立新繫結，或設定包含萬用字元的 Reporting Services URL 註冊。
   
 ### <a name="to-create-a-url-reservation-for-the-includessrswebportalincludesssrswebportalmd"></a>建立 URL 保留項目 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  

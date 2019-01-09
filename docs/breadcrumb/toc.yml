@@ -688,7 +688,7 @@ items:
         items:
         - name: 系統管理
           href: /sql/relational-databases/replication/administration/
-          homepage: /sql/relational-databases/replication/administration/administration-replication
+          homepage: /sql/relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators
         - name: 代理程式
           href: /sql/relational-databases/replication/agents/
           homepage: /sql/relational-databases/replication/agents/replication-agents
@@ -1210,9 +1210,9 @@ items:
       - name: SSMA Sybase
         href: /sql/ssma/sybase/
         homepage: /sql/ssma/sybase/installing-ssma-for-sybase-sybasetosql
-ms.openlocfilehash: 0f92879379c4acd3dabf40da787aa70c2b03c629
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 529f9ba70c4beb5a5fb5deeb5830c90a26c06941
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046558"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125214"

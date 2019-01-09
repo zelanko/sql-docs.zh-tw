@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42db9954a071865124d443be32203fc284dfe699
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 079a54bdbf107ec9f83e1078fedba1be84374c5b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838956"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589132"
 ---
 # <a name="specify-parameters"></a>指定參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -169,7 +169,7 @@ GO
  執行 `usp_GetList` 以傳回成本低於 $700 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 產品 (自行車) 清單。 OUTPUT 參數 **\@cost** 和 **\@compareprices** 會搭配流程控制語言使用，以便在 [訊息] 視窗中傳回訊息。  
   
 > [!NOTE]  
->  在建立程序過程以及在使用變數過程中，必須定義 OUTPUT 變數。 參數名稱和變數名稱不一定要相符。 但是，資料類型和參數定位必須相符 (除非使用 **\@listprice=** *variable*)。  
+>  在建立程序過程以及在使用變數過程中，必須定義 OUTPUT 變數。 參數名稱和變數名稱不一定要相符。 但是，資料類型和參數定位必須相符 (除非使用 **\@listprice=** _variable_)。  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

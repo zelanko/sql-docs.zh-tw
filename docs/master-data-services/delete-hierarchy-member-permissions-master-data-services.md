@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting member permissions [Master Data Services]
@@ -16,12 +15,12 @@ ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 290104c5b28fed70dd17a742a94c779ff693804e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f497495fbcef0bc0b34d6b1c354f5132001e17fc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791466"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749251"
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>刪除階層成員權限 (Master Data Services)
 

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - notifications [Master Data Services]
@@ -17,12 +16,12 @@ ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ab3388df365458d7fdc8fcac7692b58c6a2da743
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b255b5e0d82b70237bd9933f49c6b3b247560be2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701291"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819220"
 ---
 # <a name="notifications-master-data-services"></a>通知 (Master Data Services)
 

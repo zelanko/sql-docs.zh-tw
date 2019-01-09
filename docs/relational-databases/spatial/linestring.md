@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e73aa99ec25e1cdf084dc2a5f7a8dfa4c08f6c90
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: c7765138f3ff4fd1ef31b6d3a606d427020c376d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018633"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979824"
 ---
 # <a name="linestring"></a>LineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51018633"
   
  ![幾何 LineString 執行個體的範例](../../relational-databases/spatial/media/linestring.gif "幾何 LineString 執行個體的範例")  
   
- 如本圖所示：  
+如本圖所示：  
   
 -   圖 1 是簡單、非封閉的 **LineString** 執行個體。  
   
@@ -41,69 +41,69 @@ ms.locfileid: "51018633"
 -   圖 4 是非簡單、封閉的 **LineString** 執行個體，因此它不是環形。  
   
 ### <a name="accepted-instances"></a>已接受的執行個體  
- 您可以將已接受的 **LineString** 執行個體放入 geometry 變數中，但是它們可能不是有效的 **LineString** 執行個體。 若要讓系統接受 **LineString** 執行個體，就必須符合下列準則。 此執行個體至少必須由兩個點所組成，或者它必須是空的。 下面是已接受的 LineString 執行個體。  
+您可以將已接受的 **LineString** 執行個體放入 geometry 變數中，但是它們可能不是有效的 **LineString** 執行個體。 若要讓系統接受 **LineString** 執行個體，就必須符合下列準則。 此執行個體至少必須由兩個點所組成，或者它必須是空的。 下面是已接受的 LineString 執行個體。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'LINESTRING EMPTY';  
 DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';  
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';  
 ```  
   
- `@g3` 顯示 **LineString** 執行個體可被系統接受但卻無效。  
+`@g3` 顯示 **LineString** 執行個體可被系統接受但卻無效。  
   
- 下面是無法接受的 **LineString** 執行個體。 它將擲回 `System.FormatException`。  
+下面是無法接受的 **LineString** 執行個體。 它將擲回 `System.FormatException`。  
   
-```  
+```sql  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>有效的執行個體  
- **LineString** 執行個體必須符合下列準則，才會是有效的。  
+**LineString** 執行個體必須符合下列準則，才會是有效的。  
   
 1.  系統必須接受 **LineString** 執行個體。  
-  
 2.  如果 **LineString** 執行個體不是空的，則它至少必須包含兩個相異點。  
-  
 3.  **LineString** 執行個體本身不得在兩個或多個連續點的間隔上重疊。  
   
- 下面是有效的 **LineString** 執行個體。  
+下面是有效的 **LineString** 執行個體。  
   
-```  
+```sql  
 DECLARE @g1 geometry= 'LINESTRING EMPTY';  
 DECLARE @g2 geometry= 'LINESTRING(1 1, 3 3)';  
 DECLARE @g3 geometry= 'LINESTRING(1 1, 3 3, 2 4, 2 0)';  
 DECLARE @g4 geometry= 'LINESTRING(1 1, 3 3, 2 4, 2 0, 1 1)';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
-  
 ```  
   
- 下面是無效的 **LineString** 執行個體。  
+下面是無效的 **LineString** 執行個體。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  
 DECLARE @g2 geometry = 'LINESTRING(1 1, 1 1)';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
 > [!WARNING]  
->  **LineString** 重疊的偵測是以浮點計算為基礎，但這些計算並不精確。  
+> **LineString** 重疊的偵測是以浮點計算為基礎，但這些計算並不精確。  
   
 ## <a name="examples"></a>範例  
- 下列範例示範如何建立具有三個點且 SRID 為 0 的 `geometry``LineString` 執行個體：  
+### <a name="example-a"></a>範例 A。    
+下列範例示範如何建立具有三個點且 SRID 為 0 的 `geometry``LineString` 執行個體：  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(1 1, 2 4, 3 9)', 0);  
 ```  
   
- `LineString` 執行個體中的每個點都可包含 Z (高度) 和 M (測量) 值。 此範例會將 M 值加入到上述範例所建立的 `LineString` 執行個體。 M 和 Z 可以是 null 值。  
+### <a name="example-b"></a>範例 B.   
+`LineString` 執行個體中的每個點都可包含 Z (高度) 和 M (測量) 值。 此範例會將 M 值加入到上述範例所建立的 `LineString` 執行個體。 M 和 Z 可以是 null 值。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NULL 24.5)', 0);  
 ```  
   
- 下列範例會示範如何建立具有兩個相同點的 `geometry LineString` 執行個體。 `IsValid` 的呼叫表示 **LineString** 執行個體無效，而 `MakeValid` 的呼叫會將 **LineString** 執行個體轉換成 **Point**。  
+### <a name="example-c"></a>範例 C。   
+下列範例會示範如何建立具有兩個相同點的 `geometry LineString` 執行個體。 `IsValid` 的呼叫表示 **LineString** 執行個體無效，而 `MakeValid` 的呼叫會將 **LineString** 執行個體轉換成 **Point**。  
   
 ```sql  
 DECLARE @g geometry  
@@ -118,11 +118,10 @@ ELSE
      SET @g = @g.MakeValid();  
      SELECT @g.ToString() + ' is a valid Point.';    
   END  
-  
 ```  
   
- 上述程式碼片段會傳回下列結果：  
-  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
 ```  
 LINESTRING(1 3, 1 3) is not a valid LineString  
 POINT(1 3) is a valid Point.  

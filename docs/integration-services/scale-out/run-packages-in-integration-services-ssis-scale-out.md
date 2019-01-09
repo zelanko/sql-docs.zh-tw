@@ -13,12 +13,12 @@ ms.author: haoqian
 manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 70ebcc5773d17f6f0f6fe714367f4bf487f3a0db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c718dd14e1c7d2fc508efa403a9abfbcbae100d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686266"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205807"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>執行 Integration Services (SSIS) Scale Out 中的套件
 將套件部署至 Integration Services 伺服器之後，即可使用下列其中一種方法在 Scale Out 中予以執行：
@@ -33,7 +33,7 @@ ms.locfileid: "47686266"
 
 1. 開啟 [在相應放大中執行套件] 對話方塊。
 
-    在 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 中連接到 Integration Services 伺服器。 在 [物件總管] 中，展開樹狀目錄以顯示 [Integration Services 目錄] 下的節點。 以滑鼠右鍵按一下 [SSISDB]  節點或您要執行的專案或封裝，再按一下 [在相應放大中執行] 。
+    在 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]中連接到 Integration Services 伺服器。 在 [物件總管] 中，展開樹狀目錄以顯示 [Integration Services 目錄] 下的節點。 以滑鼠右鍵按一下 [SSISDB]  節點或您要執行的專案或封裝，再按一下 [在相應放大中執行] 。
 
 2. 選取套件，並設定選項。
 
@@ -117,7 +117,7 @@ GO
 
 設定這個預設執行模式之後，在呼叫 `[catalog].[create_execution]` 預存程序時，就不再需要指定 **@runinscaleout** 參數。 套件會自動以相應放大模式執行。 
 
-![執行模式](media\exe-mode.PNG)
+![執行模式](media/exe-mode.PNG)
 
 若要重新切換預設執行模式，讓套件不再預設以相應放大模式執行，請將 [全伺服器的預設執行模式] 設定為 [伺服器]。
 

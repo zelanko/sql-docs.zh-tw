@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - leaf members [Master Data Services], creating
@@ -16,12 +15,12 @@ ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 08605c9020e79bcafe2966373a5c7735030be51a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffc3b726b0143b67a4991b8c22486259865ed804
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805526"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822052"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>建立分葉成員 (Master Data Services)
 

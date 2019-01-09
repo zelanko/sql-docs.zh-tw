@@ -6,15 +6,15 @@ ms.prod: sql
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1fd033b3a575a5841c062a938688a30c7fc2c44
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 63310a5010f8d632f91bea5c73f1505dde4849da
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700556"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53597050"
 ---
 # <a name="extended-events-for-stretch-database"></a>Stretch Database 的擴充事件
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
