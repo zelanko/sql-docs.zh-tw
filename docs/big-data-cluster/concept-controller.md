@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: seodec18
 ms.openlocfilehash: 954f3fa220d2bd379dc5d6666015b2be759aafc7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
+ms.lasthandoff: 01/09/2019
 ms.locfileid: "53206717"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>什麼是 SQL Server 2019 巨量資料叢集上的控制器？

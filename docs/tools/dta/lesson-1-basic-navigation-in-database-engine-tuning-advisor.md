@@ -1,5 +1,5 @@
 ---
-title: 課程 1：Database Engine Tuning Advisor 中的基本導覽 | Microsoft Docs
+title: 第 1 課：Database Engine Tuning Advisor 中的基本導覽 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee0b1c221c3bdb18ec9b79339e9dd55cb4eed93e
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: d41c8a3dcc995849fa62ea9a06703d915298eeac
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071802"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201777"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>第 1 課：Database Engine Tuning Advisor 中的基本導覽
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ Database Engine Tuning Advisor 提供一種以圖形化使用者介面 (GUI) 為
   
 -   右窗格包含 [一般] 和 [微調選項] 索引標籤。 您可以在這裡定義您的 Database Engine 微調工作階段。 在 [一般] 索引標籤中，輸入微調工作階段的名稱，指定要使用的工作負載檔案或資料表，並選取您要在此工作階段中進行微調的資料庫和資料表。 工作負載是針對需要微調的一或多個資料庫來執行的一組 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 當微調資料庫時，Database Engine Tuning Advisor 會利用追蹤檔、追蹤資料表、[!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼或 XML 檔來作為工作負載輸入。 您可以在 [微調選項] 索引標籤中，選取實體資料庫設計結構 (索引或索引檢視)，以及在分析期間，Database Engine Tuning Advisor 所要考量的資料分割策略。 在這個索引標籤中，您也可以指定 Database Engine Tuning Advisor 微調工作負載所花的最大時間。 依預設，Database Engine Tuning Advisor 會微調工作負載一小時。  
   
-> [!NOTE]  
+> [!NOTE]
 > 當從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢編輯器匯入 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指令碼時，Database Engine Tuning Advisor 可以採用 XML 檔來作為輸入。 如需詳細資訊，請參閱 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 啟動及使用 Database Engine Tuning Advisor [中有關從](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)查詢編輯器＜啟動 Database Engine Tuning Advisor＞一節。  
   
 ## <a name="configure-tool-options-and-layout"></a>設定工具選項和配置 
@@ -86,7 +86,7 @@ Database Engine Tuning Advisor 提供一種以圖形化使用者介面 (GUI) 為
     -   依預設，會核取 [停止工作階段分析之前先詢問]，以避免在 Database Engine Tuning Advisor 分析工作負載完成之前不慎停止微調工作階段。  
   
 ## <a name="next-lesson"></a>下一課  
-[課程 2：使用 Database Engine Tuning Advisor](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[第 2 課：使用 Database Engine Tuning Advisor](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

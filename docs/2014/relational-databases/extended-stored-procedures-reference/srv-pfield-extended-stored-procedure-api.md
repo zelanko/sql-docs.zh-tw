@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_pfield
@@ -22,12 +20,12 @@ ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6243ceb9d96c5cb3c681aea8832ba35f45e80703
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed4abfe8914c7f6b1dc3e22de7a321419b8d9cee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170077"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353848"
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (擴充預存程序 API)
     
@@ -89,6 +87,6 @@ len
  以 Null 結束的字串指標，其中包含指定之欄位在 SRV_PROC 結構中的目前值。 如果欄位是空的，則會傳回空字串的有效指標，而且 *len* 包含 0。 如果欄位不明，會傳回 NULL，而且 *len* 包含值 -1。  
   
 > [!IMPORTANT]  
->  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱[資訊安全開發人員中心](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
+>  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱[資訊安全開發人員中心](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
   

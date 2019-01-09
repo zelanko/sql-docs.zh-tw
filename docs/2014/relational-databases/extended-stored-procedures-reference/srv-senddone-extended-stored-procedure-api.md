@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_senddone
@@ -22,12 +20,12 @@ ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 51589cea0306f7a9fe3e4074c586c7c89892d9c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2bce064ee38082861e9b6c5d4f2c6e28bf41dded
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157938"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361040"
 ---
 # <a name="srvsenddone-extended-stored-procedure-api"></a>srv_senddone (擴充預存程序 API)
     
@@ -85,6 +83,6 @@ count
  請勿從 SRV_CONNECT 處理常式呼叫 **srv_senddone**。  
   
 > [!IMPORTANT]  
->  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
+>  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
   
