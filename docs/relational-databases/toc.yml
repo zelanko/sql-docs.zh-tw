@@ -15,7 +15,7 @@ items:
       href: ../relational-databases/collations/collation-and-unicode-support.md
     - name: 資料庫 +
       href: ../relational-databases/databases/databases.md
-    - name: 圖表 +
+    - name: SQL Graph
       href: ../relational-databases/graphs/sql-graph-overview.md
     - name: 階層式資料
       href: hierarchical-data-sql-server.md
@@ -108,6 +108,8 @@ items:
     items:
     - name: 管理
       items:
+      - name: SQL Server 公用程式 +
+        href: ../relational-databases/manage/sql-server-utility-features-and-tasks.md
       - name: 使用中央管理伺服器管理多部伺服器
         href: administer-multiple-servers-using-central-management-servers.md
       - name: 組態管理員
@@ -122,6 +124,8 @@ items:
         href: ../relational-databases/maintenance-plans/maintenance-plans.md
       - name: 原則式管理 +
         href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
+      - name: 交易記錄管理 +
+        href: ../relational-databases/logs/log-file-viewer.md
     - name: 監視器
       items:
       - name: 資料收集 +
@@ -176,7 +180,7 @@ items:
   - name: Database Engine 使用者入門
     href: tutorial-getting-started-with-the-database-engine.md
     items:
-    - name: 第 1 課：連接到 Database Engine
+    - name: 第 1 課：連接至 Database Engine
       href: lesson-1-connecting-to-the-database-engine.md
     - name: 第 2 課：從另一部電腦連接
       href: lesson-2-connecting-from-another-computer.md
@@ -210,9 +214,9 @@ items:
     href: ../relational-databases/system-tables/system-tables-transact-sql.md
   - name: 系統檢視表 +
     href: ../relational-databases/system-views/replication-views-transact-sql.md
-ms.openlocfilehash: 63116a51771db804d7e0a30dac73f24934c29c51
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 38de54db48c48ee439c3ff737f93dad8974cd228
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439750"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328878"

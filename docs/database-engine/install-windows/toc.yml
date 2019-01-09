@@ -10,7 +10,7 @@ items:
     href: supported-version-and-edition-upgrades.md
   - name: 執行 Data Migration Assistant 準備進行升級
     href: prepare-for-upgrade-by-running-data-migration-assistant.md
-  - name: 從 SQL Server 2005 升級嗎？
+  - name: 要從 SQL 2005、2008 或 2008 R2 升級嗎？
     href: are-you-upgrading-from-sql-server-2005.md
   - name: 升級 Analysis Services
     href: upgrade-analysis-services.md
@@ -85,9 +85,9 @@ items:
     href: installing-updates-from-the-command-prompt.md
 - name: SQL Server 使用意見收集的本機稽核
   href: local-audit-for-sql-server-usage-feedback-collection.md
-ms.openlocfilehash: 80ecbf7365d231b16040b52de30c18de94fb97db
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 66feed7cd88251f980900ebb23b9b5716e7520d2
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144843"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328398"

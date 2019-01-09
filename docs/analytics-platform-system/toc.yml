@@ -2,6 +2,8 @@ items:
 - name: APS 的新功能
   href: whats-new-analytics-platform-system.md
   items:
+  - name: APS CU7.3
+    href: whats-new-analytics-platform-system.md#h2-aps-cu7.3
   - name: APS CU7.2
     href: whats-new-analytics-platform-system.md#h2-aps-cu7.2
   - name: APS CU7.1
@@ -42,6 +44,8 @@ items:
     href: configure-auto-statistics.md
   - name: 監視作用中的查詢
     href: monitoring-active-queries.md
+  - name: 共通子運算式刪除
+    href: common-sub-expression-elimination.md
 - name: 載入
   items:
   - name: 概觀
@@ -221,9 +225,9 @@ items:
     href: tsql-statements.md
   - name: T-SQL 系統檢視表
     href: tsql-system-views.md
-ms.openlocfilehash: 04bf7785ce070800e059c9914c28d9bcf6ddbec5
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: d1aef2cdc187c2bcf8c53a8e675b1f1c11cad1d6
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236994"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626299"

@@ -45,8 +45,10 @@ items:
       href: configure-scale-out-groups-windows.md
   - name: 資料虛擬化精靈
     items:
-    - name: 資料虛擬化精靈
+    - name: 將關聯式資料虛擬化
       href: data-virtualization.md
+    - name: 將 CSV 資料虛擬化
+      href: data-virtualization-csv.md
   - name: 疑難排解
     items:
     - name: 監視和疑難排解
@@ -71,9 +73,9 @@ items:
     href: https://feedback.azure.com/forums/908035-sql-server
   - name: Reddit
     href: https://www.reddit.com/r/SQLServer
-ms.openlocfilehash: ce0b30511fb46fa85a62019710bbb401b2a99546
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 44e1705fff2febf4f126d6bb9debf6e2940f1bf0
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697407"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53595849"

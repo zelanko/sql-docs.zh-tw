@@ -1,5 +1,5 @@
 ---
-title: SQL Server 機器學習服務與程式設計延伸模組文件 | Microsoft Docs
+title: R 與 Python 機器學習及程式設計延伸模組文件 - SQL Server 機器學習服務
 description: SQL Server 中的 R 和 Python，內建資料科學模型和機器學習服務演算法，可大規模地進行企業資料分析。
 ms.prod: sql
 ms.technology: machine-learning
@@ -9,12 +9,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4c56d49e4cf168c7d1b6b1830caa6c79e237f46c
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 498a73df26b516856fefe411f5d29bdac8076139
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712380"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596539"
 ---
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
 # <a name="sql-server-machine-learning-and-programming-extensions-documentation"></a>SQL Server 機器學習服務與程式設計延伸模組文件
@@ -68,6 +68,6 @@ ms.locfileid: "46712380"
 | [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | R | 下列 R 工作的分散式和平行處理：資料轉換、探索、視覺效果、統計和預測性分析。 |
 | [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | R | 以 Microsoft AI 演算法為基礎的函式，適用於 R。 |
 | [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | R | 從 OLAP cube.s 匯入資料 |
-| [sqlRUtils]() | R | 用於封裝 R 和 T-SQL 的協助程式函式。 |
+| [sqlRUtils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | R | 用於封裝 R 和 T-SQL 的協助程式函式。 |
 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Python | 下列 Python 工作的分散式和平行處理：資料轉換、探索、視覺效果、統計和預測性分析。  | 
 | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Python | 以 Microsoft AI 演算法為基礎的函式，適用於 Python。  |
