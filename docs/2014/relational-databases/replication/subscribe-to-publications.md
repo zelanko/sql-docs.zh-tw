@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.conc.subtopubs.f1
@@ -25,12 +24,12 @@ ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 573346dcd34691f9270e61592a25d8625d2af367
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3aa122e19d890b0b994e4403dcc59b3131571d7c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207828"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767866"
 ---
 # <a name="subscribe-to-publications"></a>訂閱發行集
   訂閱是指要求一份發行集中的資料和資料庫物件。 訂閱會定義將收到的發行集，以及收到的位置和時間。 規劃訂閱時，請考慮要執行代理程式處理的位置。 您選擇的訂閱類型會控制代理程式執行的位置。 若為發送訂閱，則「合併代理程式」或「散發代理程式」會在「散發者」執行；若為提取訂閱，則代理程式會在「訂閱者」執行。 建立訂閱之後，就不能變更訂閱的類型。  
@@ -73,14 +72,14 @@ ms.locfileid: "48207828"
   
  **若要刪除發送訂閱**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[刪除發送訂閱](delete-a-push-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[刪除發送訂閱](delete-a-push-subscription.md)  
   
 > [!NOTE]  
 >  刪除訂閱並不會移除「訂閱者」中已發行的物件。  
   
  **若要建立提取訂閱**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[建立提取訂閱](create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[建立提取訂閱](create-a-pull-subscription.md)  
   
  **若要檢視或修改提取訂閱屬性**  
   

@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a857b51bf884a1bec30e28935591946da43ef390
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072938"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756610"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoring Performance By Using the Query Store
-  查詢存放區功能為 DBA 提供查詢計劃選擇及效能的深入了解。 它能讓您快速找出因為查詢計劃中的變更所導致的效能差異，以簡化效能疑難排解。 該功能會自動擷取查詢、計劃及執行階段統計資料的記錄，並會保留這些記錄供您檢閱。 其會以時段來區分資料、供您查看資料庫使用模式，並了解何時在伺服器上發生查詢計劃變更。 可設定查詢存放區，請使用[ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options)選項。  
+  查詢存放區功能為 DBA 提供查詢計劃選擇及效能的深入了解。 它能讓您快速找出因為查詢計劃中的變更所導致的效能差異，以簡化效能疑難排解。 該功能會自動擷取查詢、計劃及執行階段統計資料的記錄，並會保留這些記錄供您檢閱。 其會以時段來區分資料、供您查看資料庫使用模式，並了解何時在伺服器上發生查詢計劃變更。 使用 [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) 選項，可設定查詢存放區。  
   
 ||  
 |-|  
-|**適用於**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([取得](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
+|**適用於**：[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([取得](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
   
 > [!IMPORTANT]  
 >  目前是預覽功能。 若要使用查詢存放區，您必須同意並了解運作查詢存放區受到授權合約預覽條款 (例如，Enterprise 合約、Microsoft Azure 合約或 Microsoft 線上訂用帳戶合約) 的限制，以及任何適用的 [Microsoft Azure Preview 增補使用條款](http://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/)。  
@@ -33,7 +32,7 @@ ms.locfileid: "48072938"
   
 #### <a name="by-using-the-query-store-page-in-management-studio"></a>使用 Management Studio 中的查詢存放區頁面  
   
-1.  在物件總管中，於伺服器上按一下滑鼠右鍵，然後按一下 [屬性] 。 (需要[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]2016年版本[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]。)  
+1.  在物件總管中，於伺服器上按一下滑鼠右鍵，然後按一下 [屬性] 。 (需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]2016 版本。)  
   
 2.  在 [資料庫屬性]  對話方塊中，選取 [查詢存放區]  頁面。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48072938"
   
 #### <a name="by-using-transact-sql-statements"></a>使用 Transact-SQL 陳述式  
   
-1.  使用`ALTER DATABASE`陳述式來啟用查詢存放區。 例如：  
+1.  使用 `ALTER DATABASE` 陳述式可啟用查詢存放區。 例如：  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
@@ -71,7 +70,7 @@ ms.locfileid: "48072938"
   
 -   分析特定資料庫的資源 (CPU、I/O 及記憶體) 使用模式。  
   
- 查詢存放區包含兩個存放區。 **計劃存放區** 可保存執行計劃資訊，而 **執行階段統計資料存放區** 則會保存執行統計資料資訊。 重複的計劃的計劃存放區中的查詢受限於可儲存數目`max_plans_per_query`組態選項。 若要增強效能，資訊會以非同步方式寫入兩個存放區。 若要將空間使用量降至最低，在執行階段統計資料存放區中的執行階段執行統計資料，會以固定的時段彙總。 對查詢存放區目錄檢視進行查詢時，會顯示這些存放區中的資訊。  
+ 查詢存放區包含兩個存放區。 **計劃存放區** 可保存執行計劃資訊，而 **執行階段統計資料存放區** 則會保存執行統計資料資訊。 在計劃存放區中可為查詢儲存的不重複之計劃的數目，受限於 `max_plans_per_query` 組態選項。 若要增強效能，資訊會以非同步方式寫入兩個存放區。 若要將空間使用量降至最低，在執行階段統計資料存放區中的執行階段執行統計資料，會以固定的時段彙總。 對查詢存放區目錄檢視進行查詢時，會顯示這些存放區中的資訊。  
   
  下列查詢會傳回查詢存放區中查詢與計劃的相關資訊。  
   
@@ -91,7 +90,7 @@ JOIN sys.query_store_query_text AS Txt
   
  ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
   
- 選取**迴歸查詢**，開啟**迴歸查詢**窗格中的[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]。 [迴歸查詢] 窗格會顯示查詢存放區中的查詢與計劃。 頂端的下拉式清單方塊，可供您依據各種條件選取查詢。 選取計劃即可以圖形方式檢視查詢計劃。 提供有按鈕可供檢視來源查詢、強制執行或取消強制執行查詢計劃，以及重新整理顯示畫面。  
+ 選取 [迴歸查詢] ，開啟 **中的 [迴歸查詢]**[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]窗格。 [迴歸查詢] 窗格會顯示查詢存放區中的查詢與計劃。 頂端的下拉式清單方塊，可供您依據各種條件選取查詢。 選取計劃即可以圖形方式檢視查詢計劃。 提供有按鈕可供檢視來源查詢、強制執行或取消強制執行查詢計劃，以及重新整理顯示畫面。  
   
  ![RegressedQueries](../../database-engine/media/regressedqueries.PNG "RegressedQueries")  
   
@@ -115,14 +114,14 @@ JOIN sys.query_store_query_text AS Txt
  INTERVAL_LENGTH_MINUTES  
  決定執行階段執行統計資料彙總至查詢存放區的時間間隔。 若要最佳化空間的使用量，在執行階段統計資料存放區中的執行階段執行統計資料，會以固定的時段彙總。 這個固定時段由 INTERVAL_LENGTH_MINUTES 所設定。  
   
- 查詢`sys.database_query_store_options`檢視表來判斷查詢存放區目前的選項。  
+ 查詢 `sys.database_query_store_options` 檢視可判斷查詢存放區目前的選項。  
   
  如需使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式設定選項的詳細資訊，請參閱 [選項管理](#OptionMgmt)。  
   
  
   
 ##  <a name="Related"></a> 相關檢視、函數與程序  
- 查詢存放區中可以檢視及管理透過[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]或使用下列檢視和程序。  
+ 透過 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 或使用下列檢視與程序，即可檢視及管理查詢存放區。  
   
 -   [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)  
   
@@ -206,9 +205,9 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
   
- 請注意，不得使用任意值，您應使用下列其中之一：1、5、10、15、30 和 60。  
+ 請注意，不允許任意值-您應該使用下列其中一項：1、 5、 10、 15、 30 和 60。  
   
- 新的間隔值透過公開`sys.database_query_store_options`檢視。  
+ 透過 `sys.database_query_store_options` 檢視，即可看到新的間隔值。  
   
  如果查詢存放區的儲存體已滿，請使用下列陳述式來擴充該儲存體。  
   
@@ -276,11 +275,11 @@ DEALLOCATE adhoc_queries_cursor;
   
  您可以用不同的邏輯來定義自己的程序，以清除不再重要的資料。  
   
- 上述範例使用`sp_query_store_remove_query`擴充預存程序，移除不必要的資料。 您也可以使用其他兩項程序。  
+ 以上範例使用 `sp_query_store_remove_query` 擴充預存程序，來移除不必要的資料。 您也可以使用其他兩項程序。  
   
--   `sp_query_store_reset_exec_stats` – 清除指定計劃的執行階段統計資料。  
+-   `sp_query_store_reset_exec_stats` -清除指定計劃的執行階段統計資料。  
   
--   `sp_query_store_remove_plan` – 移除單一計劃。  
+-   `sp_query_store_remove_plan` -移除單一計劃。  
   
 
   
@@ -500,7 +499,7 @@ OPTION (MERGE JOIN);
 
   
 ###  <a name="Stability"></a> 維護查詢效能穩定性  
- 執行的查詢多次可能會發現[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用不同的計劃，導致不同的資源使用率與持續時間。 您可利用查詢存放區，輕鬆偵測查詢效能何時低下，以及判斷在意的時段中的最佳計劃。 然後可以對未來的查詢強制執行該最佳計劃。  
+ 若是執行多次的查詢，您可會注意到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用不同的計劃，而產生了不同的資源使用率與持續時間。 您可利用查詢存放區，輕鬆偵測查詢效能何時低下，以及判斷在意的時段中的最佳計劃。 然後可以對未來的查詢強制執行該最佳計劃。  
   
  也可以為具有參數 (自動設定參數或手動設定參數) 的查詢，找出不一致的查詢效能。 您可以在不同的計劃間，找出適合所有或大部分參數值的良好且快速之計劃，並強制執行該計劃，為更多使用者案例留下可預測的效能。  
   
@@ -510,9 +509,9 @@ OPTION (MERGE JOIN);
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
- 當使用`sp_query_store_force_plan`您只能強制執行所記錄的查詢存放區，作為該查詢計畫的計畫。 換句話說，可用於查詢的計劃，是已經用於執行 Q1 的計劃 (查詢存放區當時在作用中)。  
+ 使用 `sp_query_store_force_plan` 時，只能強制執行查詢存放區所記錄的計劃，做為該查詢的計劃。 換句話說，可用於查詢的計劃，是已經用於執行 Q1 的計劃 (查詢存放區當時在作用中)。  
   
- **為查詢移除強制執行計劃。** 若要再次依賴[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]查詢最佳化工具來計算最佳的查詢計畫，請使用`sp_query_store_unforce_plan`來取消強制執行已選取查詢計畫。  
+ **為查詢移除強制執行計劃。** 若要再次依賴 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 查詢最佳化工具來計算最佳的查詢計劃，請使用 `sp_query_store_unforce_plan` 以取消為該查詢所選取的強制計劃。  
   
 ```  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
