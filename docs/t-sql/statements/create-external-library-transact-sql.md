@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/05/2018
+ms.date: 12/07/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -19,22 +19,20 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8c6b8ea4467ddc09a08d21a337b1b5c8c44f34e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bd47fd06404dad6e6896d377e95de677a08c5ae3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538810"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205157"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
-將 R 套件從指定的位元組資料流或檔案路徑上傳至資料庫。
+將 R 套件檔案從指定的位元組資料流或檔案路徑上傳到資料庫。 此陳述式可作為一般機制，供資料庫管理員上傳 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 所支援之任何新外部語言執行階段 (目前只有 R) 和 OS 平台所需的成品。 
 
-此陳述式可作為一般機制，供資料庫管理員上傳 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 所支援之任何新外部語言執行階段 (R、Python、Java 等) 和 OS 平台所需的成品。 
-
-目前僅支援 R 語言和 Windows 平台。 預計在稍後的版本中將會支援 Python 和 Linux。
+在 SQL Server 2017 和更新版本中，支援 R 語言和 Windows 平台。 預計在稍後的版本中將會支援 Python 和 Linux。
 
 ## <a name="syntax"></a>語法
 
@@ -94,7 +92,7 @@ WITH ( LANGUAGE = 'R' )
 
 指定程式庫內容的平台。 此值會預設為 SQL Server 執行所在的主機平台。 因此，使用者不需要指定此值。 當支援多個平台或使用者必須指定不同的平台時，才需要指定此值。 
 
-在 SQL Server 2017 中，Windows 是唯一支援的平台。
+Windows 是目前唯一支援的平台。
 
 ## <a name="remarks"></a>Remarks
 
@@ -181,7 +179,7 @@ EXEC sp_execute_external_script
 
 ### <a name="c-create-a-library-from-a-byte-stream"></a>C. 從位元組資料流建立程式庫
 
-如果您無法將套件檔案儲存在伺服器上的位置，則可以在變數中傳遞套件內容。 下列範例會藉由以十六進位常值來傳遞位元以建立程式庫。
+如果您無法將套件檔案儲存在伺服器上的位置，則可以在變數中傳遞套件內容。 下列範例會將位元作為十六進位常值傳遞以建立程式庫。
 
 ```SQL
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');

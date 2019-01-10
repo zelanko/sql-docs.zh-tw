@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_paramdata
@@ -22,12 +20,12 @@ ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 90ef2956d169cc9591102ab945b0545ab1b325b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0825b86cabf57df552063335a0870461cb8a5658
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151928"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357560"
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata (擴充預存程序 API)
     
@@ -64,14 +62,14 @@ n
   
 |新的資料類型|輸入資料長度|  
 |--------------------|-----------------------|  
-|BITN|**NULL：** VP、NULL<br /><br /> **ZERO：** VP、NULL<br /><br /> **>=255：** N/A<br /><br /> **<255：** N/A|  
-|BIGVARCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、NULL<br /><br /> **>=255：** VP、255 個字元<br /><br /> **<255：** VP、實際資料|  
-|BIGCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、255 個空格<br /><br /> **>=255：** VP、255 個字元<br /><br /> **<255：** VP、實際資料 + 填補 (最多 255)|  
-|BIGBINARY|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、255 0x00<br /><br /> **>=255：** VP、255 個位元組<br /><br /> **<255：** VP、實際資料 + 填補 (最多 255)|  
-|BIGVARBINARY|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、0x00<br /><br /> **>=255：** VP、255 個位元組<br /><br /> **<255：** VP、實際資料|  
-|NCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、255 個空格<br /><br /> **>=255：** VP、255 個字元<br /><br /> **<255：** VP、實際資料 + 填補 (最多 255)|  
-|NVARCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、NULL<br /><br /> **>=255：** VP、255 個字元<br /><br /> **<255：** VP、實際資料|  
-|NTEXT|**NULL：** N/A<br /><br /> **ZERO：** N/A<br /><br /> **>=255：** N/A<br /><br /> **\<255：** N/A|  
+|BITN|**NULL:** VP、 NULL<br /><br /> **零：** VP、 NULL<br /><br /> **> = 255:** N/A<br /><br /> **< 255:** N/A|  
+|BIGVARCHAR|**NULL:** NULL、 N/A<br /><br /> **零：** VP、 NULL<br /><br /> **> = 255:** VP、255 個字元<br /><br /> **< 255:** VP、實際資料|  
+|BIGCHAR|**NULL:** NULL、 N/A<br /><br /> **零：** VP、255 個空格<br /><br /> **> = 255:** VP、255 個字元<br /><br /> **< 255:** VP、實際資料 + 填補 (最多 255)|  
+|BIGBINARY|**NULL:** NULL、 N/A<br /><br /> **零：** VP、255 0X00<br /><br /> **> = 255:** VP、255 個位元組<br /><br /> **< 255:** VP、實際資料 + 填補 (最多 255)|  
+|BIGVARBINARY|**NULL:** NULL、 N/A<br /><br /> **零：** VP、0X00<br /><br /> **> = 255:** VP、255 個位元組<br /><br /> **< 255:** VP、實際資料|  
+|NCHAR|**NULL:** NULL、 N/A<br /><br /> **零：** VP、255 個空格<br /><br /> **> = 255:** VP、255 個字元<br /><br /> **< 255:** VP、實際資料 + 填補 (最多 255)|  
+|NVARCHAR|**NULL:** NULL、 N/A<br /><br /> **零：** VP、 NULL<br /><br /> **> = 255:** VP、255 個字元<br /><br /> **< 255:** VP、實際資料|  
+|NTEXT|**NULL:** N/A<br /><br /> **零：** N/A<br /><br /> **> = 255:** N/A<br /><br /> **\<255:** N/A|  
   
  \*   資料不是以 Null 結束；在截斷 >255 個字元的資料時，不會發出警告。  
   
@@ -81,7 +79,7 @@ n
  當遠端預存程序呼叫是用參數進行時，可以依名稱或位置 (未命名) 傳遞參數。 如果遠端預存程序呼叫是藉由一些依名稱傳遞的參數和一些依位置傳遞的參數來進行時，就會發生錯誤。 如果發生錯誤，則仍會呼叫 SRV_RPC 處理常式，但會看來好像沒有參數一般，而且 **srv_rpcparams** 會傳回 0。  
   
 > [!IMPORTANT]  
->  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
+>  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>另請參閱  
  [srv_rpcparams &#40;擴充預存程序 API&#41;](srv-rpcparams-extended-stored-procedure-api.md)  

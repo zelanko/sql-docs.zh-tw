@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_setutype
@@ -22,12 +20,12 @@ ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b5f1b038d574da6e04fa934d4f4c599966341a7c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2439b19c4550d07b8d50a0bed6d72b603b1601a8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217394"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372020"
 ---
 # <a name="srvsetutype-extended-stored-procedure-api"></a>srv_setutype (擴充預存程序 API)
     
@@ -72,7 +70,7 @@ user_type
  利用 **srv_describe** 定義 *column* 時，以及最後一個資料列送出之前，可以呼叫 **srv_setutype** 函式。  
   
 > [!IMPORTANT]  
->  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
+>  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>另請參閱  
  [srv_describe &#40;擴充預存程序 API&#41;](srv-describe-extended-stored-procedure-api.md)  

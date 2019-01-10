@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,12 +15,12 @@ ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b86bc1d1aefc0a1e69beb45451448d7b8a31666a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40a621af401b33394b996468c581e85e3635355c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090218"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351913"
 ---
 # <a name="extended-stored-procedures-programmer39s-reference"></a>擴充預存程序程式設計人員&#39;參考
     
@@ -34,7 +32,7 @@ ms.locfileid: "48090218"
  隨著 CLR 整合之類的更新和更強大技術的出現，擴充預存程序的需求也大致被取代。  
   
 > [!IMPORTANT]  
->  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
+>  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
 ## <a name="in-this-section"></a>本節內容  
   

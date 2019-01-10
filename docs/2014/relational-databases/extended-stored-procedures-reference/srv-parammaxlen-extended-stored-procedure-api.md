@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_parammaxlen
@@ -22,12 +20,12 @@ ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8d1ebf8be54abfd0b7a12239cb84df103a8106d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7fadcfbc6249ca15ecd9581cc50d58d0e3a09a5d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156389"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360830"
 ---
 # <a name="srvparammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen (擴充預存程序 API)
     
@@ -64,13 +62,13 @@ n
   
 |新的資料類型|輸入資料長度|  
 |--------------------|-----------------------|  
-|`BITN`|**NULL：** 1<br /><br /> **ZERO：** 1<br /><br /> **>=255：** N/A<br /><br /> **<255：** N/A|  
-|`BIGVARCHAR`|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|`BIGCHAR`|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|`BIGBINARY`|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|`BIGVARBINARY`|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|`NCHAR`|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|`NVARCHAR`|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|`BITN`|**NULL:** 1<br /><br /> **零：** 1<br /><br /> **> = 255:** N/A<br /><br /> **< 255:** N/A|  
+|`BIGVARCHAR`|**NULL:** 255<br /><br /> **零：** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
+|`BIGCHAR`|**NULL:** 255<br /><br /> **零：** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
+|`BIGBINARY`|**NULL:** 255<br /><br /> **零：** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
+|`BIGVARBINARY`|**NULL:** 255<br /><br /> **零：** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
+|`NCHAR`|**NULL:** 255<br /><br /> **零：** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
+|`NVARCHAR`|**NULL:** 255<br /><br /> **零：** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
 |`NTEXT`|**NULL：**-1<br /><br /> **ZERO：**-1<br /><br /> **>=255:** -1<br /><br /> **\<255:** -1|  
   
 ## <a name="remarks"></a>備註  
@@ -79,7 +77,7 @@ n
  當遠端預存程序呼叫是用參數產生時，該參數可以依名稱或位置 (未命名) 傳遞。 如果遠端預存程序呼叫是藉由一些依名稱傳遞的參數和一些依位置傳遞的參數來進行時，就會發生錯誤。 雖然仍會呼叫 SRV_RPC 處理常式，但是看起來好像沒有參數，而且 **srv_rpcparams** 會傳回 0。  
   
 > [!IMPORTANT]  
->  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
+>  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>另請參閱  
  [srv_paraminfo &#40;擴充預存程序 API&#41;](srv-paraminfo-extended-stored-procedure-api.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], compressed
@@ -15,12 +14,12 @@ ms.assetid: 979ffa7c-3a88-4e70-8cf2-b8d452fd7a7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be1415b0f31e79baed84545ea623c84151f5c251
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: c45dc872cd75640f244c55863cdbace607812a38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148108"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815340"
 ---
 # <a name="compressed-snapshots"></a>壓縮的快照集
   當您透過通訊緩慢的網路傳送快照集時，或將快照集儲存到抽取式媒體中，且未壓縮的快照集過大而未能放入媒體時，適合壓縮快照集檔案。 在這種狀況下，壓縮快照集檔案非常有用，但是壓縮會增加產生及套用快照集的時間。  
@@ -34,7 +33,7 @@ ms.locfileid: "48148108"
   
  **若要壓縮及傳遞快照集檔案**  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[壓縮快照集檔案 &#40;SQL Server Management Studio&#41;](publish/compress-snapshot-files-sql-server-management-studio.md)  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[壓縮快照集檔案 &#40;SQL Server Management Studio&#41;](publish/compress-snapshot-files-sql-server-management-studio.md)  
   
 -   複寫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式設計：[設定快照集屬性 &#40;複寫 Transact-SQL 程式設計&#41;](publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   
