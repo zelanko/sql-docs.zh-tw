@@ -11,12 +11,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 13738a9a4e533ac8a9882724aa1b9c9f12e3048f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 606fe679f4cc58a627b2d2978b52d9865da741c1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090678"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545306"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>定義和使用鑽研動作
   依據事實維度測量事實資料的維度，但卻未正確篩選查詢傳回的資料，可能會降低查詢效能。 為了避免這種情況，您可以定義鑽研動作，以便限制傳回的資料列總數。 這樣做將會大幅改善查詢效能。  
@@ -31,7 +31,7 @@ ms.locfileid: "48090678"
   
      下圖顯示 [Cube 設計師] 的 [動作] 索引標籤。  
   
-     ![動作索引標籤，Cube 設計師](../../2014/tutorials/media/l8-action1.gif "Cube 設計師] 的 [動作] 索引標籤")  
+     ![動作索引標籤，Cube 設計師](../../2014/tutorials/media/l8-action1.gif "Cube 設計師 的 [動作] 索引標籤")  
   
 2.  在 [動作] 索引標籤的工具列上，按一下 [新增鑽研動作] 按鈕。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48090678"
   
 8.  在 **最大資料列**方塊中，輸入`10`。  
   
-9. 在  **Caption**方塊中，輸入`Drillthrough to Order Details…`。  
+9. 在  **Caption**方塊中，輸入`Drillthrough to Order Details...`。  
   
      這些設定會限制傳回的資料列數，指定在用戶端應用程式功能表中所顯示的標題。 下圖顯示 [其他屬性] 方塊中的這些設定。  
   

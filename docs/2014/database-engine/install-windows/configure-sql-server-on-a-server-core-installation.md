@@ -13,12 +13,12 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7954c3050f07fd8c727a7f91c18bf343c9b69f2d
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: b9cea2592b0e1c65fd23ccbad6b8235077ed1f2f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018433"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376217"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安裝上設定 SQL Server
   本主題涵蓋有關在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 的 Server Core 安裝上設定 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的詳細資料。 請參考下列章節：  
@@ -48,19 +48,19 @@ ms.locfileid: "51018433"
   
  如需有關在遠端設定及管理 Server Core 安裝的詳細資訊，請參閱以下主題：  
   
--   [Windows Server 2008 R2： 伺服器核心部署最佳做法](http://go.microsoft.com/fwlink/?LinkID=245957)(http://go.microsoft.com/fwlink/?LinkID=245957)  
+-   [Windows Server 2008 R2:伺服器核心部署最佳做法](https://go.microsoft.com/fwlink/?LinkID=245957)(https://go.microsoft.com/fwlink/?LinkID=245957)  
   
--   [設定 Server Core 安裝： 概觀](http://go.microsoft.com/fwlink/?LinkId=245958)(http://go.microsoft.com/fwlink/?LinkId=245958)  
+-   [設定 Server Core 安裝：概觀](https://go.microsoft.com/fwlink/?LinkId=245958)(https://go.microsoft.com/fwlink/?LinkId=245958)  
   
--   [使用 Sconfig.cmd 設定 Windows Server 2008 R2 的 Server Core 安裝](http://go.microsoft.com/fwlink/?LinkId=245959)(http://go.microsoft.com/fwlink/?LinkId=245959)  
+-   [使用 Sconfig.cmd 設定 Windows Server 2008 R2 的 Server Core 安裝](https://go.microsoft.com/fwlink/?LinkId=245959)(https://go.microsoft.com/fwlink/?LinkId=245959)  
   
--   [執行 Windows Server 2008 R2 的 Server Core 安裝的伺服器上安裝伺服器角色： 概觀](http://go.microsoft.com/fwlink/?LinkId=245960)(http://go.microsoft.com/fwlink/?LinkId=245960)  
+-   [執行 Windows Server 2008 R2 的 Server Core 安裝的伺服器上安裝伺服器角色：概觀](https://go.microsoft.com/fwlink/?LinkId=245960)(https://go.microsoft.com/fwlink/?LinkId=245960)  
   
--   [執行 Windows Server 2008 R2 的 Server Core 安裝的伺服器上安裝 Windows 功能： 概觀](http://go.microsoft.com/fwlink/?LinkId=245961)(http://go.microsoft.com/fwlink/?LinkId=245961)  
+-   [執行 Windows Server 2008 R2 的 Server Core 安裝的伺服器上安裝 Windows 功能：概觀](https://go.microsoft.com/fwlink/?LinkId=245961)(https://go.microsoft.com/fwlink/?LinkId=245961)  
   
--   [管理 Server Core 安裝： 概觀](http://go.microsoft.com/fwlink/?LinkId=245962)(http://go.microsoft.com/fwlink/?LinkId=245962)  
+-   [管理 Server Core 安裝：概觀](https://go.microsoft.com/fwlink/?LinkId=245962)(https://go.microsoft.com/fwlink/?LinkId=245962)  
   
--   [管理 Server Core 安裝](http://go.microsoft.com/fwlink/?LinkId=245963)(http://go.microsoft.com/fwlink/?LinkId=245963)  
+-   [管理 Server Core 安裝](https://go.microsoft.com/fwlink/?LinkId=245963)(https://go.microsoft.com/fwlink/?LinkId=245963)  
   
 ##  <a name="BKMK_InstallSQLUpdates"></a> 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新  
  本節提供有關在 Windows Server Core 機器上安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新的資訊。 我們建議客戶及時評估並安裝最新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新，以便確保系統保持在最新狀態而且具有最新的安全性更新。 如需安裝的詳細資訊[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在 Windows Server Core 電腦上，請參閱[Server Core 上安裝 SQL Server 2014](install-sql-server-on-server-core.md)。  
@@ -81,7 +81,7 @@ ms.locfileid: "51018433"
  指定 UpdateEnabled 和 UpdateSource 參數在主要產品安裝中包含最新的產品更新。 請參考以下範例，了解如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間啟用產品更新：  
   
 ```tsql  
-Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource=”<SourcePath>” /IACCEPTSQLSERVERLICENSETERMS  
+Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource="<SourcePath>" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
 ###  <a name="bkmk_alreadyInstall"></a> 在安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 完成之後安裝更新  
@@ -140,7 +140,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 5.  按兩下 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員]。  
   
-6.  在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態管理員] 中，按一下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務，以滑鼠右鍵按一下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](\<執行個體名稱 >)，其中\<執行個體名稱 > 是您要啟用 AlwaysOn 的本機伺服器執行個體的名稱可用性群組，然後按一下 內容。  
+6.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態管理員 中，按一下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務，以滑鼠右鍵按一下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](\<執行個體名稱 >)，其中\<執行個體名稱 > 是您要啟用 AlwaysOn 的本機伺服器執行個體的名稱可用性群組，然後按一下 內容。  
   
 7.  選取 [AlwaysOn 高可用性] 索引標籤。  
   
@@ -150,7 +150,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員會儲存您的變更。 然後您必須手動重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。 這讓您可以選擇最適合您業務需求的重新啟動時間。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務重新啟動時，AlwaysOn 就會啟用，而且 IsHadrEnabled 伺服器屬性會設定為 1。  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   您必須擁有適當的使用者權限，或者必須已被委派目標電腦的適當權限，才能連接該部電腦。  
 > -   您要管理的電腦名稱會出現在主控台樹狀目錄中 [電腦管理] 旁邊的括號內。  
   
@@ -256,7 +256,7 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> 使用疑難排解工具  
  您可以使用 [SQLdiag 公用程式](../../tools/sqldiag-utility.md) ，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他類型的伺服器收集記錄檔案和資料檔案，並使用其監視您的伺服器一段時間，或為伺服器的特定問題疑難排解。 SQLdiag 用於加速和簡化 Microsoft 客戶支援服務部門對診斷資訊的收集過程。  
   
- 您可以在 Server Core 上的系統管理員命令提示字元中，使用 [SQLdiag 公用程式](../../tools/sqldiag-utility.md)主題中指定的語法啟動此公用程式。  
+ 您可以在 Server Core 上的系統管理員命令提示字元處，使用以下主題中指定的語法，啟動此公用程式：[SQLdiag 公用程式](../../tools/sqldiag-utility.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [在 Server Core 上安裝 SQL Server 2014](install-sql-server-on-server-core.md)   

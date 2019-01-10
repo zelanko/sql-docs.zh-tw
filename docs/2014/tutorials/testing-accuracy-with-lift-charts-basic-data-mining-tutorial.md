@@ -11,12 +11,12 @@ ms.assetid: 822d414b-4a39-473f-80c3-53476e30655a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01142090276214f28e523dfc1c969747d5de60a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d5311f08e9ec6b31fd0eabc1395baa31319eff64
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222238"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412205"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>使用增益圖測試精確度 (基本資料採礦教學課程)
   在  **採礦精確度圖表** 索引標籤的 資料採礦設計師中，您可以計算程度的模型執行預測，並比較直接對照其他模型的結果的每個模型的結果。 這種比較方法稱為*增益圖*。 一般來說，採礦模型的預測精確度是由「增益」(Lift) 或分類精確度所衡量。 在此教學課程中，我們只會使用增益圖。  
@@ -32,7 +32,7 @@ ms.locfileid: "48222238"
   
 #### <a name="to-select-the-data-set"></a>若要選取資料集  
   
-1.  切換至 **[採礦精確度圖表** 索引標籤中的資料採礦設計師中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，然後選取**輸入選擇** 索引標籤。  
+1.  切換至**採礦精確度圖表** 索引標籤中的資料採礦設計師中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，然後選取**輸入選擇** 索引標籤。  
   
 2.  在 **選取要用於精確度圖表的資料集**群組方塊中，選取**使用採礦結構測試案例**。 這是您在建立採礦結構時擱置在一旁的測試資料。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48222238"
   
      若要使用的資料行**可預測資料行名稱**中的精確度圖表的資料行必須具有的使用類型`Predict`或`Predict Only`。 此外，目標資料行的內容類型必須為 `Discrete` 或 `Discretized`。 換句話說，您無法使用增益圖測量連續數值輸出的精確度。  
   
--   您是要測量模型的一般精確度，或者模型預測特定值的精確度 (例如 [Bike Buyer] = 'Yes')？  
+-   您是否要測量模型的一般精確度或預測特定值的精確度 (例如 [Bike Buyer] = 'Yes')  
   
 #### <a name="to-generate-the-lift-chart"></a>產生增益圖  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48222238"
  [測試篩選過的模型&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/testing-a-filtered-model-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [增益圖&#40;Analysis Services-資料採礦&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+ [增益圖 &#40;Analysis Services - 資料採礦&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [增益圖索引標籤&#40;採礦精確度圖表檢視&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)  
   
   

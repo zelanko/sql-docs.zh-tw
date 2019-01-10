@@ -20,16 +20,16 @@ ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b8c490da7ecfe0230eaad5f98da1c66293f99eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73092fcd7091665f9a3dae969b7821cbf9777c9a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758956"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209997"
 ---
 # <a name="sqlwritefiledsn-function"></a>SQLWriteFileDSN 函式
 **合規性**  
- 版本導入： ODBC 3.0  
+ 導入的版本：ODBC 3.0  
   
  **摘要**  
  **SQLWriteFileDSN**將資訊寫入至檔案 DSN。  
@@ -39,15 +39,15 @@ ms.locfileid: "47758956"
 ```  
   
 BOOL SQLWriteFileDSN(  
-     LPCSTR     lpszFileName,  
-     LPCSTR     lpszAppName,  
-     LPCSTR     lpszKeyName,  
-     LPCSTR     lpszString);  
+     LPCSTR     lpszFileName,  
+     LPCSTR     lpszAppName,  
+     LPCSTR     lpszKeyName,  
+     LPCSTR     lpszString);  
 ```  
   
 ## <a name="arguments"></a>引數  
  *lpszFileName*  
- [輸入][檔案 DSN 名稱的指標。 尚無 DSN 延伸模組的所有檔案名稱會加都上 DSN 延伸模組。  
+ [輸入]檔案 DSN 名稱的指標。 尚無 DSN 延伸模組的所有檔案名稱會加都上 DSN 延伸模組。  
   
  *lpszAppName*  
  [輸入]應用程式名稱的指標。 這是"ODBC"ODBC 」 一節。  

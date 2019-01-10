@@ -15,7 +15,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e00a1ff652e3f1463d37e2cd5457965968b4ba4c
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47709556"
@@ -32,10 +32,10 @@ ms.locfileid: "47709556"
  *硬碟機的存取不允許外部受信任的區域。*
 在跨網域指令碼包含不受信任的網站，會停用下列作業： **Stream.SaveToFile**， **Stream.LoadFromFile**， **Recordset.Save**，及**Recordset.Open**搭配使用， **adCmdFile**旗標或使用 Microsoft OLE DB 持續性提供者 (MSPersist)。
 
- **Recordset.Open** *，***Recordset.Save** *，***Stream.SaveToFile** *，以及***Stream.LoadFromFile***作用於實體的檔案。* 
+ **Recordset.Open** *，* **Recordset.Save** *，* **Stream.SaveToFile** *，以及* **Stream.LoadFromFile** *作用於實體的檔案。*
 這些方法現在會驗證檔案控制代碼會指向實體的檔案。
 
- **Recordset.ActiveCommand***會傳回錯誤時叫用從 HTML/ASP 網頁。* 
+ **Recordset.ActiveCommand** *會傳回錯誤時叫用從 HTML/ASP 網頁。*
 這可防止**命令**誤用物件。
 
  *數目***資料錄集***傳回巢狀***圖形***命令有上限。* 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, enabling
@@ -13,19 +12,19 @@ ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6e3d6ee852f6631014a4407e09f7b41646e9f9cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ef8d77de1df31387d33e6577fe84bd5ef9fa680
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214548"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806180"
 ---
 # <a name="enable-resource-governor"></a>啟用資源管理員
   預設會關閉資源管理員。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 啟用資源管理員。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **開始之前：**[限制事項](#LimitationsRestrictions)，[權限](#Permissions)  
   
--   **To enable Resource Governorn, using:**  [Object Explorer](#RGOnObjEx), [Resource Governor Properties](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
+-   **若要啟用資源管理員中，使用：**[物件總管](#RGOnObjEx)， [Resource Governor 屬性](#RGOnProp)， [Transact SQL](#RGOnTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  啟用資源管理員會產生下列結果：  

@@ -26,12 +26,12 @@ ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8c9cfd87578b2ffaaefb8b46b340f76f74b373ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c4697d2dcbad80d1da0fd8ed6c81750ac90695b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794559"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534127"
 ---
 # <a name="mapping-clr-parameter-data"></a>對應 CLR 參數資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "47794559"
 |**uniqueidentifier**|**SqlGuid**|**Guid，可為 Null\<Guid >**|  
 |**使用者定義的 type(UDT)**|None|繫結到相同組件或相依組件中之使用者定義型別的相同類別。|  
 |**varbinary**|**SqlBytes、 SqlBinary**|**Byte[]**|  
-|**varbinary(1)、 binary(1)**|**SqlBytes、 SqlBinary**|**byte、 Byte []、 [Nullable\<位元組 >**|  
+|**varbinary(1)、 binary(1)**|**SqlBytes、 SqlBinary**|**byte、 Byte []、 Nullable\<位元組 >**|  
 |**varchar**|None|None|  
 |**xml**|**SqlXml**|None|  
   
@@ -87,13 +87,13 @@ ms.locfileid: "47794559"
 ```csharp  
 [Microsoft.SqlServer.Server.SqlProcedure]  
 public static void PriceSum(out SqlInt32 value)  
-{ … }  
+{ ... }  
 ```  
   
 ```vb  
 \<Microsoft.SqlServer.Server.SqlProcedure> _  
 Public Shared Sub PriceSum( \<Out()> ByRef value As SqlInt32)  
-…  
+...  
 End Sub  
 ```  
   

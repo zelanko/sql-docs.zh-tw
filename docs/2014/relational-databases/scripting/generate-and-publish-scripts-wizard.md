@@ -43,25 +43,25 @@ ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc5ba07db49ac27ff5f36762abe6c1f1bcfac1d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d7c1da71445659d61fa95dc30bc7f128a1e1d40
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192853"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373610"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>[產生和發佈指令碼]
   您可以使用 [產生和發佈指令碼精靈] 建立指令碼，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 執行個體之間傳送資料庫。 您可以針對區域網路上 Database Engine 執行個體的資料庫產生指令碼，或是從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]產生指令碼。 產生的指令碼可以在另一個 Database Engine 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]執行個體上執行。 您也可以使用此精靈，將資料庫內容直接發行到使用資料庫發行服務所建立的 Web 服務。 您可以針對整個資料庫建立指令碼，或將它限制為特定物件。  
   
-1.  **開始之前：**[發佈到託管服務](#PubHostSvc)、[權限](#Permissions)  
+1.  **開始之前：**[發行至託管服務](#PubHostSvc)，[權限](#Permissions)  
   
-2.  **若要產生或發行指令碼，請使用：**  [產生和發佈指令碼精靈](#GenPubScriptWiz)  
+2.  **產生或發佈指令碼，使用：**[產生和發佈指令碼精靈](#GenPubScriptWiz)  
   
 ## <a name="before-you-begin"></a>開始之前  
  來源和目標資料庫可以位於執行 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或更新版本的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 執行個體上。  
   
 ###  <a name="PubHostSvc"></a> 發行至主控的服務  
- 除了建立指令碼以外， **[產生和發佈指令碼精靈]** 還可以用來將資料庫發佈至特定類型的主控 SQL Server Web 服務。 SQL Server Hosting Toolkit 會提供資料庫發行服務當做 CodePlex 上的共用原始檔專案。 Web 主控提供者可以使用資料庫發行服務專案來建置一組 Web 服務，讓他們的客戶輕鬆地將資料庫部署到 Web 服務。 如需有關下載 SQL Server Hosting Toolkit 的詳細資訊，請參閱 [SQL Server 資料庫發行服務](http://go.microsoft.com/fwlink/?LinkId=142025)。  
+ 除了建立指令碼以外， **[產生和發佈指令碼精靈]** 還可以用來將資料庫發佈至特定類型的主控 SQL Server Web 服務。 SQL Server Hosting Toolkit 會提供資料庫發行服務當做 CodePlex 上的共用原始檔專案。 Web 主控提供者可以使用資料庫發行服務專案來建置一組 Web 服務，讓他們的客戶輕鬆地將資料庫部署到 Web 服務。 如需有關下載 SQL Server Hosting Toolkit 的詳細資訊，請參閱 [SQL Server 資料庫發行服務](https://go.microsoft.com/fwlink/?LinkId=142025)。  
   
  若要將資料庫發佈至 Web 主控服務，請選取精靈之 **[設定指令碼編寫選項]** 頁面上的 **[發佈到 Web 服務]** 選項。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48192853"
  [取消] - 結束精靈，而不從資料庫中產生或發佈指令碼。  
   
 ###  <a name="ChooseObjects"></a> 選擇物件頁面  
- 您可以使用這個頁面來選擇哪些物件要包含在此精靈所產生的指令碼中。 在下列精靈頁面中，您可以選擇將這些指令碼儲存至所選擇的位置，或使用這些指令碼，將資料庫物件和資料發行至已安裝 [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025)的遠端 Web 主控提供者。  
+ 您可以使用這個頁面來選擇哪些物件要包含在此精靈所產生的指令碼中。 在下列精靈頁面中，您可以選擇將這些指令碼儲存至所選擇的位置，或使用這些指令碼，將資料庫物件和資料發行至已安裝 [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025)的遠端 Web 主控提供者。  
   
  **編寫整個資料庫選項** ：按一下即可針對資料庫中的所有物件產生指令碼，並且包含資料庫本身的指令碼。  
   
@@ -124,11 +124,11 @@ ms.locfileid: "48192853"
   
  **選項** ：如果您想要讓精靈將指令碼儲存至所選擇的位置，請選取 **[將指令碼儲存至特定位置]**。 您之後可以針對 Database Engine 執行個體或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]執行指令碼。 如果您想要讓精靈將資料庫物件發行至遠端 Web 主控提供者，請選取 **[發佈到 Web 服務]**。  
   
- **將指令碼儲存至特定位置** ：將一個或多個 .Transact-SQL 指令碼檔案儲存至指定的位置。  
+ **將指令碼儲存至特定位置**-儲存一或多個。您指定的位置的 transact SQL 指令碼檔案。  
   
 -   **進階** ：顯示可從中選取用於產生指令碼之進階選項的 **[進階編寫指令碼選項]** 對話方塊。  
   
--   **儲存至檔案** ：將指令碼儲存至一個或多個 .sql 檔案。 按一下瀏覽按鈕 (**…**)，來指定檔案的名稱和位置。 如果已經存在相同名稱的檔案，請選取 **[覆寫現有檔案]** 核取方塊來取代該檔案。 若要指定指令碼的產生方式，請按一下 **[單一檔案]** 或 **[每一物件單一檔案]** 。 若要指定指令碼中應該使用的文字種類，請按一下 **[Unicode 文字]** 或 **[ANSI 文字]** 。  
+-   **儲存至檔案** ：將指令碼儲存至一個或多個 .sql 檔案。 按一下瀏覽按鈕 ([...])，即可指定檔案的名稱和位置。 如果已經存在相同名稱的檔案，請選取 **[覆寫現有檔案]** 核取方塊來取代該檔案。 若要指定指令碼的產生方式，請按一下 **[單一檔案]** 或 **[每一物件單一檔案]** 。 若要指定指令碼中應該使用的文字種類，請按一下 **[Unicode 文字]** 或 **[ANSI 文字]** 。  
   
 -   **儲存至剪貼簿** ：將 Transact-SQL 指令碼儲存至 [剪貼簿]。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "48192853"
   
  **選項** - 在每個選項右方的可用設定清單中選取值，即可指定進階選項。  
   
- **一般** ：下列選項適用於整個指令碼。  
+ **一般**：下列選項適用於整個指令碼。  
   
 -   **ANSI Padding** -包含`ANSI PADDING ON`指令碼中。 預設值為 **True**。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "48192853"
   
 -   **指令碼繫結** ：產生用於繫結預設物件和規則物件的指令碼。 預設值為 **False**。 如需詳細資訊，請參閱 [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql) 和 [CREATE RULE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql)。  
   
--   [指令碼定序] - 在指令碼中包含定序資訊。 預設值為 **False**。 如需詳細資訊，請參閱 [Collation and Unicode Support](../collations/collation-and-unicode-support.md)。  
+-   [指令碼定序] - 在指令碼中包含定序資訊。 預設值為 **False**。 如需相關資訊，請參閱 [Collation and Unicode Support](../collations/collation-and-unicode-support.md)。  
   
 -   **編寫預設值的指令碼** ：包含用來在資料表資料行中設定預設值的預設物件。 預設值為 **True**。 如需詳細資訊，請參閱 [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql)。  
   
@@ -191,15 +191,15 @@ ms.locfileid: "48192853"
   
 -   **編寫統計資料的指令碼**-當設定為**編寫統計資料**，這個選項會包含`CREATE STATISTICS`陳述式來重新建立物件的統計資料。 **[編寫統計資料和長條圖的指令碼]** 選項也會建立長條圖資訊。 預設值為 **[不要編寫統計資料的指令碼]**。 如需詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)。  
   
--   **編寫 USE DATABASE 的指令碼**-加入`USE DATABASE`陳述式的指令碼。 若要確定正確的資料庫中會建立資料庫物件，包含`USE DATABASE`陳述式。 當指令碼要用於不同的資料庫時，請選取**假**省略`USE DATABASE`陳述式。 預設值為 **True**。 如需詳細資訊，請參閱 [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)。  
+-   **編寫 USE DATABASE 的指令碼**-加入`USE DATABASE`陳述式的指令碼。 若要確保在正確的資料庫中建立資料庫物件，請包含 `USE DATABASE` 陳述式。 當指令碼要用於不同的資料庫時，請選取**假**省略`USE DATABASE`陳述式。 預設值為 **True**。 如需詳細資訊，請參閱 [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)。  
   
--   [要編寫指令碼的資料類型] - 選取應該編寫指令碼的項目：[僅限資料] 和/或 [僅限結構描述]。 預設值為 **[僅限結構描述]**。  
+-   **要編寫指令碼的資料型別**-選取項目應該編寫指令碼：**僅限資料**，**僅限結構描述**，或兩者。 預設值為 **[僅限結構描述]**。  
   
  **資料表/檢視表選項** ：下列選項只適用於資料表或檢視表的指令碼。  
   
 -   **編寫變更追蹤的指令碼** ：如果來源資料庫或來源資料庫中的資料表已啟用變更追蹤，則會編寫變更追蹤的指令碼。 預設值為 **False**。 如需詳細資訊，請參閱[關於變更追蹤 &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)。  
   
--   **編寫 check 條件約束**– Adds`CHECK`指令碼的條件約束。 預設值為 **True**。 `CHECK` 條件約束會要求輸入資料表，以符合某些指定的條件的資料。 如需相關資訊，請參閱 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
+-   **編寫 check 條件約束**-加入`CHECK`指令碼的條件約束。 預設值為 **True**。 `CHECK` 條件約束會要求輸入資料表的資料必須符合某些指定的條件。 如需詳細資訊，請參閱 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
   
 -   [編寫資料壓縮選項的指令碼] - 如果來源資料庫或來源資料庫中的資料表已設定資料壓縮選項，則會編寫資料壓縮選項的指令碼。 如需詳細資訊，請參閱 [Data Compression](../data-compression/data-compression.md)。 預設值為 **False**。  
   
@@ -213,7 +213,7 @@ ms.locfileid: "48192853"
   
 -   **編寫觸發程序的指令碼** - 編寫在資料表上建立 DML 觸發程序的指令碼。 預設值為 **False**。 DML 觸發程序是以程式設計當資料庫伺服器發生資料操作語言 (DML) 事件時所執行的動作。 如需詳細資訊，請參閱 [DML Triggers](../triggers/dml-triggers.md)。  
   
--   **編寫唯一索引鍵的指令碼** ：編寫在資料表上建立唯一索引鍵的指令碼。 唯一索引鍵可防止輸入重複的資料。 預設值為 **True**。 如需相關資訊，請參閱 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
+-   **編寫唯一索引鍵的指令碼** ：編寫在資料表上建立唯一索引鍵的指令碼。 唯一索引鍵可防止輸入重複的資料。 預設值為 **True**。 如需詳細資訊，請參閱 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
   
 ###  <a name="MgProviders"></a> 管理提供者頁面  
  您可以使用此對話方塊來檢視、加入、編輯、刪除或測試主控提供者的連接。 主控提供者會針對使用 CodePlex 上 SQL Server Hosting Toolkit 中的資料庫發行服務專案所建立的 Web 服務來指定連接資訊。  
@@ -237,7 +237,7 @@ ms.locfileid: "48192853"
   
  **選項** - 在每個選項右方的可用設定清單中選取值，即可指定進階選項。  
   
- **一般** ：下列選項適用於整個發佈作業。  
+ **一般**：下列選項適用於整個發佈作業。  
   
 1.  **將 UDDT 轉換為基底類型** ：設定為 **[True]** 時，使用者定義資料類型 (UDDT) 會轉換為用來建立它們的基礎基底資料類型。 當 UDDT 不存在於執行指令碼的資料庫時，請使用 **[True]** 。 設定為 **[False]** 時，就會使用 UDDT。 預設值為 **False**。  
   
@@ -261,15 +261,15 @@ ms.locfileid: "48192853"
   
 11. **指令碼繫結** ：在傳送至提供者進行發佈的指令碼中包含預設物件和規則物件的繫結。 預設值為 **True**。 如需詳細資訊，請參閱 [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql) 和 [CREATE RULE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql)。  
   
-12. [要發行的資料類型] - 選取應該編寫指令碼的項目：[僅限資料]**Data only** 和/或 [僅限結構描述]。 預設值為 **[結構描述和資料]**。  
+12. **要發行的資料類型**-選取項目應該編寫指令碼：**僅限資料**，**僅限結構描述**，或兩者。 預設值為 **[結構描述和資料]**。  
   
- **發佈選項** ：指定發佈到 Web 主機提供者時，是否要使用交易。  
+ **發佈選項**：指定發佈到 Web 主機提供者時，是否要使用交易。  
   
 1.  **使用交易發行** ：在發佈至遠端 Web 主控提供者時，使用交易。 如果目標資料庫無法完成發行，就會回復交易。 預設值為 **True**。  
   
  **資料表/檢視表選項** ：下列選項只適用於資料表或檢視表。  
   
-1.  **發佈 check 條件約束**-包含建立`CHECK`發行程序中的條件約束。 預設值為 **True**。 `CHECK` 條件約束會要求輸入資料表，以符合某些指定的條件的資料。 如需相關資訊，請參閱 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
+1.  **發佈 check 條件約束**-包含建立`CHECK`發行程序中的條件約束。 預設值為 **True**。 `CHECK` 條件約束會要求輸入資料表的資料必須符合某些指定的條件。 如需詳細資訊，請參閱 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
   
 2.  **發佈外部索引鍵** ：在發佈程序中包含建立外部索引鍵的程序。 預設值為 **True**。 外部索引鍵指出並強制執行資料表之間的關聯性。 如需詳細資訊，請參閱 [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md)。  
   
@@ -281,7 +281,7 @@ ms.locfileid: "48192853"
   
 6.  **發佈觸發程序** ：在發佈程序中包含建立 DML 觸發程序的程序。 預設值為 **True**。 DML 觸發程序是以程式設計當資料庫伺服器發生資料操作語言 (DML) 事件時所執行的動作。 如需詳細資訊，請參閱 [DML Triggers](../triggers/dml-triggers.md)。  
   
-7.  **發佈唯一索引鍵** ：在發佈程序中包含建立資料表之唯一索引鍵的程序。 唯一索引鍵可防止輸入重複的資料。 預設值為 **True**。 如需相關資訊，請參閱 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
+7.  **發佈唯一索引鍵** ：在發佈程序中包含建立資料表之唯一索引鍵的程序。 唯一索引鍵可防止輸入重複的資料。 預設值為 **True**。 如需詳細資訊，請參閱 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
   
 8.  **發行變更追蹤** ：如果來源資料庫或來源資料庫中的資料表已啟用變更追蹤，則會在發佈程序中包含變更追蹤。 預設值為 **False**。 如需詳細資訊，請參閱[關於變更追蹤 &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - workload groups [SQL Server], delete
@@ -14,19 +13,19 @@ ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 28de150be95c10e8c1c1ef9f4c5280d185c5bc18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174328"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764020"
 ---
 # <a name="delete-a-workload-group"></a>刪除工作負載群組
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 刪除工作負載群組或資源集區。  
   
--   **開始之前：**  [限制事項](#LimitationsRestrictions)、 [權限](#Permissions)  
+-   **開始之前：**[限制事項](#LimitationsRestrictions)，[權限](#Permissions)  
   
--   **使用下列方式刪除工作負載群組：**[物件總管](#DelWGObjEx)、[資源管理員屬性](#DelWGRGProp)、[Transact-SQL](#DelWGTSQL)  
+-   **若要刪除工作負載群組，請使用：**[物件總管](#DelWGObjEx)， [Resource Governor 屬性](#DelWGRGProp)， [Transact SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  如果工作負載群組包含作用中工作階段，您就無法刪除該工作負載群組。  
@@ -68,9 +67,9 @@ ms.locfileid: "48174328"
 ##  <a name="DelWGTSQL"></a> 使用 Transact-SQL 刪除工作負載群組  
  **若要使用 Transact-SQL 刪除工作負載群組**  
   
-1.  執行`DROP WORKLOAD GROUP`陳述式，指定要刪除的工作負載群組的名稱。  
+1.  執行 `DROP WORKLOAD GROUP` 陳述式，並指定要刪除之工作負載群組的名稱。  
   
-2.  在您發出 `ALTER RESOURCE GOVERNOR RECONFIGURE` 陳述式之前，請先確認要刪除的工作負載群組中沒有任何使用中要求。 如果有使用中要求，`ALTER RESOURCE GOVERNOR`將會失敗。 若要避免這個問題，您可以採取下列其中一個動作：  
+2.  在您發出 `ALTER RESOURCE GOVERNOR RECONFIGURE` 陳述式之前，請先確認要刪除的工作負載群組中沒有任何使用中要求。 如果有使用中要求，`ALTER RESOURCE GOVERNOR` 將會失敗。 若要避免這個問題，您可以採取下列其中一個動作：  
   
     -   等候直到工作負載群組的所有工作階段都中斷連接為止。  
   

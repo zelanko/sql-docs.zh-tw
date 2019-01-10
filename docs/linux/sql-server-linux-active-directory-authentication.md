@@ -1,5 +1,6 @@
 ---
-title: 使用中目錄驗證教學課程，Linux 上的 SQL Server 的 |Microsoft 文件
+title: 教學課程：Linux 上的 SQL Server 的 active Directory 驗證
+titleSuffix: SQL Server
 description: 本教學課程會提供 AAD 驗證 Linux 上的 SQL Server 中的設定步驟。
 author: meet-bhagdev
 ms.date: 02/23/2018
@@ -7,18 +8,18 @@ ms.author: meetb
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: c641b6ee84ffd13e17bc540b3272ba9a95d74648
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 237924a1bc4309b4e4d686076d1e0862ea3afe92
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658491"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160597"
 ---
-# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教學課程： 使用 Active Directory Linux 上的 SQL Server 驗證
+# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教學課程：使用 Linux 上的 SQL Server 的 Active Directory 驗證
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -230,7 +231,7 @@ ms.locfileid: "51658491"
    ```
 
    > [!NOTE]
-   > Spn 可能需要幾分鐘的時間才能傳播至您的網域，整個，尤其是網域較大。 如果您收到錯誤，「 kvno： 找不到伺服器在 Kerberos 資料庫中取得認證 MSSQLSvc /\*\*\<主機電腦的完整的網域名稱\>\*\*:\* \* \<tcp 連接埠\>\*\*\@CONTOSO.COM"，請等候幾分鐘的時間，然後再試一次。
+   > Spn 可能需要幾分鐘的時間才能傳播至您的網域，整個，尤其是網域較大。 如果您收到錯誤，「 kvno:找不到伺服器在 Kerberos 資料庫中取得認證 MSSQLSvc /\*\*\<主機電腦的完整的網域名稱\>\*\*:\* \* \<tcp 連接埠\>\*\*\@CONTOSO.COM"，請等候幾分鐘的時間，然後再試一次。
 
 2. 建立的 keytab 檔案**[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** 您在上一個步驟中建立 AD 使用者。 出現提示時，輸入該 AD 帳戶的密碼。
 
@@ -292,7 +293,7 @@ ms.locfileid: "51658491"
    sudo systemctl restart mssql-server
    ```
 
-6. 選擇性︰ 停用網域控制站，以改善效能的 UDP 連接。 在許多情況下，UDP 連線將一律失敗連接到網域控制站，因此您可以設定組態選項時`/etc/krb5.conf`略過 UDP 呼叫。 編輯`/etc/krb5.conf`並設定下列選項：
+6. 選擇性:停用 UDP 連線到網域控制站，以改善效能。 在許多情況下，UDP 連線將一律失敗連接到網域控制站，因此您可以設定組態選項時`/etc/krb5.conf`略過 UDP 呼叫。 編輯`/etc/krb5.conf`並設定下列選項：
 
    ```/etc/krb5.conf
    [libdefaults]
@@ -339,8 +340,8 @@ ms.locfileid: "51658491"
 
 * 使用其他用戶端驅動程式的 AD 驗證
 
-  * JDBC:[使用 Kerberos 整合式驗證來連接 SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
-  * ODBC:[使用整合式的驗證](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
+  * JDBC:[連接 SQL Server 使用 Kerberos 整合式的驗證](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
+  * ODBC：[使用整合式驗證](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET:[連接字串語法](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
 
 ## <a name="performance-improvements"></a>效能改進

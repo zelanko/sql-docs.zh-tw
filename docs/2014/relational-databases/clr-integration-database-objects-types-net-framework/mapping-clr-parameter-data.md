@@ -26,12 +26,12 @@ ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8ba043e2c19a1fd835f04c5426c0518dec2831b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51e94f1cf42b8c40b4f0023371bc7a538bdba76f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148118"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357078"
 ---
 # <a name="mapping-clr-parameter-data"></a>對應 CLR 參數資料
   下表列出[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型、 common language runtime (CLR) 中的對應項[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中`System.Data.SqlTypes`命名空間，並在其原生 CLR 對等用法[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework。  
@@ -50,9 +50,9 @@ ms.locfileid: "48148118"
 |`DATETIMEOFFSET`|`None`|**DateTimeOffset，可為 Null\<DateTimeOffset >**|  
 |`decimal`|`SqlDecimal`|**Decimal，可為 Null\<十進位 >**|  
 |`float`|`SqlDouble`|**Double，可為 Null\<雙 >**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography` 定義於 Microsoft.SqlServer.Types.dll 中，它會隨 SQL Server，並可以從下載[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](http://go.microsoft.com/fwlink/?LinkId=131220)。|None|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` 定義於 Microsoft.SqlServer.Types.dll 中，它會隨 SQL Server，並可以從下載[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](http://go.microsoft.com/fwlink/?LinkId=131220)。|None|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` 定義於 Microsoft.SqlServer.Types.dll 中，它會隨 SQL Server，並可以從下載[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](http://go.microsoft.com/fwlink/?LinkId=131220)。|None|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography` 定義於 Microsoft.SqlServer.Types.dll 中，它會隨 SQL Server，並可以從下載[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](https://go.microsoft.com/fwlink/?LinkId=131220)。|None|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` 定義於 Microsoft.SqlServer.Types.dll 中，它會隨 SQL Server，並可以從下載[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](https://go.microsoft.com/fwlink/?LinkId=131220)。|None|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` 定義於 Microsoft.SqlServer.Types.dll 中，它會隨 SQL Server，並可以從下載[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](https://go.microsoft.com/fwlink/?LinkId=131220)。|None|  
 |`image`|None|None|  
 |`int`|`SqlInt32`|**Int32，可為 Null\<Int32 >**|  
 |`money`|`SqlMoney`|**Decimal，可為 Null\<十進位 >**|  
@@ -74,7 +74,7 @@ ms.locfileid: "48148118"
 |`uniqueidentifier`|`SqlGuid`|**Guid，可為 Null\<Guid >**|  
 |`User-defined type(UDT)`|None|繫結到相同組件或相依組件中之使用者定義型別的相同類別。|  
 |**varbinary**|`SqlBytes, SqlBinary`|`Byte[]`|  
-|`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**byte、 Byte []、 [Nullable\<位元組 >**|  
+|`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**byte、 Byte []、 Nullable\<位元組 >**|  
 |`varchar`|None|None|  
 |`xml`|`SqlXml`|None|  
   
@@ -86,13 +86,13 @@ ms.locfileid: "48148118"
 ```csharp  
 [Microsoft.SqlServer.Server.SqlProcedure]  
 public static void PriceSum(out SqlInt32 value)  
-{ … }  
+{ ... }  
 ```  
   
 ```vb  
 <Microsoft.SqlServer.Server.SqlProcedure> _  
 Public Shared Sub PriceSum( <Out()> ByRef value As SqlInt32)  
-…  
+...  
 End Sub  
 ```  
   

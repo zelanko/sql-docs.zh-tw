@@ -1,5 +1,5 @@
 ---
-title: 定義和使用鑽研動作 |Microsoft 文件
+title: 定義和使用鑽研動作 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 45f35145b116f36280ff7d70ee820f4e333382aa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3b57c18d159c677fe10d99fbae1ea9e4bffbed9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018045"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507936"
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>課程 8-1-定義和使用鑽研動作
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34018045"
   
     下圖顯示 [Cube 設計師] 的 [動作] 索引標籤。  
   
-    ![動作索引標籤，Cube 設計工具的](../analysis-services/media/l8-action1.gif "動作索引標籤，Cube 設計工具")  
+    ![動作索引標籤，Cube 設計師](../analysis-services/media/l8-action1.gif "Cube 設計師的 [動作] 索引標籤")  
   
 2.  在 [動作] 索引標籤的工具列上，按一下 [新增鑽研動作] 按鈕。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "34018045"
   
 8.  在 [最大資料列數] 方塊中，輸入 **10**。  
   
-9. 在 [標題] 方塊中，輸入**鑽研至訂單詳細資料…**。  
+9. 在  **Caption**方塊中，輸入**鑽研至訂購詳細資料...**.  
   
     這些設定會限制傳回的資料列數，指定在用戶端應用程式功能表中所顯示的標題。 下圖顯示 [其他屬性] 方塊中的這些設定。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "34018045"
   
     運送給 Adam Powell 的訂單詳細資料會顯示在 [資料範例檢視器] 中，如下圖所示。 不過，額外附加的詳細資料，有時候是很有用的，例如，訂購日期、截止日期和出貨日期。 在下一個程序中，您要加入這些額外的詳細資料。  
   
-    ![到 Adam Powell 送貨的訂單](../analysis-services/media/l8-action6.gif "到 Adam Powell 送貨的訂單")  
+    ![訂單運送給 Adam Powell](../analysis-services/media/l8-action6.gif "運送給 Adam Powell 的訂單")  
   
 8.  關閉 Excel/  
   
@@ -109,7 +109,7 @@ ms.locfileid: "34018045"
   
 7.  將 [到期日索引鍵] 屬性 (attribute) 的 [名稱] 屬性 (property) 變更為**到期日**。然後，使用處理 [訂單日期索引鍵] 屬性 (attribute) 的相同方法，將這個屬性的 [名稱資料行] 屬性 (property) 變更為 **Date.SimpleDate (WChar)**。  
   
-8.  將 [出貨日期索引鍵] 屬性 (attribute) 的 [名稱] \(property) 屬性變更為**出貨日期**，然後將這個屬性 (attribute) 的 [名稱資料行] 屬性 (property) 變更為 **Date.SimpleDate (WChar)**。  
+8.  將 [出貨日期索引鍵] 屬性 (attribute) 的 [名稱] (property) 屬性變更為**出貨日期**，然後將這個屬性 (attribute) 的 [名稱資料行] 屬性 (property) 變更為 **Date.SimpleDate (WChar)**。  
   
 9. 針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師] 的 [動作] 索引標籤。  
   
@@ -141,10 +141,10 @@ ms.locfileid: "34018045"
   
     傳送給 Adam Powell 的訂購詳細資料會顯示在暫存的工作表中。 這項資料包括項目描述、訂單號碼、訂購日期、截止日期和出貨日期資訊，如下圖所示。  
   
-    ![到 Adam Powell 送貨的訂單](../analysis-services/media/l8-action8.gif "到 Adam Powell 送貨的訂單")  
+    ![訂單運送給 Adam Powell](../analysis-services/media/l8-action8.gif "運送給 Adam Powell 的訂單")  
   
 ## <a name="next-lesson"></a>下一課  
-[第 9 課： Defining Perspectives and Translations](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+[第 9 課：定義檢視方塊和翻譯](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [動作 &#40;Analysis Services - 多維度資料&#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  

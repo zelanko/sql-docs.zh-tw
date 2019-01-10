@@ -11,21 +11,21 @@ ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 133a21d00442859738ac6114847f68ab7bfb1564
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11b55e2faeb251f8c3a7ab5220d9716476e66639
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093428"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512083"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>狀態列 (Database Engine 查詢編輯器)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗的狀態列可能利用彩色編碼，以便表示每個視窗所連接的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。  
   
-1.  **開始之前：**  [狀態列色彩](#StatusBarColors)  
+1.  **開始之前：**[狀態列色彩](#StatusBarColors)  
   
-2.  **設定以下的伺服器狀態色彩：**  [物件總管](#SetOEServerColor)、 [已註冊的伺服器](#SetRegServerColor)  
+2.  **若要設定的伺服器狀態色彩：**[物件總管](#SetOEServerColor)，[已註冊的伺服器](#SetRegServerColor)  
   
-3.  **使用狀態色彩：**  [開啟使用伺服器色彩的查詢編輯器](#OpenServerColor)、 [開啟指定狀態色彩的查詢編輯器](#OpenSpecColor)  
+3.  **若要使用的狀態色彩：**[開啟使用伺服器色彩的查詢編輯器](#OpenServerColor)，[開啟指定狀態色彩的查詢編輯器](#OpenSpecColor)  
   
 ##  <a name="StatusBarColors"></a> 狀態列色彩  
  您可在 **[物件總管]** 或 **[已註冊的伺服器]** 中讓狀態列色彩與特定伺服器節點產生關聯。 您僅能指定連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的伺服器節點之色彩，而不能指定其他 SQL Server 技術的伺服器節點色彩。 每當您將新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體時，便可自訂狀態列色彩。 接著您可以使用為伺服器節點所定義的狀態色彩，開啟查詢編輯器視窗；或為該編輯器視窗指定獨特的色彩。  
@@ -35,13 +35,13 @@ ms.locfileid: "48093428"
 ##  <a name="SetOEServerColor"></a> 為 [物件總管] 中的伺服器設定狀態色彩  
  **設定 [物件總管] 中的伺服器狀態色彩**  
   
-1.  在 **[物件總管]** 中，選取 **[連接]** 按鈕，然後選取 **[Database Engine…]**。  
+1.  在 [物件總管] 中，選取 [連接] 按鈕，然後選取 [資料庫引擎…]。  
   
 2.  在 [連接到伺服器] 對話方塊中選取 [選項 >>]。  
   
 3.  選取 **[使用自訂色彩]** 核取方塊。  
   
-4.  選取 **[選取…]** 按鈕，可選取色彩。  
+4.  選取 [選取...] 按鈕，可選取色彩。  
   
 5.  選取基本色彩或自訂色彩，然後選取 [確定]。  
   
@@ -50,13 +50,13 @@ ms.locfileid: "48093428"
 ##  <a name="SetRegServerColor"></a> 為已註冊的伺服器設定狀態色彩  
  **為已註冊的伺服器設定伺服器色彩**  
   
-1.  在 **[已註冊的伺服器]** 中，以滑鼠右鍵按一下伺服器節點，然後選取 **[屬性…]**。  
+1.  在 [已註冊的伺服器] 中，以滑鼠右鍵按一下伺服器節點，然後選取 [屬性…]。  
   
 2.  在 **[編輯伺服器註冊屬性]** 對話方塊上，選取 **[連接屬性]** 索引標籤。  
   
 3.  選取 **[使用自訂色彩]** 核取方塊。  
   
-4.  選取 **[選取…]** 按鈕，可選取色彩。  
+4.  選取 [選取...] 按鈕，可選取色彩。  
   
 5.  選取基本色彩或自訂色彩，然後選取 [確定]。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48093428"
   
 -   選取 **[使用自訂色彩]** 核取方塊。  
   
--   選取 **[選取…]** 按鈕，可選取色彩。  
+-   選取 [選取...] 按鈕，可選取色彩。  
   
 -   選取基本色彩或自訂色彩，然後選取 [確定]。  
   
