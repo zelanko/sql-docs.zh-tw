@@ -3,21 +3,24 @@ title: R 與 Python 機器學習及程式設計延伸模組文件 - SQL Server �
 description: SQL Server 中的 R 和 Python，內建資料科學模型和機器學習服務演算法，可大規模地進行企業資料分析。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/10/2018
+ms.date: 01/09/2019
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 498a73df26b516856fefe411f5d29bdac8076139
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 7eb5083f17ab08f19b689b3550f979f88495f604
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596539"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206244"
 ---
+# <a name="sql-server-machine-learning"></a>SQL Server 機器學習服務
+
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-# <a name="sql-server-machine-learning-and-programming-extensions-documentation"></a>SQL Server 機器學習服務與程式設計延伸模組文件
+
+## <a name="sql-server-machine-learning-and-programming-extensions-documentation"></a>SQL Server 機器學習服務與程式設計延伸模組文件
 
 使用我們的快速入門、教學課程和操作說明文章，了解如何在常駐的關聯式資料上使用 R 和 Python 外部程式庫和語言。 [SQL Server 機器學習服務](what-is-sql-server-machine-learning.md)中的 R 和 Python 程式庫包含基本發佈、資料科學模型、機器學習服務演算法，以及可大規模地進行高效能分析的函式，而不需要在網路之間傳輸資料。 
 
@@ -31,7 +34,8 @@ ms.locfileid: "53596539"
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sql-server-2017"
-# <a name="sql-server-machine-learning-r-and-python-documentation"></a>SQL Server 機器學習服務 R 和 Python 文件
+
+## <a name="sql-server-machine-learning-r-and-python-documentation"></a>SQL Server 機器學習服務 R 和 Python 文件
 
 使用我們的快速入門、教學課程和操作說明文章，了解如何在常駐的關聯式資料上使用 R 和 Python 外部程式庫和語言。 [SQL Server 機器學習服務](what-is-sql-server-machine-learning.md)中的 R 和 Python 程式庫包含基本發佈、資料科學模型、機器學習服務演算法，以及可大規模地進行高效能分析的函式，而不需要在網路之間傳輸資料。 
 
