@@ -11,12 +11,12 @@ ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f5e41f1dac0c9c0048b5751439209e17e289f4c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 354e1dce8bfb11f7eefc0f90df0868ebc01757e0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178128"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365010"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>使用資料摘要 (PowerPivot for SharePoint)
   資料摘要是從線上資料來源產生，並串流至目的地文件或應用程式的一個或多個資料流。 如果您使用的是 PowerPivot for Excel，資料摘要可以協助您從任意資料來源取得現有的公司或商務資料，送到 Excel 2010 活頁簿的 PowerPivot 視窗中。 將資料摘要匯入活頁簿之後，您可以在 SharePoint 伺服器上排程的任何資料重新整理作業中參考該摘要。  
@@ -63,7 +63,7 @@ ms.locfileid: "48178128"
 ##  <a name="rsreport"></a> 從 Reporting Services 報表建立資料摘要  
  如果您擁有 SQL Server 2008 R2 Reporting Services 的部署，您可以使用新的 Atom 轉譯延伸模組，從現有的報表中產生資料摘要。 為了取得最佳結果，您在工作站上應該有 Excel 2010 和 PowerPivot for Excel。 PowerPivot 用戶端應用程式將會啟動，以回應資料摘要匯出，然後在進行串流時，自動加入資料表和資料行並使兩者相關。  
   
- 如需如何從報表匯出資料摘要的指示，請參閱[報表產生器說明檔](http://go.microsoft.com/fwlink/?LinkId=154494)中的[從報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)。  
+ 如需如何從報表匯出資料摘要的指示，請參閱[報表產生器說明檔](https://go.microsoft.com/fwlink/?LinkId=154494)中的[從報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  若要設定週期性的資料重新整理排程，將報表資料重新匯入至已發行至 SharePoint 文件庫的 PowerPivot 活頁簿中，報表伺服器必須設定為整合 SharePoint。 如需 PowerPivot for SharePoint 和 Reporting Services 如何一起使用的詳細資訊，請參閱[設定和管理報表伺服器的&#40;Reporting Services SharePoint 模式&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md)。  
