@@ -278,7 +278,7 @@ items:
     href: sys-dm-db-missing-index-groups-transact-sql.md
   - name: sys.dm_db_missing_index_group_stats
     href: sys-dm-db-missing-index-group-stats-transact-sql.md
-- name: I O
+- name: I/O
   href: i-o-related-dynamic-management-views-and-functions-transact-sql.md
   items:
   - name: sys.dm_io_backup_tapes
@@ -577,9 +577,9 @@ items:
     href: sys-dm-tran-version-store-transact-sql.md
   - name: sys.dm_tran_version_store_space_usage
     href: sys-dm-tran-version-store-space-usage.md
-ms.openlocfilehash: 7eb74e07549ca9777ed2488e1eb301eb913e20ec
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: bfdb4985bba617d8c8e6bdd306b832f3783281ed
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712660"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226655"
