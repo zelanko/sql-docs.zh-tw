@@ -1,5 +1,5 @@
 ---
-title: 我 O 相關動態管理檢視和函數 (TRANSACT-SQL) |Microsoft Docs
+title: I/O 相關的動態管理檢視和函數 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: f876d32b-c07f-4ccc-a691-5e580bc50c40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbe810e8a41c16b7b8c0ad19ff9ff64715976c0b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a94af268647627b5cdc5cf1f5a20e61008177bad
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669787"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226345"
 ---
-# <a name="i-o-related-dynamic-management-views-and-functions-transact-sql"></a>我 O 相關動態管理檢視和函數 (transact-SQL&AMP;#41
+# <a name="io-related-dynamic-management-views-and-functions-transact-sql"></a>I/O 相關的動態管理檢視和函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   此章節包含下列動態管理物件。  

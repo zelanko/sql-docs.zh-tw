@@ -16,12 +16,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d26bb248705ddce8932264701fbb7b9c09f64fcb
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018593"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132398"
 ---
 # <a name="upgrade-replicated-databases"></a>升級複寫的資料庫
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級複寫資料庫。升級節點時，不需要停止其他節點上的活動。 請確定您遵守有關拓撲中支援之版本的規則：  
@@ -89,9 +89,8 @@ ms.locfileid: "51018593"
  若要確定從舊版還原複寫資料庫的備份時有保留複寫設定：還原到與建立備份的伺服器和資料庫同名的伺服器和資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理 &#40;複寫&#41;](../../relational-databases/replication/administration/administration-replication.md)   
+ [複寫管理常見問題集](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [複寫回溯相容性](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
- [新功能 &#40;複寫&#41;](../../../2014/relational-databases/replication/what-s-new-replication.md)   
  [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [升級到 SQL Server 2014](upgrade-sql-server.md)  
   

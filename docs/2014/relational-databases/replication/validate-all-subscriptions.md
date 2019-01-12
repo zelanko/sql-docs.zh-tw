@@ -14,12 +14,12 @@ ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0f9161e0b083afe8a57c396ba9d6e1db68755c1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b33cfe47cebba4c24c90ad41ce1b218192d128f4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799600"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135958"
 ---
 # <a name="validate-all-subscriptions"></a>驗證所有訂閱
   使用 **[驗證所有訂閱]** 對話方塊來指定下次執行每個訂閱的合併代理程式時，應驗證合併發行集的所有訂閱。 驗證的結果會在複寫監視器中顯示。 如需詳細資訊，請參閱 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)。  
@@ -34,6 +34,6 @@ ms.locfileid: "52799600"
  除了統計「發行者」與「訂閱者」上的資料列數量之外，也會使用二進位總和檢查碼演算法計算所有資料的總和檢查碼。 如果資料列計數失敗，就不會執行總和檢查碼。 這個選項對於 [!INCLUDE[ssEW](../../includes/ssew-md.md)]無效。  
   
 ## <a name="see-also"></a>另請參閱  
- [驗證複寫的資料](validate-replicated-data.md)  
+ [驗證複寫的資料](validate-data-at-the-subscriber.md)  
   
   

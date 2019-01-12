@@ -13,12 +13,12 @@ ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03a7640f95242538d01c8f135a005729b15042b5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813963"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135443"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>點對點複寫中的衝突偵測
   點對點異動複寫可讓您在拓撲中的任何節點上插入、更新或刪除資料，以及讓資料變更傳播至其他節點。 由於您可以在任何節點上變更資料，因此不同節點的資料變更可能會彼此衝突。 如果在一個以上的節點上修改資料列，它可能會在此資料列傳播到其他節點時，造成衝突或甚至是遺失更新。  
@@ -26,7 +26,7 @@ ms.locfileid: "52813963"
  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 及更新版本中的點對點複寫提供了在點對點拓撲之間啟用衝突偵測的選項。 這個選項可避免因為未偵測到的衝突所導致的問題，包括不一致的應用程式行為和遺失更新。 啟用這個選項時，預設會將衝突的變更視為造成散發代理程式失敗的嚴重錯誤。 在發生衝突時，此拓撲會維持不一致的狀態，直到解決衝突並讓拓撲之間的資料變成一致為止。  
   
 > [!NOTE]  
->  若要避免潛在的資料不一致問題，請務必要避免發生點對點拓撲中的衝突，即使是啟用了衝突偵測也一樣。 若要確定只在一個節點上執行特定資料列的寫入作業，存取和變更資料的應用程式必須分割插入、更新和刪除作業。 這樣的分割可確保，從一個節點對給定資料列的修改會在其他節點修改該資料列之前，與拓撲中的所有其他節點同步處理。 如果應用程式需要複雜的衝突偵測與解決功能，請使用合併式複寫。 如需詳細資訊，請參閱[合併式複寫](../merge/merge-replication.md)和[偵測及解決合併式複寫衝突](../merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)。  
+>  若要避免潛在的資料不一致問題，請務必要避免發生點對點拓撲中的衝突，即使是啟用了衝突偵測也一樣。 若要確定只在一個節點上執行特定資料列的寫入作業，存取和變更資料的應用程式必須分割插入、更新和刪除作業。 這樣的分割可確保，從一個節點對給定資料列的修改會在其他節點修改該資料列之前，與拓撲中的所有其他節點同步處理。 如果應用程式需要複雜的衝突偵測與解決功能，請使用合併式複寫。 如需詳細資訊，請參閱[合併式複寫](../merge/merge-replication.md)和[偵測及解決合併式複寫衝突](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
 ## <a name="understanding-conflicts-and-conflict-detection"></a>了解衝突和衝突偵測  
  在單一資料庫中，由不同應用程式對相同資料列所做的變更不會導致衝突發生。 這是因為交易是序列化的，而且系統會使用鎖定來處理並行的變更。 在非同步分散式系統 (例如點對點複寫) 中，交易會在每個節點上獨立運作，而且沒有任何機制可序列化多個節點之間的交易。 雖然您可以使用兩階段交易認可之類的通訊協定，但是這樣做會大幅影響效能。  
@@ -92,7 +92,7 @@ ms.locfileid: "52813963"
   
     3.  使用衝突檢視器來確認偵測到的衝突，然後判斷所涉及的資料列、衝突的類型以及成功者。 系統會根據您在組態設定期間指定的訂閱者識別碼值來解決衝突：源自最高識別碼之節點的資料列會在衝突中獲勝。 如需詳細資訊，請參閱[檢視交易式發行集的資料衝突 &#40;SQL Server Management Studio&#41;](../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)。  
   
-    4.  執行驗證，以便確保衝突資料列會正確聚合。 如需詳細資訊，請參閱[驗證複寫的資料](../validate-replicated-data.md)。  
+    4.  執行驗證，以便確保衝突資料列會正確聚合。 如需詳細資訊，請參閱[驗證複寫的資料](../validate-data-at-the-subscriber.md)。  
   
         > [!NOTE]  
         >  如果進行這個步驟之後資料出現不一致，您就必須手動更新具有最高優先權之節點上的資料列，然後讓變更從這個節點傳播。 如果拓撲中沒有其他進一步的衝突變更，所有節點都會處於一致狀態。  

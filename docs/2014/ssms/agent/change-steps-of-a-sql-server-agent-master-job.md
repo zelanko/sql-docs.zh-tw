@@ -10,12 +10,12 @@ ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2bf10e4357579bcda5ec9ac3bef92b49f596b7a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1a60d9e5d8569324cc3f68200d4a5a232b930d8b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812290"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133258"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>變更 SQL Server Agent 主要作業的步驟
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中變更 SQL Server Agent 主要作業的步驟。  
@@ -56,13 +56,13 @@ ms.locfileid: "52812290"
   
 4.  以滑鼠右鍵按一下您想要修改步驟的作業，然後選取 [屬性]。  
   
-5.  在 **作業屬性-* * * job_name*對話方塊的 **選取頁面**，選取**步驟**。  
+5.  在 [作業屬性 -_job_name_] 對話方塊的 [選取頁面] 下，選取 [步驟]。  
   
-6.  按一下 [**編輯**以開啟 **作業步驟屬性-* * * <* ] 對話方塊。 如需有關此對話方塊中可用之選項的詳細資訊，請參閱[作業步驟屬性：新增作業步驟&#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)並[作業步驟屬性：新增作業步驟&#40;進階頁面&#41;](job-step-properties-new-job-step-advanced-page.md)。  
+6.  按一下 [**編輯**來開啟**作業步驟屬性-**_<_ ] 對話方塊。 如需有關此對話方塊中可用之選項的詳細資訊，請參閱[作業步驟屬性：新增作業步驟&#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)並[作業步驟屬性：新增作業步驟&#40;進階頁面&#41;](job-step-properties-new-job-step-advanced-page.md)。  
   
 7.  完成後，請按一下 **[確定]**。  
   
-8.  在 **作業屬性-* * * job_name*  對話方塊中，按一下**確定**。  
+8.  在 **作業屬性-**_job_name_  對話方塊中，按一下 **確定**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

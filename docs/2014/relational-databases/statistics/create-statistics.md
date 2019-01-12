@@ -18,12 +18,12 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3128828bd26e6d2755f30748c23873538b8a7649
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527710"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133468"
 ---
 # <a name="create-statistics"></a>建立統計資料
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中針對資料表或索引檢視表的一個或多個資料行建立查詢最佳化統計資料。 對於大部分查詢而言，查詢最佳化工具已經產生高品質查詢計畫的必要統計資料。不過，在少數情況下，您必須建立其他統計資料。  
@@ -69,7 +69,7 @@ ms.locfileid: "52527710"
   
 4.  以滑鼠右鍵按一下 [統計資料] 資料夾，然後選取 [新增統計資料…]。  
   
-     下列屬性會在 [<資料表名稱> 資料表上的新統計資料] 對話方塊的 [一般] 頁面中顯示。  
+     下列屬性會在 [_資料表名稱_ 資料表上的新統計資料] 對話方塊的 [一般] 頁面中顯示。  
   
      **資料表名稱**  
      顯示統計資料所描述的資料表名稱。  
@@ -113,12 +113,12 @@ ms.locfileid: "52527710"
      **更新這些資料行的統計資料**  
      勾選即可在對話方塊關閉時更新統計資料。  
   
-     下列屬性會在 [<資料表名稱> 資料表上的新統計資料] 對話方塊的 [篩選] 頁面中顯示。  
+     下列屬性會在 [_資料表名稱_ 資料表上的新統計資料] 對話方塊的 [篩選] 頁面中顯示。  
   
      **篩選運算式**  
      定義要在篩選統計資料中包含什麼資料列。 例如： `Production.ProductSubcategoryID IN ( 1,2,3 )`   
   
-5.  在 [<資料表名稱> 資料表上的新統計資料] 對話方塊的 [一般] 頁面上，按一下 [新增]。  
+5.  在 [_資料表名稱_ 資料表上的新統計資料] 對話方塊的 [一般] 頁面上，按一下 [加入]。  
   
      下列屬性會在 **[選取資料行]** 對話方塊中顯示。 此資訊是唯讀的。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "52527710"
   
 6.  在 **[選取資料行]** 對話方塊中，選取要為其建立統計資料的每個資料行的核取方塊，然後按一下 **[確定]**。  
   
-7.  在 [<資料表名稱> 資料表上的新統計資料] 對話方塊中，按一下 [確定]。  
+7.  在 [_資料表名稱_ 資料表上的新統計資料] 對話方塊中，按一下 [確定]。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

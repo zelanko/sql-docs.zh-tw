@@ -12,12 +12,12 @@ ms.assetid: 8886378c-e70e-481a-bd24-2d613a39f491
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1a4e4f951f221f9a66b69c942a3ca0f48abfaeac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 46e346cf816d265f13120b85839d6a306f0d1dc4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772390"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132548"
 ---
 # <a name="mssqleng020575"></a>MSSQL_ENG020575
     
@@ -33,7 +33,7 @@ ms.locfileid: "52772390"
 |訊息文字|訂閱者 '%s' 訂閱的發行項 '%s' (在發行集 '%s' 中)，已通過資料驗證。|  
   
 ## <a name="explanation"></a>說明  
- 訂閱者端的資料是依據發行者端的資料進行驗證，而資料相符，因此通過驗證。 如需驗證的相關資訊，請參閱 [Validate Replicated Data](validate-replicated-data.md)。  
+ 訂閱者端的資料是依據發行者端的資料進行驗證，而資料相符，因此通過驗證。 如需驗證的相關資訊，請參閱 [Validate Replicated Data](validate-data-at-the-subscriber.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [錯誤和事件參考 &#40;複寫&#41;](errors-and-events-reference-replication.md)  

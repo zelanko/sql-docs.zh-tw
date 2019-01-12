@@ -10,12 +10,12 @@ ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d64724108630e64ecfd654367180a6603aabe3e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125944"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134828"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>將指令碼儲存成專案或方案
   熟悉 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 的開發人員會欣然接受 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [方案總管]。 支援您商務的指令碼可以分組成不同的指令碼專案，而且這些指令碼專案可以當作一個方案來一起管理。 當您將指令碼放在指令碼專案和方案中時，您可以將它們當作一個群組來一起開啟，也可以將它們一起儲存在 Visual SourceSafe 之類的原始檔控制產品中。 指令碼專案包括適當執行指令碼所需要的連接資訊，且可以包括支援文字檔之類的非指令碼檔案。  
@@ -58,7 +58,7 @@ ms.locfileid: "48125944"
     > [!NOTE]  
     >  如果您需要更多空間來輸入您的查詢，請按 SHIFT+ALT+ENTER 鍵，切換成全螢幕模式。  
   
-11. 在方案總管中，以滑鼠右鍵按一下 [SQLQuery1]，然後按一下 [重新命名]。 輸入 **Check Workorders****.sql** 作為查詢的新名稱，再按 ENTER 鍵。  
+11. 在方案總管中，以滑鼠右鍵按一下 [SQLQuery1]，然後按一下 [重新命名]。 型別**Check Workorders.sql**做為查詢並按 ENTER 鍵的新名稱。  
   
 12. 若要儲存您的方案和指令碼專案，請在 [檔案] 功能表上，按一下 [全部儲存]。  
   

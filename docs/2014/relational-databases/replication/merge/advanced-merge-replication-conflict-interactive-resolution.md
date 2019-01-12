@@ -15,12 +15,12 @@ ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7485f840682c6bc8f8140aae6376431ad92442a0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 43347190c53331d0a30ba0f29d795cce981eec34
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815410"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135628"
 ---
 # <a name="interactive-conflict-resolution"></a>Interactive Conflict Resolution
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫提供互動式解決器，可讓您在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Synchronization Manager 中於需要同步處理期間手動解決衝突。 「互動解析程式」是圖形介面，會在執行時期啟動並顯示各衝突資料列的資料，以及提供檢視及編輯衝突資料的選項，然後個別解決每項衝突。  
@@ -35,7 +35,7 @@ ms.locfileid: "52815410"
   
  若要使用「互動解析程式」，必須為每個發行項以及需要它的訂閱啟用互動式解決。 為一個或多個發行項和訂閱啟用「互動解析程式」之後，便會在合併同步處理期間偵測到衝突時使用它。  
   
- 若要使用互動解析程式，請參閱[指定合併發行項的互動式衝突解決方法](../publish/specify-interactive-conflict-resolution-for-merge-articles.md)和[使用 Windows Synchronization Manager 同步處理訂閱 &#40;Windows Synchronization Manager&#41;](../synchronize-a-subscription-using-windows-synchronization-manager.md)。  
+ 若要使用互動解析程式，請參閱[指定合併發行項的互動式衝突解決方法](..//publish/specify-merge-replication-properties.md#interactive-conflict-resolution)和[使用 Windows Synchronization Manager 同步處理訂閱 &#40;Windows Synchronization Manager&#41;](../synchronize-a-subscription-using-windows-synchronization-manager.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)  

@@ -13,12 +13,12 @@ ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae66ab14a058f5fd6cfef462ddcc1c83c5a9cfe3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 27d5be264fc6e6033997babb4a7aac1e8271a39d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823520"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134948"
 ---
 # <a name="com-based-custom-resolvers"></a>COM-Based Custom Resolvers
   自訂解決器比預設解決機制更具有彈性，它們能使用複寫資料實作應用程式要求的商務邏輯。 以 COM 為基礎的自訂解決器是一個實作 **ICustomResolver** COM 介面、其方法與屬性，以及特別為衝突解決所設計的其他支援介面與類型定義之動態連結程式庫 (DLL)。  
@@ -32,7 +32,7 @@ ms.locfileid: "52823520"
   
 -   您想解決的資料列變更之類型 (例如更新、插入、刪除)，以及在合併變更的上傳、下載，或兩者兼具期間，是否應叫用解決器。 您可以指定一類變更、所有變更，或者任意組合。 預設的合併衝突解決器可處理自訂解決器未能涵蓋的任何衝突。  
   
--   解決衝突時是否要使用資料行追蹤。 若啟用資料行層級追蹤，只有衝突所在的資料行中的資料會加上旗標標示為衝突，否則這些資料便會遭到合併。 但是，衝突解決的方式與資料列層級追蹤相同：優先權勝利者會覆寫整列資料 (但這些資料可能是來自於「發行者」、「訂閱者」的混合值或一些非來自「發行者」亦非「訂閱者」的變更值)。 如需相關資訊，請參閱 [偵測及解決合併式複寫衝突](advanced-merge-replication-resolve-merge-replication-conflicts.md)。  
+-   解決衝突時是否要使用資料行追蹤。 若啟用資料行層級追蹤，只有衝突所在的資料行中的資料會加上旗標標示為衝突，否則這些資料便會遭到合併。 但是，衝突解決的方式與資料列層級追蹤相同：優先權勝利者會覆寫整列資料 (但這些資料可能是來自於「發行者」、「訂閱者」的混合值或一些非來自「發行者」亦非「訂閱者」的變更值)。 如需相關資訊，請參閱 [偵測及解決合併式複寫衝突](advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
  若要實作以 COM 為基礎的自訂 Conflict Resolver，請參閱＜ [針對合併發行項實作自訂衝突解析程式](../implement-a-custom-conflict-resolver-for-a-merge-article.md)＞。  
   

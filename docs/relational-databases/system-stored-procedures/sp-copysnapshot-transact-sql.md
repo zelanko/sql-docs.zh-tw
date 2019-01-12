@@ -16,12 +16,12 @@ ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0cb4757d454343b48d5eea74d10d66cdbaa7a52a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d3c8037bdccc0b04e2c11399f09e5a99c109df65
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817188"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134108"
 ---
 # <a name="spcopysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,16 +40,16 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_發行集_**'**  
  這是要複製快照集內容的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@destination_folder=**] **'***destination_folder***'**  
+ [  **@destination_folder=**] **'**_destination_folder_**'**  
  這是要複製發行集快照集內容的資料夾名稱。 *destination_folder*已**nvarchar(255)**，沒有預設值。 *Destination_folder*可以是替代位置例如另一部伺服器、 網路磁碟機或抽取式媒體 （如 Cd-rom 或抽取式磁碟）。  
   
- [  **@subscriber=**] **'***訂閱者***'**  
+ [  **@subscriber=**] **'**_訂閱者_**'**  
  這是訂閱者的名稱。 *訂閱者*是 sysname，預設值是 NULL。  
   
- [  **@subscriber_db=**] **'***subscriber_db***'**  
+ [  **@subscriber_db=**] **'**_subscriber_db_**'**  
  這是訂閱資料庫的名稱。 *subscriber_db*是 sysname，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -62,7 +62,7 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_copysnapshot**。  
   
 ## <a name="see-also"></a>另請參閱  
- [替代快照集資料夾位置](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [替代快照集資料夾位置](../../relational-databases/replication/snapshot-options.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

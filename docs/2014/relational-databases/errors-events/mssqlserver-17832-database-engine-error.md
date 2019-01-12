@@ -15,12 +15,12 @@ ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bda6c6038a4bdfce089d8523c2b4655d1b4d2d39
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1280bb44d11ce4f8234d544bf113e796a9c3c85c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362090"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133378"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
     
@@ -51,7 +51,7 @@ ms.locfileid: "53362090"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
- **若要變更 MaxTokenSize****伺服器電腦上**  
+ **若要在伺服器電腦上變更 MaxTokenSize**  
   
 1.  在 **[開始]** 功能表上，按一下 **[執行]**。  
   

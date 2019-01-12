@@ -1,6 +1,6 @@
 ---
-title: 新增 SQLRUserGroup 作為資料庫使用者-SQL Server Machine Learning 服務
-description: 對於使用隱含的驗證的回送連線，新增 SQLRUserGroup 作為資料庫使用者，使背景工作帳戶可以登入伺服器上，以傳回給呼叫使用者的身分識別轉換。
+title: 新增 SQLRUserGroup 作為 SQL Server 登入-SQL Server Machine Learning 服務
+description: 對於使用隱含的驗證的回送連線，新增 SQLRUserGroup 作為 SQL Server 登入，使背景工作帳戶可以登入伺服器上，以傳回給呼叫使用者的身分識別轉換。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: abd0745126a4f2a23cf559500b93d2fa53fa2cf9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 0bc84a7a4cfae14ea19491c42e828d0a93cdfba7
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432351"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143418"
 ---
-# <a name="add-sqlrusergroup-as-a-database-user"></a>新增 SQLRUserGroup 作為資料庫使用者
+# <a name="add-sqlrusergroup-as-a-sql-server-login"></a>新增 SQLRUserGroup 作為 SQL Server 登入
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-建立的資料庫登入[SQLRUserGroup](../concepts/security.md#sqlrusergroup)當[循迴路連線](../../advanced-analytics/concepts/security.md#implied-authentication)指令碼中指定*信任連接*，以及用來執行物件的識別包含您的程式碼是 Windows 使用者帳戶。
+建立 SQL Server 登入[SQLRUserGroup](../concepts/security.md#sqlrusergroup)當[循迴路連線](../../advanced-analytics/concepts/security.md#implied-authentication)指令碼中指定*信任連接*，以及用來執行物件的識別包含您的程式碼是 Windows 使用者帳戶。
 
 受信任的連接是指`Trusted_Connection=True`連接字串中。 當 SQL Server 收到要求，指定受信任的連線時，它會檢查目前的 Windows 使用者的身分識別是否有登入。 執行為背景工作帳戶的外部處理序 (例如 MSSQLSERVER01 從**SQLRUserGroup**)，則要求會失敗，因為這些帳戶依預設沒有登入。
 

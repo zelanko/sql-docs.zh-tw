@@ -12,12 +12,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 151a7e847d50a84c34eb07f55e5bd4d8e20dcc4d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775790"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132783"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>建立維護計畫 (維護計畫設計介面)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的維護計畫設計介面，建立單一伺服器或多伺服器維護計畫。 雖然 **[維護計畫精靈]** 最適用於建立基本的維護計畫，但使用設計介面建立計畫時可讓您利用加強的工作流程。  
@@ -55,7 +55,7 @@ ms.locfileid: "52775790"
   
 3.  以滑鼠右鍵按一下 [維護計畫] 資料夾，然後選取 [新增維護計畫]。  
   
-4.  在 **[新增維護計畫]** 對話方塊中的 **[名稱]** 方塊，輸入計畫的名稱，然後按一下 **[確定]**。 這會開啟工具箱和 *maintenance_plan_name* [設計] 介面，並在主要方格中建立預設的 [子計畫_1] 子計畫。  
+4.  在 **[新增維護計畫]** 對話方塊中的 **[名稱]** 方塊，輸入計畫的名稱，然後按一下 **[確定]**。 這會開啟工具箱和 _maintenance_plan_name_ [設計] 介面，並在主要方格中建立預設的 [子計畫_1] 子計畫。  
   
      設計空間的標頭中有下列選項。  
   
@@ -215,7 +215,7 @@ ms.locfileid: "52775790"
   
         1.  如果您選取 **[產生文字檔報表]**，請選取 **[建立新檔案]** 或 **[附加至檔案]**。  
   
-        2.  根據上述選項，透過在 **[資料夾]** 或 **[檔案名稱]** 方塊中輸入資訊，輸入新檔案或要附加之檔案的名稱和完整路徑。 或者，按一下省略符號 **（...）** 的資料夾或檔案名稱來選取路徑 **尋找資料夾-* * * server_name*或 **尋找資料庫檔案-* * * _ n a m*對話方塊。  
+        2.  根據上述選項，透過在 **[資料夾]** 或 **[檔案名稱]** 方塊中輸入資訊，輸入新檔案或要附加之檔案的名稱和完整路徑。 或者，按一下省略符號 **（...）** 的資料夾或檔案名稱來選取路徑**尋找資料夾-**_server_name_或**尋找資料庫檔案-**__ n a_對話方塊。  
   
         3.  如果您選取 **[傳送報表至電子郵件收件者]**，請在 **[代理程式操作員]** 清單中選取電子郵件報表的收件者。  
   
@@ -230,7 +230,7 @@ ms.locfileid: "52775790"
   
 12. 若要在記錄檔檢視器中檢視結果，請在物件總管中以滑鼠右鍵按一下 [維護計畫] 資料夾或特定維護計畫，然後選取 [檢視記錄]。  
   
-     下列選項位於 **記錄檔檢視器-* * * server_name*  對話方塊。  
+     下列選項位於**記錄檔檢視器-**_server_name_  對話方塊。  
   
      **載入記錄**  
      開啟對話方塊供您指定所要載入的記錄檔。  

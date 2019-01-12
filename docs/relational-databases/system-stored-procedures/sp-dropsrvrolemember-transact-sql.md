@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2f08fa101e2a53696e58f15413ec08c301a9e890
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9eca631440e92f946513429ddb43d3212a109984
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596939"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131938"
 ---
 # <a name="spdropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @loginame **=** ] **'***登入***'**  
+ [ @loginame **=** ] **'**_登入_**'**  
  這是要從固定伺服器角色中移除的登入名稱。 *登入*已**sysname**，沒有預設值。 *登入*必須存在。  
   
- [ @rolename **=** ] **'***角色***'**  
+ [ @rolename **=** ] **'**_角色_**'**  
  這是伺服器角色的名稱。 *角色*已**sysname**，預設值是 NULL。 *角色*必須是下列值之一：  
   
 -   sysadmin  

@@ -20,15 +20,15 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f34b5accc278a55946546c149c00bffd3a02a693
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4b919289d49901f64b26db0aa2d4b71eeb0e132a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811991"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133568"
 ---
 # <a name="replication-agent-security-model"></a>複寫代理程式安全性模型
-  複寫代理程式安全性模型允許精確控制複寫代理程式執行並建立連接的帳戶：每個代理程式，可以指定不同的帳戶。 如需如何指定帳戶的詳細資訊，請參閱[管理複寫的登入與密碼](manage-logins-and-passwords-in-replication.md)。  
+  複寫代理程式安全性模型允許精確控制複寫代理程式執行並建立連接的帳戶：每個代理程式，可以指定不同的帳戶。 如需如何指定帳戶的詳細資訊，請參閱[管理複寫的登入與密碼](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)。  
   
 > [!IMPORTANT]  
 >  當 **系統管理員 (sysadmin)** 固定伺服器角色的成員設定複寫時，複寫代理程式可以設定為模擬 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 帳戶。 完成這項作業的方法，就是不指定複寫代理程式的登入和密碼；不過，我們不建議此方式。 反之，就安全性最佳做法而言，我們建議您為每個具有最小權限的代理程式指定帳戶；本主題稍後的＜代理程式所需的權限＞一節會描述最小權限。  
@@ -92,7 +92,7 @@ ms.locfileid: "52811991"
   
 ## <a name="see-also"></a>另請參閱  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [安全性與保護 &#40;複寫&#41;](security-and-protection-replication.md)   
+ [SQL Server 複寫安全性](view-and-modify-replication-security-settings.md)   
  [保護快照集資料夾](secure-the-snapshot-folder.md)  
   
   

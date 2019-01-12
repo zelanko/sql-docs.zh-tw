@@ -13,12 +13,12 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd6f263e816d74f1fe3f09902c7e806709dd6993
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823303"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134730"
 ---
 # <a name="best-practices-for-replication-administration"></a>複寫管理的最佳做法
   設定複寫之後，請務必了解如何管理複寫拓撲。 這個主題提供各個範疇的基本最佳做法指導，並可透過連結方式分別取得進一步資訊。 除了依照此主題中呈現的最佳做法指導，請考慮閱讀常見問答集，以更加熟悉一般問題和問題：[複寫管理員的常見問題集](frequently-asked-questions-for-replication-administrators.md)。  
@@ -121,7 +121,7 @@ ms.locfileid: "52823303"
 ## <a name="validate-data-periodically"></a>定期驗證資料  
  複寫並不需要進行驗證，但建議對異動複寫和合併式複寫定期執行驗證。 驗證允許您驗證「訂閱者」端的資料與「發行者」端的資料是否相符合。 成功的驗證則表示，在那個時間點，「發行者」端的所有變更都已複寫到「訂閱者」端 (同時，如果「訂閱者」端支援更新，則「訂閱者」端的所有變更也都會複寫到「發行者」端)，而且這兩個資料庫將保持同步。  
   
- 建議根據發行集資料庫的備份排程執行驗證。 例如，如果發行集資料庫每週進行一次完整備份，則驗證會在備份完成後每週執行一次。 如需詳細資訊，請參閱[驗證複寫的資料](../validate-replicated-data.md)。  
+ 建議根據發行集資料庫的備份排程執行驗證。 例如，如果發行集資料庫每週進行一次完整備份，則驗證會在備份完成後每週執行一次。 如需詳細資訊，請參閱[驗證複寫的資料](../validate-data-at-the-subscriber.md)。  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>必要時，使用代理程式設定檔變更代理程式參數  
  代理程式設定檔提供一個設定複寫代理程式參數的便利方法。 參數也可以在代理程式命令列指定，但是如果您需要變更參數值，則一般更適合使用預先定義的代理程式設定檔或者建立一個新設定檔。 例如，如果您使用合併式複寫，同時「訂閱者」從寬頻連接移到撥號連接，請考慮為「合併代理程式」使用 **慢速連結** 設定檔；此設定檔會使用一組更適合慢速通訊連結的參數。 如需詳細資訊，請參閱＜ [Replication Agent Profiles](../agents/replication-agent-profiles.md)＞。  
@@ -148,6 +148,6 @@ ms.locfileid: "52823303"
  如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../publish/make-schema-changes-on-publication-databases.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理 &#40;複寫&#41;](administration-replication.md)  
+ [複寫管理常見問題集](frequently-asked-questions-for-replication-administrators.md)  
   
   

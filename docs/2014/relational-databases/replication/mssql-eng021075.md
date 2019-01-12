@@ -12,12 +12,12 @@ ms.assetid: c8c29543-d1f6-49d5-b6c8-e8c3aa373090
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b97942c7fae84a43b30ce848af593a96ea0f4714
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4647b34db4cd224e5c76f6e960a5636deaeeac8c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778220"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132418"
 ---
 # <a name="mssqleng021075"></a>MSSQL_ENG021075
     
@@ -38,7 +38,7 @@ ms.locfileid: "52778220"
 ## <a name="user-action"></a>使用者動作  
  如果在建立訂閱或上次選擇重新初始化訂閱後未啟動發行集的「快照集代理程式」，請啟動「快照集代理程式」，並讓其在啟動「散發代理程式」或「合併代理程式」之前完成。 如需詳細資訊，請參閱[建立和套用快照集](create-and-apply-the-snapshot.md)。  
   
- 若快照集代理程式未完成，請檢查快照集代理程式記錄，以便找出錯誤並加以解決。 如需如何在複寫監視器中檢視代理程式狀態和錯誤詳細資料的相關資訊，請參閱[檢視與發行集相關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
+ 若快照集代理程式未完成，請檢查快照集代理程式記錄，以便找出錯誤並加以解決。 在複寫監視器中檢視代理程式狀態和錯誤詳細資料的相關資訊，請參閱[View Information and Perform Tasks 使用 「 複寫監視器](monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
  若錯誤繼續發生，請增加代理程式的記錄，並指定記錄的輸出檔。 視錯誤內容的不同，可提供導致錯誤的步驟和 (或) 其他錯誤訊息。  
   

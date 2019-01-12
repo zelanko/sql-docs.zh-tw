@@ -14,12 +14,12 @@ ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc2cc36a309f74c63ad13f93c9d5e76fb9140900
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f5fca9032df4f1327933580a306215fd2fd47854
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770220"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135968"
 ---
 # <a name="rename-columns-database-engine"></a>重新命名資料行 (Database Engine)
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新命名資料表資料行。  
@@ -64,7 +64,7 @@ ms.locfileid: "52770220"
   
 2.  在 **[資料行名稱]** 下，選取您要變更的名稱，並輸入新名稱。  
   
-3.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]。  
+3.  在 [檔案]  功能表上，按一下 [儲存] _table name_。  
   
 > [!NOTE]  
 >  您也可以在 **[資料行屬性]** 索引標籤中變更資料行的名稱。請選取您要變更名稱的資料行，並輸入新的 **[名稱]** 值。  

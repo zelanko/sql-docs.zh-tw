@@ -14,12 +14,12 @@ ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2998ac4c51ea4ea7b289e4ef769acf0f3991f53
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 963fe86b0d5939c82bffb9c07d5adacbadadba89
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784890"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135948"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>啟用交易式發行集的可更新訂閱
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中啟用交易式發行集的訂閱更新。  
@@ -37,7 +37,7 @@ ms.locfileid: "52784890"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  在「新增發行集精靈」的 **[發行集類型]** 頁面上，為交易式發行集啟用更新訂閱。 如需使用此精靈的詳細資訊，請參閱[建立發行集](create-a-publication.md)。 建立發行集之後您將無法啟用更新訂閱。  
   
- 若要使用更新訂閱，您還必須在「新增訂閱精靈」中設定選項。 如需詳細資訊，請參閱 [建立交易式發行集的可更新訂閱](../create-updatable-subscription-transactional-publication-transact-sql.md)。  
+ 若要使用更新訂閱，您還必須在「新增訂閱精靈」中設定選項。 如需詳細資訊，請參閱 [建立交易式發行集的可更新訂閱](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
 #### <a name="to-enable-updating-subscriptions"></a>若要啟用更新訂閱  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52784890"
   
 4.  將發行項加入至發行集。 如需詳細資訊，請參閱 [定義發行項](define-an-article.md)。  
   
-5.  在訂閱者上，建立此發行集的更新訂閱。 如需詳細資訊，請參閱 [建立交易式發行集的可更新訂閱](../create-updatable-subscription-transactional-publication-transact-sql.md)。  
+5.  在訂閱者上，建立此發行集的更新訂閱。 如需詳細資訊，請參閱 [建立交易式發行集的可更新訂閱](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
 #### <a name="to-create-a-publication-that-supports-queued-updating-subscriptions"></a>建立可支援佇列更新訂閱的發行集  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52784890"
   
 5.  將發行項加入至發行集。 如需詳細資訊，請參閱 [定義發行項](define-an-article.md)。  
   
-6.  在訂閱者上，建立此發行集的更新訂閱。 如需詳細資訊，請參閱 [建立交易式發行集的可更新訂閱](../create-updatable-subscription-transactional-publication-transact-sql.md)。  
+6.  在訂閱者上，建立此發行集的更新訂閱。 如需詳細資訊，請參閱 [建立交易式發行集的可更新訂閱](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
 #### <a name="to-change-the-conflict-policy-for-a-publication-that-allows-queued-updating-subscriptions"></a>針對允許佇列更新訂閱的發行集變更衝突原則  
   
@@ -105,11 +105,11 @@ ms.locfileid: "52784890"
  [!code-sql[HowTo#sp_createtranupdatingpub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubupdate.sql#sp_createtranupdatingpub)]  
   
 ## <a name="see-also"></a>另請參閱  
- [設定佇列的更新衝突解決選項 &#40;SQL Server Management Studio&#41;](../publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)   
- [異動複寫的發行集類型](../transactional/publication-types-for-transactional-replication.md)   
+ [設定佇列的更新衝突解決選項 &#40;SQL Server Management Studio&#41;](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [異動複寫的發行集類型](../transactional/transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Create a Publication](create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)   
+ [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [以指令碼變數使用 sqlcmd](../../scripting/sqlcmd-use-with-scripting-variables.md)  
   

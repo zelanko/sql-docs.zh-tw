@@ -1,7 +1,7 @@
 ---
 title: SQLSetConnectAttr |Microsoft Docs
 ms.custom: ''
-ms.date: 12/11/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7167f88fd1cc3b349df9543080caf6d571322c40
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: 0e27df2328474f4123daa9488af88eb7903832be
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306255"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206374"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -35,7 +36,7 @@ ms.locfileid: "53306255"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入了新交易隔離屬性 SQL_COPT_SS_TXN_ISOLATION 的支援。 將 SQL_COPT_SS_TXN_ISOLATION 設定為 SQL_TXN_SS_SNAPSHOT 代表交易會在快照隔離等級之下發生。  
   
 > [!NOTE]  
->  SQL_ATTR_TXN_ISOLATION 可用來設定 SQL_TXN_SS_SNAPSHOT 以外的所有其他隔離等級。 如果您想要使用快照集隔離，就必須透過 SQL_COPT_SS_TXN_ISOLATION 設定 SQL_TXN_SS_SNAPSHOT。 不過，您可以使用 SQL_ATTR_TXN_ISOLATION 或 SQL_COPT_SS_TXN_ISOLATION 來擷取隔離等級。  
+> SQL_ATTR_TXN_ISOLATION 可用來設定 SQL_TXN_SS_SNAPSHOT 以外的所有其他隔離等級。 如果您想要使用快照集隔離，就必須透過 SQL_COPT_SS_TXN_ISOLATION 設定 SQL_TXN_SS_SNAPSHOT。 不過，您可以使用 SQL_ATTR_TXN_ISOLATION 或 SQL_COPT_SS_TXN_ISOLATION 來擷取隔離等級。  
   
  將 ODBC 陳述式屬性升級至連接屬性可能會產生非預期的後果。 您可以將要求伺服器資料指標以進行結果集處理的陳述式屬性升級至連接。 例如，如果您將 ODBC 陳述式屬性 SQL_ATTR_CONCURRENCY 設定為比預設值 SQL_CONCUR_READ_ONLY 更具限制性的值，就會引導驅動程式針對在連接時送出的所有陳述式使用動態資料指標。 針對連接的陳述式執行 ODBC 目錄函數會傳回 SQL_SUCCESS_WITH_INFO 以及一個診斷記錄，表示資料指標行為已經變更成唯讀。 嘗試執行包含相同連接之 COMPUTE 子句的 Transact-SQL SELECT 陳述式會失敗。  
   
@@ -193,7 +194,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_IS_OFF|預設值。 在登入時使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來驗證使用者識別碼和密碼。|  
 |SQL_IS_ON|使用 Windows 驗證模式來驗證使用者對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的存取權限。|  
 
-< 名稱 ="sqlcoptssmarsenabled"></a>
+<a name="sqlcoptssmarsenabled"></a>
 ## <a name="sqlcoptssmarsenabled"></a>SQL_COPT_SS_MARS_ENABLED  
  這個屬性會啟用或停用 Multiple Active Result Sets (MARS)。 根據預設，MARS 已停用。 您應該在建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連接之前設定這個屬性。 開啟連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後，MARS 將會在連接期間維持啟用或停用狀態。  
   
@@ -315,7 +316,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
  如需有關快照集隔離的詳細資訊，請參閱 <<c0> [ 使用快照隔離](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)。  
   
-## <a name="sqlcoptssuseprocforprep"></a>SQL_COPT_SS_USE_PROC_FOR_PREP  
+## <a name="sqlcoptssuseprocforprep"></a>SQL_COPT_SS_USE_PROC_FOR_PREP
+
  已不再支援這個屬性。  
 
 <a name="sqlcoptssuserdata"></a>
@@ -333,7 +335,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |SQL_WARN_YES|在字碼頁轉換期間發生資料遺失時產生警告。|  
 |SQL_WARN_NO|(預設值) 在字碼頁轉換期間發生資料遺失時不產生警告。|  
   
-## <a name="sqlsetconnectattr-support-for-service-principal-names-spns"></a>服務主要名稱 (SPN) 的 SQLSetConnectAttr 支援  
+## <a name="sqlsetconnectattr-support-for-service-principal-names-spns"></a>服務主要名稱 (SPN) 的 SQLSetConnectAttr 支援
+
  SQLSetConnectAttr 可用來設定新的連接屬性 SQL_COPT_SS_SERVER_SPN 和 SQL_COPT_SS_FAILOVER_PARTNER_SPN 的值。 這些屬性無法在連接已開啟時設定。如果您嘗試在連接已開啟時設定這些屬性，就會傳回錯誤 HY011 並顯示「此時作業無效」訊息 （SQLSetConnectOption 也可用來設定這些值。）  
   
  如需有關 Spn 的詳細資訊，請參閱 <<c0> [ 服務主體名稱&#40;Spn&#41;用戶端連接中&#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)。</c0>  
@@ -344,7 +347,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
  如需有關 SQL_COPT_SS_CONNECTION_DEAD 的詳細資訊，請參閱 < [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)並[連接到資料來源&#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md)。  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>範例
+
  這則範例會記錄效能資料。  
   
 ```  
@@ -388,7 +392,8 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
 // Continue on...  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
+
  [SQLSetConnectAttr 函數](https://go.microsoft.com/fwlink/?LinkId=59368)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)   

@@ -13,12 +13,12 @@ ms.assetid: 25b7af05-2721-4b24-9083-fb671e8bf4e0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0af2d4357c74d9ce7bec74e1b787ed259b04977
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 78dfc544d7fd01f6641df6c0968d4a59a668cdd3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797347"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132518"
 ---
 # <a name="securing-replication-over-the-internet"></a>Securing Replication Over the Internet
   網際網路複寫可以提供彈性，特別是對於行動訂閱者，但是您必須正確設定網際網路複寫以保證充分的安全性。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 建議使用下列兩個透過網際網路安全共用資訊的技術之一：  
@@ -39,6 +39,6 @@ ms.locfileid: "52797347"
   
 ## <a name="see-also"></a>另請參閱  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [安全性與保護 &#40;複寫&#41;](security-and-protection-replication.md)  
+ [SQL Server 複寫安全性](view-and-modify-replication-security-settings.md)  
   
   

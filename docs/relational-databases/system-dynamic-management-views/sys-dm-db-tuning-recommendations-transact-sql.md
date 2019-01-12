@@ -23,12 +23,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb5b2558a6dca79d4794b5d12c8e63fd6f002312
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 21756cadbfb924e95edd261942f018fb6aef6a4c
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527499"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226515"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_微調\_建議 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -62,6 +62,7 @@ ms.locfileid: "52527499"
  所傳回的資訊`sys.dm_db_tuning_recommendations`資料庫引擎識別潛在的查詢效能變差，而不會保存。 建議會保留只[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新啟動。 如果他們想要保留在伺服器回收之後，資料庫管理員應該定期製作備份複本的微調建議。 
 
  `currentValue` 欄位`state`資料行可能會有下列值：
+ 
  | [狀態] | 描述 |
  |--------|-------------|
  | `Active` | 建議是作用中和未套用。 使用者可以建議指令碼，以手動方式執行它。 |
@@ -88,27 +89,95 @@ ms.locfileid: "52527499"
 
  在 詳細資料資料行的統計資料不會顯示執行階段計畫統計資料 （例如，目前 CPU 時間）。 建議的詳細資料會進行迴歸偵測的時間，並說明為什麼[!INCLUDE[ssde_md](../../includes/ssde_md.md)]識別效能變差。 使用`regressedPlanId`並`recommendedPlanId`來查詢[查詢存放區目錄檢視](../../relational-databases/performance/how-query-store-collects-data.md)若要尋找確切執行階段計畫的統計資料。
 
-## <a name="using-tuning-recommendations-information"></a>使用微調建議資訊  
-您可以使用下列查詢來取得[!INCLUDE[tsql](../../includes/tsql-md.md)]指令碼，將會修正此問題：  
+## <a name="examples-of-using-tuning-recommendations-information"></a>使用微調建議資訊的範例  
+
+### <a name="example-1"></a>範例 1
+以下會取得所產生[!INCLUDE[tsql](../../includes/tsql-md.md)]強制任何給定查詢的良好計劃的指令碼：  
  
 ```sql
 SELECT name, reason, score,
-        JSON_VALUE(details, '$.implementationDetails.script') as script,
-        details.* 
+    JSON_VALUE(details, '$.implementationDetails.script') AS script,
+    details.* 
 FROM sys.dm_db_tuning_recommendations
-    CROSS APPLY OPENJSON(details, '$.planForceDetails')
-                WITH (  query_id int '$.queryId',
-                        regressed_plan_id int '$.regressedPlanId',
-                        last_good_plan_id int '$.recommendedPlanId') as details
-WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
+CROSS APPLY OPENJSON(details, '$.planForceDetails')
+    WITH (  [query_id] int '$.queryId',
+            regressed_plan_id int '$.regressedPlanId',
+            last_good_plan_id int '$.recommendedPlanId') AS details
+WHERE JSON_VALUE(state, '$.currentValue') = 'Active';
 ```
-  
- 如需有關可用來在 [建議] 檢視中的查詢值的 JSON 函式的詳細資訊，請參閱[JSON 支援](../../relational-databases/json/index.md)在[!INCLUDE[ssde_md](../../includes/ssde_md.md)]。
+### <a name="example-2"></a>範例 2
+以下會取得所產生[!INCLUDE[tsql](../../includes/tsql-md.md)]強制任何給定的查詢和預估的改善的其他資訊的良好計劃的指令碼：
+
+```sql
+SELECT reason, score,
+      script = JSON_VALUE(details, '$.implementationDetails.script'),
+      planForceDetails.*,
+      estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
+                  *(regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
+      error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
+FROM sys.dm_db_tuning_recommendations
+CROSS APPLY OPENJSON (Details, '$.planForceDetails')
+    WITH (  [query_id] int '$.queryId',
+            regressedPlanId int '$.regressedPlanId',
+            recommendedPlanId int '$.recommendedPlanId',
+            regressedPlanErrorCount int,
+            recommendedPlanErrorCount int,
+            regressedPlanExecutionCount int,
+            regressedPlanCpuTimeAverage float,
+            recommendedPlanExecutionCount int,
+            recommendedPlanCpuTimeAverage float
+          ) AS planForceDetails;
+```
+
+### <a name="example-3"></a>範例 3
+以下會取得所產生[!INCLUDE[tsql](../../includes/tsql-md.md)]強制任何給定的查詢和其他資訊，其中包含查詢文字的良好計劃和查詢存放區中儲存的查詢計劃的指令碼：
+
+```sql
+WITH cte_db_tuning_recommendations
+AS (SELECT reason,
+        score,
+        query_id,
+        regressedPlanId,
+        recommendedPlanId,
+        current_state = JSON_VALUE(state, '$.currentValue'),
+        current_state_reason = JSON_VALUE(state, '$.reason'),
+        script = JSON_VALUE(details, '$.implementationDetails.script'),
+        estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
+                * (regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
+        error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
+    FROM sys.dm_db_tuning_recommendations
+    CROSS APPLY OPENJSON(Details, '$.planForceDetails')
+    WITH ([query_id] int '$.queryId',
+        regressedPlanId int '$.regressedPlanId',
+        recommendedPlanId int '$.recommendedPlanId',
+        regressedPlanErrorCount int,    
+        recommendedPlanErrorCount int,
+        regressedPlanExecutionCount int,
+        regressedPlanCpuTimeAverage float,
+        recommendedPlanExecutionCount int,
+        recommendedPlanCpuTimeAverage float
+        )
+    )
+SELECT qsq.query_id,
+    qsqt.query_sql_text,
+    dtr.*,
+    CAST(rp.query_plan AS XML) AS RegressedPlan,
+    CAST(sp.query_plan AS XML) AS SuggestedPlan
+FROM cte_db_tuning_recommendations AS dtr
+INNER JOIN sys.query_store_plan AS rp ON rp.query_id = dtr.query_id
+    AND rp.plan_id = dtr.regressedPlanId
+INNER JOIN sys.query_store_plan AS sp ON sp.query_id = dtr.query_id
+    AND sp.plan_id = dtr.recommendedPlanId
+INNER JOIN sys.query_store_query AS qsq ON qsq.query_id = rp.query_id
+INNER JOIN sys.query_store_query_text AS qsqt ON qsqt.query_text_id = qsq.query_text_id;
+```
+
+如需有關可用來在 [建議] 檢視中的查詢值的 JSON 函式的詳細資訊，請參閱[JSON 支援](../../relational-databases/json/index.md)在[!INCLUDE[ssde_md](../../includes/ssde_md.md)]。
   
 ## <a name="permissions"></a>Permissions  
 
-在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+需要`VIEW SERVER STATE`中的權限[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]。   
+需要`VIEW DATABASE STATE`中資料庫的權限[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
 
 ## <a name="see-also"></a>另請參閱  
  [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)   

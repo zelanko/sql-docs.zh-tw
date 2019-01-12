@@ -39,12 +39,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72f7ee857946267ca1c8732976cb31d30767bfed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371180"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131488"
 ---
 # <a name="configure-database-mail"></a>設定 Database Mail
   本主題說明如何使用 Database Mail 組態精靈來啟用及設定 Database Mail，並使用範本建立 Database Mail 組態指令碼。  
@@ -394,7 +394,7 @@ ms.locfileid: "53371180"
 
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- 透過 [從 <執行個體名稱> 傳送測試電子郵件]****** 頁面使用指定的 Database Mail 設定檔傳送電子郵件訊息。 只有 **系統管理員** 固定伺服器角色的成員，才可以使用此頁面來傳送測試電子郵件。  
+ 使用 [從 <執行個體名稱> 傳送測試電子郵件] 頁面，以使用指定的 Database Mail 設定檔傳送電子郵件訊息。 只有 **系統管理員** 固定伺服器角色的成員，才可以使用此頁面來傳送測試電子郵件。  
   
  **Database Mail 設定檔**  
  從清單中選取 Database Mail 設定檔。 這是必要的欄位。 如果未顯示任何設定檔，就表示沒有設定檔，或者您沒有設定檔的存取權限。 使用 **[Database Mail 組態精靈]** 來建立及設定設定檔。 如果未列出任何設定檔，請使用 Database Mail 組態精靈來建立供您使用的設定檔。  

@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 149bcdddd5388c9c68a9d2d96c5474903104757d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f0cb0110e6f2cc047ca5db5f2813b250567573fc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508017"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132138"
 ---
 # <a name="referentialconstraints-transact-sql"></a>REFERENTIAL_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "52508017"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|條件約束限定詞。|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|包含條件約束之結構描述的名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|包含條件約束之結構描述的名稱。<br /><br /> **&#42;&#42;重要&#42; &#42;** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**CONSTRAINT_NAME**|**sysname**|條件約束名稱。|  
 |**UNIQUE_CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|UNIQUE 條件約束限定詞。|  
-|**UNIQUE_CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|包含 UNIQUE 條件約束的結構描述名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**UNIQUE_CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|包含 UNIQUE 條件約束的結構描述名稱。<br /><br /> **&#42;&#42;重要&#42; &#42;** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**UNIQUE_CONSTRAINT_NAME**|**sysname**|UNIQUE 條件約束。|  
 |**MATCH_OPTION**|**varchar (** 7 **)**|參考條件約束相符狀況。 一律傳回 SIMPLE。 這表示未定義相符項目。 當符合下列條件之一時，狀況就視為相符：<br /><br /> 外部索引鍵資料行至少有一個值是 NULL。<br /><br /> 外部索引鍵資料行中的所有值都不是 NULL，且主索引鍵資料表中有一個含相同索引鍵的資料列。|  
 |**UPDATE_RULE**|**varchar (** 11 **)**|當 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式違反這個條件約束所定義的參考完整性時，所採取的動作。 傳回下列項目之一： <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> 如果這個條件約束的 ON UPDATE 指定了 NO ACTION，就不會將條件約束所參考的主索引鍵之更新傳播到外部索引鍵。 如果這類的主索引鍵更新會因為至少有一個外部索引鍵包含相同的值，而造成參考完整性違規，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會變更父系和參考資料表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會引發錯誤。<br /><br /> 如果這個條件約束的 ON UPDATE 指定了 CASCADE，就會將主索引鍵值的變更傳播到外部索引鍵值。|  

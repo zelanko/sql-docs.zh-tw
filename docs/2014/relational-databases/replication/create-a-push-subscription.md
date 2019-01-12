@@ -16,12 +16,12 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e723c42dd41c21abb2c11059b8706a098f7fcfd9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353346"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135538"
 ---
 # <a name="create-a-push-subscription"></a>建立發送訂閱
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來建立 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的發送訂閱。 如需為非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者建立發送訂閱的資訊，請參閱[為非 SQL Server 訂閱者建立訂閱](create-a-subscription-for-a-non-sql-server-subscriber.md)。  
@@ -93,7 +93,7 @@ ms.locfileid: "53353346"
   
     -   如果值**allow_push**是**0**，執行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，並指定**allow_push**如 **@property**並`true`for **@value**。  
   
-2.  在發行集資料庫的「發行者」上，執行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication**或 Replication Management Objects (RMO) 來建立 **@subscriber** ，並將 **@destination_db**＞。 將 **@subscription_type** 指定為 **@subscription_type**＞。 如需有關如何更新訂用帳戶的資訊，請參閱[建立交易式發行集的可更新訂閱](create-updatable-subscription-transactional-publication-transact-sql.md)  
+2.  在發行集資料庫的「發行者」上，執行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication**或 Replication Management Objects (RMO) 來建立 **@subscriber** ，並將 **@destination_db**＞。 將 **@subscription_type** 指定為 **@subscription_type**＞。 如需有關如何更新訂用帳戶的資訊，請參閱[建立交易式發行集的可更新訂閱](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 3.  在發行集資料庫的「發行者」上，執行 [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定下列項目：  
   

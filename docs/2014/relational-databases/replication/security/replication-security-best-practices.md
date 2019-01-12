@@ -15,12 +15,12 @@ ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18a3bed07be7fd035a5011d16c528525685cdfb6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7db85ce6d63cd6c3eb458434357fa5a2d8127dec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781170"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135928"
 ---
 # <a name="replication-security-best-practices"></a>複寫安全性最佳做法
   複寫會移動分散式環境中的資料，範圍從單一網域上的企業內部網路，乃至於存取未受信任網域之間以及網際網路上資料的應用程式。 因此，了解在這些不同環境下保護複寫連接安全的最佳方法相當重要。  
@@ -37,7 +37,7 @@ ms.locfileid: "52781170"
   
     -   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
   
--   以不同的 Windows 帳戶執行各複寫代理程式，並針對所有複寫代理程式連接使用 Windows 驗證。 如需指定帳戶的詳細資訊，請參閱[管理複寫的登入與密碼](manage-logins-and-passwords-in-replication.md)。  
+-   以不同的 Windows 帳戶執行各複寫代理程式，並針對所有複寫代理程式連接使用 Windows 驗證。 如需指定帳戶的詳細資訊，請參閱[管理複寫的登入與密碼](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)。  
   
 -   僅對各代理程式授與必要的權限。 如需詳細資訊，請參閱＜ [Replication Agent Security Model](replication-agent-security-model.md)＞的「代理程式所需的權限」一節。  
   
@@ -73,6 +73,6 @@ ms.locfileid: "52781170"
  [保護訂閱者](secure-the-subscriber.md)   
  [保護散發者](secure-the-distributor.md)   
  [保護發行者](secure-the-publisher.md)   
- [安全性與保護 &#40;複寫&#41;](security-and-protection-replication.md)  
+ [SQL Server 複寫安全性](view-and-modify-replication-security-settings.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e93025676d451444140fad80a993813c0463a2f6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 07213247345280e992c2fbd5552d5cdfb96747ab
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206757"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133558"
 ---
 # <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=** ] **'***發行集***'**  
+ [  **@publication=** ] **'**_發行集_**'**  
  這是 Oracle 發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@article =** ] **'***文章***'**  
+ [  **@article =** ] **'**_文章_**'**  
  這是發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
   
- [ **@column**=] **'***資料行***'**  
+ [ **@column**=] **'**_資料行_**'**  
  這是要變更資料類型對應的資料行名稱。 *資料行*已**sysname**，沒有預設值。  
   
- [ **@type** =] **'***型別***'**  
+ [ **@type** =] **'**_型別_**'**  
  是的名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目的地資料行中的資料類型。 *型別*已**sysname**，預設值是 NULL。  
   
  [ **@length** =]*長度*  
@@ -66,7 +66,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
  [ **@precision**=]*有效位數*  
  是目的地資料行中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的有效位數。 *有效位數*已**bigint**，預設值是 NULL。  
   
- [ **@publisher**=] **'***發行者***'**  
+ [ **@publisher**=] **'**_發行者_**'**  
  指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  

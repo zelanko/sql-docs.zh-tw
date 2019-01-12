@@ -17,12 +17,12 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 16249e9b9a1af56793d30cef48a9e1573f883c57
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e85b1a85ab9415c76fdaeee5453c992994a286ba
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371190"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136088"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port-sql-server-configuration-manager"></a>設定伺服器接聽特定 TCP 通訊埠 (SQL Server 組態管理員)
   此主題描述如何使用 SQL Server 組態管理員，將 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體設定為在特定固定通訊埠上接聽。 當啟用時，預設的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體會在 TCP 通訊埠 1433 上接聽。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 的具名執行個體是針對動態通訊埠所設定。 這表示，當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動時，它們會選取可用的通訊埠。 透過防火牆連接到具名執行個體時，設定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 接聽特定通訊埠，如此才能在防火牆中開啟適當的通訊埠。  
@@ -51,7 +51,7 @@ ms.locfileid: "53371190"
   
 3.  如果 **[TCP 動態通訊埠]** 對話方塊包含 **0**，代表 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 正在接聽動態通訊埠，請將 0 刪除。  
   
-4.  在 [IPn 內容] 區域方塊的 [TCP 通訊埠] 方塊中，鍵入要此 IP 位址接聽的通訊埠編號，然後按一下 [確定]。  
+4.  在 **IP**_n_ **內容** 區域方塊的 **TCP 通訊埠** box, type the port number you want this IP address to listen on, and then click **確定**。  
   
 5.  在主控台窗格中，按一下 **[SQL Server 服務]**。  
   

@@ -18,12 +18,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 439a2009e6cb5e470ef09d3c766c4349d54ecdb8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792286"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135828"
 ---
 # <a name="view-and-modify-publication-properties"></a>檢視及修改發行集屬性
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中檢視及修改發行集屬性。  
@@ -192,8 +192,8 @@ ms.locfileid: "52792286"
  [變更發行集與發行項屬性](change-publication-and-article-properties.md)   
  [對發行集資料庫進行結構描述變更](make-schema-changes-on-publication-databases.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [在發行集中新增和卸除發行項 &#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)   
- [檢視發行集的資訊並執行工作 &#40;複寫監視器&#41;](../monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
+ [從發行集中加入和卸除發行項](add-articles-to-and-drop-articles-from-a-publication.md)   
+ [檢視資訊並執行的工作，使用 「 複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [檢視和修改發行項屬性](view-and-modify-article-properties.md)  
   
   

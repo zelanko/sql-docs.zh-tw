@@ -13,12 +13,12 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 9be3645ec0846970cc7bcaaff237c4864bfe1216
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 42027a48803cd5269d5ab2d69452352bdbe62bc5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544630"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134998"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>將 TDE 保護的資料庫移至另一個 SQL Server
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，透過透明資料加密 (TDE) 保護資料庫，然後將資料庫移到另一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 TDE 會執行資料和記錄檔的即時 I/O 加密和解密。 此加密會使用資料庫加密金鑰 (DEK)，該金鑰儲存於資料庫開機記錄中，以便在復原期間可供使用。 DEK 是對稱金鑰，而其維護安全的方式是使用儲存於伺服器之 `master` 資料庫內的憑證或是受到 EKM 模組所保護的非對稱金鑰。  
@@ -191,7 +191,7 @@ ms.locfileid: "52544630"
   
     -   當資料庫涉及複寫時， **[狀態]** 為 **[尚未備妥]** 且 **[訊息]** 資料行會顯示 **[資料庫已複寫]**。  
   
-    -   當資料庫有一或多個作用中連線**狀態**是**未就緒**並**訊息**資料行會顯示 *< 使用中連接數目> * * * 使用**-例如：**1 個作用中的連接**。 您必須選取 **[卸除連接]** 中斷任何使用中的連接之後，才能卸離資料庫。  
+    -   當資料庫有一或多個作用中連線**狀態**是**未就緒**並**訊息**資料行會顯示 _< 使用中連接數目>_**使用**-例如：**1 個作用中的連接**。 您必須選取 **[卸除連接]** 中斷任何使用中的連接之後，才能卸離資料庫。  
   
      若要取得有關訊息的詳細資訊，請按一下超連結文字，以開啟活動監視器。  
   
@@ -209,7 +209,7 @@ ms.locfileid: "52544630"
   
 8.  在 **[附加資料庫]** 對話方塊中，按一下 **[要附加的資料庫]** 底下的 **[加入]**。  
   
-9. 在 **尋找資料庫檔案-* * * server_name*對話方塊中選取的資料庫檔案附加至新的伺服器，然後按一下 **[確定]**。  
+9. 在**尋找資料庫檔案-**_server_name_對話方塊中選取的資料庫檔案附加至新的伺服器，然後按一下 **[確定]**。  
   
      **[附加資料庫]** 對話方塊有下列選項。  
   
@@ -252,7 +252,7 @@ ms.locfileid: "52544630"
      **移除**  
      從 **[要附加的資料庫]** 方格中移除選取的檔案。  
   
-     **"** *<database_name>* **" 資料庫詳細資料**  
+     **"** _<database_name>_ **" 資料庫詳細資料**  
      顯示要附加之檔案的名稱。 若要確認或變更檔案的路徑名稱，請按一下 [瀏覽] 按鈕 (**...**)。  
   
     > [!NOTE]  

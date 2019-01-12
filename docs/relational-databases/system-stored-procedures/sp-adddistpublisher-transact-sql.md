@@ -16,12 +16,12 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 171618db612b77de63feb2a7e53b248a6ac847b0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 079e2591323b60ea86f93c3cbaedc423cc85d420
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206567"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135038"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_發行者_**'**  
  這是發行者名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [  **@distribution_db=**] **'***distribution_db***'**  
+ [  **@distribution_db=**] **'**_distribution_db_**'**  
  這是散發資料庫的名稱。 *distributor_db*已**sysname**，沒有預設值。 複寫代理程式利用這個參數來連接發行者。  
   
  [  **@security_mode=**] *security_mode*  
@@ -62,26 +62,26 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 |**0**|散發者的複寫代理程式利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來連接到發行者。|  
 |**1** (預設值)|散發者的複寫代理程式利用 Windows 驗證來連接到發行者。|  
   
- [  **@login=**] **'***登入***'**  
+ [  **@login=**] **'**_登入_**'**  
  這是登入。 如果此參數，則需要*security_mode*是**0**。 *login* 是預設值為 NULL 的 **sysname**。 複寫代理程式利用這個參數來連接發行者。  
   
- [  **@password=**] **'***密碼***'**]  
+ [  **@password=**] **'**_密碼_**'**]  
  這是密碼。 *密碼*已**sysname**，預設值是 NULL。 複寫代理程式利用這個參數來連接發行者。  
   
 > [!IMPORTANT]  
 >  請勿使用空白密碼。 請使用增強式密碼。  
   
- [  **@working_directory=**] **'***working_directory***'**  
+ [  **@working_directory=**] **'**_working_directory_**'**  
  這是用來儲存發行集資料和結構描述檔案的工作目錄名稱。 *working_directory*已**nvarchar(255)**，預設值是 ReplData 資料夾，這個執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，例如`C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`。 這個名稱應該用 UNC 格式來指定。  
 
  針對 Azure SQL Database，使用`\\<storage_account>.file.core.windows.net\<share>`。
 
- [  **@storage_connection_string =**] **'***storage_connection_string***'**  
+ [  **@storage_connection_string =**] **'**_storage_connection_string_**'**  
  需要 SQL Database。 使用儲存體存取金鑰從 Azure 入口網站 > 設定。
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
- [  **@trusted=**] **'***信任***'**  
+ [  **@trusted=**] **'**_信任_**'**  
  這個參數已被取代，而且僅供回溯相容性之用。 *受信任*是**nvarchar(5)**，並設定為任何內容，不過**false**會導致錯誤。  
   
  [  **@encrypted_password=**] *encrypted_password*  
@@ -95,7 +95,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 |**0** (預設)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。|  
 |**1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的資料庫。|  
   
- [ **@publisher_type**=] **'***publisher_type***'**  
+ [ **@publisher_type**=] **'**_publisher_type_**'**  
  指定當發行者不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時的發行者類型。 *publisher_type*是 sysname，而且可以是下列值之一。  
   
 |值|描述|  

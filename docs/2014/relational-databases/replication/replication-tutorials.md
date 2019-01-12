@@ -14,12 +14,12 @@ ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2d57e12535bad09c1ddf1f89e87cba17e364f19
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784818"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135391"
 ---
 # <a name="replication-tutorials"></a>複寫教學課程
   複寫課程包含可用來學習如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]設定及執行複寫拓撲的教學課程。  
@@ -40,6 +40,6 @@ ms.locfileid: "52784818"
  了解如何使用合併式複寫，在伺服器與一個或多個只是偶而連接的用戶端之間交換資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [安全性與保護 &#40;複寫&#41;](security/security-and-protection-replication.md)  
+ [SQL Server 複寫安全性](security/view-and-modify-replication-security-settings.md)  
   
   

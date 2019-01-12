@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
-ms.openlocfilehash: b73e144dd362691ea93b3312f6dc10ce542f1c43
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 02e5e0ba4bd7300d71d95d5e3572ce4e09ac3bd4
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030212"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143323"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>連接[!INCLUDE[name-sos](../includes/name-sos-short.md)]到 SQL Server 使用 Windows 驗證-Kerberos 
 
@@ -27,7 +27,7 @@ ms.locfileid: "53030212"
 ## <a name="prerequisites"></a>必要條件
 
 - 若要查詢您的 Kerberos 網域控制站的 Windows 網域的機器存取。
-- SQL Server 應該設定成允許 Kerberos 驗證。 在 Unix 上執行用戶端驅動程式的情況下，對整合式的驗證，才支援使用 Kerberos。 可以找到更多有關將 Sql Server 設定為使用 Kerberos 進行驗證[此處](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server)。 應該針對每個您嘗試連接到 Sql Server 執行個體註冊 Spn。 SQL Server Spn 格式的相關詳細資料列[這裡](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
+- SQL Server 應該設定成允許 Kerberos 驗證。 在 Unix 上執行用戶端驅動程式的情況下，對整合式的驗證，才支援使用 Kerberos。 可以找到更多有關將 Sql Server 設定為使用 Kerberos 進行驗證[此處](https://support.microsoft.com/help/319723/how-to-use-kerberos-authentication-in-sql-server)。 應該針對每個您嘗試連接到 Sql Server 執行個體註冊 Spn。 SQL Server Spn 格式的相關詳細資料列[這裡](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>正在檢查 Sql Server 是否有 Kerberos 設定

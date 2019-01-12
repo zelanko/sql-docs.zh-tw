@@ -1,5 +1,5 @@
 ---
-title: 新增發行者 | Microsoft Docs
+title: '[加入發行者] 對話方塊'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fc6041d3d33a7ddaaeb9fb11ff8582c70c7f080
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 735162edb8e7eda06e99d69ed74d4752b7f0d950
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817490"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133298"
 ---
-# <a name="add-publisher"></a>加入發行者
+# <a name="sql-server-replication-add-publisher-dialog-box"></a>SQL Server 複寫加入發行者對話方塊 
   **[加入發行者]** 對話方塊，可讓您將一或多個發行者加入至複寫監視器的左窗格。 加入發行者之後，選取左窗格中的發行者會在右窗格中顯示該發行者的資訊。  
   
 ## <a name="options"></a>選項。  

@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 003d16f807f2f16d9356eb4536e5296607a1e11a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 73526621bcd2925b863feb45566ed652484a6d57
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791760"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131738"
 ---
 # <a name="spdropmergepartition-transact-sql"></a>sp_dropmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,13 +41,13 @@ sp_dropmergepartition [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication**] = **'***發行集***'**  
+ [ **@publication**] = **'**_發行集_**'**  
  這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [ **@suser_sname**=] **'***suser_sname***'**  
+ [ **@suser_sname**=] **'**_suser_sname_**'**  
  值[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)函式，在訂閱者用來定義資料分割。 *suser_sname*已**sysname**，沒有預設值。  
   
- [ **@host_name** =] **'***host_name***'**  
+ [ **@host_name** =] **'**_host_name_**'**  
  值[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函式，在訂閱者用來定義資料分割。 *host_name*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  

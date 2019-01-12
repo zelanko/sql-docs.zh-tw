@@ -14,12 +14,12 @@ ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35f1ce877d6ed8a390bb6425a4d7f33a5d6947d2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 827dd531eda338f4fd297a4420ed144d46a613ff
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513986"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135708"
 ---
 # <a name="outer-joins"></a>外部聯結
 ODBC 支援 SQL-92 左、 右方和完整外部聯結語法。 外部聯結的逸出序列是  
@@ -28,7 +28,7 @@ ODBC 支援 SQL-92 左、 右方和完整外部聯結語法。 外部聯結的�
   
  何處*外部聯結*是  
   
- *資料表參考*{**LEFT&#124;權限&#124;完整} 外部聯結**{*資料表參考* &#124; *外部聯結*} **ON** *搜尋條件*  
+ *資料表參考*{**LEFT&#124;權限&#124;完整} 外部聯結**{*資料表參考* &#124; *外部聯結*} **ON** _搜尋條件_  
   
  *資料表引用*指定資料表名稱，並*搜尋條件*指定之間的聯結條件*資料表參考*。  
   

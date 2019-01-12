@@ -16,12 +16,12 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a71f486318c9431e25898b36343c67562da5451e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9b7c8e0bd544815b7a26afaccd308d6898e3bc95
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784680"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136128"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,19 +42,19 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_發行集_**'**  
  這是發行集的名稱。 *發行集*已**sysname**，預設值是 %。  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_發行者_**'**  
  這是發行者的名稱。 *發行者*已**sysname**，預設值是 %。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  這是發行者資料庫的名稱。 *publisher_db*已**sysname**，預設值是 %。  
   
- [  **@property=**] **'***屬性***'**  
+ [  **@property=**] **'**_屬性_**'**  
  這是要變更的屬性名稱。 *屬性*已**sysname**，而且可以是下列其中一個資料表中的值。  
   
- [  **@value=**] **'***值***'**  
+ [  **@value=**] **'**_值_**'**  
  這是指定之屬性的新值。 *值*已**nvarchar(255)**，而且可以是下列其中一個資料表中的值。  
   
 |屬性|值|描述|  

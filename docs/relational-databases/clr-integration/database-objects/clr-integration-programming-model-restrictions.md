@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 828608b5c00cdcf0ed625a302359bb5c271381b4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9d42017e3dfd6016d8b4a42c6953905e804200f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538532"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136018"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 整合程式設計模型限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "52538532"
   
 -   此組件是其中一個支援的組件。 如需詳細資訊，請參閱 <<c0> [ 支援的.NET Framework 程式庫](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)。  
   
--   您正在使用 **CREATE ASSEMBLY FROM * * *\<位置 >，* 所有參考的組件和其相依性也在中找到*\<位置 >*。  
+-   您使用**建立組件從**_\<位置 >，_ 且所有參考的組件和其相依性都在*\<位置 >*.  
   
--   您正在使用 **CREATE ASSEMBLY FROM * * *\<位元組...>，* ，但所有參考指定空間透過以位元組為單位。  
+-   您使用**建立組件從**_\<位元組...>，_ ，但所有參考指定空間透過以位元組為單位。  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  所有**EXTERNAL_ACCESS**組件必須符合下列準則：  

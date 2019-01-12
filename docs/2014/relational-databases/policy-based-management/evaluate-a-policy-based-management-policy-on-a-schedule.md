@@ -12,12 +12,12 @@ ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f7652f9ebacf5e673738c4144878870eb156d944
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4355245af62817b7ab675241f5df9db77500daa3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780940"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132358"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>依照排程評估原則式管理原則
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中依照排程評估原則式管理原則。  
@@ -53,7 +53,7 @@ ms.locfileid: "52780940"
   
 5.  以滑鼠右鍵按一下您想要評估其排程的原則，然後選取 [屬性]。  
   
-6.  在 [開啟原則 -policy_name] 對話方塊的 [評估模式] 清單中，選取 [按排程時間]。  
+6.  上**開啟原則-**_原則_對話方塊中，於**評估模式**清單中，選取**排程**。  
   
 7.  在 **[排程]** 底下，按一下 **[挑選]** 指定現有的排程，或按一下 **[新增]** 建立新的排程。  
   

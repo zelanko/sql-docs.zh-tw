@@ -12,12 +12,12 @@ ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8ad635cc5dea991c1857831d874de6482b5a9b0d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0558ded6ed10284df39270ddeca9d92434daf40e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816858"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133728"
 ---
 # <a name="mssqleng018752"></a>MSSQL_ENG018752
     
@@ -48,7 +48,7 @@ ms.locfileid: "52816858"
 ## <a name="user-action"></a>使用者動作  
  下列步驟可以幫助您對此問題進行疑難排解。 如果任一步驟允許「記錄讀取器代理程式」在沒有錯誤的情況下啟動，則無需完成剩餘步驟。  
   
--   檢查「記錄讀取器代理程式」的記錄，以便尋找可能導致此錯誤的其他任何錯誤。 如需如何在複寫監視器中檢視代理程式狀態和錯誤詳細資料的相關資訊，請參閱[檢視與發行集相關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
+-   檢查「記錄讀取器代理程式」的記錄，以便尋找可能導致此錯誤的其他任何錯誤。 在複寫監視器中檢視代理程式狀態和錯誤詳細資料的相關資訊，請參閱[View Information and Perform Tasks 使用 「 複寫監視器](monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 -   檢查 [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql) 的輸出，以尋找連接到已發行資料庫之特定處理序識別碼 (SPID)。 關閉可能已執行 **sp_repldone**、 **sp_replcmds**或 **sp_replshowcmds**的任何連接。  
   

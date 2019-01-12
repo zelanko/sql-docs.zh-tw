@@ -13,12 +13,12 @@ ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7fc36ac66702da23f2baf2c8003486bd00ec8bf3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e0cce16636e8f3be542b926170c905353602d95e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780921"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135908"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Microsoft 複寫衝突檢視器和互動解析程式
   此章節包含合併式複寫和異動複寫之複寫衝突檢視器的相關資訊，以及合併式複寫之互動解析程式的相關資訊：  
@@ -36,7 +36,7 @@ ms.locfileid: "52780921"
  [檢視交易式發行集的資料衝突 &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)   
  [進階合併式複寫衝突偵測與解決方法](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [點對點複寫中的衝突偵測](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [佇列更新衝突偵測和解決方法](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
- [屬性參考 &#40;複寫&#41;](properties-reference-replication.md)  
+ [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
+
   
   

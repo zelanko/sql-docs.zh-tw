@@ -17,12 +17,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 056675637b181340dc27e7f09698a0ac439dfb6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164598"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131808"
 ---
 # <a name="create-indexed-views"></a>建立索引檢視表
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立索引檢視表。 對檢視建立的第一個索引必須是唯一的叢集索引。 建好唯一的叢集索引後，才可以建立其他非叢集索引。 為檢視表建立唯一的叢集索引，可以提升查詢效能，因為檢視表儲存在資料庫中的方式與包含叢集索引之資料表的儲存方式一樣。 查詢最佳化工具可以利用索引檢視表來加快查詢執行的速度。 不必在查詢中參考此檢視表，最佳化工具仍會考慮以該檢視表做為替代方式。  
@@ -86,11 +86,11 @@ ms.locfileid: "48164598"
   
 -   當您建立索引時，IGNORE_DUP_KEY 選項必須設定為 OFF (預設值)。  
   
--   在檢視表定義中，兩部分名稱 *schema ***.*** tablename* 必須參考資料表。  
+-   在檢視定義中，兩部分名稱 _schema_**.**_tablename_ 必須參考資料表。  
   
 -   檢視中所參考的使用者自訂函數，必須使用 WITH SCHEMABINDING 選項來建立。  
   
--   檢視表中參考的任何使用者定義函式，必須透過兩部分名稱 *schema ***.*** function* 加以參考。  
+-   檢視中參考的任何使用者定義函數，必須以兩部分名稱參考 _schema_**.**_function_。  
   
 -   使用者自訂函數的資料存取屬性必須是 NO SQL，而外部存取屬性必須是 NO。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "48164598"
 -   如果檢視表定義包含 GROUP BY 子句，唯一叢集索引的索引鍵則只能參考 GROUP BY 子句中指定的資料行。  
   
 ###  <a name="Recommendations"></a> 建議  
- 當您在索引檢視中參考 `datetime` 和 `smalldatetime` 字串常值時，我們建議您使用決定性的日期格式樣式，將常值明確轉換成您想要的日期類型。 如需具有決定性之日期格式樣式的清單，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)。 牽涉到將字元字串隱含轉換的運算式`datetime`或`smalldatetime`會被視為不具決定性。 這是因為結果需視伺服器工作階段的 LANGUAGE 和 DATEFORMAT 設定而定。 例如，運算式 `CONVERT (datetime, '30 listopad 1996', 113)` 的結果需視 LANGUAGE 設定而定，因為字串 '`listopad`' 在不同的語言中表示不同的月份。 同樣地，在運算式 `DATEADD(mm,3,'2000-12-01')`中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會根據 DATEFORMAT 設定解譯字串 `'2000-12-01'` 。  
+ 當您在索引檢視中參考 `datetime` 和 `smalldatetime` 字串常值時，我們建議您使用決定性的日期格式樣式，將常值明確轉換成您想要的日期類型。 如需具有決定性之日期格式樣式的清單，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)。 牽涉到將字元字串隱含轉換成 `datetime` 或 `smalldatetime` 的運算式是視為非決定性的。 這是因為結果需視伺服器工作階段的 LANGUAGE 和 DATEFORMAT 設定而定。 例如，運算式 `CONVERT (datetime, '30 listopad 1996', 113)` 的結果需視 LANGUAGE 設定而定，因為字串 '`listopad`' 在不同的語言中表示不同的月份。 同樣地，在運算式 `DATEADD(mm,3,'2000-12-01')`中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會根據 DATEFORMAT 設定解譯字串 `'2000-12-01'` 。  
   
  非 Unicode 字元資料與定序之間的隱含轉換也是視為非決定性的。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "48164598"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會建立檢視表並在該檢視表上建立索引。 內含使用索引檢視的兩項查詢。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例會建立檢視表並在該檢視表上建立索引。 內含使用索引檢視的兩項查詢。  
   
     ```  
     USE AdventureWorks2012;  

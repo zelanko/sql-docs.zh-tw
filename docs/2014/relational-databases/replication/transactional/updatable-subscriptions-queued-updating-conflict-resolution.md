@@ -16,12 +16,12 @@ ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c07d35024358961b1d438d6a0b53cc764bbc479
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b43cdabb83b8f255b315e16b4bbe0d9af1156c51
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781230"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133628"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
   因為佇列更新訂閱允許在多個位置對相同資料做修改，則在發行者同步資料時，有可能發生衝突。 複寫會在變更與發行者同步處理時偵測是否有任何衝突，並使用您在建立發行集時選取的解決原則解決衝突。 會發生下列衝突：  
@@ -54,7 +54,7 @@ ms.locfileid: "52781230"
   
  **若要設定佇列更新衝突解決原則**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[設定佇列的更新衝突解決選項 &#40;SQL Server Management Studio&#41;](../publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[設定佇列的更新衝突解決選項 &#40;SQL Server Management Studio&#41;](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 -   複寫 Transact-SQL 程式設計：[啟用交易式發行集的更新訂閱](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   

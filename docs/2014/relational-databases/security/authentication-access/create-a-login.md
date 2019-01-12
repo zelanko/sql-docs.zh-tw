@@ -22,12 +22,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c9ff712cb5915493f1ff285421bfe3edc8d7981f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374760"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131588"
 ---
 # <a name="create-a-login"></a>建立登入
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立登入。 登入是連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的人員或程序的識別。  
@@ -146,7 +146,7 @@ ms.locfileid: "53374760"
  **[使用者對應]** 頁面列出所有可能的資料庫和這些資料庫上可套用至此登入的資料庫角色成員資格。 所選的資料庫決定可供登入使用的角色成員資格。 此頁面提供下列選項：  
   
  **已對應到此登入的使用者**  
- 選取此登入可以存取的資料庫。 選取資料庫時，[資料庫角色成員資格對象: *資料庫名稱*] 窗格會顯示有效的資料庫角色。  
+ 選取此登入可以存取的資料庫。 選取資料庫時，[資料庫角色成員資格對象: _資料庫名稱_] 窗格會顯示有效的資料庫角色。  
   
  **對應**  
  允許登入存取下列資料庫。  
@@ -160,10 +160,10 @@ ms.locfileid: "53374760"
  **預設結構描述**  
  指定使用者的預設結構描述。 使用者最初建立時，預設結構描述為 **dbo**。 可以指定不存在的預設結構描述。 您無法為使用者指定對應至 Windows 群組、憑證或非對稱金鑰的預設結構描述。  
   
- **已啟用 *資料庫名稱*的 Guest 帳戶**  
+ **已啟用 _資料庫名稱_的 Guest 帳戶**  
  唯讀屬性，表示選取的資料庫上是否啟用 Guest 帳戶。 使用 Guest 帳戶之 **[登入屬性]** 對話方塊的 **[狀態]** 頁面，啟用或停用 Guest 帳戶。  
   
- **資料庫角色成員資格對象: *資料庫名稱***  
+ **資料庫角色成員資格對象: _資料庫名稱_**  
  在指定的資料庫中選取使用者的角色。 在每一個資料庫中，所有使用者都是 **public** 角色的成員，且無法移除。 如需資料庫角色的詳細資訊，請參閱 [資料庫層級角色](database-level-roles.md)。  
   
 ### <a name="securables"></a>[安全性實體]  
@@ -176,10 +176,10 @@ ms.locfileid: "53374760"
   
 1.  按一下 **[搜尋]**。  
   
-2.  在 [**加入物件**] 對話方塊中，選取下列其中一個選項：**特定物件...**，**類型的所有物件...**，或 **伺服器 * server_name*。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  在 [**加入物件**] 對話方塊中，選取下列其中一個選項：**特定物件...**，**類型的所有物件...**，或**伺服器**_server_name_。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  選取 **伺服器 * server_name*使用的所有該伺服器的安全物件自動填滿上層方格。  
+    >  選取 [伺服器_伺服器名稱_] 會使用該伺服器的所有安全物件自動填滿上層方格。  
   
 3.  如果您選取 [特定物件...]：  
   

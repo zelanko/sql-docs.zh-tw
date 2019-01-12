@@ -15,12 +15,12 @@ ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea98f596638d19994d76606ae136204ae5f8d419
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 951e96cd13ba7cbb6f14039d3745a44ff6167fa0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823922"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132438"
 ---
 # <a name="duplicate-tables"></a>複製資料表
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立新的資料表，然後從現有的資料表複製資料行資訊，藉以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中複製現有的資料表。  
@@ -63,7 +63,7 @@ ms.locfileid: "52823922"
   
 6.  從 **[編輯]** 功能表中，按一下 **[貼上]**。  
   
-7.  從 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]。  
+7.  從 [檔案]  功能表中，按一下 [儲存] _table name_。  
   
 8.  在 **[選擇名稱]** 對話方塊中，輸入新資料表的名稱，並按一下 **[確定]**。  
   

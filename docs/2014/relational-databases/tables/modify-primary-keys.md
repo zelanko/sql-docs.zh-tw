@@ -13,12 +13,12 @@ ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c411b3f032931dfe0964fe008d7fa1b5598d6423
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e9e19d6d6453acedff16e46dbd2d90d92a3b9587
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822952"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134798"
 ---
 # <a name="modify-primary-keys"></a>修改主索引鍵
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改主索引鍵。 您可以透過變更資料行順序、索引名稱、叢集選項或填滿因數，修改資料表的主索引鍵。  
@@ -59,7 +59,7 @@ ms.locfileid: "52822952"
     |定義填滿因數|展開 **[填滿規格]** 類別目錄，然後在 **[填滿因數]** 方塊中輸入 0 到 100 的整數。 如需填滿因數的詳細資訊以及使用方法，請參閱 [指定索引的填滿因素](../indexes/specify-fill-factor-for-an-index.md)。|  
     |變更資料行順序|選取 [資料行]，然後按一下屬性右邊的省略符號 **(…)**。 在  **[索引資料行]** 對話方塊中，從主索引鍵移除資料行。 然後將資料行以所要的順序加回去。 若要從索引鍵移除資料行，只要從 **[資料行]** 名稱清單中移除資料行名稱即可。|  
   
-4.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]。  
+4.  在 [檔案]  功能表上，按一下 [儲存] _table name_。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改主索引鍵**  

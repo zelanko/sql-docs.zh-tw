@@ -13,12 +13,12 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 433c50834a7dc989d706cc2f67883cd43f5788d9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508412"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135523"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>使用 Windows 驗證建立資料庫鏡像工作階段 (Transact-SQL)
     
@@ -63,13 +63,13 @@ ms.locfileid: "52508412"
   
 4.  若要設定主體伺服器做為鏡像資料庫上的夥伴，請連接到該鏡像伺服器，並執行以下陳述式：  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
+     ALTER DATABASE <資料庫名稱> SET PARTNER **=**<伺服器網路位址>  
   
      其中 <資料庫名稱> 是要鏡像的資料庫名稱 (此名稱在兩個夥伴中都相同)，而 <伺服器網路位址> 是主體伺服器的伺服器網路位址。  
   
      伺服器網路位址的語法如下：  
   
-     TCP **://**\<*system-address>***:**\<* port>*  
+     TCP<strong>://</strong>\<*系統位址>*<strong>:</strong>\<*通訊埠>*  
   
      其中 \<系統位址> 是清楚識別目的地電腦系統的字串，\<通訊埠> 是夥伴伺服器執行個體之鏡像端點使用的通訊埠編號。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](specify-a-server-network-address-database-mirroring.md)。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52508412"
   
 5.  若要設定鏡像伺服器做為主體資料庫上的夥伴，請連接到該主體伺服器，並發出以下陳述式：  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
+     ALTER DATABASE <資料庫名稱> SET PARTNER **=**<伺服器網路位址>  
   
      如需詳細資訊，請參閱步驟 4。  
   

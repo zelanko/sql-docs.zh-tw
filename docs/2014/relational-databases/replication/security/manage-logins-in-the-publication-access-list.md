@@ -16,12 +16,12 @@ ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ffc40d39df10e83e4f5c68f891b0d7f44223524
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 966b8a03d10bb8e87950e19e3e099954e8aaad8f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784720"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132228"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>管理發行集存取清單中的登入
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中管理發行集存取清單內的登入。 發行集的存取是由發行集存取清單 (PAL) 所控制。 可以從 PAL 中加入及移除登入和群組。  
@@ -72,7 +72,7 @@ ms.locfileid: "52784720"
   
 ## <a name="see-also"></a>另請參閱  
  [複寫代理程式安全性模型](replication-agent-security-model.md)   
- [保護複寫拓撲](secure-a-replication-topology.md)   
+ [保護複寫拓撲](view-and-modify-replication-security-settings.md)   
  [保護發行者](secure-the-publisher.md)  
   
   

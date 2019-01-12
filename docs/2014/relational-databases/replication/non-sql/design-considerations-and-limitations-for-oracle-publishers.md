@@ -12,12 +12,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f9d7183d6e94f5808434090dd8fc998b946ed0f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810890"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136058"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 發行者的設計考量與限制
   從 Oracle 資料庫發行和從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫發行的設計幾乎相同。 但應該注意下列限制和問題：  
@@ -135,7 +135,7 @@ ms.locfileid: "52810890"
   
 -   Oracle 發行集的「訂閱者」無法從備份自動初始化。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援兩種類型的驗證：二進位和資料列計數。 「Oracle 發行者」支援資料列數驗證。 如需詳細資訊，請參閱[驗證複寫的資料](../validate-replicated-data.md)。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援兩種類型的驗證：二進位和資料列計數。 「Oracle 發行者」支援資料列數驗證。 如需詳細資訊，請參閱[驗證複寫的資料](../validate-data-at-the-subscriber.md)。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供兩種快照集格式：原生 bcp 模式以及字元模式。 「Oracle 發行者」支援字元模式快照集。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "52810890"
   
     -   您無法透過 [sp_changepublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) 或 [sp_changelogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql) 來變更 **@job_login** 參數，但可以變更密碼。  
   
- 如需複寫安全性的詳細資訊，請參閱[安全性與保護 &#40;複寫&#41;](../security/security-and-protection-replication.md)。  
+ 如需有關複寫安全性的詳細資訊，請參閱 < [SQL Server 複寫安全性](../security/view-and-modify-replication-security-settings.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Oracle 發行者的管理考量](administrative-considerations-for-oracle-publishers.md)   

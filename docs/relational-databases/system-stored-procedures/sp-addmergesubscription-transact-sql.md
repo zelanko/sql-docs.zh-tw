@@ -16,12 +16,12 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1fc809277151ee85608c9ca286185011cf52552
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6c3341c37998f61cba743c8da8a4cd772c2c73d9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822572"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133758"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,22 +62,22 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_發行集_**'**  
  這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。 發行集必須已存在。  
   
- [  **@subscriber =**] **'***訂閱者***'**  
+ [  **@subscriber =**] **'**_訂閱者_**'**  
  這是訂閱者的名稱。 *訂閱者*已**sysname**，預設值是 NULL。  
   
- [  **@subscriber_db=**] **'***subscriber_db***'**  
+ [  **@subscriber_db=**] **'**_subscriber_db_**'**  
  這是訂閱資料庫的名稱。 *subscriber_db*已**sysname**，預設值是 NULL。  
   
- [  **@subscription_type=**] **'***subscription_type***'**  
+ [  **@subscription_type=**] **'**_subscription_type_**'**  
  這是訂閱的類型。 *subscription_type*已**nvarchar(15)**，預設值是 PUSH。 如果**推播**新增發送訂閱，散發者端新增合併代理程式。 如果**提取**，而不會增加 「 合併代理程式在散發者端加入提取訂閱。  
   
 > [!NOTE]  
 >  匿名訂閱不需要使用這個預存程序。  
   
- [  **@subscriber_type=**] **'***subscriber_type***'**  
+ [  **@subscriber_type=**] **'**_subscriber_type_**'**  
  這是訂閱者的類型。 *subscriber_type*已**nvarchar(15)**，而且可以是下列值之一。  
   
 |值|描述|  
@@ -90,7 +90,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@subscription_priority=**] *subscription_priority*  
  這是表示訂閱優先權的數字。 *subscription_priority*已**實際**，預設值是 NULL。 如果是本機和匿名訂閱，優先權就是 0.0。 如果是全域訂閱，優先權必須小於 100.0。  
   
- [  **@sync_type=**] **'***sync_type***'**  
+ [  **@sync_type=**] **'**_sync_type_**'**  
  這是訂閱同步處理類型。 *sync_type*已**nvarchar(15)**，預設值是**自動**。 可以是**自動**或是**無**。 如果**自動**，結構描述和發行資料表的初始資料傳送給 「 訂閱者 」 第一次。 如果**無**，便假設訂閱者端已有的結構描述和初始資料已發行資料表。 一律會傳送系統資料表和資料。  
   
 > [!NOTE]  
@@ -167,13 +167,13 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@active_end_date=**] *active_end_date*  
  這是排程停止合併代理程式的日期，格式為 YYYYMMDD。 *active_end_date*已**int**，預設值是 NULL。  
   
- [  **@optional_command_line=**] **'***optional_command_line***'**  
+ [  **@optional_command_line=**] **'**_optional_command_line_**'**  
  這是要執行的選擇性命令提示字元。 *optional_command_line*已**nvarchar(4000)**，預設值是 NULL。 這個參數用來新增擷取輸出以及將輸出儲存在檔案中的命令，或指定組態檔或屬性。  
   
- [  **@description=**] **'***描述***'**  
+ [  **@description=**] **'**_描述_**'**  
  這是此項合併訂閱的簡要描述。 *描述*已**nvarchar(255)**，預設值是 NULL。 這個值會顯示在複寫監視器**易記名稱**資料行，可用來排序受監視發行集的訂閱。  
   
- [  **@enabled_for_syncmgr=**] **'***enabled_for_syncmgr***'**  
+ [  **@enabled_for_syncmgr=**] **'**_enabled_for_syncmgr_**'**  
  指定是否能夠利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Synchronization Manager 來同步處理訂閱。 *enabled_for_syncmgr*已**nvarchar(5)**，預設值是 FALSE。 如果**false**，訂用帳戶未註冊使用 Synchronization Manager。 如果**真**，訂用帳戶使用 Synchronization Manager 註冊，並可以同步處理，而不啟動[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
  [  **@offloadagent=** ] *remote_agent_activation&lt*  
@@ -182,16 +182,16 @@ sp_addmergesubscription [ @publication= ] 'publication'
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。  
   
- [  **@offloadserver=** ] **'***remote_agent_server_name***'**  
+ [  **@offloadserver=** ] **'**_remote_agent_server_name_**'**  
  指定將用來啟用遠端代理程式之伺服器的網路名稱。 *remote_agent_server_name*已**sysname**，預設值是 NULL。  
   
- [  **@use_interactive_resolver=** ] **'***use_interactive_resolver***'**  
+ [  **@use_interactive_resolver=** ] **'**_use_interactive_resolver_**'**  
  可讓您以互動方式來解決接受互動式解決之所有發行項的衝突。 *use_interactive_resolver*已**nvarchar(5)**，預設值是 FALSE。  
   
- [  **@merge_job_name=** ] **'***merge_job_name***'**  
+ [  **@merge_job_name=** ] **'**_merge_job_name_**'**  
  *@merge_job_name*參數已被取代，而且無法設定。 *merge_job_name*已**sysname**，預設值是 NULL。  
   
- [ **@hostname**=] **'***hostname***'**  
+ [ **@hostname**=] **'**_主機名稱_**'**  
  所傳回的值會覆寫[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)參數化篩選的 WHERE 子句中使用此函式時。 *主機名稱*已**sysname**，預設值是 NULL。  
   
 > [!IMPORTANT]  

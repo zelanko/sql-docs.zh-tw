@@ -18,12 +18,12 @@ ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3b9390b198ddcb9a54691a7f33b8f52d520356d8
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 232b071c11d4a2a0bb2e42b6f9787d07f99e21e2
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292420"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226585"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery 與靜態類型
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "51292420"
   
  如果在隱含轉換後需要它，靜態類型檢查可確保只會將具有正確基數的允許類型值傳遞至運算中。 對於 「 字串 」 + 1，其識別的 「 字串 」 的靜態型別是**xs: string**。 因為這不是允許的類型**+** ，就會引發類型錯誤的作業。  
   
- 在將任意運算式 E1 的結果與任意運算式 E2 相加的例子中 (E1 + E2)，靜態類型推斷首先會決定 E1 與 E2 的靜態類型，然後以運算所允許的類型來檢查靜態類型。 例如，如果 E1 的靜態類型可以是**xs: string**該**xs: integer**，靜態類型檢查會引發類型錯誤，即使某些值在執行的階段可能是整數。 如果 E1 的靜態類型，一樣會發生這個狀況**xs: integer\***。 因為**+** 作業只接受一個整數值和 E1 可傳回零或 1 個以上，靜態類型檢查就會引發錯誤。  
+ 在將任意運算式 E1 的結果與任意運算式 E2 相加的例子中 (E1 + E2)，靜態類型推斷首先會決定 E1 與 E2 的靜態類型，然後以運算所允許的類型來檢查靜態類型。 例如，如果 E1 的靜態類型可以是**xs: string**該**xs: integer**，靜態類型檢查會引發類型錯誤，即使某些值在執行的階段可能是整數。 如果 E1 的靜態類型，一樣會發生這個狀況**xs: integer&#42;**。 因為**+** 作業只接受一個整數值和 E1 可傳回零或 1 個以上，靜態類型檢查就會引發錯誤。  
   
  如稍早所提及，類型推斷經常所推斷的類型，比使用者所知道的傳遞資料類型更為廣泛。 在這些情況下，使用者必須重寫查詢。 有些典型的例子包含下列項目：  
   
@@ -73,7 +73,7 @@ ms.locfileid: "51292420"
 ## <a name="type-checking-of-union-types"></a>聯集類型的類型檢查  
  因為類型檢查的關係，處理聯集類型要很小心。 下列範例將舉例說明兩個問題。  
   
-### <a name="example-function-over-union-type"></a>範例：聯集類型的函數  
+### <a name="example-function-over-union-type"></a>範例聯集類型的函數  
  請針對聯集類型的 <`r`> 來考量元素定義：  
   
 ```  
@@ -86,7 +86,7 @@ ms.locfileid: "51292420"
   
  在 XQuery 內容中，"average"函數`fn:avg (//r)`會傳回靜態錯誤，因為 XQuery 編譯器無法新增不同類型的值 (**xs: int**， **xs: float**或**xs:雙精度浮點**) 的 <`r`> 項目中的引數**fn:avg()**。 若要解決這個問題，請將函數引動過程改寫成 `fn:avg(for $r in //r return $r cast as xs:double ?)`。  
   
-### <a name="example-operator-over-union-type"></a>範例：聯集類型的運算子  
+### <a name="example-operator-over-union-type"></a>範例聯集類型的運算子  
  加法運算 ('+') 需要精確的運算元類型。 因此，運算式 `(//r)[1] + 1` 會傳回靜態錯誤，其中含有前述之元素 <`r`> 的類型定義。 有一種解決方法，就是將它改寫成 `(//r)[1] cast as xs:int? +1`，其中 "?" 表示出現次數 0 或 1。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 需要 "cast as" 含有 "?"，因為任何轉換都可能會因執行階段錯誤，而造成空的序列。  
   
 ## <a name="see-also"></a>另請參閱  

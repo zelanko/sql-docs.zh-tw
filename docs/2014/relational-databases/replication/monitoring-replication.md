@@ -1,11 +1,10 @@
 ---
-title: 監視 (複寫) | Microsoft Docs
+title: 監視複寫 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], about monitoring replication
@@ -19,23 +18,23 @@ ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 34d88a90890ac047913e1973b37a2a40e831dd01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111038"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134298"
 ---
 # <a name="monitoring-replication"></a>監視 (複寫)
   監控複寫拓撲是部署複寫時很重要的層面。 由於已散發複寫活動，因此必須跨越所有複寫相關的電腦，追蹤活動和狀態 下列工具可用來監視複寫：  
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Replication Monitor  
   
-     「複寫監視器」是最重要的複寫監視工具，可呈現所有複寫活動以發行者為焦點的檢視。 如需詳細資訊，請參閱 <<c0> [ 監視複寫](monitor/monitoring-replication-overview.md)。  
+     「複寫監視器」是最重要的複寫監視工具，可呈現所有複寫活動以發行者為焦點的檢視。 如需詳細資訊，請參閱 <<c0> [ 使用複寫監視器監視效能](monitor/monitor-performance-with-replication-monitor.md)。  
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 提供「複寫監視器」的存取權。 還允許您檢視下列代理程式記錄的目前狀態和上一條訊息，並允許您啟動及停止每一個代理程式：「記錄讀取器代理程式」、「快照代理程式」、「合併代理程式」及「散發代理程式」。 如需相關資訊，請參閱 [Monitor Replication Agents](agents/replication-agents.md)。  
+     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 提供「複寫監視器」的存取權。 它也可讓您檢視目前的狀態以及下列代理程式所記錄的最後一個訊息，並可讓您啟動和停止每個代理程式：記錄讀取器代理程式、 快照集代理程式、 合併代理程式，以及散發代理程式。 如需相關資訊，請參閱 [Monitor Replication Agents](monitor/monitor-replication-agents.md)。  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 Replication Management Objects (RMO)  
   
@@ -50,8 +49,8 @@ ms.locfileid: "48111038"
      「系統監視器」提供了許多複寫計數器，有助於監視效能。 如需相關資訊，請參閱 [Monitoring Replication with System Monitor](monitor/monitoring-replication-with-system-monitor.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理 &#40;複寫&#41;](administration/administration-replication.md)   
+ [複寫管理常見問題集](administration/frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
- [監視複寫](monitor/monitoring-replication-overview.md)  
+
   
   

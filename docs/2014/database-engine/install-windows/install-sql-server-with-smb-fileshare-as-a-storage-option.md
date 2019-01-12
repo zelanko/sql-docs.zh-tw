@@ -10,12 +10,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5113730b1920fb1cd6ecf305e03614e3de894a8e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366850"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136048"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>將 SQL Server 與 SMB Fileshare 當做儲存選項一起安裝
   從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，系統資料庫 (Master、Model、MSDB 和 TempDB) 與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用者資料庫可以當做儲存選項與伺服器訊息區塊 (SMB) 檔案伺服器一起安裝。 這同時適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立安裝和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝 (FCI)。  
@@ -98,11 +98,11 @@ ms.locfileid: "53366850"
     > [!NOTE]  
     >  SMB 共用資料夾的 FULL CONTROL 共用權限及 NTFS 權限僅限於： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶以及具有管理伺服器角色的 Windows 使用者。  
   
-     建議使用網域帳戶當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶。 如果系統帳戶做為服務帳戶，授與格式的電腦帳戶的權限: * < 網域名稱 >***\\***< 電腦名稱 > ***$**。  
+     建議使用網域帳戶當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶。 如果將系統帳戶當作服務帳戶使用，請以下列格式授與電腦帳戶的權限：<網域名稱>**\\**<電腦名稱>**$**。  
   
     > [!NOTE]  
     >  -   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間，如果將 SMB 檔案共用指定為儲存選項，則必須將網域帳戶指定為服務帳戶。 在 SMB 檔案共用中，系統帳戶只能指定為服務帳戶後續 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝。  
-    > -   虛擬帳戶無法對遠端位置驗證。 所有虛擬帳戶都使用電腦帳戶的權限。 使用下列格式提供電腦帳戶：*<網域名稱>***\\***<電腦名稱>***$**。  
+    > -   虛擬帳戶無法對遠端位置驗證。 所有虛擬帳戶都使用電腦帳戶的權限。 使用下列格式提供電腦帳戶：<網域名稱>**\\**<電腦名稱>**$**。  
   
 -   在叢集安裝期間，用來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的帳戶應該擁有當做資料目錄使用之 SMB 檔案共用資料夾，或是其他任何資料夾 (使用者資料庫目錄、使用者資料庫記錄檔目錄、TempDB 目錄、TempDB 記錄檔目錄、備份目錄) 的 FULL CONTROL 權限。  
   

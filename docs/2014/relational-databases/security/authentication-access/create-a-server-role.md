@@ -16,12 +16,12 @@ ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 05314fe18f555d4d2d3cca161a3b770ec85b4256
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532126"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133288"
 ---
 # <a name="create-a-server-role"></a>建立伺服器角色
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立新的伺服器角色。  
@@ -69,7 +69,7 @@ ms.locfileid: "52532126"
   
 3.  以滑鼠右鍵按一下 [伺服器角色] 資料夾，然後選取 [新增伺服器角色...]。  
   
-4.  在 **新的伺服器角色-* * * server_role_name*對話方塊的 [**一般**頁面上，輸入新的伺服器角色中的名稱**伺服器角色名稱**] 方塊中。  
+4.  在 **新的伺服器角色-**_server_role_name_對話方塊中，於**一般**頁面上，輸入新的伺服器角色中的名稱**伺服器角色名稱**方塊。  
   
 5.  在 **[擁有者]** 方塊中，輸入將擁有新角色之伺服器主體的名稱。 或者，按一下省略符號 **(...)**，開啟 [選取伺服器登入或角色] 對話方塊。  
   

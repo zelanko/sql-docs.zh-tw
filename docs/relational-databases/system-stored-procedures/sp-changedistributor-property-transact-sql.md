@@ -16,12 +16,12 @@ ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f769e45d80dd54c6e006297e46ee9cf8ad2da92e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 12ba78e62b0441a76cea2b10ebaf13caec767443
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819130"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133898"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@property=**] **'***屬性***'**  
+ [  **@property=**] **'**_屬性_**'**  
  這是指定散發者的屬性。 *屬性*已**sysname**，而且可以是下列值之一。  
   
 |值|描述|  
@@ -47,7 +47,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 |**heartbeat_interval**|在未記錄進度訊息的情況下，代理程式所能執行的最大分鐘數。|  
 |NULL (預設值)|所有可用*屬性*值會列印。|  
   
- [  **@value=**] **'***值***'**  
+ [  **@value=**] **'**_值_**'**  
  這是指定散發者的屬性值。 *值*已**varchar(255)**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  

@@ -1,7 +1,7 @@
 ---
 title: 硬體和軟體需求的 Reporting Services SharePoint 模式 |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/09/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -11,14 +11,15 @@ ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6ee2cbd875416e1b981d2dfa6006e42529fcf679
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5b70a6a736d9a7f566eb4aa60a37ed7b5151168e
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362600"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206174"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>SharePoint 模式的 Reporting Services 之硬體和軟體需求
+
   本主題描述以 SharePoint 模式執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的必要條件、硬體需求和安裝考量。 由於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式需要 SharePoint 伺服器，因此大部分需求都是以 SharePoint 環境為基礎。 若是原生模式報表伺服器，您的硬體應符合執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的最低硬體和軟體需求。 如需詳細資訊，請參閱＜ [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)＞。  
   
 -   [必要條件](#bkmk_prereq)  
@@ -61,11 +62,13 @@ ms.locfileid: "53362600"
   
 -   報表伺服器執行個體無法使用 SQL Server Express Edition 做為其資料庫； 但是，由 SharePoint 產品所安裝的 SQL Server Express Edition 執行個體可以與其他 Database Engine 版本並存。  
   
-##  <a name="bkmk_powerview"></a> [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 需求  
+##  <a name="bkmk_powerview"></a> [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 需求
+
  請檢閱 Office.Microsoft.com 上最新的 [Power View 文件集](http://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) 。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 是 Microsoft Excel 2013 的一項功能，而且屬於適用於 Microsoft SharePoint Server 2010 和 2013 Enterprise 版之 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services 增益集的一部分。  
   
-##  <a name="bkmk_more_information"></a> 其他資訊  
- 如需 SharePoint 變更的詳細資訊，請參閱[SharePoint 2013 會從 SharePoint 2010 變成](https://technet.microsoft.com/library/ff607742\(office.15\).aspx)(https://technet.microsoft.com/en-us/library/ff607742(office.15).aspx)。  
+##  <a name="bkmk_more_information"></a> 其他資訊
+
+ 如需 SharePoint 變更的詳細資訊，請參閱[SharePoint 2013 會從 SharePoint 2010 變成](https://technet.microsoft.com/library/ff607742\(office.15\).aspx)(https://technet.microsoft.com/library/ff607742(office.15).aspx)。  
   
  [SQL Server 2014 版本資訊](https://go.microsoft.com/fwlink/?LinkID=296445)。  
   

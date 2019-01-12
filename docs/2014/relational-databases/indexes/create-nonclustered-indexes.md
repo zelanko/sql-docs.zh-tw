@@ -16,12 +16,12 @@ ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 932bd340e84e352eb6de2bd714508135328024d1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3dc7c4b9b32ee872ec48e78ecb05a713f2cf8a12
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533059"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132012"
 ---
 # <a name="create-nonclustered-indexes"></a>建立非叢集索引
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立非叢集索引。 非叢集索引是與資料表中所儲存之資料不同的索引結構，可重新排序一個或多個選取的資料行。 非叢集索引經常可協助您以比搜尋基礎資料表更快的速度找到資料；查詢的結果有時會完全來自非叢集索引中的資料，或是非叢集索引可能會將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 指向基礎資料表中的資料列。 一般而言，建立非叢集索引是為了改善叢集索引未涵蓋但經常使用之查詢的效能，或尋找沒有叢集索引之資料表中的資料列 (稱為堆積)。 您可以在資料表或索引檢視表上建立多個非叢集索引。  
@@ -82,7 +82,7 @@ ms.locfileid: "52533059"
   
 8.  按一下 [ **關閉**]。  
   
-9. 在 [檔案] 功能表上，按一下 [儲存 <資料表名稱>]。  
+9. 在 [檔案] 功能表上，按一下 [儲存 _資料表名稱_]。  
   
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>若要使用物件總管建立非叢集索引  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52533059"
   
 6.  按一下 [索引鍵資料行] 下的 [新增...]。  
   
-7.  在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要新增至非叢集索引之一或多個資料表資料行的核取方塊。  
+7.  在 [從 _資料表名稱_ 選取資料行] 對話方塊中，選取要加入非叢集索引之一或多個資料表資料行的核取方塊。  
   
 8.  按一下 [確定] 。  
   

@@ -15,12 +15,12 @@ ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b3d2581f2f086f8db5f9408502185c132a5866af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ef528fb128c81de1d2be07196dfe2a20ceaebba4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513218"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135078"
 ---
 # <a name="modify-views"></a>修改檢視
   定義檢視之後，可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改其定義，不需要卸除和重新建立檢視。  
@@ -70,7 +70,7 @@ ms.locfileid: "52513218"
   
     3.  以滑鼠右鍵按一下您要移除之資料表的標題列，然後選取 [移除]。  
   
-4.  在 [檔案] 功能表上，按一下 [儲存 <view name>]******。  
+4.  在 [檔案]  功能表上，按一下 [儲存] _view name_。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

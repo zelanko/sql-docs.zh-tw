@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 8248404353674f8139a26cfc75f37363557136b9
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: acca24570cf1c5052d92378b0dd5aa44d978aab6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030742"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131418"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server 匯入擴充功能 （預覽）
 
@@ -55,7 +55,7 @@ SQL Server 匯入擴充功能 （預覽） 會將.txt 或.csv 檔案轉換成 SQ
     ![開啟匯入精靈](media/sql-server-import-extension/import-wizard-modify-columns.png)
 3. 此頁面可讓選擇的動作的摘要。 您也可以查看您的資料表插入成功與否。 
 
-    您可以按一下**完成之後，** **Previous**若要進行的變更，或**匯入新的檔案**快速匯入另一個檔案。
+    您可以按一下**完成之後上, 一步**如果您需要進行變更，或是**匯入新的檔案**快速匯入另一個檔案。
     ![開啟匯入精靈](media/sql-server-import-extension/import-wizard-summary.png)
 1. 請確認是否您已成功匯入資料表的重新整理您的目標資料庫或資料表名稱上執行 SELECT 查詢。
 

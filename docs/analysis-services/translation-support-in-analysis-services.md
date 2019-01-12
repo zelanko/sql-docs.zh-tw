@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 中的翻譯支援 |Microsoft Docs
-ms.date: 05/08/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 18b0dd9990c863d6630e63969250bc60b3287255
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: bd727b56649ce9ffc237575b0311db256ec9b2fc
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213627"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54184924"
 ---
 # <a name="translation-support-in-analysis-services"></a>Analysis Services 中的翻譯支援
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
-  在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料模型中，您可以內嵌標題或描述的多個翻譯，根據 LCID 提供文化特性的字串。 若為多維度模型，您可以為資料庫名稱、Cube 物件和資料庫維度物件加入翻譯。 若為表格式模型，您可以翻譯資料表和資料行的標題和描述。  
+  在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料模型，您可以內嵌標題或描述，以提供特定文化特性的字串，根據地區設定識別碼 (LCID) 的多個翻譯。 若為多維度模型，您可以為資料庫名稱、Cube 物件和資料庫維度物件加入翻譯。 若為表格式模型，您可以翻譯資料表和資料行的標題和描述。  
   
  定義翻譯會在模型內建立中繼資料和翻譯的標題，但若要在用戶端應用程式中轉譯當地語系化的字串，您必須在物件上設定 **Language** 屬性，或在連接字串上傳遞 **Culture** 或 **Locale Identifier** 參數 (例如，藉由設定 `LocaleIdentifier=1036` 以傳回法文字串)。  
   
@@ -28,14 +28,14 @@ ms.locfileid: "53213627"
  翻譯是由地區設定識別碼 (LCID)、物件的翻譯標題 (例如維度或屬性名稱)，以及 (選擇性) 以目標語言提供資料值的資料行繫結所組成。 您可以有多個翻譯，但任何一個指定的連接只能使用一個翻譯。 理論上，您可以內嵌在模型中的翻譯數目沒有限制，但每個翻譯都會增加測試的複雜性，且所有翻譯都必須共用相同的定序，因此當您設計方案時，請記住這些原本就有的條件約束。  
   
 > [!TIP]  
->  您可以使用用戶端應用程式 (例如 Excel、Management Studio 和 SQL Server Profiler) 來傳回翻譯的字串。 如需詳細資訊，請參閱 [全球化秘訣和最佳做法 &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) (全球化秘訣和最佳做法 (Analysis Services))。  
+>  您可以使用用戶端應用程式，例如 Excel、 SQL Server Management Studio 和 SQL Server Profiler 來傳回翻譯的字串。 如需詳細資訊，請參閱 [全球化秘訣和最佳做法 &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) (全球化秘訣和最佳做法 (Analysis Services))。  
   
 ## <a name="how-to-add-translated-metadata-to-model-in-analysis-services"></a>如何將翻譯的中繼資料加入 Analysis Services 模型中  
  請前往下列連結取得逐步指示：  
   
--   [表格式模型 &#40;Analysis Services&#41; 中的翻譯](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)  
+-   [表格式模型中的翻譯](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)  
   
--   [多維度模型中的翻譯 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)  
+-   [多維度模型中的翻譯](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 的全球化案例](../analysis-services/globalization-scenarios-for-analysis-services.md)   

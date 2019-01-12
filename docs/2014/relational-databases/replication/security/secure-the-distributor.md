@@ -13,17 +13,17 @@ ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 51618b0103a168ab72cab676fdf76ec1da8c3a7c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1bb6f278b18381d1b3d3defdb53a7c40a6f673ad
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788600"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135498"
 ---
 # <a name="secure-the-distributor"></a>保護散發者
   下列複寫代理程式連接到「散發者」：記錄讀取代理程式、快照集代理程式、佇列讀取器代理程式、散發代理程式及合併代理程式。 為遵循授與所需最小權限的原則，並同時保護所有密碼的儲存，有必要為這些代理程式中的每一個提供適當的登入。  
   
--   如需管理登入和密碼的資訊，請參閱[管理複寫的登入與密碼](manage-logins-and-passwords-in-replication.md)。  
+-   如需管理登入和密碼的資訊，請參閱[管理複寫的登入與密碼](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)。  
   
 -   如需各代理程式所需權限的詳細資訊，請參閱＜ [Replication Agent Security Model](replication-agent-security-model.md)＞。  
   
@@ -48,6 +48,6 @@ ms.locfileid: "52788600"
  [檢視及修改複寫安全性設定](view-and-modify-replication-security-settings.md)   
  [啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [安全性與保護 &#40;複寫&#41;](security-and-protection-replication.md)  
+ [SQL Server 複寫安全性](view-and-modify-replication-security-settings.md)  
   
   

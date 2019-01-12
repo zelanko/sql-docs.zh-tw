@@ -3,7 +3,7 @@ title: SQL Server 2019 擴充功能 （預覽）
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 的 SQL Server 2019 Preview 延伸模組
 ms.custom: seodec18
-ms.date: 11/06/2018
+ms.date: 01/10/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -12,12 +12,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6ce44d22675be344aaa1f08632e39bfdf9c190b3
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: c41c2a08f0b8d608ef21cd44a60a2d63cdeb5fed
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432811"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143311"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 擴充功能 （預覽）
 
@@ -31,9 +31,9 @@ SQL Server 2019 擴充功能 （預覽） 提供的預覽支援的新功能和�
 
    |平台|下載|發行日期|版本
    |:---|:---|:---|:---|
-   |視窗|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038184)|2018 年 11 月 6 日 |0.8.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038178)|2018 年 11 月 6 日 |0.8.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2038246)|2018 年 11 月 6 日 |0.8.0
+   |視窗|[.vsix](https://go.microsoft.com/fwlink/?linkid=2051167)|2019 年 1 月 09 日 |0.9.1
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2051166)|2019 年 1 月 09 日 |0.9.1
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2051165)|2019 年 1 月 09 日 |0.9.1
 
 1. 在 Azure Data Studio 選擇**VSIX 套件安裝延伸模組**從**檔案**功能表，然後選取已下載的.vsix 檔案。
 

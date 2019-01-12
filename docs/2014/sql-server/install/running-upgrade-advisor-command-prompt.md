@@ -16,12 +16,12 @@ ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee501c8e576363fd4a4bc15883ca322490d60908
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34f36ea3b27100510857a05cd5edffa68c5be74a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150768"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132388"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>執行 Upgrade Advisor (命令提示字元)
   使用**UpgradeAdvisorWizardCmd**公用程式來從命令提示字元執行 Upgrade Advisor。 您可以選擇以 XML 格式或含有逗號分隔值的檔案來接收結果。  
@@ -43,7 +43,7 @@ where <server_info> is any combination of the following:
  **-?**  
  顯示命令語法。  
   
- **-ConfigFile** *檔名*  
+ **-ConfigFile** _檔名_  
  路徑名稱和檔案名稱的 XML 檔案，其中包含要在執行時使用的設定**UpgradeAdvisorWizardCmd**公用程式。  
   
  *< server_info >*  
@@ -51,22 +51,22 @@ where <server_info> is any combination of the following:
   
  *< server_info >* 可以是下列四個引數的任何組合：  
   
- **-Server** *_ n a*  
+ **-Server** __ n a_  
  指定要分析之電腦的名稱。 這可以是本機電腦 (預設值) 或遠端電腦。  
   
- **-執行個體** *執行個體名稱*  
+ **-執行個體** _執行個體名稱_  
  指定要分析之執行個體的名稱。 沒有預設值。 如果您沒有指定這個參數，就不會掃描 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 代表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設執行個體的值為 MSSQLSERVER。 若為具名執行個體，請使用執行個體名稱。  
   
- **-ASInstance**  *AS_instance_name*   
+ **-ASInstance**  _AS_instance_name_   
  指定要分析之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的名稱。 沒有預設值。 如果您沒有指定這個值，就不會掃描 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 代表 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預設執行個體的值為 MSSQLServerOLAPService。 若為具名執行個體，請使用執行個體名稱。  
   
- **-RSInstance**  *RS_instance_name*   
+ **-RSInstance**  _RS_instance_name_   
  指定要分析之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體的名稱。 沒有預設值。 如果您沒有指定這個值，就不會掃描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 代表 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設執行個體的值為 ReportServer。 若為具名執行個體，請使用執行個體名稱。  
   
- **-SqlUser** *login_id*  
+ **-SqlUser** _login_id_  
  如果您要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，這個值就是 Upgrade Advisor 將用來連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 如果您沒有指定登入，就會使用 Windows 驗證來連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
- **-SqlPassword** *密碼*  
+ **-SqlPassword** _密碼_  
  如果您使用 **-SqlUser**引數，使用這個引數指定的密碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入。  
   
  **CSV**  
@@ -137,11 +137,11 @@ where <server_info> is any combination of the following:
 |`BatchFile`|指定要分析的批次檔案。 可以有多個。|(必要) 如果 `BatchFiles` 元素存在，就出現一或多次。 沒有預設值。|  
 |`BatchSeparator`|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 批次檔案中所使用的批次分隔符號。|選擇性的一次，每個`SQLServer`項目。 預設值為 GO。|  
 |`AnalysisServices`|包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的分析設定。|(選擇性) 每個組態檔出現一次。 如果沒有指定，就不會分析 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。|  
-|`ASInstance`|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的名稱。|每一次需要`AnalysisServices`項目。 沒有預設值。|  
+|`ASInstance`|指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的名稱。|(必要) 每個 `AnalysisServices` 元素出現一次。 沒有預設值。|  
 |`Databases` 元素的 `Analysis Services`|包含要分析之資料庫的清單。|選擇性的一次，每個`AnalysisServices`項目。 如果這個元素不存在，就會分析執行個體中的所有資料庫。|  
 |`Database` 元素的 `AnalysisServices`|指定要分析之資料庫的名稱。|(必要) 如果 `Databases` 元素存在，就出現一或多次。 如果 `Database` 元素包含 "*" 值，就會分析執行個體中的所有資料庫。 沒有預設值。|  
 |`ReportingServices`|指定要針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行分析。|(選擇性) 每個組態檔出現一次。 如果沒有指定，就不會分析 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。|  
-|`RSInstance`|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體的名稱。|每一次需要`ReportingServices`項目。 沒有預設值。|  
+|`RSInstance`|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體的名稱。|(必要) 每個 `ReportingServices` 元素出現一次。 沒有預設值。|  
 |`IntegrationServices`|包含分析設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。|(選擇性) 每個組態檔出現一次。 如果沒有指定，就不會分析 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。|  
 |`PackagePath`|指定一組 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的路徑。|選擇性的一次，每個`IntegrationServices`項目。 如果這個元素不存在，就會針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體進行分析，而且不會分析儲存於外部的封裝。 沒有預設值。|  
   

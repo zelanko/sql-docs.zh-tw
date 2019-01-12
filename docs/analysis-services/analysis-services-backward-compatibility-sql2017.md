@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2017 Analysis Services 回溯相容性 |Microsoft Docs
-ms.date: 05/08/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 29fb46b02e887ceebde293383fda99cbd3ed42be
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 411fa78bada76c79d4a869d68c94abf752b8466a
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072425"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185074"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services 回溯相容性 (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "53072425"
 這篇文章說明功能可用性和目前的版本與舊版之間的行為變更。
 
 ## <a name="deprecated-features"></a>即將淘汰的功能
-A*已被取代功能*將不再從產品在未來的版本中，但仍支援且包含在目前版本為了維持回溯相容性。 建議您停止使用新的和現有的專案中的已被取代的功能，為了相容於未來的版本。
+A*已被取代功能*將不再從產品在未來的版本中，但仍支援且包含在目前版本為了維持回溯相容性。 建議您停止使用新的和現有的專案中的已被取代的功能，為了相容於未來的版本。 文件不會更新已被取代的功能。
 
 在此版本中已被取代的下列功能：
   

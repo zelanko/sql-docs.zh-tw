@@ -14,12 +14,12 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9b891d4c8196dbac8fd7e557abc17f15bafbe0f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 627bbbafd272b6bb7682b776132445041207f8e1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545225"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133328"
 ---
 # <a name="customization-file-connect-section"></a>自訂檔案 Connect 區段
 處理常式的預設行為是拒絕所有連線。 **連線**區段會指定該行為的例外狀況。 例如，如果要將所有**連線**區段已不存在或空的則預設無法建立任何連線。  
@@ -57,11 +57,11 @@ connectionString
 |部分|描述|  
 |----------|-----------------|  
 |**[連接]**|常值字串，表示這是連接字串項目。|  
-|***connectionString***|字串，取代整個用戶端連接字串。|  
+|**_ConnectionString_**|字串，取代整個用戶端連接字串。|  
 |**存取**|常值字串，表示這是存取項目。|  
-|***accessRight***|其中一個下列的存取權限：<br /><br /> -   **NoAccess** -使用者無法存取資料來源。<br />-   **ReadOnly** -使用者可以讀取的資料來源。<br />-   **ReadWrite** -使用者可以讀取或寫入至資料來源。|  
+|**_accessRight_**|其中一個下列的存取權限：<br /><br /> -   **NoAccess** -使用者無法存取資料來源。<br />-   **ReadOnly** -使用者可以讀取的資料來源。<br />-   **ReadWrite** -使用者可以讀取或寫入至資料來源。|  
   
- 如果您想要允許任何連線 （以影響，停用預設處理常式的行為），請在中設定的存取項目**連接預設值** 區段`Access=ReadWrite`，並刪除或取消註解的任何其他**連接***識別碼*一節。  
+ 如果您想要允許任何連線 （以影響，停用預設處理常式的行為），請在中設定的存取項目**連接預設值** 區段`Access=ReadWrite`，並刪除或取消註解的任何其他**連接**_識別碼_一節。  
   
 ## <a name="see-also"></a>另請參閱  
  [自訂檔案 Logs 區段](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   

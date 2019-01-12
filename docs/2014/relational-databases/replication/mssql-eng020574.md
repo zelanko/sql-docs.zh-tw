@@ -12,12 +12,12 @@ ms.assetid: 4e98f8de-287c-4090-81ee-dc8f80dfa6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc44785fa96b5bc9af8e871605f8304d13bc481d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4788e7696b9bb986ab5a16fb2fea618d0b996cc9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753280"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133588"
 ---
 # <a name="mssqleng020574"></a>MSSQL_ENG020574
     
@@ -33,7 +33,7 @@ ms.locfileid: "52753280"
 |訊息文字|訂閱者 '%s' 訂閱的發行項 '%s' (在發行集 '%s' 中)，未通過資料驗證。|  
   
 ## <a name="explanation"></a>說明  
- 訂閱者端的資料是依據發行者端的資料進行驗證，而資料不相符，因此驗證失敗。 如需驗證的相關資訊，請參閱 [Validate Replicated Data](validate-replicated-data.md)。  
+ 訂閱者端的資料是依據發行者端的資料進行驗證，而資料不相符，因此驗證失敗。 如需驗證的相關資訊，請參閱 [Validate Replicated Data](validate-data-at-the-subscriber.md)。  
   
 ## <a name="user-action"></a>使用者動作  
  我們建議您執行下列動作：  

@@ -18,12 +18,12 @@ ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23bc80a73c9a3343e2ee1191a729207e2b8f45b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7385dddea48813615a851979e526af5f03a23332
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193168"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134388"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>呼叫預存程序 (OLE DB)
   預存程序可以有零或多個參數。 它也可以傳回值。 當使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，可以藉由傳遞至預存程序的參數：  
@@ -91,7 +91,7 @@ ms.locfileid: "48193168"
   
  使用 ODBC CALL 逸出序列呼叫程序的一般語法為：  
   
- {[**?=**]**call***procedure_name*[**(**[*parameter*][**,**[*parameter*]]...**)**]}  
+ {[**？ =**]**呼叫**_procedure_name_[**(**[*參數*] [**，**[*參數*]]...**)**]}  
   
  例如：  
   

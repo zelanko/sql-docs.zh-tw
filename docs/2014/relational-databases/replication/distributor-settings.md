@@ -1,5 +1,5 @@
 ---
-title: 散發者設定 | Microsoft Docs
+title: '[散發者設定] 對話方塊 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ccd710e20ba1cb280b60dea72bad368e80505846
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d910cdb4baf1d65f67ece14c20a1f384af2a843b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753210"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132318"
 ---
-# <a name="distributor-settings"></a>散發者設定
+# <a name="sql-server-replication-distributor-settings-dialog-box"></a>SQL Server 複寫 [散發者設定] 對話方塊
   **[散發者設定]** 對話方塊，可讓您針對已加入至複寫監視器之左窗格的散發者變更設定。  
   
 ## <a name="options"></a>選項。  

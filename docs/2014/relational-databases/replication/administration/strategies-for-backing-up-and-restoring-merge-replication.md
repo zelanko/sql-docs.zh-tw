@@ -15,22 +15,19 @@ ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4d1bdc1f39e7e8e40b75b02bcb258f23ee411a7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757478"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131908"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>備份與還原合併式複寫的策略
   對於合併式複寫，請定期備份下列資料庫：  
   
--   發行者端的發行集資料庫  
-  
--   散發者端的散發資料庫  
-  
--   每個訂閱者端的訂閱資料庫  
-  
+-   發行者端的發行集資料庫   
+-   散發者端的散發資料庫    
+-   每個訂閱者端的訂閱資料庫    
 -   發行者、散發者及所有訂閱者端的 **master** 與 **msdb** 系統資料庫。 這些資料庫應與其他每個及相關的複寫資料庫同時備份。 例如，在您備份發行集資料庫的同時，在發行者端備份 **master** 與 **msdb** 資料庫。 還原發行集資料庫時，請確定 **master** 與 **msdb** 資料庫的複寫組態與設定和發行集資料庫一致。  
   
  如果您執行一般記錄備份，就必須在記錄備份中擷取任何複寫相關的變更。 如果您沒有執行記錄備份，每當與複寫相關的設定有所變更，就應該執行備份。 如需相關資訊，請參閱 [需要更新之備份的常見動作](common-actions-requiring-an-updated-backup.md)。  

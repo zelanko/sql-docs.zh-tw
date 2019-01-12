@@ -18,12 +18,12 @@ ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 172602fcaff2764256c9aa7b3e660c2400abdfd5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06198932c654bf7e8d855b4a008b3de3401dda1c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596446"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131508"
 ---
 # <a name="spapprolepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@rolename =** ] **'***角色***'**  
+ [  **@rolename =** ] **'**_角色_**'**  
  這是應用程式角色的名稱。 *角色*已**sysname**，沒有預設值。 *角色*必須存在於目前的資料庫。  
   
- [  **@newpwd =** ] **'***密碼***'**  
+ [  **@newpwd =** ] **'**_密碼_**'**  
  這是應用程式角色的新密碼。 *密碼*已**sysname**，沒有預設值。 *密碼*不能是 NULL。  
   
 > [!IMPORTANT]  

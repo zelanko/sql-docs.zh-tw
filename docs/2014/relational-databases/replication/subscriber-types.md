@@ -12,12 +12,12 @@ ms.assetid: a70656cb-21c9-4489-be77-ccd396747e3b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e34d70b84e20f8c4f65e09baad9d8388aa96fca3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b9445c7b366a43253da4accabaf98d9c5b7f8d92
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806210"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134938"
 ---
 # <a name="subscriber-types"></a>訂閱者類型
   合併式複寫可讓您指定發行集必須支援的訂閱者類型。 選取訂閱者類型會設定 *發行集相容性層級*，以決定發行集可以使用哪些功能。  
@@ -39,6 +39,5 @@ ms.locfileid: "52806210"
  [發行資料和資料庫物件](publish/publish-data-and-database-objects.md)   
  [Create a Publication](publish/create-a-publication.md)   
  [檢視及修改散發者和發行者屬性](view-and-modify-distributor-and-publisher-properties.md)   
- [屬性參考 &#40;複寫&#41;](properties-reference-replication.md)  
-  
+
   

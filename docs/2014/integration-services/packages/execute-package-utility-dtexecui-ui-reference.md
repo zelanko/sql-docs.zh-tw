@@ -23,12 +23,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9e01e1c77d67bd19fa01ec1cf07e4e53807651b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 5f5b1b235cf3cf3a97198a97ee6a8520a6034635
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797951"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134668"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>執行封裝公用程式 (DtExecUI) UI 參考
   您可使用 **[執行封裝公用程式]** 來執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 此公用程式會執行儲存在下列三個位置之一的封裝： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統。 此使用者介面，可以從開啟[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，或輸入`dtexecui`的命令提示字元中，會使用執行封裝的替代方案**DTExec**命令提示字元工具。  
@@ -67,7 +67,7 @@ ms.locfileid: "52797951"
 |||  
 |-|-|  
 |值|Description|  
-|**SQL Server**|當封裝位於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，請選取此選項。 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，並提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的使用者名稱和密碼。 每個使用者名稱和密碼都會將 **/USER** *username* 和 **/PASSWORD** *password* options to the comm和 prompt.|  
+|**SQL Server**|當封裝位於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，請選取此選項。 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，並提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的使用者名稱和密碼。 每個使用者名稱和密碼都會將 **/USER** _username_ 和 **/PASSWORD** _password_ options to the comm和 prompt.|  
 |**檔案系統**|當封裝位於檔案系統時，請選取此選項。|  
 |**SSIS 封裝存放區**|當封裝位於 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區時，請選取此選項。|  
   

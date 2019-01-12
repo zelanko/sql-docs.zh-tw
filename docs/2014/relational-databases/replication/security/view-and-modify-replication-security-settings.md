@@ -16,12 +16,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c4fd9221e363cb869f01c525a7f4b63b91132ca
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0fb57b14b27fd2682efae9da8befae6c5454f1d1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375630"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132118"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>檢視及修改複寫安全性設定
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中檢視及修改複寫安全性設定。 例如，您可能要將「記錄讀取器代理程式」到「發行者」的連接從 SQL Server 驗證變更為 Windows 整合式驗證，或者在 Windows 帳戶密碼變更後，可能需要變更用來執行代理程式作業的認證。 如需各代理程式需要的權限資訊，請參閱[複寫代理程式安全性模型](replication-agent-security-model.md)。  
@@ -572,10 +572,10 @@ ms.locfileid: "53375630"
 ## <a name="see-also"></a>另請參閱  
  [Replication Management Objects Concepts](../concepts/replication-management-objects-concepts.md)   
  [升級複寫指令碼 &#40;複寫 Transact-SQL 程式設計&#41;](../administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
- [管理複寫的登入與密碼](manage-logins-and-passwords-in-replication.md)   
+ [管理複寫的登入與密碼](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [複寫代理程式安全性模型](replication-agent-security-model.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [安全性與保護 &#40;複寫&#41;](security-and-protection-replication.md)   
+ [SQL Server 複寫安全性](view-and-modify-replication-security-settings.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)  
   
   

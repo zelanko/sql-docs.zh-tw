@@ -1,7 +1,7 @@
 ---
 title: 可用性複本未聯結 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/09/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,12 +14,12 @@ ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb42a01a13ad35845133676aa59ef74453487fba
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c1143efc4d5a695dd00766d1f78132f7e69adc46
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358160"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206254"
 ---
 # <a name="availability-replica-is-not-joined"></a>可用性複本未聯結
     
@@ -42,7 +42,7 @@ ms.locfileid: "53358160"
  次要複本並未聯結至可用性群組。 若要讓可用性複本成功聯結至可用性群組，聯結狀態必須是聯結的獨立執行個體 (1) 或聯結的容錯移轉叢集 (2)。  
   
 ## <a name="possible-solution"></a>可能的解決方案  
- 使用 Transact-SQL、PowerShell 或 SQL Server Management Studio，將次要複本聯結至可用性群組。 如需將次要複本聯結至可用性群組的詳細資訊，請參閱 [將次要複本聯結至可用性群組 (SQL Server)](https://msdn.microsoft.com/en-sg/library/ff878473\(en-us,SQL.110\).aspx)。  
+ 使用 Transact-SQL、PowerShell 或 SQL Server Management Studio，將次要複本聯結至可用性群組。 如需將次要複本聯結至可用性群組的詳細資訊，請參閱 [將次要複本聯結至可用性群組 (SQL Server)](https://msdn.microsoft.com/library/ff878473\(en-us,SQL.110\).aspx)。  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

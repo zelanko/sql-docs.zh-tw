@@ -16,12 +16,12 @@ ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0c9fecbd4296f9b097b513f032214063cf7a5d9
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: f308f86de68c672a64f78da0a6b1bd54cde82a2b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589242"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133798"
 ---
 # <a name="spcopymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_copymergesnapshot**。  
   
 ## <a name="see-also"></a>另請參閱  
- [替代快照集資料夾位置](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [替代快照集資料夾位置](../../relational-databases/replication/snapshot-options.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

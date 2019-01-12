@@ -1,6 +1,6 @@
 ---
 title: 資料採礦概念 |Microsoft Docs
-ms.date: 05/01/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: data-mining
@@ -9,28 +9,32 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6dc15187198b5355d9e6f5a2171e57d52406e839
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 161ba42729a21bd3794cf380c745380f8f7ed59c
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982000"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185134"
 ---
 # <a name="data-mining-concepts"></a>資料採礦概念
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
+> [!IMPORTANT]
+> 在 SQL Server Analysis Services 2017 中已被取代的資料採礦。 文件不會更新已被取代的功能。 若要進一步了解，請參閱[Analysis Services 回溯相容性 (SQL 2017)](../analysis-services-backward-compatibility-sql2017.md)。
+
   資料採礦是從大型資料集探索可付諸行動之資訊的過程。 資料採礦使用數學分析衍生存在於資料中的模式和趨勢。 傳統資料瀏覽一般無法探索這些模式，因為這些關聯性太複雜或因為沒有太多資料。  
   
  這些模式和趨勢可收集在一起，並定義為 *「資料採礦模型」*(Data mining model)。 採礦模型可套用至特定案例，例如：  
   
--   **預測**：估計銷售、預測伺服器負載或伺服器停機時間  
+-   **預測**:估計銷售、預測伺服器負載或伺服器停機時間  
   
--   **風險和機率**：選擇目標郵件的最佳客戶、為風險案例決定可能的損益平衡點、指派診斷或其他結果的機率  
+-   **風險和機率**:選擇目標郵件的最佳客戶、為風險案例決定可能的損益平衡點、指派診斷或其他結果的機率  
   
--   **建議**：決定可能一起銷售的產品、產生建議  
+-   **建議**:決定可能一起銷售的產品、產生建議  
   
--   **尋找順序**：分析客戶在購物車中的選擇、預測下一個可能的事件  
+-   **尋找順序**:分析客戶在購物車中的選擇、預測下一個可能的事件  
   
--   **群組**：將客戶或事件分成相關項目的叢集、分析及預測相似性  
+-   **群組**:將客戶或事件分成相關項目的叢集、分析及預測相似性  
   
  建立採礦模型是較大型程序的一部分，它包括從詢問資料相關問題與建立模型回答這些問題，到部署該模型到工作環境中的一切細節。 可以使用下列 6 個基本步驟來定義這個程序：  
   
@@ -164,6 +168,6 @@ ms.locfileid: "38982000"
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦方案](../../analysis-services/data-mining/data-mining-solutions.md)   
- [資料採礦工具](../../analysis-services/data-mining/data-mining-tools.md)  
+ [資料採礦工具。](../../analysis-services/data-mining/data-mining-tools.md)  
   
   
