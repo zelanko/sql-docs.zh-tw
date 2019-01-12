@@ -12,12 +12,12 @@ ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 945dfd47f82f0c11dcb104d283cf61346f27903d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ace6059545a4c46e3af279ad7c6104456478801c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814688"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125198"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>新增訂閱精靈 (UI 參考)
   此章節會提供新增訂閱精靈之下列頁面的資訊：  
@@ -45,7 +45,7 @@ ms.locfileid: "52814688"
 ## <a name="see-also"></a>另請參閱  
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
- [屬性參考 &#40;複寫&#41;](properties-reference-replication.md)  
+ [訂閱發行集](subscribe-to-publications.md)   
+
   
   

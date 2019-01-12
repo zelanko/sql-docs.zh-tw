@@ -15,12 +15,12 @@ ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 357678ea7a6f76554cbafade965ee6c847480d67
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813560"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124228"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>建立 SQL Server Agent 作業以封存 Database Mail 訊息及事件記錄檔
   Database Mail 訊息的副本及其附件會隨著 Database Mail 事件記錄檔一起保留在 **msdb** 資料表。 您可能需要定期減少資料表的大小，並封存不再需要的訊息和事件。 下列程序可建立 SQL Server Agent 作業以便自動執行程序。  
@@ -47,11 +47,11 @@ ms.locfileid: "52813560"
   
 -   第一個程序會建立一個名稱為「封存 Database Mail」的作業，此作業包含下列步驟。  
   
-    1.  將 Database Mail 資料表的所有訊息複製到新資料表，並將該新資料表以前一個月份命名，格式為 **DBMailArchive_***<year_month>*。  
+    1.  將 Database Mail 資料表的所有訊息複製到新資料表，該新資料表是以上個月來命名，格式為 **DBMailArchive_**<年_月>。  
   
-    2.  將第一個步驟中複製之訊息的相關附件從 Database Mail 資料表複製到新資料表，並將該新資料表以前一個月份命名，格式為 **DBMailArchive_Attachments_***<year_month>*。  
+    2.  將第一個步驟複製之訊息的相關附件，從 Database Mail 資料表複製到新資料表，該新資料表是以上個月來命名，格式為 **DBMailArchive_Attachments_**<年_月>。  
   
-    3.  將 Database Mail 事件記錄檔內與第一個步驟中複製之訊息相關的事件，從 Database Mail 資料表複製到新資料表，並將該新資料表以前一個月份命名，格式為 **DBMailArchive_Log_***<year_month>*。  
+    3.  將 Database Mail 事件記錄檔中第一個步驟複製之訊息的相關事件，從 Database Mail 資料表複製到新資料表，該新資料表是以上個月來命名，格式為 **DBMailArchive_Log_**<年_月>。  
   
     4.  刪除 Database Mail 資料表中已轉移郵件項目的記錄。  
   

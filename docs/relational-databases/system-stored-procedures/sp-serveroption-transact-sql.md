@@ -19,12 +19,12 @@ ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57bc3a40cfaa600c27c0bded34d62a1f68060390
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d947f319c56c29c0d3dbe4ce88c38055c59dfc5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607326"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124108"
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_serveroption [@server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@server =** ] **'***server***'**  
+ [  **@server =** ] **'**_server_**'**  
  這是要設定選項的伺服器名稱。 *server* 是 **sysname**，沒有預設值。  
   
- [  **@optname =** ] **'***option_name***'**  
+ [  **@optname =** ] **'**_option_name_**'**  
  這是要為指定伺服器設定的選項。 *option_name*已**varchar (** 35 **)**，沒有預設值。 *option_name*可以是下列值之一。  
   
 |值|描述|  
@@ -66,7 +66,7 @@ sp_serveroption [@server = ] 'server'
 |**使用遠端定序**|決定將使用遠端資料行或本機伺服器的定序。<br /><br /> 如果**真**，遠端資料行的定序用於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料來源，以及在指定的定序**定序名稱**使用於非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料來源。<br /><br /> 如果**假**，分散式的查詢一律會使用本機伺服器上的預設定序雖然**定序名稱**和遠端資料行的定序會被忽略。 預設值為 **false**。 (**假**值是在中使用的定序語意相容[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0。)|  
 |**遠端程序交易升級**|使用此選項，透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 交易，保護伺服器對伺服器程序的動作。 當此選項為 TRUE （或） 呼叫遠端預存程序啟動分散式的交易，且會利用 MS DTC 交易的登記。 發出遠端預存程序呼叫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是交易發起者，它會控制交易的完成。 當發出連接的後續 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 陳述式時，負責控制的執行個體會要求 MS DTC 跨越所涉及的各部電腦來管理分散式交易的完成。<br /><br /> 在啟動 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散式交易之後，會向已定義為連結伺服器的其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體發出遠端預存程序呼叫。 所有連結伺服器都會編列在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散式交易中，MS DTC 會確保已針對每部連結伺服器來完成交易。<br /><br /> 如果此選項設定為 FALSE (或 OFF)，在連結伺服器上呼叫遠端預存程序時，本機交易將不會升級為分散式交易。<br /><br /> 如果在進行伺服器對伺服器的程序呼叫之前，此交易已經是分散式交易，則此選項不會有任何影響。 針對連結伺服器執行的程序呼叫將會在相同的分散式交易之下執行。<br /><br /> 如果在進行伺服器對伺服器的程序呼叫之前，連接中沒有任何使用中的交易，則此選項不會有任何影響。 然後此程序會在沒有使用中交易的情況下對連結伺服器執行。<br /><br /> 這個選項的預設值是 TRUE (或 ON)。|  
   
- [  **@optvalue =**] **'***option_value***'**  
+ [  **@optvalue =**] **'**_option_value_**'**  
  指定是否*option_name*應該啟用 (**，則為 TRUE**或是**上**) 或停用 (**FALSE**或**關閉**). *option_value*已**varchar (** 10 **)**，沒有預設值。  
   
  *option_value*可能是負整數**連接的逾時值**並**查詢逾時**選項。 針對**定序名稱**選項時， *option_value*可能是定序名稱或 NULL。  

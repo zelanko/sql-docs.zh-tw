@@ -18,12 +18,12 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5f3f2dbe576fe95f89588354785b64bf444eb27b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 542cf5a0960e967d2bebb3889af0f03656004472
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661847"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124558"
 ---
 # <a name="sequencetype-expressions-xquery"></a>時序類型運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Expression instance of SequenceType[Occurrence indicator]
   
  如果**嗎？** 未指定發生指標，則`sequence of`，則傳回 True 時，才`Expression`輸入相符項目`Type`指定和`Expression`傳回單一值。  
   
- **附註**加號 (**+**) 和星號 (**\***) 相符項目並不支援在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ **附註**加號 (**+**) 和星號 (**&#42;**) 中的相符項目指標不支援[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  下列範例說明使用**的執行個體**XQuery 運算子。  
   
@@ -139,7 +139,7 @@ where ProductModelID=19
  此查詢會傳回 True。  
   
 ### <a name="example-c"></a>範例 C  
- 在使用聯集類型時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 `instance of` 運算式有一個限制：具體而言，當元素或屬性的類型是聯集類型時，`instance of` 可能無法判斷正確的類型。 因此，除非 SequenceType 中所使用的不可部份完成類型是 simpleType 階層中運算式之實際類型的最高父系，否則查詢會傳回 False。 也就是，在 SequenceType 中所指定的不可部份完成類型必須是 anySimpleType 的直接子系。 類型階層的詳細資訊，請參閱[XQuery 中的類型轉換規則](../xquery/type-casting-rules-in-xquery.md)。  
+ 使用等位的型別時`instance of`中的運算式[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]有限制：具體來說，當項目或屬性的類型是等位的型別，`instance of`可能無法判斷正確的類型。 因此，除非 SequenceType 中所使用的不可部份完成類型是 simpleType 階層中運算式之實際類型的最高父系，否則查詢會傳回 False。 也就是，在 SequenceType 中所指定的不可部份完成類型必須是 anySimpleType 的直接子系。 類型階層的詳細資訊，請參閱[XQuery 中的類型轉換規則](../xquery/type-casting-rules-in-xquery.md)。  
   
  下個查詢範例將執行下列動作：  
   

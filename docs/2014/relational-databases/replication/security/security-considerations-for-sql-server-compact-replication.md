@@ -12,18 +12,18 @@ ms.assetid: 09f591a1-cfae-4a08-b04d-50bd02e7b71a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed2bf15bdf648d2f6bda735ed94714e8896de2d6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: cf96d8118d35fab87e50f1a4237bafcb9b586c2e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788510"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129498"
 ---
 # <a name="security-considerations-for-sql-server-compact-replication"></a>SQL Server Compact 複寫的安全性考量
   保護 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Engine 的執行個體與 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 之間連線安全的工作，包括正確設定 Microsoft Internet Information Services (IIS) 與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]兩者的安全性。  
   
 ## <a name="see-also"></a>另請參閱  
- [安全性與保護 &#40;複寫&#41;](security-and-protection-replication.md)   
- [複寫安全性最佳做法](replication-security-best-practices.md)  
+ [SQL Server 複寫安全性](view-and-modify-replication-security-settings.md)   
+ [複寫安全性最佳作法](replication-security-best-practices.md)  
   
   

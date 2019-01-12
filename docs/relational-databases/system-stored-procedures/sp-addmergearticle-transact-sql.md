@@ -16,12 +16,12 @@ ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7894d5f7f3d3c686c8984c0386f1025f00c2890
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4bcf5b0163156fe078c3bd3382efb193ec417399
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770140"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129406"
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -161,7 +161,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x100000000**|使用此選項來複寫 FILESTREAM 屬性，如果同時指定**varbinary （max)** 資料行。 如果您要將資料表複寫至 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 訂閱者，請勿指定這個選項。 將具有 FILESTREAM 資料行的資料表複寫[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]不支援訂閱者，不論這個結構描述選項的設定方式。 請參閱相關的選項**0x800000000**。|  
 |**0x200000000**|將日期和時間資料類型轉換 (**日期**，**時間**， **datetimeoffset**，以及**datetime2**) 中導入[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]資料型別所支援的舊版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**0x400000000**|複寫資料與索引的壓縮選項。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
-|**0x800000000**|設定這個選項即可將 FILESTREAM 資料儲存在訂閱者端的檔案群組中。 如果沒有設定這個選項，FILESTREAM 資料就會儲存在預設檔案群組中。 複寫不會建立檔案群組。因此，如果您設定這個選項，就必須先建立檔案群組，然後再於訂閱者端套用快照集。 如需如何建立物件，然後再套用快照集的詳細資訊，請參閱[前後執行指令碼之後套用快照集](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)。<br /><br /> 請參閱相關的選項**0x100000000**。|  
+|**0x800000000**|設定這個選項即可將 FILESTREAM 資料儲存在訂閱者端的檔案群組中。 如果沒有設定這個選項，FILESTREAM 資料就會儲存在預設檔案群組中。 複寫不會建立檔案群組。因此，如果您設定這個選項，就必須先建立檔案群組，然後再於訂閱者端套用快照集。 如需如何建立物件，然後再套用快照集的詳細資訊，請參閱[前後執行指令碼之後套用快照集](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。<br /><br /> 請參閱相關的選項**0x100000000**。|  
 |**0x1000000000**|將 common language runtime (CLR) 使用者定義類型 (Udt) 轉換成**varbinary （max)** 如此 UDT 類型的資料行可以複寫至訂閱者執行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 |**0x2000000000**|將轉換**hierarchyid**資料類型**varbinary （max)** 以便類型的資料行**hierarchyid**可以複寫到訂閱者執行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 如需有關如何使用**hierarchyid**資料行在複寫資料表中，請參閱[hierarchyid &#40;-&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
 |**0x4000000000**|複寫資料表上任何已篩選的索引。 如需有關篩選索引的詳細資訊，請參閱[建立篩選的索引](../../relational-databases/indexes/create-filtered-indexes.md)。|  
@@ -296,7 +296,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 >  如果發行項的來源資料表已在另一個發行集，則會將值的*partition_options*必須是兩個發行項相同。  
   
  [  **@processing_order=** ] *processing_order*  
- 指出合併式發行集中發行項的處理順序。 *processing_order*已**int**，預設值是 0。 **0**指出發行項並未排序，任何其他值則表示這個發行項之處理順序的序數值。 發行項會依照從最低值到最高值的順序來處理。 如果兩個發行項有相同的值，處理順序由決定的順序中的發行項暱稱[sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md)系統資料表。 如需詳細資訊，請參閱[指定合併發行項的處理順序](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)。  
+ 指出合併式發行集中發行項的處理順序。 *processing_order*已**int**，預設值是 0。 **0**指出發行項並未排序，任何其他值則表示這個發行項之處理順序的序數值。 發行項會依照從最低值到最高值的順序來處理。 如果兩個發行項有相同的值，處理順序由決定的順序中的發行項暱稱[sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md)系統資料表。 如需詳細資訊，請參閱 <<c0> [ 指定合併式複寫屬性](../../relational-databases/replication/merge/specify-merge-replication-properties.md)。  
   
  [  **@subscriber_upload_options=** ] *subscriber_upload_options*  
  定義客訂閱在訂閱者端進行的更新之限制。 如需詳細資訊，請參閱[使用僅限下載的發行項最佳化合併式複寫效能](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。 *subscriber_upload_options*已**tinyint**，而且可以是下列值之一。  
@@ -358,11 +358,11 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  如果您指定的值**3** for *partition_options*，可以只有單一訂用帳戶每個資料分割的該文章中的資料。 如果建立第二項訂閱，將新訂閱的篩選準則解析成現有訂閱的相同資料分割，就會卸除現有的訂閱。  
   
- 指定的值是 3 時*partition_options*，中繼資料都會清除每當執行合併代理程式和資料分割的快照集到期得更快。 當使用這個選項時，您應該考慮啟用訂閱者要求的資料分割快照集。 如需詳細資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)。  
+ 指定的值是 3 時*partition_options*，中繼資料都會清除每當執行合併代理程式和資料分割的快照集到期得更快。 當使用這個選項時，您應該考慮啟用訂閱者要求的資料分割快照集。 如需詳細資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
  使用靜態的水平篩選的發行項加入、 使用*subset_filterclause*至現有的發行集使用參數化篩選的發行項需要重新初始化訂閱。  
   
- 指定時*processing_order*，我們建議您發行項順序值之間保留間距可以輕鬆設定新的值在未來。 例如，如果您有 Article1、 Article2 和 article3 這三個發行時，設定*processing_order*至 10、 20 和 30，而不是 1、 2 和 3。 如需詳細資訊，請參閱[指定合併發行項的處理順序](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)。  
+ 指定時*processing_order*，我們建議您發行項順序值之間保留間距可以輕鬆設定新的值在未來。 例如，如果您有 Article1、 Article2 和 article3 這三個發行時，設定*processing_order*至 10、 20 和 30，而不是 1、 2 和 3。 如需詳細資訊，請參閱 <<c0> [ 指定合併式複寫屬性](../../relational-databases/replication/merge/specify-merge-replication-properties.md)。  
   
 ## <a name="default-schema-option-table"></a>預設結構描述選項表  
  下表說明如果指定 NULL 值，會將預存程序所設定的預設值*schema_option*，這取決於發行項類型。  

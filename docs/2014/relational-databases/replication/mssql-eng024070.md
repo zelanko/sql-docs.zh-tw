@@ -12,12 +12,12 @@ ms.assetid: 23ac7e00-fab6-429b-9f85-2736a322aa65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c334b90f412ee0835ef574fa3c9bac1c4e35ea46
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2f5fc8fdc9b522ad79e67a7769ba2571b7a80af9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770070"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123468"
 ---
 # <a name="mssqleng024070"></a>MSSQL_ENG024070
     
@@ -50,7 +50,7 @@ ms.locfileid: "52770070"
   
 ## <a name="see-also"></a>另請參閱  
  [錯誤和事件參考 &#40;複寫&#41;](errors-and-events-reference-replication.md)   
- [管理複寫的登入與密碼](security/manage-logins-and-passwords-in-replication.md)   
+ [管理複寫的登入與密碼](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [SQL Server 組態管理員](../sql-server-configuration-manager.md)  
   
   

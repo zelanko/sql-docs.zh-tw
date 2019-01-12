@@ -15,12 +15,12 @@ ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34b930defb70b64bd006026870389fc509b755c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3fc62dc5f0e716273df257aba7fdc137391d3055
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789008"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124588"
 ---
 # <a name="rename-tables-database-engine"></a>重新命名資料表 (Database Engine)
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新命名資料表。  
@@ -64,7 +64,7 @@ ms.locfileid: "52789008"
   
 4.  若要取消這個動作，請在離開這個欄位之前按 ESC 鍵。  
   
-5.  從 [檔案]  功能表中，選擇 [儲存 <資料表名稱>] 。  
+5.  從 [檔案] 功能表中，選擇 [儲存 _table name_]。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -16,12 +16,12 @@ ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 45aadf2eab3cad31bfc376de59e8cce25126533f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c87a0968f2541507c59384bfad82780377301dc7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785730"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128218"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +43,19 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_發行者_**'**  
  這是發行者的名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  這是發行者資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
   
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_發行集_**'**  
  這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@property=**] **'***屬性***'**  
+ [  **@property=**] **'**_屬性_**'**  
  這是要變更的屬性。 *屬性*已**sysname**。  
   
- [  **@value=**] **'***值***'**  
+ [  **@value=**] **'**_值_**'**  
  這是屬性的新值。 *值*已**nvarchar(1000)**，沒有預設值。  
   
  [  **@publication_type =** ] *publication_type*  

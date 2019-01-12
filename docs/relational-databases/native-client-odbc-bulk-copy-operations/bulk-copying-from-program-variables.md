@@ -20,26 +20,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ec3600cf7ae7569cae8d42015c11e1fade97491
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c3a0eee5477b249bcde144aa6933851b2f61d5e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695056"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126986"
 ---
 # <a name="bulk-copying-from-program-variables"></a>從程式變數中大量複製
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  您可以直接從程式變數大量複製。 在配置變數來保存的資料列的資料及呼叫之後[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)若要開始大量複製，呼叫[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)每個資料行指定的位置與相關聯之程式變數的格式與資料行。 填滿每個變數的資料，然後呼叫[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)將一個資料列的資料傳送至伺服器。 重複填入變數及呼叫的程序**bcp_sendrow**之前的所有資料列已傳送至伺服器，然後呼叫[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)來指定作業已完成。  
+  您可以直接從程式變數大量複製。 在配置變數來保存資料列的資料及呼叫 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 開始大量複製之後，請針對每一個資料行呼叫 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) ，以指定要與此資料行產生關聯之程式變數的位置與格式。 然後針對每一個包含資料的變數，呼叫 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 將一個資料列傳送給伺服器。 重複填入變數及呼叫 **bcp_sendrow** 的程序，直到所有資料列都已傳送給伺服器為止，然後呼叫 [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) 來指定此作業已完成。  
   
- **Bcp_bind * * * pData*參數包含繫結至資料行之變數的位址。 每一個資料行的資料都可以透過以下兩種方式的其中一種來儲存：  
+ **bcp_bind**_pData_ 參數包含了繫結至資料行之變數的位址。 每一個資料行的資料都可以透過以下兩種方式的其中一種來儲存：  
   
 -   配置一個變數來保存資料。  
   
 -   配置指標變數，後面緊接著資料變數。  
   
- 此指標變數指出變動長度資料行之資料的長度，也會在此資料行允許 NULL 時指出 NULL 值。 如果只使用資料變數時，則此變數的位址儲存在 **bcp_bind * * * pData*參數。 如果使用了指標變數，則要將這個指標變數的位址儲存在 **bcp_bind * * * pData*參數。 大量複製函數會計算此資料變數的位置加入 **bcp_bind * * * cbIndicator*並*pData*參數。  
+ 此指標變數指出變動長度資料行之資料的長度，也會在此資料行允許 NULL 時指出 NULL 值。 如果只使用資料變數，則會將這個變數的位址儲存在 **bcp_bind**_pData_ 參數中。 如果使用了指標變數，則會將這個指標變數的位址儲存在 **bcp_bind**_pData_ 參數中。 大量複製函數會計算此資料變數的位置，其方式是加入 **bcp_bind**_cbIndicator_ 和 *pData* 參數。  
   
  **bcp_bind** 可支援用來處理變動長度資料的三個方法：  
   
@@ -47,15 +47,15 @@ ms.locfileid: "47695056"
   
 -   使用指標變數。 當每一個新的資料值移到資料變數內時，請將該值的長度儲存在指標變數中。 如果使用了其他兩個方法的其中一種，請針對 *cbIndicator*指定 0。  
   
--   使用結束字元指標。 負載 **bcp_bind * * * pTerm*結束資料之位元模式的位址參數。 如果使用了其他兩個方法的其中一種，請針對 *pTerm*指定 NULL。  
+-   使用結束字元指標。 使用可結束資料之位元模式的位址來尋找 **bcp_bind**_pTerm_ 參數。 如果使用了其他兩個方法的其中一種，請針對 *pTerm*指定 NULL。  
   
  這三種方法全都可以在相同的 **bcp_bind** 呼叫上使用，在此情況下會使用產生最少量複製資料的規格。  
   
- **Bcp_bind * * * 類型*參數會使用 Db-library 資料類型識別碼，而不是 ODBC 資料類型識別碼。 DB-Library 資料類型識別碼定義在 sqlncli.h 中，可搭配 ODBC **bcp_bind** 函數使用。  
+ **bcp_bind**_type_ 參數會使用 DB-Library 資料類型識別碼，而不是 ODBC 資料類型識別碼。 DB-Library 資料類型識別碼定義在 sqlncli.h 中，可搭配 ODBC **bcp_bind** 函數使用。  
   
- 大量複製函數並非所有 ODBC C 資料類型都有支援。 例如，大量複製函數不支援 ODBC SQL_C_TYPE_TIMESTAMP 結構，因此請使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)或是[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)將 ODBC SQL_TYPE_TIMESTAMP 資料轉換成 SQL_C_CHAR 變數。 如果您稍後使用**bcp_bind**與*型別*參數來繫結的變數，以搭配 SQLCHARACTER 的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**  欄中，大量複製函數轉換在適當的日期時間格式字元變數中的時間戳記逸出子句。  
+ 大量複製函數並非所有 ODBC C 資料類型都有支援。 例如，大量複製函數不支援 ODBC SQL_C_TYPE_TIMESTAMP 結構，所以請使用 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) 或 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) 將 ODBC SQL_TYPE_TIMESTAMP 資料轉換成 SQL_C_CHAR 變數。 如果您之後搭配 SQLCHARACTER 的 **bcp_bind** 參數使用 *bcp_bind* ，將此變數繫結至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 資料行，則大量複製函數會將字元變數中的時間戳記逸出子句轉換成適當的日期時間格式。  
   
- 下表列出建議的資料類型對應至 ODBC SQL 資料類型中使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。  
+ 下表列出當從 ODBC SQL 資料類型對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型時所建議使用的資料類型。  
   
 |ODBC SQL 資料類型|ODBC C 資料類型|bcp_bind *type* 參數|SQL Server 資料類型|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
@@ -87,7 +87,7 @@ ms.locfileid: "47695056"
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會不會有簽署**tinyint**不帶正負號**smallint**，或不帶正負號**int**資料型別。 若要移轉這些資料類型時，請避免遺失資料的值，建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]下一步 的最大整數資料類型的資料表。 若要避免使用者之後加入原始資料類型所允許之範圍以外的值，請將規則套用到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行，將可允許的值限制為原始來源中受到該資料類型所支援的範圍：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會不會有簽署**tinyint**不帶正負號**smallint**，或不帶正負號**int**資料型別。 若要避免在移轉這些資料類型時發生資料值遺失的情況，請使用次大的整數資料類型來建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 若要避免使用者之後加入原始資料類型所允許之範圍以外的值，請將規則套用到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行，將可允許的值限制為原始來源中受到該資料類型所支援的範圍：  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  
@@ -107,13 +107,13 @@ sp_bindrule USmallInt_Rule, 'Sample_Ints.USmallIntCol'
 GO  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不直接支援間隔資料類型。 應用程式可以不過，儲存間隔逸出序列當做字元字串中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字元資料行。 應用程式可以讀取它們供日後使用，但是它們不能在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中使用。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不直接支援間隔資料類型。 但是，應用程式可以將間隔逸出序列當做字元字串儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字元資料行中。 應用程式可以讀取它們供日後使用，但是它們不能在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中使用。  
   
- 大量複製函數可用來快速將資料載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]讀取從 ODBC 資料來源。 使用  [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)繫結結果集至程式變數的資料行，然後使用**bcp_bind**至相同的程式變數繫結至大量複製作業。 呼叫[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)或是**SQLFetch**然後會從 ODBC 資料來源的資料列擷取到程式變數，並呼叫[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)將資料大量複製從程式變數到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 大量複製函數可用來將資料快速載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中 (該資料是從 ODBC 資料來源讀取)。 只搭配資料變數使用 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) 可將結果集的資料行繫結至程式變數，然後使用 **bcp_bind** 可將相同程式變數繫結至大量複製作業。 呼叫[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)或是**SQLFetch**然後會從 ODBC 資料來源的資料列擷取到程式變數，並呼叫[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)將資料大量複製從程式變數到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- 應用程式可以使用[bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)函式，每當程式需要變更原本在所指定的資料變數的位址**bcp_bind** *pData*參數。 應用程式可以使用[bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)函式，每當程式需要變更原本指定的資料長度 **bcp_bind * * * cbData*參數。  
+ 應用程式可以使用[bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)函式，每當程式需要變更原本在所指定的資料變數的位址**bcp_bind** _pData_參數。 每當應用程式需要變更原本在 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) cbData **參數中指定的資料長度時，可以隨時使用**_bcp_collen_ 函數。  
   
- 您無法讀取來自資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到程式變數使用大量複製，並沒有類似"bcp_readrow"函數。 您只能將應用程式中的資料傳送到伺服器。  
+ 您無法使用大量複製將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的資料讀入程式變數中；因為並沒有類似 "bcp_readrow" 函數的項目。 您只能將應用程式中的資料傳送到伺服器。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行大量複製作業&#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  

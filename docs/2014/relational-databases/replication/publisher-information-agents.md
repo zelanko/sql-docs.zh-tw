@@ -12,12 +12,12 @@ ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 266c839fbaf899af4f882c9ae858303f8cd7eac3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9094fcbbede4c9bb6bac283129ed20ea4e3e910b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771430"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127319"
 ---
 # <a name="publisher-information-agents"></a>發行者資訊，代理程式
   **[代理程式]** 索引標籤會顯示與發行者相關聯之代理程式和維護作業的相關資訊：  
@@ -196,8 +196,7 @@ ms.locfileid: "52771430"
   
 ## <a name="see-also"></a>另請參閱  
  [啟動複寫監視器](monitor/start-the-replication-monitor.md)   
- [檢視發行者的資訊並執行工作 &#40;複寫監視器&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [檢視與發行集建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)   
+ [檢視資訊並執行的工作，使用 「 複寫監視器](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [監視複寫](monitoring-replication.md)  
   
   

@@ -1,11 +1,10 @@
 ---
-title: 第 3 課：同步處理合併式發行集的訂閱 | Microsoft Docs
+title: 第 3 課：同步處理合併式發行集的訂閱 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -13,15 +12,15 @@ ms.assetid: 49008384-2c55-4080-a890-9bceb40e4d6d
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 8e382a5c39d67d4c38052bc2b52e0018d1233b3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 847b833d793d3b572b44bcb77903c534300109b7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207398"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128468"
 ---
 # <a name="lesson-3-synchronizing-the-subscription-to-the-merge-publication"></a>第 3 課：同步處理合併式發行集的訂閱
-  在這一課，您將啟動合併代理程式，以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來初始化訂閱。 此外，您會使用此程序與發行者進行同步處理。 您必須先完成上一課 [第 2 課：建立合併式發行集的訂閱](lesson-2-creating-a-subscription-to-the-merge-publication.md)，才能進行這一課。  
+  在這一課，您將啟動合併代理程式，以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來初始化訂閱。 此外，您會使用此程序與發行者進行同步處理。 本課程需要您已完成上一課，[第 2 課：建立合併式發行集的訂閱](lesson-2-creating-a-subscription-to-the-merge-publication.md)。  
   
 ### <a name="to-start-synchronization-and-initialize-the-subscription"></a>啟動同步處理並初始化訂閱  
   
@@ -34,7 +33,7 @@ ms.locfileid: "48207398"
 ## <a name="next-steps"></a>後續步驟  
  您已順利執行合併代理程式，以啟動同步處理並初始化訂閱。 您也可以在「發行者」或「訂閱者」端插入、更新或刪除 **SalesOrderHeader** 或 **SalesOrderDetail** 資料表中的資料，並且在可以使用網路連接來同步處理「發行者」或「訂閱者」之間的資料時，重複此程序，然後在其他伺服器上查詢 **SalesOrderHeader** 或 **SalesOrderDetail** 資料表，以檢視複寫的變更。  
   
- 如此即完成「利用行動用戶端複寫資料」教學課程。 如需使用異動複寫的類似教學課程，請參閱＜ [Tutorial: Replicating Data Between Continuously Connected Servers](tutorial-replicating-data-between-continuously-connected-servers.md)＞。  
+ 如此即完成「利用行動用戶端複寫資料」教學課程。 使用異動複寫的類似教學課程，請參閱[教學課程：持續複寫之間的資料連接的伺服器](tutorial-replicating-data-between-continuously-connected-servers.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用快照集初始化訂閱](initialize-a-subscription-with-a-snapshot.md)   

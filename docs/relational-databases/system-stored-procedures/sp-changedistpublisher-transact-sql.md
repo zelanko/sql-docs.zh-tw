@@ -16,12 +16,12 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba242dfc6c457bd94c082f151f162b8f6eb06e29
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 81f6b1ca0ea65068851756dc2a1b91cb84c52227
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819178"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128229"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,16 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publisher=** ] **'***發行者***'**  
+ [  **@publisher=** ] **'**_發行者_**'**  
  這是發行者名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [  **@property=** ] **'***屬性***'**  
+ [  **@property=** ] **'**_屬性_**'**  
  這是要變更之給定發行者的屬性。 *屬性*已**sysname**而且可以是下列值之一。  
   
- [ **@value=** ] **'***value***'**  
+ [ **@value=** ] **'**_value_**'**  
  這是指定屬性的值。 *值*已**nvarchar(255)**，預設值是 NULL。  
   
- [  **@storage_connection_string =**] **'***storage_connection_string***'**  
+ [  **@storage_connection_string =**] **'**_storage_connection_string_**'**  
  需要 SQL Database 受控執行個體，應該符合 Azure SQL Database 的存放磁碟區的存取金鑰。 
 
 

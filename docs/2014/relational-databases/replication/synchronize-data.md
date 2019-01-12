@@ -21,12 +21,12 @@ ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e367cc0a02e446bf915c01e5a3d846ba02dcc8b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 15f4d85d117b5af09b0f67ef788364be6adad810
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781940"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128558"
 ---
 # <a name="synchronize-data"></a>同步處理資料
   同步資料是指在「訂閱者」端套用初始快照集後，在「發行者」與「訂閱者」之間傳播資料和結構描述變更的處理。 同步處理將會：  
@@ -69,6 +69,6 @@ ms.locfileid: "52781940"
 -   合併式複寫支援商務邏輯處理常式。 您可以使用商務邏輯處理常式架構來撰寫受管理的程式碼組件，該組件將在合併同步處理期間中被呼叫。 組件包括可對應至幾種同步處理條件的商務邏輯：資料變更、衝突和錯誤。 如需詳細資訊，請參閱[在合併同步處理期間執行商務邏輯](merge/execute-business-logic-during-merge-synchronization.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [偵測及解決合併式複寫衝突](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
+ [偵測及解決合併式複寫衝突](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

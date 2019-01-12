@@ -12,12 +12,12 @@ ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25dc706689ec136a5423de8051fecd3c6071d5bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d77f8d6acb449bc9aa2298dbcba9782fd7bc07e7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762380"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127434"
 ---
 # <a name="ltagentnamegt-agent-security"></a>&lt;AgentName&gt; 代理程式安全性
   [\<代理程式名稱> 代理程式安全] 頁面，可以讓您指定散發代理程式 (適用於交易式與快照式複寫) 或合併代理程式 (適用於合併式複寫) 用以執行並連接到複寫拓撲中之電腦的帳戶。 如需代理程式所需權限和複寫安全性最佳做法的資訊，請參閱[複寫代理程式安全性模型](security/replication-agent-security-model.md)和[複寫安全性最佳做法](security/replication-security-best-practices.md)。  
@@ -54,8 +54,8 @@ ms.locfileid: "52762380"
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改提取訂閱屬性](view-and-modify-pull-subscription-properties.md)   
  [檢視及修改發送訂閱屬性](view-and-modify-push-subscription-properties.md)   
- [管理複寫的登入與密碼](security/manage-logins-and-passwords-in-replication.md)   
+ [管理複寫的登入與密碼](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [複寫代理程式安全性模型](security/replication-agent-security-model.md)   
- [安全性與保護 &#40;複寫&#41;](security/security-and-protection-replication.md)  
+ [SQL Server 複寫安全性](security/view-and-modify-replication-security-settings.md)  
   
   

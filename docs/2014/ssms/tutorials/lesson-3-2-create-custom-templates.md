@@ -14,12 +14,12 @@ ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e94112325267cf65329d825f46a30f3ed9c50450
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215578"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127248"
 ---
 # <a name="create-custom-templates"></a>建立自訂範本
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了許多一般工作的範本，但範本真正的威力，在於能夠建立您經常需要建立之複雜指令碼的自訂範本。 在這個練習中，您將利用幾個參數來建立簡單的指令碼，但冗長而重複的指令碼也適合使用範本。  
@@ -67,7 +67,7 @@ ms.locfileid: "48215578"
   
 10. 在 [查詢編輯器] 中，輸入 **EXECUTE dbo.WorkOrdersForBlade**，然後按 F5 鍵來執行查詢。 確認 [結果] 窗格會傳回刀鋒視窗的工單清單。  
   
-11. 編輯範本指令碼 （指令碼在步驟 7 中），參數來取代產品名稱 Blade ***< * product_name**， `nvarchar(50)`，**名稱*> * * *，在四個位置。  
+11. 編輯範本指令碼 （指令碼在步驟 7 中），參數來取代產品名稱 Blade  <strong>*<* product_name</strong>， `nvarchar(50)`，<strong>名稱*>*</strong>  ，在四個位置。  
   
     > [!NOTE]  
     >  參數具備三個元素：想要取代的參數名稱、參數的資料類型和參數的預設值。  

@@ -1,5 +1,5 @@
 ---
-title: 偵錯商務邏輯處理常式 (複寫程式設計) | Microsoft 文件
+title: 偵錯商務邏輯處理常式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 019ff508b10859cae2388636e9189292b498e251
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761510"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128758"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>偵錯商務邏輯處理常式 (複寫程式設計)
   使用商務邏輯處理常式，以便在同步處理合併訂閱期間叫用自訂商務邏輯。 如需詳細資訊，請參閱[在合併同步處理期間執行商務邏輯](merge/execute-business-logic-during-merge-synchronization.md)。  
@@ -31,7 +31,7 @@ ms.locfileid: "52761510"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>在本機電腦上偵錯商務邏輯處理常式  
   
-1.  設定發行和散發、建立發行集，以及建立發行集的訂閱。 如需詳細資訊，請參閱[設定發行和散發](configure-publishing-and-distribution.md)和[建立、修改及刪除發行集和發行項 &#40;複寫&#41;](publish/create-modify-and-delete-publications-and-articles-replication.md)。  
+1.  設定發行和散發、建立發行集，以及建立發行集的訂閱。 如需詳細資訊，請參閱 < [Configure Publishing and Distribution](configure-publishing-and-distribution.md)並[建立發行集](publish/create-a-publication.md)。  
   
 2.  建立及註冊商務邏輯處理常式。 如需相關資訊，請參閱 [為合併發行項實作商務邏輯處理常式](implement-a-business-logic-handler-for-a-merge-article.md)。  
   

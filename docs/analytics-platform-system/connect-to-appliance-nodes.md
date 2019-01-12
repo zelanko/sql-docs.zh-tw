@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f57719bae769a75d704454af03af82689715644d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e8c61bebd6265d25e2c3fe0a14516e986f3ee414
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506305"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124442"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>連接至設備節點在 Analytics Platform System
 這篇文章說明連接到每個節點，Analytics Platform System 設備中的各種方式。  
@@ -30,7 +30,7 @@ ms.locfileid: "52506305"
 |||  
 |-|-|  
 |**節點**|**存取案例**|  
-|控制節點|您可以使用網頁瀏覽器來存取管理主控台中，會在控制節點執行。 如需詳細資訊，請參閱 <<c0> [ 使用管理主控台來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)。</c0><br /><br />所有的用戶端應用程式和工具連接到控制節點，不論連線是否使用乙太網路或 InfiniBand。<br /><br />若要設定乙太網路連線到控制節點，使用的控制節點的叢集 IP 位址和連接埠**接著 17001**。 例如，"192.168.0.1,17001。 」<br /><br />若要設定的控制節點的 InfiniBand 連線，請使用 ***appliance_domain *-SQLCTL01**和連接埠**接著 17001**。 使用 ***appliance_domain *-SQLCTL01**，應用裝置 DNS 伺服器會將伺服器連線到作用中的 InfiniBand 網路。 若要設定您的非應用裝置伺服器使用此選項，請參閱[設定的 InfiniBand 網路介面卡](configure-infiniband-network-adapters.md)。<br /><br />應用裝置系統管理員會連接到控制節點，以執行管理作業。 比方說，應用裝置系統管理員會從 [控制] 節點，執行下列作業：<br /><br />設定與 Analytics Platform System **dwconfig.exe**組態工具。|  
+|控制節點|您可以使用網頁瀏覽器來存取管理主控台中，會在控制節點執行。 如需詳細資訊，請參閱 <<c0> [ 使用管理主控台來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)。</c0><br /><br />所有的用戶端應用程式和工具連接到控制節點，不論連線是否使用乙太網路或 InfiniBand。<br /><br />若要設定乙太網路連線到控制節點，使用的控制節點的叢集 IP 位址和連接埠**接著 17001**。 例如，"192.168.0.1,17001。 」<br /><br />若要設定的控制節點的 InfiniBand 連線，請使用 <strong>*appliance_domain*-SQLCTL01</strong>與連接埠**接著 17001**。 藉由使用 <strong>*appliance_domain*-SQLCTL01</strong>，應用裝置 DNS 伺服器會將伺服器連線到作用中的 InfiniBand 網路。 若要設定您的非應用裝置伺服器使用此選項，請參閱[設定的 InfiniBand 網路介面卡](configure-infiniband-network-adapters.md)。<br /><br />應用裝置系統管理員會連接到控制節點，以執行管理作業。 比方說，應用裝置系統管理員會從 [控制] 節點，執行下列作業：<br /><br />設定與 Analytics Platform System **dwconfig.exe**組態工具。|  
 |計算節點|計算節點的連接會被導向由控制節點。 做為參數，計算節點的 IP 位址永遠不會輸入到應用程式的命令。<br /><br />載入，備份中，遠端資料表複製，以及 Hadoop、 SQL Server PDW 不會傳送，或直接在計算節點和非應用裝置節點或伺服器之間的平行接收資料。 這些應用程式與 SQL Server PDW 連接連接到控制節點和控制節點然後指示來建立計算節點和非應用裝置伺服器之間通訊的 SQL Server PDW。<br /><br />比方說，這些資料傳輸作業會直接連線到計算節點的同時發生：<br /><br />從載入伺服器載入 SQL Server pdw。<br /><br />備份資料庫從 SQL Server PDW 備份伺服器。<br /><br />來自備份伺服器的資料庫還原至 SQL Server PDW 中。<br /><br />從 SQL Server PDW 查詢 Hadoop 資料。<br /><br />從 SQL Server PDW 的資料匯出至外部 Hadoop 資料表中。<br /><br />將 SQL Server PDW 資料表複製到遠端 SMP SQL Server 資料庫。|  
   
 ## <a name="connecting-to-the-ethernet-and-infiniband-networks"></a>連線到乙太網路和 InfiniBand 網路  

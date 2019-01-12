@@ -19,12 +19,12 @@ ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 47fd5d47ea064a6aa783132ff052f8b95a6f2941
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150428"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126898"
 ---
 # <a name="file-restores-simple-recovery-model"></a>檔案還原 (簡單復原模式)
   這個主題僅與至少包含一個唯讀次要檔案群組的簡單模式資料庫有關。  
@@ -46,7 +46,7 @@ ms.locfileid: "48150428"
      如需線上頁面和檔案還原支援的相關資訊，請參閱 [SQL Server 2014 版本支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如需線上還原的詳細資訊，請參閱[線上還原 &#40;SQL Server&#41;](online-restore-sql-server.md)。  
   
     > [!TIP]  
-    >  若您要讓資料庫離線以進行檔案還原，請在啟動還原順序之前，執行下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) 陳述式：ALTER DATABASE *database_name* SET OFFLINE。  
+    >  如果您想要離線檔案還原的資料庫，讓資料庫離線再開始還原順序，執行下列[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)陳述式：ALTER DATABASE *database_name* SET OFFLINE。  
   
 
   
@@ -62,13 +62,13 @@ ms.locfileid: "48150428"
   
  還原順序只包含兩個 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式。 第一個陳述式會還原次要檔案 (即 `A`檔案)，而此檔案是使用 WITH NORECOVERY 進行還原。 第二項作業還原其他兩個檔案 ( `B` 和 `C` )，而這些檔案是使用 WITH RECOVERY 從不同的備份裝置進行還原。  
   
-1.  RESTORE DATABASE *database* FILE **=***name_of_file_A*  
+1.  RESTORE DATABASE *database* FILE **=**_name_of_file_A_  
   
      FROM *file_backup_of_file_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *database* FILE **=***name_of_file_B***,***name_of_file_C*  
+2.  RESTORE DATABASE *database* FILE **=**_name_of_file_B_**,**_name_of_file_C_  
   
      FROM *file_backup_of_files_B_and_C*  
   
@@ -76,9 +76,9 @@ ms.locfileid: "48150428"
   
 ### <a name="examples"></a>範例  
   
--   [範例：線上還原唯讀檔案 &#40;簡單復原模式&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [範例：線上還原唯讀檔案&#40;簡單復原模式&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [範例：離線還原主要檔案群組與另一個檔案群組 &#40;完整復原模式&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [範例：離線還原主要與另一個檔案群組&#40;完整復原模式&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48150428"
   
   
 ## <a name="see-also"></a>另請參閱  
- [備份與還原：互通性與共存性 &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [備份與還原：互通性與共存性&#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [差異備份 &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [完整檔案備份 &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
  [備份概觀 &#40;SQL Server&#41;](backup-overview-sql-server.md)   

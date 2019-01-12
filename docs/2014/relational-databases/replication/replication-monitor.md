@@ -14,12 +14,12 @@ ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 780c4913a75b6014c43c407f05181ef93eddb594
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fcb3a7ccfc5e0b5da01d3976f3c9f13e06df7ee7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813962"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124428"
 ---
 # <a name="replication-monitor"></a>複寫監視器
   文件集的這個章節包含複寫監視器的資訊。 監視器中所顯示的頁面和對話方塊，會視複寫的類型和監視的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本不同而有所不同。  
@@ -31,15 +31,7 @@ ms.locfileid: "52813962"
 -   [散發者設定](distributor-settings.md)  
   
 -   [散發者資訊，發行集](distributor-information-publications.md)  
-  
--   [散發者資訊，訂閱監看清單 &#40;交易式發行集，SQL Server 2005 和更新版本&#41;](distributor-info-subscription-watch-list-transaction-pub-sql-2005.md)  
-  
--   [散發者資訊，訂閱監看清單 &#40;合併式發行集，SQL Server 2005 和更新版本&#41;](distributor-info-subscription-watch-list-merge-pub-sql-2005.md)  
-  
--   [散發者資訊，訂閱監看清單 &#40;快照式發行集，SQL Server 2005 和更新版本&#41;](distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md)  
-  
--   [散發者資訊，代理程式](distributor-information-agents.md)  
-  
+
 -   [發行者設定](publisher-settings.md)  
   
 -   [發行者資訊，發行集](publisher-information-publications.md)  
@@ -80,8 +72,6 @@ ms.locfileid: "52813962"
   
 -   [訂閱，同步處理記錄 &#40;合併訂閱，SQL Server 2005 和更新版本&#41;](subscription-synchronization-history.md)  
   
--   [訂閱，同步處理記錄 &#40;合併訂閱，SQL Server 2000&#41;](subscription-synchronization-history-merge-subscription-sql-server-2000.md)  
-  
 -   [訂閱，散發者到訂閱者記錄 &#40;快照式訂閱&#41;](subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
 -   [記錄讀取器代理程式](log-reader-agent.md)  
@@ -97,6 +87,5 @@ ms.locfileid: "52813962"
 ## <a name="see-also"></a>另請參閱  
  [啟動複寫監視器](monitor/start-the-replication-monitor.md)   
  [監視複寫](monitoring-replication.md)   
- [屬性參考 &#40;複寫&#41;](properties-reference-replication.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 410a852ed1535a219208a62b7d0b45849333cb49
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e4612c7b20e448eecbd6c83a3d09d0796dcff542
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818990"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126255"
 ---
 # <a name="spdropdynamicsnapshotjob-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_發行集_**'**  
  這是移除篩選之資料快照集作業的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [ **@dynamic_snapshot_jobname**=] **'***dynamic_snapshot_jobname***'**  
+ [ **@dynamic_snapshot_jobname**=] **'**_dynamic_snapshot_jobname_**'**  
  這是移除篩選之資料快照集作業的名稱。 *dynamic_snapshot_jobname*是 sysname，以及如果不提供的預設值給任何工作名稱與相關聯*dynamic_snapshot_jobid*。  
   
- [ **@dynamic_snapshot_jobid**=] **'***dynamic_snapshot_jobid***'**  
+ [ **@dynamic_snapshot_jobid**=] **'**_dynamic_snapshot_jobid_**'**  
  這是移除篩選之資料快照集作業的識別碼。 *dynamic_snapshot_jobid*已**uniqueidentifier**，預設值是 NULL。  
   
 > [!IMPORTANT]  

@@ -17,12 +17,12 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 4e4a9e1cc36590555ab33632c97c73cbeb3d8e0f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 57acb73332f90f4084243184f480edf0a1395a7b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365611"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124818"
 ---
 # <a name="what39s-new-in-sql-server-2014"></a>什麼&#39;SQL Server 2014 的新功能
   本主題摘要說明中的新功能的詳細的連結[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，並摘要說明適用於服務組件 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
@@ -38,8 +38,6 @@ ms.locfileid: "53365611"
  **[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 並未引進重要的新功能如下：**  
   
 -   [新功能&#40;Integration Services&#41;](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
-  
--   [新功能&#40;複寫&#41;](../relational-databases/replication/what-s-new-replication.md)  
   
 -   [新功能&#40;Reporting Services&#41;](../reporting-services/what-s-new-reporting-services.md)  
   
@@ -65,7 +63,7 @@ ms.locfileid: "53365611"
 -    **空間原生實作：** 空間查詢效能的重大改進在引進[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]SP2 至原生實作。 如需詳細資訊，請參閱 < [KB3107399 眭妎踱恅](https://support.microsoft.com/en-us/kb/3107399)。
 
 ### <a name="supportability-and-diagnostics-improvements"></a>可支援性和診斷的改良
--   **資料庫複製：** 複製資料庫是新的 DBCC 命令，可增強疑難排解現有的生產資料庫，藉由複製結構描述和不含資料的中繼資料。 使用命令建立複製`DBCC clonedatabase('source_database_name', 'clone_database_name')`。  **注意：** 請勿在生產環境中使用複製的資料庫。 使用下列命令判斷從複製資料庫的資料庫是否已產生： `select DATABASEPROPERTYEX('clonedb', 'isClone')`。 傳回值**1**表示從 clonedatabase 時建立資料庫**0**表示它不是複製。
+-   **資料庫複製：** 複製資料庫是新的 DBCC 命令，可增強疑難排解現有的生產資料庫，藉由複製結構描述和不含資料的中繼資料。 使用命令建立複製`DBCC clonedatabase('source_database_name', 'clone_database_name')`。  **請注意：** 請勿在生產環境中使用複製的資料庫。 使用下列命令判斷從複製資料庫的資料庫是否已產生： `select DATABASEPROPERTYEX('clonedb', 'isClone')`。 傳回值**1**表示從 clonedatabase 時建立資料庫**0**表示它不是複製。
 -   **Temptdb 可支援：** 新的錯誤記錄檔訊息，指出 tempdb 檔案數目和大小/自動成長的 tempdb 資料檔案出現在伺服器啟動。
 -   **資料庫檔案立即初始化記錄：** 新的錯誤記錄檔訊息，指出在伺服器 statup，資料庫立即檔案初始化 （啟用/停用） 的狀態。
 -   **在 呼叫堆疊中的模組名稱：** Xevent 呼叫堆疊現在包含模組名稱 + 而不是絕對位址的位移。

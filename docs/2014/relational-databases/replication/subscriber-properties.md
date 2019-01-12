@@ -14,12 +14,12 @@ ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e35b5020eef6b7a884a0490d882c82e2775c8952
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3142a78fcf3a2413e43b1a7598b5d3b282aba1c7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805780"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127668"
 ---
 # <a name="subscriber-properties"></a>訂閱者屬性
   [訂閱者屬性] 對話方塊包含執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本訂閱者的相關資訊。  
@@ -40,7 +40,7 @@ ms.locfileid: "52805780"
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改散發者和發行者屬性](view-and-modify-distributor-and-publisher-properties.md)   
- [屬性參考 &#40;複寫&#41;](properties-reference-replication.md)   
+
  [訂閱發行集](subscribe-to-publications.md)  
   
   

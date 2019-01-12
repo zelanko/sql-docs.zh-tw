@@ -19,12 +19,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c84d808b84a70ae9d70eff308351ff1e7f3df8e0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e69b1d6ca838334c36ff94037473e5fda45cce43
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815570"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126418"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>使用複寫監視器監視效能
   「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器」可讓您使用下列方法來監視異動複寫與合併式複寫的效能：  
@@ -85,16 +85,16 @@ ms.locfileid: "52815570"
     |---------------|----------|----------|----------|  
     |151+%|76 - 150%|26 - 75%|0 - 25%|  
   
- 如需檢視訂閱資訊的詳細資訊，請參閱[檢視訂閱的資訊並執行工作 &#40;複寫監視器&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)。  
+ 如需有關如何檢視訂用帳戶資訊的詳細資訊，請參閱[View Information and Perform Tasks 使用 「 複寫監視器](view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="determine-latency-with-tracer-tokens"></a>使用追蹤 Token 判斷延遲  
  異動複寫可允許您藉由在發行集資料庫的交易記錄中插入 Token (少量資料)，並記錄到達散發者和訂閱者所需花費的時間，以測量系統中的延遲。 Token 亦可讓您識別資料是否未到達散發者或訂閱者。 如需相關資訊，請參閱 [針對異動複寫測量延遲及驗證連接](measure-latency-and-validate-connections-for-transactional-replication.md)。  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>檢視合併式複寫的詳細同步處理效能  
- 針對合併式複寫，複寫監視器於同步處理時顯示每個已處理發行項的詳細資訊，包括每個處理階段花費的時間 (上傳變更、下載變更等等)。 這樣有助於找出導致過慢的特定資料表，同時也是解決合併訂閱效能問題的最佳地點。 如需檢視詳細統計資料的詳細資訊，請參閱[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](view-information-and-perform-tasks-for-subscription-agents.md)。  
+ 針對合併式複寫，複寫監視器於同步處理時顯示每個已處理發行項的詳細資訊，包括每個處理階段花費的時間 (上傳變更、下載變更等等)。 這樣有助於找出導致過慢的特定資料表，同時也是解決合併訂閱效能問題的最佳地點。 如需有關如何檢視詳細統計資料的詳細資訊，請參閱 < [View Information and Perform Tasks 使用 「 複寫監視器](view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>檢視異動複寫的交易和傳遞時間  
- 對於異動複寫，「複寫監視器」會顯示有關下列內容的資訊：尚未散發到「訂閱者」之散發資料庫中的交易數，以及散發這些交易的預估時間。 如需詳細資訊，請參閱[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](view-information-and-perform-tasks-for-subscription-agents.md)。  
+ 對於異動複寫，「複寫監視器」會顯示有關下列內容的資訊：尚未散發到「訂閱者」之散發資料庫中的交易數，以及散發這些交易的預估時間。 如需詳細資訊，請參閱 < [View Information and Perform Tasks 使用 「 複寫監視器](view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [監視複寫](../monitoring-replication.md)   

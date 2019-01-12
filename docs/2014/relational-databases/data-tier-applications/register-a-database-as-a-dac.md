@@ -20,12 +20,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0411281173339c46eb629dc6aad757337b3c41c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761448"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129416"
 ---
 # <a name="register-a-database-as-a-dac"></a>將資料庫註冊為 DAC
   使用任何一種**註冊資料層應用程式精靈**或 Windows PowerShell 指令碼來建立資料層應用程式 (DAC) 定義，以便描述現有的資料庫中的物件，並註冊 DAC 定義中的`msdb`系統資料庫 (**主要**在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。  
@@ -101,7 +101,7 @@ ms.locfileid: "52761448"
  **取消** - 結束精靈，而不註冊 DAC。  
   
 ### <a name="validating-objects"></a>驗證物件  
- **正在檢查**  *SchemaName* **＞。** *ObjectName* **＞。** - 當精靈驗證擷取之物件的相依性，並驗證這些對於 DAC 都是有效的物件時，將會顯示進度列。 *SchemaName ***.*** ObjectName* 識別目前正在驗證哪一個物件。  
+ **Checking**  _SchemaName_ **.** _ObjectName_ **.** - 當精靈驗證擷取之物件的相依性，並驗證這些對於 DAC 都是有效的物件時，將會顯示進度列。 _SchemaName_**.**_ObjectName_ 識別目前正在驗證哪一個物件。  
   
  **\< 先前**-會讓您回到**器集合工具內容**頁面，以變更您的項目。  
   

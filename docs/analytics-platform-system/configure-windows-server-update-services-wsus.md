@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2d1e07fca7c18bdecba265a9e69994a9f728e9ba
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398613"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124708"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Analytics Platform System 中設定 Windows Server Update Services (WSUS)
 這些指示會引導您完成使用 Windows Server Update Services (WSUS) 組態精靈設定 WSUS Analytics Platform System 的步驟。 您需要將 WSUS 設定，才能將軟體更新套用至應用裝置。 VMM 虛擬機器的應用裝置上已安裝 WSUS。  
@@ -55,7 +55,7 @@ ms.locfileid: "52398613"
   
     1.  在 **伺服器管理員儀表板**上**工具**功能表上，按一下  **Windows Server Update Services**。  
   
-    2.  在左窗格中**Update Services**視窗中，按一下以展開虛擬機器管理節點伺服器 (***appliance_domain *-VMM**)，然後按一下**選項**。  
+    2.  在左窗格中**Update Services**視窗中，按一下以展開虛擬機器管理節點伺服器 (**_appliance_domain_VMM**)，然後按一下  **選項**。  
   
     3.  在 **選項** 窗格中，按一下**WSUS 伺服器設定精靈**啟動組態精靈。  
   

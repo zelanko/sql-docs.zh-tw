@@ -16,12 +16,12 @@ ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 059e47206d0d2dd3a1668c754539c4e93e47ad78
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7de6c03b133746156f414687fd661f70b40e842e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822062"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128115"
 ---
 # <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_發行集_**'**  
  這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@article=**] **'***文章***'**  
+ [  **@article=**] **'**_文章_**'**  
  這是發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
   
- [  **@filtername=**] **'***filtername***'**  
+ [  **@filtername=**] **'**_filtername_**'**  
  這是要卸除的篩選名稱。 *filtername*已**sysname**，沒有預設值。  
   
  [  **@force_invalidate_snapshot=** ] *force_invalidate_snapshot*  

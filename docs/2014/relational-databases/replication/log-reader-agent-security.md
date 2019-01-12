@@ -14,12 +14,12 @@ ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03455e0ae31712d4ce02beab7eebb697978a1a1a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c55292aff126d1955c438c9417ce0651cc6afc94
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799920"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128888"
 ---
 # <a name="log-reader-agent-security"></a>記錄讀取器代理程式安全性
   **[記錄讀取器代理程式安全性]** 對話方塊可以讓您指定：  
@@ -51,7 +51,7 @@ ms.locfileid: "52799920"
  用於連接的 Windows 帳戶或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶至少必須是發行集資料庫內 **db_owner** 固定資料庫角色的成員。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理複寫的登入與密碼](security/manage-logins-and-passwords-in-replication.md)   
+ [管理複寫的登入與密碼](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [複寫代理程式安全性模型](security/replication-agent-security-model.md)   
  [複寫代理程式概觀](agents/replication-agents-overview.md)   
  [複寫安全性最佳作法](security/replication-security-best-practices.md)  

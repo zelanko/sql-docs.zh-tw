@@ -1,5 +1,5 @@
 ---
-title: 發行者資訊，發行集 | Microsoft Docs
+title: '[發行者資訊] 對話方塊中 SQL Server 複寫 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,14 +12,14 @@ ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8614db7bd44f6ba5de8826215aed8cf123e86488
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 344b899905e844312ee6e5a66455fc2fa14b446f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812170"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128908"
 ---
-# <a name="publisher-information-publications"></a>發行者資訊，發行集
+# <a name="sql-server-replication-publisher-information-dialog-box"></a>SQL Server 複寫 [發行者資訊] 對話方塊
   **[發行集]** 索引標籤可以提供在左窗格中所選取發行者之所有發行集的摘要資訊。  
   
 ## <a name="options"></a>選項。  
@@ -84,7 +84,7 @@ ms.locfileid: "52812170"
   
 ## <a name="see-also"></a>另請參閱  
  [啟動複寫監視器](monitor/start-the-replication-monitor.md)   
- [檢視發行者的資訊並執行工作 &#40;複寫監視器&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [檢視資訊並執行的工作，使用 「 複寫監視器](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [監視複寫](monitoring-replication.md)  
   
   

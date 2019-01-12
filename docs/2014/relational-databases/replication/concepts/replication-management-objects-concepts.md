@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 dev_langs:
 - VB
@@ -20,12 +20,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 75d4e1e4ac97683d25e00fd2cf249a8890f5edd3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772081"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129568"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
   Replication Management Objects (RMO) 是一種 Managed 程式碼組件，用以封裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的複寫功能。 RMO 是由 <xref:Microsoft.SqlServer.Replication> 命名空間實作。  
@@ -35,16 +35,16 @@ ms.locfileid: "52772081"
  [設定散發](../configure-distribution.md)  
  本節中的主題示範如何使用 RMO 來設定發行與散發。  
   
- [建立、修改及刪除發行集和發行項 &#40;複寫&#41;](../publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a Publication](../publish/create-a-publication.md)  
  本章節中的主題示範如何使用 RMO 來建立、刪除和修改發行集與發行項。  
   
  [訂閱發行集](../subscribe-to-publications.md)  
  本章節中的主題示範如何使用 RMO 來建立、刪除和修改訂閱。  
   
- [保護複寫拓撲](../security/secure-a-replication-topology.md)  
+ [保護複寫拓撲](../security/view-and-modify-replication-security-settings.md)  
  本章節中的主題示範如何使用 RMO 來檢視和修改安全性設定。  
   
- [同步處理訂閱 &#40;複寫&#41;](../synchronize-subscriptions-replication.md)  
+ [同步處理訂閱 &#40;複寫&#41;](../synchronize-data.md)  
  本章節中的主題示範如何同步處理訂閱。  
   
  [監視複寫](../monitoring-replication.md)  

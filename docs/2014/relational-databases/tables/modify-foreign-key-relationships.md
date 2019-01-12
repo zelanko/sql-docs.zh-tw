@@ -16,12 +16,12 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 50e6886e9ef69842432a0759095f11335cfbb494
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797660"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129618"
 ---
 # <a name="modify-foreign-key-relationships"></a>修改外部索引鍵關聯性
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改關聯性的外部索引鍵端。 修改資料表的外部索引鍵，會變更與主索引鍵資料表中資料行相關的資料行。  
@@ -139,7 +139,7 @@ ms.locfileid: "52797660"
   
     -   **設為預設值** ：如果資料表的所有外部索引鍵資料行都具有為其所定義的預設值，就可以將值設為資料行所定義的預設值。  
   
-4.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]。  
+4.  在 [檔案]  功能表上，按一下 [儲存] _table name_。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改外部索引鍵**  

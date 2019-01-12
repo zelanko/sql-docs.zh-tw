@@ -20,12 +20,12 @@ ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1a593812709e62a02645cdd0ce1ee2fa53461b4d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540838"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124432"
 ---
 # <a name="create-indexes-with-included-columns"></a>建立內含資料行的索引
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中加入內含 (或非索引鍵) 資料行，以擴充非叢集索引的功能。 藉由加入非索引鍵資料行，您可以建立涵蓋更多查詢的非叢集索引。 這是因為非索引鍵之索引資料行有下列好處：  
@@ -102,13 +102,13 @@ ms.locfileid: "52540838"
   
 6.  按一下 [索引鍵資料行] 索引標籤底下的 [加入...]。  
   
-7.  在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要新增至索引之一或多個資料表資料行的核取方塊。  
+7.  在 [從 _table_name_ 選取資料行] 對話方塊中，選取要加入索引之一或多個資料表資料行的核取方塊。  
   
 8.  按一下 [確定] 。  
   
 9. 按一下 [包含的資料行] 索引標籤底下的 [加入...]。  
   
-10. 在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要新增至索引中作為非索引鍵資料行之資料表資料行的核取方塊。  
+10. 在 [從 _table_name_ 選取資料行] 對話方塊中，選取要加入至索引中作為非索引鍵資料行之資料表資料行的核取方塊。  
   
 11. 按一下 [確定] 。  
   

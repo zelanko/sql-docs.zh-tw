@@ -16,12 +16,12 @@ ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: caaf907b0db55306ebd341ed727174f3531c947f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 21d0ea34f3521333976ce00a3f5b823c3fcb816a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777733"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129298"
 ---
 # <a name="spaddmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,31 +46,31 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_發行者_**'**  
  這是發行者的名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  這是發行集資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
   
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_發行集_**'**  
  這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@alternate_publisher=**] **'***alternate_synchronization_partner***'**  
+ [  **@alternate_publisher=**] **'**_alternate_synchronization_partner_**'**  
  這是替代發行者的名稱。 *alternate_synchronization_partner*已**sysname**，沒有預設值。  
   
- [  **@alternate_publisher_db=**] **'***alternate_publisher_db***'**  
+ [  **@alternate_publisher_db=**] **'**_alternate_publisher_db_**'**  
  這是替代發行者上的發行集資料庫名稱。 *alternate_publisher_db*已**sysname**，沒有預設值。  
   
- [  **@alternate_publication=**] **'***alternate_synchronization_partner***'**  
+ [  **@alternate_publication=**] **'**_alternate_synchronization_partner_**'**  
  這是替代同步處理夥伴上的發行集名稱。 *alternate_synchronization_partner*已**sysname**，沒有預設值。  
   
- [  **@alternate_distributor=**] **'***alternate_distributor***'**  
+ [  **@alternate_distributor=**] **'**_alternate_distributor_**'**  
  這是替代同步處理夥伴的散發者名稱。 *alternate_distributor*已**sysname**，沒有預設值。  
   
- [  **@friendly_name=**] **'***friendly_name***'**  
+ [  **@friendly_name=**] **'**_friendly_name_**'**  
  這是一個顯示名稱，用來識別組成替代同步處理夥伴之發行者、發行集和散發者的關聯。 *friendly_name*已**nvarchar(255)**，預設值是 NULL。  
   
- [  **@reserved=**] **'***保留***'**  
+ [  **@reserved=**] **'**_保留_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  

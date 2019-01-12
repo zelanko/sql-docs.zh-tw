@@ -20,12 +20,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43be13027d1460ec407239140cd4306be76a445e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823512"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125228"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>備份與還原快照式和異動複寫的策略
   當為快照式及異動複寫設計備份與還原策略時，需要考慮三個方面：  
@@ -117,7 +117,7 @@ ms.locfileid: "52823512"
   
          如需如何執行散發代理程式的詳細資訊，請參閱[啟動及停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 與[複寫代理程式可執行檔概念](../concepts/replication-agent-executables-concepts.md)。  
   
-         如需如何驗證命令的詳細資訊，請參閱[在散發資料庫中檢視複寫的命令和其他資訊 &#40;複寫 Transact-SQL 程式設計&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) 和[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+         如需如何確認命令的詳細資訊，請參閱[檢視複寫的命令和散發資料庫中的其他資訊&#40;Replication TRANSACT-SQL Programming&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md)並[檢視資訊並執行的工作，使用 「 複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
     2.  從「發行者」、「散發者」及「訂閱者」端移除複寫組態，然後重新建立組態。 重新建立訂閱時，請指定「訂閱者」已經擁有該資料。 還原即可完成。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "52823512"
   
          如需如何執行散發代理程式的詳細資訊，請參閱[啟動及停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 與[複寫代理程式可執行檔概念](../concepts/replication-agent-executables-concepts.md)。  
   
-         如需如何驗證命令的詳細資訊，請參閱[在散發資料庫中檢視複寫的命令和其他資訊 &#40;複寫 Transact-SQL 程式設計&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) 和[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+         如需如何確認命令的詳細資訊，請參閱[檢視複寫的命令和散發資料庫中的其他資訊&#40;Replication TRANSACT-SQL Programming&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md)並[檢視資訊並執行的工作，使用 「 複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
     2.  使用 [tablediff 公用程式](../../../tools/tablediff-utility.md) 或其他工具來手動同步化發行者與訂閱者。 如此可讓您從訂閱資料庫中，復原沒有包含在發行集資料庫備份中的資料。 移至步驟 c。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "52823512"
   
      如需如何執行散發代理程式的詳細資訊，請參閱[啟動及停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 與[複寫代理程式可執行檔概念](../concepts/replication-agent-executables-concepts.md)。  
   
-     如需如何驗證命令的詳細資訊，請參閱[在散發資料庫中檢視複寫的命令和其他資訊 &#40;複寫 Transact-SQL 程式設計&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) 和[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+     如需如何確認命令的詳細資訊，請參閱[檢視複寫的命令和散發資料庫中的其他資訊&#40;Replication TRANSACT-SQL Programming&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md)並[檢視資訊並執行的工作，使用 「 複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 3.  如要使用佇列更新訂閱，請連接到各訂閱者，並從訂閱資料庫的 [MSreplication_queue &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msreplication-queue-transact-sql) 資料表中刪除所有資料列。 移至步驟 4。  
   
@@ -285,7 +285,7 @@ ms.locfileid: "52823512"
   
     2.  標示所有發行集以供驗證。 將未通過驗證的任何訂閱重新初始化。 復原即可完成。  
   
-         如需驗證的相關資訊，請參閱 [Validate Replicated Data](../validate-replicated-data.md)。 如需詳細資訊，請參閱[重新初始化訂閱](../reinitialize-subscriptions.md)。  
+         如需驗證的相關資訊，請參閱 [Validate Replicated Data](../validate-data-at-the-subscriber.md)。 如需詳細資訊，請參閱[重新初始化訂閱](../reinitialize-subscriptions.md)。  
   
 #### <a name="msdb-database-distributor"></a>msdb 資料庫 (散發者)  
   
@@ -301,7 +301,7 @@ ms.locfileid: "52823512"
   
 4.  標示所有發行集以供驗證。 將未通過驗證的任何訂閱重新初始化。 復原即可完成。  
   
-     如需驗證的相關資訊，請參閱 [Validate Replicated Data](../validate-replicated-data.md)。 如需詳細資訊，請參閱[重新初始化訂閱](../reinitialize-subscriptions.md)。  
+     如需驗證的相關資訊，請參閱 [Validate Replicated Data](../validate-data-at-the-subscriber.md)。 如需詳細資訊，請參閱[重新初始化訂閱](../reinitialize-subscriptions.md)。  
   
 #### <a name="master-database-distributor"></a>Master 資料庫 (散發者)  
   

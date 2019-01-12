@@ -13,41 +13,25 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cd024310b00338749147b56e3b63a09fbd515de
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9a6099a43713ebbcfdc65aec43aabcca95fe5e0b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814010"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127678"
 ---
 # <a name="transactional-replication"></a>異動複寫
   通常以發行集資料庫物件和資料的快照集啟動異動複寫。 使用初始快照集後，在「發行者」端進行的後續資料變更和結構描述修改，通常會立即 (近乎即時) 傳遞到「訂閱者」。 資料變更會以相同的順序，並且在相同於「發行者」端發生之變更的交易界限內套用到「訂閱者」；因此，在發行集內會保證交易的一致性。  
   
  異動複寫一般用於伺服器對伺服器環境，並適用於下列各案例：  
   
--   您希望發生累加式更新時，能立即傳播給「訂閱者」。  
-  
--   應用程式在發行者進行變更的時間與變更到達訂閱者的時間需要有低度延遲。  
-  
--   應用程式需要中繼資料狀態的存取權。 例如，若資料列變更五次，異動複寫允許應用程式回應至每個變更 (如引發觸發程序)，而非只有回應至資料列的資料變更。  
-  
--   發行者有極大量的插入、更新和刪除活動。  
-  
+-   您希望發生累加式更新時，能立即傳播給「訂閱者」。    
+-   應用程式在發行者進行變更的時間與變更到達訂閱者的時間需要有低度延遲。    
+-   應用程式需要中繼資料狀態的存取權。 例如，若資料列變更五次，異動複寫允許應用程式回應至每個變更 (如引發觸發程序)，而非只有回應至資料列的資料變更。    
+-   發行者有極大量的插入、更新和刪除活動。    
 -   發行者或訂閱者為非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫，如 Oracle。  
   
  依預設，交易式發行集的訂閱者應當成唯讀處理，因為變更並不會傳播回發行者。 不過，異動複寫的確有提供選項讓訂閱者更新。  
-  
- **本主題內容**  
-  
- [異動複寫的運作方式](#HowWorks)  
-  
- [初始資料集](#Dataset)  
-  
- [快照集代理程式](#SnapshotAgent)  
-  
- [記錄讀取器代理程式](#LogReaderAgent)  
-  
- [散發代理程式](#DistributionAgent)  
   
 ##  <a name="HowWorks"></a> 異動複寫的運作方式  
  異動複寫是由「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照集代理程式」、「記錄讀取器代理程式」及「散發代理程式」實作。 「快照集代理程式」會準備快照集檔案，內含結構描述及已發行資料表與資料庫物件的資料、將檔案儲存在快照集資料夾內，然後將同步作業記錄至散發者的散發資料庫中。  
@@ -82,5 +66,17 @@ ms.locfileid: "52814010"
   
 ##  <a name="DistributionAgent"></a> 散發代理程式  
  若為發送訂閱，散發代理程式會在散發者端執行；若為提取訂閱，則散發代理程式會在訂閱者端執行。 該代理程式會將交易從散發資料庫移至訂閱者。 如果訂閱標示為驗證，則「散發代理程式」還會檢查發行者端和訂閱者端的資料是否相符。  
+
+## <a name="publication-types"></a>發行集類型
+
+  
+異動複寫提供四種發行集類型：  
+  
+|發行集類型|描述|  
+|----------------------|-----------------|  
+|標準交易式發行集|適合於「訂閱者」端的所有資料均為唯讀狀態 (異動複寫並不在「訂閱者」端強制這個屬性) 的拓撲。<br /><br /> 當使用 Transact-SQL 或 Replication Management Objects (RMO) 時，依預設，會建立標準交易式發行集。 當使用「新增發行集精靈」時，它們會透過選取 **[發行集類型]** 頁面上的 **[交易式發行集]** 來建立。<br /><br /> 如需建立發行集的詳細資訊，請參閱 [發行資料和資料庫物件](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)。|  
+|具有可更新訂閱的交易式發行集|這個發行集類型的特性為：<br /><br /> -每個位置具有相同的資料，一個 「 發行者 」 與 「 訂閱者 」。 <br /> -您可更新訂閱者端的資料列<br /> -此拓撲最適合用於需要高可用性的伺服器環境，和讀取延展性。<br /><br />如需詳細資訊，請參閱 <<c0> [ 可更新訂閱](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。|  
+|對等項目-拓撲|這個發行集類型的特性為：<br /> -每個位置具有相同的資料，並做為發行者 」 和 「 訂閱者。<br /> 為一次，可以只在一個位置變更相同的資料列。<br /> -支援[衝突偵測](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />-此拓撲最適合用於需要高可用性的伺服器環境，和讀取延展性。<br /><br />如需相關資訊，請參閱 [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。|  
+|雙向異動複寫|這個發行集類型的特性為：<br />雙向複寫對等複寫類似，不過，它不提供衝突解決。 此外，雙向複寫僅限於 2 部伺服器。 <br /><br /> 如需詳細資訊，請參閱[雙向異動複寫](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
   
   

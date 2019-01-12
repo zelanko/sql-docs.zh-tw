@@ -18,12 +18,12 @@ ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04b6717a2bab3d8a370ed50cacdce935526cb628
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 45b3d55774c4a05192f3bec9ef8bd92f89a74aa8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354963"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127648"
 ---
 # <a name="calling-a-stored-procedure"></a>呼叫預存程序
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式同時支援 ODBC CALL 逸出序列和[!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)陳述式執行預存程序; ODBC CALL 逸出序列是慣用的方法。 使用 ODBC 語法可讓應用程式擷取預存程序的傳回碼，而且會最佳化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式，使用最初開發的通訊協定，在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦之間傳送遠端程序 (RPC) 呼叫。 此 RPC 通訊協定會排除在伺服器上完成的許多參數處理與陳述式剖析，藉以增加效能。  
@@ -33,7 +33,7 @@ ms.locfileid: "53354963"
   
  用來呼叫程序的 ODBC CALL 逸出序列為：  
   
- {[**?=**]**call***procedure_name*[([*parameter*][**,**[* parameter*]]...)]}  
+ {[**？ =**]**呼叫**_procedure_name_[([*參數*] [**，**[*參數*]]...)]}  
   
  何處*procedure_name*指定程序的名稱並*參數*指定程序參數。 只有使用 ODBC CALL 逸出序列的陳述式才會支援具名參數。  
   
@@ -41,11 +41,11 @@ ms.locfileid: "53354963"
   
  輸入和輸入/輸出參數可以從程序呼叫省略。 如果呼叫包含括號但沒有任何參數的程序，驅動程式會引導資料來源使用第一個參數的預設值。 例如：  
   
- {**call** *procedure_name***( )**}  
+ {**呼叫** _procedure_name_**> （)**}  
   
  如果程序沒有任何參數，該程序可能會失敗。 如果呼叫沒有括號的程序，驅動程式不會傳送任何參數值。 例如：  
   
- {**呼叫** *procedure_name*}  
+ {**呼叫** _procedure_name_}  
   
  在程序呼叫中可以針對輸入和輸入/輸出參數指定常值。 例如，程序 InsertOrder 有五個輸入參數。 以下對 InsertOrder 的呼叫會省略第一個參數、提供第二個參數的常值，然後將參數標記用於第三、第四和第五個參數 (參數會循序編號，從 1 這個值開始)。  
   

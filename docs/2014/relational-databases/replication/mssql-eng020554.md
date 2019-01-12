@@ -12,12 +12,12 @@ ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cdb16831ec27c647645ae0d63f2aa899ec49d590
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806820"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124398"
 ---
 # <a name="mssqleng020554"></a>MSSQL_ENG020554
     
@@ -52,15 +52,15 @@ ms.locfileid: "52806820"
   
      在「複寫監視器」中檢查錯誤詳細資料，然後重新啟動代理程式 (如果它已停止)。 錯誤詳細資料可能會提供有關代理程式無法正確執行之原因的額外資訊。 如果代理程式在執行，請勿停止並重新啟動代理程式，因為這樣可能會使問題惡化。 如需有關檢視代理程式狀態以及複寫監視器中的錯誤詳細資料，請參閱下列主題：  
   
-    -   如需了解快照集代理程式、記錄讀取器代理程式和佇列讀取器代理程式，請參閱[檢視與發行集相關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
+    -   快照集代理程式、 記錄讀取器代理程式和佇列讀取器代理程式，請參閱[View Information and Perform Tasks 使用 「 複寫監視器](monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
-    -   如需了解散發代理程式和合併代理程式，請參閱[檢視與訂閱相關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+    -   針對散發代理程式和合併代理程式，請參閱[View Information and Perform Tasks 使用 「 複寫監視器](monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 -   如果因代理程式正忙而頻繁出現此錯誤：  
   
      您可能需要重新設計應用程式，以縮短代理程式的處理時間。  
   
-     您可以使用 **[作業屬性]** 對話方塊增加檢查代理程式狀態的間隔。 如需如何存取此對話方塊以執行複寫作業的詳細資訊，請參閱[檢視發行者的資訊並執行工作 &#40;複寫監視器&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)。  
+     您可以使用 **[作業屬性]** 對話方塊增加檢查代理程式狀態的間隔。 如需存取此對話方塊中，複寫作業的詳細資訊，請參閱[View Information and Perform Tasks 使用 「 複寫監視器](monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 -   如果代理程式無法登入拓撲中的某台電腦：  
   

@@ -13,12 +13,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6fa90f7732b504000696ad2977ae465b392ff565
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748721"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125848"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>複寫管理員的常見問題集
   透過下列問題和答覆可以了解複寫的資料庫管理員所面臨的各種工作。  
@@ -42,9 +42,9 @@ ms.locfileid: "52748721"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>訂閱何時可用？訂閱資料庫何時可用？  
  訂閱可在快照集套用至訂閱資料庫後使用。 儘管在此之前可以存取訂閱資料庫，但在套用快照集之前不應使用資料庫。 使用「複寫監視器」檢查快照集產生狀態與應用程式：  
   
--   快照集由「快照集代理程式」產生。 在複寫監視器中發行集的 **[代理程式]** 索引標籤上檢視快照集產生狀態。 如需詳細資訊，請參閱[檢視與發行集建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
+-   快照集由「快照集代理程式」產生。 在複寫監視器中發行集的 **[代理程式]** 索引標籤上檢視快照集產生狀態。 如需詳細資訊，請參閱 < [View Information and Perform Tasks 使用 「 複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
--   快照集由「散發代理程式」或「合併代理程式」套用。 在「複寫監視器」的 **[散發代理程式]** 或 **[合併代理程式]** 頁面中檢視快照集應用程式狀態。 如需詳細資訊，請參閱[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+-   快照集由「散發代理程式」或「合併代理程式」套用。 在「複寫監視器」的 **[散發代理程式]** 或 **[合併代理程式]** 頁面中檢視快照集應用程式狀態。 
   
 ### <a name="what-happens-if-the-snapshot-agent-has-not-completed-when-the-distribution-or-merge-agent-starts"></a>如果當「散發代理程式」或「合併代理程式」啟動時「快照集代理程式」尚未完成，會發生什麼事情？  
  如果「散發代理程式」或「合併代理程式」與「快照集代理程式」同時執行，將不會導致錯誤。 但是，您必須注意下列情況：  
@@ -94,7 +94,7 @@ ms.locfileid: "52748721"
  此資訊可透過 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]和數個複寫預存程序獲得。 如需詳細資訊，請參閱 [Distributor and Publisher Information Script](distributor-and-publisher-information-script.md)。  
   
 ### <a name="does-replication-encrypt-data"></a>複寫是否會加密資料？  
- 資料分割 複寫不會對儲存在資料庫或透過網路傳送的資料加密。 如需詳細資訊，請參閱[安全性概觀 &#40;複寫&#41;](../security/security-overview-replication.md) 主題中的＜加密＞一節。  
+ 資料分割 複寫不會對儲存在資料庫或透過網路傳送的資料加密。 如需詳細資訊，請參閱主題的 < 加密 > 一節[SQL Server 複寫安全性](../security/view-and-modify-replication-security-settings.md)。  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>如何透過網際網路複寫資料？  
  使用下列方式，透過網際網路複寫資料：  
@@ -140,7 +140,7 @@ ms.locfileid: "52748721"
   
 -   直接在訂閱資料庫執行 GRANT 陳述式。  
   
--   使用後快照集指令碼執行陳述式。 如需詳細資訊，請參閱[在套用快照集之前及之後執行指令碼](../execute-scripts-before-and-after-the-snapshot-is-applied.md)。  
+-   使用後快照集指令碼執行陳述式。 如需詳細資訊，請參閱[在套用快照集之前及之後執行指令碼](../snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。  
   
 -   使用預存程序 [sp_addscriptexec](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql) 執行陳述式。  
   
@@ -167,7 +167,7 @@ ms.locfileid: "52748721"
  是的。 對於涉及複寫的資料庫有許多特殊的考量。 如需詳細資訊，請參閱 [備份及還原複寫的資料庫](back-up-and-restore-replicated-databases.md)。  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>複寫是否會影響交易記錄的大小？  
- 合併式複寫和快照式複寫不會影響交易記錄大小，但異動複寫會影響。 如果資料庫包含一個或多個交易式發行集，則除非已將所有與發行集相關的交易傳遞至散發資料庫，否則不會截斷記錄檔。 如果交易記錄變得很大，而且「記錄讀取器代理程式」依排程執行，請考慮縮短兩次執行間的間隔或設定其以連續模式執行。 或者將它設定為以連續模式執行。 如果已將其設定為在連續模式下執行 (預設值)，則請確定它正在執行。 如需檢查記錄讀取器代理程式狀態的詳細資訊，請參閱[檢視與發行集建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
+ 合併式複寫和快照式複寫不會影響交易記錄大小，但異動複寫會影響。 如果資料庫包含一個或多個交易式發行集，則除非已將所有與發行集相關的交易傳遞至散發資料庫，否則不會截斷記錄檔。 如果交易記錄變得很大，而且「記錄讀取器代理程式」依排程執行，請考慮縮短兩次執行間的間隔或設定其以連續模式執行。 或者將它設定為以連續模式執行。 如果已將其設定為在連續模式下執行 (預設值)，則請確定它正在執行。 如需有關如何檢查記錄讀取器代理程式狀態的詳細資訊，請參閱[View Information and Perform Tasks 使用 「 複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
  此外，如果您已在發行集資料庫或散發資料庫中設定選項 'sync with backup'，則除非已備份所有交易，否則交易記錄不會被截斷。 如果交易記錄變得很大，並且您已設定此選項，則請考慮縮短兩次交易記錄備份之間的間隔。 如需涉及異動複寫之備份和還原資料庫的詳細資訊，請參閱[備份與還原快照集和異動複寫的策略](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)。  
   
@@ -189,7 +189,7 @@ ms.locfileid: "52748721"
 ## <a name="replication-maintenance"></a>複寫維護  
   
 ### <a name="how-do-i-determine-if-the-data-at-subscribers-is-synchronized-with-data-at-the-publisher"></a>如何確定「訂閱者」端的資料是否與「發行者」端的資料同步？  
- 使用驗證。 驗證將報告給定「訂閱者」是否與「發行者」同步。 如需詳細資訊，請參閱[驗證複寫的資料](../validate-replicated-data.md)。 驗證不會提供未正確同步之資料列 (若有的話) 的資訊，但 [tablediff 公用程式](../../../tools/tablediff-utility.md) 可以提供。  
+ 使用驗證。 驗證將報告給定「訂閱者」是否與「發行者」同步。 如需詳細資訊，請參閱[驗證複寫的資料](../validate-data-at-the-subscriber.md)。 驗證不會提供未正確同步之資料列 (若有的話) 的資訊，但 [tablediff 公用程式](../../../tools/tablediff-utility.md) 可以提供。  
   
 ### <a name="how-do-i-add-a-table-to-an-existing-publication"></a>如何將資料表新增至現有的發行集？  
  新增資料表 (或其他物件) 時不必停止發行集或訂閱資料庫中的活動。 透過 [發行集屬性 - \<發行集>] 對話方塊或預存程序 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 和 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)，將資料表新增至發行集。 如需詳細資訊，請參閱[在現有發行集中新增和卸除發行項](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
@@ -207,7 +207,7 @@ ms.locfileid: "52748721"
  從資料庫中移除複寫所需採取的動作視資料庫是否用作發行集資料庫、訂閱資料庫或兩者而定。  
   
 ### <a name="how-do-i-determine-whether-there-are-transactions-or-rows-to-be-replicated"></a>如何確定是否有要複寫的交易或資料列？  
- 對於異動複寫，請使用預存程序或「複寫監視器」中的 **[未散發的命令]** 索引標籤。 如需詳細資訊，請參閱[在散發資料庫中檢視複寫的命令和其他資訊 &#40;複寫 Transact-SQL 程式設計&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) 和[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+ 對於異動複寫，請使用預存程序或「複寫監視器」中的 **[未散發的命令]** 索引標籤。 如需詳細資訊，請參閱 <<c0> [ 檢視複寫的命令和散發資料庫中的其他資訊&#40;Replication TRANSACT-SQL Programming&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md)並[View Information and Perform Tasks 使用複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。</c0>  
   
  對於合併式複寫，請使用預存程序 **sp_showpendingchanges**。 如需詳細資訊，請參閱 [sp_showpendingchanges &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)。  
   
@@ -218,7 +218,7 @@ ms.locfileid: "52748721"
   
 -   估計將命令傳遞給訂閱者所需的時間量。 如果此值大於產生快照集並將其套用至訂閱者所需的時間量，則請考慮重新初始化訂閱者。 如需詳細資訊，請參閱 [重新初始化訂閱](../reinitialize-subscriptions.md)。  
   
- 如需詳細資訊，請參閱 [sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql) 和[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+ 如需詳細資訊，請參閱 < [sp_replmonitorsubscriptionpendingcmds &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql)並[View Information and Perform Tasks 使用 「 複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="replication-and-other-database-features"></a>複寫與其他資料庫功能  
   
@@ -229,7 +229,7 @@ ms.locfileid: "52748721"
  是的。 無需特殊考量，因為所有資料儲存在群集的一組磁碟中。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理 &#40;複寫&#41;](administration-replication.md)   
+ [複寫管理常見問題集](frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   
   

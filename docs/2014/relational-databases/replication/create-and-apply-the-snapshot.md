@@ -13,12 +13,12 @@ ms.assetid: 631f48bf-50c9-4015-b9d8-8f1ad92d1ee2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bd78bf7da1a68e7e053af52c4fa8f9cf0cd71094
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e4c69b22af2a4e5a087c21b34fc719f971c3844b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755640"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128578"
 ---
 # <a name="create-and-apply-the-snapshot"></a>建立並套用快照集
   快照集在發行集建立之後由「快照代理程式」產生。 它們可以：  
@@ -43,8 +43,7 @@ ms.locfileid: "52755640"
   
  若要檢視或修改預設的快照資料夾位置，請參閱  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[指定預設快照集位置&#40;SQL Server Management Studio&#41;](specify-the-default-snapshot-location-sql-server-management-studio.md)  
-  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[指定預設快照集位置](snapshot-options.md#snapshot-folder-locations)
 -   複寫程式設計和 RMO 程式設計：[設定發行和散發](configure-publishing-and-distribution.md)  
   
 ## <a name="see-also"></a>另請參閱  

@@ -12,12 +12,12 @@ ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2983889b79f30c18c6b6ae1ad22d614629b37654
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ed11d8f045315130fb0d9155607625659f2b8052
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778100"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125588"
 ---
 # <a name="replication-monitor-main-page"></a>複寫監視器，主要頁面
   複寫監視器可讓您跨複寫拓撲，追蹤發行集和訂閱的狀態與效能。 下列主題提供詳細資訊：  
@@ -30,15 +30,7 @@ ms.locfileid: "52778100"
   
     -   [在複寫監視器中重新整理資料](monitor/refresh-data-in-replication-monitor.md)  
   
-    -   [檢視發行者的資訊並執行工作 &#40;複寫監視器&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
-  
-    -   [檢視發行集的資訊並執行工作 &#40;複寫監視器&#41;](monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
-  
-    -   [檢視與發行集建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)  
-  
-    -   [檢視訂閱的資訊並執行工作 &#40;複寫監視器&#41;](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
-  
-    -   [檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
+    -   [檢視資訊並執行的工作，使用 「 複寫監視器](monitor/view-information-and-perform-tasks-replication-monitor.md) 
   
     -   [針對異動複寫測量延遲及驗證連接](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

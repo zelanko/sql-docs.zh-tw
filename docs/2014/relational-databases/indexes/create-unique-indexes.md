@@ -17,12 +17,12 @@ ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 52f677c99b72de5a4342d534bddcd216027e4e0d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540915"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127228"
 ---
 # <a name="create-unique-indexes"></a>建立唯一索引
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]的資料表建立唯一索引。 唯一索引可保證索引鍵不包含重複值，因此資料表中的每一個資料列在某方面來說是唯一的。 建立 UNIQUE 條件約束與建立獨立於條件約束之外的唯一索引，兩者並無明顯差異。 資料驗證的方式相同，而且查詢最佳化工具不會區分由條件約束建立或由手動建立的唯一索引。 不過，在資料行上建立 UNIQUE 條件約束，會使索引目標更明確。 如需有關 UNIQUE 條件約束的詳細資訊，請參閱＜ [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)＞。  
@@ -124,7 +124,7 @@ ms.locfileid: "52540915"
   
 13. 按一下 [ **關閉**]。  
   
-14. 在 [檔案] 功能表上，按一下 [儲存 <資料表名稱>]。  
+14. 在 [檔案] 功能表上，按一下 [儲存 _資料表名稱_]。  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>使用物件總管建立唯一索引  
   
@@ -142,7 +142,7 @@ ms.locfileid: "52540915"
   
 7.  按一下 [索引鍵資料行] 下的 [新增...]。  
   
-8.  在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要新增至唯一索引之一或多個資料表資料行的核取方塊。  
+8.  在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要加入唯一索引之一或多個資料表資料行的核取方塊。  
   
 9. 按一下 [確定] 。  
   

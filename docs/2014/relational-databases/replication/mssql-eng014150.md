@@ -12,12 +12,12 @@ ms.assetid: c3dd3109-abf3-4b38-a4e9-ef48d0235656
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 15f4c7759404c0c904f17819f0a8eb750588777e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fc4e2ecd81b6bf0a6c24aff8e89dc31c95e04625
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758910"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126078"
 ---
 # <a name="mssqleng014150"></a>MSSQL_ENG014150
     
@@ -48,7 +48,7 @@ ms.locfileid: "52758910"
 -   複寫維護作業。  
   
 ## <a name="user-action"></a>使用者動作  
- 記錄讀取器代理程式、佇列讀取器代理程式，以及散發代理程式通常都是連續執行，而其他代理程式則通常是視需要或依排程執行。 如果不認為代理程式已完成執行，請檢查代理程式的狀態。 如需相關資訊，請參閱 [Monitor Replication Agents](agents/replication-agents.md)。  
+ 記錄讀取器代理程式、佇列讀取器代理程式，以及散發代理程式通常都是連續執行，而其他代理程式則通常是視需要或依排程執行。 如果不認為代理程式已完成執行，請檢查代理程式的狀態。 如需相關資訊，請參閱 [Monitor Replication Agents](agents/replication-agents-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫代理程式管理](agents/replication-agent-administration.md)   

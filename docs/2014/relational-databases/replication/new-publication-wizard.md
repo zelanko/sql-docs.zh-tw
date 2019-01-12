@@ -43,12 +43,12 @@ ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7c2b215895f6e28d51b91ed5617b3de1230cb7bb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a76bb95fb3689e6dc7f6de71373152ce36ebd14
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755730"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123258"
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
   此章節提供有關新增發行集精靈之下列頁面的資訊。  
@@ -82,6 +82,6 @@ ms.locfileid: "52755730"
 ## <a name="see-also"></a>另請參閱  
  [Create a Publication](publish/create-a-publication.md)   
  [發行資料和資料庫物件](publish/publish-data-and-database-objects.md)   
- [屬性參考 &#40;複寫&#41;](properties-reference-replication.md)  
+
   
   

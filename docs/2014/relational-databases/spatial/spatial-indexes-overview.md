@@ -11,12 +11,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e3d145290ac0fb416df91c99337d0e5dc2e30a5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: HT
+ms.openlocfilehash: 229674b624913c08b35637a106d9ced7e88e855d
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373220"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100883"
 ---
 # <a name="spatial-indexes-overview"></a>空間索引概觀
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援空間資料和空間索引。 *「空間索引」* (Spatial Index) 是一種類型的擴充索引，可讓您建立空間資料行的索引。 空間資料行是包含空間資料類型資料的資料表資料行，例如 `geometry` 或 `geography`。  
@@ -127,7 +127,7 @@ ms.locfileid: "53373220"
 >  您可以使用 [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式的 USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 子句來明確指定這個鑲嵌式配置。  
   
 ##### <a name="the-bounding-box"></a>週框方塊  
- 幾何資料會佔據可以是無限的平面。 但是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，空間索引需要有限的空間。 若要建立要分解的有限空間，幾何方格鑲嵌式配置需要矩形 *「週框方塊」*(Bounding Box)。 週框方塊由四個座標定義`(` *x 最小 ***，*** y 最小*`)`並`(` *x-最大值 ***，*** y-最大值* `)`，這些會儲存為空間索引的屬性。 這些座標表示以下項目：  
+ 幾何資料會佔據可以是無限的平面。 但是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，空間索引需要有限的空間。 若要建立要分解的有限空間，幾何方格鑲嵌式配置需要矩形 *「週框方塊」*(Bounding Box)。 週框方塊由四個座標定義`(` _x 最小_**，**_y-最小值_`)`並`(` _x-最大值_**，**_y-最大值_`)`，這些會儲存為空間索引的屬性。 這些座標表示以下項目：  
   
 -   *x-min* 是週框方塊左下角的 X 座標。  
   
@@ -140,11 +140,11 @@ ms.locfileid: "53373220"
 > [!NOTE]  
 >  這些座標是由 [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式的 BOUNDING_BOX 子句所指定。  
   
- `(` *X-min ***，*** y-min* `)`並`(` *x-max ***，*** y-max* `)`座標可決定的位置和維度的週框方塊。 週框方塊外面的空間會視為編號 0 的單一資料格。  
+ `(` _X-min_**，**_y-min_ `)`並`(` _x-max_**，** _y 最大_`)`座標可決定的位置和維度的週框方塊。 週框方塊外面的空間會視為編號 0 的單一資料格。  
   
  空間索引會分解週框方塊內的空間。 方格階層的層級 1 方格會填滿此週框方塊。 若要將幾何物件放在方格階層中，空間索引會將此物件的座標與週框方塊座標相比較。  
   
- 下圖顯示所定義的點`(` *x 最小 ***，*** y 最小*`)`並`(` *x 最大 ***，*** y-最大值*`)`週框方塊座標。 方格階層的最上層會顯示為 4x4 方格。 為了說明起見，較低的層級會予以忽略。 週框方塊外面的空間是由零 (0) 所指示。 請注意，物件 'A' 有一部分延伸到方塊外面，而物件 'B' 則完全位於資料格 0 的方塊內。  
+ 下圖顯示所定義的點`(` _x 最小_**，**_y 最小_`)`並`(` _x-最大值_ **，**_y 最大_`)`週框方塊座標。 方格階層的最上層會顯示為 4x4 方格。 為了說明起見，較低的層級會予以忽略。 週框方塊外面的空間是由零 (0) 所指示。 請注意，物件 'A' 有一部分延伸到方塊外面，而物件 'B' 則完全位於資料格 0 的方塊內。  
   
  ![顯示座標和資料格 0 的週框方塊。](../../database-engine/media/spndx-bb-4x4-objects.gif "顯示座標和資料格 0 的週框方塊。")  
   

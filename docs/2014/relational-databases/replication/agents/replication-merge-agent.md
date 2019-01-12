@@ -15,12 +15,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d3b323be70911881b99f055503d12bb6b79988d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ec21ff98d49cff26bde48452a30fd347c23782fe
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762820"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129538"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   「複寫合併代理程式」是一個公用程式可執行檔，它會將資料庫資料表中保存的初始快照集套用至「訂閱者」。 此外，它也會合併建立初始快照集之後在「發行者」端發生的累加資料變更，並根據您設定的規則或使用您建立的自訂解析程式來調解衝突。  
@@ -109,55 +109,55 @@ ms.locfileid: "52762820"
  **-?**  
  列印所有可用的參數。  
   
- **-Publisher** *server_name*[**\\***instance_name*]  
- 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 <伺服器名稱>。 請針對該伺服器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ **-Publisher** _server_name_[**\\**_instance_name_]  
+ 這是發行者的名稱。 請針對該伺服器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 <伺服器名稱>。 請針對該伺服器上 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
   
- **-PublisherDB** *publisher_database*  
+ **-PublisherDB** _publisher_database_  
  這是發行者資料庫的名稱。  
   
- **-Publication** *publication*  
+ **-Publication** _publication_  
  這是發行集的名稱。 只有在發行集設定成隨時都有快照供新的訂閱或重新初始化的訂閱使用時，這個參數才有效。  
   
- **-Subscriber** *server_name*[**\\***instance_name*]  
- 這是訂閱者的名稱。 請針對該伺服器上的 *預設執行個體指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 請針對該伺服器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ **-Subscriber** _server_name_[**\\**_instance_name_]  
+ 這是訂閱者的名稱。 請針對該伺服器上的 *預設執行個體指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 請針對該伺服器上 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。  
   
- **-SubscriberDB** *subscriber_database*  
+ **-SubscriberDB** _subscriber_database_  
  這是訂閱者資料庫的名稱。  
   
- **-AltSnapshotFolder** *alt_snapshot_folder_path*  
+ **-AltSnapshotFolder** _alt_snapshot_folder_path_  
  這是包含訂閱之初始快照集的資料夾路徑。  
   
  **-Continuous**  
  指定代理程式是否會嘗試持續輪詢複寫的交易。 如果您指定了這個參數，代理程式就會以輪詢間隔輪詢來源的複寫交易，即使沒有任何交易暫止也一樣。  
   
- **-DestThreads** *number_of_destination_threads*  
+ **-DestThreads** _number_of_destination_threads_  
  指定合併代理程式在目的地套用變更所用的目的地執行緒數目。 在上傳期間，目的地是發行者，而在下載期間，目的地則是訂閱者。 預設值是 4。  
   
- **-DefinitionFile** *def_path_and_file_name*  
+ **-DefinitionFile** _def_path_and_file_name_  
  這是代理程式定義檔的路徑。 代理程式定義檔包含代理程式的命令提示字元引數。 此檔案的內容會剖析為可執行檔。 請使用雙引號 (") 來指定包含任意字元的引數值。  
   
- **-Distributor** *server_name*[**\\***instance_name*]  
- 這是散發者的名稱。 請針對該伺服器上的 *預設執行個體指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 請針對該伺服器上的 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 若為散發者 (發送) 散發，此名稱就會預設為本機電腦上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體的名稱。  
+ **-Distributor** _server_name_[**\\**_instance_name_]  
+ 這是散發者的名稱。 請針對該伺服器上的 *預設執行個體指定* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 請針對該伺服器上 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體指定 server_name。 若為散發者 (發送) 散發，此名稱就會預設為本機電腦上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設執行個體的名稱。  
   
- **-DistributorLogin** *distributor_login*  
+ **-DistributorLogin** _distributor_login_  
  這是散發者登入名稱。  
   
- **-DistributorPassword** *distributor_password*  
+ **-DistributorPassword** _distributor_password_  
  這是散發者密碼。  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
  指定散發者的安全性模式。 值為 **0** 表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證模式 (預設值)，而值為 **1** 則表示 Windows 驗證模式。  
   
- **-DownloadGenerationsPerBatch** *download_generations_per_batch*  
+ **-DownloadGenerationsPerBatch** _download_generations_per_batch_  
  這是將變更從發行者下載至訂閱者時，要在單一批次中處理的層代數目。 層代會定義為每個發行項的邏輯變更群組。 可靠通訊連結的預設值為 100。 不可靠通訊連結的預設值為 10。  
   
- **-DownloadReadChangesPerBatch** *download_read_changes_per_batch*  
+ **-DownloadReadChangesPerBatch** _download_read_changes_per_batch_  
  這是將變更從發行者下載至訂閱者時，要在單一批次中讀取的變更數目。 預設值為 100。  
   
- **-DownloadWriteChangesPerBatch** *download_write_changes_per_batch*  
+ **-DownloadWriteChangesPerBatch** _download_write_changes_per_batch_  
  這是將變更從發行者下載至訂閱者時，要在單一批次中套用的變更數目。 預設值為 100。  
   
- **-DynamicSnapshotLocation** *dynamic_snapshot_location*  
+ **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
  這是當發行集使用數化資料列篩選器時，已篩選資料快照集檔案的位置。  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
@@ -172,7 +172,7 @@ ms.locfileid: "52762820"
  > [!NOTE]  
  >  定義的 SSL 憑證必須包含 SQL Server 的完整網域名稱才會有效。 為了讓代理程式能在將 -EncryptionLevel 設定為 2 時成功連線，請在本機 SQL Server 上建立別名。 'Alias Name' 參數應為伺服器名稱，且應將 'Server' 參數設為 SQL Server 的完整名稱。
   
- 如需詳細資訊，請參閱[安全性概觀 &#40;複寫&#41;](../security/security-overview-replication.md)。  
+ 如需詳細資訊，請參閱 < [SQL Server 複寫安全性](../security/view-and-modify-replication-security-settings.md)。  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
@@ -205,16 +205,16 @@ ms.locfileid: "52762820"
 |**1**|針對所有層代強制執行聚合。|  
 |**2**|針對所有層代強制執行聚合並更正損毀的歷程。 指定這個值時，指定應該修正歷程的位置：發行者、訂閱者或發行者與訂閱者兩者。|  
   
- **-FtpAddress** *ftp_address*  
+ **-FtpAddress** _ftp_address_  
  這是散發者之 FTP 服務的網路位址。 沒有指定這個參數時，系統就會使用 **Distributor** 。  
   
- **-FtpPassword** *ftp_password*  
+ **-FtpPassword** _ftp_password_  
  這是用來連接到 FTP 服務的使用者密碼。  
   
- **-FtpPort** *ftp_port*  
+ **-FtpPort** _ftp_port_  
  這是散發者的 FTP 服務通訊埠編號。 沒有指定這個參數時，系統就會使用 FTP 服務的預設通訊埠編號 (21)。  
   
- **-FtpUserName** *ftp_user_name*  
+ **-FtpUserName** _ftp_user_name_  
  這是用來連接到 FTP 服務的使用者名稱。 沒有指定這個參數時，系統就會使用 anonymous。  
   
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
@@ -227,16 +227,16 @@ ms.locfileid: "52762820"
 |**2**|預設值。 除了最終代理程式狀態訊息、最終工作階段詳細資料以及任何錯誤以外，記錄每個工作階段狀態的累加工作階段詳細資料和發行項層級工作階段詳細資料，包括完成百分比。 此外，系統也會記錄代理程式狀態訊息。|  
 |**3**|與 **-HistoryVerboseLevel** = **2**相同，但是系統會記錄更多代理程式進度訊息。|  
   
- **-Hostname** *host_name*  
+ **-Hostname** _host_name_  
  這是本機電腦的網路名稱。 預設值為本機電腦名稱。  
   
  **-InteractiveResolution** [**0**|**1**]  
  指定在同步處理期間發生衝突時，是否要使用互動式衝突解決方案。 預設值為 **0**，表示不使用互動式衝突解決方案。  
   
- **-InternetLogin** *internet_login*  
+ **-InternetLogin** _internet_login_  
  指定連接至需要驗證之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener ISAPI DLL 時使用的登入名稱。  
   
- **-InternetPassword** *internet_password*  
+ **-InternetPassword** _internet_password_  
  指定連接至需要驗證之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener ISAPI DLL 時使用的密碼。  
   
  **-InternetProxyLogin**  *internet_proxy_login*  
@@ -251,36 +251,36 @@ ms.locfileid: "52762820"
  **-InternetSecurityMode** [**0**|**1**]  
  指定在 Web 同步處理期間，連接至 Web 伺服器時使用的 IIS 安全性模式。 值為 **0** 表示基本驗證，而值為 **1** 則表示 Windows 整合式驗證 (預設值)。  
   
- **-InternetTimeout** *internet_timeout*  
+ **-InternetTimeout** _internet_timeout_  
  這是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener ISAPI DLL 的連接逾時之前的秒數。  
   
- **-InternetURL** *internet_url*  
+ **-InternetURL** _internet_url_  
  指定用來連接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Listener ISAPI DLL 的 URL。 您必須指定這個屬性。  
   
- **-KeepAliveMessageInterval** *keep_alive_message_interval_seconds*  
+ **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
  這是記錄執行緒檢查是否有任何現有的連接正在等候伺服器回應之前的秒數。 執行長時間執行的批次時，您可以減少這個值，避免檢查代理程式將合併代理程式標示為有疑問。 預設值是 **300** 秒。  
   
- **-LoginTimeOut** *login_time_out_seconds*  
+ **-LoginTimeOut** _login_time_out_seconds_  
  這是登入逾時之前的秒數。 預設值為 15 秒。  
   
- **-MakeGenerationInterval** *make_generation_interval_seconds*  
+ **-MakeGenerationInterval** _make_generation_interval_seconds_  
  這是建立層代或變更批次之間等待的秒數，以便下載到用戶端。 預設值為 **1** 秒。  
   
  Makegeneration 是準備將發行者變更下載到訂閱者的程序，而且在它下載期間可能是效能瓶頸。 如果 makegeneration 程序已經在 **-MakeGenerationInterval**指定的間隔內執行，則會略過目前同步處理工作階段的程序。 這有助於進行並行同步處理，而且在訂閱者不想要下載變更時特別實用。  
   
- **-MaxBcpThreads** *number_of_threads*  
+ **-MaxBcpThreads** _number_of_threads_  
  指定可用平行方式執行的大量複製作業數目。 同時存在之執行緒和 ODBC 連接的最大數目是 **MaxBcpThreads** 或發行集資料庫之系統資料表 **sysmergeschemachange** 中顯示的大量複製要求數目的較小者。 **MaxBcpThreads** 必須具有大於 0 的值而且沒有硬式編碼的上限。 預設為 **1**。  
   
- **-MaxDownloadChanges** *number_of_download_changes*  
+ **-MaxDownloadChanges** _number_of_download_changes_  
  指定應該從發行者下載至訂閱者的最大變更資料列數目。 所下載的資料列數目可能會高於指定的最大值，因為：系統會處理完整的層代，而且平行目的地執行緒可能會執行，其中每個執行緒在第一次傳遞時至少會處理 100 項變更。 根據預設，系統會傳送準備下載的所有變更。  
   
- **-MaxUploadChanges** *number_of_upload_changes*  
+ **-MaxUploadChanges** _number_of_upload_changes_  
  指定應該從訂閱者上傳至發行者的最大變更資料列數目。 所上傳的資料列數目可能會高於指定的最大值，因為：系統會處理完整的層代，而且平行目的地執行緒可能會執行，其中每個執行緒在第一次傳遞時至少會處理 100 項變更。 根據預設，系統會傳送準備上傳的所有變更。  
   
  **-MetadataRetentionCleanup** [**0**|**1**]  
  指定是否應該根據發行集保留週期，從 [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql)、 [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql)、 [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql)、 [MSmerge_past_partition_mappings](/sql/relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql)和 [MSmerge_current_partition_mappings](/sql/relational-databases/system-tables/msmerge-current-partition-mappings) 中移除中繼資料。 預設值為 **1**，表示應該進行清除。 值為 **0** 則表示不應該自動進行清除。  
   
- **-Output** *output_path_and_file_name*  
+ **-Output** _output_path_and_file_name_  
  這是代理程式輸出檔的路徑。 如果未提供檔案名稱，輸出將傳送至主控台。 如果指定的檔案名稱存在，輸出就會附加至該檔案。  
   
  **-OutputVerboseLevel** [**0**|**1**|**2**]  
@@ -292,34 +292,34 @@ ms.locfileid: "52762820"
  **-PacketSize**  
  這是封包大小 (以位元組為單位)。 預設值是 4096 (位元組)。  
   
- **-PollingInterval** *polling_interval*  
+ **-PollingInterval** _polling_interval_  
  這是針對資料變更查詢發行者或訂閱者的頻率 (以秒為單位)。 預設值是 60 秒。  
   
- **-ProfileName** *profile_name*  
+ **-ProfileName** _profile_name_  
  指定要用於代理程式參數的代理程式設定檔。 如果 **ProfileName** 為 NULL，就會停用代理程式設定檔。 如果沒有指定 **ProfileName** ，就會使用該代理程式類型的預設設定檔。 如需資訊，請參閱[複寫代理程式設定檔](replication-agent-profiles.md)。  
   
- **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
+ **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
  指定參與具有發行集資料庫之資料庫鏡像工作階段的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉夥伴執行個體。 如需詳細資訊，請參閱 [資料庫鏡像和複寫 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)。  
   
- **-PublisherLogin** *publisher_login*  
+ **-PublisherLogin** _publisher_login_  
  這是發行者登入名稱。 如果 **PublisherSecurityMode** 是 **0** (代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證)，您就必須指定這個參數。  
   
- **-PublisherPassword** *publisher_password*  
+ **-PublisherPassword** _publisher_password_  
  這是發行者密碼。 如果 **PublisherSecurityMode** 是 **0** (代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證)，您就必須指定這個參數。  
   
  **-PublisherSecurityMode** [**0**|**1**]  
  指定發行者的安全性模式。 值為 **0** 表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證 (預設值)，而值為 **1** 則表示 Windows 驗證模式。  
   
- **-QueryTimeOut** *query_time_out_seconds*  
+ **-QueryTimeOut** _query_time_out_seconds_  
  這是查詢逾時之前的秒數。預設為 300 秒。 此外，當這個值大於 1800 時，合併代理程式也會使用 `QueryTimeout` 的值來決定等候資料分割快照集產生的時間長度。  
   
- **-SrcThreads** *number_of_source_threads*  
+ **-SrcThreads** _number_of_source_threads_  
  指定合併代理程式從來源列舉變更所用的來源執行緒數目。 在上傳期間，來源是訂閱者，而在下載期間，來源則是發行者。 預設為 **3**。  
   
- **-StartQueueTimeout** *start_queue_timeout_seconds*  
+ **-StartQueueTimeout** _start_queue_timeout_seconds_  
  這是當執行中並行合併處理序數目到達 **@max_concurrent_merge** 的 **@max_concurrent_merge**。 如果已到達最大秒數而且合併代理程式仍然等候中，它就會結束。 值為 0 表示代理程式會永遠等候，不過您可以取消它。  
   
- **-SubscriberDatabasePath** *subscriber_database_path*  
+ **-SubscriberDatabasePath** _subscriber_database_path_  
  如果 **SubscriberType** 是 **2** (允許連接至沒有 ODBC 資料來源名稱 (DSN) 的 Jet 資料庫)，這就是 Jet 資料庫 (.mdb 檔) 的名稱。  
   
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
@@ -335,10 +335,10 @@ ms.locfileid: "52762820"
 > [!NOTE]  
 >  當您使用 **2** 和 **3**值時，就必須在 **SubscriberDatabasePath** 選項中指定訂閱者的資料庫路徑。  
   
- **-SubscriberLogin** *subscriber_login*  
+ **-SubscriberLogin** _subscriber_login_  
  這是訂閱者登入名稱。 如果 **SubscriberSecurityMode** 是 **0** (代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證)，您就必須指定這個參數。  
   
- **-SubscriberPassword** *subscriber_password*  
+ **-SubscriberPassword** _subscriber_password_  
  這是訂閱者密碼。 如果 **SubscriberSecurityMode** 是 **0** (代表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證)，您就必須指定這個參數。  
   
  **-SubscriberSecurityMode** [ **0**| **1**]  
@@ -356,13 +356,13 @@ ms.locfileid: "52762820"
  **-SyncToAlternate** [ **0|1**]  
  指定合併代理程式是否會在訂閱者與替代發行者之間進行同步處理。 值為 **1** 表示它是替代發行者。 預設為 **0**。  
   
- **-UploadGenerationsPerBatch** *upload_generations_per_batch*  
+ **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  這是將變更從訂閱者上傳至發行者時，要在單一批次中處理的層代數目。 層代會定義為每個發行項的邏輯變更群組。 可靠通訊連結的預設值為 **100**。 不可靠通訊連結的預設值為 **1**。  
   
- **-UploadReadChangesPerBatch** *upload_read_changes_per_batch*  
+ **-UploadReadChangesPerBatch** _upload_read_changes_per_batch_  
  這是將變更從訂閱者上傳至發行者時，要在單一批次中讀取的變更數目。 預設為 **100**。  
   
- **-UploadWriteChangesPerBatch** *upload_write_changes_per_batch*  
+ **-UploadWriteChangesPerBatch** _upload_write_changes_per_batch_  
  這是將變更從訂閱者上傳至發行者時，要在單一批次中套用的變更數目。 預設為 **100**。  
   
  **-UseInprocLoader**  
@@ -379,9 +379,9 @@ ms.locfileid: "52762820"
 |**3**|資料列計數及二進位總和檢查碼驗證。|  
   
 > [!NOTE]  
->  如果「訂閱者」與「發行者」端的資料類型不同，則使用二進位總和檢查碼或總和檢查碼的驗證可能會誤報失敗。 如需詳細資訊，請參閱[驗證複寫的資料](../validate-replicated-data.md)中的＜資料驗證的考量＞一節。  
+>  如果「訂閱者」與「發行者」端的資料類型不同，則使用二進位總和檢查碼或總和檢查碼的驗證可能會誤報失敗。 如需詳細資訊，請參閱[驗證複寫的資料](../validate-data-at-the-subscriber.md)中的＜資料驗證的考量＞一節。  
   
- **-ValidateInterval** *validate_interval*  
+ **-ValidateInterval** _validate_interval_  
  這是在連續模式下驗證訂閱的頻率。 預設值是 **60** 分鐘。  
   
 ## <a name="remarks"></a>備註  

@@ -15,12 +15,12 @@ ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b9d254bc40b8a4f36bd73913a33729d3235dd8dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6df7b90915fd7ba91a2b577abc710e708b792ec1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061808"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124288"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>將共用資料來源發行至 SharePoint 文件庫
   若要將共用資料來源發行到以 SharePoint 整合模式執行的報表伺服器，您必須在報表設計師中設定報表專案屬性。 在專案屬性中，伺服器、報表和共用資料來源的所有參考都必須是完整 URL。  
@@ -31,7 +31,7 @@ ms.locfileid: "48061808"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟現有或新的報表伺服器專案。  
   
-2.  按一下 [專案] 功能表上的 [屬性]。 [*\<專案>***屬性頁**] 對話方塊隨即開啟。  
+2.  按一下 [專案] 功能表上的 [屬性]。 \<專案> [屬性頁] 對話方塊隨即開啟。  
   
 3.  選擇您用來發行至 SharePoint 網站的 [組態]。  
   
@@ -53,11 +53,11 @@ ms.locfileid: "48061808"
     >  當您將共用資料來源發行到 SharePoint 網站時，副檔名會變更為 .rsds。 您可以直接在 SharePoint 網站上編輯及管理共用資料來源。 如需詳細資訊，請參閱[建立及管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [將報表發行至 SharePoint 文件庫](publish-a-report-to-a-sharepoint-library.md)   
- [SharePoint 模式中報表伺服器上已發行報表項目的 URL 範例 &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [將報表發行到 SharePoint 文件庫](publish-a-report-to-a-sharepoint-library.md)   
+ [SharePoint 模式在報表伺服器上已發行報表項目的 URL 範例 &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [專案屬性頁對話方塊](../tools/project-property-pages-dialog-box.md)   
- [設定部署屬性&#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
+ [設定部署屬性 &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
  [將報表發行至報表伺服器](publishing-reports-to-a-report-server.md)   
- [使用 Office 資料連線&#40;.odc&#41;報表&#40;Reporting Services SharePoint 整合模式&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [搭配報表使用 Office 資料連接 &#40;.odc&#41; &#40;SharePoint 整合模式的 Reporting Services&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

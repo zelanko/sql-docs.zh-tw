@@ -16,19 +16,19 @@ ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a26d1f9b1e8ff7cf9ed127dc78a02827952d411
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf8f067cd223bb9064e5e44734b9765cc8b41c79
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772196"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129468"
 ---
 # <a name="affectenum"></a>AffectEnum
 指定的記錄會受到影響的作業。  
   
 |常數|值|描述|  
 |--------------|-----------|-----------------|  
-|**adAffectAll**|3|如果沒有[篩選條件](../../../ado/reference/ado-api/filter-property.md)套用至**資料錄集**，會影響所有的記錄。<br /><br /> 如果**篩選**屬性設定為字串準則 (例如 「 作者 = 'Smith' 」)，則作業會影響目前的一章中可見的記錄。<br /><br /> 如果**篩選條件**屬性設定為隸屬[FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)或陣列的書籤，則作業將會影響的所有資料列**資料錄集**。 **注意︰****adAffectAll**隱藏在 Visual Basic 物件瀏覽器中。  |  
+|**adAffectAll**|3|如果沒有[篩選條件](../../../ado/reference/ado-api/filter-property.md)套用至**資料錄集**，會影響所有的記錄。<br /><br /> 如果**篩選**屬性設定為字串準則 (例如 「 作者 = 'Smith' 」)，則作業會影響目前的一章中可見的記錄。<br /><br /> 如果**篩選條件**屬性設定為隸屬[FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)或陣列的書籤，則作業將會影響的所有資料列**資料錄集**。 **注意： adAffectAll**隱藏在 Visual Basic 物件瀏覽器中。|  
 |**adAffectAllChapters**|4|會影響所有同層級章節中的所有記錄**Recordset**，包括透過任何不可見**篩選**目前套用。|  
 |**adAffectCurrent**|1|會影響目前的記錄。|  
 |**adAffectGroup**|2|會影響符合目前的記錄[篩選](../../../ado/reference/ado-api/filter-property.md)屬性設定。 您必須設定**篩選條件**屬性設**FilterGroupEnum**值或陣列**書籤**才能使用此選項。|  

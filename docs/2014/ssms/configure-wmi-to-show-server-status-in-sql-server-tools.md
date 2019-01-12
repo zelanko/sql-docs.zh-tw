@@ -13,12 +13,12 @@ ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2982dc2825b621248da9f9c29e4aad8ddfc51bd5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c0b0b8236187698917dddd3ca98830add6c3fde9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764390"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129018"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>設定 WMI 在 SQL Server 工具中顯示伺服器狀態
   此主題描述如何在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中設定 WMI，以在 SQL Server 工具中顯示伺服器狀態。 連接到伺服器時， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的 [已註冊的伺服器] 和 [物件總管] 元件，以及「 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員」，都會使用 Windows Management Instrumentation (WMI) 來取得 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (MSSQLSERVER) 及 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent (MSSQLSERVER) 服務的狀態。 若要顯示這些服務的狀態，使用者必須具有從遠端存取 WMI 物件的權限。 伺服器必須安裝 WMI，才能設定此權限。  
@@ -37,7 +37,7 @@ ms.locfileid: "52764390"
   
 6.  新增群組或使用者至 [群組或使用者名稱] 方塊，然後選取此新增項目。  
   
-7.  在 **權限 * * *\<群組或使用者 >* 方塊中，選取**允許**資料行，如**遠端啟用**權限，針對您想要從遠端使用者偵測其服務狀態。  
+7.  在**權限**_\<群組或使用者 >_ 方塊中，選取**允許**資料行，如**遠端啟用**權限為使用者想要遠端偵測其服務狀態。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動、停止或暫停 SQL Server Agent 服務](agent/start-stop-or-pause-the-sql-server-agent-service.md)  

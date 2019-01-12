@@ -14,12 +14,12 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c426781f52a513cca1e90e5f83eac7feab79fdaf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785220"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124988"
 ---
 # <a name="article-properties---ltarticlegt"></a>發行項屬性 - &lt;發行項&gt;
   從新增發行集精靈和 **[發行集屬性]** 對話方塊中，可以使用 **[發行項屬性]** 對話方塊。 它可讓您檢視和設定所有類型之發行項的屬性。 某些屬性只有在建立發行集時才能設定，而其他的則只有在發行集沒有使用中的訂閱時才能設定。 無法設定的屬性會以唯讀顯示。  
@@ -121,7 +121,7 @@ ms.locfileid: "52785220"
   
 ### <a name="resolver-tab"></a>解析程式索引標籤  
  **使用預設解析程式**  
- 如果您選取預設的解析程式，則會依據指派給每個訂閱者的優先權或第一個寫入發行者的變更來解決衝突，視使用的訂閱類型而定。 如需詳細資訊，請參閱[偵測及解決合併式複寫衝突](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)。  
+ 如果您選取預設的解析程式，則會依據指派給每個訂閱者的優先權或第一個寫入發行者的變更來解決衝突，視使用的訂閱類型而定。 如需詳細資訊，請參閱[偵測及解決合併式複寫衝突](merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
  **使用自訂解析程式 (已在散發者註冊)**  
  如果您選擇使用發行項解析程式 (由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供或您自行撰寫)，您必須從清單方塊中選取解析程式。 如需詳細資訊，請參閱＜ [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)＞。  

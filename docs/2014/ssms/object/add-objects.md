@@ -12,12 +12,12 @@ ms.assetid: 17ac0e99-8490-46b0-8515-e5012bc9e0cf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41927fa4008731c1ff047189735a5e8a50d6165a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 15011717f0f2d5ece6666c30aef72eade0faabb3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751210"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127178"
 ---
 # <a name="add-objects"></a>加入物件
   限制物件選項對話方塊為僅顯示您想看到的物件類型。  
@@ -29,7 +29,7 @@ ms.locfileid: "52751210"
  **下列類型的所有物件**  
  開啟 [選取物件類型] 對話方塊，以指定應包含在基礎清單中的物件類型。  
   
- **伺服器***\<伺服器名稱 >*  
+ **伺服器**_\<伺服器名稱 >_  
  在指定的伺服器上加入所有適當的物件。 只有從伺服器範圍對話方塊，例如 [登入 - 新增] 對話方塊開啟時才會出現。  
   
  **屬於結構描述的所有物件**  

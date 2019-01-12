@@ -17,12 +17,12 @@ ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8592517c71651b457c660e1d73e683c1c5ed332
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813980"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126428"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52813980"
   
  若要為交易式發行集啟用可更新的訂閱，請參閱＜ [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)＞。  
   
- 若為交易式發行集建立可更新的訂閱，請參閱＜ [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)＞。  
+ 若為交易式發行集建立可更新的訂閱，請參閱＜ [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)＞。  
   
 ## <a name="switching-between-update-modes"></a>切換更新模式  
  使用可更新訂閱時，可以指定訂閱應使用一個更新模式，如果應用程式有所要求，再切換至另一個更新模式。 例如，您可以指定訂閱應使用立即更新，但是如果系統錯誤造成失去網路連接，則切換至佇列更新。  
@@ -124,7 +124,7 @@ ms.locfileid: "52813980"
   
 ## <a name="see-also"></a>另請參閱  
  [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
- [異動複寫的發行集類型](publication-types-for-transactional-replication.md)   
+ [異動複寫](transactional-replication.md)   
  [發行資料和資料庫物件](../publish/publish-data-and-database-objects.md)   
  [訂閱發行集](../subscribe-to-publications.md)  
   

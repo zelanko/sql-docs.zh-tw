@@ -12,12 +12,12 @@ ms.assetid: e2bb2e21-62a7-4689-b68b-bdfba3fdd985
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 913559815f2157f487db429f2cf9975f68d8da89
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e3640999842c7bd61c368bf967f74183f5d57099
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805793"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123528"
 ---
 # <a name="mssqleng021330"></a>MSSQL_ENG021330
     
@@ -39,7 +39,7 @@ ms.locfileid: "52805793"
  請確定指定的快照集資料夾路徑正確，而且在發行者端執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶具有足夠的權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [指定預設快照集位置 &#40;SQL Server Management Studio&#41;](specify-the-default-snapshot-location-sql-server-management-studio.md)   
+ [指定預設快照集位置](snapshot-options.md#snapshot-folder-locations)   
  [錯誤和事件參考 &#40;複寫&#41;](errors-and-events-reference-replication.md)   
  [不使用快照集初始化交易式訂閱](initialize-a-transactional-subscription-without-a-snapshot.md)  
   

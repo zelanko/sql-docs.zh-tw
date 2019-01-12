@@ -16,12 +16,12 @@ ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ffb78d301762f9b7edcb78a2ba062db6fe662f6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f2ada1011096eb8275f9059e531cfc0fcc1af58c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540018"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126168"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>核心層級 API 函式 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -38,7 +38,7 @@ ms.locfileid: "52540018"
 |**SQLCancel**|取消陳述式控制代碼，hstmt 上的處理。 在某些情況下，Oracle 不允許取消執行的陳述式。 這表示執行的陳述式，將會繼續直到 Oracle 完成此程序，ODBC Driver for Oracle 取消這段陳述式的結果。|  
 |**SQLColAttributes**|在結果集中傳回的資料行的描述項資訊。 為字元字串、 32 位元描述元相依值或整數值，會傳回描述元資訊。|  
 |**SQLConnect**|連接到資料來源。 若要使用 Oracle 作業系統驗證，請指定"/"作為*szUID*參數和 「"作為*szAuthStr*參數。|  
-|**SQLDescribeCol**|傳回名稱、 類型、 有效位數、 小數位數和指定的結果資料行 null 屬性。 **注意：****SQLDescribeCol**報告為 SQL_VARCHAR 的導出資料行。|  
+|**SQLDescribeCol**|傳回名稱、 類型、 有效位數、 小數位數和指定的結果資料行 null 屬性。 **注意：SQLDescribeCol**報告為 SQL_VARCHAR 的導出資料行。|  
 |**SQLDisconnect**|關閉連接。 如果連接共用已啟用共用的環境，而且應用程式呼叫**SQLDisconnect**在該環境中連接之後，連接傳回連接集區並仍可使用其他元件相同的共用的環境中。|  
 |**SQLError**|傳回最後一個錯誤的錯誤或狀態資訊。 驅動程式會維護的堆疊或可針對傳回的錯誤清單*hstmt*， *hdbc*，並*henv*引數，視呼叫**SQLError**為止。 錯誤佇列中排清每個陳述式之後。 通常擷取 Oracle 錯誤訊息，並為空白。|  
 |**SQLExecDirect**|執行新的、 已取消準備的 SQL 陳述式。 如果陳述式中存在的任何參數，驅動程式會使用參數標記變數的目前值。 如果您的資料表、 檢視或欄位名稱包含空格，括住名稱後引號標記。 比方說，如果您的資料庫包含名為資料表*My Table*和欄位*My Field*，括住識別項的每個項目就像這樣：<br /><br /> 選取 \`表格\`。 \`我 Field1\`，;\`表格\`。\`我 Field2\` FROM\`表格 '|  

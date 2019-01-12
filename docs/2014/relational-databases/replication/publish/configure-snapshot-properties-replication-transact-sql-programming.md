@@ -14,12 +14,12 @@ ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 880f2f6fc155338aa65637fbc71402ba7ec55821
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b03dd7f886cee5816d591034d1be63ece45d8d1d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800210"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127879"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>設定快照集屬性 (複寫 Transact-SQL 程式設計)
   可以使用複寫預存程序來以程式設計的方式定義及修改快照集屬性，使用的預存程序將取決於發行集的類型而定。  
@@ -101,7 +101,7 @@ ms.locfileid: "52800210"
 ## <a name="see-also"></a>另請參閱  
  [替代快照集資料夾位置](../alternate-snapshot-folder-locations.md)   
  [壓縮的快照集](../compressed-snapshots.md)   
- [在套用快照集之前及之後執行指令碼](../execute-scripts-before-and-after-the-snapshot-is-applied.md)   
+ [在套用快照集之前及之後執行指令碼](../snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [透過 FTP 傳送快照集](../transfer-snapshots-through-ftp.md)   
  [變更發行集與發行項屬性](change-publication-and-article-properties.md)  

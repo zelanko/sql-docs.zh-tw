@@ -16,12 +16,12 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 073577731fba32e092307ebd7c86eb5904c38a05
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bfe5d9f7bc5c95055af06b0582f2ddcf88ae7cdf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760231"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125708"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證  
   
- [ **@login** =] **'***登入***'**  
+ [ **@login** =] **'**_登入_**'**  
  這是您要變更的 Windows 帳戶或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的名稱。 *登入*已**nvarchar(257)**，沒有預設值  
   
- [ **@password** =] **'***密碼***'**  
+ [ **@password** =] **'**_密碼_**'**  
  是新的密碼，以儲存指定之*登入*。 *密碼*已**sysname**，沒有預設值。  
   
 > [!NOTE]  
 >  在變更複寫密碼之後，必須停止並重新啟動使用該代理程式變更生效前所用密碼的每一個代理程式。  
   
- [ **@server** =] **'***server***'**  
+ [ **@server** =] **'**_server_**'**  
  這是要變更儲存密碼的伺服器連接。 *伺服器*已**sysname**，而且可以是下列其中一個值：  
   
 |值|描述|  

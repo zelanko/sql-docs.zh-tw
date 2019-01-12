@@ -18,12 +18,12 @@ ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4aa4b07c3a7c27546990f1b5a1a25fd4f7d0da83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3eae9eeceec6d32ca616244f2ebd77f96d23e614
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725036"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124148"
 ---
 # <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_dropmessage [ @msgnum = ] message_number
  [  **@msgnum =** ] *message_number*  
  這是要卸除的訊息編號。 *message_number*必須是訊息編號大於 50000 的使用者定義的訊息。 *message_number*已**int**，預設值是 NULL。  
   
- [  **@lang =** ] **'***語言***'**  
+ [  **@lang =** ] **'**_語言_**'**  
  這是要卸除之訊息的語言。 如果**所有**指定的所有語言版本*message_number*會卸除。 *語言*已**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  

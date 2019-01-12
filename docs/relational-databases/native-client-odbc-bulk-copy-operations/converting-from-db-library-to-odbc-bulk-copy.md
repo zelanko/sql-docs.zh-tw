@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08db3afed0709f97404317ed19d8a7d9f58da374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81d44a01e46078599fe601d672211a9d615ce528
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826366"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124048"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>從 DB-Library 轉換成 ODBC 大量複製
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47826366"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不支援 Db-library 訊息和錯誤處理常式，您必須呼叫**SQLGetDiagRec**以取得錯誤和 ODBC 大量複製函數所引發的訊息。 大量複製函數的 ODBC 版本會傳回標準的大量複製傳回碼 SUCCEED 或 FAILED，而非 ODBC 樣式的傳回碼，例如 SQL_SUCCESS 或 SQL_ERROR。  
   
--   DB 程式庫所指定的值[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen*參數會被解譯方式與 ODBC **bcp_bind * * * cbData*參數。  
+-   DB 程式庫所指定的值[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen*參數會被解譯方式與 ODBC **bcp_bind**_cbData_參數。  
   
     |指示的條件|Db-library *varlen*值|ODBC *cbData*值|  
     |-------------------------|--------------------------------|-------------------------|  
@@ -52,7 +52,7 @@ ms.locfileid: "47826366"
   
      在 DB 程式庫*varlen* -1 值表示，要提供可變長度資料，而在 ODBC *cbData*則解譯成表示提供的是只有 NULL 值。 變更任何 Db-library *varlen* -1 為 SQL_VARLEN_DATA，以及任何的規格*varlen* 0 為 SQL_NULL_DATA 的規格。  
   
--   Db-library  **bcp_colfmt * * * file_collen*和 ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)* cbUserData * 具有相同的問題為 **bcp_bind * * * varlen*並*cbData*先前所述的參數。 變更任何 Db-library *file_collen* -1 為 SQL_VARLEN_DATA，以及任何的規格*file_collen* 0 為 SQL_NULL_DATA 的規格。  
+-   Db-library **bcp_colfmt**_file_collen_和 ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData*具有相同的問題為**bcp_bind**_varlen_並*cbData*先前所述的參數。 變更任何 Db-library *file_collen* -1 為 SQL_VARLEN_DATA，以及任何的規格*file_collen* 0 為 SQL_NULL_DATA 的規格。  
   
 -   *IValue*參數的 ODBC [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)函式是 void 的指標。 在 DB 程式庫*iValue*是整數。 值轉換為 ODBC *iValue*為 void *。  
   

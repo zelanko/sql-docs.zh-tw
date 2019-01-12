@@ -10,12 +10,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6efa9ab6ec2733c67a00b4c16e08d6b4e435cf9b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367190"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127208"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 課：從另一部電腦連接
   為了加強安全性，初始安裝時，您不能從另一部電腦存取 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer Edition、Express Edition 和 Evaluation Edition 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 這一課教您如何啟用通訊協定、設定通訊埠以及設定 Windows 防火牆，以便從其他電腦連接。  
@@ -44,7 +44,7 @@ ms.locfileid: "53367190"
     > [!NOTE]  
     >  您必須同時能夠使用 32 位元和 64 位元選項。  
   
-2.  在  **SQL Server 組態管理員**，展開**SQL Server 網路組態**，然後按一下**通訊協定** *\<執行個體名稱>*。  
+2.  在  **SQL Server 組態管理員**，展開**SQL Server 網路組態**，然後按一下**通訊協定** _\<執行個體名稱>_。  
   
      預設執行個體 (未命名的執行個體) 是以 **MSSQLSERVER**列出。 如果您安裝了具名執行個體，則會列出您所提供的名稱。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] 會安裝成 **SQLEXPRESS**，除非您在安裝期間變更其名稱。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "53367190"
   
 2.  在 [連接到伺服器] 對話方塊中，確認 [伺服器類型] 方塊中的 [Database Engine]。  
   
-3.  在 [伺服器名稱] 方塊中，輸入 **tcp:** 以指定通訊協定，後面接著電腦名稱、逗號和通訊埠編號。 若要連線到預設執行個體，通訊埠 1433 為隱含 且可省略的通訊埠，因此只要鍵入 *tcp:***<電腦名稱> 即可。 在我們的具名執行個體範例中，請鍵入 **tcp:<電腦名稱>,49172**。  
+3.  在 [伺服器名稱] 方塊中，輸入 **tcp:** 以指定通訊協定，後面接著電腦名稱、逗號和通訊埠編號。 若要連接到預設執行個體，通訊埠 1433 是內定通訊埠而且可省略，因此只要輸入 **tcp:**_<computer_name>_ 即可。 在我們的具名執行個體範例中，請輸入 **tcp:**_<computer_name>_**,49172**。  
   
     > [!NOTE]  
     >  如果 [伺服器名稱] 方塊中省略了 **tcp:**，用戶端將依照用戶端設定中指定的順序，嘗試所有啟用的通訊協定。  

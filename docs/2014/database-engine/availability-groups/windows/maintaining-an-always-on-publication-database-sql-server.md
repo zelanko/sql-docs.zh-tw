@@ -13,12 +13,12 @@ ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b275f7b25d87753911548eda5225d5de29f0897c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143758"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126979"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>維護 AlwaysOn 發行集資料庫 (SQL Server)
   本主題將討論使用 AlwaysOn 可用性群組時維護發行集資料庫的特殊考量。  
@@ -68,7 +68,7 @@ ms.locfileid: "48143758"
     > [!NOTE]  
     >  當您移除了具有已發行成員資料庫的可用性群組，或者從可用性群組中移除已發行的資料庫時，已發行資料庫的所有複本都將保持復原狀態。 如果進行還原，每個複本都會顯示成已發行的資料庫。 您應該只保留一個具有發行集中繼資料的複本。 若要針對已發行的資料庫複本停用複寫，請先從資料庫中移除所有訂閱和發行集。  
   
-     執行`sp_dropsubscription`移除發行集的訂閱。 請務必將 *@ignore_distributributor* 參數設定為 1，以便在散發者端保留使用中發行資料庫的中繼資料。  
+     執行 `sp_dropsubscription` 可移除發行集訂閱。 請務必將 *@ignore_distributributor* 參數設定為 1，以便在散發者端保留使用中發行資料庫的中繼資料。  
   
     ```  
     USE MyDBName;  
@@ -81,7 +81,7 @@ ms.locfileid: "48143758"
         @ignore_distributor = 1;  
     ```  
   
-     執行`sp_droppublication`可移除所有發行集。 同樣地，請將 *@ignore_distributor* 參數設定為 1，以便在散發者端保留使用中發行資料庫的中繼資料。  
+     執行 `sp_droppublication` 可移除所有發行集。 同樣地，請將 *@ignore_distributor* 參數設定為 1，以便在散發者端保留使用中發行資料庫的中繼資料。  
   
     ```  
     EXEC sys.sp_droppublication   
@@ -106,14 +106,14 @@ ms.locfileid: "48143758"
   
 -   [複寫、 變更追蹤、 異動資料擷取和 AlwaysOn 可用性群組&#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
--   [管理 &#40;複寫&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [複寫管理常見問題集](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
 -   [複寫訂閱者及 AlwaysOn 可用性群組&#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [必要條件、 限制和建議，AlwaysOn 可用性群組的&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性群組： 互通性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
+ [AlwaysOn 可用性群組：互通性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server 複寫](../../../relational-databases/replication/sql-server-replication.md)  
   
   

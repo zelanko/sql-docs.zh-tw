@@ -19,12 +19,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 82452c5e0d4ddff21870ff341673da6d11b18f40
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772018"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129118"
 ---
 # <a name="enhance-merge-replication-performance"></a>增強合併式複寫效能
   除了考慮＜ [增強一般複寫效能](enhance-general-replication-performance.md)＞中所述的一般效能提示之外，還要考慮合併式複寫特定的以下幾個其他方面。  
@@ -144,6 +144,6 @@ ms.locfileid: "52772018"
   
 -   使用複寫監視器內的 **[同步處理記錄]** 索引標籤監視同步處理效能。  
   
-     對於合併式複寫，「複寫監視器」會在 **[同步處理記錄]** 索引標籤中顯示同步處理期間處理之每個發行項的詳細統計資料，包括在每個處理階段 (上傳變更、下載變更等等) 內花費的時間。 這樣有助於找出導致過慢的特定資料表，同時也是解決合併訂閱效能問題的最佳地點。 如需檢視詳細統計資料的詳細資訊，請參閱[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+     對於合併式複寫，「複寫監視器」會在 **[同步處理記錄]** 索引標籤中顯示同步處理期間處理之每個發行項的詳細統計資料，包括在每個處理階段 (上傳變更、下載變更等等) 內花費的時間。 這樣有助於找出導致過慢的特定資料表，同時也是解決合併訂閱效能問題的最佳地點。 如需有關如何檢視詳細統計資料的詳細資訊，請參閱 < [View Information and Perform Tasks 使用 「 複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
   

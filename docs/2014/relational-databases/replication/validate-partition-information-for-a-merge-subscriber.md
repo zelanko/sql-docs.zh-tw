@@ -14,12 +14,12 @@ ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a95d55aa0d2722719f799af9f69f6a3b3c14689
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3bada5fc49dc344510164260330699b60a3288cc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805850"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127568"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>驗證合併訂閱者的資料分割資訊
   在為合併式發行集定義參數化資料列篩選器時，可以使用參考「訂閱者」資訊的功能，例如「訂閱者」的登入名稱。 依預設，複寫將在每次同步處理和在「訂閱者」端套用快照集之前，根據該功能驗證「訂閱者」資訊。 驗證處理可確保為每個「訂閱者」正確分割資料。 驗證行為由 **validate_subscriber_info** 發行集屬性控制，該發行集屬性可使用 [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) 或在 [發行集屬性] 對話方塊的 [訂閱選項] 頁面中變更。 如需有關變更發行集屬性的詳細資訊，請參閱＜ [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)＞。  
@@ -34,9 +34,9 @@ ms.locfileid: "52805850"
  在「合併代理程式」驗證分割時，除了根據篩選運算式中所使用之函數傳回的值來驗證分割外，代理程式還會檢查快照集在使其無效的變更 (例如中繼資料清除作業或結構描述變更) 發生前是否已產生。 如果分割的快照集太舊，「合併代理程式」將傳回錯誤，且您必須根據目前的一般快照集為該「訂閱者」重新產生分割的快照集。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理 &#40;複寫&#41;](administration/administration-replication.md)   
- [複寫管理的最佳做法](administration/best-practices-for-replication-administration.md)   
+ [複寫管理常見問題集](administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
  [重新初始化訂閱](reinitialize-subscriptions.md)   
- [驗證複寫的資料](validate-replicated-data.md)  
+ [驗證複寫的資料](validate-data-at-the-subscriber.md)  
   
   

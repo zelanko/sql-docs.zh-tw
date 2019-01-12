@@ -23,12 +23,12 @@ ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33b7d8f60bfef89aef49733cf193f8aad2678ee7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ebcb8171ef63411fface757d2e6000e95eec6822
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808870"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126748"
 ---
 # <a name="osql-utility"></a>osql 公用程式
   **osql** 公用程式可讓您輸入 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式、系統程序和指令碼檔案。 這個公用程式利用 ODBC 來與伺服器通訊。  
@@ -67,10 +67,10 @@ ms.locfileid: "52808870"
 > [!NOTE]  
 >  由於網路廣播的本質，因此 **osql** 可能不會收到所有伺服器的及時回應。 因此，這個選項各次的引動過程，傳回的伺服器清單可能各不相同。  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  這是使用者登入識別碼。 登入識別碼會區分大小寫。  
   
- **-P** *password*  
+ **-P** _password_  
  這是一個使用者指定的密碼。 若未使用 **-P** 選項，則 **osql** 會提示輸入密碼。 若在命令提示字元的尾端使用 **-P** 選項且無任何密碼，則 **osql** 會使用預設密碼 (NULL)。  
   
 > [!IMPORTANT]  
@@ -93,31 +93,31 @@ C:\>osql
  **-E**  
  使用信任連接，不要求密碼。  
   
- **-S** *server_name*[ **\\***instance_name*]  
- 指定要連接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的預設執行個體。 指定 *server_name***\\***instance_name*，即可連線到該伺服器之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體。 若未指定伺服器，則 **osql** 會連接到本機電腦的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體。 從網路中的遠端電腦執行 **osql** 時，需要使用此選項。  
+ **-S** _server_name_[ **\\**_instance_name_]  
+ 指定要連接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的預設執行個體。 指定 _server_name_**\\**_instance_name_ ，即可連接至該伺服器上之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體。 若未指定伺服器，則 **osql** 會連接到本機電腦的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體。 從網路中的遠端電腦執行 **osql** 時，需要使用此選項。  
   
- **-H** *wksta_name*  
+ **-H** _wksta_name_  
  這是一個工作站名稱。 工作站名稱儲存在 **sysprocesses.hostname** 中， **sp_who**會顯示它。 如果未指定這個選項，就會假設目前的電腦名稱。  
   
- **-d** *db_name*  
+ **-d** _db_name_  
  啟動 *osql* 時發出 USE **db_name**陳述式。  
   
- **-l** *time_out*  
+ **-l** _time_out_  
  指定 **osql** 登入逾時之前的秒數。**osql** 的預設登入逾時值是八秒。  
   
- **-t** *time_out*  
+ **-t** _time_out_  
  指定命令逾時之前的秒數。如果未指定 *time_out* 值，命令不會逾時。  
   
- **-h** *headers*  
+ **-h** _headers_  
  指定資料行標頭之間所要列印的資料列數。 預設值是每一組查詢結果各列印一次標頭。 請利用 -1 來指定不列印任何標頭。 若使用 -1，則參數和設定之間不能有空格 (**-h-1**，而非 **-h -1**)。  
   
- **-s** *col_separator*  
+ **-s** _col_separator_  
  指定資料行分隔字元，依預設，它是一個空格。 若要使用對作業系統有特殊意義的字元 (例如 |; （& s) \< >)、 雙引號 （"） 括住的字元。  
   
- **-w** *column_width*  
+ **-w** _column_width_  
  可讓使用者設定輸出的螢幕寬度。 預設值是 80 個字元。 當輸出行到達最大螢幕寬度時，它會折成多行。  
   
- **-a** *packet_size*  
+ **-a** _packet_size_  
  可讓您要求不同大小的封包。 *packet_size* 的有效值為 512 到 65535。 預設值 **osql** 為伺服器預設值。 增加的封包大小可加強較大指令碼執行 (其中 GO 命令之間的 SQL 陳述式數量很大) 的效能。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 測試指出 8192 通常是大量複製作業的最快設定。 您可以要求較大的封包，但如果無法授與要求，則 **osql** 會預設為伺服器預設值。  
   
  **-e**  
@@ -126,13 +126,13 @@ C:\>osql
  **-I**  
  將 QUOTED_IDENTIFIER 連接選項設為開啟。  
   
- **-D** *data_source_name*  
+ **-D** _data_source_name_  
  連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的 ODBC 驅動程式所定義的 ODBC 資料來源。 **osql** 連接會使用資料來源所指定的選項。  
   
 > [!NOTE]  
 >  這個選項不會使用定義給其他驅動程式的資料來源。  
   
- **-c** *cmd_end*  
+ **-c** _cmd_end_  
  指定命令結束字元。 依預設，在一行中單獨輸入 GO，便會終止命令，並將命令傳給 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 當您重設命令結束字元時，請勿使用對作業系統有特殊意義的 [!INCLUDE[tsql](../includes/tsql-md.md)] 保留字或字元，不論前面是否附加了反斜線，都是一樣。  
   
  **-q "查詢** **"**  
@@ -151,16 +151,16 @@ osql -E -q "select name, object_id from %table%"
  **-n**  
  從輸入行中，移除編號和提示符號 (>)。  
   
- **-m** *error_level*  
+ **-m** _error_level_  
  自訂錯誤訊息的顯示畫面。 在指定嚴重性層級或以上的錯誤，會顯示訊息編號、狀態和錯誤層級。 在指定層級以下的錯誤不會顯示任何資訊。 請利用 **-1** 來指定訊息傳回所有標頭，即使參考訊息也是如此。 若使用 **-1**，則參數與設定之間不能有空格 (**-m-1**而非 **-m -1**)。  
   
  **-r** { **0**| **1**}  
  將訊息輸出重新導向至畫面 (**stderr**)。 如果您沒有指定參數，或您指定 **0**，便只會重新導向嚴重性層級 11 或以上的錯誤訊息。 如果您指定 **1**，便會重新導向所有訊息輸出 (包括 "print")。  
   
- **-i** *input_file*  
+ **-i** _input_file_  
  識別包含 SQL 陳述式或預存程序的批次之檔案。 小於 (**\<**) 比較運算子可用來代替 **-i**。  
   
- **-o** *output_file*  
+ **-o** _output_file_  
  識別用來接收 **osql**輸出的檔案。 大於 (**>**) 比較運算子可用來代替 **-o**。  
   
  若 *input_file* 不是 Unicode 且未指定 **-u** ，則會以 OEM 格式儲存 *output_file* 。 若 *input_file* 是 Unicode 或指定 **-u** ，則會以 Unicode 格式儲存 *output_file* 。  
@@ -253,7 +253,7 @@ osql -E -i titles.qry -o titles.res
 > [!IMPORTANT]  
 >  可能的話，請使用 **-E**選項 (信任連接)。  
   
- 當以互動方式使用 **osql** 時，您可以使用 **:r***file_name*，將作業系統檔案讀到命令緩衝區中。 這會將 *file_name* 中的 SQL 指令碼當作單一批次直接傳給伺服器。  
+ 當以互動方式使用 **osql** 時，您可以利用 **:r**_file_name_，將作業系統檔案讀到命令緩衝區中。 這會將 *file_name* 中的 SQL 指令碼當作單一批次直接傳給伺服器。  
   
 > [!NOTE]  
 >  當使用 **osql**時，如果批次分隔字元 GO 出現在 SQL 指令碼檔案中， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會將其視為語法錯誤。  

@@ -18,12 +18,12 @@ ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4834ebec21b69d000a84c6d4fdd5c615f2ca833e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 53bf75f0c153012eb60188f354ac9ac775ce1b26
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757010"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128233"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "52757010"
 |**fast_multicol_updateproc**|**bit**|指定是否已啟用合併代理程式，以在 UPDATE 陳述式中，將變更套用相同資料列的多個資料行中。<br /><br /> **0** = 變更為個別更新每個資料行的問題。<br /><br /> **1** = 發出 UPDATE 陳述式，這會導致發生在單一陳述式的多個資料行的更新。|  
 |**check_permissions**|**int**|這是合併代理程式將變更套用在發行者時，所驗證之資料表層級權限的點陣圖。 *check_permissions*可以有下列值之一：<br /><br /> **0x00 =** 不檢查權限。<br /><br /> **0x10 =** 可以上傳在訂閱者端進行的 Insert 先檢查發行者端的權限。<br /><br /> **0x20 =** 在上傳在訂閱者端進行的更新之前，會檢查在發行者端的權限。<br /><br /> **0x40 =** 檢查發行者端的權限，在上傳在訂閱者端所作的刪除之前。|  
 |**maxversion_at_cleanup**|**int**|清除中繼資料的最高層代 (Generation)。|  
-|**processing_order**|**int**|指出合併式發行集中; 的發行項的處理順序值**0**指出發行項並未排序，，和處理順序從最低到最高值的發行項。 如果兩個發行項有相同的值，就會同時處理它們。 如需詳細資訊，請參閱[指定合併發行項的處理順序](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)。|  
+|**processing_order**|**int**|指出合併式發行集中; 的發行項的處理順序值**0**指出發行項並未排序，，和處理順序從最低到最高值的發行項。 如果兩個發行項有相同的值，就會同時處理它們。 如需詳細資訊，請參閱 <<c0> [ 指定合併式複寫屬性](../../relational-databases/replication/merge/specify-merge-replication-properties.md)。|  
 |**upload_options**|**tinyint**|定義客訂閱在訂閱者端進行的更新之限制，它可以是下列值之一。<br /><br /> **0** = 客訂閱的訂閱者端進行的更新沒有限制; 所有的變更會上傳到 「 發行者 」。<br /><br /> **1** = 允許客訂閱，訂閱者端進行變更，但它們不會上傳到 「 發行者 」。<br /><br /> **2** = 不允許客訂閱的訂閱者端進行變更。<br /><br /> 如需詳細資訊，請參閱[使用僅限下載的發行項最佳化合併式複寫效能](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。|  
 |**published_in_tran_pub**|**bit**|指出合併式發行集中的發行項也在交易式發行集中發行。<br /><br /> **0** = 發行項不發行在交易式發行項中。<br /><br /> **1** = 發行項也發行在交易式發行項中。|  
 |**輕量型**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

@@ -12,12 +12,12 @@ ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb3aa18f17219f46bc5ce6f3d25af7d4bd29c4d9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f3612a8b2006978a8098a406a6557d6c9f0f1f7f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753950"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127798"
 ---
 # <a name="secure-the-snapshot-folder"></a>保護快照集資料夾
   快照集資料夾是儲存快照集檔案的目錄；建議您將此目錄專用於快照集儲存。 授與「快照集代理程式」對資料夾的寫入權限，並確定僅授與 Windows 帳戶讀取權限，「合併代理程式」或「散發代理程式」使用該帳戶來存取此資料夾。 與代理程式相關聯的 Windows 帳戶必須為網域帳戶，這樣才能存取位於遠端電腦上的快照集資料夾。  
@@ -54,7 +54,7 @@ ms.locfileid: "52753950"
  [替代快照集資料夾位置](../alternate-snapshot-folder-locations.md)   
  [使用快照集初始化訂閱](../initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [安全性與保護 &#40;複寫&#41;](security-and-protection-replication.md)   
+ [SQL Server 複寫安全性](view-and-modify-replication-security-settings.md)   
  [透過 FTP 傳送快照集](../transfer-snapshots-through-ftp.md)  
   
   
