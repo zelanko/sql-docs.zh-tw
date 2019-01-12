@@ -16,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b247e6869d3eea05325fd9020ee6a073540deb4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5cdd5f3b4c4c1dd8ddac0df34423834c3b09b839
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209127"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131238"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication =** ] **'***publication***'**  
+ [  **@publication =** ] **'**_發行集_**'**  
  這是發行集的名稱。 *發行集*已**sysname**，預設值是 NULL。  
   
- [  **@property =** ] **'***屬性***'**  
+ [  **@property =** ] **'**_屬性_**'**  
  這是要變更的發行集屬性。 *屬性*已**nvarchar(255)**。  
   
- [  **@value =** ] **'***值***'**  
+ [  **@value =** ] **'**_值_**'**  
  這是新的屬性值。 *值*已**nvarchar(255)**，預設值是 NULL。  
   
  下表描述可變更的發行集屬性及這些屬性值的限制。  
@@ -130,7 +130,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **0**指定發行項的變更不會使訂閱重新初始化。 如果預存程序偵測到變更需要重新初始化現有的訂閱，就會發生錯誤，且不會進行任何變更。  
   - **1**指定發行項的變更會使現有的訂閱重新初始化，並提供發生之訂閱重新初始化的權限。  
   
-[ **@publisher** = ] **'***publisher***'**  
+[ **@publisher** =] **'**_發行者_**'**  
  指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
   > [!NOTE]  

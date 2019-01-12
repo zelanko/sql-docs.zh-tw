@@ -13,12 +13,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3141146842bd568336033073f07b41c636129ee7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543585"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130478"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>資料庫鏡像和複寫 (SQL Server)
   資料庫鏡像可以和複寫一起使用，以改進發行集資料庫的可用性。 資料庫鏡像是指單一資料庫的兩份副本，而且通常位在不同的電腦上。 在任何時間內，目前的用戶端都只能使用其中一份資料庫副本， 此份資料庫稱為主體資料庫。 用戶端對主體資料庫所做的更新會套用到其他份資料庫，也稱為鏡像資料庫。 鏡像作業涵蓋了針對主體資料庫上所進行的每個插入、更新或刪除動作，將其交易記錄套用至鏡像資料庫。  
@@ -161,7 +161,7 @@ ms.locfileid: "52543585"
 |沒有自動容錯移轉的高安全性模式|所有經過認可的交易一定會存到鏡像的磁碟上。 「記錄讀取器代理程式」只會複寫在鏡像上強化的交易。 如果鏡像無法使用，則主體不會允許在資料庫上有進一步的活動；因此，「記錄讀取器代理程式」便沒有交易可複寫。|  
   
 ## <a name="see-also"></a>另請參閱  
- [複寫功能及工作](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [SQL Server 複寫](../../relational-databases/replication/sql-server-replication.md)   
  [記錄傳送和複寫 &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

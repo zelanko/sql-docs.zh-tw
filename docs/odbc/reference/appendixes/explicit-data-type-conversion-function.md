@@ -15,12 +15,12 @@ ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc229e2bef69069ba1fc5f8cb3077e592d959a55
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 77cb69877324b36120b3a277688bb1ad737f5c4d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521935"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129818"
 ---
 # <a name="explicit-data-type-conversion-function"></a>明確資料類型轉換函式
 明確資料類型轉換是根據 SQL 資料類型定義所指定。  
@@ -29,7 +29,7 @@ ms.locfileid: "52521935"
   
  格式**轉換**函式是：  
   
- **轉換 (** *value_exp*， _data_type_**)**  
+ **轉換 (** _value_exp_， _data_type_**)**  
   
  函式會傳回所指定的值*value_exp*轉換為指定*data_type*，其中*data_type*是其中一個下列關鍵字：  
   

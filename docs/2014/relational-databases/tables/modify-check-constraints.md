@@ -15,12 +15,12 @@ ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f90f0f332aff728699a92daadec2c28a71552dd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 651b13121653f5627f59bc6a8a11f1e2e49c43b2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803250"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130318"
 ---
 # <a name="modify-check-constraints"></a>修改檢查條件約束
   當您想要變更條件約束運算式或是針對特定條件啟用或停用條件約束的選項時，可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中修改檢查條件約束。  
@@ -69,7 +69,7 @@ ms.locfileid: "52803250"
   
 5.  按一下 [ **關閉**]。  
   
-6.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]。  
+6.  在 [檔案]  功能表上，按一下 [儲存] _table name_。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要修改檢查條件約束**  

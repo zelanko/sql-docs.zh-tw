@@ -13,12 +13,12 @@ ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71c0b884fea0ceab1da3beba770414e1af14b74a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 23ad4cd92d186f43fb1a9dd81e1dbb0727170367
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776440"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131108"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>使用快照集初始化訂閱
   建立發行集之後，通常會建立初始快照集，並將其複製到快照集資料夾 (使用「新增發行集精靈」建立的合併式發行集預設均會發生此情況)。 然後，在訂閱的初始同步處理期間，由「散發代理程式」(針對交易式和快取式發行集) 或「合併代理程式」(針對合併式發行集) 套用至「訂閱者」。 快照集處理取決於發行集的類型：  
@@ -43,7 +43,7 @@ ms.locfileid: "52776440"
   
 -   壓縮快照集以儲存在抽取式媒體，或者透過慢速網路傳送。 如需詳細資訊，請參閱＜ [Compressed Snapshots](compressed-snapshots.md)＞。  
   
--   在套用快照集之前及之後執行 Transact-SQL 指令碼。 如需詳細資訊，請參閱[在套用快照集之前及之後執行指令碼](execute-scripts-before-and-after-the-snapshot-is-applied.md)。  
+-   在套用快照集之前及之後執行 Transact-SQL 指令碼。 如需詳細資訊，請參閱[在套用快照集之前及之後執行指令碼](snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。  
   
 -   使用檔案傳輸通訊協定 (FTP) 傳送快照集檔案。 如需詳細資訊，請參閱[透過 FTP 傳送快照集](transfer-snapshots-through-ftp.md)。  
   

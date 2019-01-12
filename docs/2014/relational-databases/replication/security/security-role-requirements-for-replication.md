@@ -13,12 +13,12 @@ ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dea87fd8144863d8098c88ee9e038cebda0b0060
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 52eed41a8b44147c13ed8dbc63dbda46ed625f51
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816650"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129798"
 ---
 # <a name="security-role-requirements-for-replication"></a>複寫的安全性角色需求
   基於使用者登入所對應之角色，複寫會限制使用者執行的特定動作。 複寫會將部份權限授與 **系統管理員 (sysadmin)** 固定伺服器角色、 **db_owner** 固定資料庫角色，以及發行集存取清單 (PAL) 中的登入。  
@@ -51,6 +51,6 @@ ms.locfileid: "52816650"
   
 ## <a name="see-also"></a>另請參閱  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [安全性與保護 &#40;複寫&#41;](security-and-protection-replication.md)  
+ [SQL Server 複寫安全性](view-and-modify-replication-security-settings.md)  
   
   

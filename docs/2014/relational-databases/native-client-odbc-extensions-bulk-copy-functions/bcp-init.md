@@ -18,12 +18,12 @@ ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13bafcd55e2e6cf95dec92e5ad2feeda20dde8f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125468"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131168"
 ---
 # <a name="bcpinit"></a>bcp_init
   初始化大量複製作業。  
@@ -60,7 +60,7 @@ eDirection
   
  如果*eDirection*為 DB_OUT， *szTable*也可以為資料庫檢視的名稱。  
   
- 如果*eDirection*為 DB_OUT，而且使用指定的 SELECT 陳述式[bcp_control](bcp-control.md)之前[bcp_exec](bcp-exec.md)呼叫時，**bcp_init * * * szTable*必須設為 NULL。  
+ 如果*eDirection*為 DB_OUT，而且使用指定的 SELECT 陳述式[bcp_control](bcp-control.md)之前[bcp_exec](bcp-exec.md)呼叫時， **bcp_init** _szTable_必須設為 NULL。  
   
  *szDataFile*  
  這是要來回複製之使用者檔案的名稱。 如果在複製資料時直接從變數使用[bcp_sendrow](bcp-sendrow.md)，將*szDataFile*為 NULL。  

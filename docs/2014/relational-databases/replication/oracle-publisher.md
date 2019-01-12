@@ -12,12 +12,12 @@ ms.assetid: 019b7c49-dcca-445d-8969-5982a8ccbc1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ad7a226b3c4e3fa9aa593e82e976ff94dd4fe557
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b38b397c0a2128aed5ebaba0b1367ca14ebdcd09
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753870"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130248"
 ---
 # <a name="oracle-publisher"></a>Oracle 發行者
   從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可讓您使用快照式和異動複寫來發行 Oracle 資料庫的資料。 如需詳細資訊，請參閱 [Oracle 發行概觀](non-sql/oracle-publishing-overview.md)。  
@@ -39,6 +39,6 @@ ms.locfileid: "52753870"
   
 ## <a name="see-also"></a>另請參閱  
  [從 Oracle 資料庫建立發行集](publish/create-a-publication-from-an-oracle-database.md)   
- [屬性參考 &#40;複寫&#41;](properties-reference-replication.md)  
+
   
   

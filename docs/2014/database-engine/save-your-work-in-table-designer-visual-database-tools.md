@@ -14,12 +14,12 @@ ms.assetid: 676e4a9a-be75-44d2-b011-6e7fb921de4a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 56da0e1bff6811885a2008a0881d52583c24c1ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b6b705f887e0df06684d33fc7be26aa73ff4048
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090290"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130798"
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>儲存資料表設計工具中的工作 (Visual Database Tools)
   您可將變更儲存至 [資料表設計工具] 開啟中的資料表。  
@@ -28,7 +28,7 @@ ms.locfileid: "48090290"
   
 1.  請按一下 [資料表設計工具] 中的任何位置。  
   
-2.  從**檔案**功能表上，選擇 **儲存 * * * tablename*。  
+2.  從 [檔案] 功能表中，選擇 [儲存 <資料表名稱>]。  
   
 3.  在 [儲存] 對話方塊中，按一下 [是] 更新資料庫。  
   

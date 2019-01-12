@@ -16,12 +16,12 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dcbe4835a333e6b1b1c0881ccd1833c4e5606639
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5def842b7b65523d207433680ebd017536b7f2aa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370410"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130948"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>註冊 Kerberos 連接的服務主體名稱
   若要搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 Kerberos 驗證，需要符合下列兩個條件：  
@@ -71,7 +71,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **具名執行個體**  
   
--   *MSSQLSvc/FQDN*: [*連接埠***|*** instancename*]，其中：  
+-   *MSSQLSvc/FQDN*:[_port_**|**_instancename_]，其中：  
   
     -   *MSSQLSvc* 是所註冊的服務。  
   
@@ -83,7 +83,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **預設執行個體**  
   
--   *MSSQLSvc/FQDN*:*連接埠***|*** MSSQLSvc/FQDN*，其中：  
+-   *MSSQLSvc/FQDN*:_port_**|**_MSSQLSvc/FQDN_，其中：  
   
     -   *MSSQLSvc* 是所註冊的服務。  
   

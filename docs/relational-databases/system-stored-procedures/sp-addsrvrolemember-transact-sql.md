@@ -18,12 +18,12 @@ ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bb3c0d60d5c20651e525d573f8367f1aff4824f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80de1581116ddc477ee1d5b8197532a853ee3da7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601376"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130518"
 ---
 # <a name="spaddsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @loginame **=** ] **'***登入***'**  
+ [ @loginame **=** ] **'**_登入_**'**  
  這是加入至固定伺服器角色的登入名稱。 *登入*已**sysname**，沒有預設值。 *登入*可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或 Windows 登入。 如果 Windows 登入尚未獲得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的存取權，會自動授與其存取權。  
   
- [ @rolename **=** ] **'***角色***'**  
+ [ @rolename **=** ] **'**_角色_**'**  
  這是要加入登入的固定伺服器角色名稱。 *角色*已**sysname**，預設值是 NULL，而且必須是下列值之一：  
   
 -   sysadmin  

@@ -23,12 +23,12 @@ ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9feaa3be20692b89b0d0568f1ccacc49c992667
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 24587f27710381ac787fe8045029df681e401af5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408268"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130188"
 ---
 # <a name="set-index-options"></a>設定索引選項
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改索引的屬性。  
@@ -78,7 +78,7 @@ ms.locfileid: "52408268"
   
 7.  按一下 [ **關閉**]。  
   
-8.  在 [檔案] 功能表上，選取 [儲存 <資料表名稱>]。  
+8.  在 [檔案] 功能表上，選取 [儲存 _table_name_]。  
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>在物件總管中修改索引的屬性  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52408268"
   
 7.  變更任何和所有屬性的設定，以自訂索引。  
   
-8.  若要加入、移除或變更索引資料行的位置，請選取 [索引屬性 - *index_name*] 對話方塊中的 [一般] 頁面。 如需相關資訊，請參閱 [Index Properties F1 Help](index-properties-f1-help.md)  
+8.  若要加入、移除或變更索引資料行的位置，請選取 [索引屬性 - _index_name_] 對話方塊中的 [一般] 頁面。 如需相關資訊，請參閱 [Index Properties F1 Help](index-properties-f1-help.md)  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

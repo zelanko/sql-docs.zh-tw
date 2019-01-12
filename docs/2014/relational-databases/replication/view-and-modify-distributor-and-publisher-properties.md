@@ -15,12 +15,12 @@ ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 90eb7b166316533b68fdc128fb6ecc65e1820efb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361330"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131138"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>檢視及修改散發者和發行者屬性
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視及修改「散發者」和「發行者」屬性。  
@@ -204,6 +204,6 @@ ms.locfileid: "53361330"
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [散發者與發行者資訊指令碼](administration/distributor-and-publisher-information-script.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
- [檢視發行者的資訊並執行工作 &#40;複寫監視器&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
+ [檢視資訊並執行的工作，使用 「 複寫監視器](monitor/view-information-and-perform-tasks-replication-monitor.md)  
   
   

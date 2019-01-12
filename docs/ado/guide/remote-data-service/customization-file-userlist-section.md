@@ -14,12 +14,12 @@ ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b499f06254a482deea2c90f2fc570b8bb7c9d43e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5feb29337ccd0ee79cd1b6f98187cc6fdb52a942
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516747"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130668"
 ---
 # <a name="customization-file-userlist-section"></a>自訂檔案 UserList 區段
 **Userlist**一節有關**連線**相同的區段與區段*識別碼*參數。  
@@ -32,13 +32,13 @@ ms.locfileid: "52516747"
 ## <a name="syntax"></a>語法  
  使用者存取項目屬於表單：  
   
- *userName* **=**   
- ***accessRights***  
+ _userName_ **=**   
+ **_accessRights_**  
   
 |部分|描述|  
 |----------|-----------------|  
 |*userName*|*使用者名*採用此連線的人員。 有效的使用者名稱建立與 IIS **Service Manager**對話方塊。|  
-|***accessRights***|其中一個下列的存取權限：<br /><br /> -   **NoAccess** -使用者無法存取資料來源。<br />-   **ReadOnly** -使用者可以讀取的資料來源。<br />-   **ReadWrite** -使用者可以讀取或寫入至資料來源。|  
+|**_accessRights_**|其中一個下列的存取權限：<br /><br /> -   **NoAccess** -使用者無法存取資料來源。<br />-   **ReadOnly** -使用者可以讀取的資料來源。<br />-   **ReadWrite** -使用者可以讀取或寫入至資料來源。|  
   
 ## <a name="see-also"></a>另請參閱  
  [自訂檔案 Connect 區段](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   

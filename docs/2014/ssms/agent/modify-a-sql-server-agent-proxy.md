@@ -13,12 +13,12 @@ ms.assetid: 6e1dfbaa-8089-4813-940c-d5a2e13d8552
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc2bf4573408606c38f368e58b3a245dfdea4ece
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 349e3313a194aa45ae26a106b1f61d7df7ac1f46
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806850"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131209"
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>Modify a SQL Server Agent Proxy
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中修改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy。  
@@ -66,7 +66,7 @@ ms.locfileid: "52806850"
   
 5.  以滑鼠右鍵按一下要修改的 Proxy 帳戶，然後選取 [屬性]。  
   
-6.  在 [<Proxy 名稱> Proxy 帳戶屬性] 對話方塊中，視需要變更 Proxy 帳戶。 如需有關此對話方塊之選項的詳細資訊，請參閱 [建立 SQL Server Agent Proxy](create-a-sql-server-agent-proxy.md)。  
+6.  在 [<Proxy 名稱> Proxy 帳戶屬性] 對話方塊中，視需要變更 Proxy 帳戶。 如需有關此對話方塊之選項的詳細資訊，請參閱[建立 SQL Server Agent Proxy](create-a-sql-server-agent-proxy.md)。  
   
 7.  完成後，請按一下 **[確定]**。  
   
