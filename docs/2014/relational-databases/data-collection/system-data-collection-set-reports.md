@@ -20,12 +20,12 @@ ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 36aa1bbfd37642e66b232a1b532ff114397841d8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788431"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100493"
 ---
 # <a name="system-data-collection-set-reports"></a>系統資料收集組報表
   資料收集器會針對每個系統資料收集組提供歷程記錄報表。 下列每份報表都會使用儲存在管理資料倉儲中的資料：  
@@ -56,7 +56,7 @@ ms.locfileid: "52788431"
  圖表下方的資料表會列出資料收集時間和對應的使用量資料。  
   
 #### <a name="disk-usage-for-database-databasename-subreport"></a>資料庫的磁碟使用量: <database_name> 子報表  
- 當您在 [磁碟使用量收集組] 報表的摘要資料表中按一下資料庫名稱時，會顯示 [資料庫的磁碟使用量: <資料庫名稱>]  子報表。 這份報表會提供資料庫資料和交易記錄檔之空間使用量的數值與圖形細目。 資料檔的空間使用量會分類成配置給索引頁面、未配置空間、資料頁面和未使用空間的百分比。 這些類別目錄的定義方式如下：  
+ 當您在 [磁碟使用量收集組] 報表的摘要資料表中按一下資料庫名稱時，就會顯示 [資料庫的磁碟使用量: <資料庫名稱>] 子報表。 這份報表會提供資料庫資料和交易記錄檔之空間使用量的數值與圖形細目。 資料檔的空間使用量會分類成配置給索引頁面、未配置空間、資料頁面和未使用空間的百分比。 這些類別目錄的定義方式如下：  
   
 |類別目錄|定義|  
 |--------------|----------------|  

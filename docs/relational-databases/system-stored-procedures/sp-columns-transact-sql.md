@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d61c0d2a7c7b15db9e96a354d5b7f062d10ca8f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 71b5b57625a8feb5d268898ff4865c2039bd358c
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514082"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100503"
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,21 +46,21 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@table_name=**] *object*  
+ [  **\@table_name =**]*物件*  
  這是用來傳回目錄資訊之物件的名稱。 *物件*可以是資料表、 檢視或其他物件，例如資料表值函式的資料行。 *物件*已**nvarchar(384)**，沒有預設值。 支援萬用字元的模式比對。  
   
- [ **@table_owner****=**] *owner*  
+ [  **\@table_owner =**]*擁有者*  
  這是用來傳回目錄資訊之物件的物件擁有者。 *擁有者*已**nvarchar(384)**，預設值是 NULL。 支援萬用字元的模式比對。 如果*擁有者*未指定，套用基礎 dbms 的預設物件可見性規則。  
   
  如果目前使用者擁有一個含有指定名稱的物件，就會傳回該物件的資料行。 如果*擁有者*未指定且目前使用者並未擁有具有指定的物件*物件*， **sp_columns**尋找具有指定之物件*物件*資料庫擁有者所擁有。 如果存在，就會傳回該物件的資料行。  
   
- [ **@table_qualifier****=**] *qualifier*  
+ [  **\@table_qualifier =**]*限定詞*  
  這是物件限定詞的名稱。 *限定詞*已**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分命名物件 (_限定詞_**。**_擁有者_**。**_名稱_)。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表物件之資料庫環境的伺服器名稱。  
   
- [  **@column_name=**]*資料行*  
+ [  **\@column_name =**]*資料行*  
  這是個單一資料行，當只需要一個目錄資訊的資料行時，就會使用這個單一資料行。 *資料行*已**nvarchar(384)**，預設值是 NULL。 如果*資料行*是未指定，會傳回所有資料行。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*資料行*代表的資料行名稱，如下所示**syscolumns**資料表。 支援萬用字元的模式比對。 若要有最大交互操作能力，閘道用戶端應該只採用 SQL-92 標準模式比對 (% 和 _ 萬用字元)。  
   
- [ **@ODBCVer=**] *ODBCVer*  
+ [  **\@ODBCVer =**] *ODBCVer*  
  這是要使用之 ODBC 的版本。 *ODBCVer*已**int**，預設值是 2。 這表示 ODBC 2。 有效值是 2 或 3。 如需 2 和 3 版之間行為差異，請參閱 ODBC **SQLColumns**規格。  
   
 ## <a name="return-code-values"></a>傳回碼值  

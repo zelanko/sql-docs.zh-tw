@@ -13,12 +13,12 @@ ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eb6f8f381b0cc284e0db2816fd56dd130f60de07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 340423e23037ae401b1e5749fbed38b1822cfb41
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758210"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100577"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>檢視或修改原則式管理條件的屬性
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視或修改原則式管理條件的屬性。  
@@ -54,7 +54,7 @@ ms.locfileid: "52758210"
   
 4.  按一下加號展開 **[條件]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要檢視或編輯的條件，然後選取 [屬性]。 如需 **[開啟條件 -***condition_name*] 對話方塊可用選項的詳細資訊，請參閱[建立新條件或開啟條件對話方塊，一般頁面](../../integration-services/general-page-of-integration-services-designers-options.md)、[開啟條件對話方塊，相依原則頁面](open-condition-dialog-box-dependent-policies-page.md)、[建立新條件或開啟條件對話方塊，描述頁面](create-new-condition-or-open-condition-dialog-box-description-page.md)和[進階編輯 &#40;條件&#41; 對話方塊](advanced-edit-condition-dialog-box.md)。  
+5.  以滑鼠右鍵按一下您想要檢視或編輯的條件，然後選取 [屬性]。 如需可用之選項的詳細資訊**開啟條件-**_condition_name_  對話方塊中，請參閱[建立新條件或開啟條件對話方塊，一般頁面](../../integration-services/general-page-of-integration-services-designers-options.md)，[開啟條件對話方塊，相依原則頁面](open-condition-dialog-box-dependent-policies-page.md)，[建立新條件或開啟條件對話方塊，描述頁面](create-new-condition-or-open-condition-dialog-box-description-page.md)，和[進階編輯&#40;條件&#41;對話方塊](advanced-edit-condition-dialog-box.md)。  
   
 6.  完成後，請按一下 **[確定]**。  
   

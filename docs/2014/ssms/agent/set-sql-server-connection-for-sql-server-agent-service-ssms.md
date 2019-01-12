@@ -13,12 +13,12 @@ ms.assetid: 28b6178b-0a9e-4f2c-8562-7a62d2d2a285
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 725e9375f0a6fea46570c92d822b957ba359f5d6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a9d417c1c043564111e761b033c039737ed378aa
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787070"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100283"
 ---
 # <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>設定 SQL Server Agent 服務的 SQL Server 連線 (SQL Server Management Studio)
   此主題描述如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 設定 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Agent 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]之間的連接。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務可使用「Windows 驗證」連接到 SQL Server 的本機執行個體。  
@@ -66,7 +66,7 @@ ms.locfileid: "52787070"
   
 2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
   
-3.  在 [SQL Server Agent 屬性 <伺服器名稱>] 對話方塊的 [選取頁面] 底下，按一下 [連線]。  
+3.  在 [SQL Server Agent 屬性 <伺服器名稱>] 對話方塊的 [選取頁面] 底下，按一下 [連接]。  
   
 4.  在 [SQL Server 連接] 底下選取 [使用 Windows 驗證]，讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體。 連接到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本的資料庫需要 Windows 驗證。  
   

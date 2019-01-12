@@ -13,12 +13,12 @@ ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a61e48294d39c955e806b8dd4f127bf8bfec2027
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6d5b5b5ee05f467c0881b38108d126da523ea2e7
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758150"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100223"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>檢視或修改原則式管理原則的屬性
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視或修改原則式管理原則的屬性。  
@@ -46,7 +46,7 @@ ms.locfileid: "52758150"
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>若要檢視物件之所有原則的屬性  
   
-1.  在物件總管中，以滑鼠右鍵按一下伺服器、伺服器物件、資料庫或資料庫物件，指向 [原則]，然後選取 [檢視]。 如需 [檢視原則 - <物件名稱>] 對話方塊可用選項的詳細資訊，請參閱[檢視原則對話方塊](view-policies-dialog-box.md)。  
+1.  在物件總管中，以滑鼠右鍵按一下伺服器、伺服器物件、資料庫或資料庫物件，指向 [原則]，然後選取 [檢視]。 如需可用之選項的詳細資訊**檢視原則-**_object_name_  對話方塊中，請參閱[檢視原則對話方塊](view-policies-dialog-box.md)。  
   
 2.  完成後，請按一下 **[關閉]**。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52758150"
   
 4.  按一下加號展開 **[原則]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要檢視或修改的原則，然後選取 [屬性]。 如需 [開啟原則 - <原則名稱>] 對話方塊可用選項的詳細資訊，請參閱[建立新原則或開啟原則對話方塊，一般頁面](../../integration-services/general-page-of-integration-services-designers-options.md)和[建立新原則或開啟原則對話方塊，描述頁面](create-new-policy-or-open-policy-dialog-box-description-page.md)。  
+5.  以滑鼠右鍵按一下您想要檢視或修改的原則，然後選取 [屬性]。 如需可用之選項的詳細資訊**開啟原則-**_原則_ 對話方塊中，請參閱[建立新原則或開啟原則對話方塊，一般頁面](../../integration-services/general-page-of-integration-services-designers-options.md)並[建立新原則或開啟原則對話方塊，描述頁面](create-new-policy-or-open-policy-dialog-box-description-page.md)。  
   
 6.  完成後，請按一下 **[確定]**。  
   

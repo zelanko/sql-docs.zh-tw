@@ -18,12 +18,12 @@ ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a327b07384ce2c12e64612b19c611c57dbbf18b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36e00cf0e5d39722fee1c60fc86f0e6f81fd7e43
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850366"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100353"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [ **@job_id=** ] *job_id*  
  作業識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'**_job_name_**'**  
  作業的名稱。 *job_name*已**sysname**，預設值是 NULL。  
   
 > **注意：** 任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
   
- [  **@schedule_name=** ] **'***schedule_name&lt***'**  
+ [  **@schedule_name=** ] **'**_schedule_name&lt_**'**  
  作業的排程項目名稱。 *schedule_name&lt*已**sysname**，預設值是 NULL。  
   
  [ **@schedule_id=** ] *schedule_id*  
@@ -88,7 +88,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|排程的識別碼。|  
 |**job_count**|**int**|傳回的作業計數。|  
   
-> **注意︰** **sp_help_jobschedule**傳回的值**msdb**並**dbo.sysjobschedules**系統資料表的**msdb**.   **sysjobschedules**更新每隔 20 分鐘。 這可能會影響這個預存程序所傳回的值。  
+> **注意： sp_help_jobschedule**傳回的值**msdb**並**dbo.sysjobschedules**系統資料表中**msdb**。 **sysjobschedules**更新每隔 20 分鐘。 這可能會影響這個預存程序所傳回的值。  
   
 ## <a name="remarks"></a>備註  
  參數**sp_help_jobschedule**可用只在特定組合。 如果*schedule_id*指定時，都不*job_id*也*job_name*可以指定。 否則，請*job_id*或是*job_name*參數可以搭配*schedule_name&lt*。  

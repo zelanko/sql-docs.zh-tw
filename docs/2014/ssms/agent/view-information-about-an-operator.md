@@ -17,12 +17,12 @@ ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 361511051bec6cc33f3062c0c4da13fe8a39329b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751050"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100323"
 ---
 # <a name="view-information-about-an-operator"></a>檢視關於操作員的資訊
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 操作員的詳細資訊。  

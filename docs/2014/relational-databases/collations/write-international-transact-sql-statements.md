@@ -18,12 +18,12 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d092939ca68c0d556b33c2f74b6cd4925061716
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 64dc9129373a57de2924b2983e14266a67d4915e
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778340"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100313"
 ---
 # <a name="write-international-transact-sql-statements"></a>撰寫國際通用的 Transact-SQL 陳述式
   如果遵循下列的指導方針，使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的資料庫與資料庫應用程式將更能從一個語言移植至另一個語言，或可支援多種語言：  
@@ -36,11 +36,11 @@ ms.locfileid: "52778340"
   
     -   ADO、OLE DB 和 ODBC 應用程式應該使用以下形式的 ODBC 時間戳記、日期和時間逸出子句：  
   
-         **{ ts'** yyyy**-***mm***-***dd**hh ***:*** mm ***:*** ss *[**.***fff*] **'}** 例如：**{ ts'** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **' }**  
+         **{ts'** yyyy**-**_mm_**-**_ddhh_**:** _mm_**:**_ss_[**。**_fff_] **'}** 例如： **{ts'** 1998年**-** 09**-** 24 10 **:** 02 **:** 20 **'}**  
   
-         **{ d'** *yyyy* **-** *mm* **-** *dd* **'}** 例如： **{ d'** 1998**-** 09**-** 24 **'}**  
+         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** 例如： **{ d'** 1998**-** 09**-** 24 **'}**  
   
-         **{ t'** *hh* **:** *mm* **:** *ss* **'}** 例如： **{ t'** 10:02:20 **'}**  
+         **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** such as: **{ t'** 10:02:20 **'}**  
   
     -   使用其他 API 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼、預存程序和觸發程序的應用程式，應該使用未分隔的數值字串。 例如 *yyyymmdd* 為 19980924。  
   

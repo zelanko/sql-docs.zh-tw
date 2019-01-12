@@ -13,12 +13,12 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14bc2f8445f61cb8cbafb94770c646df4d6a48bb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a02385a6cd12b85be1661c738488c000f810510
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748490"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100663"
 ---
 # <a name="specify-default-values-for-columns"></a>指定資料行的預設值
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中指定將在資料行中輸入的預設值。 如果您沒有指派預設值，而且使用者將資料行保留空白，則：  
@@ -71,7 +71,7 @@ ms.locfileid: "52748490"
     > [!NOTE]  
     >  若要輸入數字預設值，請輸入數字。 若為物件或函數，請輸入其名稱。 若為英數字元預設值，請在單引號內部輸入值。  
   
-4.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]。  
+4.  在 [檔案]  功能表上，按一下 [儲存] _table name_。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

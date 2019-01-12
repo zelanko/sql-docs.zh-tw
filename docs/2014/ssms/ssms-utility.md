@@ -16,12 +16,12 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20b6109b5622fb78366ab24886b991185c8dbc76
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: edb7ea682ebef5d99cee7a248681be80fc433312
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777810"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100453"
 ---
 # <a name="ssms-utility"></a>Ssms 公用程式
   **Ssms** 公用程式會開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 如果有指定， **Ssms** 也會建立伺服器的連接，且會開啟查詢、指令碼、檔案、專案和方案。  
@@ -51,16 +51,16 @@ ms.locfileid: "52777810"
  *solutionfile*  
  指定要開啟的方案。 這個參數必須包含方案檔的完整路徑。  
   
- [**-S** *servername*]  
+ [**-S** _servername_]  
  伺服器名稱  
   
- [**-d** *databasename*]  
+ [**-d** _databasename_]  
  資料庫名稱  
   
- [**-U** *username*]  
+ [**-U** _username_]  
  利用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證來連接時的使用者名稱  
   
- [**-P** *password*]  
+ [**-P** _password_]  
  利用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證來連接時的密碼  
   
  [**-E**]  
@@ -69,7 +69,7 @@ ms.locfileid: "52777810"
  [**-nosplash**]  
  在開啟時，使 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 不呈現開頭顯示畫面。 當您利用頻寬有限的連接，透過「終端機服務」來連接執行 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的電腦時，請使用這個選項。 這個引數不區分大小寫，可出現在其他引數的前後。  
   
- [**-log***[filename]?*]  
+ [**-log**_[filename]?_]  
  將 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 活動記錄到指定的檔案以利於進行疑難排解  
   
  [**-?**]  

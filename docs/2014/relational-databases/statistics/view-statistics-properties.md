@@ -15,12 +15,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 343ba03f20d059763f4b1122aac80e0af80fc2ae
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415635"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54099963"
 ---
 # <a name="view-statistics-properties"></a>檢視統計資料屬性
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中針對資料表或索引檢視表顯示目前的查詢最佳化統計資料。 統計資料物件包含標頭 (其中包含有關統計資料的中繼資料)、長條圖 (包含統計資料物件之第一個索引鍵資料行中的值分佈)，以及用來測量跨資料行關聯的密度向量。 如需長條圖和密度向量的詳細資訊，請參閱 [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)  
@@ -58,9 +58,9 @@ ms.locfileid: "52415635"
   
 5.  以滑鼠右鍵按一下要檢視其屬性的統計資料物件，然後選取 [屬性]。  
   
-6.  在 [統計資料屬性 - *statistics_name*] 對話方塊的 [選取頁面] 窗格中，選取 [詳細資料]。  
+6.  在 [統計資料屬性 - _statistics_name_] 對話方塊的 [選取頁面] 窗格中，選取 [詳細資料]。  
   
-     下列屬性會在 [統計資料屬性 - *statistics_name*] 對話方塊的 [詳細資料] 頁面中顯示。  
+     下列屬性會在 [統計資料屬性 - _statistics_name_] 對話方塊的 [詳細資料] 頁面中顯示。  
   
      **資料表名稱**  
      顯示統計資料所描述的資料表名稱。  

@@ -14,12 +14,12 @@ ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26412fd6727049019b289fd0245e4ebf7f826dc1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: HT
+ms.openlocfilehash: 30c50d1f6efc44c17eac76e0e03432c2461da296
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375530"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100614"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務啟動帳戶會定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行的 Windows 帳戶以及它的網路權限。 此主題描述如何透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 組態管理員來設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Agent 服務帳戶。  
@@ -71,9 +71,9 @@ ms.locfileid: "53375530"
   
 5.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員的主控台窗格中，選取 **[SQL Server 服務]**。  
   
-6.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server Agent (<伺服器名稱>)]，其中 <伺服器名稱> 是您要變更服務啟動帳戶之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行個體的名稱，然後選取 [屬性]。  
+6.  在詳細資料窗格中，以滑鼠右鍵按一下 [SQL Server Agent (<伺服器名稱>)]，其中 <伺服器名稱> 是您要變更服務啟動帳戶的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行個體的名稱，然後選取 [屬性]。  
   
-7.  在 [SQL Server Agent (<伺服器名稱>) 屬性] 對話方塊的 [登入] 索引標籤中，選取 [登入身分] 底下的下列其中一個選項：  
+7.  在 [SQL Server Agent (<伺服器名稱>) 屬性] 對話方塊的 [登入] 索引標籤中，選取 [登入身分] 下的下列其中一個選項：  
   
     -   **內建帳戶**：如果您的作業僅需來自本機伺服器的資源，請選取此選項。 如需有關如何選擇 Windows 內建帳戶類型的詳細資訊，請參閱[選取 SQL Server Agent 服務的帳戶](https://msdn.microsoft.com/library/ms191543.aspx)。  
   

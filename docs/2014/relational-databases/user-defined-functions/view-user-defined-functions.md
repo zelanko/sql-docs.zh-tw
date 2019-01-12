@@ -18,12 +18,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 73f3fcdb485d4fdfbb06392414086d25f405a77f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505456"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100553"
 ---
 # <a name="view-user-defined-functions"></a>檢視使用者定義函數
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，取得 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用者定義函數之定義或屬性的相關資訊。 您可能需要查看函數的定義才能了解如何從來源資料表衍生出資料；或是查看函數所定義的資料。  
@@ -68,7 +68,7 @@ ms.locfileid: "52505456"
   
 4.  以滑鼠右鍵按一下要查看其屬性的函數，然後選取 [屬性]。  
   
-     下列屬性會出現在 [函數屬性 - *function_name*] 對話方塊中。  
+     下列屬性會出現在 [函數屬性 - _function_name_] 對話方塊中。  
   
      **[資料庫備份]**  
      包含此函數之資料庫的名稱。  

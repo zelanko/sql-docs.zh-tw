@@ -17,12 +17,12 @@ ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39e9db45723d32fd78eef35c5600d05b54999e61
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 290454026cc87819bf9ffcf73329bb562e3dc5a4
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749212"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100873"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>使用卸離與附加來升級資料庫 (Transact-SQL)
   本主題描述如何使用卸離和附加作業升級 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的資料庫。 附加至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，資料庫可立即使用並自動進行升級。  
@@ -88,7 +88,7 @@ ms.locfileid: "52749212"
     > [!IMPORTANT]  
     >  針對實際執行的資料庫，將資料庫與交易記錄放在不同的磁碟上。  
   
-     若要經由網路將檔案複製到遠端電腦的磁碟，請使用遠端位置的通用命名慣例 (UNC) 名稱。 UNC 名稱的格式為 **\\\\***Servername***\\***Sharename***\\***Path***\\***Filename*。 如同將檔案寫入本機硬碟一樣，您必須將在遠端磁碟讀取或寫入檔案所需的適當權限，授與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體所用的使用者帳戶。  
+     若要經由網路將檔案複製到遠端電腦的磁碟，請使用遠端位置的通用命名慣例 (UNC) 名稱。 UNC 名稱的格式為 **\\\\**_Servername_**\\**_Sharename_**\\**_Path_**\\**_Filename_。 如同將檔案寫入本機硬碟一樣，您必須將在遠端磁碟讀取或寫入檔案所需的適當權限，授與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體所用的使用者帳戶。  
   
 3.  若要附加已移動的資料庫和記錄檔 (選擇性)，請執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   

@@ -13,12 +13,12 @@ ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cb12dbcee56debfd88b4706ad69ac3ac2d04113a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d4fe48814f8d707b0feeacf7a9a84c79df0ffe71
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398811"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100713"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>指定索引的填滿因素
   此主題描述何謂填滿因數，以及如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中指定索引的填滿因數值。  
@@ -79,7 +79,7 @@ ms.locfileid: "52398811"
   
 7.  按一下 [ **關閉**]。  
   
-8.  在 [檔案] 功能表上，選取 [儲存 <資料表名稱>]。  
+8.  在 [檔案] 功能表上，選取 [儲存 _table_name_]。  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>使用物件總管指定索引的填滿因數  
   

@@ -19,12 +19,12 @@ ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b8d88e1098d9bfddb690685804d29b44730da4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11c704413f9668a5da99ded7d269d05b8e3f2c25
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827496"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100618"
 ---
 # <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
  [ @instance_name =] '*instance_name*'  
  這是執行個體名稱。 *instance_name*已**sysname**和預設為本機執行個體，如果是 NULL。  
   
-> **注意︰** *instance_name*必須是完整的執行個體名稱，其中包含電腦名稱和執行個體名稱格式*computerName* \\ *instanceName*。    
+> **注意︰** _instance_name_必須是完整的執行個體名稱，其中包含電腦名稱和執行個體名稱格式*computerName* \\ *instanceName*。    
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

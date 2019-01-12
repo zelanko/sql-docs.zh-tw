@@ -18,12 +18,12 @@ ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e5dc7d93b411834ae127d5bce7f775b78dc36ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12058e9c599428b6f0ba6c3014b8aab8b9ae5f61
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815346"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100858"
 ---
 # <a name="spdeletejobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47815346"
 ## <a name="remarks"></a>備註  
  現在，您可以在作業之外，獨立管理作業排程。 若要從作業移除排程，請使用**sp_detach_schedule**。 若要刪除排程，請使用**sp_delete_schedule**。  
   
-> **注意︰****sp_delete_jobschedule**不支援附加至多項作業的排程。   如果現有的指令碼會呼叫**sp_delete_jobschedule**若要移除的排程附加至一個以上的作業，此程序會傳回錯誤。  
+> **注意： sp_delete_jobschedule**不支援附加至多項作業的排程。 如果現有的指令碼會呼叫**sp_delete_jobschedule**若要移除的排程附加至一個以上的作業，此程序會傳回錯誤。  
   
 ## <a name="permissions"></a>Permissions  
  依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  

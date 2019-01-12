@@ -12,12 +12,12 @@ ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 50067da1853795279216b16f7c12119bc03f38c6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789090"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100363"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定資料表中的計算資料行
   計算資料行是一個虛擬資料行，除非資料行標示了 PERSISTED，否則，並未實際儲存在資料表中。 計算資料行運算式可以使用來自其他資料行的資料來計算其所屬資料行的值。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中指定計算資料行的運算式。  
@@ -66,7 +66,7 @@ ms.locfileid: "52789090"
   
 5.  藉由從 [Is Persisted] 子屬性的下拉式清單中選擇 [是] 或 [否]，指示資料是否為永續性。  
   
-6.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]。  
+6.  在 [檔案]  功能表上，按一下 [儲存] _table name_。  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>若要將計算資料行定義新增至現有資料行  
   

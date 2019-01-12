@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 4078d2d660a2690983e34c6db024df3a93df97eb
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
-ms.translationtype: HT
+ms.openlocfilehash: ae57a6f453cf15dbb22158b49aad990cc0c3df67
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266059"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100733"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>在 Docker 上設定 SQL Server 容器映像
 
@@ -64,19 +64,10 @@ docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
 
 - 如果您有有效的授權，可以只在生產環境中使用 SQL Server。 您可以取得免費的 SQL Server Express 生產授權[此處](https://go.microsoft.com/fwlink/?linkid=857693)。 SQL Server Standard 和 Enterprise Edition 授權都是透過[Microsoft 大量授權](https://www.microsoft.com/licensing/default.aspx)。
 
-- 實際執行 SQL Server 容器映像必須取自[Docker 存放區](https://store.docker.com)。 如果您還沒有一個 Docker 存放區上建立帳戶。
 
-- 若要執行的實際執行版本，可以設定 Docker 存放區上的開發人員容器映像。 您可以使用下列步驟來執行生產版本：
+- 若要執行的生產版本，可以設定開發人員的容器映像。 您可以使用下列步驟來執行生產版本：
 
-   1. 首先，登入您的 docker 識別碼從命令列。
-
-      ```bash
-      docker login
-      ```
-
-   2. 接下來，您需要取得免費的開發人員 Docker 存放區上的容器映像。 移至[https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux)，按一下 **繼續簽出**，並遵循指示。
-
-   3. 檢閱需求，並執行程序[快速入門](quickstart-install-connect-docker.md)。 但是，有兩個差異。 您必須提取映像**存放區/microsoft/mssql-server-linux:\<標記名稱\>** 從 Docker 存放區。 您必須指定您的生產版本，具有**MSSQL_PID**環境變數。 下列範例示範如何執行 Enterprise edition 的最新的 SQL Server 2017 容器映像：
+檢閱需求，並執行程序[快速入門](quickstart-install-connect-docker.md)。 您必須指定您的生產版本，具有**MSSQL_PID**環境變數。 下列範例示範如何執行 Enterprise edition 的最新的 SQL Server 2017 容器映像：
 
       ```bash
       docker run --name sqlenterprise \
@@ -93,10 +84,10 @@ docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.2
       ```
 
       > [!IMPORTANT]
-      > 傳遞的值，藉以**Y**環境變數**ACCEPT_EULA**和版本值以**MSSQL_PID**，您要表達您有有效的和現有的授權，版本和您想要使用的 SQL Server 版本。 您也同意在 Docker 容器映像中執行的 SQL Server 軟體的使用會受到您的 SQL Server 授權條款。
+      > By passing the value **Y** to the environment variable **ACCEPT_EULA** and an edition value to **MSSQL_PID**, you are expressing that you have a valid and existing license for the edition and version of SQL Server that you intend to use. You also agree that your use of SQL Server software running in a Docker container image will be governed by the terms of your SQL Server license.
 
       > [!NOTE]
-      > 如需完整的可能值清單**MSSQL_PID**，請參閱[環境變數，在 Linux 上設定 SQL Server 設定](sql-server-linux-configure-environment-variables.md)。
+      > For a full list of possible values for **MSSQL_PID**, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
 
 ::: moniker-end
 
