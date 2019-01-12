@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2ea25aeb5c7c39c5b00e545bc39974073132b1b2
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 778645079d2585bd86fc01c5d5e1130c564b0de5
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208165"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242009"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>什麼是中的 SQL Server 2019 巨量資料叢集的主要執行個體？
 

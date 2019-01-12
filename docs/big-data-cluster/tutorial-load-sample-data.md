@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/13/2018
 ms.topic: tutorial
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 67e97774a00fed123ba6733688e002f1b57ba743
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: a89b1bec266f590d6e96365436fe5339b9152f92
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53439385"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241472"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>教學課程：將範例資料載入 SQL Server 2019 巨量資料叢集
 

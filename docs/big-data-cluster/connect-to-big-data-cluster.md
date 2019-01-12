@@ -8,12 +8,13 @@ manager: craigg
 ms.date: 12/10/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 8bccadd8fbce9fe2a8cc6f16db75dbd09f3d1ed0
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.technology: big-data-cluster
+ms.openlocfilehash: 9129b436f33092054a19b858fa5bcdb8aebadec2
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53264360"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241819"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>連線到 SQL Server 的巨量資料叢集使用 Azure Data Studio
 
@@ -29,7 +30,7 @@ ms.locfileid: "53264360"
 
 ## <a name="connect-to-the-cluster"></a>連線到叢集
 
-當您連線至巨量資料叢集時，您可以選擇連接到 SQL Server[主要執行個體](concept-master-instance.md)或 HDFS/Spark 閘道。 下列各節示範如何連接到每個。
+當您連線至巨量資料叢集時，您可以選擇連接到 SQL Server 的主要執行個體或 HDFS/Spark 閘道。 下列各節示範如何連接到每個。
 
 ## <a id="master"></a> 主要執行個體
 
@@ -79,6 +80,9 @@ SQL Server 的主要執行個體是傳統的 SQL Server 執行個體，包含 SQ
 1. 在 Azure Data Studio，按下**F1** > **新連線**。
 
 1. 在 **連線類型**，選取**巨量資料的 SQL Server 叢集**。
+
+   > [!TIP]
+   > 如果您看不見**巨量資料的 SQL Server 叢集**連線類型，請確定您已安裝[SQL Server 2019 延伸模組](../azure-data-studio/sql-server-2019-extension.md)和您在完成的延伸模組後重新啟動 Azure Data Studio正在安裝。
 
 1. 輸入中的巨量資料叢集的 IP 位址**伺服器名稱**（不指定連接埠）。
 

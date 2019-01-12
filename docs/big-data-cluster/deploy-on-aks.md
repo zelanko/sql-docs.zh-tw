@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b36a81b4fa99cf6c7db2c1638f63cd464646badf
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: 8e6e91836b3daf0392da082df1f4ec806e9faf94
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246557"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241239"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>設定適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署的 Azure Kubernetes 服務
 

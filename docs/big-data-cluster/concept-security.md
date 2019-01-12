@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d4da38df828b2859de07a7676fc5070bcecf6329
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 8ad12de9456fef0d4803ae83479e615bffa0edcc
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030572"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241419"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>SQL Server 的巨量資料叢集的安全性概念
 

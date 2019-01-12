@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a4bdccba6d42868225a39792cb94566df1f56680
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: 66a0e955c77d98e7c3a311047fa3b93dd299ce76
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246567"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241159"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>設定適用於 SQL Server 2019 巨量資料叢集部署的 minikube
 
@@ -25,7 +26,7 @@ ms.locfileid: "53246567"
 - 若要執行的 SQL Server 2019 （預覽） 的 Minikube 叢集，巨量資料叢集，建議您的電腦必須至少 32 GB 的 RAM。
 
    > [!TIP] 
-   > 如果機器有建議的記憶體最小值，然後設定叢集有 1 個計算集區執行個體、 1 個資料集區執行個體和 1 個儲存體集區執行個體的部署。 這項設定應該只用於評估環境，持久性和可用性的資料不重要。 請參閱[部署文件](deployment-guidance.md#define-environment-variables)如需有關設定來設定資料集區的複本數目的環境變數的詳細資訊，請計算集區和儲存體集區。
+   > 如果機器有建議的記憶體最小值，然後設定叢集有 1 個計算集區執行個體、 1 個資料集區執行個體和 1 個儲存體集區執行個體的部署。 這項設定應該只用於評估環境，持久性和可用性的資料不重要。 請參閱[部署文件](deployment-guidance.md#env)如需有關設定來設定資料集區的複本數目的環境變數的詳細資訊，請計算集區和儲存體集區。
 
 - 必須在您電腦的 BIOS 中啟用 VT x 或 amd-v 的虛擬化。
 

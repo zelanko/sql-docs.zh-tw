@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: cca0ac5e7b81318d95fbb133758fca83e1a0742e
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: f37267083e0e56dd6e3c0e06c1d80ed79c0d9969
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246402"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241924"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>如何部署 SQL Server 2019 巨量資料叢集 （預覽） 上的應用程式
 

@@ -7,13 +7,15 @@ ms.author: jroth
 manager: craigg
 ms.date: 12/12/2018
 ms.topic: tutorial
+ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f7a367a41814a7cb590276b10fcfb7c4c8697011
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 27956603d3627f1d4a78e62fbf9c7aeaa1e55974
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432151"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241909"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>教學課程：從 SQL Server 的巨量資料叢集查詢 Oracle
 

@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: af1393b38b297e451903d5a39942a3e878c88ee6
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: 95a1f141467fa4c3ee9cd7e7076eca604aa497ca
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246607"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241799"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>如何在 SQL Server 2019 預覽中使用 notebook
 

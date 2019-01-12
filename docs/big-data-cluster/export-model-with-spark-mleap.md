@@ -9,13 +9,14 @@ manager: craigg
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: db6e980441c2037311cf2dc35a8f9de01acb045b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ee858f66c99ff7b85e2e6c456ad509ec7deb0a6e
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211167"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242129"
 ---
 # <a name="export-spark-machine-learning-models-with-mleap"></a>匯出 Spark 機器學習服務模型與 MLeap
 

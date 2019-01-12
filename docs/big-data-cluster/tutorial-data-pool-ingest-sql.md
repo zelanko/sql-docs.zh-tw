@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/07/2018
 ms.topic: tutorial
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 142a2db6bc841947a83ada4dc24c59de4e58df8f
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: aa245d074958837245fc921e52a56550f8c82e98
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432441"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241459"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教學課程：將資料內嵌到 SQL Server 資料集區使用 TRANSACT-SQL
 

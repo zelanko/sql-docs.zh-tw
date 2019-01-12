@@ -9,13 +9,14 @@ ms.reviewer: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c1a23ebb390c2276d1ce47c2936b8fe682a4e9b7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c9bcc5ba99736a6bb65bde4aff20e220d70303d4
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213097"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242019"
 ---
 # <a name="train-and-create-machine-learning-models-with-spark"></a>訓練及建立 Spark 機器學習服務模型
 

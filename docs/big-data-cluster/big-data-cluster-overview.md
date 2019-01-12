@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/06/2018
 ms.topic: overview
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5a44fe9001b7a3bffb67cb3f213bed2ac1065970
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 4e5f45d51e80753bb65e5fa1d620ca105af28344
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030042"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241989"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>什麼是 SQL Server 2019 巨量資料叢集？
 

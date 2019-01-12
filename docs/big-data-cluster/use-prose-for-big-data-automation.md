@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a42820199c2a481e490b510e3fd00f9dc765cb27
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 4d13d200bf331771b0f2f8735bf2c76c1f227979
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030519"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241649"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>使用文字程式碼加速器 data Wrangling
 

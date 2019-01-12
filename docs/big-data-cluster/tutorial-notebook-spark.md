@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 55d37969ec3e03a635e948cdafb73eb1922a1795
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 45845efe34c94f0c8f21c7e154dde673b0bfb889
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432551"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241840"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-2019-big-data-cluster"></a>教學課程：SQL Server 2019 巨量資料叢集上執行 notebook 範例
 

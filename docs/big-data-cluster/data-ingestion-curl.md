@@ -7,13 +7,14 @@ manager: craigg
 ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 890c323434c17bb66cd9a67aac872a5580cb2ddf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2d1f3139023f326bc230e6269478b6dbfe522361
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201617"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241969"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-2019-big-data-clusters"></a>將資料載入 HDFS，在 SQL Server 2019 巨量資料叢集上使用 curl
 

@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/07/2018
 ms.topic: tutorial
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d1780ae630231cd96e9424f4f541d921b1496e7d
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 1e6f75f21a02b30a6f75d79a9da5be0320485c5b
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432361"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241679"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教學課程：將資料內嵌到 Spark 作業的 SQL Server 資料集區
 

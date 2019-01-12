@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 75cf78e7c73ad61e5e28ed6f0707639899d8ec19
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 47fb255ea18fdf48765a1a40b1e05e06cdf7ee1e
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207667"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241739"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>在 Kubernetes 上的 SQL Server 巨量資料叢集使用的資料持續性
 
